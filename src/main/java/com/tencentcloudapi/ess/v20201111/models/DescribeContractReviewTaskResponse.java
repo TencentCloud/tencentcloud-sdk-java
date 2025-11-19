@@ -135,6 +135,14 @@ public class DescribeContractReviewTaskResponse extends AbstractModel {
     private Long TotalRiskCount;
 
     /**
+    * 通过项信息(详细引文信息)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApprovedLists")
+    @Expose
+    private OutputReference [] ApprovedLists;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -430,6 +438,26 @@ public class DescribeContractReviewTaskResponse extends AbstractModel {
     }
 
     /**
+     * Get 通过项信息(详细引文信息)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApprovedLists 通过项信息(详细引文信息)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public OutputReference [] getApprovedLists() {
+        return this.ApprovedLists;
+    }
+
+    /**
+     * Set 通过项信息(详细引文信息)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApprovedLists 通过项信息(详细引文信息)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApprovedLists(OutputReference [] ApprovedLists) {
+        this.ApprovedLists = ApprovedLists;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -495,6 +523,12 @@ public class DescribeContractReviewTaskResponse extends AbstractModel {
         if (source.TotalRiskCount != null) {
             this.TotalRiskCount = new Long(source.TotalRiskCount);
         }
+        if (source.ApprovedLists != null) {
+            this.ApprovedLists = new OutputReference[source.ApprovedLists.length];
+            for (int i = 0; i < source.ApprovedLists.length; i++) {
+                this.ApprovedLists[i] = new OutputReference(source.ApprovedLists[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -518,6 +552,7 @@ public class DescribeContractReviewTaskResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "UserData", this.UserData);
         this.setParamSimple(map, prefix + "HighRiskCount", this.HighRiskCount);
         this.setParamSimple(map, prefix + "TotalRiskCount", this.TotalRiskCount);
+        this.setParamArrayObj(map, prefix + "ApprovedLists.", this.ApprovedLists);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

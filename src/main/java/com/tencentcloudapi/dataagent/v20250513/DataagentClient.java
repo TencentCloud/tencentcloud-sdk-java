@@ -138,7 +138,7 @@ public class DataagentClient extends AbstractClient{
     }
 
     /**
-     *分配查询
+     *文档切片查询
      * @param req QueryChunkListRequest
      * @return QueryChunkListResponse
      * @throws TencentCloudSDKException

@@ -424,6 +424,28 @@ HoaiMy
     private Boolean EnableComplianceAudio;
 
     /**
+    * 是否开启语音信箱识别
+    */
+    @SerializedName("EnableVoicemailDetection")
+    @Expose
+    private Boolean EnableVoicemailDetection;
+
+    /**
+    * 识别到对端为语音信箱时的行为，当EnableVoicemailDetection为True时生效
+0: 挂断电话（默认）
+    */
+    @SerializedName("VoicemailAction")
+    @Expose
+    private Long VoicemailAction;
+
+    /**
+    * 大模型拓展参数， 格式为json字符串
+    */
+    @SerializedName("LLMExtraBody")
+    @Expose
+    private String LLMExtraBody;
+
+    /**
      * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
      * @return SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
@@ -1631,6 +1653,58 @@ HoaiMy
         this.EnableComplianceAudio = EnableComplianceAudio;
     }
 
+    /**
+     * Get 是否开启语音信箱识别 
+     * @return EnableVoicemailDetection 是否开启语音信箱识别
+     */
+    public Boolean getEnableVoicemailDetection() {
+        return this.EnableVoicemailDetection;
+    }
+
+    /**
+     * Set 是否开启语音信箱识别
+     * @param EnableVoicemailDetection 是否开启语音信箱识别
+     */
+    public void setEnableVoicemailDetection(Boolean EnableVoicemailDetection) {
+        this.EnableVoicemailDetection = EnableVoicemailDetection;
+    }
+
+    /**
+     * Get 识别到对端为语音信箱时的行为，当EnableVoicemailDetection为True时生效
+0: 挂断电话（默认） 
+     * @return VoicemailAction 识别到对端为语音信箱时的行为，当EnableVoicemailDetection为True时生效
+0: 挂断电话（默认）
+     */
+    public Long getVoicemailAction() {
+        return this.VoicemailAction;
+    }
+
+    /**
+     * Set 识别到对端为语音信箱时的行为，当EnableVoicemailDetection为True时生效
+0: 挂断电话（默认）
+     * @param VoicemailAction 识别到对端为语音信箱时的行为，当EnableVoicemailDetection为True时生效
+0: 挂断电话（默认）
+     */
+    public void setVoicemailAction(Long VoicemailAction) {
+        this.VoicemailAction = VoicemailAction;
+    }
+
+    /**
+     * Get 大模型拓展参数， 格式为json字符串 
+     * @return LLMExtraBody 大模型拓展参数， 格式为json字符串
+     */
+    public String getLLMExtraBody() {
+        return this.LLMExtraBody;
+    }
+
+    /**
+     * Set 大模型拓展参数， 格式为json字符串
+     * @param LLMExtraBody 大模型拓展参数， 格式为json字符串
+     */
+    public void setLLMExtraBody(String LLMExtraBody) {
+        this.LLMExtraBody = LLMExtraBody;
+    }
+
     public CreateAICallRequest() {
     }
 
@@ -1756,6 +1830,15 @@ HoaiMy
         if (source.EnableComplianceAudio != null) {
             this.EnableComplianceAudio = new Boolean(source.EnableComplianceAudio);
         }
+        if (source.EnableVoicemailDetection != null) {
+            this.EnableVoicemailDetection = new Boolean(source.EnableVoicemailDetection);
+        }
+        if (source.VoicemailAction != null) {
+            this.VoicemailAction = new Long(source.VoicemailAction);
+        }
+        if (source.LLMExtraBody != null) {
+            this.LLMExtraBody = new String(source.LLMExtraBody);
+        }
     }
 
 
@@ -1796,6 +1879,9 @@ HoaiMy
         this.setParamSimple(map, prefix + "VadLevel", this.VadLevel);
         this.setParamObj(map, prefix + "ToneWord.", this.ToneWord);
         this.setParamSimple(map, prefix + "EnableComplianceAudio", this.EnableComplianceAudio);
+        this.setParamSimple(map, prefix + "EnableVoicemailDetection", this.EnableVoicemailDetection);
+        this.setParamSimple(map, prefix + "VoicemailAction", this.VoicemailAction);
+        this.setParamSimple(map, prefix + "LLMExtraBody", this.LLMExtraBody);
 
     }
 }

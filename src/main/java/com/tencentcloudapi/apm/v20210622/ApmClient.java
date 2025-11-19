@@ -50,6 +50,28 @@ public class ApmClient extends AbstractClient{
     }
 
     /**
+     *用于创建apm业务系统与Prometheus实例的指标匹配规则
+     * @param req CreateApmPrometheusRuleRequest
+     * @return CreateApmPrometheusRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateApmPrometheusRuleResponse CreateApmPrometheusRule(CreateApmPrometheusRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateApmPrometheusRule", CreateApmPrometheusRuleResponse.class);
+    }
+
+    /**
+     *创建采样配置接口
+     * @param req CreateApmSampleConfigRequest
+     * @return CreateApmSampleConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateApmSampleConfigResponse CreateApmSampleConfig(CreateApmSampleConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateApmSampleConfig", CreateApmSampleConfigResponse.class);
+    }
+
+    /**
      *创建事件任务
      * @param req CreateProfileTaskRequest
      * @return CreateProfileTaskResponse
@@ -58,6 +80,17 @@ public class ApmClient extends AbstractClient{
     public CreateProfileTaskResponse CreateProfileTask(CreateProfileTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateProfileTask", CreateProfileTaskResponse.class);
+    }
+
+    /**
+     *删除采样配置接口
+     * @param req DeleteApmSampleConfigRequest
+     * @return DeleteApmSampleConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteApmSampleConfigResponse DeleteApmSampleConfig(DeleteApmSampleConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteApmSampleConfig", DeleteApmSampleConfigResponse.class);
     }
 
     /**
@@ -72,6 +105,28 @@ public class ApmClient extends AbstractClient{
     }
 
     /**
+     *查询应用配置接口
+     * @param req DescribeApmApplicationConfigRequest
+     * @return DescribeApmApplicationConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApmApplicationConfigResponse DescribeApmApplicationConfig(DescribeApmApplicationConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeApmApplicationConfig", DescribeApmApplicationConfigResponse.class);
+    }
+
+    /**
+     *用于查询apm业务系统与其他产品的关联关系
+     * @param req DescribeApmAssociationRequest
+     * @return DescribeApmAssociationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApmAssociationResponse DescribeApmAssociation(DescribeApmAssociationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeApmAssociation", DescribeApmAssociationResponse.class);
+    }
+
+    /**
      *获取 APM 业务系统列表
      * @param req DescribeApmInstancesRequest
      * @return DescribeApmInstancesResponse
@@ -80,6 +135,28 @@ public class ApmClient extends AbstractClient{
     public DescribeApmInstancesResponse DescribeApmInstances(DescribeApmInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeApmInstances", DescribeApmInstancesResponse.class);
+    }
+
+    /**
+     *用于查询apm业务系统与Prometheus实例的指标匹配规则
+     * @param req DescribeApmPrometheusRuleRequest
+     * @return DescribeApmPrometheusRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApmPrometheusRuleResponse DescribeApmPrometheusRule(DescribeApmPrometheusRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeApmPrometheusRule", DescribeApmPrometheusRuleResponse.class);
+    }
+
+    /**
+     *查询采样配置接口
+     * @param req DescribeApmSampleConfigRequest
+     * @return DescribeApmSampleConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApmSampleConfigResponse DescribeApmSampleConfig(DescribeApmSampleConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeApmSampleConfig", DescribeApmSampleConfigResponse.class);
     }
 
     /**
@@ -172,6 +249,28 @@ public class ApmClient extends AbstractClient{
     }
 
     /**
+     *修改应用配置接口
+     * @param req ModifyApmApplicationConfigRequest
+     * @return ModifyApmApplicationConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyApmApplicationConfigResponse ModifyApmApplicationConfig(ModifyApmApplicationConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyApmApplicationConfig", ModifyApmApplicationConfigResponse.class);
+    }
+
+    /**
+     *用于修改apm业务系统与其他产品的关联关系（包括创建和删除）
+     * @param req ModifyApmAssociationRequest
+     * @return ModifyApmAssociationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyApmAssociationResponse ModifyApmAssociation(ModifyApmAssociationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyApmAssociation", ModifyApmAssociationResponse.class);
+    }
+
+    /**
      *修改APM业务系统接口
      * @param req ModifyApmInstanceRequest
      * @return ModifyApmInstanceResponse
@@ -180,6 +279,28 @@ public class ApmClient extends AbstractClient{
     public ModifyApmInstanceResponse ModifyApmInstance(ModifyApmInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyApmInstance", ModifyApmInstanceResponse.class);
+    }
+
+    /**
+     *用于修改apm业务系统与Prometheus实例的指标匹配规则
+     * @param req ModifyApmPrometheusRuleRequest
+     * @return ModifyApmPrometheusRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyApmPrometheusRuleResponse ModifyApmPrometheusRule(ModifyApmPrometheusRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyApmPrometheusRule", ModifyApmPrometheusRuleResponse.class);
+    }
+
+    /**
+     *修改采样配置接口
+     * @param req ModifyApmSampleConfigRequest
+     * @return ModifyApmSampleConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyApmSampleConfigResponse ModifyApmSampleConfig(ModifyApmSampleConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyApmSampleConfig", ModifyApmSampleConfigResponse.class);
     }
 
     /**

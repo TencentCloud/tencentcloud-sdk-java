@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreatePrivateNatGatewayRequest extends AbstractModel {
 
     /**
-    * 私网网关名称
+    * 私网网关名称，限制60个字符
     */
     @SerializedName("NatGatewayName")
     @Expose
@@ -73,16 +73,16 @@ public class CreatePrivateNatGatewayRequest extends AbstractModel {
     private Boolean DeletionProtectionEnabled;
 
     /**
-     * Get 私网网关名称 
-     * @return NatGatewayName 私网网关名称
+     * Get 私网网关名称，限制60个字符 
+     * @return NatGatewayName 私网网关名称，限制60个字符
      */
     public String getNatGatewayName() {
         return this.NatGatewayName;
     }
 
     /**
-     * Set 私网网关名称
-     * @param NatGatewayName 私网网关名称
+     * Set 私网网关名称，限制60个字符
+     * @param NatGatewayName 私网网关名称，限制60个字符
      */
     public void setNatGatewayName(String NatGatewayName) {
         this.NatGatewayName = NatGatewayName;

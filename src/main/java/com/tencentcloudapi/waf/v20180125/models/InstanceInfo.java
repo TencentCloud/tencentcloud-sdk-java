@@ -385,6 +385,20 @@ public class InstanceInfo extends AbstractModel {
     private String ElasticResourceId;
 
     /**
+    * 预付费大模型安全信息包
+    */
+    @SerializedName("LLMMonPkg")
+    @Expose
+    private LLMMonPkg LLMMonPkg;
+
+    /**
+    * 地域id
+    */
+    @SerializedName("RegionId")
+    @Expose
+    private Long RegionId;
+
+    /**
      * Get 实例唯一ID 
      * @return InstanceId 实例唯一ID
      */
@@ -1228,6 +1242,38 @@ public class InstanceInfo extends AbstractModel {
         this.ElasticResourceId = ElasticResourceId;
     }
 
+    /**
+     * Get 预付费大模型安全信息包 
+     * @return LLMMonPkg 预付费大模型安全信息包
+     */
+    public LLMMonPkg getLLMMonPkg() {
+        return this.LLMMonPkg;
+    }
+
+    /**
+     * Set 预付费大模型安全信息包
+     * @param LLMMonPkg 预付费大模型安全信息包
+     */
+    public void setLLMMonPkg(LLMMonPkg LLMMonPkg) {
+        this.LLMMonPkg = LLMMonPkg;
+    }
+
+    /**
+     * Get 地域id 
+     * @return RegionId 地域id
+     */
+    public Long getRegionId() {
+        return this.RegionId;
+    }
+
+    /**
+     * Set 地域id
+     * @param RegionId 地域id
+     */
+    public void setRegionId(Long RegionId) {
+        this.RegionId = RegionId;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1386,6 +1432,12 @@ public class InstanceInfo extends AbstractModel {
         if (source.ElasticResourceId != null) {
             this.ElasticResourceId = new String(source.ElasticResourceId);
         }
+        if (source.LLMMonPkg != null) {
+            this.LLMMonPkg = new LLMMonPkg(source.LLMMonPkg);
+        }
+        if (source.RegionId != null) {
+            this.RegionId = new Long(source.RegionId);
+        }
     }
 
 
@@ -1443,6 +1495,8 @@ public class InstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ExceedPolicy", this.ExceedPolicy);
         this.setParamObj(map, prefix + "LLMPkg.", this.LLMPkg);
         this.setParamSimple(map, prefix + "ElasticResourceId", this.ElasticResourceId);
+        this.setParamObj(map, prefix + "LLMMonPkg.", this.LLMMonPkg);
+        this.setParamSimple(map, prefix + "RegionId", this.RegionId);
 
     }
 }

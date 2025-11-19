@@ -61,6 +61,17 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *本接口用于关闭数据库账户的CAM验证服务。
+     * @param req CloseAccountCAMRequest
+     * @return CloseAccountCAMResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloseAccountCAMResponse CloseAccountCAM(CloseAccountCAMRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CloseAccountCAM", CloseAccountCAMResponse.class);
+    }
+
+    /**
      *本接口（CloseDBExtranetAccess）用于关闭实例公网地址。
      * @param req CloseDBExtranetAccessRequest
      * @return CloseDBExtranetAccessResponse
@@ -847,6 +858,17 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *本接口（DeletionProtection）用于开启或关闭实例销毁保护
+     * @param req ModifyDBInstanceDeletionProtectionRequest
+     * @return ModifyDBInstanceDeletionProtectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstanceDeletionProtectionResponse ModifyDBInstanceDeletionProtection(ModifyDBInstanceDeletionProtectionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDBInstanceDeletionProtection", ModifyDBInstanceDeletionProtectionResponse.class);
+    }
+
+    /**
      *本接口（ModifyDBInstanceDeployment）用于修改节点可用区部署方式，仅支持主实例。
      * @param req ModifyDBInstanceDeploymentRequest
      * @return ModifyDBInstanceDeploymentResponse
@@ -1014,6 +1036,17 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *本接口用于开启数据库账户的CAM验证服务。
+     * @param req OpenAccountCAMRequest
+     * @return OpenAccountCAMResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenAccountCAMResponse OpenAccountCAM(OpenAccountCAMRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "OpenAccountCAM", OpenAccountCAMResponse.class);
+    }
+
+    /**
      *本接口（OpenDBExtranetAccess）用于开通实例公网地址。
      * @param req OpenDBExtranetAccessRequest
      * @return OpenDBExtranetAccessResponse
@@ -1033,6 +1066,17 @@ public class PostgresClient extends AbstractClient{
     public RebalanceReadOnlyGroupResponse RebalanceReadOnlyGroup(RebalanceReadOnlyGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RebalanceReadOnlyGroup", RebalanceReadOnlyGroupResponse.class);
+    }
+
+    /**
+     *本接口用于对开启CAM验证的账户执行手动刷新密码。
+     * @param req RefreshAccountPasswordRequest
+     * @return RefreshAccountPasswordResponse
+     * @throws TencentCloudSDKException
+     */
+    public RefreshAccountPasswordResponse RefreshAccountPassword(RefreshAccountPasswordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RefreshAccountPassword", RefreshAccountPasswordResponse.class);
     }
 
     /**

@@ -31,12 +31,10 @@ public class StopInstancesRequest extends AbstractModel {
     private String [] InstanceIds;
 
     /**
-    * 关机类型。
-取值范围： 
-
-- SOFT：表示软关机
-- HARD：表示硬关机 
-- SOFT_FIRST：表示优先软关机，失败再执行硬关机  
+    * 关机类型。取值范围： 
+<li>SOFT：表示软关机</li>
+<li>HARD：表示硬关机 </li>
+<li>SOFT_FIRST：表示优先软关机，失败再执行硬关机 </li>
 
 默认取值：SOFT_FIRST
     */
@@ -61,20 +59,16 @@ public class StopInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 关机类型。
-取值范围： 
-
-- SOFT：表示软关机
-- HARD：表示硬关机 
-- SOFT_FIRST：表示优先软关机，失败再执行硬关机  
+     * Get 关机类型。取值范围： 
+<li>SOFT：表示软关机</li>
+<li>HARD：表示硬关机 </li>
+<li>SOFT_FIRST：表示优先软关机，失败再执行硬关机 </li>
 
 默认取值：SOFT_FIRST 
-     * @return StopType 关机类型。
-取值范围： 
-
-- SOFT：表示软关机
-- HARD：表示硬关机 
-- SOFT_FIRST：表示优先软关机，失败再执行硬关机  
+     * @return StopType 关机类型。取值范围： 
+<li>SOFT：表示软关机</li>
+<li>HARD：表示硬关机 </li>
+<li>SOFT_FIRST：表示优先软关机，失败再执行硬关机 </li>
 
 默认取值：SOFT_FIRST
      */
@@ -83,20 +77,16 @@ public class StopInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Set 关机类型。
-取值范围： 
-
-- SOFT：表示软关机
-- HARD：表示硬关机 
-- SOFT_FIRST：表示优先软关机，失败再执行硬关机  
+     * Set 关机类型。取值范围： 
+<li>SOFT：表示软关机</li>
+<li>HARD：表示硬关机 </li>
+<li>SOFT_FIRST：表示优先软关机，失败再执行硬关机 </li>
 
 默认取值：SOFT_FIRST
-     * @param StopType 关机类型。
-取值范围： 
-
-- SOFT：表示软关机
-- HARD：表示硬关机 
-- SOFT_FIRST：表示优先软关机，失败再执行硬关机  
+     * @param StopType 关机类型。取值范围： 
+<li>SOFT：表示软关机</li>
+<li>HARD：表示硬关机 </li>
+<li>SOFT_FIRST：表示优先软关机，失败再执行硬关机 </li>
 
 默认取值：SOFT_FIRST
      */

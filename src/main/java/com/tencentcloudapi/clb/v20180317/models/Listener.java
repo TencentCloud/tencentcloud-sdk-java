@@ -151,7 +151,7 @@ public class Listener extends AbstractModel {
     private Boolean Toa;
 
     /**
-    * 解绑后端目标时，是否发RST给客户端，（此参数仅对于TCP监听器有意义）。
+    * 重新调度功能，解绑后端服务开关，打开此开关，当解绑后端服务时触发重新调度。仅TCP/UDP监听器支持。
     */
     @SerializedName("DeregisterTargetRst")
     @Expose
@@ -520,16 +520,16 @@ public class Listener extends AbstractModel {
     }
 
     /**
-     * Get 解绑后端目标时，是否发RST给客户端，（此参数仅对于TCP监听器有意义）。 
-     * @return DeregisterTargetRst 解绑后端目标时，是否发RST给客户端，（此参数仅对于TCP监听器有意义）。
+     * Get 重新调度功能，解绑后端服务开关，打开此开关，当解绑后端服务时触发重新调度。仅TCP/UDP监听器支持。 
+     * @return DeregisterTargetRst 重新调度功能，解绑后端服务开关，打开此开关，当解绑后端服务时触发重新调度。仅TCP/UDP监听器支持。
      */
     public Boolean getDeregisterTargetRst() {
         return this.DeregisterTargetRst;
     }
 
     /**
-     * Set 解绑后端目标时，是否发RST给客户端，（此参数仅对于TCP监听器有意义）。
-     * @param DeregisterTargetRst 解绑后端目标时，是否发RST给客户端，（此参数仅对于TCP监听器有意义）。
+     * Set 重新调度功能，解绑后端服务开关，打开此开关，当解绑后端服务时触发重新调度。仅TCP/UDP监听器支持。
+     * @param DeregisterTargetRst 重新调度功能，解绑后端服务开关，打开此开关，当解绑后端服务时触发重新调度。仅TCP/UDP监听器支持。
      */
     public void setDeregisterTargetRst(Boolean DeregisterTargetRst) {
         this.DeregisterTargetRst = DeregisterTargetRst;

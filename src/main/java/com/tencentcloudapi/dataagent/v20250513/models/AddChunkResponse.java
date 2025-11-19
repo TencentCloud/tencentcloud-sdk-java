@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AddChunkResponse extends AbstractModel {
 
     /**
-    * 新增的chunkid
+    * 新增的ChunkId
     */
     @SerializedName("ChunkId")
     @Expose
@@ -38,16 +38,16 @@ public class AddChunkResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 新增的chunkid 
-     * @return ChunkId 新增的chunkid
+     * Get 新增的ChunkId 
+     * @return ChunkId 新增的ChunkId
      */
     public String getChunkId() {
         return this.ChunkId;
     }
 
     /**
-     * Set 新增的chunkid
-     * @param ChunkId 新增的chunkid
+     * Set 新增的ChunkId
+     * @param ChunkId 新增的ChunkId
      */
     public void setChunkId(String ChunkId) {
         this.ChunkId = ChunkId;

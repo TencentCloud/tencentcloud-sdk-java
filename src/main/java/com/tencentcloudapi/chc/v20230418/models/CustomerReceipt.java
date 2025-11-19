@@ -38,7 +38,7 @@ public class CustomerReceipt extends AbstractModel {
     private String PickUpStuffContact;
 
     /**
-    * 自提人证件号码
+    * 到访人证件号码
     */
     @SerializedName("PickUpStuffIDCard")
     @Expose
@@ -96,16 +96,16 @@ OTHER: 其他
     }
 
     /**
-     * Get 自提人证件号码 
-     * @return PickUpStuffIDCard 自提人证件号码
+     * Get 到访人证件号码 
+     * @return PickUpStuffIDCard 到访人证件号码
      */
     public String getPickUpStuffIDCard() {
         return this.PickUpStuffIDCard;
     }
 
     /**
-     * Set 自提人证件号码
-     * @param PickUpStuffIDCard 自提人证件号码
+     * Set 到访人证件号码
+     * @param PickUpStuffIDCard 到访人证件号码
      */
     public void setPickUpStuffIDCard(String PickUpStuffIDCard) {
         this.PickUpStuffIDCard = PickUpStuffIDCard;

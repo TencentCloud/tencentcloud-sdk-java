@@ -59,7 +59,7 @@ public class AddChunkRequest extends AbstractModel {
     private String Content;
 
     /**
-    * 	 新 Chunk 插入到目标 Chunk ​之后的位置。插入位置的上一个 chunkId
+    * 新 Chunk 插入到目标 Chunk ​之后的位置。插入位置的上一个 chunkId
     */
     @SerializedName("AfterChunkId")
     @Expose
@@ -146,16 +146,16 @@ public class AddChunkRequest extends AbstractModel {
     }
 
     /**
-     * Get 	 新 Chunk 插入到目标 Chunk ​之后的位置。插入位置的上一个 chunkId 
-     * @return AfterChunkId 	 新 Chunk 插入到目标 Chunk ​之后的位置。插入位置的上一个 chunkId
+     * Get 新 Chunk 插入到目标 Chunk ​之后的位置。插入位置的上一个 chunkId 
+     * @return AfterChunkId 新 Chunk 插入到目标 Chunk ​之后的位置。插入位置的上一个 chunkId
      */
     public String getAfterChunkId() {
         return this.AfterChunkId;
     }
 
     /**
-     * Set 	 新 Chunk 插入到目标 Chunk ​之后的位置。插入位置的上一个 chunkId
-     * @param AfterChunkId 	 新 Chunk 插入到目标 Chunk ​之后的位置。插入位置的上一个 chunkId
+     * Set 新 Chunk 插入到目标 Chunk ​之后的位置。插入位置的上一个 chunkId
+     * @param AfterChunkId 新 Chunk 插入到目标 Chunk ​之后的位置。插入位置的上一个 chunkId
      */
     public void setAfterChunkId(String AfterChunkId) {
         this.AfterChunkId = AfterChunkId;

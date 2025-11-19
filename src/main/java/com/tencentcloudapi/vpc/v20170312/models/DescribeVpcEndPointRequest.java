@@ -60,11 +60,25 @@ public class DescribeVpcEndPointRequest extends AbstractModel {
     private String [] EndPointId;
 
     /**
-    * 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
+    * 协议类型，支持 Ipv4，Ipv6， DualStack，默认 Ipv4。使用DualStack查询双栈的时候，必须要使用MaxResult配合NextToken查询。第1次查询的时候只需要携带MaxResult，如果返回NextToken非空，表示有更多可用数据。第2次查询的时候就需要携带NextToken进行分页查询。
     */
     @SerializedName("IpAddressType")
     @Expose
     private String IpAddressType;
+
+    /**
+    * 每次调用返回的最大结果数。如果查询返回的时候有NextToken返回，您可以使用NextToken值获取更多页结果， 当NextToke返回空或者返回的结果数量小于MaxResults时，表示没有更多数据了。允许的最大页面大小为 100。
+    */
+    @SerializedName("MaxResults")
+    @Expose
+    private Long MaxResults;
+
+    /**
+    * 如果NextToken返回非空字符串 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。
+    */
+    @SerializedName("NextToken")
+    @Expose
+    private String NextToken;
 
     /**
      * Get 过滤条件。当前支持如下过滤条件：
@@ -163,19 +177,51 @@ public class DescribeVpcEndPointRequest extends AbstractModel {
     }
 
     /**
-     * Get 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。 
-     * @return IpAddressType 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
+     * Get 协议类型，支持 Ipv4，Ipv6， DualStack，默认 Ipv4。使用DualStack查询双栈的时候，必须要使用MaxResult配合NextToken查询。第1次查询的时候只需要携带MaxResult，如果返回NextToken非空，表示有更多可用数据。第2次查询的时候就需要携带NextToken进行分页查询。 
+     * @return IpAddressType 协议类型，支持 Ipv4，Ipv6， DualStack，默认 Ipv4。使用DualStack查询双栈的时候，必须要使用MaxResult配合NextToken查询。第1次查询的时候只需要携带MaxResult，如果返回NextToken非空，表示有更多可用数据。第2次查询的时候就需要携带NextToken进行分页查询。
      */
     public String getIpAddressType() {
         return this.IpAddressType;
     }
 
     /**
-     * Set 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
-     * @param IpAddressType 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
+     * Set 协议类型，支持 Ipv4，Ipv6， DualStack，默认 Ipv4。使用DualStack查询双栈的时候，必须要使用MaxResult配合NextToken查询。第1次查询的时候只需要携带MaxResult，如果返回NextToken非空，表示有更多可用数据。第2次查询的时候就需要携带NextToken进行分页查询。
+     * @param IpAddressType 协议类型，支持 Ipv4，Ipv6， DualStack，默认 Ipv4。使用DualStack查询双栈的时候，必须要使用MaxResult配合NextToken查询。第1次查询的时候只需要携带MaxResult，如果返回NextToken非空，表示有更多可用数据。第2次查询的时候就需要携带NextToken进行分页查询。
      */
     public void setIpAddressType(String IpAddressType) {
         this.IpAddressType = IpAddressType;
+    }
+
+    /**
+     * Get 每次调用返回的最大结果数。如果查询返回的时候有NextToken返回，您可以使用NextToken值获取更多页结果， 当NextToke返回空或者返回的结果数量小于MaxResults时，表示没有更多数据了。允许的最大页面大小为 100。 
+     * @return MaxResults 每次调用返回的最大结果数。如果查询返回的时候有NextToken返回，您可以使用NextToken值获取更多页结果， 当NextToke返回空或者返回的结果数量小于MaxResults时，表示没有更多数据了。允许的最大页面大小为 100。
+     */
+    public Long getMaxResults() {
+        return this.MaxResults;
+    }
+
+    /**
+     * Set 每次调用返回的最大结果数。如果查询返回的时候有NextToken返回，您可以使用NextToken值获取更多页结果， 当NextToke返回空或者返回的结果数量小于MaxResults时，表示没有更多数据了。允许的最大页面大小为 100。
+     * @param MaxResults 每次调用返回的最大结果数。如果查询返回的时候有NextToken返回，您可以使用NextToken值获取更多页结果， 当NextToke返回空或者返回的结果数量小于MaxResults时，表示没有更多数据了。允许的最大页面大小为 100。
+     */
+    public void setMaxResults(Long MaxResults) {
+        this.MaxResults = MaxResults;
+    }
+
+    /**
+     * Get 如果NextToken返回非空字符串 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。 
+     * @return NextToken 如果NextToken返回非空字符串 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。
+     */
+    public String getNextToken() {
+        return this.NextToken;
+    }
+
+    /**
+     * Set 如果NextToken返回非空字符串 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。
+     * @param NextToken 如果NextToken返回非空字符串 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。
+     */
+    public void setNextToken(String NextToken) {
+        this.NextToken = NextToken;
     }
 
     public DescribeVpcEndPointRequest() {
@@ -207,6 +253,12 @@ public class DescribeVpcEndPointRequest extends AbstractModel {
         if (source.IpAddressType != null) {
             this.IpAddressType = new String(source.IpAddressType);
         }
+        if (source.MaxResults != null) {
+            this.MaxResults = new Long(source.MaxResults);
+        }
+        if (source.NextToken != null) {
+            this.NextToken = new String(source.NextToken);
+        }
     }
 
 
@@ -219,6 +271,8 @@ public class DescribeVpcEndPointRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArraySimple(map, prefix + "EndPointId.", this.EndPointId);
         this.setParamSimple(map, prefix + "IpAddressType", this.IpAddressType);
+        this.setParamSimple(map, prefix + "MaxResults", this.MaxResults);
+        this.setParamSimple(map, prefix + "NextToken", this.NextToken);
 
     }
 }

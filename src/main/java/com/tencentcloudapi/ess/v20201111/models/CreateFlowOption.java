@@ -286,6 +286,13 @@ public class CreateFlowOption extends AbstractModel {
     private Boolean SignAfterStart;
 
     /**
+    * 发起过程中是否保存草稿
+    */
+    @SerializedName("NeedFlowDraft")
+    @Expose
+    private Boolean NeedFlowDraft;
+
+    /**
      * Get 是否允许修改发起合同时确认弹窗的合同信息（合同名称、合同类型、签署截止时间），若不允许编辑，则表单字段将被禁止输入。
 <br/>true：允许编辑<br/>false：不允许编辑（默认值）<br/> 
      * @return CanEditFlow 是否允许修改发起合同时确认弹窗的合同信息（合同名称、合同类型、签署截止时间），若不允许编辑，则表单字段将被禁止输入。
@@ -1061,6 +1068,22 @@ public class CreateFlowOption extends AbstractModel {
         this.SignAfterStart = SignAfterStart;
     }
 
+    /**
+     * Get 发起过程中是否保存草稿 
+     * @return NeedFlowDraft 发起过程中是否保存草稿
+     */
+    public Boolean getNeedFlowDraft() {
+        return this.NeedFlowDraft;
+    }
+
+    /**
+     * Set 发起过程中是否保存草稿
+     * @param NeedFlowDraft 发起过程中是否保存草稿
+     */
+    public void setNeedFlowDraft(Boolean NeedFlowDraft) {
+        this.NeedFlowDraft = NeedFlowDraft;
+    }
+
     public CreateFlowOption() {
     }
 
@@ -1153,6 +1176,9 @@ public class CreateFlowOption extends AbstractModel {
         if (source.SignAfterStart != null) {
             this.SignAfterStart = new Boolean(source.SignAfterStart);
         }
+        if (source.NeedFlowDraft != null) {
+            this.NeedFlowDraft = new Boolean(source.NeedFlowDraft);
+        }
     }
 
 
@@ -1183,6 +1209,7 @@ public class CreateFlowOption extends AbstractModel {
         this.setParamSimple(map, prefix + "HideSignCodeAfterStart", this.HideSignCodeAfterStart);
         this.setParamSimple(map, prefix + "PreviewAfterStart", this.PreviewAfterStart);
         this.setParamSimple(map, prefix + "SignAfterStart", this.SignAfterStart);
+        this.setParamSimple(map, prefix + "NeedFlowDraft", this.NeedFlowDraft);
 
     }
 }

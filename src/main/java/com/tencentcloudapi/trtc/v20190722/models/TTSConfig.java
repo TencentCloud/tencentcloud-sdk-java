@@ -38,6 +38,20 @@ public class TTSConfig extends AbstractModel {
     private String Model;
 
     /**
+    * 语速，范围 0.5-2.0，默认 1.0
+    */
+    @SerializedName("Speed")
+    @Expose
+    private Float Speed;
+
+    /**
+    * (0, 10] 默认值1.0
+    */
+    @SerializedName("Volume")
+    @Expose
+    private Float Volume;
+
+    /**
      * Get 音色ID 
      * @return VoiceId 音色ID
      */
@@ -69,6 +83,38 @@ public class TTSConfig extends AbstractModel {
         this.Model = Model;
     }
 
+    /**
+     * Get 语速，范围 0.5-2.0，默认 1.0 
+     * @return Speed 语速，范围 0.5-2.0，默认 1.0
+     */
+    public Float getSpeed() {
+        return this.Speed;
+    }
+
+    /**
+     * Set 语速，范围 0.5-2.0，默认 1.0
+     * @param Speed 语速，范围 0.5-2.0，默认 1.0
+     */
+    public void setSpeed(Float Speed) {
+        this.Speed = Speed;
+    }
+
+    /**
+     * Get (0, 10] 默认值1.0 
+     * @return Volume (0, 10] 默认值1.0
+     */
+    public Float getVolume() {
+        return this.Volume;
+    }
+
+    /**
+     * Set (0, 10] 默认值1.0
+     * @param Volume (0, 10] 默认值1.0
+     */
+    public void setVolume(Float Volume) {
+        this.Volume = Volume;
+    }
+
     public TTSConfig() {
     }
 
@@ -83,6 +129,12 @@ public class TTSConfig extends AbstractModel {
         if (source.Model != null) {
             this.Model = new String(source.Model);
         }
+        if (source.Speed != null) {
+            this.Speed = new Float(source.Speed);
+        }
+        if (source.Volume != null) {
+            this.Volume = new Float(source.Volume);
+        }
     }
 
 
@@ -92,6 +144,8 @@ public class TTSConfig extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VoiceId", this.VoiceId);
         this.setParamSimple(map, prefix + "Model", this.Model);
+        this.setParamSimple(map, prefix + "Speed", this.Speed);
+        this.setParamSimple(map, prefix + "Volume", this.Volume);
 
     }
 }

@@ -26,7 +26,9 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel {
     /**
     * 资源类型，取值有：
 <ul><li> **1**：模板</li>
-<li> **2**：文件（默认值）</li></ul>
+<li> **2**：文件（默认值）</li>
+<li> **3**：草稿</li>
+</ul>
     */
     @SerializedName("ResourceType")
     @Expose
@@ -59,6 +61,7 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel {
 <ul>
 <li>文件Id（通过UploadFiles获取文件资源Id）</li>
 <li>模板Id（通过控制台创建模板后获取模板Id）</li>
+<li>草稿Id（通过嵌入页面保存草稿后获取草稿Id）</li>
 </ul>
 注意：需要同时设置 ResourceType 参数指定资源类型
     */
@@ -122,10 +125,14 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel {
     /**
      * Get 资源类型，取值有：
 <ul><li> **1**：模板</li>
-<li> **2**：文件（默认值）</li></ul> 
+<li> **2**：文件（默认值）</li>
+<li> **3**：草稿</li>
+</ul> 
      * @return ResourceType 资源类型，取值有：
 <ul><li> **1**：模板</li>
-<li> **2**：文件（默认值）</li></ul>
+<li> **2**：文件（默认值）</li>
+<li> **3**：草稿</li>
+</ul>
      */
     public Long getResourceType() {
         return this.ResourceType;
@@ -134,10 +141,14 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel {
     /**
      * Set 资源类型，取值有：
 <ul><li> **1**：模板</li>
-<li> **2**：文件（默认值）</li></ul>
+<li> **2**：文件（默认值）</li>
+<li> **3**：草稿</li>
+</ul>
      * @param ResourceType 资源类型，取值有：
 <ul><li> **1**：模板</li>
-<li> **2**：文件（默认值）</li></ul>
+<li> **2**：文件（默认值）</li>
+<li> **3**：草稿</li>
+</ul>
      */
     public void setResourceType(Long ResourceType) {
         this.ResourceType = ResourceType;
@@ -212,12 +223,14 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel {
 <ul>
 <li>文件Id（通过UploadFiles获取文件资源Id）</li>
 <li>模板Id（通过控制台创建模板后获取模板Id）</li>
+<li>草稿Id（通过嵌入页面保存草稿后获取草稿Id）</li>
 </ul>
 注意：需要同时设置 ResourceType 参数指定资源类型 
      * @return ResourceId 资源id，与ResourceType相对应，取值范围：
 <ul>
 <li>文件Id（通过UploadFiles获取文件资源Id）</li>
 <li>模板Id（通过控制台创建模板后获取模板Id）</li>
+<li>草稿Id（通过嵌入页面保存草稿后获取草稿Id）</li>
 </ul>
 注意：需要同时设置 ResourceType 参数指定资源类型
      */
@@ -230,12 +243,14 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel {
 <ul>
 <li>文件Id（通过UploadFiles获取文件资源Id）</li>
 <li>模板Id（通过控制台创建模板后获取模板Id）</li>
+<li>草稿Id（通过嵌入页面保存草稿后获取草稿Id）</li>
 </ul>
 注意：需要同时设置 ResourceType 参数指定资源类型
      * @param ResourceId 资源id，与ResourceType相对应，取值范围：
 <ul>
 <li>文件Id（通过UploadFiles获取文件资源Id）</li>
 <li>模板Id（通过控制台创建模板后获取模板Id）</li>
+<li>草稿Id（通过嵌入页面保存草稿后获取草稿Id）</li>
 </ul>
 注意：需要同时设置 ResourceType 参数指定资源类型
      */

@@ -463,6 +463,33 @@ https：使用https协议回源
     private Long Gzip;
 
     /**
+    * SAAS型WAF域名状态：
+-2：配置下发失败
+-1：配置下发中
+0：DNS解析中
+1：无DNS解析记录，请接入WAF
+10：DNS解析未知，域名启用了代理
+11：DNS解析异常，使用A记录接入WAF IP
+200：检测源站不可达
+220：源站不支持长连接
+311：证书过期
+312：证书即将过期
+310：证书异常
+316：备案异常
+5：WAF回源已变更
+负载均衡型WAF域名LB监听器状态：
+0：操作成功 
+4：正在绑定LB 
+6：正在解绑LB 
+7：解绑LB失败 
+8：绑定LB失败 
+10：内部错误
+    */
+    @SerializedName("State")
+    @Expose
+    private Long State;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -1550,6 +1577,102 @@ https：使用https协议回源
         this.Gzip = Gzip;
     }
 
+    /**
+     * Get SAAS型WAF域名状态：
+-2：配置下发失败
+-1：配置下发中
+0：DNS解析中
+1：无DNS解析记录，请接入WAF
+10：DNS解析未知，域名启用了代理
+11：DNS解析异常，使用A记录接入WAF IP
+200：检测源站不可达
+220：源站不支持长连接
+311：证书过期
+312：证书即将过期
+310：证书异常
+316：备案异常
+5：WAF回源已变更
+负载均衡型WAF域名LB监听器状态：
+0：操作成功 
+4：正在绑定LB 
+6：正在解绑LB 
+7：解绑LB失败 
+8：绑定LB失败 
+10：内部错误 
+     * @return State SAAS型WAF域名状态：
+-2：配置下发失败
+-1：配置下发中
+0：DNS解析中
+1：无DNS解析记录，请接入WAF
+10：DNS解析未知，域名启用了代理
+11：DNS解析异常，使用A记录接入WAF IP
+200：检测源站不可达
+220：源站不支持长连接
+311：证书过期
+312：证书即将过期
+310：证书异常
+316：备案异常
+5：WAF回源已变更
+负载均衡型WAF域名LB监听器状态：
+0：操作成功 
+4：正在绑定LB 
+6：正在解绑LB 
+7：解绑LB失败 
+8：绑定LB失败 
+10：内部错误
+     */
+    public Long getState() {
+        return this.State;
+    }
+
+    /**
+     * Set SAAS型WAF域名状态：
+-2：配置下发失败
+-1：配置下发中
+0：DNS解析中
+1：无DNS解析记录，请接入WAF
+10：DNS解析未知，域名启用了代理
+11：DNS解析异常，使用A记录接入WAF IP
+200：检测源站不可达
+220：源站不支持长连接
+311：证书过期
+312：证书即将过期
+310：证书异常
+316：备案异常
+5：WAF回源已变更
+负载均衡型WAF域名LB监听器状态：
+0：操作成功 
+4：正在绑定LB 
+6：正在解绑LB 
+7：解绑LB失败 
+8：绑定LB失败 
+10：内部错误
+     * @param State SAAS型WAF域名状态：
+-2：配置下发失败
+-1：配置下发中
+0：DNS解析中
+1：无DNS解析记录，请接入WAF
+10：DNS解析未知，域名启用了代理
+11：DNS解析异常，使用A记录接入WAF IP
+200：检测源站不可达
+220：源站不支持长连接
+311：证书过期
+312：证书即将过期
+310：证书异常
+316：备案异常
+5：WAF回源已变更
+负载均衡型WAF域名LB监听器状态：
+0：操作成功 
+4：正在绑定LB 
+6：正在解绑LB 
+7：解绑LB失败 
+8：绑定LB失败 
+10：内部错误
+     */
+    public void setState(Long State) {
+        this.State = State;
+    }
+
     public DomainsPartInfo() {
     }
 
@@ -1747,6 +1870,9 @@ https：使用https协议回源
         if (source.Gzip != null) {
             this.Gzip = new Long(source.Gzip);
         }
+        if (source.State != null) {
+            this.State = new Long(source.State);
+        }
     }
 
 
@@ -1810,6 +1936,7 @@ https：使用https协议回源
         this.setParamArrayObj(map, prefix + "UpstreamRules.", this.UpstreamRules);
         this.setParamSimple(map, prefix + "UseCase", this.UseCase);
         this.setParamSimple(map, prefix + "Gzip", this.Gzip);
+        this.setParamSimple(map, prefix + "State", this.State);
 
     }
 }

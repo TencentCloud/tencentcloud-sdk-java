@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class SavingPlanOverviewDetail extends AbstractModel {
 
     /**
+    * 节省计划资源id
+    */
+    @SerializedName("SpId")
+    @Expose
+    private String SpId;
+
+    /**
     * 节省计划类型
     */
     @SerializedName("SpType")
@@ -93,6 +100,22 @@ public class SavingPlanOverviewDetail extends AbstractModel {
     @SerializedName("PromiseAmount")
     @Expose
     private String PromiseAmount;
+
+    /**
+     * Get 节省计划资源id 
+     * @return SpId 节省计划资源id
+     */
+    public String getSpId() {
+        return this.SpId;
+    }
+
+    /**
+     * Set 节省计划资源id
+     * @param SpId 节省计划资源id
+     */
+    public void setSpId(String SpId) {
+        this.SpId = SpId;
+    }
 
     /**
      * Get 节省计划类型 
@@ -266,6 +289,9 @@ public class SavingPlanOverviewDetail extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public SavingPlanOverviewDetail(SavingPlanOverviewDetail source) {
+        if (source.SpId != null) {
+            this.SpId = new String(source.SpId);
+        }
         if (source.SpType != null) {
             this.SpType = new String(source.SpType);
         }
@@ -306,6 +332,7 @@ public class SavingPlanOverviewDetail extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "SpId", this.SpId);
         this.setParamSimple(map, prefix + "SpType", this.SpType);
         this.setParamSimple(map, prefix + "PayAmount", this.PayAmount);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);

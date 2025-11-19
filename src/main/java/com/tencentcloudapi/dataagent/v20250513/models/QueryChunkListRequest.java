@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class QueryChunkListRequest extends AbstractModel {
 
     /**
-    * 默认 1 表示第一页
+    * 表示第一页
     */
     @SerializedName("Page")
     @Expose
     private Long Page;
 
     /**
-    * 	 默认 10 一页展示 10 条
+    * 默认一页展示 10 条
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-     * Get 默认 1 表示第一页 
-     * @return Page 默认 1 表示第一页
+     * Get 表示第一页 
+     * @return Page 表示第一页
      */
     public Long getPage() {
         return this.Page;
     }
 
     /**
-     * Set 默认 1 表示第一页
-     * @param Page 默认 1 表示第一页
+     * Set 表示第一页
+     * @param Page 表示第一页
      */
     public void setPage(Long Page) {
         this.Page = Page;
     }
 
     /**
-     * Get 	 默认 10 一页展示 10 条 
-     * @return PageSize 	 默认 10 一页展示 10 条
+     * Get 默认一页展示 10 条 
+     * @return PageSize 默认一页展示 10 条
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 	 默认 10 一页展示 10 条
-     * @param PageSize 	 默认 10 一页展示 10 条
+     * Set 默认一页展示 10 条
+     * @param PageSize 默认一页展示 10 条
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;

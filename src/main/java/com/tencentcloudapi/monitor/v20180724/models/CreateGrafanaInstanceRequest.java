@@ -38,7 +38,8 @@ public class CreateGrafanaInstanceRequest extends AbstractModel {
     private String VpcId;
 
     /**
-    * 子网 ID 数组(VPC ID下的子网 ID，只取第一个)
+    * 子网 ID 数组(VPC ID下的子网 ID，只取第一个)。
+注意：并不是所有可用区都可用（可通过 monitor:DescribePrometheusZones 接口获取可用区状态，选择 ZoneState 和ZoneResourceState 都为1的可用区）
     */
     @SerializedName("SubnetIds")
     @Expose
@@ -105,16 +106,20 @@ public class CreateGrafanaInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 子网 ID 数组(VPC ID下的子网 ID，只取第一个) 
-     * @return SubnetIds 子网 ID 数组(VPC ID下的子网 ID，只取第一个)
+     * Get 子网 ID 数组(VPC ID下的子网 ID，只取第一个)。
+注意：并不是所有可用区都可用（可通过 monitor:DescribePrometheusZones 接口获取可用区状态，选择 ZoneState 和ZoneResourceState 都为1的可用区） 
+     * @return SubnetIds 子网 ID 数组(VPC ID下的子网 ID，只取第一个)。
+注意：并不是所有可用区都可用（可通过 monitor:DescribePrometheusZones 接口获取可用区状态，选择 ZoneState 和ZoneResourceState 都为1的可用区）
      */
     public String [] getSubnetIds() {
         return this.SubnetIds;
     }
 
     /**
-     * Set 子网 ID 数组(VPC ID下的子网 ID，只取第一个)
-     * @param SubnetIds 子网 ID 数组(VPC ID下的子网 ID，只取第一个)
+     * Set 子网 ID 数组(VPC ID下的子网 ID，只取第一个)。
+注意：并不是所有可用区都可用（可通过 monitor:DescribePrometheusZones 接口获取可用区状态，选择 ZoneState 和ZoneResourceState 都为1的可用区）
+     * @param SubnetIds 子网 ID 数组(VPC ID下的子网 ID，只取第一个)。
+注意：并不是所有可用区都可用（可通过 monitor:DescribePrometheusZones 接口获取可用区状态，选择 ZoneState 和ZoneResourceState 都为1的可用区）
      */
     public void setSubnetIds(String [] SubnetIds) {
         this.SubnetIds = SubnetIds;

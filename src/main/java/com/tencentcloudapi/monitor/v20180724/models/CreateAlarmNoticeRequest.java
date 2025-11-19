@@ -80,6 +80,13 @@ public class CreateAlarmNoticeRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
+    * 是否免登录，0-否，1-是
+    */
+    @SerializedName("IsLoginFree")
+    @Expose
+    private Long IsLoginFree;
+
+    /**
      * Get 模块名，这里填“monitor” 
      * @return Module 模块名，这里填“monitor”
      */
@@ -207,6 +214,22 @@ public class CreateAlarmNoticeRequest extends AbstractModel {
         this.Tags = Tags;
     }
 
+    /**
+     * Get 是否免登录，0-否，1-是 
+     * @return IsLoginFree 是否免登录，0-否，1-是
+     */
+    public Long getIsLoginFree() {
+        return this.IsLoginFree;
+    }
+
+    /**
+     * Set 是否免登录，0-否，1-是
+     * @param IsLoginFree 是否免登录，0-否，1-是
+     */
+    public void setIsLoginFree(Long IsLoginFree) {
+        this.IsLoginFree = IsLoginFree;
+    }
+
     public CreateAlarmNoticeRequest() {
     }
 
@@ -251,6 +274,9 @@ public class CreateAlarmNoticeRequest extends AbstractModel {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.IsLoginFree != null) {
+            this.IsLoginFree = new Long(source.IsLoginFree);
+        }
     }
 
 
@@ -266,6 +292,7 @@ public class CreateAlarmNoticeRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "URLNotices.", this.URLNotices);
         this.setParamArrayObj(map, prefix + "CLSNotices.", this.CLSNotices);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "IsLoginFree", this.IsLoginFree);
 
     }
 }

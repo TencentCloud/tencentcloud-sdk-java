@@ -46,6 +46,7 @@ public class AssociateNatGatewayAddressRequest extends AbstractModel {
 
     /**
     * 弹性IP可用区，自动分配弹性IP时传递。
+其中产品可用区查询接口为[查询产品可用区列表](https://cloud.tencent.com/document/product/1596/77929)
     */
     @SerializedName("Zone")
     @Expose
@@ -71,6 +72,13 @@ public class AssociateNatGatewayAddressRequest extends AbstractModel {
     @SerializedName("PublicIpFromSameZone")
     @Expose
     private Boolean PublicIpFromSameZone;
+
+    /**
+    * 启用或者禁用NAT网关绑定的EIP
+    */
+    @SerializedName("IpAddressEnableMode")
+    @Expose
+    private Boolean IpAddressEnableMode;
 
     /**
      * Get NAT网关的ID，形如：`nat-df45454`。 
@@ -121,8 +129,10 @@ public class AssociateNatGatewayAddressRequest extends AbstractModel {
     }
 
     /**
-     * Get 弹性IP可用区，自动分配弹性IP时传递。 
+     * Get 弹性IP可用区，自动分配弹性IP时传递。
+其中产品可用区查询接口为[查询产品可用区列表](https://cloud.tencent.com/document/product/1596/77929) 
      * @return Zone 弹性IP可用区，自动分配弹性IP时传递。
+其中产品可用区查询接口为[查询产品可用区列表](https://cloud.tencent.com/document/product/1596/77929)
      */
     public String getZone() {
         return this.Zone;
@@ -130,7 +140,9 @@ public class AssociateNatGatewayAddressRequest extends AbstractModel {
 
     /**
      * Set 弹性IP可用区，自动分配弹性IP时传递。
+其中产品可用区查询接口为[查询产品可用区列表](https://cloud.tencent.com/document/product/1596/77929)
      * @param Zone 弹性IP可用区，自动分配弹性IP时传递。
+其中产品可用区查询接口为[查询产品可用区列表](https://cloud.tencent.com/document/product/1596/77929)
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
@@ -184,6 +196,22 @@ public class AssociateNatGatewayAddressRequest extends AbstractModel {
         this.PublicIpFromSameZone = PublicIpFromSameZone;
     }
 
+    /**
+     * Get 启用或者禁用NAT网关绑定的EIP 
+     * @return IpAddressEnableMode 启用或者禁用NAT网关绑定的EIP
+     */
+    public Boolean getIpAddressEnableMode() {
+        return this.IpAddressEnableMode;
+    }
+
+    /**
+     * Set 启用或者禁用NAT网关绑定的EIP
+     * @param IpAddressEnableMode 启用或者禁用NAT网关绑定的EIP
+     */
+    public void setIpAddressEnableMode(Boolean IpAddressEnableMode) {
+        this.IpAddressEnableMode = IpAddressEnableMode;
+    }
+
     public AssociateNatGatewayAddressRequest() {
     }
 
@@ -216,6 +244,9 @@ public class AssociateNatGatewayAddressRequest extends AbstractModel {
         if (source.PublicIpFromSameZone != null) {
             this.PublicIpFromSameZone = new Boolean(source.PublicIpFromSameZone);
         }
+        if (source.IpAddressEnableMode != null) {
+            this.IpAddressEnableMode = new Boolean(source.IpAddressEnableMode);
+        }
     }
 
 
@@ -230,6 +261,7 @@ public class AssociateNatGatewayAddressRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "StockPublicIpAddressesBandwidthOut", this.StockPublicIpAddressesBandwidthOut);
         this.setParamSimple(map, prefix + "PublicIpAddressesBandwidthOut", this.PublicIpAddressesBandwidthOut);
         this.setParamSimple(map, prefix + "PublicIpFromSameZone", this.PublicIpFromSameZone);
+        this.setParamSimple(map, prefix + "IpAddressEnableMode", this.IpAddressEnableMode);
 
     }
 }

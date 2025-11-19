@@ -31,7 +31,7 @@ public class ModifyNatGatewaySourceIpTranslationNatRuleRequest extends AbstractM
     private String NatGatewayId;
 
     /**
-    * NAT网关的SNAT转换规则。
+    * NAT网关的SNAT转换规则。仅支持根据指定的NatGatewaySnatId修改PublicIpAddresses或Description。
     */
     @SerializedName("SourceIpTranslationNatRule")
     @Expose
@@ -54,16 +54,16 @@ public class ModifyNatGatewaySourceIpTranslationNatRuleRequest extends AbstractM
     }
 
     /**
-     * Get NAT网关的SNAT转换规则。 
-     * @return SourceIpTranslationNatRule NAT网关的SNAT转换规则。
+     * Get NAT网关的SNAT转换规则。仅支持根据指定的NatGatewaySnatId修改PublicIpAddresses或Description。 
+     * @return SourceIpTranslationNatRule NAT网关的SNAT转换规则。仅支持根据指定的NatGatewaySnatId修改PublicIpAddresses或Description。
      */
     public SourceIpTranslationNatRule getSourceIpTranslationNatRule() {
         return this.SourceIpTranslationNatRule;
     }
 
     /**
-     * Set NAT网关的SNAT转换规则。
-     * @param SourceIpTranslationNatRule NAT网关的SNAT转换规则。
+     * Set NAT网关的SNAT转换规则。仅支持根据指定的NatGatewaySnatId修改PublicIpAddresses或Description。
+     * @param SourceIpTranslationNatRule NAT网关的SNAT转换规则。仅支持根据指定的NatGatewaySnatId修改PublicIpAddresses或Description。
      */
     public void setSourceIpTranslationNatRule(SourceIpTranslationNatRule SourceIpTranslationNatRule) {
         this.SourceIpTranslationNatRule = SourceIpTranslationNatRule;

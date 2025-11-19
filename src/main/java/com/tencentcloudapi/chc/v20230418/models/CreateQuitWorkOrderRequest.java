@@ -101,6 +101,41 @@ public class CreateQuitWorkOrderRequest extends AbstractModel {
     private CustomerReceipt CustomerReceipt;
 
     /**
+    * 楼宇名
+    */
+    @SerializedName("Building")
+    @Expose
+    private String Building;
+
+    /**
+    * 机房管理单元id
+    */
+    @SerializedName("IdcUnitId")
+    @Expose
+    private String IdcUnitId;
+
+    /**
+    * 运营商
+    */
+    @SerializedName("Isp")
+    @Expose
+    private String Isp;
+
+    /**
+    * 放行邮件目的邮箱
+    */
+    @SerializedName("EmailSet")
+    @Expose
+    private String [] EmailSet;
+
+    /**
+    * 到访原因
+    */
+    @SerializedName("FactorSet")
+    @Expose
+    private String [] FactorSet;
+
+    /**
      * Get 机房id 
      * @return IdcId 机房id
      */
@@ -276,6 +311,86 @@ public class CreateQuitWorkOrderRequest extends AbstractModel {
         this.CustomerReceipt = CustomerReceipt;
     }
 
+    /**
+     * Get 楼宇名 
+     * @return Building 楼宇名
+     */
+    public String getBuilding() {
+        return this.Building;
+    }
+
+    /**
+     * Set 楼宇名
+     * @param Building 楼宇名
+     */
+    public void setBuilding(String Building) {
+        this.Building = Building;
+    }
+
+    /**
+     * Get 机房管理单元id 
+     * @return IdcUnitId 机房管理单元id
+     */
+    public String getIdcUnitId() {
+        return this.IdcUnitId;
+    }
+
+    /**
+     * Set 机房管理单元id
+     * @param IdcUnitId 机房管理单元id
+     */
+    public void setIdcUnitId(String IdcUnitId) {
+        this.IdcUnitId = IdcUnitId;
+    }
+
+    /**
+     * Get 运营商 
+     * @return Isp 运营商
+     */
+    public String getIsp() {
+        return this.Isp;
+    }
+
+    /**
+     * Set 运营商
+     * @param Isp 运营商
+     */
+    public void setIsp(String Isp) {
+        this.Isp = Isp;
+    }
+
+    /**
+     * Get 放行邮件目的邮箱 
+     * @return EmailSet 放行邮件目的邮箱
+     */
+    public String [] getEmailSet() {
+        return this.EmailSet;
+    }
+
+    /**
+     * Set 放行邮件目的邮箱
+     * @param EmailSet 放行邮件目的邮箱
+     */
+    public void setEmailSet(String [] EmailSet) {
+        this.EmailSet = EmailSet;
+    }
+
+    /**
+     * Get 到访原因 
+     * @return FactorSet 到访原因
+     */
+    public String [] getFactorSet() {
+        return this.FactorSet;
+    }
+
+    /**
+     * Set 到访原因
+     * @param FactorSet 到访原因
+     */
+    public void setFactorSet(String [] FactorSet) {
+        this.FactorSet = FactorSet;
+    }
+
     public CreateQuitWorkOrderRequest() {
     }
 
@@ -320,6 +435,27 @@ public class CreateQuitWorkOrderRequest extends AbstractModel {
         if (source.CustomerReceipt != null) {
             this.CustomerReceipt = new CustomerReceipt(source.CustomerReceipt);
         }
+        if (source.Building != null) {
+            this.Building = new String(source.Building);
+        }
+        if (source.IdcUnitId != null) {
+            this.IdcUnitId = new String(source.IdcUnitId);
+        }
+        if (source.Isp != null) {
+            this.Isp = new String(source.Isp);
+        }
+        if (source.EmailSet != null) {
+            this.EmailSet = new String[source.EmailSet.length];
+            for (int i = 0; i < source.EmailSet.length; i++) {
+                this.EmailSet[i] = new String(source.EmailSet[i]);
+            }
+        }
+        if (source.FactorSet != null) {
+            this.FactorSet = new String[source.FactorSet.length];
+            for (int i = 0; i < source.FactorSet.length; i++) {
+                this.FactorSet[i] = new String(source.FactorSet[i]);
+            }
+        }
     }
 
 
@@ -338,6 +474,11 @@ public class CreateQuitWorkOrderRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamObj(map, prefix + "LogisticsReceipt.", this.LogisticsReceipt);
         this.setParamObj(map, prefix + "CustomerReceipt.", this.CustomerReceipt);
+        this.setParamSimple(map, prefix + "Building", this.Building);
+        this.setParamSimple(map, prefix + "IdcUnitId", this.IdcUnitId);
+        this.setParamSimple(map, prefix + "Isp", this.Isp);
+        this.setParamArraySimple(map, prefix + "EmailSet.", this.EmailSet);
+        this.setParamArraySimple(map, prefix + "FactorSet.", this.FactorSet);
 
     }
 }

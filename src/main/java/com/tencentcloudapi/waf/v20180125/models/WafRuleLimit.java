@@ -115,6 +115,20 @@ public class WafRuleLimit extends AbstractModel {
     private Long TrafficMarking;
 
     /**
+    * 批量cc
+    */
+    @SerializedName("BatchCC")
+    @Expose
+    private Long BatchCC;
+
+    /**
+    * 批量session
+    */
+    @SerializedName("BatchSession")
+    @Expose
+    private Long BatchSession;
+
+    /**
      * Get 自定义CC的规格 
      * @return CC 自定义CC的规格
      */
@@ -322,6 +336,38 @@ public class WafRuleLimit extends AbstractModel {
         this.TrafficMarking = TrafficMarking;
     }
 
+    /**
+     * Get 批量cc 
+     * @return BatchCC 批量cc
+     */
+    public Long getBatchCC() {
+        return this.BatchCC;
+    }
+
+    /**
+     * Set 批量cc
+     * @param BatchCC 批量cc
+     */
+    public void setBatchCC(Long BatchCC) {
+        this.BatchCC = BatchCC;
+    }
+
+    /**
+     * Get 批量session 
+     * @return BatchSession 批量session
+     */
+    public Long getBatchSession() {
+        return this.BatchSession;
+    }
+
+    /**
+     * Set 批量session
+     * @param BatchSession 批量session
+     */
+    public void setBatchSession(Long BatchSession) {
+        this.BatchSession = BatchSession;
+    }
+
     public WafRuleLimit() {
     }
 
@@ -369,6 +415,12 @@ public class WafRuleLimit extends AbstractModel {
         if (source.TrafficMarking != null) {
             this.TrafficMarking = new Long(source.TrafficMarking);
         }
+        if (source.BatchCC != null) {
+            this.BatchCC = new Long(source.BatchCC);
+        }
+        if (source.BatchSession != null) {
+            this.BatchSession = new Long(source.BatchSession);
+        }
     }
 
 
@@ -389,6 +441,8 @@ public class WafRuleLimit extends AbstractModel {
         this.setParamSimple(map, prefix + "ApiSecurity", this.ApiSecurity);
         this.setParamSimple(map, prefix + "ClientMsg", this.ClientMsg);
         this.setParamSimple(map, prefix + "TrafficMarking", this.TrafficMarking);
+        this.setParamSimple(map, prefix + "BatchCC", this.BatchCC);
+        this.setParamSimple(map, prefix + "BatchSession", this.BatchSession);
 
     }
 }

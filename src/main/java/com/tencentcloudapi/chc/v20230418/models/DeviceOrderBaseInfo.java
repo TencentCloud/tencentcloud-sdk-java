@@ -136,6 +136,27 @@ public class DeviceOrderBaseInfo extends AbstractModel {
     private LogisticsReceipt LogisticsReceipt;
 
     /**
+    * 涉及物资放行时的楼宇
+    */
+    @SerializedName("Building")
+    @Expose
+    private String Building;
+
+    /**
+    * 物资放行抄送邮箱
+    */
+    @SerializedName("EmailSet")
+    @Expose
+    private String [] EmailSet;
+
+    /**
+    * 物资放行到访原因
+    */
+    @SerializedName("FactorSet")
+    @Expose
+    private String [] FactorSet;
+
+    /**
      * Get 机房id 
      * @return IdcId 机房id
      */
@@ -391,6 +412,54 @@ public class DeviceOrderBaseInfo extends AbstractModel {
         this.LogisticsReceipt = LogisticsReceipt;
     }
 
+    /**
+     * Get 涉及物资放行时的楼宇 
+     * @return Building 涉及物资放行时的楼宇
+     */
+    public String getBuilding() {
+        return this.Building;
+    }
+
+    /**
+     * Set 涉及物资放行时的楼宇
+     * @param Building 涉及物资放行时的楼宇
+     */
+    public void setBuilding(String Building) {
+        this.Building = Building;
+    }
+
+    /**
+     * Get 物资放行抄送邮箱 
+     * @return EmailSet 物资放行抄送邮箱
+     */
+    public String [] getEmailSet() {
+        return this.EmailSet;
+    }
+
+    /**
+     * Set 物资放行抄送邮箱
+     * @param EmailSet 物资放行抄送邮箱
+     */
+    public void setEmailSet(String [] EmailSet) {
+        this.EmailSet = EmailSet;
+    }
+
+    /**
+     * Get 物资放行到访原因 
+     * @return FactorSet 物资放行到访原因
+     */
+    public String [] getFactorSet() {
+        return this.FactorSet;
+    }
+
+    /**
+     * Set 物资放行到访原因
+     * @param FactorSet 物资放行到访原因
+     */
+    public void setFactorSet(String [] FactorSet) {
+        this.FactorSet = FactorSet;
+    }
+
     public DeviceOrderBaseInfo() {
     }
 
@@ -447,6 +516,21 @@ public class DeviceOrderBaseInfo extends AbstractModel {
         if (source.LogisticsReceipt != null) {
             this.LogisticsReceipt = new LogisticsReceipt(source.LogisticsReceipt);
         }
+        if (source.Building != null) {
+            this.Building = new String(source.Building);
+        }
+        if (source.EmailSet != null) {
+            this.EmailSet = new String[source.EmailSet.length];
+            for (int i = 0; i < source.EmailSet.length; i++) {
+                this.EmailSet[i] = new String(source.EmailSet[i]);
+            }
+        }
+        if (source.FactorSet != null) {
+            this.FactorSet = new String[source.FactorSet.length];
+            for (int i = 0; i < source.FactorSet.length; i++) {
+                this.FactorSet[i] = new String(source.FactorSet[i]);
+            }
+        }
     }
 
 
@@ -470,6 +554,9 @@ public class DeviceOrderBaseInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "HandoverMethod", this.HandoverMethod);
         this.setParamObj(map, prefix + "CustomerReceipt.", this.CustomerReceipt);
         this.setParamObj(map, prefix + "LogisticsReceipt.", this.LogisticsReceipt);
+        this.setParamSimple(map, prefix + "Building", this.Building);
+        this.setParamArraySimple(map, prefix + "EmailSet.", this.EmailSet);
+        this.setParamArraySimple(map, prefix + "FactorSet.", this.FactorSet);
 
     }
 }

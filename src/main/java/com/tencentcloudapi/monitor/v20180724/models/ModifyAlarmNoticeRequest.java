@@ -87,6 +87,13 @@ public class ModifyAlarmNoticeRequest extends AbstractModel {
     private String [] PolicyIds;
 
     /**
+    * 是否免登录，0-否，1-是
+    */
+    @SerializedName("IsLoginFree")
+    @Expose
+    private Long IsLoginFree;
+
+    /**
      * Get 模块名，这里填“monitor” 
      * @return Module 模块名，这里填“monitor”
      */
@@ -230,6 +237,22 @@ public class ModifyAlarmNoticeRequest extends AbstractModel {
         this.PolicyIds = PolicyIds;
     }
 
+    /**
+     * Get 是否免登录，0-否，1-是 
+     * @return IsLoginFree 是否免登录，0-否，1-是
+     */
+    public Long getIsLoginFree() {
+        return this.IsLoginFree;
+    }
+
+    /**
+     * Set 是否免登录，0-否，1-是
+     * @param IsLoginFree 是否免登录，0-否，1-是
+     */
+    public void setIsLoginFree(Long IsLoginFree) {
+        this.IsLoginFree = IsLoginFree;
+    }
+
     public ModifyAlarmNoticeRequest() {
     }
 
@@ -277,6 +300,9 @@ public class ModifyAlarmNoticeRequest extends AbstractModel {
                 this.PolicyIds[i] = new String(source.PolicyIds[i]);
             }
         }
+        if (source.IsLoginFree != null) {
+            this.IsLoginFree = new Long(source.IsLoginFree);
+        }
     }
 
 
@@ -293,6 +319,7 @@ public class ModifyAlarmNoticeRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "URLNotices.", this.URLNotices);
         this.setParamArrayObj(map, prefix + "CLSNotices.", this.CLSNotices);
         this.setParamArraySimple(map, prefix + "PolicyIds.", this.PolicyIds);
+        this.setParamSimple(map, prefix + "IsLoginFree", this.IsLoginFree);
 
     }
 }

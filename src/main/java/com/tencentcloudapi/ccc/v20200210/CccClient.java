@@ -786,6 +786,17 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *暂停未完成的自动外呼任务
+     * @param req PauseAutoCalloutTaskRequest
+     * @return PauseAutoCalloutTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public PauseAutoCalloutTaskResponse PauseAutoCalloutTask(PauseAutoCalloutTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "PauseAutoCalloutTask", PauseAutoCalloutTaskResponse.class);
+    }
+
+    /**
      *暂停预测式外呼任务
      * @param req PausePredictiveDialingCampaignRequest
      * @return PausePredictiveDialingCampaignResponse
@@ -816,6 +827,17 @@ public class CccClient extends AbstractClient{
     public RestoreMemberOnlineResponse RestoreMemberOnline(RestoreMemberOnlineRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RestoreMemberOnline", RestoreMemberOnlineResponse.class);
+    }
+
+    /**
+     *暂停未完成的自动外呼任务
+     * @param req ResumeAutoCalloutTaskRequest
+     * @return ResumeAutoCalloutTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResumeAutoCalloutTaskResponse ResumeAutoCalloutTask(ResumeAutoCalloutTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResumeAutoCalloutTask", ResumeAutoCalloutTaskResponse.class);
     }
 
     /**

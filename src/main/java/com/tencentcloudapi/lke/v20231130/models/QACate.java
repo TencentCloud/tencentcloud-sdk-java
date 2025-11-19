@@ -85,6 +85,14 @@ public class QACate extends AbstractModel {
     private QACate [] Children;
 
     /**
+    * 是否是叶子节点
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsLeaf")
+    @Expose
+    private Boolean IsLeaf;
+
+    /**
      * Get QA分类的业务ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CateBizId QA分类的业务ID
@@ -244,6 +252,26 @@ public class QACate extends AbstractModel {
         this.Children = Children;
     }
 
+    /**
+     * Get 是否是叶子节点
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsLeaf 是否是叶子节点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsLeaf() {
+        return this.IsLeaf;
+    }
+
+    /**
+     * Set 是否是叶子节点
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsLeaf 是否是叶子节点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsLeaf(Boolean IsLeaf) {
+        this.IsLeaf = IsLeaf;
+    }
+
     public QACate() {
     }
 
@@ -276,6 +304,9 @@ public class QACate extends AbstractModel {
                 this.Children[i] = new QACate(source.Children[i]);
             }
         }
+        if (source.IsLeaf != null) {
+            this.IsLeaf = new Boolean(source.IsLeaf);
+        }
     }
 
 
@@ -290,6 +321,7 @@ public class QACate extends AbstractModel {
         this.setParamSimple(map, prefix + "CanEdit", this.CanEdit);
         this.setParamSimple(map, prefix + "CanDelete", this.CanDelete);
         this.setParamArrayObj(map, prefix + "Children.", this.Children);
+        this.setParamSimple(map, prefix + "IsLeaf", this.IsLeaf);
 
     }
 }

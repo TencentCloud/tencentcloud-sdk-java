@@ -171,6 +171,62 @@ public class CCRuleItems extends AbstractModel {
     private Long ActionRatio;
 
     /**
+    * 批量cc规则配置的批量域名
+    */
+    @SerializedName("Domains")
+    @Expose
+    private String [] Domains;
+
+    /**
+    * 批量cc规则使用的批量防护组
+    */
+    @SerializedName("GroupIds")
+    @Expose
+    private Long [] GroupIds;
+
+    /**
+    * 定时任务类型
+    */
+    @SerializedName("JobType")
+    @Expose
+    private String JobType;
+
+    /**
+    * 定时任务配置
+    */
+    @SerializedName("JobDateTime")
+    @Expose
+    private JobDateTime JobDateTime;
+
+    /**
+    * 定时任务类型：month or week
+    */
+    @SerializedName("CronType")
+    @Expose
+    private String CronType;
+
+    /**
+    * 过期时间
+    */
+    @SerializedName("ExpireTime")
+    @Expose
+    private Long ExpireTime;
+
+    /**
+    * 是否生效
+    */
+    @SerializedName("ValidStatus")
+    @Expose
+    private Long ValidStatus;
+
+    /**
+    * 来源：批量还是单个规则
+    */
+    @SerializedName("Source")
+    @Expose
+    private String Source;
+
+    /**
      * Get 名字 
      * @return Name 名字
      */
@@ -506,6 +562,134 @@ public class CCRuleItems extends AbstractModel {
         this.ActionRatio = ActionRatio;
     }
 
+    /**
+     * Get 批量cc规则配置的批量域名 
+     * @return Domains 批量cc规则配置的批量域名
+     */
+    public String [] getDomains() {
+        return this.Domains;
+    }
+
+    /**
+     * Set 批量cc规则配置的批量域名
+     * @param Domains 批量cc规则配置的批量域名
+     */
+    public void setDomains(String [] Domains) {
+        this.Domains = Domains;
+    }
+
+    /**
+     * Get 批量cc规则使用的批量防护组 
+     * @return GroupIds 批量cc规则使用的批量防护组
+     */
+    public Long [] getGroupIds() {
+        return this.GroupIds;
+    }
+
+    /**
+     * Set 批量cc规则使用的批量防护组
+     * @param GroupIds 批量cc规则使用的批量防护组
+     */
+    public void setGroupIds(Long [] GroupIds) {
+        this.GroupIds = GroupIds;
+    }
+
+    /**
+     * Get 定时任务类型 
+     * @return JobType 定时任务类型
+     */
+    public String getJobType() {
+        return this.JobType;
+    }
+
+    /**
+     * Set 定时任务类型
+     * @param JobType 定时任务类型
+     */
+    public void setJobType(String JobType) {
+        this.JobType = JobType;
+    }
+
+    /**
+     * Get 定时任务配置 
+     * @return JobDateTime 定时任务配置
+     */
+    public JobDateTime getJobDateTime() {
+        return this.JobDateTime;
+    }
+
+    /**
+     * Set 定时任务配置
+     * @param JobDateTime 定时任务配置
+     */
+    public void setJobDateTime(JobDateTime JobDateTime) {
+        this.JobDateTime = JobDateTime;
+    }
+
+    /**
+     * Get 定时任务类型：month or week 
+     * @return CronType 定时任务类型：month or week
+     */
+    public String getCronType() {
+        return this.CronType;
+    }
+
+    /**
+     * Set 定时任务类型：month or week
+     * @param CronType 定时任务类型：month or week
+     */
+    public void setCronType(String CronType) {
+        this.CronType = CronType;
+    }
+
+    /**
+     * Get 过期时间 
+     * @return ExpireTime 过期时间
+     */
+    public Long getExpireTime() {
+        return this.ExpireTime;
+    }
+
+    /**
+     * Set 过期时间
+     * @param ExpireTime 过期时间
+     */
+    public void setExpireTime(Long ExpireTime) {
+        this.ExpireTime = ExpireTime;
+    }
+
+    /**
+     * Get 是否生效 
+     * @return ValidStatus 是否生效
+     */
+    public Long getValidStatus() {
+        return this.ValidStatus;
+    }
+
+    /**
+     * Set 是否生效
+     * @param ValidStatus 是否生效
+     */
+    public void setValidStatus(Long ValidStatus) {
+        this.ValidStatus = ValidStatus;
+    }
+
+    /**
+     * Get 来源：批量还是单个规则 
+     * @return Source 来源：批量还是单个规则
+     */
+    public String getSource() {
+        return this.Source;
+    }
+
+    /**
+     * Set 来源：批量还是单个规则
+     * @param Source 来源：批量还是单个规则
+     */
+    public void setSource(String Source) {
+        this.Source = Source;
+    }
+
     public CCRuleItems() {
     }
 
@@ -580,6 +764,36 @@ public class CCRuleItems extends AbstractModel {
         if (source.ActionRatio != null) {
             this.ActionRatio = new Long(source.ActionRatio);
         }
+        if (source.Domains != null) {
+            this.Domains = new String[source.Domains.length];
+            for (int i = 0; i < source.Domains.length; i++) {
+                this.Domains[i] = new String(source.Domains[i]);
+            }
+        }
+        if (source.GroupIds != null) {
+            this.GroupIds = new Long[source.GroupIds.length];
+            for (int i = 0; i < source.GroupIds.length; i++) {
+                this.GroupIds[i] = new Long(source.GroupIds[i]);
+            }
+        }
+        if (source.JobType != null) {
+            this.JobType = new String(source.JobType);
+        }
+        if (source.JobDateTime != null) {
+            this.JobDateTime = new JobDateTime(source.JobDateTime);
+        }
+        if (source.CronType != null) {
+            this.CronType = new String(source.CronType);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new Long(source.ExpireTime);
+        }
+        if (source.ValidStatus != null) {
+            this.ValidStatus = new Long(source.ValidStatus);
+        }
+        if (source.Source != null) {
+            this.Source = new String(source.Source);
+        }
     }
 
 
@@ -608,6 +822,14 @@ public class CCRuleItems extends AbstractModel {
         this.setParamSimple(map, prefix + "LogicalOp", this.LogicalOp);
         this.setParamSimple(map, prefix + "PageId", this.PageId);
         this.setParamSimple(map, prefix + "ActionRatio", this.ActionRatio);
+        this.setParamArraySimple(map, prefix + "Domains.", this.Domains);
+        this.setParamArraySimple(map, prefix + "GroupIds.", this.GroupIds);
+        this.setParamSimple(map, prefix + "JobType", this.JobType);
+        this.setParamObj(map, prefix + "JobDateTime.", this.JobDateTime);
+        this.setParamSimple(map, prefix + "CronType", this.CronType);
+        this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+        this.setParamSimple(map, prefix + "ValidStatus", this.ValidStatus);
+        this.setParamSimple(map, prefix + "Source", this.Source);
 
     }
 }

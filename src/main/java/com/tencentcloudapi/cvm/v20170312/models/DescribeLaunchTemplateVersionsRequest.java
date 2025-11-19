@@ -45,7 +45,7 @@ public class DescribeLaunchTemplateVersionsRequest extends AbstractModel {
     private Long MinVersion;
 
     /**
-    * 过范围指定版本时的最大版本号，默认为30。
+    * 通过范围指定版本时的最大版本号，默认为30。
     */
     @SerializedName("MaxVersion")
     @Expose
@@ -66,7 +66,7 @@ public class DescribeLaunchTemplateVersionsRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 是否查询默认版本。该参数不可与LaunchTemplateVersions同时指定。
+    * 是否查询默认版本。默认值：false
     */
     @SerializedName("DefaultVersion")
     @Expose
@@ -121,16 +121,16 @@ public class DescribeLaunchTemplateVersionsRequest extends AbstractModel {
     }
 
     /**
-     * Get 过范围指定版本时的最大版本号，默认为30。 
-     * @return MaxVersion 过范围指定版本时的最大版本号，默认为30。
+     * Get 通过范围指定版本时的最大版本号，默认为30。 
+     * @return MaxVersion 通过范围指定版本时的最大版本号，默认为30。
      */
     public Long getMaxVersion() {
         return this.MaxVersion;
     }
 
     /**
-     * Set 过范围指定版本时的最大版本号，默认为30。
-     * @param MaxVersion 过范围指定版本时的最大版本号，默认为30。
+     * Set 通过范围指定版本时的最大版本号，默认为30。
+     * @param MaxVersion 通过范围指定版本时的最大版本号，默认为30。
      */
     public void setMaxVersion(Long MaxVersion) {
         this.MaxVersion = MaxVersion;
@@ -169,16 +169,16 @@ public class DescribeLaunchTemplateVersionsRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否查询默认版本。该参数不可与LaunchTemplateVersions同时指定。 
-     * @return DefaultVersion 是否查询默认版本。该参数不可与LaunchTemplateVersions同时指定。
+     * Get 是否查询默认版本。默认值：false 
+     * @return DefaultVersion 是否查询默认版本。默认值：false
      */
     public Boolean getDefaultVersion() {
         return this.DefaultVersion;
     }
 
     /**
-     * Set 是否查询默认版本。该参数不可与LaunchTemplateVersions同时指定。
-     * @param DefaultVersion 是否查询默认版本。该参数不可与LaunchTemplateVersions同时指定。
+     * Set 是否查询默认版本。默认值：false
+     * @param DefaultVersion 是否查询默认版本。默认值：false
      */
     public void setDefaultVersion(Boolean DefaultVersion) {
         this.DefaultVersion = DefaultVersion;

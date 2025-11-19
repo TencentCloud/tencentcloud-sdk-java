@@ -93,6 +93,13 @@ public class UnsatisfiedReply extends AbstractModel {
     private String Operator;
 
     /**
+    * 自定义反馈
+    */
+    @SerializedName("FeedbackContent")
+    @Expose
+    private String FeedbackContent;
+
+    /**
      * Get 不满意回复ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ReplyBizId 不满意回复ID
@@ -260,6 +267,22 @@ public class UnsatisfiedReply extends AbstractModel {
         this.Operator = Operator;
     }
 
+    /**
+     * Get 自定义反馈 
+     * @return FeedbackContent 自定义反馈
+     */
+    public String getFeedbackContent() {
+        return this.FeedbackContent;
+    }
+
+    /**
+     * Set 自定义反馈
+     * @param FeedbackContent 自定义反馈
+     */
+    public void setFeedbackContent(String FeedbackContent) {
+        this.FeedbackContent = FeedbackContent;
+    }
+
     public UnsatisfiedReply() {
     }
 
@@ -298,6 +321,9 @@ public class UnsatisfiedReply extends AbstractModel {
         if (source.Operator != null) {
             this.Operator = new String(source.Operator);
         }
+        if (source.FeedbackContent != null) {
+            this.FeedbackContent = new String(source.FeedbackContent);
+        }
     }
 
 
@@ -314,6 +340,7 @@ public class UnsatisfiedReply extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "Operator", this.Operator);
+        this.setParamSimple(map, prefix + "FeedbackContent", this.FeedbackContent);
 
     }
 }

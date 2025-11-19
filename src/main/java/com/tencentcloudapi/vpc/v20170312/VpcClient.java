@@ -2461,6 +2461,17 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeNatGatewayZones)用于查询NAT网关可售卖的可用区信息
+     * @param req DescribeNatGatewayZonesRequest
+     * @return DescribeNatGatewayZonesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNatGatewayZonesResponse DescribeNatGatewayZones(DescribeNatGatewayZonesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeNatGatewayZones", DescribeNatGatewayZonesResponse.class);
+    }
+
+    /**
      *本接口（DescribeNatGateways）用于查询 NAT 网关。
      * @param req DescribeNatGatewaysRequest
      * @return DescribeNatGatewaysResponse

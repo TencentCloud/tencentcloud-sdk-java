@@ -87,7 +87,8 @@ public class HostResource extends AbstractModel {
     private Long GpuAvailable;
 
     /**
-    * CDH owner
+    * CDH 拥有者
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExclusiveOwner")
     @Expose
@@ -238,16 +239,20 @@ public class HostResource extends AbstractModel {
     }
 
     /**
-     * Get CDH owner 
-     * @return ExclusiveOwner CDH owner
+     * Get CDH 拥有者
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExclusiveOwner CDH 拥有者
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExclusiveOwner() {
         return this.ExclusiveOwner;
     }
 
     /**
-     * Set CDH owner
-     * @param ExclusiveOwner CDH owner
+     * Set CDH 拥有者
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExclusiveOwner CDH 拥有者
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExclusiveOwner(String ExclusiveOwner) {
         this.ExclusiveOwner = ExclusiveOwner;

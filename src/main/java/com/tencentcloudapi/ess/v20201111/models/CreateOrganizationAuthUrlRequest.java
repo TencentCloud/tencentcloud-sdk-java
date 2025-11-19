@@ -261,6 +261,13 @@ p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，
     private JumpEvent [] JumpEvents;
 
     /**
+    * 企业证照类型：<ul><li> **USCC** :(默认)工商组织营业执照</li><li> **PRACTICELICENSEOFMEDICALINSTITUTION** :医疗机构执业许可证</li></ul>
+    */
+    @SerializedName("OrganizationIdCardType")
+    @Expose
+    private String OrganizationIdCardType;
+
+    /**
      * Get 操作人信息 
      * @return Operator 操作人信息
      */
@@ -908,6 +915,22 @@ p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，
         this.JumpEvents = JumpEvents;
     }
 
+    /**
+     * Get 企业证照类型：<ul><li> **USCC** :(默认)工商组织营业执照</li><li> **PRACTICELICENSEOFMEDICALINSTITUTION** :医疗机构执业许可证</li></ul> 
+     * @return OrganizationIdCardType 企业证照类型：<ul><li> **USCC** :(默认)工商组织营业执照</li><li> **PRACTICELICENSEOFMEDICALINSTITUTION** :医疗机构执业许可证</li></ul>
+     */
+    public String getOrganizationIdCardType() {
+        return this.OrganizationIdCardType;
+    }
+
+    /**
+     * Set 企业证照类型：<ul><li> **USCC** :(默认)工商组织营业执照</li><li> **PRACTICELICENSEOFMEDICALINSTITUTION** :医疗机构执业许可证</li></ul>
+     * @param OrganizationIdCardType 企业证照类型：<ul><li> **USCC** :(默认)工商组织营业执照</li><li> **PRACTICELICENSEOFMEDICALINSTITUTION** :医疗机构执业许可证</li></ul>
+     */
+    public void setOrganizationIdCardType(String OrganizationIdCardType) {
+        this.OrganizationIdCardType = OrganizationIdCardType;
+    }
+
     public CreateOrganizationAuthUrlRequest() {
     }
 
@@ -1003,6 +1026,9 @@ p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，
                 this.JumpEvents[i] = new JumpEvent(source.JumpEvents[i]);
             }
         }
+        if (source.OrganizationIdCardType != null) {
+            this.OrganizationIdCardType = new String(source.OrganizationIdCardType);
+        }
     }
 
 
@@ -1035,6 +1061,7 @@ p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，
         this.setParamSimple(map, prefix + "BankAccountNumber", this.BankAccountNumber);
         this.setParamSimple(map, prefix + "BankAccountNumberSame", this.BankAccountNumberSame);
         this.setParamArrayObj(map, prefix + "JumpEvents.", this.JumpEvents);
+        this.setParamSimple(map, prefix + "OrganizationIdCardType", this.OrganizationIdCardType);
 
     }
 }

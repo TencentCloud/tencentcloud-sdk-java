@@ -255,6 +255,18 @@ p.s.Endpoint如果是APP 类型，请传递JumpUrl为<font color="red">"true" </
     private JumpEvent [] JumpEvents;
 
     /**
+    * 企业证照类型：
+<ul>
+<li> **USCC** :(默认)工商组织营业执照</li>
+<li> **PRACTICELICENSEOFMEDICALINSTITUTION** :医疗机构执业许可证</li>
+</ul>
+
+    */
+    @SerializedName("ProxyOrganizationIdCardType")
+    @Expose
+    private String ProxyOrganizationIdCardType;
+
+    /**
      * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容
 此接口下面信息必填。
 <ul>
@@ -906,6 +918,42 @@ p.s.Endpoint如果是APP 类型，请传递JumpUrl为<font color="red">"true" </
         this.JumpEvents = JumpEvents;
     }
 
+    /**
+     * Get 企业证照类型：
+<ul>
+<li> **USCC** :(默认)工商组织营业执照</li>
+<li> **PRACTICELICENSEOFMEDICALINSTITUTION** :医疗机构执业许可证</li>
+</ul>
+ 
+     * @return ProxyOrganizationIdCardType 企业证照类型：
+<ul>
+<li> **USCC** :(默认)工商组织营业执照</li>
+<li> **PRACTICELICENSEOFMEDICALINSTITUTION** :医疗机构执业许可证</li>
+</ul>
+
+     */
+    public String getProxyOrganizationIdCardType() {
+        return this.ProxyOrganizationIdCardType;
+    }
+
+    /**
+     * Set 企业证照类型：
+<ul>
+<li> **USCC** :(默认)工商组织营业执照</li>
+<li> **PRACTICELICENSEOFMEDICALINSTITUTION** :医疗机构执业许可证</li>
+</ul>
+
+     * @param ProxyOrganizationIdCardType 企业证照类型：
+<ul>
+<li> **USCC** :(默认)工商组织营业执照</li>
+<li> **PRACTICELICENSEOFMEDICALINSTITUTION** :医疗机构执业许可证</li>
+</ul>
+
+     */
+    public void setProxyOrganizationIdCardType(String ProxyOrganizationIdCardType) {
+        this.ProxyOrganizationIdCardType = ProxyOrganizationIdCardType;
+    }
+
     public CreateConsoleLoginUrlRequest() {
     }
 
@@ -992,6 +1040,9 @@ p.s.Endpoint如果是APP 类型，请传递JumpUrl为<font color="red">"true" </
                 this.JumpEvents[i] = new JumpEvent(source.JumpEvents[i]);
             }
         }
+        if (source.ProxyOrganizationIdCardType != null) {
+            this.ProxyOrganizationIdCardType = new String(source.ProxyOrganizationIdCardType);
+        }
     }
 
 
@@ -1022,6 +1073,7 @@ p.s.Endpoint如果是APP 类型，请传递JumpUrl为<font color="red">"true" </
         this.setParamSimple(map, prefix + "BankAccountNumber", this.BankAccountNumber);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamArrayObj(map, prefix + "JumpEvents.", this.JumpEvents);
+        this.setParamSimple(map, prefix + "ProxyOrganizationIdCardType", this.ProxyOrganizationIdCardType);
 
     }
 }

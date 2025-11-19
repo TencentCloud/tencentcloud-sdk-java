@@ -23,6 +23,52 @@ import java.util.HashMap;
 
 public class GetSessionDetailsRequest extends AbstractModel {
 
+    /**
+    * 实例ID
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * 会话ID
+    */
+    @SerializedName("SessionId")
+    @Expose
+    private String SessionId;
+
+    /**
+     * Get 实例ID 
+     * @return InstanceId 实例ID
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 实例ID
+     * @param InstanceId 实例ID
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get 会话ID 
+     * @return SessionId 会话ID
+     */
+    public String getSessionId() {
+        return this.SessionId;
+    }
+
+    /**
+     * Set 会话ID
+     * @param SessionId 会话ID
+     */
+    public void setSessionId(String SessionId) {
+        this.SessionId = SessionId;
+    }
+
     public GetSessionDetailsRequest() {
     }
 
@@ -31,6 +77,12 @@ public class GetSessionDetailsRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public GetSessionDetailsRequest(GetSessionDetailsRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
     }
 
 
@@ -38,6 +90,8 @@ public class GetSessionDetailsRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "SessionId", this.SessionId);
 
     }
 }

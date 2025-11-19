@@ -267,6 +267,13 @@ API：通过API手动注册
     private String TransportLayerSecurity;
 
     /**
+    * 消息属性增强规则配额
+    */
+    @SerializedName("MessageEnrichmentRuleLimit")
+    @Expose
+    private Long MessageEnrichmentRuleLimit;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -838,6 +845,22 @@ API：通过API手动注册
     }
 
     /**
+     * Get 消息属性增强规则配额 
+     * @return MessageEnrichmentRuleLimit 消息属性增强规则配额
+     */
+    public Long getMessageEnrichmentRuleLimit() {
+        return this.MessageEnrichmentRuleLimit;
+    }
+
+    /**
+     * Set 消息属性增强规则配额
+     * @param MessageEnrichmentRuleLimit 消息属性增强规则配额
+     */
+    public void setMessageEnrichmentRuleLimit(Long MessageEnrichmentRuleLimit) {
+        this.MessageEnrichmentRuleLimit = MessageEnrichmentRuleLimit;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -963,6 +986,9 @@ API：通过API手动注册
         if (source.TransportLayerSecurity != null) {
             this.TransportLayerSecurity = new String(source.TransportLayerSecurity);
         }
+        if (source.MessageEnrichmentRuleLimit != null) {
+            this.MessageEnrichmentRuleLimit = new Long(source.MessageEnrichmentRuleLimit);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1007,6 +1033,7 @@ API：通过API手动注册
         this.setParamSimple(map, prefix + "TopicPrefixSlashLimit", this.TopicPrefixSlashLimit);
         this.setParamSimple(map, prefix + "MessageRate", this.MessageRate);
         this.setParamSimple(map, prefix + "TransportLayerSecurity", this.TransportLayerSecurity);
+        this.setParamSimple(map, prefix + "MessageEnrichmentRuleLimit", this.MessageEnrichmentRuleLimit);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

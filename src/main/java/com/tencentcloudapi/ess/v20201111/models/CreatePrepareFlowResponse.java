@@ -38,6 +38,13 @@ public class CreatePrepareFlowResponse extends AbstractModel {
     private String FlowId;
 
     /**
+    * 临时的草稿id（还未实际保存草稿），用户可以记录此字段对应后续页面保存的草稿，若在页面上未保存草稿，则此字段无效。
+    */
+    @SerializedName("DraftId")
+    @Expose
+    private String DraftId;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -77,6 +84,22 @@ public class CreatePrepareFlowResponse extends AbstractModel {
     }
 
     /**
+     * Get 临时的草稿id（还未实际保存草稿），用户可以记录此字段对应后续页面保存的草稿，若在页面上未保存草稿，则此字段无效。 
+     * @return DraftId 临时的草稿id（还未实际保存草稿），用户可以记录此字段对应后续页面保存的草稿，若在页面上未保存草稿，则此字段无效。
+     */
+    public String getDraftId() {
+        return this.DraftId;
+    }
+
+    /**
+     * Set 临时的草稿id（还未实际保存草稿），用户可以记录此字段对应后续页面保存的草稿，若在页面上未保存草稿，则此字段无效。
+     * @param DraftId 临时的草稿id（还未实际保存草稿），用户可以记录此字段对应后续页面保存的草稿，若在页面上未保存草稿，则此字段无效。
+     */
+    public void setDraftId(String DraftId) {
+        this.DraftId = DraftId;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -106,6 +129,9 @@ public class CreatePrepareFlowResponse extends AbstractModel {
         if (source.FlowId != null) {
             this.FlowId = new String(source.FlowId);
         }
+        if (source.DraftId != null) {
+            this.DraftId = new String(source.DraftId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -118,6 +144,7 @@ public class CreatePrepareFlowResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
+        this.setParamSimple(map, prefix + "DraftId", this.DraftId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -192,6 +192,13 @@ public class UpsertCCRuleRequest extends AbstractModel {
     private Long ActionRatio;
 
     /**
+    * 规则来源
+    */
+    @SerializedName("Source")
+    @Expose
+    private String Source;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -575,6 +582,22 @@ public class UpsertCCRuleRequest extends AbstractModel {
         this.ActionRatio = ActionRatio;
     }
 
+    /**
+     * Get 规则来源 
+     * @return Source 规则来源
+     */
+    public String getSource() {
+        return this.Source;
+    }
+
+    /**
+     * Set 规则来源
+     * @param Source 规则来源
+     */
+    public void setSource(String Source) {
+        this.Source = Source;
+    }
+
     public UpsertCCRuleRequest() {
     }
 
@@ -658,6 +681,9 @@ public class UpsertCCRuleRequest extends AbstractModel {
         if (source.ActionRatio != null) {
             this.ActionRatio = new Long(source.ActionRatio);
         }
+        if (source.Source != null) {
+            this.Source = new String(source.Source);
+        }
     }
 
 
@@ -689,6 +715,7 @@ public class UpsertCCRuleRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "LogicalOp", this.LogicalOp);
         this.setParamSimple(map, prefix + "PageId", this.PageId);
         this.setParamSimple(map, prefix + "ActionRatio", this.ActionRatio);
+        this.setParamSimple(map, prefix + "Source", this.Source);
 
     }
 }

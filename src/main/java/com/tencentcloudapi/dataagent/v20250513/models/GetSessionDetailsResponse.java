@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class GetSessionDetailsResponse extends AbstractModel {
 
     /**
+    * 会话记录详情
+    */
+    @SerializedName("RecordList")
+    @Expose
+    private Record [] RecordList;
+
+    /**
     * 记录总数
     */
     @SerializedName("RecordCount")
@@ -43,6 +50,22 @@ public class GetSessionDetailsResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 会话记录详情 
+     * @return RecordList 会话记录详情
+     */
+    public Record [] getRecordList() {
+        return this.RecordList;
+    }
+
+    /**
+     * Set 会话记录详情
+     * @param RecordList 会话记录详情
+     */
+    public void setRecordList(Record [] RecordList) {
+        this.RecordList = RecordList;
+    }
 
     /**
      * Get 记录总数 
@@ -100,6 +123,12 @@ public class GetSessionDetailsResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public GetSessionDetailsResponse(GetSessionDetailsResponse source) {
+        if (source.RecordList != null) {
+            this.RecordList = new Record[source.RecordList.length];
+            for (int i = 0; i < source.RecordList.length; i++) {
+                this.RecordList[i] = new Record(source.RecordList[i]);
+            }
+        }
         if (source.RecordCount != null) {
             this.RecordCount = new Long(source.RecordCount);
         }
@@ -116,6 +145,7 @@ public class GetSessionDetailsResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "RecordList.", this.RecordList);
         this.setParamSimple(map, prefix + "RecordCount", this.RecordCount);
         this.setParamSimple(map, prefix + "RunRecord", this.RunRecord);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);

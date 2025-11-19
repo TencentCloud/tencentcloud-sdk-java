@@ -111,6 +111,13 @@ public class DatasourceConnectionConfig extends AbstractModel {
     private TccHive TccHive;
 
     /**
+    * MongoDB 数据源
+    */
+    @SerializedName("MongoDB")
+    @Expose
+    private DataSourceInfo MongoDB;
+
+    /**
      * Get Mysql数据源连接的属性
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Mysql Mysql数据源连接的属性
@@ -326,6 +333,22 @@ public class DatasourceConnectionConfig extends AbstractModel {
         this.TccHive = TccHive;
     }
 
+    /**
+     * Get MongoDB 数据源 
+     * @return MongoDB MongoDB 数据源
+     */
+    public DataSourceInfo getMongoDB() {
+        return this.MongoDB;
+    }
+
+    /**
+     * Set MongoDB 数据源
+     * @param MongoDB MongoDB 数据源
+     */
+    public void setMongoDB(DataSourceInfo MongoDB) {
+        this.MongoDB = MongoDB;
+    }
+
     public DatasourceConnectionConfig() {
     }
 
@@ -367,6 +390,9 @@ public class DatasourceConnectionConfig extends AbstractModel {
         if (source.TccHive != null) {
             this.TccHive = new TccHive(source.TccHive);
         }
+        if (source.MongoDB != null) {
+            this.MongoDB = new DataSourceInfo(source.MongoDB);
+        }
     }
 
 
@@ -385,6 +411,7 @@ public class DatasourceConnectionConfig extends AbstractModel {
         this.setParamObj(map, prefix + "TDSQLPostgreSql.", this.TDSQLPostgreSql);
         this.setParamObj(map, prefix + "TCHouseD.", this.TCHouseD);
         this.setParamObj(map, prefix + "TccHive.", this.TccHive);
+        this.setParamObj(map, prefix + "MongoDB.", this.MongoDB);
 
     }
 }

@@ -98,9 +98,7 @@ public class ModifyListenerRequest extends AbstractModel {
     private Long KeepaliveEnable;
 
     /**
-    * 解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
-True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
-不传则表示不修改。
+    * 重新调度功能，解绑后端服务开关，打开此开关，当解绑后端服务时触发重新调度。仅TCP/UDP监听器支持。
     */
     @SerializedName("DeregisterTargetRst")
     @Expose
@@ -153,8 +151,7 @@ True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
     private Boolean ProxyProtocol;
 
     /**
-    * 是否开启SNAT， True 表示开启 SNAT，False 表示不开启 SNAT。
-不传则表示不修改。
+    * 是否开启SNAT（源IP替换），True（开启）、False（关闭）。默认为关闭。注意：SnatEnable开启时会替换客户端源IP，此时`透传客户端源IP`选项关闭，反之亦然。
     */
     @SerializedName("SnatEnable")
     @Expose
@@ -379,24 +376,16 @@ True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
     }
 
     /**
-     * Get 解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
-True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
-不传则表示不修改。 
-     * @return DeregisterTargetRst 解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
-True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
-不传则表示不修改。
+     * Get 重新调度功能，解绑后端服务开关，打开此开关，当解绑后端服务时触发重新调度。仅TCP/UDP监听器支持。 
+     * @return DeregisterTargetRst 重新调度功能，解绑后端服务开关，打开此开关，当解绑后端服务时触发重新调度。仅TCP/UDP监听器支持。
      */
     public Boolean getDeregisterTargetRst() {
         return this.DeregisterTargetRst;
     }
 
     /**
-     * Set 解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
-True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
-不传则表示不修改。
-     * @param DeregisterTargetRst 解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
-True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
-不传则表示不修改。
+     * Set 重新调度功能，解绑后端服务开关，打开此开关，当解绑后端服务时触发重新调度。仅TCP/UDP监听器支持。
+     * @param DeregisterTargetRst 重新调度功能，解绑后端服务开关，打开此开关，当解绑后端服务时触发重新调度。仅TCP/UDP监听器支持。
      */
     public void setDeregisterTargetRst(Boolean DeregisterTargetRst) {
         this.DeregisterTargetRst = DeregisterTargetRst;
@@ -515,20 +504,16 @@ True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
     }
 
     /**
-     * Get 是否开启SNAT， True 表示开启 SNAT，False 表示不开启 SNAT。
-不传则表示不修改。 
-     * @return SnatEnable 是否开启SNAT， True 表示开启 SNAT，False 表示不开启 SNAT。
-不传则表示不修改。
+     * Get 是否开启SNAT（源IP替换），True（开启）、False（关闭）。默认为关闭。注意：SnatEnable开启时会替换客户端源IP，此时`透传客户端源IP`选项关闭，反之亦然。 
+     * @return SnatEnable 是否开启SNAT（源IP替换），True（开启）、False（关闭）。默认为关闭。注意：SnatEnable开启时会替换客户端源IP，此时`透传客户端源IP`选项关闭，反之亦然。
      */
     public Boolean getSnatEnable() {
         return this.SnatEnable;
     }
 
     /**
-     * Set 是否开启SNAT， True 表示开启 SNAT，False 表示不开启 SNAT。
-不传则表示不修改。
-     * @param SnatEnable 是否开启SNAT， True 表示开启 SNAT，False 表示不开启 SNAT。
-不传则表示不修改。
+     * Set 是否开启SNAT（源IP替换），True（开启）、False（关闭）。默认为关闭。注意：SnatEnable开启时会替换客户端源IP，此时`透传客户端源IP`选项关闭，反之亦然。
+     * @param SnatEnable 是否开启SNAT（源IP替换），True（开启）、False（关闭）。默认为关闭。注意：SnatEnable开启时会替换客户端源IP，此时`透传客户端源IP`选项关闭，反之亦然。
      */
     public void setSnatEnable(Boolean SnatEnable) {
         this.SnatEnable = SnatEnable;

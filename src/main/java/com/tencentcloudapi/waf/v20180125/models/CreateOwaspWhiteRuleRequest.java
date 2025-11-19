@@ -87,6 +87,13 @@ public class CreateOwaspWhiteRuleRequest extends AbstractModel {
     private Long Status;
 
     /**
+    * 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+    */
+    @SerializedName("LogicalOp")
+    @Expose
+    private String LogicalOp;
+
+    /**
      * Get 规则名称 
      * @return Name 规则名称
      */
@@ -230,6 +237,22 @@ public class CreateOwaspWhiteRuleRequest extends AbstractModel {
         this.Status = Status;
     }
 
+    /**
+     * Get 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系 
+     * @return LogicalOp 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+     */
+    public String getLogicalOp() {
+        return this.LogicalOp;
+    }
+
+    /**
+     * Set 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+     * @param LogicalOp 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+     */
+    public void setLogicalOp(String LogicalOp) {
+        this.LogicalOp = LogicalOp;
+    }
+
     public CreateOwaspWhiteRuleRequest() {
     }
 
@@ -271,6 +294,9 @@ public class CreateOwaspWhiteRuleRequest extends AbstractModel {
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.LogicalOp != null) {
+            this.LogicalOp = new String(source.LogicalOp);
+        }
     }
 
 
@@ -287,6 +313,7 @@ public class CreateOwaspWhiteRuleRequest extends AbstractModel {
         this.setParamObj(map, prefix + "JobDateTime.", this.JobDateTime);
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "LogicalOp", this.LogicalOp);
 
     }
 }

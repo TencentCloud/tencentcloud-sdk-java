@@ -146,6 +146,13 @@ public class AgentToolInfo extends AbstractModel {
     private Long FinanceStatus;
 
     /**
+    * 工具来源: 0-来自插件，1-来自工作流
+    */
+    @SerializedName("ToolSource")
+    @Expose
+    private Long ToolSource;
+
+    /**
      * Get 插件id 
      * @return PluginId 插件id
      */
@@ -429,6 +436,22 @@ public class AgentToolInfo extends AbstractModel {
         this.FinanceStatus = FinanceStatus;
     }
 
+    /**
+     * Get 工具来源: 0-来自插件，1-来自工作流 
+     * @return ToolSource 工具来源: 0-来自插件，1-来自工作流
+     */
+    public Long getToolSource() {
+        return this.ToolSource;
+    }
+
+    /**
+     * Set 工具来源: 0-来自插件，1-来自工作流
+     * @param ToolSource 工具来源: 0-来自插件，1-来自工作流
+     */
+    public void setToolSource(Long ToolSource) {
+        this.ToolSource = ToolSource;
+    }
+
     public AgentToolInfo() {
     }
 
@@ -500,6 +523,9 @@ public class AgentToolInfo extends AbstractModel {
         if (source.FinanceStatus != null) {
             this.FinanceStatus = new Long(source.FinanceStatus);
         }
+        if (source.ToolSource != null) {
+            this.ToolSource = new Long(source.ToolSource);
+        }
     }
 
 
@@ -524,6 +550,7 @@ public class AgentToolInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "CallingMethod", this.CallingMethod);
         this.setParamArrayObj(map, prefix + "Query.", this.Query);
         this.setParamSimple(map, prefix + "FinanceStatus", this.FinanceStatus);
+        this.setParamSimple(map, prefix + "ToolSource", this.ToolSource);
 
     }
 }

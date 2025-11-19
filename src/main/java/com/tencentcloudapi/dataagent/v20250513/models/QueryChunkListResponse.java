@@ -24,11 +24,57 @@ import java.util.HashMap;
 public class QueryChunkListResponse extends AbstractModel {
 
     /**
+    * 总数
+    */
+    @SerializedName("Total")
+    @Expose
+    private Long Total;
+
+    /**
+    * 分片信息
+    */
+    @SerializedName("Chunks")
+    @Expose
+    private Chunk [] Chunks;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 总数 
+     * @return Total 总数
+     */
+    public Long getTotal() {
+        return this.Total;
+    }
+
+    /**
+     * Set 总数
+     * @param Total 总数
+     */
+    public void setTotal(Long Total) {
+        this.Total = Total;
+    }
+
+    /**
+     * Get 分片信息 
+     * @return Chunks 分片信息
+     */
+    public Chunk [] getChunks() {
+        return this.Chunks;
+    }
+
+    /**
+     * Set 分片信息
+     * @param Chunks 分片信息
+     */
+    public void setChunks(Chunk [] Chunks) {
+        this.Chunks = Chunks;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +100,15 @@ public class QueryChunkListResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public QueryChunkListResponse(QueryChunkListResponse source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.Chunks != null) {
+            this.Chunks = new Chunk[source.Chunks.length];
+            for (int i = 0; i < source.Chunks.length; i++) {
+                this.Chunks[i] = new Chunk(source.Chunks[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +119,8 @@ public class QueryChunkListResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamArrayObj(map, prefix + "Chunks.", this.Chunks);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

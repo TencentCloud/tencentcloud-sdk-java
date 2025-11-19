@@ -31,6 +31,13 @@ public class DeleteNatGatewayRequest extends AbstractModel {
     private String NatGatewayId;
 
     /**
+    * 忽略操作风险
+    */
+    @SerializedName("IgnoreOperationRisk")
+    @Expose
+    private Boolean IgnoreOperationRisk;
+
+    /**
      * Get NAT网关的ID，形如：`nat-df45454`。 
      * @return NatGatewayId NAT网关的ID，形如：`nat-df45454`。
      */
@@ -46,6 +53,22 @@ public class DeleteNatGatewayRequest extends AbstractModel {
         this.NatGatewayId = NatGatewayId;
     }
 
+    /**
+     * Get 忽略操作风险 
+     * @return IgnoreOperationRisk 忽略操作风险
+     */
+    public Boolean getIgnoreOperationRisk() {
+        return this.IgnoreOperationRisk;
+    }
+
+    /**
+     * Set 忽略操作风险
+     * @param IgnoreOperationRisk 忽略操作风险
+     */
+    public void setIgnoreOperationRisk(Boolean IgnoreOperationRisk) {
+        this.IgnoreOperationRisk = IgnoreOperationRisk;
+    }
+
     public DeleteNatGatewayRequest() {
     }
 
@@ -57,6 +80,9 @@ public class DeleteNatGatewayRequest extends AbstractModel {
         if (source.NatGatewayId != null) {
             this.NatGatewayId = new String(source.NatGatewayId);
         }
+        if (source.IgnoreOperationRisk != null) {
+            this.IgnoreOperationRisk = new Boolean(source.IgnoreOperationRisk);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DeleteNatGatewayRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NatGatewayId", this.NatGatewayId);
+        this.setParamSimple(map, prefix + "IgnoreOperationRisk", this.IgnoreOperationRisk);
 
     }
 }

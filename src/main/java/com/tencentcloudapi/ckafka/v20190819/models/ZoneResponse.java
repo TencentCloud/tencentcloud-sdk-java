@@ -24,368 +24,368 @@ import java.util.HashMap;
 public class ZoneResponse extends AbstractModel {
 
     /**
-    * zone列表
+    * <p>zone列表</p>
     */
     @SerializedName("ZoneList")
     @Expose
     private ZoneInfo [] ZoneList;
 
     /**
-    * 最大购买实例个数
+    * <p>最大购买实例个数</p>
     */
     @SerializedName("MaxBuyInstanceNum")
     @Expose
     private Long MaxBuyInstanceNum;
 
     /**
-    * 最大购买带宽 单位Mb/s
+    * <p>最大购买带宽 单位Mb/s</p>
     */
     @SerializedName("MaxBandwidth")
     @Expose
     private Long MaxBandwidth;
 
     /**
-    * 后付费单位价格
+    * <p>后付费单位价格</p>
     */
     @SerializedName("UnitPrice")
     @Expose
     private Price UnitPrice;
 
     /**
-    * 后付费消息单价
+    * <p>后付费消息单价</p>
     */
     @SerializedName("MessagePrice")
     @Expose
     private Price MessagePrice;
 
     /**
-    * 用户独占集群信息
+    * <p>用户独占集群信息</p>
     */
     @SerializedName("ClusterInfo")
     @Expose
     private ClusterInfo [] ClusterInfo;
 
     /**
-    * 购买标准版配置
+    * <p>购买标准版配置</p>
     */
     @SerializedName("Standard")
     @Expose
     private String Standard;
 
     /**
-    * 购买标准版S2配置
+    * <p>购买标准版S2配置</p>
     */
     @SerializedName("StandardS2")
     @Expose
     private String StandardS2;
 
     /**
-    * 购买专业版配置
+    * <p>购买专业版配置</p>
     */
     @SerializedName("Profession")
     @Expose
     private String Profession;
 
     /**
-    * 购买物理独占版配置
+    * <p>购买物理独占版配置</p>
     */
     @SerializedName("Physical")
     @Expose
     private String Physical;
 
     /**
-    * 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写   已废弃,无实际意义
+    * <p>公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写   已废弃,无实际意义</p>
     */
     @SerializedName("PublicNetwork")
     @Expose
     private String PublicNetwork;
 
     /**
-    * 公网带宽配置
+    * <p>公网带宽配置</p>
     */
     @SerializedName("PublicNetworkLimit")
     @Expose
     private String PublicNetworkLimit;
 
     /**
-    * 请求Id
+    * <p>请求Id</p>
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
 
     /**
-    * 分页offset
+    * <p>分页offset</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 分页limit
+    * <p>分页limit</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 是否必须录入tag
+    * <p>是否必须录入tag</p>
     */
     @SerializedName("ForceCheckTag")
     @Expose
     private Boolean ForceCheckTag;
 
     /**
-     * Get zone列表 
-     * @return ZoneList zone列表
+     * Get <p>zone列表</p> 
+     * @return ZoneList <p>zone列表</p>
      */
     public ZoneInfo [] getZoneList() {
         return this.ZoneList;
     }
 
     /**
-     * Set zone列表
-     * @param ZoneList zone列表
+     * Set <p>zone列表</p>
+     * @param ZoneList <p>zone列表</p>
      */
     public void setZoneList(ZoneInfo [] ZoneList) {
         this.ZoneList = ZoneList;
     }
 
     /**
-     * Get 最大购买实例个数 
-     * @return MaxBuyInstanceNum 最大购买实例个数
+     * Get <p>最大购买实例个数</p> 
+     * @return MaxBuyInstanceNum <p>最大购买实例个数</p>
      */
     public Long getMaxBuyInstanceNum() {
         return this.MaxBuyInstanceNum;
     }
 
     /**
-     * Set 最大购买实例个数
-     * @param MaxBuyInstanceNum 最大购买实例个数
+     * Set <p>最大购买实例个数</p>
+     * @param MaxBuyInstanceNum <p>最大购买实例个数</p>
      */
     public void setMaxBuyInstanceNum(Long MaxBuyInstanceNum) {
         this.MaxBuyInstanceNum = MaxBuyInstanceNum;
     }
 
     /**
-     * Get 最大购买带宽 单位Mb/s 
-     * @return MaxBandwidth 最大购买带宽 单位Mb/s
+     * Get <p>最大购买带宽 单位Mb/s</p> 
+     * @return MaxBandwidth <p>最大购买带宽 单位Mb/s</p>
      */
     public Long getMaxBandwidth() {
         return this.MaxBandwidth;
     }
 
     /**
-     * Set 最大购买带宽 单位Mb/s
-     * @param MaxBandwidth 最大购买带宽 单位Mb/s
+     * Set <p>最大购买带宽 单位Mb/s</p>
+     * @param MaxBandwidth <p>最大购买带宽 单位Mb/s</p>
      */
     public void setMaxBandwidth(Long MaxBandwidth) {
         this.MaxBandwidth = MaxBandwidth;
     }
 
     /**
-     * Get 后付费单位价格 
-     * @return UnitPrice 后付费单位价格
+     * Get <p>后付费单位价格</p> 
+     * @return UnitPrice <p>后付费单位价格</p>
      */
     public Price getUnitPrice() {
         return this.UnitPrice;
     }
 
     /**
-     * Set 后付费单位价格
-     * @param UnitPrice 后付费单位价格
+     * Set <p>后付费单位价格</p>
+     * @param UnitPrice <p>后付费单位价格</p>
      */
     public void setUnitPrice(Price UnitPrice) {
         this.UnitPrice = UnitPrice;
     }
 
     /**
-     * Get 后付费消息单价 
-     * @return MessagePrice 后付费消息单价
+     * Get <p>后付费消息单价</p> 
+     * @return MessagePrice <p>后付费消息单价</p>
      */
     public Price getMessagePrice() {
         return this.MessagePrice;
     }
 
     /**
-     * Set 后付费消息单价
-     * @param MessagePrice 后付费消息单价
+     * Set <p>后付费消息单价</p>
+     * @param MessagePrice <p>后付费消息单价</p>
      */
     public void setMessagePrice(Price MessagePrice) {
         this.MessagePrice = MessagePrice;
     }
 
     /**
-     * Get 用户独占集群信息 
-     * @return ClusterInfo 用户独占集群信息
+     * Get <p>用户独占集群信息</p> 
+     * @return ClusterInfo <p>用户独占集群信息</p>
      */
     public ClusterInfo [] getClusterInfo() {
         return this.ClusterInfo;
     }
 
     /**
-     * Set 用户独占集群信息
-     * @param ClusterInfo 用户独占集群信息
+     * Set <p>用户独占集群信息</p>
+     * @param ClusterInfo <p>用户独占集群信息</p>
      */
     public void setClusterInfo(ClusterInfo [] ClusterInfo) {
         this.ClusterInfo = ClusterInfo;
     }
 
     /**
-     * Get 购买标准版配置 
-     * @return Standard 购买标准版配置
+     * Get <p>购买标准版配置</p> 
+     * @return Standard <p>购买标准版配置</p>
      */
     public String getStandard() {
         return this.Standard;
     }
 
     /**
-     * Set 购买标准版配置
-     * @param Standard 购买标准版配置
+     * Set <p>购买标准版配置</p>
+     * @param Standard <p>购买标准版配置</p>
      */
     public void setStandard(String Standard) {
         this.Standard = Standard;
     }
 
     /**
-     * Get 购买标准版S2配置 
-     * @return StandardS2 购买标准版S2配置
+     * Get <p>购买标准版S2配置</p> 
+     * @return StandardS2 <p>购买标准版S2配置</p>
      */
     public String getStandardS2() {
         return this.StandardS2;
     }
 
     /**
-     * Set 购买标准版S2配置
-     * @param StandardS2 购买标准版S2配置
+     * Set <p>购买标准版S2配置</p>
+     * @param StandardS2 <p>购买标准版S2配置</p>
      */
     public void setStandardS2(String StandardS2) {
         this.StandardS2 = StandardS2;
     }
 
     /**
-     * Get 购买专业版配置 
-     * @return Profession 购买专业版配置
+     * Get <p>购买专业版配置</p> 
+     * @return Profession <p>购买专业版配置</p>
      */
     public String getProfession() {
         return this.Profession;
     }
 
     /**
-     * Set 购买专业版配置
-     * @param Profession 购买专业版配置
+     * Set <p>购买专业版配置</p>
+     * @param Profession <p>购买专业版配置</p>
      */
     public void setProfession(String Profession) {
         this.Profession = Profession;
     }
 
     /**
-     * Get 购买物理独占版配置 
-     * @return Physical 购买物理独占版配置
+     * Get <p>购买物理独占版配置</p> 
+     * @return Physical <p>购买物理独占版配置</p>
      */
     public String getPhysical() {
         return this.Physical;
     }
 
     /**
-     * Set 购买物理独占版配置
-     * @param Physical 购买物理独占版配置
+     * Set <p>购买物理独占版配置</p>
+     * @param Physical <p>购买物理独占版配置</p>
      */
     public void setPhysical(String Physical) {
         this.Physical = Physical;
     }
 
     /**
-     * Get 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写   已废弃,无实际意义 
-     * @return PublicNetwork 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写   已废弃,无实际意义
+     * Get <p>公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写   已废弃,无实际意义</p> 
+     * @return PublicNetwork <p>公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写   已废弃,无实际意义</p>
      */
     public String getPublicNetwork() {
         return this.PublicNetwork;
     }
 
     /**
-     * Set 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写   已废弃,无实际意义
-     * @param PublicNetwork 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写   已废弃,无实际意义
+     * Set <p>公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写   已废弃,无实际意义</p>
+     * @param PublicNetwork <p>公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写   已废弃,无实际意义</p>
      */
     public void setPublicNetwork(String PublicNetwork) {
         this.PublicNetwork = PublicNetwork;
     }
 
     /**
-     * Get 公网带宽配置 
-     * @return PublicNetworkLimit 公网带宽配置
+     * Get <p>公网带宽配置</p> 
+     * @return PublicNetworkLimit <p>公网带宽配置</p>
      */
     public String getPublicNetworkLimit() {
         return this.PublicNetworkLimit;
     }
 
     /**
-     * Set 公网带宽配置
-     * @param PublicNetworkLimit 公网带宽配置
+     * Set <p>公网带宽配置</p>
+     * @param PublicNetworkLimit <p>公网带宽配置</p>
      */
     public void setPublicNetworkLimit(String PublicNetworkLimit) {
         this.PublicNetworkLimit = PublicNetworkLimit;
     }
 
     /**
-     * Get 请求Id 
-     * @return RequestId 请求Id
+     * Get <p>请求Id</p> 
+     * @return RequestId <p>请求Id</p>
      */
     public String getRequestId() {
         return this.RequestId;
     }
 
     /**
-     * Set 请求Id
-     * @param RequestId 请求Id
+     * Set <p>请求Id</p>
+     * @param RequestId <p>请求Id</p>
      */
     public void setRequestId(String RequestId) {
         this.RequestId = RequestId;
     }
 
     /**
-     * Get 分页offset 
-     * @return Offset 分页offset
+     * Get <p>分页offset</p> 
+     * @return Offset <p>分页offset</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页offset
-     * @param Offset 分页offset
+     * Set <p>分页offset</p>
+     * @param Offset <p>分页offset</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 分页limit 
-     * @return Limit 分页limit
+     * Get <p>分页limit</p> 
+     * @return Limit <p>分页limit</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页limit
-     * @param Limit 分页limit
+     * Set <p>分页limit</p>
+     * @param Limit <p>分页limit</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 是否必须录入tag 
-     * @return ForceCheckTag 是否必须录入tag
+     * Get <p>是否必须录入tag</p> 
+     * @return ForceCheckTag <p>是否必须录入tag</p>
      */
     public Boolean getForceCheckTag() {
         return this.ForceCheckTag;
     }
 
     /**
-     * Set 是否必须录入tag
-     * @param ForceCheckTag 是否必须录入tag
+     * Set <p>是否必须录入tag</p>
+     * @param ForceCheckTag <p>是否必须录入tag</p>
      */
     public void setForceCheckTag(Boolean ForceCheckTag) {
         this.ForceCheckTag = ForceCheckTag;

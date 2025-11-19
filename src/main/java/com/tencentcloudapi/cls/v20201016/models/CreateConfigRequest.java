@@ -99,7 +99,10 @@ public class CreateConfigRequest extends AbstractModel {
     private String AdvancedConfig;
 
     /**
-    * 日志输入类型，支持file、window_event、syslog、k8s_stdout、k8s_file
+    * 日志输入类型（<span style="color:red; font-weight:bold">注：windows场景必填且仅支持file和windows_event类型</span>）
+- file: 文件类型采集
+- windows_event：windows事件采集
+- syslog：系统日志采集
     */
     @SerializedName("InputType")
     @Expose
@@ -310,16 +313,28 @@ public class CreateConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get 日志输入类型，支持file、window_event、syslog、k8s_stdout、k8s_file 
-     * @return InputType 日志输入类型，支持file、window_event、syslog、k8s_stdout、k8s_file
+     * Get 日志输入类型（<span style="color:red; font-weight:bold">注：windows场景必填且仅支持file和windows_event类型</span>）
+- file: 文件类型采集
+- windows_event：windows事件采集
+- syslog：系统日志采集 
+     * @return InputType 日志输入类型（<span style="color:red; font-weight:bold">注：windows场景必填且仅支持file和windows_event类型</span>）
+- file: 文件类型采集
+- windows_event：windows事件采集
+- syslog：系统日志采集
      */
     public String getInputType() {
         return this.InputType;
     }
 
     /**
-     * Set 日志输入类型，支持file、window_event、syslog、k8s_stdout、k8s_file
-     * @param InputType 日志输入类型，支持file、window_event、syslog、k8s_stdout、k8s_file
+     * Set 日志输入类型（<span style="color:red; font-weight:bold">注：windows场景必填且仅支持file和windows_event类型</span>）
+- file: 文件类型采集
+- windows_event：windows事件采集
+- syslog：系统日志采集
+     * @param InputType 日志输入类型（<span style="color:red; font-weight:bold">注：windows场景必填且仅支持file和windows_event类型</span>）
+- file: 文件类型采集
+- windows_event：windows事件采集
+- syslog：系统日志采集
      */
     public void setInputType(String InputType) {
         this.InputType = InputType;

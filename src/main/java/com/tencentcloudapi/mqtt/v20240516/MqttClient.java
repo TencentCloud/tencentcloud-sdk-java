@@ -61,6 +61,17 @@ public class MqttClient extends AbstractClient{
     }
 
     /**
+     *为MQTT客户端增加一条订阅
+     * @param req AddClientSubscriptionRequest
+     * @return AddClientSubscriptionResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddClientSubscriptionResponse AddClientSubscription(AddClientSubscriptionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddClientSubscription", AddClientSubscriptionResponse.class);
+    }
+
+    /**
      *申请ca注册码
      * @param req ApplyRegistrationCodeRequest
      * @return ApplyRegistrationCodeResponse
@@ -223,6 +234,17 @@ public class MqttClient extends AbstractClient{
     public DeleteCaCertificateResponse DeleteCaCertificate(DeleteCaCertificateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteCaCertificate", DeleteCaCertificateResponse.class);
+    }
+
+    /**
+     *删除MQTT客户端下的一条订阅
+     * @param req DeleteClientSubscriptionRequest
+     * @return DeleteClientSubscriptionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteClientSubscriptionResponse DeleteClientSubscription(DeleteClientSubscriptionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteClientSubscription", DeleteClientSubscriptionResponse.class);
     }
 
     /**

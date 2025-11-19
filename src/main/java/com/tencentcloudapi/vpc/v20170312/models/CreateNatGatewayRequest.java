@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateNatGatewayRequest extends AbstractModel {
 
     /**
-    * NAT网关名称
+    * NAT网关名称，限制60字符
     */
     @SerializedName("NatGatewayName")
     @Expose
@@ -122,16 +122,16 @@ public class CreateNatGatewayRequest extends AbstractModel {
     private Boolean DeletionProtectionEnabled;
 
     /**
-     * Get NAT网关名称 
-     * @return NatGatewayName NAT网关名称
+     * Get NAT网关名称，限制60字符 
+     * @return NatGatewayName NAT网关名称，限制60字符
      */
     public String getNatGatewayName() {
         return this.NatGatewayName;
     }
 
     /**
-     * Set NAT网关名称
-     * @param NatGatewayName NAT网关名称
+     * Set NAT网关名称，限制60字符
+     * @param NatGatewayName NAT网关名称，限制60字符
      */
     public void setNatGatewayName(String NatGatewayName) {
         this.NatGatewayName = NatGatewayName;

@@ -38,6 +38,20 @@ public class CCRuleLists extends AbstractModel {
     private CCRuleItems [] Res;
 
     /**
+    * 规则限制总数
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * 规则剩余多少可用
+    */
+    @SerializedName("Available")
+    @Expose
+    private Long Available;
+
+    /**
      * Get 总数 
      * @return TotalCount 总数
      */
@@ -69,6 +83,38 @@ public class CCRuleLists extends AbstractModel {
         this.Res = Res;
     }
 
+    /**
+     * Get 规则限制总数 
+     * @return Limit 规则限制总数
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 规则限制总数
+     * @param Limit 规则限制总数
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get 规则剩余多少可用 
+     * @return Available 规则剩余多少可用
+     */
+    public Long getAvailable() {
+        return this.Available;
+    }
+
+    /**
+     * Set 规则剩余多少可用
+     * @param Available 规则剩余多少可用
+     */
+    public void setAvailable(Long Available) {
+        this.Available = Available;
+    }
+
     public CCRuleLists() {
     }
 
@@ -86,6 +132,12 @@ public class CCRuleLists extends AbstractModel {
                 this.Res[i] = new CCRuleItems(source.Res[i]);
             }
         }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Available != null) {
+            this.Available = new Long(source.Available);
+        }
     }
 
 
@@ -95,6 +147,8 @@ public class CCRuleLists extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "Res.", this.Res);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Available", this.Available);
 
     }
 }

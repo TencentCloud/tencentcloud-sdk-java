@@ -38,7 +38,7 @@ public class RefreshDirectConnectGatewayRouteToNatGatewayRequest extends Abstrac
     private String NatGatewayId;
 
     /**
-    * 是否是预刷新；True:是， False:否
+    * 是否是预刷新；true:是， false:否
     */
     @SerializedName("DryRun")
     @Expose
@@ -77,16 +77,16 @@ public class RefreshDirectConnectGatewayRouteToNatGatewayRequest extends Abstrac
     }
 
     /**
-     * Get 是否是预刷新；True:是， False:否 
-     * @return DryRun 是否是预刷新；True:是， False:否
+     * Get 是否是预刷新；true:是， false:否 
+     * @return DryRun 是否是预刷新；true:是， false:否
      */
     public Boolean getDryRun() {
         return this.DryRun;
     }
 
     /**
-     * Set 是否是预刷新；True:是， False:否
-     * @param DryRun 是否是预刷新；True:是， False:否
+     * Set 是否是预刷新；true:是， false:否
+     * @param DryRun 是否是预刷新；true:是， false:否
      */
     public void setDryRun(Boolean DryRun) {
         this.DryRun = DryRun;

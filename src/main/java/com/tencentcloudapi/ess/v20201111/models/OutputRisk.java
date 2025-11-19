@@ -93,6 +93,13 @@ public class OutputRisk extends AbstractModel {
     private String RiskBasis;
 
     /**
+    * 风险等级id
+    */
+    @SerializedName("RiskLevelId")
+    @Expose
+    private Long RiskLevelId;
+
+    /**
      * Get 合同审查风险结果ID 
      * @return RiskId 合同审查风险结果ID
      */
@@ -260,6 +267,22 @@ public class OutputRisk extends AbstractModel {
         this.RiskBasis = RiskBasis;
     }
 
+    /**
+     * Get 风险等级id 
+     * @return RiskLevelId 风险等级id
+     */
+    public Long getRiskLevelId() {
+        return this.RiskLevelId;
+    }
+
+    /**
+     * Set 风险等级id
+     * @param RiskLevelId 风险等级id
+     */
+    public void setRiskLevelId(Long RiskLevelId) {
+        this.RiskLevelId = RiskLevelId;
+    }
+
     public OutputRisk() {
     }
 
@@ -301,6 +324,9 @@ public class OutputRisk extends AbstractModel {
         if (source.RiskBasis != null) {
             this.RiskBasis = new String(source.RiskBasis);
         }
+        if (source.RiskLevelId != null) {
+            this.RiskLevelId = new Long(source.RiskLevelId);
+        }
     }
 
 
@@ -317,6 +343,7 @@ public class OutputRisk extends AbstractModel {
         this.setParamSimple(map, prefix + "Content", this.Content);
         this.setParamArrayObj(map, prefix + "Positions.", this.Positions);
         this.setParamSimple(map, prefix + "RiskBasis", this.RiskBasis);
+        this.setParamSimple(map, prefix + "RiskLevelId", this.RiskLevelId);
 
     }
 }

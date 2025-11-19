@@ -64,7 +64,7 @@ public class TaskConfiguration extends AbstractModel {
     private String YarnQueue;
 
     /**
-    * 来源数据源ID, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+    * 来源数据源ID,  需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceServiceId")
@@ -72,7 +72,7 @@ public class TaskConfiguration extends AbstractModel {
     private String SourceServiceId;
 
     /**
-    * 来源数据源类型, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+    * 来源数据源类型,  需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceServiceType")
@@ -80,7 +80,7 @@ public class TaskConfiguration extends AbstractModel {
     private String SourceServiceType;
 
     /**
-    * 来源数据源名称, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+    * 来源数据源名称, 需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceServiceName")
@@ -88,7 +88,7 @@ public class TaskConfiguration extends AbstractModel {
     private String SourceServiceName;
 
     /**
-    * 目标数据源ID, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+    * 目标数据源ID, 需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetServiceId")
@@ -96,7 +96,7 @@ public class TaskConfiguration extends AbstractModel {
     private String TargetServiceId;
 
     /**
-    * 目标数据源类型, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+    * 目标数据源类型,  需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetServiceType")
@@ -104,7 +104,7 @@ public class TaskConfiguration extends AbstractModel {
     private String TargetServiceType;
 
     /**
-    * 目标数据源名称, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+    * 目标数据源名称, 需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetServiceName")
@@ -252,9 +252,9 @@ public class TaskConfiguration extends AbstractModel {
     }
 
     /**
-     * Get 来源数据源ID, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+     * Get 来源数据源ID,  需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SourceServiceId 来源数据源ID, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+     * @return SourceServiceId 来源数据源ID,  需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSourceServiceId() {
@@ -262,9 +262,9 @@ public class TaskConfiguration extends AbstractModel {
     }
 
     /**
-     * Set 来源数据源ID, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+     * Set 来源数据源ID,  需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SourceServiceId 来源数据源ID, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+     * @param SourceServiceId 来源数据源ID,  需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceServiceId(String SourceServiceId) {
@@ -272,9 +272,9 @@ public class TaskConfiguration extends AbstractModel {
     }
 
     /**
-     * Get 来源数据源类型, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+     * Get 来源数据源类型,  需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SourceServiceType 来源数据源类型, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+     * @return SourceServiceType 来源数据源类型,  需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSourceServiceType() {
@@ -282,9 +282,9 @@ public class TaskConfiguration extends AbstractModel {
     }
 
     /**
-     * Set 来源数据源类型, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+     * Set 来源数据源类型,  需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SourceServiceType 来源数据源类型, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+     * @param SourceServiceType 来源数据源类型,  需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceServiceType(String SourceServiceType) {
@@ -292,9 +292,9 @@ public class TaskConfiguration extends AbstractModel {
     }
 
     /**
-     * Get 来源数据源名称, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+     * Get 来源数据源名称, 需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SourceServiceName 来源数据源名称, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+     * @return SourceServiceName 来源数据源名称, 需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSourceServiceName() {
@@ -302,9 +302,9 @@ public class TaskConfiguration extends AbstractModel {
     }
 
     /**
-     * Set 来源数据源名称, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+     * Set 来源数据源名称, 需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SourceServiceName 来源数据源名称, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+     * @param SourceServiceName 来源数据源名称, 需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceServiceName(String SourceServiceName) {
@@ -312,9 +312,9 @@ public class TaskConfiguration extends AbstractModel {
     }
 
     /**
-     * Get 目标数据源ID, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+     * Get 目标数据源ID, 需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TargetServiceId 目标数据源ID, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+     * @return TargetServiceId 目标数据源ID, 需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTargetServiceId() {
@@ -322,9 +322,9 @@ public class TaskConfiguration extends AbstractModel {
     }
 
     /**
-     * Set 目标数据源ID, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+     * Set 目标数据源ID, 需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TargetServiceId 目标数据源ID, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+     * @param TargetServiceId 目标数据源ID, 需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetServiceId(String TargetServiceId) {
@@ -332,9 +332,9 @@ public class TaskConfiguration extends AbstractModel {
     }
 
     /**
-     * Get 目标数据源类型, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+     * Get 目标数据源类型,  需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TargetServiceType 目标数据源类型, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+     * @return TargetServiceType 目标数据源类型,  需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTargetServiceType() {
@@ -342,9 +342,9 @@ public class TaskConfiguration extends AbstractModel {
     }
 
     /**
-     * Set 目标数据源类型, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+     * Set 目标数据源类型,  需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TargetServiceType 目标数据源类型, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+     * @param TargetServiceType 目标数据源类型,  需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetServiceType(String TargetServiceType) {
@@ -352,9 +352,9 @@ public class TaskConfiguration extends AbstractModel {
     }
 
     /**
-     * Get 目标数据源名称, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+     * Get 目标数据源名称, 需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TargetServiceName 目标数据源名称, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+     * @return TargetServiceName 目标数据源名称, 需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTargetServiceName() {
@@ -362,9 +362,9 @@ public class TaskConfiguration extends AbstractModel {
     }
 
     /**
-     * Set 目标数据源名称, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+     * Set 目标数据源名称, 需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TargetServiceName 目标数据源名称, 使用 ; 分隔, 需要通过 DescribeDataSourceWithoutInfo 获取
+     * @param TargetServiceName 目标数据源名称, 需要通过 DescribeDataSourceWithoutInfo 获取
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetServiceName(String TargetServiceName) {

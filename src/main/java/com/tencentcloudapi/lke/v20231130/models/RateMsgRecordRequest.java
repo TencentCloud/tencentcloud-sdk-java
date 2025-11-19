@@ -56,6 +56,13 @@ public class RateMsgRecordRequest extends AbstractModel {
     private String [] Reasons;
 
     /**
+    * 用户自定义反馈内容
+    */
+    @SerializedName("FeedbackContent")
+    @Expose
+    private String FeedbackContent;
+
+    /**
      * Get 应用appKey 
      * @return BotAppKey 应用appKey
      */
@@ -135,6 +142,22 @@ public class RateMsgRecordRequest extends AbstractModel {
         this.Reasons = Reasons;
     }
 
+    /**
+     * Get 用户自定义反馈内容 
+     * @return FeedbackContent 用户自定义反馈内容
+     */
+    public String getFeedbackContent() {
+        return this.FeedbackContent;
+    }
+
+    /**
+     * Set 用户自定义反馈内容
+     * @param FeedbackContent 用户自定义反馈内容
+     */
+    public void setFeedbackContent(String FeedbackContent) {
+        this.FeedbackContent = FeedbackContent;
+    }
+
     public RateMsgRecordRequest() {
     }
 
@@ -158,6 +181,9 @@ public class RateMsgRecordRequest extends AbstractModel {
                 this.Reasons[i] = new String(source.Reasons[i]);
             }
         }
+        if (source.FeedbackContent != null) {
+            this.FeedbackContent = new String(source.FeedbackContent);
+        }
     }
 
 
@@ -169,6 +195,7 @@ public class RateMsgRecordRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RecordId", this.RecordId);
         this.setParamSimple(map, prefix + "Score", this.Score);
         this.setParamArraySimple(map, prefix + "Reasons.", this.Reasons);
+        this.setParamSimple(map, prefix + "FeedbackContent", this.FeedbackContent);
 
     }
 }

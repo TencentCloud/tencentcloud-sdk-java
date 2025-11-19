@@ -25,6 +25,7 @@ public class DescribePrivateNatGatewaysRequest extends AbstractModel {
 
     /**
     * 私网网关唯一`ID`，形如：`intranat-0g3blj80`。
+注意：NatGatewayIds和Filters参数互斥，不能同时传入。
     */
     @SerializedName("NatGatewayIds")
     @Expose
@@ -52,22 +53,24 @@ public class DescribePrivateNatGatewaysRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 排序字段。可选值："NatGatewayId"、"NatGatewayName"、"CreatedTime"
+    * 排序字段。可选值：NatGatewayId、NatGatewayName、CreatedTime。
     */
     @SerializedName("OrderField")
     @Expose
     private String OrderField;
 
     /**
-    * 排序方式。可选值："ASC"、"DESC"。
+    * 排序方式。可选值：ASC、DESC。分别表示升序、降序。
     */
     @SerializedName("OrderDirection")
     @Expose
     private String OrderDirection;
 
     /**
-     * Get 私网网关唯一`ID`，形如：`intranat-0g3blj80`。 
+     * Get 私网网关唯一`ID`，形如：`intranat-0g3blj80`。
+注意：NatGatewayIds和Filters参数互斥，不能同时传入。 
      * @return NatGatewayIds 私网网关唯一`ID`，形如：`intranat-0g3blj80`。
+注意：NatGatewayIds和Filters参数互斥，不能同时传入。
      */
     public String [] getNatGatewayIds() {
         return this.NatGatewayIds;
@@ -75,7 +78,9 @@ public class DescribePrivateNatGatewaysRequest extends AbstractModel {
 
     /**
      * Set 私网网关唯一`ID`，形如：`intranat-0g3blj80`。
+注意：NatGatewayIds和Filters参数互斥，不能同时传入。
      * @param NatGatewayIds 私网网关唯一`ID`，形如：`intranat-0g3blj80`。
+注意：NatGatewayIds和Filters参数互斥，不能同时传入。
      */
     public void setNatGatewayIds(String [] NatGatewayIds) {
         this.NatGatewayIds = NatGatewayIds;
@@ -130,32 +135,32 @@ public class DescribePrivateNatGatewaysRequest extends AbstractModel {
     }
 
     /**
-     * Get 排序字段。可选值："NatGatewayId"、"NatGatewayName"、"CreatedTime" 
-     * @return OrderField 排序字段。可选值："NatGatewayId"、"NatGatewayName"、"CreatedTime"
+     * Get 排序字段。可选值：NatGatewayId、NatGatewayName、CreatedTime。 
+     * @return OrderField 排序字段。可选值：NatGatewayId、NatGatewayName、CreatedTime。
      */
     public String getOrderField() {
         return this.OrderField;
     }
 
     /**
-     * Set 排序字段。可选值："NatGatewayId"、"NatGatewayName"、"CreatedTime"
-     * @param OrderField 排序字段。可选值："NatGatewayId"、"NatGatewayName"、"CreatedTime"
+     * Set 排序字段。可选值：NatGatewayId、NatGatewayName、CreatedTime。
+     * @param OrderField 排序字段。可选值：NatGatewayId、NatGatewayName、CreatedTime。
      */
     public void setOrderField(String OrderField) {
         this.OrderField = OrderField;
     }
 
     /**
-     * Get 排序方式。可选值："ASC"、"DESC"。 
-     * @return OrderDirection 排序方式。可选值："ASC"、"DESC"。
+     * Get 排序方式。可选值：ASC、DESC。分别表示升序、降序。 
+     * @return OrderDirection 排序方式。可选值：ASC、DESC。分别表示升序、降序。
      */
     public String getOrderDirection() {
         return this.OrderDirection;
     }
 
     /**
-     * Set 排序方式。可选值："ASC"、"DESC"。
-     * @param OrderDirection 排序方式。可选值："ASC"、"DESC"。
+     * Set 排序方式。可选值：ASC、DESC。分别表示升序、降序。
+     * @param OrderDirection 排序方式。可选值：ASC、DESC。分别表示升序、降序。
      */
     public void setOrderDirection(String OrderDirection) {
         this.OrderDirection = OrderDirection;

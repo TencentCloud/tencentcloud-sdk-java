@@ -45,6 +45,13 @@ public class InputMapping extends AbstractModel {
     private String MountOptionParameter;
 
     /**
+    * 挂载COS存储时支持的挂载工具；当前可选值：COSFS、GooseFS-Lite。
+    */
+    @SerializedName("MountType")
+    @Expose
+    private String MountType;
+
+    /**
      * Get 源端路径 
      * @return SourcePath 源端路径
      */
@@ -92,6 +99,22 @@ public class InputMapping extends AbstractModel {
         this.MountOptionParameter = MountOptionParameter;
     }
 
+    /**
+     * Get 挂载COS存储时支持的挂载工具；当前可选值：COSFS、GooseFS-Lite。 
+     * @return MountType 挂载COS存储时支持的挂载工具；当前可选值：COSFS、GooseFS-Lite。
+     */
+    public String getMountType() {
+        return this.MountType;
+    }
+
+    /**
+     * Set 挂载COS存储时支持的挂载工具；当前可选值：COSFS、GooseFS-Lite。
+     * @param MountType 挂载COS存储时支持的挂载工具；当前可选值：COSFS、GooseFS-Lite。
+     */
+    public void setMountType(String MountType) {
+        this.MountType = MountType;
+    }
+
     public InputMapping() {
     }
 
@@ -109,6 +132,9 @@ public class InputMapping extends AbstractModel {
         if (source.MountOptionParameter != null) {
             this.MountOptionParameter = new String(source.MountOptionParameter);
         }
+        if (source.MountType != null) {
+            this.MountType = new String(source.MountType);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class InputMapping extends AbstractModel {
         this.setParamSimple(map, prefix + "SourcePath", this.SourcePath);
         this.setParamSimple(map, prefix + "DestinationPath", this.DestinationPath);
         this.setParamSimple(map, prefix + "MountOptionParameter", this.MountOptionParameter);
+        this.setParamSimple(map, prefix + "MountType", this.MountType);
 
     }
 }

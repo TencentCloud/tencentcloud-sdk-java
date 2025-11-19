@@ -169,6 +169,13 @@ public class CreateFlowOption extends AbstractModel {
     private Boolean HideSignCodeAfterStart;
 
     /**
+    * 发起过程中是否保存草稿	
+    */
+    @SerializedName("NeedFlowDraft")
+    @Expose
+    private Boolean NeedFlowDraft;
+
+    /**
      * Get 是否允许修改合同信息，
 **true**：可以
 **false**：（默认）不可以 
@@ -556,6 +563,22 @@ public class CreateFlowOption extends AbstractModel {
         this.HideSignCodeAfterStart = HideSignCodeAfterStart;
     }
 
+    /**
+     * Get 发起过程中是否保存草稿	 
+     * @return NeedFlowDraft 发起过程中是否保存草稿	
+     */
+    public Boolean getNeedFlowDraft() {
+        return this.NeedFlowDraft;
+    }
+
+    /**
+     * Set 发起过程中是否保存草稿	
+     * @param NeedFlowDraft 发起过程中是否保存草稿	
+     */
+    public void setNeedFlowDraft(Boolean NeedFlowDraft) {
+        this.NeedFlowDraft = NeedFlowDraft;
+    }
+
     public CreateFlowOption() {
     }
 
@@ -615,6 +638,9 @@ public class CreateFlowOption extends AbstractModel {
         if (source.HideSignCodeAfterStart != null) {
             this.HideSignCodeAfterStart = new Boolean(source.HideSignCodeAfterStart);
         }
+        if (source.NeedFlowDraft != null) {
+            this.NeedFlowDraft = new Boolean(source.NeedFlowDraft);
+        }
     }
 
 
@@ -638,6 +664,7 @@ public class CreateFlowOption extends AbstractModel {
         this.setParamArraySimple(map, prefix + "HideOperationSteps.", this.HideOperationSteps);
         this.setParamSimple(map, prefix + "SelfName", this.SelfName);
         this.setParamSimple(map, prefix + "HideSignCodeAfterStart", this.HideSignCodeAfterStart);
+        this.setParamSimple(map, prefix + "NeedFlowDraft", this.NeedFlowDraft);
 
     }
 }

@@ -61,6 +61,17 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *本接口(CreateAuditLogFile)用于创建云数据库实例的审计日志文件。
+     * @param req CreateAuditLogFileRequest
+     * @return CreateAuditLogFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAuditLogFileResponse CreateAuditLogFile(CreateAuditLogFileRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAuditLogFile", CreateAuditLogFileResponse.class);
+    }
+
+    /**
      *本接口（CreateBackupDBInstance）用于备份实例。
      * @param req CreateBackupDBInstanceRequest
      * @return CreateBackupDBInstanceResponse
@@ -139,6 +150,17 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *本接口(DeleteAuditLogFile)用于删除云数据库实例的审计日志文件。
+     * @param req DeleteAuditLogFileRequest
+     * @return DeleteAuditLogFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAuditLogFileResponse DeleteAuditLogFile(DeleteAuditLogFileRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAuditLogFile", DeleteAuditLogFileResponse.class);
+    }
+
+    /**
      *删除日志下载任务
      * @param req DeleteLogDownloadTaskRequest
      * @return DeleteLogDownloadTaskResponse
@@ -169,6 +191,17 @@ public class MongodbClient extends AbstractClient{
     public DescribeAsyncRequestInfoResponse DescribeAsyncRequestInfo(DescribeAsyncRequestInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAsyncRequestInfo", DescribeAsyncRequestInfoResponse.class);
+    }
+
+    /**
+     *本接口（DescribeAuditInstanceList）用于查询开通或未开通数据库审计的实例列表。
+     * @param req DescribeAuditInstanceListRequest
+     * @return DescribeAuditInstanceListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuditInstanceListResponse DescribeAuditInstanceList(DescribeAuditInstanceListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAuditInstanceList", DescribeAuditInstanceListResponse.class);
     }
 
     /**
@@ -506,6 +539,17 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *本接口(ModifyAuditService)用于修改云数据库审计策略的服务配置，包括审计日志保存时长等。
+     * @param req ModifyAuditServiceRequest
+     * @return ModifyAuditServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAuditServiceResponse ModifyAuditService(ModifyAuditServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAuditService", ModifyAuditServiceResponse.class);
+    }
+
+    /**
      *本接口（ModifyDBInstanceNetworkAddress）用于修改云数据库实例的网络信息，支持基础网络切换为私有网络、私有网络切换私有网络。
      * @param req ModifyDBInstanceNetworkAddressRequest
      * @return ModifyDBInstanceNetworkAddressResponse
@@ -570,6 +614,17 @@ public class MongodbClient extends AbstractClient{
     public OfflineIsolatedDBInstanceResponse OfflineIsolatedDBInstance(OfflineIsolatedDBInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "OfflineIsolatedDBInstance", OfflineIsolatedDBInstanceResponse.class);
+    }
+
+    /**
+     *本接口(OpenAuditService)用于开通云数据库实例的审计。
+     * @param req OpenAuditServiceRequest
+     * @return OpenAuditServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenAuditServiceResponse OpenAuditService(OpenAuditServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "OpenAuditService", OpenAuditServiceResponse.class);
     }
 
     /**

@@ -84,6 +84,14 @@ public class CateInfo extends AbstractModel {
     private CateInfo [] Children;
 
     /**
+    * 是否为叶子节点
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsLeaf")
+    @Expose
+    private Boolean IsLeaf;
+
+    /**
      * Get 分类ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CateBizId 分类ID
@@ -239,6 +247,26 @@ public class CateInfo extends AbstractModel {
         this.Children = Children;
     }
 
+    /**
+     * Get 是否为叶子节点
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsLeaf 是否为叶子节点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsLeaf() {
+        return this.IsLeaf;
+    }
+
+    /**
+     * Set 是否为叶子节点
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsLeaf 是否为叶子节点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsLeaf(Boolean IsLeaf) {
+        this.IsLeaf = IsLeaf;
+    }
+
     public CateInfo() {
     }
 
@@ -271,6 +299,9 @@ public class CateInfo extends AbstractModel {
                 this.Children[i] = new CateInfo(source.Children[i]);
             }
         }
+        if (source.IsLeaf != null) {
+            this.IsLeaf = new Boolean(source.IsLeaf);
+        }
     }
 
 
@@ -285,6 +316,7 @@ public class CateInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "CanEdit", this.CanEdit);
         this.setParamSimple(map, prefix + "CanDelete", this.CanDelete);
         this.setParamArrayObj(map, prefix + "Children.", this.Children);
+        this.setParamSimple(map, prefix + "IsLeaf", this.IsLeaf);
 
     }
 }
