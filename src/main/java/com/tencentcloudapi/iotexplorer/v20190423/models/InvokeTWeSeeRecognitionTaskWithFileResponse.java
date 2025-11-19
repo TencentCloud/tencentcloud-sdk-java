@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.vcube.v20220410.models;
+package com.tencentcloudapi.iotexplorer.v20190423.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,28 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateApplicationAndVideoResponse extends AbstractModel {
+public class InvokeTWeSeeRecognitionTaskWithFileResponse extends AbstractModel {
 
     /**
-    * license唯一标识
+    * 任务 ID
     */
-    @SerializedName("LicenseId")
+    @SerializedName("TaskId")
     @Expose
-    private Long LicenseId;
+    private String TaskId;
+
+    /**
+    * 任务是否执行完成
+    */
+    @SerializedName("Completed")
+    @Expose
+    private Boolean Completed;
+
+    /**
+    * 语义理解任务结果（仅当 Completed 为 true 时包含该出参）
+    */
+    @SerializedName("Result")
+    @Expose
+    private VisionRecognitionResult Result;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +52,51 @@ public class CreateApplicationAndVideoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get license唯一标识 
-     * @return LicenseId license唯一标识
+     * Get 任务 ID 
+     * @return TaskId 任务 ID
      */
-    public Long getLicenseId() {
-        return this.LicenseId;
+    public String getTaskId() {
+        return this.TaskId;
     }
 
     /**
-     * Set license唯一标识
-     * @param LicenseId license唯一标识
+     * Set 任务 ID
+     * @param TaskId 任务 ID
      */
-    public void setLicenseId(Long LicenseId) {
-        this.LicenseId = LicenseId;
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
+    }
+
+    /**
+     * Get 任务是否执行完成 
+     * @return Completed 任务是否执行完成
+     */
+    public Boolean getCompleted() {
+        return this.Completed;
+    }
+
+    /**
+     * Set 任务是否执行完成
+     * @param Completed 任务是否执行完成
+     */
+    public void setCompleted(Boolean Completed) {
+        this.Completed = Completed;
+    }
+
+    /**
+     * Get 语义理解任务结果（仅当 Completed 为 true 时包含该出参） 
+     * @return Result 语义理解任务结果（仅当 Completed 为 true 时包含该出参）
+     */
+    public VisionRecognitionResult getResult() {
+        return this.Result;
+    }
+
+    /**
+     * Set 语义理解任务结果（仅当 Completed 为 true 时包含该出参）
+     * @param Result 语义理解任务结果（仅当 Completed 为 true 时包含该出参）
+     */
+    public void setResult(VisionRecognitionResult Result) {
+        this.Result = Result;
     }
 
     /**
@@ -69,16 +115,22 @@ public class CreateApplicationAndVideoResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreateApplicationAndVideoResponse() {
+    public InvokeTWeSeeRecognitionTaskWithFileResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateApplicationAndVideoResponse(CreateApplicationAndVideoResponse source) {
-        if (source.LicenseId != null) {
-            this.LicenseId = new Long(source.LicenseId);
+    public InvokeTWeSeeRecognitionTaskWithFileResponse(InvokeTWeSeeRecognitionTaskWithFileResponse source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.Completed != null) {
+            this.Completed = new Boolean(source.Completed);
+        }
+        if (source.Result != null) {
+            this.Result = new VisionRecognitionResult(source.Result);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +142,9 @@ public class CreateApplicationAndVideoResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "LicenseId", this.LicenseId);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "Completed", this.Completed);
+        this.setParamObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

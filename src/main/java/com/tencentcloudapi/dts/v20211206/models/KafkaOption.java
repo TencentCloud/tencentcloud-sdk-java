@@ -52,6 +52,13 @@ public class KafkaOption extends AbstractModel {
     private TopicRule [] TopicRules;
 
     /**
+    * 其他附加信息，对于特定数据类型可设置额外参数，比如针对Canal兼容的功能支持："canalOfficialFormat":"on"表示打开Canal兼容功能，默认不带。
+    */
+    @SerializedName("DataOption")
+    @Expose
+    private KeyValuePairOption [] DataOption;
+
+    /**
      * Get 投递到kafka的数据类型，如Avro,Json,canal-pb,canal-json,debezium 
      * @return DataType 投递到kafka的数据类型，如Avro,Json,canal-pb,canal-json,debezium
      */
@@ -115,6 +122,22 @@ public class KafkaOption extends AbstractModel {
         this.TopicRules = TopicRules;
     }
 
+    /**
+     * Get 其他附加信息，对于特定数据类型可设置额外参数，比如针对Canal兼容的功能支持："canalOfficialFormat":"on"表示打开Canal兼容功能，默认不带。 
+     * @return DataOption 其他附加信息，对于特定数据类型可设置额外参数，比如针对Canal兼容的功能支持："canalOfficialFormat":"on"表示打开Canal兼容功能，默认不带。
+     */
+    public KeyValuePairOption [] getDataOption() {
+        return this.DataOption;
+    }
+
+    /**
+     * Set 其他附加信息，对于特定数据类型可设置额外参数，比如针对Canal兼容的功能支持："canalOfficialFormat":"on"表示打开Canal兼容功能，默认不带。
+     * @param DataOption 其他附加信息，对于特定数据类型可设置额外参数，比如针对Canal兼容的功能支持："canalOfficialFormat":"on"表示打开Canal兼容功能，默认不带。
+     */
+    public void setDataOption(KeyValuePairOption [] DataOption) {
+        this.DataOption = DataOption;
+    }
+
     public KafkaOption() {
     }
 
@@ -138,6 +161,12 @@ public class KafkaOption extends AbstractModel {
                 this.TopicRules[i] = new TopicRule(source.TopicRules[i]);
             }
         }
+        if (source.DataOption != null) {
+            this.DataOption = new KeyValuePairOption[source.DataOption.length];
+            for (int i = 0; i < source.DataOption.length; i++) {
+                this.DataOption[i] = new KeyValuePairOption(source.DataOption[i]);
+            }
+        }
     }
 
 
@@ -149,6 +178,7 @@ public class KafkaOption extends AbstractModel {
         this.setParamSimple(map, prefix + "TopicType", this.TopicType);
         this.setParamSimple(map, prefix + "DDLTopicName", this.DDLTopicName);
         this.setParamArrayObj(map, prefix + "TopicRules.", this.TopicRules);
+        this.setParamArrayObj(map, prefix + "DataOption.", this.DataOption);
 
     }
 }

@@ -31,6 +31,13 @@ public class DeleteUserRequest extends AbstractModel {
     private String [] UserIds;
 
     /**
+    * 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+    */
+    @SerializedName("AccountType")
+    @Expose
+    private String AccountType;
+
+    /**
      * Get 需要删除的用户的Id 
      * @return UserIds 需要删除的用户的Id
      */
@@ -44,6 +51,22 @@ public class DeleteUserRequest extends AbstractModel {
      */
     public void setUserIds(String [] UserIds) {
         this.UserIds = UserIds;
+    }
+
+    /**
+     * Get 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户） 
+     * @return AccountType 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+     */
+    public String getAccountType() {
+        return this.AccountType;
+    }
+
+    /**
+     * Set 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+     * @param AccountType 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+     */
+    public void setAccountType(String AccountType) {
+        this.AccountType = AccountType;
     }
 
     public DeleteUserRequest() {
@@ -60,6 +83,9 @@ public class DeleteUserRequest extends AbstractModel {
                 this.UserIds[i] = new String(source.UserIds[i]);
             }
         }
+        if (source.AccountType != null) {
+            this.AccountType = new String(source.AccountType);
+        }
     }
 
 
@@ -68,6 +94,7 @@ public class DeleteUserRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "UserIds.", this.UserIds);
+        this.setParamSimple(map, prefix + "AccountType", this.AccountType);
 
     }
 }

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.vcube.v20220410.models;
+package com.tencentcloudapi.iotexplorer.v20190423.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateApplicationAndVideoResponse extends AbstractModel {
+public class CreateTWeSeeRecognitionTaskWithFileResponse extends AbstractModel {
 
     /**
-    * license唯一标识
+    * 任务 ID
     */
-    @SerializedName("LicenseId")
+    @SerializedName("TaskId")
     @Expose
-    private Long LicenseId;
+    private String TaskId;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +38,19 @@ public class CreateApplicationAndVideoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get license唯一标识 
-     * @return LicenseId license唯一标识
+     * Get 任务 ID 
+     * @return TaskId 任务 ID
      */
-    public Long getLicenseId() {
-        return this.LicenseId;
+    public String getTaskId() {
+        return this.TaskId;
     }
 
     /**
-     * Set license唯一标识
-     * @param LicenseId license唯一标识
+     * Set 任务 ID
+     * @param TaskId 任务 ID
      */
-    public void setLicenseId(Long LicenseId) {
-        this.LicenseId = LicenseId;
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
     }
 
     /**
@@ -69,16 +69,16 @@ public class CreateApplicationAndVideoResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreateApplicationAndVideoResponse() {
+    public CreateTWeSeeRecognitionTaskWithFileResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateApplicationAndVideoResponse(CreateApplicationAndVideoResponse source) {
-        if (source.LicenseId != null) {
-            this.LicenseId = new Long(source.LicenseId);
+    public CreateTWeSeeRecognitionTaskWithFileResponse(CreateTWeSeeRecognitionTaskWithFileResponse source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +90,7 @@ public class CreateApplicationAndVideoResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "LicenseId", this.LicenseId);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

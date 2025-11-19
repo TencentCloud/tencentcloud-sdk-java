@@ -66,6 +66,13 @@ public class CreateUserRequest extends AbstractModel {
     private String UserAlias;
 
     /**
+    * 账号类型，UserAccount：用户账号 RoleAccount：角色账号，默认为用户账号
+    */
+    @SerializedName("AccountType")
+    @Expose
+    private String AccountType;
+
+    /**
      * Get 需要授权的子用户uin，可以通过腾讯云控制台右上角 → “账号信息” → “账号ID进行查看”。 
      * @return UserId 需要授权的子用户uin，可以通过腾讯云控制台右上角 → “账号信息” → “账号ID进行查看”。
      */
@@ -161,6 +168,22 @@ public class CreateUserRequest extends AbstractModel {
         this.UserAlias = UserAlias;
     }
 
+    /**
+     * Get 账号类型，UserAccount：用户账号 RoleAccount：角色账号，默认为用户账号 
+     * @return AccountType 账号类型，UserAccount：用户账号 RoleAccount：角色账号，默认为用户账号
+     */
+    public String getAccountType() {
+        return this.AccountType;
+    }
+
+    /**
+     * Set 账号类型，UserAccount：用户账号 RoleAccount：角色账号，默认为用户账号
+     * @param AccountType 账号类型，UserAccount：用户账号 RoleAccount：角色账号，默认为用户账号
+     */
+    public void setAccountType(String AccountType) {
+        this.AccountType = AccountType;
+    }
+
     public CreateUserRequest() {
     }
 
@@ -193,6 +216,9 @@ public class CreateUserRequest extends AbstractModel {
         if (source.UserAlias != null) {
             this.UserAlias = new String(source.UserAlias);
         }
+        if (source.AccountType != null) {
+            this.AccountType = new String(source.AccountType);
+        }
     }
 
 
@@ -206,6 +232,7 @@ public class CreateUserRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "UserType", this.UserType);
         this.setParamArraySimple(map, prefix + "WorkGroupIds.", this.WorkGroupIds);
         this.setParamSimple(map, prefix + "UserAlias", this.UserAlias);
+        this.setParamSimple(map, prefix + "AccountType", this.AccountType);
 
     }
 }

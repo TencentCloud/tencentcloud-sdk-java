@@ -60,6 +60,13 @@ public class UserMessage extends AbstractModel {
     private String UserAlias;
 
     /**
+    * 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+    */
+    @SerializedName("AccountType")
+    @Expose
+    private String AccountType;
+
+    /**
      * Get 用户Id，和CAM侧子用户Uin匹配 
      * @return UserId 用户Id，和CAM侧子用户Uin匹配
      */
@@ -143,6 +150,22 @@ public class UserMessage extends AbstractModel {
         this.UserAlias = UserAlias;
     }
 
+    /**
+     * Get 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户） 
+     * @return AccountType 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+     */
+    public String getAccountType() {
+        return this.AccountType;
+    }
+
+    /**
+     * Set 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+     * @param AccountType 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+     */
+    public void setAccountType(String AccountType) {
+        this.AccountType = AccountType;
+    }
+
     public UserMessage() {
     }
 
@@ -166,6 +189,9 @@ public class UserMessage extends AbstractModel {
         if (source.UserAlias != null) {
             this.UserAlias = new String(source.UserAlias);
         }
+        if (source.AccountType != null) {
+            this.AccountType = new String(source.AccountType);
+        }
     }
 
 
@@ -178,6 +204,7 @@ public class UserMessage extends AbstractModel {
         this.setParamSimple(map, prefix + "Creator", this.Creator);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UserAlias", this.UserAlias);
+        this.setParamSimple(map, prefix + "AccountType", this.AccountType);
 
     }
 }

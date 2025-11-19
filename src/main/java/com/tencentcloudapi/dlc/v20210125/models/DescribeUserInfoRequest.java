@@ -97,6 +97,13 @@ engine-name：库表的模糊搜索。
     private Long Offset;
 
     /**
+    * 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+    */
+    @SerializedName("AccountType")
+    @Expose
+    private String AccountType;
+
+    /**
      * Get 用户Id 
      * @return UserId 用户Id
      */
@@ -304,6 +311,22 @@ engine-name：库表的模糊搜索。
         this.Offset = Offset;
     }
 
+    /**
+     * Get 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户） 
+     * @return AccountType 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+     */
+    public String getAccountType() {
+        return this.AccountType;
+    }
+
+    /**
+     * Set 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+     * @param AccountType 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+     */
+    public void setAccountType(String AccountType) {
+        this.AccountType = AccountType;
+    }
+
     public DescribeUserInfoRequest() {
     }
 
@@ -336,6 +359,9 @@ engine-name：库表的模糊搜索。
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.AccountType != null) {
+            this.AccountType = new String(source.AccountType);
+        }
     }
 
 
@@ -350,6 +376,7 @@ engine-name：库表的模糊搜索。
         this.setParamSimple(map, prefix + "Sorting", this.Sorting);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "AccountType", this.AccountType);
 
     }
 }

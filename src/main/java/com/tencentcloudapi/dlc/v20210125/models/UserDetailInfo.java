@@ -106,6 +106,13 @@ public class UserDetailInfo extends AbstractModel {
     private Policys CatalogPolicyInfo;
 
     /**
+    * 模型权限集合
+    */
+    @SerializedName("ModelPolicyInfo")
+    @Expose
+    private Policys ModelPolicyInfo;
+
+    /**
      * Get 用户Id 
      * @return UserId 用户Id
      */
@@ -301,6 +308,22 @@ public class UserDetailInfo extends AbstractModel {
         this.CatalogPolicyInfo = CatalogPolicyInfo;
     }
 
+    /**
+     * Get 模型权限集合 
+     * @return ModelPolicyInfo 模型权限集合
+     */
+    public Policys getModelPolicyInfo() {
+        return this.ModelPolicyInfo;
+    }
+
+    /**
+     * Set 模型权限集合
+     * @param ModelPolicyInfo 模型权限集合
+     */
+    public void setModelPolicyInfo(Policys ModelPolicyInfo) {
+        this.ModelPolicyInfo = ModelPolicyInfo;
+    }
+
     public UserDetailInfo() {
     }
 
@@ -342,6 +365,9 @@ public class UserDetailInfo extends AbstractModel {
         if (source.CatalogPolicyInfo != null) {
             this.CatalogPolicyInfo = new Policys(source.CatalogPolicyInfo);
         }
+        if (source.ModelPolicyInfo != null) {
+            this.ModelPolicyInfo = new Policys(source.ModelPolicyInfo);
+        }
     }
 
 
@@ -360,6 +386,7 @@ public class UserDetailInfo extends AbstractModel {
         this.setParamObj(map, prefix + "RowFilterInfo.", this.RowFilterInfo);
         this.setParamSimple(map, prefix + "AccountType", this.AccountType);
         this.setParamObj(map, prefix + "CatalogPolicyInfo.", this.CatalogPolicyInfo);
+        this.setParamObj(map, prefix + "ModelPolicyInfo.", this.ModelPolicyInfo);
 
     }
 }

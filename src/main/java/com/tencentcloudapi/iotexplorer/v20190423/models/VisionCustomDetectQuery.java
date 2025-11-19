@@ -21,67 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class WifiInfo extends AbstractModel {
+public class VisionCustomDetectQuery extends AbstractModel {
 
     /**
-    * mac地址
+    * 自定义标签的标识符
     */
-    @SerializedName("MAC")
+    @SerializedName("Key")
     @Expose
-    private String MAC;
+    private String Key;
 
     /**
-    * 信号强度
+    * 自定义标签的描述文本
     */
-    @SerializedName("RSSI")
+    @SerializedName("Query")
     @Expose
-    private Long RSSI;
+    private String Query;
 
     /**
-     * Get mac地址 
-     * @return MAC mac地址
+     * Get 自定义标签的标识符 
+     * @return Key 自定义标签的标识符
      */
-    public String getMAC() {
-        return this.MAC;
+    public String getKey() {
+        return this.Key;
     }
 
     /**
-     * Set mac地址
-     * @param MAC mac地址
+     * Set 自定义标签的标识符
+     * @param Key 自定义标签的标识符
      */
-    public void setMAC(String MAC) {
-        this.MAC = MAC;
+    public void setKey(String Key) {
+        this.Key = Key;
     }
 
     /**
-     * Get 信号强度 
-     * @return RSSI 信号强度
+     * Get 自定义标签的描述文本 
+     * @return Query 自定义标签的描述文本
      */
-    public Long getRSSI() {
-        return this.RSSI;
+    public String getQuery() {
+        return this.Query;
     }
 
     /**
-     * Set 信号强度
-     * @param RSSI 信号强度
+     * Set 自定义标签的描述文本
+     * @param Query 自定义标签的描述文本
      */
-    public void setRSSI(Long RSSI) {
-        this.RSSI = RSSI;
+    public void setQuery(String Query) {
+        this.Query = Query;
     }
 
-    public WifiInfo() {
+    public VisionCustomDetectQuery() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public WifiInfo(WifiInfo source) {
-        if (source.MAC != null) {
-            this.MAC = new String(source.MAC);
+    public VisionCustomDetectQuery(VisionCustomDetectQuery source) {
+        if (source.Key != null) {
+            this.Key = new String(source.Key);
         }
-        if (source.RSSI != null) {
-            this.RSSI = new Long(source.RSSI);
+        if (source.Query != null) {
+            this.Query = new String(source.Query);
         }
     }
 
@@ -90,8 +90,8 @@ public class WifiInfo extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "MAC", this.MAC);
-        this.setParamSimple(map, prefix + "RSSI", this.RSSI);
+        this.setParamSimple(map, prefix + "Key", this.Key);
+        this.setParamSimple(map, prefix + "Query", this.Query);
 
     }
 }

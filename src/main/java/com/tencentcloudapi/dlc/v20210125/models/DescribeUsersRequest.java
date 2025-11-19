@@ -66,6 +66,13 @@ public class DescribeUsersRequest extends AbstractModel {
     private Filter [] Filters;
 
     /**
+    * 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+    */
+    @SerializedName("AccountType")
+    @Expose
+    private String AccountType;
+
+    /**
      * Get 指定查询的子用户uin，用户需要通过CreateUser接口创建。 
      * @return UserId 指定查询的子用户uin，用户需要通过CreateUser接口创建。
      */
@@ -161,6 +168,22 @@ public class DescribeUsersRequest extends AbstractModel {
         this.Filters = Filters;
     }
 
+    /**
+     * Get 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户） 
+     * @return AccountType 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+     */
+    public String getAccountType() {
+        return this.AccountType;
+    }
+
+    /**
+     * Set 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+     * @param AccountType 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+     */
+    public void setAccountType(String AccountType) {
+        this.AccountType = AccountType;
+    }
+
     public DescribeUsersRequest() {
     }
 
@@ -190,6 +213,9 @@ public class DescribeUsersRequest extends AbstractModel {
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
         }
+        if (source.AccountType != null) {
+            this.AccountType = new String(source.AccountType);
+        }
     }
 
 
@@ -203,6 +229,7 @@ public class DescribeUsersRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SortBy", this.SortBy);
         this.setParamSimple(map, prefix + "Sorting", this.Sorting);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "AccountType", this.AccountType);
 
     }
 }

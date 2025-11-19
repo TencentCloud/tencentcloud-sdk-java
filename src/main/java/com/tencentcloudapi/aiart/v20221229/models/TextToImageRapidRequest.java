@@ -121,7 +121,7 @@ public class TextToImageRapidRequest extends AbstractModel {
     private LogoParam LogoParam;
 
     /**
-    * 返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。
+    * 返回图像方式（base64 或 url），二选一，默认为 base64。url 有效期为1小时。
     */
     @SerializedName("RspImgType")
     @Expose
@@ -432,16 +432,16 @@ public class TextToImageRapidRequest extends AbstractModel {
     }
 
     /**
-     * Get 返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。 
-     * @return RspImgType 返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。
+     * Get 返回图像方式（base64 或 url），二选一，默认为 base64。url 有效期为1小时。 
+     * @return RspImgType 返回图像方式（base64 或 url），二选一，默认为 base64。url 有效期为1小时。
      */
     public String getRspImgType() {
         return this.RspImgType;
     }
 
     /**
-     * Set 返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。
-     * @param RspImgType 返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。
+     * Set 返回图像方式（base64 或 url），二选一，默认为 base64。url 有效期为1小时。
+     * @param RspImgType 返回图像方式（base64 或 url），二选一，默认为 base64。url 有效期为1小时。
      */
     public void setRspImgType(String RspImgType) {
         this.RspImgType = RspImgType;

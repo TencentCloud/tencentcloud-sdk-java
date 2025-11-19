@@ -29,6 +29,7 @@ public class ParseLiveStreamProcessNotificationResponse extends AbstractModel {
 <li>AiRecognitionResult：内容识别结果；</li>
 <li>LiveRecordResult：直播录制结果；</li>
 <li>AiQualityControlResult：媒体质检结果；</li>
+<li>AiAnalysisResult：内容分析结果；</li>
 <li>ProcessEof：直播流处理结束。</li>
     */
     @SerializedName("NotificationType")
@@ -131,12 +132,14 @@ public class ParseLiveStreamProcessNotificationResponse extends AbstractModel {
 <li>AiRecognitionResult：内容识别结果；</li>
 <li>LiveRecordResult：直播录制结果；</li>
 <li>AiQualityControlResult：媒体质检结果；</li>
+<li>AiAnalysisResult：内容分析结果；</li>
 <li>ProcessEof：直播流处理结束。</li> 
      * @return NotificationType 直播流处理结果类型，包含：
 <li>AiReviewResult：内容审核结果；</li>
 <li>AiRecognitionResult：内容识别结果；</li>
 <li>LiveRecordResult：直播录制结果；</li>
 <li>AiQualityControlResult：媒体质检结果；</li>
+<li>AiAnalysisResult：内容分析结果；</li>
 <li>ProcessEof：直播流处理结束。</li>
      */
     public String getNotificationType() {
@@ -149,12 +152,14 @@ public class ParseLiveStreamProcessNotificationResponse extends AbstractModel {
 <li>AiRecognitionResult：内容识别结果；</li>
 <li>LiveRecordResult：直播录制结果；</li>
 <li>AiQualityControlResult：媒体质检结果；</li>
+<li>AiAnalysisResult：内容分析结果；</li>
 <li>ProcessEof：直播流处理结束。</li>
      * @param NotificationType 直播流处理结果类型，包含：
 <li>AiReviewResult：内容审核结果；</li>
 <li>AiRecognitionResult：内容识别结果；</li>
 <li>LiveRecordResult：直播录制结果；</li>
 <li>AiQualityControlResult：媒体质检结果；</li>
+<li>AiAnalysisResult：内容分析结果；</li>
 <li>ProcessEof：直播流处理结束。</li>
      */
     public void setNotificationType(String NotificationType) {

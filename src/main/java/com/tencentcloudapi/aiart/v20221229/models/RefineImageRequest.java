@@ -42,7 +42,7 @@ Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
     private String InputImage;
 
     /**
-    * 返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。 示例值：url
+    * 返回图像方式（base64 或 url），二选一，默认为 base64。url 有效期为1小时。 示例值：url
     */
     @SerializedName("RspImgType")
     @Expose
@@ -97,16 +97,16 @@ Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
     }
 
     /**
-     * Get 返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。 示例值：url 
-     * @return RspImgType 返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。 示例值：url
+     * Get 返回图像方式（base64 或 url），二选一，默认为 base64。url 有效期为1小时。 示例值：url 
+     * @return RspImgType 返回图像方式（base64 或 url），二选一，默认为 base64。url 有效期为1小时。 示例值：url
      */
     public String getRspImgType() {
         return this.RspImgType;
     }
 
     /**
-     * Set 返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。 示例值：url
-     * @param RspImgType 返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。 示例值：url
+     * Set 返回图像方式（base64 或 url），二选一，默认为 base64。url 有效期为1小时。 示例值：url
+     * @param RspImgType 返回图像方式（base64 或 url），二选一，默认为 base64。url 有效期为1小时。 示例值：url
      */
     public void setRspImgType(String RspImgType) {
         this.RspImgType = RspImgType;

@@ -446,17 +446,6 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
-     *查询用户列表
-     * @param req DescribeAppInfoRequest
-     * @return DescribeAppInfoResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAppInfoResponse DescribeAppInfo(DescribeAppInfoRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeAppInfo", DescribeAppInfoResponse.class);
-    }
-
-    /**
      *用于查看ckafka的可用区列表
      * @param req DescribeCkafkaZoneRequest
      * @return DescribeCkafkaZoneResponse

@@ -50,6 +50,28 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *批量同步执行 TWeSee 语义理解任务
+     * @param req BatchCreateTWeSeeRecognitionTaskRequest
+     * @return BatchCreateTWeSeeRecognitionTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchCreateTWeSeeRecognitionTaskResponse BatchCreateTWeSeeRecognitionTask(BatchCreateTWeSeeRecognitionTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BatchCreateTWeSeeRecognitionTask", BatchCreateTWeSeeRecognitionTaskResponse.class);
+    }
+
+    /**
+     *批量同步执行 TWeSee 语义理解任务
+     * @param req BatchInvokeTWeSeeRecognitionTaskRequest
+     * @return BatchInvokeTWeSeeRecognitionTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchInvokeTWeSeeRecognitionTaskResponse BatchInvokeTWeSeeRecognitionTask(BatchInvokeTWeSeeRecognitionTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BatchInvokeTWeSeeRecognitionTask", BatchInvokeTWeSeeRecognitionTaskResponse.class);
+    }
+
+    /**
      *本接口（BatchUpdateFirmware）用于批量更新设备固件
      * @param req BatchUpdateFirmwareRequest
      * @return BatchUpdateFirmwareResponse
@@ -371,6 +393,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *同步执行 TWeSee 语义理解任务
+     * @param req CreateTWeSeeRecognitionTaskWithFileRequest
+     * @return CreateTWeSeeRecognitionTaskWithFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTWeSeeRecognitionTaskWithFileResponse CreateTWeSeeRecognitionTaskWithFile(CreateTWeSeeRecognitionTaskWithFileRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTWeSeeRecognitionTaskWithFile", CreateTWeSeeRecognitionTaskWithFileResponse.class);
+    }
+
+    /**
      *开通 TWeSee 后付费服务
      * @param req CreateTWeSeeServiceRequest
      * @return CreateTWeSeeServiceResponse
@@ -544,6 +577,17 @@ public class IotexplorerClient extends AbstractClient{
     public DeleteStudioProductResponse DeleteStudioProduct(DeleteStudioProductRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteStudioProduct", DeleteStudioProductResponse.class);
+    }
+
+    /**
+     *用于删除配置TWeTalk服务连接产品配置信息。
+     * @param req DeleteTWeTalkProductConfigV2Request
+     * @return DeleteTWeTalkProductConfigV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTWeTalkProductConfigV2Response DeleteTWeTalkProductConfigV2(DeleteTWeTalkProductConfigV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteTWeTalkProductConfigV2", DeleteTWeTalkProductConfigV2Response.class);
     }
 
     /**
@@ -885,19 +929,6 @@ public class IotexplorerClient extends AbstractClient{
     public DescribeDeviceFirmwaresResponse DescribeDeviceFirmwares(DescribeDeviceFirmwaresRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDeviceFirmwares", DescribeDeviceFirmwaresResponse.class);
-    }
-
-    /**
-     *获取实时位置解析依赖于teg位置服务，近30天调用只有2个个人账号调用，产品推下线
-
-获取实时位置解析
-     * @param req DescribeDeviceLocationSolveRequest
-     * @return DescribeDeviceLocationSolveResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDeviceLocationSolveResponse DescribeDeviceLocationSolve(DescribeDeviceLocationSolveRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeDeviceLocationSolve", DescribeDeviceLocationSolveResponse.class);
     }
 
     /**
@@ -1580,6 +1611,17 @@ public class IotexplorerClient extends AbstractClient{
     public InvokeTWeSeeRecognitionTaskResponse InvokeTWeSeeRecognitionTask(InvokeTWeSeeRecognitionTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "InvokeTWeSeeRecognitionTask", InvokeTWeSeeRecognitionTaskResponse.class);
+    }
+
+    /**
+     *同步执行 TWeSee 语义理解任务
+     * @param req InvokeTWeSeeRecognitionTaskWithFileRequest
+     * @return InvokeTWeSeeRecognitionTaskWithFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public InvokeTWeSeeRecognitionTaskWithFileResponse InvokeTWeSeeRecognitionTaskWithFile(InvokeTWeSeeRecognitionTaskWithFileRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InvokeTWeSeeRecognitionTaskWithFile", InvokeTWeSeeRecognitionTaskWithFileResponse.class);
     }
 
     /**

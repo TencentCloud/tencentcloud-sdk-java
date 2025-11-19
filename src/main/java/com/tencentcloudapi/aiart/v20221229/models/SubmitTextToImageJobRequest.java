@@ -70,9 +70,11 @@ public class SubmitTextToImageJobRequest extends AbstractModel {
     private LogoParam LogoParam;
 
     /**
-    * 是否开启prompt改写，默认开启，改写预计会增加20s左右耗时。
-
-如果关闭改写，需要调用方自己接改写，否则对生图效果有较大影响，改写方法可以参考：[改写](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0/tree/main/PE)
+    * 是否开启prompt改写，为空时默认开启，改写预计会增加20s左右耗时。
+0：关闭改写
+1：开启改写
+建议默认开启，如果关闭改写，需要调用方自己接改写，否则对生图效果有较大影响，改写方法可以参考：[改写](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0/tree/main/PE)
+示例值：1
     */
     @SerializedName("Revise")
     @Expose
@@ -203,24 +205,32 @@ public class SubmitTextToImageJobRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否开启prompt改写，默认开启，改写预计会增加20s左右耗时。
-
-如果关闭改写，需要调用方自己接改写，否则对生图效果有较大影响，改写方法可以参考：[改写](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0/tree/main/PE) 
-     * @return Revise 是否开启prompt改写，默认开启，改写预计会增加20s左右耗时。
-
-如果关闭改写，需要调用方自己接改写，否则对生图效果有较大影响，改写方法可以参考：[改写](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0/tree/main/PE)
+     * Get 是否开启prompt改写，为空时默认开启，改写预计会增加20s左右耗时。
+0：关闭改写
+1：开启改写
+建议默认开启，如果关闭改写，需要调用方自己接改写，否则对生图效果有较大影响，改写方法可以参考：[改写](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0/tree/main/PE)
+示例值：1 
+     * @return Revise 是否开启prompt改写，为空时默认开启，改写预计会增加20s左右耗时。
+0：关闭改写
+1：开启改写
+建议默认开启，如果关闭改写，需要调用方自己接改写，否则对生图效果有较大影响，改写方法可以参考：[改写](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0/tree/main/PE)
+示例值：1
      */
     public Long getRevise() {
         return this.Revise;
     }
 
     /**
-     * Set 是否开启prompt改写，默认开启，改写预计会增加20s左右耗时。
-
-如果关闭改写，需要调用方自己接改写，否则对生图效果有较大影响，改写方法可以参考：[改写](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0/tree/main/PE)
-     * @param Revise 是否开启prompt改写，默认开启，改写预计会增加20s左右耗时。
-
-如果关闭改写，需要调用方自己接改写，否则对生图效果有较大影响，改写方法可以参考：[改写](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0/tree/main/PE)
+     * Set 是否开启prompt改写，为空时默认开启，改写预计会增加20s左右耗时。
+0：关闭改写
+1：开启改写
+建议默认开启，如果关闭改写，需要调用方自己接改写，否则对生图效果有较大影响，改写方法可以参考：[改写](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0/tree/main/PE)
+示例值：1
+     * @param Revise 是否开启prompt改写，为空时默认开启，改写预计会增加20s左右耗时。
+0：关闭改写
+1：开启改写
+建议默认开启，如果关闭改写，需要调用方自己接改写，否则对生图效果有较大影响，改写方法可以参考：[改写](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0/tree/main/PE)
+示例值：1
      */
     public void setRevise(Long Revise) {
         this.Revise = Revise;

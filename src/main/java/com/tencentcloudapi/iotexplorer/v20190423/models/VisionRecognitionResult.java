@@ -71,6 +71,13 @@ public class VisionRecognitionResult extends AbstractModel {
     private String ErrorCode;
 
     /**
+    * 目标检测算法检测到的目标列表
+    */
+    @SerializedName("DetectedObjects")
+    @Expose
+    private VisionDetectedObject [] DetectedObjects;
+
+    /**
      * Get 任务状态（1：分析失败；2：下载/读取视频/图片失败；3：成功；4：执行中） 
      * @return Status 任务状态（1：分析失败；2：下载/读取视频/图片失败；3：成功；4：执行中）
      */
@@ -198,6 +205,22 @@ public class VisionRecognitionResult extends AbstractModel {
         this.ErrorCode = ErrorCode;
     }
 
+    /**
+     * Get 目标检测算法检测到的目标列表 
+     * @return DetectedObjects 目标检测算法检测到的目标列表
+     */
+    public VisionDetectedObject [] getDetectedObjects() {
+        return this.DetectedObjects;
+    }
+
+    /**
+     * Set 目标检测算法检测到的目标列表
+     * @param DetectedObjects 目标检测算法检测到的目标列表
+     */
+    public void setDetectedObjects(VisionDetectedObject [] DetectedObjects) {
+        this.DetectedObjects = DetectedObjects;
+    }
+
     public VisionRecognitionResult() {
     }
 
@@ -224,6 +247,12 @@ public class VisionRecognitionResult extends AbstractModel {
         if (source.ErrorCode != null) {
             this.ErrorCode = new String(source.ErrorCode);
         }
+        if (source.DetectedObjects != null) {
+            this.DetectedObjects = new VisionDetectedObject[source.DetectedObjects.length];
+            for (int i = 0; i < source.DetectedObjects.length; i++) {
+                this.DetectedObjects[i] = new VisionDetectedObject(source.DetectedObjects[i]);
+            }
+        }
     }
 
 
@@ -236,6 +265,7 @@ public class VisionRecognitionResult extends AbstractModel {
         this.setParamSimple(map, prefix + "Summary", this.Summary);
         this.setParamSimple(map, prefix + "AlternativeSummary", this.AlternativeSummary);
         this.setParamSimple(map, prefix + "ErrorCode", this.ErrorCode);
+        this.setParamArrayObj(map, prefix + "DetectedObjects.", this.DetectedObjects);
 
     }
 }

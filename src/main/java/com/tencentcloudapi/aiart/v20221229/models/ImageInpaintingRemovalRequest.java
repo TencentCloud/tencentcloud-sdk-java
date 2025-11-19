@@ -62,7 +62,7 @@ Mask 的 Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
     private String MaskUrl;
 
     /**
-    * 返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。
+    * 返回图像方式（base64 或 url），二选一，默认为 base64。url 有效期为1小时。
     */
     @SerializedName("RspImgType")
     @Expose
@@ -192,16 +192,16 @@ Mask 的 Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
     }
 
     /**
-     * Get 返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。 
-     * @return RspImgType 返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。
+     * Get 返回图像方式（base64 或 url），二选一，默认为 base64。url 有效期为1小时。 
+     * @return RspImgType 返回图像方式（base64 或 url），二选一，默认为 base64。url 有效期为1小时。
      */
     public String getRspImgType() {
         return this.RspImgType;
     }
 
     /**
-     * Set 返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。
-     * @param RspImgType 返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。
+     * Set 返回图像方式（base64 或 url），二选一，默认为 base64。url 有效期为1小时。
+     * @param RspImgType 返回图像方式（base64 或 url），二选一，默认为 base64。url 有效期为1小时。
      */
     public void setRspImgType(String RspImgType) {
         this.RspImgType = RspImgType;

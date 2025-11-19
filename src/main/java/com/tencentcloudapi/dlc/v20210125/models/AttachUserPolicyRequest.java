@@ -38,6 +38,13 @@ public class AttachUserPolicyRequest extends AbstractModel {
     private Policy [] PolicySet;
 
     /**
+    * 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+    */
+    @SerializedName("AccountType")
+    @Expose
+    private String AccountType;
+
+    /**
      * Get 用户Id，和子用户uin相同，需要先使用CreateUser接口创建用户。可以使用DescribeUsers接口查看。 
      * @return UserId 用户Id，和子用户uin相同，需要先使用CreateUser接口创建用户。可以使用DescribeUsers接口查看。
      */
@@ -69,6 +76,22 @@ public class AttachUserPolicyRequest extends AbstractModel {
         this.PolicySet = PolicySet;
     }
 
+    /**
+     * Get 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户） 
+     * @return AccountType 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+     */
+    public String getAccountType() {
+        return this.AccountType;
+    }
+
+    /**
+     * Set 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+     * @param AccountType 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+     */
+    public void setAccountType(String AccountType) {
+        this.AccountType = AccountType;
+    }
+
     public AttachUserPolicyRequest() {
     }
 
@@ -86,6 +109,9 @@ public class AttachUserPolicyRequest extends AbstractModel {
                 this.PolicySet[i] = new Policy(source.PolicySet[i]);
             }
         }
+        if (source.AccountType != null) {
+            this.AccountType = new String(source.AccountType);
+        }
     }
 
 
@@ -95,6 +121,7 @@ public class AttachUserPolicyRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamArrayObj(map, prefix + "PolicySet.", this.PolicySet);
+        this.setParamSimple(map, prefix + "AccountType", this.AccountType);
 
     }
 }

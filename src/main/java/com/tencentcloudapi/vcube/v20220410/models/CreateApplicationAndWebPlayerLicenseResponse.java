@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class CreateApplicationAndWebPlayerLicenseResponse extends AbstractModel {
 
     /**
+    * license的唯一标识
+    */
+    @SerializedName("LicenseId")
+    @Expose
+    private Long LicenseId;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get license的唯一标识 
+     * @return LicenseId license的唯一标识
+     */
+    public Long getLicenseId() {
+        return this.LicenseId;
+    }
+
+    /**
+     * Set license的唯一标识
+     * @param LicenseId license的唯一标识
+     */
+    public void setLicenseId(Long LicenseId) {
+        this.LicenseId = LicenseId;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,9 @@ public class CreateApplicationAndWebPlayerLicenseResponse extends AbstractModel 
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateApplicationAndWebPlayerLicenseResponse(CreateApplicationAndWebPlayerLicenseResponse source) {
+        if (source.LicenseId != null) {
+            this.LicenseId = new Long(source.LicenseId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +90,7 @@ public class CreateApplicationAndWebPlayerLicenseResponse extends AbstractModel 
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "LicenseId", this.LicenseId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

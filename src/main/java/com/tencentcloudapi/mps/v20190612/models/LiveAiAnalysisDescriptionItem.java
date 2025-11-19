@@ -21,63 +21,48 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LiveStreamAiAnalysisResultInfo extends AbstractModel {
+public class LiveAiAnalysisDescriptionItem extends AbstractModel {
 
     /**
-    * 直播分析子任务结果，支持：
-<li>直播拆条</li>
-<li>直播高光集锦</li>
-<li>直播摘要</li>
+    * 分段结果。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("ResultSet")
+    @SerializedName("Paragraphs")
     @Expose
-    private LiveStreamAiAnalysisResultItem [] ResultSet;
+    private LiveAiParagraphInfo [] Paragraphs;
 
     /**
-     * Get 直播分析子任务结果，支持：
-<li>直播拆条</li>
-<li>直播高光集锦</li>
-<li>直播摘要</li>
+     * Get 分段结果。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResultSet 直播分析子任务结果，支持：
-<li>直播拆条</li>
-<li>直播高光集锦</li>
-<li>直播摘要</li>
+     * @return Paragraphs 分段结果。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public LiveStreamAiAnalysisResultItem [] getResultSet() {
-        return this.ResultSet;
+    public LiveAiParagraphInfo [] getParagraphs() {
+        return this.Paragraphs;
     }
 
     /**
-     * Set 直播分析子任务结果，支持：
-<li>直播拆条</li>
-<li>直播高光集锦</li>
-<li>直播摘要</li>
+     * Set 分段结果。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResultSet 直播分析子任务结果，支持：
-<li>直播拆条</li>
-<li>直播高光集锦</li>
-<li>直播摘要</li>
+     * @param Paragraphs 分段结果。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setResultSet(LiveStreamAiAnalysisResultItem [] ResultSet) {
-        this.ResultSet = ResultSet;
+    public void setParagraphs(LiveAiParagraphInfo [] Paragraphs) {
+        this.Paragraphs = Paragraphs;
     }
 
-    public LiveStreamAiAnalysisResultInfo() {
+    public LiveAiAnalysisDescriptionItem() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public LiveStreamAiAnalysisResultInfo(LiveStreamAiAnalysisResultInfo source) {
-        if (source.ResultSet != null) {
-            this.ResultSet = new LiveStreamAiAnalysisResultItem[source.ResultSet.length];
-            for (int i = 0; i < source.ResultSet.length; i++) {
-                this.ResultSet[i] = new LiveStreamAiAnalysisResultItem(source.ResultSet[i]);
+    public LiveAiAnalysisDescriptionItem(LiveAiAnalysisDescriptionItem source) {
+        if (source.Paragraphs != null) {
+            this.Paragraphs = new LiveAiParagraphInfo[source.Paragraphs.length];
+            for (int i = 0; i < source.Paragraphs.length; i++) {
+                this.Paragraphs[i] = new LiveAiParagraphInfo(source.Paragraphs[i]);
             }
         }
     }
@@ -87,7 +72,7 @@ public class LiveStreamAiAnalysisResultInfo extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "ResultSet.", this.ResultSet);
+        this.setParamArrayObj(map, prefix + "Paragraphs.", this.Paragraphs);
 
     }
 }

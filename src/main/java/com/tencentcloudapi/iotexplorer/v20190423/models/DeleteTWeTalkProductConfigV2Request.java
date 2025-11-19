@@ -21,7 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDeviceLocationSolveRequest extends AbstractModel {
+public class DeleteTWeTalkProductConfigV2Request extends AbstractModel {
 
     /**
     * 产品ID
@@ -38,25 +38,11 @@ public class DescribeDeviceLocationSolveRequest extends AbstractModel {
     private String DeviceName;
 
     /**
-    * 定位解析类型，wifi或GNSSNavigation
+    * 支持的语言，zh-中文；en-英文；默认zh
     */
-    @SerializedName("LocationType")
+    @SerializedName("TargetLanguage")
     @Expose
-    private String LocationType;
-
-    /**
-    * LoRaEdge卫星导航电文
-    */
-    @SerializedName("GNSSNavigation")
-    @Expose
-    private String GNSSNavigation;
-
-    /**
-    * wifi信息
-    */
-    @SerializedName("WiFiInfo")
-    @Expose
-    private WifiInfo [] WiFiInfo;
+    private String TargetLanguage;
 
     /**
      * Get 产品ID 
@@ -91,78 +77,37 @@ public class DescribeDeviceLocationSolveRequest extends AbstractModel {
     }
 
     /**
-     * Get 定位解析类型，wifi或GNSSNavigation 
-     * @return LocationType 定位解析类型，wifi或GNSSNavigation
+     * Get 支持的语言，zh-中文；en-英文；默认zh 
+     * @return TargetLanguage 支持的语言，zh-中文；en-英文；默认zh
      */
-    public String getLocationType() {
-        return this.LocationType;
+    public String getTargetLanguage() {
+        return this.TargetLanguage;
     }
 
     /**
-     * Set 定位解析类型，wifi或GNSSNavigation
-     * @param LocationType 定位解析类型，wifi或GNSSNavigation
+     * Set 支持的语言，zh-中文；en-英文；默认zh
+     * @param TargetLanguage 支持的语言，zh-中文；en-英文；默认zh
      */
-    public void setLocationType(String LocationType) {
-        this.LocationType = LocationType;
+    public void setTargetLanguage(String TargetLanguage) {
+        this.TargetLanguage = TargetLanguage;
     }
 
-    /**
-     * Get LoRaEdge卫星导航电文 
-     * @return GNSSNavigation LoRaEdge卫星导航电文
-     */
-    public String getGNSSNavigation() {
-        return this.GNSSNavigation;
-    }
-
-    /**
-     * Set LoRaEdge卫星导航电文
-     * @param GNSSNavigation LoRaEdge卫星导航电文
-     */
-    public void setGNSSNavigation(String GNSSNavigation) {
-        this.GNSSNavigation = GNSSNavigation;
-    }
-
-    /**
-     * Get wifi信息 
-     * @return WiFiInfo wifi信息
-     */
-    public WifiInfo [] getWiFiInfo() {
-        return this.WiFiInfo;
-    }
-
-    /**
-     * Set wifi信息
-     * @param WiFiInfo wifi信息
-     */
-    public void setWiFiInfo(WifiInfo [] WiFiInfo) {
-        this.WiFiInfo = WiFiInfo;
-    }
-
-    public DescribeDeviceLocationSolveRequest() {
+    public DeleteTWeTalkProductConfigV2Request() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeDeviceLocationSolveRequest(DescribeDeviceLocationSolveRequest source) {
+    public DeleteTWeTalkProductConfigV2Request(DeleteTWeTalkProductConfigV2Request source) {
         if (source.ProductId != null) {
             this.ProductId = new String(source.ProductId);
         }
         if (source.DeviceName != null) {
             this.DeviceName = new String(source.DeviceName);
         }
-        if (source.LocationType != null) {
-            this.LocationType = new String(source.LocationType);
-        }
-        if (source.GNSSNavigation != null) {
-            this.GNSSNavigation = new String(source.GNSSNavigation);
-        }
-        if (source.WiFiInfo != null) {
-            this.WiFiInfo = new WifiInfo[source.WiFiInfo.length];
-            for (int i = 0; i < source.WiFiInfo.length; i++) {
-                this.WiFiInfo[i] = new WifiInfo(source.WiFiInfo[i]);
-            }
+        if (source.TargetLanguage != null) {
+            this.TargetLanguage = new String(source.TargetLanguage);
         }
     }
 
@@ -173,9 +118,7 @@ public class DescribeDeviceLocationSolveRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
-        this.setParamSimple(map, prefix + "LocationType", this.LocationType);
-        this.setParamSimple(map, prefix + "GNSSNavigation", this.GNSSNavigation);
-        this.setParamArrayObj(map, prefix + "WiFiInfo.", this.WiFiInfo);
+        this.setParamSimple(map, prefix + "TargetLanguage", this.TargetLanguage);
 
     }
 }

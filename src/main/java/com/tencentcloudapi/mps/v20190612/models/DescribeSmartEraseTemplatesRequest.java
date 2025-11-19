@@ -54,6 +54,16 @@ public class DescribeSmartEraseTemplatesRequest extends AbstractModel {
     private String Type;
 
     /**
+    * 智能擦除模板擦除类型过滤条件。
+- subtitle 去字幕
+- watermark 去水印
+- privacy 隐私保护
+    */
+    @SerializedName("EraseType")
+    @Expose
+    private String EraseType;
+
+    /**
     * 智能擦除模板名过滤条件，长度限制：64 个字符。
     */
     @SerializedName("Name")
@@ -133,6 +143,34 @@ public class DescribeSmartEraseTemplatesRequest extends AbstractModel {
     }
 
     /**
+     * Get 智能擦除模板擦除类型过滤条件。
+- subtitle 去字幕
+- watermark 去水印
+- privacy 隐私保护 
+     * @return EraseType 智能擦除模板擦除类型过滤条件。
+- subtitle 去字幕
+- watermark 去水印
+- privacy 隐私保护
+     */
+    public String getEraseType() {
+        return this.EraseType;
+    }
+
+    /**
+     * Set 智能擦除模板擦除类型过滤条件。
+- subtitle 去字幕
+- watermark 去水印
+- privacy 隐私保护
+     * @param EraseType 智能擦除模板擦除类型过滤条件。
+- subtitle 去字幕
+- watermark 去水印
+- privacy 隐私保护
+     */
+    public void setEraseType(String EraseType) {
+        this.EraseType = EraseType;
+    }
+
+    /**
      * Get 智能擦除模板名过滤条件，长度限制：64 个字符。 
      * @return Name 智能擦除模板名过滤条件，长度限制：64 个字符。
      */
@@ -171,6 +209,9 @@ public class DescribeSmartEraseTemplatesRequest extends AbstractModel {
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
+        if (source.EraseType != null) {
+            this.EraseType = new String(source.EraseType);
+        }
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
@@ -185,6 +226,7 @@ public class DescribeSmartEraseTemplatesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "EraseType", this.EraseType);
         this.setParamSimple(map, prefix + "Name", this.Name);
 
     }

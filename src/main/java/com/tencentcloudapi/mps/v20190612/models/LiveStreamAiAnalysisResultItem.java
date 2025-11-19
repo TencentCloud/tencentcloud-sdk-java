@@ -27,6 +27,7 @@ public class LiveStreamAiAnalysisResultItem extends AbstractModel {
     * 结果的类型，取值范围：
 <li>SegmentRecognition：拆条。</li>
 <li>Highlight ：集锦。</li>
+<li> Description：摘要。</li>
     */
     @SerializedName("Type")
     @Expose
@@ -50,12 +51,21 @@ SegmentRecognition 时有效。
     private MediaAiAnalysisHighlightItem [] HighlightResultSet;
 
     /**
+    * 摘要结果，当Type 为 Description 时有效。
+    */
+    @SerializedName("DescriptionResult")
+    @Expose
+    private LiveAiAnalysisDescriptionItem DescriptionResult;
+
+    /**
      * Get 结果的类型，取值范围：
 <li>SegmentRecognition：拆条。</li>
-<li>Highlight ：集锦。</li> 
+<li>Highlight ：集锦。</li>
+<li> Description：摘要。</li> 
      * @return Type 结果的类型，取值范围：
 <li>SegmentRecognition：拆条。</li>
 <li>Highlight ：集锦。</li>
+<li> Description：摘要。</li>
      */
     public String getType() {
         return this.Type;
@@ -65,9 +75,11 @@ SegmentRecognition 时有效。
      * Set 结果的类型，取值范围：
 <li>SegmentRecognition：拆条。</li>
 <li>Highlight ：集锦。</li>
+<li> Description：摘要。</li>
      * @param Type 结果的类型，取值范围：
 <li>SegmentRecognition：拆条。</li>
 <li>Highlight ：集锦。</li>
+<li> Description：摘要。</li>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -117,6 +129,22 @@ SegmentRecognition 时有效。
         this.HighlightResultSet = HighlightResultSet;
     }
 
+    /**
+     * Get 摘要结果，当Type 为 Description 时有效。 
+     * @return DescriptionResult 摘要结果，当Type 为 Description 时有效。
+     */
+    public LiveAiAnalysisDescriptionItem getDescriptionResult() {
+        return this.DescriptionResult;
+    }
+
+    /**
+     * Set 摘要结果，当Type 为 Description 时有效。
+     * @param DescriptionResult 摘要结果，当Type 为 Description 时有效。
+     */
+    public void setDescriptionResult(LiveAiAnalysisDescriptionItem DescriptionResult) {
+        this.DescriptionResult = DescriptionResult;
+    }
+
     public LiveStreamAiAnalysisResultItem() {
     }
 
@@ -140,6 +168,9 @@ SegmentRecognition 时有效。
                 this.HighlightResultSet[i] = new MediaAiAnalysisHighlightItem(source.HighlightResultSet[i]);
             }
         }
+        if (source.DescriptionResult != null) {
+            this.DescriptionResult = new LiveAiAnalysisDescriptionItem(source.DescriptionResult);
+        }
     }
 
 
@@ -150,6 +181,7 @@ SegmentRecognition 时有效。
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamArrayObj(map, prefix + "SegmentResultSet.", this.SegmentResultSet);
         this.setParamArrayObj(map, prefix + "HighlightResultSet.", this.HighlightResultSet);
+        this.setParamObj(map, prefix + "DescriptionResult.", this.DescriptionResult);
 
     }
 }

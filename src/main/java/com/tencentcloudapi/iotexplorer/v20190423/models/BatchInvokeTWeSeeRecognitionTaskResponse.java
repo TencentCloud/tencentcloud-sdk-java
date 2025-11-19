@@ -21,35 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDeviceLocationSolveResponse extends AbstractModel {
+public class BatchInvokeTWeSeeRecognitionTaskResponse extends AbstractModel {
 
     /**
-    * 经度
+    * TWeSee 语义理解任务的执行结果。与入参 Inputs 一一对应。
     */
-    @SerializedName("Longitude")
+    @SerializedName("Outputs")
     @Expose
-    private Float Longitude;
-
-    /**
-    * 纬度
-    */
-    @SerializedName("Latitude")
-    @Expose
-    private Float Latitude;
-
-    /**
-    * 类型
-    */
-    @SerializedName("LocationType")
-    @Expose
-    private String LocationType;
-
-    /**
-    * 误差精度预估，单位为米
-    */
-    @SerializedName("Accuracy")
-    @Expose
-    private Float Accuracy;
+    private InvokeVisionRecognitionTaskOutput [] Outputs;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -59,67 +38,19 @@ public class DescribeDeviceLocationSolveResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 经度 
-     * @return Longitude 经度
+     * Get TWeSee 语义理解任务的执行结果。与入参 Inputs 一一对应。 
+     * @return Outputs TWeSee 语义理解任务的执行结果。与入参 Inputs 一一对应。
      */
-    public Float getLongitude() {
-        return this.Longitude;
+    public InvokeVisionRecognitionTaskOutput [] getOutputs() {
+        return this.Outputs;
     }
 
     /**
-     * Set 经度
-     * @param Longitude 经度
+     * Set TWeSee 语义理解任务的执行结果。与入参 Inputs 一一对应。
+     * @param Outputs TWeSee 语义理解任务的执行结果。与入参 Inputs 一一对应。
      */
-    public void setLongitude(Float Longitude) {
-        this.Longitude = Longitude;
-    }
-
-    /**
-     * Get 纬度 
-     * @return Latitude 纬度
-     */
-    public Float getLatitude() {
-        return this.Latitude;
-    }
-
-    /**
-     * Set 纬度
-     * @param Latitude 纬度
-     */
-    public void setLatitude(Float Latitude) {
-        this.Latitude = Latitude;
-    }
-
-    /**
-     * Get 类型 
-     * @return LocationType 类型
-     */
-    public String getLocationType() {
-        return this.LocationType;
-    }
-
-    /**
-     * Set 类型
-     * @param LocationType 类型
-     */
-    public void setLocationType(String LocationType) {
-        this.LocationType = LocationType;
-    }
-
-    /**
-     * Get 误差精度预估，单位为米 
-     * @return Accuracy 误差精度预估，单位为米
-     */
-    public Float getAccuracy() {
-        return this.Accuracy;
-    }
-
-    /**
-     * Set 误差精度预估，单位为米
-     * @param Accuracy 误差精度预估，单位为米
-     */
-    public void setAccuracy(Float Accuracy) {
-        this.Accuracy = Accuracy;
+    public void setOutputs(InvokeVisionRecognitionTaskOutput [] Outputs) {
+        this.Outputs = Outputs;
     }
 
     /**
@@ -138,25 +69,19 @@ public class DescribeDeviceLocationSolveResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeDeviceLocationSolveResponse() {
+    public BatchInvokeTWeSeeRecognitionTaskResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeDeviceLocationSolveResponse(DescribeDeviceLocationSolveResponse source) {
-        if (source.Longitude != null) {
-            this.Longitude = new Float(source.Longitude);
-        }
-        if (source.Latitude != null) {
-            this.Latitude = new Float(source.Latitude);
-        }
-        if (source.LocationType != null) {
-            this.LocationType = new String(source.LocationType);
-        }
-        if (source.Accuracy != null) {
-            this.Accuracy = new Float(source.Accuracy);
+    public BatchInvokeTWeSeeRecognitionTaskResponse(BatchInvokeTWeSeeRecognitionTaskResponse source) {
+        if (source.Outputs != null) {
+            this.Outputs = new InvokeVisionRecognitionTaskOutput[source.Outputs.length];
+            for (int i = 0; i < source.Outputs.length; i++) {
+                this.Outputs[i] = new InvokeVisionRecognitionTaskOutput(source.Outputs[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -168,10 +93,7 @@ public class DescribeDeviceLocationSolveResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Longitude", this.Longitude);
-        this.setParamSimple(map, prefix + "Latitude", this.Latitude);
-        this.setParamSimple(map, prefix + "LocationType", this.LocationType);
-        this.setParamSimple(map, prefix + "Accuracy", this.Accuracy);
+        this.setParamArrayObj(map, prefix + "Outputs.", this.Outputs);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

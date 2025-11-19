@@ -80,6 +80,13 @@ public class DescribeVcubeApplicationAndPlayListRequest extends AbstractModel {
     private String WinProcessName;
 
     /**
+    * license唯一标识
+    */
+    @SerializedName("LicenseId")
+    @Expose
+    private Long LicenseId;
+
+    /**
      * Get 查询对应业务方的license，直播:live 点播：vod 
      * @return BizType 查询对应业务方的license，直播:live 点播：vod
      */
@@ -207,6 +214,22 @@ public class DescribeVcubeApplicationAndPlayListRequest extends AbstractModel {
         this.WinProcessName = WinProcessName;
     }
 
+    /**
+     * Get license唯一标识 
+     * @return LicenseId license唯一标识
+     */
+    public Long getLicenseId() {
+        return this.LicenseId;
+    }
+
+    /**
+     * Set license唯一标识
+     * @param LicenseId license唯一标识
+     */
+    public void setLicenseId(Long LicenseId) {
+        this.LicenseId = LicenseId;
+    }
+
     public DescribeVcubeApplicationAndPlayListRequest() {
     }
 
@@ -239,6 +262,9 @@ public class DescribeVcubeApplicationAndPlayListRequest extends AbstractModel {
         if (source.WinProcessName != null) {
             this.WinProcessName = new String(source.WinProcessName);
         }
+        if (source.LicenseId != null) {
+            this.LicenseId = new Long(source.LicenseId);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class DescribeVcubeApplicationAndPlayListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Platform", this.Platform);
         this.setParamSimple(map, prefix + "MacBundleId", this.MacBundleId);
         this.setParamSimple(map, prefix + "WinProcessName", this.WinProcessName);
+        this.setParamSimple(map, prefix + "LicenseId", this.LicenseId);
 
     }
 }

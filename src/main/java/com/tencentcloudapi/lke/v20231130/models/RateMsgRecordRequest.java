@@ -49,7 +49,7 @@ public class RateMsgRecordRequest extends AbstractModel {
     private Long Score;
 
     /**
-    * 原因，只有Score参数为2即点踩的时候才需要输入
+    * 支持通过API自定义，字符上限值为20字符；通过API 自定义标签，可以支持平台端用户在不满意问题错误类型中筛选、查看
     */
     @SerializedName("Reasons")
     @Expose
@@ -127,16 +127,16 @@ public class RateMsgRecordRequest extends AbstractModel {
     }
 
     /**
-     * Get 原因，只有Score参数为2即点踩的时候才需要输入 
-     * @return Reasons 原因，只有Score参数为2即点踩的时候才需要输入
+     * Get 支持通过API自定义，字符上限值为20字符；通过API 自定义标签，可以支持平台端用户在不满意问题错误类型中筛选、查看 
+     * @return Reasons 支持通过API自定义，字符上限值为20字符；通过API 自定义标签，可以支持平台端用户在不满意问题错误类型中筛选、查看
      */
     public String [] getReasons() {
         return this.Reasons;
     }
 
     /**
-     * Set 原因，只有Score参数为2即点踩的时候才需要输入
-     * @param Reasons 原因，只有Score参数为2即点踩的时候才需要输入
+     * Set 支持通过API自定义，字符上限值为20字符；通过API 自定义标签，可以支持平台端用户在不满意问题错误类型中筛选、查看
+     * @param Reasons 支持通过API自定义，字符上限值为20字符；通过API 自定义标签，可以支持平台端用户在不满意问题错误类型中筛选、查看
      */
     public void setReasons(String [] Reasons) {
         this.Reasons = Reasons;

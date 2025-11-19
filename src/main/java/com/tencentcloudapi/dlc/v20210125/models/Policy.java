@@ -163,6 +163,13 @@ public class Policy extends AbstractModel {
     private String EngineGeneration;
 
     /**
+    * 需要授权的Model名，填 * 代表当前Database下所有表。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别、数据库级别时只允许填空，其他类型下可以任意指定数据表。
+    */
+    @SerializedName("Model")
+    @Expose
+    private String Model;
+
+    /**
      * Get 需要授权的数据库名，填 * 代表当前Catalog下所有数据库。当授权类型为管理员级别时，只允许填 “*”，当授权类型为数据连接级别时只允许填空，其他类型下可以任意指定数据库。 
      * @return Database 需要授权的数据库名，填 * 代表当前Catalog下所有数据库。当授权类型为管理员级别时，只允许填 “*”，当授权类型为数据连接级别时只允许填空，其他类型下可以任意指定数据库。
      */
@@ -502,6 +509,22 @@ public class Policy extends AbstractModel {
         this.EngineGeneration = EngineGeneration;
     }
 
+    /**
+     * Get 需要授权的Model名，填 * 代表当前Database下所有表。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别、数据库级别时只允许填空，其他类型下可以任意指定数据表。 
+     * @return Model 需要授权的Model名，填 * 代表当前Database下所有表。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别、数据库级别时只允许填空，其他类型下可以任意指定数据表。
+     */
+    public String getModel() {
+        return this.Model;
+    }
+
+    /**
+     * Set 需要授权的Model名，填 * 代表当前Database下所有表。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别、数据库级别时只允许填空，其他类型下可以任意指定数据表。
+     * @param Model 需要授权的Model名，填 * 代表当前Database下所有表。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别、数据库级别时只允许填空，其他类型下可以任意指定数据表。
+     */
+    public void setModel(String Model) {
+        this.Model = Model;
+    }
+
     public Policy() {
     }
 
@@ -564,6 +587,9 @@ public class Policy extends AbstractModel {
         if (source.EngineGeneration != null) {
             this.EngineGeneration = new String(source.EngineGeneration);
         }
+        if (source.Model != null) {
+            this.Model = new String(source.Model);
+        }
     }
 
 
@@ -589,6 +615,7 @@ public class Policy extends AbstractModel {
         this.setParamSimple(map, prefix + "SourceName", this.SourceName);
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "EngineGeneration", this.EngineGeneration);
+        this.setParamSimple(map, prefix + "Model", this.Model);
 
     }
 }

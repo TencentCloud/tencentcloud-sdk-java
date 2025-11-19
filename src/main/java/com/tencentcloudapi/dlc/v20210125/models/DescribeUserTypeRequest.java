@@ -31,6 +31,13 @@ public class DescribeUserTypeRequest extends AbstractModel {
     private String UserId;
 
     /**
+    * 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+    */
+    @SerializedName("AccountType")
+    @Expose
+    private String AccountType;
+
+    /**
      * Get 用户ID（UIN），如果不填默认为调用方的子UIN 
      * @return UserId 用户ID（UIN），如果不填默认为调用方的子UIN
      */
@@ -46,6 +53,22 @@ public class DescribeUserTypeRequest extends AbstractModel {
         this.UserId = UserId;
     }
 
+    /**
+     * Get 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户） 
+     * @return AccountType 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+     */
+    public String getAccountType() {
+        return this.AccountType;
+    }
+
+    /**
+     * Set 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+     * @param AccountType 用户来源类型TencentAccount（普通腾讯云用户） / EntraAccount（微软用户）
+     */
+    public void setAccountType(String AccountType) {
+        this.AccountType = AccountType;
+    }
+
     public DescribeUserTypeRequest() {
     }
 
@@ -57,6 +80,9 @@ public class DescribeUserTypeRequest extends AbstractModel {
         if (source.UserId != null) {
             this.UserId = new String(source.UserId);
         }
+        if (source.AccountType != null) {
+            this.AccountType = new String(source.AccountType);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DescribeUserTypeRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "UserId", this.UserId);
+        this.setParamSimple(map, prefix + "AccountType", this.AccountType);
 
     }
 }
