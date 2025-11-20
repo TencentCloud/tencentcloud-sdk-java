@@ -31,7 +31,7 @@ public class DescribeDBDiagEventsRequest extends AbstractModel {
     private String StartTime;
 
     /**
-    * 结束时间，如“2021-05-27 01:00:00”，结束时间与开始时间的间隔最大可为7天。
+    * 结束时间，如“2021-05-27 01:00:00”，支持的最早查询时间为当前时间的前30天。
     */
     @SerializedName("EndTime")
     @Expose
@@ -45,14 +45,15 @@ public class DescribeDBDiagEventsRequest extends AbstractModel {
     private Long [] Severities;
 
     /**
-    * 实例ID列表。
+    * 实例ID列表。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+查询TDSQL MySQL分布式实例:Instanceld：填写集群ID&Shard实例ID，如：dcdbt-157xxxk&shard-qxxxx
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * 服务产品类型，支持值包括："mysql" - 云数据库 MySQL，"redis" - 云数据库 Redis，默认为"mysql"。
+    * 服务产品类型，支持值包括："mysql" - 云数据库 MySQL，"redis" - 云数据库 Redis，"mariadb"-数据库mariadb    默认为"mysql"。
     */
     @SerializedName("Product")
     @Expose
@@ -89,16 +90,16 @@ public class DescribeDBDiagEventsRequest extends AbstractModel {
     }
 
     /**
-     * Get 结束时间，如“2021-05-27 01:00:00”，结束时间与开始时间的间隔最大可为7天。 
-     * @return EndTime 结束时间，如“2021-05-27 01:00:00”，结束时间与开始时间的间隔最大可为7天。
+     * Get 结束时间，如“2021-05-27 01:00:00”，支持的最早查询时间为当前时间的前30天。 
+     * @return EndTime 结束时间，如“2021-05-27 01:00:00”，支持的最早查询时间为当前时间的前30天。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间，如“2021-05-27 01:00:00”，结束时间与开始时间的间隔最大可为7天。
-     * @param EndTime 结束时间，如“2021-05-27 01:00:00”，结束时间与开始时间的间隔最大可为7天。
+     * Set 结束时间，如“2021-05-27 01:00:00”，支持的最早查询时间为当前时间的前30天。
+     * @param EndTime 结束时间，如“2021-05-27 01:00:00”，支持的最早查询时间为当前时间的前30天。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -121,32 +122,36 @@ public class DescribeDBDiagEventsRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例ID列表。 
-     * @return InstanceIds 实例ID列表。
+     * Get 实例ID列表。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+查询TDSQL MySQL分布式实例:Instanceld：填写集群ID&Shard实例ID，如：dcdbt-157xxxk&shard-qxxxx 
+     * @return InstanceIds 实例ID列表。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+查询TDSQL MySQL分布式实例:Instanceld：填写集群ID&Shard实例ID，如：dcdbt-157xxxk&shard-qxxxx
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 实例ID列表。
-     * @param InstanceIds 实例ID列表。
+     * Set 实例ID列表。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+查询TDSQL MySQL分布式实例:Instanceld：填写集群ID&Shard实例ID，如：dcdbt-157xxxk&shard-qxxxx
+     * @param InstanceIds 实例ID列表。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+查询TDSQL MySQL分布式实例:Instanceld：填写集群ID&Shard实例ID，如：dcdbt-157xxxk&shard-qxxxx
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get 服务产品类型，支持值包括："mysql" - 云数据库 MySQL，"redis" - 云数据库 Redis，默认为"mysql"。 
-     * @return Product 服务产品类型，支持值包括："mysql" - 云数据库 MySQL，"redis" - 云数据库 Redis，默认为"mysql"。
+     * Get 服务产品类型，支持值包括："mysql" - 云数据库 MySQL，"redis" - 云数据库 Redis，"mariadb"-数据库mariadb    默认为"mysql"。 
+     * @return Product 服务产品类型，支持值包括："mysql" - 云数据库 MySQL，"redis" - 云数据库 Redis，"mariadb"-数据库mariadb    默认为"mysql"。
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set 服务产品类型，支持值包括："mysql" - 云数据库 MySQL，"redis" - 云数据库 Redis，默认为"mysql"。
-     * @param Product 服务产品类型，支持值包括："mysql" - 云数据库 MySQL，"redis" - 云数据库 Redis，默认为"mysql"。
+     * Set 服务产品类型，支持值包括："mysql" - 云数据库 MySQL，"redis" - 云数据库 Redis，"mariadb"-数据库mariadb    默认为"mysql"。
+     * @param Product 服务产品类型，支持值包括："mysql" - 云数据库 MySQL，"redis" - 云数据库 Redis，"mariadb"-数据库mariadb    默认为"mysql"。
      */
     public void setProduct(String Product) {
         this.Product = Product;

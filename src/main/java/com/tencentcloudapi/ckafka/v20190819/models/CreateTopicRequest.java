@@ -143,6 +143,13 @@ public class CreateTopicRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
+    * 消息保存的时间类型:CreateTime/LogAppendTime
+    */
+    @SerializedName("LogMsgTimestampType")
+    @Expose
+    private String LogMsgTimestampType;
+
+    /**
      * Get 实例Id，可通过DescribeInstances接口获取。 
      * @return InstanceId 实例Id，可通过DescribeInstances接口获取。
      */
@@ -414,6 +421,22 @@ public class CreateTopicRequest extends AbstractModel {
         this.Tags = Tags;
     }
 
+    /**
+     * Get 消息保存的时间类型:CreateTime/LogAppendTime 
+     * @return LogMsgTimestampType 消息保存的时间类型:CreateTime/LogAppendTime
+     */
+    public String getLogMsgTimestampType() {
+        return this.LogMsgTimestampType;
+    }
+
+    /**
+     * Set 消息保存的时间类型:CreateTime/LogAppendTime
+     * @param LogMsgTimestampType 消息保存的时间类型:CreateTime/LogAppendTime
+     */
+    public void setLogMsgTimestampType(String LogMsgTimestampType) {
+        this.LogMsgTimestampType = LogMsgTimestampType;
+    }
+
     public CreateTopicRequest() {
     }
 
@@ -479,6 +502,9 @@ public class CreateTopicRequest extends AbstractModel {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.LogMsgTimestampType != null) {
+            this.LogMsgTimestampType = new String(source.LogMsgTimestampType);
+        }
     }
 
 
@@ -503,6 +529,7 @@ public class CreateTopicRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AclRuleName", this.AclRuleName);
         this.setParamSimple(map, prefix + "RetentionBytes", this.RetentionBytes);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "LogMsgTimestampType", this.LogMsgTimestampType);
 
     }
 }

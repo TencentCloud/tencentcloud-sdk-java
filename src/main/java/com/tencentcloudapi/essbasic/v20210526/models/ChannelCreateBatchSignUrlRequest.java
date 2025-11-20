@@ -129,7 +129,7 @@ public class ChannelCreateBatchSignUrlRequest extends AbstractModel {
 <li>请确认该名称与企业营业执照中注册的名称一致。</li>
 <li>如果名称中包含英文括号()，请使用中文括号（）代替。</li>
 <li>请确保此企业已完成腾讯电子签企业认证。</li>
-<li>**若为子客企业员工，请使用OpenId，OrganizationOpenId参数，此参数留空即可**</li>
+<li>**若为子客企业员工，请使用OpenId，OrganizationOpenId参数。如果此子客企业未认证，则此参数需要传子客企业名称**</li>
 </ul>
     */
     @SerializedName("OrganizationName")
@@ -523,7 +523,7 @@ public class ChannelCreateBatchSignUrlRequest extends AbstractModel {
 <li>请确认该名称与企业营业执照中注册的名称一致。</li>
 <li>如果名称中包含英文括号()，请使用中文括号（）代替。</li>
 <li>请确保此企业已完成腾讯电子签企业认证。</li>
-<li>**若为子客企业员工，请使用OpenId，OrganizationOpenId参数，此参数留空即可**</li>
+<li>**若为子客企业员工，请使用OpenId，OrganizationOpenId参数。如果此子客企业未认证，则此参数需要传子客企业名称**</li>
 </ul> 
      * @return OrganizationName SaaS平台企业员工签署方的企业名称。目标签署人如果为saas应用企业员工身份，此参数必填。
 
@@ -532,7 +532,7 @@ public class ChannelCreateBatchSignUrlRequest extends AbstractModel {
 <li>请确认该名称与企业营业执照中注册的名称一致。</li>
 <li>如果名称中包含英文括号()，请使用中文括号（）代替。</li>
 <li>请确保此企业已完成腾讯电子签企业认证。</li>
-<li>**若为子客企业员工，请使用OpenId，OrganizationOpenId参数，此参数留空即可**</li>
+<li>**若为子客企业员工，请使用OpenId，OrganizationOpenId参数。如果此子客企业未认证，则此参数需要传子客企业名称**</li>
 </ul>
      */
     public String getOrganizationName() {
@@ -547,7 +547,7 @@ public class ChannelCreateBatchSignUrlRequest extends AbstractModel {
 <li>请确认该名称与企业营业执照中注册的名称一致。</li>
 <li>如果名称中包含英文括号()，请使用中文括号（）代替。</li>
 <li>请确保此企业已完成腾讯电子签企业认证。</li>
-<li>**若为子客企业员工，请使用OpenId，OrganizationOpenId参数，此参数留空即可**</li>
+<li>**若为子客企业员工，请使用OpenId，OrganizationOpenId参数。如果此子客企业未认证，则此参数需要传子客企业名称**</li>
 </ul>
      * @param OrganizationName SaaS平台企业员工签署方的企业名称。目标签署人如果为saas应用企业员工身份，此参数必填。
 
@@ -556,7 +556,7 @@ public class ChannelCreateBatchSignUrlRequest extends AbstractModel {
 <li>请确认该名称与企业营业执照中注册的名称一致。</li>
 <li>如果名称中包含英文括号()，请使用中文括号（）代替。</li>
 <li>请确保此企业已完成腾讯电子签企业认证。</li>
-<li>**若为子客企业员工，请使用OpenId，OrganizationOpenId参数，此参数留空即可**</li>
+<li>**若为子客企业员工，请使用OpenId，OrganizationOpenId参数。如果此子客企业未认证，则此参数需要传子客企业名称**</li>
 </ul>
      */
     public void setOrganizationName(String OrganizationName) {

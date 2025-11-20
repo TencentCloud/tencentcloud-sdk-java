@@ -38,6 +38,13 @@ public class DescribeRouteRequest extends AbstractModel {
     private Long RouteId;
 
     /**
+    * 是否显示主路由，true时会在返回原路由列表的基础上,再额外展示实例创建时的主路由信息(且不被InternalFlag/UsedFor等参数过滤影响)	
+    */
+    @SerializedName("MainRouteFlag")
+    @Expose
+    private Boolean MainRouteFlag;
+
+    /**
      * Get ckafka集群实例Id 
      * @return InstanceId ckafka集群实例Id
      */
@@ -69,6 +76,22 @@ public class DescribeRouteRequest extends AbstractModel {
         this.RouteId = RouteId;
     }
 
+    /**
+     * Get 是否显示主路由，true时会在返回原路由列表的基础上,再额外展示实例创建时的主路由信息(且不被InternalFlag/UsedFor等参数过滤影响)	 
+     * @return MainRouteFlag 是否显示主路由，true时会在返回原路由列表的基础上,再额外展示实例创建时的主路由信息(且不被InternalFlag/UsedFor等参数过滤影响)	
+     */
+    public Boolean getMainRouteFlag() {
+        return this.MainRouteFlag;
+    }
+
+    /**
+     * Set 是否显示主路由，true时会在返回原路由列表的基础上,再额外展示实例创建时的主路由信息(且不被InternalFlag/UsedFor等参数过滤影响)	
+     * @param MainRouteFlag 是否显示主路由，true时会在返回原路由列表的基础上,再额外展示实例创建时的主路由信息(且不被InternalFlag/UsedFor等参数过滤影响)	
+     */
+    public void setMainRouteFlag(Boolean MainRouteFlag) {
+        this.MainRouteFlag = MainRouteFlag;
+    }
+
     public DescribeRouteRequest() {
     }
 
@@ -83,6 +106,9 @@ public class DescribeRouteRequest extends AbstractModel {
         if (source.RouteId != null) {
             this.RouteId = new Long(source.RouteId);
         }
+        if (source.MainRouteFlag != null) {
+            this.MainRouteFlag = new Boolean(source.MainRouteFlag);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class DescribeRouteRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "RouteId", this.RouteId);
+        this.setParamSimple(map, prefix + "MainRouteFlag", this.MainRouteFlag);
 
     }
 }

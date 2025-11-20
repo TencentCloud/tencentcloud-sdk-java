@@ -59,6 +59,20 @@ public class ProcessImageRequest extends AbstractModel {
     private String OutputPath;
 
     /**
+    * 图片处理模板唯一标识。
+    */
+    @SerializedName("Definition")
+    @Expose
+    private Long Definition;
+
+    /**
+    * 资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
+    */
+    @SerializedName("ResourceId")
+    @Expose
+    private String ResourceId;
+
+    /**
     * 图片处理参数。
     */
     @SerializedName("ImageTask")
@@ -158,6 +172,38 @@ public class ProcessImageRequest extends AbstractModel {
     }
 
     /**
+     * Get 图片处理模板唯一标识。 
+     * @return Definition 图片处理模板唯一标识。
+     */
+    public Long getDefinition() {
+        return this.Definition;
+    }
+
+    /**
+     * Set 图片处理模板唯一标识。
+     * @param Definition 图片处理模板唯一标识。
+     */
+    public void setDefinition(Long Definition) {
+        this.Definition = Definition;
+    }
+
+    /**
+     * Get 资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。 
+     * @return ResourceId 资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
+     */
+    public String getResourceId() {
+        return this.ResourceId;
+    }
+
+    /**
+     * Set 资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
+     * @param ResourceId 资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
+     */
+    public void setResourceId(String ResourceId) {
+        this.ResourceId = ResourceId;
+    }
+
+    /**
      * Get 图片处理参数。 
      * @return ImageTask 图片处理参数。
      */
@@ -193,6 +239,12 @@ public class ProcessImageRequest extends AbstractModel {
         if (source.OutputPath != null) {
             this.OutputPath = new String(source.OutputPath);
         }
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
         if (source.ImageTask != null) {
             this.ImageTask = new ImageTaskInput(source.ImageTask);
         }
@@ -207,6 +259,8 @@ public class ProcessImageRequest extends AbstractModel {
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
         this.setParamSimple(map, prefix + "OutputDir", this.OutputDir);
         this.setParamSimple(map, prefix + "OutputPath", this.OutputPath);
+        this.setParamSimple(map, prefix + "Definition", this.Definition);
+        this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamObj(map, prefix + "ImageTask.", this.ImageTask);
 
     }

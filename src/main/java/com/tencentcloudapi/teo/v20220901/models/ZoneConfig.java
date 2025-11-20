@@ -184,6 +184,14 @@ public class ZoneConfig extends AbstractModel {
     private GrpcParameters Grpc;
 
     /**
+    * 网络错误日志记录配置。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NetworkErrorLogging")
+    @Expose
+    private NetworkErrorLoggingParameters NetworkErrorLogging;
+
+    /**
     * 中国大陆加速优化配置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -600,6 +608,26 @@ public class ZoneConfig extends AbstractModel {
     }
 
     /**
+     * Get 网络错误日志记录配置。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NetworkErrorLogging 网络错误日志记录配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public NetworkErrorLoggingParameters getNetworkErrorLogging() {
+        return this.NetworkErrorLogging;
+    }
+
+    /**
+     * Set 网络错误日志记录配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NetworkErrorLogging 网络错误日志记录配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNetworkErrorLogging(NetworkErrorLoggingParameters NetworkErrorLogging) {
+        this.NetworkErrorLogging = NetworkErrorLogging;
+    }
+
+    /**
      * Get 中国大陆加速优化配置。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AccelerateMainland 中国大陆加速优化配置。
@@ -707,6 +735,9 @@ public class ZoneConfig extends AbstractModel {
         if (source.Grpc != null) {
             this.Grpc = new GrpcParameters(source.Grpc);
         }
+        if (source.NetworkErrorLogging != null) {
+            this.NetworkErrorLogging = new NetworkErrorLoggingParameters(source.NetworkErrorLogging);
+        }
         if (source.AccelerateMainland != null) {
             this.AccelerateMainland = new AccelerateMainlandParameters(source.AccelerateMainland);
         }
@@ -740,6 +771,7 @@ public class ZoneConfig extends AbstractModel {
         this.setParamObj(map, prefix + "ClientIPHeader.", this.ClientIPHeader);
         this.setParamObj(map, prefix + "ClientIPCountry.", this.ClientIPCountry);
         this.setParamObj(map, prefix + "Grpc.", this.Grpc);
+        this.setParamObj(map, prefix + "NetworkErrorLogging.", this.NetworkErrorLogging);
         this.setParamObj(map, prefix + "AccelerateMainland.", this.AccelerateMainland);
         this.setParamObj(map, prefix + "StandardDebug.", this.StandardDebug);
 

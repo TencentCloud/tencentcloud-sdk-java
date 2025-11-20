@@ -56,6 +56,14 @@ public class TranscodeTaskInput extends AbstractModel {
     private WatermarkInput [] WatermarkSet;
 
     /**
+    * 数字水印参数。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BlindWatermark")
+    @Expose
+    private BlindWatermarkInput BlindWatermark;
+
+    /**
     * 马赛克列表，最大可支持 10 张。
     */
     @SerializedName("MosaicSet")
@@ -206,6 +214,26 @@ public class TranscodeTaskInput extends AbstractModel {
      */
     public void setWatermarkSet(WatermarkInput [] WatermarkSet) {
         this.WatermarkSet = WatermarkSet;
+    }
+
+    /**
+     * Get 数字水印参数。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BlindWatermark 数字水印参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BlindWatermarkInput getBlindWatermark() {
+        return this.BlindWatermark;
+    }
+
+    /**
+     * Set 数字水印参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BlindWatermark 数字水印参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBlindWatermark(BlindWatermarkInput BlindWatermark) {
+        this.BlindWatermark = BlindWatermark;
     }
 
     /**
@@ -427,6 +455,9 @@ public class TranscodeTaskInput extends AbstractModel {
                 this.WatermarkSet[i] = new WatermarkInput(source.WatermarkSet[i]);
             }
         }
+        if (source.BlindWatermark != null) {
+            this.BlindWatermark = new BlindWatermarkInput(source.BlindWatermark);
+        }
         if (source.MosaicSet != null) {
             this.MosaicSet = new MosaicInput[source.MosaicSet.length];
             for (int i = 0; i < source.MosaicSet.length; i++) {
@@ -465,6 +496,7 @@ public class TranscodeTaskInput extends AbstractModel {
         this.setParamObj(map, prefix + "RawParameter.", this.RawParameter);
         this.setParamObj(map, prefix + "OverrideParameter.", this.OverrideParameter);
         this.setParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
+        this.setParamObj(map, prefix + "BlindWatermark.", this.BlindWatermark);
         this.setParamArrayObj(map, prefix + "MosaicSet.", this.MosaicSet);
         this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
         this.setParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);

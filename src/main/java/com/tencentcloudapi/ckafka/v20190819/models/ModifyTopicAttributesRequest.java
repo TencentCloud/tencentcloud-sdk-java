@@ -150,6 +150,13 @@ public class ModifyTopicAttributesRequest extends AbstractModel {
     private Long ReplicaNum;
 
     /**
+    * 消息保存的时间类型：CreateTime/LogAppendTime
+    */
+    @SerializedName("LogMsgTimestampType")
+    @Expose
+    private String LogMsgTimestampType;
+
+    /**
      * Get ckafka集群实例Id 
      * @return InstanceId ckafka集群实例Id
      */
@@ -437,6 +444,22 @@ public class ModifyTopicAttributesRequest extends AbstractModel {
         this.ReplicaNum = ReplicaNum;
     }
 
+    /**
+     * Get 消息保存的时间类型：CreateTime/LogAppendTime 
+     * @return LogMsgTimestampType 消息保存的时间类型：CreateTime/LogAppendTime
+     */
+    public String getLogMsgTimestampType() {
+        return this.LogMsgTimestampType;
+    }
+
+    /**
+     * Set 消息保存的时间类型：CreateTime/LogAppendTime
+     * @param LogMsgTimestampType 消息保存的时间类型：CreateTime/LogAppendTime
+     */
+    public void setLogMsgTimestampType(String LogMsgTimestampType) {
+        this.LogMsgTimestampType = LogMsgTimestampType;
+    }
+
     public ModifyTopicAttributesRequest() {
     }
 
@@ -505,6 +528,9 @@ public class ModifyTopicAttributesRequest extends AbstractModel {
         if (source.ReplicaNum != null) {
             this.ReplicaNum = new Long(source.ReplicaNum);
         }
+        if (source.LogMsgTimestampType != null) {
+            this.LogMsgTimestampType = new String(source.LogMsgTimestampType);
+        }
     }
 
 
@@ -530,6 +556,7 @@ public class ModifyTopicAttributesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "QuotaProducerByteRate", this.QuotaProducerByteRate);
         this.setParamSimple(map, prefix + "QuotaConsumerByteRate", this.QuotaConsumerByteRate);
         this.setParamSimple(map, prefix + "ReplicaNum", this.ReplicaNum);
+        this.setParamSimple(map, prefix + "LogMsgTimestampType", this.LogMsgTimestampType);
 
     }
 }

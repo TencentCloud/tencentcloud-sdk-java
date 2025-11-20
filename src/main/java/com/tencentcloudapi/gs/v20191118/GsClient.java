@@ -131,6 +131,17 @@ public class GsClient extends AbstractClient{
     }
 
     /**
+     *创建安卓实例加速Token
+     * @param req CreateAndroidInstanceAcceleratorTokenRequest
+     * @return CreateAndroidInstanceAcceleratorTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAndroidInstanceAcceleratorTokenResponse CreateAndroidInstanceAcceleratorToken(CreateAndroidInstanceAcceleratorTokenRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAndroidInstanceAcceleratorToken", CreateAndroidInstanceAcceleratorTokenResponse.class);
+    }
+
+    /**
      *使用指定的安卓实例创建镜像，创建镜像时指定的实例会关机，镜像创建完成后实例会自动开机。当镜像的 AndroidInstanceImageState 为 NORMAL 时，镜像创建完成处于可用状态。
      * @param req CreateAndroidInstanceImageRequest
      * @return CreateAndroidInstanceImageResponse
@@ -436,6 +447,17 @@ public class GsClient extends AbstractClient{
     public DisconnectAndroidInstanceResponse DisconnectAndroidInstance(DisconnectAndroidInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DisconnectAndroidInstance", DisconnectAndroidInstanceResponse.class);
+    }
+
+    /**
+     *断开安卓实例加速节点
+     * @param req DisconnectAndroidInstanceAcceleratorRequest
+     * @return DisconnectAndroidInstanceAcceleratorResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisconnectAndroidInstanceAcceleratorResponse DisconnectAndroidInstanceAccelerator(DisconnectAndroidInstanceAcceleratorRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DisconnectAndroidInstanceAccelerator", DisconnectAndroidInstanceAcceleratorResponse.class);
     }
 
     /**

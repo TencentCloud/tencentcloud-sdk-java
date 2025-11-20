@@ -33,6 +33,9 @@ public enum VclmErrorCode {
      /* 输入图人脸检测失败 */
      FAILEDOPERATION_IMAGEDETECTFACEFAILED("FailedOperation.ImageDetectFaceFailed"),
      
+     /* 图片下载失败。 */
+     FAILEDOPERATION_IMAGEDOWNLOADERROR("FailedOperation.ImageDownloadError"),
+     
      /* 人脸检测失败 */
      FAILEDOPERATION_IMAGEFACEDETECTFAILED("FailedOperation.ImageFaceDetectFailed"),
      
@@ -58,6 +61,9 @@ public enum VclmErrorCode {
      FAILEDOPERATION_INNERERROR("FailedOperation.InnerError"),
      
      /* 任务不存在。 */
+     FAILEDOPERATION_JOBNOTEXIST("FailedOperation.JobNotExist"),
+     
+     /* 任务不存在。 */
      FAILEDOPERATION_JOBNOTFOUND("FailedOperation.JobNotFound"),
      
      /* 任务队列已满，请稍后重试。 */
@@ -71,6 +77,12 @@ public enum VclmErrorCode {
      
      /* 内容审核不通过。 */
      FAILEDOPERATION_MODERATIONFAILED("FailedOperation.ModerationFailed"),
+     
+     /* ModerationFailed */
+     FAILEDOPERATION_MODERATIONRESPONSEERROR("FailedOperation.ModerationResponseError"),
+     
+     /* 后端服务超时。 */
+     FAILEDOPERATION_REQUESTTIMEOUT("FailedOperation.RequestTimeout"),
      
      /* 系统内部错误。 */
      FAILEDOPERATION_SERVERERROR("FailedOperation.ServerError"),
@@ -99,8 +111,14 @@ public enum VclmErrorCode {
      /* 参数错误。 */
      INVALIDPARAMETER("InvalidParameter"),
      
+     /* 参数不合法。 */
+     INVALIDPARAMETER_INVALIDPARAMETER("InvalidParameter.InvalidParameter"),
+     
      /* 模板不存在 */
      INVALIDPARAMETER_TEMPLATENOTEXISTED("InvalidParameter.TemplateNotExisted"),
+     
+     /* 参数VideoUrl格式不合法。 */
+     INVALIDPARAMETER_VIDEOURLINVALID("InvalidParameter.VideoUrlInvalid"),
      
      /* 参数取值错误。 */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
@@ -177,6 +195,9 @@ public enum VclmErrorCode {
      /* 超过配额限制。 */
      LIMITEXCEEDED("LimitExceeded"),
      
+     /* 缺少参数错误。 */
+     MISSINGPARAMETER("MissingParameter"),
+     
      /* 操作被拒绝。 */
      OPERATIONDENIED("OperationDenied"),
      
@@ -192,8 +213,14 @@ public enum VclmErrorCode {
      /* 资源不存在。 */
      RESOURCENOTFOUND("ResourceNotFound"),
      
+     /* 服务正在开通中，请稍等。 */
+     RESOURCEUNAVAILABLE_ISOPENING("ResourceUnavailable.IsOpening"),
+     
      /* 计费状态未知。 */
      RESOURCEUNAVAILABLE_NOTEXIST("ResourceUnavailable.NotExist"),
+     
+     /* 账号已欠费。 */
+     RESOURCESSOLDOUT_CHARGESTATUSEXCEPTION("ResourcesSoldOut.ChargeStatusException"),
      
      /* 未授权操作。 */
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),

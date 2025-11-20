@@ -175,6 +175,13 @@ public class ModifyZoneSettingRequest extends AbstractModel {
     private Grpc Grpc;
 
     /**
+    * 网络错误日志记录配置。不填写表示保持原有配置。
+    */
+    @SerializedName("NetworkErrorLogging")
+    @Expose
+    private NetworkErrorLogging NetworkErrorLogging;
+
+    /**
     * 图片优化配置。
 不填写表示关闭。
     */
@@ -573,6 +580,22 @@ public class ModifyZoneSettingRequest extends AbstractModel {
     }
 
     /**
+     * Get 网络错误日志记录配置。不填写表示保持原有配置。 
+     * @return NetworkErrorLogging 网络错误日志记录配置。不填写表示保持原有配置。
+     */
+    public NetworkErrorLogging getNetworkErrorLogging() {
+        return this.NetworkErrorLogging;
+    }
+
+    /**
+     * Set 网络错误日志记录配置。不填写表示保持原有配置。
+     * @param NetworkErrorLogging 网络错误日志记录配置。不填写表示保持原有配置。
+     */
+    public void setNetworkErrorLogging(NetworkErrorLogging NetworkErrorLogging) {
+        this.NetworkErrorLogging = NetworkErrorLogging;
+    }
+
+    /**
      * Get 图片优化配置。
 不填写表示关闭。 
      * @return ImageOptimize 图片优化配置。
@@ -689,6 +712,9 @@ public class ModifyZoneSettingRequest extends AbstractModel {
         if (source.Grpc != null) {
             this.Grpc = new Grpc(source.Grpc);
         }
+        if (source.NetworkErrorLogging != null) {
+            this.NetworkErrorLogging = new NetworkErrorLogging(source.NetworkErrorLogging);
+        }
         if (source.ImageOptimize != null) {
             this.ImageOptimize = new ImageOptimize(source.ImageOptimize);
         }
@@ -724,6 +750,7 @@ public class ModifyZoneSettingRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Ipv6.", this.Ipv6);
         this.setParamObj(map, prefix + "ClientIpCountry.", this.ClientIpCountry);
         this.setParamObj(map, prefix + "Grpc.", this.Grpc);
+        this.setParamObj(map, prefix + "NetworkErrorLogging.", this.NetworkErrorLogging);
         this.setParamObj(map, prefix + "ImageOptimize.", this.ImageOptimize);
         this.setParamObj(map, prefix + "StandardDebug.", this.StandardDebug);
         this.setParamObj(map, prefix + "JITVideoProcess.", this.JITVideoProcess);

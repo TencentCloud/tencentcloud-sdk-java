@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class CreateHpcClusterRequest extends AbstractModel {
 
     /**
-    * 可用区。
+    * 可用区信息。可用区信息可通过 [查询可用区信息](https://cloud.tencent.com/document/api/213/15707) 接口获取。
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 高性能计算集群名称。
+    * 高性能计算集群名称，长度限制[1-60]。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 高性能计算集群备注。
+    * 高性能计算集群备注，长度[1-256]。
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 高性能计算集群类型。
+    * 高性能计算集群类型，当前有三个取值：分别是CDC/CHC/STANDARD，其中STANDARD是默认的标准模式。
     */
     @SerializedName("HpcClusterType")
     @Expose
     private String HpcClusterType;
 
     /**
-    * 高性能计算集群对应的业务场景标识，当前只支持CDC。
+    * 高性能计算集群对应的业务场景标识，当前只支持CDC场景类型。
     */
     @SerializedName("HpcClusterBusinessId")
     @Expose
     private String HpcClusterBusinessId;
 
     /**
-    * 标签描述列表。通过指定该参数可以同时绑定标签到相应的HPC高性能集群。
+    * 标签描述列表。通过指定该参数可以同时绑定标签到相应的HPC高性能集群。集群信息可通过 [查询高性能集群信息](https://cloud.tencent.com/document/api/213/83220) 接口获取。
     */
     @SerializedName("TagSpecification")
     @Expose
     private TagSpecification [] TagSpecification;
 
     /**
-     * Get 可用区。 
-     * @return Zone 可用区。
+     * Get 可用区信息。可用区信息可通过 [查询可用区信息](https://cloud.tencent.com/document/api/213/15707) 接口获取。 
+     * @return Zone 可用区信息。可用区信息可通过 [查询可用区信息](https://cloud.tencent.com/document/api/213/15707) 接口获取。
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区。
-     * @param Zone 可用区。
+     * Set 可用区信息。可用区信息可通过 [查询可用区信息](https://cloud.tencent.com/document/api/213/15707) 接口获取。
+     * @param Zone 可用区信息。可用区信息可通过 [查询可用区信息](https://cloud.tencent.com/document/api/213/15707) 接口获取。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 高性能计算集群名称。 
-     * @return Name 高性能计算集群名称。
+     * Get 高性能计算集群名称，长度限制[1-60]。 
+     * @return Name 高性能计算集群名称，长度限制[1-60]。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 高性能计算集群名称。
-     * @param Name 高性能计算集群名称。
+     * Set 高性能计算集群名称，长度限制[1-60]。
+     * @param Name 高性能计算集群名称，长度限制[1-60]。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 高性能计算集群备注。 
-     * @return Remark 高性能计算集群备注。
+     * Get 高性能计算集群备注，长度[1-256]。 
+     * @return Remark 高性能计算集群备注，长度[1-256]。
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 高性能计算集群备注。
-     * @param Remark 高性能计算集群备注。
+     * Set 高性能计算集群备注，长度[1-256]。
+     * @param Remark 高性能计算集群备注，长度[1-256]。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 高性能计算集群类型。 
-     * @return HpcClusterType 高性能计算集群类型。
+     * Get 高性能计算集群类型，当前有三个取值：分别是CDC/CHC/STANDARD，其中STANDARD是默认的标准模式。 
+     * @return HpcClusterType 高性能计算集群类型，当前有三个取值：分别是CDC/CHC/STANDARD，其中STANDARD是默认的标准模式。
      */
     public String getHpcClusterType() {
         return this.HpcClusterType;
     }
 
     /**
-     * Set 高性能计算集群类型。
-     * @param HpcClusterType 高性能计算集群类型。
+     * Set 高性能计算集群类型，当前有三个取值：分别是CDC/CHC/STANDARD，其中STANDARD是默认的标准模式。
+     * @param HpcClusterType 高性能计算集群类型，当前有三个取值：分别是CDC/CHC/STANDARD，其中STANDARD是默认的标准模式。
      */
     public void setHpcClusterType(String HpcClusterType) {
         this.HpcClusterType = HpcClusterType;
     }
 
     /**
-     * Get 高性能计算集群对应的业务场景标识，当前只支持CDC。 
-     * @return HpcClusterBusinessId 高性能计算集群对应的业务场景标识，当前只支持CDC。
+     * Get 高性能计算集群对应的业务场景标识，当前只支持CDC场景类型。 
+     * @return HpcClusterBusinessId 高性能计算集群对应的业务场景标识，当前只支持CDC场景类型。
      */
     public String getHpcClusterBusinessId() {
         return this.HpcClusterBusinessId;
     }
 
     /**
-     * Set 高性能计算集群对应的业务场景标识，当前只支持CDC。
-     * @param HpcClusterBusinessId 高性能计算集群对应的业务场景标识，当前只支持CDC。
+     * Set 高性能计算集群对应的业务场景标识，当前只支持CDC场景类型。
+     * @param HpcClusterBusinessId 高性能计算集群对应的业务场景标识，当前只支持CDC场景类型。
      */
     public void setHpcClusterBusinessId(String HpcClusterBusinessId) {
         this.HpcClusterBusinessId = HpcClusterBusinessId;
     }
 
     /**
-     * Get 标签描述列表。通过指定该参数可以同时绑定标签到相应的HPC高性能集群。 
-     * @return TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到相应的HPC高性能集群。
+     * Get 标签描述列表。通过指定该参数可以同时绑定标签到相应的HPC高性能集群。集群信息可通过 [查询高性能集群信息](https://cloud.tencent.com/document/api/213/83220) 接口获取。 
+     * @return TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到相应的HPC高性能集群。集群信息可通过 [查询高性能集群信息](https://cloud.tencent.com/document/api/213/83220) 接口获取。
      */
     public TagSpecification [] getTagSpecification() {
         return this.TagSpecification;
     }
 
     /**
-     * Set 标签描述列表。通过指定该参数可以同时绑定标签到相应的HPC高性能集群。
-     * @param TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到相应的HPC高性能集群。
+     * Set 标签描述列表。通过指定该参数可以同时绑定标签到相应的HPC高性能集群。集群信息可通过 [查询高性能集群信息](https://cloud.tencent.com/document/api/213/83220) 接口获取。
+     * @param TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到相应的HPC高性能集群。集群信息可通过 [查询高性能集群信息](https://cloud.tencent.com/document/api/213/83220) 接口获取。
      */
     public void setTagSpecification(TagSpecification [] TagSpecification) {
         this.TagSpecification = TagSpecification;

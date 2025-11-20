@@ -361,6 +361,17 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *查看实例SSL开启状态
+     * @param req DescribeInstanceSSLRequest
+     * @return DescribeInstanceSSLResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceSSLResponse DescribeInstanceSSL(DescribeInstanceSSLRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstanceSSL", DescribeInstanceSSLResponse.class);
+    }
+
+    /**
      *日志下载任务查询
      * @param req DescribeLogDownloadTasksRequest
      * @return DescribeLogDownloadTasksResponse
@@ -514,6 +525,17 @@ public class MongodbClient extends AbstractClient{
     public InquirePriceRenewDBInstancesResponse InquirePriceRenewDBInstances(InquirePriceRenewDBInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "InquirePriceRenewDBInstances", InquirePriceRenewDBInstancesResponse.class);
+    }
+
+    /**
+     *本接口（InstanceEnableSSL）用于设置实例SSL状态。
+     * @param req InstanceEnableSSLRequest
+     * @return InstanceEnableSSLResponse
+     * @throws TencentCloudSDKException
+     */
+    public InstanceEnableSSLResponse InstanceEnableSSL(InstanceEnableSSLRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InstanceEnableSSL", InstanceEnableSSLResponse.class);
     }
 
     /**

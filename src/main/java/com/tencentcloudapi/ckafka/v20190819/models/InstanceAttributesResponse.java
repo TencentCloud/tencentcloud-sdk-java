@@ -273,6 +273,20 @@ serverless  :serverless版
     private DynamicDiskConfig DynamicDiskConfig;
 
     /**
+    * 系统维护时间
+    */
+    @SerializedName("SystemMaintenanceTime")
+    @Expose
+    private String SystemMaintenanceTime;
+
+    /**
+    * 实例级别消息最大大小
+    */
+    @SerializedName("MaxMessageByte")
+    @Expose
+    private Long MaxMessageByte;
+
+    /**
     * 实例计费类型  POSTPAID_BY_HOUR 按小时付费; PREPAID 包年包月
     */
     @SerializedName("InstanceChargeType")
@@ -927,6 +941,38 @@ serverless  :serverless版
     }
 
     /**
+     * Get 系统维护时间 
+     * @return SystemMaintenanceTime 系统维护时间
+     */
+    public String getSystemMaintenanceTime() {
+        return this.SystemMaintenanceTime;
+    }
+
+    /**
+     * Set 系统维护时间
+     * @param SystemMaintenanceTime 系统维护时间
+     */
+    public void setSystemMaintenanceTime(String SystemMaintenanceTime) {
+        this.SystemMaintenanceTime = SystemMaintenanceTime;
+    }
+
+    /**
+     * Get 实例级别消息最大大小 
+     * @return MaxMessageByte 实例级别消息最大大小
+     */
+    public Long getMaxMessageByte() {
+        return this.MaxMessageByte;
+    }
+
+    /**
+     * Set 实例级别消息最大大小
+     * @param MaxMessageByte 实例级别消息最大大小
+     */
+    public void setMaxMessageByte(Long MaxMessageByte) {
+        this.MaxMessageByte = MaxMessageByte;
+    }
+
+    /**
      * Get 实例计费类型  POSTPAID_BY_HOUR 按小时付费; PREPAID 包年包月 
      * @return InstanceChargeType 实例计费类型  POSTPAID_BY_HOUR 按小时付费; PREPAID 包年包月
      */
@@ -1255,6 +1301,12 @@ CLOUD_EKS_TSE EKS集群
         if (source.DynamicDiskConfig != null) {
             this.DynamicDiskConfig = new DynamicDiskConfig(source.DynamicDiskConfig);
         }
+        if (source.SystemMaintenanceTime != null) {
+            this.SystemMaintenanceTime = new String(source.SystemMaintenanceTime);
+        }
+        if (source.MaxMessageByte != null) {
+            this.MaxMessageByte = new Long(source.MaxMessageByte);
+        }
         if (source.InstanceChargeType != null) {
             this.InstanceChargeType = new String(source.InstanceChargeType);
         }
@@ -1324,6 +1376,8 @@ CLOUD_EKS_TSE EKS集群
         this.setParamSimple(map, prefix + "RemainingPartitions", this.RemainingPartitions);
         this.setParamSimple(map, prefix + "RemainingTopics", this.RemainingTopics);
         this.setParamObj(map, prefix + "DynamicDiskConfig.", this.DynamicDiskConfig);
+        this.setParamSimple(map, prefix + "SystemMaintenanceTime", this.SystemMaintenanceTime);
+        this.setParamSimple(map, prefix + "MaxMessageByte", this.MaxMessageByte);
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         this.setParamSimple(map, prefix + "ElasticBandwidthSwitch", this.ElasticBandwidthSwitch);
         this.setParamSimple(map, prefix + "ElasticBandwidthOpenStatus", this.ElasticBandwidthOpenStatus);

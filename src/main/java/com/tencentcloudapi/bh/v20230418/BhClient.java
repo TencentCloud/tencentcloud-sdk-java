@@ -215,6 +215,17 @@ public class BhClient extends AbstractClient{
     }
 
     /**
+     *创建用户同步任务
+     * @param req CreateSyncUserTaskRequest
+     * @return CreateSyncUserTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSyncUserTaskResponse CreateSyncUserTask(CreateSyncUserTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSyncUserTask", CreateSyncUserTaskResponse.class);
+    }
+
+    /**
      *新建用户
      * @param req CreateUserRequest
      * @return CreateUserResponse
@@ -223,6 +234,17 @@ public class BhClient extends AbstractClient{
     public CreateUserResponse CreateUser(CreateUserRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateUser", CreateUserResponse.class);
+    }
+
+    /**
+     *创建用户目录
+     * @param req CreateUserDirectoryRequest
+     * @return CreateUserDirectoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateUserDirectoryResponse CreateUserDirectory(CreateUserDirectoryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateUserDirectory", CreateUserDirectoryResponse.class);
     }
 
     /**
@@ -336,6 +358,17 @@ public class BhClient extends AbstractClient{
     }
 
     /**
+     *删除用户目录
+     * @param req DeleteUserDirectoryRequest
+     * @return DeleteUserDirectoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteUserDirectoryResponse DeleteUserDirectory(DeleteUserDirectoryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteUserDirectory", DeleteUserDirectoryResponse.class);
+    }
+
+    /**
      *删除用户组成员
      * @param req DeleteUserGroupMembersRequest
      * @return DeleteUserGroupMembersResponse
@@ -388,6 +421,17 @@ public class BhClient extends AbstractClient{
     public DescribeAccessWhiteListRulesResponse DescribeAccessWhiteListRules(DescribeAccessWhiteListRulesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAccessWhiteListRules", DescribeAccessWhiteListRulesResponse.class);
+    }
+
+    /**
+     *获取账号组信息
+     * @param req DescribeAccountGroupsRequest
+     * @return DescribeAccountGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccountGroupsResponse DescribeAccountGroups(DescribeAccountGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAccountGroups", DescribeAccountGroupsResponse.class);
     }
 
     /**
@@ -578,6 +622,28 @@ public class BhClient extends AbstractClient{
     }
 
     /**
+     *获取认证源信息
+     * @param req DescribeSourceTypesRequest
+     * @return DescribeSourceTypesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSourceTypesResponse DescribeSourceTypes(DescribeSourceTypesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSourceTypes", DescribeSourceTypesResponse.class);
+    }
+
+    /**
+     *获取用户目录
+     * @param req DescribeUserDirectoryRequest
+     * @return DescribeUserDirectoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserDirectoryResponse DescribeUserDirectory(DescribeUserDirectoryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUserDirectory", DescribeUserDirectoryResponse.class);
+    }
+
+    /**
      *查询用户组成员列表
      * @param req DescribeUserGroupMembersRequest
      * @return DescribeUserGroupMembersResponse
@@ -597,6 +663,17 @@ public class BhClient extends AbstractClient{
     public DescribeUserGroupsResponse DescribeUserGroups(DescribeUserGroupsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeUserGroups", DescribeUserGroupsResponse.class);
+    }
+
+    /**
+     *获取用户同步状态
+     * @param req DescribeUserSyncStatusRequest
+     * @return DescribeUserSyncStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserSyncStatusResponse DescribeUserSyncStatus(DescribeUserSyncStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUserSyncStatus", DescribeUserSyncStatusResponse.class);
     }
 
     /**
@@ -842,6 +919,17 @@ public class BhClient extends AbstractClient{
     }
 
     /**
+     *修改用户目录信息
+     * @param req ModifyUserDirectoryRequest
+     * @return ModifyUserDirectoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyUserDirectoryResponse ModifyUserDirectory(ModifyUserDirectoryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyUserDirectory", ModifyUserDirectoryResponse.class);
+    }
+
+    /**
      *修改用户组
      * @param req ModifyUserGroupRequest
      * @return ModifyUserGroupResponse
@@ -1026,6 +1114,28 @@ public class BhClient extends AbstractClient{
     public SetLDAPSyncFlagResponse SetLDAPSyncFlag(SetLDAPSyncFlagRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SetLDAPSyncFlag", SetLDAPSyncFlagResponse.class);
+    }
+
+    /**
+     *同步资产到IOA
+     * @param req SyncDevicesToIOARequest
+     * @return SyncDevicesToIOAResponse
+     * @throws TencentCloudSDKException
+     */
+    public SyncDevicesToIOAResponse SyncDevicesToIOA(SyncDevicesToIOARequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SyncDevicesToIOA", SyncDevicesToIOAResponse.class);
+    }
+
+    /**
+     *同步堡垒机本地用户到IOA
+     * @param req SyncUserToIOARequest
+     * @return SyncUserToIOAResponse
+     * @throws TencentCloudSDKException
+     */
+    public SyncUserToIOAResponse SyncUserToIOA(SyncUserToIOARequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SyncUserToIOA", SyncUserToIOAResponse.class);
     }
 
     /**

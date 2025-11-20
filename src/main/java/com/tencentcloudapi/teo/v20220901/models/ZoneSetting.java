@@ -184,6 +184,14 @@ public class ZoneSetting extends AbstractModel {
     private Grpc Grpc;
 
     /**
+    * 网络错误日志记录配置。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NetworkErrorLogging")
+    @Expose
+    private NetworkErrorLogging NetworkErrorLogging;
+
+    /**
     * 图片优化相关配置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -616,6 +624,26 @@ public class ZoneSetting extends AbstractModel {
     }
 
     /**
+     * Get 网络错误日志记录配置。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NetworkErrorLogging 网络错误日志记录配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public NetworkErrorLogging getNetworkErrorLogging() {
+        return this.NetworkErrorLogging;
+    }
+
+    /**
+     * Set 网络错误日志记录配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NetworkErrorLogging 网络错误日志记录配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNetworkErrorLogging(NetworkErrorLogging NetworkErrorLogging) {
+        this.NetworkErrorLogging = NetworkErrorLogging;
+    }
+
+    /**
      * Get 图片优化相关配置。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ImageOptimize 图片优化相关配置。
@@ -763,6 +791,9 @@ public class ZoneSetting extends AbstractModel {
         if (source.Grpc != null) {
             this.Grpc = new Grpc(source.Grpc);
         }
+        if (source.NetworkErrorLogging != null) {
+            this.NetworkErrorLogging = new NetworkErrorLogging(source.NetworkErrorLogging);
+        }
         if (source.ImageOptimize != null) {
             this.ImageOptimize = new ImageOptimize(source.ImageOptimize);
         }
@@ -802,6 +833,7 @@ public class ZoneSetting extends AbstractModel {
         this.setParamObj(map, prefix + "Https.", this.Https);
         this.setParamObj(map, prefix + "ClientIpCountry.", this.ClientIpCountry);
         this.setParamObj(map, prefix + "Grpc.", this.Grpc);
+        this.setParamObj(map, prefix + "NetworkErrorLogging.", this.NetworkErrorLogging);
         this.setParamObj(map, prefix + "ImageOptimize.", this.ImageOptimize);
         this.setParamObj(map, prefix + "AccelerateMainland.", this.AccelerateMainland);
         this.setParamObj(map, prefix + "StandardDebug.", this.StandardDebug);

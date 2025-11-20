@@ -235,6 +235,13 @@ public class ServerBaseConfig extends AbstractModel {
     private VolumeConf [] VolumesConf;
 
     /**
+    * 关联镜像密钥
+    */
+    @SerializedName("LinkImageRegistry")
+    @Expose
+    private String LinkImageRegistry;
+
+    /**
      * Get 环境 Id 
      * @return EnvId 环境 Id
      */
@@ -718,6 +725,22 @@ public class ServerBaseConfig extends AbstractModel {
         this.VolumesConf = VolumesConf;
     }
 
+    /**
+     * Get 关联镜像密钥 
+     * @return LinkImageRegistry 关联镜像密钥
+     */
+    public String getLinkImageRegistry() {
+        return this.LinkImageRegistry;
+    }
+
+    /**
+     * Set 关联镜像密钥
+     * @param LinkImageRegistry 关联镜像密钥
+     */
+    public void setLinkImageRegistry(String LinkImageRegistry) {
+        this.LinkImageRegistry = LinkImageRegistry;
+    }
+
     public ServerBaseConfig() {
     }
 
@@ -834,6 +857,9 @@ public class ServerBaseConfig extends AbstractModel {
                 this.VolumesConf[i] = new VolumeConf(source.VolumesConf[i]);
             }
         }
+        if (source.LinkImageRegistry != null) {
+            this.LinkImageRegistry = new String(source.LinkImageRegistry);
+        }
     }
 
 
@@ -871,6 +897,7 @@ public class ServerBaseConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "SessionAffinity", this.SessionAffinity);
         this.setParamObj(map, prefix + "VpcConf.", this.VpcConf);
         this.setParamArrayObj(map, prefix + "VolumesConf.", this.VolumesConf);
+        this.setParamSimple(map, prefix + "LinkImageRegistry", this.LinkImageRegistry);
 
     }
 }

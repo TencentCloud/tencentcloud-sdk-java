@@ -31,20 +31,19 @@ public class SubmitTemplateToVideoJobRequest extends AbstractModel {
     private String Template;
 
     /**
-    * 参考图像，最多输入2张图。
+    * 参考图像，不同特效输入图片的数量详见： [视频特效模板-图片要求说明](https://cloud.tencent.com/document/product/1616/119194)
 - 支持传入图片Base64编码或图片URL（确保可访问）
 - 图片格式：支持png、jpg、jpeg、webp、bmp、tiff
-- 图片文件：大小不能超过10MB（base64后），图片分辨率不小于300\*300px，不大于4096\*4096，图片宽高比应在1:4 ~ 4:1之间
-
+- 图片文件：大小不能超过10MB（base64后），图片分辨率不小于300*300px，不大于4096*4096，图片宽高比应在1:4 ~ 4:1之间
     */
     @SerializedName("Images")
     @Expose
     private Image [] Images;
 
     /**
-    * 为生成视频添加标识的开关，默认为1。
-1：添加标识。
-0：不添加标识。
+    * 为生成视频添加标识的开关，默认为1。传0 需前往  [控制台](https://console.cloud.tencent.com/vtc/setting) 申请开启显式标识自主完成后方可生效。
+1：添加标识；
+0：不添加标识；
 其他数值：默认按1处理。
 建议您使用显著标识来提示，该视频是 AI 生成的视频。
     */
@@ -54,14 +53,15 @@ public class SubmitTemplateToVideoJobRequest extends AbstractModel {
 
     /**
     * 标识内容设置。
-默认在生成视频的右下角添加“视频由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
+默认在生成视频的右下角添加“ AI 生成”或“视频由 AI 生成”字样，如需替换为其他的标识图片，需前往  [控制台](https://console.cloud.tencent.com/vtc/setting) 申请开启显式标识自主完成。
+
     */
     @SerializedName("LogoParam")
     @Expose
     private LogoParam LogoParam;
 
     /**
-    * 视频输出分辨率，默认值：360p  - 枚举值：  720p  360p。
+    * 视频输出分辨率，默认值：360p 。不同特效支持的清晰度及消耗积分数详见：[视频特效模板-单次调用消耗积分数列](https://cloud.tencent.com/document/product/1616/119194 )
     */
     @SerializedName("Resolution")
     @Expose
@@ -73,6 +73,13 @@ public class SubmitTemplateToVideoJobRequest extends AbstractModel {
     @SerializedName("BGM")
     @Expose
     private Boolean BGM;
+
+    /**
+    * 扩展字段。
+    */
+    @SerializedName("ExtraParam")
+    @Expose
+    private ExtraParam ExtraParam;
 
     /**
      * Get 特效模板名称。请在 [视频特效模板列表](https://cloud.tencent.com/document/product/1616/119194)  中选择想要生成的特效对应的 template 名称。 
@@ -91,46 +98,42 @@ public class SubmitTemplateToVideoJobRequest extends AbstractModel {
     }
 
     /**
-     * Get 参考图像，最多输入2张图。
+     * Get 参考图像，不同特效输入图片的数量详见： [视频特效模板-图片要求说明](https://cloud.tencent.com/document/product/1616/119194)
 - 支持传入图片Base64编码或图片URL（确保可访问）
 - 图片格式：支持png、jpg、jpeg、webp、bmp、tiff
-- 图片文件：大小不能超过10MB（base64后），图片分辨率不小于300\*300px，不大于4096\*4096，图片宽高比应在1:4 ~ 4:1之间
- 
-     * @return Images 参考图像，最多输入2张图。
+- 图片文件：大小不能超过10MB（base64后），图片分辨率不小于300*300px，不大于4096*4096，图片宽高比应在1:4 ~ 4:1之间 
+     * @return Images 参考图像，不同特效输入图片的数量详见： [视频特效模板-图片要求说明](https://cloud.tencent.com/document/product/1616/119194)
 - 支持传入图片Base64编码或图片URL（确保可访问）
 - 图片格式：支持png、jpg、jpeg、webp、bmp、tiff
-- 图片文件：大小不能超过10MB（base64后），图片分辨率不小于300\*300px，不大于4096\*4096，图片宽高比应在1:4 ~ 4:1之间
-
+- 图片文件：大小不能超过10MB（base64后），图片分辨率不小于300*300px，不大于4096*4096，图片宽高比应在1:4 ~ 4:1之间
      */
     public Image [] getImages() {
         return this.Images;
     }
 
     /**
-     * Set 参考图像，最多输入2张图。
+     * Set 参考图像，不同特效输入图片的数量详见： [视频特效模板-图片要求说明](https://cloud.tencent.com/document/product/1616/119194)
 - 支持传入图片Base64编码或图片URL（确保可访问）
 - 图片格式：支持png、jpg、jpeg、webp、bmp、tiff
-- 图片文件：大小不能超过10MB（base64后），图片分辨率不小于300\*300px，不大于4096\*4096，图片宽高比应在1:4 ~ 4:1之间
-
-     * @param Images 参考图像，最多输入2张图。
+- 图片文件：大小不能超过10MB（base64后），图片分辨率不小于300*300px，不大于4096*4096，图片宽高比应在1:4 ~ 4:1之间
+     * @param Images 参考图像，不同特效输入图片的数量详见： [视频特效模板-图片要求说明](https://cloud.tencent.com/document/product/1616/119194)
 - 支持传入图片Base64编码或图片URL（确保可访问）
 - 图片格式：支持png、jpg、jpeg、webp、bmp、tiff
-- 图片文件：大小不能超过10MB（base64后），图片分辨率不小于300\*300px，不大于4096\*4096，图片宽高比应在1:4 ~ 4:1之间
-
+- 图片文件：大小不能超过10MB（base64后），图片分辨率不小于300*300px，不大于4096*4096，图片宽高比应在1:4 ~ 4:1之间
      */
     public void setImages(Image [] Images) {
         this.Images = Images;
     }
 
     /**
-     * Get 为生成视频添加标识的开关，默认为1。
-1：添加标识。
-0：不添加标识。
+     * Get 为生成视频添加标识的开关，默认为1。传0 需前往  [控制台](https://console.cloud.tencent.com/vtc/setting) 申请开启显式标识自主完成后方可生效。
+1：添加标识；
+0：不添加标识；
 其他数值：默认按1处理。
 建议您使用显著标识来提示，该视频是 AI 生成的视频。 
-     * @return LogoAdd 为生成视频添加标识的开关，默认为1。
-1：添加标识。
-0：不添加标识。
+     * @return LogoAdd 为生成视频添加标识的开关，默认为1。传0 需前往  [控制台](https://console.cloud.tencent.com/vtc/setting) 申请开启显式标识自主完成后方可生效。
+1：添加标识；
+0：不添加标识；
 其他数值：默认按1处理。
 建议您使用显著标识来提示，该视频是 AI 生成的视频。
      */
@@ -139,14 +142,14 @@ public class SubmitTemplateToVideoJobRequest extends AbstractModel {
     }
 
     /**
-     * Set 为生成视频添加标识的开关，默认为1。
-1：添加标识。
-0：不添加标识。
+     * Set 为生成视频添加标识的开关，默认为1。传0 需前往  [控制台](https://console.cloud.tencent.com/vtc/setting) 申请开启显式标识自主完成后方可生效。
+1：添加标识；
+0：不添加标识；
 其他数值：默认按1处理。
 建议您使用显著标识来提示，该视频是 AI 生成的视频。
-     * @param LogoAdd 为生成视频添加标识的开关，默认为1。
-1：添加标识。
-0：不添加标识。
+     * @param LogoAdd 为生成视频添加标识的开关，默认为1。传0 需前往  [控制台](https://console.cloud.tencent.com/vtc/setting) 申请开启显式标识自主完成后方可生效。
+1：添加标识；
+0：不添加标识；
 其他数值：默认按1处理。
 建议您使用显著标识来提示，该视频是 AI 生成的视频。
      */
@@ -156,9 +159,11 @@ public class SubmitTemplateToVideoJobRequest extends AbstractModel {
 
     /**
      * Get 标识内容设置。
-默认在生成视频的右下角添加“视频由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。 
+默认在生成视频的右下角添加“ AI 生成”或“视频由 AI 生成”字样，如需替换为其他的标识图片，需前往  [控制台](https://console.cloud.tencent.com/vtc/setting) 申请开启显式标识自主完成。
+ 
      * @return LogoParam 标识内容设置。
-默认在生成视频的右下角添加“视频由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
+默认在生成视频的右下角添加“ AI 生成”或“视频由 AI 生成”字样，如需替换为其他的标识图片，需前往  [控制台](https://console.cloud.tencent.com/vtc/setting) 申请开启显式标识自主完成。
+
      */
     public LogoParam getLogoParam() {
         return this.LogoParam;
@@ -166,25 +171,27 @@ public class SubmitTemplateToVideoJobRequest extends AbstractModel {
 
     /**
      * Set 标识内容设置。
-默认在生成视频的右下角添加“视频由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
+默认在生成视频的右下角添加“ AI 生成”或“视频由 AI 生成”字样，如需替换为其他的标识图片，需前往  [控制台](https://console.cloud.tencent.com/vtc/setting) 申请开启显式标识自主完成。
+
      * @param LogoParam 标识内容设置。
-默认在生成视频的右下角添加“视频由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
+默认在生成视频的右下角添加“ AI 生成”或“视频由 AI 生成”字样，如需替换为其他的标识图片，需前往  [控制台](https://console.cloud.tencent.com/vtc/setting) 申请开启显式标识自主完成。
+
      */
     public void setLogoParam(LogoParam LogoParam) {
         this.LogoParam = LogoParam;
     }
 
     /**
-     * Get 视频输出分辨率，默认值：360p  - 枚举值：  720p  360p。 
-     * @return Resolution 视频输出分辨率，默认值：360p  - 枚举值：  720p  360p。
+     * Get 视频输出分辨率，默认值：360p 。不同特效支持的清晰度及消耗积分数详见：[视频特效模板-单次调用消耗积分数列](https://cloud.tencent.com/document/product/1616/119194 ) 
+     * @return Resolution 视频输出分辨率，默认值：360p 。不同特效支持的清晰度及消耗积分数详见：[视频特效模板-单次调用消耗积分数列](https://cloud.tencent.com/document/product/1616/119194 )
      */
     public String getResolution() {
         return this.Resolution;
     }
 
     /**
-     * Set 视频输出分辨率，默认值：360p  - 枚举值：  720p  360p。
-     * @param Resolution 视频输出分辨率，默认值：360p  - 枚举值：  720p  360p。
+     * Set 视频输出分辨率，默认值：360p 。不同特效支持的清晰度及消耗积分数详见：[视频特效模板-单次调用消耗积分数列](https://cloud.tencent.com/document/product/1616/119194 )
+     * @param Resolution 视频输出分辨率，默认值：360p 。不同特效支持的清晰度及消耗积分数详见：[视频特效模板-单次调用消耗积分数列](https://cloud.tencent.com/document/product/1616/119194 )
      */
     public void setResolution(String Resolution) {
         this.Resolution = Resolution;
@@ -204,6 +211,22 @@ public class SubmitTemplateToVideoJobRequest extends AbstractModel {
      */
     public void setBGM(Boolean BGM) {
         this.BGM = BGM;
+    }
+
+    /**
+     * Get 扩展字段。 
+     * @return ExtraParam 扩展字段。
+     */
+    public ExtraParam getExtraParam() {
+        return this.ExtraParam;
+    }
+
+    /**
+     * Set 扩展字段。
+     * @param ExtraParam 扩展字段。
+     */
+    public void setExtraParam(ExtraParam ExtraParam) {
+        this.ExtraParam = ExtraParam;
     }
 
     public SubmitTemplateToVideoJobRequest() {
@@ -235,6 +258,9 @@ public class SubmitTemplateToVideoJobRequest extends AbstractModel {
         if (source.BGM != null) {
             this.BGM = new Boolean(source.BGM);
         }
+        if (source.ExtraParam != null) {
+            this.ExtraParam = new ExtraParam(source.ExtraParam);
+        }
     }
 
 
@@ -248,6 +274,7 @@ public class SubmitTemplateToVideoJobRequest extends AbstractModel {
         this.setParamObj(map, prefix + "LogoParam.", this.LogoParam);
         this.setParamSimple(map, prefix + "Resolution", this.Resolution);
         this.setParamSimple(map, prefix + "BGM", this.BGM);
+        this.setParamObj(map, prefix + "ExtraParam.", this.ExtraParam);
 
     }
 }

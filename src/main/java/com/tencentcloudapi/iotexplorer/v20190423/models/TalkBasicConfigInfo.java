@@ -45,6 +45,13 @@ public class TalkBasicConfigInfo extends AbstractModel {
     private Long DefaultVoiceType;
 
     /**
+    * 复刻音色ID，当不为空时，DefaultVoiceType为200000000
+    */
+    @SerializedName("FastVoiceType")
+    @Expose
+    private String FastVoiceType;
+
+    /**
      * Get 系统提示词 
      * @return SystemPrompt 系统提示词
      */
@@ -92,6 +99,22 @@ public class TalkBasicConfigInfo extends AbstractModel {
         this.DefaultVoiceType = DefaultVoiceType;
     }
 
+    /**
+     * Get 复刻音色ID，当不为空时，DefaultVoiceType为200000000 
+     * @return FastVoiceType 复刻音色ID，当不为空时，DefaultVoiceType为200000000
+     */
+    public String getFastVoiceType() {
+        return this.FastVoiceType;
+    }
+
+    /**
+     * Set 复刻音色ID，当不为空时，DefaultVoiceType为200000000
+     * @param FastVoiceType 复刻音色ID，当不为空时，DefaultVoiceType为200000000
+     */
+    public void setFastVoiceType(String FastVoiceType) {
+        this.FastVoiceType = FastVoiceType;
+    }
+
     public TalkBasicConfigInfo() {
     }
 
@@ -109,6 +132,9 @@ public class TalkBasicConfigInfo extends AbstractModel {
         if (source.DefaultVoiceType != null) {
             this.DefaultVoiceType = new Long(source.DefaultVoiceType);
         }
+        if (source.FastVoiceType != null) {
+            this.FastVoiceType = new String(source.FastVoiceType);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class TalkBasicConfigInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "SystemPrompt", this.SystemPrompt);
         this.setParamSimple(map, prefix + "GreetingMessage", this.GreetingMessage);
         this.setParamSimple(map, prefix + "DefaultVoiceType", this.DefaultVoiceType);
+        this.setParamSimple(map, prefix + "FastVoiceType", this.FastVoiceType);
 
     }
 }

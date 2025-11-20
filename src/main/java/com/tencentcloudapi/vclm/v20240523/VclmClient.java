@@ -50,6 +50,17 @@ public class VclmClient extends AbstractClient{
     }
 
     /**
+     *通过JobId提交请求，获取人像驱动任务的结果信息。
+     * @param req DescribeHumanActorJobRequest
+     * @return DescribeHumanActorJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHumanActorJobResponse DescribeHumanActorJob(DescribeHumanActorJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHumanActorJob", DescribeHumanActorJobResponse.class);
+    }
+
+    /**
      *用于查询图片跳舞任务。图片跳舞能力支持舞蹈动作结合图片生成跳舞视频，满足社交娱乐、互动营销等场景的需求。
      * @param req DescribeImageAnimateJobRequest
      * @return DescribeImageAnimateJobResponse
@@ -103,6 +114,18 @@ public class VclmClient extends AbstractClient{
     public DescribeVideoStylizationJobResponse DescribeVideoStylizationJob(DescribeVideoStylizationJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeVideoStylizationJob", DescribeVideoStylizationJobResponse.class);
+    }
+
+    /**
+     *用于提交人像驱动任务
+支持提交音频和图文来生成对应视频，满足动态交互、内容生产等场景需求。
+     * @param req SubmitHumanActorJobRequest
+     * @return SubmitHumanActorJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitHumanActorJobResponse SubmitHumanActorJob(SubmitHumanActorJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitHumanActorJob", SubmitHumanActorJobResponse.class);
     }
 
     /**

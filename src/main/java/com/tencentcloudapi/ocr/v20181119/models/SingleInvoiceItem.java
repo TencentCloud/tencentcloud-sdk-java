@@ -320,6 +320,14 @@ public class SingleInvoiceItem extends AbstractModel {
     private UsedCarPurchaseInvoice UsedCarPurchaseInvoiceElectronic;
 
     /**
+    * 通行费电子票据汇总单
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ElectronicTollSummary")
+    @Expose
+    private ElectronicTollSummary ElectronicTollSummary;
+
+    /**
      * Get 增值税专用发票
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return VatSpecialInvoice 增值税专用发票
@@ -1059,6 +1067,26 @@ public class SingleInvoiceItem extends AbstractModel {
         this.UsedCarPurchaseInvoiceElectronic = UsedCarPurchaseInvoiceElectronic;
     }
 
+    /**
+     * Get 通行费电子票据汇总单
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ElectronicTollSummary 通行费电子票据汇总单
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ElectronicTollSummary getElectronicTollSummary() {
+        return this.ElectronicTollSummary;
+    }
+
+    /**
+     * Set 通行费电子票据汇总单
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ElectronicTollSummary 通行费电子票据汇总单
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setElectronicTollSummary(ElectronicTollSummary ElectronicTollSummary) {
+        this.ElectronicTollSummary = ElectronicTollSummary;
+    }
+
     public SingleInvoiceItem() {
     }
 
@@ -1178,6 +1206,9 @@ public class SingleInvoiceItem extends AbstractModel {
         if (source.UsedCarPurchaseInvoiceElectronic != null) {
             this.UsedCarPurchaseInvoiceElectronic = new UsedCarPurchaseInvoice(source.UsedCarPurchaseInvoiceElectronic);
         }
+        if (source.ElectronicTollSummary != null) {
+            this.ElectronicTollSummary = new ElectronicTollSummary(source.ElectronicTollSummary);
+        }
     }
 
 
@@ -1222,6 +1253,7 @@ public class SingleInvoiceItem extends AbstractModel {
         this.setParamObj(map, prefix + "SaleInventory.", this.SaleInventory);
         this.setParamObj(map, prefix + "MotorVehicleSaleInvoiceElectronic.", this.MotorVehicleSaleInvoiceElectronic);
         this.setParamObj(map, prefix + "UsedCarPurchaseInvoiceElectronic.", this.UsedCarPurchaseInvoiceElectronic);
+        this.setParamObj(map, prefix + "ElectronicTollSummary.", this.ElectronicTollSummary);
 
     }
 }

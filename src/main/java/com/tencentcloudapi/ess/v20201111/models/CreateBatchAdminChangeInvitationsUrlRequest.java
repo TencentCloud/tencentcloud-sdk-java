@@ -80,14 +80,18 @@ public class CreateBatchAdminChangeInvitationsUrlRequest extends AbstractModel {
  SMS  - 如果使用这个方式，则会给即将变更的超管发信息。
 注意：
 发送信息的手机号，是用户传递的手机号。
-如果用户同时传递了证件号，手机号会用用户在电子签注册的手机号进行覆盖。
+如果用户同时传递了证件号，手机号会被用户在电子签注册的手机号进行覆盖。
     */
     @SerializedName("NotifyType")
     @Expose
     private String NotifyType;
 
     /**
-    * 要跳转的链接类型<ul><li> **HTTP**：跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型  ，此时返回长链 (默认类型)</li><li>**HTTP_SHORT_URL**：跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型，此时返回短链</li><li>**APP**： 第三方APP或小程序跳转电子签小程序的path,  APP或者小程序跳转适合此类型</li><li>**QR_CODE**： 跳转电子签小程序的http_url的二维码形式,  可以在页面展示适合此类型</li></ul>
+    * 要跳转的链接类型
+<ul>
+<li> **HTTP**：跳转电子签小程序的http_url，短信通知或者H5跳转适合此类型 ，此时返回长链 （默认类型）。</li><li>**HTTP_SHORT_URL**：跳转电子签小程序的http_url，短信通知或者H5跳转适合此类型，此时返回短链。</li><li>**APP**： 第三方APP或小程序跳转电子签小程序的path，APP或者小程序跳转适合此类型。</li>
+<li>**QR_CODE**： 跳转电子签小程序的http_url的二维码形式，可以在页面展示适合此类型。</li>
+</ul>
     */
     @SerializedName("Endpoint")
     @Expose
@@ -243,13 +247,13 @@ public class CreateBatchAdminChangeInvitationsUrlRequest extends AbstractModel {
  SMS  - 如果使用这个方式，则会给即将变更的超管发信息。
 注意：
 发送信息的手机号，是用户传递的手机号。
-如果用户同时传递了证件号，手机号会用用户在电子签注册的手机号进行覆盖。 
+如果用户同时传递了证件号，手机号会被用户在电子签注册的手机号进行覆盖。 
      * @return NotifyType 通知方式。
  NONE（默认）
  SMS  - 如果使用这个方式，则会给即将变更的超管发信息。
 注意：
 发送信息的手机号，是用户传递的手机号。
-如果用户同时传递了证件号，手机号会用用户在电子签注册的手机号进行覆盖。
+如果用户同时传递了证件号，手机号会被用户在电子签注册的手机号进行覆盖。
      */
     public String getNotifyType() {
         return this.NotifyType;
@@ -261,29 +265,45 @@ public class CreateBatchAdminChangeInvitationsUrlRequest extends AbstractModel {
  SMS  - 如果使用这个方式，则会给即将变更的超管发信息。
 注意：
 发送信息的手机号，是用户传递的手机号。
-如果用户同时传递了证件号，手机号会用用户在电子签注册的手机号进行覆盖。
+如果用户同时传递了证件号，手机号会被用户在电子签注册的手机号进行覆盖。
      * @param NotifyType 通知方式。
  NONE（默认）
  SMS  - 如果使用这个方式，则会给即将变更的超管发信息。
 注意：
 发送信息的手机号，是用户传递的手机号。
-如果用户同时传递了证件号，手机号会用用户在电子签注册的手机号进行覆盖。
+如果用户同时传递了证件号，手机号会被用户在电子签注册的手机号进行覆盖。
      */
     public void setNotifyType(String NotifyType) {
         this.NotifyType = NotifyType;
     }
 
     /**
-     * Get 要跳转的链接类型<ul><li> **HTTP**：跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型  ，此时返回长链 (默认类型)</li><li>**HTTP_SHORT_URL**：跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型，此时返回短链</li><li>**APP**： 第三方APP或小程序跳转电子签小程序的path,  APP或者小程序跳转适合此类型</li><li>**QR_CODE**： 跳转电子签小程序的http_url的二维码形式,  可以在页面展示适合此类型</li></ul> 
-     * @return Endpoint 要跳转的链接类型<ul><li> **HTTP**：跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型  ，此时返回长链 (默认类型)</li><li>**HTTP_SHORT_URL**：跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型，此时返回短链</li><li>**APP**： 第三方APP或小程序跳转电子签小程序的path,  APP或者小程序跳转适合此类型</li><li>**QR_CODE**： 跳转电子签小程序的http_url的二维码形式,  可以在页面展示适合此类型</li></ul>
+     * Get 要跳转的链接类型
+<ul>
+<li> **HTTP**：跳转电子签小程序的http_url，短信通知或者H5跳转适合此类型 ，此时返回长链 （默认类型）。</li><li>**HTTP_SHORT_URL**：跳转电子签小程序的http_url，短信通知或者H5跳转适合此类型，此时返回短链。</li><li>**APP**： 第三方APP或小程序跳转电子签小程序的path，APP或者小程序跳转适合此类型。</li>
+<li>**QR_CODE**： 跳转电子签小程序的http_url的二维码形式，可以在页面展示适合此类型。</li>
+</ul> 
+     * @return Endpoint 要跳转的链接类型
+<ul>
+<li> **HTTP**：跳转电子签小程序的http_url，短信通知或者H5跳转适合此类型 ，此时返回长链 （默认类型）。</li><li>**HTTP_SHORT_URL**：跳转电子签小程序的http_url，短信通知或者H5跳转适合此类型，此时返回短链。</li><li>**APP**： 第三方APP或小程序跳转电子签小程序的path，APP或者小程序跳转适合此类型。</li>
+<li>**QR_CODE**： 跳转电子签小程序的http_url的二维码形式，可以在页面展示适合此类型。</li>
+</ul>
      */
     public String getEndpoint() {
         return this.Endpoint;
     }
 
     /**
-     * Set 要跳转的链接类型<ul><li> **HTTP**：跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型  ，此时返回长链 (默认类型)</li><li>**HTTP_SHORT_URL**：跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型，此时返回短链</li><li>**APP**： 第三方APP或小程序跳转电子签小程序的path,  APP或者小程序跳转适合此类型</li><li>**QR_CODE**： 跳转电子签小程序的http_url的二维码形式,  可以在页面展示适合此类型</li></ul>
-     * @param Endpoint 要跳转的链接类型<ul><li> **HTTP**：跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型  ，此时返回长链 (默认类型)</li><li>**HTTP_SHORT_URL**：跳转电子签小程序的http_url, 短信通知或者H5跳转适合此类型，此时返回短链</li><li>**APP**： 第三方APP或小程序跳转电子签小程序的path,  APP或者小程序跳转适合此类型</li><li>**QR_CODE**： 跳转电子签小程序的http_url的二维码形式,  可以在页面展示适合此类型</li></ul>
+     * Set 要跳转的链接类型
+<ul>
+<li> **HTTP**：跳转电子签小程序的http_url，短信通知或者H5跳转适合此类型 ，此时返回长链 （默认类型）。</li><li>**HTTP_SHORT_URL**：跳转电子签小程序的http_url，短信通知或者H5跳转适合此类型，此时返回短链。</li><li>**APP**： 第三方APP或小程序跳转电子签小程序的path，APP或者小程序跳转适合此类型。</li>
+<li>**QR_CODE**： 跳转电子签小程序的http_url的二维码形式，可以在页面展示适合此类型。</li>
+</ul>
+     * @param Endpoint 要跳转的链接类型
+<ul>
+<li> **HTTP**：跳转电子签小程序的http_url，短信通知或者H5跳转适合此类型 ，此时返回长链 （默认类型）。</li><li>**HTTP_SHORT_URL**：跳转电子签小程序的http_url，短信通知或者H5跳转适合此类型，此时返回短链。</li><li>**APP**： 第三方APP或小程序跳转电子签小程序的path，APP或者小程序跳转适合此类型。</li>
+<li>**QR_CODE**： 跳转电子签小程序的http_url的二维码形式，可以在页面展示适合此类型。</li>
+</ul>
      */
     public void setEndpoint(String Endpoint) {
         this.Endpoint = Endpoint;

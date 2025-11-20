@@ -35,7 +35,7 @@ public class ImageAreaBoxInfo extends AbstractModel {
     private String Type;
 
     /**
-    * 图片框选区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+    * 图片框选区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。注意：该字段最大值为4096。
 示例值：[101, 85, 111, 95]
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -44,7 +44,7 @@ public class ImageAreaBoxInfo extends AbstractModel {
     private Long [] AreaCoordSet;
 
     /**
-    * 图片框选区域坐标，[x1, y1, x2, y2]，即左上角坐标、右下角坐标， 当AreaCoordSet未指定时生效。
+    * 图片框选区域坐标，[x1, y1, x2, y2]，即左上角坐标、右下角坐标， 当AreaCoordSet未指定时生效。当表示像素时，该字段最大值为4096。
 - [0.1, 0.1, 0.3, 0.3] :  表示比例 （数值小于1）
 - [50, 50, 350, 280] : 表示像素 （数值大于等于1）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -52,6 +52,13 @@ public class ImageAreaBoxInfo extends AbstractModel {
     @SerializedName("BoundingBox")
     @Expose
     private Float [] BoundingBox;
+
+    /**
+    * BoundingBox字段单位。设置为0时，按照该字段规则自动选择单位；设置为1时，单位为比例；设置为2时，单位为像素。
+    */
+    @SerializedName("BoundingBoxUnitType")
+    @Expose
+    private Long BoundingBoxUnitType;
 
     /**
      * Get 图片框选区域类型，可选值：
@@ -86,10 +93,10 @@ public class ImageAreaBoxInfo extends AbstractModel {
     }
 
     /**
-     * Get 图片框选区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+     * Get 图片框选区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。注意：该字段最大值为4096。
 示例值：[101, 85, 111, 95]
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AreaCoordSet 图片框选区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+     * @return AreaCoordSet 图片框选区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。注意：该字段最大值为4096。
 示例值：[101, 85, 111, 95]
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -98,10 +105,10 @@ public class ImageAreaBoxInfo extends AbstractModel {
     }
 
     /**
-     * Set 图片框选区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+     * Set 图片框选区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。注意：该字段最大值为4096。
 示例值：[101, 85, 111, 95]
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AreaCoordSet 图片框选区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+     * @param AreaCoordSet 图片框选区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。注意：该字段最大值为4096。
 示例值：[101, 85, 111, 95]
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -110,11 +117,11 @@ public class ImageAreaBoxInfo extends AbstractModel {
     }
 
     /**
-     * Get 图片框选区域坐标，[x1, y1, x2, y2]，即左上角坐标、右下角坐标， 当AreaCoordSet未指定时生效。
+     * Get 图片框选区域坐标，[x1, y1, x2, y2]，即左上角坐标、右下角坐标， 当AreaCoordSet未指定时生效。当表示像素时，该字段最大值为4096。
 - [0.1, 0.1, 0.3, 0.3] :  表示比例 （数值小于1）
 - [50, 50, 350, 280] : 表示像素 （数值大于等于1）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BoundingBox 图片框选区域坐标，[x1, y1, x2, y2]，即左上角坐标、右下角坐标， 当AreaCoordSet未指定时生效。
+     * @return BoundingBox 图片框选区域坐标，[x1, y1, x2, y2]，即左上角坐标、右下角坐标， 当AreaCoordSet未指定时生效。当表示像素时，该字段最大值为4096。
 - [0.1, 0.1, 0.3, 0.3] :  表示比例 （数值小于1）
 - [50, 50, 350, 280] : 表示像素 （数值大于等于1）
 注意：此字段可能返回 null，表示取不到有效值。
@@ -124,17 +131,33 @@ public class ImageAreaBoxInfo extends AbstractModel {
     }
 
     /**
-     * Set 图片框选区域坐标，[x1, y1, x2, y2]，即左上角坐标、右下角坐标， 当AreaCoordSet未指定时生效。
+     * Set 图片框选区域坐标，[x1, y1, x2, y2]，即左上角坐标、右下角坐标， 当AreaCoordSet未指定时生效。当表示像素时，该字段最大值为4096。
 - [0.1, 0.1, 0.3, 0.3] :  表示比例 （数值小于1）
 - [50, 50, 350, 280] : 表示像素 （数值大于等于1）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BoundingBox 图片框选区域坐标，[x1, y1, x2, y2]，即左上角坐标、右下角坐标， 当AreaCoordSet未指定时生效。
+     * @param BoundingBox 图片框选区域坐标，[x1, y1, x2, y2]，即左上角坐标、右下角坐标， 当AreaCoordSet未指定时生效。当表示像素时，该字段最大值为4096。
 - [0.1, 0.1, 0.3, 0.3] :  表示比例 （数值小于1）
 - [50, 50, 350, 280] : 表示像素 （数值大于等于1）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBoundingBox(Float [] BoundingBox) {
         this.BoundingBox = BoundingBox;
+    }
+
+    /**
+     * Get BoundingBox字段单位。设置为0时，按照该字段规则自动选择单位；设置为1时，单位为比例；设置为2时，单位为像素。 
+     * @return BoundingBoxUnitType BoundingBox字段单位。设置为0时，按照该字段规则自动选择单位；设置为1时，单位为比例；设置为2时，单位为像素。
+     */
+    public Long getBoundingBoxUnitType() {
+        return this.BoundingBoxUnitType;
+    }
+
+    /**
+     * Set BoundingBox字段单位。设置为0时，按照该字段规则自动选择单位；设置为1时，单位为比例；设置为2时，单位为像素。
+     * @param BoundingBoxUnitType BoundingBox字段单位。设置为0时，按照该字段规则自动选择单位；设置为1时，单位为比例；设置为2时，单位为像素。
+     */
+    public void setBoundingBoxUnitType(Long BoundingBoxUnitType) {
+        this.BoundingBoxUnitType = BoundingBoxUnitType;
     }
 
     public ImageAreaBoxInfo() {
@@ -160,6 +183,9 @@ public class ImageAreaBoxInfo extends AbstractModel {
                 this.BoundingBox[i] = new Float(source.BoundingBox[i]);
             }
         }
+        if (source.BoundingBoxUnitType != null) {
+            this.BoundingBoxUnitType = new Long(source.BoundingBoxUnitType);
+        }
     }
 
 
@@ -170,6 +196,7 @@ public class ImageAreaBoxInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamArraySimple(map, prefix + "AreaCoordSet.", this.AreaCoordSet);
         this.setParamArraySimple(map, prefix + "BoundingBox.", this.BoundingBox);
+        this.setParamSimple(map, prefix + "BoundingBoxUnitType", this.BoundingBoxUnitType);
 
     }
 }

@@ -121,7 +121,6 @@ public class CreateBatchSignUrlRequest extends AbstractModel {
 <ul>
 <li>请确认该名称与企业营业执照中注册的名称一致。</li>
 <li>如果名称中包含英文括号()，请使用中文括号（）代替。</li>
-<li>请确保此企业已完成腾讯电子签企业认证。</li>
 </ul>
     */
     @SerializedName("OrganizationName")
@@ -447,7 +446,6 @@ public class CreateBatchSignUrlRequest extends AbstractModel {
 <ul>
 <li>请确认该名称与企业营业执照中注册的名称一致。</li>
 <li>如果名称中包含英文括号()，请使用中文括号（）代替。</li>
-<li>请确保此企业已完成腾讯电子签企业认证。</li>
 </ul> 
      * @return OrganizationName 目标签署人的企业名称，签署人如果是企业员工身份，需要传此参数。
 
@@ -455,7 +453,6 @@ public class CreateBatchSignUrlRequest extends AbstractModel {
 <ul>
 <li>请确认该名称与企业营业执照中注册的名称一致。</li>
 <li>如果名称中包含英文括号()，请使用中文括号（）代替。</li>
-<li>请确保此企业已完成腾讯电子签企业认证。</li>
 </ul>
      */
     public String getOrganizationName() {
@@ -469,7 +466,6 @@ public class CreateBatchSignUrlRequest extends AbstractModel {
 <ul>
 <li>请确认该名称与企业营业执照中注册的名称一致。</li>
 <li>如果名称中包含英文括号()，请使用中文括号（）代替。</li>
-<li>请确保此企业已完成腾讯电子签企业认证。</li>
 </ul>
      * @param OrganizationName 目标签署人的企业名称，签署人如果是企业员工身份，需要传此参数。
 
@@ -477,7 +473,6 @@ public class CreateBatchSignUrlRequest extends AbstractModel {
 <ul>
 <li>请确认该名称与企业营业执照中注册的名称一致。</li>
 <li>如果名称中包含英文括号()，请使用中文括号（）代替。</li>
-<li>请确保此企业已完成腾讯电子签企业认证。</li>
 </ul>
      */
     public void setOrganizationName(String OrganizationName) {

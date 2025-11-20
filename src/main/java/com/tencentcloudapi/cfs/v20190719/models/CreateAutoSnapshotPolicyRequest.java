@@ -66,6 +66,13 @@ public class CreateAutoSnapshotPolicyRequest extends AbstractModel {
     private Long IntervalDays;
 
     /**
+    * 快照策略标签
+    */
+    @SerializedName("ResourceTags")
+    @Expose
+    private TagInfo [] ResourceTags;
+
+    /**
      * Get 快照重复时间点,0-23，小时 
      * @return Hour 快照重复时间点,0-23，小时
      */
@@ -161,6 +168,22 @@ public class CreateAutoSnapshotPolicyRequest extends AbstractModel {
         this.IntervalDays = IntervalDays;
     }
 
+    /**
+     * Get 快照策略标签 
+     * @return ResourceTags 快照策略标签
+     */
+    public TagInfo [] getResourceTags() {
+        return this.ResourceTags;
+    }
+
+    /**
+     * Set 快照策略标签
+     * @param ResourceTags 快照策略标签
+     */
+    public void setResourceTags(TagInfo [] ResourceTags) {
+        this.ResourceTags = ResourceTags;
+    }
+
     public CreateAutoSnapshotPolicyRequest() {
     }
 
@@ -187,6 +210,12 @@ public class CreateAutoSnapshotPolicyRequest extends AbstractModel {
         if (source.IntervalDays != null) {
             this.IntervalDays = new Long(source.IntervalDays);
         }
+        if (source.ResourceTags != null) {
+            this.ResourceTags = new TagInfo[source.ResourceTags.length];
+            for (int i = 0; i < source.ResourceTags.length; i++) {
+                this.ResourceTags[i] = new TagInfo(source.ResourceTags[i]);
+            }
+        }
     }
 
 
@@ -200,6 +229,7 @@ public class CreateAutoSnapshotPolicyRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AliveDays", this.AliveDays);
         this.setParamSimple(map, prefix + "DayOfMonth", this.DayOfMonth);
         this.setParamSimple(map, prefix + "IntervalDays", this.IntervalDays);
+        this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
 
     }
 }

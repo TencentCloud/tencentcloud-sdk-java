@@ -446,6 +446,17 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *查询实例版本信息
+     * @param req DescribeCkafkaVersionRequest
+     * @return DescribeCkafkaVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCkafkaVersionResponse DescribeCkafkaVersion(DescribeCkafkaVersionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCkafkaVersion", DescribeCkafkaVersionResponse.class);
+    }
+
+    /**
      *用于查看ckafka的可用区列表
      * @param req DescribeCkafkaZoneRequest
      * @return DescribeCkafkaZoneResponse
@@ -1016,6 +1027,17 @@ public class CkafkaClient extends AbstractClient{
     public SendMessageResponse SendMessage(SendMessageRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SendMessage", SendMessageResponse.class);
+    }
+
+    /**
+     *broker版本升级
+     * @param req UpgradeBrokerVersionRequest
+     * @return UpgradeBrokerVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeBrokerVersionResponse UpgradeBrokerVersion(UpgradeBrokerVersionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpgradeBrokerVersion", UpgradeBrokerVersionResponse.class);
     }
 
 }

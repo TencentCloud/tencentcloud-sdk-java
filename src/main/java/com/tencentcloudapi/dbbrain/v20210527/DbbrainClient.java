@@ -523,6 +523,17 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *查询MongoDB实时会话列表
+     * @param req DescribeMongoDBProcessListRequest
+     * @return DescribeMongoDBProcessListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMongoDBProcessListResponse DescribeMongoDBProcessList(DescribeMongoDBProcessListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMongoDBProcessList", DescribeMongoDBProcessListResponse.class);
+    }
+
+    /**
      *查询关系型数据库的实时线程列表。
      * @param req DescribeMySqlProcessListRequest
      * @return DescribeMySqlProcessListResponse

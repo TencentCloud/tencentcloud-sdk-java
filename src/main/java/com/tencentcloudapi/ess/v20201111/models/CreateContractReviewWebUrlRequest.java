@@ -51,6 +51,13 @@ public class CreateContractReviewWebUrlRequest extends AbstractModel {
     private String UserData;
 
     /**
+    * 个性化参数，用于控制页面展示内容
+    */
+    @SerializedName("Option")
+    @Expose
+    private ContractReviewWebUrlOption Option;
+
+    /**
      * Get 执行本接口操作的员工信息。使用此接口时，必须填写userId。
 
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
@@ -122,6 +129,22 @@ public class CreateContractReviewWebUrlRequest extends AbstractModel {
         this.UserData = UserData;
     }
 
+    /**
+     * Get 个性化参数，用于控制页面展示内容 
+     * @return Option 个性化参数，用于控制页面展示内容
+     */
+    public ContractReviewWebUrlOption getOption() {
+        return this.Option;
+    }
+
+    /**
+     * Set 个性化参数，用于控制页面展示内容
+     * @param Option 个性化参数，用于控制页面展示内容
+     */
+    public void setOption(ContractReviewWebUrlOption Option) {
+        this.Option = Option;
+    }
+
     public CreateContractReviewWebUrlRequest() {
     }
 
@@ -139,6 +162,9 @@ public class CreateContractReviewWebUrlRequest extends AbstractModel {
         if (source.UserData != null) {
             this.UserData = new String(source.UserData);
         }
+        if (source.Option != null) {
+            this.Option = new ContractReviewWebUrlOption(source.Option);
+        }
     }
 
 
@@ -149,6 +175,7 @@ public class CreateContractReviewWebUrlRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamSimple(map, prefix + "UserData", this.UserData);
+        this.setParamObj(map, prefix + "Option.", this.Option);
 
     }
 }

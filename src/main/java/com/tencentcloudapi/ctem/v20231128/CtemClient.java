@@ -50,6 +50,17 @@ public class CtemClient extends AbstractClient{
     }
 
     /**
+     *添加企业架构数据
+     * @param req CreateEnterpriseRequest
+     * @return CreateEnterpriseResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateEnterpriseResponse CreateEnterprise(CreateEnterpriseRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateEnterprise", CreateEnterpriseResponse.class);
+    }
+
+    /**
      *启动测绘
      * @param req CreateJobRecordRequest
      * @return CreateJobRecordResponse
@@ -58,6 +69,17 @@ public class CtemClient extends AbstractClient{
     public CreateJobRecordResponse CreateJobRecord(CreateJobRecordRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateJobRecord", CreateJobRecordResponse.class);
+    }
+
+    /**
+     *查看API安全数据
+     * @param req DescribeApiSecsRequest
+     * @return DescribeApiSecsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApiSecsResponse DescribeApiSecs(DescribeApiSecsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeApiSecs", DescribeApiSecsResponse.class);
     }
 
     /**

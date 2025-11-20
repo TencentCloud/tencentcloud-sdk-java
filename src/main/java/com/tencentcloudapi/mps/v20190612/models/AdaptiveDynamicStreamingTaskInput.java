@@ -38,6 +38,14 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel {
     private WatermarkInput [] WatermarkSet;
 
     /**
+    * 数字水印参数	
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BlindWatermark")
+    @Expose
+    private BlindWatermarkInput BlindWatermark;
+
+    /**
     * 转自适应码流后文件的目标存储，不填则继承上层的 OutputStorage 值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -151,6 +159,26 @@ PureAudio：纯音频类型
      */
     public void setWatermarkSet(WatermarkInput [] WatermarkSet) {
         this.WatermarkSet = WatermarkSet;
+    }
+
+    /**
+     * Get 数字水印参数	
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BlindWatermark 数字水印参数	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BlindWatermarkInput getBlindWatermark() {
+        return this.BlindWatermark;
+    }
+
+    /**
+     * Set 数字水印参数	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BlindWatermark 数字水印参数	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBlindWatermark(BlindWatermarkInput BlindWatermark) {
+        this.BlindWatermark = BlindWatermark;
     }
 
     /**
@@ -386,6 +414,9 @@ PureAudio：纯音频类型
                 this.WatermarkSet[i] = new WatermarkInput(source.WatermarkSet[i]);
             }
         }
+        if (source.BlindWatermark != null) {
+            this.BlindWatermark = new BlindWatermarkInput(source.BlindWatermark);
+        }
         if (source.OutputStorage != null) {
             this.OutputStorage = new TaskOutputStorage(source.OutputStorage);
         }
@@ -431,6 +462,7 @@ PureAudio：纯音频类型
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
+        this.setParamObj(map, prefix + "BlindWatermark.", this.BlindWatermark);
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
         this.setParamSimple(map, prefix + "OutputObjectPath", this.OutputObjectPath);
         this.setParamSimple(map, prefix + "SubStreamObjectName", this.SubStreamObjectName);

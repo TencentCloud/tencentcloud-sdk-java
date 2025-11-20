@@ -138,6 +138,13 @@ public class AutoSnapshotPolicyInfo extends AbstractModel {
     private Long CrossRegionsAliveDays;
 
     /**
+    * 快照策略标签
+    */
+    @SerializedName("Tags")
+    @Expose
+    private TagInfo [] Tags;
+
+    /**
      * Get 快照策略ID 
      * @return AutoSnapshotPolicyId 快照策略ID
      */
@@ -401,6 +408,22 @@ public class AutoSnapshotPolicyInfo extends AbstractModel {
         this.CrossRegionsAliveDays = CrossRegionsAliveDays;
     }
 
+    /**
+     * Get 快照策略标签 
+     * @return Tags 快照策略标签
+     */
+    public TagInfo [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 快照策略标签
+     * @param Tags 快照策略标签
+     */
+    public void setTags(TagInfo [] Tags) {
+        this.Tags = Tags;
+    }
+
     public AutoSnapshotPolicyInfo() {
     }
 
@@ -460,6 +483,12 @@ public class AutoSnapshotPolicyInfo extends AbstractModel {
         if (source.CrossRegionsAliveDays != null) {
             this.CrossRegionsAliveDays = new Long(source.CrossRegionsAliveDays);
         }
+        if (source.Tags != null) {
+            this.Tags = new TagInfo[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new TagInfo(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -483,6 +512,7 @@ public class AutoSnapshotPolicyInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "DayOfMonth", this.DayOfMonth);
         this.setParamSimple(map, prefix + "IntervalDays", this.IntervalDays);
         this.setParamSimple(map, prefix + "CrossRegionsAliveDays", this.CrossRegionsAliveDays);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }
