@@ -136,6 +136,13 @@ public class WorkflowRunDetail extends AbstractModel {
     private CustomVariable [] CustomVariables;
 
     /**
+    * 工作流的流程图
+    */
+    @SerializedName("WorkflowGraph")
+    @Expose
+    private String WorkflowGraph;
+
+    /**
      * Get 运行环境。0: 测试环境； 1: 正式环境 
      * @return RunEnv 运行环境。0: 测试环境； 1: 正式环境
      */
@@ -330,7 +337,9 @@ public class WorkflowRunDetail extends AbstractModel {
     /**
      * Get 工作流画布Json 
      * @return DialogJson 工作流画布Json
+     * @deprecated
      */
+    @Deprecated
     public String getDialogJson() {
         return this.DialogJson;
     }
@@ -338,7 +347,9 @@ public class WorkflowRunDetail extends AbstractModel {
     /**
      * Set 工作流画布Json
      * @param DialogJson 工作流画布Json
+     * @deprecated
      */
+    @Deprecated
     public void setDialogJson(String DialogJson) {
         this.DialogJson = DialogJson;
     }
@@ -389,6 +400,22 @@ public class WorkflowRunDetail extends AbstractModel {
      */
     public void setCustomVariables(CustomVariable [] CustomVariables) {
         this.CustomVariables = CustomVariables;
+    }
+
+    /**
+     * Get 工作流的流程图 
+     * @return WorkflowGraph 工作流的流程图
+     */
+    public String getWorkflowGraph() {
+        return this.WorkflowGraph;
+    }
+
+    /**
+     * Set 工作流的流程图
+     * @param WorkflowGraph 工作流的流程图
+     */
+    public void setWorkflowGraph(String WorkflowGraph) {
+        this.WorkflowGraph = WorkflowGraph;
     }
 
     public WorkflowRunDetail() {
@@ -450,6 +477,9 @@ public class WorkflowRunDetail extends AbstractModel {
                 this.CustomVariables[i] = new CustomVariable(source.CustomVariables[i]);
             }
         }
+        if (source.WorkflowGraph != null) {
+            this.WorkflowGraph = new String(source.WorkflowGraph);
+        }
     }
 
 
@@ -473,6 +503,7 @@ public class WorkflowRunDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "Query", this.Query);
         this.setParamSimple(map, prefix + "MainModelName", this.MainModelName);
         this.setParamArrayObj(map, prefix + "CustomVariables.", this.CustomVariables);
+        this.setParamSimple(map, prefix + "WorkflowGraph", this.WorkflowGraph);
 
     }
 }

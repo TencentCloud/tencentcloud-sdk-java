@@ -1,0 +1,287 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.ctem.v20231128.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class CreateWechatAppletRequest extends AbstractModel {
+
+    /**
+    * 企业Id
+    */
+    @SerializedName("CustomerId")
+    @Expose
+    private Long CustomerId;
+
+    /**
+    * 名称
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+    * 图片地址
+    */
+    @SerializedName("Logo")
+    @Expose
+    private String Logo;
+
+    /**
+    * 账号
+    */
+    @SerializedName("AccountId")
+    @Expose
+    private String AccountId;
+
+    /**
+    * 二维码
+    */
+    @SerializedName("QrCode")
+    @Expose
+    private String QrCode;
+
+    /**
+    * 描述
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
+    * 子公司
+    */
+    @SerializedName("EnterpriseUid")
+    @Expose
+    private String EnterpriseUid;
+
+    /**
+    * 账号Appid
+    */
+    @SerializedName("AccountAppid")
+    @Expose
+    private String AccountAppid;
+
+    /**
+    * 认证主体
+    */
+    @SerializedName("RecordSubject")
+    @Expose
+    private String RecordSubject;
+
+    /**
+     * Get 企业Id 
+     * @return CustomerId 企业Id
+     */
+    public Long getCustomerId() {
+        return this.CustomerId;
+    }
+
+    /**
+     * Set 企业Id
+     * @param CustomerId 企业Id
+     */
+    public void setCustomerId(Long CustomerId) {
+        this.CustomerId = CustomerId;
+    }
+
+    /**
+     * Get 名称 
+     * @return Name 名称
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 名称
+     * @param Name 名称
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get 图片地址 
+     * @return Logo 图片地址
+     */
+    public String getLogo() {
+        return this.Logo;
+    }
+
+    /**
+     * Set 图片地址
+     * @param Logo 图片地址
+     */
+    public void setLogo(String Logo) {
+        this.Logo = Logo;
+    }
+
+    /**
+     * Get 账号 
+     * @return AccountId 账号
+     */
+    public String getAccountId() {
+        return this.AccountId;
+    }
+
+    /**
+     * Set 账号
+     * @param AccountId 账号
+     */
+    public void setAccountId(String AccountId) {
+        this.AccountId = AccountId;
+    }
+
+    /**
+     * Get 二维码 
+     * @return QrCode 二维码
+     */
+    public String getQrCode() {
+        return this.QrCode;
+    }
+
+    /**
+     * Set 二维码
+     * @param QrCode 二维码
+     */
+    public void setQrCode(String QrCode) {
+        this.QrCode = QrCode;
+    }
+
+    /**
+     * Get 描述 
+     * @return Description 描述
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 描述
+     * @param Description 描述
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
+    /**
+     * Get 子公司 
+     * @return EnterpriseUid 子公司
+     */
+    public String getEnterpriseUid() {
+        return this.EnterpriseUid;
+    }
+
+    /**
+     * Set 子公司
+     * @param EnterpriseUid 子公司
+     */
+    public void setEnterpriseUid(String EnterpriseUid) {
+        this.EnterpriseUid = EnterpriseUid;
+    }
+
+    /**
+     * Get 账号Appid 
+     * @return AccountAppid 账号Appid
+     */
+    public String getAccountAppid() {
+        return this.AccountAppid;
+    }
+
+    /**
+     * Set 账号Appid
+     * @param AccountAppid 账号Appid
+     */
+    public void setAccountAppid(String AccountAppid) {
+        this.AccountAppid = AccountAppid;
+    }
+
+    /**
+     * Get 认证主体 
+     * @return RecordSubject 认证主体
+     */
+    public String getRecordSubject() {
+        return this.RecordSubject;
+    }
+
+    /**
+     * Set 认证主体
+     * @param RecordSubject 认证主体
+     */
+    public void setRecordSubject(String RecordSubject) {
+        this.RecordSubject = RecordSubject;
+    }
+
+    public CreateWechatAppletRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateWechatAppletRequest(CreateWechatAppletRequest source) {
+        if (source.CustomerId != null) {
+            this.CustomerId = new Long(source.CustomerId);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Logo != null) {
+            this.Logo = new String(source.Logo);
+        }
+        if (source.AccountId != null) {
+            this.AccountId = new String(source.AccountId);
+        }
+        if (source.QrCode != null) {
+            this.QrCode = new String(source.QrCode);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.EnterpriseUid != null) {
+            this.EnterpriseUid = new String(source.EnterpriseUid);
+        }
+        if (source.AccountAppid != null) {
+            this.AccountAppid = new String(source.AccountAppid);
+        }
+        if (source.RecordSubject != null) {
+            this.RecordSubject = new String(source.RecordSubject);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "CustomerId", this.CustomerId);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Logo", this.Logo);
+        this.setParamSimple(map, prefix + "AccountId", this.AccountId);
+        this.setParamSimple(map, prefix + "QrCode", this.QrCode);
+        this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "EnterpriseUid", this.EnterpriseUid);
+        this.setParamSimple(map, prefix + "AccountAppid", this.AccountAppid);
+        this.setParamSimple(map, prefix + "RecordSubject", this.RecordSubject);
+
+    }
+}
+

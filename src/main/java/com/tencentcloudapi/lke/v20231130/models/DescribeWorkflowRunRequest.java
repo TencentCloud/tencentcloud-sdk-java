@@ -38,6 +38,29 @@ public class DescribeWorkflowRunRequest extends AbstractModel {
     private String WorkflowRunId;
 
     /**
+    * 指定的子工作流对应的NodePath。
+格式：`[<node_id>[<index>].]*<node_id>[<index>]`
+- 此路径用于定位一个具体的工作流实例（Workflow Run），可以是主工作流实例或某个子工作流节点产生的子实例。
+- 路径由点号（.）分隔的节点标识符组成，每个节点标识符格式为 `节点ID[实例索引]`。
+- **节点ID (node_id)**：子工作流所属的节点的ID。
+- **实例索引 (index)**：“实例索引” 在工作流节点的时候为空，循环、批处理节点非空，从1开始。
+示例：
+- "" 或 不设置 -> 查询主工作流实例 (父工作流)
+- "node_id_a" -> 查询由主工作流中工作流节点`node_id_a`对应的子工作流实例
+- "node_id_a.node_id_b[1]" -> 查询工作流节点`node_id_a`对应的子工作流的循环节点node_id_b的第1轮循环的子工作流运行状态
+    */
+    @SerializedName("SubWorkflowNodePath")
+    @Expose
+    private String SubWorkflowNodePath;
+
+    /**
+    * 是否需要返回工作流的流程图配置
+    */
+    @SerializedName("IncludeWorkflowGraph")
+    @Expose
+    private Boolean IncludeWorkflowGraph;
+
+    /**
      * Get 应用ID 
      * @return AppBizId 应用ID
      */
@@ -69,6 +92,74 @@ public class DescribeWorkflowRunRequest extends AbstractModel {
         this.WorkflowRunId = WorkflowRunId;
     }
 
+    /**
+     * Get 指定的子工作流对应的NodePath。
+格式：`[<node_id>[<index>].]*<node_id>[<index>]`
+- 此路径用于定位一个具体的工作流实例（Workflow Run），可以是主工作流实例或某个子工作流节点产生的子实例。
+- 路径由点号（.）分隔的节点标识符组成，每个节点标识符格式为 `节点ID[实例索引]`。
+- **节点ID (node_id)**：子工作流所属的节点的ID。
+- **实例索引 (index)**：“实例索引” 在工作流节点的时候为空，循环、批处理节点非空，从1开始。
+示例：
+- "" 或 不设置 -> 查询主工作流实例 (父工作流)
+- "node_id_a" -> 查询由主工作流中工作流节点`node_id_a`对应的子工作流实例
+- "node_id_a.node_id_b[1]" -> 查询工作流节点`node_id_a`对应的子工作流的循环节点node_id_b的第1轮循环的子工作流运行状态 
+     * @return SubWorkflowNodePath 指定的子工作流对应的NodePath。
+格式：`[<node_id>[<index>].]*<node_id>[<index>]`
+- 此路径用于定位一个具体的工作流实例（Workflow Run），可以是主工作流实例或某个子工作流节点产生的子实例。
+- 路径由点号（.）分隔的节点标识符组成，每个节点标识符格式为 `节点ID[实例索引]`。
+- **节点ID (node_id)**：子工作流所属的节点的ID。
+- **实例索引 (index)**：“实例索引” 在工作流节点的时候为空，循环、批处理节点非空，从1开始。
+示例：
+- "" 或 不设置 -> 查询主工作流实例 (父工作流)
+- "node_id_a" -> 查询由主工作流中工作流节点`node_id_a`对应的子工作流实例
+- "node_id_a.node_id_b[1]" -> 查询工作流节点`node_id_a`对应的子工作流的循环节点node_id_b的第1轮循环的子工作流运行状态
+     */
+    public String getSubWorkflowNodePath() {
+        return this.SubWorkflowNodePath;
+    }
+
+    /**
+     * Set 指定的子工作流对应的NodePath。
+格式：`[<node_id>[<index>].]*<node_id>[<index>]`
+- 此路径用于定位一个具体的工作流实例（Workflow Run），可以是主工作流实例或某个子工作流节点产生的子实例。
+- 路径由点号（.）分隔的节点标识符组成，每个节点标识符格式为 `节点ID[实例索引]`。
+- **节点ID (node_id)**：子工作流所属的节点的ID。
+- **实例索引 (index)**：“实例索引” 在工作流节点的时候为空，循环、批处理节点非空，从1开始。
+示例：
+- "" 或 不设置 -> 查询主工作流实例 (父工作流)
+- "node_id_a" -> 查询由主工作流中工作流节点`node_id_a`对应的子工作流实例
+- "node_id_a.node_id_b[1]" -> 查询工作流节点`node_id_a`对应的子工作流的循环节点node_id_b的第1轮循环的子工作流运行状态
+     * @param SubWorkflowNodePath 指定的子工作流对应的NodePath。
+格式：`[<node_id>[<index>].]*<node_id>[<index>]`
+- 此路径用于定位一个具体的工作流实例（Workflow Run），可以是主工作流实例或某个子工作流节点产生的子实例。
+- 路径由点号（.）分隔的节点标识符组成，每个节点标识符格式为 `节点ID[实例索引]`。
+- **节点ID (node_id)**：子工作流所属的节点的ID。
+- **实例索引 (index)**：“实例索引” 在工作流节点的时候为空，循环、批处理节点非空，从1开始。
+示例：
+- "" 或 不设置 -> 查询主工作流实例 (父工作流)
+- "node_id_a" -> 查询由主工作流中工作流节点`node_id_a`对应的子工作流实例
+- "node_id_a.node_id_b[1]" -> 查询工作流节点`node_id_a`对应的子工作流的循环节点node_id_b的第1轮循环的子工作流运行状态
+     */
+    public void setSubWorkflowNodePath(String SubWorkflowNodePath) {
+        this.SubWorkflowNodePath = SubWorkflowNodePath;
+    }
+
+    /**
+     * Get 是否需要返回工作流的流程图配置 
+     * @return IncludeWorkflowGraph 是否需要返回工作流的流程图配置
+     */
+    public Boolean getIncludeWorkflowGraph() {
+        return this.IncludeWorkflowGraph;
+    }
+
+    /**
+     * Set 是否需要返回工作流的流程图配置
+     * @param IncludeWorkflowGraph 是否需要返回工作流的流程图配置
+     */
+    public void setIncludeWorkflowGraph(Boolean IncludeWorkflowGraph) {
+        this.IncludeWorkflowGraph = IncludeWorkflowGraph;
+    }
+
     public DescribeWorkflowRunRequest() {
     }
 
@@ -83,6 +174,12 @@ public class DescribeWorkflowRunRequest extends AbstractModel {
         if (source.WorkflowRunId != null) {
             this.WorkflowRunId = new String(source.WorkflowRunId);
         }
+        if (source.SubWorkflowNodePath != null) {
+            this.SubWorkflowNodePath = new String(source.SubWorkflowNodePath);
+        }
+        if (source.IncludeWorkflowGraph != null) {
+            this.IncludeWorkflowGraph = new Boolean(source.IncludeWorkflowGraph);
+        }
     }
 
 
@@ -92,6 +189,8 @@ public class DescribeWorkflowRunRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AppBizId", this.AppBizId);
         this.setParamSimple(map, prefix + "WorkflowRunId", this.WorkflowRunId);
+        this.setParamSimple(map, prefix + "SubWorkflowNodePath", this.SubWorkflowNodePath);
+        this.setParamSimple(map, prefix + "IncludeWorkflowGraph", this.IncludeWorkflowGraph);
 
     }
 }

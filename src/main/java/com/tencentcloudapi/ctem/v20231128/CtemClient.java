@@ -39,6 +39,28 @@ public class CtemClient extends AbstractClient{
     }
 
     /**
+     *添加APP资产
+     * @param req CreateAppRequest
+     * @return CreateAppResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAppResponse CreateApp(CreateAppRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateApp", CreateAppResponse.class);
+    }
+
+    /**
+     *添加主机资产
+     * @param req CreateAssetRequest
+     * @return CreateAssetResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAssetResponse CreateAsset(CreateAssetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAsset", CreateAssetResponse.class);
+    }
+
+    /**
      *创建企业
      * @param req CreateCustomerRequest
      * @return CreateCustomerResponse
@@ -50,7 +72,18 @@ public class CtemClient extends AbstractClient{
     }
 
     /**
-     *添加企业架构数据
+     *添加主域名数据
+     * @param req CreateDomainRequest
+     * @return CreateDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDomainResponse CreateDomain(CreateDomainRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDomain", CreateDomainResponse.class);
+    }
+
+    /**
+     *添加企业架构资产
      * @param req CreateEnterpriseRequest
      * @return CreateEnterpriseResponse
      * @throws TencentCloudSDKException
@@ -58,6 +91,17 @@ public class CtemClient extends AbstractClient{
     public CreateEnterpriseResponse CreateEnterprise(CreateEnterpriseRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateEnterprise", CreateEnterpriseResponse.class);
+    }
+
+    /**
+     *添加网站资产
+     * @param req CreateHttpRequest
+     * @return CreateHttpResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateHttpResponse CreateHttp(CreateHttpRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateHttp", CreateHttpResponse.class);
     }
 
     /**
@@ -69,6 +113,215 @@ public class CtemClient extends AbstractClient{
     public CreateJobRecordResponse CreateJobRecord(CreateJobRecordRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateJobRecord", CreateJobRecordResponse.class);
+    }
+
+    /**
+     *添加后台数据
+     * @param req CreateManageRequest
+     * @return CreateManageResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateManageResponse CreateManage(CreateManageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateManage", CreateManageResponse.class);
+    }
+
+    /**
+     *添加端口服务资产
+     * @param req CreatePortRequest
+     * @return CreatePortResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePortResponse CreatePort(CreatePortRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreatePort", CreatePortResponse.class);
+    }
+
+    /**
+     *创建种子
+     * @param req CreateSeedsRequest
+     * @return CreateSeedsResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSeedsResponse CreateSeeds(CreateSeedsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSeeds", CreateSeedsResponse.class);
+    }
+
+    /**
+     *添加子域名数据
+     * @param req CreateSubDomainRequest
+     * @return CreateSubDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSubDomainResponse CreateSubDomain(CreateSubDomainRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSubDomain", CreateSubDomainResponse.class);
+    }
+
+    /**
+     *添加影子资产
+     * @param req CreateSuspiciousAssetRequest
+     * @return CreateSuspiciousAssetResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSuspiciousAssetResponse CreateSuspiciousAsset(CreateSuspiciousAssetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSuspiciousAsset", CreateSuspiciousAssetResponse.class);
+    }
+
+    /**
+     *添加微信小程序资产
+     * @param req CreateWechatAppletRequest
+     * @return CreateWechatAppletResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateWechatAppletResponse CreateWechatApplet(CreateWechatAppletRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateWechatApplet", CreateWechatAppletResponse.class);
+    }
+
+    /**
+     *添加微信公众号资产
+     * @param req CreateWechatOfficialAccountRequest
+     * @return CreateWechatOfficialAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateWechatOfficialAccountResponse CreateWechatOfficialAccount(CreateWechatOfficialAccountRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateWechatOfficialAccount", CreateWechatOfficialAccountResponse.class);
+    }
+
+    /**
+     *删除APP数据
+     * @param req DeleteAppsRequest
+     * @return DeleteAppsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAppsResponse DeleteApps(DeleteAppsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteApps", DeleteAppsResponse.class);
+    }
+
+    /**
+     *删除主机资产数据
+     * @param req DeleteAssetsRequest
+     * @return DeleteAssetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAssetsResponse DeleteAssets(DeleteAssetsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAssets", DeleteAssetsResponse.class);
+    }
+
+    /**
+     *删除主域名数据
+     * @param req DeleteDomainsRequest
+     * @return DeleteDomainsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDomainsResponse DeleteDomains(DeleteDomainsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDomains", DeleteDomainsResponse.class);
+    }
+
+    /**
+     *删除企业架构数据
+     * @param req DeleteEnterprisesRequest
+     * @return DeleteEnterprisesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteEnterprisesResponse DeleteEnterprises(DeleteEnterprisesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteEnterprises", DeleteEnterprisesResponse.class);
+    }
+
+    /**
+     *删除网站资产数据
+     * @param req DeleteHttpsRequest
+     * @return DeleteHttpsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteHttpsResponse DeleteHttps(DeleteHttpsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteHttps", DeleteHttpsResponse.class);
+    }
+
+    /**
+     *删除后台数据
+     * @param req DeleteManagesRequest
+     * @return DeleteManagesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteManagesResponse DeleteManages(DeleteManagesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteManages", DeleteManagesResponse.class);
+    }
+
+    /**
+     *删除端口数据
+     * @param req DeletePortsRequest
+     * @return DeletePortsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePortsResponse DeletePorts(DeletePortsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeletePorts", DeletePortsResponse.class);
+    }
+
+    /**
+     *删除种子
+     * @param req DeleteSeedsRequest
+     * @return DeleteSeedsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSeedsResponse DeleteSeeds(DeleteSeedsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteSeeds", DeleteSeedsResponse.class);
+    }
+
+    /**
+     *删除子域名数据
+     * @param req DeleteSubDomainsRequest
+     * @return DeleteSubDomainsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSubDomainsResponse DeleteSubDomains(DeleteSubDomainsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteSubDomains", DeleteSubDomainsResponse.class);
+    }
+
+    /**
+     *删除影子资产数据
+     * @param req DeleteSuspiciousAssetsRequest
+     * @return DeleteSuspiciousAssetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSuspiciousAssetsResponse DeleteSuspiciousAssets(DeleteSuspiciousAssetsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteSuspiciousAssets", DeleteSuspiciousAssetsResponse.class);
+    }
+
+    /**
+     *删除微信小程序数据
+     * @param req DeleteWechatAppletsRequest
+     * @return DeleteWechatAppletsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteWechatAppletsResponse DeleteWechatApplets(DeleteWechatAppletsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteWechatApplets", DeleteWechatAppletsResponse.class);
+    }
+
+    /**
+     *删除微信公众号数据
+     * @param req DeleteWechatOfficialAccountsRequest
+     * @return DeleteWechatOfficialAccountsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteWechatOfficialAccountsResponse DeleteWechatOfficialAccounts(DeleteWechatOfficialAccountsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteWechatOfficialAccounts", DeleteWechatOfficialAccountsResponse.class);
     }
 
     /**
@@ -314,6 +567,17 @@ public class CtemClient extends AbstractClient{
     }
 
     /**
+     *查看种子列表
+     * @param req DescribeSeedsRequest
+     * @return DescribeSeedsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSeedsResponse DescribeSeeds(DescribeSeedsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSeeds", DescribeSeedsResponse.class);
+    }
+
+    /**
      *查看敏感信息泄露数据
      * @param req DescribeSensitiveInfosRequest
      * @return DescribeSensitiveInfosResponse
@@ -391,6 +655,17 @@ public class CtemClient extends AbstractClient{
     }
 
     /**
+     *忽略数据
+     * @param req IgnoreDataRequest
+     * @return IgnoreDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public IgnoreDataResponse IgnoreData(IgnoreDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "IgnoreData", IgnoreDataResponse.class);
+    }
+
+    /**
      *编辑企业
      * @param req ModifyCustomerRequest
      * @return ModifyCustomerResponse
@@ -410,6 +685,17 @@ public class CtemClient extends AbstractClient{
     public ModifyLabelResponse ModifyLabel(ModifyLabelRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyLabel", ModifyLabelResponse.class);
+    }
+
+    /**
+     *修改种子状态
+     * @param req ModifySeedStatusRequest
+     * @return ModifySeedStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySeedStatusResponse ModifySeedStatus(ModifySeedStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySeedStatus", ModifySeedStatusResponse.class);
     }
 
     /**

@@ -138,6 +138,28 @@ public class VcubeClient extends AbstractClient{
     }
 
     /**
+     *删除视频播放器 License 和相关应用
+     * @param req DeleteApplicationAndVideoLicenseRequest
+     * @return DeleteApplicationAndVideoLicenseResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteApplicationAndVideoLicenseResponse DeleteApplicationAndVideoLicense(DeleteApplicationAndVideoLicenseRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteApplicationAndVideoLicense", DeleteApplicationAndVideoLicenseResponse.class);
+    }
+
+    /**
+     *删除web播放器license和应用
+     * @param req DeleteApplicationAndWebPlayerLicenseRequest
+     * @return DeleteApplicationAndWebPlayerLicenseResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteApplicationAndWebPlayerLicenseResponse DeleteApplicationAndWebPlayerLicense(DeleteApplicationAndWebPlayerLicenseRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteApplicationAndWebPlayerLicense", DeleteApplicationAndWebPlayerLicenseResponse.class);
+    }
+
+    /**
      *查询功能列表
      * @param req DescribeFeatureListRequest
      * @return DescribeFeatureListResponse

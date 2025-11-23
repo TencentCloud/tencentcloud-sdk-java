@@ -38,7 +38,7 @@ public class DescribeInboundEndpointListRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 过滤参数，支持EndPointName，EndpointName，EndpointId
+    * 过滤参数，支持EndPointName，EndpointName，EndPointId
     */
     @SerializedName("Filters")
     @Expose
@@ -77,16 +77,16 @@ public class DescribeInboundEndpointListRequest extends AbstractModel {
     }
 
     /**
-     * Get 过滤参数，支持EndPointName，EndpointName，EndpointId 
-     * @return Filters 过滤参数，支持EndPointName，EndpointName，EndpointId
+     * Get 过滤参数，支持EndPointName，EndpointName，EndPointId 
+     * @return Filters 过滤参数，支持EndPointName，EndpointName，EndPointId
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤参数，支持EndPointName，EndpointName，EndpointId
-     * @param Filters 过滤参数，支持EndPointName，EndpointName，EndpointId
+     * Set 过滤参数，支持EndPointName，EndpointName，EndPointId
+     * @param Filters 过滤参数，支持EndPointName，EndpointName，EndPointId
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

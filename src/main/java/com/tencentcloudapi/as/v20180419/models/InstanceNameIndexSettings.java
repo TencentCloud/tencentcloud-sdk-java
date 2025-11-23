@@ -48,6 +48,16 @@ public class InstanceNameIndexSettings extends AbstractModel {
     private Long BeginIndex;
 
     /**
+    * 实例名称递增序号位数，默认为0，表示不指定序号位数。不指定序号时，采用默认值0。 取值范围：0-8，最大为整数8。 采用取值1-8时，会检查序号是否超过此序号位数的最大数字。
+
+假设设置为3，那么序号形如：000、001、002 ... 010、011 ... 100 ... 999，序号上限为999; 
+假设设置为0，对应的序号为0、1、2 ... 10、11 ... 100 ... 1000 ...10000 ... 99999999，序号上限为99999999。
+    */
+    @SerializedName("IndexLength")
+    @Expose
+    private Long IndexLength;
+
+    /**
      * Get 是否开启实例创建序号，默认不开启。取值范围：
 
 **TRUE**：表示开启实例创建序号; **FALSE**：表示不开启实例创建序号
@@ -119,6 +129,34 @@ public class InstanceNameIndexSettings extends AbstractModel {
         this.BeginIndex = BeginIndex;
     }
 
+    /**
+     * Get 实例名称递增序号位数，默认为0，表示不指定序号位数。不指定序号时，采用默认值0。 取值范围：0-8，最大为整数8。 采用取值1-8时，会检查序号是否超过此序号位数的最大数字。
+
+假设设置为3，那么序号形如：000、001、002 ... 010、011 ... 100 ... 999，序号上限为999; 
+假设设置为0，对应的序号为0、1、2 ... 10、11 ... 100 ... 1000 ...10000 ... 99999999，序号上限为99999999。 
+     * @return IndexLength 实例名称递增序号位数，默认为0，表示不指定序号位数。不指定序号时，采用默认值0。 取值范围：0-8，最大为整数8。 采用取值1-8时，会检查序号是否超过此序号位数的最大数字。
+
+假设设置为3，那么序号形如：000、001、002 ... 010、011 ... 100 ... 999，序号上限为999; 
+假设设置为0，对应的序号为0、1、2 ... 10、11 ... 100 ... 1000 ...10000 ... 99999999，序号上限为99999999。
+     */
+    public Long getIndexLength() {
+        return this.IndexLength;
+    }
+
+    /**
+     * Set 实例名称递增序号位数，默认为0，表示不指定序号位数。不指定序号时，采用默认值0。 取值范围：0-8，最大为整数8。 采用取值1-8时，会检查序号是否超过此序号位数的最大数字。
+
+假设设置为3，那么序号形如：000、001、002 ... 010、011 ... 100 ... 999，序号上限为999; 
+假设设置为0，对应的序号为0、1、2 ... 10、11 ... 100 ... 1000 ...10000 ... 99999999，序号上限为99999999。
+     * @param IndexLength 实例名称递增序号位数，默认为0，表示不指定序号位数。不指定序号时，采用默认值0。 取值范围：0-8，最大为整数8。 采用取值1-8时，会检查序号是否超过此序号位数的最大数字。
+
+假设设置为3，那么序号形如：000、001、002 ... 010、011 ... 100 ... 999，序号上限为999; 
+假设设置为0，对应的序号为0、1、2 ... 10、11 ... 100 ... 1000 ...10000 ... 99999999，序号上限为99999999。
+     */
+    public void setIndexLength(Long IndexLength) {
+        this.IndexLength = IndexLength;
+    }
+
     public InstanceNameIndexSettings() {
     }
 
@@ -133,6 +171,9 @@ public class InstanceNameIndexSettings extends AbstractModel {
         if (source.BeginIndex != null) {
             this.BeginIndex = new Long(source.BeginIndex);
         }
+        if (source.IndexLength != null) {
+            this.IndexLength = new Long(source.IndexLength);
+        }
     }
 
 
@@ -142,6 +183,7 @@ public class InstanceNameIndexSettings extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Enabled", this.Enabled);
         this.setParamSimple(map, prefix + "BeginIndex", this.BeginIndex);
+        this.setParamSimple(map, prefix + "IndexLength", this.IndexLength);
 
     }
 }

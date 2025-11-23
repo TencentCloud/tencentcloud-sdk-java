@@ -94,6 +94,17 @@ public class CreateBatchContractReviewTaskRequest extends AbstractModel {
     private String UserData;
 
     /**
+    * 启用附加通用风险审查清单。默认为启用状态
+可选值如下：
+
+- 1: 启用系统提供的附加通用风险审查清单
+- 2:不启用系统提供的附加通用风险审查清单
+    */
+    @SerializedName("EnableGeneralChecklist")
+    @Expose
+    private Long EnableGeneralChecklist;
+
+    /**
      * Get 执行合同审查任务的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
      * @return Operator 执行合同审查任务的员工信息。
@@ -277,6 +288,38 @@ public class CreateBatchContractReviewTaskRequest extends AbstractModel {
         this.UserData = UserData;
     }
 
+    /**
+     * Get 启用附加通用风险审查清单。默认为启用状态
+可选值如下：
+
+- 1: 启用系统提供的附加通用风险审查清单
+- 2:不启用系统提供的附加通用风险审查清单 
+     * @return EnableGeneralChecklist 启用附加通用风险审查清单。默认为启用状态
+可选值如下：
+
+- 1: 启用系统提供的附加通用风险审查清单
+- 2:不启用系统提供的附加通用风险审查清单
+     */
+    public Long getEnableGeneralChecklist() {
+        return this.EnableGeneralChecklist;
+    }
+
+    /**
+     * Set 启用附加通用风险审查清单。默认为启用状态
+可选值如下：
+
+- 1: 启用系统提供的附加通用风险审查清单
+- 2:不启用系统提供的附加通用风险审查清单
+     * @param EnableGeneralChecklist 启用附加通用风险审查清单。默认为启用状态
+可选值如下：
+
+- 1: 启用系统提供的附加通用风险审查清单
+- 2:不启用系统提供的附加通用风险审查清单
+     */
+    public void setEnableGeneralChecklist(Long EnableGeneralChecklist) {
+        this.EnableGeneralChecklist = EnableGeneralChecklist;
+    }
+
     public CreateBatchContractReviewTaskRequest() {
     }
 
@@ -312,6 +355,9 @@ public class CreateBatchContractReviewTaskRequest extends AbstractModel {
         if (source.UserData != null) {
             this.UserData = new String(source.UserData);
         }
+        if (source.EnableGeneralChecklist != null) {
+            this.EnableGeneralChecklist = new Long(source.EnableGeneralChecklist);
+        }
     }
 
 
@@ -327,6 +373,7 @@ public class CreateBatchContractReviewTaskRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamSimple(map, prefix + "UserData", this.UserData);
+        this.setParamSimple(map, prefix + "EnableGeneralChecklist", this.EnableGeneralChecklist);
 
     }
 }

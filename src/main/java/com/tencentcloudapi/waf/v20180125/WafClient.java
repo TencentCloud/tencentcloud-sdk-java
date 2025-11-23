@@ -248,6 +248,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *创建限流规则
+     * @param req CreateRateLimitV2Request
+     * @return CreateRateLimitV2Response
+     * @throws TencentCloudSDKException
+     */
+    public CreateRateLimitV2Response CreateRateLimitV2(CreateRateLimitV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateRateLimitV2", CreateRateLimitV2Response.class);
+    }
+
+    /**
      *本接口用于删除访问日志导出
      * @param req DeleteAccessExportRequest
      * @return DeleteAccessExportResponse
@@ -432,6 +443,17 @@ public class WafClient extends AbstractClient{
     public DeleteOwaspWhiteRuleResponse DeleteOwaspWhiteRule(DeleteOwaspWhiteRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteOwaspWhiteRule", DeleteOwaspWhiteRuleResponse.class);
+    }
+
+    /**
+     *删除自研版限流规则
+     * @param req DeleteRateLimitsV2Request
+     * @return DeleteRateLimitsV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRateLimitsV2Response DeleteRateLimitsV2(DeleteRateLimitsV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteRateLimitsV2", DeleteRateLimitsV2Response.class);
     }
 
     /**
@@ -1073,6 +1095,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *查询限流规则列表接口
+     * @param req DescribeRateLimitsV2Request
+     * @return DescribeRateLimitsV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRateLimitsV2Response DescribeRateLimitsV2(DescribeRateLimitsV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRateLimitsV2", DescribeRateLimitsV2Response.class);
+    }
+
+    /**
      *获取各个模块具体的规格限制
      * @param req DescribeRuleLimitRequest
      * @return DescribeRuleLimitResponse
@@ -1306,6 +1339,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *批量更改自研版限流规则开关
+     * @param req EnableRateLimitsV2Request
+     * @return EnableRateLimitsV2Response
+     * @throws TencentCloudSDKException
+     */
+    public EnableRateLimitsV2Response EnableRateLimitsV2(EnableRateLimitsV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EnableRateLimitsV2", EnableRateLimitsV2Response.class);
+    }
+
+    /**
      *刷新防篡改url
      * @param req FreshAntiFakeUrlRequest
      * @return FreshAntiFakeUrlResponse
@@ -1449,6 +1493,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *修改api安全敏感检测规则
+     * @param req ModifyApiSecSensitiveRuleRequest
+     * @return ModifyApiSecSensitiveRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyApiSecSensitiveRuleResponse ModifyApiSecSensitiveRule(ModifyApiSecSensitiveRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyApiSecSensitiveRule", ModifyApiSecSensitiveRuleResponse.class);
+    }
+
+    /**
      *修改地域封禁中的地域信息
      * @param req ModifyAreaBanAreasRequest
      * @return ModifyAreaBanAreasResponse
@@ -1501,6 +1556,17 @@ public class WafClient extends AbstractClient{
     public ModifyBatchIpAccessControlResponse ModifyBatchIpAccessControl(ModifyBatchIpAccessControlRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyBatchIpAccessControl", ModifyBatchIpAccessControlResponse.class);
+    }
+
+    /**
+     *修改Bot-ID规则配置1
+     * @param req ModifyBotIdRuleRequest
+     * @return ModifyBotIdRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBotIdRuleResponse ModifyBotIdRule(ModifyBotIdRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyBotIdRule", ModifyBotIdRuleResponse.class);
     }
 
     /**
@@ -2033,6 +2099,17 @@ public class WafClient extends AbstractClient{
     public UpdateProtectionModesResponse UpdateProtectionModes(UpdateProtectionModesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateProtectionModes", UpdateProtectionModesResponse.class);
+    }
+
+    /**
+     *更新自研版限流规则
+     * @param req UpdateRateLimitV2Request
+     * @return UpdateRateLimitV2Response
+     * @throws TencentCloudSDKException
+     */
+    public UpdateRateLimitV2Response UpdateRateLimitV2(UpdateRateLimitV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateRateLimitV2", UpdateRateLimitV2Response.class);
     }
 
     /**

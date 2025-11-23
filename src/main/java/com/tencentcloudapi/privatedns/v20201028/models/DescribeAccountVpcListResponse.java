@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAccountVpcListResponse extends AbstractModel {
 
     /**
-    * VPC数量
+    * 关联账号VPC数量
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * VPC 列表
+    * 关联账号VPC 列表
     */
     @SerializedName("VpcSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeAccountVpcListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get VPC数量 
-     * @return TotalCount VPC数量
+     * Get 关联账号VPC数量 
+     * @return TotalCount 关联账号VPC数量
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set VPC数量
-     * @param TotalCount VPC数量
+     * Set 关联账号VPC数量
+     * @param TotalCount 关联账号VPC数量
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get VPC 列表 
-     * @return VpcSet VPC 列表
+     * Get 关联账号VPC 列表 
+     * @return VpcSet 关联账号VPC 列表
      */
     public AccountVpcInfoOut [] getVpcSet() {
         return this.VpcSet;
     }
 
     /**
-     * Set VPC 列表
-     * @param VpcSet VPC 列表
+     * Set 关联账号VPC 列表
+     * @param VpcSet 关联账号VPC 列表
      */
     public void setVpcSet(AccountVpcInfoOut [] VpcSet) {
         this.VpcSet = VpcSet;

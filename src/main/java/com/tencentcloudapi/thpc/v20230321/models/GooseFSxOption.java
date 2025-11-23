@@ -38,6 +38,13 @@ public class GooseFSxOption extends AbstractModel {
     private String LocalPath;
 
     /**
+    * GooseFSx文件系统ID 文件系统ID通过调用接口[DescribeFileSystems](https://cloud.tencent.com/document/api/1424/95789)获取。
+    */
+    @SerializedName("FileSystemId")
+    @Expose
+    private String FileSystemId;
+
+    /**
      * Get 文件系统master的ip和端口列表。 
      * @return Masters 文件系统master的ip和端口列表。
      */
@@ -69,6 +76,22 @@ public class GooseFSxOption extends AbstractModel {
         this.LocalPath = LocalPath;
     }
 
+    /**
+     * Get GooseFSx文件系统ID 文件系统ID通过调用接口[DescribeFileSystems](https://cloud.tencent.com/document/api/1424/95789)获取。 
+     * @return FileSystemId GooseFSx文件系统ID 文件系统ID通过调用接口[DescribeFileSystems](https://cloud.tencent.com/document/api/1424/95789)获取。
+     */
+    public String getFileSystemId() {
+        return this.FileSystemId;
+    }
+
+    /**
+     * Set GooseFSx文件系统ID 文件系统ID通过调用接口[DescribeFileSystems](https://cloud.tencent.com/document/api/1424/95789)获取。
+     * @param FileSystemId GooseFSx文件系统ID 文件系统ID通过调用接口[DescribeFileSystems](https://cloud.tencent.com/document/api/1424/95789)获取。
+     */
+    public void setFileSystemId(String FileSystemId) {
+        this.FileSystemId = FileSystemId;
+    }
+
     public GooseFSxOption() {
     }
 
@@ -86,6 +109,9 @@ public class GooseFSxOption extends AbstractModel {
         if (source.LocalPath != null) {
             this.LocalPath = new String(source.LocalPath);
         }
+        if (source.FileSystemId != null) {
+            this.FileSystemId = new String(source.FileSystemId);
+        }
     }
 
 
@@ -95,6 +121,7 @@ public class GooseFSxOption extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Masters.", this.Masters);
         this.setParamSimple(map, prefix + "LocalPath", this.LocalPath);
+        this.setParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
 
     }
 }

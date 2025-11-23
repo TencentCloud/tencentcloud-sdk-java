@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ConvertOperatingSystemsResponse extends AbstractModel {
 
     /**
-    * 转换的目标操系统信息，仅在入参 DryRun 为 true 时返回。
+    * 转换的目标操作系统信息，仅在入参 DryRun 为 true 时返回。
     */
     @SerializedName("SupportTargetOSList")
     @Expose
@@ -45,16 +45,16 @@ public class ConvertOperatingSystemsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 转换的目标操系统信息，仅在入参 DryRun 为 true 时返回。 
-     * @return SupportTargetOSList 转换的目标操系统信息，仅在入参 DryRun 为 true 时返回。
+     * Get 转换的目标操作系统信息，仅在入参 DryRun 为 true 时返回。 
+     * @return SupportTargetOSList 转换的目标操作系统信息，仅在入参 DryRun 为 true 时返回。
      */
     public TargetOS [] getSupportTargetOSList() {
         return this.SupportTargetOSList;
     }
 
     /**
-     * Set 转换的目标操系统信息，仅在入参 DryRun 为 true 时返回。
-     * @param SupportTargetOSList 转换的目标操系统信息，仅在入参 DryRun 为 true 时返回。
+     * Set 转换的目标操作系统信息，仅在入参 DryRun 为 true 时返回。
+     * @param SupportTargetOSList 转换的目标操作系统信息，仅在入参 DryRun 为 true 时返回。
      */
     public void setSupportTargetOSList(TargetOS [] SupportTargetOSList) {
         this.SupportTargetOSList = SupportTargetOSList;

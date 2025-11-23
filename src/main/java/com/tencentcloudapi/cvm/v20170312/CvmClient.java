@@ -107,7 +107,7 @@ public class CvmClient extends AbstractClient{
     }
 
     /**
-     *本接口(ConvertOperatingSystem)用于转换实例的操作系统，仅支持源操作系统为 CentOS 7、CentOS 8 的实例。
+     *本接口(ConvertOperatingSystems)用于转换实例的操作系统，仅支持源操作系统为 CentOS 7、CentOS 8 的实例。
      * @param req ConvertOperatingSystemsRequest
      * @return ConvertOperatingSystemsResponse
      * @throws TencentCloudSDKException

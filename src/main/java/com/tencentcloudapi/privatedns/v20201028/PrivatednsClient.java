@@ -105,6 +105,17 @@ public class PrivatednsClient extends AbstractClient{
     }
 
     /**
+     *批量创建私有域
+     * @param req CreatePrivateZoneListRequest
+     * @return CreatePrivateZoneListResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePrivateZoneListResponse CreatePrivateZoneList(CreatePrivateZoneListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreatePrivateZoneList", CreatePrivateZoneListResponse.class);
+    }
+
+    /**
      *添加私有域解析记录
      * @param req CreatePrivateZoneRecordRequest
      * @return CreatePrivateZoneRecordResponse
@@ -113,6 +124,17 @@ public class PrivatednsClient extends AbstractClient{
     public CreatePrivateZoneRecordResponse CreatePrivateZoneRecord(CreatePrivateZoneRecordRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreatePrivateZoneRecord", CreatePrivateZoneRecordResponse.class);
+    }
+
+    /**
+     *批量添加私有域解析记录
+     * @param req CreatePrivateZoneRecordListRequest
+     * @return CreatePrivateZoneRecordListResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePrivateZoneRecordListResponse CreatePrivateZoneRecordList(CreatePrivateZoneRecordListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreatePrivateZoneRecordList", CreatePrivateZoneRecordListResponse.class);
     }
 
     /**
@@ -193,7 +215,7 @@ public class PrivatednsClient extends AbstractClient{
     }
 
     /**
-     *获取私有域解析账号的VPC列表
+     *获取关联账号的VPC列表
      * @param req DescribeAccountVpcListRequest
      * @return DescribeAccountVpcListResponse
      * @throws TencentCloudSDKException
@@ -212,6 +234,28 @@ public class PrivatednsClient extends AbstractClient{
     public DescribeAuditLogResponse DescribeAuditLog(DescribeAuditLogRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAuditLog", DescribeAuditLogResponse.class);
+    }
+
+    /**
+     *查询批量添加私有域解析记录结果
+     * @param req DescribeCreateRecordListResultRequest
+     * @return DescribeCreateRecordListResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCreateRecordListResultResponse DescribeCreateRecordListResult(DescribeCreateRecordListResultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCreateRecordListResult", DescribeCreateRecordListResultResponse.class);
+    }
+
+    /**
+     *查询批量添加私有域结果
+     * @param req DescribeCreateZoneListResultRequest
+     * @return DescribeCreateZoneListResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCreateZoneListResultResponse DescribeCreateZoneListResult(DescribeCreateZoneListResultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCreateZoneListResult", DescribeCreateZoneListResultResponse.class);
     }
 
     /**
