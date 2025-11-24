@@ -325,17 +325,6 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
-     *活体检测
-     * @param req LivenessRequest
-     * @return LivenessResponse
-     * @throws TencentCloudSDKException
-     */
-    public LivenessResponse Liveness(LivenessRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "Liveness", LivenessResponse.class);
-    }
-
-    /**
      *传入视频和照片，先判断视频中是否为真人，判断为真人后，再判断该视频中的人与上传照片是否属于同一个人。
      * @param req LivenessCompareRequest
      * @return LivenessCompareResponse

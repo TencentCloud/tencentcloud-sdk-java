@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class DescribeDetectTaskPackageListRequest extends AbstractModel {
 
     /**
+    * 偏移量
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
     * 每页条数
     */
     @SerializedName("Limit")
@@ -36,6 +43,22 @@ public class DescribeDetectTaskPackageListRequest extends AbstractModel {
     @SerializedName("Filters")
     @Expose
     private ResourceFilter [] Filters;
+
+    /**
+     * Get 偏移量 
+     * @return Offset 偏移量
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 偏移量
+     * @param Offset 偏移量
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
 
     /**
      * Get 每页条数 
@@ -77,6 +100,9 @@ public class DescribeDetectTaskPackageListRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeDetectTaskPackageListRequest(DescribeDetectTaskPackageListRequest source) {
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
@@ -93,6 +119,7 @@ public class DescribeDetectTaskPackageListRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 

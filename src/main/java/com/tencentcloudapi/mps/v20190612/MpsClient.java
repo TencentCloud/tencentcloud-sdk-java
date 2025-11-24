@@ -139,6 +139,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *创建用户自定义数字水印模板，数量上限：1000。
+     * @param req CreateBlindWatermarkTemplateRequest
+     * @return CreateBlindWatermarkTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBlindWatermarkTemplateResponse CreateBlindWatermarkTemplate(CreateBlindWatermarkTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateBlindWatermarkTemplate", CreateBlindWatermarkTemplateResponse.class);
+    }
+
+    /**
      *创建用户自定义内容审核模板，数量上限：50。
      * @param req CreateContentReviewTemplateRequest
      * @return CreateContentReviewTemplateResponse
@@ -194,6 +205,17 @@ public class MpsClient extends AbstractClient{
     public CreatePersonSampleResponse CreatePersonSample(CreatePersonSampleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreatePersonSample", CreatePersonSampleResponse.class);
+    }
+
+    /**
+     *创建图片处理模板
+     * @param req CreateProcessImageTemplateRequest
+     * @return CreateProcessImageTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateProcessImageTemplateResponse CreateProcessImageTemplate(CreateProcessImageTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateProcessImageTemplate", CreateProcessImageTemplateResponse.class);
     }
 
     /**
@@ -467,6 +489,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *删除用户自定义数字水印模板。
+     * @param req DeleteBlindWatermarkTemplateRequest
+     * @return DeleteBlindWatermarkTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteBlindWatermarkTemplateResponse DeleteBlindWatermarkTemplate(DeleteBlindWatermarkTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteBlindWatermarkTemplate", DeleteBlindWatermarkTemplateResponse.class);
+    }
+
+    /**
      *删除用户自定义内容审核模板。
      * @param req DeleteContentReviewTemplateRequest
      * @return DeleteContentReviewTemplateResponse
@@ -508,6 +541,17 @@ public class MpsClient extends AbstractClient{
     public DeletePersonSampleResponse DeletePersonSample(DeletePersonSampleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeletePersonSample", DeletePersonSampleResponse.class);
+    }
+
+    /**
+     *删除图片处理模板
+     * @param req DeleteProcessImageTemplateRequest
+     * @return DeleteProcessImageTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteProcessImageTemplateResponse DeleteProcessImageTemplate(DeleteProcessImageTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteProcessImageTemplate", DeleteProcessImageTemplateResponse.class);
     }
 
     /**
@@ -742,6 +786,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *查询用户自定义数字水印模板，支持根据条件，分页查询。
+     * @param req DescribeBlindWatermarkTemplatesRequest
+     * @return DescribeBlindWatermarkTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBlindWatermarkTemplatesResponse DescribeBlindWatermarkTemplates(DescribeBlindWatermarkTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBlindWatermarkTemplates", DescribeBlindWatermarkTemplatesResponse.class);
+    }
+
+    /**
      *根据智能审核模板唯一标识，获取智能审核模板详情列表。返回结果包含符合条件的所有用户自定义模板及系统预置智能审核模板。
      * @param req DescribeContentReviewTemplatesRequest
      * @return DescribeContentReviewTemplatesResponse
@@ -816,6 +871,17 @@ public class MpsClient extends AbstractClient{
     public DescribePersonSamplesResponse DescribePersonSamples(DescribePersonSamplesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribePersonSamples", DescribePersonSamplesResponse.class);
+    }
+
+    /**
+     *查询图片处理模板列表。
+     * @param req DescribeProcessImageTemplatesRequest
+     * @return DescribeProcessImageTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProcessImageTemplatesResponse DescribeProcessImageTemplates(DescribeProcessImageTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeProcessImageTemplates", DescribeProcessImageTemplatesResponse.class);
     }
 
     /**
@@ -1207,6 +1273,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *用于发起提取视频数字水印任务，提取结果可以通过DescribeTaskDetail查询。
+     * @param req ExtractBlindWatermarkRequest
+     * @return ExtractBlindWatermarkResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExtractBlindWatermarkResponse ExtractBlindWatermark(ExtractBlindWatermarkRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ExtractBlindWatermark", ExtractBlindWatermarkResponse.class);
+    }
+
+    /**
      *对已发起的任务进行管理。
      * @param req ManageTaskRequest
      * @return ManageTaskResponse
@@ -1275,6 +1352,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *修改用户自定义数字水印模板，数字水印类型不允许修改。
+     * @param req ModifyBlindWatermarkTemplateRequest
+     * @return ModifyBlindWatermarkTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBlindWatermarkTemplateResponse ModifyBlindWatermarkTemplate(ModifyBlindWatermarkTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyBlindWatermarkTemplate", ModifyBlindWatermarkTemplateResponse.class);
+    }
+
+    /**
      *修改用户自定义内容审核模板。
      * @param req ModifyContentReviewTemplateRequest
      * @return ModifyContentReviewTemplateResponse
@@ -1316,6 +1404,17 @@ public class MpsClient extends AbstractClient{
     public ModifyPersonSampleResponse ModifyPersonSample(ModifyPersonSampleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyPersonSample", ModifyPersonSampleResponse.class);
+    }
+
+    /**
+     *修改图片处理模板。
+     * @param req ModifyProcessImageTemplateRequest
+     * @return ModifyProcessImageTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyProcessImageTemplateResponse ModifyProcessImageTemplate(ModifyProcessImageTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyProcessImageTemplate", ModifyProcessImageTemplateResponse.class);
     }
 
     /**

@@ -227,6 +227,13 @@ public class GateWayAsset extends AbstractModel {
     private String EngineRegion;
 
     /**
+    * 弱口令风险
+    */
+    @SerializedName("WeakPasswordRisk")
+    @Expose
+    private Long WeakPasswordRisk;
+
+    /**
      * Get appid 
      * @return AppId appid
      */
@@ -690,6 +697,22 @@ public class GateWayAsset extends AbstractModel {
         this.EngineRegion = EngineRegion;
     }
 
+    /**
+     * Get 弱口令风险 
+     * @return WeakPasswordRisk 弱口令风险
+     */
+    public Long getWeakPasswordRisk() {
+        return this.WeakPasswordRisk;
+    }
+
+    /**
+     * Set 弱口令风险
+     * @param WeakPasswordRisk 弱口令风险
+     */
+    public void setWeakPasswordRisk(Long WeakPasswordRisk) {
+        this.WeakPasswordRisk = WeakPasswordRisk;
+    }
+
     public GateWayAsset() {
     }
 
@@ -788,6 +811,9 @@ public class GateWayAsset extends AbstractModel {
         if (source.EngineRegion != null) {
             this.EngineRegion = new String(source.EngineRegion);
         }
+        if (source.WeakPasswordRisk != null) {
+            this.WeakPasswordRisk = new Long(source.WeakPasswordRisk);
+        }
     }
 
 
@@ -824,6 +850,7 @@ public class GateWayAsset extends AbstractModel {
         this.setParamSimple(map, prefix + "IsNewAsset", this.IsNewAsset);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "EngineRegion", this.EngineRegion);
+        this.setParamSimple(map, prefix + "WeakPasswordRisk", this.WeakPasswordRisk);
 
     }
 }

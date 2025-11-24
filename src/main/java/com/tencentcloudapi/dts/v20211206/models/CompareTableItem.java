@@ -45,6 +45,20 @@ public class CompareTableItem extends AbstractModel {
     private CompareColumnItem [] Columns;
 
     /**
+    * 过滤条件
+    */
+    @SerializedName("FilterCondition")
+    @Expose
+    private String FilterCondition;
+
+    /**
+    * 时区选择。如 "+08:00", "-08:00", "+00:00"（空值等价于"+00:00"）	
+    */
+    @SerializedName("FilterTimeZone")
+    @Expose
+    private String FilterTimeZone;
+
+    /**
      * Get 表名称 
      * @return TableName 表名称
      */
@@ -92,6 +106,38 @@ public class CompareTableItem extends AbstractModel {
         this.Columns = Columns;
     }
 
+    /**
+     * Get 过滤条件 
+     * @return FilterCondition 过滤条件
+     */
+    public String getFilterCondition() {
+        return this.FilterCondition;
+    }
+
+    /**
+     * Set 过滤条件
+     * @param FilterCondition 过滤条件
+     */
+    public void setFilterCondition(String FilterCondition) {
+        this.FilterCondition = FilterCondition;
+    }
+
+    /**
+     * Get 时区选择。如 "+08:00", "-08:00", "+00:00"（空值等价于"+00:00"）	 
+     * @return FilterTimeZone 时区选择。如 "+08:00", "-08:00", "+00:00"（空值等价于"+00:00"）	
+     */
+    public String getFilterTimeZone() {
+        return this.FilterTimeZone;
+    }
+
+    /**
+     * Set 时区选择。如 "+08:00", "-08:00", "+00:00"（空值等价于"+00:00"）	
+     * @param FilterTimeZone 时区选择。如 "+08:00", "-08:00", "+00:00"（空值等价于"+00:00"）	
+     */
+    public void setFilterTimeZone(String FilterTimeZone) {
+        this.FilterTimeZone = FilterTimeZone;
+    }
+
     public CompareTableItem() {
     }
 
@@ -112,6 +158,12 @@ public class CompareTableItem extends AbstractModel {
                 this.Columns[i] = new CompareColumnItem(source.Columns[i]);
             }
         }
+        if (source.FilterCondition != null) {
+            this.FilterCondition = new String(source.FilterCondition);
+        }
+        if (source.FilterTimeZone != null) {
+            this.FilterTimeZone = new String(source.FilterTimeZone);
+        }
     }
 
 
@@ -122,6 +174,8 @@ public class CompareTableItem extends AbstractModel {
         this.setParamSimple(map, prefix + "TableName", this.TableName);
         this.setParamSimple(map, prefix + "ColumnMode", this.ColumnMode);
         this.setParamArrayObj(map, prefix + "Columns.", this.Columns);
+        this.setParamSimple(map, prefix + "FilterCondition", this.FilterCondition);
+        this.setParamSimple(map, prefix + "FilterTimeZone", this.FilterTimeZone);
 
     }
 }

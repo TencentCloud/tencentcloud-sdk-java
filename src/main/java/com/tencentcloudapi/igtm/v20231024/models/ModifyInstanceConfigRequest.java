@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class ModifyInstanceConfigRequest extends AbstractModel {
 
     /**
+    * 实例id	
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
     * 实例配置详情
     */
     @SerializedName("InstanceConfig")
     @Expose
     private InstanceConfig InstanceConfig;
+
+    /**
+     * Get 实例id	 
+     * @return InstanceId 实例id	
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 实例id	
+     * @param InstanceId 实例id	
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
 
     /**
      * Get 实例配置详情 
@@ -54,6 +77,9 @@ public class ModifyInstanceConfigRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ModifyInstanceConfigRequest(ModifyInstanceConfigRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
         if (source.InstanceConfig != null) {
             this.InstanceConfig = new InstanceConfig(source.InstanceConfig);
         }
@@ -64,6 +90,7 @@ public class ModifyInstanceConfigRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamObj(map, prefix + "InstanceConfig.", this.InstanceConfig);
 
     }

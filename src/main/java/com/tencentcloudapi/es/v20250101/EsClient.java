@@ -40,7 +40,7 @@ public class EsClient extends AbstractClient{
 
     /**
      *本服务支持一系列高性能的大语言模型，包括DeepSeek以及腾讯自主研发的混元大模型，结合混合搜索等先进搜索技术，快速高效实现RAG，有效解决幻觉和知识更新问题。
-本接口有单账号调用上限控制，如您有提高并发限制的需求请[联系我们](https://cloud.tencent.com/act/event/Online_service)  。
+本接口有模型维度调用上限控制，单个模型qps限制5，如您有提高并发限制的需求请[联系我们](https://cloud.tencent.com/act/event/Online_service)  。
      * @param req ChatCompletionsRequest
      * @return ChatCompletionsResponse
      * @throws TencentCloudSDKException
@@ -64,7 +64,7 @@ public class EsClient extends AbstractClient{
 
     /**
      *文本切片是将长文本分割为短片段的技术，用于适配模型输入、提升处理效率或信息检索，平衡片段长度与语义连贯性，适用于NLP、数据分析等场景。
-本接口为异步接口，有单账号调用上限控制，如您有提高并发限制的需求请[联系我们](https://cloud.tencent.com/act/event/Online_service) 。
+本接口为异步接口，有模型维度调用上限控制，单个模型qps限制5，如您有提高并发限制的需求请[联系我们](https://cloud.tencent.com/act/event/Online_service) 。
      * @param req ChunkDocumentAsyncRequest
      * @return ChunkDocumentAsyncResponse
      * @throws TencentCloudSDKException
@@ -97,7 +97,8 @@ public class EsClient extends AbstractClient{
     }
 
     /**
-     *Embedding是一种将高维数据映射到低维空间的技术，通常用于将非结构化数据，如文本、图像或音频转化为向量表示，使其更容易输入机器模型进行处理，并且向量之间的距离可以反映对象之间的相似性。 本接口有模型维度调用上限控制，单个模型qps限制10，如您有提高并发限制的需求请[联系我们](https://cloud.tencent.com/act/event/Online_service)  。
+     *Embedding是一种将高维数据映射到低维空间的技术，通常用于将非结构化数据，如文本、图像或音频转化为向量表示，使其更容易输入机器模型进行处理，并且向量之间的距离可以反映对象之间的相似性。 
+本接口有模型维度调用上限控制，单个模型qps限制10，如您有提高并发限制的需求请[联系我们](https://cloud.tencent.com/act/event/Online_service)  。
      * @param req GetMultiModalEmbeddingRequest
      * @return GetMultiModalEmbeddingResponse
      * @throws TencentCloudSDKException
@@ -121,7 +122,7 @@ public class EsClient extends AbstractClient{
 
     /**
      *本服务可将各类格式文档精准转换为标准格式，满足企业知识库建设、技术文档迁移、内容平台结构化存储等需求。
-本接口有单账号调用上限控制，如您有提高并发限制的需求请[联系我们](https://cloud.tencent.com/act/event/Online_service)。
+本接口有模型维度调用上限控制，单个模型qps限制5，如您有提高并发限制的需求请[联系我们](https://cloud.tencent.com/act/event/Online_service) 。
      * @param req ParseDocumentRequest
      * @return ParseDocumentResponse
      * @throws TencentCloudSDKException
@@ -133,7 +134,7 @@ public class EsClient extends AbstractClient{
 
     /**
      *本服务可将各类格式文档精准转换为标准格式，满足企业知识库建设、技术文档迁移、内容平台结构化存储等需求。
-本接口为异步接口，有单账号调用上限控制，如您有提高并发限制的需求请[联系我们](https://cloud.tencent.com/act/event/Online_service)  。
+本接口为异步接口，有模型维度调用上限控制，单个模型qps限制5，如您有提高并发限制的需求请[联系我们](https://cloud.tencent.com/act/event/Online_service) 。
      * @param req ParseDocumentAsyncRequest
      * @return ParseDocumentAsyncResponse
      * @throws TencentCloudSDKException

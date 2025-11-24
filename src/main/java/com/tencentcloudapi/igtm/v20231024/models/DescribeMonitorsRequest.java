@@ -38,6 +38,13 @@ public class DescribeMonitorsRequest extends AbstractModel {
     private Long Limit;
 
     /**
+    * 查询过滤条件：MonitorName：监控器名称；MonitorId：监控器id
+    */
+    @SerializedName("Filters")
+    @Expose
+    private ResourceFilter [] Filters;
+
+    /**
     * 是否查探测次数0否1是
     */
     @SerializedName("IsDetectNum")
@@ -77,6 +84,22 @@ public class DescribeMonitorsRequest extends AbstractModel {
     }
 
     /**
+     * Get 查询过滤条件：MonitorName：监控器名称；MonitorId：监控器id 
+     * @return Filters 查询过滤条件：MonitorName：监控器名称；MonitorId：监控器id
+     */
+    public ResourceFilter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 查询过滤条件：MonitorName：监控器名称；MonitorId：监控器id
+     * @param Filters 查询过滤条件：MonitorName：监控器名称；MonitorId：监控器id
+     */
+    public void setFilters(ResourceFilter [] Filters) {
+        this.Filters = Filters;
+    }
+
+    /**
      * Get 是否查探测次数0否1是 
      * @return IsDetectNum 是否查探测次数0否1是
      */
@@ -106,6 +129,12 @@ public class DescribeMonitorsRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.Filters != null) {
+            this.Filters = new ResourceFilter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new ResourceFilter(source.Filters[i]);
+            }
+        }
         if (source.IsDetectNum != null) {
             this.IsDetectNum = new Long(source.IsDetectNum);
         }
@@ -118,6 +147,7 @@ public class DescribeMonitorsRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "IsDetectNum", this.IsDetectNum);
 
     }

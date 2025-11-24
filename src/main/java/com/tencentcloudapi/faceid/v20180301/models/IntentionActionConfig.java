@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class IntentionActionConfig extends AbstractModel {
 
     /**
-    * 点头确认模式下，系统语音播报使用的问题文本，问题最大长度为150个字符。
+    * 点头确认模式下，系统语音播报使用的问题文本，问题最大长度为250个字符。
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-     * Get 点头确认模式下，系统语音播报使用的问题文本，问题最大长度为150个字符。 
-     * @return Text 点头确认模式下，系统语音播报使用的问题文本，问题最大长度为150个字符。
+     * Get 点头确认模式下，系统语音播报使用的问题文本，问题最大长度为250个字符。 
+     * @return Text 点头确认模式下，系统语音播报使用的问题文本，问题最大长度为250个字符。
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set 点头确认模式下，系统语音播报使用的问题文本，问题最大长度为150个字符。
-     * @param Text 点头确认模式下，系统语音播报使用的问题文本，问题最大长度为150个字符。
+     * Set 点头确认模式下，系统语音播报使用的问题文本，问题最大长度为250个字符。
+     * @param Text 点头确认模式下，系统语音播报使用的问题文本，问题最大长度为250个字符。
      */
     public void setText(String Text) {
         this.Text = Text;

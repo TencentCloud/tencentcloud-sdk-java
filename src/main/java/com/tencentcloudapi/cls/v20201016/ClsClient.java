@@ -233,6 +233,17 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *创建DLC投递任务
+     * @param req CreateDlcDeliverRequest
+     * @return CreateDlcDeliverResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDlcDeliverResponse CreateDlcDeliver(CreateDlcDeliverRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDlcDeliver", CreateDlcDeliverResponse.class);
+    }
+
+    /**
      *本接口仅创建下载任务。任务返回的下载地址，请用户调用[DescribeExports](https://cloud.tencent.com/document/product/614/56449)查看任务列表，其中有下载地址CosPath参数。
      * @param req CreateExportRequest
      * @return CreateExportResponse
@@ -472,6 +483,17 @@ public class ClsClient extends AbstractClient{
     public DeleteDataTransformResponse DeleteDataTransform(DeleteDataTransformRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteDataTransform", DeleteDataTransformResponse.class);
+    }
+
+    /**
+     *删除DLC投递任务
+     * @param req DeleteDlcDeliverRequest
+     * @return DeleteDlcDeliverResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDlcDeliverResponse DeleteDlcDeliver(DeleteDlcDeliverRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDlcDeliver", DeleteDlcDeliverResponse.class);
     }
 
     /**
@@ -747,6 +769,17 @@ public class ClsClient extends AbstractClient{
     public DescribeDataTransformInfoResponse DescribeDataTransformInfo(DescribeDataTransformInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDataTransformInfo", DescribeDataTransformInfoResponse.class);
+    }
+
+    /**
+     *获取告警渠道回调配置列表。
+     * @param req DescribeDlcDeliversRequest
+     * @return DescribeDlcDeliversResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDlcDeliversResponse DescribeDlcDelivers(DescribeDlcDeliversRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDlcDelivers", DescribeDlcDeliversResponse.class);
     }
 
     /**
@@ -1100,6 +1133,17 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
     public ModifyDataTransformResponse ModifyDataTransform(ModifyDataTransformRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyDataTransform", ModifyDataTransformResponse.class);
+    }
+
+    /**
+     *修改DLC投递任务
+     * @param req ModifyDlcDeliverRequest
+     * @return ModifyDlcDeliverResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDlcDeliverResponse ModifyDlcDeliver(ModifyDlcDeliverRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDlcDeliver", ModifyDlcDeliverResponse.class);
     }
 
     /**

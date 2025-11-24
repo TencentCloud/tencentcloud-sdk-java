@@ -115,6 +115,13 @@ public class CheckViewRiskItem extends AbstractModel {
     private String EventType;
 
     /**
+    * 处置分类
+    */
+    @SerializedName("Classify")
+    @Expose
+    private String Classify;
+
+    /**
      * Get 检查项规则ID 
      * @return RiskRuleId 检查项规则ID
      */
@@ -322,6 +329,22 @@ public class CheckViewRiskItem extends AbstractModel {
         this.EventType = EventType;
     }
 
+    /**
+     * Get 处置分类 
+     * @return Classify 处置分类
+     */
+    public String getClassify() {
+        return this.Classify;
+    }
+
+    /**
+     * Set 处置分类
+     * @param Classify 处置分类
+     */
+    public void setClassify(String Classify) {
+        this.Classify = Classify;
+    }
+
     public CheckViewRiskItem() {
     }
 
@@ -369,6 +392,9 @@ public class CheckViewRiskItem extends AbstractModel {
         if (source.EventType != null) {
             this.EventType = new String(source.EventType);
         }
+        if (source.Classify != null) {
+            this.Classify = new String(source.Classify);
+        }
     }
 
 
@@ -389,6 +415,7 @@ public class CheckViewRiskItem extends AbstractModel {
         this.setParamSimple(map, prefix + "RiskCount", this.RiskCount);
         this.setParamSimple(map, prefix + "AssetType", this.AssetType);
         this.setParamSimple(map, prefix + "EventType", this.EventType);
+        this.setParamSimple(map, prefix + "Classify", this.Classify);
 
     }
 }

@@ -633,6 +633,17 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *查询NAT边界防火墙开关列表
+     * @param req DescribeNatFwSwitchRequest
+     * @return DescribeNatFwSwitchResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNatFwSwitchResponse DescribeNatFwSwitch(DescribeNatFwSwitchRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeNatFwSwitch", DescribeNatFwSwitchResponse.class);
+    }
+
+    /**
      *展示当前natfw 实例对应的vpc dns开关
      * @param req DescribeNatFwVpcDnsLstRequest
      * @return DescribeNatFwVpcDnsLstResponse

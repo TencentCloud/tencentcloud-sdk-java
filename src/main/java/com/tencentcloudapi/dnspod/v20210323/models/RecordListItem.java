@@ -102,7 +102,7 @@ public class RecordListItem extends AbstractModel {
     private String Remark;
 
     /**
-    * 记录缓存时间
+    * 记录缓存时间，单位：秒
     */
     @SerializedName("TTL")
     @Expose
@@ -303,16 +303,16 @@ public class RecordListItem extends AbstractModel {
     }
 
     /**
-     * Get 记录缓存时间 
-     * @return TTL 记录缓存时间
+     * Get 记录缓存时间，单位：秒 
+     * @return TTL 记录缓存时间，单位：秒
      */
     public Long getTTL() {
         return this.TTL;
     }
 
     /**
-     * Set 记录缓存时间
-     * @param TTL 记录缓存时间
+     * Set 记录缓存时间，单位：秒
+     * @param TTL 记录缓存时间，单位：秒
      */
     public void setTTL(Long TTL) {
         this.TTL = TTL;

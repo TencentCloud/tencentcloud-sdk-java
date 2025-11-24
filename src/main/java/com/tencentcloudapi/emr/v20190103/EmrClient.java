@@ -394,6 +394,17 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *获取实例操作日志
+     * @param req DescribeInstanceOplogRequest
+     * @return DescribeInstanceOplogResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceOplogResponse DescribeInstanceOplog(DescribeInstanceOplogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstanceOplog", DescribeInstanceOplogResponse.class);
+    }
+
+    /**
      *查询待续费节点信息
      * @param req DescribeInstanceRenewNodesRequest
      * @return DescribeInstanceRenewNodesResponse

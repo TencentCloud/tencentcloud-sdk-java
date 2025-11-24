@@ -122,6 +122,13 @@ public class AssetRiskItem extends AbstractModel {
     private String RiskRuleId;
 
     /**
+    * 处置分类
+    */
+    @SerializedName("Classify")
+    @Expose
+    private String Classify;
+
+    /**
      * Get 租户ID 
      * @return AppId 租户ID
      */
@@ -345,6 +352,22 @@ public class AssetRiskItem extends AbstractModel {
         this.RiskRuleId = RiskRuleId;
     }
 
+    /**
+     * Get 处置分类 
+     * @return Classify 处置分类
+     */
+    public String getClassify() {
+        return this.Classify;
+    }
+
+    /**
+     * Set 处置分类
+     * @param Classify 处置分类
+     */
+    public void setClassify(String Classify) {
+        this.Classify = Classify;
+    }
+
     public AssetRiskItem() {
     }
 
@@ -395,6 +418,9 @@ public class AssetRiskItem extends AbstractModel {
         if (source.RiskRuleId != null) {
             this.RiskRuleId = new String(source.RiskRuleId);
         }
+        if (source.Classify != null) {
+            this.Classify = new String(source.Classify);
+        }
     }
 
 
@@ -416,6 +442,7 @@ public class AssetRiskItem extends AbstractModel {
         this.setParamSimple(map, prefix + "CheckType", this.CheckType);
         this.setParamSimple(map, prefix + "Severity", this.Severity);
         this.setParamSimple(map, prefix + "RiskRuleId", this.RiskRuleId);
+        this.setParamSimple(map, prefix + "Classify", this.Classify);
 
     }
 }

@@ -136,7 +136,9 @@ public class DescribeOrganizationGroupOrganizationsRequest extends AbstractModel
     /**
      * Get 查询成员企业的企业名，模糊匹配 
      * @return Name 查询成员企业的企业名，模糊匹配
+     * @deprecated
      */
+    @Deprecated
     public String getName() {
         return this.Name;
     }
@@ -144,7 +146,9 @@ public class DescribeOrganizationGroupOrganizationsRequest extends AbstractModel
     /**
      * Set 查询成员企业的企业名，模糊匹配
      * @param Name 查询成员企业的企业名，模糊匹配
+     * @deprecated
      */
+    @Deprecated
     public void setName(String Name) {
         this.Name = Name;
     }

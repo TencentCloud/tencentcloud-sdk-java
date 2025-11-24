@@ -184,7 +184,7 @@ public class DetectInfoText extends AbstractModel {
     /**
     * 本次流程活体一比一的分数。
 - 取值范围 [0.00, 100.00]。
-- 相似度大于等于70时才判断为同一人，也可根据具体场景自行调整阈值。
+- 相似度大于等于70时才判断为同一人，阈值不支持自定义。
 - 阈值70的误通过率为千分之一，阈值80的误通过率是万分之一。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -306,6 +306,22 @@ public class DetectInfoText extends AbstractModel {
     @SerializedName("VisaNum")
     @Expose
     private String VisaNum;
+
+    /**
+    * 活体检测的动作顺序，多动作以“,”分隔。
+输出格式如：“1,2”表示“张嘴+眨眼”。
+- 详细序列值含义如下： 
+   1：张嘴
+2：眨眼
+3：点头
+4：摇头
+5：静默
+注：仅浮层H5产品返回
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LivenessActionSequence")
+    @Expose
+    private String LivenessActionSequence;
 
     /**
      * Get 本次流程最终验证结果。
@@ -726,12 +742,12 @@ public class DetectInfoText extends AbstractModel {
     /**
      * Get 本次流程活体一比一的分数。
 - 取值范围 [0.00, 100.00]。
-- 相似度大于等于70时才判断为同一人，也可根据具体场景自行调整阈值。
+- 相似度大于等于70时才判断为同一人，阈值不支持自定义。
 - 阈值70的误通过率为千分之一，阈值80的误通过率是万分之一。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Sim 本次流程活体一比一的分数。
 - 取值范围 [0.00, 100.00]。
-- 相似度大于等于70时才判断为同一人，也可根据具体场景自行调整阈值。
+- 相似度大于等于70时才判断为同一人，阈值不支持自定义。
 - 阈值70的误通过率为千分之一，阈值80的误通过率是万分之一。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -742,12 +758,12 @@ public class DetectInfoText extends AbstractModel {
     /**
      * Set 本次流程活体一比一的分数。
 - 取值范围 [0.00, 100.00]。
-- 相似度大于等于70时才判断为同一人，也可根据具体场景自行调整阈值。
+- 相似度大于等于70时才判断为同一人，阈值不支持自定义。
 - 阈值70的误通过率为千分之一，阈值80的误通过率是万分之一。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Sim 本次流程活体一比一的分数。
 - 取值范围 [0.00, 100.00]。
-- 相似度大于等于70时才判断为同一人，也可根据具体场景自行调整阈值。
+- 相似度大于等于70时才判断为同一人，阈值不支持自定义。
 - 阈值70的误通过率为千分之一，阈值80的误通过率是万分之一。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -1083,6 +1099,58 @@ public class DetectInfoText extends AbstractModel {
         this.VisaNum = VisaNum;
     }
 
+    /**
+     * Get 活体检测的动作顺序，多动作以“,”分隔。
+输出格式如：“1,2”表示“张嘴+眨眼”。
+- 详细序列值含义如下： 
+   1：张嘴
+2：眨眼
+3：点头
+4：摇头
+5：静默
+注：仅浮层H5产品返回
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LivenessActionSequence 活体检测的动作顺序，多动作以“,”分隔。
+输出格式如：“1,2”表示“张嘴+眨眼”。
+- 详细序列值含义如下： 
+   1：张嘴
+2：眨眼
+3：点头
+4：摇头
+5：静默
+注：仅浮层H5产品返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLivenessActionSequence() {
+        return this.LivenessActionSequence;
+    }
+
+    /**
+     * Set 活体检测的动作顺序，多动作以“,”分隔。
+输出格式如：“1,2”表示“张嘴+眨眼”。
+- 详细序列值含义如下： 
+   1：张嘴
+2：眨眼
+3：点头
+4：摇头
+5：静默
+注：仅浮层H5产品返回
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LivenessActionSequence 活体检测的动作顺序，多动作以“,”分隔。
+输出格式如：“1,2”表示“张嘴+眨眼”。
+- 详细序列值含义如下： 
+   1：张嘴
+2：眨眼
+3：点头
+4：摇头
+5：静默
+注：仅浮层H5产品返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLivenessActionSequence(String LivenessActionSequence) {
+        this.LivenessActionSequence = LivenessActionSequence;
+    }
+
     public DetectInfoText() {
     }
 
@@ -1190,6 +1258,9 @@ public class DetectInfoText extends AbstractModel {
         if (source.VisaNum != null) {
             this.VisaNum = new String(source.VisaNum);
         }
+        if (source.LivenessActionSequence != null) {
+            this.LivenessActionSequence = new String(source.LivenessActionSequence);
+        }
     }
 
 
@@ -1227,6 +1298,7 @@ public class DetectInfoText extends AbstractModel {
         this.setParamSimple(map, prefix + "NFCBillingCounts", this.NFCBillingCounts);
         this.setParamSimple(map, prefix + "PassNo", this.PassNo);
         this.setParamSimple(map, prefix + "VisaNum", this.VisaNum);
+        this.setParamSimple(map, prefix + "LivenessActionSequence", this.LivenessActionSequence);
 
     }
 }

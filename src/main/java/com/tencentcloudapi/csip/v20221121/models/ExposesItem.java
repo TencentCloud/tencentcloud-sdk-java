@@ -248,6 +248,34 @@ public class ExposesItem extends AbstractModel {
     private String PortDetectResult;
 
     /**
+    * 标签
+    */
+    @SerializedName("Tag")
+    @Expose
+    private String Tag;
+
+    /**
+    * 备注
+    */
+    @SerializedName("Comment")
+    @Expose
+    private String Comment;
+
+    /**
+    * 待治理风险数量
+    */
+    @SerializedName("ToGovernedRiskCount")
+    @Expose
+    private Long ToGovernedRiskCount;
+
+    /**
+    * 待治理风险内容
+    */
+    @SerializedName("ToGovernedRiskContent")
+    @Expose
+    private String ToGovernedRiskContent;
+
+    /**
      * Get 云厂商 
      * @return Provider 云厂商
      */
@@ -759,6 +787,70 @@ public class ExposesItem extends AbstractModel {
         this.PortDetectResult = PortDetectResult;
     }
 
+    /**
+     * Get 标签 
+     * @return Tag 标签
+     */
+    public String getTag() {
+        return this.Tag;
+    }
+
+    /**
+     * Set 标签
+     * @param Tag 标签
+     */
+    public void setTag(String Tag) {
+        this.Tag = Tag;
+    }
+
+    /**
+     * Get 备注 
+     * @return Comment 备注
+     */
+    public String getComment() {
+        return this.Comment;
+    }
+
+    /**
+     * Set 备注
+     * @param Comment 备注
+     */
+    public void setComment(String Comment) {
+        this.Comment = Comment;
+    }
+
+    /**
+     * Get 待治理风险数量 
+     * @return ToGovernedRiskCount 待治理风险数量
+     */
+    public Long getToGovernedRiskCount() {
+        return this.ToGovernedRiskCount;
+    }
+
+    /**
+     * Set 待治理风险数量
+     * @param ToGovernedRiskCount 待治理风险数量
+     */
+    public void setToGovernedRiskCount(Long ToGovernedRiskCount) {
+        this.ToGovernedRiskCount = ToGovernedRiskCount;
+    }
+
+    /**
+     * Get 待治理风险内容 
+     * @return ToGovernedRiskContent 待治理风险内容
+     */
+    public String getToGovernedRiskContent() {
+        return this.ToGovernedRiskContent;
+    }
+
+    /**
+     * Set 待治理风险内容
+     * @param ToGovernedRiskContent 待治理风险内容
+     */
+    public void setToGovernedRiskContent(String ToGovernedRiskContent) {
+        this.ToGovernedRiskContent = ToGovernedRiskContent;
+    }
+
     public ExposesItem() {
     }
 
@@ -863,6 +955,18 @@ public class ExposesItem extends AbstractModel {
         if (source.PortDetectResult != null) {
             this.PortDetectResult = new String(source.PortDetectResult);
         }
+        if (source.Tag != null) {
+            this.Tag = new String(source.Tag);
+        }
+        if (source.Comment != null) {
+            this.Comment = new String(source.Comment);
+        }
+        if (source.ToGovernedRiskCount != null) {
+            this.ToGovernedRiskCount = new Long(source.ToGovernedRiskCount);
+        }
+        if (source.ToGovernedRiskContent != null) {
+            this.ToGovernedRiskContent = new String(source.ToGovernedRiskContent);
+        }
     }
 
 
@@ -902,6 +1006,10 @@ public class ExposesItem extends AbstractModel {
         this.setParamSimple(map, prefix + "ExposureID", this.ExposureID);
         this.setParamSimple(map, prefix + "PortDetectCount", this.PortDetectCount);
         this.setParamSimple(map, prefix + "PortDetectResult", this.PortDetectResult);
+        this.setParamSimple(map, prefix + "Tag", this.Tag);
+        this.setParamSimple(map, prefix + "Comment", this.Comment);
+        this.setParamSimple(map, prefix + "ToGovernedRiskCount", this.ToGovernedRiskCount);
+        this.setParamSimple(map, prefix + "ToGovernedRiskContent", this.ToGovernedRiskContent);
 
     }
 }

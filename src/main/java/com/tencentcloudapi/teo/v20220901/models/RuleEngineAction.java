@@ -60,7 +60,9 @@ public class RuleEngineAction extends AbstractModel {
 <li>ModifyRequestHeader：修改 HTTP 节点请求头；</li>
 <li>ResponseSpeedLimit：单连接下载限速；</li>
 <li>SetContentIdentifier：设置内容标识符；</li>
-<li>Vary：Vary 特性配置。</li>
+<li>Vary：Vary 特性配置；</li>
+<li>ContentCompression：内容压缩配置；</li>
+<li>OriginAuthentication：回源鉴权配置。</li>
     */
     @SerializedName("Name")
     @Expose
@@ -362,6 +364,13 @@ public class RuleEngineAction extends AbstractModel {
     private ContentCompressionParameters ContentCompressionParameters;
 
     /**
+    * 回源鉴权配置参数，当 Name 取值为 OriginAuthentication 时，该参数必填。该参数为白名单功能，如有需要，请联系腾讯云工程师处理。
+    */
+    @SerializedName("OriginAuthenticationParameters")
+    @Expose
+    private OriginAuthenticationParameters OriginAuthenticationParameters;
+
+    /**
      * Get 操作名称。名称需要与参数结构体对应，例如 Name=Cache，则 CacheParameters 必填。
 <li>Cache：节点缓存 TTL；</li>
 <li>CacheKey：自定义 Cache Key；</li>
@@ -398,7 +407,9 @@ public class RuleEngineAction extends AbstractModel {
 <li>ModifyRequestHeader：修改 HTTP 节点请求头；</li>
 <li>ResponseSpeedLimit：单连接下载限速；</li>
 <li>SetContentIdentifier：设置内容标识符；</li>
-<li>Vary：Vary 特性配置。</li> 
+<li>Vary：Vary 特性配置；</li>
+<li>ContentCompression：内容压缩配置；</li>
+<li>OriginAuthentication：回源鉴权配置。</li> 
      * @return Name 操作名称。名称需要与参数结构体对应，例如 Name=Cache，则 CacheParameters 必填。
 <li>Cache：节点缓存 TTL；</li>
 <li>CacheKey：自定义 Cache Key；</li>
@@ -435,7 +446,9 @@ public class RuleEngineAction extends AbstractModel {
 <li>ModifyRequestHeader：修改 HTTP 节点请求头；</li>
 <li>ResponseSpeedLimit：单连接下载限速；</li>
 <li>SetContentIdentifier：设置内容标识符；</li>
-<li>Vary：Vary 特性配置。</li>
+<li>Vary：Vary 特性配置；</li>
+<li>ContentCompression：内容压缩配置；</li>
+<li>OriginAuthentication：回源鉴权配置。</li>
      */
     public String getName() {
         return this.Name;
@@ -478,7 +491,9 @@ public class RuleEngineAction extends AbstractModel {
 <li>ModifyRequestHeader：修改 HTTP 节点请求头；</li>
 <li>ResponseSpeedLimit：单连接下载限速；</li>
 <li>SetContentIdentifier：设置内容标识符；</li>
-<li>Vary：Vary 特性配置。</li>
+<li>Vary：Vary 特性配置；</li>
+<li>ContentCompression：内容压缩配置；</li>
+<li>OriginAuthentication：回源鉴权配置。</li>
      * @param Name 操作名称。名称需要与参数结构体对应，例如 Name=Cache，则 CacheParameters 必填。
 <li>Cache：节点缓存 TTL；</li>
 <li>CacheKey：自定义 Cache Key；</li>
@@ -515,7 +530,9 @@ public class RuleEngineAction extends AbstractModel {
 <li>ModifyRequestHeader：修改 HTTP 节点请求头；</li>
 <li>ResponseSpeedLimit：单连接下载限速；</li>
 <li>SetContentIdentifier：设置内容标识符；</li>
-<li>Vary：Vary 特性配置。</li>
+<li>Vary：Vary 特性配置；</li>
+<li>ContentCompression：内容压缩配置；</li>
+<li>OriginAuthentication：回源鉴权配置。</li>
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -1257,6 +1274,22 @@ public class RuleEngineAction extends AbstractModel {
         this.ContentCompressionParameters = ContentCompressionParameters;
     }
 
+    /**
+     * Get 回源鉴权配置参数，当 Name 取值为 OriginAuthentication 时，该参数必填。该参数为白名单功能，如有需要，请联系腾讯云工程师处理。 
+     * @return OriginAuthenticationParameters 回源鉴权配置参数，当 Name 取值为 OriginAuthentication 时，该参数必填。该参数为白名单功能，如有需要，请联系腾讯云工程师处理。
+     */
+    public OriginAuthenticationParameters getOriginAuthenticationParameters() {
+        return this.OriginAuthenticationParameters;
+    }
+
+    /**
+     * Set 回源鉴权配置参数，当 Name 取值为 OriginAuthentication 时，该参数必填。该参数为白名单功能，如有需要，请联系腾讯云工程师处理。
+     * @param OriginAuthenticationParameters 回源鉴权配置参数，当 Name 取值为 OriginAuthentication 时，该参数必填。该参数为白名单功能，如有需要，请联系腾讯云工程师处理。
+     */
+    public void setOriginAuthenticationParameters(OriginAuthenticationParameters OriginAuthenticationParameters) {
+        this.OriginAuthenticationParameters = OriginAuthenticationParameters;
+    }
+
     public RuleEngineAction() {
     }
 
@@ -1379,6 +1412,9 @@ public class RuleEngineAction extends AbstractModel {
         if (source.ContentCompressionParameters != null) {
             this.ContentCompressionParameters = new ContentCompressionParameters(source.ContentCompressionParameters);
         }
+        if (source.OriginAuthenticationParameters != null) {
+            this.OriginAuthenticationParameters = new OriginAuthenticationParameters(source.OriginAuthenticationParameters);
+        }
     }
 
 
@@ -1424,6 +1460,7 @@ public class RuleEngineAction extends AbstractModel {
         this.setParamObj(map, prefix + "SetContentIdentifierParameters.", this.SetContentIdentifierParameters);
         this.setParamObj(map, prefix + "VaryParameters.", this.VaryParameters);
         this.setParamObj(map, prefix + "ContentCompressionParameters.", this.ContentCompressionParameters);
+        this.setParamObj(map, prefix + "OriginAuthenticationParameters.", this.OriginAuthenticationParameters);
 
     }
 }

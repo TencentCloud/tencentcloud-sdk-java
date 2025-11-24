@@ -187,6 +187,17 @@ public class DtsClient extends AbstractClient{
     }
 
     /**
+     *本接口用于创建数据对比任务，创建成功后会返回数据对比任务 ID，形如：sync-8yv4w2i1-cmp-37skmii9，创建成功后可通过StartSyncCompare启动一致性校验任务
+     * @param req CreateSyncCompareTaskRequest
+     * @return CreateSyncCompareTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSyncCompareTaskResponse CreateSyncCompareTask(CreateSyncCompareTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSyncCompareTask", CreateSyncCompareTaskResponse.class);
+    }
+
+    /**
      *创建一个同步任务
      * @param req CreateSyncJobRequest
      * @return CreateSyncJobResponse
@@ -217,6 +228,17 @@ public class DtsClient extends AbstractClient{
     public DeleteConsumerGroupResponse DeleteConsumerGroup(DeleteConsumerGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteConsumerGroup", DeleteConsumerGroupResponse.class);
+    }
+
+    /**
+     *删除一致性校验任务。当一致性校验任务状态为success、failed、canceled 时可以执行此操作。
+     * @param req DeleteSyncCompareTaskRequest
+     * @return DeleteSyncCompareTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSyncCompareTaskResponse DeleteSyncCompareTask(DeleteSyncCompareTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteSyncCompareTask", DeleteSyncCompareTaskResponse.class);
     }
 
     /**
@@ -377,6 +399,28 @@ public class DtsClient extends AbstractClient{
     public DescribeSubscribeReturnableResponse DescribeSubscribeReturnable(DescribeSubscribeReturnableRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSubscribeReturnable", DescribeSubscribeReturnableResponse.class);
+    }
+
+    /**
+     *查询一致性校验任务详情
+     * @param req DescribeSyncCompareReportRequest
+     * @return DescribeSyncCompareReportResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSyncCompareReportResponse DescribeSyncCompareReport(DescribeSyncCompareReportRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSyncCompareReport", DescribeSyncCompareReportResponse.class);
+    }
+
+    /**
+     *查询一致性校验任务列表。通过该接口可查看改任务下所有一致性校验任务。
+     * @param req DescribeSyncCompareTasksRequest
+     * @return DescribeSyncCompareTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSyncCompareTasksResponse DescribeSyncCompareTasks(DescribeSyncCompareTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSyncCompareTasks", DescribeSyncCompareTasksResponse.class);
     }
 
     /**
@@ -586,6 +630,28 @@ public class DtsClient extends AbstractClient{
     public ModifySubscribeObjectsResponse ModifySubscribeObjects(ModifySubscribeObjectsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifySubscribeObjects", ModifySubscribeObjectsResponse.class);
+    }
+
+    /**
+     *修改一致性校验任务，在任务创建后启动之前，可修改一致性校验参数
+     * @param req ModifySyncCompareTaskRequest
+     * @return ModifySyncCompareTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySyncCompareTaskResponse ModifySyncCompareTask(ModifySyncCompareTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySyncCompareTask", ModifySyncCompareTaskResponse.class);
+    }
+
+    /**
+     *修改同步一致性校验任务名称
+     * @param req ModifySyncCompareTaskNameRequest
+     * @return ModifySyncCompareTaskNameResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySyncCompareTaskNameResponse ModifySyncCompareTaskName(ModifySyncCompareTaskNameRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySyncCompareTaskName", ModifySyncCompareTaskNameResponse.class);
     }
 
     /**
@@ -800,6 +866,17 @@ public class DtsClient extends AbstractClient{
     }
 
     /**
+     *启动一致性校验任务，启动之前需要先通过接口`CreateSyncCompareTask` 创建一致性校验任务，启动后可通过接口`DescribeSyncCompareTasks` 查询一致性校验任务列表来获得启动后的状态
+     * @param req StartSyncCompareRequest
+     * @return StartSyncCompareResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartSyncCompareResponse StartSyncCompare(StartSyncCompareRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StartSyncCompare", StartSyncCompareResponse.class);
+    }
+
+    /**
      *启动同步任务
      * @param req StartSyncJobRequest
      * @return StartSyncJobResponse
@@ -831,6 +908,17 @@ public class DtsClient extends AbstractClient{
     public StopMigrateJobResponse StopMigrateJob(StopMigrateJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StopMigrateJob", StopMigrateJobResponse.class);
+    }
+
+    /**
+     *终止一致性校验任务
+     * @param req StopSyncCompareRequest
+     * @return StopSyncCompareResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopSyncCompareResponse StopSyncCompare(StopSyncCompareRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopSyncCompare", StopSyncCompareResponse.class);
     }
 
     /**

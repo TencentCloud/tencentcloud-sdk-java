@@ -45,6 +45,13 @@ public class CreateTWeSeeRecognitionTaskRequest extends AbstractModel {
     private String InputURL;
 
     /**
+    * 通道 ID
+    */
+    @SerializedName("ChannelId")
+    @Expose
+    private Long ChannelId;
+
+    /**
     * 自定义事件 ID
     */
     @SerializedName("CustomId")
@@ -175,6 +182,22 @@ public class CreateTWeSeeRecognitionTaskRequest extends AbstractModel {
      */
     public void setInputURL(String InputURL) {
         this.InputURL = InputURL;
+    }
+
+    /**
+     * Get 通道 ID 
+     * @return ChannelId 通道 ID
+     */
+    public Long getChannelId() {
+        return this.ChannelId;
+    }
+
+    /**
+     * Set 通道 ID
+     * @param ChannelId 通道 ID
+     */
+    public void setChannelId(Long ChannelId) {
+        this.ChannelId = ChannelId;
     }
 
     /**
@@ -402,6 +425,9 @@ public class CreateTWeSeeRecognitionTaskRequest extends AbstractModel {
         if (source.InputURL != null) {
             this.InputURL = new String(source.InputURL);
         }
+        if (source.ChannelId != null) {
+            this.ChannelId = new Long(source.ChannelId);
+        }
         if (source.CustomId != null) {
             this.CustomId = new String(source.CustomId);
         }
@@ -445,6 +471,7 @@ public class CreateTWeSeeRecognitionTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
         this.setParamSimple(map, prefix + "InputURL", this.InputURL);
+        this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
         this.setParamSimple(map, prefix + "CustomId", this.CustomId);
         this.setParamSimple(map, prefix + "EnableSearch", this.EnableSearch);
         this.setParamSimple(map, prefix + "StartTimeMs", this.StartTimeMs);

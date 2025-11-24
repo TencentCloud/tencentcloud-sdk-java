@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ChunkConfig extends AbstractModel {
 
     /**
-    * 最大分片长度
+    * 按照分隔符切片后，对分片长度会进行校验，当超过最大分片长度时，则用下一级分隔符分割，如无下一级分隔符，则保留原长度；默认值：1000
     */
     @SerializedName("MaxChunkSize")
     @Expose
     private Long MaxChunkSize;
 
     /**
-    * 分隔符列表
+    * 分隔符列表，优先靠前的分隔符；文件类型为TXT时，默认值：["\n\n", "\n", "。", "！", "？", "，", ""]
     */
     @SerializedName("Delimiters")
     @Expose
     private String [] Delimiters;
 
     /**
-    * 相邻切片重合字符数，需要小于分片长度
+    * 相邻切片重合字符数，需要小于分片长度，若形成完全冗余的切片，则会自动过滤；默认值：0.2*MaxChunkSize
     */
     @SerializedName("ChunkOverlap")
     @Expose
     private Long ChunkOverlap;
 
     /**
-     * Get 最大分片长度 
-     * @return MaxChunkSize 最大分片长度
+     * Get 按照分隔符切片后，对分片长度会进行校验，当超过最大分片长度时，则用下一级分隔符分割，如无下一级分隔符，则保留原长度；默认值：1000 
+     * @return MaxChunkSize 按照分隔符切片后，对分片长度会进行校验，当超过最大分片长度时，则用下一级分隔符分割，如无下一级分隔符，则保留原长度；默认值：1000
      */
     public Long getMaxChunkSize() {
         return this.MaxChunkSize;
     }
 
     /**
-     * Set 最大分片长度
-     * @param MaxChunkSize 最大分片长度
+     * Set 按照分隔符切片后，对分片长度会进行校验，当超过最大分片长度时，则用下一级分隔符分割，如无下一级分隔符，则保留原长度；默认值：1000
+     * @param MaxChunkSize 按照分隔符切片后，对分片长度会进行校验，当超过最大分片长度时，则用下一级分隔符分割，如无下一级分隔符，则保留原长度；默认值：1000
      */
     public void setMaxChunkSize(Long MaxChunkSize) {
         this.MaxChunkSize = MaxChunkSize;
     }
 
     /**
-     * Get 分隔符列表 
-     * @return Delimiters 分隔符列表
+     * Get 分隔符列表，优先靠前的分隔符；文件类型为TXT时，默认值：["\n\n", "\n", "。", "！", "？", "，", ""] 
+     * @return Delimiters 分隔符列表，优先靠前的分隔符；文件类型为TXT时，默认值：["\n\n", "\n", "。", "！", "？", "，", ""]
      */
     public String [] getDelimiters() {
         return this.Delimiters;
     }
 
     /**
-     * Set 分隔符列表
-     * @param Delimiters 分隔符列表
+     * Set 分隔符列表，优先靠前的分隔符；文件类型为TXT时，默认值：["\n\n", "\n", "。", "！", "？", "，", ""]
+     * @param Delimiters 分隔符列表，优先靠前的分隔符；文件类型为TXT时，默认值：["\n\n", "\n", "。", "！", "？", "，", ""]
      */
     public void setDelimiters(String [] Delimiters) {
         this.Delimiters = Delimiters;
     }
 
     /**
-     * Get 相邻切片重合字符数，需要小于分片长度 
-     * @return ChunkOverlap 相邻切片重合字符数，需要小于分片长度
+     * Get 相邻切片重合字符数，需要小于分片长度，若形成完全冗余的切片，则会自动过滤；默认值：0.2*MaxChunkSize 
+     * @return ChunkOverlap 相邻切片重合字符数，需要小于分片长度，若形成完全冗余的切片，则会自动过滤；默认值：0.2*MaxChunkSize
      */
     public Long getChunkOverlap() {
         return this.ChunkOverlap;
     }
 
     /**
-     * Set 相邻切片重合字符数，需要小于分片长度
-     * @param ChunkOverlap 相邻切片重合字符数，需要小于分片长度
+     * Set 相邻切片重合字符数，需要小于分片长度，若形成完全冗余的切片，则会自动过滤；默认值：0.2*MaxChunkSize
+     * @param ChunkOverlap 相邻切片重合字符数，需要小于分片长度，若形成完全冗余的切片，则会自动过滤；默认值：0.2*MaxChunkSize
      */
     public void setChunkOverlap(Long ChunkOverlap) {
         this.ChunkOverlap = ChunkOverlap;
