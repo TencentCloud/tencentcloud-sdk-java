@@ -131,6 +131,13 @@ OFF/ON/CREATING/DELETING
     private String PublicTlsAccessEndpoint;
 
     /**
+    * 公网IP是否复用
+    */
+    @SerializedName("PublicIpReused")
+    @Expose
+    private Boolean PublicIpReused;
+
+    /**
      * Get 集群公网接入地址
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PublicAccessEndpoint 集群公网接入地址
@@ -378,6 +385,22 @@ OFF/ON/CREATING/DELETING
         this.PublicTlsAccessEndpoint = PublicTlsAccessEndpoint;
     }
 
+    /**
+     * Get 公网IP是否复用 
+     * @return PublicIpReused 公网IP是否复用
+     */
+    public Boolean getPublicIpReused() {
+        return this.PublicIpReused;
+    }
+
+    /**
+     * Set 公网IP是否复用
+     * @param PublicIpReused 公网IP是否复用
+     */
+    public void setPublicIpReused(Boolean PublicIpReused) {
+        this.PublicIpReused = PublicIpReused;
+    }
+
     public RabbitMQClusterAccessInfo() {
     }
 
@@ -431,6 +454,9 @@ OFF/ON/CREATING/DELETING
         if (source.PublicTlsAccessEndpoint != null) {
             this.PublicTlsAccessEndpoint = new String(source.PublicTlsAccessEndpoint);
         }
+        if (source.PublicIpReused != null) {
+            this.PublicIpReused = new Boolean(source.PublicIpReused);
+        }
     }
 
 
@@ -453,6 +479,7 @@ OFF/ON/CREATING/DELETING
         this.setParamSimple(map, prefix + "WebConsoleDomainEndpoint", this.WebConsoleDomainEndpoint);
         this.setParamObj(map, prefix + "ControlPlaneEndpointInfo.", this.ControlPlaneEndpointInfo);
         this.setParamSimple(map, prefix + "PublicTlsAccessEndpoint", this.PublicTlsAccessEndpoint);
+        this.setParamSimple(map, prefix + "PublicIpReused", this.PublicIpReused);
 
     }
 }

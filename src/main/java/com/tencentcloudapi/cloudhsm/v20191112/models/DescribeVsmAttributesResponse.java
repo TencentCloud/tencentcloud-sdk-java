@@ -185,6 +185,13 @@ public class DescribeVsmAttributesResponse extends AbstractModel {
     private String Manufacturer;
 
     /**
+    * 0-关闭，1-开启
+    */
+    @SerializedName("PqcFlag")
+    @Expose
+    private Long PqcFlag;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -560,6 +567,22 @@ public class DescribeVsmAttributesResponse extends AbstractModel {
     }
 
     /**
+     * Get 0-关闭，1-开启 
+     * @return PqcFlag 0-关闭，1-开启
+     */
+    public Long getPqcFlag() {
+        return this.PqcFlag;
+    }
+
+    /**
+     * Set 0-关闭，1-开启
+     * @param PqcFlag 0-关闭，1-开启
+     */
+    public void setPqcFlag(Long PqcFlag) {
+        this.PqcFlag = PqcFlag;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -658,6 +681,9 @@ public class DescribeVsmAttributesResponse extends AbstractModel {
         if (source.Manufacturer != null) {
             this.Manufacturer = new String(source.Manufacturer);
         }
+        if (source.PqcFlag != null) {
+            this.PqcFlag = new Long(source.PqcFlag);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -691,6 +717,7 @@ public class DescribeVsmAttributesResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         this.setParamSimple(map, prefix + "Manufacturer", this.Manufacturer);
+        this.setParamSimple(map, prefix + "PqcFlag", this.PqcFlag);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

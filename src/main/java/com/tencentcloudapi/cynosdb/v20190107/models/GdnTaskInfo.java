@@ -66,7 +66,7 @@ public class GdnTaskInfo extends AbstractModel {
     private String StandbyClusterId;
 
     /**
-    * 从集群别名
+    * 从集群名称
     */
     @SerializedName("StandbyClusterName")
     @Expose
@@ -169,16 +169,16 @@ public class GdnTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 从集群别名 
-     * @return StandbyClusterName 从集群别名
+     * Get 从集群名称 
+     * @return StandbyClusterName 从集群名称
      */
     public String getStandbyClusterName() {
         return this.StandbyClusterName;
     }
 
     /**
-     * Set 从集群别名
-     * @param StandbyClusterName 从集群别名
+     * Set 从集群名称
+     * @param StandbyClusterName 从集群名称
      */
     public void setStandbyClusterName(String StandbyClusterName) {
         this.StandbyClusterName = StandbyClusterName;

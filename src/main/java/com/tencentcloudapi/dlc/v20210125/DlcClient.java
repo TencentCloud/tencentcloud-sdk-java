@@ -1284,6 +1284,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *该接口（DescribleTasks）用于查询任务列表
+     * @param req DescribeTaskListRequest
+     * @return DescribeTaskListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTaskListResponse DescribeTaskList(DescribeTaskListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTaskList", DescribeTaskListResponse.class);
+    }
+
+    /**
      *本接口（DescribeTaskLog）用于获取spark 作业任务日志详情
      * @param req DescribeTaskLogRequest
      * @return DescribeTaskLogResponse

@@ -73,6 +73,13 @@ public class DescribeRocketMQTopicsRequest extends AbstractModel {
     private String FilterGroup;
 
     /**
+    * 标签过滤器
+    */
+    @SerializedName("TagFilters")
+    @Expose
+    private TagFilter [] TagFilters;
+
+    /**
      * Get 查询偏移量 
      * @return Offset 查询偏移量
      */
@@ -184,6 +191,22 @@ public class DescribeRocketMQTopicsRequest extends AbstractModel {
         this.FilterGroup = FilterGroup;
     }
 
+    /**
+     * Get 标签过滤器 
+     * @return TagFilters 标签过滤器
+     */
+    public TagFilter [] getTagFilters() {
+        return this.TagFilters;
+    }
+
+    /**
+     * Set 标签过滤器
+     * @param TagFilters 标签过滤器
+     */
+    public void setTagFilters(TagFilter [] TagFilters) {
+        this.TagFilters = TagFilters;
+    }
+
     public DescribeRocketMQTopicsRequest() {
     }
 
@@ -216,6 +239,12 @@ public class DescribeRocketMQTopicsRequest extends AbstractModel {
         if (source.FilterGroup != null) {
             this.FilterGroup = new String(source.FilterGroup);
         }
+        if (source.TagFilters != null) {
+            this.TagFilters = new TagFilter[source.TagFilters.length];
+            for (int i = 0; i < source.TagFilters.length; i++) {
+                this.TagFilters[i] = new TagFilter(source.TagFilters[i]);
+            }
+        }
     }
 
 
@@ -230,6 +259,7 @@ public class DescribeRocketMQTopicsRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "FilterType.", this.FilterType);
         this.setParamSimple(map, prefix + "FilterName", this.FilterName);
         this.setParamSimple(map, prefix + "FilterGroup", this.FilterGroup);
+        this.setParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
 
     }
 }

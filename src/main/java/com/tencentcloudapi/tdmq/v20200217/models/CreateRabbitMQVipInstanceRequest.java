@@ -53,11 +53,11 @@ public class CreateRabbitMQVipInstanceRequest extends AbstractModel {
 
     /**
     * 集群的节点规格，需要输入对应的规格标识：
-2C8G：rabbit-vip-basic-2c8g
-4C16G：rabbit-vip-basic-4c16g
-8C32G：rabbit-vip-basic-8c32g
+2C8G：rabbit-vip-profession-2c8g
+4C16G：rabbit-vip-profession-4c16g
+8C32G：rabbit-vip-profession-8c32g
 16C32G：rabbit-vip-basic-4
-16C64G：rabbit-vip-basic-16c64g
+16C64G：rabbit-vip-profession-16c64g
 2C4G：rabbit-vip-basic-5
 4C8G：rabbit-vip-basic-1
 8C16G（已售罄）：rabbit-vip-basic-2
@@ -110,7 +110,7 @@ public class CreateRabbitMQVipInstanceRequest extends AbstractModel {
     private Long PayMode;
 
     /**
-    * 集群版本，不传默认为 3.8.30，可选值为 3.8.30 和 3.11.8
+    * 集群版本，不传默认为 3.8.30，可选值为 3.8.30、3.11.8和3.13.7
     */
     @SerializedName("ClusterVersion")
     @Expose
@@ -217,21 +217,21 @@ public class CreateRabbitMQVipInstanceRequest extends AbstractModel {
 
     /**
      * Get 集群的节点规格，需要输入对应的规格标识：
-2C8G：rabbit-vip-basic-2c8g
-4C16G：rabbit-vip-basic-4c16g
-8C32G：rabbit-vip-basic-8c32g
+2C8G：rabbit-vip-profession-2c8g
+4C16G：rabbit-vip-profession-4c16g
+8C32G：rabbit-vip-profession-8c32g
 16C32G：rabbit-vip-basic-4
-16C64G：rabbit-vip-basic-16c64g
+16C64G：rabbit-vip-profession-16c64g
 2C4G：rabbit-vip-basic-5
 4C8G：rabbit-vip-basic-1
 8C16G（已售罄）：rabbit-vip-basic-2
 不传默认为 4C8G：rabbit-vip-basic-1 
      * @return NodeSpec 集群的节点规格，需要输入对应的规格标识：
-2C8G：rabbit-vip-basic-2c8g
-4C16G：rabbit-vip-basic-4c16g
-8C32G：rabbit-vip-basic-8c32g
+2C8G：rabbit-vip-profession-2c8g
+4C16G：rabbit-vip-profession-4c16g
+8C32G：rabbit-vip-profession-8c32g
 16C32G：rabbit-vip-basic-4
-16C64G：rabbit-vip-basic-16c64g
+16C64G：rabbit-vip-profession-16c64g
 2C4G：rabbit-vip-basic-5
 4C8G：rabbit-vip-basic-1
 8C16G（已售罄）：rabbit-vip-basic-2
@@ -243,21 +243,21 @@ public class CreateRabbitMQVipInstanceRequest extends AbstractModel {
 
     /**
      * Set 集群的节点规格，需要输入对应的规格标识：
-2C8G：rabbit-vip-basic-2c8g
-4C16G：rabbit-vip-basic-4c16g
-8C32G：rabbit-vip-basic-8c32g
+2C8G：rabbit-vip-profession-2c8g
+4C16G：rabbit-vip-profession-4c16g
+8C32G：rabbit-vip-profession-8c32g
 16C32G：rabbit-vip-basic-4
-16C64G：rabbit-vip-basic-16c64g
+16C64G：rabbit-vip-profession-16c64g
 2C4G：rabbit-vip-basic-5
 4C8G：rabbit-vip-basic-1
 8C16G（已售罄）：rabbit-vip-basic-2
 不传默认为 4C8G：rabbit-vip-basic-1
      * @param NodeSpec 集群的节点规格，需要输入对应的规格标识：
-2C8G：rabbit-vip-basic-2c8g
-4C16G：rabbit-vip-basic-4c16g
-8C32G：rabbit-vip-basic-8c32g
+2C8G：rabbit-vip-profession-2c8g
+4C16G：rabbit-vip-profession-4c16g
+8C32G：rabbit-vip-profession-8c32g
 16C32G：rabbit-vip-basic-4
-16C64G：rabbit-vip-basic-16c64g
+16C64G：rabbit-vip-profession-16c64g
 2C4G：rabbit-vip-basic-5
 4C8G：rabbit-vip-basic-1
 8C16G（已售罄）：rabbit-vip-basic-2
@@ -364,16 +364,16 @@ public class CreateRabbitMQVipInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 集群版本，不传默认为 3.8.30，可选值为 3.8.30 和 3.11.8 
-     * @return ClusterVersion 集群版本，不传默认为 3.8.30，可选值为 3.8.30 和 3.11.8
+     * Get 集群版本，不传默认为 3.8.30，可选值为 3.8.30、3.11.8和3.13.7 
+     * @return ClusterVersion 集群版本，不传默认为 3.8.30，可选值为 3.8.30、3.11.8和3.13.7
      */
     public String getClusterVersion() {
         return this.ClusterVersion;
     }
 
     /**
-     * Set 集群版本，不传默认为 3.8.30，可选值为 3.8.30 和 3.11.8
-     * @param ClusterVersion 集群版本，不传默认为 3.8.30，可选值为 3.8.30 和 3.11.8
+     * Set 集群版本，不传默认为 3.8.30，可选值为 3.8.30、3.11.8和3.13.7
+     * @param ClusterVersion 集群版本，不传默认为 3.8.30，可选值为 3.8.30、3.11.8和3.13.7
      */
     public void setClusterVersion(String ClusterVersion) {
         this.ClusterVersion = ClusterVersion;

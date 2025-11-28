@@ -74,6 +74,13 @@ RESET：对原有不健康实例进行重装系统操作，可保持数据盘、
     private Boolean DesiredCapacitySyncWithMaxMinSize;
 
     /**
+    * 优先缩容不健康实例。若开启，缩容时会优先选择不健康实例。默认值为 False。
+    */
+    @SerializedName("PriorityScaleInUnhealthy")
+    @Expose
+    private Boolean PriorityScaleInUnhealthy;
+
+    /**
      * Get 开启监控不健康替换服务。若开启则对于云监控标记为不健康的实例，弹性伸缩服务会进行替换。若不指定该参数，则默认为 False。 
      * @return ReplaceMonitorUnhealthy 开启监控不健康替换服务。若开启则对于云监控标记为不健康的实例，弹性伸缩服务会进行替换。若不指定该参数，则默认为 False。
      */
@@ -201,6 +208,22 @@ RESET：对原有不健康实例进行重装系统操作，可保持数据盘、
         this.DesiredCapacitySyncWithMaxMinSize = DesiredCapacitySyncWithMaxMinSize;
     }
 
+    /**
+     * Get 优先缩容不健康实例。若开启，缩容时会优先选择不健康实例。默认值为 False。 
+     * @return PriorityScaleInUnhealthy 优先缩容不健康实例。若开启，缩容时会优先选择不健康实例。默认值为 False。
+     */
+    public Boolean getPriorityScaleInUnhealthy() {
+        return this.PriorityScaleInUnhealthy;
+    }
+
+    /**
+     * Set 优先缩容不健康实例。若开启，缩容时会优先选择不健康实例。默认值为 False。
+     * @param PriorityScaleInUnhealthy 优先缩容不健康实例。若开启，缩容时会优先选择不健康实例。默认值为 False。
+     */
+    public void setPriorityScaleInUnhealthy(Boolean PriorityScaleInUnhealthy) {
+        this.PriorityScaleInUnhealthy = PriorityScaleInUnhealthy;
+    }
+
     public ServiceSettings() {
     }
 
@@ -227,6 +250,9 @@ RESET：对原有不健康实例进行重装系统操作，可保持数据盘、
         if (source.DesiredCapacitySyncWithMaxMinSize != null) {
             this.DesiredCapacitySyncWithMaxMinSize = new Boolean(source.DesiredCapacitySyncWithMaxMinSize);
         }
+        if (source.PriorityScaleInUnhealthy != null) {
+            this.PriorityScaleInUnhealthy = new Boolean(source.PriorityScaleInUnhealthy);
+        }
     }
 
 
@@ -240,6 +266,7 @@ RESET：对原有不健康实例进行重装系统操作，可保持数据盘、
         this.setParamSimple(map, prefix + "ReplaceMode", this.ReplaceMode);
         this.setParamSimple(map, prefix + "AutoUpdateInstanceTags", this.AutoUpdateInstanceTags);
         this.setParamSimple(map, prefix + "DesiredCapacitySyncWithMaxMinSize", this.DesiredCapacitySyncWithMaxMinSize);
+        this.setParamSimple(map, prefix + "PriorityScaleInUnhealthy", this.PriorityScaleInUnhealthy);
 
     }
 }

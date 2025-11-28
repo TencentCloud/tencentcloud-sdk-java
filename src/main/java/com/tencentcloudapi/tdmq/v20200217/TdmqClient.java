@@ -1086,45 +1086,6 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *平滑迁移相关接口已迁移至trocket产品下，该接口已废弃
-
-用于查询RocketMQ平滑迁移任务列表
-     * @param req DescribeRocketMQSmoothMigrationTaskListRequest
-     * @return DescribeRocketMQSmoothMigrationTaskListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeRocketMQSmoothMigrationTaskListResponse DescribeRocketMQSmoothMigrationTaskList(DescribeRocketMQSmoothMigrationTaskListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeRocketMQSmoothMigrationTaskList", DescribeRocketMQSmoothMigrationTaskListResponse.class);
-    }
-
-    /**
-     *平滑迁移相关接口已迁移至trocket产品下，该接口已废弃
-
-平滑迁移过程获取源集群group列表接口
-     * @param req DescribeRocketMQSourceClusterGroupListRequest
-     * @return DescribeRocketMQSourceClusterGroupListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeRocketMQSourceClusterGroupListResponse DescribeRocketMQSourceClusterGroupList(DescribeRocketMQSourceClusterGroupListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeRocketMQSourceClusterGroupList", DescribeRocketMQSourceClusterGroupListResponse.class);
-    }
-
-    /**
-     *平滑迁移相关接口已迁移至trocket产品下，该接口已废弃
-
-平滑迁移过程获取源集群topic列表接口
-     * @param req DescribeRocketMQSourceClusterTopicListRequest
-     * @return DescribeRocketMQSourceClusterTopicListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeRocketMQSourceClusterTopicListResponse DescribeRocketMQSourceClusterTopicList(DescribeRocketMQSourceClusterTopicListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeRocketMQSourceClusterTopicList", DescribeRocketMQSourceClusterTopicListResponse.class);
-    }
-
-    /**
      *用于获取RocketMQ消费组订阅关系数据
      * @param req DescribeRocketMQSubscriptionsRequest
      * @return DescribeRocketMQSubscriptionsResponse
@@ -1144,6 +1105,17 @@ public class TdmqClient extends AbstractClient{
     public DescribeRocketMQTopUsagesResponse DescribeRocketMQTopUsages(DescribeRocketMQTopUsagesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRocketMQTopUsages", DescribeRocketMQTopUsagesResponse.class);
+    }
+
+    /**
+     *获取RocketMQ主题详情
+     * @param req DescribeRocketMQTopicRequest
+     * @return DescribeRocketMQTopicResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRocketMQTopicResponse DescribeRocketMQTopic(DescribeRocketMQTopicRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRocketMQTopic", DescribeRocketMQTopicResponse.class);
     }
 
     /**

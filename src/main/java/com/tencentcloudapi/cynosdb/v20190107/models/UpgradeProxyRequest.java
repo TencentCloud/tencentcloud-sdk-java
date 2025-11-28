@@ -80,6 +80,20 @@ public class UpgradeProxyRequest extends AbstractModel {
     private ProxyZone [] ProxyZones;
 
     /**
+    * 是否滚动升级
+    */
+    @SerializedName("IsRollUpgrade")
+    @Expose
+    private String IsRollUpgrade;
+
+    /**
+    * 滚动升级等待时间，单位：秒
+    */
+    @SerializedName("RollUpgradeWaitingTime")
+    @Expose
+    private Long RollUpgradeWaitingTime;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -207,6 +221,38 @@ public class UpgradeProxyRequest extends AbstractModel {
         this.ProxyZones = ProxyZones;
     }
 
+    /**
+     * Get 是否滚动升级 
+     * @return IsRollUpgrade 是否滚动升级
+     */
+    public String getIsRollUpgrade() {
+        return this.IsRollUpgrade;
+    }
+
+    /**
+     * Set 是否滚动升级
+     * @param IsRollUpgrade 是否滚动升级
+     */
+    public void setIsRollUpgrade(String IsRollUpgrade) {
+        this.IsRollUpgrade = IsRollUpgrade;
+    }
+
+    /**
+     * Get 滚动升级等待时间，单位：秒 
+     * @return RollUpgradeWaitingTime 滚动升级等待时间，单位：秒
+     */
+    public Long getRollUpgradeWaitingTime() {
+        return this.RollUpgradeWaitingTime;
+    }
+
+    /**
+     * Set 滚动升级等待时间，单位：秒
+     * @param RollUpgradeWaitingTime 滚动升级等待时间，单位：秒
+     */
+    public void setRollUpgradeWaitingTime(Long RollUpgradeWaitingTime) {
+        this.RollUpgradeWaitingTime = RollUpgradeWaitingTime;
+    }
+
     public UpgradeProxyRequest() {
     }
 
@@ -242,6 +288,12 @@ public class UpgradeProxyRequest extends AbstractModel {
                 this.ProxyZones[i] = new ProxyZone(source.ProxyZones[i]);
             }
         }
+        if (source.IsRollUpgrade != null) {
+            this.IsRollUpgrade = new String(source.IsRollUpgrade);
+        }
+        if (source.RollUpgradeWaitingTime != null) {
+            this.RollUpgradeWaitingTime = new Long(source.RollUpgradeWaitingTime);
+        }
     }
 
 
@@ -257,6 +309,8 @@ public class UpgradeProxyRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ReloadBalance", this.ReloadBalance);
         this.setParamSimple(map, prefix + "IsInMaintainPeriod", this.IsInMaintainPeriod);
         this.setParamArrayObj(map, prefix + "ProxyZones.", this.ProxyZones);
+        this.setParamSimple(map, prefix + "IsRollUpgrade", this.IsRollUpgrade);
+        this.setParamSimple(map, prefix + "RollUpgradeWaitingTime", this.RollUpgradeWaitingTime);
 
     }
 }

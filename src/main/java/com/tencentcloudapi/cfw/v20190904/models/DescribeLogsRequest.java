@@ -35,7 +35,7 @@ public class DescribeLogsRequest extends AbstractModel {
     private String Index;
 
     /**
-    * 每页条数，最大支持2000
+    * 每页条数，最大支持1000
     */
     @SerializedName("Limit")
     @Expose
@@ -102,16 +102,16 @@ public class DescribeLogsRequest extends AbstractModel {
     }
 
     /**
-     * Get 每页条数，最大支持2000 
-     * @return Limit 每页条数，最大支持2000
+     * Get 每页条数，最大支持1000 
+     * @return Limit 每页条数，最大支持1000
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页条数，最大支持2000
-     * @param Limit 每页条数，最大支持2000
+     * Set 每页条数，最大支持1000
+     * @param Limit 每页条数，最大支持1000
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

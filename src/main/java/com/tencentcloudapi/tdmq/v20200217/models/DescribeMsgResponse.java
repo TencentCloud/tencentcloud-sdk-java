@@ -66,6 +66,22 @@ public class DescribeMsgResponse extends AbstractModel {
     private String ProducerName;
 
     /**
+    * 消息 key
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Key")
+    @Expose
+    private String Key;
+
+    /**
+    * 消息的元数据信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Metadata")
+    @Expose
+    private String Metadata;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -169,6 +185,46 @@ public class DescribeMsgResponse extends AbstractModel {
     }
 
     /**
+     * Get 消息 key
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Key 消息 key
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getKey() {
+        return this.Key;
+    }
+
+    /**
+     * Set 消息 key
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Key 消息 key
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKey(String Key) {
+        this.Key = Key;
+    }
+
+    /**
+     * Get 消息的元数据信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Metadata 消息的元数据信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMetadata() {
+        return this.Metadata;
+    }
+
+    /**
+     * Set 消息的元数据信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Metadata 消息的元数据信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMetadata(String Metadata) {
+        this.Metadata = Metadata;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -210,6 +266,12 @@ public class DescribeMsgResponse extends AbstractModel {
         if (source.ProducerName != null) {
             this.ProducerName = new String(source.ProducerName);
         }
+        if (source.Key != null) {
+            this.Key = new String(source.Key);
+        }
+        if (source.Metadata != null) {
+            this.Metadata = new String(source.Metadata);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -226,6 +288,8 @@ public class DescribeMsgResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ProduceTime", this.ProduceTime);
         this.setParamSimple(map, prefix + "MsgId", this.MsgId);
         this.setParamSimple(map, prefix + "ProducerName", this.ProducerName);
+        this.setParamSimple(map, prefix + "Key", this.Key);
+        this.setParamSimple(map, prefix + "Metadata", this.Metadata);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

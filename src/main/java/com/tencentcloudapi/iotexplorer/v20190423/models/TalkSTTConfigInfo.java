@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TalkSTTConfigInfo extends AbstractModel {
 
     /**
-    * 支持的STT类型，tencent-腾讯；azure-亚马逊；volcengine-火山引擎；deepgram-Deepgram;系统默认-tencent。
+    * 支持的STT类型，tencent-腾讯；azure-亚马逊；deepgram-Deepgram;系统默认-tencent。
     */
     @SerializedName("STTType")
     @Expose
@@ -59,16 +59,7 @@ public class TalkSTTConfigInfo extends AbstractModel {
   "SubscriptionKey": "*****"
 }
 ```
-## volcengine
-```
-{
-  "AppId": 123456,
-  "AccessToken": "*****",
-  "ResourceId": "SecretKey****",
-  "ModelName": "16k_zh",
-  "Language":""
-}
-```
+
 ## deepgram
 ```
 {
@@ -85,16 +76,16 @@ public class TalkSTTConfigInfo extends AbstractModel {
     private String Config;
 
     /**
-     * Get 支持的STT类型，tencent-腾讯；azure-亚马逊；volcengine-火山引擎；deepgram-Deepgram;系统默认-tencent。 
-     * @return STTType 支持的STT类型，tencent-腾讯；azure-亚马逊；volcengine-火山引擎；deepgram-Deepgram;系统默认-tencent。
+     * Get 支持的STT类型，tencent-腾讯；azure-亚马逊；deepgram-Deepgram;系统默认-tencent。 
+     * @return STTType 支持的STT类型，tencent-腾讯；azure-亚马逊；deepgram-Deepgram;系统默认-tencent。
      */
     public String getSTTType() {
         return this.STTType;
     }
 
     /**
-     * Set 支持的STT类型，tencent-腾讯；azure-亚马逊；volcengine-火山引擎；deepgram-Deepgram;系统默认-tencent。
-     * @param STTType 支持的STT类型，tencent-腾讯；azure-亚马逊；volcengine-火山引擎；deepgram-Deepgram;系统默认-tencent。
+     * Set 支持的STT类型，tencent-腾讯；azure-亚马逊；deepgram-Deepgram;系统默认-tencent。
+     * @param STTType 支持的STT类型，tencent-腾讯；azure-亚马逊；deepgram-Deepgram;系统默认-tencent。
      */
     public void setSTTType(String STTType) {
         this.STTType = STTType;
@@ -138,16 +129,7 @@ public class TalkSTTConfigInfo extends AbstractModel {
   "SubscriptionKey": "*****"
 }
 ```
-## volcengine
-```
-{
-  "AppId": 123456,
-  "AccessToken": "*****",
-  "ResourceId": "SecretKey****",
-  "ModelName": "16k_zh",
-  "Language":""
-}
-```
+
 ## deepgram
 ```
 {
@@ -179,16 +161,7 @@ public class TalkSTTConfigInfo extends AbstractModel {
   "SubscriptionKey": "*****"
 }
 ```
-## volcengine
-```
-{
-  "AppId": 123456,
-  "AccessToken": "*****",
-  "ResourceId": "SecretKey****",
-  "ModelName": "16k_zh",
-  "Language":""
-}
-```
+
 ## deepgram
 ```
 {
@@ -226,16 +199,7 @@ public class TalkSTTConfigInfo extends AbstractModel {
   "SubscriptionKey": "*****"
 }
 ```
-## volcengine
-```
-{
-  "AppId": 123456,
-  "AccessToken": "*****",
-  "ResourceId": "SecretKey****",
-  "ModelName": "16k_zh",
-  "Language":""
-}
-```
+
 ## deepgram
 ```
 {
@@ -267,16 +231,7 @@ public class TalkSTTConfigInfo extends AbstractModel {
   "SubscriptionKey": "*****"
 }
 ```
-## volcengine
-```
-{
-  "AppId": 123456,
-  "AccessToken": "*****",
-  "ResourceId": "SecretKey****",
-  "ModelName": "16k_zh",
-  "Language":""
-}
-```
+
 ## deepgram
 ```
 {

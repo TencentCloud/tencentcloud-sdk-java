@@ -84,6 +84,13 @@ public class ServerPushText extends AbstractModel {
     private Boolean AddHistory;
 
     /**
+    * 如果填写，会和字幕绑定发送到端上，注意确保内容为json字符串
+    */
+    @SerializedName("MetaInfo")
+    @Expose
+    private String MetaInfo;
+
+    /**
      * Get 服务端推送播报文本 
      * @return Text 服务端推送播报文本
      */
@@ -239,6 +246,22 @@ public class ServerPushText extends AbstractModel {
         this.AddHistory = AddHistory;
     }
 
+    /**
+     * Get 如果填写，会和字幕绑定发送到端上，注意确保内容为json字符串 
+     * @return MetaInfo 如果填写，会和字幕绑定发送到端上，注意确保内容为json字符串
+     */
+    public String getMetaInfo() {
+        return this.MetaInfo;
+    }
+
+    /**
+     * Set 如果填写，会和字幕绑定发送到端上，注意确保内容为json字符串
+     * @param MetaInfo 如果填写，会和字幕绑定发送到端上，注意确保内容为json字符串
+     */
+    public void setMetaInfo(String MetaInfo) {
+        this.MetaInfo = MetaInfo;
+    }
+
     public ServerPushText() {
     }
 
@@ -268,6 +291,9 @@ public class ServerPushText extends AbstractModel {
         if (source.AddHistory != null) {
             this.AddHistory = new Boolean(source.AddHistory);
         }
+        if (source.MetaInfo != null) {
+            this.MetaInfo = new String(source.MetaInfo);
+        }
     }
 
 
@@ -282,6 +308,7 @@ public class ServerPushText extends AbstractModel {
         this.setParamSimple(map, prefix + "DropMode", this.DropMode);
         this.setParamSimple(map, prefix + "Priority", this.Priority);
         this.setParamSimple(map, prefix + "AddHistory", this.AddHistory);
+        this.setParamSimple(map, prefix + "MetaInfo", this.MetaInfo);
 
     }
 }

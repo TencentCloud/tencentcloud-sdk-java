@@ -105,6 +105,17 @@ public class CreateTopicRequest extends AbstractModel {
     private Long HotPeriod;
 
     /**
+    * 加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。
+0或者不传： 不加密
+1：kms-cls 云产品密钥加密
+
+支持地域：ap-beijing,ap-guangzhou,ap-shanghai,ap-singapore,ap-bangkok,ap-jakarta,eu-frankfurt,ap-seoul,ap-tokyo
+    */
+    @SerializedName("Encryption")
+    @Expose
+    private Long Encryption;
+
+    /**
     * 主题类型
 - 0:日志主题，默认值
 - 1:指标主题
@@ -350,6 +361,38 @@ public class CreateTopicRequest extends AbstractModel {
     }
 
     /**
+     * Get 加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。
+0或者不传： 不加密
+1：kms-cls 云产品密钥加密
+
+支持地域：ap-beijing,ap-guangzhou,ap-shanghai,ap-singapore,ap-bangkok,ap-jakarta,eu-frankfurt,ap-seoul,ap-tokyo 
+     * @return Encryption 加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。
+0或者不传： 不加密
+1：kms-cls 云产品密钥加密
+
+支持地域：ap-beijing,ap-guangzhou,ap-shanghai,ap-singapore,ap-bangkok,ap-jakarta,eu-frankfurt,ap-seoul,ap-tokyo
+     */
+    public Long getEncryption() {
+        return this.Encryption;
+    }
+
+    /**
+     * Set 加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。
+0或者不传： 不加密
+1：kms-cls 云产品密钥加密
+
+支持地域：ap-beijing,ap-guangzhou,ap-shanghai,ap-singapore,ap-bangkok,ap-jakarta,eu-frankfurt,ap-seoul,ap-tokyo
+     * @param Encryption 加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。
+0或者不传： 不加密
+1：kms-cls 云产品密钥加密
+
+支持地域：ap-beijing,ap-guangzhou,ap-shanghai,ap-singapore,ap-bangkok,ap-jakarta,eu-frankfurt,ap-seoul,ap-tokyo
+     */
+    public void setEncryption(Long Encryption) {
+        this.Encryption = Encryption;
+    }
+
+    /**
      * Get 主题类型
 - 0:日志主题，默认值
 - 1:指标主题 
@@ -494,6 +537,9 @@ public class CreateTopicRequest extends AbstractModel {
         if (source.HotPeriod != null) {
             this.HotPeriod = new Long(source.HotPeriod);
         }
+        if (source.Encryption != null) {
+            this.Encryption = new Long(source.Encryption);
+        }
         if (source.BizType != null) {
             this.BizType = new Long(source.BizType);
         }
@@ -526,6 +572,7 @@ public class CreateTopicRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "Describes", this.Describes);
         this.setParamSimple(map, prefix + "HotPeriod", this.HotPeriod);
+        this.setParamSimple(map, prefix + "Encryption", this.Encryption);
         this.setParamSimple(map, prefix + "BizType", this.BizType);
         this.setParamSimple(map, prefix + "TopicId", this.TopicId);
         this.setParamSimple(map, prefix + "IsWebTracking", this.IsWebTracking);

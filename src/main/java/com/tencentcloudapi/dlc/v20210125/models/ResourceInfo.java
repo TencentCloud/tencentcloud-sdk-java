@@ -74,6 +74,13 @@ public class ResourceInfo extends AbstractModel {
     private String ResourceGroupName;
 
     /**
+    * 资源配置信息
+    */
+    @SerializedName("ResourceConf")
+    @Expose
+    private ResourceConf ResourceConf;
+
+    /**
      * Get 归属类型 
      * @return AttributionType 归属类型
      */
@@ -189,6 +196,22 @@ public class ResourceInfo extends AbstractModel {
         this.ResourceGroupName = ResourceGroupName;
     }
 
+    /**
+     * Get 资源配置信息 
+     * @return ResourceConf 资源配置信息
+     */
+    public ResourceConf getResourceConf() {
+        return this.ResourceConf;
+    }
+
+    /**
+     * Set 资源配置信息
+     * @param ResourceConf 资源配置信息
+     */
+    public void setResourceConf(ResourceConf ResourceConf) {
+        this.ResourceConf = ResourceConf;
+    }
+
     public ResourceInfo() {
     }
 
@@ -221,6 +244,9 @@ public class ResourceInfo extends AbstractModel {
         if (source.ResourceGroupName != null) {
             this.ResourceGroupName = new String(source.ResourceGroupName);
         }
+        if (source.ResourceConf != null) {
+            this.ResourceConf = new ResourceConf(source.ResourceConf);
+        }
     }
 
 
@@ -235,6 +261,7 @@ public class ResourceInfo extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Favor.", this.Favor);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
+        this.setParamObj(map, prefix + "ResourceConf.", this.ResourceConf);
 
     }
 }

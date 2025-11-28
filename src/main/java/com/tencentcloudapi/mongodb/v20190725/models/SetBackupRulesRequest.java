@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SetBackupRulesRequest extends AbstractModel {
 
     /**
-    * 实例 ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+    * 实例id，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -51,6 +51,13 @@ public class SetBackupRulesRequest extends AbstractModel {
     private Long BackupTime;
 
     /**
+    * 自动备份频率，内部展示，默认取值为24h。
+    */
+    @SerializedName("BackupFrequency")
+    @Expose
+    private Long BackupFrequency;
+
+    /**
     * 设置自动备份发生错误时，是否发送失败告警。
 - true：发送。
 - false：不发送。
@@ -67,16 +74,65 @@ public class SetBackupRulesRequest extends AbstractModel {
     private Long BackupRetentionPeriod;
 
     /**
-     * Get 实例 ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。 
-     * @return InstanceId 实例 ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+    * 周几备份，0-6，逗号分割。仅对高级备份生效
+    */
+    @SerializedName("ActiveWeekdays")
+    @Expose
+    private String ActiveWeekdays;
+
+    /**
+    * 长期保留周期，周weekly，月monthly，空不开启
+    */
+    @SerializedName("LongTermUnit")
+    @Expose
+    private String LongTermUnit;
+
+    /**
+    * 长期保留哪些天的，周0-6，月1-31，逗号分割
+    */
+    @SerializedName("LongTermActiveDays")
+    @Expose
+    private String LongTermActiveDays;
+
+    /**
+    * 长期备份保留多少天
+    */
+    @SerializedName("LongTermExpiredDays")
+    @Expose
+    private Long LongTermExpiredDays;
+
+    /**
+    * 增量保留多少天
+    */
+    @SerializedName("OplogExpiredDays")
+    @Expose
+    private Long OplogExpiredDays;
+
+    /**
+    * 备份版本。旧版本备份为0，高级备份为1。开启高级备份此值传1
+    */
+    @SerializedName("BackupVersion")
+    @Expose
+    private Long BackupVersion;
+
+    /**
+    * 告警额度。50-300
+    */
+    @SerializedName("AlarmWaterLevel")
+    @Expose
+    private Long AlarmWaterLevel;
+
+    /**
+     * Get 实例id，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。 
+     * @return InstanceId 实例id，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
-     * @param InstanceId 实例 ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * Set 实例id，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * @param InstanceId 实例id，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -139,6 +195,22 @@ public class SetBackupRulesRequest extends AbstractModel {
     }
 
     /**
+     * Get 自动备份频率，内部展示，默认取值为24h。 
+     * @return BackupFrequency 自动备份频率，内部展示，默认取值为24h。
+     */
+    public Long getBackupFrequency() {
+        return this.BackupFrequency;
+    }
+
+    /**
+     * Set 自动备份频率，内部展示，默认取值为24h。
+     * @param BackupFrequency 自动备份频率，内部展示，默认取值为24h。
+     */
+    public void setBackupFrequency(Long BackupFrequency) {
+        this.BackupFrequency = BackupFrequency;
+    }
+
+    /**
      * Get 设置自动备份发生错误时，是否发送失败告警。
 - true：发送。
 - false：不发送。 
@@ -178,6 +250,118 @@ public class SetBackupRulesRequest extends AbstractModel {
         this.BackupRetentionPeriod = BackupRetentionPeriod;
     }
 
+    /**
+     * Get 周几备份，0-6，逗号分割。仅对高级备份生效 
+     * @return ActiveWeekdays 周几备份，0-6，逗号分割。仅对高级备份生效
+     */
+    public String getActiveWeekdays() {
+        return this.ActiveWeekdays;
+    }
+
+    /**
+     * Set 周几备份，0-6，逗号分割。仅对高级备份生效
+     * @param ActiveWeekdays 周几备份，0-6，逗号分割。仅对高级备份生效
+     */
+    public void setActiveWeekdays(String ActiveWeekdays) {
+        this.ActiveWeekdays = ActiveWeekdays;
+    }
+
+    /**
+     * Get 长期保留周期，周weekly，月monthly，空不开启 
+     * @return LongTermUnit 长期保留周期，周weekly，月monthly，空不开启
+     */
+    public String getLongTermUnit() {
+        return this.LongTermUnit;
+    }
+
+    /**
+     * Set 长期保留周期，周weekly，月monthly，空不开启
+     * @param LongTermUnit 长期保留周期，周weekly，月monthly，空不开启
+     */
+    public void setLongTermUnit(String LongTermUnit) {
+        this.LongTermUnit = LongTermUnit;
+    }
+
+    /**
+     * Get 长期保留哪些天的，周0-6，月1-31，逗号分割 
+     * @return LongTermActiveDays 长期保留哪些天的，周0-6，月1-31，逗号分割
+     */
+    public String getLongTermActiveDays() {
+        return this.LongTermActiveDays;
+    }
+
+    /**
+     * Set 长期保留哪些天的，周0-6，月1-31，逗号分割
+     * @param LongTermActiveDays 长期保留哪些天的，周0-6，月1-31，逗号分割
+     */
+    public void setLongTermActiveDays(String LongTermActiveDays) {
+        this.LongTermActiveDays = LongTermActiveDays;
+    }
+
+    /**
+     * Get 长期备份保留多少天 
+     * @return LongTermExpiredDays 长期备份保留多少天
+     */
+    public Long getLongTermExpiredDays() {
+        return this.LongTermExpiredDays;
+    }
+
+    /**
+     * Set 长期备份保留多少天
+     * @param LongTermExpiredDays 长期备份保留多少天
+     */
+    public void setLongTermExpiredDays(Long LongTermExpiredDays) {
+        this.LongTermExpiredDays = LongTermExpiredDays;
+    }
+
+    /**
+     * Get 增量保留多少天 
+     * @return OplogExpiredDays 增量保留多少天
+     */
+    public Long getOplogExpiredDays() {
+        return this.OplogExpiredDays;
+    }
+
+    /**
+     * Set 增量保留多少天
+     * @param OplogExpiredDays 增量保留多少天
+     */
+    public void setOplogExpiredDays(Long OplogExpiredDays) {
+        this.OplogExpiredDays = OplogExpiredDays;
+    }
+
+    /**
+     * Get 备份版本。旧版本备份为0，高级备份为1。开启高级备份此值传1 
+     * @return BackupVersion 备份版本。旧版本备份为0，高级备份为1。开启高级备份此值传1
+     */
+    public Long getBackupVersion() {
+        return this.BackupVersion;
+    }
+
+    /**
+     * Set 备份版本。旧版本备份为0，高级备份为1。开启高级备份此值传1
+     * @param BackupVersion 备份版本。旧版本备份为0，高级备份为1。开启高级备份此值传1
+     */
+    public void setBackupVersion(Long BackupVersion) {
+        this.BackupVersion = BackupVersion;
+    }
+
+    /**
+     * Get 告警额度。50-300 
+     * @return AlarmWaterLevel 告警额度。50-300
+     */
+    public Long getAlarmWaterLevel() {
+        return this.AlarmWaterLevel;
+    }
+
+    /**
+     * Set 告警额度。50-300
+     * @param AlarmWaterLevel 告警额度。50-300
+     */
+    public void setAlarmWaterLevel(Long AlarmWaterLevel) {
+        this.AlarmWaterLevel = AlarmWaterLevel;
+    }
+
     public SetBackupRulesRequest() {
     }
 
@@ -195,11 +379,35 @@ public class SetBackupRulesRequest extends AbstractModel {
         if (source.BackupTime != null) {
             this.BackupTime = new Long(source.BackupTime);
         }
+        if (source.BackupFrequency != null) {
+            this.BackupFrequency = new Long(source.BackupFrequency);
+        }
         if (source.Notify != null) {
             this.Notify = new Boolean(source.Notify);
         }
         if (source.BackupRetentionPeriod != null) {
             this.BackupRetentionPeriod = new Long(source.BackupRetentionPeriod);
+        }
+        if (source.ActiveWeekdays != null) {
+            this.ActiveWeekdays = new String(source.ActiveWeekdays);
+        }
+        if (source.LongTermUnit != null) {
+            this.LongTermUnit = new String(source.LongTermUnit);
+        }
+        if (source.LongTermActiveDays != null) {
+            this.LongTermActiveDays = new String(source.LongTermActiveDays);
+        }
+        if (source.LongTermExpiredDays != null) {
+            this.LongTermExpiredDays = new Long(source.LongTermExpiredDays);
+        }
+        if (source.OplogExpiredDays != null) {
+            this.OplogExpiredDays = new Long(source.OplogExpiredDays);
+        }
+        if (source.BackupVersion != null) {
+            this.BackupVersion = new Long(source.BackupVersion);
+        }
+        if (source.AlarmWaterLevel != null) {
+            this.AlarmWaterLevel = new Long(source.AlarmWaterLevel);
         }
     }
 
@@ -211,8 +419,16 @@ public class SetBackupRulesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
         this.setParamSimple(map, prefix + "BackupTime", this.BackupTime);
+        this.setParamSimple(map, prefix + "BackupFrequency", this.BackupFrequency);
         this.setParamSimple(map, prefix + "Notify", this.Notify);
         this.setParamSimple(map, prefix + "BackupRetentionPeriod", this.BackupRetentionPeriod);
+        this.setParamSimple(map, prefix + "ActiveWeekdays", this.ActiveWeekdays);
+        this.setParamSimple(map, prefix + "LongTermUnit", this.LongTermUnit);
+        this.setParamSimple(map, prefix + "LongTermActiveDays", this.LongTermActiveDays);
+        this.setParamSimple(map, prefix + "LongTermExpiredDays", this.LongTermExpiredDays);
+        this.setParamSimple(map, prefix + "OplogExpiredDays", this.OplogExpiredDays);
+        this.setParamSimple(map, prefix + "BackupVersion", this.BackupVersion);
+        this.setParamSimple(map, prefix + "AlarmWaterLevel", this.AlarmWaterLevel);
 
     }
 }

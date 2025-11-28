@@ -40,6 +40,34 @@ public class InstanceConcurrencyConfig extends AbstractModel {
     private Long MaxConcurrency;
 
     /**
+    * 安全隔离开关
+    */
+    @SerializedName("InstanceIsolationEnabled")
+    @Expose
+    private String InstanceIsolationEnabled;
+
+    /**
+    * 基于会话：Session-Based ， 或者基于请求：Request-Based，二选一
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
+    * 动态并发参数
+    */
+    @SerializedName("MixNodeConfig")
+    @Expose
+    private MixNodeConfig [] MixNodeConfig;
+
+    /**
+    * 会话配置参数
+    */
+    @SerializedName("SessionConfig")
+    @Expose
+    private SessionConfig SessionConfig;
+
+    /**
      * Get 是否开启智能动态并发。'FALSE'时是静态并发。''时取消多并发配置。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DynamicEnabled 是否开启智能动态并发。'FALSE'时是静态并发。''时取消多并发配置。
@@ -79,6 +107,70 @@ public class InstanceConcurrencyConfig extends AbstractModel {
         this.MaxConcurrency = MaxConcurrency;
     }
 
+    /**
+     * Get 安全隔离开关 
+     * @return InstanceIsolationEnabled 安全隔离开关
+     */
+    public String getInstanceIsolationEnabled() {
+        return this.InstanceIsolationEnabled;
+    }
+
+    /**
+     * Set 安全隔离开关
+     * @param InstanceIsolationEnabled 安全隔离开关
+     */
+    public void setInstanceIsolationEnabled(String InstanceIsolationEnabled) {
+        this.InstanceIsolationEnabled = InstanceIsolationEnabled;
+    }
+
+    /**
+     * Get 基于会话：Session-Based ， 或者基于请求：Request-Based，二选一 
+     * @return Type 基于会话：Session-Based ， 或者基于请求：Request-Based，二选一
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 基于会话：Session-Based ， 或者基于请求：Request-Based，二选一
+     * @param Type 基于会话：Session-Based ， 或者基于请求：Request-Based，二选一
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get 动态并发参数 
+     * @return MixNodeConfig 动态并发参数
+     */
+    public MixNodeConfig [] getMixNodeConfig() {
+        return this.MixNodeConfig;
+    }
+
+    /**
+     * Set 动态并发参数
+     * @param MixNodeConfig 动态并发参数
+     */
+    public void setMixNodeConfig(MixNodeConfig [] MixNodeConfig) {
+        this.MixNodeConfig = MixNodeConfig;
+    }
+
+    /**
+     * Get 会话配置参数 
+     * @return SessionConfig 会话配置参数
+     */
+    public SessionConfig getSessionConfig() {
+        return this.SessionConfig;
+    }
+
+    /**
+     * Set 会话配置参数
+     * @param SessionConfig 会话配置参数
+     */
+    public void setSessionConfig(SessionConfig SessionConfig) {
+        this.SessionConfig = SessionConfig;
+    }
+
     public InstanceConcurrencyConfig() {
     }
 
@@ -93,6 +185,21 @@ public class InstanceConcurrencyConfig extends AbstractModel {
         if (source.MaxConcurrency != null) {
             this.MaxConcurrency = new Long(source.MaxConcurrency);
         }
+        if (source.InstanceIsolationEnabled != null) {
+            this.InstanceIsolationEnabled = new String(source.InstanceIsolationEnabled);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.MixNodeConfig != null) {
+            this.MixNodeConfig = new MixNodeConfig[source.MixNodeConfig.length];
+            for (int i = 0; i < source.MixNodeConfig.length; i++) {
+                this.MixNodeConfig[i] = new MixNodeConfig(source.MixNodeConfig[i]);
+            }
+        }
+        if (source.SessionConfig != null) {
+            this.SessionConfig = new SessionConfig(source.SessionConfig);
+        }
     }
 
 
@@ -102,6 +209,10 @@ public class InstanceConcurrencyConfig extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DynamicEnabled", this.DynamicEnabled);
         this.setParamSimple(map, prefix + "MaxConcurrency", this.MaxConcurrency);
+        this.setParamSimple(map, prefix + "InstanceIsolationEnabled", this.InstanceIsolationEnabled);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamArrayObj(map, prefix + "MixNodeConfig.", this.MixNodeConfig);
+        this.setParamObj(map, prefix + "SessionConfig.", this.SessionConfig);
 
     }
 }

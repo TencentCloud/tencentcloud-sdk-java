@@ -51,10 +51,7 @@ WEWORKAPP: 企业微信
     private String CustomUserId;
 
     /**
-    * 补充企业签署人员工姓名
-<ul>
-<li>ApproverSource!=WEWORKAPP时，必传</li>
-</ul>
+    * 企业签署人的员工姓名。除企业微信应用场景（ApproverSource设置为WEWORKAPP）外，本字段为必填。
     */
     @SerializedName("ApproverName")
     @Expose
@@ -202,28 +199,16 @@ WEWORKAPP: 企业微信
     }
 
     /**
-     * Get 补充企业签署人员工姓名
-<ul>
-<li>ApproverSource!=WEWORKAPP时，必传</li>
-</ul> 
-     * @return ApproverName 补充企业签署人员工姓名
-<ul>
-<li>ApproverSource!=WEWORKAPP时，必传</li>
-</ul>
+     * Get 企业签署人的员工姓名。除企业微信应用场景（ApproverSource设置为WEWORKAPP）外，本字段为必填。 
+     * @return ApproverName 企业签署人的员工姓名。除企业微信应用场景（ApproverSource设置为WEWORKAPP）外，本字段为必填。
      */
     public String getApproverName() {
         return this.ApproverName;
     }
 
     /**
-     * Set 补充企业签署人员工姓名
-<ul>
-<li>ApproverSource!=WEWORKAPP时，必传</li>
-</ul>
-     * @param ApproverName 补充企业签署人员工姓名
-<ul>
-<li>ApproverSource!=WEWORKAPP时，必传</li>
-</ul>
+     * Set 企业签署人的员工姓名。除企业微信应用场景（ApproverSource设置为WEWORKAPP）外，本字段为必填。
+     * @param ApproverName 企业签署人的员工姓名。除企业微信应用场景（ApproverSource设置为WEWORKAPP）外，本字段为必填。
      */
     public void setApproverName(String ApproverName) {
         this.ApproverName = ApproverName;

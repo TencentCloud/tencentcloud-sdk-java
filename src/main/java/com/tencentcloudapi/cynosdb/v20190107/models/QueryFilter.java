@@ -125,7 +125,9 @@ public class QueryFilter extends AbstractModel {
     /**
      * Get 操作符 
      * @return Operator 操作符
+     * @deprecated
      */
+    @Deprecated
     public String getOperator() {
         return this.Operator;
     }
@@ -133,7 +135,9 @@ public class QueryFilter extends AbstractModel {
     /**
      * Set 操作符
      * @param Operator 操作符
+     * @deprecated
      */
+    @Deprecated
     public void setOperator(String Operator) {
         this.Operator = Operator;
     }

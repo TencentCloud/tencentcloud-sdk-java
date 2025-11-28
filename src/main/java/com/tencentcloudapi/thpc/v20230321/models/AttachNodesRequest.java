@@ -61,6 +61,13 @@ SLURM默认队列为：compute。
     private String ResourceType;
 
     /**
+    * 提供给实例使用的用户数据，需要以 base64 方式编码，支持的最大数据大小为 16KB。关于获取此参数的详细介绍，请参阅[Windows](https://cloud.tencent.com/document/product/213/17526)和[Linux](https://cloud.tencent.com/document/product/213/17525)启动时运行命令。
+    */
+    @SerializedName("UserData")
+    @Expose
+    private String UserData;
+
+    /**
      * Get 集群id 
      * @return ClusterId 集群id
      */
@@ -148,6 +155,22 @@ SLURM默认队列为：compute。
         this.ResourceType = ResourceType;
     }
 
+    /**
+     * Get 提供给实例使用的用户数据，需要以 base64 方式编码，支持的最大数据大小为 16KB。关于获取此参数的详细介绍，请参阅[Windows](https://cloud.tencent.com/document/product/213/17526)和[Linux](https://cloud.tencent.com/document/product/213/17525)启动时运行命令。 
+     * @return UserData 提供给实例使用的用户数据，需要以 base64 方式编码，支持的最大数据大小为 16KB。关于获取此参数的详细介绍，请参阅[Windows](https://cloud.tencent.com/document/product/213/17526)和[Linux](https://cloud.tencent.com/document/product/213/17525)启动时运行命令。
+     */
+    public String getUserData() {
+        return this.UserData;
+    }
+
+    /**
+     * Set 提供给实例使用的用户数据，需要以 base64 方式编码，支持的最大数据大小为 16KB。关于获取此参数的详细介绍，请参阅[Windows](https://cloud.tencent.com/document/product/213/17526)和[Linux](https://cloud.tencent.com/document/product/213/17525)启动时运行命令。
+     * @param UserData 提供给实例使用的用户数据，需要以 base64 方式编码，支持的最大数据大小为 16KB。关于获取此参数的详细介绍，请参阅[Windows](https://cloud.tencent.com/document/product/213/17526)和[Linux](https://cloud.tencent.com/document/product/213/17525)启动时运行命令。
+     */
+    public void setUserData(String UserData) {
+        this.UserData = UserData;
+    }
+
     public AttachNodesRequest() {
     }
 
@@ -174,6 +197,9 @@ SLURM默认队列为：compute。
         if (source.ResourceType != null) {
             this.ResourceType = new String(source.ResourceType);
         }
+        if (source.UserData != null) {
+            this.UserData = new String(source.UserData);
+        }
     }
 
 
@@ -186,6 +212,7 @@ SLURM默认队列为：compute。
         this.setParamSimple(map, prefix + "QueueName", this.QueueName);
         this.setParamSimple(map, prefix + "ImageId", this.ImageId);
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
+        this.setParamSimple(map, prefix + "UserData", this.UserData);
 
     }
 }

@@ -114,6 +114,13 @@ public class RocketMQTopic extends AbstractModel {
     private RocketMQSubscription [] SubscriptionData;
 
     /**
+    * 绑定的标签列表
+    */
+    @SerializedName("TagList")
+    @Expose
+    private Tag [] TagList;
+
+    /**
      * Get 主题名称 
      * @return Name 主题名称
      */
@@ -329,6 +336,22 @@ public class RocketMQTopic extends AbstractModel {
         this.SubscriptionData = SubscriptionData;
     }
 
+    /**
+     * Get 绑定的标签列表 
+     * @return TagList 绑定的标签列表
+     */
+    public Tag [] getTagList() {
+        return this.TagList;
+    }
+
+    /**
+     * Set 绑定的标签列表
+     * @param TagList 绑定的标签列表
+     */
+    public void setTagList(Tag [] TagList) {
+        this.TagList = TagList;
+    }
+
     public RocketMQTopic() {
     }
 
@@ -376,6 +399,12 @@ public class RocketMQTopic extends AbstractModel {
                 this.SubscriptionData[i] = new RocketMQSubscription(source.SubscriptionData[i]);
             }
         }
+        if (source.TagList != null) {
+            this.TagList = new Tag[source.TagList.length];
+            for (int i = 0; i < source.TagList.length; i++) {
+                this.TagList[i] = new Tag(source.TagList[i]);
+            }
+        }
     }
 
 
@@ -395,6 +424,7 @@ public class RocketMQTopic extends AbstractModel {
         this.setParamSimple(map, prefix + "LastUpdateTime", this.LastUpdateTime);
         this.setParamSimple(map, prefix + "SubscriptionCount", this.SubscriptionCount);
         this.setParamArrayObj(map, prefix + "SubscriptionData.", this.SubscriptionData);
+        this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
 
     }
 }

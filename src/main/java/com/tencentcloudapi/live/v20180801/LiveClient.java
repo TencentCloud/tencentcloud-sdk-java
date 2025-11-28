@@ -1225,19 +1225,6 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
-     *获取禁推流列表。
-
-注意：该接口仅作为直播辅助查询接口，重要业务场景不可强依赖该接口。
-     * @param req DescribeLiveForbidStreamListRequest
-     * @return DescribeLiveForbidStreamListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeLiveForbidStreamListResponse DescribeLiveForbidStreamList(DescribeLiveForbidStreamListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeLiveForbidStreamList", DescribeLiveForbidStreamListResponse.class);
-    }
-
-    /**
      *查询用户套餐包总量、使用量、剩余量、包状态、购买时间和过期时间等。
      * @param req DescribeLivePackageInfoRequest
      * @return DescribeLivePackageInfoResponse

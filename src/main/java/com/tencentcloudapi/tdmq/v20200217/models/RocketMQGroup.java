@@ -157,6 +157,13 @@ public class RocketMQGroup extends AbstractModel {
     private Long SubscribeTopicNum;
 
     /**
+    * 绑定的标签列表
+    */
+    @SerializedName("TagList")
+    @Expose
+    private Tag [] TagList;
+
+    /**
      * Get 消费组名称 
      * @return Name 消费组名称
      */
@@ -480,6 +487,22 @@ public class RocketMQGroup extends AbstractModel {
         this.SubscribeTopicNum = SubscribeTopicNum;
     }
 
+    /**
+     * Get 绑定的标签列表 
+     * @return TagList 绑定的标签列表
+     */
+    public Tag [] getTagList() {
+        return this.TagList;
+    }
+
+    /**
+     * Set 绑定的标签列表
+     * @param TagList 绑定的标签列表
+     */
+    public void setTagList(Tag [] TagList) {
+        this.TagList = TagList;
+    }
+
     public RocketMQGroup() {
     }
 
@@ -542,6 +565,12 @@ public class RocketMQGroup extends AbstractModel {
         if (source.SubscribeTopicNum != null) {
             this.SubscribeTopicNum = new Long(source.SubscribeTopicNum);
         }
+        if (source.TagList != null) {
+            this.TagList = new Tag[source.TagList.length];
+            for (int i = 0; i < source.TagList.length; i++) {
+                this.TagList[i] = new Tag(source.TagList[i]);
+            }
+        }
     }
 
 
@@ -567,6 +596,7 @@ public class RocketMQGroup extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
         this.setParamSimple(map, prefix + "SubscribeTopicNum", this.SubscribeTopicNum);
+        this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
 
     }
 }

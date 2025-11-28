@@ -1129,6 +1129,19 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *该接口返回查询时间范围内每天使用的媒体处理用量信息。
+   1. 可以查询最近365天内的媒体处理统计数据。
+   2. 查询时间跨度不超过90天。
+     * @param req DescribeUsageDataRequest
+     * @return DescribeUsageDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUsageDataResponse DescribeUsageData(DescribeUsageDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUsageData", DescribeUsageDataResponse.class);
+    }
+
+    /**
      *根据任务ID查询视频入库任务的状态。
      * @param req DescribeVideoDatabaseEntryTaskDetailRequest
      * @return DescribeVideoDatabaseEntryTaskDetailResponse

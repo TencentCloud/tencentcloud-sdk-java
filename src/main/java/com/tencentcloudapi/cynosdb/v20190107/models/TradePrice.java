@@ -66,6 +66,27 @@ public class TradePrice extends AbstractModel {
     private String ChargeUnit;
 
     /**
+    * 高精度下不包含优惠价格
+    */
+    @SerializedName("UnitPriceHighPrecision")
+    @Expose
+    private String UnitPriceHighPrecision;
+
+    /**
+    * 高精度下优惠后价格
+    */
+    @SerializedName("UnitPriceDiscountHighPrecision")
+    @Expose
+    private String UnitPriceDiscountHighPrecision;
+
+    /**
+    * 货币单位
+    */
+    @SerializedName("AmountUnit")
+    @Expose
+    private String AmountUnit;
+
+    /**
      * Get 预付费模式下资源总价，不包含优惠，单位:分 
      * @return TotalPrice 预付费模式下资源总价，不包含优惠，单位:分
      */
@@ -161,6 +182,54 @@ public class TradePrice extends AbstractModel {
         this.ChargeUnit = ChargeUnit;
     }
 
+    /**
+     * Get 高精度下不包含优惠价格 
+     * @return UnitPriceHighPrecision 高精度下不包含优惠价格
+     */
+    public String getUnitPriceHighPrecision() {
+        return this.UnitPriceHighPrecision;
+    }
+
+    /**
+     * Set 高精度下不包含优惠价格
+     * @param UnitPriceHighPrecision 高精度下不包含优惠价格
+     */
+    public void setUnitPriceHighPrecision(String UnitPriceHighPrecision) {
+        this.UnitPriceHighPrecision = UnitPriceHighPrecision;
+    }
+
+    /**
+     * Get 高精度下优惠后价格 
+     * @return UnitPriceDiscountHighPrecision 高精度下优惠后价格
+     */
+    public String getUnitPriceDiscountHighPrecision() {
+        return this.UnitPriceDiscountHighPrecision;
+    }
+
+    /**
+     * Set 高精度下优惠后价格
+     * @param UnitPriceDiscountHighPrecision 高精度下优惠后价格
+     */
+    public void setUnitPriceDiscountHighPrecision(String UnitPriceDiscountHighPrecision) {
+        this.UnitPriceDiscountHighPrecision = UnitPriceDiscountHighPrecision;
+    }
+
+    /**
+     * Get 货币单位 
+     * @return AmountUnit 货币单位
+     */
+    public String getAmountUnit() {
+        return this.AmountUnit;
+    }
+
+    /**
+     * Set 货币单位
+     * @param AmountUnit 货币单位
+     */
+    public void setAmountUnit(String AmountUnit) {
+        this.AmountUnit = AmountUnit;
+    }
+
     public TradePrice() {
     }
 
@@ -187,6 +256,15 @@ public class TradePrice extends AbstractModel {
         if (source.ChargeUnit != null) {
             this.ChargeUnit = new String(source.ChargeUnit);
         }
+        if (source.UnitPriceHighPrecision != null) {
+            this.UnitPriceHighPrecision = new String(source.UnitPriceHighPrecision);
+        }
+        if (source.UnitPriceDiscountHighPrecision != null) {
+            this.UnitPriceDiscountHighPrecision = new String(source.UnitPriceDiscountHighPrecision);
+        }
+        if (source.AmountUnit != null) {
+            this.AmountUnit = new String(source.AmountUnit);
+        }
     }
 
 
@@ -200,6 +278,9 @@ public class TradePrice extends AbstractModel {
         this.setParamSimple(map, prefix + "UnitPrice", this.UnitPrice);
         this.setParamSimple(map, prefix + "UnitPriceDiscount", this.UnitPriceDiscount);
         this.setParamSimple(map, prefix + "ChargeUnit", this.ChargeUnit);
+        this.setParamSimple(map, prefix + "UnitPriceHighPrecision", this.UnitPriceHighPrecision);
+        this.setParamSimple(map, prefix + "UnitPriceDiscountHighPrecision", this.UnitPriceDiscountHighPrecision);
+        this.setParamSimple(map, prefix + "AmountUnit", this.AmountUnit);
 
     }
 }

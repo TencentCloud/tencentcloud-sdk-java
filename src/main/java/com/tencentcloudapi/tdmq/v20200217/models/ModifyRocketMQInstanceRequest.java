@@ -59,6 +59,13 @@ public class ModifyRocketMQInstanceRequest extends AbstractModel {
     private Boolean EnableDeletionProtection;
 
     /**
+    * 控制生产和消费消息的 TPS 占比，取值范围0～1，默认值为0.5
+    */
+    @SerializedName("SendReceiveRatio")
+    @Expose
+    private Float SendReceiveRatio;
+
+    /**
      * Get 专享实例ID 
      * @return InstanceId 专享实例ID
      */
@@ -138,6 +145,22 @@ public class ModifyRocketMQInstanceRequest extends AbstractModel {
         this.EnableDeletionProtection = EnableDeletionProtection;
     }
 
+    /**
+     * Get 控制生产和消费消息的 TPS 占比，取值范围0～1，默认值为0.5 
+     * @return SendReceiveRatio 控制生产和消费消息的 TPS 占比，取值范围0～1，默认值为0.5
+     */
+    public Float getSendReceiveRatio() {
+        return this.SendReceiveRatio;
+    }
+
+    /**
+     * Set 控制生产和消费消息的 TPS 占比，取值范围0～1，默认值为0.5
+     * @param SendReceiveRatio 控制生产和消费消息的 TPS 占比，取值范围0～1，默认值为0.5
+     */
+    public void setSendReceiveRatio(Float SendReceiveRatio) {
+        this.SendReceiveRatio = SendReceiveRatio;
+    }
+
     public ModifyRocketMQInstanceRequest() {
     }
 
@@ -161,6 +184,9 @@ public class ModifyRocketMQInstanceRequest extends AbstractModel {
         if (source.EnableDeletionProtection != null) {
             this.EnableDeletionProtection = new Boolean(source.EnableDeletionProtection);
         }
+        if (source.SendReceiveRatio != null) {
+            this.SendReceiveRatio = new Float(source.SendReceiveRatio);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class ModifyRocketMQInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "MessageRetention", this.MessageRetention);
         this.setParamSimple(map, prefix + "EnableDeletionProtection", this.EnableDeletionProtection);
+        this.setParamSimple(map, prefix + "SendReceiveRatio", this.SendReceiveRatio);
 
     }
 }

@@ -345,6 +345,14 @@ public class GetFunctionResponse extends AbstractModel {
     private ProtocolParams ProtocolParams;
 
     /**
+    * 单实例多并发配置。只支持Web函数。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceConcurrencyConfig")
+    @Expose
+    private InstanceConcurrencyConfig InstanceConcurrencyConfig;
+
+    /**
     * 是否开启DNS缓存
     */
     @SerializedName("DnsCache")
@@ -1111,6 +1119,26 @@ public class GetFunctionResponse extends AbstractModel {
     }
 
     /**
+     * Get 单实例多并发配置。只支持Web函数。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceConcurrencyConfig 单实例多并发配置。只支持Web函数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public InstanceConcurrencyConfig getInstanceConcurrencyConfig() {
+        return this.InstanceConcurrencyConfig;
+    }
+
+    /**
+     * Set 单实例多并发配置。只支持Web函数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceConcurrencyConfig 单实例多并发配置。只支持Web函数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceConcurrencyConfig(InstanceConcurrencyConfig InstanceConcurrencyConfig) {
+        this.InstanceConcurrencyConfig = InstanceConcurrencyConfig;
+    }
+
+    /**
      * Get 是否开启DNS缓存 
      * @return DnsCache 是否开启DNS缓存
      */
@@ -1317,6 +1345,9 @@ public class GetFunctionResponse extends AbstractModel {
         if (source.ProtocolParams != null) {
             this.ProtocolParams = new ProtocolParams(source.ProtocolParams);
         }
+        if (source.InstanceConcurrencyConfig != null) {
+            this.InstanceConcurrencyConfig = new InstanceConcurrencyConfig(source.InstanceConcurrencyConfig);
+        }
         if (source.DnsCache != null) {
             this.DnsCache = new String(source.DnsCache);
         }
@@ -1378,6 +1409,7 @@ public class GetFunctionResponse extends AbstractModel {
         this.setParamObj(map, prefix + "ImageConfig.", this.ImageConfig);
         this.setParamSimple(map, prefix + "ProtocolType", this.ProtocolType);
         this.setParamObj(map, prefix + "ProtocolParams.", this.ProtocolParams);
+        this.setParamObj(map, prefix + "InstanceConcurrencyConfig.", this.InstanceConcurrencyConfig);
         this.setParamSimple(map, prefix + "DnsCache", this.DnsCache);
         this.setParamObj(map, prefix + "IntranetConfig.", this.IntranetConfig);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);

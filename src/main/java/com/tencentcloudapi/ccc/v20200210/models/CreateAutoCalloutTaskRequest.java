@@ -129,6 +129,13 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel {
     private Long AIAgentId;
 
     /**
+    * 任务失败重试时间间隔，重试间隔 600秒～86400 秒
+    */
+    @SerializedName("RetryInterval")
+    @Expose
+    private Long RetryInterval;
+
+    /**
      * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
      * @return SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
@@ -368,6 +375,22 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel {
         this.AIAgentId = AIAgentId;
     }
 
+    /**
+     * Get 任务失败重试时间间隔，重试间隔 600秒～86400 秒 
+     * @return RetryInterval 任务失败重试时间间隔，重试间隔 600秒～86400 秒
+     */
+    public Long getRetryInterval() {
+        return this.RetryInterval;
+    }
+
+    /**
+     * Set 任务失败重试时间间隔，重试间隔 600秒～86400 秒
+     * @param RetryInterval 任务失败重试时间间隔，重试间隔 600秒～86400 秒
+     */
+    public void setRetryInterval(Long RetryInterval) {
+        this.RetryInterval = RetryInterval;
+    }
+
     public CreateAutoCalloutTaskRequest() {
     }
 
@@ -436,6 +459,9 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel {
         if (source.AIAgentId != null) {
             this.AIAgentId = new Long(source.AIAgentId);
         }
+        if (source.RetryInterval != null) {
+            this.RetryInterval = new Long(source.RetryInterval);
+        }
     }
 
 
@@ -458,6 +484,7 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TimeZone", this.TimeZone);
         this.setParamArrayObj(map, prefix + "AvailableTime.", this.AvailableTime);
         this.setParamSimple(map, prefix + "AIAgentId", this.AIAgentId);
+        this.setParamSimple(map, prefix + "RetryInterval", this.RetryInterval);
 
     }
 }

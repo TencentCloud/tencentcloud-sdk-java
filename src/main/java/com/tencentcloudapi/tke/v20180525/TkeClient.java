@@ -105,6 +105,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *取消升级计划
+     * @param req CancelUpgradePlanRequest
+     * @return CancelUpgradePlanResponse
+     * @throws TencentCloudSDKException
+     */
+    public CancelUpgradePlanResponse CancelUpgradePlan(CancelUpgradePlanRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CancelUpgradePlan", CancelUpgradePlanResponse.class);
+    }
+
+    /**
      *检查边缘计算集群的CIDR是否冲突
      * @param req CheckEdgeClusterCIDRRequest
      * @return CheckEdgeClusterCIDRResponse
@@ -190,6 +201,17 @@ public class TkeClient extends AbstractClient{
     public CreateClusterInstancesResponse CreateClusterInstances(CreateClusterInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateClusterInstances", CreateClusterInstancesResponse.class);
+    }
+
+    /**
+     *创建集群维护时间窗口和排除项
+     * @param req CreateClusterMaintenanceWindowAndExclusionsRequest
+     * @return CreateClusterMaintenanceWindowAndExclusionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateClusterMaintenanceWindowAndExclusionsResponse CreateClusterMaintenanceWindowAndExclusions(CreateClusterMaintenanceWindowAndExclusionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateClusterMaintenanceWindowAndExclusions", CreateClusterMaintenanceWindowAndExclusionsResponse.class);
     }
 
     /**
@@ -325,6 +347,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *创建全局维护时间窗口和排除项
+     * @param req CreateGlobalMaintenanceWindowAndExclusionsRequest
+     * @return CreateGlobalMaintenanceWindowAndExclusionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateGlobalMaintenanceWindowAndExclusionsResponse CreateGlobalMaintenanceWindowAndExclusions(CreateGlobalMaintenanceWindowAndExclusionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateGlobalMaintenanceWindowAndExclusions", CreateGlobalMaintenanceWindowAndExclusionsResponse.class);
+    }
+
+    /**
      *创建镜像缓存的接口。创建过程中，请勿删除EKSCI实例和云盘，否则镜像缓存将创建失败。
      * @param req CreateImageCacheRequest
      * @return CreateImageCacheResponse
@@ -446,6 +479,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *创建集群发布序列
+     * @param req CreateRollOutSequenceRequest
+     * @return CreateRollOutSequenceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRollOutSequenceResponse CreateRollOutSequence(CreateRollOutSequenceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateRollOutSequence", CreateRollOutSequenceResponse.class);
+    }
+
+    /**
      *创建边缘计算集群
      * @param req CreateTKEEdgeClusterRequest
      * @return CreateTKEEdgeClusterResponse
@@ -531,6 +575,17 @@ public class TkeClient extends AbstractClient{
     public DeleteClusterInstancesResponse DeleteClusterInstances(DeleteClusterInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteClusterInstances", DeleteClusterInstancesResponse.class);
+    }
+
+    /**
+     *删除集群维护时间窗口和排除项
+     * @param req DeleteClusterMaintenanceWindowAndExclusionRequest
+     * @return DeleteClusterMaintenanceWindowAndExclusionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteClusterMaintenanceWindowAndExclusionResponse DeleteClusterMaintenanceWindowAndExclusion(DeleteClusterMaintenanceWindowAndExclusionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteClusterMaintenanceWindowAndExclusion", DeleteClusterMaintenanceWindowAndExclusionResponse.class);
     }
 
     /**
@@ -641,6 +696,17 @@ public class TkeClient extends AbstractClient{
     public DeleteEdgeClusterInstancesResponse DeleteEdgeClusterInstances(DeleteEdgeClusterInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteEdgeClusterInstances", DeleteEdgeClusterInstancesResponse.class);
+    }
+
+    /**
+     *删除全集维护时间窗口和排除项
+     * @param req DeleteGlobalMaintenanceWindowAndExclusionRequest
+     * @return DeleteGlobalMaintenanceWindowAndExclusionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteGlobalMaintenanceWindowAndExclusionResponse DeleteGlobalMaintenanceWindowAndExclusion(DeleteGlobalMaintenanceWindowAndExclusionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteGlobalMaintenanceWindowAndExclusion", DeleteGlobalMaintenanceWindowAndExclusionResponse.class);
     }
 
     /**
@@ -773,6 +839,17 @@ public class TkeClient extends AbstractClient{
     public DeleteReservedInstancesResponse DeleteReservedInstances(DeleteReservedInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteReservedInstances", DeleteReservedInstancesResponse.class);
+    }
+
+    /**
+     *删除集群发布序列
+     * @param req DeleteRollOutSequenceRequest
+     * @return DeleteRollOutSequenceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRollOutSequenceResponse DeleteRollOutSequence(DeleteRollOutSequenceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteRollOutSequence", DeleteRollOutSequenceResponse.class);
     }
 
     /**
@@ -1018,6 +1095,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *获取集群维护时间窗口和排除项
+     * @param req DescribeClusterMaintenanceWindowAndExclusionsRequest
+     * @return DescribeClusterMaintenanceWindowAndExclusionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterMaintenanceWindowAndExclusionsResponse DescribeClusterMaintenanceWindowAndExclusions(DescribeClusterMaintenanceWindowAndExclusionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClusterMaintenanceWindowAndExclusions", DescribeClusterMaintenanceWindowAndExclusionsResponse.class);
+    }
+
+    /**
      *查询节点池详情
      * @param req DescribeClusterNodePoolDetailRequest
      * @return DescribeClusterNodePoolDetailResponse
@@ -1081,6 +1169,17 @@ public class TkeClient extends AbstractClient{
     public DescribeClusterReleasesResponse DescribeClusterReleases(DescribeClusterReleasesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeClusterReleases", DescribeClusterReleasesResponse.class);
+    }
+
+    /**
+     *查询集群发布序列标签
+     * @param req DescribeClusterRollOutSequenceTagsRequest
+     * @return DescribeClusterRollOutSequenceTagsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterRollOutSequenceTagsResponse DescribeClusterRollOutSequenceTags(DescribeClusterRollOutSequenceTagsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClusterRollOutSequenceTags", DescribeClusterRollOutSequenceTagsResponse.class);
     }
 
     /**
@@ -1345,6 +1444,17 @@ public class TkeClient extends AbstractClient{
     public DescribeExternalNodeSupportConfigResponse DescribeExternalNodeSupportConfig(DescribeExternalNodeSupportConfigRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeExternalNodeSupportConfig", DescribeExternalNodeSupportConfigResponse.class);
+    }
+
+    /**
+     *获取全局维护时间窗口和排除项
+     * @param req DescribeGlobalMaintenanceWindowAndExclusionsRequest
+     * @return DescribeGlobalMaintenanceWindowAndExclusionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGlobalMaintenanceWindowAndExclusionsResponse DescribeGlobalMaintenanceWindowAndExclusions(DescribeGlobalMaintenanceWindowAndExclusionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeGlobalMaintenanceWindowAndExclusions", DescribeGlobalMaintenanceWindowAndExclusionsResponse.class);
     }
 
     /**
@@ -1744,6 +1854,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *查询集群发布序列
+     * @param req DescribeRollOutSequencesRequest
+     * @return DescribeRollOutSequencesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRollOutSequencesResponse DescribeRollOutSequences(DescribeRollOutSequencesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRollOutSequences", DescribeRollOutSequencesResponse.class);
+    }
+
+    /**
      *查询路由表冲突列表
      * @param req DescribeRouteTableConflictsRequest
      * @return DescribeRouteTableConflictsResponse
@@ -1829,6 +1950,28 @@ public class TkeClient extends AbstractClient{
     public DescribeTasksResponse DescribeTasks(DescribeTasksRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeTasks", DescribeTasksResponse.class);
+    }
+
+    /**
+     *查询计划升级任务详情
+     * @param req DescribeUpgradeTaskDetailRequest
+     * @return DescribeUpgradeTaskDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUpgradeTaskDetailResponse DescribeUpgradeTaskDetail(DescribeUpgradeTaskDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUpgradeTaskDetail", DescribeUpgradeTaskDetailResponse.class);
+    }
+
+    /**
+     *查询计划升级任务
+     * @param req DescribeUpgradeTasksRequest
+     * @return DescribeUpgradeTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUpgradeTasksResponse DescribeUpgradeTasks(DescribeUpgradeTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUpgradeTasks", DescribeUpgradeTasksResponse.class);
     }
 
     /**
@@ -2173,6 +2316,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *更新集群维护时间窗口和排除项
+     * @param req ModifyClusterMaintenanceWindowAndExclusionsRequest
+     * @return ModifyClusterMaintenanceWindowAndExclusionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterMaintenanceWindowAndExclusionsResponse ModifyClusterMaintenanceWindowAndExclusions(ModifyClusterMaintenanceWindowAndExclusionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyClusterMaintenanceWindowAndExclusions", ModifyClusterMaintenanceWindowAndExclusionsResponse.class);
+    }
+
+    /**
      *编辑节点池
      * @param req ModifyClusterNodePoolRequest
      * @return ModifyClusterNodePoolResponse
@@ -2181,6 +2335,17 @@ public class TkeClient extends AbstractClient{
     public ModifyClusterNodePoolResponse ModifyClusterNodePool(ModifyClusterNodePoolRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyClusterNodePool", ModifyClusterNodePoolResponse.class);
+    }
+
+    /**
+     *更新集群发布序列标签
+     * @param req ModifyClusterRollOutSequenceTagsRequest
+     * @return ModifyClusterRollOutSequenceTagsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterRollOutSequenceTagsResponse ModifyClusterRollOutSequenceTags(ModifyClusterRollOutSequenceTagsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyClusterRollOutSequenceTags", ModifyClusterRollOutSequenceTagsResponse.class);
     }
 
     /**
@@ -2214,6 +2379,17 @@ public class TkeClient extends AbstractClient{
     public ModifyClusterVirtualNodePoolResponse ModifyClusterVirtualNodePool(ModifyClusterVirtualNodePoolRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyClusterVirtualNodePool", ModifyClusterVirtualNodePoolResponse.class);
+    }
+
+    /**
+     *更新全局维护时间窗口和排除项
+     * @param req ModifyGlobalMaintenanceWindowAndExclusionsRequest
+     * @return ModifyGlobalMaintenanceWindowAndExclusionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyGlobalMaintenanceWindowAndExclusionsResponse ModifyGlobalMaintenanceWindowAndExclusions(ModifyGlobalMaintenanceWindowAndExclusionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyGlobalMaintenanceWindowAndExclusions", ModifyGlobalMaintenanceWindowAndExclusionsResponse.class);
     }
 
     /**
@@ -2360,6 +2536,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *更新集群发布序列
+     * @param req ModifyRollOutSequenceRequest
+     * @return ModifyRollOutSequenceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRollOutSequenceResponse ModifyRollOutSequence(ModifyRollOutSequenceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyRollOutSequence", ModifyRollOutSequenceResponse.class);
+    }
+
+    /**
      *移出节点池节点，但保留在集群内
      * @param req RemoveNodeFromNodePoolRequest
      * @return RemoveNodeFromNodePoolResponse
@@ -2445,6 +2632,17 @@ public class TkeClient extends AbstractClient{
     public SetNodePoolNodeProtectionResponse SetNodePoolNodeProtection(SetNodePoolNodeProtectionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SetNodePoolNodeProtection", SetNodePoolNodeProtectionResponse.class);
+    }
+
+    /**
+     *切换集群网络访问链路为直连
+     * @param req SwitchClusterEndpointRequest
+     * @return SwitchClusterEndpointResponse
+     * @throws TencentCloudSDKException
+     */
+    public SwitchClusterEndpointResponse SwitchClusterEndpoint(SwitchClusterEndpointRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SwitchClusterEndpoint", SwitchClusterEndpointResponse.class);
     }
 
     /**

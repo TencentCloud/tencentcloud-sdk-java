@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TalkLLMConfigInfo extends AbstractModel {
 
     /**
-    * 支持的LLM类型，tencent-腾讯；openai-OPENAI格式；anthropic-ANTHROPIC；gemini-GEMINI;gemini-GEMINI;coze-扣子;dify-DIFY；tencent_lke-腾讯智能体平台；系统默认-openai。
+    * 支持的LLM类型，openai-OPENAI格式。
     */
     @SerializedName("LLMType")
     @Expose
@@ -65,54 +65,6 @@ public class TalkLLMConfigInfo extends AbstractModel {
   "MetaInfo":{}
 }
 ```
-
-## anthropic
-```
-{
-   "ApiKey": "sk-XXXXXXXXXXXX",
-   "ApiUrl": "https://api.openai.com/v1",
-   "SystemPrompt": "一个小小助手"
-}
-```
-## gemini
-```
-{
-  "AppId": 123456,
-  "AccessToken": "*****",
-  "ResourceId": "SecretKey****",
-  "ModelName": "16k_zh",
-  "Language":""
-}
-```
-## coze
-```
-{
-   "ApiKey": "sk-XXXXXXXXXXXX",
-   "BotId": "v1",
-   "UserId": "xxx",
-  "ApiUrl": "https://api.coze.cn/v3/chat"
-}
-```
-## dify
-```
-{
-   "ApiKey": "sk-XXXXXXXXXXXX",
-   "ApiUrl": "https://api.openai.com/v1",
-   "User": "xxx",
-  "Inputs":{},
-  "ConversationId":"c1"
-}
-```
-## tencent_lke
-```
-{
-   "ApiKey": "sk-XXXXXXXXXXXX",
-   "ApiUrl": "https://api.openai.com/v1",
-   "SystemRole": "一个小小助手",
-  "SessionId":"123456"
-}
-```
-
     */
     @SerializedName("Config")
     @Expose
@@ -140,16 +92,23 @@ public class TalkLLMConfigInfo extends AbstractModel {
     private Float TopP;
 
     /**
-     * Get 支持的LLM类型，tencent-腾讯；openai-OPENAI格式；anthropic-ANTHROPIC；gemini-GEMINI;gemini-GEMINI;coze-扣子;dify-DIFY；tencent_lke-腾讯智能体平台；系统默认-openai。 
-     * @return LLMType 支持的LLM类型，tencent-腾讯；openai-OPENAI格式；anthropic-ANTHROPIC；gemini-GEMINI;gemini-GEMINI;coze-扣子;dify-DIFY；tencent_lke-腾讯智能体平台；系统默认-openai。
+    * 工具ID列表
+    */
+    @SerializedName("Tools")
+    @Expose
+    private String [] Tools;
+
+    /**
+     * Get 支持的LLM类型，openai-OPENAI格式。 
+     * @return LLMType 支持的LLM类型，openai-OPENAI格式。
      */
     public String getLLMType() {
         return this.LLMType;
     }
 
     /**
-     * Set 支持的LLM类型，tencent-腾讯；openai-OPENAI格式；anthropic-ANTHROPIC；gemini-GEMINI;gemini-GEMINI;coze-扣子;dify-DIFY；tencent_lke-腾讯智能体平台；系统默认-openai。
-     * @param LLMType 支持的LLM类型，tencent-腾讯；openai-OPENAI格式；anthropic-ANTHROPIC；gemini-GEMINI;gemini-GEMINI;coze-扣子;dify-DIFY；tencent_lke-腾讯智能体平台；系统默认-openai。
+     * Set 支持的LLM类型，openai-OPENAI格式。
+     * @param LLMType 支持的LLM类型，openai-OPENAI格式。
      */
     public void setLLMType(String LLMType) {
         this.LLMType = LLMType;
@@ -216,55 +175,7 @@ public class TalkLLMConfigInfo extends AbstractModel {
   "History":10,
   "MetaInfo":{}
 }
-```
-
-## anthropic
-```
-{
-   "ApiKey": "sk-XXXXXXXXXXXX",
-   "ApiUrl": "https://api.openai.com/v1",
-   "SystemPrompt": "一个小小助手"
-}
-```
-## gemini
-```
-{
-  "AppId": 123456,
-  "AccessToken": "*****",
-  "ResourceId": "SecretKey****",
-  "ModelName": "16k_zh",
-  "Language":""
-}
-```
-## coze
-```
-{
-   "ApiKey": "sk-XXXXXXXXXXXX",
-   "BotId": "v1",
-   "UserId": "xxx",
-  "ApiUrl": "https://api.coze.cn/v3/chat"
-}
-```
-## dify
-```
-{
-   "ApiKey": "sk-XXXXXXXXXXXX",
-   "ApiUrl": "https://api.openai.com/v1",
-   "User": "xxx",
-  "Inputs":{},
-  "ConversationId":"c1"
-}
-```
-## tencent_lke
-```
-{
-   "ApiKey": "sk-XXXXXXXXXXXX",
-   "ApiUrl": "https://api.openai.com/v1",
-   "SystemRole": "一个小小助手",
-  "SessionId":"123456"
-}
-```
- 
+``` 
      * @return Config 配置信息JSON字符串，根据`LLMType`进行不同的值匹配。例如`LLMType`是`openai`，`Config`值是`{\"ApiKey\":\"sk-09***\",\"ApiUrl\":\"base_url\",\"SystemPrompt\":\"你是一个语音助手\",\"Timeout\":30,\"History\":0,\"MetaInfo\":{\"productID\":\"test\"}}`
 
 ## openai
@@ -278,54 +189,6 @@ public class TalkLLMConfigInfo extends AbstractModel {
   "MetaInfo":{}
 }
 ```
-
-## anthropic
-```
-{
-   "ApiKey": "sk-XXXXXXXXXXXX",
-   "ApiUrl": "https://api.openai.com/v1",
-   "SystemPrompt": "一个小小助手"
-}
-```
-## gemini
-```
-{
-  "AppId": 123456,
-  "AccessToken": "*****",
-  "ResourceId": "SecretKey****",
-  "ModelName": "16k_zh",
-  "Language":""
-}
-```
-## coze
-```
-{
-   "ApiKey": "sk-XXXXXXXXXXXX",
-   "BotId": "v1",
-   "UserId": "xxx",
-  "ApiUrl": "https://api.coze.cn/v3/chat"
-}
-```
-## dify
-```
-{
-   "ApiKey": "sk-XXXXXXXXXXXX",
-   "ApiUrl": "https://api.openai.com/v1",
-   "User": "xxx",
-  "Inputs":{},
-  "ConversationId":"c1"
-}
-```
-## tencent_lke
-```
-{
-   "ApiKey": "sk-XXXXXXXXXXXX",
-   "ApiUrl": "https://api.openai.com/v1",
-   "SystemRole": "一个小小助手",
-  "SessionId":"123456"
-}
-```
-
      */
     public String getConfig() {
         return this.Config;
@@ -345,54 +208,6 @@ public class TalkLLMConfigInfo extends AbstractModel {
   "MetaInfo":{}
 }
 ```
-
-## anthropic
-```
-{
-   "ApiKey": "sk-XXXXXXXXXXXX",
-   "ApiUrl": "https://api.openai.com/v1",
-   "SystemPrompt": "一个小小助手"
-}
-```
-## gemini
-```
-{
-  "AppId": 123456,
-  "AccessToken": "*****",
-  "ResourceId": "SecretKey****",
-  "ModelName": "16k_zh",
-  "Language":""
-}
-```
-## coze
-```
-{
-   "ApiKey": "sk-XXXXXXXXXXXX",
-   "BotId": "v1",
-   "UserId": "xxx",
-  "ApiUrl": "https://api.coze.cn/v3/chat"
-}
-```
-## dify
-```
-{
-   "ApiKey": "sk-XXXXXXXXXXXX",
-   "ApiUrl": "https://api.openai.com/v1",
-   "User": "xxx",
-  "Inputs":{},
-  "ConversationId":"c1"
-}
-```
-## tencent_lke
-```
-{
-   "ApiKey": "sk-XXXXXXXXXXXX",
-   "ApiUrl": "https://api.openai.com/v1",
-   "SystemRole": "一个小小助手",
-  "SessionId":"123456"
-}
-```
-
      * @param Config 配置信息JSON字符串，根据`LLMType`进行不同的值匹配。例如`LLMType`是`openai`，`Config`值是`{\"ApiKey\":\"sk-09***\",\"ApiUrl\":\"base_url\",\"SystemPrompt\":\"你是一个语音助手\",\"Timeout\":30,\"History\":0,\"MetaInfo\":{\"productID\":\"test\"}}`
 
 ## openai
@@ -406,54 +221,6 @@ public class TalkLLMConfigInfo extends AbstractModel {
   "MetaInfo":{}
 }
 ```
-
-## anthropic
-```
-{
-   "ApiKey": "sk-XXXXXXXXXXXX",
-   "ApiUrl": "https://api.openai.com/v1",
-   "SystemPrompt": "一个小小助手"
-}
-```
-## gemini
-```
-{
-  "AppId": 123456,
-  "AccessToken": "*****",
-  "ResourceId": "SecretKey****",
-  "ModelName": "16k_zh",
-  "Language":""
-}
-```
-## coze
-```
-{
-   "ApiKey": "sk-XXXXXXXXXXXX",
-   "BotId": "v1",
-   "UserId": "xxx",
-  "ApiUrl": "https://api.coze.cn/v3/chat"
-}
-```
-## dify
-```
-{
-   "ApiKey": "sk-XXXXXXXXXXXX",
-   "ApiUrl": "https://api.openai.com/v1",
-   "User": "xxx",
-  "Inputs":{},
-  "ConversationId":"c1"
-}
-```
-## tencent_lke
-```
-{
-   "ApiKey": "sk-XXXXXXXXXXXX",
-   "ApiUrl": "https://api.openai.com/v1",
-   "SystemRole": "一个小小助手",
-  "SessionId":"123456"
-}
-```
-
      */
     public void setConfig(String Config) {
         this.Config = Config;
@@ -507,6 +274,22 @@ public class TalkLLMConfigInfo extends AbstractModel {
         this.TopP = TopP;
     }
 
+    /**
+     * Get 工具ID列表 
+     * @return Tools 工具ID列表
+     */
+    public String [] getTools() {
+        return this.Tools;
+    }
+
+    /**
+     * Set 工具ID列表
+     * @param Tools 工具ID列表
+     */
+    public void setTools(String [] Tools) {
+        this.Tools = Tools;
+    }
+
     public TalkLLMConfigInfo() {
     }
 
@@ -539,6 +322,12 @@ public class TalkLLMConfigInfo extends AbstractModel {
         if (source.TopP != null) {
             this.TopP = new Float(source.TopP);
         }
+        if (source.Tools != null) {
+            this.Tools = new String[source.Tools.length];
+            for (int i = 0; i < source.Tools.length; i++) {
+                this.Tools[i] = new String(source.Tools[i]);
+            }
+        }
     }
 
 
@@ -554,6 +343,7 @@ public class TalkLLMConfigInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Temperature", this.Temperature);
         this.setParamSimple(map, prefix + "MaxTokens", this.MaxTokens);
         this.setParamSimple(map, prefix + "TopP", this.TopP);
+        this.setParamArraySimple(map, prefix + "Tools.", this.Tools);
 
     }
 }

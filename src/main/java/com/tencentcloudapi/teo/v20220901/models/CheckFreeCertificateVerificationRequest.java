@@ -31,7 +31,7 @@ public class CheckFreeCertificateVerificationRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * 加速域名，该域名为[申请免费证书](https://tcloud4api.woa.com/document/product/1657/927654?!preview&!document=1)时使用的域名。
+    * 加速域名，该域名为[申请免费证书](https://cloud.tencent.com/document/product/1552/124807)时使用的域名。
     */
     @SerializedName("Domain")
     @Expose
@@ -54,16 +54,16 @@ public class CheckFreeCertificateVerificationRequest extends AbstractModel {
     }
 
     /**
-     * Get 加速域名，该域名为[申请免费证书](https://tcloud4api.woa.com/document/product/1657/927654?!preview&!document=1)时使用的域名。 
-     * @return Domain 加速域名，该域名为[申请免费证书](https://tcloud4api.woa.com/document/product/1657/927654?!preview&!document=1)时使用的域名。
+     * Get 加速域名，该域名为[申请免费证书](https://cloud.tencent.com/document/product/1552/124807)时使用的域名。 
+     * @return Domain 加速域名，该域名为[申请免费证书](https://cloud.tencent.com/document/product/1552/124807)时使用的域名。
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 加速域名，该域名为[申请免费证书](https://tcloud4api.woa.com/document/product/1657/927654?!preview&!document=1)时使用的域名。
-     * @param Domain 加速域名，该域名为[申请免费证书](https://tcloud4api.woa.com/document/product/1657/927654?!preview&!document=1)时使用的域名。
+     * Set 加速域名，该域名为[申请免费证书](https://cloud.tencent.com/document/product/1552/124807)时使用的域名。
+     * @param Domain 加速域名，该域名为[申请免费证书](https://cloud.tencent.com/document/product/1552/124807)时使用的域名。
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;

@@ -21,6 +21,9 @@ public enum MpsErrorCode {
      /* 操作失败：无效用户。 */
      FAILEDOPERATION_INVALIDUSER("FailedOperation.InvalidUser"),
      
+     /* 操作失败：网络错误。 */
+     FAILEDOPERATION_NETWORKERROR("FailedOperation.NetWorkError"),
+     
      /* 操作失败：设置源通知错误。 */
      FAILEDOPERATION_SETSOURCENOTIFY("FailedOperation.SetSourceNotify"),
      
@@ -329,6 +332,9 @@ public enum MpsErrorCode {
      
      /* 参数值错误：SampleType。 */
      INVALIDPARAMETERVALUE_SAMPLETYPE("InvalidParameterValue.SampleType"),
+     
+     /* Service参数值错误 */
+     INVALIDPARAMETERVALUE_SERVICE("InvalidParameterValue.Service"),
      
      /* SessionContext 过长。 */
      INVALIDPARAMETERVALUE_SESSIONCONTEXTTOOLONG("InvalidParameterValue.SessionContextTooLong"),

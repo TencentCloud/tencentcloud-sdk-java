@@ -52,6 +52,20 @@ public class ModifyRabbitMQVipInstanceRequest extends AbstractModel {
     private Boolean EnableDeletionProtection;
 
     /**
+    * 是否删除所有标签，默认为false
+    */
+    @SerializedName("RemoveAllTags")
+    @Expose
+    private Boolean RemoveAllTags;
+
+    /**
+    * 修改实例的标签信息，全量标签信息，非增量
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 实例Id 
      * @return InstanceId 实例Id
      */
@@ -115,6 +129,38 @@ public class ModifyRabbitMQVipInstanceRequest extends AbstractModel {
         this.EnableDeletionProtection = EnableDeletionProtection;
     }
 
+    /**
+     * Get 是否删除所有标签，默认为false 
+     * @return RemoveAllTags 是否删除所有标签，默认为false
+     */
+    public Boolean getRemoveAllTags() {
+        return this.RemoveAllTags;
+    }
+
+    /**
+     * Set 是否删除所有标签，默认为false
+     * @param RemoveAllTags 是否删除所有标签，默认为false
+     */
+    public void setRemoveAllTags(Boolean RemoveAllTags) {
+        this.RemoveAllTags = RemoveAllTags;
+    }
+
+    /**
+     * Get 修改实例的标签信息，全量标签信息，非增量 
+     * @return Tags 修改实例的标签信息，全量标签信息，非增量
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 修改实例的标签信息，全量标签信息，非增量
+     * @param Tags 修改实例的标签信息，全量标签信息，非增量
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public ModifyRabbitMQVipInstanceRequest() {
     }
 
@@ -135,6 +181,15 @@ public class ModifyRabbitMQVipInstanceRequest extends AbstractModel {
         if (source.EnableDeletionProtection != null) {
             this.EnableDeletionProtection = new Boolean(source.EnableDeletionProtection);
         }
+        if (source.RemoveAllTags != null) {
+            this.RemoveAllTags = new Boolean(source.RemoveAllTags);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -146,6 +201,8 @@ public class ModifyRabbitMQVipInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "EnableDeletionProtection", this.EnableDeletionProtection);
+        this.setParamSimple(map, prefix + "RemoveAllTags", this.RemoveAllTags);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

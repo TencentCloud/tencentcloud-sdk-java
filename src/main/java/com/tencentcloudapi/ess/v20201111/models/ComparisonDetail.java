@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class ComparisonDetail extends AbstractModel {
 
     /**
+    * 合同对比差异点唯一ID。
+    */
+    @SerializedName("ComparisonPointId")
+    @Expose
+    private String ComparisonPointId;
+
+    /**
     * 对比前后差异类型，具体如下：
 <ul><li> **add**：新增</li>
 <li> **change**：变更</li>
@@ -58,6 +65,22 @@ public class ComparisonDetail extends AbstractModel {
     @SerializedName("DiffText")
     @Expose
     private String DiffText;
+
+    /**
+     * Get 合同对比差异点唯一ID。 
+     * @return ComparisonPointId 合同对比差异点唯一ID。
+     */
+    public String getComparisonPointId() {
+        return this.ComparisonPointId;
+    }
+
+    /**
+     * Set 合同对比差异点唯一ID。
+     * @param ComparisonPointId 合同对比差异点唯一ID。
+     */
+    public void setComparisonPointId(String ComparisonPointId) {
+        this.ComparisonPointId = ComparisonPointId;
+    }
 
     /**
      * Get 对比前后差异类型，具体如下：
@@ -163,6 +186,9 @@ public class ComparisonDetail extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ComparisonDetail(ComparisonDetail source) {
+        if (source.ComparisonPointId != null) {
+            this.ComparisonPointId = new String(source.ComparisonPointId);
+        }
         if (source.ComparisonType != null) {
             this.ComparisonType = new String(source.ComparisonType);
         }
@@ -182,6 +208,7 @@ public class ComparisonDetail extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ComparisonPointId", this.ComparisonPointId);
         this.setParamSimple(map, prefix + "ComparisonType", this.ComparisonType);
         this.setParamSimple(map, prefix + "ContentType", this.ContentType);
         this.setParamSimple(map, prefix + "OriginText", this.OriginText);

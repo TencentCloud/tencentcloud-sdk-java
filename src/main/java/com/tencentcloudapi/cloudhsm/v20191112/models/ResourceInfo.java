@@ -185,6 +185,22 @@ public class ResourceInfo extends AbstractModel {
     private Long AlarmStatus;
 
     /**
+    * 0不支持
+1关闭
+2开启
+    */
+    @SerializedName("PqcStatus")
+    @Expose
+    private Long PqcStatus;
+
+    /**
+    * 0关闭，1开启
+    */
+    @SerializedName("PqcFlag")
+    @Expose
+    private Long PqcFlag;
+
+    /**
      * Get 资源Id 
      * @return ResourceId 资源Id
      */
@@ -552,6 +568,46 @@ public class ResourceInfo extends AbstractModel {
         this.AlarmStatus = AlarmStatus;
     }
 
+    /**
+     * Get 0不支持
+1关闭
+2开启 
+     * @return PqcStatus 0不支持
+1关闭
+2开启
+     */
+    public Long getPqcStatus() {
+        return this.PqcStatus;
+    }
+
+    /**
+     * Set 0不支持
+1关闭
+2开启
+     * @param PqcStatus 0不支持
+1关闭
+2开启
+     */
+    public void setPqcStatus(Long PqcStatus) {
+        this.PqcStatus = PqcStatus;
+    }
+
+    /**
+     * Get 0关闭，1开启 
+     * @return PqcFlag 0关闭，1开启
+     */
+    public Long getPqcFlag() {
+        return this.PqcFlag;
+    }
+
+    /**
+     * Set 0关闭，1开启
+     * @param PqcFlag 0关闭，1开启
+     */
+    public void setPqcFlag(Long PqcFlag) {
+        this.PqcFlag = PqcFlag;
+    }
+
     public ResourceInfo() {
     }
 
@@ -635,6 +691,12 @@ public class ResourceInfo extends AbstractModel {
         if (source.AlarmStatus != null) {
             this.AlarmStatus = new Long(source.AlarmStatus);
         }
+        if (source.PqcStatus != null) {
+            this.PqcStatus = new Long(source.PqcStatus);
+        }
+        if (source.PqcFlag != null) {
+            this.PqcFlag = new Long(source.PqcFlag);
+        }
     }
 
 
@@ -665,6 +727,8 @@ public class ResourceInfo extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "Manufacturer", this.Manufacturer);
         this.setParamSimple(map, prefix + "AlarmStatus", this.AlarmStatus);
+        this.setParamSimple(map, prefix + "PqcStatus", this.PqcStatus);
+        this.setParamSimple(map, prefix + "PqcFlag", this.PqcFlag);
 
     }
 }

@@ -347,6 +347,17 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *删除消费分组订阅的topic(消费分组必须是Empty 状态)
+     * @param req DeleteGroupSubscribeTopicRequest
+     * @return DeleteGroupSubscribeTopicResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteGroupSubscribeTopicResponse DeleteGroupSubscribeTopic(DeleteGroupSubscribeTopicRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteGroupSubscribeTopic", DeleteGroupSubscribeTopicResponse.class);
+    }
+
+    /**
      *删除后付费实例，通过调用API删除不会对连接器和任务进行关联预检查，直接进行实例销毁。
      * @param req DeleteInstancePostRequest
      * @return DeleteInstancePostResponse
@@ -630,6 +641,17 @@ public class CkafkaClient extends AbstractClient{
     public DescribeInstancesDetailResponse DescribeInstancesDetail(DescribeInstancesDetailRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeInstancesDetail", DescribeInstancesDetailResponse.class);
+    }
+
+    /**
+     *查询实例变配类型
+     * @param req DescribeModifyTypeRequest
+     * @return DescribeModifyTypeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeModifyTypeResponse DescribeModifyType(DescribeModifyTypeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeModifyType", DescribeModifyTypeResponse.class);
     }
 
     /**

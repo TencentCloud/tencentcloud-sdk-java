@@ -83,6 +83,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *添加一键bypass能力支持,直接添加APPID
+     * @param req AddBypassAllRuleRequest
+     * @return AddBypassAllRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddBypassAllRuleResponse AddBypassAllRule(AddBypassAllRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddBypassAllRule", AddBypassAllRuleResponse.class);
+    }
+
+    /**
      *增加访问控制（自定义策略）
      * @param req AddCustomRuleRequest
      * @return AddCustomRuleResponse
@@ -2022,6 +2033,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *查询该用户是否被加入了全局的bypass列表
+     * @param req QueryBypassAllStatusRequest
+     * @return QueryBypassAllStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryBypassAllStatusResponse QueryBypassAllStatus(QueryBypassAllStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryBypassAllStatus", QueryBypassAllStatusResponse.class);
+    }
+
+    /**
      *刷新接入检查的结果，后台会生成接入检查任务
      * @param req RefreshAccessCheckResultRequest
      * @return RefreshAccessCheckResultResponse
@@ -2030,6 +2052,17 @@ public class WafClient extends AbstractClient{
     public RefreshAccessCheckResultResponse RefreshAccessCheckResult(RefreshAccessCheckResultRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RefreshAccessCheckResult", RefreshAccessCheckResultResponse.class);
+    }
+
+    /**
+     *删除一键bypass规则
+     * @param req RemoveBypassAllRuleRequest
+     * @return RemoveBypassAllRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public RemoveBypassAllRuleResponse RemoveBypassAllRule(RemoveBypassAllRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RemoveBypassAllRule", RemoveBypassAllRuleResponse.class);
     }
 
     /**

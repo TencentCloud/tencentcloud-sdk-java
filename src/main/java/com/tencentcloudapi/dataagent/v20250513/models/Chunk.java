@@ -45,6 +45,13 @@ public class Chunk extends AbstractModel {
     private Long Size;
 
     /**
+    * 切片概要
+    */
+    @SerializedName("Summary")
+    @Expose
+    private String Summary;
+
+    /**
      * Get 切片ID 
      * @return Id 切片ID
      */
@@ -92,6 +99,22 @@ public class Chunk extends AbstractModel {
         this.Size = Size;
     }
 
+    /**
+     * Get 切片概要 
+     * @return Summary 切片概要
+     */
+    public String getSummary() {
+        return this.Summary;
+    }
+
+    /**
+     * Set 切片概要
+     * @param Summary 切片概要
+     */
+    public void setSummary(String Summary) {
+        this.Summary = Summary;
+    }
+
     public Chunk() {
     }
 
@@ -109,6 +132,9 @@ public class Chunk extends AbstractModel {
         if (source.Size != null) {
             this.Size = new Long(source.Size);
         }
+        if (source.Summary != null) {
+            this.Summary = new String(source.Summary);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class Chunk extends AbstractModel {
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "Content", this.Content);
         this.setParamSimple(map, prefix + "Size", this.Size);
+        this.setParamSimple(map, prefix + "Summary", this.Summary);
 
     }
 }

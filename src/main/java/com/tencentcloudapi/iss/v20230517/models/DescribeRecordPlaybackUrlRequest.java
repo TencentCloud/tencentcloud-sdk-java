@@ -52,7 +52,7 @@ public class DescribeRecordPlaybackUrlRequest extends AbstractModel {
     private Boolean IsInternal;
 
     /**
-    * 云录像回放时，是否需要开启时间戳矫正，主要解决时间戳反转，会退等问题导致无法播放
+    * 云录像回放时，是否需要开启时间戳矫正，主要解决时间戳反转、回退等问题导致无法播放
     */
     @SerializedName("CorrectTimestamp")
     @Expose
@@ -123,16 +123,16 @@ public class DescribeRecordPlaybackUrlRequest extends AbstractModel {
     }
 
     /**
-     * Get 云录像回放时，是否需要开启时间戳矫正，主要解决时间戳反转，会退等问题导致无法播放 
-     * @return CorrectTimestamp 云录像回放时，是否需要开启时间戳矫正，主要解决时间戳反转，会退等问题导致无法播放
+     * Get 云录像回放时，是否需要开启时间戳矫正，主要解决时间戳反转、回退等问题导致无法播放 
+     * @return CorrectTimestamp 云录像回放时，是否需要开启时间戳矫正，主要解决时间戳反转、回退等问题导致无法播放
      */
     public Boolean getCorrectTimestamp() {
         return this.CorrectTimestamp;
     }
 
     /**
-     * Set 云录像回放时，是否需要开启时间戳矫正，主要解决时间戳反转，会退等问题导致无法播放
-     * @param CorrectTimestamp 云录像回放时，是否需要开启时间戳矫正，主要解决时间戳反转，会退等问题导致无法播放
+     * Set 云录像回放时，是否需要开启时间戳矫正，主要解决时间戳反转、回退等问题导致无法播放
+     * @param CorrectTimestamp 云录像回放时，是否需要开启时间戳矫正，主要解决时间戳反转、回退等问题导致无法播放
      */
     public void setCorrectTimestamp(Boolean CorrectTimestamp) {
         this.CorrectTimestamp = CorrectTimestamp;

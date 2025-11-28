@@ -136,6 +136,13 @@ public class BatchUpdateFirmwareRequest extends AbstractModel {
     private String TaskUserDefine;
 
     /**
+    * 每分钟下发设备量
+    */
+    @SerializedName("RateLimit")
+    @Expose
+    private Long RateLimit;
+
+    /**
      * Get 产品ID 
      * @return ProductID 产品ID
      */
@@ -391,6 +398,22 @@ public class BatchUpdateFirmwareRequest extends AbstractModel {
         this.TaskUserDefine = TaskUserDefine;
     }
 
+    /**
+     * Get 每分钟下发设备量 
+     * @return RateLimit 每分钟下发设备量
+     */
+    public Long getRateLimit() {
+        return this.RateLimit;
+    }
+
+    /**
+     * Set 每分钟下发设备量
+     * @param RateLimit 每分钟下发设备量
+     */
+    public void setRateLimit(Long RateLimit) {
+        this.RateLimit = RateLimit;
+    }
+
     public BatchUpdateFirmwareRequest() {
     }
 
@@ -450,6 +473,9 @@ public class BatchUpdateFirmwareRequest extends AbstractModel {
         if (source.TaskUserDefine != null) {
             this.TaskUserDefine = new String(source.TaskUserDefine);
         }
+        if (source.RateLimit != null) {
+            this.RateLimit = new Long(source.RateLimit);
+        }
     }
 
 
@@ -473,6 +499,7 @@ public class BatchUpdateFirmwareRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RetryInterval", this.RetryInterval);
         this.setParamSimple(map, prefix + "FwType", this.FwType);
         this.setParamSimple(map, prefix + "TaskUserDefine", this.TaskUserDefine);
+        this.setParamSimple(map, prefix + "RateLimit", this.RateLimit);
 
     }
 }

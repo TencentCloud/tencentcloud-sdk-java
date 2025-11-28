@@ -56,7 +56,8 @@ public class OperateChannelTemplateRequest extends AbstractModel {
     private String TemplateId;
 
     /**
-    * 第三方平台子客企业的唯一标识，支持批量(用,分割)，
+    * 第三方平台子客企业的唯一标识，支持批量(用,分割) 
+一次批量操作最多支持100个第三方平台子客
     */
     @SerializedName("ProxyOrganizationOpenIds")
     @Expose
@@ -98,6 +99,21 @@ public class OperateChannelTemplateRequest extends AbstractModel {
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
+
+    /**
+    * 指定分页每页返回的数据条数，单页最大支持 100。
+不传默认值为 20
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * 分页查询偏移量，默认为0
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
 
     /**
      * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
@@ -192,16 +208,20 @@ public class OperateChannelTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get 第三方平台子客企业的唯一标识，支持批量(用,分割)， 
-     * @return ProxyOrganizationOpenIds 第三方平台子客企业的唯一标识，支持批量(用,分割)，
+     * Get 第三方平台子客企业的唯一标识，支持批量(用,分割) 
+一次批量操作最多支持100个第三方平台子客 
+     * @return ProxyOrganizationOpenIds 第三方平台子客企业的唯一标识，支持批量(用,分割) 
+一次批量操作最多支持100个第三方平台子客
      */
     public String getProxyOrganizationOpenIds() {
         return this.ProxyOrganizationOpenIds;
     }
 
     /**
-     * Set 第三方平台子客企业的唯一标识，支持批量(用,分割)，
-     * @param ProxyOrganizationOpenIds 第三方平台子客企业的唯一标识，支持批量(用,分割)，
+     * Set 第三方平台子客企业的唯一标识，支持批量(用,分割) 
+一次批量操作最多支持100个第三方平台子客
+     * @param ProxyOrganizationOpenIds 第三方平台子客企业的唯一标识，支持批量(用,分割) 
+一次批量操作最多支持100个第三方平台子客
      */
     public void setProxyOrganizationOpenIds(String ProxyOrganizationOpenIds) {
         this.ProxyOrganizationOpenIds = ProxyOrganizationOpenIds;
@@ -323,6 +343,42 @@ public class OperateChannelTemplateRequest extends AbstractModel {
         this.Operator = Operator;
     }
 
+    /**
+     * Get 指定分页每页返回的数据条数，单页最大支持 100。
+不传默认值为 20 
+     * @return Limit 指定分页每页返回的数据条数，单页最大支持 100。
+不传默认值为 20
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 指定分页每页返回的数据条数，单页最大支持 100。
+不传默认值为 20
+     * @param Limit 指定分页每页返回的数据条数，单页最大支持 100。
+不传默认值为 20
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get 分页查询偏移量，默认为0 
+     * @return Offset 分页查询偏移量，默认为0
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 分页查询偏移量，默认为0
+     * @param Offset 分页查询偏移量，默认为0
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
     public OperateChannelTemplateRequest() {
     }
 
@@ -352,6 +408,12 @@ public class OperateChannelTemplateRequest extends AbstractModel {
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
     }
 
 
@@ -366,6 +428,8 @@ public class OperateChannelTemplateRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AuthTag", this.AuthTag);
         this.setParamSimple(map, prefix + "Available", this.Available);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
 
     }
 }

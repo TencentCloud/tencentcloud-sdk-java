@@ -27,6 +27,9 @@ public enum TdmqErrorCode {
      /* 创建命名空间失败。 */
      FAILEDOPERATION_CREATENAMESPACE("FailedOperation.CreateNamespace"),
      
+     /* 当前地域不支持 sdk 创建 */
+     FAILEDOPERATION_CREATEPROCLUSTERREGIONNOTEXIST("FailedOperation.CreateProClusterRegionNotExist"),
+     
      /* 创建producer出错。 */
      FAILEDOPERATION_CREATEPRODUCERERROR("FailedOperation.CreateProducerError"),
      

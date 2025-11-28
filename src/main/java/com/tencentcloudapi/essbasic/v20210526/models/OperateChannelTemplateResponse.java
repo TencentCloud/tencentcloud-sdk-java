@@ -59,7 +59,7 @@ public class OperateChannelTemplateResponse extends AbstractModel {
     private String AuthTag;
 
     /**
-    * 第三方平台子客企业标识列表
+    * 第三方平台子客企业标识列表，仅在select 模式下返回
     */
     @SerializedName("ProxyOrganizationOpenIds")
     @Expose
@@ -71,6 +71,13 @@ public class OperateChannelTemplateResponse extends AbstractModel {
     @SerializedName("FailMessageList")
     @Expose
     private AuthFailMessage [] FailMessageList;
+
+    /**
+    * 授权的平台子企业数量，OperateType 为select 时返回。
+    */
+    @SerializedName("Total")
+    @Expose
+    private Long Total;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -172,16 +179,16 @@ public class OperateChannelTemplateResponse extends AbstractModel {
     }
 
     /**
-     * Get 第三方平台子客企业标识列表 
-     * @return ProxyOrganizationOpenIds 第三方平台子客企业标识列表
+     * Get 第三方平台子客企业标识列表，仅在select 模式下返回 
+     * @return ProxyOrganizationOpenIds 第三方平台子客企业标识列表，仅在select 模式下返回
      */
     public String [] getProxyOrganizationOpenIds() {
         return this.ProxyOrganizationOpenIds;
     }
 
     /**
-     * Set 第三方平台子客企业标识列表
-     * @param ProxyOrganizationOpenIds 第三方平台子客企业标识列表
+     * Set 第三方平台子客企业标识列表，仅在select 模式下返回
+     * @param ProxyOrganizationOpenIds 第三方平台子客企业标识列表，仅在select 模式下返回
      */
     public void setProxyOrganizationOpenIds(String [] ProxyOrganizationOpenIds) {
         this.ProxyOrganizationOpenIds = ProxyOrganizationOpenIds;
@@ -201,6 +208,22 @@ public class OperateChannelTemplateResponse extends AbstractModel {
      */
     public void setFailMessageList(AuthFailMessage [] FailMessageList) {
         this.FailMessageList = FailMessageList;
+    }
+
+    /**
+     * Get 授权的平台子企业数量，OperateType 为select 时返回。 
+     * @return Total 授权的平台子企业数量，OperateType 为select 时返回。
+     */
+    public Long getTotal() {
+        return this.Total;
+    }
+
+    /**
+     * Set 授权的平台子企业数量，OperateType 为select 时返回。
+     * @param Total 授权的平台子企业数量，OperateType 为select 时返回。
+     */
+    public void setTotal(Long Total) {
+        this.Total = Total;
     }
 
     /**
@@ -251,6 +274,9 @@ public class OperateChannelTemplateResponse extends AbstractModel {
                 this.FailMessageList[i] = new AuthFailMessage(source.FailMessageList[i]);
             }
         }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -267,6 +293,7 @@ public class OperateChannelTemplateResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "AuthTag", this.AuthTag);
         this.setParamArraySimple(map, prefix + "ProxyOrganizationOpenIds.", this.ProxyOrganizationOpenIds);
         this.setParamArrayObj(map, prefix + "FailMessageList.", this.FailMessageList);
+        this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

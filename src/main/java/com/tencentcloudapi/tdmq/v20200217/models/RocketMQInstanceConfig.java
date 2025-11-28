@@ -149,6 +149,13 @@ public class RocketMQInstanceConfig extends AbstractModel {
     private Long TopicNumUpperLimit;
 
     /**
+    * 控制生产和消费消息的 TPS 占比，取值范围0～1，默认值为0.5
+    */
+    @SerializedName("SendReceiveRatio")
+    @Expose
+    private Float SendReceiveRatio;
+
+    /**
      * Get 单命名空间TPS上线 
      * @return MaxTpsPerNamespace 单命名空间TPS上线
      */
@@ -444,6 +451,22 @@ public class RocketMQInstanceConfig extends AbstractModel {
         this.TopicNumUpperLimit = TopicNumUpperLimit;
     }
 
+    /**
+     * Get 控制生产和消费消息的 TPS 占比，取值范围0～1，默认值为0.5 
+     * @return SendReceiveRatio 控制生产和消费消息的 TPS 占比，取值范围0～1，默认值为0.5
+     */
+    public Float getSendReceiveRatio() {
+        return this.SendReceiveRatio;
+    }
+
+    /**
+     * Set 控制生产和消费消息的 TPS 占比，取值范围0～1，默认值为0.5
+     * @param SendReceiveRatio 控制生产和消费消息的 TPS 占比，取值范围0～1，默认值为0.5
+     */
+    public void setSendReceiveRatio(Float SendReceiveRatio) {
+        this.SendReceiveRatio = SendReceiveRatio;
+    }
+
     public RocketMQInstanceConfig() {
     }
 
@@ -509,6 +532,9 @@ public class RocketMQInstanceConfig extends AbstractModel {
         if (source.TopicNumUpperLimit != null) {
             this.TopicNumUpperLimit = new Long(source.TopicNumUpperLimit);
         }
+        if (source.SendReceiveRatio != null) {
+            this.SendReceiveRatio = new Float(source.SendReceiveRatio);
+        }
     }
 
 
@@ -533,6 +559,7 @@ public class RocketMQInstanceConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "Retention", this.Retention);
         this.setParamSimple(map, prefix + "TopicNumLowerLimit", this.TopicNumLowerLimit);
         this.setParamSimple(map, prefix + "TopicNumUpperLimit", this.TopicNumUpperLimit);
+        this.setParamSimple(map, prefix + "SendReceiveRatio", this.SendReceiveRatio);
 
     }
 }
