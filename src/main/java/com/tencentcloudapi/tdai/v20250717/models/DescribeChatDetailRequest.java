@@ -38,11 +38,25 @@ public class DescribeChatDetailRequest extends AbstractModel {
     private String ChatId;
 
     /**
-    * 最后一条流式TokenID
+    * 流ID
     */
-    @SerializedName("LastStreamingTokenId")
+    @SerializedName("StreamingId")
     @Expose
-    private Long LastStreamingTokenId;
+    private String StreamingId;
+
+    /**
+    * 开始拉取的流式TokenID。0表示从该流最早的TokenID开始获取
+    */
+    @SerializedName("BeginStreamingTokenId")
+    @Expose
+    private String BeginStreamingTokenId;
+
+    /**
+    * 单次获取的token数量，默认2000
+    */
+    @SerializedName("TokenLimit")
+    @Expose
+    private Long TokenLimit;
 
     /**
      * Get 智能体ID 
@@ -77,19 +91,51 @@ public class DescribeChatDetailRequest extends AbstractModel {
     }
 
     /**
-     * Get 最后一条流式TokenID 
-     * @return LastStreamingTokenId 最后一条流式TokenID
+     * Get 流ID 
+     * @return StreamingId 流ID
      */
-    public Long getLastStreamingTokenId() {
-        return this.LastStreamingTokenId;
+    public String getStreamingId() {
+        return this.StreamingId;
     }
 
     /**
-     * Set 最后一条流式TokenID
-     * @param LastStreamingTokenId 最后一条流式TokenID
+     * Set 流ID
+     * @param StreamingId 流ID
      */
-    public void setLastStreamingTokenId(Long LastStreamingTokenId) {
-        this.LastStreamingTokenId = LastStreamingTokenId;
+    public void setStreamingId(String StreamingId) {
+        this.StreamingId = StreamingId;
+    }
+
+    /**
+     * Get 开始拉取的流式TokenID。0表示从该流最早的TokenID开始获取 
+     * @return BeginStreamingTokenId 开始拉取的流式TokenID。0表示从该流最早的TokenID开始获取
+     */
+    public String getBeginStreamingTokenId() {
+        return this.BeginStreamingTokenId;
+    }
+
+    /**
+     * Set 开始拉取的流式TokenID。0表示从该流最早的TokenID开始获取
+     * @param BeginStreamingTokenId 开始拉取的流式TokenID。0表示从该流最早的TokenID开始获取
+     */
+    public void setBeginStreamingTokenId(String BeginStreamingTokenId) {
+        this.BeginStreamingTokenId = BeginStreamingTokenId;
+    }
+
+    /**
+     * Get 单次获取的token数量，默认2000 
+     * @return TokenLimit 单次获取的token数量，默认2000
+     */
+    public Long getTokenLimit() {
+        return this.TokenLimit;
+    }
+
+    /**
+     * Set 单次获取的token数量，默认2000
+     * @param TokenLimit 单次获取的token数量，默认2000
+     */
+    public void setTokenLimit(Long TokenLimit) {
+        this.TokenLimit = TokenLimit;
     }
 
     public DescribeChatDetailRequest() {
@@ -106,8 +152,14 @@ public class DescribeChatDetailRequest extends AbstractModel {
         if (source.ChatId != null) {
             this.ChatId = new String(source.ChatId);
         }
-        if (source.LastStreamingTokenId != null) {
-            this.LastStreamingTokenId = new Long(source.LastStreamingTokenId);
+        if (source.StreamingId != null) {
+            this.StreamingId = new String(source.StreamingId);
+        }
+        if (source.BeginStreamingTokenId != null) {
+            this.BeginStreamingTokenId = new String(source.BeginStreamingTokenId);
+        }
+        if (source.TokenLimit != null) {
+            this.TokenLimit = new Long(source.TokenLimit);
         }
     }
 
@@ -118,7 +170,9 @@ public class DescribeChatDetailRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "ChatId", this.ChatId);
-        this.setParamSimple(map, prefix + "LastStreamingTokenId", this.LastStreamingTokenId);
+        this.setParamSimple(map, prefix + "StreamingId", this.StreamingId);
+        this.setParamSimple(map, prefix + "BeginStreamingTokenId", this.BeginStreamingTokenId);
+        this.setParamSimple(map, prefix + "TokenLimit", this.TokenLimit);
 
     }
 }

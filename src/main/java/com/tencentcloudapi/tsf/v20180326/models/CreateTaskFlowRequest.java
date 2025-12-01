@@ -45,14 +45,14 @@ public class CreateTaskFlowRequest extends AbstractModel {
     private TaskFlowEdge [] FlowEdges;
 
     /**
-    * 工作流执行超时时间
+    * 工作流执行超时时间，单位：毫秒
     */
     @SerializedName("TimeOut")
     @Expose
     private Long TimeOut;
 
     /**
-    * 无
+    * 数据集列表
     */
     @SerializedName("ProgramIdList")
     @Expose
@@ -107,32 +107,32 @@ public class CreateTaskFlowRequest extends AbstractModel {
     }
 
     /**
-     * Get 工作流执行超时时间 
-     * @return TimeOut 工作流执行超时时间
+     * Get 工作流执行超时时间，单位：毫秒 
+     * @return TimeOut 工作流执行超时时间，单位：毫秒
      */
     public Long getTimeOut() {
         return this.TimeOut;
     }
 
     /**
-     * Set 工作流执行超时时间
-     * @param TimeOut 工作流执行超时时间
+     * Set 工作流执行超时时间，单位：毫秒
+     * @param TimeOut 工作流执行超时时间，单位：毫秒
      */
     public void setTimeOut(Long TimeOut) {
         this.TimeOut = TimeOut;
     }
 
     /**
-     * Get 无 
-     * @return ProgramIdList 无
+     * Get 数据集列表 
+     * @return ProgramIdList 数据集列表
      */
     public String [] getProgramIdList() {
         return this.ProgramIdList;
     }
 
     /**
-     * Set 无
-     * @param ProgramIdList 无
+     * Set 数据集列表
+     * @param ProgramIdList 数据集列表
      */
     public void setProgramIdList(String [] ProgramIdList) {
         this.ProgramIdList = ProgramIdList;

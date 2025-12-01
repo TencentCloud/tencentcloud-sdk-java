@@ -150,6 +150,13 @@ public class DescribeFirmwareTaskResponse extends AbstractModel {
     private String TaskUserDefine;
 
     /**
+    * 每分钟发送设备量
+    */
+    @SerializedName("RateLimit")
+    @Expose
+    private Long RateLimit;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -445,6 +452,22 @@ public class DescribeFirmwareTaskResponse extends AbstractModel {
     }
 
     /**
+     * Get 每分钟发送设备量 
+     * @return RateLimit 每分钟发送设备量
+     */
+    public Long getRateLimit() {
+        return this.RateLimit;
+    }
+
+    /**
+     * Set 每分钟发送设备量
+     * @param RateLimit 每分钟发送设备量
+     */
+    public void setRateLimit(Long RateLimit) {
+        this.RateLimit = RateLimit;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -522,6 +545,9 @@ public class DescribeFirmwareTaskResponse extends AbstractModel {
         if (source.TaskUserDefine != null) {
             this.TaskUserDefine = new String(source.TaskUserDefine);
         }
+        if (source.RateLimit != null) {
+            this.RateLimit = new Long(source.RateLimit);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -550,6 +576,7 @@ public class DescribeFirmwareTaskResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "RetryInterval", this.RetryInterval);
         this.setParamSimple(map, prefix + "OverrideMode", this.OverrideMode);
         this.setParamSimple(map, prefix + "TaskUserDefine", this.TaskUserDefine);
+        this.setParamSimple(map, prefix + "RateLimit", this.RateLimit);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

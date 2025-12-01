@@ -60,13 +60,14 @@ public class ProcessImageRequest extends AbstractModel {
 
     /**
     * 图片处理模板唯一标识。
+图片模板功能内测中，如需使用请提交工单申请。
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
+    * 资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。
     */
     @SerializedName("ResourceId")
     @Expose
@@ -172,8 +173,10 @@ public class ProcessImageRequest extends AbstractModel {
     }
 
     /**
-     * Get 图片处理模板唯一标识。 
+     * Get 图片处理模板唯一标识。
+图片模板功能内测中，如需使用请提交工单申请。 
      * @return Definition 图片处理模板唯一标识。
+图片模板功能内测中，如需使用请提交工单申请。
      */
     public Long getDefinition() {
         return this.Definition;
@@ -181,23 +184,25 @@ public class ProcessImageRequest extends AbstractModel {
 
     /**
      * Set 图片处理模板唯一标识。
+图片模板功能内测中，如需使用请提交工单申请。
      * @param Definition 图片处理模板唯一标识。
+图片模板功能内测中，如需使用请提交工单申请。
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get 资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。 
-     * @return ResourceId 资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
+     * Get 资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。 
+     * @return ResourceId 资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
-     * @param ResourceId 资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
+     * Set 资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。
+     * @param ResourceId 资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
