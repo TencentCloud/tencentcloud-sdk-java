@@ -262,10 +262,46 @@ p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，
 
     /**
     * 企业证照类型：<ul><li> **USCC** :(默认)工商组织营业执照</li><li> **PRACTICELICENSEOFMEDICALINSTITUTION** :医疗机构执业许可证</li></ul>
+
+注意 ：
+如果企业证照类型是医疗机构，则参数设置企业授权方式(AuthorizationTypes)和企业认证方式(AuthorizationMethods)都无效.
+医疗机构的企业授权方式  仅有授权书的方式。企业认证仅有上传营业执照的方式。
     */
     @SerializedName("OrganizationIdCardType")
     @Expose
     private String OrganizationIdCardType;
+
+    /**
+    * 是否允许编辑企业注册时的证照类型
+
+true:不允许编辑。
+
+false:允许编辑（默认值）。
+
+
+注意：
+入参中的OrganizationIdCardType值不为空的时候，才可设置为不可编辑。
+    */
+    @SerializedName("OrganizationIdCardTypeSame")
+    @Expose
+    private Boolean OrganizationIdCardTypeSame;
+
+    /**
+    * 指定企业认证的授权方式 支持多选:
+
+<ul>
+<li><strong>1</strong>: 上传营业执照</li>
+<li><strong>2</strong>: 腾讯云快速认证</li>
+<li><strong>3</strong>: 腾讯商户号授权<font color="red">（仅支持小程序端）</font></li>
+</ul>
+
+注意：
+1.如果没有指定，则默认是1,仅有上传营业执照。
+2.H5 仅支持上传营业执照。
+    */
+    @SerializedName("AuthorizationMethod")
+    @Expose
+    private Long [] AuthorizationMethod;
 
     /**
      * Get 操作人信息 
@@ -916,8 +952,16 @@ p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，
     }
 
     /**
-     * Get 企业证照类型：<ul><li> **USCC** :(默认)工商组织营业执照</li><li> **PRACTICELICENSEOFMEDICALINSTITUTION** :医疗机构执业许可证</li></ul> 
+     * Get 企业证照类型：<ul><li> **USCC** :(默认)工商组织营业执照</li><li> **PRACTICELICENSEOFMEDICALINSTITUTION** :医疗机构执业许可证</li></ul>
+
+注意 ：
+如果企业证照类型是医疗机构，则参数设置企业授权方式(AuthorizationTypes)和企业认证方式(AuthorizationMethods)都无效.
+医疗机构的企业授权方式  仅有授权书的方式。企业认证仅有上传营业执照的方式。 
      * @return OrganizationIdCardType 企业证照类型：<ul><li> **USCC** :(默认)工商组织营业执照</li><li> **PRACTICELICENSEOFMEDICALINSTITUTION** :医疗机构执业许可证</li></ul>
+
+注意 ：
+如果企业证照类型是医疗机构，则参数设置企业授权方式(AuthorizationTypes)和企业认证方式(AuthorizationMethods)都无效.
+医疗机构的企业授权方式  仅有授权书的方式。企业认证仅有上传营业执照的方式。
      */
     public String getOrganizationIdCardType() {
         return this.OrganizationIdCardType;
@@ -925,10 +969,122 @@ p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，
 
     /**
      * Set 企业证照类型：<ul><li> **USCC** :(默认)工商组织营业执照</li><li> **PRACTICELICENSEOFMEDICALINSTITUTION** :医疗机构执业许可证</li></ul>
+
+注意 ：
+如果企业证照类型是医疗机构，则参数设置企业授权方式(AuthorizationTypes)和企业认证方式(AuthorizationMethods)都无效.
+医疗机构的企业授权方式  仅有授权书的方式。企业认证仅有上传营业执照的方式。
      * @param OrganizationIdCardType 企业证照类型：<ul><li> **USCC** :(默认)工商组织营业执照</li><li> **PRACTICELICENSEOFMEDICALINSTITUTION** :医疗机构执业许可证</li></ul>
+
+注意 ：
+如果企业证照类型是医疗机构，则参数设置企业授权方式(AuthorizationTypes)和企业认证方式(AuthorizationMethods)都无效.
+医疗机构的企业授权方式  仅有授权书的方式。企业认证仅有上传营业执照的方式。
      */
     public void setOrganizationIdCardType(String OrganizationIdCardType) {
         this.OrganizationIdCardType = OrganizationIdCardType;
+    }
+
+    /**
+     * Get 是否允许编辑企业注册时的证照类型
+
+true:不允许编辑。
+
+false:允许编辑（默认值）。
+
+
+注意：
+入参中的OrganizationIdCardType值不为空的时候，才可设置为不可编辑。 
+     * @return OrganizationIdCardTypeSame 是否允许编辑企业注册时的证照类型
+
+true:不允许编辑。
+
+false:允许编辑（默认值）。
+
+
+注意：
+入参中的OrganizationIdCardType值不为空的时候，才可设置为不可编辑。
+     */
+    public Boolean getOrganizationIdCardTypeSame() {
+        return this.OrganizationIdCardTypeSame;
+    }
+
+    /**
+     * Set 是否允许编辑企业注册时的证照类型
+
+true:不允许编辑。
+
+false:允许编辑（默认值）。
+
+
+注意：
+入参中的OrganizationIdCardType值不为空的时候，才可设置为不可编辑。
+     * @param OrganizationIdCardTypeSame 是否允许编辑企业注册时的证照类型
+
+true:不允许编辑。
+
+false:允许编辑（默认值）。
+
+
+注意：
+入参中的OrganizationIdCardType值不为空的时候，才可设置为不可编辑。
+     */
+    public void setOrganizationIdCardTypeSame(Boolean OrganizationIdCardTypeSame) {
+        this.OrganizationIdCardTypeSame = OrganizationIdCardTypeSame;
+    }
+
+    /**
+     * Get 指定企业认证的授权方式 支持多选:
+
+<ul>
+<li><strong>1</strong>: 上传营业执照</li>
+<li><strong>2</strong>: 腾讯云快速认证</li>
+<li><strong>3</strong>: 腾讯商户号授权<font color="red">（仅支持小程序端）</font></li>
+</ul>
+
+注意：
+1.如果没有指定，则默认是1,仅有上传营业执照。
+2.H5 仅支持上传营业执照。 
+     * @return AuthorizationMethod 指定企业认证的授权方式 支持多选:
+
+<ul>
+<li><strong>1</strong>: 上传营业执照</li>
+<li><strong>2</strong>: 腾讯云快速认证</li>
+<li><strong>3</strong>: 腾讯商户号授权<font color="red">（仅支持小程序端）</font></li>
+</ul>
+
+注意：
+1.如果没有指定，则默认是1,仅有上传营业执照。
+2.H5 仅支持上传营业执照。
+     */
+    public Long [] getAuthorizationMethod() {
+        return this.AuthorizationMethod;
+    }
+
+    /**
+     * Set 指定企业认证的授权方式 支持多选:
+
+<ul>
+<li><strong>1</strong>: 上传营业执照</li>
+<li><strong>2</strong>: 腾讯云快速认证</li>
+<li><strong>3</strong>: 腾讯商户号授权<font color="red">（仅支持小程序端）</font></li>
+</ul>
+
+注意：
+1.如果没有指定，则默认是1,仅有上传营业执照。
+2.H5 仅支持上传营业执照。
+     * @param AuthorizationMethod 指定企业认证的授权方式 支持多选:
+
+<ul>
+<li><strong>1</strong>: 上传营业执照</li>
+<li><strong>2</strong>: 腾讯云快速认证</li>
+<li><strong>3</strong>: 腾讯商户号授权<font color="red">（仅支持小程序端）</font></li>
+</ul>
+
+注意：
+1.如果没有指定，则默认是1,仅有上传营业执照。
+2.H5 仅支持上传营业执照。
+     */
+    public void setAuthorizationMethod(Long [] AuthorizationMethod) {
+        this.AuthorizationMethod = AuthorizationMethod;
     }
 
     public CreateOrganizationAuthUrlRequest() {
@@ -1029,6 +1185,15 @@ p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，
         if (source.OrganizationIdCardType != null) {
             this.OrganizationIdCardType = new String(source.OrganizationIdCardType);
         }
+        if (source.OrganizationIdCardTypeSame != null) {
+            this.OrganizationIdCardTypeSame = new Boolean(source.OrganizationIdCardTypeSame);
+        }
+        if (source.AuthorizationMethod != null) {
+            this.AuthorizationMethod = new Long[source.AuthorizationMethod.length];
+            for (int i = 0; i < source.AuthorizationMethod.length; i++) {
+                this.AuthorizationMethod[i] = new Long(source.AuthorizationMethod[i]);
+            }
+        }
     }
 
 
@@ -1062,6 +1227,8 @@ p.s. 如果Endpoint是 APP，传递的跳转地址无效，不会进行跳转，
         this.setParamSimple(map, prefix + "BankAccountNumberSame", this.BankAccountNumberSame);
         this.setParamArrayObj(map, prefix + "JumpEvents.", this.JumpEvents);
         this.setParamSimple(map, prefix + "OrganizationIdCardType", this.OrganizationIdCardType);
+        this.setParamSimple(map, prefix + "OrganizationIdCardTypeSame", this.OrganizationIdCardTypeSame);
+        this.setParamArraySimple(map, prefix + "AuthorizationMethod.", this.AuthorizationMethod);
 
     }
 }

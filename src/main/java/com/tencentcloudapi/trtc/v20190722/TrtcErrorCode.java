@@ -132,6 +132,9 @@ public enum TrtcErrorCode {
      /* BackgroundImageUrl参数错误。 */
      INVALIDPARAMETER_BACKGROUNDIMAGEURL("InvalidParameter.BackgroundImageUrl"),
      
+     /* BizId参数错误 */
+     INVALIDPARAMETER_BIZID("InvalidParameter.BizId"),
+     
      /* body 解析参数失败。 */
      INVALIDPARAMETER_BODYPARAMSERROR("InvalidParameter.BodyParamsError"),
      

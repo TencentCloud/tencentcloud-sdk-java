@@ -259,6 +259,17 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *创建RocketMQ主题
+     * @param req CreateRocketMQTopicV2Request
+     * @return CreateRocketMQTopicV2Response
+     * @throws TencentCloudSDKException
+     */
+    public CreateRocketMQTopicV2Response CreateRocketMQTopicV2(CreateRocketMQTopicV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateRocketMQTopicV2", CreateRocketMQTopicV2Response.class);
+    }
+
+    /**
      *创建RocketMQ专享实例
      * @param req CreateRocketMQVipInstanceRequest
      * @return CreateRocketMQVipInstanceResponse

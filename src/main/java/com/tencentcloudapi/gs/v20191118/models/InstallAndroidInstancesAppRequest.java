@@ -45,6 +45,15 @@ public class InstallAndroidInstancesAppRequest extends AbstractModel {
     private String AndroidAppVersion;
 
     /**
+    * 安装方式。
+CLEAR_DATA 默认，清理数据
+KEEP_DATA 保留数据
+    */
+    @SerializedName("InstallationMethod")
+    @Expose
+    private String InstallationMethod;
+
+    /**
      * Get 实例ID 
      * @return AndroidInstanceIds 实例ID
      */
@@ -92,6 +101,30 @@ public class InstallAndroidInstancesAppRequest extends AbstractModel {
         this.AndroidAppVersion = AndroidAppVersion;
     }
 
+    /**
+     * Get 安装方式。
+CLEAR_DATA 默认，清理数据
+KEEP_DATA 保留数据 
+     * @return InstallationMethod 安装方式。
+CLEAR_DATA 默认，清理数据
+KEEP_DATA 保留数据
+     */
+    public String getInstallationMethod() {
+        return this.InstallationMethod;
+    }
+
+    /**
+     * Set 安装方式。
+CLEAR_DATA 默认，清理数据
+KEEP_DATA 保留数据
+     * @param InstallationMethod 安装方式。
+CLEAR_DATA 默认，清理数据
+KEEP_DATA 保留数据
+     */
+    public void setInstallationMethod(String InstallationMethod) {
+        this.InstallationMethod = InstallationMethod;
+    }
+
     public InstallAndroidInstancesAppRequest() {
     }
 
@@ -112,6 +145,9 @@ public class InstallAndroidInstancesAppRequest extends AbstractModel {
         if (source.AndroidAppVersion != null) {
             this.AndroidAppVersion = new String(source.AndroidAppVersion);
         }
+        if (source.InstallationMethod != null) {
+            this.InstallationMethod = new String(source.InstallationMethod);
+        }
     }
 
 
@@ -122,6 +158,7 @@ public class InstallAndroidInstancesAppRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "AndroidInstanceIds.", this.AndroidInstanceIds);
         this.setParamSimple(map, prefix + "AndroidAppId", this.AndroidAppId);
         this.setParamSimple(map, prefix + "AndroidAppVersion", this.AndroidAppVersion);
+        this.setParamSimple(map, prefix + "InstallationMethod", this.InstallationMethod);
 
     }
 }

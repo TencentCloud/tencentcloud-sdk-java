@@ -31,6 +31,13 @@ public class CreateDSPACosMetaResourcesRequest extends AbstractModel {
     private String DspaId;
 
     /**
+    * 必填，COS资源列表
+    */
+    @SerializedName("CosBucketItems")
+    @Expose
+    private CosBucketItem [] CosBucketItems;
+
+    /**
     * 资源所处地域。
     */
     @SerializedName("ResourceRegion")
@@ -43,13 +50,6 @@ public class CreateDSPACosMetaResourcesRequest extends AbstractModel {
     @SerializedName("Buckets")
     @Expose
     private String [] Buckets;
-
-    /**
-    * 必填，COS资源列表
-    */
-    @SerializedName("CosBucketItems")
-    @Expose
-    private CosBucketItem [] CosBucketItems;
 
     /**
      * Get DSPA实例ID。 
@@ -65,6 +65,22 @@ public class CreateDSPACosMetaResourcesRequest extends AbstractModel {
      */
     public void setDspaId(String DspaId) {
         this.DspaId = DspaId;
+    }
+
+    /**
+     * Get 必填，COS资源列表 
+     * @return CosBucketItems 必填，COS资源列表
+     */
+    public CosBucketItem [] getCosBucketItems() {
+        return this.CosBucketItems;
+    }
+
+    /**
+     * Set 必填，COS资源列表
+     * @param CosBucketItems 必填，COS资源列表
+     */
+    public void setCosBucketItems(CosBucketItem [] CosBucketItems) {
+        this.CosBucketItems = CosBucketItems;
     }
 
     /**
@@ -107,22 +123,6 @@ public class CreateDSPACosMetaResourcesRequest extends AbstractModel {
         this.Buckets = Buckets;
     }
 
-    /**
-     * Get 必填，COS资源列表 
-     * @return CosBucketItems 必填，COS资源列表
-     */
-    public CosBucketItem [] getCosBucketItems() {
-        return this.CosBucketItems;
-    }
-
-    /**
-     * Set 必填，COS资源列表
-     * @param CosBucketItems 必填，COS资源列表
-     */
-    public void setCosBucketItems(CosBucketItem [] CosBucketItems) {
-        this.CosBucketItems = CosBucketItems;
-    }
-
     public CreateDSPACosMetaResourcesRequest() {
     }
 
@@ -134,6 +134,12 @@ public class CreateDSPACosMetaResourcesRequest extends AbstractModel {
         if (source.DspaId != null) {
             this.DspaId = new String(source.DspaId);
         }
+        if (source.CosBucketItems != null) {
+            this.CosBucketItems = new CosBucketItem[source.CosBucketItems.length];
+            for (int i = 0; i < source.CosBucketItems.length; i++) {
+                this.CosBucketItems[i] = new CosBucketItem(source.CosBucketItems[i]);
+            }
+        }
         if (source.ResourceRegion != null) {
             this.ResourceRegion = new String(source.ResourceRegion);
         }
@@ -141,12 +147,6 @@ public class CreateDSPACosMetaResourcesRequest extends AbstractModel {
             this.Buckets = new String[source.Buckets.length];
             for (int i = 0; i < source.Buckets.length; i++) {
                 this.Buckets[i] = new String(source.Buckets[i]);
-            }
-        }
-        if (source.CosBucketItems != null) {
-            this.CosBucketItems = new CosBucketItem[source.CosBucketItems.length];
-            for (int i = 0; i < source.CosBucketItems.length; i++) {
-                this.CosBucketItems[i] = new CosBucketItem(source.CosBucketItems[i]);
             }
         }
     }
@@ -157,9 +157,9 @@ public class CreateDSPACosMetaResourcesRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DspaId", this.DspaId);
+        this.setParamArrayObj(map, prefix + "CosBucketItems.", this.CosBucketItems);
         this.setParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
         this.setParamArraySimple(map, prefix + "Buckets.", this.Buckets);
-        this.setParamArrayObj(map, prefix + "CosBucketItems.", this.CosBucketItems);
 
     }
 }

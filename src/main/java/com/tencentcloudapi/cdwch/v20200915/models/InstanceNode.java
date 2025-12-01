@@ -87,7 +87,7 @@ public class InstanceNode extends AbstractModel {
     private String Rip;
 
     /**
-    * ture的时候表示该节点上部署了chproxy进程
+    * ture的时候表示该节点上部署了chPROXY进程
     */
     @SerializedName("IsCHProxy")
     @Expose
@@ -115,7 +115,7 @@ public class InstanceNode extends AbstractModel {
     private String Zone;
 
     /**
-    * 区描述
+    * 去描述
     */
     @SerializedName("ZoneDesc")
     @Expose
@@ -127,6 +127,13 @@ public class InstanceNode extends AbstractModel {
     @SerializedName("RealResourceId")
     @Expose
     private String RealResourceId;
+
+    /**
+    * 子网信息
+    */
+    @SerializedName("SubnetId")
+    @Expose
+    private String SubnetId;
 
     /**
      * Get IP地址 
@@ -273,16 +280,16 @@ public class InstanceNode extends AbstractModel {
     }
 
     /**
-     * Get ture的时候表示该节点上部署了chproxy进程 
-     * @return IsCHProxy ture的时候表示该节点上部署了chproxy进程
+     * Get ture的时候表示该节点上部署了chPROXY进程 
+     * @return IsCHProxy ture的时候表示该节点上部署了chPROXY进程
      */
     public Boolean getIsCHProxy() {
         return this.IsCHProxy;
     }
 
     /**
-     * Set ture的时候表示该节点上部署了chproxy进程
-     * @param IsCHProxy ture的时候表示该节点上部署了chproxy进程
+     * Set ture的时候表示该节点上部署了chPROXY进程
+     * @param IsCHProxy ture的时候表示该节点上部署了chPROXY进程
      */
     public void setIsCHProxy(Boolean IsCHProxy) {
         this.IsCHProxy = IsCHProxy;
@@ -337,16 +344,16 @@ public class InstanceNode extends AbstractModel {
     }
 
     /**
-     * Get 区描述 
-     * @return ZoneDesc 区描述
+     * Get 去描述 
+     * @return ZoneDesc 去描述
      */
     public String getZoneDesc() {
         return this.ZoneDesc;
     }
 
     /**
-     * Set 区描述
-     * @param ZoneDesc 区描述
+     * Set 去描述
+     * @param ZoneDesc 去描述
      */
     public void setZoneDesc(String ZoneDesc) {
         this.ZoneDesc = ZoneDesc;
@@ -366,6 +373,22 @@ public class InstanceNode extends AbstractModel {
      */
     public void setRealResourceId(String RealResourceId) {
         this.RealResourceId = RealResourceId;
+    }
+
+    /**
+     * Get 子网信息 
+     * @return SubnetId 子网信息
+     */
+    public String getSubnetId() {
+        return this.SubnetId;
+    }
+
+    /**
+     * Set 子网信息
+     * @param SubnetId 子网信息
+     */
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
     }
 
     public InstanceNode() {
@@ -424,6 +447,9 @@ public class InstanceNode extends AbstractModel {
         if (source.RealResourceId != null) {
             this.RealResourceId = new String(source.RealResourceId);
         }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
     }
 
 
@@ -446,6 +472,7 @@ public class InstanceNode extends AbstractModel {
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "ZoneDesc", this.ZoneDesc);
         this.setParamSimple(map, prefix + "RealResourceId", this.RealResourceId);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
 
     }
 }

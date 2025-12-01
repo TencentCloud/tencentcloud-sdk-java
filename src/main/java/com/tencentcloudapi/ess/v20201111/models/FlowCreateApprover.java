@@ -353,6 +353,21 @@ public class FlowCreateApprover extends AbstractModel {
     private String [] SignEndpoints;
 
     /**
+    * 是否不保存联系人
+默认 false 保存联系人  true 不保存联系人
+
+设置这个参数为保存联系人的时候,他方企业签署人会被保存进发起人的联系人中。
+联系人查看可登录[电子签控制台](https://test.qian.tencent.cn/console/) 进行查看。
+如下图位置：
+![](https://qcloudimg.tencent-cloud.cn/raw/fb8a22cd615d24c21acfa0e37e2cd873.png)
+
+
+    */
+    @SerializedName("NotSaveContact")
+    @Expose
+    private Boolean NotSaveContact;
+
+    /**
      * Get 在指定签署方时，可以选择企业B端或个人C端等不同的参与者类型，可选类型如下：
 
 <ul><li> <b>0</b> :企业B端。</li>
@@ -1324,6 +1339,54 @@ public class FlowCreateApprover extends AbstractModel {
         this.SignEndpoints = SignEndpoints;
     }
 
+    /**
+     * Get 是否不保存联系人
+默认 false 保存联系人  true 不保存联系人
+
+设置这个参数为保存联系人的时候,他方企业签署人会被保存进发起人的联系人中。
+联系人查看可登录[电子签控制台](https://test.qian.tencent.cn/console/) 进行查看。
+如下图位置：
+![](https://qcloudimg.tencent-cloud.cn/raw/fb8a22cd615d24c21acfa0e37e2cd873.png)
+
+ 
+     * @return NotSaveContact 是否不保存联系人
+默认 false 保存联系人  true 不保存联系人
+
+设置这个参数为保存联系人的时候,他方企业签署人会被保存进发起人的联系人中。
+联系人查看可登录[电子签控制台](https://test.qian.tencent.cn/console/) 进行查看。
+如下图位置：
+![](https://qcloudimg.tencent-cloud.cn/raw/fb8a22cd615d24c21acfa0e37e2cd873.png)
+
+
+     */
+    public Boolean getNotSaveContact() {
+        return this.NotSaveContact;
+    }
+
+    /**
+     * Set 是否不保存联系人
+默认 false 保存联系人  true 不保存联系人
+
+设置这个参数为保存联系人的时候,他方企业签署人会被保存进发起人的联系人中。
+联系人查看可登录[电子签控制台](https://test.qian.tencent.cn/console/) 进行查看。
+如下图位置：
+![](https://qcloudimg.tencent-cloud.cn/raw/fb8a22cd615d24c21acfa0e37e2cd873.png)
+
+
+     * @param NotSaveContact 是否不保存联系人
+默认 false 保存联系人  true 不保存联系人
+
+设置这个参数为保存联系人的时候,他方企业签署人会被保存进发起人的联系人中。
+联系人查看可登录[电子签控制台](https://test.qian.tencent.cn/console/) 进行查看。
+如下图位置：
+![](https://qcloudimg.tencent-cloud.cn/raw/fb8a22cd615d24c21acfa0e37e2cd873.png)
+
+
+     */
+    public void setNotSaveContact(Boolean NotSaveContact) {
+        this.NotSaveContact = NotSaveContact;
+    }
+
     public FlowCreateApprover() {
     }
 
@@ -1440,6 +1503,9 @@ public class FlowCreateApprover extends AbstractModel {
                 this.SignEndpoints[i] = new String(source.SignEndpoints[i]);
             }
         }
+        if (source.NotSaveContact != null) {
+            this.NotSaveContact = new Boolean(source.NotSaveContact);
+        }
     }
 
 
@@ -1476,6 +1542,7 @@ public class FlowCreateApprover extends AbstractModel {
         this.setParamSimple(map, prefix + "Deadline", this.Deadline);
         this.setParamObj(map, prefix + "Intention.", this.Intention);
         this.setParamArraySimple(map, prefix + "SignEndpoints.", this.SignEndpoints);
+        this.setParamSimple(map, prefix + "NotSaveContact", this.NotSaveContact);
 
     }
 }

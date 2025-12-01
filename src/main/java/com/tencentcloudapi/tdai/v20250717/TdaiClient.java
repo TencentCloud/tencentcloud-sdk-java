@@ -61,7 +61,7 @@ public class TdaiClient extends AbstractClient{
     }
 
     /**
-     *用于创建一次回话的SSE接口
+     *用于创建一次会话的SSE接口
      * @param req CreateChatCompletionRequest
      * @return CreateChatCompletionResponse
      * @throws TencentCloudSDKException

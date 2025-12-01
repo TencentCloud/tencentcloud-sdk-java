@@ -38,6 +38,13 @@ public class ModifyAndroidInstancesUserIdRequest extends AbstractModel {
     private String UserId;
 
     /**
+    * 有效时长。如果不填该字段，默认为永久。支持 s（秒）、m（分）、h（小时）、d（天）等单位，比如 12h 表示 12 小时，1h2m3s 表示一小时两分三秒
+    */
+    @SerializedName("ExpirationDuration")
+    @Expose
+    private String ExpirationDuration;
+
+    /**
      * Get 安卓实例 ID 列表 
      * @return AndroidInstanceIds 安卓实例 ID 列表
      */
@@ -69,6 +76,22 @@ public class ModifyAndroidInstancesUserIdRequest extends AbstractModel {
         this.UserId = UserId;
     }
 
+    /**
+     * Get 有效时长。如果不填该字段，默认为永久。支持 s（秒）、m（分）、h（小时）、d（天）等单位，比如 12h 表示 12 小时，1h2m3s 表示一小时两分三秒 
+     * @return ExpirationDuration 有效时长。如果不填该字段，默认为永久。支持 s（秒）、m（分）、h（小时）、d（天）等单位，比如 12h 表示 12 小时，1h2m3s 表示一小时两分三秒
+     */
+    public String getExpirationDuration() {
+        return this.ExpirationDuration;
+    }
+
+    /**
+     * Set 有效时长。如果不填该字段，默认为永久。支持 s（秒）、m（分）、h（小时）、d（天）等单位，比如 12h 表示 12 小时，1h2m3s 表示一小时两分三秒
+     * @param ExpirationDuration 有效时长。如果不填该字段，默认为永久。支持 s（秒）、m（分）、h（小时）、d（天）等单位，比如 12h 表示 12 小时，1h2m3s 表示一小时两分三秒
+     */
+    public void setExpirationDuration(String ExpirationDuration) {
+        this.ExpirationDuration = ExpirationDuration;
+    }
+
     public ModifyAndroidInstancesUserIdRequest() {
     }
 
@@ -86,6 +109,9 @@ public class ModifyAndroidInstancesUserIdRequest extends AbstractModel {
         if (source.UserId != null) {
             this.UserId = new String(source.UserId);
         }
+        if (source.ExpirationDuration != null) {
+            this.ExpirationDuration = new String(source.ExpirationDuration);
+        }
     }
 
 
@@ -95,6 +121,7 @@ public class ModifyAndroidInstancesUserIdRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "AndroidInstanceIds.", this.AndroidInstanceIds);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
+        this.setParamSimple(map, prefix + "ExpirationDuration", this.ExpirationDuration);
 
     }
 }

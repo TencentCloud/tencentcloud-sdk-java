@@ -38,6 +38,13 @@ public class CreateDSPADbMetaResourcesRequest extends AbstractModel {
     private String MetaType;
 
     /**
+    * 必填，云数据库资源列表。
+    */
+    @SerializedName("CloudResourceItems")
+    @Expose
+    private CloudResourceItem [] CloudResourceItems;
+
+    /**
     * 资源所处地域。
     */
     @SerializedName("ResourceRegion")
@@ -64,13 +71,6 @@ public class CreateDSPADbMetaResourcesRequest extends AbstractModel {
     @SerializedName("Items")
     @Expose
     private DspaCloudResourceMeta [] Items;
-
-    /**
-    * 必填，云数据库资源列表。
-    */
-    @SerializedName("CloudResourceItems")
-    @Expose
-    private CloudResourceItem [] CloudResourceItems;
 
     /**
      * Get DSPA实例ID。 
@@ -102,6 +102,22 @@ public class CreateDSPADbMetaResourcesRequest extends AbstractModel {
      */
     public void setMetaType(String MetaType) {
         this.MetaType = MetaType;
+    }
+
+    /**
+     * Get 必填，云数据库资源列表。 
+     * @return CloudResourceItems 必填，云数据库资源列表。
+     */
+    public CloudResourceItem [] getCloudResourceItems() {
+        return this.CloudResourceItems;
+    }
+
+    /**
+     * Set 必填，云数据库资源列表。
+     * @param CloudResourceItems 必填，云数据库资源列表。
+     */
+    public void setCloudResourceItems(CloudResourceItem [] CloudResourceItems) {
+        this.CloudResourceItems = CloudResourceItems;
     }
 
     /**
@@ -184,22 +200,6 @@ public class CreateDSPADbMetaResourcesRequest extends AbstractModel {
         this.Items = Items;
     }
 
-    /**
-     * Get 必填，云数据库资源列表。 
-     * @return CloudResourceItems 必填，云数据库资源列表。
-     */
-    public CloudResourceItem [] getCloudResourceItems() {
-        return this.CloudResourceItems;
-    }
-
-    /**
-     * Set 必填，云数据库资源列表。
-     * @param CloudResourceItems 必填，云数据库资源列表。
-     */
-    public void setCloudResourceItems(CloudResourceItem [] CloudResourceItems) {
-        this.CloudResourceItems = CloudResourceItems;
-    }
-
     public CreateDSPADbMetaResourcesRequest() {
     }
 
@@ -213,6 +213,12 @@ public class CreateDSPADbMetaResourcesRequest extends AbstractModel {
         }
         if (source.MetaType != null) {
             this.MetaType = new String(source.MetaType);
+        }
+        if (source.CloudResourceItems != null) {
+            this.CloudResourceItems = new CloudResourceItem[source.CloudResourceItems.length];
+            for (int i = 0; i < source.CloudResourceItems.length; i++) {
+                this.CloudResourceItems[i] = new CloudResourceItem(source.CloudResourceItems[i]);
+            }
         }
         if (source.ResourceRegion != null) {
             this.ResourceRegion = new String(source.ResourceRegion);
@@ -229,12 +235,6 @@ public class CreateDSPADbMetaResourcesRequest extends AbstractModel {
                 this.Items[i] = new DspaCloudResourceMeta(source.Items[i]);
             }
         }
-        if (source.CloudResourceItems != null) {
-            this.CloudResourceItems = new CloudResourceItem[source.CloudResourceItems.length];
-            for (int i = 0; i < source.CloudResourceItems.length; i++) {
-                this.CloudResourceItems[i] = new CloudResourceItem(source.CloudResourceItems[i]);
-            }
-        }
     }
 
 
@@ -244,11 +244,11 @@ public class CreateDSPADbMetaResourcesRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DspaId", this.DspaId);
         this.setParamSimple(map, prefix + "MetaType", this.MetaType);
+        this.setParamArrayObj(map, prefix + "CloudResourceItems.", this.CloudResourceItems);
         this.setParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
         this.setParamSimple(map, prefix + "UpdateStatus", this.UpdateStatus);
         this.setParamSimple(map, prefix + "UpdateId", this.UpdateId);
         this.setParamArrayObj(map, prefix + "Items.", this.Items);
-        this.setParamArrayObj(map, prefix + "CloudResourceItems.", this.CloudResourceItems);
 
     }
 }

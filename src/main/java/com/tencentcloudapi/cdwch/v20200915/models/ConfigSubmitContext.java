@@ -52,6 +52,13 @@ public class ConfigSubmitContext extends AbstractModel {
     private String FilePath;
 
     /**
+    * 节点ip信息，可选参数，当修改集群节点级配置（例如keeper_config.xml）时此参数必填；
+    */
+    @SerializedName("Ip")
+    @Expose
+    private String Ip;
+
+    /**
      * Get 配置文件名称 
      * @return FileName 配置文件名称
      */
@@ -115,6 +122,22 @@ public class ConfigSubmitContext extends AbstractModel {
         this.FilePath = FilePath;
     }
 
+    /**
+     * Get 节点ip信息，可选参数，当修改集群节点级配置（例如keeper_config.xml）时此参数必填； 
+     * @return Ip 节点ip信息，可选参数，当修改集群节点级配置（例如keeper_config.xml）时此参数必填；
+     */
+    public String getIp() {
+        return this.Ip;
+    }
+
+    /**
+     * Set 节点ip信息，可选参数，当修改集群节点级配置（例如keeper_config.xml）时此参数必填；
+     * @param Ip 节点ip信息，可选参数，当修改集群节点级配置（例如keeper_config.xml）时此参数必填；
+     */
+    public void setIp(String Ip) {
+        this.Ip = Ip;
+    }
+
     public ConfigSubmitContext() {
     }
 
@@ -135,6 +158,9 @@ public class ConfigSubmitContext extends AbstractModel {
         if (source.FilePath != null) {
             this.FilePath = new String(source.FilePath);
         }
+        if (source.Ip != null) {
+            this.Ip = new String(source.Ip);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class ConfigSubmitContext extends AbstractModel {
         this.setParamSimple(map, prefix + "OldConfValue", this.OldConfValue);
         this.setParamSimple(map, prefix + "NewConfValue", this.NewConfValue);
         this.setParamSimple(map, prefix + "FilePath", this.FilePath);
+        this.setParamSimple(map, prefix + "Ip", this.Ip);
 
     }
 }

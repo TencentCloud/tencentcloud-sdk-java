@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tdai.v20250717.models;
+package com.tencentcloudapi.evt.v20250217.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,67 +21,70 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateChatCompletionRequest extends AbstractModel {
+public class UserAttribute extends AbstractModel {
 
     /**
-    * 是否隐藏
+    * 属性键名
     */
-    @SerializedName("IsHidden")
+    @SerializedName("Key")
     @Expose
-    private Boolean IsHidden;
+    private String Key;
 
     /**
-    * 是否隐藏会话
+    * 属性值
     */
-    @SerializedName("IsChatHidden")
+    @SerializedName("Value")
     @Expose
-    private Boolean IsChatHidden;
+    private Long [] Value;
 
     /**
-     * Get 是否隐藏 
-     * @return IsHidden 是否隐藏
+     * Get 属性键名 
+     * @return Key 属性键名
      */
-    public Boolean getIsHidden() {
-        return this.IsHidden;
+    public String getKey() {
+        return this.Key;
     }
 
     /**
-     * Set 是否隐藏
-     * @param IsHidden 是否隐藏
+     * Set 属性键名
+     * @param Key 属性键名
      */
-    public void setIsHidden(Boolean IsHidden) {
-        this.IsHidden = IsHidden;
+    public void setKey(String Key) {
+        this.Key = Key;
     }
 
     /**
-     * Get 是否隐藏会话 
-     * @return IsChatHidden 是否隐藏会话
+     * Get 属性值 
+     * @return Value 属性值
      */
-    public Boolean getIsChatHidden() {
-        return this.IsChatHidden;
+    public Long [] getValue() {
+        return this.Value;
     }
 
     /**
-     * Set 是否隐藏会话
-     * @param IsChatHidden 是否隐藏会话
+     * Set 属性值
+     * @param Value 属性值
      */
-    public void setIsChatHidden(Boolean IsChatHidden) {
-        this.IsChatHidden = IsChatHidden;
+    public void setValue(Long [] Value) {
+        this.Value = Value;
     }
 
-    public CreateChatCompletionRequest() {
+    public UserAttribute() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateChatCompletionRequest(CreateChatCompletionRequest source) {
-        if (source.IsHidden != null) {
-            this.IsHidden = new Boolean(source.IsHidden);
+    public UserAttribute(UserAttribute source) {
+        if (source.Key != null) {
+            this.Key = new String(source.Key);
         }
-        if (source.IsChatHidden != null) {
-            this.IsChatHidden = new Boolean(source.IsChatHidden);
+        if (source.Value != null) {
+            this.Value = new Long[source.Value.length];
+            for (int i = 0; i < source.Value.length; i++) {
+                this.Value[i] = new Long(source.Value[i]);
+            }
         }
     }
 
@@ -90,8 +93,8 @@ public class CreateChatCompletionRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "IsHidden", this.IsHidden);
-        this.setParamSimple(map, prefix + "IsChatHidden", this.IsChatHidden);
+        this.setParamSimple(map, prefix + "Key", this.Key);
+        this.setParamArraySimple(map, prefix + "Value.", this.Value);
 
     }
 }
