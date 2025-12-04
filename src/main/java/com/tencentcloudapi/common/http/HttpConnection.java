@@ -19,12 +19,15 @@ package com.tencentcloudapi.common.http;
 
 import com.tencentcloudapi.common.exception.TencentCloudSDKException;
 import okhttp3.*;
+import okhttp3.internal.Util;
 
 import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.X509TrustManager;
 import java.io.IOException;
 import java.net.Proxy;
+import java.util.concurrent.SynchronousQueue;
+import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 public class HttpConnection {
@@ -33,7 +36,7 @@ public class HttpConnection {
     // https://github.com/square/okhttp/issues/3372
     // Creating dispatcher and connectionPool is expensive.
     // Share them between OkHttpClients by singleton's Builder.
-    private static final OkHttpClient clientSingleton = new OkHttpClient();
+    private static final OkHttpClient clientSingleton = newOkhttpClient();
     private OkHttpClient client;
 
     public HttpConnection(Integer connTimeout, Integer readTimeout, Integer writeTimeout) {
@@ -149,5 +152,12 @@ public class HttpConnection {
 
     public Object getHttpClient() {
         return client;
+    }
+
+    private static OkHttpClient newOkhttpClient() {
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(0, Integer.MAX_VALUE, 60, TimeUnit.SECONDS,
+                new SynchronousQueue<Runnable>(), Util.threadFactory("OkHttp Dispatcher", true));
+        Dispatcher dispatcher = new Dispatcher(executor);
+        return new OkHttpClient.Builder().dispatcher(dispatcher).build();
     }
 }
