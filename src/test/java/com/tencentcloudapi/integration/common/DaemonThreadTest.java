@@ -9,7 +9,7 @@ import static org.junit.Assert.fail;
 public class DaemonThreadTest {
 
     @Test
-    // make sure okhttp create daemon threads instead of normal threads, so user process won't be suspending
+    // ensure OkHttp threads are daemon to allow clean JVM shutdown
     public void testOkhttpUseDaemonThread() {
         Credential cred = new Credential(
                 System.getenv("TENCENTCLOUD_SECRET_ID"),
