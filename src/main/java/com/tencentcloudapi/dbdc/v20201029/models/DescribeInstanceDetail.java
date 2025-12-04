@@ -206,6 +206,20 @@ public class DescribeInstanceDetail extends AbstractModel {
     private String ClusterId;
 
     /**
+    * 实例标签
+    */
+    @SerializedName("ResourceTags")
+    @Expose
+    private ResourceTag [] ResourceTags;
+
+    /**
+    * CPU类型：Intel/AMD,Hygon
+    */
+    @SerializedName("CpuType")
+    @Expose
+    private String CpuType;
+
+    /**
      * Get 独享集群实例Id 
      * @return InstanceId 独享集群实例Id
      */
@@ -621,6 +635,38 @@ public class DescribeInstanceDetail extends AbstractModel {
         this.ClusterId = ClusterId;
     }
 
+    /**
+     * Get 实例标签 
+     * @return ResourceTags 实例标签
+     */
+    public ResourceTag [] getResourceTags() {
+        return this.ResourceTags;
+    }
+
+    /**
+     * Set 实例标签
+     * @param ResourceTags 实例标签
+     */
+    public void setResourceTags(ResourceTag [] ResourceTags) {
+        this.ResourceTags = ResourceTags;
+    }
+
+    /**
+     * Get CPU类型：Intel/AMD,Hygon 
+     * @return CpuType CPU类型：Intel/AMD,Hygon
+     */
+    public String getCpuType() {
+        return this.CpuType;
+    }
+
+    /**
+     * Set CPU类型：Intel/AMD,Hygon
+     * @param CpuType CPU类型：Intel/AMD,Hygon
+     */
+    public void setCpuType(String CpuType) {
+        this.CpuType = CpuType;
+    }
+
     public DescribeInstanceDetail() {
     }
 
@@ -707,6 +753,15 @@ public class DescribeInstanceDetail extends AbstractModel {
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
         }
+        if (source.ResourceTags != null) {
+            this.ResourceTags = new ResourceTag[source.ResourceTags.length];
+            for (int i = 0; i < source.ResourceTags.length; i++) {
+                this.ResourceTags[i] = new ResourceTag(source.ResourceTags[i]);
+            }
+        }
+        if (source.CpuType != null) {
+            this.CpuType = new String(source.CpuType);
+        }
     }
 
 
@@ -740,6 +795,8 @@ public class DescribeInstanceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "FenceId", this.FenceId);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+        this.setParamSimple(map, prefix + "CpuType", this.CpuType);
 
     }
 }

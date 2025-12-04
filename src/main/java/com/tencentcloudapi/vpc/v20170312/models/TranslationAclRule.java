@@ -38,13 +38,6 @@ public class TranslationAclRule extends AbstractModel {
     private String SourcePort;
 
     /**
-    * 源地址。支持`ip`或`cidr`格式"xxx.xxx.xxx.000/xx"
-    */
-    @SerializedName("SourceCidr")
-    @Expose
-    private String SourceCidr;
-
-    /**
     * 目的端口。
     */
     @SerializedName("DestinationPort")
@@ -57,6 +50,13 @@ public class TranslationAclRule extends AbstractModel {
     @SerializedName("DestinationCidr")
     @Expose
     private String DestinationCidr;
+
+    /**
+    * 源地址。支持`ip`或`cidr`格式"xxx.xxx.xxx.000/xx"
+    */
+    @SerializedName("SourceCidr")
+    @Expose
+    private String SourceCidr;
 
     /**
     * ACL规则`ID`。
@@ -112,22 +112,6 @@ public class TranslationAclRule extends AbstractModel {
     }
 
     /**
-     * Get 源地址。支持`ip`或`cidr`格式"xxx.xxx.xxx.000/xx" 
-     * @return SourceCidr 源地址。支持`ip`或`cidr`格式"xxx.xxx.xxx.000/xx"
-     */
-    public String getSourceCidr() {
-        return this.SourceCidr;
-    }
-
-    /**
-     * Set 源地址。支持`ip`或`cidr`格式"xxx.xxx.xxx.000/xx"
-     * @param SourceCidr 源地址。支持`ip`或`cidr`格式"xxx.xxx.xxx.000/xx"
-     */
-    public void setSourceCidr(String SourceCidr) {
-        this.SourceCidr = SourceCidr;
-    }
-
-    /**
      * Get 目的端口。 
      * @return DestinationPort 目的端口。
      */
@@ -157,6 +141,22 @@ public class TranslationAclRule extends AbstractModel {
      */
     public void setDestinationCidr(String DestinationCidr) {
         this.DestinationCidr = DestinationCidr;
+    }
+
+    /**
+     * Get 源地址。支持`ip`或`cidr`格式"xxx.xxx.xxx.000/xx" 
+     * @return SourceCidr 源地址。支持`ip`或`cidr`格式"xxx.xxx.xxx.000/xx"
+     */
+    public String getSourceCidr() {
+        return this.SourceCidr;
+    }
+
+    /**
+     * Set 源地址。支持`ip`或`cidr`格式"xxx.xxx.xxx.000/xx"
+     * @param SourceCidr 源地址。支持`ip`或`cidr`格式"xxx.xxx.xxx.000/xx"
+     */
+    public void setSourceCidr(String SourceCidr) {
+        this.SourceCidr = SourceCidr;
     }
 
     /**
@@ -221,14 +221,14 @@ public class TranslationAclRule extends AbstractModel {
         if (source.SourcePort != null) {
             this.SourcePort = new String(source.SourcePort);
         }
-        if (source.SourceCidr != null) {
-            this.SourceCidr = new String(source.SourceCidr);
-        }
         if (source.DestinationPort != null) {
             this.DestinationPort = new String(source.DestinationPort);
         }
         if (source.DestinationCidr != null) {
             this.DestinationCidr = new String(source.DestinationCidr);
+        }
+        if (source.SourceCidr != null) {
+            this.SourceCidr = new String(source.SourceCidr);
         }
         if (source.AclRuleId != null) {
             this.AclRuleId = new Long(source.AclRuleId);
@@ -248,9 +248,9 @@ public class TranslationAclRule extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "SourcePort", this.SourcePort);
-        this.setParamSimple(map, prefix + "SourceCidr", this.SourceCidr);
         this.setParamSimple(map, prefix + "DestinationPort", this.DestinationPort);
         this.setParamSimple(map, prefix + "DestinationCidr", this.DestinationCidr);
+        this.setParamSimple(map, prefix + "SourceCidr", this.SourceCidr);
         this.setParamSimple(map, prefix + "AclRuleId", this.AclRuleId);
         this.setParamSimple(map, prefix + "Action", this.Action);
         this.setParamSimple(map, prefix + "Description", this.Description);

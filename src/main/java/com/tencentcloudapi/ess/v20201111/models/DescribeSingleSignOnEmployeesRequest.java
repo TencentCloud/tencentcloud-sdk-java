@@ -39,7 +39,7 @@ public class DescribeSingleSignOnEmployeesRequest extends AbstractModel {
     private String SsoApplicationId;
 
     /**
-    * 需要删除的单点登录员工的唯一Id 值.不能超过 200 个。
+    * 需要查询的单点登录员工的唯一Id 值.不能超过 200 个。
 如果传递了 openIds，limit 和 offset 参数无效，
     */
     @SerializedName("OpenIds")
@@ -105,9 +105,9 @@ public class DescribeSingleSignOnEmployeesRequest extends AbstractModel {
     }
 
     /**
-     * Get 需要删除的单点登录员工的唯一Id 值.不能超过 200 个。
+     * Get 需要查询的单点登录员工的唯一Id 值.不能超过 200 个。
 如果传递了 openIds，limit 和 offset 参数无效， 
-     * @return OpenIds 需要删除的单点登录员工的唯一Id 值.不能超过 200 个。
+     * @return OpenIds 需要查询的单点登录员工的唯一Id 值.不能超过 200 个。
 如果传递了 openIds，limit 和 offset 参数无效，
      */
     public String [] getOpenIds() {
@@ -115,9 +115,9 @@ public class DescribeSingleSignOnEmployeesRequest extends AbstractModel {
     }
 
     /**
-     * Set 需要删除的单点登录员工的唯一Id 值.不能超过 200 个。
+     * Set 需要查询的单点登录员工的唯一Id 值.不能超过 200 个。
 如果传递了 openIds，limit 和 offset 参数无效，
-     * @param OpenIds 需要删除的单点登录员工的唯一Id 值.不能超过 200 个。
+     * @param OpenIds 需要查询的单点登录员工的唯一Id 值.不能超过 200 个。
 如果传递了 openIds，limit 和 offset 参数无效，
      */
     public void setOpenIds(String [] OpenIds) {

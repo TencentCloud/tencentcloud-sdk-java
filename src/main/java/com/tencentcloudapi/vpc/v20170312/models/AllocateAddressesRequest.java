@@ -55,6 +55,14 @@ public class AllocateAddressesRequest extends AbstractModel {
     private String InternetChargeType;
 
     /**
+    * IP 资源计费模式，当前仅支持原生 IP。
+<ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul><li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li><li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li></ul></li></ul>
+    */
+    @SerializedName("IPChargeType")
+    @Expose
+    private String IPChargeType;
+
+    /**
     * EIP出带宽上限，单位：Mbps。
 <ul style="margin:0"><li>标准账户类型EIP出带宽上限，可选值范围取决于EIP计费方式：<ul><li>BANDWIDTH_PACKAGE：1 Mbps 至 2000 Mbps</li>
 <li>BANDWIDTH_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps</li>
@@ -78,7 +86,9 @@ public class AllocateAddressesRequest extends AbstractModel {
 <li>EIP：弹性公网 IP。 </li>
 <li>AnycastEIP：加速 IP，已开通 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)白名单的用户可选。仅部分地域支持加速IP，详情可见Anycast公网加速[购买指南](https://cloud.tencent.com/document/product/644/12617)。</li>
 <li>HighQualityEIP：精品 IP。仅新加坡和中国香港支持精品IP。</li>
-<li>AntiDDoSEIP：高防 IP。仅部分地域支持高防IP，详情可见弹性公网IP[产品概述](https://cloud.tencent.com/document/product/1199/41646)。</li>
+<li>AntiDDoSEIP：高防 IP。仅部分地域支持高防IP。</li>
+<li>ResidentialEIP：原生 IP。仅部分地域支持原生IP。</li>
+关于弹性公网 IP 支持的 IP 类型，请见[产品概述](https://cloud.tencent.com/document/product/1199/41646)。
     */
     @SerializedName("AddressType")
     @Expose
@@ -170,18 +180,6 @@ AnycastEIP是否用于绑定负载均衡。
     private String ClientToken;
 
     /**
-    * 原生EIP IP资源的计费方式。
-<ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul>
-<li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li>
-<li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li>
-</ul></li>
-</ul>
-    */
-    @SerializedName("IPChargeType")
-    @Expose
-    private String IPChargeType;
-
-    /**
      * Get EIP数量。可申请的数量限制参考：[EIP 配额限制](https://cloud.tencent.com/document/product/1199/41648)。默认值：1。 
      * @return AddressCount EIP数量。可申请的数量限制参考：[EIP 配额限制](https://cloud.tencent.com/document/product/1199/41648)。默认值：1。
      */
@@ -270,6 +268,26 @@ AnycastEIP是否用于绑定负载均衡。
     }
 
     /**
+     * Get IP 资源计费模式，当前仅支持原生 IP。
+<ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul><li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li><li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li></ul></li></ul> 
+     * @return IPChargeType IP 资源计费模式，当前仅支持原生 IP。
+<ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul><li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li><li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li></ul></li></ul>
+     */
+    public String getIPChargeType() {
+        return this.IPChargeType;
+    }
+
+    /**
+     * Set IP 资源计费模式，当前仅支持原生 IP。
+<ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul><li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li><li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li></ul></li></ul>
+     * @param IPChargeType IP 资源计费模式，当前仅支持原生 IP。
+<ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul><li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li><li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li></ul></li></ul>
+     */
+    public void setIPChargeType(String IPChargeType) {
+        this.IPChargeType = IPChargeType;
+    }
+
+    /**
      * Get EIP出带宽上限，单位：Mbps。
 <ul style="margin:0"><li>标准账户类型EIP出带宽上限，可选值范围取决于EIP计费方式：<ul><li>BANDWIDTH_PACKAGE：1 Mbps 至 2000 Mbps</li>
 <li>BANDWIDTH_POSTPAID_BY_HOUR：1 Mbps 至 100 Mbps</li>
@@ -326,12 +344,16 @@ AnycastEIP是否用于绑定负载均衡。
 <li>EIP：弹性公网 IP。 </li>
 <li>AnycastEIP：加速 IP，已开通 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)白名单的用户可选。仅部分地域支持加速IP，详情可见Anycast公网加速[购买指南](https://cloud.tencent.com/document/product/644/12617)。</li>
 <li>HighQualityEIP：精品 IP。仅新加坡和中国香港支持精品IP。</li>
-<li>AntiDDoSEIP：高防 IP。仅部分地域支持高防IP，详情可见弹性公网IP[产品概述](https://cloud.tencent.com/document/product/1199/41646)。</li> 
+<li>AntiDDoSEIP：高防 IP。仅部分地域支持高防IP。</li>
+<li>ResidentialEIP：原生 IP。仅部分地域支持原生IP。</li>
+关于弹性公网 IP 支持的 IP 类型，请见[产品概述](https://cloud.tencent.com/document/product/1199/41646)。 
      * @return AddressType EIP类型。各种EIP类型详情可参考：[EIP 的 IP 地址类型](https://cloud.tencent.com/document/product/1199/41646)。默认值：EIP。
 <li>EIP：弹性公网 IP。 </li>
 <li>AnycastEIP：加速 IP，已开通 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)白名单的用户可选。仅部分地域支持加速IP，详情可见Anycast公网加速[购买指南](https://cloud.tencent.com/document/product/644/12617)。</li>
 <li>HighQualityEIP：精品 IP。仅新加坡和中国香港支持精品IP。</li>
-<li>AntiDDoSEIP：高防 IP。仅部分地域支持高防IP，详情可见弹性公网IP[产品概述](https://cloud.tencent.com/document/product/1199/41646)。</li>
+<li>AntiDDoSEIP：高防 IP。仅部分地域支持高防IP。</li>
+<li>ResidentialEIP：原生 IP。仅部分地域支持原生IP。</li>
+关于弹性公网 IP 支持的 IP 类型，请见[产品概述](https://cloud.tencent.com/document/product/1199/41646)。
      */
     public String getAddressType() {
         return this.AddressType;
@@ -342,12 +364,16 @@ AnycastEIP是否用于绑定负载均衡。
 <li>EIP：弹性公网 IP。 </li>
 <li>AnycastEIP：加速 IP，已开通 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)白名单的用户可选。仅部分地域支持加速IP，详情可见Anycast公网加速[购买指南](https://cloud.tencent.com/document/product/644/12617)。</li>
 <li>HighQualityEIP：精品 IP。仅新加坡和中国香港支持精品IP。</li>
-<li>AntiDDoSEIP：高防 IP。仅部分地域支持高防IP，详情可见弹性公网IP[产品概述](https://cloud.tencent.com/document/product/1199/41646)。</li>
+<li>AntiDDoSEIP：高防 IP。仅部分地域支持高防IP。</li>
+<li>ResidentialEIP：原生 IP。仅部分地域支持原生IP。</li>
+关于弹性公网 IP 支持的 IP 类型，请见[产品概述](https://cloud.tencent.com/document/product/1199/41646)。
      * @param AddressType EIP类型。各种EIP类型详情可参考：[EIP 的 IP 地址类型](https://cloud.tencent.com/document/product/1199/41646)。默认值：EIP。
 <li>EIP：弹性公网 IP。 </li>
 <li>AnycastEIP：加速 IP，已开通 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)白名单的用户可选。仅部分地域支持加速IP，详情可见Anycast公网加速[购买指南](https://cloud.tencent.com/document/product/644/12617)。</li>
 <li>HighQualityEIP：精品 IP。仅新加坡和中国香港支持精品IP。</li>
-<li>AntiDDoSEIP：高防 IP。仅部分地域支持高防IP，详情可见弹性公网IP[产品概述](https://cloud.tencent.com/document/product/1199/41646)。</li>
+<li>AntiDDoSEIP：高防 IP。仅部分地域支持高防IP。</li>
+<li>ResidentialEIP：原生 IP。仅部分地域支持原生IP。</li>
+关于弹性公网 IP 支持的 IP 类型，请见[产品概述](https://cloud.tencent.com/document/product/1199/41646)。
      */
     public void setAddressType(String AddressType) {
         this.AddressType = AddressType;
@@ -565,42 +591,6 @@ AnycastEIP是否用于绑定负载均衡。
         this.ClientToken = ClientToken;
     }
 
-    /**
-     * Get 原生EIP IP资源的计费方式。
-<ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul>
-<li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li>
-<li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li>
-</ul></li>
-</ul> 
-     * @return IPChargeType 原生EIP IP资源的计费方式。
-<ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul>
-<li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li>
-<li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li>
-</ul></li>
-</ul>
-     */
-    public String getIPChargeType() {
-        return this.IPChargeType;
-    }
-
-    /**
-     * Set 原生EIP IP资源的计费方式。
-<ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul>
-<li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li>
-<li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li>
-</ul></li>
-</ul>
-     * @param IPChargeType 原生EIP IP资源的计费方式。
-<ul style="margin:0"><li>账号为标准账户类型的用户，可选值：<ul>
-<li>IP_POSTPAID_BY_HOUR：IP资源按小时后付费</li>
-<li>IP_PREPAID_BY_MONTH：IP资源包月预付费</li>
-</ul></li>
-</ul>
-     */
-    public void setIPChargeType(String IPChargeType) {
-        this.IPChargeType = IPChargeType;
-    }
-
     public AllocateAddressesRequest() {
     }
 
@@ -617,6 +607,9 @@ AnycastEIP是否用于绑定负载均衡。
         }
         if (source.InternetChargeType != null) {
             this.InternetChargeType = new String(source.InternetChargeType);
+        }
+        if (source.IPChargeType != null) {
+            this.IPChargeType = new String(source.IPChargeType);
         }
         if (source.InternetMaxBandwidthOut != null) {
             this.InternetMaxBandwidthOut = new Long(source.InternetMaxBandwidthOut);
@@ -666,9 +659,6 @@ AnycastEIP是否用于绑定负载均衡。
         if (source.ClientToken != null) {
             this.ClientToken = new String(source.ClientToken);
         }
-        if (source.IPChargeType != null) {
-            this.IPChargeType = new String(source.IPChargeType);
-        }
     }
 
 
@@ -679,6 +669,7 @@ AnycastEIP是否用于绑定负载均衡。
         this.setParamSimple(map, prefix + "AddressCount", this.AddressCount);
         this.setParamSimple(map, prefix + "InternetServiceProvider", this.InternetServiceProvider);
         this.setParamSimple(map, prefix + "InternetChargeType", this.InternetChargeType);
+        this.setParamSimple(map, prefix + "IPChargeType", this.IPChargeType);
         this.setParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
         this.setParamObj(map, prefix + "AddressChargePrepaid.", this.AddressChargePrepaid);
         this.setParamSimple(map, prefix + "AddressType", this.AddressType);
@@ -693,7 +684,6 @@ AnycastEIP是否用于绑定负载均衡。
         this.setParamSimple(map, prefix + "Egress", this.Egress);
         this.setParamSimple(map, prefix + "AntiDDoSPackageId", this.AntiDDoSPackageId);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
-        this.setParamSimple(map, prefix + "IPChargeType", this.IPChargeType);
 
     }
 }

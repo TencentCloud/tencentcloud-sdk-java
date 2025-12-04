@@ -73,6 +73,13 @@ public class ModifyVpcAttributeRequest extends AbstractModel {
     private Boolean EnableCdcPublish;
 
     /**
+    * vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。
+    */
+    @SerializedName("EnableRouteVpcPublishIpv6")
+    @Expose
+    private Boolean EnableRouteVpcPublishIpv6;
+
+    /**
      * Get VPC实例ID。形如：vpc-f49l6u0z。 
      * @return VpcId VPC实例ID。形如：vpc-f49l6u0z。
      */
@@ -184,6 +191,22 @@ public class ModifyVpcAttributeRequest extends AbstractModel {
         this.EnableCdcPublish = EnableCdcPublish;
     }
 
+    /**
+     * Get vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。 
+     * @return EnableRouteVpcPublishIpv6 vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。
+     */
+    public Boolean getEnableRouteVpcPublishIpv6() {
+        return this.EnableRouteVpcPublishIpv6;
+    }
+
+    /**
+     * Set vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。
+     * @param EnableRouteVpcPublishIpv6 vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。
+     */
+    public void setEnableRouteVpcPublishIpv6(Boolean EnableRouteVpcPublishIpv6) {
+        this.EnableRouteVpcPublishIpv6 = EnableRouteVpcPublishIpv6;
+    }
+
     public ModifyVpcAttributeRequest() {
     }
 
@@ -216,6 +239,9 @@ public class ModifyVpcAttributeRequest extends AbstractModel {
         if (source.EnableCdcPublish != null) {
             this.EnableCdcPublish = new Boolean(source.EnableCdcPublish);
         }
+        if (source.EnableRouteVpcPublishIpv6 != null) {
+            this.EnableRouteVpcPublishIpv6 = new Boolean(source.EnableRouteVpcPublishIpv6);
+        }
     }
 
 
@@ -230,6 +256,7 @@ public class ModifyVpcAttributeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);
         this.setParamSimple(map, prefix + "EnableRouteVpcPublish", this.EnableRouteVpcPublish);
         this.setParamSimple(map, prefix + "EnableCdcPublish", this.EnableCdcPublish);
+        this.setParamSimple(map, prefix + "EnableRouteVpcPublishIpv6", this.EnableRouteVpcPublishIpv6);
 
     }
 }

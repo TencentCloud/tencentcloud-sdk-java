@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class User extends AbstractModel {
 
     /**
-    * 用户名, 3-20个字符 必须以英文字母开头，且不能包含字母、数字、.、_、-以外的字符
+    * 用户名,1 - 128个字符 必须以英文字母开头，只能由a-zA-Z0-9以及+=,.@_-组成，支持邮箱格式
+
     */
     @SerializedName("UserName")
     @Expose
@@ -159,16 +160,27 @@ public class User extends AbstractModel {
     private IOAUserGroup IOAUserGroup;
 
     /**
-     * Get 用户名, 3-20个字符 必须以英文字母开头，且不能包含字母、数字、.、_、-以外的字符 
-     * @return UserName 用户名, 3-20个字符 必须以英文字母开头，且不能包含字母、数字、.、_、-以外的字符
+    * cam角色用户载体
+    */
+    @SerializedName("RoleArn")
+    @Expose
+    private String RoleArn;
+
+    /**
+     * Get 用户名,1 - 128个字符 必须以英文字母开头，只能由a-zA-Z0-9以及+=,.@_-组成，支持邮箱格式
+ 
+     * @return UserName 用户名,1 - 128个字符 必须以英文字母开头，只能由a-zA-Z0-9以及+=,.@_-组成，支持邮箱格式
+
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set 用户名, 3-20个字符 必须以英文字母开头，且不能包含字母、数字、.、_、-以外的字符
-     * @param UserName 用户名, 3-20个字符 必须以英文字母开头，且不能包含字母、数字、.、_、-以外的字符
+     * Set 用户名,1 - 128个字符 必须以英文字母开头，只能由a-zA-Z0-9以及+=,.@_-组成，支持邮箱格式
+
+     * @param UserName 用户名,1 - 128个字符 必须以英文字母开头，只能由a-zA-Z0-9以及+=,.@_-组成，支持邮箱格式
+
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
@@ -470,6 +482,22 @@ public class User extends AbstractModel {
         this.IOAUserGroup = IOAUserGroup;
     }
 
+    /**
+     * Get cam角色用户载体 
+     * @return RoleArn cam角色用户载体
+     */
+    public String getRoleArn() {
+        return this.RoleArn;
+    }
+
+    /**
+     * Set cam角色用户载体
+     * @param RoleArn cam角色用户载体
+     */
+    public void setRoleArn(String RoleArn) {
+        this.RoleArn = RoleArn;
+    }
+
     public User() {
     }
 
@@ -538,6 +566,9 @@ public class User extends AbstractModel {
         if (source.IOAUserGroup != null) {
             this.IOAUserGroup = new IOAUserGroup(source.IOAUserGroup);
         }
+        if (source.RoleArn != null) {
+            this.RoleArn = new String(source.RoleArn);
+        }
     }
 
 
@@ -564,6 +595,7 @@ public class User extends AbstractModel {
         this.setParamSimple(map, prefix + "AclVersion", this.AclVersion);
         this.setParamSimple(map, prefix + "UserFrom", this.UserFrom);
         this.setParamObj(map, prefix + "IOAUserGroup.", this.IOAUserGroup);
+        this.setParamSimple(map, prefix + "RoleArn", this.RoleArn);
 
     }
 }

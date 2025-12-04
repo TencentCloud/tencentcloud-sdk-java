@@ -187,6 +187,20 @@ public class NatGateway extends AbstractModel {
     private Boolean DeletionProtectionEnabled;
 
     /**
+    * NAT实例连接超时时间
+    */
+    @SerializedName("ConnectionStateTimeouts")
+    @Expose
+    private ConnectionStateTimeouts ConnectionStateTimeouts;
+
+    /**
+    * 独享实例规格。取值范围：ExclusiveSmall/ExclusiveMedium1/ExclusiveLarge1
+    */
+    @SerializedName("ExclusiveType")
+    @Expose
+    private String ExclusiveType;
+
+    /**
      * Get NAT网关的ID。 
      * @return NatGatewayId NAT网关的ID。
      */
@@ -562,6 +576,38 @@ public class NatGateway extends AbstractModel {
         this.DeletionProtectionEnabled = DeletionProtectionEnabled;
     }
 
+    /**
+     * Get NAT实例连接超时时间 
+     * @return ConnectionStateTimeouts NAT实例连接超时时间
+     */
+    public ConnectionStateTimeouts getConnectionStateTimeouts() {
+        return this.ConnectionStateTimeouts;
+    }
+
+    /**
+     * Set NAT实例连接超时时间
+     * @param ConnectionStateTimeouts NAT实例连接超时时间
+     */
+    public void setConnectionStateTimeouts(ConnectionStateTimeouts ConnectionStateTimeouts) {
+        this.ConnectionStateTimeouts = ConnectionStateTimeouts;
+    }
+
+    /**
+     * Get 独享实例规格。取值范围：ExclusiveSmall/ExclusiveMedium1/ExclusiveLarge1 
+     * @return ExclusiveType 独享实例规格。取值范围：ExclusiveSmall/ExclusiveMedium1/ExclusiveLarge1
+     */
+    public String getExclusiveType() {
+        return this.ExclusiveType;
+    }
+
+    /**
+     * Set 独享实例规格。取值范围：ExclusiveSmall/ExclusiveMedium1/ExclusiveLarge1
+     * @param ExclusiveType 独享实例规格。取值范围：ExclusiveSmall/ExclusiveMedium1/ExclusiveLarge1
+     */
+    public void setExclusiveType(String ExclusiveType) {
+        this.ExclusiveType = ExclusiveType;
+    }
+
     public NatGateway() {
     }
 
@@ -657,6 +703,12 @@ public class NatGateway extends AbstractModel {
         if (source.DeletionProtectionEnabled != null) {
             this.DeletionProtectionEnabled = new Boolean(source.DeletionProtectionEnabled);
         }
+        if (source.ConnectionStateTimeouts != null) {
+            this.ConnectionStateTimeouts = new ConnectionStateTimeouts(source.ConnectionStateTimeouts);
+        }
+        if (source.ExclusiveType != null) {
+            this.ExclusiveType = new String(source.ExclusiveType);
+        }
     }
 
 
@@ -687,6 +739,8 @@ public class NatGateway extends AbstractModel {
         this.setParamSimple(map, prefix + "SmartScheduleMode", this.SmartScheduleMode);
         this.setParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
         this.setParamSimple(map, prefix + "DeletionProtectionEnabled", this.DeletionProtectionEnabled);
+        this.setParamObj(map, prefix + "ConnectionStateTimeouts.", this.ConnectionStateTimeouts);
+        this.setParamSimple(map, prefix + "ExclusiveType", this.ExclusiveType);
 
     }
 }

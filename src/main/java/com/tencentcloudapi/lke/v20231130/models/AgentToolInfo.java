@@ -153,6 +153,13 @@ public class AgentToolInfo extends AbstractModel {
     private Long ToolSource;
 
     /**
+    * 计费状态；0-不计费，1-限时免费，2-官方收费
+    */
+    @SerializedName("FinanceType")
+    @Expose
+    private Long FinanceType;
+
+    /**
      * Get 插件id 
      * @return PluginId 插件id
      */
@@ -452,6 +459,22 @@ public class AgentToolInfo extends AbstractModel {
         this.ToolSource = ToolSource;
     }
 
+    /**
+     * Get 计费状态；0-不计费，1-限时免费，2-官方收费 
+     * @return FinanceType 计费状态；0-不计费，1-限时免费，2-官方收费
+     */
+    public Long getFinanceType() {
+        return this.FinanceType;
+    }
+
+    /**
+     * Set 计费状态；0-不计费，1-限时免费，2-官方收费
+     * @param FinanceType 计费状态；0-不计费，1-限时免费，2-官方收费
+     */
+    public void setFinanceType(Long FinanceType) {
+        this.FinanceType = FinanceType;
+    }
+
     public AgentToolInfo() {
     }
 
@@ -526,6 +549,9 @@ public class AgentToolInfo extends AbstractModel {
         if (source.ToolSource != null) {
             this.ToolSource = new Long(source.ToolSource);
         }
+        if (source.FinanceType != null) {
+            this.FinanceType = new Long(source.FinanceType);
+        }
     }
 
 
@@ -551,6 +577,7 @@ public class AgentToolInfo extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Query.", this.Query);
         this.setParamSimple(map, prefix + "FinanceStatus", this.FinanceStatus);
         this.setParamSimple(map, prefix + "ToolSource", this.ToolSource);
+        this.setParamSimple(map, prefix + "FinanceType", this.FinanceType);
 
     }
 }

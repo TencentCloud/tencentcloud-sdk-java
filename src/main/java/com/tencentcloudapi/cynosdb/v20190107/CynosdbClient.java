@@ -1315,6 +1315,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *开关全局加密
+     * @param req ModifyClusterGlobalEncryptionRequest
+     * @return ModifyClusterGlobalEncryptionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterGlobalEncryptionResponse ModifyClusterGlobalEncryption(ModifyClusterGlobalEncryptionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyClusterGlobalEncryption", ModifyClusterGlobalEncryptionResponse.class);
+    }
+
+    /**
      *本接口（ModifyClusterName）用于修改集群名称。
      * @param req ModifyClusterNameRequest
      * @return ModifyClusterNameResponse

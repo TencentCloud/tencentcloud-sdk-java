@@ -106,6 +106,17 @@ public class VclmClient extends AbstractClient{
     }
 
     /**
+     *查询视频人脸融合任务
+     * @param req DescribeVideoFaceFusionJobRequest
+     * @return DescribeVideoFaceFusionJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVideoFaceFusionJobResponse DescribeVideoFaceFusionJob(DescribeVideoFaceFusionJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVideoFaceFusionJob", DescribeVideoFaceFusionJobResponse.class);
+    }
+
+    /**
      *用于查询视频风格化任务。视频风格化支持将输入视频生成特定风格的视频。生成后的视频画面风格多样、流畅自然，能够满足社交娱乐、互动营销、视频素材制作等场景的需求。
      * @param req DescribeVideoStylizationJobRequest
      * @return DescribeVideoStylizationJobResponse
@@ -171,6 +182,17 @@ public class VclmClient extends AbstractClient{
     public SubmitTemplateToVideoJobResponse SubmitTemplateToVideoJob(SubmitTemplateToVideoJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SubmitTemplateToVideoJob", SubmitTemplateToVideoJobResponse.class);
+    }
+
+    /**
+     *提交视频人脸融合任务
+     * @param req SubmitVideoFaceFusionJobRequest
+     * @return SubmitVideoFaceFusionJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitVideoFaceFusionJobResponse SubmitVideoFaceFusionJob(SubmitVideoFaceFusionJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitVideoFaceFusionJob", SubmitVideoFaceFusionJobResponse.class);
     }
 
     /**

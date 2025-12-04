@@ -38,6 +38,13 @@ public class ResetNatGatewayConnectionRequest extends AbstractModel {
     private Long MaxConcurrentConnection;
 
     /**
+    * 独享实例规格。如果要变配到独享实例，此参数必选，取值范围：ExclusiveSmall/ExclusiveMedium1/ExclusiveLarge1
+    */
+    @SerializedName("ExclusiveType")
+    @Expose
+    private String ExclusiveType;
+
+    /**
      * Get NAT网关ID。 
      * @return NatGatewayId NAT网关ID。
      */
@@ -69,6 +76,22 @@ public class ResetNatGatewayConnectionRequest extends AbstractModel {
         this.MaxConcurrentConnection = MaxConcurrentConnection;
     }
 
+    /**
+     * Get 独享实例规格。如果要变配到独享实例，此参数必选，取值范围：ExclusiveSmall/ExclusiveMedium1/ExclusiveLarge1 
+     * @return ExclusiveType 独享实例规格。如果要变配到独享实例，此参数必选，取值范围：ExclusiveSmall/ExclusiveMedium1/ExclusiveLarge1
+     */
+    public String getExclusiveType() {
+        return this.ExclusiveType;
+    }
+
+    /**
+     * Set 独享实例规格。如果要变配到独享实例，此参数必选，取值范围：ExclusiveSmall/ExclusiveMedium1/ExclusiveLarge1
+     * @param ExclusiveType 独享实例规格。如果要变配到独享实例，此参数必选，取值范围：ExclusiveSmall/ExclusiveMedium1/ExclusiveLarge1
+     */
+    public void setExclusiveType(String ExclusiveType) {
+        this.ExclusiveType = ExclusiveType;
+    }
+
     public ResetNatGatewayConnectionRequest() {
     }
 
@@ -83,6 +106,9 @@ public class ResetNatGatewayConnectionRequest extends AbstractModel {
         if (source.MaxConcurrentConnection != null) {
             this.MaxConcurrentConnection = new Long(source.MaxConcurrentConnection);
         }
+        if (source.ExclusiveType != null) {
+            this.ExclusiveType = new String(source.ExclusiveType);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class ResetNatGatewayConnectionRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NatGatewayId", this.NatGatewayId);
         this.setParamSimple(map, prefix + "MaxConcurrentConnection", this.MaxConcurrentConnection);
+        this.setParamSimple(map, prefix + "ExclusiveType", this.ExclusiveType);
 
     }
 }

@@ -129,6 +129,13 @@ public class Vpc extends AbstractModel {
     private ISPIPv6CidrBlock [] Ipv6CidrBlockSet;
 
     /**
+    * vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。
+    */
+    @SerializedName("EnableRouteVpcPublishIpv6")
+    @Expose
+    private Boolean EnableRouteVpcPublishIpv6;
+
+    /**
      * Get `VPC`名称。 
      * @return VpcName `VPC`名称。
      */
@@ -368,6 +375,22 @@ public class Vpc extends AbstractModel {
         this.Ipv6CidrBlockSet = Ipv6CidrBlockSet;
     }
 
+    /**
+     * Get vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。 
+     * @return EnableRouteVpcPublishIpv6 vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。
+     */
+    public Boolean getEnableRouteVpcPublishIpv6() {
+        return this.EnableRouteVpcPublishIpv6;
+    }
+
+    /**
+     * Set vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。
+     * @param EnableRouteVpcPublishIpv6 vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。
+     */
+    public void setEnableRouteVpcPublishIpv6(Boolean EnableRouteVpcPublishIpv6) {
+        this.EnableRouteVpcPublishIpv6 = EnableRouteVpcPublishIpv6;
+    }
+
     public Vpc() {
     }
 
@@ -433,6 +456,9 @@ public class Vpc extends AbstractModel {
                 this.Ipv6CidrBlockSet[i] = new ISPIPv6CidrBlock(source.Ipv6CidrBlockSet[i]);
             }
         }
+        if (source.EnableRouteVpcPublishIpv6 != null) {
+            this.EnableRouteVpcPublishIpv6 = new Boolean(source.EnableRouteVpcPublishIpv6);
+        }
     }
 
 
@@ -455,6 +481,7 @@ public class Vpc extends AbstractModel {
         this.setParamArrayObj(map, prefix + "AssistantCidrSet.", this.AssistantCidrSet);
         this.setParamSimple(map, prefix + "EnableRouteVpcPublish", this.EnableRouteVpcPublish);
         this.setParamArrayObj(map, prefix + "Ipv6CidrBlockSet.", this.Ipv6CidrBlockSet);
+        this.setParamSimple(map, prefix + "EnableRouteVpcPublishIpv6", this.EnableRouteVpcPublishIpv6);
 
     }
 }

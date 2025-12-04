@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class DescribeSecuritySettingResponse extends AbstractModel {
 
     /**
+    * 无
+    */
+    @SerializedName("SecuritySetting")
+    @Expose
+    private SecuritySetting SecuritySetting;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 无 
+     * @return SecuritySetting 无
+     */
+    public SecuritySetting getSecuritySetting() {
+        return this.SecuritySetting;
+    }
+
+    /**
+     * Set 无
+     * @param SecuritySetting 无
+     */
+    public void setSecuritySetting(SecuritySetting SecuritySetting) {
+        this.SecuritySetting = SecuritySetting;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,9 @@ public class DescribeSecuritySettingResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeSecuritySettingResponse(DescribeSecuritySettingResponse source) {
+        if (source.SecuritySetting != null) {
+            this.SecuritySetting = new SecuritySetting(source.SecuritySetting);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +90,7 @@ public class DescribeSecuritySettingResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "SecuritySetting.", this.SecuritySetting);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

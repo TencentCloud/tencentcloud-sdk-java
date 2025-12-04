@@ -53,6 +53,13 @@ public class Objects extends AbstractModel {
     private OnlineDDL OnlineDDL;
 
     /**
+    * 库/表/视图级 DML/DDL 白名单
+    */
+    @SerializedName("DatabasesOpFilter")
+    @Expose
+    private DBOpFilter [] DatabasesOpFilter;
+
+    /**
      * Get 同步对象类型 Partial(部分对象) 
      * @return Mode 同步对象类型 Partial(部分对象)
      */
@@ -120,6 +127,22 @@ public class Objects extends AbstractModel {
         this.OnlineDDL = OnlineDDL;
     }
 
+    /**
+     * Get 库/表/视图级 DML/DDL 白名单 
+     * @return DatabasesOpFilter 库/表/视图级 DML/DDL 白名单
+     */
+    public DBOpFilter [] getDatabasesOpFilter() {
+        return this.DatabasesOpFilter;
+    }
+
+    /**
+     * Set 库/表/视图级 DML/DDL 白名单
+     * @param DatabasesOpFilter 库/表/视图级 DML/DDL 白名单
+     */
+    public void setDatabasesOpFilter(DBOpFilter [] DatabasesOpFilter) {
+        this.DatabasesOpFilter = DatabasesOpFilter;
+    }
+
     public Objects() {
     }
 
@@ -146,6 +169,12 @@ public class Objects extends AbstractModel {
         if (source.OnlineDDL != null) {
             this.OnlineDDL = new OnlineDDL(source.OnlineDDL);
         }
+        if (source.DatabasesOpFilter != null) {
+            this.DatabasesOpFilter = new DBOpFilter[source.DatabasesOpFilter.length];
+            for (int i = 0; i < source.DatabasesOpFilter.length; i++) {
+                this.DatabasesOpFilter[i] = new DBOpFilter(source.DatabasesOpFilter[i]);
+            }
+        }
     }
 
 
@@ -157,6 +186,7 @@ public class Objects extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Databases.", this.Databases);
         this.setParamArraySimple(map, prefix + "AdvancedObjects.", this.AdvancedObjects);
         this.setParamObj(map, prefix + "OnlineDDL.", this.OnlineDDL);
+        this.setParamArrayObj(map, prefix + "DatabasesOpFilter.", this.DatabasesOpFilter);
 
     }
 }

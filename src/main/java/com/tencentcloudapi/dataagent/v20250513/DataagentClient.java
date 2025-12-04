@@ -116,6 +116,17 @@ public class DataagentClient extends AbstractClient{
     }
 
     /**
+     *查询上传任务
+     * @param req GetUploadJobDetailsRequest
+     * @return GetUploadJobDetailsResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetUploadJobDetailsResponse GetUploadJobDetails(GetUploadJobDetailsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetUploadJobDetails", GetUploadJobDetailsResponse.class);
+    }
+
+    /**
      *编辑修改分片
      * @param req ModifyChunkRequest
      * @return ModifyChunkResponse
@@ -157,6 +168,17 @@ public class DataagentClient extends AbstractClient{
     public StopChatAIResponse StopChatAI(StopChatAIRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StopChatAI", StopChatAIResponse.class);
+    }
+
+    /**
+     *上传提交文件
+     * @param req UploadAndCommitFileRequest
+     * @return UploadAndCommitFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public UploadAndCommitFileResponse UploadAndCommitFile(UploadAndCommitFileRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UploadAndCommitFile", UploadAndCommitFileResponse.class);
     }
 
 }

@@ -66,6 +66,20 @@ public class ClusterConfigsInfoFromEMR extends AbstractModel {
     private String FilePath;
 
     /**
+    * 节点级配置的ip，当ConfigLevel取值为node时，此参数必选；
+    */
+    @SerializedName("Ip")
+    @Expose
+    private String Ip;
+
+    /**
+    * 可选参数，参数取值：node,cluster; node: 节点级参数配置，cluster: 实例级参数配置；
+    */
+    @SerializedName("ConfigLevel")
+    @Expose
+    private String ConfigLevel;
+
+    /**
      * Get 配置文件名称 
      * @return FileName 配置文件名称
      */
@@ -161,6 +175,38 @@ public class ClusterConfigsInfoFromEMR extends AbstractModel {
         this.FilePath = FilePath;
     }
 
+    /**
+     * Get 节点级配置的ip，当ConfigLevel取值为node时，此参数必选； 
+     * @return Ip 节点级配置的ip，当ConfigLevel取值为node时，此参数必选；
+     */
+    public String getIp() {
+        return this.Ip;
+    }
+
+    /**
+     * Set 节点级配置的ip，当ConfigLevel取值为node时，此参数必选；
+     * @param Ip 节点级配置的ip，当ConfigLevel取值为node时，此参数必选；
+     */
+    public void setIp(String Ip) {
+        this.Ip = Ip;
+    }
+
+    /**
+     * Get 可选参数，参数取值：node,cluster; node: 节点级参数配置，cluster: 实例级参数配置； 
+     * @return ConfigLevel 可选参数，参数取值：node,cluster; node: 节点级参数配置，cluster: 实例级参数配置；
+     */
+    public String getConfigLevel() {
+        return this.ConfigLevel;
+    }
+
+    /**
+     * Set 可选参数，参数取值：node,cluster; node: 节点级参数配置，cluster: 实例级参数配置；
+     * @param ConfigLevel 可选参数，参数取值：node,cluster; node: 节点级参数配置，cluster: 实例级参数配置；
+     */
+    public void setConfigLevel(String ConfigLevel) {
+        this.ConfigLevel = ConfigLevel;
+    }
+
     public ClusterConfigsInfoFromEMR() {
     }
 
@@ -187,6 +233,12 @@ public class ClusterConfigsInfoFromEMR extends AbstractModel {
         if (source.FilePath != null) {
             this.FilePath = new String(source.FilePath);
         }
+        if (source.Ip != null) {
+            this.Ip = new String(source.Ip);
+        }
+        if (source.ConfigLevel != null) {
+            this.ConfigLevel = new String(source.ConfigLevel);
+        }
     }
 
 
@@ -200,6 +252,8 @@ public class ClusterConfigsInfoFromEMR extends AbstractModel {
         this.setParamSimple(map, prefix + "OriParam", this.OriParam);
         this.setParamSimple(map, prefix + "NeedRestart", this.NeedRestart);
         this.setParamSimple(map, prefix + "FilePath", this.FilePath);
+        this.setParamSimple(map, prefix + "Ip", this.Ip);
+        this.setParamSimple(map, prefix + "ConfigLevel", this.ConfigLevel);
 
     }
 }

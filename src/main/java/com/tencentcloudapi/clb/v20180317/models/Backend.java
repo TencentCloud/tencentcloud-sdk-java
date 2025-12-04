@@ -97,6 +97,14 @@ public class Backend extends AbstractModel {
     private String Tag;
 
     /**
+    * 后端服务所在的可用区，如ap-guangzhou-1
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
+
+    /**
      * Get 后端服务的类型，可取：CVM、ENI、CCN、EVM、GLOBALROUTE、NAT、SRV等 
      * @return Type 后端服务的类型，可取：CVM、ENI、CCN、EVM、GLOBALROUTE、NAT、SRV等
      */
@@ -268,6 +276,26 @@ public class Backend extends AbstractModel {
         this.Tag = Tag;
     }
 
+    /**
+     * Get 后端服务所在的可用区，如ap-guangzhou-1
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Zone 后端服务所在的可用区，如ap-guangzhou-1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * Set 后端服务所在的可用区，如ap-guangzhou-1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Zone 后端服务所在的可用区，如ap-guangzhou-1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
+    }
+
     public Backend() {
     }
 
@@ -312,6 +340,9 @@ public class Backend extends AbstractModel {
         if (source.Tag != null) {
             this.Tag = new String(source.Tag);
         }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
     }
 
 
@@ -329,6 +360,7 @@ public class Backend extends AbstractModel {
         this.setParamSimple(map, prefix + "RegisteredTime", this.RegisteredTime);
         this.setParamSimple(map, prefix + "EniId", this.EniId);
         this.setParamSimple(map, prefix + "Tag", this.Tag);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
 
     }
 }

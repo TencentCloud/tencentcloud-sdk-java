@@ -483,6 +483,13 @@ ToaClean: TOA（TCP Option Address）清理，清除TCP选项中的地址信息�
     private String AssociateEndpoint;
 
     /**
+    * 可用区转发亲和信息
+    */
+    @SerializedName("AvailableZoneAffinityInfo")
+    @Expose
+    private AvailableZoneAffinityInfo AvailableZoneAffinityInfo;
+
+    /**
      * Get 负载均衡实例 ID。 
      * @return LoadBalancerId 负载均衡实例 ID。
      */
@@ -1626,6 +1633,22 @@ ToaClean: TOA（TCP Option Address）清理，清除TCP选项中的地址信息�
         this.AssociateEndpoint = AssociateEndpoint;
     }
 
+    /**
+     * Get 可用区转发亲和信息 
+     * @return AvailableZoneAffinityInfo 可用区转发亲和信息
+     */
+    public AvailableZoneAffinityInfo getAvailableZoneAffinityInfo() {
+        return this.AvailableZoneAffinityInfo;
+    }
+
+    /**
+     * Set 可用区转发亲和信息
+     * @param AvailableZoneAffinityInfo 可用区转发亲和信息
+     */
+    public void setAvailableZoneAffinityInfo(AvailableZoneAffinityInfo AvailableZoneAffinityInfo) {
+        this.AvailableZoneAffinityInfo = AvailableZoneAffinityInfo;
+    }
+
     public LoadBalancer() {
     }
 
@@ -1832,6 +1855,9 @@ ToaClean: TOA（TCP Option Address）清理，清除TCP选项中的地址信息�
         if (source.AssociateEndpoint != null) {
             this.AssociateEndpoint = new String(source.AssociateEndpoint);
         }
+        if (source.AvailableZoneAffinityInfo != null) {
+            this.AvailableZoneAffinityInfo = new AvailableZoneAffinityInfo(source.AvailableZoneAffinityInfo);
+        }
     }
 
 
@@ -1897,6 +1923,7 @@ ToaClean: TOA（TCP Option Address）清理，清除TCP选项中的地址信息�
         this.setParamSimple(map, prefix + "Exclusive", this.Exclusive);
         this.setParamSimple(map, prefix + "TargetCount", this.TargetCount);
         this.setParamSimple(map, prefix + "AssociateEndpoint", this.AssociateEndpoint);
+        this.setParamObj(map, prefix + "AvailableZoneAffinityInfo.", this.AvailableZoneAffinityInfo);
 
     }
 }

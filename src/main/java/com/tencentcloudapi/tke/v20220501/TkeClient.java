@@ -160,6 +160,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *修改原生节点
+     * @param req ModifyClusterMachineRequest
+     * @return ModifyClusterMachineResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterMachineResponse ModifyClusterMachine(ModifyClusterMachineRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyClusterMachine", ModifyClusterMachineResponse.class);
+    }
+
+    /**
      *修改健康检测策略
      * @param req ModifyHealthCheckPolicyRequest
      * @return ModifyHealthCheckPolicyResponse

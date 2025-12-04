@@ -4845,7 +4845,7 @@ LimitTypes取值范围：
     }
 
     /**
-     *本接口（ResetNatGatewayConnection）用来NAT网关并发连接上限。
+     *本接口（ResetNatGatewayConnection）用于调整传统型NAT网关并发连接数上限。
      * @param req ResetNatGatewayConnectionRequest
      * @return ResetNatGatewayConnectionResponse
      * @throws TencentCloudSDKException

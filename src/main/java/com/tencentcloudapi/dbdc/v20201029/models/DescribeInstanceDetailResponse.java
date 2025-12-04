@@ -206,6 +206,20 @@ public class DescribeInstanceDetailResponse extends AbstractModel {
     private String ClusterId;
 
     /**
+    * 独享集群的标签信息
+    */
+    @SerializedName("ResourceTags")
+    @Expose
+    private ResourceTag [] ResourceTags;
+
+    /**
+    * CPU类型，Intel/AMD,Hygon
+    */
+    @SerializedName("CpuType")
+    @Expose
+    private String CpuType;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -629,6 +643,38 @@ public class DescribeInstanceDetailResponse extends AbstractModel {
     }
 
     /**
+     * Get 独享集群的标签信息 
+     * @return ResourceTags 独享集群的标签信息
+     */
+    public ResourceTag [] getResourceTags() {
+        return this.ResourceTags;
+    }
+
+    /**
+     * Set 独享集群的标签信息
+     * @param ResourceTags 独享集群的标签信息
+     */
+    public void setResourceTags(ResourceTag [] ResourceTags) {
+        this.ResourceTags = ResourceTags;
+    }
+
+    /**
+     * Get CPU类型，Intel/AMD,Hygon 
+     * @return CpuType CPU类型，Intel/AMD,Hygon
+     */
+    public String getCpuType() {
+        return this.CpuType;
+    }
+
+    /**
+     * Set CPU类型，Intel/AMD,Hygon
+     * @param CpuType CPU类型，Intel/AMD,Hygon
+     */
+    public void setCpuType(String CpuType) {
+        this.CpuType = CpuType;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -730,6 +776,15 @@ public class DescribeInstanceDetailResponse extends AbstractModel {
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
         }
+        if (source.ResourceTags != null) {
+            this.ResourceTags = new ResourceTag[source.ResourceTags.length];
+            for (int i = 0; i < source.ResourceTags.length; i++) {
+                this.ResourceTags[i] = new ResourceTag(source.ResourceTags[i]);
+            }
+        }
+        if (source.CpuType != null) {
+            this.CpuType = new String(source.CpuType);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -766,6 +821,8 @@ public class DescribeInstanceDetailResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "FenceId", this.FenceId);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+        this.setParamSimple(map, prefix + "CpuType", this.CpuType);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

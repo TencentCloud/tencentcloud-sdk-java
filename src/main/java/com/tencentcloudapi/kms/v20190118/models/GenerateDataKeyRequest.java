@@ -94,6 +94,13 @@ public class GenerateDataKeyRequest extends AbstractModel {
     private String HsmClusterId;
 
     /**
+    * 标签列表,当参数IsHostedByKms=1，数据密钥托管到kms时有效.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get CMK全局唯一标识符 
      * @return KeyId CMK全局唯一标识符
      */
@@ -253,6 +260,22 @@ public class GenerateDataKeyRequest extends AbstractModel {
         this.HsmClusterId = HsmClusterId;
     }
 
+    /**
+     * Get 标签列表,当参数IsHostedByKms=1，数据密钥托管到kms时有效. 
+     * @return Tags 标签列表,当参数IsHostedByKms=1，数据密钥托管到kms时有效.
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签列表,当参数IsHostedByKms=1，数据密钥托管到kms时有效.
+     * @param Tags 标签列表,当参数IsHostedByKms=1，数据密钥托管到kms时有效.
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public GenerateDataKeyRequest() {
     }
 
@@ -291,6 +314,12 @@ public class GenerateDataKeyRequest extends AbstractModel {
         if (source.HsmClusterId != null) {
             this.HsmClusterId = new String(source.HsmClusterId);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -308,6 +337,7 @@ public class GenerateDataKeyRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DataKeyName", this.DataKeyName);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "HsmClusterId", this.HsmClusterId);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

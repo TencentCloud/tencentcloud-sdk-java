@@ -73,6 +73,13 @@ public class CreateVpcRequest extends AbstractModel {
     private Boolean EnableRouteVpcPublish;
 
     /**
+    * vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。
+    */
+    @SerializedName("EnableRouteVpcPublishIpv6")
+    @Expose
+    private Boolean EnableRouteVpcPublishIpv6;
+
+    /**
      * Get vpc名称，最大长度不能超过60个字节。 
      * @return VpcName vpc名称，最大长度不能超过60个字节。
      */
@@ -184,6 +191,22 @@ public class CreateVpcRequest extends AbstractModel {
         this.EnableRouteVpcPublish = EnableRouteVpcPublish;
     }
 
+    /**
+     * Get vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。 
+     * @return EnableRouteVpcPublishIpv6 vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。
+     */
+    public Boolean getEnableRouteVpcPublishIpv6() {
+        return this.EnableRouteVpcPublishIpv6;
+    }
+
+    /**
+     * Set vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。
+     * @param EnableRouteVpcPublishIpv6 vpc关联云联网时IPv6类型路由发布策略， true：开启cidr路由发布，false：开启subnet子网路由发布。创建vpc时默认为子网路由发布，当选择cidr路由发布时，请通过工单加入白名单。
+     */
+    public void setEnableRouteVpcPublishIpv6(Boolean EnableRouteVpcPublishIpv6) {
+        this.EnableRouteVpcPublishIpv6 = EnableRouteVpcPublishIpv6;
+    }
+
     public CreateVpcRequest() {
     }
 
@@ -219,6 +242,9 @@ public class CreateVpcRequest extends AbstractModel {
         if (source.EnableRouteVpcPublish != null) {
             this.EnableRouteVpcPublish = new Boolean(source.EnableRouteVpcPublish);
         }
+        if (source.EnableRouteVpcPublishIpv6 != null) {
+            this.EnableRouteVpcPublishIpv6 = new Boolean(source.EnableRouteVpcPublishIpv6);
+        }
     }
 
 
@@ -233,6 +259,7 @@ public class CreateVpcRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "EnableRouteVpcPublish", this.EnableRouteVpcPublish);
+        this.setParamSimple(map, prefix + "EnableRouteVpcPublishIpv6", this.EnableRouteVpcPublishIpv6);
 
     }
 }

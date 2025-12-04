@@ -94,6 +94,13 @@ public class ListDataKeyDetailRequest extends AbstractModel {
     private Long DataKeyLen;
 
     /**
+    * 标签过滤条件
+    */
+    @SerializedName("TagFilters")
+    @Expose
+    private TagFilter [] TagFilters;
+
+    /**
      * Get 含义跟 SQL 查询的 Offset 一致，表示本次获取从按一定顺序排列数组的第 Offset 个元素开始，缺省为0 
      * @return Offset 含义跟 SQL 查询的 Offset 一致，表示本次获取从按一定顺序排列数组的第 Offset 个元素开始，缺省为0
      */
@@ -253,6 +260,22 @@ public class ListDataKeyDetailRequest extends AbstractModel {
         this.DataKeyLen = DataKeyLen;
     }
 
+    /**
+     * Get 标签过滤条件 
+     * @return TagFilters 标签过滤条件
+     */
+    public TagFilter [] getTagFilters() {
+        return this.TagFilters;
+    }
+
+    /**
+     * Set 标签过滤条件
+     * @param TagFilters 标签过滤条件
+     */
+    public void setTagFilters(TagFilter [] TagFilters) {
+        this.TagFilters = TagFilters;
+    }
+
     public ListDataKeyDetailRequest() {
     }
 
@@ -291,6 +314,12 @@ public class ListDataKeyDetailRequest extends AbstractModel {
         if (source.DataKeyLen != null) {
             this.DataKeyLen = new Long(source.DataKeyLen);
         }
+        if (source.TagFilters != null) {
+            this.TagFilters = new TagFilter[source.TagFilters.length];
+            for (int i = 0; i < source.TagFilters.length; i++) {
+                this.TagFilters[i] = new TagFilter(source.TagFilters[i]);
+            }
+        }
     }
 
 
@@ -308,6 +337,7 @@ public class ListDataKeyDetailRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "HsmClusterId", this.HsmClusterId);
         this.setParamSimple(map, prefix + "KeyId", this.KeyId);
         this.setParamSimple(map, prefix + "DataKeyLen", this.DataKeyLen);
+        this.setParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
 
     }
 }

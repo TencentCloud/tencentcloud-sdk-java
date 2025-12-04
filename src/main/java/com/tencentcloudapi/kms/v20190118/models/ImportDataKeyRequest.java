@@ -67,6 +67,13 @@ public class ImportDataKeyRequest extends AbstractModel {
     private String HsmClusterId;
 
     /**
+    * 标签列表
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 数据密钥的名称 
      * @return DataKeyName 数据密钥的名称
      */
@@ -166,6 +173,22 @@ public class ImportDataKeyRequest extends AbstractModel {
         this.HsmClusterId = HsmClusterId;
     }
 
+    /**
+     * Get 标签列表 
+     * @return Tags 标签列表
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签列表
+     * @param Tags 标签列表
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public ImportDataKeyRequest() {
     }
 
@@ -192,6 +215,12 @@ public class ImportDataKeyRequest extends AbstractModel {
         if (source.HsmClusterId != null) {
             this.HsmClusterId = new String(source.HsmClusterId);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -205,6 +234,7 @@ public class ImportDataKeyRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "KeyId", this.KeyId);
         this.setParamSimple(map, prefix + "HsmClusterId", this.HsmClusterId);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

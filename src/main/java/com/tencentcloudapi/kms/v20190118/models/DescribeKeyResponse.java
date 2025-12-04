@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeKeyResponse extends AbstractModel {
 
     /**
-    * 密钥属性信息
+    * 密钥属性信息。
     */
     @SerializedName("KeyMetadata")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeKeyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 密钥属性信息 
-     * @return KeyMetadata 密钥属性信息
+     * Get 密钥属性信息。 
+     * @return KeyMetadata 密钥属性信息。
      */
     public KeyMetadata getKeyMetadata() {
         return this.KeyMetadata;
     }
 
     /**
-     * Set 密钥属性信息
-     * @param KeyMetadata 密钥属性信息
+     * Set 密钥属性信息。
+     * @param KeyMetadata 密钥属性信息。
      */
     public void setKeyMetadata(KeyMetadata KeyMetadata) {
         this.KeyMetadata = KeyMetadata;

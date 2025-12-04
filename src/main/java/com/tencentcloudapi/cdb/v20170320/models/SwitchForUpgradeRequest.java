@@ -31,6 +31,13 @@ public class SwitchForUpgradeRequest extends AbstractModel {
     private String InstanceId;
 
     /**
+    * 是否开启关联切换，true为开启，false为关闭，默认false
+    */
+    @SerializedName("IsRelatedSwitch")
+    @Expose
+    private Boolean IsRelatedSwitch;
+
+    /**
      * Get 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。 
      * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
@@ -46,6 +53,22 @@ public class SwitchForUpgradeRequest extends AbstractModel {
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get 是否开启关联切换，true为开启，false为关闭，默认false 
+     * @return IsRelatedSwitch 是否开启关联切换，true为开启，false为关闭，默认false
+     */
+    public Boolean getIsRelatedSwitch() {
+        return this.IsRelatedSwitch;
+    }
+
+    /**
+     * Set 是否开启关联切换，true为开启，false为关闭，默认false
+     * @param IsRelatedSwitch 是否开启关联切换，true为开启，false为关闭，默认false
+     */
+    public void setIsRelatedSwitch(Boolean IsRelatedSwitch) {
+        this.IsRelatedSwitch = IsRelatedSwitch;
+    }
+
     public SwitchForUpgradeRequest() {
     }
 
@@ -57,6 +80,9 @@ public class SwitchForUpgradeRequest extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.IsRelatedSwitch != null) {
+            this.IsRelatedSwitch = new Boolean(source.IsRelatedSwitch);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class SwitchForUpgradeRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "IsRelatedSwitch", this.IsRelatedSwitch);
 
     }
 }

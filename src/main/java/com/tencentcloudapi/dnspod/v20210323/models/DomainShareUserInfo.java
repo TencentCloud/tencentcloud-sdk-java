@@ -31,7 +31,7 @@ public class DomainShareUserInfo extends AbstractModel {
     private Long DomainShareId;
 
     /**
-    * 共享模式。r-只读；w-可写；rw-可读写。
+    * 共享模式。r-只读；rw-可读写。
     */
     @SerializedName("Mode")
     @Expose
@@ -82,16 +82,16 @@ public class DomainShareUserInfo extends AbstractModel {
     }
 
     /**
-     * Get 共享模式。r-只读；w-可写；rw-可读写。 
-     * @return Mode 共享模式。r-只读；w-可写；rw-可读写。
+     * Get 共享模式。r-只读；rw-可读写。 
+     * @return Mode 共享模式。r-只读；rw-可读写。
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set 共享模式。r-只读；w-可写；rw-可读写。
-     * @param Mode 共享模式。r-只读；w-可写；rw-可读写。
+     * Set 共享模式。r-只读；rw-可读写。
+     * @param Mode 共享模式。r-只读；rw-可读写。
      */
     public void setMode(String Mode) {
         this.Mode = Mode;

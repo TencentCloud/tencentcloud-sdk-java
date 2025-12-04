@@ -460,6 +460,13 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
     private Long ProtectedProperty;
 
     /**
+    * 流程Id，标志实例当前所处的异步任务
+    */
+    @SerializedName("FlowId")
+    @Expose
+    private Long FlowId;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -1467,6 +1474,22 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
+     * Get 流程Id，标志实例当前所处的异步任务 
+     * @return FlowId 流程Id，标志实例当前所处的异步任务
+     */
+    public Long getFlowId() {
+        return this.FlowId;
+    }
+
+    /**
+     * Set 流程Id，标志实例当前所处的异步任务
+     * @param FlowId 流程Id，标志实例当前所处的异步任务
+     */
+    public void setFlowId(Long FlowId) {
+        this.FlowId = FlowId;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -1688,6 +1711,9 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
         if (source.ProtectedProperty != null) {
             this.ProtectedProperty = new Long(source.ProtectedProperty);
         }
+        if (source.FlowId != null) {
+            this.FlowId = new Long(source.FlowId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1760,6 +1786,7 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ProxyVersion", this.ProxyVersion);
         this.setParamSimple(map, prefix + "CpuType", this.CpuType);
         this.setParamSimple(map, prefix + "ProtectedProperty", this.ProtectedProperty);
+        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

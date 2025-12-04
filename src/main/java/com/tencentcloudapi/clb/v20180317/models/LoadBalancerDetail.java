@@ -359,6 +359,14 @@ Public：公网属性，Private：内网属性；对于内网属性的负载均�
     private Long Exclusive;
 
     /**
+    * 可用区转发亲和信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AvailableZoneAffinityInfo")
+    @Expose
+    private AvailableZoneAffinityInfo AvailableZoneAffinityInfo;
+
+    /**
      * Get 负载均衡实例 ID。 
      * @return LoadBalancerId 负载均衡实例 ID。
      */
@@ -1194,6 +1202,26 @@ Public：公网属性，Private：内网属性；对于内网属性的负载均�
         this.Exclusive = Exclusive;
     }
 
+    /**
+     * Get 可用区转发亲和信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AvailableZoneAffinityInfo 可用区转发亲和信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AvailableZoneAffinityInfo getAvailableZoneAffinityInfo() {
+        return this.AvailableZoneAffinityInfo;
+    }
+
+    /**
+     * Set 可用区转发亲和信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AvailableZoneAffinityInfo 可用区转发亲和信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAvailableZoneAffinityInfo(AvailableZoneAffinityInfo AvailableZoneAffinityInfo) {
+        this.AvailableZoneAffinityInfo = AvailableZoneAffinityInfo;
+    }
+
     public LoadBalancerDetail() {
     }
 
@@ -1343,6 +1371,9 @@ Public：公网属性，Private：内网属性；对于内网属性的负载均�
         if (source.Exclusive != null) {
             this.Exclusive = new Long(source.Exclusive);
         }
+        if (source.AvailableZoneAffinityInfo != null) {
+            this.AvailableZoneAffinityInfo = new AvailableZoneAffinityInfo(source.AvailableZoneAffinityInfo);
+        }
     }
 
 
@@ -1392,6 +1423,7 @@ Public：公网属性，Private：内网属性；对于内网属性的负载均�
         this.setParamArraySimple(map, prefix + "AttributeFlags.", this.AttributeFlags);
         this.setParamSimple(map, prefix + "SlaType", this.SlaType);
         this.setParamSimple(map, prefix + "Exclusive", this.Exclusive);
+        this.setParamObj(map, prefix + "AvailableZoneAffinityInfo.", this.AvailableZoneAffinityInfo);
 
     }
 }

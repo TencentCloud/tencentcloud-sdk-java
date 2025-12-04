@@ -24,14 +24,17 @@ import java.util.HashMap;
 public class DescribeRocketMQPublicAccessMonitorDataRequest extends AbstractModel {
 
     /**
-    * 专享集群ID
+    * 集群 ID
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 指标名称，仅支持单指标拉取。目前仅支持：ClientIntraffic; ClientOuttraffic
+    * 指标名称，仅支持单指标拉取。指标枚举如下：
+
+- ClientIntraffic：入流量
+- ClientOuttraffic：出流量
     */
     @SerializedName("MetricName")
     @Expose
@@ -59,32 +62,44 @@ public class DescribeRocketMQPublicAccessMonitorDataRequest extends AbstractMode
     private Long Period;
 
     /**
-     * Get 专享集群ID 
-     * @return InstanceId 专享集群ID
+     * Get 集群 ID 
+     * @return InstanceId 集群 ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 专享集群ID
-     * @param InstanceId 专享集群ID
+     * Set 集群 ID
+     * @param InstanceId 集群 ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 指标名称，仅支持单指标拉取。目前仅支持：ClientIntraffic; ClientOuttraffic 
-     * @return MetricName 指标名称，仅支持单指标拉取。目前仅支持：ClientIntraffic; ClientOuttraffic
+     * Get 指标名称，仅支持单指标拉取。指标枚举如下：
+
+- ClientIntraffic：入流量
+- ClientOuttraffic：出流量 
+     * @return MetricName 指标名称，仅支持单指标拉取。指标枚举如下：
+
+- ClientIntraffic：入流量
+- ClientOuttraffic：出流量
      */
     public String getMetricName() {
         return this.MetricName;
     }
 
     /**
-     * Set 指标名称，仅支持单指标拉取。目前仅支持：ClientIntraffic; ClientOuttraffic
-     * @param MetricName 指标名称，仅支持单指标拉取。目前仅支持：ClientIntraffic; ClientOuttraffic
+     * Set 指标名称，仅支持单指标拉取。指标枚举如下：
+
+- ClientIntraffic：入流量
+- ClientOuttraffic：出流量
+     * @param MetricName 指标名称，仅支持单指标拉取。指标枚举如下：
+
+- ClientIntraffic：入流量
+- ClientOuttraffic：出流量
      */
     public void setMetricName(String MetricName) {
         this.MetricName = MetricName;

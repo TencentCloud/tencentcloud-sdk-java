@@ -38,6 +38,13 @@ public class DescribeAppAgentListResponse extends AbstractModel {
     private Agent [] Agents;
 
     /**
+    * Agent转交高级设置
+    */
+    @SerializedName("HandoffAdvancedSetting")
+    @Expose
+    private AgentHandoffAdvancedSetting HandoffAdvancedSetting;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -77,6 +84,22 @@ public class DescribeAppAgentListResponse extends AbstractModel {
     }
 
     /**
+     * Get Agent转交高级设置 
+     * @return HandoffAdvancedSetting Agent转交高级设置
+     */
+    public AgentHandoffAdvancedSetting getHandoffAdvancedSetting() {
+        return this.HandoffAdvancedSetting;
+    }
+
+    /**
+     * Set Agent转交高级设置
+     * @param HandoffAdvancedSetting Agent转交高级设置
+     */
+    public void setHandoffAdvancedSetting(AgentHandoffAdvancedSetting HandoffAdvancedSetting) {
+        this.HandoffAdvancedSetting = HandoffAdvancedSetting;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -109,6 +132,9 @@ public class DescribeAppAgentListResponse extends AbstractModel {
                 this.Agents[i] = new Agent(source.Agents[i]);
             }
         }
+        if (source.HandoffAdvancedSetting != null) {
+            this.HandoffAdvancedSetting = new AgentHandoffAdvancedSetting(source.HandoffAdvancedSetting);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -121,6 +147,7 @@ public class DescribeAppAgentListResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StaringAgentId", this.StaringAgentId);
         this.setParamArrayObj(map, prefix + "Agents.", this.Agents);
+        this.setParamObj(map, prefix + "HandoffAdvancedSetting.", this.HandoffAdvancedSetting);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

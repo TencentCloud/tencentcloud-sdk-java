@@ -160,6 +160,17 @@ public class MqttClient extends AbstractClient{
     }
 
     /**
+     *创建一条消息属性增强规则
+     * @param req CreateMessageEnrichmentRuleRequest
+     * @return CreateMessageEnrichmentRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMessageEnrichmentRuleResponse CreateMessageEnrichmentRule(CreateMessageEnrichmentRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateMessageEnrichmentRule", CreateMessageEnrichmentRuleResponse.class);
+    }
+
+    /**
      *创建主题
      * @param req CreateTopicRequest
      * @return CreateTopicResponse
@@ -289,6 +300,17 @@ public class MqttClient extends AbstractClient{
     public DeleteInstanceResponse DeleteInstance(DeleteInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteInstance", DeleteInstanceResponse.class);
+    }
+
+    /**
+     *删除消息属性增强规则
+     * @param req DeleteMessageEnrichmentRuleRequest
+     * @return DeleteMessageEnrichmentRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteMessageEnrichmentRuleResponse DeleteMessageEnrichmentRule(DeleteMessageEnrichmentRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteMessageEnrichmentRule", DeleteMessageEnrichmentRuleResponse.class);
     }
 
     /**
@@ -484,6 +506,17 @@ public class MqttClient extends AbstractClient{
     }
 
     /**
+     *查询消息属性增强规则
+     * @param req DescribeMessageEnrichmentRulesRequest
+     * @return DescribeMessageEnrichmentRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMessageEnrichmentRulesResponse DescribeMessageEnrichmentRules(DescribeMessageEnrichmentRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMessageEnrichmentRules", DescribeMessageEnrichmentRulesResponse.class);
+    }
+
+    /**
      *根据一级Topic查询消息列表
      * @param req DescribeMessageListRequest
      * @return DescribeMessageListResponse
@@ -655,6 +688,18 @@ public class MqttClient extends AbstractClient{
     }
 
     /**
+     *修改消息属性增强规则
+注意：需要提交当前规则的所有属性，即使某些字段没有修改。
+     * @param req ModifyMessageEnrichmentRuleRequest
+     * @return ModifyMessageEnrichmentRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMessageEnrichmentRuleResponse ModifyMessageEnrichmentRule(ModifyMessageEnrichmentRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyMessageEnrichmentRule", ModifyMessageEnrichmentRuleResponse.class);
+    }
+
+    /**
      *修改主题属性
      * @param req ModifyTopicRequest
      * @return ModifyTopicResponse
@@ -729,6 +774,17 @@ public class MqttClient extends AbstractClient{
     public UpdateAuthorizationPolicyPriorityResponse UpdateAuthorizationPolicyPriority(UpdateAuthorizationPolicyPriorityRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateAuthorizationPolicyPriority", UpdateAuthorizationPolicyPriorityResponse.class);
+    }
+
+    /**
+     *修改消息属性增强规则优先级
+     * @param req UpdateMessageEnrichmentRulePriorityRequest
+     * @return UpdateMessageEnrichmentRulePriorityResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateMessageEnrichmentRulePriorityResponse UpdateMessageEnrichmentRulePriority(UpdateMessageEnrichmentRulePriorityRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateMessageEnrichmentRulePriority", UpdateMessageEnrichmentRulePriorityResponse.class);
     }
 
 }

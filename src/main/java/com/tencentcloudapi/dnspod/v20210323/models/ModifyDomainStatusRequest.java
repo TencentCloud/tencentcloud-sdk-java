@@ -31,7 +31,7 @@ public class ModifyDomainStatusRequest extends AbstractModel {
     private String Domain;
 
     /**
-    * 域名状态，”enable” 、”disable” 分别代表启用和暂停
+    * 域名状态，"enable"、"disable" 分别代表启用和暂停
     */
     @SerializedName("Status")
     @Expose
@@ -61,16 +61,16 @@ public class ModifyDomainStatusRequest extends AbstractModel {
     }
 
     /**
-     * Get 域名状态，”enable” 、”disable” 分别代表启用和暂停 
-     * @return Status 域名状态，”enable” 、”disable” 分别代表启用和暂停
+     * Get 域名状态，"enable"、"disable" 分别代表启用和暂停 
+     * @return Status 域名状态，"enable"、"disable" 分别代表启用和暂停
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 域名状态，”enable” 、”disable” 分别代表启用和暂停
-     * @param Status 域名状态，”enable” 、”disable” 分别代表启用和暂停
+     * Set 域名状态，"enable"、"disable" 分别代表启用和暂停
+     * @param Status 域名状态，"enable"、"disable" 分别代表启用和暂停
      */
     public void setStatus(String Status) {
         this.Status = Status;

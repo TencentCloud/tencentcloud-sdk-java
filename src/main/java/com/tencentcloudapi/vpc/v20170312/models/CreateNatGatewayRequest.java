@@ -122,6 +122,13 @@ public class CreateNatGatewayRequest extends AbstractModel {
     private Boolean DeletionProtectionEnabled;
 
     /**
+    * 独享实例规格。取值范围：ExclusiveSmall/ExclusiveMedium1/ExclusiveLarge1
+    */
+    @SerializedName("ExclusiveType")
+    @Expose
+    private String ExclusiveType;
+
+    /**
      * Get NAT网关名称，限制60字符 
      * @return NatGatewayName NAT网关名称，限制60字符
      */
@@ -349,6 +356,22 @@ public class CreateNatGatewayRequest extends AbstractModel {
         this.DeletionProtectionEnabled = DeletionProtectionEnabled;
     }
 
+    /**
+     * Get 独享实例规格。取值范围：ExclusiveSmall/ExclusiveMedium1/ExclusiveLarge1 
+     * @return ExclusiveType 独享实例规格。取值范围：ExclusiveSmall/ExclusiveMedium1/ExclusiveLarge1
+     */
+    public String getExclusiveType() {
+        return this.ExclusiveType;
+    }
+
+    /**
+     * Set 独享实例规格。取值范围：ExclusiveSmall/ExclusiveMedium1/ExclusiveLarge1
+     * @param ExclusiveType 独享实例规格。取值范围：ExclusiveSmall/ExclusiveMedium1/ExclusiveLarge1
+     */
+    public void setExclusiveType(String ExclusiveType) {
+        this.ExclusiveType = ExclusiveType;
+    }
+
     public CreateNatGatewayRequest() {
     }
 
@@ -405,6 +428,9 @@ public class CreateNatGatewayRequest extends AbstractModel {
         if (source.DeletionProtectionEnabled != null) {
             this.DeletionProtectionEnabled = new Boolean(source.DeletionProtectionEnabled);
         }
+        if (source.ExclusiveType != null) {
+            this.ExclusiveType = new String(source.ExclusiveType);
+        }
     }
 
 
@@ -426,6 +452,7 @@ public class CreateNatGatewayRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PublicIpFromSameZone", this.PublicIpFromSameZone);
         this.setParamSimple(map, prefix + "NatProductVersion", this.NatProductVersion);
         this.setParamSimple(map, prefix + "DeletionProtectionEnabled", this.DeletionProtectionEnabled);
+        this.setParamSimple(map, prefix + "ExclusiveType", this.ExclusiveType);
 
     }
 }

@@ -45,6 +45,13 @@ public class ModifyAccountPasswordRequest extends AbstractModel {
     private Account [] Accounts;
 
     /**
+    * 是否跳过校验密码复杂度
+    */
+    @SerializedName("SkipValidatePassword")
+    @Expose
+    private Boolean SkipValidatePassword;
+
+    /**
      * Get 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。 
      * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
@@ -92,6 +99,22 @@ public class ModifyAccountPasswordRequest extends AbstractModel {
         this.Accounts = Accounts;
     }
 
+    /**
+     * Get 是否跳过校验密码复杂度 
+     * @return SkipValidatePassword 是否跳过校验密码复杂度
+     */
+    public Boolean getSkipValidatePassword() {
+        return this.SkipValidatePassword;
+    }
+
+    /**
+     * Set 是否跳过校验密码复杂度
+     * @param SkipValidatePassword 是否跳过校验密码复杂度
+     */
+    public void setSkipValidatePassword(Boolean SkipValidatePassword) {
+        this.SkipValidatePassword = SkipValidatePassword;
+    }
+
     public ModifyAccountPasswordRequest() {
     }
 
@@ -112,6 +135,9 @@ public class ModifyAccountPasswordRequest extends AbstractModel {
                 this.Accounts[i] = new Account(source.Accounts[i]);
             }
         }
+        if (source.SkipValidatePassword != null) {
+            this.SkipValidatePassword = new Boolean(source.SkipValidatePassword);
+        }
     }
 
 
@@ -122,6 +148,7 @@ public class ModifyAccountPasswordRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "NewPassword", this.NewPassword);
         this.setParamArrayObj(map, prefix + "Accounts.", this.Accounts);
+        this.setParamSimple(map, prefix + "SkipValidatePassword", this.SkipValidatePassword);
 
     }
 }

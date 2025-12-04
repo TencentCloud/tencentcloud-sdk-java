@@ -38,6 +38,20 @@ public class ImportDataKeyResponse extends AbstractModel {
     private String DataKeyId;
 
     /**
+    * 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误
+    */
+    @SerializedName("TagCode")
+    @Expose
+    private Long TagCode;
+
+    /**
+    * 标签操作的返回信息
+    */
+    @SerializedName("TagMsg")
+    @Expose
+    private String TagMsg;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -77,6 +91,38 @@ public class ImportDataKeyResponse extends AbstractModel {
     }
 
     /**
+     * Get 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误 
+     * @return TagCode 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误
+     */
+    public Long getTagCode() {
+        return this.TagCode;
+    }
+
+    /**
+     * Set 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误
+     * @param TagCode 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误
+     */
+    public void setTagCode(Long TagCode) {
+        this.TagCode = TagCode;
+    }
+
+    /**
+     * Get 标签操作的返回信息 
+     * @return TagMsg 标签操作的返回信息
+     */
+    public String getTagMsg() {
+        return this.TagMsg;
+    }
+
+    /**
+     * Set 标签操作的返回信息
+     * @param TagMsg 标签操作的返回信息
+     */
+    public void setTagMsg(String TagMsg) {
+        this.TagMsg = TagMsg;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -106,6 +152,12 @@ public class ImportDataKeyResponse extends AbstractModel {
         if (source.DataKeyId != null) {
             this.DataKeyId = new String(source.DataKeyId);
         }
+        if (source.TagCode != null) {
+            this.TagCode = new Long(source.TagCode);
+        }
+        if (source.TagMsg != null) {
+            this.TagMsg = new String(source.TagMsg);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -118,6 +170,8 @@ public class ImportDataKeyResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "KeyId", this.KeyId);
         this.setParamSimple(map, prefix + "DataKeyId", this.DataKeyId);
+        this.setParamSimple(map, prefix + "TagCode", this.TagCode);
+        this.setParamSimple(map, prefix + "TagMsg", this.TagMsg);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
