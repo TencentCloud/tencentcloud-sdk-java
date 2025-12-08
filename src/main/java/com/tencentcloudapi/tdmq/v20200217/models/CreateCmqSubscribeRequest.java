@@ -31,7 +31,7 @@ public class CreateCmqSubscribeRequest extends AbstractModel {
     private String TopicName;
 
     /**
-    * 订阅名字，在单个地域同一账号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
+    * 订阅名字，在单个地域同一账号的同一主题下唯一。订阅名称以字母起始，只能包含字母、数字、“-”及“_”，最大64字符，创建后不能修改。
     */
     @SerializedName("SubscriptionName")
     @Expose
@@ -96,16 +96,16 @@ public class CreateCmqSubscribeRequest extends AbstractModel {
     }
 
     /**
-     * Get 订阅名字，在单个地域同一账号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。 
-     * @return SubscriptionName 订阅名字，在单个地域同一账号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
+     * Get 订阅名字，在单个地域同一账号的同一主题下唯一。订阅名称以字母起始，只能包含字母、数字、“-”及“_”，最大64字符，创建后不能修改。 
+     * @return SubscriptionName 订阅名字，在单个地域同一账号的同一主题下唯一。订阅名称以字母起始，只能包含字母、数字、“-”及“_”，最大64字符，创建后不能修改。
      */
     public String getSubscriptionName() {
         return this.SubscriptionName;
     }
 
     /**
-     * Set 订阅名字，在单个地域同一账号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
-     * @param SubscriptionName 订阅名字，在单个地域同一账号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
+     * Set 订阅名字，在单个地域同一账号的同一主题下唯一。订阅名称以字母起始，只能包含字母、数字、“-”及“_”，最大64字符，创建后不能修改。
+     * @param SubscriptionName 订阅名字，在单个地域同一账号的同一主题下唯一。订阅名称以字母起始，只能包含字母、数字、“-”及“_”，最大64字符，创建后不能修改。
      */
     public void setSubscriptionName(String SubscriptionName) {
         this.SubscriptionName = SubscriptionName;

@@ -913,4 +913,26 @@ Filters示例：
         return this.internalRequest(req, "RollbackMigratingTopicStage", RollbackMigratingTopicStageResponse.class);
     }
 
+    /**
+     *发送 RocketMQ 消息，该接口仅用于控制台发送少量测试消息，不保证SLA，且云 API 存在限流，在真实业务场景下，请使用 RocketMQ SDK 发送消息。
+     * @param req SendMessageRequest
+     * @return SendMessageResponse
+     * @throws TencentCloudSDKException
+     */
+    public SendMessageResponse SendMessage(SendMessageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SendMessage", SendMessageResponse.class);
+    }
+
+    /**
+     *消息消费验证
+     * @param req VerifyMessageConsumptionRequest
+     * @return VerifyMessageConsumptionResponse
+     * @throws TencentCloudSDKException
+     */
+    public VerifyMessageConsumptionResponse VerifyMessageConsumption(VerifyMessageConsumptionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "VerifyMessageConsumption", VerifyMessageConsumptionResponse.class);
+    }
+
 }

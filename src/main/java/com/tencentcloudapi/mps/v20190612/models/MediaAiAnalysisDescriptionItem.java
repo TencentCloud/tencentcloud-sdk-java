@@ -68,6 +68,27 @@ public class MediaAiAnalysisDescriptionItem extends AbstractModel {
     private String MindMapUrl;
 
     /**
+    * 摘要思维导图路径。
+    */
+    @SerializedName("MindMapPath")
+    @Expose
+    private String MindMapPath;
+
+    /**
+    * 视频字幕文件路径。
+    */
+    @SerializedName("SubtitlePath")
+    @Expose
+    private String SubtitlePath;
+
+    /**
+    * 摘要文件存储位置。
+    */
+    @SerializedName("OutputStorage")
+    @Expose
+    private TaskOutputStorage OutputStorage;
+
+    /**
      * Get 智能描述。 
      * @return Description 智能描述。
      */
@@ -171,6 +192,54 @@ public class MediaAiAnalysisDescriptionItem extends AbstractModel {
         this.MindMapUrl = MindMapUrl;
     }
 
+    /**
+     * Get 摘要思维导图路径。 
+     * @return MindMapPath 摘要思维导图路径。
+     */
+    public String getMindMapPath() {
+        return this.MindMapPath;
+    }
+
+    /**
+     * Set 摘要思维导图路径。
+     * @param MindMapPath 摘要思维导图路径。
+     */
+    public void setMindMapPath(String MindMapPath) {
+        this.MindMapPath = MindMapPath;
+    }
+
+    /**
+     * Get 视频字幕文件路径。 
+     * @return SubtitlePath 视频字幕文件路径。
+     */
+    public String getSubtitlePath() {
+        return this.SubtitlePath;
+    }
+
+    /**
+     * Set 视频字幕文件路径。
+     * @param SubtitlePath 视频字幕文件路径。
+     */
+    public void setSubtitlePath(String SubtitlePath) {
+        this.SubtitlePath = SubtitlePath;
+    }
+
+    /**
+     * Get 摘要文件存储位置。 
+     * @return OutputStorage 摘要文件存储位置。
+     */
+    public TaskOutputStorage getOutputStorage() {
+        return this.OutputStorage;
+    }
+
+    /**
+     * Set 摘要文件存储位置。
+     * @param OutputStorage 摘要文件存储位置。
+     */
+    public void setOutputStorage(TaskOutputStorage OutputStorage) {
+        this.OutputStorage = OutputStorage;
+    }
+
     public MediaAiAnalysisDescriptionItem() {
     }
 
@@ -203,6 +272,15 @@ public class MediaAiAnalysisDescriptionItem extends AbstractModel {
         if (source.MindMapUrl != null) {
             this.MindMapUrl = new String(source.MindMapUrl);
         }
+        if (source.MindMapPath != null) {
+            this.MindMapPath = new String(source.MindMapPath);
+        }
+        if (source.SubtitlePath != null) {
+            this.SubtitlePath = new String(source.SubtitlePath);
+        }
+        if (source.OutputStorage != null) {
+            this.OutputStorage = new TaskOutputStorage(source.OutputStorage);
+        }
     }
 
 
@@ -216,6 +294,9 @@ public class MediaAiAnalysisDescriptionItem extends AbstractModel {
         this.setParamArraySimple(map, prefix + "Keywords.", this.Keywords);
         this.setParamArrayObj(map, prefix + "Paragraphs.", this.Paragraphs);
         this.setParamSimple(map, prefix + "MindMapUrl", this.MindMapUrl);
+        this.setParamSimple(map, prefix + "MindMapPath", this.MindMapPath);
+        this.setParamSimple(map, prefix + "SubtitlePath", this.SubtitlePath);
+        this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
 
     }
 }

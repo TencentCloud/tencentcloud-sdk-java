@@ -31,7 +31,7 @@ public class ResetRocketMQConsumerOffSetRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * 命名空间名称
+    * 命名空间，4.x 通用集群命名空间固定为: tdmq_default
     */
     @SerializedName("NamespaceId")
     @Expose
@@ -59,7 +59,7 @@ public class ResetRocketMQConsumerOffSetRequest extends AbstractModel {
     private String Topic;
 
     /**
-    * 重置指定的时间戳，仅在 Type 为1是生效，以毫秒为单位
+    * 重置指定的时间戳，仅在 Type 为1时生效，以毫秒为单位
     */
     @SerializedName("ResetTimestamp")
     @Expose
@@ -89,16 +89,16 @@ public class ResetRocketMQConsumerOffSetRequest extends AbstractModel {
     }
 
     /**
-     * Get 命名空间名称 
-     * @return NamespaceId 命名空间名称
+     * Get 命名空间，4.x 通用集群命名空间固定为: tdmq_default 
+     * @return NamespaceId 命名空间，4.x 通用集群命名空间固定为: tdmq_default
      */
     public String getNamespaceId() {
         return this.NamespaceId;
     }
 
     /**
-     * Set 命名空间名称
-     * @param NamespaceId 命名空间名称
+     * Set 命名空间，4.x 通用集群命名空间固定为: tdmq_default
+     * @param NamespaceId 命名空间，4.x 通用集群命名空间固定为: tdmq_default
      */
     public void setNamespaceId(String NamespaceId) {
         this.NamespaceId = NamespaceId;
@@ -153,16 +153,16 @@ public class ResetRocketMQConsumerOffSetRequest extends AbstractModel {
     }
 
     /**
-     * Get 重置指定的时间戳，仅在 Type 为1是生效，以毫秒为单位 
-     * @return ResetTimestamp 重置指定的时间戳，仅在 Type 为1是生效，以毫秒为单位
+     * Get 重置指定的时间戳，仅在 Type 为1时生效，以毫秒为单位 
+     * @return ResetTimestamp 重置指定的时间戳，仅在 Type 为1时生效，以毫秒为单位
      */
     public Long getResetTimestamp() {
         return this.ResetTimestamp;
     }
 
     /**
-     * Set 重置指定的时间戳，仅在 Type 为1是生效，以毫秒为单位
-     * @param ResetTimestamp 重置指定的时间戳，仅在 Type 为1是生效，以毫秒为单位
+     * Set 重置指定的时间戳，仅在 Type 为1时生效，以毫秒为单位
+     * @param ResetTimestamp 重置指定的时间戳，仅在 Type 为1时生效，以毫秒为单位
      */
     public void setResetTimestamp(Long ResetTimestamp) {
         this.ResetTimestamp = ResetTimestamp;

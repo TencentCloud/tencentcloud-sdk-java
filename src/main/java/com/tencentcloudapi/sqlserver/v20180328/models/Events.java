@@ -52,7 +52,7 @@ public class Events extends AbstractModel {
     private String EventType;
 
     /**
-    * 事件记录状态，1-成功，2-失败，3-文件待删除，4-写入中
+    * 事件记录状态，1-成功，4-写入中
     */
     @SerializedName("Status")
     @Expose
@@ -151,16 +151,16 @@ public class Events extends AbstractModel {
     }
 
     /**
-     * Get 事件记录状态，1-成功，2-失败，3-文件待删除，4-写入中 
-     * @return Status 事件记录状态，1-成功，2-失败，3-文件待删除，4-写入中
+     * Get 事件记录状态，1-成功，4-写入中 
+     * @return Status 事件记录状态，1-成功，4-写入中
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 事件记录状态，1-成功，2-失败，3-文件待删除，4-写入中
-     * @param Status 事件记录状态，1-成功，2-失败，3-文件待删除，4-写入中
+     * Set 事件记录状态，1-成功，4-写入中
+     * @param Status 事件记录状态，1-成功，4-写入中
      */
     public void setStatus(Long Status) {
         this.Status = Status;

@@ -47,6 +47,13 @@ public class DescribePulsarProInstanceDetailResponse extends AbstractModel {
     private PulsarProClusterSpecInfo ClusterSpecInfo;
 
     /**
+    * 集群的证书列表
+    */
+    @SerializedName("CertificateList")
+    @Expose
+    private CertificateInfo [] CertificateList;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -110,6 +117,22 @@ public class DescribePulsarProInstanceDetailResponse extends AbstractModel {
     }
 
     /**
+     * Get 集群的证书列表 
+     * @return CertificateList 集群的证书列表
+     */
+    public CertificateInfo [] getCertificateList() {
+        return this.CertificateList;
+    }
+
+    /**
+     * Set 集群的证书列表
+     * @param CertificateList 集群的证书列表
+     */
+    public void setCertificateList(CertificateInfo [] CertificateList) {
+        this.CertificateList = CertificateList;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -145,6 +168,12 @@ public class DescribePulsarProInstanceDetailResponse extends AbstractModel {
         if (source.ClusterSpecInfo != null) {
             this.ClusterSpecInfo = new PulsarProClusterSpecInfo(source.ClusterSpecInfo);
         }
+        if (source.CertificateList != null) {
+            this.CertificateList = new CertificateInfo[source.CertificateList.length];
+            for (int i = 0; i < source.CertificateList.length; i++) {
+                this.CertificateList[i] = new CertificateInfo(source.CertificateList[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -158,6 +187,7 @@ public class DescribePulsarProInstanceDetailResponse extends AbstractModel {
         this.setParamObj(map, prefix + "ClusterInfo.", this.ClusterInfo);
         this.setParamArrayObj(map, prefix + "NetworkAccessPointInfos.", this.NetworkAccessPointInfos);
         this.setParamObj(map, prefix + "ClusterSpecInfo.", this.ClusterSpecInfo);
+        this.setParamArrayObj(map, prefix + "CertificateList.", this.CertificateList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

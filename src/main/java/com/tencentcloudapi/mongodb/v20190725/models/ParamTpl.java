@@ -46,6 +46,7 @@ public class ParamTpl extends AbstractModel {
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
 - MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+- MONGO_80_WT：MongoDB 8.0 WiredTiger存储引擎版本。
     */
     @SerializedName("MongoVersion")
     @Expose
@@ -117,7 +118,8 @@ public class ParamTpl extends AbstractModel {
 - MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
-- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。 
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+- MONGO_80_WT：MongoDB 8.0 WiredTiger存储引擎版本。 
      * @return MongoVersion 参数模板适用的数据库版本。
 - MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，
 - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，
@@ -126,6 +128,7 @@ public class ParamTpl extends AbstractModel {
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
 - MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+- MONGO_80_WT：MongoDB 8.0 WiredTiger存储引擎版本。
      */
     public String getMongoVersion() {
         return this.MongoVersion;
@@ -140,6 +143,7 @@ public class ParamTpl extends AbstractModel {
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
 - MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+- MONGO_80_WT：MongoDB 8.0 WiredTiger存储引擎版本。
      * @param MongoVersion 参数模板适用的数据库版本。
 - MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，
 - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，
@@ -148,6 +152,7 @@ public class ParamTpl extends AbstractModel {
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
 - MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+- MONGO_80_WT：MongoDB 8.0 WiredTiger存储引擎版本。
      */
     public void setMongoVersion(String MongoVersion) {
         this.MongoVersion = MongoVersion;

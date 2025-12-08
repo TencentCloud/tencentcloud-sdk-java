@@ -182,6 +182,20 @@ public class InternalTenant extends AbstractModel {
     private Boolean PublicAccessEnabled;
 
     /**
+    * 实例标签列表
+    */
+    @SerializedName("TagList")
+    @Expose
+    private String [] TagList;
+
+    /**
+    * 实例规格
+    */
+    @SerializedName("TenantSpec")
+    @Expose
+    private String TenantSpec;
+
+    /**
      * Get 虚拟集群ID 
      * @return TenantId 虚拟集群ID
      */
@@ -549,6 +563,38 @@ public class InternalTenant extends AbstractModel {
         this.PublicAccessEnabled = PublicAccessEnabled;
     }
 
+    /**
+     * Get 实例标签列表 
+     * @return TagList 实例标签列表
+     */
+    public String [] getTagList() {
+        return this.TagList;
+    }
+
+    /**
+     * Set 实例标签列表
+     * @param TagList 实例标签列表
+     */
+    public void setTagList(String [] TagList) {
+        this.TagList = TagList;
+    }
+
+    /**
+     * Get 实例规格 
+     * @return TenantSpec 实例规格
+     */
+    public String getTenantSpec() {
+        return this.TenantSpec;
+    }
+
+    /**
+     * Set 实例规格
+     * @param TenantSpec 实例规格
+     */
+    public void setTenantSpec(String TenantSpec) {
+        this.TenantSpec = TenantSpec;
+    }
+
     public InternalTenant() {
     }
 
@@ -623,6 +669,15 @@ public class InternalTenant extends AbstractModel {
         if (source.PublicAccessEnabled != null) {
             this.PublicAccessEnabled = new Boolean(source.PublicAccessEnabled);
         }
+        if (source.TagList != null) {
+            this.TagList = new String[source.TagList.length];
+            for (int i = 0; i < source.TagList.length; i++) {
+                this.TagList[i] = new String(source.TagList[i]);
+            }
+        }
+        if (source.TenantSpec != null) {
+            this.TenantSpec = new String(source.TenantSpec);
+        }
     }
 
 
@@ -652,6 +707,8 @@ public class InternalTenant extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxPublishRateInBytes", this.MaxPublishRateInBytes);
         this.setParamSimple(map, prefix + "MaxRetentionSizeInMB", this.MaxRetentionSizeInMB);
         this.setParamSimple(map, prefix + "PublicAccessEnabled", this.PublicAccessEnabled);
+        this.setParamArraySimple(map, prefix + "TagList.", this.TagList);
+        this.setParamSimple(map, prefix + "TenantSpec", this.TenantSpec);
 
     }
 }

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeRocketMQEnvironmentRolesResponse extends AbstractModel {
 
     /**
-    * 记录数。
+    * 总数
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 命名空间角色集合。
+    * 角色授权列表
     */
     @SerializedName("EnvironmentRoleSets")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeRocketMQEnvironmentRolesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 记录数。 
-     * @return TotalCount 记录数。
+     * Get 总数 
+     * @return TotalCount 总数
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 记录数。
-     * @param TotalCount 记录数。
+     * Set 总数
+     * @param TotalCount 总数
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 命名空间角色集合。 
-     * @return EnvironmentRoleSets 命名空间角色集合。
+     * Get 角色授权列表 
+     * @return EnvironmentRoleSets 角色授权列表
      */
     public EnvironmentRole [] getEnvironmentRoleSets() {
         return this.EnvironmentRoleSets;
     }
 
     /**
-     * Set 命名空间角色集合。
-     * @param EnvironmentRoleSets 命名空间角色集合。
+     * Set 角色授权列表
+     * @param EnvironmentRoleSets 角色授权列表
      */
     public void setEnvironmentRoleSets(EnvironmentRole [] EnvironmentRoleSets) {
         this.EnvironmentRoleSets = EnvironmentRoleSets;

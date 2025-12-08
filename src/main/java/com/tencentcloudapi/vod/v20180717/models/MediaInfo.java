@@ -127,6 +127,13 @@ public class MediaInfo extends AbstractModel {
     private FileReviewInfo ReviewInfo;
 
     /**
+    * MPS智能媒资信息
+    */
+    @SerializedName("MPSAiMediaInfo")
+    @Expose
+    private MPSAiMediaInfo MPSAiMediaInfo;
+
+    /**
      * Get 基础信息。包括视频名称、分类、播放地址、封面图片等。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return BasicInfo 基础信息。包括视频名称、分类、播放地址、封面图片等。
@@ -382,6 +389,22 @@ public class MediaInfo extends AbstractModel {
         this.ReviewInfo = ReviewInfo;
     }
 
+    /**
+     * Get MPS智能媒资信息 
+     * @return MPSAiMediaInfo MPS智能媒资信息
+     */
+    public MPSAiMediaInfo getMPSAiMediaInfo() {
+        return this.MPSAiMediaInfo;
+    }
+
+    /**
+     * Set MPS智能媒资信息
+     * @param MPSAiMediaInfo MPS智能媒资信息
+     */
+    public void setMPSAiMediaInfo(MPSAiMediaInfo MPSAiMediaInfo) {
+        this.MPSAiMediaInfo = MPSAiMediaInfo;
+    }
+
     public MediaInfo() {
     }
 
@@ -429,6 +452,9 @@ public class MediaInfo extends AbstractModel {
         if (source.ReviewInfo != null) {
             this.ReviewInfo = new FileReviewInfo(source.ReviewInfo);
         }
+        if (source.MPSAiMediaInfo != null) {
+            this.MPSAiMediaInfo = new MPSAiMediaInfo(source.MPSAiMediaInfo);
+        }
     }
 
 
@@ -449,6 +475,7 @@ public class MediaInfo extends AbstractModel {
         this.setParamObj(map, prefix + "SubtitleInfo.", this.SubtitleInfo);
         this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamObj(map, prefix + "ReviewInfo.", this.ReviewInfo);
+        this.setParamObj(map, prefix + "MPSAiMediaInfo.", this.MPSAiMediaInfo);
 
     }
 }

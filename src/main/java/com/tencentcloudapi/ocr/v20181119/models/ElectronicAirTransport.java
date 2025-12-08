@@ -154,6 +154,34 @@ public class ElectronicAirTransport extends AbstractModel {
     private ElectronicAirTransportDetail [] ElectronicAirTransportDetails;
 
     /**
+    * 票价
+    */
+    @SerializedName("Fare")
+    @Expose
+    private String Fare;
+
+    /**
+    * 燃油附加费
+    */
+    @SerializedName("FuelSurcharge")
+    @Expose
+    private String FuelSurcharge;
+
+    /**
+    * 增值税税额
+    */
+    @SerializedName("TaxAmount")
+    @Expose
+    private String TaxAmount;
+
+    /**
+    * 民航发展基金
+    */
+    @SerializedName("DevelopmentFund")
+    @Expose
+    private String DevelopmentFund;
+
+    /**
      * Get 发票代码
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Code 发票代码
@@ -481,6 +509,70 @@ public class ElectronicAirTransport extends AbstractModel {
         this.ElectronicAirTransportDetails = ElectronicAirTransportDetails;
     }
 
+    /**
+     * Get 票价 
+     * @return Fare 票价
+     */
+    public String getFare() {
+        return this.Fare;
+    }
+
+    /**
+     * Set 票价
+     * @param Fare 票价
+     */
+    public void setFare(String Fare) {
+        this.Fare = Fare;
+    }
+
+    /**
+     * Get 燃油附加费 
+     * @return FuelSurcharge 燃油附加费
+     */
+    public String getFuelSurcharge() {
+        return this.FuelSurcharge;
+    }
+
+    /**
+     * Set 燃油附加费
+     * @param FuelSurcharge 燃油附加费
+     */
+    public void setFuelSurcharge(String FuelSurcharge) {
+        this.FuelSurcharge = FuelSurcharge;
+    }
+
+    /**
+     * Get 增值税税额 
+     * @return TaxAmount 增值税税额
+     */
+    public String getTaxAmount() {
+        return this.TaxAmount;
+    }
+
+    /**
+     * Set 增值税税额
+     * @param TaxAmount 增值税税额
+     */
+    public void setTaxAmount(String TaxAmount) {
+        this.TaxAmount = TaxAmount;
+    }
+
+    /**
+     * Get 民航发展基金 
+     * @return DevelopmentFund 民航发展基金
+     */
+    public String getDevelopmentFund() {
+        return this.DevelopmentFund;
+    }
+
+    /**
+     * Set 民航发展基金
+     * @param DevelopmentFund 民航发展基金
+     */
+    public void setDevelopmentFund(String DevelopmentFund) {
+        this.DevelopmentFund = DevelopmentFund;
+    }
+
     public ElectronicAirTransport() {
     }
 
@@ -540,6 +632,18 @@ public class ElectronicAirTransport extends AbstractModel {
                 this.ElectronicAirTransportDetails[i] = new ElectronicAirTransportDetail(source.ElectronicAirTransportDetails[i]);
             }
         }
+        if (source.Fare != null) {
+            this.Fare = new String(source.Fare);
+        }
+        if (source.FuelSurcharge != null) {
+            this.FuelSurcharge = new String(source.FuelSurcharge);
+        }
+        if (source.TaxAmount != null) {
+            this.TaxAmount = new String(source.TaxAmount);
+        }
+        if (source.DevelopmentFund != null) {
+            this.DevelopmentFund = new String(source.DevelopmentFund);
+        }
     }
 
 
@@ -563,6 +667,10 @@ public class ElectronicAirTransport extends AbstractModel {
         this.setParamSimple(map, prefix + "PassengerNo", this.PassengerNo);
         this.setParamSimple(map, prefix + "ElectronicNumber", this.ElectronicNumber);
         this.setParamArrayObj(map, prefix + "ElectronicAirTransportDetails.", this.ElectronicAirTransportDetails);
+        this.setParamSimple(map, prefix + "Fare", this.Fare);
+        this.setParamSimple(map, prefix + "FuelSurcharge", this.FuelSurcharge);
+        this.setParamSimple(map, prefix + "TaxAmount", this.TaxAmount);
+        this.setParamSimple(map, prefix + "DevelopmentFund", this.DevelopmentFund);
 
     }
 }

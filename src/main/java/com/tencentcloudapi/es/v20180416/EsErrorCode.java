@@ -648,6 +648,9 @@ public enum EsErrorCode {
      /* 纵向缩容太多资源。 */
      UNSUPPORTEDOPERATION_SCALEDOWNTOOMUCH("UnsupportedOperation.ScaleDownTooMuch"),
      
+     /* 单节点不支持该操作 */
+     UNSUPPORTEDOPERATION_SINGLENODECLUSTERNOTSUPPORT("UnsupportedOperation.SingleNodeClusterNotSupport"),
+     
      /* 不支持该操作，当前实例运行状态不为正常。 */
      UNSUPPORTEDOPERATION_STATUSNOTNORMAL("UnsupportedOperation.StatusNotNormal"),
      

@@ -204,7 +204,8 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *创建环境角色授权
+     *创建角色授权。
+当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的创建角色接口文档见 [CreateRole](https://cloud.tencent.com/document/api/1493/98864)。
      * @param req CreateRocketMQEnvironmentRoleRequest
      * @return CreateRocketMQEnvironmentRoleResponse
      * @throws TencentCloudSDKException
@@ -237,7 +238,8 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *创建角色
+     *创建角色。
+当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的创建角色接口文档见 [CreateRole](https://cloud.tencent.com/document/api/1493/98864)。
      * @param req CreateRocketMQRoleRequest
      * @return CreateRocketMQRoleResponse
      * @throws TencentCloudSDKException
@@ -457,7 +459,8 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *删除环境角色授权。
+     *批量删除角色授权。
+当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的删除角色接口文档见 [DeleteRole](https://cloud.tencent.com/document/api/1493/98863)。
      * @param req DeleteRocketMQEnvironmentRolesRequest
      * @return DeleteRocketMQEnvironmentRolesResponse
      * @throws TencentCloudSDKException
@@ -490,7 +493,8 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *删除角色，支持批量。
+     *批量删除角色。
+当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的删除角色接口文档见 [DeleteRole](https://cloud.tencent.com/document/api/1493/98863)。
      * @param req DeleteRocketMQRolesRequest
      * @return DeleteRocketMQRolesResponse
      * @throws TencentCloudSDKException
@@ -734,7 +738,7 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *查询消息轨迹
+     *查询单条消息的消息轨迹
      * @param req DescribeMsgTraceRequest
      * @return DescribeMsgTraceResponse
      * @throws TencentCloudSDKException
@@ -976,7 +980,8 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *获取命名空间角色列表
+     *查询角色授权列表。
+当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的查询角色列表接口文档见 [DescribeRoleList](https://cloud.tencent.com/document/api/1493/98862)。
      * @param req DescribeRocketMQEnvironmentRolesRequest
      * @return DescribeRocketMQEnvironmentRolesResponse
      * @throws TencentCloudSDKException
@@ -1076,7 +1081,8 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *获取角色列表
+     *查询角色列表。
+当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的查询角色列表接口文档见 [DescribeRoleList](https://cloud.tencent.com/document/api/1493/98862)。
      * @param req DescribeRocketMQRolesRequest
      * @return DescribeRocketMQRolesResponse
      * @throws TencentCloudSDKException
@@ -1428,7 +1434,8 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *修改环境角色授权。
+     *修改角色授权。
+当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的修改角色接口文档见 [ModifyRole](https://cloud.tencent.com/document/api/1493/98861)。
      * @param req ModifyRocketMQEnvironmentRoleRequest
      * @return ModifyRocketMQEnvironmentRoleResponse
      * @throws TencentCloudSDKException
@@ -1483,7 +1490,8 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *角色修改
+     *修改角色。
+当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的修改角色接口文档见 [ModifyRole](https://cloud.tencent.com/document/api/1493/98861)。
      * @param req ModifyRocketMQRoleRequest
      * @return ModifyRocketMQRoleResponse
      * @throws TencentCloudSDKException
@@ -1579,7 +1587,8 @@ BatchReceivePolicy 的接口会一次性返回多条消息：
     }
 
     /**
-     *重置指定Group的消费位点到指定时间戳
+     *重置消费位点。
+当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。5.x 集群的重置消费位点接口文档见 [ResetConsumerGroupOffset](https://cloud.tencent.com/document/api/1493/116942)。
      * @param req ResetRocketMQConsumerOffSetRequest
      * @return ResetRocketMQConsumerOffSetResponse
      * @throws TencentCloudSDKException

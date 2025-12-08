@@ -45,7 +45,7 @@ public class OutputRisk extends AbstractModel {
     private String RiskDescription;
 
     /**
-    * 风险等级。
+    * 风险等级别名。
 
 等级描述如下：
 <ul>
@@ -93,7 +93,7 @@ public class OutputRisk extends AbstractModel {
     private String RiskBasis;
 
     /**
-    * 风险等级id
+    * 风险等级id。1 为最高风险等级，0 为最低风险等级，从[2,n]数字越大风险等级逐渐降低。
     */
     @SerializedName("RiskLevelId")
     @Expose
@@ -148,14 +148,14 @@ public class OutputRisk extends AbstractModel {
     }
 
     /**
-     * Get 风险等级。
+     * Get 风险等级别名。
 
 等级描述如下：
 <ul>
     <li>**HIGH** - 高风险</li> 
     <li>**NORMAL** - 风险</li>   
 </ul> 
-     * @return RiskLevel 风险等级。
+     * @return RiskLevel 风险等级别名。
 
 等级描述如下：
 <ul>
@@ -168,14 +168,14 @@ public class OutputRisk extends AbstractModel {
     }
 
     /**
-     * Set 风险等级。
+     * Set 风险等级别名。
 
 等级描述如下：
 <ul>
     <li>**HIGH** - 高风险</li> 
     <li>**NORMAL** - 风险</li>   
 </ul>
-     * @param RiskLevel 风险等级。
+     * @param RiskLevel 风险等级别名。
 
 等级描述如下：
 <ul>
@@ -268,16 +268,16 @@ public class OutputRisk extends AbstractModel {
     }
 
     /**
-     * Get 风险等级id 
-     * @return RiskLevelId 风险等级id
+     * Get 风险等级id。1 为最高风险等级，0 为最低风险等级，从[2,n]数字越大风险等级逐渐降低。 
+     * @return RiskLevelId 风险等级id。1 为最高风险等级，0 为最低风险等级，从[2,n]数字越大风险等级逐渐降低。
      */
     public Long getRiskLevelId() {
         return this.RiskLevelId;
     }
 
     /**
-     * Set 风险等级id
-     * @param RiskLevelId 风险等级id
+     * Set 风险等级id。1 为最高风险等级，0 为最低风险等级，从[2,n]数字越大风险等级逐渐降低。
+     * @param RiskLevelId 风险等级id。1 为最高风险等级，0 为最低风险等级，从[2,n]数字越大风险等级逐渐降低。
      */
     public void setRiskLevelId(Long RiskLevelId) {
         this.RiskLevelId = RiskLevelId;

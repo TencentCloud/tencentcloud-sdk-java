@@ -130,6 +130,13 @@ public class PulsarNetworkAccessPointInfo extends AbstractModel {
     private String CustomUrl;
 
     /**
+    * 接入点绑定的安全组id列表，仅限vpc接入点有效
+    */
+    @SerializedName("SecurityGroupIds")
+    @Expose
+    private String [] SecurityGroupIds;
+
+    /**
      * Get vpc的id，支撑网和公网接入点，该字段为空
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return VpcId vpc的id，支撑网和公网接入点，该字段为空
@@ -397,6 +404,22 @@ public class PulsarNetworkAccessPointInfo extends AbstractModel {
         this.CustomUrl = CustomUrl;
     }
 
+    /**
+     * Get 接入点绑定的安全组id列表，仅限vpc接入点有效 
+     * @return SecurityGroupIds 接入点绑定的安全组id列表，仅限vpc接入点有效
+     */
+    public String [] getSecurityGroupIds() {
+        return this.SecurityGroupIds;
+    }
+
+    /**
+     * Set 接入点绑定的安全组id列表，仅限vpc接入点有效
+     * @param SecurityGroupIds 接入点绑定的安全组id列表，仅限vpc接入点有效
+     */
+    public void setSecurityGroupIds(String [] SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
+    }
+
     public PulsarNetworkAccessPointInfo() {
     }
 
@@ -447,6 +470,12 @@ public class PulsarNetworkAccessPointInfo extends AbstractModel {
         if (source.CustomUrl != null) {
             this.CustomUrl = new String(source.CustomUrl);
         }
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
+        }
     }
 
 
@@ -467,6 +496,7 @@ public class PulsarNetworkAccessPointInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
         this.setParamSimple(map, prefix + "Tls", this.Tls);
         this.setParamSimple(map, prefix + "CustomUrl", this.CustomUrl);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
 
     }
 }

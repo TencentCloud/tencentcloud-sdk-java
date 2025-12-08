@@ -26,7 +26,7 @@ public class SubmitHunyuanTo3DRapidJobRequest extends AbstractModel {
     /**
     * 文生3D，3D内容的描述，中文正向提示词。
 最多支持200个 utf-8 字符。
-文生3D, image、image_url和 prompt必填其一，且prompt和image/image_url不能同时存在。
+文生3D, ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
     */
     @SerializedName("Prompt")
     @Expose
@@ -34,7 +34,7 @@ public class SubmitHunyuanTo3DRapidJobRequest extends AbstractModel {
 
     /**
     * 输入图 Base64 数据。
-大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过6m）
+大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过5m）
 格式：jpg，png，jpeg，webp。
 ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
     */
@@ -44,9 +44,9 @@ ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl�
 
     /**
     * 输入图Url。
-大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过6m）
+大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过5m）
 格式：jpg，png，jpeg，webp。
-ImageBase64/ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
+ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
     */
     @SerializedName("ImageUrl")
     @Expose
@@ -69,12 +69,19 @@ ImageBase64/ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不
     private Boolean EnablePBR;
 
     /**
+    * 是否开启单几何生成选项，开启后会生成不带纹理的3D模型（白模）； 开启时，生成模型文件不支持OBJ格式，默认生成模型文件为GLB格式。
+    */
+    @SerializedName("EnableGeometry")
+    @Expose
+    private Boolean EnableGeometry;
+
+    /**
      * Get 文生3D，3D内容的描述，中文正向提示词。
 最多支持200个 utf-8 字符。
-文生3D, image、image_url和 prompt必填其一，且prompt和image/image_url不能同时存在。 
+文生3D, ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。 
      * @return Prompt 文生3D，3D内容的描述，中文正向提示词。
 最多支持200个 utf-8 字符。
-文生3D, image、image_url和 prompt必填其一，且prompt和image/image_url不能同时存在。
+文生3D, ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
      */
     public String getPrompt() {
         return this.Prompt;
@@ -83,10 +90,10 @@ ImageBase64/ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不
     /**
      * Set 文生3D，3D内容的描述，中文正向提示词。
 最多支持200个 utf-8 字符。
-文生3D, image、image_url和 prompt必填其一，且prompt和image/image_url不能同时存在。
+文生3D, ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
      * @param Prompt 文生3D，3D内容的描述，中文正向提示词。
 最多支持200个 utf-8 字符。
-文生3D, image、image_url和 prompt必填其一，且prompt和image/image_url不能同时存在。
+文生3D, ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
@@ -94,11 +101,11 @@ ImageBase64/ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不
 
     /**
      * Get 输入图 Base64 数据。
-大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过6m）
+大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过5m）
 格式：jpg，png，jpeg，webp。
 ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。 
      * @return ImageBase64 输入图 Base64 数据。
-大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过6m）
+大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过5m）
 格式：jpg，png，jpeg，webp。
 ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
      */
@@ -108,11 +115,11 @@ ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl�
 
     /**
      * Set 输入图 Base64 数据。
-大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过6m）
+大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过5m）
 格式：jpg，png，jpeg，webp。
 ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
      * @param ImageBase64 输入图 Base64 数据。
-大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过6m）
+大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过5m）
 格式：jpg，png，jpeg，webp。
 ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
      */
@@ -122,13 +129,13 @@ ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl�
 
     /**
      * Get 输入图Url。
-大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过6m）
+大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过5m）
 格式：jpg，png，jpeg，webp。
-ImageBase64/ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。 
+ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。 
      * @return ImageUrl 输入图Url。
-大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过6m）
+大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过5m）
 格式：jpg，png，jpeg，webp。
-ImageBase64/ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
+ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
      */
     public String getImageUrl() {
         return this.ImageUrl;
@@ -136,13 +143,13 @@ ImageBase64/ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不
 
     /**
      * Set 输入图Url。
-大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过6m）
+大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过5m）
 格式：jpg，png，jpeg，webp。
-ImageBase64/ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
+ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
      * @param ImageUrl 输入图Url。
-大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过6m）
+大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过5m）
 格式：jpg，png，jpeg，webp。
-ImageBase64/ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
+ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
      */
     public void setImageUrl(String ImageUrl) {
         this.ImageUrl = ImageUrl;
@@ -188,6 +195,22 @@ ImageBase64/ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不
         this.EnablePBR = EnablePBR;
     }
 
+    /**
+     * Get 是否开启单几何生成选项，开启后会生成不带纹理的3D模型（白模）； 开启时，生成模型文件不支持OBJ格式，默认生成模型文件为GLB格式。 
+     * @return EnableGeometry 是否开启单几何生成选项，开启后会生成不带纹理的3D模型（白模）； 开启时，生成模型文件不支持OBJ格式，默认生成模型文件为GLB格式。
+     */
+    public Boolean getEnableGeometry() {
+        return this.EnableGeometry;
+    }
+
+    /**
+     * Set 是否开启单几何生成选项，开启后会生成不带纹理的3D模型（白模）； 开启时，生成模型文件不支持OBJ格式，默认生成模型文件为GLB格式。
+     * @param EnableGeometry 是否开启单几何生成选项，开启后会生成不带纹理的3D模型（白模）； 开启时，生成模型文件不支持OBJ格式，默认生成模型文件为GLB格式。
+     */
+    public void setEnableGeometry(Boolean EnableGeometry) {
+        this.EnableGeometry = EnableGeometry;
+    }
+
     public SubmitHunyuanTo3DRapidJobRequest() {
     }
 
@@ -211,6 +234,9 @@ ImageBase64/ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不
         if (source.EnablePBR != null) {
             this.EnablePBR = new Boolean(source.EnablePBR);
         }
+        if (source.EnableGeometry != null) {
+            this.EnableGeometry = new Boolean(source.EnableGeometry);
+        }
     }
 
 
@@ -223,6 +249,7 @@ ImageBase64/ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
         this.setParamSimple(map, prefix + "ResultFormat", this.ResultFormat);
         this.setParamSimple(map, prefix + "EnablePBR", this.EnablePBR);
+        this.setParamSimple(map, prefix + "EnableGeometry", this.EnableGeometry);
 
     }
 }

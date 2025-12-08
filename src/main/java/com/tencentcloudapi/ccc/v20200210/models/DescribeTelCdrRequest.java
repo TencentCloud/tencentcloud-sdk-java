@@ -38,27 +38,6 @@ public class DescribeTelCdrRequest extends AbstractModel {
     private Long EndTimeStamp;
 
     /**
-    * 实例 ID（废弃）
-    */
-    @SerializedName("InstanceId")
-    @Expose
-    private Long InstanceId;
-
-    /**
-    * 返回数据条数，上限（废弃）
-    */
-    @SerializedName("Limit")
-    @Expose
-    private Long Limit;
-
-    /**
-    * 偏移（废弃）
-    */
-    @SerializedName("Offset")
-    @Expose
-    private Long Offset;
-
-    /**
     * 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
     */
     @SerializedName("SdkAppId")
@@ -78,6 +57,27 @@ public class DescribeTelCdrRequest extends AbstractModel {
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
+
+    /**
+    * 实例 ID（废弃）
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private Long InstanceId;
+
+    /**
+    * 返回数据条数，上限（废弃）
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * 偏移（废弃）
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
 
     /**
     * 按手机号筛选
@@ -123,6 +123,54 @@ public class DescribeTelCdrRequest extends AbstractModel {
      */
     public void setEndTimeStamp(Long EndTimeStamp) {
         this.EndTimeStamp = EndTimeStamp;
+    }
+
+    /**
+     * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
+     * @return SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+     */
+    public Long getSdkAppId() {
+        return this.SdkAppId;
+    }
+
+    /**
+     * Set 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+     * @param SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+     */
+    public void setSdkAppId(Long SdkAppId) {
+        this.SdkAppId = SdkAppId;
+    }
+
+    /**
+     * Get 分页尺寸（必填），上限 100 
+     * @return PageSize 分页尺寸（必填），上限 100
+     */
+    public Long getPageSize() {
+        return this.PageSize;
+    }
+
+    /**
+     * Set 分页尺寸（必填），上限 100
+     * @param PageSize 分页尺寸（必填），上限 100
+     */
+    public void setPageSize(Long PageSize) {
+        this.PageSize = PageSize;
+    }
+
+    /**
+     * Get 分页页码（必填），从 0 开始 
+     * @return PageNumber 分页页码（必填），从 0 开始
+     */
+    public Long getPageNumber() {
+        return this.PageNumber;
+    }
+
+    /**
+     * Set 分页页码（必填），从 0 开始
+     * @param PageNumber 分页页码（必填），从 0 开始
+     */
+    public void setPageNumber(Long PageNumber) {
+        this.PageNumber = PageNumber;
     }
 
     /**
@@ -178,54 +226,6 @@ public class DescribeTelCdrRequest extends AbstractModel {
     }
 
     /**
-     * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
-     * @return SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
-     */
-    public Long getSdkAppId() {
-        return this.SdkAppId;
-    }
-
-    /**
-     * Set 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
-     * @param SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
-     */
-    public void setSdkAppId(Long SdkAppId) {
-        this.SdkAppId = SdkAppId;
-    }
-
-    /**
-     * Get 分页尺寸（必填），上限 100 
-     * @return PageSize 分页尺寸（必填），上限 100
-     */
-    public Long getPageSize() {
-        return this.PageSize;
-    }
-
-    /**
-     * Set 分页尺寸（必填），上限 100
-     * @param PageSize 分页尺寸（必填），上限 100
-     */
-    public void setPageSize(Long PageSize) {
-        this.PageSize = PageSize;
-    }
-
-    /**
-     * Get 分页页码（必填），从 0 开始 
-     * @return PageNumber 分页页码（必填），从 0 开始
-     */
-    public Long getPageNumber() {
-        return this.PageNumber;
-    }
-
-    /**
-     * Set 分页页码（必填），从 0 开始
-     * @param PageNumber 分页页码（必填），从 0 开始
-     */
-    public void setPageNumber(Long PageNumber) {
-        this.PageNumber = PageNumber;
-    }
-
-    /**
      * Get 按手机号筛选 
      * @return Phones 按手机号筛选
      */
@@ -271,15 +271,6 @@ public class DescribeTelCdrRequest extends AbstractModel {
         if (source.EndTimeStamp != null) {
             this.EndTimeStamp = new Long(source.EndTimeStamp);
         }
-        if (source.InstanceId != null) {
-            this.InstanceId = new Long(source.InstanceId);
-        }
-        if (source.Limit != null) {
-            this.Limit = new Long(source.Limit);
-        }
-        if (source.Offset != null) {
-            this.Offset = new Long(source.Offset);
-        }
         if (source.SdkAppId != null) {
             this.SdkAppId = new Long(source.SdkAppId);
         }
@@ -288,6 +279,15 @@ public class DescribeTelCdrRequest extends AbstractModel {
         }
         if (source.PageNumber != null) {
             this.PageNumber = new Long(source.PageNumber);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new Long(source.InstanceId);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
         }
         if (source.Phones != null) {
             this.Phones = new String[source.Phones.length];
@@ -310,12 +310,12 @@ public class DescribeTelCdrRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StartTimeStamp", this.StartTimeStamp);
         this.setParamSimple(map, prefix + "EndTimeStamp", this.EndTimeStamp);
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamSimple(map, prefix + "Limit", this.Limit);
-        this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamArraySimple(map, prefix + "Phones.", this.Phones);
         this.setParamArraySimple(map, prefix + "SessionIds.", this.SessionIds);
 

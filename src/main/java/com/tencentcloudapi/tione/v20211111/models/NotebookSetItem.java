@@ -259,6 +259,13 @@ public class NotebookSetItem extends AbstractModel {
     private String AppId;
 
     /**
+    * 容器服务暴露端口配置
+    */
+    @SerializedName("ExposePortConfig")
+    @Expose
+    private ExposePortConfig ExposePortConfig;
+
+    /**
      * Get notebook ID 
      * @return Id notebook ID
      */
@@ -838,6 +845,22 @@ public class NotebookSetItem extends AbstractModel {
         this.AppId = AppId;
     }
 
+    /**
+     * Get 容器服务暴露端口配置 
+     * @return ExposePortConfig 容器服务暴露端口配置
+     */
+    public ExposePortConfig getExposePortConfig() {
+        return this.ExposePortConfig;
+    }
+
+    /**
+     * Set 容器服务暴露端口配置
+     * @param ExposePortConfig 容器服务暴露端口配置
+     */
+    public void setExposePortConfig(ExposePortConfig ExposePortConfig) {
+        this.ExposePortConfig = ExposePortConfig;
+    }
+
     public NotebookSetItem() {
     }
 
@@ -945,6 +968,9 @@ public class NotebookSetItem extends AbstractModel {
         if (source.AppId != null) {
             this.AppId = new String(source.AppId);
         }
+        if (source.ExposePortConfig != null) {
+            this.ExposePortConfig = new ExposePortConfig(source.ExposePortConfig);
+        }
     }
 
 
@@ -982,6 +1008,7 @@ public class NotebookSetItem extends AbstractModel {
         this.setParamSimple(map, prefix + "SubUin", this.SubUin);
         this.setParamSimple(map, prefix + "SubUinName", this.SubUinName);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
+        this.setParamObj(map, prefix + "ExposePortConfig.", this.ExposePortConfig);
 
     }
 }

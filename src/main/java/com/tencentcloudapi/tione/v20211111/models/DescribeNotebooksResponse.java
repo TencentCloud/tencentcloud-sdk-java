@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeNotebooksResponse extends AbstractModel {
 
     /**
-    * 详情
+    * notebook详情
     */
     @SerializedName("NotebookSet")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeNotebooksResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 详情 
-     * @return NotebookSet 详情
+     * Get notebook详情 
+     * @return NotebookSet notebook详情
      */
     public NotebookSetItem [] getNotebookSet() {
         return this.NotebookSet;
     }
 
     /**
-     * Set 详情
-     * @param NotebookSet 详情
+     * Set notebook详情
+     * @param NotebookSet notebook详情
      */
     public void setNotebookSet(NotebookSetItem [] NotebookSet) {
         this.NotebookSet = NotebookSet;

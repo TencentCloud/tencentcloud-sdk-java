@@ -70,6 +70,7 @@ ItemNames=["姓名","性别"]
     /**
     * 配置id支持：
 General -- 通用场景
+GeneralNoDate -- 无后处理日期格式模版
 OnlineTaxiItinerary -- 网约车行程单
 RideHailingDriverLicense -- 网约车驾驶证
 RideHailingTransportLicense -- 网约车运输证
@@ -202,6 +203,7 @@ ItemNames=["姓名","性别"]
     /**
      * Get 配置id支持：
 General -- 通用场景
+GeneralNoDate -- 无后处理日期格式模版
 OnlineTaxiItinerary -- 网约车行程单
 RideHailingDriverLicense -- 网约车驾驶证
 RideHailingTransportLicense -- 网约车运输证
@@ -217,6 +219,7 @@ CarInsurance -- 车险保单
 MultiRealEstateCertificate -- 房产证、不动产证、产权证等材料合一模板 
      * @return ConfigId 配置id支持：
 General -- 通用场景
+GeneralNoDate -- 无后处理日期格式模版
 OnlineTaxiItinerary -- 网约车行程单
 RideHailingDriverLicense -- 网约车驾驶证
 RideHailingTransportLicense -- 网约车运输证
@@ -238,6 +241,7 @@ MultiRealEstateCertificate -- 房产证、不动产证、产权证等材料合�
     /**
      * Set 配置id支持：
 General -- 通用场景
+GeneralNoDate -- 无后处理日期格式模版
 OnlineTaxiItinerary -- 网约车行程单
 RideHailingDriverLicense -- 网约车驾驶证
 RideHailingTransportLicense -- 网约车运输证
@@ -253,6 +257,7 @@ CarInsurance -- 车险保单
 MultiRealEstateCertificate -- 房产证、不动产证、产权证等材料合一模板
      * @param ConfigId 配置id支持：
 General -- 通用场景
+GeneralNoDate -- 无后处理日期格式模版
 OnlineTaxiItinerary -- 网约车行程单
 RideHailingDriverLicense -- 网约车驾驶证
 RideHailingTransportLicense -- 网约车运输证

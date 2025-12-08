@@ -39,6 +39,7 @@ public class CreateDBInstanceParamTplRequest extends AbstractModel {
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
 - MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+- MONGO_80_WT：MongoDB 8.0 WiredTiger存储引擎版本。
     */
     @SerializedName("MongoVersion")
     @Expose
@@ -100,7 +101,8 @@ public class CreateDBInstanceParamTplRequest extends AbstractModel {
 - MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
-- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。 
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+- MONGO_80_WT：MongoDB 8.0 WiredTiger存储引擎版本。 
      * @return MongoVersion 参数模板版本号。当**MirrorTplId**为空时，该字段必填。参数模板支持的售卖版本，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/35767) 获取。
 - MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，
 - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，
@@ -109,6 +111,7 @@ public class CreateDBInstanceParamTplRequest extends AbstractModel {
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
 - MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+- MONGO_80_WT：MongoDB 8.0 WiredTiger存储引擎版本。
      */
     public String getMongoVersion() {
         return this.MongoVersion;
@@ -123,6 +126,7 @@ public class CreateDBInstanceParamTplRequest extends AbstractModel {
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
 - MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+- MONGO_80_WT：MongoDB 8.0 WiredTiger存储引擎版本。
      * @param MongoVersion 参数模板版本号。当**MirrorTplId**为空时，该字段必填。参数模板支持的售卖版本，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/35767) 获取。
 - MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，
 - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，
@@ -131,6 +135,7 @@ public class CreateDBInstanceParamTplRequest extends AbstractModel {
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
 - MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+- MONGO_80_WT：MongoDB 8.0 WiredTiger存储引擎版本。
      */
     public void setMongoVersion(String MongoVersion) {
         this.MongoVersion = MongoVersion;

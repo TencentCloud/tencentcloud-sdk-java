@@ -61,6 +61,17 @@ public class VclmClient extends AbstractClient{
     }
 
     /**
+     *查询混元生视频任务
+     * @param req DescribeHunyuanToVideoJobRequest
+     * @return DescribeHunyuanToVideoJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHunyuanToVideoJobResponse DescribeHunyuanToVideoJob(DescribeHunyuanToVideoJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHunyuanToVideoJob", DescribeHunyuanToVideoJobResponse.class);
+    }
+
+    /**
      *用于查询图片跳舞任务。图片跳舞能力支持舞蹈动作结合图片生成跳舞视频，满足社交娱乐、互动营销等场景的需求。
      * @param req DescribeImageAnimateJobRequest
      * @return DescribeImageAnimateJobResponse
@@ -128,6 +139,17 @@ public class VclmClient extends AbstractClient{
     }
 
     /**
+     *通过JobId提交请求，获取视频配音频任务的结果信息。
+     * @param req DescribeVideoVoiceJobRequest
+     * @return DescribeVideoVoiceJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVideoVoiceJobResponse DescribeVideoVoiceJob(DescribeVideoVoiceJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVideoVoiceJob", DescribeVideoVoiceJobResponse.class);
+    }
+
+    /**
      *用于提交人像驱动任务
 支持提交音频和图文来生成对应视频，满足动态交互、内容生产等场景需求。
      * @param req SubmitHumanActorJobRequest
@@ -137,6 +159,19 @@ public class VclmClient extends AbstractClient{
     public SubmitHumanActorJobResponse SubmitHumanActorJob(SubmitHumanActorJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SubmitHumanActorJob", SubmitHumanActorJobResponse.class);
+    }
+
+    /**
+     *●混元生视频接口，基于混元大模型，根据输入的文本或图片智能生成视频。
+
+●默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
+     * @param req SubmitHunyuanToVideoJobRequest
+     * @return SubmitHunyuanToVideoJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitHunyuanToVideoJobResponse SubmitHunyuanToVideoJob(SubmitHunyuanToVideoJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitHunyuanToVideoJob", SubmitHunyuanToVideoJobResponse.class);
     }
 
     /**
@@ -204,6 +239,17 @@ public class VclmClient extends AbstractClient{
     public SubmitVideoStylizationJobResponse SubmitVideoStylizationJob(SubmitVideoStylizationJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SubmitVideoStylizationJob", SubmitVideoStylizationJobResponse.class);
+    }
+
+    /**
+     *提交视频配音效任务，输入视频后提交请求，会返回一个JobId，用于查询视频配音效的处理进度。
+     * @param req SubmitVideoVoiceJobRequest
+     * @return SubmitVideoVoiceJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitVideoVoiceJobResponse SubmitVideoVoiceJob(SubmitVideoVoiceJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitVideoVoiceJob", SubmitVideoVoiceJobResponse.class);
     }
 
 }

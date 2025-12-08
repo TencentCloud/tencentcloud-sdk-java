@@ -176,7 +176,9 @@ public class DescribeModelServiceGroupsRequest extends AbstractModel {
     /**
      * Get 服务分类 
      * @return ServiceCategory 服务分类
+     * @deprecated
      */
+    @Deprecated
     public String getServiceCategory() {
         return this.ServiceCategory;
     }
@@ -184,7 +186,9 @@ public class DescribeModelServiceGroupsRequest extends AbstractModel {
     /**
      * Set 服务分类
      * @param ServiceCategory 服务分类
+     * @deprecated
      */
+    @Deprecated
     public void setServiceCategory(String ServiceCategory) {
         this.ServiceCategory = ServiceCategory;
     }

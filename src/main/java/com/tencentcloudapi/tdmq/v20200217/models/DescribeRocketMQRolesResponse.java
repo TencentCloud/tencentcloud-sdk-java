@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeRocketMQRolesResponse extends AbstractModel {
 
     /**
-    * 记录数。
+    * 总数
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 角色数组。
+    * 角色列表
     */
     @SerializedName("RoleSets")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeRocketMQRolesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 记录数。 
-     * @return TotalCount 记录数。
+     * Get 总数 
+     * @return TotalCount 总数
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 记录数。
-     * @param TotalCount 记录数。
+     * Set 总数
+     * @param TotalCount 总数
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 角色数组。 
-     * @return RoleSets 角色数组。
+     * Get 角色列表 
+     * @return RoleSets 角色列表
      */
     public Role [] getRoleSets() {
         return this.RoleSets;
     }
 
     /**
-     * Set 角色数组。
-     * @param RoleSets 角色数组。
+     * Set 角色列表
+     * @param RoleSets 角色列表
      */
     public void setRoleSets(Role [] RoleSets) {
         this.RoleSets = RoleSets;

@@ -97,6 +97,20 @@ public class Environment extends AbstractModel {
     private Boolean AutoSubscriptionCreation;
 
     /**
+    * 离线订阅过期自动清理时间
+    */
+    @SerializedName("SubscriptionExpirationTime")
+    @Expose
+    private Long SubscriptionExpirationTime;
+
+    /**
+    * 离线订阅过期自动清理时间开关
+    */
+    @SerializedName("SubscriptionExpirationTimeEnable")
+    @Expose
+    private Boolean SubscriptionExpirationTimeEnable;
+
+    /**
      * Get 命名空间名称 
      * @return EnvironmentId 命名空间名称
      */
@@ -268,6 +282,38 @@ public class Environment extends AbstractModel {
         this.AutoSubscriptionCreation = AutoSubscriptionCreation;
     }
 
+    /**
+     * Get 离线订阅过期自动清理时间 
+     * @return SubscriptionExpirationTime 离线订阅过期自动清理时间
+     */
+    public Long getSubscriptionExpirationTime() {
+        return this.SubscriptionExpirationTime;
+    }
+
+    /**
+     * Set 离线订阅过期自动清理时间
+     * @param SubscriptionExpirationTime 离线订阅过期自动清理时间
+     */
+    public void setSubscriptionExpirationTime(Long SubscriptionExpirationTime) {
+        this.SubscriptionExpirationTime = SubscriptionExpirationTime;
+    }
+
+    /**
+     * Get 离线订阅过期自动清理时间开关 
+     * @return SubscriptionExpirationTimeEnable 离线订阅过期自动清理时间开关
+     */
+    public Boolean getSubscriptionExpirationTimeEnable() {
+        return this.SubscriptionExpirationTimeEnable;
+    }
+
+    /**
+     * Set 离线订阅过期自动清理时间开关
+     * @param SubscriptionExpirationTimeEnable 离线订阅过期自动清理时间开关
+     */
+    public void setSubscriptionExpirationTimeEnable(Boolean SubscriptionExpirationTimeEnable) {
+        this.SubscriptionExpirationTimeEnable = SubscriptionExpirationTimeEnable;
+    }
+
     public Environment() {
     }
 
@@ -306,6 +352,12 @@ public class Environment extends AbstractModel {
         if (source.AutoSubscriptionCreation != null) {
             this.AutoSubscriptionCreation = new Boolean(source.AutoSubscriptionCreation);
         }
+        if (source.SubscriptionExpirationTime != null) {
+            this.SubscriptionExpirationTime = new Long(source.SubscriptionExpirationTime);
+        }
+        if (source.SubscriptionExpirationTimeEnable != null) {
+            this.SubscriptionExpirationTimeEnable = new Boolean(source.SubscriptionExpirationTimeEnable);
+        }
     }
 
 
@@ -323,6 +375,8 @@ public class Environment extends AbstractModel {
         this.setParamSimple(map, prefix + "TopicNum", this.TopicNum);
         this.setParamObj(map, prefix + "RetentionPolicy.", this.RetentionPolicy);
         this.setParamSimple(map, prefix + "AutoSubscriptionCreation", this.AutoSubscriptionCreation);
+        this.setParamSimple(map, prefix + "SubscriptionExpirationTime", this.SubscriptionExpirationTime);
+        this.setParamSimple(map, prefix + "SubscriptionExpirationTimeEnable", this.SubscriptionExpirationTimeEnable);
 
     }
 }

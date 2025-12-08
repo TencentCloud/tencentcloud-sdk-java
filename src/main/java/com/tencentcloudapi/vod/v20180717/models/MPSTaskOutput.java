@@ -31,6 +31,13 @@ public class MPSTaskOutput extends AbstractModel {
     private MPSOutputFile [] OutputFiles;
 
     /**
+    * 任务返回的结果JSON
+    */
+    @SerializedName("OutputText")
+    @Expose
+    private String OutputText;
+
+    /**
      * Get 任务返回结果中的文件类型结果。如智能擦除中，擦除后的视频文件将被存入媒资，并在此字段中给出 FileId；基于画面提取的字幕文件 Url 将在此字段中给出。 
      * @return OutputFiles 任务返回结果中的文件类型结果。如智能擦除中，擦除后的视频文件将被存入媒资，并在此字段中给出 FileId；基于画面提取的字幕文件 Url 将在此字段中给出。
      */
@@ -44,6 +51,22 @@ public class MPSTaskOutput extends AbstractModel {
      */
     public void setOutputFiles(MPSOutputFile [] OutputFiles) {
         this.OutputFiles = OutputFiles;
+    }
+
+    /**
+     * Get 任务返回的结果JSON 
+     * @return OutputText 任务返回的结果JSON
+     */
+    public String getOutputText() {
+        return this.OutputText;
+    }
+
+    /**
+     * Set 任务返回的结果JSON
+     * @param OutputText 任务返回的结果JSON
+     */
+    public void setOutputText(String OutputText) {
+        this.OutputText = OutputText;
     }
 
     public MPSTaskOutput() {
@@ -60,6 +83,9 @@ public class MPSTaskOutput extends AbstractModel {
                 this.OutputFiles[i] = new MPSOutputFile(source.OutputFiles[i]);
             }
         }
+        if (source.OutputText != null) {
+            this.OutputText = new String(source.OutputText);
+        }
     }
 
 
@@ -68,6 +94,7 @@ public class MPSTaskOutput extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "OutputFiles.", this.OutputFiles);
+        this.setParamSimple(map, prefix + "OutputText", this.OutputText);
 
     }
 }

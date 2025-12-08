@@ -45,7 +45,10 @@ public class DetailedRolePerm extends AbstractModel {
     private Boolean PermRead;
 
     /**
-    * 授权资源类型（Topic:主题; Group:消费组）
+    * 授权资源类型，枚举值如下：
+- Topic：主题维度
+- Group：消费组维度
+- Cluster：集群维度（默认值）
     */
     @SerializedName("ResourceType")
     @Expose
@@ -107,16 +110,28 @@ public class DetailedRolePerm extends AbstractModel {
     }
 
     /**
-     * Get 授权资源类型（Topic:主题; Group:消费组） 
-     * @return ResourceType 授权资源类型（Topic:主题; Group:消费组）
+     * Get 授权资源类型，枚举值如下：
+- Topic：主题维度
+- Group：消费组维度
+- Cluster：集群维度（默认值） 
+     * @return ResourceType 授权资源类型，枚举值如下：
+- Topic：主题维度
+- Group：消费组维度
+- Cluster：集群维度（默认值）
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set 授权资源类型（Topic:主题; Group:消费组）
-     * @param ResourceType 授权资源类型（Topic:主题; Group:消费组）
+     * Set 授权资源类型，枚举值如下：
+- Topic：主题维度
+- Group：消费组维度
+- Cluster：集群维度（默认值）
+     * @param ResourceType 授权资源类型，枚举值如下：
+- Topic：主题维度
+- Group：消费组维度
+- Cluster：集群维度（默认值）
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;

@@ -918,6 +918,17 @@ public class DnspodClient extends AbstractClient{
     }
 
     /**
+     *套餐绑定、解绑、更换域名
+     * @param req ModifyPackageDomainRequest
+     * @return ModifyPackageDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPackageDomainResponse ModifyPackageDomain(ModifyPackageDomainRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyPackageDomain", ModifyPackageDomainResponse.class);
+    }
+
+    /**
      *修改记录
      * @param req ModifyRecordRequest
      * @return ModifyRecordResponse

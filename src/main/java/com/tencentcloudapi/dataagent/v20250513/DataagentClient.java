@@ -94,6 +94,17 @@ public class DataagentClient extends AbstractClient{
     }
 
     /**
+     *获取知识库文件信息列表
+     * @param req GetKnowledgeBaseFileListRequest
+     * @return GetKnowledgeBaseFileListResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetKnowledgeBaseFileListResponse GetKnowledgeBaseFileList(GetKnowledgeBaseFileListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetKnowledgeBaseFileList", GetKnowledgeBaseFileListResponse.class);
+    }
+
+    /**
      *获取知识库列表
      * @param req GetKnowledgeBaseListRequest
      * @return GetKnowledgeBaseListResponse

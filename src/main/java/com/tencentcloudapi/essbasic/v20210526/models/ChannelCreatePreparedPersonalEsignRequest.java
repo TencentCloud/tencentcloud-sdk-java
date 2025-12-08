@@ -121,6 +121,13 @@ public class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel {
     private String SceneKey;
 
     /**
+    * 印章图片文件 id取值：填写的FileId通过UploadFiles接口上传文件获取。
+    */
+    @SerializedName("FileId")
+    @Expose
+    private String FileId;
+
+    /**
      * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。 
      * @return Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
      */
@@ -364,6 +371,22 @@ public class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel {
         this.SceneKey = SceneKey;
     }
 
+    /**
+     * Get 印章图片文件 id取值：填写的FileId通过UploadFiles接口上传文件获取。 
+     * @return FileId 印章图片文件 id取值：填写的FileId通过UploadFiles接口上传文件获取。
+     */
+    public String getFileId() {
+        return this.FileId;
+    }
+
+    /**
+     * Set 印章图片文件 id取值：填写的FileId通过UploadFiles接口上传文件获取。
+     * @param FileId 印章图片文件 id取值：填写的FileId通过UploadFiles接口上传文件获取。
+     */
+    public void setFileId(String FileId) {
+        this.FileId = FileId;
+    }
+
     public ChannelCreatePreparedPersonalEsignRequest() {
     }
 
@@ -408,6 +431,9 @@ public class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel {
         if (source.SceneKey != null) {
             this.SceneKey = new String(source.SceneKey);
         }
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
     }
 
 
@@ -427,6 +453,7 @@ public class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableAutoSign", this.EnableAutoSign);
         this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
         this.setParamSimple(map, prefix + "SceneKey", this.SceneKey);
+        this.setParamSimple(map, prefix + "FileId", this.FileId);
 
     }
 }

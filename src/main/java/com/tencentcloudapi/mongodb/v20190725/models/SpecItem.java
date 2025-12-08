@@ -35,7 +35,7 @@ public class SpecItem extends AbstractModel {
 
     /**
     * 售卖规格有效标志，取值范围如下：
-- 0：停止售卖，
+- 0：停止售卖。
 - 1：开放售卖。
     */
     @SerializedName("Status")
@@ -99,6 +99,7 @@ public class SpecItem extends AbstractModel {
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
 - MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+- MONGO_80_WT：MongoDB 8.0 WiredTiger存储引擎版本。
     */
     @SerializedName("MongoVersionCode")
     @Expose
@@ -106,20 +107,29 @@ public class SpecItem extends AbstractModel {
 
     /**
     * 实例版本对应的数字版本。
+- MongoDB 3.2 版本：2。
+- MongoDB 3.6 版本：4。
+- MongoDB 4.0 版本：5。
+- MongoDB 4.2 版本：9。
+- MongoDB 4.4 版本：10。
+- MongoDB 5.0 版本：11。
+- MongoDB 6.0 版本：12。
+- MongoDB 7.0 版本：13。
+- MongoDB 8.0 版本：14。
     */
     @SerializedName("MongoVersionValue")
     @Expose
     private Long MongoVersionValue;
 
     /**
-    * 实例版本信息。支持：4.2、4.4、5.0、6.0、7.0。
+    * 实例版本信息。支持：4.2、4.4、5.0、6.0、7.0、8.0。
     */
     @SerializedName("Version")
     @Expose
     private String Version;
 
     /**
-    * 存储引擎。
+    * 存储引擎，仅支持 WiredTiger。
     */
     @SerializedName("EngineName")
     @Expose
@@ -215,10 +225,10 @@ public class SpecItem extends AbstractModel {
 
     /**
      * Get 售卖规格有效标志，取值范围如下：
-- 0：停止售卖，
+- 0：停止售卖。
 - 1：开放售卖。 
      * @return Status 售卖规格有效标志，取值范围如下：
-- 0：停止售卖，
+- 0：停止售卖。
 - 1：开放售卖。
      */
     public Long getStatus() {
@@ -227,10 +237,10 @@ public class SpecItem extends AbstractModel {
 
     /**
      * Set 售卖规格有效标志，取值范围如下：
-- 0：停止售卖，
+- 0：停止售卖。
 - 1：开放售卖。
      * @param Status 售卖规格有效标志，取值范围如下：
-- 0：停止售卖，
+- 0：停止售卖。
 - 1：开放售卖。
      */
     public void setStatus(Long Status) {
@@ -356,7 +366,8 @@ public class SpecItem extends AbstractModel {
 - MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
-- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。 
+- MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+- MONGO_80_WT：MongoDB 8.0 WiredTiger存储引擎版本。 
      * @return MongoVersionCode 实例存储引擎版本信息。
 - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
 - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
@@ -364,6 +375,7 @@ public class SpecItem extends AbstractModel {
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
 - MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+- MONGO_80_WT：MongoDB 8.0 WiredTiger存储引擎版本。
      */
     public String getMongoVersionCode() {
         return this.MongoVersionCode;
@@ -377,6 +389,7 @@ public class SpecItem extends AbstractModel {
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
 - MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+- MONGO_80_WT：MongoDB 8.0 WiredTiger存储引擎版本。
      * @param MongoVersionCode 实例存储引擎版本信息。
 - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
 - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
@@ -384,14 +397,33 @@ public class SpecItem extends AbstractModel {
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
 - MONGO_70_WT：MongoDB 7.0 WiredTiger存储引擎版本。
+- MONGO_80_WT：MongoDB 8.0 WiredTiger存储引擎版本。
      */
     public void setMongoVersionCode(String MongoVersionCode) {
         this.MongoVersionCode = MongoVersionCode;
     }
 
     /**
-     * Get 实例版本对应的数字版本。 
+     * Get 实例版本对应的数字版本。
+- MongoDB 3.2 版本：2。
+- MongoDB 3.6 版本：4。
+- MongoDB 4.0 版本：5。
+- MongoDB 4.2 版本：9。
+- MongoDB 4.4 版本：10。
+- MongoDB 5.0 版本：11。
+- MongoDB 6.0 版本：12。
+- MongoDB 7.0 版本：13。
+- MongoDB 8.0 版本：14。 
      * @return MongoVersionValue 实例版本对应的数字版本。
+- MongoDB 3.2 版本：2。
+- MongoDB 3.6 版本：4。
+- MongoDB 4.0 版本：5。
+- MongoDB 4.2 版本：9。
+- MongoDB 4.4 版本：10。
+- MongoDB 5.0 版本：11。
+- MongoDB 6.0 版本：12。
+- MongoDB 7.0 版本：13。
+- MongoDB 8.0 版本：14。
      */
     public Long getMongoVersionValue() {
         return this.MongoVersionValue;
@@ -399,39 +431,57 @@ public class SpecItem extends AbstractModel {
 
     /**
      * Set 实例版本对应的数字版本。
+- MongoDB 3.2 版本：2。
+- MongoDB 3.6 版本：4。
+- MongoDB 4.0 版本：5。
+- MongoDB 4.2 版本：9。
+- MongoDB 4.4 版本：10。
+- MongoDB 5.0 版本：11。
+- MongoDB 6.0 版本：12。
+- MongoDB 7.0 版本：13。
+- MongoDB 8.0 版本：14。
      * @param MongoVersionValue 实例版本对应的数字版本。
+- MongoDB 3.2 版本：2。
+- MongoDB 3.6 版本：4。
+- MongoDB 4.0 版本：5。
+- MongoDB 4.2 版本：9。
+- MongoDB 4.4 版本：10。
+- MongoDB 5.0 版本：11。
+- MongoDB 6.0 版本：12。
+- MongoDB 7.0 版本：13。
+- MongoDB 8.0 版本：14。
      */
     public void setMongoVersionValue(Long MongoVersionValue) {
         this.MongoVersionValue = MongoVersionValue;
     }
 
     /**
-     * Get 实例版本信息。支持：4.2、4.4、5.0、6.0、7.0。 
-     * @return Version 实例版本信息。支持：4.2、4.4、5.0、6.0、7.0。
+     * Get 实例版本信息。支持：4.2、4.4、5.0、6.0、7.0、8.0。 
+     * @return Version 实例版本信息。支持：4.2、4.4、5.0、6.0、7.0、8.0。
      */
     public String getVersion() {
         return this.Version;
     }
 
     /**
-     * Set 实例版本信息。支持：4.2、4.4、5.0、6.0、7.0。
-     * @param Version 实例版本信息。支持：4.2、4.4、5.0、6.0、7.0。
+     * Set 实例版本信息。支持：4.2、4.4、5.0、6.0、7.0、8.0。
+     * @param Version 实例版本信息。支持：4.2、4.4、5.0、6.0、7.0、8.0。
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get 存储引擎。 
-     * @return EngineName 存储引擎。
+     * Get 存储引擎，仅支持 WiredTiger。 
+     * @return EngineName 存储引擎，仅支持 WiredTiger。
      */
     public String getEngineName() {
         return this.EngineName;
     }
 
     /**
-     * Set 存储引擎。
-     * @param EngineName 存储引擎。
+     * Set 存储引擎，仅支持 WiredTiger。
+     * @param EngineName 存储引擎，仅支持 WiredTiger。
      */
     public void setEngineName(String EngineName) {
         this.EngineName = EngineName;

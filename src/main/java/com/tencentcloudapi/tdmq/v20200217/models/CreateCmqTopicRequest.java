@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateCmqTopicRequest extends AbstractModel {
 
     /**
-    * 主题名字，在单个地域同一账号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线（-）。
+    * 主题名字，在单个地域同一账号下唯一。主题名称只能包含字母、数字、“-”及“_”，最大64字符，创建后不能修改，不区分大小写。
     */
     @SerializedName("TopicName")
     @Expose
@@ -66,16 +66,16 @@ public class CreateCmqTopicRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
-     * Get 主题名字，在单个地域同一账号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线（-）。 
-     * @return TopicName 主题名字，在单个地域同一账号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线（-）。
+     * Get 主题名字，在单个地域同一账号下唯一。主题名称只能包含字母、数字、“-”及“_”，最大64字符，创建后不能修改，不区分大小写。 
+     * @return TopicName 主题名字，在单个地域同一账号下唯一。主题名称只能包含字母、数字、“-”及“_”，最大64字符，创建后不能修改，不区分大小写。
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set 主题名字，在单个地域同一账号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线（-）。
-     * @param TopicName 主题名字，在单个地域同一账号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线（-）。
+     * Set 主题名字，在单个地域同一账号下唯一。主题名称只能包含字母、数字、“-”及“_”，最大64字符，创建后不能修改，不区分大小写。
+     * @param TopicName 主题名字，在单个地域同一账号下唯一。主题名称只能包含字母、数字、“-”及“_”，最大64字符，创建后不能修改，不区分大小写。
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;

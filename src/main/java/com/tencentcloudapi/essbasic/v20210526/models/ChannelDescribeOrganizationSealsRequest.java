@@ -39,7 +39,7 @@ public class ChannelDescribeOrganizationSealsRequest extends AbstractModel {
     private Agent Agent;
 
     /**
-    * 指定分页每页返回的数据条数，单页最大支持 100。
+    * 指定分页每页返回的数据条数，单页最大支持 100。默认值为20
     */
     @SerializedName("Limit")
     @Expose
@@ -136,16 +136,16 @@ public class ChannelDescribeOrganizationSealsRequest extends AbstractModel {
     }
 
     /**
-     * Get 指定分页每页返回的数据条数，单页最大支持 100。 
-     * @return Limit 指定分页每页返回的数据条数，单页最大支持 100。
+     * Get 指定分页每页返回的数据条数，单页最大支持 100。默认值为20 
+     * @return Limit 指定分页每页返回的数据条数，单页最大支持 100。默认值为20
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 指定分页每页返回的数据条数，单页最大支持 100。
-     * @param Limit 指定分页每页返回的数据条数，单页最大支持 100。
+     * Set 指定分页每页返回的数据条数，单页最大支持 100。默认值为20
+     * @param Limit 指定分页每页返回的数据条数，单页最大支持 100。默认值为20
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

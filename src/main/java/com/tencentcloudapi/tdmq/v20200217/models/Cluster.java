@@ -132,12 +132,26 @@ public class Cluster extends AbstractModel {
     private String PublicEndPoint;
 
     /**
+    * 旧的公网访问接入点
+    */
+    @SerializedName("OldPublicEndPoint")
+    @Expose
+    private String OldPublicEndPoint;
+
+    /**
     * VPC访问接入点
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcEndPoint")
     @Expose
     private String VpcEndPoint;
+
+    /**
+    * 旧的VPC访问接入点
+    */
+    @SerializedName("OldVpcEndPoint")
+    @Expose
+    private String OldVpcEndPoint;
 
     /**
     * 命名空间数量
@@ -218,6 +232,20 @@ public class Cluster extends AbstractModel {
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
+
+    /**
+    * 旧的支撑网 Pulsar 接入点
+    */
+    @SerializedName("OldInternalPulsarEndPoint")
+    @Expose
+    private String OldInternalPulsarEndPoint;
+
+    /**
+    * 旧的支撑网 HTTP 接入点
+    */
+    @SerializedName("OldInternalHttpEndPoint")
+    @Expose
+    private String OldInternalHttpEndPoint;
 
     /**
     * 计费模式：
@@ -505,6 +533,22 @@ public class Cluster extends AbstractModel {
     }
 
     /**
+     * Get 旧的公网访问接入点 
+     * @return OldPublicEndPoint 旧的公网访问接入点
+     */
+    public String getOldPublicEndPoint() {
+        return this.OldPublicEndPoint;
+    }
+
+    /**
+     * Set 旧的公网访问接入点
+     * @param OldPublicEndPoint 旧的公网访问接入点
+     */
+    public void setOldPublicEndPoint(String OldPublicEndPoint) {
+        this.OldPublicEndPoint = OldPublicEndPoint;
+    }
+
+    /**
      * Get VPC访问接入点
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return VpcEndPoint VPC访问接入点
@@ -522,6 +566,22 @@ public class Cluster extends AbstractModel {
      */
     public void setVpcEndPoint(String VpcEndPoint) {
         this.VpcEndPoint = VpcEndPoint;
+    }
+
+    /**
+     * Get 旧的VPC访问接入点 
+     * @return OldVpcEndPoint 旧的VPC访问接入点
+     */
+    public String getOldVpcEndPoint() {
+        return this.OldVpcEndPoint;
+    }
+
+    /**
+     * Set 旧的VPC访问接入点
+     * @param OldVpcEndPoint 旧的VPC访问接入点
+     */
+    public void setOldVpcEndPoint(String OldVpcEndPoint) {
+        this.OldVpcEndPoint = OldVpcEndPoint;
     }
 
     /**
@@ -725,6 +785,38 @@ public class Cluster extends AbstractModel {
     }
 
     /**
+     * Get 旧的支撑网 Pulsar 接入点 
+     * @return OldInternalPulsarEndPoint 旧的支撑网 Pulsar 接入点
+     */
+    public String getOldInternalPulsarEndPoint() {
+        return this.OldInternalPulsarEndPoint;
+    }
+
+    /**
+     * Set 旧的支撑网 Pulsar 接入点
+     * @param OldInternalPulsarEndPoint 旧的支撑网 Pulsar 接入点
+     */
+    public void setOldInternalPulsarEndPoint(String OldInternalPulsarEndPoint) {
+        this.OldInternalPulsarEndPoint = OldInternalPulsarEndPoint;
+    }
+
+    /**
+     * Get 旧的支撑网 HTTP 接入点 
+     * @return OldInternalHttpEndPoint 旧的支撑网 HTTP 接入点
+     */
+    public String getOldInternalHttpEndPoint() {
+        return this.OldInternalHttpEndPoint;
+    }
+
+    /**
+     * Set 旧的支撑网 HTTP 接入点
+     * @param OldInternalHttpEndPoint 旧的支撑网 HTTP 接入点
+     */
+    public void setOldInternalHttpEndPoint(String OldInternalHttpEndPoint) {
+        this.OldInternalHttpEndPoint = OldInternalHttpEndPoint;
+    }
+
+    /**
      * Get 计费模式：
 0: 按量计费
 1: 包年包月
@@ -861,8 +953,14 @@ public class Cluster extends AbstractModel {
         if (source.PublicEndPoint != null) {
             this.PublicEndPoint = new String(source.PublicEndPoint);
         }
+        if (source.OldPublicEndPoint != null) {
+            this.OldPublicEndPoint = new String(source.OldPublicEndPoint);
+        }
         if (source.VpcEndPoint != null) {
             this.VpcEndPoint = new String(source.VpcEndPoint);
+        }
+        if (source.OldVpcEndPoint != null) {
+            this.OldVpcEndPoint = new String(source.OldVpcEndPoint);
         }
         if (source.NamespaceNum != null) {
             this.NamespaceNum = new Long(source.NamespaceNum);
@@ -896,6 +994,12 @@ public class Cluster extends AbstractModel {
             for (int i = 0; i < source.Tags.length; i++) {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
+        }
+        if (source.OldInternalPulsarEndPoint != null) {
+            this.OldInternalPulsarEndPoint = new String(source.OldInternalPulsarEndPoint);
+        }
+        if (source.OldInternalHttpEndPoint != null) {
+            this.OldInternalHttpEndPoint = new String(source.OldInternalHttpEndPoint);
         }
         if (source.PayMode != null) {
             this.PayMode = new Long(source.PayMode);
@@ -931,7 +1035,9 @@ public class Cluster extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxStorageCapacity", this.MaxStorageCapacity);
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamSimple(map, prefix + "PublicEndPoint", this.PublicEndPoint);
+        this.setParamSimple(map, prefix + "OldPublicEndPoint", this.OldPublicEndPoint);
         this.setParamSimple(map, prefix + "VpcEndPoint", this.VpcEndPoint);
+        this.setParamSimple(map, prefix + "OldVpcEndPoint", this.OldVpcEndPoint);
         this.setParamSimple(map, prefix + "NamespaceNum", this.NamespaceNum);
         this.setParamSimple(map, prefix + "UsedStorageBudget", this.UsedStorageBudget);
         this.setParamSimple(map, prefix + "MaxPublishRateInMessages", this.MaxPublishRateInMessages);
@@ -942,6 +1048,8 @@ public class Cluster extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxMessageDelayInSeconds", this.MaxMessageDelayInSeconds);
         this.setParamSimple(map, prefix + "PublicAccessEnabled", this.PublicAccessEnabled);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "OldInternalPulsarEndPoint", this.OldInternalPulsarEndPoint);
+        this.setParamSimple(map, prefix + "OldInternalHttpEndPoint", this.OldInternalHttpEndPoint);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "ProjectName", this.ProjectName);

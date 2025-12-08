@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyApmAssociationRequest extends AbstractModel {
 
     /**
-    * 关联的产品名，当前只支持Prometheus
+    * 关联的产品名，当前只支持Prometheus、CKafka
     */
     @SerializedName("ProductName")
     @Expose
     private String ProductName;
 
     /**
-    * 关联关系的状态：// 关联关系状态：1（启用）、2（不启用）、4（已删除）
+    * 关联关系的状态：// 关联关系状态：1（启用）、2（不启用）
     */
     @SerializedName("Status")
     @Expose
@@ -59,32 +59,32 @@ public class ModifyApmAssociationRequest extends AbstractModel {
     private String Topic;
 
     /**
-     * Get 关联的产品名，当前只支持Prometheus 
-     * @return ProductName 关联的产品名，当前只支持Prometheus
+     * Get 关联的产品名，当前只支持Prometheus、CKafka 
+     * @return ProductName 关联的产品名，当前只支持Prometheus、CKafka
      */
     public String getProductName() {
         return this.ProductName;
     }
 
     /**
-     * Set 关联的产品名，当前只支持Prometheus
-     * @param ProductName 关联的产品名，当前只支持Prometheus
+     * Set 关联的产品名，当前只支持Prometheus、CKafka
+     * @param ProductName 关联的产品名，当前只支持Prometheus、CKafka
      */
     public void setProductName(String ProductName) {
         this.ProductName = ProductName;
     }
 
     /**
-     * Get 关联关系的状态：// 关联关系状态：1（启用）、2（不启用）、4（已删除） 
-     * @return Status 关联关系的状态：// 关联关系状态：1（启用）、2（不启用）、4（已删除）
+     * Get 关联关系的状态：// 关联关系状态：1（启用）、2（不启用） 
+     * @return Status 关联关系的状态：// 关联关系状态：1（启用）、2（不启用）
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 关联关系的状态：// 关联关系状态：1（启用）、2（不启用）、4（已删除）
-     * @param Status 关联关系的状态：// 关联关系状态：1（启用）、2（不启用）、4（已删除）
+     * Set 关联关系的状态：// 关联关系状态：1（启用）、2（不启用）
+     * @param Status 关联关系的状态：// 关联关系状态：1（启用）、2（不启用）
      */
     public void setStatus(Long Status) {
         this.Status = Status;

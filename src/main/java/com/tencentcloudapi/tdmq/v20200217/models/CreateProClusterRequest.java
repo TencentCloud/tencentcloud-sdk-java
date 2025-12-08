@@ -41,14 +41,6 @@ public class CreateProClusterRequest extends AbstractModel {
     private String ProductName;
 
     /**
-    * 存储规格
-参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705)
-    */
-    @SerializedName("StorageSize")
-    @Expose
-    private Long StorageSize;
-
-    /**
     * 1: true，开启自动按月续费
 
 0: false，关闭自动按月续费
@@ -77,6 +69,14 @@ public class CreateProClusterRequest extends AbstractModel {
     @SerializedName("AutoVoucher")
     @Expose
     private Long AutoVoucher;
+
+    /**
+    * 存储规格
+参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705)
+    */
+    @SerializedName("StorageSize")
+    @Expose
+    private Long StorageSize;
 
     /**
     * vpc网络标签
@@ -134,26 +134,6 @@ public class CreateProClusterRequest extends AbstractModel {
      */
     public void setProductName(String ProductName) {
         this.ProductName = ProductName;
-    }
-
-    /**
-     * Get 存储规格
-参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705) 
-     * @return StorageSize 存储规格
-参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705)
-     */
-    public Long getStorageSize() {
-        return this.StorageSize;
-    }
-
-    /**
-     * Set 存储规格
-参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705)
-     * @param StorageSize 存储规格
-参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705)
-     */
-    public void setStorageSize(Long StorageSize) {
-        this.StorageSize = StorageSize;
     }
 
     /**
@@ -229,6 +209,26 @@ public class CreateProClusterRequest extends AbstractModel {
     }
 
     /**
+     * Get 存储规格
+参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705) 
+     * @return StorageSize 存储规格
+参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705)
+     */
+    public Long getStorageSize() {
+        return this.StorageSize;
+    }
+
+    /**
+     * Set 存储规格
+参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705)
+     * @param StorageSize 存储规格
+参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705)
+     */
+    public void setStorageSize(Long StorageSize) {
+        this.StorageSize = StorageSize;
+    }
+
+    /**
      * Get vpc网络标签 
      * @return Vpc vpc网络标签
      */
@@ -277,9 +277,6 @@ public class CreateProClusterRequest extends AbstractModel {
         if (source.ProductName != null) {
             this.ProductName = new String(source.ProductName);
         }
-        if (source.StorageSize != null) {
-            this.StorageSize = new Long(source.StorageSize);
-        }
         if (source.AutoRenewFlag != null) {
             this.AutoRenewFlag = new Long(source.AutoRenewFlag);
         }
@@ -291,6 +288,9 @@ public class CreateProClusterRequest extends AbstractModel {
         }
         if (source.AutoVoucher != null) {
             this.AutoVoucher = new Long(source.AutoVoucher);
+        }
+        if (source.StorageSize != null) {
+            this.StorageSize = new Long(source.StorageSize);
         }
         if (source.Vpc != null) {
             this.Vpc = new VpcInfo(source.Vpc);
@@ -310,11 +310,11 @@ public class CreateProClusterRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
         this.setParamSimple(map, prefix + "ProductName", this.ProductName);
-        this.setParamSimple(map, prefix + "StorageSize", this.StorageSize);
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
+        this.setParamSimple(map, prefix + "StorageSize", this.StorageSize);
         this.setParamObj(map, prefix + "Vpc.", this.Vpc);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 

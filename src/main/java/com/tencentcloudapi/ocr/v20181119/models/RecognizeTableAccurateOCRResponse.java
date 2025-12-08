@@ -47,7 +47,7 @@ public class RecognizeTableAccurateOCRResponse extends AbstractModel {
     private Long PdfPageSize;
 
     /**
-    * 图片旋转角度（角度制），文本的水平方向为0°，统一以逆时针方向旋转，逆时针为负，角度范围为-360°至0°。
+    * 图片旋转角度（角度制），文本的水平方向为0°。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Angle")
@@ -118,9 +118,9 @@ public class RecognizeTableAccurateOCRResponse extends AbstractModel {
     }
 
     /**
-     * Get 图片旋转角度（角度制），文本的水平方向为0°，统一以逆时针方向旋转，逆时针为负，角度范围为-360°至0°。
+     * Get 图片旋转角度（角度制），文本的水平方向为0°。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Angle 图片旋转角度（角度制），文本的水平方向为0°，统一以逆时针方向旋转，逆时针为负，角度范围为-360°至0°。
+     * @return Angle 图片旋转角度（角度制），文本的水平方向为0°。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getAngle() {
@@ -128,9 +128,9 @@ public class RecognizeTableAccurateOCRResponse extends AbstractModel {
     }
 
     /**
-     * Set 图片旋转角度（角度制），文本的水平方向为0°，统一以逆时针方向旋转，逆时针为负，角度范围为-360°至0°。
+     * Set 图片旋转角度（角度制），文本的水平方向为0°。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Angle 图片旋转角度（角度制），文本的水平方向为0°，统一以逆时针方向旋转，逆时针为负，角度范围为-360°至0°。
+     * @param Angle 图片旋转角度（角度制），文本的水平方向为0°。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAngle(Float Angle) {

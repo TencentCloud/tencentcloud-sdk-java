@@ -53,6 +53,20 @@ public class CreateEnvironmentResponse extends AbstractModel {
     private String NamespaceId;
 
     /**
+    * 离线订阅过期自动清理时间
+    */
+    @SerializedName("SubscriptionExpirationTime")
+    @Expose
+    private Long SubscriptionExpirationTime;
+
+    /**
+    * 离线订阅过期自动清理时间
+    */
+    @SerializedName("SubscriptionExpirationTimeEnable")
+    @Expose
+    private Boolean SubscriptionExpirationTimeEnable;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -128,6 +142,38 @@ public class CreateEnvironmentResponse extends AbstractModel {
     }
 
     /**
+     * Get 离线订阅过期自动清理时间 
+     * @return SubscriptionExpirationTime 离线订阅过期自动清理时间
+     */
+    public Long getSubscriptionExpirationTime() {
+        return this.SubscriptionExpirationTime;
+    }
+
+    /**
+     * Set 离线订阅过期自动清理时间
+     * @param SubscriptionExpirationTime 离线订阅过期自动清理时间
+     */
+    public void setSubscriptionExpirationTime(Long SubscriptionExpirationTime) {
+        this.SubscriptionExpirationTime = SubscriptionExpirationTime;
+    }
+
+    /**
+     * Get 离线订阅过期自动清理时间 
+     * @return SubscriptionExpirationTimeEnable 离线订阅过期自动清理时间
+     */
+    public Boolean getSubscriptionExpirationTimeEnable() {
+        return this.SubscriptionExpirationTimeEnable;
+    }
+
+    /**
+     * Set 离线订阅过期自动清理时间
+     * @param SubscriptionExpirationTimeEnable 离线订阅过期自动清理时间
+     */
+    public void setSubscriptionExpirationTimeEnable(Boolean SubscriptionExpirationTimeEnable) {
+        this.SubscriptionExpirationTimeEnable = SubscriptionExpirationTimeEnable;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -163,6 +209,12 @@ public class CreateEnvironmentResponse extends AbstractModel {
         if (source.NamespaceId != null) {
             this.NamespaceId = new String(source.NamespaceId);
         }
+        if (source.SubscriptionExpirationTime != null) {
+            this.SubscriptionExpirationTime = new Long(source.SubscriptionExpirationTime);
+        }
+        if (source.SubscriptionExpirationTimeEnable != null) {
+            this.SubscriptionExpirationTimeEnable = new Boolean(source.SubscriptionExpirationTimeEnable);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -177,6 +229,8 @@ public class CreateEnvironmentResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
+        this.setParamSimple(map, prefix + "SubscriptionExpirationTime", this.SubscriptionExpirationTime);
+        this.setParamSimple(map, prefix + "SubscriptionExpirationTimeEnable", this.SubscriptionExpirationTimeEnable);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

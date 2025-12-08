@@ -178,11 +178,25 @@ public class CCN extends AbstractModel {
     private Boolean MrtbAggregatePolicyFlag;
 
     /**
-    * 是否支持策略值
+    * 是否支持AsPath策略值
     */
     @SerializedName("MrtbPolicyValueFlag")
     @Expose
     private Boolean MrtbPolicyValueFlag;
+
+    /**
+    * 是否支持Community策略值
+    */
+    @SerializedName("RouteTablePolicyValueCommunityFlag")
+    @Expose
+    private Boolean RouteTablePolicyValueCommunityFlag;
+
+    /**
+    * 是否支持策略路由
+    */
+    @SerializedName("PolicyBasedRoutingFlag")
+    @Expose
+    private Boolean PolicyBasedRoutingFlag;
 
     /**
      * Get 云联网唯一ID 
@@ -537,19 +551,51 @@ public class CCN extends AbstractModel {
     }
 
     /**
-     * Get 是否支持策略值 
-     * @return MrtbPolicyValueFlag 是否支持策略值
+     * Get 是否支持AsPath策略值 
+     * @return MrtbPolicyValueFlag 是否支持AsPath策略值
      */
     public Boolean getMrtbPolicyValueFlag() {
         return this.MrtbPolicyValueFlag;
     }
 
     /**
-     * Set 是否支持策略值
-     * @param MrtbPolicyValueFlag 是否支持策略值
+     * Set 是否支持AsPath策略值
+     * @param MrtbPolicyValueFlag 是否支持AsPath策略值
      */
     public void setMrtbPolicyValueFlag(Boolean MrtbPolicyValueFlag) {
         this.MrtbPolicyValueFlag = MrtbPolicyValueFlag;
+    }
+
+    /**
+     * Get 是否支持Community策略值 
+     * @return RouteTablePolicyValueCommunityFlag 是否支持Community策略值
+     */
+    public Boolean getRouteTablePolicyValueCommunityFlag() {
+        return this.RouteTablePolicyValueCommunityFlag;
+    }
+
+    /**
+     * Set 是否支持Community策略值
+     * @param RouteTablePolicyValueCommunityFlag 是否支持Community策略值
+     */
+    public void setRouteTablePolicyValueCommunityFlag(Boolean RouteTablePolicyValueCommunityFlag) {
+        this.RouteTablePolicyValueCommunityFlag = RouteTablePolicyValueCommunityFlag;
+    }
+
+    /**
+     * Get 是否支持策略路由 
+     * @return PolicyBasedRoutingFlag 是否支持策略路由
+     */
+    public Boolean getPolicyBasedRoutingFlag() {
+        return this.PolicyBasedRoutingFlag;
+    }
+
+    /**
+     * Set 是否支持策略路由
+     * @param PolicyBasedRoutingFlag 是否支持策略路由
+     */
+    public void setPolicyBasedRoutingFlag(Boolean PolicyBasedRoutingFlag) {
+        this.PolicyBasedRoutingFlag = PolicyBasedRoutingFlag;
     }
 
     public CCN() {
@@ -632,6 +678,12 @@ public class CCN extends AbstractModel {
         if (source.MrtbPolicyValueFlag != null) {
             this.MrtbPolicyValueFlag = new Boolean(source.MrtbPolicyValueFlag);
         }
+        if (source.RouteTablePolicyValueCommunityFlag != null) {
+            this.RouteTablePolicyValueCommunityFlag = new Boolean(source.RouteTablePolicyValueCommunityFlag);
+        }
+        if (source.PolicyBasedRoutingFlag != null) {
+            this.PolicyBasedRoutingFlag = new Boolean(source.PolicyBasedRoutingFlag);
+        }
     }
 
 
@@ -662,6 +714,8 @@ public class CCN extends AbstractModel {
         this.setParamSimple(map, prefix + "Ipv6Flag", this.Ipv6Flag);
         this.setParamSimple(map, prefix + "MrtbAggregatePolicyFlag", this.MrtbAggregatePolicyFlag);
         this.setParamSimple(map, prefix + "MrtbPolicyValueFlag", this.MrtbPolicyValueFlag);
+        this.setParamSimple(map, prefix + "RouteTablePolicyValueCommunityFlag", this.RouteTablePolicyValueCommunityFlag);
+        this.setParamSimple(map, prefix + "PolicyBasedRoutingFlag", this.PolicyBasedRoutingFlag);
 
     }
 }

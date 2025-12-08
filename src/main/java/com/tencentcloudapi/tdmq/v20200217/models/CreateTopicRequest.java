@@ -110,6 +110,13 @@ public class CreateTopicRequest extends AbstractModel {
     private Long AckTimeOut;
 
     /**
+    * Pulsar主题消息类型0: 混合消息1:普通消息2:延迟消息
+    */
+    @SerializedName("PulsarTopicMessageType")
+    @Expose
+    private Long PulsarTopicMessageType;
+
+    /**
      * Get 环境（命名空间）名称。 
      * @return EnvironmentId 环境（命名空间）名称。
      */
@@ -321,6 +328,22 @@ public class CreateTopicRequest extends AbstractModel {
         this.AckTimeOut = AckTimeOut;
     }
 
+    /**
+     * Get Pulsar主题消息类型0: 混合消息1:普通消息2:延迟消息 
+     * @return PulsarTopicMessageType Pulsar主题消息类型0: 混合消息1:普通消息2:延迟消息
+     */
+    public Long getPulsarTopicMessageType() {
+        return this.PulsarTopicMessageType;
+    }
+
+    /**
+     * Set Pulsar主题消息类型0: 混合消息1:普通消息2:延迟消息
+     * @param PulsarTopicMessageType Pulsar主题消息类型0: 混合消息1:普通消息2:延迟消息
+     */
+    public void setPulsarTopicMessageType(Long PulsarTopicMessageType) {
+        this.PulsarTopicMessageType = PulsarTopicMessageType;
+    }
+
     public CreateTopicRequest() {
     }
 
@@ -362,6 +385,9 @@ public class CreateTopicRequest extends AbstractModel {
         if (source.AckTimeOut != null) {
             this.AckTimeOut = new Long(source.AckTimeOut);
         }
+        if (source.PulsarTopicMessageType != null) {
+            this.PulsarTopicMessageType = new Long(source.PulsarTopicMessageType);
+        }
     }
 
 
@@ -380,6 +406,7 @@ public class CreateTopicRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "UnackPolicy", this.UnackPolicy);
         this.setParamSimple(map, prefix + "IsolateConsumerEnable", this.IsolateConsumerEnable);
         this.setParamSimple(map, prefix + "AckTimeOut", this.AckTimeOut);
+        this.setParamSimple(map, prefix + "PulsarTopicMessageType", this.PulsarTopicMessageType);
 
     }
 }

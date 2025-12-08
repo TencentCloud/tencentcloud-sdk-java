@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribePulsarProInstanceDetailRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * 集群id
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get 集群id 
+     * @return ClusterId 集群id
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set 集群id
+     * @param ClusterId 集群id
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;

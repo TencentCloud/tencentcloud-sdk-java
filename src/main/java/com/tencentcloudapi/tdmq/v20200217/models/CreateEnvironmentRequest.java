@@ -66,6 +66,20 @@ public class CreateEnvironmentRequest extends AbstractModel {
     private Boolean AutoSubscriptionCreation;
 
     /**
+    * 离线订阅过期自动清理时间
+    */
+    @SerializedName("SubscriptionExpirationTime")
+    @Expose
+    private Long SubscriptionExpirationTime;
+
+    /**
+    * 离线订阅过期自动清理时间开关
+    */
+    @SerializedName("SubscriptionExpirationTimeEnable")
+    @Expose
+    private Boolean SubscriptionExpirationTimeEnable;
+
+    /**
      * Get 环境（命名空间）名称，不支持中字以及除了短线和下划线外的特殊字符且不超过16个字符。 
      * @return EnvironmentId 环境（命名空间）名称，不支持中字以及除了短线和下划线外的特殊字符且不超过16个字符。
      */
@@ -161,6 +175,38 @@ public class CreateEnvironmentRequest extends AbstractModel {
         this.AutoSubscriptionCreation = AutoSubscriptionCreation;
     }
 
+    /**
+     * Get 离线订阅过期自动清理时间 
+     * @return SubscriptionExpirationTime 离线订阅过期自动清理时间
+     */
+    public Long getSubscriptionExpirationTime() {
+        return this.SubscriptionExpirationTime;
+    }
+
+    /**
+     * Set 离线订阅过期自动清理时间
+     * @param SubscriptionExpirationTime 离线订阅过期自动清理时间
+     */
+    public void setSubscriptionExpirationTime(Long SubscriptionExpirationTime) {
+        this.SubscriptionExpirationTime = SubscriptionExpirationTime;
+    }
+
+    /**
+     * Get 离线订阅过期自动清理时间开关 
+     * @return SubscriptionExpirationTimeEnable 离线订阅过期自动清理时间开关
+     */
+    public Boolean getSubscriptionExpirationTimeEnable() {
+        return this.SubscriptionExpirationTimeEnable;
+    }
+
+    /**
+     * Set 离线订阅过期自动清理时间开关
+     * @param SubscriptionExpirationTimeEnable 离线订阅过期自动清理时间开关
+     */
+    public void setSubscriptionExpirationTimeEnable(Boolean SubscriptionExpirationTimeEnable) {
+        this.SubscriptionExpirationTimeEnable = SubscriptionExpirationTimeEnable;
+    }
+
     public CreateEnvironmentRequest() {
     }
 
@@ -187,6 +233,12 @@ public class CreateEnvironmentRequest extends AbstractModel {
         if (source.AutoSubscriptionCreation != null) {
             this.AutoSubscriptionCreation = new Boolean(source.AutoSubscriptionCreation);
         }
+        if (source.SubscriptionExpirationTime != null) {
+            this.SubscriptionExpirationTime = new Long(source.SubscriptionExpirationTime);
+        }
+        if (source.SubscriptionExpirationTimeEnable != null) {
+            this.SubscriptionExpirationTimeEnable = new Boolean(source.SubscriptionExpirationTimeEnable);
+        }
     }
 
 
@@ -200,6 +252,8 @@ public class CreateEnvironmentRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamObj(map, prefix + "RetentionPolicy.", this.RetentionPolicy);
         this.setParamSimple(map, prefix + "AutoSubscriptionCreation", this.AutoSubscriptionCreation);
+        this.setParamSimple(map, prefix + "SubscriptionExpirationTime", this.SubscriptionExpirationTime);
+        this.setParamSimple(map, prefix + "SubscriptionExpirationTimeEnable", this.SubscriptionExpirationTimeEnable);
 
     }
 }

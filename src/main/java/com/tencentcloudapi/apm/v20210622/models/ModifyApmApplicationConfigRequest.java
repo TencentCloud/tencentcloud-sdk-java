@@ -367,6 +367,20 @@ public class ModifyApmApplicationConfigRequest extends AbstractModel {
     private Long DisableCpuUsed;
 
     /**
+    * 是否开启SQL参数获取
+    */
+    @SerializedName("DbStatementParametersEnabled")
+    @Expose
+    private Boolean DbStatementParametersEnabled;
+
+    /**
+    * 慢SQL阈值
+    */
+    @SerializedName("SlowSQLThresholds")
+    @Expose
+    private ApmTag [] SlowSQLThresholds;
+
+    /**
      * Get 业务系统 ID 
      * @return InstanceId 业务系统 ID
      */
@@ -1150,6 +1164,38 @@ public class ModifyApmApplicationConfigRequest extends AbstractModel {
         this.DisableCpuUsed = DisableCpuUsed;
     }
 
+    /**
+     * Get 是否开启SQL参数获取 
+     * @return DbStatementParametersEnabled 是否开启SQL参数获取
+     */
+    public Boolean getDbStatementParametersEnabled() {
+        return this.DbStatementParametersEnabled;
+    }
+
+    /**
+     * Set 是否开启SQL参数获取
+     * @param DbStatementParametersEnabled 是否开启SQL参数获取
+     */
+    public void setDbStatementParametersEnabled(Boolean DbStatementParametersEnabled) {
+        this.DbStatementParametersEnabled = DbStatementParametersEnabled;
+    }
+
+    /**
+     * Get 慢SQL阈值 
+     * @return SlowSQLThresholds 慢SQL阈值
+     */
+    public ApmTag [] getSlowSQLThresholds() {
+        return this.SlowSQLThresholds;
+    }
+
+    /**
+     * Set 慢SQL阈值
+     * @param SlowSQLThresholds 慢SQL阈值
+     */
+    public void setSlowSQLThresholds(ApmTag [] SlowSQLThresholds) {
+        this.SlowSQLThresholds = SlowSQLThresholds;
+    }
+
     public ModifyApmApplicationConfigRequest() {
     }
 
@@ -1308,6 +1354,15 @@ public class ModifyApmApplicationConfigRequest extends AbstractModel {
         if (source.DisableCpuUsed != null) {
             this.DisableCpuUsed = new Long(source.DisableCpuUsed);
         }
+        if (source.DbStatementParametersEnabled != null) {
+            this.DbStatementParametersEnabled = new Boolean(source.DbStatementParametersEnabled);
+        }
+        if (source.SlowSQLThresholds != null) {
+            this.SlowSQLThresholds = new ApmTag[source.SlowSQLThresholds.length];
+            for (int i = 0; i < source.SlowSQLThresholds.length; i++) {
+                this.SlowSQLThresholds[i] = new ApmTag(source.SlowSQLThresholds[i]);
+            }
+        }
     }
 
 
@@ -1364,6 +1419,8 @@ public class ModifyApmApplicationConfigRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "UrlNumberSegmentThreshold", this.UrlNumberSegmentThreshold);
         this.setParamSimple(map, prefix + "DisableMemoryUsed", this.DisableMemoryUsed);
         this.setParamSimple(map, prefix + "DisableCpuUsed", this.DisableCpuUsed);
+        this.setParamSimple(map, prefix + "DbStatementParametersEnabled", this.DbStatementParametersEnabled);
+        this.setParamArrayObj(map, prefix + "SlowSQLThresholds.", this.SlowSQLThresholds);
 
     }
 }

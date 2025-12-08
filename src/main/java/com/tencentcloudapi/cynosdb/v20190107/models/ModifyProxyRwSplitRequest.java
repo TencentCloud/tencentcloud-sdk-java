@@ -61,7 +61,7 @@ public class ModifyProxyRwSplitRequest extends AbstractModel {
 
     /**
     * 实例只读权重。
-该参数必填。
+
     */
     @SerializedName("InstanceWeights")
     @Expose
@@ -237,9 +237,9 @@ SessionConnectionPool
 
     /**
      * Get 实例只读权重。
-该参数必填。 
+ 
      * @return InstanceWeights 实例只读权重。
-该参数必填。
+
      */
     public ProxyInstanceWeight [] getInstanceWeights() {
         return this.InstanceWeights;
@@ -247,9 +247,9 @@ SessionConnectionPool
 
     /**
      * Set 实例只读权重。
-该参数必填。
+
      * @param InstanceWeights 实例只读权重。
-该参数必填。
+
      */
     public void setInstanceWeights(ProxyInstanceWeight [] InstanceWeights) {
         this.InstanceWeights = InstanceWeights;

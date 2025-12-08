@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyRocketMQEnvironmentRoleRequest extends AbstractModel {
 
     /**
-    * 环境（命名空间）名称。
+    * 命名空间，4.x 通用集群命名空间固定为: tdmq_default
     */
     @SerializedName("EnvironmentId")
     @Expose
@@ -59,16 +59,16 @@ public class ModifyRocketMQEnvironmentRoleRequest extends AbstractModel {
     private DetailedRolePerm [] DetailedPerms;
 
     /**
-     * Get 环境（命名空间）名称。 
-     * @return EnvironmentId 环境（命名空间）名称。
+     * Get 命名空间，4.x 通用集群命名空间固定为: tdmq_default 
+     * @return EnvironmentId 命名空间，4.x 通用集群命名空间固定为: tdmq_default
      */
     public String getEnvironmentId() {
         return this.EnvironmentId;
     }
 
     /**
-     * Set 环境（命名空间）名称。
-     * @param EnvironmentId 环境（命名空间）名称。
+     * Set 命名空间，4.x 通用集群命名空间固定为: tdmq_default
+     * @param EnvironmentId 命名空间，4.x 通用集群命名空间固定为: tdmq_default
      */
     public void setEnvironmentId(String EnvironmentId) {
         this.EnvironmentId = EnvironmentId;
