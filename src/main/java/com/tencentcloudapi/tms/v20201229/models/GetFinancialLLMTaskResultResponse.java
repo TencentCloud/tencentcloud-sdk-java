@@ -24,36 +24,22 @@ import java.util.HashMap;
 public class GetFinancialLLMTaskResultResponse extends AbstractModel {
 
     /**
-    * 审校任务状态：
+    * TaskId对应的任务的状态：
+- Success: 任务已完成
+- Processing: 任务进行中，建议10秒后再查询
+- Failed: 任务失败
 
-- Success: 成功
-- Processing: 处理中，请等待
-- Failed: 失败
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 大模型审校结果
+    * 该字段标识服务检测到的违规点，具体内容参阅数据结构[FinancialLLMViolationDetail](https://cloud.tencent.com/document/api/1124/51861#FinancialLLMViolationDetail)
     */
-    @SerializedName("ModerationResult")
+    @SerializedName("Details")
     @Expose
-    private String ModerationResult;
-
-    /**
-    * 审校任务失败原因，仅当任务失败时有值
-    */
-    @SerializedName("FailureReason")
-    @Expose
-    private String FailureReason;
-
-    /**
-    * 审校任务开始时间
-    */
-    @SerializedName("StartTime")
-    @Expose
-    private String StartTime;
+    private FinancialLLMViolationDetail [] Details;
 
     /**
     * 本次检测的违规点列表
@@ -63,11 +49,27 @@ public class GetFinancialLLMTaskResultResponse extends AbstractModel {
     private String [] ReviewedLabels;
 
     /**
-    * 违规明细
+    * 审校任务的开始时间
+示例值：2025-09-25 19:42:35
     */
-    @SerializedName("Details")
+    @SerializedName("StartTime")
     @Expose
-    private FinancialLLMViolationDetail [] Details;
+    private String StartTime;
+
+    /**
+    * 若审校任务失败（Status="Failed"），该字段返回失败的具体原因。
+示例值：文档解析失败
+    */
+    @SerializedName("FailureReason")
+    @Expose
+    private String FailureReason;
+
+    /**
+    * 该字段为历史结构字段，不再推荐使用。
+    */
+    @SerializedName("ModerationResult")
+    @Expose
+    private String ModerationResult;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -77,83 +79,51 @@ public class GetFinancialLLMTaskResultResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 审校任务状态：
+     * Get TaskId对应的任务的状态：
+- Success: 任务已完成
+- Processing: 任务进行中，建议10秒后再查询
+- Failed: 任务失败
+ 
+     * @return Status TaskId对应的任务的状态：
+- Success: 任务已完成
+- Processing: 任务进行中，建议10秒后再查询
+- Failed: 任务失败
 
-- Success: 成功
-- Processing: 处理中，请等待
-- Failed: 失败 
-     * @return Status 审校任务状态：
-
-- Success: 成功
-- Processing: 处理中，请等待
-- Failed: 失败
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 审校任务状态：
+     * Set TaskId对应的任务的状态：
+- Success: 任务已完成
+- Processing: 任务进行中，建议10秒后再查询
+- Failed: 任务失败
 
-- Success: 成功
-- Processing: 处理中，请等待
-- Failed: 失败
-     * @param Status 审校任务状态：
+     * @param Status TaskId对应的任务的状态：
+- Success: 任务已完成
+- Processing: 任务进行中，建议10秒后再查询
+- Failed: 任务失败
 
-- Success: 成功
-- Processing: 处理中，请等待
-- Failed: 失败
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 大模型审校结果 
-     * @return ModerationResult 大模型审校结果
+     * Get 该字段标识服务检测到的违规点，具体内容参阅数据结构[FinancialLLMViolationDetail](https://cloud.tencent.com/document/api/1124/51861#FinancialLLMViolationDetail) 
+     * @return Details 该字段标识服务检测到的违规点，具体内容参阅数据结构[FinancialLLMViolationDetail](https://cloud.tencent.com/document/api/1124/51861#FinancialLLMViolationDetail)
      */
-    public String getModerationResult() {
-        return this.ModerationResult;
+    public FinancialLLMViolationDetail [] getDetails() {
+        return this.Details;
     }
 
     /**
-     * Set 大模型审校结果
-     * @param ModerationResult 大模型审校结果
+     * Set 该字段标识服务检测到的违规点，具体内容参阅数据结构[FinancialLLMViolationDetail](https://cloud.tencent.com/document/api/1124/51861#FinancialLLMViolationDetail)
+     * @param Details 该字段标识服务检测到的违规点，具体内容参阅数据结构[FinancialLLMViolationDetail](https://cloud.tencent.com/document/api/1124/51861#FinancialLLMViolationDetail)
      */
-    public void setModerationResult(String ModerationResult) {
-        this.ModerationResult = ModerationResult;
-    }
-
-    /**
-     * Get 审校任务失败原因，仅当任务失败时有值 
-     * @return FailureReason 审校任务失败原因，仅当任务失败时有值
-     */
-    public String getFailureReason() {
-        return this.FailureReason;
-    }
-
-    /**
-     * Set 审校任务失败原因，仅当任务失败时有值
-     * @param FailureReason 审校任务失败原因，仅当任务失败时有值
-     */
-    public void setFailureReason(String FailureReason) {
-        this.FailureReason = FailureReason;
-    }
-
-    /**
-     * Get 审校任务开始时间 
-     * @return StartTime 审校任务开始时间
-     */
-    public String getStartTime() {
-        return this.StartTime;
-    }
-
-    /**
-     * Set 审校任务开始时间
-     * @param StartTime 审校任务开始时间
-     */
-    public void setStartTime(String StartTime) {
-        this.StartTime = StartTime;
+    public void setDetails(FinancialLLMViolationDetail [] Details) {
+        this.Details = Details;
     }
 
     /**
@@ -173,19 +143,59 @@ public class GetFinancialLLMTaskResultResponse extends AbstractModel {
     }
 
     /**
-     * Get 违规明细 
-     * @return Details 违规明细
+     * Get 审校任务的开始时间
+示例值：2025-09-25 19:42:35 
+     * @return StartTime 审校任务的开始时间
+示例值：2025-09-25 19:42:35
      */
-    public FinancialLLMViolationDetail [] getDetails() {
-        return this.Details;
+    public String getStartTime() {
+        return this.StartTime;
     }
 
     /**
-     * Set 违规明细
-     * @param Details 违规明细
+     * Set 审校任务的开始时间
+示例值：2025-09-25 19:42:35
+     * @param StartTime 审校任务的开始时间
+示例值：2025-09-25 19:42:35
      */
-    public void setDetails(FinancialLLMViolationDetail [] Details) {
-        this.Details = Details;
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get 若审校任务失败（Status="Failed"），该字段返回失败的具体原因。
+示例值：文档解析失败 
+     * @return FailureReason 若审校任务失败（Status="Failed"），该字段返回失败的具体原因。
+示例值：文档解析失败
+     */
+    public String getFailureReason() {
+        return this.FailureReason;
+    }
+
+    /**
+     * Set 若审校任务失败（Status="Failed"），该字段返回失败的具体原因。
+示例值：文档解析失败
+     * @param FailureReason 若审校任务失败（Status="Failed"），该字段返回失败的具体原因。
+示例值：文档解析失败
+     */
+    public void setFailureReason(String FailureReason) {
+        this.FailureReason = FailureReason;
+    }
+
+    /**
+     * Get 该字段为历史结构字段，不再推荐使用。 
+     * @return ModerationResult 该字段为历史结构字段，不再推荐使用。
+     */
+    public String getModerationResult() {
+        return this.ModerationResult;
+    }
+
+    /**
+     * Set 该字段为历史结构字段，不再推荐使用。
+     * @param ModerationResult 该字段为历史结构字段，不再推荐使用。
+     */
+    public void setModerationResult(String ModerationResult) {
+        this.ModerationResult = ModerationResult;
     }
 
     /**
@@ -215,14 +225,11 @@ public class GetFinancialLLMTaskResultResponse extends AbstractModel {
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
-        if (source.ModerationResult != null) {
-            this.ModerationResult = new String(source.ModerationResult);
-        }
-        if (source.FailureReason != null) {
-            this.FailureReason = new String(source.FailureReason);
-        }
-        if (source.StartTime != null) {
-            this.StartTime = new String(source.StartTime);
+        if (source.Details != null) {
+            this.Details = new FinancialLLMViolationDetail[source.Details.length];
+            for (int i = 0; i < source.Details.length; i++) {
+                this.Details[i] = new FinancialLLMViolationDetail(source.Details[i]);
+            }
         }
         if (source.ReviewedLabels != null) {
             this.ReviewedLabels = new String[source.ReviewedLabels.length];
@@ -230,11 +237,14 @@ public class GetFinancialLLMTaskResultResponse extends AbstractModel {
                 this.ReviewedLabels[i] = new String(source.ReviewedLabels[i]);
             }
         }
-        if (source.Details != null) {
-            this.Details = new FinancialLLMViolationDetail[source.Details.length];
-            for (int i = 0; i < source.Details.length; i++) {
-                this.Details[i] = new FinancialLLMViolationDetail(source.Details[i]);
-            }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.FailureReason != null) {
+            this.FailureReason = new String(source.FailureReason);
+        }
+        if (source.ModerationResult != null) {
+            this.ModerationResult = new String(source.ModerationResult);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -247,11 +257,11 @@ public class GetFinancialLLMTaskResultResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);
-        this.setParamSimple(map, prefix + "ModerationResult", this.ModerationResult);
-        this.setParamSimple(map, prefix + "FailureReason", this.FailureReason);
-        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
-        this.setParamArraySimple(map, prefix + "ReviewedLabels.", this.ReviewedLabels);
         this.setParamArrayObj(map, prefix + "Details.", this.Details);
+        this.setParamArraySimple(map, prefix + "ReviewedLabels.", this.ReviewedLabels);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "FailureReason", this.FailureReason);
+        this.setParamSimple(map, prefix + "ModerationResult", this.ModerationResult);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class CreateFinancialLLMTaskResponse extends AbstractModel {
 
     /**
-    * 金融大模型审校任务ID
+    * 本次请求返回的任务ID将用于后续查询接口，以获取对应的审校结果。
+示例值：3570106e-b156-45d9-8af5-99b46f7eb2f9。
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +39,20 @@ public class CreateFinancialLLMTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 金融大模型审校任务ID 
-     * @return TaskId 金融大模型审校任务ID
+     * Get 本次请求返回的任务ID将用于后续查询接口，以获取对应的审校结果。
+示例值：3570106e-b156-45d9-8af5-99b46f7eb2f9。 
+     * @return TaskId 本次请求返回的任务ID将用于后续查询接口，以获取对应的审校结果。
+示例值：3570106e-b156-45d9-8af5-99b46f7eb2f9。
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 金融大模型审校任务ID
-     * @param TaskId 金融大模型审校任务ID
+     * Set 本次请求返回的任务ID将用于后续查询接口，以获取对应的审校结果。
+示例值：3570106e-b156-45d9-8af5-99b46f7eb2f9。
+     * @param TaskId 本次请求返回的任务ID将用于后续查询接口，以获取对应的审校结果。
+示例值：3570106e-b156-45d9-8af5-99b46f7eb2f9。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

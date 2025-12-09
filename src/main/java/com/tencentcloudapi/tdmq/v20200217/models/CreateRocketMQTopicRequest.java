@@ -31,7 +31,7 @@ public class CreateRocketMQTopicRequest extends AbstractModel {
     private String Topic;
 
     /**
-    * 主题所在的命名空间，目前支持在单个命名空间下创建主题
+    * 主题所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
     */
     @SerializedName("Namespaces")
     @Expose
@@ -82,16 +82,16 @@ public class CreateRocketMQTopicRequest extends AbstractModel {
     }
 
     /**
-     * Get 主题所在的命名空间，目前支持在单个命名空间下创建主题 
-     * @return Namespaces 主题所在的命名空间，目前支持在单个命名空间下创建主题
+     * Get 主题所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default 
+     * @return Namespaces 主题所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
      */
     public String [] getNamespaces() {
         return this.Namespaces;
     }
 
     /**
-     * Set 主题所在的命名空间，目前支持在单个命名空间下创建主题
-     * @param Namespaces 主题所在的命名空间，目前支持在单个命名空间下创建主题
+     * Set 主题所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
+     * @param Namespaces 主题所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
      */
     public void setNamespaces(String [] Namespaces) {
         this.Namespaces = Namespaces;

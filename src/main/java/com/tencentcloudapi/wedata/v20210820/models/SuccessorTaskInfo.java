@@ -118,6 +118,15 @@ public class SuccessorTaskInfo extends AbstractModel {
     private String TaskTypeDesc;
 
     /**
+    * 当前用户对该资源的权限列表
+CAN_MANAGE 有修改操作权限
+NO_PERMISSION 无权限
+    */
+    @SerializedName("Privileges")
+    @Expose
+    private String [] Privileges;
+
+    /**
      * Get 任务id 
      * @return TaskId 任务id
      */
@@ -337,6 +346,30 @@ public class SuccessorTaskInfo extends AbstractModel {
         this.TaskTypeDesc = TaskTypeDesc;
     }
 
+    /**
+     * Get 当前用户对该资源的权限列表
+CAN_MANAGE 有修改操作权限
+NO_PERMISSION 无权限 
+     * @return Privileges 当前用户对该资源的权限列表
+CAN_MANAGE 有修改操作权限
+NO_PERMISSION 无权限
+     */
+    public String [] getPrivileges() {
+        return this.Privileges;
+    }
+
+    /**
+     * Set 当前用户对该资源的权限列表
+CAN_MANAGE 有修改操作权限
+NO_PERMISSION 无权限
+     * @param Privileges 当前用户对该资源的权限列表
+CAN_MANAGE 有修改操作权限
+NO_PERMISSION 无权限
+     */
+    public void setPrivileges(String [] Privileges) {
+        this.Privileges = Privileges;
+    }
+
     public SuccessorTaskInfo() {
     }
 
@@ -384,6 +417,12 @@ public class SuccessorTaskInfo extends AbstractModel {
         if (source.TaskTypeDesc != null) {
             this.TaskTypeDesc = new String(source.TaskTypeDesc);
         }
+        if (source.Privileges != null) {
+            this.Privileges = new String[source.Privileges.length];
+            for (int i = 0; i < source.Privileges.length; i++) {
+                this.Privileges[i] = new String(source.Privileges[i]);
+            }
+        }
     }
 
 
@@ -404,6 +443,7 @@ public class SuccessorTaskInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "CycleUnit", this.CycleUnit);
         this.setParamSimple(map, prefix + "ScheduleDesc", this.ScheduleDesc);
         this.setParamSimple(map, prefix + "TaskTypeDesc", this.TaskTypeDesc);
+        this.setParamArraySimple(map, prefix + "Privileges.", this.Privileges);
 
     }
 }

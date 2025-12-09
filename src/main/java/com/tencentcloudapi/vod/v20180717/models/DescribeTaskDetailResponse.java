@@ -246,6 +246,20 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     private ProcessMediaByMPS ProcessMediaByMPSTask;
 
     /**
+    * AIGC 生图任务信息，仅当 TaskType 为 AigcImageTask，该字段有值。
+    */
+    @SerializedName("AigcImageTask")
+    @Expose
+    private AigcImageTask AigcImageTask;
+
+    /**
+    * AIGC 生视频任务信息，仅当 TaskType 为 AigcVideoTask，该字段有值。
+    */
+    @SerializedName("AigcVideoTask")
+    @Expose
+    private AigcVideoTask AigcVideoTask;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -805,6 +819,38 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
+     * Get AIGC 生图任务信息，仅当 TaskType 为 AigcImageTask，该字段有值。 
+     * @return AigcImageTask AIGC 生图任务信息，仅当 TaskType 为 AigcImageTask，该字段有值。
+     */
+    public AigcImageTask getAigcImageTask() {
+        return this.AigcImageTask;
+    }
+
+    /**
+     * Set AIGC 生图任务信息，仅当 TaskType 为 AigcImageTask，该字段有值。
+     * @param AigcImageTask AIGC 生图任务信息，仅当 TaskType 为 AigcImageTask，该字段有值。
+     */
+    public void setAigcImageTask(AigcImageTask AigcImageTask) {
+        this.AigcImageTask = AigcImageTask;
+    }
+
+    /**
+     * Get AIGC 生视频任务信息，仅当 TaskType 为 AigcVideoTask，该字段有值。 
+     * @return AigcVideoTask AIGC 生视频任务信息，仅当 TaskType 为 AigcVideoTask，该字段有值。
+     */
+    public AigcVideoTask getAigcVideoTask() {
+        return this.AigcVideoTask;
+    }
+
+    /**
+     * Set AIGC 生视频任务信息，仅当 TaskType 为 AigcVideoTask，该字段有值。
+     * @param AigcVideoTask AIGC 生视频任务信息，仅当 TaskType 为 AigcVideoTask，该字段有值。
+     */
+    public void setAigcVideoTask(AigcVideoTask AigcVideoTask) {
+        this.AigcVideoTask = AigcVideoTask;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -912,6 +958,12 @@ public class DescribeTaskDetailResponse extends AbstractModel {
         if (source.ProcessMediaByMPSTask != null) {
             this.ProcessMediaByMPSTask = new ProcessMediaByMPS(source.ProcessMediaByMPSTask);
         }
+        if (source.AigcImageTask != null) {
+            this.AigcImageTask = new AigcImageTask(source.AigcImageTask);
+        }
+        if (source.AigcVideoTask != null) {
+            this.AigcVideoTask = new AigcVideoTask(source.AigcVideoTask);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -950,6 +1002,8 @@ public class DescribeTaskDetailResponse extends AbstractModel {
         this.setParamObj(map, prefix + "QualityEnhanceTask.", this.QualityEnhanceTask);
         this.setParamObj(map, prefix + "ComplexAdaptiveDynamicStreamingTask.", this.ComplexAdaptiveDynamicStreamingTask);
         this.setParamObj(map, prefix + "ProcessMediaByMPSTask.", this.ProcessMediaByMPSTask);
+        this.setParamObj(map, prefix + "AigcImageTask.", this.AigcImageTask);
+        this.setParamObj(map, prefix + "AigcVideoTask.", this.AigcVideoTask);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

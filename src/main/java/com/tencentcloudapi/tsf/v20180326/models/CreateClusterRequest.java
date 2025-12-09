@@ -118,7 +118,7 @@ public class CreateClusterRequest extends AbstractModel {
     private String KuberneteApiServer;
 
     /**
-    * K : kubeconfig, S : service account
+    * K : kubeconfig, S : service account (公有云不支持通过kubeconfig和service account的方式创建集群)
     */
     @SerializedName("KuberneteNativeType")
     @Expose
@@ -366,16 +366,16 @@ public class CreateClusterRequest extends AbstractModel {
     }
 
     /**
-     * Get K : kubeconfig, S : service account 
-     * @return KuberneteNativeType K : kubeconfig, S : service account
+     * Get K : kubeconfig, S : service account (公有云不支持通过kubeconfig和service account的方式创建集群) 
+     * @return KuberneteNativeType K : kubeconfig, S : service account (公有云不支持通过kubeconfig和service account的方式创建集群)
      */
     public String getKuberneteNativeType() {
         return this.KuberneteNativeType;
     }
 
     /**
-     * Set K : kubeconfig, S : service account
-     * @param KuberneteNativeType K : kubeconfig, S : service account
+     * Set K : kubeconfig, S : service account (公有云不支持通过kubeconfig和service account的方式创建集群)
+     * @param KuberneteNativeType K : kubeconfig, S : service account (公有云不支持通过kubeconfig和service account的方式创建集群)
      */
     public void setKuberneteNativeType(String KuberneteNativeType) {
         this.KuberneteNativeType = KuberneteNativeType;

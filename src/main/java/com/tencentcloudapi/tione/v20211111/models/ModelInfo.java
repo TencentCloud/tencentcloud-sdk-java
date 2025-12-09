@@ -68,6 +68,7 @@ public class ModelInfo extends AbstractModel {
 
     /**
     * GooseFSx的配置，ModelSource为GooseFSx时有效
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GooseFSx")
     @Expose
@@ -220,8 +221,10 @@ public class ModelInfo extends AbstractModel {
     }
 
     /**
-     * Get GooseFSx的配置，ModelSource为GooseFSx时有效 
+     * Get GooseFSx的配置，ModelSource为GooseFSx时有效
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return GooseFSx GooseFSx的配置，ModelSource为GooseFSx时有效
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public GooseFSx getGooseFSx() {
         return this.GooseFSx;
@@ -229,7 +232,9 @@ public class ModelInfo extends AbstractModel {
 
     /**
      * Set GooseFSx的配置，ModelSource为GooseFSx时有效
+注意：此字段可能返回 null，表示取不到有效值。
      * @param GooseFSx GooseFSx的配置，ModelSource为GooseFSx时有效
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGooseFSx(GooseFSx GooseFSx) {
         this.GooseFSx = GooseFSx;

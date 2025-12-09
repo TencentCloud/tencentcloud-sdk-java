@@ -359,6 +359,13 @@ public class DataSourceInfo extends AbstractModel {
     private String DatasourceType;
 
     /**
+    * 是否开通tccatalog,默认没有开启
+    */
+    @SerializedName("TcCatalogOpen")
+    @Expose
+    private Boolean TcCatalogOpen;
+
+    /**
      * Get 若数据源列表为绑定数据库，则为db名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DatabaseName 若数据源列表为绑定数据库，则为db名称
@@ -1194,6 +1201,22 @@ public class DataSourceInfo extends AbstractModel {
         this.DatasourceType = DatasourceType;
     }
 
+    /**
+     * Get 是否开通tccatalog,默认没有开启 
+     * @return TcCatalogOpen 是否开通tccatalog,默认没有开启
+     */
+    public Boolean getTcCatalogOpen() {
+        return this.TcCatalogOpen;
+    }
+
+    /**
+     * Set 是否开通tccatalog,默认没有开启
+     * @param TcCatalogOpen 是否开通tccatalog,默认没有开启
+     */
+    public void setTcCatalogOpen(Boolean TcCatalogOpen) {
+        this.TcCatalogOpen = TcCatalogOpen;
+    }
+
     public DataSourceInfo() {
     }
 
@@ -1331,6 +1354,9 @@ public class DataSourceInfo extends AbstractModel {
         if (source.DatasourceType != null) {
             this.DatasourceType = new String(source.DatasourceType);
         }
+        if (source.TcCatalogOpen != null) {
+            this.TcCatalogOpen = new Boolean(source.TcCatalogOpen);
+        }
     }
 
 
@@ -1380,6 +1406,7 @@ public class DataSourceInfo extends AbstractModel {
         this.setParamArrayObj(map, prefix + "DataSourceEnvInfos.", this.DataSourceEnvInfos);
         this.setParamSimple(map, prefix + "ForbidProbe", this.ForbidProbe);
         this.setParamSimple(map, prefix + "DatasourceType", this.DatasourceType);
+        this.setParamSimple(map, prefix + "TcCatalogOpen", this.TcCatalogOpen);
 
     }
 }

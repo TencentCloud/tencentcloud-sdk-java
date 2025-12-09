@@ -136,6 +136,38 @@ public class ColumnMeta extends AbstractModel {
     private String Specification;
 
     /**
+    * 目录名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CategoryName")
+    @Expose
+    private String CategoryName;
+
+    /**
+    * 源类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OriginType")
+    @Expose
+    private String OriginType;
+
+    /**
+    * 列绑定的指标信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IndicatorBase")
+    @Expose
+    private IndicatorBaseSimpleInfo IndicatorBase;
+
+    /**
+    * 列绑定的维度信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AssetDim")
+    @Expose
+    private AssetDim AssetDim;
+
+    /**
      * Get 字段英文名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return NameEn 字段英文名称
@@ -415,6 +447,86 @@ public class ColumnMeta extends AbstractModel {
         this.Specification = Specification;
     }
 
+    /**
+     * Get 目录名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CategoryName 目录名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCategoryName() {
+        return this.CategoryName;
+    }
+
+    /**
+     * Set 目录名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CategoryName 目录名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCategoryName(String CategoryName) {
+        this.CategoryName = CategoryName;
+    }
+
+    /**
+     * Get 源类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OriginType 源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOriginType() {
+        return this.OriginType;
+    }
+
+    /**
+     * Set 源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OriginType 源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOriginType(String OriginType) {
+        this.OriginType = OriginType;
+    }
+
+    /**
+     * Get 列绑定的指标信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IndicatorBase 列绑定的指标信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public IndicatorBaseSimpleInfo getIndicatorBase() {
+        return this.IndicatorBase;
+    }
+
+    /**
+     * Set 列绑定的指标信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IndicatorBase 列绑定的指标信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIndicatorBase(IndicatorBaseSimpleInfo IndicatorBase) {
+        this.IndicatorBase = IndicatorBase;
+    }
+
+    /**
+     * Get 列绑定的维度信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AssetDim 列绑定的维度信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AssetDim getAssetDim() {
+        return this.AssetDim;
+    }
+
+    /**
+     * Set 列绑定的维度信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AssetDim 列绑定的维度信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAssetDim(AssetDim AssetDim) {
+        this.AssetDim = AssetDim;
+    }
+
     public ColumnMeta() {
     }
 
@@ -468,6 +580,18 @@ public class ColumnMeta extends AbstractModel {
         if (source.Specification != null) {
             this.Specification = new String(source.Specification);
         }
+        if (source.CategoryName != null) {
+            this.CategoryName = new String(source.CategoryName);
+        }
+        if (source.OriginType != null) {
+            this.OriginType = new String(source.OriginType);
+        }
+        if (source.IndicatorBase != null) {
+            this.IndicatorBase = new IndicatorBaseSimpleInfo(source.IndicatorBase);
+        }
+        if (source.AssetDim != null) {
+            this.AssetDim = new AssetDim(source.AssetDim);
+        }
     }
 
 
@@ -489,6 +613,10 @@ public class ColumnMeta extends AbstractModel {
         this.setParamSimple(map, prefix + "LevelRank", this.LevelRank);
         this.setParamSimple(map, prefix + "InfluxCategory", this.InfluxCategory);
         this.setParamSimple(map, prefix + "Specification", this.Specification);
+        this.setParamSimple(map, prefix + "CategoryName", this.CategoryName);
+        this.setParamSimple(map, prefix + "OriginType", this.OriginType);
+        this.setParamObj(map, prefix + "IndicatorBase.", this.IndicatorBase);
+        this.setParamObj(map, prefix + "AssetDim.", this.AssetDim);
 
     }
 }

@@ -52,8 +52,8 @@ public class EventContent extends AbstractModel {
 <li>PersistenceComplete：剪辑固化完成；</li>
 <li>ComplexAdaptiveDynamicStreamingComplete：复杂自适应码流任务完成。</li>
 <li>ProcessMediaByMPSComplete：MPS视频处理完成。</li>
-<li>AigcImageComplete：AIGC 生图任务完成。</li>
-<li>AigcVideoComplete：AIGC 生视频任务完成。</li>
+<li>AigcImageTaskComplete：AIGC 生图任务完成。</li>
+<li>AigcVideoTaskComplete：AIGC 生视频任务完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -289,6 +289,20 @@ public class EventContent extends AbstractModel {
     private ProcessMediaByMPS ProcessMediaByMPSCompleteEvent;
 
     /**
+    * AIGC 生图任务信息，仅当 EventType 为 AigcImageTaskComplete 时有效。
+    */
+    @SerializedName("AigcImageCompleteEvent")
+    @Expose
+    private AigcImageTask AigcImageCompleteEvent;
+
+    /**
+    * AIGC 生视频任务信息，仅当 EventType 为 AigcVideoTaskComplete 时有效。
+    */
+    @SerializedName("AigcVideoCompleteEvent")
+    @Expose
+    private AigcVideoTask AigcVideoCompleteEvent;
+
+    /**
      * Get 事件句柄，调用方必须调用 ConfirmEvents 来确认消息已经收到，确认有效时间 30 秒。失效后，事件可重新被获取。 
      * @return EventHandle 事件句柄，调用方必须调用 ConfirmEvents 来确认消息已经收到，确认有效时间 30 秒。失效后，事件可重新被获取。
      */
@@ -326,8 +340,8 @@ public class EventContent extends AbstractModel {
 <li>PersistenceComplete：剪辑固化完成；</li>
 <li>ComplexAdaptiveDynamicStreamingComplete：复杂自适应码流任务完成。</li>
 <li>ProcessMediaByMPSComplete：MPS视频处理完成。</li>
-<li>AigcImageComplete：AIGC 生图任务完成。</li>
-<li>AigcVideoComplete：AIGC 生视频任务完成。</li>
+<li>AigcImageTaskComplete：AIGC 生图任务完成。</li>
+<li>AigcVideoTaskComplete：AIGC 生视频任务完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -355,8 +369,8 @@ public class EventContent extends AbstractModel {
 <li>PersistenceComplete：剪辑固化完成；</li>
 <li>ComplexAdaptiveDynamicStreamingComplete：复杂自适应码流任务完成。</li>
 <li>ProcessMediaByMPSComplete：MPS视频处理完成。</li>
-<li>AigcImageComplete：AIGC 生图任务完成。</li>
-<li>AigcVideoComplete：AIGC 生视频任务完成。</li>
+<li>AigcImageTaskComplete：AIGC 生图任务完成。</li>
+<li>AigcVideoTaskComplete：AIGC 生视频任务完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -390,8 +404,8 @@ public class EventContent extends AbstractModel {
 <li>PersistenceComplete：剪辑固化完成；</li>
 <li>ComplexAdaptiveDynamicStreamingComplete：复杂自适应码流任务完成。</li>
 <li>ProcessMediaByMPSComplete：MPS视频处理完成。</li>
-<li>AigcImageComplete：AIGC 生图任务完成。</li>
-<li>AigcVideoComplete：AIGC 生视频任务完成。</li>
+<li>AigcImageTaskComplete：AIGC 生图任务完成。</li>
+<li>AigcVideoTaskComplete：AIGC 生视频任务完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -419,8 +433,8 @@ public class EventContent extends AbstractModel {
 <li>PersistenceComplete：剪辑固化完成；</li>
 <li>ComplexAdaptiveDynamicStreamingComplete：复杂自适应码流任务完成。</li>
 <li>ProcessMediaByMPSComplete：MPS视频处理完成。</li>
-<li>AigcImageComplete：AIGC 生图任务完成。</li>
-<li>AigcVideoComplete：AIGC 生视频任务完成。</li>
+<li>AigcImageTaskComplete：AIGC 生图任务完成。</li>
+<li>AigcVideoTaskComplete：AIGC 生视频任务完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -988,6 +1002,38 @@ public class EventContent extends AbstractModel {
         this.ProcessMediaByMPSCompleteEvent = ProcessMediaByMPSCompleteEvent;
     }
 
+    /**
+     * Get AIGC 生图任务信息，仅当 EventType 为 AigcImageTaskComplete 时有效。 
+     * @return AigcImageCompleteEvent AIGC 生图任务信息，仅当 EventType 为 AigcImageTaskComplete 时有效。
+     */
+    public AigcImageTask getAigcImageCompleteEvent() {
+        return this.AigcImageCompleteEvent;
+    }
+
+    /**
+     * Set AIGC 生图任务信息，仅当 EventType 为 AigcImageTaskComplete 时有效。
+     * @param AigcImageCompleteEvent AIGC 生图任务信息，仅当 EventType 为 AigcImageTaskComplete 时有效。
+     */
+    public void setAigcImageCompleteEvent(AigcImageTask AigcImageCompleteEvent) {
+        this.AigcImageCompleteEvent = AigcImageCompleteEvent;
+    }
+
+    /**
+     * Get AIGC 生视频任务信息，仅当 EventType 为 AigcVideoTaskComplete 时有效。 
+     * @return AigcVideoCompleteEvent AIGC 生视频任务信息，仅当 EventType 为 AigcVideoTaskComplete 时有效。
+     */
+    public AigcVideoTask getAigcVideoCompleteEvent() {
+        return this.AigcVideoCompleteEvent;
+    }
+
+    /**
+     * Set AIGC 生视频任务信息，仅当 EventType 为 AigcVideoTaskComplete 时有效。
+     * @param AigcVideoCompleteEvent AIGC 生视频任务信息，仅当 EventType 为 AigcVideoTaskComplete 时有效。
+     */
+    public void setAigcVideoCompleteEvent(AigcVideoTask AigcVideoCompleteEvent) {
+        this.AigcVideoCompleteEvent = AigcVideoCompleteEvent;
+    }
+
     public EventContent() {
     }
 
@@ -1086,6 +1132,12 @@ public class EventContent extends AbstractModel {
         if (source.ProcessMediaByMPSCompleteEvent != null) {
             this.ProcessMediaByMPSCompleteEvent = new ProcessMediaByMPS(source.ProcessMediaByMPSCompleteEvent);
         }
+        if (source.AigcImageCompleteEvent != null) {
+            this.AigcImageCompleteEvent = new AigcImageTask(source.AigcImageCompleteEvent);
+        }
+        if (source.AigcVideoCompleteEvent != null) {
+            this.AigcVideoCompleteEvent = new AigcVideoTask(source.AigcVideoCompleteEvent);
+        }
     }
 
 
@@ -1123,6 +1175,8 @@ public class EventContent extends AbstractModel {
         this.setParamObj(map, prefix + "PersistenceCompleteEvent.", this.PersistenceCompleteEvent);
         this.setParamObj(map, prefix + "ComplexAdaptiveDynamicStreamingCompleteEvent.", this.ComplexAdaptiveDynamicStreamingCompleteEvent);
         this.setParamObj(map, prefix + "ProcessMediaByMPSCompleteEvent.", this.ProcessMediaByMPSCompleteEvent);
+        this.setParamObj(map, prefix + "AigcImageCompleteEvent.", this.AigcImageCompleteEvent);
+        this.setParamObj(map, prefix + "AigcVideoCompleteEvent.", this.AigcVideoCompleteEvent);
 
     }
 }

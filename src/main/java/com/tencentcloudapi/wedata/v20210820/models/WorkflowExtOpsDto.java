@@ -152,6 +152,20 @@ public class WorkflowExtOpsDto extends AbstractModel {
     private String WorkflowType;
 
     /**
+    * bundle客户端绑定唯一id
+    */
+    @SerializedName("BundleId")
+    @Expose
+    private String BundleId;
+
+    /**
+    * bundle客户端扩展信息，json格式
+    */
+    @SerializedName("BundleInfo")
+    @Expose
+    private String BundleInfo;
+
+    /**
      * Get 任务数量count
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskCount 任务数量count
@@ -471,6 +485,38 @@ public class WorkflowExtOpsDto extends AbstractModel {
         this.WorkflowType = WorkflowType;
     }
 
+    /**
+     * Get bundle客户端绑定唯一id 
+     * @return BundleId bundle客户端绑定唯一id
+     */
+    public String getBundleId() {
+        return this.BundleId;
+    }
+
+    /**
+     * Set bundle客户端绑定唯一id
+     * @param BundleId bundle客户端绑定唯一id
+     */
+    public void setBundleId(String BundleId) {
+        this.BundleId = BundleId;
+    }
+
+    /**
+     * Get bundle客户端扩展信息，json格式 
+     * @return BundleInfo bundle客户端扩展信息，json格式
+     */
+    public String getBundleInfo() {
+        return this.BundleInfo;
+    }
+
+    /**
+     * Set bundle客户端扩展信息，json格式
+     * @param BundleInfo bundle客户端扩展信息，json格式
+     */
+    public void setBundleInfo(String BundleInfo) {
+        this.BundleInfo = BundleInfo;
+    }
+
     public WorkflowExtOpsDto() {
     }
 
@@ -527,6 +573,12 @@ public class WorkflowExtOpsDto extends AbstractModel {
         if (source.WorkflowType != null) {
             this.WorkflowType = new String(source.WorkflowType);
         }
+        if (source.BundleId != null) {
+            this.BundleId = new String(source.BundleId);
+        }
+        if (source.BundleInfo != null) {
+            this.BundleInfo = new String(source.BundleInfo);
+        }
     }
 
 
@@ -550,6 +602,8 @@ public class WorkflowExtOpsDto extends AbstractModel {
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamSimple(map, prefix + "ModifyUser", this.ModifyUser);
         this.setParamSimple(map, prefix + "WorkflowType", this.WorkflowType);
+        this.setParamSimple(map, prefix + "BundleId", this.BundleId);
+        this.setParamSimple(map, prefix + "BundleInfo", this.BundleInfo);
 
     }
 }

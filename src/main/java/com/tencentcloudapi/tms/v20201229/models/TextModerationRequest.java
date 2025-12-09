@@ -24,189 +24,264 @@ import java.util.HashMap;
 public class TextModerationRequest extends AbstractModel {
 
     /**
-    * 该字段表示待检测对象的文本内容，文本需要按utf-8格式编码，长度不能超过10000个字符（按unicode编码计算），并进行 Base64加密
+    * 待检测的文本内容，需为UTF-8编码并以Base64格式传入。
+示例值：5L2g55qE5Lil6LCo6K6p5L2g5Y+R546w77yM5Lqn5ZOB57uP55CG5Y+r5YmR6Z2S
+
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-    * 该字段表示使用的策略的具体编号，该字段需要先在[内容安全控制台](https://console.cloud.tencent.com/cms/clouds/manage)中配置。
-备注：不同Biztype关联不同的业务场景与识别能力策略，调用前请确认正确的Biztype。
+    * 接口使用的识别策略编号，需在[控制台](https://console.cloud.tencent.com/cms/clouds/manage)获取。详细获取方式请参考以下链接：
+- **内容安全**（详见步骤四：策略配置）：[点击这里](https://cloud.tencent.com/document/product/1124/37119)
+- **AI生成识别**（详见服务对接->方式二）：[点击这里](https://cloud.tencent.com/document/product/1124/118694)
+
+示例值：TencentCloudDefault
     */
     @SerializedName("BizType")
     @Expose
     private String BizType;
 
     /**
-    * 该字段表示您为待检测对象分配的数据ID，传入后可方便您对文件进行标识和管理。<br>取值：由英文字母（大小写均可）、数字及四个特殊符号（_，-，@，#）组成，**长度不超过64个字符**
+    * 该字段表示您为待检测文本分配的数据ID，作用是方便您对数据进行标识和管理。
+取值：可由英文字母、数字、四种特殊符号（_，-，@，#）组成，**长度不超过64个字符**。
+示例值：a6127dd-c2a0-43e7-a3da-d27022d39ba7
     */
     @SerializedName("DataId")
     @Expose
     private String DataId;
 
     /**
-    * 该字段表示待检测对象对应的用户相关信息，传入后可便于甄别相应违规风险用户
+    * 该字段标识用户信息，传入后可增强甄别有违规风险的发布者账号。
     */
     @SerializedName("User")
     @Expose
     private User User;
 
     /**
-    * 该字段表示待检测对象对应的设备相关信息，传入后可便于甄别相应违规风险设备
+    * 该字段标识设备信息，传入后可增强甄别有违规风险的发布者设备。
     */
     @SerializedName("Device")
     @Expose
     private Device Device;
 
     /**
-    * 表示Content的原始语种，枚举值包括 "en" 和 "zh"。其中，"en" 表示英文，"zh" 表示中文。非中文场景的处理耗时较高，具体情况取决于送审文本长度，非中文场景需[反馈工单](https://console.cloud.tencent.com/workorder/category?level1_id=141&level2_id=1287&source=14&data_title=%E6%96%87%E6%9C%AC%E5%86%85%E5%AE%B9%E5%AE%89%E5%85%A8&step=1)确认。
+    * Content字段的原始语种，枚举值包括 zh 和 en：
+- 推荐使用 zh
+- en 适用于纯英文内容，耗时较高。若需使用 en，请先通过[反馈工单](https://console.cloud.tencent.com/workorder/category?level1_id=141&level2_id=1287&source=14&data_title=%E6%96%87%E6%9C%AC%E5%86%85%E5%AE%B9%E5%AE%89%E5%85%A8&step=1)确认
+
+示例值：zh
+
     */
     @SerializedName("SourceLanguage")
     @Expose
     private String SourceLanguage;
 
     /**
-    * 审核的业务类型，枚举值包括"TEXT"和"TEXT_AIGC"。其中"TEXT"表示传统文本审核，"TEXT_AIGC"表示AI生成检测（生成检测能力具体能力了解可[参见文档](https://cloud.tencent.com/document/product/1124/118694)）。
+    * 服务类型，枚举值包括 TEXT 和 TEXT_AIGC：
+TEXT：内容安全
+TEXT_AIGC：AI生成识别
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 流式审核策略维度下的唯一会话ID
+    * 适用于上下文关联审核场景，若多条文本内容需要联合审核，通过该字段关联会话。
+示例值：7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-     * Get 该字段表示待检测对象的文本内容，文本需要按utf-8格式编码，长度不能超过10000个字符（按unicode编码计算），并进行 Base64加密 
-     * @return Content 该字段表示待检测对象的文本内容，文本需要按utf-8格式编码，长度不能超过10000个字符（按unicode编码计算），并进行 Base64加密
+     * Get 待检测的文本内容，需为UTF-8编码并以Base64格式传入。
+示例值：5L2g55qE5Lil6LCo6K6p5L2g5Y+R546w77yM5Lqn5ZOB57uP55CG5Y+r5YmR6Z2S
+ 
+     * @return Content 待检测的文本内容，需为UTF-8编码并以Base64格式传入。
+示例值：5L2g55qE5Lil6LCo6K6p5L2g5Y+R546w77yM5Lqn5ZOB57uP55CG5Y+r5YmR6Z2S
+
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set 该字段表示待检测对象的文本内容，文本需要按utf-8格式编码，长度不能超过10000个字符（按unicode编码计算），并进行 Base64加密
-     * @param Content 该字段表示待检测对象的文本内容，文本需要按utf-8格式编码，长度不能超过10000个字符（按unicode编码计算），并进行 Base64加密
+     * Set 待检测的文本内容，需为UTF-8编码并以Base64格式传入。
+示例值：5L2g55qE5Lil6LCo6K6p5L2g5Y+R546w77yM5Lqn5ZOB57uP55CG5Y+r5YmR6Z2S
+
+     * @param Content 待检测的文本内容，需为UTF-8编码并以Base64格式传入。
+示例值：5L2g55qE5Lil6LCo6K6p5L2g5Y+R546w77yM5Lqn5ZOB57uP55CG5Y+r5YmR6Z2S
+
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get 该字段表示使用的策略的具体编号，该字段需要先在[内容安全控制台](https://console.cloud.tencent.com/cms/clouds/manage)中配置。
-备注：不同Biztype关联不同的业务场景与识别能力策略，调用前请确认正确的Biztype。 
-     * @return BizType 该字段表示使用的策略的具体编号，该字段需要先在[内容安全控制台](https://console.cloud.tencent.com/cms/clouds/manage)中配置。
-备注：不同Biztype关联不同的业务场景与识别能力策略，调用前请确认正确的Biztype。
+     * Get 接口使用的识别策略编号，需在[控制台](https://console.cloud.tencent.com/cms/clouds/manage)获取。详细获取方式请参考以下链接：
+- **内容安全**（详见步骤四：策略配置）：[点击这里](https://cloud.tencent.com/document/product/1124/37119)
+- **AI生成识别**（详见服务对接->方式二）：[点击这里](https://cloud.tencent.com/document/product/1124/118694)
+
+示例值：TencentCloudDefault 
+     * @return BizType 接口使用的识别策略编号，需在[控制台](https://console.cloud.tencent.com/cms/clouds/manage)获取。详细获取方式请参考以下链接：
+- **内容安全**（详见步骤四：策略配置）：[点击这里](https://cloud.tencent.com/document/product/1124/37119)
+- **AI生成识别**（详见服务对接->方式二）：[点击这里](https://cloud.tencent.com/document/product/1124/118694)
+
+示例值：TencentCloudDefault
      */
     public String getBizType() {
         return this.BizType;
     }
 
     /**
-     * Set 该字段表示使用的策略的具体编号，该字段需要先在[内容安全控制台](https://console.cloud.tencent.com/cms/clouds/manage)中配置。
-备注：不同Biztype关联不同的业务场景与识别能力策略，调用前请确认正确的Biztype。
-     * @param BizType 该字段表示使用的策略的具体编号，该字段需要先在[内容安全控制台](https://console.cloud.tencent.com/cms/clouds/manage)中配置。
-备注：不同Biztype关联不同的业务场景与识别能力策略，调用前请确认正确的Biztype。
+     * Set 接口使用的识别策略编号，需在[控制台](https://console.cloud.tencent.com/cms/clouds/manage)获取。详细获取方式请参考以下链接：
+- **内容安全**（详见步骤四：策略配置）：[点击这里](https://cloud.tencent.com/document/product/1124/37119)
+- **AI生成识别**（详见服务对接->方式二）：[点击这里](https://cloud.tencent.com/document/product/1124/118694)
+
+示例值：TencentCloudDefault
+     * @param BizType 接口使用的识别策略编号，需在[控制台](https://console.cloud.tencent.com/cms/clouds/manage)获取。详细获取方式请参考以下链接：
+- **内容安全**（详见步骤四：策略配置）：[点击这里](https://cloud.tencent.com/document/product/1124/37119)
+- **AI生成识别**（详见服务对接->方式二）：[点击这里](https://cloud.tencent.com/document/product/1124/118694)
+
+示例值：TencentCloudDefault
      */
     public void setBizType(String BizType) {
         this.BizType = BizType;
     }
 
     /**
-     * Get 该字段表示您为待检测对象分配的数据ID，传入后可方便您对文件进行标识和管理。<br>取值：由英文字母（大小写均可）、数字及四个特殊符号（_，-，@，#）组成，**长度不超过64个字符** 
-     * @return DataId 该字段表示您为待检测对象分配的数据ID，传入后可方便您对文件进行标识和管理。<br>取值：由英文字母（大小写均可）、数字及四个特殊符号（_，-，@，#）组成，**长度不超过64个字符**
+     * Get 该字段表示您为待检测文本分配的数据ID，作用是方便您对数据进行标识和管理。
+取值：可由英文字母、数字、四种特殊符号（_，-，@，#）组成，**长度不超过64个字符**。
+示例值：a6127dd-c2a0-43e7-a3da-d27022d39ba7 
+     * @return DataId 该字段表示您为待检测文本分配的数据ID，作用是方便您对数据进行标识和管理。
+取值：可由英文字母、数字、四种特殊符号（_，-，@，#）组成，**长度不超过64个字符**。
+示例值：a6127dd-c2a0-43e7-a3da-d27022d39ba7
      */
     public String getDataId() {
         return this.DataId;
     }
 
     /**
-     * Set 该字段表示您为待检测对象分配的数据ID，传入后可方便您对文件进行标识和管理。<br>取值：由英文字母（大小写均可）、数字及四个特殊符号（_，-，@，#）组成，**长度不超过64个字符**
-     * @param DataId 该字段表示您为待检测对象分配的数据ID，传入后可方便您对文件进行标识和管理。<br>取值：由英文字母（大小写均可）、数字及四个特殊符号（_，-，@，#）组成，**长度不超过64个字符**
+     * Set 该字段表示您为待检测文本分配的数据ID，作用是方便您对数据进行标识和管理。
+取值：可由英文字母、数字、四种特殊符号（_，-，@，#）组成，**长度不超过64个字符**。
+示例值：a6127dd-c2a0-43e7-a3da-d27022d39ba7
+     * @param DataId 该字段表示您为待检测文本分配的数据ID，作用是方便您对数据进行标识和管理。
+取值：可由英文字母、数字、四种特殊符号（_，-，@，#）组成，**长度不超过64个字符**。
+示例值：a6127dd-c2a0-43e7-a3da-d27022d39ba7
      */
     public void setDataId(String DataId) {
         this.DataId = DataId;
     }
 
     /**
-     * Get 该字段表示待检测对象对应的用户相关信息，传入后可便于甄别相应违规风险用户 
-     * @return User 该字段表示待检测对象对应的用户相关信息，传入后可便于甄别相应违规风险用户
+     * Get 该字段标识用户信息，传入后可增强甄别有违规风险的发布者账号。 
+     * @return User 该字段标识用户信息，传入后可增强甄别有违规风险的发布者账号。
      */
     public User getUser() {
         return this.User;
     }
 
     /**
-     * Set 该字段表示待检测对象对应的用户相关信息，传入后可便于甄别相应违规风险用户
-     * @param User 该字段表示待检测对象对应的用户相关信息，传入后可便于甄别相应违规风险用户
+     * Set 该字段标识用户信息，传入后可增强甄别有违规风险的发布者账号。
+     * @param User 该字段标识用户信息，传入后可增强甄别有违规风险的发布者账号。
      */
     public void setUser(User User) {
         this.User = User;
     }
 
     /**
-     * Get 该字段表示待检测对象对应的设备相关信息，传入后可便于甄别相应违规风险设备 
-     * @return Device 该字段表示待检测对象对应的设备相关信息，传入后可便于甄别相应违规风险设备
+     * Get 该字段标识设备信息，传入后可增强甄别有违规风险的发布者设备。 
+     * @return Device 该字段标识设备信息，传入后可增强甄别有违规风险的发布者设备。
      */
     public Device getDevice() {
         return this.Device;
     }
 
     /**
-     * Set 该字段表示待检测对象对应的设备相关信息，传入后可便于甄别相应违规风险设备
-     * @param Device 该字段表示待检测对象对应的设备相关信息，传入后可便于甄别相应违规风险设备
+     * Set 该字段标识设备信息，传入后可增强甄别有违规风险的发布者设备。
+     * @param Device 该字段标识设备信息，传入后可增强甄别有违规风险的发布者设备。
      */
     public void setDevice(Device Device) {
         this.Device = Device;
     }
 
     /**
-     * Get 表示Content的原始语种，枚举值包括 "en" 和 "zh"。其中，"en" 表示英文，"zh" 表示中文。非中文场景的处理耗时较高，具体情况取决于送审文本长度，非中文场景需[反馈工单](https://console.cloud.tencent.com/workorder/category?level1_id=141&level2_id=1287&source=14&data_title=%E6%96%87%E6%9C%AC%E5%86%85%E5%AE%B9%E5%AE%89%E5%85%A8&step=1)确认。 
-     * @return SourceLanguage 表示Content的原始语种，枚举值包括 "en" 和 "zh"。其中，"en" 表示英文，"zh" 表示中文。非中文场景的处理耗时较高，具体情况取决于送审文本长度，非中文场景需[反馈工单](https://console.cloud.tencent.com/workorder/category?level1_id=141&level2_id=1287&source=14&data_title=%E6%96%87%E6%9C%AC%E5%86%85%E5%AE%B9%E5%AE%89%E5%85%A8&step=1)确认。
+     * Get Content字段的原始语种，枚举值包括 zh 和 en：
+- 推荐使用 zh
+- en 适用于纯英文内容，耗时较高。若需使用 en，请先通过[反馈工单](https://console.cloud.tencent.com/workorder/category?level1_id=141&level2_id=1287&source=14&data_title=%E6%96%87%E6%9C%AC%E5%86%85%E5%AE%B9%E5%AE%89%E5%85%A8&step=1)确认
+
+示例值：zh
+ 
+     * @return SourceLanguage Content字段的原始语种，枚举值包括 zh 和 en：
+- 推荐使用 zh
+- en 适用于纯英文内容，耗时较高。若需使用 en，请先通过[反馈工单](https://console.cloud.tencent.com/workorder/category?level1_id=141&level2_id=1287&source=14&data_title=%E6%96%87%E6%9C%AC%E5%86%85%E5%AE%B9%E5%AE%89%E5%85%A8&step=1)确认
+
+示例值：zh
+
      */
     public String getSourceLanguage() {
         return this.SourceLanguage;
     }
 
     /**
-     * Set 表示Content的原始语种，枚举值包括 "en" 和 "zh"。其中，"en" 表示英文，"zh" 表示中文。非中文场景的处理耗时较高，具体情况取决于送审文本长度，非中文场景需[反馈工单](https://console.cloud.tencent.com/workorder/category?level1_id=141&level2_id=1287&source=14&data_title=%E6%96%87%E6%9C%AC%E5%86%85%E5%AE%B9%E5%AE%89%E5%85%A8&step=1)确认。
-     * @param SourceLanguage 表示Content的原始语种，枚举值包括 "en" 和 "zh"。其中，"en" 表示英文，"zh" 表示中文。非中文场景的处理耗时较高，具体情况取决于送审文本长度，非中文场景需[反馈工单](https://console.cloud.tencent.com/workorder/category?level1_id=141&level2_id=1287&source=14&data_title=%E6%96%87%E6%9C%AC%E5%86%85%E5%AE%B9%E5%AE%89%E5%85%A8&step=1)确认。
+     * Set Content字段的原始语种，枚举值包括 zh 和 en：
+- 推荐使用 zh
+- en 适用于纯英文内容，耗时较高。若需使用 en，请先通过[反馈工单](https://console.cloud.tencent.com/workorder/category?level1_id=141&level2_id=1287&source=14&data_title=%E6%96%87%E6%9C%AC%E5%86%85%E5%AE%B9%E5%AE%89%E5%85%A8&step=1)确认
+
+示例值：zh
+
+     * @param SourceLanguage Content字段的原始语种，枚举值包括 zh 和 en：
+- 推荐使用 zh
+- en 适用于纯英文内容，耗时较高。若需使用 en，请先通过[反馈工单](https://console.cloud.tencent.com/workorder/category?level1_id=141&level2_id=1287&source=14&data_title=%E6%96%87%E6%9C%AC%E5%86%85%E5%AE%B9%E5%AE%89%E5%85%A8&step=1)确认
+
+示例值：zh
+
      */
     public void setSourceLanguage(String SourceLanguage) {
         this.SourceLanguage = SourceLanguage;
     }
 
     /**
-     * Get 审核的业务类型，枚举值包括"TEXT"和"TEXT_AIGC"。其中"TEXT"表示传统文本审核，"TEXT_AIGC"表示AI生成检测（生成检测能力具体能力了解可[参见文档](https://cloud.tencent.com/document/product/1124/118694)）。 
-     * @return Type 审核的业务类型，枚举值包括"TEXT"和"TEXT_AIGC"。其中"TEXT"表示传统文本审核，"TEXT_AIGC"表示AI生成检测（生成检测能力具体能力了解可[参见文档](https://cloud.tencent.com/document/product/1124/118694)）。
+     * Get 服务类型，枚举值包括 TEXT 和 TEXT_AIGC：
+TEXT：内容安全
+TEXT_AIGC：AI生成识别 
+     * @return Type 服务类型，枚举值包括 TEXT 和 TEXT_AIGC：
+TEXT：内容安全
+TEXT_AIGC：AI生成识别
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 审核的业务类型，枚举值包括"TEXT"和"TEXT_AIGC"。其中"TEXT"表示传统文本审核，"TEXT_AIGC"表示AI生成检测（生成检测能力具体能力了解可[参见文档](https://cloud.tencent.com/document/product/1124/118694)）。
-     * @param Type 审核的业务类型，枚举值包括"TEXT"和"TEXT_AIGC"。其中"TEXT"表示传统文本审核，"TEXT_AIGC"表示AI生成检测（生成检测能力具体能力了解可[参见文档](https://cloud.tencent.com/document/product/1124/118694)）。
+     * Set 服务类型，枚举值包括 TEXT 和 TEXT_AIGC：
+TEXT：内容安全
+TEXT_AIGC：AI生成识别
+     * @param Type 服务类型，枚举值包括 TEXT 和 TEXT_AIGC：
+TEXT：内容安全
+TEXT_AIGC：AI生成识别
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 流式审核策略维度下的唯一会话ID 
-     * @return SessionId 流式审核策略维度下的唯一会话ID
+     * Get 适用于上下文关联审核场景，若多条文本内容需要联合审核，通过该字段关联会话。
+示例值：7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b 
+     * @return SessionId 适用于上下文关联审核场景，若多条文本内容需要联合审核，通过该字段关联会话。
+示例值：7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 流式审核策略维度下的唯一会话ID
-     * @param SessionId 流式审核策略维度下的唯一会话ID
+     * Set 适用于上下文关联审核场景，若多条文本内容需要联合审核，通过该字段关联会话。
+示例值：7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b
+     * @param SessionId 适用于上下文关联审核场景，若多条文本内容需要联合审核，通过该字段关联会话。
+示例值：7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;

@@ -31,6 +31,13 @@ public class TagVoteSum extends AbstractModel {
     private Long TagId;
 
     /**
+    * 标签名
+    */
+    @SerializedName("TagName")
+    @Expose
+    private String TagName;
+
+    /**
     * 该表该标签投票次数
     */
     @SerializedName("VoteSum")
@@ -45,19 +52,44 @@ public class TagVoteSum extends AbstractModel {
     private Boolean Status;
 
     /**
-    * 标签名
-    */
-    @SerializedName("TagName")
-    @Expose
-    private String TagName;
-
-    /**
     * 标签描述
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagDesc")
     @Expose
     private String TagDesc;
+
+    /**
+    * 标签值Id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TagValueId")
+    @Expose
+    private Long TagValueId;
+
+    /**
+    * 标签值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TagValue")
+    @Expose
+    private String TagValue;
+
+    /**
+    * 标签是否已删除
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TagIsDeleted")
+    @Expose
+    private Boolean TagIsDeleted;
+
+    /**
+    * 标签值是否已删除
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TagValueIsDeleted")
+    @Expose
+    private Boolean TagValueIsDeleted;
 
     /**
      * Get 标签id 
@@ -73,6 +105,22 @@ public class TagVoteSum extends AbstractModel {
      */
     public void setTagId(Long TagId) {
         this.TagId = TagId;
+    }
+
+    /**
+     * Get 标签名 
+     * @return TagName 标签名
+     */
+    public String getTagName() {
+        return this.TagName;
+    }
+
+    /**
+     * Set 标签名
+     * @param TagName 标签名
+     */
+    public void setTagName(String TagName) {
+        this.TagName = TagName;
     }
 
     /**
@@ -108,22 +156,6 @@ public class TagVoteSum extends AbstractModel {
     }
 
     /**
-     * Get 标签名 
-     * @return TagName 标签名
-     */
-    public String getTagName() {
-        return this.TagName;
-    }
-
-    /**
-     * Set 标签名
-     * @param TagName 标签名
-     */
-    public void setTagName(String TagName) {
-        this.TagName = TagName;
-    }
-
-    /**
      * Get 标签描述
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TagDesc 标签描述
@@ -143,6 +175,86 @@ public class TagVoteSum extends AbstractModel {
         this.TagDesc = TagDesc;
     }
 
+    /**
+     * Get 标签值Id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TagValueId 标签值Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTagValueId() {
+        return this.TagValueId;
+    }
+
+    /**
+     * Set 标签值Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagValueId 标签值Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTagValueId(Long TagValueId) {
+        this.TagValueId = TagValueId;
+    }
+
+    /**
+     * Get 标签值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TagValue 标签值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTagValue() {
+        return this.TagValue;
+    }
+
+    /**
+     * Set 标签值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagValue 标签值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTagValue(String TagValue) {
+        this.TagValue = TagValue;
+    }
+
+    /**
+     * Get 标签是否已删除
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TagIsDeleted 标签是否已删除
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getTagIsDeleted() {
+        return this.TagIsDeleted;
+    }
+
+    /**
+     * Set 标签是否已删除
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagIsDeleted 标签是否已删除
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTagIsDeleted(Boolean TagIsDeleted) {
+        this.TagIsDeleted = TagIsDeleted;
+    }
+
+    /**
+     * Get 标签值是否已删除
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TagValueIsDeleted 标签值是否已删除
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getTagValueIsDeleted() {
+        return this.TagValueIsDeleted;
+    }
+
+    /**
+     * Set 标签值是否已删除
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagValueIsDeleted 标签值是否已删除
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTagValueIsDeleted(Boolean TagValueIsDeleted) {
+        this.TagValueIsDeleted = TagValueIsDeleted;
+    }
+
     public TagVoteSum() {
     }
 
@@ -154,17 +266,29 @@ public class TagVoteSum extends AbstractModel {
         if (source.TagId != null) {
             this.TagId = new Long(source.TagId);
         }
+        if (source.TagName != null) {
+            this.TagName = new String(source.TagName);
+        }
         if (source.VoteSum != null) {
             this.VoteSum = new Long(source.VoteSum);
         }
         if (source.Status != null) {
             this.Status = new Boolean(source.Status);
         }
-        if (source.TagName != null) {
-            this.TagName = new String(source.TagName);
-        }
         if (source.TagDesc != null) {
             this.TagDesc = new String(source.TagDesc);
+        }
+        if (source.TagValueId != null) {
+            this.TagValueId = new Long(source.TagValueId);
+        }
+        if (source.TagValue != null) {
+            this.TagValue = new String(source.TagValue);
+        }
+        if (source.TagIsDeleted != null) {
+            this.TagIsDeleted = new Boolean(source.TagIsDeleted);
+        }
+        if (source.TagValueIsDeleted != null) {
+            this.TagValueIsDeleted = new Boolean(source.TagValueIsDeleted);
         }
     }
 
@@ -174,10 +298,14 @@ public class TagVoteSum extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TagId", this.TagId);
+        this.setParamSimple(map, prefix + "TagName", this.TagName);
         this.setParamSimple(map, prefix + "VoteSum", this.VoteSum);
         this.setParamSimple(map, prefix + "Status", this.Status);
-        this.setParamSimple(map, prefix + "TagName", this.TagName);
         this.setParamSimple(map, prefix + "TagDesc", this.TagDesc);
+        this.setParamSimple(map, prefix + "TagValueId", this.TagValueId);
+        this.setParamSimple(map, prefix + "TagValue", this.TagValue);
+        this.setParamSimple(map, prefix + "TagIsDeleted", this.TagIsDeleted);
+        this.setParamSimple(map, prefix + "TagValueIsDeleted", this.TagValueIsDeleted);
 
     }
 }

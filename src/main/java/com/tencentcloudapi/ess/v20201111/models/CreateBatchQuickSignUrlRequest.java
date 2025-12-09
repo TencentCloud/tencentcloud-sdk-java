@@ -174,6 +174,13 @@ public class CreateBatchQuickSignUrlRequest extends AbstractModel {
     private PresetApproverInfo PresetApproverInfo;
 
     /**
+    * 是否允许此链接中签署方批量确认已读文件。 <ul><li>false (默认): 不允许批量确认已读文件。</li> <li>true : 允许批量确认已读文件。</li></ul>注：`1. 此功能为白名单功能，使用前请联系对应客户经理进行开通。2. 若批量签署的合同中第一份待签署合同所选择的印章或者签名无法完全覆盖后续合同要求，或者当前签署人没有指定印章使用权限，则无法使用此功能，会自动退化为逐份确认。`
+    */
+    @SerializedName("CanSkipReadFlow")
+    @Expose
+    private Boolean CanSkipReadFlow;
+
+    /**
      * Get 批量签署的流程签署人，其中姓名(ApproverName)、参与人类型(ApproverType)必传，手机号(ApproverMobile)和证件信息(ApproverIdCardType、ApproverIdCardNumber)可任选一种或全部传入。
 <ul>
 <li>若为个人参与方：ApproverType=1</li>
@@ -593,6 +600,22 @@ public class CreateBatchQuickSignUrlRequest extends AbstractModel {
         this.PresetApproverInfo = PresetApproverInfo;
     }
 
+    /**
+     * Get 是否允许此链接中签署方批量确认已读文件。 <ul><li>false (默认): 不允许批量确认已读文件。</li> <li>true : 允许批量确认已读文件。</li></ul>注：`1. 此功能为白名单功能，使用前请联系对应客户经理进行开通。2. 若批量签署的合同中第一份待签署合同所选择的印章或者签名无法完全覆盖后续合同要求，或者当前签署人没有指定印章使用权限，则无法使用此功能，会自动退化为逐份确认。` 
+     * @return CanSkipReadFlow 是否允许此链接中签署方批量确认已读文件。 <ul><li>false (默认): 不允许批量确认已读文件。</li> <li>true : 允许批量确认已读文件。</li></ul>注：`1. 此功能为白名单功能，使用前请联系对应客户经理进行开通。2. 若批量签署的合同中第一份待签署合同所选择的印章或者签名无法完全覆盖后续合同要求，或者当前签署人没有指定印章使用权限，则无法使用此功能，会自动退化为逐份确认。`
+     */
+    public Boolean getCanSkipReadFlow() {
+        return this.CanSkipReadFlow;
+    }
+
+    /**
+     * Set 是否允许此链接中签署方批量确认已读文件。 <ul><li>false (默认): 不允许批量确认已读文件。</li> <li>true : 允许批量确认已读文件。</li></ul>注：`1. 此功能为白名单功能，使用前请联系对应客户经理进行开通。2. 若批量签署的合同中第一份待签署合同所选择的印章或者签名无法完全覆盖后续合同要求，或者当前签署人没有指定印章使用权限，则无法使用此功能，会自动退化为逐份确认。`
+     * @param CanSkipReadFlow 是否允许此链接中签署方批量确认已读文件。 <ul><li>false (默认): 不允许批量确认已读文件。</li> <li>true : 允许批量确认已读文件。</li></ul>注：`1. 此功能为白名单功能，使用前请联系对应客户经理进行开通。2. 若批量签署的合同中第一份待签署合同所选择的印章或者签名无法完全覆盖后续合同要求，或者当前签署人没有指定印章使用权限，则无法使用此功能，会自动退化为逐份确认。`
+     */
+    public void setCanSkipReadFlow(Boolean CanSkipReadFlow) {
+        this.CanSkipReadFlow = CanSkipReadFlow;
+    }
+
     public CreateBatchQuickSignUrlRequest() {
     }
 
@@ -655,6 +678,9 @@ public class CreateBatchQuickSignUrlRequest extends AbstractModel {
         if (source.PresetApproverInfo != null) {
             this.PresetApproverInfo = new PresetApproverInfo(source.PresetApproverInfo);
         }
+        if (source.CanSkipReadFlow != null) {
+            this.CanSkipReadFlow = new Boolean(source.CanSkipReadFlow);
+        }
     }
 
 
@@ -677,6 +703,7 @@ public class CreateBatchQuickSignUrlRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CacheApproverInfo", this.CacheApproverInfo);
         this.setParamSimple(map, prefix + "CanBatchReject", this.CanBatchReject);
         this.setParamObj(map, prefix + "PresetApproverInfo.", this.PresetApproverInfo);
+        this.setParamSimple(map, prefix + "CanSkipReadFlow", this.CanSkipReadFlow);
 
     }
 }

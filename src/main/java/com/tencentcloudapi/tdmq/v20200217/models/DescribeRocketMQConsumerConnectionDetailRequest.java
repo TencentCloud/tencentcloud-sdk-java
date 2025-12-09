@@ -31,7 +31,7 @@ public class DescribeRocketMQConsumerConnectionDetailRequest extends AbstractMod
     private String ClusterId;
 
     /**
-    * 命名空间名称
+    * 消费组所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
     */
     @SerializedName("NamespaceId")
     @Expose
@@ -89,16 +89,16 @@ public class DescribeRocketMQConsumerConnectionDetailRequest extends AbstractMod
     }
 
     /**
-     * Get 命名空间名称 
-     * @return NamespaceId 命名空间名称
+     * Get 消费组所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default 
+     * @return NamespaceId 消费组所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
      */
     public String getNamespaceId() {
         return this.NamespaceId;
     }
 
     /**
-     * Set 命名空间名称
-     * @param NamespaceId 命名空间名称
+     * Set 消费组所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
+     * @param NamespaceId 消费组所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
      */
     public void setNamespaceId(String NamespaceId) {
         this.NamespaceId = NamespaceId;

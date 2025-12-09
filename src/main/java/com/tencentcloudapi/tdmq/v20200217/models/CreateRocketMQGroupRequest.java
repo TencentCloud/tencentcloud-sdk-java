@@ -31,7 +31,7 @@ public class CreateRocketMQGroupRequest extends AbstractModel {
     private String GroupId;
 
     /**
-    * 命名空间，目前只支持单个命名空间
+    * 消费组所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
     */
     @SerializedName("Namespaces")
     @Expose
@@ -96,16 +96,16 @@ public class CreateRocketMQGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get 命名空间，目前只支持单个命名空间 
-     * @return Namespaces 命名空间，目前只支持单个命名空间
+     * Get 消费组所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default 
+     * @return Namespaces 消费组所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
      */
     public String [] getNamespaces() {
         return this.Namespaces;
     }
 
     /**
-     * Set 命名空间，目前只支持单个命名空间
-     * @param Namespaces 命名空间，目前只支持单个命名空间
+     * Set 消费组所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
+     * @param Namespaces 消费组所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
      */
     public void setNamespaces(String [] Namespaces) {
         this.Namespaces = Namespaces;

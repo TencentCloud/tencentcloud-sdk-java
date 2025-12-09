@@ -143,6 +143,15 @@ public class DescribeOpsWorkflowsRequest extends AbstractModel {
     private String ScheduleTimeZone;
 
     /**
+    * 是否过滤无权限的工作流
+true: 过滤无权限的仅返回有权限的工作流列表(默认)
+false： 返回所有的工作流列表
+    */
+    @SerializedName("CheckPrivilege")
+    @Expose
+    private Boolean CheckPrivilege;
+
+    /**
      * Get 项目id 
      * @return ProjectId 项目id
      */
@@ -414,6 +423,30 @@ public class DescribeOpsWorkflowsRequest extends AbstractModel {
         this.ScheduleTimeZone = ScheduleTimeZone;
     }
 
+    /**
+     * Get 是否过滤无权限的工作流
+true: 过滤无权限的仅返回有权限的工作流列表(默认)
+false： 返回所有的工作流列表 
+     * @return CheckPrivilege 是否过滤无权限的工作流
+true: 过滤无权限的仅返回有权限的工作流列表(默认)
+false： 返回所有的工作流列表
+     */
+    public Boolean getCheckPrivilege() {
+        return this.CheckPrivilege;
+    }
+
+    /**
+     * Set 是否过滤无权限的工作流
+true: 过滤无权限的仅返回有权限的工作流列表(默认)
+false： 返回所有的工作流列表
+     * @param CheckPrivilege 是否过滤无权限的工作流
+true: 过滤无权限的仅返回有权限的工作流列表(默认)
+false： 返回所有的工作流列表
+     */
+    public void setCheckPrivilege(Boolean CheckPrivilege) {
+        this.CheckPrivilege = CheckPrivilege;
+    }
+
     public DescribeOpsWorkflowsRequest() {
     }
 
@@ -479,6 +512,9 @@ public class DescribeOpsWorkflowsRequest extends AbstractModel {
         if (source.ScheduleTimeZone != null) {
             this.ScheduleTimeZone = new String(source.ScheduleTimeZone);
         }
+        if (source.CheckPrivilege != null) {
+            this.CheckPrivilege = new Boolean(source.CheckPrivilege);
+        }
     }
 
 
@@ -503,6 +539,7 @@ public class DescribeOpsWorkflowsRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "WorkflowTypeList.", this.WorkflowTypeList);
         this.setParamSimple(map, prefix + "KeyWord", this.KeyWord);
         this.setParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
+        this.setParamSimple(map, prefix + "CheckPrivilege", this.CheckPrivilege);
 
     }
 }

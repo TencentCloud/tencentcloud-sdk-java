@@ -24,23 +24,28 @@ import java.util.HashMap;
 public class GetFinancialLLMTaskResultRequest extends AbstractModel {
 
     /**
-    * 金融大模型审校任务ID
+    * 该值对应创建任务接口里返回的TaskId字段值，创建任务接口见[创建金融大模型审校任务](https://cloud.tencent.com/document/product/1124/124463)。
+示例值：3570106e-b156-45d9-8af5-99b46f7eb2f9
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-     * Get 金融大模型审校任务ID 
-     * @return TaskId 金融大模型审校任务ID
+     * Get 该值对应创建任务接口里返回的TaskId字段值，创建任务接口见[创建金融大模型审校任务](https://cloud.tencent.com/document/product/1124/124463)。
+示例值：3570106e-b156-45d9-8af5-99b46f7eb2f9 
+     * @return TaskId 该值对应创建任务接口里返回的TaskId字段值，创建任务接口见[创建金融大模型审校任务](https://cloud.tencent.com/document/product/1124/124463)。
+示例值：3570106e-b156-45d9-8af5-99b46f7eb2f9
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 金融大模型审校任务ID
-     * @param TaskId 金融大模型审校任务ID
+     * Set 该值对应创建任务接口里返回的TaskId字段值，创建任务接口见[创建金融大模型审校任务](https://cloud.tencent.com/document/product/1124/124463)。
+示例值：3570106e-b156-45d9-8af5-99b46f7eb2f9
+     * @param TaskId 该值对应创建任务接口里返回的TaskId字段值，创建任务接口见[创建金融大模型审校任务](https://cloud.tencent.com/document/product/1124/124463)。
+示例值：3570106e-b156-45d9-8af5-99b46f7eb2f9
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

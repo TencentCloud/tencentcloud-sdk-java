@@ -24,137 +24,142 @@ import java.util.HashMap;
 public class CreateFinancialLLMTaskRequest extends AbstractModel {
 
     /**
-    * 审核策略BizType
+    * 接口使用的识别策略 ID，请参考 [快速指引](https://cloud.tencent.com/document/product/1124/124604) 获取该值。  
+示例值：TencentCloudFinancialLLMDefault
     */
     @SerializedName("BizType")
     @Expose
     private String BizType;
 
     /**
-    * 待审文件类型，目前支持：PDF, DOC, DOCX
-    */
-    @SerializedName("FileType")
-    @Expose
-    private String FileType;
+    * 送审内容的格式，有两个可选值：
+- 1：代表送审内容为**文档**，如DOC文档
+- 2：代表送审内容为**纯文本**
 
-    /**
-    * 送审内容类型：1-文档，2-文本
+示例值：1
     */
     @SerializedName("ContentType")
     @Expose
     private Long ContentType;
 
     /**
-    * 送审内容，根据ContentType字段的取值，传入送审文档的Url链接，或送审文本的Base64编码
+    * 若送审内容为文档（ContentType=1），需要传入具体格式，当前支持：DOC、DOCX、PDF。  
+说明：若送审内容为纯文本（ContentType=2），则本字段传空（FileType=""）。
+    */
+    @SerializedName("FileType")
+    @Expose
+    private String FileType;
 
-文档限制：
+    /**
+    * 送审内容的传入方式如下：
+- 若为文档类，需传入文档的URL（原文档文字数不超过10,000字），例如：http://xxxxxxxxxxxx/financial_test.doc
+- 若为纯文本类，请以UTF-8格式进行Base64编码后传入（编码后字符数不超过10,000字），例如：5piO5aSpNjAz5LiA5a6a5rao
 
-- 文件下载时间不超过15秒（文件存储于腾讯云的Url可保障更高的下载速度和稳定性，建议文件存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。）
-- 所下载文件经 Base64 编码后不超过支持的文件大小：PDF/DOC/DOCX - 200M
-- 文档解析后的纯文本长度不超过 10000字
-
-文本限制：Base64解码后的文本长度不超过10000字
-
+示例值：5piO5aSpNjAz5LiA5a6a5rao
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-     * Get 审核策略BizType 
-     * @return BizType 审核策略BizType
+     * Get 接口使用的识别策略 ID，请参考 [快速指引](https://cloud.tencent.com/document/product/1124/124604) 获取该值。  
+示例值：TencentCloudFinancialLLMDefault 
+     * @return BizType 接口使用的识别策略 ID，请参考 [快速指引](https://cloud.tencent.com/document/product/1124/124604) 获取该值。  
+示例值：TencentCloudFinancialLLMDefault
      */
     public String getBizType() {
         return this.BizType;
     }
 
     /**
-     * Set 审核策略BizType
-     * @param BizType 审核策略BizType
+     * Set 接口使用的识别策略 ID，请参考 [快速指引](https://cloud.tencent.com/document/product/1124/124604) 获取该值。  
+示例值：TencentCloudFinancialLLMDefault
+     * @param BizType 接口使用的识别策略 ID，请参考 [快速指引](https://cloud.tencent.com/document/product/1124/124604) 获取该值。  
+示例值：TencentCloudFinancialLLMDefault
      */
     public void setBizType(String BizType) {
         this.BizType = BizType;
     }
 
     /**
-     * Get 待审文件类型，目前支持：PDF, DOC, DOCX 
-     * @return FileType 待审文件类型，目前支持：PDF, DOC, DOCX
-     */
-    public String getFileType() {
-        return this.FileType;
-    }
+     * Get 送审内容的格式，有两个可选值：
+- 1：代表送审内容为**文档**，如DOC文档
+- 2：代表送审内容为**纯文本**
 
-    /**
-     * Set 待审文件类型，目前支持：PDF, DOC, DOCX
-     * @param FileType 待审文件类型，目前支持：PDF, DOC, DOCX
-     */
-    public void setFileType(String FileType) {
-        this.FileType = FileType;
-    }
+示例值：1 
+     * @return ContentType 送审内容的格式，有两个可选值：
+- 1：代表送审内容为**文档**，如DOC文档
+- 2：代表送审内容为**纯文本**
 
-    /**
-     * Get 送审内容类型：1-文档，2-文本 
-     * @return ContentType 送审内容类型：1-文档，2-文本
+示例值：1
      */
     public Long getContentType() {
         return this.ContentType;
     }
 
     /**
-     * Set 送审内容类型：1-文档，2-文本
-     * @param ContentType 送审内容类型：1-文档，2-文本
+     * Set 送审内容的格式，有两个可选值：
+- 1：代表送审内容为**文档**，如DOC文档
+- 2：代表送审内容为**纯文本**
+
+示例值：1
+     * @param ContentType 送审内容的格式，有两个可选值：
+- 1：代表送审内容为**文档**，如DOC文档
+- 2：代表送审内容为**纯文本**
+
+示例值：1
      */
     public void setContentType(Long ContentType) {
         this.ContentType = ContentType;
     }
 
     /**
-     * Get 送审内容，根据ContentType字段的取值，传入送审文档的Url链接，或送审文本的Base64编码
+     * Get 若送审内容为文档（ContentType=1），需要传入具体格式，当前支持：DOC、DOCX、PDF。  
+说明：若送审内容为纯文本（ContentType=2），则本字段传空（FileType=""）。 
+     * @return FileType 若送审内容为文档（ContentType=1），需要传入具体格式，当前支持：DOC、DOCX、PDF。  
+说明：若送审内容为纯文本（ContentType=2），则本字段传空（FileType=""）。
+     */
+    public String getFileType() {
+        return this.FileType;
+    }
 
-文档限制：
+    /**
+     * Set 若送审内容为文档（ContentType=1），需要传入具体格式，当前支持：DOC、DOCX、PDF。  
+说明：若送审内容为纯文本（ContentType=2），则本字段传空（FileType=""）。
+     * @param FileType 若送审内容为文档（ContentType=1），需要传入具体格式，当前支持：DOC、DOCX、PDF。  
+说明：若送审内容为纯文本（ContentType=2），则本字段传空（FileType=""）。
+     */
+    public void setFileType(String FileType) {
+        this.FileType = FileType;
+    }
 
-- 文件下载时间不超过15秒（文件存储于腾讯云的Url可保障更高的下载速度和稳定性，建议文件存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。）
-- 所下载文件经 Base64 编码后不超过支持的文件大小：PDF/DOC/DOCX - 200M
-- 文档解析后的纯文本长度不超过 10000字
+    /**
+     * Get 送审内容的传入方式如下：
+- 若为文档类，需传入文档的URL（原文档文字数不超过10,000字），例如：http://xxxxxxxxxxxx/financial_test.doc
+- 若为纯文本类，请以UTF-8格式进行Base64编码后传入（编码后字符数不超过10,000字），例如：5piO5aSpNjAz5LiA5a6a5rao
 
-文本限制：Base64解码后的文本长度不超过10000字
- 
-     * @return Content 送审内容，根据ContentType字段的取值，传入送审文档的Url链接，或送审文本的Base64编码
+示例值：5piO5aSpNjAz5LiA5a6a5rao 
+     * @return Content 送审内容的传入方式如下：
+- 若为文档类，需传入文档的URL（原文档文字数不超过10,000字），例如：http://xxxxxxxxxxxx/financial_test.doc
+- 若为纯文本类，请以UTF-8格式进行Base64编码后传入（编码后字符数不超过10,000字），例如：5piO5aSpNjAz5LiA5a6a5rao
 
-文档限制：
-
-- 文件下载时间不超过15秒（文件存储于腾讯云的Url可保障更高的下载速度和稳定性，建议文件存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。）
-- 所下载文件经 Base64 编码后不超过支持的文件大小：PDF/DOC/DOCX - 200M
-- 文档解析后的纯文本长度不超过 10000字
-
-文本限制：Base64解码后的文本长度不超过10000字
-
+示例值：5piO5aSpNjAz5LiA5a6a5rao
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set 送审内容，根据ContentType字段的取值，传入送审文档的Url链接，或送审文本的Base64编码
+     * Set 送审内容的传入方式如下：
+- 若为文档类，需传入文档的URL（原文档文字数不超过10,000字），例如：http://xxxxxxxxxxxx/financial_test.doc
+- 若为纯文本类，请以UTF-8格式进行Base64编码后传入（编码后字符数不超过10,000字），例如：5piO5aSpNjAz5LiA5a6a5rao
 
-文档限制：
+示例值：5piO5aSpNjAz5LiA5a6a5rao
+     * @param Content 送审内容的传入方式如下：
+- 若为文档类，需传入文档的URL（原文档文字数不超过10,000字），例如：http://xxxxxxxxxxxx/financial_test.doc
+- 若为纯文本类，请以UTF-8格式进行Base64编码后传入（编码后字符数不超过10,000字），例如：5piO5aSpNjAz5LiA5a6a5rao
 
-- 文件下载时间不超过15秒（文件存储于腾讯云的Url可保障更高的下载速度和稳定性，建议文件存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。）
-- 所下载文件经 Base64 编码后不超过支持的文件大小：PDF/DOC/DOCX - 200M
-- 文档解析后的纯文本长度不超过 10000字
-
-文本限制：Base64解码后的文本长度不超过10000字
-
-     * @param Content 送审内容，根据ContentType字段的取值，传入送审文档的Url链接，或送审文本的Base64编码
-
-文档限制：
-
-- 文件下载时间不超过15秒（文件存储于腾讯云的Url可保障更高的下载速度和稳定性，建议文件存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。）
-- 所下载文件经 Base64 编码后不超过支持的文件大小：PDF/DOC/DOCX - 200M
-- 文档解析后的纯文本长度不超过 10000字
-
-文本限制：Base64解码后的文本长度不超过10000字
-
+示例值：5piO5aSpNjAz5LiA5a6a5rao
      */
     public void setContent(String Content) {
         this.Content = Content;
@@ -171,11 +176,11 @@ public class CreateFinancialLLMTaskRequest extends AbstractModel {
         if (source.BizType != null) {
             this.BizType = new String(source.BizType);
         }
-        if (source.FileType != null) {
-            this.FileType = new String(source.FileType);
-        }
         if (source.ContentType != null) {
             this.ContentType = new Long(source.ContentType);
+        }
+        if (source.FileType != null) {
+            this.FileType = new String(source.FileType);
         }
         if (source.Content != null) {
             this.Content = new String(source.Content);
@@ -188,8 +193,8 @@ public class CreateFinancialLLMTaskRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BizType", this.BizType);
-        this.setParamSimple(map, prefix + "FileType", this.FileType);
         this.setParamSimple(map, prefix + "ContentType", this.ContentType);
+        this.setParamSimple(map, prefix + "FileType", this.FileType);
         this.setParamSimple(map, prefix + "Content", this.Content);
 
     }

@@ -761,6 +761,30 @@ no：任务无需满足自依赖
     private String OwnerId;
 
     /**
+    * 当前用户对该任务的权限列表， 当前支持
+CAN_MANAGE : 有权限管理操作
+    */
+    @SerializedName("Privileges")
+    @Expose
+    private String [] Privileges;
+
+    /**
+    * bundle客户端唯一id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BundleId")
+    @Expose
+    private String BundleId;
+
+    /**
+    * bundle客户端信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BundleInfo")
+    @Expose
+    private String BundleInfo;
+
+    /**
      * Get 任务ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskId 任务ID
@@ -2604,6 +2628,66 @@ no：任务无需满足自依赖
         this.OwnerId = OwnerId;
     }
 
+    /**
+     * Get 当前用户对该任务的权限列表， 当前支持
+CAN_MANAGE : 有权限管理操作 
+     * @return Privileges 当前用户对该任务的权限列表， 当前支持
+CAN_MANAGE : 有权限管理操作
+     */
+    public String [] getPrivileges() {
+        return this.Privileges;
+    }
+
+    /**
+     * Set 当前用户对该任务的权限列表， 当前支持
+CAN_MANAGE : 有权限管理操作
+     * @param Privileges 当前用户对该任务的权限列表， 当前支持
+CAN_MANAGE : 有权限管理操作
+     */
+    public void setPrivileges(String [] Privileges) {
+        this.Privileges = Privileges;
+    }
+
+    /**
+     * Get bundle客户端唯一id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BundleId bundle客户端唯一id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBundleId() {
+        return this.BundleId;
+    }
+
+    /**
+     * Set bundle客户端唯一id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BundleId bundle客户端唯一id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBundleId(String BundleId) {
+        this.BundleId = BundleId;
+    }
+
+    /**
+     * Get bundle客户端信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BundleInfo bundle客户端信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBundleInfo() {
+        return this.BundleInfo;
+    }
+
+    /**
+     * Set bundle客户端信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BundleInfo bundle客户端信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBundleInfo(String BundleInfo) {
+        this.BundleInfo = BundleInfo;
+    }
+
     public TaskOpsDto() {
     }
 
@@ -2894,6 +2978,18 @@ no：任务无需满足自依赖
         if (source.OwnerId != null) {
             this.OwnerId = new String(source.OwnerId);
         }
+        if (source.Privileges != null) {
+            this.Privileges = new String[source.Privileges.length];
+            for (int i = 0; i < source.Privileges.length; i++) {
+                this.Privileges[i] = new String(source.Privileges[i]);
+            }
+        }
+        if (source.BundleId != null) {
+            this.BundleId = new String(source.BundleId);
+        }
+        if (source.BundleInfo != null) {
+            this.BundleInfo = new String(source.BundleInfo);
+        }
     }
 
 
@@ -2993,6 +3089,9 @@ no：任务无需满足自依赖
         this.setParamSimple(map, prefix + "SelfWorkFlowDependType", this.SelfWorkFlowDependType);
         this.setParamSimple(map, prefix + "AllowRedoType", this.AllowRedoType);
         this.setParamSimple(map, prefix + "OwnerId", this.OwnerId);
+        this.setParamArraySimple(map, prefix + "Privileges.", this.Privileges);
+        this.setParamSimple(map, prefix + "BundleId", this.BundleId);
+        this.setParamSimple(map, prefix + "BundleInfo", this.BundleInfo);
 
     }
 }

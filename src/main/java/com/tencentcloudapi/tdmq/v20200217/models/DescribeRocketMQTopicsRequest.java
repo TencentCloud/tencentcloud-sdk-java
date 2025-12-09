@@ -45,7 +45,7 @@ public class DescribeRocketMQTopicsRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * 命名空间
+    * 主题所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
     */
     @SerializedName("NamespaceId")
     @Expose
@@ -128,16 +128,16 @@ public class DescribeRocketMQTopicsRequest extends AbstractModel {
     }
 
     /**
-     * Get 命名空间 
-     * @return NamespaceId 命名空间
+     * Get 主题所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default 
+     * @return NamespaceId 主题所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
      */
     public String getNamespaceId() {
         return this.NamespaceId;
     }
 
     /**
-     * Set 命名空间
-     * @param NamespaceId 命名空间
+     * Set 主题所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
+     * @param NamespaceId 主题所在的命名空间，4.x 通用集群命名空间固定为: tdmq_default
      */
     public void setNamespaceId(String NamespaceId) {
         this.NamespaceId = NamespaceId;

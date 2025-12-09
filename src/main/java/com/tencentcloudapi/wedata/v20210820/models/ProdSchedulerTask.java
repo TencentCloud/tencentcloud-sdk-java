@@ -72,6 +72,22 @@ public class ProdSchedulerTask extends AbstractModel {
     private String ScheduleTimeZone;
 
     /**
+    * 负责人id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InChargeIdList")
+    @Expose
+    private String [] InChargeIdList;
+
+    /**
+    * 负责人name
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InChargeNameList")
+    @Expose
+    private String [] InChargeNameList;
+
+    /**
      * Get 生产调度任务工作流ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return WorkflowId 生产调度任务工作流ID
@@ -191,6 +207,46 @@ public class ProdSchedulerTask extends AbstractModel {
         this.ScheduleTimeZone = ScheduleTimeZone;
     }
 
+    /**
+     * Get 负责人id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InChargeIdList 负责人id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getInChargeIdList() {
+        return this.InChargeIdList;
+    }
+
+    /**
+     * Set 负责人id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InChargeIdList 负责人id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInChargeIdList(String [] InChargeIdList) {
+        this.InChargeIdList = InChargeIdList;
+    }
+
+    /**
+     * Get 负责人name
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InChargeNameList 负责人name
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getInChargeNameList() {
+        return this.InChargeNameList;
+    }
+
+    /**
+     * Set 负责人name
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InChargeNameList 负责人name
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInChargeNameList(String [] InChargeNameList) {
+        this.InChargeNameList = InChargeNameList;
+    }
+
     public ProdSchedulerTask() {
     }
 
@@ -217,6 +273,18 @@ public class ProdSchedulerTask extends AbstractModel {
         if (source.ScheduleTimeZone != null) {
             this.ScheduleTimeZone = new String(source.ScheduleTimeZone);
         }
+        if (source.InChargeIdList != null) {
+            this.InChargeIdList = new String[source.InChargeIdList.length];
+            for (int i = 0; i < source.InChargeIdList.length; i++) {
+                this.InChargeIdList[i] = new String(source.InChargeIdList[i]);
+            }
+        }
+        if (source.InChargeNameList != null) {
+            this.InChargeNameList = new String[source.InChargeNameList.length];
+            for (int i = 0; i < source.InChargeNameList.length; i++) {
+                this.InChargeNameList[i] = new String(source.InChargeNameList[i]);
+            }
+        }
     }
 
 
@@ -230,6 +298,8 @@ public class ProdSchedulerTask extends AbstractModel {
         this.setParamSimple(map, prefix + "CycleType", this.CycleType);
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
         this.setParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
+        this.setParamArraySimple(map, prefix + "InChargeIdList.", this.InChargeIdList);
+        this.setParamArraySimple(map, prefix + "InChargeNameList.", this.InChargeNameList);
 
     }
 }

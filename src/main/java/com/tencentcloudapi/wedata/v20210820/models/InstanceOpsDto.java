@@ -557,6 +557,13 @@ public class InstanceOpsDto extends AbstractModel {
     private String InstanceSchedulerDesc;
 
     /**
+    * 当前用户对该实例的权限列表
+    */
+    @SerializedName("Privileges")
+    @Expose
+    private String [] Privileges;
+
+    /**
      * Get 任务ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskId 任务ID
@@ -1884,6 +1891,22 @@ public class InstanceOpsDto extends AbstractModel {
         this.InstanceSchedulerDesc = InstanceSchedulerDesc;
     }
 
+    /**
+     * Get 当前用户对该实例的权限列表 
+     * @return Privileges 当前用户对该实例的权限列表
+     */
+    public String [] getPrivileges() {
+        return this.Privileges;
+    }
+
+    /**
+     * Set 当前用户对该实例的权限列表
+     * @param Privileges 当前用户对该实例的权限列表
+     */
+    public void setPrivileges(String [] Privileges) {
+        this.Privileges = Privileges;
+    }
+
     public InstanceOpsDto() {
     }
 
@@ -2102,6 +2125,12 @@ public class InstanceOpsDto extends AbstractModel {
         if (source.InstanceSchedulerDesc != null) {
             this.InstanceSchedulerDesc = new String(source.InstanceSchedulerDesc);
         }
+        if (source.Privileges != null) {
+            this.Privileges = new String[source.Privileges.length];
+            for (int i = 0; i < source.Privileges.length; i++) {
+                this.Privileges[i] = new String(source.Privileges[i]);
+            }
+        }
     }
 
 
@@ -2176,6 +2205,7 @@ public class InstanceOpsDto extends AbstractModel {
         this.setParamSimple(map, prefix + "AllowRedoType", this.AllowRedoType);
         this.setParamSimple(map, prefix + "InstanceCycleType", this.InstanceCycleType);
         this.setParamSimple(map, prefix + "InstanceSchedulerDesc", this.InstanceSchedulerDesc);
+        this.setParamArraySimple(map, prefix + "Privileges.", this.Privileges);
 
     }
 }

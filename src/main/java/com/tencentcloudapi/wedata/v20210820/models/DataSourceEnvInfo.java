@@ -88,6 +88,13 @@ public class DataSourceEnvInfo extends AbstractModel {
     private String BizParams;
 
     /**
+    * 是否支持tccatalog
+    */
+    @SerializedName("TcCatalogOpen")
+    @Expose
+    private Boolean TcCatalogOpen;
+
+    /**
      * Get 环境
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Env 环境
@@ -247,6 +254,22 @@ public class DataSourceEnvInfo extends AbstractModel {
         this.BizParams = BizParams;
     }
 
+    /**
+     * Get 是否支持tccatalog 
+     * @return TcCatalogOpen 是否支持tccatalog
+     */
+    public Boolean getTcCatalogOpen() {
+        return this.TcCatalogOpen;
+    }
+
+    /**
+     * Set 是否支持tccatalog
+     * @param TcCatalogOpen 是否支持tccatalog
+     */
+    public void setTcCatalogOpen(Boolean TcCatalogOpen) {
+        this.TcCatalogOpen = TcCatalogOpen;
+    }
+
     public DataSourceEnvInfo() {
     }
 
@@ -279,6 +302,9 @@ public class DataSourceEnvInfo extends AbstractModel {
         if (source.BizParams != null) {
             this.BizParams = new String(source.BizParams);
         }
+        if (source.TcCatalogOpen != null) {
+            this.TcCatalogOpen = new Boolean(source.TcCatalogOpen);
+        }
     }
 
 
@@ -294,6 +320,7 @@ public class DataSourceEnvInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "DataSourceId", this.DataSourceId);
         this.setParamSimple(map, prefix + "EnvDataSourceId", this.EnvDataSourceId);
         this.setParamSimple(map, prefix + "BizParams", this.BizParams);
+        this.setParamSimple(map, prefix + "TcCatalogOpen", this.TcCatalogOpen);
 
     }
 }

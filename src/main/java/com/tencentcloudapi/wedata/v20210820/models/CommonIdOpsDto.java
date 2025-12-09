@@ -32,6 +32,14 @@ public class CommonIdOpsDto extends AbstractModel {
     private String Id;
 
     /**
+    * 补录计划Id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MakeId")
+    @Expose
+    private String MakeId;
+
+    /**
      * Get 返回补录计划名称_ok
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Id 返回补录计划名称_ok
@@ -51,6 +59,26 @@ public class CommonIdOpsDto extends AbstractModel {
         this.Id = Id;
     }
 
+    /**
+     * Get 补录计划Id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MakeId 补录计划Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMakeId() {
+        return this.MakeId;
+    }
+
+    /**
+     * Set 补录计划Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MakeId 补录计划Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMakeId(String MakeId) {
+        this.MakeId = MakeId;
+    }
+
     public CommonIdOpsDto() {
     }
 
@@ -62,6 +90,9 @@ public class CommonIdOpsDto extends AbstractModel {
         if (source.Id != null) {
             this.Id = new String(source.Id);
         }
+        if (source.MakeId != null) {
+            this.MakeId = new String(source.MakeId);
+        }
     }
 
 
@@ -70,6 +101,7 @@ public class CommonIdOpsDto extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "MakeId", this.MakeId);
 
     }
 }

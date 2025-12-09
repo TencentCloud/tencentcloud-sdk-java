@@ -227,6 +227,20 @@ public class DescribeOperateOpsTasksRequest extends AbstractModel {
     private Long [] RunPriorityList;
 
     /**
+    * 是否包含手动工作流
+    */
+    @SerializedName("IncludeManualTask")
+    @Expose
+    private String IncludeManualTask;
+
+    /**
+    * 是否检查权限
+    */
+    @SerializedName("CheckPrivilege")
+    @Expose
+    private Boolean CheckPrivilege;
+
+    /**
      * Get 项目id 
      * @return ProjectId 项目id
      */
@@ -690,6 +704,38 @@ public class DescribeOperateOpsTasksRequest extends AbstractModel {
         this.RunPriorityList = RunPriorityList;
     }
 
+    /**
+     * Get 是否包含手动工作流 
+     * @return IncludeManualTask 是否包含手动工作流
+     */
+    public String getIncludeManualTask() {
+        return this.IncludeManualTask;
+    }
+
+    /**
+     * Set 是否包含手动工作流
+     * @param IncludeManualTask 是否包含手动工作流
+     */
+    public void setIncludeManualTask(String IncludeManualTask) {
+        this.IncludeManualTask = IncludeManualTask;
+    }
+
+    /**
+     * Get 是否检查权限 
+     * @return CheckPrivilege 是否检查权限
+     */
+    public Boolean getCheckPrivilege() {
+        return this.CheckPrivilege;
+    }
+
+    /**
+     * Set 是否检查权限
+     * @param CheckPrivilege 是否检查权限
+     */
+    public void setCheckPrivilege(Boolean CheckPrivilege) {
+        this.CheckPrivilege = CheckPrivilege;
+    }
+
     public DescribeOperateOpsTasksRequest() {
     }
 
@@ -800,6 +846,12 @@ public class DescribeOperateOpsTasksRequest extends AbstractModel {
                 this.RunPriorityList[i] = new Long(source.RunPriorityList[i]);
             }
         }
+        if (source.IncludeManualTask != null) {
+            this.IncludeManualTask = new String(source.IncludeManualTask);
+        }
+        if (source.CheckPrivilege != null) {
+            this.CheckPrivilege = new Boolean(source.CheckPrivilege);
+        }
     }
 
 
@@ -836,6 +888,8 @@ public class DescribeOperateOpsTasksRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "BlackTaskIdList.", this.BlackTaskIdList);
         this.setParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
         this.setParamArraySimple(map, prefix + "RunPriorityList.", this.RunPriorityList);
+        this.setParamSimple(map, prefix + "IncludeManualTask", this.IncludeManualTask);
+        this.setParamSimple(map, prefix + "CheckPrivilege", this.CheckPrivilege);
 
     }
 }
