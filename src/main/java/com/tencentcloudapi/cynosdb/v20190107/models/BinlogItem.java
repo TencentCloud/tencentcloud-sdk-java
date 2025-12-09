@@ -59,6 +59,13 @@ public class BinlogItem extends AbstractModel {
     private Long BinlogId;
 
     /**
+    * binlog所跨地域
+    */
+    @SerializedName("CrossRegions")
+    @Expose
+    private String [] CrossRegions;
+
+    /**
      * Get Binlog文件名称 
      * @return FileName Binlog文件名称
      */
@@ -138,6 +145,22 @@ public class BinlogItem extends AbstractModel {
         this.BinlogId = BinlogId;
     }
 
+    /**
+     * Get binlog所跨地域 
+     * @return CrossRegions binlog所跨地域
+     */
+    public String [] getCrossRegions() {
+        return this.CrossRegions;
+    }
+
+    /**
+     * Set binlog所跨地域
+     * @param CrossRegions binlog所跨地域
+     */
+    public void setCrossRegions(String [] CrossRegions) {
+        this.CrossRegions = CrossRegions;
+    }
+
     public BinlogItem() {
     }
 
@@ -161,6 +184,12 @@ public class BinlogItem extends AbstractModel {
         if (source.BinlogId != null) {
             this.BinlogId = new Long(source.BinlogId);
         }
+        if (source.CrossRegions != null) {
+            this.CrossRegions = new String[source.CrossRegions.length];
+            for (int i = 0; i < source.CrossRegions.length; i++) {
+                this.CrossRegions[i] = new String(source.CrossRegions[i]);
+            }
+        }
     }
 
 
@@ -173,6 +202,7 @@ public class BinlogItem extends AbstractModel {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "FinishTime", this.FinishTime);
         this.setParamSimple(map, prefix + "BinlogId", this.BinlogId);
+        this.setParamArraySimple(map, prefix + "CrossRegions.", this.CrossRegions);
 
     }
 }

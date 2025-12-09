@@ -25,7 +25,6 @@ public class CreateFinancialLLMTaskRequest extends AbstractModel {
 
     /**
     * 接口使用的识别策略 ID，请参考 [快速指引](https://cloud.tencent.com/document/product/1124/124604) 获取该值。  
-示例值：TencentCloudFinancialLLMDefault
     */
     @SerializedName("BizType")
     @Expose
@@ -35,8 +34,6 @@ public class CreateFinancialLLMTaskRequest extends AbstractModel {
     * 送审内容的格式，有两个可选值：
 - 1：代表送审内容为**文档**，如DOC文档
 - 2：代表送审内容为**纯文本**
-
-示例值：1
     */
     @SerializedName("ContentType")
     @Expose
@@ -54,18 +51,14 @@ public class CreateFinancialLLMTaskRequest extends AbstractModel {
     * 送审内容的传入方式如下：
 - 若为文档类，需传入文档的URL（原文档文字数不超过10,000字），例如：http://xxxxxxxxxxxx/financial_test.doc
 - 若为纯文本类，请以UTF-8格式进行Base64编码后传入（编码后字符数不超过10,000字），例如：5piO5aSpNjAz5LiA5a6a5rao
-
-示例值：5piO5aSpNjAz5LiA5a6a5rao
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-     * Get 接口使用的识别策略 ID，请参考 [快速指引](https://cloud.tencent.com/document/product/1124/124604) 获取该值。  
-示例值：TencentCloudFinancialLLMDefault 
+     * Get 接口使用的识别策略 ID，请参考 [快速指引](https://cloud.tencent.com/document/product/1124/124604) 获取该值。   
      * @return BizType 接口使用的识别策略 ID，请参考 [快速指引](https://cloud.tencent.com/document/product/1124/124604) 获取该值。  
-示例值：TencentCloudFinancialLLMDefault
      */
     public String getBizType() {
         return this.BizType;
@@ -73,9 +66,7 @@ public class CreateFinancialLLMTaskRequest extends AbstractModel {
 
     /**
      * Set 接口使用的识别策略 ID，请参考 [快速指引](https://cloud.tencent.com/document/product/1124/124604) 获取该值。  
-示例值：TencentCloudFinancialLLMDefault
      * @param BizType 接口使用的识别策略 ID，请参考 [快速指引](https://cloud.tencent.com/document/product/1124/124604) 获取该值。  
-示例值：TencentCloudFinancialLLMDefault
      */
     public void setBizType(String BizType) {
         this.BizType = BizType;
@@ -84,14 +75,10 @@ public class CreateFinancialLLMTaskRequest extends AbstractModel {
     /**
      * Get 送审内容的格式，有两个可选值：
 - 1：代表送审内容为**文档**，如DOC文档
-- 2：代表送审内容为**纯文本**
-
-示例值：1 
+- 2：代表送审内容为**纯文本** 
      * @return ContentType 送审内容的格式，有两个可选值：
 - 1：代表送审内容为**文档**，如DOC文档
 - 2：代表送审内容为**纯文本**
-
-示例值：1
      */
     public Long getContentType() {
         return this.ContentType;
@@ -101,13 +88,9 @@ public class CreateFinancialLLMTaskRequest extends AbstractModel {
      * Set 送审内容的格式，有两个可选值：
 - 1：代表送审内容为**文档**，如DOC文档
 - 2：代表送审内容为**纯文本**
-
-示例值：1
      * @param ContentType 送审内容的格式，有两个可选值：
 - 1：代表送审内容为**文档**，如DOC文档
 - 2：代表送审内容为**纯文本**
-
-示例值：1
      */
     public void setContentType(Long ContentType) {
         this.ContentType = ContentType;
@@ -136,14 +119,10 @@ public class CreateFinancialLLMTaskRequest extends AbstractModel {
     /**
      * Get 送审内容的传入方式如下：
 - 若为文档类，需传入文档的URL（原文档文字数不超过10,000字），例如：http://xxxxxxxxxxxx/financial_test.doc
-- 若为纯文本类，请以UTF-8格式进行Base64编码后传入（编码后字符数不超过10,000字），例如：5piO5aSpNjAz5LiA5a6a5rao
-
-示例值：5piO5aSpNjAz5LiA5a6a5rao 
+- 若为纯文本类，请以UTF-8格式进行Base64编码后传入（编码后字符数不超过10,000字），例如：5piO5aSpNjAz5LiA5a6a5rao 
      * @return Content 送审内容的传入方式如下：
 - 若为文档类，需传入文档的URL（原文档文字数不超过10,000字），例如：http://xxxxxxxxxxxx/financial_test.doc
 - 若为纯文本类，请以UTF-8格式进行Base64编码后传入（编码后字符数不超过10,000字），例如：5piO5aSpNjAz5LiA5a6a5rao
-
-示例值：5piO5aSpNjAz5LiA5a6a5rao
      */
     public String getContent() {
         return this.Content;
@@ -153,13 +132,9 @@ public class CreateFinancialLLMTaskRequest extends AbstractModel {
      * Set 送审内容的传入方式如下：
 - 若为文档类，需传入文档的URL（原文档文字数不超过10,000字），例如：http://xxxxxxxxxxxx/financial_test.doc
 - 若为纯文本类，请以UTF-8格式进行Base64编码后传入（编码后字符数不超过10,000字），例如：5piO5aSpNjAz5LiA5a6a5rao
-
-示例值：5piO5aSpNjAz5LiA5a6a5rao
      * @param Content 送审内容的传入方式如下：
 - 若为文档类，需传入文档的URL（原文档文字数不超过10,000字），例如：http://xxxxxxxxxxxx/financial_test.doc
 - 若为纯文本类，请以UTF-8格式进行Base64编码后传入（编码后字符数不超过10,000字），例如：5piO5aSpNjAz5LiA5a6a5rao
-
-示例值：5piO5aSpNjAz5LiA5a6a5rao
      */
     public void setContent(String Content) {
         this.Content = Content;

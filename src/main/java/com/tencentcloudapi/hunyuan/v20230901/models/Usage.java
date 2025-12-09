@@ -45,6 +45,13 @@ public class Usage extends AbstractModel {
     private Long TotalTokens;
 
     /**
+    * 输入 token 的详情。
+    */
+    @SerializedName("PromptTokensDetails")
+    @Expose
+    private PromptTokensDetails PromptTokensDetails;
+
+    /**
      * Get 输入 Token 数量。 
      * @return PromptTokens 输入 Token 数量。
      */
@@ -92,6 +99,22 @@ public class Usage extends AbstractModel {
         this.TotalTokens = TotalTokens;
     }
 
+    /**
+     * Get 输入 token 的详情。 
+     * @return PromptTokensDetails 输入 token 的详情。
+     */
+    public PromptTokensDetails getPromptTokensDetails() {
+        return this.PromptTokensDetails;
+    }
+
+    /**
+     * Set 输入 token 的详情。
+     * @param PromptTokensDetails 输入 token 的详情。
+     */
+    public void setPromptTokensDetails(PromptTokensDetails PromptTokensDetails) {
+        this.PromptTokensDetails = PromptTokensDetails;
+    }
+
     public Usage() {
     }
 
@@ -109,6 +132,9 @@ public class Usage extends AbstractModel {
         if (source.TotalTokens != null) {
             this.TotalTokens = new Long(source.TotalTokens);
         }
+        if (source.PromptTokensDetails != null) {
+            this.PromptTokensDetails = new PromptTokensDetails(source.PromptTokensDetails);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class Usage extends AbstractModel {
         this.setParamSimple(map, prefix + "PromptTokens", this.PromptTokens);
         this.setParamSimple(map, prefix + "CompletionTokens", this.CompletionTokens);
         this.setParamSimple(map, prefix + "TotalTokens", this.TotalTokens);
+        this.setParamObj(map, prefix + "PromptTokensDetails.", this.PromptTokensDetails);
 
     }
 }

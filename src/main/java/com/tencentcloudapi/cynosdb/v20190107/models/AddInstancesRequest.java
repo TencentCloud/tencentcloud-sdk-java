@@ -52,7 +52,9 @@ public class AddInstancesRequest extends AbstractModel {
     private Long ReadOnlyCount;
 
     /**
-    * 实例机器类型
+    * 实例机器类型，支持值如下：
+- common：表示通用型
+- exclusive：表示独享型
     */
     @SerializedName("DeviceType")
     @Expose
@@ -215,16 +217,24 @@ public class AddInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例机器类型 
-     * @return DeviceType 实例机器类型
+     * Get 实例机器类型，支持值如下：
+- common：表示通用型
+- exclusive：表示独享型 
+     * @return DeviceType 实例机器类型，支持值如下：
+- common：表示通用型
+- exclusive：表示独享型
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set 实例机器类型
-     * @param DeviceType 实例机器类型
+     * Set 实例机器类型，支持值如下：
+- common：表示通用型
+- exclusive：表示独享型
+     * @param DeviceType 实例机器类型，支持值如下：
+- common：表示通用型
+- exclusive：表示独享型
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;

@@ -72,7 +72,9 @@ public class TrocketClient extends AbstractClient{
     }
 
     /**
-     *为MQTT实例创建公网接入点
+     *下线trocket下mqtt接口
+
+为MQTT实例创建公网接入点
      * @param req CreateMQTTInsPublicEndpointRequest
      * @return CreateMQTTInsPublicEndpointResponse
      * @throws TencentCloudSDKException
@@ -83,7 +85,9 @@ public class TrocketClient extends AbstractClient{
     }
 
     /**
-     *购买新的MQTT实例
+     *下线trocket下mqtt接口
+
+购买新的MQTT实例
      * @param req CreateMQTTInstanceRequest
      * @return CreateMQTTInstanceResponse
      * @throws TencentCloudSDKException
@@ -94,7 +98,9 @@ public class TrocketClient extends AbstractClient{
     }
 
     /**
-     *创建主题
+     *下线trocket下mqtt接口
+
+创建主题
      * @param req CreateMQTTTopicRequest
      * @return CreateMQTTTopicResponse
      * @throws TencentCloudSDKException
@@ -105,7 +111,9 @@ public class TrocketClient extends AbstractClient{
     }
 
     /**
-     *添加mqtt角色
+     *下线trocket下mqtt接口
+
+添加mqtt角色
      * @param req CreateMQTTUserRequest
      * @return CreateMQTTUserResponse
      * @throws TencentCloudSDKException
@@ -160,7 +168,9 @@ public class TrocketClient extends AbstractClient{
     }
 
     /**
-     *删除MQTT实例的公网接入点
+     *下线trocket下mqtt接口
+
+删除MQTT实例的公网接入点
      * @param req DeleteMQTTInsPublicEndpointRequest
      * @return DeleteMQTTInsPublicEndpointResponse
      * @throws TencentCloudSDKException
@@ -171,7 +181,9 @@ public class TrocketClient extends AbstractClient{
     }
 
     /**
-     *删除MQTT实例
+     *下线trocket下mqtt接口
+
+删除MQTT实例
      * @param req DeleteMQTTInstanceRequest
      * @return DeleteMQTTInstanceResponse
      * @throws TencentCloudSDKException
@@ -182,7 +194,9 @@ public class TrocketClient extends AbstractClient{
     }
 
     /**
-     *删除MQTT主题
+     *下线trocket下mqtt接口
+
+删除MQTT主题
      * @param req DeleteMQTTTopicRequest
      * @return DeleteMQTTTopicResponse
      * @throws TencentCloudSDKException
@@ -193,7 +207,9 @@ public class TrocketClient extends AbstractClient{
     }
 
     /**
-     *删除MQTT访问用户
+     *下线trocket下mqtt接口
+
+删除MQTT访问用户
      * @param req DeleteMQTTUserRequest
      * @return DeleteMQTTUserResponse
      * @throws TencentCloudSDKException
@@ -354,7 +370,9 @@ Filters示例：
     }
 
     /**
-     *查询 MQTT 客户端详情
+     *下线trocket下mqtt接口
+
+查询 MQTT 客户端详情
      * @param req DescribeMQTTClientRequest
      * @return DescribeMQTTClientResponse
      * @throws TencentCloudSDKException
@@ -365,7 +383,9 @@ Filters示例：
     }
 
     /**
-     *查询MQTT实例公网接入点
+     *下线trocket下mqtt接口
+
+查询MQTT实例公网接入点
      * @param req DescribeMQTTInsPublicEndpointsRequest
      * @return DescribeMQTTInsPublicEndpointsResponse
      * @throws TencentCloudSDKException
@@ -376,7 +396,9 @@ Filters示例：
     }
 
     /**
-     *查询MQTT实例公网接入点
+     *下线trocket下mqtt接口
+
+查询MQTT实例公网接入点
      * @param req DescribeMQTTInsVPCEndpointsRequest
      * @return DescribeMQTTInsVPCEndpointsResponse
      * @throws TencentCloudSDKException
@@ -387,7 +409,9 @@ Filters示例：
     }
 
     /**
-     *查询实例信息
+     *下线trocket下mqtt接口
+
+查询实例信息
      * @param req DescribeMQTTInstanceRequest
      * @return DescribeMQTTInstanceResponse
      * @throws TencentCloudSDKException
@@ -398,7 +422,9 @@ Filters示例：
     }
 
     /**
-     *查询MQTT集群证书列表
+     *下线trocket下mqtt接口
+
+查询MQTT集群证书列表
      * @param req DescribeMQTTInstanceCertRequest
      * @return DescribeMQTTInstanceCertResponse
      * @throws TencentCloudSDKException
@@ -409,7 +435,9 @@ Filters示例：
     }
 
     /**
-     *获取实例列表，Filters参数使用说明如下：
+     *下线trocket下mqtt接口
+
+获取实例列表，Filters参数使用说明如下：
 1. InstanceName, 名称模糊查询
 2. InstanceId，实例ID查询
 3. InstanceType, 实例类型查询，支持多选
@@ -426,7 +454,9 @@ Filters示例：
     }
 
     /**
-     *查询MQTT消息详情
+     *下线trocket下mqtt接口
+
+查询MQTT消息详情
      * @param req DescribeMQTTMessageRequest
      * @return DescribeMQTTMessageResponse
      * @throws TencentCloudSDKException
@@ -437,7 +467,9 @@ Filters示例：
     }
 
     /**
-     *查询消息列表，如查询死信，请设置ConsumerGroup参数
+     *下线trocket下mqtt接口
+
+查询消息列表，如查询死信，请设置ConsumerGroup参数
      * @param req DescribeMQTTMessageListRequest
      * @return DescribeMQTTMessageListResponse
      * @throws TencentCloudSDKException
@@ -448,7 +480,9 @@ Filters示例：
     }
 
     /**
-     *获取产品售卖规格
+     *下线trocket下mqtt接口
+
+获取产品售卖规格
      * @param req DescribeMQTTProductSKUListRequest
      * @return DescribeMQTTProductSKUListResponse
      * @throws TencentCloudSDKException
@@ -459,7 +493,9 @@ Filters示例：
     }
 
     /**
-     *查询mqtt主题详情
+     *下线trocket下mqtt接口
+
+查询mqtt主题详情
      * @param req DescribeMQTTTopicRequest
      * @return DescribeMQTTTopicResponse
      * @throws TencentCloudSDKException
@@ -470,7 +506,9 @@ Filters示例：
     }
 
     /**
-     *获取主题列表，Filter参数使用说明如下：
+     *下线trocket下mqtt接口
+
+获取主题列表，Filter参数使用说明如下：
 
 1. TopicName，主题名称模糊搜索
 2. TopicType，主题类型查询，支持多选，可选值：Normal,Order,Transaction,DelayScheduled
@@ -484,7 +522,9 @@ Filters示例：
     }
 
     /**
-     *查询用户列表，Filter参数使用说明如下：
+     *下线trocket下mqtt接口
+
+查询用户列表，Filter参数使用说明如下：
 
 1. Username，用户名称模糊搜索
      * @param req DescribeMQTTUserListRequest
@@ -593,6 +633,7 @@ Type，根据任务类型精确查找
      *查询主题关联的生产者列表信息，Filters支持以下筛选条件：
 - ClientIP，客户端IP
 - ClientID，客户端ID
+当前 API 适用集群：5.x 集群。4.x 集群的查询生产者客户端列表接口文档见 [DescribeRocketMQProducers](https://cloud.tencent.com/document/api/1179/122749)。
      * @param req DescribeProducerListRequest
      * @return DescribeProducerListResponse
      * @throws TencentCloudSDKException
@@ -792,7 +833,9 @@ Filters示例：
     }
 
     /**
-     *更新MQTT实例公网接入点
+     *下线trocket下mqtt接口
+
+更新MQTT实例公网接入点
      * @param req ModifyMQTTInsPublicEndpointRequest
      * @return ModifyMQTTInsPublicEndpointResponse
      * @throws TencentCloudSDKException
@@ -803,7 +846,9 @@ Filters示例：
     }
 
     /**
-     *修改实例属性
+     *下线trocket下mqtt接口
+
+修改实例属性
      * @param req ModifyMQTTInstanceRequest
      * @return ModifyMQTTInstanceResponse
      * @throws TencentCloudSDKException
@@ -814,7 +859,9 @@ Filters示例：
     }
 
     /**
-     *更新MQTT集群绑定证书
+     *下线trocket下mqtt接口
+
+更新MQTT集群绑定证书
 参数传空，则为删除证书
      * @param req ModifyMQTTInstanceCertBindingRequest
      * @return ModifyMQTTInstanceCertBindingResponse
@@ -826,7 +873,9 @@ Filters示例：
     }
 
     /**
-     *修改主题属性
+     *下线trocket下mqtt接口
+
+修改主题属性
      * @param req ModifyMQTTTopicRequest
      * @return ModifyMQTTTopicResponse
      * @throws TencentCloudSDKException
@@ -837,7 +886,9 @@ Filters示例：
     }
 
     /**
-     *修改MQTT角色
+     *下线trocket下mqtt接口
+
+修改MQTT角色
      * @param req ModifyMQTTUserRequest
      * @return ModifyMQTTUserResponse
      * @throws TencentCloudSDKException
@@ -881,7 +932,8 @@ Filters示例：
     }
 
     /**
-     *重新发送死信消息
+     *重新发送死信消息。
+当前 API 适用集群：5.x集群。4.x 集群的重发死信消息接口文档见 [RetryRocketMQDlqMessage](https://cloud.tencent.com/document/api/1179/114595)。
      * @param req ResendDeadLetterMessageRequest
      * @return ResendDeadLetterMessageResponse
      * @throws TencentCloudSDKException
@@ -914,7 +966,8 @@ Filters示例：
     }
 
     /**
-     *发送 RocketMQ 消息，该接口仅用于控制台发送少量测试消息，不保证SLA，且云 API 存在限流，在真实业务场景下，请使用 RocketMQ SDK 发送消息。
+     *发送 RocketMQ 消息，该接口仅用于控制台发送少量测试消息，不保证 SLA，且云 API 存在限流，在真实业务场景下，请使用 RocketMQ SDK 发送消息。
+当前 API 适用集群：5.x 集群。4.x 集群的发送消息接口文档见 [SendRocketMQMessage](https://cloud.tencent.com/document/api/1179/94179)。
      * @param req SendMessageRequest
      * @return SendMessageResponse
      * @throws TencentCloudSDKException
@@ -925,7 +978,8 @@ Filters示例：
     }
 
     /**
-     *消息消费验证
+     *消息消费验证。
+当前 API 适用集群：5.x 集群。4.x 集群的消息消费验证接口文档见 [VerifyRocketMQConsume](https://cloud.tencent.com/document/api/1179/101061)。
      * @param req VerifyMessageConsumptionRequest
      * @return VerifyMessageConsumptionResponse
      * @throws TencentCloudSDKException

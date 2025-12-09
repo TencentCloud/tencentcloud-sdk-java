@@ -59,7 +59,16 @@ public class CynosdbClusterDetail extends AbstractModel {
     private String PhysicalZone;
 
     /**
-    * 状态
+    * 状态，支持的值如下：
+- creating：创建中
+- running：运行中
+- isolating：隔离中
+- isolated：已隔离
+- activating：从回收站重新恢复
+- offlining：下线中
+- offlined：已下线
+- deleting：删除中
+- deleted：已删除
     */
     @SerializedName("Status")
     @Expose
@@ -503,16 +512,52 @@ pausing
     }
 
     /**
-     * Get 状态 
-     * @return Status 状态
+     * Get 状态，支持的值如下：
+- creating：创建中
+- running：运行中
+- isolating：隔离中
+- isolated：已隔离
+- activating：从回收站重新恢复
+- offlining：下线中
+- offlined：已下线
+- deleting：删除中
+- deleted：已删除 
+     * @return Status 状态，支持的值如下：
+- creating：创建中
+- running：运行中
+- isolating：隔离中
+- isolated：已隔离
+- activating：从回收站重新恢复
+- offlining：下线中
+- offlined：已下线
+- deleting：删除中
+- deleted：已删除
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态
-     * @param Status 状态
+     * Set 状态，支持的值如下：
+- creating：创建中
+- running：运行中
+- isolating：隔离中
+- isolated：已隔离
+- activating：从回收站重新恢复
+- offlining：下线中
+- offlined：已下线
+- deleting：删除中
+- deleted：已删除
+     * @param Status 状态，支持的值如下：
+- creating：创建中
+- running：运行中
+- isolating：隔离中
+- isolated：已隔离
+- activating：从回收站重新恢复
+- offlining：下线中
+- offlined：已下线
+- deleting：删除中
+- deleted：已删除
      */
     public void setStatus(String Status) {
         this.Status = Status;

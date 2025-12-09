@@ -25,7 +25,6 @@ public class TextModerationResponse extends AbstractModel {
 
     /**
     * 该字段用于回显检测对象请求参数中的 BizType，与输入的 BizType 值对应。
-示例值：TencentCloudDefault
     */
     @SerializedName("BizType")
     @Expose
@@ -48,7 +47,6 @@ public class TextModerationResponse extends AbstractModel {
 
     /**
     * 对应 Label 字段下的二级子标签，表示该 Label 下更细分的违规点。
-示例值：SexualBehavior（该值为 Porn 下的一个二级标签）
     */
     @SerializedName("SubLabel")
     @Expose
@@ -56,7 +54,6 @@ public class TextModerationResponse extends AbstractModel {
 
     /**
     * 该字段标识 SubLabel 的置信度，取值范围为 0 - 100，值越高代表置信度越高。
-示例值：85
     */
     @SerializedName("Score")
     @Expose
@@ -64,7 +61,6 @@ public class TextModerationResponse extends AbstractModel {
 
     /**
     * 该字段标识被检测文本所命中的关键词，可能返回0个或多个关键词。
-示例值：["优惠券", "线下兑换"]
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Keywords")
@@ -97,7 +93,6 @@ public class TextModerationResponse extends AbstractModel {
 
     /**
     * 该字段用于回显检测对象请求参数中的 DataId，与输入的 DataId 值对应。
-示例值：a6127dd-c2a0-43e7-a3da-d27022d39ba7
     */
     @SerializedName("DataId")
     @Expose
@@ -127,7 +122,6 @@ public class TextModerationResponse extends AbstractModel {
 
     /**
     * 该字段用于回显检测对象请求参数中的 SessionId，与输入的 SessionId 值对应。
-示例值：7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b
     */
     @SerializedName("SessionId")
     @Expose
@@ -141,10 +135,8 @@ public class TextModerationResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 该字段用于回显检测对象请求参数中的 BizType，与输入的 BizType 值对应。
-示例值：TencentCloudDefault 
+     * Get 该字段用于回显检测对象请求参数中的 BizType，与输入的 BizType 值对应。 
      * @return BizType 该字段用于回显检测对象请求参数中的 BizType，与输入的 BizType 值对应。
-示例值：TencentCloudDefault
      */
     public String getBizType() {
         return this.BizType;
@@ -152,9 +144,7 @@ public class TextModerationResponse extends AbstractModel {
 
     /**
      * Set 该字段用于回显检测对象请求参数中的 BizType，与输入的 BizType 值对应。
-示例值：TencentCloudDefault
      * @param BizType 该字段用于回显检测对象请求参数中的 BizType，与输入的 BizType 值对应。
-示例值：TencentCloudDefault
      */
     public void setBizType(String BizType) {
         this.BizType = BizType;
@@ -197,10 +187,8 @@ public class TextModerationResponse extends AbstractModel {
     }
 
     /**
-     * Get 对应 Label 字段下的二级子标签，表示该 Label 下更细分的违规点。
-示例值：SexualBehavior（该值为 Porn 下的一个二级标签） 
+     * Get 对应 Label 字段下的二级子标签，表示该 Label 下更细分的违规点。 
      * @return SubLabel 对应 Label 字段下的二级子标签，表示该 Label 下更细分的违规点。
-示例值：SexualBehavior（该值为 Porn 下的一个二级标签）
      */
     public String getSubLabel() {
         return this.SubLabel;
@@ -208,19 +196,15 @@ public class TextModerationResponse extends AbstractModel {
 
     /**
      * Set 对应 Label 字段下的二级子标签，表示该 Label 下更细分的违规点。
-示例值：SexualBehavior（该值为 Porn 下的一个二级标签）
      * @param SubLabel 对应 Label 字段下的二级子标签，表示该 Label 下更细分的违规点。
-示例值：SexualBehavior（该值为 Porn 下的一个二级标签）
      */
     public void setSubLabel(String SubLabel) {
         this.SubLabel = SubLabel;
     }
 
     /**
-     * Get 该字段标识 SubLabel 的置信度，取值范围为 0 - 100，值越高代表置信度越高。
-示例值：85 
+     * Get 该字段标识 SubLabel 的置信度，取值范围为 0 - 100，值越高代表置信度越高。 
      * @return Score 该字段标识 SubLabel 的置信度，取值范围为 0 - 100，值越高代表置信度越高。
-示例值：85
      */
     public Long getScore() {
         return this.Score;
@@ -228,9 +212,7 @@ public class TextModerationResponse extends AbstractModel {
 
     /**
      * Set 该字段标识 SubLabel 的置信度，取值范围为 0 - 100，值越高代表置信度越高。
-示例值：85
      * @param Score 该字段标识 SubLabel 的置信度，取值范围为 0 - 100，值越高代表置信度越高。
-示例值：85
      */
     public void setScore(Long Score) {
         this.Score = Score;
@@ -238,10 +220,8 @@ public class TextModerationResponse extends AbstractModel {
 
     /**
      * Get 该字段标识被检测文本所命中的关键词，可能返回0个或多个关键词。
-示例值：["优惠券", "线下兑换"]
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Keywords 该字段标识被检测文本所命中的关键词，可能返回0个或多个关键词。
-示例值：["优惠券", "线下兑换"]
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getKeywords() {
@@ -250,10 +230,8 @@ public class TextModerationResponse extends AbstractModel {
 
     /**
      * Set 该字段标识被检测文本所命中的关键词，可能返回0个或多个关键词。
-示例值：["优惠券", "线下兑换"]
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Keywords 该字段标识被检测文本所命中的关键词，可能返回0个或多个关键词。
-示例值：["优惠券", "线下兑换"]
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeywords(String [] Keywords) {
@@ -321,10 +299,8 @@ public class TextModerationResponse extends AbstractModel {
     }
 
     /**
-     * Get 该字段用于回显检测对象请求参数中的 DataId，与输入的 DataId 值对应。
-示例值：a6127dd-c2a0-43e7-a3da-d27022d39ba7 
+     * Get 该字段用于回显检测对象请求参数中的 DataId，与输入的 DataId 值对应。 
      * @return DataId 该字段用于回显检测对象请求参数中的 DataId，与输入的 DataId 值对应。
-示例值：a6127dd-c2a0-43e7-a3da-d27022d39ba7
      */
     public String getDataId() {
         return this.DataId;
@@ -332,9 +308,7 @@ public class TextModerationResponse extends AbstractModel {
 
     /**
      * Set 该字段用于回显检测对象请求参数中的 DataId，与输入的 DataId 值对应。
-示例值：a6127dd-c2a0-43e7-a3da-d27022d39ba7
      * @param DataId 该字段用于回显检测对象请求参数中的 DataId，与输入的 DataId 值对应。
-示例值：a6127dd-c2a0-43e7-a3da-d27022d39ba7
      */
     public void setDataId(String DataId) {
         this.DataId = DataId;
@@ -393,10 +367,8 @@ public class TextModerationResponse extends AbstractModel {
     }
 
     /**
-     * Get 该字段用于回显检测对象请求参数中的 SessionId，与输入的 SessionId 值对应。
-示例值：7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b 
+     * Get 该字段用于回显检测对象请求参数中的 SessionId，与输入的 SessionId 值对应。 
      * @return SessionId 该字段用于回显检测对象请求参数中的 SessionId，与输入的 SessionId 值对应。
-示例值：7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b
      */
     public String getSessionId() {
         return this.SessionId;
@@ -404,9 +376,7 @@ public class TextModerationResponse extends AbstractModel {
 
     /**
      * Set 该字段用于回显检测对象请求参数中的 SessionId，与输入的 SessionId 值对应。
-示例值：7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b
      * @param SessionId 该字段用于回显检测对象请求参数中的 SessionId，与输入的 SessionId 值对应。
-示例值：7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;

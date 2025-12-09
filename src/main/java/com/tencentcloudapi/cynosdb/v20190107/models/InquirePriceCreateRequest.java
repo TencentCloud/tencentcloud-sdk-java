@@ -52,7 +52,9 @@ public class InquirePriceCreateRequest extends AbstractModel {
     private String StoragePayMode;
 
     /**
-    * 实例设备类型
+    * 实例设备类型，支持值如下：
+- common：表示通用型
+- exclusive：表示独享型
     */
     @SerializedName("DeviceType")
     @Expose
@@ -165,16 +167,24 @@ public class InquirePriceCreateRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例设备类型 
-     * @return DeviceType 实例设备类型
+     * Get 实例设备类型，支持值如下：
+- common：表示通用型
+- exclusive：表示独享型 
+     * @return DeviceType 实例设备类型，支持值如下：
+- common：表示通用型
+- exclusive：表示独享型
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set 实例设备类型
-     * @param DeviceType 实例设备类型
+     * Set 实例设备类型，支持值如下：
+- common：表示通用型
+- exclusive：表示独享型
+     * @param DeviceType 实例设备类型，支持值如下：
+- common：表示通用型
+- exclusive：表示独享型
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;

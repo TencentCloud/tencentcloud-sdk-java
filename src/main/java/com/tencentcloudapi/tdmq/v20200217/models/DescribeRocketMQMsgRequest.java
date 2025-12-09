@@ -31,7 +31,7 @@ public class DescribeRocketMQMsgRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * 命名空间
+    * 命名空间，4.x 通用集群命名空间固定为: tdmq_default
     */
     @SerializedName("EnvironmentId")
     @Expose
@@ -110,16 +110,16 @@ public class DescribeRocketMQMsgRequest extends AbstractModel {
     }
 
     /**
-     * Get 命名空间 
-     * @return EnvironmentId 命名空间
+     * Get 命名空间，4.x 通用集群命名空间固定为: tdmq_default 
+     * @return EnvironmentId 命名空间，4.x 通用集群命名空间固定为: tdmq_default
      */
     public String getEnvironmentId() {
         return this.EnvironmentId;
     }
 
     /**
-     * Set 命名空间
-     * @param EnvironmentId 命名空间
+     * Set 命名空间，4.x 通用集群命名空间固定为: tdmq_default
+     * @param EnvironmentId 命名空间，4.x 通用集群命名空间固定为: tdmq_default
      */
     public void setEnvironmentId(String EnvironmentId) {
         this.EnvironmentId = EnvironmentId;

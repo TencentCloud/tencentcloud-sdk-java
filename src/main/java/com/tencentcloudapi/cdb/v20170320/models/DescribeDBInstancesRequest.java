@@ -129,7 +129,7 @@ public class DescribeDBInstancesRequest extends AbstractModel {
     private Long [] CdbErrors;
 
     /**
-    * 返回结果集排序的字段，目前支持："InstanceId"，"InstanceName"，"CreateTime"，"DeadlineTime"。
+    * 返回结果集排序的字段，目前支持："instanceId"，"instanceName"，"createTime"，"deadlineTime"。
     */
     @SerializedName("OrderBy")
     @Expose
@@ -271,7 +271,7 @@ public class DescribeDBInstancesRequest extends AbstractModel {
     private String [] EngineTypes;
 
     /**
-    * 是否获取集群版实例节点信息，可填：true 或 false。默认为 false。
+    * 是否获取云盘版实例节点信息，可填：true 或 false。默认为 false。
     */
     @SerializedName("QueryClusterInfo")
     @Expose
@@ -518,16 +518,16 @@ public class DescribeDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 返回结果集排序的字段，目前支持："InstanceId"，"InstanceName"，"CreateTime"，"DeadlineTime"。 
-     * @return OrderBy 返回结果集排序的字段，目前支持："InstanceId"，"InstanceName"，"CreateTime"，"DeadlineTime"。
+     * Get 返回结果集排序的字段，目前支持："instanceId"，"instanceName"，"createTime"，"deadlineTime"。 
+     * @return OrderBy 返回结果集排序的字段，目前支持："instanceId"，"instanceName"，"createTime"，"deadlineTime"。
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 返回结果集排序的字段，目前支持："InstanceId"，"InstanceName"，"CreateTime"，"DeadlineTime"。
-     * @param OrderBy 返回结果集排序的字段，目前支持："InstanceId"，"InstanceName"，"CreateTime"，"DeadlineTime"。
+     * Set 返回结果集排序的字段，目前支持："instanceId"，"instanceName"，"createTime"，"deadlineTime"。
+     * @param OrderBy 返回结果集排序的字段，目前支持："instanceId"，"instanceName"，"createTime"，"deadlineTime"。
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
@@ -846,16 +846,16 @@ public class DescribeDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否获取集群版实例节点信息，可填：true 或 false。默认为 false。 
-     * @return QueryClusterInfo 是否获取集群版实例节点信息，可填：true 或 false。默认为 false。
+     * Get 是否获取云盘版实例节点信息，可填：true 或 false。默认为 false。 
+     * @return QueryClusterInfo 是否获取云盘版实例节点信息，可填：true 或 false。默认为 false。
      */
     public Boolean getQueryClusterInfo() {
         return this.QueryClusterInfo;
     }
 
     /**
-     * Set 是否获取集群版实例节点信息，可填：true 或 false。默认为 false。
-     * @param QueryClusterInfo 是否获取集群版实例节点信息，可填：true 或 false。默认为 false。
+     * Set 是否获取云盘版实例节点信息，可填：true 或 false。默认为 false。
+     * @param QueryClusterInfo 是否获取云盘版实例节点信息，可填：true 或 false。默认为 false。
      */
     public void setQueryClusterInfo(Boolean QueryClusterInfo) {
         this.QueryClusterInfo = QueryClusterInfo;

@@ -108,6 +108,13 @@ public class UpdateWorkflowInfoRequest extends AbstractModel {
     private GeneralTaskParam [] GeneralTaskParams;
 
     /**
+    * 工作流依赖，yes/no。开启后表示当前任务依赖本工作流上个周期的所有任务。仅支持当前任务所在工作流的任务全部为同周期的情况，如果非同周期则不生效，请在工作流-统一调度上进行配置。
+    */
+    @SerializedName("DependencyWorkflow")
+    @Expose
+    private String DependencyWorkflow;
+
+    /**
      * Get 项目Id 
      * @return ProjectId 项目Id
      */
@@ -299,6 +306,22 @@ public class UpdateWorkflowInfoRequest extends AbstractModel {
         this.GeneralTaskParams = GeneralTaskParams;
     }
 
+    /**
+     * Get 工作流依赖，yes/no。开启后表示当前任务依赖本工作流上个周期的所有任务。仅支持当前任务所在工作流的任务全部为同周期的情况，如果非同周期则不生效，请在工作流-统一调度上进行配置。 
+     * @return DependencyWorkflow 工作流依赖，yes/no。开启后表示当前任务依赖本工作流上个周期的所有任务。仅支持当前任务所在工作流的任务全部为同周期的情况，如果非同周期则不生效，请在工作流-统一调度上进行配置。
+     */
+    public String getDependencyWorkflow() {
+        return this.DependencyWorkflow;
+    }
+
+    /**
+     * Set 工作流依赖，yes/no。开启后表示当前任务依赖本工作流上个周期的所有任务。仅支持当前任务所在工作流的任务全部为同周期的情况，如果非同周期则不生效，请在工作流-统一调度上进行配置。
+     * @param DependencyWorkflow 工作流依赖，yes/no。开启后表示当前任务依赖本工作流上个周期的所有任务。仅支持当前任务所在工作流的任务全部为同周期的情况，如果非同周期则不生效，请在工作流-统一调度上进行配置。
+     */
+    public void setDependencyWorkflow(String DependencyWorkflow) {
+        this.DependencyWorkflow = DependencyWorkflow;
+    }
+
     public UpdateWorkflowInfoRequest() {
     }
 
@@ -349,6 +372,9 @@ public class UpdateWorkflowInfoRequest extends AbstractModel {
                 this.GeneralTaskParams[i] = new GeneralTaskParam(source.GeneralTaskParams[i]);
             }
         }
+        if (source.DependencyWorkflow != null) {
+            this.DependencyWorkflow = new String(source.DependencyWorkflow);
+        }
     }
 
 
@@ -368,6 +394,7 @@ public class UpdateWorkflowInfoRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "UserGroupName", this.UserGroupName);
         this.setParamArrayObj(map, prefix + "WorkflowParams.", this.WorkflowParams);
         this.setParamArrayObj(map, prefix + "GeneralTaskParams.", this.GeneralTaskParams);
+        this.setParamSimple(map, prefix + "DependencyWorkflow", this.DependencyWorkflow);
 
     }
 }

@@ -50,7 +50,6 @@ public class GetFinancialLLMTaskResultResponse extends AbstractModel {
 
     /**
     * 审校任务的开始时间
-示例值：2025-09-25 19:42:35
     */
     @SerializedName("StartTime")
     @Expose
@@ -58,7 +57,6 @@ public class GetFinancialLLMTaskResultResponse extends AbstractModel {
 
     /**
     * 若审校任务失败（Status="Failed"），该字段返回失败的具体原因。
-示例值：文档解析失败
     */
     @SerializedName("FailureReason")
     @Expose
@@ -143,10 +141,8 @@ public class GetFinancialLLMTaskResultResponse extends AbstractModel {
     }
 
     /**
-     * Get 审校任务的开始时间
-示例值：2025-09-25 19:42:35 
+     * Get 审校任务的开始时间 
      * @return StartTime 审校任务的开始时间
-示例值：2025-09-25 19:42:35
      */
     public String getStartTime() {
         return this.StartTime;
@@ -154,19 +150,15 @@ public class GetFinancialLLMTaskResultResponse extends AbstractModel {
 
     /**
      * Set 审校任务的开始时间
-示例值：2025-09-25 19:42:35
      * @param StartTime 审校任务的开始时间
-示例值：2025-09-25 19:42:35
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 若审校任务失败（Status="Failed"），该字段返回失败的具体原因。
-示例值：文档解析失败 
+     * Get 若审校任务失败（Status="Failed"），该字段返回失败的具体原因。 
      * @return FailureReason 若审校任务失败（Status="Failed"），该字段返回失败的具体原因。
-示例值：文档解析失败
      */
     public String getFailureReason() {
         return this.FailureReason;
@@ -174,9 +166,7 @@ public class GetFinancialLLMTaskResultResponse extends AbstractModel {
 
     /**
      * Set 若审校任务失败（Status="Failed"），该字段返回失败的具体原因。
-示例值：文档解析失败
      * @param FailureReason 若审校任务失败（Status="Failed"），该字段返回失败的具体原因。
-示例值：文档解析失败
      */
     public void setFailureReason(String FailureReason) {
         this.FailureReason = FailureReason;

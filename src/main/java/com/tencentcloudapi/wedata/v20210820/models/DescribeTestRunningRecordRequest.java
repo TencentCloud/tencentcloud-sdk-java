@@ -87,6 +87,20 @@ public class DescribeTestRunningRecordRequest extends AbstractModel {
     private Long PageIndex;
 
     /**
+    * 状态列表  LAUNCHED:等待运行 RUNNING:运行中 KILLING:终止中 KILLED:已终止 SUCCESS:成功 FAILED:失败 SKIP_RUNNING 跳过运行 NEVER_RUN:未运行
+    */
+    @SerializedName("StatusList")
+    @Expose
+    private String [] StatusList;
+
+    /**
+    * 排序条件 排序的key：timeCost,startTime
+    */
+    @SerializedName("OrderConditionList")
+    @Expose
+    private OrderCondition [] OrderConditionList;
+
+    /**
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
@@ -230,6 +244,38 @@ public class DescribeTestRunningRecordRequest extends AbstractModel {
         this.PageIndex = PageIndex;
     }
 
+    /**
+     * Get 状态列表  LAUNCHED:等待运行 RUNNING:运行中 KILLING:终止中 KILLED:已终止 SUCCESS:成功 FAILED:失败 SKIP_RUNNING 跳过运行 NEVER_RUN:未运行 
+     * @return StatusList 状态列表  LAUNCHED:等待运行 RUNNING:运行中 KILLING:终止中 KILLED:已终止 SUCCESS:成功 FAILED:失败 SKIP_RUNNING 跳过运行 NEVER_RUN:未运行
+     */
+    public String [] getStatusList() {
+        return this.StatusList;
+    }
+
+    /**
+     * Set 状态列表  LAUNCHED:等待运行 RUNNING:运行中 KILLING:终止中 KILLED:已终止 SUCCESS:成功 FAILED:失败 SKIP_RUNNING 跳过运行 NEVER_RUN:未运行
+     * @param StatusList 状态列表  LAUNCHED:等待运行 RUNNING:运行中 KILLING:终止中 KILLED:已终止 SUCCESS:成功 FAILED:失败 SKIP_RUNNING 跳过运行 NEVER_RUN:未运行
+     */
+    public void setStatusList(String [] StatusList) {
+        this.StatusList = StatusList;
+    }
+
+    /**
+     * Get 排序条件 排序的key：timeCost,startTime 
+     * @return OrderConditionList 排序条件 排序的key：timeCost,startTime
+     */
+    public OrderCondition [] getOrderConditionList() {
+        return this.OrderConditionList;
+    }
+
+    /**
+     * Set 排序条件 排序的key：timeCost,startTime
+     * @param OrderConditionList 排序条件 排序的key：timeCost,startTime
+     */
+    public void setOrderConditionList(OrderCondition [] OrderConditionList) {
+        this.OrderConditionList = OrderConditionList;
+    }
+
     public DescribeTestRunningRecordRequest() {
     }
 
@@ -268,6 +314,18 @@ public class DescribeTestRunningRecordRequest extends AbstractModel {
         if (source.PageIndex != null) {
             this.PageIndex = new Long(source.PageIndex);
         }
+        if (source.StatusList != null) {
+            this.StatusList = new String[source.StatusList.length];
+            for (int i = 0; i < source.StatusList.length; i++) {
+                this.StatusList[i] = new String(source.StatusList[i]);
+            }
+        }
+        if (source.OrderConditionList != null) {
+            this.OrderConditionList = new OrderCondition[source.OrderConditionList.length];
+            for (int i = 0; i < source.OrderConditionList.length; i++) {
+                this.OrderConditionList[i] = new OrderCondition(source.OrderConditionList[i]);
+            }
+        }
     }
 
 
@@ -284,6 +342,8 @@ public class DescribeTestRunningRecordRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "RecordIdList.", this.RecordIdList);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "PageIndex", this.PageIndex);
+        this.setParamArraySimple(map, prefix + "StatusList.", this.StatusList);
+        this.setParamArrayObj(map, prefix + "OrderConditionList.", this.OrderConditionList);
 
     }
 }

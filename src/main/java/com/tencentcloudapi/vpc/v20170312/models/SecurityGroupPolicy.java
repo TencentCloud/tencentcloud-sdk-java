@@ -102,6 +102,13 @@ public class SecurityGroupPolicy extends AbstractModel {
     private String ModifyTime;
 
     /**
+    * 安全组规则优先级，值会随着安全组规则的变更动态变化。使用Priority时，请先调用`DescribeSecurityGroupPolicies`获取到规则的Priority，并且结合返回值中的Version一起使用处理规则。
+    */
+    @SerializedName("Priority")
+    @Expose
+    private Long Priority;
+
+    /**
      * Get 安全组规则索引号，值会随着安全组规则的变更动态变化。使用PolicyIndex时，请先调用`DescribeSecurityGroupPolicies`获取到规则的PolicyIndex，并且结合返回值中的Version一起使用处理规则。 
      * @return PolicyIndex 安全组规则索引号，值会随着安全组规则的变更动态变化。使用PolicyIndex时，请先调用`DescribeSecurityGroupPolicies`获取到规则的PolicyIndex，并且结合返回值中的Version一起使用处理规则。
      */
@@ -281,6 +288,22 @@ public class SecurityGroupPolicy extends AbstractModel {
         this.ModifyTime = ModifyTime;
     }
 
+    /**
+     * Get 安全组规则优先级，值会随着安全组规则的变更动态变化。使用Priority时，请先调用`DescribeSecurityGroupPolicies`获取到规则的Priority，并且结合返回值中的Version一起使用处理规则。 
+     * @return Priority 安全组规则优先级，值会随着安全组规则的变更动态变化。使用Priority时，请先调用`DescribeSecurityGroupPolicies`获取到规则的Priority，并且结合返回值中的Version一起使用处理规则。
+     */
+    public Long getPriority() {
+        return this.Priority;
+    }
+
+    /**
+     * Set 安全组规则优先级，值会随着安全组规则的变更动态变化。使用Priority时，请先调用`DescribeSecurityGroupPolicies`获取到规则的Priority，并且结合返回值中的Version一起使用处理规则。
+     * @param Priority 安全组规则优先级，值会随着安全组规则的变更动态变化。使用Priority时，请先调用`DescribeSecurityGroupPolicies`获取到规则的Priority，并且结合返回值中的Version一起使用处理规则。
+     */
+    public void setPriority(Long Priority) {
+        this.Priority = Priority;
+    }
+
     public SecurityGroupPolicy() {
     }
 
@@ -322,6 +345,9 @@ public class SecurityGroupPolicy extends AbstractModel {
         if (source.ModifyTime != null) {
             this.ModifyTime = new String(source.ModifyTime);
         }
+        if (source.Priority != null) {
+            this.Priority = new Long(source.Priority);
+        }
     }
 
 
@@ -340,6 +366,7 @@ public class SecurityGroupPolicy extends AbstractModel {
         this.setParamSimple(map, prefix + "Action", this.Action);
         this.setParamSimple(map, prefix + "PolicyDescription", this.PolicyDescription);
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+        this.setParamSimple(map, prefix + "Priority", this.Priority);
 
     }
 }

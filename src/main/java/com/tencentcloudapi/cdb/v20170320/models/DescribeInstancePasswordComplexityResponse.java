@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeInstancePasswordComplexityResponse extends AbstractModel {
 
     /**
-    * 实例的参数总数
+    * 密码复杂度相关参数总数
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 参数详情
+    * 密码复杂度参数详情，policy取值范围["","LOW","MEDIUM"],空或者LOW表示：密码复杂度关，MEDIUM表示：密码复杂度开；当policy参数值是MEDIUM时，以下参数才有意义，length:取值范围[8-64],表示：最少字符数；mixed_case_count：取值范围[1-16]，表示大写字母和小写字母的最少个数。number_count：取值范围[1-16]，表示数字字符的最少个数。special_char_count：取值范围[1-16]，表示特殊字符的最少个数。
     */
     @SerializedName("Items")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeInstancePasswordComplexityResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实例的参数总数 
-     * @return TotalCount 实例的参数总数
+     * Get 密码复杂度相关参数总数 
+     * @return TotalCount 密码复杂度相关参数总数
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 实例的参数总数
-     * @param TotalCount 实例的参数总数
+     * Set 密码复杂度相关参数总数
+     * @param TotalCount 密码复杂度相关参数总数
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 参数详情 
-     * @return Items 参数详情
+     * Get 密码复杂度参数详情，policy取值范围["","LOW","MEDIUM"],空或者LOW表示：密码复杂度关，MEDIUM表示：密码复杂度开；当policy参数值是MEDIUM时，以下参数才有意义，length:取值范围[8-64],表示：最少字符数；mixed_case_count：取值范围[1-16]，表示大写字母和小写字母的最少个数。number_count：取值范围[1-16]，表示数字字符的最少个数。special_char_count：取值范围[1-16]，表示特殊字符的最少个数。 
+     * @return Items 密码复杂度参数详情，policy取值范围["","LOW","MEDIUM"],空或者LOW表示：密码复杂度关，MEDIUM表示：密码复杂度开；当policy参数值是MEDIUM时，以下参数才有意义，length:取值范围[8-64],表示：最少字符数；mixed_case_count：取值范围[1-16]，表示大写字母和小写字母的最少个数。number_count：取值范围[1-16]，表示数字字符的最少个数。special_char_count：取值范围[1-16]，表示特殊字符的最少个数。
      */
     public ParameterDetail [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set 参数详情
-     * @param Items 参数详情
+     * Set 密码复杂度参数详情，policy取值范围["","LOW","MEDIUM"],空或者LOW表示：密码复杂度关，MEDIUM表示：密码复杂度开；当policy参数值是MEDIUM时，以下参数才有意义，length:取值范围[8-64],表示：最少字符数；mixed_case_count：取值范围[1-16]，表示大写字母和小写字母的最少个数。number_count：取值范围[1-16]，表示数字字符的最少个数。special_char_count：取值范围[1-16]，表示特殊字符的最少个数。
+     * @param Items 密码复杂度参数详情，policy取值范围["","LOW","MEDIUM"],空或者LOW表示：密码复杂度关，MEDIUM表示：密码复杂度开；当policy参数值是MEDIUM时，以下参数才有意义，length:取值范围[8-64],表示：最少字符数；mixed_case_count：取值范围[1-16]，表示大写字母和小写字母的最少个数。number_count：取值范围[1-16]，表示数字字符的最少个数。special_char_count：取值范围[1-16]，表示特殊字符的最少个数。
      */
     public void setItems(ParameterDetail [] Items) {
         this.Items = Items;

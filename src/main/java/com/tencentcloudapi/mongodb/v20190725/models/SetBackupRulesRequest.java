@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SetBackupRulesRequest extends AbstractModel {
 
     /**
-    * 实例id，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+    * 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -51,7 +51,9 @@ public class SetBackupRulesRequest extends AbstractModel {
     private Long BackupTime;
 
     /**
-    * 自动备份频率，内部展示，默认取值为24h。
+    * 指定每日自动备份频率。
+- 12: 每日备份2次，间隔约12小时。
+- 24: 每日备份1次（默认），间隔约24小时。
     */
     @SerializedName("BackupFrequency")
     @Expose
@@ -67,72 +69,91 @@ public class SetBackupRulesRequest extends AbstractModel {
     private Boolean Notify;
 
     /**
-    * 指定备份数据保存天数。默认为 7 天，支持设置为7、30、90、180、365。
+    * 指定备份数据保留时长。
+- 单位：天，默认为 7 天。
+- 取值范围：[7,365]。
     */
     @SerializedName("BackupRetentionPeriod")
     @Expose
     private Long BackupRetentionPeriod;
 
     /**
-    * 周几备份，0-6，逗号分割。仅对高级备份生效
+    * 指定每周内执行自动备份的具体日期。
+- 格式：请输入 0-6 之间的数字代表周日至周六（例如：1 代表周一），多个日期请用英文逗号 , 分隔。
+- 示例：输入 1,3,5 表示系统将在每周的周一、周三、周五执行备份。
+- 默认值：不设置，则默认为全周期 (0,1,2,3,4,5,6)，即每日执行备份。
     */
     @SerializedName("ActiveWeekdays")
     @Expose
     private String ActiveWeekdays;
 
     /**
-    * 长期保留周期，周weekly，月monthly，空不开启
+    * 长期保留周期。支持按周或按月选择特定日期的备份（例如，每月1日、15日的备份数据），将其保留更长周期。
+- 不开启（默认）：不启用长期保留功能。
+- 按周保留： 指定为 weekly。
+- 按月保留： 指定为 monthly。
     */
     @SerializedName("LongTermUnit")
     @Expose
     private String LongTermUnit;
 
     /**
-    * 长期保留哪些天的，周0-6，月1-31，逗号分割
+    * 指定用于长期保留的具体备份日期。此设置仅在 **LongTermUnit** 被设为**weekly** 或 **monthly** 时生效。
+- 按周（weekly）保留：请输入 0-6 之间的数字来代表周日至周六。多个日期请用英文逗号 , 分隔。
+- 按月（monthly）保留：请输入 1-31 之间的数字来代表月份中的具体日期。多个日期请用英文逗号 , 分隔。
     */
     @SerializedName("LongTermActiveDays")
     @Expose
     private String LongTermActiveDays;
 
     /**
-    * 长期备份保留多少天
+    * 长期备份保留时长。取值范围[30,1075]。
     */
     @SerializedName("LongTermExpiredDays")
     @Expose
     private Long LongTermExpiredDays;
 
     /**
-    * 增量保留多少天
+    * 增量备份保留时长。
+- 单位：天。
+- 默认值：7天。
+- 取值范围：[7,365]。
+
     */
     @SerializedName("OplogExpiredDays")
     @Expose
     private Long OplogExpiredDays;
 
     /**
-    * 备份版本。旧版本备份为0，高级备份为1。开启高级备份此值传1
+    * 指定备份版本。
+- 旧版本备份：0。
+- 开启高级备份：1。
     */
     @SerializedName("BackupVersion")
     @Expose
     private Long BackupVersion;
 
     /**
-    * 告警额度。50-300
+    * 设置备份数据集存储空间使用率的告警阈值。
+- 单位：%。
+-  默认值：100。
+- 取值范围：[50,300]。
     */
     @SerializedName("AlarmWaterLevel")
     @Expose
     private Long AlarmWaterLevel;
 
     /**
-     * Get 实例id，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。 
-     * @return InstanceId 实例id，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * Get 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。 
+     * @return InstanceId 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例id，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
-     * @param InstanceId 实例id，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * Set 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * @param InstanceId 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -195,16 +216,24 @@ public class SetBackupRulesRequest extends AbstractModel {
     }
 
     /**
-     * Get 自动备份频率，内部展示，默认取值为24h。 
-     * @return BackupFrequency 自动备份频率，内部展示，默认取值为24h。
+     * Get 指定每日自动备份频率。
+- 12: 每日备份2次，间隔约12小时。
+- 24: 每日备份1次（默认），间隔约24小时。 
+     * @return BackupFrequency 指定每日自动备份频率。
+- 12: 每日备份2次，间隔约12小时。
+- 24: 每日备份1次（默认），间隔约24小时。
      */
     public Long getBackupFrequency() {
         return this.BackupFrequency;
     }
 
     /**
-     * Set 自动备份频率，内部展示，默认取值为24h。
-     * @param BackupFrequency 自动备份频率，内部展示，默认取值为24h。
+     * Set 指定每日自动备份频率。
+- 12: 每日备份2次，间隔约12小时。
+- 24: 每日备份1次（默认），间隔约24小时。
+     * @param BackupFrequency 指定每日自动备份频率。
+- 12: 每日备份2次，间隔约12小时。
+- 24: 每日备份1次（默认），间隔约24小时。
      */
     public void setBackupFrequency(Long BackupFrequency) {
         this.BackupFrequency = BackupFrequency;
@@ -235,128 +264,204 @@ public class SetBackupRulesRequest extends AbstractModel {
     }
 
     /**
-     * Get 指定备份数据保存天数。默认为 7 天，支持设置为7、30、90、180、365。 
-     * @return BackupRetentionPeriod 指定备份数据保存天数。默认为 7 天，支持设置为7、30、90、180、365。
+     * Get 指定备份数据保留时长。
+- 单位：天，默认为 7 天。
+- 取值范围：[7,365]。 
+     * @return BackupRetentionPeriod 指定备份数据保留时长。
+- 单位：天，默认为 7 天。
+- 取值范围：[7,365]。
      */
     public Long getBackupRetentionPeriod() {
         return this.BackupRetentionPeriod;
     }
 
     /**
-     * Set 指定备份数据保存天数。默认为 7 天，支持设置为7、30、90、180、365。
-     * @param BackupRetentionPeriod 指定备份数据保存天数。默认为 7 天，支持设置为7、30、90、180、365。
+     * Set 指定备份数据保留时长。
+- 单位：天，默认为 7 天。
+- 取值范围：[7,365]。
+     * @param BackupRetentionPeriod 指定备份数据保留时长。
+- 单位：天，默认为 7 天。
+- 取值范围：[7,365]。
      */
     public void setBackupRetentionPeriod(Long BackupRetentionPeriod) {
         this.BackupRetentionPeriod = BackupRetentionPeriod;
     }
 
     /**
-     * Get 周几备份，0-6，逗号分割。仅对高级备份生效 
-     * @return ActiveWeekdays 周几备份，0-6，逗号分割。仅对高级备份生效
+     * Get 指定每周内执行自动备份的具体日期。
+- 格式：请输入 0-6 之间的数字代表周日至周六（例如：1 代表周一），多个日期请用英文逗号 , 分隔。
+- 示例：输入 1,3,5 表示系统将在每周的周一、周三、周五执行备份。
+- 默认值：不设置，则默认为全周期 (0,1,2,3,4,5,6)，即每日执行备份。 
+     * @return ActiveWeekdays 指定每周内执行自动备份的具体日期。
+- 格式：请输入 0-6 之间的数字代表周日至周六（例如：1 代表周一），多个日期请用英文逗号 , 分隔。
+- 示例：输入 1,3,5 表示系统将在每周的周一、周三、周五执行备份。
+- 默认值：不设置，则默认为全周期 (0,1,2,3,4,5,6)，即每日执行备份。
      */
     public String getActiveWeekdays() {
         return this.ActiveWeekdays;
     }
 
     /**
-     * Set 周几备份，0-6，逗号分割。仅对高级备份生效
-     * @param ActiveWeekdays 周几备份，0-6，逗号分割。仅对高级备份生效
+     * Set 指定每周内执行自动备份的具体日期。
+- 格式：请输入 0-6 之间的数字代表周日至周六（例如：1 代表周一），多个日期请用英文逗号 , 分隔。
+- 示例：输入 1,3,5 表示系统将在每周的周一、周三、周五执行备份。
+- 默认值：不设置，则默认为全周期 (0,1,2,3,4,5,6)，即每日执行备份。
+     * @param ActiveWeekdays 指定每周内执行自动备份的具体日期。
+- 格式：请输入 0-6 之间的数字代表周日至周六（例如：1 代表周一），多个日期请用英文逗号 , 分隔。
+- 示例：输入 1,3,5 表示系统将在每周的周一、周三、周五执行备份。
+- 默认值：不设置，则默认为全周期 (0,1,2,3,4,5,6)，即每日执行备份。
      */
     public void setActiveWeekdays(String ActiveWeekdays) {
         this.ActiveWeekdays = ActiveWeekdays;
     }
 
     /**
-     * Get 长期保留周期，周weekly，月monthly，空不开启 
-     * @return LongTermUnit 长期保留周期，周weekly，月monthly，空不开启
+     * Get 长期保留周期。支持按周或按月选择特定日期的备份（例如，每月1日、15日的备份数据），将其保留更长周期。
+- 不开启（默认）：不启用长期保留功能。
+- 按周保留： 指定为 weekly。
+- 按月保留： 指定为 monthly。 
+     * @return LongTermUnit 长期保留周期。支持按周或按月选择特定日期的备份（例如，每月1日、15日的备份数据），将其保留更长周期。
+- 不开启（默认）：不启用长期保留功能。
+- 按周保留： 指定为 weekly。
+- 按月保留： 指定为 monthly。
      */
     public String getLongTermUnit() {
         return this.LongTermUnit;
     }
 
     /**
-     * Set 长期保留周期，周weekly，月monthly，空不开启
-     * @param LongTermUnit 长期保留周期，周weekly，月monthly，空不开启
+     * Set 长期保留周期。支持按周或按月选择特定日期的备份（例如，每月1日、15日的备份数据），将其保留更长周期。
+- 不开启（默认）：不启用长期保留功能。
+- 按周保留： 指定为 weekly。
+- 按月保留： 指定为 monthly。
+     * @param LongTermUnit 长期保留周期。支持按周或按月选择特定日期的备份（例如，每月1日、15日的备份数据），将其保留更长周期。
+- 不开启（默认）：不启用长期保留功能。
+- 按周保留： 指定为 weekly。
+- 按月保留： 指定为 monthly。
      */
     public void setLongTermUnit(String LongTermUnit) {
         this.LongTermUnit = LongTermUnit;
     }
 
     /**
-     * Get 长期保留哪些天的，周0-6，月1-31，逗号分割 
-     * @return LongTermActiveDays 长期保留哪些天的，周0-6，月1-31，逗号分割
+     * Get 指定用于长期保留的具体备份日期。此设置仅在 **LongTermUnit** 被设为**weekly** 或 **monthly** 时生效。
+- 按周（weekly）保留：请输入 0-6 之间的数字来代表周日至周六。多个日期请用英文逗号 , 分隔。
+- 按月（monthly）保留：请输入 1-31 之间的数字来代表月份中的具体日期。多个日期请用英文逗号 , 分隔。 
+     * @return LongTermActiveDays 指定用于长期保留的具体备份日期。此设置仅在 **LongTermUnit** 被设为**weekly** 或 **monthly** 时生效。
+- 按周（weekly）保留：请输入 0-6 之间的数字来代表周日至周六。多个日期请用英文逗号 , 分隔。
+- 按月（monthly）保留：请输入 1-31 之间的数字来代表月份中的具体日期。多个日期请用英文逗号 , 分隔。
      */
     public String getLongTermActiveDays() {
         return this.LongTermActiveDays;
     }
 
     /**
-     * Set 长期保留哪些天的，周0-6，月1-31，逗号分割
-     * @param LongTermActiveDays 长期保留哪些天的，周0-6，月1-31，逗号分割
+     * Set 指定用于长期保留的具体备份日期。此设置仅在 **LongTermUnit** 被设为**weekly** 或 **monthly** 时生效。
+- 按周（weekly）保留：请输入 0-6 之间的数字来代表周日至周六。多个日期请用英文逗号 , 分隔。
+- 按月（monthly）保留：请输入 1-31 之间的数字来代表月份中的具体日期。多个日期请用英文逗号 , 分隔。
+     * @param LongTermActiveDays 指定用于长期保留的具体备份日期。此设置仅在 **LongTermUnit** 被设为**weekly** 或 **monthly** 时生效。
+- 按周（weekly）保留：请输入 0-6 之间的数字来代表周日至周六。多个日期请用英文逗号 , 分隔。
+- 按月（monthly）保留：请输入 1-31 之间的数字来代表月份中的具体日期。多个日期请用英文逗号 , 分隔。
      */
     public void setLongTermActiveDays(String LongTermActiveDays) {
         this.LongTermActiveDays = LongTermActiveDays;
     }
 
     /**
-     * Get 长期备份保留多少天 
-     * @return LongTermExpiredDays 长期备份保留多少天
+     * Get 长期备份保留时长。取值范围[30,1075]。 
+     * @return LongTermExpiredDays 长期备份保留时长。取值范围[30,1075]。
      */
     public Long getLongTermExpiredDays() {
         return this.LongTermExpiredDays;
     }
 
     /**
-     * Set 长期备份保留多少天
-     * @param LongTermExpiredDays 长期备份保留多少天
+     * Set 长期备份保留时长。取值范围[30,1075]。
+     * @param LongTermExpiredDays 长期备份保留时长。取值范围[30,1075]。
      */
     public void setLongTermExpiredDays(Long LongTermExpiredDays) {
         this.LongTermExpiredDays = LongTermExpiredDays;
     }
 
     /**
-     * Get 增量保留多少天 
-     * @return OplogExpiredDays 增量保留多少天
+     * Get 增量备份保留时长。
+- 单位：天。
+- 默认值：7天。
+- 取值范围：[7,365]。
+ 
+     * @return OplogExpiredDays 增量备份保留时长。
+- 单位：天。
+- 默认值：7天。
+- 取值范围：[7,365]。
+
      */
     public Long getOplogExpiredDays() {
         return this.OplogExpiredDays;
     }
 
     /**
-     * Set 增量保留多少天
-     * @param OplogExpiredDays 增量保留多少天
+     * Set 增量备份保留时长。
+- 单位：天。
+- 默认值：7天。
+- 取值范围：[7,365]。
+
+     * @param OplogExpiredDays 增量备份保留时长。
+- 单位：天。
+- 默认值：7天。
+- 取值范围：[7,365]。
+
      */
     public void setOplogExpiredDays(Long OplogExpiredDays) {
         this.OplogExpiredDays = OplogExpiredDays;
     }
 
     /**
-     * Get 备份版本。旧版本备份为0，高级备份为1。开启高级备份此值传1 
-     * @return BackupVersion 备份版本。旧版本备份为0，高级备份为1。开启高级备份此值传1
+     * Get 指定备份版本。
+- 旧版本备份：0。
+- 开启高级备份：1。 
+     * @return BackupVersion 指定备份版本。
+- 旧版本备份：0。
+- 开启高级备份：1。
      */
     public Long getBackupVersion() {
         return this.BackupVersion;
     }
 
     /**
-     * Set 备份版本。旧版本备份为0，高级备份为1。开启高级备份此值传1
-     * @param BackupVersion 备份版本。旧版本备份为0，高级备份为1。开启高级备份此值传1
+     * Set 指定备份版本。
+- 旧版本备份：0。
+- 开启高级备份：1。
+     * @param BackupVersion 指定备份版本。
+- 旧版本备份：0。
+- 开启高级备份：1。
      */
     public void setBackupVersion(Long BackupVersion) {
         this.BackupVersion = BackupVersion;
     }
 
     /**
-     * Get 告警额度。50-300 
-     * @return AlarmWaterLevel 告警额度。50-300
+     * Get 设置备份数据集存储空间使用率的告警阈值。
+- 单位：%。
+-  默认值：100。
+- 取值范围：[50,300]。 
+     * @return AlarmWaterLevel 设置备份数据集存储空间使用率的告警阈值。
+- 单位：%。
+-  默认值：100。
+- 取值范围：[50,300]。
      */
     public Long getAlarmWaterLevel() {
         return this.AlarmWaterLevel;
     }
 
     /**
-     * Set 告警额度。50-300
-     * @param AlarmWaterLevel 告警额度。50-300
+     * Set 设置备份数据集存储空间使用率的告警阈值。
+- 单位：%。
+-  默认值：100。
+- 取值范围：[50,300]。
+     * @param AlarmWaterLevel 设置备份数据集存储空间使用率的告警阈值。
+- 单位：%。
+-  默认值：100。
+- 取值范围：[50,300]。
      */
     public void setAlarmWaterLevel(Long AlarmWaterLevel) {
         this.AlarmWaterLevel = AlarmWaterLevel;
