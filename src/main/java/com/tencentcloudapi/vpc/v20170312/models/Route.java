@@ -42,8 +42,8 @@ NORMAL_CVM：普通云服务器；
 EIP：云服务器的公网IP；
 LOCAL_GATEWAY：CDC本地网关；
 INTRANAT：私网NAT网关；
-USER_CCN；云联网（自定义路由）。
-
+USER_CCN：云联网（自定义路由）；
+GWLB_ENDPOINT：网关负载均衡终端节点。
     */
     @SerializedName("GatewayType")
     @Expose
@@ -162,8 +162,8 @@ NORMAL_CVM：普通云服务器；
 EIP：云服务器的公网IP；
 LOCAL_GATEWAY：CDC本地网关；
 INTRANAT：私网NAT网关；
-USER_CCN；云联网（自定义路由）。
- 
+USER_CCN：云联网（自定义路由）；
+GWLB_ENDPOINT：网关负载均衡终端节点。 
      * @return GatewayType 下一跳类型，目前我们支持的类型有：
 CVM：公网网关类型的云服务器；
 VPN：VPN网关；
@@ -175,8 +175,8 @@ NORMAL_CVM：普通云服务器；
 EIP：云服务器的公网IP；
 LOCAL_GATEWAY：CDC本地网关；
 INTRANAT：私网NAT网关；
-USER_CCN；云联网（自定义路由）。
-
+USER_CCN：云联网（自定义路由）；
+GWLB_ENDPOINT：网关负载均衡终端节点。
      */
     public String getGatewayType() {
         return this.GatewayType;
@@ -194,8 +194,8 @@ NORMAL_CVM：普通云服务器；
 EIP：云服务器的公网IP；
 LOCAL_GATEWAY：CDC本地网关；
 INTRANAT：私网NAT网关；
-USER_CCN；云联网（自定义路由）。
-
+USER_CCN：云联网（自定义路由）；
+GWLB_ENDPOINT：网关负载均衡终端节点。
      * @param GatewayType 下一跳类型，目前我们支持的类型有：
 CVM：公网网关类型的云服务器；
 VPN：VPN网关；
@@ -207,8 +207,8 @@ NORMAL_CVM：普通云服务器；
 EIP：云服务器的公网IP；
 LOCAL_GATEWAY：CDC本地网关；
 INTRANAT：私网NAT网关；
-USER_CCN；云联网（自定义路由）。
-
+USER_CCN：云联网（自定义路由）；
+GWLB_ENDPOINT：网关负载均衡终端节点。
      */
     public void setGatewayType(String GatewayType) {
         this.GatewayType = GatewayType;

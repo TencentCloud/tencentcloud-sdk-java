@@ -38,7 +38,7 @@ public class GeneralAccurateOCRRequest extends AbstractModel {
     private String ImageUrl;
 
     /**
-    * 是否返回单字信息，默认关
+    * 是否返回单字信息，默认值为false，注：仅ConfigID配置为OCR时支持。
     */
     @SerializedName("IsWords")
     @Expose
@@ -73,7 +73,7 @@ public class GeneralAccurateOCRRequest extends AbstractModel {
     private Boolean EnableDetectText;
 
     /**
-    * 配置ID支持：  OCR -- 通用场景  MulOCR--多语种场景，注：仅ConfigID配置为OCR时支持
+    * 配置ID支持： OCR -- 通用场景 MulOCR--多语种场景，默认值为OCR
     */
     @SerializedName("ConfigID")
     @Expose
@@ -112,16 +112,16 @@ public class GeneralAccurateOCRRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否返回单字信息，默认关 
-     * @return IsWords 是否返回单字信息，默认关
+     * Get 是否返回单字信息，默认值为false，注：仅ConfigID配置为OCR时支持。 
+     * @return IsWords 是否返回单字信息，默认值为false，注：仅ConfigID配置为OCR时支持。
      */
     public Boolean getIsWords() {
         return this.IsWords;
     }
 
     /**
-     * Set 是否返回单字信息，默认关
-     * @param IsWords 是否返回单字信息，默认关
+     * Set 是否返回单字信息，默认值为false，注：仅ConfigID配置为OCR时支持。
+     * @param IsWords 是否返回单字信息，默认值为false，注：仅ConfigID配置为OCR时支持。
      */
     public void setIsWords(Boolean IsWords) {
         this.IsWords = IsWords;
@@ -192,16 +192,16 @@ public class GeneralAccurateOCRRequest extends AbstractModel {
     }
 
     /**
-     * Get 配置ID支持：  OCR -- 通用场景  MulOCR--多语种场景，注：仅ConfigID配置为OCR时支持 
-     * @return ConfigID 配置ID支持：  OCR -- 通用场景  MulOCR--多语种场景，注：仅ConfigID配置为OCR时支持
+     * Get 配置ID支持： OCR -- 通用场景 MulOCR--多语种场景，默认值为OCR 
+     * @return ConfigID 配置ID支持： OCR -- 通用场景 MulOCR--多语种场景，默认值为OCR
      */
     public String getConfigID() {
         return this.ConfigID;
     }
 
     /**
-     * Set 配置ID支持：  OCR -- 通用场景  MulOCR--多语种场景，注：仅ConfigID配置为OCR时支持
-     * @param ConfigID 配置ID支持：  OCR -- 通用场景  MulOCR--多语种场景，注：仅ConfigID配置为OCR时支持
+     * Set 配置ID支持： OCR -- 通用场景 MulOCR--多语种场景，默认值为OCR
+     * @param ConfigID 配置ID支持： OCR -- 通用场景 MulOCR--多语种场景，默认值为OCR
      */
     public void setConfigID(String ConfigID) {
         this.ConfigID = ConfigID;

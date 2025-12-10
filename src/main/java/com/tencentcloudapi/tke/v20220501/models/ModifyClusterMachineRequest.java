@@ -45,6 +45,13 @@ public class ModifyClusterMachineRequest extends AbstractModel {
     private String DisplayName;
 
     /**
+    * 系统盘的信息
+    */
+    @SerializedName("SystemDisk")
+    @Expose
+    private Disk SystemDisk;
+
+    /**
     * 节点预付费信息
     */
     @SerializedName("InstanceChargePrepaid")
@@ -100,6 +107,22 @@ public class ModifyClusterMachineRequest extends AbstractModel {
     }
 
     /**
+     * Get 系统盘的信息 
+     * @return SystemDisk 系统盘的信息
+     */
+    public Disk getSystemDisk() {
+        return this.SystemDisk;
+    }
+
+    /**
+     * Set 系统盘的信息
+     * @param SystemDisk 系统盘的信息
+     */
+    public void setSystemDisk(Disk SystemDisk) {
+        this.SystemDisk = SystemDisk;
+    }
+
+    /**
      * Get 节点预付费信息 
      * @return InstanceChargePrepaid 节点预付费信息
      */
@@ -135,6 +158,9 @@ public class ModifyClusterMachineRequest extends AbstractModel {
         if (source.DisplayName != null) {
             this.DisplayName = new String(source.DisplayName);
         }
+        if (source.SystemDisk != null) {
+            this.SystemDisk = new Disk(source.SystemDisk);
+        }
         if (source.InstanceChargePrepaid != null) {
             this.InstanceChargePrepaid = new InstanceChargePrepaid(source.InstanceChargePrepaid);
         }
@@ -148,6 +174,7 @@ public class ModifyClusterMachineRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamArraySimple(map, prefix + "MachineNames.", this.MachineNames);
         this.setParamSimple(map, prefix + "DisplayName", this.DisplayName);
+        this.setParamObj(map, prefix + "SystemDisk.", this.SystemDisk);
         this.setParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
 
     }

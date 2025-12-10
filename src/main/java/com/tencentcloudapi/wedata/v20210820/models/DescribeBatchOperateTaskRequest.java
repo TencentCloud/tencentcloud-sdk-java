@@ -182,6 +182,27 @@ presto
     private Boolean CanSubmit;
 
     /**
+    * 返回时间字段需要转换的时区
+    */
+    @SerializedName("TimeZone")
+    @Expose
+    private String TimeZone;
+
+    /**
+    * 任务最后更新时间最小值，ISO8601格式，如2025-07-16T15:00:00+08:00
+    */
+    @SerializedName("MinUpdateTime")
+    @Expose
+    private String MinUpdateTime;
+
+    /**
+    * 任务最后更新时间最大值，ISO8601格式，如2025-07-17T15:00:00+08:00
+    */
+    @SerializedName("MaxUpdateTime")
+    @Expose
+    private String MaxUpdateTime;
+
+    /**
      * Get 项目Id 
      * @return ProjectId 项目Id
      */
@@ -561,6 +582,54 @@ presto
         this.CanSubmit = CanSubmit;
     }
 
+    /**
+     * Get 返回时间字段需要转换的时区 
+     * @return TimeZone 返回时间字段需要转换的时区
+     */
+    public String getTimeZone() {
+        return this.TimeZone;
+    }
+
+    /**
+     * Set 返回时间字段需要转换的时区
+     * @param TimeZone 返回时间字段需要转换的时区
+     */
+    public void setTimeZone(String TimeZone) {
+        this.TimeZone = TimeZone;
+    }
+
+    /**
+     * Get 任务最后更新时间最小值，ISO8601格式，如2025-07-16T15:00:00+08:00 
+     * @return MinUpdateTime 任务最后更新时间最小值，ISO8601格式，如2025-07-16T15:00:00+08:00
+     */
+    public String getMinUpdateTime() {
+        return this.MinUpdateTime;
+    }
+
+    /**
+     * Set 任务最后更新时间最小值，ISO8601格式，如2025-07-16T15:00:00+08:00
+     * @param MinUpdateTime 任务最后更新时间最小值，ISO8601格式，如2025-07-16T15:00:00+08:00
+     */
+    public void setMinUpdateTime(String MinUpdateTime) {
+        this.MinUpdateTime = MinUpdateTime;
+    }
+
+    /**
+     * Get 任务最后更新时间最大值，ISO8601格式，如2025-07-17T15:00:00+08:00 
+     * @return MaxUpdateTime 任务最后更新时间最大值，ISO8601格式，如2025-07-17T15:00:00+08:00
+     */
+    public String getMaxUpdateTime() {
+        return this.MaxUpdateTime;
+    }
+
+    /**
+     * Set 任务最后更新时间最大值，ISO8601格式，如2025-07-17T15:00:00+08:00
+     * @param MaxUpdateTime 任务最后更新时间最大值，ISO8601格式，如2025-07-17T15:00:00+08:00
+     */
+    public void setMaxUpdateTime(String MaxUpdateTime) {
+        this.MaxUpdateTime = MaxUpdateTime;
+    }
+
     public DescribeBatchOperateTaskRequest() {
     }
 
@@ -659,6 +728,15 @@ presto
         if (source.CanSubmit != null) {
             this.CanSubmit = new Boolean(source.CanSubmit);
         }
+        if (source.TimeZone != null) {
+            this.TimeZone = new String(source.TimeZone);
+        }
+        if (source.MinUpdateTime != null) {
+            this.MinUpdateTime = new String(source.MinUpdateTime);
+        }
+        if (source.MaxUpdateTime != null) {
+            this.MaxUpdateTime = new String(source.MaxUpdateTime);
+        }
     }
 
 
@@ -687,6 +765,9 @@ presto
         this.setParamArraySimple(map, prefix + "DatasourceTypeList.", this.DatasourceTypeList);
         this.setParamArraySimple(map, prefix + "CycleUnitList.", this.CycleUnitList);
         this.setParamSimple(map, prefix + "CanSubmit", this.CanSubmit);
+        this.setParamSimple(map, prefix + "TimeZone", this.TimeZone);
+        this.setParamSimple(map, prefix + "MinUpdateTime", this.MinUpdateTime);
+        this.setParamSimple(map, prefix + "MaxUpdateTime", this.MaxUpdateTime);
 
     }
 }

@@ -28,6 +28,7 @@ public class SmartSubtitlesResult extends AbstractModel {
 - AsrFullTextRecognition：语音全文识别
 - TransTextRecognition：语音翻译
 - PureSubtitleTrans:   纯字幕翻译
+- OcrFullTextRecognition：文字提取字幕
     */
     @SerializedName("Type")
     @Expose
@@ -61,14 +62,25 @@ TransTextRecognition 时有效。
     private PureSubtitleTransResult PureSubtitleTransTask;
 
     /**
+    * 文字提取字幕结果，当 Type 为
+ OcrFullTextRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OcrFullTextTask")
+    @Expose
+    private SmartSubtitleTaskFullTextResult OcrFullTextTask;
+
+    /**
      * Get 任务的类型，取值范围：
 - AsrFullTextRecognition：语音全文识别
 - TransTextRecognition：语音翻译
-- PureSubtitleTrans:   纯字幕翻译 
+- PureSubtitleTrans:   纯字幕翻译
+- OcrFullTextRecognition：文字提取字幕 
      * @return Type 任务的类型，取值范围：
 - AsrFullTextRecognition：语音全文识别
 - TransTextRecognition：语音翻译
 - PureSubtitleTrans:   纯字幕翻译
+- OcrFullTextRecognition：文字提取字幕
      */
     public String getType() {
         return this.Type;
@@ -79,10 +91,12 @@ TransTextRecognition 时有效。
 - AsrFullTextRecognition：语音全文识别
 - TransTextRecognition：语音翻译
 - PureSubtitleTrans:   纯字幕翻译
+- OcrFullTextRecognition：文字提取字幕
      * @param Type 任务的类型，取值范围：
 - AsrFullTextRecognition：语音全文识别
 - TransTextRecognition：语音翻译
 - PureSubtitleTrans:   纯字幕翻译
+- OcrFullTextRecognition：文字提取字幕
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -160,6 +174,30 @@ TransTextRecognition 时有效。
         this.PureSubtitleTransTask = PureSubtitleTransTask;
     }
 
+    /**
+     * Get 文字提取字幕结果，当 Type 为
+ OcrFullTextRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OcrFullTextTask 文字提取字幕结果，当 Type 为
+ OcrFullTextRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SmartSubtitleTaskFullTextResult getOcrFullTextTask() {
+        return this.OcrFullTextTask;
+    }
+
+    /**
+     * Set 文字提取字幕结果，当 Type 为
+ OcrFullTextRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OcrFullTextTask 文字提取字幕结果，当 Type 为
+ OcrFullTextRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOcrFullTextTask(SmartSubtitleTaskFullTextResult OcrFullTextTask) {
+        this.OcrFullTextTask = OcrFullTextTask;
+    }
+
     public SmartSubtitlesResult() {
     }
 
@@ -180,6 +218,9 @@ TransTextRecognition 时有效。
         if (source.PureSubtitleTransTask != null) {
             this.PureSubtitleTransTask = new PureSubtitleTransResult(source.PureSubtitleTransTask);
         }
+        if (source.OcrFullTextTask != null) {
+            this.OcrFullTextTask = new SmartSubtitleTaskFullTextResult(source.OcrFullTextTask);
+        }
     }
 
 
@@ -191,6 +232,7 @@ TransTextRecognition 时有效。
         this.setParamObj(map, prefix + "AsrFullTextTask.", this.AsrFullTextTask);
         this.setParamObj(map, prefix + "TransTextTask.", this.TransTextTask);
         this.setParamObj(map, prefix + "PureSubtitleTransTask.", this.PureSubtitleTransTask);
+        this.setParamObj(map, prefix + "OcrFullTextTask.", this.OcrFullTextTask);
 
     }
 }

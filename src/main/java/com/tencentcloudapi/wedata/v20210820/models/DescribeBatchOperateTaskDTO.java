@@ -137,7 +137,15 @@ presto\SparkJob\SparkSql
     private String CreateTime;
 
     /**
-    * 周期类型
+    * 周期类型D天周期
+H小时
+Ccrontab类型
+I分钟
+O一次性
+Y年
+R用户驱动
+W周
+M月
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CycleUnit")
@@ -167,6 +175,30 @@ presto\SparkJob\SparkSql
     @SerializedName("DatasourceType")
     @Expose
     private String DatasourceType;
+
+    /**
+    * 引擎名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ComputeResource")
+    @Expose
+    private String ComputeResource;
+
+    /**
+    * dlc地域
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DlcRegion")
+    @Expose
+    private String DlcRegion;
+
+    /**
+    * 资源组或自定义
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsInherit")
+    @Expose
+    private String IsInherit;
 
     /**
      * Get 任务ID
@@ -453,9 +485,25 @@ presto\SparkJob\SparkSql
     }
 
     /**
-     * Get 周期类型
+     * Get 周期类型D天周期
+H小时
+Ccrontab类型
+I分钟
+O一次性
+Y年
+R用户驱动
+W周
+M月
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CycleUnit 周期类型
+     * @return CycleUnit 周期类型D天周期
+H小时
+Ccrontab类型
+I分钟
+O一次性
+Y年
+R用户驱动
+W周
+M月
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCycleUnit() {
@@ -463,9 +511,25 @@ presto\SparkJob\SparkSql
     }
 
     /**
-     * Set 周期类型
+     * Set 周期类型D天周期
+H小时
+Ccrontab类型
+I分钟
+O一次性
+Y年
+R用户驱动
+W周
+M月
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CycleUnit 周期类型
+     * @param CycleUnit 周期类型D天周期
+H小时
+Ccrontab类型
+I分钟
+O一次性
+Y年
+R用户驱动
+W周
+M月
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCycleUnit(String CycleUnit) {
@@ -532,6 +596,66 @@ presto\SparkJob\SparkSql
         this.DatasourceType = DatasourceType;
     }
 
+    /**
+     * Get 引擎名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ComputeResource 引擎名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getComputeResource() {
+        return this.ComputeResource;
+    }
+
+    /**
+     * Set 引擎名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ComputeResource 引擎名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setComputeResource(String ComputeResource) {
+        this.ComputeResource = ComputeResource;
+    }
+
+    /**
+     * Get dlc地域
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DlcRegion dlc地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDlcRegion() {
+        return this.DlcRegion;
+    }
+
+    /**
+     * Set dlc地域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DlcRegion dlc地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDlcRegion(String DlcRegion) {
+        this.DlcRegion = DlcRegion;
+    }
+
+    /**
+     * Get 资源组或自定义
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsInherit 资源组或自定义
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIsInherit() {
+        return this.IsInherit;
+    }
+
+    /**
+     * Set 资源组或自定义
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsInherit 资源组或自定义
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsInherit(String IsInherit) {
+        this.IsInherit = IsInherit;
+    }
+
     public DescribeBatchOperateTaskDTO() {
     }
 
@@ -594,6 +718,15 @@ presto\SparkJob\SparkSql
         if (source.DatasourceType != null) {
             this.DatasourceType = new String(source.DatasourceType);
         }
+        if (source.ComputeResource != null) {
+            this.ComputeResource = new String(source.ComputeResource);
+        }
+        if (source.DlcRegion != null) {
+            this.DlcRegion = new String(source.DlcRegion);
+        }
+        if (source.IsInherit != null) {
+            this.IsInherit = new String(source.IsInherit);
+        }
     }
 
 
@@ -619,6 +752,9 @@ presto\SparkJob\SparkSql
         this.setParamSimple(map, prefix + "ScheduleDesc", this.ScheduleDesc);
         this.setParamSimple(map, prefix + "DatasourceId", this.DatasourceId);
         this.setParamSimple(map, prefix + "DatasourceType", this.DatasourceType);
+        this.setParamSimple(map, prefix + "ComputeResource", this.ComputeResource);
+        this.setParamSimple(map, prefix + "DlcRegion", this.DlcRegion);
+        this.setParamSimple(map, prefix + "IsInherit", this.IsInherit);
 
     }
 }

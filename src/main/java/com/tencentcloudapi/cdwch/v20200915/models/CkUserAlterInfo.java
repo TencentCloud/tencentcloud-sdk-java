@@ -52,6 +52,13 @@ public class CkUserAlterInfo extends AbstractModel {
     private String Describe;
 
     /**
+    * 账户的当前密码
+    */
+    @SerializedName("OriginalPassword")
+    @Expose
+    private String OriginalPassword;
+
+    /**
      * Get 集群实例id 
      * @return InstanceId 集群实例id
      */
@@ -115,6 +122,22 @@ public class CkUserAlterInfo extends AbstractModel {
         this.Describe = Describe;
     }
 
+    /**
+     * Get 账户的当前密码 
+     * @return OriginalPassword 账户的当前密码
+     */
+    public String getOriginalPassword() {
+        return this.OriginalPassword;
+    }
+
+    /**
+     * Set 账户的当前密码
+     * @param OriginalPassword 账户的当前密码
+     */
+    public void setOriginalPassword(String OriginalPassword) {
+        this.OriginalPassword = OriginalPassword;
+    }
+
     public CkUserAlterInfo() {
     }
 
@@ -135,6 +158,9 @@ public class CkUserAlterInfo extends AbstractModel {
         if (source.Describe != null) {
             this.Describe = new String(source.Describe);
         }
+        if (source.OriginalPassword != null) {
+            this.OriginalPassword = new String(source.OriginalPassword);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class CkUserAlterInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "UserName", this.UserName);
         this.setParamSimple(map, prefix + "PassWord", this.PassWord);
         this.setParamSimple(map, prefix + "Describe", this.Describe);
+        this.setParamSimple(map, prefix + "OriginalPassword", this.OriginalPassword);
 
     }
 }

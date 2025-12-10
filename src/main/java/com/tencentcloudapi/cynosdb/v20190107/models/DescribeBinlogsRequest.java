@@ -52,7 +52,7 @@ public class DescribeBinlogsRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 限制条数
+    * 限制条数，默认值为20
     */
     @SerializedName("Limit")
     @Expose
@@ -123,16 +123,16 @@ public class DescribeBinlogsRequest extends AbstractModel {
     }
 
     /**
-     * Get 限制条数 
-     * @return Limit 限制条数
+     * Get 限制条数，默认值为20 
+     * @return Limit 限制条数，默认值为20
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 限制条数
-     * @param Limit 限制条数
+     * Set 限制条数，默认值为20
+     * @param Limit 限制条数，默认值为20
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

@@ -130,6 +130,7 @@ public class ClusterInstanceDetail extends AbstractModel {
 
     /**
     * 实例存储类型
+说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。
     */
     @SerializedName("InstanceStorageType")
     @Expose
@@ -144,6 +145,7 @@ public class ClusterInstanceDetail extends AbstractModel {
 
     /**
     * 节点列表
+说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。
     */
     @SerializedName("NodeList")
     @Expose
@@ -390,8 +392,10 @@ public class ClusterInstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get 实例存储类型 
+     * Get 实例存储类型
+说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。 
      * @return InstanceStorageType 实例存储类型
+说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。
      */
     public String getInstanceStorageType() {
         return this.InstanceStorageType;
@@ -399,7 +403,9 @@ public class ClusterInstanceDetail extends AbstractModel {
 
     /**
      * Set 实例存储类型
+说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。
      * @param InstanceStorageType 实例存储类型
+说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。
      */
     public void setInstanceStorageType(String InstanceStorageType) {
         this.InstanceStorageType = InstanceStorageType;
@@ -422,8 +428,10 @@ public class ClusterInstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get 节点列表 
+     * Get 节点列表
+说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。 
      * @return NodeList 节点列表
+说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。
      */
     public String [] getNodeList() {
         return this.NodeList;
@@ -431,7 +439,9 @@ public class ClusterInstanceDetail extends AbstractModel {
 
     /**
      * Set 节点列表
+说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。
      * @param NodeList 节点列表
+说明：仅当要查询的资源为 LibraDB 时，此参数才会返回值。
      */
     public void setNodeList(String [] NodeList) {
         this.NodeList = NodeList;

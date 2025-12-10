@@ -126,13 +126,15 @@ day：天粒度，指定查询区间大于 31 天，可返回天粒度明细数�
 all：所有协议
 http：指定查询 HTTP 对应指标
 https：指定查询 HTTPS 对应指标
+quic：指定查询 QUIC 对应指标
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * 指定数据源查询，白名单功能
+    * 指定数据源查询
+monitor：监控数据
     */
     @SerializedName("DataSource")
     @Expose
@@ -470,11 +472,13 @@ day：天粒度，指定查询区间大于 31 天，可返回天粒度明细数�
      * Get 指定协议查询，不填充表示查询所有协议
 all：所有协议
 http：指定查询 HTTP 对应指标
-https：指定查询 HTTPS 对应指标 
+https：指定查询 HTTPS 对应指标
+quic：指定查询 QUIC 对应指标 
      * @return Protocol 指定协议查询，不填充表示查询所有协议
 all：所有协议
 http：指定查询 HTTP 对应指标
 https：指定查询 HTTPS 对应指标
+quic：指定查询 QUIC 对应指标
      */
     public String getProtocol() {
         return this.Protocol;
@@ -485,26 +489,32 @@ https：指定查询 HTTPS 对应指标
 all：所有协议
 http：指定查询 HTTP 对应指标
 https：指定查询 HTTPS 对应指标
+quic：指定查询 QUIC 对应指标
      * @param Protocol 指定协议查询，不填充表示查询所有协议
 all：所有协议
 http：指定查询 HTTP 对应指标
 https：指定查询 HTTPS 对应指标
+quic：指定查询 QUIC 对应指标
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 指定数据源查询，白名单功能 
-     * @return DataSource 指定数据源查询，白名单功能
+     * Get 指定数据源查询
+monitor：监控数据 
+     * @return DataSource 指定数据源查询
+monitor：监控数据
      */
     public String getDataSource() {
         return this.DataSource;
     }
 
     /**
-     * Set 指定数据源查询，白名单功能
-     * @param DataSource 指定数据源查询，白名单功能
+     * Set 指定数据源查询
+monitor：监控数据
+     * @param DataSource 指定数据源查询
+monitor：监控数据
      */
     public void setDataSource(String DataSource) {
         this.DataSource = DataSource;

@@ -399,6 +399,20 @@ public class InstanceInfo extends AbstractModel {
     private Long RegionId;
 
     /**
+    * BOT安全护航信息
+    */
+    @SerializedName("BotSecurityPkg")
+    @Expose
+    private BotSecurityPkg BotSecurityPkg;
+
+    /**
+    * BOT安全监测资源信息
+    */
+    @SerializedName("BotMonitorPkg")
+    @Expose
+    private BotMonitorPkg BotMonitorPkg;
+
+    /**
      * Get 实例唯一ID 
      * @return InstanceId 实例唯一ID
      */
@@ -1274,6 +1288,38 @@ public class InstanceInfo extends AbstractModel {
         this.RegionId = RegionId;
     }
 
+    /**
+     * Get BOT安全护航信息 
+     * @return BotSecurityPkg BOT安全护航信息
+     */
+    public BotSecurityPkg getBotSecurityPkg() {
+        return this.BotSecurityPkg;
+    }
+
+    /**
+     * Set BOT安全护航信息
+     * @param BotSecurityPkg BOT安全护航信息
+     */
+    public void setBotSecurityPkg(BotSecurityPkg BotSecurityPkg) {
+        this.BotSecurityPkg = BotSecurityPkg;
+    }
+
+    /**
+     * Get BOT安全监测资源信息 
+     * @return BotMonitorPkg BOT安全监测资源信息
+     */
+    public BotMonitorPkg getBotMonitorPkg() {
+        return this.BotMonitorPkg;
+    }
+
+    /**
+     * Set BOT安全监测资源信息
+     * @param BotMonitorPkg BOT安全监测资源信息
+     */
+    public void setBotMonitorPkg(BotMonitorPkg BotMonitorPkg) {
+        this.BotMonitorPkg = BotMonitorPkg;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1438,6 +1484,12 @@ public class InstanceInfo extends AbstractModel {
         if (source.RegionId != null) {
             this.RegionId = new Long(source.RegionId);
         }
+        if (source.BotSecurityPkg != null) {
+            this.BotSecurityPkg = new BotSecurityPkg(source.BotSecurityPkg);
+        }
+        if (source.BotMonitorPkg != null) {
+            this.BotMonitorPkg = new BotMonitorPkg(source.BotMonitorPkg);
+        }
     }
 
 
@@ -1497,6 +1549,8 @@ public class InstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ElasticResourceId", this.ElasticResourceId);
         this.setParamObj(map, prefix + "LLMMonPkg.", this.LLMMonPkg);
         this.setParamSimple(map, prefix + "RegionId", this.RegionId);
+        this.setParamObj(map, prefix + "BotSecurityPkg.", this.BotSecurityPkg);
+        this.setParamObj(map, prefix + "BotMonitorPkg.", this.BotMonitorPkg);
 
     }
 }

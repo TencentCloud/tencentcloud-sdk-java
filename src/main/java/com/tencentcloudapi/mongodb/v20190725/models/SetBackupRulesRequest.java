@@ -99,8 +99,8 @@ public class SetBackupRulesRequest extends AbstractModel {
 
     /**
     * 指定用于长期保留的具体备份日期。此设置仅在 **LongTermUnit** 被设为**weekly** 或 **monthly** 时生效。
-- 按周（weekly）保留：请输入 0-6 之间的数字来代表周日至周六。多个日期请用英文逗号 , 分隔。
-- 按月（monthly）保留：请输入 1-31 之间的数字来代表月份中的具体日期。多个日期请用英文逗号 , 分隔。
+- 按周（weekly）保留：请输入 0-6 之间的数字来代表周日至周六。多个日期请用英文逗号分隔。
+- 按月（monthly）保留：请输入 1-31 之间的数字来代表月份中的具体日期。多个日期请用英文逗号分隔。
     */
     @SerializedName("LongTermActiveDays")
     @Expose
@@ -118,7 +118,6 @@ public class SetBackupRulesRequest extends AbstractModel {
 - 单位：天。
 - 默认值：7天。
 - 取值范围：[7,365]。
-
     */
     @SerializedName("OplogExpiredDays")
     @Expose
@@ -345,11 +344,11 @@ public class SetBackupRulesRequest extends AbstractModel {
 
     /**
      * Get 指定用于长期保留的具体备份日期。此设置仅在 **LongTermUnit** 被设为**weekly** 或 **monthly** 时生效。
-- 按周（weekly）保留：请输入 0-6 之间的数字来代表周日至周六。多个日期请用英文逗号 , 分隔。
-- 按月（monthly）保留：请输入 1-31 之间的数字来代表月份中的具体日期。多个日期请用英文逗号 , 分隔。 
+- 按周（weekly）保留：请输入 0-6 之间的数字来代表周日至周六。多个日期请用英文逗号分隔。
+- 按月（monthly）保留：请输入 1-31 之间的数字来代表月份中的具体日期。多个日期请用英文逗号分隔。 
      * @return LongTermActiveDays 指定用于长期保留的具体备份日期。此设置仅在 **LongTermUnit** 被设为**weekly** 或 **monthly** 时生效。
-- 按周（weekly）保留：请输入 0-6 之间的数字来代表周日至周六。多个日期请用英文逗号 , 分隔。
-- 按月（monthly）保留：请输入 1-31 之间的数字来代表月份中的具体日期。多个日期请用英文逗号 , 分隔。
+- 按周（weekly）保留：请输入 0-6 之间的数字来代表周日至周六。多个日期请用英文逗号分隔。
+- 按月（monthly）保留：请输入 1-31 之间的数字来代表月份中的具体日期。多个日期请用英文逗号分隔。
      */
     public String getLongTermActiveDays() {
         return this.LongTermActiveDays;
@@ -357,11 +356,11 @@ public class SetBackupRulesRequest extends AbstractModel {
 
     /**
      * Set 指定用于长期保留的具体备份日期。此设置仅在 **LongTermUnit** 被设为**weekly** 或 **monthly** 时生效。
-- 按周（weekly）保留：请输入 0-6 之间的数字来代表周日至周六。多个日期请用英文逗号 , 分隔。
-- 按月（monthly）保留：请输入 1-31 之间的数字来代表月份中的具体日期。多个日期请用英文逗号 , 分隔。
+- 按周（weekly）保留：请输入 0-6 之间的数字来代表周日至周六。多个日期请用英文逗号分隔。
+- 按月（monthly）保留：请输入 1-31 之间的数字来代表月份中的具体日期。多个日期请用英文逗号分隔。
      * @param LongTermActiveDays 指定用于长期保留的具体备份日期。此设置仅在 **LongTermUnit** 被设为**weekly** 或 **monthly** 时生效。
-- 按周（weekly）保留：请输入 0-6 之间的数字来代表周日至周六。多个日期请用英文逗号 , 分隔。
-- 按月（monthly）保留：请输入 1-31 之间的数字来代表月份中的具体日期。多个日期请用英文逗号 , 分隔。
+- 按周（weekly）保留：请输入 0-6 之间的数字来代表周日至周六。多个日期请用英文逗号分隔。
+- 按月（monthly）保留：请输入 1-31 之间的数字来代表月份中的具体日期。多个日期请用英文逗号分隔。
      */
     public void setLongTermActiveDays(String LongTermActiveDays) {
         this.LongTermActiveDays = LongTermActiveDays;
@@ -387,13 +386,11 @@ public class SetBackupRulesRequest extends AbstractModel {
      * Get 增量备份保留时长。
 - 单位：天。
 - 默认值：7天。
-- 取值范围：[7,365]。
- 
+- 取值范围：[7,365]。 
      * @return OplogExpiredDays 增量备份保留时长。
 - 单位：天。
 - 默认值：7天。
 - 取值范围：[7,365]。
-
      */
     public Long getOplogExpiredDays() {
         return this.OplogExpiredDays;
@@ -404,12 +401,10 @@ public class SetBackupRulesRequest extends AbstractModel {
 - 单位：天。
 - 默认值：7天。
 - 取值范围：[7,365]。
-
      * @param OplogExpiredDays 增量备份保留时长。
 - 单位：天。
 - 默认值：7天。
 - 取值范围：[7,365]。
-
      */
     public void setOplogExpiredDays(Long OplogExpiredDays) {
         this.OplogExpiredDays = OplogExpiredDays;

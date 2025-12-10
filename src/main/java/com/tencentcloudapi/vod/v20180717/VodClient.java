@@ -1624,6 +1624,17 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *用于将智能分析的结果导入到知识库中。
+     * @param req ImportMediaKnowledgeRequest
+     * @return ImportMediaKnowledgeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ImportMediaKnowledgeResponse ImportMediaKnowledge(ImportMediaKnowledgeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ImportMediaKnowledge", ImportMediaKnowledgeResponse.class);
+    }
+
+    /**
      *对点播中的音视频媒体发起音画质检测任务。
      * @param req InspectMediaQualityRequest
      * @return InspectMediaQualityResponse
@@ -2342,6 +2353,17 @@ public class VodClient extends AbstractClient{
     public SearchMediaResponse SearchMedia(SearchMediaRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SearchMedia", SearchMediaResponse.class);
+    }
+
+    /**
+     *使用自然语言对媒体进行语义搜索。
+     * @param req SearchMediaBySemanticsRequest
+     * @return SearchMediaBySemanticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public SearchMediaBySemanticsResponse SearchMediaBySemantics(SearchMediaBySemanticsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SearchMediaBySemantics", SearchMediaBySemanticsResponse.class);
     }
 
     /**
