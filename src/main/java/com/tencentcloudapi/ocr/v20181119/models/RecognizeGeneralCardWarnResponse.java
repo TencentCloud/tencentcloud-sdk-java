@@ -112,6 +112,13 @@ SocialSecurityCard：社保卡
     private GeneralCardWarnInfo Watermark;
 
     /**
+    * 是否电子证照（目前仅支持电子身份证、电子营业执照识别
+    */
+    @SerializedName("Electron")
+    @Expose
+    private GeneralCardWarnInfo Electron;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -339,6 +346,22 @@ SocialSecurityCard：社保卡
     }
 
     /**
+     * Get 是否电子证照（目前仅支持电子身份证、电子营业执照识别 
+     * @return Electron 是否电子证照（目前仅支持电子身份证、电子营业执照识别
+     */
+    public GeneralCardWarnInfo getElectron() {
+        return this.Electron;
+    }
+
+    /**
+     * Set 是否电子证照（目前仅支持电子身份证、电子营业执照识别
+     * @param Electron 是否电子证照（目前仅支持电子身份证、电子营业执照识别
+     */
+    public void setElectron(GeneralCardWarnInfo Electron) {
+        this.Electron = Electron;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -395,6 +418,9 @@ SocialSecurityCard：社保卡
         if (source.Watermark != null) {
             this.Watermark = new GeneralCardWarnInfo(source.Watermark);
         }
+        if (source.Electron != null) {
+            this.Electron = new GeneralCardWarnInfo(source.Electron);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -416,6 +442,7 @@ SocialSecurityCard：社保卡
         this.setParamObj(map, prefix + "Cover.", this.Cover);
         this.setParamObj(map, prefix + "Overlap.", this.Overlap);
         this.setParamObj(map, prefix + "Watermark.", this.Watermark);
+        this.setParamObj(map, prefix + "Electron.", this.Electron);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

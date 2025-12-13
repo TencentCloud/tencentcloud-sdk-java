@@ -1709,6 +1709,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *文本翻译
+     * @param req TextTranslationRequest
+     * @return TextTranslationResponse
+     * @throws TencentCloudSDKException
+     */
+    public TextTranslationResponse TextTranslation(TextTranslationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TextTranslation", TextTranslationResponse.class);
+    }
+
+    /**
      *提取视频中的盲水印。
      * @param req WithdrawsWatermarkRequest
      * @return WithdrawsWatermarkResponse

@@ -227,6 +227,13 @@ public class TableInfoNew extends AbstractModel {
     private SyncTableInfo SyncTableInfo;
 
     /**
+    * 表格分片数量
+    */
+    @SerializedName("ShardNum")
+    @Expose
+    private Long ShardNum;
+
+    /**
      * Get 表格名称 
      * @return TableName 表格名称
      */
@@ -690,6 +697,22 @@ public class TableInfoNew extends AbstractModel {
         this.SyncTableInfo = SyncTableInfo;
     }
 
+    /**
+     * Get 表格分片数量 
+     * @return ShardNum 表格分片数量
+     */
+    public Long getShardNum() {
+        return this.ShardNum;
+    }
+
+    /**
+     * Set 表格分片数量
+     * @param ShardNum 表格分片数量
+     */
+    public void setShardNum(Long ShardNum) {
+        this.ShardNum = ShardNum;
+    }
+
     public TableInfoNew() {
     }
 
@@ -788,6 +811,9 @@ public class TableInfoNew extends AbstractModel {
         if (source.SyncTableInfo != null) {
             this.SyncTableInfo = new SyncTableInfo(source.SyncTableInfo);
         }
+        if (source.ShardNum != null) {
+            this.ShardNum = new Long(source.ShardNum);
+        }
     }
 
 
@@ -824,6 +850,7 @@ public class TableInfoNew extends AbstractModel {
         this.setParamSimple(map, prefix + "DbClusterInfoStruct", this.DbClusterInfoStruct);
         this.setParamSimple(map, prefix + "TxhBackupExpireDay", this.TxhBackupExpireDay);
         this.setParamObj(map, prefix + "SyncTableInfo.", this.SyncTableInfo);
+        this.setParamSimple(map, prefix + "ShardNum", this.ShardNum);
 
     }
 }

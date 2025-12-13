@@ -138,17 +138,6 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
-     *本接口（CreateStandaloneGateway）用于创建独立网关。
-     * @param req CreateStandaloneGatewayRequest
-     * @return CreateStandaloneGatewayResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateStandaloneGatewayResponse CreateStandaloneGateway(CreateStandaloneGatewayRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateStandaloneGateway", CreateStandaloneGatewayResponse.class);
-    }
-
-    /**
      *创建静态托管资源，包括COS和CDN，异步任务创建，查看创建结果需要根据DescribeStaticStore接口来查看
      * @param req CreateStaticStoreRequest
      * @return CreateStaticStoreResponse
@@ -201,17 +190,6 @@ public class TcbClient extends AbstractClient{
     public DeleteCloudBaseRunServerVersionResponse DeleteCloudBaseRunServerVersion(DeleteCloudBaseRunServerVersionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteCloudBaseRunServerVersion", DeleteCloudBaseRunServerVersionResponse.class);
-    }
-
-    /**
-     *删除终端用户
-     * @param req DeleteEndUserRequest
-     * @return DeleteEndUserResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteEndUserResponse DeleteEndUser(DeleteEndUserRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteEndUser", DeleteEndUserResponse.class);
     }
 
     /**
@@ -501,39 +479,6 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
-     *获取环境终端用户新增与登录信息
-     * @param req DescribeEndUserLoginStatisticRequest
-     * @return DescribeEndUserLoginStatisticResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeEndUserLoginStatisticResponse DescribeEndUserLoginStatistic(DescribeEndUserLoginStatisticRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeEndUserLoginStatistic", DescribeEndUserLoginStatisticResponse.class);
-    }
-
-    /**
-     *获取终端用户总量与平台分布情况
-     * @param req DescribeEndUserStatisticRequest
-     * @return DescribeEndUserStatisticResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeEndUserStatisticResponse DescribeEndUserStatistic(DescribeEndUserStatisticRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeEndUserStatistic", DescribeEndUserStatisticResponse.class);
-    }
-
-    /**
-     *获取终端用户列表
-     * @param req DescribeEndUsersRequest
-     * @return DescribeEndUsersResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeEndUsersResponse DescribeEndUsers(DescribeEndUsersRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeEndUsers", DescribeEndUsersResponse.class);
-    }
-
-    /**
      *获取环境下单地域
      * @param req DescribeEnvDealRegionRequest
      * @return DescribeEnvDealRegionResponse
@@ -714,28 +659,6 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribeStandaloneGateway）查询小租户网关套餐信息。
-     * @param req DescribeStandaloneGatewayRequest
-     * @return DescribeStandaloneGatewayResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeStandaloneGatewayResponse DescribeStandaloneGateway(DescribeStandaloneGatewayRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeStandaloneGateway", DescribeStandaloneGatewayResponse.class);
-    }
-
-    /**
-     *本接口（DescribeStandaloneGatewayPackage）用于查询小租户网关套餐信息。
-     * @param req DescribeStandaloneGatewayPackageRequest
-     * @return DescribeStandaloneGatewayPackageResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeStandaloneGatewayPackageResponse DescribeStandaloneGatewayPackage(DescribeStandaloneGatewayPackageRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeStandaloneGatewayPackage", DescribeStandaloneGatewayPackageResponse.class);
-    }
-
-    /**
      *查询用户活动信息
      * @param req DescribeUserActivityInfoRequest
      * @return DescribeUserActivityInfoResponse
@@ -799,17 +722,6 @@ public class TcbClient extends AbstractClient{
     public DestroyEnvResponse DestroyEnv(DestroyEnvRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DestroyEnv", DestroyEnvResponse.class);
-    }
-
-    /**
-     *本接口（DestroyStandaloneGateway）用于销毁小租户网关。
-     * @param req DestroyStandaloneGatewayRequest
-     * @return DestroyStandaloneGatewayResponse
-     * @throws TencentCloudSDKException
-     */
-    public DestroyStandaloneGatewayResponse DestroyStandaloneGateway(DestroyStandaloneGatewayRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DestroyStandaloneGateway", DestroyStandaloneGatewayResponse.class);
     }
 
     /**
@@ -912,17 +824,6 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
-     *管理终端用户
-     * @param req ModifyEndUserRequest
-     * @return ModifyEndUserResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyEndUserResponse ModifyEndUser(ModifyEndUserRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyEndUser", ModifyEndUserResponse.class);
-    }
-
-    /**
      *更新环境信息
      * @param req ModifyEnvRequest
      * @return ModifyEnvResponse
@@ -986,28 +887,6 @@ public class TcbClient extends AbstractClient{
     public SearchClsLogResponse SearchClsLog(SearchClsLogRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SearchClsLog", SearchClsLogResponse.class);
-    }
-
-    /**
-     *本接口（TurnOffStandaloneGateway）用于关闭小租户网关。
-     * @param req TurnOffStandaloneGatewayRequest
-     * @return TurnOffStandaloneGatewayResponse
-     * @throws TencentCloudSDKException
-     */
-    public TurnOffStandaloneGatewayResponse TurnOffStandaloneGateway(TurnOffStandaloneGatewayRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "TurnOffStandaloneGateway", TurnOffStandaloneGatewayResponse.class);
-    }
-
-    /**
-     *本接口（TurnOnStandaloneGateway）用于开启小租户网关。
-     * @param req TurnOnStandaloneGatewayRequest
-     * @return TurnOnStandaloneGatewayResponse
-     * @throws TencentCloudSDKException
-     */
-    public TurnOnStandaloneGatewayResponse TurnOnStandaloneGateway(TurnOnStandaloneGatewayRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "TurnOnStandaloneGateway", TurnOnStandaloneGatewayResponse.class);
     }
 
     /**

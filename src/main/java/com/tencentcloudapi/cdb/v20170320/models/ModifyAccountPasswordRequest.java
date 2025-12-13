@@ -102,7 +102,9 @@ public class ModifyAccountPasswordRequest extends AbstractModel {
     /**
      * Get 是否跳过校验密码复杂度 
      * @return SkipValidatePassword 是否跳过校验密码复杂度
+     * @deprecated
      */
+    @Deprecated
     public Boolean getSkipValidatePassword() {
         return this.SkipValidatePassword;
     }
@@ -110,7 +112,9 @@ public class ModifyAccountPasswordRequest extends AbstractModel {
     /**
      * Set 是否跳过校验密码复杂度
      * @param SkipValidatePassword 是否跳过校验密码复杂度
+     * @deprecated
      */
+    @Deprecated
     public void setSkipValidatePassword(Boolean SkipValidatePassword) {
         this.SkipValidatePassword = SkipValidatePassword;
     }

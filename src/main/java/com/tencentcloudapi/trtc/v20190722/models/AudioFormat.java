@@ -24,46 +24,101 @@ import java.util.HashMap;
 public class AudioFormat extends AbstractModel {
 
     /**
-    * 生成的音频格式，默认pcm，目前支持的格式列表：流式：[pcm]，非流式 [pcm，wav]
+    * 生成的音频格式
+
+- TextToSpeech流式接口
+
+ 支持 pcm, 默认: pcm
+
+- TextToSpeech非流式接口
+
+ 支持 pcm,wav,  默认: pcm
     */
     @SerializedName("Format")
     @Expose
     private String Format;
 
     /**
-    * 采样率，默认24000， 可选16000, 24000 
+    * 生成的音频采样率，默认24000
+可选
+- 16000
+- 24000 
     */
     @SerializedName("SampleRate")
     @Expose
     private Long SampleRate;
 
     /**
-     * Get 生成的音频格式，默认pcm，目前支持的格式列表：流式：[pcm]，非流式 [pcm，wav] 
-     * @return Format 生成的音频格式，默认pcm，目前支持的格式列表：流式：[pcm]，非流式 [pcm，wav]
+     * Get 生成的音频格式
+
+- TextToSpeech流式接口
+
+ 支持 pcm, 默认: pcm
+
+- TextToSpeech非流式接口
+
+ 支持 pcm,wav,  默认: pcm 
+     * @return Format 生成的音频格式
+
+- TextToSpeech流式接口
+
+ 支持 pcm, 默认: pcm
+
+- TextToSpeech非流式接口
+
+ 支持 pcm,wav,  默认: pcm
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set 生成的音频格式，默认pcm，目前支持的格式列表：流式：[pcm]，非流式 [pcm，wav]
-     * @param Format 生成的音频格式，默认pcm，目前支持的格式列表：流式：[pcm]，非流式 [pcm，wav]
+     * Set 生成的音频格式
+
+- TextToSpeech流式接口
+
+ 支持 pcm, 默认: pcm
+
+- TextToSpeech非流式接口
+
+ 支持 pcm,wav,  默认: pcm
+     * @param Format 生成的音频格式
+
+- TextToSpeech流式接口
+
+ 支持 pcm, 默认: pcm
+
+- TextToSpeech非流式接口
+
+ 支持 pcm,wav,  默认: pcm
      */
     public void setFormat(String Format) {
         this.Format = Format;
     }
 
     /**
-     * Get 采样率，默认24000， 可选16000, 24000  
-     * @return SampleRate 采样率，默认24000， 可选16000, 24000 
+     * Get 生成的音频采样率，默认24000
+可选
+- 16000
+- 24000  
+     * @return SampleRate 生成的音频采样率，默认24000
+可选
+- 16000
+- 24000 
      */
     public Long getSampleRate() {
         return this.SampleRate;
     }
 
     /**
-     * Set 采样率，默认24000， 可选16000, 24000 
-     * @param SampleRate 采样率，默认24000， 可选16000, 24000 
+     * Set 生成的音频采样率，默认24000
+可选
+- 16000
+- 24000 
+     * @param SampleRate 生成的音频采样率，默认24000
+可选
+- 16000
+- 24000 
      */
     public void setSampleRate(Long SampleRate) {
         this.SampleRate = SampleRate;

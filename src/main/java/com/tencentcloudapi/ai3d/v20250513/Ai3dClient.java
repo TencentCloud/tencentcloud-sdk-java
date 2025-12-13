@@ -39,6 +39,63 @@ public class Ai3dClient extends AbstractClient{
     }
 
     /**
+     *输入3D模型文件后，可进行3D模型文件格式转换。
+     * @param req Convert3DFormatRequest
+     * @return Convert3DFormatResponse
+     * @throws TencentCloudSDKException
+     */
+    public Convert3DFormatResponse Convert3DFormat(Convert3DFormatRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "Convert3DFormat", Convert3DFormatResponse.class);
+    }
+
+    /**
+     *查询组件拆分任务。
+     * @param req DescribeHunyuanTo3DUVJobRequest
+     * @return DescribeHunyuanTo3DUVJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHunyuanTo3DUVJobResponse DescribeHunyuanTo3DUVJob(DescribeHunyuanTo3DUVJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHunyuanTo3DUVJob", DescribeHunyuanTo3DUVJobResponse.class);
+    }
+
+    /**
+     *混元生3D接口，基于混元大模型，根据输入的文本描述/图片智能生成3D。
+默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
+     * @param req DescribeReduceFaceJobRequest
+     * @return DescribeReduceFaceJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReduceFaceJobResponse DescribeReduceFaceJob(DescribeReduceFaceJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeReduceFaceJob", DescribeReduceFaceJobResponse.class);
+    }
+
+    /**
+     *混元生3D接口，基于混元大模型，根据输入的文本描述/图片智能生成3D。
+默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
+     * @param req DescribeTextureTo3DJobRequest
+     * @return DescribeTextureTo3DJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTextureTo3DJobResponse DescribeTextureTo3DJob(DescribeTextureTo3DJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTextureTo3DJob", DescribeTextureTo3DJobResponse.class);
+    }
+
+    /**
+     *查询组件生成任务。
+     * @param req QueryHunyuan3DPartJobRequest
+     * @return QueryHunyuan3DPartJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryHunyuan3DPartJobResponse QueryHunyuan3DPartJob(QueryHunyuan3DPartJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryHunyuan3DPartJob", QueryHunyuan3DPartJobResponse.class);
+    }
+
+    /**
      *混元生3D接口，基于混元大模型，根据输入的文本描述/图片智能生成3D。
 默认提供3个并发，代表最多能同时处理3个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
      * @param req QueryHunyuanTo3DProJobRequest
@@ -63,6 +120,17 @@ public class Ai3dClient extends AbstractClient{
     }
 
     /**
+     *输入3D模型文件后，根据模型结构自动进行组件识别生成。
+     * @param req SubmitHunyuan3DPartJobRequest
+     * @return SubmitHunyuan3DPartJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitHunyuan3DPartJobResponse SubmitHunyuan3DPartJob(SubmitHunyuan3DPartJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitHunyuan3DPartJob", SubmitHunyuan3DPartJobResponse.class);
+    }
+
+    /**
      *混元生3D接口，基于混元大模型，根据输入的文本描述/图片智能生成3D。
 默认提供3个并发，代表最多能同时处理3个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
      * @param req SubmitHunyuanTo3DProJobRequest
@@ -84,6 +152,41 @@ public class Ai3dClient extends AbstractClient{
     public SubmitHunyuanTo3DRapidJobResponse SubmitHunyuanTo3DRapidJob(SubmitHunyuanTo3DRapidJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SubmitHunyuanTo3DRapidJob", SubmitHunyuanTo3DRapidJobResponse.class);
+    }
+
+    /**
+     *输入模型后，可根据模型纹理进行UV展开，输出对应UV贴图。
+     * @param req SubmitHunyuanTo3DUVJobRequest
+     * @return SubmitHunyuanTo3DUVJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitHunyuanTo3DUVJobResponse SubmitHunyuanTo3DUVJob(SubmitHunyuanTo3DUVJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitHunyuanTo3DUVJob", SubmitHunyuanTo3DUVJobResponse.class);
+    }
+
+    /**
+     *混元生3D接口，基于混元大模型，根据输入的文本描述/图片智能生成3D。
+默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
+     * @param req SubmitReduceFaceJobRequest
+     * @return SubmitReduceFaceJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitReduceFaceJobResponse SubmitReduceFaceJob(SubmitReduceFaceJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitReduceFaceJob", SubmitReduceFaceJobResponse.class);
+    }
+
+    /**
+     *混元生3D接口，基于混元大模型，根据输入的文本描述/图片智能生成3D。
+默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
+     * @param req SubmitTextureTo3DJobRequest
+     * @return SubmitTextureTo3DJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitTextureTo3DJobResponse SubmitTextureTo3DJob(SubmitTextureTo3DJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitTextureTo3DJob", SubmitTextureTo3DJobResponse.class);
     }
 
 }

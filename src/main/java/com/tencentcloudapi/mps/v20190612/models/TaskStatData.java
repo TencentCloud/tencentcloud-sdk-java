@@ -110,7 +110,7 @@ public class TaskStatData extends AbstractModel {
 <li> ImageSuperResolution：图片超分</li>
 <li> EnhanceImageColor：图片色彩增强</li>
 5、智能分析规格：
-<li>AIAnalysis：分析大类，对于未拆分的</li>
+<li>AIAnalysis：分析大类</li>
 <li>VideoTag：视频标签</li>
 <li>VideoClassification：视频分类</li>
 <li>SmartCover：智能封面</li>
@@ -119,7 +119,7 @@ public class TaskStatData extends AbstractModel {
 <li>Highlights：精彩集锦</li>
 <li>OpeningAndEnding：片头片尾</li>
 6、智能识别规格：
-<li>AIRecognition：识别大类，对于未拆分的</li>
+<li>AIRecognition：识别大类</li>
 <li>FaceRecognition：人脸识别</li>
 <li>TextRecognition：文字识别</li>
 <li>ObjectRecognition：物体识别</li>
@@ -284,7 +284,7 @@ public class TaskStatData extends AbstractModel {
 <li> ImageSuperResolution：图片超分</li>
 <li> EnhanceImageColor：图片色彩增强</li>
 5、智能分析规格：
-<li>AIAnalysis：分析大类，对于未拆分的</li>
+<li>AIAnalysis：分析大类</li>
 <li>VideoTag：视频标签</li>
 <li>VideoClassification：视频分类</li>
 <li>SmartCover：智能封面</li>
@@ -293,7 +293,7 @@ public class TaskStatData extends AbstractModel {
 <li>Highlights：精彩集锦</li>
 <li>OpeningAndEnding：片头片尾</li>
 6、智能识别规格：
-<li>AIRecognition：识别大类，对于未拆分的</li>
+<li>AIRecognition：识别大类</li>
 <li>FaceRecognition：人脸识别</li>
 <li>TextRecognition：文字识别</li>
 <li>ObjectRecognition：物体识别</li>
@@ -356,7 +356,7 @@ public class TaskStatData extends AbstractModel {
 <li> ImageSuperResolution：图片超分</li>
 <li> EnhanceImageColor：图片色彩增强</li>
 5、智能分析规格：
-<li>AIAnalysis：分析大类，对于未拆分的</li>
+<li>AIAnalysis：分析大类</li>
 <li>VideoTag：视频标签</li>
 <li>VideoClassification：视频分类</li>
 <li>SmartCover：智能封面</li>
@@ -365,7 +365,7 @@ public class TaskStatData extends AbstractModel {
 <li>Highlights：精彩集锦</li>
 <li>OpeningAndEnding：片头片尾</li>
 6、智能识别规格：
-<li>AIRecognition：识别大类，对于未拆分的</li>
+<li>AIRecognition：识别大类</li>
 <li>FaceRecognition：人脸识别</li>
 <li>TextRecognition：文字识别</li>
 <li>ObjectRecognition：物体识别</li>
@@ -434,7 +434,7 @@ public class TaskStatData extends AbstractModel {
 <li> ImageSuperResolution：图片超分</li>
 <li> EnhanceImageColor：图片色彩增强</li>
 5、智能分析规格：
-<li>AIAnalysis：分析大类，对于未拆分的</li>
+<li>AIAnalysis：分析大类</li>
 <li>VideoTag：视频标签</li>
 <li>VideoClassification：视频分类</li>
 <li>SmartCover：智能封面</li>
@@ -443,7 +443,7 @@ public class TaskStatData extends AbstractModel {
 <li>Highlights：精彩集锦</li>
 <li>OpeningAndEnding：片头片尾</li>
 6、智能识别规格：
-<li>AIRecognition：识别大类，对于未拆分的</li>
+<li>AIRecognition：识别大类</li>
 <li>FaceRecognition：人脸识别</li>
 <li>TextRecognition：文字识别</li>
 <li>ObjectRecognition：物体识别</li>
@@ -506,7 +506,7 @@ public class TaskStatData extends AbstractModel {
 <li> ImageSuperResolution：图片超分</li>
 <li> EnhanceImageColor：图片色彩增强</li>
 5、智能分析规格：
-<li>AIAnalysis：分析大类，对于未拆分的</li>
+<li>AIAnalysis：分析大类</li>
 <li>VideoTag：视频标签</li>
 <li>VideoClassification：视频分类</li>
 <li>SmartCover：智能封面</li>
@@ -515,7 +515,7 @@ public class TaskStatData extends AbstractModel {
 <li>Highlights：精彩集锦</li>
 <li>OpeningAndEnding：片头片尾</li>
 6、智能识别规格：
-<li>AIRecognition：识别大类，对于未拆分的</li>
+<li>AIRecognition：识别大类</li>
 <li>FaceRecognition：人脸识别</li>
 <li>TextRecognition：文字识别</li>
 <li>ObjectRecognition：物体识别</li>

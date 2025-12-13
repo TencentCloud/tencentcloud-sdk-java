@@ -48,8 +48,7 @@ public class GetDetectInfoEnhancedRequest extends AbstractModel {
     private String InfoType;
 
     /**
-    * 从活体视频中截取一定张数的最佳帧。
-- 仅部分服务支持，若需使用请与慧眼小助手沟通。
+    * 从活体视频中截取一定张数的自截帧。
 - 默认值为0，最大值为10，超出10的最多只给10张。
 - InfoType需要包含3。
     */
@@ -166,12 +165,10 @@ public class GetDetectInfoEnhancedRequest extends AbstractModel {
     }
 
     /**
-     * Get 从活体视频中截取一定张数的最佳帧。
-- 仅部分服务支持，若需使用请与慧眼小助手沟通。
+     * Get 从活体视频中截取一定张数的自截帧。
 - 默认值为0，最大值为10，超出10的最多只给10张。
 - InfoType需要包含3。 
-     * @return BestFramesCount 从活体视频中截取一定张数的最佳帧。
-- 仅部分服务支持，若需使用请与慧眼小助手沟通。
+     * @return BestFramesCount 从活体视频中截取一定张数的自截帧。
 - 默认值为0，最大值为10，超出10的最多只给10张。
 - InfoType需要包含3。
      */
@@ -180,12 +177,10 @@ public class GetDetectInfoEnhancedRequest extends AbstractModel {
     }
 
     /**
-     * Set 从活体视频中截取一定张数的最佳帧。
-- 仅部分服务支持，若需使用请与慧眼小助手沟通。
+     * Set 从活体视频中截取一定张数的自截帧。
 - 默认值为0，最大值为10，超出10的最多只给10张。
 - InfoType需要包含3。
-     * @param BestFramesCount 从活体视频中截取一定张数的最佳帧。
-- 仅部分服务支持，若需使用请与慧眼小助手沟通。
+     * @param BestFramesCount 从活体视频中截取一定张数的自截帧。
 - 默认值为0，最大值为10，超出10的最多只给10张。
 - InfoType需要包含3。
      */

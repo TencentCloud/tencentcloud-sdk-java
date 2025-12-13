@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class Voice extends AbstractModel {
 
     /**
-    * TTS的声音的ID
+    *  音色 ID，可从音色列表获取，或使用声音克隆生成的自定义音色 ID
     */
     @SerializedName("VoiceId")
     @Expose
     private String VoiceId;
 
     /**
-    * 语速，范围 0.5-2.0，默认 1.0
+    * 语速调节，0.5 为半速慢放，2.0 为两倍速快放，1.0 为正常语速，区间：[0.5, 2.0]，默认1.0
     */
     @SerializedName("Speed")
     @Expose
     private Float Speed;
 
     /**
-    * (0, 10]   默认值1.0 
+    *  音量调节，0 为静音，10 为最大音量，建议保持默认值 1.0，区间：[0, 10]，默认1.0
     */
     @SerializedName("Volume")
     @Expose
     private Float Volume;
 
     /**
-    * 取值[-12,12],默认0
+    *  音高调节，负值声音更低沉，正值声音更尖锐，0 为原始音高，区间 [-12, 12],  默认0
     */
     @SerializedName("Pitch")
     @Expose
     private Long Pitch;
 
     /**
-     * Get TTS的声音的ID 
-     * @return VoiceId TTS的声音的ID
+     * Get  音色 ID，可从音色列表获取，或使用声音克隆生成的自定义音色 ID 
+     * @return VoiceId  音色 ID，可从音色列表获取，或使用声音克隆生成的自定义音色 ID
      */
     public String getVoiceId() {
         return this.VoiceId;
     }
 
     /**
-     * Set TTS的声音的ID
-     * @param VoiceId TTS的声音的ID
+     * Set  音色 ID，可从音色列表获取，或使用声音克隆生成的自定义音色 ID
+     * @param VoiceId  音色 ID，可从音色列表获取，或使用声音克隆生成的自定义音色 ID
      */
     public void setVoiceId(String VoiceId) {
         this.VoiceId = VoiceId;
     }
 
     /**
-     * Get 语速，范围 0.5-2.0，默认 1.0 
-     * @return Speed 语速，范围 0.5-2.0，默认 1.0
+     * Get 语速调节，0.5 为半速慢放，2.0 为两倍速快放，1.0 为正常语速，区间：[0.5, 2.0]，默认1.0 
+     * @return Speed 语速调节，0.5 为半速慢放，2.0 为两倍速快放，1.0 为正常语速，区间：[0.5, 2.0]，默认1.0
      */
     public Float getSpeed() {
         return this.Speed;
     }
 
     /**
-     * Set 语速，范围 0.5-2.0，默认 1.0
-     * @param Speed 语速，范围 0.5-2.0，默认 1.0
+     * Set 语速调节，0.5 为半速慢放，2.0 为两倍速快放，1.0 为正常语速，区间：[0.5, 2.0]，默认1.0
+     * @param Speed 语速调节，0.5 为半速慢放，2.0 为两倍速快放，1.0 为正常语速，区间：[0.5, 2.0]，默认1.0
      */
     public void setSpeed(Float Speed) {
         this.Speed = Speed;
     }
 
     /**
-     * Get (0, 10]   默认值1.0  
-     * @return Volume (0, 10]   默认值1.0 
+     * Get  音量调节，0 为静音，10 为最大音量，建议保持默认值 1.0，区间：[0, 10]，默认1.0 
+     * @return Volume  音量调节，0 为静音，10 为最大音量，建议保持默认值 1.0，区间：[0, 10]，默认1.0
      */
     public Float getVolume() {
         return this.Volume;
     }
 
     /**
-     * Set (0, 10]   默认值1.0 
-     * @param Volume (0, 10]   默认值1.0 
+     * Set  音量调节，0 为静音，10 为最大音量，建议保持默认值 1.0，区间：[0, 10]，默认1.0
+     * @param Volume  音量调节，0 为静音，10 为最大音量，建议保持默认值 1.0，区间：[0, 10]，默认1.0
      */
     public void setVolume(Float Volume) {
         this.Volume = Volume;
     }
 
     /**
-     * Get 取值[-12,12],默认0 
-     * @return Pitch 取值[-12,12],默认0
+     * Get  音高调节，负值声音更低沉，正值声音更尖锐，0 为原始音高，区间 [-12, 12],  默认0 
+     * @return Pitch  音高调节，负值声音更低沉，正值声音更尖锐，0 为原始音高，区间 [-12, 12],  默认0
      */
     public Long getPitch() {
         return this.Pitch;
     }
 
     /**
-     * Set 取值[-12,12],默认0
-     * @param Pitch 取值[-12,12],默认0
+     * Set  音高调节，负值声音更低沉，正值声音更尖锐，0 为原始音高，区间 [-12, 12],  默认0
+     * @param Pitch  音高调节，负值声音更低沉，正值声音更尖锐，0 为原始音高，区间 [-12, 12],  默认0
      */
     public void setPitch(Long Pitch) {
         this.Pitch = Pitch;

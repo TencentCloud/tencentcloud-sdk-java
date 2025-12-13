@@ -59,14 +59,14 @@ public class TextToSpeechSSERequest extends AbstractModel {
     private String APIKey;
 
     /**
-    * TTS的模型：flow_01_turbo，flow_01_ex
+    * TTS的模型，当前固定为：flow_01_turbo
     */
     @SerializedName("Model")
     @Expose
     private String Model;
 
     /**
-    * 语言参数，默认为空， 参考： (ISO 639-1) 
+    *  需要合成的语言（ISO 639-1），支持 zh（中文）、en（英文）、yue（粤语）、ja（日语）、ko（韩语），默认自动识别
     */
     @SerializedName("Language")
     @Expose
@@ -139,7 +139,9 @@ public class TextToSpeechSSERequest extends AbstractModel {
     /**
      * Get TTS的API密钥 
      * @return APIKey TTS的API密钥
+     * @deprecated
      */
+    @Deprecated
     public String getAPIKey() {
         return this.APIKey;
     }
@@ -147,38 +149,40 @@ public class TextToSpeechSSERequest extends AbstractModel {
     /**
      * Set TTS的API密钥
      * @param APIKey TTS的API密钥
+     * @deprecated
      */
+    @Deprecated
     public void setAPIKey(String APIKey) {
         this.APIKey = APIKey;
     }
 
     /**
-     * Get TTS的模型：flow_01_turbo，flow_01_ex 
-     * @return Model TTS的模型：flow_01_turbo，flow_01_ex
+     * Get TTS的模型，当前固定为：flow_01_turbo 
+     * @return Model TTS的模型，当前固定为：flow_01_turbo
      */
     public String getModel() {
         return this.Model;
     }
 
     /**
-     * Set TTS的模型：flow_01_turbo，flow_01_ex
-     * @param Model TTS的模型：flow_01_turbo，flow_01_ex
+     * Set TTS的模型，当前固定为：flow_01_turbo
+     * @param Model TTS的模型，当前固定为：flow_01_turbo
      */
     public void setModel(String Model) {
         this.Model = Model;
     }
 
     /**
-     * Get 语言参数，默认为空， 参考： (ISO 639-1)  
-     * @return Language 语言参数，默认为空， 参考： (ISO 639-1) 
+     * Get  需要合成的语言（ISO 639-1），支持 zh（中文）、en（英文）、yue（粤语）、ja（日语）、ko（韩语），默认自动识别 
+     * @return Language  需要合成的语言（ISO 639-1），支持 zh（中文）、en（英文）、yue（粤语）、ja（日语）、ko（韩语），默认自动识别
      */
     public String getLanguage() {
         return this.Language;
     }
 
     /**
-     * Set 语言参数，默认为空， 参考： (ISO 639-1) 
-     * @param Language 语言参数，默认为空， 参考： (ISO 639-1) 
+     * Set  需要合成的语言（ISO 639-1），支持 zh（中文）、en（英文）、yue（粤语）、ja（日语）、ko（韩语），默认自动识别
+     * @param Language  需要合成的语言（ISO 639-1），支持 zh（中文）、en（英文）、yue（粤语）、ja（日语）、ko（韩语），默认自动识别
      */
     public void setLanguage(String Language) {
         this.Language = Language;
