@@ -64,6 +64,14 @@ public class SearchStrategy extends AbstractModel {
     private String RerankModel;
 
     /**
+    * NL2SQL模型配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NatureLanguageToSqlModelConfig")
+    @Expose
+    private NL2SQLModelConfig NatureLanguageToSqlModelConfig;
+
+    /**
      * Get 检索策略类型 0:混合检索，1：语义检索
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return StrategyType 检索策略类型 0:混合检索，1：语义检索
@@ -163,6 +171,26 @@ public class SearchStrategy extends AbstractModel {
         this.RerankModel = RerankModel;
     }
 
+    /**
+     * Get NL2SQL模型配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NatureLanguageToSqlModelConfig NL2SQL模型配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public NL2SQLModelConfig getNatureLanguageToSqlModelConfig() {
+        return this.NatureLanguageToSqlModelConfig;
+    }
+
+    /**
+     * Set NL2SQL模型配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NatureLanguageToSqlModelConfig NL2SQL模型配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNatureLanguageToSqlModelConfig(NL2SQLModelConfig NatureLanguageToSqlModelConfig) {
+        this.NatureLanguageToSqlModelConfig = NatureLanguageToSqlModelConfig;
+    }
+
     public SearchStrategy() {
     }
 
@@ -186,6 +214,9 @@ public class SearchStrategy extends AbstractModel {
         if (source.RerankModel != null) {
             this.RerankModel = new String(source.RerankModel);
         }
+        if (source.NatureLanguageToSqlModelConfig != null) {
+            this.NatureLanguageToSqlModelConfig = new NL2SQLModelConfig(source.NatureLanguageToSqlModelConfig);
+        }
     }
 
 
@@ -198,6 +229,7 @@ public class SearchStrategy extends AbstractModel {
         this.setParamSimple(map, prefix + "EmbeddingModel", this.EmbeddingModel);
         this.setParamSimple(map, prefix + "RerankModelSwitch", this.RerankModelSwitch);
         this.setParamSimple(map, prefix + "RerankModel", this.RerankModel);
+        this.setParamObj(map, prefix + "NatureLanguageToSqlModelConfig.", this.NatureLanguageToSqlModelConfig);
 
     }
 }

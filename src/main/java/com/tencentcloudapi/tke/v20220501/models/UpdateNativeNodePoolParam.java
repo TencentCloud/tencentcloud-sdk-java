@@ -174,6 +174,13 @@ public class UpdateNativeNodePoolParam extends AbstractModel {
     private GPUConfig [] GPUConfigs;
 
     /**
+    * 原生节点池密码
+    */
+    @SerializedName("Password")
+    @Expose
+    private String Password;
+
+    /**
      * Get 伸缩配置 
      * @return Scaling 伸缩配置
      */
@@ -521,6 +528,22 @@ public class UpdateNativeNodePoolParam extends AbstractModel {
         this.GPUConfigs = GPUConfigs;
     }
 
+    /**
+     * Get 原生节点池密码 
+     * @return Password 原生节点池密码
+     */
+    public String getPassword() {
+        return this.Password;
+    }
+
+    /**
+     * Set 原生节点池密码
+     * @param Password 原生节点池密码
+     */
+    public void setPassword(String Password) {
+        this.Password = Password;
+    }
+
     public UpdateNativeNodePoolParam() {
     }
 
@@ -613,6 +636,9 @@ public class UpdateNativeNodePoolParam extends AbstractModel {
                 this.GPUConfigs[i] = new GPUConfig(source.GPUConfigs[i]);
             }
         }
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
     }
 
 
@@ -641,6 +667,7 @@ public class UpdateNativeNodePoolParam extends AbstractModel {
         this.setParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
         this.setParamArraySimple(map, prefix + "KeyIds.", this.KeyIds);
         this.setParamArrayObj(map, prefix + "GPUConfigs.", this.GPUConfigs);
+        this.setParamSimple(map, prefix + "Password", this.Password);
 
     }
 }

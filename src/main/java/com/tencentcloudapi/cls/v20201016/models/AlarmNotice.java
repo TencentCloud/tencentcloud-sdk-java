@@ -113,6 +113,52 @@ public class AlarmNotice extends AbstractModel {
     private String UpdateTime;
 
     /**
+    * 投递日志开关。
+
+参数值：
+
+1：关闭
+
+2：开启 
+
+    */
+    @SerializedName("DeliverStatus")
+    @Expose
+    private Long DeliverStatus;
+
+    /**
+    * 投递日志标识。
+
+参数值：
+
+1：未启用
+
+2：已启用
+
+3：投递异常
+    */
+    @SerializedName("DeliverFlag")
+    @Expose
+    private Long DeliverFlag;
+
+    /**
+    * 通知渠道组配置的告警屏蔽统计状态数量信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AlarmShieldCount")
+    @Expose
+    private AlarmShieldCount AlarmShieldCount;
+
+    /**
+    * 统一设定自定义回调参数。
+-  true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。
+-  false:优先使用告警策略中单独配置的请求头及请求内容。
+    */
+    @SerializedName("CallbackPrioritize")
+    @Expose
+    private Boolean CallbackPrioritize;
+
+    /**
      * Get 告警通知渠道组名称。 
      * @return Name 告警通知渠道组名称。
      */
@@ -324,6 +370,142 @@ public class AlarmNotice extends AbstractModel {
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get 投递日志开关。
+
+参数值：
+
+1：关闭
+
+2：开启 
+ 
+     * @return DeliverStatus 投递日志开关。
+
+参数值：
+
+1：关闭
+
+2：开启 
+
+     */
+    public Long getDeliverStatus() {
+        return this.DeliverStatus;
+    }
+
+    /**
+     * Set 投递日志开关。
+
+参数值：
+
+1：关闭
+
+2：开启 
+
+     * @param DeliverStatus 投递日志开关。
+
+参数值：
+
+1：关闭
+
+2：开启 
+
+     */
+    public void setDeliverStatus(Long DeliverStatus) {
+        this.DeliverStatus = DeliverStatus;
+    }
+
+    /**
+     * Get 投递日志标识。
+
+参数值：
+
+1：未启用
+
+2：已启用
+
+3：投递异常 
+     * @return DeliverFlag 投递日志标识。
+
+参数值：
+
+1：未启用
+
+2：已启用
+
+3：投递异常
+     */
+    public Long getDeliverFlag() {
+        return this.DeliverFlag;
+    }
+
+    /**
+     * Set 投递日志标识。
+
+参数值：
+
+1：未启用
+
+2：已启用
+
+3：投递异常
+     * @param DeliverFlag 投递日志标识。
+
+参数值：
+
+1：未启用
+
+2：已启用
+
+3：投递异常
+     */
+    public void setDeliverFlag(Long DeliverFlag) {
+        this.DeliverFlag = DeliverFlag;
+    }
+
+    /**
+     * Get 通知渠道组配置的告警屏蔽统计状态数量信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AlarmShieldCount 通知渠道组配置的告警屏蔽统计状态数量信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AlarmShieldCount getAlarmShieldCount() {
+        return this.AlarmShieldCount;
+    }
+
+    /**
+     * Set 通知渠道组配置的告警屏蔽统计状态数量信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AlarmShieldCount 通知渠道组配置的告警屏蔽统计状态数量信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAlarmShieldCount(AlarmShieldCount AlarmShieldCount) {
+        this.AlarmShieldCount = AlarmShieldCount;
+    }
+
+    /**
+     * Get 统一设定自定义回调参数。
+-  true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。
+-  false:优先使用告警策略中单独配置的请求头及请求内容。 
+     * @return CallbackPrioritize 统一设定自定义回调参数。
+-  true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。
+-  false:优先使用告警策略中单独配置的请求头及请求内容。
+     */
+    public Boolean getCallbackPrioritize() {
+        return this.CallbackPrioritize;
+    }
+
+    /**
+     * Set 统一设定自定义回调参数。
+-  true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。
+-  false:优先使用告警策略中单独配置的请求头及请求内容。
+     * @param CallbackPrioritize 统一设定自定义回调参数。
+-  true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。
+-  false:优先使用告警策略中单独配置的请求头及请求内容。
+     */
+    public void setCallbackPrioritize(Boolean CallbackPrioritize) {
+        this.CallbackPrioritize = CallbackPrioritize;
+    }
+
     public AlarmNotice() {
     }
 
@@ -380,6 +562,18 @@ public class AlarmNotice extends AbstractModel {
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.DeliverStatus != null) {
+            this.DeliverStatus = new Long(source.DeliverStatus);
+        }
+        if (source.DeliverFlag != null) {
+            this.DeliverFlag = new Long(source.DeliverFlag);
+        }
+        if (source.AlarmShieldCount != null) {
+            this.AlarmShieldCount = new AlarmShieldCount(source.AlarmShieldCount);
+        }
+        if (source.CallbackPrioritize != null) {
+            this.CallbackPrioritize = new Boolean(source.CallbackPrioritize);
+        }
     }
 
 
@@ -399,6 +593,10 @@ public class AlarmNotice extends AbstractModel {
         this.setParamObj(map, prefix + "AlarmNoticeDeliverConfig.", this.AlarmNoticeDeliverConfig);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "DeliverStatus", this.DeliverStatus);
+        this.setParamSimple(map, prefix + "DeliverFlag", this.DeliverFlag);
+        this.setParamObj(map, prefix + "AlarmShieldCount.", this.AlarmShieldCount);
+        this.setParamSimple(map, prefix + "CallbackPrioritize", this.CallbackPrioritize);
 
     }
 }

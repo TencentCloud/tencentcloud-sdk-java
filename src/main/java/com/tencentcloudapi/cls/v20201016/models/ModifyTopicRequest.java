@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class ModifyTopicRequest extends AbstractModel {
 
     /**
-    * 主题ID
-- 通过[获取主题列表](https://cloud.tencent.com/document/product/614/56454)获取主题Id。
+    *  主题ID- 通过[获取主题列表](https://cloud.tencent.com/document/product/614/56454)获取主题Id。
     */
     @SerializedName("TopicId")
     @Expose
@@ -80,6 +79,13 @@ public class ModifyTopicRequest extends AbstractModel {
     private Long Period;
 
     /**
+    * 存储类型：cold 低频存储，hot 标准存储
+    */
+    @SerializedName("StorageType")
+    @Expose
+    private String StorageType;
+
+    /**
     * 主题描述
     */
     @SerializedName("Describes")
@@ -131,20 +137,31 @@ public class ModifyTopicRequest extends AbstractModel {
     private String CancelTopicAsyncTaskID;
 
     /**
-     * Get 主题ID
-- 通过[获取主题列表](https://cloud.tencent.com/document/product/614/56454)获取主题Id。 
-     * @return TopicId 主题ID
-- 通过[获取主题列表](https://cloud.tencent.com/document/product/614/56454)获取主题Id。
+    * 加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。
+只支持传入1：kms-cls 云产品秘钥加密
+    */
+    @SerializedName("Encryption")
+    @Expose
+    private Long Encryption;
+
+    /**
+    * 开启记录公网来源ip和服务端接收时间
+    */
+    @SerializedName("IsSourceFrom")
+    @Expose
+    private Boolean IsSourceFrom;
+
+    /**
+     * Get  主题ID- 通过[获取主题列表](https://cloud.tencent.com/document/product/614/56454)获取主题Id。 
+     * @return TopicId  主题ID- 通过[获取主题列表](https://cloud.tencent.com/document/product/614/56454)获取主题Id。
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 主题ID
-- 通过[获取主题列表](https://cloud.tencent.com/document/product/614/56454)获取主题Id。
-     * @param TopicId 主题ID
-- 通过[获取主题列表](https://cloud.tencent.com/document/product/614/56454)获取主题Id。
+     * Set  主题ID- 通过[获取主题列表](https://cloud.tencent.com/document/product/614/56454)获取主题Id。
+     * @param TopicId  主题ID- 通过[获取主题列表](https://cloud.tencent.com/document/product/614/56454)获取主题Id。
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
@@ -268,6 +285,22 @@ public class ModifyTopicRequest extends AbstractModel {
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
+    }
+
+    /**
+     * Get 存储类型：cold 低频存储，hot 标准存储 
+     * @return StorageType 存储类型：cold 低频存储，hot 标准存储
+     */
+    public String getStorageType() {
+        return this.StorageType;
+    }
+
+    /**
+     * Set 存储类型：cold 低频存储，hot 标准存储
+     * @param StorageType 存储类型：cold 低频存储，hot 标准存储
+     */
+    public void setStorageType(String StorageType) {
+        this.StorageType = StorageType;
     }
 
     /**
@@ -402,6 +435,42 @@ public class ModifyTopicRequest extends AbstractModel {
         this.CancelTopicAsyncTaskID = CancelTopicAsyncTaskID;
     }
 
+    /**
+     * Get 加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。
+只支持传入1：kms-cls 云产品秘钥加密 
+     * @return Encryption 加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。
+只支持传入1：kms-cls 云产品秘钥加密
+     */
+    public Long getEncryption() {
+        return this.Encryption;
+    }
+
+    /**
+     * Set 加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。
+只支持传入1：kms-cls 云产品秘钥加密
+     * @param Encryption 加密相关参数。 支持加密地域并且开白用户可以传此参数，其他场景不能传递该参数。
+只支持传入1：kms-cls 云产品秘钥加密
+     */
+    public void setEncryption(Long Encryption) {
+        this.Encryption = Encryption;
+    }
+
+    /**
+     * Get 开启记录公网来源ip和服务端接收时间 
+     * @return IsSourceFrom 开启记录公网来源ip和服务端接收时间
+     */
+    public Boolean getIsSourceFrom() {
+        return this.IsSourceFrom;
+    }
+
+    /**
+     * Set 开启记录公网来源ip和服务端接收时间
+     * @param IsSourceFrom 开启记录公网来源ip和服务端接收时间
+     */
+    public void setIsSourceFrom(Boolean IsSourceFrom) {
+        this.IsSourceFrom = IsSourceFrom;
+    }
+
     public ModifyTopicRequest() {
     }
 
@@ -434,6 +503,9 @@ public class ModifyTopicRequest extends AbstractModel {
         if (source.Period != null) {
             this.Period = new Long(source.Period);
         }
+        if (source.StorageType != null) {
+            this.StorageType = new String(source.StorageType);
+        }
         if (source.Describes != null) {
             this.Describes = new String(source.Describes);
         }
@@ -452,6 +524,12 @@ public class ModifyTopicRequest extends AbstractModel {
         if (source.CancelTopicAsyncTaskID != null) {
             this.CancelTopicAsyncTaskID = new String(source.CancelTopicAsyncTaskID);
         }
+        if (source.Encryption != null) {
+            this.Encryption = new Long(source.Encryption);
+        }
+        if (source.IsSourceFrom != null) {
+            this.IsSourceFrom = new Boolean(source.IsSourceFrom);
+        }
     }
 
 
@@ -466,12 +544,15 @@ public class ModifyTopicRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AutoSplit", this.AutoSplit);
         this.setParamSimple(map, prefix + "MaxSplitPartitions", this.MaxSplitPartitions);
         this.setParamSimple(map, prefix + "Period", this.Period);
+        this.setParamSimple(map, prefix + "StorageType", this.StorageType);
         this.setParamSimple(map, prefix + "Describes", this.Describes);
         this.setParamSimple(map, prefix + "HotPeriod", this.HotPeriod);
         this.setParamSimple(map, prefix + "IsWebTracking", this.IsWebTracking);
         this.setParamObj(map, prefix + "Extends.", this.Extends);
         this.setParamSimple(map, prefix + "PartitionCount", this.PartitionCount);
         this.setParamSimple(map, prefix + "CancelTopicAsyncTaskID", this.CancelTopicAsyncTaskID);
+        this.setParamSimple(map, prefix + "Encryption", this.Encryption);
+        this.setParamSimple(map, prefix + "IsSourceFrom", this.IsSourceFrom);
 
     }
 }

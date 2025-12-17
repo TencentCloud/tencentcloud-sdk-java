@@ -72,6 +72,17 @@ public class IgtmClient extends AbstractClient{
     }
 
     /**
+     *购买套餐并支付，此接口会在余额扣费，谨慎调用
+     * @param req CreatePackageAndPayRequest
+     * @return CreatePackageAndPayResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePackageAndPayResponse CreatePackageAndPay(CreatePackageAndPayRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreatePackageAndPay", CreatePackageAndPayResponse.class);
+    }
+
+    /**
      *新建策略接口
      * @param req CreateStrategyRequest
      * @return CreateStrategyResponse
@@ -311,6 +322,17 @@ public class IgtmClient extends AbstractClient{
     public ModifyMonitorResponse ModifyMonitor(ModifyMonitorRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyMonitor", ModifyMonitorResponse.class);
+    }
+
+    /**
+     *设置自动续费接口
+     * @param req ModifyPackageAutoRenewRequest
+     * @return ModifyPackageAutoRenewResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPackageAutoRenewResponse ModifyPackageAutoRenew(ModifyPackageAutoRenewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyPackageAutoRenew", ModifyPackageAutoRenewResponse.class);
     }
 
     /**

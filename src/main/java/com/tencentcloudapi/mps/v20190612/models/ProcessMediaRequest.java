@@ -147,7 +147,7 @@ public class ProcessMediaRequest extends AbstractModel {
     private String TaskType;
 
     /**
-    * 资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
+    * 资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。
     */
     @SerializedName("ResourceId")
     @Expose
@@ -464,16 +464,16 @@ public class ProcessMediaRequest extends AbstractModel {
     }
 
     /**
-     * Get 资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。 
-     * @return ResourceId 资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
+     * Get 资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。 
+     * @return ResourceId 资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
-     * @param ResourceId 资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
+     * Set 资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。
+     * @param ResourceId 资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;

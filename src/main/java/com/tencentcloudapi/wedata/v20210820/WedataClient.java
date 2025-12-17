@@ -2099,6 +2099,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *分组获取编排空间调试任务实例状态信息
+     * @param req DescribeTaskInstancesStatusRequest
+     * @return DescribeTaskInstancesStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTaskInstancesStatusResponse DescribeTaskInstancesStatus(DescribeTaskInstancesStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTaskInstancesStatus", DescribeTaskInstancesStatusResponse.class);
+    }
+
+    /**
      *通过任务查询表的血缘关系
      * @param req DescribeTaskLineageRequest
      * @return DescribeTaskLineageResponse

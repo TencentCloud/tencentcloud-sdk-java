@@ -185,6 +185,13 @@ public class CreateNativeNodePoolParam extends AbstractModel {
     private Boolean AutomationService;
 
     /**
+    * 原生节点池密码
+    */
+    @SerializedName("Password")
+    @Expose
+    private String Password;
+
+    /**
      * Get 节点池伸缩配置 
      * @return Scaling 节点池伸缩配置
      */
@@ -552,6 +559,22 @@ public class CreateNativeNodePoolParam extends AbstractModel {
         this.AutomationService = AutomationService;
     }
 
+    /**
+     * Get 原生节点池密码 
+     * @return Password 原生节点池密码
+     */
+    public String getPassword() {
+        return this.Password;
+    }
+
+    /**
+     * Set 原生节点池密码
+     * @param Password 原生节点池密码
+     */
+    public void setPassword(String Password) {
+        this.Password = Password;
+    }
+
     public CreateNativeNodePoolParam() {
     }
 
@@ -647,6 +670,9 @@ public class CreateNativeNodePoolParam extends AbstractModel {
         if (source.AutomationService != null) {
             this.AutomationService = new Boolean(source.AutomationService);
         }
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
     }
 
 
@@ -677,6 +703,7 @@ public class CreateNativeNodePoolParam extends AbstractModel {
         this.setParamArraySimple(map, prefix + "KeyIds.", this.KeyIds);
         this.setParamSimple(map, prefix + "MachineType", this.MachineType);
         this.setParamSimple(map, prefix + "AutomationService", this.AutomationService);
+        this.setParamSimple(map, prefix + "Password", this.Password);
 
     }
 }

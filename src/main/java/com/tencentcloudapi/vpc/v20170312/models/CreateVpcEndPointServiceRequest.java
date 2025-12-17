@@ -151,7 +151,9 @@ public class CreateVpcEndPointServiceRequest extends AbstractModel {
     /**
      * Get ~~是否是PassService类型。该字段已废弃，请不要使用该字段。~~ 
      * @return IsPassService ~~是否是PassService类型。该字段已废弃，请不要使用该字段。~~
+     * @deprecated
      */
+    @Deprecated
     public Boolean getIsPassService() {
         return this.IsPassService;
     }
@@ -159,7 +161,9 @@ public class CreateVpcEndPointServiceRequest extends AbstractModel {
     /**
      * Set ~~是否是PassService类型。该字段已废弃，请不要使用该字段。~~
      * @param IsPassService ~~是否是PassService类型。该字段已废弃，请不要使用该字段。~~
+     * @deprecated
      */
+    @Deprecated
     public void setIsPassService(Boolean IsPassService) {
         this.IsPassService = IsPassService;
     }

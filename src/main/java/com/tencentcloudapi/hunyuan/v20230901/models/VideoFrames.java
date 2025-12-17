@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class VideoFrames extends AbstractModel {
 
     /**
-    * 视频图像帧列表，图像帧传url
+    * 视频图像帧列表，图像帧传url，最大支持传入数量为512帧
     */
     @SerializedName("Frames")
     @Expose
     private String [] Frames;
 
     /**
-     * Get 视频图像帧列表，图像帧传url 
-     * @return Frames 视频图像帧列表，图像帧传url
+     * Get 视频图像帧列表，图像帧传url，最大支持传入数量为512帧 
+     * @return Frames 视频图像帧列表，图像帧传url，最大支持传入数量为512帧
      */
     public String [] getFrames() {
         return this.Frames;
     }
 
     /**
-     * Set 视频图像帧列表，图像帧传url
-     * @param Frames 视频图像帧列表，图像帧传url
+     * Set 视频图像帧列表，图像帧传url，最大支持传入数量为512帧
+     * @param Frames 视频图像帧列表，图像帧传url，最大支持传入数量为512帧
      */
     public void setFrames(String [] Frames) {
         this.Frames = Frames;

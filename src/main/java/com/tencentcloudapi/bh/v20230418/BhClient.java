@@ -501,6 +501,17 @@ public class BhClient extends AbstractClient{
     }
 
     /**
+     *查询部门信息
+     * @param req DescribeDepartmentsRequest
+     * @return DescribeDepartmentsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDepartmentsResponse DescribeDepartments(DescribeDepartmentsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDepartments", DescribeDepartmentsResponse.class);
+    }
+
+    /**
      *查询主机账号列表
      * @param req DescribeDeviceAccountsRequest
      * @return DescribeDeviceAccountsResponse

@@ -152,6 +152,118 @@ SUCCESS     备份成功
     private String UserBackUp;
 
     /**
+    * 0 腾讯云仓库; 1 客户仓库
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EsRepositoryType")
+    @Expose
+    private Long EsRepositoryType;
+
+    /**
+    * 托管快照仓库名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PaasEsRepository")
+    @Expose
+    private String PaasEsRepository;
+
+    /**
+    * 客户快照仓库名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UserEsRepository")
+    @Expose
+    private String UserEsRepository;
+
+    /**
+    * 快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StorageDuration")
+    @Expose
+    private Long StorageDuration;
+
+    /**
+    * 自动备份频率, 如果是0,则等效24
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AutoBackupInterval")
+    @Expose
+    private Long AutoBackupInterval;
+
+    /**
+    * 备份锁定 0 不锁定; 1 锁定
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CosRetention")
+    @Expose
+    private Long CosRetention;
+
+    /**
+    * 锁定截止日期 2022-12-10T08:34:48.000Z
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RetainUntilDate")
+    @Expose
+    private String RetainUntilDate;
+
+    /**
+    * 锁定宽限期,单位天
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RetentionGraceTime")
+    @Expose
+    private Long RetentionGraceTime;
+
+    /**
+    * 是否已经备份锁定 0 不锁定; 1 锁定
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsLocked")
+    @Expose
+    private Long IsLocked;
+
+    /**
+    * 跨地域备份 0 不跨地域; 1 跨地域
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RemoteCos")
+    @Expose
+    private Long RemoteCos;
+
+    /**
+    * 跨地域备份地域名称 ap-guangzhou
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RemoteCosRegion")
+    @Expose
+    private String RemoteCosRegion;
+
+    /**
+    * 备份加密 0 不加密; 1 加密
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CosEncryption")
+    @Expose
+    private Long CosEncryption;
+
+    /**
+    * kms密钥
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KmsKey")
+    @Expose
+    private String KmsKey;
+
+    /**
+    * 策略名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StrategyName")
+    @Expose
+    private String StrategyName;
+
+    /**
      * Get 快照名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SnapshotName 快照名称
@@ -483,6 +595,286 @@ SUCCESS     备份成功
         this.UserBackUp = UserBackUp;
     }
 
+    /**
+     * Get 0 腾讯云仓库; 1 客户仓库
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EsRepositoryType 0 腾讯云仓库; 1 客户仓库
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getEsRepositoryType() {
+        return this.EsRepositoryType;
+    }
+
+    /**
+     * Set 0 腾讯云仓库; 1 客户仓库
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EsRepositoryType 0 腾讯云仓库; 1 客户仓库
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEsRepositoryType(Long EsRepositoryType) {
+        this.EsRepositoryType = EsRepositoryType;
+    }
+
+    /**
+     * Get 托管快照仓库名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PaasEsRepository 托管快照仓库名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPaasEsRepository() {
+        return this.PaasEsRepository;
+    }
+
+    /**
+     * Set 托管快照仓库名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PaasEsRepository 托管快照仓库名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPaasEsRepository(String PaasEsRepository) {
+        this.PaasEsRepository = PaasEsRepository;
+    }
+
+    /**
+     * Get 客户快照仓库名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UserEsRepository 客户快照仓库名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUserEsRepository() {
+        return this.UserEsRepository;
+    }
+
+    /**
+     * Set 客户快照仓库名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UserEsRepository 客户快照仓库名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUserEsRepository(String UserEsRepository) {
+        this.UserEsRepository = UserEsRepository;
+    }
+
+    /**
+     * Get 快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StorageDuration 快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getStorageDuration() {
+        return this.StorageDuration;
+    }
+
+    /**
+     * Set 快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StorageDuration 快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStorageDuration(Long StorageDuration) {
+        this.StorageDuration = StorageDuration;
+    }
+
+    /**
+     * Get 自动备份频率, 如果是0,则等效24
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AutoBackupInterval 自动备份频率, 如果是0,则等效24
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAutoBackupInterval() {
+        return this.AutoBackupInterval;
+    }
+
+    /**
+     * Set 自动备份频率, 如果是0,则等效24
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AutoBackupInterval 自动备份频率, 如果是0,则等效24
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAutoBackupInterval(Long AutoBackupInterval) {
+        this.AutoBackupInterval = AutoBackupInterval;
+    }
+
+    /**
+     * Get 备份锁定 0 不锁定; 1 锁定
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CosRetention 备份锁定 0 不锁定; 1 锁定
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCosRetention() {
+        return this.CosRetention;
+    }
+
+    /**
+     * Set 备份锁定 0 不锁定; 1 锁定
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CosRetention 备份锁定 0 不锁定; 1 锁定
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCosRetention(Long CosRetention) {
+        this.CosRetention = CosRetention;
+    }
+
+    /**
+     * Get 锁定截止日期 2022-12-10T08:34:48.000Z
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RetainUntilDate 锁定截止日期 2022-12-10T08:34:48.000Z
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRetainUntilDate() {
+        return this.RetainUntilDate;
+    }
+
+    /**
+     * Set 锁定截止日期 2022-12-10T08:34:48.000Z
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RetainUntilDate 锁定截止日期 2022-12-10T08:34:48.000Z
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRetainUntilDate(String RetainUntilDate) {
+        this.RetainUntilDate = RetainUntilDate;
+    }
+
+    /**
+     * Get 锁定宽限期,单位天
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RetentionGraceTime 锁定宽限期,单位天
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRetentionGraceTime() {
+        return this.RetentionGraceTime;
+    }
+
+    /**
+     * Set 锁定宽限期,单位天
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RetentionGraceTime 锁定宽限期,单位天
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRetentionGraceTime(Long RetentionGraceTime) {
+        this.RetentionGraceTime = RetentionGraceTime;
+    }
+
+    /**
+     * Get 是否已经备份锁定 0 不锁定; 1 锁定
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsLocked 是否已经备份锁定 0 不锁定; 1 锁定
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsLocked() {
+        return this.IsLocked;
+    }
+
+    /**
+     * Set 是否已经备份锁定 0 不锁定; 1 锁定
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsLocked 是否已经备份锁定 0 不锁定; 1 锁定
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsLocked(Long IsLocked) {
+        this.IsLocked = IsLocked;
+    }
+
+    /**
+     * Get 跨地域备份 0 不跨地域; 1 跨地域
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RemoteCos 跨地域备份 0 不跨地域; 1 跨地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRemoteCos() {
+        return this.RemoteCos;
+    }
+
+    /**
+     * Set 跨地域备份 0 不跨地域; 1 跨地域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RemoteCos 跨地域备份 0 不跨地域; 1 跨地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRemoteCos(Long RemoteCos) {
+        this.RemoteCos = RemoteCos;
+    }
+
+    /**
+     * Get 跨地域备份地域名称 ap-guangzhou
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RemoteCosRegion 跨地域备份地域名称 ap-guangzhou
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRemoteCosRegion() {
+        return this.RemoteCosRegion;
+    }
+
+    /**
+     * Set 跨地域备份地域名称 ap-guangzhou
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RemoteCosRegion 跨地域备份地域名称 ap-guangzhou
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRemoteCosRegion(String RemoteCosRegion) {
+        this.RemoteCosRegion = RemoteCosRegion;
+    }
+
+    /**
+     * Get 备份加密 0 不加密; 1 加密
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CosEncryption 备份加密 0 不加密; 1 加密
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCosEncryption() {
+        return this.CosEncryption;
+    }
+
+    /**
+     * Set 备份加密 0 不加密; 1 加密
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CosEncryption 备份加密 0 不加密; 1 加密
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCosEncryption(Long CosEncryption) {
+        this.CosEncryption = CosEncryption;
+    }
+
+    /**
+     * Get kms密钥
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KmsKey kms密钥
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getKmsKey() {
+        return this.KmsKey;
+    }
+
+    /**
+     * Set kms密钥
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KmsKey kms密钥
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKmsKey(String KmsKey) {
+        this.KmsKey = KmsKey;
+    }
+
+    /**
+     * Get 策略名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StrategyName 策略名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStrategyName() {
+        return this.StrategyName;
+    }
+
+    /**
+     * Set 策略名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StrategyName 策略名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStrategyName(String StrategyName) {
+        this.StrategyName = StrategyName;
+    }
+
     public Snapshots() {
     }
 
@@ -545,6 +937,48 @@ SUCCESS     备份成功
         if (source.UserBackUp != null) {
             this.UserBackUp = new String(source.UserBackUp);
         }
+        if (source.EsRepositoryType != null) {
+            this.EsRepositoryType = new Long(source.EsRepositoryType);
+        }
+        if (source.PaasEsRepository != null) {
+            this.PaasEsRepository = new String(source.PaasEsRepository);
+        }
+        if (source.UserEsRepository != null) {
+            this.UserEsRepository = new String(source.UserEsRepository);
+        }
+        if (source.StorageDuration != null) {
+            this.StorageDuration = new Long(source.StorageDuration);
+        }
+        if (source.AutoBackupInterval != null) {
+            this.AutoBackupInterval = new Long(source.AutoBackupInterval);
+        }
+        if (source.CosRetention != null) {
+            this.CosRetention = new Long(source.CosRetention);
+        }
+        if (source.RetainUntilDate != null) {
+            this.RetainUntilDate = new String(source.RetainUntilDate);
+        }
+        if (source.RetentionGraceTime != null) {
+            this.RetentionGraceTime = new Long(source.RetentionGraceTime);
+        }
+        if (source.IsLocked != null) {
+            this.IsLocked = new Long(source.IsLocked);
+        }
+        if (source.RemoteCos != null) {
+            this.RemoteCos = new Long(source.RemoteCos);
+        }
+        if (source.RemoteCosRegion != null) {
+            this.RemoteCosRegion = new String(source.RemoteCosRegion);
+        }
+        if (source.CosEncryption != null) {
+            this.CosEncryption = new Long(source.CosEncryption);
+        }
+        if (source.KmsKey != null) {
+            this.KmsKey = new String(source.KmsKey);
+        }
+        if (source.StrategyName != null) {
+            this.StrategyName = new String(source.StrategyName);
+        }
     }
 
 
@@ -567,6 +1001,20 @@ SUCCESS     备份成功
         this.setParamSimple(map, prefix + "SuccessfulShards", this.SuccessfulShards);
         this.setParamArrayObj(map, prefix + "Failures.", this.Failures);
         this.setParamSimple(map, prefix + "UserBackUp", this.UserBackUp);
+        this.setParamSimple(map, prefix + "EsRepositoryType", this.EsRepositoryType);
+        this.setParamSimple(map, prefix + "PaasEsRepository", this.PaasEsRepository);
+        this.setParamSimple(map, prefix + "UserEsRepository", this.UserEsRepository);
+        this.setParamSimple(map, prefix + "StorageDuration", this.StorageDuration);
+        this.setParamSimple(map, prefix + "AutoBackupInterval", this.AutoBackupInterval);
+        this.setParamSimple(map, prefix + "CosRetention", this.CosRetention);
+        this.setParamSimple(map, prefix + "RetainUntilDate", this.RetainUntilDate);
+        this.setParamSimple(map, prefix + "RetentionGraceTime", this.RetentionGraceTime);
+        this.setParamSimple(map, prefix + "IsLocked", this.IsLocked);
+        this.setParamSimple(map, prefix + "RemoteCos", this.RemoteCos);
+        this.setParamSimple(map, prefix + "RemoteCosRegion", this.RemoteCosRegion);
+        this.setParamSimple(map, prefix + "CosEncryption", this.CosEncryption);
+        this.setParamSimple(map, prefix + "KmsKey", this.KmsKey);
+        this.setParamSimple(map, prefix + "StrategyName", this.StrategyName);
 
     }
 }

@@ -457,6 +457,14 @@ public class Cluster extends AbstractModel {
     private String LogCOSBucket;
 
     /**
+    * Cdc集群Id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CdcId")
+    @Expose
+    private String CdcId;
+
+    /**
      * Get 集群 ID 
      * @return ClusterId 集群 ID
      */
@@ -1504,6 +1512,26 @@ public class Cluster extends AbstractModel {
         this.LogCOSBucket = LogCOSBucket;
     }
 
+    /**
+     * Get Cdc集群Id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CdcId Cdc集群Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCdcId() {
+        return this.CdcId;
+    }
+
+    /**
+     * Set Cdc集群Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CdcId Cdc集群Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCdcId(String CdcId) {
+        this.CdcId = CdcId;
+    }
+
     public Cluster() {
     }
 
@@ -1707,6 +1735,9 @@ public class Cluster extends AbstractModel {
         if (source.LogCOSBucket != null) {
             this.LogCOSBucket = new String(source.LogCOSBucket);
         }
+        if (source.CdcId != null) {
+            this.CdcId = new String(source.CdcId);
+        }
     }
 
 
@@ -1771,6 +1802,7 @@ public class Cluster extends AbstractModel {
         this.setParamSimple(map, prefix + "DeploymentMode", this.DeploymentMode);
         this.setParamArrayObj(map, prefix + "SlaveZones.", this.SlaveZones);
         this.setParamSimple(map, prefix + "LogCOSBucket", this.LogCOSBucket);
+        this.setParamSimple(map, prefix + "CdcId", this.CdcId);
 
     }
 }

@@ -1260,6 +1260,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *查询插件日志采集配置
+     * @param req DescribeControlPlaneLogsRequest
+     * @return DescribeControlPlaneLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeControlPlaneLogsResponse DescribeControlPlaneLogs(DescribeControlPlaneLogsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeControlPlaneLogs", DescribeControlPlaneLogsResponse.class);
+    }
+
+    /**
      *获取ECM实例相关信息
      * @param req DescribeECMInstancesRequest
      * @return DescribeECMInstancesResponse
@@ -2019,6 +2030,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *删除插件日志采集配置
+     * @param req DisableControlPlaneLogsRequest
+     * @return DisableControlPlaneLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableControlPlaneLogsResponse DisableControlPlaneLogs(DisableControlPlaneLogsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DisableControlPlaneLogs", DisableControlPlaneLogsResponse.class);
+    }
+
+    /**
      *关闭加密信息保护
      * @param req DisableEncryptionProtectionRequest
      * @return DisableEncryptionProtectionResponse
@@ -2082,6 +2104,17 @@ public class TkeClient extends AbstractClient{
     public EnableClusterDeletionProtectionResponse EnableClusterDeletionProtection(EnableClusterDeletionProtectionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "EnableClusterDeletionProtection", EnableClusterDeletionProtectionResponse.class);
+    }
+
+    /**
+     *创建插件日志采集配置
+     * @param req EnableControlPlaneLogsRequest
+     * @return EnableControlPlaneLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableControlPlaneLogsResponse EnableControlPlaneLogs(EnableControlPlaneLogsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EnableControlPlaneLogs", EnableControlPlaneLogsResponse.class);
     }
 
     /**

@@ -60,6 +60,14 @@ public class GetWsTokenResponse extends AbstractModel {
     private KnowledgeQaSingleWorkflow SingleWorkflow;
 
     /**
+    * 使用视觉模型时对话窗口输入字符限制
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VisionModelInputLimit")
+    @Expose
+    private Long VisionModelInputLimit;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -151,6 +159,26 @@ public class GetWsTokenResponse extends AbstractModel {
     }
 
     /**
+     * Get 使用视觉模型时对话窗口输入字符限制
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VisionModelInputLimit 使用视觉模型时对话窗口输入字符限制
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getVisionModelInputLimit() {
+        return this.VisionModelInputLimit;
+    }
+
+    /**
+     * Set 使用视觉模型时对话窗口输入字符限制
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VisionModelInputLimit 使用视觉模型时对话窗口输入字符限制
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVisionModelInputLimit(Long VisionModelInputLimit) {
+        this.VisionModelInputLimit = VisionModelInputLimit;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -189,6 +217,9 @@ public class GetWsTokenResponse extends AbstractModel {
         if (source.SingleWorkflow != null) {
             this.SingleWorkflow = new KnowledgeQaSingleWorkflow(source.SingleWorkflow);
         }
+        if (source.VisionModelInputLimit != null) {
+            this.VisionModelInputLimit = new Long(source.VisionModelInputLimit);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -204,6 +235,7 @@ public class GetWsTokenResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "InputLenLimit", this.InputLenLimit);
         this.setParamSimple(map, prefix + "Pattern", this.Pattern);
         this.setParamObj(map, prefix + "SingleWorkflow.", this.SingleWorkflow);
+        this.setParamSimple(map, prefix + "VisionModelInputLimit", this.VisionModelInputLimit);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

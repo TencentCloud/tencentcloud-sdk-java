@@ -628,6 +628,17 @@ BGP带宽包必须传带宽包id
     }
 
     /**
+     *查询目标组后端服务状态。目前仅支持网关负载均衡类型的目标组支持查询后端服务状态。
+     * @param req DescribeTargetGroupInstanceStatusRequest
+     * @return DescribeTargetGroupInstanceStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTargetGroupInstanceStatusResponse DescribeTargetGroupInstanceStatus(DescribeTargetGroupInstanceStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTargetGroupInstanceStatus", DescribeTargetGroupInstanceStatusResponse.class);
+    }
+
+    /**
      *获取目标组绑定的服务器信息
      * @param req DescribeTargetGroupInstancesRequest
      * @return DescribeTargetGroupInstancesResponse

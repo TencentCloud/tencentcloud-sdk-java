@@ -67,6 +67,13 @@ public class CloneSecurityGroupRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
+    * 是否克隆标签。
+    */
+    @SerializedName("IsCloneTags")
+    @Expose
+    private Boolean IsCloneTags;
+
+    /**
      * Get 安全组实例ID，例如sg-33ocnj9n，可通过<a href="https://cloud.tencent.com/document/product/215/15808">DescribeSecurityGroups</a>获取。 
      * @return SecurityGroupId 安全组实例ID，例如sg-33ocnj9n，可通过<a href="https://cloud.tencent.com/document/product/215/15808">DescribeSecurityGroups</a>获取。
      */
@@ -166,6 +173,22 @@ public class CloneSecurityGroupRequest extends AbstractModel {
         this.Tags = Tags;
     }
 
+    /**
+     * Get 是否克隆标签。 
+     * @return IsCloneTags 是否克隆标签。
+     */
+    public Boolean getIsCloneTags() {
+        return this.IsCloneTags;
+    }
+
+    /**
+     * Set 是否克隆标签。
+     * @param IsCloneTags 是否克隆标签。
+     */
+    public void setIsCloneTags(Boolean IsCloneTags) {
+        this.IsCloneTags = IsCloneTags;
+    }
+
     public CloneSecurityGroupRequest() {
     }
 
@@ -195,6 +218,9 @@ public class CloneSecurityGroupRequest extends AbstractModel {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.IsCloneTags != null) {
+            this.IsCloneTags = new Boolean(source.IsCloneTags);
+        }
     }
 
 
@@ -208,6 +234,7 @@ public class CloneSecurityGroupRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "RemoteRegion", this.RemoteRegion);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "IsCloneTags", this.IsCloneTags);
 
     }
 }

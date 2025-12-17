@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ListUnsatisfiedReplyRequest extends AbstractModel {
 
     /**
-    * 应用ID
+    * 应用ID，获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
     */
     @SerializedName("BotBizId")
     @Expose
     private String BotBizId;
 
     /**
-    * 页码
+    * 页码，取值范围：大于0
     */
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
 
     /**
-    * 分页数量
+    * 分页数量，取值范围：大于0
     */
     @SerializedName("PageSize")
     @Expose
@@ -59,69 +59,76 @@ public class ListUnsatisfiedReplyRequest extends AbstractModel {
     private String LoginSubAccountUin;
 
     /**
-    * 用户请求(问题或答案)
+    * 用户请求(问题或答案)，按关键词检索，可匹配用户问题或答案
     */
     @SerializedName("Query")
     @Expose
     private String Query;
 
     /**
-    * 错误类型检索
+    * 按错误类型检索
     */
     @SerializedName("Reasons")
     @Expose
     private String [] Reasons;
 
     /**
-    * 操作状态  0-全部 1-待处理  2-已处理【包括答案纠错，拒答，忽略】
+    * 按操作状态检索  0-全部 1-待处理  2-已处理【包括答案纠错，拒答，忽略】，不填时默认值为0
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get 应用ID 
-     * @return BotBizId 应用ID
+    * 处理状态 0-待处理 1-已拒答 2-已忽略 3-已添加为新问答 4-已添加为相似问
+    */
+    @SerializedName("HandlingStatuses")
+    @Expose
+    private Long [] HandlingStatuses;
+
+    /**
+     * Get 应用ID，获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa) 
+     * @return BotBizId 应用ID，获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      */
     public String getBotBizId() {
         return this.BotBizId;
     }
 
     /**
-     * Set 应用ID
-     * @param BotBizId 应用ID
+     * Set 应用ID，获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+     * @param BotBizId 应用ID，获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      */
     public void setBotBizId(String BotBizId) {
         this.BotBizId = BotBizId;
     }
 
     /**
-     * Get 页码 
-     * @return PageNumber 页码
+     * Get 页码，取值范围：大于0 
+     * @return PageNumber 页码，取值范围：大于0
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set 页码
-     * @param PageNumber 页码
+     * Set 页码，取值范围：大于0
+     * @param PageNumber 页码，取值范围：大于0
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 分页数量 
-     * @return PageSize 分页数量
+     * Get 分页数量，取值范围：大于0 
+     * @return PageSize 分页数量，取值范围：大于0
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 分页数量
-     * @param PageSize 分页数量
+     * Set 分页数量，取值范围：大于0
+     * @param PageSize 分页数量，取值范围：大于0
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
@@ -160,51 +167,67 @@ public class ListUnsatisfiedReplyRequest extends AbstractModel {
     }
 
     /**
-     * Get 用户请求(问题或答案) 
-     * @return Query 用户请求(问题或答案)
+     * Get 用户请求(问题或答案)，按关键词检索，可匹配用户问题或答案 
+     * @return Query 用户请求(问题或答案)，按关键词检索，可匹配用户问题或答案
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set 用户请求(问题或答案)
-     * @param Query 用户请求(问题或答案)
+     * Set 用户请求(问题或答案)，按关键词检索，可匹配用户问题或答案
+     * @param Query 用户请求(问题或答案)，按关键词检索，可匹配用户问题或答案
      */
     public void setQuery(String Query) {
         this.Query = Query;
     }
 
     /**
-     * Get 错误类型检索 
-     * @return Reasons 错误类型检索
+     * Get 按错误类型检索 
+     * @return Reasons 按错误类型检索
      */
     public String [] getReasons() {
         return this.Reasons;
     }
 
     /**
-     * Set 错误类型检索
-     * @param Reasons 错误类型检索
+     * Set 按错误类型检索
+     * @param Reasons 按错误类型检索
      */
     public void setReasons(String [] Reasons) {
         this.Reasons = Reasons;
     }
 
     /**
-     * Get 操作状态  0-全部 1-待处理  2-已处理【包括答案纠错，拒答，忽略】 
-     * @return Status 操作状态  0-全部 1-待处理  2-已处理【包括答案纠错，拒答，忽略】
+     * Get 按操作状态检索  0-全部 1-待处理  2-已处理【包括答案纠错，拒答，忽略】，不填时默认值为0 
+     * @return Status 按操作状态检索  0-全部 1-待处理  2-已处理【包括答案纠错，拒答，忽略】，不填时默认值为0
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 操作状态  0-全部 1-待处理  2-已处理【包括答案纠错，拒答，忽略】
-     * @param Status 操作状态  0-全部 1-待处理  2-已处理【包括答案纠错，拒答，忽略】
+     * Set 按操作状态检索  0-全部 1-待处理  2-已处理【包括答案纠错，拒答，忽略】，不填时默认值为0
+     * @param Status 按操作状态检索  0-全部 1-待处理  2-已处理【包括答案纠错，拒答，忽略】，不填时默认值为0
      */
     public void setStatus(Long Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get 处理状态 0-待处理 1-已拒答 2-已忽略 3-已添加为新问答 4-已添加为相似问 
+     * @return HandlingStatuses 处理状态 0-待处理 1-已拒答 2-已忽略 3-已添加为新问答 4-已添加为相似问
+     */
+    public Long [] getHandlingStatuses() {
+        return this.HandlingStatuses;
+    }
+
+    /**
+     * Set 处理状态 0-待处理 1-已拒答 2-已忽略 3-已添加为新问答 4-已添加为相似问
+     * @param HandlingStatuses 处理状态 0-待处理 1-已拒答 2-已忽略 3-已添加为新问答 4-已添加为相似问
+     */
+    public void setHandlingStatuses(Long [] HandlingStatuses) {
+        this.HandlingStatuses = HandlingStatuses;
     }
 
     public ListUnsatisfiedReplyRequest() {
@@ -242,6 +265,12 @@ public class ListUnsatisfiedReplyRequest extends AbstractModel {
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.HandlingStatuses != null) {
+            this.HandlingStatuses = new Long[source.HandlingStatuses.length];
+            for (int i = 0; i < source.HandlingStatuses.length; i++) {
+                this.HandlingStatuses[i] = new Long(source.HandlingStatuses[i]);
+            }
+        }
     }
 
 
@@ -257,6 +286,7 @@ public class ListUnsatisfiedReplyRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Query", this.Query);
         this.setParamArraySimple(map, prefix + "Reasons.", this.Reasons);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamArraySimple(map, prefix + "HandlingStatuses.", this.HandlingStatuses);
 
     }
 }

@@ -54,7 +54,9 @@ public class DescribeVpcEndPointServiceWhiteListResponse extends AbstractModel {
     /**
      * Get 白名单对象数组。已废弃 
      * @return VpcEndpointServiceUserSet 白名单对象数组。已废弃
+     * @deprecated
      */
+    @Deprecated
     public VpcEndPointServiceUser [] getVpcEndpointServiceUserSet() {
         return this.VpcEndpointServiceUserSet;
     }
@@ -62,7 +64,9 @@ public class DescribeVpcEndPointServiceWhiteListResponse extends AbstractModel {
     /**
      * Set 白名单对象数组。已废弃
      * @param VpcEndpointServiceUserSet 白名单对象数组。已废弃
+     * @deprecated
      */
+    @Deprecated
     public void setVpcEndpointServiceUserSet(VpcEndPointServiceUser [] VpcEndpointServiceUserSet) {
         this.VpcEndpointServiceUserSet = VpcEndpointServiceUserSet;
     }

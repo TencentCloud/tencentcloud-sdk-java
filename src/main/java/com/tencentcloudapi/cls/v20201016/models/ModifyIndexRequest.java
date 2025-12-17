@@ -66,6 +66,13 @@ public class ModifyIndexRequest extends AbstractModel {
     private Long MetadataFlag;
 
     /**
+    * 自定义日志解析异常存储字段。
+    */
+    @SerializedName("CoverageField")
+    @Expose
+    private String CoverageField;
+
+    /**
      * Get 日志主题Id。
 - 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。 
      * @return TopicId 日志主题Id。
@@ -173,6 +180,22 @@ public class ModifyIndexRequest extends AbstractModel {
         this.MetadataFlag = MetadataFlag;
     }
 
+    /**
+     * Get 自定义日志解析异常存储字段。 
+     * @return CoverageField 自定义日志解析异常存储字段。
+     */
+    public String getCoverageField() {
+        return this.CoverageField;
+    }
+
+    /**
+     * Set 自定义日志解析异常存储字段。
+     * @param CoverageField 自定义日志解析异常存储字段。
+     */
+    public void setCoverageField(String CoverageField) {
+        this.CoverageField = CoverageField;
+    }
+
     public ModifyIndexRequest() {
     }
 
@@ -196,6 +219,9 @@ public class ModifyIndexRequest extends AbstractModel {
         if (source.MetadataFlag != null) {
             this.MetadataFlag = new Long(source.MetadataFlag);
         }
+        if (source.CoverageField != null) {
+            this.CoverageField = new String(source.CoverageField);
+        }
     }
 
 
@@ -208,6 +234,7 @@ public class ModifyIndexRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Rule.", this.Rule);
         this.setParamSimple(map, prefix + "IncludeInternalFields", this.IncludeInternalFields);
         this.setParamSimple(map, prefix + "MetadataFlag", this.MetadataFlag);
+        this.setParamSimple(map, prefix + "CoverageField", this.CoverageField);
 
     }
 }

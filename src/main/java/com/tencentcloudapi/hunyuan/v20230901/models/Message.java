@@ -38,7 +38,7 @@ public class Message extends AbstractModel {
     private String Content;
 
     /**
-    * 多种类型内容（目前支持图片和文本），仅 hunyuan-vision 和 hunyuan-turbo-vision 模型支持
+    * 多种类型内容（目前支持文本、图片和视频），图片支持混元图生文系列模型，视频支持混元视频生文系列模型，详情参考[产品概述](https://cloud.tencent.com/document/product/1729/104753)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Contents")
@@ -109,9 +109,9 @@ public class Message extends AbstractModel {
     }
 
     /**
-     * Get 多种类型内容（目前支持图片和文本），仅 hunyuan-vision 和 hunyuan-turbo-vision 模型支持
+     * Get 多种类型内容（目前支持文本、图片和视频），图片支持混元图生文系列模型，视频支持混元视频生文系列模型，详情参考[产品概述](https://cloud.tencent.com/document/product/1729/104753)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Contents 多种类型内容（目前支持图片和文本），仅 hunyuan-vision 和 hunyuan-turbo-vision 模型支持
+     * @return Contents 多种类型内容（目前支持文本、图片和视频），图片支持混元图生文系列模型，视频支持混元视频生文系列模型，详情参考[产品概述](https://cloud.tencent.com/document/product/1729/104753)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Content [] getContents() {
@@ -119,9 +119,9 @@ public class Message extends AbstractModel {
     }
 
     /**
-     * Set 多种类型内容（目前支持图片和文本），仅 hunyuan-vision 和 hunyuan-turbo-vision 模型支持
+     * Set 多种类型内容（目前支持文本、图片和视频），图片支持混元图生文系列模型，视频支持混元视频生文系列模型，详情参考[产品概述](https://cloud.tencent.com/document/product/1729/104753)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Contents 多种类型内容（目前支持图片和文本），仅 hunyuan-vision 和 hunyuan-turbo-vision 模型支持
+     * @param Contents 多种类型内容（目前支持文本、图片和视频），图片支持混元图生文系列模型，视频支持混元视频生文系列模型，详情参考[产品概述](https://cloud.tencent.com/document/product/1729/104753)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContents(Content [] Contents) {

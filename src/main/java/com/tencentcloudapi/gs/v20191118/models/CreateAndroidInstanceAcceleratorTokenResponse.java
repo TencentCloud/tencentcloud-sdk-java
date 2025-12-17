@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class CreateAndroidInstanceAcceleratorTokenResponse extends AbstractModel {
 
     /**
+    * token
+    */
+    @SerializedName("Token")
+    @Expose
+    private String Token;
+
+    /**
     * 加速信息
     */
     @SerializedName("AcceleratorInfo")
@@ -43,6 +50,22 @@ public class CreateAndroidInstanceAcceleratorTokenResponse extends AbstractModel
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get token 
+     * @return Token token
+     */
+    public String getToken() {
+        return this.Token;
+    }
+
+    /**
+     * Set token
+     * @param Token token
+     */
+    public void setToken(String Token) {
+        this.Token = Token;
+    }
 
     /**
      * Get 加速信息 
@@ -100,6 +123,9 @@ public class CreateAndroidInstanceAcceleratorTokenResponse extends AbstractModel
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateAndroidInstanceAcceleratorTokenResponse(CreateAndroidInstanceAcceleratorTokenResponse source) {
+        if (source.Token != null) {
+            this.Token = new String(source.Token);
+        }
         if (source.AcceleratorInfo != null) {
             this.AcceleratorInfo = new String(source.AcceleratorInfo);
         }
@@ -119,6 +145,7 @@ public class CreateAndroidInstanceAcceleratorTokenResponse extends AbstractModel
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Token", this.Token);
         this.setParamSimple(map, prefix + "AcceleratorInfo", this.AcceleratorInfo);
         this.setParamArrayObj(map, prefix + "AndroidInstanceErrors.", this.AndroidInstanceErrors);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);

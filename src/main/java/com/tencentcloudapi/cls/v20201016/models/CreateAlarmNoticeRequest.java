@@ -106,6 +106,15 @@ public class CreateAlarmNoticeRequest extends AbstractModel {
     private Long AlarmShieldStatus;
 
     /**
+    * 统一设定自定义回调参数。
+-  true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。
+-  false:优先使用告警策略中单独配置的请求头及请求内容。
+    */
+    @SerializedName("CallbackPrioritize")
+    @Expose
+    private Boolean CallbackPrioritize;
+
+    /**
      * Get 通知渠道组名称。最大支持255个字节。 不支持 '|'。 
      * @return Name 通知渠道组名称。最大支持255个字节。 不支持 '|'。
      */
@@ -313,6 +322,30 @@ public class CreateAlarmNoticeRequest extends AbstractModel {
         this.AlarmShieldStatus = AlarmShieldStatus;
     }
 
+    /**
+     * Get 统一设定自定义回调参数。
+-  true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。
+-  false:优先使用告警策略中单独配置的请求头及请求内容。 
+     * @return CallbackPrioritize 统一设定自定义回调参数。
+-  true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。
+-  false:优先使用告警策略中单独配置的请求头及请求内容。
+     */
+    public Boolean getCallbackPrioritize() {
+        return this.CallbackPrioritize;
+    }
+
+    /**
+     * Set 统一设定自定义回调参数。
+-  true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。
+-  false:优先使用告警策略中单独配置的请求头及请求内容。
+     * @param CallbackPrioritize 统一设定自定义回调参数。
+-  true: 使用通知内容模板中的自定义回调参数覆盖告警策略中单独配置的请求头及请求内容。
+-  false:优先使用告警策略中单独配置的请求头及请求内容。
+     */
+    public void setCallbackPrioritize(Boolean CallbackPrioritize) {
+        this.CallbackPrioritize = CallbackPrioritize;
+    }
+
     public CreateAlarmNoticeRequest() {
     }
 
@@ -363,6 +396,9 @@ public class CreateAlarmNoticeRequest extends AbstractModel {
         if (source.AlarmShieldStatus != null) {
             this.AlarmShieldStatus = new Long(source.AlarmShieldStatus);
         }
+        if (source.CallbackPrioritize != null) {
+            this.CallbackPrioritize = new Boolean(source.CallbackPrioritize);
+        }
     }
 
 
@@ -380,6 +416,7 @@ public class CreateAlarmNoticeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DeliverStatus", this.DeliverStatus);
         this.setParamObj(map, prefix + "DeliverConfig.", this.DeliverConfig);
         this.setParamSimple(map, prefix + "AlarmShieldStatus", this.AlarmShieldStatus);
+        this.setParamSimple(map, prefix + "CallbackPrioritize", this.CallbackPrioritize);
 
     }
 }

@@ -24,21 +24,22 @@ import java.util.HashMap;
 public class DescribeAttributeLabelRequest extends AbstractModel {
 
     /**
-    * 应用ID
+    * 应用ID，获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
     */
     @SerializedName("BotBizId")
     @Expose
     private String BotBizId;
 
     /**
-    * 属性ID
+    * 标签ID
     */
     @SerializedName("AttributeBizId")
     @Expose
     private String AttributeBizId;
 
     /**
-    * 每次加载的数量 
+    * 每次请求返回的最大标签数量​，限制单次接口返回的标签数量，避免数据量过大。取值范围：大于0。
+
     */
     @SerializedName("Limit")
     @Expose
@@ -59,14 +60,14 @@ public class DescribeAttributeLabelRequest extends AbstractModel {
     private String LoginSubAccountUin;
 
     /**
-    * 查询标签或相似标签
+    * 搜索关键词，用于查询标签标准词或相似词
     */
     @SerializedName("Query")
     @Expose
     private String Query;
 
     /**
-    * 滚动加载游标的标签ID
+    * 滚动加载游标，上一次请求返回的最后一个标签ID
     */
     @SerializedName("LastLabelBizId")
     @Expose
@@ -80,48 +81,52 @@ public class DescribeAttributeLabelRequest extends AbstractModel {
     private String QueryScope;
 
     /**
-     * Get 应用ID 
-     * @return BotBizId 应用ID
+     * Get 应用ID，获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa) 
+     * @return BotBizId 应用ID，获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      */
     public String getBotBizId() {
         return this.BotBizId;
     }
 
     /**
-     * Set 应用ID
-     * @param BotBizId 应用ID
+     * Set 应用ID，获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+     * @param BotBizId 应用ID，获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      */
     public void setBotBizId(String BotBizId) {
         this.BotBizId = BotBizId;
     }
 
     /**
-     * Get 属性ID 
-     * @return AttributeBizId 属性ID
+     * Get 标签ID 
+     * @return AttributeBizId 标签ID
      */
     public String getAttributeBizId() {
         return this.AttributeBizId;
     }
 
     /**
-     * Set 属性ID
-     * @param AttributeBizId 属性ID
+     * Set 标签ID
+     * @param AttributeBizId 标签ID
      */
     public void setAttributeBizId(String AttributeBizId) {
         this.AttributeBizId = AttributeBizId;
     }
 
     /**
-     * Get 每次加载的数量  
-     * @return Limit 每次加载的数量 
+     * Get 每次请求返回的最大标签数量​，限制单次接口返回的标签数量，避免数据量过大。取值范围：大于0。
+ 
+     * @return Limit 每次请求返回的最大标签数量​，限制单次接口返回的标签数量，避免数据量过大。取值范围：大于0。
+
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每次加载的数量 
-     * @param Limit 每次加载的数量 
+     * Set 每次请求返回的最大标签数量​，限制单次接口返回的标签数量，避免数据量过大。取值范围：大于0。
+
+     * @param Limit 每次请求返回的最大标签数量​，限制单次接口返回的标签数量，避免数据量过大。取值范围：大于0。
+
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -160,32 +165,32 @@ public class DescribeAttributeLabelRequest extends AbstractModel {
     }
 
     /**
-     * Get 查询标签或相似标签 
-     * @return Query 查询标签或相似标签
+     * Get 搜索关键词，用于查询标签标准词或相似词 
+     * @return Query 搜索关键词，用于查询标签标准词或相似词
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set 查询标签或相似标签
-     * @param Query 查询标签或相似标签
+     * Set 搜索关键词，用于查询标签标准词或相似词
+     * @param Query 搜索关键词，用于查询标签标准词或相似词
      */
     public void setQuery(String Query) {
         this.Query = Query;
     }
 
     /**
-     * Get 滚动加载游标的标签ID 
-     * @return LastLabelBizId 滚动加载游标的标签ID
+     * Get 滚动加载游标，上一次请求返回的最后一个标签ID 
+     * @return LastLabelBizId 滚动加载游标，上一次请求返回的最后一个标签ID
      */
     public String getLastLabelBizId() {
         return this.LastLabelBizId;
     }
 
     /**
-     * Set 滚动加载游标的标签ID
-     * @param LastLabelBizId 滚动加载游标的标签ID
+     * Set 滚动加载游标，上一次请求返回的最后一个标签ID
+     * @param LastLabelBizId 滚动加载游标，上一次请求返回的最后一个标签ID
      */
     public void setLastLabelBizId(String LastLabelBizId) {
         this.LastLabelBizId = LastLabelBizId;

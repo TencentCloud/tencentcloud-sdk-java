@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class CheckAttributeLabelExistRequest extends AbstractModel {
 
     /**
-    * 应用ID
+    * 应用ID，获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
     */
     @SerializedName("BotBizId")
     @Expose
     private String BotBizId;
 
     /**
-    * 属性名称
+    * 标签名称
     */
     @SerializedName("LabelName")
     @Expose
     private String LabelName;
 
     /**
-    * 属性ID
+    * 标签ID
     */
     @SerializedName("AttributeBizId")
     @Expose
@@ -59,55 +59,55 @@ public class CheckAttributeLabelExistRequest extends AbstractModel {
     private String LoginSubAccountUin;
 
     /**
-    * 滚动加载，最后一个属性标签ID
+    * 最后一个标签ID。用于滚动加载：是一种分批、滚动式的存在性检查机制。客户端需要持续调用接口，并每次传入上一次返回的最后一个记录的ID，直到接口明确返回“存在”或“已检查全部数据且不存在”为止。
     */
     @SerializedName("LastLabelBizId")
     @Expose
     private String LastLabelBizId;
 
     /**
-     * Get 应用ID 
-     * @return BotBizId 应用ID
+     * Get 应用ID，获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa) 
+     * @return BotBizId 应用ID，获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      */
     public String getBotBizId() {
         return this.BotBizId;
     }
 
     /**
-     * Set 应用ID
-     * @param BotBizId 应用ID
+     * Set 应用ID，获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+     * @param BotBizId 应用ID，获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      */
     public void setBotBizId(String BotBizId) {
         this.BotBizId = BotBizId;
     }
 
     /**
-     * Get 属性名称 
-     * @return LabelName 属性名称
+     * Get 标签名称 
+     * @return LabelName 标签名称
      */
     public String getLabelName() {
         return this.LabelName;
     }
 
     /**
-     * Set 属性名称
-     * @param LabelName 属性名称
+     * Set 标签名称
+     * @param LabelName 标签名称
      */
     public void setLabelName(String LabelName) {
         this.LabelName = LabelName;
     }
 
     /**
-     * Get 属性ID 
-     * @return AttributeBizId 属性ID
+     * Get 标签ID 
+     * @return AttributeBizId 标签ID
      */
     public String getAttributeBizId() {
         return this.AttributeBizId;
     }
 
     /**
-     * Set 属性ID
-     * @param AttributeBizId 属性ID
+     * Set 标签ID
+     * @param AttributeBizId 标签ID
      */
     public void setAttributeBizId(String AttributeBizId) {
         this.AttributeBizId = AttributeBizId;
@@ -146,16 +146,16 @@ public class CheckAttributeLabelExistRequest extends AbstractModel {
     }
 
     /**
-     * Get 滚动加载，最后一个属性标签ID 
-     * @return LastLabelBizId 滚动加载，最后一个属性标签ID
+     * Get 最后一个标签ID。用于滚动加载：是一种分批、滚动式的存在性检查机制。客户端需要持续调用接口，并每次传入上一次返回的最后一个记录的ID，直到接口明确返回“存在”或“已检查全部数据且不存在”为止。 
+     * @return LastLabelBizId 最后一个标签ID。用于滚动加载：是一种分批、滚动式的存在性检查机制。客户端需要持续调用接口，并每次传入上一次返回的最后一个记录的ID，直到接口明确返回“存在”或“已检查全部数据且不存在”为止。
      */
     public String getLastLabelBizId() {
         return this.LastLabelBizId;
     }
 
     /**
-     * Set 滚动加载，最后一个属性标签ID
-     * @param LastLabelBizId 滚动加载，最后一个属性标签ID
+     * Set 最后一个标签ID。用于滚动加载：是一种分批、滚动式的存在性检查机制。客户端需要持续调用接口，并每次传入上一次返回的最后一个记录的ID，直到接口明确返回“存在”或“已检查全部数据且不存在”为止。
+     * @param LastLabelBizId 最后一个标签ID。用于滚动加载：是一种分批、滚动式的存在性检查机制。客户端需要持续调用接口，并每次传入上一次返回的最后一个记录的ID，直到接口明确返回“存在”或“已检查全部数据且不存在”为止。
      */
     public void setLastLabelBizId(String LastLabelBizId) {
         this.LastLabelBizId = LastLabelBizId;

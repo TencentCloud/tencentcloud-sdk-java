@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateRoleUserResponse extends AbstractModel {
 
     /**
-    * 人员ID
+    * <p>人员ID</p>
     */
     @SerializedName("UserId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateRoleUserResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 人员ID 
-     * @return UserId 人员ID
+     * Get <p>人员ID</p> 
+     * @return UserId <p>人员ID</p>
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 人员ID
-     * @param UserId 人员ID
+     * Set <p>人员ID</p>
+     * @param UserId <p>人员ID</p>
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;

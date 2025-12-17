@@ -45,6 +45,62 @@ public class CreateClusterSnapshotRequest extends AbstractModel {
     private String Indices;
 
     /**
+    * 0 腾讯云仓库; 1 客户仓库
+    */
+    @SerializedName("EsRepositoryType")
+    @Expose
+    private Long EsRepositoryType;
+
+    /**
+    * 客户快照仓库名称
+    */
+    @SerializedName("UserEsRepository")
+    @Expose
+    private String UserEsRepository;
+
+    /**
+    * 快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天
+    */
+    @SerializedName("StorageDuration")
+    @Expose
+    private Long StorageDuration;
+
+    /**
+    * 备份锁定 0 不锁定; 1 锁定
+    */
+    @SerializedName("CosRetention")
+    @Expose
+    private Long CosRetention;
+
+    /**
+    * 锁定截止日期 2022-12-10T08:34:48.000Z
+    */
+    @SerializedName("RetainUntilDate")
+    @Expose
+    private String RetainUntilDate;
+
+    /**
+    * 锁定宽限期,单位天
+    */
+    @SerializedName("RetentionGraceTime")
+    @Expose
+    private Long RetentionGraceTime;
+
+    /**
+    * 跨地域备份 0 不跨地域; 1 跨地域
+    */
+    @SerializedName("RemoteCos")
+    @Expose
+    private Long RemoteCos;
+
+    /**
+    * 跨地域备份地域名称 ap-guangzhou
+    */
+    @SerializedName("RemoteCosRegion")
+    @Expose
+    private String RemoteCosRegion;
+
+    /**
      * Get 实例名称 
      * @return InstanceId 实例名称
      */
@@ -92,6 +148,134 @@ public class CreateClusterSnapshotRequest extends AbstractModel {
         this.Indices = Indices;
     }
 
+    /**
+     * Get 0 腾讯云仓库; 1 客户仓库 
+     * @return EsRepositoryType 0 腾讯云仓库; 1 客户仓库
+     */
+    public Long getEsRepositoryType() {
+        return this.EsRepositoryType;
+    }
+
+    /**
+     * Set 0 腾讯云仓库; 1 客户仓库
+     * @param EsRepositoryType 0 腾讯云仓库; 1 客户仓库
+     */
+    public void setEsRepositoryType(Long EsRepositoryType) {
+        this.EsRepositoryType = EsRepositoryType;
+    }
+
+    /**
+     * Get 客户快照仓库名称 
+     * @return UserEsRepository 客户快照仓库名称
+     */
+    public String getUserEsRepository() {
+        return this.UserEsRepository;
+    }
+
+    /**
+     * Set 客户快照仓库名称
+     * @param UserEsRepository 客户快照仓库名称
+     */
+    public void setUserEsRepository(String UserEsRepository) {
+        this.UserEsRepository = UserEsRepository;
+    }
+
+    /**
+     * Get 快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天 
+     * @return StorageDuration 快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天
+     */
+    public Long getStorageDuration() {
+        return this.StorageDuration;
+    }
+
+    /**
+     * Set 快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天
+     * @param StorageDuration 快照存储周期 单位天，范围[0, INF), 如果没有设置则默认7天
+     */
+    public void setStorageDuration(Long StorageDuration) {
+        this.StorageDuration = StorageDuration;
+    }
+
+    /**
+     * Get 备份锁定 0 不锁定; 1 锁定 
+     * @return CosRetention 备份锁定 0 不锁定; 1 锁定
+     */
+    public Long getCosRetention() {
+        return this.CosRetention;
+    }
+
+    /**
+     * Set 备份锁定 0 不锁定; 1 锁定
+     * @param CosRetention 备份锁定 0 不锁定; 1 锁定
+     */
+    public void setCosRetention(Long CosRetention) {
+        this.CosRetention = CosRetention;
+    }
+
+    /**
+     * Get 锁定截止日期 2022-12-10T08:34:48.000Z 
+     * @return RetainUntilDate 锁定截止日期 2022-12-10T08:34:48.000Z
+     */
+    public String getRetainUntilDate() {
+        return this.RetainUntilDate;
+    }
+
+    /**
+     * Set 锁定截止日期 2022-12-10T08:34:48.000Z
+     * @param RetainUntilDate 锁定截止日期 2022-12-10T08:34:48.000Z
+     */
+    public void setRetainUntilDate(String RetainUntilDate) {
+        this.RetainUntilDate = RetainUntilDate;
+    }
+
+    /**
+     * Get 锁定宽限期,单位天 
+     * @return RetentionGraceTime 锁定宽限期,单位天
+     */
+    public Long getRetentionGraceTime() {
+        return this.RetentionGraceTime;
+    }
+
+    /**
+     * Set 锁定宽限期,单位天
+     * @param RetentionGraceTime 锁定宽限期,单位天
+     */
+    public void setRetentionGraceTime(Long RetentionGraceTime) {
+        this.RetentionGraceTime = RetentionGraceTime;
+    }
+
+    /**
+     * Get 跨地域备份 0 不跨地域; 1 跨地域 
+     * @return RemoteCos 跨地域备份 0 不跨地域; 1 跨地域
+     */
+    public Long getRemoteCos() {
+        return this.RemoteCos;
+    }
+
+    /**
+     * Set 跨地域备份 0 不跨地域; 1 跨地域
+     * @param RemoteCos 跨地域备份 0 不跨地域; 1 跨地域
+     */
+    public void setRemoteCos(Long RemoteCos) {
+        this.RemoteCos = RemoteCos;
+    }
+
+    /**
+     * Get 跨地域备份地域名称 ap-guangzhou 
+     * @return RemoteCosRegion 跨地域备份地域名称 ap-guangzhou
+     */
+    public String getRemoteCosRegion() {
+        return this.RemoteCosRegion;
+    }
+
+    /**
+     * Set 跨地域备份地域名称 ap-guangzhou
+     * @param RemoteCosRegion 跨地域备份地域名称 ap-guangzhou
+     */
+    public void setRemoteCosRegion(String RemoteCosRegion) {
+        this.RemoteCosRegion = RemoteCosRegion;
+    }
+
     public CreateClusterSnapshotRequest() {
     }
 
@@ -109,6 +293,30 @@ public class CreateClusterSnapshotRequest extends AbstractModel {
         if (source.Indices != null) {
             this.Indices = new String(source.Indices);
         }
+        if (source.EsRepositoryType != null) {
+            this.EsRepositoryType = new Long(source.EsRepositoryType);
+        }
+        if (source.UserEsRepository != null) {
+            this.UserEsRepository = new String(source.UserEsRepository);
+        }
+        if (source.StorageDuration != null) {
+            this.StorageDuration = new Long(source.StorageDuration);
+        }
+        if (source.CosRetention != null) {
+            this.CosRetention = new Long(source.CosRetention);
+        }
+        if (source.RetainUntilDate != null) {
+            this.RetainUntilDate = new String(source.RetainUntilDate);
+        }
+        if (source.RetentionGraceTime != null) {
+            this.RetentionGraceTime = new Long(source.RetentionGraceTime);
+        }
+        if (source.RemoteCos != null) {
+            this.RemoteCos = new Long(source.RemoteCos);
+        }
+        if (source.RemoteCosRegion != null) {
+            this.RemoteCosRegion = new String(source.RemoteCosRegion);
+        }
     }
 
 
@@ -119,6 +327,14 @@ public class CreateClusterSnapshotRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "SnapshotName", this.SnapshotName);
         this.setParamSimple(map, prefix + "Indices", this.Indices);
+        this.setParamSimple(map, prefix + "EsRepositoryType", this.EsRepositoryType);
+        this.setParamSimple(map, prefix + "UserEsRepository", this.UserEsRepository);
+        this.setParamSimple(map, prefix + "StorageDuration", this.StorageDuration);
+        this.setParamSimple(map, prefix + "CosRetention", this.CosRetention);
+        this.setParamSimple(map, prefix + "RetainUntilDate", this.RetainUntilDate);
+        this.setParamSimple(map, prefix + "RetentionGraceTime", this.RetentionGraceTime);
+        this.setParamSimple(map, prefix + "RemoteCos", this.RemoteCos);
+        this.setParamSimple(map, prefix + "RemoteCosRegion", this.RemoteCosRegion);
 
     }
 }

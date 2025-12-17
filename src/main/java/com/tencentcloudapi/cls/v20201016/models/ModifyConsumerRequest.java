@@ -70,6 +70,27 @@ public class ModifyConsumerRequest extends AbstractModel {
     private Long Compression;
 
     /**
+    * 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+    */
+    @SerializedName("RoleArn")
+    @Expose
+    private String RoleArn;
+
+    /**
+    * 外部ID
+    */
+    @SerializedName("ExternalId")
+    @Expose
+    private String ExternalId;
+
+    /**
+    * 高级配置
+    */
+    @SerializedName("AdvancedConfig")
+    @Expose
+    private AdvancedConsumerConfiguration AdvancedConfig;
+
+    /**
      * Get 投递任务绑定的日志主题Id。
 - 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
 - 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。 
@@ -181,6 +202,54 @@ public class ModifyConsumerRequest extends AbstractModel {
         this.Compression = Compression;
     }
 
+    /**
+     * Get 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381) 
+     * @return RoleArn 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+     */
+    public String getRoleArn() {
+        return this.RoleArn;
+    }
+
+    /**
+     * Set 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+     * @param RoleArn 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+     */
+    public void setRoleArn(String RoleArn) {
+        this.RoleArn = RoleArn;
+    }
+
+    /**
+     * Get 外部ID 
+     * @return ExternalId 外部ID
+     */
+    public String getExternalId() {
+        return this.ExternalId;
+    }
+
+    /**
+     * Set 外部ID
+     * @param ExternalId 外部ID
+     */
+    public void setExternalId(String ExternalId) {
+        this.ExternalId = ExternalId;
+    }
+
+    /**
+     * Get 高级配置 
+     * @return AdvancedConfig 高级配置
+     */
+    public AdvancedConsumerConfiguration getAdvancedConfig() {
+        return this.AdvancedConfig;
+    }
+
+    /**
+     * Set 高级配置
+     * @param AdvancedConfig 高级配置
+     */
+    public void setAdvancedConfig(AdvancedConsumerConfiguration AdvancedConfig) {
+        this.AdvancedConfig = AdvancedConfig;
+    }
+
     public ModifyConsumerRequest() {
     }
 
@@ -207,6 +276,15 @@ public class ModifyConsumerRequest extends AbstractModel {
         if (source.Compression != null) {
             this.Compression = new Long(source.Compression);
         }
+        if (source.RoleArn != null) {
+            this.RoleArn = new String(source.RoleArn);
+        }
+        if (source.ExternalId != null) {
+            this.ExternalId = new String(source.ExternalId);
+        }
+        if (source.AdvancedConfig != null) {
+            this.AdvancedConfig = new AdvancedConsumerConfiguration(source.AdvancedConfig);
+        }
     }
 
 
@@ -220,6 +298,9 @@ public class ModifyConsumerRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Content.", this.Content);
         this.setParamObj(map, prefix + "Ckafka.", this.Ckafka);
         this.setParamSimple(map, prefix + "Compression", this.Compression);
+        this.setParamSimple(map, prefix + "RoleArn", this.RoleArn);
+        this.setParamSimple(map, prefix + "ExternalId", this.ExternalId);
+        this.setParamObj(map, prefix + "AdvancedConfig.", this.AdvancedConfig);
 
     }
 }

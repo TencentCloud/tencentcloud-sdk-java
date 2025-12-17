@@ -64,7 +64,7 @@ public class AttrLabelDetail extends AbstractModel {
     private Boolean IsUpdating;
 
     /**
-    * 状态
+    * 发布状态(1 待发布 2 发布中 3 已发布 4 发布失败)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -111,7 +111,9 @@ public class AttrLabelDetail extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AttrKey 标签标识
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getAttrKey() {
         return this.AttrKey;
     }
@@ -121,7 +123,9 @@ public class AttrLabelDetail extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AttrKey 标签标识
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setAttrKey(String AttrKey) {
         this.AttrKey = AttrKey;
     }
@@ -187,9 +191,9 @@ public class AttrLabelDetail extends AbstractModel {
     }
 
     /**
-     * Get 状态
+     * Get 发布状态(1 待发布 2 发布中 3 已发布 4 发布失败)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 状态
+     * @return Status 发布状态(1 待发布 2 发布中 3 已发布 4 发布失败)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -197,9 +201,9 @@ public class AttrLabelDetail extends AbstractModel {
     }
 
     /**
-     * Set 状态
+     * Set 发布状态(1 待发布 2 发布中 3 已发布 4 发布失败)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 状态
+     * @param Status 发布状态(1 待发布 2 发布中 3 已发布 4 发布失败)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {

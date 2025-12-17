@@ -1,0 +1,128 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.wedata.v20210820.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class DescribeTaskInstancesStatusRequest extends AbstractModel {
+
+    /**
+    * 任务列表
+    */
+    @SerializedName("RecordIdList")
+    @Expose
+    private String [] RecordIdList;
+
+    /**
+    * 工作流id
+    */
+    @SerializedName("WorkflowId")
+    @Expose
+    private String WorkflowId;
+
+    /**
+    * 项目id
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private String ProjectId;
+
+    /**
+     * Get 任务列表 
+     * @return RecordIdList 任务列表
+     */
+    public String [] getRecordIdList() {
+        return this.RecordIdList;
+    }
+
+    /**
+     * Set 任务列表
+     * @param RecordIdList 任务列表
+     */
+    public void setRecordIdList(String [] RecordIdList) {
+        this.RecordIdList = RecordIdList;
+    }
+
+    /**
+     * Get 工作流id 
+     * @return WorkflowId 工作流id
+     */
+    public String getWorkflowId() {
+        return this.WorkflowId;
+    }
+
+    /**
+     * Set 工作流id
+     * @param WorkflowId 工作流id
+     */
+    public void setWorkflowId(String WorkflowId) {
+        this.WorkflowId = WorkflowId;
+    }
+
+    /**
+     * Get 项目id 
+     * @return ProjectId 项目id
+     */
+    public String getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * Set 项目id
+     * @param ProjectId 项目id
+     */
+    public void setProjectId(String ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
+    public DescribeTaskInstancesStatusRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeTaskInstancesStatusRequest(DescribeTaskInstancesStatusRequest source) {
+        if (source.RecordIdList != null) {
+            this.RecordIdList = new String[source.RecordIdList.length];
+            for (int i = 0; i < source.RecordIdList.length; i++) {
+                this.RecordIdList[i] = new String(source.RecordIdList[i]);
+            }
+        }
+        if (source.WorkflowId != null) {
+            this.WorkflowId = new String(source.WorkflowId);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "RecordIdList.", this.RecordIdList);
+        this.setParamSimple(map, prefix + "WorkflowId", this.WorkflowId);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+
+    }
+}
+

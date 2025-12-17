@@ -38,11 +38,18 @@ public class ReplaceSecurityGroupPoliciesRequest extends AbstractModel {
     private SecurityGroupPolicySet SecurityGroupPolicySet;
 
     /**
-    * 旧的安全组规则集合对象，可选，日志记录用。
+    * 旧的安全组规则集合对象，当更新优先级时为必选，且修改顺序与SecurityGroupPolicySet参数顺序一一对应，入参长度需要与SecurityGroupPolicySet参数保持一致。
     */
     @SerializedName("OriginalSecurityGroupPolicySet")
     @Expose
     private SecurityGroupPolicySet OriginalSecurityGroupPolicySet;
+
+    /**
+    * 更新类型，默认 Policy  Policy：只更新内容  Priority：只更新优先级  Both：内容和优先级都更新
+    */
+    @SerializedName("UpdateType")
+    @Expose
+    private String UpdateType;
 
     /**
      * Get 安全组实例ID，例如sg-33ocnj9n，可通过<a href="https://cloud.tencent.com/document/product/215/15808">DescribeSecurityGroups</a>获取。 
@@ -77,19 +84,35 @@ public class ReplaceSecurityGroupPoliciesRequest extends AbstractModel {
     }
 
     /**
-     * Get 旧的安全组规则集合对象，可选，日志记录用。 
-     * @return OriginalSecurityGroupPolicySet 旧的安全组规则集合对象，可选，日志记录用。
+     * Get 旧的安全组规则集合对象，当更新优先级时为必选，且修改顺序与SecurityGroupPolicySet参数顺序一一对应，入参长度需要与SecurityGroupPolicySet参数保持一致。 
+     * @return OriginalSecurityGroupPolicySet 旧的安全组规则集合对象，当更新优先级时为必选，且修改顺序与SecurityGroupPolicySet参数顺序一一对应，入参长度需要与SecurityGroupPolicySet参数保持一致。
      */
     public SecurityGroupPolicySet getOriginalSecurityGroupPolicySet() {
         return this.OriginalSecurityGroupPolicySet;
     }
 
     /**
-     * Set 旧的安全组规则集合对象，可选，日志记录用。
-     * @param OriginalSecurityGroupPolicySet 旧的安全组规则集合对象，可选，日志记录用。
+     * Set 旧的安全组规则集合对象，当更新优先级时为必选，且修改顺序与SecurityGroupPolicySet参数顺序一一对应，入参长度需要与SecurityGroupPolicySet参数保持一致。
+     * @param OriginalSecurityGroupPolicySet 旧的安全组规则集合对象，当更新优先级时为必选，且修改顺序与SecurityGroupPolicySet参数顺序一一对应，入参长度需要与SecurityGroupPolicySet参数保持一致。
      */
     public void setOriginalSecurityGroupPolicySet(SecurityGroupPolicySet OriginalSecurityGroupPolicySet) {
         this.OriginalSecurityGroupPolicySet = OriginalSecurityGroupPolicySet;
+    }
+
+    /**
+     * Get 更新类型，默认 Policy  Policy：只更新内容  Priority：只更新优先级  Both：内容和优先级都更新 
+     * @return UpdateType 更新类型，默认 Policy  Policy：只更新内容  Priority：只更新优先级  Both：内容和优先级都更新
+     */
+    public String getUpdateType() {
+        return this.UpdateType;
+    }
+
+    /**
+     * Set 更新类型，默认 Policy  Policy：只更新内容  Priority：只更新优先级  Both：内容和优先级都更新
+     * @param UpdateType 更新类型，默认 Policy  Policy：只更新内容  Priority：只更新优先级  Both：内容和优先级都更新
+     */
+    public void setUpdateType(String UpdateType) {
+        this.UpdateType = UpdateType;
     }
 
     public ReplaceSecurityGroupPoliciesRequest() {
@@ -109,6 +132,9 @@ public class ReplaceSecurityGroupPoliciesRequest extends AbstractModel {
         if (source.OriginalSecurityGroupPolicySet != null) {
             this.OriginalSecurityGroupPolicySet = new SecurityGroupPolicySet(source.OriginalSecurityGroupPolicySet);
         }
+        if (source.UpdateType != null) {
+            this.UpdateType = new String(source.UpdateType);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class ReplaceSecurityGroupPoliciesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);
         this.setParamObj(map, prefix + "SecurityGroupPolicySet.", this.SecurityGroupPolicySet);
         this.setParamObj(map, prefix + "OriginalSecurityGroupPolicySet.", this.OriginalSecurityGroupPolicySet);
+        this.setParamSimple(map, prefix + "UpdateType", this.UpdateType);
 
     }
 }

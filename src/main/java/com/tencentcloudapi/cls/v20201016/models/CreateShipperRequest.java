@@ -139,6 +139,20 @@ public class CreateShipperRequest extends AbstractModel {
     private String StorageType;
 
     /**
+    * 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+    */
+    @SerializedName("RoleArn")
+    @Expose
+    private String RoleArn;
+
+    /**
+    * 外部ID
+    */
+    @SerializedName("ExternalId")
+    @Expose
+    private String ExternalId;
+
+    /**
      * Get 创建的投递规则所属的日志主题Id。
 - 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。 
      * @return TopicId 创建的投递规则所属的日志主题Id。
@@ -430,6 +444,38 @@ public class CreateShipperRequest extends AbstractModel {
         this.StorageType = StorageType;
     }
 
+    /**
+     * Get 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381) 
+     * @return RoleArn 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+     */
+    public String getRoleArn() {
+        return this.RoleArn;
+    }
+
+    /**
+     * Set 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+     * @param RoleArn 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+     */
+    public void setRoleArn(String RoleArn) {
+        this.RoleArn = RoleArn;
+    }
+
+    /**
+     * Get 外部ID 
+     * @return ExternalId 外部ID
+     */
+    public String getExternalId() {
+        return this.ExternalId;
+    }
+
+    /**
+     * Set 外部ID
+     * @param ExternalId 外部ID
+     */
+    public void setExternalId(String ExternalId) {
+        this.ExternalId = ExternalId;
+    }
+
     public CreateShipperRequest() {
     }
 
@@ -483,6 +529,12 @@ public class CreateShipperRequest extends AbstractModel {
         if (source.StorageType != null) {
             this.StorageType = new String(source.StorageType);
         }
+        if (source.RoleArn != null) {
+            this.RoleArn = new String(source.RoleArn);
+        }
+        if (source.ExternalId != null) {
+            this.ExternalId = new String(source.ExternalId);
+        }
     }
 
 
@@ -504,6 +556,8 @@ public class CreateShipperRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "StorageType", this.StorageType);
+        this.setParamSimple(map, prefix + "RoleArn", this.RoleArn);
+        this.setParamSimple(map, prefix + "ExternalId", this.ExternalId);
 
     }
 }

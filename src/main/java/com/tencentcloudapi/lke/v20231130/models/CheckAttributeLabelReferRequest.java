@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CheckAttributeLabelReferRequest extends AbstractModel {
 
     /**
-    * 应用ID
+    * 应用ID,获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
     */
     @SerializedName("BotBizId")
     @Expose
@@ -45,30 +45,30 @@ public class CheckAttributeLabelReferRequest extends AbstractModel {
     private String LoginSubAccountUin;
 
     /**
-    * 属性标签
+    * 属性标签ID
     */
     @SerializedName("LabelBizId")
     @Expose
     private String LabelBizId;
 
     /**
-    * 属性ID
+    * 标签ID
     */
     @SerializedName("AttributeBizId")
     @Expose
     private String [] AttributeBizId;
 
     /**
-     * Get 应用ID 
-     * @return BotBizId 应用ID
+     * Get 应用ID,获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa) 
+     * @return BotBizId 应用ID,获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      */
     public String getBotBizId() {
         return this.BotBizId;
     }
 
     /**
-     * Set 应用ID
-     * @param BotBizId 应用ID
+     * Set 应用ID,获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+     * @param BotBizId 应用ID,获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      */
     public void setBotBizId(String BotBizId) {
         this.BotBizId = BotBizId;
@@ -107,32 +107,32 @@ public class CheckAttributeLabelReferRequest extends AbstractModel {
     }
 
     /**
-     * Get 属性标签 
-     * @return LabelBizId 属性标签
+     * Get 属性标签ID 
+     * @return LabelBizId 属性标签ID
      */
     public String getLabelBizId() {
         return this.LabelBizId;
     }
 
     /**
-     * Set 属性标签
-     * @param LabelBizId 属性标签
+     * Set 属性标签ID
+     * @param LabelBizId 属性标签ID
      */
     public void setLabelBizId(String LabelBizId) {
         this.LabelBizId = LabelBizId;
     }
 
     /**
-     * Get 属性ID 
-     * @return AttributeBizId 属性ID
+     * Get 标签ID 
+     * @return AttributeBizId 标签ID
      */
     public String [] getAttributeBizId() {
         return this.AttributeBizId;
     }
 
     /**
-     * Set 属性ID
-     * @param AttributeBizId 属性ID
+     * Set 标签ID
+     * @param AttributeBizId 标签ID
      */
     public void setAttributeBizId(String [] AttributeBizId) {
         this.AttributeBizId = AttributeBizId;

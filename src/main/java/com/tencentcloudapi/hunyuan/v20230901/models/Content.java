@@ -27,7 +27,7 @@ public class Content extends AbstractModel {
     * 内容类型
 注意：
 需包含至少一个 Type 为"text"的参数。
-参数值可选范围：[text", "image_url","video_url"]
+参数值可选范围：["text", "image_url","video_url","video_frames"]
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -35,7 +35,7 @@ public class Content extends AbstractModel {
     private String Type;
 
     /**
-    * 当 Type 为 text 时使用，表示具体的文本内容。当 Type 为 image_url 时，当前字段内容需保持为空，传递内容不生效。
+    * 当 Type 为 text 时使用，表示具体的文本内容。当 Type 为 其他类型 时，当前字段内容需保持为空，传递内容不生效。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Text")
@@ -44,7 +44,7 @@ public class Content extends AbstractModel {
 
     /**
     * 图片的url，当 Type 为 image_url 时使用，表示具体的图片内容
-如"https://example.com/1.png" 或 图片的base64（注意 "data:image/jpeg;base64," 为必要部分）："data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAA......"。当 Type 为 text 时，当前字段内容需保持为空，传递内容不生效。
+如"https://example.com/1.png" 或 图片的base64（注意 "data:image/jpeg;base64," 为必要部分）："data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAA......"。当 Type 为 其他类型 时，当前字段内容需保持为空，传递内容不生效。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageUrl")
@@ -52,7 +52,7 @@ public class Content extends AbstractModel {
     private ImageUrl ImageUrl;
 
     /**
-    * 当type为video_url时使用，标识具体的视频链接内容
+    * 当 Type 为 video_url 时使用，标识具体的视频链接内容，如"https://your-video-path.mp4"。当 Type 为 其他类型 时，当前字段内容需保持为空，传递内容不生效。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VideoUrl")
@@ -60,7 +60,7 @@ public class Content extends AbstractModel {
     private VideoUrl VideoUrl;
 
     /**
-    * 当type为video_frames时使用，标识具体的视频内图像帧内容
+    * 当 Type 为 video_frames 时使用，标识具体的视频内图像帧内容，当 Type 为 其他类型 时，当前字段内容需保持为空，传递内容不生效。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VideoFrames")
@@ -71,12 +71,12 @@ public class Content extends AbstractModel {
      * Get 内容类型
 注意：
 需包含至少一个 Type 为"text"的参数。
-参数值可选范围：[text", "image_url","video_url"]
+参数值可选范围：["text", "image_url","video_url","video_frames"]
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Type 内容类型
 注意：
 需包含至少一个 Type 为"text"的参数。
-参数值可选范围：[text", "image_url","video_url"]
+参数值可选范围：["text", "image_url","video_url","video_frames"]
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
@@ -87,12 +87,12 @@ public class Content extends AbstractModel {
      * Set 内容类型
 注意：
 需包含至少一个 Type 为"text"的参数。
-参数值可选范围：[text", "image_url","video_url"]
+参数值可选范围：["text", "image_url","video_url","video_frames"]
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 内容类型
 注意：
 需包含至少一个 Type 为"text"的参数。
-参数值可选范围：[text", "image_url","video_url"]
+参数值可选范围：["text", "image_url","video_url","video_frames"]
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
@@ -100,9 +100,9 @@ public class Content extends AbstractModel {
     }
 
     /**
-     * Get 当 Type 为 text 时使用，表示具体的文本内容。当 Type 为 image_url 时，当前字段内容需保持为空，传递内容不生效。
+     * Get 当 Type 为 text 时使用，表示具体的文本内容。当 Type 为 其他类型 时，当前字段内容需保持为空，传递内容不生效。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Text 当 Type 为 text 时使用，表示具体的文本内容。当 Type 为 image_url 时，当前字段内容需保持为空，传递内容不生效。
+     * @return Text 当 Type 为 text 时使用，表示具体的文本内容。当 Type 为 其他类型 时，当前字段内容需保持为空，传递内容不生效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getText() {
@@ -110,9 +110,9 @@ public class Content extends AbstractModel {
     }
 
     /**
-     * Set 当 Type 为 text 时使用，表示具体的文本内容。当 Type 为 image_url 时，当前字段内容需保持为空，传递内容不生效。
+     * Set 当 Type 为 text 时使用，表示具体的文本内容。当 Type 为 其他类型 时，当前字段内容需保持为空，传递内容不生效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Text 当 Type 为 text 时使用，表示具体的文本内容。当 Type 为 image_url 时，当前字段内容需保持为空，传递内容不生效。
+     * @param Text 当 Type 为 text 时使用，表示具体的文本内容。当 Type 为 其他类型 时，当前字段内容需保持为空，传递内容不生效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setText(String Text) {
@@ -121,10 +121,10 @@ public class Content extends AbstractModel {
 
     /**
      * Get 图片的url，当 Type 为 image_url 时使用，表示具体的图片内容
-如"https://example.com/1.png" 或 图片的base64（注意 "data:image/jpeg;base64," 为必要部分）："data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAA......"。当 Type 为 text 时，当前字段内容需保持为空，传递内容不生效。
+如"https://example.com/1.png" 或 图片的base64（注意 "data:image/jpeg;base64," 为必要部分）："data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAA......"。当 Type 为 其他类型 时，当前字段内容需保持为空，传递内容不生效。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ImageUrl 图片的url，当 Type 为 image_url 时使用，表示具体的图片内容
-如"https://example.com/1.png" 或 图片的base64（注意 "data:image/jpeg;base64," 为必要部分）："data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAA......"。当 Type 为 text 时，当前字段内容需保持为空，传递内容不生效。
+如"https://example.com/1.png" 或 图片的base64（注意 "data:image/jpeg;base64," 为必要部分）："data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAA......"。当 Type 为 其他类型 时，当前字段内容需保持为空，传递内容不生效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ImageUrl getImageUrl() {
@@ -133,10 +133,10 @@ public class Content extends AbstractModel {
 
     /**
      * Set 图片的url，当 Type 为 image_url 时使用，表示具体的图片内容
-如"https://example.com/1.png" 或 图片的base64（注意 "data:image/jpeg;base64," 为必要部分）："data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAA......"。当 Type 为 text 时，当前字段内容需保持为空，传递内容不生效。
+如"https://example.com/1.png" 或 图片的base64（注意 "data:image/jpeg;base64," 为必要部分）："data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAA......"。当 Type 为 其他类型 时，当前字段内容需保持为空，传递内容不生效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageUrl 图片的url，当 Type 为 image_url 时使用，表示具体的图片内容
-如"https://example.com/1.png" 或 图片的base64（注意 "data:image/jpeg;base64," 为必要部分）："data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAA......"。当 Type 为 text 时，当前字段内容需保持为空，传递内容不生效。
+如"https://example.com/1.png" 或 图片的base64（注意 "data:image/jpeg;base64," 为必要部分）："data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAA......"。当 Type 为 其他类型 时，当前字段内容需保持为空，传递内容不生效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageUrl(ImageUrl ImageUrl) {
@@ -144,9 +144,9 @@ public class Content extends AbstractModel {
     }
 
     /**
-     * Get 当type为video_url时使用，标识具体的视频链接内容
+     * Get 当 Type 为 video_url 时使用，标识具体的视频链接内容，如"https://your-video-path.mp4"。当 Type 为 其他类型 时，当前字段内容需保持为空，传递内容不生效。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VideoUrl 当type为video_url时使用，标识具体的视频链接内容
+     * @return VideoUrl 当 Type 为 video_url 时使用，标识具体的视频链接内容，如"https://your-video-path.mp4"。当 Type 为 其他类型 时，当前字段内容需保持为空，传递内容不生效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public VideoUrl getVideoUrl() {
@@ -154,9 +154,9 @@ public class Content extends AbstractModel {
     }
 
     /**
-     * Set 当type为video_url时使用，标识具体的视频链接内容
+     * Set 当 Type 为 video_url 时使用，标识具体的视频链接内容，如"https://your-video-path.mp4"。当 Type 为 其他类型 时，当前字段内容需保持为空，传递内容不生效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VideoUrl 当type为video_url时使用，标识具体的视频链接内容
+     * @param VideoUrl 当 Type 为 video_url 时使用，标识具体的视频链接内容，如"https://your-video-path.mp4"。当 Type 为 其他类型 时，当前字段内容需保持为空，传递内容不生效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVideoUrl(VideoUrl VideoUrl) {
@@ -164,9 +164,9 @@ public class Content extends AbstractModel {
     }
 
     /**
-     * Get 当type为video_frames时使用，标识具体的视频内图像帧内容
+     * Get 当 Type 为 video_frames 时使用，标识具体的视频内图像帧内容，当 Type 为 其他类型 时，当前字段内容需保持为空，传递内容不生效。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VideoFrames 当type为video_frames时使用，标识具体的视频内图像帧内容
+     * @return VideoFrames 当 Type 为 video_frames 时使用，标识具体的视频内图像帧内容，当 Type 为 其他类型 时，当前字段内容需保持为空，传递内容不生效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public VideoFrames getVideoFrames() {
@@ -174,9 +174,9 @@ public class Content extends AbstractModel {
     }
 
     /**
-     * Set 当type为video_frames时使用，标识具体的视频内图像帧内容
+     * Set 当 Type 为 video_frames 时使用，标识具体的视频内图像帧内容，当 Type 为 其他类型 时，当前字段内容需保持为空，传递内容不生效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VideoFrames 当type为video_frames时使用，标识具体的视频内图像帧内容
+     * @param VideoFrames 当 Type 为 video_frames 时使用，标识具体的视频内图像帧内容，当 Type 为 其他类型 时，当前字段内容需保持为空，传递内容不生效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVideoFrames(VideoFrames VideoFrames) {

@@ -846,6 +846,20 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *该接口返回查询时间范围内AIGC的统计信息。
+   1. 可以查询最近365天内的AIGC统计数据。
+   2. 查询时间跨度不超过90天。
+   3. 查询时间跨度超过1天的，返回以天为粒度的数据，否则，返回以5分钟为粒度的数据。
+     * @param req DescribeAigcUsageDataRequest
+     * @return DescribeAigcUsageDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAigcUsageDataResponse DescribeAigcUsageData(DescribeAigcUsageDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAigcUsageData", DescribeAigcUsageDataResponse.class);
+    }
+
+    /**
      ** 获得用户的所有分类信息。
      * @param req DescribeAllClassRequest
      * @return DescribeAllClassResponse

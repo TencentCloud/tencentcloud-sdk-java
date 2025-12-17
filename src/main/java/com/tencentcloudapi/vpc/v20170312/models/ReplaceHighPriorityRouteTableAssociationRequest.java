@@ -31,7 +31,7 @@ public class ReplaceHighPriorityRouteTableAssociationRequest extends AbstractMod
     private String HighPriorityRouteTableId;
 
     /**
-    * 子网唯一 ID
+    * 子网唯一 ID。对于存在子网唯一ID的场景，该参数为必选。对于不存在子网ID的特殊场景，SubnetId和CidrBlock参数至少提供一个，二选一。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -54,16 +54,16 @@ public class ReplaceHighPriorityRouteTableAssociationRequest extends AbstractMod
     }
 
     /**
-     * Get 子网唯一 ID 
-     * @return SubnetId 子网唯一 ID
+     * Get 子网唯一 ID。对于存在子网唯一ID的场景，该参数为必选。对于不存在子网ID的特殊场景，SubnetId和CidrBlock参数至少提供一个，二选一。 
+     * @return SubnetId 子网唯一 ID。对于存在子网唯一ID的场景，该参数为必选。对于不存在子网ID的特殊场景，SubnetId和CidrBlock参数至少提供一个，二选一。
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网唯一 ID
-     * @param SubnetId 子网唯一 ID
+     * Set 子网唯一 ID。对于存在子网唯一ID的场景，该参数为必选。对于不存在子网ID的特殊场景，SubnetId和CidrBlock参数至少提供一个，二选一。
+     * @param SubnetId 子网唯一 ID。对于存在子网唯一ID的场景，该参数为必选。对于不存在子网ID的特殊场景，SubnetId和CidrBlock参数至少提供一个，二选一。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;

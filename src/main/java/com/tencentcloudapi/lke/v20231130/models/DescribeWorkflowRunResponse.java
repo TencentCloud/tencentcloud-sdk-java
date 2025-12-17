@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeWorkflowRunResponse extends AbstractModel {
 
     /**
-    * 工作流的详情
+    * 工作流运行实例详情
     */
     @SerializedName("WorkflowRun")
     @Expose
@@ -52,16 +52,16 @@ public class DescribeWorkflowRunResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 工作流的详情 
-     * @return WorkflowRun 工作流的详情
+     * Get 工作流运行实例详情 
+     * @return WorkflowRun 工作流运行实例详情
      */
     public WorkflowRunDetail getWorkflowRun() {
         return this.WorkflowRun;
     }
 
     /**
-     * Set 工作流的详情
-     * @param WorkflowRun 工作流的详情
+     * Set 工作流运行实例详情
+     * @param WorkflowRun 工作流运行实例详情
      */
     public void setWorkflowRun(WorkflowRunDetail WorkflowRun) {
         this.WorkflowRun = WorkflowRun;

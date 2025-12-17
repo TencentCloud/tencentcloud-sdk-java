@@ -39,6 +39,13 @@ public class Filters extends AbstractModel {
     private String [] Reasons;
 
     /**
+    * 处理状态 0-待处理 1-已拒答 2-已忽略 3-已添加为新问答 4-已添加为相似问
+    */
+    @SerializedName("HandlingStatuses")
+    @Expose
+    private Long [] HandlingStatuses;
+
+    /**
      * Get 检索，用户问题或答案 
      * @return Query 检索，用户问题或答案
      */
@@ -74,6 +81,22 @@ public class Filters extends AbstractModel {
         this.Reasons = Reasons;
     }
 
+    /**
+     * Get 处理状态 0-待处理 1-已拒答 2-已忽略 3-已添加为新问答 4-已添加为相似问 
+     * @return HandlingStatuses 处理状态 0-待处理 1-已拒答 2-已忽略 3-已添加为新问答 4-已添加为相似问
+     */
+    public Long [] getHandlingStatuses() {
+        return this.HandlingStatuses;
+    }
+
+    /**
+     * Set 处理状态 0-待处理 1-已拒答 2-已忽略 3-已添加为新问答 4-已添加为相似问
+     * @param HandlingStatuses 处理状态 0-待处理 1-已拒答 2-已忽略 3-已添加为新问答 4-已添加为相似问
+     */
+    public void setHandlingStatuses(Long [] HandlingStatuses) {
+        this.HandlingStatuses = HandlingStatuses;
+    }
+
     public Filters() {
     }
 
@@ -91,6 +114,12 @@ public class Filters extends AbstractModel {
                 this.Reasons[i] = new String(source.Reasons[i]);
             }
         }
+        if (source.HandlingStatuses != null) {
+            this.HandlingStatuses = new Long[source.HandlingStatuses.length];
+            for (int i = 0; i < source.HandlingStatuses.length; i++) {
+                this.HandlingStatuses[i] = new Long(source.HandlingStatuses[i]);
+            }
+        }
     }
 
 
@@ -100,6 +129,7 @@ public class Filters extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Query", this.Query);
         this.setParamArraySimple(map, prefix + "Reasons.", this.Reasons);
+        this.setParamArraySimple(map, prefix + "HandlingStatuses.", this.HandlingStatuses);
 
     }
 }

@@ -87,6 +87,13 @@ public class DescribeDedicatedClusterOverviewResponse extends AbstractModel {
     private Long HostNormalCount;
 
     /**
+    * 异常宿主机数量
+    */
+    @SerializedName("HostAbnormalCount")
+    @Expose
+    private Long HostAbnormalCount;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -238,6 +245,22 @@ public class DescribeDedicatedClusterOverviewResponse extends AbstractModel {
     }
 
     /**
+     * Get 异常宿主机数量 
+     * @return HostAbnormalCount 异常宿主机数量
+     */
+    public Long getHostAbnormalCount() {
+        return this.HostAbnormalCount;
+    }
+
+    /**
+     * Set 异常宿主机数量
+     * @param HostAbnormalCount 异常宿主机数量
+     */
+    public void setHostAbnormalCount(Long HostAbnormalCount) {
+        this.HostAbnormalCount = HostAbnormalCount;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -294,6 +317,9 @@ public class DescribeDedicatedClusterOverviewResponse extends AbstractModel {
         if (source.HostNormalCount != null) {
             this.HostNormalCount = new Long(source.HostNormalCount);
         }
+        if (source.HostAbnormalCount != null) {
+            this.HostAbnormalCount = new Long(source.HostAbnormalCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -313,6 +339,7 @@ public class DescribeDedicatedClusterOverviewResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "HostDetailInfo.", this.HostDetailInfo);
         this.setParamSimple(map, prefix + "HostStandbyCount", this.HostStandbyCount);
         this.setParamSimple(map, prefix + "HostNormalCount", this.HostNormalCount);
+        this.setParamSimple(map, prefix + "HostAbnormalCount", this.HostAbnormalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

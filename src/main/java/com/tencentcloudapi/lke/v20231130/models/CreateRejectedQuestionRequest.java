@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateRejectedQuestionRequest extends AbstractModel {
 
     /**
-    * 应用ID
+    * 应用ID, 获取方式参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
     */
     @SerializedName("BotBizId")
     @Expose
@@ -40,7 +40,7 @@ public class CreateRejectedQuestionRequest extends AbstractModel {
     private String Question;
 
     /**
-    * 拒答问题来源的数据源唯一id， - 拒答来源于不满意回复  2 - 拒答来源于手动添加
+    * 拒答问题来源， 1- 来源于不满意回复;  2 - 来源于手动添加
     */
     @SerializedName("BusinessSource")
     @Expose
@@ -56,16 +56,16 @@ public class CreateRejectedQuestionRequest extends AbstractModel {
     private String BusinessId;
 
     /**
-     * Get 应用ID 
-     * @return BotBizId 应用ID
+     * Get 应用ID, 获取方式参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa) 
+     * @return BotBizId 应用ID, 获取方式参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      */
     public String getBotBizId() {
         return this.BotBizId;
     }
 
     /**
-     * Set 应用ID
-     * @param BotBizId 应用ID
+     * Set 应用ID, 获取方式参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+     * @param BotBizId 应用ID, 获取方式参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      */
     public void setBotBizId(String BotBizId) {
         this.BotBizId = BotBizId;
@@ -96,16 +96,16 @@ public class CreateRejectedQuestionRequest extends AbstractModel {
     }
 
     /**
-     * Get 拒答问题来源的数据源唯一id， - 拒答来源于不满意回复  2 - 拒答来源于手动添加 
-     * @return BusinessSource 拒答问题来源的数据源唯一id， - 拒答来源于不满意回复  2 - 拒答来源于手动添加
+     * Get 拒答问题来源， 1- 来源于不满意回复;  2 - 来源于手动添加 
+     * @return BusinessSource 拒答问题来源， 1- 来源于不满意回复;  2 - 来源于手动添加
      */
     public Long getBusinessSource() {
         return this.BusinessSource;
     }
 
     /**
-     * Set 拒答问题来源的数据源唯一id， - 拒答来源于不满意回复  2 - 拒答来源于手动添加
-     * @param BusinessSource 拒答问题来源的数据源唯一id， - 拒答来源于不满意回复  2 - 拒答来源于手动添加
+     * Set 拒答问题来源， 1- 来源于不满意回复;  2 - 来源于手动添加
+     * @param BusinessSource 拒答问题来源， 1- 来源于不满意回复;  2 - 来源于手动添加
      */
     public void setBusinessSource(Long BusinessSource) {
         this.BusinessSource = BusinessSource;

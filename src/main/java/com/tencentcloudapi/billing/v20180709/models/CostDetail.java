@@ -136,6 +136,13 @@ public class CostDetail extends AbstractModel {
     private String ProductCode;
 
     /**
+    * 标签信息	
+    */
+    @SerializedName("Tags")
+    @Expose
+    private BillTagInfo [] Tags;
+
+    /**
      * Get 支付者uin 
      * @return PayerUin 支付者uin
      */
@@ -391,6 +398,22 @@ public class CostDetail extends AbstractModel {
         this.ProductCode = ProductCode;
     }
 
+    /**
+     * Get 标签信息	 
+     * @return Tags 标签信息	
+     */
+    public BillTagInfo [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签信息	
+     * @param Tags 标签信息	
+     */
+    public void setTags(BillTagInfo [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CostDetail() {
     }
 
@@ -450,6 +473,12 @@ public class CostDetail extends AbstractModel {
         if (source.ProductCode != null) {
             this.ProductCode = new String(source.ProductCode);
         }
+        if (source.Tags != null) {
+            this.Tags = new BillTagInfo[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new BillTagInfo(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -473,6 +502,7 @@ public class CostDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "FeeEndTime", this.FeeEndTime);
         this.setParamArrayObj(map, prefix + "ComponentSet.", this.ComponentSet);
         this.setParamSimple(map, prefix + "ProductCode", this.ProductCode);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

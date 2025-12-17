@@ -59,6 +59,13 @@ public class TopicInfo extends AbstractModel {
     private Boolean Index;
 
     /**
+    * AssumerUin非空则表示创建该日志主题的服务方Uin
+    */
+    @SerializedName("AssumerUin")
+    @Expose
+    private Long AssumerUin;
+
+    /**
     * 云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
     */
     @SerializedName("AssumerName")
@@ -66,8 +73,7 @@ public class TopicInfo extends AbstractModel {
     private String AssumerName;
 
     /**
-    * 创建时间
-时间格式：yyyy-MM-dd HH:mm:ss
+    * 创建时间。格式：yyyy-MM-dd HH:mm:ss
     */
     @SerializedName("CreateTime")
     @Expose
@@ -88,6 +94,13 @@ public class TopicInfo extends AbstractModel {
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
+
+    /**
+    * RoleName非空则表示创建该日志主题的服务方使用的角色
+    */
+    @SerializedName("RoleName")
+    @Expose
+    private String RoleName;
 
     /**
     * 该主题是否开启自动分裂
@@ -194,6 +207,13 @@ HotPeriod=0为没有开启日志沉降。
     private String EffectiveDate;
 
     /**
+    * IsSourceFrom 开启记录公网来源ip和服务端接收时间
+    */
+    @SerializedName("IsSourceFrom")
+    @Expose
+    private Boolean IsSourceFrom;
+
+    /**
      * Get 日志集ID 
      * @return LogsetId 日志集ID
      */
@@ -274,6 +294,22 @@ HotPeriod=0为没有开启日志沉降。
     }
 
     /**
+     * Get AssumerUin非空则表示创建该日志主题的服务方Uin 
+     * @return AssumerUin AssumerUin非空则表示创建该日志主题的服务方Uin
+     */
+    public Long getAssumerUin() {
+        return this.AssumerUin;
+    }
+
+    /**
+     * Set AssumerUin非空则表示创建该日志主题的服务方Uin
+     * @param AssumerUin AssumerUin非空则表示创建该日志主题的服务方Uin
+     */
+    public void setAssumerUin(Long AssumerUin) {
+        this.AssumerUin = AssumerUin;
+    }
+
+    /**
      * Get 云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE 
      * @return AssumerName 云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
      */
@@ -290,20 +326,16 @@ HotPeriod=0为没有开启日志沉降。
     }
 
     /**
-     * Get 创建时间
-时间格式：yyyy-MM-dd HH:mm:ss 
-     * @return CreateTime 创建时间
-时间格式：yyyy-MM-dd HH:mm:ss
+     * Get 创建时间。格式：yyyy-MM-dd HH:mm:ss 
+     * @return CreateTime 创建时间。格式：yyyy-MM-dd HH:mm:ss
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-时间格式：yyyy-MM-dd HH:mm:ss
-     * @param CreateTime 创建时间
-时间格式：yyyy-MM-dd HH:mm:ss
+     * Set 创建时间。格式：yyyy-MM-dd HH:mm:ss
+     * @param CreateTime 创建时间。格式：yyyy-MM-dd HH:mm:ss
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
@@ -347,6 +379,22 @@ HotPeriod=0为没有开启日志沉降。
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
+    }
+
+    /**
+     * Get RoleName非空则表示创建该日志主题的服务方使用的角色 
+     * @return RoleName RoleName非空则表示创建该日志主题的服务方使用的角色
+     */
+    public String getRoleName() {
+        return this.RoleName;
+    }
+
+    /**
+     * Set RoleName非空则表示创建该日志主题的服务方使用的角色
+     * @param RoleName RoleName非空则表示创建该日志主题的服务方使用的角色
+     */
+    public void setRoleName(String RoleName) {
+        this.RoleName = RoleName;
     }
 
     /**
@@ -609,6 +657,22 @@ HotPeriod=0为没有开启日志沉降。
         this.EffectiveDate = EffectiveDate;
     }
 
+    /**
+     * Get IsSourceFrom 开启记录公网来源ip和服务端接收时间 
+     * @return IsSourceFrom IsSourceFrom 开启记录公网来源ip和服务端接收时间
+     */
+    public Boolean getIsSourceFrom() {
+        return this.IsSourceFrom;
+    }
+
+    /**
+     * Set IsSourceFrom 开启记录公网来源ip和服务端接收时间
+     * @param IsSourceFrom IsSourceFrom 开启记录公网来源ip和服务端接收时间
+     */
+    public void setIsSourceFrom(Boolean IsSourceFrom) {
+        this.IsSourceFrom = IsSourceFrom;
+    }
+
     public TopicInfo() {
     }
 
@@ -632,6 +696,9 @@ HotPeriod=0为没有开启日志沉降。
         if (source.Index != null) {
             this.Index = new Boolean(source.Index);
         }
+        if (source.AssumerUin != null) {
+            this.AssumerUin = new Long(source.AssumerUin);
+        }
         if (source.AssumerName != null) {
             this.AssumerName = new String(source.AssumerName);
         }
@@ -646,6 +713,9 @@ HotPeriod=0为没有开启日志沉降。
             for (int i = 0; i < source.Tags.length; i++) {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
+        }
+        if (source.RoleName != null) {
+            this.RoleName = new String(source.RoleName);
         }
         if (source.AutoSplit != null) {
             this.AutoSplit = new Boolean(source.AutoSplit);
@@ -686,6 +756,9 @@ HotPeriod=0为没有开启日志沉降。
         if (source.EffectiveDate != null) {
             this.EffectiveDate = new String(source.EffectiveDate);
         }
+        if (source.IsSourceFrom != null) {
+            this.IsSourceFrom = new Boolean(source.IsSourceFrom);
+        }
     }
 
 
@@ -698,10 +771,12 @@ HotPeriod=0为没有开启日志沉降。
         this.setParamSimple(map, prefix + "TopicName", this.TopicName);
         this.setParamSimple(map, prefix + "PartitionCount", this.PartitionCount);
         this.setParamSimple(map, prefix + "Index", this.Index);
+        this.setParamSimple(map, prefix + "AssumerUin", this.AssumerUin);
         this.setParamSimple(map, prefix + "AssumerName", this.AssumerName);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "RoleName", this.RoleName);
         this.setParamSimple(map, prefix + "AutoSplit", this.AutoSplit);
         this.setParamSimple(map, prefix + "MaxSplitPartitions", this.MaxSplitPartitions);
         this.setParamSimple(map, prefix + "StorageType", this.StorageType);
@@ -715,6 +790,7 @@ HotPeriod=0为没有开启日志沉降。
         this.setParamSimple(map, prefix + "TopicAsyncTaskID", this.TopicAsyncTaskID);
         this.setParamSimple(map, prefix + "MigrationStatus", this.MigrationStatus);
         this.setParamSimple(map, prefix + "EffectiveDate", this.EffectiveDate);
+        this.setParamSimple(map, prefix + "IsSourceFrom", this.IsSourceFrom);
 
     }
 }

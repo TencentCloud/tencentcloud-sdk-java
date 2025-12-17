@@ -70,7 +70,7 @@ public class UserIdAndUserName extends AbstractModel {
     private Long Status;
 
     /**
-    * 首次登陆是否修改密码
+    * 首次登录是否修改密码
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FirstModify")
@@ -110,7 +110,7 @@ public class UserIdAndUserName extends AbstractModel {
     private String CreatedAt;
 
     /**
-    * 更改人
+    * 修改人
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdatedUser")
@@ -126,7 +126,7 @@ public class UserIdAndUserName extends AbstractModel {
     private String UpdatedAt;
 
     /**
-    * 全局角色
+    * 系统全局角色
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GlobalUserName")
@@ -134,7 +134,7 @@ public class UserIdAndUserName extends AbstractModel {
     private String GlobalUserName;
 
     /**
-    * 全局角色编码
+    * 系统全局角色编码
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GlobalUserCode")
@@ -318,9 +318,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Get 首次登陆是否修改密码
+     * Get 首次登录是否修改密码
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FirstModify 首次登陆是否修改密码
+     * @return FirstModify 首次登录是否修改密码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFirstModify() {
@@ -328,9 +328,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Set 首次登陆是否修改密码
+     * Set 首次登录是否修改密码
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FirstModify 首次登陆是否修改密码
+     * @param FirstModify 首次登录是否修改密码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFirstModify(Long FirstModify) {
@@ -418,9 +418,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Get 更改人
+     * Get 修改人
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdatedUser 更改人
+     * @return UpdatedUser 修改人
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdatedUser() {
@@ -428,9 +428,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Set 更改人
+     * Set 修改人
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdatedUser 更改人
+     * @param UpdatedUser 修改人
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdatedUser(String UpdatedUser) {
@@ -458,9 +458,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Get 全局角色
+     * Get 系统全局角色
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GlobalUserName 全局角色
+     * @return GlobalUserName 系统全局角色
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGlobalUserName() {
@@ -468,9 +468,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Set 全局角色
+     * Set 系统全局角色
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GlobalUserName 全局角色
+     * @param GlobalUserName 系统全局角色
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGlobalUserName(String GlobalUserName) {
@@ -478,9 +478,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Get 全局角色编码
+     * Get 系统全局角色编码
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GlobalUserCode 全局角色编码
+     * @return GlobalUserCode 系统全局角色编码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGlobalUserCode() {
@@ -488,9 +488,9 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Set 全局角色编码
+     * Set 系统全局角色编码
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GlobalUserCode 全局角色编码
+     * @param GlobalUserCode 系统全局角色编码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGlobalUserCode(String GlobalUserCode) {

@@ -24,173 +24,138 @@ import java.util.HashMap;
 public class CasterLayoutInfo extends AbstractModel {
 
     /**
-    * 布局Index。
+    * <p>布局Index。</p>取值范围：[1, 1000]
     */
     @SerializedName("LayoutIndex")
     @Expose
     private Long LayoutIndex;
 
     /**
-    * 布局模板Id。
-有效值[1，20，21，31，32，41]
-当使用布局模板时，无需LayoutParams参数，导播台将使用模板布局参数。
-
+    * <p>布局模板Id。有效值[1，20，21，31，32，41]当使用布局模板时，无需LayoutParams参数，导播台将使用模板布局参数。</p>
     */
     @SerializedName("LayoutTemplateId")
     @Expose
     private Long LayoutTemplateId;
 
     /**
-    * 布局绑定的输入列表。按布局LayerId从小到大，按顺序排列。
-已有两个画面的布局为例，输入1对应LayerId为1，输入2对应的LayerId为2，该字段应该填入"1|2"。
+    * <p>布局绑定的输入列表。按布局LayerId从小到大，按顺序排列。已有两个画面的布局为例，输入1对应LayerId为1，输入2对应的LayerId为2，该字段应该填入"1|2"。</p>
     */
     @SerializedName("InputIndexList")
     @Expose
     private String InputIndexList;
 
     /**
-    * 详细的布局参数列表。
+    * <p>详细的布局参数列表。</p>
     */
     @SerializedName("LayoutParams")
     @Expose
     private CasterLayoutParam [] LayoutParams;
 
     /**
-    * 布局输出的宽度，单位为像素。
-默认为1280像素。
-注：该值仅在画中画布局，且未设置PgmWidth时生效。
+    * <p>布局输出的宽度，单位为像素。默认为1280像素。注：该值仅在画中画布局，且未设置PgmWidth时生效。</p>
     */
     @SerializedName("LayoutWidth")
     @Expose
     private Long LayoutWidth;
 
     /**
-    * 布局输出的高度，单位为像素。
-注：该参数仅在画中画布局，且未设置PgmHeight时生效。
+    * <p>布局输出的高度，单位为像素。注：该参数仅在画中画布局，且未设置PgmHeight时生效。</p>
     */
     @SerializedName("LayoutHeight")
     @Expose
     private Long LayoutHeight;
 
     /**
-     * Get 布局Index。 
-     * @return LayoutIndex 布局Index。
+     * Get <p>布局Index。</p>取值范围：[1, 1000] 
+     * @return LayoutIndex <p>布局Index。</p>取值范围：[1, 1000]
      */
     public Long getLayoutIndex() {
         return this.LayoutIndex;
     }
 
     /**
-     * Set 布局Index。
-     * @param LayoutIndex 布局Index。
+     * Set <p>布局Index。</p>取值范围：[1, 1000]
+     * @param LayoutIndex <p>布局Index。</p>取值范围：[1, 1000]
      */
     public void setLayoutIndex(Long LayoutIndex) {
         this.LayoutIndex = LayoutIndex;
     }
 
     /**
-     * Get 布局模板Id。
-有效值[1，20，21，31，32，41]
-当使用布局模板时，无需LayoutParams参数，导播台将使用模板布局参数。
- 
-     * @return LayoutTemplateId 布局模板Id。
-有效值[1，20，21，31，32，41]
-当使用布局模板时，无需LayoutParams参数，导播台将使用模板布局参数。
-
+     * Get <p>布局模板Id。有效值[1，20，21，31，32，41]当使用布局模板时，无需LayoutParams参数，导播台将使用模板布局参数。</p> 
+     * @return LayoutTemplateId <p>布局模板Id。有效值[1，20，21，31，32，41]当使用布局模板时，无需LayoutParams参数，导播台将使用模板布局参数。</p>
      */
     public Long getLayoutTemplateId() {
         return this.LayoutTemplateId;
     }
 
     /**
-     * Set 布局模板Id。
-有效值[1，20，21，31，32，41]
-当使用布局模板时，无需LayoutParams参数，导播台将使用模板布局参数。
-
-     * @param LayoutTemplateId 布局模板Id。
-有效值[1，20，21，31，32，41]
-当使用布局模板时，无需LayoutParams参数，导播台将使用模板布局参数。
-
+     * Set <p>布局模板Id。有效值[1，20，21，31，32，41]当使用布局模板时，无需LayoutParams参数，导播台将使用模板布局参数。</p>
+     * @param LayoutTemplateId <p>布局模板Id。有效值[1，20，21，31，32，41]当使用布局模板时，无需LayoutParams参数，导播台将使用模板布局参数。</p>
      */
     public void setLayoutTemplateId(Long LayoutTemplateId) {
         this.LayoutTemplateId = LayoutTemplateId;
     }
 
     /**
-     * Get 布局绑定的输入列表。按布局LayerId从小到大，按顺序排列。
-已有两个画面的布局为例，输入1对应LayerId为1，输入2对应的LayerId为2，该字段应该填入"1|2"。 
-     * @return InputIndexList 布局绑定的输入列表。按布局LayerId从小到大，按顺序排列。
-已有两个画面的布局为例，输入1对应LayerId为1，输入2对应的LayerId为2，该字段应该填入"1|2"。
+     * Get <p>布局绑定的输入列表。按布局LayerId从小到大，按顺序排列。已有两个画面的布局为例，输入1对应LayerId为1，输入2对应的LayerId为2，该字段应该填入"1|2"。</p> 
+     * @return InputIndexList <p>布局绑定的输入列表。按布局LayerId从小到大，按顺序排列。已有两个画面的布局为例，输入1对应LayerId为1，输入2对应的LayerId为2，该字段应该填入"1|2"。</p>
      */
     public String getInputIndexList() {
         return this.InputIndexList;
     }
 
     /**
-     * Set 布局绑定的输入列表。按布局LayerId从小到大，按顺序排列。
-已有两个画面的布局为例，输入1对应LayerId为1，输入2对应的LayerId为2，该字段应该填入"1|2"。
-     * @param InputIndexList 布局绑定的输入列表。按布局LayerId从小到大，按顺序排列。
-已有两个画面的布局为例，输入1对应LayerId为1，输入2对应的LayerId为2，该字段应该填入"1|2"。
+     * Set <p>布局绑定的输入列表。按布局LayerId从小到大，按顺序排列。已有两个画面的布局为例，输入1对应LayerId为1，输入2对应的LayerId为2，该字段应该填入"1|2"。</p>
+     * @param InputIndexList <p>布局绑定的输入列表。按布局LayerId从小到大，按顺序排列。已有两个画面的布局为例，输入1对应LayerId为1，输入2对应的LayerId为2，该字段应该填入"1|2"。</p>
      */
     public void setInputIndexList(String InputIndexList) {
         this.InputIndexList = InputIndexList;
     }
 
     /**
-     * Get 详细的布局参数列表。 
-     * @return LayoutParams 详细的布局参数列表。
+     * Get <p>详细的布局参数列表。</p> 
+     * @return LayoutParams <p>详细的布局参数列表。</p>
      */
     public CasterLayoutParam [] getLayoutParams() {
         return this.LayoutParams;
     }
 
     /**
-     * Set 详细的布局参数列表。
-     * @param LayoutParams 详细的布局参数列表。
+     * Set <p>详细的布局参数列表。</p>
+     * @param LayoutParams <p>详细的布局参数列表。</p>
      */
     public void setLayoutParams(CasterLayoutParam [] LayoutParams) {
         this.LayoutParams = LayoutParams;
     }
 
     /**
-     * Get 布局输出的宽度，单位为像素。
-默认为1280像素。
-注：该值仅在画中画布局，且未设置PgmWidth时生效。 
-     * @return LayoutWidth 布局输出的宽度，单位为像素。
-默认为1280像素。
-注：该值仅在画中画布局，且未设置PgmWidth时生效。
+     * Get <p>布局输出的宽度，单位为像素。默认为1280像素。注：该值仅在画中画布局，且未设置PgmWidth时生效。</p> 
+     * @return LayoutWidth <p>布局输出的宽度，单位为像素。默认为1280像素。注：该值仅在画中画布局，且未设置PgmWidth时生效。</p>
      */
     public Long getLayoutWidth() {
         return this.LayoutWidth;
     }
 
     /**
-     * Set 布局输出的宽度，单位为像素。
-默认为1280像素。
-注：该值仅在画中画布局，且未设置PgmWidth时生效。
-     * @param LayoutWidth 布局输出的宽度，单位为像素。
-默认为1280像素。
-注：该值仅在画中画布局，且未设置PgmWidth时生效。
+     * Set <p>布局输出的宽度，单位为像素。默认为1280像素。注：该值仅在画中画布局，且未设置PgmWidth时生效。</p>
+     * @param LayoutWidth <p>布局输出的宽度，单位为像素。默认为1280像素。注：该值仅在画中画布局，且未设置PgmWidth时生效。</p>
      */
     public void setLayoutWidth(Long LayoutWidth) {
         this.LayoutWidth = LayoutWidth;
     }
 
     /**
-     * Get 布局输出的高度，单位为像素。
-注：该参数仅在画中画布局，且未设置PgmHeight时生效。 
-     * @return LayoutHeight 布局输出的高度，单位为像素。
-注：该参数仅在画中画布局，且未设置PgmHeight时生效。
+     * Get <p>布局输出的高度，单位为像素。注：该参数仅在画中画布局，且未设置PgmHeight时生效。</p> 
+     * @return LayoutHeight <p>布局输出的高度，单位为像素。注：该参数仅在画中画布局，且未设置PgmHeight时生效。</p>
      */
     public Long getLayoutHeight() {
         return this.LayoutHeight;
     }
 
     /**
-     * Set 布局输出的高度，单位为像素。
-注：该参数仅在画中画布局，且未设置PgmHeight时生效。
-     * @param LayoutHeight 布局输出的高度，单位为像素。
-注：该参数仅在画中画布局，且未设置PgmHeight时生效。
+     * Set <p>布局输出的高度，单位为像素。注：该参数仅在画中画布局，且未设置PgmHeight时生效。</p>
+     * @param LayoutHeight <p>布局输出的高度，单位为像素。注：该参数仅在画中画布局，且未设置PgmHeight时生效。</p>
      */
     public void setLayoutHeight(Long LayoutHeight) {
         this.LayoutHeight = LayoutHeight;

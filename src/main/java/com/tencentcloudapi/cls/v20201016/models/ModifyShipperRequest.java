@@ -131,6 +131,20 @@ public class ModifyShipperRequest extends AbstractModel {
     private String StorageType;
 
     /**
+    * 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+    */
+    @SerializedName("RoleArn")
+    @Expose
+    private String RoleArn;
+
+    /**
+    * 外部ID
+    */
+    @SerializedName("ExternalId")
+    @Expose
+    private String ExternalId;
+
+    /**
      * Get 投递规则Id。
 
 - 通过 [获取投递任务列表](https://cloud.tencent.com/document/product/614/58745)获取ShipperId。 
@@ -402,6 +416,38 @@ public class ModifyShipperRequest extends AbstractModel {
         this.StorageType = StorageType;
     }
 
+    /**
+     * Get 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381) 
+     * @return RoleArn 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+     */
+    public String getRoleArn() {
+        return this.RoleArn;
+    }
+
+    /**
+     * Set 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+     * @param RoleArn 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+     */
+    public void setRoleArn(String RoleArn) {
+        this.RoleArn = RoleArn;
+    }
+
+    /**
+     * Get 外部ID 
+     * @return ExternalId 外部ID
+     */
+    public String getExternalId() {
+        return this.ExternalId;
+    }
+
+    /**
+     * Set 外部ID
+     * @param ExternalId 外部ID
+     */
+    public void setExternalId(String ExternalId) {
+        this.ExternalId = ExternalId;
+    }
+
     public ModifyShipperRequest() {
     }
 
@@ -452,6 +498,12 @@ public class ModifyShipperRequest extends AbstractModel {
         if (source.StorageType != null) {
             this.StorageType = new String(source.StorageType);
         }
+        if (source.RoleArn != null) {
+            this.RoleArn = new String(source.RoleArn);
+        }
+        if (source.ExternalId != null) {
+            this.ExternalId = new String(source.ExternalId);
+        }
     }
 
 
@@ -472,6 +524,8 @@ public class ModifyShipperRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Content.", this.Content);
         this.setParamSimple(map, prefix + "FilenameMode", this.FilenameMode);
         this.setParamSimple(map, prefix + "StorageType", this.StorageType);
+        this.setParamSimple(map, prefix + "RoleArn", this.RoleArn);
+        this.setParamSimple(map, prefix + "ExternalId", this.ExternalId);
 
     }
 }

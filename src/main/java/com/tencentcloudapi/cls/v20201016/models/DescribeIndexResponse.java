@@ -73,6 +73,13 @@ public class DescribeIndexResponse extends AbstractModel {
     private Long MetadataFlag;
 
     /**
+    * 自定义日志解析异常存储字段。
+    */
+    @SerializedName("CoverageField")
+    @Expose
+    private String CoverageField;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -204,6 +211,22 @@ public class DescribeIndexResponse extends AbstractModel {
     }
 
     /**
+     * Get 自定义日志解析异常存储字段。 
+     * @return CoverageField 自定义日志解析异常存储字段。
+     */
+    public String getCoverageField() {
+        return this.CoverageField;
+    }
+
+    /**
+     * Set 自定义日志解析异常存储字段。
+     * @param CoverageField 自定义日志解析异常存储字段。
+     */
+    public void setCoverageField(String CoverageField) {
+        this.CoverageField = CoverageField;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -245,6 +268,9 @@ public class DescribeIndexResponse extends AbstractModel {
         if (source.MetadataFlag != null) {
             this.MetadataFlag = new Long(source.MetadataFlag);
         }
+        if (source.CoverageField != null) {
+            this.CoverageField = new String(source.CoverageField);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -261,6 +287,7 @@ public class DescribeIndexResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamSimple(map, prefix + "IncludeInternalFields", this.IncludeInternalFields);
         this.setParamSimple(map, prefix + "MetadataFlag", this.MetadataFlag);
+        this.setParamSimple(map, prefix + "CoverageField", this.CoverageField);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

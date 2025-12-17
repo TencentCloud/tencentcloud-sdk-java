@@ -39,6 +39,17 @@ public class EvtClient extends AbstractClient{
     }
 
     /**
+     *执行审批
+     * @param req CompleteApprovalRequest
+     * @return CompleteApprovalResponse
+     * @throws TencentCloudSDKException
+     */
+    public CompleteApprovalResponse CompleteApproval(CompleteApprovalRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CompleteApproval", CompleteApprovalResponse.class);
+    }
+
+    /**
      *创建人员
      * @param req CreateRoleUserRequest
      * @return CreateRoleUserResponse

@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class ReplaceRouteTableAssociationRequest extends AbstractModel {
 
     /**
-    * 子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnets接口查询。
-    */
-    @SerializedName("SubnetId")
-    @Expose
-    private String SubnetId;
-
-    /**
     * 路由表实例ID，例如：rtb-azd4dt1c。
     */
     @SerializedName("RouteTableId")
@@ -38,20 +31,11 @@ public class ReplaceRouteTableAssociationRequest extends AbstractModel {
     private String RouteTableId;
 
     /**
-     * Get 子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnets接口查询。 
-     * @return SubnetId 子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnets接口查询。
-     */
-    public String getSubnetId() {
-        return this.SubnetId;
-    }
-
-    /**
-     * Set 子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnets接口查询。
-     * @param SubnetId 子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnets接口查询。
-     */
-    public void setSubnetId(String SubnetId) {
-        this.SubnetId = SubnetId;
-    }
+    * 子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnets接口查询。对于存在子网唯一ID的子网，该参数为必选；否则， SubnetId和CidrBlock必选二选一。
+    */
+    @SerializedName("SubnetId")
+    @Expose
+    private String SubnetId;
 
     /**
      * Get 路由表实例ID，例如：rtb-azd4dt1c。 
@@ -69,6 +53,22 @@ public class ReplaceRouteTableAssociationRequest extends AbstractModel {
         this.RouteTableId = RouteTableId;
     }
 
+    /**
+     * Get 子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnets接口查询。对于存在子网唯一ID的子网，该参数为必选；否则， SubnetId和CidrBlock必选二选一。 
+     * @return SubnetId 子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnets接口查询。对于存在子网唯一ID的子网，该参数为必选；否则， SubnetId和CidrBlock必选二选一。
+     */
+    public String getSubnetId() {
+        return this.SubnetId;
+    }
+
+    /**
+     * Set 子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnets接口查询。对于存在子网唯一ID的子网，该参数为必选；否则， SubnetId和CidrBlock必选二选一。
+     * @param SubnetId 子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnets接口查询。对于存在子网唯一ID的子网，该参数为必选；否则， SubnetId和CidrBlock必选二选一。
+     */
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
+    }
+
     public ReplaceRouteTableAssociationRequest() {
     }
 
@@ -77,11 +77,11 @@ public class ReplaceRouteTableAssociationRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ReplaceRouteTableAssociationRequest(ReplaceRouteTableAssociationRequest source) {
-        if (source.SubnetId != null) {
-            this.SubnetId = new String(source.SubnetId);
-        }
         if (source.RouteTableId != null) {
             this.RouteTableId = new String(source.RouteTableId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
         }
     }
 
@@ -90,8 +90,8 @@ public class ReplaceRouteTableAssociationRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "RouteTableId", this.RouteTableId);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
 
     }
 }

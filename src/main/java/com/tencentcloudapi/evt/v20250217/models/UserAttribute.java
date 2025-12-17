@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class UserAttribute extends AbstractModel {
 
     /**
-    * 属性键名
+    * <p>自定义角色体系中用户属性的ID</p><p>属性键名</p>
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * 属性值
+    * <p>自定义角色体系中的用户属性值，只支持传入对应用户属性支持的角色ID</p><p>属性值</p>
     */
     @SerializedName("Value")
     @Expose
     private Long [] Value;
 
     /**
-     * Get 属性键名 
-     * @return Key 属性键名
+     * Get <p>自定义角色体系中用户属性的ID</p><p>属性键名</p> 
+     * @return Key <p>自定义角色体系中用户属性的ID</p><p>属性键名</p>
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set 属性键名
-     * @param Key 属性键名
+     * Set <p>自定义角色体系中用户属性的ID</p><p>属性键名</p>
+     * @param Key <p>自定义角色体系中用户属性的ID</p><p>属性键名</p>
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 属性值 
-     * @return Value 属性值
+     * Get <p>自定义角色体系中的用户属性值，只支持传入对应用户属性支持的角色ID</p><p>属性值</p> 
+     * @return Value <p>自定义角色体系中的用户属性值，只支持传入对应用户属性支持的角色ID</p><p>属性值</p>
      */
     public Long [] getValue() {
         return this.Value;
     }
 
     /**
-     * Set 属性值
-     * @param Value 属性值
+     * Set <p>自定义角色体系中的用户属性值，只支持传入对应用户属性支持的角色ID</p><p>属性值</p>
+     * @param Value <p>自定义角色体系中的用户属性值，只支持传入对应用户属性支持的角色ID</p><p>属性值</p>
      */
     public void setValue(Long [] Value) {
         this.Value = Value;

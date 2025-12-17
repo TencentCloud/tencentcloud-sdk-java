@@ -178,6 +178,31 @@ MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）
     private String StorageType;
 
     /**
+    * 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+    */
+    @SerializedName("RoleArn")
+    @Expose
+    private String RoleArn;
+
+    /**
+    * 外部ID
+    */
+    @SerializedName("ExternalId")
+    @Expose
+    private String ExternalId;
+
+    /**
+    * 任务运行状态。支持`0`,`1`,`2`
+
+- `0`: 停止
+- `1`: 运行中
+- `2`: 异常
+    */
+    @SerializedName("TaskStatus")
+    @Expose
+    private Long TaskStatus;
+
+    /**
      * Get 投递规则ID 
      * @return ShipperId 投递规则ID
      */
@@ -553,6 +578,70 @@ MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）
         this.StorageType = StorageType;
     }
 
+    /**
+     * Get 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381) 
+     * @return RoleArn 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+     */
+    public String getRoleArn() {
+        return this.RoleArn;
+    }
+
+    /**
+     * Set 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+     * @param RoleArn 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+     */
+    public void setRoleArn(String RoleArn) {
+        this.RoleArn = RoleArn;
+    }
+
+    /**
+     * Get 外部ID 
+     * @return ExternalId 外部ID
+     */
+    public String getExternalId() {
+        return this.ExternalId;
+    }
+
+    /**
+     * Set 外部ID
+     * @param ExternalId 外部ID
+     */
+    public void setExternalId(String ExternalId) {
+        this.ExternalId = ExternalId;
+    }
+
+    /**
+     * Get 任务运行状态。支持`0`,`1`,`2`
+
+- `0`: 停止
+- `1`: 运行中
+- `2`: 异常 
+     * @return TaskStatus 任务运行状态。支持`0`,`1`,`2`
+
+- `0`: 停止
+- `1`: 运行中
+- `2`: 异常
+     */
+    public Long getTaskStatus() {
+        return this.TaskStatus;
+    }
+
+    /**
+     * Set 任务运行状态。支持`0`,`1`,`2`
+
+- `0`: 停止
+- `1`: 运行中
+- `2`: 异常
+     * @param TaskStatus 任务运行状态。支持`0`,`1`,`2`
+
+- `0`: 停止
+- `1`: 运行中
+- `2`: 异常
+     */
+    public void setTaskStatus(Long TaskStatus) {
+        this.TaskStatus = TaskStatus;
+    }
+
     public ShipperInfo() {
     }
 
@@ -624,6 +713,15 @@ MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）
         if (source.StorageType != null) {
             this.StorageType = new String(source.StorageType);
         }
+        if (source.RoleArn != null) {
+            this.RoleArn = new String(source.RoleArn);
+        }
+        if (source.ExternalId != null) {
+            this.ExternalId = new String(source.ExternalId);
+        }
+        if (source.TaskStatus != null) {
+            this.TaskStatus = new Long(source.TaskStatus);
+        }
     }
 
 
@@ -651,6 +749,9 @@ MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）
         this.setParamSimple(map, prefix + "RemainTime", this.RemainTime);
         this.setParamSimple(map, prefix + "HistoryStatus", this.HistoryStatus);
         this.setParamSimple(map, prefix + "StorageType", this.StorageType);
+        this.setParamSimple(map, prefix + "RoleArn", this.RoleArn);
+        this.setParamSimple(map, prefix + "ExternalId", this.ExternalId);
+        this.setParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
 
     }
 }

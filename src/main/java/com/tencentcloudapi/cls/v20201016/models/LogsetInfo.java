@@ -45,6 +45,13 @@ public class LogsetInfo extends AbstractModel {
     private String CreateTime;
 
     /**
+    * 若AssumerUin非空，则表示创建该日志集的服务方Uin
+    */
+    @SerializedName("AssumerUin")
+    @Expose
+    private Long AssumerUin;
+
+    /**
     * 云产品标识，日志集由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
     */
     @SerializedName("AssumerName")
@@ -71,6 +78,13 @@ public class LogsetInfo extends AbstractModel {
     @SerializedName("RoleName")
     @Expose
     private String RoleName;
+
+    /**
+    * 日志集下指标主题的数目
+    */
+    @SerializedName("MetricTopicCount")
+    @Expose
+    private Long MetricTopicCount;
 
     /**
      * Get 日志集ID 
@@ -118,6 +132,22 @@ public class LogsetInfo extends AbstractModel {
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get 若AssumerUin非空，则表示创建该日志集的服务方Uin 
+     * @return AssumerUin 若AssumerUin非空，则表示创建该日志集的服务方Uin
+     */
+    public Long getAssumerUin() {
+        return this.AssumerUin;
+    }
+
+    /**
+     * Set 若AssumerUin非空，则表示创建该日志集的服务方Uin
+     * @param AssumerUin 若AssumerUin非空，则表示创建该日志集的服务方Uin
+     */
+    public void setAssumerUin(Long AssumerUin) {
+        this.AssumerUin = AssumerUin;
     }
 
     /**
@@ -184,6 +214,22 @@ public class LogsetInfo extends AbstractModel {
         this.RoleName = RoleName;
     }
 
+    /**
+     * Get 日志集下指标主题的数目 
+     * @return MetricTopicCount 日志集下指标主题的数目
+     */
+    public Long getMetricTopicCount() {
+        return this.MetricTopicCount;
+    }
+
+    /**
+     * Set 日志集下指标主题的数目
+     * @param MetricTopicCount 日志集下指标主题的数目
+     */
+    public void setMetricTopicCount(Long MetricTopicCount) {
+        this.MetricTopicCount = MetricTopicCount;
+    }
+
     public LogsetInfo() {
     }
 
@@ -201,6 +247,9 @@ public class LogsetInfo extends AbstractModel {
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.AssumerUin != null) {
+            this.AssumerUin = new Long(source.AssumerUin);
+        }
         if (source.AssumerName != null) {
             this.AssumerName = new String(source.AssumerName);
         }
@@ -216,6 +265,9 @@ public class LogsetInfo extends AbstractModel {
         if (source.RoleName != null) {
             this.RoleName = new String(source.RoleName);
         }
+        if (source.MetricTopicCount != null) {
+            this.MetricTopicCount = new Long(source.MetricTopicCount);
+        }
     }
 
 
@@ -226,10 +278,12 @@ public class LogsetInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "LogsetId", this.LogsetId);
         this.setParamSimple(map, prefix + "LogsetName", this.LogsetName);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "AssumerUin", this.AssumerUin);
         this.setParamSimple(map, prefix + "AssumerName", this.AssumerName);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "TopicCount", this.TopicCount);
         this.setParamSimple(map, prefix + "RoleName", this.RoleName);
+        this.setParamSimple(map, prefix + "MetricTopicCount", this.MetricTopicCount);
 
     }
 }

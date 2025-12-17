@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class VideoUrl extends AbstractModel {
 
     /**
-    * 视频的url，如"https://your-video-path.mp/4"
+    * 视频的url，如"https://your-video-path.mp4"，视频文件大小不超过100M。
     */
     @SerializedName("Url")
     @Expose
@@ -38,16 +38,16 @@ public class VideoUrl extends AbstractModel {
     private Float Fps;
 
     /**
-     * Get 视频的url，如"https://your-video-path.mp/4" 
-     * @return Url 视频的url，如"https://your-video-path.mp/4"
+     * Get 视频的url，如"https://your-video-path.mp4"，视频文件大小不超过100M。 
+     * @return Url 视频的url，如"https://your-video-path.mp4"，视频文件大小不超过100M。
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 视频的url，如"https://your-video-path.mp/4"
-     * @param Url 视频的url，如"https://your-video-path.mp/4"
+     * Set 视频的url，如"https://your-video-path.mp4"，视频文件大小不超过100M。
+     * @param Url 视频的url，如"https://your-video-path.mp4"，视频文件大小不超过100M。
      */
     public void setUrl(String Url) {
         this.Url = Url;

@@ -31,11 +31,25 @@ public class ActivityRecordItem extends AbstractModel {
     private String Uin;
 
     /**
+    * 环境ID
+    */
+    @SerializedName("EnvId")
+    @Expose
+    private String EnvId;
+
+    /**
     * 活动id
     */
     @SerializedName("ActivityId")
     @Expose
     private Long ActivityId;
+
+    /**
+    * 活动名称（唯一英文标识）
+    */
+    @SerializedName("ActivityName")
+    @Expose
+    private String ActivityName;
 
     /**
     * 自定义状态码
@@ -59,11 +73,18 @@ public class ActivityRecordItem extends AbstractModel {
     private Long SubStatusInt;
 
     /**
-    * 是否软删除
+    * 是否已删除
     */
     @SerializedName("IsDeleted")
     @Expose
     private Boolean IsDeleted;
+
+    /**
+    * 活动参与时间
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
 
     /**
      * Get 用户uin 
@@ -82,6 +103,22 @@ public class ActivityRecordItem extends AbstractModel {
     }
 
     /**
+     * Get 环境ID 
+     * @return EnvId 环境ID
+     */
+    public String getEnvId() {
+        return this.EnvId;
+    }
+
+    /**
+     * Set 环境ID
+     * @param EnvId 环境ID
+     */
+    public void setEnvId(String EnvId) {
+        this.EnvId = EnvId;
+    }
+
+    /**
      * Get 活动id 
      * @return ActivityId 活动id
      */
@@ -95,6 +132,22 @@ public class ActivityRecordItem extends AbstractModel {
      */
     public void setActivityId(Long ActivityId) {
         this.ActivityId = ActivityId;
+    }
+
+    /**
+     * Get 活动名称（唯一英文标识） 
+     * @return ActivityName 活动名称（唯一英文标识）
+     */
+    public String getActivityName() {
+        return this.ActivityName;
+    }
+
+    /**
+     * Set 活动名称（唯一英文标识）
+     * @param ActivityName 活动名称（唯一英文标识）
+     */
+    public void setActivityName(String ActivityName) {
+        this.ActivityName = ActivityName;
     }
 
     /**
@@ -146,19 +199,35 @@ public class ActivityRecordItem extends AbstractModel {
     }
 
     /**
-     * Get 是否软删除 
-     * @return IsDeleted 是否软删除
+     * Get 是否已删除 
+     * @return IsDeleted 是否已删除
      */
     public Boolean getIsDeleted() {
         return this.IsDeleted;
     }
 
     /**
-     * Set 是否软删除
-     * @param IsDeleted 是否软删除
+     * Set 是否已删除
+     * @param IsDeleted 是否已删除
      */
     public void setIsDeleted(Boolean IsDeleted) {
         this.IsDeleted = IsDeleted;
+    }
+
+    /**
+     * Get 活动参与时间 
+     * @return CreateTime 活动参与时间
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 活动参与时间
+     * @param CreateTime 活动参与时间
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
     }
 
     public ActivityRecordItem() {
@@ -172,8 +241,14 @@ public class ActivityRecordItem extends AbstractModel {
         if (source.Uin != null) {
             this.Uin = new String(source.Uin);
         }
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
         if (source.ActivityId != null) {
             this.ActivityId = new Long(source.ActivityId);
+        }
+        if (source.ActivityName != null) {
+            this.ActivityName = new String(source.ActivityName);
         }
         if (source.Status != null) {
             this.Status = new Long(source.Status);
@@ -187,6 +262,9 @@ public class ActivityRecordItem extends AbstractModel {
         if (source.IsDeleted != null) {
             this.IsDeleted = new Boolean(source.IsDeleted);
         }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
     }
 
 
@@ -195,11 +273,14 @@ public class ActivityRecordItem extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Uin", this.Uin);
+        this.setParamSimple(map, prefix + "EnvId", this.EnvId);
         this.setParamSimple(map, prefix + "ActivityId", this.ActivityId);
+        this.setParamSimple(map, prefix + "ActivityName", this.ActivityName);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "SubStatus", this.SubStatus);
         this.setParamSimple(map, prefix + "SubStatusInt", this.SubStatusInt);
         this.setParamSimple(map, prefix + "IsDeleted", this.IsDeleted);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }
