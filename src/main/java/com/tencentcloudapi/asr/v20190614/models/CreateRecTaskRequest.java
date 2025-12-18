@@ -152,6 +152,7 @@ public class CreateRecTaskRequest extends AbstractModel {
     * 是否开启说话人分离
 0：不开启；
 1：开启（仅支持以下引擎：8k_zh/8k_zh_large/16k_zh/16k_ms/16k_en/16k_id/16k_zh_large/16k_zh_dialect/16k_zh_en，且ChannelNum=1时可用）；
+3: 开启角色分离，需配合SpeakerRoles参数使用（增值服务，仅支持16k_zh_en引擎，可支持传入声纹对录音文件内的说话人进行角色认证）
 默认值为 0
 
 注意：
@@ -336,6 +337,19 @@ public class CreateRecTaskRequest extends AbstractModel {
     @SerializedName("ReplaceTextId")
     @Expose
     private String ReplaceTextId;
+
+    /**
+    * 开启角色分离能力
+配合SpeakerDiarization: 3 使用，ASR增值服务，可传入一组声纹信息进行角色认证，仅支持16k_zh_en引擎。
+需传入SpeakerRoleInfo数据组，确定说话人的角色信息，涉及RoleAudioUrl和RoleName两个参数。 
+RoleAudioUrl：需要认证角色的声纹音频地址，建议30s内的纯净人声，最长不能超过45s。 
+RoleName：需要认证角色的名称，若匹配成功，会替换话者分离中的SpeakerID。 
+示例： 
+"{\"EngineModelType\":\"16k_zh_en\",\"ChannelNum\":1,\"ResTextFormat\":1,\"SourceType\":0,\"Url\":\"需要进行ASR识别的音频链接\",\"SpeakerDiarization\":3,\"SpeakerRoles\":[{\"RoleAudioUrl\":\"需要认证角色的声纹音频地址\",\"RoleName\":\"需要认证角色的名称\"}]}"
+    */
+    @SerializedName("SpeakerRoles")
+    @Expose
+    private SpeakerRoleInfo [] SpeakerRoles;
 
     /**
      * Get 引擎模型类型
@@ -745,6 +759,7 @@ public class CreateRecTaskRequest extends AbstractModel {
      * Get 是否开启说话人分离
 0：不开启；
 1：开启（仅支持以下引擎：8k_zh/8k_zh_large/16k_zh/16k_ms/16k_en/16k_id/16k_zh_large/16k_zh_dialect/16k_zh_en，且ChannelNum=1时可用）；
+3: 开启角色分离，需配合SpeakerRoles参数使用（增值服务，仅支持16k_zh_en引擎，可支持传入声纹对录音文件内的说话人进行角色认证）
 默认值为 0
 
 注意：
@@ -752,6 +767,7 @@ public class CreateRecTaskRequest extends AbstractModel {
      * @return SpeakerDiarization 是否开启说话人分离
 0：不开启；
 1：开启（仅支持以下引擎：8k_zh/8k_zh_large/16k_zh/16k_ms/16k_en/16k_id/16k_zh_large/16k_zh_dialect/16k_zh_en，且ChannelNum=1时可用）；
+3: 开启角色分离，需配合SpeakerRoles参数使用（增值服务，仅支持16k_zh_en引擎，可支持传入声纹对录音文件内的说话人进行角色认证）
 默认值为 0
 
 注意：
@@ -765,6 +781,7 @@ public class CreateRecTaskRequest extends AbstractModel {
      * Set 是否开启说话人分离
 0：不开启；
 1：开启（仅支持以下引擎：8k_zh/8k_zh_large/16k_zh/16k_ms/16k_en/16k_id/16k_zh_large/16k_zh_dialect/16k_zh_en，且ChannelNum=1时可用）；
+3: 开启角色分离，需配合SpeakerRoles参数使用（增值服务，仅支持16k_zh_en引擎，可支持传入声纹对录音文件内的说话人进行角色认证）
 默认值为 0
 
 注意：
@@ -772,6 +789,7 @@ public class CreateRecTaskRequest extends AbstractModel {
      * @param SpeakerDiarization 是否开启说话人分离
 0：不开启；
 1：开启（仅支持以下引擎：8k_zh/8k_zh_large/16k_zh/16k_ms/16k_en/16k_id/16k_zh_large/16k_zh_dialect/16k_zh_en，且ChannelNum=1时可用）；
+3: 开启角色分离，需配合SpeakerRoles参数使用（增值服务，仅支持16k_zh_en引擎，可支持传入声纹对录音文件内的说话人进行角色认证）
 默认值为 0
 
 注意：
@@ -1309,6 +1327,46 @@ public class CreateRecTaskRequest extends AbstractModel {
         this.ReplaceTextId = ReplaceTextId;
     }
 
+    /**
+     * Get 开启角色分离能力
+配合SpeakerDiarization: 3 使用，ASR增值服务，可传入一组声纹信息进行角色认证，仅支持16k_zh_en引擎。
+需传入SpeakerRoleInfo数据组，确定说话人的角色信息，涉及RoleAudioUrl和RoleName两个参数。 
+RoleAudioUrl：需要认证角色的声纹音频地址，建议30s内的纯净人声，最长不能超过45s。 
+RoleName：需要认证角色的名称，若匹配成功，会替换话者分离中的SpeakerID。 
+示例： 
+"{\"EngineModelType\":\"16k_zh_en\",\"ChannelNum\":1,\"ResTextFormat\":1,\"SourceType\":0,\"Url\":\"需要进行ASR识别的音频链接\",\"SpeakerDiarization\":3,\"SpeakerRoles\":[{\"RoleAudioUrl\":\"需要认证角色的声纹音频地址\",\"RoleName\":\"需要认证角色的名称\"}]}" 
+     * @return SpeakerRoles 开启角色分离能力
+配合SpeakerDiarization: 3 使用，ASR增值服务，可传入一组声纹信息进行角色认证，仅支持16k_zh_en引擎。
+需传入SpeakerRoleInfo数据组，确定说话人的角色信息，涉及RoleAudioUrl和RoleName两个参数。 
+RoleAudioUrl：需要认证角色的声纹音频地址，建议30s内的纯净人声，最长不能超过45s。 
+RoleName：需要认证角色的名称，若匹配成功，会替换话者分离中的SpeakerID。 
+示例： 
+"{\"EngineModelType\":\"16k_zh_en\",\"ChannelNum\":1,\"ResTextFormat\":1,\"SourceType\":0,\"Url\":\"需要进行ASR识别的音频链接\",\"SpeakerDiarization\":3,\"SpeakerRoles\":[{\"RoleAudioUrl\":\"需要认证角色的声纹音频地址\",\"RoleName\":\"需要认证角色的名称\"}]}"
+     */
+    public SpeakerRoleInfo [] getSpeakerRoles() {
+        return this.SpeakerRoles;
+    }
+
+    /**
+     * Set 开启角色分离能力
+配合SpeakerDiarization: 3 使用，ASR增值服务，可传入一组声纹信息进行角色认证，仅支持16k_zh_en引擎。
+需传入SpeakerRoleInfo数据组，确定说话人的角色信息，涉及RoleAudioUrl和RoleName两个参数。 
+RoleAudioUrl：需要认证角色的声纹音频地址，建议30s内的纯净人声，最长不能超过45s。 
+RoleName：需要认证角色的名称，若匹配成功，会替换话者分离中的SpeakerID。 
+示例： 
+"{\"EngineModelType\":\"16k_zh_en\",\"ChannelNum\":1,\"ResTextFormat\":1,\"SourceType\":0,\"Url\":\"需要进行ASR识别的音频链接\",\"SpeakerDiarization\":3,\"SpeakerRoles\":[{\"RoleAudioUrl\":\"需要认证角色的声纹音频地址\",\"RoleName\":\"需要认证角色的名称\"}]}"
+     * @param SpeakerRoles 开启角色分离能力
+配合SpeakerDiarization: 3 使用，ASR增值服务，可传入一组声纹信息进行角色认证，仅支持16k_zh_en引擎。
+需传入SpeakerRoleInfo数据组，确定说话人的角色信息，涉及RoleAudioUrl和RoleName两个参数。 
+RoleAudioUrl：需要认证角色的声纹音频地址，建议30s内的纯净人声，最长不能超过45s。 
+RoleName：需要认证角色的名称，若匹配成功，会替换话者分离中的SpeakerID。 
+示例： 
+"{\"EngineModelType\":\"16k_zh_en\",\"ChannelNum\":1,\"ResTextFormat\":1,\"SourceType\":0,\"Url\":\"需要进行ASR识别的音频链接\",\"SpeakerDiarization\":3,\"SpeakerRoles\":[{\"RoleAudioUrl\":\"需要认证角色的声纹音频地址\",\"RoleName\":\"需要认证角色的名称\"}]}"
+     */
+    public void setSpeakerRoles(SpeakerRoleInfo [] SpeakerRoles) {
+        this.SpeakerRoles = SpeakerRoles;
+    }
+
     public CreateRecTaskRequest() {
     }
 
@@ -1392,6 +1450,12 @@ public class CreateRecTaskRequest extends AbstractModel {
         if (source.ReplaceTextId != null) {
             this.ReplaceTextId = new String(source.ReplaceTextId);
         }
+        if (source.SpeakerRoles != null) {
+            this.SpeakerRoles = new SpeakerRoleInfo[source.SpeakerRoles.length];
+            for (int i = 0; i < source.SpeakerRoles.length; i++) {
+                this.SpeakerRoles[i] = new SpeakerRoleInfo(source.SpeakerRoles[i]);
+            }
+        }
     }
 
 
@@ -1423,6 +1487,7 @@ public class CreateRecTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "HotwordList", this.HotwordList);
         this.setParamArraySimple(map, prefix + "KeyWordLibIdList.", this.KeyWordLibIdList);
         this.setParamSimple(map, prefix + "ReplaceTextId", this.ReplaceTextId);
+        this.setParamArrayObj(map, prefix + "SpeakerRoles.", this.SpeakerRoles);
 
     }
 }

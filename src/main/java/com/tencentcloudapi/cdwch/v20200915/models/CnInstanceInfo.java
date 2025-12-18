@@ -80,6 +80,20 @@ public class CnInstanceInfo extends AbstractModel {
     private CNResource [] Resources;
 
     /**
+    * desc
+    */
+    @SerializedName("IsSecondaryZone")
+    @Expose
+    private String IsSecondaryZone;
+
+    /**
+    * desc
+    */
+    @SerializedName("SecondaryZoneInfo")
+    @Expose
+    private String SecondaryZoneInfo;
+
+    /**
      * Get ID值 
      * @return ID ID值
      */
@@ -207,6 +221,38 @@ public class CnInstanceInfo extends AbstractModel {
         this.Resources = Resources;
     }
 
+    /**
+     * Get desc 
+     * @return IsSecondaryZone desc
+     */
+    public String getIsSecondaryZone() {
+        return this.IsSecondaryZone;
+    }
+
+    /**
+     * Set desc
+     * @param IsSecondaryZone desc
+     */
+    public void setIsSecondaryZone(String IsSecondaryZone) {
+        this.IsSecondaryZone = IsSecondaryZone;
+    }
+
+    /**
+     * Get desc 
+     * @return SecondaryZoneInfo desc
+     */
+    public String getSecondaryZoneInfo() {
+        return this.SecondaryZoneInfo;
+    }
+
+    /**
+     * Set desc
+     * @param SecondaryZoneInfo desc
+     */
+    public void setSecondaryZoneInfo(String SecondaryZoneInfo) {
+        this.SecondaryZoneInfo = SecondaryZoneInfo;
+    }
+
     public CnInstanceInfo() {
     }
 
@@ -242,6 +288,12 @@ public class CnInstanceInfo extends AbstractModel {
                 this.Resources[i] = new CNResource(source.Resources[i]);
             }
         }
+        if (source.IsSecondaryZone != null) {
+            this.IsSecondaryZone = new String(source.IsSecondaryZone);
+        }
+        if (source.SecondaryZoneInfo != null) {
+            this.SecondaryZoneInfo = new String(source.SecondaryZoneInfo);
+        }
     }
 
 
@@ -257,6 +309,8 @@ public class CnInstanceInfo extends AbstractModel {
         this.setParamObj(map, prefix + "InstanceStateInfo.", this.InstanceStateInfo);
         this.setParamSimple(map, prefix + "InstanceID", this.InstanceID);
         this.setParamArrayObj(map, prefix + "Resources.", this.Resources);
+        this.setParamSimple(map, prefix + "IsSecondaryZone", this.IsSecondaryZone);
+        this.setParamSimple(map, prefix + "SecondaryZoneInfo", this.SecondaryZoneInfo);
 
     }
 }

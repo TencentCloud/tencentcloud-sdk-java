@@ -219,6 +219,13 @@ postMoveIn 按量计费迁入资源
     private String [] ResourceId;
 
     /**
+    * 订单对应的可用区Id
+    */
+    @SerializedName("ZoneCode")
+    @Expose
+    private String ZoneCode;
+
+    /**
      * Get 订单号 
      * @return OrderId 订单号
      */
@@ -686,6 +693,22 @@ postMoveIn 按量计费迁入资源
         this.ResourceId = ResourceId;
     }
 
+    /**
+     * Get 订单对应的可用区Id 
+     * @return ZoneCode 订单对应的可用区Id
+     */
+    public String getZoneCode() {
+        return this.ZoneCode;
+    }
+
+    /**
+     * Set 订单对应的可用区Id
+     * @param ZoneCode 订单对应的可用区Id
+     */
+    public void setZoneCode(String ZoneCode) {
+        this.ZoneCode = ZoneCode;
+    }
+
     public Deal() {
     }
 
@@ -778,6 +801,9 @@ postMoveIn 按量计费迁入资源
                 this.ResourceId[i] = new String(source.ResourceId[i]);
             }
         }
+        if (source.ZoneCode != null) {
+            this.ZoneCode = new String(source.ZoneCode);
+        }
     }
 
 
@@ -811,6 +837,7 @@ postMoveIn 按量计费迁入资源
         this.setParamSimple(map, prefix + "ProductName", this.ProductName);
         this.setParamSimple(map, prefix + "SubProductName", this.SubProductName);
         this.setParamArraySimple(map, prefix + "ResourceId.", this.ResourceId);
+        this.setParamSimple(map, prefix + "ZoneCode", this.ZoneCode);
 
     }
 }

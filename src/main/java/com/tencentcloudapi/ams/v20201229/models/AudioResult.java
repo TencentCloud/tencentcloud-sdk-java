@@ -158,6 +158,13 @@ public class AudioResult extends AbstractModel {
     private String HitType;
 
     /**
+    * ASR句子的起止时间
+    */
+    @SerializedName("Sentences")
+    @Expose
+    private Sentence [] Sentences;
+
+    /**
      * Get 该字段用于返回审核内容是否命中审核模型；取值：0（**未命中**）、1（**命中**）。 
      * @return HitFlag 该字段用于返回审核内容是否命中审核模型；取值：0（**未命中**）、1（**命中**）。
      */
@@ -465,6 +472,22 @@ public class AudioResult extends AbstractModel {
         this.HitType = HitType;
     }
 
+    /**
+     * Get ASR句子的起止时间 
+     * @return Sentences ASR句子的起止时间
+     */
+    public Sentence [] getSentences() {
+        return this.Sentences;
+    }
+
+    /**
+     * Set ASR句子的起止时间
+     * @param Sentences ASR句子的起止时间
+     */
+    public void setSentences(Sentence [] Sentences) {
+        this.Sentences = Sentences;
+    }
+
     public AudioResult() {
     }
 
@@ -551,6 +574,12 @@ public class AudioResult extends AbstractModel {
         if (source.HitType != null) {
             this.HitType = new String(source.HitType);
         }
+        if (source.Sentences != null) {
+            this.Sentences = new Sentence[source.Sentences.length];
+            for (int i = 0; i < source.Sentences.length; i++) {
+                this.Sentences[i] = new Sentence(source.Sentences[i]);
+            }
+        }
     }
 
 
@@ -577,6 +606,7 @@ public class AudioResult extends AbstractModel {
         this.setParamSimple(map, prefix + "SubTag", this.SubTag);
         this.setParamSimple(map, prefix + "SubTagCode", this.SubTagCode);
         this.setParamSimple(map, prefix + "HitType", this.HitType);
+        this.setParamArrayObj(map, prefix + "Sentences.", this.Sentences);
 
     }
 }

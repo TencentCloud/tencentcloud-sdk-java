@@ -66,6 +66,28 @@ public class CreateFlowGroupByFilesRequest extends AbstractModel {
     private FlowGroupOptions FlowGroupOptions;
 
     /**
+    * 用户自定义合同类型。
+
+自定义合同类型配置的地方如链接图所示。[点击查看自定义合同类型管理的位置](https://qcloudimg.tencent-cloud.cn/raw/36582cea03ae6a2559894844942b5d5c.png)
+
+注意：
+如果传递了自定义合同类型，则每一个子合同设置的自定义合同类型将会失效，已最外层定义的为准。
+例如：
+这份合同组有三个子合同，设置合同类型为<font color="blue">人事/劳务</font>
+第一份子合同设置的合同自定义合同类型是<font color="blue">采购</font>
+第二份和第三份子合同设置的合同自定义合同类型是<font color="blue">人事/劳务</font>
+但最终这个合同组的合同类型是<font color="blue">人事/劳务</font>
+
+
+
+
+
+    */
+    @SerializedName("UserFlowType")
+    @Expose
+    private UserFlowType UserFlowType;
+
+    /**
      * Get 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
      * @return Operator 执行本接口操作的员工信息。
@@ -173,6 +195,82 @@ public class CreateFlowGroupByFilesRequest extends AbstractModel {
         this.FlowGroupOptions = FlowGroupOptions;
     }
 
+    /**
+     * Get 用户自定义合同类型。
+
+自定义合同类型配置的地方如链接图所示。[点击查看自定义合同类型管理的位置](https://qcloudimg.tencent-cloud.cn/raw/36582cea03ae6a2559894844942b5d5c.png)
+
+注意：
+如果传递了自定义合同类型，则每一个子合同设置的自定义合同类型将会失效，已最外层定义的为准。
+例如：
+这份合同组有三个子合同，设置合同类型为<font color="blue">人事/劳务</font>
+第一份子合同设置的合同自定义合同类型是<font color="blue">采购</font>
+第二份和第三份子合同设置的合同自定义合同类型是<font color="blue">人事/劳务</font>
+但最终这个合同组的合同类型是<font color="blue">人事/劳务</font>
+
+
+
+
+ 
+     * @return UserFlowType 用户自定义合同类型。
+
+自定义合同类型配置的地方如链接图所示。[点击查看自定义合同类型管理的位置](https://qcloudimg.tencent-cloud.cn/raw/36582cea03ae6a2559894844942b5d5c.png)
+
+注意：
+如果传递了自定义合同类型，则每一个子合同设置的自定义合同类型将会失效，已最外层定义的为准。
+例如：
+这份合同组有三个子合同，设置合同类型为<font color="blue">人事/劳务</font>
+第一份子合同设置的合同自定义合同类型是<font color="blue">采购</font>
+第二份和第三份子合同设置的合同自定义合同类型是<font color="blue">人事/劳务</font>
+但最终这个合同组的合同类型是<font color="blue">人事/劳务</font>
+
+
+
+
+
+     */
+    public UserFlowType getUserFlowType() {
+        return this.UserFlowType;
+    }
+
+    /**
+     * Set 用户自定义合同类型。
+
+自定义合同类型配置的地方如链接图所示。[点击查看自定义合同类型管理的位置](https://qcloudimg.tencent-cloud.cn/raw/36582cea03ae6a2559894844942b5d5c.png)
+
+注意：
+如果传递了自定义合同类型，则每一个子合同设置的自定义合同类型将会失效，已最外层定义的为准。
+例如：
+这份合同组有三个子合同，设置合同类型为<font color="blue">人事/劳务</font>
+第一份子合同设置的合同自定义合同类型是<font color="blue">采购</font>
+第二份和第三份子合同设置的合同自定义合同类型是<font color="blue">人事/劳务</font>
+但最终这个合同组的合同类型是<font color="blue">人事/劳务</font>
+
+
+
+
+
+     * @param UserFlowType 用户自定义合同类型。
+
+自定义合同类型配置的地方如链接图所示。[点击查看自定义合同类型管理的位置](https://qcloudimg.tencent-cloud.cn/raw/36582cea03ae6a2559894844942b5d5c.png)
+
+注意：
+如果传递了自定义合同类型，则每一个子合同设置的自定义合同类型将会失效，已最外层定义的为准。
+例如：
+这份合同组有三个子合同，设置合同类型为<font color="blue">人事/劳务</font>
+第一份子合同设置的合同自定义合同类型是<font color="blue">采购</font>
+第二份和第三份子合同设置的合同自定义合同类型是<font color="blue">人事/劳务</font>
+但最终这个合同组的合同类型是<font color="blue">人事/劳务</font>
+
+
+
+
+
+     */
+    public void setUserFlowType(UserFlowType UserFlowType) {
+        this.UserFlowType = UserFlowType;
+    }
+
     public CreateFlowGroupByFilesRequest() {
     }
 
@@ -199,6 +297,9 @@ public class CreateFlowGroupByFilesRequest extends AbstractModel {
         if (source.FlowGroupOptions != null) {
             this.FlowGroupOptions = new FlowGroupOptions(source.FlowGroupOptions);
         }
+        if (source.UserFlowType != null) {
+            this.UserFlowType = new UserFlowType(source.UserFlowType);
+        }
     }
 
 
@@ -211,6 +312,7 @@ public class CreateFlowGroupByFilesRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "FlowGroupInfos.", this.FlowGroupInfos);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamObj(map, prefix + "FlowGroupOptions.", this.FlowGroupOptions);
+        this.setParamObj(map, prefix + "UserFlowType.", this.UserFlowType);
 
     }
 }

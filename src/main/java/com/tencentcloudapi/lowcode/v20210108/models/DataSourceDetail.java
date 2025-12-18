@@ -312,6 +312,13 @@ public class DataSourceDetail extends AbstractModel {
     private String DbSourceType;
 
     /**
+    * 模型预览状态开关
+    */
+    @SerializedName("StagingSwitch")
+    @Expose
+    private Boolean StagingSwitch;
+
+    /**
      * Get 数据源 ID 
      * @return Id 数据源 ID
      */
@@ -1011,6 +1018,22 @@ public class DataSourceDetail extends AbstractModel {
         this.DbSourceType = DbSourceType;
     }
 
+    /**
+     * Get 模型预览状态开关 
+     * @return StagingSwitch 模型预览状态开关
+     */
+    public Boolean getStagingSwitch() {
+        return this.StagingSwitch;
+    }
+
+    /**
+     * Set 模型预览状态开关
+     * @param StagingSwitch 模型预览状态开关
+     */
+    public void setStagingSwitch(Boolean StagingSwitch) {
+        this.StagingSwitch = StagingSwitch;
+    }
+
     public DataSourceDetail() {
     }
 
@@ -1145,6 +1168,9 @@ public class DataSourceDetail extends AbstractModel {
         if (source.DbSourceType != null) {
             this.DbSourceType = new String(source.DbSourceType);
         }
+        if (source.StagingSwitch != null) {
+            this.StagingSwitch = new Boolean(source.StagingSwitch);
+        }
     }
 
 
@@ -1190,6 +1216,7 @@ public class DataSourceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "PreviewTableName", this.PreviewTableName);
         this.setParamSimple(map, prefix + "PublishedTableName", this.PublishedTableName);
         this.setParamSimple(map, prefix + "DbSourceType", this.DbSourceType);
+        this.setParamSimple(map, prefix + "StagingSwitch", this.StagingSwitch);
 
     }
 }

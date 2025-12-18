@@ -92,6 +92,13 @@ public class DescribeDealsByCondRequest extends AbstractModel {
     private String ResourceId;
 
     /**
+    * 订单状态
+    */
+    @SerializedName("StatusSet")
+    @Expose
+    private Long [] StatusSet;
+
+    /**
      * Get 开始时间 2016-01-01 00:00:00 
      * @return StartTime 开始时间 2016-01-01 00:00:00
      */
@@ -267,6 +274,22 @@ public class DescribeDealsByCondRequest extends AbstractModel {
         this.ResourceId = ResourceId;
     }
 
+    /**
+     * Get 订单状态 
+     * @return StatusSet 订单状态
+     */
+    public Long [] getStatusSet() {
+        return this.StatusSet;
+    }
+
+    /**
+     * Set 订单状态
+     * @param StatusSet 订单状态
+     */
+    public void setStatusSet(Long [] StatusSet) {
+        this.StatusSet = StatusSet;
+    }
+
     public DescribeDealsByCondRequest() {
     }
 
@@ -299,6 +322,12 @@ public class DescribeDealsByCondRequest extends AbstractModel {
         if (source.ResourceId != null) {
             this.ResourceId = new String(source.ResourceId);
         }
+        if (source.StatusSet != null) {
+            this.StatusSet = new Long[source.StatusSet.length];
+            for (int i = 0; i < source.StatusSet.length; i++) {
+                this.StatusSet[i] = new Long(source.StatusSet[i]);
+            }
+        }
     }
 
 
@@ -314,6 +343,7 @@ public class DescribeDealsByCondRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "OrderId", this.OrderId);
         this.setParamSimple(map, prefix + "BigDealId", this.BigDealId);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
+        this.setParamArraySimple(map, prefix + "StatusSet.", this.StatusSet);
 
     }
 }

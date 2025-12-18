@@ -116,6 +116,7 @@ FailedOperation.UnKnowError：表示识别失败；
 
     /**
     * 该发票中所有字段坐标信息。包括字段英文名称、字段值所在位置四点坐标、字段所属行号，具体内容请点击左侧链接。
+字段在原始图的坐标可以根据Polygon转换得出。
     */
     @SerializedName("ItemPolygon")
     @Expose
@@ -380,8 +381,10 @@ FailedOperation.UnKnowError：表示识别失败；
     }
 
     /**
-     * Get 该发票中所有字段坐标信息。包括字段英文名称、字段值所在位置四点坐标、字段所属行号，具体内容请点击左侧链接。 
+     * Get 该发票中所有字段坐标信息。包括字段英文名称、字段值所在位置四点坐标、字段所属行号，具体内容请点击左侧链接。
+字段在原始图的坐标可以根据Polygon转换得出。 
      * @return ItemPolygon 该发票中所有字段坐标信息。包括字段英文名称、字段值所在位置四点坐标、字段所属行号，具体内容请点击左侧链接。
+字段在原始图的坐标可以根据Polygon转换得出。
      */
     public ItemPolygonInfo [] getItemPolygon() {
         return this.ItemPolygon;
@@ -389,7 +392,9 @@ FailedOperation.UnKnowError：表示识别失败；
 
     /**
      * Set 该发票中所有字段坐标信息。包括字段英文名称、字段值所在位置四点坐标、字段所属行号，具体内容请点击左侧链接。
+字段在原始图的坐标可以根据Polygon转换得出。
      * @param ItemPolygon 该发票中所有字段坐标信息。包括字段英文名称、字段值所在位置四点坐标、字段所属行号，具体内容请点击左侧链接。
+字段在原始图的坐标可以根据Polygon转换得出。
      */
     public void setItemPolygon(ItemPolygonInfo [] ItemPolygon) {
         this.ItemPolygon = ItemPolygon;

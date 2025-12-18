@@ -157,6 +157,13 @@ HotPeriod=0为没有开启日志沉降。
     private Long HotPeriod;
 
     /**
+    * kms-cls服务秘钥id
+    */
+    @SerializedName("KeyId")
+    @Expose
+    private String KeyId;
+
+    /**
     * 主题类型。
 - 0: 日志主题 
 - 1: 指标主题
@@ -530,6 +537,22 @@ HotPeriod=0为没有开启日志沉降。
     }
 
     /**
+     * Get kms-cls服务秘钥id 
+     * @return KeyId kms-cls服务秘钥id
+     */
+    public String getKeyId() {
+        return this.KeyId;
+    }
+
+    /**
+     * Set kms-cls服务秘钥id
+     * @param KeyId kms-cls服务秘钥id
+     */
+    public void setKeyId(String KeyId) {
+        this.KeyId = KeyId;
+    }
+
+    /**
      * Get 主题类型。
 - 0: 日志主题 
 - 1: 指标主题 
@@ -738,6 +761,9 @@ HotPeriod=0为没有开启日志沉降。
         if (source.HotPeriod != null) {
             this.HotPeriod = new Long(source.HotPeriod);
         }
+        if (source.KeyId != null) {
+            this.KeyId = new String(source.KeyId);
+        }
         if (source.BizType != null) {
             this.BizType = new Long(source.BizType);
         }
@@ -784,6 +810,7 @@ HotPeriod=0为没有开启日志沉降。
         this.setParamSimple(map, prefix + "SubAssumerName", this.SubAssumerName);
         this.setParamSimple(map, prefix + "Describes", this.Describes);
         this.setParamSimple(map, prefix + "HotPeriod", this.HotPeriod);
+        this.setParamSimple(map, prefix + "KeyId", this.KeyId);
         this.setParamSimple(map, prefix + "BizType", this.BizType);
         this.setParamSimple(map, prefix + "IsWebTracking", this.IsWebTracking);
         this.setParamObj(map, prefix + "Extends.", this.Extends);

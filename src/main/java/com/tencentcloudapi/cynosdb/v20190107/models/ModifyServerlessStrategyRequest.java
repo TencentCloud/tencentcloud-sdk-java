@@ -110,6 +110,13 @@ public class ModifyServerlessStrategyRequest extends AbstractModel {
     private String AutoArchive;
 
     /**
+    * 升级类型。 默认值：upgradeImmediate。 可选值： upgradeImmediate：立即完成修改 upgradeInMaintain：在维护时间窗口内完成修改
+    */
+    @SerializedName("UpgradeType")
+    @Expose
+    private String UpgradeType;
+
+    /**
      * Get serverless集群id 
      * @return ClusterId serverless集群id
      */
@@ -309,6 +316,22 @@ public class ModifyServerlessStrategyRequest extends AbstractModel {
         this.AutoArchive = AutoArchive;
     }
 
+    /**
+     * Get 升级类型。 默认值：upgradeImmediate。 可选值： upgradeImmediate：立即完成修改 upgradeInMaintain：在维护时间窗口内完成修改 
+     * @return UpgradeType 升级类型。 默认值：upgradeImmediate。 可选值： upgradeImmediate：立即完成修改 upgradeInMaintain：在维护时间窗口内完成修改
+     */
+    public String getUpgradeType() {
+        return this.UpgradeType;
+    }
+
+    /**
+     * Set 升级类型。 默认值：upgradeImmediate。 可选值： upgradeImmediate：立即完成修改 upgradeInMaintain：在维护时间窗口内完成修改
+     * @param UpgradeType 升级类型。 默认值：upgradeImmediate。 可选值： upgradeImmediate：立即完成修改 upgradeInMaintain：在维护时间窗口内完成修改
+     */
+    public void setUpgradeType(String UpgradeType) {
+        this.UpgradeType = UpgradeType;
+    }
+
     public ModifyServerlessStrategyRequest() {
     }
 
@@ -353,6 +376,9 @@ public class ModifyServerlessStrategyRequest extends AbstractModel {
         if (source.AutoArchive != null) {
             this.AutoArchive = new String(source.AutoArchive);
         }
+        if (source.UpgradeType != null) {
+            this.UpgradeType = new String(source.UpgradeType);
+        }
     }
 
 
@@ -372,6 +398,7 @@ public class ModifyServerlessStrategyRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "MinRoCount", this.MinRoCount);
         this.setParamSimple(map, prefix + "MaxRoCount", this.MaxRoCount);
         this.setParamSimple(map, prefix + "AutoArchive", this.AutoArchive);
+        this.setParamSimple(map, prefix + "UpgradeType", this.UpgradeType);
 
     }
 }

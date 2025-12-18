@@ -61,6 +61,17 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
+     *通过API 购买高防包接口
+     * @param req CreateBgpInstanceRequest
+     * @return CreateBgpInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBgpInstanceResponse CreateBgpInstance(CreateBgpInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateBgpInstance", CreateBgpInstanceResponse.class);
+    }
+
+    /**
      *添加DDoS防护的IP黑白名单
      * @param req CreateBlackWhiteIpListRequest
      * @return CreateBlackWhiteIpListResponse
@@ -476,6 +487,17 @@ public class AntiddosClient extends AbstractClient{
     public DescribeBgpBizTrendResponse DescribeBgpBizTrend(DescribeBgpBizTrendRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeBgpBizTrend", DescribeBgpBizTrendResponse.class);
+    }
+
+    /**
+     *购买后，查询购买的高防包实例信息
+     * @param req DescribeBgpInstancesRequest
+     * @return DescribeBgpInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBgpInstancesResponse DescribeBgpInstances(DescribeBgpInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBgpInstances", DescribeBgpInstancesResponse.class);
     }
 
     /**

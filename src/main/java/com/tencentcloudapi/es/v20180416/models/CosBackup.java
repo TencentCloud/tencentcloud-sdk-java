@@ -66,6 +66,13 @@ public class CosBackup extends AbstractModel {
     private String UserEsRepository;
 
     /**
+    * cos存储文件夹目录
+    */
+    @SerializedName("CosBasePath")
+    @Expose
+    private String CosBasePath;
+
+    /**
     * 快照存储周期 单位天
     */
     @SerializedName("StorageDuration")
@@ -229,6 +236,22 @@ public class CosBackup extends AbstractModel {
      */
     public void setUserEsRepository(String UserEsRepository) {
         this.UserEsRepository = UserEsRepository;
+    }
+
+    /**
+     * Get cos存储文件夹目录 
+     * @return CosBasePath cos存储文件夹目录
+     */
+    public String getCosBasePath() {
+        return this.CosBasePath;
+    }
+
+    /**
+     * Set cos存储文件夹目录
+     * @param CosBasePath cos存储文件夹目录
+     */
+    public void setCosBasePath(String CosBasePath) {
+        this.CosBasePath = CosBasePath;
     }
 
     /**
@@ -417,6 +440,9 @@ public class CosBackup extends AbstractModel {
         if (source.UserEsRepository != null) {
             this.UserEsRepository = new String(source.UserEsRepository);
         }
+        if (source.CosBasePath != null) {
+            this.CosBasePath = new String(source.CosBasePath);
+        }
         if (source.StorageDuration != null) {
             this.StorageDuration = new Long(source.StorageDuration);
         }
@@ -460,6 +486,7 @@ public class CosBackup extends AbstractModel {
         this.setParamSimple(map, prefix + "EsRepositoryType", this.EsRepositoryType);
         this.setParamSimple(map, prefix + "PaasEsRepository", this.PaasEsRepository);
         this.setParamSimple(map, prefix + "UserEsRepository", this.UserEsRepository);
+        this.setParamSimple(map, prefix + "CosBasePath", this.CosBasePath);
         this.setParamSimple(map, prefix + "StorageDuration", this.StorageDuration);
         this.setParamSimple(map, prefix + "AutoBackupInterval", this.AutoBackupInterval);
         this.setParamSimple(map, prefix + "CosRetention", this.CosRetention);
