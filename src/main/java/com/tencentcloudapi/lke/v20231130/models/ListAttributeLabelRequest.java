@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ListAttributeLabelRequest extends AbstractModel {
 
     /**
-    * 应用ID
+    * 应用ID，获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
     */
     @SerializedName("BotBizId")
     @Expose
     private String BotBizId;
 
     /**
-    * 页码
+    * 页码，取值范围：大于0
     */
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
 
     /**
-    * 每页数量
+    * 每页数量，取值范围：大于0
     */
     @SerializedName("PageSize")
     @Expose
@@ -59,62 +59,62 @@ public class ListAttributeLabelRequest extends AbstractModel {
     private String LoginSubAccountUin;
 
     /**
-    * 查询内容
+    * 查询内容，同时匹配标签内容和标签值内容
     */
     @SerializedName("Query")
     @Expose
     private String Query;
 
     /**
-    * 每个属性同步拉取的标签值数量
+    * 每个标签同步拉取的标签值数量。即在展示标签列表时，为每一个标签加载多少个具体的标签值。
     */
     @SerializedName("LabelSize")
     @Expose
     private Long LabelSize;
 
     /**
-     * Get 应用ID 
-     * @return BotBizId 应用ID
+     * Get 应用ID，获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa) 
+     * @return BotBizId 应用ID，获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      */
     public String getBotBizId() {
         return this.BotBizId;
     }
 
     /**
-     * Set 应用ID
-     * @param BotBizId 应用ID
+     * Set 应用ID，获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+     * @param BotBizId 应用ID，获取方法参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      */
     public void setBotBizId(String BotBizId) {
         this.BotBizId = BotBizId;
     }
 
     /**
-     * Get 页码 
-     * @return PageNumber 页码
+     * Get 页码，取值范围：大于0 
+     * @return PageNumber 页码，取值范围：大于0
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set 页码
-     * @param PageNumber 页码
+     * Set 页码，取值范围：大于0
+     * @param PageNumber 页码，取值范围：大于0
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 每页数量 
-     * @return PageSize 每页数量
+     * Get 每页数量，取值范围：大于0 
+     * @return PageSize 每页数量，取值范围：大于0
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 每页数量
-     * @param PageSize 每页数量
+     * Set 每页数量，取值范围：大于0
+     * @param PageSize 每页数量，取值范围：大于0
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
@@ -153,32 +153,32 @@ public class ListAttributeLabelRequest extends AbstractModel {
     }
 
     /**
-     * Get 查询内容 
-     * @return Query 查询内容
+     * Get 查询内容，同时匹配标签内容和标签值内容 
+     * @return Query 查询内容，同时匹配标签内容和标签值内容
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set 查询内容
-     * @param Query 查询内容
+     * Set 查询内容，同时匹配标签内容和标签值内容
+     * @param Query 查询内容，同时匹配标签内容和标签值内容
      */
     public void setQuery(String Query) {
         this.Query = Query;
     }
 
     /**
-     * Get 每个属性同步拉取的标签值数量 
-     * @return LabelSize 每个属性同步拉取的标签值数量
+     * Get 每个标签同步拉取的标签值数量。即在展示标签列表时，为每一个标签加载多少个具体的标签值。 
+     * @return LabelSize 每个标签同步拉取的标签值数量。即在展示标签列表时，为每一个标签加载多少个具体的标签值。
      */
     public Long getLabelSize() {
         return this.LabelSize;
     }
 
     /**
-     * Set 每个属性同步拉取的标签值数量
-     * @param LabelSize 每个属性同步拉取的标签值数量
+     * Set 每个标签同步拉取的标签值数量。即在展示标签列表时，为每一个标签加载多少个具体的标签值。
+     * @param LabelSize 每个标签同步拉取的标签值数量。即在展示标签列表时，为每一个标签加载多少个具体的标签值。
      */
     public void setLabelSize(Long LabelSize) {
         this.LabelSize = LabelSize;

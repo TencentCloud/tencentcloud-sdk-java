@@ -60,4 +60,15 @@ public class EvtClient extends AbstractClient{
         return this.internalRequest(req, "CreateRoleUser", CreateRoleUserResponse.class);
     }
 
+    /**
+     *删除自定义用户
+     * @param req DeleteRoleUserRequest
+     * @return DeleteRoleUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRoleUserResponse DeleteRoleUser(DeleteRoleUserRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteRoleUser", DeleteRoleUserResponse.class);
+    }
+
 }

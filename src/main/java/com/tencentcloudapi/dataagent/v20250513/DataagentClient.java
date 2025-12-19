@@ -94,6 +94,17 @@ public class DataagentClient extends AbstractClient{
     }
 
     /**
+     *根据知识库id查询jobs 列表
+     * @param req GetJobsByKnowledgeBaseIdRequest
+     * @return GetJobsByKnowledgeBaseIdResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetJobsByKnowledgeBaseIdResponse GetJobsByKnowledgeBaseId(GetJobsByKnowledgeBaseIdRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetJobsByKnowledgeBaseId", GetJobsByKnowledgeBaseIdResponse.class);
+    }
+
+    /**
      *获取知识库文件信息列表
      * @param req GetKnowledgeBaseFileListRequest
      * @return GetKnowledgeBaseFileListResponse

@@ -31,7 +31,7 @@ public class RateMsgRecordRequest extends AbstractModel {
     private String BotAppKey;
 
     /**
-    * 消息ID 【大模型回复答案的RecordID】
+    * 消息ID 【大模型回复答案的RecordID】可以通过[GetMsgRecord](https://cloud.tencent.com/document/product/1759/105090)接口获取
     */
     @SerializedName("RecordId")
     @Expose
@@ -79,16 +79,16 @@ public class RateMsgRecordRequest extends AbstractModel {
     }
 
     /**
-     * Get 消息ID 【大模型回复答案的RecordID】 
-     * @return RecordId 消息ID 【大模型回复答案的RecordID】
+     * Get 消息ID 【大模型回复答案的RecordID】可以通过[GetMsgRecord](https://cloud.tencent.com/document/product/1759/105090)接口获取 
+     * @return RecordId 消息ID 【大模型回复答案的RecordID】可以通过[GetMsgRecord](https://cloud.tencent.com/document/product/1759/105090)接口获取
      */
     public String getRecordId() {
         return this.RecordId;
     }
 
     /**
-     * Set 消息ID 【大模型回复答案的RecordID】
-     * @param RecordId 消息ID 【大模型回复答案的RecordID】
+     * Set 消息ID 【大模型回复答案的RecordID】可以通过[GetMsgRecord](https://cloud.tencent.com/document/product/1759/105090)接口获取
+     * @param RecordId 消息ID 【大模型回复答案的RecordID】可以通过[GetMsgRecord](https://cloud.tencent.com/document/product/1759/105090)接口获取
      */
     public void setRecordId(String RecordId) {
         this.RecordId = RecordId;

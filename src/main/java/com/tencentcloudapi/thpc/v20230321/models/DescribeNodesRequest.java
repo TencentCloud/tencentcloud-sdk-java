@@ -31,24 +31,7 @@ public class DescribeNodesRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * <ul>
-    <li><strong>queue-name</strong>
-        <p style="padding-left: 30px;">按照【<strong>队列名称</strong>】进行过滤。队列名称形如：compute。</p>
-        <p style="padding-left: 30px;">类型：String</p>
-        <p style="padding-left: 30px;">必选：否</p>
-    </li>
-    <li><strong>node-role</strong>
-        <p style="padding-left: 30px;">按照【<strong>节点角色</strong>】进行过滤。节点角色形如：Manager。（Manager：管控节点。Compute：计算节点。Login：登录节点。ManagerBackup：备用管控节点。）</p>
-        <p style="padding-left: 30px;">类型：String</p>
-        <p style="padding-left: 30px;">必选：否</p>
-    </li>
-    <li><strong>node-type</strong>
-        <p style="padding-left: 30px;">按照【<strong>节点类型</strong>】进行过滤。节点类型形如：STATIC。(STATIC：静态节点。DYNAMIC：弹性节点。)</p>
-        <p style="padding-left: 30px;">类型：String</p>
-        <p style="padding-left: 30px;">必选：否</p>
-    </li>
-</ul>
-<p style="padding-left: 30px;">每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。</p>
+    * <ul>    <li><strong>queue-name</strong>        <p style="padding-left: 30px;">按照【<strong>队列名称</strong>】进行过滤。队列名称形如：compute。</p>        <p style="padding-left: 30px;">类型：String</p>        <p style="padding-left: 30px;">必选：否</p>    </li>    <li><strong>node-role</strong>        <p style="padding-left: 30px;">按照【<strong>节点角色</strong>】进行过滤。节点角色形如：Manager。（Manager：管控节点。Compute：计算节点。Login：登录节点。ManagerBackup：备用管控节点。）</p>        <p style="padding-left: 30px;">类型：String</p>        <p style="padding-left: 30px;">必选：否</p>    </li>    <li><strong>node-type</strong>        <p style="padding-left: 30px;">按照【<strong>节点类型</strong>】进行过滤。节点类型形如：STATIC。(STATIC：静态节点。DYNAMIC：弹性节点。)</p>        <p style="padding-left: 30px;">类型：String</p>        <p style="padding-left: 30px;">必选：否</p>    </li>  <li><strong>instance-id</strong>        <p style="padding-left: 30px;">按照【<strong>CVM实例资源ID</strong>】进行过滤。资源ID名称形如：ins-xxx。</p>        <p style="padding-left: 30px;">类型：String</p>        <p style="padding-left: 30px;">必选：否</p>    </li> </ul><p style="padding-left: 30px;">每次请求的`Filters`的上限为10，`Filter.Values`的上限为100。</p>
     */
     @SerializedName("Filters")
     @Expose
@@ -85,84 +68,16 @@ public class DescribeNodesRequest extends AbstractModel {
     }
 
     /**
-     * Get <ul>
-    <li><strong>queue-name</strong>
-        <p style="padding-left: 30px;">按照【<strong>队列名称</strong>】进行过滤。队列名称形如：compute。</p>
-        <p style="padding-left: 30px;">类型：String</p>
-        <p style="padding-left: 30px;">必选：否</p>
-    </li>
-    <li><strong>node-role</strong>
-        <p style="padding-left: 30px;">按照【<strong>节点角色</strong>】进行过滤。节点角色形如：Manager。（Manager：管控节点。Compute：计算节点。Login：登录节点。ManagerBackup：备用管控节点。）</p>
-        <p style="padding-left: 30px;">类型：String</p>
-        <p style="padding-left: 30px;">必选：否</p>
-    </li>
-    <li><strong>node-type</strong>
-        <p style="padding-left: 30px;">按照【<strong>节点类型</strong>】进行过滤。节点类型形如：STATIC。(STATIC：静态节点。DYNAMIC：弹性节点。)</p>
-        <p style="padding-left: 30px;">类型：String</p>
-        <p style="padding-left: 30px;">必选：否</p>
-    </li>
-</ul>
-<p style="padding-left: 30px;">每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。</p> 
-     * @return Filters <ul>
-    <li><strong>queue-name</strong>
-        <p style="padding-left: 30px;">按照【<strong>队列名称</strong>】进行过滤。队列名称形如：compute。</p>
-        <p style="padding-left: 30px;">类型：String</p>
-        <p style="padding-left: 30px;">必选：否</p>
-    </li>
-    <li><strong>node-role</strong>
-        <p style="padding-left: 30px;">按照【<strong>节点角色</strong>】进行过滤。节点角色形如：Manager。（Manager：管控节点。Compute：计算节点。Login：登录节点。ManagerBackup：备用管控节点。）</p>
-        <p style="padding-left: 30px;">类型：String</p>
-        <p style="padding-left: 30px;">必选：否</p>
-    </li>
-    <li><strong>node-type</strong>
-        <p style="padding-left: 30px;">按照【<strong>节点类型</strong>】进行过滤。节点类型形如：STATIC。(STATIC：静态节点。DYNAMIC：弹性节点。)</p>
-        <p style="padding-left: 30px;">类型：String</p>
-        <p style="padding-left: 30px;">必选：否</p>
-    </li>
-</ul>
-<p style="padding-left: 30px;">每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。</p>
+     * Get <ul>    <li><strong>queue-name</strong>        <p style="padding-left: 30px;">按照【<strong>队列名称</strong>】进行过滤。队列名称形如：compute。</p>        <p style="padding-left: 30px;">类型：String</p>        <p style="padding-left: 30px;">必选：否</p>    </li>    <li><strong>node-role</strong>        <p style="padding-left: 30px;">按照【<strong>节点角色</strong>】进行过滤。节点角色形如：Manager。（Manager：管控节点。Compute：计算节点。Login：登录节点。ManagerBackup：备用管控节点。）</p>        <p style="padding-left: 30px;">类型：String</p>        <p style="padding-left: 30px;">必选：否</p>    </li>    <li><strong>node-type</strong>        <p style="padding-left: 30px;">按照【<strong>节点类型</strong>】进行过滤。节点类型形如：STATIC。(STATIC：静态节点。DYNAMIC：弹性节点。)</p>        <p style="padding-left: 30px;">类型：String</p>        <p style="padding-left: 30px;">必选：否</p>    </li>  <li><strong>instance-id</strong>        <p style="padding-left: 30px;">按照【<strong>CVM实例资源ID</strong>】进行过滤。资源ID名称形如：ins-xxx。</p>        <p style="padding-left: 30px;">类型：String</p>        <p style="padding-left: 30px;">必选：否</p>    </li> </ul><p style="padding-left: 30px;">每次请求的`Filters`的上限为10，`Filter.Values`的上限为100。</p> 
+     * @return Filters <ul>    <li><strong>queue-name</strong>        <p style="padding-left: 30px;">按照【<strong>队列名称</strong>】进行过滤。队列名称形如：compute。</p>        <p style="padding-left: 30px;">类型：String</p>        <p style="padding-left: 30px;">必选：否</p>    </li>    <li><strong>node-role</strong>        <p style="padding-left: 30px;">按照【<strong>节点角色</strong>】进行过滤。节点角色形如：Manager。（Manager：管控节点。Compute：计算节点。Login：登录节点。ManagerBackup：备用管控节点。）</p>        <p style="padding-left: 30px;">类型：String</p>        <p style="padding-left: 30px;">必选：否</p>    </li>    <li><strong>node-type</strong>        <p style="padding-left: 30px;">按照【<strong>节点类型</strong>】进行过滤。节点类型形如：STATIC。(STATIC：静态节点。DYNAMIC：弹性节点。)</p>        <p style="padding-left: 30px;">类型：String</p>        <p style="padding-left: 30px;">必选：否</p>    </li>  <li><strong>instance-id</strong>        <p style="padding-left: 30px;">按照【<strong>CVM实例资源ID</strong>】进行过滤。资源ID名称形如：ins-xxx。</p>        <p style="padding-left: 30px;">类型：String</p>        <p style="padding-left: 30px;">必选：否</p>    </li> </ul><p style="padding-left: 30px;">每次请求的`Filters`的上限为10，`Filter.Values`的上限为100。</p>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set <ul>
-    <li><strong>queue-name</strong>
-        <p style="padding-left: 30px;">按照【<strong>队列名称</strong>】进行过滤。队列名称形如：compute。</p>
-        <p style="padding-left: 30px;">类型：String</p>
-        <p style="padding-left: 30px;">必选：否</p>
-    </li>
-    <li><strong>node-role</strong>
-        <p style="padding-left: 30px;">按照【<strong>节点角色</strong>】进行过滤。节点角色形如：Manager。（Manager：管控节点。Compute：计算节点。Login：登录节点。ManagerBackup：备用管控节点。）</p>
-        <p style="padding-left: 30px;">类型：String</p>
-        <p style="padding-left: 30px;">必选：否</p>
-    </li>
-    <li><strong>node-type</strong>
-        <p style="padding-left: 30px;">按照【<strong>节点类型</strong>】进行过滤。节点类型形如：STATIC。(STATIC：静态节点。DYNAMIC：弹性节点。)</p>
-        <p style="padding-left: 30px;">类型：String</p>
-        <p style="padding-left: 30px;">必选：否</p>
-    </li>
-</ul>
-<p style="padding-left: 30px;">每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。</p>
-     * @param Filters <ul>
-    <li><strong>queue-name</strong>
-        <p style="padding-left: 30px;">按照【<strong>队列名称</strong>】进行过滤。队列名称形如：compute。</p>
-        <p style="padding-left: 30px;">类型：String</p>
-        <p style="padding-left: 30px;">必选：否</p>
-    </li>
-    <li><strong>node-role</strong>
-        <p style="padding-left: 30px;">按照【<strong>节点角色</strong>】进行过滤。节点角色形如：Manager。（Manager：管控节点。Compute：计算节点。Login：登录节点。ManagerBackup：备用管控节点。）</p>
-        <p style="padding-left: 30px;">类型：String</p>
-        <p style="padding-left: 30px;">必选：否</p>
-    </li>
-    <li><strong>node-type</strong>
-        <p style="padding-left: 30px;">按照【<strong>节点类型</strong>】进行过滤。节点类型形如：STATIC。(STATIC：静态节点。DYNAMIC：弹性节点。)</p>
-        <p style="padding-left: 30px;">类型：String</p>
-        <p style="padding-left: 30px;">必选：否</p>
-    </li>
-</ul>
-<p style="padding-left: 30px;">每次请求的`Filters`的上限为10，`Filter.Values`的上限为5。</p>
+     * Set <ul>    <li><strong>queue-name</strong>        <p style="padding-left: 30px;">按照【<strong>队列名称</strong>】进行过滤。队列名称形如：compute。</p>        <p style="padding-left: 30px;">类型：String</p>        <p style="padding-left: 30px;">必选：否</p>    </li>    <li><strong>node-role</strong>        <p style="padding-left: 30px;">按照【<strong>节点角色</strong>】进行过滤。节点角色形如：Manager。（Manager：管控节点。Compute：计算节点。Login：登录节点。ManagerBackup：备用管控节点。）</p>        <p style="padding-left: 30px;">类型：String</p>        <p style="padding-left: 30px;">必选：否</p>    </li>    <li><strong>node-type</strong>        <p style="padding-left: 30px;">按照【<strong>节点类型</strong>】进行过滤。节点类型形如：STATIC。(STATIC：静态节点。DYNAMIC：弹性节点。)</p>        <p style="padding-left: 30px;">类型：String</p>        <p style="padding-left: 30px;">必选：否</p>    </li>  <li><strong>instance-id</strong>        <p style="padding-left: 30px;">按照【<strong>CVM实例资源ID</strong>】进行过滤。资源ID名称形如：ins-xxx。</p>        <p style="padding-left: 30px;">类型：String</p>        <p style="padding-left: 30px;">必选：否</p>    </li> </ul><p style="padding-left: 30px;">每次请求的`Filters`的上限为10，`Filter.Values`的上限为100。</p>
+     * @param Filters <ul>    <li><strong>queue-name</strong>        <p style="padding-left: 30px;">按照【<strong>队列名称</strong>】进行过滤。队列名称形如：compute。</p>        <p style="padding-left: 30px;">类型：String</p>        <p style="padding-left: 30px;">必选：否</p>    </li>    <li><strong>node-role</strong>        <p style="padding-left: 30px;">按照【<strong>节点角色</strong>】进行过滤。节点角色形如：Manager。（Manager：管控节点。Compute：计算节点。Login：登录节点。ManagerBackup：备用管控节点。）</p>        <p style="padding-left: 30px;">类型：String</p>        <p style="padding-left: 30px;">必选：否</p>    </li>    <li><strong>node-type</strong>        <p style="padding-left: 30px;">按照【<strong>节点类型</strong>】进行过滤。节点类型形如：STATIC。(STATIC：静态节点。DYNAMIC：弹性节点。)</p>        <p style="padding-left: 30px;">类型：String</p>        <p style="padding-left: 30px;">必选：否</p>    </li>  <li><strong>instance-id</strong>        <p style="padding-left: 30px;">按照【<strong>CVM实例资源ID</strong>】进行过滤。资源ID名称形如：ins-xxx。</p>        <p style="padding-left: 30px;">类型：String</p>        <p style="padding-left: 30px;">必选：否</p>    </li> </ul><p style="padding-left: 30px;">每次请求的`Filters`的上限为10，`Filter.Values`的上限为100。</p>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

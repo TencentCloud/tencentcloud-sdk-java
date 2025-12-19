@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ListWorkflowRunsRequest extends AbstractModel {
 
     /**
-    * 应用ID
+    * 应用ID, 获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
     */
     @SerializedName("AppBizId")
     @Expose
     private String AppBizId;
 
     /**
-    * 每页数量
+    * 每页数量(取值范围1-200)
     */
     @SerializedName("PageSize")
     @Expose
@@ -45,7 +45,7 @@ public class ListWorkflowRunsRequest extends AbstractModel {
     private Long RunEnv;
 
     /**
-    * 页码
+    * 页码(必须大于0)
     */
     @SerializedName("Page")
     @Expose
@@ -66,32 +66,32 @@ public class ListWorkflowRunsRequest extends AbstractModel {
     private String LoginSubAccountUin;
 
     /**
-     * Get 应用ID 
-     * @return AppBizId 应用ID
+     * Get 应用ID, 获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa) 
+     * @return AppBizId 应用ID, 获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      */
     public String getAppBizId() {
         return this.AppBizId;
     }
 
     /**
-     * Set 应用ID
-     * @param AppBizId 应用ID
+     * Set 应用ID, 获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+     * @param AppBizId 应用ID, 获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      */
     public void setAppBizId(String AppBizId) {
         this.AppBizId = AppBizId;
     }
 
     /**
-     * Get 每页数量 
-     * @return PageSize 每页数量
+     * Get 每页数量(取值范围1-200) 
+     * @return PageSize 每页数量(取值范围1-200)
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 每页数量
-     * @param PageSize 每页数量
+     * Set 每页数量(取值范围1-200)
+     * @param PageSize 每页数量(取值范围1-200)
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
@@ -114,16 +114,16 @@ public class ListWorkflowRunsRequest extends AbstractModel {
     }
 
     /**
-     * Get 页码 
-     * @return Page 页码
+     * Get 页码(必须大于0) 
+     * @return Page 页码(必须大于0)
      */
     public Long getPage() {
         return this.Page;
     }
 
     /**
-     * Set 页码
-     * @param Page 页码
+     * Set 页码(必须大于0)
+     * @param Page 页码(必须大于0)
      */
     public void setPage(Long Page) {
         this.Page = Page;

@@ -798,6 +798,17 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
+     *获取防护阈值配置列表，包括DDoS的AI、等级、CC阈值开关等等
+     * @param req DescribeListProtectThresholdConfigNewRequest
+     * @return DescribeListProtectThresholdConfigNewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeListProtectThresholdConfigNewResponse DescribeListProtectThresholdConfigNew(DescribeListProtectThresholdConfigNewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeListProtectThresholdConfigNew", DescribeListProtectThresholdConfigNewResponse.class);
+    }
+
+    /**
      *获取DDoS防护的协议封禁配置列表
      * @param req DescribeListProtocolBlockConfigRequest
      * @return DescribeListProtocolBlockConfigResponse

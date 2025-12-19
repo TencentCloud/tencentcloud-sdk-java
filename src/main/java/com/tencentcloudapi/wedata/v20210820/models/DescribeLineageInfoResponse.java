@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.weilingwith.v20230427.models;
+package com.tencentcloudapi.wedata.v20210820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,15 +21,15 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCityWorkspaceListResponse extends AbstractModel {
+public class DescribeLineageInfoResponse extends AbstractModel {
 
     /**
-    * 工作空间信息集合
+    * 血缘信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Result")
+    @SerializedName("Data")
     @Expose
-    private DescribeCityWorkspaceListRes Result;
+    private LineageCommonInfoVO Data;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -39,23 +39,23 @@ public class DescribeCityWorkspaceListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 工作空间信息集合
+     * Get 血缘信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Result 工作空间信息集合
+     * @return Data 血缘信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public DescribeCityWorkspaceListRes getResult() {
-        return this.Result;
+    public LineageCommonInfoVO getData() {
+        return this.Data;
     }
 
     /**
-     * Set 工作空间信息集合
+     * Set 血缘信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Result 工作空间信息集合
+     * @param Data 血缘信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setResult(DescribeCityWorkspaceListRes Result) {
-        this.Result = Result;
+    public void setData(LineageCommonInfoVO Data) {
+        this.Data = Data;
     }
 
     /**
@@ -74,16 +74,16 @@ public class DescribeCityWorkspaceListResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeCityWorkspaceListResponse() {
+    public DescribeLineageInfoResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeCityWorkspaceListResponse(DescribeCityWorkspaceListResponse source) {
-        if (source.Result != null) {
-            this.Result = new DescribeCityWorkspaceListRes(source.Result);
+    public DescribeLineageInfoResponse(DescribeLineageInfoResponse source) {
+        if (source.Data != null) {
+            this.Data = new LineageCommonInfoVO(source.Data);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -95,7 +95,7 @@ public class DescribeCityWorkspaceListResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Result.", this.Result);
+        this.setParamObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

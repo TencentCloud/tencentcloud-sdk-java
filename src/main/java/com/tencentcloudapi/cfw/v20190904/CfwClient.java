@@ -248,7 +248,9 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
-     *全部删除规则
+     *业务废弃
+
+全部删除规则
      * @param req DeleteAllAccessControlRuleRequest
      * @return DeleteAllAccessControlRuleResponse
      * @throws TencentCloudSDKException

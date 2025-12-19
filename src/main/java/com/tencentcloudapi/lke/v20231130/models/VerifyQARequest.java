@@ -52,6 +52,13 @@ public class VerifyQARequest extends AbstractModel {
     private String LoginSubAccountUin;
 
     /**
+    * 用于操作共享知识库
+    */
+    @SerializedName("KnowledgeBizId")
+    @Expose
+    private String KnowledgeBizId;
+
+    /**
      * Get 问答列表 
      * @return List 问答列表
      */
@@ -115,6 +122,22 @@ public class VerifyQARequest extends AbstractModel {
         this.LoginSubAccountUin = LoginSubAccountUin;
     }
 
+    /**
+     * Get 用于操作共享知识库 
+     * @return KnowledgeBizId 用于操作共享知识库
+     */
+    public String getKnowledgeBizId() {
+        return this.KnowledgeBizId;
+    }
+
+    /**
+     * Set 用于操作共享知识库
+     * @param KnowledgeBizId 用于操作共享知识库
+     */
+    public void setKnowledgeBizId(String KnowledgeBizId) {
+        this.KnowledgeBizId = KnowledgeBizId;
+    }
+
     public VerifyQARequest() {
     }
 
@@ -138,6 +161,9 @@ public class VerifyQARequest extends AbstractModel {
         if (source.LoginSubAccountUin != null) {
             this.LoginSubAccountUin = new String(source.LoginSubAccountUin);
         }
+        if (source.KnowledgeBizId != null) {
+            this.KnowledgeBizId = new String(source.KnowledgeBizId);
+        }
     }
 
 
@@ -149,6 +175,7 @@ public class VerifyQARequest extends AbstractModel {
         this.setParamSimple(map, prefix + "BotBizId", this.BotBizId);
         this.setParamSimple(map, prefix + "LoginUin", this.LoginUin);
         this.setParamSimple(map, prefix + "LoginSubAccountUin", this.LoginSubAccountUin);
+        this.setParamSimple(map, prefix + "KnowledgeBizId", this.KnowledgeBizId);
 
     }
 }

@@ -270,19 +270,6 @@ public class WeilingwithClient extends AbstractClient{
     }
 
     /**
-     *老微瓴后续不继续更新
-
-通过城市id查询工作空间列表
-     * @param req DescribeCityWorkspaceListRequest
-     * @return DescribeCityWorkspaceListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeCityWorkspaceListResponse DescribeCityWorkspaceList(DescribeCityWorkspaceListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeCityWorkspaceList", DescribeCityWorkspaceListResponse.class);
-    }
-
-    /**
      *设备分组列表
      * @param req DescribeDeviceGroupListRequest
      * @return DescribeDeviceGroupListResponse

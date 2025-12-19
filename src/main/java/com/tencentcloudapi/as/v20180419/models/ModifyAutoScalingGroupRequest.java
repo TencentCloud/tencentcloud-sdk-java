@@ -213,6 +213,20 @@ public class ModifyAutoScalingGroupRequest extends AbstractModel {
     private InstanceNameIndexSettings InstanceNameIndexSettings;
 
     /**
+    * 实例主机名序号相关设置。开启后为伸缩组内自动创建的实例主机名添加递增的数字序号。
+    */
+    @SerializedName("HostNameIndexSettings")
+    @Expose
+    private HostNameIndexSettings HostNameIndexSettings;
+
+    /**
+    * 匹配期望数并发扩容功能，不能在InstanceAllocationPolicy为竞价混合模式时设置，也不能在ScalingMode为扩容优先开机模式时设置。目前仅支持两个匹配期望数扩容活动并发进行，不支持指定数量扩容、缩容等其他类型活动并发。设置为FALSE表示不开启。
+    */
+    @SerializedName("ConcurrentScaleOutForDesiredCapacity")
+    @Expose
+    private Boolean ConcurrentScaleOutForDesiredCapacity;
+
+    /**
      * Get 伸缩组ID。可以通过如下方式获取可用的伸缩组ID:
 <li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li>
 <li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li> 
@@ -692,6 +706,38 @@ public class ModifyAutoScalingGroupRequest extends AbstractModel {
         this.InstanceNameIndexSettings = InstanceNameIndexSettings;
     }
 
+    /**
+     * Get 实例主机名序号相关设置。开启后为伸缩组内自动创建的实例主机名添加递增的数字序号。 
+     * @return HostNameIndexSettings 实例主机名序号相关设置。开启后为伸缩组内自动创建的实例主机名添加递增的数字序号。
+     */
+    public HostNameIndexSettings getHostNameIndexSettings() {
+        return this.HostNameIndexSettings;
+    }
+
+    /**
+     * Set 实例主机名序号相关设置。开启后为伸缩组内自动创建的实例主机名添加递增的数字序号。
+     * @param HostNameIndexSettings 实例主机名序号相关设置。开启后为伸缩组内自动创建的实例主机名添加递增的数字序号。
+     */
+    public void setHostNameIndexSettings(HostNameIndexSettings HostNameIndexSettings) {
+        this.HostNameIndexSettings = HostNameIndexSettings;
+    }
+
+    /**
+     * Get 匹配期望数并发扩容功能，不能在InstanceAllocationPolicy为竞价混合模式时设置，也不能在ScalingMode为扩容优先开机模式时设置。目前仅支持两个匹配期望数扩容活动并发进行，不支持指定数量扩容、缩容等其他类型活动并发。设置为FALSE表示不开启。 
+     * @return ConcurrentScaleOutForDesiredCapacity 匹配期望数并发扩容功能，不能在InstanceAllocationPolicy为竞价混合模式时设置，也不能在ScalingMode为扩容优先开机模式时设置。目前仅支持两个匹配期望数扩容活动并发进行，不支持指定数量扩容、缩容等其他类型活动并发。设置为FALSE表示不开启。
+     */
+    public Boolean getConcurrentScaleOutForDesiredCapacity() {
+        return this.ConcurrentScaleOutForDesiredCapacity;
+    }
+
+    /**
+     * Set 匹配期望数并发扩容功能，不能在InstanceAllocationPolicy为竞价混合模式时设置，也不能在ScalingMode为扩容优先开机模式时设置。目前仅支持两个匹配期望数扩容活动并发进行，不支持指定数量扩容、缩容等其他类型活动并发。设置为FALSE表示不开启。
+     * @param ConcurrentScaleOutForDesiredCapacity 匹配期望数并发扩容功能，不能在InstanceAllocationPolicy为竞价混合模式时设置，也不能在ScalingMode为扩容优先开机模式时设置。目前仅支持两个匹配期望数扩容活动并发进行，不支持指定数量扩容、缩容等其他类型活动并发。设置为FALSE表示不开启。
+     */
+    public void setConcurrentScaleOutForDesiredCapacity(Boolean ConcurrentScaleOutForDesiredCapacity) {
+        this.ConcurrentScaleOutForDesiredCapacity = ConcurrentScaleOutForDesiredCapacity;
+    }
+
     public ModifyAutoScalingGroupRequest() {
     }
 
@@ -778,6 +824,12 @@ public class ModifyAutoScalingGroupRequest extends AbstractModel {
         if (source.InstanceNameIndexSettings != null) {
             this.InstanceNameIndexSettings = new InstanceNameIndexSettings(source.InstanceNameIndexSettings);
         }
+        if (source.HostNameIndexSettings != null) {
+            this.HostNameIndexSettings = new HostNameIndexSettings(source.HostNameIndexSettings);
+        }
+        if (source.ConcurrentScaleOutForDesiredCapacity != null) {
+            this.ConcurrentScaleOutForDesiredCapacity = new Boolean(source.ConcurrentScaleOutForDesiredCapacity);
+        }
     }
 
 
@@ -808,6 +860,8 @@ public class ModifyAutoScalingGroupRequest extends AbstractModel {
         this.setParamObj(map, prefix + "SpotMixedAllocationPolicy.", this.SpotMixedAllocationPolicy);
         this.setParamSimple(map, prefix + "CapacityRebalance", this.CapacityRebalance);
         this.setParamObj(map, prefix + "InstanceNameIndexSettings.", this.InstanceNameIndexSettings);
+        this.setParamObj(map, prefix + "HostNameIndexSettings.", this.HostNameIndexSettings);
+        this.setParamSimple(map, prefix + "ConcurrentScaleOutForDesiredCapacity", this.ConcurrentScaleOutForDesiredCapacity);
 
     }
 }

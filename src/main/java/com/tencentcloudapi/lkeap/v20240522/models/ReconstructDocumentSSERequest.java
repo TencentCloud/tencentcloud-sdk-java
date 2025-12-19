@@ -61,9 +61,7 @@ public class ReconstructDocumentSSERequest extends AbstractModel {
     private Long FileStartPageNumber;
 
     /**
-    * 说明：文档的结束页码。
-备注：当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值。
-默认值：无
+    * 说明：文档的结束页码。备注：当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值，文档页码大于100页建议使用异步解析接入。默认值：无
     */
     @SerializedName("FileEndPageNumber")
     @Expose
@@ -180,24 +178,16 @@ public class ReconstructDocumentSSERequest extends AbstractModel {
     }
 
     /**
-     * Get 说明：文档的结束页码。
-备注：当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值。
-默认值：无 
-     * @return FileEndPageNumber 说明：文档的结束页码。
-备注：当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值。
-默认值：无
+     * Get 说明：文档的结束页码。备注：当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值，文档页码大于100页建议使用异步解析接入。默认值：无 
+     * @return FileEndPageNumber 说明：文档的结束页码。备注：当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值，文档页码大于100页建议使用异步解析接入。默认值：无
      */
     public Long getFileEndPageNumber() {
         return this.FileEndPageNumber;
     }
 
     /**
-     * Set 说明：文档的结束页码。
-备注：当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值。
-默认值：无
-     * @param FileEndPageNumber 说明：文档的结束页码。
-备注：当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值。
-默认值：无
+     * Set 说明：文档的结束页码。备注：当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值，文档页码大于100页建议使用异步解析接入。默认值：无
+     * @param FileEndPageNumber 说明：文档的结束页码。备注：当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值，文档页码大于100页建议使用异步解析接入。默认值：无
      */
     public void setFileEndPageNumber(Long FileEndPageNumber) {
         this.FileEndPageNumber = FileEndPageNumber;

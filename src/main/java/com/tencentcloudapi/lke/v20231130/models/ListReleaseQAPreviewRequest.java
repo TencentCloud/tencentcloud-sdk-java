@@ -24,207 +24,207 @@ import java.util.HashMap;
 public class ListReleaseQAPreviewRequest extends AbstractModel {
 
     /**
-    * 应用ID
+    * 应用ID（获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)）
     */
     @SerializedName("BotBizId")
     @Expose
     private String BotBizId;
 
     /**
-    * 页码
+    * 页码（必须大于0）
     */
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
 
     /**
-    * 每页数量
+    * 每页数量（取值范围为1-200）
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 查询内容
+    * 查询内容关键字，用于模糊查询，若未提供该参数，默认为查询全部。
     */
     @SerializedName("Query")
     @Expose
     private String Query;
 
     /**
-    * 发布单ID
+    * 发布单ID（可以通过[ListRelease](https://cloud.tencent.com/document/product/1759/105077)获得）
     */
     @SerializedName("ReleaseBizId")
     @Expose
     private String ReleaseBizId;
 
     /**
-    * 开始时间
+    * 开始时间。Unix 时间戳，单位是秒，默认为空。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间
+    * 结束时间。Unix 时间戳，单位是秒，默认为空。
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 状态(1新增2修改3删除)
+    * 状态(1新增2修改3删除)，其和ReleaseStatus的区别为：Actions表示的是对数据/内容的操作状态，ReleaseStatus表示数据/内容本身的发布状态
     */
     @SerializedName("Actions")
     @Expose
     private Long [] Actions;
 
     /**
-    * 发布状态(4发布成功5发布失败)
+    * 发布状态(4发布成功5发布失败)。其和Actions的区别为：Actions表示的是对数据/内容的操作状态，ReleaseStatus表示数据/内容本身的发布状态
     */
     @SerializedName("ReleaseStatus")
     @Expose
     private Long [] ReleaseStatus;
 
     /**
-     * Get 应用ID 
-     * @return BotBizId 应用ID
+     * Get 应用ID（获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)） 
+     * @return BotBizId 应用ID（获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)）
      */
     public String getBotBizId() {
         return this.BotBizId;
     }
 
     /**
-     * Set 应用ID
-     * @param BotBizId 应用ID
+     * Set 应用ID（获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)）
+     * @param BotBizId 应用ID（获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)）
      */
     public void setBotBizId(String BotBizId) {
         this.BotBizId = BotBizId;
     }
 
     /**
-     * Get 页码 
-     * @return PageNumber 页码
+     * Get 页码（必须大于0） 
+     * @return PageNumber 页码（必须大于0）
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set 页码
-     * @param PageNumber 页码
+     * Set 页码（必须大于0）
+     * @param PageNumber 页码（必须大于0）
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 每页数量 
-     * @return PageSize 每页数量
+     * Get 每页数量（取值范围为1-200） 
+     * @return PageSize 每页数量（取值范围为1-200）
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 每页数量
-     * @param PageSize 每页数量
+     * Set 每页数量（取值范围为1-200）
+     * @param PageSize 每页数量（取值范围为1-200）
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 查询内容 
-     * @return Query 查询内容
+     * Get 查询内容关键字，用于模糊查询，若未提供该参数，默认为查询全部。 
+     * @return Query 查询内容关键字，用于模糊查询，若未提供该参数，默认为查询全部。
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set 查询内容
-     * @param Query 查询内容
+     * Set 查询内容关键字，用于模糊查询，若未提供该参数，默认为查询全部。
+     * @param Query 查询内容关键字，用于模糊查询，若未提供该参数，默认为查询全部。
      */
     public void setQuery(String Query) {
         this.Query = Query;
     }
 
     /**
-     * Get 发布单ID 
-     * @return ReleaseBizId 发布单ID
+     * Get 发布单ID（可以通过[ListRelease](https://cloud.tencent.com/document/product/1759/105077)获得） 
+     * @return ReleaseBizId 发布单ID（可以通过[ListRelease](https://cloud.tencent.com/document/product/1759/105077)获得）
      */
     public String getReleaseBizId() {
         return this.ReleaseBizId;
     }
 
     /**
-     * Set 发布单ID
-     * @param ReleaseBizId 发布单ID
+     * Set 发布单ID（可以通过[ListRelease](https://cloud.tencent.com/document/product/1759/105077)获得）
+     * @param ReleaseBizId 发布单ID（可以通过[ListRelease](https://cloud.tencent.com/document/product/1759/105077)获得）
      */
     public void setReleaseBizId(String ReleaseBizId) {
         this.ReleaseBizId = ReleaseBizId;
     }
 
     /**
-     * Get 开始时间 
-     * @return StartTime 开始时间
+     * Get 开始时间。Unix 时间戳，单位是秒，默认为空。 
+     * @return StartTime 开始时间。Unix 时间戳，单位是秒，默认为空。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间
-     * @param StartTime 开始时间
+     * Set 开始时间。Unix 时间戳，单位是秒，默认为空。
+     * @param StartTime 开始时间。Unix 时间戳，单位是秒，默认为空。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
+     * Get 结束时间。Unix 时间戳，单位是秒，默认为空。 
+     * @return EndTime 结束时间。Unix 时间戳，单位是秒，默认为空。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTime 结束时间
+     * Set 结束时间。Unix 时间戳，单位是秒，默认为空。
+     * @param EndTime 结束时间。Unix 时间戳，单位是秒，默认为空。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 状态(1新增2修改3删除) 
-     * @return Actions 状态(1新增2修改3删除)
+     * Get 状态(1新增2修改3删除)，其和ReleaseStatus的区别为：Actions表示的是对数据/内容的操作状态，ReleaseStatus表示数据/内容本身的发布状态 
+     * @return Actions 状态(1新增2修改3删除)，其和ReleaseStatus的区别为：Actions表示的是对数据/内容的操作状态，ReleaseStatus表示数据/内容本身的发布状态
      */
     public Long [] getActions() {
         return this.Actions;
     }
 
     /**
-     * Set 状态(1新增2修改3删除)
-     * @param Actions 状态(1新增2修改3删除)
+     * Set 状态(1新增2修改3删除)，其和ReleaseStatus的区别为：Actions表示的是对数据/内容的操作状态，ReleaseStatus表示数据/内容本身的发布状态
+     * @param Actions 状态(1新增2修改3删除)，其和ReleaseStatus的区别为：Actions表示的是对数据/内容的操作状态，ReleaseStatus表示数据/内容本身的发布状态
      */
     public void setActions(Long [] Actions) {
         this.Actions = Actions;
     }
 
     /**
-     * Get 发布状态(4发布成功5发布失败) 
-     * @return ReleaseStatus 发布状态(4发布成功5发布失败)
+     * Get 发布状态(4发布成功5发布失败)。其和Actions的区别为：Actions表示的是对数据/内容的操作状态，ReleaseStatus表示数据/内容本身的发布状态 
+     * @return ReleaseStatus 发布状态(4发布成功5发布失败)。其和Actions的区别为：Actions表示的是对数据/内容的操作状态，ReleaseStatus表示数据/内容本身的发布状态
      */
     public Long [] getReleaseStatus() {
         return this.ReleaseStatus;
     }
 
     /**
-     * Set 发布状态(4发布成功5发布失败)
-     * @param ReleaseStatus 发布状态(4发布成功5发布失败)
+     * Set 发布状态(4发布成功5发布失败)。其和Actions的区别为：Actions表示的是对数据/内容的操作状态，ReleaseStatus表示数据/内容本身的发布状态
+     * @param ReleaseStatus 发布状态(4发布成功5发布失败)。其和Actions的区别为：Actions表示的是对数据/内容的操作状态，ReleaseStatus表示数据/内容本身的发布状态
      */
     public void setReleaseStatus(Long [] ReleaseStatus) {
         this.ReleaseStatus = ReleaseStatus;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ListChannelRequest extends AbstractModel {
 
     /**
-    * 应用ID
+    * 应用ID（获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)）
     */
     @SerializedName("AppBizId")
     @Expose
@@ -38,44 +38,44 @@ public class ListChannelRequest extends AbstractModel {
     private String BotBizId;
 
     /**
-    * 页码
+    * 页码（必须大于0）
     */
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
 
     /**
-    * 分页数量
+    * 分页数量（取值范围为1-200）
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 渠道类型, 10000: 微信订阅号，10001: 微信服务号，10002：企微应用，10004：微信客服，10005：小程序，10009：企微智能机器人 
+    * 渠道类型, 10000: 微信订阅号，10001: 微信服务号，10002：企微应用，10004：微信客服，10005：小程序，10009：企微智能机器人 。（默认为[]）
     */
     @SerializedName("ChannelType")
     @Expose
     private Long [] ChannelType;
 
     /**
-    * 渠道状态 1未发布 2运行中 3已下线
+    * 渠道状态 1未发布 2运行中 3已下线 （默认为[]）
     */
     @SerializedName("ChannelStatus")
     @Expose
     private Long [] ChannelStatus;
 
     /**
-     * Get 应用ID 
-     * @return AppBizId 应用ID
+     * Get 应用ID（获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)） 
+     * @return AppBizId 应用ID（获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)）
      */
     public String getAppBizId() {
         return this.AppBizId;
     }
 
     /**
-     * Set 应用ID
-     * @param AppBizId 应用ID
+     * Set 应用ID（获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)）
+     * @param AppBizId 应用ID（获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)）
      */
     public void setAppBizId(String AppBizId) {
         this.AppBizId = AppBizId;
@@ -102,64 +102,64 @@ public class ListChannelRequest extends AbstractModel {
     }
 
     /**
-     * Get 页码 
-     * @return PageNumber 页码
+     * Get 页码（必须大于0） 
+     * @return PageNumber 页码（必须大于0）
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set 页码
-     * @param PageNumber 页码
+     * Set 页码（必须大于0）
+     * @param PageNumber 页码（必须大于0）
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 分页数量 
-     * @return PageSize 分页数量
+     * Get 分页数量（取值范围为1-200） 
+     * @return PageSize 分页数量（取值范围为1-200）
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 分页数量
-     * @param PageSize 分页数量
+     * Set 分页数量（取值范围为1-200）
+     * @param PageSize 分页数量（取值范围为1-200）
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 渠道类型, 10000: 微信订阅号，10001: 微信服务号，10002：企微应用，10004：微信客服，10005：小程序，10009：企微智能机器人  
-     * @return ChannelType 渠道类型, 10000: 微信订阅号，10001: 微信服务号，10002：企微应用，10004：微信客服，10005：小程序，10009：企微智能机器人 
+     * Get 渠道类型, 10000: 微信订阅号，10001: 微信服务号，10002：企微应用，10004：微信客服，10005：小程序，10009：企微智能机器人 。（默认为[]） 
+     * @return ChannelType 渠道类型, 10000: 微信订阅号，10001: 微信服务号，10002：企微应用，10004：微信客服，10005：小程序，10009：企微智能机器人 。（默认为[]）
      */
     public Long [] getChannelType() {
         return this.ChannelType;
     }
 
     /**
-     * Set 渠道类型, 10000: 微信订阅号，10001: 微信服务号，10002：企微应用，10004：微信客服，10005：小程序，10009：企微智能机器人 
-     * @param ChannelType 渠道类型, 10000: 微信订阅号，10001: 微信服务号，10002：企微应用，10004：微信客服，10005：小程序，10009：企微智能机器人 
+     * Set 渠道类型, 10000: 微信订阅号，10001: 微信服务号，10002：企微应用，10004：微信客服，10005：小程序，10009：企微智能机器人 。（默认为[]）
+     * @param ChannelType 渠道类型, 10000: 微信订阅号，10001: 微信服务号，10002：企微应用，10004：微信客服，10005：小程序，10009：企微智能机器人 。（默认为[]）
      */
     public void setChannelType(Long [] ChannelType) {
         this.ChannelType = ChannelType;
     }
 
     /**
-     * Get 渠道状态 1未发布 2运行中 3已下线 
-     * @return ChannelStatus 渠道状态 1未发布 2运行中 3已下线
+     * Get 渠道状态 1未发布 2运行中 3已下线 （默认为[]） 
+     * @return ChannelStatus 渠道状态 1未发布 2运行中 3已下线 （默认为[]）
      */
     public Long [] getChannelStatus() {
         return this.ChannelStatus;
     }
 
     /**
-     * Set 渠道状态 1未发布 2运行中 3已下线
-     * @param ChannelStatus 渠道状态 1未发布 2运行中 3已下线
+     * Set 渠道状态 1未发布 2运行中 3已下线 （默认为[]）
+     * @param ChannelStatus 渠道状态 1未发布 2运行中 3已下线 （默认为[]）
      */
     public void setChannelStatus(Long [] ChannelStatus) {
         this.ChannelStatus = ChannelStatus;

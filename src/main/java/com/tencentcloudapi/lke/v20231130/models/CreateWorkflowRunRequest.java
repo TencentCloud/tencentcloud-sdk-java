@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateWorkflowRunRequest extends AbstractModel {
 
     /**
-    * 应用ID
+    * 应用ID, 获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
     */
     @SerializedName("AppBizId")
     @Expose
@@ -52,16 +52,16 @@ public class CreateWorkflowRunRequest extends AbstractModel {
     private CustomVariable [] CustomVariables;
 
     /**
-     * Get 应用ID 
-     * @return AppBizId 应用ID
+     * Get 应用ID, 获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa) 
+     * @return AppBizId 应用ID, 获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      */
     public String getAppBizId() {
         return this.AppBizId;
     }
 
     /**
-     * Set 应用ID
-     * @param AppBizId 应用ID
+     * Set 应用ID, 获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+     * @param AppBizId 应用ID, 获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      */
     public void setAppBizId(String AppBizId) {
         this.AppBizId = AppBizId;

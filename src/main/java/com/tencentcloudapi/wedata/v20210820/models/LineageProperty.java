@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.mongodb.v20190725.models;
+package com.tencentcloudapi.wedata.v20210820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,85 +21,77 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Filters extends AbstractModel {
+public class LineageProperty extends AbstractModel {
 
     /**
-    * 搜索字段，目前支持：
-"InstanceId"：实例Id，例如：cmgo-****
-"InstanceName"：实例名称
-"ClusterId"：实例组Id，例如：cmgo-****
+    * 属性名称
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 筛选值
+    * 属性值
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Values")
+    @SerializedName("Value")
     @Expose
-    private String [] Values;
+    private String Value;
 
     /**
-     * Get 搜索字段，目前支持：
-"InstanceId"：实例Id，例如：cmgo-****
-"InstanceName"：实例名称
-"ClusterId"：实例组Id，例如：cmgo-**** 
-     * @return Name 搜索字段，目前支持：
-"InstanceId"：实例Id，例如：cmgo-****
-"InstanceName"：实例名称
-"ClusterId"：实例组Id，例如：cmgo-****
+     * Get 属性名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Name 属性名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 搜索字段，目前支持：
-"InstanceId"：实例Id，例如：cmgo-****
-"InstanceName"：实例名称
-"ClusterId"：实例组Id，例如：cmgo-****
-     * @param Name 搜索字段，目前支持：
-"InstanceId"：实例Id，例如：cmgo-****
-"InstanceName"：实例名称
-"ClusterId"：实例组Id，例如：cmgo-****
+     * Set 属性名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Name 属性名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 筛选值 
-     * @return Values 筛选值
+     * Get 属性值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Value 属性值
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String [] getValues() {
-        return this.Values;
+    public String getValue() {
+        return this.Value;
     }
 
     /**
-     * Set 筛选值
-     * @param Values 筛选值
+     * Set 属性值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Value 属性值
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setValues(String [] Values) {
-        this.Values = Values;
+    public void setValue(String Value) {
+        this.Value = Value;
     }
 
-    public Filters() {
+    public LineageProperty() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public Filters(Filters source) {
+    public LineageProperty(LineageProperty source) {
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
-        if (source.Values != null) {
-            this.Values = new String[source.Values.length];
-            for (int i = 0; i < source.Values.length; i++) {
-                this.Values[i] = new String(source.Values[i]);
-            }
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
         }
     }
 
@@ -109,7 +101,7 @@ public class Filters extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamArraySimple(map, prefix + "Values.", this.Values);
+        this.setParamSimple(map, prefix + "Value", this.Value);
 
     }
 }

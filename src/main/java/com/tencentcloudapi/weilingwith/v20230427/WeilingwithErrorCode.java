@@ -102,9 +102,6 @@ public enum WeilingwithErrorCode {
      /* 参数取值错误。 */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-     /* 行政区编码长度为0 */
-     INVALIDPARAMETERVALUE_EMPTYADMINISTRATIVECODE("InvalidParameterValue.EmptyAdministrativeCode"),
-     
      /* 告警状态无效 */
      INVALIDPARAMETERVALUE_INVALIDALARMSTATUS("InvalidParameterValue.InvalidAlarmStatus"),
      

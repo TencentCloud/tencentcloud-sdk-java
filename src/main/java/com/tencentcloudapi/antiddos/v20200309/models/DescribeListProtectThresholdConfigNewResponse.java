@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.weilingwith.v20230427.models;
+package com.tencentcloudapi.antiddos.v20200309.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVideoRecordStreamResponse extends AbstractModel {
+public class DescribeListProtectThresholdConfigNewResponse extends AbstractModel {
 
     /**
-    * 获取历史流结果
+    * 总记录数
     */
-    @SerializedName("Result")
+    @SerializedName("Total")
     @Expose
-    private VideoRecordStreamRes Result;
+    private Long Total;
+
+    /**
+    * 防护阈值配置列表
+    */
+    @SerializedName("ConfigList")
+    @Expose
+    private ProtectThresholdRelationNew [] ConfigList;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +45,35 @@ public class DescribeVideoRecordStreamResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 获取历史流结果 
-     * @return Result 获取历史流结果
+     * Get 总记录数 
+     * @return Total 总记录数
      */
-    public VideoRecordStreamRes getResult() {
-        return this.Result;
+    public Long getTotal() {
+        return this.Total;
     }
 
     /**
-     * Set 获取历史流结果
-     * @param Result 获取历史流结果
+     * Set 总记录数
+     * @param Total 总记录数
      */
-    public void setResult(VideoRecordStreamRes Result) {
-        this.Result = Result;
+    public void setTotal(Long Total) {
+        this.Total = Total;
+    }
+
+    /**
+     * Get 防护阈值配置列表 
+     * @return ConfigList 防护阈值配置列表
+     */
+    public ProtectThresholdRelationNew [] getConfigList() {
+        return this.ConfigList;
+    }
+
+    /**
+     * Set 防护阈值配置列表
+     * @param ConfigList 防护阈值配置列表
+     */
+    public void setConfigList(ProtectThresholdRelationNew [] ConfigList) {
+        this.ConfigList = ConfigList;
     }
 
     /**
@@ -69,16 +92,22 @@ public class DescribeVideoRecordStreamResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeVideoRecordStreamResponse() {
+    public DescribeListProtectThresholdConfigNewResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeVideoRecordStreamResponse(DescribeVideoRecordStreamResponse source) {
-        if (source.Result != null) {
-            this.Result = new VideoRecordStreamRes(source.Result);
+    public DescribeListProtectThresholdConfigNewResponse(DescribeListProtectThresholdConfigNewResponse source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.ConfigList != null) {
+            this.ConfigList = new ProtectThresholdRelationNew[source.ConfigList.length];
+            for (int i = 0; i < source.ConfigList.length; i++) {
+                this.ConfigList[i] = new ProtectThresholdRelationNew(source.ConfigList[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +119,8 @@ public class DescribeVideoRecordStreamResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Result.", this.Result);
+        this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamArrayObj(map, prefix + "ConfigList.", this.ConfigList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

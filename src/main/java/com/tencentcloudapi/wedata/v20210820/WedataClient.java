@@ -1403,6 +1403,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *通用血缘查询接口
+     * @param req DescribeLineageInfoRequest
+     * @return DescribeLineageInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLineageInfoResponse DescribeLineageInfo(DescribeLineageInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLineageInfo", DescribeLineageInfoResponse.class);
+    }
+
+    /**
      *查询手动任务触发记录
      * @param req DescribeManualTriggerRecordPageRequest
      * @return DescribeManualTriggerRecordPageResponse

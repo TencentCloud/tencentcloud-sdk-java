@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.weilingwith.v20230427.models;
+package com.tencentcloudapi.dataagent.v20250513.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVideoRecordStreamResponse extends AbstractModel {
+public class GetJobsByKnowledgeBaseIdResponse extends AbstractModel {
 
     /**
-    * 获取历史流结果
+    * 任务列表详情
     */
-    @SerializedName("Result")
+    @SerializedName("Jobs")
     @Expose
-    private VideoRecordStreamRes Result;
+    private UploadJob [] Jobs;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +38,19 @@ public class DescribeVideoRecordStreamResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 获取历史流结果 
-     * @return Result 获取历史流结果
+     * Get 任务列表详情 
+     * @return Jobs 任务列表详情
      */
-    public VideoRecordStreamRes getResult() {
-        return this.Result;
+    public UploadJob [] getJobs() {
+        return this.Jobs;
     }
 
     /**
-     * Set 获取历史流结果
-     * @param Result 获取历史流结果
+     * Set 任务列表详情
+     * @param Jobs 任务列表详情
      */
-    public void setResult(VideoRecordStreamRes Result) {
-        this.Result = Result;
+    public void setJobs(UploadJob [] Jobs) {
+        this.Jobs = Jobs;
     }
 
     /**
@@ -69,16 +69,19 @@ public class DescribeVideoRecordStreamResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeVideoRecordStreamResponse() {
+    public GetJobsByKnowledgeBaseIdResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeVideoRecordStreamResponse(DescribeVideoRecordStreamResponse source) {
-        if (source.Result != null) {
-            this.Result = new VideoRecordStreamRes(source.Result);
+    public GetJobsByKnowledgeBaseIdResponse(GetJobsByKnowledgeBaseIdResponse source) {
+        if (source.Jobs != null) {
+            this.Jobs = new UploadJob[source.Jobs.length];
+            for (int i = 0; i < source.Jobs.length; i++) {
+                this.Jobs[i] = new UploadJob(source.Jobs[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +93,7 @@ public class DescribeVideoRecordStreamResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Result.", this.Result);
+        this.setParamArrayObj(map, prefix + "Jobs.", this.Jobs);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
