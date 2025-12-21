@@ -40,18 +40,18 @@ public class CreateScheduledActionRequest extends AbstractModel {
     private String ScheduledActionName;
 
     /**
-    * 当定时任务触发时，设置的伸缩组最大实例数。
-    */
-    @SerializedName("MaxSize")
-    @Expose
-    private Long MaxSize;
-
-    /**
     * 当定时任务触发时，设置的伸缩组最小实例数。
     */
     @SerializedName("MinSize")
     @Expose
     private Long MinSize;
+
+    /**
+    * 定时任务的首次触发时间，取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
 
     /**
     * 当定时任务触发时，设置的伸缩组期望实例数。
@@ -61,11 +61,11 @@ public class CreateScheduledActionRequest extends AbstractModel {
     private Long DesiredCapacity;
 
     /**
-    * 定时任务的首次触发时间，取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
+    * 当定时任务触发时，设置的伸缩组最大实例数。
     */
-    @SerializedName("StartTime")
+    @SerializedName("MaxSize")
     @Expose
-    private String StartTime;
+    private Long MaxSize;
 
     /**
     * 定时任务的结束时间，取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。<br><br>此参数与`Recurrence`需要同时指定，到达结束时间之后，定时任务将不再生效。
@@ -80,6 +80,19 @@ public class CreateScheduledActionRequest extends AbstractModel {
     @SerializedName("Recurrence")
     @Expose
     private String Recurrence;
+
+    /**
+    * 停用期望数更新。默认值为 False，表示定时任务触发时期望实例数正常更新。
+该值为 True 时，定时任务触发时不会主动修改期望实例数，但可能会因最大最小值机制修改期望实例数。
+以下案例的前提都是停用期望数更新为 True：
+
+- 定时任务触发时，原期望数为 5，定时任务将最小值改为 10，最大值改为 20，期望数改为 15，由于停用期望数更新，15不生效，但原期望数 5 小于最小值 10，最终新期望数为 10。
+- 定时任务触发时，原期望数为 25，定时任务将最小值改为 10，最大值改为 20，期望数改为 15，由于停用期望数更新，15不生效，但原期望数 25 大于最大值 20，最终新期望数为 20。
+- 定时任务触发时，原期望数为 13，定时任务将最小值改为 10，最大值改为 20，期望数改为 15，由于停用期望数更新，15不生效，期望数保持为 13 。
+    */
+    @SerializedName("DisableUpdateDesiredCapacity")
+    @Expose
+    private Boolean DisableUpdateDesiredCapacity;
 
     /**
      * Get 伸缩组ID。可以通过如下方式获取可用的伸缩组ID:
@@ -122,22 +135,6 @@ public class CreateScheduledActionRequest extends AbstractModel {
     }
 
     /**
-     * Get 当定时任务触发时，设置的伸缩组最大实例数。 
-     * @return MaxSize 当定时任务触发时，设置的伸缩组最大实例数。
-     */
-    public Long getMaxSize() {
-        return this.MaxSize;
-    }
-
-    /**
-     * Set 当定时任务触发时，设置的伸缩组最大实例数。
-     * @param MaxSize 当定时任务触发时，设置的伸缩组最大实例数。
-     */
-    public void setMaxSize(Long MaxSize) {
-        this.MaxSize = MaxSize;
-    }
-
-    /**
      * Get 当定时任务触发时，设置的伸缩组最小实例数。 
      * @return MinSize 当定时任务触发时，设置的伸缩组最小实例数。
      */
@@ -151,6 +148,22 @@ public class CreateScheduledActionRequest extends AbstractModel {
      */
     public void setMinSize(Long MinSize) {
         this.MinSize = MinSize;
+    }
+
+    /**
+     * Get 定时任务的首次触发时间，取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。 
+     * @return StartTime 定时任务的首次触发时间，取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set 定时任务的首次触发时间，取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
+     * @param StartTime 定时任务的首次触发时间，取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
     }
 
     /**
@@ -170,19 +183,19 @@ public class CreateScheduledActionRequest extends AbstractModel {
     }
 
     /**
-     * Get 定时任务的首次触发时间，取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。 
-     * @return StartTime 定时任务的首次触发时间，取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
+     * Get 当定时任务触发时，设置的伸缩组最大实例数。 
+     * @return MaxSize 当定时任务触发时，设置的伸缩组最大实例数。
      */
-    public String getStartTime() {
-        return this.StartTime;
+    public Long getMaxSize() {
+        return this.MaxSize;
     }
 
     /**
-     * Set 定时任务的首次触发时间，取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
-     * @param StartTime 定时任务的首次触发时间，取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
+     * Set 当定时任务触发时，设置的伸缩组最大实例数。
+     * @param MaxSize 当定时任务触发时，设置的伸缩组最大实例数。
      */
-    public void setStartTime(String StartTime) {
-        this.StartTime = StartTime;
+    public void setMaxSize(Long MaxSize) {
+        this.MaxSize = MaxSize;
     }
 
     /**
@@ -217,6 +230,46 @@ public class CreateScheduledActionRequest extends AbstractModel {
         this.Recurrence = Recurrence;
     }
 
+    /**
+     * Get 停用期望数更新。默认值为 False，表示定时任务触发时期望实例数正常更新。
+该值为 True 时，定时任务触发时不会主动修改期望实例数，但可能会因最大最小值机制修改期望实例数。
+以下案例的前提都是停用期望数更新为 True：
+
+- 定时任务触发时，原期望数为 5，定时任务将最小值改为 10，最大值改为 20，期望数改为 15，由于停用期望数更新，15不生效，但原期望数 5 小于最小值 10，最终新期望数为 10。
+- 定时任务触发时，原期望数为 25，定时任务将最小值改为 10，最大值改为 20，期望数改为 15，由于停用期望数更新，15不生效，但原期望数 25 大于最大值 20，最终新期望数为 20。
+- 定时任务触发时，原期望数为 13，定时任务将最小值改为 10，最大值改为 20，期望数改为 15，由于停用期望数更新，15不生效，期望数保持为 13 。 
+     * @return DisableUpdateDesiredCapacity 停用期望数更新。默认值为 False，表示定时任务触发时期望实例数正常更新。
+该值为 True 时，定时任务触发时不会主动修改期望实例数，但可能会因最大最小值机制修改期望实例数。
+以下案例的前提都是停用期望数更新为 True：
+
+- 定时任务触发时，原期望数为 5，定时任务将最小值改为 10，最大值改为 20，期望数改为 15，由于停用期望数更新，15不生效，但原期望数 5 小于最小值 10，最终新期望数为 10。
+- 定时任务触发时，原期望数为 25，定时任务将最小值改为 10，最大值改为 20，期望数改为 15，由于停用期望数更新，15不生效，但原期望数 25 大于最大值 20，最终新期望数为 20。
+- 定时任务触发时，原期望数为 13，定时任务将最小值改为 10，最大值改为 20，期望数改为 15，由于停用期望数更新，15不生效，期望数保持为 13 。
+     */
+    public Boolean getDisableUpdateDesiredCapacity() {
+        return this.DisableUpdateDesiredCapacity;
+    }
+
+    /**
+     * Set 停用期望数更新。默认值为 False，表示定时任务触发时期望实例数正常更新。
+该值为 True 时，定时任务触发时不会主动修改期望实例数，但可能会因最大最小值机制修改期望实例数。
+以下案例的前提都是停用期望数更新为 True：
+
+- 定时任务触发时，原期望数为 5，定时任务将最小值改为 10，最大值改为 20，期望数改为 15，由于停用期望数更新，15不生效，但原期望数 5 小于最小值 10，最终新期望数为 10。
+- 定时任务触发时，原期望数为 25，定时任务将最小值改为 10，最大值改为 20，期望数改为 15，由于停用期望数更新，15不生效，但原期望数 25 大于最大值 20，最终新期望数为 20。
+- 定时任务触发时，原期望数为 13，定时任务将最小值改为 10，最大值改为 20，期望数改为 15，由于停用期望数更新，15不生效，期望数保持为 13 。
+     * @param DisableUpdateDesiredCapacity 停用期望数更新。默认值为 False，表示定时任务触发时期望实例数正常更新。
+该值为 True 时，定时任务触发时不会主动修改期望实例数，但可能会因最大最小值机制修改期望实例数。
+以下案例的前提都是停用期望数更新为 True：
+
+- 定时任务触发时，原期望数为 5，定时任务将最小值改为 10，最大值改为 20，期望数改为 15，由于停用期望数更新，15不生效，但原期望数 5 小于最小值 10，最终新期望数为 10。
+- 定时任务触发时，原期望数为 25，定时任务将最小值改为 10，最大值改为 20，期望数改为 15，由于停用期望数更新，15不生效，但原期望数 25 大于最大值 20，最终新期望数为 20。
+- 定时任务触发时，原期望数为 13，定时任务将最小值改为 10，最大值改为 20，期望数改为 15，由于停用期望数更新，15不生效，期望数保持为 13 。
+     */
+    public void setDisableUpdateDesiredCapacity(Boolean DisableUpdateDesiredCapacity) {
+        this.DisableUpdateDesiredCapacity = DisableUpdateDesiredCapacity;
+    }
+
     public CreateScheduledActionRequest() {
     }
 
@@ -231,23 +284,26 @@ public class CreateScheduledActionRequest extends AbstractModel {
         if (source.ScheduledActionName != null) {
             this.ScheduledActionName = new String(source.ScheduledActionName);
         }
-        if (source.MaxSize != null) {
-            this.MaxSize = new Long(source.MaxSize);
-        }
         if (source.MinSize != null) {
             this.MinSize = new Long(source.MinSize);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
         }
         if (source.DesiredCapacity != null) {
             this.DesiredCapacity = new Long(source.DesiredCapacity);
         }
-        if (source.StartTime != null) {
-            this.StartTime = new String(source.StartTime);
+        if (source.MaxSize != null) {
+            this.MaxSize = new Long(source.MaxSize);
         }
         if (source.EndTime != null) {
             this.EndTime = new String(source.EndTime);
         }
         if (source.Recurrence != null) {
             this.Recurrence = new String(source.Recurrence);
+        }
+        if (source.DisableUpdateDesiredCapacity != null) {
+            this.DisableUpdateDesiredCapacity = new Boolean(source.DisableUpdateDesiredCapacity);
         }
     }
 
@@ -258,12 +314,13 @@ public class CreateScheduledActionRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);
         this.setParamSimple(map, prefix + "ScheduledActionName", this.ScheduledActionName);
-        this.setParamSimple(map, prefix + "MaxSize", this.MaxSize);
         this.setParamSimple(map, prefix + "MinSize", this.MinSize);
-        this.setParamSimple(map, prefix + "DesiredCapacity", this.DesiredCapacity);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "DesiredCapacity", this.DesiredCapacity);
+        this.setParamSimple(map, prefix + "MaxSize", this.MaxSize);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "Recurrence", this.Recurrence);
+        this.setParamSimple(map, prefix + "DisableUpdateDesiredCapacity", this.DisableUpdateDesiredCapacity);
 
     }
 }

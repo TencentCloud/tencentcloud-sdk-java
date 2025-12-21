@@ -24,240 +24,230 @@ import java.util.HashMap;
 public class DescribeAgentDealsByCacheRequest extends AbstractModel {
 
     /**
-    * 偏移量
+    * <p>偏移量</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 限制数目 最大200
+    * <p>限制数目 最大200</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 下单时间范围起始点【*请必传并控制时间范围最大90天，避免出现超时】
+    * <p>下单时间范围起始点【*请必传并控制时间范围最大90天，避免出现超时】</p>
     */
     @SerializedName("CreatTimeRangeStart")
     @Expose
     private String CreatTimeRangeStart;
 
     /**
-    * 下单时间范围终止点【*请必传并控制时间范围最大90天，避免出现超时】
+    * <p>下单时间范围终止点【*请必传并控制时间范围最大90天，避免出现超时】</p>
     */
     @SerializedName("CreatTimeRangeEnd")
     @Expose
     private String CreatTimeRangeEnd;
 
     /**
-    * 0:下单时间降序；其他：下单时间升序
+    * <p>0:下单时间降序；其他：下单时间升序</p>
     */
     @SerializedName("Order")
     @Expose
     private Long Order;
 
     /**
-    * 子订单状态(1-待支付,2-已支付,3-发货中,4-已发货,5-发货失败,6-已退款,7-已取消,8-已过期,9-已失效,12-支付中,13-退款中,30-处理中)
-
-控制台订单状态为以上状态的组合：未支付(1) 处理中(2,3,5,12,13,30) 已取消(7) 交易成功(4) 已过期(8) 已退款(6) 订单错误(9)
+    * <p>子订单状态(1-待支付,2-已支付,3-发货中,4-已发货,5-发货失败,6-已退款,7-已取消,8-已过期,9-已失效,12-支付中,13-退款中,30-处理中)</p><p>控制台订单状态为以上状态的组合：未支付(1) 处理中(2,3,5,12,13,30) 已取消(7) 交易成功(4) 已过期(8) 已退款(6) 订单错误(9)</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 下单人账号ID列表
+    * <p>下单人账号ID列表</p>
     */
     @SerializedName("OwnerUins")
     @Expose
     private String [] OwnerUins;
 
     /**
-    * 子订单号列表
+    * <p>子订单号列表</p>
     */
     @SerializedName("DealNames")
     @Expose
     private String [] DealNames;
 
     /**
-    * 大订单号列表
+    * <p>大订单号列表</p>
     */
     @SerializedName("BigDealIds")
     @Expose
     private String [] BigDealIds;
 
     /**
-    * 支付方式，0：自付；1：代付
+    * <p>支付方式，0：自付；1：代付</p>
     */
     @SerializedName("PayerMode")
     @Expose
     private Long PayerMode;
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get <p>偏移量</p> 
+     * @return Offset <p>偏移量</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set <p>偏移量</p>
+     * @param Offset <p>偏移量</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 限制数目 最大200 
-     * @return Limit 限制数目 最大200
+     * Get <p>限制数目 最大200</p> 
+     * @return Limit <p>限制数目 最大200</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 限制数目 最大200
-     * @param Limit 限制数目 最大200
+     * Set <p>限制数目 最大200</p>
+     * @param Limit <p>限制数目 最大200</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 下单时间范围起始点【*请必传并控制时间范围最大90天，避免出现超时】 
-     * @return CreatTimeRangeStart 下单时间范围起始点【*请必传并控制时间范围最大90天，避免出现超时】
+     * Get <p>下单时间范围起始点【*请必传并控制时间范围最大90天，避免出现超时】</p> 
+     * @return CreatTimeRangeStart <p>下单时间范围起始点【*请必传并控制时间范围最大90天，避免出现超时】</p>
      */
     public String getCreatTimeRangeStart() {
         return this.CreatTimeRangeStart;
     }
 
     /**
-     * Set 下单时间范围起始点【*请必传并控制时间范围最大90天，避免出现超时】
-     * @param CreatTimeRangeStart 下单时间范围起始点【*请必传并控制时间范围最大90天，避免出现超时】
+     * Set <p>下单时间范围起始点【*请必传并控制时间范围最大90天，避免出现超时】</p>
+     * @param CreatTimeRangeStart <p>下单时间范围起始点【*请必传并控制时间范围最大90天，避免出现超时】</p>
      */
     public void setCreatTimeRangeStart(String CreatTimeRangeStart) {
         this.CreatTimeRangeStart = CreatTimeRangeStart;
     }
 
     /**
-     * Get 下单时间范围终止点【*请必传并控制时间范围最大90天，避免出现超时】 
-     * @return CreatTimeRangeEnd 下单时间范围终止点【*请必传并控制时间范围最大90天，避免出现超时】
+     * Get <p>下单时间范围终止点【*请必传并控制时间范围最大90天，避免出现超时】</p> 
+     * @return CreatTimeRangeEnd <p>下单时间范围终止点【*请必传并控制时间范围最大90天，避免出现超时】</p>
      */
     public String getCreatTimeRangeEnd() {
         return this.CreatTimeRangeEnd;
     }
 
     /**
-     * Set 下单时间范围终止点【*请必传并控制时间范围最大90天，避免出现超时】
-     * @param CreatTimeRangeEnd 下单时间范围终止点【*请必传并控制时间范围最大90天，避免出现超时】
+     * Set <p>下单时间范围终止点【*请必传并控制时间范围最大90天，避免出现超时】</p>
+     * @param CreatTimeRangeEnd <p>下单时间范围终止点【*请必传并控制时间范围最大90天，避免出现超时】</p>
      */
     public void setCreatTimeRangeEnd(String CreatTimeRangeEnd) {
         this.CreatTimeRangeEnd = CreatTimeRangeEnd;
     }
 
     /**
-     * Get 0:下单时间降序；其他：下单时间升序 
-     * @return Order 0:下单时间降序；其他：下单时间升序
+     * Get <p>0:下单时间降序；其他：下单时间升序</p> 
+     * @return Order <p>0:下单时间降序；其他：下单时间升序</p>
      */
     public Long getOrder() {
         return this.Order;
     }
 
     /**
-     * Set 0:下单时间降序；其他：下单时间升序
-     * @param Order 0:下单时间降序；其他：下单时间升序
+     * Set <p>0:下单时间降序；其他：下单时间升序</p>
+     * @param Order <p>0:下单时间降序；其他：下单时间升序</p>
      */
     public void setOrder(Long Order) {
         this.Order = Order;
     }
 
     /**
-     * Get 子订单状态(1-待支付,2-已支付,3-发货中,4-已发货,5-发货失败,6-已退款,7-已取消,8-已过期,9-已失效,12-支付中,13-退款中,30-处理中)
-
-控制台订单状态为以上状态的组合：未支付(1) 处理中(2,3,5,12,13,30) 已取消(7) 交易成功(4) 已过期(8) 已退款(6) 订单错误(9) 
-     * @return Status 子订单状态(1-待支付,2-已支付,3-发货中,4-已发货,5-发货失败,6-已退款,7-已取消,8-已过期,9-已失效,12-支付中,13-退款中,30-处理中)
-
-控制台订单状态为以上状态的组合：未支付(1) 处理中(2,3,5,12,13,30) 已取消(7) 交易成功(4) 已过期(8) 已退款(6) 订单错误(9)
+     * Get <p>子订单状态(1-待支付,2-已支付,3-发货中,4-已发货,5-发货失败,6-已退款,7-已取消,8-已过期,9-已失效,12-支付中,13-退款中,30-处理中)</p><p>控制台订单状态为以上状态的组合：未支付(1) 处理中(2,3,5,12,13,30) 已取消(7) 交易成功(4) 已过期(8) 已退款(6) 订单错误(9)</p> 
+     * @return Status <p>子订单状态(1-待支付,2-已支付,3-发货中,4-已发货,5-发货失败,6-已退款,7-已取消,8-已过期,9-已失效,12-支付中,13-退款中,30-处理中)</p><p>控制台订单状态为以上状态的组合：未支付(1) 处理中(2,3,5,12,13,30) 已取消(7) 交易成功(4) 已过期(8) 已退款(6) 订单错误(9)</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 子订单状态(1-待支付,2-已支付,3-发货中,4-已发货,5-发货失败,6-已退款,7-已取消,8-已过期,9-已失效,12-支付中,13-退款中,30-处理中)
-
-控制台订单状态为以上状态的组合：未支付(1) 处理中(2,3,5,12,13,30) 已取消(7) 交易成功(4) 已过期(8) 已退款(6) 订单错误(9)
-     * @param Status 子订单状态(1-待支付,2-已支付,3-发货中,4-已发货,5-发货失败,6-已退款,7-已取消,8-已过期,9-已失效,12-支付中,13-退款中,30-处理中)
-
-控制台订单状态为以上状态的组合：未支付(1) 处理中(2,3,5,12,13,30) 已取消(7) 交易成功(4) 已过期(8) 已退款(6) 订单错误(9)
+     * Set <p>子订单状态(1-待支付,2-已支付,3-发货中,4-已发货,5-发货失败,6-已退款,7-已取消,8-已过期,9-已失效,12-支付中,13-退款中,30-处理中)</p><p>控制台订单状态为以上状态的组合：未支付(1) 处理中(2,3,5,12,13,30) 已取消(7) 交易成功(4) 已过期(8) 已退款(6) 订单错误(9)</p>
+     * @param Status <p>子订单状态(1-待支付,2-已支付,3-发货中,4-已发货,5-发货失败,6-已退款,7-已取消,8-已过期,9-已失效,12-支付中,13-退款中,30-处理中)</p><p>控制台订单状态为以上状态的组合：未支付(1) 处理中(2,3,5,12,13,30) 已取消(7) 交易成功(4) 已过期(8) 已退款(6) 订单错误(9)</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 下单人账号ID列表 
-     * @return OwnerUins 下单人账号ID列表
+     * Get <p>下单人账号ID列表</p> 
+     * @return OwnerUins <p>下单人账号ID列表</p>
      */
     public String [] getOwnerUins() {
         return this.OwnerUins;
     }
 
     /**
-     * Set 下单人账号ID列表
-     * @param OwnerUins 下单人账号ID列表
+     * Set <p>下单人账号ID列表</p>
+     * @param OwnerUins <p>下单人账号ID列表</p>
      */
     public void setOwnerUins(String [] OwnerUins) {
         this.OwnerUins = OwnerUins;
     }
 
     /**
-     * Get 子订单号列表 
-     * @return DealNames 子订单号列表
+     * Get <p>子订单号列表</p> 
+     * @return DealNames <p>子订单号列表</p>
      */
     public String [] getDealNames() {
         return this.DealNames;
     }
 
     /**
-     * Set 子订单号列表
-     * @param DealNames 子订单号列表
+     * Set <p>子订单号列表</p>
+     * @param DealNames <p>子订单号列表</p>
      */
     public void setDealNames(String [] DealNames) {
         this.DealNames = DealNames;
     }
 
     /**
-     * Get 大订单号列表 
-     * @return BigDealIds 大订单号列表
+     * Get <p>大订单号列表</p> 
+     * @return BigDealIds <p>大订单号列表</p>
      */
     public String [] getBigDealIds() {
         return this.BigDealIds;
     }
 
     /**
-     * Set 大订单号列表
-     * @param BigDealIds 大订单号列表
+     * Set <p>大订单号列表</p>
+     * @param BigDealIds <p>大订单号列表</p>
      */
     public void setBigDealIds(String [] BigDealIds) {
         this.BigDealIds = BigDealIds;
     }
 
     /**
-     * Get 支付方式，0：自付；1：代付 
-     * @return PayerMode 支付方式，0：自付；1：代付
+     * Get <p>支付方式，0：自付；1：代付</p> 
+     * @return PayerMode <p>支付方式，0：自付；1：代付</p>
      */
     public Long getPayerMode() {
         return this.PayerMode;
     }
 
     /**
-     * Set 支付方式，0：自付；1：代付
-     * @param PayerMode 支付方式，0：自付；1：代付
+     * Set <p>支付方式，0：自付；1：代付</p>
+     * @param PayerMode <p>支付方式，0：自付；1：代付</p>
      */
     public void setPayerMode(Long PayerMode) {
         this.PayerMode = PayerMode;

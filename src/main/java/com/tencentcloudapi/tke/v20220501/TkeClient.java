@@ -105,6 +105,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *查询托原生点列表
+     * @param req DescribeClusterMachinesRequest
+     * @return DescribeClusterMachinesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterMachinesResponse DescribeClusterMachines(DescribeClusterMachinesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClusterMachines", DescribeClusterMachinesResponse.class);
+    }
+
+    /**
      *查询集群列表
      * @param req DescribeClustersRequest
      * @return DescribeClustersResponse

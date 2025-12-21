@@ -51,6 +51,13 @@ public class AigcImageTaskInputFileInfo extends AbstractModel {
     private String Url;
 
     /**
+    * 输入图片的描述信息，用于帮助模型理解图片。仅GEM 2.5、GEM 3.0 有效。
+    */
+    @SerializedName("Text")
+    @Expose
+    private String Text;
+
+    /**
      * Get 输入的视频文件类型。取值有： <li>File：点播媒体文件；</li> <li>Url：可访问的 URL；</li>  
      * @return Type 输入的视频文件类型。取值有： <li>File：点播媒体文件；</li> <li>Url：可访问的 URL；</li> 
      */
@@ -122,6 +129,22 @@ public class AigcImageTaskInputFileInfo extends AbstractModel {
         this.Url = Url;
     }
 
+    /**
+     * Get 输入图片的描述信息，用于帮助模型理解图片。仅GEM 2.5、GEM 3.0 有效。 
+     * @return Text 输入图片的描述信息，用于帮助模型理解图片。仅GEM 2.5、GEM 3.0 有效。
+     */
+    public String getText() {
+        return this.Text;
+    }
+
+    /**
+     * Set 输入图片的描述信息，用于帮助模型理解图片。仅GEM 2.5、GEM 3.0 有效。
+     * @param Text 输入图片的描述信息，用于帮助模型理解图片。仅GEM 2.5、GEM 3.0 有效。
+     */
+    public void setText(String Text) {
+        this.Text = Text;
+    }
+
     public AigcImageTaskInputFileInfo() {
     }
 
@@ -139,6 +162,9 @@ public class AigcImageTaskInputFileInfo extends AbstractModel {
         if (source.Url != null) {
             this.Url = new String(source.Url);
         }
+        if (source.Text != null) {
+            this.Text = new String(source.Text);
+        }
     }
 
 
@@ -149,6 +175,7 @@ public class AigcImageTaskInputFileInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "Text", this.Text);
 
     }
 }

@@ -24,17 +24,14 @@ import java.util.HashMap;
 public class ModifyCasterInputInfoResponse extends AbstractModel {
 
     /**
-    * 修改输入源后的预览地址。
-注：该地址仅作为预览使用，不可分发。
+    * <p>修改输入源后的预览地址。注：该地址仅作为预览使用，不可分发。</p>
     */
     @SerializedName("InputPlayUrl")
     @Expose
     private String InputPlayUrl;
 
     /**
-    * 修改后的输入源webrtc预览地址。
-该地址需配合腾讯云快直播播放SDK使用。
-注：该地址仅做预览使用，不可分发。
+    * <p>修改后的输入源webrtc预览地址。该地址需配合腾讯云快直播播放SDK使用。注：该地址仅做预览使用，不可分发。</p>
     */
     @SerializedName("InputWebRTCPlayUrl")
     @Expose
@@ -48,44 +45,32 @@ public class ModifyCasterInputInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 修改输入源后的预览地址。
-注：该地址仅作为预览使用，不可分发。 
-     * @return InputPlayUrl 修改输入源后的预览地址。
-注：该地址仅作为预览使用，不可分发。
+     * Get <p>修改输入源后的预览地址。注：该地址仅作为预览使用，不可分发。</p> 
+     * @return InputPlayUrl <p>修改输入源后的预览地址。注：该地址仅作为预览使用，不可分发。</p>
      */
     public String getInputPlayUrl() {
         return this.InputPlayUrl;
     }
 
     /**
-     * Set 修改输入源后的预览地址。
-注：该地址仅作为预览使用，不可分发。
-     * @param InputPlayUrl 修改输入源后的预览地址。
-注：该地址仅作为预览使用，不可分发。
+     * Set <p>修改输入源后的预览地址。注：该地址仅作为预览使用，不可分发。</p>
+     * @param InputPlayUrl <p>修改输入源后的预览地址。注：该地址仅作为预览使用，不可分发。</p>
      */
     public void setInputPlayUrl(String InputPlayUrl) {
         this.InputPlayUrl = InputPlayUrl;
     }
 
     /**
-     * Get 修改后的输入源webrtc预览地址。
-该地址需配合腾讯云快直播播放SDK使用。
-注：该地址仅做预览使用，不可分发。 
-     * @return InputWebRTCPlayUrl 修改后的输入源webrtc预览地址。
-该地址需配合腾讯云快直播播放SDK使用。
-注：该地址仅做预览使用，不可分发。
+     * Get <p>修改后的输入源webrtc预览地址。该地址需配合腾讯云快直播播放SDK使用。注：该地址仅做预览使用，不可分发。</p> 
+     * @return InputWebRTCPlayUrl <p>修改后的输入源webrtc预览地址。该地址需配合腾讯云快直播播放SDK使用。注：该地址仅做预览使用，不可分发。</p>
      */
     public String getInputWebRTCPlayUrl() {
         return this.InputWebRTCPlayUrl;
     }
 
     /**
-     * Set 修改后的输入源webrtc预览地址。
-该地址需配合腾讯云快直播播放SDK使用。
-注：该地址仅做预览使用，不可分发。
-     * @param InputWebRTCPlayUrl 修改后的输入源webrtc预览地址。
-该地址需配合腾讯云快直播播放SDK使用。
-注：该地址仅做预览使用，不可分发。
+     * Set <p>修改后的输入源webrtc预览地址。该地址需配合腾讯云快直播播放SDK使用。注：该地址仅做预览使用，不可分发。</p>
+     * @param InputWebRTCPlayUrl <p>修改后的输入源webrtc预览地址。该地址需配合腾讯云快直播播放SDK使用。注：该地址仅做预览使用，不可分发。</p>
      */
     public void setInputWebRTCPlayUrl(String InputWebRTCPlayUrl) {
         this.InputWebRTCPlayUrl = InputWebRTCPlayUrl;

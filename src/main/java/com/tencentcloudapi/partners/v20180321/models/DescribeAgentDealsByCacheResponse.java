@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAgentDealsByCacheResponse extends AbstractModel {
 
     /**
-    * 订单数组
+    * <p>订单数组</p>
     */
     @SerializedName("AgentDealSet")
     @Expose
     private AgentDealNewElem [] AgentDealSet;
 
     /**
-    * 符合条件的订单总数量
+    * <p>符合条件的订单总数量</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeAgentDealsByCacheResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 订单数组 
-     * @return AgentDealSet 订单数组
+     * Get <p>订单数组</p> 
+     * @return AgentDealSet <p>订单数组</p>
      */
     public AgentDealNewElem [] getAgentDealSet() {
         return this.AgentDealSet;
     }
 
     /**
-     * Set 订单数组
-     * @param AgentDealSet 订单数组
+     * Set <p>订单数组</p>
+     * @param AgentDealSet <p>订单数组</p>
      */
     public void setAgentDealSet(AgentDealNewElem [] AgentDealSet) {
         this.AgentDealSet = AgentDealSet;
     }
 
     /**
-     * Get 符合条件的订单总数量 
-     * @return TotalCount 符合条件的订单总数量
+     * Get <p>符合条件的订单总数量</p> 
+     * @return TotalCount <p>符合条件的订单总数量</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的订单总数量
-     * @param TotalCount 符合条件的订单总数量
+     * Set <p>符合条件的订单总数量</p>
+     * @param TotalCount <p>符合条件的订单总数量</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

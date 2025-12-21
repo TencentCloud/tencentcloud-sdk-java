@@ -24,63 +24,65 @@ import java.util.HashMap;
 public class CreateProxyEndPointRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * 集群 ID。
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 私有网络ID，默认与集群私有网络ID保持一致
+    * 私有网络 ID，默认与集群私有网络 ID 保持一致。
     */
     @SerializedName("UniqueVpcId")
     @Expose
     private String UniqueVpcId;
 
     /**
-    * 私有网络子网ID，默认与集群子网ID保持一致
+    * 私有网络子网 ID，默认与集群子网 ID 保持一致。
     */
     @SerializedName("UniqueSubnetId")
     @Expose
     private String UniqueSubnetId;
 
     /**
-    * 连接池类型：SessionConnectionPool(会话级别连接池 )
+    * 连接池类型：SessionConnectionPool（会话级别连接池）。
     */
     @SerializedName("ConnectionPoolType")
     @Expose
     private String ConnectionPoolType;
 
     /**
-    * 是否开启连接池,yes-开启，no-不开启
+    * 是否开启连接池。
+yes：表示开启。
+no：表示不开启。
     */
     @SerializedName("OpenConnectionPool")
     @Expose
     private String OpenConnectionPool;
 
     /**
-    * 连接池阈值：单位（秒）
+    * 连接池阈值：单位（秒），可选范围：0 - 300秒。
     */
     @SerializedName("ConnectionPoolTimeOut")
     @Expose
     private Long ConnectionPoolTimeOut;
 
     /**
-    * 绑定的安全组ID数组
+    * 绑定的安全组 ID 数组。
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-    * 描述说明
+    * 描述说明。
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 想要绑定的vip信息，需与UniqueVpcId对应。
+    * 想要绑定的 vip 信息，需与 UniqueVpcId 对应。
     */
     @SerializedName("Vip")
     @Expose
@@ -88,14 +90,17 @@ public class CreateProxyEndPointRequest extends AbstractModel {
 
     /**
     * 权重模式：
-system-系统分配，custom-自定义
+system：系统分配。
+custom：自定义。
     */
     @SerializedName("WeightMode")
     @Expose
     private String WeightMode;
 
     /**
-    * 是否自动添加只读实例，yes-是，no-不自动添加
+    * 是否自动添加只读实例。
+yes：表示自动添加只读实例。
+no：表示不自动添加只读实例。
     */
     @SerializedName("AutoAddRo")
     @Expose
@@ -103,9 +108,10 @@ system-系统分配，custom-自定义
 
     /**
     * 是否开启故障转移。
-yes：开启
-no：不开启。
-数据库代理出现故障时，链接地址将会路由到主实例
+yes：表示开启，开启后，当数据库代理出现故障时，连接地址将会路由到主实例。
+no：表示不开启。
+说明：
+仅当 RwType 参数值为 READWRITE 时，才支持设置此项。
     */
     @SerializedName("FailOver")
     @Expose
@@ -113,7 +119,11 @@ no：不开启。
 
     /**
     * 一致性类型：
-eventual,global,session
+eventual：最终一致性。
+global：全局一致性。
+session：会话一致性。
+说明：
+仅当 RwType 参数值为 READWRITE 时，才支持设置此项。
     */
     @SerializedName("ConsistencyType")
     @Expose
@@ -121,180 +131,190 @@ eventual,global,session
 
     /**
     * 读写属性：
-READWRITE,READONLY
+READWRITE：表示读写分离。当此参数值为 READWRITE 时，才支持设置 FailOver、ConsistencyType 参数。
+READONLY：表示只读。
     */
     @SerializedName("RwType")
     @Expose
     private String RwType;
 
     /**
-    * 一致性超时时间。取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待
+    * 一致性超时时间。取值范围：0 ~ 1000000（微秒）。设置为0时，表示若只读实例出现延迟导致一致性策略不满足时，请求将一直等待。
     */
     @SerializedName("ConsistencyTimeOut")
     @Expose
     private Long ConsistencyTimeOut;
 
     /**
-    * 是否开启事务拆分。在一个事务中拆分读和写到不同的实例上去执行
+    * 是否开启事务拆分。开启后，在一个事务中拆分读和写到不同的实例上去执行。
     */
     @SerializedName("TransSplit")
     @Expose
     private Boolean TransSplit;
 
     /**
-    * 连接模式：
-nearby,balance
+    * 接入模式：
+nearby：就近访问。
+balance：均衡分配。
     */
     @SerializedName("AccessMode")
     @Expose
     private String AccessMode;
 
     /**
-    * 实例权重
+    * 实例权重。
     */
     @SerializedName("InstanceWeights")
     @Expose
     private ProxyInstanceWeight [] InstanceWeights;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get 集群 ID。 
+     * @return ClusterId 集群 ID。
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set 集群 ID。
+     * @param ClusterId 集群 ID。
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 私有网络ID，默认与集群私有网络ID保持一致 
-     * @return UniqueVpcId 私有网络ID，默认与集群私有网络ID保持一致
+     * Get 私有网络 ID，默认与集群私有网络 ID 保持一致。 
+     * @return UniqueVpcId 私有网络 ID，默认与集群私有网络 ID 保持一致。
      */
     public String getUniqueVpcId() {
         return this.UniqueVpcId;
     }
 
     /**
-     * Set 私有网络ID，默认与集群私有网络ID保持一致
-     * @param UniqueVpcId 私有网络ID，默认与集群私有网络ID保持一致
+     * Set 私有网络 ID，默认与集群私有网络 ID 保持一致。
+     * @param UniqueVpcId 私有网络 ID，默认与集群私有网络 ID 保持一致。
      */
     public void setUniqueVpcId(String UniqueVpcId) {
         this.UniqueVpcId = UniqueVpcId;
     }
 
     /**
-     * Get 私有网络子网ID，默认与集群子网ID保持一致 
-     * @return UniqueSubnetId 私有网络子网ID，默认与集群子网ID保持一致
+     * Get 私有网络子网 ID，默认与集群子网 ID 保持一致。 
+     * @return UniqueSubnetId 私有网络子网 ID，默认与集群子网 ID 保持一致。
      */
     public String getUniqueSubnetId() {
         return this.UniqueSubnetId;
     }
 
     /**
-     * Set 私有网络子网ID，默认与集群子网ID保持一致
-     * @param UniqueSubnetId 私有网络子网ID，默认与集群子网ID保持一致
+     * Set 私有网络子网 ID，默认与集群子网 ID 保持一致。
+     * @param UniqueSubnetId 私有网络子网 ID，默认与集群子网 ID 保持一致。
      */
     public void setUniqueSubnetId(String UniqueSubnetId) {
         this.UniqueSubnetId = UniqueSubnetId;
     }
 
     /**
-     * Get 连接池类型：SessionConnectionPool(会话级别连接池 ) 
-     * @return ConnectionPoolType 连接池类型：SessionConnectionPool(会话级别连接池 )
+     * Get 连接池类型：SessionConnectionPool（会话级别连接池）。 
+     * @return ConnectionPoolType 连接池类型：SessionConnectionPool（会话级别连接池）。
      */
     public String getConnectionPoolType() {
         return this.ConnectionPoolType;
     }
 
     /**
-     * Set 连接池类型：SessionConnectionPool(会话级别连接池 )
-     * @param ConnectionPoolType 连接池类型：SessionConnectionPool(会话级别连接池 )
+     * Set 连接池类型：SessionConnectionPool（会话级别连接池）。
+     * @param ConnectionPoolType 连接池类型：SessionConnectionPool（会话级别连接池）。
      */
     public void setConnectionPoolType(String ConnectionPoolType) {
         this.ConnectionPoolType = ConnectionPoolType;
     }
 
     /**
-     * Get 是否开启连接池,yes-开启，no-不开启 
-     * @return OpenConnectionPool 是否开启连接池,yes-开启，no-不开启
+     * Get 是否开启连接池。
+yes：表示开启。
+no：表示不开启。 
+     * @return OpenConnectionPool 是否开启连接池。
+yes：表示开启。
+no：表示不开启。
      */
     public String getOpenConnectionPool() {
         return this.OpenConnectionPool;
     }
 
     /**
-     * Set 是否开启连接池,yes-开启，no-不开启
-     * @param OpenConnectionPool 是否开启连接池,yes-开启，no-不开启
+     * Set 是否开启连接池。
+yes：表示开启。
+no：表示不开启。
+     * @param OpenConnectionPool 是否开启连接池。
+yes：表示开启。
+no：表示不开启。
      */
     public void setOpenConnectionPool(String OpenConnectionPool) {
         this.OpenConnectionPool = OpenConnectionPool;
     }
 
     /**
-     * Get 连接池阈值：单位（秒） 
-     * @return ConnectionPoolTimeOut 连接池阈值：单位（秒）
+     * Get 连接池阈值：单位（秒），可选范围：0 - 300秒。 
+     * @return ConnectionPoolTimeOut 连接池阈值：单位（秒），可选范围：0 - 300秒。
      */
     public Long getConnectionPoolTimeOut() {
         return this.ConnectionPoolTimeOut;
     }
 
     /**
-     * Set 连接池阈值：单位（秒）
-     * @param ConnectionPoolTimeOut 连接池阈值：单位（秒）
+     * Set 连接池阈值：单位（秒），可选范围：0 - 300秒。
+     * @param ConnectionPoolTimeOut 连接池阈值：单位（秒），可选范围：0 - 300秒。
      */
     public void setConnectionPoolTimeOut(Long ConnectionPoolTimeOut) {
         this.ConnectionPoolTimeOut = ConnectionPoolTimeOut;
     }
 
     /**
-     * Get 绑定的安全组ID数组 
-     * @return SecurityGroupIds 绑定的安全组ID数组
+     * Get 绑定的安全组 ID 数组。 
+     * @return SecurityGroupIds 绑定的安全组 ID 数组。
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set 绑定的安全组ID数组
-     * @param SecurityGroupIds 绑定的安全组ID数组
+     * Set 绑定的安全组 ID 数组。
+     * @param SecurityGroupIds 绑定的安全组 ID 数组。
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
-     * Get 描述说明 
-     * @return Description 描述说明
+     * Get 描述说明。 
+     * @return Description 描述说明。
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 描述说明
-     * @param Description 描述说明
+     * Set 描述说明。
+     * @param Description 描述说明。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 想要绑定的vip信息，需与UniqueVpcId对应。 
-     * @return Vip 想要绑定的vip信息，需与UniqueVpcId对应。
+     * Get 想要绑定的 vip 信息，需与 UniqueVpcId 对应。 
+     * @return Vip 想要绑定的 vip 信息，需与 UniqueVpcId 对应。
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set 想要绑定的vip信息，需与UniqueVpcId对应。
-     * @param Vip 想要绑定的vip信息，需与UniqueVpcId对应。
+     * Set 想要绑定的 vip 信息，需与 UniqueVpcId 对应。
+     * @param Vip 想要绑定的 vip 信息，需与 UniqueVpcId 对应。
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
@@ -302,9 +322,11 @@ nearby,balance
 
     /**
      * Get 权重模式：
-system-系统分配，custom-自定义 
+system：系统分配。
+custom：自定义。 
      * @return WeightMode 权重模式：
-system-系统分配，custom-自定义
+system：系统分配。
+custom：自定义。
      */
     public String getWeightMode() {
         return this.WeightMode;
@@ -312,25 +334,35 @@ system-系统分配，custom-自定义
 
     /**
      * Set 权重模式：
-system-系统分配，custom-自定义
+system：系统分配。
+custom：自定义。
      * @param WeightMode 权重模式：
-system-系统分配，custom-自定义
+system：系统分配。
+custom：自定义。
      */
     public void setWeightMode(String WeightMode) {
         this.WeightMode = WeightMode;
     }
 
     /**
-     * Get 是否自动添加只读实例，yes-是，no-不自动添加 
-     * @return AutoAddRo 是否自动添加只读实例，yes-是，no-不自动添加
+     * Get 是否自动添加只读实例。
+yes：表示自动添加只读实例。
+no：表示不自动添加只读实例。 
+     * @return AutoAddRo 是否自动添加只读实例。
+yes：表示自动添加只读实例。
+no：表示不自动添加只读实例。
      */
     public String getAutoAddRo() {
         return this.AutoAddRo;
     }
 
     /**
-     * Set 是否自动添加只读实例，yes-是，no-不自动添加
-     * @param AutoAddRo 是否自动添加只读实例，yes-是，no-不自动添加
+     * Set 是否自动添加只读实例。
+yes：表示自动添加只读实例。
+no：表示不自动添加只读实例。
+     * @param AutoAddRo 是否自动添加只读实例。
+yes：表示自动添加只读实例。
+no：表示不自动添加只读实例。
      */
     public void setAutoAddRo(String AutoAddRo) {
         this.AutoAddRo = AutoAddRo;
@@ -338,13 +370,15 @@ system-系统分配，custom-自定义
 
     /**
      * Get 是否开启故障转移。
-yes：开启
-no：不开启。
-数据库代理出现故障时，链接地址将会路由到主实例 
+yes：表示开启，开启后，当数据库代理出现故障时，连接地址将会路由到主实例。
+no：表示不开启。
+说明：
+仅当 RwType 参数值为 READWRITE 时，才支持设置此项。 
      * @return FailOver 是否开启故障转移。
-yes：开启
-no：不开启。
-数据库代理出现故障时，链接地址将会路由到主实例
+yes：表示开启，开启后，当数据库代理出现故障时，连接地址将会路由到主实例。
+no：表示不开启。
+说明：
+仅当 RwType 参数值为 READWRITE 时，才支持设置此项。
      */
     public String getFailOver() {
         return this.FailOver;
@@ -352,13 +386,15 @@ no：不开启。
 
     /**
      * Set 是否开启故障转移。
-yes：开启
-no：不开启。
-数据库代理出现故障时，链接地址将会路由到主实例
+yes：表示开启，开启后，当数据库代理出现故障时，连接地址将会路由到主实例。
+no：表示不开启。
+说明：
+仅当 RwType 参数值为 READWRITE 时，才支持设置此项。
      * @param FailOver 是否开启故障转移。
-yes：开启
-no：不开启。
-数据库代理出现故障时，链接地址将会路由到主实例
+yes：表示开启，开启后，当数据库代理出现故障时，连接地址将会路由到主实例。
+no：表示不开启。
+说明：
+仅当 RwType 参数值为 READWRITE 时，才支持设置此项。
      */
     public void setFailOver(String FailOver) {
         this.FailOver = FailOver;
@@ -366,9 +402,17 @@ no：不开启。
 
     /**
      * Get 一致性类型：
-eventual,global,session 
+eventual：最终一致性。
+global：全局一致性。
+session：会话一致性。
+说明：
+仅当 RwType 参数值为 READWRITE 时，才支持设置此项。 
      * @return ConsistencyType 一致性类型：
-eventual,global,session
+eventual：最终一致性。
+global：全局一致性。
+session：会话一致性。
+说明：
+仅当 RwType 参数值为 READWRITE 时，才支持设置此项。
      */
     public String getConsistencyType() {
         return this.ConsistencyType;
@@ -376,9 +420,17 @@ eventual,global,session
 
     /**
      * Set 一致性类型：
-eventual,global,session
+eventual：最终一致性。
+global：全局一致性。
+session：会话一致性。
+说明：
+仅当 RwType 参数值为 READWRITE 时，才支持设置此项。
      * @param ConsistencyType 一致性类型：
-eventual,global,session
+eventual：最终一致性。
+global：全局一致性。
+session：会话一致性。
+说明：
+仅当 RwType 参数值为 READWRITE 时，才支持设置此项。
      */
     public void setConsistencyType(String ConsistencyType) {
         this.ConsistencyType = ConsistencyType;
@@ -386,9 +438,11 @@ eventual,global,session
 
     /**
      * Get 读写属性：
-READWRITE,READONLY 
+READWRITE：表示读写分离。当此参数值为 READWRITE 时，才支持设置 FailOver、ConsistencyType 参数。
+READONLY：表示只读。 
      * @return RwType 读写属性：
-READWRITE,READONLY
+READWRITE：表示读写分离。当此参数值为 READWRITE 时，才支持设置 FailOver、ConsistencyType 参数。
+READONLY：表示只读。
      */
     public String getRwType() {
         return this.RwType;
@@ -396,77 +450,83 @@ READWRITE,READONLY
 
     /**
      * Set 读写属性：
-READWRITE,READONLY
+READWRITE：表示读写分离。当此参数值为 READWRITE 时，才支持设置 FailOver、ConsistencyType 参数。
+READONLY：表示只读。
      * @param RwType 读写属性：
-READWRITE,READONLY
+READWRITE：表示读写分离。当此参数值为 READWRITE 时，才支持设置 FailOver、ConsistencyType 参数。
+READONLY：表示只读。
      */
     public void setRwType(String RwType) {
         this.RwType = RwType;
     }
 
     /**
-     * Get 一致性超时时间。取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待 
-     * @return ConsistencyTimeOut 一致性超时时间。取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待
+     * Get 一致性超时时间。取值范围：0 ~ 1000000（微秒）。设置为0时，表示若只读实例出现延迟导致一致性策略不满足时，请求将一直等待。 
+     * @return ConsistencyTimeOut 一致性超时时间。取值范围：0 ~ 1000000（微秒）。设置为0时，表示若只读实例出现延迟导致一致性策略不满足时，请求将一直等待。
      */
     public Long getConsistencyTimeOut() {
         return this.ConsistencyTimeOut;
     }
 
     /**
-     * Set 一致性超时时间。取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待
-     * @param ConsistencyTimeOut 一致性超时时间。取值范围：0~1000000（微秒）,设置0则表示若只读实例出现延迟, 导致一致性策略不满足, 请求将一直等待
+     * Set 一致性超时时间。取值范围：0 ~ 1000000（微秒）。设置为0时，表示若只读实例出现延迟导致一致性策略不满足时，请求将一直等待。
+     * @param ConsistencyTimeOut 一致性超时时间。取值范围：0 ~ 1000000（微秒）。设置为0时，表示若只读实例出现延迟导致一致性策略不满足时，请求将一直等待。
      */
     public void setConsistencyTimeOut(Long ConsistencyTimeOut) {
         this.ConsistencyTimeOut = ConsistencyTimeOut;
     }
 
     /**
-     * Get 是否开启事务拆分。在一个事务中拆分读和写到不同的实例上去执行 
-     * @return TransSplit 是否开启事务拆分。在一个事务中拆分读和写到不同的实例上去执行
+     * Get 是否开启事务拆分。开启后，在一个事务中拆分读和写到不同的实例上去执行。 
+     * @return TransSplit 是否开启事务拆分。开启后，在一个事务中拆分读和写到不同的实例上去执行。
      */
     public Boolean getTransSplit() {
         return this.TransSplit;
     }
 
     /**
-     * Set 是否开启事务拆分。在一个事务中拆分读和写到不同的实例上去执行
-     * @param TransSplit 是否开启事务拆分。在一个事务中拆分读和写到不同的实例上去执行
+     * Set 是否开启事务拆分。开启后，在一个事务中拆分读和写到不同的实例上去执行。
+     * @param TransSplit 是否开启事务拆分。开启后，在一个事务中拆分读和写到不同的实例上去执行。
      */
     public void setTransSplit(Boolean TransSplit) {
         this.TransSplit = TransSplit;
     }
 
     /**
-     * Get 连接模式：
-nearby,balance 
-     * @return AccessMode 连接模式：
-nearby,balance
+     * Get 接入模式：
+nearby：就近访问。
+balance：均衡分配。 
+     * @return AccessMode 接入模式：
+nearby：就近访问。
+balance：均衡分配。
      */
     public String getAccessMode() {
         return this.AccessMode;
     }
 
     /**
-     * Set 连接模式：
-nearby,balance
-     * @param AccessMode 连接模式：
-nearby,balance
+     * Set 接入模式：
+nearby：就近访问。
+balance：均衡分配。
+     * @param AccessMode 接入模式：
+nearby：就近访问。
+balance：均衡分配。
      */
     public void setAccessMode(String AccessMode) {
         this.AccessMode = AccessMode;
     }
 
     /**
-     * Get 实例权重 
-     * @return InstanceWeights 实例权重
+     * Get 实例权重。 
+     * @return InstanceWeights 实例权重。
      */
     public ProxyInstanceWeight [] getInstanceWeights() {
         return this.InstanceWeights;
     }
 
     /**
-     * Set 实例权重
-     * @param InstanceWeights 实例权重
+     * Set 实例权重。
+     * @param InstanceWeights 实例权重。
      */
     public void setInstanceWeights(ProxyInstanceWeight [] InstanceWeights) {
         this.InstanceWeights = InstanceWeights;

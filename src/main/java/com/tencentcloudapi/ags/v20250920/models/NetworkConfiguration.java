@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class NetworkConfiguration extends AbstractModel {
 
     /**
-    * 网络模式（当前支持 PUBLIC）
+    * 网络模式（当前支持 PUBLIC, VPC, SANDBOX）
     */
     @SerializedName("NetworkMode")
     @Expose
     private String NetworkMode;
 
     /**
-     * Get 网络模式（当前支持 PUBLIC） 
-     * @return NetworkMode 网络模式（当前支持 PUBLIC）
+    * VPC网络相关配置
+    */
+    @SerializedName("VpcConfig")
+    @Expose
+    private VPCConfig VpcConfig;
+
+    /**
+     * Get 网络模式（当前支持 PUBLIC, VPC, SANDBOX） 
+     * @return NetworkMode 网络模式（当前支持 PUBLIC, VPC, SANDBOX）
      */
     public String getNetworkMode() {
         return this.NetworkMode;
     }
 
     /**
-     * Set 网络模式（当前支持 PUBLIC）
-     * @param NetworkMode 网络模式（当前支持 PUBLIC）
+     * Set 网络模式（当前支持 PUBLIC, VPC, SANDBOX）
+     * @param NetworkMode 网络模式（当前支持 PUBLIC, VPC, SANDBOX）
      */
     public void setNetworkMode(String NetworkMode) {
         this.NetworkMode = NetworkMode;
+    }
+
+    /**
+     * Get VPC网络相关配置 
+     * @return VpcConfig VPC网络相关配置
+     */
+    public VPCConfig getVpcConfig() {
+        return this.VpcConfig;
+    }
+
+    /**
+     * Set VPC网络相关配置
+     * @param VpcConfig VPC网络相关配置
+     */
+    public void setVpcConfig(VPCConfig VpcConfig) {
+        this.VpcConfig = VpcConfig;
     }
 
     public NetworkConfiguration() {
@@ -57,6 +80,9 @@ public class NetworkConfiguration extends AbstractModel {
         if (source.NetworkMode != null) {
             this.NetworkMode = new String(source.NetworkMode);
         }
+        if (source.VpcConfig != null) {
+            this.VpcConfig = new VPCConfig(source.VpcConfig);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class NetworkConfiguration extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NetworkMode", this.NetworkMode);
+        this.setParamObj(map, prefix + "VpcConfig.", this.VpcConfig);
 
     }
 }

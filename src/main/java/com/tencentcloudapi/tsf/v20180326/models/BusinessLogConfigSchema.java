@@ -32,7 +32,6 @@ public class BusinessLogConfigSchema extends AbstractModel {
 
     /**
     * 解析规则内容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SchemaContent")
     @Expose
@@ -40,7 +39,6 @@ public class BusinessLogConfigSchema extends AbstractModel {
 
     /**
     * 解析规则时间格式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SchemaDateFormat")
     @Expose
@@ -48,7 +46,6 @@ public class BusinessLogConfigSchema extends AbstractModel {
 
     /**
     * 解析规则对应的多行匹配规则
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SchemaMultilinePattern")
     @Expose
@@ -63,7 +60,6 @@ public class BusinessLogConfigSchema extends AbstractModel {
 
     /**
     * 用户填写的解析规则
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SchemaPatternLayout")
     @Expose
@@ -86,10 +82,8 @@ public class BusinessLogConfigSchema extends AbstractModel {
     }
 
     /**
-     * Get 解析规则内容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 解析规则内容 
      * @return SchemaContent 解析规则内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSchemaContent() {
         return this.SchemaContent;
@@ -97,19 +91,15 @@ public class BusinessLogConfigSchema extends AbstractModel {
 
     /**
      * Set 解析规则内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SchemaContent 解析规则内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSchemaContent(String SchemaContent) {
         this.SchemaContent = SchemaContent;
     }
 
     /**
-     * Get 解析规则时间格式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 解析规则时间格式 
      * @return SchemaDateFormat 解析规则时间格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSchemaDateFormat() {
         return this.SchemaDateFormat;
@@ -117,19 +107,15 @@ public class BusinessLogConfigSchema extends AbstractModel {
 
     /**
      * Set 解析规则时间格式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SchemaDateFormat 解析规则时间格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSchemaDateFormat(String SchemaDateFormat) {
         this.SchemaDateFormat = SchemaDateFormat;
     }
 
     /**
-     * Get 解析规则对应的多行匹配规则
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 解析规则对应的多行匹配规则 
      * @return SchemaMultilinePattern 解析规则对应的多行匹配规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSchemaMultilinePattern() {
         return this.SchemaMultilinePattern;
@@ -137,9 +123,7 @@ public class BusinessLogConfigSchema extends AbstractModel {
 
     /**
      * Set 解析规则对应的多行匹配规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SchemaMultilinePattern 解析规则对应的多行匹配规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSchemaMultilinePattern(String SchemaMultilinePattern) {
         this.SchemaMultilinePattern = SchemaMultilinePattern;
@@ -162,10 +146,8 @@ public class BusinessLogConfigSchema extends AbstractModel {
     }
 
     /**
-     * Get 用户填写的解析规则
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户填写的解析规则 
      * @return SchemaPatternLayout 用户填写的解析规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSchemaPatternLayout() {
         return this.SchemaPatternLayout;
@@ -173,9 +155,7 @@ public class BusinessLogConfigSchema extends AbstractModel {
 
     /**
      * Set 用户填写的解析规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SchemaPatternLayout 用户填写的解析规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSchemaPatternLayout(String SchemaPatternLayout) {
         this.SchemaPatternLayout = SchemaPatternLayout;

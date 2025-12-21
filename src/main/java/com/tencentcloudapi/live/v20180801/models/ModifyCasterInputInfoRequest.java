@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ModifyCasterInputInfoRequest extends AbstractModel {
 
     /**
-    * 导播台ID。
+    * <p>导播台ID。</p>
     */
     @SerializedName("CasterId")
     @Expose
     private Long CasterId;
 
     /**
-    * 修改的导播台输入源信息
+    * <p>修改的导播台输入源信息</p>
     */
     @SerializedName("InputInfo")
     @Expose
     private CasterInputInfo InputInfo;
 
     /**
-     * Get 导播台ID。 
-     * @return CasterId 导播台ID。
+     * Get <p>导播台ID。</p> 
+     * @return CasterId <p>导播台ID。</p>
      */
     public Long getCasterId() {
         return this.CasterId;
     }
 
     /**
-     * Set 导播台ID。
-     * @param CasterId 导播台ID。
+     * Set <p>导播台ID。</p>
+     * @param CasterId <p>导播台ID。</p>
      */
     public void setCasterId(Long CasterId) {
         this.CasterId = CasterId;
     }
 
     /**
-     * Get 修改的导播台输入源信息 
-     * @return InputInfo 修改的导播台输入源信息
+     * Get <p>修改的导播台输入源信息</p> 
+     * @return InputInfo <p>修改的导播台输入源信息</p>
      */
     public CasterInputInfo getInputInfo() {
         return this.InputInfo;
     }
 
     /**
-     * Set 修改的导播台输入源信息
-     * @param InputInfo 修改的导播台输入源信息
+     * Set <p>修改的导播台输入源信息</p>
+     * @param InputInfo <p>修改的导播台输入源信息</p>
      */
     public void setInputInfo(CasterInputInfo InputInfo) {
         this.InputInfo = InputInfo;

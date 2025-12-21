@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeRebateInfosNewResponse extends AbstractModel {
 
     /**
-    * 返佣信息列表
+    * <p>返佣信息列表</p>
     */
     @SerializedName("RebateInfoSet")
     @Expose
     private RebateInfoElemNew [] RebateInfoSet;
 
     /**
-    * 符合查询条件返佣信息数目
+    * <p>符合查询条件返佣信息数目</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeRebateInfosNewResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返佣信息列表 
-     * @return RebateInfoSet 返佣信息列表
+     * Get <p>返佣信息列表</p> 
+     * @return RebateInfoSet <p>返佣信息列表</p>
      */
     public RebateInfoElemNew [] getRebateInfoSet() {
         return this.RebateInfoSet;
     }
 
     /**
-     * Set 返佣信息列表
-     * @param RebateInfoSet 返佣信息列表
+     * Set <p>返佣信息列表</p>
+     * @param RebateInfoSet <p>返佣信息列表</p>
      */
     public void setRebateInfoSet(RebateInfoElemNew [] RebateInfoSet) {
         this.RebateInfoSet = RebateInfoSet;
     }
 
     /**
-     * Get 符合查询条件返佣信息数目 
-     * @return TotalCount 符合查询条件返佣信息数目
+     * Get <p>符合查询条件返佣信息数目</p> 
+     * @return TotalCount <p>符合查询条件返佣信息数目</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合查询条件返佣信息数目
-     * @param TotalCount 符合查询条件返佣信息数目
+     * Set <p>符合查询条件返佣信息数目</p>
+     * @param TotalCount <p>符合查询条件返佣信息数目</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

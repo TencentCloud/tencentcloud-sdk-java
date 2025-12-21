@@ -87,6 +87,13 @@ public class SandboxInstance extends AbstractModel {
     private String UpdateTime;
 
     /**
+    * 存储挂载选项
+    */
+    @SerializedName("MountOptions")
+    @Expose
+    private MountOption [] MountOptions;
+
+    /**
      * Get 沙箱实例唯一标识符 
      * @return InstanceId 沙箱实例唯一标识符
      */
@@ -230,6 +237,22 @@ public class SandboxInstance extends AbstractModel {
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get 存储挂载选项 
+     * @return MountOptions 存储挂载选项
+     */
+    public MountOption [] getMountOptions() {
+        return this.MountOptions;
+    }
+
+    /**
+     * Set 存储挂载选项
+     * @param MountOptions 存储挂载选项
+     */
+    public void setMountOptions(MountOption [] MountOptions) {
+        this.MountOptions = MountOptions;
+    }
+
     public SandboxInstance() {
     }
 
@@ -265,6 +288,12 @@ public class SandboxInstance extends AbstractModel {
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.MountOptions != null) {
+            this.MountOptions = new MountOption[source.MountOptions.length];
+            for (int i = 0; i < source.MountOptions.length; i++) {
+                this.MountOptions[i] = new MountOption(source.MountOptions[i]);
+            }
+        }
     }
 
 
@@ -281,6 +310,7 @@ public class SandboxInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "StopReason", this.StopReason);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamArrayObj(map, prefix + "MountOptions.", this.MountOptions);
 
     }
 }

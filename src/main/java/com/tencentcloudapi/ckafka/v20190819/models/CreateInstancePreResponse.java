@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateInstancePreResponse extends AbstractModel {
 
     /**
-    * 返回结果
+    * <p>返回结果</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class CreateInstancePreResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回结果 
-     * @return Result 返回结果
+     * Get <p>返回结果</p> 
+     * @return Result <p>返回结果</p>
      */
     public CreateInstancePreResp getResult() {
         return this.Result;
     }
 
     /**
-     * Set 返回结果
-     * @param Result 返回结果
+     * Set <p>返回结果</p>
+     * @param Result <p>返回结果</p>
      */
     public void setResult(CreateInstancePreResp Result) {
         this.Result = Result;

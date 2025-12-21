@@ -73,6 +73,20 @@ public class CreateSandboxToolRequest extends AbstractModel {
     private String ClientToken;
 
     /**
+    * 角色ARN
+    */
+    @SerializedName("RoleArn")
+    @Expose
+    private String RoleArn;
+
+    /**
+    * 沙箱工具存储配置
+    */
+    @SerializedName("StorageMounts")
+    @Expose
+    private StorageMount [] StorageMounts;
+
+    /**
      * Get 沙箱工具名称，长度 1-50 字符，支持英文、数字、下划线和连接线。同一 AppId 下沙箱工具名称必须唯一 
      * @return ToolName 沙箱工具名称，长度 1-50 字符，支持英文、数字、下划线和连接线。同一 AppId 下沙箱工具名称必须唯一
      */
@@ -184,6 +198,38 @@ public class CreateSandboxToolRequest extends AbstractModel {
         this.ClientToken = ClientToken;
     }
 
+    /**
+     * Get 角色ARN 
+     * @return RoleArn 角色ARN
+     */
+    public String getRoleArn() {
+        return this.RoleArn;
+    }
+
+    /**
+     * Set 角色ARN
+     * @param RoleArn 角色ARN
+     */
+    public void setRoleArn(String RoleArn) {
+        this.RoleArn = RoleArn;
+    }
+
+    /**
+     * Get 沙箱工具存储配置 
+     * @return StorageMounts 沙箱工具存储配置
+     */
+    public StorageMount [] getStorageMounts() {
+        return this.StorageMounts;
+    }
+
+    /**
+     * Set 沙箱工具存储配置
+     * @param StorageMounts 沙箱工具存储配置
+     */
+    public void setStorageMounts(StorageMount [] StorageMounts) {
+        this.StorageMounts = StorageMounts;
+    }
+
     public CreateSandboxToolRequest() {
     }
 
@@ -216,6 +262,15 @@ public class CreateSandboxToolRequest extends AbstractModel {
         if (source.ClientToken != null) {
             this.ClientToken = new String(source.ClientToken);
         }
+        if (source.RoleArn != null) {
+            this.RoleArn = new String(source.RoleArn);
+        }
+        if (source.StorageMounts != null) {
+            this.StorageMounts = new StorageMount[source.StorageMounts.length];
+            for (int i = 0; i < source.StorageMounts.length; i++) {
+                this.StorageMounts[i] = new StorageMount(source.StorageMounts[i]);
+            }
+        }
     }
 
 
@@ -230,6 +285,8 @@ public class CreateSandboxToolRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DefaultTimeout", this.DefaultTimeout);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
+        this.setParamSimple(map, prefix + "RoleArn", this.RoleArn);
+        this.setParamArrayObj(map, prefix + "StorageMounts.", this.StorageMounts);
 
     }
 }

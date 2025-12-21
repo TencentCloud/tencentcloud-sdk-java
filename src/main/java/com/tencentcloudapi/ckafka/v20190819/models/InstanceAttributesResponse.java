@@ -24,1153 +24,1058 @@ import java.util.HashMap;
 public class InstanceAttributesResponse extends AbstractModel {
 
     /**
-    * ckafka集群实例Id
+    * <p>ckafka集群实例Id</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * ckafka集群实例Name
+    * <p>ckafka集群实例Name</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 接入点 VIP 列表信息
+    * <p>接入点 VIP 列表信息</p>
     */
     @SerializedName("VipList")
     @Expose
     private VipEntity [] VipList;
 
     /**
-    * 虚拟IP
+    * <p>虚拟IP</p>
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * 虚拟端口
+    * <p>虚拟端口</p>
     */
     @SerializedName("Vport")
     @Expose
     private String Vport;
 
     /**
-    * 实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
+    * <p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 </p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 实例带宽，单位：Mbps
+    * <p>实例带宽，单位：Mbps</p>
     */
     @SerializedName("Bandwidth")
     @Expose
     private Long Bandwidth;
 
     /**
-    * 实例的存储大小，单位：GB
+    * <p>实例的存储大小，单位：GB</p>
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-    * 可用区
+    * <p>可用区</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * VPC 的 ID，为空表示是基础网络
+    * <p>VPC 的 ID，为空表示是基础网络</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 子网 ID， 为空表示基础网络
+    * <p>子网 ID， 为空表示基础网络</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 实例健康状态， 1：健康，2：告警，3：异常
+    * <p>实例健康状态， 1：健康，2：告警，3：异常</p>
     */
     @SerializedName("Healthy")
     @Expose
     private Long Healthy;
 
     /**
-    * 实例健康信息，当前会展示磁盘利用率，最大长度为256
+    * <p>实例健康信息，当前会展示磁盘利用率，最大长度为256</p>
     */
     @SerializedName("HealthyMessage")
     @Expose
     private String HealthyMessage;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
 
     /**
-    * 消息保存时间,单位为分钟
+    * <p>消息保存时间,单位为分钟</p>
     */
     @SerializedName("MsgRetentionTime")
     @Expose
     private Long MsgRetentionTime;
 
     /**
-    * 自动创建 Topic 配置， 若该字段为空，则表示未开启自动创建
+    * <p>自动创建 Topic 配置， 若该字段为空，则表示未开启自动创建</p>
     */
     @SerializedName("Config")
     @Expose
     private InstanceConfigDO Config;
 
     /**
-    * 剩余创建分区数
+    * <p>剩余创建分区数</p>
     */
     @SerializedName("RemainderPartitions")
     @Expose
     private Long RemainderPartitions;
 
     /**
-    * 剩余创建主题数
+    * <p>剩余创建主题数</p>
     */
     @SerializedName("RemainderTopics")
     @Expose
     private Long RemainderTopics;
 
     /**
-    * 当前创建分区数
+    * <p>当前创建分区数</p>
     */
     @SerializedName("CreatedPartitions")
     @Expose
     private Long CreatedPartitions;
 
     /**
-    * 当前创建主题数
+    * <p>当前创建主题数</p>
     */
     @SerializedName("CreatedTopics")
     @Expose
     private Long CreatedTopics;
 
     /**
-    * 标签数组
+    * <p>标签数组</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 过期时间
+    * <p>过期时间</p>
     */
     @SerializedName("ExpireTime")
     @Expose
     private Long ExpireTime;
 
     /**
-    * 可用区列表
+    * <p>可用区列表</p>
     */
     @SerializedName("ZoneIds")
     @Expose
     private Long [] ZoneIds;
 
     /**
-    * ckafka集群实例版本
+    * <p>ckafka集群实例版本</p>
     */
     @SerializedName("Version")
     @Expose
     private String Version;
 
     /**
-    * 最大分组数
+    * <p>最大分组数</p>
     */
     @SerializedName("MaxGroupNum")
     @Expose
     private Long MaxGroupNum;
 
     /**
-    * 售卖类型,0:标准版,1:专业版
+    * <p>售卖类型,0:标准版,1:专业版</p>
     */
     @SerializedName("Cvm")
     @Expose
     private Long Cvm;
 
     /**
-    * 实例类型  枚举列表: 
-profession  :专业版    
-standards2  :标准版
-premium   :高级版
-serverless  :serverless版
+    * <p>实例类型  枚举列表: profession  :专业版  <br />standards2  :标准版premium   :高级版serverless  :serverless版</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * 表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。
+    * <p>表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。</p>
     */
     @SerializedName("Features")
     @Expose
     private String [] Features;
 
     /**
-    * 动态消息保留策略
+    * <p>动态消息保留策略</p>
     */
     @SerializedName("RetentionTimeConfig")
     @Expose
     private DynamicRetentionTime RetentionTimeConfig;
 
     /**
-    * 最大连接数
+    * <p>最大连接数</p>
     */
     @SerializedName("MaxConnection")
     @Expose
     private Long MaxConnection;
 
     /**
-    * 公网带宽
+    * <p>公网带宽</p>
     */
     @SerializedName("PublicNetwork")
     @Expose
     private Long PublicNetwork;
 
     /**
-    * 该字段已废弃,无实际含义
+    * <p>该字段已废弃,无实际含义</p>
     */
     @SerializedName("DeleteRouteTimestamp")
     @Expose
     private String DeleteRouteTimestamp;
 
     /**
-    * 剩余创建分区数
+    * <p>剩余创建分区数</p>
     */
     @SerializedName("RemainingPartitions")
     @Expose
     private Long RemainingPartitions;
 
     /**
-    * 剩余创建主题数
+    * <p>剩余创建主题数</p>
     */
     @SerializedName("RemainingTopics")
     @Expose
     private Long RemainingTopics;
 
     /**
-    * 动态硬盘扩容策略
+    * <p>动态硬盘扩容策略</p>
     */
     @SerializedName("DynamicDiskConfig")
     @Expose
     private DynamicDiskConfig DynamicDiskConfig;
 
     /**
-    * 系统维护时间
+    * <p>系统维护时间</p>
     */
     @SerializedName("SystemMaintenanceTime")
     @Expose
     private String SystemMaintenanceTime;
 
     /**
-    * 实例级别消息最大大小
+    * <p>实例级别消息最大大小</p>
     */
     @SerializedName("MaxMessageByte")
     @Expose
     private Long MaxMessageByte;
 
     /**
-    * 实例计费类型  POSTPAID_BY_HOUR 按小时付费; PREPAID 包年包月
+    * <p>实例计费类型  POSTPAID_BY_HOUR 按小时付费; PREPAID 包年包月</p>
     */
     @SerializedName("InstanceChargeType")
     @Expose
     private String InstanceChargeType;
 
     /**
-    * 是否开启弹性带宽白名单   
-1:已开启弹性带宽白名单;
-0:未开启弹性带宽白名单;
+    * <p>是否开启弹性带宽白名单 <br />1:已开启弹性带宽白名单;0:未开启弹性带宽白名单;</p>
     */
     @SerializedName("ElasticBandwidthSwitch")
     @Expose
     private Long ElasticBandwidthSwitch;
 
     /**
-    * 弹性带宽开通状态
-1:未开启弹性带宽;
-16: 开启弹性带宽中;
-32:开启弹性带宽成功;
-33:关闭弹性带宽中;
-34:关闭弹性带宽成功;
-64:开启弹性带宽失败;
-65:关闭弹性带宽失败;
+    * <p>弹性带宽开通状态1:未开启弹性带宽;16: 开启弹性带宽中;32:开启弹性带宽成功;33:关闭弹性带宽中;34:关闭弹性带宽成功;64:开启弹性带宽失败;65:关闭弹性带宽失败;</p>
     */
     @SerializedName("ElasticBandwidthOpenStatus")
     @Expose
     private Long ElasticBandwidthOpenStatus;
 
     /**
-    * 集群类型  
-CLOUD_IDC IDC集群
-CLOUD_CVM_SHARE CVM共享集群
-CLOUD_CVM_YUNTI 云梯CVM集群
-CLOUD_CVM    CVM集群
-CLOUD_CDC CDC集群
-CLOUD_EKS_TSE EKS集群
+    * <p>集群类型<br />CLOUD_IDC IDC集群CLOUD_CVM_SHARE CVM共享集群CLOUD_CVM_YUNTI 云梯CVM集群CLOUD_CVM    CVM集群CLOUD_CDC CDC集群CLOUD_EKS_TSE EKS集群</p>
     */
     @SerializedName("ClusterType")
     @Expose
     private String ClusterType;
 
     /**
-    * 免费分区数量
+    * <p>免费分区数量</p>
     */
     @SerializedName("FreePartitionNumber")
     @Expose
     private Long FreePartitionNumber;
 
     /**
-    * 弹性带宽上浮值
+    * <p>弹性带宽上浮值</p>
     */
     @SerializedName("ElasticFloatBandwidth")
     @Expose
     private Long ElasticFloatBandwidth;
 
     /**
-    * ssl自定义证书id  仅自定义证书实例集群返回
+    * <p>ssl自定义证书id  仅自定义证书实例集群返回</p>
     */
     @SerializedName("CustomCertId")
     @Expose
     private String CustomCertId;
 
     /**
-    * 集群topic默认 unclean.leader.election.enable配置: 1 开启 0 关闭
+    * <p>集群topic默认 unclean.leader.election.enable配置: 1 开启 0 关闭</p>
     */
     @SerializedName("UncleanLeaderElectionEnable")
     @Expose
     private Long UncleanLeaderElectionEnable;
 
     /**
-    * 实例删除保护开关: 1 开启 0 关闭
+    * <p>实例删除保护开关: 1 开启 0 关闭</p>
     */
     @SerializedName("DeleteProtectionEnable")
     @Expose
     private Long DeleteProtectionEnable;
 
     /**
-     * Get ckafka集群实例Id 
-     * @return InstanceId ckafka集群实例Id
+     * Get <p>ckafka集群实例Id</p> 
+     * @return InstanceId <p>ckafka集群实例Id</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ckafka集群实例Id
-     * @param InstanceId ckafka集群实例Id
+     * Set <p>ckafka集群实例Id</p>
+     * @param InstanceId <p>ckafka集群实例Id</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get ckafka集群实例Name 
-     * @return InstanceName ckafka集群实例Name
+     * Get <p>ckafka集群实例Name</p> 
+     * @return InstanceName <p>ckafka集群实例Name</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set ckafka集群实例Name
-     * @param InstanceName ckafka集群实例Name
+     * Set <p>ckafka集群实例Name</p>
+     * @param InstanceName <p>ckafka集群实例Name</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 接入点 VIP 列表信息 
-     * @return VipList 接入点 VIP 列表信息
+     * Get <p>接入点 VIP 列表信息</p> 
+     * @return VipList <p>接入点 VIP 列表信息</p>
      */
     public VipEntity [] getVipList() {
         return this.VipList;
     }
 
     /**
-     * Set 接入点 VIP 列表信息
-     * @param VipList 接入点 VIP 列表信息
+     * Set <p>接入点 VIP 列表信息</p>
+     * @param VipList <p>接入点 VIP 列表信息</p>
      */
     public void setVipList(VipEntity [] VipList) {
         this.VipList = VipList;
     }
 
     /**
-     * Get 虚拟IP 
-     * @return Vip 虚拟IP
+     * Get <p>虚拟IP</p> 
+     * @return Vip <p>虚拟IP</p>
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set 虚拟IP
-     * @param Vip 虚拟IP
+     * Set <p>虚拟IP</p>
+     * @param Vip <p>虚拟IP</p>
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get 虚拟端口 
-     * @return Vport 虚拟端口
+     * Get <p>虚拟端口</p> 
+     * @return Vport <p>虚拟端口</p>
      */
     public String getVport() {
         return this.Vport;
     }
 
     /**
-     * Set 虚拟端口
-     * @param Vport 虚拟端口
+     * Set <p>虚拟端口</p>
+     * @param Vport <p>虚拟端口</p>
      */
     public void setVport(String Vport) {
         this.Vport = Vport;
     }
 
     /**
-     * Get 实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败  
-     * @return Status 实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
+     * Get <p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 </p> 
+     * @return Status <p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 </p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
-     * @param Status 实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
+     * Set <p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 </p>
+     * @param Status <p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 </p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 实例带宽，单位：Mbps 
-     * @return Bandwidth 实例带宽，单位：Mbps
+     * Get <p>实例带宽，单位：Mbps</p> 
+     * @return Bandwidth <p>实例带宽，单位：Mbps</p>
      */
     public Long getBandwidth() {
         return this.Bandwidth;
     }
 
     /**
-     * Set 实例带宽，单位：Mbps
-     * @param Bandwidth 实例带宽，单位：Mbps
+     * Set <p>实例带宽，单位：Mbps</p>
+     * @param Bandwidth <p>实例带宽，单位：Mbps</p>
      */
     public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 
     /**
-     * Get 实例的存储大小，单位：GB 
-     * @return DiskSize 实例的存储大小，单位：GB
+     * Get <p>实例的存储大小，单位：GB</p> 
+     * @return DiskSize <p>实例的存储大小，单位：GB</p>
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set 实例的存储大小，单位：GB
-     * @param DiskSize 实例的存储大小，单位：GB
+     * Set <p>实例的存储大小，单位：GB</p>
+     * @param DiskSize <p>实例的存储大小，单位：GB</p>
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get 可用区 
-     * @return ZoneId 可用区
+     * Get <p>可用区</p> 
+     * @return ZoneId <p>可用区</p>
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 可用区
-     * @param ZoneId 可用区
+     * Set <p>可用区</p>
+     * @param ZoneId <p>可用区</p>
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get VPC 的 ID，为空表示是基础网络 
-     * @return VpcId VPC 的 ID，为空表示是基础网络
+     * Get <p>VPC 的 ID，为空表示是基础网络</p> 
+     * @return VpcId <p>VPC 的 ID，为空表示是基础网络</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC 的 ID，为空表示是基础网络
-     * @param VpcId VPC 的 ID，为空表示是基础网络
+     * Set <p>VPC 的 ID，为空表示是基础网络</p>
+     * @param VpcId <p>VPC 的 ID，为空表示是基础网络</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网 ID， 为空表示基础网络 
-     * @return SubnetId 子网 ID， 为空表示基础网络
+     * Get <p>子网 ID， 为空表示基础网络</p> 
+     * @return SubnetId <p>子网 ID， 为空表示基础网络</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网 ID， 为空表示基础网络
-     * @param SubnetId 子网 ID， 为空表示基础网络
+     * Set <p>子网 ID， 为空表示基础网络</p>
+     * @param SubnetId <p>子网 ID， 为空表示基础网络</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 实例健康状态， 1：健康，2：告警，3：异常 
-     * @return Healthy 实例健康状态， 1：健康，2：告警，3：异常
+     * Get <p>实例健康状态， 1：健康，2：告警，3：异常</p> 
+     * @return Healthy <p>实例健康状态， 1：健康，2：告警，3：异常</p>
      */
     public Long getHealthy() {
         return this.Healthy;
     }
 
     /**
-     * Set 实例健康状态， 1：健康，2：告警，3：异常
-     * @param Healthy 实例健康状态， 1：健康，2：告警，3：异常
+     * Set <p>实例健康状态， 1：健康，2：告警，3：异常</p>
+     * @param Healthy <p>实例健康状态， 1：健康，2：告警，3：异常</p>
      */
     public void setHealthy(Long Healthy) {
         this.Healthy = Healthy;
     }
 
     /**
-     * Get 实例健康信息，当前会展示磁盘利用率，最大长度为256 
-     * @return HealthyMessage 实例健康信息，当前会展示磁盘利用率，最大长度为256
+     * Get <p>实例健康信息，当前会展示磁盘利用率，最大长度为256</p> 
+     * @return HealthyMessage <p>实例健康信息，当前会展示磁盘利用率，最大长度为256</p>
      */
     public String getHealthyMessage() {
         return this.HealthyMessage;
     }
 
     /**
-     * Set 实例健康信息，当前会展示磁盘利用率，最大长度为256
-     * @param HealthyMessage 实例健康信息，当前会展示磁盘利用率，最大长度为256
+     * Set <p>实例健康信息，当前会展示磁盘利用率，最大长度为256</p>
+     * @param HealthyMessage <p>实例健康信息，当前会展示磁盘利用率，最大长度为256</p>
      */
     public void setHealthyMessage(String HealthyMessage) {
         this.HealthyMessage = HealthyMessage;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 消息保存时间,单位为分钟 
-     * @return MsgRetentionTime 消息保存时间,单位为分钟
+     * Get <p>消息保存时间,单位为分钟</p> 
+     * @return MsgRetentionTime <p>消息保存时间,单位为分钟</p>
      */
     public Long getMsgRetentionTime() {
         return this.MsgRetentionTime;
     }
 
     /**
-     * Set 消息保存时间,单位为分钟
-     * @param MsgRetentionTime 消息保存时间,单位为分钟
+     * Set <p>消息保存时间,单位为分钟</p>
+     * @param MsgRetentionTime <p>消息保存时间,单位为分钟</p>
      */
     public void setMsgRetentionTime(Long MsgRetentionTime) {
         this.MsgRetentionTime = MsgRetentionTime;
     }
 
     /**
-     * Get 自动创建 Topic 配置， 若该字段为空，则表示未开启自动创建 
-     * @return Config 自动创建 Topic 配置， 若该字段为空，则表示未开启自动创建
+     * Get <p>自动创建 Topic 配置， 若该字段为空，则表示未开启自动创建</p> 
+     * @return Config <p>自动创建 Topic 配置， 若该字段为空，则表示未开启自动创建</p>
      */
     public InstanceConfigDO getConfig() {
         return this.Config;
     }
 
     /**
-     * Set 自动创建 Topic 配置， 若该字段为空，则表示未开启自动创建
-     * @param Config 自动创建 Topic 配置， 若该字段为空，则表示未开启自动创建
+     * Set <p>自动创建 Topic 配置， 若该字段为空，则表示未开启自动创建</p>
+     * @param Config <p>自动创建 Topic 配置， 若该字段为空，则表示未开启自动创建</p>
      */
     public void setConfig(InstanceConfigDO Config) {
         this.Config = Config;
     }
 
     /**
-     * Get 剩余创建分区数 
-     * @return RemainderPartitions 剩余创建分区数
+     * Get <p>剩余创建分区数</p> 
+     * @return RemainderPartitions <p>剩余创建分区数</p>
      */
     public Long getRemainderPartitions() {
         return this.RemainderPartitions;
     }
 
     /**
-     * Set 剩余创建分区数
-     * @param RemainderPartitions 剩余创建分区数
+     * Set <p>剩余创建分区数</p>
+     * @param RemainderPartitions <p>剩余创建分区数</p>
      */
     public void setRemainderPartitions(Long RemainderPartitions) {
         this.RemainderPartitions = RemainderPartitions;
     }
 
     /**
-     * Get 剩余创建主题数 
-     * @return RemainderTopics 剩余创建主题数
+     * Get <p>剩余创建主题数</p> 
+     * @return RemainderTopics <p>剩余创建主题数</p>
      */
     public Long getRemainderTopics() {
         return this.RemainderTopics;
     }
 
     /**
-     * Set 剩余创建主题数
-     * @param RemainderTopics 剩余创建主题数
+     * Set <p>剩余创建主题数</p>
+     * @param RemainderTopics <p>剩余创建主题数</p>
      */
     public void setRemainderTopics(Long RemainderTopics) {
         this.RemainderTopics = RemainderTopics;
     }
 
     /**
-     * Get 当前创建分区数 
-     * @return CreatedPartitions 当前创建分区数
+     * Get <p>当前创建分区数</p> 
+     * @return CreatedPartitions <p>当前创建分区数</p>
      */
     public Long getCreatedPartitions() {
         return this.CreatedPartitions;
     }
 
     /**
-     * Set 当前创建分区数
-     * @param CreatedPartitions 当前创建分区数
+     * Set <p>当前创建分区数</p>
+     * @param CreatedPartitions <p>当前创建分区数</p>
      */
     public void setCreatedPartitions(Long CreatedPartitions) {
         this.CreatedPartitions = CreatedPartitions;
     }
 
     /**
-     * Get 当前创建主题数 
-     * @return CreatedTopics 当前创建主题数
+     * Get <p>当前创建主题数</p> 
+     * @return CreatedTopics <p>当前创建主题数</p>
      */
     public Long getCreatedTopics() {
         return this.CreatedTopics;
     }
 
     /**
-     * Set 当前创建主题数
-     * @param CreatedTopics 当前创建主题数
+     * Set <p>当前创建主题数</p>
+     * @param CreatedTopics <p>当前创建主题数</p>
      */
     public void setCreatedTopics(Long CreatedTopics) {
         this.CreatedTopics = CreatedTopics;
     }
 
     /**
-     * Get 标签数组 
-     * @return Tags 标签数组
+     * Get <p>标签数组</p> 
+     * @return Tags <p>标签数组</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签数组
-     * @param Tags 标签数组
+     * Set <p>标签数组</p>
+     * @param Tags <p>标签数组</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 过期时间 
-     * @return ExpireTime 过期时间
+     * Get <p>过期时间</p> 
+     * @return ExpireTime <p>过期时间</p>
      */
     public Long getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 过期时间
-     * @param ExpireTime 过期时间
+     * Set <p>过期时间</p>
+     * @param ExpireTime <p>过期时间</p>
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 可用区列表 
-     * @return ZoneIds 可用区列表
+     * Get <p>可用区列表</p> 
+     * @return ZoneIds <p>可用区列表</p>
      */
     public Long [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set 可用区列表
-     * @param ZoneIds 可用区列表
+     * Set <p>可用区列表</p>
+     * @param ZoneIds <p>可用区列表</p>
      */
     public void setZoneIds(Long [] ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
     /**
-     * Get ckafka集群实例版本 
-     * @return Version ckafka集群实例版本
+     * Get <p>ckafka集群实例版本</p> 
+     * @return Version <p>ckafka集群实例版本</p>
      */
     public String getVersion() {
         return this.Version;
     }
 
     /**
-     * Set ckafka集群实例版本
-     * @param Version ckafka集群实例版本
+     * Set <p>ckafka集群实例版本</p>
+     * @param Version <p>ckafka集群实例版本</p>
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get 最大分组数 
-     * @return MaxGroupNum 最大分组数
+     * Get <p>最大分组数</p> 
+     * @return MaxGroupNum <p>最大分组数</p>
      */
     public Long getMaxGroupNum() {
         return this.MaxGroupNum;
     }
 
     /**
-     * Set 最大分组数
-     * @param MaxGroupNum 最大分组数
+     * Set <p>最大分组数</p>
+     * @param MaxGroupNum <p>最大分组数</p>
      */
     public void setMaxGroupNum(Long MaxGroupNum) {
         this.MaxGroupNum = MaxGroupNum;
     }
 
     /**
-     * Get 售卖类型,0:标准版,1:专业版 
-     * @return Cvm 售卖类型,0:标准版,1:专业版
+     * Get <p>售卖类型,0:标准版,1:专业版</p> 
+     * @return Cvm <p>售卖类型,0:标准版,1:专业版</p>
      */
     public Long getCvm() {
         return this.Cvm;
     }
 
     /**
-     * Set 售卖类型,0:标准版,1:专业版
-     * @param Cvm 售卖类型,0:标准版,1:专业版
+     * Set <p>售卖类型,0:标准版,1:专业版</p>
+     * @param Cvm <p>售卖类型,0:标准版,1:专业版</p>
      */
     public void setCvm(Long Cvm) {
         this.Cvm = Cvm;
     }
 
     /**
-     * Get 实例类型  枚举列表: 
-profession  :专业版    
-standards2  :标准版
-premium   :高级版
-serverless  :serverless版 
-     * @return InstanceType 实例类型  枚举列表: 
-profession  :专业版    
-standards2  :标准版
-premium   :高级版
-serverless  :serverless版
+     * Get <p>实例类型  枚举列表: profession  :专业版  <br />standards2  :标准版premium   :高级版serverless  :serverless版</p> 
+     * @return InstanceType <p>实例类型  枚举列表: profession  :专业版  <br />standards2  :标准版premium   :高级版serverless  :serverless版</p>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 实例类型  枚举列表: 
-profession  :专业版    
-standards2  :标准版
-premium   :高级版
-serverless  :serverless版
-     * @param InstanceType 实例类型  枚举列表: 
-profession  :专业版    
-standards2  :标准版
-premium   :高级版
-serverless  :serverless版
+     * Set <p>实例类型  枚举列表: profession  :专业版  <br />standards2  :标准版premium   :高级版serverless  :serverless版</p>
+     * @param InstanceType <p>实例类型  枚举列表: profession  :专业版  <br />standards2  :标准版premium   :高级版serverless  :serverless版</p>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。 
-     * @return Features 表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。
+     * Get <p>表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。</p> 
+     * @return Features <p>表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。</p>
      */
     public String [] getFeatures() {
         return this.Features;
     }
 
     /**
-     * Set 表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。
-     * @param Features 表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。
+     * Set <p>表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。</p>
+     * @param Features <p>表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。</p>
      */
     public void setFeatures(String [] Features) {
         this.Features = Features;
     }
 
     /**
-     * Get 动态消息保留策略 
-     * @return RetentionTimeConfig 动态消息保留策略
+     * Get <p>动态消息保留策略</p> 
+     * @return RetentionTimeConfig <p>动态消息保留策略</p>
      */
     public DynamicRetentionTime getRetentionTimeConfig() {
         return this.RetentionTimeConfig;
     }
 
     /**
-     * Set 动态消息保留策略
-     * @param RetentionTimeConfig 动态消息保留策略
+     * Set <p>动态消息保留策略</p>
+     * @param RetentionTimeConfig <p>动态消息保留策略</p>
      */
     public void setRetentionTimeConfig(DynamicRetentionTime RetentionTimeConfig) {
         this.RetentionTimeConfig = RetentionTimeConfig;
     }
 
     /**
-     * Get 最大连接数 
-     * @return MaxConnection 最大连接数
+     * Get <p>最大连接数</p> 
+     * @return MaxConnection <p>最大连接数</p>
      */
     public Long getMaxConnection() {
         return this.MaxConnection;
     }
 
     /**
-     * Set 最大连接数
-     * @param MaxConnection 最大连接数
+     * Set <p>最大连接数</p>
+     * @param MaxConnection <p>最大连接数</p>
      */
     public void setMaxConnection(Long MaxConnection) {
         this.MaxConnection = MaxConnection;
     }
 
     /**
-     * Get 公网带宽 
-     * @return PublicNetwork 公网带宽
+     * Get <p>公网带宽</p> 
+     * @return PublicNetwork <p>公网带宽</p>
      */
     public Long getPublicNetwork() {
         return this.PublicNetwork;
     }
 
     /**
-     * Set 公网带宽
-     * @param PublicNetwork 公网带宽
+     * Set <p>公网带宽</p>
+     * @param PublicNetwork <p>公网带宽</p>
      */
     public void setPublicNetwork(Long PublicNetwork) {
         this.PublicNetwork = PublicNetwork;
     }
 
     /**
-     * Get 该字段已废弃,无实际含义 
-     * @return DeleteRouteTimestamp 该字段已废弃,无实际含义
+     * Get <p>该字段已废弃,无实际含义</p> 
+     * @return DeleteRouteTimestamp <p>该字段已废弃,无实际含义</p>
      */
     public String getDeleteRouteTimestamp() {
         return this.DeleteRouteTimestamp;
     }
 
     /**
-     * Set 该字段已废弃,无实际含义
-     * @param DeleteRouteTimestamp 该字段已废弃,无实际含义
+     * Set <p>该字段已废弃,无实际含义</p>
+     * @param DeleteRouteTimestamp <p>该字段已废弃,无实际含义</p>
      */
     public void setDeleteRouteTimestamp(String DeleteRouteTimestamp) {
         this.DeleteRouteTimestamp = DeleteRouteTimestamp;
     }
 
     /**
-     * Get 剩余创建分区数 
-     * @return RemainingPartitions 剩余创建分区数
+     * Get <p>剩余创建分区数</p> 
+     * @return RemainingPartitions <p>剩余创建分区数</p>
      */
     public Long getRemainingPartitions() {
         return this.RemainingPartitions;
     }
 
     /**
-     * Set 剩余创建分区数
-     * @param RemainingPartitions 剩余创建分区数
+     * Set <p>剩余创建分区数</p>
+     * @param RemainingPartitions <p>剩余创建分区数</p>
      */
     public void setRemainingPartitions(Long RemainingPartitions) {
         this.RemainingPartitions = RemainingPartitions;
     }
 
     /**
-     * Get 剩余创建主题数 
-     * @return RemainingTopics 剩余创建主题数
+     * Get <p>剩余创建主题数</p> 
+     * @return RemainingTopics <p>剩余创建主题数</p>
      */
     public Long getRemainingTopics() {
         return this.RemainingTopics;
     }
 
     /**
-     * Set 剩余创建主题数
-     * @param RemainingTopics 剩余创建主题数
+     * Set <p>剩余创建主题数</p>
+     * @param RemainingTopics <p>剩余创建主题数</p>
      */
     public void setRemainingTopics(Long RemainingTopics) {
         this.RemainingTopics = RemainingTopics;
     }
 
     /**
-     * Get 动态硬盘扩容策略 
-     * @return DynamicDiskConfig 动态硬盘扩容策略
+     * Get <p>动态硬盘扩容策略</p> 
+     * @return DynamicDiskConfig <p>动态硬盘扩容策略</p>
      */
     public DynamicDiskConfig getDynamicDiskConfig() {
         return this.DynamicDiskConfig;
     }
 
     /**
-     * Set 动态硬盘扩容策略
-     * @param DynamicDiskConfig 动态硬盘扩容策略
+     * Set <p>动态硬盘扩容策略</p>
+     * @param DynamicDiskConfig <p>动态硬盘扩容策略</p>
      */
     public void setDynamicDiskConfig(DynamicDiskConfig DynamicDiskConfig) {
         this.DynamicDiskConfig = DynamicDiskConfig;
     }
 
     /**
-     * Get 系统维护时间 
-     * @return SystemMaintenanceTime 系统维护时间
+     * Get <p>系统维护时间</p> 
+     * @return SystemMaintenanceTime <p>系统维护时间</p>
      */
     public String getSystemMaintenanceTime() {
         return this.SystemMaintenanceTime;
     }
 
     /**
-     * Set 系统维护时间
-     * @param SystemMaintenanceTime 系统维护时间
+     * Set <p>系统维护时间</p>
+     * @param SystemMaintenanceTime <p>系统维护时间</p>
      */
     public void setSystemMaintenanceTime(String SystemMaintenanceTime) {
         this.SystemMaintenanceTime = SystemMaintenanceTime;
     }
 
     /**
-     * Get 实例级别消息最大大小 
-     * @return MaxMessageByte 实例级别消息最大大小
+     * Get <p>实例级别消息最大大小</p> 
+     * @return MaxMessageByte <p>实例级别消息最大大小</p>
      */
     public Long getMaxMessageByte() {
         return this.MaxMessageByte;
     }
 
     /**
-     * Set 实例级别消息最大大小
-     * @param MaxMessageByte 实例级别消息最大大小
+     * Set <p>实例级别消息最大大小</p>
+     * @param MaxMessageByte <p>实例级别消息最大大小</p>
      */
     public void setMaxMessageByte(Long MaxMessageByte) {
         this.MaxMessageByte = MaxMessageByte;
     }
 
     /**
-     * Get 实例计费类型  POSTPAID_BY_HOUR 按小时付费; PREPAID 包年包月 
-     * @return InstanceChargeType 实例计费类型  POSTPAID_BY_HOUR 按小时付费; PREPAID 包年包月
+     * Get <p>实例计费类型  POSTPAID_BY_HOUR 按小时付费; PREPAID 包年包月</p> 
+     * @return InstanceChargeType <p>实例计费类型  POSTPAID_BY_HOUR 按小时付费; PREPAID 包年包月</p>
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set 实例计费类型  POSTPAID_BY_HOUR 按小时付费; PREPAID 包年包月
-     * @param InstanceChargeType 实例计费类型  POSTPAID_BY_HOUR 按小时付费; PREPAID 包年包月
+     * Set <p>实例计费类型  POSTPAID_BY_HOUR 按小时付费; PREPAID 包年包月</p>
+     * @param InstanceChargeType <p>实例计费类型  POSTPAID_BY_HOUR 按小时付费; PREPAID 包年包月</p>
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
     }
 
     /**
-     * Get 是否开启弹性带宽白名单   
-1:已开启弹性带宽白名单;
-0:未开启弹性带宽白名单; 
-     * @return ElasticBandwidthSwitch 是否开启弹性带宽白名单   
-1:已开启弹性带宽白名单;
-0:未开启弹性带宽白名单;
+     * Get <p>是否开启弹性带宽白名单 <br />1:已开启弹性带宽白名单;0:未开启弹性带宽白名单;</p> 
+     * @return ElasticBandwidthSwitch <p>是否开启弹性带宽白名单 <br />1:已开启弹性带宽白名单;0:未开启弹性带宽白名单;</p>
      */
     public Long getElasticBandwidthSwitch() {
         return this.ElasticBandwidthSwitch;
     }
 
     /**
-     * Set 是否开启弹性带宽白名单   
-1:已开启弹性带宽白名单;
-0:未开启弹性带宽白名单;
-     * @param ElasticBandwidthSwitch 是否开启弹性带宽白名单   
-1:已开启弹性带宽白名单;
-0:未开启弹性带宽白名单;
+     * Set <p>是否开启弹性带宽白名单 <br />1:已开启弹性带宽白名单;0:未开启弹性带宽白名单;</p>
+     * @param ElasticBandwidthSwitch <p>是否开启弹性带宽白名单 <br />1:已开启弹性带宽白名单;0:未开启弹性带宽白名单;</p>
      */
     public void setElasticBandwidthSwitch(Long ElasticBandwidthSwitch) {
         this.ElasticBandwidthSwitch = ElasticBandwidthSwitch;
     }
 
     /**
-     * Get 弹性带宽开通状态
-1:未开启弹性带宽;
-16: 开启弹性带宽中;
-32:开启弹性带宽成功;
-33:关闭弹性带宽中;
-34:关闭弹性带宽成功;
-64:开启弹性带宽失败;
-65:关闭弹性带宽失败; 
-     * @return ElasticBandwidthOpenStatus 弹性带宽开通状态
-1:未开启弹性带宽;
-16: 开启弹性带宽中;
-32:开启弹性带宽成功;
-33:关闭弹性带宽中;
-34:关闭弹性带宽成功;
-64:开启弹性带宽失败;
-65:关闭弹性带宽失败;
+     * Get <p>弹性带宽开通状态1:未开启弹性带宽;16: 开启弹性带宽中;32:开启弹性带宽成功;33:关闭弹性带宽中;34:关闭弹性带宽成功;64:开启弹性带宽失败;65:关闭弹性带宽失败;</p> 
+     * @return ElasticBandwidthOpenStatus <p>弹性带宽开通状态1:未开启弹性带宽;16: 开启弹性带宽中;32:开启弹性带宽成功;33:关闭弹性带宽中;34:关闭弹性带宽成功;64:开启弹性带宽失败;65:关闭弹性带宽失败;</p>
      */
     public Long getElasticBandwidthOpenStatus() {
         return this.ElasticBandwidthOpenStatus;
     }
 
     /**
-     * Set 弹性带宽开通状态
-1:未开启弹性带宽;
-16: 开启弹性带宽中;
-32:开启弹性带宽成功;
-33:关闭弹性带宽中;
-34:关闭弹性带宽成功;
-64:开启弹性带宽失败;
-65:关闭弹性带宽失败;
-     * @param ElasticBandwidthOpenStatus 弹性带宽开通状态
-1:未开启弹性带宽;
-16: 开启弹性带宽中;
-32:开启弹性带宽成功;
-33:关闭弹性带宽中;
-34:关闭弹性带宽成功;
-64:开启弹性带宽失败;
-65:关闭弹性带宽失败;
+     * Set <p>弹性带宽开通状态1:未开启弹性带宽;16: 开启弹性带宽中;32:开启弹性带宽成功;33:关闭弹性带宽中;34:关闭弹性带宽成功;64:开启弹性带宽失败;65:关闭弹性带宽失败;</p>
+     * @param ElasticBandwidthOpenStatus <p>弹性带宽开通状态1:未开启弹性带宽;16: 开启弹性带宽中;32:开启弹性带宽成功;33:关闭弹性带宽中;34:关闭弹性带宽成功;64:开启弹性带宽失败;65:关闭弹性带宽失败;</p>
      */
     public void setElasticBandwidthOpenStatus(Long ElasticBandwidthOpenStatus) {
         this.ElasticBandwidthOpenStatus = ElasticBandwidthOpenStatus;
     }
 
     /**
-     * Get 集群类型  
-CLOUD_IDC IDC集群
-CLOUD_CVM_SHARE CVM共享集群
-CLOUD_CVM_YUNTI 云梯CVM集群
-CLOUD_CVM    CVM集群
-CLOUD_CDC CDC集群
-CLOUD_EKS_TSE EKS集群 
-     * @return ClusterType 集群类型  
-CLOUD_IDC IDC集群
-CLOUD_CVM_SHARE CVM共享集群
-CLOUD_CVM_YUNTI 云梯CVM集群
-CLOUD_CVM    CVM集群
-CLOUD_CDC CDC集群
-CLOUD_EKS_TSE EKS集群
+     * Get <p>集群类型<br />CLOUD_IDC IDC集群CLOUD_CVM_SHARE CVM共享集群CLOUD_CVM_YUNTI 云梯CVM集群CLOUD_CVM    CVM集群CLOUD_CDC CDC集群CLOUD_EKS_TSE EKS集群</p> 
+     * @return ClusterType <p>集群类型<br />CLOUD_IDC IDC集群CLOUD_CVM_SHARE CVM共享集群CLOUD_CVM_YUNTI 云梯CVM集群CLOUD_CVM    CVM集群CLOUD_CDC CDC集群CLOUD_EKS_TSE EKS集群</p>
      */
     public String getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set 集群类型  
-CLOUD_IDC IDC集群
-CLOUD_CVM_SHARE CVM共享集群
-CLOUD_CVM_YUNTI 云梯CVM集群
-CLOUD_CVM    CVM集群
-CLOUD_CDC CDC集群
-CLOUD_EKS_TSE EKS集群
-     * @param ClusterType 集群类型  
-CLOUD_IDC IDC集群
-CLOUD_CVM_SHARE CVM共享集群
-CLOUD_CVM_YUNTI 云梯CVM集群
-CLOUD_CVM    CVM集群
-CLOUD_CDC CDC集群
-CLOUD_EKS_TSE EKS集群
+     * Set <p>集群类型<br />CLOUD_IDC IDC集群CLOUD_CVM_SHARE CVM共享集群CLOUD_CVM_YUNTI 云梯CVM集群CLOUD_CVM    CVM集群CLOUD_CDC CDC集群CLOUD_EKS_TSE EKS集群</p>
+     * @param ClusterType <p>集群类型<br />CLOUD_IDC IDC集群CLOUD_CVM_SHARE CVM共享集群CLOUD_CVM_YUNTI 云梯CVM集群CLOUD_CVM    CVM集群CLOUD_CDC CDC集群CLOUD_EKS_TSE EKS集群</p>
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;
     }
 
     /**
-     * Get 免费分区数量 
-     * @return FreePartitionNumber 免费分区数量
+     * Get <p>免费分区数量</p> 
+     * @return FreePartitionNumber <p>免费分区数量</p>
      */
     public Long getFreePartitionNumber() {
         return this.FreePartitionNumber;
     }
 
     /**
-     * Set 免费分区数量
-     * @param FreePartitionNumber 免费分区数量
+     * Set <p>免费分区数量</p>
+     * @param FreePartitionNumber <p>免费分区数量</p>
      */
     public void setFreePartitionNumber(Long FreePartitionNumber) {
         this.FreePartitionNumber = FreePartitionNumber;
     }
 
     /**
-     * Get 弹性带宽上浮值 
-     * @return ElasticFloatBandwidth 弹性带宽上浮值
+     * Get <p>弹性带宽上浮值</p> 
+     * @return ElasticFloatBandwidth <p>弹性带宽上浮值</p>
      */
     public Long getElasticFloatBandwidth() {
         return this.ElasticFloatBandwidth;
     }
 
     /**
-     * Set 弹性带宽上浮值
-     * @param ElasticFloatBandwidth 弹性带宽上浮值
+     * Set <p>弹性带宽上浮值</p>
+     * @param ElasticFloatBandwidth <p>弹性带宽上浮值</p>
      */
     public void setElasticFloatBandwidth(Long ElasticFloatBandwidth) {
         this.ElasticFloatBandwidth = ElasticFloatBandwidth;
     }
 
     /**
-     * Get ssl自定义证书id  仅自定义证书实例集群返回 
-     * @return CustomCertId ssl自定义证书id  仅自定义证书实例集群返回
+     * Get <p>ssl自定义证书id  仅自定义证书实例集群返回</p> 
+     * @return CustomCertId <p>ssl自定义证书id  仅自定义证书实例集群返回</p>
      */
     public String getCustomCertId() {
         return this.CustomCertId;
     }
 
     /**
-     * Set ssl自定义证书id  仅自定义证书实例集群返回
-     * @param CustomCertId ssl自定义证书id  仅自定义证书实例集群返回
+     * Set <p>ssl自定义证书id  仅自定义证书实例集群返回</p>
+     * @param CustomCertId <p>ssl自定义证书id  仅自定义证书实例集群返回</p>
      */
     public void setCustomCertId(String CustomCertId) {
         this.CustomCertId = CustomCertId;
     }
 
     /**
-     * Get 集群topic默认 unclean.leader.election.enable配置: 1 开启 0 关闭 
-     * @return UncleanLeaderElectionEnable 集群topic默认 unclean.leader.election.enable配置: 1 开启 0 关闭
+     * Get <p>集群topic默认 unclean.leader.election.enable配置: 1 开启 0 关闭</p> 
+     * @return UncleanLeaderElectionEnable <p>集群topic默认 unclean.leader.election.enable配置: 1 开启 0 关闭</p>
      */
     public Long getUncleanLeaderElectionEnable() {
         return this.UncleanLeaderElectionEnable;
     }
 
     /**
-     * Set 集群topic默认 unclean.leader.election.enable配置: 1 开启 0 关闭
-     * @param UncleanLeaderElectionEnable 集群topic默认 unclean.leader.election.enable配置: 1 开启 0 关闭
+     * Set <p>集群topic默认 unclean.leader.election.enable配置: 1 开启 0 关闭</p>
+     * @param UncleanLeaderElectionEnable <p>集群topic默认 unclean.leader.election.enable配置: 1 开启 0 关闭</p>
      */
     public void setUncleanLeaderElectionEnable(Long UncleanLeaderElectionEnable) {
         this.UncleanLeaderElectionEnable = UncleanLeaderElectionEnable;
     }
 
     /**
-     * Get 实例删除保护开关: 1 开启 0 关闭 
-     * @return DeleteProtectionEnable 实例删除保护开关: 1 开启 0 关闭
+     * Get <p>实例删除保护开关: 1 开启 0 关闭</p> 
+     * @return DeleteProtectionEnable <p>实例删除保护开关: 1 开启 0 关闭</p>
      */
     public Long getDeleteProtectionEnable() {
         return this.DeleteProtectionEnable;
     }
 
     /**
-     * Set 实例删除保护开关: 1 开启 0 关闭
-     * @param DeleteProtectionEnable 实例删除保护开关: 1 开启 0 关闭
+     * Set <p>实例删除保护开关: 1 开启 0 关闭</p>
+     * @param DeleteProtectionEnable <p>实例删除保护开关: 1 开启 0 关闭</p>
      */
     public void setDeleteProtectionEnable(Long DeleteProtectionEnable) {
         this.DeleteProtectionEnable = DeleteProtectionEnable;

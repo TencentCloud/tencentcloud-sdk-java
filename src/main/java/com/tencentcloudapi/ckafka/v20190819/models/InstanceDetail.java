@@ -24,736 +24,736 @@ import java.util.HashMap;
 public class InstanceDetail extends AbstractModel {
 
     /**
-    * ckafka集群实例Id
+    * <p>ckafka集群实例Id</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * ckafka集群实例名称
+    * <p>ckafka集群实例名称</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 访问实例的vip 信息
+    * <p>访问实例的vip 信息</p>
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * 访问实例的端口信息
+    * <p>访问实例的端口信息</p>
     */
     @SerializedName("Vport")
     @Expose
     private String Vport;
 
     /**
-    * 虚拟IP列表
+    * <p>虚拟IP列表</p>
     */
     @SerializedName("VipList")
     @Expose
     private VipEntity [] VipList;
 
     /**
-    * 实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
+    * <p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 </p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 实例带宽，单位Mbps
+    * <p>实例带宽，单位Mbps</p>
     */
     @SerializedName("Bandwidth")
     @Expose
     private Long Bandwidth;
 
     /**
-    * ckafka集群实例磁盘大小，单位G
+    * <p>ckafka集群实例磁盘大小，单位G</p>
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-    * 可用区域ID
+    * <p>可用区域ID</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * vpcId，如果为空，说明是基础网络
+    * <p>vpcId，如果为空，说明是基础网络</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 子网id
+    * <p>子网id</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 实例是否续费，int  枚举值：1表示自动续费，2表示明确不自动续费
+    * <p>实例是否续费，int  枚举值：1表示自动续费，2表示明确不自动续费</p>
     */
     @SerializedName("RenewFlag")
     @Expose
     private Long RenewFlag;
 
     /**
-    * 实例状态 int：1表示健康，2表示告警，3 表示实例状态异常
+    * <p>实例状态 int：1表示健康，2表示告警，3 表示实例状态异常</p>
     */
     @SerializedName("Healthy")
     @Expose
     private Long Healthy;
 
     /**
-    * 实例状态信息
+    * <p>实例状态信息</p>
     */
     @SerializedName("HealthyMessage")
     @Expose
     private String HealthyMessage;
 
     /**
-    * 实例创建时间
+    * <p>实例创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
 
     /**
-    * 实例过期时间
+    * <p>实例过期时间</p>
     */
     @SerializedName("ExpireTime")
     @Expose
     private Long ExpireTime;
 
     /**
-    * 是否为内部客户。值为1 表示内部客户
+    * <p>是否为内部客户。值为1 表示内部客户</p>
     */
     @SerializedName("IsInternal")
     @Expose
     private Long IsInternal;
 
     /**
-    * Topic个数
+    * <p>Topic个数</p>
     */
     @SerializedName("TopicNum")
     @Expose
     private Long TopicNum;
 
     /**
-    * 标识tag
+    * <p>标识tag</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * kafka版本信息
+    * <p>kafka版本信息</p>
     */
     @SerializedName("Version")
     @Expose
     private String Version;
 
     /**
-    * 跨可用区
+    * <p>跨可用区</p>
     */
     @SerializedName("ZoneIds")
     @Expose
     private Long [] ZoneIds;
 
     /**
-    * ckafka售卖类型
+    * <p>ckafka售卖类型</p>
     */
     @SerializedName("Cvm")
     @Expose
     private Long Cvm;
 
     /**
-    * ckafka集群实例类型
+    * <p>ckafka集群实例类型</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * ckafka集群实例磁盘类型
+    * <p>ckafka集群实例磁盘类型</p>
     */
     @SerializedName("DiskType")
     @Expose
     private String DiskType;
 
     /**
-    * 当前规格最大Topic数
+    * <p>当前规格最大Topic数</p>
     */
     @SerializedName("MaxTopicNumber")
     @Expose
     private Long MaxTopicNumber;
 
     /**
-    * 当前规格最大Partition数
+    * <p>当前规格最大Partition数</p>
     */
     @SerializedName("MaxPartitionNumber")
     @Expose
     private Long MaxPartitionNumber;
 
     /**
-    * 计划升级配置时间
+    * <p>计划升级配置时间</p>
     */
     @SerializedName("RebalanceTime")
     @Expose
     private String RebalanceTime;
 
     /**
-    * 实例当前partition数量
+    * <p>实例当前partition数量</p>
     */
     @SerializedName("PartitionNumber")
     @Expose
     private Long PartitionNumber;
 
     /**
-    * ckafka集群实例公网带宽类型
+    * <p>ckafka集群实例公网带宽类型</p>
     */
     @SerializedName("PublicNetworkChargeType")
     @Expose
     private String PublicNetworkChargeType;
 
     /**
-    * 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
+    * <p>公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写</p>
     */
     @SerializedName("PublicNetwork")
     @Expose
     private Long PublicNetwork;
 
     /**
-    * ckafka集群实例底层集群类型
+    * <p>ckafka集群实例底层集群类型</p>
     */
     @SerializedName("ClusterType")
     @Expose
     private String ClusterType;
 
     /**
-    * 实例功能列表
+    * <p>实例功能列表</p>
     */
     @SerializedName("Features")
     @Expose
     private String [] Features;
 
     /**
-     * Get ckafka集群实例Id 
-     * @return InstanceId ckafka集群实例Id
+     * Get <p>ckafka集群实例Id</p> 
+     * @return InstanceId <p>ckafka集群实例Id</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ckafka集群实例Id
-     * @param InstanceId ckafka集群实例Id
+     * Set <p>ckafka集群实例Id</p>
+     * @param InstanceId <p>ckafka集群实例Id</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get ckafka集群实例名称 
-     * @return InstanceName ckafka集群实例名称
+     * Get <p>ckafka集群实例名称</p> 
+     * @return InstanceName <p>ckafka集群实例名称</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set ckafka集群实例名称
-     * @param InstanceName ckafka集群实例名称
+     * Set <p>ckafka集群实例名称</p>
+     * @param InstanceName <p>ckafka集群实例名称</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 访问实例的vip 信息 
-     * @return Vip 访问实例的vip 信息
+     * Get <p>访问实例的vip 信息</p> 
+     * @return Vip <p>访问实例的vip 信息</p>
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set 访问实例的vip 信息
-     * @param Vip 访问实例的vip 信息
+     * Set <p>访问实例的vip 信息</p>
+     * @param Vip <p>访问实例的vip 信息</p>
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get 访问实例的端口信息 
-     * @return Vport 访问实例的端口信息
+     * Get <p>访问实例的端口信息</p> 
+     * @return Vport <p>访问实例的端口信息</p>
      */
     public String getVport() {
         return this.Vport;
     }
 
     /**
-     * Set 访问实例的端口信息
-     * @param Vport 访问实例的端口信息
+     * Set <p>访问实例的端口信息</p>
+     * @param Vport <p>访问实例的端口信息</p>
      */
     public void setVport(String Vport) {
         this.Vport = Vport;
     }
 
     /**
-     * Get 虚拟IP列表 
-     * @return VipList 虚拟IP列表
+     * Get <p>虚拟IP列表</p> 
+     * @return VipList <p>虚拟IP列表</p>
      */
     public VipEntity [] getVipList() {
         return this.VipList;
     }
 
     /**
-     * Set 虚拟IP列表
-     * @param VipList 虚拟IP列表
+     * Set <p>虚拟IP列表</p>
+     * @param VipList <p>虚拟IP列表</p>
      */
     public void setVipList(VipEntity [] VipList) {
         this.VipList = VipList;
     }
 
     /**
-     * Get 实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败  
-     * @return Status 实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
+     * Get <p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 </p> 
+     * @return Status <p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 </p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
-     * @param Status 实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
+     * Set <p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 </p>
+     * @param Status <p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 </p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 实例带宽，单位Mbps 
-     * @return Bandwidth 实例带宽，单位Mbps
+     * Get <p>实例带宽，单位Mbps</p> 
+     * @return Bandwidth <p>实例带宽，单位Mbps</p>
      */
     public Long getBandwidth() {
         return this.Bandwidth;
     }
 
     /**
-     * Set 实例带宽，单位Mbps
-     * @param Bandwidth 实例带宽，单位Mbps
+     * Set <p>实例带宽，单位Mbps</p>
+     * @param Bandwidth <p>实例带宽，单位Mbps</p>
      */
     public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 
     /**
-     * Get ckafka集群实例磁盘大小，单位G 
-     * @return DiskSize ckafka集群实例磁盘大小，单位G
+     * Get <p>ckafka集群实例磁盘大小，单位G</p> 
+     * @return DiskSize <p>ckafka集群实例磁盘大小，单位G</p>
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set ckafka集群实例磁盘大小，单位G
-     * @param DiskSize ckafka集群实例磁盘大小，单位G
+     * Set <p>ckafka集群实例磁盘大小，单位G</p>
+     * @param DiskSize <p>ckafka集群实例磁盘大小，单位G</p>
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get 可用区域ID 
-     * @return ZoneId 可用区域ID
+     * Get <p>可用区域ID</p> 
+     * @return ZoneId <p>可用区域ID</p>
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 可用区域ID
-     * @param ZoneId 可用区域ID
+     * Set <p>可用区域ID</p>
+     * @param ZoneId <p>可用区域ID</p>
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get vpcId，如果为空，说明是基础网络 
-     * @return VpcId vpcId，如果为空，说明是基础网络
+     * Get <p>vpcId，如果为空，说明是基础网络</p> 
+     * @return VpcId <p>vpcId，如果为空，说明是基础网络</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set vpcId，如果为空，说明是基础网络
-     * @param VpcId vpcId，如果为空，说明是基础网络
+     * Set <p>vpcId，如果为空，说明是基础网络</p>
+     * @param VpcId <p>vpcId，如果为空，说明是基础网络</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网id 
-     * @return SubnetId 子网id
+     * Get <p>子网id</p> 
+     * @return SubnetId <p>子网id</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网id
-     * @param SubnetId 子网id
+     * Set <p>子网id</p>
+     * @param SubnetId <p>子网id</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 实例是否续费，int  枚举值：1表示自动续费，2表示明确不自动续费 
-     * @return RenewFlag 实例是否续费，int  枚举值：1表示自动续费，2表示明确不自动续费
+     * Get <p>实例是否续费，int  枚举值：1表示自动续费，2表示明确不自动续费</p> 
+     * @return RenewFlag <p>实例是否续费，int  枚举值：1表示自动续费，2表示明确不自动续费</p>
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 实例是否续费，int  枚举值：1表示自动续费，2表示明确不自动续费
-     * @param RenewFlag 实例是否续费，int  枚举值：1表示自动续费，2表示明确不自动续费
+     * Set <p>实例是否续费，int  枚举值：1表示自动续费，2表示明确不自动续费</p>
+     * @param RenewFlag <p>实例是否续费，int  枚举值：1表示自动续费，2表示明确不自动续费</p>
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get 实例状态 int：1表示健康，2表示告警，3 表示实例状态异常 
-     * @return Healthy 实例状态 int：1表示健康，2表示告警，3 表示实例状态异常
+     * Get <p>实例状态 int：1表示健康，2表示告警，3 表示实例状态异常</p> 
+     * @return Healthy <p>实例状态 int：1表示健康，2表示告警，3 表示实例状态异常</p>
      */
     public Long getHealthy() {
         return this.Healthy;
     }
 
     /**
-     * Set 实例状态 int：1表示健康，2表示告警，3 表示实例状态异常
-     * @param Healthy 实例状态 int：1表示健康，2表示告警，3 表示实例状态异常
+     * Set <p>实例状态 int：1表示健康，2表示告警，3 表示实例状态异常</p>
+     * @param Healthy <p>实例状态 int：1表示健康，2表示告警，3 表示实例状态异常</p>
      */
     public void setHealthy(Long Healthy) {
         this.Healthy = Healthy;
     }
 
     /**
-     * Get 实例状态信息 
-     * @return HealthyMessage 实例状态信息
+     * Get <p>实例状态信息</p> 
+     * @return HealthyMessage <p>实例状态信息</p>
      */
     public String getHealthyMessage() {
         return this.HealthyMessage;
     }
 
     /**
-     * Set 实例状态信息
-     * @param HealthyMessage 实例状态信息
+     * Set <p>实例状态信息</p>
+     * @param HealthyMessage <p>实例状态信息</p>
      */
     public void setHealthyMessage(String HealthyMessage) {
         this.HealthyMessage = HealthyMessage;
     }
 
     /**
-     * Get 实例创建时间 
-     * @return CreateTime 实例创建时间
+     * Get <p>实例创建时间</p> 
+     * @return CreateTime <p>实例创建时间</p>
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 实例创建时间
-     * @param CreateTime 实例创建时间
+     * Set <p>实例创建时间</p>
+     * @param CreateTime <p>实例创建时间</p>
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 实例过期时间 
-     * @return ExpireTime 实例过期时间
+     * Get <p>实例过期时间</p> 
+     * @return ExpireTime <p>实例过期时间</p>
      */
     public Long getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 实例过期时间
-     * @param ExpireTime 实例过期时间
+     * Set <p>实例过期时间</p>
+     * @param ExpireTime <p>实例过期时间</p>
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 是否为内部客户。值为1 表示内部客户 
-     * @return IsInternal 是否为内部客户。值为1 表示内部客户
+     * Get <p>是否为内部客户。值为1 表示内部客户</p> 
+     * @return IsInternal <p>是否为内部客户。值为1 表示内部客户</p>
      */
     public Long getIsInternal() {
         return this.IsInternal;
     }
 
     /**
-     * Set 是否为内部客户。值为1 表示内部客户
-     * @param IsInternal 是否为内部客户。值为1 表示内部客户
+     * Set <p>是否为内部客户。值为1 表示内部客户</p>
+     * @param IsInternal <p>是否为内部客户。值为1 表示内部客户</p>
      */
     public void setIsInternal(Long IsInternal) {
         this.IsInternal = IsInternal;
     }
 
     /**
-     * Get Topic个数 
-     * @return TopicNum Topic个数
+     * Get <p>Topic个数</p> 
+     * @return TopicNum <p>Topic个数</p>
      */
     public Long getTopicNum() {
         return this.TopicNum;
     }
 
     /**
-     * Set Topic个数
-     * @param TopicNum Topic个数
+     * Set <p>Topic个数</p>
+     * @param TopicNum <p>Topic个数</p>
      */
     public void setTopicNum(Long TopicNum) {
         this.TopicNum = TopicNum;
     }
 
     /**
-     * Get 标识tag 
-     * @return Tags 标识tag
+     * Get <p>标识tag</p> 
+     * @return Tags <p>标识tag</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标识tag
-     * @param Tags 标识tag
+     * Set <p>标识tag</p>
+     * @param Tags <p>标识tag</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get kafka版本信息 
-     * @return Version kafka版本信息
+     * Get <p>kafka版本信息</p> 
+     * @return Version <p>kafka版本信息</p>
      */
     public String getVersion() {
         return this.Version;
     }
 
     /**
-     * Set kafka版本信息
-     * @param Version kafka版本信息
+     * Set <p>kafka版本信息</p>
+     * @param Version <p>kafka版本信息</p>
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get 跨可用区 
-     * @return ZoneIds 跨可用区
+     * Get <p>跨可用区</p> 
+     * @return ZoneIds <p>跨可用区</p>
      */
     public Long [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set 跨可用区
-     * @param ZoneIds 跨可用区
+     * Set <p>跨可用区</p>
+     * @param ZoneIds <p>跨可用区</p>
      */
     public void setZoneIds(Long [] ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
     /**
-     * Get ckafka售卖类型 
-     * @return Cvm ckafka售卖类型
+     * Get <p>ckafka售卖类型</p> 
+     * @return Cvm <p>ckafka售卖类型</p>
      */
     public Long getCvm() {
         return this.Cvm;
     }
 
     /**
-     * Set ckafka售卖类型
-     * @param Cvm ckafka售卖类型
+     * Set <p>ckafka售卖类型</p>
+     * @param Cvm <p>ckafka售卖类型</p>
      */
     public void setCvm(Long Cvm) {
         this.Cvm = Cvm;
     }
 
     /**
-     * Get ckafka集群实例类型 
-     * @return InstanceType ckafka集群实例类型
+     * Get <p>ckafka集群实例类型</p> 
+     * @return InstanceType <p>ckafka集群实例类型</p>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set ckafka集群实例类型
-     * @param InstanceType ckafka集群实例类型
+     * Set <p>ckafka集群实例类型</p>
+     * @param InstanceType <p>ckafka集群实例类型</p>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get ckafka集群实例磁盘类型 
-     * @return DiskType ckafka集群实例磁盘类型
+     * Get <p>ckafka集群实例磁盘类型</p> 
+     * @return DiskType <p>ckafka集群实例磁盘类型</p>
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set ckafka集群实例磁盘类型
-     * @param DiskType ckafka集群实例磁盘类型
+     * Set <p>ckafka集群实例磁盘类型</p>
+     * @param DiskType <p>ckafka集群实例磁盘类型</p>
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get 当前规格最大Topic数 
-     * @return MaxTopicNumber 当前规格最大Topic数
+     * Get <p>当前规格最大Topic数</p> 
+     * @return MaxTopicNumber <p>当前规格最大Topic数</p>
      */
     public Long getMaxTopicNumber() {
         return this.MaxTopicNumber;
     }
 
     /**
-     * Set 当前规格最大Topic数
-     * @param MaxTopicNumber 当前规格最大Topic数
+     * Set <p>当前规格最大Topic数</p>
+     * @param MaxTopicNumber <p>当前规格最大Topic数</p>
      */
     public void setMaxTopicNumber(Long MaxTopicNumber) {
         this.MaxTopicNumber = MaxTopicNumber;
     }
 
     /**
-     * Get 当前规格最大Partition数 
-     * @return MaxPartitionNumber 当前规格最大Partition数
+     * Get <p>当前规格最大Partition数</p> 
+     * @return MaxPartitionNumber <p>当前规格最大Partition数</p>
      */
     public Long getMaxPartitionNumber() {
         return this.MaxPartitionNumber;
     }
 
     /**
-     * Set 当前规格最大Partition数
-     * @param MaxPartitionNumber 当前规格最大Partition数
+     * Set <p>当前规格最大Partition数</p>
+     * @param MaxPartitionNumber <p>当前规格最大Partition数</p>
      */
     public void setMaxPartitionNumber(Long MaxPartitionNumber) {
         this.MaxPartitionNumber = MaxPartitionNumber;
     }
 
     /**
-     * Get 计划升级配置时间 
-     * @return RebalanceTime 计划升级配置时间
+     * Get <p>计划升级配置时间</p> 
+     * @return RebalanceTime <p>计划升级配置时间</p>
      */
     public String getRebalanceTime() {
         return this.RebalanceTime;
     }
 
     /**
-     * Set 计划升级配置时间
-     * @param RebalanceTime 计划升级配置时间
+     * Set <p>计划升级配置时间</p>
+     * @param RebalanceTime <p>计划升级配置时间</p>
      */
     public void setRebalanceTime(String RebalanceTime) {
         this.RebalanceTime = RebalanceTime;
     }
 
     /**
-     * Get 实例当前partition数量 
-     * @return PartitionNumber 实例当前partition数量
+     * Get <p>实例当前partition数量</p> 
+     * @return PartitionNumber <p>实例当前partition数量</p>
      */
     public Long getPartitionNumber() {
         return this.PartitionNumber;
     }
 
     /**
-     * Set 实例当前partition数量
-     * @param PartitionNumber 实例当前partition数量
+     * Set <p>实例当前partition数量</p>
+     * @param PartitionNumber <p>实例当前partition数量</p>
      */
     public void setPartitionNumber(Long PartitionNumber) {
         this.PartitionNumber = PartitionNumber;
     }
 
     /**
-     * Get ckafka集群实例公网带宽类型 
-     * @return PublicNetworkChargeType ckafka集群实例公网带宽类型
+     * Get <p>ckafka集群实例公网带宽类型</p> 
+     * @return PublicNetworkChargeType <p>ckafka集群实例公网带宽类型</p>
      */
     public String getPublicNetworkChargeType() {
         return this.PublicNetworkChargeType;
     }
 
     /**
-     * Set ckafka集群实例公网带宽类型
-     * @param PublicNetworkChargeType ckafka集群实例公网带宽类型
+     * Set <p>ckafka集群实例公网带宽类型</p>
+     * @param PublicNetworkChargeType <p>ckafka集群实例公网带宽类型</p>
      */
     public void setPublicNetworkChargeType(String PublicNetworkChargeType) {
         this.PublicNetworkChargeType = PublicNetworkChargeType;
     }
 
     /**
-     * Get 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写 
-     * @return PublicNetwork 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
+     * Get <p>公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写</p> 
+     * @return PublicNetwork <p>公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写</p>
      */
     public Long getPublicNetwork() {
         return this.PublicNetwork;
     }
 
     /**
-     * Set 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
-     * @param PublicNetwork 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
+     * Set <p>公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写</p>
+     * @param PublicNetwork <p>公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写</p>
      */
     public void setPublicNetwork(Long PublicNetwork) {
         this.PublicNetwork = PublicNetwork;
     }
 
     /**
-     * Get ckafka集群实例底层集群类型 
-     * @return ClusterType ckafka集群实例底层集群类型
+     * Get <p>ckafka集群实例底层集群类型</p> 
+     * @return ClusterType <p>ckafka集群实例底层集群类型</p>
      */
     public String getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set ckafka集群实例底层集群类型
-     * @param ClusterType ckafka集群实例底层集群类型
+     * Set <p>ckafka集群实例底层集群类型</p>
+     * @param ClusterType <p>ckafka集群实例底层集群类型</p>
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;
     }
 
     /**
-     * Get 实例功能列表 
-     * @return Features 实例功能列表
+     * Get <p>实例功能列表</p> 
+     * @return Features <p>实例功能列表</p>
      */
     public String [] getFeatures() {
         return this.Features;
     }
 
     /**
-     * Set 实例功能列表
-     * @param Features 实例功能列表
+     * Set <p>实例功能列表</p>
+     * @param Features <p>实例功能列表</p>
      */
     public void setFeatures(String [] Features) {
         this.Features = Features;

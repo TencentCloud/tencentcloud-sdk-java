@@ -35,6 +35,8 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
 <li>GEM：Gemini；</li>
 <li>Jimeng：即梦；</li>
 <li>Qwen：千问。</li>
+<li>Hunyuan：混元。</li>
+<li>Mingmou：明眸。</li>
     */
     @SerializedName("ModelName")
     @Expose
@@ -45,6 +47,8 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
 <li>当 ModelName 是 GEM，可选值为 2.5、3.0；</li>
 <li>当 ModelName 是 Jimeng，可选值为 4.0；</li>
 <li>当 ModelName 是 Qwen，可选值为 0925；</li>
+<li>当 ModelName 是 Hunyuan，可选值为 3.0；</li>
+<li>当 ModelName 是 Mingmou，可选值为 1.0；</li>
     */
     @SerializedName("ModelVersion")
     @Expose
@@ -58,7 +62,7 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
     private AigcImageTaskInputFileInfo [] FileInfos;
 
     /**
-    * 生成图片的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。
+    * 生成图片的提示词。最大支持2000字符，当 FileInfos 为空时，此参数必填。
     */
     @SerializedName("Prompt")
     @Expose
@@ -133,11 +137,15 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
      * Get 模型名称。取值：
 <li>GEM：Gemini；</li>
 <li>Jimeng：即梦；</li>
-<li>Qwen：千问。</li> 
+<li>Qwen：千问。</li>
+<li>Hunyuan：混元。</li>
+<li>Mingmou：明眸。</li> 
      * @return ModelName 模型名称。取值：
 <li>GEM：Gemini；</li>
 <li>Jimeng：即梦；</li>
 <li>Qwen：千问。</li>
+<li>Hunyuan：混元。</li>
+<li>Mingmou：明眸。</li>
      */
     public String getModelName() {
         return this.ModelName;
@@ -148,10 +156,14 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
 <li>GEM：Gemini；</li>
 <li>Jimeng：即梦；</li>
 <li>Qwen：千问。</li>
+<li>Hunyuan：混元。</li>
+<li>Mingmou：明眸。</li>
      * @param ModelName 模型名称。取值：
 <li>GEM：Gemini；</li>
 <li>Jimeng：即梦；</li>
 <li>Qwen：千问。</li>
+<li>Hunyuan：混元。</li>
+<li>Mingmou：明眸。</li>
      */
     public void setModelName(String ModelName) {
         this.ModelName = ModelName;
@@ -161,11 +173,15 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
      * Get 模型版本。取值：
 <li>当 ModelName 是 GEM，可选值为 2.5、3.0；</li>
 <li>当 ModelName 是 Jimeng，可选值为 4.0；</li>
-<li>当 ModelName 是 Qwen，可选值为 0925；</li> 
+<li>当 ModelName 是 Qwen，可选值为 0925；</li>
+<li>当 ModelName 是 Hunyuan，可选值为 3.0；</li>
+<li>当 ModelName 是 Mingmou，可选值为 1.0；</li> 
      * @return ModelVersion 模型版本。取值：
 <li>当 ModelName 是 GEM，可选值为 2.5、3.0；</li>
 <li>当 ModelName 是 Jimeng，可选值为 4.0；</li>
 <li>当 ModelName 是 Qwen，可选值为 0925；</li>
+<li>当 ModelName 是 Hunyuan，可选值为 3.0；</li>
+<li>当 ModelName 是 Mingmou，可选值为 1.0；</li>
      */
     public String getModelVersion() {
         return this.ModelVersion;
@@ -176,10 +192,14 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
 <li>当 ModelName 是 GEM，可选值为 2.5、3.0；</li>
 <li>当 ModelName 是 Jimeng，可选值为 4.0；</li>
 <li>当 ModelName 是 Qwen，可选值为 0925；</li>
+<li>当 ModelName 是 Hunyuan，可选值为 3.0；</li>
+<li>当 ModelName 是 Mingmou，可选值为 1.0；</li>
      * @param ModelVersion 模型版本。取值：
 <li>当 ModelName 是 GEM，可选值为 2.5、3.0；</li>
 <li>当 ModelName 是 Jimeng，可选值为 4.0；</li>
 <li>当 ModelName 是 Qwen，可选值为 0925；</li>
+<li>当 ModelName 是 Hunyuan，可选值为 3.0；</li>
+<li>当 ModelName 是 Mingmou，可选值为 1.0；</li>
      */
     public void setModelVersion(String ModelVersion) {
         this.ModelVersion = ModelVersion;
@@ -202,16 +222,16 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 生成图片的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。 
-     * @return Prompt 生成图片的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。
+     * Get 生成图片的提示词。最大支持2000字符，当 FileInfos 为空时，此参数必填。 
+     * @return Prompt 生成图片的提示词。最大支持2000字符，当 FileInfos 为空时，此参数必填。
      */
     public String getPrompt() {
         return this.Prompt;
     }
 
     /**
-     * Set 生成图片的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。
-     * @param Prompt 生成图片的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。
+     * Set 生成图片的提示词。最大支持2000字符，当 FileInfos 为空时，此参数必填。
+     * @param Prompt 生成图片的提示词。最大支持2000字符，当 FileInfos 为空时，此参数必填。
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;

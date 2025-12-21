@@ -24,207 +24,207 @@ import java.util.HashMap;
 public class DescribeAgentSelfPayDealsV2Request extends AbstractModel {
 
     /**
-    * 下单人账号ID
+    * <p>下单人账号ID</p>
     */
     @SerializedName("OwnerUin")
     @Expose
     private String OwnerUin;
 
     /**
-    * 偏移量
+    * <p>偏移量</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 限制数目 最大100
+    * <p>限制数目 最大100</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 下单时间范围起始点(不传时会默认查最近15天内订单，传值时需要传最近15天内的起始时间)
+    * <p>下单时间范围起始点(不传时会默认查最近15天内订单，传值时需要传最近15天内的起始时间)</p>
     */
     @SerializedName("CreatTimeRangeStart")
     @Expose
     private String CreatTimeRangeStart;
 
     /**
-    * 下单时间范围终止点
+    * <p>下单时间范围终止点</p>
     */
     @SerializedName("CreatTimeRangeEnd")
     @Expose
     private String CreatTimeRangeEnd;
 
     /**
-    * 0:下单时间降序；其他：下单时间升序
+    * <p>0:下单时间降序；其他：下单时间升序</p>
     */
     @SerializedName("Order")
     @Expose
     private Long Order;
 
     /**
-    * 订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)
+    * <p>订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 子订单号列表
+    * <p>子订单号列表</p>
     */
     @SerializedName("DealNames")
     @Expose
     private String [] DealNames;
 
     /**
-    * 大订单号列表
+    * <p>大订单号列表</p>
     */
     @SerializedName("BigDealIds")
     @Expose
     private String [] BigDealIds;
 
     /**
-     * Get 下单人账号ID 
-     * @return OwnerUin 下单人账号ID
+     * Get <p>下单人账号ID</p> 
+     * @return OwnerUin <p>下单人账号ID</p>
      */
     public String getOwnerUin() {
         return this.OwnerUin;
     }
 
     /**
-     * Set 下单人账号ID
-     * @param OwnerUin 下单人账号ID
+     * Set <p>下单人账号ID</p>
+     * @param OwnerUin <p>下单人账号ID</p>
      */
     public void setOwnerUin(String OwnerUin) {
         this.OwnerUin = OwnerUin;
     }
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get <p>偏移量</p> 
+     * @return Offset <p>偏移量</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set <p>偏移量</p>
+     * @param Offset <p>偏移量</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 限制数目 最大100 
-     * @return Limit 限制数目 最大100
+     * Get <p>限制数目 最大100</p> 
+     * @return Limit <p>限制数目 最大100</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 限制数目 最大100
-     * @param Limit 限制数目 最大100
+     * Set <p>限制数目 最大100</p>
+     * @param Limit <p>限制数目 最大100</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 下单时间范围起始点(不传时会默认查最近15天内订单，传值时需要传最近15天内的起始时间) 
-     * @return CreatTimeRangeStart 下单时间范围起始点(不传时会默认查最近15天内订单，传值时需要传最近15天内的起始时间)
+     * Get <p>下单时间范围起始点(不传时会默认查最近15天内订单，传值时需要传最近15天内的起始时间)</p> 
+     * @return CreatTimeRangeStart <p>下单时间范围起始点(不传时会默认查最近15天内订单，传值时需要传最近15天内的起始时间)</p>
      */
     public String getCreatTimeRangeStart() {
         return this.CreatTimeRangeStart;
     }
 
     /**
-     * Set 下单时间范围起始点(不传时会默认查最近15天内订单，传值时需要传最近15天内的起始时间)
-     * @param CreatTimeRangeStart 下单时间范围起始点(不传时会默认查最近15天内订单，传值时需要传最近15天内的起始时间)
+     * Set <p>下单时间范围起始点(不传时会默认查最近15天内订单，传值时需要传最近15天内的起始时间)</p>
+     * @param CreatTimeRangeStart <p>下单时间范围起始点(不传时会默认查最近15天内订单，传值时需要传最近15天内的起始时间)</p>
      */
     public void setCreatTimeRangeStart(String CreatTimeRangeStart) {
         this.CreatTimeRangeStart = CreatTimeRangeStart;
     }
 
     /**
-     * Get 下单时间范围终止点 
-     * @return CreatTimeRangeEnd 下单时间范围终止点
+     * Get <p>下单时间范围终止点</p> 
+     * @return CreatTimeRangeEnd <p>下单时间范围终止点</p>
      */
     public String getCreatTimeRangeEnd() {
         return this.CreatTimeRangeEnd;
     }
 
     /**
-     * Set 下单时间范围终止点
-     * @param CreatTimeRangeEnd 下单时间范围终止点
+     * Set <p>下单时间范围终止点</p>
+     * @param CreatTimeRangeEnd <p>下单时间范围终止点</p>
      */
     public void setCreatTimeRangeEnd(String CreatTimeRangeEnd) {
         this.CreatTimeRangeEnd = CreatTimeRangeEnd;
     }
 
     /**
-     * Get 0:下单时间降序；其他：下单时间升序 
-     * @return Order 0:下单时间降序；其他：下单时间升序
+     * Get <p>0:下单时间降序；其他：下单时间升序</p> 
+     * @return Order <p>0:下单时间降序；其他：下单时间升序</p>
      */
     public Long getOrder() {
         return this.Order;
     }
 
     /**
-     * Set 0:下单时间降序；其他：下单时间升序
-     * @param Order 0:下单时间降序；其他：下单时间升序
+     * Set <p>0:下单时间降序；其他：下单时间升序</p>
+     * @param Order <p>0:下单时间降序；其他：下单时间升序</p>
      */
     public void setOrder(Long Order) {
         this.Order = Order;
     }
 
     /**
-     * Get 订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中) 
-     * @return Status 订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)
+     * Get <p>订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)</p> 
+     * @return Status <p>订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)
-     * @param Status 订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)
+     * Set <p>订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)</p>
+     * @param Status <p>订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 子订单号列表 
-     * @return DealNames 子订单号列表
+     * Get <p>子订单号列表</p> 
+     * @return DealNames <p>子订单号列表</p>
      */
     public String [] getDealNames() {
         return this.DealNames;
     }
 
     /**
-     * Set 子订单号列表
-     * @param DealNames 子订单号列表
+     * Set <p>子订单号列表</p>
+     * @param DealNames <p>子订单号列表</p>
      */
     public void setDealNames(String [] DealNames) {
         this.DealNames = DealNames;
     }
 
     /**
-     * Get 大订单号列表 
-     * @return BigDealIds 大订单号列表
+     * Get <p>大订单号列表</p> 
+     * @return BigDealIds <p>大订单号列表</p>
      */
     public String [] getBigDealIds() {
         return this.BigDealIds;
     }
 
     /**
-     * Set 大订单号列表
-     * @param BigDealIds 大订单号列表
+     * Set <p>大订单号列表</p>
+     * @param BigDealIds <p>大订单号列表</p>
      */
     public void setBigDealIds(String [] BigDealIds) {
         this.BigDealIds = BigDealIds;

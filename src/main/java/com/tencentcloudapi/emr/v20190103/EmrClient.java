@@ -339,6 +339,28 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *Hbase的表粒度读取和写入速率
+     * @param req DescribeHBaseTableRequestMetricRequest
+     * @return DescribeHBaseTableRequestMetricResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHBaseTableRequestMetricResponse DescribeHBaseTableRequestMetric(DescribeHBaseTableRequestMetricRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHBaseTableRequestMetric", DescribeHBaseTableRequestMetricResponse.class);
+    }
+
+    /**
+     *查询Hbase的表粒度StoreSize大小监控指标数据
+     * @param req DescribeHBaseTableStoreSizeMetricRequest
+     * @return DescribeHBaseTableStoreSizeMetricResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHBaseTableStoreSizeMetricResponse DescribeHBaseTableStoreSizeMetric(DescribeHBaseTableStoreSizeMetricRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHBaseTableStoreSizeMetric", DescribeHBaseTableStoreSizeMetricResponse.class);
+    }
+
+    /**
      *查询HDFS存储文件信息
      * @param req DescribeHDFSStorageInfoRequest
      * @return DescribeHDFSStorageInfoResponse

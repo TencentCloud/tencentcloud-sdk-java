@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class DescribeCkafkaVersionResponse extends AbstractModel {
 
     /**
+    * 实例版本信息
+    */
+    @SerializedName("Result")
+    @Expose
+    private InstanceVersion Result;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 实例版本信息 
+     * @return Result 实例版本信息
+     */
+    public InstanceVersion getResult() {
+        return this.Result;
+    }
+
+    /**
+     * Set 实例版本信息
+     * @param Result 实例版本信息
+     */
+    public void setResult(InstanceVersion Result) {
+        this.Result = Result;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,9 @@ public class DescribeCkafkaVersionResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeCkafkaVersionResponse(DescribeCkafkaVersionResponse source) {
+        if (source.Result != null) {
+            this.Result = new InstanceVersion(source.Result);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +90,7 @@ public class DescribeCkafkaVersionResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

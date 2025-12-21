@@ -24,317 +24,207 @@ import java.util.HashMap;
 public class CasterInputInfo extends AbstractModel {
 
     /**
-    * 输入源Index。
-范围[1, 24]
+    * <p>输入源Index。范围[1, 24]</p>
     */
     @SerializedName("InputIndex")
     @Expose
     private Long InputIndex;
 
     /**
-    * 输入源类型。
-范围[0,1,2,3,4]。
-0：推流地址。
-1：点播文件地址。
-2：直播拉流地址。
-3：图片地址。
-4：webrtc协议推流地址。
+    * <p>输入源类型。范围[0,1,2,3,4]。0：推流地址。1：点播文件地址。2：直播拉流地址。3：图片地址。4：webrtc协议推流地址。</p>
     */
     @SerializedName("InputType")
     @Expose
     private Long InputType;
 
     /**
-    * 输入源的源地址。
-最大允许长度512。
-当InputType为0（推流地址），2（直播拉流地址），3（图片地址）,4（webrtc推流地址）这几种类型时，URL需填入该字段。
-
+    * <p>输入源的源地址。最大允许长度512。当InputType为0（推流地址），2（直播拉流地址），3（图片地址）,4（webrtc推流地址）这几种类型时，URL需填入该字段。</p>
     */
     @SerializedName("InputUrl")
     @Expose
     private String InputUrl;
 
     /**
-    * 输入源描述。
-最大允许长度256字符。
+    * <p>输入源描述。最大允许长度256字符。</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 点播地址列表。仅当input type为1（点播地址）时，将一个或多个点播地址，填入该字段。
-单个地址最大允许长度512字符。
-最多允许同时填入5个地址。
-注：此时需保持InputUrl字段为空。
+    * <p>点播地址列表。仅当input type为1（点播地址）时，将一个或多个点播地址，填入该字段。单个地址最大允许长度512字符。最多允许同时填入5个地址。注：此时需保持InputUrl字段为空。</p>
     */
     @SerializedName("InputUrls")
     @Expose
     private String [] InputUrls;
 
     /**
-    * 是否启用点播无限循环播放。
-注：当前该字段未生效，默认为True。
+    * <p>是否启用点播无限循环播放。注：当前该字段未生效，默认为True。</p>
     */
     @SerializedName("LoopEnable")
     @Expose
     private Boolean LoopEnable;
 
     /**
-    * 点播循环次数。
-允许值-1或正整数。
-当值为-1时，表示无限循环。
-当值为其他正整数时，表示循环对应次数。
-注：该字段暂未生效。
+    * <p>点播循环次数。允许值-1或正整数。当值为-1时，表示无限循环。当值为其他正整数时，表示循环对应次数。注：该字段暂未生效。</p>
     */
     @SerializedName("LoopNumber")
     @Expose
     private Long LoopNumber;
 
     /**
-    * 是否启用拉取到导播台。
-注：该字段默认强制为true。
+    * <p>是否启用拉取到导播台。注：该字段默认强制为true。</p>
     */
     @SerializedName("PullPushEnable")
     @Expose
     private Boolean PullPushEnable;
 
     /**
-    * 输入源音量百分比。
-默认为100。表示音量为原始大小。
-允许值[0,200]。
+    * <p>输入源音量百分比。默认为100。表示音量为原始大小。允许值[0,200]。</p>
     */
     @SerializedName("Volume")
     @Expose
     private Long Volume;
 
     /**
-     * Get 输入源Index。
-范围[1, 24] 
-     * @return InputIndex 输入源Index。
-范围[1, 24]
+     * Get <p>输入源Index。范围[1, 24]</p> 
+     * @return InputIndex <p>输入源Index。范围[1, 24]</p>
      */
     public Long getInputIndex() {
         return this.InputIndex;
     }
 
     /**
-     * Set 输入源Index。
-范围[1, 24]
-     * @param InputIndex 输入源Index。
-范围[1, 24]
+     * Set <p>输入源Index。范围[1, 24]</p>
+     * @param InputIndex <p>输入源Index。范围[1, 24]</p>
      */
     public void setInputIndex(Long InputIndex) {
         this.InputIndex = InputIndex;
     }
 
     /**
-     * Get 输入源类型。
-范围[0,1,2,3,4]。
-0：推流地址。
-1：点播文件地址。
-2：直播拉流地址。
-3：图片地址。
-4：webrtc协议推流地址。 
-     * @return InputType 输入源类型。
-范围[0,1,2,3,4]。
-0：推流地址。
-1：点播文件地址。
-2：直播拉流地址。
-3：图片地址。
-4：webrtc协议推流地址。
+     * Get <p>输入源类型。范围[0,1,2,3,4]。0：推流地址。1：点播文件地址。2：直播拉流地址。3：图片地址。4：webrtc协议推流地址。</p> 
+     * @return InputType <p>输入源类型。范围[0,1,2,3,4]。0：推流地址。1：点播文件地址。2：直播拉流地址。3：图片地址。4：webrtc协议推流地址。</p>
      */
     public Long getInputType() {
         return this.InputType;
     }
 
     /**
-     * Set 输入源类型。
-范围[0,1,2,3,4]。
-0：推流地址。
-1：点播文件地址。
-2：直播拉流地址。
-3：图片地址。
-4：webrtc协议推流地址。
-     * @param InputType 输入源类型。
-范围[0,1,2,3,4]。
-0：推流地址。
-1：点播文件地址。
-2：直播拉流地址。
-3：图片地址。
-4：webrtc协议推流地址。
+     * Set <p>输入源类型。范围[0,1,2,3,4]。0：推流地址。1：点播文件地址。2：直播拉流地址。3：图片地址。4：webrtc协议推流地址。</p>
+     * @param InputType <p>输入源类型。范围[0,1,2,3,4]。0：推流地址。1：点播文件地址。2：直播拉流地址。3：图片地址。4：webrtc协议推流地址。</p>
      */
     public void setInputType(Long InputType) {
         this.InputType = InputType;
     }
 
     /**
-     * Get 输入源的源地址。
-最大允许长度512。
-当InputType为0（推流地址），2（直播拉流地址），3（图片地址）,4（webrtc推流地址）这几种类型时，URL需填入该字段。
- 
-     * @return InputUrl 输入源的源地址。
-最大允许长度512。
-当InputType为0（推流地址），2（直播拉流地址），3（图片地址）,4（webrtc推流地址）这几种类型时，URL需填入该字段。
-
+     * Get <p>输入源的源地址。最大允许长度512。当InputType为0（推流地址），2（直播拉流地址），3（图片地址）,4（webrtc推流地址）这几种类型时，URL需填入该字段。</p> 
+     * @return InputUrl <p>输入源的源地址。最大允许长度512。当InputType为0（推流地址），2（直播拉流地址），3（图片地址）,4（webrtc推流地址）这几种类型时，URL需填入该字段。</p>
      */
     public String getInputUrl() {
         return this.InputUrl;
     }
 
     /**
-     * Set 输入源的源地址。
-最大允许长度512。
-当InputType为0（推流地址），2（直播拉流地址），3（图片地址）,4（webrtc推流地址）这几种类型时，URL需填入该字段。
-
-     * @param InputUrl 输入源的源地址。
-最大允许长度512。
-当InputType为0（推流地址），2（直播拉流地址），3（图片地址）,4（webrtc推流地址）这几种类型时，URL需填入该字段。
-
+     * Set <p>输入源的源地址。最大允许长度512。当InputType为0（推流地址），2（直播拉流地址），3（图片地址）,4（webrtc推流地址）这几种类型时，URL需填入该字段。</p>
+     * @param InputUrl <p>输入源的源地址。最大允许长度512。当InputType为0（推流地址），2（直播拉流地址），3（图片地址）,4（webrtc推流地址）这几种类型时，URL需填入该字段。</p>
      */
     public void setInputUrl(String InputUrl) {
         this.InputUrl = InputUrl;
     }
 
     /**
-     * Get 输入源描述。
-最大允许长度256字符。 
-     * @return Description 输入源描述。
-最大允许长度256字符。
+     * Get <p>输入源描述。最大允许长度256字符。</p> 
+     * @return Description <p>输入源描述。最大允许长度256字符。</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 输入源描述。
-最大允许长度256字符。
-     * @param Description 输入源描述。
-最大允许长度256字符。
+     * Set <p>输入源描述。最大允许长度256字符。</p>
+     * @param Description <p>输入源描述。最大允许长度256字符。</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 点播地址列表。仅当input type为1（点播地址）时，将一个或多个点播地址，填入该字段。
-单个地址最大允许长度512字符。
-最多允许同时填入5个地址。
-注：此时需保持InputUrl字段为空。 
-     * @return InputUrls 点播地址列表。仅当input type为1（点播地址）时，将一个或多个点播地址，填入该字段。
-单个地址最大允许长度512字符。
-最多允许同时填入5个地址。
-注：此时需保持InputUrl字段为空。
+     * Get <p>点播地址列表。仅当input type为1（点播地址）时，将一个或多个点播地址，填入该字段。单个地址最大允许长度512字符。最多允许同时填入5个地址。注：此时需保持InputUrl字段为空。</p> 
+     * @return InputUrls <p>点播地址列表。仅当input type为1（点播地址）时，将一个或多个点播地址，填入该字段。单个地址最大允许长度512字符。最多允许同时填入5个地址。注：此时需保持InputUrl字段为空。</p>
      */
     public String [] getInputUrls() {
         return this.InputUrls;
     }
 
     /**
-     * Set 点播地址列表。仅当input type为1（点播地址）时，将一个或多个点播地址，填入该字段。
-单个地址最大允许长度512字符。
-最多允许同时填入5个地址。
-注：此时需保持InputUrl字段为空。
-     * @param InputUrls 点播地址列表。仅当input type为1（点播地址）时，将一个或多个点播地址，填入该字段。
-单个地址最大允许长度512字符。
-最多允许同时填入5个地址。
-注：此时需保持InputUrl字段为空。
+     * Set <p>点播地址列表。仅当input type为1（点播地址）时，将一个或多个点播地址，填入该字段。单个地址最大允许长度512字符。最多允许同时填入5个地址。注：此时需保持InputUrl字段为空。</p>
+     * @param InputUrls <p>点播地址列表。仅当input type为1（点播地址）时，将一个或多个点播地址，填入该字段。单个地址最大允许长度512字符。最多允许同时填入5个地址。注：此时需保持InputUrl字段为空。</p>
      */
     public void setInputUrls(String [] InputUrls) {
         this.InputUrls = InputUrls;
     }
 
     /**
-     * Get 是否启用点播无限循环播放。
-注：当前该字段未生效，默认为True。 
-     * @return LoopEnable 是否启用点播无限循环播放。
-注：当前该字段未生效，默认为True。
+     * Get <p>是否启用点播无限循环播放。注：当前该字段未生效，默认为True。</p> 
+     * @return LoopEnable <p>是否启用点播无限循环播放。注：当前该字段未生效，默认为True。</p>
      */
     public Boolean getLoopEnable() {
         return this.LoopEnable;
     }
 
     /**
-     * Set 是否启用点播无限循环播放。
-注：当前该字段未生效，默认为True。
-     * @param LoopEnable 是否启用点播无限循环播放。
-注：当前该字段未生效，默认为True。
+     * Set <p>是否启用点播无限循环播放。注：当前该字段未生效，默认为True。</p>
+     * @param LoopEnable <p>是否启用点播无限循环播放。注：当前该字段未生效，默认为True。</p>
      */
     public void setLoopEnable(Boolean LoopEnable) {
         this.LoopEnable = LoopEnable;
     }
 
     /**
-     * Get 点播循环次数。
-允许值-1或正整数。
-当值为-1时，表示无限循环。
-当值为其他正整数时，表示循环对应次数。
-注：该字段暂未生效。 
-     * @return LoopNumber 点播循环次数。
-允许值-1或正整数。
-当值为-1时，表示无限循环。
-当值为其他正整数时，表示循环对应次数。
-注：该字段暂未生效。
+     * Get <p>点播循环次数。允许值-1或正整数。当值为-1时，表示无限循环。当值为其他正整数时，表示循环对应次数。注：该字段暂未生效。</p> 
+     * @return LoopNumber <p>点播循环次数。允许值-1或正整数。当值为-1时，表示无限循环。当值为其他正整数时，表示循环对应次数。注：该字段暂未生效。</p>
      */
     public Long getLoopNumber() {
         return this.LoopNumber;
     }
 
     /**
-     * Set 点播循环次数。
-允许值-1或正整数。
-当值为-1时，表示无限循环。
-当值为其他正整数时，表示循环对应次数。
-注：该字段暂未生效。
-     * @param LoopNumber 点播循环次数。
-允许值-1或正整数。
-当值为-1时，表示无限循环。
-当值为其他正整数时，表示循环对应次数。
-注：该字段暂未生效。
+     * Set <p>点播循环次数。允许值-1或正整数。当值为-1时，表示无限循环。当值为其他正整数时，表示循环对应次数。注：该字段暂未生效。</p>
+     * @param LoopNumber <p>点播循环次数。允许值-1或正整数。当值为-1时，表示无限循环。当值为其他正整数时，表示循环对应次数。注：该字段暂未生效。</p>
      */
     public void setLoopNumber(Long LoopNumber) {
         this.LoopNumber = LoopNumber;
     }
 
     /**
-     * Get 是否启用拉取到导播台。
-注：该字段默认强制为true。 
-     * @return PullPushEnable 是否启用拉取到导播台。
-注：该字段默认强制为true。
+     * Get <p>是否启用拉取到导播台。注：该字段默认强制为true。</p> 
+     * @return PullPushEnable <p>是否启用拉取到导播台。注：该字段默认强制为true。</p>
      */
     public Boolean getPullPushEnable() {
         return this.PullPushEnable;
     }
 
     /**
-     * Set 是否启用拉取到导播台。
-注：该字段默认强制为true。
-     * @param PullPushEnable 是否启用拉取到导播台。
-注：该字段默认强制为true。
+     * Set <p>是否启用拉取到导播台。注：该字段默认强制为true。</p>
+     * @param PullPushEnable <p>是否启用拉取到导播台。注：该字段默认强制为true。</p>
      */
     public void setPullPushEnable(Boolean PullPushEnable) {
         this.PullPushEnable = PullPushEnable;
     }
 
     /**
-     * Get 输入源音量百分比。
-默认为100。表示音量为原始大小。
-允许值[0,200]。 
-     * @return Volume 输入源音量百分比。
-默认为100。表示音量为原始大小。
-允许值[0,200]。
+     * Get <p>输入源音量百分比。默认为100。表示音量为原始大小。允许值[0,200]。</p> 
+     * @return Volume <p>输入源音量百分比。默认为100。表示音量为原始大小。允许值[0,200]。</p>
      */
     public Long getVolume() {
         return this.Volume;
     }
 
     /**
-     * Set 输入源音量百分比。
-默认为100。表示音量为原始大小。
-允许值[0,200]。
-     * @param Volume 输入源音量百分比。
-默认为100。表示音量为原始大小。
-允许值[0,200]。
+     * Set <p>输入源音量百分比。默认为100。表示音量为原始大小。允许值[0,200]。</p>
+     * @param Volume <p>输入源音量百分比。默认为100。表示音量为原始大小。允许值[0,200]。</p>
      */
     public void setVolume(Long Volume) {
         this.Volume = Volume;

@@ -43,8 +43,6 @@ UNIQUE，入参所填的 InstanceName 相当于实例名前缀，AS 和 CVM 会�
 
     /**
     * 云服务器实例名后缀。字符长度为[1,105]，且与 InstanceName 的长度和不能超过107。
-
-假设后缀名称为 suffix，原实例名为 test.0，最终实例名为 test.0.suffix。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceNameSuffix")
@@ -52,9 +50,11 @@ UNIQUE，入参所填的 InstanceName 相当于实例名前缀，AS 和 CVM 会�
     private String InstanceNameSuffix;
 
     /**
-    * 云服务器实例名分隔符。 默认的分隔符是点号（.），可选短横线（-）。仅有点号（.）和短横线（-）能作为实例名的分隔符。如果不设置，则默认采用点号（.）分隔符。 通过分割符连接多段。
-
-假设原实例名为“product-as-instance”，分隔符InstanceNameDelimiter为“-”，设置实例名后缀"suffix"，那么最终实例名为“product-as-instance-suffix”。
+    * 云服务器的实例名分隔符。默认的分隔符是点号（.），可选短横线（-）或空字符串。
+分隔符用于拼接实例名，递增序号，后缀。假设实例名为 testGpu4090 ，递增序号为 0007，后缀为 server：
+- 分隔符为英文点号（.），最终拼接为 testGpu4090.007.server
+- 分隔符为短横线（-），最终拼接为 testGpu4090-007-server
+- 分隔符为空字符串，最终拼接为 testGpu4090007server
     */
     @SerializedName("InstanceNameDelimiter")
     @Expose
@@ -110,12 +110,8 @@ UNIQUE，入参所填的 InstanceName 相当于实例名前缀，AS 和 CVM 会�
 
     /**
      * Get 云服务器实例名后缀。字符长度为[1,105]，且与 InstanceName 的长度和不能超过107。
-
-假设后缀名称为 suffix，原实例名为 test.0，最终实例名为 test.0.suffix。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceNameSuffix 云服务器实例名后缀。字符长度为[1,105]，且与 InstanceName 的长度和不能超过107。
-
-假设后缀名称为 suffix，原实例名为 test.0，最终实例名为 test.0.suffix。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceNameSuffix() {
@@ -124,12 +120,8 @@ UNIQUE，入参所填的 InstanceName 相当于实例名前缀，AS 和 CVM 会�
 
     /**
      * Set 云服务器实例名后缀。字符长度为[1,105]，且与 InstanceName 的长度和不能超过107。
-
-假设后缀名称为 suffix，原实例名为 test.0，最终实例名为 test.0.suffix。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceNameSuffix 云服务器实例名后缀。字符长度为[1,105]，且与 InstanceName 的长度和不能超过107。
-
-假设后缀名称为 suffix，原实例名为 test.0，最终实例名为 test.0.suffix。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceNameSuffix(String InstanceNameSuffix) {
@@ -137,24 +129,32 @@ UNIQUE，入参所填的 InstanceName 相当于实例名前缀，AS 和 CVM 会�
     }
 
     /**
-     * Get 云服务器实例名分隔符。 默认的分隔符是点号（.），可选短横线（-）。仅有点号（.）和短横线（-）能作为实例名的分隔符。如果不设置，则默认采用点号（.）分隔符。 通过分割符连接多段。
-
-假设原实例名为“product-as-instance”，分隔符InstanceNameDelimiter为“-”，设置实例名后缀"suffix"，那么最终实例名为“product-as-instance-suffix”。 
-     * @return InstanceNameDelimiter 云服务器实例名分隔符。 默认的分隔符是点号（.），可选短横线（-）。仅有点号（.）和短横线（-）能作为实例名的分隔符。如果不设置，则默认采用点号（.）分隔符。 通过分割符连接多段。
-
-假设原实例名为“product-as-instance”，分隔符InstanceNameDelimiter为“-”，设置实例名后缀"suffix"，那么最终实例名为“product-as-instance-suffix”。
+     * Get 云服务器的实例名分隔符。默认的分隔符是点号（.），可选短横线（-）或空字符串。
+分隔符用于拼接实例名，递增序号，后缀。假设实例名为 testGpu4090 ，递增序号为 0007，后缀为 server：
+- 分隔符为英文点号（.），最终拼接为 testGpu4090.007.server
+- 分隔符为短横线（-），最终拼接为 testGpu4090-007-server
+- 分隔符为空字符串，最终拼接为 testGpu4090007server 
+     * @return InstanceNameDelimiter 云服务器的实例名分隔符。默认的分隔符是点号（.），可选短横线（-）或空字符串。
+分隔符用于拼接实例名，递增序号，后缀。假设实例名为 testGpu4090 ，递增序号为 0007，后缀为 server：
+- 分隔符为英文点号（.），最终拼接为 testGpu4090.007.server
+- 分隔符为短横线（-），最终拼接为 testGpu4090-007-server
+- 分隔符为空字符串，最终拼接为 testGpu4090007server
      */
     public String getInstanceNameDelimiter() {
         return this.InstanceNameDelimiter;
     }
 
     /**
-     * Set 云服务器实例名分隔符。 默认的分隔符是点号（.），可选短横线（-）。仅有点号（.）和短横线（-）能作为实例名的分隔符。如果不设置，则默认采用点号（.）分隔符。 通过分割符连接多段。
-
-假设原实例名为“product-as-instance”，分隔符InstanceNameDelimiter为“-”，设置实例名后缀"suffix"，那么最终实例名为“product-as-instance-suffix”。
-     * @param InstanceNameDelimiter 云服务器实例名分隔符。 默认的分隔符是点号（.），可选短横线（-）。仅有点号（.）和短横线（-）能作为实例名的分隔符。如果不设置，则默认采用点号（.）分隔符。 通过分割符连接多段。
-
-假设原实例名为“product-as-instance”，分隔符InstanceNameDelimiter为“-”，设置实例名后缀"suffix"，那么最终实例名为“product-as-instance-suffix”。
+     * Set 云服务器的实例名分隔符。默认的分隔符是点号（.），可选短横线（-）或空字符串。
+分隔符用于拼接实例名，递增序号，后缀。假设实例名为 testGpu4090 ，递增序号为 0007，后缀为 server：
+- 分隔符为英文点号（.），最终拼接为 testGpu4090.007.server
+- 分隔符为短横线（-），最终拼接为 testGpu4090-007-server
+- 分隔符为空字符串，最终拼接为 testGpu4090007server
+     * @param InstanceNameDelimiter 云服务器的实例名分隔符。默认的分隔符是点号（.），可选短横线（-）或空字符串。
+分隔符用于拼接实例名，递增序号，后缀。假设实例名为 testGpu4090 ，递增序号为 0007，后缀为 server：
+- 分隔符为英文点号（.），最终拼接为 testGpu4090.007.server
+- 分隔符为短横线（-），最终拼接为 testGpu4090-007-server
+- 分隔符为空字符串，最终拼接为 testGpu4090007server
      */
     public void setInstanceNameDelimiter(String InstanceNameDelimiter) {
         this.InstanceNameDelimiter = InstanceNameDelimiter;

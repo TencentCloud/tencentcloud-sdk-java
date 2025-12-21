@@ -24,51 +24,46 @@ import java.util.HashMap;
 public class DeleteCasterLayoutInfoRequest extends AbstractModel {
 
     /**
-    * 导播台ID。
+    * <p>导播台ID。</p>
     */
     @SerializedName("CasterId")
     @Expose
     private Long CasterId;
 
     /**
-    * 要删除的布局Index。
-注：待删除的Index对应的布局需存在。
+    * <p>要删除的布局Index。注：待删除的Index对应的布局需存在。</p>
     */
     @SerializedName("LayoutIndex")
     @Expose
     private Long LayoutIndex;
 
     /**
-     * Get 导播台ID。 
-     * @return CasterId 导播台ID。
+     * Get <p>导播台ID。</p> 
+     * @return CasterId <p>导播台ID。</p>
      */
     public Long getCasterId() {
         return this.CasterId;
     }
 
     /**
-     * Set 导播台ID。
-     * @param CasterId 导播台ID。
+     * Set <p>导播台ID。</p>
+     * @param CasterId <p>导播台ID。</p>
      */
     public void setCasterId(Long CasterId) {
         this.CasterId = CasterId;
     }
 
     /**
-     * Get 要删除的布局Index。
-注：待删除的Index对应的布局需存在。 
-     * @return LayoutIndex 要删除的布局Index。
-注：待删除的Index对应的布局需存在。
+     * Get <p>要删除的布局Index。注：待删除的Index对应的布局需存在。</p> 
+     * @return LayoutIndex <p>要删除的布局Index。注：待删除的Index对应的布局需存在。</p>
      */
     public Long getLayoutIndex() {
         return this.LayoutIndex;
     }
 
     /**
-     * Set 要删除的布局Index。
-注：待删除的Index对应的布局需存在。
-     * @param LayoutIndex 要删除的布局Index。
-注：待删除的Index对应的布局需存在。
+     * Set <p>要删除的布局Index。注：待删除的Index对应的布局需存在。</p>
+     * @param LayoutIndex <p>要删除的布局Index。注：待删除的Index对应的布局需存在。</p>
      */
     public void setLayoutIndex(Long LayoutIndex) {
         this.LayoutIndex = LayoutIndex;

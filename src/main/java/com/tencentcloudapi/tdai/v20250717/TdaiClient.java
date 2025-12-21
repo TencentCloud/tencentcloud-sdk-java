@@ -226,6 +226,17 @@ public class TdaiClient extends AbstractClient{
     }
 
     /**
+     *该接口用于启动一个智能体的任务
+     * @param req StartAgentTaskRequest
+     * @return StartAgentTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartAgentTaskResponse StartAgentTask(StartAgentTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StartAgentTask", StartAgentTaskResponse.class);
+    }
+
+    /**
      *本接口（TerminateAgentInstance）用于下线智能体实例，通常在用户需要下线智能体实例时使用。
      * @param req TerminateAgentInstanceRequest
      * @return TerminateAgentInstanceResponse

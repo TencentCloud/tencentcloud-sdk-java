@@ -94,6 +94,20 @@ public class SandboxTool extends AbstractModel {
     private String UpdateTime;
 
     /**
+    * 沙箱工具绑定角色ARN
+    */
+    @SerializedName("RoleArn")
+    @Expose
+    private String RoleArn;
+
+    /**
+    * 沙箱工具中实例存储挂载配置
+    */
+    @SerializedName("StorageMounts")
+    @Expose
+    private StorageMount [] StorageMounts;
+
+    /**
      * Get 沙箱工具唯一标识符 
      * @return ToolId 沙箱工具唯一标识符
      */
@@ -253,6 +267,38 @@ public class SandboxTool extends AbstractModel {
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get 沙箱工具绑定角色ARN 
+     * @return RoleArn 沙箱工具绑定角色ARN
+     */
+    public String getRoleArn() {
+        return this.RoleArn;
+    }
+
+    /**
+     * Set 沙箱工具绑定角色ARN
+     * @param RoleArn 沙箱工具绑定角色ARN
+     */
+    public void setRoleArn(String RoleArn) {
+        this.RoleArn = RoleArn;
+    }
+
+    /**
+     * Get 沙箱工具中实例存储挂载配置 
+     * @return StorageMounts 沙箱工具中实例存储挂载配置
+     */
+    public StorageMount [] getStorageMounts() {
+        return this.StorageMounts;
+    }
+
+    /**
+     * Set 沙箱工具中实例存储挂载配置
+     * @param StorageMounts 沙箱工具中实例存储挂载配置
+     */
+    public void setStorageMounts(StorageMount [] StorageMounts) {
+        this.StorageMounts = StorageMounts;
+    }
+
     public SandboxTool() {
     }
 
@@ -294,6 +340,15 @@ public class SandboxTool extends AbstractModel {
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.RoleArn != null) {
+            this.RoleArn = new String(source.RoleArn);
+        }
+        if (source.StorageMounts != null) {
+            this.StorageMounts = new StorageMount[source.StorageMounts.length];
+            for (int i = 0; i < source.StorageMounts.length; i++) {
+                this.StorageMounts[i] = new StorageMount(source.StorageMounts[i]);
+            }
+        }
     }
 
 
@@ -311,6 +366,8 @@ public class SandboxTool extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "RoleArn", this.RoleArn);
+        this.setParamArrayObj(map, prefix + "StorageMounts.", this.StorageMounts);
 
     }
 }

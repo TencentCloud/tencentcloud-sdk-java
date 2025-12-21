@@ -24,18 +24,14 @@ import java.util.HashMap;
 public class AddCasterInputInfoResponse extends AbstractModel {
 
     /**
-    * rtmp协议输入源播放地址。
-注：仅可作为预览使用，不可分发。
+    * <p>rtmp协议输入源播放地址。注：仅可作为预览使用，不可分发。</p>
     */
     @SerializedName("InputPlayUrl")
     @Expose
     private String InputPlayUrl;
 
     /**
-    * webrtc协议播放地址。
-注：
-1. 需配合使用腾讯云快直播播放SDK使用才可正常播放。
-2. 仅作为预览使用，不可分发。
+    * <p>webrtc协议播放地址。注：1. 需配合使用腾讯云快直播播放SDK使用才可正常播放。2. 仅作为预览使用，不可分发。</p>
     */
     @SerializedName("InputWebRTCPlayUrl")
     @Expose
@@ -49,48 +45,32 @@ public class AddCasterInputInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get rtmp协议输入源播放地址。
-注：仅可作为预览使用，不可分发。 
-     * @return InputPlayUrl rtmp协议输入源播放地址。
-注：仅可作为预览使用，不可分发。
+     * Get <p>rtmp协议输入源播放地址。注：仅可作为预览使用，不可分发。</p> 
+     * @return InputPlayUrl <p>rtmp协议输入源播放地址。注：仅可作为预览使用，不可分发。</p>
      */
     public String getInputPlayUrl() {
         return this.InputPlayUrl;
     }
 
     /**
-     * Set rtmp协议输入源播放地址。
-注：仅可作为预览使用，不可分发。
-     * @param InputPlayUrl rtmp协议输入源播放地址。
-注：仅可作为预览使用，不可分发。
+     * Set <p>rtmp协议输入源播放地址。注：仅可作为预览使用，不可分发。</p>
+     * @param InputPlayUrl <p>rtmp协议输入源播放地址。注：仅可作为预览使用，不可分发。</p>
      */
     public void setInputPlayUrl(String InputPlayUrl) {
         this.InputPlayUrl = InputPlayUrl;
     }
 
     /**
-     * Get webrtc协议播放地址。
-注：
-1. 需配合使用腾讯云快直播播放SDK使用才可正常播放。
-2. 仅作为预览使用，不可分发。 
-     * @return InputWebRTCPlayUrl webrtc协议播放地址。
-注：
-1. 需配合使用腾讯云快直播播放SDK使用才可正常播放。
-2. 仅作为预览使用，不可分发。
+     * Get <p>webrtc协议播放地址。注：1. 需配合使用腾讯云快直播播放SDK使用才可正常播放。2. 仅作为预览使用，不可分发。</p> 
+     * @return InputWebRTCPlayUrl <p>webrtc协议播放地址。注：1. 需配合使用腾讯云快直播播放SDK使用才可正常播放。2. 仅作为预览使用，不可分发。</p>
      */
     public String getInputWebRTCPlayUrl() {
         return this.InputWebRTCPlayUrl;
     }
 
     /**
-     * Set webrtc协议播放地址。
-注：
-1. 需配合使用腾讯云快直播播放SDK使用才可正常播放。
-2. 仅作为预览使用，不可分发。
-     * @param InputWebRTCPlayUrl webrtc协议播放地址。
-注：
-1. 需配合使用腾讯云快直播播放SDK使用才可正常播放。
-2. 仅作为预览使用，不可分发。
+     * Set <p>webrtc协议播放地址。注：1. 需配合使用腾讯云快直播播放SDK使用才可正常播放。2. 仅作为预览使用，不可分发。</p>
+     * @param InputWebRTCPlayUrl <p>webrtc协议播放地址。注：1. 需配合使用腾讯云快直播播放SDK使用才可正常播放。2. 仅作为预览使用，不可分发。</p>
      */
     public void setInputWebRTCPlayUrl(String InputWebRTCPlayUrl) {
         this.InputWebRTCPlayUrl = InputWebRTCPlayUrl;

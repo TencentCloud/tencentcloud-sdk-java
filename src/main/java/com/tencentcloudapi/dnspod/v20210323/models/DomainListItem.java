@@ -45,7 +45,7 @@ public class DomainListItem extends AbstractModel {
     private String Status;
 
     /**
-    * 域名默认的解析记录默认TTL值
+    * 域名默认的解析记录默认TTL值，单位：秒
     */
     @SerializedName("TTL")
     @Expose
@@ -234,16 +234,16 @@ public class DomainListItem extends AbstractModel {
     }
 
     /**
-     * Get 域名默认的解析记录默认TTL值 
-     * @return TTL 域名默认的解析记录默认TTL值
+     * Get 域名默认的解析记录默认TTL值，单位：秒 
+     * @return TTL 域名默认的解析记录默认TTL值，单位：秒
      */
     public Long getTTL() {
         return this.TTL;
     }
 
     /**
-     * Set 域名默认的解析记录默认TTL值
-     * @param TTL 域名默认的解析记录默认TTL值
+     * Set 域名默认的解析记录默认TTL值，单位：秒
+     * @param TTL 域名默认的解析记录默认TTL值，单位：秒
      */
     public void setTTL(Long TTL) {
         this.TTL = TTL;

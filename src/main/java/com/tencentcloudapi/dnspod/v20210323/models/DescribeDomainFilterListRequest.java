@@ -135,7 +135,7 @@ SPAM：封禁
     private Long RecordCountEnd;
 
     /**
-    * 项目ID
+    * 项目ID，"帐号中心-项目管理"拿到项目ID
     */
     @SerializedName("ProjectId")
     @Expose
@@ -425,16 +425,16 @@ SPAM：封禁
     }
 
     /**
-     * Get 项目ID 
-     * @return ProjectId 项目ID
+     * Get 项目ID，"帐号中心-项目管理"拿到项目ID 
+     * @return ProjectId 项目ID，"帐号中心-项目管理"拿到项目ID
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID
-     * @param ProjectId 项目ID
+     * Set 项目ID，"帐号中心-项目管理"拿到项目ID
+     * @param ProjectId 项目ID，"帐号中心-项目管理"拿到项目ID
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;

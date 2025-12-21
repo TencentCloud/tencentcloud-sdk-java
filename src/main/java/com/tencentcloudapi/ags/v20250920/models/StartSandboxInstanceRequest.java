@@ -52,6 +52,13 @@ public class StartSandboxInstanceRequest extends AbstractModel {
     private String ClientToken;
 
     /**
+    * 沙箱实例存储挂载配置
+    */
+    @SerializedName("MountOptions")
+    @Expose
+    private MountOption [] MountOptions;
+
+    /**
      * Get 沙箱工具 ID，与 ToolName 至少有一个要填 
      * @return ToolId 沙箱工具 ID，与 ToolName 至少有一个要填
      */
@@ -115,6 +122,22 @@ public class StartSandboxInstanceRequest extends AbstractModel {
         this.ClientToken = ClientToken;
     }
 
+    /**
+     * Get 沙箱实例存储挂载配置 
+     * @return MountOptions 沙箱实例存储挂载配置
+     */
+    public MountOption [] getMountOptions() {
+        return this.MountOptions;
+    }
+
+    /**
+     * Set 沙箱实例存储挂载配置
+     * @param MountOptions 沙箱实例存储挂载配置
+     */
+    public void setMountOptions(MountOption [] MountOptions) {
+        this.MountOptions = MountOptions;
+    }
+
     public StartSandboxInstanceRequest() {
     }
 
@@ -135,6 +158,12 @@ public class StartSandboxInstanceRequest extends AbstractModel {
         if (source.ClientToken != null) {
             this.ClientToken = new String(source.ClientToken);
         }
+        if (source.MountOptions != null) {
+            this.MountOptions = new MountOption[source.MountOptions.length];
+            for (int i = 0; i < source.MountOptions.length; i++) {
+                this.MountOptions[i] = new MountOption(source.MountOptions[i]);
+            }
+        }
     }
 
 
@@ -146,6 +175,7 @@ public class StartSandboxInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ToolName", this.ToolName);
         this.setParamSimple(map, prefix + "Timeout", this.Timeout);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
+        this.setParamArrayObj(map, prefix + "MountOptions.", this.MountOptions);
 
     }
 }

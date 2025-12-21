@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeRebateInfosNewRequest extends AbstractModel {
 
     /**
-    * 返佣月份，如2018-02
+    * <p>返佣月份，如2018-02</p>
     */
     @SerializedName("RebateMonth")
     @Expose
     private String RebateMonth;
 
     /**
-    * 偏移量
+    * <p>偏移量</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 限制数目
+    * <p>限制数目</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 返佣月份，如2018-02 
-     * @return RebateMonth 返佣月份，如2018-02
+     * Get <p>返佣月份，如2018-02</p> 
+     * @return RebateMonth <p>返佣月份，如2018-02</p>
      */
     public String getRebateMonth() {
         return this.RebateMonth;
     }
 
     /**
-     * Set 返佣月份，如2018-02
-     * @param RebateMonth 返佣月份，如2018-02
+     * Set <p>返佣月份，如2018-02</p>
+     * @param RebateMonth <p>返佣月份，如2018-02</p>
      */
     public void setRebateMonth(String RebateMonth) {
         this.RebateMonth = RebateMonth;
     }
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get <p>偏移量</p> 
+     * @return Offset <p>偏移量</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set <p>偏移量</p>
+     * @param Offset <p>偏移量</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 限制数目 
-     * @return Limit 限制数目
+     * Get <p>限制数目</p> 
+     * @return Limit <p>限制数目</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 限制数目
-     * @param Limit 限制数目
+     * Set <p>限制数目</p>
+     * @param Limit <p>限制数目</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

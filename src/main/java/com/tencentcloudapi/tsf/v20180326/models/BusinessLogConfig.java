@@ -46,7 +46,6 @@ public class BusinessLogConfig extends AbstractModel {
 
     /**
     * 配置项描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigDesc")
     @Expose
@@ -54,7 +53,6 @@ public class BusinessLogConfig extends AbstractModel {
 
     /**
     * 配置项标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigTags")
     @Expose
@@ -69,7 +67,6 @@ public class BusinessLogConfig extends AbstractModel {
 
     /**
     * 配置项创建时间，格式为yyyy-MM-dd HH:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigCreateTime")
     @Expose
@@ -77,7 +74,6 @@ public class BusinessLogConfig extends AbstractModel {
 
     /**
     * 配置项更新时间，格式为yyyy-MM-dd HH:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigUpdateTime")
     @Expose
@@ -148,6 +144,13 @@ public class BusinessLogConfig extends AbstractModel {
     private Long FilebeatCleanInactive;
 
     /**
+    * 是否开启自定义pattern
+    */
+    @SerializedName("CustomMultilinePattern")
+    @Expose
+    private Boolean CustomMultilinePattern;
+
+    /**
      * Get 配置项ID 
      * @return ConfigId 配置项ID
      */
@@ -196,10 +199,8 @@ public class BusinessLogConfig extends AbstractModel {
     }
 
     /**
-     * Get 配置项描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置项描述 
      * @return ConfigDesc 配置项描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConfigDesc() {
         return this.ConfigDesc;
@@ -207,19 +208,15 @@ public class BusinessLogConfig extends AbstractModel {
 
     /**
      * Set 配置项描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigDesc 配置项描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigDesc(String ConfigDesc) {
         this.ConfigDesc = ConfigDesc;
     }
 
     /**
-     * Get 配置项标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置项标签 
      * @return ConfigTags 配置项标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConfigTags() {
         return this.ConfigTags;
@@ -227,9 +224,7 @@ public class BusinessLogConfig extends AbstractModel {
 
     /**
      * Set 配置项标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigTags 配置项标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigTags(String ConfigTags) {
         this.ConfigTags = ConfigTags;
@@ -252,10 +247,8 @@ public class BusinessLogConfig extends AbstractModel {
     }
 
     /**
-     * Get 配置项创建时间，格式为yyyy-MM-dd HH:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置项创建时间，格式为yyyy-MM-dd HH:mm:ss 
      * @return ConfigCreateTime 配置项创建时间，格式为yyyy-MM-dd HH:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConfigCreateTime() {
         return this.ConfigCreateTime;
@@ -263,19 +256,15 @@ public class BusinessLogConfig extends AbstractModel {
 
     /**
      * Set 配置项创建时间，格式为yyyy-MM-dd HH:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigCreateTime 配置项创建时间，格式为yyyy-MM-dd HH:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigCreateTime(String ConfigCreateTime) {
         this.ConfigCreateTime = ConfigCreateTime;
     }
 
     /**
-     * Get 配置项更新时间，格式为yyyy-MM-dd HH:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置项更新时间，格式为yyyy-MM-dd HH:mm:ss 
      * @return ConfigUpdateTime 配置项更新时间，格式为yyyy-MM-dd HH:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConfigUpdateTime() {
         return this.ConfigUpdateTime;
@@ -283,9 +272,7 @@ public class BusinessLogConfig extends AbstractModel {
 
     /**
      * Set 配置项更新时间，格式为yyyy-MM-dd HH:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigUpdateTime 配置项更新时间，格式为yyyy-MM-dd HH:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigUpdateTime(String ConfigUpdateTime) {
         this.ConfigUpdateTime = ConfigUpdateTime;
@@ -443,6 +430,22 @@ public class BusinessLogConfig extends AbstractModel {
         this.FilebeatCleanInactive = FilebeatCleanInactive;
     }
 
+    /**
+     * Get 是否开启自定义pattern 
+     * @return CustomMultilinePattern 是否开启自定义pattern
+     */
+    public Boolean getCustomMultilinePattern() {
+        return this.CustomMultilinePattern;
+    }
+
+    /**
+     * Set 是否开启自定义pattern
+     * @param CustomMultilinePattern 是否开启自定义pattern
+     */
+    public void setCustomMultilinePattern(Boolean CustomMultilinePattern) {
+        this.CustomMultilinePattern = CustomMultilinePattern;
+    }
+
     public BusinessLogConfig() {
     }
 
@@ -508,6 +511,9 @@ public class BusinessLogConfig extends AbstractModel {
         if (source.FilebeatCleanInactive != null) {
             this.FilebeatCleanInactive = new Long(source.FilebeatCleanInactive);
         }
+        if (source.CustomMultilinePattern != null) {
+            this.CustomMultilinePattern = new Boolean(source.CustomMultilinePattern);
+        }
     }
 
 
@@ -532,6 +538,7 @@ public class BusinessLogConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "FilebeatHarvesterLimit", this.FilebeatHarvesterLimit);
         this.setParamSimple(map, prefix + "FilebeatCloseInactive", this.FilebeatCloseInactive);
         this.setParamSimple(map, prefix + "FilebeatCleanInactive", this.FilebeatCleanInactive);
+        this.setParamSimple(map, prefix + "CustomMultilinePattern", this.CustomMultilinePattern);
 
     }
 }

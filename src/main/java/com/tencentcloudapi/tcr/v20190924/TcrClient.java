@@ -468,6 +468,17 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *删除实例同步规则
+     * @param req DeleteReplicationRuleRequest
+     * @return DeleteReplicationRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteReplicationRuleResponse DeleteReplicationRule(DeleteReplicationRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteReplicationRule", DeleteReplicationRuleResponse.class);
+    }
+
+    /**
      *删除镜像仓库
      * @param req DeleteRepositoryRequest
      * @return DeleteRepositoryResponse
@@ -852,6 +863,17 @@ public class TcrClient extends AbstractClient{
     public DescribeReplicationInstancesResponse DescribeReplicationInstances(DescribeReplicationInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeReplicationInstances", DescribeReplicationInstancesResponse.class);
+    }
+
+    /**
+     *获取实例同步规则列表
+     * @param req DescribeReplicationPoliciesRequest
+     * @return DescribeReplicationPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReplicationPoliciesResponse DescribeReplicationPolicies(DescribeReplicationPoliciesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeReplicationPolicies", DescribeReplicationPoliciesResponse.class);
     }
 
     /**
