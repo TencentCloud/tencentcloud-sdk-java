@@ -61,6 +61,39 @@ public class TcbrClient extends AbstractClient{
     }
 
     /**
+     *删除云托管服务：包括服务下的版本，镜像，流水线
+     * @param req DeleteCloudRunServerRequest
+     * @return DeleteCloudRunServerResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCloudRunServerResponse DeleteCloudRunServer(DeleteCloudRunServerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCloudRunServer", DeleteCloudRunServerResponse.class);
+    }
+
+    /**
+     *批量删除版本
+     * @param req DeleteCloudRunVersionsRequest
+     * @return DeleteCloudRunVersionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCloudRunVersionsResponse DeleteCloudRunVersions(DeleteCloudRunVersionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCloudRunVersions", DeleteCloudRunVersionsResponse.class);
+    }
+
+    /**
+     *查询云托管部署记录
+     * @param req DescribeCloudRunDeployRecordRequest
+     * @return DescribeCloudRunDeployRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudRunDeployRecordResponse DescribeCloudRunDeployRecord(DescribeCloudRunDeployRecordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudRunDeployRecord", DescribeCloudRunDeployRecordResponse.class);
+    }
+
+    /**
      *获取环境列表，含环境下的各个资源信息。尤其是各资源的唯一标识，是请求各资源的关键参数
      * @param req DescribeCloudRunEnvsRequest
      * @return DescribeCloudRunEnvsResponse
@@ -69,6 +102,28 @@ public class TcbrClient extends AbstractClient{
     public DescribeCloudRunEnvsResponse DescribeCloudRunEnvs(DescribeCloudRunEnvsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCloudRunEnvs", DescribeCloudRunEnvsResponse.class);
+    }
+
+    /**
+     *查询云托管Pod实例列表
+     * @param req DescribeCloudRunPodListRequest
+     * @return DescribeCloudRunPodListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudRunPodListResponse DescribeCloudRunPodList(DescribeCloudRunPodListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudRunPodList", DescribeCloudRunPodListResponse.class);
+    }
+
+    /**
+     *查询运行日志
+     * @param req DescribeCloudRunProcessLogRequest
+     * @return DescribeCloudRunProcessLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudRunProcessLogResponse DescribeCloudRunProcessLog(DescribeCloudRunProcessLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudRunProcessLog", DescribeCloudRunProcessLogResponse.class);
     }
 
     /**
@@ -105,6 +160,17 @@ public class TcbrClient extends AbstractClient{
     }
 
     /**
+     *查询发布单
+     * @param req DescribeReleaseOrderRequest
+     * @return DescribeReleaseOrderResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReleaseOrderResponse DescribeReleaseOrder(DescribeReleaseOrderRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeReleaseOrder", DescribeReleaseOrderResponse.class);
+    }
+
+    /**
      *查询服务管理任务信息
      * @param req DescribeServerManageTaskRequest
      * @return DescribeServerManageTaskResponse
@@ -113,6 +179,17 @@ public class TcbrClient extends AbstractClient{
     public DescribeServerManageTaskResponse DescribeServerManageTask(DescribeServerManageTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeServerManageTask", DescribeServerManageTaskResponse.class);
+    }
+
+    /**
+     *查询版本详情
+     * @param req DescribeVersionDetailRequest
+     * @return DescribeVersionDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVersionDetailResponse DescribeVersionDetail(DescribeVersionDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVersionDetail", DescribeVersionDetailResponse.class);
     }
 
     /**
@@ -135,6 +212,28 @@ public class TcbrClient extends AbstractClient{
     public ReleaseGrayResponse ReleaseGray(ReleaseGrayRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ReleaseGray", ReleaseGrayResponse.class);
+    }
+
+    /**
+     *查询日志信息
+     * @param req SearchClsLogRequest
+     * @return SearchClsLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public SearchClsLogResponse SearchClsLog(SearchClsLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SearchClsLog", SearchClsLogResponse.class);
+    }
+
+    /**
+     *回滚版本
+     * @param req SubmitServerRollbackRequest
+     * @return SubmitServerRollbackResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitServerRollbackResponse SubmitServerRollback(SubmitServerRollbackRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitServerRollback", SubmitServerRollbackResponse.class);
     }
 
     /**

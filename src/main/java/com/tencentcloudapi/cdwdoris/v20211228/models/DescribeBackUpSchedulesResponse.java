@@ -24,11 +24,57 @@ import java.util.HashMap;
 public class DescribeBackUpSchedulesResponse extends AbstractModel {
 
     /**
+    * 当前系统时间
+    */
+    @SerializedName("CurrentTime")
+    @Expose
+    private String CurrentTime;
+
+    /**
+    * 桶加密状态信息
+    */
+    @SerializedName("BucketEncryption")
+    @Expose
+    private BucketEncryptionInfo BucketEncryption;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 当前系统时间 
+     * @return CurrentTime 当前系统时间
+     */
+    public String getCurrentTime() {
+        return this.CurrentTime;
+    }
+
+    /**
+     * Set 当前系统时间
+     * @param CurrentTime 当前系统时间
+     */
+    public void setCurrentTime(String CurrentTime) {
+        this.CurrentTime = CurrentTime;
+    }
+
+    /**
+     * Get 桶加密状态信息 
+     * @return BucketEncryption 桶加密状态信息
+     */
+    public BucketEncryptionInfo getBucketEncryption() {
+        return this.BucketEncryption;
+    }
+
+    /**
+     * Set 桶加密状态信息
+     * @param BucketEncryption 桶加密状态信息
+     */
+    public void setBucketEncryption(BucketEncryptionInfo BucketEncryption) {
+        this.BucketEncryption = BucketEncryption;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +100,12 @@ public class DescribeBackUpSchedulesResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeBackUpSchedulesResponse(DescribeBackUpSchedulesResponse source) {
+        if (source.CurrentTime != null) {
+            this.CurrentTime = new String(source.CurrentTime);
+        }
+        if (source.BucketEncryption != null) {
+            this.BucketEncryption = new BucketEncryptionInfo(source.BucketEncryption);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +116,8 @@ public class DescribeBackUpSchedulesResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "CurrentTime", this.CurrentTime);
+        this.setParamObj(map, prefix + "BucketEncryption.", this.BucketEncryption);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -122,6 +122,13 @@ public class CheckViewRiskItem extends AbstractModel {
     private String Classify;
 
     /**
+    * cspm规范条款
+    */
+    @SerializedName("StandardTerms")
+    @Expose
+    private StandardTerm [] StandardTerms;
+
+    /**
      * Get 检查项规则ID 
      * @return RiskRuleId 检查项规则ID
      */
@@ -345,6 +352,22 @@ public class CheckViewRiskItem extends AbstractModel {
         this.Classify = Classify;
     }
 
+    /**
+     * Get cspm规范条款 
+     * @return StandardTerms cspm规范条款
+     */
+    public StandardTerm [] getStandardTerms() {
+        return this.StandardTerms;
+    }
+
+    /**
+     * Set cspm规范条款
+     * @param StandardTerms cspm规范条款
+     */
+    public void setStandardTerms(StandardTerm [] StandardTerms) {
+        this.StandardTerms = StandardTerms;
+    }
+
     public CheckViewRiskItem() {
     }
 
@@ -395,6 +418,12 @@ public class CheckViewRiskItem extends AbstractModel {
         if (source.Classify != null) {
             this.Classify = new String(source.Classify);
         }
+        if (source.StandardTerms != null) {
+            this.StandardTerms = new StandardTerm[source.StandardTerms.length];
+            for (int i = 0; i < source.StandardTerms.length; i++) {
+                this.StandardTerms[i] = new StandardTerm(source.StandardTerms[i]);
+            }
+        }
     }
 
 
@@ -416,6 +445,7 @@ public class CheckViewRiskItem extends AbstractModel {
         this.setParamSimple(map, prefix + "AssetType", this.AssetType);
         this.setParamSimple(map, prefix + "EventType", this.EventType);
         this.setParamSimple(map, prefix + "Classify", this.Classify);
+        this.setParamArrayObj(map, prefix + "StandardTerms.", this.StandardTerms);
 
     }
 }

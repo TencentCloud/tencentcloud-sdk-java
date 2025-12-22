@@ -25,6 +25,7 @@ public class CreateQARequest extends AbstractModel {
 
     /**
     * 应用ID
+若要操作共享知识库，传KnowledgeBizId
     */
     @SerializedName("BotBizId")
     @Expose
@@ -80,7 +81,7 @@ public class CreateQARequest extends AbstractModel {
     private String CateBizId;
 
     /**
-    * 有效开始时间，unix时间戳
+    * 有效开始时间，单位是unix时间戳。默认值为0，表示问答为永久有效.
     */
     @SerializedName("ExpireStart")
     @Expose
@@ -108,8 +109,17 @@ public class CreateQARequest extends AbstractModel {
     private String QuestionDesc;
 
     /**
-     * Get 应用ID 
+    * 问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+    */
+    @SerializedName("EnableScope")
+    @Expose
+    private Long EnableScope;
+
+    /**
+     * Get 应用ID
+若要操作共享知识库，传KnowledgeBizId 
      * @return BotBizId 应用ID
+若要操作共享知识库，传KnowledgeBizId
      */
     public String getBotBizId() {
         return this.BotBizId;
@@ -117,7 +127,9 @@ public class CreateQARequest extends AbstractModel {
 
     /**
      * Set 应用ID
+若要操作共享知识库，传KnowledgeBizId
      * @param BotBizId 应用ID
+若要操作共享知识库，传KnowledgeBizId
      */
     public void setBotBizId(String BotBizId) {
         this.BotBizId = BotBizId;
@@ -236,16 +248,16 @@ public class CreateQARequest extends AbstractModel {
     }
 
     /**
-     * Get 有效开始时间，unix时间戳 
-     * @return ExpireStart 有效开始时间，unix时间戳
+     * Get 有效开始时间，单位是unix时间戳。默认值为0，表示问答为永久有效. 
+     * @return ExpireStart 有效开始时间，单位是unix时间戳。默认值为0，表示问答为永久有效.
      */
     public String getExpireStart() {
         return this.ExpireStart;
     }
 
     /**
-     * Set 有效开始时间，unix时间戳
-     * @param ExpireStart 有效开始时间，unix时间戳
+     * Set 有效开始时间，单位是unix时间戳。默认值为0，表示问答为永久有效.
+     * @param ExpireStart 有效开始时间，单位是unix时间戳。默认值为0，表示问答为永久有效.
      */
     public void setExpireStart(String ExpireStart) {
         this.ExpireStart = ExpireStart;
@@ -299,6 +311,22 @@ public class CreateQARequest extends AbstractModel {
         this.QuestionDesc = QuestionDesc;
     }
 
+    /**
+     * Get 问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域 
+     * @return EnableScope 问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     */
+    public Long getEnableScope() {
+        return this.EnableScope;
+    }
+
+    /**
+     * Set 问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     * @param EnableScope 问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     */
+    public void setEnableScope(Long EnableScope) {
+        this.EnableScope = EnableScope;
+    }
+
     public CreateQARequest() {
     }
 
@@ -349,6 +377,9 @@ public class CreateQARequest extends AbstractModel {
         if (source.QuestionDesc != null) {
             this.QuestionDesc = new String(source.QuestionDesc);
         }
+        if (source.EnableScope != null) {
+            this.EnableScope = new Long(source.EnableScope);
+        }
     }
 
 
@@ -368,6 +399,7 @@ public class CreateQARequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ExpireEnd", this.ExpireEnd);
         this.setParamArraySimple(map, prefix + "SimilarQuestions.", this.SimilarQuestions);
         this.setParamSimple(map, prefix + "QuestionDesc", this.QuestionDesc);
+        this.setParamSimple(map, prefix + "EnableScope", this.EnableScope);
 
     }
 }

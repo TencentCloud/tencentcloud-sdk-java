@@ -223,6 +223,29 @@ public class DescribeDocResponse extends AbstractModel {
     private UpdatePeriodInfo UpdatePeriodInfo;
 
     /**
+    * 从根节点开始的路径分类ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CateBizIdPath")
+    @Expose
+    private String [] CateBizIdPath;
+
+    /**
+    * 从根节点开始的路径分类名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CateNamePath")
+    @Expose
+    private String [] CateNamePath;
+
+    /**
+    * 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+    */
+    @SerializedName("EnableScope")
+    @Expose
+    private Long EnableScope;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -690,6 +713,62 @@ public class DescribeDocResponse extends AbstractModel {
     }
 
     /**
+     * Get 从根节点开始的路径分类ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CateBizIdPath 从根节点开始的路径分类ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getCateBizIdPath() {
+        return this.CateBizIdPath;
+    }
+
+    /**
+     * Set 从根节点开始的路径分类ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CateBizIdPath 从根节点开始的路径分类ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCateBizIdPath(String [] CateBizIdPath) {
+        this.CateBizIdPath = CateBizIdPath;
+    }
+
+    /**
+     * Get 从根节点开始的路径分类名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CateNamePath 从根节点开始的路径分类名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getCateNamePath() {
+        return this.CateNamePath;
+    }
+
+    /**
+     * Set 从根节点开始的路径分类名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CateNamePath 从根节点开始的路径分类名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCateNamePath(String [] CateNamePath) {
+        this.CateNamePath = CateNamePath;
+    }
+
+    /**
+     * Get 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域 
+     * @return EnableScope 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     */
+    public Long getEnableScope() {
+        return this.EnableScope;
+    }
+
+    /**
+     * Set 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     * @param EnableScope 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     */
+    public void setEnableScope(Long EnableScope) {
+        this.EnableScope = EnableScope;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -800,6 +879,21 @@ public class DescribeDocResponse extends AbstractModel {
         if (source.UpdatePeriodInfo != null) {
             this.UpdatePeriodInfo = new UpdatePeriodInfo(source.UpdatePeriodInfo);
         }
+        if (source.CateBizIdPath != null) {
+            this.CateBizIdPath = new String[source.CateBizIdPath.length];
+            for (int i = 0; i < source.CateBizIdPath.length; i++) {
+                this.CateBizIdPath[i] = new String(source.CateBizIdPath[i]);
+            }
+        }
+        if (source.CateNamePath != null) {
+            this.CateNamePath = new String[source.CateNamePath.length];
+            for (int i = 0; i < source.CateNamePath.length; i++) {
+                this.CateNamePath[i] = new String(source.CateNamePath[i]);
+            }
+        }
+        if (source.EnableScope != null) {
+            this.EnableScope = new Long(source.EnableScope);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -838,6 +932,9 @@ public class DescribeDocResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "IsDownload", this.IsDownload);
         this.setParamSimple(map, prefix + "SplitRule", this.SplitRule);
         this.setParamObj(map, prefix + "UpdatePeriodInfo.", this.UpdatePeriodInfo);
+        this.setParamArraySimple(map, prefix + "CateBizIdPath.", this.CateBizIdPath);
+        this.setParamArraySimple(map, prefix + "CateNamePath.", this.CateNamePath);
+        this.setParamSimple(map, prefix + "EnableScope", this.EnableScope);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

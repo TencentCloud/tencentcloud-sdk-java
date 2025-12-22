@@ -89,14 +89,6 @@ CRONTAB_CYCLE: crontab表达式类型
     private String ExecutionEndTime;
 
     /**
-    * 调度类型: 0 正常调度 1 空跑调度
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("ScheduleRunType")
-    @Expose
-    private Long ScheduleRunType;
-
-    /**
     * 日历调度 取值为 0 和 1， 1为打开，0为关闭，默认为0
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -140,9 +132,9 @@ CRONTAB_CYCLE: crontab表达式类型
     * 下游依赖数组
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("DownStreamDependencyConfigList")
+    @SerializedName("DownstreamDependencyConfigList")
     @Expose
-    private DependencyTaskBrief [] DownStreamDependencyConfigList;
+    private DependencyTaskBrief [] DownstreamDependencyConfigList;
 
     /**
     * 事件数组
@@ -151,46 +143,6 @@ CRONTAB_CYCLE: crontab表达式类型
     @SerializedName("EventListenerList")
     @Expose
     private EventListener [] EventListenerList;
-
-    /**
-    * 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("RunPriority")
-    @Expose
-    private Long RunPriority;
-
-    /**
-    * 重试策略 重试等待时间,单位分钟: 默认: 5
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("RetryWait")
-    @Expose
-    private Long RetryWait;
-
-    /**
-    * 重试策略 最大尝试次数, 默认: 4
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("MaxRetryAttempts")
-    @Expose
-    private Long MaxRetryAttempts;
-
-    /**
-    * 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("ExecutionTTL")
-    @Expose
-    private Long ExecutionTTL;
-
-    /**
-    * 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("WaitExecutionTotalTTL")
-    @Expose
-    private String WaitExecutionTotalTTL;
 
     /**
     * 重跑&补录配置, 默认为 ALL; , ALL 运行成功或失败后皆可重跑或补录, FAILURE 运行成功后不可重跑或补录，运行失败后可重跑或补录, NONE 运行成功或失败后皆不可重跑或补录;
@@ -233,6 +185,110 @@ CRONTAB_CYCLE: crontab表达式类型
     @SerializedName("InitStrategy")
     @Expose
     private String InitStrategy;
+
+    /**
+    * 调度类型: 0 正常调度 1 空跑调度，默认为 0
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScheduleRunType")
+    @Expose
+    private Long ScheduleRunType;
+
+    /**
+    * （废弃，建议使用 DownstreamDependencyConfigList）下游依赖数组
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DownStreamDependencyConfigList")
+    @Expose
+    private DependencyTaskBrief [] DownStreamDependencyConfigList;
+
+    /**
+    * 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RunPriority")
+    @Expose
+    private Long RunPriority;
+
+    /**
+    * 重试策略 重试等待时间,单位分钟: 默认: 5
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RetryWait")
+    @Expose
+    private Long RetryWait;
+
+    /**
+    * 重试策略 最大尝试次数, 默认: 4
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxRetryAttempts")
+    @Expose
+    private Long MaxRetryAttempts;
+
+    /**
+    * 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExecutionTTL")
+    @Expose
+    private Long ExecutionTTL;
+
+    /**
+    * 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WaitExecutionTotalTTL")
+    @Expose
+    private String WaitExecutionTotalTTL;
+
+    /**
+    * 调度类型: 0 正常调度 1 空跑调度，默认为 0
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScheduleType")
+    @Expose
+    private Long ScheduleType;
+
+    /**
+    * 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RunPriorityType")
+    @Expose
+    private Long RunPriorityType;
+
+    /**
+    * 重试策略 重试等待时间,单位分钟: 默认: 5
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RetryWaitMinute")
+    @Expose
+    private Long RetryWaitMinute;
+
+    /**
+    * 重试策略 最大尝试次数, 默认: 4
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxRetryNumber")
+    @Expose
+    private Long MaxRetryNumber;
+
+    /**
+    * 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExecutionTTLMinute")
+    @Expose
+    private Long ExecutionTTLMinute;
+
+    /**
+    * 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WaitExecutionTotalTTLMinute")
+    @Expose
+    private Long WaitExecutionTotalTTLMinute;
 
     /**
      * Get 周期类型：支持的类型为
@@ -411,26 +467,6 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 调度类型: 0 正常调度 1 空跑调度
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScheduleRunType 调度类型: 0 正常调度 1 空跑调度
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getScheduleRunType() {
-        return this.ScheduleRunType;
-    }
-
-    /**
-     * Set 调度类型: 0 正常调度 1 空跑调度
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScheduleRunType 调度类型: 0 正常调度 1 空跑调度
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setScheduleRunType(Long ScheduleRunType) {
-        this.ScheduleRunType = ScheduleRunType;
-    }
-
-    /**
      * Get 日历调度 取值为 0 和 1， 1为打开，0为关闭，默认为0
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CalendarOpen 日历调度 取值为 0 和 1， 1为打开，0为关闭，默认为0
@@ -533,21 +569,21 @@ CRONTAB_CYCLE: crontab表达式类型
     /**
      * Get 下游依赖数组
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DownStreamDependencyConfigList 下游依赖数组
+     * @return DownstreamDependencyConfigList 下游依赖数组
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public DependencyTaskBrief [] getDownStreamDependencyConfigList() {
-        return this.DownStreamDependencyConfigList;
+    public DependencyTaskBrief [] getDownstreamDependencyConfigList() {
+        return this.DownstreamDependencyConfigList;
     }
 
     /**
      * Set 下游依赖数组
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DownStreamDependencyConfigList 下游依赖数组
+     * @param DownstreamDependencyConfigList 下游依赖数组
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setDownStreamDependencyConfigList(DependencyTaskBrief [] DownStreamDependencyConfigList) {
-        this.DownStreamDependencyConfigList = DownStreamDependencyConfigList;
+    public void setDownstreamDependencyConfigList(DependencyTaskBrief [] DownstreamDependencyConfigList) {
+        this.DownstreamDependencyConfigList = DownstreamDependencyConfigList;
     }
 
     /**
@@ -568,106 +604,6 @@ CRONTAB_CYCLE: crontab表达式类型
      */
     public void setEventListenerList(EventListener [] EventListenerList) {
         this.EventListenerList = EventListenerList;
-    }
-
-    /**
-     * Get 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RunPriority 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getRunPriority() {
-        return this.RunPriority;
-    }
-
-    /**
-     * Set 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param RunPriority 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setRunPriority(Long RunPriority) {
-        this.RunPriority = RunPriority;
-    }
-
-    /**
-     * Get 重试策略 重试等待时间,单位分钟: 默认: 5
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RetryWait 重试策略 重试等待时间,单位分钟: 默认: 5
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getRetryWait() {
-        return this.RetryWait;
-    }
-
-    /**
-     * Set 重试策略 重试等待时间,单位分钟: 默认: 5
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param RetryWait 重试策略 重试等待时间,单位分钟: 默认: 5
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setRetryWait(Long RetryWait) {
-        this.RetryWait = RetryWait;
-    }
-
-    /**
-     * Get 重试策略 最大尝试次数, 默认: 4
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MaxRetryAttempts 重试策略 最大尝试次数, 默认: 4
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getMaxRetryAttempts() {
-        return this.MaxRetryAttempts;
-    }
-
-    /**
-     * Set 重试策略 最大尝试次数, 默认: 4
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaxRetryAttempts 重试策略 最大尝试次数, 默认: 4
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setMaxRetryAttempts(Long MaxRetryAttempts) {
-        this.MaxRetryAttempts = MaxRetryAttempts;
-    }
-
-    /**
-     * Get 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecutionTTL 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getExecutionTTL() {
-        return this.ExecutionTTL;
-    }
-
-    /**
-     * Set 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecutionTTL 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setExecutionTTL(Long ExecutionTTL) {
-        this.ExecutionTTL = ExecutionTTL;
-    }
-
-    /**
-     * Get 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WaitExecutionTotalTTL 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getWaitExecutionTotalTTL() {
-        return this.WaitExecutionTotalTTL;
-    }
-
-    /**
-     * Set 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param WaitExecutionTotalTTL 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setWaitExecutionTotalTTL(String WaitExecutionTotalTTL) {
-        this.WaitExecutionTotalTTL = WaitExecutionTotalTTL;
     }
 
     /**
@@ -778,6 +714,294 @@ CRONTAB_CYCLE: crontab表达式类型
         this.InitStrategy = InitStrategy;
     }
 
+    /**
+     * Get 调度类型: 0 正常调度 1 空跑调度，默认为 0
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScheduleRunType 调度类型: 0 正常调度 1 空跑调度，默认为 0
+注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
+     */
+    @Deprecated
+    public Long getScheduleRunType() {
+        return this.ScheduleRunType;
+    }
+
+    /**
+     * Set 调度类型: 0 正常调度 1 空跑调度，默认为 0
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScheduleRunType 调度类型: 0 正常调度 1 空跑调度，默认为 0
+注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
+     */
+    @Deprecated
+    public void setScheduleRunType(Long ScheduleRunType) {
+        this.ScheduleRunType = ScheduleRunType;
+    }
+
+    /**
+     * Get （废弃，建议使用 DownstreamDependencyConfigList）下游依赖数组
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DownStreamDependencyConfigList （废弃，建议使用 DownstreamDependencyConfigList）下游依赖数组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
+     */
+    @Deprecated
+    public DependencyTaskBrief [] getDownStreamDependencyConfigList() {
+        return this.DownStreamDependencyConfigList;
+    }
+
+    /**
+     * Set （废弃，建议使用 DownstreamDependencyConfigList）下游依赖数组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DownStreamDependencyConfigList （废弃，建议使用 DownstreamDependencyConfigList）下游依赖数组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
+     */
+    @Deprecated
+    public void setDownStreamDependencyConfigList(DependencyTaskBrief [] DownStreamDependencyConfigList) {
+        this.DownStreamDependencyConfigList = DownStreamDependencyConfigList;
+    }
+
+    /**
+     * Get 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RunPriority 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
+     */
+    @Deprecated
+    public Long getRunPriority() {
+        return this.RunPriority;
+    }
+
+    /**
+     * Set 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RunPriority 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
+     */
+    @Deprecated
+    public void setRunPriority(Long RunPriority) {
+        this.RunPriority = RunPriority;
+    }
+
+    /**
+     * Get 重试策略 重试等待时间,单位分钟: 默认: 5
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RetryWait 重试策略 重试等待时间,单位分钟: 默认: 5
+注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
+     */
+    @Deprecated
+    public Long getRetryWait() {
+        return this.RetryWait;
+    }
+
+    /**
+     * Set 重试策略 重试等待时间,单位分钟: 默认: 5
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RetryWait 重试策略 重试等待时间,单位分钟: 默认: 5
+注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
+     */
+    @Deprecated
+    public void setRetryWait(Long RetryWait) {
+        this.RetryWait = RetryWait;
+    }
+
+    /**
+     * Get 重试策略 最大尝试次数, 默认: 4
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxRetryAttempts 重试策略 最大尝试次数, 默认: 4
+注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
+     */
+    @Deprecated
+    public Long getMaxRetryAttempts() {
+        return this.MaxRetryAttempts;
+    }
+
+    /**
+     * Set 重试策略 最大尝试次数, 默认: 4
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxRetryAttempts 重试策略 最大尝试次数, 默认: 4
+注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
+     */
+    @Deprecated
+    public void setMaxRetryAttempts(Long MaxRetryAttempts) {
+        this.MaxRetryAttempts = MaxRetryAttempts;
+    }
+
+    /**
+     * Get 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExecutionTTL 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
+     */
+    @Deprecated
+    public Long getExecutionTTL() {
+        return this.ExecutionTTL;
+    }
+
+    /**
+     * Set 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExecutionTTL 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
+     */
+    @Deprecated
+    public void setExecutionTTL(Long ExecutionTTL) {
+        this.ExecutionTTL = ExecutionTTL;
+    }
+
+    /**
+     * Get 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WaitExecutionTotalTTL 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
+     */
+    @Deprecated
+    public String getWaitExecutionTotalTTL() {
+        return this.WaitExecutionTotalTTL;
+    }
+
+    /**
+     * Set 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WaitExecutionTotalTTL 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
+     */
+    @Deprecated
+    public void setWaitExecutionTotalTTL(String WaitExecutionTotalTTL) {
+        this.WaitExecutionTotalTTL = WaitExecutionTotalTTL;
+    }
+
+    /**
+     * Get 调度类型: 0 正常调度 1 空跑调度，默认为 0
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScheduleType 调度类型: 0 正常调度 1 空跑调度，默认为 0
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getScheduleType() {
+        return this.ScheduleType;
+    }
+
+    /**
+     * Set 调度类型: 0 正常调度 1 空跑调度，默认为 0
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScheduleType 调度类型: 0 正常调度 1 空跑调度，默认为 0
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScheduleType(Long ScheduleType) {
+        this.ScheduleType = ScheduleType;
+    }
+
+    /**
+     * Get 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RunPriorityType 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRunPriorityType() {
+        return this.RunPriorityType;
+    }
+
+    /**
+     * Set 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RunPriorityType 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRunPriorityType(Long RunPriorityType) {
+        this.RunPriorityType = RunPriorityType;
+    }
+
+    /**
+     * Get 重试策略 重试等待时间,单位分钟: 默认: 5
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RetryWaitMinute 重试策略 重试等待时间,单位分钟: 默认: 5
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRetryWaitMinute() {
+        return this.RetryWaitMinute;
+    }
+
+    /**
+     * Set 重试策略 重试等待时间,单位分钟: 默认: 5
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RetryWaitMinute 重试策略 重试等待时间,单位分钟: 默认: 5
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRetryWaitMinute(Long RetryWaitMinute) {
+        this.RetryWaitMinute = RetryWaitMinute;
+    }
+
+    /**
+     * Get 重试策略 最大尝试次数, 默认: 4
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxRetryNumber 重试策略 最大尝试次数, 默认: 4
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMaxRetryNumber() {
+        return this.MaxRetryNumber;
+    }
+
+    /**
+     * Set 重试策略 最大尝试次数, 默认: 4
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxRetryNumber 重试策略 最大尝试次数, 默认: 4
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxRetryNumber(Long MaxRetryNumber) {
+        this.MaxRetryNumber = MaxRetryNumber;
+    }
+
+    /**
+     * Get 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExecutionTTLMinute 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getExecutionTTLMinute() {
+        return this.ExecutionTTLMinute;
+    }
+
+    /**
+     * Set 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExecutionTTLMinute 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExecutionTTLMinute(Long ExecutionTTLMinute) {
+        this.ExecutionTTLMinute = ExecutionTTLMinute;
+    }
+
+    /**
+     * Get 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WaitExecutionTotalTTLMinute 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getWaitExecutionTotalTTLMinute() {
+        return this.WaitExecutionTotalTTLMinute;
+    }
+
+    /**
+     * Set 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WaitExecutionTotalTTLMinute 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWaitExecutionTotalTTLMinute(Long WaitExecutionTotalTTLMinute) {
+        this.WaitExecutionTotalTTLMinute = WaitExecutionTotalTTLMinute;
+    }
+
     public TaskSchedulerConfiguration() {
     }
 
@@ -807,9 +1031,6 @@ CRONTAB_CYCLE: crontab表达式类型
         if (source.ExecutionEndTime != null) {
             this.ExecutionEndTime = new String(source.ExecutionEndTime);
         }
-        if (source.ScheduleRunType != null) {
-            this.ScheduleRunType = new Long(source.ScheduleRunType);
-        }
         if (source.CalendarOpen != null) {
             this.CalendarOpen = new String(source.CalendarOpen);
         }
@@ -828,10 +1049,10 @@ CRONTAB_CYCLE: crontab表达式类型
                 this.UpstreamDependencyConfigList[i] = new DependencyTaskBrief(source.UpstreamDependencyConfigList[i]);
             }
         }
-        if (source.DownStreamDependencyConfigList != null) {
-            this.DownStreamDependencyConfigList = new DependencyTaskBrief[source.DownStreamDependencyConfigList.length];
-            for (int i = 0; i < source.DownStreamDependencyConfigList.length; i++) {
-                this.DownStreamDependencyConfigList[i] = new DependencyTaskBrief(source.DownStreamDependencyConfigList[i]);
+        if (source.DownstreamDependencyConfigList != null) {
+            this.DownstreamDependencyConfigList = new DependencyTaskBrief[source.DownstreamDependencyConfigList.length];
+            for (int i = 0; i < source.DownstreamDependencyConfigList.length; i++) {
+                this.DownstreamDependencyConfigList[i] = new DependencyTaskBrief(source.DownstreamDependencyConfigList[i]);
             }
         }
         if (source.EventListenerList != null) {
@@ -839,21 +1060,6 @@ CRONTAB_CYCLE: crontab表达式类型
             for (int i = 0; i < source.EventListenerList.length; i++) {
                 this.EventListenerList[i] = new EventListener(source.EventListenerList[i]);
             }
-        }
-        if (source.RunPriority != null) {
-            this.RunPriority = new Long(source.RunPriority);
-        }
-        if (source.RetryWait != null) {
-            this.RetryWait = new Long(source.RetryWait);
-        }
-        if (source.MaxRetryAttempts != null) {
-            this.MaxRetryAttempts = new Long(source.MaxRetryAttempts);
-        }
-        if (source.ExecutionTTL != null) {
-            this.ExecutionTTL = new Long(source.ExecutionTTL);
-        }
-        if (source.WaitExecutionTotalTTL != null) {
-            this.WaitExecutionTotalTTL = new String(source.WaitExecutionTotalTTL);
         }
         if (source.AllowRedoType != null) {
             this.AllowRedoType = new String(source.AllowRedoType);
@@ -879,6 +1085,48 @@ CRONTAB_CYCLE: crontab表达式类型
         if (source.InitStrategy != null) {
             this.InitStrategy = new String(source.InitStrategy);
         }
+        if (source.ScheduleRunType != null) {
+            this.ScheduleRunType = new Long(source.ScheduleRunType);
+        }
+        if (source.DownStreamDependencyConfigList != null) {
+            this.DownStreamDependencyConfigList = new DependencyTaskBrief[source.DownStreamDependencyConfigList.length];
+            for (int i = 0; i < source.DownStreamDependencyConfigList.length; i++) {
+                this.DownStreamDependencyConfigList[i] = new DependencyTaskBrief(source.DownStreamDependencyConfigList[i]);
+            }
+        }
+        if (source.RunPriority != null) {
+            this.RunPriority = new Long(source.RunPriority);
+        }
+        if (source.RetryWait != null) {
+            this.RetryWait = new Long(source.RetryWait);
+        }
+        if (source.MaxRetryAttempts != null) {
+            this.MaxRetryAttempts = new Long(source.MaxRetryAttempts);
+        }
+        if (source.ExecutionTTL != null) {
+            this.ExecutionTTL = new Long(source.ExecutionTTL);
+        }
+        if (source.WaitExecutionTotalTTL != null) {
+            this.WaitExecutionTotalTTL = new String(source.WaitExecutionTotalTTL);
+        }
+        if (source.ScheduleType != null) {
+            this.ScheduleType = new Long(source.ScheduleType);
+        }
+        if (source.RunPriorityType != null) {
+            this.RunPriorityType = new Long(source.RunPriorityType);
+        }
+        if (source.RetryWaitMinute != null) {
+            this.RetryWaitMinute = new Long(source.RetryWaitMinute);
+        }
+        if (source.MaxRetryNumber != null) {
+            this.MaxRetryNumber = new Long(source.MaxRetryNumber);
+        }
+        if (source.ExecutionTTLMinute != null) {
+            this.ExecutionTTLMinute = new Long(source.ExecutionTTLMinute);
+        }
+        if (source.WaitExecutionTotalTTLMinute != null) {
+            this.WaitExecutionTotalTTLMinute = new Long(source.WaitExecutionTotalTTLMinute);
+        }
     }
 
 
@@ -893,24 +1141,31 @@ CRONTAB_CYCLE: crontab表达式类型
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "ExecutionStartTime", this.ExecutionStartTime);
         this.setParamSimple(map, prefix + "ExecutionEndTime", this.ExecutionEndTime);
-        this.setParamSimple(map, prefix + "ScheduleRunType", this.ScheduleRunType);
         this.setParamSimple(map, prefix + "CalendarOpen", this.CalendarOpen);
         this.setParamSimple(map, prefix + "CalendarId", this.CalendarId);
         this.setParamSimple(map, prefix + "CalendarName", this.CalendarName);
         this.setParamSimple(map, prefix + "SelfDepend", this.SelfDepend);
         this.setParamArrayObj(map, prefix + "UpstreamDependencyConfigList.", this.UpstreamDependencyConfigList);
-        this.setParamArrayObj(map, prefix + "DownStreamDependencyConfigList.", this.DownStreamDependencyConfigList);
+        this.setParamArrayObj(map, prefix + "DownstreamDependencyConfigList.", this.DownstreamDependencyConfigList);
         this.setParamArrayObj(map, prefix + "EventListenerList.", this.EventListenerList);
-        this.setParamSimple(map, prefix + "RunPriority", this.RunPriority);
-        this.setParamSimple(map, prefix + "RetryWait", this.RetryWait);
-        this.setParamSimple(map, prefix + "MaxRetryAttempts", this.MaxRetryAttempts);
-        this.setParamSimple(map, prefix + "ExecutionTTL", this.ExecutionTTL);
-        this.setParamSimple(map, prefix + "WaitExecutionTotalTTL", this.WaitExecutionTotalTTL);
         this.setParamSimple(map, prefix + "AllowRedoType", this.AllowRedoType);
         this.setParamArrayObj(map, prefix + "ParamTaskOutList.", this.ParamTaskOutList);
         this.setParamArrayObj(map, prefix + "ParamTaskInList.", this.ParamTaskInList);
         this.setParamArrayObj(map, prefix + "TaskOutputRegistryList.", this.TaskOutputRegistryList);
         this.setParamSimple(map, prefix + "InitStrategy", this.InitStrategy);
+        this.setParamSimple(map, prefix + "ScheduleRunType", this.ScheduleRunType);
+        this.setParamArrayObj(map, prefix + "DownStreamDependencyConfigList.", this.DownStreamDependencyConfigList);
+        this.setParamSimple(map, prefix + "RunPriority", this.RunPriority);
+        this.setParamSimple(map, prefix + "RetryWait", this.RetryWait);
+        this.setParamSimple(map, prefix + "MaxRetryAttempts", this.MaxRetryAttempts);
+        this.setParamSimple(map, prefix + "ExecutionTTL", this.ExecutionTTL);
+        this.setParamSimple(map, prefix + "WaitExecutionTotalTTL", this.WaitExecutionTotalTTL);
+        this.setParamSimple(map, prefix + "ScheduleType", this.ScheduleType);
+        this.setParamSimple(map, prefix + "RunPriorityType", this.RunPriorityType);
+        this.setParamSimple(map, prefix + "RetryWaitMinute", this.RetryWaitMinute);
+        this.setParamSimple(map, prefix + "MaxRetryNumber", this.MaxRetryNumber);
+        this.setParamSimple(map, prefix + "ExecutionTTLMinute", this.ExecutionTTLMinute);
+        this.setParamSimple(map, prefix + "WaitExecutionTotalTTLMinute", this.WaitExecutionTotalTTLMinute);
 
     }
 }

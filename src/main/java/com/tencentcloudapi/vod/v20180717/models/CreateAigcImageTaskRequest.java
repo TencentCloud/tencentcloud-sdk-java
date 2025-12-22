@@ -62,14 +62,14 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
     private AigcImageTaskInputFileInfo [] FileInfos;
 
     /**
-    * 生成图片的提示词。最大支持2000字符，当 FileInfos 为空时，此参数必填。
+    * 生成图片的提示词。当 FileInfos 为空时，此参数必填。
     */
     @SerializedName("Prompt")
     @Expose
     private String Prompt;
 
     /**
-    * 要阻止模型生成图片的提示词。最大支持500个字符。
+    * 要阻止模型生成图片的提示词。
     */
     @SerializedName("NegativePrompt")
     @Expose
@@ -222,32 +222,32 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 生成图片的提示词。最大支持2000字符，当 FileInfos 为空时，此参数必填。 
-     * @return Prompt 生成图片的提示词。最大支持2000字符，当 FileInfos 为空时，此参数必填。
+     * Get 生成图片的提示词。当 FileInfos 为空时，此参数必填。 
+     * @return Prompt 生成图片的提示词。当 FileInfos 为空时，此参数必填。
      */
     public String getPrompt() {
         return this.Prompt;
     }
 
     /**
-     * Set 生成图片的提示词。最大支持2000字符，当 FileInfos 为空时，此参数必填。
-     * @param Prompt 生成图片的提示词。最大支持2000字符，当 FileInfos 为空时，此参数必填。
+     * Set 生成图片的提示词。当 FileInfos 为空时，此参数必填。
+     * @param Prompt 生成图片的提示词。当 FileInfos 为空时，此参数必填。
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
     }
 
     /**
-     * Get 要阻止模型生成图片的提示词。最大支持500个字符。 
-     * @return NegativePrompt 要阻止模型生成图片的提示词。最大支持500个字符。
+     * Get 要阻止模型生成图片的提示词。 
+     * @return NegativePrompt 要阻止模型生成图片的提示词。
      */
     public String getNegativePrompt() {
         return this.NegativePrompt;
     }
 
     /**
-     * Set 要阻止模型生成图片的提示词。最大支持500个字符。
-     * @param NegativePrompt 要阻止模型生成图片的提示词。最大支持500个字符。
+     * Set 要阻止模型生成图片的提示词。
+     * @param NegativePrompt 要阻止模型生成图片的提示词。
      */
     public void setNegativePrompt(String NegativePrompt) {
         this.NegativePrompt = NegativePrompt;

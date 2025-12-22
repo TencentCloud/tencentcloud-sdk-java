@@ -307,6 +307,14 @@ public class ListDocItem extends AbstractModel {
     private String StaffName;
 
     /**
+    * 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableScope")
+    @Expose
+    private Long EnableScope;
+
+    /**
      * Get 文档ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DocBizId 文档ID
@@ -1006,6 +1014,26 @@ public class ListDocItem extends AbstractModel {
         this.StaffName = StaffName;
     }
 
+    /**
+     * Get 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableScope 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getEnableScope() {
+        return this.EnableScope;
+    }
+
+    /**
+     * Set 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableScope 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableScope(Long EnableScope) {
+        this.EnableScope = EnableScope;
+    }
+
     public ListDocItem() {
     }
 
@@ -1131,6 +1159,9 @@ public class ListDocItem extends AbstractModel {
         if (source.StaffName != null) {
             this.StaffName = new String(source.StaffName);
         }
+        if (source.EnableScope != null) {
+            this.EnableScope = new Long(source.EnableScope);
+        }
     }
 
 
@@ -1174,6 +1205,7 @@ public class ListDocItem extends AbstractModel {
         this.setParamArraySimple(map, prefix + "AttributeFlags.", this.AttributeFlags);
         this.setParamSimple(map, prefix + "IsDisabled", this.IsDisabled);
         this.setParamSimple(map, prefix + "StaffName", this.StaffName);
+        this.setParamSimple(map, prefix + "EnableScope", this.EnableScope);
 
     }
 }

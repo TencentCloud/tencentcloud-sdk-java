@@ -96,6 +96,13 @@ public class BaseProject extends AbstractModel {
     private String Model;
 
     /**
+    * 项目调度模式，task：任务模式 workflow：工作流模式
+    */
+    @SerializedName("ScheduleMode")
+    @Expose
+    private String ScheduleMode;
+
+    /**
      * Get 项目标识，英文名
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProjectName 项目标识，英文名
@@ -275,6 +282,22 @@ public class BaseProject extends AbstractModel {
         this.Model = Model;
     }
 
+    /**
+     * Get 项目调度模式，task：任务模式 workflow：工作流模式 
+     * @return ScheduleMode 项目调度模式，task：任务模式 workflow：工作流模式
+     */
+    public String getScheduleMode() {
+        return this.ScheduleMode;
+    }
+
+    /**
+     * Set 项目调度模式，task：任务模式 workflow：工作流模式
+     * @param ScheduleMode 项目调度模式，task：任务模式 workflow：工作流模式
+     */
+    public void setScheduleMode(String ScheduleMode) {
+        this.ScheduleMode = ScheduleMode;
+    }
+
     public BaseProject() {
     }
 
@@ -310,6 +333,9 @@ public class BaseProject extends AbstractModel {
         if (source.Model != null) {
             this.Model = new String(source.Model);
         }
+        if (source.ScheduleMode != null) {
+            this.ScheduleMode = new String(source.ScheduleMode);
+        }
     }
 
 
@@ -326,6 +352,7 @@ public class BaseProject extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Model", this.Model);
+        this.setParamSimple(map, prefix + "ScheduleMode", this.ScheduleMode);
 
     }
 }

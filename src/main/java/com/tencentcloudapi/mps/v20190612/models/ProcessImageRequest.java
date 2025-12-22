@@ -81,6 +81,24 @@ public class ProcessImageRequest extends AbstractModel {
     private ImageTaskInput ImageTask;
 
     /**
+    * 图片处理编排场景 ID。
+
+- 30000：文字水印擦除
+- 30010：图片扩展
+- 30100：换装场景
+    */
+    @SerializedName("ScheduleId")
+    @Expose
+    private Long ScheduleId;
+
+    /**
+    * 图片处理附加参数。
+    */
+    @SerializedName("AddOnParameter")
+    @Expose
+    private AddOnParameter AddOnParameter;
+
+    /**
      * Get 图片处理的文件输入信息。 
      * @return InputInfo 图片处理的文件输入信息。
      */
@@ -224,6 +242,54 @@ public class ProcessImageRequest extends AbstractModel {
         this.ImageTask = ImageTask;
     }
 
+    /**
+     * Get 图片处理编排场景 ID。
+
+- 30000：文字水印擦除
+- 30010：图片扩展
+- 30100：换装场景 
+     * @return ScheduleId 图片处理编排场景 ID。
+
+- 30000：文字水印擦除
+- 30010：图片扩展
+- 30100：换装场景
+     */
+    public Long getScheduleId() {
+        return this.ScheduleId;
+    }
+
+    /**
+     * Set 图片处理编排场景 ID。
+
+- 30000：文字水印擦除
+- 30010：图片扩展
+- 30100：换装场景
+     * @param ScheduleId 图片处理编排场景 ID。
+
+- 30000：文字水印擦除
+- 30010：图片扩展
+- 30100：换装场景
+     */
+    public void setScheduleId(Long ScheduleId) {
+        this.ScheduleId = ScheduleId;
+    }
+
+    /**
+     * Get 图片处理附加参数。 
+     * @return AddOnParameter 图片处理附加参数。
+     */
+    public AddOnParameter getAddOnParameter() {
+        return this.AddOnParameter;
+    }
+
+    /**
+     * Set 图片处理附加参数。
+     * @param AddOnParameter 图片处理附加参数。
+     */
+    public void setAddOnParameter(AddOnParameter AddOnParameter) {
+        this.AddOnParameter = AddOnParameter;
+    }
+
     public ProcessImageRequest() {
     }
 
@@ -253,6 +319,12 @@ public class ProcessImageRequest extends AbstractModel {
         if (source.ImageTask != null) {
             this.ImageTask = new ImageTaskInput(source.ImageTask);
         }
+        if (source.ScheduleId != null) {
+            this.ScheduleId = new Long(source.ScheduleId);
+        }
+        if (source.AddOnParameter != null) {
+            this.AddOnParameter = new AddOnParameter(source.AddOnParameter);
+        }
     }
 
 
@@ -267,6 +339,8 @@ public class ProcessImageRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamObj(map, prefix + "ImageTask.", this.ImageTask);
+        this.setParamSimple(map, prefix + "ScheduleId", this.ScheduleId);
+        this.setParamObj(map, prefix + "AddOnParameter.", this.AddOnParameter);
 
     }
 }

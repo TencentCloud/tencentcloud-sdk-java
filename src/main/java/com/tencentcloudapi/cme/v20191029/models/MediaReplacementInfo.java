@@ -67,6 +67,17 @@ public class MediaReplacementInfo extends AbstractModel {
     private MediaPreprocessOperation PreprocessOperation;
 
     /**
+    * 静音开关，仅对视频类型媒体生效。取值有：
+<li>ON：视频媒体开启静音，该段媒体在导出中会屏蔽音频；</li>
+<li>OFF：视频媒体关闭静音；</li>
+
+注：默认为 OFF，即不对视频媒体的音频做静音处理。
+    */
+    @SerializedName("MuteSwitch")
+    @Expose
+    private String MuteSwitch;
+
+    /**
      * Get 替换的媒体类型，取值有：
 <li>CMEMaterialId：替换的媒体类型为媒体 ID；</li>
 <li>ImageUrl：替换的媒体类型为图片 URL；</li>
@@ -178,6 +189,38 @@ public class MediaReplacementInfo extends AbstractModel {
         this.PreprocessOperation = PreprocessOperation;
     }
 
+    /**
+     * Get 静音开关，仅对视频类型媒体生效。取值有：
+<li>ON：视频媒体开启静音，该段媒体在导出中会屏蔽音频；</li>
+<li>OFF：视频媒体关闭静音；</li>
+
+注：默认为 OFF，即不对视频媒体的音频做静音处理。 
+     * @return MuteSwitch 静音开关，仅对视频类型媒体生效。取值有：
+<li>ON：视频媒体开启静音，该段媒体在导出中会屏蔽音频；</li>
+<li>OFF：视频媒体关闭静音；</li>
+
+注：默认为 OFF，即不对视频媒体的音频做静音处理。
+     */
+    public String getMuteSwitch() {
+        return this.MuteSwitch;
+    }
+
+    /**
+     * Set 静音开关，仅对视频类型媒体生效。取值有：
+<li>ON：视频媒体开启静音，该段媒体在导出中会屏蔽音频；</li>
+<li>OFF：视频媒体关闭静音；</li>
+
+注：默认为 OFF，即不对视频媒体的音频做静音处理。
+     * @param MuteSwitch 静音开关，仅对视频类型媒体生效。取值有：
+<li>ON：视频媒体开启静音，该段媒体在导出中会屏蔽音频；</li>
+<li>OFF：视频媒体关闭静音；</li>
+
+注：默认为 OFF，即不对视频媒体的音频做静音处理。
+     */
+    public void setMuteSwitch(String MuteSwitch) {
+        this.MuteSwitch = MuteSwitch;
+    }
+
     public MediaReplacementInfo() {
     }
 
@@ -201,6 +244,9 @@ public class MediaReplacementInfo extends AbstractModel {
         if (source.PreprocessOperation != null) {
             this.PreprocessOperation = new MediaPreprocessOperation(source.PreprocessOperation);
         }
+        if (source.MuteSwitch != null) {
+            this.MuteSwitch = new String(source.MuteSwitch);
+        }
     }
 
 
@@ -213,6 +259,7 @@ public class MediaReplacementInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "MediaUrl", this.MediaUrl);
         this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
         this.setParamObj(map, prefix + "PreprocessOperation.", this.PreprocessOperation);
+        this.setParamSimple(map, prefix + "MuteSwitch", this.MuteSwitch);
 
     }
 }

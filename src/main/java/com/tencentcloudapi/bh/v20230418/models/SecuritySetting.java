@@ -38,6 +38,13 @@ public class SecuritySetting extends AbstractModel {
     private ReconnectionSetting Reconnection;
 
     /**
+    * 大区环境网络设置
+    */
+    @SerializedName("EnvInternetAccess")
+    @Expose
+    private EnvInternetAccessSetting EnvInternetAccess;
+
+    /**
      * Get 国密认证方式设置 
      * @return AuthModeGM 国密认证方式设置
      */
@@ -69,6 +76,22 @@ public class SecuritySetting extends AbstractModel {
         this.Reconnection = Reconnection;
     }
 
+    /**
+     * Get 大区环境网络设置 
+     * @return EnvInternetAccess 大区环境网络设置
+     */
+    public EnvInternetAccessSetting getEnvInternetAccess() {
+        return this.EnvInternetAccess;
+    }
+
+    /**
+     * Set 大区环境网络设置
+     * @param EnvInternetAccess 大区环境网络设置
+     */
+    public void setEnvInternetAccess(EnvInternetAccessSetting EnvInternetAccess) {
+        this.EnvInternetAccess = EnvInternetAccess;
+    }
+
     public SecuritySetting() {
     }
 
@@ -83,6 +106,9 @@ public class SecuritySetting extends AbstractModel {
         if (source.Reconnection != null) {
             this.Reconnection = new ReconnectionSetting(source.Reconnection);
         }
+        if (source.EnvInternetAccess != null) {
+            this.EnvInternetAccess = new EnvInternetAccessSetting(source.EnvInternetAccess);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class SecuritySetting extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "AuthModeGM.", this.AuthModeGM);
         this.setParamObj(map, prefix + "Reconnection.", this.Reconnection);
+        this.setParamObj(map, prefix + "EnvInternetAccess.", this.EnvInternetAccess);
 
     }
 }

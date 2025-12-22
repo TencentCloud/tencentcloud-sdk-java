@@ -297,6 +297,13 @@ public class Resource extends AbstractModel {
     private String IntranetVpcId;
 
     /**
+    * 开通内网访问的subnetId
+    */
+    @SerializedName("IntranetSubnetId")
+    @Expose
+    private String IntranetSubnetId;
+
+    /**
     * 开通内网访问vpc的网段
     */
     @SerializedName("IntranetVpcCidr")
@@ -1019,6 +1026,22 @@ public class Resource extends AbstractModel {
     }
 
     /**
+     * Get 开通内网访问的subnetId 
+     * @return IntranetSubnetId 开通内网访问的subnetId
+     */
+    public String getIntranetSubnetId() {
+        return this.IntranetSubnetId;
+    }
+
+    /**
+     * Set 开通内网访问的subnetId
+     * @param IntranetSubnetId 开通内网访问的subnetId
+     */
+    public void setIntranetSubnetId(String IntranetSubnetId) {
+        this.IntranetSubnetId = IntranetSubnetId;
+    }
+
+    /**
      * Get 开通内网访问vpc的网段 
      * @return IntranetVpcCidr 开通内网访问vpc的网段
      */
@@ -1382,6 +1405,9 @@ public class Resource extends AbstractModel {
         if (source.IntranetVpcId != null) {
             this.IntranetVpcId = new String(source.IntranetVpcId);
         }
+        if (source.IntranetSubnetId != null) {
+            this.IntranetSubnetId = new String(source.IntranetSubnetId);
+        }
         if (source.IntranetVpcCidr != null) {
             this.IntranetVpcCidr = new String(source.IntranetVpcCidr);
         }
@@ -1470,6 +1496,7 @@ public class Resource extends AbstractModel {
         this.setParamSimple(map, prefix + "IntranetAccess", this.IntranetAccess);
         this.setParamArraySimple(map, prefix + "IntranetPrivateIpSet.", this.IntranetPrivateIpSet);
         this.setParamSimple(map, prefix + "IntranetVpcId", this.IntranetVpcId);
+        this.setParamSimple(map, prefix + "IntranetSubnetId", this.IntranetSubnetId);
         this.setParamSimple(map, prefix + "IntranetVpcCidr", this.IntranetVpcCidr);
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);
         this.setParamSimple(map, prefix + "ShareClb", this.ShareClb);

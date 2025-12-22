@@ -1300,19 +1300,6 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *废弃接口
-
-废弃
-     * @param req DescribeInovcationIndicatorsRequest
-     * @return DescribeInovcationIndicatorsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeInovcationIndicatorsResponse DescribeInovcationIndicators(DescribeInovcationIndicatorsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeInovcationIndicators", DescribeInovcationIndicatorsResponse.class);
-    }
-
-    /**
      *无
      * @param req DescribeInstancesRequest
      * @return DescribeInstancesResponse

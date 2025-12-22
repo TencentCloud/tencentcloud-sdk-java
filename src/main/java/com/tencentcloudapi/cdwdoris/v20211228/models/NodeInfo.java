@@ -108,6 +108,13 @@ public class NodeInfo extends AbstractModel {
     private String VirtualZone;
 
     /**
+    * 是否有fdb
+    */
+    @SerializedName("HasFDB")
+    @Expose
+    private Boolean HasFDB;
+
+    /**
      * Get 用户IP 
      * @return Ip 用户IP
      */
@@ -299,6 +306,22 @@ public class NodeInfo extends AbstractModel {
         this.VirtualZone = VirtualZone;
     }
 
+    /**
+     * Get 是否有fdb 
+     * @return HasFDB 是否有fdb
+     */
+    public Boolean getHasFDB() {
+        return this.HasFDB;
+    }
+
+    /**
+     * Set 是否有fdb
+     * @param HasFDB 是否有fdb
+     */
+    public void setHasFDB(Boolean HasFDB) {
+        this.HasFDB = HasFDB;
+    }
+
     public NodeInfo() {
     }
 
@@ -343,6 +366,9 @@ public class NodeInfo extends AbstractModel {
         if (source.VirtualZone != null) {
             this.VirtualZone = new String(source.VirtualZone);
         }
+        if (source.HasFDB != null) {
+            this.HasFDB = new Boolean(source.HasFDB);
+        }
     }
 
 
@@ -362,6 +388,7 @@ public class NodeInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ComputeGroupId", this.ComputeGroupId);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "VirtualZone", this.VirtualZone);
+        this.setParamSimple(map, prefix + "HasFDB", this.HasFDB);
 
     }
 }

@@ -155,6 +155,27 @@ public class CreateBackUpScheduleRequest extends AbstractModel {
     private String DataRemoteRegion;
 
     /**
+    * 托管桶类型：standard-标准，maz-多可用区
+    */
+    @SerializedName("BucketType")
+    @Expose
+    private String BucketType;
+
+    /**
+    * 是否开启安全锁：0-未开启，1-开启
+    */
+    @SerializedName("EnableSecurityLock")
+    @Expose
+    private Long EnableSecurityLock;
+
+    /**
+    * 宽限期（天数）
+    */
+    @SerializedName("GracePeriod")
+    @Expose
+    private Long GracePeriod;
+
+    /**
      * Get 集群id 
      * @return InstanceId 集群id
      */
@@ -490,6 +511,54 @@ public class CreateBackUpScheduleRequest extends AbstractModel {
         this.DataRemoteRegion = DataRemoteRegion;
     }
 
+    /**
+     * Get 托管桶类型：standard-标准，maz-多可用区 
+     * @return BucketType 托管桶类型：standard-标准，maz-多可用区
+     */
+    public String getBucketType() {
+        return this.BucketType;
+    }
+
+    /**
+     * Set 托管桶类型：standard-标准，maz-多可用区
+     * @param BucketType 托管桶类型：standard-标准，maz-多可用区
+     */
+    public void setBucketType(String BucketType) {
+        this.BucketType = BucketType;
+    }
+
+    /**
+     * Get 是否开启安全锁：0-未开启，1-开启 
+     * @return EnableSecurityLock 是否开启安全锁：0-未开启，1-开启
+     */
+    public Long getEnableSecurityLock() {
+        return this.EnableSecurityLock;
+    }
+
+    /**
+     * Set 是否开启安全锁：0-未开启，1-开启
+     * @param EnableSecurityLock 是否开启安全锁：0-未开启，1-开启
+     */
+    public void setEnableSecurityLock(Long EnableSecurityLock) {
+        this.EnableSecurityLock = EnableSecurityLock;
+    }
+
+    /**
+     * Get 宽限期（天数） 
+     * @return GracePeriod 宽限期（天数）
+     */
+    public Long getGracePeriod() {
+        return this.GracePeriod;
+    }
+
+    /**
+     * Set 宽限期（天数）
+     * @param GracePeriod 宽限期（天数）
+     */
+    public void setGracePeriod(Long GracePeriod) {
+        this.GracePeriod = GracePeriod;
+    }
+
     public CreateBackUpScheduleRequest() {
     }
 
@@ -555,6 +624,15 @@ public class CreateBackUpScheduleRequest extends AbstractModel {
         if (source.DataRemoteRegion != null) {
             this.DataRemoteRegion = new String(source.DataRemoteRegion);
         }
+        if (source.BucketType != null) {
+            this.BucketType = new String(source.BucketType);
+        }
+        if (source.EnableSecurityLock != null) {
+            this.EnableSecurityLock = new Long(source.EnableSecurityLock);
+        }
+        if (source.GracePeriod != null) {
+            this.GracePeriod = new Long(source.GracePeriod);
+        }
     }
 
 
@@ -580,6 +658,9 @@ public class CreateBackUpScheduleRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CosBucket", this.CosBucket);
         this.setParamObj(map, prefix + "SnapshotRemainPolicy.", this.SnapshotRemainPolicy);
         this.setParamSimple(map, prefix + "DataRemoteRegion", this.DataRemoteRegion);
+        this.setParamSimple(map, prefix + "BucketType", this.BucketType);
+        this.setParamSimple(map, prefix + "EnableSecurityLock", this.EnableSecurityLock);
+        this.setParamSimple(map, prefix + "GracePeriod", this.GracePeriod);
 
     }
 }

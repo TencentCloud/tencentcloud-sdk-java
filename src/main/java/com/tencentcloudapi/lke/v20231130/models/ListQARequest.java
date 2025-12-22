@@ -25,20 +25,21 @@ public class ListQARequest extends AbstractModel {
 
     /**
     * 应用ID
+若要操作共享知识库，传KnowledgeBizId
     */
     @SerializedName("BotBizId")
     @Expose
     private String BotBizId;
 
     /**
-    * 页码
+    * 页码（取值范围>0）
     */
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
 
     /**
-    * 每页大小
+    * 每页大小(取值范围1-200)
     */
     @SerializedName("PageSize")
     @Expose
@@ -55,6 +56,7 @@ public class ListQARequest extends AbstractModel {
 
     /**
     * 校验状态(1未校验2采纳3不采纳)
+如果不填默认值为空数组，表示不筛选，返回所有状态
     */
     @SerializedName("AcceptStatus")
     @Expose
@@ -62,6 +64,7 @@ public class ListQARequest extends AbstractModel {
 
     /**
     * 发布状态(2待发布 3发布中 4已发布 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)
+如果不填默认值为空数组，表示不筛选返回所有状态
     */
     @SerializedName("ReleaseStatus")
     @Expose
@@ -76,6 +79,7 @@ public class ListQARequest extends AbstractModel {
 
     /**
     * 来源(1 文档生成 2 批量导入 3 手动添加)
+不填默认值为0，表示不过滤，返回所有状态
     */
     @SerializedName("Source")
     @Expose
@@ -104,6 +108,7 @@ public class ListQARequest extends AbstractModel {
 
     /**
     * 查询类型 filename 名称、 attribute 标签
+如果不填默认值为"filename"
     */
     @SerializedName("QueryType")
     @Expose
@@ -117,8 +122,17 @@ public class ListQARequest extends AbstractModel {
     private Long ShowCurrCate;
 
     /**
-     * Get 应用ID 
+    * // 知识生效作用域枚举值 enum RetrievalEnableScope {   ENABLE_SCOPE_TYPE_UNKNOWN = 0; // 未知类型   ENABLE_SCOPE_TYPE_NONE = 1; // 停用   ENABLE_SCOPE_TYPE_DEV = 2; // 仅开发域   ENABLE_SCOPE_TYPE_RELEASE = 3; // 仅发布域   ENABLE_SCOPE_TYPE_ALL = 4; // 全域 }  问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+    */
+    @SerializedName("EnableScope")
+    @Expose
+    private Long EnableScope;
+
+    /**
+     * Get 应用ID
+若要操作共享知识库，传KnowledgeBizId 
      * @return BotBizId 应用ID
+若要操作共享知识库，传KnowledgeBizId
      */
     public String getBotBizId() {
         return this.BotBizId;
@@ -126,39 +140,41 @@ public class ListQARequest extends AbstractModel {
 
     /**
      * Set 应用ID
+若要操作共享知识库，传KnowledgeBizId
      * @param BotBizId 应用ID
+若要操作共享知识库，传KnowledgeBizId
      */
     public void setBotBizId(String BotBizId) {
         this.BotBizId = BotBizId;
     }
 
     /**
-     * Get 页码 
-     * @return PageNumber 页码
+     * Get 页码（取值范围>0） 
+     * @return PageNumber 页码（取值范围>0）
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set 页码
-     * @param PageNumber 页码
+     * Set 页码（取值范围>0）
+     * @param PageNumber 页码（取值范围>0）
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 每页大小 
-     * @return PageSize 每页大小
+     * Get 每页大小(取值范围1-200) 
+     * @return PageSize 每页大小(取值范围1-200)
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 每页大小
-     * @param PageSize 每页大小
+     * Set 每页大小(取值范围1-200)
+     * @param PageSize 每页大小(取值范围1-200)
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
@@ -189,8 +205,10 @@ public class ListQARequest extends AbstractModel {
     }
 
     /**
-     * Get 校验状态(1未校验2采纳3不采纳) 
+     * Get 校验状态(1未校验2采纳3不采纳)
+如果不填默认值为空数组，表示不筛选，返回所有状态 
      * @return AcceptStatus 校验状态(1未校验2采纳3不采纳)
+如果不填默认值为空数组，表示不筛选，返回所有状态
      */
     public Long [] getAcceptStatus() {
         return this.AcceptStatus;
@@ -198,15 +216,19 @@ public class ListQARequest extends AbstractModel {
 
     /**
      * Set 校验状态(1未校验2采纳3不采纳)
+如果不填默认值为空数组，表示不筛选，返回所有状态
      * @param AcceptStatus 校验状态(1未校验2采纳3不采纳)
+如果不填默认值为空数组，表示不筛选，返回所有状态
      */
     public void setAcceptStatus(Long [] AcceptStatus) {
         this.AcceptStatus = AcceptStatus;
     }
 
     /**
-     * Get 发布状态(2待发布 3发布中 4已发布 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复) 
+     * Get 发布状态(2待发布 3发布中 4已发布 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)
+如果不填默认值为空数组，表示不筛选返回所有状态 
      * @return ReleaseStatus 发布状态(2待发布 3发布中 4已发布 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)
+如果不填默认值为空数组，表示不筛选返回所有状态
      */
     public Long [] getReleaseStatus() {
         return this.ReleaseStatus;
@@ -214,7 +236,9 @@ public class ListQARequest extends AbstractModel {
 
     /**
      * Set 发布状态(2待发布 3发布中 4已发布 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)
+如果不填默认值为空数组，表示不筛选返回所有状态
      * @param ReleaseStatus 发布状态(2待发布 3发布中 4已发布 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)
+如果不填默认值为空数组，表示不筛选返回所有状态
      */
     public void setReleaseStatus(Long [] ReleaseStatus) {
         this.ReleaseStatus = ReleaseStatus;
@@ -237,8 +261,10 @@ public class ListQARequest extends AbstractModel {
     }
 
     /**
-     * Get 来源(1 文档生成 2 批量导入 3 手动添加) 
+     * Get 来源(1 文档生成 2 批量导入 3 手动添加)
+不填默认值为0，表示不过滤，返回所有状态 
      * @return Source 来源(1 文档生成 2 批量导入 3 手动添加)
+不填默认值为0，表示不过滤，返回所有状态
      */
     public Long getSource() {
         return this.Source;
@@ -246,7 +272,9 @@ public class ListQARequest extends AbstractModel {
 
     /**
      * Set 来源(1 文档生成 2 批量导入 3 手动添加)
+不填默认值为0，表示不过滤，返回所有状态
      * @param Source 来源(1 文档生成 2 批量导入 3 手动添加)
+不填默认值为0，表示不过滤，返回所有状态
      */
     public void setSource(Long Source) {
         this.Source = Source;
@@ -301,8 +329,10 @@ public class ListQARequest extends AbstractModel {
     }
 
     /**
-     * Get 查询类型 filename 名称、 attribute 标签 
+     * Get 查询类型 filename 名称、 attribute 标签
+如果不填默认值为"filename" 
      * @return QueryType 查询类型 filename 名称、 attribute 标签
+如果不填默认值为"filename"
      */
     public String getQueryType() {
         return this.QueryType;
@@ -310,7 +340,9 @@ public class ListQARequest extends AbstractModel {
 
     /**
      * Set 查询类型 filename 名称、 attribute 标签
+如果不填默认值为"filename"
      * @param QueryType 查询类型 filename 名称、 attribute 标签
+如果不填默认值为"filename"
      */
     public void setQueryType(String QueryType) {
         this.QueryType = QueryType;
@@ -330,6 +362,22 @@ public class ListQARequest extends AbstractModel {
      */
     public void setShowCurrCate(Long ShowCurrCate) {
         this.ShowCurrCate = ShowCurrCate;
+    }
+
+    /**
+     * Get // 知识生效作用域枚举值 enum RetrievalEnableScope {   ENABLE_SCOPE_TYPE_UNKNOWN = 0; // 未知类型   ENABLE_SCOPE_TYPE_NONE = 1; // 停用   ENABLE_SCOPE_TYPE_DEV = 2; // 仅开发域   ENABLE_SCOPE_TYPE_RELEASE = 3; // 仅发布域   ENABLE_SCOPE_TYPE_ALL = 4; // 全域 }  问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域 
+     * @return EnableScope // 知识生效作用域枚举值 enum RetrievalEnableScope {   ENABLE_SCOPE_TYPE_UNKNOWN = 0; // 未知类型   ENABLE_SCOPE_TYPE_NONE = 1; // 停用   ENABLE_SCOPE_TYPE_DEV = 2; // 仅开发域   ENABLE_SCOPE_TYPE_RELEASE = 3; // 仅发布域   ENABLE_SCOPE_TYPE_ALL = 4; // 全域 }  问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     */
+    public Long getEnableScope() {
+        return this.EnableScope;
+    }
+
+    /**
+     * Set // 知识生效作用域枚举值 enum RetrievalEnableScope {   ENABLE_SCOPE_TYPE_UNKNOWN = 0; // 未知类型   ENABLE_SCOPE_TYPE_NONE = 1; // 停用   ENABLE_SCOPE_TYPE_DEV = 2; // 仅开发域   ENABLE_SCOPE_TYPE_RELEASE = 3; // 仅发布域   ENABLE_SCOPE_TYPE_ALL = 4; // 全域 }  问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     * @param EnableScope // 知识生效作用域枚举值 enum RetrievalEnableScope {   ENABLE_SCOPE_TYPE_UNKNOWN = 0; // 未知类型   ENABLE_SCOPE_TYPE_NONE = 1; // 停用   ENABLE_SCOPE_TYPE_DEV = 2; // 仅开发域   ENABLE_SCOPE_TYPE_RELEASE = 3; // 仅发布域   ENABLE_SCOPE_TYPE_ALL = 4; // 全域 }  问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     */
+    public void setEnableScope(Long EnableScope) {
+        this.EnableScope = EnableScope;
     }
 
     public ListQARequest() {
@@ -388,6 +436,9 @@ public class ListQARequest extends AbstractModel {
         if (source.ShowCurrCate != null) {
             this.ShowCurrCate = new Long(source.ShowCurrCate);
         }
+        if (source.EnableScope != null) {
+            this.EnableScope = new Long(source.EnableScope);
+        }
     }
 
 
@@ -408,6 +459,7 @@ public class ListQARequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "QaBizIds.", this.QaBizIds);
         this.setParamSimple(map, prefix + "QueryType", this.QueryType);
         this.setParamSimple(map, prefix + "ShowCurrCate", this.ShowCurrCate);
+        this.setParamSimple(map, prefix + "EnableScope", this.EnableScope);
 
     }
 }

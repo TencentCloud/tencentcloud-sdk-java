@@ -84,13 +84,6 @@ public class CreateTaskSchedulerConfiguration extends AbstractModel {
     private String ExecutionEndTime;
 
     /**
-    * 调度类型: 0 正常调度 1 空跑调度，默认为 0
-    */
-    @SerializedName("ScheduleRunType")
-    @Expose
-    private String ScheduleRunType;
-
-    /**
     * 日历调度 取值为 0 和 1， 1为打开，0为关闭，默认为0
     */
     @SerializedName("CalendarOpen")
@@ -124,41 +117,6 @@ public class CreateTaskSchedulerConfiguration extends AbstractModel {
     @SerializedName("EventListenerList")
     @Expose
     private EventListener [] EventListenerList;
-
-    /**
-    * 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
-    */
-    @SerializedName("RunPriority")
-    @Expose
-    private String RunPriority;
-
-    /**
-    * 重试策略 重试等待时间,单位分钟: 默认: 5
-    */
-    @SerializedName("RetryWait")
-    @Expose
-    private String RetryWait;
-
-    /**
-    * 重试策略 最大尝试次数, 默认: 4
-    */
-    @SerializedName("MaxRetryAttempts")
-    @Expose
-    private String MaxRetryAttempts;
-
-    /**
-    * 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
-    */
-    @SerializedName("ExecutionTTL")
-    @Expose
-    private String ExecutionTTL;
-
-    /**
-    * 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
-    */
-    @SerializedName("WaitExecutionTotalTTL")
-    @Expose
-    private String WaitExecutionTotalTTL;
 
     /**
     * 重跑&补录配置, 默认为 ALL; , ALL 运行成功或失败后皆可重跑或补录, FAILURE 运行成功后不可重跑或补录，运行失败后可重跑或补录, NONE 运行成功或失败后皆不可重跑或补录;
@@ -196,6 +154,90 @@ public class CreateTaskSchedulerConfiguration extends AbstractModel {
     @SerializedName("InitStrategy")
     @Expose
     private String InitStrategy;
+
+    /**
+    * 调度类型: 0 正常调度 1 空跑调度，默认为 0
+    */
+    @SerializedName("ScheduleRunType")
+    @Expose
+    private String ScheduleRunType;
+
+    /**
+    * 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+    */
+    @SerializedName("RunPriority")
+    @Expose
+    private String RunPriority;
+
+    /**
+    * 重试策略 重试等待时间,单位分钟: 默认: 5
+    */
+    @SerializedName("RetryWait")
+    @Expose
+    private String RetryWait;
+
+    /**
+    * 重试策略 最大尝试次数, 默认: 4
+    */
+    @SerializedName("MaxRetryAttempts")
+    @Expose
+    private String MaxRetryAttempts;
+
+    /**
+    * 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+    */
+    @SerializedName("ExecutionTTL")
+    @Expose
+    private String ExecutionTTL;
+
+    /**
+    * 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+    */
+    @SerializedName("WaitExecutionTotalTTL")
+    @Expose
+    private String WaitExecutionTotalTTL;
+
+    /**
+    * 调度类型: 0 正常调度 1 空跑调度，默认为 0
+    */
+    @SerializedName("ScheduleType")
+    @Expose
+    private Long ScheduleType;
+
+    /**
+    * 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+    */
+    @SerializedName("RunPriorityType")
+    @Expose
+    private Long RunPriorityType;
+
+    /**
+    * 重试策略 重试等待时间,单位分钟: 默认: 5
+    */
+    @SerializedName("RetryWaitMinute")
+    @Expose
+    private Long RetryWaitMinute;
+
+    /**
+    * 重试策略 最大尝试次数, 默认: 4
+    */
+    @SerializedName("MaxRetryNumber")
+    @Expose
+    private Long MaxRetryNumber;
+
+    /**
+    * 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+    */
+    @SerializedName("ExecutionTTLMinute")
+    @Expose
+    private Long ExecutionTTLMinute;
+
+    /**
+    * 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+    */
+    @SerializedName("WaitExecutionTotalTTLMinute")
+    @Expose
+    private Long WaitExecutionTotalTTLMinute;
 
     /**
      * Get 周期类型：默认为 DAY_CYCLE
@@ -354,22 +396,6 @@ public class CreateTaskSchedulerConfiguration extends AbstractModel {
     }
 
     /**
-     * Get 调度类型: 0 正常调度 1 空跑调度，默认为 0 
-     * @return ScheduleRunType 调度类型: 0 正常调度 1 空跑调度，默认为 0
-     */
-    public String getScheduleRunType() {
-        return this.ScheduleRunType;
-    }
-
-    /**
-     * Set 调度类型: 0 正常调度 1 空跑调度，默认为 0
-     * @param ScheduleRunType 调度类型: 0 正常调度 1 空跑调度，默认为 0
-     */
-    public void setScheduleRunType(String ScheduleRunType) {
-        this.ScheduleRunType = ScheduleRunType;
-    }
-
-    /**
      * Get 日历调度 取值为 0 和 1， 1为打开，0为关闭，默认为0 
      * @return CalendarOpen 日历调度 取值为 0 和 1， 1为打开，0为关闭，默认为0
      */
@@ -447,86 +473,6 @@ public class CreateTaskSchedulerConfiguration extends AbstractModel {
      */
     public void setEventListenerList(EventListener [] EventListenerList) {
         this.EventListenerList = EventListenerList;
-    }
-
-    /**
-     * Get 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6 
-     * @return RunPriority 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
-     */
-    public String getRunPriority() {
-        return this.RunPriority;
-    }
-
-    /**
-     * Set 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
-     * @param RunPriority 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
-     */
-    public void setRunPriority(String RunPriority) {
-        this.RunPriority = RunPriority;
-    }
-
-    /**
-     * Get 重试策略 重试等待时间,单位分钟: 默认: 5 
-     * @return RetryWait 重试策略 重试等待时间,单位分钟: 默认: 5
-     */
-    public String getRetryWait() {
-        return this.RetryWait;
-    }
-
-    /**
-     * Set 重试策略 重试等待时间,单位分钟: 默认: 5
-     * @param RetryWait 重试策略 重试等待时间,单位分钟: 默认: 5
-     */
-    public void setRetryWait(String RetryWait) {
-        this.RetryWait = RetryWait;
-    }
-
-    /**
-     * Get 重试策略 最大尝试次数, 默认: 4 
-     * @return MaxRetryAttempts 重试策略 最大尝试次数, 默认: 4
-     */
-    public String getMaxRetryAttempts() {
-        return this.MaxRetryAttempts;
-    }
-
-    /**
-     * Set 重试策略 最大尝试次数, 默认: 4
-     * @param MaxRetryAttempts 重试策略 最大尝试次数, 默认: 4
-     */
-    public void setMaxRetryAttempts(String MaxRetryAttempts) {
-        this.MaxRetryAttempts = MaxRetryAttempts;
-    }
-
-    /**
-     * Get 超时处理策略 运行耗时超时（单位：分钟）默认为 -1 
-     * @return ExecutionTTL 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
-     */
-    public String getExecutionTTL() {
-        return this.ExecutionTTL;
-    }
-
-    /**
-     * Set 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
-     * @param ExecutionTTL 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
-     */
-    public void setExecutionTTL(String ExecutionTTL) {
-        this.ExecutionTTL = ExecutionTTL;
-    }
-
-    /**
-     * Get 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1 
-     * @return WaitExecutionTotalTTL 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
-     */
-    public String getWaitExecutionTotalTTL() {
-        return this.WaitExecutionTotalTTL;
-    }
-
-    /**
-     * Set 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
-     * @param WaitExecutionTotalTTL 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
-     */
-    public void setWaitExecutionTotalTTL(String WaitExecutionTotalTTL) {
-        this.WaitExecutionTotalTTL = WaitExecutionTotalTTL;
     }
 
     /**
@@ -617,6 +563,222 @@ public class CreateTaskSchedulerConfiguration extends AbstractModel {
         this.InitStrategy = InitStrategy;
     }
 
+    /**
+     * Get 调度类型: 0 正常调度 1 空跑调度，默认为 0 
+     * @return ScheduleRunType 调度类型: 0 正常调度 1 空跑调度，默认为 0
+     * @deprecated
+     */
+    @Deprecated
+    public String getScheduleRunType() {
+        return this.ScheduleRunType;
+    }
+
+    /**
+     * Set 调度类型: 0 正常调度 1 空跑调度，默认为 0
+     * @param ScheduleRunType 调度类型: 0 正常调度 1 空跑调度，默认为 0
+     * @deprecated
+     */
+    @Deprecated
+    public void setScheduleRunType(String ScheduleRunType) {
+        this.ScheduleRunType = ScheduleRunType;
+    }
+
+    /**
+     * Get 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6 
+     * @return RunPriority 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+     * @deprecated
+     */
+    @Deprecated
+    public String getRunPriority() {
+        return this.RunPriority;
+    }
+
+    /**
+     * Set 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+     * @param RunPriority 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+     * @deprecated
+     */
+    @Deprecated
+    public void setRunPriority(String RunPriority) {
+        this.RunPriority = RunPriority;
+    }
+
+    /**
+     * Get 重试策略 重试等待时间,单位分钟: 默认: 5 
+     * @return RetryWait 重试策略 重试等待时间,单位分钟: 默认: 5
+     * @deprecated
+     */
+    @Deprecated
+    public String getRetryWait() {
+        return this.RetryWait;
+    }
+
+    /**
+     * Set 重试策略 重试等待时间,单位分钟: 默认: 5
+     * @param RetryWait 重试策略 重试等待时间,单位分钟: 默认: 5
+     * @deprecated
+     */
+    @Deprecated
+    public void setRetryWait(String RetryWait) {
+        this.RetryWait = RetryWait;
+    }
+
+    /**
+     * Get 重试策略 最大尝试次数, 默认: 4 
+     * @return MaxRetryAttempts 重试策略 最大尝试次数, 默认: 4
+     * @deprecated
+     */
+    @Deprecated
+    public String getMaxRetryAttempts() {
+        return this.MaxRetryAttempts;
+    }
+
+    /**
+     * Set 重试策略 最大尝试次数, 默认: 4
+     * @param MaxRetryAttempts 重试策略 最大尝试次数, 默认: 4
+     * @deprecated
+     */
+    @Deprecated
+    public void setMaxRetryAttempts(String MaxRetryAttempts) {
+        this.MaxRetryAttempts = MaxRetryAttempts;
+    }
+
+    /**
+     * Get 超时处理策略 运行耗时超时（单位：分钟）默认为 -1 
+     * @return ExecutionTTL 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+     * @deprecated
+     */
+    @Deprecated
+    public String getExecutionTTL() {
+        return this.ExecutionTTL;
+    }
+
+    /**
+     * Set 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+     * @param ExecutionTTL 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+     * @deprecated
+     */
+    @Deprecated
+    public void setExecutionTTL(String ExecutionTTL) {
+        this.ExecutionTTL = ExecutionTTL;
+    }
+
+    /**
+     * Get 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1 
+     * @return WaitExecutionTotalTTL 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+     * @deprecated
+     */
+    @Deprecated
+    public String getWaitExecutionTotalTTL() {
+        return this.WaitExecutionTotalTTL;
+    }
+
+    /**
+     * Set 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+     * @param WaitExecutionTotalTTL 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+     * @deprecated
+     */
+    @Deprecated
+    public void setWaitExecutionTotalTTL(String WaitExecutionTotalTTL) {
+        this.WaitExecutionTotalTTL = WaitExecutionTotalTTL;
+    }
+
+    /**
+     * Get 调度类型: 0 正常调度 1 空跑调度，默认为 0 
+     * @return ScheduleType 调度类型: 0 正常调度 1 空跑调度，默认为 0
+     */
+    public Long getScheduleType() {
+        return this.ScheduleType;
+    }
+
+    /**
+     * Set 调度类型: 0 正常调度 1 空跑调度，默认为 0
+     * @param ScheduleType 调度类型: 0 正常调度 1 空跑调度，默认为 0
+     */
+    public void setScheduleType(Long ScheduleType) {
+        this.ScheduleType = ScheduleType;
+    }
+
+    /**
+     * Get 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6 
+     * @return RunPriorityType 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+     */
+    public Long getRunPriorityType() {
+        return this.RunPriorityType;
+    }
+
+    /**
+     * Set 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+     * @param RunPriorityType 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+     */
+    public void setRunPriorityType(Long RunPriorityType) {
+        this.RunPriorityType = RunPriorityType;
+    }
+
+    /**
+     * Get 重试策略 重试等待时间,单位分钟: 默认: 5 
+     * @return RetryWaitMinute 重试策略 重试等待时间,单位分钟: 默认: 5
+     */
+    public Long getRetryWaitMinute() {
+        return this.RetryWaitMinute;
+    }
+
+    /**
+     * Set 重试策略 重试等待时间,单位分钟: 默认: 5
+     * @param RetryWaitMinute 重试策略 重试等待时间,单位分钟: 默认: 5
+     */
+    public void setRetryWaitMinute(Long RetryWaitMinute) {
+        this.RetryWaitMinute = RetryWaitMinute;
+    }
+
+    /**
+     * Get 重试策略 最大尝试次数, 默认: 4 
+     * @return MaxRetryNumber 重试策略 最大尝试次数, 默认: 4
+     */
+    public Long getMaxRetryNumber() {
+        return this.MaxRetryNumber;
+    }
+
+    /**
+     * Set 重试策略 最大尝试次数, 默认: 4
+     * @param MaxRetryNumber 重试策略 最大尝试次数, 默认: 4
+     */
+    public void setMaxRetryNumber(Long MaxRetryNumber) {
+        this.MaxRetryNumber = MaxRetryNumber;
+    }
+
+    /**
+     * Get 超时处理策略 运行耗时超时（单位：分钟）默认为 -1 
+     * @return ExecutionTTLMinute 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+     */
+    public Long getExecutionTTLMinute() {
+        return this.ExecutionTTLMinute;
+    }
+
+    /**
+     * Set 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+     * @param ExecutionTTLMinute 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+     */
+    public void setExecutionTTLMinute(Long ExecutionTTLMinute) {
+        this.ExecutionTTLMinute = ExecutionTTLMinute;
+    }
+
+    /**
+     * Get 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1 
+     * @return WaitExecutionTotalTTLMinute 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+     */
+    public Long getWaitExecutionTotalTTLMinute() {
+        return this.WaitExecutionTotalTTLMinute;
+    }
+
+    /**
+     * Set 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+     * @param WaitExecutionTotalTTLMinute 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+     */
+    public void setWaitExecutionTotalTTLMinute(Long WaitExecutionTotalTTLMinute) {
+        this.WaitExecutionTotalTTLMinute = WaitExecutionTotalTTLMinute;
+    }
+
     public CreateTaskSchedulerConfiguration() {
     }
 
@@ -646,9 +808,6 @@ public class CreateTaskSchedulerConfiguration extends AbstractModel {
         if (source.ExecutionEndTime != null) {
             this.ExecutionEndTime = new String(source.ExecutionEndTime);
         }
-        if (source.ScheduleRunType != null) {
-            this.ScheduleRunType = new String(source.ScheduleRunType);
-        }
         if (source.CalendarOpen != null) {
             this.CalendarOpen = new String(source.CalendarOpen);
         }
@@ -669,21 +828,6 @@ public class CreateTaskSchedulerConfiguration extends AbstractModel {
             for (int i = 0; i < source.EventListenerList.length; i++) {
                 this.EventListenerList[i] = new EventListener(source.EventListenerList[i]);
             }
-        }
-        if (source.RunPriority != null) {
-            this.RunPriority = new String(source.RunPriority);
-        }
-        if (source.RetryWait != null) {
-            this.RetryWait = new String(source.RetryWait);
-        }
-        if (source.MaxRetryAttempts != null) {
-            this.MaxRetryAttempts = new String(source.MaxRetryAttempts);
-        }
-        if (source.ExecutionTTL != null) {
-            this.ExecutionTTL = new String(source.ExecutionTTL);
-        }
-        if (source.WaitExecutionTotalTTL != null) {
-            this.WaitExecutionTotalTTL = new String(source.WaitExecutionTotalTTL);
         }
         if (source.AllowRedoType != null) {
             this.AllowRedoType = new String(source.AllowRedoType);
@@ -709,6 +853,42 @@ public class CreateTaskSchedulerConfiguration extends AbstractModel {
         if (source.InitStrategy != null) {
             this.InitStrategy = new String(source.InitStrategy);
         }
+        if (source.ScheduleRunType != null) {
+            this.ScheduleRunType = new String(source.ScheduleRunType);
+        }
+        if (source.RunPriority != null) {
+            this.RunPriority = new String(source.RunPriority);
+        }
+        if (source.RetryWait != null) {
+            this.RetryWait = new String(source.RetryWait);
+        }
+        if (source.MaxRetryAttempts != null) {
+            this.MaxRetryAttempts = new String(source.MaxRetryAttempts);
+        }
+        if (source.ExecutionTTL != null) {
+            this.ExecutionTTL = new String(source.ExecutionTTL);
+        }
+        if (source.WaitExecutionTotalTTL != null) {
+            this.WaitExecutionTotalTTL = new String(source.WaitExecutionTotalTTL);
+        }
+        if (source.ScheduleType != null) {
+            this.ScheduleType = new Long(source.ScheduleType);
+        }
+        if (source.RunPriorityType != null) {
+            this.RunPriorityType = new Long(source.RunPriorityType);
+        }
+        if (source.RetryWaitMinute != null) {
+            this.RetryWaitMinute = new Long(source.RetryWaitMinute);
+        }
+        if (source.MaxRetryNumber != null) {
+            this.MaxRetryNumber = new Long(source.MaxRetryNumber);
+        }
+        if (source.ExecutionTTLMinute != null) {
+            this.ExecutionTTLMinute = new Long(source.ExecutionTTLMinute);
+        }
+        if (source.WaitExecutionTotalTTLMinute != null) {
+            this.WaitExecutionTotalTTLMinute = new Long(source.WaitExecutionTotalTTLMinute);
+        }
     }
 
 
@@ -723,22 +903,28 @@ public class CreateTaskSchedulerConfiguration extends AbstractModel {
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "ExecutionStartTime", this.ExecutionStartTime);
         this.setParamSimple(map, prefix + "ExecutionEndTime", this.ExecutionEndTime);
-        this.setParamSimple(map, prefix + "ScheduleRunType", this.ScheduleRunType);
         this.setParamSimple(map, prefix + "CalendarOpen", this.CalendarOpen);
         this.setParamSimple(map, prefix + "CalendarId", this.CalendarId);
         this.setParamSimple(map, prefix + "SelfDepend", this.SelfDepend);
         this.setParamArrayObj(map, prefix + "UpstreamDependencyConfigList.", this.UpstreamDependencyConfigList);
         this.setParamArrayObj(map, prefix + "EventListenerList.", this.EventListenerList);
-        this.setParamSimple(map, prefix + "RunPriority", this.RunPriority);
-        this.setParamSimple(map, prefix + "RetryWait", this.RetryWait);
-        this.setParamSimple(map, prefix + "MaxRetryAttempts", this.MaxRetryAttempts);
-        this.setParamSimple(map, prefix + "ExecutionTTL", this.ExecutionTTL);
-        this.setParamSimple(map, prefix + "WaitExecutionTotalTTL", this.WaitExecutionTotalTTL);
         this.setParamSimple(map, prefix + "AllowRedoType", this.AllowRedoType);
         this.setParamArrayObj(map, prefix + "ParamTaskOutList.", this.ParamTaskOutList);
         this.setParamArrayObj(map, prefix + "ParamTaskInList.", this.ParamTaskInList);
         this.setParamArrayObj(map, prefix + "TaskOutputRegistryList.", this.TaskOutputRegistryList);
         this.setParamSimple(map, prefix + "InitStrategy", this.InitStrategy);
+        this.setParamSimple(map, prefix + "ScheduleRunType", this.ScheduleRunType);
+        this.setParamSimple(map, prefix + "RunPriority", this.RunPriority);
+        this.setParamSimple(map, prefix + "RetryWait", this.RetryWait);
+        this.setParamSimple(map, prefix + "MaxRetryAttempts", this.MaxRetryAttempts);
+        this.setParamSimple(map, prefix + "ExecutionTTL", this.ExecutionTTL);
+        this.setParamSimple(map, prefix + "WaitExecutionTotalTTL", this.WaitExecutionTotalTTL);
+        this.setParamSimple(map, prefix + "ScheduleType", this.ScheduleType);
+        this.setParamSimple(map, prefix + "RunPriorityType", this.RunPriorityType);
+        this.setParamSimple(map, prefix + "RetryWaitMinute", this.RetryWaitMinute);
+        this.setParamSimple(map, prefix + "MaxRetryNumber", this.MaxRetryNumber);
+        this.setParamSimple(map, prefix + "ExecutionTTLMinute", this.ExecutionTTLMinute);
+        this.setParamSimple(map, prefix + "WaitExecutionTotalTTLMinute", this.WaitExecutionTotalTTLMinute);
 
     }
 }

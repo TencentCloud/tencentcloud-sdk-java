@@ -49,7 +49,7 @@ public class DescribeChatDetailRequest extends AbstractModel {
     */
     @SerializedName("BeginStreamingTokenId")
     @Expose
-    private String BeginStreamingTokenId;
+    private Long BeginStreamingTokenId;
 
     /**
     * 单次获取的token数量，默认2000
@@ -110,7 +110,7 @@ public class DescribeChatDetailRequest extends AbstractModel {
      * Get 开始拉取的流式TokenID。0表示从该流最早的TokenID开始获取 
      * @return BeginStreamingTokenId 开始拉取的流式TokenID。0表示从该流最早的TokenID开始获取
      */
-    public String getBeginStreamingTokenId() {
+    public Long getBeginStreamingTokenId() {
         return this.BeginStreamingTokenId;
     }
 
@@ -118,7 +118,7 @@ public class DescribeChatDetailRequest extends AbstractModel {
      * Set 开始拉取的流式TokenID。0表示从该流最早的TokenID开始获取
      * @param BeginStreamingTokenId 开始拉取的流式TokenID。0表示从该流最早的TokenID开始获取
      */
-    public void setBeginStreamingTokenId(String BeginStreamingTokenId) {
+    public void setBeginStreamingTokenId(Long BeginStreamingTokenId) {
         this.BeginStreamingTokenId = BeginStreamingTokenId;
     }
 
@@ -156,7 +156,7 @@ public class DescribeChatDetailRequest extends AbstractModel {
             this.StreamingId = new String(source.StreamingId);
         }
         if (source.BeginStreamingTokenId != null) {
-            this.BeginStreamingTokenId = new String(source.BeginStreamingTokenId);
+            this.BeginStreamingTokenId = new Long(source.BeginStreamingTokenId);
         }
         if (source.TokenLimit != null) {
             this.TokenLimit = new Long(source.TokenLimit);

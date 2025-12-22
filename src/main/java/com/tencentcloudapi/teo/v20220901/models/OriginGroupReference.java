@@ -25,10 +25,10 @@ public class OriginGroupReference extends AbstractModel {
 
     /**
     * 引用服务类型，取值有：
-<li>AccelerationDomain: 加速域名；</li>
-<li>RuleEngine: 规则引擎；</li>
-<li>Loadbalance: 负载均衡；</li>
-<li>ApplicationProxy: 四层代理。</li>
+<li>acceleration-domain: 加速域名；</li>
+<li>rule-engine: 规则引擎；</li>
+<li>load-balancer: 负载均衡；</li>
+<li>application-proxy: 四层代理。</li>
     */
     @SerializedName("InstanceType")
     @Expose
@@ -42,23 +42,44 @@ public class OriginGroupReference extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 应用类型的实例名称。
+    * 引用类型的实例名称。
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
+    * 引用站点ID。
+    */
+    @SerializedName("ZoneId")
+    @Expose
+    private String ZoneId;
+
+    /**
+    * 引用站点名称。
+    */
+    @SerializedName("ZoneName")
+    @Expose
+    private String ZoneName;
+
+    /**
+    * 引用站点别名。
+    */
+    @SerializedName("AliasZoneName")
+    @Expose
+    private String AliasZoneName;
+
+    /**
      * Get 引用服务类型，取值有：
-<li>AccelerationDomain: 加速域名；</li>
-<li>RuleEngine: 规则引擎；</li>
-<li>Loadbalance: 负载均衡；</li>
-<li>ApplicationProxy: 四层代理。</li> 
+<li>acceleration-domain: 加速域名；</li>
+<li>rule-engine: 规则引擎；</li>
+<li>load-balancer: 负载均衡；</li>
+<li>application-proxy: 四层代理。</li> 
      * @return InstanceType 引用服务类型，取值有：
-<li>AccelerationDomain: 加速域名；</li>
-<li>RuleEngine: 规则引擎；</li>
-<li>Loadbalance: 负载均衡；</li>
-<li>ApplicationProxy: 四层代理。</li>
+<li>acceleration-domain: 加速域名；</li>
+<li>rule-engine: 规则引擎；</li>
+<li>load-balancer: 负载均衡；</li>
+<li>application-proxy: 四层代理。</li>
      */
     public String getInstanceType() {
         return this.InstanceType;
@@ -66,15 +87,15 @@ public class OriginGroupReference extends AbstractModel {
 
     /**
      * Set 引用服务类型，取值有：
-<li>AccelerationDomain: 加速域名；</li>
-<li>RuleEngine: 规则引擎；</li>
-<li>Loadbalance: 负载均衡；</li>
-<li>ApplicationProxy: 四层代理。</li>
+<li>acceleration-domain: 加速域名；</li>
+<li>rule-engine: 规则引擎；</li>
+<li>load-balancer: 负载均衡；</li>
+<li>application-proxy: 四层代理。</li>
      * @param InstanceType 引用服务类型，取值有：
-<li>AccelerationDomain: 加速域名；</li>
-<li>RuleEngine: 规则引擎；</li>
-<li>Loadbalance: 负载均衡；</li>
-<li>ApplicationProxy: 四层代理。</li>
+<li>acceleration-domain: 加速域名；</li>
+<li>rule-engine: 规则引擎；</li>
+<li>load-balancer: 负载均衡；</li>
+<li>application-proxy: 四层代理。</li>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
@@ -97,19 +118,67 @@ public class OriginGroupReference extends AbstractModel {
     }
 
     /**
-     * Get 应用类型的实例名称。 
-     * @return InstanceName 应用类型的实例名称。
+     * Get 引用类型的实例名称。 
+     * @return InstanceName 引用类型的实例名称。
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 应用类型的实例名称。
-     * @param InstanceName 应用类型的实例名称。
+     * Set 引用类型的实例名称。
+     * @param InstanceName 引用类型的实例名称。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
+    }
+
+    /**
+     * Get 引用站点ID。 
+     * @return ZoneId 引用站点ID。
+     */
+    public String getZoneId() {
+        return this.ZoneId;
+    }
+
+    /**
+     * Set 引用站点ID。
+     * @param ZoneId 引用站点ID。
+     */
+    public void setZoneId(String ZoneId) {
+        this.ZoneId = ZoneId;
+    }
+
+    /**
+     * Get 引用站点名称。 
+     * @return ZoneName 引用站点名称。
+     */
+    public String getZoneName() {
+        return this.ZoneName;
+    }
+
+    /**
+     * Set 引用站点名称。
+     * @param ZoneName 引用站点名称。
+     */
+    public void setZoneName(String ZoneName) {
+        this.ZoneName = ZoneName;
+    }
+
+    /**
+     * Get 引用站点别名。 
+     * @return AliasZoneName 引用站点别名。
+     */
+    public String getAliasZoneName() {
+        return this.AliasZoneName;
+    }
+
+    /**
+     * Set 引用站点别名。
+     * @param AliasZoneName 引用站点别名。
+     */
+    public void setAliasZoneName(String AliasZoneName) {
+        this.AliasZoneName = AliasZoneName;
     }
 
     public OriginGroupReference() {
@@ -129,6 +198,15 @@ public class OriginGroupReference extends AbstractModel {
         if (source.InstanceName != null) {
             this.InstanceName = new String(source.InstanceName);
         }
+        if (source.ZoneId != null) {
+            this.ZoneId = new String(source.ZoneId);
+        }
+        if (source.ZoneName != null) {
+            this.ZoneName = new String(source.ZoneName);
+        }
+        if (source.AliasZoneName != null) {
+            this.AliasZoneName = new String(source.AliasZoneName);
+        }
     }
 
 
@@ -139,6 +217,9 @@ public class OriginGroupReference extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
+        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
+        this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
+        this.setParamSimple(map, prefix + "AliasZoneName", this.AliasZoneName);
 
     }
 }

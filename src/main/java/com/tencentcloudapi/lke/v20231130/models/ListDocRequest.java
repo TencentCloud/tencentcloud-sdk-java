@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ListDocRequest extends AbstractModel {
 
     /**
-    * 应用ID
+    * 应用ID, 获取方式参看 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
     */
     @SerializedName("BotBizId")
     @Expose
     private String BotBizId;
 
     /**
-    * 页码
+    * 页码(必须大于0)
     */
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
 
     /**
-    * 每页数量
+    * 每页数量(取值范围1-200)
     */
     @SerializedName("PageSize")
     @Expose
@@ -68,7 +68,7 @@ public class ListDocRequest extends AbstractModel {
     private String QueryType;
 
     /**
-    * 分类ID
+    * 分类ID, 调用接口[ListDocCate](https://capi.woa.com/api/detail?product=lke&version=2023-11-30&action=ListDocCate)获取
     */
     @SerializedName("CateBizId")
     @Expose
@@ -96,48 +96,55 @@ public class ListDocRequest extends AbstractModel {
     private Long ShowCurrCate;
 
     /**
-     * Get 应用ID 
-     * @return BotBizId 应用ID
+    * 文档生效域；不检索默认为0
+    */
+    @SerializedName("EnableScope")
+    @Expose
+    private Long EnableScope;
+
+    /**
+     * Get 应用ID, 获取方式参看 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa) 
+     * @return BotBizId 应用ID, 获取方式参看 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      */
     public String getBotBizId() {
         return this.BotBizId;
     }
 
     /**
-     * Set 应用ID
-     * @param BotBizId 应用ID
+     * Set 应用ID, 获取方式参看 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+     * @param BotBizId 应用ID, 获取方式参看 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      */
     public void setBotBizId(String BotBizId) {
         this.BotBizId = BotBizId;
     }
 
     /**
-     * Get 页码 
-     * @return PageNumber 页码
+     * Get 页码(必须大于0) 
+     * @return PageNumber 页码(必须大于0)
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set 页码
-     * @param PageNumber 页码
+     * Set 页码(必须大于0)
+     * @param PageNumber 页码(必须大于0)
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 每页数量 
-     * @return PageSize 每页数量
+     * Get 每页数量(取值范围1-200) 
+     * @return PageSize 每页数量(取值范围1-200)
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 每页数量
-     * @param PageSize 每页数量
+     * Set 每页数量(取值范围1-200)
+     * @param PageSize 每页数量(取值范围1-200)
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
@@ -200,16 +207,16 @@ public class ListDocRequest extends AbstractModel {
     }
 
     /**
-     * Get 分类ID 
-     * @return CateBizId 分类ID
+     * Get 分类ID, 调用接口[ListDocCate](https://capi.woa.com/api/detail?product=lke&version=2023-11-30&action=ListDocCate)获取 
+     * @return CateBizId 分类ID, 调用接口[ListDocCate](https://capi.woa.com/api/detail?product=lke&version=2023-11-30&action=ListDocCate)获取
      */
     public String getCateBizId() {
         return this.CateBizId;
     }
 
     /**
-     * Set 分类ID
-     * @param CateBizId 分类ID
+     * Set 分类ID, 调用接口[ListDocCate](https://capi.woa.com/api/detail?product=lke&version=2023-11-30&action=ListDocCate)获取
+     * @param CateBizId 分类ID, 调用接口[ListDocCate](https://capi.woa.com/api/detail?product=lke&version=2023-11-30&action=ListDocCate)获取
      */
     public void setCateBizId(String CateBizId) {
         this.CateBizId = CateBizId;
@@ -263,6 +270,22 @@ public class ListDocRequest extends AbstractModel {
         this.ShowCurrCate = ShowCurrCate;
     }
 
+    /**
+     * Get 文档生效域；不检索默认为0 
+     * @return EnableScope 文档生效域；不检索默认为0
+     */
+    public Long getEnableScope() {
+        return this.EnableScope;
+    }
+
+    /**
+     * Set 文档生效域；不检索默认为0
+     * @param EnableScope 文档生效域；不检索默认为0
+     */
+    public void setEnableScope(Long EnableScope) {
+        this.EnableScope = EnableScope;
+    }
+
     public ListDocRequest() {
     }
 
@@ -310,6 +333,9 @@ public class ListDocRequest extends AbstractModel {
         if (source.ShowCurrCate != null) {
             this.ShowCurrCate = new Long(source.ShowCurrCate);
         }
+        if (source.EnableScope != null) {
+            this.EnableScope = new Long(source.EnableScope);
+        }
     }
 
 
@@ -327,6 +353,7 @@ public class ListDocRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "FileTypes.", this.FileTypes);
         this.setParamArrayObj(map, prefix + "FilterFlag.", this.FilterFlag);
         this.setParamSimple(map, prefix + "ShowCurrCate", this.ShowCurrCate);
+        this.setParamSimple(map, prefix + "EnableScope", this.EnableScope);
 
     }
 }

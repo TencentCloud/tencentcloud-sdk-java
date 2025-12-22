@@ -94,6 +94,17 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *提交消费点位
+     * @param req CommitConsumerOffsetsRequest
+     * @return CommitConsumerOffsetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public CommitConsumerOffsetsResponse CommitConsumerOffsets(CommitConsumerOffsetsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CommitConsumerOffsets", CommitConsumerOffsetsResponse.class);
+    }
+
+    /**
      *本接口用于创建告警策略。
      * @param req CreateAlarmRequest
      * @return CreateAlarmResponse
@@ -189,6 +200,17 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *消费组心跳
+     * @param req CreateConsumerGroupRequest
+     * @return CreateConsumerGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateConsumerGroupResponse CreateConsumerGroup(CreateConsumerGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateConsumerGroup", CreateConsumerGroupResponse.class);
+    }
+
+    /**
      *本接口用于创建cos导入任务
      * @param req CreateCosRechargeRequest
      * @return CreateCosRechargeResponse
@@ -244,6 +266,17 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *创建es导入配置
+     * @param req CreateEsRechargeRequest
+     * @return CreateEsRechargeResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateEsRechargeResponse CreateEsRecharge(CreateEsRechargeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateEsRecharge", CreateEsRechargeResponse.class);
+    }
+
+    /**
      *本接口仅创建下载任务。任务返回的下载地址，请用户调用[DescribeExports](https://cloud.tencent.com/document/product/614/56449)查看任务列表，其中有下载地址CosPath参数。
      * @param req CreateExportRequest
      * @return CreateExportResponse
@@ -252,6 +285,17 @@ public class ClsClient extends AbstractClient{
     public CreateExportResponse CreateExport(CreateExportRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateExport", CreateExportResponse.class);
+    }
+
+    /**
+     *创建主机指标采集配置
+     * @param req CreateHostMetricConfigRequest
+     * @return CreateHostMetricConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateHostMetricConfigResponse CreateHostMetricConfig(CreateHostMetricConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateHostMetricConfig", CreateHostMetricConfigResponse.class);
     }
 
     /**
@@ -299,6 +343,28 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *创建指标采集配置
+     * @param req CreateMetricConfigRequest
+     * @return CreateMetricConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMetricConfigResponse CreateMetricConfig(CreateMetricConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateMetricConfig", CreateMetricConfigResponse.class);
+    }
+
+    /**
+     *创建指标订阅配置
+     * @param req CreateMetricSubscribeRequest
+     * @return CreateMetricSubscribeResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMetricSubscribeResponse CreateMetricSubscribe(CreateMetricSubscribeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateMetricSubscribe", CreateMetricSubscribeResponse.class);
+    }
+
+    /**
      *该接口用于创建通知内容。
      * @param req CreateNoticeContentRequest
      * @return CreateNoticeContentResponse
@@ -329,6 +395,17 @@ public class ClsClient extends AbstractClient{
     public CreateShipperResponse CreateShipper(CreateShipperRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateShipper", CreateShipperResponse.class);
+    }
+
+    /**
+     *创建Splunk投递任务
+     * @param req CreateSplunkDeliverRequest
+     * @return CreateSplunkDeliverResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSplunkDeliverResponse CreateSplunkDeliver(CreateSplunkDeliverRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSplunkDeliver", CreateSplunkDeliverResponse.class);
     }
 
     /**
@@ -453,6 +530,17 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *删除消费组
+     * @param req DeleteConsumerGroupRequest
+     * @return DeleteConsumerGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteConsumerGroupResponse DeleteConsumerGroup(DeleteConsumerGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteConsumerGroup", DeleteConsumerGroupResponse.class);
+    }
+
+    /**
      *本接口用于删除cos导入任务
      * @param req DeleteCosRechargeRequest
      * @return DeleteCosRechargeResponse
@@ -497,6 +585,17 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *删除es导入配置
+     * @param req DeleteEsRechargeRequest
+     * @return DeleteEsRechargeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteEsRechargeResponse DeleteEsRecharge(DeleteEsRechargeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteEsRecharge", DeleteEsRechargeResponse.class);
+    }
+
+    /**
      *本接口用于删除日志下载任务
      * @param req DeleteExportRequest
      * @return DeleteExportResponse
@@ -505,6 +604,17 @@ public class ClsClient extends AbstractClient{
     public DeleteExportResponse DeleteExport(DeleteExportRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteExport", DeleteExportResponse.class);
+    }
+
+    /**
+     *删除主机指标采集配置
+     * @param req DeleteHostMetricConfigRequest
+     * @return DeleteHostMetricConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteHostMetricConfigResponse DeleteHostMetricConfig(DeleteHostMetricConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteHostMetricConfig", DeleteHostMetricConfigResponse.class);
     }
 
     /**
@@ -563,6 +673,28 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *删除指标采集配置
+     * @param req DeleteMetricConfigRequest
+     * @return DeleteMetricConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteMetricConfigResponse DeleteMetricConfig(DeleteMetricConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteMetricConfig", DeleteMetricConfigResponse.class);
+    }
+
+    /**
+     *删除指标订阅配置
+     * @param req DeleteMetricSubscribeRequest
+     * @return DeleteMetricSubscribeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteMetricSubscribeResponse DeleteMetricSubscribe(DeleteMetricSubscribeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteMetricSubscribe", DeleteMetricSubscribeResponse.class);
+    }
+
+    /**
      *该接口用于删除通知内容配置
      * @param req DeleteNoticeContentRequest
      * @return DeleteNoticeContentResponse
@@ -593,6 +725,17 @@ public class ClsClient extends AbstractClient{
     public DeleteShipperResponse DeleteShipper(DeleteShipperRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteShipper", DeleteShipperResponse.class);
+    }
+
+    /**
+     *删除Splunk投递任务
+     * @param req DeleteSplunkDeliverRequest
+     * @return DeleteSplunkDeliverResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSplunkDeliverResponse DeleteSplunkDeliver(DeleteSplunkDeliverRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteSplunkDeliver", DeleteSplunkDeliverResponse.class);
     }
 
     /**
@@ -673,6 +816,28 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *获取指标订阅配置
+     * @param req DescribeClusterBaseMetricConfigsRequest
+     * @return DescribeClusterBaseMetricConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterBaseMetricConfigsResponse DescribeClusterBaseMetricConfigs(DescribeClusterBaseMetricConfigsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClusterBaseMetricConfigs", DescribeClusterBaseMetricConfigsResponse.class);
+    }
+
+    /**
+     *获取指标订阅配置
+     * @param req DescribeClusterMetricConfigsRequest
+     * @return DescribeClusterMetricConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterMetricConfigsResponse DescribeClusterMetricConfigs(DescribeClusterMetricConfigsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClusterMetricConfigs", DescribeClusterMetricConfigsResponse.class);
+    }
+
+    /**
      *本接口用于获取特殊采集配置，特殊采集配置应用于自建K8S环境的采集Agent
      * @param req DescribeConfigExtrasRequest
      * @return DescribeConfigExtrasResponse
@@ -725,6 +890,50 @@ public class ClsClient extends AbstractClient{
     public DescribeConsumerResponse DescribeConsumer(DescribeConsumerRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeConsumer", DescribeConsumerResponse.class);
+    }
+
+    /**
+     *获取消费组列表
+     * @param req DescribeConsumerGroupsRequest
+     * @return DescribeConsumerGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConsumerGroupsResponse DescribeConsumerGroups(DescribeConsumerGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeConsumerGroups", DescribeConsumerGroupsResponse.class);
+    }
+
+    /**
+     *获取消费组点位信息
+     * @param req DescribeConsumerOffsetsRequest
+     * @return DescribeConsumerOffsetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConsumerOffsetsResponse DescribeConsumerOffsets(DescribeConsumerOffsetsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeConsumerOffsets", DescribeConsumerOffsetsResponse.class);
+    }
+
+    /**
+     *本接口用于kafka投递数据预览
+     * @param req DescribeConsumerPreviewRequest
+     * @return DescribeConsumerPreviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConsumerPreviewResponse DescribeConsumerPreview(DescribeConsumerPreviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeConsumerPreview", DescribeConsumerPreviewResponse.class);
+    }
+
+    /**
+     *获取投递规则信息列表
+     * @param req DescribeConsumersRequest
+     * @return DescribeConsumersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConsumersResponse DescribeConsumers(DescribeConsumersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeConsumers", DescribeConsumersResponse.class);
     }
 
     /**
@@ -783,6 +992,28 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *es导入预览
+     * @param req DescribeEsRechargePreviewRequest
+     * @return DescribeEsRechargePreviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEsRechargePreviewResponse DescribeEsRechargePreview(DescribeEsRechargePreviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEsRechargePreview", DescribeEsRechargePreviewResponse.class);
+    }
+
+    /**
+     *获取es导入配置
+     * @param req DescribeEsRechargesRequest
+     * @return DescribeEsRechargesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEsRechargesResponse DescribeEsRecharges(DescribeEsRechargesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEsRecharges", DescribeEsRechargesResponse.class);
+    }
+
+    /**
      *本接口用于获取日志下载任务列表
      * @param req DescribeExportsRequest
      * @return DescribeExportsResponse
@@ -791,6 +1022,17 @@ public class ClsClient extends AbstractClient{
     public DescribeExportsResponse DescribeExports(DescribeExportsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeExports", DescribeExportsResponse.class);
+    }
+
+    /**
+     *获取指标订阅配置
+     * @param req DescribeHostMetricConfigsRequest
+     * @return DescribeHostMetricConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHostMetricConfigsResponse DescribeHostMetricConfigs(DescribeHostMetricConfigsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHostMetricConfigs", DescribeHostMetricConfigsResponse.class);
     }
 
     /**
@@ -835,6 +1077,28 @@ public class ClsClient extends AbstractClient{
     public DescribeKafkaConsumerGroupListResponse DescribeKafkaConsumerGroupList(DescribeKafkaConsumerGroupListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeKafkaConsumerGroupList", DescribeKafkaConsumerGroupListResponse.class);
+    }
+
+    /**
+     *kafka协议消费预览接口
+     * @param req DescribeKafkaConsumerPreviewRequest
+     * @return DescribeKafkaConsumerPreviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKafkaConsumerPreviewResponse DescribeKafkaConsumerPreview(DescribeKafkaConsumerPreviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeKafkaConsumerPreview", DescribeKafkaConsumerPreviewResponse.class);
+    }
+
+    /**
+     *本接口用于获取kafka协议消费主题信息列表
+     * @param req DescribeKafkaConsumerTopicsRequest
+     * @return DescribeKafkaConsumerTopicsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKafkaConsumerTopicsResponse DescribeKafkaConsumerTopics(DescribeKafkaConsumerTopicsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeKafkaConsumerTopics", DescribeKafkaConsumerTopicsResponse.class);
     }
 
     /**
@@ -916,6 +1180,39 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
     }
 
     /**
+     *获取指标订阅配置
+     * @param req DescribeMetricCorrectDimensionRequest
+     * @return DescribeMetricCorrectDimensionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMetricCorrectDimensionResponse DescribeMetricCorrectDimension(DescribeMetricCorrectDimensionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMetricCorrectDimension", DescribeMetricCorrectDimensionResponse.class);
+    }
+
+    /**
+     *创建指标订阅配置
+     * @param req DescribeMetricSubscribePreviewRequest
+     * @return DescribeMetricSubscribePreviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMetricSubscribePreviewResponse DescribeMetricSubscribePreview(DescribeMetricSubscribePreviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMetricSubscribePreview", DescribeMetricSubscribePreviewResponse.class);
+    }
+
+    /**
+     *获取指标订阅配置
+     * @param req DescribeMetricSubscribesRequest
+     * @return DescribeMetricSubscribesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMetricSubscribesResponse DescribeMetricSubscribes(DescribeMetricSubscribesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMetricSubscribes", DescribeMetricSubscribesResponse.class);
+    }
+
+    /**
      *获取通知内容列表
      * @param req DescribeNoticeContentsRequest
      * @return DescribeNoticeContentsResponse
@@ -971,6 +1268,50 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
     }
 
     /**
+     *获取Splunk投递任务列表
+     * @param req DescribeSplunkDeliversRequest
+     * @return DescribeSplunkDeliversResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSplunkDeliversResponse DescribeSplunkDelivers(DescribeSplunkDeliversRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSplunkDelivers", DescribeSplunkDeliversResponse.class);
+    }
+
+    /**
+     *splunk投递任务预览
+     * @param req DescribeSplunkPreviewRequest
+     * @return DescribeSplunkPreviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSplunkPreviewResponse DescribeSplunkPreview(DescribeSplunkPreviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSplunkPreview", DescribeSplunkPreviewResponse.class);
+    }
+
+    /**
+     *获取指标订阅配置
+     * @param req DescribeTopicBaseMetricConfigsRequest
+     * @return DescribeTopicBaseMetricConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTopicBaseMetricConfigsResponse DescribeTopicBaseMetricConfigs(DescribeTopicBaseMetricConfigsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTopicBaseMetricConfigs", DescribeTopicBaseMetricConfigsResponse.class);
+    }
+
+    /**
+     *获取指标订阅配置
+     * @param req DescribeTopicMetricConfigsRequest
+     * @return DescribeTopicMetricConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTopicMetricConfigsResponse DescribeTopicMetricConfigs(DescribeTopicMetricConfigsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTopicMetricConfigs", DescribeTopicMetricConfigsResponse.class);
+    }
+
+    /**
      *本接口用于获取日志或指标主题列表，支持分页
      * @param req DescribeTopicsRequest
      * @return DescribeTopicsResponse
@@ -1001,6 +1342,17 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
     public GetAlarmLogResponse GetAlarmLog(GetAlarmLogRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetAlarmLog", GetAlarmLogResponse.class);
+    }
+
+    /**
+     *获取时序label values列表
+     * @param req GetMetricLabelValuesRequest
+     * @return GetMetricLabelValuesResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetMetricLabelValuesResponse GetMetricLabelValues(GetMetricLabelValuesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetMetricLabelValues", GetMetricLabelValuesResponse.class);
     }
 
     /**
@@ -1103,6 +1455,17 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
     }
 
     /**
+     *更新消费组信息
+     * @param req ModifyConsumerGroupRequest
+     * @return ModifyConsumerGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyConsumerGroupResponse ModifyConsumerGroup(ModifyConsumerGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyConsumerGroup", ModifyConsumerGroupResponse.class);
+    }
+
+    /**
      *本接口用于修改cos导入任务
      * @param req ModifyCosRechargeRequest
      * @return ModifyCosRechargeResponse
@@ -1144,6 +1507,28 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
     public ModifyDlcDeliverResponse ModifyDlcDeliver(ModifyDlcDeliverRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyDlcDeliver", ModifyDlcDeliverResponse.class);
+    }
+
+    /**
+     *修改es导入配置
+     * @param req ModifyEsRechargeRequest
+     * @return ModifyEsRechargeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyEsRechargeResponse ModifyEsRecharge(ModifyEsRechargeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyEsRecharge", ModifyEsRechargeResponse.class);
+    }
+
+    /**
+     *修改主机指标采集配置
+     * @param req ModifyHostMetricConfigRequest
+     * @return ModifyHostMetricConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyHostMetricConfigResponse ModifyHostMetricConfig(ModifyHostMetricConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyHostMetricConfig", ModifyHostMetricConfigResponse.class);
     }
 
     /**
@@ -1214,6 +1599,28 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
     }
 
     /**
+     *创建指标采集配置
+     * @param req ModifyMetricConfigRequest
+     * @return ModifyMetricConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMetricConfigResponse ModifyMetricConfig(ModifyMetricConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyMetricConfig", ModifyMetricConfigResponse.class);
+    }
+
+    /**
+     *修改指标订阅配置
+     * @param req ModifyMetricSubscribeRequest
+     * @return ModifyMetricSubscribeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMetricSubscribeResponse ModifyMetricSubscribe(ModifyMetricSubscribeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyMetricSubscribe", ModifyMetricSubscribeResponse.class);
+    }
+
+    /**
      *该接口用于修改通知内容配置
      * @param req ModifyNoticeContentRequest
      * @return ModifyNoticeContentResponse
@@ -1244,6 +1651,17 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
     public ModifyShipperResponse ModifyShipper(ModifyShipperRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyShipper", ModifyShipperResponse.class);
+    }
+
+    /**
+     *修改splunk投递任务相关信息
+     * @param req ModifySplunkDeliverRequest
+     * @return ModifySplunkDeliverResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySplunkDeliverResponse ModifySplunkDeliver(ModifySplunkDeliverRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySplunkDeliver", ModifySplunkDeliverResponse.class);
     }
 
     /**
@@ -1358,6 +1776,17 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
     public SearchLogResponse SearchLog(SearchLogRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SearchLog", SearchLogResponse.class);
+    }
+
+    /**
+     *消费组心跳
+     * @param req SendConsumerHeartbeatRequest
+     * @return SendConsumerHeartbeatResponse
+     * @throws TencentCloudSDKException
+     */
+    public SendConsumerHeartbeatResponse SendConsumerHeartbeat(SendConsumerHeartbeatRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SendConsumerHeartbeat", SendConsumerHeartbeatResponse.class);
     }
 
     /**

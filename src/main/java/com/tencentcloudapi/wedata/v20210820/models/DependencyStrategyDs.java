@@ -51,6 +51,14 @@ public class DependencyStrategyDs extends AbstractModel {
     private Long TaskDependencyExecutingTimeoutValue;
 
     /**
+    * 超时依赖策略
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DependencyConfigTimeoutTypeList")
+    @Expose
+    private DependencyConfigTimeoutDTO [] DependencyConfigTimeoutTypeList;
+
+    /**
      * Get 等待上游任务实例策略：EXECUTING（执行）；WAITING（等待）
 
 注意：此字段可能返回 null，表示取不到有效值。 
@@ -122,6 +130,26 @@ public class DependencyStrategyDs extends AbstractModel {
         this.TaskDependencyExecutingTimeoutValue = TaskDependencyExecutingTimeoutValue;
     }
 
+    /**
+     * Get 超时依赖策略
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DependencyConfigTimeoutTypeList 超时依赖策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DependencyConfigTimeoutDTO [] getDependencyConfigTimeoutTypeList() {
+        return this.DependencyConfigTimeoutTypeList;
+    }
+
+    /**
+     * Set 超时依赖策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DependencyConfigTimeoutTypeList 超时依赖策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDependencyConfigTimeoutTypeList(DependencyConfigTimeoutDTO [] DependencyConfigTimeoutTypeList) {
+        this.DependencyConfigTimeoutTypeList = DependencyConfigTimeoutTypeList;
+    }
+
     public DependencyStrategyDs() {
     }
 
@@ -142,6 +170,12 @@ public class DependencyStrategyDs extends AbstractModel {
         if (source.TaskDependencyExecutingTimeoutValue != null) {
             this.TaskDependencyExecutingTimeoutValue = new Long(source.TaskDependencyExecutingTimeoutValue);
         }
+        if (source.DependencyConfigTimeoutTypeList != null) {
+            this.DependencyConfigTimeoutTypeList = new DependencyConfigTimeoutDTO[source.DependencyConfigTimeoutTypeList.length];
+            for (int i = 0; i < source.DependencyConfigTimeoutTypeList.length; i++) {
+                this.DependencyConfigTimeoutTypeList[i] = new DependencyConfigTimeoutDTO(source.DependencyConfigTimeoutTypeList[i]);
+            }
+        }
     }
 
 
@@ -152,6 +186,7 @@ public class DependencyStrategyDs extends AbstractModel {
         this.setParamSimple(map, prefix + "PollingNullStrategy", this.PollingNullStrategy);
         this.setParamArraySimple(map, prefix + "TaskDependencyExecutingStrategies.", this.TaskDependencyExecutingStrategies);
         this.setParamSimple(map, prefix + "TaskDependencyExecutingTimeoutValue", this.TaskDependencyExecutingTimeoutValue);
+        this.setParamArrayObj(map, prefix + "DependencyConfigTimeoutTypeList.", this.DependencyConfigTimeoutTypeList);
 
     }
 }

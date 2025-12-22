@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyDocRequest extends AbstractModel {
 
     /**
-    * 应用ID
+    * 应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
     */
     @SerializedName("BotBizId")
     @Expose
@@ -45,7 +45,7 @@ public class ModifyDocRequest extends AbstractModel {
     private Boolean IsRefer;
 
     /**
-    * 标签适用范围，需要传参为1
+    * 标签适用范围，1:全部，2:按条件。默认为1。
     */
     @SerializedName("AttrRange")
     @Expose
@@ -88,14 +88,14 @@ public class ModifyDocRequest extends AbstractModel {
     private Long ReferUrlType;
 
     /**
-    * 有效开始时间，unix时间戳
+    * 有效开始时间，单位为unix时间戳
     */
     @SerializedName("ExpireStart")
     @Expose
     private String ExpireStart;
 
     /**
-    * 有效结束时间，unix时间戳，0代表永久有效
+    * 有效结束时间，单位为unix时间戳，默认值为0代表永久有效
     */
     @SerializedName("ExpireEnd")
     @Expose
@@ -137,16 +137,23 @@ public class ModifyDocRequest extends AbstractModel {
     private String SplitRule;
 
     /**
-     * Get 应用ID 
-     * @return BotBizId 应用ID
+    * 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+    */
+    @SerializedName("EnableScope")
+    @Expose
+    private Long EnableScope;
+
+    /**
+     * Get 应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa) 
+     * @return BotBizId 应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      */
     public String getBotBizId() {
         return this.BotBizId;
     }
 
     /**
-     * Set 应用ID
-     * @param BotBizId 应用ID
+     * Set 应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+     * @param BotBizId 应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      */
     public void setBotBizId(String BotBizId) {
         this.BotBizId = BotBizId;
@@ -185,16 +192,16 @@ public class ModifyDocRequest extends AbstractModel {
     }
 
     /**
-     * Get 标签适用范围，需要传参为1 
-     * @return AttrRange 标签适用范围，需要传参为1
+     * Get 标签适用范围，1:全部，2:按条件。默认为1。 
+     * @return AttrRange 标签适用范围，1:全部，2:按条件。默认为1。
      */
     public Long getAttrRange() {
         return this.AttrRange;
     }
 
     /**
-     * Set 标签适用范围，需要传参为1
-     * @param AttrRange 标签适用范围，需要传参为1
+     * Set 标签适用范围，1:全部，2:按条件。默认为1。
+     * @param AttrRange 标签适用范围，1:全部，2:按条件。默认为1。
      */
     public void setAttrRange(Long AttrRange) {
         this.AttrRange = AttrRange;
@@ -285,32 +292,32 @@ public class ModifyDocRequest extends AbstractModel {
     }
 
     /**
-     * Get 有效开始时间，unix时间戳 
-     * @return ExpireStart 有效开始时间，unix时间戳
+     * Get 有效开始时间，单位为unix时间戳 
+     * @return ExpireStart 有效开始时间，单位为unix时间戳
      */
     public String getExpireStart() {
         return this.ExpireStart;
     }
 
     /**
-     * Set 有效开始时间，unix时间戳
-     * @param ExpireStart 有效开始时间，unix时间戳
+     * Set 有效开始时间，单位为unix时间戳
+     * @param ExpireStart 有效开始时间，单位为unix时间戳
      */
     public void setExpireStart(String ExpireStart) {
         this.ExpireStart = ExpireStart;
     }
 
     /**
-     * Get 有效结束时间，unix时间戳，0代表永久有效 
-     * @return ExpireEnd 有效结束时间，unix时间戳，0代表永久有效
+     * Get 有效结束时间，单位为unix时间戳，默认值为0代表永久有效 
+     * @return ExpireEnd 有效结束时间，单位为unix时间戳，默认值为0代表永久有效
      */
     public String getExpireEnd() {
         return this.ExpireEnd;
     }
 
     /**
-     * Set 有效结束时间，unix时间戳，0代表永久有效
-     * @param ExpireEnd 有效结束时间，unix时间戳，0代表永久有效
+     * Set 有效结束时间，单位为unix时间戳，默认值为0代表永久有效
+     * @param ExpireEnd 有效结束时间，单位为unix时间戳，默认值为0代表永久有效
      */
     public void setExpireEnd(String ExpireEnd) {
         this.ExpireEnd = ExpireEnd;
@@ -396,6 +403,22 @@ public class ModifyDocRequest extends AbstractModel {
         this.SplitRule = SplitRule;
     }
 
+    /**
+     * Get 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域 
+     * @return EnableScope 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     */
+    public Long getEnableScope() {
+        return this.EnableScope;
+    }
+
+    /**
+     * Set 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     * @param EnableScope 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     */
+    public void setEnableScope(Long EnableScope) {
+        this.EnableScope = EnableScope;
+    }
+
     public ModifyDocRequest() {
     }
 
@@ -458,6 +481,9 @@ public class ModifyDocRequest extends AbstractModel {
         if (source.SplitRule != null) {
             this.SplitRule = new String(source.SplitRule);
         }
+        if (source.EnableScope != null) {
+            this.EnableScope = new Long(source.EnableScope);
+        }
     }
 
 
@@ -481,6 +507,7 @@ public class ModifyDocRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ModifyTypes.", this.ModifyTypes);
         this.setParamObj(map, prefix + "UpdatePeriodInfo.", this.UpdatePeriodInfo);
         this.setParamSimple(map, prefix + "SplitRule", this.SplitRule);
+        this.setParamSimple(map, prefix + "EnableScope", this.EnableScope);
 
     }
 }

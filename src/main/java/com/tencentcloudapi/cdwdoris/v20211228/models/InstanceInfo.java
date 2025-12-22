@@ -432,6 +432,27 @@ Changing  变更中
     private Boolean UseManagedBucket;
 
     /**
+    * 集群类型
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
+
+    /**
+    * 对应主集群
+    */
+    @SerializedName("MasterInstance")
+    @Expose
+    private String MasterInstance;
+
+    /**
+    * 对应备集群
+    */
+    @SerializedName("SlaveInstances")
+    @Expose
+    private String [] SlaveInstances;
+
+    /**
      * Get 集群实例ID, "cdwdoris-xxxx" 字符串类型 
      * @return InstanceId 集群实例ID, "cdwdoris-xxxx" 字符串类型
      */
@@ -1383,6 +1404,54 @@ Changing  变更中
         this.UseManagedBucket = UseManagedBucket;
     }
 
+    /**
+     * Get 集群类型 
+     * @return InstanceType 集群类型
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set 集群类型
+     * @param InstanceType 集群类型
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
+    /**
+     * Get 对应主集群 
+     * @return MasterInstance 对应主集群
+     */
+    public String getMasterInstance() {
+        return this.MasterInstance;
+    }
+
+    /**
+     * Set 对应主集群
+     * @param MasterInstance 对应主集群
+     */
+    public void setMasterInstance(String MasterInstance) {
+        this.MasterInstance = MasterInstance;
+    }
+
+    /**
+     * Get 对应备集群 
+     * @return SlaveInstances 对应备集群
+     */
+    public String [] getSlaveInstances() {
+        return this.SlaveInstances;
+    }
+
+    /**
+     * Set 对应备集群
+     * @param SlaveInstances 对应备集群
+     */
+    public void setSlaveInstances(String [] SlaveInstances) {
+        this.SlaveInstances = SlaveInstances;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1571,6 +1640,18 @@ Changing  变更中
         if (source.UseManagedBucket != null) {
             this.UseManagedBucket = new Boolean(source.UseManagedBucket);
         }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.MasterInstance != null) {
+            this.MasterInstance = new String(source.MasterInstance);
+        }
+        if (source.SlaveInstances != null) {
+            this.SlaveInstances = new String[source.SlaveInstances.length];
+            for (int i = 0; i < source.SlaveInstances.length; i++) {
+                this.SlaveInstances[i] = new String(source.SlaveInstances[i]);
+            }
+        }
     }
 
 
@@ -1635,6 +1716,9 @@ Changing  变更中
         this.setParamSimple(map, prefix + "IsMasterNonVM", this.IsMasterNonVM);
         this.setParamSimple(map, prefix + "CosPkgCapacity", this.CosPkgCapacity);
         this.setParamSimple(map, prefix + "UseManagedBucket", this.UseManagedBucket);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "MasterInstance", this.MasterInstance);
+        this.setParamArraySimple(map, prefix + "SlaveInstances.", this.SlaveInstances);
 
     }
 }

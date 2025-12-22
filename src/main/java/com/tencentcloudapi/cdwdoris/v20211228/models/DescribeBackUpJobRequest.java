@@ -76,6 +76,13 @@ public class DescribeBackUpJobRequest extends AbstractModel {
     private String JobIdFiltersStr;
 
     /**
+    * 0-未加密；1-已加密
+    */
+    @SerializedName("EncryptionFilters")
+    @Expose
+    private Long [] EncryptionFilters;
+
+    /**
      * Get 集群id 
      * @return InstanceId 集群id
      */
@@ -199,6 +206,22 @@ public class DescribeBackUpJobRequest extends AbstractModel {
         this.JobIdFiltersStr = JobIdFiltersStr;
     }
 
+    /**
+     * Get 0-未加密；1-已加密 
+     * @return EncryptionFilters 0-未加密；1-已加密
+     */
+    public Long [] getEncryptionFilters() {
+        return this.EncryptionFilters;
+    }
+
+    /**
+     * Set 0-未加密；1-已加密
+     * @param EncryptionFilters 0-未加密；1-已加密
+     */
+    public void setEncryptionFilters(Long [] EncryptionFilters) {
+        this.EncryptionFilters = EncryptionFilters;
+    }
+
     public DescribeBackUpJobRequest() {
     }
 
@@ -228,6 +251,12 @@ public class DescribeBackUpJobRequest extends AbstractModel {
         if (source.JobIdFiltersStr != null) {
             this.JobIdFiltersStr = new String(source.JobIdFiltersStr);
         }
+        if (source.EncryptionFilters != null) {
+            this.EncryptionFilters = new Long[source.EncryptionFilters.length];
+            for (int i = 0; i < source.EncryptionFilters.length; i++) {
+                this.EncryptionFilters[i] = new Long(source.EncryptionFilters[i]);
+            }
+        }
     }
 
 
@@ -242,6 +271,7 @@ public class DescribeBackUpJobRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "BeginTime", this.BeginTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "JobIdFiltersStr", this.JobIdFiltersStr);
+        this.setParamArraySimple(map, prefix + "EncryptionFilters.", this.EncryptionFilters);
 
     }
 }

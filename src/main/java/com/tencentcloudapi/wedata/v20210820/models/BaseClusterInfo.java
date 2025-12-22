@@ -160,6 +160,22 @@ public class BaseClusterInfo extends AbstractModel {
     private String CdwUserName;
 
     /**
+    * 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateTimestamp")
+    @Expose
+    private Long CreateTimestamp;
+
+    /**
+    * 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UpdateTimestamp")
+    @Expose
+    private Long UpdateTimestamp;
+
+    /**
      * Get 集群id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ClusterId 集群id
@@ -499,6 +515,46 @@ public class BaseClusterInfo extends AbstractModel {
         this.CdwUserName = CdwUserName;
     }
 
+    /**
+     * Get 创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateTimestamp 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCreateTimestamp() {
+        return this.CreateTimestamp;
+    }
+
+    /**
+     * Set 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateTimestamp 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateTimestamp(Long CreateTimestamp) {
+        this.CreateTimestamp = CreateTimestamp;
+    }
+
+    /**
+     * Get 修改时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UpdateTimestamp 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getUpdateTimestamp() {
+        return this.UpdateTimestamp;
+    }
+
+    /**
+     * Set 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpdateTimestamp 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUpdateTimestamp(Long UpdateTimestamp) {
+        this.UpdateTimestamp = UpdateTimestamp;
+    }
+
     public BaseClusterInfo() {
     }
 
@@ -558,6 +614,12 @@ public class BaseClusterInfo extends AbstractModel {
         if (source.CdwUserName != null) {
             this.CdwUserName = new String(source.CdwUserName);
         }
+        if (source.CreateTimestamp != null) {
+            this.CreateTimestamp = new Long(source.CreateTimestamp);
+        }
+        if (source.UpdateTimestamp != null) {
+            this.UpdateTimestamp = new Long(source.UpdateTimestamp);
+        }
     }
 
 
@@ -582,6 +644,8 @@ public class BaseClusterInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ExtraConf", this.ExtraConf);
         this.setParamSimple(map, prefix + "RangerUserName", this.RangerUserName);
         this.setParamSimple(map, prefix + "CdwUserName", this.CdwUserName);
+        this.setParamSimple(map, prefix + "CreateTimestamp", this.CreateTimestamp);
+        this.setParamSimple(map, prefix + "UpdateTimestamp", this.UpdateTimestamp);
 
     }
 }

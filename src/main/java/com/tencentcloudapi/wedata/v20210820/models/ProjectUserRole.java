@@ -120,6 +120,22 @@ public class ProjectUserRole extends AbstractModel {
     private Boolean IsProjectOwner;
 
     /**
+    * 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateTimestamp")
+    @Expose
+    private Long CreateTimestamp;
+
+    /**
+    * 用户状态 0:历史 1:正常 2:已删除
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
      * Get 用户角色对象
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Roles 用户角色对象
@@ -359,6 +375,46 @@ public class ProjectUserRole extends AbstractModel {
         this.IsProjectOwner = IsProjectOwner;
     }
 
+    /**
+     * Get 创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateTimestamp 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCreateTimestamp() {
+        return this.CreateTimestamp;
+    }
+
+    /**
+     * Set 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateTimestamp 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateTimestamp(Long CreateTimestamp) {
+        this.CreateTimestamp = CreateTimestamp;
+    }
+
+    /**
+     * Get 用户状态 0:历史 1:正常 2:已删除
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Status 用户状态 0:历史 1:正常 2:已删除
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 用户状态 0:历史 1:正常 2:已删除
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Status 用户状态 0:历史 1:正常 2:已删除
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
     public ProjectUserRole() {
     }
 
@@ -406,6 +462,12 @@ public class ProjectUserRole extends AbstractModel {
         if (source.IsProjectOwner != null) {
             this.IsProjectOwner = new Boolean(source.IsProjectOwner);
         }
+        if (source.CreateTimestamp != null) {
+            this.CreateTimestamp = new Long(source.CreateTimestamp);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
     }
 
 
@@ -425,6 +487,8 @@ public class ProjectUserRole extends AbstractModel {
         this.setParamSimple(map, prefix + "OwnerUin", this.OwnerUin);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "IsProjectOwner", this.IsProjectOwner);
+        this.setParamSimple(map, prefix + "CreateTimestamp", this.CreateTimestamp);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

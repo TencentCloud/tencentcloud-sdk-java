@@ -129,6 +129,13 @@ public class AssetRiskItem extends AbstractModel {
     private String Classify;
 
     /**
+    * 等保合规
+    */
+    @SerializedName("StandardTerms")
+    @Expose
+    private StandardTerm [] StandardTerms;
+
+    /**
      * Get 租户ID 
      * @return AppId 租户ID
      */
@@ -368,6 +375,22 @@ public class AssetRiskItem extends AbstractModel {
         this.Classify = Classify;
     }
 
+    /**
+     * Get 等保合规 
+     * @return StandardTerms 等保合规
+     */
+    public StandardTerm [] getStandardTerms() {
+        return this.StandardTerms;
+    }
+
+    /**
+     * Set 等保合规
+     * @param StandardTerms 等保合规
+     */
+    public void setStandardTerms(StandardTerm [] StandardTerms) {
+        this.StandardTerms = StandardTerms;
+    }
+
     public AssetRiskItem() {
     }
 
@@ -421,6 +444,12 @@ public class AssetRiskItem extends AbstractModel {
         if (source.Classify != null) {
             this.Classify = new String(source.Classify);
         }
+        if (source.StandardTerms != null) {
+            this.StandardTerms = new StandardTerm[source.StandardTerms.length];
+            for (int i = 0; i < source.StandardTerms.length; i++) {
+                this.StandardTerms[i] = new StandardTerm(source.StandardTerms[i]);
+            }
+        }
     }
 
 
@@ -443,6 +472,7 @@ public class AssetRiskItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Severity", this.Severity);
         this.setParamSimple(map, prefix + "RiskRuleId", this.RiskRuleId);
         this.setParamSimple(map, prefix + "Classify", this.Classify);
+        this.setParamArrayObj(map, prefix + "StandardTerms.", this.StandardTerms);
 
     }
 }

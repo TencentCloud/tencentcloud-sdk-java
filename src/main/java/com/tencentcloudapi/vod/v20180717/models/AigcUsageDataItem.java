@@ -32,12 +32,14 @@ public class AigcUsageDataItem extends AbstractModel {
 <li>Gem3.0_2K</li>
 <li>Gem3.0_4K</li>
 <li>Sora2</li>
-<li>Veo3.1Standard</li>
 <li>Veo3.1Fast</li>
+<li>Veo3.1Standard</li>
 <li>Kling2.5pro_720P</li>
 <li>Kling2.5pro_1080P</li>
+<li>KlingO1_1080P</li>
 <li>Kling2.0&2.1std_720P</li>
 <li>Kling2.0&2.1pro_1080P</li>
+<li>KlingO1_720P</li>
 <li>Hailuo02&2.3_1080P</li>
 <li>Hailuo02&2.3_768P</li>
 <li>Hailuo2.3fast_768P</li>
@@ -50,6 +52,16 @@ public class AigcUsageDataItem extends AbstractModel {
 <li>ViduQ2pro_1080P</li>
 <li>ViduQ2turbo_720P</li>
 <li>ViduQ2turbo_1080P</li>
+<li>Hunyuan1.5_720P</li>
+<li>Hunyuan1.5_1080P</li>
+<li>Hunyuan3.0_1K</li>
+<li>Hunyuan3.0_2K</li>
+<li>Hunyuan3.0_4K</li>
+<li>Mingmou1.0_1080P</li>
+<li>Mingmou1.0_1K</li>
+<li>Mingmou1.0_2K</li>
+<li>Mingmou1.0_4K</li>
+<li>Mingmou1.0_720P</li>
 <li> unknown</li>
     */
     @SerializedName("Specification")
@@ -72,12 +84,14 @@ public class AigcUsageDataItem extends AbstractModel {
 <li>Gem3.0_2K</li>
 <li>Gem3.0_4K</li>
 <li>Sora2</li>
-<li>Veo3.1Standard</li>
 <li>Veo3.1Fast</li>
+<li>Veo3.1Standard</li>
 <li>Kling2.5pro_720P</li>
 <li>Kling2.5pro_1080P</li>
+<li>KlingO1_1080P</li>
 <li>Kling2.0&2.1std_720P</li>
 <li>Kling2.0&2.1pro_1080P</li>
+<li>KlingO1_720P</li>
 <li>Hailuo02&2.3_1080P</li>
 <li>Hailuo02&2.3_768P</li>
 <li>Hailuo2.3fast_768P</li>
@@ -90,6 +104,16 @@ public class AigcUsageDataItem extends AbstractModel {
 <li>ViduQ2pro_1080P</li>
 <li>ViduQ2turbo_720P</li>
 <li>ViduQ2turbo_1080P</li>
+<li>Hunyuan1.5_720P</li>
+<li>Hunyuan1.5_1080P</li>
+<li>Hunyuan3.0_1K</li>
+<li>Hunyuan3.0_2K</li>
+<li>Hunyuan3.0_4K</li>
+<li>Mingmou1.0_1080P</li>
+<li>Mingmou1.0_1K</li>
+<li>Mingmou1.0_2K</li>
+<li>Mingmou1.0_4K</li>
+<li>Mingmou1.0_720P</li>
 <li> unknown</li> 
      * @return Specification AIGC规格。
 取值有：
@@ -99,12 +123,14 @@ public class AigcUsageDataItem extends AbstractModel {
 <li>Gem3.0_2K</li>
 <li>Gem3.0_4K</li>
 <li>Sora2</li>
-<li>Veo3.1Standard</li>
 <li>Veo3.1Fast</li>
+<li>Veo3.1Standard</li>
 <li>Kling2.5pro_720P</li>
 <li>Kling2.5pro_1080P</li>
+<li>KlingO1_1080P</li>
 <li>Kling2.0&2.1std_720P</li>
 <li>Kling2.0&2.1pro_1080P</li>
+<li>KlingO1_720P</li>
 <li>Hailuo02&2.3_1080P</li>
 <li>Hailuo02&2.3_768P</li>
 <li>Hailuo2.3fast_768P</li>
@@ -117,6 +143,16 @@ public class AigcUsageDataItem extends AbstractModel {
 <li>ViduQ2pro_1080P</li>
 <li>ViduQ2turbo_720P</li>
 <li>ViduQ2turbo_1080P</li>
+<li>Hunyuan1.5_720P</li>
+<li>Hunyuan1.5_1080P</li>
+<li>Hunyuan3.0_1K</li>
+<li>Hunyuan3.0_2K</li>
+<li>Hunyuan3.0_4K</li>
+<li>Mingmou1.0_1080P</li>
+<li>Mingmou1.0_1K</li>
+<li>Mingmou1.0_2K</li>
+<li>Mingmou1.0_4K</li>
+<li>Mingmou1.0_720P</li>
 <li> unknown</li>
      */
     public String getSpecification() {
@@ -132,12 +168,14 @@ public class AigcUsageDataItem extends AbstractModel {
 <li>Gem3.0_2K</li>
 <li>Gem3.0_4K</li>
 <li>Sora2</li>
-<li>Veo3.1Standard</li>
 <li>Veo3.1Fast</li>
+<li>Veo3.1Standard</li>
 <li>Kling2.5pro_720P</li>
 <li>Kling2.5pro_1080P</li>
+<li>KlingO1_1080P</li>
 <li>Kling2.0&2.1std_720P</li>
 <li>Kling2.0&2.1pro_1080P</li>
+<li>KlingO1_720P</li>
 <li>Hailuo02&2.3_1080P</li>
 <li>Hailuo02&2.3_768P</li>
 <li>Hailuo2.3fast_768P</li>
@@ -150,6 +188,16 @@ public class AigcUsageDataItem extends AbstractModel {
 <li>ViduQ2pro_1080P</li>
 <li>ViduQ2turbo_720P</li>
 <li>ViduQ2turbo_1080P</li>
+<li>Hunyuan1.5_720P</li>
+<li>Hunyuan1.5_1080P</li>
+<li>Hunyuan3.0_1K</li>
+<li>Hunyuan3.0_2K</li>
+<li>Hunyuan3.0_4K</li>
+<li>Mingmou1.0_1080P</li>
+<li>Mingmou1.0_1K</li>
+<li>Mingmou1.0_2K</li>
+<li>Mingmou1.0_4K</li>
+<li>Mingmou1.0_720P</li>
 <li> unknown</li>
      * @param Specification AIGC规格。
 取值有：
@@ -159,12 +207,14 @@ public class AigcUsageDataItem extends AbstractModel {
 <li>Gem3.0_2K</li>
 <li>Gem3.0_4K</li>
 <li>Sora2</li>
-<li>Veo3.1Standard</li>
 <li>Veo3.1Fast</li>
+<li>Veo3.1Standard</li>
 <li>Kling2.5pro_720P</li>
 <li>Kling2.5pro_1080P</li>
+<li>KlingO1_1080P</li>
 <li>Kling2.0&2.1std_720P</li>
 <li>Kling2.0&2.1pro_1080P</li>
+<li>KlingO1_720P</li>
 <li>Hailuo02&2.3_1080P</li>
 <li>Hailuo02&2.3_768P</li>
 <li>Hailuo2.3fast_768P</li>
@@ -177,6 +227,16 @@ public class AigcUsageDataItem extends AbstractModel {
 <li>ViduQ2pro_1080P</li>
 <li>ViduQ2turbo_720P</li>
 <li>ViduQ2turbo_1080P</li>
+<li>Hunyuan1.5_720P</li>
+<li>Hunyuan1.5_1080P</li>
+<li>Hunyuan3.0_1K</li>
+<li>Hunyuan3.0_2K</li>
+<li>Hunyuan3.0_4K</li>
+<li>Mingmou1.0_1080P</li>
+<li>Mingmou1.0_1K</li>
+<li>Mingmou1.0_2K</li>
+<li>Mingmou1.0_4K</li>
+<li>Mingmou1.0_720P</li>
 <li> unknown</li>
      */
     public void setSpecification(String Specification) {

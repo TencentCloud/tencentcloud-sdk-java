@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Convert3DFormatRequest extends AbstractModel {
 
     /**
-    * 3D文件url地址。
+    * 3D文件url地址，模型文件大小≤60m，支持fbx，obj，glb格式3D文件输入。
     */
     @SerializedName("File3D")
     @Expose
@@ -38,16 +38,16 @@ public class Convert3DFormatRequest extends AbstractModel {
     private String Format;
 
     /**
-     * Get 3D文件url地址。 
-     * @return File3D 3D文件url地址。
+     * Get 3D文件url地址，模型文件大小≤60m，支持fbx，obj，glb格式3D文件输入。 
+     * @return File3D 3D文件url地址，模型文件大小≤60m，支持fbx，obj，glb格式3D文件输入。
      */
     public String getFile3D() {
         return this.File3D;
     }
 
     /**
-     * Set 3D文件url地址。
-     * @param File3D 3D文件url地址。
+     * Set 3D文件url地址，模型文件大小≤60m，支持fbx，obj，glb格式3D文件输入。
+     * @param File3D 3D文件url地址，模型文件大小≤60m，支持fbx，obj，glb格式3D文件输入。
      */
     public void setFile3D(String File3D) {
         this.File3D = File3D;

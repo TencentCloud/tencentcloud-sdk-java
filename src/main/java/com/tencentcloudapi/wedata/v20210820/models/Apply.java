@@ -159,10 +159,27 @@ public class Apply extends AbstractModel {
 
     /**
     * 扩展字段
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Metadata")
     @Expose
     private String Metadata;
+
+    /**
+    * 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateTimestamp")
+    @Expose
+    private Long CreateTimestamp;
+
+    /**
+    * 审批时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApproveTimestamp")
+    @Expose
+    private Long ApproveTimestamp;
 
     /**
      * Get 申请人id 
@@ -485,8 +502,10 @@ public class Apply extends AbstractModel {
     }
 
     /**
-     * Get 扩展字段 
+     * Get 扩展字段
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Metadata 扩展字段
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMetadata() {
         return this.Metadata;
@@ -494,10 +513,52 @@ public class Apply extends AbstractModel {
 
     /**
      * Set 扩展字段
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Metadata 扩展字段
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetadata(String Metadata) {
         this.Metadata = Metadata;
+    }
+
+    /**
+     * Get 创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateTimestamp 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCreateTimestamp() {
+        return this.CreateTimestamp;
+    }
+
+    /**
+     * Set 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateTimestamp 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateTimestamp(Long CreateTimestamp) {
+        this.CreateTimestamp = CreateTimestamp;
+    }
+
+    /**
+     * Get 审批时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApproveTimestamp 审批时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getApproveTimestamp() {
+        return this.ApproveTimestamp;
+    }
+
+    /**
+     * Set 审批时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApproveTimestamp 审批时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApproveTimestamp(Long ApproveTimestamp) {
+        this.ApproveTimestamp = ApproveTimestamp;
     }
 
     public Apply() {
@@ -565,6 +626,12 @@ public class Apply extends AbstractModel {
         if (source.Metadata != null) {
             this.Metadata = new String(source.Metadata);
         }
+        if (source.CreateTimestamp != null) {
+            this.CreateTimestamp = new Long(source.CreateTimestamp);
+        }
+        if (source.ApproveTimestamp != null) {
+            this.ApproveTimestamp = new Long(source.ApproveTimestamp);
+        }
     }
 
 
@@ -591,6 +658,8 @@ public class Apply extends AbstractModel {
         this.setParamSimple(map, prefix + "ApproveProjectName", this.ApproveProjectName);
         this.setParamSimple(map, prefix + "ApplyId", this.ApplyId);
         this.setParamSimple(map, prefix + "Metadata", this.Metadata);
+        this.setParamSimple(map, prefix + "CreateTimestamp", this.CreateTimestamp);
+        this.setParamSimple(map, prefix + "ApproveTimestamp", this.ApproveTimestamp);
 
     }
 }

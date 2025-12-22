@@ -88,6 +88,18 @@ public class CreateTaskBaseAttribute extends AbstractModel {
     private String TaskDescription;
 
     /**
+    * 任务文件夹路径
+
+注意：
+- 路径上不要填写任务节点类型；例如，在 一个名为 wf01 的工作流，“通用” 分类下，现在想要在这个分类下的 tf_01 文件夹下，新建一个 shell 任务；则 填写 /tf_01 即可；
+- 如果 tf_01 文件夹不存在，则需要先创建这个文件夹（使用 CreateTaskFolder 接口）才能操作成功；
+
+    */
+    @SerializedName("TaskFolderPath")
+    @Expose
+    private String TaskFolderPath;
+
+    /**
      * Get 任务名称 
      * @return TaskName 任务名称
      */
@@ -283,6 +295,42 @@ public class CreateTaskBaseAttribute extends AbstractModel {
         this.TaskDescription = TaskDescription;
     }
 
+    /**
+     * Get 任务文件夹路径
+
+注意：
+- 路径上不要填写任务节点类型；例如，在 一个名为 wf01 的工作流，“通用” 分类下，现在想要在这个分类下的 tf_01 文件夹下，新建一个 shell 任务；则 填写 /tf_01 即可；
+- 如果 tf_01 文件夹不存在，则需要先创建这个文件夹（使用 CreateTaskFolder 接口）才能操作成功；
+ 
+     * @return TaskFolderPath 任务文件夹路径
+
+注意：
+- 路径上不要填写任务节点类型；例如，在 一个名为 wf01 的工作流，“通用” 分类下，现在想要在这个分类下的 tf_01 文件夹下，新建一个 shell 任务；则 填写 /tf_01 即可；
+- 如果 tf_01 文件夹不存在，则需要先创建这个文件夹（使用 CreateTaskFolder 接口）才能操作成功；
+
+     */
+    public String getTaskFolderPath() {
+        return this.TaskFolderPath;
+    }
+
+    /**
+     * Set 任务文件夹路径
+
+注意：
+- 路径上不要填写任务节点类型；例如，在 一个名为 wf01 的工作流，“通用” 分类下，现在想要在这个分类下的 tf_01 文件夹下，新建一个 shell 任务；则 填写 /tf_01 即可；
+- 如果 tf_01 文件夹不存在，则需要先创建这个文件夹（使用 CreateTaskFolder 接口）才能操作成功；
+
+     * @param TaskFolderPath 任务文件夹路径
+
+注意：
+- 路径上不要填写任务节点类型；例如，在 一个名为 wf01 的工作流，“通用” 分类下，现在想要在这个分类下的 tf_01 文件夹下，新建一个 shell 任务；则 填写 /tf_01 即可；
+- 如果 tf_01 文件夹不存在，则需要先创建这个文件夹（使用 CreateTaskFolder 接口）才能操作成功；
+
+     */
+    public void setTaskFolderPath(String TaskFolderPath) {
+        this.TaskFolderPath = TaskFolderPath;
+    }
+
     public CreateTaskBaseAttribute() {
     }
 
@@ -306,6 +354,9 @@ public class CreateTaskBaseAttribute extends AbstractModel {
         if (source.TaskDescription != null) {
             this.TaskDescription = new String(source.TaskDescription);
         }
+        if (source.TaskFolderPath != null) {
+            this.TaskFolderPath = new String(source.TaskFolderPath);
+        }
     }
 
 
@@ -318,6 +369,7 @@ public class CreateTaskBaseAttribute extends AbstractModel {
         this.setParamSimple(map, prefix + "WorkflowId", this.WorkflowId);
         this.setParamSimple(map, prefix + "OwnerUin", this.OwnerUin);
         this.setParamSimple(map, prefix + "TaskDescription", this.TaskDescription);
+        this.setParamSimple(map, prefix + "TaskFolderPath", this.TaskFolderPath);
 
     }
 }

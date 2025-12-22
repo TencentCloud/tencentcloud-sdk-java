@@ -59,6 +59,13 @@ public class DescribeFormVersionParamRequest extends AbstractModel {
     private Long Size;
 
     /**
+    * 来源 studio(Studio脚本)/codeTemplate(代码模版)
+    */
+    @SerializedName("Source")
+    @Expose
+    private String Source;
+
+    /**
      * Get 项目Id 
      * @return ProjectId 项目Id
      */
@@ -138,6 +145,22 @@ public class DescribeFormVersionParamRequest extends AbstractModel {
         this.Size = Size;
     }
 
+    /**
+     * Get 来源 studio(Studio脚本)/codeTemplate(代码模版) 
+     * @return Source 来源 studio(Studio脚本)/codeTemplate(代码模版)
+     */
+    public String getSource() {
+        return this.Source;
+    }
+
+    /**
+     * Set 来源 studio(Studio脚本)/codeTemplate(代码模版)
+     * @param Source 来源 studio(Studio脚本)/codeTemplate(代码模版)
+     */
+    public void setSource(String Source) {
+        this.Source = Source;
+    }
+
     public DescribeFormVersionParamRequest() {
     }
 
@@ -164,6 +187,9 @@ public class DescribeFormVersionParamRequest extends AbstractModel {
         if (source.Size != null) {
             this.Size = new Long(source.Size);
         }
+        if (source.Source != null) {
+            this.Source = new String(source.Source);
+        }
     }
 
 
@@ -176,6 +202,7 @@ public class DescribeFormVersionParamRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "OriginalParams.", this.OriginalParams);
         this.setParamSimple(map, prefix + "Page", this.Page);
         this.setParamSimple(map, prefix + "Size", this.Size);
+        this.setParamSimple(map, prefix + "Source", this.Source);
 
     }
 }

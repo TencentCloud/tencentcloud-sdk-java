@@ -192,6 +192,21 @@ public class ListQaItem extends AbstractModel {
     private String StaffName;
 
     /**
+    * 问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableScope")
+    @Expose
+    private Long EnableScope;
+
+    /**
+    * 问答关联的文档生效域
+    */
+    @SerializedName("DocEnableScope")
+    @Expose
+    private Long DocEnableScope;
+
+    /**
      * Get 问答ID 
      * @return QaBizId 问答ID
      */
@@ -575,6 +590,42 @@ public class ListQaItem extends AbstractModel {
         this.StaffName = StaffName;
     }
 
+    /**
+     * Get 问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableScope 问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getEnableScope() {
+        return this.EnableScope;
+    }
+
+    /**
+     * Set 问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableScope 问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableScope(Long EnableScope) {
+        this.EnableScope = EnableScope;
+    }
+
+    /**
+     * Get 问答关联的文档生效域 
+     * @return DocEnableScope 问答关联的文档生效域
+     */
+    public Long getDocEnableScope() {
+        return this.DocEnableScope;
+    }
+
+    /**
+     * Set 问答关联的文档生效域
+     * @param DocEnableScope 问答关联的文档生效域
+     */
+    public void setDocEnableScope(Long DocEnableScope) {
+        this.DocEnableScope = DocEnableScope;
+    }
+
     public ListQaItem() {
     }
 
@@ -658,6 +709,12 @@ public class ListQaItem extends AbstractModel {
         if (source.StaffName != null) {
             this.StaffName = new String(source.StaffName);
         }
+        if (source.EnableScope != null) {
+            this.EnableScope = new Long(source.EnableScope);
+        }
+        if (source.DocEnableScope != null) {
+            this.DocEnableScope = new Long(source.DocEnableScope);
+        }
     }
 
 
@@ -689,6 +746,8 @@ public class ListQaItem extends AbstractModel {
         this.setParamSimple(map, prefix + "SimilarQuestionTips", this.SimilarQuestionTips);
         this.setParamSimple(map, prefix + "IsDisabled", this.IsDisabled);
         this.setParamSimple(map, prefix + "StaffName", this.StaffName);
+        this.setParamSimple(map, prefix + "EnableScope", this.EnableScope);
+        this.setParamSimple(map, prefix + "DocEnableScope", this.DocEnableScope);
 
     }
 }

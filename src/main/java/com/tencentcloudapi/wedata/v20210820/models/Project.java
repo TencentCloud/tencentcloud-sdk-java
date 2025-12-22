@@ -159,6 +159,14 @@ public class Project extends AbstractModel {
     private WorkspaceExt [] WorkspaceExt;
 
     /**
+    * 创建时间时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateTimestamp")
+    @Expose
+    private Long CreateTimestamp;
+
+    /**
      * Get 项目的所在租户ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TenantId 项目的所在租户ID
@@ -494,6 +502,26 @@ public class Project extends AbstractModel {
         this.WorkspaceExt = WorkspaceExt;
     }
 
+    /**
+     * Get 创建时间时间戳
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateTimestamp 创建时间时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCreateTimestamp() {
+        return this.CreateTimestamp;
+    }
+
+    /**
+     * Set 创建时间时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateTimestamp 创建时间时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateTimestamp(Long CreateTimestamp) {
+        this.CreateTimestamp = CreateTimestamp;
+    }
+
     public Project() {
     }
 
@@ -565,6 +593,9 @@ public class Project extends AbstractModel {
                 this.WorkspaceExt[i] = new WorkspaceExt(source.WorkspaceExt[i]);
             }
         }
+        if (source.CreateTimestamp != null) {
+            this.CreateTimestamp = new Long(source.CreateTimestamp);
+        }
     }
 
 
@@ -589,6 +620,7 @@ public class Project extends AbstractModel {
         this.setParamArraySimple(map, prefix + "SecondModuleList.", this.SecondModuleList);
         this.setParamObj(map, prefix + "Owner.", this.Owner);
         this.setParamArrayObj(map, prefix + "WorkspaceExt.", this.WorkspaceExt);
+        this.setParamSimple(map, prefix + "CreateTimestamp", this.CreateTimestamp);
 
     }
 }

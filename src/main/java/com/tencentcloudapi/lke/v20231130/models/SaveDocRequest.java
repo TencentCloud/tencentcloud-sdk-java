@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class SaveDocRequest extends AbstractModel {
 
     /**
-    * 应用ID
+    * 应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
     */
     @SerializedName("BotBizId")
     @Expose
     private String BotBizId;
 
     /**
-    * 文件名
+    * 文件名，需要包含文件扩展名
     */
     @SerializedName("FileName")
     @Expose
@@ -82,7 +82,7 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
     private String Size;
 
     /**
-    * 标签适用范围，需要传参为1
+    * 标签适用范围，1:全部，2:按条件。默认为1。
     */
     @SerializedName("AttrRange")
     @Expose
@@ -118,28 +118,28 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
     private Long ReferUrlType;
 
     /**
-    * 有效开始时间，unix秒级时间戳
+    * 有效开始时间，unix秒级时间戳，默认为0
     */
     @SerializedName("ExpireStart")
     @Expose
     private String ExpireStart;
 
     /**
-    * 有效结束时间，unix秒级时间戳，0代表永久有效
+    * 有效结束时间，unix秒级时间戳，默认为0代表永久有效
     */
     @SerializedName("ExpireEnd")
     @Expose
     private String ExpireEnd;
 
     /**
-    * 是否引用链接
+    * 是否显示引用的文档来源(false不显示 true显示）默认false
     */
     @SerializedName("IsRefer")
     @Expose
     private Boolean IsRefer;
 
     /**
-    * 文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档） 默认为1  <br> 请注意，opt=1的时候请从腾讯云智能体开发平台页面下载excel模板
+    * 文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档） 默认为2 <br> 请注意，opt=1的时候请从腾讯云智能体开发平台页面下载excel模板
     */
     @SerializedName("Opt")
     @Expose
@@ -258,39 +258,46 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
     private String SplitRule;
 
     /**
-    * 文档更新频率
+    * 文档更新频率，默认值为0不更新
     */
     @SerializedName("UpdatePeriodInfo")
     @Expose
     private UpdatePeriodInfo UpdatePeriodInfo;
 
     /**
-     * Get 应用ID 
-     * @return BotBizId 应用ID
+    * 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+    */
+    @SerializedName("EnableScope")
+    @Expose
+    private Long EnableScope;
+
+    /**
+     * Get 应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa) 
+     * @return BotBizId 应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      */
     public String getBotBizId() {
         return this.BotBizId;
     }
 
     /**
-     * Set 应用ID
-     * @param BotBizId 应用ID
+     * Set 应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+     * @param BotBizId 应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      */
     public void setBotBizId(String BotBizId) {
         this.BotBizId = BotBizId;
     }
 
     /**
-     * Get 文件名 
-     * @return FileName 文件名
+     * Get 文件名，需要包含文件扩展名 
+     * @return FileName 文件名，需要包含文件扩展名
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set 文件名
-     * @param FileName 文件名
+     * Set 文件名，需要包含文件扩展名
+     * @param FileName 文件名，需要包含文件扩展名
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
@@ -413,16 +420,16 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
     }
 
     /**
-     * Get 标签适用范围，需要传参为1 
-     * @return AttrRange 标签适用范围，需要传参为1
+     * Get 标签适用范围，1:全部，2:按条件。默认为1。 
+     * @return AttrRange 标签适用范围，1:全部，2:按条件。默认为1。
      */
     public Long getAttrRange() {
         return this.AttrRange;
     }
 
     /**
-     * Set 标签适用范围，需要传参为1
-     * @param AttrRange 标签适用范围，需要传参为1
+     * Set 标签适用范围，1:全部，2:按条件。默认为1。
+     * @param AttrRange 标签适用范围，1:全部，2:按条件。默认为1。
      */
     public void setAttrRange(Long AttrRange) {
         this.AttrRange = AttrRange;
@@ -497,64 +504,64 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
     }
 
     /**
-     * Get 有效开始时间，unix秒级时间戳 
-     * @return ExpireStart 有效开始时间，unix秒级时间戳
+     * Get 有效开始时间，unix秒级时间戳，默认为0 
+     * @return ExpireStart 有效开始时间，unix秒级时间戳，默认为0
      */
     public String getExpireStart() {
         return this.ExpireStart;
     }
 
     /**
-     * Set 有效开始时间，unix秒级时间戳
-     * @param ExpireStart 有效开始时间，unix秒级时间戳
+     * Set 有效开始时间，unix秒级时间戳，默认为0
+     * @param ExpireStart 有效开始时间，unix秒级时间戳，默认为0
      */
     public void setExpireStart(String ExpireStart) {
         this.ExpireStart = ExpireStart;
     }
 
     /**
-     * Get 有效结束时间，unix秒级时间戳，0代表永久有效 
-     * @return ExpireEnd 有效结束时间，unix秒级时间戳，0代表永久有效
+     * Get 有效结束时间，unix秒级时间戳，默认为0代表永久有效 
+     * @return ExpireEnd 有效结束时间，unix秒级时间戳，默认为0代表永久有效
      */
     public String getExpireEnd() {
         return this.ExpireEnd;
     }
 
     /**
-     * Set 有效结束时间，unix秒级时间戳，0代表永久有效
-     * @param ExpireEnd 有效结束时间，unix秒级时间戳，0代表永久有效
+     * Set 有效结束时间，unix秒级时间戳，默认为0代表永久有效
+     * @param ExpireEnd 有效结束时间，unix秒级时间戳，默认为0代表永久有效
      */
     public void setExpireEnd(String ExpireEnd) {
         this.ExpireEnd = ExpireEnd;
     }
 
     /**
-     * Get 是否引用链接 
-     * @return IsRefer 是否引用链接
+     * Get 是否显示引用的文档来源(false不显示 true显示）默认false 
+     * @return IsRefer 是否显示引用的文档来源(false不显示 true显示）默认false
      */
     public Boolean getIsRefer() {
         return this.IsRefer;
     }
 
     /**
-     * Set 是否引用链接
-     * @param IsRefer 是否引用链接
+     * Set 是否显示引用的文档来源(false不显示 true显示）默认false
+     * @param IsRefer 是否显示引用的文档来源(false不显示 true显示）默认false
      */
     public void setIsRefer(Boolean IsRefer) {
         this.IsRefer = IsRefer;
     }
 
     /**
-     * Get 文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档） 默认为1  <br> 请注意，opt=1的时候请从腾讯云智能体开发平台页面下载excel模板 
-     * @return Opt 文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档） 默认为1  <br> 请注意，opt=1的时候请从腾讯云智能体开发平台页面下载excel模板
+     * Get 文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档） 默认为2 <br> 请注意，opt=1的时候请从腾讯云智能体开发平台页面下载excel模板 
+     * @return Opt 文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档） 默认为2 <br> 请注意，opt=1的时候请从腾讯云智能体开发平台页面下载excel模板
      */
     public Long getOpt() {
         return this.Opt;
     }
 
     /**
-     * Set 文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档） 默认为1  <br> 请注意，opt=1的时候请从腾讯云智能体开发平台页面下载excel模板
-     * @param Opt 文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档） 默认为1  <br> 请注意，opt=1的时候请从腾讯云智能体开发平台页面下载excel模板
+     * Set 文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档） 默认为2 <br> 请注意，opt=1的时候请从腾讯云智能体开发平台页面下载excel模板
+     * @param Opt 文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档） 默认为2 <br> 请注意，opt=1的时候请从腾讯云智能体开发平台页面下载excel模板
      */
     public void setOpt(Long Opt) {
         this.Opt = Opt;
@@ -961,19 +968,35 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
     }
 
     /**
-     * Get 文档更新频率 
-     * @return UpdatePeriodInfo 文档更新频率
+     * Get 文档更新频率，默认值为0不更新 
+     * @return UpdatePeriodInfo 文档更新频率，默认值为0不更新
      */
     public UpdatePeriodInfo getUpdatePeriodInfo() {
         return this.UpdatePeriodInfo;
     }
 
     /**
-     * Set 文档更新频率
-     * @param UpdatePeriodInfo 文档更新频率
+     * Set 文档更新频率，默认值为0不更新
+     * @param UpdatePeriodInfo 文档更新频率，默认值为0不更新
      */
     public void setUpdatePeriodInfo(UpdatePeriodInfo UpdatePeriodInfo) {
         this.UpdatePeriodInfo = UpdatePeriodInfo;
+    }
+
+    /**
+     * Get 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域 
+     * @return EnableScope 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     */
+    public Long getEnableScope() {
+        return this.EnableScope;
+    }
+
+    /**
+     * Set 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     * @param EnableScope 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     */
+    public void setEnableScope(Long EnableScope) {
+        this.EnableScope = EnableScope;
     }
 
     public SaveDocRequest() {
@@ -1053,6 +1076,9 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
         if (source.UpdatePeriodInfo != null) {
             this.UpdatePeriodInfo = new UpdatePeriodInfo(source.UpdatePeriodInfo);
         }
+        if (source.EnableScope != null) {
+            this.EnableScope = new Long(source.EnableScope);
+        }
     }
 
 
@@ -1081,6 +1107,7 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
         this.setParamArrayObj(map, prefix + "DuplicateFileHandles.", this.DuplicateFileHandles);
         this.setParamSimple(map, prefix + "SplitRule", this.SplitRule);
         this.setParamObj(map, prefix + "UpdatePeriodInfo.", this.UpdatePeriodInfo);
+        this.setParamSimple(map, prefix + "EnableScope", this.EnableScope);
 
     }
 }

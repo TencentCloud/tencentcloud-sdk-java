@@ -560,19 +560,6 @@ public class TcaplusdbClient extends AbstractClient{
     }
 
     /**
-     *不再使用
-
-表格数据回档
-     * @param req RollbackTablesRequest
-     * @return RollbackTablesResponse
-     * @throws TencentCloudSDKException
-     */
-    public RollbackTablesResponse RollbackTables(RollbackTablesRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "RollbackTables", RollbackTablesResponse.class);
-    }
-
-    /**
      *新增、删除、修改备份过期策略， ClusterId必须为具体的集群Id（appid）
      * @param req SetBackupExpireRuleRequest
      * @return SetBackupExpireRuleResponse

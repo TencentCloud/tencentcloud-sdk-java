@@ -136,6 +136,13 @@ public class BackupStatus extends AbstractModel {
     private Long TaskId;
 
     /**
+    * 上传大小
+    */
+    @SerializedName("UploadBytes")
+    @Expose
+    private Long UploadBytes;
+
+    /**
      * Get 备份任务id 
      * @return JobId 备份任务id
      */
@@ -391,6 +398,22 @@ public class BackupStatus extends AbstractModel {
         this.TaskId = TaskId;
     }
 
+    /**
+     * Get 上传大小 
+     * @return UploadBytes 上传大小
+     */
+    public Long getUploadBytes() {
+        return this.UploadBytes;
+    }
+
+    /**
+     * Set 上传大小
+     * @param UploadBytes 上传大小
+     */
+    public void setUploadBytes(Long UploadBytes) {
+        this.UploadBytes = UploadBytes;
+    }
+
     public BackupStatus() {
     }
 
@@ -447,6 +470,9 @@ public class BackupStatus extends AbstractModel {
         if (source.TaskId != null) {
             this.TaskId = new Long(source.TaskId);
         }
+        if (source.UploadBytes != null) {
+            this.UploadBytes = new Long(source.UploadBytes);
+        }
     }
 
 
@@ -470,6 +496,7 @@ public class BackupStatus extends AbstractModel {
         this.setParamSimple(map, prefix + "Timeout", this.Timeout);
         this.setParamSimple(map, prefix + "BackupJobId", this.BackupJobId);
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "UploadBytes", this.UploadBytes);
 
     }
 }

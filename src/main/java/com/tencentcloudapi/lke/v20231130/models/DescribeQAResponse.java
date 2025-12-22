@@ -249,6 +249,37 @@ public class DescribeQAResponse extends AbstractModel {
     private Boolean IsDisabled;
 
     /**
+    * 从根节点开始的路径分类ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CateBizIdPath")
+    @Expose
+    private String [] CateBizIdPath;
+
+    /**
+    * 从根节点开始的路径分类名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CateNamePath")
+    @Expose
+    private String [] CateNamePath;
+
+    /**
+    * 问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableScope")
+    @Expose
+    private Long EnableScope;
+
+    /**
+    * 问答关联的文档生效域
+    */
+    @SerializedName("DocEnableScope")
+    @Expose
+    private Long DocEnableScope;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -796,6 +827,82 @@ public class DescribeQAResponse extends AbstractModel {
     }
 
     /**
+     * Get 从根节点开始的路径分类ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CateBizIdPath 从根节点开始的路径分类ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getCateBizIdPath() {
+        return this.CateBizIdPath;
+    }
+
+    /**
+     * Set 从根节点开始的路径分类ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CateBizIdPath 从根节点开始的路径分类ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCateBizIdPath(String [] CateBizIdPath) {
+        this.CateBizIdPath = CateBizIdPath;
+    }
+
+    /**
+     * Get 从根节点开始的路径分类名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CateNamePath 从根节点开始的路径分类名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getCateNamePath() {
+        return this.CateNamePath;
+    }
+
+    /**
+     * Set 从根节点开始的路径分类名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CateNamePath 从根节点开始的路径分类名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCateNamePath(String [] CateNamePath) {
+        this.CateNamePath = CateNamePath;
+    }
+
+    /**
+     * Get 问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableScope 问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getEnableScope() {
+        return this.EnableScope;
+    }
+
+    /**
+     * Set 问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableScope 问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableScope(Long EnableScope) {
+        this.EnableScope = EnableScope;
+    }
+
+    /**
+     * Get 问答关联的文档生效域 
+     * @return DocEnableScope 问答关联的文档生效域
+     */
+    public Long getDocEnableScope() {
+        return this.DocEnableScope;
+    }
+
+    /**
+     * Set 问答关联的文档生效域
+     * @param DocEnableScope 问答关联的文档生效域
+     */
+    public void setDocEnableScope(Long DocEnableScope) {
+        this.DocEnableScope = DocEnableScope;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -918,6 +1025,24 @@ public class DescribeQAResponse extends AbstractModel {
         if (source.IsDisabled != null) {
             this.IsDisabled = new Boolean(source.IsDisabled);
         }
+        if (source.CateBizIdPath != null) {
+            this.CateBizIdPath = new String[source.CateBizIdPath.length];
+            for (int i = 0; i < source.CateBizIdPath.length; i++) {
+                this.CateBizIdPath[i] = new String(source.CateBizIdPath[i]);
+            }
+        }
+        if (source.CateNamePath != null) {
+            this.CateNamePath = new String[source.CateNamePath.length];
+            for (int i = 0; i < source.CateNamePath.length; i++) {
+                this.CateNamePath[i] = new String(source.CateNamePath[i]);
+            }
+        }
+        if (source.EnableScope != null) {
+            this.EnableScope = new Long(source.EnableScope);
+        }
+        if (source.DocEnableScope != null) {
+            this.DocEnableScope = new Long(source.DocEnableScope);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -958,6 +1083,10 @@ public class DescribeQAResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "VideoAuditStatus", this.VideoAuditStatus);
         this.setParamSimple(map, prefix + "QuestionDesc", this.QuestionDesc);
         this.setParamSimple(map, prefix + "IsDisabled", this.IsDisabled);
+        this.setParamArraySimple(map, prefix + "CateBizIdPath.", this.CateBizIdPath);
+        this.setParamArraySimple(map, prefix + "CateNamePath.", this.CateNamePath);
+        this.setParamSimple(map, prefix + "EnableScope", this.EnableScope);
+        this.setParamSimple(map, prefix + "DocEnableScope", this.DocEnableScope);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

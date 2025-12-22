@@ -117,6 +117,17 @@ public class VclmClient extends AbstractClient{
     }
 
     /**
+     *用于提交视频编辑任务，支持上传视频、文本及图片素材开展编辑操作，涵盖风格迁移、元素替换、内容增减等核心能力。
+     * @param req DescribeVideoEditJobRequest
+     * @return DescribeVideoEditJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVideoEditJobResponse DescribeVideoEditJob(DescribeVideoEditJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVideoEditJob", DescribeVideoEditJobResponse.class);
+    }
+
+    /**
      *查询视频人脸融合任务
      * @param req DescribeVideoFaceFusionJobRequest
      * @return DescribeVideoFaceFusionJobResponse
@@ -217,6 +228,17 @@ public class VclmClient extends AbstractClient{
     public SubmitTemplateToVideoJobResponse SubmitTemplateToVideoJob(SubmitTemplateToVideoJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SubmitTemplateToVideoJob", SubmitTemplateToVideoJobResponse.class);
+    }
+
+    /**
+     *用于提交视频编辑任务，支持上传视频、文本及图片素材开展编辑操作，涵盖风格迁移、元素替换、内容增减等核心能力。
+     * @param req SubmitVideoEditJobRequest
+     * @return SubmitVideoEditJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitVideoEditJobResponse SubmitVideoEditJob(SubmitVideoEditJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitVideoEditJob", SubmitVideoEditJobResponse.class);
     }
 
     /**

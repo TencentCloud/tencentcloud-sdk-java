@@ -34,6 +34,13 @@ public class DescribeBackUpSchedulesRequest extends AbstractModel {
     private Long ApplicationType;
 
     /**
+    * 0-未加密；1-已加密
+    */
+    @SerializedName("EncryptionFilters")
+    @Expose
+    private Long [] EncryptionFilters;
+
+    /**
      * Get 任务类型
 0-不限制，或使用TypeFilters过滤；
 1-备份恢复（包括周期备份和一次性备份）；
@@ -61,6 +68,22 @@ public class DescribeBackUpSchedulesRequest extends AbstractModel {
         this.ApplicationType = ApplicationType;
     }
 
+    /**
+     * Get 0-未加密；1-已加密 
+     * @return EncryptionFilters 0-未加密；1-已加密
+     */
+    public Long [] getEncryptionFilters() {
+        return this.EncryptionFilters;
+    }
+
+    /**
+     * Set 0-未加密；1-已加密
+     * @param EncryptionFilters 0-未加密；1-已加密
+     */
+    public void setEncryptionFilters(Long [] EncryptionFilters) {
+        this.EncryptionFilters = EncryptionFilters;
+    }
+
     public DescribeBackUpSchedulesRequest() {
     }
 
@@ -72,6 +95,12 @@ public class DescribeBackUpSchedulesRequest extends AbstractModel {
         if (source.ApplicationType != null) {
             this.ApplicationType = new Long(source.ApplicationType);
         }
+        if (source.EncryptionFilters != null) {
+            this.EncryptionFilters = new Long[source.EncryptionFilters.length];
+            for (int i = 0; i < source.EncryptionFilters.length; i++) {
+                this.EncryptionFilters[i] = new Long(source.EncryptionFilters[i]);
+            }
+        }
     }
 
 
@@ -80,6 +109,7 @@ public class DescribeBackUpSchedulesRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationType", this.ApplicationType);
+        this.setParamArraySimple(map, prefix + "EncryptionFilters.", this.EncryptionFilters);
 
     }
 }

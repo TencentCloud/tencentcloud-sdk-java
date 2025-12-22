@@ -94,6 +94,7 @@ public class RegisterInfo extends AbstractModel {
 
 USCC :(默认)工商组织营业执照
 PRACTICELICENSEOFMEDICALINSTITUTION :医疗机构执业许可证
+CLINICFILLINGCERTIFICATE:诊所备案证
     */
     @SerializedName("OrganizationIdCardType")
     @Expose
@@ -302,11 +303,13 @@ OrganizationIdCardTypeSame  是否可以更改证照类型。
      * Get 企业证照类型：
 
 USCC :(默认)工商组织营业执照
-PRACTICELICENSEOFMEDICALINSTITUTION :医疗机构执业许可证 
+PRACTICELICENSEOFMEDICALINSTITUTION :医疗机构执业许可证
+CLINICFILLINGCERTIFICATE:诊所备案证 
      * @return OrganizationIdCardType 企业证照类型：
 
 USCC :(默认)工商组织营业执照
 PRACTICELICENSEOFMEDICALINSTITUTION :医疗机构执业许可证
+CLINICFILLINGCERTIFICATE:诊所备案证
      */
     public String getOrganizationIdCardType() {
         return this.OrganizationIdCardType;
@@ -317,10 +320,12 @@ PRACTICELICENSEOFMEDICALINSTITUTION :医疗机构执业许可证
 
 USCC :(默认)工商组织营业执照
 PRACTICELICENSEOFMEDICALINSTITUTION :医疗机构执业许可证
+CLINICFILLINGCERTIFICATE:诊所备案证
      * @param OrganizationIdCardType 企业证照类型：
 
 USCC :(默认)工商组织营业执照
 PRACTICELICENSEOFMEDICALINSTITUTION :医疗机构执业许可证
+CLINICFILLINGCERTIFICATE:诊所备案证
      */
     public void setOrganizationIdCardType(String OrganizationIdCardType) {
         this.OrganizationIdCardType = OrganizationIdCardType;

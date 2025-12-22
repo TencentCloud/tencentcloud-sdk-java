@@ -136,6 +136,97 @@ public class BackUpJobDisplay extends AbstractModel {
     private Long IsolationCount;
 
     /**
+    * 是否开启安全锁
+    */
+    @SerializedName("EnableSecurityLock")
+    @Expose
+    private Long EnableSecurityLock;
+
+    /**
+    * 宽限期天数
+    */
+    @SerializedName("GracePeriod")
+    @Expose
+    private Long GracePeriod;
+
+    /**
+    * 宽限期开始时间
+    */
+    @SerializedName("GraceStartTime")
+    @Expose
+    private String GraceStartTime;
+
+    /**
+    * 是否在宽限期内
+    */
+    @SerializedName("IsWithinGracePeriod")
+    @Expose
+    private Boolean IsWithinGracePeriod;
+
+    /**
+    * 是否使用托管桶
+    */
+    @SerializedName("UseManagedBucket")
+    @Expose
+    private Boolean UseManagedBucket;
+
+    /**
+    * 实例ID
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * 实例名称
+    */
+    @SerializedName("InstanceName")
+    @Expose
+    private String InstanceName;
+
+    /**
+    * 实例状态
+    */
+    @SerializedName("InstanceStatus")
+    @Expose
+    private String InstanceStatus;
+
+    /**
+    * 实例状态描述
+    */
+    @SerializedName("InstanceStatusDesc")
+    @Expose
+    private String InstanceStatusDesc;
+
+    /**
+    * 备份远程桶地域
+    */
+    @SerializedName("DataRemoteRegion")
+    @Expose
+    private String DataRemoteRegion;
+
+    /**
+    * 桶加密状态信息
+    */
+    @SerializedName("BucketEncryption")
+    @Expose
+    private BucketEncryptionInfo BucketEncryption;
+
+    /**
+    * 备份任务创建时记录的加密类型：SSE-COS/SSE-KMS/disabled
+    */
+    @SerializedName("Encryption")
+    @Expose
+    private String Encryption;
+
+    /**
+    * 是否开通加密存储：0-未开通，1-已开通
+    */
+    @SerializedName("EncryptionEnabled")
+    @Expose
+    private Boolean EncryptionEnabled;
+
+    /**
      * Get 备份实例id 
      * @return JobId 备份实例id
      */
@@ -391,6 +482,214 @@ public class BackUpJobDisplay extends AbstractModel {
         this.IsolationCount = IsolationCount;
     }
 
+    /**
+     * Get 是否开启安全锁 
+     * @return EnableSecurityLock 是否开启安全锁
+     */
+    public Long getEnableSecurityLock() {
+        return this.EnableSecurityLock;
+    }
+
+    /**
+     * Set 是否开启安全锁
+     * @param EnableSecurityLock 是否开启安全锁
+     */
+    public void setEnableSecurityLock(Long EnableSecurityLock) {
+        this.EnableSecurityLock = EnableSecurityLock;
+    }
+
+    /**
+     * Get 宽限期天数 
+     * @return GracePeriod 宽限期天数
+     */
+    public Long getGracePeriod() {
+        return this.GracePeriod;
+    }
+
+    /**
+     * Set 宽限期天数
+     * @param GracePeriod 宽限期天数
+     */
+    public void setGracePeriod(Long GracePeriod) {
+        this.GracePeriod = GracePeriod;
+    }
+
+    /**
+     * Get 宽限期开始时间 
+     * @return GraceStartTime 宽限期开始时间
+     */
+    public String getGraceStartTime() {
+        return this.GraceStartTime;
+    }
+
+    /**
+     * Set 宽限期开始时间
+     * @param GraceStartTime 宽限期开始时间
+     */
+    public void setGraceStartTime(String GraceStartTime) {
+        this.GraceStartTime = GraceStartTime;
+    }
+
+    /**
+     * Get 是否在宽限期内 
+     * @return IsWithinGracePeriod 是否在宽限期内
+     */
+    public Boolean getIsWithinGracePeriod() {
+        return this.IsWithinGracePeriod;
+    }
+
+    /**
+     * Set 是否在宽限期内
+     * @param IsWithinGracePeriod 是否在宽限期内
+     */
+    public void setIsWithinGracePeriod(Boolean IsWithinGracePeriod) {
+        this.IsWithinGracePeriod = IsWithinGracePeriod;
+    }
+
+    /**
+     * Get 是否使用托管桶 
+     * @return UseManagedBucket 是否使用托管桶
+     */
+    public Boolean getUseManagedBucket() {
+        return this.UseManagedBucket;
+    }
+
+    /**
+     * Set 是否使用托管桶
+     * @param UseManagedBucket 是否使用托管桶
+     */
+    public void setUseManagedBucket(Boolean UseManagedBucket) {
+        this.UseManagedBucket = UseManagedBucket;
+    }
+
+    /**
+     * Get 实例ID 
+     * @return InstanceId 实例ID
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 实例ID
+     * @param InstanceId 实例ID
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get 实例名称 
+     * @return InstanceName 实例名称
+     */
+    public String getInstanceName() {
+        return this.InstanceName;
+    }
+
+    /**
+     * Set 实例名称
+     * @param InstanceName 实例名称
+     */
+    public void setInstanceName(String InstanceName) {
+        this.InstanceName = InstanceName;
+    }
+
+    /**
+     * Get 实例状态 
+     * @return InstanceStatus 实例状态
+     */
+    public String getInstanceStatus() {
+        return this.InstanceStatus;
+    }
+
+    /**
+     * Set 实例状态
+     * @param InstanceStatus 实例状态
+     */
+    public void setInstanceStatus(String InstanceStatus) {
+        this.InstanceStatus = InstanceStatus;
+    }
+
+    /**
+     * Get 实例状态描述 
+     * @return InstanceStatusDesc 实例状态描述
+     */
+    public String getInstanceStatusDesc() {
+        return this.InstanceStatusDesc;
+    }
+
+    /**
+     * Set 实例状态描述
+     * @param InstanceStatusDesc 实例状态描述
+     */
+    public void setInstanceStatusDesc(String InstanceStatusDesc) {
+        this.InstanceStatusDesc = InstanceStatusDesc;
+    }
+
+    /**
+     * Get 备份远程桶地域 
+     * @return DataRemoteRegion 备份远程桶地域
+     */
+    public String getDataRemoteRegion() {
+        return this.DataRemoteRegion;
+    }
+
+    /**
+     * Set 备份远程桶地域
+     * @param DataRemoteRegion 备份远程桶地域
+     */
+    public void setDataRemoteRegion(String DataRemoteRegion) {
+        this.DataRemoteRegion = DataRemoteRegion;
+    }
+
+    /**
+     * Get 桶加密状态信息 
+     * @return BucketEncryption 桶加密状态信息
+     */
+    public BucketEncryptionInfo getBucketEncryption() {
+        return this.BucketEncryption;
+    }
+
+    /**
+     * Set 桶加密状态信息
+     * @param BucketEncryption 桶加密状态信息
+     */
+    public void setBucketEncryption(BucketEncryptionInfo BucketEncryption) {
+        this.BucketEncryption = BucketEncryption;
+    }
+
+    /**
+     * Get 备份任务创建时记录的加密类型：SSE-COS/SSE-KMS/disabled 
+     * @return Encryption 备份任务创建时记录的加密类型：SSE-COS/SSE-KMS/disabled
+     */
+    public String getEncryption() {
+        return this.Encryption;
+    }
+
+    /**
+     * Set 备份任务创建时记录的加密类型：SSE-COS/SSE-KMS/disabled
+     * @param Encryption 备份任务创建时记录的加密类型：SSE-COS/SSE-KMS/disabled
+     */
+    public void setEncryption(String Encryption) {
+        this.Encryption = Encryption;
+    }
+
+    /**
+     * Get 是否开通加密存储：0-未开通，1-已开通 
+     * @return EncryptionEnabled 是否开通加密存储：0-未开通，1-已开通
+     */
+    public Boolean getEncryptionEnabled() {
+        return this.EncryptionEnabled;
+    }
+
+    /**
+     * Set 是否开通加密存储：0-未开通，1-已开通
+     * @param EncryptionEnabled 是否开通加密存储：0-未开通，1-已开通
+     */
+    public void setEncryptionEnabled(Boolean EncryptionEnabled) {
+        this.EncryptionEnabled = EncryptionEnabled;
+    }
+
     public BackUpJobDisplay() {
     }
 
@@ -447,6 +746,45 @@ public class BackUpJobDisplay extends AbstractModel {
         if (source.IsolationCount != null) {
             this.IsolationCount = new Long(source.IsolationCount);
         }
+        if (source.EnableSecurityLock != null) {
+            this.EnableSecurityLock = new Long(source.EnableSecurityLock);
+        }
+        if (source.GracePeriod != null) {
+            this.GracePeriod = new Long(source.GracePeriod);
+        }
+        if (source.GraceStartTime != null) {
+            this.GraceStartTime = new String(source.GraceStartTime);
+        }
+        if (source.IsWithinGracePeriod != null) {
+            this.IsWithinGracePeriod = new Boolean(source.IsWithinGracePeriod);
+        }
+        if (source.UseManagedBucket != null) {
+            this.UseManagedBucket = new Boolean(source.UseManagedBucket);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.InstanceStatus != null) {
+            this.InstanceStatus = new String(source.InstanceStatus);
+        }
+        if (source.InstanceStatusDesc != null) {
+            this.InstanceStatusDesc = new String(source.InstanceStatusDesc);
+        }
+        if (source.DataRemoteRegion != null) {
+            this.DataRemoteRegion = new String(source.DataRemoteRegion);
+        }
+        if (source.BucketEncryption != null) {
+            this.BucketEncryption = new BucketEncryptionInfo(source.BucketEncryption);
+        }
+        if (source.Encryption != null) {
+            this.Encryption = new String(source.Encryption);
+        }
+        if (source.EncryptionEnabled != null) {
+            this.EncryptionEnabled = new Boolean(source.EncryptionEnabled);
+        }
     }
 
 
@@ -470,6 +808,19 @@ public class BackUpJobDisplay extends AbstractModel {
         this.setParamSimple(map, prefix + "ErrorReason", this.ErrorReason);
         this.setParamObj(map, prefix + "SnapshotRemainPolicy.", this.SnapshotRemainPolicy);
         this.setParamSimple(map, prefix + "IsolationCount", this.IsolationCount);
+        this.setParamSimple(map, prefix + "EnableSecurityLock", this.EnableSecurityLock);
+        this.setParamSimple(map, prefix + "GracePeriod", this.GracePeriod);
+        this.setParamSimple(map, prefix + "GraceStartTime", this.GraceStartTime);
+        this.setParamSimple(map, prefix + "IsWithinGracePeriod", this.IsWithinGracePeriod);
+        this.setParamSimple(map, prefix + "UseManagedBucket", this.UseManagedBucket);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
+        this.setParamSimple(map, prefix + "InstanceStatus", this.InstanceStatus);
+        this.setParamSimple(map, prefix + "InstanceStatusDesc", this.InstanceStatusDesc);
+        this.setParamSimple(map, prefix + "DataRemoteRegion", this.DataRemoteRegion);
+        this.setParamObj(map, prefix + "BucketEncryption.", this.BucketEncryption);
+        this.setParamSimple(map, prefix + "Encryption", this.Encryption);
+        this.setParamSimple(map, prefix + "EncryptionEnabled", this.EncryptionEnabled);
 
     }
 }
