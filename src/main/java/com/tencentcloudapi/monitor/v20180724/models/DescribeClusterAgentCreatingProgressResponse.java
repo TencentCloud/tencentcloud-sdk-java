@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class DescribeClusterAgentCreatingProgressResponse extends AbstractModel {
 
     /**
+    * 绑定状态response
+    */
+    @SerializedName("Response")
+    @Expose
+    private BindProgressResponse [] Response;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 绑定状态response 
+     * @return Response 绑定状态response
+     */
+    public BindProgressResponse [] getResponse() {
+        return this.Response;
+    }
+
+    /**
+     * Set 绑定状态response
+     * @param Response 绑定状态response
+     */
+    public void setResponse(BindProgressResponse [] Response) {
+        this.Response = Response;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,12 @@ public class DescribeClusterAgentCreatingProgressResponse extends AbstractModel 
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeClusterAgentCreatingProgressResponse(DescribeClusterAgentCreatingProgressResponse source) {
+        if (source.Response != null) {
+            this.Response = new BindProgressResponse[source.Response.length];
+            for (int i = 0; i < source.Response.length; i++) {
+                this.Response[i] = new BindProgressResponse(source.Response[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +93,7 @@ public class DescribeClusterAgentCreatingProgressResponse extends AbstractModel 
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Response.", this.Response);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

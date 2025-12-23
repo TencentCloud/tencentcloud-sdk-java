@@ -52,6 +52,17 @@ public class AiartClient extends AbstractClient{
     }
 
     /**
+     *查询图片特效任务
+     * @param req DescribeTemplateToImageJobRequest
+     * @return DescribeTemplateToImageJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTemplateToImageJobResponse DescribeTemplateToImageJob(DescribeTemplateToImageJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTemplateToImageJob", DescribeTemplateToImageJobResponse.class);
+    }
+
+    /**
      *百变头像接口将根据输入的人像照片，生成风格百变的头像。
 百变头像默认提供1个并发任务数，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
      * @param req GenerateAvatarRequest
@@ -275,6 +286,17 @@ AI 美照默认提供1个并发，代表最多能同时处理1个已提交的任
     public SubmitMemeJobResponse SubmitMemeJob(SubmitMemeJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SubmitMemeJob", SubmitMemeJobResponse.class);
+    }
+
+    /**
+     *提交图片特效任务
+     * @param req SubmitTemplateToImageJobRequest
+     * @return SubmitTemplateToImageJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitTemplateToImageJobResponse SubmitTemplateToImageJob(SubmitTemplateToImageJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitTemplateToImageJob", SubmitTemplateToImageJobResponse.class);
     }
 
     /**

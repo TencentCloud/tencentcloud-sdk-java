@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tcbr.v20220217.models;
+package com.tencentcloudapi.teo.v20220901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,21 +21,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateCloudRunServerResponse extends AbstractModel {
+public class DescribePrefetchOriginLimitResponse extends AbstractModel {
 
     /**
-    * <p>环境Id</p>
+    * 回源限速限制总数。
     */
-    @SerializedName("EnvId")
+    @SerializedName("TotalCount")
     @Expose
-    private String EnvId;
+    private Long TotalCount;
 
     /**
-    * <p>一键部署任务Id，暂时用不到</p>
+    * 回源限速限制详情List。
     */
-    @SerializedName("TaskId")
+    @SerializedName("Limits")
     @Expose
-    private Long TaskId;
+    private PrefetchOriginLimit [] Limits;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +45,35 @@ public class UpdateCloudRunServerResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>环境Id</p> 
-     * @return EnvId <p>环境Id</p>
+     * Get 回源限速限制总数。 
+     * @return TotalCount 回源限速限制总数。
      */
-    public String getEnvId() {
-        return this.EnvId;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set <p>环境Id</p>
-     * @param EnvId <p>环境Id</p>
+     * Set 回源限速限制总数。
+     * @param TotalCount 回源限速限制总数。
      */
-    public void setEnvId(String EnvId) {
-        this.EnvId = EnvId;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
-     * Get <p>一键部署任务Id，暂时用不到</p> 
-     * @return TaskId <p>一键部署任务Id，暂时用不到</p>
+     * Get 回源限速限制详情List。 
+     * @return Limits 回源限速限制详情List。
      */
-    public Long getTaskId() {
-        return this.TaskId;
+    public PrefetchOriginLimit [] getLimits() {
+        return this.Limits;
     }
 
     /**
-     * Set <p>一键部署任务Id，暂时用不到</p>
-     * @param TaskId <p>一键部署任务Id，暂时用不到</p>
+     * Set 回源限速限制详情List。
+     * @param Limits 回源限速限制详情List。
      */
-    public void setTaskId(Long TaskId) {
-        this.TaskId = TaskId;
+    public void setLimits(PrefetchOriginLimit [] Limits) {
+        this.Limits = Limits;
     }
 
     /**
@@ -92,19 +92,22 @@ public class UpdateCloudRunServerResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public UpdateCloudRunServerResponse() {
+    public DescribePrefetchOriginLimitResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public UpdateCloudRunServerResponse(UpdateCloudRunServerResponse source) {
-        if (source.EnvId != null) {
-            this.EnvId = new String(source.EnvId);
+    public DescribePrefetchOriginLimitResponse(DescribePrefetchOriginLimitResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
-        if (source.TaskId != null) {
-            this.TaskId = new Long(source.TaskId);
+        if (source.Limits != null) {
+            this.Limits = new PrefetchOriginLimit[source.Limits.length];
+            for (int i = 0; i < source.Limits.length; i++) {
+                this.Limits[i] = new PrefetchOriginLimit(source.Limits[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -116,8 +119,8 @@ public class UpdateCloudRunServerResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "EnvId", this.EnvId);
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "Limits.", this.Limits);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

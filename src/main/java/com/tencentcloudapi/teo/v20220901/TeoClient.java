@@ -1307,6 +1307,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *本接口用于查询回源限速限制，该功能白名单内测中。
+     * @param req DescribePrefetchOriginLimitRequest
+     * @return DescribePrefetchOriginLimitResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrefetchOriginLimitResponse DescribePrefetchOriginLimit(DescribePrefetchOriginLimitRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePrefetchOriginLimit", DescribePrefetchOriginLimitResponse.class);
+    }
+
+    /**
      *DescribePrefetchTasks 用于查询预热任务提交历史记录及执行进度，通过 CreatePrefetchTasks 接口提交的任务可通过此接口进行查询。
      * @param req DescribePrefetchTasksRequest
      * @return DescribePrefetchTasksResponse
@@ -2071,6 +2082,18 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public ModifyPlanResponse ModifyPlan(ModifyPlanRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyPlan", ModifyPlanResponse.class);
+    }
+
+    /**
+     *本接口用于配置回源限速限制，该功能白名单内测中。
+可通过此接口创建、修改与删除预热回源限速限制，每个账号最多支持 100 条限制。
+     * @param req ModifyPrefetchOriginLimitRequest
+     * @return ModifyPrefetchOriginLimitResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPrefetchOriginLimitResponse ModifyPrefetchOriginLimit(ModifyPrefetchOriginLimitRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyPrefetchOriginLimit", ModifyPrefetchOriginLimitResponse.class);
     }
 
     /**

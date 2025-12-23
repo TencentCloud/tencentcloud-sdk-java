@@ -24,240 +24,230 @@ import java.util.HashMap;
 public class CreateCloudRunEnvRequest extends AbstractModel {
 
     /**
-    * Trial,Standard,Professional,Enterprise
+    * <p>Trial,Standard,Professional,Enterprise</p>
     */
     @SerializedName("PackageType")
     @Expose
     private String PackageType;
 
     /**
-    * 环境别名，要以a-z开头，不能包含 a-z,0-9,- 以外的字符
+    * <p>环境别名，要以a-z开头，不能包含 a-z,0-9,- 以外的字符</p>
     */
     @SerializedName("Alias")
     @Expose
     private String Alias;
 
     /**
-    * 用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，标识不享受免费额度。
+    * <p>用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，标识不享受免费额度。</p>
     */
     @SerializedName("FreeQuota")
     @Expose
     private String FreeQuota;
 
     /**
-    * 订单标记。建议使用方统一转大小写之后再判断。
-QuickStart：快速启动来源
-Activity：活动来源
+    * <p>订单标记。建议使用方统一转大小写之后再判断。QuickStart：快速启动来源Activity：活动来源</p>
     */
     @SerializedName("Flag")
     @Expose
     private String Flag;
 
     /**
-    * 私有网络Id
+    * <p>私有网络Id</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 子网列表
+    * <p>子网列表</p>
     */
     @SerializedName("SubNetIds")
     @Expose
     private String [] SubNetIds;
 
     /**
-    * 请求key 用于防重
+    * <p>请求key 用于防重</p>
     */
     @SerializedName("ReqKey")
     @Expose
     private String ReqKey;
 
     /**
-    * 来源：wechat | cloud | weda
+    * <p>来源：wechat | cloud | weda</p>
     */
     @SerializedName("Source")
     @Expose
     private String Source;
 
     /**
-    * 渠道：wechat | cloud | weda
+    * <p>渠道：wechat | cloud | weda</p>
     */
     @SerializedName("Channel")
     @Expose
     private String Channel;
 
     /**
-    * 环境ID 云开发平台必填
+    * <p>环境ID 云开发平台必填</p>
     */
     @SerializedName("EnvId")
     @Expose
     private String EnvId;
 
     /**
-     * Get Trial,Standard,Professional,Enterprise 
-     * @return PackageType Trial,Standard,Professional,Enterprise
+     * Get <p>Trial,Standard,Professional,Enterprise</p> 
+     * @return PackageType <p>Trial,Standard,Professional,Enterprise</p>
      */
     public String getPackageType() {
         return this.PackageType;
     }
 
     /**
-     * Set Trial,Standard,Professional,Enterprise
-     * @param PackageType Trial,Standard,Professional,Enterprise
+     * Set <p>Trial,Standard,Professional,Enterprise</p>
+     * @param PackageType <p>Trial,Standard,Professional,Enterprise</p>
      */
     public void setPackageType(String PackageType) {
         this.PackageType = PackageType;
     }
 
     /**
-     * Get 环境别名，要以a-z开头，不能包含 a-z,0-9,- 以外的字符 
-     * @return Alias 环境别名，要以a-z开头，不能包含 a-z,0-9,- 以外的字符
+     * Get <p>环境别名，要以a-z开头，不能包含 a-z,0-9,- 以外的字符</p> 
+     * @return Alias <p>环境别名，要以a-z开头，不能包含 a-z,0-9,- 以外的字符</p>
      */
     public String getAlias() {
         return this.Alias;
     }
 
     /**
-     * Set 环境别名，要以a-z开头，不能包含 a-z,0-9,- 以外的字符
-     * @param Alias 环境别名，要以a-z开头，不能包含 a-z,0-9,- 以外的字符
+     * Set <p>环境别名，要以a-z开头，不能包含 a-z,0-9,- 以外的字符</p>
+     * @param Alias <p>环境别名，要以a-z开头，不能包含 a-z,0-9,- 以外的字符</p>
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;
     }
 
     /**
-     * Get 用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，标识不享受免费额度。 
-     * @return FreeQuota 用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，标识不享受免费额度。
+     * Get <p>用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，标识不享受免费额度。</p> 
+     * @return FreeQuota <p>用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，标识不享受免费额度。</p>
      */
     public String getFreeQuota() {
         return this.FreeQuota;
     }
 
     /**
-     * Set 用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，标识不享受免费额度。
-     * @param FreeQuota 用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，标识不享受免费额度。
+     * Set <p>用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，标识不享受免费额度。</p>
+     * @param FreeQuota <p>用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，标识不享受免费额度。</p>
      */
     public void setFreeQuota(String FreeQuota) {
         this.FreeQuota = FreeQuota;
     }
 
     /**
-     * Get 订单标记。建议使用方统一转大小写之后再判断。
-QuickStart：快速启动来源
-Activity：活动来源 
-     * @return Flag 订单标记。建议使用方统一转大小写之后再判断。
-QuickStart：快速启动来源
-Activity：活动来源
+     * Get <p>订单标记。建议使用方统一转大小写之后再判断。QuickStart：快速启动来源Activity：活动来源</p> 
+     * @return Flag <p>订单标记。建议使用方统一转大小写之后再判断。QuickStart：快速启动来源Activity：活动来源</p>
      */
     public String getFlag() {
         return this.Flag;
     }
 
     /**
-     * Set 订单标记。建议使用方统一转大小写之后再判断。
-QuickStart：快速启动来源
-Activity：活动来源
-     * @param Flag 订单标记。建议使用方统一转大小写之后再判断。
-QuickStart：快速启动来源
-Activity：活动来源
+     * Set <p>订单标记。建议使用方统一转大小写之后再判断。QuickStart：快速启动来源Activity：活动来源</p>
+     * @param Flag <p>订单标记。建议使用方统一转大小写之后再判断。QuickStart：快速启动来源Activity：活动来源</p>
      */
     public void setFlag(String Flag) {
         this.Flag = Flag;
     }
 
     /**
-     * Get 私有网络Id 
-     * @return VpcId 私有网络Id
+     * Get <p>私有网络Id</p> 
+     * @return VpcId <p>私有网络Id</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私有网络Id
-     * @param VpcId 私有网络Id
+     * Set <p>私有网络Id</p>
+     * @param VpcId <p>私有网络Id</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网列表 
-     * @return SubNetIds 子网列表
+     * Get <p>子网列表</p> 
+     * @return SubNetIds <p>子网列表</p>
      */
     public String [] getSubNetIds() {
         return this.SubNetIds;
     }
 
     /**
-     * Set 子网列表
-     * @param SubNetIds 子网列表
+     * Set <p>子网列表</p>
+     * @param SubNetIds <p>子网列表</p>
      */
     public void setSubNetIds(String [] SubNetIds) {
         this.SubNetIds = SubNetIds;
     }
 
     /**
-     * Get 请求key 用于防重 
-     * @return ReqKey 请求key 用于防重
+     * Get <p>请求key 用于防重</p> 
+     * @return ReqKey <p>请求key 用于防重</p>
      */
     public String getReqKey() {
         return this.ReqKey;
     }
 
     /**
-     * Set 请求key 用于防重
-     * @param ReqKey 请求key 用于防重
+     * Set <p>请求key 用于防重</p>
+     * @param ReqKey <p>请求key 用于防重</p>
      */
     public void setReqKey(String ReqKey) {
         this.ReqKey = ReqKey;
     }
 
     /**
-     * Get 来源：wechat | cloud | weda 
-     * @return Source 来源：wechat | cloud | weda
+     * Get <p>来源：wechat | cloud | weda</p> 
+     * @return Source <p>来源：wechat | cloud | weda</p>
      */
     public String getSource() {
         return this.Source;
     }
 
     /**
-     * Set 来源：wechat | cloud | weda
-     * @param Source 来源：wechat | cloud | weda
+     * Set <p>来源：wechat | cloud | weda</p>
+     * @param Source <p>来源：wechat | cloud | weda</p>
      */
     public void setSource(String Source) {
         this.Source = Source;
     }
 
     /**
-     * Get 渠道：wechat | cloud | weda 
-     * @return Channel 渠道：wechat | cloud | weda
+     * Get <p>渠道：wechat | cloud | weda</p> 
+     * @return Channel <p>渠道：wechat | cloud | weda</p>
      */
     public String getChannel() {
         return this.Channel;
     }
 
     /**
-     * Set 渠道：wechat | cloud | weda
-     * @param Channel 渠道：wechat | cloud | weda
+     * Set <p>渠道：wechat | cloud | weda</p>
+     * @param Channel <p>渠道：wechat | cloud | weda</p>
      */
     public void setChannel(String Channel) {
         this.Channel = Channel;
     }
 
     /**
-     * Get 环境ID 云开发平台必填 
-     * @return EnvId 环境ID 云开发平台必填
+     * Get <p>环境ID 云开发平台必填</p> 
+     * @return EnvId <p>环境ID 云开发平台必填</p>
      */
     public String getEnvId() {
         return this.EnvId;
     }
 
     /**
-     * Set 环境ID 云开发平台必填
-     * @param EnvId 环境ID 云开发平台必填
+     * Set <p>环境ID 云开发平台必填</p>
+     * @param EnvId <p>环境ID 云开发平台必填</p>
      */
     public void setEnvId(String EnvId) {
         this.EnvId = EnvId;

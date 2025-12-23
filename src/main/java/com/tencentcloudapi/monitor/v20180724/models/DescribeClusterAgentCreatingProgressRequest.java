@@ -23,6 +23,52 @@ import java.util.HashMap;
 
 public class DescribeClusterAgentCreatingProgressRequest extends AbstractModel {
 
+    /**
+    * prom实例id
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * 集群ids
+    */
+    @SerializedName("ClusterIds")
+    @Expose
+    private String [] ClusterIds;
+
+    /**
+     * Get prom实例id 
+     * @return InstanceId prom实例id
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set prom实例id
+     * @param InstanceId prom实例id
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get 集群ids 
+     * @return ClusterIds 集群ids
+     */
+    public String [] getClusterIds() {
+        return this.ClusterIds;
+    }
+
+    /**
+     * Set 集群ids
+     * @param ClusterIds 集群ids
+     */
+    public void setClusterIds(String [] ClusterIds) {
+        this.ClusterIds = ClusterIds;
+    }
+
     public DescribeClusterAgentCreatingProgressRequest() {
     }
 
@@ -31,6 +77,15 @@ public class DescribeClusterAgentCreatingProgressRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeClusterAgentCreatingProgressRequest(DescribeClusterAgentCreatingProgressRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.ClusterIds != null) {
+            this.ClusterIds = new String[source.ClusterIds.length];
+            for (int i = 0; i < source.ClusterIds.length; i++) {
+                this.ClusterIds[i] = new String(source.ClusterIds[i]);
+            }
+        }
     }
 
 
@@ -38,6 +93,8 @@ public class DescribeClusterAgentCreatingProgressRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamArraySimple(map, prefix + "ClusterIds.", this.ClusterIds);
 
     }
 }

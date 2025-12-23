@@ -115,6 +115,20 @@ public class DescribeAccountBalanceResponse extends AbstractModel {
     private Float RealCreditBalance;
 
     /**
+    * 临时额度，单位 分
+    */
+    @SerializedName("TempCredit")
+    @Expose
+    private Float TempCredit;
+
+    /**
+    * 临时额度详情
+    */
+    @SerializedName("TempAmountInfoList")
+    @Expose
+    private UinTempAmountModel [] TempAmountInfoList;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -338,6 +352,38 @@ public class DescribeAccountBalanceResponse extends AbstractModel {
     }
 
     /**
+     * Get 临时额度，单位 分 
+     * @return TempCredit 临时额度，单位 分
+     */
+    public Float getTempCredit() {
+        return this.TempCredit;
+    }
+
+    /**
+     * Set 临时额度，单位 分
+     * @param TempCredit 临时额度，单位 分
+     */
+    public void setTempCredit(Float TempCredit) {
+        this.TempCredit = TempCredit;
+    }
+
+    /**
+     * Get 临时额度详情 
+     * @return TempAmountInfoList 临时额度详情
+     */
+    public UinTempAmountModel [] getTempAmountInfoList() {
+        return this.TempAmountInfoList;
+    }
+
+    /**
+     * Set 临时额度详情
+     * @param TempAmountInfoList 临时额度详情
+     */
+    public void setTempAmountInfoList(UinTempAmountModel [] TempAmountInfoList) {
+        this.TempAmountInfoList = TempAmountInfoList;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -400,6 +446,15 @@ public class DescribeAccountBalanceResponse extends AbstractModel {
         if (source.RealCreditBalance != null) {
             this.RealCreditBalance = new Float(source.RealCreditBalance);
         }
+        if (source.TempCredit != null) {
+            this.TempCredit = new Float(source.TempCredit);
+        }
+        if (source.TempAmountInfoList != null) {
+            this.TempAmountInfoList = new UinTempAmountModel[source.TempAmountInfoList.length];
+            for (int i = 0; i < source.TempAmountInfoList.length; i++) {
+                this.TempAmountInfoList[i] = new UinTempAmountModel(source.TempAmountInfoList[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -423,6 +478,8 @@ public class DescribeAccountBalanceResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "CreditAmount", this.CreditAmount);
         this.setParamSimple(map, prefix + "CreditBalance", this.CreditBalance);
         this.setParamSimple(map, prefix + "RealCreditBalance", this.RealCreditBalance);
+        this.setParamSimple(map, prefix + "TempCredit", this.TempCredit);
+        this.setParamArrayObj(map, prefix + "TempAmountInfoList.", this.TempAmountInfoList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

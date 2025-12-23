@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tcbr.v20220217.models;
+package com.tencentcloudapi.teo.v20220901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,21 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpdateCloudRunServerResponse extends AbstractModel {
-
-    /**
-    * <p>环境Id</p>
-    */
-    @SerializedName("EnvId")
-    @Expose
-    private String EnvId;
-
-    /**
-    * <p>一键部署任务Id，暂时用不到</p>
-    */
-    @SerializedName("TaskId")
-    @Expose
-    private Long TaskId;
+public class ModifyPrefetchOriginLimitResponse extends AbstractModel {
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -43,38 +29,6 @@ public class UpdateCloudRunServerResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get <p>环境Id</p> 
-     * @return EnvId <p>环境Id</p>
-     */
-    public String getEnvId() {
-        return this.EnvId;
-    }
-
-    /**
-     * Set <p>环境Id</p>
-     * @param EnvId <p>环境Id</p>
-     */
-    public void setEnvId(String EnvId) {
-        this.EnvId = EnvId;
-    }
-
-    /**
-     * Get <p>一键部署任务Id，暂时用不到</p> 
-     * @return TaskId <p>一键部署任务Id，暂时用不到</p>
-     */
-    public Long getTaskId() {
-        return this.TaskId;
-    }
-
-    /**
-     * Set <p>一键部署任务Id，暂时用不到</p>
-     * @param TaskId <p>一键部署任务Id，暂时用不到</p>
-     */
-    public void setTaskId(Long TaskId) {
-        this.TaskId = TaskId;
-    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -92,20 +46,14 @@ public class UpdateCloudRunServerResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public UpdateCloudRunServerResponse() {
+    public ModifyPrefetchOriginLimitResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public UpdateCloudRunServerResponse(UpdateCloudRunServerResponse source) {
-        if (source.EnvId != null) {
-            this.EnvId = new String(source.EnvId);
-        }
-        if (source.TaskId != null) {
-            this.TaskId = new Long(source.TaskId);
-        }
+    public ModifyPrefetchOriginLimitResponse(ModifyPrefetchOriginLimitResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -116,8 +64,6 @@ public class UpdateCloudRunServerResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "EnvId", this.EnvId);
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

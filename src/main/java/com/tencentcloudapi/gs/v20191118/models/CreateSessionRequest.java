@@ -108,7 +108,7 @@ public class CreateSessionRequest extends AbstractModel {
     private Long Fps;
 
     /**
-    * 【必选】用户IP，用户客户端的公网IP，用于就近调度，不填将严重影响用户体验
+    * 【推荐填写】用户IP，用户客户端的公网IP，用于就近调度，不填将严重影响用户体验
     */
     @SerializedName("UserIp")
     @Expose
@@ -344,16 +344,16 @@ RunWithoutClient：允许无客户端连接的情况下仍保持云端 App 运�
     }
 
     /**
-     * Get 【必选】用户IP，用户客户端的公网IP，用于就近调度，不填将严重影响用户体验 
-     * @return UserIp 【必选】用户IP，用户客户端的公网IP，用于就近调度，不填将严重影响用户体验
+     * Get 【推荐填写】用户IP，用户客户端的公网IP，用于就近调度，不填将严重影响用户体验 
+     * @return UserIp 【推荐填写】用户IP，用户客户端的公网IP，用于就近调度，不填将严重影响用户体验
      */
     public String getUserIp() {
         return this.UserIp;
     }
 
     /**
-     * Set 【必选】用户IP，用户客户端的公网IP，用于就近调度，不填将严重影响用户体验
-     * @param UserIp 【必选】用户IP，用户客户端的公网IP，用于就近调度，不填将严重影响用户体验
+     * Set 【推荐填写】用户IP，用户客户端的公网IP，用于就近调度，不填将严重影响用户体验
+     * @param UserIp 【推荐填写】用户IP，用户客户端的公网IP，用于就近调度，不填将严重影响用户体验
      */
     public void setUserIp(String UserIp) {
         this.UserIp = UserIp;

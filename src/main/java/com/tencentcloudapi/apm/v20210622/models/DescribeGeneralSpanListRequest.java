@@ -76,7 +76,7 @@ public class DescribeGeneralSpanListRequest extends AbstractModel {
     private String BusinessName;
 
     /**
-    * 单页项目个数，默认为10000，合法取值范围为0～10000
+    * 单页项目个数，默认为1000，合法取值范围为1～1000
     */
     @SerializedName("Limit")
     @Expose
@@ -226,16 +226,16 @@ public class DescribeGeneralSpanListRequest extends AbstractModel {
     }
 
     /**
-     * Get 单页项目个数，默认为10000，合法取值范围为0～10000 
-     * @return Limit 单页项目个数，默认为10000，合法取值范围为0～10000
+     * Get 单页项目个数，默认为1000，合法取值范围为1～1000 
+     * @return Limit 单页项目个数，默认为1000，合法取值范围为1～1000
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 单页项目个数，默认为10000，合法取值范围为0～10000
-     * @param Limit 单页项目个数，默认为10000，合法取值范围为0～10000
+     * Set 单页项目个数，默认为1000，合法取值范围为1～1000
+     * @param Limit 单页项目个数，默认为1000，合法取值范围为1～1000
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

@@ -45,7 +45,7 @@ public class DescribeRocketMQGroupsRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 限制条数
+    * 单次查询最大条数。取值范围：[0~100]，默认值为20
     */
     @SerializedName("Limit")
     @Expose
@@ -149,16 +149,16 @@ public class DescribeRocketMQGroupsRequest extends AbstractModel {
     }
 
     /**
-     * Get 限制条数 
-     * @return Limit 限制条数
+     * Get 单次查询最大条数。取值范围：[0~100]，默认值为20 
+     * @return Limit 单次查询最大条数。取值范围：[0~100]，默认值为20
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 限制条数
-     * @param Limit 限制条数
+     * Set 单次查询最大条数。取值范围：[0~100]，默认值为20
+     * @param Limit 单次查询最大条数。取值范围：[0~100]，默认值为20
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

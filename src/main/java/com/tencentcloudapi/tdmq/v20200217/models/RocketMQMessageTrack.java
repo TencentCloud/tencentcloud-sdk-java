@@ -59,6 +59,16 @@ UNKNOWN: 查询不到消费状态
     private String ExceptionDesc;
 
     /**
+    * 消费状态来源，枚举值如下：
+
+- DIFF_OFFSET：通过服务端offset计算
+- TRACE_REPORT：通过上报的轨迹判断
+    */
+    @SerializedName("ConsumeStatusSource")
+    @Expose
+    private String ConsumeStatusSource;
+
+    /**
      * Get 消费者组 
      * @return Group 消费者组
      */
@@ -150,6 +160,34 @@ UNKNOWN: 查询不到消费状态
         this.ExceptionDesc = ExceptionDesc;
     }
 
+    /**
+     * Get 消费状态来源，枚举值如下：
+
+- DIFF_OFFSET：通过服务端offset计算
+- TRACE_REPORT：通过上报的轨迹判断 
+     * @return ConsumeStatusSource 消费状态来源，枚举值如下：
+
+- DIFF_OFFSET：通过服务端offset计算
+- TRACE_REPORT：通过上报的轨迹判断
+     */
+    public String getConsumeStatusSource() {
+        return this.ConsumeStatusSource;
+    }
+
+    /**
+     * Set 消费状态来源，枚举值如下：
+
+- DIFF_OFFSET：通过服务端offset计算
+- TRACE_REPORT：通过上报的轨迹判断
+     * @param ConsumeStatusSource 消费状态来源，枚举值如下：
+
+- DIFF_OFFSET：通过服务端offset计算
+- TRACE_REPORT：通过上报的轨迹判断
+     */
+    public void setConsumeStatusSource(String ConsumeStatusSource) {
+        this.ConsumeStatusSource = ConsumeStatusSource;
+    }
+
     public RocketMQMessageTrack() {
     }
 
@@ -170,6 +208,9 @@ UNKNOWN: 查询不到消费状态
         if (source.ExceptionDesc != null) {
             this.ExceptionDesc = new String(source.ExceptionDesc);
         }
+        if (source.ConsumeStatusSource != null) {
+            this.ConsumeStatusSource = new String(source.ConsumeStatusSource);
+        }
     }
 
 
@@ -181,6 +222,7 @@ UNKNOWN: 查询不到消费状态
         this.setParamSimple(map, prefix + "ConsumeStatus", this.ConsumeStatus);
         this.setParamSimple(map, prefix + "TrackType", this.TrackType);
         this.setParamSimple(map, prefix + "ExceptionDesc", this.ExceptionDesc);
+        this.setParamSimple(map, prefix + "ConsumeStatusSource", this.ConsumeStatusSource);
 
     }
 }

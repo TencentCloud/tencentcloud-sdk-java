@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeEnvBaseInfoResponse extends AbstractModel {
 
     /**
-    * 环境基础信息
+    * <p>环境基础信息</p>
     */
     @SerializedName("EnvBaseInfo")
     @Expose
     private EnvBaseInfo EnvBaseInfo;
 
     /**
-    * 是否存在
+    * <p>是否存在</p>
     */
     @SerializedName("IsExist")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeEnvBaseInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 环境基础信息 
-     * @return EnvBaseInfo 环境基础信息
+     * Get <p>环境基础信息</p> 
+     * @return EnvBaseInfo <p>环境基础信息</p>
      */
     public EnvBaseInfo getEnvBaseInfo() {
         return this.EnvBaseInfo;
     }
 
     /**
-     * Set 环境基础信息
-     * @param EnvBaseInfo 环境基础信息
+     * Set <p>环境基础信息</p>
+     * @param EnvBaseInfo <p>环境基础信息</p>
      */
     public void setEnvBaseInfo(EnvBaseInfo EnvBaseInfo) {
         this.EnvBaseInfo = EnvBaseInfo;
     }
 
     /**
-     * Get 是否存在 
-     * @return IsExist 是否存在
+     * Get <p>是否存在</p> 
+     * @return IsExist <p>是否存在</p>
      */
     public Boolean getIsExist() {
         return this.IsExist;
     }
 
     /**
-     * Set 是否存在
-     * @param IsExist 是否存在
+     * Set <p>是否存在</p>
+     * @param IsExist <p>是否存在</p>
      */
     public void setIsExist(Boolean IsExist) {
         this.IsExist = IsExist;

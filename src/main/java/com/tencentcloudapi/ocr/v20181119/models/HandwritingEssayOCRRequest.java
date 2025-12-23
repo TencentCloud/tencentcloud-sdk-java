@@ -46,7 +46,8 @@ public class HandwritingEssayOCRRequest extends AbstractModel {
 
     /**
     * 配置id支持：
-ArticleRecognize -- 手写作文模板
+ArticleRecognize -- 手写中文作文模板
+ArticleRecognizeEng -- 手写英文作文模板
 默认：ArticleRecognize
     */
     @SerializedName("ConfigId")
@@ -110,10 +111,12 @@ ArticleRecognize -- 手写作文模板
 
     /**
      * Get 配置id支持：
-ArticleRecognize -- 手写作文模板
+ArticleRecognize -- 手写中文作文模板
+ArticleRecognizeEng -- 手写英文作文模板
 默认：ArticleRecognize 
      * @return ConfigId 配置id支持：
-ArticleRecognize -- 手写作文模板
+ArticleRecognize -- 手写中文作文模板
+ArticleRecognizeEng -- 手写英文作文模板
 默认：ArticleRecognize
      */
     public String getConfigId() {
@@ -122,10 +125,12 @@ ArticleRecognize -- 手写作文模板
 
     /**
      * Set 配置id支持：
-ArticleRecognize -- 手写作文模板
+ArticleRecognize -- 手写中文作文模板
+ArticleRecognizeEng -- 手写英文作文模板
 默认：ArticleRecognize
      * @param ConfigId 配置id支持：
-ArticleRecognize -- 手写作文模板
+ArticleRecognize -- 手写中文作文模板
+ArticleRecognizeEng -- 手写英文作文模板
 默认：ArticleRecognize
      */
     public void setConfigId(String ConfigId) {

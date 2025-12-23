@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeEnvBaseInfoRequest extends AbstractModel {
 
     /**
-    * 环境 Id
+    * <p>环境 Id</p>
     */
     @SerializedName("EnvId")
     @Expose
     private String EnvId;
 
     /**
-     * Get 环境 Id 
-     * @return EnvId 环境 Id
+     * Get <p>环境 Id</p> 
+     * @return EnvId <p>环境 Id</p>
      */
     public String getEnvId() {
         return this.EnvId;
     }
 
     /**
-     * Set 环境 Id
-     * @param EnvId 环境 Id
+     * Set <p>环境 Id</p>
+     * @param EnvId <p>环境 Id</p>
      */
     public void setEnvId(String EnvId) {
         this.EnvId = EnvId;

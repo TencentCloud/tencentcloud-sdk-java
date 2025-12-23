@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateCloudRunEnvResponse extends AbstractModel {
 
     /**
-    * 环境Id
+    * <p>环境Id</p>
     */
     @SerializedName("EnvId")
     @Expose
     private String EnvId;
 
     /**
-    * 后付费订单号
+    * <p>后付费订单号</p>
     */
     @SerializedName("TranId")
     @Expose
@@ -45,32 +45,32 @@ public class CreateCloudRunEnvResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 环境Id 
-     * @return EnvId 环境Id
+     * Get <p>环境Id</p> 
+     * @return EnvId <p>环境Id</p>
      */
     public String getEnvId() {
         return this.EnvId;
     }
 
     /**
-     * Set 环境Id
-     * @param EnvId 环境Id
+     * Set <p>环境Id</p>
+     * @param EnvId <p>环境Id</p>
      */
     public void setEnvId(String EnvId) {
         this.EnvId = EnvId;
     }
 
     /**
-     * Get 后付费订单号 
-     * @return TranId 后付费订单号
+     * Get <p>后付费订单号</p> 
+     * @return TranId <p>后付费订单号</p>
      */
     public String getTranId() {
         return this.TranId;
     }
 
     /**
-     * Set 后付费订单号
-     * @param TranId 后付费订单号
+     * Set <p>后付费订单号</p>
+     * @param TranId <p>后付费订单号</p>
      */
     public void setTranId(String TranId) {
         this.TranId = TranId;

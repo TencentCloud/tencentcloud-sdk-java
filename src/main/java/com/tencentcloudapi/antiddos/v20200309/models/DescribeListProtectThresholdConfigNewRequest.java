@@ -52,14 +52,14 @@ public class DescribeListProtectThresholdConfigNewRequest extends AbstractModel 
     private String FilterIp;
 
     /**
-    * 域名搜索(查询域名与协议的CC防护阈值时使用）
+    * 域名搜索，查询域名与协议的CC防护阈值时使用
     */
     @SerializedName("FilterDomain")
     @Expose
     private String FilterDomain;
 
     /**
-    * 协议搜索(查询域名与协议的CC防护阈值时使用）
+    * 协议搜索，查询域名与协议的CC防护阈值时使用
     */
     @SerializedName("FilterProtocol")
     @Expose
@@ -130,32 +130,32 @@ public class DescribeListProtectThresholdConfigNewRequest extends AbstractModel 
     }
 
     /**
-     * Get 域名搜索(查询域名与协议的CC防护阈值时使用） 
-     * @return FilterDomain 域名搜索(查询域名与协议的CC防护阈值时使用）
+     * Get 域名搜索，查询域名与协议的CC防护阈值时使用 
+     * @return FilterDomain 域名搜索，查询域名与协议的CC防护阈值时使用
      */
     public String getFilterDomain() {
         return this.FilterDomain;
     }
 
     /**
-     * Set 域名搜索(查询域名与协议的CC防护阈值时使用）
-     * @param FilterDomain 域名搜索(查询域名与协议的CC防护阈值时使用）
+     * Set 域名搜索，查询域名与协议的CC防护阈值时使用
+     * @param FilterDomain 域名搜索，查询域名与协议的CC防护阈值时使用
      */
     public void setFilterDomain(String FilterDomain) {
         this.FilterDomain = FilterDomain;
     }
 
     /**
-     * Get 协议搜索(查询域名与协议的CC防护阈值时使用） 
-     * @return FilterProtocol 协议搜索(查询域名与协议的CC防护阈值时使用）
+     * Get 协议搜索，查询域名与协议的CC防护阈值时使用 
+     * @return FilterProtocol 协议搜索，查询域名与协议的CC防护阈值时使用
      */
     public String getFilterProtocol() {
         return this.FilterProtocol;
     }
 
     /**
-     * Set 协议搜索(查询域名与协议的CC防护阈值时使用）
-     * @param FilterProtocol 协议搜索(查询域名与协议的CC防护阈值时使用）
+     * Set 协议搜索，查询域名与协议的CC防护阈值时使用
+     * @param FilterProtocol 协议搜索，查询域名与协议的CC防护阈值时使用
      */
     public void setFilterProtocol(String FilterProtocol) {
         this.FilterProtocol = FilterProtocol;

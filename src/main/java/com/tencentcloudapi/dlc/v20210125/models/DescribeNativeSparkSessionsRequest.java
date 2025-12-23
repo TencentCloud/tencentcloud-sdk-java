@@ -38,6 +38,20 @@ public class DescribeNativeSparkSessionsRequest extends AbstractModel {
     private String ResourceGroupId;
 
     /**
+    * 项目ID
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private String ProjectId;
+
+    /**
+    * 用户Uin
+    */
+    @SerializedName("UserUin")
+    @Expose
+    private String UserUin;
+
+    /**
      * Get 引擎ID 
      * @return DataEngineId 引擎ID
      */
@@ -69,6 +83,38 @@ public class DescribeNativeSparkSessionsRequest extends AbstractModel {
         this.ResourceGroupId = ResourceGroupId;
     }
 
+    /**
+     * Get 项目ID 
+     * @return ProjectId 项目ID
+     */
+    public String getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * Set 项目ID
+     * @param ProjectId 项目ID
+     */
+    public void setProjectId(String ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
+    /**
+     * Get 用户Uin 
+     * @return UserUin 用户Uin
+     */
+    public String getUserUin() {
+        return this.UserUin;
+    }
+
+    /**
+     * Set 用户Uin
+     * @param UserUin 用户Uin
+     */
+    public void setUserUin(String UserUin) {
+        this.UserUin = UserUin;
+    }
+
     public DescribeNativeSparkSessionsRequest() {
     }
 
@@ -83,6 +129,12 @@ public class DescribeNativeSparkSessionsRequest extends AbstractModel {
         if (source.ResourceGroupId != null) {
             this.ResourceGroupId = new String(source.ResourceGroupId);
         }
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
+        if (source.UserUin != null) {
+            this.UserUin = new String(source.UserUin);
+        }
     }
 
 
@@ -92,6 +144,8 @@ public class DescribeNativeSparkSessionsRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DataEngineId", this.DataEngineId);
         this.setParamSimple(map, prefix + "ResourceGroupId", this.ResourceGroupId);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "UserUin", this.UserUin);
 
     }
 }

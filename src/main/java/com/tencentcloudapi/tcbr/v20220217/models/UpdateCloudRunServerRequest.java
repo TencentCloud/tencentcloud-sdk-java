@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class UpdateCloudRunServerRequest extends AbstractModel {
 
     /**
-    * 环境Id
+    * <p>环境Id</p>
     */
     @SerializedName("EnvId")
     @Expose
     private String EnvId;
 
     /**
-    * 服务名
+    * <p>服务名</p>
     */
     @SerializedName("ServerName")
     @Expose
     private String ServerName;
 
     /**
-    * 部署信息
+    * <p>部署信息</p>
     */
     @SerializedName("DeployInfo")
     @Expose
     private DeployParam DeployInfo;
 
     /**
-    * 服务配置信息(已废弃)
+    * <p>服务配置信息(已废弃)</p>
     */
     @SerializedName("ServerConfig")
     @Expose
     private ServerBaseConfig ServerConfig;
 
     /**
-    * 业务类型，默认tcr
+    * <p>业务类型，默认tcr</p>
     */
     @SerializedName("Business")
     @Expose
     private String Business;
 
     /**
-    * 服务配置信息
+    * <p>服务配置信息</p>
     */
     @SerializedName("Items")
     @Expose
     private DiffConfigItem [] Items;
 
     /**
-     * Get 环境Id 
-     * @return EnvId 环境Id
+     * Get <p>环境Id</p> 
+     * @return EnvId <p>环境Id</p>
      */
     public String getEnvId() {
         return this.EnvId;
     }
 
     /**
-     * Set 环境Id
-     * @param EnvId 环境Id
+     * Set <p>环境Id</p>
+     * @param EnvId <p>环境Id</p>
      */
     public void setEnvId(String EnvId) {
         this.EnvId = EnvId;
     }
 
     /**
-     * Get 服务名 
-     * @return ServerName 服务名
+     * Get <p>服务名</p> 
+     * @return ServerName <p>服务名</p>
      */
     public String getServerName() {
         return this.ServerName;
     }
 
     /**
-     * Set 服务名
-     * @param ServerName 服务名
+     * Set <p>服务名</p>
+     * @param ServerName <p>服务名</p>
      */
     public void setServerName(String ServerName) {
         this.ServerName = ServerName;
     }
 
     /**
-     * Get 部署信息 
-     * @return DeployInfo 部署信息
+     * Get <p>部署信息</p> 
+     * @return DeployInfo <p>部署信息</p>
      */
     public DeployParam getDeployInfo() {
         return this.DeployInfo;
     }
 
     /**
-     * Set 部署信息
-     * @param DeployInfo 部署信息
+     * Set <p>部署信息</p>
+     * @param DeployInfo <p>部署信息</p>
      */
     public void setDeployInfo(DeployParam DeployInfo) {
         this.DeployInfo = DeployInfo;
     }
 
     /**
-     * Get 服务配置信息(已废弃) 
-     * @return ServerConfig 服务配置信息(已废弃)
+     * Get <p>服务配置信息(已废弃)</p> 
+     * @return ServerConfig <p>服务配置信息(已废弃)</p>
      */
     public ServerBaseConfig getServerConfig() {
         return this.ServerConfig;
     }
 
     /**
-     * Set 服务配置信息(已废弃)
-     * @param ServerConfig 服务配置信息(已废弃)
+     * Set <p>服务配置信息(已废弃)</p>
+     * @param ServerConfig <p>服务配置信息(已废弃)</p>
      */
     public void setServerConfig(ServerBaseConfig ServerConfig) {
         this.ServerConfig = ServerConfig;
     }
 
     /**
-     * Get 业务类型，默认tcr 
-     * @return Business 业务类型，默认tcr
+     * Get <p>业务类型，默认tcr</p> 
+     * @return Business <p>业务类型，默认tcr</p>
      */
     public String getBusiness() {
         return this.Business;
     }
 
     /**
-     * Set 业务类型，默认tcr
-     * @param Business 业务类型，默认tcr
+     * Set <p>业务类型，默认tcr</p>
+     * @param Business <p>业务类型，默认tcr</p>
      */
     public void setBusiness(String Business) {
         this.Business = Business;
     }
 
     /**
-     * Get 服务配置信息 
-     * @return Items 服务配置信息
+     * Get <p>服务配置信息</p> 
+     * @return Items <p>服务配置信息</p>
      */
     public DiffConfigItem [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set 服务配置信息
-     * @param Items 服务配置信息
+     * Set <p>服务配置信息</p>
+     * @param Items <p>服务配置信息</p>
      */
     public void setItems(DiffConfigItem [] Items) {
         this.Items = Items;

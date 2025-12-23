@@ -31,13 +31,6 @@ public class ModifyConsumerGroupRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口返回的 [ConsumeGroupItem](https://cloud.tencent.com/document/api/1493/96031#ConsumeGroupItem) 或控制台获得。
-    */
-    @SerializedName("ConsumerGroup")
-    @Expose
-    private String ConsumerGroup;
-
-    /**
     * 是否开启消费
     */
     @SerializedName("ConsumeEnable")
@@ -51,6 +44,13 @@ public class ModifyConsumerGroupRequest extends AbstractModel {
     @SerializedName("ConsumeMessageOrderly")
     @Expose
     private Boolean ConsumeMessageOrderly;
+
+    /**
+    * 消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口返回的 [ConsumeGroupItem](https://cloud.tencent.com/document/api/1493/96031#ConsumeGroupItem) 或控制台获得。
+    */
+    @SerializedName("ConsumerGroup")
+    @Expose
+    private String ConsumerGroup;
 
     /**
     * 最大重试次数，取值范围0～1000
@@ -80,22 +80,6 @@ public class ModifyConsumerGroupRequest extends AbstractModel {
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
-    }
-
-    /**
-     * Get 消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口返回的 [ConsumeGroupItem](https://cloud.tencent.com/document/api/1493/96031#ConsumeGroupItem) 或控制台获得。 
-     * @return ConsumerGroup 消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口返回的 [ConsumeGroupItem](https://cloud.tencent.com/document/api/1493/96031#ConsumeGroupItem) 或控制台获得。
-     */
-    public String getConsumerGroup() {
-        return this.ConsumerGroup;
-    }
-
-    /**
-     * Set 消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口返回的 [ConsumeGroupItem](https://cloud.tencent.com/document/api/1493/96031#ConsumeGroupItem) 或控制台获得。
-     * @param ConsumerGroup 消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口返回的 [ConsumeGroupItem](https://cloud.tencent.com/document/api/1493/96031#ConsumeGroupItem) 或控制台获得。
-     */
-    public void setConsumerGroup(String ConsumerGroup) {
-        this.ConsumerGroup = ConsumerGroup;
     }
 
     /**
@@ -132,6 +116,22 @@ public class ModifyConsumerGroupRequest extends AbstractModel {
      */
     public void setConsumeMessageOrderly(Boolean ConsumeMessageOrderly) {
         this.ConsumeMessageOrderly = ConsumeMessageOrderly;
+    }
+
+    /**
+     * Get 消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口返回的 [ConsumeGroupItem](https://cloud.tencent.com/document/api/1493/96031#ConsumeGroupItem) 或控制台获得。 
+     * @return ConsumerGroup 消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口返回的 [ConsumeGroupItem](https://cloud.tencent.com/document/api/1493/96031#ConsumeGroupItem) 或控制台获得。
+     */
+    public String getConsumerGroup() {
+        return this.ConsumerGroup;
+    }
+
+    /**
+     * Set 消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口返回的 [ConsumeGroupItem](https://cloud.tencent.com/document/api/1493/96031#ConsumeGroupItem) 或控制台获得。
+     * @param ConsumerGroup 消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口返回的 [ConsumeGroupItem](https://cloud.tencent.com/document/api/1493/96031#ConsumeGroupItem) 或控制台获得。
+     */
+    public void setConsumerGroup(String ConsumerGroup) {
+        this.ConsumerGroup = ConsumerGroup;
     }
 
     /**
@@ -177,14 +177,14 @@ public class ModifyConsumerGroupRequest extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
-        if (source.ConsumerGroup != null) {
-            this.ConsumerGroup = new String(source.ConsumerGroup);
-        }
         if (source.ConsumeEnable != null) {
             this.ConsumeEnable = new Boolean(source.ConsumeEnable);
         }
         if (source.ConsumeMessageOrderly != null) {
             this.ConsumeMessageOrderly = new Boolean(source.ConsumeMessageOrderly);
+        }
+        if (source.ConsumerGroup != null) {
+            this.ConsumerGroup = new String(source.ConsumerGroup);
         }
         if (source.MaxRetryTimes != null) {
             this.MaxRetryTimes = new Long(source.MaxRetryTimes);
@@ -200,9 +200,9 @@ public class ModifyConsumerGroupRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamSimple(map, prefix + "ConsumerGroup", this.ConsumerGroup);
         this.setParamSimple(map, prefix + "ConsumeEnable", this.ConsumeEnable);
         this.setParamSimple(map, prefix + "ConsumeMessageOrderly", this.ConsumeMessageOrderly);
+        this.setParamSimple(map, prefix + "ConsumerGroup", this.ConsumerGroup);
         this.setParamSimple(map, prefix + "MaxRetryTimes", this.MaxRetryTimes);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
 

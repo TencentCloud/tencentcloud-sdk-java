@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.billing.v20180709.models;
+package com.tencentcloudapi.aiart.v20221229.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAccountBalanceRequest extends AbstractModel {
+public class DescribeTemplateToImageJobRequest extends AbstractModel {
 
     /**
-    * 是否查询临时额度
+    * 任务 ID。
     */
-    @SerializedName("TempCredit")
+    @SerializedName("JobId")
     @Expose
-    private Boolean TempCredit;
+    private String JobId;
 
     /**
-     * Get 是否查询临时额度 
-     * @return TempCredit 是否查询临时额度
+     * Get 任务 ID。 
+     * @return JobId 任务 ID。
      */
-    public Boolean getTempCredit() {
-        return this.TempCredit;
+    public String getJobId() {
+        return this.JobId;
     }
 
     /**
-     * Set 是否查询临时额度
-     * @param TempCredit 是否查询临时额度
+     * Set 任务 ID。
+     * @param JobId 任务 ID。
      */
-    public void setTempCredit(Boolean TempCredit) {
-        this.TempCredit = TempCredit;
+    public void setJobId(String JobId) {
+        this.JobId = JobId;
     }
 
-    public DescribeAccountBalanceRequest() {
+    public DescribeTemplateToImageJobRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeAccountBalanceRequest(DescribeAccountBalanceRequest source) {
-        if (source.TempCredit != null) {
-            this.TempCredit = new Boolean(source.TempCredit);
+    public DescribeTemplateToImageJobRequest(DescribeTemplateToImageJobRequest source) {
+        if (source.JobId != null) {
+            this.JobId = new String(source.JobId);
         }
     }
 
@@ -64,7 +64,7 @@ public class DescribeAccountBalanceRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TempCredit", this.TempCredit);
+        this.setParamSimple(map, prefix + "JobId", this.JobId);
 
     }
 }
