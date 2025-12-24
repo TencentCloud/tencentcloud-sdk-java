@@ -577,6 +577,94 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
     private Long ColumnCount;
 
     /**
+    * 权限标记
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TablePermissionFlag")
+    @Expose
+    private Boolean TablePermissionFlag;
+
+    /**
+    * 资产状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AssetStatus")
+    @Expose
+    private Long AssetStatus;
+
+    /**
+    * 资产等级
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AssetLevel")
+    @Expose
+    private Long AssetLevel;
+
+    /**
+    * 资产code
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AssetCode")
+    @Expose
+    private String AssetCode;
+
+    /**
+    * 审批状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AssetAuditStatus")
+    @Expose
+    private String AssetAuditStatus;
+
+    /**
+    * 发布时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PublishedTime")
+    @Expose
+    private String PublishedTime;
+
+    /**
+    * 标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TagInfoList")
+    @Expose
+    private LabelTag [] TagInfoList;
+
+    /**
+    * 标签值选择列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LabelValueSelections")
+    @Expose
+    private LabelValueSelection [] LabelValueSelections;
+
+    /**
+    * 命名空间 - 对应TC-Catalog
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Namespace")
+    @Expose
+    private String Namespace;
+
+    /**
+    * Catalog来源
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MetaFrom")
+    @Expose
+    private String MetaFrom;
+
+    /**
+    * 引擎侧创建者
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EngineCreator")
+    @Expose
+    private String EngineCreator;
+
+    /**
      * Get 表的全局唯一ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TableId 表的全局唯一ID
@@ -1960,6 +2048,226 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
         this.ColumnCount = ColumnCount;
     }
 
+    /**
+     * Get 权限标记
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TablePermissionFlag 权限标记
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getTablePermissionFlag() {
+        return this.TablePermissionFlag;
+    }
+
+    /**
+     * Set 权限标记
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TablePermissionFlag 权限标记
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTablePermissionFlag(Boolean TablePermissionFlag) {
+        this.TablePermissionFlag = TablePermissionFlag;
+    }
+
+    /**
+     * Get 资产状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AssetStatus 资产状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAssetStatus() {
+        return this.AssetStatus;
+    }
+
+    /**
+     * Set 资产状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AssetStatus 资产状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAssetStatus(Long AssetStatus) {
+        this.AssetStatus = AssetStatus;
+    }
+
+    /**
+     * Get 资产等级
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AssetLevel 资产等级
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAssetLevel() {
+        return this.AssetLevel;
+    }
+
+    /**
+     * Set 资产等级
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AssetLevel 资产等级
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAssetLevel(Long AssetLevel) {
+        this.AssetLevel = AssetLevel;
+    }
+
+    /**
+     * Get 资产code
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AssetCode 资产code
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAssetCode() {
+        return this.AssetCode;
+    }
+
+    /**
+     * Set 资产code
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AssetCode 资产code
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAssetCode(String AssetCode) {
+        this.AssetCode = AssetCode;
+    }
+
+    /**
+     * Get 审批状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AssetAuditStatus 审批状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAssetAuditStatus() {
+        return this.AssetAuditStatus;
+    }
+
+    /**
+     * Set 审批状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AssetAuditStatus 审批状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAssetAuditStatus(String AssetAuditStatus) {
+        this.AssetAuditStatus = AssetAuditStatus;
+    }
+
+    /**
+     * Get 发布时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PublishedTime 发布时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPublishedTime() {
+        return this.PublishedTime;
+    }
+
+    /**
+     * Set 发布时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PublishedTime 发布时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPublishedTime(String PublishedTime) {
+        this.PublishedTime = PublishedTime;
+    }
+
+    /**
+     * Get 标签列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TagInfoList 标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public LabelTag [] getTagInfoList() {
+        return this.TagInfoList;
+    }
+
+    /**
+     * Set 标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagInfoList 标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTagInfoList(LabelTag [] TagInfoList) {
+        this.TagInfoList = TagInfoList;
+    }
+
+    /**
+     * Get 标签值选择列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LabelValueSelections 标签值选择列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public LabelValueSelection [] getLabelValueSelections() {
+        return this.LabelValueSelections;
+    }
+
+    /**
+     * Set 标签值选择列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LabelValueSelections 标签值选择列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLabelValueSelections(LabelValueSelection [] LabelValueSelections) {
+        this.LabelValueSelections = LabelValueSelections;
+    }
+
+    /**
+     * Get 命名空间 - 对应TC-Catalog
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Namespace 命名空间 - 对应TC-Catalog
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNamespace() {
+        return this.Namespace;
+    }
+
+    /**
+     * Set 命名空间 - 对应TC-Catalog
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Namespace 命名空间 - 对应TC-Catalog
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNamespace(String Namespace) {
+        this.Namespace = Namespace;
+    }
+
+    /**
+     * Get Catalog来源
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MetaFrom Catalog来源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMetaFrom() {
+        return this.MetaFrom;
+    }
+
+    /**
+     * Set Catalog来源
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MetaFrom Catalog来源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMetaFrom(String MetaFrom) {
+        this.MetaFrom = MetaFrom;
+    }
+
+    /**
+     * Get 引擎侧创建者
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EngineCreator 引擎侧创建者
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEngineCreator() {
+        return this.EngineCreator;
+    }
+
+    /**
+     * Set 引擎侧创建者
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EngineCreator 引擎侧创建者
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEngineCreator(String EngineCreator) {
+        this.EngineCreator = EngineCreator;
+    }
+
     public TableMeta() {
     }
 
@@ -2193,6 +2501,45 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
         if (source.ColumnCount != null) {
             this.ColumnCount = new Long(source.ColumnCount);
         }
+        if (source.TablePermissionFlag != null) {
+            this.TablePermissionFlag = new Boolean(source.TablePermissionFlag);
+        }
+        if (source.AssetStatus != null) {
+            this.AssetStatus = new Long(source.AssetStatus);
+        }
+        if (source.AssetLevel != null) {
+            this.AssetLevel = new Long(source.AssetLevel);
+        }
+        if (source.AssetCode != null) {
+            this.AssetCode = new String(source.AssetCode);
+        }
+        if (source.AssetAuditStatus != null) {
+            this.AssetAuditStatus = new String(source.AssetAuditStatus);
+        }
+        if (source.PublishedTime != null) {
+            this.PublishedTime = new String(source.PublishedTime);
+        }
+        if (source.TagInfoList != null) {
+            this.TagInfoList = new LabelTag[source.TagInfoList.length];
+            for (int i = 0; i < source.TagInfoList.length; i++) {
+                this.TagInfoList[i] = new LabelTag(source.TagInfoList[i]);
+            }
+        }
+        if (source.LabelValueSelections != null) {
+            this.LabelValueSelections = new LabelValueSelection[source.LabelValueSelections.length];
+            for (int i = 0; i < source.LabelValueSelections.length; i++) {
+                this.LabelValueSelections[i] = new LabelValueSelection(source.LabelValueSelections[i]);
+            }
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.MetaFrom != null) {
+            this.MetaFrom = new String(source.MetaFrom);
+        }
+        if (source.EngineCreator != null) {
+            this.EngineCreator = new String(source.EngineCreator);
+        }
     }
 
 
@@ -2269,6 +2616,17 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
         this.setParamSimple(map, prefix + "DataLayerUuid", this.DataLayerUuid);
         this.setParamSimple(map, prefix + "DataLayerName", this.DataLayerName);
         this.setParamSimple(map, prefix + "ColumnCount", this.ColumnCount);
+        this.setParamSimple(map, prefix + "TablePermissionFlag", this.TablePermissionFlag);
+        this.setParamSimple(map, prefix + "AssetStatus", this.AssetStatus);
+        this.setParamSimple(map, prefix + "AssetLevel", this.AssetLevel);
+        this.setParamSimple(map, prefix + "AssetCode", this.AssetCode);
+        this.setParamSimple(map, prefix + "AssetAuditStatus", this.AssetAuditStatus);
+        this.setParamSimple(map, prefix + "PublishedTime", this.PublishedTime);
+        this.setParamArrayObj(map, prefix + "TagInfoList.", this.TagInfoList);
+        this.setParamArrayObj(map, prefix + "LabelValueSelections.", this.LabelValueSelections);
+        this.setParamSimple(map, prefix + "Namespace", this.Namespace);
+        this.setParamSimple(map, prefix + "MetaFrom", this.MetaFrom);
+        this.setParamSimple(map, prefix + "EngineCreator", this.EngineCreator);
 
     }
 }

@@ -38,7 +38,7 @@ public class VoiceCloneRequest extends AbstractModel {
     private String VoiceName;
 
     /**
-    * 声音克隆的参考音频，必须为16k单声道的wav的base64字符串， 长度在5秒～12秒之间
+    * 声音克隆的参考音频，必须为16k单声道的wav的base64字符串， 长度在10秒～180秒之间
     */
     @SerializedName("PromptAudio")
     @Expose
@@ -105,16 +105,16 @@ public class VoiceCloneRequest extends AbstractModel {
     }
 
     /**
-     * Get 声音克隆的参考音频，必须为16k单声道的wav的base64字符串， 长度在5秒～12秒之间 
-     * @return PromptAudio 声音克隆的参考音频，必须为16k单声道的wav的base64字符串， 长度在5秒～12秒之间
+     * Get 声音克隆的参考音频，必须为16k单声道的wav的base64字符串， 长度在10秒～180秒之间 
+     * @return PromptAudio 声音克隆的参考音频，必须为16k单声道的wav的base64字符串， 长度在10秒～180秒之间
      */
     public String getPromptAudio() {
         return this.PromptAudio;
     }
 
     /**
-     * Set 声音克隆的参考音频，必须为16k单声道的wav的base64字符串， 长度在5秒～12秒之间
-     * @param PromptAudio 声音克隆的参考音频，必须为16k单声道的wav的base64字符串， 长度在5秒～12秒之间
+     * Set 声音克隆的参考音频，必须为16k单声道的wav的base64字符串， 长度在10秒～180秒之间
+     * @param PromptAudio 声音克隆的参考音频，必须为16k单声道的wav的base64字符串， 长度在10秒～180秒之间
      */
     public void setPromptAudio(String PromptAudio) {
         this.PromptAudio = PromptAudio;

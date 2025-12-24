@@ -1665,6 +1665,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *同步接口，返回语音识别结果
+     * @param req RecognizeAudioRequest
+     * @return RecognizeAudioResponse
+     * @throws TencentCloudSDKException
+     */
+    public RecognizeAudioResponse RecognizeAudio(RecognizeAudioRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RecognizeAudio", RecognizeAudioResponse.class);
+    }
+
+    /**
      *智能媒体识别，包含表情和动作识别。仅用于智学，其他调用无效。
      * @param req RecognizeMediaForZhiXueRequest
      * @return RecognizeMediaForZhiXueResponse

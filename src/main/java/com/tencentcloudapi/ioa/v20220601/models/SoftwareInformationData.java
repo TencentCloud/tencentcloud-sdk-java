@@ -80,6 +80,20 @@ public class SoftwareInformationData extends AbstractModel {
     private Long PiracyRisk;
 
     /**
+    * 设备id
+    */
+    @SerializedName("DeviceId")
+    @Expose
+    private Long DeviceId;
+
+    /**
+    * 平台类型
+    */
+    @SerializedName("OsType")
+    @Expose
+    private Long OsType;
+
+    /**
      * Get 软件名称 
      * @return Name 软件名称
      */
@@ -207,6 +221,38 @@ public class SoftwareInformationData extends AbstractModel {
         this.PiracyRisk = PiracyRisk;
     }
 
+    /**
+     * Get 设备id 
+     * @return DeviceId 设备id
+     */
+    public Long getDeviceId() {
+        return this.DeviceId;
+    }
+
+    /**
+     * Set 设备id
+     * @param DeviceId 设备id
+     */
+    public void setDeviceId(Long DeviceId) {
+        this.DeviceId = DeviceId;
+    }
+
+    /**
+     * Get 平台类型 
+     * @return OsType 平台类型
+     */
+    public Long getOsType() {
+        return this.OsType;
+    }
+
+    /**
+     * Set 平台类型
+     * @param OsType 平台类型
+     */
+    public void setOsType(Long OsType) {
+        this.OsType = OsType;
+    }
+
     public SoftwareInformationData() {
     }
 
@@ -239,6 +285,12 @@ public class SoftwareInformationData extends AbstractModel {
         if (source.PiracyRisk != null) {
             this.PiracyRisk = new Long(source.PiracyRisk);
         }
+        if (source.DeviceId != null) {
+            this.DeviceId = new Long(source.DeviceId);
+        }
+        if (source.OsType != null) {
+            this.OsType = new Long(source.OsType);
+        }
     }
 
 
@@ -254,6 +306,8 @@ public class SoftwareInformationData extends AbstractModel {
         this.setParamSimple(map, prefix + "CorpName", this.CorpName);
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "PiracyRisk", this.PiracyRisk);
+        this.setParamSimple(map, prefix + "DeviceId", this.DeviceId);
+        this.setParamSimple(map, prefix + "OsType", this.OsType);
 
     }
 }

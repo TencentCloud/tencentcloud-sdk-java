@@ -135,6 +135,20 @@ public class StartStreamIngestRequest extends AbstractModel {
     private Long Volume;
 
     /**
+    * 开启播放进度回调, 默认false，当开启后，播放进度会通过trtc custom data 回调给播放端
+    */
+    @SerializedName("EnableProgress")
+    @Expose
+    private Boolean EnableProgress;
+
+    /**
+    * 播放倍速，默认1.0，可取[0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0]
+    */
+    @SerializedName("Tempo")
+    @Expose
+    private Float Tempo;
+
+    /**
      * Get TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和TRTC的房间所对应的SdkAppId相同。 
      * @return SdkAppId TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和TRTC的房间所对应的SdkAppId相同。
      */
@@ -410,6 +424,38 @@ public class StartStreamIngestRequest extends AbstractModel {
         this.Volume = Volume;
     }
 
+    /**
+     * Get 开启播放进度回调, 默认false，当开启后，播放进度会通过trtc custom data 回调给播放端 
+     * @return EnableProgress 开启播放进度回调, 默认false，当开启后，播放进度会通过trtc custom data 回调给播放端
+     */
+    public Boolean getEnableProgress() {
+        return this.EnableProgress;
+    }
+
+    /**
+     * Set 开启播放进度回调, 默认false，当开启后，播放进度会通过trtc custom data 回调给播放端
+     * @param EnableProgress 开启播放进度回调, 默认false，当开启后，播放进度会通过trtc custom data 回调给播放端
+     */
+    public void setEnableProgress(Boolean EnableProgress) {
+        this.EnableProgress = EnableProgress;
+    }
+
+    /**
+     * Get 播放倍速，默认1.0，可取[0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0] 
+     * @return Tempo 播放倍速，默认1.0，可取[0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0]
+     */
+    public Float getTempo() {
+        return this.Tempo;
+    }
+
+    /**
+     * Set 播放倍速，默认1.0，可取[0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0]
+     * @param Tempo 播放倍速，默认1.0，可取[0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0]
+     */
+    public void setTempo(Float Tempo) {
+        this.Tempo = Tempo;
+    }
+
     public StartStreamIngestRequest() {
     }
 
@@ -466,6 +512,12 @@ public class StartStreamIngestRequest extends AbstractModel {
         if (source.Volume != null) {
             this.Volume = new Long(source.Volume);
         }
+        if (source.EnableProgress != null) {
+            this.EnableProgress = new Boolean(source.EnableProgress);
+        }
+        if (source.Tempo != null) {
+            this.Tempo = new Float(source.Tempo);
+        }
     }
 
 
@@ -488,6 +540,8 @@ public class StartStreamIngestRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RepeatNum", this.RepeatNum);
         this.setParamSimple(map, prefix + "MaxDuration", this.MaxDuration);
         this.setParamSimple(map, prefix + "Volume", this.Volume);
+        this.setParamSimple(map, prefix + "EnableProgress", this.EnableProgress);
+        this.setParamSimple(map, prefix + "Tempo", this.Tempo);
 
     }
 }

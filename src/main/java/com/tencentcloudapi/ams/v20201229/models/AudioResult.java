@@ -165,6 +165,13 @@ public class AudioResult extends AbstractModel {
     private Sentence [] Sentences;
 
     /**
+    * 切片请求ID
+    */
+    @SerializedName("RequestId")
+    @Expose
+    private String RequestId;
+
+    /**
      * Get 该字段用于返回审核内容是否命中审核模型；取值：0（**未命中**）、1（**命中**）。 
      * @return HitFlag 该字段用于返回审核内容是否命中审核模型；取值：0（**未命中**）、1（**命中**）。
      */
@@ -488,6 +495,22 @@ public class AudioResult extends AbstractModel {
         this.Sentences = Sentences;
     }
 
+    /**
+     * Get 切片请求ID 
+     * @return RequestId 切片请求ID
+     */
+    public String getRequestId() {
+        return this.RequestId;
+    }
+
+    /**
+     * Set 切片请求ID
+     * @param RequestId 切片请求ID
+     */
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
+    }
+
     public AudioResult() {
     }
 
@@ -580,6 +603,9 @@ public class AudioResult extends AbstractModel {
                 this.Sentences[i] = new Sentence(source.Sentences[i]);
             }
         }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
     }
 
 
@@ -607,6 +633,7 @@ public class AudioResult extends AbstractModel {
         this.setParamSimple(map, prefix + "SubTagCode", this.SubTagCode);
         this.setParamSimple(map, prefix + "HitType", this.HitType);
         this.setParamArrayObj(map, prefix + "Sentences.", this.Sentences);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

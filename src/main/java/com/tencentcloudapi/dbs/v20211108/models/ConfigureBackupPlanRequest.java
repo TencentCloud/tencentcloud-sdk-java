@@ -38,6 +38,13 @@ public class ConfigureBackupPlanRequest extends AbstractModel {
     private String BackupPlanName;
 
     /**
+    * 全量备份并发数上限。
+    */
+    @SerializedName("UpperParallel")
+    @Expose
+    private Long UpperParallel;
+
+    /**
     * 备份源实例信息。
     */
     @SerializedName("SourceEndPoint")
@@ -95,6 +102,22 @@ public class ConfigureBackupPlanRequest extends AbstractModel {
      */
     public void setBackupPlanName(String BackupPlanName) {
         this.BackupPlanName = BackupPlanName;
+    }
+
+    /**
+     * Get 全量备份并发数上限。 
+     * @return UpperParallel 全量备份并发数上限。
+     */
+    public Long getUpperParallel() {
+        return this.UpperParallel;
+    }
+
+    /**
+     * Set 全量备份并发数上限。
+     * @param UpperParallel 全量备份并发数上限。
+     */
+    public void setUpperParallel(Long UpperParallel) {
+        this.UpperParallel = UpperParallel;
     }
 
     /**
@@ -175,6 +198,9 @@ public class ConfigureBackupPlanRequest extends AbstractModel {
         if (source.BackupPlanName != null) {
             this.BackupPlanName = new String(source.BackupPlanName);
         }
+        if (source.UpperParallel != null) {
+            this.UpperParallel = new Long(source.UpperParallel);
+        }
         if (source.SourceEndPoint != null) {
             this.SourceEndPoint = new BackupEndpoint(source.SourceEndPoint);
         }
@@ -196,6 +222,7 @@ public class ConfigureBackupPlanRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BackupPlanId", this.BackupPlanId);
         this.setParamSimple(map, prefix + "BackupPlanName", this.BackupPlanName);
+        this.setParamSimple(map, prefix + "UpperParallel", this.UpperParallel);
         this.setParamObj(map, prefix + "SourceEndPoint.", this.SourceEndPoint);
         this.setParamObj(map, prefix + "BackupObject.", this.BackupObject);
         this.setParamObj(map, prefix + "BackupStrategy.", this.BackupStrategy);

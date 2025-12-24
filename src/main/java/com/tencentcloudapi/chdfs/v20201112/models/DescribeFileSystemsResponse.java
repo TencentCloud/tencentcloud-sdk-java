@@ -31,6 +31,20 @@ public class DescribeFileSystemsResponse extends AbstractModel {
     private FileSystem [] FileSystems;
 
     /**
+    * 标识是否已获取全量
+    */
+    @SerializedName("IsOver")
+    @Expose
+    private Boolean IsOver;
+
+    /**
+    * 下一次请求起始文件系统ID标记
+    */
+    @SerializedName("NextFileSystemIdMarker")
+    @Expose
+    private String NextFileSystemIdMarker;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +65,38 @@ public class DescribeFileSystemsResponse extends AbstractModel {
      */
     public void setFileSystems(FileSystem [] FileSystems) {
         this.FileSystems = FileSystems;
+    }
+
+    /**
+     * Get 标识是否已获取全量 
+     * @return IsOver 标识是否已获取全量
+     */
+    public Boolean getIsOver() {
+        return this.IsOver;
+    }
+
+    /**
+     * Set 标识是否已获取全量
+     * @param IsOver 标识是否已获取全量
+     */
+    public void setIsOver(Boolean IsOver) {
+        this.IsOver = IsOver;
+    }
+
+    /**
+     * Get 下一次请求起始文件系统ID标记 
+     * @return NextFileSystemIdMarker 下一次请求起始文件系统ID标记
+     */
+    public String getNextFileSystemIdMarker() {
+        return this.NextFileSystemIdMarker;
+    }
+
+    /**
+     * Set 下一次请求起始文件系统ID标记
+     * @param NextFileSystemIdMarker 下一次请求起始文件系统ID标记
+     */
+    public void setNextFileSystemIdMarker(String NextFileSystemIdMarker) {
+        this.NextFileSystemIdMarker = NextFileSystemIdMarker;
     }
 
     /**
@@ -83,6 +129,12 @@ public class DescribeFileSystemsResponse extends AbstractModel {
                 this.FileSystems[i] = new FileSystem(source.FileSystems[i]);
             }
         }
+        if (source.IsOver != null) {
+            this.IsOver = new Boolean(source.IsOver);
+        }
+        if (source.NextFileSystemIdMarker != null) {
+            this.NextFileSystemIdMarker = new String(source.NextFileSystemIdMarker);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -94,6 +146,8 @@ public class DescribeFileSystemsResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "FileSystems.", this.FileSystems);
+        this.setParamSimple(map, prefix + "IsOver", this.IsOver);
+        this.setParamSimple(map, prefix + "NextFileSystemIdMarker", this.NextFileSystemIdMarker);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -106,6 +106,13 @@ Block 确认违规
     private String HitType;
 
     /**
+    * 截帧请求ID
+    */
+    @SerializedName("RequestId")
+    @Expose
+    private String RequestId;
+
+    /**
      * Get 违规标志
 0 未命中
 1 命中 
@@ -313,6 +320,22 @@ Block 确认违规
         this.HitType = HitType;
     }
 
+    /**
+     * Get 截帧请求ID 
+     * @return RequestId 截帧请求ID
+     */
+    public String getRequestId() {
+        return this.RequestId;
+    }
+
+    /**
+     * Set 截帧请求ID
+     * @param RequestId 截帧请求ID
+     */
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
+    }
+
     public ImageResult() {
     }
 
@@ -357,6 +380,9 @@ Block 确认违规
         if (source.HitType != null) {
             this.HitType = new String(source.HitType);
         }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
     }
 
 
@@ -374,6 +400,7 @@ Block 确认违规
         this.setParamSimple(map, prefix + "SubLabel", this.SubLabel);
         this.setParamArrayObj(map, prefix + "RecognitionResults.", this.RecognitionResults);
         this.setParamSimple(map, prefix + "HitType", this.HitType);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

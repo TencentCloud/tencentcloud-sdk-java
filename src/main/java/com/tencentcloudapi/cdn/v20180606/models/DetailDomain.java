@@ -579,6 +579,20 @@ off：不支持
     private ParamFilter ParamFilter;
 
     /**
+    * 流量一键防盗刷配置
+    */
+    @SerializedName("AutoGuard")
+    @Expose
+    private AutoGuard AutoGuard;
+
+    /**
+    * 区域访问控制配置
+    */
+    @SerializedName("GeoBlocker")
+    @Expose
+    private GeoBlocker GeoBlocker;
+
+    /**
      * Get 域名 ID 
      * @return ResourceId 域名 ID
      */
@@ -1994,6 +2008,38 @@ off：不支持
         this.ParamFilter = ParamFilter;
     }
 
+    /**
+     * Get 流量一键防盗刷配置 
+     * @return AutoGuard 流量一键防盗刷配置
+     */
+    public AutoGuard getAutoGuard() {
+        return this.AutoGuard;
+    }
+
+    /**
+     * Set 流量一键防盗刷配置
+     * @param AutoGuard 流量一键防盗刷配置
+     */
+    public void setAutoGuard(AutoGuard AutoGuard) {
+        this.AutoGuard = AutoGuard;
+    }
+
+    /**
+     * Get 区域访问控制配置 
+     * @return GeoBlocker 区域访问控制配置
+     */
+    public GeoBlocker getGeoBlocker() {
+        return this.GeoBlocker;
+    }
+
+    /**
+     * Set 区域访问控制配置
+     * @param GeoBlocker 区域访问控制配置
+     */
+    public void setGeoBlocker(GeoBlocker GeoBlocker) {
+        this.GeoBlocker = GeoBlocker;
+    }
+
     public DetailDomain() {
     }
 
@@ -2212,6 +2258,12 @@ off：不支持
         if (source.ParamFilter != null) {
             this.ParamFilter = new ParamFilter(source.ParamFilter);
         }
+        if (source.AutoGuard != null) {
+            this.AutoGuard = new AutoGuard(source.AutoGuard);
+        }
+        if (source.GeoBlocker != null) {
+            this.GeoBlocker = new GeoBlocker(source.GeoBlocker);
+        }
     }
 
 
@@ -2286,6 +2338,8 @@ off：不支持
         this.setParamObj(map, prefix + "HttpsBilling.", this.HttpsBilling);
         this.setParamObj(map, prefix + "OthersPrivateAccess.", this.OthersPrivateAccess);
         this.setParamObj(map, prefix + "ParamFilter.", this.ParamFilter);
+        this.setParamObj(map, prefix + "AutoGuard.", this.AutoGuard);
+        this.setParamObj(map, prefix + "GeoBlocker.", this.GeoBlocker);
 
     }
 }

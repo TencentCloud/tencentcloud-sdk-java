@@ -38,6 +38,20 @@ public class DescribeRuleExecResultsRequest extends AbstractModel {
     private String ProjectId;
 
     /**
+    * 过滤条件	
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
+    * 排序字段
+    */
+    @SerializedName("OrderFields")
+    @Expose
+    private OrderField [] OrderFields;
+
+    /**
      * Get 规则组执行Id 
      * @return RuleGroupExecId 规则组执行Id
      */
@@ -69,6 +83,38 @@ public class DescribeRuleExecResultsRequest extends AbstractModel {
         this.ProjectId = ProjectId;
     }
 
+    /**
+     * Get 过滤条件	 
+     * @return Filters 过滤条件	
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 过滤条件	
+     * @param Filters 过滤条件	
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
+    /**
+     * Get 排序字段 
+     * @return OrderFields 排序字段
+     */
+    public OrderField [] getOrderFields() {
+        return this.OrderFields;
+    }
+
+    /**
+     * Set 排序字段
+     * @param OrderFields 排序字段
+     */
+    public void setOrderFields(OrderField [] OrderFields) {
+        this.OrderFields = OrderFields;
+    }
+
     public DescribeRuleExecResultsRequest() {
     }
 
@@ -83,6 +129,18 @@ public class DescribeRuleExecResultsRequest extends AbstractModel {
         if (source.ProjectId != null) {
             this.ProjectId = new String(source.ProjectId);
         }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
+        if (source.OrderFields != null) {
+            this.OrderFields = new OrderField[source.OrderFields.length];
+            for (int i = 0; i < source.OrderFields.length; i++) {
+                this.OrderFields[i] = new OrderField(source.OrderFields[i]);
+            }
+        }
     }
 
 
@@ -92,6 +150,8 @@ public class DescribeRuleExecResultsRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RuleGroupExecId", this.RuleGroupExecId);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamArrayObj(map, prefix + "OrderFields.", this.OrderFields);
 
     }
 }

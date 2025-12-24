@@ -165,6 +165,20 @@ public class AggrSoftDeviceRow extends AbstractModel {
     private String RemarkName;
 
     /**
+    * 软件id
+    */
+    @SerializedName("SoftwareId")
+    @Expose
+    private Long SoftwareId;
+
+    /**
+    * 0:win 2:mac
+    */
+    @SerializedName("OsType")
+    @Expose
+    private Long OsType;
+
+    /**
      * Get 终端名
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DeviceName 终端名
@@ -512,6 +526,38 @@ public class AggrSoftDeviceRow extends AbstractModel {
         this.RemarkName = RemarkName;
     }
 
+    /**
+     * Get 软件id 
+     * @return SoftwareId 软件id
+     */
+    public Long getSoftwareId() {
+        return this.SoftwareId;
+    }
+
+    /**
+     * Set 软件id
+     * @param SoftwareId 软件id
+     */
+    public void setSoftwareId(Long SoftwareId) {
+        this.SoftwareId = SoftwareId;
+    }
+
+    /**
+     * Get 0:win 2:mac 
+     * @return OsType 0:win 2:mac
+     */
+    public Long getOsType() {
+        return this.OsType;
+    }
+
+    /**
+     * Set 0:win 2:mac
+     * @param OsType 0:win 2:mac
+     */
+    public void setOsType(Long OsType) {
+        this.OsType = OsType;
+    }
+
     public AggrSoftDeviceRow() {
     }
 
@@ -574,6 +620,12 @@ public class AggrSoftDeviceRow extends AbstractModel {
         if (source.RemarkName != null) {
             this.RemarkName = new String(source.RemarkName);
         }
+        if (source.SoftwareId != null) {
+            this.SoftwareId = new Long(source.SoftwareId);
+        }
+        if (source.OsType != null) {
+            this.OsType = new Long(source.OsType);
+        }
     }
 
 
@@ -599,6 +651,8 @@ public class AggrSoftDeviceRow extends AbstractModel {
         this.setParamSimple(map, prefix + "NewVersion", this.NewVersion);
         this.setParamSimple(map, prefix + "UpgradeSoftId", this.UpgradeSoftId);
         this.setParamSimple(map, prefix + "RemarkName", this.RemarkName);
+        this.setParamSimple(map, prefix + "SoftwareId", this.SoftwareId);
+        this.setParamSimple(map, prefix + "OsType", this.OsType);
 
     }
 }

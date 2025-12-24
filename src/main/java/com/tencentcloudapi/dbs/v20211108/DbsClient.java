@@ -50,6 +50,17 @@ public class DbsClient extends AbstractClient{
     }
 
     /**
+     *该接口用于创建备份计划。
+     * @param req CreateBackupPlanRequest
+     * @return CreateBackupPlanResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBackupPlanResponse CreateBackupPlan(CreateBackupPlanRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateBackupPlan", CreateBackupPlanResponse.class);
+    }
+
+    /**
      *该接口用于创建连通性检测任务，请在创建备份计划前，通过该接口来检测你的源端实例是否连通性正常。
      * @param req CreateConnectTestJobRequest
      * @return CreateConnectTestJobResponse
@@ -69,6 +80,28 @@ public class DbsClient extends AbstractClient{
     public DescribeBackupCheckJobResponse DescribeBackupCheckJob(DescribeBackupCheckJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeBackupCheckJob", DescribeBackupCheckJobResponse.class);
+    }
+
+    /**
+     *本接口（DescribeBackupPlans）用于查询备份计划列表。
+     * @param req DescribeBackupPlansRequest
+     * @return DescribeBackupPlansResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupPlansResponse DescribeBackupPlans(DescribeBackupPlansRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBackupPlans", DescribeBackupPlansResponse.class);
+    }
+
+    /**
+     *该接口用于查询连通性检测任务的结果
+     * @param req DescribeConnectTestResultRequest
+     * @return DescribeConnectTestResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConnectTestResultResponse DescribeConnectTestResult(DescribeConnectTestResultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeConnectTestResult", DescribeConnectTestResultResponse.class);
     }
 
     /**

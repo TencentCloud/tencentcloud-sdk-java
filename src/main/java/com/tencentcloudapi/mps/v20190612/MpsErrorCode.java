@@ -132,6 +132,15 @@ public enum MpsErrorCode {
      /* 参数错误：音频流编码格式。 */
      INVALIDPARAMETERVALUE_AUDIOCODEC("InvalidParameterValue.AudioCodec"),
      
+     /* 音频数据不合法 */
+     INVALIDPARAMETERVALUE_AUDIODATA("InvalidParameterValue.AudioData"),
+     
+     /* 音频数据过长 */
+     INVALIDPARAMETERVALUE_AUDIODATATOOLONG("InvalidParameterValue.AudioDataTooLong"),
+     
+     /* 音频数据格式不支持 */
+     INVALIDPARAMETERVALUE_AUDIOFORMAT("InvalidParameterValue.AudioFormat"),
+     
      /* 参数错误：音频流采样率。 */
      INVALIDPARAMETERVALUE_AUDIOSAMPLERATE("InvalidParameterValue.AudioSampleRate"),
      

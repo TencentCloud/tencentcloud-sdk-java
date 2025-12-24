@@ -112,6 +112,14 @@ public class DatabaseInfo extends AbstractModel {
     private String SchemaName;
 
     /**
+    * 是否展示目录
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ShowEnableCatalog")
+    @Expose
+    private Boolean ShowEnableCatalog;
+
+    /**
      * Get 数据源名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DatasourceName 数据源名称
@@ -331,6 +339,26 @@ public class DatabaseInfo extends AbstractModel {
         this.SchemaName = SchemaName;
     }
 
+    /**
+     * Get 是否展示目录
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ShowEnableCatalog 是否展示目录
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getShowEnableCatalog() {
+        return this.ShowEnableCatalog;
+    }
+
+    /**
+     * Set 是否展示目录
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ShowEnableCatalog 是否展示目录
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setShowEnableCatalog(Boolean ShowEnableCatalog) {
+        this.ShowEnableCatalog = ShowEnableCatalog;
+    }
+
     public DatabaseInfo() {
     }
 
@@ -372,6 +400,9 @@ public class DatabaseInfo extends AbstractModel {
         if (source.SchemaName != null) {
             this.SchemaName = new String(source.SchemaName);
         }
+        if (source.ShowEnableCatalog != null) {
+            this.ShowEnableCatalog = new Boolean(source.ShowEnableCatalog);
+        }
     }
 
 
@@ -390,6 +421,7 @@ public class DatabaseInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "DsEnvType", this.DsEnvType);
         this.setParamSimple(map, prefix + "ClusterDeployType", this.ClusterDeployType);
         this.setParamSimple(map, prefix + "SchemaName", this.SchemaName);
+        this.setParamSimple(map, prefix + "ShowEnableCatalog", this.ShowEnableCatalog);
 
     }
 }

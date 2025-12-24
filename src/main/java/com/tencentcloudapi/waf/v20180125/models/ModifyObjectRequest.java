@@ -66,6 +66,20 @@ public class ModifyObjectRequest extends AbstractModel {
     private String [] IpHeaders;
 
     /**
+    * 对象所属集团成员appid
+    */
+    @SerializedName("MemberAppId")
+    @Expose
+    private Long MemberAppId;
+
+    /**
+    * 对象所属集团成员uin
+    */
+    @SerializedName("MemberUin")
+    @Expose
+    private String MemberUin;
+
+    /**
      * Get 修改对象标识 
      * @return ObjectId 修改对象标识
      */
@@ -161,6 +175,38 @@ public class ModifyObjectRequest extends AbstractModel {
         this.IpHeaders = IpHeaders;
     }
 
+    /**
+     * Get 对象所属集团成员appid 
+     * @return MemberAppId 对象所属集团成员appid
+     */
+    public Long getMemberAppId() {
+        return this.MemberAppId;
+    }
+
+    /**
+     * Set 对象所属集团成员appid
+     * @param MemberAppId 对象所属集团成员appid
+     */
+    public void setMemberAppId(Long MemberAppId) {
+        this.MemberAppId = MemberAppId;
+    }
+
+    /**
+     * Get 对象所属集团成员uin 
+     * @return MemberUin 对象所属集团成员uin
+     */
+    public String getMemberUin() {
+        return this.MemberUin;
+    }
+
+    /**
+     * Set 对象所属集团成员uin
+     * @param MemberUin 对象所属集团成员uin
+     */
+    public void setMemberUin(String MemberUin) {
+        this.MemberUin = MemberUin;
+    }
+
     public ModifyObjectRequest() {
     }
 
@@ -190,6 +236,12 @@ public class ModifyObjectRequest extends AbstractModel {
                 this.IpHeaders[i] = new String(source.IpHeaders[i]);
             }
         }
+        if (source.MemberAppId != null) {
+            this.MemberAppId = new Long(source.MemberAppId);
+        }
+        if (source.MemberUin != null) {
+            this.MemberUin = new String(source.MemberUin);
+        }
     }
 
 
@@ -203,6 +255,8 @@ public class ModifyObjectRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Proxy", this.Proxy);
         this.setParamArraySimple(map, prefix + "IpHeaders.", this.IpHeaders);
+        this.setParamSimple(map, prefix + "MemberAppId", this.MemberAppId);
+        this.setParamSimple(map, prefix + "MemberUin", this.MemberUin);
 
     }
 }

@@ -31,6 +31,13 @@ public class DescribeRestoreTasksRequest extends AbstractModel {
     private String FileSystemId;
 
     /**
+    * 起始回热任务ID标记
+    */
+    @SerializedName("RestoreTaskIdMarker")
+    @Expose
+    private Long RestoreTaskIdMarker;
+
+    /**
      * Get 文件系统ID 
      * @return FileSystemId 文件系统ID
      */
@@ -46,6 +53,22 @@ public class DescribeRestoreTasksRequest extends AbstractModel {
         this.FileSystemId = FileSystemId;
     }
 
+    /**
+     * Get 起始回热任务ID标记 
+     * @return RestoreTaskIdMarker 起始回热任务ID标记
+     */
+    public Long getRestoreTaskIdMarker() {
+        return this.RestoreTaskIdMarker;
+    }
+
+    /**
+     * Set 起始回热任务ID标记
+     * @param RestoreTaskIdMarker 起始回热任务ID标记
+     */
+    public void setRestoreTaskIdMarker(Long RestoreTaskIdMarker) {
+        this.RestoreTaskIdMarker = RestoreTaskIdMarker;
+    }
+
     public DescribeRestoreTasksRequest() {
     }
 
@@ -57,6 +80,9 @@ public class DescribeRestoreTasksRequest extends AbstractModel {
         if (source.FileSystemId != null) {
             this.FileSystemId = new String(source.FileSystemId);
         }
+        if (source.RestoreTaskIdMarker != null) {
+            this.RestoreTaskIdMarker = new Long(source.RestoreTaskIdMarker);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DescribeRestoreTasksRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
+        this.setParamSimple(map, prefix + "RestoreTaskIdMarker", this.RestoreTaskIdMarker);
 
     }
 }

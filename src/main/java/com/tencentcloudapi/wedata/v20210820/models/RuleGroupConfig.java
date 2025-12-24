@@ -24,7 +24,20 @@ import java.util.HashMap;
 public class RuleGroupConfig extends AbstractModel {
 
     /**
-    * 模型检测类型
+    * 分析类型，可选值：
+INFERENCE-推理表
+TIME_SERIES-时序表
+SNAPSHOT-快照表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AnalysisType")
+    @Expose
+    private String AnalysisType;
+
+    /**
+    * 模型检测类型，分析类型为推理表（INFERENCE）时必填，可选值：
+CLAASSIFICATION-分类
+REGRESSION-回归
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModelMonitorType")
@@ -160,7 +173,7 @@ public class RuleGroupConfig extends AbstractModel {
     private String PositiveValue;
 
     /**
-    * 特征列
+    * 数值型特征列
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FeatureColumn")
@@ -168,9 +181,61 @@ public class RuleGroupConfig extends AbstractModel {
     private String FeatureColumn;
 
     /**
-     * Get 模型检测类型
+    * 分类型特征列
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CategoricalFeatureColumn")
+    @Expose
+    private String CategoricalFeatureColumn;
+
+    /**
+    * 目录
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BaseCatalog")
+    @Expose
+    private String BaseCatalog;
+
+    /**
+     * Get 分析类型，可选值：
+INFERENCE-推理表
+TIME_SERIES-时序表
+SNAPSHOT-快照表
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ModelMonitorType 模型检测类型
+     * @return AnalysisType 分析类型，可选值：
+INFERENCE-推理表
+TIME_SERIES-时序表
+SNAPSHOT-快照表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAnalysisType() {
+        return this.AnalysisType;
+    }
+
+    /**
+     * Set 分析类型，可选值：
+INFERENCE-推理表
+TIME_SERIES-时序表
+SNAPSHOT-快照表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AnalysisType 分析类型，可选值：
+INFERENCE-推理表
+TIME_SERIES-时序表
+SNAPSHOT-快照表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAnalysisType(String AnalysisType) {
+        this.AnalysisType = AnalysisType;
+    }
+
+    /**
+     * Get 模型检测类型，分析类型为推理表（INFERENCE）时必填，可选值：
+CLAASSIFICATION-分类
+REGRESSION-回归
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ModelMonitorType 模型检测类型，分析类型为推理表（INFERENCE）时必填，可选值：
+CLAASSIFICATION-分类
+REGRESSION-回归
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModelMonitorType() {
@@ -178,9 +243,13 @@ public class RuleGroupConfig extends AbstractModel {
     }
 
     /**
-     * Set 模型检测类型
+     * Set 模型检测类型，分析类型为推理表（INFERENCE）时必填，可选值：
+CLAASSIFICATION-分类
+REGRESSION-回归
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ModelMonitorType 模型检测类型
+     * @param ModelMonitorType 模型检测类型，分析类型为推理表（INFERENCE）时必填，可选值：
+CLAASSIFICATION-分类
+REGRESSION-回归
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModelMonitorType(String ModelMonitorType) {
@@ -508,9 +577,9 @@ public class RuleGroupConfig extends AbstractModel {
     }
 
     /**
-     * Get 特征列
+     * Get 数值型特征列
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FeatureColumn 特征列
+     * @return FeatureColumn 数值型特征列
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFeatureColumn() {
@@ -518,13 +587,53 @@ public class RuleGroupConfig extends AbstractModel {
     }
 
     /**
-     * Set 特征列
+     * Set 数值型特征列
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FeatureColumn 特征列
+     * @param FeatureColumn 数值型特征列
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFeatureColumn(String FeatureColumn) {
         this.FeatureColumn = FeatureColumn;
+    }
+
+    /**
+     * Get 分类型特征列
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CategoricalFeatureColumn 分类型特征列
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCategoricalFeatureColumn() {
+        return this.CategoricalFeatureColumn;
+    }
+
+    /**
+     * Set 分类型特征列
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CategoricalFeatureColumn 分类型特征列
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCategoricalFeatureColumn(String CategoricalFeatureColumn) {
+        this.CategoricalFeatureColumn = CategoricalFeatureColumn;
+    }
+
+    /**
+     * Get 目录
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BaseCatalog 目录
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBaseCatalog() {
+        return this.BaseCatalog;
+    }
+
+    /**
+     * Set 目录
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BaseCatalog 目录
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBaseCatalog(String BaseCatalog) {
+        this.BaseCatalog = BaseCatalog;
     }
 
     public RuleGroupConfig() {
@@ -535,6 +644,9 @@ public class RuleGroupConfig extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public RuleGroupConfig(RuleGroupConfig source) {
+        if (source.AnalysisType != null) {
+            this.AnalysisType = new String(source.AnalysisType);
+        }
         if (source.ModelMonitorType != null) {
             this.ModelMonitorType = new String(source.ModelMonitorType);
         }
@@ -589,6 +701,12 @@ public class RuleGroupConfig extends AbstractModel {
         if (source.FeatureColumn != null) {
             this.FeatureColumn = new String(source.FeatureColumn);
         }
+        if (source.CategoricalFeatureColumn != null) {
+            this.CategoricalFeatureColumn = new String(source.CategoricalFeatureColumn);
+        }
+        if (source.BaseCatalog != null) {
+            this.BaseCatalog = new String(source.BaseCatalog);
+        }
     }
 
 
@@ -596,6 +714,7 @@ public class RuleGroupConfig extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "AnalysisType", this.AnalysisType);
         this.setParamSimple(map, prefix + "ModelMonitorType", this.ModelMonitorType);
         this.setParamSimple(map, prefix + "PredictColumn", this.PredictColumn);
         this.setParamSimple(map, prefix + "PredictColumnType", this.PredictColumnType);
@@ -614,6 +733,8 @@ public class RuleGroupConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "ProtectionValue", this.ProtectionValue);
         this.setParamSimple(map, prefix + "PositiveValue", this.PositiveValue);
         this.setParamSimple(map, prefix + "FeatureColumn", this.FeatureColumn);
+        this.setParamSimple(map, prefix + "CategoricalFeatureColumn", this.CategoricalFeatureColumn);
+        this.setParamSimple(map, prefix + "BaseCatalog", this.BaseCatalog);
 
     }
 }

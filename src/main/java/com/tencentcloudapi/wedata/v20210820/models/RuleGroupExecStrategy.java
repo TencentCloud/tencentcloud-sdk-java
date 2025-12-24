@@ -240,6 +240,14 @@ public class RuleGroupExecStrategy extends AbstractModel {
     private String EngineParam;
 
     /**
+    * catalog名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CatalogName")
+    @Expose
+    private String CatalogName;
+
+    /**
      * Get 规则组Id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RuleGroupId 规则组Id
@@ -779,6 +787,26 @@ public class RuleGroupExecStrategy extends AbstractModel {
         this.EngineParam = EngineParam;
     }
 
+    /**
+     * Get catalog名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CatalogName catalog名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCatalogName() {
+        return this.CatalogName;
+    }
+
+    /**
+     * Set catalog名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CatalogName catalog名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCatalogName(String CatalogName) {
+        this.CatalogName = CatalogName;
+    }
+
     public RuleGroupExecStrategy() {
     }
 
@@ -874,6 +902,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
         if (source.EngineParam != null) {
             this.EngineParam = new String(source.EngineParam);
         }
+        if (source.CatalogName != null) {
+            this.CatalogName = new String(source.CatalogName);
+        }
     }
 
 
@@ -908,6 +939,7 @@ public class RuleGroupExecStrategy extends AbstractModel {
         this.setParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
         this.setParamObj(map, prefix + "GroupConfig.", this.GroupConfig);
         this.setParamSimple(map, prefix + "EngineParam", this.EngineParam);
+        this.setParamSimple(map, prefix + "CatalogName", this.CatalogName);
 
     }
 }

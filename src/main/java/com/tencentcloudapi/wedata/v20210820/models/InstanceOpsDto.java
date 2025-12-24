@@ -564,6 +564,38 @@ public class InstanceOpsDto extends AbstractModel {
     private String [] Privileges;
 
     /**
+    * 任务执行id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskExecutionId")
+    @Expose
+    private String TaskExecutionId;
+
+    /**
+    * dlc taskid
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DlcTaskId")
+    @Expose
+    private String DlcTaskId;
+
+    /**
+    * dlc jobid
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DlcSparkJobId")
+    @Expose
+    private String DlcSparkJobId;
+
+    /**
+    * 扩展属性
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Ext")
+    @Expose
+    private StrToStrMap Ext;
+
+    /**
      * Get 任务ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskId 任务ID
@@ -1907,6 +1939,86 @@ public class InstanceOpsDto extends AbstractModel {
         this.Privileges = Privileges;
     }
 
+    /**
+     * Get 任务执行id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskExecutionId 任务执行id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTaskExecutionId() {
+        return this.TaskExecutionId;
+    }
+
+    /**
+     * Set 任务执行id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskExecutionId 任务执行id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskExecutionId(String TaskExecutionId) {
+        this.TaskExecutionId = TaskExecutionId;
+    }
+
+    /**
+     * Get dlc taskid
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DlcTaskId dlc taskid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDlcTaskId() {
+        return this.DlcTaskId;
+    }
+
+    /**
+     * Set dlc taskid
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DlcTaskId dlc taskid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDlcTaskId(String DlcTaskId) {
+        this.DlcTaskId = DlcTaskId;
+    }
+
+    /**
+     * Get dlc jobid
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DlcSparkJobId dlc jobid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDlcSparkJobId() {
+        return this.DlcSparkJobId;
+    }
+
+    /**
+     * Set dlc jobid
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DlcSparkJobId dlc jobid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDlcSparkJobId(String DlcSparkJobId) {
+        this.DlcSparkJobId = DlcSparkJobId;
+    }
+
+    /**
+     * Get 扩展属性
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Ext 扩展属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public StrToStrMap getExt() {
+        return this.Ext;
+    }
+
+    /**
+     * Set 扩展属性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Ext 扩展属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExt(StrToStrMap Ext) {
+        this.Ext = Ext;
+    }
+
     public InstanceOpsDto() {
     }
 
@@ -2131,6 +2243,18 @@ public class InstanceOpsDto extends AbstractModel {
                 this.Privileges[i] = new String(source.Privileges[i]);
             }
         }
+        if (source.TaskExecutionId != null) {
+            this.TaskExecutionId = new String(source.TaskExecutionId);
+        }
+        if (source.DlcTaskId != null) {
+            this.DlcTaskId = new String(source.DlcTaskId);
+        }
+        if (source.DlcSparkJobId != null) {
+            this.DlcSparkJobId = new String(source.DlcSparkJobId);
+        }
+        if (source.Ext != null) {
+            this.Ext = new StrToStrMap(source.Ext);
+        }
     }
 
 
@@ -2206,6 +2330,10 @@ public class InstanceOpsDto extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceCycleType", this.InstanceCycleType);
         this.setParamSimple(map, prefix + "InstanceSchedulerDesc", this.InstanceSchedulerDesc);
         this.setParamArraySimple(map, prefix + "Privileges.", this.Privileges);
+        this.setParamSimple(map, prefix + "TaskExecutionId", this.TaskExecutionId);
+        this.setParamSimple(map, prefix + "DlcTaskId", this.DlcTaskId);
+        this.setParamSimple(map, prefix + "DlcSparkJobId", this.DlcSparkJobId);
+        this.setParamObj(map, prefix + "Ext.", this.Ext);
 
     }
 }

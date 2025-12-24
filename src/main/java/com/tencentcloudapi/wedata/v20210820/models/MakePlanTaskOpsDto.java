@@ -56,12 +56,20 @@ public class MakePlanTaskOpsDto extends AbstractModel {
     private Long SuccessPercent;
 
     /**
-    * 预计生成的总实例个数，由于是异步生成，-1代表实例还未完完全生成
+    * 预计生成的总实例个数，由于是异步生成，-1代表实例还未完全生成
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceTotalCount")
     @Expose
     private Long InstanceTotalCount;
+
+    /**
+    * 补录任务实例失败百分数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FailurePercent")
+    @Expose
+    private Long FailurePercent;
 
     /**
      * Get 任务基本信息
@@ -144,9 +152,9 @@ public class MakePlanTaskOpsDto extends AbstractModel {
     }
 
     /**
-     * Get 预计生成的总实例个数，由于是异步生成，-1代表实例还未完完全生成
+     * Get 预计生成的总实例个数，由于是异步生成，-1代表实例还未完全生成
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceTotalCount 预计生成的总实例个数，由于是异步生成，-1代表实例还未完完全生成
+     * @return InstanceTotalCount 预计生成的总实例个数，由于是异步生成，-1代表实例还未完全生成
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInstanceTotalCount() {
@@ -154,13 +162,33 @@ public class MakePlanTaskOpsDto extends AbstractModel {
     }
 
     /**
-     * Set 预计生成的总实例个数，由于是异步生成，-1代表实例还未完完全生成
+     * Set 预计生成的总实例个数，由于是异步生成，-1代表实例还未完全生成
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceTotalCount 预计生成的总实例个数，由于是异步生成，-1代表实例还未完完全生成
+     * @param InstanceTotalCount 预计生成的总实例个数，由于是异步生成，-1代表实例还未完全生成
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceTotalCount(Long InstanceTotalCount) {
         this.InstanceTotalCount = InstanceTotalCount;
+    }
+
+    /**
+     * Get 补录任务实例失败百分数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FailurePercent 补录任务实例失败百分数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getFailurePercent() {
+        return this.FailurePercent;
+    }
+
+    /**
+     * Set 补录任务实例失败百分数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FailurePercent 补录任务实例失败百分数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFailurePercent(Long FailurePercent) {
+        this.FailurePercent = FailurePercent;
     }
 
     public MakePlanTaskOpsDto() {
@@ -186,6 +214,9 @@ public class MakePlanTaskOpsDto extends AbstractModel {
         if (source.InstanceTotalCount != null) {
             this.InstanceTotalCount = new Long(source.InstanceTotalCount);
         }
+        if (source.FailurePercent != null) {
+            this.FailurePercent = new Long(source.FailurePercent);
+        }
     }
 
 
@@ -198,6 +229,7 @@ public class MakePlanTaskOpsDto extends AbstractModel {
         this.setParamSimple(map, prefix + "CompletePercent", this.CompletePercent);
         this.setParamSimple(map, prefix + "SuccessPercent", this.SuccessPercent);
         this.setParamSimple(map, prefix + "InstanceTotalCount", this.InstanceTotalCount);
+        this.setParamSimple(map, prefix + "FailurePercent", this.FailurePercent);
 
     }
 }

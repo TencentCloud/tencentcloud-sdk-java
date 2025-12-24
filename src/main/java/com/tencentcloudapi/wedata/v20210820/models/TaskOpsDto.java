@@ -785,6 +785,22 @@ CAN_MANAGE : 有权限管理操作
     private String BundleInfo;
 
     /**
+    * 工作流类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WorkflowType")
+    @Expose
+    private String WorkflowType;
+
+    /**
+    * 任务扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskExtDTO")
+    @Expose
+    private TaskExtOpsDto TaskExtDTO;
+
+    /**
      * Get 任务ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskId 任务ID
@@ -2688,6 +2704,46 @@ CAN_MANAGE : 有权限管理操作
         this.BundleInfo = BundleInfo;
     }
 
+    /**
+     * Get 工作流类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WorkflowType 工作流类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getWorkflowType() {
+        return this.WorkflowType;
+    }
+
+    /**
+     * Set 工作流类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WorkflowType 工作流类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWorkflowType(String WorkflowType) {
+        this.WorkflowType = WorkflowType;
+    }
+
+    /**
+     * Get 任务扩展信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskExtDTO 任务扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TaskExtOpsDto getTaskExtDTO() {
+        return this.TaskExtDTO;
+    }
+
+    /**
+     * Set 任务扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskExtDTO 任务扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskExtDTO(TaskExtOpsDto TaskExtDTO) {
+        this.TaskExtDTO = TaskExtDTO;
+    }
+
     public TaskOpsDto() {
     }
 
@@ -2990,6 +3046,12 @@ CAN_MANAGE : 有权限管理操作
         if (source.BundleInfo != null) {
             this.BundleInfo = new String(source.BundleInfo);
         }
+        if (source.WorkflowType != null) {
+            this.WorkflowType = new String(source.WorkflowType);
+        }
+        if (source.TaskExtDTO != null) {
+            this.TaskExtDTO = new TaskExtOpsDto(source.TaskExtDTO);
+        }
     }
 
 
@@ -3092,6 +3154,8 @@ CAN_MANAGE : 有权限管理操作
         this.setParamArraySimple(map, prefix + "Privileges.", this.Privileges);
         this.setParamSimple(map, prefix + "BundleId", this.BundleId);
         this.setParamSimple(map, prefix + "BundleInfo", this.BundleInfo);
+        this.setParamSimple(map, prefix + "WorkflowType", this.WorkflowType);
+        this.setParamObj(map, prefix + "TaskExtDTO.", this.TaskExtDTO);
 
     }
 }

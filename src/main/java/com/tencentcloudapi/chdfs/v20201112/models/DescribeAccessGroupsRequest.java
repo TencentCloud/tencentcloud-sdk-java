@@ -39,6 +39,13 @@ public class DescribeAccessGroupsRequest extends AbstractModel {
     private Long OwnerUin;
 
     /**
+    * 起始权限组ID标记
+    */
+    @SerializedName("AccessGroupIdMarker")
+    @Expose
+    private String AccessGroupIdMarker;
+
+    /**
      * Get VPC网络ID
 备注：入参只能指定VpcId和OwnerUin的其中一个 
      * @return VpcId VPC网络ID
@@ -74,6 +81,22 @@ public class DescribeAccessGroupsRequest extends AbstractModel {
         this.OwnerUin = OwnerUin;
     }
 
+    /**
+     * Get 起始权限组ID标记 
+     * @return AccessGroupIdMarker 起始权限组ID标记
+     */
+    public String getAccessGroupIdMarker() {
+        return this.AccessGroupIdMarker;
+    }
+
+    /**
+     * Set 起始权限组ID标记
+     * @param AccessGroupIdMarker 起始权限组ID标记
+     */
+    public void setAccessGroupIdMarker(String AccessGroupIdMarker) {
+        this.AccessGroupIdMarker = AccessGroupIdMarker;
+    }
+
     public DescribeAccessGroupsRequest() {
     }
 
@@ -88,6 +111,9 @@ public class DescribeAccessGroupsRequest extends AbstractModel {
         if (source.OwnerUin != null) {
             this.OwnerUin = new Long(source.OwnerUin);
         }
+        if (source.AccessGroupIdMarker != null) {
+            this.AccessGroupIdMarker = new String(source.AccessGroupIdMarker);
+        }
     }
 
 
@@ -97,6 +123,7 @@ public class DescribeAccessGroupsRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "OwnerUin", this.OwnerUin);
+        this.setParamSimple(map, prefix + "AccessGroupIdMarker", this.AccessGroupIdMarker);
 
     }
 }

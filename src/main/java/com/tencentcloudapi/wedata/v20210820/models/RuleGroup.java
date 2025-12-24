@@ -264,6 +264,30 @@ public class RuleGroup extends AbstractModel {
     private String CreateUserName;
 
     /**
+    * 任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GroupType")
+    @Expose
+    private String GroupType;
+
+    /**
+    * 任务id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AspectTaskId")
+    @Expose
+    private String AspectTaskId;
+
+    /**
+    * catalog名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CatalogName")
+    @Expose
+    private String CatalogName;
+
+    /**
      * Get 规则组Id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RuleGroupId 规则组Id
@@ -863,6 +887,66 @@ public class RuleGroup extends AbstractModel {
         this.CreateUserName = CreateUserName;
     }
 
+    /**
+     * Get 任务类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GroupType 任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGroupType() {
+        return this.GroupType;
+    }
+
+    /**
+     * Set 任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GroupType 任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGroupType(String GroupType) {
+        this.GroupType = GroupType;
+    }
+
+    /**
+     * Get 任务id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AspectTaskId 任务id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAspectTaskId() {
+        return this.AspectTaskId;
+    }
+
+    /**
+     * Set 任务id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AspectTaskId 任务id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAspectTaskId(String AspectTaskId) {
+        this.AspectTaskId = AspectTaskId;
+    }
+
+    /**
+     * Get catalog名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CatalogName catalog名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCatalogName() {
+        return this.CatalogName;
+    }
+
+    /**
+     * Set catalog名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CatalogName catalog名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCatalogName(String CatalogName) {
+        this.CatalogName = CatalogName;
+    }
+
     public RuleGroup() {
     }
 
@@ -961,6 +1045,15 @@ public class RuleGroup extends AbstractModel {
         if (source.CreateUserName != null) {
             this.CreateUserName = new String(source.CreateUserName);
         }
+        if (source.GroupType != null) {
+            this.GroupType = new String(source.GroupType);
+        }
+        if (source.AspectTaskId != null) {
+            this.AspectTaskId = new String(source.AspectTaskId);
+        }
+        if (source.CatalogName != null) {
+            this.CatalogName = new String(source.CatalogName);
+        }
     }
 
 
@@ -998,6 +1091,9 @@ public class RuleGroup extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableRuleCount", this.EnableRuleCount);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "CreateUserName", this.CreateUserName);
+        this.setParamSimple(map, prefix + "GroupType", this.GroupType);
+        this.setParamSimple(map, prefix + "AspectTaskId", this.AspectTaskId);
+        this.setParamSimple(map, prefix + "CatalogName", this.CatalogName);
 
     }
 }

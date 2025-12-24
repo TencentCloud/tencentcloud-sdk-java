@@ -45,6 +45,20 @@ public class DescribeObjectsRequest extends AbstractModel {
     private String By;
 
     /**
+    * 集团成员列表
+    */
+    @SerializedName("MemberAppIdList")
+    @Expose
+    private Long [] MemberAppIdList;
+
+    /**
+    * 1代表跨账号情况，0代表单账号情况
+    */
+    @SerializedName("IsCrossAccount")
+    @Expose
+    private Long IsCrossAccount;
+
+    /**
      * Get 支持的过滤器:	ObjectId: clb实例ID	VIP: clb实例的公网IP	InstanceId: waf实例ID	Domain: 精准域名	Status: waf防护开关状态: 0关闭，1开启	ClsStatus: waf日志开关: 0关闭，1开启    
      * @return Filters 支持的过滤器:	ObjectId: clb实例ID	VIP: clb实例的公网IP	InstanceId: waf实例ID	Domain: 精准域名	Status: waf防护开关状态: 0关闭，1开启	ClsStatus: waf日志开关: 0关闭，1开启   
      */
@@ -92,6 +106,38 @@ public class DescribeObjectsRequest extends AbstractModel {
         this.By = By;
     }
 
+    /**
+     * Get 集团成员列表 
+     * @return MemberAppIdList 集团成员列表
+     */
+    public Long [] getMemberAppIdList() {
+        return this.MemberAppIdList;
+    }
+
+    /**
+     * Set 集团成员列表
+     * @param MemberAppIdList 集团成员列表
+     */
+    public void setMemberAppIdList(Long [] MemberAppIdList) {
+        this.MemberAppIdList = MemberAppIdList;
+    }
+
+    /**
+     * Get 1代表跨账号情况，0代表单账号情况 
+     * @return IsCrossAccount 1代表跨账号情况，0代表单账号情况
+     */
+    public Long getIsCrossAccount() {
+        return this.IsCrossAccount;
+    }
+
+    /**
+     * Set 1代表跨账号情况，0代表单账号情况
+     * @param IsCrossAccount 1代表跨账号情况，0代表单账号情况
+     */
+    public void setIsCrossAccount(Long IsCrossAccount) {
+        this.IsCrossAccount = IsCrossAccount;
+    }
+
     public DescribeObjectsRequest() {
     }
 
@@ -112,6 +158,15 @@ public class DescribeObjectsRequest extends AbstractModel {
         if (source.By != null) {
             this.By = new String(source.By);
         }
+        if (source.MemberAppIdList != null) {
+            this.MemberAppIdList = new Long[source.MemberAppIdList.length];
+            for (int i = 0; i < source.MemberAppIdList.length; i++) {
+                this.MemberAppIdList[i] = new Long(source.MemberAppIdList[i]);
+            }
+        }
+        if (source.IsCrossAccount != null) {
+            this.IsCrossAccount = new Long(source.IsCrossAccount);
+        }
     }
 
 
@@ -122,6 +177,8 @@ public class DescribeObjectsRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Order", this.Order);
         this.setParamSimple(map, prefix + "By", this.By);
+        this.setParamArraySimple(map, prefix + "MemberAppIdList.", this.MemberAppIdList);
+        this.setParamSimple(map, prefix + "IsCrossAccount", this.IsCrossAccount);
 
     }
 }

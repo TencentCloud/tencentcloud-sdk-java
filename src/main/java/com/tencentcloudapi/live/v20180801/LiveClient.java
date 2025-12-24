@@ -1726,6 +1726,17 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
+     *查询拉流转推任务流数据统计信息。
+     * @param req DescribePullTransformPushInfoListRequest
+     * @return DescribePullTransformPushInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePullTransformPushInfoListResponse DescribePullTransformPushInfoList(DescribePullTransformPushInfoListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePullTransformPushInfoList", DescribePullTransformPushInfoListResponse.class);
+    }
+
+    /**
      *直播推流带宽和流量数据查询。
 推流计费会先取全球推流用量和全球播放用量进行比较，满足计费条件后再按各地区用量出账。详情参见[计费文档](https://cloud.tencent.com/document/product/267/34175)。
      * @param req DescribePushBandwidthAndFluxListRequest

@@ -108,6 +108,20 @@ public class LoadBalancer extends AbstractModel {
     private String LoadBalancerDomain;
 
     /**
+    * 监听器所属成员id
+    */
+    @SerializedName("MemberAppId")
+    @Expose
+    private Long MemberAppId;
+
+    /**
+    * 监听器所属成员的uin
+    */
+    @SerializedName("MemberUin")
+    @Expose
+    private String MemberUin;
+
+    /**
      * Get 负载均衡LD的ID 
      * @return LoadBalancerId 负载均衡LD的ID
      */
@@ -299,6 +313,38 @@ public class LoadBalancer extends AbstractModel {
         this.LoadBalancerDomain = LoadBalancerDomain;
     }
 
+    /**
+     * Get 监听器所属成员id 
+     * @return MemberAppId 监听器所属成员id
+     */
+    public Long getMemberAppId() {
+        return this.MemberAppId;
+    }
+
+    /**
+     * Set 监听器所属成员id
+     * @param MemberAppId 监听器所属成员id
+     */
+    public void setMemberAppId(Long MemberAppId) {
+        this.MemberAppId = MemberAppId;
+    }
+
+    /**
+     * Get 监听器所属成员的uin 
+     * @return MemberUin 监听器所属成员的uin
+     */
+    public String getMemberUin() {
+        return this.MemberUin;
+    }
+
+    /**
+     * Set 监听器所属成员的uin
+     * @param MemberUin 监听器所属成员的uin
+     */
+    public void setMemberUin(String MemberUin) {
+        this.MemberUin = MemberUin;
+    }
+
     public LoadBalancer() {
     }
 
@@ -343,6 +389,12 @@ public class LoadBalancer extends AbstractModel {
         if (source.LoadBalancerDomain != null) {
             this.LoadBalancerDomain = new String(source.LoadBalancerDomain);
         }
+        if (source.MemberAppId != null) {
+            this.MemberAppId = new Long(source.MemberAppId);
+        }
+        if (source.MemberUin != null) {
+            this.MemberUin = new String(source.MemberUin);
+        }
     }
 
 
@@ -362,6 +414,8 @@ public class LoadBalancer extends AbstractModel {
         this.setParamSimple(map, prefix + "NumericalVpcId", this.NumericalVpcId);
         this.setParamSimple(map, prefix + "LoadBalancerType", this.LoadBalancerType);
         this.setParamSimple(map, prefix + "LoadBalancerDomain", this.LoadBalancerDomain);
+        this.setParamSimple(map, prefix + "MemberAppId", this.MemberAppId);
+        this.setParamSimple(map, prefix + "MemberUin", this.MemberUin);
 
     }
 }

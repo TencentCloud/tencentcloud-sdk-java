@@ -120,6 +120,14 @@ public class TableQualityDetail extends AbstractModel {
     private String RuleGroupTableId;
 
     /**
+    * catalog名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CatalogName")
+    @Expose
+    private String CatalogName;
+
+    /**
      * Get 数据库id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DatabaseId 数据库id
@@ -359,6 +367,26 @@ public class TableQualityDetail extends AbstractModel {
         this.RuleGroupTableId = RuleGroupTableId;
     }
 
+    /**
+     * Get catalog名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CatalogName catalog名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCatalogName() {
+        return this.CatalogName;
+    }
+
+    /**
+     * Set catalog名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CatalogName catalog名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCatalogName(String CatalogName) {
+        this.CatalogName = CatalogName;
+    }
+
     public TableQualityDetail() {
     }
 
@@ -403,6 +431,9 @@ public class TableQualityDetail extends AbstractModel {
         if (source.RuleGroupTableId != null) {
             this.RuleGroupTableId = new String(source.RuleGroupTableId);
         }
+        if (source.CatalogName != null) {
+            this.CatalogName = new String(source.CatalogName);
+        }
     }
 
 
@@ -422,6 +453,7 @@ public class TableQualityDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "DsEnvType", this.DsEnvType);
         this.setParamSimple(map, prefix + "SchemaName", this.SchemaName);
         this.setParamSimple(map, prefix + "RuleGroupTableId", this.RuleGroupTableId);
+        this.setParamSimple(map, prefix + "CatalogName", this.CatalogName);
 
     }
 }

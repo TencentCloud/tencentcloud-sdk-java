@@ -31,6 +31,20 @@ public class DescribeAccessGroupsResponse extends AbstractModel {
     private AccessGroup [] AccessGroups;
 
     /**
+    * 标识是否已获取全量
+    */
+    @SerializedName("IsOver")
+    @Expose
+    private Boolean IsOver;
+
+    /**
+    * 下一次请求起始权限组ID标记
+    */
+    @SerializedName("NextAccessGroupIdMarker")
+    @Expose
+    private String NextAccessGroupIdMarker;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +65,38 @@ public class DescribeAccessGroupsResponse extends AbstractModel {
      */
     public void setAccessGroups(AccessGroup [] AccessGroups) {
         this.AccessGroups = AccessGroups;
+    }
+
+    /**
+     * Get 标识是否已获取全量 
+     * @return IsOver 标识是否已获取全量
+     */
+    public Boolean getIsOver() {
+        return this.IsOver;
+    }
+
+    /**
+     * Set 标识是否已获取全量
+     * @param IsOver 标识是否已获取全量
+     */
+    public void setIsOver(Boolean IsOver) {
+        this.IsOver = IsOver;
+    }
+
+    /**
+     * Get 下一次请求起始权限组ID标记 
+     * @return NextAccessGroupIdMarker 下一次请求起始权限组ID标记
+     */
+    public String getNextAccessGroupIdMarker() {
+        return this.NextAccessGroupIdMarker;
+    }
+
+    /**
+     * Set 下一次请求起始权限组ID标记
+     * @param NextAccessGroupIdMarker 下一次请求起始权限组ID标记
+     */
+    public void setNextAccessGroupIdMarker(String NextAccessGroupIdMarker) {
+        this.NextAccessGroupIdMarker = NextAccessGroupIdMarker;
     }
 
     /**
@@ -83,6 +129,12 @@ public class DescribeAccessGroupsResponse extends AbstractModel {
                 this.AccessGroups[i] = new AccessGroup(source.AccessGroups[i]);
             }
         }
+        if (source.IsOver != null) {
+            this.IsOver = new Boolean(source.IsOver);
+        }
+        if (source.NextAccessGroupIdMarker != null) {
+            this.NextAccessGroupIdMarker = new String(source.NextAccessGroupIdMarker);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -94,6 +146,8 @@ public class DescribeAccessGroupsResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "AccessGroups.", this.AccessGroups);
+        this.setParamSimple(map, prefix + "IsOver", this.IsOver);
+        this.setParamSimple(map, prefix + "NextAccessGroupIdMarker", this.NextAccessGroupIdMarker);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

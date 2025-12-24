@@ -187,6 +187,13 @@ public class HostInfo extends AbstractModel {
     private Long CoresCnt;
 
     /**
+    * 最近在线时间
+    */
+    @SerializedName("LastOnlineTime")
+    @Expose
+    private String LastOnlineTime;
+
+    /**
      * Get 主机id 
      * @return HostID 主机id
      */
@@ -562,6 +569,22 @@ public class HostInfo extends AbstractModel {
         this.CoresCnt = CoresCnt;
     }
 
+    /**
+     * Get 最近在线时间 
+     * @return LastOnlineTime 最近在线时间
+     */
+    public String getLastOnlineTime() {
+        return this.LastOnlineTime;
+    }
+
+    /**
+     * Set 最近在线时间
+     * @param LastOnlineTime 最近在线时间
+     */
+    public void setLastOnlineTime(String LastOnlineTime) {
+        this.LastOnlineTime = LastOnlineTime;
+    }
+
     public HostInfo() {
     }
 
@@ -642,6 +665,9 @@ public class HostInfo extends AbstractModel {
         if (source.CoresCnt != null) {
             this.CoresCnt = new Long(source.CoresCnt);
         }
+        if (source.LastOnlineTime != null) {
+            this.LastOnlineTime = new String(source.LastOnlineTime);
+        }
     }
 
 
@@ -672,6 +698,7 @@ public class HostInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ChargeCoresCnt", this.ChargeCoresCnt);
         this.setParamSimple(map, prefix + "DefendStatus", this.DefendStatus);
         this.setParamSimple(map, prefix + "CoresCnt", this.CoresCnt);
+        this.setParamSimple(map, prefix + "LastOnlineTime", this.LastOnlineTime);
 
     }
 }

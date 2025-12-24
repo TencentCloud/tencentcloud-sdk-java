@@ -149,28 +149,6 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
-     *创建微信云托管
-     * @param req CreateWxCloudBaseRunEnvRequest
-     * @return CreateWxCloudBaseRunEnvResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateWxCloudBaseRunEnvResponse CreateWxCloudBaseRunEnv(CreateWxCloudBaseRunEnvRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateWxCloudBaseRunEnv", CreateWxCloudBaseRunEnvResponse.class);
-    }
-
-    /**
-     *开通微信云托管MySQL数据库服务
-     * @param req CreateWxCloudBaseRunServerDBClusterRequest
-     * @return CreateWxCloudBaseRunServerDBClusterResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateWxCloudBaseRunServerDBClusterResponse CreateWxCloudBaseRunServerDBCluster(CreateWxCloudBaseRunServerDBClusterRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateWxCloudBaseRunServerDBCluster", CreateWxCloudBaseRunServerDBClusterResponse.class);
-    }
-
-    /**
      *删除云项目
      * @param req DeleteCloudBaseProjectLatestVersionRequest
      * @return DeleteCloudBaseProjectLatestVersionResponse
@@ -303,61 +281,6 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
-     *查询环境下所有的vpc列表
-     * @param req DescribeCloudBaseRunAllVpcsRequest
-     * @return DescribeCloudBaseRunAllVpcsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeCloudBaseRunAllVpcsResponse DescribeCloudBaseRunAllVpcs(DescribeCloudBaseRunAllVpcsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeCloudBaseRunAllVpcs", DescribeCloudBaseRunAllVpcsResponse.class);
-    }
-
-    /**
-     *独立网关中拉取云托管服务对应的配置信息
-     * @param req DescribeCloudBaseRunConfForGateWayRequest
-     * @return DescribeCloudBaseRunConfForGateWayResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeCloudBaseRunConfForGateWayResponse DescribeCloudBaseRunConfForGateWay(DescribeCloudBaseRunConfForGateWayRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeCloudBaseRunConfForGateWay", DescribeCloudBaseRunConfForGateWayResponse.class);
-    }
-
-    /**
-     *查询一键部署任务 （特定接口：外部查询使用）
-     * @param req DescribeCloudBaseRunOneClickTaskExternalRequest
-     * @return DescribeCloudBaseRunOneClickTaskExternalResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeCloudBaseRunOneClickTaskExternalResponse DescribeCloudBaseRunOneClickTaskExternal(DescribeCloudBaseRunOneClickTaskExternalRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeCloudBaseRunOneClickTaskExternal", DescribeCloudBaseRunOneClickTaskExternalResponse.class);
-    }
-
-    /**
-     *查询服务、版本和操作类型
-     * @param req DescribeCloudBaseRunOperationTypesRequest
-     * @return DescribeCloudBaseRunOperationTypesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeCloudBaseRunOperationTypesResponse DescribeCloudBaseRunOperationTypes(DescribeCloudBaseRunOperationTypesRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeCloudBaseRunOperationTypes", DescribeCloudBaseRunOperationTypesResponse.class);
-    }
-
-    /**
-     *查询云托管服务版本容器列表
-     * @param req DescribeCloudBaseRunPodListRequest
-     * @return DescribeCloudBaseRunPodListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeCloudBaseRunPodListResponse DescribeCloudBaseRunPodList(DescribeCloudBaseRunPodListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeCloudBaseRunPodList", DescribeCloudBaseRunPodListResponse.class);
-    }
-
-    /**
      *查看容器托管的集群状态
      * @param req DescribeCloudBaseRunResourceRequest
      * @return DescribeCloudBaseRunResourceResponse
@@ -391,17 +314,6 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
-     *查询微信云托管服务域名
-     * @param req DescribeCloudBaseRunServerDomainNameRequest
-     * @return DescribeCloudBaseRunServerDomainNameResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeCloudBaseRunServerDomainNameResponse DescribeCloudBaseRunServerDomainName(DescribeCloudBaseRunServerDomainNameRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeCloudBaseRunServerDomainName", DescribeCloudBaseRunServerDomainNameResponse.class);
-    }
-
-    /**
      *查询服务版本的详情，CPU和MEM  请使用CPUSize和MemSize
      * @param req DescribeCloudBaseRunServerVersionRequest
      * @return DescribeCloudBaseRunServerVersionResponse
@@ -421,17 +333,6 @@ public class TcbClient extends AbstractClient{
     public DescribeCloudBaseRunVersionResponse DescribeCloudBaseRunVersion(DescribeCloudBaseRunVersionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCloudBaseRunVersion", DescribeCloudBaseRunVersionResponse.class);
-    }
-
-    /**
-     *DescribeCloudBaseRunVersionRsByCondition 获取云托管详情
-     * @param req DescribeCloudBaseRunVersionRsByConditionRequest
-     * @return DescribeCloudBaseRunVersionRsByConditionResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeCloudBaseRunVersionRsByConditionResponse DescribeCloudBaseRunVersionRsByCondition(DescribeCloudBaseRunVersionRsByConditionRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeCloudBaseRunVersionRsByCondition", DescribeCloudBaseRunVersionRsByConditionResponse.class);
     }
 
     /**
@@ -670,28 +571,6 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
-     *查询微信云托管环境信息
-     * @param req DescribeWxCloudBaseRunEnvsRequest
-     * @return DescribeWxCloudBaseRunEnvsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeWxCloudBaseRunEnvsResponse DescribeWxCloudBaseRunEnvs(DescribeWxCloudBaseRunEnvsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeWxCloudBaseRunEnvs", DescribeWxCloudBaseRunEnvsResponse.class);
-    }
-
-    /**
-     *查询微信云托管子网
-     * @param req DescribeWxCloudBaseRunSubNetsRequest
-     * @return DescribeWxCloudBaseRunSubNetsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeWxCloudBaseRunSubNetsResponse DescribeWxCloudBaseRunSubNets(DescribeWxCloudBaseRunSubNetsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeWxCloudBaseRunSubNets", DescribeWxCloudBaseRunSubNetsResponse.class);
-    }
-
-    /**
      *查看安全网关路由
      * @param req DescribeWxGatewayRoutesRequest
      * @return DescribeWxGatewayRoutesResponse
@@ -865,17 +744,6 @@ public class TcbClient extends AbstractClient{
     public ReplaceActivityRecordResponse ReplaceActivityRecord(ReplaceActivityRecordRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ReplaceActivityRecord", ReplaceActivityRecordResponse.class);
-    }
-
-    /**
-     *针对特定的版本，进行滚动更新
-     * @param req RollUpdateCloudBaseRunServerVersionRequest
-     * @return RollUpdateCloudBaseRunServerVersionResponse
-     * @throws TencentCloudSDKException
-     */
-    public RollUpdateCloudBaseRunServerVersionResponse RollUpdateCloudBaseRunServerVersion(RollUpdateCloudBaseRunServerVersionRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "RollUpdateCloudBaseRunServerVersion", RollUpdateCloudBaseRunServerVersionResponse.class);
     }
 
     /**

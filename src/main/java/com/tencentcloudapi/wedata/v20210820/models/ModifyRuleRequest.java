@@ -206,6 +206,20 @@ public class ModifyRuleRequest extends AbstractModel {
     private String TargetTableName;
 
     /**
+    * 目录
+    */
+    @SerializedName("CatalogName")
+    @Expose
+    private String CatalogName;
+
+    /**
+    * 目标目录
+    */
+    @SerializedName("TargetCatalogName")
+    @Expose
+    private String TargetCatalogName;
+
+    /**
      * Get 项目Id 
      * @return ProjectId 项目Id
      */
@@ -621,6 +635,38 @@ public class ModifyRuleRequest extends AbstractModel {
         this.TargetTableName = TargetTableName;
     }
 
+    /**
+     * Get 目录 
+     * @return CatalogName 目录
+     */
+    public String getCatalogName() {
+        return this.CatalogName;
+    }
+
+    /**
+     * Set 目录
+     * @param CatalogName 目录
+     */
+    public void setCatalogName(String CatalogName) {
+        this.CatalogName = CatalogName;
+    }
+
+    /**
+     * Get 目标目录 
+     * @return TargetCatalogName 目标目录
+     */
+    public String getTargetCatalogName() {
+        return this.TargetCatalogName;
+    }
+
+    /**
+     * Set 目标目录
+     * @param TargetCatalogName 目标目录
+     */
+    public void setTargetCatalogName(String TargetCatalogName) {
+        this.TargetCatalogName = TargetCatalogName;
+    }
+
     public ModifyRuleRequest() {
     }
 
@@ -710,6 +756,12 @@ public class ModifyRuleRequest extends AbstractModel {
         if (source.TargetTableName != null) {
             this.TargetTableName = new String(source.TargetTableName);
         }
+        if (source.CatalogName != null) {
+            this.CatalogName = new String(source.CatalogName);
+        }
+        if (source.TargetCatalogName != null) {
+            this.TargetCatalogName = new String(source.TargetCatalogName);
+        }
     }
 
 
@@ -743,6 +795,8 @@ public class ModifyRuleRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TargetDatabaseName", this.TargetDatabaseName);
         this.setParamSimple(map, prefix + "TargetSchemaName", this.TargetSchemaName);
         this.setParamSimple(map, prefix + "TargetTableName", this.TargetTableName);
+        this.setParamSimple(map, prefix + "CatalogName", this.CatalogName);
+        this.setParamSimple(map, prefix + "TargetCatalogName", this.TargetCatalogName);
 
     }
 }

@@ -456,6 +456,38 @@ public class Rule extends AbstractModel {
     private String FailMsg;
 
     /**
+    * 任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GroupType")
+    @Expose
+    private String GroupType;
+
+    /**
+    * 编排任务id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AspectTaskId")
+    @Expose
+    private String AspectTaskId;
+
+    /**
+    * 目录
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CatalogName")
+    @Expose
+    private String CatalogName;
+
+    /**
+    * 目标目录
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TargetCatalogName")
+    @Expose
+    private String TargetCatalogName;
+
+    /**
      * Get 规则ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RuleId 规则ID
@@ -1535,6 +1567,86 @@ public class Rule extends AbstractModel {
         this.FailMsg = FailMsg;
     }
 
+    /**
+     * Get 任务类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GroupType 任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGroupType() {
+        return this.GroupType;
+    }
+
+    /**
+     * Set 任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GroupType 任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGroupType(String GroupType) {
+        this.GroupType = GroupType;
+    }
+
+    /**
+     * Get 编排任务id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AspectTaskId 编排任务id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAspectTaskId() {
+        return this.AspectTaskId;
+    }
+
+    /**
+     * Set 编排任务id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AspectTaskId 编排任务id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAspectTaskId(String AspectTaskId) {
+        this.AspectTaskId = AspectTaskId;
+    }
+
+    /**
+     * Get 目录
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CatalogName 目录
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCatalogName() {
+        return this.CatalogName;
+    }
+
+    /**
+     * Set 目录
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CatalogName 目录
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCatalogName(String CatalogName) {
+        this.CatalogName = CatalogName;
+    }
+
+    /**
+     * Get 目标目录
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TargetCatalogName 目标目录
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTargetCatalogName() {
+        return this.TargetCatalogName;
+    }
+
+    /**
+     * Set 目标目录
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TargetCatalogName 目标目录
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTargetCatalogName(String TargetCatalogName) {
+        this.TargetCatalogName = TargetCatalogName;
+    }
+
     public Rule() {
     }
 
@@ -1708,6 +1820,18 @@ public class Rule extends AbstractModel {
         if (source.FailMsg != null) {
             this.FailMsg = new String(source.FailMsg);
         }
+        if (source.GroupType != null) {
+            this.GroupType = new String(source.GroupType);
+        }
+        if (source.AspectTaskId != null) {
+            this.AspectTaskId = new String(source.AspectTaskId);
+        }
+        if (source.CatalogName != null) {
+            this.CatalogName = new String(source.CatalogName);
+        }
+        if (source.TargetCatalogName != null) {
+            this.TargetCatalogName = new String(source.TargetCatalogName);
+        }
     }
 
 
@@ -1769,6 +1893,10 @@ public class Rule extends AbstractModel {
         this.setParamSimple(map, prefix + "DatasourceName", this.DatasourceName);
         this.setParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
         this.setParamSimple(map, prefix + "FailMsg", this.FailMsg);
+        this.setParamSimple(map, prefix + "GroupType", this.GroupType);
+        this.setParamSimple(map, prefix + "AspectTaskId", this.AspectTaskId);
+        this.setParamSimple(map, prefix + "CatalogName", this.CatalogName);
+        this.setParamSimple(map, prefix + "TargetCatalogName", this.TargetCatalogName);
 
     }
 }

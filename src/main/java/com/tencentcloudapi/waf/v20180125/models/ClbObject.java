@@ -199,6 +199,27 @@ public class ClbObject extends AbstractModel {
     private String AddTime;
 
     /**
+    * 跨账号时，表示成员账号的appid
+    */
+    @SerializedName("MemberAppId")
+    @Expose
+    private Long MemberAppId;
+
+    /**
+    * 跨账号时，表示成员账号的uin
+    */
+    @SerializedName("MemberUin")
+    @Expose
+    private String MemberUin;
+
+    /**
+    * 跨账号时，表示成员账号的昵称
+    */
+    @SerializedName("MemberNickName")
+    @Expose
+    private String MemberNickName;
+
+    /**
      * Get 对象ID 
      * @return ObjectId 对象ID
      */
@@ -598,6 +619,54 @@ public class ClbObject extends AbstractModel {
         this.AddTime = AddTime;
     }
 
+    /**
+     * Get 跨账号时，表示成员账号的appid 
+     * @return MemberAppId 跨账号时，表示成员账号的appid
+     */
+    public Long getMemberAppId() {
+        return this.MemberAppId;
+    }
+
+    /**
+     * Set 跨账号时，表示成员账号的appid
+     * @param MemberAppId 跨账号时，表示成员账号的appid
+     */
+    public void setMemberAppId(Long MemberAppId) {
+        this.MemberAppId = MemberAppId;
+    }
+
+    /**
+     * Get 跨账号时，表示成员账号的uin 
+     * @return MemberUin 跨账号时，表示成员账号的uin
+     */
+    public String getMemberUin() {
+        return this.MemberUin;
+    }
+
+    /**
+     * Set 跨账号时，表示成员账号的uin
+     * @param MemberUin 跨账号时，表示成员账号的uin
+     */
+    public void setMemberUin(String MemberUin) {
+        this.MemberUin = MemberUin;
+    }
+
+    /**
+     * Get 跨账号时，表示成员账号的昵称 
+     * @return MemberNickName 跨账号时，表示成员账号的昵称
+     */
+    public String getMemberNickName() {
+        return this.MemberNickName;
+    }
+
+    /**
+     * Set 跨账号时，表示成员账号的昵称
+     * @param MemberNickName 跨账号时，表示成员账号的昵称
+     */
+    public void setMemberNickName(String MemberNickName) {
+        this.MemberNickName = MemberNickName;
+    }
+
     public ClbObject() {
     }
 
@@ -693,6 +762,15 @@ public class ClbObject extends AbstractModel {
         if (source.AddTime != null) {
             this.AddTime = new String(source.AddTime);
         }
+        if (source.MemberAppId != null) {
+            this.MemberAppId = new Long(source.MemberAppId);
+        }
+        if (source.MemberUin != null) {
+            this.MemberUin = new String(source.MemberUin);
+        }
+        if (source.MemberNickName != null) {
+            this.MemberNickName = new String(source.MemberNickName);
+        }
     }
 
 
@@ -725,6 +803,9 @@ public class ClbObject extends AbstractModel {
         this.setParamSimple(map, prefix + "NumericalVpcId", this.NumericalVpcId);
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamSimple(map, prefix + "AddTime", this.AddTime);
+        this.setParamSimple(map, prefix + "MemberAppId", this.MemberAppId);
+        this.setParamSimple(map, prefix + "MemberUin", this.MemberUin);
+        this.setParamSimple(map, prefix + "MemberNickName", this.MemberNickName);
 
     }
 }

@@ -23,6 +23,29 @@ import java.util.HashMap;
 
 public class DeleteApplicationAndVideoLicenseRequest extends AbstractModel {
 
+    /**
+    * license唯一标识
+    */
+    @SerializedName("LicenseId")
+    @Expose
+    private Long LicenseId;
+
+    /**
+     * Get license唯一标识 
+     * @return LicenseId license唯一标识
+     */
+    public Long getLicenseId() {
+        return this.LicenseId;
+    }
+
+    /**
+     * Set license唯一标识
+     * @param LicenseId license唯一标识
+     */
+    public void setLicenseId(Long LicenseId) {
+        this.LicenseId = LicenseId;
+    }
+
     public DeleteApplicationAndVideoLicenseRequest() {
     }
 
@@ -31,6 +54,9 @@ public class DeleteApplicationAndVideoLicenseRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DeleteApplicationAndVideoLicenseRequest(DeleteApplicationAndVideoLicenseRequest source) {
+        if (source.LicenseId != null) {
+            this.LicenseId = new Long(source.LicenseId);
+        }
     }
 
 
@@ -38,6 +64,7 @@ public class DeleteApplicationAndVideoLicenseRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "LicenseId", this.LicenseId);
 
     }
 }

@@ -38,6 +38,13 @@ public class QueryInternalTableWarehouseRequest extends AbstractModel {
     private String TableName;
 
     /**
+    * catalog名称
+    */
+    @SerializedName("DatasourceConnectionName")
+    @Expose
+    private String DatasourceConnectionName;
+
+    /**
      * Get 库名 
      * @return DatabaseName 库名
      */
@@ -69,6 +76,22 @@ public class QueryInternalTableWarehouseRequest extends AbstractModel {
         this.TableName = TableName;
     }
 
+    /**
+     * Get catalog名称 
+     * @return DatasourceConnectionName catalog名称
+     */
+    public String getDatasourceConnectionName() {
+        return this.DatasourceConnectionName;
+    }
+
+    /**
+     * Set catalog名称
+     * @param DatasourceConnectionName catalog名称
+     */
+    public void setDatasourceConnectionName(String DatasourceConnectionName) {
+        this.DatasourceConnectionName = DatasourceConnectionName;
+    }
+
     public QueryInternalTableWarehouseRequest() {
     }
 
@@ -83,6 +106,9 @@ public class QueryInternalTableWarehouseRequest extends AbstractModel {
         if (source.TableName != null) {
             this.TableName = new String(source.TableName);
         }
+        if (source.DatasourceConnectionName != null) {
+            this.DatasourceConnectionName = new String(source.DatasourceConnectionName);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class QueryInternalTableWarehouseRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
         this.setParamSimple(map, prefix + "TableName", this.TableName);
+        this.setParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
 
     }
 }

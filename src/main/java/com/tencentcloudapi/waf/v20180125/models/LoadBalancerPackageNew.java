@@ -137,6 +137,34 @@ public class LoadBalancerPackageNew extends AbstractModel {
     private String LoadBalancerDomain;
 
     /**
+    * 监听器所属appid
+    */
+    @SerializedName("MemberAppId")
+    @Expose
+    private Long MemberAppId;
+
+    /**
+    * 监听器自身所属uin
+    */
+    @SerializedName("MemberUin")
+    @Expose
+    private String MemberUin;
+
+    /**
+    * 监听器被接入的waf账号
+    */
+    @SerializedName("Appid")
+    @Expose
+    private Long Appid;
+
+    /**
+    * 集团账号昵称
+    */
+    @SerializedName("MemberNickName")
+    @Expose
+    private String MemberNickName;
+
+    /**
      * Get 监听id 
      * @return ListenerId 监听id
      */
@@ -444,6 +472,70 @@ public class LoadBalancerPackageNew extends AbstractModel {
         this.LoadBalancerDomain = LoadBalancerDomain;
     }
 
+    /**
+     * Get 监听器所属appid 
+     * @return MemberAppId 监听器所属appid
+     */
+    public Long getMemberAppId() {
+        return this.MemberAppId;
+    }
+
+    /**
+     * Set 监听器所属appid
+     * @param MemberAppId 监听器所属appid
+     */
+    public void setMemberAppId(Long MemberAppId) {
+        this.MemberAppId = MemberAppId;
+    }
+
+    /**
+     * Get 监听器自身所属uin 
+     * @return MemberUin 监听器自身所属uin
+     */
+    public String getMemberUin() {
+        return this.MemberUin;
+    }
+
+    /**
+     * Set 监听器自身所属uin
+     * @param MemberUin 监听器自身所属uin
+     */
+    public void setMemberUin(String MemberUin) {
+        this.MemberUin = MemberUin;
+    }
+
+    /**
+     * Get 监听器被接入的waf账号 
+     * @return Appid 监听器被接入的waf账号
+     */
+    public Long getAppid() {
+        return this.Appid;
+    }
+
+    /**
+     * Set 监听器被接入的waf账号
+     * @param Appid 监听器被接入的waf账号
+     */
+    public void setAppid(Long Appid) {
+        this.Appid = Appid;
+    }
+
+    /**
+     * Get 集团账号昵称 
+     * @return MemberNickName 集团账号昵称
+     */
+    public String getMemberNickName() {
+        return this.MemberNickName;
+    }
+
+    /**
+     * Set 集团账号昵称
+     * @param MemberNickName 集团账号昵称
+     */
+    public void setMemberNickName(String MemberNickName) {
+        this.MemberNickName = MemberNickName;
+    }
+
     public LoadBalancerPackageNew() {
     }
 
@@ -488,6 +580,18 @@ public class LoadBalancerPackageNew extends AbstractModel {
         if (source.LoadBalancerDomain != null) {
             this.LoadBalancerDomain = new String(source.LoadBalancerDomain);
         }
+        if (source.MemberAppId != null) {
+            this.MemberAppId = new Long(source.MemberAppId);
+        }
+        if (source.MemberUin != null) {
+            this.MemberUin = new String(source.MemberUin);
+        }
+        if (source.Appid != null) {
+            this.Appid = new Long(source.Appid);
+        }
+        if (source.MemberNickName != null) {
+            this.MemberNickName = new String(source.MemberNickName);
+        }
     }
 
 
@@ -507,6 +611,10 @@ public class LoadBalancerPackageNew extends AbstractModel {
         this.setParamSimple(map, prefix + "NumericalVpcId", this.NumericalVpcId);
         this.setParamSimple(map, prefix + "LoadBalancerType", this.LoadBalancerType);
         this.setParamSimple(map, prefix + "LoadBalancerDomain", this.LoadBalancerDomain);
+        this.setParamSimple(map, prefix + "MemberAppId", this.MemberAppId);
+        this.setParamSimple(map, prefix + "MemberUin", this.MemberUin);
+        this.setParamSimple(map, prefix + "Appid", this.Appid);
+        this.setParamSimple(map, prefix + "MemberNickName", this.MemberNickName);
 
     }
 }

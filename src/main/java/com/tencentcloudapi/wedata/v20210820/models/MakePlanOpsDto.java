@@ -275,6 +275,52 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
     private String TimeType;
 
     /**
+    * 开始时间
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
+    * 结束时间
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private String EndTime;
+
+    /**
+    * 失败百分比
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FailurePercent")
+    @Expose
+    private Long FailurePercent;
+
+    /**
+    * 补录计划的告警规则
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AlarmRule")
+    @Expose
+    private MakePlanAlarmRule AlarmRule;
+
+    /**
+    * 运行类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RunType")
+    @Expose
+    private Long RunType;
+
+    /**
+    * 定时运行时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RunDateTime")
+    @Expose
+    private String RunDateTime;
+
+    /**
      * Get 补录计划ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PlanId 补录计划ID
@@ -906,6 +952,118 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
         this.TimeType = TimeType;
     }
 
+    /**
+     * Get 开始时间 
+     * @return StartTime 开始时间
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set 开始时间
+     * @param StartTime 开始时间
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get 结束时间 
+     * @return EndTime 结束时间
+     */
+    public String getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set 结束时间
+     * @param EndTime 结束时间
+     */
+    public void setEndTime(String EndTime) {
+        this.EndTime = EndTime;
+    }
+
+    /**
+     * Get 失败百分比
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FailurePercent 失败百分比
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getFailurePercent() {
+        return this.FailurePercent;
+    }
+
+    /**
+     * Set 失败百分比
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FailurePercent 失败百分比
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFailurePercent(Long FailurePercent) {
+        this.FailurePercent = FailurePercent;
+    }
+
+    /**
+     * Get 补录计划的告警规则
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AlarmRule 补录计划的告警规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MakePlanAlarmRule getAlarmRule() {
+        return this.AlarmRule;
+    }
+
+    /**
+     * Set 补录计划的告警规则
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AlarmRule 补录计划的告警规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAlarmRule(MakePlanAlarmRule AlarmRule) {
+        this.AlarmRule = AlarmRule;
+    }
+
+    /**
+     * Get 运行类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RunType 运行类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRunType() {
+        return this.RunType;
+    }
+
+    /**
+     * Set 运行类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RunType 运行类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRunType(Long RunType) {
+        this.RunType = RunType;
+    }
+
+    /**
+     * Get 定时运行时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RunDateTime 定时运行时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRunDateTime() {
+        return this.RunDateTime;
+    }
+
+    /**
+     * Set 定时运行时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RunDateTime 定时运行时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRunDateTime(String RunDateTime) {
+        this.RunDateTime = RunDateTime;
+    }
+
     public MakePlanOpsDto() {
     }
 
@@ -1016,6 +1174,24 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
         if (source.TimeType != null) {
             this.TimeType = new String(source.TimeType);
         }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.FailurePercent != null) {
+            this.FailurePercent = new Long(source.FailurePercent);
+        }
+        if (source.AlarmRule != null) {
+            this.AlarmRule = new MakePlanAlarmRule(source.AlarmRule);
+        }
+        if (source.RunType != null) {
+            this.RunType = new Long(source.RunType);
+        }
+        if (source.RunDateTime != null) {
+            this.RunDateTime = new String(source.RunDateTime);
+        }
     }
 
 
@@ -1054,6 +1230,12 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
         this.setParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
         this.setParamSimple(map, prefix + "AppParam", this.AppParam);
         this.setParamSimple(map, prefix + "TimeType", this.TimeType);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "FailurePercent", this.FailurePercent);
+        this.setParamObj(map, prefix + "AlarmRule.", this.AlarmRule);
+        this.setParamSimple(map, prefix + "RunType", this.RunType);
+        this.setParamSimple(map, prefix + "RunDateTime", this.RunDateTime);
 
     }
 }

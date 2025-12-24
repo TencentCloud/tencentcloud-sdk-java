@@ -288,6 +288,30 @@ public class RuleExecResult extends AbstractModel {
     private String FinishTime;
 
     /**
+    * 任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GroupType")
+    @Expose
+    private String GroupType;
+
+    /**
+    * 编排任务id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AspectTaskId")
+    @Expose
+    private String AspectTaskId;
+
+    /**
+    * 目录
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CatalogName")
+    @Expose
+    private String CatalogName;
+
+    /**
      * Get 规则执行ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RuleExecId 规则执行ID
@@ -947,6 +971,66 @@ public class RuleExecResult extends AbstractModel {
         this.FinishTime = FinishTime;
     }
 
+    /**
+     * Get 任务类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GroupType 任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGroupType() {
+        return this.GroupType;
+    }
+
+    /**
+     * Set 任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GroupType 任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGroupType(String GroupType) {
+        this.GroupType = GroupType;
+    }
+
+    /**
+     * Get 编排任务id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AspectTaskId 编排任务id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAspectTaskId() {
+        return this.AspectTaskId;
+    }
+
+    /**
+     * Set 编排任务id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AspectTaskId 编排任务id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAspectTaskId(String AspectTaskId) {
+        this.AspectTaskId = AspectTaskId;
+    }
+
+    /**
+     * Get 目录
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CatalogName 目录
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCatalogName() {
+        return this.CatalogName;
+    }
+
+    /**
+     * Set 目录
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CatalogName 目录
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCatalogName(String CatalogName) {
+        this.CatalogName = CatalogName;
+    }
+
     public RuleExecResult() {
     }
 
@@ -1054,6 +1138,15 @@ public class RuleExecResult extends AbstractModel {
         if (source.FinishTime != null) {
             this.FinishTime = new String(source.FinishTime);
         }
+        if (source.GroupType != null) {
+            this.GroupType = new String(source.GroupType);
+        }
+        if (source.AspectTaskId != null) {
+            this.AspectTaskId = new String(source.AspectTaskId);
+        }
+        if (source.CatalogName != null) {
+            this.CatalogName = new String(source.CatalogName);
+        }
     }
 
 
@@ -1094,6 +1187,9 @@ public class RuleExecResult extends AbstractModel {
         this.setParamSimple(map, prefix + "RuleGroupTableId", this.RuleGroupTableId);
         this.setParamSimple(map, prefix + "MonitorType", this.MonitorType);
         this.setParamSimple(map, prefix + "FinishTime", this.FinishTime);
+        this.setParamSimple(map, prefix + "GroupType", this.GroupType);
+        this.setParamSimple(map, prefix + "AspectTaskId", this.AspectTaskId);
+        this.setParamSimple(map, prefix + "CatalogName", this.CatalogName);
 
     }
 }

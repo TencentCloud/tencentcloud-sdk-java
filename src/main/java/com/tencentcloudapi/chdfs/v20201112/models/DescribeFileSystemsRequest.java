@@ -23,6 +23,29 @@ import java.util.HashMap;
 
 public class DescribeFileSystemsRequest extends AbstractModel {
 
+    /**
+    * 起始文件系统ID标记
+    */
+    @SerializedName("FileSystemIdMarker")
+    @Expose
+    private String FileSystemIdMarker;
+
+    /**
+     * Get 起始文件系统ID标记 
+     * @return FileSystemIdMarker 起始文件系统ID标记
+     */
+    public String getFileSystemIdMarker() {
+        return this.FileSystemIdMarker;
+    }
+
+    /**
+     * Set 起始文件系统ID标记
+     * @param FileSystemIdMarker 起始文件系统ID标记
+     */
+    public void setFileSystemIdMarker(String FileSystemIdMarker) {
+        this.FileSystemIdMarker = FileSystemIdMarker;
+    }
+
     public DescribeFileSystemsRequest() {
     }
 
@@ -31,6 +54,9 @@ public class DescribeFileSystemsRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeFileSystemsRequest(DescribeFileSystemsRequest source) {
+        if (source.FileSystemIdMarker != null) {
+            this.FileSystemIdMarker = new String(source.FileSystemIdMarker);
+        }
     }
 
 
@@ -38,6 +64,7 @@ public class DescribeFileSystemsRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "FileSystemIdMarker", this.FileSystemIdMarker);
 
     }
 }

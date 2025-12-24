@@ -59,6 +59,13 @@ public class DescribeRelatedUsersRequest extends AbstractModel {
     private String EnvType;
 
     /**
+    * 新角色id
+    */
+    @SerializedName("RoleStringId")
+    @Expose
+    private String RoleStringId;
+
+    /**
      * Get 角色id 
      * @return RoleId 角色id
      */
@@ -138,6 +145,22 @@ public class DescribeRelatedUsersRequest extends AbstractModel {
         this.EnvType = EnvType;
     }
 
+    /**
+     * Get 新角色id 
+     * @return RoleStringId 新角色id
+     */
+    public String getRoleStringId() {
+        return this.RoleStringId;
+    }
+
+    /**
+     * Set 新角色id
+     * @param RoleStringId 新角色id
+     */
+    public void setRoleStringId(String RoleStringId) {
+        this.RoleStringId = RoleStringId;
+    }
+
     public DescribeRelatedUsersRequest() {
     }
 
@@ -161,6 +184,9 @@ public class DescribeRelatedUsersRequest extends AbstractModel {
         if (source.EnvType != null) {
             this.EnvType = new String(source.EnvType);
         }
+        if (source.RoleStringId != null) {
+            this.RoleStringId = new String(source.RoleStringId);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class DescribeRelatedUsersRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PageNo", this.PageNo);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "EnvType", this.EnvType);
+        this.setParamSimple(map, prefix + "RoleStringId", this.RoleStringId);
 
     }
 }

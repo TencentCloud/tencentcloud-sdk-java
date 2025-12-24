@@ -249,6 +249,17 @@ public class ApmClient extends AbstractClient{
     }
 
     /**
+     *根据应用名查询服务拓扑图
+     * @param req DescribeTopologyNewRequest
+     * @return DescribeTopologyNewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTopologyNewResponse DescribeTopologyNew(DescribeTopologyNewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTopologyNew", DescribeTopologyNewResponse.class);
+    }
+
+    /**
      *修改应用配置接口
      * @param req ModifyApmApplicationConfigRequest
      * @return ModifyApmApplicationConfigResponse
