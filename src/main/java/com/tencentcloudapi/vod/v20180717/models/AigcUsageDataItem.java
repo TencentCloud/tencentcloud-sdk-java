@@ -62,6 +62,19 @@ public class AigcUsageDataItem extends AbstractModel {
 <li>Mingmou1.0_2K</li>
 <li>Mingmou1.0_4K</li>
 <li>Mingmou1.0_720P</li>
+<li>Seedance1.5ProAudioOn_480P</li>
+<li>Seedance1.5ProAudioOff_480P</li>
+<li>Seedance1.5ProAudioOn_720P</li>
+<li>Seedance1.5ProAudioOff_720P</li>
+<li>Seedance1.0Pro_480P</li>
+<li>Seedance1.0Pro_720P</li>
+<li>Seedance1.0Pro_1080P</li>
+<li>Seedance1.0ProFast480P</li>
+<li>Seedance1.0ProFast720P</li>
+<li>Seedance1.0ProFast1080P</li>
+<li>Seedance1.0Lite480P</li>
+<li>Seedance1.0Lite720P</li>
+<li>Seedance1.0Lite1080P</li>
 <li> unknown</li>
     */
     @SerializedName("Specification")
@@ -114,6 +127,19 @@ public class AigcUsageDataItem extends AbstractModel {
 <li>Mingmou1.0_2K</li>
 <li>Mingmou1.0_4K</li>
 <li>Mingmou1.0_720P</li>
+<li>Seedance1.5ProAudioOn_480P</li>
+<li>Seedance1.5ProAudioOff_480P</li>
+<li>Seedance1.5ProAudioOn_720P</li>
+<li>Seedance1.5ProAudioOff_720P</li>
+<li>Seedance1.0Pro_480P</li>
+<li>Seedance1.0Pro_720P</li>
+<li>Seedance1.0Pro_1080P</li>
+<li>Seedance1.0ProFast480P</li>
+<li>Seedance1.0ProFast720P</li>
+<li>Seedance1.0ProFast1080P</li>
+<li>Seedance1.0Lite480P</li>
+<li>Seedance1.0Lite720P</li>
+<li>Seedance1.0Lite1080P</li>
 <li> unknown</li> 
      * @return Specification AIGC规格。
 取值有：
@@ -153,6 +179,19 @@ public class AigcUsageDataItem extends AbstractModel {
 <li>Mingmou1.0_2K</li>
 <li>Mingmou1.0_4K</li>
 <li>Mingmou1.0_720P</li>
+<li>Seedance1.5ProAudioOn_480P</li>
+<li>Seedance1.5ProAudioOff_480P</li>
+<li>Seedance1.5ProAudioOn_720P</li>
+<li>Seedance1.5ProAudioOff_720P</li>
+<li>Seedance1.0Pro_480P</li>
+<li>Seedance1.0Pro_720P</li>
+<li>Seedance1.0Pro_1080P</li>
+<li>Seedance1.0ProFast480P</li>
+<li>Seedance1.0ProFast720P</li>
+<li>Seedance1.0ProFast1080P</li>
+<li>Seedance1.0Lite480P</li>
+<li>Seedance1.0Lite720P</li>
+<li>Seedance1.0Lite1080P</li>
 <li> unknown</li>
      */
     public String getSpecification() {
@@ -198,6 +237,19 @@ public class AigcUsageDataItem extends AbstractModel {
 <li>Mingmou1.0_2K</li>
 <li>Mingmou1.0_4K</li>
 <li>Mingmou1.0_720P</li>
+<li>Seedance1.5ProAudioOn_480P</li>
+<li>Seedance1.5ProAudioOff_480P</li>
+<li>Seedance1.5ProAudioOn_720P</li>
+<li>Seedance1.5ProAudioOff_720P</li>
+<li>Seedance1.0Pro_480P</li>
+<li>Seedance1.0Pro_720P</li>
+<li>Seedance1.0Pro_1080P</li>
+<li>Seedance1.0ProFast480P</li>
+<li>Seedance1.0ProFast720P</li>
+<li>Seedance1.0ProFast1080P</li>
+<li>Seedance1.0Lite480P</li>
+<li>Seedance1.0Lite720P</li>
+<li>Seedance1.0Lite1080P</li>
 <li> unknown</li>
      * @param Specification AIGC规格。
 取值有：
@@ -237,6 +289,19 @@ public class AigcUsageDataItem extends AbstractModel {
 <li>Mingmou1.0_2K</li>
 <li>Mingmou1.0_4K</li>
 <li>Mingmou1.0_720P</li>
+<li>Seedance1.5ProAudioOn_480P</li>
+<li>Seedance1.5ProAudioOff_480P</li>
+<li>Seedance1.5ProAudioOn_720P</li>
+<li>Seedance1.5ProAudioOff_720P</li>
+<li>Seedance1.0Pro_480P</li>
+<li>Seedance1.0Pro_720P</li>
+<li>Seedance1.0Pro_1080P</li>
+<li>Seedance1.0ProFast480P</li>
+<li>Seedance1.0ProFast720P</li>
+<li>Seedance1.0ProFast1080P</li>
+<li>Seedance1.0Lite480P</li>
+<li>Seedance1.0Lite720P</li>
+<li>Seedance1.0Lite1080P</li>
 <li> unknown</li>
      */
     public void setSpecification(String Specification) {

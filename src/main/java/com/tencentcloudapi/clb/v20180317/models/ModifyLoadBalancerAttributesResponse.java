@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyLoadBalancerAttributesResponse extends AbstractModel {
 
     /**
-    * 切换负载均衡计费方式时，可用此参数查询切换任务是否成功。
+    * <p>切换负载均衡计费方式时，可用此参数查询切换任务是否成功。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DealName")
@@ -39,9 +39,9 @@ public class ModifyLoadBalancerAttributesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 切换负载均衡计费方式时，可用此参数查询切换任务是否成功。
+     * Get <p>切换负载均衡计费方式时，可用此参数查询切换任务是否成功。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DealName 切换负载均衡计费方式时，可用此参数查询切换任务是否成功。
+     * @return DealName <p>切换负载均衡计费方式时，可用此参数查询切换任务是否成功。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDealName() {
@@ -49,9 +49,9 @@ public class ModifyLoadBalancerAttributesResponse extends AbstractModel {
     }
 
     /**
-     * Set 切换负载均衡计费方式时，可用此参数查询切换任务是否成功。
+     * Set <p>切换负载均衡计费方式时，可用此参数查询切换任务是否成功。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DealName 切换负载均衡计费方式时，可用此参数查询切换任务是否成功。
+     * @param DealName <p>切换负载均衡计费方式时，可用此参数查询切换任务是否成功。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDealName(String DealName) {

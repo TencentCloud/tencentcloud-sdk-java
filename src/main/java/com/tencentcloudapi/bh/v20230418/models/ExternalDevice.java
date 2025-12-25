@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ExternalDevice extends AbstractModel {
 
     /**
-    * 操作系统名称，只能是Linux、Windows或MySQL
+    * 操作系统名称，只能是主机（Linux、Windows）、数据库（MySQL、SQL Server、MariaDB、PostgreSQL、MongoDBReplicaSet、MongoDBSharded、Redis）、容器（TKE、EKS）
     */
     @SerializedName("OsName")
     @Expose
@@ -129,16 +129,16 @@ public class ExternalDevice extends AbstractModel {
     private String PublicIp;
 
     /**
-     * Get 操作系统名称，只能是Linux、Windows或MySQL 
-     * @return OsName 操作系统名称，只能是Linux、Windows或MySQL
+     * Get 操作系统名称，只能是主机（Linux、Windows）、数据库（MySQL、SQL Server、MariaDB、PostgreSQL、MongoDBReplicaSet、MongoDBSharded、Redis）、容器（TKE、EKS） 
+     * @return OsName 操作系统名称，只能是主机（Linux、Windows）、数据库（MySQL、SQL Server、MariaDB、PostgreSQL、MongoDBReplicaSet、MongoDBSharded、Redis）、容器（TKE、EKS）
      */
     public String getOsName() {
         return this.OsName;
     }
 
     /**
-     * Set 操作系统名称，只能是Linux、Windows或MySQL
-     * @param OsName 操作系统名称，只能是Linux、Windows或MySQL
+     * Set 操作系统名称，只能是主机（Linux、Windows）、数据库（MySQL、SQL Server、MariaDB、PostgreSQL、MongoDBReplicaSet、MongoDBSharded、Redis）、容器（TKE、EKS）
+     * @param OsName 操作系统名称，只能是主机（Linux、Windows）、数据库（MySQL、SQL Server、MariaDB、PostgreSQL、MongoDBReplicaSet、MongoDBSharded、Redis）、容器（TKE、EKS）
      */
     public void setOsName(String OsName) {
         this.OsName = OsName;

@@ -31,6 +31,13 @@ public class DescribeAgentDutyTasksResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
+    * 任务详细信息
+    */
+    @SerializedName("DutyTasks")
+    @Expose
+    private AgentDutyTask [] DutyTasks;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +58,22 @@ public class DescribeAgentDutyTasksResponse extends AbstractModel {
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 任务详细信息 
+     * @return DutyTasks 任务详细信息
+     */
+    public AgentDutyTask [] getDutyTasks() {
+        return this.DutyTasks;
+    }
+
+    /**
+     * Set 任务详细信息
+     * @param DutyTasks 任务详细信息
+     */
+    public void setDutyTasks(AgentDutyTask [] DutyTasks) {
+        this.DutyTasks = DutyTasks;
     }
 
     /**
@@ -80,6 +103,12 @@ public class DescribeAgentDutyTasksResponse extends AbstractModel {
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
+        if (source.DutyTasks != null) {
+            this.DutyTasks = new AgentDutyTask[source.DutyTasks.length];
+            for (int i = 0; i < source.DutyTasks.length; i++) {
+                this.DutyTasks[i] = new AgentDutyTask(source.DutyTasks[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -91,6 +120,7 @@ public class DescribeAgentDutyTasksResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "DutyTasks.", this.DutyTasks);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

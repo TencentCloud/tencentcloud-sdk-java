@@ -1856,6 +1856,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *设置优化策略的接口
+     * @param req SetOptimizerPolicyRequest
+     * @return SetOptimizerPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetOptimizerPolicyResponse SetOptimizerPolicy(SetOptimizerPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SetOptimizerPolicy", SetOptimizerPolicyResponse.class);
+    }
+
+    /**
      *本接口用于控制挂起或启动数据引擎
      * @param req SuspendResumeDataEngineRequest
      * @return SuspendResumeDataEngineResponse

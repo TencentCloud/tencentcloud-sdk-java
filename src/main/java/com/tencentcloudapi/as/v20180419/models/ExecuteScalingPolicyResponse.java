@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ExecuteScalingPolicyResponse extends AbstractModel {
 
     /**
-    * 伸缩活动ID
+    * <p>伸缩活动ID</p>
     */
     @SerializedName("ActivityId")
     @Expose
@@ -38,16 +38,16 @@ public class ExecuteScalingPolicyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 伸缩活动ID 
-     * @return ActivityId 伸缩活动ID
+     * Get <p>伸缩活动ID</p> 
+     * @return ActivityId <p>伸缩活动ID</p>
      */
     public String getActivityId() {
         return this.ActivityId;
     }
 
     /**
-     * Set 伸缩活动ID
-     * @param ActivityId 伸缩活动ID
+     * Set <p>伸缩活动ID</p>
+     * @param ActivityId <p>伸缩活动ID</p>
      */
     public void setActivityId(String ActivityId) {
         this.ActivityId = ActivityId;

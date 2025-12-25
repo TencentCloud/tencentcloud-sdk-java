@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.as.v20180419.models;
+package com.tencentcloudapi.evt.v20250217.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateLaunchConfigurationResponse extends AbstractModel {
+public class PutMessageResponse extends AbstractModel {
 
     /**
-    * <p>当通过本接口来创建启动配置时会返回该参数，表示启动配置ID。</p>
+    * <p>满足条件时生成的事件单id，不满足条件时为空</p>
     */
-    @SerializedName("LaunchConfigurationId")
+    @SerializedName("TicketId")
     @Expose
-    private String LaunchConfigurationId;
+    private String TicketId;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +38,19 @@ public class CreateLaunchConfigurationResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>当通过本接口来创建启动配置时会返回该参数，表示启动配置ID。</p> 
-     * @return LaunchConfigurationId <p>当通过本接口来创建启动配置时会返回该参数，表示启动配置ID。</p>
+     * Get <p>满足条件时生成的事件单id，不满足条件时为空</p> 
+     * @return TicketId <p>满足条件时生成的事件单id，不满足条件时为空</p>
      */
-    public String getLaunchConfigurationId() {
-        return this.LaunchConfigurationId;
+    public String getTicketId() {
+        return this.TicketId;
     }
 
     /**
-     * Set <p>当通过本接口来创建启动配置时会返回该参数，表示启动配置ID。</p>
-     * @param LaunchConfigurationId <p>当通过本接口来创建启动配置时会返回该参数，表示启动配置ID。</p>
+     * Set <p>满足条件时生成的事件单id，不满足条件时为空</p>
+     * @param TicketId <p>满足条件时生成的事件单id，不满足条件时为空</p>
      */
-    public void setLaunchConfigurationId(String LaunchConfigurationId) {
-        this.LaunchConfigurationId = LaunchConfigurationId;
+    public void setTicketId(String TicketId) {
+        this.TicketId = TicketId;
     }
 
     /**
@@ -69,16 +69,16 @@ public class CreateLaunchConfigurationResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreateLaunchConfigurationResponse() {
+    public PutMessageResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateLaunchConfigurationResponse(CreateLaunchConfigurationResponse source) {
-        if (source.LaunchConfigurationId != null) {
-            this.LaunchConfigurationId = new String(source.LaunchConfigurationId);
+    public PutMessageResponse(PutMessageResponse source) {
+        if (source.TicketId != null) {
+            this.TicketId = new String(source.TicketId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +90,7 @@ public class CreateLaunchConfigurationResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "LaunchConfigurationId", this.LaunchConfigurationId);
+        this.setParamSimple(map, prefix + "TicketId", this.TicketId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

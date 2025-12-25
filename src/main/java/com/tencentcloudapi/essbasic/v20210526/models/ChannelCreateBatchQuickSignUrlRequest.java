@@ -74,12 +74,13 @@ public class ChannelCreateBatchQuickSignUrlRequest extends AbstractModel {
 <li>**1**：OCR楷体</li>
 <li>**2**：姓名印章</li>
 <li>**3**：图片印章</li>
-<li>**4**：系统签名</li></ul>
+<li>**4**：系统签名</li>
+<li>**5**：长效手写签名（包含手写签名）</li></ul>
 注：
 <ul><li>默认情况下，签名类型为手写签名</li>
 <li>您可以传递多种值，表示可用多种签名类型。</li>
 <li>该参数会覆盖您合同中的签名类型，若您在发起合同时限定了签名类型(赋值签名类型给ComponentTypeLimit)，请将这些签名类型赋予此参数</li>
-<li>若签署方为企业员工，此参数无效，签名方式将以合同中为准。</li>
+<li>若签署方为个人，签名类型“5:长效手写签名”不可用，签名方式将以合同中为准。</li>
 </ul>
     */
     @SerializedName("SignatureTypes")
@@ -282,24 +283,26 @@ public class ChannelCreateBatchQuickSignUrlRequest extends AbstractModel {
 <li>**1**：OCR楷体</li>
 <li>**2**：姓名印章</li>
 <li>**3**：图片印章</li>
-<li>**4**：系统签名</li></ul>
+<li>**4**：系统签名</li>
+<li>**5**：长效手写签名（包含手写签名）</li></ul>
 注：
 <ul><li>默认情况下，签名类型为手写签名</li>
 <li>您可以传递多种值，表示可用多种签名类型。</li>
 <li>该参数会覆盖您合同中的签名类型，若您在发起合同时限定了签名类型(赋值签名类型给ComponentTypeLimit)，请将这些签名类型赋予此参数</li>
-<li>若签署方为企业员工，此参数无效，签名方式将以合同中为准。</li>
+<li>若签署方为个人，签名类型“5:长效手写签名”不可用，签名方式将以合同中为准。</li>
 </ul> 
      * @return SignatureTypes 指定批量签署合同的签名类型，可传递以下值：
 <ul><li>**0**：手写签名(默认)</li>
 <li>**1**：OCR楷体</li>
 <li>**2**：姓名印章</li>
 <li>**3**：图片印章</li>
-<li>**4**：系统签名</li></ul>
+<li>**4**：系统签名</li>
+<li>**5**：长效手写签名（包含手写签名）</li></ul>
 注：
 <ul><li>默认情况下，签名类型为手写签名</li>
 <li>您可以传递多种值，表示可用多种签名类型。</li>
 <li>该参数会覆盖您合同中的签名类型，若您在发起合同时限定了签名类型(赋值签名类型给ComponentTypeLimit)，请将这些签名类型赋予此参数</li>
-<li>若签署方为企业员工，此参数无效，签名方式将以合同中为准。</li>
+<li>若签署方为个人，签名类型“5:长效手写签名”不可用，签名方式将以合同中为准。</li>
 </ul>
      */
     public Long [] getSignatureTypes() {
@@ -312,24 +315,26 @@ public class ChannelCreateBatchQuickSignUrlRequest extends AbstractModel {
 <li>**1**：OCR楷体</li>
 <li>**2**：姓名印章</li>
 <li>**3**：图片印章</li>
-<li>**4**：系统签名</li></ul>
+<li>**4**：系统签名</li>
+<li>**5**：长效手写签名（包含手写签名）</li></ul>
 注：
 <ul><li>默认情况下，签名类型为手写签名</li>
 <li>您可以传递多种值，表示可用多种签名类型。</li>
 <li>该参数会覆盖您合同中的签名类型，若您在发起合同时限定了签名类型(赋值签名类型给ComponentTypeLimit)，请将这些签名类型赋予此参数</li>
-<li>若签署方为企业员工，此参数无效，签名方式将以合同中为准。</li>
+<li>若签署方为个人，签名类型“5:长效手写签名”不可用，签名方式将以合同中为准。</li>
 </ul>
      * @param SignatureTypes 指定批量签署合同的签名类型，可传递以下值：
 <ul><li>**0**：手写签名(默认)</li>
 <li>**1**：OCR楷体</li>
 <li>**2**：姓名印章</li>
 <li>**3**：图片印章</li>
-<li>**4**：系统签名</li></ul>
+<li>**4**：系统签名</li>
+<li>**5**：长效手写签名（包含手写签名）</li></ul>
 注：
 <ul><li>默认情况下，签名类型为手写签名</li>
 <li>您可以传递多种值，表示可用多种签名类型。</li>
 <li>该参数会覆盖您合同中的签名类型，若您在发起合同时限定了签名类型(赋值签名类型给ComponentTypeLimit)，请将这些签名类型赋予此参数</li>
-<li>若签署方为企业员工，此参数无效，签名方式将以合同中为准。</li>
+<li>若签署方为个人，签名类型“5:长效手写签名”不可用，签名方式将以合同中为准。</li>
 </ul>
      */
     public void setSignatureTypes(Long [] SignatureTypes) {

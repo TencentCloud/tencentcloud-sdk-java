@@ -39,7 +39,6 @@ public class StrategyInfo extends AbstractModel {
 
     /**
     * 策略创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AddTime")
     @Expose
@@ -139,6 +138,13 @@ public class StrategyInfo extends AbstractModel {
     private String UpdateTime;
 
     /**
+    * 标签列表
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 策略ID。 
      * @return PolicyId 策略ID。
      */
@@ -171,10 +177,8 @@ public class StrategyInfo extends AbstractModel {
     }
 
     /**
-     * Get 策略创建时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略创建时间。 
      * @return AddTime 策略创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddTime() {
         return this.AddTime;
@@ -182,9 +186,7 @@ public class StrategyInfo extends AbstractModel {
 
     /**
      * Set 策略创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AddTime 策略创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddTime(String AddTime) {
         this.AddTime = AddTime;
@@ -418,6 +420,22 @@ public class StrategyInfo extends AbstractModel {
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get 标签列表 
+     * @return Tags 标签列表
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签列表
+     * @param Tags 标签列表
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public StrategyInfo() {
     }
 
@@ -474,6 +492,12 @@ public class StrategyInfo extends AbstractModel {
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -496,6 +520,7 @@ public class StrategyInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "AttachEntityCount", this.AttachEntityCount);
         this.setParamSimple(map, prefix + "AttachEntityBoundaryCount", this.AttachEntityBoundaryCount);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

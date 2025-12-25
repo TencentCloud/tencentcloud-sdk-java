@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.bh.v20230418.models;
+package com.tencentcloudapi.dlc.v20210125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAssetSyncJobRequest extends AbstractModel {
+public class SetOptimizerPolicyRequest extends AbstractModel {
 
     /**
-    * 同步资产类别，1 - 主机资产, 2 - 数据库资产，3-容器资产
+    * 优化策略
     */
-    @SerializedName("Category")
+    @SerializedName("SmartPolicy")
     @Expose
-    private Long Category;
+    private SmartPolicy SmartPolicy;
 
     /**
-     * Get 同步资产类别，1 - 主机资产, 2 - 数据库资产，3-容器资产 
-     * @return Category 同步资产类别，1 - 主机资产, 2 - 数据库资产，3-容器资产
+     * Get 优化策略 
+     * @return SmartPolicy 优化策略
      */
-    public Long getCategory() {
-        return this.Category;
+    public SmartPolicy getSmartPolicy() {
+        return this.SmartPolicy;
     }
 
     /**
-     * Set 同步资产类别，1 - 主机资产, 2 - 数据库资产，3-容器资产
-     * @param Category 同步资产类别，1 - 主机资产, 2 - 数据库资产，3-容器资产
+     * Set 优化策略
+     * @param SmartPolicy 优化策略
      */
-    public void setCategory(Long Category) {
-        this.Category = Category;
+    public void setSmartPolicy(SmartPolicy SmartPolicy) {
+        this.SmartPolicy = SmartPolicy;
     }
 
-    public CreateAssetSyncJobRequest() {
+    public SetOptimizerPolicyRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateAssetSyncJobRequest(CreateAssetSyncJobRequest source) {
-        if (source.Category != null) {
-            this.Category = new Long(source.Category);
+    public SetOptimizerPolicyRequest(SetOptimizerPolicyRequest source) {
+        if (source.SmartPolicy != null) {
+            this.SmartPolicy = new SmartPolicy(source.SmartPolicy);
         }
     }
 
@@ -64,7 +64,7 @@ public class CreateAssetSyncJobRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Category", this.Category);
+        this.setParamObj(map, prefix + "SmartPolicy.", this.SmartPolicy);
 
     }
 }

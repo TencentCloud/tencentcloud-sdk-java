@@ -24,105 +24,105 @@ import java.util.HashMap;
 public class DescribeVersionDetailResponse extends AbstractModel {
 
     /**
-    * 版本名
+    * <p>版本名</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 端口号
+    * <p>端口号</p>
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * cpu 规格
+    * <p>cpu 规格</p>
     */
     @SerializedName("Cpu")
     @Expose
     private Float Cpu;
 
     /**
-    * mem 规格
+    * <p>mem 规格</p>
     */
     @SerializedName("Mem")
     @Expose
     private Float Mem;
 
     /**
-    * 最小副本数
+    * <p>最小副本数</p>
     */
     @SerializedName("MinNum")
     @Expose
     private Long MinNum;
 
     /**
-    * 最大副本数
+    * <p>最大副本数</p>
     */
     @SerializedName("MaxNum")
     @Expose
     private Long MaxNum;
 
     /**
-    * 扩缩容策略
+    * <p>扩缩容策略</p>
     */
     @SerializedName("PolicyDetails")
     @Expose
     private HpaPolicy [] PolicyDetails;
 
     /**
-    * Dockerfile path
+    * <p>Dockerfile path</p>
     */
     @SerializedName("Dockerfile")
     @Expose
     private String Dockerfile;
 
     /**
-    * 目标目录
+    * <p>目标目录</p>
     */
     @SerializedName("BuildDir")
     @Expose
     private String BuildDir;
 
     /**
-    * 环境变量
+    * <p>环境变量</p>
     */
     @SerializedName("EnvParams")
     @Expose
     private String EnvParams;
 
     /**
-    * 状态
+    * <p>状态</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
     */
     @SerializedName("UpdatedTime")
     @Expose
     private String UpdatedTime;
 
     /**
-    * 日志采集路径
+    * <p>日志采集路径</p>
     */
     @SerializedName("LogPath")
     @Expose
     private String LogPath;
 
     /**
-    * entryPoint
+    * <p>entryPoint</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EntryPoint")
@@ -130,7 +130,7 @@ public class DescribeVersionDetailResponse extends AbstractModel {
     private String EntryPoint;
 
     /**
-    * Cmd
+    * <p>Cmd</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cmd")
@@ -138,7 +138,7 @@ public class DescribeVersionDetailResponse extends AbstractModel {
     private String Cmd;
 
     /**
-    * vpc conf
+    * <p>vpc conf</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcConf")
@@ -146,12 +146,20 @@ public class DescribeVersionDetailResponse extends AbstractModel {
     private VpcConf VpcConf;
 
     /**
-    * volume conf
+    * <p>volume conf</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VolumesConf")
     @Expose
     private VolumeConf [] VolumesConf;
+
+    /**
+    * <p>buildpack 信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BuildPacks")
+    @Expose
+    private BuildPacksInfo BuildPacks;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -161,233 +169,233 @@ public class DescribeVersionDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 版本名 
-     * @return Name 版本名
+     * Get <p>版本名</p> 
+     * @return Name <p>版本名</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 版本名
-     * @param Name 版本名
+     * Set <p>版本名</p>
+     * @param Name <p>版本名</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 端口号 
-     * @return Port 端口号
+     * Get <p>端口号</p> 
+     * @return Port <p>端口号</p>
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 端口号
-     * @param Port 端口号
+     * Set <p>端口号</p>
+     * @param Port <p>端口号</p>
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get cpu 规格 
-     * @return Cpu cpu 规格
+     * Get <p>cpu 规格</p> 
+     * @return Cpu <p>cpu 规格</p>
      */
     public Float getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set cpu 规格
-     * @param Cpu cpu 规格
+     * Set <p>cpu 规格</p>
+     * @param Cpu <p>cpu 规格</p>
      */
     public void setCpu(Float Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get mem 规格 
-     * @return Mem mem 规格
+     * Get <p>mem 规格</p> 
+     * @return Mem <p>mem 规格</p>
      */
     public Float getMem() {
         return this.Mem;
     }
 
     /**
-     * Set mem 规格
-     * @param Mem mem 规格
+     * Set <p>mem 规格</p>
+     * @param Mem <p>mem 规格</p>
      */
     public void setMem(Float Mem) {
         this.Mem = Mem;
     }
 
     /**
-     * Get 最小副本数 
-     * @return MinNum 最小副本数
+     * Get <p>最小副本数</p> 
+     * @return MinNum <p>最小副本数</p>
      */
     public Long getMinNum() {
         return this.MinNum;
     }
 
     /**
-     * Set 最小副本数
-     * @param MinNum 最小副本数
+     * Set <p>最小副本数</p>
+     * @param MinNum <p>最小副本数</p>
      */
     public void setMinNum(Long MinNum) {
         this.MinNum = MinNum;
     }
 
     /**
-     * Get 最大副本数 
-     * @return MaxNum 最大副本数
+     * Get <p>最大副本数</p> 
+     * @return MaxNum <p>最大副本数</p>
      */
     public Long getMaxNum() {
         return this.MaxNum;
     }
 
     /**
-     * Set 最大副本数
-     * @param MaxNum 最大副本数
+     * Set <p>最大副本数</p>
+     * @param MaxNum <p>最大副本数</p>
      */
     public void setMaxNum(Long MaxNum) {
         this.MaxNum = MaxNum;
     }
 
     /**
-     * Get 扩缩容策略 
-     * @return PolicyDetails 扩缩容策略
+     * Get <p>扩缩容策略</p> 
+     * @return PolicyDetails <p>扩缩容策略</p>
      */
     public HpaPolicy [] getPolicyDetails() {
         return this.PolicyDetails;
     }
 
     /**
-     * Set 扩缩容策略
-     * @param PolicyDetails 扩缩容策略
+     * Set <p>扩缩容策略</p>
+     * @param PolicyDetails <p>扩缩容策略</p>
      */
     public void setPolicyDetails(HpaPolicy [] PolicyDetails) {
         this.PolicyDetails = PolicyDetails;
     }
 
     /**
-     * Get Dockerfile path 
-     * @return Dockerfile Dockerfile path
+     * Get <p>Dockerfile path</p> 
+     * @return Dockerfile <p>Dockerfile path</p>
      */
     public String getDockerfile() {
         return this.Dockerfile;
     }
 
     /**
-     * Set Dockerfile path
-     * @param Dockerfile Dockerfile path
+     * Set <p>Dockerfile path</p>
+     * @param Dockerfile <p>Dockerfile path</p>
      */
     public void setDockerfile(String Dockerfile) {
         this.Dockerfile = Dockerfile;
     }
 
     /**
-     * Get 目标目录 
-     * @return BuildDir 目标目录
+     * Get <p>目标目录</p> 
+     * @return BuildDir <p>目标目录</p>
      */
     public String getBuildDir() {
         return this.BuildDir;
     }
 
     /**
-     * Set 目标目录
-     * @param BuildDir 目标目录
+     * Set <p>目标目录</p>
+     * @param BuildDir <p>目标目录</p>
      */
     public void setBuildDir(String BuildDir) {
         this.BuildDir = BuildDir;
     }
 
     /**
-     * Get 环境变量 
-     * @return EnvParams 环境变量
+     * Get <p>环境变量</p> 
+     * @return EnvParams <p>环境变量</p>
      */
     public String getEnvParams() {
         return this.EnvParams;
     }
 
     /**
-     * Set 环境变量
-     * @param EnvParams 环境变量
+     * Set <p>环境变量</p>
+     * @param EnvParams <p>环境变量</p>
      */
     public void setEnvParams(String EnvParams) {
         this.EnvParams = EnvParams;
     }
 
     /**
-     * Get 状态 
-     * @return Status 状态
+     * Get <p>状态</p> 
+     * @return Status <p>状态</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态
-     * @param Status 状态
+     * Set <p>状态</p>
+     * @param Status <p>状态</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreatedTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreatedTime <p>创建时间</p>
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreatedTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreatedTime <p>创建时间</p>
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 更新时间 
-     * @return UpdatedTime 更新时间
+     * Get <p>更新时间</p> 
+     * @return UpdatedTime <p>更新时间</p>
      */
     public String getUpdatedTime() {
         return this.UpdatedTime;
     }
 
     /**
-     * Set 更新时间
-     * @param UpdatedTime 更新时间
+     * Set <p>更新时间</p>
+     * @param UpdatedTime <p>更新时间</p>
      */
     public void setUpdatedTime(String UpdatedTime) {
         this.UpdatedTime = UpdatedTime;
     }
 
     /**
-     * Get 日志采集路径 
-     * @return LogPath 日志采集路径
+     * Get <p>日志采集路径</p> 
+     * @return LogPath <p>日志采集路径</p>
      */
     public String getLogPath() {
         return this.LogPath;
     }
 
     /**
-     * Set 日志采集路径
-     * @param LogPath 日志采集路径
+     * Set <p>日志采集路径</p>
+     * @param LogPath <p>日志采集路径</p>
      */
     public void setLogPath(String LogPath) {
         this.LogPath = LogPath;
     }
 
     /**
-     * Get entryPoint
+     * Get <p>entryPoint</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EntryPoint entryPoint
+     * @return EntryPoint <p>entryPoint</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEntryPoint() {
@@ -395,9 +403,9 @@ public class DescribeVersionDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set entryPoint
+     * Set <p>entryPoint</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EntryPoint entryPoint
+     * @param EntryPoint <p>entryPoint</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEntryPoint(String EntryPoint) {
@@ -405,9 +413,9 @@ public class DescribeVersionDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get Cmd
+     * Get <p>Cmd</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Cmd Cmd
+     * @return Cmd <p>Cmd</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCmd() {
@@ -415,9 +423,9 @@ public class DescribeVersionDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set Cmd
+     * Set <p>Cmd</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Cmd Cmd
+     * @param Cmd <p>Cmd</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCmd(String Cmd) {
@@ -425,9 +433,9 @@ public class DescribeVersionDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get vpc conf
+     * Get <p>vpc conf</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VpcConf vpc conf
+     * @return VpcConf <p>vpc conf</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public VpcConf getVpcConf() {
@@ -435,9 +443,9 @@ public class DescribeVersionDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set vpc conf
+     * Set <p>vpc conf</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VpcConf vpc conf
+     * @param VpcConf <p>vpc conf</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcConf(VpcConf VpcConf) {
@@ -445,9 +453,9 @@ public class DescribeVersionDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get volume conf
+     * Get <p>volume conf</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VolumesConf volume conf
+     * @return VolumesConf <p>volume conf</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public VolumeConf [] getVolumesConf() {
@@ -455,13 +463,33 @@ public class DescribeVersionDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set volume conf
+     * Set <p>volume conf</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VolumesConf volume conf
+     * @param VolumesConf <p>volume conf</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVolumesConf(VolumeConf [] VolumesConf) {
         this.VolumesConf = VolumesConf;
+    }
+
+    /**
+     * Get <p>buildpack 信息</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BuildPacks <p>buildpack 信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BuildPacksInfo getBuildPacks() {
+        return this.BuildPacks;
+    }
+
+    /**
+     * Set <p>buildpack 信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BuildPacks <p>buildpack 信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBuildPacks(BuildPacksInfo BuildPacks) {
+        this.BuildPacks = BuildPacks;
     }
 
     /**
@@ -548,6 +576,9 @@ public class DescribeVersionDetailResponse extends AbstractModel {
                 this.VolumesConf[i] = new VolumeConf(source.VolumesConf[i]);
             }
         }
+        if (source.BuildPacks != null) {
+            this.BuildPacks = new BuildPacksInfo(source.BuildPacks);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -576,6 +607,7 @@ public class DescribeVersionDetailResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Cmd", this.Cmd);
         this.setParamObj(map, prefix + "VpcConf.", this.VpcConf);
         this.setParamArrayObj(map, prefix + "VolumesConf.", this.VolumesConf);
+        this.setParamObj(map, prefix + "BuildPacks.", this.BuildPacks);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -32,6 +32,14 @@ public class AutoGuard extends AbstractModel {
     private String Switch;
 
     /**
+    * 流量防盗刷配置规则
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FilterRules")
+    @Expose
+    private FilterRules [] FilterRules;
+
+    /**
      * Get 流量防盗刷配置开关，取值有： on：开启 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Switch 流量防盗刷配置开关，取值有： on：开启 off：关闭
@@ -51,6 +59,26 @@ public class AutoGuard extends AbstractModel {
         this.Switch = Switch;
     }
 
+    /**
+     * Get 流量防盗刷配置规则
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FilterRules 流量防盗刷配置规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public FilterRules [] getFilterRules() {
+        return this.FilterRules;
+    }
+
+    /**
+     * Set 流量防盗刷配置规则
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FilterRules 流量防盗刷配置规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFilterRules(FilterRules [] FilterRules) {
+        this.FilterRules = FilterRules;
+    }
+
     public AutoGuard() {
     }
 
@@ -62,6 +90,12 @@ public class AutoGuard extends AbstractModel {
         if (source.Switch != null) {
             this.Switch = new String(source.Switch);
         }
+        if (source.FilterRules != null) {
+            this.FilterRules = new FilterRules[source.FilterRules.length];
+            for (int i = 0; i < source.FilterRules.length; i++) {
+                this.FilterRules[i] = new FilterRules(source.FilterRules[i]);
+            }
+        }
     }
 
 
@@ -70,6 +104,7 @@ public class AutoGuard extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);
+        this.setParamArrayObj(map, prefix + "FilterRules.", this.FilterRules);
 
     }
 }

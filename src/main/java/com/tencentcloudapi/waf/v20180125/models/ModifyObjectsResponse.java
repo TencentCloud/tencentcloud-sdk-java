@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.as.v20180419.models;
+package com.tencentcloudapi.waf.v20180125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateLaunchConfigurationResponse extends AbstractModel {
-
-    /**
-    * <p>当通过本接口来创建启动配置时会返回该参数，表示启动配置ID。</p>
-    */
-    @SerializedName("LaunchConfigurationId")
-    @Expose
-    private String LaunchConfigurationId;
+public class ModifyObjectsResponse extends AbstractModel {
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -36,22 +29,6 @@ public class CreateLaunchConfigurationResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get <p>当通过本接口来创建启动配置时会返回该参数，表示启动配置ID。</p> 
-     * @return LaunchConfigurationId <p>当通过本接口来创建启动配置时会返回该参数，表示启动配置ID。</p>
-     */
-    public String getLaunchConfigurationId() {
-        return this.LaunchConfigurationId;
-    }
-
-    /**
-     * Set <p>当通过本接口来创建启动配置时会返回该参数，表示启动配置ID。</p>
-     * @param LaunchConfigurationId <p>当通过本接口来创建启动配置时会返回该参数，表示启动配置ID。</p>
-     */
-    public void setLaunchConfigurationId(String LaunchConfigurationId) {
-        this.LaunchConfigurationId = LaunchConfigurationId;
-    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -69,17 +46,14 @@ public class CreateLaunchConfigurationResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreateLaunchConfigurationResponse() {
+    public ModifyObjectsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateLaunchConfigurationResponse(CreateLaunchConfigurationResponse source) {
-        if (source.LaunchConfigurationId != null) {
-            this.LaunchConfigurationId = new String(source.LaunchConfigurationId);
-        }
+    public ModifyObjectsResponse(ModifyObjectsResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,7 +64,6 @@ public class CreateLaunchConfigurationResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "LaunchConfigurationId", this.LaunchConfigurationId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

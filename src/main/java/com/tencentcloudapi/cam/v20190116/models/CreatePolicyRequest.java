@@ -45,6 +45,13 @@ public class CreatePolicyRequest extends AbstractModel {
     private String Description;
 
     /**
+    * 策略关联的标签列表
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 策略名称。长度为1~128个字符，可包含英文字母、数字和+=,.@-_。 
      * @return PolicyName 策略名称。长度为1~128个字符，可包含英文字母、数字和+=,.@-_。
      */
@@ -92,6 +99,22 @@ public class CreatePolicyRequest extends AbstractModel {
         this.Description = Description;
     }
 
+    /**
+     * Get 策略关联的标签列表 
+     * @return Tags 策略关联的标签列表
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 策略关联的标签列表
+     * @param Tags 策略关联的标签列表
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreatePolicyRequest() {
     }
 
@@ -109,6 +132,12 @@ public class CreatePolicyRequest extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -119,6 +148,7 @@ public class CreatePolicyRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PolicyName", this.PolicyName);
         this.setParamSimple(map, prefix + "PolicyDocument", this.PolicyDocument);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

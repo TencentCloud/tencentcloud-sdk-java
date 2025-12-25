@@ -24,98 +24,98 @@ import java.util.HashMap;
 public class License extends AbstractModel {
 
     /**
-    * License ID
+    * <p>License ID</p>
     */
     @SerializedName("LicenseId")
     @Expose
     private String LicenseId;
 
     /**
-    * 软件授权模式。<table><thead><tr><th>枚举值</th><th>说明</th></tr></thead><tbody><tr><td>Permanent</td><td>永久授权。该授权不受有效期限制。</td></tr><tr><td>Subscription</td><td>订阅授权。授权如果过了有效期，则会进入过期状态。</td></tr><tr><td>Accept</td><td>验收期授权。用于需要验收的软件处于验收期间的授权，授权如果过了验收有效期，则会进入过期状态。</td></tr></tbody></table>
+    * <p>软件授权模式。<table><thead><tr><th>枚举值</th><th>说明</th></tr></thead><tbody><tr><td>Permanent</td><td>永久授权。该授权不受有效期限制。</td></tr><tr><td>Subscription</td><td>订阅授权。授权如果过了有效期，则会进入过期状态。</td></tr><tr><td>Accept</td><td>验收期授权。用于需要验收的软件处于验收期间的授权，授权如果过了验收有效期，则会进入过期状态。</td></tr></tbody></table></p>
     */
     @SerializedName("LicenseMode")
     @Expose
     private String LicenseMode;
 
     /**
-    * 软件的授权状态。<table><thead><tr><th>枚举值</th><th>说明</th></tr></thead><tbody><tr><td>Issued</td><td>已颁发，等待激活。一般来说，如果软件已经在运行，不会出现该状态。</td></tr><tr><td>Active</td><td>授权在有效期内，这是软件运行期间最常见的状态。</td></tr><tr><td>Expired</td><td>授权已过期。订阅类的软件授权有有效期，如果服务器时间已晚于有效期，则会进入过期状态。</td></tr><tr><td>Isolated</td><td>授权已隔离。有截止日期的授权，当用户授权到期时，先进入此状态，用户可以去续费，超过7天不续费则授权进入Destroyed状态。</td></tr><tr><td>Destroyed</td><td>授权已失效/销毁。用户如果退货软件，则授权会自动失效。</td></tr></tbody></table>
+    * <p>软件的授权状态。<table><thead><tr><th>枚举值</th><th>说明</th></tr></thead><tbody><tr><td>Issued</td><td>已颁发，等待激活。一般来说，如果软件已经在运行，不会出现该状态。</td></tr><tr><td>Active</td><td>授权在有效期内，这是软件运行期间最常见的状态。</td></tr><tr><td>Expired</td><td>授权已过期。订阅类的软件授权有有效期，如果服务器时间已晚于有效期，则会进入过期状态。</td></tr><tr><td>Isolated</td><td>授权已隔离。有截止日期的授权，当用户授权到期时，先进入此状态，用户可以去续费，超过7天不续费则授权进入Destroyed状态。</td></tr><tr><td>Destroyed</td><td>授权已失效/销毁。用户如果退货软件，则授权会自动失效。</td></tr></tbody></table></p>
     */
     @SerializedName("LicenseStatus")
     @Expose
     private String LicenseStatus;
 
     /**
-    * 软件供应方 ID。
+    * <p>软件供应方 ID。</p>
     */
     @SerializedName("ProviderId")
     @Expose
     private Long ProviderId;
 
     /**
-    * 软件包 ID。
+    * <p>软件包 ID。</p>
     */
     @SerializedName("SoftwarePackageId")
     @Expose
     private String SoftwarePackageId;
 
     /**
-    * 软件包版本。
+    * <p>软件包版本。</p>
     */
     @SerializedName("SoftwarePackageVersion")
     @Expose
     private String SoftwarePackageVersion;
 
     /**
-    * 被授权的用户 UIN。
+    * <p>被授权的用户 UIN。</p>
     */
     @SerializedName("AuthorizedUserUin")
     @Expose
     private String AuthorizedUserUin;
 
     /**
-    * 被授权的应用实例 ID。
+    * <p>被授权的应用实例 ID。</p>
     */
     @SerializedName("AuthorizedCloudappId")
     @Expose
     private String AuthorizedCloudappId;
 
     /**
-    * 被授权的角色 ID。
+    * <p>被授权的角色 ID。</p>
     */
     @SerializedName("AuthorizedCloudappRoleId")
     @Expose
     private String AuthorizedCloudappRoleId;
 
     /**
-    * 被授权的软件规格，具体字段请参考结构SaleParam
+    * <p>被授权的软件规格，具体字段请参考结构SaleParam</p>
     */
     @SerializedName("AuthorizedSpecification")
     @Expose
     private SaleParam [] AuthorizedSpecification;
 
     /**
-    * 被授权的软件的计费模式。<table><thead><tr><th>枚举值</th><th>说明</th></tr></thead><tbody><tr><td>1</td><td>线上计费，软件的授权从腾讯云线上购买，支持续费、退款等操作。</td></tr><tr><td>2</td><td>线下计费，软件的授权线下签订合同购买，定向客户交付，无法从线上续费和退款。</td></tr><tr><td>4</td><td>免费</td></tr></tbody></table>
+    * <p>被授权的软件的计费模式。<table><thead><tr><th>枚举值</th><th>说明</th></tr></thead><tbody><tr><td>1</td><td>线上计费，软件的授权从腾讯云线上购买，支持续费、退款等操作。</td></tr><tr><td>2</td><td>线下计费，软件的授权线下签订合同购买，定向客户交付，无法从线上续费和退款。</td></tr><tr><td>4</td><td>免费</td></tr></tbody></table></p>
     */
     @SerializedName("BillingMode")
     @Expose
     private Long BillingMode;
 
     /**
-    * 授权时长（单位由LifeSpanUnit确定，枚举值有Y年/M月/D日三种）
+    * <p>授权时长（单位由LifeSpanUnit确定，枚举值有Y年/M月/D日三种）</p>
     */
     @SerializedName("LifeSpan")
     @Expose
     private Long LifeSpan;
 
     /**
-    * 授权颁发时间。
+    * <p>授权颁发时间。</p>
     */
     @SerializedName("IssueDate")
     @Expose
     private String IssueDate;
 
     /**
-    * 授权激活时间，如从未激活则返回 null。
+    * <p>授权激活时间，如从未激活则返回 null。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActivationDate")
@@ -123,7 +123,7 @@ public class License extends AbstractModel {
     private String ActivationDate;
 
     /**
-    * 授权过期时间
+    * <p>授权过期时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpirationDate")
@@ -131,238 +131,238 @@ public class License extends AbstractModel {
     private String ExpirationDate;
 
     /**
-    * 授权时长单位，枚举值有Y年/M月/D日三种
+    * <p>授权时长单位，枚举值有Y年/M月/D日三种</p>
     */
     @SerializedName("LifeSpanUnit")
     @Expose
     private String LifeSpanUnit;
 
     /**
-    * 授权的类型：Standard正式版/Development开发版/Trial体验版
+    * <p>授权的类型：Standard正式版/Development开发版/Trial体验版</p>
     */
     @SerializedName("LicenseType")
     @Expose
     private String LicenseType;
 
     /**
-    * 授权的层级：Master 主授权；Child 子授权/增强型授权
+    * <p>授权的层级：Master 主授权；Child 子授权/增强型授权</p>
     */
     @SerializedName("LicenseLevel")
     @Expose
     private String LicenseLevel;
 
     /**
-     * Get License ID 
-     * @return LicenseId License ID
+     * Get <p>License ID</p> 
+     * @return LicenseId <p>License ID</p>
      */
     public String getLicenseId() {
         return this.LicenseId;
     }
 
     /**
-     * Set License ID
-     * @param LicenseId License ID
+     * Set <p>License ID</p>
+     * @param LicenseId <p>License ID</p>
      */
     public void setLicenseId(String LicenseId) {
         this.LicenseId = LicenseId;
     }
 
     /**
-     * Get 软件授权模式。<table><thead><tr><th>枚举值</th><th>说明</th></tr></thead><tbody><tr><td>Permanent</td><td>永久授权。该授权不受有效期限制。</td></tr><tr><td>Subscription</td><td>订阅授权。授权如果过了有效期，则会进入过期状态。</td></tr><tr><td>Accept</td><td>验收期授权。用于需要验收的软件处于验收期间的授权，授权如果过了验收有效期，则会进入过期状态。</td></tr></tbody></table> 
-     * @return LicenseMode 软件授权模式。<table><thead><tr><th>枚举值</th><th>说明</th></tr></thead><tbody><tr><td>Permanent</td><td>永久授权。该授权不受有效期限制。</td></tr><tr><td>Subscription</td><td>订阅授权。授权如果过了有效期，则会进入过期状态。</td></tr><tr><td>Accept</td><td>验收期授权。用于需要验收的软件处于验收期间的授权，授权如果过了验收有效期，则会进入过期状态。</td></tr></tbody></table>
+     * Get <p>软件授权模式。<table><thead><tr><th>枚举值</th><th>说明</th></tr></thead><tbody><tr><td>Permanent</td><td>永久授权。该授权不受有效期限制。</td></tr><tr><td>Subscription</td><td>订阅授权。授权如果过了有效期，则会进入过期状态。</td></tr><tr><td>Accept</td><td>验收期授权。用于需要验收的软件处于验收期间的授权，授权如果过了验收有效期，则会进入过期状态。</td></tr></tbody></table></p> 
+     * @return LicenseMode <p>软件授权模式。<table><thead><tr><th>枚举值</th><th>说明</th></tr></thead><tbody><tr><td>Permanent</td><td>永久授权。该授权不受有效期限制。</td></tr><tr><td>Subscription</td><td>订阅授权。授权如果过了有效期，则会进入过期状态。</td></tr><tr><td>Accept</td><td>验收期授权。用于需要验收的软件处于验收期间的授权，授权如果过了验收有效期，则会进入过期状态。</td></tr></tbody></table></p>
      */
     public String getLicenseMode() {
         return this.LicenseMode;
     }
 
     /**
-     * Set 软件授权模式。<table><thead><tr><th>枚举值</th><th>说明</th></tr></thead><tbody><tr><td>Permanent</td><td>永久授权。该授权不受有效期限制。</td></tr><tr><td>Subscription</td><td>订阅授权。授权如果过了有效期，则会进入过期状态。</td></tr><tr><td>Accept</td><td>验收期授权。用于需要验收的软件处于验收期间的授权，授权如果过了验收有效期，则会进入过期状态。</td></tr></tbody></table>
-     * @param LicenseMode 软件授权模式。<table><thead><tr><th>枚举值</th><th>说明</th></tr></thead><tbody><tr><td>Permanent</td><td>永久授权。该授权不受有效期限制。</td></tr><tr><td>Subscription</td><td>订阅授权。授权如果过了有效期，则会进入过期状态。</td></tr><tr><td>Accept</td><td>验收期授权。用于需要验收的软件处于验收期间的授权，授权如果过了验收有效期，则会进入过期状态。</td></tr></tbody></table>
+     * Set <p>软件授权模式。<table><thead><tr><th>枚举值</th><th>说明</th></tr></thead><tbody><tr><td>Permanent</td><td>永久授权。该授权不受有效期限制。</td></tr><tr><td>Subscription</td><td>订阅授权。授权如果过了有效期，则会进入过期状态。</td></tr><tr><td>Accept</td><td>验收期授权。用于需要验收的软件处于验收期间的授权，授权如果过了验收有效期，则会进入过期状态。</td></tr></tbody></table></p>
+     * @param LicenseMode <p>软件授权模式。<table><thead><tr><th>枚举值</th><th>说明</th></tr></thead><tbody><tr><td>Permanent</td><td>永久授权。该授权不受有效期限制。</td></tr><tr><td>Subscription</td><td>订阅授权。授权如果过了有效期，则会进入过期状态。</td></tr><tr><td>Accept</td><td>验收期授权。用于需要验收的软件处于验收期间的授权，授权如果过了验收有效期，则会进入过期状态。</td></tr></tbody></table></p>
      */
     public void setLicenseMode(String LicenseMode) {
         this.LicenseMode = LicenseMode;
     }
 
     /**
-     * Get 软件的授权状态。<table><thead><tr><th>枚举值</th><th>说明</th></tr></thead><tbody><tr><td>Issued</td><td>已颁发，等待激活。一般来说，如果软件已经在运行，不会出现该状态。</td></tr><tr><td>Active</td><td>授权在有效期内，这是软件运行期间最常见的状态。</td></tr><tr><td>Expired</td><td>授权已过期。订阅类的软件授权有有效期，如果服务器时间已晚于有效期，则会进入过期状态。</td></tr><tr><td>Isolated</td><td>授权已隔离。有截止日期的授权，当用户授权到期时，先进入此状态，用户可以去续费，超过7天不续费则授权进入Destroyed状态。</td></tr><tr><td>Destroyed</td><td>授权已失效/销毁。用户如果退货软件，则授权会自动失效。</td></tr></tbody></table> 
-     * @return LicenseStatus 软件的授权状态。<table><thead><tr><th>枚举值</th><th>说明</th></tr></thead><tbody><tr><td>Issued</td><td>已颁发，等待激活。一般来说，如果软件已经在运行，不会出现该状态。</td></tr><tr><td>Active</td><td>授权在有效期内，这是软件运行期间最常见的状态。</td></tr><tr><td>Expired</td><td>授权已过期。订阅类的软件授权有有效期，如果服务器时间已晚于有效期，则会进入过期状态。</td></tr><tr><td>Isolated</td><td>授权已隔离。有截止日期的授权，当用户授权到期时，先进入此状态，用户可以去续费，超过7天不续费则授权进入Destroyed状态。</td></tr><tr><td>Destroyed</td><td>授权已失效/销毁。用户如果退货软件，则授权会自动失效。</td></tr></tbody></table>
+     * Get <p>软件的授权状态。<table><thead><tr><th>枚举值</th><th>说明</th></tr></thead><tbody><tr><td>Issued</td><td>已颁发，等待激活。一般来说，如果软件已经在运行，不会出现该状态。</td></tr><tr><td>Active</td><td>授权在有效期内，这是软件运行期间最常见的状态。</td></tr><tr><td>Expired</td><td>授权已过期。订阅类的软件授权有有效期，如果服务器时间已晚于有效期，则会进入过期状态。</td></tr><tr><td>Isolated</td><td>授权已隔离。有截止日期的授权，当用户授权到期时，先进入此状态，用户可以去续费，超过7天不续费则授权进入Destroyed状态。</td></tr><tr><td>Destroyed</td><td>授权已失效/销毁。用户如果退货软件，则授权会自动失效。</td></tr></tbody></table></p> 
+     * @return LicenseStatus <p>软件的授权状态。<table><thead><tr><th>枚举值</th><th>说明</th></tr></thead><tbody><tr><td>Issued</td><td>已颁发，等待激活。一般来说，如果软件已经在运行，不会出现该状态。</td></tr><tr><td>Active</td><td>授权在有效期内，这是软件运行期间最常见的状态。</td></tr><tr><td>Expired</td><td>授权已过期。订阅类的软件授权有有效期，如果服务器时间已晚于有效期，则会进入过期状态。</td></tr><tr><td>Isolated</td><td>授权已隔离。有截止日期的授权，当用户授权到期时，先进入此状态，用户可以去续费，超过7天不续费则授权进入Destroyed状态。</td></tr><tr><td>Destroyed</td><td>授权已失效/销毁。用户如果退货软件，则授权会自动失效。</td></tr></tbody></table></p>
      */
     public String getLicenseStatus() {
         return this.LicenseStatus;
     }
 
     /**
-     * Set 软件的授权状态。<table><thead><tr><th>枚举值</th><th>说明</th></tr></thead><tbody><tr><td>Issued</td><td>已颁发，等待激活。一般来说，如果软件已经在运行，不会出现该状态。</td></tr><tr><td>Active</td><td>授权在有效期内，这是软件运行期间最常见的状态。</td></tr><tr><td>Expired</td><td>授权已过期。订阅类的软件授权有有效期，如果服务器时间已晚于有效期，则会进入过期状态。</td></tr><tr><td>Isolated</td><td>授权已隔离。有截止日期的授权，当用户授权到期时，先进入此状态，用户可以去续费，超过7天不续费则授权进入Destroyed状态。</td></tr><tr><td>Destroyed</td><td>授权已失效/销毁。用户如果退货软件，则授权会自动失效。</td></tr></tbody></table>
-     * @param LicenseStatus 软件的授权状态。<table><thead><tr><th>枚举值</th><th>说明</th></tr></thead><tbody><tr><td>Issued</td><td>已颁发，等待激活。一般来说，如果软件已经在运行，不会出现该状态。</td></tr><tr><td>Active</td><td>授权在有效期内，这是软件运行期间最常见的状态。</td></tr><tr><td>Expired</td><td>授权已过期。订阅类的软件授权有有效期，如果服务器时间已晚于有效期，则会进入过期状态。</td></tr><tr><td>Isolated</td><td>授权已隔离。有截止日期的授权，当用户授权到期时，先进入此状态，用户可以去续费，超过7天不续费则授权进入Destroyed状态。</td></tr><tr><td>Destroyed</td><td>授权已失效/销毁。用户如果退货软件，则授权会自动失效。</td></tr></tbody></table>
+     * Set <p>软件的授权状态。<table><thead><tr><th>枚举值</th><th>说明</th></tr></thead><tbody><tr><td>Issued</td><td>已颁发，等待激活。一般来说，如果软件已经在运行，不会出现该状态。</td></tr><tr><td>Active</td><td>授权在有效期内，这是软件运行期间最常见的状态。</td></tr><tr><td>Expired</td><td>授权已过期。订阅类的软件授权有有效期，如果服务器时间已晚于有效期，则会进入过期状态。</td></tr><tr><td>Isolated</td><td>授权已隔离。有截止日期的授权，当用户授权到期时，先进入此状态，用户可以去续费，超过7天不续费则授权进入Destroyed状态。</td></tr><tr><td>Destroyed</td><td>授权已失效/销毁。用户如果退货软件，则授权会自动失效。</td></tr></tbody></table></p>
+     * @param LicenseStatus <p>软件的授权状态。<table><thead><tr><th>枚举值</th><th>说明</th></tr></thead><tbody><tr><td>Issued</td><td>已颁发，等待激活。一般来说，如果软件已经在运行，不会出现该状态。</td></tr><tr><td>Active</td><td>授权在有效期内，这是软件运行期间最常见的状态。</td></tr><tr><td>Expired</td><td>授权已过期。订阅类的软件授权有有效期，如果服务器时间已晚于有效期，则会进入过期状态。</td></tr><tr><td>Isolated</td><td>授权已隔离。有截止日期的授权，当用户授权到期时，先进入此状态，用户可以去续费，超过7天不续费则授权进入Destroyed状态。</td></tr><tr><td>Destroyed</td><td>授权已失效/销毁。用户如果退货软件，则授权会自动失效。</td></tr></tbody></table></p>
      */
     public void setLicenseStatus(String LicenseStatus) {
         this.LicenseStatus = LicenseStatus;
     }
 
     /**
-     * Get 软件供应方 ID。 
-     * @return ProviderId 软件供应方 ID。
+     * Get <p>软件供应方 ID。</p> 
+     * @return ProviderId <p>软件供应方 ID。</p>
      */
     public Long getProviderId() {
         return this.ProviderId;
     }
 
     /**
-     * Set 软件供应方 ID。
-     * @param ProviderId 软件供应方 ID。
+     * Set <p>软件供应方 ID。</p>
+     * @param ProviderId <p>软件供应方 ID。</p>
      */
     public void setProviderId(Long ProviderId) {
         this.ProviderId = ProviderId;
     }
 
     /**
-     * Get 软件包 ID。 
-     * @return SoftwarePackageId 软件包 ID。
+     * Get <p>软件包 ID。</p> 
+     * @return SoftwarePackageId <p>软件包 ID。</p>
      */
     public String getSoftwarePackageId() {
         return this.SoftwarePackageId;
     }
 
     /**
-     * Set 软件包 ID。
-     * @param SoftwarePackageId 软件包 ID。
+     * Set <p>软件包 ID。</p>
+     * @param SoftwarePackageId <p>软件包 ID。</p>
      */
     public void setSoftwarePackageId(String SoftwarePackageId) {
         this.SoftwarePackageId = SoftwarePackageId;
     }
 
     /**
-     * Get 软件包版本。 
-     * @return SoftwarePackageVersion 软件包版本。
+     * Get <p>软件包版本。</p> 
+     * @return SoftwarePackageVersion <p>软件包版本。</p>
      */
     public String getSoftwarePackageVersion() {
         return this.SoftwarePackageVersion;
     }
 
     /**
-     * Set 软件包版本。
-     * @param SoftwarePackageVersion 软件包版本。
+     * Set <p>软件包版本。</p>
+     * @param SoftwarePackageVersion <p>软件包版本。</p>
      */
     public void setSoftwarePackageVersion(String SoftwarePackageVersion) {
         this.SoftwarePackageVersion = SoftwarePackageVersion;
     }
 
     /**
-     * Get 被授权的用户 UIN。 
-     * @return AuthorizedUserUin 被授权的用户 UIN。
+     * Get <p>被授权的用户 UIN。</p> 
+     * @return AuthorizedUserUin <p>被授权的用户 UIN。</p>
      */
     public String getAuthorizedUserUin() {
         return this.AuthorizedUserUin;
     }
 
     /**
-     * Set 被授权的用户 UIN。
-     * @param AuthorizedUserUin 被授权的用户 UIN。
+     * Set <p>被授权的用户 UIN。</p>
+     * @param AuthorizedUserUin <p>被授权的用户 UIN。</p>
      */
     public void setAuthorizedUserUin(String AuthorizedUserUin) {
         this.AuthorizedUserUin = AuthorizedUserUin;
     }
 
     /**
-     * Get 被授权的应用实例 ID。 
-     * @return AuthorizedCloudappId 被授权的应用实例 ID。
+     * Get <p>被授权的应用实例 ID。</p> 
+     * @return AuthorizedCloudappId <p>被授权的应用实例 ID。</p>
      */
     public String getAuthorizedCloudappId() {
         return this.AuthorizedCloudappId;
     }
 
     /**
-     * Set 被授权的应用实例 ID。
-     * @param AuthorizedCloudappId 被授权的应用实例 ID。
+     * Set <p>被授权的应用实例 ID。</p>
+     * @param AuthorizedCloudappId <p>被授权的应用实例 ID。</p>
      */
     public void setAuthorizedCloudappId(String AuthorizedCloudappId) {
         this.AuthorizedCloudappId = AuthorizedCloudappId;
     }
 
     /**
-     * Get 被授权的角色 ID。 
-     * @return AuthorizedCloudappRoleId 被授权的角色 ID。
+     * Get <p>被授权的角色 ID。</p> 
+     * @return AuthorizedCloudappRoleId <p>被授权的角色 ID。</p>
      */
     public String getAuthorizedCloudappRoleId() {
         return this.AuthorizedCloudappRoleId;
     }
 
     /**
-     * Set 被授权的角色 ID。
-     * @param AuthorizedCloudappRoleId 被授权的角色 ID。
+     * Set <p>被授权的角色 ID。</p>
+     * @param AuthorizedCloudappRoleId <p>被授权的角色 ID。</p>
      */
     public void setAuthorizedCloudappRoleId(String AuthorizedCloudappRoleId) {
         this.AuthorizedCloudappRoleId = AuthorizedCloudappRoleId;
     }
 
     /**
-     * Get 被授权的软件规格，具体字段请参考结构SaleParam 
-     * @return AuthorizedSpecification 被授权的软件规格，具体字段请参考结构SaleParam
+     * Get <p>被授权的软件规格，具体字段请参考结构SaleParam</p> 
+     * @return AuthorizedSpecification <p>被授权的软件规格，具体字段请参考结构SaleParam</p>
      */
     public SaleParam [] getAuthorizedSpecification() {
         return this.AuthorizedSpecification;
     }
 
     /**
-     * Set 被授权的软件规格，具体字段请参考结构SaleParam
-     * @param AuthorizedSpecification 被授权的软件规格，具体字段请参考结构SaleParam
+     * Set <p>被授权的软件规格，具体字段请参考结构SaleParam</p>
+     * @param AuthorizedSpecification <p>被授权的软件规格，具体字段请参考结构SaleParam</p>
      */
     public void setAuthorizedSpecification(SaleParam [] AuthorizedSpecification) {
         this.AuthorizedSpecification = AuthorizedSpecification;
     }
 
     /**
-     * Get 被授权的软件的计费模式。<table><thead><tr><th>枚举值</th><th>说明</th></tr></thead><tbody><tr><td>1</td><td>线上计费，软件的授权从腾讯云线上购买，支持续费、退款等操作。</td></tr><tr><td>2</td><td>线下计费，软件的授权线下签订合同购买，定向客户交付，无法从线上续费和退款。</td></tr><tr><td>4</td><td>免费</td></tr></tbody></table> 
-     * @return BillingMode 被授权的软件的计费模式。<table><thead><tr><th>枚举值</th><th>说明</th></tr></thead><tbody><tr><td>1</td><td>线上计费，软件的授权从腾讯云线上购买，支持续费、退款等操作。</td></tr><tr><td>2</td><td>线下计费，软件的授权线下签订合同购买，定向客户交付，无法从线上续费和退款。</td></tr><tr><td>4</td><td>免费</td></tr></tbody></table>
+     * Get <p>被授权的软件的计费模式。<table><thead><tr><th>枚举值</th><th>说明</th></tr></thead><tbody><tr><td>1</td><td>线上计费，软件的授权从腾讯云线上购买，支持续费、退款等操作。</td></tr><tr><td>2</td><td>线下计费，软件的授权线下签订合同购买，定向客户交付，无法从线上续费和退款。</td></tr><tr><td>4</td><td>免费</td></tr></tbody></table></p> 
+     * @return BillingMode <p>被授权的软件的计费模式。<table><thead><tr><th>枚举值</th><th>说明</th></tr></thead><tbody><tr><td>1</td><td>线上计费，软件的授权从腾讯云线上购买，支持续费、退款等操作。</td></tr><tr><td>2</td><td>线下计费，软件的授权线下签订合同购买，定向客户交付，无法从线上续费和退款。</td></tr><tr><td>4</td><td>免费</td></tr></tbody></table></p>
      */
     public Long getBillingMode() {
         return this.BillingMode;
     }
 
     /**
-     * Set 被授权的软件的计费模式。<table><thead><tr><th>枚举值</th><th>说明</th></tr></thead><tbody><tr><td>1</td><td>线上计费，软件的授权从腾讯云线上购买，支持续费、退款等操作。</td></tr><tr><td>2</td><td>线下计费，软件的授权线下签订合同购买，定向客户交付，无法从线上续费和退款。</td></tr><tr><td>4</td><td>免费</td></tr></tbody></table>
-     * @param BillingMode 被授权的软件的计费模式。<table><thead><tr><th>枚举值</th><th>说明</th></tr></thead><tbody><tr><td>1</td><td>线上计费，软件的授权从腾讯云线上购买，支持续费、退款等操作。</td></tr><tr><td>2</td><td>线下计费，软件的授权线下签订合同购买，定向客户交付，无法从线上续费和退款。</td></tr><tr><td>4</td><td>免费</td></tr></tbody></table>
+     * Set <p>被授权的软件的计费模式。<table><thead><tr><th>枚举值</th><th>说明</th></tr></thead><tbody><tr><td>1</td><td>线上计费，软件的授权从腾讯云线上购买，支持续费、退款等操作。</td></tr><tr><td>2</td><td>线下计费，软件的授权线下签订合同购买，定向客户交付，无法从线上续费和退款。</td></tr><tr><td>4</td><td>免费</td></tr></tbody></table></p>
+     * @param BillingMode <p>被授权的软件的计费模式。<table><thead><tr><th>枚举值</th><th>说明</th></tr></thead><tbody><tr><td>1</td><td>线上计费，软件的授权从腾讯云线上购买，支持续费、退款等操作。</td></tr><tr><td>2</td><td>线下计费，软件的授权线下签订合同购买，定向客户交付，无法从线上续费和退款。</td></tr><tr><td>4</td><td>免费</td></tr></tbody></table></p>
      */
     public void setBillingMode(Long BillingMode) {
         this.BillingMode = BillingMode;
     }
 
     /**
-     * Get 授权时长（单位由LifeSpanUnit确定，枚举值有Y年/M月/D日三种） 
-     * @return LifeSpan 授权时长（单位由LifeSpanUnit确定，枚举值有Y年/M月/D日三种）
+     * Get <p>授权时长（单位由LifeSpanUnit确定，枚举值有Y年/M月/D日三种）</p> 
+     * @return LifeSpan <p>授权时长（单位由LifeSpanUnit确定，枚举值有Y年/M月/D日三种）</p>
      */
     public Long getLifeSpan() {
         return this.LifeSpan;
     }
 
     /**
-     * Set 授权时长（单位由LifeSpanUnit确定，枚举值有Y年/M月/D日三种）
-     * @param LifeSpan 授权时长（单位由LifeSpanUnit确定，枚举值有Y年/M月/D日三种）
+     * Set <p>授权时长（单位由LifeSpanUnit确定，枚举值有Y年/M月/D日三种）</p>
+     * @param LifeSpan <p>授权时长（单位由LifeSpanUnit确定，枚举值有Y年/M月/D日三种）</p>
      */
     public void setLifeSpan(Long LifeSpan) {
         this.LifeSpan = LifeSpan;
     }
 
     /**
-     * Get 授权颁发时间。 
-     * @return IssueDate 授权颁发时间。
+     * Get <p>授权颁发时间。</p> 
+     * @return IssueDate <p>授权颁发时间。</p>
      */
     public String getIssueDate() {
         return this.IssueDate;
     }
 
     /**
-     * Set 授权颁发时间。
-     * @param IssueDate 授权颁发时间。
+     * Set <p>授权颁发时间。</p>
+     * @param IssueDate <p>授权颁发时间。</p>
      */
     public void setIssueDate(String IssueDate) {
         this.IssueDate = IssueDate;
     }
 
     /**
-     * Get 授权激活时间，如从未激活则返回 null。
+     * Get <p>授权激活时间，如从未激活则返回 null。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ActivationDate 授权激活时间，如从未激活则返回 null。
+     * @return ActivationDate <p>授权激活时间，如从未激活则返回 null。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getActivationDate() {
@@ -370,9 +370,9 @@ public class License extends AbstractModel {
     }
 
     /**
-     * Set 授权激活时间，如从未激活则返回 null。
+     * Set <p>授权激活时间，如从未激活则返回 null。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ActivationDate 授权激活时间，如从未激活则返回 null。
+     * @param ActivationDate <p>授权激活时间，如从未激活则返回 null。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActivationDate(String ActivationDate) {
@@ -380,9 +380,9 @@ public class License extends AbstractModel {
     }
 
     /**
-     * Get 授权过期时间
+     * Get <p>授权过期时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExpirationDate 授权过期时间
+     * @return ExpirationDate <p>授权过期时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpirationDate() {
@@ -390,9 +390,9 @@ public class License extends AbstractModel {
     }
 
     /**
-     * Set 授权过期时间
+     * Set <p>授权过期时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExpirationDate 授权过期时间
+     * @param ExpirationDate <p>授权过期时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpirationDate(String ExpirationDate) {
@@ -400,48 +400,48 @@ public class License extends AbstractModel {
     }
 
     /**
-     * Get 授权时长单位，枚举值有Y年/M月/D日三种 
-     * @return LifeSpanUnit 授权时长单位，枚举值有Y年/M月/D日三种
+     * Get <p>授权时长单位，枚举值有Y年/M月/D日三种</p> 
+     * @return LifeSpanUnit <p>授权时长单位，枚举值有Y年/M月/D日三种</p>
      */
     public String getLifeSpanUnit() {
         return this.LifeSpanUnit;
     }
 
     /**
-     * Set 授权时长单位，枚举值有Y年/M月/D日三种
-     * @param LifeSpanUnit 授权时长单位，枚举值有Y年/M月/D日三种
+     * Set <p>授权时长单位，枚举值有Y年/M月/D日三种</p>
+     * @param LifeSpanUnit <p>授权时长单位，枚举值有Y年/M月/D日三种</p>
      */
     public void setLifeSpanUnit(String LifeSpanUnit) {
         this.LifeSpanUnit = LifeSpanUnit;
     }
 
     /**
-     * Get 授权的类型：Standard正式版/Development开发版/Trial体验版 
-     * @return LicenseType 授权的类型：Standard正式版/Development开发版/Trial体验版
+     * Get <p>授权的类型：Standard正式版/Development开发版/Trial体验版</p> 
+     * @return LicenseType <p>授权的类型：Standard正式版/Development开发版/Trial体验版</p>
      */
     public String getLicenseType() {
         return this.LicenseType;
     }
 
     /**
-     * Set 授权的类型：Standard正式版/Development开发版/Trial体验版
-     * @param LicenseType 授权的类型：Standard正式版/Development开发版/Trial体验版
+     * Set <p>授权的类型：Standard正式版/Development开发版/Trial体验版</p>
+     * @param LicenseType <p>授权的类型：Standard正式版/Development开发版/Trial体验版</p>
      */
     public void setLicenseType(String LicenseType) {
         this.LicenseType = LicenseType;
     }
 
     /**
-     * Get 授权的层级：Master 主授权；Child 子授权/增强型授权 
-     * @return LicenseLevel 授权的层级：Master 主授权；Child 子授权/增强型授权
+     * Get <p>授权的层级：Master 主授权；Child 子授权/增强型授权</p> 
+     * @return LicenseLevel <p>授权的层级：Master 主授权；Child 子授权/增强型授权</p>
      */
     public String getLicenseLevel() {
         return this.LicenseLevel;
     }
 
     /**
-     * Set 授权的层级：Master 主授权；Child 子授权/增强型授权
-     * @param LicenseLevel 授权的层级：Master 主授权；Child 子授权/增强型授权
+     * Set <p>授权的层级：Master 主授权；Child 子授权/增强型授权</p>
+     * @param LicenseLevel <p>授权的层级：Master 主授权；Child 子授权/增强型授权</p>
      */
     public void setLicenseLevel(String LicenseLevel) {
         this.LicenseLevel = LicenseLevel;

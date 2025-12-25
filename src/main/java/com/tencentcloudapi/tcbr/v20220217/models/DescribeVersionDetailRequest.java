@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribeVersionDetailRequest extends AbstractModel {
 
     /**
-    * 环境Id
+    * <p>环境Id</p>
     */
     @SerializedName("EnvId")
     @Expose
     private String EnvId;
 
     /**
-    * 服务名
+    * <p>服务名</p>
     */
     @SerializedName("ServerName")
     @Expose
     private String ServerName;
 
     /**
-    * 版本名
+    * <p>版本名</p>
     */
     @SerializedName("VersionName")
     @Expose
     private String VersionName;
 
     /**
-    * channel
+    * <p>channel</p>
     */
     @SerializedName("Channel")
     @Expose
     private String Channel;
 
     /**
-     * Get 环境Id 
-     * @return EnvId 环境Id
+     * Get <p>环境Id</p> 
+     * @return EnvId <p>环境Id</p>
      */
     public String getEnvId() {
         return this.EnvId;
     }
 
     /**
-     * Set 环境Id
-     * @param EnvId 环境Id
+     * Set <p>环境Id</p>
+     * @param EnvId <p>环境Id</p>
      */
     public void setEnvId(String EnvId) {
         this.EnvId = EnvId;
     }
 
     /**
-     * Get 服务名 
-     * @return ServerName 服务名
+     * Get <p>服务名</p> 
+     * @return ServerName <p>服务名</p>
      */
     public String getServerName() {
         return this.ServerName;
     }
 
     /**
-     * Set 服务名
-     * @param ServerName 服务名
+     * Set <p>服务名</p>
+     * @param ServerName <p>服务名</p>
      */
     public void setServerName(String ServerName) {
         this.ServerName = ServerName;
     }
 
     /**
-     * Get 版本名 
-     * @return VersionName 版本名
+     * Get <p>版本名</p> 
+     * @return VersionName <p>版本名</p>
      */
     public String getVersionName() {
         return this.VersionName;
     }
 
     /**
-     * Set 版本名
-     * @param VersionName 版本名
+     * Set <p>版本名</p>
+     * @param VersionName <p>版本名</p>
      */
     public void setVersionName(String VersionName) {
         this.VersionName = VersionName;
     }
 
     /**
-     * Get channel 
-     * @return Channel channel
+     * Get <p>channel</p> 
+     * @return Channel <p>channel</p>
      */
     public String getChannel() {
         return this.Channel;
     }
 
     /**
-     * Set channel
-     * @param Channel channel
+     * Set <p>channel</p>
+     * @param Channel <p>channel</p>
      */
     public void setChannel(String Channel) {
         this.Channel = Channel;

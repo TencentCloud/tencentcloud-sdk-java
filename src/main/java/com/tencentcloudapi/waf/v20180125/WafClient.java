@@ -1846,6 +1846,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *批量修改防护对象
+     * @param req ModifyObjectsRequest
+     * @return ModifyObjectsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyObjectsResponse ModifyObjects(ModifyObjectsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyObjects", ModifyObjectsResponse.class);
+    }
+
+    /**
      *更新规则的开关
      * @param req ModifyOwaspRuleStatusRequest
      * @return ModifyOwaspRuleStatusResponse

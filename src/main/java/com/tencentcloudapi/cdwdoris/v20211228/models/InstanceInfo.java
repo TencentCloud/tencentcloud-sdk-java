@@ -453,6 +453,13 @@ Changing  变更中
     private String [] SlaveInstances;
 
     /**
+    * ccr服务部署节点ip
+    */
+    @SerializedName("SyncerIp")
+    @Expose
+    private String SyncerIp;
+
+    /**
      * Get 集群实例ID, "cdwdoris-xxxx" 字符串类型 
      * @return InstanceId 集群实例ID, "cdwdoris-xxxx" 字符串类型
      */
@@ -1452,6 +1459,22 @@ Changing  变更中
         this.SlaveInstances = SlaveInstances;
     }
 
+    /**
+     * Get ccr服务部署节点ip 
+     * @return SyncerIp ccr服务部署节点ip
+     */
+    public String getSyncerIp() {
+        return this.SyncerIp;
+    }
+
+    /**
+     * Set ccr服务部署节点ip
+     * @param SyncerIp ccr服务部署节点ip
+     */
+    public void setSyncerIp(String SyncerIp) {
+        this.SyncerIp = SyncerIp;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1652,6 +1675,9 @@ Changing  变更中
                 this.SlaveInstances[i] = new String(source.SlaveInstances[i]);
             }
         }
+        if (source.SyncerIp != null) {
+            this.SyncerIp = new String(source.SyncerIp);
+        }
     }
 
 
@@ -1719,6 +1745,7 @@ Changing  变更中
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamSimple(map, prefix + "MasterInstance", this.MasterInstance);
         this.setParamArraySimple(map, prefix + "SlaveInstances.", this.SlaveInstances);
+        this.setParamSimple(map, prefix + "SyncerIp", this.SyncerIp);
 
     }
 }
