@@ -110,7 +110,7 @@ public class SmartSubtitleTemplateItem extends AbstractModel {
     * 智能字幕文件格式
 - vtt: WebVTT 格式
 - srt: SRT格式
-- original：与源字幕文件一致（用于纯字幕翻译模版）
+- original：与源字幕文件一致（用于纯字幕翻译模板）
 - 不填或填空：不生成字幕文件
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -199,10 +199,19 @@ OFF: 关闭翻译
     * 字幕处理类型：
 - 0：ASR识别字幕
 - 1：纯字幕翻译
+- 2:  OCR识别字幕
     */
     @SerializedName("ProcessType")
     @Expose
     private Long ProcessType;
+
+    /**
+    * 字幕OCR提取框选区域配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SelectingSubtitleAreasConfig")
+    @Expose
+    private SelectingSubtitleAreasConfig SelectingSubtitleAreasConfig;
 
     /**
      * Get 智能字幕模板唯一标识 
@@ -456,13 +465,13 @@ OFF: 关闭翻译
      * Get 智能字幕文件格式
 - vtt: WebVTT 格式
 - srt: SRT格式
-- original：与源字幕文件一致（用于纯字幕翻译模版）
+- original：与源字幕文件一致（用于纯字幕翻译模板）
 - 不填或填空：不生成字幕文件
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SubtitleFormat 智能字幕文件格式
 - vtt: WebVTT 格式
 - srt: SRT格式
-- original：与源字幕文件一致（用于纯字幕翻译模版）
+- original：与源字幕文件一致（用于纯字幕翻译模板）
 - 不填或填空：不生成字幕文件
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -474,13 +483,13 @@ OFF: 关闭翻译
      * Set 智能字幕文件格式
 - vtt: WebVTT 格式
 - srt: SRT格式
-- original：与源字幕文件一致（用于纯字幕翻译模版）
+- original：与源字幕文件一致（用于纯字幕翻译模板）
 - 不填或填空：不生成字幕文件
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SubtitleFormat 智能字幕文件格式
 - vtt: WebVTT 格式
 - srt: SRT格式
-- original：与源字幕文件一致（用于纯字幕翻译模版）
+- original：与源字幕文件一致（用于纯字幕翻译模板）
 - 不填或填空：不生成字幕文件
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -727,10 +736,12 @@ OFF: 关闭翻译
     /**
      * Get 字幕处理类型：
 - 0：ASR识别字幕
-- 1：纯字幕翻译 
+- 1：纯字幕翻译
+- 2:  OCR识别字幕 
      * @return ProcessType 字幕处理类型：
 - 0：ASR识别字幕
 - 1：纯字幕翻译
+- 2:  OCR识别字幕
      */
     public Long getProcessType() {
         return this.ProcessType;
@@ -740,12 +751,34 @@ OFF: 关闭翻译
      * Set 字幕处理类型：
 - 0：ASR识别字幕
 - 1：纯字幕翻译
+- 2:  OCR识别字幕
      * @param ProcessType 字幕处理类型：
 - 0：ASR识别字幕
 - 1：纯字幕翻译
+- 2:  OCR识别字幕
      */
     public void setProcessType(Long ProcessType) {
         this.ProcessType = ProcessType;
+    }
+
+    /**
+     * Get 字幕OCR提取框选区域配置信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SelectingSubtitleAreasConfig 字幕OCR提取框选区域配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SelectingSubtitleAreasConfig getSelectingSubtitleAreasConfig() {
+        return this.SelectingSubtitleAreasConfig;
+    }
+
+    /**
+     * Set 字幕OCR提取框选区域配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SelectingSubtitleAreasConfig 字幕OCR提取框选区域配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSelectingSubtitleAreasConfig(SelectingSubtitleAreasConfig SelectingSubtitleAreasConfig) {
+        this.SelectingSubtitleAreasConfig = SelectingSubtitleAreasConfig;
     }
 
     public SmartSubtitleTemplateItem() {
@@ -801,6 +834,9 @@ OFF: 关闭翻译
         if (source.ProcessType != null) {
             this.ProcessType = new Long(source.ProcessType);
         }
+        if (source.SelectingSubtitleAreasConfig != null) {
+            this.SelectingSubtitleAreasConfig = new SelectingSubtitleAreasConfig(source.SelectingSubtitleAreasConfig);
+        }
     }
 
 
@@ -823,6 +859,7 @@ OFF: 关闭翻译
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "AliasName", this.AliasName);
         this.setParamSimple(map, prefix + "ProcessType", this.ProcessType);
+        this.setParamObj(map, prefix + "SelectingSubtitleAreasConfig.", this.SelectingSubtitleAreasConfig);
 
     }
 }

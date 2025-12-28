@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdn.v20180606.models;
+package com.tencentcloudapi.clb.v20180317.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDiagnoseUrlResponse extends AbstractModel {
+public class RenewLoadBalancersResponse extends AbstractModel {
 
     /**
-    * 系统生成的诊断链接，一个诊断链接最多可访问10次，有效期为24h。
+    * 订单号。
     */
-    @SerializedName("DiagnoseLink")
+    @SerializedName("DealName")
     @Expose
-    private String DiagnoseLink;
+    private String DealName;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +38,19 @@ public class CreateDiagnoseUrlResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 系统生成的诊断链接，一个诊断链接最多可访问10次，有效期为24h。 
-     * @return DiagnoseLink 系统生成的诊断链接，一个诊断链接最多可访问10次，有效期为24h。
+     * Get 订单号。 
+     * @return DealName 订单号。
      */
-    public String getDiagnoseLink() {
-        return this.DiagnoseLink;
+    public String getDealName() {
+        return this.DealName;
     }
 
     /**
-     * Set 系统生成的诊断链接，一个诊断链接最多可访问10次，有效期为24h。
-     * @param DiagnoseLink 系统生成的诊断链接，一个诊断链接最多可访问10次，有效期为24h。
+     * Set 订单号。
+     * @param DealName 订单号。
      */
-    public void setDiagnoseLink(String DiagnoseLink) {
-        this.DiagnoseLink = DiagnoseLink;
+    public void setDealName(String DealName) {
+        this.DealName = DealName;
     }
 
     /**
@@ -69,16 +69,16 @@ public class CreateDiagnoseUrlResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreateDiagnoseUrlResponse() {
+    public RenewLoadBalancersResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateDiagnoseUrlResponse(CreateDiagnoseUrlResponse source) {
-        if (source.DiagnoseLink != null) {
-            this.DiagnoseLink = new String(source.DiagnoseLink);
+    public RenewLoadBalancersResponse(RenewLoadBalancersResponse source) {
+        if (source.DealName != null) {
+            this.DealName = new String(source.DealName);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +90,7 @@ public class CreateDiagnoseUrlResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DiagnoseLink", this.DiagnoseLink);
+        this.setParamSimple(map, prefix + "DealName", this.DealName);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

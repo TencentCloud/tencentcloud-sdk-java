@@ -248,19 +248,6 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
-     *业务废弃
-
-全部删除规则
-     * @param req DeleteAllAccessControlRuleRequest
-     * @return DeleteAllAccessControlRuleResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteAllAccessControlRuleResponse DeleteAllAccessControlRule(DeleteAllAccessControlRuleRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteAllAccessControlRule", DeleteAllAccessControlRuleResponse.class);
-    }
-
-    /**
      *批量删除入侵防御封禁列表、放通列表规则
      * @param req DeleteBlockIgnoreRuleListRequest
      * @return DeleteBlockIgnoreRuleListResponse

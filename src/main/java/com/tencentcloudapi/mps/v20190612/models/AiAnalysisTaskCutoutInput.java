@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdn.v20180606.models;
+package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDiagnoseReportRequest extends AbstractModel {
+public class AiAnalysisTaskCutoutInput extends AbstractModel {
 
     /**
-    * 报告ID
+    * 视频智能抠图模板 ID。
     */
-    @SerializedName("ReportId")
+    @SerializedName("Definition")
     @Expose
-    private String ReportId;
+    private Long Definition;
 
     /**
-     * Get 报告ID 
-     * @return ReportId 报告ID
+     * Get 视频智能抠图模板 ID。 
+     * @return Definition 视频智能抠图模板 ID。
      */
-    public String getReportId() {
-        return this.ReportId;
+    public Long getDefinition() {
+        return this.Definition;
     }
 
     /**
-     * Set 报告ID
-     * @param ReportId 报告ID
+     * Set 视频智能抠图模板 ID。
+     * @param Definition 视频智能抠图模板 ID。
      */
-    public void setReportId(String ReportId) {
-        this.ReportId = ReportId;
+    public void setDefinition(Long Definition) {
+        this.Definition = Definition;
     }
 
-    public DescribeDiagnoseReportRequest() {
+    public AiAnalysisTaskCutoutInput() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeDiagnoseReportRequest(DescribeDiagnoseReportRequest source) {
-        if (source.ReportId != null) {
-            this.ReportId = new String(source.ReportId);
+    public AiAnalysisTaskCutoutInput(AiAnalysisTaskCutoutInput source) {
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
         }
     }
 
@@ -64,7 +64,7 @@ public class DescribeDiagnoseReportRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ReportId", this.ReportId);
+        this.setParamSimple(map, prefix + "Definition", this.Definition);
 
     }
 }

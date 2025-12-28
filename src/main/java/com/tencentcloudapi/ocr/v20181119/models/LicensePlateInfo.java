@@ -52,6 +52,13 @@ public class LicensePlateInfo extends AbstractModel {
     private String Color;
 
     /**
+    * 车牌类别， 如： 实体车牌、非实体车牌
+    */
+    @SerializedName("LicensePlateCategory")
+    @Expose
+    private String LicensePlateCategory;
+
+    /**
      * Get 识别出的车牌号码。 
      * @return Number 识别出的车牌号码。
      */
@@ -115,6 +122,22 @@ public class LicensePlateInfo extends AbstractModel {
         this.Color = Color;
     }
 
+    /**
+     * Get 车牌类别， 如： 实体车牌、非实体车牌 
+     * @return LicensePlateCategory 车牌类别， 如： 实体车牌、非实体车牌
+     */
+    public String getLicensePlateCategory() {
+        return this.LicensePlateCategory;
+    }
+
+    /**
+     * Set 车牌类别， 如： 实体车牌、非实体车牌
+     * @param LicensePlateCategory 车牌类别， 如： 实体车牌、非实体车牌
+     */
+    public void setLicensePlateCategory(String LicensePlateCategory) {
+        this.LicensePlateCategory = LicensePlateCategory;
+    }
+
     public LicensePlateInfo() {
     }
 
@@ -135,6 +158,9 @@ public class LicensePlateInfo extends AbstractModel {
         if (source.Color != null) {
             this.Color = new String(source.Color);
         }
+        if (source.LicensePlateCategory != null) {
+            this.LicensePlateCategory = new String(source.LicensePlateCategory);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class LicensePlateInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);
         this.setParamObj(map, prefix + "Rect.", this.Rect);
         this.setParamSimple(map, prefix + "Color", this.Color);
+        this.setParamSimple(map, prefix + "LicensePlateCategory", this.LicensePlateCategory);
 
     }
 }

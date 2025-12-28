@@ -184,8 +184,10 @@ public class Component extends AbstractModel {
 <ul><li> <b>Font</b>：目前只支持黑体、宋体、仿宋</li>
 <li> <b>FontSize</b>： 范围6 :72</li>
 <li> <b>FontAlign</b>： Left/Right/Center，左对齐/居中/右对齐</li>
-<li> <b>FontColor</b>：字符串类型，格式为RGB颜色数字</li></ul>
-<b>参数样例</b>：`{"FontColor":"255,0,0","FontSize":12}`
+<li> <b>FontColor</b>：字符串类型，格式为RGB颜色数字</li>
+<li> <b>Bold</b>是否加粗：true/false</li>
+</ul>
+<b>参数样例</b>：`{"FontColor":"255,0,0","FontSize":12,"Bold":false}`
 
 <font color="red">ComponentType为DATE时</font>，支持以下参数：
 <ul><li> <b>Font</b>：目前只支持黑体、宋体、仿宋</li>
@@ -929,8 +931,10 @@ ChildrenComponent结构体定义:
 <ul><li> <b>Font</b>：目前只支持黑体、宋体、仿宋</li>
 <li> <b>FontSize</b>： 范围6 :72</li>
 <li> <b>FontAlign</b>： Left/Right/Center，左对齐/居中/右对齐</li>
-<li> <b>FontColor</b>：字符串类型，格式为RGB颜色数字</li></ul>
-<b>参数样例</b>：`{"FontColor":"255,0,0","FontSize":12}`
+<li> <b>FontColor</b>：字符串类型，格式为RGB颜色数字</li>
+<li> <b>Bold</b>是否加粗：true/false</li>
+</ul>
+<b>参数样例</b>：`{"FontColor":"255,0,0","FontSize":12,"Bold":false}`
 
 <font color="red">ComponentType为DATE时</font>，支持以下参数：
 <ul><li> <b>Font</b>：目前只支持黑体、宋体、仿宋</li>
@@ -1065,8 +1069,10 @@ ChildrenComponent结构体定义:
 <ul><li> <b>Font</b>：目前只支持黑体、宋体、仿宋</li>
 <li> <b>FontSize</b>： 范围6 :72</li>
 <li> <b>FontAlign</b>： Left/Right/Center，左对齐/居中/右对齐</li>
-<li> <b>FontColor</b>：字符串类型，格式为RGB颜色数字</li></ul>
-<b>参数样例</b>：`{"FontColor":"255,0,0","FontSize":12}`
+<li> <b>FontColor</b>：字符串类型，格式为RGB颜色数字</li>
+<li> <b>Bold</b>是否加粗：true/false</li>
+</ul>
+<b>参数样例</b>：`{"FontColor":"255,0,0","FontSize":12,"Bold":false}`
 
 <font color="red">ComponentType为DATE时</font>，支持以下参数：
 <ul><li> <b>Font</b>：目前只支持黑体、宋体、仿宋</li>
@@ -1207,8 +1213,10 @@ ChildrenComponent结构体定义:
 <ul><li> <b>Font</b>：目前只支持黑体、宋体、仿宋</li>
 <li> <b>FontSize</b>： 范围6 :72</li>
 <li> <b>FontAlign</b>： Left/Right/Center，左对齐/居中/右对齐</li>
-<li> <b>FontColor</b>：字符串类型，格式为RGB颜色数字</li></ul>
-<b>参数样例</b>：`{"FontColor":"255,0,0","FontSize":12}`
+<li> <b>FontColor</b>：字符串类型，格式为RGB颜色数字</li>
+<li> <b>Bold</b>是否加粗：true/false</li>
+</ul>
+<b>参数样例</b>：`{"FontColor":"255,0,0","FontSize":12,"Bold":false}`
 
 <font color="red">ComponentType为DATE时</font>，支持以下参数：
 <ul><li> <b>Font</b>：目前只支持黑体、宋体、仿宋</li>
@@ -1343,8 +1351,10 @@ ChildrenComponent结构体定义:
 <ul><li> <b>Font</b>：目前只支持黑体、宋体、仿宋</li>
 <li> <b>FontSize</b>： 范围6 :72</li>
 <li> <b>FontAlign</b>： Left/Right/Center，左对齐/居中/右对齐</li>
-<li> <b>FontColor</b>：字符串类型，格式为RGB颜色数字</li></ul>
-<b>参数样例</b>：`{"FontColor":"255,0,0","FontSize":12}`
+<li> <b>FontColor</b>：字符串类型，格式为RGB颜色数字</li>
+<li> <b>Bold</b>是否加粗：true/false</li>
+</ul>
+<b>参数样例</b>：`{"FontColor":"255,0,0","FontSize":12,"Bold":false}`
 
 <font color="red">ComponentType为DATE时</font>，支持以下参数：
 <ul><li> <b>Font</b>：目前只支持黑体、宋体、仿宋</li>

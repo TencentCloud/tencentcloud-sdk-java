@@ -38,7 +38,7 @@ public class DisableControlPlaneLogsRequest extends AbstractModel {
     private String ClusterType;
 
     /**
-    * 组件名称列表，目前支持的组件有：kube-apiserver、kube-controller-manager、kube-scheduler、cluster-autoscaler、kapenter
+    * 组件名称列表，目前支持的组件有：cluster-autoscaler、kapenter
     */
     @SerializedName("ComponentNames")
     @Expose
@@ -84,16 +84,16 @@ public class DisableControlPlaneLogsRequest extends AbstractModel {
     }
 
     /**
-     * Get 组件名称列表，目前支持的组件有：kube-apiserver、kube-controller-manager、kube-scheduler、cluster-autoscaler、kapenter 
-     * @return ComponentNames 组件名称列表，目前支持的组件有：kube-apiserver、kube-controller-manager、kube-scheduler、cluster-autoscaler、kapenter
+     * Get 组件名称列表，目前支持的组件有：cluster-autoscaler、kapenter 
+     * @return ComponentNames 组件名称列表，目前支持的组件有：cluster-autoscaler、kapenter
      */
     public String [] getComponentNames() {
         return this.ComponentNames;
     }
 
     /**
-     * Set 组件名称列表，目前支持的组件有：kube-apiserver、kube-controller-manager、kube-scheduler、cluster-autoscaler、kapenter
-     * @param ComponentNames 组件名称列表，目前支持的组件有：kube-apiserver、kube-controller-manager、kube-scheduler、cluster-autoscaler、kapenter
+     * Set 组件名称列表，目前支持的组件有：cluster-autoscaler、kapenter
+     * @param ComponentNames 组件名称列表，目前支持的组件有：cluster-autoscaler、kapenter
      */
     public void setComponentNames(String [] ComponentNames) {
         this.ComponentNames = ComponentNames;

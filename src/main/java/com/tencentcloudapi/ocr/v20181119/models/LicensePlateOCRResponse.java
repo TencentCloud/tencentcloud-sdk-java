@@ -45,7 +45,7 @@ public class LicensePlateOCRResponse extends AbstractModel {
     private Rect Rect;
 
     /**
-    * 识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”、“喷漆”、“其它”。
+    * 识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿”、“黄”、“黄绿”、“临牌”、“喷漆”、“其它”。
     */
     @SerializedName("Color")
     @Expose
@@ -57,6 +57,13 @@ public class LicensePlateOCRResponse extends AbstractModel {
     @SerializedName("LicensePlateInfos")
     @Expose
     private LicensePlateInfo [] LicensePlateInfos;
+
+    /**
+    * 车牌类别， 如： 实体车牌、非实体车牌 示例值：实体车牌
+    */
+    @SerializedName("LicensePlateCategory")
+    @Expose
+    private String LicensePlateCategory;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -114,16 +121,16 @@ public class LicensePlateOCRResponse extends AbstractModel {
     }
 
     /**
-     * Get 识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”、“喷漆”、“其它”。 
-     * @return Color 识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”、“喷漆”、“其它”。
+     * Get 识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿”、“黄”、“黄绿”、“临牌”、“喷漆”、“其它”。 
+     * @return Color 识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿”、“黄”、“黄绿”、“临牌”、“喷漆”、“其它”。
      */
     public String getColor() {
         return this.Color;
     }
 
     /**
-     * Set 识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”、“喷漆”、“其它”。
-     * @param Color 识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿“、“黄”、“黄绿”、“临牌”、“喷漆”、“其它”。
+     * Set 识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿”、“黄”、“黄绿”、“临牌”、“喷漆”、“其它”。
+     * @param Color 识别出的车牌颜色，目前支持颜色包括 “白”、“黑”、“蓝”、“绿”、“黄”、“黄绿”、“临牌”、“喷漆”、“其它”。
      */
     public void setColor(String Color) {
         this.Color = Color;
@@ -143,6 +150,22 @@ public class LicensePlateOCRResponse extends AbstractModel {
      */
     public void setLicensePlateInfos(LicensePlateInfo [] LicensePlateInfos) {
         this.LicensePlateInfos = LicensePlateInfos;
+    }
+
+    /**
+     * Get 车牌类别， 如： 实体车牌、非实体车牌 示例值：实体车牌 
+     * @return LicensePlateCategory 车牌类别， 如： 实体车牌、非实体车牌 示例值：实体车牌
+     */
+    public String getLicensePlateCategory() {
+        return this.LicensePlateCategory;
+    }
+
+    /**
+     * Set 车牌类别， 如： 实体车牌、非实体车牌 示例值：实体车牌
+     * @param LicensePlateCategory 车牌类别， 如： 实体车牌、非实体车牌 示例值：实体车牌
+     */
+    public void setLicensePlateCategory(String LicensePlateCategory) {
+        this.LicensePlateCategory = LicensePlateCategory;
     }
 
     /**
@@ -187,6 +210,9 @@ public class LicensePlateOCRResponse extends AbstractModel {
                 this.LicensePlateInfos[i] = new LicensePlateInfo(source.LicensePlateInfos[i]);
             }
         }
+        if (source.LicensePlateCategory != null) {
+            this.LicensePlateCategory = new String(source.LicensePlateCategory);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -202,6 +228,7 @@ public class LicensePlateOCRResponse extends AbstractModel {
         this.setParamObj(map, prefix + "Rect.", this.Rect);
         this.setParamSimple(map, prefix + "Color", this.Color);
         this.setParamArrayObj(map, prefix + "LicensePlateInfos.", this.LicensePlateInfos);
+        this.setParamSimple(map, prefix + "LicensePlateCategory", this.LicensePlateCategory);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

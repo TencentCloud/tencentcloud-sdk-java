@@ -166,6 +166,13 @@ public class NatGateway extends AbstractModel {
     private Long NatProductVersion;
 
     /**
+    * true代表仅允许匹配SNAT规则的内网IP的流量进行转发，false代表所有内网IP发起的流量都进行转发。默认为false。
+    */
+    @SerializedName("StrictSnatMode")
+    @Expose
+    private Boolean StrictSnatMode;
+
+    /**
     * 是否启用根据目的网段选择SNAT使用的EIP功能	
     */
     @SerializedName("SmartScheduleMode")
@@ -199,6 +206,27 @@ public class NatGateway extends AbstractModel {
     @SerializedName("ExclusiveType")
     @Expose
     private String ExclusiveType;
+
+    /**
+    * 标准型NAT网关自动扩容
+    */
+    @SerializedName("AutoScaling")
+    @Expose
+    private Boolean AutoScaling;
+
+    /**
+    * 是否代答公网发给NAT网关上弹性公网IP的ICMP echo请求报文，当前适用于标准型NAT网关
+    */
+    @SerializedName("ICMPProxy")
+    @Expose
+    private Boolean ICMPProxy;
+
+    /**
+    * true代表同一个私网IP访问同一个公网目的IP时，固定使用同一个NAT网关上的弹性公网IP；false代表这种情况下使用的弹性公网IP不固定。默认为true。
+    */
+    @SerializedName("PublicAddressAffinity")
+    @Expose
+    private Boolean PublicAddressAffinity;
 
     /**
      * Get NAT网关的ID。 
@@ -529,6 +557,22 @@ public class NatGateway extends AbstractModel {
     }
 
     /**
+     * Get true代表仅允许匹配SNAT规则的内网IP的流量进行转发，false代表所有内网IP发起的流量都进行转发。默认为false。 
+     * @return StrictSnatMode true代表仅允许匹配SNAT规则的内网IP的流量进行转发，false代表所有内网IP发起的流量都进行转发。默认为false。
+     */
+    public Boolean getStrictSnatMode() {
+        return this.StrictSnatMode;
+    }
+
+    /**
+     * Set true代表仅允许匹配SNAT规则的内网IP的流量进行转发，false代表所有内网IP发起的流量都进行转发。默认为false。
+     * @param StrictSnatMode true代表仅允许匹配SNAT规则的内网IP的流量进行转发，false代表所有内网IP发起的流量都进行转发。默认为false。
+     */
+    public void setStrictSnatMode(Boolean StrictSnatMode) {
+        this.StrictSnatMode = StrictSnatMode;
+    }
+
+    /**
      * Get 是否启用根据目的网段选择SNAT使用的EIP功能	 
      * @return SmartScheduleMode 是否启用根据目的网段选择SNAT使用的EIP功能	
      */
@@ -606,6 +650,54 @@ public class NatGateway extends AbstractModel {
      */
     public void setExclusiveType(String ExclusiveType) {
         this.ExclusiveType = ExclusiveType;
+    }
+
+    /**
+     * Get 标准型NAT网关自动扩容 
+     * @return AutoScaling 标准型NAT网关自动扩容
+     */
+    public Boolean getAutoScaling() {
+        return this.AutoScaling;
+    }
+
+    /**
+     * Set 标准型NAT网关自动扩容
+     * @param AutoScaling 标准型NAT网关自动扩容
+     */
+    public void setAutoScaling(Boolean AutoScaling) {
+        this.AutoScaling = AutoScaling;
+    }
+
+    /**
+     * Get 是否代答公网发给NAT网关上弹性公网IP的ICMP echo请求报文，当前适用于标准型NAT网关 
+     * @return ICMPProxy 是否代答公网发给NAT网关上弹性公网IP的ICMP echo请求报文，当前适用于标准型NAT网关
+     */
+    public Boolean getICMPProxy() {
+        return this.ICMPProxy;
+    }
+
+    /**
+     * Set 是否代答公网发给NAT网关上弹性公网IP的ICMP echo请求报文，当前适用于标准型NAT网关
+     * @param ICMPProxy 是否代答公网发给NAT网关上弹性公网IP的ICMP echo请求报文，当前适用于标准型NAT网关
+     */
+    public void setICMPProxy(Boolean ICMPProxy) {
+        this.ICMPProxy = ICMPProxy;
+    }
+
+    /**
+     * Get true代表同一个私网IP访问同一个公网目的IP时，固定使用同一个NAT网关上的弹性公网IP；false代表这种情况下使用的弹性公网IP不固定。默认为true。 
+     * @return PublicAddressAffinity true代表同一个私网IP访问同一个公网目的IP时，固定使用同一个NAT网关上的弹性公网IP；false代表这种情况下使用的弹性公网IP不固定。默认为true。
+     */
+    public Boolean getPublicAddressAffinity() {
+        return this.PublicAddressAffinity;
+    }
+
+    /**
+     * Set true代表同一个私网IP访问同一个公网目的IP时，固定使用同一个NAT网关上的弹性公网IP；false代表这种情况下使用的弹性公网IP不固定。默认为true。
+     * @param PublicAddressAffinity true代表同一个私网IP访问同一个公网目的IP时，固定使用同一个NAT网关上的弹性公网IP；false代表这种情况下使用的弹性公网IP不固定。默认为true。
+     */
+    public void setPublicAddressAffinity(Boolean PublicAddressAffinity) {
+        this.PublicAddressAffinity = PublicAddressAffinity;
     }
 
     public NatGateway() {
@@ -694,6 +786,9 @@ public class NatGateway extends AbstractModel {
         if (source.NatProductVersion != null) {
             this.NatProductVersion = new Long(source.NatProductVersion);
         }
+        if (source.StrictSnatMode != null) {
+            this.StrictSnatMode = new Boolean(source.StrictSnatMode);
+        }
         if (source.SmartScheduleMode != null) {
             this.SmartScheduleMode = new Boolean(source.SmartScheduleMode);
         }
@@ -708,6 +803,15 @@ public class NatGateway extends AbstractModel {
         }
         if (source.ExclusiveType != null) {
             this.ExclusiveType = new String(source.ExclusiveType);
+        }
+        if (source.AutoScaling != null) {
+            this.AutoScaling = new Boolean(source.AutoScaling);
+        }
+        if (source.ICMPProxy != null) {
+            this.ICMPProxy = new Boolean(source.ICMPProxy);
+        }
+        if (source.PublicAddressAffinity != null) {
+            this.PublicAddressAffinity = new Boolean(source.PublicAddressAffinity);
         }
     }
 
@@ -736,11 +840,15 @@ public class NatGateway extends AbstractModel {
         this.setParamSimple(map, prefix + "ExclusiveGatewayBandwidth", this.ExclusiveGatewayBandwidth);
         this.setParamSimple(map, prefix + "RestrictState", this.RestrictState);
         this.setParamSimple(map, prefix + "NatProductVersion", this.NatProductVersion);
+        this.setParamSimple(map, prefix + "StrictSnatMode", this.StrictSnatMode);
         this.setParamSimple(map, prefix + "SmartScheduleMode", this.SmartScheduleMode);
         this.setParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
         this.setParamSimple(map, prefix + "DeletionProtectionEnabled", this.DeletionProtectionEnabled);
         this.setParamObj(map, prefix + "ConnectionStateTimeouts.", this.ConnectionStateTimeouts);
         this.setParamSimple(map, prefix + "ExclusiveType", this.ExclusiveType);
+        this.setParamSimple(map, prefix + "AutoScaling", this.AutoScaling);
+        this.setParamSimple(map, prefix + "ICMPProxy", this.ICMPProxy);
+        this.setParamSimple(map, prefix + "PublicAddressAffinity", this.PublicAddressAffinity);
 
     }
 }

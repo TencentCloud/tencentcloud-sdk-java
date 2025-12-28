@@ -45,9 +45,15 @@ public class CreateAigcVideoTaskRequest extends AbstractModel {
     private String ModelVersion;
 
     /**
-    * AIGC 生视频任务的输入图片的文件信息。说明
-1. 当 ModelName 是 GV 时，最大长度为 3；其他情况下最大长度为1。
-2. 当 ModelName 是 GV 时，并且长度大于1时，则不能再指定 LastFrameFileId 参数。
+    * 最多包含三张素材资源图片的列表，用于描述模型在生成视频时要使用的资源图片。
+
+支持多图输入的模型：
+1. GV，使用多图输入时，不可使用LastFrameFileId和LastFrameUrl。
+2. Vidu，支持多图参考生视频。q2模型1-7张图片，可通过FileInfos里面的ObjectId作为主体id来传入。
+
+注意：
+1. 图片大小不超过10M。
+2. 支持的图片格式：jpeg、png。
     */
     @SerializedName("FileInfos")
     @Expose
@@ -74,14 +80,15 @@ public class CreateAigcVideoTaskRequest extends AbstractModel {
     private String LastFrameUrl;
 
     /**
-    * 生成图片的提示词。当 FileInfos 为空时，此参数必填。
+    * 生成视频的提示词。当 FileInfos 为空时，此参数必填。
+示例值：move the picture
     */
     @SerializedName("Prompt")
     @Expose
     private String Prompt;
 
     /**
-    * 要阻止模型生成图片的提示词。
+    * 要阻止模型生成视频的提示词。
     */
     @SerializedName("NegativePrompt")
     @Expose
@@ -128,6 +135,13 @@ public class CreateAigcVideoTaskRequest extends AbstractModel {
     @SerializedName("ExtInfo")
     @Expose
     private String ExtInfo;
+
+    /**
+    * 输入图片的区域信息。当图片url是国外地址时候，可选Oversea。默认Mainland。
+    */
+    @SerializedName("InputRegion")
+    @Expose
+    private String InputRegion;
 
     /**
      * Get <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b> 
@@ -178,24 +192,48 @@ public class CreateAigcVideoTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get AIGC 生视频任务的输入图片的文件信息。说明
-1. 当 ModelName 是 GV 时，最大长度为 3；其他情况下最大长度为1。
-2. 当 ModelName 是 GV 时，并且长度大于1时，则不能再指定 LastFrameFileId 参数。 
-     * @return FileInfos AIGC 生视频任务的输入图片的文件信息。说明
-1. 当 ModelName 是 GV 时，最大长度为 3；其他情况下最大长度为1。
-2. 当 ModelName 是 GV 时，并且长度大于1时，则不能再指定 LastFrameFileId 参数。
+     * Get 最多包含三张素材资源图片的列表，用于描述模型在生成视频时要使用的资源图片。
+
+支持多图输入的模型：
+1. GV，使用多图输入时，不可使用LastFrameFileId和LastFrameUrl。
+2. Vidu，支持多图参考生视频。q2模型1-7张图片，可通过FileInfos里面的ObjectId作为主体id来传入。
+
+注意：
+1. 图片大小不超过10M。
+2. 支持的图片格式：jpeg、png。 
+     * @return FileInfos 最多包含三张素材资源图片的列表，用于描述模型在生成视频时要使用的资源图片。
+
+支持多图输入的模型：
+1. GV，使用多图输入时，不可使用LastFrameFileId和LastFrameUrl。
+2. Vidu，支持多图参考生视频。q2模型1-7张图片，可通过FileInfos里面的ObjectId作为主体id来传入。
+
+注意：
+1. 图片大小不超过10M。
+2. 支持的图片格式：jpeg、png。
      */
     public AigcVideoTaskInputFileInfo [] getFileInfos() {
         return this.FileInfos;
     }
 
     /**
-     * Set AIGC 生视频任务的输入图片的文件信息。说明
-1. 当 ModelName 是 GV 时，最大长度为 3；其他情况下最大长度为1。
-2. 当 ModelName 是 GV 时，并且长度大于1时，则不能再指定 LastFrameFileId 参数。
-     * @param FileInfos AIGC 生视频任务的输入图片的文件信息。说明
-1. 当 ModelName 是 GV 时，最大长度为 3；其他情况下最大长度为1。
-2. 当 ModelName 是 GV 时，并且长度大于1时，则不能再指定 LastFrameFileId 参数。
+     * Set 最多包含三张素材资源图片的列表，用于描述模型在生成视频时要使用的资源图片。
+
+支持多图输入的模型：
+1. GV，使用多图输入时，不可使用LastFrameFileId和LastFrameUrl。
+2. Vidu，支持多图参考生视频。q2模型1-7张图片，可通过FileInfos里面的ObjectId作为主体id来传入。
+
+注意：
+1. 图片大小不超过10M。
+2. 支持的图片格式：jpeg、png。
+     * @param FileInfos 最多包含三张素材资源图片的列表，用于描述模型在生成视频时要使用的资源图片。
+
+支持多图输入的模型：
+1. GV，使用多图输入时，不可使用LastFrameFileId和LastFrameUrl。
+2. Vidu，支持多图参考生视频。q2模型1-7张图片，可通过FileInfos里面的ObjectId作为主体id来传入。
+
+注意：
+1. 图片大小不超过10M。
+2. 支持的图片格式：jpeg、png。
      */
     public void setFileInfos(AigcVideoTaskInputFileInfo [] FileInfos) {
         this.FileInfos = FileInfos;
@@ -258,32 +296,36 @@ public class CreateAigcVideoTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 生成图片的提示词。当 FileInfos 为空时，此参数必填。 
-     * @return Prompt 生成图片的提示词。当 FileInfos 为空时，此参数必填。
+     * Get 生成视频的提示词。当 FileInfos 为空时，此参数必填。
+示例值：move the picture 
+     * @return Prompt 生成视频的提示词。当 FileInfos 为空时，此参数必填。
+示例值：move the picture
      */
     public String getPrompt() {
         return this.Prompt;
     }
 
     /**
-     * Set 生成图片的提示词。当 FileInfos 为空时，此参数必填。
-     * @param Prompt 生成图片的提示词。当 FileInfos 为空时，此参数必填。
+     * Set 生成视频的提示词。当 FileInfos 为空时，此参数必填。
+示例值：move the picture
+     * @param Prompt 生成视频的提示词。当 FileInfos 为空时，此参数必填。
+示例值：move the picture
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
     }
 
     /**
-     * Get 要阻止模型生成图片的提示词。 
-     * @return NegativePrompt 要阻止模型生成图片的提示词。
+     * Get 要阻止模型生成视频的提示词。 
+     * @return NegativePrompt 要阻止模型生成视频的提示词。
      */
     public String getNegativePrompt() {
         return this.NegativePrompt;
     }
 
     /**
-     * Set 要阻止模型生成图片的提示词。
-     * @param NegativePrompt 要阻止模型生成图片的提示词。
+     * Set 要阻止模型生成视频的提示词。
+     * @param NegativePrompt 要阻止模型生成视频的提示词。
      */
     public void setNegativePrompt(String NegativePrompt) {
         this.NegativePrompt = NegativePrompt;
@@ -385,6 +427,22 @@ public class CreateAigcVideoTaskRequest extends AbstractModel {
         this.ExtInfo = ExtInfo;
     }
 
+    /**
+     * Get 输入图片的区域信息。当图片url是国外地址时候，可选Oversea。默认Mainland。 
+     * @return InputRegion 输入图片的区域信息。当图片url是国外地址时候，可选Oversea。默认Mainland。
+     */
+    public String getInputRegion() {
+        return this.InputRegion;
+    }
+
+    /**
+     * Set 输入图片的区域信息。当图片url是国外地址时候，可选Oversea。默认Mainland。
+     * @param InputRegion 输入图片的区域信息。当图片url是国外地址时候，可选Oversea。默认Mainland。
+     */
+    public void setInputRegion(String InputRegion) {
+        this.InputRegion = InputRegion;
+    }
+
     public CreateAigcVideoTaskRequest() {
     }
 
@@ -438,6 +496,9 @@ public class CreateAigcVideoTaskRequest extends AbstractModel {
         if (source.ExtInfo != null) {
             this.ExtInfo = new String(source.ExtInfo);
         }
+        if (source.InputRegion != null) {
+            this.InputRegion = new String(source.InputRegion);
+        }
     }
 
 
@@ -459,6 +520,7 @@ public class CreateAigcVideoTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
         this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
+        this.setParamSimple(map, prefix + "InputRegion", this.InputRegion);
 
     }
 }

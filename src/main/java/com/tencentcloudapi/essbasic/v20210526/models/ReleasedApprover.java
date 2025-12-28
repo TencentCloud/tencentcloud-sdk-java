@@ -41,8 +41,7 @@ public class ReleasedApprover extends AbstractModel {
     private String ApproverType;
 
     /**
-    * 签署人在原合同中的RecipientId，可以通过<a href="https://qian.tencent.com/developers/partnerApis/flows/DescribeFlowDetailInfo" target="_blank">DescribeFlowDetailInfo</a>接口查看原流程中的签署人信息，可参考返回结构体<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#flowapproverdetail" target="_blank">FlowApproverDetail</a>中的RecipientId。
-**注意**：当指定了此参数后，ApproverNumber即失效，会以本参数作为原合同参与人的选取。与ApproverNumber二选一。
+    * <font color="red">【已废弃】</font>请用ApproverNumber来指定替换的参与方的位置
     */
     @SerializedName("ReleasedApproverRecipientId")
     @Expose
@@ -180,20 +179,16 @@ public class ReleasedApprover extends AbstractModel {
     }
 
     /**
-     * Get 签署人在原合同中的RecipientId，可以通过<a href="https://qian.tencent.com/developers/partnerApis/flows/DescribeFlowDetailInfo" target="_blank">DescribeFlowDetailInfo</a>接口查看原流程中的签署人信息，可参考返回结构体<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#flowapproverdetail" target="_blank">FlowApproverDetail</a>中的RecipientId。
-**注意**：当指定了此参数后，ApproverNumber即失效，会以本参数作为原合同参与人的选取。与ApproverNumber二选一。 
-     * @return ReleasedApproverRecipientId 签署人在原合同中的RecipientId，可以通过<a href="https://qian.tencent.com/developers/partnerApis/flows/DescribeFlowDetailInfo" target="_blank">DescribeFlowDetailInfo</a>接口查看原流程中的签署人信息，可参考返回结构体<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#flowapproverdetail" target="_blank">FlowApproverDetail</a>中的RecipientId。
-**注意**：当指定了此参数后，ApproverNumber即失效，会以本参数作为原合同参与人的选取。与ApproverNumber二选一。
+     * Get <font color="red">【已废弃】</font>请用ApproverNumber来指定替换的参与方的位置 
+     * @return ReleasedApproverRecipientId <font color="red">【已废弃】</font>请用ApproverNumber来指定替换的参与方的位置
      */
     public String getReleasedApproverRecipientId() {
         return this.ReleasedApproverRecipientId;
     }
 
     /**
-     * Set 签署人在原合同中的RecipientId，可以通过<a href="https://qian.tencent.com/developers/partnerApis/flows/DescribeFlowDetailInfo" target="_blank">DescribeFlowDetailInfo</a>接口查看原流程中的签署人信息，可参考返回结构体<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#flowapproverdetail" target="_blank">FlowApproverDetail</a>中的RecipientId。
-**注意**：当指定了此参数后，ApproverNumber即失效，会以本参数作为原合同参与人的选取。与ApproverNumber二选一。
-     * @param ReleasedApproverRecipientId 签署人在原合同中的RecipientId，可以通过<a href="https://qian.tencent.com/developers/partnerApis/flows/DescribeFlowDetailInfo" target="_blank">DescribeFlowDetailInfo</a>接口查看原流程中的签署人信息，可参考返回结构体<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#flowapproverdetail" target="_blank">FlowApproverDetail</a>中的RecipientId。
-**注意**：当指定了此参数后，ApproverNumber即失效，会以本参数作为原合同参与人的选取。与ApproverNumber二选一。
+     * Set <font color="red">【已废弃】</font>请用ApproverNumber来指定替换的参与方的位置
+     * @param ReleasedApproverRecipientId <font color="red">【已废弃】</font>请用ApproverNumber来指定替换的参与方的位置
      */
     public void setReleasedApproverRecipientId(String ReleasedApproverRecipientId) {
         this.ReleasedApproverRecipientId = ReleasedApproverRecipientId;

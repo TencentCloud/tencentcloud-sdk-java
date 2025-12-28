@@ -35,6 +35,8 @@ public class AiAnalysisResult extends AbstractModel {
 <li>Dubbing：智能译制</li>
 <li>VideoRemake: 视频去重</li>
 <li>VideoComprehension: 视频（音频）理解</li>
+<li>Cutout：视频抠图</li>
+<li>Reel：智能成片</li>
     */
     @SerializedName("Type")
     @Expose
@@ -145,6 +147,22 @@ public class AiAnalysisResult extends AbstractModel {
     private AiAnalysisTaskVideoComprehensionResult VideoComprehensionTask;
 
     /**
+    * 视频内容分析抠图任务的查询结果，当任务类型为Cutout时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CutoutTask")
+    @Expose
+    private AiAnalysisTaskCutoutResult CutoutTask;
+
+    /**
+    * 视频内容分析成片任务的查询结果，当任务类型为Reel时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReelTask")
+    @Expose
+    private AiAnalysisTaskReelResult ReelTask;
+
+    /**
      * Get 任务的类型，可以取的值有：
 <li>Classification：智能分类</li>
 <li>Cover：智能封面</li>
@@ -155,7 +173,9 @@ public class AiAnalysisResult extends AbstractModel {
 <li>Description：大模型摘要</li>
 <li>Dubbing：智能译制</li>
 <li>VideoRemake: 视频去重</li>
-<li>VideoComprehension: 视频（音频）理解</li> 
+<li>VideoComprehension: 视频（音频）理解</li>
+<li>Cutout：视频抠图</li>
+<li>Reel：智能成片</li> 
      * @return Type 任务的类型，可以取的值有：
 <li>Classification：智能分类</li>
 <li>Cover：智能封面</li>
@@ -167,6 +187,8 @@ public class AiAnalysisResult extends AbstractModel {
 <li>Dubbing：智能译制</li>
 <li>VideoRemake: 视频去重</li>
 <li>VideoComprehension: 视频（音频）理解</li>
+<li>Cutout：视频抠图</li>
+<li>Reel：智能成片</li>
      */
     public String getType() {
         return this.Type;
@@ -184,6 +206,8 @@ public class AiAnalysisResult extends AbstractModel {
 <li>Dubbing：智能译制</li>
 <li>VideoRemake: 视频去重</li>
 <li>VideoComprehension: 视频（音频）理解</li>
+<li>Cutout：视频抠图</li>
+<li>Reel：智能成片</li>
      * @param Type 任务的类型，可以取的值有：
 <li>Classification：智能分类</li>
 <li>Cover：智能封面</li>
@@ -195,6 +219,8 @@ public class AiAnalysisResult extends AbstractModel {
 <li>Dubbing：智能译制</li>
 <li>VideoRemake: 视频去重</li>
 <li>VideoComprehension: 视频（音频）理解</li>
+<li>Cutout：视频抠图</li>
+<li>Reel：智能成片</li>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -460,6 +486,46 @@ public class AiAnalysisResult extends AbstractModel {
         this.VideoComprehensionTask = VideoComprehensionTask;
     }
 
+    /**
+     * Get 视频内容分析抠图任务的查询结果，当任务类型为Cutout时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CutoutTask 视频内容分析抠图任务的查询结果，当任务类型为Cutout时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AiAnalysisTaskCutoutResult getCutoutTask() {
+        return this.CutoutTask;
+    }
+
+    /**
+     * Set 视频内容分析抠图任务的查询结果，当任务类型为Cutout时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CutoutTask 视频内容分析抠图任务的查询结果，当任务类型为Cutout时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCutoutTask(AiAnalysisTaskCutoutResult CutoutTask) {
+        this.CutoutTask = CutoutTask;
+    }
+
+    /**
+     * Get 视频内容分析成片任务的查询结果，当任务类型为Reel时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReelTask 视频内容分析成片任务的查询结果，当任务类型为Reel时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AiAnalysisTaskReelResult getReelTask() {
+        return this.ReelTask;
+    }
+
+    /**
+     * Set 视频内容分析成片任务的查询结果，当任务类型为Reel时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReelTask 视频内容分析成片任务的查询结果，当任务类型为Reel时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReelTask(AiAnalysisTaskReelResult ReelTask) {
+        this.ReelTask = ReelTask;
+    }
+
     public AiAnalysisResult() {
     }
 
@@ -510,6 +576,12 @@ public class AiAnalysisResult extends AbstractModel {
         if (source.VideoComprehensionTask != null) {
             this.VideoComprehensionTask = new AiAnalysisTaskVideoComprehensionResult(source.VideoComprehensionTask);
         }
+        if (source.CutoutTask != null) {
+            this.CutoutTask = new AiAnalysisTaskCutoutResult(source.CutoutTask);
+        }
+        if (source.ReelTask != null) {
+            this.ReelTask = new AiAnalysisTaskReelResult(source.ReelTask);
+        }
     }
 
 
@@ -531,6 +603,8 @@ public class AiAnalysisResult extends AbstractModel {
         this.setParamObj(map, prefix + "DubbingTask.", this.DubbingTask);
         this.setParamObj(map, prefix + "VideoRemakeTask.", this.VideoRemakeTask);
         this.setParamObj(map, prefix + "VideoComprehensionTask.", this.VideoComprehensionTask);
+        this.setParamObj(map, prefix + "CutoutTask.", this.CutoutTask);
+        this.setParamObj(map, prefix + "ReelTask.", this.ReelTask);
 
     }
 }

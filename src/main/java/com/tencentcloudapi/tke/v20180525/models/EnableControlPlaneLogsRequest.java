@@ -38,7 +38,7 @@ public class EnableControlPlaneLogsRequest extends AbstractModel {
     private String ClusterType;
 
     /**
-    * 各组件日志采集配置，目前支持的组件有：kube-apiserver、kube-controller-manager、kube-scheduler、cluster-autoscaler、kapenter
+    * 组件名称列表，目前支持的组件有：cluster-autoscaler、kapenter
     */
     @SerializedName("Components")
     @Expose
@@ -77,16 +77,16 @@ public class EnableControlPlaneLogsRequest extends AbstractModel {
     }
 
     /**
-     * Get 各组件日志采集配置，目前支持的组件有：kube-apiserver、kube-controller-manager、kube-scheduler、cluster-autoscaler、kapenter 
-     * @return Components 各组件日志采集配置，目前支持的组件有：kube-apiserver、kube-controller-manager、kube-scheduler、cluster-autoscaler、kapenter
+     * Get 组件名称列表，目前支持的组件有：cluster-autoscaler、kapenter 
+     * @return Components 组件名称列表，目前支持的组件有：cluster-autoscaler、kapenter
      */
     public ComponentLogConfig [] getComponents() {
         return this.Components;
     }
 
     /**
-     * Set 各组件日志采集配置，目前支持的组件有：kube-apiserver、kube-controller-manager、kube-scheduler、cluster-autoscaler、kapenter
-     * @param Components 各组件日志采集配置，目前支持的组件有：kube-apiserver、kube-controller-manager、kube-scheduler、cluster-autoscaler、kapenter
+     * Set 组件名称列表，目前支持的组件有：cluster-autoscaler、kapenter
+     * @param Components 组件名称列表，目前支持的组件有：cluster-autoscaler、kapenter
      */
     public void setComponents(ComponentLogConfig [] Components) {
         this.Components = Components;

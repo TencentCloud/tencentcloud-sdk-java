@@ -185,6 +185,20 @@ public class ApmApplicationConfigView extends AbstractModel {
     private ApmTag [] SlowSQLThresholds;
 
     /**
+    * 是否开启脱敏规则
+    */
+    @SerializedName("EnableDesensitizationRule")
+    @Expose
+    private Long EnableDesensitizationRule;
+
+    /**
+    * 脱敏规则
+    */
+    @SerializedName("DesensitizationRule")
+    @Expose
+    private String DesensitizationRule;
+
+    /**
      * Get 业务系统 ID 
      * @return InstanceKey 业务系统 ID
      */
@@ -552,6 +566,38 @@ public class ApmApplicationConfigView extends AbstractModel {
         this.SlowSQLThresholds = SlowSQLThresholds;
     }
 
+    /**
+     * Get 是否开启脱敏规则 
+     * @return EnableDesensitizationRule 是否开启脱敏规则
+     */
+    public Long getEnableDesensitizationRule() {
+        return this.EnableDesensitizationRule;
+    }
+
+    /**
+     * Set 是否开启脱敏规则
+     * @param EnableDesensitizationRule 是否开启脱敏规则
+     */
+    public void setEnableDesensitizationRule(Long EnableDesensitizationRule) {
+        this.EnableDesensitizationRule = EnableDesensitizationRule;
+    }
+
+    /**
+     * Get 脱敏规则 
+     * @return DesensitizationRule 脱敏规则
+     */
+    public String getDesensitizationRule() {
+        return this.DesensitizationRule;
+    }
+
+    /**
+     * Set 脱敏规则
+     * @param DesensitizationRule 脱敏规则
+     */
+    public void setDesensitizationRule(String DesensitizationRule) {
+        this.DesensitizationRule = DesensitizationRule;
+    }
+
     public ApmApplicationConfigView() {
     }
 
@@ -635,6 +681,12 @@ public class ApmApplicationConfigView extends AbstractModel {
                 this.SlowSQLThresholds[i] = new ApmTag(source.SlowSQLThresholds[i]);
             }
         }
+        if (source.EnableDesensitizationRule != null) {
+            this.EnableDesensitizationRule = new Long(source.EnableDesensitizationRule);
+        }
+        if (source.DesensitizationRule != null) {
+            this.DesensitizationRule = new String(source.DesensitizationRule);
+        }
     }
 
 
@@ -665,6 +717,8 @@ public class ApmApplicationConfigView extends AbstractModel {
         this.setParamSimple(map, prefix + "DisableCpuUsed", this.DisableCpuUsed);
         this.setParamSimple(map, prefix + "DbStatementParametersEnabled", this.DbStatementParametersEnabled);
         this.setParamArrayObj(map, prefix + "SlowSQLThresholds.", this.SlowSQLThresholds);
+        this.setParamSimple(map, prefix + "EnableDesensitizationRule", this.EnableDesensitizationRule);
+        this.setParamSimple(map, prefix + "DesensitizationRule", this.DesensitizationRule);
 
     }
 }

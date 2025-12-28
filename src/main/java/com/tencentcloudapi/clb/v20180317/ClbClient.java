@@ -1025,6 +1025,17 @@ BGP带宽包必须传带宽包id
     }
 
     /**
+     *API接口续费包年包月实例还在灰度中，如您需要体验该功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)
+     * @param req RenewLoadBalancersRequest
+     * @return RenewLoadBalancersResponse
+     * @throws TencentCloudSDKException
+     */
+    public RenewLoadBalancersResponse RenewLoadBalancers(RenewLoadBalancersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RenewLoadBalancers", RenewLoadBalancersResponse.class);
+    }
+
+    /**
      *ReplaceCertForLoadBalancers 接口用以替换负载均衡实例所关联的证书，对于各个地域的负载均衡，如果指定的老的证书ID与其有关联关系，则会先解除关联，再建立新证书与该负载均衡的关联关系。
 此接口支持替换服务端证书或客户端证书。
 需要使用的新证书，可以通过传入证书ID来指定，如果不指定证书ID，则必须传入证书内容等相关信息，用以新建证书并绑定至负载均衡。

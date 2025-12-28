@@ -40,7 +40,7 @@ public class CreateCloneInstanceRequest extends AbstractModel {
 
     /**
     * 如果需要克隆实例回档到指定备份集，则指定该值为备份文件的 Id。请使用 [查询数据备份文件列表](/document/api/236/15842)。
-说明：如果是克隆双节点、三节点实例，备份文件为物理备份，如果是克隆单节点、集群版实例，备份文件为快照备份。
+说明：如果是克隆双节点、三节点实例，备份文件为物理备份，如果是克隆单节点、云盘版实例，备份文件为快照备份。
     */
     @SerializedName("SpecifiedBackupId")
     @Expose
@@ -131,7 +131,7 @@ public class CreateCloneInstanceRequest extends AbstractModel {
     private String BackupZone;
 
     /**
-    * 克隆实例类型。支持值包括："UNIVERSAL" - 通用型实例，"EXCLUSIVE" - 独享型实例，"CLOUD_NATIVE_CLUSTER" - 集群版标准型，"CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 集群版加强型。不指定则默认为通用型。
+    * 克隆实例类型。支持值包括："UNIVERSAL" - 通用型实例，"EXCLUSIVE" - 独享型实例，"CLOUD_NATIVE_CLUSTER" - 云盘版标准型，"CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 云盘版加强型。不指定则默认为通用型。
     */
     @SerializedName("DeviceType")
     @Expose
@@ -187,7 +187,7 @@ public class CreateCloneInstanceRequest extends AbstractModel {
     private Long Period;
 
     /**
-    * 集群版节点拓扑配置。
+    * 云盘版节点拓扑配置。
     */
     @SerializedName("ClusterTopology")
     @Expose
@@ -206,6 +206,13 @@ public class CreateCloneInstanceRequest extends AbstractModel {
     @SerializedName("SpecifiedSubBackupId")
     @Expose
     private Long SpecifiedSubBackupId;
+
+    /**
+    * 新产生的克隆实例主库的可用区信息，默认同源实例 Zone 的值。
+    */
+    @SerializedName("MasterZone")
+    @Expose
+    private String MasterZone;
 
     /**
      * Get 克隆源实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/api/236/15872) 接口获取。 
@@ -245,9 +252,9 @@ public class CreateCloneInstanceRequest extends AbstractModel {
 
     /**
      * Get 如果需要克隆实例回档到指定备份集，则指定该值为备份文件的 Id。请使用 [查询数据备份文件列表](/document/api/236/15842)。
-说明：如果是克隆双节点、三节点实例，备份文件为物理备份，如果是克隆单节点、集群版实例，备份文件为快照备份。 
+说明：如果是克隆双节点、三节点实例，备份文件为物理备份，如果是克隆单节点、云盘版实例，备份文件为快照备份。 
      * @return SpecifiedBackupId 如果需要克隆实例回档到指定备份集，则指定该值为备份文件的 Id。请使用 [查询数据备份文件列表](/document/api/236/15842)。
-说明：如果是克隆双节点、三节点实例，备份文件为物理备份，如果是克隆单节点、集群版实例，备份文件为快照备份。
+说明：如果是克隆双节点、三节点实例，备份文件为物理备份，如果是克隆单节点、云盘版实例，备份文件为快照备份。
      */
     public Long getSpecifiedBackupId() {
         return this.SpecifiedBackupId;
@@ -255,9 +262,9 @@ public class CreateCloneInstanceRequest extends AbstractModel {
 
     /**
      * Set 如果需要克隆实例回档到指定备份集，则指定该值为备份文件的 Id。请使用 [查询数据备份文件列表](/document/api/236/15842)。
-说明：如果是克隆双节点、三节点实例，备份文件为物理备份，如果是克隆单节点、集群版实例，备份文件为快照备份。
+说明：如果是克隆双节点、三节点实例，备份文件为物理备份，如果是克隆单节点、云盘版实例，备份文件为快照备份。
      * @param SpecifiedBackupId 如果需要克隆实例回档到指定备份集，则指定该值为备份文件的 Id。请使用 [查询数据备份文件列表](/document/api/236/15842)。
-说明：如果是克隆双节点、三节点实例，备份文件为物理备份，如果是克隆单节点、集群版实例，备份文件为快照备份。
+说明：如果是克隆双节点、三节点实例，备份文件为物理备份，如果是克隆单节点、云盘版实例，备份文件为快照备份。
      */
     public void setSpecifiedBackupId(Long SpecifiedBackupId) {
         this.SpecifiedBackupId = SpecifiedBackupId;
@@ -456,16 +463,16 @@ public class CreateCloneInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 克隆实例类型。支持值包括："UNIVERSAL" - 通用型实例，"EXCLUSIVE" - 独享型实例，"CLOUD_NATIVE_CLUSTER" - 集群版标准型，"CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 集群版加强型。不指定则默认为通用型。 
-     * @return DeviceType 克隆实例类型。支持值包括："UNIVERSAL" - 通用型实例，"EXCLUSIVE" - 独享型实例，"CLOUD_NATIVE_CLUSTER" - 集群版标准型，"CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 集群版加强型。不指定则默认为通用型。
+     * Get 克隆实例类型。支持值包括："UNIVERSAL" - 通用型实例，"EXCLUSIVE" - 独享型实例，"CLOUD_NATIVE_CLUSTER" - 云盘版标准型，"CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 云盘版加强型。不指定则默认为通用型。 
+     * @return DeviceType 克隆实例类型。支持值包括："UNIVERSAL" - 通用型实例，"EXCLUSIVE" - 独享型实例，"CLOUD_NATIVE_CLUSTER" - 云盘版标准型，"CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 云盘版加强型。不指定则默认为通用型。
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set 克隆实例类型。支持值包括："UNIVERSAL" - 通用型实例，"EXCLUSIVE" - 独享型实例，"CLOUD_NATIVE_CLUSTER" - 集群版标准型，"CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 集群版加强型。不指定则默认为通用型。
-     * @param DeviceType 克隆实例类型。支持值包括："UNIVERSAL" - 通用型实例，"EXCLUSIVE" - 独享型实例，"CLOUD_NATIVE_CLUSTER" - 集群版标准型，"CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 集群版加强型。不指定则默认为通用型。
+     * Set 克隆实例类型。支持值包括："UNIVERSAL" - 通用型实例，"EXCLUSIVE" - 独享型实例，"CLOUD_NATIVE_CLUSTER" - 云盘版标准型，"CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 云盘版加强型。不指定则默认为通用型。
+     * @param DeviceType 克隆实例类型。支持值包括："UNIVERSAL" - 通用型实例，"EXCLUSIVE" - 独享型实例，"CLOUD_NATIVE_CLUSTER" - 云盘版标准型，"CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 云盘版加强型。不指定则默认为通用型。
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;
@@ -584,16 +591,16 @@ public class CreateCloneInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 集群版节点拓扑配置。 
-     * @return ClusterTopology 集群版节点拓扑配置。
+     * Get 云盘版节点拓扑配置。 
+     * @return ClusterTopology 云盘版节点拓扑配置。
      */
     public ClusterTopology getClusterTopology() {
         return this.ClusterTopology;
     }
 
     /**
-     * Set 集群版节点拓扑配置。
-     * @param ClusterTopology 集群版节点拓扑配置。
+     * Set 云盘版节点拓扑配置。
+     * @param ClusterTopology 云盘版节点拓扑配置。
      */
     public void setClusterTopology(ClusterTopology ClusterTopology) {
         this.ClusterTopology = ClusterTopology;
@@ -629,6 +636,22 @@ public class CreateCloneInstanceRequest extends AbstractModel {
      */
     public void setSpecifiedSubBackupId(Long SpecifiedSubBackupId) {
         this.SpecifiedSubBackupId = SpecifiedSubBackupId;
+    }
+
+    /**
+     * Get 新产生的克隆实例主库的可用区信息，默认同源实例 Zone 的值。 
+     * @return MasterZone 新产生的克隆实例主库的可用区信息，默认同源实例 Zone 的值。
+     */
+    public String getMasterZone() {
+        return this.MasterZone;
+    }
+
+    /**
+     * Set 新产生的克隆实例主库的可用区信息，默认同源实例 Zone 的值。
+     * @param MasterZone 新产生的克隆实例主库的可用区信息，默认同源实例 Zone 的值。
+     */
+    public void setMasterZone(String MasterZone) {
+        this.MasterZone = MasterZone;
     }
 
     public CreateCloneInstanceRequest() {
@@ -723,6 +746,9 @@ public class CreateCloneInstanceRequest extends AbstractModel {
         if (source.SpecifiedSubBackupId != null) {
             this.SpecifiedSubBackupId = new Long(source.SpecifiedSubBackupId);
         }
+        if (source.MasterZone != null) {
+            this.MasterZone = new String(source.MasterZone);
+        }
     }
 
 
@@ -756,6 +782,7 @@ public class CreateCloneInstanceRequest extends AbstractModel {
         this.setParamObj(map, prefix + "ClusterTopology.", this.ClusterTopology);
         this.setParamSimple(map, prefix + "SrcRegion", this.SrcRegion);
         this.setParamSimple(map, prefix + "SpecifiedSubBackupId", this.SpecifiedSubBackupId);
+        this.setParamSimple(map, prefix + "MasterZone", this.MasterZone);
 
     }
 }
