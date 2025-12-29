@@ -45,7 +45,9 @@ public class AddDeviceRequest extends AbstractModel {
     private String DataKey;
 
     /**
-    * 是否设置预置密钥
+    * 是否设置预置密钥。
+true：设置预置密钥；
+false：不设置预置密钥。
     */
     @SerializedName("Encrypted")
     @Expose
@@ -142,16 +144,24 @@ public class AddDeviceRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否设置预置密钥 
-     * @return Encrypted 是否设置预置密钥
+     * Get 是否设置预置密钥。
+true：设置预置密钥；
+false：不设置预置密钥。 
+     * @return Encrypted 是否设置预置密钥。
+true：设置预置密钥；
+false：不设置预置密钥。
      */
     public Boolean getEncrypted() {
         return this.Encrypted;
     }
 
     /**
-     * Set 是否设置预置密钥
-     * @param Encrypted 是否设置预置密钥
+     * Set 是否设置预置密钥。
+true：设置预置密钥；
+false：不设置预置密钥。
+     * @param Encrypted 是否设置预置密钥。
+true：设置预置密钥；
+false：不设置预置密钥。
      */
     public void setEncrypted(Boolean Encrypted) {
         this.Encrypted = Encrypted;

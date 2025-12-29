@@ -25,6 +25,7 @@ public class ExportQAListRequest extends AbstractModel {
 
     /**
     * 应用ID
+若要操作共享知识库，传KnowledgeBizId
     */
     @SerializedName("BotBizId")
     @Expose
@@ -39,14 +40,23 @@ public class ExportQAListRequest extends AbstractModel {
 
     /**
     * 查询参数
+Filters.pageNumber范围是>0,0<Filters.pageSize<=200
+Filters.query用于内容检索，模糊匹配
+Filters.AcceptStatus默认值是0，表示不筛选，返回所有状态
+Filters.ReleaseStatus默认值是0，表示不筛选，返回所有状态
+Filters.Source默认值是0，表示不筛选，返回所有来源。表示来源(1 文档生成 2 批量导入 3 手动添加)。
+Filter.QueryType默认值是"filename"，表示查询类型。
+ShowCurrCate表示，是否只展示当前分类的数据 0不是，1是
     */
     @SerializedName("Filters")
     @Expose
     private QAQuery Filters;
 
     /**
-     * Get 应用ID 
+     * Get 应用ID
+若要操作共享知识库，传KnowledgeBizId 
      * @return BotBizId 应用ID
+若要操作共享知识库，传KnowledgeBizId
      */
     public String getBotBizId() {
         return this.BotBizId;
@@ -54,7 +64,9 @@ public class ExportQAListRequest extends AbstractModel {
 
     /**
      * Set 应用ID
+若要操作共享知识库，传KnowledgeBizId
      * @param BotBizId 应用ID
+若要操作共享知识库，传KnowledgeBizId
      */
     public void setBotBizId(String BotBizId) {
         this.BotBizId = BotBizId;
@@ -77,8 +89,22 @@ public class ExportQAListRequest extends AbstractModel {
     }
 
     /**
-     * Get 查询参数 
+     * Get 查询参数
+Filters.pageNumber范围是>0,0<Filters.pageSize<=200
+Filters.query用于内容检索，模糊匹配
+Filters.AcceptStatus默认值是0，表示不筛选，返回所有状态
+Filters.ReleaseStatus默认值是0，表示不筛选，返回所有状态
+Filters.Source默认值是0，表示不筛选，返回所有来源。表示来源(1 文档生成 2 批量导入 3 手动添加)。
+Filter.QueryType默认值是"filename"，表示查询类型。
+ShowCurrCate表示，是否只展示当前分类的数据 0不是，1是 
      * @return Filters 查询参数
+Filters.pageNumber范围是>0,0<Filters.pageSize<=200
+Filters.query用于内容检索，模糊匹配
+Filters.AcceptStatus默认值是0，表示不筛选，返回所有状态
+Filters.ReleaseStatus默认值是0，表示不筛选，返回所有状态
+Filters.Source默认值是0，表示不筛选，返回所有来源。表示来源(1 文档生成 2 批量导入 3 手动添加)。
+Filter.QueryType默认值是"filename"，表示查询类型。
+ShowCurrCate表示，是否只展示当前分类的数据 0不是，1是
      */
     public QAQuery getFilters() {
         return this.Filters;
@@ -86,7 +112,21 @@ public class ExportQAListRequest extends AbstractModel {
 
     /**
      * Set 查询参数
+Filters.pageNumber范围是>0,0<Filters.pageSize<=200
+Filters.query用于内容检索，模糊匹配
+Filters.AcceptStatus默认值是0，表示不筛选，返回所有状态
+Filters.ReleaseStatus默认值是0，表示不筛选，返回所有状态
+Filters.Source默认值是0，表示不筛选，返回所有来源。表示来源(1 文档生成 2 批量导入 3 手动添加)。
+Filter.QueryType默认值是"filename"，表示查询类型。
+ShowCurrCate表示，是否只展示当前分类的数据 0不是，1是
      * @param Filters 查询参数
+Filters.pageNumber范围是>0,0<Filters.pageSize<=200
+Filters.query用于内容检索，模糊匹配
+Filters.AcceptStatus默认值是0，表示不筛选，返回所有状态
+Filters.ReleaseStatus默认值是0，表示不筛选，返回所有状态
+Filters.Source默认值是0，表示不筛选，返回所有来源。表示来源(1 文档生成 2 批量导入 3 手动添加)。
+Filter.QueryType默认值是"filename"，表示查询类型。
+ShowCurrCate表示，是否只展示当前分类的数据 0不是，1是
      */
     public void setFilters(QAQuery Filters) {
         this.Filters = Filters;

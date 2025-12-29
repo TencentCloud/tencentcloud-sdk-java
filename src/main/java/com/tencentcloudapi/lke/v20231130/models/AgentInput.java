@@ -66,6 +66,13 @@ public class AgentInput extends AbstractModel {
     private AgentInputSystemVariable SystemVariable;
 
     /**
+    * 工具参数
+    */
+    @SerializedName("ToolParam")
+    @Expose
+    private String ToolParam;
+
+    /**
      * Get 输入来源类型：0 用户输入，3 自定义变量（API参数） 
      * @return InputType 输入来源类型：0 用户输入，3 自定义变量（API参数）
      */
@@ -161,6 +168,22 @@ public class AgentInput extends AbstractModel {
         this.SystemVariable = SystemVariable;
     }
 
+    /**
+     * Get 工具参数 
+     * @return ToolParam 工具参数
+     */
+    public String getToolParam() {
+        return this.ToolParam;
+    }
+
+    /**
+     * Set 工具参数
+     * @param ToolParam 工具参数
+     */
+    public void setToolParam(String ToolParam) {
+        this.ToolParam = ToolParam;
+    }
+
     public AgentInput() {
     }
 
@@ -187,6 +210,9 @@ public class AgentInput extends AbstractModel {
         if (source.SystemVariable != null) {
             this.SystemVariable = new AgentInputSystemVariable(source.SystemVariable);
         }
+        if (source.ToolParam != null) {
+            this.ToolParam = new String(source.ToolParam);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class AgentInput extends AbstractModel {
         this.setParamSimple(map, prefix + "EnvVarId", this.EnvVarId);
         this.setParamSimple(map, prefix + "AppVarId", this.AppVarId);
         this.setParamObj(map, prefix + "SystemVariable.", this.SystemVariable);
+        this.setParamSimple(map, prefix + "ToolParam", this.ToolParam);
 
     }
 }

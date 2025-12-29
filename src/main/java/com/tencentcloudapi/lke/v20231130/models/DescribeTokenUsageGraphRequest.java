@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTokenUsageGraphRequest extends AbstractModel {
 
     /**
-    * 腾讯云主账号
+    * 子账号标识列表，支持批量查询多个子账号。不填时查询主账号下所有子账号的汇总数据
     */
     @SerializedName("UinAccount")
     @Expose
@@ -59,14 +59,14 @@ public class DescribeTokenUsageGraphRequest extends AbstractModel {
     private String EndTime;
 
     /**
-    * 应用id列表
+    * 应用ID列表。不填时：若指定SpaceId则查该空间所有应用；否则查用户下所有应用
     */
     @SerializedName("AppBizIds")
     @Expose
     private String [] AppBizIds;
 
     /**
-    * 应用类型(knowledge_qa应用管理， shared_knowlege 共享知识库)
+    * 应用类型。可选值：knowledge_qa(知识问答)/plugin_parsing_qa(插件)/shared_knowledge(知识库)/evaluate_test(评测)。不填时查所有类型
     */
     @SerializedName("AppType")
     @Expose
@@ -80,30 +80,30 @@ public class DescribeTokenUsageGraphRequest extends AbstractModel {
     private String [] SubScenes;
 
     /**
-    * 开始时间戳, 单位为秒
+    * 开始时间。Unix 时间戳，单位是秒，默认为空。
     */
     @SerializedName("StatStartTime")
     @Expose
     private Long StatStartTime;
 
     /**
-    * 结束时间戳, 单位为秒
+    * 结束时间。Unix 时间戳，单位是秒，默认为空。
     */
     @SerializedName("StatEndTime")
     @Expose
     private Long StatEndTime;
 
     /**
-     * Get 腾讯云主账号 
-     * @return UinAccount 腾讯云主账号
+     * Get 子账号标识列表，支持批量查询多个子账号。不填时查询主账号下所有子账号的汇总数据 
+     * @return UinAccount 子账号标识列表，支持批量查询多个子账号。不填时查询主账号下所有子账号的汇总数据
      */
     public String [] getUinAccount() {
         return this.UinAccount;
     }
 
     /**
-     * Set 腾讯云主账号
-     * @param UinAccount 腾讯云主账号
+     * Set 子账号标识列表，支持批量查询多个子账号。不填时查询主账号下所有子账号的汇总数据
+     * @param UinAccount 子账号标识列表，支持批量查询多个子账号。不填时查询主账号下所有子账号的汇总数据
      */
     public void setUinAccount(String [] UinAccount) {
         this.UinAccount = UinAccount;
@@ -144,7 +144,9 @@ public class DescribeTokenUsageGraphRequest extends AbstractModel {
     /**
      * Get 开始时间戳, 单位为秒(废弃) 
      * @return StartTime 开始时间戳, 单位为秒(废弃)
+     * @deprecated
      */
+    @Deprecated
     public String getStartTime() {
         return this.StartTime;
     }
@@ -152,7 +154,9 @@ public class DescribeTokenUsageGraphRequest extends AbstractModel {
     /**
      * Set 开始时间戳, 单位为秒(废弃)
      * @param StartTime 开始时间戳, 单位为秒(废弃)
+     * @deprecated
      */
+    @Deprecated
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
@@ -160,7 +164,9 @@ public class DescribeTokenUsageGraphRequest extends AbstractModel {
     /**
      * Get 结束时间戳, 单位为秒(废弃) 
      * @return EndTime 结束时间戳, 单位为秒(废弃)
+     * @deprecated
      */
+    @Deprecated
     public String getEndTime() {
         return this.EndTime;
     }
@@ -168,38 +174,40 @@ public class DescribeTokenUsageGraphRequest extends AbstractModel {
     /**
      * Set 结束时间戳, 单位为秒(废弃)
      * @param EndTime 结束时间戳, 单位为秒(废弃)
+     * @deprecated
      */
+    @Deprecated
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 应用id列表 
-     * @return AppBizIds 应用id列表
+     * Get 应用ID列表。不填时：若指定SpaceId则查该空间所有应用；否则查用户下所有应用 
+     * @return AppBizIds 应用ID列表。不填时：若指定SpaceId则查该空间所有应用；否则查用户下所有应用
      */
     public String [] getAppBizIds() {
         return this.AppBizIds;
     }
 
     /**
-     * Set 应用id列表
-     * @param AppBizIds 应用id列表
+     * Set 应用ID列表。不填时：若指定SpaceId则查该空间所有应用；否则查用户下所有应用
+     * @param AppBizIds 应用ID列表。不填时：若指定SpaceId则查该空间所有应用；否则查用户下所有应用
      */
     public void setAppBizIds(String [] AppBizIds) {
         this.AppBizIds = AppBizIds;
     }
 
     /**
-     * Get 应用类型(knowledge_qa应用管理， shared_knowlege 共享知识库) 
-     * @return AppType 应用类型(knowledge_qa应用管理， shared_knowlege 共享知识库)
+     * Get 应用类型。可选值：knowledge_qa(知识问答)/plugin_parsing_qa(插件)/shared_knowledge(知识库)/evaluate_test(评测)。不填时查所有类型 
+     * @return AppType 应用类型。可选值：knowledge_qa(知识问答)/plugin_parsing_qa(插件)/shared_knowledge(知识库)/evaluate_test(评测)。不填时查所有类型
      */
     public String getAppType() {
         return this.AppType;
     }
 
     /**
-     * Set 应用类型(knowledge_qa应用管理， shared_knowlege 共享知识库)
-     * @param AppType 应用类型(knowledge_qa应用管理， shared_knowlege 共享知识库)
+     * Set 应用类型。可选值：knowledge_qa(知识问答)/plugin_parsing_qa(插件)/shared_knowledge(知识库)/evaluate_test(评测)。不填时查所有类型
+     * @param AppType 应用类型。可选值：knowledge_qa(知识问答)/plugin_parsing_qa(插件)/shared_knowledge(知识库)/evaluate_test(评测)。不填时查所有类型
      */
     public void setAppType(String AppType) {
         this.AppType = AppType;
@@ -222,32 +230,32 @@ public class DescribeTokenUsageGraphRequest extends AbstractModel {
     }
 
     /**
-     * Get 开始时间戳, 单位为秒 
-     * @return StatStartTime 开始时间戳, 单位为秒
+     * Get 开始时间。Unix 时间戳，单位是秒，默认为空。 
+     * @return StatStartTime 开始时间。Unix 时间戳，单位是秒，默认为空。
      */
     public Long getStatStartTime() {
         return this.StatStartTime;
     }
 
     /**
-     * Set 开始时间戳, 单位为秒
-     * @param StatStartTime 开始时间戳, 单位为秒
+     * Set 开始时间。Unix 时间戳，单位是秒，默认为空。
+     * @param StatStartTime 开始时间。Unix 时间戳，单位是秒，默认为空。
      */
     public void setStatStartTime(Long StatStartTime) {
         this.StatStartTime = StatStartTime;
     }
 
     /**
-     * Get 结束时间戳, 单位为秒 
-     * @return StatEndTime 结束时间戳, 单位为秒
+     * Get 结束时间。Unix 时间戳，单位是秒，默认为空。 
+     * @return StatEndTime 结束时间。Unix 时间戳，单位是秒，默认为空。
      */
     public Long getStatEndTime() {
         return this.StatEndTime;
     }
 
     /**
-     * Set 结束时间戳, 单位为秒
-     * @param StatEndTime 结束时间戳, 单位为秒
+     * Set 结束时间。Unix 时间戳，单位是秒，默认为空。
+     * @param StatEndTime 结束时间。Unix 时间戳，单位是秒，默认为空。
      */
     public void setStatEndTime(Long StatEndTime) {
         this.StatEndTime = StatEndTime;

@@ -1025,7 +1025,7 @@ BGP带宽包必须传带宽包id
     }
 
     /**
-     *API接口续费包年包月实例还在灰度中，如您需要体验该功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)
+     *本接口 (RenewLoadBalancers) 用于续费包年包月实例。
      * @param req RenewLoadBalancersRequest
      * @return RenewLoadBalancersResponse
      * @throws TencentCloudSDKException

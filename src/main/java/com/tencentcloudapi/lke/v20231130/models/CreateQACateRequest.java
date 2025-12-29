@@ -25,6 +25,7 @@ public class CreateQACateRequest extends AbstractModel {
 
     /**
     * 应用ID
+若要操作共享知识库，传KnowledgeBizId
     */
     @SerializedName("BotBizId")
     @Expose
@@ -38,16 +39,17 @@ public class CreateQACateRequest extends AbstractModel {
     private String ParentBizId;
 
     /**
-    * 分类名称
-
+    * 创建的分类名称
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get 应用ID 
+     * Get 应用ID
+若要操作共享知识库，传KnowledgeBizId 
      * @return BotBizId 应用ID
+若要操作共享知识库，传KnowledgeBizId
      */
     public String getBotBizId() {
         return this.BotBizId;
@@ -55,7 +57,9 @@ public class CreateQACateRequest extends AbstractModel {
 
     /**
      * Set 应用ID
+若要操作共享知识库，传KnowledgeBizId
      * @param BotBizId 应用ID
+若要操作共享知识库，传KnowledgeBizId
      */
     public void setBotBizId(String BotBizId) {
         this.BotBizId = BotBizId;
@@ -78,20 +82,16 @@ public class CreateQACateRequest extends AbstractModel {
     }
 
     /**
-     * Get 分类名称
- 
-     * @return Name 分类名称
-
+     * Get 创建的分类名称 
+     * @return Name 创建的分类名称
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 分类名称
-
-     * @param Name 分类名称
-
+     * Set 创建的分类名称
+     * @param Name 创建的分类名称
      */
     public void setName(String Name) {
         this.Name = Name;

@@ -64,7 +64,6 @@ HYBRID_PAID:
 
     /**
     * 后付费实例对应的机型规格
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceType")
     @Expose
@@ -72,7 +71,6 @@ HYBRID_PAID:
 
     /**
     * 模型信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModelInfo")
     @Expose
@@ -80,7 +78,6 @@ HYBRID_PAID:
 
     /**
     * 是否启用日志
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogEnable")
     @Expose
@@ -88,7 +85,6 @@ HYBRID_PAID:
 
     /**
     * 日志配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogConfig")
     @Expose
@@ -96,7 +92,6 @@ HYBRID_PAID:
 
     /**
     * 是否开启鉴权
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuthorizationEnable")
     @Expose
@@ -104,7 +99,6 @@ HYBRID_PAID:
 
     /**
     * hpa配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HorizontalPodAutoscaler")
     @Expose
@@ -336,6 +330,20 @@ HYBRID_PAID:
     private VolumeMount [] VolumeMounts;
 
     /**
+    * 调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用
+    */
+    @SerializedName("SchedulingStrategy")
+    @Expose
+    private String SchedulingStrategy;
+
+    /**
+    * 服务实际运行的节点数
+    */
+    @SerializedName("NodeCount")
+    @Expose
+    private Long NodeCount;
+
+    /**
      * Get 期望运行的Pod数量，停止状态是0
 不同计费模式和调节模式下对应关系如下
 PREPAID 和 POSTPAID_BY_HOUR:
@@ -444,10 +452,8 @@ HYBRID_PAID:
     }
 
     /**
-     * Get 后付费实例对应的机型规格
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 后付费实例对应的机型规格 
      * @return InstanceType 后付费实例对应的机型规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceType() {
         return this.InstanceType;
@@ -455,19 +461,15 @@ HYBRID_PAID:
 
     /**
      * Set 后付费实例对应的机型规格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceType 后付费实例对应的机型规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 模型信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 模型信息 
      * @return ModelInfo 模型信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ModelInfo getModelInfo() {
         return this.ModelInfo;
@@ -475,19 +477,15 @@ HYBRID_PAID:
 
     /**
      * Set 模型信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModelInfo 模型信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModelInfo(ModelInfo ModelInfo) {
         this.ModelInfo = ModelInfo;
     }
 
     /**
-     * Get 是否启用日志
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否启用日志 
      * @return LogEnable 是否启用日志
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getLogEnable() {
         return this.LogEnable;
@@ -495,19 +493,15 @@ HYBRID_PAID:
 
     /**
      * Set 是否启用日志
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogEnable 是否启用日志
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogEnable(Boolean LogEnable) {
         this.LogEnable = LogEnable;
     }
 
     /**
-     * Get 日志配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志配置 
      * @return LogConfig 日志配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LogConfig getLogConfig() {
         return this.LogConfig;
@@ -515,19 +509,15 @@ HYBRID_PAID:
 
     /**
      * Set 日志配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogConfig 日志配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogConfig(LogConfig LogConfig) {
         this.LogConfig = LogConfig;
     }
 
     /**
-     * Get 是否开启鉴权
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启鉴权 
      * @return AuthorizationEnable 是否开启鉴权
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getAuthorizationEnable() {
         return this.AuthorizationEnable;
@@ -535,19 +525,15 @@ HYBRID_PAID:
 
     /**
      * Set 是否开启鉴权
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AuthorizationEnable 是否开启鉴权
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuthorizationEnable(Boolean AuthorizationEnable) {
         this.AuthorizationEnable = AuthorizationEnable;
     }
 
     /**
-     * Get hpa配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get hpa配置 
      * @return HorizontalPodAutoscaler hpa配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public HorizontalPodAutoscaler getHorizontalPodAutoscaler() {
         return this.HorizontalPodAutoscaler;
@@ -555,9 +541,7 @@ HYBRID_PAID:
 
     /**
      * Set hpa配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HorizontalPodAutoscaler hpa配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHorizontalPodAutoscaler(HorizontalPodAutoscaler HorizontalPodAutoscaler) {
         this.HorizontalPodAutoscaler = HorizontalPodAutoscaler;
@@ -1123,6 +1107,38 @@ HYBRID_PAID:
         this.VolumeMounts = VolumeMounts;
     }
 
+    /**
+     * Get 调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用 
+     * @return SchedulingStrategy 调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用
+     */
+    public String getSchedulingStrategy() {
+        return this.SchedulingStrategy;
+    }
+
+    /**
+     * Set 调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用
+     * @param SchedulingStrategy 调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用
+     */
+    public void setSchedulingStrategy(String SchedulingStrategy) {
+        this.SchedulingStrategy = SchedulingStrategy;
+    }
+
+    /**
+     * Get 服务实际运行的节点数 
+     * @return NodeCount 服务实际运行的节点数
+     */
+    public Long getNodeCount() {
+        return this.NodeCount;
+    }
+
+    /**
+     * Set 服务实际运行的节点数
+     * @param NodeCount 服务实际运行的节点数
+     */
+    public void setNodeCount(Long NodeCount) {
+        this.NodeCount = NodeCount;
+    }
+
     public ServiceInfo() {
     }
 
@@ -1266,6 +1282,12 @@ HYBRID_PAID:
                 this.VolumeMounts[i] = new VolumeMount(source.VolumeMounts[i]);
             }
         }
+        if (source.SchedulingStrategy != null) {
+            this.SchedulingStrategy = new String(source.SchedulingStrategy);
+        }
+        if (source.NodeCount != null) {
+            this.NodeCount = new Long(source.NodeCount);
+        }
     }
 
 
@@ -1312,6 +1334,8 @@ HYBRID_PAID:
         this.setParamObj(map, prefix + "RollingUpdate.", this.RollingUpdate);
         this.setParamSimple(map, prefix + "InstancePerReplicas", this.InstancePerReplicas);
         this.setParamArrayObj(map, prefix + "VolumeMounts.", this.VolumeMounts);
+        this.setParamSimple(map, prefix + "SchedulingStrategy", this.SchedulingStrategy);
+        this.setParamSimple(map, prefix + "NodeCount", this.NodeCount);
 
     }
 }

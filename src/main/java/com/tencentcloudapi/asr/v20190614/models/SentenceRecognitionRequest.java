@@ -193,6 +193,13 @@ hotword_list：临时热词表。每次请求时直接传入临时热词表来�
     private Long InputSampleRate;
 
     /**
+    * 替换词id。用于调用对应的替换词表。
+    */
+    @SerializedName("ReplaceTextId")
+    @Expose
+    private String ReplaceTextId;
+
+    /**
      * Get 引擎模型类型。
 电话场景：
 • 8k_zh：中文电话通用；
@@ -656,6 +663,22 @@ hotword_list：临时热词表。每次请求时直接传入临时热词表来�
         this.InputSampleRate = InputSampleRate;
     }
 
+    /**
+     * Get 替换词id。用于调用对应的替换词表。 
+     * @return ReplaceTextId 替换词id。用于调用对应的替换词表。
+     */
+    public String getReplaceTextId() {
+        return this.ReplaceTextId;
+    }
+
+    /**
+     * Set 替换词id。用于调用对应的替换词表。
+     * @param ReplaceTextId 替换词id。用于调用对应的替换词表。
+     */
+    public void setReplaceTextId(String ReplaceTextId) {
+        this.ReplaceTextId = ReplaceTextId;
+    }
+
     public SentenceRecognitionRequest() {
     }
 
@@ -721,6 +744,9 @@ hotword_list：临时热词表。每次请求时直接传入临时热词表来�
         if (source.InputSampleRate != null) {
             this.InputSampleRate = new Long(source.InputSampleRate);
         }
+        if (source.ReplaceTextId != null) {
+            this.ReplaceTextId = new String(source.ReplaceTextId);
+        }
     }
 
 
@@ -747,6 +773,7 @@ hotword_list：临时热词表。每次请求时直接传入临时热词表来�
         this.setParamSimple(map, prefix + "ReinforceHotword", this.ReinforceHotword);
         this.setParamSimple(map, prefix + "HotwordList", this.HotwordList);
         this.setParamSimple(map, prefix + "InputSampleRate", this.InputSampleRate);
+        this.setParamSimple(map, prefix + "ReplaceTextId", this.ReplaceTextId);
 
     }
 }

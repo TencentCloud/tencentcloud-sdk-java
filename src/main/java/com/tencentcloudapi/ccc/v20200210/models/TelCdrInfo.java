@@ -372,6 +372,20 @@ NotExists
     private String [] VoicemailAsrURL;
 
     /**
+    * 如果是智能体相关通话，这里是智能体 ID
+    */
+    @SerializedName("AIAgentId")
+    @Expose
+    private Long AIAgentId;
+
+    /**
+    * 如果是智能体相关通话，这里是智能体名称
+    */
+    @SerializedName("AIAgentName")
+    @Expose
+    private String AIAgentName;
+
+    /**
      * Get 主叫号码 
      * @return Caller 主叫号码
      */
@@ -1311,6 +1325,38 @@ NotExists
         this.VoicemailAsrURL = VoicemailAsrURL;
     }
 
+    /**
+     * Get 如果是智能体相关通话，这里是智能体 ID 
+     * @return AIAgentId 如果是智能体相关通话，这里是智能体 ID
+     */
+    public Long getAIAgentId() {
+        return this.AIAgentId;
+    }
+
+    /**
+     * Set 如果是智能体相关通话，这里是智能体 ID
+     * @param AIAgentId 如果是智能体相关通话，这里是智能体 ID
+     */
+    public void setAIAgentId(Long AIAgentId) {
+        this.AIAgentId = AIAgentId;
+    }
+
+    /**
+     * Get 如果是智能体相关通话，这里是智能体名称 
+     * @return AIAgentName 如果是智能体相关通话，这里是智能体名称
+     */
+    public String getAIAgentName() {
+        return this.AIAgentName;
+    }
+
+    /**
+     * Set 如果是智能体相关通话，这里是智能体名称
+     * @param AIAgentName 如果是智能体相关通话，这里是智能体名称
+     */
+    public void setAIAgentName(String AIAgentName) {
+        this.AIAgentName = AIAgentName;
+    }
+
     public TelCdrInfo() {
     }
 
@@ -1451,6 +1497,12 @@ NotExists
                 this.VoicemailAsrURL[i] = new String(source.VoicemailAsrURL[i]);
             }
         }
+        if (source.AIAgentId != null) {
+            this.AIAgentId = new Long(source.AIAgentId);
+        }
+        if (source.AIAgentName != null) {
+            this.AIAgentName = new String(source.AIAgentName);
+        }
     }
 
 
@@ -1496,6 +1548,8 @@ NotExists
         this.setParamSimple(map, prefix + "QueuedSkillGroupName", this.QueuedSkillGroupName);
         this.setParamArraySimple(map, prefix + "VoicemailRecordURL.", this.VoicemailRecordURL);
         this.setParamArraySimple(map, prefix + "VoicemailAsrURL.", this.VoicemailAsrURL);
+        this.setParamSimple(map, prefix + "AIAgentId", this.AIAgentId);
+        this.setParamSimple(map, prefix + "AIAgentName", this.AIAgentName);
 
     }
 }

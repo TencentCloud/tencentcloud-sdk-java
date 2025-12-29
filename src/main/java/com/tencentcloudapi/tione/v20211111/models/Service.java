@@ -182,7 +182,6 @@ public class Service extends AbstractModel {
 
     /**
     * 已废弃,以ServiceInfo中的对应为准
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceLimit")
     @Expose
@@ -190,7 +189,6 @@ public class Service extends AbstractModel {
 
     /**
     * 已废弃,以ServiceInfo中的对应为准
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScheduledAction")
     @Expose
@@ -712,10 +710,8 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Get 已废弃,以ServiceInfo中的对应为准
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已废弃,以ServiceInfo中的对应为准 
      * @return ServiceLimit 已废弃,以ServiceInfo中的对应为准
-注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     @Deprecated
@@ -725,9 +721,7 @@ DEFAULT: 其他来源
 
     /**
      * Set 已废弃,以ServiceInfo中的对应为准
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceLimit 已废弃,以ServiceInfo中的对应为准
-注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     @Deprecated
@@ -736,10 +730,8 @@ DEFAULT: 其他来源
     }
 
     /**
-     * Get 已废弃,以ServiceInfo中的对应为准
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已废弃,以ServiceInfo中的对应为准 
      * @return ScheduledAction 已废弃,以ServiceInfo中的对应为准
-注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     @Deprecated
@@ -749,9 +741,7 @@ DEFAULT: 其他来源
 
     /**
      * Set 已废弃,以ServiceInfo中的对应为准
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScheduledAction 已废弃,以ServiceInfo中的对应为准
-注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     @Deprecated

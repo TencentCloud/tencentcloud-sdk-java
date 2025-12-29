@@ -160,6 +160,13 @@ public class AgentToolInfo extends AbstractModel {
     private Long FinanceType;
 
     /**
+    * 工具高级设置
+    */
+    @SerializedName("ToolAdvanceConfig")
+    @Expose
+    private ToolAdvanceConfig ToolAdvanceConfig;
+
+    /**
      * Get 插件id 
      * @return PluginId 插件id
      */
@@ -475,6 +482,22 @@ public class AgentToolInfo extends AbstractModel {
         this.FinanceType = FinanceType;
     }
 
+    /**
+     * Get 工具高级设置 
+     * @return ToolAdvanceConfig 工具高级设置
+     */
+    public ToolAdvanceConfig getToolAdvanceConfig() {
+        return this.ToolAdvanceConfig;
+    }
+
+    /**
+     * Set 工具高级设置
+     * @param ToolAdvanceConfig 工具高级设置
+     */
+    public void setToolAdvanceConfig(ToolAdvanceConfig ToolAdvanceConfig) {
+        this.ToolAdvanceConfig = ToolAdvanceConfig;
+    }
+
     public AgentToolInfo() {
     }
 
@@ -552,6 +575,9 @@ public class AgentToolInfo extends AbstractModel {
         if (source.FinanceType != null) {
             this.FinanceType = new Long(source.FinanceType);
         }
+        if (source.ToolAdvanceConfig != null) {
+            this.ToolAdvanceConfig = new ToolAdvanceConfig(source.ToolAdvanceConfig);
+        }
     }
 
 
@@ -578,6 +604,7 @@ public class AgentToolInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "FinanceStatus", this.FinanceStatus);
         this.setParamSimple(map, prefix + "ToolSource", this.ToolSource);
         this.setParamSimple(map, prefix + "FinanceType", this.FinanceType);
+        this.setParamObj(map, prefix + "ToolAdvanceConfig.", this.ToolAdvanceConfig);
 
     }
 }

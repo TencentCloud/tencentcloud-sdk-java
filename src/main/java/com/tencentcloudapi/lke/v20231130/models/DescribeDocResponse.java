@@ -239,7 +239,7 @@ public class DescribeDocResponse extends AbstractModel {
     private String [] CateNamePath;
 
     /**
-    * 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+    * 文档生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
     */
     @SerializedName("EnableScope")
     @Expose
@@ -753,16 +753,16 @@ public class DescribeDocResponse extends AbstractModel {
     }
 
     /**
-     * Get 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域 
-     * @return EnableScope 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     * Get 文档生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效 
+     * @return EnableScope 文档生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
      */
     public Long getEnableScope() {
         return this.EnableScope;
     }
 
     /**
-     * Set 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
-     * @param EnableScope 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     * Set 文档生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
+     * @param EnableScope 文档生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
      */
     public void setEnableScope(Long EnableScope) {
         this.EnableScope = EnableScope;

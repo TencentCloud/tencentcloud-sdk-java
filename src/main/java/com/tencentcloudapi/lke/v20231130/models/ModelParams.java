@@ -87,6 +87,24 @@ public class ModelParams extends AbstractModel {
     private String ReplyFormat;
 
     /**
+    * 深度思考值
+disabled
+enabled
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeepThinking")
+    @Expose
+    private String DeepThinking;
+
+    /**
+    * 效果 disabled low medium high
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReasoningEffort")
+    @Expose
+    private String ReasoningEffort;
+
+    /**
      * Get 温度 
      * @return Temperature 温度
      */
@@ -230,6 +248,54 @@ public class ModelParams extends AbstractModel {
         this.ReplyFormat = ReplyFormat;
     }
 
+    /**
+     * Get 深度思考值
+disabled
+enabled
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeepThinking 深度思考值
+disabled
+enabled
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDeepThinking() {
+        return this.DeepThinking;
+    }
+
+    /**
+     * Set 深度思考值
+disabled
+enabled
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeepThinking 深度思考值
+disabled
+enabled
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeepThinking(String DeepThinking) {
+        this.DeepThinking = DeepThinking;
+    }
+
+    /**
+     * Get 效果 disabled low medium high
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReasoningEffort 效果 disabled low medium high
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getReasoningEffort() {
+        return this.ReasoningEffort;
+    }
+
+    /**
+     * Set 效果 disabled low medium high
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReasoningEffort 效果 disabled low medium high
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReasoningEffort(String ReasoningEffort) {
+        this.ReasoningEffort = ReasoningEffort;
+    }
+
     public ModelParams() {
     }
 
@@ -268,6 +334,12 @@ public class ModelParams extends AbstractModel {
         if (source.ReplyFormat != null) {
             this.ReplyFormat = new String(source.ReplyFormat);
         }
+        if (source.DeepThinking != null) {
+            this.DeepThinking = new String(source.DeepThinking);
+        }
+        if (source.ReasoningEffort != null) {
+            this.ReasoningEffort = new String(source.ReasoningEffort);
+        }
     }
 
 
@@ -284,6 +356,8 @@ public class ModelParams extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxTokens", this.MaxTokens);
         this.setParamArraySimple(map, prefix + "StopSequences.", this.StopSequences);
         this.setParamSimple(map, prefix + "ReplyFormat", this.ReplyFormat);
+        this.setParamSimple(map, prefix + "DeepThinking", this.DeepThinking);
+        this.setParamSimple(map, prefix + "ReasoningEffort", this.ReasoningEffort);
 
     }
 }

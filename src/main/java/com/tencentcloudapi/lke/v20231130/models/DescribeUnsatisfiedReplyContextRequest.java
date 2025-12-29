@@ -31,7 +31,7 @@ public class DescribeUnsatisfiedReplyContextRequest extends AbstractModel {
     private String BotBizId;
 
     /**
-    * 回复ID，调用这个接口获得：[ListUnsatisfiedReply](https://capi.woa.com/api/detail?product=lke&version=2023-11-30&action=ListUnsatisfiedReply) 
+    * 回复ID
     */
     @SerializedName("ReplyBizId")
     @Expose
@@ -68,16 +68,16 @@ public class DescribeUnsatisfiedReplyContextRequest extends AbstractModel {
     }
 
     /**
-     * Get 回复ID，调用这个接口获得：[ListUnsatisfiedReply](https://capi.woa.com/api/detail?product=lke&version=2023-11-30&action=ListUnsatisfiedReply)  
-     * @return ReplyBizId 回复ID，调用这个接口获得：[ListUnsatisfiedReply](https://capi.woa.com/api/detail?product=lke&version=2023-11-30&action=ListUnsatisfiedReply) 
+     * Get 回复ID 
+     * @return ReplyBizId 回复ID
      */
     public String getReplyBizId() {
         return this.ReplyBizId;
     }
 
     /**
-     * Set 回复ID，调用这个接口获得：[ListUnsatisfiedReply](https://capi.woa.com/api/detail?product=lke&version=2023-11-30&action=ListUnsatisfiedReply) 
-     * @param ReplyBizId 回复ID，调用这个接口获得：[ListUnsatisfiedReply](https://capi.woa.com/api/detail?product=lke&version=2023-11-30&action=ListUnsatisfiedReply) 
+     * Set 回复ID
+     * @param ReplyBizId 回复ID
      */
     public void setReplyBizId(String ReplyBizId) {
         this.ReplyBizId = ReplyBizId;

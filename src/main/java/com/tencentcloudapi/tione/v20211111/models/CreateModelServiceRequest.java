@@ -341,6 +341,13 @@ HYBRID_PAID:
     private VolumeMount [] VolumeMounts;
 
     /**
+    * 调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用
+    */
+    @SerializedName("SchedulingStrategy")
+    @Expose
+    private String SchedulingStrategy;
+
+    /**
      * Get 新增版本时需要填写 
      * @return ServiceGroupId 新增版本时需要填写
      */
@@ -1104,6 +1111,22 @@ HYBRID_PAID:
         this.VolumeMounts = VolumeMounts;
     }
 
+    /**
+     * Get 调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用 
+     * @return SchedulingStrategy 调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用
+     */
+    public String getSchedulingStrategy() {
+        return this.SchedulingStrategy;
+    }
+
+    /**
+     * Set 调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用
+     * @param SchedulingStrategy 调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用
+     */
+    public void setSchedulingStrategy(String SchedulingStrategy) {
+        this.SchedulingStrategy = SchedulingStrategy;
+    }
+
     public CreateModelServiceRequest() {
     }
 
@@ -1253,6 +1276,9 @@ HYBRID_PAID:
                 this.VolumeMounts[i] = new VolumeMount(source.VolumeMounts[i]);
             }
         }
+        if (source.SchedulingStrategy != null) {
+            this.SchedulingStrategy = new String(source.SchedulingStrategy);
+        }
     }
 
 
@@ -1302,6 +1328,7 @@ HYBRID_PAID:
         this.setParamObj(map, prefix + "RollingUpdate.", this.RollingUpdate);
         this.setParamObj(map, prefix + "Sidecar.", this.Sidecar);
         this.setParamArrayObj(map, prefix + "VolumeMounts.", this.VolumeMounts);
+        this.setParamSimple(map, prefix + "SchedulingStrategy", this.SchedulingStrategy);
 
     }
 }

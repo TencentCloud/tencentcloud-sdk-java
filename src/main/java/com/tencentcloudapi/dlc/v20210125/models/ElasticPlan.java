@@ -59,6 +59,13 @@ public class ElasticPlan extends AbstractModel {
     private String EndTime;
 
     /**
+    * 分时弹性上限
+    */
+    @SerializedName("ElasticLimit")
+    @Expose
+    private Long ElasticLimit;
+
+    /**
      * Get 最小集群数 
      * @return MinElasticClusters 最小集群数
      */
@@ -138,6 +145,22 @@ public class ElasticPlan extends AbstractModel {
         this.EndTime = EndTime;
     }
 
+    /**
+     * Get 分时弹性上限 
+     * @return ElasticLimit 分时弹性上限
+     */
+    public Long getElasticLimit() {
+        return this.ElasticLimit;
+    }
+
+    /**
+     * Set 分时弹性上限
+     * @param ElasticLimit 分时弹性上限
+     */
+    public void setElasticLimit(Long ElasticLimit) {
+        this.ElasticLimit = ElasticLimit;
+    }
+
     public ElasticPlan() {
     }
 
@@ -161,6 +184,9 @@ public class ElasticPlan extends AbstractModel {
         if (source.EndTime != null) {
             this.EndTime = new String(source.EndTime);
         }
+        if (source.ElasticLimit != null) {
+            this.ElasticLimit = new Long(source.ElasticLimit);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class ElasticPlan extends AbstractModel {
         this.setParamSimple(map, prefix + "TolerableQueueTime", this.TolerableQueueTime);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "ElasticLimit", this.ElasticLimit);
 
     }
 }

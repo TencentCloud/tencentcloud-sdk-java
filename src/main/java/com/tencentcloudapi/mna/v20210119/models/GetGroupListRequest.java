@@ -25,6 +25,7 @@ public class GetGroupListRequest extends AbstractModel {
 
     /**
     * 每页显示记录数，PageSize、PageNumber值均为-1 时，按照1页无限制条数匹配所有设备
+示例值：10
     */
     @SerializedName("PageSize")
     @Expose
@@ -32,6 +33,7 @@ public class GetGroupListRequest extends AbstractModel {
 
     /**
     * 当前查看页码，PageSize、PageNumber值均为-1 时，按照1页无限制条数匹配所有设备
+示例值：1
     */
     @SerializedName("PageNumber")
     @Expose
@@ -45,8 +47,10 @@ public class GetGroupListRequest extends AbstractModel {
     private String Keyword;
 
     /**
-     * Get 每页显示记录数，PageSize、PageNumber值均为-1 时，按照1页无限制条数匹配所有设备 
+     * Get 每页显示记录数，PageSize、PageNumber值均为-1 时，按照1页无限制条数匹配所有设备
+示例值：10 
      * @return PageSize 每页显示记录数，PageSize、PageNumber值均为-1 时，按照1页无限制条数匹配所有设备
+示例值：10
      */
     public Long getPageSize() {
         return this.PageSize;
@@ -54,15 +58,19 @@ public class GetGroupListRequest extends AbstractModel {
 
     /**
      * Set 每页显示记录数，PageSize、PageNumber值均为-1 时，按照1页无限制条数匹配所有设备
+示例值：10
      * @param PageSize 每页显示记录数，PageSize、PageNumber值均为-1 时，按照1页无限制条数匹配所有设备
+示例值：10
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 当前查看页码，PageSize、PageNumber值均为-1 时，按照1页无限制条数匹配所有设备 
+     * Get 当前查看页码，PageSize、PageNumber值均为-1 时，按照1页无限制条数匹配所有设备
+示例值：1 
      * @return PageNumber 当前查看页码，PageSize、PageNumber值均为-1 时，按照1页无限制条数匹配所有设备
+示例值：1
      */
     public Long getPageNumber() {
         return this.PageNumber;
@@ -70,7 +78,9 @@ public class GetGroupListRequest extends AbstractModel {
 
     /**
      * Set 当前查看页码，PageSize、PageNumber值均为-1 时，按照1页无限制条数匹配所有设备
+示例值：1
      * @param PageNumber 当前查看页码，PageSize、PageNumber值均为-1 时，按照1页无限制条数匹配所有设备
+示例值：1
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;

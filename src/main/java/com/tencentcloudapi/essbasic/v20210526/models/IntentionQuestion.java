@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class IntentionQuestion extends AbstractModel {
 
     /**
-    * 当选择语音问答模式时，系统自动播报的问题文本，最大长度为150个字符。
+    * 当选择语音问答模式时，系统自动播报的问题文本，最大长度为250个字符。
     */
     @SerializedName("Question")
     @Expose
@@ -38,16 +38,16 @@ public class IntentionQuestion extends AbstractModel {
     private String [] Answers;
 
     /**
-     * Get 当选择语音问答模式时，系统自动播报的问题文本，最大长度为150个字符。 
-     * @return Question 当选择语音问答模式时，系统自动播报的问题文本，最大长度为150个字符。
+     * Get 当选择语音问答模式时，系统自动播报的问题文本，最大长度为250个字符。 
+     * @return Question 当选择语音问答模式时，系统自动播报的问题文本，最大长度为250个字符。
      */
     public String getQuestion() {
         return this.Question;
     }
 
     /**
-     * Set 当选择语音问答模式时，系统自动播报的问题文本，最大长度为150个字符。
-     * @param Question 当选择语音问答模式时，系统自动播报的问题文本，最大长度为150个字符。
+     * Set 当选择语音问答模式时，系统自动播报的问题文本，最大长度为250个字符。
+     * @param Question 当选择语音问答模式时，系统自动播报的问题文本，最大长度为250个字符。
      */
     public void setQuestion(String Question) {
         this.Question = Question;

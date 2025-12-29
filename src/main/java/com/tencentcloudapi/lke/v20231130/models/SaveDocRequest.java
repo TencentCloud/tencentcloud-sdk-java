@@ -265,7 +265,8 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
     private UpdatePeriodInfo UpdatePeriodInfo;
 
     /**
-    * 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+    * 文档生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
+默认值：应用内默认知识库为2，共享知识库为4。
     */
     @SerializedName("EnableScope")
     @Expose
@@ -984,16 +985,20 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
     }
 
     /**
-     * Get 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域 
-     * @return EnableScope 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     * Get 文档生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
+默认值：应用内默认知识库为2，共享知识库为4。 
+     * @return EnableScope 文档生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
+默认值：应用内默认知识库为2，共享知识库为4。
      */
     public Long getEnableScope() {
         return this.EnableScope;
     }
 
     /**
-     * Set 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
-     * @param EnableScope 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     * Set 文档生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
+默认值：应用内默认知识库为2，共享知识库为4。
+     * @param EnableScope 文档生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
+默认值：应用内默认知识库为2，共享知识库为4。
      */
     public void setEnableScope(Long EnableScope) {
         this.EnableScope = EnableScope;

@@ -265,7 +265,7 @@ public class DescribeQAResponse extends AbstractModel {
     private String [] CateNamePath;
 
     /**
-    * 问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+    * 问答生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableScope")
@@ -273,7 +273,8 @@ public class DescribeQAResponse extends AbstractModel {
     private Long EnableScope;
 
     /**
-    * 问答关联的文档生效域
+    * 问答关联的文档生效域:1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效.
+若问答未关联文档，则该字段值同问答生效域
     */
     @SerializedName("DocEnableScope")
     @Expose
@@ -867,9 +868,9 @@ public class DescribeQAResponse extends AbstractModel {
     }
 
     /**
-     * Get 问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     * Get 问答生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EnableScope 问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     * @return EnableScope 问答生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEnableScope() {
@@ -877,9 +878,9 @@ public class DescribeQAResponse extends AbstractModel {
     }
 
     /**
-     * Set 问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     * Set 问答生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EnableScope 问答生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     * @param EnableScope 问答生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableScope(Long EnableScope) {
@@ -887,16 +888,20 @@ public class DescribeQAResponse extends AbstractModel {
     }
 
     /**
-     * Get 问答关联的文档生效域 
-     * @return DocEnableScope 问答关联的文档生效域
+     * Get 问答关联的文档生效域:1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效.
+若问答未关联文档，则该字段值同问答生效域 
+     * @return DocEnableScope 问答关联的文档生效域:1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效.
+若问答未关联文档，则该字段值同问答生效域
      */
     public Long getDocEnableScope() {
         return this.DocEnableScope;
     }
 
     /**
-     * Set 问答关联的文档生效域
-     * @param DocEnableScope 问答关联的文档生效域
+     * Set 问答关联的文档生效域:1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效.
+若问答未关联文档，则该字段值同问答生效域
+     * @param DocEnableScope 问答关联的文档生效域:1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效.
+若问答未关联文档，则该字段值同问答生效域
      */
     public void setDocEnableScope(Long DocEnableScope) {
         this.DocEnableScope = DocEnableScope;

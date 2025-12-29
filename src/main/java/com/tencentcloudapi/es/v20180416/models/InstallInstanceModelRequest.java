@@ -52,6 +52,34 @@ public class InstallInstanceModelRequest extends AbstractModel {
     private String [] TaskTypes;
 
     /**
+    * HuggingFace模型名称
+    */
+    @SerializedName("HuggingFaceModelNames")
+    @Expose
+    private String [] HuggingFaceModelNames;
+
+    /**
+    * 模型描述
+    */
+    @SerializedName("ModelDescription")
+    @Expose
+    private String ModelDescription;
+
+    /**
+    * 模型来源：UserModel、HuggingFace和PlatformModel
+    */
+    @SerializedName("ModelSourceType")
+    @Expose
+    private String ModelSourceType;
+
+    /**
+    * 已上传的模型路径
+    */
+    @SerializedName("UploadedCosPaths")
+    @Expose
+    private String [] UploadedCosPaths;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -115,6 +143,70 @@ public class InstallInstanceModelRequest extends AbstractModel {
         this.TaskTypes = TaskTypes;
     }
 
+    /**
+     * Get HuggingFace模型名称 
+     * @return HuggingFaceModelNames HuggingFace模型名称
+     */
+    public String [] getHuggingFaceModelNames() {
+        return this.HuggingFaceModelNames;
+    }
+
+    /**
+     * Set HuggingFace模型名称
+     * @param HuggingFaceModelNames HuggingFace模型名称
+     */
+    public void setHuggingFaceModelNames(String [] HuggingFaceModelNames) {
+        this.HuggingFaceModelNames = HuggingFaceModelNames;
+    }
+
+    /**
+     * Get 模型描述 
+     * @return ModelDescription 模型描述
+     */
+    public String getModelDescription() {
+        return this.ModelDescription;
+    }
+
+    /**
+     * Set 模型描述
+     * @param ModelDescription 模型描述
+     */
+    public void setModelDescription(String ModelDescription) {
+        this.ModelDescription = ModelDescription;
+    }
+
+    /**
+     * Get 模型来源：UserModel、HuggingFace和PlatformModel 
+     * @return ModelSourceType 模型来源：UserModel、HuggingFace和PlatformModel
+     */
+    public String getModelSourceType() {
+        return this.ModelSourceType;
+    }
+
+    /**
+     * Set 模型来源：UserModel、HuggingFace和PlatformModel
+     * @param ModelSourceType 模型来源：UserModel、HuggingFace和PlatformModel
+     */
+    public void setModelSourceType(String ModelSourceType) {
+        this.ModelSourceType = ModelSourceType;
+    }
+
+    /**
+     * Get 已上传的模型路径 
+     * @return UploadedCosPaths 已上传的模型路径
+     */
+    public String [] getUploadedCosPaths() {
+        return this.UploadedCosPaths;
+    }
+
+    /**
+     * Set 已上传的模型路径
+     * @param UploadedCosPaths 已上传的模型路径
+     */
+    public void setUploadedCosPaths(String [] UploadedCosPaths) {
+        this.UploadedCosPaths = UploadedCosPaths;
+    }
+
     public InstallInstanceModelRequest() {
     }
 
@@ -144,6 +236,24 @@ public class InstallInstanceModelRequest extends AbstractModel {
                 this.TaskTypes[i] = new String(source.TaskTypes[i]);
             }
         }
+        if (source.HuggingFaceModelNames != null) {
+            this.HuggingFaceModelNames = new String[source.HuggingFaceModelNames.length];
+            for (int i = 0; i < source.HuggingFaceModelNames.length; i++) {
+                this.HuggingFaceModelNames[i] = new String(source.HuggingFaceModelNames[i]);
+            }
+        }
+        if (source.ModelDescription != null) {
+            this.ModelDescription = new String(source.ModelDescription);
+        }
+        if (source.ModelSourceType != null) {
+            this.ModelSourceType = new String(source.ModelSourceType);
+        }
+        if (source.UploadedCosPaths != null) {
+            this.UploadedCosPaths = new String[source.UploadedCosPaths.length];
+            for (int i = 0; i < source.UploadedCosPaths.length; i++) {
+                this.UploadedCosPaths[i] = new String(source.UploadedCosPaths[i]);
+            }
+        }
     }
 
 
@@ -155,6 +265,10 @@ public class InstallInstanceModelRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "UsrCosModelUrlList.", this.UsrCosModelUrlList);
         this.setParamArraySimple(map, prefix + "ModelNames.", this.ModelNames);
         this.setParamArraySimple(map, prefix + "TaskTypes.", this.TaskTypes);
+        this.setParamArraySimple(map, prefix + "HuggingFaceModelNames.", this.HuggingFaceModelNames);
+        this.setParamSimple(map, prefix + "ModelDescription", this.ModelDescription);
+        this.setParamSimple(map, prefix + "ModelSourceType", this.ModelSourceType);
+        this.setParamArraySimple(map, prefix + "UploadedCosPaths.", this.UploadedCosPaths);
 
     }
 }

@@ -232,6 +232,22 @@ public class MsgRecord extends AbstractModel {
     private WorkflowInfo WorkFlow;
 
     /**
+    * Widget信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Widgets")
+    @Expose
+    private Widget [] Widgets;
+
+    /**
+    * Widget动作信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WidgetAction")
+    @Expose
+    private WidgetAction WidgetAction;
+
+    /**
      * Get 内容 
      * @return Content 内容
      */
@@ -751,6 +767,46 @@ public class MsgRecord extends AbstractModel {
         this.WorkFlow = WorkFlow;
     }
 
+    /**
+     * Get Widget信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Widgets Widget信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Widget [] getWidgets() {
+        return this.Widgets;
+    }
+
+    /**
+     * Set Widget信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Widgets Widget信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWidgets(Widget [] Widgets) {
+        this.Widgets = Widgets;
+    }
+
+    /**
+     * Get Widget动作信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WidgetAction Widget动作信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public WidgetAction getWidgetAction() {
+        return this.WidgetAction;
+    }
+
+    /**
+     * Set Widget动作信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WidgetAction Widget动作信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWidgetAction(WidgetAction WidgetAction) {
+        this.WidgetAction = WidgetAction;
+    }
+
     public MsgRecord() {
     }
 
@@ -855,6 +911,15 @@ public class MsgRecord extends AbstractModel {
         if (source.WorkFlow != null) {
             this.WorkFlow = new WorkflowInfo(source.WorkFlow);
         }
+        if (source.Widgets != null) {
+            this.Widgets = new Widget[source.Widgets.length];
+            for (int i = 0; i < source.Widgets.length; i++) {
+                this.Widgets[i] = new Widget(source.Widgets[i]);
+            }
+        }
+        if (source.WidgetAction != null) {
+            this.WidgetAction = new WidgetAction(source.WidgetAction);
+        }
     }
 
 
@@ -888,6 +953,8 @@ public class MsgRecord extends AbstractModel {
         this.setParamObj(map, prefix + "AgentThought.", this.AgentThought);
         this.setParamObj(map, prefix + "ExtraInfo.", this.ExtraInfo);
         this.setParamObj(map, prefix + "WorkFlow.", this.WorkFlow);
+        this.setParamArrayObj(map, prefix + "Widgets.", this.Widgets);
+        this.setParamObj(map, prefix + "WidgetAction.", this.WidgetAction);
 
     }
 }

@@ -31,6 +31,14 @@ public class SmartOptimizerWrittenPolicy extends AbstractModel {
     private String WrittenEnable;
 
     /**
+    * 用户自定义高级参数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AdvancePolicy")
+    @Expose
+    private WrittenAdvancePolicy AdvancePolicy;
+
+    /**
      * Get none/enable/disable/default 
      * @return WrittenEnable none/enable/disable/default
      */
@@ -46,6 +54,26 @@ public class SmartOptimizerWrittenPolicy extends AbstractModel {
         this.WrittenEnable = WrittenEnable;
     }
 
+    /**
+     * Get 用户自定义高级参数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AdvancePolicy 用户自定义高级参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public WrittenAdvancePolicy getAdvancePolicy() {
+        return this.AdvancePolicy;
+    }
+
+    /**
+     * Set 用户自定义高级参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AdvancePolicy 用户自定义高级参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAdvancePolicy(WrittenAdvancePolicy AdvancePolicy) {
+        this.AdvancePolicy = AdvancePolicy;
+    }
+
     public SmartOptimizerWrittenPolicy() {
     }
 
@@ -57,6 +85,9 @@ public class SmartOptimizerWrittenPolicy extends AbstractModel {
         if (source.WrittenEnable != null) {
             this.WrittenEnable = new String(source.WrittenEnable);
         }
+        if (source.AdvancePolicy != null) {
+            this.AdvancePolicy = new WrittenAdvancePolicy(source.AdvancePolicy);
+        }
     }
 
 
@@ -65,6 +96,7 @@ public class SmartOptimizerWrittenPolicy extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "WrittenEnable", this.WrittenEnable);
+        this.setParamObj(map, prefix + "AdvancePolicy.", this.AdvancePolicy);
 
     }
 }

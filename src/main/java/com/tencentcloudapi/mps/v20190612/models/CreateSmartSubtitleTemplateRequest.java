@@ -355,7 +355,6 @@ ASR识别和纯字幕翻译当前支持以下语言：
 `iw`：希伯来语
 `ja`：日语
 `jv`：爪哇语
-`jw`：爪哇语
 `ka`：格鲁吉亚语
 `kk`：哈萨克语
 `km`：高棉语
@@ -442,7 +441,6 @@ ASR识别和纯字幕翻译当前支持以下语言：
 `th`：泰语
 `ti`：提格里尼亚语
 `tk`：土库曼语
-`tl`：菲律宾语（塔加拉语）
 `tn`：茨瓦纳语
 `tr`：土耳其语
 `ts`：聪加语
@@ -478,6 +476,13 @@ ASR识别和纯字幕翻译当前支持以下语言：
     @SerializedName("ProcessType")
     @Expose
     private Long ProcessType;
+
+    /**
+    * 字幕OCR提取框选区域配置
+    */
+    @SerializedName("SelectingSubtitleAreasConfig")
+    @Expose
+    private SelectingSubtitleAreasConfig SelectingSubtitleAreasConfig;
 
     /**
      * Get 智能字幕模板名称
@@ -1453,7 +1458,6 @@ ASR识别和纯字幕翻译当前支持以下语言：
 `iw`：希伯来语
 `ja`：日语
 `jv`：爪哇语
-`jw`：爪哇语
 `ka`：格鲁吉亚语
 `kk`：哈萨克语
 `km`：高棉语
@@ -1540,7 +1544,6 @@ ASR识别和纯字幕翻译当前支持以下语言：
 `th`：泰语
 `ti`：提格里尼亚语
 `tk`：土库曼语
-`tl`：菲律宾语（塔加拉语）
 `tn`：茨瓦纳语
 `tr`：土耳其语
 `ts`：聪加语
@@ -1649,7 +1652,6 @@ ASR识别和纯字幕翻译当前支持以下语言：
 `iw`：希伯来语
 `ja`：日语
 `jv`：爪哇语
-`jw`：爪哇语
 `ka`：格鲁吉亚语
 `kk`：哈萨克语
 `km`：高棉语
@@ -1736,7 +1738,6 @@ ASR识别和纯字幕翻译当前支持以下语言：
 `th`：泰语
 `ti`：提格里尼亚语
 `tk`：土库曼语
-`tl`：菲律宾语（塔加拉语）
 `tn`：茨瓦纳语
 `tr`：土耳其语
 `ts`：聪加语
@@ -1851,7 +1852,6 @@ ASR识别和纯字幕翻译当前支持以下语言：
 `iw`：希伯来语
 `ja`：日语
 `jv`：爪哇语
-`jw`：爪哇语
 `ka`：格鲁吉亚语
 `kk`：哈萨克语
 `km`：高棉语
@@ -1938,7 +1938,6 @@ ASR识别和纯字幕翻译当前支持以下语言：
 `th`：泰语
 `ti`：提格里尼亚语
 `tk`：土库曼语
-`tl`：菲律宾语（塔加拉语）
 `tn`：茨瓦纳语
 `tr`：土耳其语
 `ts`：聪加语
@@ -2047,7 +2046,6 @@ ASR识别和纯字幕翻译当前支持以下语言：
 `iw`：希伯来语
 `ja`：日语
 `jv`：爪哇语
-`jw`：爪哇语
 `ka`：格鲁吉亚语
 `kk`：哈萨克语
 `km`：高棉语
@@ -2134,7 +2132,6 @@ ASR识别和纯字幕翻译当前支持以下语言：
 `th`：泰语
 `ti`：提格里尼亚语
 `tk`：土库曼语
-`tl`：菲律宾语（塔加拉语）
 `tn`：茨瓦纳语
 `tr`：土耳其语
 `ts`：聪加语
@@ -2195,6 +2192,22 @@ ASR识别和纯字幕翻译当前支持以下语言：
         this.ProcessType = ProcessType;
     }
 
+    /**
+     * Get 字幕OCR提取框选区域配置 
+     * @return SelectingSubtitleAreasConfig 字幕OCR提取框选区域配置
+     */
+    public SelectingSubtitleAreasConfig getSelectingSubtitleAreasConfig() {
+        return this.SelectingSubtitleAreasConfig;
+    }
+
+    /**
+     * Set 字幕OCR提取框选区域配置
+     * @param SelectingSubtitleAreasConfig 字幕OCR提取框选区域配置
+     */
+    public void setSelectingSubtitleAreasConfig(SelectingSubtitleAreasConfig SelectingSubtitleAreasConfig) {
+        this.SelectingSubtitleAreasConfig = SelectingSubtitleAreasConfig;
+    }
+
     public CreateSmartSubtitleTemplateRequest() {
     }
 
@@ -2230,6 +2243,9 @@ ASR识别和纯字幕翻译当前支持以下语言：
         if (source.ProcessType != null) {
             this.ProcessType = new Long(source.ProcessType);
         }
+        if (source.SelectingSubtitleAreasConfig != null) {
+            this.SelectingSubtitleAreasConfig = new SelectingSubtitleAreasConfig(source.SelectingSubtitleAreasConfig);
+        }
     }
 
 
@@ -2246,6 +2262,7 @@ ASR识别和纯字幕翻译当前支持以下语言：
         this.setParamSimple(map, prefix + "TranslateSwitch", this.TranslateSwitch);
         this.setParamSimple(map, prefix + "TranslateDstLanguage", this.TranslateDstLanguage);
         this.setParamSimple(map, prefix + "ProcessType", this.ProcessType);
+        this.setParamObj(map, prefix + "SelectingSubtitleAreasConfig.", this.SelectingSubtitleAreasConfig);
 
     }
 }

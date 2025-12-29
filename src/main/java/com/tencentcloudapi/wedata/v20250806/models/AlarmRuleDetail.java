@@ -85,6 +85,38 @@ public class AlarmRuleDetail extends AbstractModel {
     private MonitorWhiteTask [] MonitorWhiteTasks;
 
     /**
+    * 3.0 Workflow 完成时间（周期）告警策略
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WorkflowCompletionTimeCycleExtInfo")
+    @Expose
+    private TimeOutStrategyInfo [] WorkflowCompletionTimeCycleExtInfo;
+
+    /**
+    * 工作流执行触发告警条件
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WorkflowExecutionTrigger")
+    @Expose
+    private Long WorkflowExecutionTrigger;
+
+    /**
+    * 工作流执行失败告警条件
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WorkflowExecutionFailureTrigger")
+    @Expose
+    private Long WorkflowExecutionFailureTrigger;
+
+    /**
+    * 工作流执行成功告警条件
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WorkflowExecutionSuccessTrigger")
+    @Expose
+    private Long WorkflowExecutionSuccessTrigger;
+
+    /**
      * Get 失败触发时机 
 
 1 – 首次失败触发
@@ -244,6 +276,86 @@ public class AlarmRuleDetail extends AbstractModel {
         this.MonitorWhiteTasks = MonitorWhiteTasks;
     }
 
+    /**
+     * Get 3.0 Workflow 完成时间（周期）告警策略
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WorkflowCompletionTimeCycleExtInfo 3.0 Workflow 完成时间（周期）告警策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TimeOutStrategyInfo [] getWorkflowCompletionTimeCycleExtInfo() {
+        return this.WorkflowCompletionTimeCycleExtInfo;
+    }
+
+    /**
+     * Set 3.0 Workflow 完成时间（周期）告警策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WorkflowCompletionTimeCycleExtInfo 3.0 Workflow 完成时间（周期）告警策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWorkflowCompletionTimeCycleExtInfo(TimeOutStrategyInfo [] WorkflowCompletionTimeCycleExtInfo) {
+        this.WorkflowCompletionTimeCycleExtInfo = WorkflowCompletionTimeCycleExtInfo;
+    }
+
+    /**
+     * Get 工作流执行触发告警条件
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WorkflowExecutionTrigger 工作流执行触发告警条件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getWorkflowExecutionTrigger() {
+        return this.WorkflowExecutionTrigger;
+    }
+
+    /**
+     * Set 工作流执行触发告警条件
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WorkflowExecutionTrigger 工作流执行触发告警条件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWorkflowExecutionTrigger(Long WorkflowExecutionTrigger) {
+        this.WorkflowExecutionTrigger = WorkflowExecutionTrigger;
+    }
+
+    /**
+     * Get 工作流执行失败告警条件
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WorkflowExecutionFailureTrigger 工作流执行失败告警条件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getWorkflowExecutionFailureTrigger() {
+        return this.WorkflowExecutionFailureTrigger;
+    }
+
+    /**
+     * Set 工作流执行失败告警条件
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WorkflowExecutionFailureTrigger 工作流执行失败告警条件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWorkflowExecutionFailureTrigger(Long WorkflowExecutionFailureTrigger) {
+        this.WorkflowExecutionFailureTrigger = WorkflowExecutionFailureTrigger;
+    }
+
+    /**
+     * Get 工作流执行成功告警条件
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WorkflowExecutionSuccessTrigger 工作流执行成功告警条件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getWorkflowExecutionSuccessTrigger() {
+        return this.WorkflowExecutionSuccessTrigger;
+    }
+
+    /**
+     * Set 工作流执行成功告警条件
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WorkflowExecutionSuccessTrigger 工作流执行成功告警条件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWorkflowExecutionSuccessTrigger(Long WorkflowExecutionSuccessTrigger) {
+        this.WorkflowExecutionSuccessTrigger = WorkflowExecutionSuccessTrigger;
+    }
+
     public AlarmRuleDetail() {
     }
 
@@ -288,6 +400,21 @@ public class AlarmRuleDetail extends AbstractModel {
                 this.MonitorWhiteTasks[i] = new MonitorWhiteTask(source.MonitorWhiteTasks[i]);
             }
         }
+        if (source.WorkflowCompletionTimeCycleExtInfo != null) {
+            this.WorkflowCompletionTimeCycleExtInfo = new TimeOutStrategyInfo[source.WorkflowCompletionTimeCycleExtInfo.length];
+            for (int i = 0; i < source.WorkflowCompletionTimeCycleExtInfo.length; i++) {
+                this.WorkflowCompletionTimeCycleExtInfo[i] = new TimeOutStrategyInfo(source.WorkflowCompletionTimeCycleExtInfo[i]);
+            }
+        }
+        if (source.WorkflowExecutionTrigger != null) {
+            this.WorkflowExecutionTrigger = new Long(source.WorkflowExecutionTrigger);
+        }
+        if (source.WorkflowExecutionFailureTrigger != null) {
+            this.WorkflowExecutionFailureTrigger = new Long(source.WorkflowExecutionFailureTrigger);
+        }
+        if (source.WorkflowExecutionSuccessTrigger != null) {
+            this.WorkflowExecutionSuccessTrigger = new Long(source.WorkflowExecutionSuccessTrigger);
+        }
     }
 
 
@@ -302,6 +429,10 @@ public class AlarmRuleDetail extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ProjectInstanceStatisticsAlarmInfoList.", this.ProjectInstanceStatisticsAlarmInfoList);
         this.setParamArrayObj(map, prefix + "ReconciliationExtInfo.", this.ReconciliationExtInfo);
         this.setParamArrayObj(map, prefix + "MonitorWhiteTasks.", this.MonitorWhiteTasks);
+        this.setParamArrayObj(map, prefix + "WorkflowCompletionTimeCycleExtInfo.", this.WorkflowCompletionTimeCycleExtInfo);
+        this.setParamSimple(map, prefix + "WorkflowExecutionTrigger", this.WorkflowExecutionTrigger);
+        this.setParamSimple(map, prefix + "WorkflowExecutionFailureTrigger", this.WorkflowExecutionFailureTrigger);
+        this.setParamSimple(map, prefix + "WorkflowExecutionSuccessTrigger", this.WorkflowExecutionSuccessTrigger);
 
     }
 }

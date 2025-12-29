@@ -93,7 +93,7 @@ public class DescribeServiceNodeInfosRequest extends AbstractModel {
     private String HealthStateId;
 
     /**
-    * 服务组件名称，都是大写例如YARN
+    * 服务组件名称应采用全大写形式（例如：YARN），api调用时须与 ServiceGroupType 在两者之中任选其一并保证必填。
     */
     @SerializedName("ServiceName")
     @Expose
@@ -303,16 +303,16 @@ public class DescribeServiceNodeInfosRequest extends AbstractModel {
     }
 
     /**
-     * Get 服务组件名称，都是大写例如YARN 
-     * @return ServiceName 服务组件名称，都是大写例如YARN
+     * Get 服务组件名称应采用全大写形式（例如：YARN），api调用时须与 ServiceGroupType 在两者之中任选其一并保证必填。 
+     * @return ServiceName 服务组件名称应采用全大写形式（例如：YARN），api调用时须与 ServiceGroupType 在两者之中任选其一并保证必填。
      */
     public String getServiceName() {
         return this.ServiceName;
     }
 
     /**
-     * Set 服务组件名称，都是大写例如YARN
-     * @param ServiceName 服务组件名称，都是大写例如YARN
+     * Set 服务组件名称应采用全大写形式（例如：YARN），api调用时须与 ServiceGroupType 在两者之中任选其一并保证必填。
+     * @param ServiceName 服务组件名称应采用全大写形式（例如：YARN），api调用时须与 ServiceGroupType 在两者之中任选其一并保证必填。
      */
     public void setServiceName(String ServiceName) {
         this.ServiceName = ServiceName;

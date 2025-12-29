@@ -42,6 +42,13 @@ Base64 和 Url 必须提供一个，如果都提供以ImageUrl为准。
     private String Prompt;
 
     /**
+    * 输出视频分辨率。可选择：480p、720p、1080p。
+    */
+    @SerializedName("Resolution")
+    @Expose
+    private String Resolution;
+
+    /**
     * 为生成视频添加标识的开关，默认为1，0 需前往 控制台 申请开启显示标识自主完成方可生效。  1：添加标识；  0：不添加标识；  其他数值：默认按1处理。
     */
     @SerializedName("LogoAdd")
@@ -104,6 +111,22 @@ Base64 和 Url 必须提供一个，如果都提供以ImageUrl为准。
     }
 
     /**
+     * Get 输出视频分辨率。可选择：480p、720p、1080p。 
+     * @return Resolution 输出视频分辨率。可选择：480p、720p、1080p。
+     */
+    public String getResolution() {
+        return this.Resolution;
+    }
+
+    /**
+     * Set 输出视频分辨率。可选择：480p、720p、1080p。
+     * @param Resolution 输出视频分辨率。可选择：480p、720p、1080p。
+     */
+    public void setResolution(String Resolution) {
+        this.Resolution = Resolution;
+    }
+
+    /**
      * Get 为生成视频添加标识的开关，默认为1，0 需前往 控制台 申请开启显示标识自主完成方可生效。  1：添加标识；  0：不添加标识；  其他数值：默认按1处理。 
      * @return LogoAdd 为生成视频添加标识的开关，默认为1，0 需前往 控制台 申请开启显示标识自主完成方可生效。  1：添加标识；  0：不添加标识；  其他数值：默认按1处理。
      */
@@ -149,6 +172,9 @@ Base64 和 Url 必须提供一个，如果都提供以ImageUrl为准。
         if (source.Prompt != null) {
             this.Prompt = new String(source.Prompt);
         }
+        if (source.Resolution != null) {
+            this.Resolution = new String(source.Resolution);
+        }
         if (source.LogoAdd != null) {
             this.LogoAdd = new Long(source.LogoAdd);
         }
@@ -164,6 +190,7 @@ Base64 和 Url 必须提供一个，如果都提供以ImageUrl为准。
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Image.", this.Image);
         this.setParamSimple(map, prefix + "Prompt", this.Prompt);
+        this.setParamSimple(map, prefix + "Resolution", this.Resolution);
         this.setParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
         this.setParamObj(map, prefix + "LogoParam.", this.LogoParam);
 

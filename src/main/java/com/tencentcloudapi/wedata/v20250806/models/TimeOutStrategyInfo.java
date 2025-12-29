@@ -69,6 +69,32 @@ public class TimeOutStrategyInfo extends AbstractModel {
     private String ScheduleTimeZone;
 
     /**
+    * 秒（用于 Spark Streaming 策略）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Second")
+    @Expose
+    private Long Second;
+
+    /**
+    * 次数（用于 Spark Streaming 重试次数超限策略，ruleType=10）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Times")
+    @Expose
+    private Long Times;
+
+    /**
+    * 告警触发频率（用于 Spark Streaming 策略 ruleType=8/9/10）
+         * 单位：分钟，范围：5-1440
+         * 告警触发后，在该时间内暂停检测，避免告警风暴
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AlarmTriggerFrequency")
+    @Expose
+    private Long AlarmTriggerFrequency;
+
+    /**
      * Get 超时告警超时配置：
 
 1.预计运行耗时超时，2.预计完成时间超时，3.预计等待调度耗时超时，4.预计周期内完成但实际未完成
@@ -188,6 +214,74 @@ public class TimeOutStrategyInfo extends AbstractModel {
         this.ScheduleTimeZone = ScheduleTimeZone;
     }
 
+    /**
+     * Get 秒（用于 Spark Streaming 策略）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Second 秒（用于 Spark Streaming 策略）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSecond() {
+        return this.Second;
+    }
+
+    /**
+     * Set 秒（用于 Spark Streaming 策略）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Second 秒（用于 Spark Streaming 策略）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSecond(Long Second) {
+        this.Second = Second;
+    }
+
+    /**
+     * Get 次数（用于 Spark Streaming 重试次数超限策略，ruleType=10）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Times 次数（用于 Spark Streaming 重试次数超限策略，ruleType=10）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTimes() {
+        return this.Times;
+    }
+
+    /**
+     * Set 次数（用于 Spark Streaming 重试次数超限策略，ruleType=10）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Times 次数（用于 Spark Streaming 重试次数超限策略，ruleType=10）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTimes(Long Times) {
+        this.Times = Times;
+    }
+
+    /**
+     * Get 告警触发频率（用于 Spark Streaming 策略 ruleType=8/9/10）
+         * 单位：分钟，范围：5-1440
+         * 告警触发后，在该时间内暂停检测，避免告警风暴
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AlarmTriggerFrequency 告警触发频率（用于 Spark Streaming 策略 ruleType=8/9/10）
+         * 单位：分钟，范围：5-1440
+         * 告警触发后，在该时间内暂停检测，避免告警风暴
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAlarmTriggerFrequency() {
+        return this.AlarmTriggerFrequency;
+    }
+
+    /**
+     * Set 告警触发频率（用于 Spark Streaming 策略 ruleType=8/9/10）
+         * 单位：分钟，范围：5-1440
+         * 告警触发后，在该时间内暂停检测，避免告警风暴
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AlarmTriggerFrequency 告警触发频率（用于 Spark Streaming 策略 ruleType=8/9/10）
+         * 单位：分钟，范围：5-1440
+         * 告警触发后，在该时间内暂停检测，避免告警风暴
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAlarmTriggerFrequency(Long AlarmTriggerFrequency) {
+        this.AlarmTriggerFrequency = AlarmTriggerFrequency;
+    }
+
     public TimeOutStrategyInfo() {
     }
 
@@ -211,6 +305,15 @@ public class TimeOutStrategyInfo extends AbstractModel {
         if (source.ScheduleTimeZone != null) {
             this.ScheduleTimeZone = new String(source.ScheduleTimeZone);
         }
+        if (source.Second != null) {
+            this.Second = new Long(source.Second);
+        }
+        if (source.Times != null) {
+            this.Times = new Long(source.Times);
+        }
+        if (source.AlarmTriggerFrequency != null) {
+            this.AlarmTriggerFrequency = new Long(source.AlarmTriggerFrequency);
+        }
     }
 
 
@@ -223,6 +326,9 @@ public class TimeOutStrategyInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Hour", this.Hour);
         this.setParamSimple(map, prefix + "Min", this.Min);
         this.setParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
+        this.setParamSimple(map, prefix + "Second", this.Second);
+        this.setParamSimple(map, prefix + "Times", this.Times);
+        this.setParamSimple(map, prefix + "AlarmTriggerFrequency", this.AlarmTriggerFrequency);
 
     }
 }

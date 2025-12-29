@@ -94,6 +94,14 @@ public class WorkFlowSummary extends AbstractModel {
     private OptionCardIndex OptionCardIndex;
 
     /**
+    * 工作流多气泡输出
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Contents")
+    @Expose
+    private Content [] Contents;
+
+    /**
      * Get 工作流ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return WorkflowId 工作流ID
@@ -265,6 +273,26 @@ public class WorkFlowSummary extends AbstractModel {
         this.OptionCardIndex = OptionCardIndex;
     }
 
+    /**
+     * Get 工作流多气泡输出
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Contents 工作流多气泡输出
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Content [] getContents() {
+        return this.Contents;
+    }
+
+    /**
+     * Set 工作流多气泡输出
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Contents 工作流多气泡输出
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setContents(Content [] Contents) {
+        this.Contents = Contents;
+    }
+
     public WorkFlowSummary() {
     }
 
@@ -312,6 +340,12 @@ public class WorkFlowSummary extends AbstractModel {
         if (source.OptionCardIndex != null) {
             this.OptionCardIndex = new OptionCardIndex(source.OptionCardIndex);
         }
+        if (source.Contents != null) {
+            this.Contents = new Content[source.Contents.length];
+            for (int i = 0; i < source.Contents.length; i++) {
+                this.Contents[i] = new Content(source.Contents[i]);
+            }
+        }
     }
 
 
@@ -328,6 +362,7 @@ public class WorkFlowSummary extends AbstractModel {
         this.setParamSimple(map, prefix + "WorkflowReleaseTime", this.WorkflowReleaseTime);
         this.setParamArraySimple(map, prefix + "PendingMessages.", this.PendingMessages);
         this.setParamObj(map, prefix + "OptionCardIndex.", this.OptionCardIndex);
+        this.setParamArrayObj(map, prefix + "Contents.", this.Contents);
 
     }
 }

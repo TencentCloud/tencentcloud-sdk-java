@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyAppRequest extends AbstractModel {
 
     /**
-    * 应用 ID
+    * 应用ID, 获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。
     */
     @SerializedName("AppBizId")
     @Expose
     private String AppBizId;
 
     /**
-    * 应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classify-知识标签提取
+    * 应用类型；"knowledge_qa" 知识问答应用（包含标准模式 单工作流 Multi-Agent 等模式）
     */
     @SerializedName("AppType")
     @Expose
@@ -59,32 +59,32 @@ public class ModifyAppRequest extends AbstractModel {
     private String LoginSubAccountUin;
 
     /**
-     * Get 应用 ID 
-     * @return AppBizId 应用 ID
+     * Get 应用ID, 获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。 
+     * @return AppBizId 应用ID, 获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。
      */
     public String getAppBizId() {
         return this.AppBizId;
     }
 
     /**
-     * Set 应用 ID
-     * @param AppBizId 应用 ID
+     * Set 应用ID, 获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。
+     * @param AppBizId 应用ID, 获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。
      */
     public void setAppBizId(String AppBizId) {
         this.AppBizId = AppBizId;
     }
 
     /**
-     * Get 应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classify-知识标签提取 
-     * @return AppType 应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classify-知识标签提取
+     * Get 应用类型；"knowledge_qa" 知识问答应用（包含标准模式 单工作流 Multi-Agent 等模式） 
+     * @return AppType 应用类型；"knowledge_qa" 知识问答应用（包含标准模式 单工作流 Multi-Agent 等模式）
      */
     public String getAppType() {
         return this.AppType;
     }
 
     /**
-     * Set 应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classify-知识标签提取
-     * @param AppType 应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classify-知识标签提取
+     * Set 应用类型；"knowledge_qa" 知识问答应用（包含标准模式 单工作流 Multi-Agent 等模式）
+     * @param AppType 应用类型；"knowledge_qa" 知识问答应用（包含标准模式 单工作流 Multi-Agent 等模式）
      */
     public void setAppType(String AppType) {
         this.AppType = AppType;

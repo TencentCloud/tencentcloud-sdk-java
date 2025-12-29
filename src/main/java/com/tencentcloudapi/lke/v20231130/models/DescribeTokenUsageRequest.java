@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTokenUsageRequest extends AbstractModel {
 
     /**
-    * 腾讯云主账号
+    * 子账号标识列表，用于筛选指定子账号的统计数据，不填时查询主账号下所有子账号的汇总数据
     */
     @SerializedName("UinAccount")
     @Expose
@@ -94,37 +94,37 @@ public class DescribeTokenUsageRequest extends AbstractModel {
     private String AppType;
 
     /**
-    * 空间id
+    * 空间ID，用于限定查询范围。不填时查询所有空间的数据
     */
     @SerializedName("SpaceId")
     @Expose
     private String SpaceId;
 
     /**
-    * 开始时间戳, 单位为秒
+    * 开始时间。Unix 时间戳，单位是秒，默认为空。
     */
     @SerializedName("StatStartTime")
     @Expose
     private Long StatStartTime;
 
     /**
-    * 结束时间戳, 单位为秒
+    * 结束时间。Unix 时间戳，单位是秒，默认为空。
     */
     @SerializedName("StatEndTime")
     @Expose
     private Long StatEndTime;
 
     /**
-     * Get 腾讯云主账号 
-     * @return UinAccount 腾讯云主账号
+     * Get 子账号标识列表，用于筛选指定子账号的统计数据，不填时查询主账号下所有子账号的汇总数据 
+     * @return UinAccount 子账号标识列表，用于筛选指定子账号的统计数据，不填时查询主账号下所有子账号的汇总数据
      */
     public String [] getUinAccount() {
         return this.UinAccount;
     }
 
     /**
-     * Set 腾讯云主账号
-     * @param UinAccount 腾讯云主账号
+     * Set 子账号标识列表，用于筛选指定子账号的统计数据，不填时查询主账号下所有子账号的汇总数据
+     * @param UinAccount 子账号标识列表，用于筛选指定子账号的统计数据，不填时查询主账号下所有子账号的汇总数据
      */
     public void setUinAccount(String [] UinAccount) {
         this.UinAccount = UinAccount;
@@ -197,7 +197,9 @@ public class DescribeTokenUsageRequest extends AbstractModel {
     /**
      * Get 开始时间戳, 单位为秒(默认值0)(废弃) 
      * @return StartTime 开始时间戳, 单位为秒(默认值0)(废弃)
+     * @deprecated
      */
+    @Deprecated
     public String getStartTime() {
         return this.StartTime;
     }
@@ -205,7 +207,9 @@ public class DescribeTokenUsageRequest extends AbstractModel {
     /**
      * Set 开始时间戳, 单位为秒(默认值0)(废弃)
      * @param StartTime 开始时间戳, 单位为秒(默认值0)(废弃)
+     * @deprecated
      */
+    @Deprecated
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
@@ -213,7 +217,9 @@ public class DescribeTokenUsageRequest extends AbstractModel {
     /**
      * Get 结束时间戳, 单位为秒(默认值0， 必须大于开始时间戳)(废弃) 
      * @return EndTime 结束时间戳, 单位为秒(默认值0， 必须大于开始时间戳)(废弃)
+     * @deprecated
      */
+    @Deprecated
     public String getEndTime() {
         return this.EndTime;
     }
@@ -221,7 +227,9 @@ public class DescribeTokenUsageRequest extends AbstractModel {
     /**
      * Set 结束时间戳, 单位为秒(默认值0， 必须大于开始时间戳)(废弃)
      * @param EndTime 结束时间戳, 单位为秒(默认值0， 必须大于开始时间戳)(废弃)
+     * @deprecated
      */
+    @Deprecated
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
@@ -275,48 +283,48 @@ public class DescribeTokenUsageRequest extends AbstractModel {
     }
 
     /**
-     * Get 空间id 
-     * @return SpaceId 空间id
+     * Get 空间ID，用于限定查询范围。不填时查询所有空间的数据 
+     * @return SpaceId 空间ID，用于限定查询范围。不填时查询所有空间的数据
      */
     public String getSpaceId() {
         return this.SpaceId;
     }
 
     /**
-     * Set 空间id
-     * @param SpaceId 空间id
+     * Set 空间ID，用于限定查询范围。不填时查询所有空间的数据
+     * @param SpaceId 空间ID，用于限定查询范围。不填时查询所有空间的数据
      */
     public void setSpaceId(String SpaceId) {
         this.SpaceId = SpaceId;
     }
 
     /**
-     * Get 开始时间戳, 单位为秒 
-     * @return StatStartTime 开始时间戳, 单位为秒
+     * Get 开始时间。Unix 时间戳，单位是秒，默认为空。 
+     * @return StatStartTime 开始时间。Unix 时间戳，单位是秒，默认为空。
      */
     public Long getStatStartTime() {
         return this.StatStartTime;
     }
 
     /**
-     * Set 开始时间戳, 单位为秒
-     * @param StatStartTime 开始时间戳, 单位为秒
+     * Set 开始时间。Unix 时间戳，单位是秒，默认为空。
+     * @param StatStartTime 开始时间。Unix 时间戳，单位是秒，默认为空。
      */
     public void setStatStartTime(Long StatStartTime) {
         this.StatStartTime = StatStartTime;
     }
 
     /**
-     * Get 结束时间戳, 单位为秒 
-     * @return StatEndTime 结束时间戳, 单位为秒
+     * Get 结束时间。Unix 时间戳，单位是秒，默认为空。 
+     * @return StatEndTime 结束时间。Unix 时间戳，单位是秒，默认为空。
      */
     public Long getStatEndTime() {
         return this.StatEndTime;
     }
 
     /**
-     * Set 结束时间戳, 单位为秒
-     * @param StatEndTime 结束时间戳, 单位为秒
+     * Set 结束时间。Unix 时间戳，单位是秒，默认为空。
+     * @param StatEndTime 结束时间。Unix 时间戳，单位是秒，默认为空。
      */
     public void setStatEndTime(Long StatEndTime) {
         this.StatEndTime = StatEndTime;

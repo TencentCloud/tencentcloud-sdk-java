@@ -34,9 +34,7 @@ public class CreateOrganizationBatchSignUrlRequest extends AbstractModel {
     private UserInfo Operator;
 
     /**
-    * 请指定需执行批量签署的流程ID，数量范围为1-100。
-您可登录腾讯电子签控制台，浏览 "合同"->"合同中心" 以查阅某一合同的FlowId（在页面中显示为合同ID）。
-用户将利用链接对这些合同实施批量操作。
+    * 请指定需执行批量签署的流程ID，数量范围为1-100。您可登录腾讯电子签控制台，浏览 "合同"->"合同中心" 以查阅某一合同的FlowId（在页面中显示为合同ID）。用户将利用链接对这些合同实施批量操作。  注：生成动态签署方领取时此参数必传。 
     */
     @SerializedName("FlowIds")
     @Expose
@@ -81,9 +79,7 @@ UserId必须是传入合同（FlowId）中的签署人。
     private String Mobile;
 
     /**
-    * 为签署方经办人在签署合同中的参与方ID，必须与参数FlowIds数组一一对应。
-您可以通过查询合同接口（DescribeFlowInfo）查询此参数。
-若传了此参数，则可以不传 UserId, Name, Mobile等参数
+    * 为签署方经办人在签署合同中的参与方ID，必须与参数FlowIds数组一一对应。您可以通过查询合同接口（DescribeFlowInfo）查询此参数。若传了此参数，则可以不传 UserId, Name, Mobile等参数  注：生成动态签署方领取时此参数必传。
     */
     @SerializedName("RecipientIds")
     @Expose
@@ -102,6 +98,13 @@ UserId必须是传入合同（FlowId）中的签署人。
     @SerializedName("CanBatchReject")
     @Expose
     private Boolean CanBatchReject;
+
+    /**
+    * 动态签署方领取链接配置。
+    */
+    @SerializedName("DynamicSignOption")
+    @Expose
+    private DynamicSignOption DynamicSignOption;
 
     /**
      * Get 执行本接口操作的员工信息。使用此接口时，必须填写userId。
@@ -132,24 +135,16 @@ UserId必须是传入合同（FlowId）中的签署人。
     }
 
     /**
-     * Get 请指定需执行批量签署的流程ID，数量范围为1-100。
-您可登录腾讯电子签控制台，浏览 "合同"->"合同中心" 以查阅某一合同的FlowId（在页面中显示为合同ID）。
-用户将利用链接对这些合同实施批量操作。 
-     * @return FlowIds 请指定需执行批量签署的流程ID，数量范围为1-100。
-您可登录腾讯电子签控制台，浏览 "合同"->"合同中心" 以查阅某一合同的FlowId（在页面中显示为合同ID）。
-用户将利用链接对这些合同实施批量操作。
+     * Get 请指定需执行批量签署的流程ID，数量范围为1-100。您可登录腾讯电子签控制台，浏览 "合同"->"合同中心" 以查阅某一合同的FlowId（在页面中显示为合同ID）。用户将利用链接对这些合同实施批量操作。  注：生成动态签署方领取时此参数必传。  
+     * @return FlowIds 请指定需执行批量签署的流程ID，数量范围为1-100。您可登录腾讯电子签控制台，浏览 "合同"->"合同中心" 以查阅某一合同的FlowId（在页面中显示为合同ID）。用户将利用链接对这些合同实施批量操作。  注：生成动态签署方领取时此参数必传。 
      */
     public String [] getFlowIds() {
         return this.FlowIds;
     }
 
     /**
-     * Set 请指定需执行批量签署的流程ID，数量范围为1-100。
-您可登录腾讯电子签控制台，浏览 "合同"->"合同中心" 以查阅某一合同的FlowId（在页面中显示为合同ID）。
-用户将利用链接对这些合同实施批量操作。
-     * @param FlowIds 请指定需执行批量签署的流程ID，数量范围为1-100。
-您可登录腾讯电子签控制台，浏览 "合同"->"合同中心" 以查阅某一合同的FlowId（在页面中显示为合同ID）。
-用户将利用链接对这些合同实施批量操作。
+     * Set 请指定需执行批量签署的流程ID，数量范围为1-100。您可登录腾讯电子签控制台，浏览 "合同"->"合同中心" 以查阅某一合同的FlowId（在页面中显示为合同ID）。用户将利用链接对这些合同实施批量操作。  注：生成动态签署方领取时此参数必传。 
+     * @param FlowIds 请指定需执行批量签署的流程ID，数量范围为1-100。您可登录腾讯电子签控制台，浏览 "合同"->"合同中心" 以查阅某一合同的FlowId（在页面中显示为合同ID）。用户将利用链接对这些合同实施批量操作。  注：生成动态签署方领取时此参数必传。 
      */
     public void setFlowIds(String [] FlowIds) {
         this.FlowIds = FlowIds;
@@ -260,24 +255,16 @@ UserId必须是传入合同（FlowId）中的签署人。
     }
 
     /**
-     * Get 为签署方经办人在签署合同中的参与方ID，必须与参数FlowIds数组一一对应。
-您可以通过查询合同接口（DescribeFlowInfo）查询此参数。
-若传了此参数，则可以不传 UserId, Name, Mobile等参数 
-     * @return RecipientIds 为签署方经办人在签署合同中的参与方ID，必须与参数FlowIds数组一一对应。
-您可以通过查询合同接口（DescribeFlowInfo）查询此参数。
-若传了此参数，则可以不传 UserId, Name, Mobile等参数
+     * Get 为签署方经办人在签署合同中的参与方ID，必须与参数FlowIds数组一一对应。您可以通过查询合同接口（DescribeFlowInfo）查询此参数。若传了此参数，则可以不传 UserId, Name, Mobile等参数  注：生成动态签署方领取时此参数必传。 
+     * @return RecipientIds 为签署方经办人在签署合同中的参与方ID，必须与参数FlowIds数组一一对应。您可以通过查询合同接口（DescribeFlowInfo）查询此参数。若传了此参数，则可以不传 UserId, Name, Mobile等参数  注：生成动态签署方领取时此参数必传。
      */
     public String [] getRecipientIds() {
         return this.RecipientIds;
     }
 
     /**
-     * Set 为签署方经办人在签署合同中的参与方ID，必须与参数FlowIds数组一一对应。
-您可以通过查询合同接口（DescribeFlowInfo）查询此参数。
-若传了此参数，则可以不传 UserId, Name, Mobile等参数
-     * @param RecipientIds 为签署方经办人在签署合同中的参与方ID，必须与参数FlowIds数组一一对应。
-您可以通过查询合同接口（DescribeFlowInfo）查询此参数。
-若传了此参数，则可以不传 UserId, Name, Mobile等参数
+     * Set 为签署方经办人在签署合同中的参与方ID，必须与参数FlowIds数组一一对应。您可以通过查询合同接口（DescribeFlowInfo）查询此参数。若传了此参数，则可以不传 UserId, Name, Mobile等参数  注：生成动态签署方领取时此参数必传。
+     * @param RecipientIds 为签署方经办人在签署合同中的参与方ID，必须与参数FlowIds数组一一对应。您可以通过查询合同接口（DescribeFlowInfo）查询此参数。若传了此参数，则可以不传 UserId, Name, Mobile等参数  注：生成动态签署方领取时此参数必传。
      */
     public void setRecipientIds(String [] RecipientIds) {
         this.RecipientIds = RecipientIds;
@@ -313,6 +300,22 @@ UserId必须是传入合同（FlowId）中的签署人。
      */
     public void setCanBatchReject(Boolean CanBatchReject) {
         this.CanBatchReject = CanBatchReject;
+    }
+
+    /**
+     * Get 动态签署方领取链接配置。 
+     * @return DynamicSignOption 动态签署方领取链接配置。
+     */
+    public DynamicSignOption getDynamicSignOption() {
+        return this.DynamicSignOption;
+    }
+
+    /**
+     * Set 动态签署方领取链接配置。
+     * @param DynamicSignOption 动态签署方领取链接配置。
+     */
+    public void setDynamicSignOption(DynamicSignOption DynamicSignOption) {
+        this.DynamicSignOption = DynamicSignOption;
     }
 
     public CreateOrganizationBatchSignUrlRequest() {
@@ -356,6 +359,9 @@ UserId必须是传入合同（FlowId）中的签署人。
         if (source.CanBatchReject != null) {
             this.CanBatchReject = new Boolean(source.CanBatchReject);
         }
+        if (source.DynamicSignOption != null) {
+            this.DynamicSignOption = new DynamicSignOption(source.DynamicSignOption);
+        }
     }
 
 
@@ -372,6 +378,7 @@ UserId必须是传入合同（FlowId）中的签署人。
         this.setParamArraySimple(map, prefix + "RecipientIds.", this.RecipientIds);
         this.setParamSimple(map, prefix + "FlowGroupId", this.FlowGroupId);
         this.setParamSimple(map, prefix + "CanBatchReject", this.CanBatchReject);
+        this.setParamObj(map, prefix + "DynamicSignOption.", this.DynamicSignOption);
 
     }
 }

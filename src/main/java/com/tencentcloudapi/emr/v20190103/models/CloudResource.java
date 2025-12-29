@@ -91,6 +91,14 @@ public class CloudResource extends AbstractModel {
     private Disk [] Disks;
 
     /**
+    * 容忍
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tolerations")
+    @Expose
+    private Toleration [] Tolerations;
+
+    /**
      * Get 组件角色名 
      * @return ComponentName 组件角色名
      */
@@ -250,6 +258,26 @@ public class CloudResource extends AbstractModel {
         this.Disks = Disks;
     }
 
+    /**
+     * Get 容忍
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tolerations 容忍
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Toleration [] getTolerations() {
+        return this.Tolerations;
+    }
+
+    /**
+     * Set 容忍
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tolerations 容忍
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTolerations(Toleration [] Tolerations) {
+        this.Tolerations = Tolerations;
+    }
+
     public CloudResource() {
     }
 
@@ -288,6 +316,12 @@ public class CloudResource extends AbstractModel {
                 this.Disks[i] = new Disk(source.Disks[i]);
             }
         }
+        if (source.Tolerations != null) {
+            this.Tolerations = new Toleration[source.Tolerations.length];
+            for (int i = 0; i < source.Tolerations.length; i++) {
+                this.Tolerations[i] = new Toleration(source.Tolerations[i]);
+            }
+        }
     }
 
 
@@ -304,6 +338,7 @@ public class CloudResource extends AbstractModel {
         this.setParamObj(map, prefix + "ExternalAccess.", this.ExternalAccess);
         this.setParamObj(map, prefix + "Affinity.", this.Affinity);
         this.setParamArrayObj(map, prefix + "Disks.", this.Disks);
+        this.setParamArrayObj(map, prefix + "Tolerations.", this.Tolerations);
 
     }
 }

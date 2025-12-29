@@ -109,6 +109,9 @@ public class LkeClient extends AbstractClient{
 
     /**
      *创建QA分类
+知识库相关背景知识介绍
+“知识库检索范围”文档：https://cloud.tencent.com/document/product/1759/112704
+“标签”文档：https://cloud.tencent.com/document/product/1759/112956
      * @param req CreateQACateRequest
      * @return CreateQACateResponse
      * @throws TencentCloudSDKException
@@ -550,6 +553,9 @@ public class LkeClient extends AbstractClient{
 
     /**
      *导出QA列表
+知识库相关背景知识介绍
+“知识库检索范围”文档：https://cloud.tencent.com/document/product/1759/112704
+“标签”文档：https://cloud.tencent.com/document/product/1759/112956
      * @param req ExportQAListRequest
      * @return ExportQAListResponse
      * @throws TencentCloudSDKException
@@ -561,6 +567,9 @@ public class LkeClient extends AbstractClient{
 
     /**
      *导出不满意回复
+知识库相关背景知识介绍
+“知识库检索范围”文档：https://cloud.tencent.com/document/product/1759/112704
+“标签”文档：https://cloud.tencent.com/document/product/1759/112956
      * @param req ExportUnsatisfiedReplyRequest
      * @return ExportUnsatisfiedReplyResponse
      * @throws TencentCloudSDKException
@@ -693,7 +702,10 @@ public class LkeClient extends AbstractClient{
     }
 
     /**
-     *QA分组
+     *用户将多个问答批量的分类到知识库的具体分类
+知识库相关背景知识介绍
+“知识库检索范围”文档：https://cloud.tencent.com/document/product/1759/112704
+“标签”文档：https://cloud.tencent.com/document/product/1759/112956
      * @param req GroupQARequest
      * @return GroupQAResponse
      * @throws TencentCloudSDKException
@@ -818,6 +830,9 @@ public class LkeClient extends AbstractClient{
 
     /**
      *获取QA分类
+知识库相关背景知识介绍
+“知识库检索范围”文档：https://cloud.tencent.com/document/product/1759/112704
+“标签”文档：https://cloud.tencent.com/document/product/1759/112956
      * @param req ListQACateRequest
      * @return ListQACateResponse
      * @throws TencentCloudSDKException

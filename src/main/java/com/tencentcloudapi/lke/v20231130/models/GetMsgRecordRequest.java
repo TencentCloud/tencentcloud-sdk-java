@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class GetMsgRecordRequest extends AbstractModel {
 
     /**
-    * 类型
+    * 接入类型， 5-API 访客，目前仅支持传5
     */
     @SerializedName("Type")
     @Expose
@@ -38,7 +38,7 @@ public class GetMsgRecordRequest extends AbstractModel {
     private Long Count;
 
     /**
-    * 会话sessionid
+    * 会话sessionid。
     */
     @SerializedName("SessionId")
     @Expose
@@ -52,7 +52,9 @@ public class GetMsgRecordRequest extends AbstractModel {
     private String BotAppKey;
 
     /**
-    * 场景, 体验: 1; 正式: 2
+    * 场景, 体验: 1; 正式: 2 。
+
+体验用于创建应用测试的时候使用，正式是应用发布后对外的时候使用
     */
     @SerializedName("Scene")
     @Expose
@@ -63,6 +65,7 @@ public class GetMsgRecordRequest extends AbstractModel {
 
 MidRecordId与LastRecordId只能选择一个
 
+LastRecordId 和MidRecordId都不填的时候，默认从最新的消息ID开始取。
     */
     @SerializedName("LastRecordId")
     @Expose
@@ -73,22 +76,24 @@ MidRecordId与LastRecordId只能选择一个
 
 MidRecordId与LastRecordId只能选择一个
 
+LastRecordId 和MidRecordId都不填的时候，默认从最新的消息Id开始取
+
     */
     @SerializedName("MidRecordId")
     @Expose
     private String MidRecordId;
 
     /**
-     * Get 类型 
-     * @return Type 类型
+     * Get 接入类型， 5-API 访客，目前仅支持传5 
+     * @return Type 接入类型， 5-API 访客，目前仅支持传5
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 类型
-     * @param Type 类型
+     * Set 接入类型， 5-API 访客，目前仅支持传5
+     * @param Type 接入类型， 5-API 访客，目前仅支持传5
      */
     public void setType(Long Type) {
         this.Type = Type;
@@ -111,16 +116,16 @@ MidRecordId与LastRecordId只能选择一个
     }
 
     /**
-     * Get 会话sessionid 
-     * @return SessionId 会话sessionid
+     * Get 会话sessionid。 
+     * @return SessionId 会话sessionid。
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 会话sessionid
-     * @param SessionId 会话sessionid
+     * Set 会话sessionid。
+     * @param SessionId 会话sessionid。
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
@@ -143,16 +148,24 @@ MidRecordId与LastRecordId只能选择一个
     }
 
     /**
-     * Get 场景, 体验: 1; 正式: 2 
-     * @return Scene 场景, 体验: 1; 正式: 2
+     * Get 场景, 体验: 1; 正式: 2 。
+
+体验用于创建应用测试的时候使用，正式是应用发布后对外的时候使用 
+     * @return Scene 场景, 体验: 1; 正式: 2 。
+
+体验用于创建应用测试的时候使用，正式是应用发布后对外的时候使用
      */
     public Long getScene() {
         return this.Scene;
     }
 
     /**
-     * Set 场景, 体验: 1; 正式: 2
-     * @param Scene 场景, 体验: 1; 正式: 2
+     * Set 场景, 体验: 1; 正式: 2 。
+
+体验用于创建应用测试的时候使用，正式是应用发布后对外的时候使用
+     * @param Scene 场景, 体验: 1; 正式: 2 。
+
+体验用于创建应用测试的时候使用，正式是应用发布后对外的时候使用
      */
     public void setScene(Long Scene) {
         this.Scene = Scene;
@@ -162,11 +175,13 @@ MidRecordId与LastRecordId只能选择一个
      * Get 最后一条记录ID， 消息从后往前获取
 
 MidRecordId与LastRecordId只能选择一个
- 
+
+LastRecordId 和MidRecordId都不填的时候，默认从最新的消息ID开始取。 
      * @return LastRecordId 最后一条记录ID， 消息从后往前获取
 
 MidRecordId与LastRecordId只能选择一个
 
+LastRecordId 和MidRecordId都不填的时候，默认从最新的消息ID开始取。
      */
     public String getLastRecordId() {
         return this.LastRecordId;
@@ -177,10 +192,12 @@ MidRecordId与LastRecordId只能选择一个
 
 MidRecordId与LastRecordId只能选择一个
 
+LastRecordId 和MidRecordId都不填的时候，默认从最新的消息ID开始取。
      * @param LastRecordId 最后一条记录ID， 消息从后往前获取
 
 MidRecordId与LastRecordId只能选择一个
 
+LastRecordId 和MidRecordId都不填的时候，默认从最新的消息ID开始取。
      */
     public void setLastRecordId(String LastRecordId) {
         this.LastRecordId = LastRecordId;
@@ -190,10 +207,14 @@ MidRecordId与LastRecordId只能选择一个
      * Get 传该值，代表拉取该记录id的前后总共count条消息记录
 
 MidRecordId与LastRecordId只能选择一个
+
+LastRecordId 和MidRecordId都不填的时候，默认从最新的消息Id开始取
  
      * @return MidRecordId 传该值，代表拉取该记录id的前后总共count条消息记录
 
 MidRecordId与LastRecordId只能选择一个
+
+LastRecordId 和MidRecordId都不填的时候，默认从最新的消息Id开始取
 
      */
     public String getMidRecordId() {
@@ -205,9 +226,13 @@ MidRecordId与LastRecordId只能选择一个
 
 MidRecordId与LastRecordId只能选择一个
 
+LastRecordId 和MidRecordId都不填的时候，默认从最新的消息Id开始取
+
      * @param MidRecordId 传该值，代表拉取该记录id的前后总共count条消息记录
 
 MidRecordId与LastRecordId只能选择一个
+
+LastRecordId 和MidRecordId都不填的时候，默认从最新的消息Id开始取
 
      */
     public void setMidRecordId(String MidRecordId) {

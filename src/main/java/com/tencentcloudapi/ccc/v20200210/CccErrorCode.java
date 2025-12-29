@@ -132,6 +132,9 @@ public enum CccErrorCode {
      /* 使用体验账号的智能体不支持此类操作 */
      INVALIDPARAMETERVALUE_EXPERIENCEACCOUNT("InvalidParameterValue.ExperienceAccount"),
      
+     /* 文件不存在 */
+     INVALIDPARAMETERVALUE_FILENOTEXIST("InvalidParameterValue.FileNotExist"),
+     
      /* 实例不存在。 */
      INVALIDPARAMETERVALUE_INSTANCENOTEXIST("InvalidParameterValue.InstanceNotExist"),
      

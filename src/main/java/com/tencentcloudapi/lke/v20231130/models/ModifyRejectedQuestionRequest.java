@@ -40,7 +40,7 @@ public class ModifyRejectedQuestionRequest extends AbstractModel {
     private String Question;
 
     /**
-    * 拒答问题来源的数据源唯一id, 通过[ListRejectedQuestion](https://capi.woa.com/api/detail?product=lke&version=2023-11-30&action=ListRejectedQuestion)接口获取
+    * 拒答问题来源的数据源唯一id, 通过调用ListRejectedQuestion接口获取
 
 
 
@@ -90,11 +90,11 @@ public class ModifyRejectedQuestionRequest extends AbstractModel {
     }
 
     /**
-     * Get 拒答问题来源的数据源唯一id, 通过[ListRejectedQuestion](https://capi.woa.com/api/detail?product=lke&version=2023-11-30&action=ListRejectedQuestion)接口获取
+     * Get 拒答问题来源的数据源唯一id, 通过调用ListRejectedQuestion接口获取
 
 
  
-     * @return RejectedBizId 拒答问题来源的数据源唯一id, 通过[ListRejectedQuestion](https://capi.woa.com/api/detail?product=lke&version=2023-11-30&action=ListRejectedQuestion)接口获取
+     * @return RejectedBizId 拒答问题来源的数据源唯一id, 通过调用ListRejectedQuestion接口获取
 
 
 
@@ -104,11 +104,11 @@ public class ModifyRejectedQuestionRequest extends AbstractModel {
     }
 
     /**
-     * Set 拒答问题来源的数据源唯一id, 通过[ListRejectedQuestion](https://capi.woa.com/api/detail?product=lke&version=2023-11-30&action=ListRejectedQuestion)接口获取
+     * Set 拒答问题来源的数据源唯一id, 通过调用ListRejectedQuestion接口获取
 
 
 
-     * @param RejectedBizId 拒答问题来源的数据源唯一id, 通过[ListRejectedQuestion](https://capi.woa.com/api/detail?product=lke&version=2023-11-30&action=ListRejectedQuestion)接口获取
+     * @param RejectedBizId 拒答问题来源的数据源唯一id, 通过调用ListRejectedQuestion接口获取
 
 
 

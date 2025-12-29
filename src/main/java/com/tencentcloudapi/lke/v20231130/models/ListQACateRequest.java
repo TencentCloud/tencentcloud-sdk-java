@@ -25,6 +25,7 @@ public class ListQACateRequest extends AbstractModel {
 
     /**
     * 应用ID
+若要操作共享知识库，传KnowledgeBizId
     */
     @SerializedName("BotBizId")
     @Expose
@@ -66,8 +67,10 @@ public class ListQACateRequest extends AbstractModel {
     private String Query;
 
     /**
-     * Get 应用ID 
+     * Get 应用ID
+若要操作共享知识库，传KnowledgeBizId 
      * @return BotBizId 应用ID
+若要操作共享知识库，传KnowledgeBizId
      */
     public String getBotBizId() {
         return this.BotBizId;
@@ -75,7 +78,9 @@ public class ListQACateRequest extends AbstractModel {
 
     /**
      * Set 应用ID
+若要操作共享知识库，传KnowledgeBizId
      * @param BotBizId 应用ID
+若要操作共享知识库，传KnowledgeBizId
      */
     public void setBotBizId(String BotBizId) {
         this.BotBizId = BotBizId;

@@ -490,6 +490,55 @@ public class DataEngineInfo extends AbstractModel {
     private ScheduleElasticityConf ScheduleElasticityConf;
 
     /**
+    * GPU 信息
+    */
+    @SerializedName("GPUInfo")
+    @Expose
+    private GPUInfo GPUInfo;
+
+    /**
+    * GPU 使用量
+    */
+    @SerializedName("EngineResourceUsedGPU")
+    @Expose
+    private Long EngineResourceUsedGPU;
+
+    /**
+    * GPU 总规格
+    */
+    @SerializedName("GPUTotalSize")
+    @Expose
+    private Long GPUTotalSize;
+
+    /**
+    * GPU 机型
+    */
+    @SerializedName("InstanceModel")
+    @Expose
+    private String InstanceModel;
+
+    /**
+    * 节点数量
+    */
+    @SerializedName("NodeNum")
+    @Expose
+    private Long NodeNum;
+
+    /**
+    * 引擎规格，包含负载弹性或分时弹性
+    */
+    @SerializedName("SizeWithElastic")
+    @Expose
+    private Long SizeWithElastic;
+
+    /**
+    * 最大弹性值，包含负载弹性或分时弹性
+    */
+    @SerializedName("MaxElasticSize")
+    @Expose
+    private Long MaxElasticSize;
+
+    /**
      * Get DataEngine名称 
      * @return DataEngineName DataEngine名称
      */
@@ -1633,6 +1682,118 @@ public class DataEngineInfo extends AbstractModel {
         this.ScheduleElasticityConf = ScheduleElasticityConf;
     }
 
+    /**
+     * Get GPU 信息 
+     * @return GPUInfo GPU 信息
+     */
+    public GPUInfo getGPUInfo() {
+        return this.GPUInfo;
+    }
+
+    /**
+     * Set GPU 信息
+     * @param GPUInfo GPU 信息
+     */
+    public void setGPUInfo(GPUInfo GPUInfo) {
+        this.GPUInfo = GPUInfo;
+    }
+
+    /**
+     * Get GPU 使用量 
+     * @return EngineResourceUsedGPU GPU 使用量
+     */
+    public Long getEngineResourceUsedGPU() {
+        return this.EngineResourceUsedGPU;
+    }
+
+    /**
+     * Set GPU 使用量
+     * @param EngineResourceUsedGPU GPU 使用量
+     */
+    public void setEngineResourceUsedGPU(Long EngineResourceUsedGPU) {
+        this.EngineResourceUsedGPU = EngineResourceUsedGPU;
+    }
+
+    /**
+     * Get GPU 总规格 
+     * @return GPUTotalSize GPU 总规格
+     */
+    public Long getGPUTotalSize() {
+        return this.GPUTotalSize;
+    }
+
+    /**
+     * Set GPU 总规格
+     * @param GPUTotalSize GPU 总规格
+     */
+    public void setGPUTotalSize(Long GPUTotalSize) {
+        this.GPUTotalSize = GPUTotalSize;
+    }
+
+    /**
+     * Get GPU 机型 
+     * @return InstanceModel GPU 机型
+     */
+    public String getInstanceModel() {
+        return this.InstanceModel;
+    }
+
+    /**
+     * Set GPU 机型
+     * @param InstanceModel GPU 机型
+     */
+    public void setInstanceModel(String InstanceModel) {
+        this.InstanceModel = InstanceModel;
+    }
+
+    /**
+     * Get 节点数量 
+     * @return NodeNum 节点数量
+     */
+    public Long getNodeNum() {
+        return this.NodeNum;
+    }
+
+    /**
+     * Set 节点数量
+     * @param NodeNum 节点数量
+     */
+    public void setNodeNum(Long NodeNum) {
+        this.NodeNum = NodeNum;
+    }
+
+    /**
+     * Get 引擎规格，包含负载弹性或分时弹性 
+     * @return SizeWithElastic 引擎规格，包含负载弹性或分时弹性
+     */
+    public Long getSizeWithElastic() {
+        return this.SizeWithElastic;
+    }
+
+    /**
+     * Set 引擎规格，包含负载弹性或分时弹性
+     * @param SizeWithElastic 引擎规格，包含负载弹性或分时弹性
+     */
+    public void setSizeWithElastic(Long SizeWithElastic) {
+        this.SizeWithElastic = SizeWithElastic;
+    }
+
+    /**
+     * Get 最大弹性值，包含负载弹性或分时弹性 
+     * @return MaxElasticSize 最大弹性值，包含负载弹性或分时弹性
+     */
+    public Long getMaxElasticSize() {
+        return this.MaxElasticSize;
+    }
+
+    /**
+     * Set 最大弹性值，包含负载弹性或分时弹性
+     * @param MaxElasticSize 最大弹性值，包含负载弹性或分时弹性
+     */
+    public void setMaxElasticSize(Long MaxElasticSize) {
+        this.MaxElasticSize = MaxElasticSize;
+    }
+
     public DataEngineInfo() {
     }
 
@@ -1833,6 +1994,27 @@ public class DataEngineInfo extends AbstractModel {
         if (source.ScheduleElasticityConf != null) {
             this.ScheduleElasticityConf = new ScheduleElasticityConf(source.ScheduleElasticityConf);
         }
+        if (source.GPUInfo != null) {
+            this.GPUInfo = new GPUInfo(source.GPUInfo);
+        }
+        if (source.EngineResourceUsedGPU != null) {
+            this.EngineResourceUsedGPU = new Long(source.EngineResourceUsedGPU);
+        }
+        if (source.GPUTotalSize != null) {
+            this.GPUTotalSize = new Long(source.GPUTotalSize);
+        }
+        if (source.InstanceModel != null) {
+            this.InstanceModel = new String(source.InstanceModel);
+        }
+        if (source.NodeNum != null) {
+            this.NodeNum = new Long(source.NodeNum);
+        }
+        if (source.SizeWithElastic != null) {
+            this.SizeWithElastic = new Long(source.SizeWithElastic);
+        }
+        if (source.MaxElasticSize != null) {
+            this.MaxElasticSize = new Long(source.MaxElasticSize);
+        }
     }
 
 
@@ -1900,6 +2082,13 @@ public class DataEngineInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "IsAIGateway", this.IsAIGateway);
         this.setParamSimple(map, prefix + "IsAIEngine", this.IsAIEngine);
         this.setParamObj(map, prefix + "ScheduleElasticityConf.", this.ScheduleElasticityConf);
+        this.setParamObj(map, prefix + "GPUInfo.", this.GPUInfo);
+        this.setParamSimple(map, prefix + "EngineResourceUsedGPU", this.EngineResourceUsedGPU);
+        this.setParamSimple(map, prefix + "GPUTotalSize", this.GPUTotalSize);
+        this.setParamSimple(map, prefix + "InstanceModel", this.InstanceModel);
+        this.setParamSimple(map, prefix + "NodeNum", this.NodeNum);
+        this.setParamSimple(map, prefix + "SizeWithElastic", this.SizeWithElastic);
+        this.setParamSimple(map, prefix + "MaxElasticSize", this.MaxElasticSize);
 
     }
 }

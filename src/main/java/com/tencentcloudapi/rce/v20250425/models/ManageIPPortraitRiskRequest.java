@@ -23,6 +23,52 @@ import java.util.HashMap;
 
 public class ManageIPPortraitRiskRequest extends AbstractModel {
 
+    /**
+    * 请求秒级时间戳
+    */
+    @SerializedName("PostTime")
+    @Expose
+    private Long PostTime;
+
+    /**
+    * 业务入参
+    */
+    @SerializedName("BusinessSecurityData")
+    @Expose
+    private ManageIPPortraitRiskInput BusinessSecurityData;
+
+    /**
+     * Get 请求秒级时间戳 
+     * @return PostTime 请求秒级时间戳
+     */
+    public Long getPostTime() {
+        return this.PostTime;
+    }
+
+    /**
+     * Set 请求秒级时间戳
+     * @param PostTime 请求秒级时间戳
+     */
+    public void setPostTime(Long PostTime) {
+        this.PostTime = PostTime;
+    }
+
+    /**
+     * Get 业务入参 
+     * @return BusinessSecurityData 业务入参
+     */
+    public ManageIPPortraitRiskInput getBusinessSecurityData() {
+        return this.BusinessSecurityData;
+    }
+
+    /**
+     * Set 业务入参
+     * @param BusinessSecurityData 业务入参
+     */
+    public void setBusinessSecurityData(ManageIPPortraitRiskInput BusinessSecurityData) {
+        this.BusinessSecurityData = BusinessSecurityData;
+    }
+
     public ManageIPPortraitRiskRequest() {
     }
 
@@ -31,6 +77,12 @@ public class ManageIPPortraitRiskRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ManageIPPortraitRiskRequest(ManageIPPortraitRiskRequest source) {
+        if (source.PostTime != null) {
+            this.PostTime = new Long(source.PostTime);
+        }
+        if (source.BusinessSecurityData != null) {
+            this.BusinessSecurityData = new ManageIPPortraitRiskInput(source.BusinessSecurityData);
+        }
     }
 
 
@@ -38,6 +90,8 @@ public class ManageIPPortraitRiskRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "PostTime", this.PostTime);
+        this.setParamObj(map, prefix + "BusinessSecurityData.", this.BusinessSecurityData);
 
     }
 }

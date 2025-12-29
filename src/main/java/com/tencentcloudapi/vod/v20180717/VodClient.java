@@ -412,6 +412,17 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *该接口用于生成场景化 AIGC 图片。<b>接口处于内测阶段，如需使用请[联系我们](https://cloud.tencent.com/online-service?from=sales_sales&source=PRESALE)，接口调用会产生实际费用。</b>
+     * @param req CreateSceneAigcImageTaskRequest
+     * @return CreateSceneAigcImageTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSceneAigcImageTaskResponse CreateSceneAigcImageTask(CreateSceneAigcImageTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSceneAigcImageTask", CreateSceneAigcImageTaskResponse.class);
+    }
+
+    /**
      *创建用户自定义指定时间点截图模板，数量上限：16。
      * @param req CreateSnapshotByTimeOffsetTemplateRequest
      * @return CreateSnapshotByTimeOffsetTemplateResponse

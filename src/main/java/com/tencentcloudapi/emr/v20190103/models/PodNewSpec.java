@@ -111,6 +111,13 @@ public class PodNewSpec extends AbstractModel {
     private String PodName;
 
     /**
+    * 其他账号授权信息
+    */
+    @SerializedName("OtherAccountInfo")
+    @Expose
+    private OtherAccountInfo OtherAccountInfo;
+
+    /**
      * Get 外部资源提供者的标识符，例如"cls-a1cd23fa"。 
      * @return ResourceProviderIdentifier 外部资源提供者的标识符，例如"cls-a1cd23fa"。
      */
@@ -314,6 +321,22 @@ public class PodNewSpec extends AbstractModel {
         this.PodName = PodName;
     }
 
+    /**
+     * Get 其他账号授权信息 
+     * @return OtherAccountInfo 其他账号授权信息
+     */
+    public OtherAccountInfo getOtherAccountInfo() {
+        return this.OtherAccountInfo;
+    }
+
+    /**
+     * Set 其他账号授权信息
+     * @param OtherAccountInfo 其他账号授权信息
+     */
+    public void setOtherAccountInfo(OtherAccountInfo OtherAccountInfo) {
+        this.OtherAccountInfo = OtherAccountInfo;
+    }
+
     public PodNewSpec() {
     }
 
@@ -361,6 +384,9 @@ public class PodNewSpec extends AbstractModel {
         if (source.PodName != null) {
             this.PodName = new String(source.PodName);
         }
+        if (source.OtherAccountInfo != null) {
+            this.OtherAccountInfo = new OtherAccountInfo(source.OtherAccountInfo);
+        }
     }
 
 
@@ -380,6 +406,7 @@ public class PodNewSpec extends AbstractModel {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "PodName", this.PodName);
+        this.setParamObj(map, prefix + "OtherAccountInfo.", this.OtherAccountInfo);
 
     }
 }

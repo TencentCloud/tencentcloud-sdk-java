@@ -87,6 +87,20 @@ public class ListReleaseItem extends AbstractModel {
     private Long FailCount;
 
     /**
+    * 版本号，格式是 v{date}{time}
+    */
+    @SerializedName("ReleaseVersion")
+    @Expose
+    private String ReleaseVersion;
+
+    /**
+    * 是否可还原
+    */
+    @SerializedName("CanRollback")
+    @Expose
+    private Boolean CanRollback;
+
+    /**
      * Get 版本ID 
      * @return ReleaseBizId 版本ID
      */
@@ -230,6 +244,38 @@ public class ListReleaseItem extends AbstractModel {
         this.FailCount = FailCount;
     }
 
+    /**
+     * Get 版本号，格式是 v{date}{time} 
+     * @return ReleaseVersion 版本号，格式是 v{date}{time}
+     */
+    public String getReleaseVersion() {
+        return this.ReleaseVersion;
+    }
+
+    /**
+     * Set 版本号，格式是 v{date}{time}
+     * @param ReleaseVersion 版本号，格式是 v{date}{time}
+     */
+    public void setReleaseVersion(String ReleaseVersion) {
+        this.ReleaseVersion = ReleaseVersion;
+    }
+
+    /**
+     * Get 是否可还原 
+     * @return CanRollback 是否可还原
+     */
+    public Boolean getCanRollback() {
+        return this.CanRollback;
+    }
+
+    /**
+     * Set 是否可还原
+     * @param CanRollback 是否可还原
+     */
+    public void setCanRollback(Boolean CanRollback) {
+        this.CanRollback = CanRollback;
+    }
+
     public ListReleaseItem() {
     }
 
@@ -265,6 +311,12 @@ public class ListReleaseItem extends AbstractModel {
         if (source.FailCount != null) {
             this.FailCount = new Long(source.FailCount);
         }
+        if (source.ReleaseVersion != null) {
+            this.ReleaseVersion = new String(source.ReleaseVersion);
+        }
+        if (source.CanRollback != null) {
+            this.CanRollback = new Boolean(source.CanRollback);
+        }
     }
 
 
@@ -281,6 +333,8 @@ public class ListReleaseItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Reason", this.Reason);
         this.setParamSimple(map, prefix + "SuccessCount", this.SuccessCount);
         this.setParamSimple(map, prefix + "FailCount", this.FailCount);
+        this.setParamSimple(map, prefix + "ReleaseVersion", this.ReleaseVersion);
+        this.setParamSimple(map, prefix + "CanRollback", this.CanRollback);
 
     }
 }

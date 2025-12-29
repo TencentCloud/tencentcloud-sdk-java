@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeReleaseRequest extends AbstractModel {
 
     /**
-    * 应用ID
+    * 应用ID。获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)  
     */
     @SerializedName("BotBizId")
     @Expose
     private String BotBizId;
 
     /**
-    * 发布详情
+    * 发布ID
     */
     @SerializedName("ReleaseBizId")
     @Expose
     private String ReleaseBizId;
 
     /**
-     * Get 应用ID 
-     * @return BotBizId 应用ID
+     * Get 应用ID。获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)   
+     * @return BotBizId 应用ID。获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)  
      */
     public String getBotBizId() {
         return this.BotBizId;
     }
 
     /**
-     * Set 应用ID
-     * @param BotBizId 应用ID
+     * Set 应用ID。获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)  
+     * @param BotBizId 应用ID。获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)  
      */
     public void setBotBizId(String BotBizId) {
         this.BotBizId = BotBizId;
     }
 
     /**
-     * Get 发布详情 
-     * @return ReleaseBizId 发布详情
+     * Get 发布ID 
+     * @return ReleaseBizId 发布ID
      */
     public String getReleaseBizId() {
         return this.ReleaseBizId;
     }
 
     /**
-     * Set 发布详情
-     * @param ReleaseBizId 发布详情
+     * Set 发布ID
+     * @param ReleaseBizId 发布ID
      */
     public void setReleaseBizId(String ReleaseBizId) {
         this.ReleaseBizId = ReleaseBizId;

@@ -25,13 +25,14 @@ public class ExportUnsatisfiedReplyRequest extends AbstractModel {
 
     /**
     * 应用ID
+若要操作共享知识库，传KnowledgeBizId
     */
     @SerializedName("BotBizId")
     @Expose
     private String BotBizId;
 
     /**
-    * 勾选导出ID列表
+    * 勾选导出不满意回复的ID列表
     */
     @SerializedName("ReplyBizIds")
     @Expose
@@ -59,8 +60,10 @@ public class ExportUnsatisfiedReplyRequest extends AbstractModel {
     private Filters Filters;
 
     /**
-     * Get 应用ID 
+     * Get 应用ID
+若要操作共享知识库，传KnowledgeBizId 
      * @return BotBizId 应用ID
+若要操作共享知识库，传KnowledgeBizId
      */
     public String getBotBizId() {
         return this.BotBizId;
@@ -68,23 +71,25 @@ public class ExportUnsatisfiedReplyRequest extends AbstractModel {
 
     /**
      * Set 应用ID
+若要操作共享知识库，传KnowledgeBizId
      * @param BotBizId 应用ID
+若要操作共享知识库，传KnowledgeBizId
      */
     public void setBotBizId(String BotBizId) {
         this.BotBizId = BotBizId;
     }
 
     /**
-     * Get 勾选导出ID列表 
-     * @return ReplyBizIds 勾选导出ID列表
+     * Get 勾选导出不满意回复的ID列表 
+     * @return ReplyBizIds 勾选导出不满意回复的ID列表
      */
     public String [] getReplyBizIds() {
         return this.ReplyBizIds;
     }
 
     /**
-     * Set 勾选导出ID列表
-     * @param ReplyBizIds 勾选导出ID列表
+     * Set 勾选导出不满意回复的ID列表
+     * @param ReplyBizIds 勾选导出不满意回复的ID列表
      */
     public void setReplyBizIds(String [] ReplyBizIds) {
         this.ReplyBizIds = ReplyBizIds;

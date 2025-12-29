@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class CreatePrivateNatGatewayTranslationAclRuleResponse extends AbstractModel {
 
     /**
+    * 创建成功的访问控制列表。
+    */
+    @SerializedName("TranslationAclRuleSet")
+    @Expose
+    private TranslationAclRule [] TranslationAclRuleSet;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 创建成功的访问控制列表。 
+     * @return TranslationAclRuleSet 创建成功的访问控制列表。
+     */
+    public TranslationAclRule [] getTranslationAclRuleSet() {
+        return this.TranslationAclRuleSet;
+    }
+
+    /**
+     * Set 创建成功的访问控制列表。
+     * @param TranslationAclRuleSet 创建成功的访问控制列表。
+     */
+    public void setTranslationAclRuleSet(TranslationAclRule [] TranslationAclRuleSet) {
+        this.TranslationAclRuleSet = TranslationAclRuleSet;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,12 @@ public class CreatePrivateNatGatewayTranslationAclRuleResponse extends AbstractM
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreatePrivateNatGatewayTranslationAclRuleResponse(CreatePrivateNatGatewayTranslationAclRuleResponse source) {
+        if (source.TranslationAclRuleSet != null) {
+            this.TranslationAclRuleSet = new TranslationAclRule[source.TranslationAclRuleSet.length];
+            for (int i = 0; i < source.TranslationAclRuleSet.length; i++) {
+                this.TranslationAclRuleSet[i] = new TranslationAclRule(source.TranslationAclRuleSet[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +93,7 @@ public class CreatePrivateNatGatewayTranslationAclRuleResponse extends AbstractM
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "TranslationAclRuleSet.", this.TranslationAclRuleSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

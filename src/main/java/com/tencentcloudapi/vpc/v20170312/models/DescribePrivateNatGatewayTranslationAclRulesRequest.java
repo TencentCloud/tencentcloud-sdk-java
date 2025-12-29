@@ -80,6 +80,13 @@ public class DescribePrivateNatGatewayTranslationAclRulesRequest extends Abstrac
     private String Description;
 
     /**
+    * 过滤条件。<li>AclRuleId - Integer - ACL规则ID。</li>
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
      * Get 私网网关唯一`ID`，形如：`intranat-xxxxxxxx`。 
      * @return NatGatewayId 私网网关唯一`ID`，形如：`intranat-xxxxxxxx`。
      */
@@ -207,6 +214,22 @@ public class DescribePrivateNatGatewayTranslationAclRulesRequest extends Abstrac
         this.Description = Description;
     }
 
+    /**
+     * Get 过滤条件。<li>AclRuleId - Integer - ACL规则ID。</li> 
+     * @return Filters 过滤条件。<li>AclRuleId - Integer - ACL规则ID。</li>
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 过滤条件。<li>AclRuleId - Integer - ACL规则ID。</li>
+     * @param Filters 过滤条件。<li>AclRuleId - Integer - ACL规则ID。</li>
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
     public DescribePrivateNatGatewayTranslationAclRulesRequest() {
     }
 
@@ -239,6 +262,12 @@ public class DescribePrivateNatGatewayTranslationAclRulesRequest extends Abstrac
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -254,6 +283,7 @@ public class DescribePrivateNatGatewayTranslationAclRulesRequest extends Abstrac
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

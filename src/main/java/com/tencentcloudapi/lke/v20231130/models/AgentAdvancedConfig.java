@@ -66,6 +66,20 @@ public class AgentAdvancedConfig extends AbstractModel {
     private StructuredOutputConfig StructuredOutputConfig;
 
     /**
+    * Agent输出配置
+    */
+    @SerializedName("AgentOutputConfig")
+    @Expose
+    private AgentOutputConfig AgentOutputConfig;
+
+    /**
+    * 澄清询问配置
+    */
+    @SerializedName("ClarificationConfig")
+    @Expose
+    private ClarificationConfig ClarificationConfig;
+
+    /**
      * Get 是否开启澄清询问 
      * @return EnableClarification 是否开启澄清询问
      */
@@ -161,6 +175,38 @@ public class AgentAdvancedConfig extends AbstractModel {
         this.StructuredOutputConfig = StructuredOutputConfig;
     }
 
+    /**
+     * Get Agent输出配置 
+     * @return AgentOutputConfig Agent输出配置
+     */
+    public AgentOutputConfig getAgentOutputConfig() {
+        return this.AgentOutputConfig;
+    }
+
+    /**
+     * Set Agent输出配置
+     * @param AgentOutputConfig Agent输出配置
+     */
+    public void setAgentOutputConfig(AgentOutputConfig AgentOutputConfig) {
+        this.AgentOutputConfig = AgentOutputConfig;
+    }
+
+    /**
+     * Get 澄清询问配置 
+     * @return ClarificationConfig 澄清询问配置
+     */
+    public ClarificationConfig getClarificationConfig() {
+        return this.ClarificationConfig;
+    }
+
+    /**
+     * Set 澄清询问配置
+     * @param ClarificationConfig 澄清询问配置
+     */
+    public void setClarificationConfig(ClarificationConfig ClarificationConfig) {
+        this.ClarificationConfig = ClarificationConfig;
+    }
+
     public AgentAdvancedConfig() {
     }
 
@@ -187,6 +233,12 @@ public class AgentAdvancedConfig extends AbstractModel {
         if (source.StructuredOutputConfig != null) {
             this.StructuredOutputConfig = new StructuredOutputConfig(source.StructuredOutputConfig);
         }
+        if (source.AgentOutputConfig != null) {
+            this.AgentOutputConfig = new AgentOutputConfig(source.AgentOutputConfig);
+        }
+        if (source.ClarificationConfig != null) {
+            this.ClarificationConfig = new ClarificationConfig(source.ClarificationConfig);
+        }
     }
 
 
@@ -200,6 +252,8 @@ public class AgentAdvancedConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "HistoryLimit", this.HistoryLimit);
         this.setParamSimple(map, prefix + "EnableStructuredOutput", this.EnableStructuredOutput);
         this.setParamObj(map, prefix + "StructuredOutputConfig.", this.StructuredOutputConfig);
+        this.setParamObj(map, prefix + "AgentOutputConfig.", this.AgentOutputConfig);
+        this.setParamObj(map, prefix + "ClarificationConfig.", this.ClarificationConfig);
 
     }
 }

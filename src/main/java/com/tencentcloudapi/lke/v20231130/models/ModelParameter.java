@@ -24,6 +24,35 @@ import java.util.HashMap;
 public class ModelParameter extends AbstractModel {
 
     /**
+    * 超参名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+    * 类型
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
+    * 默认值
+    */
+    @SerializedName("DefaultValue")
+    @Expose
+    private String DefaultValue;
+
+    /**
+    * 枚举值
+    */
+    @SerializedName("EnumValues")
+    @Expose
+    private String [] EnumValues;
+
+    /**
     * 默认值
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -48,12 +77,72 @@ public class ModelParameter extends AbstractModel {
     private Float Max;
 
     /**
-    * 超参名称
+     * Get 超参名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Name 超参名称
 注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Name")
-    @Expose
-    private String Name;
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 超参名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Name 超参名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get 类型 
+     * @return Type 类型
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 类型
+     * @param Type 类型
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get 默认值 
+     * @return DefaultValue 默认值
+     */
+    public String getDefaultValue() {
+        return this.DefaultValue;
+    }
+
+    /**
+     * Set 默认值
+     * @param DefaultValue 默认值
+     */
+    public void setDefaultValue(String DefaultValue) {
+        this.DefaultValue = DefaultValue;
+    }
+
+    /**
+     * Get 枚举值 
+     * @return EnumValues 枚举值
+     */
+    public String [] getEnumValues() {
+        return this.EnumValues;
+    }
+
+    /**
+     * Set 枚举值
+     * @param EnumValues 枚举值
+     */
+    public void setEnumValues(String [] EnumValues) {
+        this.EnumValues = EnumValues;
+    }
 
     /**
      * Get 默认值
@@ -115,26 +204,6 @@ public class ModelParameter extends AbstractModel {
         this.Max = Max;
     }
 
-    /**
-     * Get 超参名称
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 超参名称
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getName() {
-        return this.Name;
-    }
-
-    /**
-     * Set 超参名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 超参名称
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setName(String Name) {
-        this.Name = Name;
-    }
-
     public ModelParameter() {
     }
 
@@ -143,6 +212,21 @@ public class ModelParameter extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ModelParameter(ModelParameter source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.DefaultValue != null) {
+            this.DefaultValue = new String(source.DefaultValue);
+        }
+        if (source.EnumValues != null) {
+            this.EnumValues = new String[source.EnumValues.length];
+            for (int i = 0; i < source.EnumValues.length; i++) {
+                this.EnumValues[i] = new String(source.EnumValues[i]);
+            }
+        }
         if (source.Default != null) {
             this.Default = new Float(source.Default);
         }
@@ -152,9 +236,6 @@ public class ModelParameter extends AbstractModel {
         if (source.Max != null) {
             this.Max = new Float(source.Max);
         }
-        if (source.Name != null) {
-            this.Name = new String(source.Name);
-        }
     }
 
 
@@ -162,10 +243,13 @@ public class ModelParameter extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "DefaultValue", this.DefaultValue);
+        this.setParamArraySimple(map, prefix + "EnumValues.", this.EnumValues);
         this.setParamSimple(map, prefix + "Default", this.Default);
         this.setParamSimple(map, prefix + "Min", this.Min);
         this.setParamSimple(map, prefix + "Max", this.Max);
-        this.setParamSimple(map, prefix + "Name", this.Name);
 
     }
 }

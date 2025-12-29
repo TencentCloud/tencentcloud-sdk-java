@@ -83,6 +83,20 @@ RealGpu=100表示实际使用了一张gpu卡, 对应实际的实例机型, 有�
     private Boolean EnableRDMA;
 
     /**
+    * root disk size(GB)
+    */
+    @SerializedName("RootDisk")
+    @Expose
+    private Long RootDisk;
+
+    /**
+    * data disk size(GB)
+    */
+    @SerializedName("DataDisk")
+    @Expose
+    private Long DataDisk;
+
+    /**
      * Get 处理器资源, 单位为1/1000核
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Cpu 处理器资源, 单位为1/1000核
@@ -234,6 +248,38 @@ RealGpu=100表示实际使用了一张gpu卡, 对应实际的实例机型, 有�
         this.EnableRDMA = EnableRDMA;
     }
 
+    /**
+     * Get root disk size(GB) 
+     * @return RootDisk root disk size(GB)
+     */
+    public Long getRootDisk() {
+        return this.RootDisk;
+    }
+
+    /**
+     * Set root disk size(GB)
+     * @param RootDisk root disk size(GB)
+     */
+    public void setRootDisk(Long RootDisk) {
+        this.RootDisk = RootDisk;
+    }
+
+    /**
+     * Get data disk size(GB) 
+     * @return DataDisk data disk size(GB)
+     */
+    public Long getDataDisk() {
+        return this.DataDisk;
+    }
+
+    /**
+     * Set data disk size(GB)
+     * @param DataDisk data disk size(GB)
+     */
+    public void setDataDisk(Long DataDisk) {
+        this.DataDisk = DataDisk;
+    }
+
     public ResourceInfo() {
     }
 
@@ -266,6 +312,12 @@ RealGpu=100表示实际使用了一张gpu卡, 对应实际的实例机型, 有�
         if (source.EnableRDMA != null) {
             this.EnableRDMA = new Boolean(source.EnableRDMA);
         }
+        if (source.RootDisk != null) {
+            this.RootDisk = new Long(source.RootDisk);
+        }
+        if (source.DataDisk != null) {
+            this.DataDisk = new Long(source.DataDisk);
+        }
     }
 
 
@@ -280,6 +332,8 @@ RealGpu=100表示实际使用了一张gpu卡, 对应实际的实例机型, 有�
         this.setParamSimple(map, prefix + "RealGpu", this.RealGpu);
         this.setParamArrayObj(map, prefix + "RealGpuDetailSet.", this.RealGpuDetailSet);
         this.setParamSimple(map, prefix + "EnableRDMA", this.EnableRDMA);
+        this.setParamSimple(map, prefix + "RootDisk", this.RootDisk);
+        this.setParamSimple(map, prefix + "DataDisk", this.DataDisk);
 
     }
 }

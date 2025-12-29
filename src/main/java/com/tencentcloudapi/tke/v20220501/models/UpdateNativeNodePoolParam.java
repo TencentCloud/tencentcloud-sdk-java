@@ -167,11 +167,25 @@ public class UpdateNativeNodePoolParam extends AbstractModel {
     private String [] KeyIds;
 
     /**
+    * 节点移出策略，有Random（随机）、Newest（优先移出最新实例）、Oldest（优先移出最旧实例）三种可选，默认是Newest
+    */
+    @SerializedName("DeletePolicy")
+    @Expose
+    private String DeletePolicy;
+
+    /**
     * 节点池 GPU 配置
     */
     @SerializedName("GPUConfigs")
     @Expose
     private GPUConfig [] GPUConfigs;
+
+    /**
+    * 原生节点池安装自动化助手开关状态
+    */
+    @SerializedName("AutomationService")
+    @Expose
+    private Boolean AutomationService;
 
     /**
     * 原生节点池密码
@@ -513,6 +527,22 @@ public class UpdateNativeNodePoolParam extends AbstractModel {
     }
 
     /**
+     * Get 节点移出策略，有Random（随机）、Newest（优先移出最新实例）、Oldest（优先移出最旧实例）三种可选，默认是Newest 
+     * @return DeletePolicy 节点移出策略，有Random（随机）、Newest（优先移出最新实例）、Oldest（优先移出最旧实例）三种可选，默认是Newest
+     */
+    public String getDeletePolicy() {
+        return this.DeletePolicy;
+    }
+
+    /**
+     * Set 节点移出策略，有Random（随机）、Newest（优先移出最新实例）、Oldest（优先移出最旧实例）三种可选，默认是Newest
+     * @param DeletePolicy 节点移出策略，有Random（随机）、Newest（优先移出最新实例）、Oldest（优先移出最旧实例）三种可选，默认是Newest
+     */
+    public void setDeletePolicy(String DeletePolicy) {
+        this.DeletePolicy = DeletePolicy;
+    }
+
+    /**
      * Get 节点池 GPU 配置 
      * @return GPUConfigs 节点池 GPU 配置
      */
@@ -526,6 +556,22 @@ public class UpdateNativeNodePoolParam extends AbstractModel {
      */
     public void setGPUConfigs(GPUConfig [] GPUConfigs) {
         this.GPUConfigs = GPUConfigs;
+    }
+
+    /**
+     * Get 原生节点池安装自动化助手开关状态 
+     * @return AutomationService 原生节点池安装自动化助手开关状态
+     */
+    public Boolean getAutomationService() {
+        return this.AutomationService;
+    }
+
+    /**
+     * Set 原生节点池安装自动化助手开关状态
+     * @param AutomationService 原生节点池安装自动化助手开关状态
+     */
+    public void setAutomationService(Boolean AutomationService) {
+        this.AutomationService = AutomationService;
     }
 
     /**
@@ -630,11 +676,17 @@ public class UpdateNativeNodePoolParam extends AbstractModel {
                 this.KeyIds[i] = new String(source.KeyIds[i]);
             }
         }
+        if (source.DeletePolicy != null) {
+            this.DeletePolicy = new String(source.DeletePolicy);
+        }
         if (source.GPUConfigs != null) {
             this.GPUConfigs = new GPUConfig[source.GPUConfigs.length];
             for (int i = 0; i < source.GPUConfigs.length; i++) {
                 this.GPUConfigs[i] = new GPUConfig(source.GPUConfigs[i]);
             }
+        }
+        if (source.AutomationService != null) {
+            this.AutomationService = new Boolean(source.AutomationService);
         }
         if (source.Password != null) {
             this.Password = new String(source.Password);
@@ -666,7 +718,9 @@ public class UpdateNativeNodePoolParam extends AbstractModel {
         this.setParamSimple(map, prefix + "UpdateExistedNode", this.UpdateExistedNode);
         this.setParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
         this.setParamArraySimple(map, prefix + "KeyIds.", this.KeyIds);
+        this.setParamSimple(map, prefix + "DeletePolicy", this.DeletePolicy);
         this.setParamArrayObj(map, prefix + "GPUConfigs.", this.GPUConfigs);
+        this.setParamSimple(map, prefix + "AutomationService", this.AutomationService);
         this.setParamSimple(map, prefix + "Password", this.Password);
 
     }

@@ -815,6 +815,17 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *对与座席通话中的会话，进行放音
+     * @param req PlaySoundCallRequest
+     * @return PlaySoundCallResponse
+     * @throws TencentCloudSDKException
+     */
+    public PlaySoundCallResponse PlaySoundCall(PlaySoundCallRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "PlaySoundCall", PlaySoundCallResponse.class);
+    }
+
+    /**
      *重置话机注册密码
      * @param req ResetExtensionPasswordRequest
      * @return ResetExtensionPasswordResponse

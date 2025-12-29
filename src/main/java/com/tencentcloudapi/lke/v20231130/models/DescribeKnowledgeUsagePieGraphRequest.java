@@ -31,7 +31,7 @@ public class DescribeKnowledgeUsagePieGraphRequest extends AbstractModel {
     private String [] AppBizIds;
 
     /**
-    * 空间列表
+    * 空间ID，用于限定查询范围。不填时查询所有空间的数据
     */
     @SerializedName("SpaceId")
     @Expose
@@ -54,16 +54,16 @@ public class DescribeKnowledgeUsagePieGraphRequest extends AbstractModel {
     }
 
     /**
-     * Get 空间列表 
-     * @return SpaceId 空间列表
+     * Get 空间ID，用于限定查询范围。不填时查询所有空间的数据 
+     * @return SpaceId 空间ID，用于限定查询范围。不填时查询所有空间的数据
      */
     public String getSpaceId() {
         return this.SpaceId;
     }
 
     /**
-     * Set 空间列表
-     * @param SpaceId 空间列表
+     * Set 空间ID，用于限定查询范围。不填时查询所有空间的数据
+     * @param SpaceId 空间ID，用于限定查询范围。不填时查询所有空间的数据
      */
     public void setSpaceId(String SpaceId) {
         this.SpaceId = SpaceId;

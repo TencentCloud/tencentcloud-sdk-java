@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class RetryReleaseRequest extends AbstractModel {
 
     /**
-    * 机器人ID
+    * 应用ID（获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)）
     */
     @SerializedName("BotBizId")
     @Expose
     private String BotBizId;
 
     /**
-    * 发布业务ID
+    * 发布单ID（可以通过[ListRelease](https://cloud.tencent.com/document/product/1759/105077)获得）
     */
     @SerializedName("ReleaseBizId")
     @Expose
     private String ReleaseBizId;
 
     /**
-     * Get 机器人ID 
-     * @return BotBizId 机器人ID
+     * Get 应用ID（获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)） 
+     * @return BotBizId 应用ID（获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)）
      */
     public String getBotBizId() {
         return this.BotBizId;
     }
 
     /**
-     * Set 机器人ID
-     * @param BotBizId 机器人ID
+     * Set 应用ID（获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)）
+     * @param BotBizId 应用ID（获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)）
      */
     public void setBotBizId(String BotBizId) {
         this.BotBizId = BotBizId;
     }
 
     /**
-     * Get 发布业务ID 
-     * @return ReleaseBizId 发布业务ID
+     * Get 发布单ID（可以通过[ListRelease](https://cloud.tencent.com/document/product/1759/105077)获得） 
+     * @return ReleaseBizId 发布单ID（可以通过[ListRelease](https://cloud.tencent.com/document/product/1759/105077)获得）
      */
     public String getReleaseBizId() {
         return this.ReleaseBizId;
     }
 
     /**
-     * Set 发布业务ID
-     * @param ReleaseBizId 发布业务ID
+     * Set 发布单ID（可以通过[ListRelease](https://cloud.tencent.com/document/product/1759/105077)获得）
+     * @param ReleaseBizId 发布单ID（可以通过[ListRelease](https://cloud.tencent.com/document/product/1759/105077)获得）
      */
     public void setReleaseBizId(String ReleaseBizId) {
         this.ReleaseBizId = ReleaseBizId;
