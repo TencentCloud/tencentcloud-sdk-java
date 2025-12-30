@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeDedicatedClusterTypesRequest extends AbstractModel {
 
     /**
-    * 模糊匹配专用集群配置名称
+    * <p>模糊匹配专用集群配置名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 待查询的专用集群配置id列表
+    * <p>待查询的专用集群配置id列表</p>
     */
     @SerializedName("DedicatedClusterTypeIds")
     @Expose
     private String [] DedicatedClusterTypeIds;
 
     /**
-    * 偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+    * <p>偏移量，默认为0。关于<code>Offset</code>的更进一步介绍请参考 API <a href="https://cloud.tencent.com/document/api/213/15688">简介</a>中的相关小节。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+    * <p>返回数量，默认为20，最大值为100。关于<code>Limit</code>的更进一步介绍请参考 API <a href="https://cloud.tencent.com/document/api/213/15688">简介</a>中的相关小节。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 是否只查询计算规格类型
+    * <p>是否只查询计算规格类型</p>
     */
     @SerializedName("IsCompute")
     @Expose
     private Boolean IsCompute;
 
     /**
-     * Get 模糊匹配专用集群配置名称 
-     * @return Name 模糊匹配专用集群配置名称
+     * Get <p>模糊匹配专用集群配置名称</p> 
+     * @return Name <p>模糊匹配专用集群配置名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 模糊匹配专用集群配置名称
-     * @param Name 模糊匹配专用集群配置名称
+     * Set <p>模糊匹配专用集群配置名称</p>
+     * @param Name <p>模糊匹配专用集群配置名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 待查询的专用集群配置id列表 
-     * @return DedicatedClusterTypeIds 待查询的专用集群配置id列表
+     * Get <p>待查询的专用集群配置id列表</p> 
+     * @return DedicatedClusterTypeIds <p>待查询的专用集群配置id列表</p>
      */
     public String [] getDedicatedClusterTypeIds() {
         return this.DedicatedClusterTypeIds;
     }
 
     /**
-     * Set 待查询的专用集群配置id列表
-     * @param DedicatedClusterTypeIds 待查询的专用集群配置id列表
+     * Set <p>待查询的专用集群配置id列表</p>
+     * @param DedicatedClusterTypeIds <p>待查询的专用集群配置id列表</p>
      */
     public void setDedicatedClusterTypeIds(String [] DedicatedClusterTypeIds) {
         this.DedicatedClusterTypeIds = DedicatedClusterTypeIds;
     }
 
     /**
-     * Get 偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。 
-     * @return Offset 偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+     * Get <p>偏移量，默认为0。关于<code>Offset</code>的更进一步介绍请参考 API <a href="https://cloud.tencent.com/document/api/213/15688">简介</a>中的相关小节。</p> 
+     * @return Offset <p>偏移量，默认为0。关于<code>Offset</code>的更进一步介绍请参考 API <a href="https://cloud.tencent.com/document/api/213/15688">简介</a>中的相关小节。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
-     * @param Offset 偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+     * Set <p>偏移量，默认为0。关于<code>Offset</code>的更进一步介绍请参考 API <a href="https://cloud.tencent.com/document/api/213/15688">简介</a>中的相关小节。</p>
+     * @param Offset <p>偏移量，默认为0。关于<code>Offset</code>的更进一步介绍请参考 API <a href="https://cloud.tencent.com/document/api/213/15688">简介</a>中的相关小节。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。 
-     * @return Limit 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+     * Get <p>返回数量，默认为20，最大值为100。关于<code>Limit</code>的更进一步介绍请参考 API <a href="https://cloud.tencent.com/document/api/213/15688">简介</a>中的相关小节。</p> 
+     * @return Limit <p>返回数量，默认为20，最大值为100。关于<code>Limit</code>的更进一步介绍请参考 API <a href="https://cloud.tencent.com/document/api/213/15688">简介</a>中的相关小节。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
-     * @param Limit 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+     * Set <p>返回数量，默认为20，最大值为100。关于<code>Limit</code>的更进一步介绍请参考 API <a href="https://cloud.tencent.com/document/api/213/15688">简介</a>中的相关小节。</p>
+     * @param Limit <p>返回数量，默认为20，最大值为100。关于<code>Limit</code>的更进一步介绍请参考 API <a href="https://cloud.tencent.com/document/api/213/15688">简介</a>中的相关小节。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 是否只查询计算规格类型 
-     * @return IsCompute 是否只查询计算规格类型
+     * Get <p>是否只查询计算规格类型</p> 
+     * @return IsCompute <p>是否只查询计算规格类型</p>
      */
     public Boolean getIsCompute() {
         return this.IsCompute;
     }
 
     /**
-     * Set 是否只查询计算规格类型
-     * @param IsCompute 是否只查询计算规格类型
+     * Set <p>是否只查询计算规格类型</p>
+     * @param IsCompute <p>是否只查询计算规格类型</p>
      */
     public void setIsCompute(Boolean IsCompute) {
         this.IsCompute = IsCompute;

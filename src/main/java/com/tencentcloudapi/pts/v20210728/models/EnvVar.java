@@ -21,119 +21,116 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateEnvironmentRequest extends AbstractModel {
+public class EnvVar extends AbstractModel {
 
     /**
-    * 项目ID
-    */
-    @SerializedName("ProjectId")
-    @Expose
-    private String ProjectId;
-
-    /**
-    * 环境名
+    * 变量引用键，建议为 C_IDENTIFIER 全大写风格
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 环境变量
+    * 默认 NORMAL，支持 NORMAL、PASSWORD 类型
     */
-    @SerializedName("EnvVars")
+    @SerializedName("Type")
     @Expose
-    private EnvVar [] EnvVars;
+    private String Type;
 
     /**
-    * 环境描述
+    * 变量引用值
+    */
+    @SerializedName("Value")
+    @Expose
+    private String Value;
+
+    /**
+    * 描述内容
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-     * Get 项目ID 
-     * @return ProjectId 项目ID
-     */
-    public String getProjectId() {
-        return this.ProjectId;
-    }
-
-    /**
-     * Set 项目ID
-     * @param ProjectId 项目ID
-     */
-    public void setProjectId(String ProjectId) {
-        this.ProjectId = ProjectId;
-    }
-
-    /**
-     * Get 环境名 
-     * @return Name 环境名
+     * Get 变量引用键，建议为 C_IDENTIFIER 全大写风格 
+     * @return Name 变量引用键，建议为 C_IDENTIFIER 全大写风格
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 环境名
-     * @param Name 环境名
+     * Set 变量引用键，建议为 C_IDENTIFIER 全大写风格
+     * @param Name 变量引用键，建议为 C_IDENTIFIER 全大写风格
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 环境变量 
-     * @return EnvVars 环境变量
+     * Get 默认 NORMAL，支持 NORMAL、PASSWORD 类型 
+     * @return Type 默认 NORMAL，支持 NORMAL、PASSWORD 类型
      */
-    public EnvVar [] getEnvVars() {
-        return this.EnvVars;
+    public String getType() {
+        return this.Type;
     }
 
     /**
-     * Set 环境变量
-     * @param EnvVars 环境变量
+     * Set 默认 NORMAL，支持 NORMAL、PASSWORD 类型
+     * @param Type 默认 NORMAL，支持 NORMAL、PASSWORD 类型
      */
-    public void setEnvVars(EnvVar [] EnvVars) {
-        this.EnvVars = EnvVars;
+    public void setType(String Type) {
+        this.Type = Type;
     }
 
     /**
-     * Get 环境描述 
-     * @return Description 环境描述
+     * Get 变量引用值 
+     * @return Value 变量引用值
+     */
+    public String getValue() {
+        return this.Value;
+    }
+
+    /**
+     * Set 变量引用值
+     * @param Value 变量引用值
+     */
+    public void setValue(String Value) {
+        this.Value = Value;
+    }
+
+    /**
+     * Get 描述内容 
+     * @return Description 描述内容
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 环境描述
-     * @param Description 环境描述
+     * Set 描述内容
+     * @param Description 描述内容
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
-    public CreateEnvironmentRequest() {
+    public EnvVar() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateEnvironmentRequest(CreateEnvironmentRequest source) {
-        if (source.ProjectId != null) {
-            this.ProjectId = new String(source.ProjectId);
-        }
+    public EnvVar(EnvVar source) {
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
-        if (source.EnvVars != null) {
-            this.EnvVars = new EnvVar[source.EnvVars.length];
-            for (int i = 0; i < source.EnvVars.length; i++) {
-                this.EnvVars[i] = new EnvVar(source.EnvVars[i]);
-            }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
         }
         if (source.Description != null) {
             this.Description = new String(source.Description);
@@ -145,9 +142,9 @@ public class CreateEnvironmentRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamArrayObj(map, prefix + "EnvVars.", this.EnvVars);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "Value", this.Value);
         this.setParamSimple(map, prefix + "Description", this.Description);
 
     }

@@ -1097,6 +1097,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *本接口根据资源组ID查询资源组CU使用情况
+     * @param req DescribeResourceGroupUsageInfoRequest
+     * @return DescribeResourceGroupUsageInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourceGroupUsageInfoResponse DescribeResourceGroupUsageInfo(DescribeResourceGroupUsageInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeResourceGroupUsageInfo", DescribeResourceGroupUsageInfoResponse.class);
+    }
+
+    /**
      *查询结果下载任务
      * @param req DescribeResultDownloadRequest
      * @return DescribeResultDownloadResponse

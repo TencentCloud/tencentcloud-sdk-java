@@ -143,6 +143,13 @@ public class DescribeContractReviewTaskResponse extends AbstractModel {
     private OutputReference [] ApprovedLists;
 
     /**
+    * 摘要信息
+    */
+    @SerializedName("Summaries")
+    @Expose
+    private ContractSummary [] Summaries;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -458,6 +465,22 @@ public class DescribeContractReviewTaskResponse extends AbstractModel {
     }
 
     /**
+     * Get 摘要信息 
+     * @return Summaries 摘要信息
+     */
+    public ContractSummary [] getSummaries() {
+        return this.Summaries;
+    }
+
+    /**
+     * Set 摘要信息
+     * @param Summaries 摘要信息
+     */
+    public void setSummaries(ContractSummary [] Summaries) {
+        this.Summaries = Summaries;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -529,6 +552,12 @@ public class DescribeContractReviewTaskResponse extends AbstractModel {
                 this.ApprovedLists[i] = new OutputReference(source.ApprovedLists[i]);
             }
         }
+        if (source.Summaries != null) {
+            this.Summaries = new ContractSummary[source.Summaries.length];
+            for (int i = 0; i < source.Summaries.length; i++) {
+                this.Summaries[i] = new ContractSummary(source.Summaries[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -553,6 +582,7 @@ public class DescribeContractReviewTaskResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "HighRiskCount", this.HighRiskCount);
         this.setParamSimple(map, prefix + "TotalRiskCount", this.TotalRiskCount);
         this.setParamArrayObj(map, prefix + "ApprovedLists.", this.ApprovedLists);
+        this.setParamArrayObj(map, prefix + "Summaries.", this.Summaries);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

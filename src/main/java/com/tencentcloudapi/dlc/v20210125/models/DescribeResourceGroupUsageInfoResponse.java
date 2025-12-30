@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdc.v20201214.models;
+package com.tencentcloudapi.dlc.v20210125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,28 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateSiteResponse extends AbstractModel {
+public class DescribeResourceGroupUsageInfoResponse extends AbstractModel {
 
     /**
-    * <p>创建Site生成的id</p>
+    * 资源上限
     */
-    @SerializedName("SiteId")
+    @SerializedName("Total")
     @Expose
-    private String SiteId;
+    private Long Total;
+
+    /**
+    * 已占用资源
+    */
+    @SerializedName("Used")
+    @Expose
+    private Long Used;
+
+    /**
+    * 剩余可用资源
+    */
+    @SerializedName("Available")
+    @Expose
+    private Long Available;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +52,51 @@ public class CreateSiteResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>创建Site生成的id</p> 
-     * @return SiteId <p>创建Site生成的id</p>
+     * Get 资源上限 
+     * @return Total 资源上限
      */
-    public String getSiteId() {
-        return this.SiteId;
+    public Long getTotal() {
+        return this.Total;
     }
 
     /**
-     * Set <p>创建Site生成的id</p>
-     * @param SiteId <p>创建Site生成的id</p>
+     * Set 资源上限
+     * @param Total 资源上限
      */
-    public void setSiteId(String SiteId) {
-        this.SiteId = SiteId;
+    public void setTotal(Long Total) {
+        this.Total = Total;
+    }
+
+    /**
+     * Get 已占用资源 
+     * @return Used 已占用资源
+     */
+    public Long getUsed() {
+        return this.Used;
+    }
+
+    /**
+     * Set 已占用资源
+     * @param Used 已占用资源
+     */
+    public void setUsed(Long Used) {
+        this.Used = Used;
+    }
+
+    /**
+     * Get 剩余可用资源 
+     * @return Available 剩余可用资源
+     */
+    public Long getAvailable() {
+        return this.Available;
+    }
+
+    /**
+     * Set 剩余可用资源
+     * @param Available 剩余可用资源
+     */
+    public void setAvailable(Long Available) {
+        this.Available = Available;
     }
 
     /**
@@ -69,16 +115,22 @@ public class CreateSiteResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreateSiteResponse() {
+    public DescribeResourceGroupUsageInfoResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateSiteResponse(CreateSiteResponse source) {
-        if (source.SiteId != null) {
-            this.SiteId = new String(source.SiteId);
+    public DescribeResourceGroupUsageInfoResponse(DescribeResourceGroupUsageInfoResponse source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.Used != null) {
+            this.Used = new Long(source.Used);
+        }
+        if (source.Available != null) {
+            this.Available = new Long(source.Available);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +142,9 @@ public class CreateSiteResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "SiteId", this.SiteId);
+        this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamSimple(map, prefix + "Used", this.Used);
+        this.setParamSimple(map, prefix + "Available", this.Available);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

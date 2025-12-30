@@ -24,175 +24,115 @@ import java.util.HashMap;
 public class DescribeCertificateBindResourceTaskDetailRequest extends AbstractModel {
 
     /**
-    * 任务ID，根据CreateCertificateBindResourceSyncTask得到的任务ID查询绑定云资源结果
+    * <p>任务ID，根据CreateCertificateBindResourceSyncTask得到的任务ID查询绑定云资源结果</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 每页展示数量， 默认10，最大值100; 分页总数为云资源地域下实例总数， 即第一页会拉群每个云资源的地域下面Limit数量实例
+    * <p>每页展示数量， 默认10，最大值100; 分页总数为云资源地域下实例总数， 即第一页会拉群每个云资源的地域下面Limit数量实例</p>
     */
     @SerializedName("Limit")
     @Expose
     private String Limit;
 
     /**
-    * 当前偏移量，默认为0
+    * <p>当前偏移量，默认为0</p>
     */
     @SerializedName("Offset")
     @Expose
     private String Offset;
 
     /**
-    * 查询资源类型的结果详情， 不传则查询所有，取值支持：
-- clb
-- cdn
-- ddos
-- live
-- vod
-- waf
-- apigateway
-- teo
-- tke
-- cos
-- tse
-- tcb
+    * <p>查询资源类型的结果详情， 不传则查询所有，取值支持：- clb- cdn- ddos- live- vod- waf- apigateway- teo- tke- cos- tse- tcb</p>
     */
     @SerializedName("ResourceTypes")
     @Expose
     private String [] ResourceTypes;
 
     /**
-    * 查询地域列表的数据，clb、tke、waf、apigateway、tcb、cos、tse支持地域查询， 其他资源类型不支持
+    * <p>查询地域列表的数据，clb、tke、waf、apigateway、tcb、cos、tse支持地域查询， 其他资源类型不支持</p>
     */
     @SerializedName("Regions")
     @Expose
     private String [] Regions;
 
     /**
-     * Get 任务ID，根据CreateCertificateBindResourceSyncTask得到的任务ID查询绑定云资源结果 
-     * @return TaskId 任务ID，根据CreateCertificateBindResourceSyncTask得到的任务ID查询绑定云资源结果
+     * Get <p>任务ID，根据CreateCertificateBindResourceSyncTask得到的任务ID查询绑定云资源结果</p> 
+     * @return TaskId <p>任务ID，根据CreateCertificateBindResourceSyncTask得到的任务ID查询绑定云资源结果</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务ID，根据CreateCertificateBindResourceSyncTask得到的任务ID查询绑定云资源结果
-     * @param TaskId 任务ID，根据CreateCertificateBindResourceSyncTask得到的任务ID查询绑定云资源结果
+     * Set <p>任务ID，根据CreateCertificateBindResourceSyncTask得到的任务ID查询绑定云资源结果</p>
+     * @param TaskId <p>任务ID，根据CreateCertificateBindResourceSyncTask得到的任务ID查询绑定云资源结果</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 每页展示数量， 默认10，最大值100; 分页总数为云资源地域下实例总数， 即第一页会拉群每个云资源的地域下面Limit数量实例 
-     * @return Limit 每页展示数量， 默认10，最大值100; 分页总数为云资源地域下实例总数， 即第一页会拉群每个云资源的地域下面Limit数量实例
+     * Get <p>每页展示数量， 默认10，最大值100; 分页总数为云资源地域下实例总数， 即第一页会拉群每个云资源的地域下面Limit数量实例</p> 
+     * @return Limit <p>每页展示数量， 默认10，最大值100; 分页总数为云资源地域下实例总数， 即第一页会拉群每个云资源的地域下面Limit数量实例</p>
      */
     public String getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页展示数量， 默认10，最大值100; 分页总数为云资源地域下实例总数， 即第一页会拉群每个云资源的地域下面Limit数量实例
-     * @param Limit 每页展示数量， 默认10，最大值100; 分页总数为云资源地域下实例总数， 即第一页会拉群每个云资源的地域下面Limit数量实例
+     * Set <p>每页展示数量， 默认10，最大值100; 分页总数为云资源地域下实例总数， 即第一页会拉群每个云资源的地域下面Limit数量实例</p>
+     * @param Limit <p>每页展示数量， 默认10，最大值100; 分页总数为云资源地域下实例总数， 即第一页会拉群每个云资源的地域下面Limit数量实例</p>
      */
     public void setLimit(String Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 当前偏移量，默认为0 
-     * @return Offset 当前偏移量，默认为0
+     * Get <p>当前偏移量，默认为0</p> 
+     * @return Offset <p>当前偏移量，默认为0</p>
      */
     public String getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 当前偏移量，默认为0
-     * @param Offset 当前偏移量，默认为0
+     * Set <p>当前偏移量，默认为0</p>
+     * @param Offset <p>当前偏移量，默认为0</p>
      */
     public void setOffset(String Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 查询资源类型的结果详情， 不传则查询所有，取值支持：
-- clb
-- cdn
-- ddos
-- live
-- vod
-- waf
-- apigateway
-- teo
-- tke
-- cos
-- tse
-- tcb 
-     * @return ResourceTypes 查询资源类型的结果详情， 不传则查询所有，取值支持：
-- clb
-- cdn
-- ddos
-- live
-- vod
-- waf
-- apigateway
-- teo
-- tke
-- cos
-- tse
-- tcb
+     * Get <p>查询资源类型的结果详情， 不传则查询所有，取值支持：- clb- cdn- ddos- live- vod- waf- apigateway- teo- tke- cos- tse- tcb</p> 
+     * @return ResourceTypes <p>查询资源类型的结果详情， 不传则查询所有，取值支持：- clb- cdn- ddos- live- vod- waf- apigateway- teo- tke- cos- tse- tcb</p>
      */
     public String [] getResourceTypes() {
         return this.ResourceTypes;
     }
 
     /**
-     * Set 查询资源类型的结果详情， 不传则查询所有，取值支持：
-- clb
-- cdn
-- ddos
-- live
-- vod
-- waf
-- apigateway
-- teo
-- tke
-- cos
-- tse
-- tcb
-     * @param ResourceTypes 查询资源类型的结果详情， 不传则查询所有，取值支持：
-- clb
-- cdn
-- ddos
-- live
-- vod
-- waf
-- apigateway
-- teo
-- tke
-- cos
-- tse
-- tcb
+     * Set <p>查询资源类型的结果详情， 不传则查询所有，取值支持：- clb- cdn- ddos- live- vod- waf- apigateway- teo- tke- cos- tse- tcb</p>
+     * @param ResourceTypes <p>查询资源类型的结果详情， 不传则查询所有，取值支持：- clb- cdn- ddos- live- vod- waf- apigateway- teo- tke- cos- tse- tcb</p>
      */
     public void setResourceTypes(String [] ResourceTypes) {
         this.ResourceTypes = ResourceTypes;
     }
 
     /**
-     * Get 查询地域列表的数据，clb、tke、waf、apigateway、tcb、cos、tse支持地域查询， 其他资源类型不支持 
-     * @return Regions 查询地域列表的数据，clb、tke、waf、apigateway、tcb、cos、tse支持地域查询， 其他资源类型不支持
+     * Get <p>查询地域列表的数据，clb、tke、waf、apigateway、tcb、cos、tse支持地域查询， 其他资源类型不支持</p> 
+     * @return Regions <p>查询地域列表的数据，clb、tke、waf、apigateway、tcb、cos、tse支持地域查询， 其他资源类型不支持</p>
      */
     public String [] getRegions() {
         return this.Regions;
     }
 
     /**
-     * Set 查询地域列表的数据，clb、tke、waf、apigateway、tcb、cos、tse支持地域查询， 其他资源类型不支持
-     * @param Regions 查询地域列表的数据，clb、tke、waf、apigateway、tcb、cos、tse支持地域查询， 其他资源类型不支持
+     * Set <p>查询地域列表的数据，clb、tke、waf、apigateway、tcb、cos、tse支持地域查询， 其他资源类型不支持</p>
+     * @param Regions <p>查询地域列表的数据，clb、tke、waf、apigateway、tcb、cos、tse支持地域查询， 其他资源类型不支持</p>
      */
     public void setRegions(String [] Regions) {
         this.Regions = Regions;

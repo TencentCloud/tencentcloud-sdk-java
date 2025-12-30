@@ -24,569 +24,529 @@ import java.util.HashMap;
 public class CreateSiteRequest extends AbstractModel {
 
     /**
-    * 站点名称
+    * <p>站点名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 站点所在国家
+    * <p>站点所在国家</p>
     */
     @SerializedName("Country")
     @Expose
     private String Country;
 
     /**
-    * 站点所在省份
+    * <p>站点所在省份</p>
     */
     @SerializedName("Province")
     @Expose
     private String Province;
 
     /**
-    * 站点所在城市
+    * <p>站点所在城市</p>
     */
     @SerializedName("City")
     @Expose
     private String City;
 
     /**
-    * 站点所在地区的详细地址信息
+    * <p>站点所在地区的详细地址信息</p>
     */
     @SerializedName("AddressLine")
     @Expose
     private String AddressLine;
 
     /**
-    * 站点描述
+    * <p>站点描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 注意事项
+    * <p>注意事项</p>
     */
     @SerializedName("Note")
     @Expose
     private String Note;
 
     /**
-    * 您将使用光纤类型将CDC设备连接到网络。有单模和多模两种选项。取值范围："MM","SM"
+    * <p>您将使用光纤类型将CDC设备连接到网络。有单模和多模两种选项。取值范围："MM","SM"</p>
     */
     @SerializedName("FiberType")
     @Expose
     private String FiberType;
 
     /**
-    * 您将CDC连接到网络时采用的光学标准。此字段取决于上行链路速度、光纤类型和到上游设备的距离。
+    * <p>您将CDC连接到网络时采用的光学标准。此字段取决于上行链路速度、光纤类型和到上游设备的距离。</p>
     */
     @SerializedName("OpticalStandard")
     @Expose
     private String OpticalStandard;
 
     /**
-    * 电源连接器类型
+    * <p>电源连接器类型</p>
     */
     @SerializedName("PowerConnectors")
     @Expose
     private String PowerConnectors;
 
     /**
-    * 从机架上方还是下方供电。取值范围：["UP","DOWN"]
+    * <p>从机架上方还是下方供电。取值范围：["UP","DOWN"]</p>
     */
     @SerializedName("PowerFeedDrop")
     @Expose
     private String PowerFeedDrop;
 
     /**
-    * 最大承重(KG)
+    * <p>最大承重(KG)</p>
     */
     @SerializedName("MaxWeight")
     @Expose
     private Long MaxWeight;
 
     /**
-    * 功耗(KW)
+    * <p>功耗(KW)</p>
     */
     @SerializedName("PowerDrawKva")
     @Expose
     private Long PowerDrawKva;
 
     /**
-    * 网络到腾讯云Region区域的上行链路速度(Gbps)
+    * <p>网络到腾讯云Region区域的上行链路速度(Gbps)</p>
     */
     @SerializedName("UplinkSpeedGbps")
     @Expose
     private Long UplinkSpeedGbps;
 
     /**
-    * 将CDC连接到网络时，每台CDC网络设备(每个机架 2 台设备)使用的上行链路数量。
+    * <p>将CDC连接到网络时，每台CDC网络设备(每个机架 2 台设备)使用的上行链路数量。</p>
     */
     @SerializedName("UplinkCount")
     @Expose
     private Long UplinkCount;
 
     /**
-    * 是否满足下面环境条件：
-1、场地没有材料要求或验收标准会影响 CDC 设备配送和安装。
-2、确定的机架位置包含:
-温度范围为 41 到 104°F (5 到 40°C)。
-湿度范围为 10°F (-12°C)和 8% RH (相对湿度)到 70°F(21°C)和 80% RH。
-机架位置的气流方向为从前向后，且应具有足够的 CFM (每分钟立方英尺)。CFM 必须是 CDC 配置的 kVA 功耗值的 145.8 倍。
+    * <p>是否满足下面环境条件：1、场地没有材料要求或验收标准会影响 CDC 设备配送和安装。2、确定的机架位置包含:温度范围为 41 到 104°F (5 到 40°C)。湿度范围为 10°F (-12°C)和 8% RH (相对湿度)到 70°F(21°C)和 80% RH。机架位置的气流方向为从前向后，且应具有足够的 CFM (每分钟立方英尺)。CFM 必须是 CDC 配置的 kVA 功耗值的 145.8 倍。</p>
     */
     @SerializedName("ConditionRequirement")
     @Expose
     private Boolean ConditionRequirement;
 
     /**
-    * 是否满足下面的尺寸条件：
-您的装货站台可以容纳一个机架箱(高 x 宽 x 深 = 94" x 54" x 48")。
-您可以提供从机架(高 x 宽 x 深 = 80" x 24" x 48")交货地点到机架最终安置位置的明确通道。测量深度时，应包括站台、走廊通道、门、转弯、坡道、货梯，并将其他通道限制考虑在内。
-在最终的 CDC安置位置，前部间隙可以为 48" 或更大，后部间隙可以为 24" 或更大。
+    * <p>是否满足下面的尺寸条件：您的装货站台可以容纳一个机架箱(高 x 宽 x 深 = 94" x 54" x 48")。您可以提供从机架(高 x 宽 x 深 = 80" x 24" x 48")交货地点到机架最终安置位置的明确通道。测量深度时，应包括站台、走廊通道、门、转弯、坡道、货梯，并将其他通道限制考虑在内。在最终的 CDC安置位置，前部间隙可以为 48" 或更大，后部间隙可以为 24" 或更大。</p>
     */
     @SerializedName("DimensionRequirement")
     @Expose
     private Boolean DimensionRequirement;
 
     /**
-    * 是否提供冗余的上游设备(交换机或路由器)，以便两台  网络设备都能连接到网络设备。
+    * <p>是否提供冗余的上游设备(交换机或路由器)，以便两台  网络设备都能连接到网络设备。</p>
     */
     @SerializedName("RedundantNetworking")
     @Expose
     private Boolean RedundantNetworking;
 
     /**
-    * 站点所在地区的邮编
+    * <p>站点所在地区的邮编</p>
     */
     @SerializedName("PostalCode")
     @Expose
     private Long PostalCode;
 
     /**
-    * 站点所在地区的详细地址信息（补充）
+    * <p>站点所在地区的详细地址信息（补充）</p>
     */
     @SerializedName("OptionalAddressLine")
     @Expose
     private String OptionalAddressLine;
 
     /**
-    * 是否需要腾讯云团队协助完成机架支撑工作
+    * <p>是否需要腾讯云团队协助完成机架支撑工作</p>
     */
     @SerializedName("NeedHelp")
     @Expose
     private Boolean NeedHelp;
 
     /**
-    * 是否电源冗余
+    * <p>是否电源冗余</p>
     */
     @SerializedName("RedundantPower")
     @Expose
     private Boolean RedundantPower;
 
     /**
-    * 上游断路器是否具备
+    * <p>上游断路器是否具备</p>
     */
     @SerializedName("BreakerRequirement")
     @Expose
     private Boolean BreakerRequirement;
 
     /**
-     * Get 站点名称 
-     * @return Name 站点名称
+     * Get <p>站点名称</p> 
+     * @return Name <p>站点名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 站点名称
-     * @param Name 站点名称
+     * Set <p>站点名称</p>
+     * @param Name <p>站点名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 站点所在国家 
-     * @return Country 站点所在国家
+     * Get <p>站点所在国家</p> 
+     * @return Country <p>站点所在国家</p>
      */
     public String getCountry() {
         return this.Country;
     }
 
     /**
-     * Set 站点所在国家
-     * @param Country 站点所在国家
+     * Set <p>站点所在国家</p>
+     * @param Country <p>站点所在国家</p>
      */
     public void setCountry(String Country) {
         this.Country = Country;
     }
 
     /**
-     * Get 站点所在省份 
-     * @return Province 站点所在省份
+     * Get <p>站点所在省份</p> 
+     * @return Province <p>站点所在省份</p>
      */
     public String getProvince() {
         return this.Province;
     }
 
     /**
-     * Set 站点所在省份
-     * @param Province 站点所在省份
+     * Set <p>站点所在省份</p>
+     * @param Province <p>站点所在省份</p>
      */
     public void setProvince(String Province) {
         this.Province = Province;
     }
 
     /**
-     * Get 站点所在城市 
-     * @return City 站点所在城市
+     * Get <p>站点所在城市</p> 
+     * @return City <p>站点所在城市</p>
      */
     public String getCity() {
         return this.City;
     }
 
     /**
-     * Set 站点所在城市
-     * @param City 站点所在城市
+     * Set <p>站点所在城市</p>
+     * @param City <p>站点所在城市</p>
      */
     public void setCity(String City) {
         this.City = City;
     }
 
     /**
-     * Get 站点所在地区的详细地址信息 
-     * @return AddressLine 站点所在地区的详细地址信息
+     * Get <p>站点所在地区的详细地址信息</p> 
+     * @return AddressLine <p>站点所在地区的详细地址信息</p>
      */
     public String getAddressLine() {
         return this.AddressLine;
     }
 
     /**
-     * Set 站点所在地区的详细地址信息
-     * @param AddressLine 站点所在地区的详细地址信息
+     * Set <p>站点所在地区的详细地址信息</p>
+     * @param AddressLine <p>站点所在地区的详细地址信息</p>
      */
     public void setAddressLine(String AddressLine) {
         this.AddressLine = AddressLine;
     }
 
     /**
-     * Get 站点描述 
-     * @return Description 站点描述
+     * Get <p>站点描述</p> 
+     * @return Description <p>站点描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 站点描述
-     * @param Description 站点描述
+     * Set <p>站点描述</p>
+     * @param Description <p>站点描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 注意事项 
-     * @return Note 注意事项
+     * Get <p>注意事项</p> 
+     * @return Note <p>注意事项</p>
      */
     public String getNote() {
         return this.Note;
     }
 
     /**
-     * Set 注意事项
-     * @param Note 注意事项
+     * Set <p>注意事项</p>
+     * @param Note <p>注意事项</p>
      */
     public void setNote(String Note) {
         this.Note = Note;
     }
 
     /**
-     * Get 您将使用光纤类型将CDC设备连接到网络。有单模和多模两种选项。取值范围："MM","SM" 
-     * @return FiberType 您将使用光纤类型将CDC设备连接到网络。有单模和多模两种选项。取值范围："MM","SM"
+     * Get <p>您将使用光纤类型将CDC设备连接到网络。有单模和多模两种选项。取值范围："MM","SM"</p> 
+     * @return FiberType <p>您将使用光纤类型将CDC设备连接到网络。有单模和多模两种选项。取值范围："MM","SM"</p>
      */
     public String getFiberType() {
         return this.FiberType;
     }
 
     /**
-     * Set 您将使用光纤类型将CDC设备连接到网络。有单模和多模两种选项。取值范围："MM","SM"
-     * @param FiberType 您将使用光纤类型将CDC设备连接到网络。有单模和多模两种选项。取值范围："MM","SM"
+     * Set <p>您将使用光纤类型将CDC设备连接到网络。有单模和多模两种选项。取值范围："MM","SM"</p>
+     * @param FiberType <p>您将使用光纤类型将CDC设备连接到网络。有单模和多模两种选项。取值范围："MM","SM"</p>
      */
     public void setFiberType(String FiberType) {
         this.FiberType = FiberType;
     }
 
     /**
-     * Get 您将CDC连接到网络时采用的光学标准。此字段取决于上行链路速度、光纤类型和到上游设备的距离。 
-     * @return OpticalStandard 您将CDC连接到网络时采用的光学标准。此字段取决于上行链路速度、光纤类型和到上游设备的距离。
+     * Get <p>您将CDC连接到网络时采用的光学标准。此字段取决于上行链路速度、光纤类型和到上游设备的距离。</p> 
+     * @return OpticalStandard <p>您将CDC连接到网络时采用的光学标准。此字段取决于上行链路速度、光纤类型和到上游设备的距离。</p>
      */
     public String getOpticalStandard() {
         return this.OpticalStandard;
     }
 
     /**
-     * Set 您将CDC连接到网络时采用的光学标准。此字段取决于上行链路速度、光纤类型和到上游设备的距离。
-     * @param OpticalStandard 您将CDC连接到网络时采用的光学标准。此字段取决于上行链路速度、光纤类型和到上游设备的距离。
+     * Set <p>您将CDC连接到网络时采用的光学标准。此字段取决于上行链路速度、光纤类型和到上游设备的距离。</p>
+     * @param OpticalStandard <p>您将CDC连接到网络时采用的光学标准。此字段取决于上行链路速度、光纤类型和到上游设备的距离。</p>
      */
     public void setOpticalStandard(String OpticalStandard) {
         this.OpticalStandard = OpticalStandard;
     }
 
     /**
-     * Get 电源连接器类型 
-     * @return PowerConnectors 电源连接器类型
+     * Get <p>电源连接器类型</p> 
+     * @return PowerConnectors <p>电源连接器类型</p>
      */
     public String getPowerConnectors() {
         return this.PowerConnectors;
     }
 
     /**
-     * Set 电源连接器类型
-     * @param PowerConnectors 电源连接器类型
+     * Set <p>电源连接器类型</p>
+     * @param PowerConnectors <p>电源连接器类型</p>
      */
     public void setPowerConnectors(String PowerConnectors) {
         this.PowerConnectors = PowerConnectors;
     }
 
     /**
-     * Get 从机架上方还是下方供电。取值范围：["UP","DOWN"] 
-     * @return PowerFeedDrop 从机架上方还是下方供电。取值范围：["UP","DOWN"]
+     * Get <p>从机架上方还是下方供电。取值范围：["UP","DOWN"]</p> 
+     * @return PowerFeedDrop <p>从机架上方还是下方供电。取值范围：["UP","DOWN"]</p>
      */
     public String getPowerFeedDrop() {
         return this.PowerFeedDrop;
     }
 
     /**
-     * Set 从机架上方还是下方供电。取值范围：["UP","DOWN"]
-     * @param PowerFeedDrop 从机架上方还是下方供电。取值范围：["UP","DOWN"]
+     * Set <p>从机架上方还是下方供电。取值范围：["UP","DOWN"]</p>
+     * @param PowerFeedDrop <p>从机架上方还是下方供电。取值范围：["UP","DOWN"]</p>
      */
     public void setPowerFeedDrop(String PowerFeedDrop) {
         this.PowerFeedDrop = PowerFeedDrop;
     }
 
     /**
-     * Get 最大承重(KG) 
-     * @return MaxWeight 最大承重(KG)
+     * Get <p>最大承重(KG)</p> 
+     * @return MaxWeight <p>最大承重(KG)</p>
      */
     public Long getMaxWeight() {
         return this.MaxWeight;
     }
 
     /**
-     * Set 最大承重(KG)
-     * @param MaxWeight 最大承重(KG)
+     * Set <p>最大承重(KG)</p>
+     * @param MaxWeight <p>最大承重(KG)</p>
      */
     public void setMaxWeight(Long MaxWeight) {
         this.MaxWeight = MaxWeight;
     }
 
     /**
-     * Get 功耗(KW) 
-     * @return PowerDrawKva 功耗(KW)
+     * Get <p>功耗(KW)</p> 
+     * @return PowerDrawKva <p>功耗(KW)</p>
      */
     public Long getPowerDrawKva() {
         return this.PowerDrawKva;
     }
 
     /**
-     * Set 功耗(KW)
-     * @param PowerDrawKva 功耗(KW)
+     * Set <p>功耗(KW)</p>
+     * @param PowerDrawKva <p>功耗(KW)</p>
      */
     public void setPowerDrawKva(Long PowerDrawKva) {
         this.PowerDrawKva = PowerDrawKva;
     }
 
     /**
-     * Get 网络到腾讯云Region区域的上行链路速度(Gbps) 
-     * @return UplinkSpeedGbps 网络到腾讯云Region区域的上行链路速度(Gbps)
+     * Get <p>网络到腾讯云Region区域的上行链路速度(Gbps)</p> 
+     * @return UplinkSpeedGbps <p>网络到腾讯云Region区域的上行链路速度(Gbps)</p>
      */
     public Long getUplinkSpeedGbps() {
         return this.UplinkSpeedGbps;
     }
 
     /**
-     * Set 网络到腾讯云Region区域的上行链路速度(Gbps)
-     * @param UplinkSpeedGbps 网络到腾讯云Region区域的上行链路速度(Gbps)
+     * Set <p>网络到腾讯云Region区域的上行链路速度(Gbps)</p>
+     * @param UplinkSpeedGbps <p>网络到腾讯云Region区域的上行链路速度(Gbps)</p>
      */
     public void setUplinkSpeedGbps(Long UplinkSpeedGbps) {
         this.UplinkSpeedGbps = UplinkSpeedGbps;
     }
 
     /**
-     * Get 将CDC连接到网络时，每台CDC网络设备(每个机架 2 台设备)使用的上行链路数量。 
-     * @return UplinkCount 将CDC连接到网络时，每台CDC网络设备(每个机架 2 台设备)使用的上行链路数量。
+     * Get <p>将CDC连接到网络时，每台CDC网络设备(每个机架 2 台设备)使用的上行链路数量。</p> 
+     * @return UplinkCount <p>将CDC连接到网络时，每台CDC网络设备(每个机架 2 台设备)使用的上行链路数量。</p>
      */
     public Long getUplinkCount() {
         return this.UplinkCount;
     }
 
     /**
-     * Set 将CDC连接到网络时，每台CDC网络设备(每个机架 2 台设备)使用的上行链路数量。
-     * @param UplinkCount 将CDC连接到网络时，每台CDC网络设备(每个机架 2 台设备)使用的上行链路数量。
+     * Set <p>将CDC连接到网络时，每台CDC网络设备(每个机架 2 台设备)使用的上行链路数量。</p>
+     * @param UplinkCount <p>将CDC连接到网络时，每台CDC网络设备(每个机架 2 台设备)使用的上行链路数量。</p>
      */
     public void setUplinkCount(Long UplinkCount) {
         this.UplinkCount = UplinkCount;
     }
 
     /**
-     * Get 是否满足下面环境条件：
-1、场地没有材料要求或验收标准会影响 CDC 设备配送和安装。
-2、确定的机架位置包含:
-温度范围为 41 到 104°F (5 到 40°C)。
-湿度范围为 10°F (-12°C)和 8% RH (相对湿度)到 70°F(21°C)和 80% RH。
-机架位置的气流方向为从前向后，且应具有足够的 CFM (每分钟立方英尺)。CFM 必须是 CDC 配置的 kVA 功耗值的 145.8 倍。 
-     * @return ConditionRequirement 是否满足下面环境条件：
-1、场地没有材料要求或验收标准会影响 CDC 设备配送和安装。
-2、确定的机架位置包含:
-温度范围为 41 到 104°F (5 到 40°C)。
-湿度范围为 10°F (-12°C)和 8% RH (相对湿度)到 70°F(21°C)和 80% RH。
-机架位置的气流方向为从前向后，且应具有足够的 CFM (每分钟立方英尺)。CFM 必须是 CDC 配置的 kVA 功耗值的 145.8 倍。
+     * Get <p>是否满足下面环境条件：1、场地没有材料要求或验收标准会影响 CDC 设备配送和安装。2、确定的机架位置包含:温度范围为 41 到 104°F (5 到 40°C)。湿度范围为 10°F (-12°C)和 8% RH (相对湿度)到 70°F(21°C)和 80% RH。机架位置的气流方向为从前向后，且应具有足够的 CFM (每分钟立方英尺)。CFM 必须是 CDC 配置的 kVA 功耗值的 145.8 倍。</p> 
+     * @return ConditionRequirement <p>是否满足下面环境条件：1、场地没有材料要求或验收标准会影响 CDC 设备配送和安装。2、确定的机架位置包含:温度范围为 41 到 104°F (5 到 40°C)。湿度范围为 10°F (-12°C)和 8% RH (相对湿度)到 70°F(21°C)和 80% RH。机架位置的气流方向为从前向后，且应具有足够的 CFM (每分钟立方英尺)。CFM 必须是 CDC 配置的 kVA 功耗值的 145.8 倍。</p>
      */
     public Boolean getConditionRequirement() {
         return this.ConditionRequirement;
     }
 
     /**
-     * Set 是否满足下面环境条件：
-1、场地没有材料要求或验收标准会影响 CDC 设备配送和安装。
-2、确定的机架位置包含:
-温度范围为 41 到 104°F (5 到 40°C)。
-湿度范围为 10°F (-12°C)和 8% RH (相对湿度)到 70°F(21°C)和 80% RH。
-机架位置的气流方向为从前向后，且应具有足够的 CFM (每分钟立方英尺)。CFM 必须是 CDC 配置的 kVA 功耗值的 145.8 倍。
-     * @param ConditionRequirement 是否满足下面环境条件：
-1、场地没有材料要求或验收标准会影响 CDC 设备配送和安装。
-2、确定的机架位置包含:
-温度范围为 41 到 104°F (5 到 40°C)。
-湿度范围为 10°F (-12°C)和 8% RH (相对湿度)到 70°F(21°C)和 80% RH。
-机架位置的气流方向为从前向后，且应具有足够的 CFM (每分钟立方英尺)。CFM 必须是 CDC 配置的 kVA 功耗值的 145.8 倍。
+     * Set <p>是否满足下面环境条件：1、场地没有材料要求或验收标准会影响 CDC 设备配送和安装。2、确定的机架位置包含:温度范围为 41 到 104°F (5 到 40°C)。湿度范围为 10°F (-12°C)和 8% RH (相对湿度)到 70°F(21°C)和 80% RH。机架位置的气流方向为从前向后，且应具有足够的 CFM (每分钟立方英尺)。CFM 必须是 CDC 配置的 kVA 功耗值的 145.8 倍。</p>
+     * @param ConditionRequirement <p>是否满足下面环境条件：1、场地没有材料要求或验收标准会影响 CDC 设备配送和安装。2、确定的机架位置包含:温度范围为 41 到 104°F (5 到 40°C)。湿度范围为 10°F (-12°C)和 8% RH (相对湿度)到 70°F(21°C)和 80% RH。机架位置的气流方向为从前向后，且应具有足够的 CFM (每分钟立方英尺)。CFM 必须是 CDC 配置的 kVA 功耗值的 145.8 倍。</p>
      */
     public void setConditionRequirement(Boolean ConditionRequirement) {
         this.ConditionRequirement = ConditionRequirement;
     }
 
     /**
-     * Get 是否满足下面的尺寸条件：
-您的装货站台可以容纳一个机架箱(高 x 宽 x 深 = 94" x 54" x 48")。
-您可以提供从机架(高 x 宽 x 深 = 80" x 24" x 48")交货地点到机架最终安置位置的明确通道。测量深度时，应包括站台、走廊通道、门、转弯、坡道、货梯，并将其他通道限制考虑在内。
-在最终的 CDC安置位置，前部间隙可以为 48" 或更大，后部间隙可以为 24" 或更大。 
-     * @return DimensionRequirement 是否满足下面的尺寸条件：
-您的装货站台可以容纳一个机架箱(高 x 宽 x 深 = 94" x 54" x 48")。
-您可以提供从机架(高 x 宽 x 深 = 80" x 24" x 48")交货地点到机架最终安置位置的明确通道。测量深度时，应包括站台、走廊通道、门、转弯、坡道、货梯，并将其他通道限制考虑在内。
-在最终的 CDC安置位置，前部间隙可以为 48" 或更大，后部间隙可以为 24" 或更大。
+     * Get <p>是否满足下面的尺寸条件：您的装货站台可以容纳一个机架箱(高 x 宽 x 深 = 94" x 54" x 48")。您可以提供从机架(高 x 宽 x 深 = 80" x 24" x 48")交货地点到机架最终安置位置的明确通道。测量深度时，应包括站台、走廊通道、门、转弯、坡道、货梯，并将其他通道限制考虑在内。在最终的 CDC安置位置，前部间隙可以为 48" 或更大，后部间隙可以为 24" 或更大。</p> 
+     * @return DimensionRequirement <p>是否满足下面的尺寸条件：您的装货站台可以容纳一个机架箱(高 x 宽 x 深 = 94" x 54" x 48")。您可以提供从机架(高 x 宽 x 深 = 80" x 24" x 48")交货地点到机架最终安置位置的明确通道。测量深度时，应包括站台、走廊通道、门、转弯、坡道、货梯，并将其他通道限制考虑在内。在最终的 CDC安置位置，前部间隙可以为 48" 或更大，后部间隙可以为 24" 或更大。</p>
      */
     public Boolean getDimensionRequirement() {
         return this.DimensionRequirement;
     }
 
     /**
-     * Set 是否满足下面的尺寸条件：
-您的装货站台可以容纳一个机架箱(高 x 宽 x 深 = 94" x 54" x 48")。
-您可以提供从机架(高 x 宽 x 深 = 80" x 24" x 48")交货地点到机架最终安置位置的明确通道。测量深度时，应包括站台、走廊通道、门、转弯、坡道、货梯，并将其他通道限制考虑在内。
-在最终的 CDC安置位置，前部间隙可以为 48" 或更大，后部间隙可以为 24" 或更大。
-     * @param DimensionRequirement 是否满足下面的尺寸条件：
-您的装货站台可以容纳一个机架箱(高 x 宽 x 深 = 94" x 54" x 48")。
-您可以提供从机架(高 x 宽 x 深 = 80" x 24" x 48")交货地点到机架最终安置位置的明确通道。测量深度时，应包括站台、走廊通道、门、转弯、坡道、货梯，并将其他通道限制考虑在内。
-在最终的 CDC安置位置，前部间隙可以为 48" 或更大，后部间隙可以为 24" 或更大。
+     * Set <p>是否满足下面的尺寸条件：您的装货站台可以容纳一个机架箱(高 x 宽 x 深 = 94" x 54" x 48")。您可以提供从机架(高 x 宽 x 深 = 80" x 24" x 48")交货地点到机架最终安置位置的明确通道。测量深度时，应包括站台、走廊通道、门、转弯、坡道、货梯，并将其他通道限制考虑在内。在最终的 CDC安置位置，前部间隙可以为 48" 或更大，后部间隙可以为 24" 或更大。</p>
+     * @param DimensionRequirement <p>是否满足下面的尺寸条件：您的装货站台可以容纳一个机架箱(高 x 宽 x 深 = 94" x 54" x 48")。您可以提供从机架(高 x 宽 x 深 = 80" x 24" x 48")交货地点到机架最终安置位置的明确通道。测量深度时，应包括站台、走廊通道、门、转弯、坡道、货梯，并将其他通道限制考虑在内。在最终的 CDC安置位置，前部间隙可以为 48" 或更大，后部间隙可以为 24" 或更大。</p>
      */
     public void setDimensionRequirement(Boolean DimensionRequirement) {
         this.DimensionRequirement = DimensionRequirement;
     }
 
     /**
-     * Get 是否提供冗余的上游设备(交换机或路由器)，以便两台  网络设备都能连接到网络设备。 
-     * @return RedundantNetworking 是否提供冗余的上游设备(交换机或路由器)，以便两台  网络设备都能连接到网络设备。
+     * Get <p>是否提供冗余的上游设备(交换机或路由器)，以便两台  网络设备都能连接到网络设备。</p> 
+     * @return RedundantNetworking <p>是否提供冗余的上游设备(交换机或路由器)，以便两台  网络设备都能连接到网络设备。</p>
      */
     public Boolean getRedundantNetworking() {
         return this.RedundantNetworking;
     }
 
     /**
-     * Set 是否提供冗余的上游设备(交换机或路由器)，以便两台  网络设备都能连接到网络设备。
-     * @param RedundantNetworking 是否提供冗余的上游设备(交换机或路由器)，以便两台  网络设备都能连接到网络设备。
+     * Set <p>是否提供冗余的上游设备(交换机或路由器)，以便两台  网络设备都能连接到网络设备。</p>
+     * @param RedundantNetworking <p>是否提供冗余的上游设备(交换机或路由器)，以便两台  网络设备都能连接到网络设备。</p>
      */
     public void setRedundantNetworking(Boolean RedundantNetworking) {
         this.RedundantNetworking = RedundantNetworking;
     }
 
     /**
-     * Get 站点所在地区的邮编 
-     * @return PostalCode 站点所在地区的邮编
+     * Get <p>站点所在地区的邮编</p> 
+     * @return PostalCode <p>站点所在地区的邮编</p>
      */
     public Long getPostalCode() {
         return this.PostalCode;
     }
 
     /**
-     * Set 站点所在地区的邮编
-     * @param PostalCode 站点所在地区的邮编
+     * Set <p>站点所在地区的邮编</p>
+     * @param PostalCode <p>站点所在地区的邮编</p>
      */
     public void setPostalCode(Long PostalCode) {
         this.PostalCode = PostalCode;
     }
 
     /**
-     * Get 站点所在地区的详细地址信息（补充） 
-     * @return OptionalAddressLine 站点所在地区的详细地址信息（补充）
+     * Get <p>站点所在地区的详细地址信息（补充）</p> 
+     * @return OptionalAddressLine <p>站点所在地区的详细地址信息（补充）</p>
      */
     public String getOptionalAddressLine() {
         return this.OptionalAddressLine;
     }
 
     /**
-     * Set 站点所在地区的详细地址信息（补充）
-     * @param OptionalAddressLine 站点所在地区的详细地址信息（补充）
+     * Set <p>站点所在地区的详细地址信息（补充）</p>
+     * @param OptionalAddressLine <p>站点所在地区的详细地址信息（补充）</p>
      */
     public void setOptionalAddressLine(String OptionalAddressLine) {
         this.OptionalAddressLine = OptionalAddressLine;
     }
 
     /**
-     * Get 是否需要腾讯云团队协助完成机架支撑工作 
-     * @return NeedHelp 是否需要腾讯云团队协助完成机架支撑工作
+     * Get <p>是否需要腾讯云团队协助完成机架支撑工作</p> 
+     * @return NeedHelp <p>是否需要腾讯云团队协助完成机架支撑工作</p>
      */
     public Boolean getNeedHelp() {
         return this.NeedHelp;
     }
 
     /**
-     * Set 是否需要腾讯云团队协助完成机架支撑工作
-     * @param NeedHelp 是否需要腾讯云团队协助完成机架支撑工作
+     * Set <p>是否需要腾讯云团队协助完成机架支撑工作</p>
+     * @param NeedHelp <p>是否需要腾讯云团队协助完成机架支撑工作</p>
      */
     public void setNeedHelp(Boolean NeedHelp) {
         this.NeedHelp = NeedHelp;
     }
 
     /**
-     * Get 是否电源冗余 
-     * @return RedundantPower 是否电源冗余
+     * Get <p>是否电源冗余</p> 
+     * @return RedundantPower <p>是否电源冗余</p>
      */
     public Boolean getRedundantPower() {
         return this.RedundantPower;
     }
 
     /**
-     * Set 是否电源冗余
-     * @param RedundantPower 是否电源冗余
+     * Set <p>是否电源冗余</p>
+     * @param RedundantPower <p>是否电源冗余</p>
      */
     public void setRedundantPower(Boolean RedundantPower) {
         this.RedundantPower = RedundantPower;
     }
 
     /**
-     * Get 上游断路器是否具备 
-     * @return BreakerRequirement 上游断路器是否具备
+     * Get <p>上游断路器是否具备</p> 
+     * @return BreakerRequirement <p>上游断路器是否具备</p>
      */
     public Boolean getBreakerRequirement() {
         return this.BreakerRequirement;
     }
 
     /**
-     * Set 上游断路器是否具备
-     * @param BreakerRequirement 上游断路器是否具备
+     * Set <p>上游断路器是否具备</p>
+     * @param BreakerRequirement <p>上游断路器是否具备</p>
      */
     public void setBreakerRequirement(Boolean BreakerRequirement) {
         this.BreakerRequirement = BreakerRequirement;

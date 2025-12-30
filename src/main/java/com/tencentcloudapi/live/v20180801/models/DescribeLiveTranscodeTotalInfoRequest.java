@@ -24,132 +24,92 @@ import java.util.HashMap;
 public class DescribeLiveTranscodeTotalInfoRequest extends AbstractModel {
 
     /**
-    * 开始时间，支持最近三个月的数据查询，起始时间和结束时间跨度不能超过三个月。接口查询支持两种时间格式：
-1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/267/38543#:~:text=I-,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
-2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
+    * <p>开始时间，支持最近三个月的数据查询，起始时间和结束时间跨度不能超过三个月。接口查询支持两种时间格式：1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 <a href="https://cloud.tencent.com/document/product/267/38543#:~:text=I-,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F">ISO 日期格式说明</a>2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间，支持最近三个月的数据查询，起始时间和结束时间跨度不能超过三个月。接口查询支持两种时间格式：
-1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/267/38543#:~:text=I-,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
-2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
+    * <p>结束时间，支持最近三个月的数据查询，起始时间和结束时间跨度不能超过三个月。接口查询支持两种时间格式：1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 <a href="https://cloud.tencent.com/document/product/267/38543#:~:text=I-,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F">ISO 日期格式说明</a>2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 推流域名列表，若不填，表示查询所有域名总体数据。
-指定域名时返回1小时粒度数据。
+    * <p>推流域名列表，若不填，表示查询所有域名总体数据。指定域名时返回1小时粒度数据。</p>
     */
     @SerializedName("PushDomains")
     @Expose
     private String [] PushDomains;
 
     /**
-    * 可选值：
-Mainland：查询中国大陆（境内）数据，
-Oversea：则查询国际/港澳台（境外）数据，
-默认：查询全球地区（境内+境外）的数据。
+    * <p>可选值：Mainland：查询中国大陆（境内）数据，Oversea：则查询国际/港澳台（境外）数据，默认：查询全球地区（境内+境外）的数据。</p>
     */
     @SerializedName("MainlandOrOversea")
     @Expose
     private String MainlandOrOversea;
 
     /**
-     * Get 开始时间，支持最近三个月的数据查询，起始时间和结束时间跨度不能超过三个月。接口查询支持两种时间格式：
-1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/267/38543#:~:text=I-,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
-2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。 
-     * @return StartTime 开始时间，支持最近三个月的数据查询，起始时间和结束时间跨度不能超过三个月。接口查询支持两种时间格式：
-1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/267/38543#:~:text=I-,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
-2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
+     * Get <p>开始时间，支持最近三个月的数据查询，起始时间和结束时间跨度不能超过三个月。接口查询支持两种时间格式：1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 <a href="https://cloud.tencent.com/document/product/267/38543#:~:text=I-,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F">ISO 日期格式说明</a>2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。</p> 
+     * @return StartTime <p>开始时间，支持最近三个月的数据查询，起始时间和结束时间跨度不能超过三个月。接口查询支持两种时间格式：1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 <a href="https://cloud.tencent.com/document/product/267/38543#:~:text=I-,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F">ISO 日期格式说明</a>2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间，支持最近三个月的数据查询，起始时间和结束时间跨度不能超过三个月。接口查询支持两种时间格式：
-1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/267/38543#:~:text=I-,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
-2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
-     * @param StartTime 开始时间，支持最近三个月的数据查询，起始时间和结束时间跨度不能超过三个月。接口查询支持两种时间格式：
-1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/267/38543#:~:text=I-,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
-2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
+     * Set <p>开始时间，支持最近三个月的数据查询，起始时间和结束时间跨度不能超过三个月。接口查询支持两种时间格式：1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 <a href="https://cloud.tencent.com/document/product/267/38543#:~:text=I-,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F">ISO 日期格式说明</a>2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。</p>
+     * @param StartTime <p>开始时间，支持最近三个月的数据查询，起始时间和结束时间跨度不能超过三个月。接口查询支持两种时间格式：1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 <a href="https://cloud.tencent.com/document/product/267/38543#:~:text=I-,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F">ISO 日期格式说明</a>2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间，支持最近三个月的数据查询，起始时间和结束时间跨度不能超过三个月。接口查询支持两种时间格式：
-1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/267/38543#:~:text=I-,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
-2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。 
-     * @return EndTime 结束时间，支持最近三个月的数据查询，起始时间和结束时间跨度不能超过三个月。接口查询支持两种时间格式：
-1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/267/38543#:~:text=I-,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
-2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
+     * Get <p>结束时间，支持最近三个月的数据查询，起始时间和结束时间跨度不能超过三个月。接口查询支持两种时间格式：1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 <a href="https://cloud.tencent.com/document/product/267/38543#:~:text=I-,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F">ISO 日期格式说明</a>2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。</p> 
+     * @return EndTime <p>结束时间，支持最近三个月的数据查询，起始时间和结束时间跨度不能超过三个月。接口查询支持两种时间格式：1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 <a href="https://cloud.tencent.com/document/product/267/38543#:~:text=I-,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F">ISO 日期格式说明</a>2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间，支持最近三个月的数据查询，起始时间和结束时间跨度不能超过三个月。接口查询支持两种时间格式：
-1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/267/38543#:~:text=I-,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
-2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
-     * @param EndTime 结束时间，支持最近三个月的数据查询，起始时间和结束时间跨度不能超过三个月。接口查询支持两种时间格式：
-1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/267/38543#:~:text=I-,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F)
-2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
+     * Set <p>结束时间，支持最近三个月的数据查询，起始时间和结束时间跨度不能超过三个月。接口查询支持两种时间格式：1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 <a href="https://cloud.tencent.com/document/product/267/38543#:~:text=I-,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F">ISO 日期格式说明</a>2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。</p>
+     * @param EndTime <p>结束时间，支持最近三个月的数据查询，起始时间和结束时间跨度不能超过三个月。接口查询支持两种时间格式：1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见 <a href="https://cloud.tencent.com/document/product/267/38543#:~:text=I-,ISO,-%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F">ISO 日期格式说明</a>2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 推流域名列表，若不填，表示查询所有域名总体数据。
-指定域名时返回1小时粒度数据。 
-     * @return PushDomains 推流域名列表，若不填，表示查询所有域名总体数据。
-指定域名时返回1小时粒度数据。
+     * Get <p>推流域名列表，若不填，表示查询所有域名总体数据。指定域名时返回1小时粒度数据。</p> 
+     * @return PushDomains <p>推流域名列表，若不填，表示查询所有域名总体数据。指定域名时返回1小时粒度数据。</p>
      */
     public String [] getPushDomains() {
         return this.PushDomains;
     }
 
     /**
-     * Set 推流域名列表，若不填，表示查询所有域名总体数据。
-指定域名时返回1小时粒度数据。
-     * @param PushDomains 推流域名列表，若不填，表示查询所有域名总体数据。
-指定域名时返回1小时粒度数据。
+     * Set <p>推流域名列表，若不填，表示查询所有域名总体数据。指定域名时返回1小时粒度数据。</p>
+     * @param PushDomains <p>推流域名列表，若不填，表示查询所有域名总体数据。指定域名时返回1小时粒度数据。</p>
      */
     public void setPushDomains(String [] PushDomains) {
         this.PushDomains = PushDomains;
     }
 
     /**
-     * Get 可选值：
-Mainland：查询中国大陆（境内）数据，
-Oversea：则查询国际/港澳台（境外）数据，
-默认：查询全球地区（境内+境外）的数据。 
-     * @return MainlandOrOversea 可选值：
-Mainland：查询中国大陆（境内）数据，
-Oversea：则查询国际/港澳台（境外）数据，
-默认：查询全球地区（境内+境外）的数据。
+     * Get <p>可选值：Mainland：查询中国大陆（境内）数据，Oversea：则查询国际/港澳台（境外）数据，默认：查询全球地区（境内+境外）的数据。</p> 
+     * @return MainlandOrOversea <p>可选值：Mainland：查询中国大陆（境内）数据，Oversea：则查询国际/港澳台（境外）数据，默认：查询全球地区（境内+境外）的数据。</p>
      */
     public String getMainlandOrOversea() {
         return this.MainlandOrOversea;
     }
 
     /**
-     * Set 可选值：
-Mainland：查询中国大陆（境内）数据，
-Oversea：则查询国际/港澳台（境外）数据，
-默认：查询全球地区（境内+境外）的数据。
-     * @param MainlandOrOversea 可选值：
-Mainland：查询中国大陆（境内）数据，
-Oversea：则查询国际/港澳台（境外）数据，
-默认：查询全球地区（境内+境外）的数据。
+     * Set <p>可选值：Mainland：查询中国大陆（境内）数据，Oversea：则查询国际/港澳台（境外）数据，默认：查询全球地区（境内+境外）的数据。</p>
+     * @param MainlandOrOversea <p>可选值：Mainland：查询中国大陆（境内）数据，Oversea：则查询国际/港澳台（境外）数据，默认：查询全球地区（境内+境外）的数据。</p>
      */
     public void setMainlandOrOversea(String MainlandOrOversea) {
         this.MainlandOrOversea = MainlandOrOversea;

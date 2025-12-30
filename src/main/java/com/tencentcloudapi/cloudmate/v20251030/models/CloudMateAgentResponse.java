@@ -31,7 +31,7 @@ public class CloudMateAgentResponse extends SSEResponseModel {
     private String SessionId;
 
     /**
-    * unix时间戳
+    * Unix 时间戳
     */
     @SerializedName("Timestamp")
     @Expose
@@ -96,16 +96,16 @@ public class CloudMateAgentResponse extends SSEResponseModel {
     }
 
     /**
-     * Get unix时间戳 
-     * @return Timestamp unix时间戳
+     * Get Unix 时间戳 
+     * @return Timestamp Unix 时间戳
      */
     public Long getTimestamp() {
         return this.Timestamp;
     }
 
     /**
-     * Set unix时间戳
-     * @param Timestamp unix时间戳
+     * Set Unix 时间戳
+     * @param Timestamp Unix 时间戳
      */
     public void setTimestamp(Long Timestamp) {
         this.Timestamp = Timestamp;

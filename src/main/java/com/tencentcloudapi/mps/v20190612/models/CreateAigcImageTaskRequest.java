@@ -26,6 +26,7 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
     /**
     * 模型名称。
 当前支持的模型列表：
+Hunyuan,
 GEM，
 Jimeng，
 Qwen。
@@ -103,11 +104,13 @@ Qwen。
     /**
      * Get 模型名称。
 当前支持的模型列表：
+Hunyuan,
 GEM，
 Jimeng，
 Qwen。 
      * @return ModelName 模型名称。
 当前支持的模型列表：
+Hunyuan,
 GEM，
 Jimeng，
 Qwen。
@@ -119,11 +122,13 @@ Qwen。
     /**
      * Set 模型名称。
 当前支持的模型列表：
+Hunyuan,
 GEM，
 Jimeng，
 Qwen。
      * @param ModelName 模型名称。
 当前支持的模型列表：
+Hunyuan,
 GEM，
 Jimeng，
 Qwen。

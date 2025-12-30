@@ -52,7 +52,7 @@ public class UpdateCertificateInstanceRequest extends AbstractModel {
     private String [] Regions;
 
     /**
-    * 云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb、tke、apigateway、waf、tcb、tse、cos
+    * 云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb、tke、apigateway、waf、tcb、tse、cos、mqtt
     */
     @SerializedName("ResourceTypesRegions")
     @Expose
@@ -176,16 +176,16 @@ public class UpdateCertificateInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb、tke、apigateway、waf、tcb、tse、cos 
-     * @return ResourceTypesRegions 云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb、tke、apigateway、waf、tcb、tse、cos
+     * Get 云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb、tke、apigateway、waf、tcb、tse、cos、mqtt 
+     * @return ResourceTypesRegions 云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb、tke、apigateway、waf、tcb、tse、cos、mqtt
      */
     public ResourceTypeRegions [] getResourceTypesRegions() {
         return this.ResourceTypesRegions;
     }
 
     /**
-     * Set 云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb、tke、apigateway、waf、tcb、tse、cos
-     * @param ResourceTypesRegions 云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb、tke、apigateway、waf、tcb、tse、cos
+     * Set 云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb、tke、apigateway、waf、tcb、tse、cos、mqtt
+     * @param ResourceTypesRegions 云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb、tke、apigateway、waf、tcb、tse、cos、mqtt
      */
     public void setResourceTypesRegions(ResourceTypeRegions [] ResourceTypesRegions) {
         this.ResourceTypesRegions = ResourceTypesRegions;

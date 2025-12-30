@@ -26,6 +26,7 @@ public class CreateAigcVideoTaskRequest extends AbstractModel {
     /**
     * 模型名称。
 当前支持的模型列表:
+Hunyuan,
 Hailuo，
 Kling，
 Jimeng，
@@ -155,6 +156,7 @@ GV。
     /**
      * Get 模型名称。
 当前支持的模型列表:
+Hunyuan,
 Hailuo，
 Kling，
 Jimeng，
@@ -163,6 +165,7 @@ OS，
 GV。 
      * @return ModelName 模型名称。
 当前支持的模型列表:
+Hunyuan,
 Hailuo，
 Kling，
 Jimeng，
@@ -177,6 +180,7 @@ GV。
     /**
      * Set 模型名称。
 当前支持的模型列表:
+Hunyuan,
 Hailuo，
 Kling，
 Jimeng，
@@ -185,6 +189,7 @@ OS，
 GV。
      * @param ModelName 模型名称。
 当前支持的模型列表:
+Hunyuan,
 Hailuo，
 Kling，
 Jimeng，

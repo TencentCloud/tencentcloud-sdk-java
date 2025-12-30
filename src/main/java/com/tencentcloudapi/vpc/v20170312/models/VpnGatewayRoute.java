@@ -87,6 +87,13 @@ public class VpnGatewayRoute extends AbstractModel {
     private String UpdateTime;
 
     /**
+    * 路由备注
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
      * Get 目的端IDC网段。 
      * @return DestinationCidrBlock 目的端IDC网段。
      */
@@ -230,6 +237,22 @@ public class VpnGatewayRoute extends AbstractModel {
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get 路由备注 
+     * @return Description 路由备注
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 路由备注
+     * @param Description 路由备注
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
     public VpnGatewayRoute() {
     }
 
@@ -265,6 +288,9 @@ public class VpnGatewayRoute extends AbstractModel {
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
     }
 
 
@@ -281,6 +307,7 @@ public class VpnGatewayRoute extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeLiveTranscodeTotalInfoResponse extends AbstractModel {
 
     /**
-    * 统计数据列表。
+    * <p>统计数据列表。</p>
     */
     @SerializedName("DataInfoList")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeLiveTranscodeTotalInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 统计数据列表。 
-     * @return DataInfoList 统计数据列表。
+     * Get <p>统计数据列表。</p> 
+     * @return DataInfoList <p>统计数据列表。</p>
      */
     public TranscodeTotalInfo [] getDataInfoList() {
         return this.DataInfoList;
     }
 
     /**
-     * Set 统计数据列表。
-     * @param DataInfoList 统计数据列表。
+     * Set <p>统计数据列表。</p>
+     * @param DataInfoList <p>统计数据列表。</p>
      */
     public void setDataInfoList(TranscodeTotalInfo [] DataInfoList) {
         this.DataInfoList = DataInfoList;

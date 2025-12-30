@@ -38,6 +38,13 @@ public class VpnGatewayRouteModify extends AbstractModel {
     private String Status;
 
     /**
+    * VPN路由备注
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
      * Get VPN网关路由ID。 
      * @return RouteId VPN网关路由ID。
      */
@@ -69,6 +76,22 @@ public class VpnGatewayRouteModify extends AbstractModel {
         this.Status = Status;
     }
 
+    /**
+     * Get VPN路由备注 
+     * @return Description VPN路由备注
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set VPN路由备注
+     * @param Description VPN路由备注
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
     public VpnGatewayRouteModify() {
     }
 
@@ -83,6 +106,9 @@ public class VpnGatewayRouteModify extends AbstractModel {
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class VpnGatewayRouteModify extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RouteId", this.RouteId);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

@@ -38,7 +38,8 @@ public class DescribeGlobalMaintenanceWindowAndExclusionsRequest extends Abstrac
     private Long Limit;
 
     /**
-    * 筛选项
+    * 筛选项，支持按照以下字段过滤：
+- "ID"：维护窗口ID，如：10
     */
     @SerializedName("Filters")
     @Expose
@@ -77,16 +78,20 @@ public class DescribeGlobalMaintenanceWindowAndExclusionsRequest extends Abstrac
     }
 
     /**
-     * Get 筛选项 
-     * @return Filters 筛选项
+     * Get 筛选项，支持按照以下字段过滤：
+- "ID"：维护窗口ID，如：10 
+     * @return Filters 筛选项，支持按照以下字段过滤：
+- "ID"：维护窗口ID，如：10
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 筛选项
-     * @param Filters 筛选项
+     * Set 筛选项，支持按照以下字段过滤：
+- "ID"：维护窗口ID，如：10
+     * @param Filters 筛选项，支持按照以下字段过滤：
+- "ID"：维护窗口ID，如：10
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

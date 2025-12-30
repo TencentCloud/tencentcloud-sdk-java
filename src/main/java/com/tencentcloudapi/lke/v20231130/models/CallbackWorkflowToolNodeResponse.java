@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdc.v20201214.models;
+package com.tencentcloudapi.lke.v20231130.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateSiteResponse extends AbstractModel {
+public class CallbackWorkflowToolNodeResponse extends AbstractModel {
 
     /**
-    * <p>创建Site生成的id</p>
+    * 状态码
     */
-    @SerializedName("SiteId")
+    @SerializedName("Code")
     @Expose
-    private String SiteId;
+    private Long Code;
+
+    /**
+    * 状态详情
+    */
+    @SerializedName("Msg")
+    @Expose
+    private String Msg;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +45,35 @@ public class CreateSiteResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>创建Site生成的id</p> 
-     * @return SiteId <p>创建Site生成的id</p>
+     * Get 状态码 
+     * @return Code 状态码
      */
-    public String getSiteId() {
-        return this.SiteId;
+    public Long getCode() {
+        return this.Code;
     }
 
     /**
-     * Set <p>创建Site生成的id</p>
-     * @param SiteId <p>创建Site生成的id</p>
+     * Set 状态码
+     * @param Code 状态码
      */
-    public void setSiteId(String SiteId) {
-        this.SiteId = SiteId;
+    public void setCode(Long Code) {
+        this.Code = Code;
+    }
+
+    /**
+     * Get 状态详情 
+     * @return Msg 状态详情
+     */
+    public String getMsg() {
+        return this.Msg;
+    }
+
+    /**
+     * Set 状态详情
+     * @param Msg 状态详情
+     */
+    public void setMsg(String Msg) {
+        this.Msg = Msg;
     }
 
     /**
@@ -69,16 +92,19 @@ public class CreateSiteResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreateSiteResponse() {
+    public CallbackWorkflowToolNodeResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateSiteResponse(CreateSiteResponse source) {
-        if (source.SiteId != null) {
-            this.SiteId = new String(source.SiteId);
+    public CallbackWorkflowToolNodeResponse(CallbackWorkflowToolNodeResponse source) {
+        if (source.Code != null) {
+            this.Code = new Long(source.Code);
+        }
+        if (source.Msg != null) {
+            this.Msg = new String(source.Msg);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +116,8 @@ public class CreateSiteResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "SiteId", this.SiteId);
+        this.setParamSimple(map, prefix + "Code", this.Code);
+        this.setParamSimple(map, prefix + "Msg", this.Msg);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

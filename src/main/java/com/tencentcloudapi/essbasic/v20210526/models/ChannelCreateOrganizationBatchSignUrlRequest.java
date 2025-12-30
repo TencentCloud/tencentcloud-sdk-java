@@ -81,6 +81,20 @@ public class ChannelCreateOrganizationBatchSignUrlRequest extends AbstractModel 
     private Boolean CanBatchReject;
 
     /**
+    * 动态签署方领取链接配置。
+    */
+    @SerializedName("DynamicSignOption")
+    @Expose
+    private DynamicSignOption DynamicSignOption;
+
+    /**
+    * 为签署方经办人在签署合同中的参与方ID，必须与参数FlowIds数组一一对应。 注：生成动态签署方领取时此参数必传。
+    */
+    @SerializedName("RecipientIds")
+    @Expose
+    private String [] RecipientIds;
+
+    /**
      * Get 关于渠道应用的相关信息，包括子客企业及应用编、号等详细内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。 
      * @return Agent 关于渠道应用的相关信息，包括子客企业及应用编、号等详细内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
      */
@@ -224,6 +238,38 @@ public class ChannelCreateOrganizationBatchSignUrlRequest extends AbstractModel 
         this.CanBatchReject = CanBatchReject;
     }
 
+    /**
+     * Get 动态签署方领取链接配置。 
+     * @return DynamicSignOption 动态签署方领取链接配置。
+     */
+    public DynamicSignOption getDynamicSignOption() {
+        return this.DynamicSignOption;
+    }
+
+    /**
+     * Set 动态签署方领取链接配置。
+     * @param DynamicSignOption 动态签署方领取链接配置。
+     */
+    public void setDynamicSignOption(DynamicSignOption DynamicSignOption) {
+        this.DynamicSignOption = DynamicSignOption;
+    }
+
+    /**
+     * Get 为签署方经办人在签署合同中的参与方ID，必须与参数FlowIds数组一一对应。 注：生成动态签署方领取时此参数必传。 
+     * @return RecipientIds 为签署方经办人在签署合同中的参与方ID，必须与参数FlowIds数组一一对应。 注：生成动态签署方领取时此参数必传。
+     */
+    public String [] getRecipientIds() {
+        return this.RecipientIds;
+    }
+
+    /**
+     * Set 为签署方经办人在签署合同中的参与方ID，必须与参数FlowIds数组一一对应。 注：生成动态签署方领取时此参数必传。
+     * @param RecipientIds 为签署方经办人在签署合同中的参与方ID，必须与参数FlowIds数组一一对应。 注：生成动态签署方领取时此参数必传。
+     */
+    public void setRecipientIds(String [] RecipientIds) {
+        this.RecipientIds = RecipientIds;
+    }
+
     public ChannelCreateOrganizationBatchSignUrlRequest() {
     }
 
@@ -256,6 +302,15 @@ public class ChannelCreateOrganizationBatchSignUrlRequest extends AbstractModel 
         if (source.CanBatchReject != null) {
             this.CanBatchReject = new Boolean(source.CanBatchReject);
         }
+        if (source.DynamicSignOption != null) {
+            this.DynamicSignOption = new DynamicSignOption(source.DynamicSignOption);
+        }
+        if (source.RecipientIds != null) {
+            this.RecipientIds = new String[source.RecipientIds.length];
+            for (int i = 0; i < source.RecipientIds.length; i++) {
+                this.RecipientIds[i] = new String(source.RecipientIds[i]);
+            }
+        }
     }
 
 
@@ -270,6 +325,8 @@ public class ChannelCreateOrganizationBatchSignUrlRequest extends AbstractModel 
         this.setParamSimple(map, prefix + "Mobile", this.Mobile);
         this.setParamSimple(map, prefix + "FlowGroupId", this.FlowGroupId);
         this.setParamSimple(map, prefix + "CanBatchReject", this.CanBatchReject);
+        this.setParamObj(map, prefix + "DynamicSignOption.", this.DynamicSignOption);
+        this.setParamArraySimple(map, prefix + "RecipientIds.", this.RecipientIds);
 
     }
 }

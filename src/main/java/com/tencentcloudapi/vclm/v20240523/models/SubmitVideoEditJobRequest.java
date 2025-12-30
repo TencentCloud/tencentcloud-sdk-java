@@ -43,6 +43,13 @@ public class SubmitVideoEditJobRequest extends AbstractModel {
     private String Prompt;
 
     /**
+    * 图片数组
+    */
+    @SerializedName("Images")
+    @Expose
+    private Image [] Images;
+
+    /**
     * 图片base64或者图片url
 
 - Base64 和 Url 必须提供一个，如果都提供以Url为准。
@@ -118,6 +125,22 @@ public class SubmitVideoEditJobRequest extends AbstractModel {
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
+    }
+
+    /**
+     * Get 图片数组 
+     * @return Images 图片数组
+     */
+    public Image [] getImages() {
+        return this.Images;
+    }
+
+    /**
+     * Set 图片数组
+     * @param Images 图片数组
+     */
+    public void setImages(Image [] Images) {
+        this.Images = Images;
     }
 
     /**
@@ -202,6 +225,12 @@ public class SubmitVideoEditJobRequest extends AbstractModel {
         if (source.Prompt != null) {
             this.Prompt = new String(source.Prompt);
         }
+        if (source.Images != null) {
+            this.Images = new Image[source.Images.length];
+            for (int i = 0; i < source.Images.length; i++) {
+                this.Images[i] = new Image(source.Images[i]);
+            }
+        }
         if (source.Image != null) {
             this.Image = new Image(source.Image);
         }
@@ -220,6 +249,7 @@ public class SubmitVideoEditJobRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VideoUrl", this.VideoUrl);
         this.setParamSimple(map, prefix + "Prompt", this.Prompt);
+        this.setParamArrayObj(map, prefix + "Images.", this.Images);
         this.setParamObj(map, prefix + "Image.", this.Image);
         this.setParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
         this.setParamObj(map, prefix + "LogoParam.", this.LogoParam);

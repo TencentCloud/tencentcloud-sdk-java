@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeDedicatedClusterTypesResponse extends AbstractModel {
 
     /**
-    * 专用集群配置列表
+    * <p>专用集群配置列表</p>
     */
     @SerializedName("DedicatedClusterTypeSet")
     @Expose
     private DedicatedClusterType [] DedicatedClusterTypeSet;
 
     /**
-    * 符合条件的个数
+    * <p>符合条件的个数</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeDedicatedClusterTypesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 专用集群配置列表 
-     * @return DedicatedClusterTypeSet 专用集群配置列表
+     * Get <p>专用集群配置列表</p> 
+     * @return DedicatedClusterTypeSet <p>专用集群配置列表</p>
      */
     public DedicatedClusterType [] getDedicatedClusterTypeSet() {
         return this.DedicatedClusterTypeSet;
     }
 
     /**
-     * Set 专用集群配置列表
-     * @param DedicatedClusterTypeSet 专用集群配置列表
+     * Set <p>专用集群配置列表</p>
+     * @param DedicatedClusterTypeSet <p>专用集群配置列表</p>
      */
     public void setDedicatedClusterTypeSet(DedicatedClusterType [] DedicatedClusterTypeSet) {
         this.DedicatedClusterTypeSet = DedicatedClusterTypeSet;
     }
 
     /**
-     * Get 符合条件的个数 
-     * @return TotalCount 符合条件的个数
+     * Get <p>符合条件的个数</p> 
+     * @return TotalCount <p>符合条件的个数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的个数
-     * @param TotalCount 符合条件的个数
+     * Set <p>符合条件的个数</p>
+     * @param TotalCount <p>符合条件的个数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

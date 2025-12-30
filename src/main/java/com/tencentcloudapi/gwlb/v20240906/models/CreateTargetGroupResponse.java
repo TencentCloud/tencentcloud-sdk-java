@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateTargetGroupResponse extends AbstractModel {
 
     /**
-    * 创建目标组后生成的id
+    * <p>创建目标组后生成的id</p>
     */
     @SerializedName("TargetGroupId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateTargetGroupResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 创建目标组后生成的id 
-     * @return TargetGroupId 创建目标组后生成的id
+     * Get <p>创建目标组后生成的id</p> 
+     * @return TargetGroupId <p>创建目标组后生成的id</p>
      */
     public String getTargetGroupId() {
         return this.TargetGroupId;
     }
 
     /**
-     * Set 创建目标组后生成的id
-     * @param TargetGroupId 创建目标组后生成的id
+     * Set <p>创建目标组后生成的id</p>
+     * @param TargetGroupId <p>创建目标组后生成的id</p>
      */
     public void setTargetGroupId(String TargetGroupId) {
         this.TargetGroupId = TargetGroupId;

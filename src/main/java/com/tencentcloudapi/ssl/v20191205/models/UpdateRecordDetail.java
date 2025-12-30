@@ -231,6 +231,20 @@ public class UpdateRecordDetail extends AbstractModel {
     private String OldAlgorithm;
 
     /**
+    * 实例状态，不同云产品状态不一样	
+    */
+    @SerializedName("InstanceStatus")
+    @Expose
+    private String InstanceStatus;
+
+    /**
+    * 监听器状态
+    */
+    @SerializedName("ListenerStatus")
+    @Expose
+    private String ListenerStatus;
+
+    /**
      * Get 更新详情记录id 
      * @return Id 更新详情记录id
      */
@@ -758,6 +772,38 @@ public class UpdateRecordDetail extends AbstractModel {
         this.OldAlgorithm = OldAlgorithm;
     }
 
+    /**
+     * Get 实例状态，不同云产品状态不一样	 
+     * @return InstanceStatus 实例状态，不同云产品状态不一样	
+     */
+    public String getInstanceStatus() {
+        return this.InstanceStatus;
+    }
+
+    /**
+     * Set 实例状态，不同云产品状态不一样	
+     * @param InstanceStatus 实例状态，不同云产品状态不一样	
+     */
+    public void setInstanceStatus(String InstanceStatus) {
+        this.InstanceStatus = InstanceStatus;
+    }
+
+    /**
+     * Get 监听器状态 
+     * @return ListenerStatus 监听器状态
+     */
+    public String getListenerStatus() {
+        return this.ListenerStatus;
+    }
+
+    /**
+     * Set 监听器状态
+     * @param ListenerStatus 监听器状态
+     */
+    public void setListenerStatus(String ListenerStatus) {
+        this.ListenerStatus = ListenerStatus;
+    }
+
     public UpdateRecordDetail() {
     }
 
@@ -844,6 +890,12 @@ public class UpdateRecordDetail extends AbstractModel {
         if (source.OldAlgorithm != null) {
             this.OldAlgorithm = new String(source.OldAlgorithm);
         }
+        if (source.InstanceStatus != null) {
+            this.InstanceStatus = new String(source.InstanceStatus);
+        }
+        if (source.ListenerStatus != null) {
+            this.ListenerStatus = new String(source.ListenerStatus);
+        }
     }
 
 
@@ -876,6 +928,8 @@ public class UpdateRecordDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "Algorithm", this.Algorithm);
         this.setParamSimple(map, prefix + "OldAlgorithm", this.OldAlgorithm);
+        this.setParamSimple(map, prefix + "InstanceStatus", this.InstanceStatus);
+        this.setParamSimple(map, prefix + "ListenerStatus", this.ListenerStatus);
 
     }
 }

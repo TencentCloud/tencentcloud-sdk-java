@@ -24,102 +24,130 @@ import java.util.HashMap;
 public class DescribeCertificateBindResourceTaskDetailResponse extends AbstractModel {
 
     /**
-    * 关联clb资源详情	
+    * <p>关联clb资源详情   </p>
     */
     @SerializedName("CLB")
     @Expose
     private ClbInstanceList [] CLB;
 
     /**
-    * 关联cdn资源详情	
+    * <p>关联cdn资源详情   </p>
     */
     @SerializedName("CDN")
     @Expose
     private CdnInstanceList [] CDN;
 
     /**
-    * 关联waf资源详情	
+    * <p>关联waf资源详情   </p>
     */
     @SerializedName("WAF")
     @Expose
     private WafInstanceList [] WAF;
 
     /**
-    * 关联ddos资源详情	
+    * <p>关联ddos资源详情  </p>
     */
     @SerializedName("DDOS")
     @Expose
     private DdosInstanceList [] DDOS;
 
     /**
-    * 关联live资源详情	
+    * <p>关联live资源详情  </p>
     */
     @SerializedName("LIVE")
     @Expose
     private LiveInstanceList [] LIVE;
 
     /**
-    * 关联vod资源详情	
+    * <p>关联vod资源详情   </p>
     */
     @SerializedName("VOD")
     @Expose
     private VODInstanceList [] VOD;
 
     /**
-    * 关联tke资源详情	
+    * <p>关联tke资源详情   </p>
     */
     @SerializedName("TKE")
     @Expose
     private TkeInstanceList [] TKE;
 
     /**
-    * 关联apigateway资源详情	
+    * <p>关联apigateway资源详情    </p>
     */
     @SerializedName("APIGATEWAY")
     @Expose
     private ApiGatewayInstanceList [] APIGATEWAY;
 
     /**
-    * 关联tcb资源详情	
+    * <p>关联tcb资源详情   </p>
     */
     @SerializedName("TCB")
     @Expose
     private TCBInstanceList [] TCB;
 
     /**
-    * 关联teo资源详情	
+    * <p>关联teo资源详情   </p>
     */
     @SerializedName("TEO")
     @Expose
     private TeoInstanceList [] TEO;
 
     /**
-    * 关联云资源异步查询结果： 0表示查询中， 1表示查询成功。 2表示查询异常； 若状态为1，则查看BindResourceResult结果；若状态为2，则查看Error原因
+    * <p>关联云资源异步查询结果： 0表示查询中， 1表示查询成功。 2表示查询异常； 若状态为1，则查看BindResourceResult结果；若状态为2，则查看Error原因</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 当前结果缓存时间
+    * <p>当前结果缓存时间</p>
     */
     @SerializedName("CacheTime")
     @Expose
     private String CacheTime;
 
     /**
-    * 关联tse资源详情	
+    * <p>关联tse资源详情   </p>
     */
     @SerializedName("TSE")
     @Expose
     private TSEInstanceList [] TSE;
 
     /**
-    * 关联的COS资源详情
+    * <p>关联的COS资源详情</p>
     */
     @SerializedName("COS")
     @Expose
     private COSInstanceList [] COS;
+
+    /**
+    * <p>关联的TDMQ - Rabbit资源详情</p>
+    */
+    @SerializedName("TDMQ")
+    @Expose
+    private TDMQInstanceList [] TDMQ;
+
+    /**
+    * <p>关联的MQTT资源详情</p>
+    */
+    @SerializedName("MQTT")
+    @Expose
+    private MQTTInstanceList [] MQTT;
+
+    /**
+    * <p>关联的GAAP资源详情</p>
+    */
+    @SerializedName("GAAP")
+    @Expose
+    private GAAPInstanceList [] GAAP;
+
+    /**
+    * <p>关联的SCF资源详情</p>
+    */
+    @SerializedName("SCF")
+    @Expose
+    private SCFInstanceList [] SCF;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -129,227 +157,291 @@ public class DescribeCertificateBindResourceTaskDetailResponse extends AbstractM
     private String RequestId;
 
     /**
-     * Get 关联clb资源详情	 
-     * @return CLB 关联clb资源详情	
+     * Get <p>关联clb资源详情   </p> 
+     * @return CLB <p>关联clb资源详情   </p>
      */
     public ClbInstanceList [] getCLB() {
         return this.CLB;
     }
 
     /**
-     * Set 关联clb资源详情	
-     * @param CLB 关联clb资源详情	
+     * Set <p>关联clb资源详情   </p>
+     * @param CLB <p>关联clb资源详情   </p>
      */
     public void setCLB(ClbInstanceList [] CLB) {
         this.CLB = CLB;
     }
 
     /**
-     * Get 关联cdn资源详情	 
-     * @return CDN 关联cdn资源详情	
+     * Get <p>关联cdn资源详情   </p> 
+     * @return CDN <p>关联cdn资源详情   </p>
      */
     public CdnInstanceList [] getCDN() {
         return this.CDN;
     }
 
     /**
-     * Set 关联cdn资源详情	
-     * @param CDN 关联cdn资源详情	
+     * Set <p>关联cdn资源详情   </p>
+     * @param CDN <p>关联cdn资源详情   </p>
      */
     public void setCDN(CdnInstanceList [] CDN) {
         this.CDN = CDN;
     }
 
     /**
-     * Get 关联waf资源详情	 
-     * @return WAF 关联waf资源详情	
+     * Get <p>关联waf资源详情   </p> 
+     * @return WAF <p>关联waf资源详情   </p>
      */
     public WafInstanceList [] getWAF() {
         return this.WAF;
     }
 
     /**
-     * Set 关联waf资源详情	
-     * @param WAF 关联waf资源详情	
+     * Set <p>关联waf资源详情   </p>
+     * @param WAF <p>关联waf资源详情   </p>
      */
     public void setWAF(WafInstanceList [] WAF) {
         this.WAF = WAF;
     }
 
     /**
-     * Get 关联ddos资源详情	 
-     * @return DDOS 关联ddos资源详情	
+     * Get <p>关联ddos资源详情  </p> 
+     * @return DDOS <p>关联ddos资源详情  </p>
      */
     public DdosInstanceList [] getDDOS() {
         return this.DDOS;
     }
 
     /**
-     * Set 关联ddos资源详情	
-     * @param DDOS 关联ddos资源详情	
+     * Set <p>关联ddos资源详情  </p>
+     * @param DDOS <p>关联ddos资源详情  </p>
      */
     public void setDDOS(DdosInstanceList [] DDOS) {
         this.DDOS = DDOS;
     }
 
     /**
-     * Get 关联live资源详情	 
-     * @return LIVE 关联live资源详情	
+     * Get <p>关联live资源详情  </p> 
+     * @return LIVE <p>关联live资源详情  </p>
      */
     public LiveInstanceList [] getLIVE() {
         return this.LIVE;
     }
 
     /**
-     * Set 关联live资源详情	
-     * @param LIVE 关联live资源详情	
+     * Set <p>关联live资源详情  </p>
+     * @param LIVE <p>关联live资源详情  </p>
      */
     public void setLIVE(LiveInstanceList [] LIVE) {
         this.LIVE = LIVE;
     }
 
     /**
-     * Get 关联vod资源详情	 
-     * @return VOD 关联vod资源详情	
+     * Get <p>关联vod资源详情   </p> 
+     * @return VOD <p>关联vod资源详情   </p>
      */
     public VODInstanceList [] getVOD() {
         return this.VOD;
     }
 
     /**
-     * Set 关联vod资源详情	
-     * @param VOD 关联vod资源详情	
+     * Set <p>关联vod资源详情   </p>
+     * @param VOD <p>关联vod资源详情   </p>
      */
     public void setVOD(VODInstanceList [] VOD) {
         this.VOD = VOD;
     }
 
     /**
-     * Get 关联tke资源详情	 
-     * @return TKE 关联tke资源详情	
+     * Get <p>关联tke资源详情   </p> 
+     * @return TKE <p>关联tke资源详情   </p>
      */
     public TkeInstanceList [] getTKE() {
         return this.TKE;
     }
 
     /**
-     * Set 关联tke资源详情	
-     * @param TKE 关联tke资源详情	
+     * Set <p>关联tke资源详情   </p>
+     * @param TKE <p>关联tke资源详情   </p>
      */
     public void setTKE(TkeInstanceList [] TKE) {
         this.TKE = TKE;
     }
 
     /**
-     * Get 关联apigateway资源详情	 
-     * @return APIGATEWAY 关联apigateway资源详情	
+     * Get <p>关联apigateway资源详情    </p> 
+     * @return APIGATEWAY <p>关联apigateway资源详情    </p>
      */
     public ApiGatewayInstanceList [] getAPIGATEWAY() {
         return this.APIGATEWAY;
     }
 
     /**
-     * Set 关联apigateway资源详情	
-     * @param APIGATEWAY 关联apigateway资源详情	
+     * Set <p>关联apigateway资源详情    </p>
+     * @param APIGATEWAY <p>关联apigateway资源详情    </p>
      */
     public void setAPIGATEWAY(ApiGatewayInstanceList [] APIGATEWAY) {
         this.APIGATEWAY = APIGATEWAY;
     }
 
     /**
-     * Get 关联tcb资源详情	 
-     * @return TCB 关联tcb资源详情	
+     * Get <p>关联tcb资源详情   </p> 
+     * @return TCB <p>关联tcb资源详情   </p>
      */
     public TCBInstanceList [] getTCB() {
         return this.TCB;
     }
 
     /**
-     * Set 关联tcb资源详情	
-     * @param TCB 关联tcb资源详情	
+     * Set <p>关联tcb资源详情   </p>
+     * @param TCB <p>关联tcb资源详情   </p>
      */
     public void setTCB(TCBInstanceList [] TCB) {
         this.TCB = TCB;
     }
 
     /**
-     * Get 关联teo资源详情	 
-     * @return TEO 关联teo资源详情	
+     * Get <p>关联teo资源详情   </p> 
+     * @return TEO <p>关联teo资源详情   </p>
      */
     public TeoInstanceList [] getTEO() {
         return this.TEO;
     }
 
     /**
-     * Set 关联teo资源详情	
-     * @param TEO 关联teo资源详情	
+     * Set <p>关联teo资源详情   </p>
+     * @param TEO <p>关联teo资源详情   </p>
      */
     public void setTEO(TeoInstanceList [] TEO) {
         this.TEO = TEO;
     }
 
     /**
-     * Get 关联云资源异步查询结果： 0表示查询中， 1表示查询成功。 2表示查询异常； 若状态为1，则查看BindResourceResult结果；若状态为2，则查看Error原因 
-     * @return Status 关联云资源异步查询结果： 0表示查询中， 1表示查询成功。 2表示查询异常； 若状态为1，则查看BindResourceResult结果；若状态为2，则查看Error原因
+     * Get <p>关联云资源异步查询结果： 0表示查询中， 1表示查询成功。 2表示查询异常； 若状态为1，则查看BindResourceResult结果；若状态为2，则查看Error原因</p> 
+     * @return Status <p>关联云资源异步查询结果： 0表示查询中， 1表示查询成功。 2表示查询异常； 若状态为1，则查看BindResourceResult结果；若状态为2，则查看Error原因</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 关联云资源异步查询结果： 0表示查询中， 1表示查询成功。 2表示查询异常； 若状态为1，则查看BindResourceResult结果；若状态为2，则查看Error原因
-     * @param Status 关联云资源异步查询结果： 0表示查询中， 1表示查询成功。 2表示查询异常； 若状态为1，则查看BindResourceResult结果；若状态为2，则查看Error原因
+     * Set <p>关联云资源异步查询结果： 0表示查询中， 1表示查询成功。 2表示查询异常； 若状态为1，则查看BindResourceResult结果；若状态为2，则查看Error原因</p>
+     * @param Status <p>关联云资源异步查询结果： 0表示查询中， 1表示查询成功。 2表示查询异常； 若状态为1，则查看BindResourceResult结果；若状态为2，则查看Error原因</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 当前结果缓存时间 
-     * @return CacheTime 当前结果缓存时间
+     * Get <p>当前结果缓存时间</p> 
+     * @return CacheTime <p>当前结果缓存时间</p>
      */
     public String getCacheTime() {
         return this.CacheTime;
     }
 
     /**
-     * Set 当前结果缓存时间
-     * @param CacheTime 当前结果缓存时间
+     * Set <p>当前结果缓存时间</p>
+     * @param CacheTime <p>当前结果缓存时间</p>
      */
     public void setCacheTime(String CacheTime) {
         this.CacheTime = CacheTime;
     }
 
     /**
-     * Get 关联tse资源详情	 
-     * @return TSE 关联tse资源详情	
+     * Get <p>关联tse资源详情   </p> 
+     * @return TSE <p>关联tse资源详情   </p>
      */
     public TSEInstanceList [] getTSE() {
         return this.TSE;
     }
 
     /**
-     * Set 关联tse资源详情	
-     * @param TSE 关联tse资源详情	
+     * Set <p>关联tse资源详情   </p>
+     * @param TSE <p>关联tse资源详情   </p>
      */
     public void setTSE(TSEInstanceList [] TSE) {
         this.TSE = TSE;
     }
 
     /**
-     * Get 关联的COS资源详情 
-     * @return COS 关联的COS资源详情
+     * Get <p>关联的COS资源详情</p> 
+     * @return COS <p>关联的COS资源详情</p>
      */
     public COSInstanceList [] getCOS() {
         return this.COS;
     }
 
     /**
-     * Set 关联的COS资源详情
-     * @param COS 关联的COS资源详情
+     * Set <p>关联的COS资源详情</p>
+     * @param COS <p>关联的COS资源详情</p>
      */
     public void setCOS(COSInstanceList [] COS) {
         this.COS = COS;
+    }
+
+    /**
+     * Get <p>关联的TDMQ - Rabbit资源详情</p> 
+     * @return TDMQ <p>关联的TDMQ - Rabbit资源详情</p>
+     */
+    public TDMQInstanceList [] getTDMQ() {
+        return this.TDMQ;
+    }
+
+    /**
+     * Set <p>关联的TDMQ - Rabbit资源详情</p>
+     * @param TDMQ <p>关联的TDMQ - Rabbit资源详情</p>
+     */
+    public void setTDMQ(TDMQInstanceList [] TDMQ) {
+        this.TDMQ = TDMQ;
+    }
+
+    /**
+     * Get <p>关联的MQTT资源详情</p> 
+     * @return MQTT <p>关联的MQTT资源详情</p>
+     */
+    public MQTTInstanceList [] getMQTT() {
+        return this.MQTT;
+    }
+
+    /**
+     * Set <p>关联的MQTT资源详情</p>
+     * @param MQTT <p>关联的MQTT资源详情</p>
+     */
+    public void setMQTT(MQTTInstanceList [] MQTT) {
+        this.MQTT = MQTT;
+    }
+
+    /**
+     * Get <p>关联的GAAP资源详情</p> 
+     * @return GAAP <p>关联的GAAP资源详情</p>
+     */
+    public GAAPInstanceList [] getGAAP() {
+        return this.GAAP;
+    }
+
+    /**
+     * Set <p>关联的GAAP资源详情</p>
+     * @param GAAP <p>关联的GAAP资源详情</p>
+     */
+    public void setGAAP(GAAPInstanceList [] GAAP) {
+        this.GAAP = GAAP;
+    }
+
+    /**
+     * Get <p>关联的SCF资源详情</p> 
+     * @return SCF <p>关联的SCF资源详情</p>
+     */
+    public SCFInstanceList [] getSCF() {
+        return this.SCF;
+    }
+
+    /**
+     * Set <p>关联的SCF资源详情</p>
+     * @param SCF <p>关联的SCF资源详情</p>
+     */
+    public void setSCF(SCFInstanceList [] SCF) {
+        this.SCF = SCF;
     }
 
     /**
@@ -454,6 +546,30 @@ public class DescribeCertificateBindResourceTaskDetailResponse extends AbstractM
                 this.COS[i] = new COSInstanceList(source.COS[i]);
             }
         }
+        if (source.TDMQ != null) {
+            this.TDMQ = new TDMQInstanceList[source.TDMQ.length];
+            for (int i = 0; i < source.TDMQ.length; i++) {
+                this.TDMQ[i] = new TDMQInstanceList(source.TDMQ[i]);
+            }
+        }
+        if (source.MQTT != null) {
+            this.MQTT = new MQTTInstanceList[source.MQTT.length];
+            for (int i = 0; i < source.MQTT.length; i++) {
+                this.MQTT[i] = new MQTTInstanceList(source.MQTT[i]);
+            }
+        }
+        if (source.GAAP != null) {
+            this.GAAP = new GAAPInstanceList[source.GAAP.length];
+            for (int i = 0; i < source.GAAP.length; i++) {
+                this.GAAP[i] = new GAAPInstanceList(source.GAAP[i]);
+            }
+        }
+        if (source.SCF != null) {
+            this.SCF = new SCFInstanceList[source.SCF.length];
+            for (int i = 0; i < source.SCF.length; i++) {
+                this.SCF[i] = new SCFInstanceList(source.SCF[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -478,6 +594,10 @@ public class DescribeCertificateBindResourceTaskDetailResponse extends AbstractM
         this.setParamSimple(map, prefix + "CacheTime", this.CacheTime);
         this.setParamArrayObj(map, prefix + "TSE.", this.TSE);
         this.setParamArrayObj(map, prefix + "COS.", this.COS);
+        this.setParamArrayObj(map, prefix + "TDMQ.", this.TDMQ);
+        this.setParamArrayObj(map, prefix + "MQTT.", this.MQTT);
+        this.setParamArrayObj(map, prefix + "GAAP.", this.GAAP);
+        this.setParamArrayObj(map, prefix + "SCF.", this.SCF);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

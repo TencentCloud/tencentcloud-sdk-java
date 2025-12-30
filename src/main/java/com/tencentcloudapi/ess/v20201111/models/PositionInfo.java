@@ -66,6 +66,27 @@ public class PositionInfo extends AbstractModel {
     private String Id;
 
     /**
+    * 开始位置
+    */
+    @SerializedName("Begin")
+    @Expose
+    private Long Begin;
+
+    /**
+    * 结束位置
+    */
+    @SerializedName("End")
+    @Expose
+    private Long End;
+
+    /**
+    * 文档类型，1：pdf，2：doc 文档
+    */
+    @SerializedName("DocType")
+    @Expose
+    private Long DocType;
+
+    /**
      * Get PDF文件页X坐标位置,以PDF单页左上角为坐标原点 
      * @return X PDF文件页X坐标位置,以PDF单页左上角为坐标原点
      */
@@ -161,6 +182,54 @@ public class PositionInfo extends AbstractModel {
         this.Id = Id;
     }
 
+    /**
+     * Get 开始位置 
+     * @return Begin 开始位置
+     */
+    public Long getBegin() {
+        return this.Begin;
+    }
+
+    /**
+     * Set 开始位置
+     * @param Begin 开始位置
+     */
+    public void setBegin(Long Begin) {
+        this.Begin = Begin;
+    }
+
+    /**
+     * Get 结束位置 
+     * @return End 结束位置
+     */
+    public Long getEnd() {
+        return this.End;
+    }
+
+    /**
+     * Set 结束位置
+     * @param End 结束位置
+     */
+    public void setEnd(Long End) {
+        this.End = End;
+    }
+
+    /**
+     * Get 文档类型，1：pdf，2：doc 文档 
+     * @return DocType 文档类型，1：pdf，2：doc 文档
+     */
+    public Long getDocType() {
+        return this.DocType;
+    }
+
+    /**
+     * Set 文档类型，1：pdf，2：doc 文档
+     * @param DocType 文档类型，1：pdf，2：doc 文档
+     */
+    public void setDocType(Long DocType) {
+        this.DocType = DocType;
+    }
+
     public PositionInfo() {
     }
 
@@ -187,6 +256,15 @@ public class PositionInfo extends AbstractModel {
         if (source.Id != null) {
             this.Id = new String(source.Id);
         }
+        if (source.Begin != null) {
+            this.Begin = new Long(source.Begin);
+        }
+        if (source.End != null) {
+            this.End = new Long(source.End);
+        }
+        if (source.DocType != null) {
+            this.DocType = new Long(source.DocType);
+        }
     }
 
 
@@ -200,6 +278,9 @@ public class PositionInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Height", this.Height);
         this.setParamSimple(map, prefix + "PageIndex", this.PageIndex);
         this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "Begin", this.Begin);
+        this.setParamSimple(map, prefix + "End", this.End);
+        this.setParamSimple(map, prefix + "DocType", this.DocType);
 
     }
 }

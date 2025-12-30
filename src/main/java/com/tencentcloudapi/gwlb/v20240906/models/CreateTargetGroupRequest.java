@@ -24,398 +24,368 @@ import java.util.HashMap;
 public class CreateTargetGroupRequest extends AbstractModel {
 
     /**
-    * 目标组名称，限定60个字符。
+    * <p>目标组名称，限定60个字符。</p>
     */
     @SerializedName("TargetGroupName")
     @Expose
     private String TargetGroupName;
 
     /**
-    * 网关负载均衡后端目标组所属的网络 ID，如vpc-12345678，可以通过 [DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)  接口获取。 不填此参数则默认为DefaultVPC。
+    * <p>网关负载均衡后端目标组所属的网络 ID，如vpc-12345678，可以通过 <a href="https://cloud.tencent.com/document/product/215/15778">DescribeVpcs</a>  接口获取。 不填此参数则默认为DefaultVPC。</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。仅支持6081。
+    * <p>目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。仅支持6081。</p>
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * 目标组绑定的后端服务器
+    * <p>目标组绑定的后端服务器</p>
     */
     @SerializedName("TargetGroupInstances")
     @Expose
     private TargetGroupInstance [] TargetGroupInstances;
 
     /**
-    * 网关负载均衡目标组协议。
-- TENCENT_GENEVE ：GENEVE 标准协议
-- AWS_GENEVE：GENEVE 兼容协议
+    * <p>网关负载均衡目标组协议。- TENCENT_GENEVE ：GENEVE 标准协议- AWS_GENEVE：GENEVE 兼容协议</p>
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * 健康检查设置。
+    * <p>健康检查设置。</p>
     */
     @SerializedName("HealthCheck")
     @Expose
     private TargetGroupHealthCheck HealthCheck;
 
     /**
-    * 均衡算法。
-- IP_HASH_3_ELASTIC：弹性哈希
+    * <p>均衡算法。</p><ul><li>IP_HASH_2_CONSISTENT：二元组一致性哈希</li><li>IP_HASH_3_CONSISTENT：三元组一致性哈希</li><li>IP_HASH_5_CONSISTENT：五元组一致性哈希</li></ul>
     */
     @SerializedName("ScheduleAlgorithm")
     @Expose
     private String ScheduleAlgorithm;
 
     /**
-    * 是否支持全死全活。默认支持。
+    * <p>是否支持全死全活。默认支持。</p>
     */
     @SerializedName("AllDeadToAlive")
     @Expose
     private Boolean AllDeadToAlive;
 
     /**
-    * 标签。
+    * <p>标签。</p>
     */
     @SerializedName("Tags")
     @Expose
     private TagInfo [] Tags;
 
     /**
-    * 流量分发方式
-
-- STATELESS：无状态
-- STATEFUL： 有状态
+    * <p>流量分发方式</p><ul><li>STATELESS：无状态</li><li>STATEFUL： 有状态</li></ul>
     */
     @SerializedName("ForwardingMode")
     @Expose
     private String ForwardingMode;
 
     /**
-    * TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。
+    * <p>TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。</p>
     */
     @SerializedName("TcpIdleConnectTimeout")
     @Expose
     private Long TcpIdleConnectTimeout;
 
     /**
-    * 其他协议连接空闲超时时间，可配置5s-180s，默认120s
+    * <p>其他协议连接空闲超时时间，可配置5s-180s，默认120s</p>
     */
     @SerializedName("OthersIdleConnectTimeout")
     @Expose
     private Long OthersIdleConnectTimeout;
 
     /**
-    * 重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。
+    * <p>重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。</p>
     */
     @SerializedName("RescheduleUnbindRs")
     @Expose
     private Boolean RescheduleUnbindRs;
 
     /**
-    * 解绑RS后开启重调度的时间，可配置0s-3600s，默认0s
+    * <p>解绑RS后开启重调度的时间，可配置0s-3600s，默认0s</p>
     */
     @SerializedName("RescheduleUnbindRsStartTime")
     @Expose
     private Long RescheduleUnbindRsStartTime;
 
     /**
-    * 重新调度功能内的后端服务健康探测异常开关，开关打开后后端服务健康检查异常会触发重新调度。
+    * <p>重新调度功能内的后端服务健康探测异常开关，开关打开后后端服务健康检查异常会触发重新调度。</p>
     */
     @SerializedName("RescheduleUnhealthy")
     @Expose
     private Boolean RescheduleUnhealthy;
 
     /**
-    * 后端服务健康探测异常后开启重调度的时间，可配置0s-3600s，默认0s
+    * <p>后端服务健康探测异常后开启重调度的时间，可配置0s-3600s，默认0s</p>
     */
     @SerializedName("RescheduleUnhealthyStartTime")
     @Expose
     private Long RescheduleUnhealthyStartTime;
 
     /**
-     * Get 目标组名称，限定60个字符。 
-     * @return TargetGroupName 目标组名称，限定60个字符。
+     * Get <p>目标组名称，限定60个字符。</p> 
+     * @return TargetGroupName <p>目标组名称，限定60个字符。</p>
      */
     public String getTargetGroupName() {
         return this.TargetGroupName;
     }
 
     /**
-     * Set 目标组名称，限定60个字符。
-     * @param TargetGroupName 目标组名称，限定60个字符。
+     * Set <p>目标组名称，限定60个字符。</p>
+     * @param TargetGroupName <p>目标组名称，限定60个字符。</p>
      */
     public void setTargetGroupName(String TargetGroupName) {
         this.TargetGroupName = TargetGroupName;
     }
 
     /**
-     * Get 网关负载均衡后端目标组所属的网络 ID，如vpc-12345678，可以通过 [DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)  接口获取。 不填此参数则默认为DefaultVPC。 
-     * @return VpcId 网关负载均衡后端目标组所属的网络 ID，如vpc-12345678，可以通过 [DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)  接口获取。 不填此参数则默认为DefaultVPC。
+     * Get <p>网关负载均衡后端目标组所属的网络 ID，如vpc-12345678，可以通过 <a href="https://cloud.tencent.com/document/product/215/15778">DescribeVpcs</a>  接口获取。 不填此参数则默认为DefaultVPC。</p> 
+     * @return VpcId <p>网关负载均衡后端目标组所属的网络 ID，如vpc-12345678，可以通过 <a href="https://cloud.tencent.com/document/product/215/15778">DescribeVpcs</a>  接口获取。 不填此参数则默认为DefaultVPC。</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 网关负载均衡后端目标组所属的网络 ID，如vpc-12345678，可以通过 [DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)  接口获取。 不填此参数则默认为DefaultVPC。
-     * @param VpcId 网关负载均衡后端目标组所属的网络 ID，如vpc-12345678，可以通过 [DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)  接口获取。 不填此参数则默认为DefaultVPC。
+     * Set <p>网关负载均衡后端目标组所属的网络 ID，如vpc-12345678，可以通过 <a href="https://cloud.tencent.com/document/product/215/15778">DescribeVpcs</a>  接口获取。 不填此参数则默认为DefaultVPC。</p>
+     * @param VpcId <p>网关负载均衡后端目标组所属的网络 ID，如vpc-12345678，可以通过 <a href="https://cloud.tencent.com/document/product/215/15778">DescribeVpcs</a>  接口获取。 不填此参数则默认为DefaultVPC。</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。仅支持6081。 
-     * @return Port 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。仅支持6081。
+     * Get <p>目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。仅支持6081。</p> 
+     * @return Port <p>目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。仅支持6081。</p>
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。仅支持6081。
-     * @param Port 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。仅支持6081。
+     * Set <p>目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。仅支持6081。</p>
+     * @param Port <p>目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。仅支持6081。</p>
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 目标组绑定的后端服务器 
-     * @return TargetGroupInstances 目标组绑定的后端服务器
+     * Get <p>目标组绑定的后端服务器</p> 
+     * @return TargetGroupInstances <p>目标组绑定的后端服务器</p>
      */
     public TargetGroupInstance [] getTargetGroupInstances() {
         return this.TargetGroupInstances;
     }
 
     /**
-     * Set 目标组绑定的后端服务器
-     * @param TargetGroupInstances 目标组绑定的后端服务器
+     * Set <p>目标组绑定的后端服务器</p>
+     * @param TargetGroupInstances <p>目标组绑定的后端服务器</p>
      */
     public void setTargetGroupInstances(TargetGroupInstance [] TargetGroupInstances) {
         this.TargetGroupInstances = TargetGroupInstances;
     }
 
     /**
-     * Get 网关负载均衡目标组协议。
-- TENCENT_GENEVE ：GENEVE 标准协议
-- AWS_GENEVE：GENEVE 兼容协议 
-     * @return Protocol 网关负载均衡目标组协议。
-- TENCENT_GENEVE ：GENEVE 标准协议
-- AWS_GENEVE：GENEVE 兼容协议
+     * Get <p>网关负载均衡目标组协议。- TENCENT_GENEVE ：GENEVE 标准协议- AWS_GENEVE：GENEVE 兼容协议</p> 
+     * @return Protocol <p>网关负载均衡目标组协议。- TENCENT_GENEVE ：GENEVE 标准协议- AWS_GENEVE：GENEVE 兼容协议</p>
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 网关负载均衡目标组协议。
-- TENCENT_GENEVE ：GENEVE 标准协议
-- AWS_GENEVE：GENEVE 兼容协议
-     * @param Protocol 网关负载均衡目标组协议。
-- TENCENT_GENEVE ：GENEVE 标准协议
-- AWS_GENEVE：GENEVE 兼容协议
+     * Set <p>网关负载均衡目标组协议。- TENCENT_GENEVE ：GENEVE 标准协议- AWS_GENEVE：GENEVE 兼容协议</p>
+     * @param Protocol <p>网关负载均衡目标组协议。- TENCENT_GENEVE ：GENEVE 标准协议- AWS_GENEVE：GENEVE 兼容协议</p>
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 健康检查设置。 
-     * @return HealthCheck 健康检查设置。
+     * Get <p>健康检查设置。</p> 
+     * @return HealthCheck <p>健康检查设置。</p>
      */
     public TargetGroupHealthCheck getHealthCheck() {
         return this.HealthCheck;
     }
 
     /**
-     * Set 健康检查设置。
-     * @param HealthCheck 健康检查设置。
+     * Set <p>健康检查设置。</p>
+     * @param HealthCheck <p>健康检查设置。</p>
      */
     public void setHealthCheck(TargetGroupHealthCheck HealthCheck) {
         this.HealthCheck = HealthCheck;
     }
 
     /**
-     * Get 均衡算法。
-- IP_HASH_3_ELASTIC：弹性哈希 
-     * @return ScheduleAlgorithm 均衡算法。
-- IP_HASH_3_ELASTIC：弹性哈希
+     * Get <p>均衡算法。</p><ul><li>IP_HASH_2_CONSISTENT：二元组一致性哈希</li><li>IP_HASH_3_CONSISTENT：三元组一致性哈希</li><li>IP_HASH_5_CONSISTENT：五元组一致性哈希</li></ul> 
+     * @return ScheduleAlgorithm <p>均衡算法。</p><ul><li>IP_HASH_2_CONSISTENT：二元组一致性哈希</li><li>IP_HASH_3_CONSISTENT：三元组一致性哈希</li><li>IP_HASH_5_CONSISTENT：五元组一致性哈希</li></ul>
      */
     public String getScheduleAlgorithm() {
         return this.ScheduleAlgorithm;
     }
 
     /**
-     * Set 均衡算法。
-- IP_HASH_3_ELASTIC：弹性哈希
-     * @param ScheduleAlgorithm 均衡算法。
-- IP_HASH_3_ELASTIC：弹性哈希
+     * Set <p>均衡算法。</p><ul><li>IP_HASH_2_CONSISTENT：二元组一致性哈希</li><li>IP_HASH_3_CONSISTENT：三元组一致性哈希</li><li>IP_HASH_5_CONSISTENT：五元组一致性哈希</li></ul>
+     * @param ScheduleAlgorithm <p>均衡算法。</p><ul><li>IP_HASH_2_CONSISTENT：二元组一致性哈希</li><li>IP_HASH_3_CONSISTENT：三元组一致性哈希</li><li>IP_HASH_5_CONSISTENT：五元组一致性哈希</li></ul>
      */
     public void setScheduleAlgorithm(String ScheduleAlgorithm) {
         this.ScheduleAlgorithm = ScheduleAlgorithm;
     }
 
     /**
-     * Get 是否支持全死全活。默认支持。 
-     * @return AllDeadToAlive 是否支持全死全活。默认支持。
+     * Get <p>是否支持全死全活。默认支持。</p> 
+     * @return AllDeadToAlive <p>是否支持全死全活。默认支持。</p>
      */
     public Boolean getAllDeadToAlive() {
         return this.AllDeadToAlive;
     }
 
     /**
-     * Set 是否支持全死全活。默认支持。
-     * @param AllDeadToAlive 是否支持全死全活。默认支持。
+     * Set <p>是否支持全死全活。默认支持。</p>
+     * @param AllDeadToAlive <p>是否支持全死全活。默认支持。</p>
      */
     public void setAllDeadToAlive(Boolean AllDeadToAlive) {
         this.AllDeadToAlive = AllDeadToAlive;
     }
 
     /**
-     * Get 标签。 
-     * @return Tags 标签。
+     * Get <p>标签。</p> 
+     * @return Tags <p>标签。</p>
      */
     public TagInfo [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签。
-     * @param Tags 标签。
+     * Set <p>标签。</p>
+     * @param Tags <p>标签。</p>
      */
     public void setTags(TagInfo [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 流量分发方式
-
-- STATELESS：无状态
-- STATEFUL： 有状态 
-     * @return ForwardingMode 流量分发方式
-
-- STATELESS：无状态
-- STATEFUL： 有状态
+     * Get <p>流量分发方式</p><ul><li>STATELESS：无状态</li><li>STATEFUL： 有状态</li></ul> 
+     * @return ForwardingMode <p>流量分发方式</p><ul><li>STATELESS：无状态</li><li>STATEFUL： 有状态</li></ul>
      */
     public String getForwardingMode() {
         return this.ForwardingMode;
     }
 
     /**
-     * Set 流量分发方式
-
-- STATELESS：无状态
-- STATEFUL： 有状态
-     * @param ForwardingMode 流量分发方式
-
-- STATELESS：无状态
-- STATEFUL： 有状态
+     * Set <p>流量分发方式</p><ul><li>STATELESS：无状态</li><li>STATEFUL： 有状态</li></ul>
+     * @param ForwardingMode <p>流量分发方式</p><ul><li>STATELESS：无状态</li><li>STATEFUL： 有状态</li></ul>
      */
     public void setForwardingMode(String ForwardingMode) {
         this.ForwardingMode = ForwardingMode;
     }
 
     /**
-     * Get TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。 
-     * @return TcpIdleConnectTimeout TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。
+     * Get <p>TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。</p> 
+     * @return TcpIdleConnectTimeout <p>TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。</p>
      */
     public Long getTcpIdleConnectTimeout() {
         return this.TcpIdleConnectTimeout;
     }
 
     /**
-     * Set TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。
-     * @param TcpIdleConnectTimeout TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。
+     * Set <p>TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。</p>
+     * @param TcpIdleConnectTimeout <p>TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。</p>
      */
     public void setTcpIdleConnectTimeout(Long TcpIdleConnectTimeout) {
         this.TcpIdleConnectTimeout = TcpIdleConnectTimeout;
     }
 
     /**
-     * Get 其他协议连接空闲超时时间，可配置5s-180s，默认120s 
-     * @return OthersIdleConnectTimeout 其他协议连接空闲超时时间，可配置5s-180s，默认120s
+     * Get <p>其他协议连接空闲超时时间，可配置5s-180s，默认120s</p> 
+     * @return OthersIdleConnectTimeout <p>其他协议连接空闲超时时间，可配置5s-180s，默认120s</p>
      */
     public Long getOthersIdleConnectTimeout() {
         return this.OthersIdleConnectTimeout;
     }
 
     /**
-     * Set 其他协议连接空闲超时时间，可配置5s-180s，默认120s
-     * @param OthersIdleConnectTimeout 其他协议连接空闲超时时间，可配置5s-180s，默认120s
+     * Set <p>其他协议连接空闲超时时间，可配置5s-180s，默认120s</p>
+     * @param OthersIdleConnectTimeout <p>其他协议连接空闲超时时间，可配置5s-180s，默认120s</p>
      */
     public void setOthersIdleConnectTimeout(Long OthersIdleConnectTimeout) {
         this.OthersIdleConnectTimeout = OthersIdleConnectTimeout;
     }
 
     /**
-     * Get 重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。 
-     * @return RescheduleUnbindRs 重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。
+     * Get <p>重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。</p> 
+     * @return RescheduleUnbindRs <p>重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。</p>
      */
     public Boolean getRescheduleUnbindRs() {
         return this.RescheduleUnbindRs;
     }
 
     /**
-     * Set 重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。
-     * @param RescheduleUnbindRs 重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。
+     * Set <p>重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。</p>
+     * @param RescheduleUnbindRs <p>重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。</p>
      */
     public void setRescheduleUnbindRs(Boolean RescheduleUnbindRs) {
         this.RescheduleUnbindRs = RescheduleUnbindRs;
     }
 
     /**
-     * Get 解绑RS后开启重调度的时间，可配置0s-3600s，默认0s 
-     * @return RescheduleUnbindRsStartTime 解绑RS后开启重调度的时间，可配置0s-3600s，默认0s
+     * Get <p>解绑RS后开启重调度的时间，可配置0s-3600s，默认0s</p> 
+     * @return RescheduleUnbindRsStartTime <p>解绑RS后开启重调度的时间，可配置0s-3600s，默认0s</p>
      */
     public Long getRescheduleUnbindRsStartTime() {
         return this.RescheduleUnbindRsStartTime;
     }
 
     /**
-     * Set 解绑RS后开启重调度的时间，可配置0s-3600s，默认0s
-     * @param RescheduleUnbindRsStartTime 解绑RS后开启重调度的时间，可配置0s-3600s，默认0s
+     * Set <p>解绑RS后开启重调度的时间，可配置0s-3600s，默认0s</p>
+     * @param RescheduleUnbindRsStartTime <p>解绑RS后开启重调度的时间，可配置0s-3600s，默认0s</p>
      */
     public void setRescheduleUnbindRsStartTime(Long RescheduleUnbindRsStartTime) {
         this.RescheduleUnbindRsStartTime = RescheduleUnbindRsStartTime;
     }
 
     /**
-     * Get 重新调度功能内的后端服务健康探测异常开关，开关打开后后端服务健康检查异常会触发重新调度。 
-     * @return RescheduleUnhealthy 重新调度功能内的后端服务健康探测异常开关，开关打开后后端服务健康检查异常会触发重新调度。
+     * Get <p>重新调度功能内的后端服务健康探测异常开关，开关打开后后端服务健康检查异常会触发重新调度。</p> 
+     * @return RescheduleUnhealthy <p>重新调度功能内的后端服务健康探测异常开关，开关打开后后端服务健康检查异常会触发重新调度。</p>
      */
     public Boolean getRescheduleUnhealthy() {
         return this.RescheduleUnhealthy;
     }
 
     /**
-     * Set 重新调度功能内的后端服务健康探测异常开关，开关打开后后端服务健康检查异常会触发重新调度。
-     * @param RescheduleUnhealthy 重新调度功能内的后端服务健康探测异常开关，开关打开后后端服务健康检查异常会触发重新调度。
+     * Set <p>重新调度功能内的后端服务健康探测异常开关，开关打开后后端服务健康检查异常会触发重新调度。</p>
+     * @param RescheduleUnhealthy <p>重新调度功能内的后端服务健康探测异常开关，开关打开后后端服务健康检查异常会触发重新调度。</p>
      */
     public void setRescheduleUnhealthy(Boolean RescheduleUnhealthy) {
         this.RescheduleUnhealthy = RescheduleUnhealthy;
     }
 
     /**
-     * Get 后端服务健康探测异常后开启重调度的时间，可配置0s-3600s，默认0s 
-     * @return RescheduleUnhealthyStartTime 后端服务健康探测异常后开启重调度的时间，可配置0s-3600s，默认0s
+     * Get <p>后端服务健康探测异常后开启重调度的时间，可配置0s-3600s，默认0s</p> 
+     * @return RescheduleUnhealthyStartTime <p>后端服务健康探测异常后开启重调度的时间，可配置0s-3600s，默认0s</p>
      */
     public Long getRescheduleUnhealthyStartTime() {
         return this.RescheduleUnhealthyStartTime;
     }
 
     /**
-     * Set 后端服务健康探测异常后开启重调度的时间，可配置0s-3600s，默认0s
-     * @param RescheduleUnhealthyStartTime 后端服务健康探测异常后开启重调度的时间，可配置0s-3600s，默认0s
+     * Set <p>后端服务健康探测异常后开启重调度的时间，可配置0s-3600s，默认0s</p>
+     * @param RescheduleUnhealthyStartTime <p>后端服务健康探测异常后开启重调度的时间，可配置0s-3600s，默认0s</p>
      */
     public void setRescheduleUnhealthyStartTime(Long RescheduleUnhealthyStartTime) {
         this.RescheduleUnhealthyStartTime = RescheduleUnhealthyStartTime;

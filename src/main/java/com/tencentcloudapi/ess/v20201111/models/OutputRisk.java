@@ -100,6 +100,41 @@ public class OutputRisk extends AbstractModel {
     private Long RiskLevelId;
 
     /**
+    * 风险标签
+    */
+    @SerializedName("RiskLabels")
+    @Expose
+    private String [] RiskLabels;
+
+    /**
+    * 风险来源 0:模型标注的风险 1:人工标注的风险
+    */
+    @SerializedName("RiskOrigin")
+    @Expose
+    private Long RiskOrigin;
+
+    /**
+    * 创建人
+    */
+    @SerializedName("Creator")
+    @Expose
+    private String Creator;
+
+    /**
+    * 创建人ID
+    */
+    @SerializedName("CreatorId")
+    @Expose
+    private String CreatorId;
+
+    /**
+    * 创建时间
+    */
+    @SerializedName("CreatedOn")
+    @Expose
+    private Long CreatedOn;
+
+    /**
      * Get 合同审查风险结果ID 
      * @return RiskId 合同审查风险结果ID
      */
@@ -283,6 +318,86 @@ public class OutputRisk extends AbstractModel {
         this.RiskLevelId = RiskLevelId;
     }
 
+    /**
+     * Get 风险标签 
+     * @return RiskLabels 风险标签
+     */
+    public String [] getRiskLabels() {
+        return this.RiskLabels;
+    }
+
+    /**
+     * Set 风险标签
+     * @param RiskLabels 风险标签
+     */
+    public void setRiskLabels(String [] RiskLabels) {
+        this.RiskLabels = RiskLabels;
+    }
+
+    /**
+     * Get 风险来源 0:模型标注的风险 1:人工标注的风险 
+     * @return RiskOrigin 风险来源 0:模型标注的风险 1:人工标注的风险
+     */
+    public Long getRiskOrigin() {
+        return this.RiskOrigin;
+    }
+
+    /**
+     * Set 风险来源 0:模型标注的风险 1:人工标注的风险
+     * @param RiskOrigin 风险来源 0:模型标注的风险 1:人工标注的风险
+     */
+    public void setRiskOrigin(Long RiskOrigin) {
+        this.RiskOrigin = RiskOrigin;
+    }
+
+    /**
+     * Get 创建人 
+     * @return Creator 创建人
+     */
+    public String getCreator() {
+        return this.Creator;
+    }
+
+    /**
+     * Set 创建人
+     * @param Creator 创建人
+     */
+    public void setCreator(String Creator) {
+        this.Creator = Creator;
+    }
+
+    /**
+     * Get 创建人ID 
+     * @return CreatorId 创建人ID
+     */
+    public String getCreatorId() {
+        return this.CreatorId;
+    }
+
+    /**
+     * Set 创建人ID
+     * @param CreatorId 创建人ID
+     */
+    public void setCreatorId(String CreatorId) {
+        this.CreatorId = CreatorId;
+    }
+
+    /**
+     * Get 创建时间 
+     * @return CreatedOn 创建时间
+     */
+    public Long getCreatedOn() {
+        return this.CreatedOn;
+    }
+
+    /**
+     * Set 创建时间
+     * @param CreatedOn 创建时间
+     */
+    public void setCreatedOn(Long CreatedOn) {
+        this.CreatedOn = CreatedOn;
+    }
+
     public OutputRisk() {
     }
 
@@ -327,6 +442,24 @@ public class OutputRisk extends AbstractModel {
         if (source.RiskLevelId != null) {
             this.RiskLevelId = new Long(source.RiskLevelId);
         }
+        if (source.RiskLabels != null) {
+            this.RiskLabels = new String[source.RiskLabels.length];
+            for (int i = 0; i < source.RiskLabels.length; i++) {
+                this.RiskLabels[i] = new String(source.RiskLabels[i]);
+            }
+        }
+        if (source.RiskOrigin != null) {
+            this.RiskOrigin = new Long(source.RiskOrigin);
+        }
+        if (source.Creator != null) {
+            this.Creator = new String(source.Creator);
+        }
+        if (source.CreatorId != null) {
+            this.CreatorId = new String(source.CreatorId);
+        }
+        if (source.CreatedOn != null) {
+            this.CreatedOn = new Long(source.CreatedOn);
+        }
     }
 
 
@@ -344,6 +477,11 @@ public class OutputRisk extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Positions.", this.Positions);
         this.setParamSimple(map, prefix + "RiskBasis", this.RiskBasis);
         this.setParamSimple(map, prefix + "RiskLevelId", this.RiskLevelId);
+        this.setParamArraySimple(map, prefix + "RiskLabels.", this.RiskLabels);
+        this.setParamSimple(map, prefix + "RiskOrigin", this.RiskOrigin);
+        this.setParamSimple(map, prefix + "Creator", this.Creator);
+        this.setParamSimple(map, prefix + "CreatorId", this.CreatorId);
+        this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
 
     }
 }

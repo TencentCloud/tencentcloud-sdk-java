@@ -199,6 +199,13 @@ public class DeployRecordDetail extends AbstractModel {
     private String InstanceStatus;
 
     /**
+    * 监听器状态
+    */
+    @SerializedName("ListenerStatus")
+    @Expose
+    private String ListenerStatus;
+
+    /**
      * Get 部署记录详情ID 
      * @return Id 部署记录详情ID
      */
@@ -598,6 +605,22 @@ public class DeployRecordDetail extends AbstractModel {
         this.InstanceStatus = InstanceStatus;
     }
 
+    /**
+     * Get 监听器状态 
+     * @return ListenerStatus 监听器状态
+     */
+    public String getListenerStatus() {
+        return this.ListenerStatus;
+    }
+
+    /**
+     * Set 监听器状态
+     * @param ListenerStatus 监听器状态
+     */
+    public void setListenerStatus(String ListenerStatus) {
+        this.ListenerStatus = ListenerStatus;
+    }
+
     public DeployRecordDetail() {
     }
 
@@ -687,6 +710,9 @@ public class DeployRecordDetail extends AbstractModel {
         if (source.InstanceStatus != null) {
             this.InstanceStatus = new String(source.InstanceStatus);
         }
+        if (source.ListenerStatus != null) {
+            this.ListenerStatus = new String(source.ListenerStatus);
+        }
     }
 
 
@@ -719,6 +745,7 @@ public class DeployRecordDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "Algorithm", this.Algorithm);
         this.setParamSimple(map, prefix + "OldAlgorithm", this.OldAlgorithm);
         this.setParamSimple(map, prefix + "InstanceStatus", this.InstanceStatus);
+        this.setParamSimple(map, prefix + "ListenerStatus", this.ListenerStatus);
 
     }
 }

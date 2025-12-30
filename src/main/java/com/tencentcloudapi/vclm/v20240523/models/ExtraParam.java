@@ -31,6 +31,22 @@ public class ExtraParam extends AbstractModel {
     private String UserDesignatedUrl;
 
     /**
+    * 回调地址
+需要您在创建任务时主动设置 CallbackUrl，请求方法为 POST，当视频生成结束时，我们将向此地址发送生成结果。
+数据格式如下：
+{
+    "JobId": "1397428070633955328",
+    "Status": "DONE",
+    "ErrorCode": "",
+    "ErrorMessage": "",
+    "ResultVideoUrl": "https://vcg.cos.tencentcos.cn/template_to_video/fa80b846-b933-4981-afad-8a39b46ef2ca.mp4"
+}
+    */
+    @SerializedName("CallbackUrl")
+    @Expose
+    private String CallbackUrl;
+
+    /**
      * Get 预签名的上传url，支持把视频直接传到客户指定的地址。 
      * @return UserDesignatedUrl 预签名的上传url，支持把视频直接传到客户指定的地址。
      */
@@ -46,6 +62,58 @@ public class ExtraParam extends AbstractModel {
         this.UserDesignatedUrl = UserDesignatedUrl;
     }
 
+    /**
+     * Get 回调地址
+需要您在创建任务时主动设置 CallbackUrl，请求方法为 POST，当视频生成结束时，我们将向此地址发送生成结果。
+数据格式如下：
+{
+    "JobId": "1397428070633955328",
+    "Status": "DONE",
+    "ErrorCode": "",
+    "ErrorMessage": "",
+    "ResultVideoUrl": "https://vcg.cos.tencentcos.cn/template_to_video/fa80b846-b933-4981-afad-8a39b46ef2ca.mp4"
+} 
+     * @return CallbackUrl 回调地址
+需要您在创建任务时主动设置 CallbackUrl，请求方法为 POST，当视频生成结束时，我们将向此地址发送生成结果。
+数据格式如下：
+{
+    "JobId": "1397428070633955328",
+    "Status": "DONE",
+    "ErrorCode": "",
+    "ErrorMessage": "",
+    "ResultVideoUrl": "https://vcg.cos.tencentcos.cn/template_to_video/fa80b846-b933-4981-afad-8a39b46ef2ca.mp4"
+}
+     */
+    public String getCallbackUrl() {
+        return this.CallbackUrl;
+    }
+
+    /**
+     * Set 回调地址
+需要您在创建任务时主动设置 CallbackUrl，请求方法为 POST，当视频生成结束时，我们将向此地址发送生成结果。
+数据格式如下：
+{
+    "JobId": "1397428070633955328",
+    "Status": "DONE",
+    "ErrorCode": "",
+    "ErrorMessage": "",
+    "ResultVideoUrl": "https://vcg.cos.tencentcos.cn/template_to_video/fa80b846-b933-4981-afad-8a39b46ef2ca.mp4"
+}
+     * @param CallbackUrl 回调地址
+需要您在创建任务时主动设置 CallbackUrl，请求方法为 POST，当视频生成结束时，我们将向此地址发送生成结果。
+数据格式如下：
+{
+    "JobId": "1397428070633955328",
+    "Status": "DONE",
+    "ErrorCode": "",
+    "ErrorMessage": "",
+    "ResultVideoUrl": "https://vcg.cos.tencentcos.cn/template_to_video/fa80b846-b933-4981-afad-8a39b46ef2ca.mp4"
+}
+     */
+    public void setCallbackUrl(String CallbackUrl) {
+        this.CallbackUrl = CallbackUrl;
+    }
+
     public ExtraParam() {
     }
 
@@ -57,6 +125,9 @@ public class ExtraParam extends AbstractModel {
         if (source.UserDesignatedUrl != null) {
             this.UserDesignatedUrl = new String(source.UserDesignatedUrl);
         }
+        if (source.CallbackUrl != null) {
+            this.CallbackUrl = new String(source.CallbackUrl);
+        }
     }
 
 
@@ -65,6 +136,7 @@ public class ExtraParam extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "UserDesignatedUrl", this.UserDesignatedUrl);
+        this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
 
     }
 }

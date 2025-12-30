@@ -39,6 +39,17 @@ public class LkeClient extends AbstractClient{
     }
 
     /**
+     *工作流工具节点异步回调
+     * @param req CallbackWorkflowToolNodeRequest
+     * @return CallbackWorkflowToolNodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public CallbackWorkflowToolNodeResponse CallbackWorkflowToolNode(CallbackWorkflowToolNodeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CallbackWorkflowToolNode", CallbackWorkflowToolNodeResponse.class);
+    }
+
+    /**
      *检查属性下的标签名是否存在
      * @param req CheckAttributeLabelExistRequest
      * @return CheckAttributeLabelExistResponse

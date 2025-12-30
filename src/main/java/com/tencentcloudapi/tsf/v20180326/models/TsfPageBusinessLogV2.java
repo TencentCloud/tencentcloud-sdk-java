@@ -39,7 +39,6 @@ public class TsfPageBusinessLogV2 extends AbstractModel {
 
     /**
     * 游标ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScrollId")
     @Expose
@@ -47,7 +46,6 @@ public class TsfPageBusinessLogV2 extends AbstractModel {
 
     /**
     * 查询状态，SUCCESS：查询成功完成，ERROR_RANGE_EXCEED：查询范围过大异常，ERROR_COMPLEX_CONDITION：查询条件复杂异常，ERROR_OTHER_CAUSE：其他异常
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -93,10 +91,8 @@ public class TsfPageBusinessLogV2 extends AbstractModel {
     }
 
     /**
-     * Get 游标ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 游标ID 
      * @return ScrollId 游标ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScrollId() {
         return this.ScrollId;
@@ -104,19 +100,15 @@ public class TsfPageBusinessLogV2 extends AbstractModel {
 
     /**
      * Set 游标ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScrollId 游标ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScrollId(String ScrollId) {
         this.ScrollId = ScrollId;
     }
 
     /**
-     * Get 查询状态，SUCCESS：查询成功完成，ERROR_RANGE_EXCEED：查询范围过大异常，ERROR_COMPLEX_CONDITION：查询条件复杂异常，ERROR_OTHER_CAUSE：其他异常
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 查询状态，SUCCESS：查询成功完成，ERROR_RANGE_EXCEED：查询范围过大异常，ERROR_COMPLEX_CONDITION：查询条件复杂异常，ERROR_OTHER_CAUSE：其他异常 
      * @return Status 查询状态，SUCCESS：查询成功完成，ERROR_RANGE_EXCEED：查询范围过大异常，ERROR_COMPLEX_CONDITION：查询条件复杂异常，ERROR_OTHER_CAUSE：其他异常
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -124,9 +116,7 @@ public class TsfPageBusinessLogV2 extends AbstractModel {
 
     /**
      * Set 查询状态，SUCCESS：查询成功完成，ERROR_RANGE_EXCEED：查询范围过大异常，ERROR_COMPLEX_CONDITION：查询条件复杂异常，ERROR_OTHER_CAUSE：其他异常
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 查询状态，SUCCESS：查询成功完成，ERROR_RANGE_EXCEED：查询范围过大异常，ERROR_COMPLEX_CONDITION：查询条件复杂异常，ERROR_OTHER_CAUSE：其他异常
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
