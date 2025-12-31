@@ -413,6 +413,41 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *查询云联网关联的实例信息
+     * @param req DescribeCcnAssociatedInstancesRequest
+     * @return DescribeCcnAssociatedInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCcnAssociatedInstancesResponse DescribeCcnAssociatedInstances(DescribeCcnAssociatedInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCcnAssociatedInstances", DescribeCcnAssociatedInstancesResponse.class);
+    }
+
+    /**
+     *查询CCN关联实例的地域防火墙引流网络部署状态
+1.根据CCN ID和实例ID列表，返回实例对应地域的防火墙引流网络部署状态
+2.如果传入实例ID列表为空，则返回CCN关联的所有实例的地域防火墙引流网络部署状态
+     * @param req DescribeCcnInstanceRegionStatusRequest
+     * @return DescribeCcnInstanceRegionStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCcnInstanceRegionStatusResponse DescribeCcnInstanceRegionStatus(DescribeCcnInstanceRegionStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCcnInstanceRegionStatus", DescribeCcnInstanceRegionStatusResponse.class);
+    }
+
+    /**
+     *查询CCN VPC防火墙开关配置
+     * @param req DescribeCcnVpcFwSwitchRequest
+     * @return DescribeCcnVpcFwSwitchResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCcnVpcFwSwitchResponse DescribeCcnVpcFwSwitch(DescribeCcnVpcFwSwitchRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCcnVpcFwSwitch", DescribeCcnVpcFwSwitchResponse.class);
+    }
+
+    /**
      *查询防火墙弹性公网IP
      * @param req DescribeCfwEipsRequest
      * @return DescribeCfwEipsResponse
@@ -699,6 +734,17 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *互联网边界防火墙开关横幅错误信息
+     * @param req DescribeSwitchErrorRequest
+     * @return DescribeSwitchErrorResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSwitchErrorResponse DescribeSwitchError(DescribeSwitchErrorRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSwitchError", DescribeSwitchErrorResponse.class);
+    }
+
+    /**
      *防火墙开关列表，请换用DescribeFwEdgeIps
      * @param req DescribeSwitchListsRequest
      * @return DescribeSwitchListsResponse
@@ -762,6 +808,17 @@ public class CfwClient extends AbstractClient{
     public DescribeVpcAcRuleResponse DescribeVpcAcRule(DescribeVpcAcRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeVpcAcRule", DescribeVpcAcRuleResponse.class);
+    }
+
+    /**
+     *查询VPC防火墙策略路由功能开白的CCN列表
+     * @param req DescribeVpcFwCcnPolicyWhiteListRequest
+     * @return DescribeVpcFwCcnPolicyWhiteListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVpcFwCcnPolicyWhiteListResponse DescribeVpcFwCcnPolicyWhiteList(DescribeVpcFwCcnPolicyWhiteListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVpcFwCcnPolicyWhiteList", DescribeVpcFwCcnPolicyWhiteListResponse.class);
     }
 
     /**
@@ -908,6 +965,17 @@ public class CfwClient extends AbstractClient{
     public ModifyBlockTopResponse ModifyBlockTop(ModifyBlockTopRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyBlockTop", ModifyBlockTopResponse.class);
+    }
+
+    /**
+     *修改集群模式VPC防火墙开关
+     * @param req ModifyClusterVpcFwSwitchRequest
+     * @return ModifyClusterVpcFwSwitchResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterVpcFwSwitchResponse ModifyClusterVpcFwSwitch(ModifyClusterVpcFwSwitchRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyClusterVpcFwSwitch", ModifyClusterVpcFwSwitchResponse.class);
     }
 
     /**
@@ -1275,6 +1343,28 @@ VPC间规则需指定EdgeId。Nat边界规则需指定地域Region与Direction�
     public SyncFwOperateResponse SyncFwOperate(SyncFwOperateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SyncFwOperate", SyncFwOperateResponse.class);
+    }
+
+    /**
+     *重新检测CCN中接入VPC防火墙的VPC实例非同城直通标记
+     * @param req UpdateCheckCcnNonDirectFlagRequest
+     * @return UpdateCheckCcnNonDirectFlagResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateCheckCcnNonDirectFlagResponse UpdateCheckCcnNonDirectFlag(UpdateCheckCcnNonDirectFlagRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateCheckCcnNonDirectFlag", UpdateCheckCcnNonDirectFlagResponse.class);
+    }
+
+    /**
+     *修改更新CCN中VPC防火墙策略配置
+     * @param req UpdateClusterVpcFwRequest
+     * @return UpdateClusterVpcFwResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateClusterVpcFwResponse UpdateClusterVpcFw(UpdateClusterVpcFwRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateClusterVpcFw", UpdateClusterVpcFwResponse.class);
     }
 
 }

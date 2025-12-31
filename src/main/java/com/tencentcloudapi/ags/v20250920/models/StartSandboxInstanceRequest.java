@@ -59,6 +59,13 @@ public class StartSandboxInstanceRequest extends AbstractModel {
     private MountOption [] MountOptions;
 
     /**
+    * 沙箱实例自定义配置
+    */
+    @SerializedName("CustomConfiguration")
+    @Expose
+    private CustomConfiguration CustomConfiguration;
+
+    /**
      * Get 沙箱工具 ID，与 ToolName 至少有一个要填 
      * @return ToolId 沙箱工具 ID，与 ToolName 至少有一个要填
      */
@@ -138,6 +145,22 @@ public class StartSandboxInstanceRequest extends AbstractModel {
         this.MountOptions = MountOptions;
     }
 
+    /**
+     * Get 沙箱实例自定义配置 
+     * @return CustomConfiguration 沙箱实例自定义配置
+     */
+    public CustomConfiguration getCustomConfiguration() {
+        return this.CustomConfiguration;
+    }
+
+    /**
+     * Set 沙箱实例自定义配置
+     * @param CustomConfiguration 沙箱实例自定义配置
+     */
+    public void setCustomConfiguration(CustomConfiguration CustomConfiguration) {
+        this.CustomConfiguration = CustomConfiguration;
+    }
+
     public StartSandboxInstanceRequest() {
     }
 
@@ -164,6 +187,9 @@ public class StartSandboxInstanceRequest extends AbstractModel {
                 this.MountOptions[i] = new MountOption(source.MountOptions[i]);
             }
         }
+        if (source.CustomConfiguration != null) {
+            this.CustomConfiguration = new CustomConfiguration(source.CustomConfiguration);
+        }
     }
 
 
@@ -176,6 +202,7 @@ public class StartSandboxInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Timeout", this.Timeout);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
         this.setParamArrayObj(map, prefix + "MountOptions.", this.MountOptions);
+        this.setParamObj(map, prefix + "CustomConfiguration.", this.CustomConfiguration);
 
     }
 }

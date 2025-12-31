@@ -94,6 +94,13 @@ public class SandboxInstance extends AbstractModel {
     private MountOption [] MountOptions;
 
     /**
+    * 沙箱实例自定义配置
+    */
+    @SerializedName("CustomConfiguration")
+    @Expose
+    private CustomConfigurationDetail CustomConfiguration;
+
+    /**
      * Get 沙箱实例唯一标识符 
      * @return InstanceId 沙箱实例唯一标识符
      */
@@ -253,6 +260,22 @@ public class SandboxInstance extends AbstractModel {
         this.MountOptions = MountOptions;
     }
 
+    /**
+     * Get 沙箱实例自定义配置 
+     * @return CustomConfiguration 沙箱实例自定义配置
+     */
+    public CustomConfigurationDetail getCustomConfiguration() {
+        return this.CustomConfiguration;
+    }
+
+    /**
+     * Set 沙箱实例自定义配置
+     * @param CustomConfiguration 沙箱实例自定义配置
+     */
+    public void setCustomConfiguration(CustomConfigurationDetail CustomConfiguration) {
+        this.CustomConfiguration = CustomConfiguration;
+    }
+
     public SandboxInstance() {
     }
 
@@ -294,6 +317,9 @@ public class SandboxInstance extends AbstractModel {
                 this.MountOptions[i] = new MountOption(source.MountOptions[i]);
             }
         }
+        if (source.CustomConfiguration != null) {
+            this.CustomConfiguration = new CustomConfigurationDetail(source.CustomConfiguration);
+        }
     }
 
 
@@ -311,6 +337,7 @@ public class SandboxInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamArrayObj(map, prefix + "MountOptions.", this.MountOptions);
+        this.setParamObj(map, prefix + "CustomConfiguration.", this.CustomConfiguration);
 
     }
 }

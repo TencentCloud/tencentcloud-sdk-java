@@ -21,67 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StorageSource extends AbstractModel {
+public class ResourceConfiguration extends AbstractModel {
 
     /**
-    * 对象存储桶配置
+    * cpu 资源量
     */
-    @SerializedName("Cos")
+    @SerializedName("CPU")
     @Expose
-    private CosStorageSource Cos;
+    private String CPU;
 
     /**
-    * 镜像卷配置
+    * 内存资源量
     */
-    @SerializedName("Image")
+    @SerializedName("Memory")
     @Expose
-    private ImageStorageSource Image;
+    private String Memory;
 
     /**
-     * Get 对象存储桶配置 
-     * @return Cos 对象存储桶配置
+     * Get cpu 资源量 
+     * @return CPU cpu 资源量
      */
-    public CosStorageSource getCos() {
-        return this.Cos;
+    public String getCPU() {
+        return this.CPU;
     }
 
     /**
-     * Set 对象存储桶配置
-     * @param Cos 对象存储桶配置
+     * Set cpu 资源量
+     * @param CPU cpu 资源量
      */
-    public void setCos(CosStorageSource Cos) {
-        this.Cos = Cos;
+    public void setCPU(String CPU) {
+        this.CPU = CPU;
     }
 
     /**
-     * Get 镜像卷配置 
-     * @return Image 镜像卷配置
+     * Get 内存资源量 
+     * @return Memory 内存资源量
      */
-    public ImageStorageSource getImage() {
-        return this.Image;
+    public String getMemory() {
+        return this.Memory;
     }
 
     /**
-     * Set 镜像卷配置
-     * @param Image 镜像卷配置
+     * Set 内存资源量
+     * @param Memory 内存资源量
      */
-    public void setImage(ImageStorageSource Image) {
-        this.Image = Image;
+    public void setMemory(String Memory) {
+        this.Memory = Memory;
     }
 
-    public StorageSource() {
+    public ResourceConfiguration() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public StorageSource(StorageSource source) {
-        if (source.Cos != null) {
-            this.Cos = new CosStorageSource(source.Cos);
+    public ResourceConfiguration(ResourceConfiguration source) {
+        if (source.CPU != null) {
+            this.CPU = new String(source.CPU);
         }
-        if (source.Image != null) {
-            this.Image = new ImageStorageSource(source.Image);
+        if (source.Memory != null) {
+            this.Memory = new String(source.Memory);
         }
     }
 
@@ -90,8 +90,8 @@ public class StorageSource extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Cos.", this.Cos);
-        this.setParamObj(map, prefix + "Image.", this.Image);
+        this.setParamSimple(map, prefix + "CPU", this.CPU);
+        this.setParamSimple(map, prefix + "Memory", this.Memory);
 
     }
 }

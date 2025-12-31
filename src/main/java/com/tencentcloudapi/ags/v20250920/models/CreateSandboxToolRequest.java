@@ -31,7 +31,7 @@ public class CreateSandboxToolRequest extends AbstractModel {
     private String ToolName;
 
     /**
-    * 沙箱工具类型，目前支持：browser、code-interpreter
+    * 沙箱工具类型，目前支持：browser、code-interpreter、custom
     */
     @SerializedName("ToolType")
     @Expose
@@ -87,6 +87,13 @@ public class CreateSandboxToolRequest extends AbstractModel {
     private StorageMount [] StorageMounts;
 
     /**
+    * 沙箱工具自定义配置
+    */
+    @SerializedName("CustomConfiguration")
+    @Expose
+    private CustomConfiguration CustomConfiguration;
+
+    /**
      * Get 沙箱工具名称，长度 1-50 字符，支持英文、数字、下划线和连接线。同一 AppId 下沙箱工具名称必须唯一 
      * @return ToolName 沙箱工具名称，长度 1-50 字符，支持英文、数字、下划线和连接线。同一 AppId 下沙箱工具名称必须唯一
      */
@@ -103,16 +110,16 @@ public class CreateSandboxToolRequest extends AbstractModel {
     }
 
     /**
-     * Get 沙箱工具类型，目前支持：browser、code-interpreter 
-     * @return ToolType 沙箱工具类型，目前支持：browser、code-interpreter
+     * Get 沙箱工具类型，目前支持：browser、code-interpreter、custom 
+     * @return ToolType 沙箱工具类型，目前支持：browser、code-interpreter、custom
      */
     public String getToolType() {
         return this.ToolType;
     }
 
     /**
-     * Set 沙箱工具类型，目前支持：browser、code-interpreter
-     * @param ToolType 沙箱工具类型，目前支持：browser、code-interpreter
+     * Set 沙箱工具类型，目前支持：browser、code-interpreter、custom
+     * @param ToolType 沙箱工具类型，目前支持：browser、code-interpreter、custom
      */
     public void setToolType(String ToolType) {
         this.ToolType = ToolType;
@@ -230,6 +237,22 @@ public class CreateSandboxToolRequest extends AbstractModel {
         this.StorageMounts = StorageMounts;
     }
 
+    /**
+     * Get 沙箱工具自定义配置 
+     * @return CustomConfiguration 沙箱工具自定义配置
+     */
+    public CustomConfiguration getCustomConfiguration() {
+        return this.CustomConfiguration;
+    }
+
+    /**
+     * Set 沙箱工具自定义配置
+     * @param CustomConfiguration 沙箱工具自定义配置
+     */
+    public void setCustomConfiguration(CustomConfiguration CustomConfiguration) {
+        this.CustomConfiguration = CustomConfiguration;
+    }
+
     public CreateSandboxToolRequest() {
     }
 
@@ -271,6 +294,9 @@ public class CreateSandboxToolRequest extends AbstractModel {
                 this.StorageMounts[i] = new StorageMount(source.StorageMounts[i]);
             }
         }
+        if (source.CustomConfiguration != null) {
+            this.CustomConfiguration = new CustomConfiguration(source.CustomConfiguration);
+        }
     }
 
 
@@ -287,6 +313,7 @@ public class CreateSandboxToolRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
         this.setParamSimple(map, prefix + "RoleArn", this.RoleArn);
         this.setParamArrayObj(map, prefix + "StorageMounts.", this.StorageMounts);
+        this.setParamObj(map, prefix + "CustomConfiguration.", this.CustomConfiguration);
 
     }
 }

@@ -87,8 +87,8 @@ public class AigcVideoOutputConfig extends AbstractModel {
     private String AspectRatio;
 
     /**
-    * 是否生成音频。支持的模型包括 GV、OS。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li>
-默认值：Enabled
+    * 是否生成音频。支持的模型包括 GV、OS、Vidu。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li>
+默认值：Disabled
     */
     @SerializedName("AudioGeneration")
     @Expose
@@ -294,20 +294,20 @@ public class AigcVideoOutputConfig extends AbstractModel {
     }
 
     /**
-     * Get 是否生成音频。支持的模型包括 GV、OS。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li>
-默认值：Enabled 
-     * @return AudioGeneration 是否生成音频。支持的模型包括 GV、OS。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li>
-默认值：Enabled
+     * Get 是否生成音频。支持的模型包括 GV、OS、Vidu。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li>
+默认值：Disabled 
+     * @return AudioGeneration 是否生成音频。支持的模型包括 GV、OS、Vidu。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li>
+默认值：Disabled
      */
     public String getAudioGeneration() {
         return this.AudioGeneration;
     }
 
     /**
-     * Set 是否生成音频。支持的模型包括 GV、OS。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li>
-默认值：Enabled
-     * @param AudioGeneration 是否生成音频。支持的模型包括 GV、OS。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li>
-默认值：Enabled
+     * Set 是否生成音频。支持的模型包括 GV、OS、Vidu。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li>
+默认值：Disabled
+     * @param AudioGeneration 是否生成音频。支持的模型包括 GV、OS、Vidu。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li>
+默认值：Disabled
      */
     public void setAudioGeneration(String AudioGeneration) {
         this.AudioGeneration = AudioGeneration;

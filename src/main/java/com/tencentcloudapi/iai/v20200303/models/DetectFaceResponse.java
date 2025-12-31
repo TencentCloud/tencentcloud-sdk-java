@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DetectFaceResponse extends AbstractModel {
 
     /**
-    * 请求的图片宽度。
+    * ，单位为：像素（px）。
     */
     @SerializedName("ImageWidth")
     @Expose
     private Long ImageWidth;
 
     /**
-    * 请求的图片高度。
+    * ，单位为：像素（px）。
     */
     @SerializedName("ImageHeight")
     @Expose
@@ -60,32 +60,32 @@ public class DetectFaceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 请求的图片宽度。 
-     * @return ImageWidth 请求的图片宽度。
+     * Get ，单位为：像素（px）。 
+     * @return ImageWidth ，单位为：像素（px）。
      */
     public Long getImageWidth() {
         return this.ImageWidth;
     }
 
     /**
-     * Set 请求的图片宽度。
-     * @param ImageWidth 请求的图片宽度。
+     * Set ，单位为：像素（px）。
+     * @param ImageWidth ，单位为：像素（px）。
      */
     public void setImageWidth(Long ImageWidth) {
         this.ImageWidth = ImageWidth;
     }
 
     /**
-     * Get 请求的图片高度。 
-     * @return ImageHeight 请求的图片高度。
+     * Get ，单位为：像素（px）。 
+     * @return ImageHeight ，单位为：像素（px）。
      */
     public Long getImageHeight() {
         return this.ImageHeight;
     }
 
     /**
-     * Set 请求的图片高度。
-     * @param ImageHeight 请求的图片高度。
+     * Set ，单位为：像素（px）。
+     * @param ImageHeight ，单位为：像素（px）。
      */
     public void setImageHeight(Long ImageHeight) {
         this.ImageHeight = ImageHeight;

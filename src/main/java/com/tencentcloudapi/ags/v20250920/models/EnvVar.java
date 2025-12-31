@@ -21,67 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StorageSource extends AbstractModel {
+public class EnvVar extends AbstractModel {
 
     /**
-    * 对象存储桶配置
+    * 环境变量名
     */
-    @SerializedName("Cos")
+    @SerializedName("Name")
     @Expose
-    private CosStorageSource Cos;
+    private String Name;
 
     /**
-    * 镜像卷配置
+    * 环境变量值
     */
-    @SerializedName("Image")
+    @SerializedName("Value")
     @Expose
-    private ImageStorageSource Image;
+    private String Value;
 
     /**
-     * Get 对象存储桶配置 
-     * @return Cos 对象存储桶配置
+     * Get 环境变量名 
+     * @return Name 环境变量名
      */
-    public CosStorageSource getCos() {
-        return this.Cos;
+    public String getName() {
+        return this.Name;
     }
 
     /**
-     * Set 对象存储桶配置
-     * @param Cos 对象存储桶配置
+     * Set 环境变量名
+     * @param Name 环境变量名
      */
-    public void setCos(CosStorageSource Cos) {
-        this.Cos = Cos;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
     /**
-     * Get 镜像卷配置 
-     * @return Image 镜像卷配置
+     * Get 环境变量值 
+     * @return Value 环境变量值
      */
-    public ImageStorageSource getImage() {
-        return this.Image;
+    public String getValue() {
+        return this.Value;
     }
 
     /**
-     * Set 镜像卷配置
-     * @param Image 镜像卷配置
+     * Set 环境变量值
+     * @param Value 环境变量值
      */
-    public void setImage(ImageStorageSource Image) {
-        this.Image = Image;
+    public void setValue(String Value) {
+        this.Value = Value;
     }
 
-    public StorageSource() {
+    public EnvVar() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public StorageSource(StorageSource source) {
-        if (source.Cos != null) {
-            this.Cos = new CosStorageSource(source.Cos);
+    public EnvVar(EnvVar source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
         }
-        if (source.Image != null) {
-            this.Image = new ImageStorageSource(source.Image);
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
         }
     }
 
@@ -90,8 +90,8 @@ public class StorageSource extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Cos.", this.Cos);
-        this.setParamObj(map, prefix + "Image.", this.Image);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Value", this.Value);
 
     }
 }

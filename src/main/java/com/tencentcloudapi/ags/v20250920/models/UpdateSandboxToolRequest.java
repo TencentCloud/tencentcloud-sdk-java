@@ -52,6 +52,13 @@ public class UpdateSandboxToolRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
+    * 沙箱工具自定义配置
+    */
+    @SerializedName("CustomConfiguration")
+    @Expose
+    private CustomConfiguration CustomConfiguration;
+
+    /**
      * Get 沙箱工具ID 
      * @return ToolId 沙箱工具ID
      */
@@ -115,6 +122,22 @@ public class UpdateSandboxToolRequest extends AbstractModel {
         this.Tags = Tags;
     }
 
+    /**
+     * Get 沙箱工具自定义配置 
+     * @return CustomConfiguration 沙箱工具自定义配置
+     */
+    public CustomConfiguration getCustomConfiguration() {
+        return this.CustomConfiguration;
+    }
+
+    /**
+     * Set 沙箱工具自定义配置
+     * @param CustomConfiguration 沙箱工具自定义配置
+     */
+    public void setCustomConfiguration(CustomConfiguration CustomConfiguration) {
+        this.CustomConfiguration = CustomConfiguration;
+    }
+
     public UpdateSandboxToolRequest() {
     }
 
@@ -138,6 +161,9 @@ public class UpdateSandboxToolRequest extends AbstractModel {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.CustomConfiguration != null) {
+            this.CustomConfiguration = new CustomConfiguration(source.CustomConfiguration);
+        }
     }
 
 
@@ -149,6 +175,7 @@ public class UpdateSandboxToolRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamObj(map, prefix + "NetworkConfiguration.", this.NetworkConfiguration);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamObj(map, prefix + "CustomConfiguration.", this.CustomConfiguration);
 
     }
 }

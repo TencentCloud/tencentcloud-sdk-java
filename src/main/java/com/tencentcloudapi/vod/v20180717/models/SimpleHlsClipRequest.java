@@ -287,7 +287,9 @@ public class SimpleHlsClipRequest extends AbstractModel {
     /**
      * Get 该字段已废弃。 
      * @return Precision 该字段已废弃。
+     * @deprecated
      */
+    @Deprecated
     public String getPrecision() {
         return this.Precision;
     }
@@ -295,7 +297,9 @@ public class SimpleHlsClipRequest extends AbstractModel {
     /**
      * Set 该字段已废弃。
      * @param Precision 该字段已废弃。
+     * @deprecated
      */
+    @Deprecated
     public void setPrecision(String Precision) {
         this.Precision = Precision;
     }
