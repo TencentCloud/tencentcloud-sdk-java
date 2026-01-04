@@ -45,6 +45,27 @@ public class AccessKeyAlarmCount extends AbstractModel {
     private Long AlarmCount;
 
     /**
+    * 访问密钥状态 0 禁用 1 已启用 2 已删除
+    */
+    @SerializedName("AccessKeyStatus")
+    @Expose
+    private Long AccessKeyStatus;
+
+    /**
+    * AK创建时间
+    */
+    @SerializedName("AccessKeyCreateTime")
+    @Expose
+    private String AccessKeyCreateTime;
+
+    /**
+    * AK最后使用时间，从未使用过则返回“-”
+    */
+    @SerializedName("LastAccessTime")
+    @Expose
+    private String LastAccessTime;
+
+    /**
      * Get 访问密钥的ID 
      * @return ID 访问密钥的ID
      */
@@ -92,6 +113,54 @@ public class AccessKeyAlarmCount extends AbstractModel {
         this.AlarmCount = AlarmCount;
     }
 
+    /**
+     * Get 访问密钥状态 0 禁用 1 已启用 2 已删除 
+     * @return AccessKeyStatus 访问密钥状态 0 禁用 1 已启用 2 已删除
+     */
+    public Long getAccessKeyStatus() {
+        return this.AccessKeyStatus;
+    }
+
+    /**
+     * Set 访问密钥状态 0 禁用 1 已启用 2 已删除
+     * @param AccessKeyStatus 访问密钥状态 0 禁用 1 已启用 2 已删除
+     */
+    public void setAccessKeyStatus(Long AccessKeyStatus) {
+        this.AccessKeyStatus = AccessKeyStatus;
+    }
+
+    /**
+     * Get AK创建时间 
+     * @return AccessKeyCreateTime AK创建时间
+     */
+    public String getAccessKeyCreateTime() {
+        return this.AccessKeyCreateTime;
+    }
+
+    /**
+     * Set AK创建时间
+     * @param AccessKeyCreateTime AK创建时间
+     */
+    public void setAccessKeyCreateTime(String AccessKeyCreateTime) {
+        this.AccessKeyCreateTime = AccessKeyCreateTime;
+    }
+
+    /**
+     * Get AK最后使用时间，从未使用过则返回“-” 
+     * @return LastAccessTime AK最后使用时间，从未使用过则返回“-”
+     */
+    public String getLastAccessTime() {
+        return this.LastAccessTime;
+    }
+
+    /**
+     * Set AK最后使用时间，从未使用过则返回“-”
+     * @param LastAccessTime AK最后使用时间，从未使用过则返回“-”
+     */
+    public void setLastAccessTime(String LastAccessTime) {
+        this.LastAccessTime = LastAccessTime;
+    }
+
     public AccessKeyAlarmCount() {
     }
 
@@ -109,6 +178,15 @@ public class AccessKeyAlarmCount extends AbstractModel {
         if (source.AlarmCount != null) {
             this.AlarmCount = new Long(source.AlarmCount);
         }
+        if (source.AccessKeyStatus != null) {
+            this.AccessKeyStatus = new Long(source.AccessKeyStatus);
+        }
+        if (source.AccessKeyCreateTime != null) {
+            this.AccessKeyCreateTime = new String(source.AccessKeyCreateTime);
+        }
+        if (source.LastAccessTime != null) {
+            this.LastAccessTime = new String(source.LastAccessTime);
+        }
     }
 
 
@@ -119,6 +197,9 @@ public class AccessKeyAlarmCount extends AbstractModel {
         this.setParamSimple(map, prefix + "ID", this.ID);
         this.setParamSimple(map, prefix + "AccessKey", this.AccessKey);
         this.setParamSimple(map, prefix + "AlarmCount", this.AlarmCount);
+        this.setParamSimple(map, prefix + "AccessKeyStatus", this.AccessKeyStatus);
+        this.setParamSimple(map, prefix + "AccessKeyCreateTime", this.AccessKeyCreateTime);
+        this.setParamSimple(map, prefix + "LastAccessTime", this.LastAccessTime);
 
     }
 }

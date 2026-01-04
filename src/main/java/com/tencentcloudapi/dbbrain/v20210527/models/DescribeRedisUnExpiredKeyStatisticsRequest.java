@@ -21,10 +21,10 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRedisTopBigKeysRequest extends AbstractModel {
+public class DescribeRedisUnExpiredKeyStatisticsRequest extends AbstractModel {
 
     /**
-    * 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+    * 实例 ID。可通过接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -45,27 +45,6 @@ public class DescribeRedisTopBigKeysRequest extends AbstractModel {
     private String Date;
 
     /**
-    * 排序字段，取值包括Capacity - 内存，ItemCount - 元素数量，默认为Capacity。
-    */
-    @SerializedName("SortBy")
-    @Expose
-    private String SortBy;
-
-    /**
-    * key类型筛选条件，默认为不进行筛选，取值包括string, list, set, hash, sortedset, stream。
-    */
-    @SerializedName("KeyType")
-    @Expose
-    private String KeyType;
-
-    /**
-    * 查询数目，默认为20，最大值为100。
-    */
-    @SerializedName("Limit")
-    @Expose
-    private Long Limit;
-
-    /**
     * 异步任务ID。当为空时，选择最近任务的ID。
     */
     @SerializedName("AsyncRequestId")
@@ -80,24 +59,16 @@ public class DescribeRedisTopBigKeysRequest extends AbstractModel {
     private Long [] ShardIds;
 
     /**
-    * 是否仅查询未设置过期时间的大Key。
-当为true时，仅查询未设置过期时间的大Key，默认为false。
-    */
-    @SerializedName("UnExpireKey")
-    @Expose
-    private Boolean UnExpireKey;
-
-    /**
-     * Get 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。 
-     * @return InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * Get 实例 ID。可通过接口获取。 
+     * @return InstanceId 实例 ID。可通过接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
-     * @param InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * Set 实例 ID。可通过接口获取。
+     * @param InstanceId 实例 ID。可通过接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -136,54 +107,6 @@ public class DescribeRedisTopBigKeysRequest extends AbstractModel {
     }
 
     /**
-     * Get 排序字段，取值包括Capacity - 内存，ItemCount - 元素数量，默认为Capacity。 
-     * @return SortBy 排序字段，取值包括Capacity - 内存，ItemCount - 元素数量，默认为Capacity。
-     */
-    public String getSortBy() {
-        return this.SortBy;
-    }
-
-    /**
-     * Set 排序字段，取值包括Capacity - 内存，ItemCount - 元素数量，默认为Capacity。
-     * @param SortBy 排序字段，取值包括Capacity - 内存，ItemCount - 元素数量，默认为Capacity。
-     */
-    public void setSortBy(String SortBy) {
-        this.SortBy = SortBy;
-    }
-
-    /**
-     * Get key类型筛选条件，默认为不进行筛选，取值包括string, list, set, hash, sortedset, stream。 
-     * @return KeyType key类型筛选条件，默认为不进行筛选，取值包括string, list, set, hash, sortedset, stream。
-     */
-    public String getKeyType() {
-        return this.KeyType;
-    }
-
-    /**
-     * Set key类型筛选条件，默认为不进行筛选，取值包括string, list, set, hash, sortedset, stream。
-     * @param KeyType key类型筛选条件，默认为不进行筛选，取值包括string, list, set, hash, sortedset, stream。
-     */
-    public void setKeyType(String KeyType) {
-        this.KeyType = KeyType;
-    }
-
-    /**
-     * Get 查询数目，默认为20，最大值为100。 
-     * @return Limit 查询数目，默认为20，最大值为100。
-     */
-    public Long getLimit() {
-        return this.Limit;
-    }
-
-    /**
-     * Set 查询数目，默认为20，最大值为100。
-     * @param Limit 查询数目，默认为20，最大值为100。
-     */
-    public void setLimit(Long Limit) {
-        this.Limit = Limit;
-    }
-
-    /**
      * Get 异步任务ID。当为空时，选择最近任务的ID。 
      * @return AsyncRequestId 异步任务ID。当为空时，选择最近任务的ID。
      */
@@ -215,34 +138,14 @@ public class DescribeRedisTopBigKeysRequest extends AbstractModel {
         this.ShardIds = ShardIds;
     }
 
-    /**
-     * Get 是否仅查询未设置过期时间的大Key。
-当为true时，仅查询未设置过期时间的大Key，默认为false。 
-     * @return UnExpireKey 是否仅查询未设置过期时间的大Key。
-当为true时，仅查询未设置过期时间的大Key，默认为false。
-     */
-    public Boolean getUnExpireKey() {
-        return this.UnExpireKey;
-    }
-
-    /**
-     * Set 是否仅查询未设置过期时间的大Key。
-当为true时，仅查询未设置过期时间的大Key，默认为false。
-     * @param UnExpireKey 是否仅查询未设置过期时间的大Key。
-当为true时，仅查询未设置过期时间的大Key，默认为false。
-     */
-    public void setUnExpireKey(Boolean UnExpireKey) {
-        this.UnExpireKey = UnExpireKey;
-    }
-
-    public DescribeRedisTopBigKeysRequest() {
+    public DescribeRedisUnExpiredKeyStatisticsRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeRedisTopBigKeysRequest(DescribeRedisTopBigKeysRequest source) {
+    public DescribeRedisUnExpiredKeyStatisticsRequest(DescribeRedisUnExpiredKeyStatisticsRequest source) {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
@@ -252,15 +155,6 @@ public class DescribeRedisTopBigKeysRequest extends AbstractModel {
         if (source.Date != null) {
             this.Date = new String(source.Date);
         }
-        if (source.SortBy != null) {
-            this.SortBy = new String(source.SortBy);
-        }
-        if (source.KeyType != null) {
-            this.KeyType = new String(source.KeyType);
-        }
-        if (source.Limit != null) {
-            this.Limit = new Long(source.Limit);
-        }
         if (source.AsyncRequestId != null) {
             this.AsyncRequestId = new Long(source.AsyncRequestId);
         }
@@ -269,9 +163,6 @@ public class DescribeRedisTopBigKeysRequest extends AbstractModel {
             for (int i = 0; i < source.ShardIds.length; i++) {
                 this.ShardIds[i] = new Long(source.ShardIds[i]);
             }
-        }
-        if (source.UnExpireKey != null) {
-            this.UnExpireKey = new Boolean(source.UnExpireKey);
         }
     }
 
@@ -283,12 +174,8 @@ public class DescribeRedisTopBigKeysRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Product", this.Product);
         this.setParamSimple(map, prefix + "Date", this.Date);
-        this.setParamSimple(map, prefix + "SortBy", this.SortBy);
-        this.setParamSimple(map, prefix + "KeyType", this.KeyType);
-        this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "AsyncRequestId", this.AsyncRequestId);
         this.setParamArraySimple(map, prefix + "ShardIds.", this.ShardIds);
-        this.setParamSimple(map, prefix + "UnExpireKey", this.UnExpireKey);
 
     }
 }

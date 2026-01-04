@@ -437,6 +437,17 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *查询CCN中VPC防火墙接入策略配置时的规则数量限制
+     * @param req DescribeCcnVpcFwPolicyLimitRequest
+     * @return DescribeCcnVpcFwPolicyLimitResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCcnVpcFwPolicyLimitResponse DescribeCcnVpcFwPolicyLimit(DescribeCcnVpcFwPolicyLimitRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCcnVpcFwPolicyLimit", DescribeCcnVpcFwPolicyLimitResponse.class);
+    }
+
+    /**
      *查询CCN VPC防火墙开关配置
      * @param req DescribeCcnVpcFwSwitchRequest
      * @return DescribeCcnVpcFwSwitchResponse
@@ -467,6 +478,17 @@ public class CfwClient extends AbstractClient{
     public DescribeCfwInsStatusResponse DescribeCfwInsStatus(DescribeCfwInsStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCfwInsStatus", DescribeCfwInsStatusResponse.class);
+    }
+
+    /**
+     *查询集群模式Vpc间防火墙开关
+     * @param req DescribeClusterVpcFwSwitchsRequest
+     * @return DescribeClusterVpcFwSwitchsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterVpcFwSwitchsResponse DescribeClusterVpcFwSwitchs(DescribeClusterVpcFwSwitchsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClusterVpcFwSwitchs", DescribeClusterVpcFwSwitchsResponse.class);
     }
 
     /**

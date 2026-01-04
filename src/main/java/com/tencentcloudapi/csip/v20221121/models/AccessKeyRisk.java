@@ -178,6 +178,20 @@ public class AccessKeyRisk extends AbstractModel {
     private String QueryParam;
 
     /**
+    * 云类型 0-腾讯云 4-阿里云
+    */
+    @SerializedName("CloudType")
+    @Expose
+    private Long CloudType;
+
+    /**
+    * 相关的AK列表，包含AK名和AK备注
+    */
+    @SerializedName("RelatedAK")
+    @Expose
+    private AKInfo [] RelatedAK;
+
+    /**
      * Get 风险名称 
      * @return Name 风险名称
      */
@@ -541,6 +555,38 @@ public class AccessKeyRisk extends AbstractModel {
         this.QueryParam = QueryParam;
     }
 
+    /**
+     * Get 云类型 0-腾讯云 4-阿里云 
+     * @return CloudType 云类型 0-腾讯云 4-阿里云
+     */
+    public Long getCloudType() {
+        return this.CloudType;
+    }
+
+    /**
+     * Set 云类型 0-腾讯云 4-阿里云
+     * @param CloudType 云类型 0-腾讯云 4-阿里云
+     */
+    public void setCloudType(Long CloudType) {
+        this.CloudType = CloudType;
+    }
+
+    /**
+     * Get 相关的AK列表，包含AK名和AK备注 
+     * @return RelatedAK 相关的AK列表，包含AK名和AK备注
+     */
+    public AKInfo [] getRelatedAK() {
+        return this.RelatedAK;
+    }
+
+    /**
+     * Set 相关的AK列表，包含AK名和AK备注
+     * @param RelatedAK 相关的AK列表，包含AK名和AK备注
+     */
+    public void setRelatedAK(AKInfo [] RelatedAK) {
+        this.RelatedAK = RelatedAK;
+    }
+
     public AccessKeyRisk() {
     }
 
@@ -615,6 +661,15 @@ public class AccessKeyRisk extends AbstractModel {
         if (source.QueryParam != null) {
             this.QueryParam = new String(source.QueryParam);
         }
+        if (source.CloudType != null) {
+            this.CloudType = new Long(source.CloudType);
+        }
+        if (source.RelatedAK != null) {
+            this.RelatedAK = new AKInfo[source.RelatedAK.length];
+            for (int i = 0; i < source.RelatedAK.length; i++) {
+                this.RelatedAK[i] = new AKInfo(source.RelatedAK[i]);
+            }
+        }
     }
 
 
@@ -643,6 +698,8 @@ public class AccessKeyRisk extends AbstractModel {
         this.setParamSimple(map, prefix + "CheckStatus", this.CheckStatus);
         this.setParamSimple(map, prefix + "AppID", this.AppID);
         this.setParamSimple(map, prefix + "QueryParam", this.QueryParam);
+        this.setParamSimple(map, prefix + "CloudType", this.CloudType);
+        this.setParamArrayObj(map, prefix + "RelatedAK.", this.RelatedAK);
 
     }
 }

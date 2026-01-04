@@ -87,6 +87,13 @@ public class SuperNodeResource extends AbstractModel {
     private String DisasterRecoverGroupId;
 
     /**
+    * 定价类型
+    */
+    @SerializedName("PriceType")
+    @Expose
+    private String PriceType;
+
+    /**
      * Get 节点名称，此字段在出参中有效。 
      * @return NodeName 节点名称，此字段在出参中有效。
      */
@@ -230,6 +237,22 @@ public class SuperNodeResource extends AbstractModel {
         this.DisasterRecoverGroupId = DisasterRecoverGroupId;
     }
 
+    /**
+     * Get 定价类型 
+     * @return PriceType 定价类型
+     */
+    public String getPriceType() {
+        return this.PriceType;
+    }
+
+    /**
+     * Set 定价类型
+     * @param PriceType 定价类型
+     */
+    public void setPriceType(String PriceType) {
+        this.PriceType = PriceType;
+    }
+
     public SuperNodeResource() {
     }
 
@@ -265,6 +288,9 @@ public class SuperNodeResource extends AbstractModel {
         if (source.DisasterRecoverGroupId != null) {
             this.DisasterRecoverGroupId = new String(source.DisasterRecoverGroupId);
         }
+        if (source.PriceType != null) {
+            this.PriceType = new String(source.PriceType);
+        }
     }
 
 
@@ -281,6 +307,7 @@ public class SuperNodeResource extends AbstractModel {
         this.setParamSimple(map, prefix + "ChargeType", this.ChargeType);
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
         this.setParamSimple(map, prefix + "DisasterRecoverGroupId", this.DisasterRecoverGroupId);
+        this.setParamSimple(map, prefix + "PriceType", this.PriceType);
 
     }
 }

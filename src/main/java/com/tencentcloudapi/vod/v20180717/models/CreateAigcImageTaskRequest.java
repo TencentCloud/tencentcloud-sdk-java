@@ -55,7 +55,7 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
     private String ModelVersion;
 
     /**
-    * AIGC 生图任务的输入图片的文件信息。默认只支持指定1个，使用模型 GEM 时最多指定3个。
+    * AIGC 生图任务的输入图片的文件信息。默认只支持指定1个，使用模型 GEM 时，版本2.5最多指定3个，版本3.0最多指定14个。
     */
     @SerializedName("FileInfos")
     @Expose
@@ -206,16 +206,16 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get AIGC 生图任务的输入图片的文件信息。默认只支持指定1个，使用模型 GEM 时最多指定3个。 
-     * @return FileInfos AIGC 生图任务的输入图片的文件信息。默认只支持指定1个，使用模型 GEM 时最多指定3个。
+     * Get AIGC 生图任务的输入图片的文件信息。默认只支持指定1个，使用模型 GEM 时，版本2.5最多指定3个，版本3.0最多指定14个。 
+     * @return FileInfos AIGC 生图任务的输入图片的文件信息。默认只支持指定1个，使用模型 GEM 时，版本2.5最多指定3个，版本3.0最多指定14个。
      */
     public AigcImageTaskInputFileInfo [] getFileInfos() {
         return this.FileInfos;
     }
 
     /**
-     * Set AIGC 生图任务的输入图片的文件信息。默认只支持指定1个，使用模型 GEM 时最多指定3个。
-     * @param FileInfos AIGC 生图任务的输入图片的文件信息。默认只支持指定1个，使用模型 GEM 时最多指定3个。
+     * Set AIGC 生图任务的输入图片的文件信息。默认只支持指定1个，使用模型 GEM 时，版本2.5最多指定3个，版本3.0最多指定14个。
+     * @param FileInfos AIGC 生图任务的输入图片的文件信息。默认只支持指定1个，使用模型 GEM 时，版本2.5最多指定3个，版本3.0最多指定14个。
      */
     public void setFileInfos(AigcImageTaskInputFileInfo [] FileInfos) {
         this.FileInfos = FileInfos;

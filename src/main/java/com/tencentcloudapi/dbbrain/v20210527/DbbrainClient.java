@@ -688,6 +688,17 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *查询Redis全量Key的内存分布情况。
+     * @param req DescribeRedisUnExpiredKeyStatisticsRequest
+     * @return DescribeRedisUnExpiredKeyStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRedisUnExpiredKeyStatisticsResponse DescribeRedisUnExpiredKeyStatistics(DescribeRedisUnExpiredKeyStatisticsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRedisUnExpiredKeyStatistics", DescribeRedisUnExpiredKeyStatisticsResponse.class);
+    }
+
+    /**
      *查询安全审计日志导出文件下载链接。目前日志文件下载仅提供腾讯云内网地址，请通过广州地域的腾讯云服务器进行下载。
      * @param req DescribeSecurityAuditLogDownloadUrlsRequest
      * @return DescribeSecurityAuditLogDownloadUrlsResponse

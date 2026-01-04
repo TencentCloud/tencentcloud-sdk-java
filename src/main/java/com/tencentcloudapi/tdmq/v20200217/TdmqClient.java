@@ -1008,6 +1008,18 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *查询通用集群售卖规格。
+当前 API 适用集群：4.x 通用集群。查询 5.x 集群的售卖规格接口文档见 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676)。
+     * @param req DescribeRocketMQGeneralSKUsRequest
+     * @return DescribeRocketMQGeneralSKUsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRocketMQGeneralSKUsResponse DescribeRocketMQGeneralSKUs(DescribeRocketMQGeneralSKUsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRocketMQGeneralSKUs", DescribeRocketMQGeneralSKUsResponse.class);
+    }
+
+    /**
      *查询 RocketMQ 消费组列表。
 当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。查询 5.x 集群的消费组列表接口文档见 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535)。
      * @param req DescribeRocketMQGroupsRequest

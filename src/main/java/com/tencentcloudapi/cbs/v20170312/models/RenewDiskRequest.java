@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class RenewDiskRequest extends AbstractModel {
 
     /**
-    * 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月云硬盘的续费时长。<br>在云硬盘与挂载的实例一起续费的场景下，可以指定参数CurInstanceDeadline，此时云硬盘会按对齐到实例续费后的到期时间来续费。
+    * <p>预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月云硬盘的续费时长。<br>在云硬盘与挂载的实例一起续费的场景下，可以指定参数CurInstanceDeadline，此时云硬盘会按对齐到实例续费后的到期时间来续费。</p>
     */
     @SerializedName("DiskChargePrepaid")
     @Expose
     private DiskChargePrepaid DiskChargePrepaid;
 
     /**
-    * 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
+    * <p>云硬盘ID， 通过<a href="/document/product/362/16315">DescribeDisks</a>接口查询。</p>
     */
     @SerializedName("DiskId")
     @Expose
     private String DiskId;
 
     /**
-     * Get 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月云硬盘的续费时长。<br>在云硬盘与挂载的实例一起续费的场景下，可以指定参数CurInstanceDeadline，此时云硬盘会按对齐到实例续费后的到期时间来续费。 
-     * @return DiskChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月云硬盘的续费时长。<br>在云硬盘与挂载的实例一起续费的场景下，可以指定参数CurInstanceDeadline，此时云硬盘会按对齐到实例续费后的到期时间来续费。
+     * Get <p>预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月云硬盘的续费时长。<br>在云硬盘与挂载的实例一起续费的场景下，可以指定参数CurInstanceDeadline，此时云硬盘会按对齐到实例续费后的到期时间来续费。</p> 
+     * @return DiskChargePrepaid <p>预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月云硬盘的续费时长。<br>在云硬盘与挂载的实例一起续费的场景下，可以指定参数CurInstanceDeadline，此时云硬盘会按对齐到实例续费后的到期时间来续费。</p>
      */
     public DiskChargePrepaid getDiskChargePrepaid() {
         return this.DiskChargePrepaid;
     }
 
     /**
-     * Set 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月云硬盘的续费时长。<br>在云硬盘与挂载的实例一起续费的场景下，可以指定参数CurInstanceDeadline，此时云硬盘会按对齐到实例续费后的到期时间来续费。
-     * @param DiskChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月云硬盘的续费时长。<br>在云硬盘与挂载的实例一起续费的场景下，可以指定参数CurInstanceDeadline，此时云硬盘会按对齐到实例续费后的到期时间来续费。
+     * Set <p>预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月云硬盘的续费时长。<br>在云硬盘与挂载的实例一起续费的场景下，可以指定参数CurInstanceDeadline，此时云硬盘会按对齐到实例续费后的到期时间来续费。</p>
+     * @param DiskChargePrepaid <p>预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月云硬盘的续费时长。<br>在云硬盘与挂载的实例一起续费的场景下，可以指定参数CurInstanceDeadline，此时云硬盘会按对齐到实例续费后的到期时间来续费。</p>
      */
     public void setDiskChargePrepaid(DiskChargePrepaid DiskChargePrepaid) {
         this.DiskChargePrepaid = DiskChargePrepaid;
     }
 
     /**
-     * Get 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。 
-     * @return DiskId 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
+     * Get <p>云硬盘ID， 通过<a href="/document/product/362/16315">DescribeDisks</a>接口查询。</p> 
+     * @return DiskId <p>云硬盘ID， 通过<a href="/document/product/362/16315">DescribeDisks</a>接口查询。</p>
      */
     public String getDiskId() {
         return this.DiskId;
     }
 
     /**
-     * Set 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
-     * @param DiskId 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
+     * Set <p>云硬盘ID， 通过<a href="/document/product/362/16315">DescribeDisks</a>接口查询。</p>
+     * @param DiskId <p>云硬盘ID， 通过<a href="/document/product/362/16315">DescribeDisks</a>接口查询。</p>
      */
     public void setDiskId(String DiskId) {
         this.DiskId = DiskId;

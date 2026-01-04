@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cbs.v20170312.models;
+package com.tencentcloudapi.cfw.v20190904.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,22 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceRenewDisksResponse extends AbstractModel {
+public class DescribeClusterVpcFwSwitchsResponse extends AbstractModel {
 
     /**
-    * <p>描述了续费云盘的价格。</p>
+    * 总条数
     */
-    @SerializedName("DiskPrice")
+    @SerializedName("Total")
     @Expose
-    private PrepayPrice DiskPrice;
+    private Long Total;
+
+    /**
+    * 防火墙开关列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Data")
+    @Expose
+    private ClusterSwitchDetail [] Data;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +46,39 @@ public class InquiryPriceRenewDisksResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>描述了续费云盘的价格。</p> 
-     * @return DiskPrice <p>描述了续费云盘的价格。</p>
+     * Get 总条数 
+     * @return Total 总条数
      */
-    public PrepayPrice getDiskPrice() {
-        return this.DiskPrice;
+    public Long getTotal() {
+        return this.Total;
     }
 
     /**
-     * Set <p>描述了续费云盘的价格。</p>
-     * @param DiskPrice <p>描述了续费云盘的价格。</p>
+     * Set 总条数
+     * @param Total 总条数
      */
-    public void setDiskPrice(PrepayPrice DiskPrice) {
-        this.DiskPrice = DiskPrice;
+    public void setTotal(Long Total) {
+        this.Total = Total;
+    }
+
+    /**
+     * Get 防火墙开关列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Data 防火墙开关列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ClusterSwitchDetail [] getData() {
+        return this.Data;
+    }
+
+    /**
+     * Set 防火墙开关列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Data 防火墙开关列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setData(ClusterSwitchDetail [] Data) {
+        this.Data = Data;
     }
 
     /**
@@ -69,16 +97,22 @@ public class InquiryPriceRenewDisksResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public InquiryPriceRenewDisksResponse() {
+    public DescribeClusterVpcFwSwitchsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public InquiryPriceRenewDisksResponse(InquiryPriceRenewDisksResponse source) {
-        if (source.DiskPrice != null) {
-            this.DiskPrice = new PrepayPrice(source.DiskPrice);
+    public DescribeClusterVpcFwSwitchsResponse(DescribeClusterVpcFwSwitchsResponse source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.Data != null) {
+            this.Data = new ClusterSwitchDetail[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new ClusterSwitchDetail(source.Data[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +124,8 @@ public class InquiryPriceRenewDisksResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "DiskPrice.", this.DiskPrice);
+        this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamArrayObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

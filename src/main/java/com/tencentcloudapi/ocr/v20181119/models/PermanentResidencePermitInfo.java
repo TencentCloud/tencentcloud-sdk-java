@@ -115,6 +115,14 @@ public class PermanentResidencePermitInfo extends AbstractModel {
     private ContentInfo Nationality;
 
     /**
+    * 英文名
+示例值：Ming Li
+    */
+    @SerializedName("EnName")
+    @Expose
+    private ContentInfo EnName;
+
+    /**
      * Get 姓名（人像面） 
      * @return Name 姓名（人像面）
      */
@@ -322,6 +330,26 @@ public class PermanentResidencePermitInfo extends AbstractModel {
         this.Nationality = Nationality;
     }
 
+    /**
+     * Get 英文名
+示例值：Ming Li 
+     * @return EnName 英文名
+示例值：Ming Li
+     */
+    public ContentInfo getEnName() {
+        return this.EnName;
+    }
+
+    /**
+     * Set 英文名
+示例值：Ming Li
+     * @param EnName 英文名
+示例值：Ming Li
+     */
+    public void setEnName(ContentInfo EnName) {
+        this.EnName = EnName;
+    }
+
     public PermanentResidencePermitInfo() {
     }
 
@@ -369,6 +397,9 @@ public class PermanentResidencePermitInfo extends AbstractModel {
         if (source.Nationality != null) {
             this.Nationality = new ContentInfo(source.Nationality);
         }
+        if (source.EnName != null) {
+            this.EnName = new ContentInfo(source.EnName);
+        }
     }
 
 
@@ -389,6 +420,7 @@ public class PermanentResidencePermitInfo extends AbstractModel {
         this.setParamObj(map, prefix + "PortraitImage.", this.PortraitImage);
         this.setParamObj(map, prefix + "HolderNum.", this.HolderNum);
         this.setParamObj(map, prefix + "Nationality.", this.Nationality);
+        this.setParamObj(map, prefix + "EnName.", this.EnName);
 
     }
 }

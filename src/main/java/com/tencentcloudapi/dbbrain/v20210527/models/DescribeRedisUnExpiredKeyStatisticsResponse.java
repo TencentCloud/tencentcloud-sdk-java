@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cbs.v20170312.models;
+package com.tencentcloudapi.dbbrain.v20210527.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceRenewDisksResponse extends AbstractModel {
+public class DescribeRedisUnExpiredKeyStatisticsResponse extends AbstractModel {
 
     /**
-    * <p>描述了续费云盘的价格。</p>
+    * 全量Key的聚合分布信息列表。
     */
-    @SerializedName("DiskPrice")
+    @SerializedName("SeriesData")
     @Expose
-    private PrepayPrice DiskPrice;
+    private RedisGlobalKeyInfo [] SeriesData;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +38,19 @@ public class InquiryPriceRenewDisksResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>描述了续费云盘的价格。</p> 
-     * @return DiskPrice <p>描述了续费云盘的价格。</p>
+     * Get 全量Key的聚合分布信息列表。 
+     * @return SeriesData 全量Key的聚合分布信息列表。
      */
-    public PrepayPrice getDiskPrice() {
-        return this.DiskPrice;
+    public RedisGlobalKeyInfo [] getSeriesData() {
+        return this.SeriesData;
     }
 
     /**
-     * Set <p>描述了续费云盘的价格。</p>
-     * @param DiskPrice <p>描述了续费云盘的价格。</p>
+     * Set 全量Key的聚合分布信息列表。
+     * @param SeriesData 全量Key的聚合分布信息列表。
      */
-    public void setDiskPrice(PrepayPrice DiskPrice) {
-        this.DiskPrice = DiskPrice;
+    public void setSeriesData(RedisGlobalKeyInfo [] SeriesData) {
+        this.SeriesData = SeriesData;
     }
 
     /**
@@ -69,16 +69,19 @@ public class InquiryPriceRenewDisksResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public InquiryPriceRenewDisksResponse() {
+    public DescribeRedisUnExpiredKeyStatisticsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public InquiryPriceRenewDisksResponse(InquiryPriceRenewDisksResponse source) {
-        if (source.DiskPrice != null) {
-            this.DiskPrice = new PrepayPrice(source.DiskPrice);
+    public DescribeRedisUnExpiredKeyStatisticsResponse(DescribeRedisUnExpiredKeyStatisticsResponse source) {
+        if (source.SeriesData != null) {
+            this.SeriesData = new RedisGlobalKeyInfo[source.SeriesData.length];
+            for (int i = 0; i < source.SeriesData.length; i++) {
+                this.SeriesData[i] = new RedisGlobalKeyInfo(source.SeriesData[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +93,7 @@ public class InquiryPriceRenewDisksResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "DiskPrice.", this.DiskPrice);
+        this.setParamArrayObj(map, prefix + "SeriesData.", this.SeriesData);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

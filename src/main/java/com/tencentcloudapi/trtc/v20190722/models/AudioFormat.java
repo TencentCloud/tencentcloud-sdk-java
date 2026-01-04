@@ -49,6 +49,13 @@ public class AudioFormat extends AbstractModel {
     private Long SampleRate;
 
     /**
+    *  MP3 比特率 (kbps)，仅对 MP3 格式生效, 可以选： `64`, `128`, `192`, `256` ,  默认： `128` 
+    */
+    @SerializedName("Bitrate")
+    @Expose
+    private Long Bitrate;
+
+    /**
      * Get 生成的音频格式
 
 - TextToSpeech流式接口
@@ -124,6 +131,22 @@ public class AudioFormat extends AbstractModel {
         this.SampleRate = SampleRate;
     }
 
+    /**
+     * Get  MP3 比特率 (kbps)，仅对 MP3 格式生效, 可以选： `64`, `128`, `192`, `256` ,  默认： `128`  
+     * @return Bitrate  MP3 比特率 (kbps)，仅对 MP3 格式生效, 可以选： `64`, `128`, `192`, `256` ,  默认： `128` 
+     */
+    public Long getBitrate() {
+        return this.Bitrate;
+    }
+
+    /**
+     * Set  MP3 比特率 (kbps)，仅对 MP3 格式生效, 可以选： `64`, `128`, `192`, `256` ,  默认： `128` 
+     * @param Bitrate  MP3 比特率 (kbps)，仅对 MP3 格式生效, 可以选： `64`, `128`, `192`, `256` ,  默认： `128` 
+     */
+    public void setBitrate(Long Bitrate) {
+        this.Bitrate = Bitrate;
+    }
+
     public AudioFormat() {
     }
 
@@ -138,6 +161,9 @@ public class AudioFormat extends AbstractModel {
         if (source.SampleRate != null) {
             this.SampleRate = new Long(source.SampleRate);
         }
+        if (source.Bitrate != null) {
+            this.Bitrate = new Long(source.Bitrate);
+        }
     }
 
 
@@ -147,6 +173,7 @@ public class AudioFormat extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Format", this.Format);
         this.setParamSimple(map, prefix + "SampleRate", this.SampleRate);
+        this.setParamSimple(map, prefix + "Bitrate", this.Bitrate);
 
     }
 }
