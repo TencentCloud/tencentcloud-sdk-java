@@ -105,6 +105,39 @@ public class VdbClient extends AbstractClient{
     }
 
     /**
+     *查询新购实例价格
+     * @param req DescribePriceCreateInstanceRequest
+     * @return DescribePriceCreateInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePriceCreateInstanceResponse DescribePriceCreateInstance(DescribePriceCreateInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePriceCreateInstance", DescribePriceCreateInstanceResponse.class);
+    }
+
+    /**
+     *查询实例续费价格（包年包月）
+     * @param req DescribePriceRenewInstanceRequest
+     * @return DescribePriceRenewInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePriceRenewInstanceResponse DescribePriceRenewInstance(DescribePriceRenewInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePriceRenewInstance", DescribePriceRenewInstanceResponse.class);
+    }
+
+    /**
+     *查询实例变配价格
+     * @param req DescribePriceResizeInstanceRequest
+     * @return DescribePriceResizeInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePriceResizeInstanceResponse DescribePriceResizeInstance(DescribePriceResizeInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePriceResizeInstance", DescribePriceResizeInstanceResponse.class);
+    }
+
+    /**
      *本接口（DestroyInstances）用于销毁实例。
      * @param req DestroyInstancesRequest
      * @return DestroyInstancesResponse

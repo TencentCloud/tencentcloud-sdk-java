@@ -94,6 +94,13 @@ public class ModifyWebHookPolicyRequest extends AbstractModel {
     private String [] ExcludedQuuids;
 
     /**
+    * 推送语言类型，中文zh，英文en
+    */
+    @SerializedName("MsgLanguage")
+    @Expose
+    private String MsgLanguage;
+
+    /**
      * Get id 
      * @return Id id
      */
@@ -253,6 +260,22 @@ public class ModifyWebHookPolicyRequest extends AbstractModel {
         this.ExcludedQuuids = ExcludedQuuids;
     }
 
+    /**
+     * Get 推送语言类型，中文zh，英文en 
+     * @return MsgLanguage 推送语言类型，中文zh，英文en
+     */
+    public String getMsgLanguage() {
+        return this.MsgLanguage;
+    }
+
+    /**
+     * Set 推送语言类型，中文zh，英文en
+     * @param MsgLanguage 推送语言类型，中文zh，英文en
+     */
+    public void setMsgLanguage(String MsgLanguage) {
+        this.MsgLanguage = MsgLanguage;
+    }
+
     public ModifyWebHookPolicyRequest() {
     }
 
@@ -309,6 +332,9 @@ public class ModifyWebHookPolicyRequest extends AbstractModel {
                 this.ExcludedQuuids[i] = new String(source.ExcludedQuuids[i]);
             }
         }
+        if (source.MsgLanguage != null) {
+            this.MsgLanguage = new String(source.MsgLanguage);
+        }
     }
 
 
@@ -326,6 +352,7 @@ public class ModifyWebHookPolicyRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IsDisabled", this.IsDisabled);
         this.setParamArraySimple(map, prefix + "Quuids.", this.Quuids);
         this.setParamArraySimple(map, prefix + "ExcludedQuuids.", this.ExcludedQuuids);
+        this.setParamSimple(map, prefix + "MsgLanguage", this.MsgLanguage);
 
     }
 }

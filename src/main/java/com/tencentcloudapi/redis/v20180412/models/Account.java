@@ -24,204 +24,187 @@ import java.util.HashMap;
 public class Account extends AbstractModel {
 
     /**
-    * 实例 ID。
+    * <p>实例 ID。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 账号名称。
+    * <p>账号名称。</p>
     */
     @SerializedName("AccountName")
     @Expose
     private String AccountName;
 
     /**
-    * 账号描述信息。
+    * <p>账号描述信息。</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 读写权限策略。
-- r：只读。
-- w：只写。
-- rw：读写。
+    * <p>读写权限策略。- r：只读。- w：只写。- rw：读写。</p>
     */
     @SerializedName("Privilege")
     @Expose
     private String Privilege;
 
     /**
-    * 只读路由策略。
-- master：主节点。
-- replication：从节点。
+    * <p>只读路由策略。- master：主节点。- replication：从节点。</p>
     */
     @SerializedName("ReadonlyPolicy")
     @Expose
     private String [] ReadonlyPolicy;
 
     /**
-    * 子账号状态.
-- 1：账号变更中。
-- 2：账号有效。
-- 4：账号已删除。
+    * <p>子账号状态.- 1：账号变更中。- 2：账号有效。- 4：账号已删除。</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 创建时间
+    * <p>账号创建时间。</p><p>若该参数为空字符串，说明该账号创建于早期版本，未支持创建时间记录功能。</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-     * Get 实例 ID。 
-     * @return InstanceId 实例 ID。
+    * <p>账号最后修改密码的时间。</p><p>若该参数为空字符串，说明该账号创建于早期版本，未支持密码修改时间记录功能。</p>
+    */
+    @SerializedName("PasswordLastModifiedTime")
+    @Expose
+    private String PasswordLastModifiedTime;
+
+    /**
+     * Get <p>实例 ID。</p> 
+     * @return InstanceId <p>实例 ID。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID。
-     * @param InstanceId 实例 ID。
+     * Set <p>实例 ID。</p>
+     * @param InstanceId <p>实例 ID。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 账号名称。 
-     * @return AccountName 账号名称。
+     * Get <p>账号名称。</p> 
+     * @return AccountName <p>账号名称。</p>
      */
     public String getAccountName() {
         return this.AccountName;
     }
 
     /**
-     * Set 账号名称。
-     * @param AccountName 账号名称。
+     * Set <p>账号名称。</p>
+     * @param AccountName <p>账号名称。</p>
      */
     public void setAccountName(String AccountName) {
         this.AccountName = AccountName;
     }
 
     /**
-     * Get 账号描述信息。 
-     * @return Remark 账号描述信息。
+     * Get <p>账号描述信息。</p> 
+     * @return Remark <p>账号描述信息。</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 账号描述信息。
-     * @param Remark 账号描述信息。
+     * Set <p>账号描述信息。</p>
+     * @param Remark <p>账号描述信息。</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 读写权限策略。
-- r：只读。
-- w：只写。
-- rw：读写。 
-     * @return Privilege 读写权限策略。
-- r：只读。
-- w：只写。
-- rw：读写。
+     * Get <p>读写权限策略。- r：只读。- w：只写。- rw：读写。</p> 
+     * @return Privilege <p>读写权限策略。- r：只读。- w：只写。- rw：读写。</p>
      */
     public String getPrivilege() {
         return this.Privilege;
     }
 
     /**
-     * Set 读写权限策略。
-- r：只读。
-- w：只写。
-- rw：读写。
-     * @param Privilege 读写权限策略。
-- r：只读。
-- w：只写。
-- rw：读写。
+     * Set <p>读写权限策略。- r：只读。- w：只写。- rw：读写。</p>
+     * @param Privilege <p>读写权限策略。- r：只读。- w：只写。- rw：读写。</p>
      */
     public void setPrivilege(String Privilege) {
         this.Privilege = Privilege;
     }
 
     /**
-     * Get 只读路由策略。
-- master：主节点。
-- replication：从节点。 
-     * @return ReadonlyPolicy 只读路由策略。
-- master：主节点。
-- replication：从节点。
+     * Get <p>只读路由策略。- master：主节点。- replication：从节点。</p> 
+     * @return ReadonlyPolicy <p>只读路由策略。- master：主节点。- replication：从节点。</p>
      */
     public String [] getReadonlyPolicy() {
         return this.ReadonlyPolicy;
     }
 
     /**
-     * Set 只读路由策略。
-- master：主节点。
-- replication：从节点。
-     * @param ReadonlyPolicy 只读路由策略。
-- master：主节点。
-- replication：从节点。
+     * Set <p>只读路由策略。- master：主节点。- replication：从节点。</p>
+     * @param ReadonlyPolicy <p>只读路由策略。- master：主节点。- replication：从节点。</p>
      */
     public void setReadonlyPolicy(String [] ReadonlyPolicy) {
         this.ReadonlyPolicy = ReadonlyPolicy;
     }
 
     /**
-     * Get 子账号状态.
-- 1：账号变更中。
-- 2：账号有效。
-- 4：账号已删除。 
-     * @return Status 子账号状态.
-- 1：账号变更中。
-- 2：账号有效。
-- 4：账号已删除。
+     * Get <p>子账号状态.- 1：账号变更中。- 2：账号有效。- 4：账号已删除。</p> 
+     * @return Status <p>子账号状态.- 1：账号变更中。- 2：账号有效。- 4：账号已删除。</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 子账号状态.
-- 1：账号变更中。
-- 2：账号有效。
-- 4：账号已删除。
-     * @param Status 子账号状态.
-- 1：账号变更中。
-- 2：账号有效。
-- 4：账号已删除。
+     * Set <p>子账号状态.- 1：账号变更中。- 2：账号有效。- 4：账号已删除。</p>
+     * @param Status <p>子账号状态.- 1：账号变更中。- 2：账号有效。- 4：账号已删除。</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>账号创建时间。</p><p>若该参数为空字符串，说明该账号创建于早期版本，未支持创建时间记录功能。</p> 
+     * @return CreateTime <p>账号创建时间。</p><p>若该参数为空字符串，说明该账号创建于早期版本，未支持创建时间记录功能。</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>账号创建时间。</p><p>若该参数为空字符串，说明该账号创建于早期版本，未支持创建时间记录功能。</p>
+     * @param CreateTime <p>账号创建时间。</p><p>若该参数为空字符串，说明该账号创建于早期版本，未支持创建时间记录功能。</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get <p>账号最后修改密码的时间。</p><p>若该参数为空字符串，说明该账号创建于早期版本，未支持密码修改时间记录功能。</p> 
+     * @return PasswordLastModifiedTime <p>账号最后修改密码的时间。</p><p>若该参数为空字符串，说明该账号创建于早期版本，未支持密码修改时间记录功能。</p>
+     */
+    public String getPasswordLastModifiedTime() {
+        return this.PasswordLastModifiedTime;
+    }
+
+    /**
+     * Set <p>账号最后修改密码的时间。</p><p>若该参数为空字符串，说明该账号创建于早期版本，未支持密码修改时间记录功能。</p>
+     * @param PasswordLastModifiedTime <p>账号最后修改密码的时间。</p><p>若该参数为空字符串，说明该账号创建于早期版本，未支持密码修改时间记录功能。</p>
+     */
+    public void setPasswordLastModifiedTime(String PasswordLastModifiedTime) {
+        this.PasswordLastModifiedTime = PasswordLastModifiedTime;
     }
 
     public Account() {
@@ -256,6 +239,9 @@ public class Account extends AbstractModel {
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.PasswordLastModifiedTime != null) {
+            this.PasswordLastModifiedTime = new String(source.PasswordLastModifiedTime);
+        }
     }
 
 
@@ -270,6 +256,7 @@ public class Account extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ReadonlyPolicy.", this.ReadonlyPolicy);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "PasswordLastModifiedTime", this.PasswordLastModifiedTime);
 
     }
 }

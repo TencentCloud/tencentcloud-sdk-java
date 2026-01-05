@@ -33,7 +33,6 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
     /**
     * 模型名称。取值：
 <li>GEM：Gemini；</li>
-<li>Jimeng：即梦；</li>
 <li>Qwen：千问。</li>
 <li>Hunyuan：混元。</li>
 <li>Mingmou：明眸。</li>
@@ -45,7 +44,6 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
     /**
     * 模型版本。取值：
 <li>当 ModelName 是 GEM，可选值为 2.5、3.0；</li>
-<li>当 ModelName 是 Jimeng，可选值为 4.0；</li>
 <li>当 ModelName 是 Qwen，可选值为 0925；</li>
 <li>当 ModelName 是 Hunyuan，可选值为 3.0；</li>
 <li>当 ModelName 是 Mingmou，可选值为 1.0；</li>
@@ -136,13 +134,11 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
     /**
      * Get 模型名称。取值：
 <li>GEM：Gemini；</li>
-<li>Jimeng：即梦；</li>
 <li>Qwen：千问。</li>
 <li>Hunyuan：混元。</li>
 <li>Mingmou：明眸。</li> 
      * @return ModelName 模型名称。取值：
 <li>GEM：Gemini；</li>
-<li>Jimeng：即梦；</li>
 <li>Qwen：千问。</li>
 <li>Hunyuan：混元。</li>
 <li>Mingmou：明眸。</li>
@@ -154,13 +150,11 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
     /**
      * Set 模型名称。取值：
 <li>GEM：Gemini；</li>
-<li>Jimeng：即梦；</li>
 <li>Qwen：千问。</li>
 <li>Hunyuan：混元。</li>
 <li>Mingmou：明眸。</li>
      * @param ModelName 模型名称。取值：
 <li>GEM：Gemini；</li>
-<li>Jimeng：即梦；</li>
 <li>Qwen：千问。</li>
 <li>Hunyuan：混元。</li>
 <li>Mingmou：明眸。</li>
@@ -172,13 +166,11 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
     /**
      * Get 模型版本。取值：
 <li>当 ModelName 是 GEM，可选值为 2.5、3.0；</li>
-<li>当 ModelName 是 Jimeng，可选值为 4.0；</li>
 <li>当 ModelName 是 Qwen，可选值为 0925；</li>
 <li>当 ModelName 是 Hunyuan，可选值为 3.0；</li>
 <li>当 ModelName 是 Mingmou，可选值为 1.0；</li> 
      * @return ModelVersion 模型版本。取值：
 <li>当 ModelName 是 GEM，可选值为 2.5、3.0；</li>
-<li>当 ModelName 是 Jimeng，可选值为 4.0；</li>
 <li>当 ModelName 是 Qwen，可选值为 0925；</li>
 <li>当 ModelName 是 Hunyuan，可选值为 3.0；</li>
 <li>当 ModelName 是 Mingmou，可选值为 1.0；</li>
@@ -190,13 +182,11 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
     /**
      * Set 模型版本。取值：
 <li>当 ModelName 是 GEM，可选值为 2.5、3.0；</li>
-<li>当 ModelName 是 Jimeng，可选值为 4.0；</li>
 <li>当 ModelName 是 Qwen，可选值为 0925；</li>
 <li>当 ModelName 是 Hunyuan，可选值为 3.0；</li>
 <li>当 ModelName 是 Mingmou，可选值为 1.0；</li>
      * @param ModelVersion 模型版本。取值：
 <li>当 ModelName 是 GEM，可选值为 2.5、3.0；</li>
-<li>当 ModelName 是 Jimeng，可选值为 4.0；</li>
 <li>当 ModelName 是 Qwen，可选值为 0925；</li>
 <li>当 ModelName 是 Hunyuan，可选值为 3.0；</li>
 <li>当 ModelName 是 Mingmou，可选值为 1.0；</li>

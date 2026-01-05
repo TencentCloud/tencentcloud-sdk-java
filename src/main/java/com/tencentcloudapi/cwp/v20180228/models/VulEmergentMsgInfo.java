@@ -31,7 +31,7 @@ public class VulEmergentMsgInfo extends AbstractModel {
     private Long VulId;
 
     /**
-    * 漏洞纰漏时间
+    * 漏洞披露时间
     */
     @SerializedName("PublishTime")
     @Expose
@@ -66,6 +66,20 @@ public class VulEmergentMsgInfo extends AbstractModel {
     private Long SupportDefense;
 
     /**
+    * KB对应的ID
+    */
+    @SerializedName("KbId")
+    @Expose
+    private Long KbId;
+
+    /**
+    * KB号
+    */
+    @SerializedName("KbNumber")
+    @Expose
+    private String KbNumber;
+
+    /**
      * Get 漏洞id 
      * @return VulId 漏洞id
      */
@@ -82,16 +96,16 @@ public class VulEmergentMsgInfo extends AbstractModel {
     }
 
     /**
-     * Get 漏洞纰漏时间 
-     * @return PublishTime 漏洞纰漏时间
+     * Get 漏洞披露时间 
+     * @return PublishTime 漏洞披露时间
      */
     public String getPublishTime() {
         return this.PublishTime;
     }
 
     /**
-     * Set 漏洞纰漏时间
-     * @param PublishTime 漏洞纰漏时间
+     * Set 漏洞披露时间
+     * @param PublishTime 漏洞披露时间
      */
     public void setPublishTime(String PublishTime) {
         this.PublishTime = PublishTime;
@@ -161,6 +175,38 @@ public class VulEmergentMsgInfo extends AbstractModel {
         this.SupportDefense = SupportDefense;
     }
 
+    /**
+     * Get KB对应的ID 
+     * @return KbId KB对应的ID
+     */
+    public Long getKbId() {
+        return this.KbId;
+    }
+
+    /**
+     * Set KB对应的ID
+     * @param KbId KB对应的ID
+     */
+    public void setKbId(Long KbId) {
+        this.KbId = KbId;
+    }
+
+    /**
+     * Get KB号 
+     * @return KbNumber KB号
+     */
+    public String getKbNumber() {
+        return this.KbNumber;
+    }
+
+    /**
+     * Set KB号
+     * @param KbNumber KB号
+     */
+    public void setKbNumber(String KbNumber) {
+        this.KbNumber = KbNumber;
+    }
+
     public VulEmergentMsgInfo() {
     }
 
@@ -187,6 +233,12 @@ public class VulEmergentMsgInfo extends AbstractModel {
         if (source.SupportDefense != null) {
             this.SupportDefense = new Long(source.SupportDefense);
         }
+        if (source.KbId != null) {
+            this.KbId = new Long(source.KbId);
+        }
+        if (source.KbNumber != null) {
+            this.KbNumber = new String(source.KbNumber);
+        }
     }
 
 
@@ -200,6 +252,8 @@ public class VulEmergentMsgInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "NameEn", this.NameEn);
         this.setParamSimple(map, prefix + "SupportFix", this.SupportFix);
         this.setParamSimple(map, prefix + "SupportDefense", this.SupportDefense);
+        this.setParamSimple(map, prefix + "KbId", this.KbId);
+        this.setParamSimple(map, prefix + "KbNumber", this.KbNumber);
 
     }
 }

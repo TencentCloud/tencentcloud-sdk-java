@@ -228,6 +228,20 @@ public class VulInfoList extends AbstractModel {
     private String LatestFixTime;
 
     /**
+    * 漏洞对应机器的应用防护开启数量
+    */
+    @SerializedName("RaspOpenNodeCount")
+    @Expose
+    private Long RaspOpenNodeCount;
+
+    /**
+    * 漏洞对应机器的应用防护关闭数量
+    */
+    @SerializedName("RaspClosedNodeCount")
+    @Expose
+    private Long RaspClosedNodeCount;
+
+    /**
      * Get 漏洞包含的事件id串，多个用“,”分割 
      * @return Ids 漏洞包含的事件id串，多个用“,”分割
      */
@@ -707,6 +721,38 @@ public class VulInfoList extends AbstractModel {
         this.LatestFixTime = LatestFixTime;
     }
 
+    /**
+     * Get 漏洞对应机器的应用防护开启数量 
+     * @return RaspOpenNodeCount 漏洞对应机器的应用防护开启数量
+     */
+    public Long getRaspOpenNodeCount() {
+        return this.RaspOpenNodeCount;
+    }
+
+    /**
+     * Set 漏洞对应机器的应用防护开启数量
+     * @param RaspOpenNodeCount 漏洞对应机器的应用防护开启数量
+     */
+    public void setRaspOpenNodeCount(Long RaspOpenNodeCount) {
+        this.RaspOpenNodeCount = RaspOpenNodeCount;
+    }
+
+    /**
+     * Get 漏洞对应机器的应用防护关闭数量 
+     * @return RaspClosedNodeCount 漏洞对应机器的应用防护关闭数量
+     */
+    public Long getRaspClosedNodeCount() {
+        return this.RaspClosedNodeCount;
+    }
+
+    /**
+     * Set 漏洞对应机器的应用防护关闭数量
+     * @param RaspClosedNodeCount 漏洞对应机器的应用防护关闭数量
+     */
+    public void setRaspClosedNodeCount(Long RaspClosedNodeCount) {
+        this.RaspClosedNodeCount = RaspClosedNodeCount;
+    }
+
     public VulInfoList() {
     }
 
@@ -799,6 +845,12 @@ public class VulInfoList extends AbstractModel {
         if (source.LatestFixTime != null) {
             this.LatestFixTime = new String(source.LatestFixTime);
         }
+        if (source.RaspOpenNodeCount != null) {
+            this.RaspOpenNodeCount = new Long(source.RaspOpenNodeCount);
+        }
+        if (source.RaspClosedNodeCount != null) {
+            this.RaspClosedNodeCount = new Long(source.RaspClosedNodeCount);
+        }
     }
 
 
@@ -834,6 +886,8 @@ public class VulInfoList extends AbstractModel {
         this.setParamSimple(map, prefix + "Method", this.Method);
         this.setParamSimple(map, prefix + "VulFixSwitch", this.VulFixSwitch);
         this.setParamSimple(map, prefix + "LatestFixTime", this.LatestFixTime);
+        this.setParamSimple(map, prefix + "RaspOpenNodeCount", this.RaspOpenNodeCount);
+        this.setParamSimple(map, prefix + "RaspClosedNodeCount", this.RaspClosedNodeCount);
 
     }
 }

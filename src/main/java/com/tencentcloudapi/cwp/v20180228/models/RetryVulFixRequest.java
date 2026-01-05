@@ -45,6 +45,13 @@ public class RetryVulFixRequest extends AbstractModel {
     private Long VulId;
 
     /**
+    * Kb Id 
+    */
+    @SerializedName("KbId")
+    @Expose
+    private Long KbId;
+
+    /**
      * Get 漏洞id 
      * @return FixId 漏洞id
      */
@@ -92,6 +99,22 @@ public class RetryVulFixRequest extends AbstractModel {
         this.VulId = VulId;
     }
 
+    /**
+     * Get Kb Id  
+     * @return KbId Kb Id 
+     */
+    public Long getKbId() {
+        return this.KbId;
+    }
+
+    /**
+     * Set Kb Id 
+     * @param KbId Kb Id 
+     */
+    public void setKbId(Long KbId) {
+        this.KbId = KbId;
+    }
+
     public RetryVulFixRequest() {
     }
 
@@ -109,6 +132,9 @@ public class RetryVulFixRequest extends AbstractModel {
         if (source.VulId != null) {
             this.VulId = new Long(source.VulId);
         }
+        if (source.KbId != null) {
+            this.KbId = new Long(source.KbId);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class RetryVulFixRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "FixId", this.FixId);
         this.setParamSimple(map, prefix + "Quuid", this.Quuid);
         this.setParamSimple(map, prefix + "VulId", this.VulId);
+        this.setParamSimple(map, prefix + "KbId", this.KbId);
 
     }
 }

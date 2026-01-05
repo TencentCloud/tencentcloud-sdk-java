@@ -190,6 +190,32 @@ public class AccessKeyAlarm extends AbstractModel {
     private Long CloudType;
 
     /**
+    * 告警AI分析状态
+-1 分析失败
+0 未分析
+1 分析中
+2 分析成功，真实告警
+3 分析成功，可疑告警
+    */
+    @SerializedName("AIStatus")
+    @Expose
+    private Long AIStatus;
+
+    /**
+    * 首次告警时间戳（秒级）
+    */
+    @SerializedName("FirstAlarmTimestamp")
+    @Expose
+    private Long FirstAlarmTimestamp;
+
+    /**
+    * 最后告警时间戳（秒级）
+    */
+    @SerializedName("LastAlarmTimestamp")
+    @Expose
+    private Long LastAlarmTimestamp;
+
+    /**
      * Get 告警名称 
      * @return Name 告警名称
      */
@@ -577,6 +603,74 @@ public class AccessKeyAlarm extends AbstractModel {
         this.CloudType = CloudType;
     }
 
+    /**
+     * Get 告警AI分析状态
+-1 分析失败
+0 未分析
+1 分析中
+2 分析成功，真实告警
+3 分析成功，可疑告警 
+     * @return AIStatus 告警AI分析状态
+-1 分析失败
+0 未分析
+1 分析中
+2 分析成功，真实告警
+3 分析成功，可疑告警
+     */
+    public Long getAIStatus() {
+        return this.AIStatus;
+    }
+
+    /**
+     * Set 告警AI分析状态
+-1 分析失败
+0 未分析
+1 分析中
+2 分析成功，真实告警
+3 分析成功，可疑告警
+     * @param AIStatus 告警AI分析状态
+-1 分析失败
+0 未分析
+1 分析中
+2 分析成功，真实告警
+3 分析成功，可疑告警
+     */
+    public void setAIStatus(Long AIStatus) {
+        this.AIStatus = AIStatus;
+    }
+
+    /**
+     * Get 首次告警时间戳（秒级） 
+     * @return FirstAlarmTimestamp 首次告警时间戳（秒级）
+     */
+    public Long getFirstAlarmTimestamp() {
+        return this.FirstAlarmTimestamp;
+    }
+
+    /**
+     * Set 首次告警时间戳（秒级）
+     * @param FirstAlarmTimestamp 首次告警时间戳（秒级）
+     */
+    public void setFirstAlarmTimestamp(Long FirstAlarmTimestamp) {
+        this.FirstAlarmTimestamp = FirstAlarmTimestamp;
+    }
+
+    /**
+     * Get 最后告警时间戳（秒级） 
+     * @return LastAlarmTimestamp 最后告警时间戳（秒级）
+     */
+    public Long getLastAlarmTimestamp() {
+        return this.LastAlarmTimestamp;
+    }
+
+    /**
+     * Set 最后告警时间戳（秒级）
+     * @param LastAlarmTimestamp 最后告警时间戳（秒级）
+     */
+    public void setLastAlarmTimestamp(Long LastAlarmTimestamp) {
+        this.LastAlarmTimestamp = LastAlarmTimestamp;
+    }
+
     public AccessKeyAlarm() {
     }
 
@@ -660,6 +754,15 @@ public class AccessKeyAlarm extends AbstractModel {
         if (source.CloudType != null) {
             this.CloudType = new Long(source.CloudType);
         }
+        if (source.AIStatus != null) {
+            this.AIStatus = new Long(source.AIStatus);
+        }
+        if (source.FirstAlarmTimestamp != null) {
+            this.FirstAlarmTimestamp = new Long(source.FirstAlarmTimestamp);
+        }
+        if (source.LastAlarmTimestamp != null) {
+            this.LastAlarmTimestamp = new Long(source.LastAlarmTimestamp);
+        }
     }
 
 
@@ -690,6 +793,9 @@ public class AccessKeyAlarm extends AbstractModel {
         this.setParamSimple(map, prefix + "Evidence", this.Evidence);
         this.setParamSimple(map, prefix + "RuleKey", this.RuleKey);
         this.setParamSimple(map, prefix + "CloudType", this.CloudType);
+        this.setParamSimple(map, prefix + "AIStatus", this.AIStatus);
+        this.setParamSimple(map, prefix + "FirstAlarmTimestamp", this.FirstAlarmTimestamp);
+        this.setParamSimple(map, prefix + "LastAlarmTimestamp", this.LastAlarmTimestamp);
 
     }
 }

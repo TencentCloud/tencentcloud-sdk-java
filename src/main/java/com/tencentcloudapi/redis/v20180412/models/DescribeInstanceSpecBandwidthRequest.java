@@ -24,148 +24,138 @@ import java.util.HashMap;
 public class DescribeInstanceSpecBandwidthRequest extends AbstractModel {
 
     /**
-    * 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。填写实例id或者规格，两者必选其一。
+    * <p>指定实例 ID。请登录 <a href="https://console.cloud.tencent.com/redis">Redis控制台</a> 在实例列表复制实例 ID。同时，InstanceId 与规格参数不能同时为空，至少提供一种。</p><ul><li>若仅指定 InstanceId：查询该实例当前规格的带宽。</li><li>若指定 InstanceId + 至少一个规格参数（ShardSize、ShardNum 或 ReplicateNum）：计算变更规格后的带宽。</li><li>若指定部分或所有规格参数（ShardSize、ShardNum、ReplicateNum 与 Type），而不指定 InstanceId：根据规格组合查询理论带宽。</li></ul>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 分片大小，单位：MB
+    * <p>分片大小。单位：MB。</p>
     */
     @SerializedName("ShardSize")
     @Expose
     private Long ShardSize;
 
     /**
-    * 分片数量。
+    * <p>分片数量。</p>
     */
     @SerializedName("ShardNum")
     @Expose
     private Long ShardNum;
 
     /**
-    * 复制组数量。
+    * <p>复制组数量。</p>
     */
     @SerializedName("ReplicateNum")
     @Expose
     private Long ReplicateNum;
 
     /**
-    * 只读权重。
-- 100：开启从只读。
-- 0：关闭从只读。
+    * <p>只读权重。- 100：开启从只读。- 0：关闭从只读。</p>
     */
     @SerializedName("ReadOnlyWeight")
     @Expose
     private Long ReadOnlyWeight;
 
     /**
-    * 实例类型，同 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的Type。
+    * <p>实例类型，同 <a href="https://cloud.tencent.com/document/api/239/20026">CreateInstances</a> 的Type。</p>
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-     * Get 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。填写实例id或者规格，两者必选其一。 
-     * @return InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。填写实例id或者规格，两者必选其一。
+     * Get <p>指定实例 ID。请登录 <a href="https://console.cloud.tencent.com/redis">Redis控制台</a> 在实例列表复制实例 ID。同时，InstanceId 与规格参数不能同时为空，至少提供一种。</p><ul><li>若仅指定 InstanceId：查询该实例当前规格的带宽。</li><li>若指定 InstanceId + 至少一个规格参数（ShardSize、ShardNum 或 ReplicateNum）：计算变更规格后的带宽。</li><li>若指定部分或所有规格参数（ShardSize、ShardNum、ReplicateNum 与 Type），而不指定 InstanceId：根据规格组合查询理论带宽。</li></ul> 
+     * @return InstanceId <p>指定实例 ID。请登录 <a href="https://console.cloud.tencent.com/redis">Redis控制台</a> 在实例列表复制实例 ID。同时，InstanceId 与规格参数不能同时为空，至少提供一种。</p><ul><li>若仅指定 InstanceId：查询该实例当前规格的带宽。</li><li>若指定 InstanceId + 至少一个规格参数（ShardSize、ShardNum 或 ReplicateNum）：计算变更规格后的带宽。</li><li>若指定部分或所有规格参数（ShardSize、ShardNum、ReplicateNum 与 Type），而不指定 InstanceId：根据规格组合查询理论带宽。</li></ul>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。填写实例id或者规格，两者必选其一。
-     * @param InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。填写实例id或者规格，两者必选其一。
+     * Set <p>指定实例 ID。请登录 <a href="https://console.cloud.tencent.com/redis">Redis控制台</a> 在实例列表复制实例 ID。同时，InstanceId 与规格参数不能同时为空，至少提供一种。</p><ul><li>若仅指定 InstanceId：查询该实例当前规格的带宽。</li><li>若指定 InstanceId + 至少一个规格参数（ShardSize、ShardNum 或 ReplicateNum）：计算变更规格后的带宽。</li><li>若指定部分或所有规格参数（ShardSize、ShardNum、ReplicateNum 与 Type），而不指定 InstanceId：根据规格组合查询理论带宽。</li></ul>
+     * @param InstanceId <p>指定实例 ID。请登录 <a href="https://console.cloud.tencent.com/redis">Redis控制台</a> 在实例列表复制实例 ID。同时，InstanceId 与规格参数不能同时为空，至少提供一种。</p><ul><li>若仅指定 InstanceId：查询该实例当前规格的带宽。</li><li>若指定 InstanceId + 至少一个规格参数（ShardSize、ShardNum 或 ReplicateNum）：计算变更规格后的带宽。</li><li>若指定部分或所有规格参数（ShardSize、ShardNum、ReplicateNum 与 Type），而不指定 InstanceId：根据规格组合查询理论带宽。</li></ul>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 分片大小，单位：MB 
-     * @return ShardSize 分片大小，单位：MB
+     * Get <p>分片大小。单位：MB。</p> 
+     * @return ShardSize <p>分片大小。单位：MB。</p>
      */
     public Long getShardSize() {
         return this.ShardSize;
     }
 
     /**
-     * Set 分片大小，单位：MB
-     * @param ShardSize 分片大小，单位：MB
+     * Set <p>分片大小。单位：MB。</p>
+     * @param ShardSize <p>分片大小。单位：MB。</p>
      */
     public void setShardSize(Long ShardSize) {
         this.ShardSize = ShardSize;
     }
 
     /**
-     * Get 分片数量。 
-     * @return ShardNum 分片数量。
+     * Get <p>分片数量。</p> 
+     * @return ShardNum <p>分片数量。</p>
      */
     public Long getShardNum() {
         return this.ShardNum;
     }
 
     /**
-     * Set 分片数量。
-     * @param ShardNum 分片数量。
+     * Set <p>分片数量。</p>
+     * @param ShardNum <p>分片数量。</p>
      */
     public void setShardNum(Long ShardNum) {
         this.ShardNum = ShardNum;
     }
 
     /**
-     * Get 复制组数量。 
-     * @return ReplicateNum 复制组数量。
+     * Get <p>复制组数量。</p> 
+     * @return ReplicateNum <p>复制组数量。</p>
      */
     public Long getReplicateNum() {
         return this.ReplicateNum;
     }
 
     /**
-     * Set 复制组数量。
-     * @param ReplicateNum 复制组数量。
+     * Set <p>复制组数量。</p>
+     * @param ReplicateNum <p>复制组数量。</p>
      */
     public void setReplicateNum(Long ReplicateNum) {
         this.ReplicateNum = ReplicateNum;
     }
 
     /**
-     * Get 只读权重。
-- 100：开启从只读。
-- 0：关闭从只读。 
-     * @return ReadOnlyWeight 只读权重。
-- 100：开启从只读。
-- 0：关闭从只读。
+     * Get <p>只读权重。- 100：开启从只读。- 0：关闭从只读。</p> 
+     * @return ReadOnlyWeight <p>只读权重。- 100：开启从只读。- 0：关闭从只读。</p>
      */
     public Long getReadOnlyWeight() {
         return this.ReadOnlyWeight;
     }
 
     /**
-     * Set 只读权重。
-- 100：开启从只读。
-- 0：关闭从只读。
-     * @param ReadOnlyWeight 只读权重。
-- 100：开启从只读。
-- 0：关闭从只读。
+     * Set <p>只读权重。- 100：开启从只读。- 0：关闭从只读。</p>
+     * @param ReadOnlyWeight <p>只读权重。- 100：开启从只读。- 0：关闭从只读。</p>
      */
     public void setReadOnlyWeight(Long ReadOnlyWeight) {
         this.ReadOnlyWeight = ReadOnlyWeight;
     }
 
     /**
-     * Get 实例类型，同 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的Type。 
-     * @return Type 实例类型，同 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的Type。
+     * Get <p>实例类型，同 <a href="https://cloud.tencent.com/document/api/239/20026">CreateInstances</a> 的Type。</p> 
+     * @return Type <p>实例类型，同 <a href="https://cloud.tencent.com/document/api/239/20026">CreateInstances</a> 的Type。</p>
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 实例类型，同 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的Type。
-     * @param Type 实例类型，同 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的Type。
+     * Set <p>实例类型，同 <a href="https://cloud.tencent.com/document/api/239/20026">CreateInstances</a> 的Type。</p>
+     * @param Type <p>实例类型，同 <a href="https://cloud.tencent.com/document/api/239/20026">CreateInstances</a> 的Type。</p>
      */
     public void setType(Long Type) {
         this.Type = Type;

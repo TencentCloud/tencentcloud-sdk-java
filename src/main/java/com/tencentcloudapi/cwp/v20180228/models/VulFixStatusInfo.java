@@ -73,6 +73,34 @@ public class VulFixStatusInfo extends AbstractModel {
     private Long FixMethod;
 
     /**
+    * kb的ID
+    */
+    @SerializedName("KbId")
+    @Expose
+    private Long KbId;
+
+    /**
+    * kb号
+    */
+    @SerializedName("KbNumber")
+    @Expose
+    private String KbNumber;
+
+    /**
+    * kb名字
+    */
+    @SerializedName("KbName")
+    @Expose
+    private String KbName;
+
+    /**
+    * 前置kb列表
+    */
+    @SerializedName("PreKbList")
+    @Expose
+    private String [] PreKbList;
+
+    /**
      * Get 漏洞id 
      * @return VulId 漏洞id
      */
@@ -184,6 +212,70 @@ public class VulFixStatusInfo extends AbstractModel {
         this.FixMethod = FixMethod;
     }
 
+    /**
+     * Get kb的ID 
+     * @return KbId kb的ID
+     */
+    public Long getKbId() {
+        return this.KbId;
+    }
+
+    /**
+     * Set kb的ID
+     * @param KbId kb的ID
+     */
+    public void setKbId(Long KbId) {
+        this.KbId = KbId;
+    }
+
+    /**
+     * Get kb号 
+     * @return KbNumber kb号
+     */
+    public String getKbNumber() {
+        return this.KbNumber;
+    }
+
+    /**
+     * Set kb号
+     * @param KbNumber kb号
+     */
+    public void setKbNumber(String KbNumber) {
+        this.KbNumber = KbNumber;
+    }
+
+    /**
+     * Get kb名字 
+     * @return KbName kb名字
+     */
+    public String getKbName() {
+        return this.KbName;
+    }
+
+    /**
+     * Set kb名字
+     * @param KbName kb名字
+     */
+    public void setKbName(String KbName) {
+        this.KbName = KbName;
+    }
+
+    /**
+     * Get 前置kb列表 
+     * @return PreKbList 前置kb列表
+     */
+    public String [] getPreKbList() {
+        return this.PreKbList;
+    }
+
+    /**
+     * Set 前置kb列表
+     * @param PreKbList 前置kb列表
+     */
+    public void setPreKbList(String [] PreKbList) {
+        this.PreKbList = PreKbList;
+    }
+
     public VulFixStatusInfo() {
     }
 
@@ -216,6 +308,21 @@ public class VulFixStatusInfo extends AbstractModel {
         if (source.FixMethod != null) {
             this.FixMethod = new Long(source.FixMethod);
         }
+        if (source.KbId != null) {
+            this.KbId = new Long(source.KbId);
+        }
+        if (source.KbNumber != null) {
+            this.KbNumber = new String(source.KbNumber);
+        }
+        if (source.KbName != null) {
+            this.KbName = new String(source.KbName);
+        }
+        if (source.PreKbList != null) {
+            this.PreKbList = new String[source.PreKbList.length];
+            for (int i = 0; i < source.PreKbList.length; i++) {
+                this.PreKbList[i] = new String(source.PreKbList[i]);
+            }
+        }
     }
 
 
@@ -230,6 +337,10 @@ public class VulFixStatusInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "FailCnt", this.FailCnt);
         this.setParamSimple(map, prefix + "FixSuccessCnt", this.FixSuccessCnt);
         this.setParamSimple(map, prefix + "FixMethod", this.FixMethod);
+        this.setParamSimple(map, prefix + "KbId", this.KbId);
+        this.setParamSimple(map, prefix + "KbNumber", this.KbNumber);
+        this.setParamSimple(map, prefix + "KbName", this.KbName);
+        this.setParamArraySimple(map, prefix + "PreKbList.", this.PreKbList);
 
     }
 }

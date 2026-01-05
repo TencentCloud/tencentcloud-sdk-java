@@ -38,6 +38,13 @@ public class ScanVulAgainRequest extends AbstractModel {
     private String Uuids;
 
     /**
+    * 0漏洞,1windows 补丁
+    */
+    @SerializedName("EventType")
+    @Expose
+    private Long EventType;
+
+    /**
      * Get 漏洞事件id串，多个用英文逗号分隔 
      * @return EventIds 漏洞事件id串，多个用英文逗号分隔
      */
@@ -69,6 +76,22 @@ public class ScanVulAgainRequest extends AbstractModel {
         this.Uuids = Uuids;
     }
 
+    /**
+     * Get 0漏洞,1windows 补丁 
+     * @return EventType 0漏洞,1windows 补丁
+     */
+    public Long getEventType() {
+        return this.EventType;
+    }
+
+    /**
+     * Set 0漏洞,1windows 补丁
+     * @param EventType 0漏洞,1windows 补丁
+     */
+    public void setEventType(Long EventType) {
+        this.EventType = EventType;
+    }
+
     public ScanVulAgainRequest() {
     }
 
@@ -83,6 +106,9 @@ public class ScanVulAgainRequest extends AbstractModel {
         if (source.Uuids != null) {
             this.Uuids = new String(source.Uuids);
         }
+        if (source.EventType != null) {
+            this.EventType = new Long(source.EventType);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class ScanVulAgainRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EventIds", this.EventIds);
         this.setParamSimple(map, prefix + "Uuids", this.Uuids);
+        this.setParamSimple(map, prefix + "EventType", this.EventType);
 
     }
 }

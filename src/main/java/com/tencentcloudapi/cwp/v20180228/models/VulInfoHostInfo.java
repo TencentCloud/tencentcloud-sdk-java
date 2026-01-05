@@ -80,6 +80,13 @@ public class VulInfoHostInfo extends AbstractModel {
     private String MachineType;
 
     /**
+    * agent是否在线；0不在线，1在线
+    */
+    @SerializedName("AgentStatus")
+    @Expose
+    private Long AgentStatus;
+
+    /**
      * Get 主机名 
      * @return HostName 主机名
      */
@@ -207,6 +214,22 @@ public class VulInfoHostInfo extends AbstractModel {
         this.MachineType = MachineType;
     }
 
+    /**
+     * Get agent是否在线；0不在线，1在线 
+     * @return AgentStatus agent是否在线；0不在线，1在线
+     */
+    public Long getAgentStatus() {
+        return this.AgentStatus;
+    }
+
+    /**
+     * Set agent是否在线；0不在线，1在线
+     * @param AgentStatus agent是否在线；0不在线，1在线
+     */
+    public void setAgentStatus(Long AgentStatus) {
+        this.AgentStatus = AgentStatus;
+    }
+
     public VulInfoHostInfo() {
     }
 
@@ -242,6 +265,9 @@ public class VulInfoHostInfo extends AbstractModel {
         if (source.MachineType != null) {
             this.MachineType = new String(source.MachineType);
         }
+        if (source.AgentStatus != null) {
+            this.AgentStatus = new Long(source.AgentStatus);
+        }
     }
 
 
@@ -257,6 +283,7 @@ public class VulInfoHostInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Uuid", this.Uuid);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "MachineType", this.MachineType);
+        this.setParamSimple(map, prefix + "AgentStatus", this.AgentStatus);
 
     }
 }

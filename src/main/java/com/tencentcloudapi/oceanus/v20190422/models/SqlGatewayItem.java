@@ -110,6 +110,13 @@ public class SqlGatewayItem extends AbstractModel {
     private Float Mem;
 
     /**
+    * jdk版本
+    */
+    @SerializedName("JdkVersion")
+    @Expose
+    private String JdkVersion;
+
+    /**
      * Get 唯一标识
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SerialId 唯一标识
@@ -321,6 +328,22 @@ public class SqlGatewayItem extends AbstractModel {
         this.Mem = Mem;
     }
 
+    /**
+     * Get jdk版本 
+     * @return JdkVersion jdk版本
+     */
+    public String getJdkVersion() {
+        return this.JdkVersion;
+    }
+
+    /**
+     * Set jdk版本
+     * @param JdkVersion jdk版本
+     */
+    public void setJdkVersion(String JdkVersion) {
+        this.JdkVersion = JdkVersion;
+    }
+
     public SqlGatewayItem() {
     }
 
@@ -368,6 +391,9 @@ public class SqlGatewayItem extends AbstractModel {
         if (source.Mem != null) {
             this.Mem = new Float(source.Mem);
         }
+        if (source.JdkVersion != null) {
+            this.JdkVersion = new String(source.JdkVersion);
+        }
     }
 
 
@@ -386,6 +412,7 @@ public class SqlGatewayItem extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Properties.", this.Properties);
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
         this.setParamSimple(map, prefix + "Mem", this.Mem);
+        this.setParamSimple(map, prefix + "JdkVersion", this.JdkVersion);
 
     }
 }

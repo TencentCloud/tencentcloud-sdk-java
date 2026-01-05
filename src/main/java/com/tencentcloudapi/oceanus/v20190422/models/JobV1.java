@@ -358,6 +358,20 @@ public class JobV1 extends AbstractModel {
     private Long RestartCount;
 
     /**
+    * 期望是开启默认告警
+    */
+    @SerializedName("ExpectJobDefaultAlarmStatus")
+    @Expose
+    private Long ExpectJobDefaultAlarmStatus;
+
+    /**
+    * jdk版本
+    */
+    @SerializedName("JdkVersion")
+    @Expose
+    private String JdkVersion;
+
+    /**
      * Get 作业ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return JobId 作业ID
@@ -1189,6 +1203,38 @@ public class JobV1 extends AbstractModel {
         this.RestartCount = RestartCount;
     }
 
+    /**
+     * Get 期望是开启默认告警 
+     * @return ExpectJobDefaultAlarmStatus 期望是开启默认告警
+     */
+    public Long getExpectJobDefaultAlarmStatus() {
+        return this.ExpectJobDefaultAlarmStatus;
+    }
+
+    /**
+     * Set 期望是开启默认告警
+     * @param ExpectJobDefaultAlarmStatus 期望是开启默认告警
+     */
+    public void setExpectJobDefaultAlarmStatus(Long ExpectJobDefaultAlarmStatus) {
+        this.ExpectJobDefaultAlarmStatus = ExpectJobDefaultAlarmStatus;
+    }
+
+    /**
+     * Get jdk版本 
+     * @return JdkVersion jdk版本
+     */
+    public String getJdkVersion() {
+        return this.JdkVersion;
+    }
+
+    /**
+     * Set jdk版本
+     * @param JdkVersion jdk版本
+     */
+    public void setJdkVersion(String JdkVersion) {
+        this.JdkVersion = JdkVersion;
+    }
+
     public JobV1() {
     }
 
@@ -1326,6 +1372,12 @@ public class JobV1 extends AbstractModel {
         if (source.RestartCount != null) {
             this.RestartCount = new Long(source.RestartCount);
         }
+        if (source.ExpectJobDefaultAlarmStatus != null) {
+            this.ExpectJobDefaultAlarmStatus = new Long(source.ExpectJobDefaultAlarmStatus);
+        }
+        if (source.JdkVersion != null) {
+            this.JdkVersion = new String(source.JdkVersion);
+        }
     }
 
 
@@ -1375,6 +1427,8 @@ public class JobV1 extends AbstractModel {
         this.setParamSimple(map, prefix + "ProgressDesc", this.ProgressDesc);
         this.setParamSimple(map, prefix + "ContinueAlarm", this.ContinueAlarm);
         this.setParamSimple(map, prefix + "RestartCount", this.RestartCount);
+        this.setParamSimple(map, prefix + "ExpectJobDefaultAlarmStatus", this.ExpectJobDefaultAlarmStatus);
+        this.setParamSimple(map, prefix + "JdkVersion", this.JdkVersion);
 
     }
 }

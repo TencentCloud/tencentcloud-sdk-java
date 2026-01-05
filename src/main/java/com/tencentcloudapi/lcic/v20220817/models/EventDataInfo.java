@@ -66,6 +66,13 @@ public class EventDataInfo extends AbstractModel {
     private String RecordUrl;
 
     /**
+    * MemberQuit事件，对应Reason（0:主动退出 1:被踢 2:永久被踢 4:失去心跳下线 5:房间结束，成员自动退出）
+    */
+    @SerializedName("Reason")
+    @Expose
+    private Long Reason;
+
+    /**
      * Get 事件发生的房间号。 
      * @return RoomId 事件发生的房间号。
      */
@@ -161,6 +168,22 @@ public class EventDataInfo extends AbstractModel {
         this.RecordUrl = RecordUrl;
     }
 
+    /**
+     * Get MemberQuit事件，对应Reason（0:主动退出 1:被踢 2:永久被踢 4:失去心跳下线 5:房间结束，成员自动退出） 
+     * @return Reason MemberQuit事件，对应Reason（0:主动退出 1:被踢 2:永久被踢 4:失去心跳下线 5:房间结束，成员自动退出）
+     */
+    public Long getReason() {
+        return this.Reason;
+    }
+
+    /**
+     * Set MemberQuit事件，对应Reason（0:主动退出 1:被踢 2:永久被踢 4:失去心跳下线 5:房间结束，成员自动退出）
+     * @param Reason MemberQuit事件，对应Reason（0:主动退出 1:被踢 2:永久被踢 4:失去心跳下线 5:房间结束，成员自动退出）
+     */
+    public void setReason(Long Reason) {
+        this.Reason = Reason;
+    }
+
     public EventDataInfo() {
     }
 
@@ -187,6 +210,9 @@ public class EventDataInfo extends AbstractModel {
         if (source.RecordUrl != null) {
             this.RecordUrl = new String(source.RecordUrl);
         }
+        if (source.Reason != null) {
+            this.Reason = new Long(source.Reason);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class EventDataInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Duration", this.Duration);
         this.setParamSimple(map, prefix + "RecordSize", this.RecordSize);
         this.setParamSimple(map, prefix + "RecordUrl", this.RecordUrl);
+        this.setParamSimple(map, prefix + "Reason", this.Reason);
 
     }
 }

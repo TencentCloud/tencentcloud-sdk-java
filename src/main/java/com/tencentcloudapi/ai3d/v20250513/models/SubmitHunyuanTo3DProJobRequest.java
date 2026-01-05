@@ -105,6 +105,13 @@ quadrilateral: 四边形面与三角形面混合生成。
     private String PolygonType;
 
     /**
+    * 生成模型的格式，仅限制生成一种格式； 生成模型文件组默认返回obj、glb格式（开启时Geometry参数时，默认为glb格式）； 可选值：STL，USDZ，FBX；
+    */
+    @SerializedName("ResultFormat")
+    @Expose
+    private String ResultFormat;
+
+    /**
      * Get 文生3D，3D内容的描述，中文正向提示词。
 最多支持1024个 utf-8 字符。
 ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。 
@@ -332,6 +339,22 @@ quadrilateral: 四边形面与三角形面混合生成。
         this.PolygonType = PolygonType;
     }
 
+    /**
+     * Get 生成模型的格式，仅限制生成一种格式； 生成模型文件组默认返回obj、glb格式（开启时Geometry参数时，默认为glb格式）； 可选值：STL，USDZ，FBX； 
+     * @return ResultFormat 生成模型的格式，仅限制生成一种格式； 生成模型文件组默认返回obj、glb格式（开启时Geometry参数时，默认为glb格式）； 可选值：STL，USDZ，FBX；
+     */
+    public String getResultFormat() {
+        return this.ResultFormat;
+    }
+
+    /**
+     * Set 生成模型的格式，仅限制生成一种格式； 生成模型文件组默认返回obj、glb格式（开启时Geometry参数时，默认为glb格式）； 可选值：STL，USDZ，FBX；
+     * @param ResultFormat 生成模型的格式，仅限制生成一种格式； 生成模型文件组默认返回obj、glb格式（开启时Geometry参数时，默认为glb格式）； 可选值：STL，USDZ，FBX；
+     */
+    public void setResultFormat(String ResultFormat) {
+        this.ResultFormat = ResultFormat;
+    }
+
     public SubmitHunyuanTo3DProJobRequest() {
     }
 
@@ -367,6 +390,9 @@ quadrilateral: 四边形面与三角形面混合生成。
         if (source.PolygonType != null) {
             this.PolygonType = new String(source.PolygonType);
         }
+        if (source.ResultFormat != null) {
+            this.ResultFormat = new String(source.ResultFormat);
+        }
     }
 
 
@@ -382,6 +408,7 @@ quadrilateral: 四边形面与三角形面混合生成。
         this.setParamSimple(map, prefix + "FaceCount", this.FaceCount);
         this.setParamSimple(map, prefix + "GenerateType", this.GenerateType);
         this.setParamSimple(map, prefix + "PolygonType", this.PolygonType);
+        this.setParamSimple(map, prefix + "ResultFormat", this.ResultFormat);
 
     }
 }

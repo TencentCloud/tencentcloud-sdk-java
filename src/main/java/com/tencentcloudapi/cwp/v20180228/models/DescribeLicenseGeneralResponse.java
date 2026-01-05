@@ -171,6 +171,13 @@ public class DescribeLicenseGeneralResponse extends AbstractModel {
     private Boolean AutoOpenRaspSwitch;
 
     /**
+    * 是否自动缩容开关开启
+    */
+    @SerializedName("AutoDowngradeSwitch")
+    @Expose
+    private Boolean AutoDowngradeSwitch;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -514,6 +521,22 @@ public class DescribeLicenseGeneralResponse extends AbstractModel {
     }
 
     /**
+     * Get 是否自动缩容开关开启 
+     * @return AutoDowngradeSwitch 是否自动缩容开关开启
+     */
+    public Boolean getAutoDowngradeSwitch() {
+        return this.AutoDowngradeSwitch;
+    }
+
+    /**
+     * Set 是否自动缩容开关开启
+     * @param AutoDowngradeSwitch 是否自动缩容开关开启
+     */
+    public void setAutoDowngradeSwitch(Boolean AutoDowngradeSwitch) {
+        this.AutoDowngradeSwitch = AutoDowngradeSwitch;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -600,6 +623,9 @@ public class DescribeLicenseGeneralResponse extends AbstractModel {
         if (source.AutoOpenRaspSwitch != null) {
             this.AutoOpenRaspSwitch = new Boolean(source.AutoOpenRaspSwitch);
         }
+        if (source.AutoDowngradeSwitch != null) {
+            this.AutoDowngradeSwitch = new Boolean(source.AutoDowngradeSwitch);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -631,6 +657,7 @@ public class DescribeLicenseGeneralResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "RepurchaseRenewSwitch", this.RepurchaseRenewSwitch);
         this.setParamSimple(map, prefix + "AutoBindRaspSwitch", this.AutoBindRaspSwitch);
         this.setParamSimple(map, prefix + "AutoOpenRaspSwitch", this.AutoOpenRaspSwitch);
+        this.setParamSimple(map, prefix + "AutoDowngradeSwitch", this.AutoDowngradeSwitch);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

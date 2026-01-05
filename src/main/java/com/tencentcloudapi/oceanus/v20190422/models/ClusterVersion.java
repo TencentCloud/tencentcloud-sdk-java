@@ -40,6 +40,13 @@ public class ClusterVersion extends AbstractModel {
     private String [] SupportedFlink;
 
     /**
+    * jdk支持版本
+    */
+    @SerializedName("JdkSupportVersion")
+    @Expose
+    private FlinkJdkVersion [] JdkSupportVersion;
+
+    /**
      * Get 集群的Flink版本
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Flink 集群的Flink版本
@@ -79,6 +86,22 @@ public class ClusterVersion extends AbstractModel {
         this.SupportedFlink = SupportedFlink;
     }
 
+    /**
+     * Get jdk支持版本 
+     * @return JdkSupportVersion jdk支持版本
+     */
+    public FlinkJdkVersion [] getJdkSupportVersion() {
+        return this.JdkSupportVersion;
+    }
+
+    /**
+     * Set jdk支持版本
+     * @param JdkSupportVersion jdk支持版本
+     */
+    public void setJdkSupportVersion(FlinkJdkVersion [] JdkSupportVersion) {
+        this.JdkSupportVersion = JdkSupportVersion;
+    }
+
     public ClusterVersion() {
     }
 
@@ -96,6 +119,12 @@ public class ClusterVersion extends AbstractModel {
                 this.SupportedFlink[i] = new String(source.SupportedFlink[i]);
             }
         }
+        if (source.JdkSupportVersion != null) {
+            this.JdkSupportVersion = new FlinkJdkVersion[source.JdkSupportVersion.length];
+            for (int i = 0; i < source.JdkSupportVersion.length; i++) {
+                this.JdkSupportVersion[i] = new FlinkJdkVersion(source.JdkSupportVersion[i]);
+            }
+        }
     }
 
 
@@ -105,6 +134,7 @@ public class ClusterVersion extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Flink", this.Flink);
         this.setParamArraySimple(map, prefix + "SupportedFlink.", this.SupportedFlink);
+        this.setParamArrayObj(map, prefix + "JdkSupportVersion.", this.JdkSupportVersion);
 
     }
 }

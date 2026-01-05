@@ -32,6 +32,13 @@ public class RowValues extends AbstractModel {
     private Long [] RowValue;
 
     /**
+    * 数据值
+    */
+    @SerializedName("RowValueFloat")
+    @Expose
+    private Float [] RowValueFloat;
+
+    /**
      * Get 数据值
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RowValue 数据值
@@ -51,6 +58,22 @@ public class RowValues extends AbstractModel {
         this.RowValue = RowValue;
     }
 
+    /**
+     * Get 数据值 
+     * @return RowValueFloat 数据值
+     */
+    public Float [] getRowValueFloat() {
+        return this.RowValueFloat;
+    }
+
+    /**
+     * Set 数据值
+     * @param RowValueFloat 数据值
+     */
+    public void setRowValueFloat(Float [] RowValueFloat) {
+        this.RowValueFloat = RowValueFloat;
+    }
+
     public RowValues() {
     }
 
@@ -65,6 +88,12 @@ public class RowValues extends AbstractModel {
                 this.RowValue[i] = new Long(source.RowValue[i]);
             }
         }
+        if (source.RowValueFloat != null) {
+            this.RowValueFloat = new Float[source.RowValueFloat.length];
+            for (int i = 0; i < source.RowValueFloat.length; i++) {
+                this.RowValueFloat[i] = new Float(source.RowValueFloat[i]);
+            }
+        }
     }
 
 
@@ -73,6 +102,7 @@ public class RowValues extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "RowValue.", this.RowValue);
+        this.setParamArraySimple(map, prefix + "RowValueFloat.", this.RowValueFloat);
 
     }
 }

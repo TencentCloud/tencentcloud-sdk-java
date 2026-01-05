@@ -117,7 +117,7 @@ public class JobConfig extends AbstractModel {
     private String COSBucket;
 
     /**
-    * 是否启用日志收集，0-未启用，1-已启用，2-历史集群未设置日志集，3-历史集群已开启
+    * 是否启用日志收集，0-未启用，1-采集到cls，4-采集到cos，5-采集到es
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogCollect")
@@ -283,6 +283,13 @@ public class JobConfig extends AbstractModel {
     @SerializedName("FlinkVersion")
     @Expose
     private String FlinkVersion;
+
+    /**
+    * jdk版本
+    */
+    @SerializedName("JdkVersion")
+    @Expose
+    private String JdkVersion;
 
     /**
     * jm使用cpu数目
@@ -567,9 +574,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Get 是否启用日志收集，0-未启用，1-已启用，2-历史集群未设置日志集，3-历史集群已开启
+     * Get 是否启用日志收集，0-未启用，1-采集到cls，4-采集到cos，5-采集到es
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LogCollect 是否启用日志收集，0-未启用，1-已启用，2-历史集群未设置日志集，3-历史集群已开启
+     * @return LogCollect 是否启用日志收集，0-未启用，1-采集到cls，4-采集到cos，5-采集到es
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLogCollect() {
@@ -577,9 +584,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Set 是否启用日志收集，0-未启用，1-已启用，2-历史集群未设置日志集，3-历史集群已开启
+     * Set 是否启用日志收集，0-未启用，1-采集到cls，4-采集到cos，5-采集到es
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LogCollect 是否启用日志收集，0-未启用，1-已启用，2-历史集群未设置日志集，3-历史集群已开启
+     * @param LogCollect 是否启用日志收集，0-未启用，1-采集到cls，4-采集到cos，5-采集到es
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogCollect(Long LogCollect) {
@@ -987,6 +994,22 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
+     * Get jdk版本 
+     * @return JdkVersion jdk版本
+     */
+    public String getJdkVersion() {
+        return this.JdkVersion;
+    }
+
+    /**
+     * Set jdk版本
+     * @param JdkVersion jdk版本
+     */
+    public void setJdkVersion(String JdkVersion) {
+        this.JdkVersion = JdkVersion;
+    }
+
+    /**
      * Get jm使用cpu数目
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return JobManagerCpu jm使用cpu数目
@@ -1234,6 +1257,9 @@ public class JobConfig extends AbstractModel {
         if (source.FlinkVersion != null) {
             this.FlinkVersion = new String(source.FlinkVersion);
         }
+        if (source.JdkVersion != null) {
+            this.JdkVersion = new String(source.JdkVersion);
+        }
         if (source.JobManagerCpu != null) {
             this.JobManagerCpu = new Float(source.JobManagerCpu);
         }
@@ -1295,6 +1321,7 @@ public class JobConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "IndexName", this.IndexName);
         this.setParamSimple(map, prefix + "WorkspaceName", this.WorkspaceName);
         this.setParamSimple(map, prefix + "FlinkVersion", this.FlinkVersion);
+        this.setParamSimple(map, prefix + "JdkVersion", this.JdkVersion);
         this.setParamSimple(map, prefix + "JobManagerCpu", this.JobManagerCpu);
         this.setParamSimple(map, prefix + "JobManagerMem", this.JobManagerMem);
         this.setParamSimple(map, prefix + "TaskManagerCpu", this.TaskManagerCpu);

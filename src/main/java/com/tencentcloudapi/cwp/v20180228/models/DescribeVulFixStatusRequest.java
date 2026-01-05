@@ -45,6 +45,13 @@ public class DescribeVulFixStatusRequest extends AbstractModel {
     private String Quuid;
 
     /**
+    * 补丁 id
+    */
+    @SerializedName("KbId")
+    @Expose
+    private Long KbId;
+
+    /**
      * Get 任务id 传VulId可以不用传FixId 
      * @return FixId 任务id 传VulId可以不用传FixId
      */
@@ -92,6 +99,22 @@ public class DescribeVulFixStatusRequest extends AbstractModel {
         this.Quuid = Quuid;
     }
 
+    /**
+     * Get 补丁 id 
+     * @return KbId 补丁 id
+     */
+    public Long getKbId() {
+        return this.KbId;
+    }
+
+    /**
+     * Set 补丁 id
+     * @param KbId 补丁 id
+     */
+    public void setKbId(Long KbId) {
+        this.KbId = KbId;
+    }
+
     public DescribeVulFixStatusRequest() {
     }
 
@@ -109,6 +132,9 @@ public class DescribeVulFixStatusRequest extends AbstractModel {
         if (source.Quuid != null) {
             this.Quuid = new String(source.Quuid);
         }
+        if (source.KbId != null) {
+            this.KbId = new Long(source.KbId);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class DescribeVulFixStatusRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "FixId", this.FixId);
         this.setParamSimple(map, prefix + "VulId", this.VulId);
         this.setParamSimple(map, prefix + "Quuid", this.Quuid);
+        this.setParamSimple(map, prefix + "KbId", this.KbId);
 
     }
 }

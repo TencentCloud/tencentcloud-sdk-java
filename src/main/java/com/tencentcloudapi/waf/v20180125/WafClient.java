@@ -666,6 +666,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *获取BotId规则列表1
+     * @param req DescribeBotIdRuleRequest
+     * @return DescribeBotIdRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBotIdRuleResponse DescribeBotIdRule(DescribeBotIdRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBotIdRule", DescribeBotIdRuleResponse.class);
+    }
+
+    /**
      *获取BOT场景列表与概览
      * @param req DescribeBotSceneListRequest
      * @return DescribeBotSceneListResponse

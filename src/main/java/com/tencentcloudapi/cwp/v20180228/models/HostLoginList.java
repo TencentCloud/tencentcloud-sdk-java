@@ -182,6 +182,13 @@ XTI - 威胁情报
     private Long Port;
 
     /**
+    * ip分析
+    */
+    @SerializedName("IPAnalyse")
+    @Expose
+    private IPAnalyse IPAnalyse;
+
+    /**
      * Get 记录Id 
      * @return Id 记录Id
      */
@@ -549,6 +556,22 @@ XTI - 威胁情报
         this.Port = Port;
     }
 
+    /**
+     * Get ip分析 
+     * @return IPAnalyse ip分析
+     */
+    public IPAnalyse getIPAnalyse() {
+        return this.IPAnalyse;
+    }
+
+    /**
+     * Set ip分析
+     * @param IPAnalyse ip分析
+     */
+    public void setIPAnalyse(IPAnalyse IPAnalyse) {
+        this.IPAnalyse = IPAnalyse;
+    }
+
     public HostLoginList() {
     }
 
@@ -623,6 +646,9 @@ XTI - 威胁情报
         if (source.Port != null) {
             this.Port = new Long(source.Port);
         }
+        if (source.IPAnalyse != null) {
+            this.IPAnalyse = new IPAnalyse(source.IPAnalyse);
+        }
     }
 
 
@@ -652,6 +678,7 @@ XTI - 威胁情报
         this.setParamSimple(map, prefix + "Desc", this.Desc);
         this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
         this.setParamSimple(map, prefix + "Port", this.Port);
+        this.setParamObj(map, prefix + "IPAnalyse.", this.IPAnalyse);
 
     }
 }

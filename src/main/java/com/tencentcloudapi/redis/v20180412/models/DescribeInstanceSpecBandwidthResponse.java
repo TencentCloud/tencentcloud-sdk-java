@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeInstanceSpecBandwidthResponse extends AbstractModel {
 
     /**
-    * 基础带宽。
+    * <p>基础带宽。</p>
     */
     @SerializedName("Bandwidth")
     @Expose
     private Long Bandwidth;
 
     /**
-    * 链接限制。
+    * <p>链接限制。</p>
     */
     @SerializedName("ClientLimit")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeInstanceSpecBandwidthResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 基础带宽。 
-     * @return Bandwidth 基础带宽。
+     * Get <p>基础带宽。</p> 
+     * @return Bandwidth <p>基础带宽。</p>
      */
     public Long getBandwidth() {
         return this.Bandwidth;
     }
 
     /**
-     * Set 基础带宽。
-     * @param Bandwidth 基础带宽。
+     * Set <p>基础带宽。</p>
+     * @param Bandwidth <p>基础带宽。</p>
      */
     public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 
     /**
-     * Get 链接限制。 
-     * @return ClientLimit 链接限制。
+     * Get <p>链接限制。</p> 
+     * @return ClientLimit <p>链接限制。</p>
      */
     public Long getClientLimit() {
         return this.ClientLimit;
     }
 
     /**
-     * Set 链接限制。
-     * @param ClientLimit 链接限制。
+     * Set <p>链接限制。</p>
+     * @param ClientLimit <p>链接限制。</p>
      */
     public void setClientLimit(Long ClientLimit) {
         this.ClientLimit = ClientLimit;

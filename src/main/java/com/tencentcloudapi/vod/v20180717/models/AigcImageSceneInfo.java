@@ -26,6 +26,7 @@ public class AigcImageSceneInfo extends AbstractModel {
     /**
     * AI生图场景类型，可选值：
 - change_clothes：AI换衣。
+- product_image：AI生商品图。
     */
     @SerializedName("Type")
     @Expose
@@ -33,18 +34,25 @@ public class AigcImageSceneInfo extends AbstractModel {
 
     /**
     * 当 Type 为 change_clothes 时有效，则该项为必填，表示AI 换衣生图配置参数。
-
-
     */
     @SerializedName("ChangeClothesConfig")
     @Expose
     private ChangeClothesConfig ChangeClothesConfig;
 
     /**
+    * 当 Type 为 product_image 时有效，表示AI 生商品图配置参数。
+    */
+    @SerializedName("ProductImageConfig")
+    @Expose
+    private ProductImageConfig ProductImageConfig;
+
+    /**
      * Get AI生图场景类型，可选值：
-- change_clothes：AI换衣。 
+- change_clothes：AI换衣。
+- product_image：AI生商品图。 
      * @return Type AI生图场景类型，可选值：
 - change_clothes：AI换衣。
+- product_image：AI生商品图。
      */
     public String getType() {
         return this.Type;
@@ -53,20 +61,18 @@ public class AigcImageSceneInfo extends AbstractModel {
     /**
      * Set AI生图场景类型，可选值：
 - change_clothes：AI换衣。
+- product_image：AI生商品图。
      * @param Type AI生图场景类型，可选值：
 - change_clothes：AI换衣。
+- product_image：AI生商品图。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 当 Type 为 change_clothes 时有效，则该项为必填，表示AI 换衣生图配置参数。
-
- 
+     * Get 当 Type 为 change_clothes 时有效，则该项为必填，表示AI 换衣生图配置参数。 
      * @return ChangeClothesConfig 当 Type 为 change_clothes 时有效，则该项为必填，表示AI 换衣生图配置参数。
-
-
      */
     public ChangeClothesConfig getChangeClothesConfig() {
         return this.ChangeClothesConfig;
@@ -74,14 +80,26 @@ public class AigcImageSceneInfo extends AbstractModel {
 
     /**
      * Set 当 Type 为 change_clothes 时有效，则该项为必填，表示AI 换衣生图配置参数。
-
-
      * @param ChangeClothesConfig 当 Type 为 change_clothes 时有效，则该项为必填，表示AI 换衣生图配置参数。
-
-
      */
     public void setChangeClothesConfig(ChangeClothesConfig ChangeClothesConfig) {
         this.ChangeClothesConfig = ChangeClothesConfig;
+    }
+
+    /**
+     * Get 当 Type 为 product_image 时有效，表示AI 生商品图配置参数。 
+     * @return ProductImageConfig 当 Type 为 product_image 时有效，表示AI 生商品图配置参数。
+     */
+    public ProductImageConfig getProductImageConfig() {
+        return this.ProductImageConfig;
+    }
+
+    /**
+     * Set 当 Type 为 product_image 时有效，表示AI 生商品图配置参数。
+     * @param ProductImageConfig 当 Type 为 product_image 时有效，表示AI 生商品图配置参数。
+     */
+    public void setProductImageConfig(ProductImageConfig ProductImageConfig) {
+        this.ProductImageConfig = ProductImageConfig;
     }
 
     public AigcImageSceneInfo() {
@@ -98,6 +116,9 @@ public class AigcImageSceneInfo extends AbstractModel {
         if (source.ChangeClothesConfig != null) {
             this.ChangeClothesConfig = new ChangeClothesConfig(source.ChangeClothesConfig);
         }
+        if (source.ProductImageConfig != null) {
+            this.ProductImageConfig = new ProductImageConfig(source.ProductImageConfig);
+        }
     }
 
 
@@ -107,6 +128,7 @@ public class AigcImageSceneInfo extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamObj(map, prefix + "ChangeClothesConfig.", this.ChangeClothesConfig);
+        this.setParamObj(map, prefix + "ProductImageConfig.", this.ProductImageConfig);
 
     }
 }

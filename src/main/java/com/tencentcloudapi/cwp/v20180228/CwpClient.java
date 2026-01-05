@@ -50,19 +50,6 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *产品变动切换到了\\n切换到 AddVulIgnoreRule / ModifyVulIgnoreRule  CancelVulIgnoreRule\\n相关接口
-
-取消漏洞忽略
-     * @param req CancelIgnoreVulRequest
-     * @return CancelIgnoreVulResponse
-     * @throws TencentCloudSDKException
-     */
-    public CancelIgnoreVulResponse CancelIgnoreVul(CancelIgnoreVulRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CancelIgnoreVul", CancelIgnoreVulResponse.class);
-    }
-
-    /**
      *根据检测项id或事件id批量忽略事件或取消忽略
      * @param req ChangeRuleEventsIgnoreStatusRequest
      * @return ChangeRuleEventsIgnoreStatusResponse
@@ -1419,17 +1406,6 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *专家服务-可用订单详情
-     * @param req DescribeAvailableExpertServiceDetailRequest
-     * @return DescribeAvailableExpertServiceDetailResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAvailableExpertServiceDetailResponse DescribeAvailableExpertServiceDetail(DescribeAvailableExpertServiceDetailRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeAvailableExpertServiceDetail", DescribeAvailableExpertServiceDetailResponse.class);
-    }
-
-    /**
      *获取爆破阻断模式
      * @param req DescribeBanModeRequest
      * @return DescribeBanModeResponse
@@ -1958,17 +1934,6 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *专家服务-应急响应列表
-     * @param req DescribeEmergencyResponseListRequest
-     * @return DescribeEmergencyResponseListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeEmergencyResponseListResponse DescribeEmergencyResponseList(DescribeEmergencyResponseListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeEmergencyResponseList", DescribeEmergencyResponseListResponse.class);
-    }
-
-    /**
      *获取应急漏洞列表
      * @param req DescribeEmergencyVulListRequest
      * @return DescribeEmergencyVulListResponse
@@ -1988,28 +1953,6 @@ public class CwpClient extends AbstractClient{
     public DescribeEventByTableResponse DescribeEventByTable(DescribeEventByTableRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeEventByTable", DescribeEventByTableResponse.class);
-    }
-
-    /**
-     *专家服务-安全管家列表
-     * @param req DescribeExpertServiceListRequest
-     * @return DescribeExpertServiceListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeExpertServiceListResponse DescribeExpertServiceList(DescribeExpertServiceListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeExpertServiceList", DescribeExpertServiceListResponse.class);
-    }
-
-    /**
-     *专家服务-专家服务订单列表
-     * @param req DescribeExpertServiceOrderListRequest
-     * @return DescribeExpertServiceOrderListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeExpertServiceOrderListResponse DescribeExpertServiceOrderList(DescribeExpertServiceOrderListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeExpertServiceOrderList", DescribeExpertServiceOrderListResponse.class);
     }
 
     /**
@@ -2695,17 +2638,6 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *专家服务-安全管家月巡检报告下载
-     * @param req DescribeMonthInspectionReportRequest
-     * @return DescribeMonthInspectionReportResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeMonthInspectionReportResponse DescribeMonthInspectionReport(DescribeMonthInspectionReportRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeMonthInspectionReport", DescribeMonthInspectionReportResponse.class);
-    }
-
-    /**
      *查询网络攻击设置
      * @param req DescribeNetAttackSettingRequest
      * @return DescribeNetAttackSettingResponse
@@ -2846,17 +2778,6 @@ public class CwpClient extends AbstractClient{
     public DescribeProtectDirRelatedServerResponse DescribeProtectDirRelatedServer(DescribeProtectDirRelatedServerRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeProtectDirRelatedServer", DescribeProtectDirRelatedServerResponse.class);
-    }
-
-    /**
-     *专家服务-旗舰重保列表
-     * @param req DescribeProtectNetListRequest
-     * @return DescribeProtectNetListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeProtectNetListResponse DescribeProtectNetList(DescribeProtectNetListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeProtectNetList", DescribeProtectNetListResponse.class);
     }
 
     /**
@@ -4727,19 +4648,6 @@ public class CwpClient extends AbstractClient{
     public GetLocalStorageItemResponse GetLocalStorageItem(GetLocalStorageItemRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetLocalStorageItem", GetLocalStorageItemResponse.class);
-    }
-
-    /**
-     *产品变动切换到了\\n切换到 AddVulIgnoreRule / ModifyVulIgnoreRule  CancelVulIgnoreRule\\n相关接口
-
-本接口 (IgnoreImpactedHosts) 用于忽略漏洞。
-     * @param req IgnoreImpactedHostsRequest
-     * @return IgnoreImpactedHostsResponse
-     * @throws TencentCloudSDKException
-     */
-    public IgnoreImpactedHostsResponse IgnoreImpactedHosts(IgnoreImpactedHostsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "IgnoreImpactedHosts", IgnoreImpactedHostsResponse.class);
     }
 
     /**

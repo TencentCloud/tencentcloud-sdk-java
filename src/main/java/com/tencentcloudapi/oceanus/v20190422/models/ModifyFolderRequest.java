@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyFolderRequest extends AbstractModel {
 
     /**
-    * 文件夹ID（必填）
+    * 只有移动文件夹的场景必填，如果是批量移动作业的场景，非必填。
     */
     @SerializedName("SourceFolderId")
     @Expose
@@ -66,16 +66,16 @@ public class ModifyFolderRequest extends AbstractModel {
     private String WorkSpaceId;
 
     /**
-     * Get 文件夹ID（必填） 
-     * @return SourceFolderId 文件夹ID（必填）
+     * Get 只有移动文件夹的场景必填，如果是批量移动作业的场景，非必填。 
+     * @return SourceFolderId 只有移动文件夹的场景必填，如果是批量移动作业的场景，非必填。
      */
     public String getSourceFolderId() {
         return this.SourceFolderId;
     }
 
     /**
-     * Set 文件夹ID（必填）
-     * @param SourceFolderId 文件夹ID（必填）
+     * Set 只有移动文件夹的场景必填，如果是批量移动作业的场景，非必填。
+     * @param SourceFolderId 只有移动文件夹的场景必填，如果是批量移动作业的场景，非必填。
      */
     public void setSourceFolderId(String SourceFolderId) {
         this.SourceFolderId = SourceFolderId;

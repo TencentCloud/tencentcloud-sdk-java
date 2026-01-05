@@ -18,11 +18,17 @@ public enum WedataErrorCode {
      /* ClientIp未被授权。 */
      INVALIDPARAMETER_CLIENTIPNOTAUTHORIZED("InvalidParameter.ClientIpNotAuthorized"),
      
+     /* 查询过滤条件参数错误。 */
+     INVALIDPARAMETER_INVALIDFILTERPARAMETER("InvalidParameter.InvalidFilterParameter"),
+     
      /* Missing Servlet Request Parameter */
      INVALIDPARAMETER_MISSINGREQUESTPARAMETER("InvalidParameter.MissingRequestParameter"),
      
      /* 已超过系统安全配额。 */
      INVALIDPARAMETER_QUOTAEXCEEDERROR("InvalidParameter.QuotaExceedError"),
+     
+     /* 规则不存在。 */
+     INVALIDPARAMETER_RULENOTEXIST("InvalidParameter.RuleNotExist"),
      
      /* 项目名重复。 */
      INVALIDPARAMETER_WORKSPACENAMEDUPLICATION("InvalidParameter.WorkspaceNameDuplication"),
@@ -58,7 +64,16 @@ public enum WedataErrorCode {
      RESOURCENOTFOUND("ResourceNotFound"),
      
      /* 未授权操作。 */
-     UNAUTHORIZEDOPERATION("UnauthorizedOperation");
+     UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
+     
+     /* 用户不是当前项目成员。 */
+     UNAUTHORIZEDOPERATION_USERNOTINPROJECT("UnauthorizedOperation.UserNotInProject"),
+     
+     /* 未知参数错误。 */
+     UNKNOWNPARAMETER("UnknownParameter"),
+     
+     /* 操作不支持。 */
+     UNSUPPORTEDOPERATION("UnsupportedOperation");
      
     private String value;
     private WedataErrorCode (String value){

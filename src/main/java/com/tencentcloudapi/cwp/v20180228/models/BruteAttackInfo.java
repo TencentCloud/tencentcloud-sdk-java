@@ -225,6 +225,13 @@ public class BruteAttackInfo extends AbstractModel {
     private String BanExpiredTime;
 
     /**
+    * IP分析
+    */
+    @SerializedName("IPAnalyse")
+    @Expose
+    private IPAnalyse IPAnalyse;
+
+    /**
      * Get 唯一Id 
      * @return Id 唯一Id
      */
@@ -704,6 +711,22 @@ public class BruteAttackInfo extends AbstractModel {
         this.BanExpiredTime = BanExpiredTime;
     }
 
+    /**
+     * Get IP分析 
+     * @return IPAnalyse IP分析
+     */
+    public IPAnalyse getIPAnalyse() {
+        return this.IPAnalyse;
+    }
+
+    /**
+     * Set IP分析
+     * @param IPAnalyse IP分析
+     */
+    public void setIPAnalyse(IPAnalyse IPAnalyse) {
+        this.IPAnalyse = IPAnalyse;
+    }
+
     public BruteAttackInfo() {
     }
 
@@ -793,6 +816,9 @@ public class BruteAttackInfo extends AbstractModel {
         if (source.BanExpiredTime != null) {
             this.BanExpiredTime = new String(source.BanExpiredTime);
         }
+        if (source.IPAnalyse != null) {
+            this.IPAnalyse = new IPAnalyse(source.IPAnalyse);
+        }
     }
 
 
@@ -827,6 +853,7 @@ public class BruteAttackInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "DataFrom", this.DataFrom);
         this.setParamSimple(map, prefix + "AttackStatusDesc", this.AttackStatusDesc);
         this.setParamSimple(map, prefix + "BanExpiredTime", this.BanExpiredTime);
+        this.setParamObj(map, prefix + "IPAnalyse.", this.IPAnalyse);
 
     }
 }

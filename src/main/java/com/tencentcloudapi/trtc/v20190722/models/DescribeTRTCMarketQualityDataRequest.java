@@ -54,6 +54,13 @@ h：按小时。此时返回查询时间范围内 UTC 时间为整小时的数�
     private String Period;
 
     /**
+    * 返回数据是否为小数
+    */
+    @SerializedName("IsFloat")
+    @Expose
+    private Boolean IsFloat;
+
+    /**
      * Get 用户SdkAppId（如：1400xxxxxx） 
      * @return SdkAppId 用户SdkAppId（如：1400xxxxxx）
      */
@@ -125,6 +132,22 @@ h：按小时。此时返回查询时间范围内 UTC 时间为整小时的数�
         this.Period = Period;
     }
 
+    /**
+     * Get 返回数据是否为小数 
+     * @return IsFloat 返回数据是否为小数
+     */
+    public Boolean getIsFloat() {
+        return this.IsFloat;
+    }
+
+    /**
+     * Set 返回数据是否为小数
+     * @param IsFloat 返回数据是否为小数
+     */
+    public void setIsFloat(Boolean IsFloat) {
+        this.IsFloat = IsFloat;
+    }
+
     public DescribeTRTCMarketQualityDataRequest() {
     }
 
@@ -145,6 +168,9 @@ h：按小时。此时返回查询时间范围内 UTC 时间为整小时的数�
         if (source.Period != null) {
             this.Period = new String(source.Period);
         }
+        if (source.IsFloat != null) {
+            this.IsFloat = new Boolean(source.IsFloat);
+        }
     }
 
 
@@ -156,6 +182,7 @@ h：按小时。此时返回查询时间范围内 UTC 时间为整小时的数�
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "Period", this.Period);
+        this.setParamSimple(map, prefix + "IsFloat", this.IsFloat);
 
     }
 }

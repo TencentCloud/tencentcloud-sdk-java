@@ -36,7 +36,7 @@ Other 混合云专区
     private String MachineType;
 
     /**
-    * 机器所属地域。如：ap-guangzhou，ap-shanghai
+    * 机器所属地域。如：ap-guangzhou，ap-shanghai，非腾讯云主机使用：ap-others
     */
     @SerializedName("MachineRegion")
     @Expose
@@ -119,16 +119,16 @@ Other 混合云专区
     }
 
     /**
-     * Get 机器所属地域。如：ap-guangzhou，ap-shanghai 
-     * @return MachineRegion 机器所属地域。如：ap-guangzhou，ap-shanghai
+     * Get 机器所属地域。如：ap-guangzhou，ap-shanghai，非腾讯云主机使用：ap-others 
+     * @return MachineRegion 机器所属地域。如：ap-guangzhou，ap-shanghai，非腾讯云主机使用：ap-others
      */
     public String getMachineRegion() {
         return this.MachineRegion;
     }
 
     /**
-     * Set 机器所属地域。如：ap-guangzhou，ap-shanghai
-     * @param MachineRegion 机器所属地域。如：ap-guangzhou，ap-shanghai
+     * Set 机器所属地域。如：ap-guangzhou，ap-shanghai，非腾讯云主机使用：ap-others
+     * @param MachineRegion 机器所属地域。如：ap-guangzhou，ap-shanghai，非腾讯云主机使用：ap-others
      */
     public void setMachineRegion(String MachineRegion) {
         this.MachineRegion = MachineRegion;

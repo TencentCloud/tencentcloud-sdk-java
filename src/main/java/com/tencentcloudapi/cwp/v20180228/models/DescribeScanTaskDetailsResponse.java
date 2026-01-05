@@ -129,6 +129,13 @@ public class DescribeScanTaskDetailsResponse extends AbstractModel {
     private Long VulCount;
 
     /**
+    * 单独扫描kb时的信息
+    */
+    @SerializedName("PatchInfo")
+    @Expose
+    private PatchInfoDetail [] PatchInfo;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -376,6 +383,22 @@ public class DescribeScanTaskDetailsResponse extends AbstractModel {
     }
 
     /**
+     * Get 单独扫描kb时的信息 
+     * @return PatchInfo 单独扫描kb时的信息
+     */
+    public PatchInfoDetail [] getPatchInfo() {
+        return this.PatchInfo;
+    }
+
+    /**
+     * Set 单独扫描kb时的信息
+     * @param PatchInfo 单独扫描kb时的信息
+     */
+    public void setPatchInfo(PatchInfoDetail [] PatchInfo) {
+        this.PatchInfo = PatchInfo;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -453,6 +476,12 @@ public class DescribeScanTaskDetailsResponse extends AbstractModel {
         if (source.VulCount != null) {
             this.VulCount = new Long(source.VulCount);
         }
+        if (source.PatchInfo != null) {
+            this.PatchInfo = new PatchInfoDetail[source.PatchInfo.length];
+            for (int i = 0; i < source.PatchInfo.length; i++) {
+                this.PatchInfo[i] = new PatchInfoDetail(source.PatchInfo[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -478,6 +507,7 @@ public class DescribeScanTaskDetailsResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "StoppingAll", this.StoppingAll);
         this.setParamSimple(map, prefix + "VulCount", this.VulCount);
+        this.setParamArrayObj(map, prefix + "PatchInfo.", this.PatchInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

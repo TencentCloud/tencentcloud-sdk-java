@@ -143,6 +143,20 @@ public class NetAttackEvent extends AbstractModel {
     private Boolean New;
 
     /**
+    * 是否开启应用防护，0关闭，1开启
+    */
+    @SerializedName("RaspOpen")
+    @Expose
+    private Long RaspOpen;
+
+    /**
+    * ip分析
+    */
+    @SerializedName("IPAnalyse")
+    @Expose
+    private IPAnalyse IPAnalyse;
+
+    /**
      * Get 日志ID 
      * @return Id 日志ID
      */
@@ -414,6 +428,38 @@ public class NetAttackEvent extends AbstractModel {
         this.New = New;
     }
 
+    /**
+     * Get 是否开启应用防护，0关闭，1开启 
+     * @return RaspOpen 是否开启应用防护，0关闭，1开启
+     */
+    public Long getRaspOpen() {
+        return this.RaspOpen;
+    }
+
+    /**
+     * Set 是否开启应用防护，0关闭，1开启
+     * @param RaspOpen 是否开启应用防护，0关闭，1开启
+     */
+    public void setRaspOpen(Long RaspOpen) {
+        this.RaspOpen = RaspOpen;
+    }
+
+    /**
+     * Get ip分析 
+     * @return IPAnalyse ip分析
+     */
+    public IPAnalyse getIPAnalyse() {
+        return this.IPAnalyse;
+    }
+
+    /**
+     * Set ip分析
+     * @param IPAnalyse ip分析
+     */
+    public void setIPAnalyse(IPAnalyse IPAnalyse) {
+        this.IPAnalyse = IPAnalyse;
+    }
+
     public NetAttackEvent() {
     }
 
@@ -473,6 +519,12 @@ public class NetAttackEvent extends AbstractModel {
         if (source.New != null) {
             this.New = new Boolean(source.New);
         }
+        if (source.RaspOpen != null) {
+            this.RaspOpen = new Long(source.RaspOpen);
+        }
+        if (source.IPAnalyse != null) {
+            this.IPAnalyse = new IPAnalyse(source.IPAnalyse);
+        }
     }
 
 
@@ -497,6 +549,8 @@ public class NetAttackEvent extends AbstractModel {
         this.setParamSimple(map, prefix + "Quuid", this.Quuid);
         this.setParamSimple(map, prefix + "Count", this.Count);
         this.setParamSimple(map, prefix + "New", this.New);
+        this.setParamSimple(map, prefix + "RaspOpen", this.RaspOpen);
+        this.setParamObj(map, prefix + "IPAnalyse.", this.IPAnalyse);
 
     }
 }

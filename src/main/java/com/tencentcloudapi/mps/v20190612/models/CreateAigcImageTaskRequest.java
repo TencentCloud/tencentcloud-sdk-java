@@ -28,7 +28,6 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
 当前支持的模型列表：
 Hunyuan,
 GEM，
-Jimeng，
 Qwen。
     */
     @SerializedName("ModelName")
@@ -39,7 +38,6 @@ Qwen。
     * 指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。
 
 1. GEM， 可选[2.5,3.0]。
-2. Jimeng，可选[4.0]。
     */
     @SerializedName("ModelVersion")
     @Expose
@@ -106,13 +104,11 @@ Qwen。
 当前支持的模型列表：
 Hunyuan,
 GEM，
-Jimeng，
 Qwen。 
      * @return ModelName 模型名称。
 当前支持的模型列表：
 Hunyuan,
 GEM，
-Jimeng，
 Qwen。
      */
     public String getModelName() {
@@ -124,13 +120,11 @@ Qwen。
 当前支持的模型列表：
 Hunyuan,
 GEM，
-Jimeng，
 Qwen。
      * @param ModelName 模型名称。
 当前支持的模型列表：
 Hunyuan,
 GEM，
-Jimeng，
 Qwen。
      */
     public void setModelName(String ModelName) {
@@ -140,12 +134,10 @@ Qwen。
     /**
      * Get 指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。
 
-1. GEM， 可选[2.5,3.0]。
-2. Jimeng，可选[4.0]。 
+1. GEM， 可选[2.5,3.0]。 
      * @return ModelVersion 指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。
 
 1. GEM， 可选[2.5,3.0]。
-2. Jimeng，可选[4.0]。
      */
     public String getModelVersion() {
         return this.ModelVersion;
@@ -155,11 +147,9 @@ Qwen。
      * Set 指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。
 
 1. GEM， 可选[2.5,3.0]。
-2. Jimeng，可选[4.0]。
      * @param ModelVersion 指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。
 
 1. GEM， 可选[2.5,3.0]。
-2. Jimeng，可选[4.0]。
      */
     public void setModelVersion(String ModelVersion) {
         this.ModelVersion = ModelVersion;

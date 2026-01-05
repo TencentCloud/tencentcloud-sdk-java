@@ -24,18 +24,18 @@ import java.util.HashMap;
 public class CreateVulFixTaskQuuids extends AbstractModel {
 
     /**
-    * 漏洞id
-    */
-    @SerializedName("VulId")
-    @Expose
-    private Long VulId;
-
-    /**
     * 需要修复漏洞的主机，所有主机必须有VulId的这个漏洞且是待修复状态。
     */
     @SerializedName("Quuids")
     @Expose
     private String [] Quuids;
+
+    /**
+    * 漏洞id
+    */
+    @SerializedName("VulId")
+    @Expose
+    private Long VulId;
 
     /**
     * 修复方式 0组件更新或者安装补丁,1禁用服务
@@ -45,20 +45,11 @@ public class CreateVulFixTaskQuuids extends AbstractModel {
     private Long FixMethod;
 
     /**
-     * Get 漏洞id 
-     * @return VulId 漏洞id
-     */
-    public Long getVulId() {
-        return this.VulId;
-    }
-
-    /**
-     * Set 漏洞id
-     * @param VulId 漏洞id
-     */
-    public void setVulId(Long VulId) {
-        this.VulId = VulId;
-    }
+    * kb id
+    */
+    @SerializedName("KbId")
+    @Expose
+    private Long KbId;
 
     /**
      * Get 需要修复漏洞的主机，所有主机必须有VulId的这个漏洞且是待修复状态。 
@@ -77,6 +68,22 @@ public class CreateVulFixTaskQuuids extends AbstractModel {
     }
 
     /**
+     * Get 漏洞id 
+     * @return VulId 漏洞id
+     */
+    public Long getVulId() {
+        return this.VulId;
+    }
+
+    /**
+     * Set 漏洞id
+     * @param VulId 漏洞id
+     */
+    public void setVulId(Long VulId) {
+        this.VulId = VulId;
+    }
+
+    /**
      * Get 修复方式 0组件更新或者安装补丁,1禁用服务 
      * @return FixMethod 修复方式 0组件更新或者安装补丁,1禁用服务
      */
@@ -92,6 +99,22 @@ public class CreateVulFixTaskQuuids extends AbstractModel {
         this.FixMethod = FixMethod;
     }
 
+    /**
+     * Get kb id 
+     * @return KbId kb id
+     */
+    public Long getKbId() {
+        return this.KbId;
+    }
+
+    /**
+     * Set kb id
+     * @param KbId kb id
+     */
+    public void setKbId(Long KbId) {
+        this.KbId = KbId;
+    }
+
     public CreateVulFixTaskQuuids() {
     }
 
@@ -100,17 +123,20 @@ public class CreateVulFixTaskQuuids extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateVulFixTaskQuuids(CreateVulFixTaskQuuids source) {
-        if (source.VulId != null) {
-            this.VulId = new Long(source.VulId);
-        }
         if (source.Quuids != null) {
             this.Quuids = new String[source.Quuids.length];
             for (int i = 0; i < source.Quuids.length; i++) {
                 this.Quuids[i] = new String(source.Quuids[i]);
             }
         }
+        if (source.VulId != null) {
+            this.VulId = new Long(source.VulId);
+        }
         if (source.FixMethod != null) {
             this.FixMethod = new Long(source.FixMethod);
+        }
+        if (source.KbId != null) {
+            this.KbId = new Long(source.KbId);
         }
     }
 
@@ -119,9 +145,10 @@ public class CreateVulFixTaskQuuids extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "VulId", this.VulId);
         this.setParamArraySimple(map, prefix + "Quuids.", this.Quuids);
+        this.setParamSimple(map, prefix + "VulId", this.VulId);
         this.setParamSimple(map, prefix + "FixMethod", this.FixMethod);
+        this.setParamSimple(map, prefix + "KbId", this.KbId);
 
     }
 }

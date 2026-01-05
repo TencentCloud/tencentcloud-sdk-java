@@ -241,6 +241,13 @@ public class CreateJobConfigRequest extends AbstractModel {
     private Float JobManagerMem;
 
     /**
+    * jdk版本
+    */
+    @SerializedName("JdkVersion")
+    @Expose
+    private String JdkVersion;
+
+    /**
     * TaskManager cpu
     */
     @SerializedName("TaskManagerCpu")
@@ -779,6 +786,22 @@ public class CreateJobConfigRequest extends AbstractModel {
     }
 
     /**
+     * Get jdk版本 
+     * @return JdkVersion jdk版本
+     */
+    public String getJdkVersion() {
+        return this.JdkVersion;
+    }
+
+    /**
+     * Set jdk版本
+     * @param JdkVersion jdk版本
+     */
+    public void setJdkVersion(String JdkVersion) {
+        this.JdkVersion = JdkVersion;
+    }
+
+    /**
      * Get TaskManager cpu 
      * @return TaskManagerCpu TaskManager cpu
      */
@@ -984,6 +1007,9 @@ public class CreateJobConfigRequest extends AbstractModel {
         if (source.JobManagerMem != null) {
             this.JobManagerMem = new Float(source.JobManagerMem);
         }
+        if (source.JdkVersion != null) {
+            this.JdkVersion = new String(source.JdkVersion);
+        }
         if (source.TaskManagerCpu != null) {
             this.TaskManagerCpu = new Float(source.TaskManagerCpu);
         }
@@ -1040,6 +1066,7 @@ public class CreateJobConfigRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "FlinkVersion", this.FlinkVersion);
         this.setParamSimple(map, prefix + "JobManagerCpu", this.JobManagerCpu);
         this.setParamSimple(map, prefix + "JobManagerMem", this.JobManagerMem);
+        this.setParamSimple(map, prefix + "JdkVersion", this.JdkVersion);
         this.setParamSimple(map, prefix + "TaskManagerCpu", this.TaskManagerCpu);
         this.setParamSimple(map, prefix + "TaskManagerMem", this.TaskManagerMem);
         this.setParamSimple(map, prefix + "UseOldSystemConnector", this.UseOldSystemConnector);

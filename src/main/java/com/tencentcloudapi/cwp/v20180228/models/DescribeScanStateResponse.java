@@ -80,6 +80,13 @@ public class DescribeScanStateResponse extends AbstractModel {
     private String ScanEndTime;
 
     /**
+    * 任务扫描的KB编号
+    */
+    @SerializedName("KBNumber")
+    @Expose
+    private String [] KBNumber;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -215,6 +222,22 @@ public class DescribeScanStateResponse extends AbstractModel {
     }
 
     /**
+     * Get 任务扫描的KB编号 
+     * @return KBNumber 任务扫描的KB编号
+     */
+    public String [] getKBNumber() {
+        return this.KBNumber;
+    }
+
+    /**
+     * Set 任务扫描的KB编号
+     * @param KBNumber 任务扫描的KB编号
+     */
+    public void setKBNumber(String [] KBNumber) {
+        this.KBNumber = KBNumber;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -265,6 +288,12 @@ public class DescribeScanStateResponse extends AbstractModel {
         if (source.ScanEndTime != null) {
             this.ScanEndTime = new String(source.ScanEndTime);
         }
+        if (source.KBNumber != null) {
+            this.KBNumber = new String[source.KBNumber.length];
+            for (int i = 0; i < source.KBNumber.length; i++) {
+                this.KBNumber[i] = new String(source.KBNumber[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -283,6 +312,7 @@ public class DescribeScanStateResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ScanBeginTime", this.ScanBeginTime);
         this.setParamSimple(map, prefix + "RiskEventCount", this.RiskEventCount);
         this.setParamSimple(map, prefix + "ScanEndTime", this.ScanEndTime);
+        this.setParamArraySimple(map, prefix + "KBNumber.", this.KBNumber);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

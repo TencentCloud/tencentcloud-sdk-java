@@ -33,6 +33,16 @@ public class ModifyAutoOpenProVersionConfigRequest extends AbstractModel {
     private String Status;
 
     /**
+    * 加固防护模式
+PROVERSION_POSTPAY 专业版-按量计费
+PROVERSION_PREPAY 专业版-包年包月
+FLAGSHIP_PREPAY 旗舰版-包年包月
+    */
+    @SerializedName("ProtectType")
+    @Expose
+    private String ProtectType;
+
+    /**
     * 自动加购/扩容授权开关,默认 1, 0关闭, 1开启
     */
     @SerializedName("AutoRepurchaseSwitch")
@@ -68,6 +78,13 @@ public class ModifyAutoOpenProVersionConfigRequest extends AbstractModel {
     private Long AutoOpenRaspSwitch;
 
     /**
+    * 自动缩容开关,0 关闭 1开启
+    */
+    @SerializedName("AutoDowngradeSwitch")
+    @Expose
+    private Long AutoDowngradeSwitch;
+
+    /**
      * Get 设置自动开通状态。
 <li>CLOSE：关闭</li>
 <li>OPEN：打开</li> 
@@ -89,6 +106,34 @@ public class ModifyAutoOpenProVersionConfigRequest extends AbstractModel {
      */
     public void setStatus(String Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get 加固防护模式
+PROVERSION_POSTPAY 专业版-按量计费
+PROVERSION_PREPAY 专业版-包年包月
+FLAGSHIP_PREPAY 旗舰版-包年包月 
+     * @return ProtectType 加固防护模式
+PROVERSION_POSTPAY 专业版-按量计费
+PROVERSION_PREPAY 专业版-包年包月
+FLAGSHIP_PREPAY 旗舰版-包年包月
+     */
+    public String getProtectType() {
+        return this.ProtectType;
+    }
+
+    /**
+     * Set 加固防护模式
+PROVERSION_POSTPAY 专业版-按量计费
+PROVERSION_PREPAY 专业版-包年包月
+FLAGSHIP_PREPAY 旗舰版-包年包月
+     * @param ProtectType 加固防护模式
+PROVERSION_POSTPAY 专业版-按量计费
+PROVERSION_PREPAY 专业版-包年包月
+FLAGSHIP_PREPAY 旗舰版-包年包月
+     */
+    public void setProtectType(String ProtectType) {
+        this.ProtectType = ProtectType;
     }
 
     /**
@@ -171,6 +216,22 @@ public class ModifyAutoOpenProVersionConfigRequest extends AbstractModel {
         this.AutoOpenRaspSwitch = AutoOpenRaspSwitch;
     }
 
+    /**
+     * Get 自动缩容开关,0 关闭 1开启 
+     * @return AutoDowngradeSwitch 自动缩容开关,0 关闭 1开启
+     */
+    public Long getAutoDowngradeSwitch() {
+        return this.AutoDowngradeSwitch;
+    }
+
+    /**
+     * Set 自动缩容开关,0 关闭 1开启
+     * @param AutoDowngradeSwitch 自动缩容开关,0 关闭 1开启
+     */
+    public void setAutoDowngradeSwitch(Long AutoDowngradeSwitch) {
+        this.AutoDowngradeSwitch = AutoDowngradeSwitch;
+    }
+
     public ModifyAutoOpenProVersionConfigRequest() {
     }
 
@@ -181,6 +242,9 @@ public class ModifyAutoOpenProVersionConfigRequest extends AbstractModel {
     public ModifyAutoOpenProVersionConfigRequest(ModifyAutoOpenProVersionConfigRequest source) {
         if (source.Status != null) {
             this.Status = new String(source.Status);
+        }
+        if (source.ProtectType != null) {
+            this.ProtectType = new String(source.ProtectType);
         }
         if (source.AutoRepurchaseSwitch != null) {
             this.AutoRepurchaseSwitch = new Long(source.AutoRepurchaseSwitch);
@@ -197,6 +261,9 @@ public class ModifyAutoOpenProVersionConfigRequest extends AbstractModel {
         if (source.AutoOpenRaspSwitch != null) {
             this.AutoOpenRaspSwitch = new Long(source.AutoOpenRaspSwitch);
         }
+        if (source.AutoDowngradeSwitch != null) {
+            this.AutoDowngradeSwitch = new Long(source.AutoDowngradeSwitch);
+        }
     }
 
 
@@ -205,11 +272,13 @@ public class ModifyAutoOpenProVersionConfigRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "ProtectType", this.ProtectType);
         this.setParamSimple(map, prefix + "AutoRepurchaseSwitch", this.AutoRepurchaseSwitch);
         this.setParamSimple(map, prefix + "AutoRepurchaseRenewSwitch", this.AutoRepurchaseRenewSwitch);
         this.setParamSimple(map, prefix + "RepurchaseRenewSwitch", this.RepurchaseRenewSwitch);
         this.setParamSimple(map, prefix + "AutoBindRaspSwitch", this.AutoBindRaspSwitch);
         this.setParamSimple(map, prefix + "AutoOpenRaspSwitch", this.AutoOpenRaspSwitch);
+        this.setParamSimple(map, prefix + "AutoDowngradeSwitch", this.AutoDowngradeSwitch);
 
     }
 }

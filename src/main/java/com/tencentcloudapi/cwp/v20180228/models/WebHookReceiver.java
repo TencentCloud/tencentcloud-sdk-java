@@ -45,6 +45,48 @@ public class WebHookReceiver extends AbstractModel {
     private String Addr;
 
     /**
+    * 类型
+    */
+    @SerializedName("Type")
+    @Expose
+    private Long Type;
+
+    /**
+    * 目标地域
+    */
+    @SerializedName("SCFRegion")
+    @Expose
+    private String SCFRegion;
+
+    /**
+    * 命名空间
+    */
+    @SerializedName("Namespace")
+    @Expose
+    private String Namespace;
+
+    /**
+    * 函数名称
+    */
+    @SerializedName("FunctionName")
+    @Expose
+    private String FunctionName;
+
+    /**
+    * 版本
+    */
+    @SerializedName("FunctionVersion")
+    @Expose
+    private String FunctionVersion;
+
+    /**
+    * 别名
+    */
+    @SerializedName("Alias")
+    @Expose
+    private String Alias;
+
+    /**
      * Get id 
      * @return Id id
      */
@@ -92,6 +134,102 @@ public class WebHookReceiver extends AbstractModel {
         this.Addr = Addr;
     }
 
+    /**
+     * Get 类型 
+     * @return Type 类型
+     */
+    public Long getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 类型
+     * @param Type 类型
+     */
+    public void setType(Long Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get 目标地域 
+     * @return SCFRegion 目标地域
+     */
+    public String getSCFRegion() {
+        return this.SCFRegion;
+    }
+
+    /**
+     * Set 目标地域
+     * @param SCFRegion 目标地域
+     */
+    public void setSCFRegion(String SCFRegion) {
+        this.SCFRegion = SCFRegion;
+    }
+
+    /**
+     * Get 命名空间 
+     * @return Namespace 命名空间
+     */
+    public String getNamespace() {
+        return this.Namespace;
+    }
+
+    /**
+     * Set 命名空间
+     * @param Namespace 命名空间
+     */
+    public void setNamespace(String Namespace) {
+        this.Namespace = Namespace;
+    }
+
+    /**
+     * Get 函数名称 
+     * @return FunctionName 函数名称
+     */
+    public String getFunctionName() {
+        return this.FunctionName;
+    }
+
+    /**
+     * Set 函数名称
+     * @param FunctionName 函数名称
+     */
+    public void setFunctionName(String FunctionName) {
+        this.FunctionName = FunctionName;
+    }
+
+    /**
+     * Get 版本 
+     * @return FunctionVersion 版本
+     */
+    public String getFunctionVersion() {
+        return this.FunctionVersion;
+    }
+
+    /**
+     * Set 版本
+     * @param FunctionVersion 版本
+     */
+    public void setFunctionVersion(String FunctionVersion) {
+        this.FunctionVersion = FunctionVersion;
+    }
+
+    /**
+     * Get 别名 
+     * @return Alias 别名
+     */
+    public String getAlias() {
+        return this.Alias;
+    }
+
+    /**
+     * Set 别名
+     * @param Alias 别名
+     */
+    public void setAlias(String Alias) {
+        this.Alias = Alias;
+    }
+
     public WebHookReceiver() {
     }
 
@@ -109,6 +247,24 @@ public class WebHookReceiver extends AbstractModel {
         if (source.Addr != null) {
             this.Addr = new String(source.Addr);
         }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.SCFRegion != null) {
+            this.SCFRegion = new String(source.SCFRegion);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.FunctionName != null) {
+            this.FunctionName = new String(source.FunctionName);
+        }
+        if (source.FunctionVersion != null) {
+            this.FunctionVersion = new String(source.FunctionVersion);
+        }
+        if (source.Alias != null) {
+            this.Alias = new String(source.Alias);
+        }
     }
 
 
@@ -119,6 +275,12 @@ public class WebHookReceiver extends AbstractModel {
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Addr", this.Addr);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "SCFRegion", this.SCFRegion);
+        this.setParamSimple(map, prefix + "Namespace", this.Namespace);
+        this.setParamSimple(map, prefix + "FunctionName", this.FunctionName);
+        this.setParamSimple(map, prefix + "FunctionVersion", this.FunctionVersion);
+        this.setParamSimple(map, prefix + "Alias", this.Alias);
 
     }
 }

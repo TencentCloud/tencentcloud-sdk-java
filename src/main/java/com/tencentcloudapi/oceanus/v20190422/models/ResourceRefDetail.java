@@ -66,6 +66,13 @@ public class ResourceRefDetail extends AbstractModel {
     private String Connector;
 
     /**
+    * Connector版本
+    */
+    @SerializedName("ConnectorVersion")
+    @Expose
+    private String ConnectorVersion;
+
+    /**
      * Get 资源id 
      * @return ResourceId 资源id
      */
@@ -161,6 +168,22 @@ public class ResourceRefDetail extends AbstractModel {
         this.Connector = Connector;
     }
 
+    /**
+     * Get Connector版本 
+     * @return ConnectorVersion Connector版本
+     */
+    public String getConnectorVersion() {
+        return this.ConnectorVersion;
+    }
+
+    /**
+     * Set Connector版本
+     * @param ConnectorVersion Connector版本
+     */
+    public void setConnectorVersion(String ConnectorVersion) {
+        this.ConnectorVersion = ConnectorVersion;
+    }
+
     public ResourceRefDetail() {
     }
 
@@ -187,6 +210,9 @@ public class ResourceRefDetail extends AbstractModel {
         if (source.Connector != null) {
             this.Connector = new String(source.Connector);
         }
+        if (source.ConnectorVersion != null) {
+            this.ConnectorVersion = new String(source.ConnectorVersion);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class ResourceRefDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "SystemProvide", this.SystemProvide);
         this.setParamSimple(map, prefix + "Connector", this.Connector);
+        this.setParamSimple(map, prefix + "ConnectorVersion", this.ConnectorVersion);
 
     }
 }

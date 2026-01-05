@@ -116,7 +116,9 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *对执行失败的任务批次执行续跑
+     *分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+
+对执行失败的任务批次执行续跑
      * @param req ContinueRunFailedTaskBatchRequest
      * @return ContinueRunFailedTaskBatchResponse
      * @throws TencentCloudSDKException
@@ -413,7 +415,9 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *创建任务
+     *分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+
+创建任务
      * @param req CreateTaskRequest
      * @return CreateTaskResponse
      * @throws TencentCloudSDKException
@@ -424,7 +428,9 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *创建工作流
+     *分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+
+创建工作流
      * @param req CreateTaskFlowRequest
      * @return CreateTaskFlowResponse
      * @throws TencentCloudSDKException
@@ -691,7 +697,9 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *删除任务
+     *分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+
+删除任务
      * @param req DeleteTaskRequest
      * @return DeleteTaskResponse
      * @throws TencentCloudSDKException
@@ -1124,7 +1132,9 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *查询工作流最新一个批次的状态信息
+     *分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+
+查询工作流最新一个批次的状态信息
      * @param req DescribeFlowLastBatchStateRequest
      * @return DescribeFlowLastBatchStateResponse
      * @throws TencentCloudSDKException
@@ -1696,7 +1706,9 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *查询任务详情
+     *分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+
+查询任务详情
      * @param req DescribeTaskDetailRequest
      * @return DescribeTaskDetailResponse
      * @throws TencentCloudSDKException
@@ -1707,7 +1719,9 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *查询任务最近一次执行状态
+     *分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+
+查询任务最近一次执行状态
      * @param req DescribeTaskLastStatusRequest
      * @return DescribeTaskLastStatusResponse
      * @throws TencentCloudSDKException
@@ -1718,7 +1732,9 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *翻页查询任务列表
+     *分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+
+翻页查询任务列表
      * @param req DescribeTaskRecordsRequest
      * @return DescribeTaskRecordsResponse
      * @throws TencentCloudSDKException
@@ -1818,7 +1834,9 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *停用任务
+     *分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+
+停用任务
      * @param req DisableTaskRequest
      * @return DisableTaskResponse
      * @throws TencentCloudSDKException
@@ -1829,7 +1847,9 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *停用工作流
+     *分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+
+停用工作流
      * @param req DisableTaskFlowRequest
      * @return DisableTaskFlowResponse
      * @throws TencentCloudSDKException
@@ -1906,7 +1926,9 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *启用任务
+     *分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+
+启用任务
      * @param req EnableTaskRequest
      * @return EnableTaskResponse
      * @throws TencentCloudSDKException
@@ -1917,7 +1939,9 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *启用工作流
+     *分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+
+启用工作流
      * @param req EnableTaskFlowRequest
      * @return EnableTaskFlowResponse
      * @throws TencentCloudSDKException
@@ -1950,7 +1974,9 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *手动执行一次任务
+     *分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+
+手动执行一次任务
      * @param req ExecuteTaskRequest
      * @return ExecuteTaskResponse
      * @throws TencentCloudSDKException
@@ -1961,7 +1987,9 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *执行一次工作流
+     *分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+
+执行一次工作流
      * @param req ExecuteTaskFlowRequest
      * @return ExecuteTaskFlowResponse
      * @throws TencentCloudSDKException
@@ -2115,7 +2143,9 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *修改任务
+     *分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+
+修改任务
      * @param req ModifyTaskRequest
      * @return ModifyTaskResponse
      * @throws TencentCloudSDKException
@@ -2162,7 +2192,9 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *重新执行任务
+     *分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+
+重新执行任务
      * @param req RedoTaskRequest
      * @return RedoTaskResponse
      * @throws TencentCloudSDKException
@@ -2173,7 +2205,9 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *重新执行任务批次
+     *分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+
+重新执行任务批次
      * @param req RedoTaskBatchRequest
      * @return RedoTaskBatchResponse
      * @throws TencentCloudSDKException
@@ -2184,7 +2218,9 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *重新执行在某个节点上执行任务。
+     *分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+
+重新执行在某个节点上执行任务。
      * @param req RedoTaskExecuteRequest
      * @return RedoTaskExecuteResponse
      * @throws TencentCloudSDKException
@@ -2195,7 +2231,9 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *重新执行工作流批次
+     *分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+
+重新执行工作流批次
      * @param req RedoTaskFlowBatchRequest
      * @return RedoTaskFlowBatchResponse
      * @throws TencentCloudSDKException
@@ -2404,7 +2442,9 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *停止执行中的任务批次， 非运行中的任务不可调用。
+     *分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+
+停止执行中的任务批次， 非运行中的任务不可调用。
      * @param req StopTaskBatchRequest
      * @return StopTaskBatchResponse
      * @throws TencentCloudSDKException
@@ -2415,7 +2455,9 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *停止正在某个节点上执行的任务
+     *分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+
+停止正在某个节点上执行的任务
      * @param req StopTaskExecuteRequest
      * @return StopTaskExecuteResponse
      * @throws TencentCloudSDKException
@@ -2426,7 +2468,9 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *停止一个工作流批次
+     *分布式任务调度 TCT 已到达 EOMS 节点，进行产品下线处理。退市公告https://cloud.tencent.com/announce/detail/2053
+
+停止一个工作流批次
      * @param req TerminateTaskFlowBatchRequest
      * @return TerminateTaskFlowBatchResponse
      * @throws TencentCloudSDKException

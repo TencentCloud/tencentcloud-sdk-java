@@ -173,6 +173,13 @@ public class ClusterSession extends AbstractModel {
     private Float TaskManagerMem;
 
     /**
+    * jdk版本
+    */
+    @SerializedName("JdkVersion")
+    @Expose
+    private String JdkVersion;
+
+    /**
      * Get 集群SerialId 
      * @return ClusterGroupSerialId 集群SerialId
      */
@@ -516,6 +523,22 @@ public class ClusterSession extends AbstractModel {
         this.TaskManagerMem = TaskManagerMem;
     }
 
+    /**
+     * Get jdk版本 
+     * @return JdkVersion jdk版本
+     */
+    public String getJdkVersion() {
+        return this.JdkVersion;
+    }
+
+    /**
+     * Set jdk版本
+     * @param JdkVersion jdk版本
+     */
+    public void setJdkVersion(String JdkVersion) {
+        this.JdkVersion = JdkVersion;
+    }
+
     public ClusterSession() {
     }
 
@@ -593,6 +616,9 @@ public class ClusterSession extends AbstractModel {
         if (source.TaskManagerMem != null) {
             this.TaskManagerMem = new Float(source.TaskManagerMem);
         }
+        if (source.JdkVersion != null) {
+            this.JdkVersion = new String(source.JdkVersion);
+        }
     }
 
 
@@ -621,6 +647,7 @@ public class ClusterSession extends AbstractModel {
         this.setParamSimple(map, prefix + "JobManagerMem", this.JobManagerMem);
         this.setParamSimple(map, prefix + "TaskManagerCpu", this.TaskManagerCpu);
         this.setParamSimple(map, prefix + "TaskManagerMem", this.TaskManagerMem);
+        this.setParamSimple(map, prefix + "JdkVersion", this.JdkVersion);
 
     }
 }

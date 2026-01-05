@@ -24,230 +24,253 @@ import java.util.HashMap;
 public class SavingPlanUsageDetail extends AbstractModel {
 
     /**
-    * 节省计划类型
+    * <p>节省计划资源id</p>
+    */
+    @SerializedName("SpId")
+    @Expose
+    private String SpId;
+
+    /**
+    * <p>节省计划类型</p>
     */
     @SerializedName("SpType")
     @Expose
     private String SpType;
 
     /**
-    * 节省计划状态
+    * <p>节省计划状态</p>枚举值：<ul><li> 1：  生效</li><li> 2： 失效 </li><li> 3： 作废</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 累计抵扣的金额（单位：元）
+    * <p>累计抵扣的金额（单位：元）</p>
     */
     @SerializedName("DeductAmount")
     @Expose
     private String DeductAmount;
 
     /**
-    * 累计承诺消费金额（单位：元）
+    * <p>累计承诺消费金额（单位：元）</p>
     */
     @SerializedName("PromiseAmount")
     @Expose
     private String PromiseAmount;
 
     /**
-    * 累计净节省金额（单位：元）
+    * <p>累计净节省金额（单位：元）</p>
     */
     @SerializedName("NetSavings")
     @Expose
     private String NetSavings;
 
     /**
-    * 使用率
+    * <p>使用率</p>
     */
     @SerializedName("UtilizationRate")
     @Expose
     private Float UtilizationRate;
 
     /**
-    * 累计流失金额（单位：元）
+    * <p>累计流失金额（单位：元）</p>
     */
     @SerializedName("LossAmount")
     @Expose
     private String LossAmount;
 
     /**
-    * 累计按量计费预期金额（单位：元）
+    * <p>累计按量计费预期金额（单位：元）</p>
     */
     @SerializedName("DosageAmount")
     @Expose
     private String DosageAmount;
 
     /**
-    * 累计成本金额（单位：元）
+    * <p>累计成本金额（单位：元）</p>
     */
     @SerializedName("CostAmount")
     @Expose
     private String CostAmount;
 
     /**
-    * 地域
+    * <p>地域</p>
     */
     @SerializedName("Region")
     @Expose
     private String [] Region;
 
     /**
-     * Get 节省计划类型 
-     * @return SpType 节省计划类型
+     * Get <p>节省计划资源id</p> 
+     * @return SpId <p>节省计划资源id</p>
+     */
+    public String getSpId() {
+        return this.SpId;
+    }
+
+    /**
+     * Set <p>节省计划资源id</p>
+     * @param SpId <p>节省计划资源id</p>
+     */
+    public void setSpId(String SpId) {
+        this.SpId = SpId;
+    }
+
+    /**
+     * Get <p>节省计划类型</p> 
+     * @return SpType <p>节省计划类型</p>
      */
     public String getSpType() {
         return this.SpType;
     }
 
     /**
-     * Set 节省计划类型
-     * @param SpType 节省计划类型
+     * Set <p>节省计划类型</p>
+     * @param SpType <p>节省计划类型</p>
      */
     public void setSpType(String SpType) {
         this.SpType = SpType;
     }
 
     /**
-     * Get 节省计划状态 
-     * @return Status 节省计划状态
+     * Get <p>节省计划状态</p>枚举值：<ul><li> 1：  生效</li><li> 2： 失效 </li><li> 3： 作废</li></ul> 
+     * @return Status <p>节省计划状态</p>枚举值：<ul><li> 1：  生效</li><li> 2： 失效 </li><li> 3： 作废</li></ul>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 节省计划状态
-     * @param Status 节省计划状态
+     * Set <p>节省计划状态</p>枚举值：<ul><li> 1：  生效</li><li> 2： 失效 </li><li> 3： 作废</li></ul>
+     * @param Status <p>节省计划状态</p>枚举值：<ul><li> 1：  生效</li><li> 2： 失效 </li><li> 3： 作废</li></ul>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 累计抵扣的金额（单位：元） 
-     * @return DeductAmount 累计抵扣的金额（单位：元）
+     * Get <p>累计抵扣的金额（单位：元）</p> 
+     * @return DeductAmount <p>累计抵扣的金额（单位：元）</p>
      */
     public String getDeductAmount() {
         return this.DeductAmount;
     }
 
     /**
-     * Set 累计抵扣的金额（单位：元）
-     * @param DeductAmount 累计抵扣的金额（单位：元）
+     * Set <p>累计抵扣的金额（单位：元）</p>
+     * @param DeductAmount <p>累计抵扣的金额（单位：元）</p>
      */
     public void setDeductAmount(String DeductAmount) {
         this.DeductAmount = DeductAmount;
     }
 
     /**
-     * Get 累计承诺消费金额（单位：元） 
-     * @return PromiseAmount 累计承诺消费金额（单位：元）
+     * Get <p>累计承诺消费金额（单位：元）</p> 
+     * @return PromiseAmount <p>累计承诺消费金额（单位：元）</p>
      */
     public String getPromiseAmount() {
         return this.PromiseAmount;
     }
 
     /**
-     * Set 累计承诺消费金额（单位：元）
-     * @param PromiseAmount 累计承诺消费金额（单位：元）
+     * Set <p>累计承诺消费金额（单位：元）</p>
+     * @param PromiseAmount <p>累计承诺消费金额（单位：元）</p>
      */
     public void setPromiseAmount(String PromiseAmount) {
         this.PromiseAmount = PromiseAmount;
     }
 
     /**
-     * Get 累计净节省金额（单位：元） 
-     * @return NetSavings 累计净节省金额（单位：元）
+     * Get <p>累计净节省金额（单位：元）</p> 
+     * @return NetSavings <p>累计净节省金额（单位：元）</p>
      */
     public String getNetSavings() {
         return this.NetSavings;
     }
 
     /**
-     * Set 累计净节省金额（单位：元）
-     * @param NetSavings 累计净节省金额（单位：元）
+     * Set <p>累计净节省金额（单位：元）</p>
+     * @param NetSavings <p>累计净节省金额（单位：元）</p>
      */
     public void setNetSavings(String NetSavings) {
         this.NetSavings = NetSavings;
     }
 
     /**
-     * Get 使用率 
-     * @return UtilizationRate 使用率
+     * Get <p>使用率</p> 
+     * @return UtilizationRate <p>使用率</p>
      */
     public Float getUtilizationRate() {
         return this.UtilizationRate;
     }
 
     /**
-     * Set 使用率
-     * @param UtilizationRate 使用率
+     * Set <p>使用率</p>
+     * @param UtilizationRate <p>使用率</p>
      */
     public void setUtilizationRate(Float UtilizationRate) {
         this.UtilizationRate = UtilizationRate;
     }
 
     /**
-     * Get 累计流失金额（单位：元） 
-     * @return LossAmount 累计流失金额（单位：元）
+     * Get <p>累计流失金额（单位：元）</p> 
+     * @return LossAmount <p>累计流失金额（单位：元）</p>
      */
     public String getLossAmount() {
         return this.LossAmount;
     }
 
     /**
-     * Set 累计流失金额（单位：元）
-     * @param LossAmount 累计流失金额（单位：元）
+     * Set <p>累计流失金额（单位：元）</p>
+     * @param LossAmount <p>累计流失金额（单位：元）</p>
      */
     public void setLossAmount(String LossAmount) {
         this.LossAmount = LossAmount;
     }
 
     /**
-     * Get 累计按量计费预期金额（单位：元） 
-     * @return DosageAmount 累计按量计费预期金额（单位：元）
+     * Get <p>累计按量计费预期金额（单位：元）</p> 
+     * @return DosageAmount <p>累计按量计费预期金额（单位：元）</p>
      */
     public String getDosageAmount() {
         return this.DosageAmount;
     }
 
     /**
-     * Set 累计按量计费预期金额（单位：元）
-     * @param DosageAmount 累计按量计费预期金额（单位：元）
+     * Set <p>累计按量计费预期金额（单位：元）</p>
+     * @param DosageAmount <p>累计按量计费预期金额（单位：元）</p>
      */
     public void setDosageAmount(String DosageAmount) {
         this.DosageAmount = DosageAmount;
     }
 
     /**
-     * Get 累计成本金额（单位：元） 
-     * @return CostAmount 累计成本金额（单位：元）
+     * Get <p>累计成本金额（单位：元）</p> 
+     * @return CostAmount <p>累计成本金额（单位：元）</p>
      */
     public String getCostAmount() {
         return this.CostAmount;
     }
 
     /**
-     * Set 累计成本金额（单位：元）
-     * @param CostAmount 累计成本金额（单位：元）
+     * Set <p>累计成本金额（单位：元）</p>
+     * @param CostAmount <p>累计成本金额（单位：元）</p>
      */
     public void setCostAmount(String CostAmount) {
         this.CostAmount = CostAmount;
     }
 
     /**
-     * Get 地域 
-     * @return Region 地域
+     * Get <p>地域</p> 
+     * @return Region <p>地域</p>
      */
     public String [] getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 地域
-     * @param Region 地域
+     * Set <p>地域</p>
+     * @param Region <p>地域</p>
      */
     public void setRegion(String [] Region) {
         this.Region = Region;
@@ -261,6 +284,9 @@ public class SavingPlanUsageDetail extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public SavingPlanUsageDetail(SavingPlanUsageDetail source) {
+        if (source.SpId != null) {
+            this.SpId = new String(source.SpId);
+        }
         if (source.SpType != null) {
             this.SpType = new String(source.SpType);
         }
@@ -301,6 +327,7 @@ public class SavingPlanUsageDetail extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "SpId", this.SpId);
         this.setParamSimple(map, prefix + "SpType", this.SpType);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "DeductAmount", this.DeductAmount);

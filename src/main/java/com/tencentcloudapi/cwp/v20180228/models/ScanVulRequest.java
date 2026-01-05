@@ -80,6 +80,13 @@ public class ScanVulRequest extends AbstractModel {
     private Long ScanMethod;
 
     /**
+    * kb编号
+    */
+    @SerializedName("KBNumber")
+    @Expose
+    private String [] KBNumber;
+
+    /**
      * Get 危害等级：1-低危；2-中危；3-高危；4-严重 (多选英文;分隔) 
      * @return VulLevels 危害等级：1-低危；2-中危；3-高危；4-严重 (多选英文;分隔)
      */
@@ -207,6 +214,22 @@ public class ScanVulRequest extends AbstractModel {
         this.ScanMethod = ScanMethod;
     }
 
+    /**
+     * Get kb编号 
+     * @return KBNumber kb编号
+     */
+    public String [] getKBNumber() {
+        return this.KBNumber;
+    }
+
+    /**
+     * Set kb编号
+     * @param KBNumber kb编号
+     */
+    public void setKBNumber(String [] KBNumber) {
+        this.KBNumber = KBNumber;
+    }
+
     public ScanVulRequest() {
     }
 
@@ -245,6 +268,12 @@ public class ScanVulRequest extends AbstractModel {
         if (source.ScanMethod != null) {
             this.ScanMethod = new Long(source.ScanMethod);
         }
+        if (source.KBNumber != null) {
+            this.KBNumber = new String[source.KBNumber.length];
+            for (int i = 0; i < source.KBNumber.length; i++) {
+                this.KBNumber[i] = new String(source.KBNumber[i]);
+            }
+        }
     }
 
 
@@ -260,6 +289,7 @@ public class ScanVulRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TimeoutPeriod", this.TimeoutPeriod);
         this.setParamArraySimple(map, prefix + "VulIds.", this.VulIds);
         this.setParamSimple(map, prefix + "ScanMethod", this.ScanMethod);
+        this.setParamArraySimple(map, prefix + "KBNumber.", this.KBNumber);
 
     }
 }

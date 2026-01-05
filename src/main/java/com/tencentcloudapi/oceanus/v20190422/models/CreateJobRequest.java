@@ -108,6 +108,20 @@ public class CreateJobRequest extends AbstractModel {
     private Long OpenJobDefaultAlarm;
 
     /**
+    * 用户Uid
+    */
+    @SerializedName("Uid")
+    @Expose
+    private Long Uid;
+
+    /**
+    * jdk版本
+    */
+    @SerializedName("JdkVersion")
+    @Expose
+    private String JdkVersion;
+
+    /**
      * Get 作业名称，允许输入长度小于50个字符的中文、英文、数字、-（横线）、_（下划线）、.（点），且符号必须半角字符。注意作业名不能和现有作业同名 
      * @return Name 作业名称，允许输入长度小于50个字符的中文、英文、数字、-（横线）、_（下划线）、.（点），且符号必须半角字符。注意作业名不能和现有作业同名
      */
@@ -299,6 +313,38 @@ public class CreateJobRequest extends AbstractModel {
         this.OpenJobDefaultAlarm = OpenJobDefaultAlarm;
     }
 
+    /**
+     * Get 用户Uid 
+     * @return Uid 用户Uid
+     */
+    public Long getUid() {
+        return this.Uid;
+    }
+
+    /**
+     * Set 用户Uid
+     * @param Uid 用户Uid
+     */
+    public void setUid(Long Uid) {
+        this.Uid = Uid;
+    }
+
+    /**
+     * Get jdk版本 
+     * @return JdkVersion jdk版本
+     */
+    public String getJdkVersion() {
+        return this.JdkVersion;
+    }
+
+    /**
+     * Set jdk版本
+     * @param JdkVersion jdk版本
+     */
+    public void setJdkVersion(String JdkVersion) {
+        this.JdkVersion = JdkVersion;
+    }
+
     public CreateJobRequest() {
     }
 
@@ -346,6 +392,12 @@ public class CreateJobRequest extends AbstractModel {
         if (source.OpenJobDefaultAlarm != null) {
             this.OpenJobDefaultAlarm = new Long(source.OpenJobDefaultAlarm);
         }
+        if (source.Uid != null) {
+            this.Uid = new Long(source.Uid);
+        }
+        if (source.JdkVersion != null) {
+            this.JdkVersion = new String(source.JdkVersion);
+        }
     }
 
 
@@ -365,6 +417,8 @@ public class CreateJobRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "OpenJobDefaultAlarm", this.OpenJobDefaultAlarm);
+        this.setParamSimple(map, prefix + "Uid", this.Uid);
+        this.setParamSimple(map, prefix + "JdkVersion", this.JdkVersion);
 
     }
 }

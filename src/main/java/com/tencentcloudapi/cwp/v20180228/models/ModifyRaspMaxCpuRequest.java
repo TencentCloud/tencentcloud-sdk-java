@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ModifyRaspMaxCpuRequest extends AbstractModel {
 
     /**
-    * rasp当前最大cpu限制，0<cpu<=100，默认100表示不限制
+    * rasp当前最大cpu限制，大于0，小于等于100，默认100表示不限制
     */
     @SerializedName("RaspMaxCpu")
     @Expose
     private Long RaspMaxCpu;
 
     /**
-     * Get rasp当前最大cpu限制，0<cpu<=100，默认100表示不限制 
-     * @return RaspMaxCpu rasp当前最大cpu限制，0<cpu<=100，默认100表示不限制
+     * Get rasp当前最大cpu限制，大于0，小于等于100，默认100表示不限制 
+     * @return RaspMaxCpu rasp当前最大cpu限制，大于0，小于等于100，默认100表示不限制
      */
     public Long getRaspMaxCpu() {
         return this.RaspMaxCpu;
     }
 
     /**
-     * Set rasp当前最大cpu限制，0<cpu<=100，默认100表示不限制
-     * @param RaspMaxCpu rasp当前最大cpu限制，0<cpu<=100，默认100表示不限制
+     * Set rasp当前最大cpu限制，大于0，小于等于100，默认100表示不限制
+     * @param RaspMaxCpu rasp当前最大cpu限制，大于0，小于等于100，默认100表示不限制
      */
     public void setRaspMaxCpu(Long RaspMaxCpu) {
         this.RaspMaxCpu = RaspMaxCpu;

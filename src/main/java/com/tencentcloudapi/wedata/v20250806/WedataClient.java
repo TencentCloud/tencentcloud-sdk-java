@@ -61,6 +61,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *授权数据源
+     * @param req AuthorizeDataSourceRequest
+     * @return AuthorizeDataSourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public AuthorizeDataSourceResponse AuthorizeDataSource(AuthorizeDataSourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AuthorizeDataSource", AuthorizeDataSourceResponse.class);
+    }
+
+    /**
      *新建代码文件
      * @param req CreateCodeFileRequest
      * @return CreateCodeFileResponse
@@ -80,6 +91,17 @@ public class WedataClient extends AbstractClient{
     public CreateCodeFolderResponse CreateCodeFolder(CreateCodeFolderRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateCodeFolder", CreateCodeFolderResponse.class);
+    }
+
+    /**
+     *配置CodeStudio实体权限
+     * @param req CreateCodePermissionsRequest
+     * @return CreateCodePermissionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCodePermissionsResponse CreateCodePermissions(CreateCodePermissionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCodePermissions", CreateCodePermissionsResponse.class);
     }
 
     /**
@@ -135,6 +157,17 @@ public class WedataClient extends AbstractClient{
     public CreateProjectMemberResponse CreateProjectMember(CreateProjectMemberRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateProjectMember", CreateProjectMemberResponse.class);
+    }
+
+    /**
+     *创建监控任务
+     * @param req CreateQualityRuleGroupRequest
+     * @return CreateQualityRuleGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateQualityRuleGroupResponse CreateQualityRuleGroup(CreateQualityRuleGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateQualityRuleGroup", CreateQualityRuleGroupResponse.class);
     }
 
     /**
@@ -204,6 +237,39 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *创建文件夹
+     * @param req CreateTaskFolderRequest
+     * @return CreateTaskFolderResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTaskFolderResponse CreateTaskFolder(CreateTaskFolderRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTaskFolder", CreateTaskFolderResponse.class);
+    }
+
+    /**
+     *创建任务接口
+     * @param req CreateTriggerTaskRequest
+     * @return CreateTriggerTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTriggerTaskResponse CreateTriggerTask(CreateTriggerTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTriggerTask", CreateTriggerTaskResponse.class);
+    }
+
+    /**
+     *创建工作流
+     * @param req CreateTriggerWorkflowRequest
+     * @return CreateTriggerWorkflowResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTriggerWorkflowResponse CreateTriggerWorkflow(CreateTriggerWorkflowRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTriggerWorkflow", CreateTriggerWorkflowResponse.class);
+    }
+
+    /**
      *创建工作流
      * @param req CreateWorkflowRequest
      * @return CreateWorkflowResponse
@@ -226,6 +292,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *数据开发配置权限
+     * @param req CreateWorkflowPermissionsRequest
+     * @return CreateWorkflowPermissionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateWorkflowPermissionsResponse CreateWorkflowPermissions(CreateWorkflowPermissionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateWorkflowPermissions", CreateWorkflowPermissionsResponse.class);
+    }
+
+    /**
      *删除代码文件
      * @param req DeleteCodeFileRequest
      * @return DeleteCodeFileResponse
@@ -245,6 +322,28 @@ public class WedataClient extends AbstractClient{
     public DeleteCodeFolderResponse DeleteCodeFolder(DeleteCodeFolderRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteCodeFolder", DeleteCodeFolderResponse.class);
+    }
+
+    /**
+     *删除CodeStudio实体权限
+     * @param req DeleteCodePermissionsRequest
+     * @return DeleteCodePermissionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCodePermissionsResponse DeleteCodePermissions(DeleteCodePermissionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCodePermissions", DeleteCodePermissionsResponse.class);
+    }
+
+    /**
+     *删除补录计划
+     * @param req DeleteDataBackfillPlanAsyncRequest
+     * @return DeleteDataBackfillPlanAsyncResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDataBackfillPlanAsyncResponse DeleteDataBackfillPlanAsync(DeleteDataBackfillPlanAsyncRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDataBackfillPlanAsync", DeleteDataBackfillPlanAsyncResponse.class);
     }
 
     /**
@@ -289,6 +388,28 @@ public class WedataClient extends AbstractClient{
     public DeleteProjectMemberResponse DeleteProjectMember(DeleteProjectMemberRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteProjectMember", DeleteProjectMemberResponse.class);
+    }
+
+    /**
+     *删除质量规则接口
+     * @param req DeleteQualityRuleRequest
+     * @return DeleteQualityRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteQualityRuleResponse DeleteQualityRule(DeleteQualityRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteQualityRule", DeleteQualityRuleResponse.class);
+    }
+
+    /**
+     *删除监控任务
+     * @param req DeleteQualityRuleGroupRequest
+     * @return DeleteQualityRuleGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteQualityRuleGroupResponse DeleteQualityRuleGroup(DeleteQualityRuleGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteQualityRuleGroup", DeleteQualityRuleGroupResponse.class);
     }
 
     /**
@@ -358,6 +479,39 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *删除数据开发任务文件夹
+     * @param req DeleteTaskFolderRequest
+     * @return DeleteTaskFolderResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTaskFolderResponse DeleteTaskFolder(DeleteTaskFolderRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteTaskFolder", DeleteTaskFolderResponse.class);
+    }
+
+    /**
+     *删除工作流调度任务
+     * @param req DeleteTriggerTaskRequest
+     * @return DeleteTriggerTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTriggerTaskResponse DeleteTriggerTask(DeleteTriggerTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteTriggerTask", DeleteTriggerTaskResponse.class);
+    }
+
+    /**
+     *删除工作流
+     * @param req DeleteTriggerWorkflowRequest
+     * @return DeleteTriggerWorkflowResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTriggerWorkflowResponse DeleteTriggerWorkflow(DeleteTriggerWorkflowRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteTriggerWorkflow", DeleteTriggerWorkflowResponse.class);
+    }
+
+    /**
      *删除工作流
      * @param req DeleteWorkflowRequest
      * @return DeleteWorkflowResponse
@@ -377,6 +531,28 @@ public class WedataClient extends AbstractClient{
     public DeleteWorkflowFolderResponse DeleteWorkflowFolder(DeleteWorkflowFolderRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteWorkflowFolder", DeleteWorkflowFolderResponse.class);
+    }
+
+    /**
+     *删除工作流文件夹权限
+     * @param req DeleteWorkflowPermissionsRequest
+     * @return DeleteWorkflowPermissionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteWorkflowPermissionsResponse DeleteWorkflowPermissions(DeleteWorkflowPermissionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteWorkflowPermissions", DeleteWorkflowPermissionsResponse.class);
+    }
+
+    /**
+     *查看数据源权限
+     * @param req DescribeDataSourceAuthorityRequest
+     * @return DescribeDataSourceAuthorityResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataSourceAuthorityResponse DescribeDataSourceAuthority(DescribeDataSourceAuthorityRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataSourceAuthority", DescribeDataSourceAuthorityResponse.class);
     }
 
     /**
@@ -479,6 +655,28 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *查看当前用户对CodeStudio实体的最大权限
+     * @param req GetMyCodeMaxPermissionRequest
+     * @return GetMyCodeMaxPermissionResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetMyCodeMaxPermissionResponse GetMyCodeMaxPermission(GetMyCodeMaxPermissionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetMyCodeMaxPermission", GetMyCodeMaxPermissionResponse.class);
+    }
+
+    /**
+     *查询当前用户对工作流文件夹的递归最大权限
+     * @param req GetMyWorkflowMaxPermissionRequest
+     * @return GetMyWorkflowMaxPermissionResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetMyWorkflowMaxPermissionResponse GetMyWorkflowMaxPermission(GetMyWorkflowMaxPermissionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetMyWorkflowMaxPermission", GetMyWorkflowMaxPermissionResponse.class);
+    }
+
+    /**
      *根据告警规则id/名称查询单个告警规则信息
      * @param req GetOpsAlarmRuleRequest
      * @return GetOpsAlarmRuleResponse
@@ -523,6 +721,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *查询工作流任务详情
+     * @param req GetOpsTriggerWorkflowRequest
+     * @return GetOpsTriggerWorkflowResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetOpsTriggerWorkflowResponse GetOpsTriggerWorkflow(GetOpsTriggerWorkflowRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetOpsTriggerWorkflow", GetOpsTriggerWorkflowResponse.class);
+    }
+
+    /**
      *根据工作流id，获取工作流调度详情。
      * @param req GetOpsWorkflowRequest
      * @return GetOpsWorkflowResponse
@@ -553,6 +762,17 @@ public class WedataClient extends AbstractClient{
     public GetResourceFileResponse GetResourceFile(GetResourceFileRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetResourceFile", GetResourceFileResponse.class);
+    }
+
+    /**
+     *查询资源文件文件夹详情
+     * @param req GetResourceFolderRequest
+     * @return GetResourceFolderResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetResourceFolderResponse GetResourceFolder(GetResourceFolderRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetResourceFolder", GetResourceFolderResponse.class);
     }
 
     /**
@@ -633,6 +853,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *查询任务文件夹详情
+     * @param req GetTaskFolderRequest
+     * @return GetTaskFolderResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetTaskFolderResponse GetTaskFolder(GetTaskFolderRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetTaskFolder", GetTaskFolderResponse.class);
+    }
+
+    /**
      *调度实例详情
      * @param req GetTaskInstanceRequest
      * @return GetTaskInstanceResponse
@@ -666,6 +897,72 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *获取任务详情接口
+     * @param req GetTriggerTaskRequest
+     * @return GetTriggerTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetTriggerTaskResponse GetTriggerTask(GetTriggerTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetTriggerTask", GetTriggerTaskResponse.class);
+    }
+
+    /**
+     *获取工作流调度任务代码
+     * @param req GetTriggerTaskCodeRequest
+     * @return GetTriggerTaskCodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetTriggerTaskCodeResponse GetTriggerTaskCode(GetTriggerTaskCodeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetTriggerTaskCode", GetTriggerTaskCodeResponse.class);
+    }
+
+    /**
+     *查询任务执行详情
+     * @param req GetTriggerTaskRunRequest
+     * @return GetTriggerTaskRunResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetTriggerTaskRunResponse GetTriggerTaskRun(GetTriggerTaskRunRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetTriggerTaskRun", GetTriggerTaskRunResponse.class);
+    }
+
+    /**
+     *拉取任务版本列表
+     * @param req GetTriggerTaskVersionRequest
+     * @return GetTriggerTaskVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetTriggerTaskVersionResponse GetTriggerTaskVersion(GetTriggerTaskVersionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetTriggerTaskVersion", GetTriggerTaskVersionResponse.class);
+    }
+
+    /**
+     *获取工作流信息
+     * @param req GetTriggerWorkflowRequest
+     * @return GetTriggerWorkflowResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetTriggerWorkflowResponse GetTriggerWorkflow(GetTriggerWorkflowRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetTriggerWorkflow", GetTriggerWorkflowResponse.class);
+    }
+
+    /**
+     *查询工作流任务详情
+     * @param req GetTriggerWorkflowRunRequest
+     * @return GetTriggerWorkflowRunResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetTriggerWorkflowRunResponse GetTriggerWorkflowRun(GetTriggerWorkflowRunRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetTriggerWorkflowRun", GetTriggerWorkflowRunResponse.class);
+    }
+
+    /**
      *获取工作流信息
      * @param req GetWorkflowRequest
      * @return GetWorkflowResponse
@@ -674,6 +971,17 @@ public class WedataClient extends AbstractClient{
     public GetWorkflowResponse GetWorkflow(GetWorkflowRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetWorkflow", GetWorkflowResponse.class);
+    }
+
+    /**
+     *查询文件夹详情
+     * @param req GetWorkflowFolderRequest
+     * @return GetWorkflowFolderResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetWorkflowFolderResponse GetWorkflowFolder(GetWorkflowFolderRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetWorkflowFolder", GetWorkflowFolderResponse.class);
     }
 
     /**
@@ -696,6 +1004,17 @@ public class WedataClient extends AbstractClient{
     public KillTaskInstancesAsyncResponse KillTaskInstancesAsync(KillTaskInstancesAsyncRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "KillTaskInstancesAsync", KillTaskInstancesAsyncResponse.class);
+    }
+
+    /**
+     *终止运行
+     * @param req KillTriggerWorkflowRunsRequest
+     * @return KillTriggerWorkflowRunsResponse
+     * @throws TencentCloudSDKException
+     */
+    public KillTriggerWorkflowRunsResponse KillTriggerWorkflowRuns(KillTriggerWorkflowRunsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "KillTriggerWorkflowRuns", KillTriggerWorkflowRunsResponse.class);
     }
 
     /**
@@ -729,6 +1048,17 @@ public class WedataClient extends AbstractClient{
     public ListCodeFolderContentsResponse ListCodeFolderContents(ListCodeFolderContentsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListCodeFolderContents", ListCodeFolderContentsResponse.class);
+    }
+
+    /**
+     *查看CodeStudio实体权限
+     * @param req ListCodePermissionsRequest
+     * @return ListCodePermissionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListCodePermissionsResponse ListCodePermissions(ListCodePermissionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListCodePermissions", ListCodePermissionsResponse.class);
     }
 
     /**
@@ -809,6 +1139,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *获取任务直接下游详情
+     * @param req ListDownstreamTriggerTasksRequest
+     * @return ListDownstreamTriggerTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListDownstreamTriggerTasksResponse ListDownstreamTriggerTasks(ListDownstreamTriggerTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListDownstreamTriggerTasks", ListDownstreamTriggerTasksResponse.class);
+    }
+
+    /**
      *获取资产血缘信息
      * @param req ListLineageRequest
      * @return ListLineageResponse
@@ -839,6 +1180,17 @@ public class WedataClient extends AbstractClient{
     public ListOpsTasksResponse ListOpsTasks(ListOpsTasksRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListOpsTasks", ListOpsTasksResponse.class);
+    }
+
+    /**
+     *查询工作流列表
+     * @param req ListOpsTriggerWorkflowsRequest
+     * @return ListOpsTriggerWorkflowsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListOpsTriggerWorkflowsResponse ListOpsTriggerWorkflows(ListOpsTriggerWorkflowsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListOpsTriggerWorkflows", ListOpsTriggerWorkflowsResponse.class);
     }
 
     /**
@@ -894,6 +1246,50 @@ public class WedataClient extends AbstractClient{
     public ListProjectsResponse ListProjects(ListProjectsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListProjects", ListProjectsResponse.class);
+    }
+
+    /**
+     *规则组执行结果分页查询接口
+     * @param req ListQualityRuleGroupExecResultsByPageRequest
+     * @return ListQualityRuleGroupExecResultsByPageResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListQualityRuleGroupExecResultsByPageResponse ListQualityRuleGroupExecResultsByPage(ListQualityRuleGroupExecResultsByPageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListQualityRuleGroupExecResultsByPage", ListQualityRuleGroupExecResultsByPageResponse.class);
+    }
+
+    /**
+     *查询监控列表
+     * @param req ListQualityRuleGroupsTableRequest
+     * @return ListQualityRuleGroupsTableResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListQualityRuleGroupsTableResponse ListQualityRuleGroupsTable(ListQualityRuleGroupsTableRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListQualityRuleGroupsTable", ListQualityRuleGroupsTableResponse.class);
+    }
+
+    /**
+     *【过滤条件】 {模板名称Name，查询使用Keyword进行模糊匹配} {模板类型type，1.系统模板 2.自定义模板} {质量检测维度QualityDims, 1.准确性 2.唯一性 3.完整性 4.一致性 5.及时性 6.有效性} 【排序字段】 { 引用数排序类型CitationOrderType，根据引用数量排序 ASC DESC}
+     * @param req ListQualityRuleTemplatesRequest
+     * @return ListQualityRuleTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListQualityRuleTemplatesResponse ListQualityRuleTemplates(ListQualityRuleTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListQualityRuleTemplates", ListQualityRuleTemplatesResponse.class);
+    }
+
+    /**
+     *分页查询质量规则
+     * @param req ListQualityRulesRequest
+     * @return ListQualityRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListQualityRulesResponse ListQualityRules(ListQualityRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListQualityRules", ListQualityRulesResponse.class);
     }
 
     /**
@@ -974,6 +1370,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *查询任务文件夹列表
+     * @param req ListTaskFoldersRequest
+     * @return ListTaskFoldersResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListTaskFoldersResponse ListTaskFolders(ListTaskFoldersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListTaskFolders", ListTaskFoldersResponse.class);
+    }
+
+    /**
      *调度实例详情
      * @param req ListTaskInstanceExecutionsRequest
      * @return ListTaskInstanceExecutionsResponse
@@ -1029,6 +1436,50 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *任务保存版本列表
+     * @param req ListTriggerTaskVersionsRequest
+     * @return ListTriggerTaskVersionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListTriggerTaskVersionsResponse ListTriggerTaskVersions(ListTriggerTaskVersionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListTriggerTaskVersions", ListTriggerTaskVersionsResponse.class);
+    }
+
+    /**
+     *查询任务分页信息
+     * @param req ListTriggerTasksRequest
+     * @return ListTriggerTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListTriggerTasksResponse ListTriggerTasks(ListTriggerTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListTriggerTasks", ListTriggerTasksResponse.class);
+    }
+
+    /**
+     *查询工作流运行
+     * @param req ListTriggerWorkflowRunsRequest
+     * @return ListTriggerWorkflowRunsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListTriggerWorkflowRunsResponse ListTriggerWorkflowRuns(ListTriggerWorkflowRunsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListTriggerWorkflowRuns", ListTriggerWorkflowRunsResponse.class);
+    }
+
+    /**
+     *查询工作流列表
+     * @param req ListTriggerWorkflowsRequest
+     * @return ListTriggerWorkflowsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListTriggerWorkflowsResponse ListTriggerWorkflows(ListTriggerWorkflowsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListTriggerWorkflows", ListTriggerWorkflowsResponse.class);
+    }
+
+    /**
      *获取任务直接上游
      * @param req ListUpstreamOpsTasksRequest
      * @return ListUpstreamOpsTasksResponse
@@ -1062,6 +1513,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *获取任务直接上游
+     * @param req ListUpstreamTriggerTasksRequest
+     * @return ListUpstreamTriggerTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListUpstreamTriggerTasksResponse ListUpstreamTriggerTasks(ListUpstreamTriggerTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListUpstreamTriggerTasks", ListUpstreamTriggerTasksResponse.class);
+    }
+
+    /**
      *查询文件夹列表
      * @param req ListWorkflowFoldersRequest
      * @return ListWorkflowFoldersResponse
@@ -1073,6 +1535,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *查询工作流授权权限
+     * @param req ListWorkflowPermissionsRequest
+     * @return ListWorkflowPermissionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListWorkflowPermissionsResponse ListWorkflowPermissions(ListWorkflowPermissionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListWorkflowPermissions", ListWorkflowPermissionsResponse.class);
+    }
+
+    /**
      *查询工作流列表
      * @param req ListWorkflowsRequest
      * @return ListWorkflowsResponse
@@ -1081,6 +1554,28 @@ public class WedataClient extends AbstractClient{
     public ListWorkflowsResponse ListWorkflows(ListWorkflowsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListWorkflows", ListWorkflowsResponse.class);
+    }
+
+    /**
+     *更新质量规则接口
+     * @param req ModifyQualityRuleRequest
+     * @return ModifyQualityRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyQualityRuleResponse ModifyQualityRule(ModifyQualityRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyQualityRule", ModifyQualityRuleResponse.class);
+    }
+
+    /**
+     *创建监控任务
+     * @param req ModifyQualityRuleGroupRequest
+     * @return ModifyQualityRuleGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyQualityRuleGroupResponse ModifyQualityRuleGroup(ModifyQualityRuleGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyQualityRuleGroup", ModifyQualityRuleGroupResponse.class);
     }
 
     /**
@@ -1125,6 +1620,28 @@ public class WedataClient extends AbstractClient{
     public RerunTaskInstancesAsyncResponse RerunTaskInstancesAsync(RerunTaskInstancesAsyncRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RerunTaskInstancesAsync", RerunTaskInstancesAsyncResponse.class);
+    }
+
+    /**
+     *重跑运行
+     * @param req RerunTriggerWorkflowRunAsyncRequest
+     * @return RerunTriggerWorkflowRunAsyncResponse
+     * @throws TencentCloudSDKException
+     */
+    public RerunTriggerWorkflowRunAsyncResponse RerunTriggerWorkflowRunAsync(RerunTriggerWorkflowRunAsyncRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RerunTriggerWorkflowRunAsync", RerunTriggerWorkflowRunAsyncResponse.class);
+    }
+
+    /**
+     *回收数据源权限
+     * @param req RevokeDataSourceAuthorizationRequest
+     * @return RevokeDataSourceAuthorizationResponse
+     * @throws TencentCloudSDKException
+     */
+    public RevokeDataSourceAuthorizationResponse RevokeDataSourceAuthorization(RevokeDataSourceAuthorizationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RevokeDataSourceAuthorization", RevokeDataSourceAuthorizationResponse.class);
     }
 
     /**
@@ -1194,6 +1711,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *提交工作流调度任务
+     * @param req SubmitTriggerTaskRequest
+     * @return SubmitTriggerTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitTriggerTaskResponse SubmitTriggerTask(SubmitTriggerTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitTriggerTask", SubmitTriggerTaskResponse.class);
+    }
+
+    /**
      *更新代码文件
      * @param req UpdateCodeFileRequest
      * @return UpdateCodeFileResponse
@@ -1246,6 +1774,17 @@ public class WedataClient extends AbstractClient{
     public UpdateOpsTasksOwnerResponse UpdateOpsTasksOwner(UpdateOpsTasksOwnerRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateOpsTasksOwner", UpdateOpsTasksOwnerResponse.class);
+    }
+
+    /**
+     *查询任务执行详情
+     * @param req UpdateOpsTriggerTasksOwnerRequest
+     * @return UpdateOpsTriggerTasksOwnerResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateOpsTriggerTasksOwnerResponse UpdateOpsTriggerTasksOwner(UpdateOpsTriggerTasksOwnerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateOpsTriggerTasksOwner", UpdateOpsTriggerTasksOwnerResponse.class);
     }
 
     /**
@@ -1323,6 +1862,72 @@ public class WedataClient extends AbstractClient{
     public UpdateTaskResponse UpdateTask(UpdateTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateTask", UpdateTaskResponse.class);
+    }
+
+    /**
+     *更新任务文件夹
+     * @param req UpdateTaskFolderRequest
+     * @return UpdateTaskFolderResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateTaskFolderResponse UpdateTaskFolder(UpdateTaskFolderRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateTaskFolder", UpdateTaskFolderResponse.class);
+    }
+
+    /**
+     *更新任务接口
+     * @param req UpdateTaskPartiallyRequest
+     * @return UpdateTaskPartiallyResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateTaskPartiallyResponse UpdateTaskPartially(UpdateTaskPartiallyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateTaskPartially", UpdateTaskPartiallyResponse.class);
+    }
+
+    /**
+     *更新任务接口
+     * @param req UpdateTriggerTaskRequest
+     * @return UpdateTriggerTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateTriggerTaskResponse UpdateTriggerTask(UpdateTriggerTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateTriggerTask", UpdateTriggerTaskResponse.class);
+    }
+
+    /**
+     *更新任务接口
+     * @param req UpdateTriggerTaskPartiallyRequest
+     * @return UpdateTriggerTaskPartiallyResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateTriggerTaskPartiallyResponse UpdateTriggerTaskPartially(UpdateTriggerTaskPartiallyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateTriggerTaskPartially", UpdateTriggerTaskPartiallyResponse.class);
+    }
+
+    /**
+     *更新工作流（包括工作流基本信息与工作流参数）
+     * @param req UpdateTriggerWorkflowRequest
+     * @return UpdateTriggerWorkflowResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateTriggerWorkflowResponse UpdateTriggerWorkflow(UpdateTriggerWorkflowRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateTriggerWorkflow", UpdateTriggerWorkflowResponse.class);
+    }
+
+    /**
+     *更新工作流（包括工作流基本信息与工作流参数）
+     * @param req UpdateTriggerWorkflowPartiallyRequest
+     * @return UpdateTriggerWorkflowPartiallyResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateTriggerWorkflowPartiallyResponse UpdateTriggerWorkflowPartially(UpdateTriggerWorkflowPartiallyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateTriggerWorkflowPartially", UpdateTriggerWorkflowPartiallyResponse.class);
     }
 
     /**

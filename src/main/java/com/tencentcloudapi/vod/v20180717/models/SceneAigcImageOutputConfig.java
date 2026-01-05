@@ -54,6 +54,13 @@ public class SceneAigcImageOutputConfig extends AbstractModel {
     private String ExpireTime;
 
     /**
+    * 指定所生成图片的宽高比。输入格式为 W:H。仅生商品图场景有效。
+    */
+    @SerializedName("AspectRatio")
+    @Expose
+    private String AspectRatio;
+
+    /**
      * Get 存储模式。取值有： <li>Permanent：永久存储，生成的图片文件将存储到云点播，可在事件通知中获取到 FileId；</li> <li>Temporary：临时存储，生成的图片文件不会存储到云点播，可在事件通知中获取到临时访问的 URL；</li>
 默认值：Temporary 
      * @return StorageMode 存储模式。取值有： <li>Permanent：永久存储，生成的图片文件将存储到云点播，可在事件通知中获取到 FileId；</li> <li>Temporary：临时存储，生成的图片文件不会存储到云点播，可在事件通知中获取到临时访问的 URL；</li>
@@ -125,6 +132,22 @@ public class SceneAigcImageOutputConfig extends AbstractModel {
         this.ExpireTime = ExpireTime;
     }
 
+    /**
+     * Get 指定所生成图片的宽高比。输入格式为 W:H。仅生商品图场景有效。 
+     * @return AspectRatio 指定所生成图片的宽高比。输入格式为 W:H。仅生商品图场景有效。
+     */
+    public String getAspectRatio() {
+        return this.AspectRatio;
+    }
+
+    /**
+     * Set 指定所生成图片的宽高比。输入格式为 W:H。仅生商品图场景有效。
+     * @param AspectRatio 指定所生成图片的宽高比。输入格式为 W:H。仅生商品图场景有效。
+     */
+    public void setAspectRatio(String AspectRatio) {
+        this.AspectRatio = AspectRatio;
+    }
+
     public SceneAigcImageOutputConfig() {
     }
 
@@ -145,6 +168,9 @@ public class SceneAigcImageOutputConfig extends AbstractModel {
         if (source.ExpireTime != null) {
             this.ExpireTime = new String(source.ExpireTime);
         }
+        if (source.AspectRatio != null) {
+            this.AspectRatio = new String(source.AspectRatio);
+        }
     }
 
 
@@ -156,6 +182,7 @@ public class SceneAigcImageOutputConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "MediaName", this.MediaName);
         this.setParamSimple(map, prefix + "ClassId", this.ClassId);
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+        this.setParamSimple(map, prefix + "AspectRatio", this.AspectRatio);
 
     }
 }

@@ -185,6 +185,13 @@ public class NetAttackEventInfo extends AbstractModel {
     private String HostOpProcessTree;
 
     /**
+    * IP分析
+    */
+    @SerializedName("IPAnalyse")
+    @Expose
+    private IPAnalyse IPAnalyse;
+
+    /**
      * Get 处理状态，0 待处理 1 已处理 2 已加白  3 已忽略 4 已删除 5: 已开启防御 
      * @return Status 处理状态，0 待处理 1 已处理 2 已加白  3 已忽略 4 已删除 5: 已开启防御
      */
@@ -552,6 +559,22 @@ public class NetAttackEventInfo extends AbstractModel {
         this.HostOpProcessTree = HostOpProcessTree;
     }
 
+    /**
+     * Get IP分析 
+     * @return IPAnalyse IP分析
+     */
+    public IPAnalyse getIPAnalyse() {
+        return this.IPAnalyse;
+    }
+
+    /**
+     * Set IP分析
+     * @param IPAnalyse IP分析
+     */
+    public void setIPAnalyse(IPAnalyse IPAnalyse) {
+        this.IPAnalyse = IPAnalyse;
+    }
+
     public NetAttackEventInfo() {
     }
 
@@ -629,6 +652,9 @@ public class NetAttackEventInfo extends AbstractModel {
         if (source.HostOpProcessTree != null) {
             this.HostOpProcessTree = new String(source.HostOpProcessTree);
         }
+        if (source.IPAnalyse != null) {
+            this.IPAnalyse = new IPAnalyse(source.IPAnalyse);
+        }
     }
 
 
@@ -659,6 +685,7 @@ public class NetAttackEventInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "HostOpType", this.HostOpType);
         this.setParamSimple(map, prefix + "HostOpProcessTree", this.HostOpProcessTree);
+        this.setParamObj(map, prefix + "IPAnalyse.", this.IPAnalyse);
 
     }
 }
