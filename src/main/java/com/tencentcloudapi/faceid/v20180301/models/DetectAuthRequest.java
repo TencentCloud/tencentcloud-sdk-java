@@ -59,8 +59,10 @@ public class DetectAuthRequest extends AbstractModel {
     private String Name;
 
     /**
-    * 认证结束后重定向的回调链接地址。
+    * 认证结束后重定向的回调链接地址，仅微信H5场景使用。
 - 最长长度1024位。
+- 默认值：[腾讯云人脸核身产品介绍页](URL Here)https://cloud.tencent.com/product/faceid?Is=sdk-topnav 
+
     */
     @SerializedName("RedirectUrl")
     @Expose
@@ -218,20 +220,28 @@ public class DetectAuthRequest extends AbstractModel {
     }
 
     /**
-     * Get 认证结束后重定向的回调链接地址。
-- 最长长度1024位。 
-     * @return RedirectUrl 认证结束后重定向的回调链接地址。
+     * Get 认证结束后重定向的回调链接地址，仅微信H5场景使用。
 - 最长长度1024位。
+- 默认值：[腾讯云人脸核身产品介绍页](URL Here)https://cloud.tencent.com/product/faceid?Is=sdk-topnav 
+ 
+     * @return RedirectUrl 认证结束后重定向的回调链接地址，仅微信H5场景使用。
+- 最长长度1024位。
+- 默认值：[腾讯云人脸核身产品介绍页](URL Here)https://cloud.tencent.com/product/faceid?Is=sdk-topnav 
+
      */
     public String getRedirectUrl() {
         return this.RedirectUrl;
     }
 
     /**
-     * Set 认证结束后重定向的回调链接地址。
+     * Set 认证结束后重定向的回调链接地址，仅微信H5场景使用。
 - 最长长度1024位。
-     * @param RedirectUrl 认证结束后重定向的回调链接地址。
+- 默认值：[腾讯云人脸核身产品介绍页](URL Here)https://cloud.tencent.com/product/faceid?Is=sdk-topnav 
+
+     * @param RedirectUrl 认证结束后重定向的回调链接地址，仅微信H5场景使用。
 - 最长长度1024位。
+- 默认值：[腾讯云人脸核身产品介绍页](URL Here)https://cloud.tencent.com/product/faceid?Is=sdk-topnav 
+
      */
     public void setRedirectUrl(String RedirectUrl) {
         this.RedirectUrl = RedirectUrl;

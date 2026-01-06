@@ -40,6 +40,13 @@ Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
     private String Style;
 
     /**
+    * 特效模式，默认使用人像模式。 Person：人像模式，仅支持上传人像图片，人像生成效果更好【这里需要加非人脸的拦截】。 Pet：宠物模式，支持宠物等非人像图片。 示例值：Person
+    */
+    @SerializedName("Mode")
+    @Expose
+    private String Mode;
+
+    /**
     * 为生成结果图添加显式水印标识的开关，默认为1。  
 1：添加。  
 0：不添加。  
@@ -96,6 +103,22 @@ Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
      */
     public void setStyle(String Style) {
         this.Style = Style;
+    }
+
+    /**
+     * Get 特效模式，默认使用人像模式。 Person：人像模式，仅支持上传人像图片，人像生成效果更好【这里需要加非人脸的拦截】。 Pet：宠物模式，支持宠物等非人像图片。 示例值：Person 
+     * @return Mode 特效模式，默认使用人像模式。 Person：人像模式，仅支持上传人像图片，人像生成效果更好【这里需要加非人脸的拦截】。 Pet：宠物模式，支持宠物等非人像图片。 示例值：Person
+     */
+    public String getMode() {
+        return this.Mode;
+    }
+
+    /**
+     * Set 特效模式，默认使用人像模式。 Person：人像模式，仅支持上传人像图片，人像生成效果更好【这里需要加非人脸的拦截】。 Pet：宠物模式，支持宠物等非人像图片。 示例值：Person
+     * @param Mode 特效模式，默认使用人像模式。 Person：人像模式，仅支持上传人像图片，人像生成效果更好【这里需要加非人脸的拦截】。 Pet：宠物模式，支持宠物等非人像图片。 示例值：Person
+     */
+    public void setMode(String Mode) {
+        this.Mode = Mode;
     }
 
     /**
@@ -164,6 +187,9 @@ Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
         if (source.Style != null) {
             this.Style = new String(source.Style);
         }
+        if (source.Mode != null) {
+            this.Mode = new String(source.Mode);
+        }
         if (source.LogoAdd != null) {
             this.LogoAdd = new Long(source.LogoAdd);
         }
@@ -179,6 +205,7 @@ Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Image.", this.Image);
         this.setParamSimple(map, prefix + "Style", this.Style);
+        this.setParamSimple(map, prefix + "Mode", this.Mode);
         this.setParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
         this.setParamObj(map, prefix + "LogoParam.", this.LogoParam);
 

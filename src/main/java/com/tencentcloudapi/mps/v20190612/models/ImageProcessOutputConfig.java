@@ -53,6 +53,13 @@ public class ImageProcessOutputConfig extends AbstractModel {
     private Long ImageWidth;
 
     /**
+    * 图片输出分辨率，取值：1K/2K/4K。
+    */
+    @SerializedName("ImageSize")
+    @Expose
+    private String ImageSize;
+
+    /**
      * Get 输出图片的宽高比。可以配合ImageWidth 和 ImageHeight 使用，规则如下：
 
 1. 仅指定 AspectRatio 时，根据原图输入进行自适应调整。
@@ -132,6 +139,22 @@ public class ImageProcessOutputConfig extends AbstractModel {
         this.ImageWidth = ImageWidth;
     }
 
+    /**
+     * Get 图片输出分辨率，取值：1K/2K/4K。 
+     * @return ImageSize 图片输出分辨率，取值：1K/2K/4K。
+     */
+    public String getImageSize() {
+        return this.ImageSize;
+    }
+
+    /**
+     * Set 图片输出分辨率，取值：1K/2K/4K。
+     * @param ImageSize 图片输出分辨率，取值：1K/2K/4K。
+     */
+    public void setImageSize(String ImageSize) {
+        this.ImageSize = ImageSize;
+    }
+
     public ImageProcessOutputConfig() {
     }
 
@@ -149,6 +172,9 @@ public class ImageProcessOutputConfig extends AbstractModel {
         if (source.ImageWidth != null) {
             this.ImageWidth = new Long(source.ImageWidth);
         }
+        if (source.ImageSize != null) {
+            this.ImageSize = new String(source.ImageSize);
+        }
     }
 
 
@@ -159,6 +185,7 @@ public class ImageProcessOutputConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "AspectRatio", this.AspectRatio);
         this.setParamSimple(map, prefix + "ImageHeight", this.ImageHeight);
         this.setParamSimple(map, prefix + "ImageWidth", this.ImageWidth);
+        this.setParamSimple(map, prefix + "ImageSize", this.ImageSize);
 
     }
 }

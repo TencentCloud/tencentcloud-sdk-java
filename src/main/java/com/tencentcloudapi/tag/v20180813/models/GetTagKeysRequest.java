@@ -24,79 +24,69 @@ import java.util.HashMap;
 public class GetTagKeysRequest extends AbstractModel {
 
     /**
-    * 从上一页的响应中获取的下一页的Token值。
-如果是第一次请求，设置为空。
+    * <p>从上一页的响应中获取的下一页的Token值。如果是第一次请求，设置为空。</p>
     */
     @SerializedName("PaginationToken")
     @Expose
     private String PaginationToken;
 
     /**
-    * 每一页返回的数据最大条数，最大1000。
-缺省值：50。
+    * <p>每一页返回的数据最大条数，最大1000。缺省值：50。</p>
     */
     @SerializedName("MaxResults")
     @Expose
     private Long MaxResults;
 
     /**
-    * 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
+    * <p>标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。</p>
     */
     @SerializedName("Category")
     @Expose
     private String Category;
 
     /**
-     * Get 从上一页的响应中获取的下一页的Token值。
-如果是第一次请求，设置为空。 
-     * @return PaginationToken 从上一页的响应中获取的下一页的Token值。
-如果是第一次请求，设置为空。
+     * Get <p>从上一页的响应中获取的下一页的Token值。如果是第一次请求，设置为空。</p> 
+     * @return PaginationToken <p>从上一页的响应中获取的下一页的Token值。如果是第一次请求，设置为空。</p>
      */
     public String getPaginationToken() {
         return this.PaginationToken;
     }
 
     /**
-     * Set 从上一页的响应中获取的下一页的Token值。
-如果是第一次请求，设置为空。
-     * @param PaginationToken 从上一页的响应中获取的下一页的Token值。
-如果是第一次请求，设置为空。
+     * Set <p>从上一页的响应中获取的下一页的Token值。如果是第一次请求，设置为空。</p>
+     * @param PaginationToken <p>从上一页的响应中获取的下一页的Token值。如果是第一次请求，设置为空。</p>
      */
     public void setPaginationToken(String PaginationToken) {
         this.PaginationToken = PaginationToken;
     }
 
     /**
-     * Get 每一页返回的数据最大条数，最大1000。
-缺省值：50。 
-     * @return MaxResults 每一页返回的数据最大条数，最大1000。
-缺省值：50。
+     * Get <p>每一页返回的数据最大条数，最大1000。缺省值：50。</p> 
+     * @return MaxResults <p>每一页返回的数据最大条数，最大1000。缺省值：50。</p>
      */
     public Long getMaxResults() {
         return this.MaxResults;
     }
 
     /**
-     * Set 每一页返回的数据最大条数，最大1000。
-缺省值：50。
-     * @param MaxResults 每一页返回的数据最大条数，最大1000。
-缺省值：50。
+     * Set <p>每一页返回的数据最大条数，最大1000。缺省值：50。</p>
+     * @param MaxResults <p>每一页返回的数据最大条数，最大1000。缺省值：50。</p>
      */
     public void setMaxResults(Long MaxResults) {
         this.MaxResults = MaxResults;
     }
 
     /**
-     * Get 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。 
-     * @return Category 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
+     * Get <p>标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。</p> 
+     * @return Category <p>标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。</p>
      */
     public String getCategory() {
         return this.Category;
     }
 
     /**
-     * Set 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
-     * @param Category 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
+     * Set <p>标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。</p>
+     * @param Category <p>标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。</p>
      */
     public void setCategory(String Category) {
         this.Category = Category;

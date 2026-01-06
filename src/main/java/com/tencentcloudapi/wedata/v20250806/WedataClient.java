@@ -380,6 +380,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *删除项目
+     * @param req DeleteProjectRequest
+     * @return DeleteProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteProjectResponse DeleteProject(DeleteProjectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteProject", DeleteProjectResponse.class);
+    }
+
+    /**
      *删除项目用户
      * @param req DeleteProjectMemberRequest
      * @return DeleteProjectMemberResponse

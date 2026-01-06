@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tag.v20180813.models;
+package com.tencentcloudapi.wedata.v20250806.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,21 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetTagValuesResponse extends AbstractModel {
+public class DeleteProjectResponse extends AbstractModel {
 
     /**
-    * <p>获取的下一页的Token值，如果当前是最后一页，返回为空</p>
+    * 删除结果
     */
-    @SerializedName("PaginationToken")
+    @SerializedName("Data")
     @Expose
-    private String PaginationToken;
-
-    /**
-    * <p>标签列表。</p>
-    */
-    @SerializedName("Tags")
-    @Expose
-    private Tag [] Tags;
+    private ProjectResult Data;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +38,19 @@ public class GetTagValuesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>获取的下一页的Token值，如果当前是最后一页，返回为空</p> 
-     * @return PaginationToken <p>获取的下一页的Token值，如果当前是最后一页，返回为空</p>
+     * Get 删除结果 
+     * @return Data 删除结果
      */
-    public String getPaginationToken() {
-        return this.PaginationToken;
+    public ProjectResult getData() {
+        return this.Data;
     }
 
     /**
-     * Set <p>获取的下一页的Token值，如果当前是最后一页，返回为空</p>
-     * @param PaginationToken <p>获取的下一页的Token值，如果当前是最后一页，返回为空</p>
+     * Set 删除结果
+     * @param Data 删除结果
      */
-    public void setPaginationToken(String PaginationToken) {
-        this.PaginationToken = PaginationToken;
-    }
-
-    /**
-     * Get <p>标签列表。</p> 
-     * @return Tags <p>标签列表。</p>
-     */
-    public Tag [] getTags() {
-        return this.Tags;
-    }
-
-    /**
-     * Set <p>标签列表。</p>
-     * @param Tags <p>标签列表。</p>
-     */
-    public void setTags(Tag [] Tags) {
-        this.Tags = Tags;
+    public void setData(ProjectResult Data) {
+        this.Data = Data;
     }
 
     /**
@@ -92,22 +69,16 @@ public class GetTagValuesResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public GetTagValuesResponse() {
+    public DeleteProjectResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public GetTagValuesResponse(GetTagValuesResponse source) {
-        if (source.PaginationToken != null) {
-            this.PaginationToken = new String(source.PaginationToken);
-        }
-        if (source.Tags != null) {
-            this.Tags = new Tag[source.Tags.length];
-            for (int i = 0; i < source.Tags.length; i++) {
-                this.Tags[i] = new Tag(source.Tags[i]);
-            }
+    public DeleteProjectResponse(DeleteProjectResponse source) {
+        if (source.Data != null) {
+            this.Data = new ProjectResult(source.Data);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -119,8 +90,7 @@ public class GetTagValuesResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "PaginationToken", this.PaginationToken);
-        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

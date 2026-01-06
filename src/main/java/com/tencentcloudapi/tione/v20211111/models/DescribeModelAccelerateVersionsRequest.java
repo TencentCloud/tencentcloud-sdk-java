@@ -48,7 +48,7 @@ public class DescribeModelAccelerateVersionsRequest extends AbstractModel {
     private String Order;
 
     /**
-    * 分页查询起始位置，如：Limit为100，第一页Offset为0，第二页Offset为100....即每页左边为闭区间; 默认0
+    * 分页查询起始位置，如：Limit为100，第一页Offset为0，第二页Offset为100...即每页左边为闭区间; 默认0
     */
     @SerializedName("Offset")
     @Expose
@@ -129,16 +129,16 @@ public class DescribeModelAccelerateVersionsRequest extends AbstractModel {
     }
 
     /**
-     * Get 分页查询起始位置，如：Limit为100，第一页Offset为0，第二页Offset为100....即每页左边为闭区间; 默认0 
-     * @return Offset 分页查询起始位置，如：Limit为100，第一页Offset为0，第二页Offset为100....即每页左边为闭区间; 默认0
+     * Get 分页查询起始位置，如：Limit为100，第一页Offset为0，第二页Offset为100...即每页左边为闭区间; 默认0 
+     * @return Offset 分页查询起始位置，如：Limit为100，第一页Offset为0，第二页Offset为100...即每页左边为闭区间; 默认0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页查询起始位置，如：Limit为100，第一页Offset为0，第二页Offset为100....即每页左边为闭区间; 默认0
-     * @param Offset 分页查询起始位置，如：Limit为100，第一页Offset为0，第二页Offset为100....即每页左边为闭区间; 默认0
+     * Set 分页查询起始位置，如：Limit为100，第一页Offset为0，第二页Offset为100...即每页左边为闭区间; 默认0
+     * @param Offset 分页查询起始位置，如：Limit为100，第一页Offset为0，第二页Offset为100...即每页左边为闭区间; 默认0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

@@ -124,6 +124,13 @@ public class AigcVideoOutputConfig extends AbstractModel {
     private String EnhanceSwitch;
 
     /**
+    * 是否开启vidu智能插帧。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 
+    */
+    @SerializedName("FrameInterpolate")
+    @Expose
+    private String FrameInterpolate;
+
+    /**
      * Get 存储模式。取值有： <li>Permanent：永久存储，生成的视频文件将存储到云点播，可在事件通知中获取到 FileId；</li> <li>Temporary：临时存储，生成的视频文件不会存储到云点播，可在事件通知中获取到临时访问的 URL；</li>
 默认值：Temporary 
      * @return StorageMode 存储模式。取值有： <li>Permanent：永久存储，生成的视频文件将存储到云点播，可在事件通知中获取到 FileId；</li> <li>Temporary：临时存储，生成的视频文件不会存储到云点播，可在事件通知中获取到临时访问的 URL；</li>
@@ -379,6 +386,22 @@ public class AigcVideoOutputConfig extends AbstractModel {
         this.EnhanceSwitch = EnhanceSwitch;
     }
 
+    /**
+     * Get 是否开启vidu智能插帧。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li>  
+     * @return FrameInterpolate 是否开启vidu智能插帧。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 
+     */
+    public String getFrameInterpolate() {
+        return this.FrameInterpolate;
+    }
+
+    /**
+     * Set 是否开启vidu智能插帧。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 
+     * @param FrameInterpolate 是否开启vidu智能插帧。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 
+     */
+    public void setFrameInterpolate(String FrameInterpolate) {
+        this.FrameInterpolate = FrameInterpolate;
+    }
+
     public AigcVideoOutputConfig() {
     }
 
@@ -423,6 +446,9 @@ public class AigcVideoOutputConfig extends AbstractModel {
         if (source.EnhanceSwitch != null) {
             this.EnhanceSwitch = new String(source.EnhanceSwitch);
         }
+        if (source.FrameInterpolate != null) {
+            this.FrameInterpolate = new String(source.FrameInterpolate);
+        }
     }
 
 
@@ -442,6 +468,7 @@ public class AigcVideoOutputConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "InputComplianceCheck", this.InputComplianceCheck);
         this.setParamSimple(map, prefix + "OutputComplianceCheck", this.OutputComplianceCheck);
         this.setParamSimple(map, prefix + "EnhanceSwitch", this.EnhanceSwitch);
+        this.setParamSimple(map, prefix + "FrameInterpolate", this.FrameInterpolate);
 
     }
 }

@@ -38,7 +38,7 @@ public class GatewayQos extends AbstractModel {
     private String IpAddress;
 
     /**
-    * 流控带宽值。
+    * 网关流控出方向带宽值，当值为-1时，代表未限速；当值大于等于0时，限速带宽上限为返回值。
     */
     @SerializedName("Bandwidth")
     @Expose
@@ -50,6 +50,13 @@ public class GatewayQos extends AbstractModel {
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
+
+    /**
+    * 网关流控入方向带宽值，当值为-1时，代表未限速；当值大于等于0时，限速带宽上限为返回值。
+    */
+    @SerializedName("InBandwidth")
+    @Expose
+    private Long InBandwidth;
 
     /**
      * Get VPC实例ID。 
@@ -84,16 +91,16 @@ public class GatewayQos extends AbstractModel {
     }
 
     /**
-     * Get 流控带宽值。 
-     * @return Bandwidth 流控带宽值。
+     * Get 网关流控出方向带宽值，当值为-1时，代表未限速；当值大于等于0时，限速带宽上限为返回值。 
+     * @return Bandwidth 网关流控出方向带宽值，当值为-1时，代表未限速；当值大于等于0时，限速带宽上限为返回值。
      */
     public Long getBandwidth() {
         return this.Bandwidth;
     }
 
     /**
-     * Set 流控带宽值。
-     * @param Bandwidth 流控带宽值。
+     * Set 网关流控出方向带宽值，当值为-1时，代表未限速；当值大于等于0时，限速带宽上限为返回值。
+     * @param Bandwidth 网关流控出方向带宽值，当值为-1时，代表未限速；当值大于等于0时，限速带宽上限为返回值。
      */
     public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;
@@ -113,6 +120,22 @@ public class GatewayQos extends AbstractModel {
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get 网关流控入方向带宽值，当值为-1时，代表未限速；当值大于等于0时，限速带宽上限为返回值。 
+     * @return InBandwidth 网关流控入方向带宽值，当值为-1时，代表未限速；当值大于等于0时，限速带宽上限为返回值。
+     */
+    public Long getInBandwidth() {
+        return this.InBandwidth;
+    }
+
+    /**
+     * Set 网关流控入方向带宽值，当值为-1时，代表未限速；当值大于等于0时，限速带宽上限为返回值。
+     * @param InBandwidth 网关流控入方向带宽值，当值为-1时，代表未限速；当值大于等于0时，限速带宽上限为返回值。
+     */
+    public void setInBandwidth(Long InBandwidth) {
+        this.InBandwidth = InBandwidth;
     }
 
     public GatewayQos() {
@@ -135,6 +158,9 @@ public class GatewayQos extends AbstractModel {
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.InBandwidth != null) {
+            this.InBandwidth = new Long(source.InBandwidth);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class GatewayQos extends AbstractModel {
         this.setParamSimple(map, prefix + "IpAddress", this.IpAddress);
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "InBandwidth", this.InBandwidth);
 
     }
 }

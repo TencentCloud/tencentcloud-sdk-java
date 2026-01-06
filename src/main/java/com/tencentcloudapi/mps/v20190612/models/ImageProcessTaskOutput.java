@@ -47,6 +47,13 @@ public class ImageProcessTaskOutput extends AbstractModel {
     private String SignedUrl;
 
     /**
+    * 图生文任务的处理结果。
+    */
+    @SerializedName("Content")
+    @Expose
+    private String Content;
+
+    /**
      * Get 输出文件的路径。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Path 输出文件的路径。
@@ -102,6 +109,22 @@ public class ImageProcessTaskOutput extends AbstractModel {
         this.SignedUrl = SignedUrl;
     }
 
+    /**
+     * Get 图生文任务的处理结果。 
+     * @return Content 图生文任务的处理结果。
+     */
+    public String getContent() {
+        return this.Content;
+    }
+
+    /**
+     * Set 图生文任务的处理结果。
+     * @param Content 图生文任务的处理结果。
+     */
+    public void setContent(String Content) {
+        this.Content = Content;
+    }
+
     public ImageProcessTaskOutput() {
     }
 
@@ -119,6 +142,9 @@ public class ImageProcessTaskOutput extends AbstractModel {
         if (source.SignedUrl != null) {
             this.SignedUrl = new String(source.SignedUrl);
         }
+        if (source.Content != null) {
+            this.Content = new String(source.Content);
+        }
     }
 
 
@@ -129,6 +155,7 @@ public class ImageProcessTaskOutput extends AbstractModel {
         this.setParamSimple(map, prefix + "Path", this.Path);
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
         this.setParamSimple(map, prefix + "SignedUrl", this.SignedUrl);
+        this.setParamSimple(map, prefix + "Content", this.Content);
 
     }
 }

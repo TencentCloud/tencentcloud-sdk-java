@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class GetTagKeysResponse extends AbstractModel {
 
     /**
-    * 获取的下一页的Token值，如果当前是最后一页，返回为空
+    * <p>获取的下一页的Token值，如果当前是最后一页，返回为空</p>
     */
     @SerializedName("PaginationToken")
     @Expose
     private String PaginationToken;
 
     /**
-    * 标签键信息。
+    * <p>标签键信息。</p>
     */
     @SerializedName("TagKeys")
     @Expose
@@ -45,32 +45,32 @@ public class GetTagKeysResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 获取的下一页的Token值，如果当前是最后一页，返回为空 
-     * @return PaginationToken 获取的下一页的Token值，如果当前是最后一页，返回为空
+     * Get <p>获取的下一页的Token值，如果当前是最后一页，返回为空</p> 
+     * @return PaginationToken <p>获取的下一页的Token值，如果当前是最后一页，返回为空</p>
      */
     public String getPaginationToken() {
         return this.PaginationToken;
     }
 
     /**
-     * Set 获取的下一页的Token值，如果当前是最后一页，返回为空
-     * @param PaginationToken 获取的下一页的Token值，如果当前是最后一页，返回为空
+     * Set <p>获取的下一页的Token值，如果当前是最后一页，返回为空</p>
+     * @param PaginationToken <p>获取的下一页的Token值，如果当前是最后一页，返回为空</p>
      */
     public void setPaginationToken(String PaginationToken) {
         this.PaginationToken = PaginationToken;
     }
 
     /**
-     * Get 标签键信息。 
-     * @return TagKeys 标签键信息。
+     * Get <p>标签键信息。</p> 
+     * @return TagKeys <p>标签键信息。</p>
      */
     public String [] getTagKeys() {
         return this.TagKeys;
     }
 
     /**
-     * Set 标签键信息。
-     * @param TagKeys 标签键信息。
+     * Set <p>标签键信息。</p>
+     * @param TagKeys <p>标签键信息。</p>
      */
     public void setTagKeys(String [] TagKeys) {
         this.TagKeys = TagKeys;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class GetTagsResponse extends AbstractModel {
 
     /**
-    * 获取的下一页的Token值，如果当前是最后一页，返回为空
+    * <p>获取的下一页的Token值，如果当前是最后一页，返回为空</p>
     */
     @SerializedName("PaginationToken")
     @Expose
     private String PaginationToken;
 
     /**
-    * 标签列表。
+    * <p>标签列表。</p>
     */
     @SerializedName("Tags")
     @Expose
@@ -45,32 +45,32 @@ public class GetTagsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 获取的下一页的Token值，如果当前是最后一页，返回为空 
-     * @return PaginationToken 获取的下一页的Token值，如果当前是最后一页，返回为空
+     * Get <p>获取的下一页的Token值，如果当前是最后一页，返回为空</p> 
+     * @return PaginationToken <p>获取的下一页的Token值，如果当前是最后一页，返回为空</p>
      */
     public String getPaginationToken() {
         return this.PaginationToken;
     }
 
     /**
-     * Set 获取的下一页的Token值，如果当前是最后一页，返回为空
-     * @param PaginationToken 获取的下一页的Token值，如果当前是最后一页，返回为空
+     * Set <p>获取的下一页的Token值，如果当前是最后一页，返回为空</p>
+     * @param PaginationToken <p>获取的下一页的Token值，如果当前是最后一页，返回为空</p>
      */
     public void setPaginationToken(String PaginationToken) {
         this.PaginationToken = PaginationToken;
     }
 
     /**
-     * Get 标签列表。 
-     * @return Tags 标签列表。
+     * Get <p>标签列表。</p> 
+     * @return Tags <p>标签列表。</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签列表。
-     * @param Tags 标签列表。
+     * Set <p>标签列表。</p>
+     * @param Tags <p>标签列表。</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;

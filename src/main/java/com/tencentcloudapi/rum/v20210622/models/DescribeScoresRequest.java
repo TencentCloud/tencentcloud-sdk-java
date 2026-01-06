@@ -52,6 +52,13 @@ public class DescribeScoresRequest extends AbstractModel {
     private Long IsDemo;
 
     /**
+    * 项目 ID 列表
+    */
+    @SerializedName("IDList")
+    @Expose
+    private Long [] IDList;
+
+    /**
      * Get 结束时间 
      * @return EndTime 结束时间
      */
@@ -119,6 +126,22 @@ public class DescribeScoresRequest extends AbstractModel {
         this.IsDemo = IsDemo;
     }
 
+    /**
+     * Get 项目 ID 列表 
+     * @return IDList 项目 ID 列表
+     */
+    public Long [] getIDList() {
+        return this.IDList;
+    }
+
+    /**
+     * Set 项目 ID 列表
+     * @param IDList 项目 ID 列表
+     */
+    public void setIDList(Long [] IDList) {
+        this.IDList = IDList;
+    }
+
     public DescribeScoresRequest() {
     }
 
@@ -139,6 +162,12 @@ public class DescribeScoresRequest extends AbstractModel {
         if (source.IsDemo != null) {
             this.IsDemo = new Long(source.IsDemo);
         }
+        if (source.IDList != null) {
+            this.IDList = new Long[source.IDList.length];
+            for (int i = 0; i < source.IDList.length; i++) {
+                this.IDList[i] = new Long(source.IDList[i]);
+            }
+        }
     }
 
 
@@ -150,6 +179,7 @@ public class DescribeScoresRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "ID", this.ID);
         this.setParamSimple(map, prefix + "IsDemo", this.IsDemo);
+        this.setParamArraySimple(map, prefix + "IDList.", this.IDList);
 
     }
 }
