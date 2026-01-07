@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class RsTagRule extends AbstractModel {
 
     /**
-    * 负载均衡监听器 ID。
+    * <p>负载均衡监听器 ID。</p>
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * 要修改标签的后端机器列表。
+    * <p>要修改标签的后端机器列表。</p>
     */
     @SerializedName("Targets")
     @Expose
     private Target [] Targets;
 
     /**
-    * 转发规则的ID，七层规则时需要此参数，4层规则不需要。
+    * <p>转发规则的ID，七层规则时需要此参数，4层规则不需要。</p>
     */
     @SerializedName("LocationId")
     @Expose
     private String LocationId;
 
     /**
-    * 后端服务修改后的标签。此参数的优先级低于前述[Target](https://cloud.tencent.com/document/api/214/30694#Target)中的Tag参数，即最终的标签以Target中的Tag参数值为准，仅当Target中的Tag参数为空时，才以RsTagRule中的Tag参数为准。
+    * <p>后端服务修改后的标签。此参数的优先级低于前述<a href="https://cloud.tencent.com/document/api/214/30694#Target">Target</a>中的Tag参数，即最终的标签以Target中的Tag参数值为准，仅当Target中的Tag参数为空时，才以RsTagRule中的Tag参数为准。</p>
     */
     @SerializedName("Tag")
     @Expose
     private String Tag;
 
     /**
-     * Get 负载均衡监听器 ID。 
-     * @return ListenerId 负载均衡监听器 ID。
+     * Get <p>负载均衡监听器 ID。</p> 
+     * @return ListenerId <p>负载均衡监听器 ID。</p>
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set 负载均衡监听器 ID。
-     * @param ListenerId 负载均衡监听器 ID。
+     * Set <p>负载均衡监听器 ID。</p>
+     * @param ListenerId <p>负载均衡监听器 ID。</p>
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get 要修改标签的后端机器列表。 
-     * @return Targets 要修改标签的后端机器列表。
+     * Get <p>要修改标签的后端机器列表。</p> 
+     * @return Targets <p>要修改标签的后端机器列表。</p>
      */
     public Target [] getTargets() {
         return this.Targets;
     }
 
     /**
-     * Set 要修改标签的后端机器列表。
-     * @param Targets 要修改标签的后端机器列表。
+     * Set <p>要修改标签的后端机器列表。</p>
+     * @param Targets <p>要修改标签的后端机器列表。</p>
      */
     public void setTargets(Target [] Targets) {
         this.Targets = Targets;
     }
 
     /**
-     * Get 转发规则的ID，七层规则时需要此参数，4层规则不需要。 
-     * @return LocationId 转发规则的ID，七层规则时需要此参数，4层规则不需要。
+     * Get <p>转发规则的ID，七层规则时需要此参数，4层规则不需要。</p> 
+     * @return LocationId <p>转发规则的ID，七层规则时需要此参数，4层规则不需要。</p>
      */
     public String getLocationId() {
         return this.LocationId;
     }
 
     /**
-     * Set 转发规则的ID，七层规则时需要此参数，4层规则不需要。
-     * @param LocationId 转发规则的ID，七层规则时需要此参数，4层规则不需要。
+     * Set <p>转发规则的ID，七层规则时需要此参数，4层规则不需要。</p>
+     * @param LocationId <p>转发规则的ID，七层规则时需要此参数，4层规则不需要。</p>
      */
     public void setLocationId(String LocationId) {
         this.LocationId = LocationId;
     }
 
     /**
-     * Get 后端服务修改后的标签。此参数的优先级低于前述[Target](https://cloud.tencent.com/document/api/214/30694#Target)中的Tag参数，即最终的标签以Target中的Tag参数值为准，仅当Target中的Tag参数为空时，才以RsTagRule中的Tag参数为准。 
-     * @return Tag 后端服务修改后的标签。此参数的优先级低于前述[Target](https://cloud.tencent.com/document/api/214/30694#Target)中的Tag参数，即最终的标签以Target中的Tag参数值为准，仅当Target中的Tag参数为空时，才以RsTagRule中的Tag参数为准。
+     * Get <p>后端服务修改后的标签。此参数的优先级低于前述<a href="https://cloud.tencent.com/document/api/214/30694#Target">Target</a>中的Tag参数，即最终的标签以Target中的Tag参数值为准，仅当Target中的Tag参数为空时，才以RsTagRule中的Tag参数为准。</p> 
+     * @return Tag <p>后端服务修改后的标签。此参数的优先级低于前述<a href="https://cloud.tencent.com/document/api/214/30694#Target">Target</a>中的Tag参数，即最终的标签以Target中的Tag参数值为准，仅当Target中的Tag参数为空时，才以RsTagRule中的Tag参数为准。</p>
      */
     public String getTag() {
         return this.Tag;
     }
 
     /**
-     * Set 后端服务修改后的标签。此参数的优先级低于前述[Target](https://cloud.tencent.com/document/api/214/30694#Target)中的Tag参数，即最终的标签以Target中的Tag参数值为准，仅当Target中的Tag参数为空时，才以RsTagRule中的Tag参数为准。
-     * @param Tag 后端服务修改后的标签。此参数的优先级低于前述[Target](https://cloud.tencent.com/document/api/214/30694#Target)中的Tag参数，即最终的标签以Target中的Tag参数值为准，仅当Target中的Tag参数为空时，才以RsTagRule中的Tag参数为准。
+     * Set <p>后端服务修改后的标签。此参数的优先级低于前述<a href="https://cloud.tencent.com/document/api/214/30694#Target">Target</a>中的Tag参数，即最终的标签以Target中的Tag参数值为准，仅当Target中的Tag参数为空时，才以RsTagRule中的Tag参数为准。</p>
+     * @param Tag <p>后端服务修改后的标签。此参数的优先级低于前述<a href="https://cloud.tencent.com/document/api/214/30694#Target">Target</a>中的Tag参数，即最终的标签以Target中的Tag参数值为准，仅当Target中的Tag参数为空时，才以RsTagRule中的Tag参数为准。</p>
      */
     public void setTag(String Tag) {
         this.Tag = Tag;

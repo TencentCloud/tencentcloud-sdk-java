@@ -192,6 +192,13 @@ public class NetAttackEventInfo extends AbstractModel {
     private IPAnalyse IPAnalyse;
 
     /**
+    * 响应数据包 base64编码
+    */
+    @SerializedName("NetResponsePayload")
+    @Expose
+    private String NetResponsePayload;
+
+    /**
      * Get 处理状态，0 待处理 1 已处理 2 已加白  3 已忽略 4 已删除 5: 已开启防御 
      * @return Status 处理状态，0 待处理 1 已处理 2 已加白  3 已忽略 4 已删除 5: 已开启防御
      */
@@ -575,6 +582,22 @@ public class NetAttackEventInfo extends AbstractModel {
         this.IPAnalyse = IPAnalyse;
     }
 
+    /**
+     * Get 响应数据包 base64编码 
+     * @return NetResponsePayload 响应数据包 base64编码
+     */
+    public String getNetResponsePayload() {
+        return this.NetResponsePayload;
+    }
+
+    /**
+     * Set 响应数据包 base64编码
+     * @param NetResponsePayload 响应数据包 base64编码
+     */
+    public void setNetResponsePayload(String NetResponsePayload) {
+        this.NetResponsePayload = NetResponsePayload;
+    }
+
     public NetAttackEventInfo() {
     }
 
@@ -655,6 +678,9 @@ public class NetAttackEventInfo extends AbstractModel {
         if (source.IPAnalyse != null) {
             this.IPAnalyse = new IPAnalyse(source.IPAnalyse);
         }
+        if (source.NetResponsePayload != null) {
+            this.NetResponsePayload = new String(source.NetResponsePayload);
+        }
     }
 
 
@@ -686,6 +712,7 @@ public class NetAttackEventInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "HostOpType", this.HostOpType);
         this.setParamSimple(map, prefix + "HostOpProcessTree", this.HostOpProcessTree);
         this.setParamObj(map, prefix + "IPAnalyse.", this.IPAnalyse);
+        this.setParamSimple(map, prefix + "NetResponsePayload", this.NetResponsePayload);
 
     }
 }

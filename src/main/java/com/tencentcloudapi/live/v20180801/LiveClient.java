@@ -1952,6 +1952,20 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
+     *可通过调用该接口，对点播源的直播拉流任务进行插播操作。
+注意：
+1. 仅支持对有效且运行中的点播源任务进行插播操作。
+2. 拉转推插播文件时，事件及回调中的索引均保持为插播前的值。
+     * @param req InsertTaskTemporaryFilesRequest
+     * @return InsertTaskTemporaryFilesResponse
+     * @throws TencentCloudSDKException
+     */
+    public InsertTaskTemporaryFilesResponse InsertTaskTemporaryFiles(InsertTaskTemporaryFilesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InsertTaskTemporaryFiles", InsertTaskTemporaryFilesResponse.class);
+    }
+
+    /**
      *该接口用来设置导播台的描述、名称、录制模板id等参数。
      * @param req ModifyCasterRequest
      * @return ModifyCasterResponse

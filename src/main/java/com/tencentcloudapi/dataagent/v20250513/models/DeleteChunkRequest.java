@@ -45,6 +45,13 @@ public class DeleteChunkRequest extends AbstractModel {
     private String [] ChunkIds;
 
     /**
+    * 知识库id
+    */
+    @SerializedName("KnowledgeBaseId")
+    @Expose
+    private String KnowledgeBaseId;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -92,6 +99,22 @@ public class DeleteChunkRequest extends AbstractModel {
         this.ChunkIds = ChunkIds;
     }
 
+    /**
+     * Get 知识库id 
+     * @return KnowledgeBaseId 知识库id
+     */
+    public String getKnowledgeBaseId() {
+        return this.KnowledgeBaseId;
+    }
+
+    /**
+     * Set 知识库id
+     * @param KnowledgeBaseId 知识库id
+     */
+    public void setKnowledgeBaseId(String KnowledgeBaseId) {
+        this.KnowledgeBaseId = KnowledgeBaseId;
+    }
+
     public DeleteChunkRequest() {
     }
 
@@ -112,6 +135,9 @@ public class DeleteChunkRequest extends AbstractModel {
                 this.ChunkIds[i] = new String(source.ChunkIds[i]);
             }
         }
+        if (source.KnowledgeBaseId != null) {
+            this.KnowledgeBaseId = new String(source.KnowledgeBaseId);
+        }
     }
 
 
@@ -122,6 +148,7 @@ public class DeleteChunkRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamArraySimple(map, prefix + "ChunkIds.", this.ChunkIds);
+        this.setParamSimple(map, prefix + "KnowledgeBaseId", this.KnowledgeBaseId);
 
     }
 }

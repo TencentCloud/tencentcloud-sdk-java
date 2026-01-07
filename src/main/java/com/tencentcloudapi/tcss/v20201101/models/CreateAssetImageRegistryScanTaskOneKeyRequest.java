@@ -52,6 +52,13 @@ public class CreateAssetImageRegistryScanTaskOneKeyRequest extends AbstractModel
     private Long [] Id;
 
     /**
+    * 剔除扫描的镜像id列表
+    */
+    @SerializedName("ExcludeIDs")
+    @Expose
+    private Long [] ExcludeIDs;
+
+    /**
     * 是否最新镜像
     */
     @SerializedName("IsLatest")
@@ -159,6 +166,22 @@ public class CreateAssetImageRegistryScanTaskOneKeyRequest extends AbstractModel
      */
     public void setId(Long [] Id) {
         this.Id = Id;
+    }
+
+    /**
+     * Get 剔除扫描的镜像id列表 
+     * @return ExcludeIDs 剔除扫描的镜像id列表
+     */
+    public Long [] getExcludeIDs() {
+        return this.ExcludeIDs;
+    }
+
+    /**
+     * Set 剔除扫描的镜像id列表
+     * @param ExcludeIDs 剔除扫描的镜像id列表
+     */
+    public void setExcludeIDs(Long [] ExcludeIDs) {
+        this.ExcludeIDs = ExcludeIDs;
     }
 
     /**
@@ -286,6 +309,12 @@ public class CreateAssetImageRegistryScanTaskOneKeyRequest extends AbstractModel
                 this.Id[i] = new Long(source.Id[i]);
             }
         }
+        if (source.ExcludeIDs != null) {
+            this.ExcludeIDs = new Long[source.ExcludeIDs.length];
+            for (int i = 0; i < source.ExcludeIDs.length; i++) {
+                this.ExcludeIDs[i] = new Long(source.ExcludeIDs[i]);
+            }
+        }
         if (source.IsLatest != null) {
             this.IsLatest = new Boolean(source.IsLatest);
         }
@@ -321,6 +350,7 @@ public class CreateAssetImageRegistryScanTaskOneKeyRequest extends AbstractModel
         this.setParamArrayObj(map, prefix + "Images.", this.Images);
         this.setParamArraySimple(map, prefix + "ScanType.", this.ScanType);
         this.setParamArraySimple(map, prefix + "Id.", this.Id);
+        this.setParamArraySimple(map, prefix + "ExcludeIDs.", this.ExcludeIDs);
         this.setParamSimple(map, prefix + "IsLatest", this.IsLatest);
         this.setParamSimple(map, prefix + "ScanScope", this.ScanScope);
         this.setParamArraySimple(map, prefix + "RegistryType.", this.RegistryType);

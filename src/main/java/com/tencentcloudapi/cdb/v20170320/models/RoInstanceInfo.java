@@ -59,7 +59,7 @@ public class RoInstanceInfo extends AbstractModel {
     private String Region;
 
     /**
-    * RO可用区的正式名称，如ap-shanghai-1
+    * RO可用区的正式名称，如 ap-shanghai-2
     */
     @SerializedName("Zone")
     @Expose
@@ -272,16 +272,16 @@ public class RoInstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get RO可用区的正式名称，如ap-shanghai-1 
-     * @return Zone RO可用区的正式名称，如ap-shanghai-1
+     * Get RO可用区的正式名称，如 ap-shanghai-2 
+     * @return Zone RO可用区的正式名称，如 ap-shanghai-2
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set RO可用区的正式名称，如ap-shanghai-1
-     * @param Zone RO可用区的正式名称，如ap-shanghai-1
+     * Set RO可用区的正式名称，如 ap-shanghai-2
+     * @param Zone RO可用区的正式名称，如 ap-shanghai-2
      */
     public void setZone(String Zone) {
         this.Zone = Zone;

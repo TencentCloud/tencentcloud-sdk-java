@@ -73,6 +73,13 @@ public class RequestsPerSecond extends AbstractModel {
     private Long GracefulStopSeconds;
 
     /**
+    * 场景最大执行次数
+    */
+    @SerializedName("IterationCount")
+    @Expose
+    private Long IterationCount;
+
+    /**
      * Get 最大RPS 
      * @return MaxRequestsPerSecond 最大RPS
      */
@@ -184,6 +191,22 @@ public class RequestsPerSecond extends AbstractModel {
         this.GracefulStopSeconds = GracefulStopSeconds;
     }
 
+    /**
+     * Get 场景最大执行次数 
+     * @return IterationCount 场景最大执行次数
+     */
+    public Long getIterationCount() {
+        return this.IterationCount;
+    }
+
+    /**
+     * Set 场景最大执行次数
+     * @param IterationCount 场景最大执行次数
+     */
+    public void setIterationCount(Long IterationCount) {
+        this.IterationCount = IterationCount;
+    }
+
     public RequestsPerSecond() {
     }
 
@@ -213,6 +236,9 @@ public class RequestsPerSecond extends AbstractModel {
         if (source.GracefulStopSeconds != null) {
             this.GracefulStopSeconds = new Long(source.GracefulStopSeconds);
         }
+        if (source.IterationCount != null) {
+            this.IterationCount = new Long(source.IterationCount);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class RequestsPerSecond extends AbstractModel {
         this.setParamSimple(map, prefix + "StartRequestsPerSecond", this.StartRequestsPerSecond);
         this.setParamSimple(map, prefix + "TargetRequestsPerSecond", this.TargetRequestsPerSecond);
         this.setParamSimple(map, prefix + "GracefulStopSeconds", this.GracefulStopSeconds);
+        this.setParamSimple(map, prefix + "IterationCount", this.IterationCount);
 
     }
 }

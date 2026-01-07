@@ -54,7 +54,9 @@ public class SceneAigcImageOutputConfig extends AbstractModel {
     private String ExpireTime;
 
     /**
-    * 指定所生成图片的宽高比。输入格式为 W:H。仅生商品图场景有效。
+    * 指定所生成图片的宽高比。输入格式为 W:H。
+
+仅生商品图场景有效，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9
     */
     @SerializedName("AspectRatio")
     @Expose
@@ -133,16 +135,24 @@ public class SceneAigcImageOutputConfig extends AbstractModel {
     }
 
     /**
-     * Get 指定所生成图片的宽高比。输入格式为 W:H。仅生商品图场景有效。 
-     * @return AspectRatio 指定所生成图片的宽高比。输入格式为 W:H。仅生商品图场景有效。
+     * Get 指定所生成图片的宽高比。输入格式为 W:H。
+
+仅生商品图场景有效，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9 
+     * @return AspectRatio 指定所生成图片的宽高比。输入格式为 W:H。
+
+仅生商品图场景有效，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9
      */
     public String getAspectRatio() {
         return this.AspectRatio;
     }
 
     /**
-     * Set 指定所生成图片的宽高比。输入格式为 W:H。仅生商品图场景有效。
-     * @param AspectRatio 指定所生成图片的宽高比。输入格式为 W:H。仅生商品图场景有效。
+     * Set 指定所生成图片的宽高比。输入格式为 W:H。
+
+仅生商品图场景有效，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9
+     * @param AspectRatio 指定所生成图片的宽高比。输入格式为 W:H。
+
+仅生商品图场景有效，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9
      */
     public void setAspectRatio(String AspectRatio) {
         this.AspectRatio = AspectRatio;

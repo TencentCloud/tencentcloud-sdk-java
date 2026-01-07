@@ -66,6 +66,13 @@ public class AddChunkRequest extends AbstractModel {
     private String AfterChunkId;
 
     /**
+    * 知识库id
+    */
+    @SerializedName("KnowledgeBaseId")
+    @Expose
+    private String KnowledgeBaseId;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -161,6 +168,22 @@ public class AddChunkRequest extends AbstractModel {
         this.AfterChunkId = AfterChunkId;
     }
 
+    /**
+     * Get 知识库id 
+     * @return KnowledgeBaseId 知识库id
+     */
+    public String getKnowledgeBaseId() {
+        return this.KnowledgeBaseId;
+    }
+
+    /**
+     * Set 知识库id
+     * @param KnowledgeBaseId 知识库id
+     */
+    public void setKnowledgeBaseId(String KnowledgeBaseId) {
+        this.KnowledgeBaseId = KnowledgeBaseId;
+    }
+
     public AddChunkRequest() {
     }
 
@@ -187,6 +210,9 @@ public class AddChunkRequest extends AbstractModel {
         if (source.AfterChunkId != null) {
             this.AfterChunkId = new String(source.AfterChunkId);
         }
+        if (source.KnowledgeBaseId != null) {
+            this.KnowledgeBaseId = new String(source.KnowledgeBaseId);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class AddChunkRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InsertPos", this.InsertPos);
         this.setParamSimple(map, prefix + "Content", this.Content);
         this.setParamSimple(map, prefix + "AfterChunkId", this.AfterChunkId);
+        this.setParamSimple(map, prefix + "KnowledgeBaseId", this.KnowledgeBaseId);
 
     }
 }

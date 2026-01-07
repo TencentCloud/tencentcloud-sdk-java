@@ -31,7 +31,7 @@ public class BackupConfig extends AbstractModel {
     private String ReplicationMode;
 
     /**
-    * 第二个从库可用区的正式名称，如ap-shanghai-1
+    * 第二个从库可用区的正式名称，如 ap-shanghai-2
     */
     @SerializedName("Zone")
     @Expose
@@ -68,16 +68,16 @@ public class BackupConfig extends AbstractModel {
     }
 
     /**
-     * Get 第二个从库可用区的正式名称，如ap-shanghai-1 
-     * @return Zone 第二个从库可用区的正式名称，如ap-shanghai-1
+     * Get 第二个从库可用区的正式名称，如 ap-shanghai-2 
+     * @return Zone 第二个从库可用区的正式名称，如 ap-shanghai-2
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 第二个从库可用区的正式名称，如ap-shanghai-1
-     * @param Zone 第二个从库可用区的正式名称，如ap-shanghai-1
+     * Set 第二个从库可用区的正式名称，如 ap-shanghai-2
+     * @param Zone 第二个从库可用区的正式名称，如 ap-shanghai-2
      */
     public void setZone(String Zone) {
         this.Zone = Zone;

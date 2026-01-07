@@ -38,6 +38,13 @@ public class QueryChunkListRequest extends AbstractModel {
     private Long PageSize;
 
     /**
+    * 知识库id
+    */
+    @SerializedName("KnowledgeBaseId")
+    @Expose
+    private String KnowledgeBaseId;
+
+    /**
      * Get 表示第一页 
      * @return Page 表示第一页
      */
@@ -69,6 +76,22 @@ public class QueryChunkListRequest extends AbstractModel {
         this.PageSize = PageSize;
     }
 
+    /**
+     * Get 知识库id 
+     * @return KnowledgeBaseId 知识库id
+     */
+    public String getKnowledgeBaseId() {
+        return this.KnowledgeBaseId;
+    }
+
+    /**
+     * Set 知识库id
+     * @param KnowledgeBaseId 知识库id
+     */
+    public void setKnowledgeBaseId(String KnowledgeBaseId) {
+        this.KnowledgeBaseId = KnowledgeBaseId;
+    }
+
     public QueryChunkListRequest() {
     }
 
@@ -83,6 +106,9 @@ public class QueryChunkListRequest extends AbstractModel {
         if (source.PageSize != null) {
             this.PageSize = new Long(source.PageSize);
         }
+        if (source.KnowledgeBaseId != null) {
+            this.KnowledgeBaseId = new String(source.KnowledgeBaseId);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class QueryChunkListRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Page", this.Page);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
+        this.setParamSimple(map, prefix + "KnowledgeBaseId", this.KnowledgeBaseId);
 
     }
 }

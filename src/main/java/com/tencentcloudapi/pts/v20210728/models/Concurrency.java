@@ -60,6 +60,13 @@ public class Concurrency extends AbstractModel {
     private Long Resources;
 
     /**
+    * 压力模型
+    */
+    @SerializedName("Mode")
+    @Expose
+    private String Mode;
+
+    /**
      * Get 多阶段配置数组
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Stages 多阶段配置数组
@@ -143,6 +150,22 @@ public class Concurrency extends AbstractModel {
         this.Resources = Resources;
     }
 
+    /**
+     * Get 压力模型 
+     * @return Mode 压力模型
+     */
+    public String getMode() {
+        return this.Mode;
+    }
+
+    /**
+     * Set 压力模型
+     * @param Mode 压力模型
+     */
+    public void setMode(String Mode) {
+        this.Mode = Mode;
+    }
+
     public Concurrency() {
     }
 
@@ -169,6 +192,9 @@ public class Concurrency extends AbstractModel {
         if (source.Resources != null) {
             this.Resources = new Long(source.Resources);
         }
+        if (source.Mode != null) {
+            this.Mode = new String(source.Mode);
+        }
     }
 
 
@@ -181,6 +207,7 @@ public class Concurrency extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxRequestsPerSecond", this.MaxRequestsPerSecond);
         this.setParamSimple(map, prefix + "GracefulStopSeconds", this.GracefulStopSeconds);
         this.setParamSimple(map, prefix + "Resources", this.Resources);
+        this.setParamSimple(map, prefix + "Mode", this.Mode);
 
     }
 }

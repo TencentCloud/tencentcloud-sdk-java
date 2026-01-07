@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.clb.v20180317.models;
+package com.tencentcloudapi.tione.v20211111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateListenerResponse extends AbstractModel {
-
-    /**
-    * <p>创建的监听器的唯一标识数组。</p>
-    */
-    @SerializedName("ListenerIds")
-    @Expose
-    private String [] ListenerIds;
+public class ModifyNotebookResponse extends AbstractModel {
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -36,22 +29,6 @@ public class CreateListenerResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get <p>创建的监听器的唯一标识数组。</p> 
-     * @return ListenerIds <p>创建的监听器的唯一标识数组。</p>
-     */
-    public String [] getListenerIds() {
-        return this.ListenerIds;
-    }
-
-    /**
-     * Set <p>创建的监听器的唯一标识数组。</p>
-     * @param ListenerIds <p>创建的监听器的唯一标识数组。</p>
-     */
-    public void setListenerIds(String [] ListenerIds) {
-        this.ListenerIds = ListenerIds;
-    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -69,20 +46,14 @@ public class CreateListenerResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreateListenerResponse() {
+    public ModifyNotebookResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateListenerResponse(CreateListenerResponse source) {
-        if (source.ListenerIds != null) {
-            this.ListenerIds = new String[source.ListenerIds.length];
-            for (int i = 0; i < source.ListenerIds.length; i++) {
-                this.ListenerIds[i] = new String(source.ListenerIds[i]);
-            }
-        }
+    public ModifyNotebookResponse(ModifyNotebookResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -93,7 +64,6 @@ public class CreateListenerResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "ListenerIds.", this.ListenerIds);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

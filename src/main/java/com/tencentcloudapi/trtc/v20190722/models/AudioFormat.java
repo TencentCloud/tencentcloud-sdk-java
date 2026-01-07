@@ -26,13 +26,13 @@ public class AudioFormat extends AbstractModel {
     /**
     * 生成的音频格式
 
-- TextToSpeech流式接口
+- TextToSpeechSSE 流式接口
 
  支持 pcm, 默认: pcm
 
-- TextToSpeech非流式接口
+- TextToSpeech 非流式接口
 
- 支持 pcm,wav,  默认: pcm
+ 支持 pcm,wav,mp3,  默认: pcm
     */
     @SerializedName("Format")
     @Expose
@@ -58,22 +58,22 @@ public class AudioFormat extends AbstractModel {
     /**
      * Get 生成的音频格式
 
-- TextToSpeech流式接口
+- TextToSpeechSSE 流式接口
 
  支持 pcm, 默认: pcm
 
-- TextToSpeech非流式接口
+- TextToSpeech 非流式接口
 
- 支持 pcm,wav,  默认: pcm 
+ 支持 pcm,wav,mp3,  默认: pcm 
      * @return Format 生成的音频格式
 
-- TextToSpeech流式接口
+- TextToSpeechSSE 流式接口
 
  支持 pcm, 默认: pcm
 
-- TextToSpeech非流式接口
+- TextToSpeech 非流式接口
 
- 支持 pcm,wav,  默认: pcm
+ 支持 pcm,wav,mp3,  默认: pcm
      */
     public String getFormat() {
         return this.Format;
@@ -82,22 +82,22 @@ public class AudioFormat extends AbstractModel {
     /**
      * Set 生成的音频格式
 
-- TextToSpeech流式接口
+- TextToSpeechSSE 流式接口
 
  支持 pcm, 默认: pcm
 
-- TextToSpeech非流式接口
+- TextToSpeech 非流式接口
 
- 支持 pcm,wav,  默认: pcm
+ 支持 pcm,wav,mp3,  默认: pcm
      * @param Format 生成的音频格式
 
-- TextToSpeech流式接口
+- TextToSpeechSSE 流式接口
 
  支持 pcm, 默认: pcm
 
-- TextToSpeech非流式接口
+- TextToSpeech 非流式接口
 
- 支持 pcm,wav,  默认: pcm
+ 支持 pcm,wav,mp3,  默认: pcm
      */
     public void setFormat(String Format) {
         this.Format = Format;

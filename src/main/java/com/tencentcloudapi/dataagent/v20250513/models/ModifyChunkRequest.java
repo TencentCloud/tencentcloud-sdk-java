@@ -52,6 +52,13 @@ public class ModifyChunkRequest extends AbstractModel {
     private String Content;
 
     /**
+    * 知识库id
+    */
+    @SerializedName("KnowledgeBaseId")
+    @Expose
+    private String KnowledgeBaseId;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -115,6 +122,22 @@ public class ModifyChunkRequest extends AbstractModel {
         this.Content = Content;
     }
 
+    /**
+     * Get 知识库id 
+     * @return KnowledgeBaseId 知识库id
+     */
+    public String getKnowledgeBaseId() {
+        return this.KnowledgeBaseId;
+    }
+
+    /**
+     * Set 知识库id
+     * @param KnowledgeBaseId 知识库id
+     */
+    public void setKnowledgeBaseId(String KnowledgeBaseId) {
+        this.KnowledgeBaseId = KnowledgeBaseId;
+    }
+
     public ModifyChunkRequest() {
     }
 
@@ -135,6 +158,9 @@ public class ModifyChunkRequest extends AbstractModel {
         if (source.Content != null) {
             this.Content = new String(source.Content);
         }
+        if (source.KnowledgeBaseId != null) {
+            this.KnowledgeBaseId = new String(source.KnowledgeBaseId);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class ModifyChunkRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamSimple(map, prefix + "ChunkId", this.ChunkId);
         this.setParamSimple(map, prefix + "Content", this.Content);
+        this.setParamSimple(map, prefix + "KnowledgeBaseId", this.KnowledgeBaseId);
 
     }
 }

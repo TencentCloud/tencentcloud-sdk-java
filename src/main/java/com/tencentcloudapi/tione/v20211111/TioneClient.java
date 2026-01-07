@@ -561,6 +561,17 @@ https://cloud.tencent.com/document/product/1278/85305
     }
 
     /**
+     *修改Notebook
+     * @param req ModifyNotebookRequest
+     * @return ModifyNotebookResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNotebookResponse ModifyNotebook(ModifyNotebookRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyNotebook", ModifyNotebookResponse.class);
+    }
+
+    /**
      *修改Notebook标签
      * @param req ModifyNotebookTagsRequest
      * @return ModifyNotebookTagsResponse

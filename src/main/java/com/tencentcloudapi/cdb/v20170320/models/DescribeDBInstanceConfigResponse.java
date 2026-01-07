@@ -38,7 +38,7 @@ public class DescribeDBInstanceConfigResponse extends AbstractModel {
     private Long DeployMode;
 
     /**
-    * 实例可用区信息，格式如 "ap-shanghai-1"。
+    * 实例可用区信息，格式如 "ap-shanghai-2"。
     */
     @SerializedName("Zone")
     @Expose
@@ -107,16 +107,16 @@ public class DescribeDBInstanceConfigResponse extends AbstractModel {
     }
 
     /**
-     * Get 实例可用区信息，格式如 "ap-shanghai-1"。 
-     * @return Zone 实例可用区信息，格式如 "ap-shanghai-1"。
+     * Get 实例可用区信息，格式如 "ap-shanghai-2"。 
+     * @return Zone 实例可用区信息，格式如 "ap-shanghai-2"。
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 实例可用区信息，格式如 "ap-shanghai-1"。
-     * @param Zone 实例可用区信息，格式如 "ap-shanghai-1"。
+     * Set 实例可用区信息，格式如 "ap-shanghai-2"。
+     * @param Zone 实例可用区信息，格式如 "ap-shanghai-2"。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;

@@ -31,7 +31,7 @@ public class SlaveConfig extends AbstractModel {
     private String ReplicationMode;
 
     /**
-    * 从库可用区的正式名称，如ap-shanghai-1
+    * 从库可用区的正式名称，如 ap-shanghai-2
     */
     @SerializedName("Zone")
     @Expose
@@ -54,16 +54,16 @@ public class SlaveConfig extends AbstractModel {
     }
 
     /**
-     * Get 从库可用区的正式名称，如ap-shanghai-1 
-     * @return Zone 从库可用区的正式名称，如ap-shanghai-1
+     * Get 从库可用区的正式名称，如 ap-shanghai-2 
+     * @return Zone 从库可用区的正式名称，如 ap-shanghai-2
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 从库可用区的正式名称，如ap-shanghai-1
-     * @param Zone 从库可用区的正式名称，如ap-shanghai-1
+     * Set 从库可用区的正式名称，如 ap-shanghai-2
+     * @param Zone 从库可用区的正式名称，如 ap-shanghai-2
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
