@@ -18,6 +18,9 @@ public enum WedataErrorCode {
      /* ClientIp未被授权。 */
      INVALIDPARAMETER_CLIENTIPNOTAUTHORIZED("InvalidParameter.ClientIpNotAuthorized"),
      
+     /* 名称重复。 */
+     INVALIDPARAMETER_DUPLICATENAME("InvalidParameter.DuplicateName"),
+     
      /* 查询过滤条件参数错误。 */
      INVALIDPARAMETER_INVALIDFILTERPARAMETER("InvalidParameter.InvalidFilterParameter"),
      
@@ -29,6 +32,9 @@ public enum WedataErrorCode {
      
      /* 规则不存在。 */
      INVALIDPARAMETER_RULENOTEXIST("InvalidParameter.RuleNotExist"),
+     
+     /* 服务繁忙，请稍后重试。 */
+     INVALIDPARAMETER_SERVICEISBUSY("InvalidParameter.ServiceIsBusy"),
      
      /* 项目名重复。 */
      INVALIDPARAMETER_WORKSPACENAMEDUPLICATION("InvalidParameter.WorkspaceNameDuplication"),

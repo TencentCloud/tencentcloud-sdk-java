@@ -307,12 +307,19 @@ public class ListDocItem extends AbstractModel {
     private String StaffName;
 
     /**
-    * 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+    * 文档生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableScope")
     @Expose
     private Long EnableScope;
+
+    /**
+    * 文档大小，单位：字节
+    */
+    @SerializedName("DocSize")
+    @Expose
+    private String DocSize;
 
     /**
      * Get 文档ID
@@ -1015,9 +1022,9 @@ public class ListDocItem extends AbstractModel {
     }
 
     /**
-     * Get 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     * Get 文档生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EnableScope 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     * @return EnableScope 文档生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEnableScope() {
@@ -1025,13 +1032,29 @@ public class ListDocItem extends AbstractModel {
     }
 
     /**
-     * Set 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     * Set 文档生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EnableScope 文档生效域: 1-停用；2-仅开发域；3-仅发布域；4-全域
+     * @param EnableScope 文档生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableScope(Long EnableScope) {
         this.EnableScope = EnableScope;
+    }
+
+    /**
+     * Get 文档大小，单位：字节 
+     * @return DocSize 文档大小，单位：字节
+     */
+    public String getDocSize() {
+        return this.DocSize;
+    }
+
+    /**
+     * Set 文档大小，单位：字节
+     * @param DocSize 文档大小，单位：字节
+     */
+    public void setDocSize(String DocSize) {
+        this.DocSize = DocSize;
     }
 
     public ListDocItem() {
@@ -1162,6 +1185,9 @@ public class ListDocItem extends AbstractModel {
         if (source.EnableScope != null) {
             this.EnableScope = new Long(source.EnableScope);
         }
+        if (source.DocSize != null) {
+            this.DocSize = new String(source.DocSize);
+        }
     }
 
 
@@ -1206,6 +1232,7 @@ public class ListDocItem extends AbstractModel {
         this.setParamSimple(map, prefix + "IsDisabled", this.IsDisabled);
         this.setParamSimple(map, prefix + "StaffName", this.StaffName);
         this.setParamSimple(map, prefix + "EnableScope", this.EnableScope);
+        this.setParamSimple(map, prefix + "DocSize", this.DocSize);
 
     }
 }

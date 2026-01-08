@@ -164,6 +164,13 @@ public class PrivilegeEscalationProcess extends AbstractModel {
     private Long Pid;
 
     /**
+    * 告警数量
+    */
+    @SerializedName("Count")
+    @Expose
+    private Long Count;
+
+    /**
      * Get 数据ID 
      * @return Id 数据ID
      */
@@ -483,6 +490,22 @@ public class PrivilegeEscalationProcess extends AbstractModel {
         this.Pid = Pid;
     }
 
+    /**
+     * Get 告警数量 
+     * @return Count 告警数量
+     */
+    public Long getCount() {
+        return this.Count;
+    }
+
+    /**
+     * Set 告警数量
+     * @param Count 告警数量
+     */
+    public void setCount(Long Count) {
+        this.Count = Count;
+    }
+
     public PrivilegeEscalationProcess() {
     }
 
@@ -551,6 +574,9 @@ public class PrivilegeEscalationProcess extends AbstractModel {
         if (source.Pid != null) {
             this.Pid = new Long(source.Pid);
         }
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
     }
 
 
@@ -578,6 +604,7 @@ public class PrivilegeEscalationProcess extends AbstractModel {
         this.setParamSimple(map, prefix + "MachineName", this.MachineName);
         this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
         this.setParamSimple(map, prefix + "Pid", this.Pid);
+        this.setParamSimple(map, prefix + "Count", this.Count);
 
     }
 }

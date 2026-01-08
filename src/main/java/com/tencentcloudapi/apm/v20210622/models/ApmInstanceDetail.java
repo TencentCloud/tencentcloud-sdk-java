@@ -422,6 +422,13 @@ public class ApmInstanceDetail extends AbstractModel {
     private Long UrlNumberSegmentThreshold;
 
     /**
+    * spanId的索引key: 当CLS索引类型为键值索引时生效
+    */
+    @SerializedName("LogSpanIdKey")
+    @Expose
+    private String LogSpanIdKey;
+
+    /**
      * Get 业务系统 ID 
      * @return InstanceId 业务系统 ID
      */
@@ -1341,6 +1348,22 @@ public class ApmInstanceDetail extends AbstractModel {
         this.UrlNumberSegmentThreshold = UrlNumberSegmentThreshold;
     }
 
+    /**
+     * Get spanId的索引key: 当CLS索引类型为键值索引时生效 
+     * @return LogSpanIdKey spanId的索引key: 当CLS索引类型为键值索引时生效
+     */
+    public String getLogSpanIdKey() {
+        return this.LogSpanIdKey;
+    }
+
+    /**
+     * Set spanId的索引key: 当CLS索引类型为键值索引时生效
+     * @param LogSpanIdKey spanId的索引key: 当CLS索引类型为键值索引时生效
+     */
+    public void setLogSpanIdKey(String LogSpanIdKey) {
+        this.LogSpanIdKey = LogSpanIdKey;
+    }
+
     public ApmInstanceDetail() {
     }
 
@@ -1523,6 +1546,9 @@ public class ApmInstanceDetail extends AbstractModel {
         if (source.UrlNumberSegmentThreshold != null) {
             this.UrlNumberSegmentThreshold = new Long(source.UrlNumberSegmentThreshold);
         }
+        if (source.LogSpanIdKey != null) {
+            this.LogSpanIdKey = new String(source.LogSpanIdKey);
+        }
     }
 
 
@@ -1586,6 +1612,7 @@ public class ApmInstanceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "Token", this.Token);
         this.setParamSimple(map, prefix + "UrlLongSegmentThreshold", this.UrlLongSegmentThreshold);
         this.setParamSimple(map, prefix + "UrlNumberSegmentThreshold", this.UrlNumberSegmentThreshold);
+        this.setParamSimple(map, prefix + "LogSpanIdKey", this.LogSpanIdKey);
 
     }
 }

@@ -108,6 +108,7 @@ public class L4Proxy extends AbstractModel {
 
     /**
     * 安全防护配置。
+本字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DDosProtectionConfig")
@@ -342,20 +343,28 @@ public class L4Proxy extends AbstractModel {
 
     /**
      * Get 安全防护配置。
+本字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DDosProtectionConfig 安全防护配置。
+本字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public DDosProtectionConfig getDDosProtectionConfig() {
         return this.DDosProtectionConfig;
     }
 
     /**
      * Set 安全防护配置。
+本字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DDosProtectionConfig 安全防护配置。
+本字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setDDosProtectionConfig(DDosProtectionConfig DDosProtectionConfig) {
         this.DDosProtectionConfig = DDosProtectionConfig;
     }

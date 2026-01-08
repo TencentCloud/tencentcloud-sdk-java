@@ -206,6 +206,13 @@ public class PrivilegeEventInfo extends AbstractModel {
     private String ModifyTime;
 
     /**
+    * 告警数量
+    */
+    @SerializedName("Count")
+    @Expose
+    private Long Count;
+
+    /**
      * Get 数据ID 
      * @return Id 数据ID
      */
@@ -621,6 +628,22 @@ public class PrivilegeEventInfo extends AbstractModel {
         this.ModifyTime = ModifyTime;
     }
 
+    /**
+     * Get 告警数量 
+     * @return Count 告警数量
+     */
+    public Long getCount() {
+        return this.Count;
+    }
+
+    /**
+     * Set 告警数量
+     * @param Count 告警数量
+     */
+    public void setCount(Long Count) {
+        this.Count = Count;
+    }
+
     public PrivilegeEventInfo() {
     }
 
@@ -713,6 +736,9 @@ public class PrivilegeEventInfo extends AbstractModel {
         if (source.ModifyTime != null) {
             this.ModifyTime = new String(source.ModifyTime);
         }
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
     }
 
 
@@ -746,6 +772,7 @@ public class PrivilegeEventInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "NewCaps", this.NewCaps);
         this.setParamSimple(map, prefix + "MachineStatus", this.MachineStatus);
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+        this.setParamSimple(map, prefix + "Count", this.Count);
 
     }
 }

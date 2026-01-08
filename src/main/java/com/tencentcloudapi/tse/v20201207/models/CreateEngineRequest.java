@@ -111,6 +111,27 @@ polarismesh - STANDARD版本
 
     /**
     * 引擎的节点规格 ID。参见EngineProductVersion字段说明
+北极星支持的引擎规格ID与节点数对应关系：
+基础版：
+spec-c160bas1 500
+spec-c160bas2 1000
+spec-c160bas3 2000
+spec-c160bas4 5000
+spec-c160bas5 10000
+spec-c160bas6 20000
+spec-c160bas7 50000
+企业版：
+spec-c160pro50 50
+spec-c160pro100 100
+spec-c160pro200 200
+spec-c160pro500 500
+spec-c160pro1k 1000
+spec-c160pro5k 5000
+spec-c160pro10k 10000
+spec-c160pro20k 20000
+spec-c160pro50k 50000
+开发版：
+spec-c160dev1 50
     */
     @SerializedName("EngineResourceSpec")
     @Expose
@@ -514,8 +535,50 @@ polarismesh - STANDARD版本
     }
 
     /**
-     * Get 引擎的节点规格 ID。参见EngineProductVersion字段说明 
+     * Get 引擎的节点规格 ID。参见EngineProductVersion字段说明
+北极星支持的引擎规格ID与节点数对应关系：
+基础版：
+spec-c160bas1 500
+spec-c160bas2 1000
+spec-c160bas3 2000
+spec-c160bas4 5000
+spec-c160bas5 10000
+spec-c160bas6 20000
+spec-c160bas7 50000
+企业版：
+spec-c160pro50 50
+spec-c160pro100 100
+spec-c160pro200 200
+spec-c160pro500 500
+spec-c160pro1k 1000
+spec-c160pro5k 5000
+spec-c160pro10k 10000
+spec-c160pro20k 20000
+spec-c160pro50k 50000
+开发版：
+spec-c160dev1 50 
      * @return EngineResourceSpec 引擎的节点规格 ID。参见EngineProductVersion字段说明
+北极星支持的引擎规格ID与节点数对应关系：
+基础版：
+spec-c160bas1 500
+spec-c160bas2 1000
+spec-c160bas3 2000
+spec-c160bas4 5000
+spec-c160bas5 10000
+spec-c160bas6 20000
+spec-c160bas7 50000
+企业版：
+spec-c160pro50 50
+spec-c160pro100 100
+spec-c160pro200 200
+spec-c160pro500 500
+spec-c160pro1k 1000
+spec-c160pro5k 5000
+spec-c160pro10k 10000
+spec-c160pro20k 20000
+spec-c160pro50k 50000
+开发版：
+spec-c160dev1 50
      */
     public String getEngineResourceSpec() {
         return this.EngineResourceSpec;
@@ -523,7 +586,49 @@ polarismesh - STANDARD版本
 
     /**
      * Set 引擎的节点规格 ID。参见EngineProductVersion字段说明
+北极星支持的引擎规格ID与节点数对应关系：
+基础版：
+spec-c160bas1 500
+spec-c160bas2 1000
+spec-c160bas3 2000
+spec-c160bas4 5000
+spec-c160bas5 10000
+spec-c160bas6 20000
+spec-c160bas7 50000
+企业版：
+spec-c160pro50 50
+spec-c160pro100 100
+spec-c160pro200 200
+spec-c160pro500 500
+spec-c160pro1k 1000
+spec-c160pro5k 5000
+spec-c160pro10k 10000
+spec-c160pro20k 20000
+spec-c160pro50k 50000
+开发版：
+spec-c160dev1 50
      * @param EngineResourceSpec 引擎的节点规格 ID。参见EngineProductVersion字段说明
+北极星支持的引擎规格ID与节点数对应关系：
+基础版：
+spec-c160bas1 500
+spec-c160bas2 1000
+spec-c160bas3 2000
+spec-c160bas4 5000
+spec-c160bas5 10000
+spec-c160bas6 20000
+spec-c160bas7 50000
+企业版：
+spec-c160pro50 50
+spec-c160pro100 100
+spec-c160pro200 200
+spec-c160pro500 500
+spec-c160pro1k 1000
+spec-c160pro5k 5000
+spec-c160pro10k 10000
+spec-c160pro20k 20000
+spec-c160pro50k 50000
+开发版：
+spec-c160dev1 50
      */
     public void setEngineResourceSpec(String EngineResourceSpec) {
         this.EngineResourceSpec = EngineResourceSpec;

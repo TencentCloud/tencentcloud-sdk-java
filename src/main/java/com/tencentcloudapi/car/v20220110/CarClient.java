@@ -61,6 +61,17 @@ public class CarClient extends AbstractClient{
     }
 
     /**
+     *获取并发计数
+     * @param req DescribeConcurrentCountRequest
+     * @return DescribeConcurrentCountResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConcurrentCountResponse DescribeConcurrentCount(DescribeConcurrentCountRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeConcurrentCount", DescribeConcurrentCountResponse.class);
+    }
+
+    /**
      *销毁会话。如果该会话开启了云端推流，那么销毁会话时会结束云端推流。
      * @param req DestroySessionRequest
      * @return DestroySessionResponse

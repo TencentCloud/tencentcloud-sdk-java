@@ -101,6 +101,20 @@ public class NetworkAclQuintupleEntry extends AbstractModel {
     private String NetworkAclDirection;
 
     /**
+    * IPv6源CIDR。
+    */
+    @SerializedName("SourceIPv6Cidr")
+    @Expose
+    private String SourceIPv6Cidr;
+
+    /**
+    * IPv6目的CIDR。
+    */
+    @SerializedName("DestinationIPv6Cidr")
+    @Expose
+    private String DestinationIPv6Cidr;
+
+    /**
      * Get 协议, 取值: TCP,UDP, ICMP, ALL。 
      * @return Protocol 协议, 取值: TCP,UDP, ICMP, ALL。
      */
@@ -276,6 +290,38 @@ public class NetworkAclQuintupleEntry extends AbstractModel {
         this.NetworkAclDirection = NetworkAclDirection;
     }
 
+    /**
+     * Get IPv6源CIDR。 
+     * @return SourceIPv6Cidr IPv6源CIDR。
+     */
+    public String getSourceIPv6Cidr() {
+        return this.SourceIPv6Cidr;
+    }
+
+    /**
+     * Set IPv6源CIDR。
+     * @param SourceIPv6Cidr IPv6源CIDR。
+     */
+    public void setSourceIPv6Cidr(String SourceIPv6Cidr) {
+        this.SourceIPv6Cidr = SourceIPv6Cidr;
+    }
+
+    /**
+     * Get IPv6目的CIDR。 
+     * @return DestinationIPv6Cidr IPv6目的CIDR。
+     */
+    public String getDestinationIPv6Cidr() {
+        return this.DestinationIPv6Cidr;
+    }
+
+    /**
+     * Set IPv6目的CIDR。
+     * @param DestinationIPv6Cidr IPv6目的CIDR。
+     */
+    public void setDestinationIPv6Cidr(String DestinationIPv6Cidr) {
+        this.DestinationIPv6Cidr = DestinationIPv6Cidr;
+    }
+
     public NetworkAclQuintupleEntry() {
     }
 
@@ -317,6 +363,12 @@ public class NetworkAclQuintupleEntry extends AbstractModel {
         if (source.NetworkAclDirection != null) {
             this.NetworkAclDirection = new String(source.NetworkAclDirection);
         }
+        if (source.SourceIPv6Cidr != null) {
+            this.SourceIPv6Cidr = new String(source.SourceIPv6Cidr);
+        }
+        if (source.DestinationIPv6Cidr != null) {
+            this.DestinationIPv6Cidr = new String(source.DestinationIPv6Cidr);
+        }
     }
 
 
@@ -335,6 +387,8 @@ public class NetworkAclQuintupleEntry extends AbstractModel {
         this.setParamSimple(map, prefix + "Priority", this.Priority);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "NetworkAclDirection", this.NetworkAclDirection);
+        this.setParamSimple(map, prefix + "SourceIPv6Cidr", this.SourceIPv6Cidr);
+        this.setParamSimple(map, prefix + "DestinationIPv6Cidr", this.DestinationIPv6Cidr);
 
     }
 }

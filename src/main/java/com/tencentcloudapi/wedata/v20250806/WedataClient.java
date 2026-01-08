@@ -160,6 +160,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *创建质量规则接口
+     * @param req CreateQualityRuleRequest
+     * @return CreateQualityRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateQualityRuleResponse CreateQualityRule(CreateQualityRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateQualityRule", CreateQualityRuleResponse.class);
+    }
+
+    /**
      *创建监控任务
      * @param req CreateQualityRuleGroupRequest
      * @return CreateQualityRuleGroupResponse
@@ -1268,6 +1279,20 @@ public class WedataClient extends AbstractClient{
     public ListQualityRuleGroupExecResultsByPageResponse ListQualityRuleGroupExecResultsByPage(ListQualityRuleGroupExecResultsByPageRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListQualityRuleGroupExecResultsByPage", ListQualityRuleGroupExecResultsByPageResponse.class);
+    }
+
+    /**
+     *【过滤条件】
+{表idTableId,支持匹配}       {任务负责人Operator,支持匹配}    
+【必要字段】
+{数据来源TableId}
+     * @param req ListQualityRuleGroupsRequest
+     * @return ListQualityRuleGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListQualityRuleGroupsResponse ListQualityRuleGroups(ListQualityRuleGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListQualityRuleGroups", ListQualityRuleGroupsResponse.class);
     }
 
     /**

@@ -21,77 +21,80 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QualityThresholdValue extends AbstractModel {
+public class QualityRuleGroupPage extends AbstractModel {
 
     /**
-    * 阈值类型【入参必填】  1.低阈值  2.高阈值   3.普通阈值  4.枚举值
+    * 总数
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("ValueType")
+    @SerializedName("TotalCount")
     @Expose
-    private Long ValueType;
+    private Long TotalCount;
 
     /**
-    * 阈值【入参必填】
+    * 质量监控列表
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Value")
+    @SerializedName("Items")
     @Expose
-    private String Value;
+    private QualityRuleGroup [] Items;
 
     /**
-     * Get 阈值类型【入参必填】  1.低阈值  2.高阈值   3.普通阈值  4.枚举值
+     * Get 总数
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ValueType 阈值类型【入参必填】  1.低阈值  2.高阈值   3.普通阈值  4.枚举值
+     * @return TotalCount 总数
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getValueType() {
-        return this.ValueType;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 阈值类型【入参必填】  1.低阈值  2.高阈值   3.普通阈值  4.枚举值
+     * Set 总数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ValueType 阈值类型【入参必填】  1.低阈值  2.高阈值   3.普通阈值  4.枚举值
+     * @param TotalCount 总数
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setValueType(Long ValueType) {
-        this.ValueType = ValueType;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 阈值【入参必填】
+     * Get 质量监控列表
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Value 阈值【入参必填】
+     * @return Items 质量监控列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getValue() {
-        return this.Value;
+    public QualityRuleGroup [] getItems() {
+        return this.Items;
     }
 
     /**
-     * Set 阈值【入参必填】
+     * Set 质量监控列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Value 阈值【入参必填】
+     * @param Items 质量监控列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setValue(String Value) {
-        this.Value = Value;
+    public void setItems(QualityRuleGroup [] Items) {
+        this.Items = Items;
     }
 
-    public QualityThresholdValue() {
+    public QualityRuleGroupPage() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public QualityThresholdValue(QualityThresholdValue source) {
-        if (source.ValueType != null) {
-            this.ValueType = new Long(source.ValueType);
+    public QualityRuleGroupPage(QualityRuleGroupPage source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
-        if (source.Value != null) {
-            this.Value = new String(source.Value);
+        if (source.Items != null) {
+            this.Items = new QualityRuleGroup[source.Items.length];
+            for (int i = 0; i < source.Items.length; i++) {
+                this.Items[i] = new QualityRuleGroup(source.Items[i]);
+            }
         }
     }
 
@@ -100,8 +103,8 @@ public class QualityThresholdValue extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ValueType", this.ValueType);
-        this.setParamSimple(map, prefix + "Value", this.Value);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "Items.", this.Items);
 
     }
 }

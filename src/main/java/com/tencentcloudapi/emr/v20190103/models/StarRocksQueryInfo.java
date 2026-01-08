@@ -157,6 +157,13 @@ public class StarRocksQueryInfo extends AbstractModel {
     private String User;
 
     /**
+    * 错误码
+    */
+    @SerializedName("ErrorCode")
+    @Expose
+    private String ErrorCode;
+
+    /**
      * Get 提交IP 
      * @return ClientIP 提交IP
      */
@@ -460,6 +467,22 @@ public class StarRocksQueryInfo extends AbstractModel {
         this.User = User;
     }
 
+    /**
+     * Get 错误码 
+     * @return ErrorCode 错误码
+     */
+    public String getErrorCode() {
+        return this.ErrorCode;
+    }
+
+    /**
+     * Set 错误码
+     * @param ErrorCode 错误码
+     */
+    public void setErrorCode(String ErrorCode) {
+        this.ErrorCode = ErrorCode;
+    }
+
     public StarRocksQueryInfo() {
     }
 
@@ -525,6 +548,9 @@ public class StarRocksQueryInfo extends AbstractModel {
         if (source.User != null) {
             this.User = new String(source.User);
         }
+        if (source.ErrorCode != null) {
+            this.ErrorCode = new String(source.ErrorCode);
+        }
     }
 
 
@@ -551,6 +577,7 @@ public class StarRocksQueryInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ExecutionState", this.ExecutionState);
         this.setParamSimple(map, prefix + "ExecutionStatement", this.ExecutionStatement);
         this.setParamSimple(map, prefix + "User", this.User);
+        this.setParamSimple(map, prefix + "ErrorCode", this.ErrorCode);
 
     }
 }

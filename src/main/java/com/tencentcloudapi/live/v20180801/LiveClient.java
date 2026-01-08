@@ -912,6 +912,17 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
+     *该接口用查询导播台的备播状态
+     * @param req DescribeCasterEmergencyStatusRequest
+     * @return DescribeCasterEmergencyStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCasterEmergencyStatusResponse DescribeCasterEmergencyStatus(DescribeCasterEmergencyStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCasterEmergencyStatus", DescribeCasterEmergencyStatusResponse.class);
+    }
+
+    /**
      *该接口用来查询导播台的输入源信息列表。
      * @param req DescribeCasterInputInfosRequest
      * @return DescribeCasterInputInfosResponse
@@ -2371,6 +2382,18 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public SwitchBackupStreamResponse SwitchBackupStream(SwitchBackupStreamRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SwitchBackupStream", SwitchBackupStreamResponse.class);
+    }
+
+    /**
+     *该接口用来将导播台切换到备播状态。
+该接口使用时，主监任务需处于运行状态。
+     * @param req SwitchCasterToEmergencyRequest
+     * @return SwitchCasterToEmergencyResponse
+     * @throws TencentCloudSDKException
+     */
+    public SwitchCasterToEmergencyResponse SwitchCasterToEmergency(SwitchCasterToEmergencyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SwitchCasterToEmergency", SwitchCasterToEmergencyResponse.class);
     }
 
     /**

@@ -45,7 +45,7 @@ public class SemanticsSearchResult extends AbstractModel {
     private Float StartTimeOffset;
 
     /**
-    * 视频片段的开始时间，单位：秒
+    * 视频片段的结束时间，单位：秒
     */
     @SerializedName("EndTimeOffset")
     @Expose
@@ -100,16 +100,16 @@ public class SemanticsSearchResult extends AbstractModel {
     }
 
     /**
-     * Get 视频片段的开始时间，单位：秒 
-     * @return EndTimeOffset 视频片段的开始时间，单位：秒
+     * Get 视频片段的结束时间，单位：秒 
+     * @return EndTimeOffset 视频片段的结束时间，单位：秒
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set 视频片段的开始时间，单位：秒
-     * @param EndTimeOffset 视频片段的开始时间，单位：秒
+     * Set 视频片段的结束时间，单位：秒
+     * @param EndTimeOffset 视频片段的结束时间，单位：秒
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;

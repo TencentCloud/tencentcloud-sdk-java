@@ -258,7 +258,7 @@ RERUN：重跑
     private String EngineParam;
 
     /**
-    * 数据目录名称，不填默认为DataLakeCatalog
+    * 数据目录名称，不填默认为DataLakeCatalog（更新质量监控时该参数无效）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CatalogName")
@@ -878,9 +878,9 @@ RERUN：重跑
     }
 
     /**
-     * Get 数据目录名称，不填默认为DataLakeCatalog
+     * Get 数据目录名称，不填默认为DataLakeCatalog（更新质量监控时该参数无效）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CatalogName 数据目录名称，不填默认为DataLakeCatalog
+     * @return CatalogName 数据目录名称，不填默认为DataLakeCatalog（更新质量监控时该参数无效）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCatalogName() {
@@ -888,9 +888,9 @@ RERUN：重跑
     }
 
     /**
-     * Set 数据目录名称，不填默认为DataLakeCatalog
+     * Set 数据目录名称，不填默认为DataLakeCatalog（更新质量监控时该参数无效）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CatalogName 数据目录名称，不填默认为DataLakeCatalog
+     * @param CatalogName 数据目录名称，不填默认为DataLakeCatalog（更新质量监控时该参数无效）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCatalogName(String CatalogName) {

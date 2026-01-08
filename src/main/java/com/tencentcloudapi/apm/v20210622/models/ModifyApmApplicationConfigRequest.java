@@ -395,6 +395,13 @@ public class ModifyApmApplicationConfigRequest extends AbstractModel {
     private String DesensitizationRule;
 
     /**
+    * spanId的索引key: 当CLS索引类型为键值索引时生效
+    */
+    @SerializedName("LogSpanIdKey")
+    @Expose
+    private String LogSpanIdKey;
+
+    /**
      * Get 业务系统 ID 
      * @return InstanceId 业务系统 ID
      */
@@ -1242,6 +1249,22 @@ public class ModifyApmApplicationConfigRequest extends AbstractModel {
         this.DesensitizationRule = DesensitizationRule;
     }
 
+    /**
+     * Get spanId的索引key: 当CLS索引类型为键值索引时生效 
+     * @return LogSpanIdKey spanId的索引key: 当CLS索引类型为键值索引时生效
+     */
+    public String getLogSpanIdKey() {
+        return this.LogSpanIdKey;
+    }
+
+    /**
+     * Set spanId的索引key: 当CLS索引类型为键值索引时生效
+     * @param LogSpanIdKey spanId的索引key: 当CLS索引类型为键值索引时生效
+     */
+    public void setLogSpanIdKey(String LogSpanIdKey) {
+        this.LogSpanIdKey = LogSpanIdKey;
+    }
+
     public ModifyApmApplicationConfigRequest() {
     }
 
@@ -1415,6 +1438,9 @@ public class ModifyApmApplicationConfigRequest extends AbstractModel {
         if (source.DesensitizationRule != null) {
             this.DesensitizationRule = new String(source.DesensitizationRule);
         }
+        if (source.LogSpanIdKey != null) {
+            this.LogSpanIdKey = new String(source.LogSpanIdKey);
+        }
     }
 
 
@@ -1475,6 +1501,7 @@ public class ModifyApmApplicationConfigRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "SlowSQLThresholds.", this.SlowSQLThresholds);
         this.setParamSimple(map, prefix + "EnableDesensitizationRule", this.EnableDesensitizationRule);
         this.setParamSimple(map, prefix + "DesensitizationRule", this.DesensitizationRule);
+        this.setParamSimple(map, prefix + "LogSpanIdKey", this.LogSpanIdKey);
 
     }
 }

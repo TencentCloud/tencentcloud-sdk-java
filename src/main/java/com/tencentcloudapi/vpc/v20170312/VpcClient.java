@@ -4810,6 +4810,17 @@ LimitTypes取值范围：
     }
 
     /**
+     *本接口（ReplaceRoutes）根据路由策略ID（RouteId）修改指定的路由策略（Route），支持批量修改。
+     * @param req ReplaceRoutesWithRoutePolicyRequest
+     * @return ReplaceRoutesWithRoutePolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReplaceRoutesWithRoutePolicyResponse ReplaceRoutesWithRoutePolicy(ReplaceRoutesWithRoutePolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ReplaceRoutesWithRoutePolicy", ReplaceRoutesWithRoutePolicyResponse.class);
+    }
+
+    /**
      *本接口（ReplaceSecurityGroupPolicies）用于批量修改安全组规则（SecurityGroupPolicy）。
 单个请求中只能替换单个方向的一条或多条规则, 必须要指定索引（PolicyIndex）。
      * @param req ReplaceSecurityGroupPoliciesRequest

@@ -106,6 +106,7 @@ public class EdgeIpInfo extends AbstractModel {
     * 0: 该地域暂未支持串行
 1: 该用户未在该地域配置串行带宽
 2: 该用户已在该地域配置串行带宽，可以开启串行开关
+3. 该地域可以支持串行，但是未部署公共集群
     */
     @SerializedName("IsSerialRegion")
     @Expose
@@ -122,7 +123,7 @@ public class EdgeIpInfo extends AbstractModel {
 
     /**
     * 0: 开启开关时提示要创建私有连接。
-1: 关闭该开关是提示删除私有连接。
+1: 关闭该开关时提示删除私有连接。
 如果大于 1: 关闭开关 、开启开关不需提示创建删除私有连接。
     */
     @SerializedName("EndpointBindEipNum")
@@ -198,6 +199,16 @@ public class EdgeIpInfo extends AbstractModel {
     @SerializedName("OverUsedStatus")
     @Expose
     private Long OverUsedStatus;
+
+    /**
+    * 0 都不支持
+1 支持旁路
+2 支持串行
+3 旁路串行都支持
+    */
+    @SerializedName("SwitchSupportType")
+    @Expose
+    private Long SwitchSupportType;
 
     /**
      * Get 公网IP 
@@ -386,10 +397,12 @@ public class EdgeIpInfo extends AbstractModel {
     /**
      * Get 0: 该地域暂未支持串行
 1: 该用户未在该地域配置串行带宽
-2: 该用户已在该地域配置串行带宽，可以开启串行开关 
+2: 该用户已在该地域配置串行带宽，可以开启串行开关
+3. 该地域可以支持串行，但是未部署公共集群 
      * @return IsSerialRegion 0: 该地域暂未支持串行
 1: 该用户未在该地域配置串行带宽
 2: 该用户已在该地域配置串行带宽，可以开启串行开关
+3. 该地域可以支持串行，但是未部署公共集群
      */
     public Long getIsSerialRegion() {
         return this.IsSerialRegion;
@@ -399,9 +412,11 @@ public class EdgeIpInfo extends AbstractModel {
      * Set 0: 该地域暂未支持串行
 1: 该用户未在该地域配置串行带宽
 2: 该用户已在该地域配置串行带宽，可以开启串行开关
+3. 该地域可以支持串行，但是未部署公共集群
      * @param IsSerialRegion 0: 该地域暂未支持串行
 1: 该用户未在该地域配置串行带宽
 2: 该用户已在该地域配置串行带宽，可以开启串行开关
+3. 该地域可以支持串行，但是未部署公共集群
      */
     public void setIsSerialRegion(Long IsSerialRegion) {
         this.IsSerialRegion = IsSerialRegion;
@@ -433,10 +448,10 @@ public class EdgeIpInfo extends AbstractModel {
 
     /**
      * Get 0: 开启开关时提示要创建私有连接。
-1: 关闭该开关是提示删除私有连接。
+1: 关闭该开关时提示删除私有连接。
 如果大于 1: 关闭开关 、开启开关不需提示创建删除私有连接。 
      * @return EndpointBindEipNum 0: 开启开关时提示要创建私有连接。
-1: 关闭该开关是提示删除私有连接。
+1: 关闭该开关时提示删除私有连接。
 如果大于 1: 关闭开关 、开启开关不需提示创建删除私有连接。
      */
     public Long getEndpointBindEipNum() {
@@ -445,10 +460,10 @@ public class EdgeIpInfo extends AbstractModel {
 
     /**
      * Set 0: 开启开关时提示要创建私有连接。
-1: 关闭该开关是提示删除私有连接。
+1: 关闭该开关时提示删除私有连接。
 如果大于 1: 关闭开关 、开启开关不需提示创建删除私有连接。
      * @param EndpointBindEipNum 0: 开启开关时提示要创建私有连接。
-1: 关闭该开关是提示删除私有连接。
+1: 关闭该开关时提示删除私有连接。
 如果大于 1: 关闭开关 、开启开关不需提示创建删除私有连接。
      */
     public void setEndpointBindEipNum(Long EndpointBindEipNum) {
@@ -627,6 +642,34 @@ public class EdgeIpInfo extends AbstractModel {
         this.OverUsedStatus = OverUsedStatus;
     }
 
+    /**
+     * Get 0 都不支持
+1 支持旁路
+2 支持串行
+3 旁路串行都支持 
+     * @return SwitchSupportType 0 都不支持
+1 支持旁路
+2 支持串行
+3 旁路串行都支持
+     */
+    public Long getSwitchSupportType() {
+        return this.SwitchSupportType;
+    }
+
+    /**
+     * Set 0 都不支持
+1 支持旁路
+2 支持串行
+3 旁路串行都支持
+     * @param SwitchSupportType 0 都不支持
+1 支持旁路
+2 支持串行
+3 旁路串行都支持
+     */
+    public void setSwitchSupportType(Long SwitchSupportType) {
+        this.SwitchSupportType = SwitchSupportType;
+    }
+
     public EdgeIpInfo() {
     }
 
@@ -704,6 +747,9 @@ public class EdgeIpInfo extends AbstractModel {
         if (source.OverUsedStatus != null) {
             this.OverUsedStatus = new Long(source.OverUsedStatus);
         }
+        if (source.SwitchSupportType != null) {
+            this.SwitchSupportType = new Long(source.SwitchSupportType);
+        }
     }
 
 
@@ -734,6 +780,7 @@ public class EdgeIpInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "SwitchWeight", this.SwitchWeight);
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "OverUsedStatus", this.OverUsedStatus);
+        this.setParamSimple(map, prefix + "SwitchSupportType", this.SwitchSupportType);
 
     }
 }

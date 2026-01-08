@@ -157,6 +157,13 @@ public class TrinoQueryInfo extends AbstractModel {
     private Long WrittenBytes;
 
     /**
+    * Error日志
+    */
+    @SerializedName("ErrorMessage")
+    @Expose
+    private String ErrorMessage;
+
+    /**
      * Get catalog 
      * @return Catalog catalog
      */
@@ -460,6 +467,22 @@ public class TrinoQueryInfo extends AbstractModel {
         this.WrittenBytes = WrittenBytes;
     }
 
+    /**
+     * Get Error日志 
+     * @return ErrorMessage Error日志
+     */
+    public String getErrorMessage() {
+        return this.ErrorMessage;
+    }
+
+    /**
+     * Set Error日志
+     * @param ErrorMessage Error日志
+     */
+    public void setErrorMessage(String ErrorMessage) {
+        this.ErrorMessage = ErrorMessage;
+    }
+
     public TrinoQueryInfo() {
     }
 
@@ -525,6 +548,9 @@ public class TrinoQueryInfo extends AbstractModel {
         if (source.WrittenBytes != null) {
             this.WrittenBytes = new Long(source.WrittenBytes);
         }
+        if (source.ErrorMessage != null) {
+            this.ErrorMessage = new String(source.ErrorMessage);
+        }
     }
 
 
@@ -551,6 +577,7 @@ public class TrinoQueryInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Statement", this.Statement);
         this.setParamSimple(map, prefix + "User", this.User);
         this.setParamSimple(map, prefix + "WrittenBytes", this.WrittenBytes);
+        this.setParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
 
     }
 }
