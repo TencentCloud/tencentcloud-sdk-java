@@ -79,6 +79,25 @@ public class DescribeTranscodeTemplatesRequest extends AbstractModel {
     private Long Limit;
 
     /**
+    * 增强类型，可选值：
+<li>VideoEnhance（仅视频增强）</li>
+<li>AudioEnhance（仅音频增强）</li>
+<li>AudioVideoEnhance（音视频增强）</li>
+<li>AnyEnhance（包括仅视频增强、仅音频增强、音视频增强）</li>
+<li>None（非增强）</li>
+    */
+    @SerializedName("EnhanceType")
+    @Expose
+    private String EnhanceType;
+
+    /**
+    * 增强场景配置，可选值： <li>common（通用），通用增强参数，适用于各种视频类型的基础优化参数，提升整体画质。</li> <li>AIGC，整体分辨率提升，利用AI技术提升视频整体分辨率，增强画面清晰度。</li> <li>short_play（短剧），增强面部与字幕细节，突出人物面部表情细节和字幕清晰度，提升观剧体验。</li> <li>short_video（短视频），优化复杂多样的画质问题，针对短视频的复杂场景，优化画质，解决多种视觉问题。</li> <li>game（游戏视频），修复运动模糊，提升细节，重点提升游戏细节清晰度，恢复运动模糊区域，使游戏画面内容更清晰，更丰富。</li> <li>HD_movie_series（超高清影视剧），获得超高清流畅效果，针对广电/OTT超高清视频的诉求，生成4K 60fps HDR的超高清标准视频。支持广电场景格式标准要求。</li> <li>LQ_material（低清素材/老片修复），整体分辨率提升，针对老旧视频由于拍摄年代较久存在的分辨率不足、模糊失真、划痕损伤和色温等问题进行专门优化。</li> <li>lecture（秀场/电商/大会/讲座），美化提升面部效果，针对秀场/电商/大会/讲座等存在人物进行讲解的场景，进行人脸区域、噪声消除、毛刺处理的专门优化。</li>
+    */
+    @SerializedName("EnhanceScenarioType")
+    @Expose
+    private String EnhanceScenarioType;
+
+    /**
      * Get <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b> 
      * @return SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
      */
@@ -214,6 +233,58 @@ public class DescribeTranscodeTemplatesRequest extends AbstractModel {
         this.Limit = Limit;
     }
 
+    /**
+     * Get 增强类型，可选值：
+<li>VideoEnhance（仅视频增强）</li>
+<li>AudioEnhance（仅音频增强）</li>
+<li>AudioVideoEnhance（音视频增强）</li>
+<li>AnyEnhance（包括仅视频增强、仅音频增强、音视频增强）</li>
+<li>None（非增强）</li> 
+     * @return EnhanceType 增强类型，可选值：
+<li>VideoEnhance（仅视频增强）</li>
+<li>AudioEnhance（仅音频增强）</li>
+<li>AudioVideoEnhance（音视频增强）</li>
+<li>AnyEnhance（包括仅视频增强、仅音频增强、音视频增强）</li>
+<li>None（非增强）</li>
+     */
+    public String getEnhanceType() {
+        return this.EnhanceType;
+    }
+
+    /**
+     * Set 增强类型，可选值：
+<li>VideoEnhance（仅视频增强）</li>
+<li>AudioEnhance（仅音频增强）</li>
+<li>AudioVideoEnhance（音视频增强）</li>
+<li>AnyEnhance（包括仅视频增强、仅音频增强、音视频增强）</li>
+<li>None（非增强）</li>
+     * @param EnhanceType 增强类型，可选值：
+<li>VideoEnhance（仅视频增强）</li>
+<li>AudioEnhance（仅音频增强）</li>
+<li>AudioVideoEnhance（音视频增强）</li>
+<li>AnyEnhance（包括仅视频增强、仅音频增强、音视频增强）</li>
+<li>None（非增强）</li>
+     */
+    public void setEnhanceType(String EnhanceType) {
+        this.EnhanceType = EnhanceType;
+    }
+
+    /**
+     * Get 增强场景配置，可选值： <li>common（通用），通用增强参数，适用于各种视频类型的基础优化参数，提升整体画质。</li> <li>AIGC，整体分辨率提升，利用AI技术提升视频整体分辨率，增强画面清晰度。</li> <li>short_play（短剧），增强面部与字幕细节，突出人物面部表情细节和字幕清晰度，提升观剧体验。</li> <li>short_video（短视频），优化复杂多样的画质问题，针对短视频的复杂场景，优化画质，解决多种视觉问题。</li> <li>game（游戏视频），修复运动模糊，提升细节，重点提升游戏细节清晰度，恢复运动模糊区域，使游戏画面内容更清晰，更丰富。</li> <li>HD_movie_series（超高清影视剧），获得超高清流畅效果，针对广电/OTT超高清视频的诉求，生成4K 60fps HDR的超高清标准视频。支持广电场景格式标准要求。</li> <li>LQ_material（低清素材/老片修复），整体分辨率提升，针对老旧视频由于拍摄年代较久存在的分辨率不足、模糊失真、划痕损伤和色温等问题进行专门优化。</li> <li>lecture（秀场/电商/大会/讲座），美化提升面部效果，针对秀场/电商/大会/讲座等存在人物进行讲解的场景，进行人脸区域、噪声消除、毛刺处理的专门优化。</li> 
+     * @return EnhanceScenarioType 增强场景配置，可选值： <li>common（通用），通用增强参数，适用于各种视频类型的基础优化参数，提升整体画质。</li> <li>AIGC，整体分辨率提升，利用AI技术提升视频整体分辨率，增强画面清晰度。</li> <li>short_play（短剧），增强面部与字幕细节，突出人物面部表情细节和字幕清晰度，提升观剧体验。</li> <li>short_video（短视频），优化复杂多样的画质问题，针对短视频的复杂场景，优化画质，解决多种视觉问题。</li> <li>game（游戏视频），修复运动模糊，提升细节，重点提升游戏细节清晰度，恢复运动模糊区域，使游戏画面内容更清晰，更丰富。</li> <li>HD_movie_series（超高清影视剧），获得超高清流畅效果，针对广电/OTT超高清视频的诉求，生成4K 60fps HDR的超高清标准视频。支持广电场景格式标准要求。</li> <li>LQ_material（低清素材/老片修复），整体分辨率提升，针对老旧视频由于拍摄年代较久存在的分辨率不足、模糊失真、划痕损伤和色温等问题进行专门优化。</li> <li>lecture（秀场/电商/大会/讲座），美化提升面部效果，针对秀场/电商/大会/讲座等存在人物进行讲解的场景，进行人脸区域、噪声消除、毛刺处理的专门优化。</li>
+     */
+    public String getEnhanceScenarioType() {
+        return this.EnhanceScenarioType;
+    }
+
+    /**
+     * Set 增强场景配置，可选值： <li>common（通用），通用增强参数，适用于各种视频类型的基础优化参数，提升整体画质。</li> <li>AIGC，整体分辨率提升，利用AI技术提升视频整体分辨率，增强画面清晰度。</li> <li>short_play（短剧），增强面部与字幕细节，突出人物面部表情细节和字幕清晰度，提升观剧体验。</li> <li>short_video（短视频），优化复杂多样的画质问题，针对短视频的复杂场景，优化画质，解决多种视觉问题。</li> <li>game（游戏视频），修复运动模糊，提升细节，重点提升游戏细节清晰度，恢复运动模糊区域，使游戏画面内容更清晰，更丰富。</li> <li>HD_movie_series（超高清影视剧），获得超高清流畅效果，针对广电/OTT超高清视频的诉求，生成4K 60fps HDR的超高清标准视频。支持广电场景格式标准要求。</li> <li>LQ_material（低清素材/老片修复），整体分辨率提升，针对老旧视频由于拍摄年代较久存在的分辨率不足、模糊失真、划痕损伤和色温等问题进行专门优化。</li> <li>lecture（秀场/电商/大会/讲座），美化提升面部效果，针对秀场/电商/大会/讲座等存在人物进行讲解的场景，进行人脸区域、噪声消除、毛刺处理的专门优化。</li>
+     * @param EnhanceScenarioType 增强场景配置，可选值： <li>common（通用），通用增强参数，适用于各种视频类型的基础优化参数，提升整体画质。</li> <li>AIGC，整体分辨率提升，利用AI技术提升视频整体分辨率，增强画面清晰度。</li> <li>short_play（短剧），增强面部与字幕细节，突出人物面部表情细节和字幕清晰度，提升观剧体验。</li> <li>short_video（短视频），优化复杂多样的画质问题，针对短视频的复杂场景，优化画质，解决多种视觉问题。</li> <li>game（游戏视频），修复运动模糊，提升细节，重点提升游戏细节清晰度，恢复运动模糊区域，使游戏画面内容更清晰，更丰富。</li> <li>HD_movie_series（超高清影视剧），获得超高清流畅效果，针对广电/OTT超高清视频的诉求，生成4K 60fps HDR的超高清标准视频。支持广电场景格式标准要求。</li> <li>LQ_material（低清素材/老片修复），整体分辨率提升，针对老旧视频由于拍摄年代较久存在的分辨率不足、模糊失真、划痕损伤和色温等问题进行专门优化。</li> <li>lecture（秀场/电商/大会/讲座），美化提升面部效果，针对秀场/电商/大会/讲座等存在人物进行讲解的场景，进行人脸区域、噪声消除、毛刺处理的专门优化。</li>
+     */
+    public void setEnhanceScenarioType(String EnhanceScenarioType) {
+        this.EnhanceScenarioType = EnhanceScenarioType;
+    }
+
     public DescribeTranscodeTemplatesRequest() {
     }
 
@@ -246,6 +317,12 @@ public class DescribeTranscodeTemplatesRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.EnhanceType != null) {
+            this.EnhanceType = new String(source.EnhanceType);
+        }
+        if (source.EnhanceScenarioType != null) {
+            this.EnhanceScenarioType = new String(source.EnhanceScenarioType);
+        }
     }
 
 
@@ -260,6 +337,8 @@ public class DescribeTranscodeTemplatesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TEHDType", this.TEHDType);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "EnhanceType", this.EnhanceType);
+        this.setParamSimple(map, prefix + "EnhanceScenarioType", this.EnhanceScenarioType);
 
     }
 }

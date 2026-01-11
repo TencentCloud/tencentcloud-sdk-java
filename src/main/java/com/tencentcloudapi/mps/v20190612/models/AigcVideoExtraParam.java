@@ -56,6 +56,14 @@ public class AigcVideoExtraParam extends AbstractModel {
     private String AspectRatio;
 
     /**
+    * 错峰模型，目前仅支持Vidu模型。
+错峰模式下提交的任务，会在48小时内生成，未能完成的任务会被自动取消。
+    */
+    @SerializedName("OffPeak")
+    @Expose
+    private Boolean OffPeak;
+
+    /**
      * Get 生成视频的分辨率，分辨率与选择模型及设置的视频时长相关。 
 
 不同模型支持的分辨率选项:
@@ -159,6 +167,26 @@ public class AigcVideoExtraParam extends AbstractModel {
         this.AspectRatio = AspectRatio;
     }
 
+    /**
+     * Get 错峰模型，目前仅支持Vidu模型。
+错峰模式下提交的任务，会在48小时内生成，未能完成的任务会被自动取消。 
+     * @return OffPeak 错峰模型，目前仅支持Vidu模型。
+错峰模式下提交的任务，会在48小时内生成，未能完成的任务会被自动取消。
+     */
+    public Boolean getOffPeak() {
+        return this.OffPeak;
+    }
+
+    /**
+     * Set 错峰模型，目前仅支持Vidu模型。
+错峰模式下提交的任务，会在48小时内生成，未能完成的任务会被自动取消。
+     * @param OffPeak 错峰模型，目前仅支持Vidu模型。
+错峰模式下提交的任务，会在48小时内生成，未能完成的任务会被自动取消。
+     */
+    public void setOffPeak(Boolean OffPeak) {
+        this.OffPeak = OffPeak;
+    }
+
     public AigcVideoExtraParam() {
     }
 
@@ -173,6 +201,9 @@ public class AigcVideoExtraParam extends AbstractModel {
         if (source.AspectRatio != null) {
             this.AspectRatio = new String(source.AspectRatio);
         }
+        if (source.OffPeak != null) {
+            this.OffPeak = new Boolean(source.OffPeak);
+        }
     }
 
 
@@ -182,6 +213,7 @@ public class AigcVideoExtraParam extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Resolution", this.Resolution);
         this.setParamSimple(map, prefix + "AspectRatio", this.AspectRatio);
+        this.setParamSimple(map, prefix + "OffPeak", this.OffPeak);
 
     }
 }

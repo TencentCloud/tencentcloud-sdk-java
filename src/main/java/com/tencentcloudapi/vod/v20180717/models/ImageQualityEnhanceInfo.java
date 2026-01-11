@@ -21,82 +21,92 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AudioDenoiseInfo extends AbstractModel {
+public class ImageQualityEnhanceInfo extends AbstractModel {
 
     /**
-    * 音频降噪控制开关，可选值：
-<li>ON：开启音频降噪；</li>
-<li>OFF：关闭音频降噪。</li>
+    * 综合增强控制开关，可选值：
+<li>ON：开启综合增强；</li>
+<li>OFF：关闭综合增强。</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 音频降噪类型，仅当音频降噪控制开关为 ON 时有效，可选值：
-<li>normal：正常音频降噪；</li>
-默认值：normal。
+    * 综合增强类型，仅当综合增强控制开关为 ON 时有效，可选值：
+<li>weak：轻综合增强；</li>
+<li>normal：正常综合增强；</li>
+<li>strong：强综合增强。</li>
+默认值：weak。
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get 音频降噪控制开关，可选值：
-<li>ON：开启音频降噪；</li>
-<li>OFF：关闭音频降噪。</li> 
-     * @return Switch 音频降噪控制开关，可选值：
-<li>ON：开启音频降噪；</li>
-<li>OFF：关闭音频降噪。</li>
+     * Get 综合增强控制开关，可选值：
+<li>ON：开启综合增强；</li>
+<li>OFF：关闭综合增强。</li> 
+     * @return Switch 综合增强控制开关，可选值：
+<li>ON：开启综合增强；</li>
+<li>OFF：关闭综合增强。</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 音频降噪控制开关，可选值：
-<li>ON：开启音频降噪；</li>
-<li>OFF：关闭音频降噪。</li>
-     * @param Switch 音频降噪控制开关，可选值：
-<li>ON：开启音频降噪；</li>
-<li>OFF：关闭音频降噪。</li>
+     * Set 综合增强控制开关，可选值：
+<li>ON：开启综合增强；</li>
+<li>OFF：关闭综合增强。</li>
+     * @param Switch 综合增强控制开关，可选值：
+<li>ON：开启综合增强；</li>
+<li>OFF：关闭综合增强。</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get 音频降噪类型，仅当音频降噪控制开关为 ON 时有效，可选值：
-<li>normal：正常音频降噪；</li>
-默认值：normal。 
-     * @return Type 音频降噪类型，仅当音频降噪控制开关为 ON 时有效，可选值：
-<li>normal：正常音频降噪；</li>
-默认值：normal。
+     * Get 综合增强类型，仅当综合增强控制开关为 ON 时有效，可选值：
+<li>weak：轻综合增强；</li>
+<li>normal：正常综合增强；</li>
+<li>strong：强综合增强。</li>
+默认值：weak。 
+     * @return Type 综合增强类型，仅当综合增强控制开关为 ON 时有效，可选值：
+<li>weak：轻综合增强；</li>
+<li>normal：正常综合增强；</li>
+<li>strong：强综合增强。</li>
+默认值：weak。
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 音频降噪类型，仅当音频降噪控制开关为 ON 时有效，可选值：
-<li>normal：正常音频降噪；</li>
-默认值：normal。
-     * @param Type 音频降噪类型，仅当音频降噪控制开关为 ON 时有效，可选值：
-<li>normal：正常音频降噪；</li>
-默认值：normal。
+     * Set 综合增强类型，仅当综合增强控制开关为 ON 时有效，可选值：
+<li>weak：轻综合增强；</li>
+<li>normal：正常综合增强；</li>
+<li>strong：强综合增强。</li>
+默认值：weak。
+     * @param Type 综合增强类型，仅当综合增强控制开关为 ON 时有效，可选值：
+<li>weak：轻综合增强；</li>
+<li>normal：正常综合增强；</li>
+<li>strong：强综合增强。</li>
+默认值：weak。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
-    public AudioDenoiseInfo() {
+    public ImageQualityEnhanceInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public AudioDenoiseInfo(AudioDenoiseInfo source) {
+    public ImageQualityEnhanceInfo(ImageQualityEnhanceInfo source) {
         if (source.Switch != null) {
             this.Switch = new String(source.Switch);
         }

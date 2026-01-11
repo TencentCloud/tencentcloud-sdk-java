@@ -21,82 +21,87 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AudioDenoiseInfo extends AbstractModel {
+public class AudioVolumeBalanceInfo extends AbstractModel {
 
     /**
-    * 音频降噪控制开关，可选值：
-<li>ON：开启音频降噪；</li>
-<li>OFF：关闭音频降噪。</li>
+    * 音量均衡控制开关，可选值：
+<li>ON：开启音量均衡；</li>
+<li>OFF：关闭音量均衡。</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 音频降噪类型，仅当音频降噪控制开关为 ON 时有效，可选值：
-<li>normal：正常音频降噪；</li>
-默认值：normal。
+    * 类型，可选值：
+<li>loudNorm：响度标准化</li>
+<li>gainControl：减小突变</li>
+默认值：loudNorm。
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get 音频降噪控制开关，可选值：
-<li>ON：开启音频降噪；</li>
-<li>OFF：关闭音频降噪。</li> 
-     * @return Switch 音频降噪控制开关，可选值：
-<li>ON：开启音频降噪；</li>
-<li>OFF：关闭音频降噪。</li>
+     * Get 音量均衡控制开关，可选值：
+<li>ON：开启音量均衡；</li>
+<li>OFF：关闭音量均衡。</li> 
+     * @return Switch 音量均衡控制开关，可选值：
+<li>ON：开启音量均衡；</li>
+<li>OFF：关闭音量均衡。</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 音频降噪控制开关，可选值：
-<li>ON：开启音频降噪；</li>
-<li>OFF：关闭音频降噪。</li>
-     * @param Switch 音频降噪控制开关，可选值：
-<li>ON：开启音频降噪；</li>
-<li>OFF：关闭音频降噪。</li>
+     * Set 音量均衡控制开关，可选值：
+<li>ON：开启音量均衡；</li>
+<li>OFF：关闭音量均衡。</li>
+     * @param Switch 音量均衡控制开关，可选值：
+<li>ON：开启音量均衡；</li>
+<li>OFF：关闭音量均衡。</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get 音频降噪类型，仅当音频降噪控制开关为 ON 时有效，可选值：
-<li>normal：正常音频降噪；</li>
-默认值：normal。 
-     * @return Type 音频降噪类型，仅当音频降噪控制开关为 ON 时有效，可选值：
-<li>normal：正常音频降噪；</li>
-默认值：normal。
+     * Get 类型，可选值：
+<li>loudNorm：响度标准化</li>
+<li>gainControl：减小突变</li>
+默认值：loudNorm。 
+     * @return Type 类型，可选值：
+<li>loudNorm：响度标准化</li>
+<li>gainControl：减小突变</li>
+默认值：loudNorm。
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 音频降噪类型，仅当音频降噪控制开关为 ON 时有效，可选值：
-<li>normal：正常音频降噪；</li>
-默认值：normal。
-     * @param Type 音频降噪类型，仅当音频降噪控制开关为 ON 时有效，可选值：
-<li>normal：正常音频降噪；</li>
-默认值：normal。
+     * Set 类型，可选值：
+<li>loudNorm：响度标准化</li>
+<li>gainControl：减小突变</li>
+默认值：loudNorm。
+     * @param Type 类型，可选值：
+<li>loudNorm：响度标准化</li>
+<li>gainControl：减小突变</li>
+默认值：loudNorm。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
-    public AudioDenoiseInfo() {
+    public AudioVolumeBalanceInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public AudioDenoiseInfo(AudioDenoiseInfo source) {
+    public AudioVolumeBalanceInfo(AudioVolumeBalanceInfo source) {
         if (source.Switch != null) {
             this.Switch = new String(source.Switch);
         }

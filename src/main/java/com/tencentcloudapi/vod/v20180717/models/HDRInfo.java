@@ -39,7 +39,7 @@ public class HDRInfo extends AbstractModel {
 
 注意：
 <li> 仅当高动态范围类型控制开关为 ON 时有效；</li>
-<li>当画质重生目标参数中指定视频输出参数的视频流编码格式 Codec 为 libx265 时有效。</li>
+<li>当目标参数中指定视频输出参数的视频流编码格式 Codec 为 libx264、libx265 时有效。</li>
     */
     @SerializedName("Type")
     @Expose
@@ -76,14 +76,14 @@ public class HDRInfo extends AbstractModel {
 
 注意：
 <li> 仅当高动态范围类型控制开关为 ON 时有效；</li>
-<li>当画质重生目标参数中指定视频输出参数的视频流编码格式 Codec 为 libx265 时有效。</li> 
+<li>当目标参数中指定视频输出参数的视频流编码格式 Codec 为 libx264、libx265 时有效。</li> 
      * @return Type 高动态范围类型，可选值：
 <li>hdr10：表示 hdr10 标准；</li>
 <li>hlg：表示 hlg 标准。</li>
 
 注意：
 <li> 仅当高动态范围类型控制开关为 ON 时有效；</li>
-<li>当画质重生目标参数中指定视频输出参数的视频流编码格式 Codec 为 libx265 时有效。</li>
+<li>当目标参数中指定视频输出参数的视频流编码格式 Codec 为 libx264、libx265 时有效。</li>
      */
     public String getType() {
         return this.Type;
@@ -96,14 +96,14 @@ public class HDRInfo extends AbstractModel {
 
 注意：
 <li> 仅当高动态范围类型控制开关为 ON 时有效；</li>
-<li>当画质重生目标参数中指定视频输出参数的视频流编码格式 Codec 为 libx265 时有效。</li>
+<li>当目标参数中指定视频输出参数的视频流编码格式 Codec 为 libx264、libx265 时有效。</li>
      * @param Type 高动态范围类型，可选值：
 <li>hdr10：表示 hdr10 标准；</li>
 <li>hlg：表示 hlg 标准。</li>
 
 注意：
 <li> 仅当高动态范围类型控制开关为 ON 时有效；</li>
-<li>当画质重生目标参数中指定视频输出参数的视频流编码格式 Codec 为 libx265 时有效。</li>
+<li>当目标参数中指定视频输出参数的视频流编码格式 Codec 为 libx264、libx265 时有效。</li>
      */
     public void setType(String Type) {
         this.Type = Type;

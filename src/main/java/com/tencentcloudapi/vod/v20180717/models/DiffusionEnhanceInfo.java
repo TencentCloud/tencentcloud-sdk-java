@@ -21,20 +21,22 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AudioDenoiseInfo extends AbstractModel {
+public class DiffusionEnhanceInfo extends AbstractModel {
 
     /**
-    * 音频降噪控制开关，可选值：
-<li>ON：开启音频降噪；</li>
-<li>OFF：关闭音频降噪。</li>
+    * 大模型增强开关，可选值：
+<li>ON：开启；</li>
+<li>OFF：关闭。</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 音频降噪类型，仅当音频降噪控制开关为 ON 时有效，可选值：
-<li>normal：正常音频降噪；</li>
+    * 强度类型，仅当大模型增强控制开关为 ON 时有效，可选值：
+<li>weak：弱；</li>
+<li>normal：正常；</li>
+<li>strong：强。</li>
 默认值：normal。
     */
     @SerializedName("Type")
@@ -42,35 +44,39 @@ public class AudioDenoiseInfo extends AbstractModel {
     private String Type;
 
     /**
-     * Get 音频降噪控制开关，可选值：
-<li>ON：开启音频降噪；</li>
-<li>OFF：关闭音频降噪。</li> 
-     * @return Switch 音频降噪控制开关，可选值：
-<li>ON：开启音频降噪；</li>
-<li>OFF：关闭音频降噪。</li>
+     * Get 大模型增强开关，可选值：
+<li>ON：开启；</li>
+<li>OFF：关闭。</li> 
+     * @return Switch 大模型增强开关，可选值：
+<li>ON：开启；</li>
+<li>OFF：关闭。</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 音频降噪控制开关，可选值：
-<li>ON：开启音频降噪；</li>
-<li>OFF：关闭音频降噪。</li>
-     * @param Switch 音频降噪控制开关，可选值：
-<li>ON：开启音频降噪；</li>
-<li>OFF：关闭音频降噪。</li>
+     * Set 大模型增强开关，可选值：
+<li>ON：开启；</li>
+<li>OFF：关闭。</li>
+     * @param Switch 大模型增强开关，可选值：
+<li>ON：开启；</li>
+<li>OFF：关闭。</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get 音频降噪类型，仅当音频降噪控制开关为 ON 时有效，可选值：
-<li>normal：正常音频降噪；</li>
+     * Get 强度类型，仅当大模型增强控制开关为 ON 时有效，可选值：
+<li>weak：弱；</li>
+<li>normal：正常；</li>
+<li>strong：强。</li>
 默认值：normal。 
-     * @return Type 音频降噪类型，仅当音频降噪控制开关为 ON 时有效，可选值：
-<li>normal：正常音频降噪；</li>
+     * @return Type 强度类型，仅当大模型增强控制开关为 ON 时有效，可选值：
+<li>weak：弱；</li>
+<li>normal：正常；</li>
+<li>strong：强。</li>
 默认值：normal。
      */
     public String getType() {
@@ -78,25 +84,29 @@ public class AudioDenoiseInfo extends AbstractModel {
     }
 
     /**
-     * Set 音频降噪类型，仅当音频降噪控制开关为 ON 时有效，可选值：
-<li>normal：正常音频降噪；</li>
+     * Set 强度类型，仅当大模型增强控制开关为 ON 时有效，可选值：
+<li>weak：弱；</li>
+<li>normal：正常；</li>
+<li>strong：强。</li>
 默认值：normal。
-     * @param Type 音频降噪类型，仅当音频降噪控制开关为 ON 时有效，可选值：
-<li>normal：正常音频降噪；</li>
+     * @param Type 强度类型，仅当大模型增强控制开关为 ON 时有效，可选值：
+<li>weak：弱；</li>
+<li>normal：正常；</li>
+<li>strong：强。</li>
 默认值：normal。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
-    public AudioDenoiseInfo() {
+    public DiffusionEnhanceInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public AudioDenoiseInfo(AudioDenoiseInfo source) {
+    public DiffusionEnhanceInfo(DiffusionEnhanceInfo source) {
         if (source.Switch != null) {
             this.Switch = new String(source.Switch);
         }

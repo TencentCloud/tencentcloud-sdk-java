@@ -171,6 +171,17 @@ public class DataagentClient extends AbstractClient{
     }
 
     /**
+     *修改对象权限
+     * @param req ModifyUserAuthorityRequest
+     * @return ModifyUserAuthorityResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyUserAuthorityResponse ModifyUserAuthority(ModifyUserAuthorityRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyUserAuthority", ModifyUserAuthorityResponse.class);
+    }
+
+    /**
      *文档切片查询
      * @param req QueryChunkListRequest
      * @return QueryChunkListResponse
@@ -179,6 +190,17 @@ public class DataagentClient extends AbstractClient{
     public QueryChunkListResponse QueryChunkList(QueryChunkListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "QueryChunkList", QueryChunkListResponse.class);
+    }
+
+    /**
+     *查询对象权限
+     * @param req QueryUserAuthorityRequest
+     * @return QueryUserAuthorityResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryUserAuthorityResponse QueryUserAuthority(QueryUserAuthorityRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryUserAuthority", QueryUserAuthorityResponse.class);
     }
 
     /**

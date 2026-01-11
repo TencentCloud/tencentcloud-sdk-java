@@ -93,6 +93,13 @@ public class CreateTranscodeTemplateRequest extends AbstractModel {
     private TEHDConfig TEHDConfig;
 
     /**
+    * 音视频增强配置。
+    */
+    @SerializedName("EnhanceConfig")
+    @Expose
+    private EnhanceConfig EnhanceConfig;
+
+    /**
     * 切片类型，当 Container 为 hls 时有效，可选值：
 <li>ts：ts 切片；</li>
 <li>fmp4：fmp4 切片。</li>
@@ -271,6 +278,22 @@ public class CreateTranscodeTemplateRequest extends AbstractModel {
     }
 
     /**
+     * Get 音视频增强配置。 
+     * @return EnhanceConfig 音视频增强配置。
+     */
+    public EnhanceConfig getEnhanceConfig() {
+        return this.EnhanceConfig;
+    }
+
+    /**
+     * Set 音视频增强配置。
+     * @param EnhanceConfig 音视频增强配置。
+     */
+    public void setEnhanceConfig(EnhanceConfig EnhanceConfig) {
+        this.EnhanceConfig = EnhanceConfig;
+    }
+
+    /**
      * Get 切片类型，当 Container 为 hls 时有效，可选值：
 <li>ts：ts 切片；</li>
 <li>fmp4：fmp4 切片。</li>
@@ -333,6 +356,9 @@ public class CreateTranscodeTemplateRequest extends AbstractModel {
         if (source.TEHDConfig != null) {
             this.TEHDConfig = new TEHDConfig(source.TEHDConfig);
         }
+        if (source.EnhanceConfig != null) {
+            this.EnhanceConfig = new EnhanceConfig(source.EnhanceConfig);
+        }
         if (source.SegmentType != null) {
             this.SegmentType = new String(source.SegmentType);
         }
@@ -352,6 +378,7 @@ public class CreateTranscodeTemplateRequest extends AbstractModel {
         this.setParamObj(map, prefix + "VideoTemplate.", this.VideoTemplate);
         this.setParamObj(map, prefix + "AudioTemplate.", this.AudioTemplate);
         this.setParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
+        this.setParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
         this.setParamSimple(map, prefix + "SegmentType", this.SegmentType);
 
     }

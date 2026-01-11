@@ -24,569 +24,529 @@ import java.util.HashMap;
 public class CreateInstancesRequest extends AbstractModel {
 
     /**
-    * 产品版本。
-14：当前仅支持混合存储版。
+    * <p>产品版本。14：极速版。</p>
     */
     @SerializedName("TypeId")
     @Expose
     private Long TypeId;
 
     /**
-    * 私有网络唯一ID。
-请登录控制台在私有网络列表查询，如：vpc-azlk3***。
+    * <p>私有网络唯一ID。请登录控制台在私有网络列表查询，如：vpc-azlk3***。</p>
     */
     @SerializedName("UniqVpcId")
     @Expose
     private String UniqVpcId;
 
     /**
-    * 私有网络所属子网唯一ID。
-请登录控制台在私有网络列表查询，如：subnet-8abje***。
+    * <p>私有网络所属子网唯一ID。请登录控制台在私有网络列表查询，如：subnet-8abje***。</p>
     */
     @SerializedName("UniqSubnetId")
     @Expose
     private String UniqSubnetId;
 
     /**
-    * 计费模式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul>
+    * <p>计费模式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul></p>
     */
     @SerializedName("BillingMode")
     @Expose
     private Long BillingMode;
 
     /**
-    * 实例数量，单次最大购买数量以查询产品售卖规格返回的数量为准。
+    * <p>实例数量，单次最大购买数量以查询产品售卖规格返回的数量为准。</p>
     */
     @SerializedName("GoodsNum")
     @Expose
     private Long GoodsNum;
 
     /**
-    * 选择包年包月计费模式（BillingMode 设置为1）时，您需要选择购买实例的时长。单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。按量计费（BillingMode 设置为0）实例该参数设置为1即可。
+    * <p>选择包年包月计费模式（BillingMode 设置为1）时，您需要选择购买实例的时长。单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。按量计费（BillingMode 设置为0）实例该参数设置为1即可。</p>
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * 分片数量，支持选择3、5、6、8、9、10、12、15、16、18、20、21、24、25、27、30、32、33、35、36、39、40、42、45、48、50、51、54、55、56、57、60、63、64分片。
+    * <p>分片数量，支持选择3、5、6、8、9、10、12、15、16、18、20、21、24、25、27、30、32、33、35、36、39、40、42、45、48、50、51、54、55、56、57、60、63、64分片。</p>
     */
     @SerializedName("ShardNum")
     @Expose
     private Long ShardNum;
 
     /**
-    * 副本数。当前仅支持设置1个副本节点，即每一个分片仅包含1个主节点与1个副本节点，数据主从实时热备。
+    * <p>副本数。当前仅支持设置1个副本节点，即每一个分片仅包含1个主节点与1个副本节点，数据主从实时热备。</p>
     */
     @SerializedName("ReplicasNum")
     @Expose
     private Long ReplicasNum;
 
     /**
-    * 实例内存容量，单位：GB。
-KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。
+    * <p>实例内存容量，单位：GB。KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/80808">产品规格</a>。</p>
     */
     @SerializedName("MachineMemory")
     @Expose
     private Long MachineMemory;
 
     /**
-    * 实例所属的可用区ID。<ul><li>具体取值，请参见[地域和可用区](https://cloud.tencent.com/document/product/239/4106)获取。</li><li>参数<b>ZoneId</b>和<b>ZoneName</b>至少配置其中一个。</li></ul>
+    * <p>实例所属的可用区ID。<ul><li>具体取值，请参见<a href="https://cloud.tencent.com/document/product/239/4106">地域和可用区</a>获取。</li><li>参数<b>ZoneId</b>和<b>ZoneName</b>至少配置其中一个。</li></ul></p>
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * 实例所属的可用区名称。<ul><li>具体取值，请参见[地域和可用区](https://cloud.tencent.com/document/product/239/4106)获取。</li><li>参数<b>ZoneId</b>和<b>ZoneName</b>至少配置其中一个。</li></ul>
+    * <p>实例所属的可用区名称。<ul><li>具体取值，请参见<a href="https://cloud.tencent.com/document/product/239/4106">地域和可用区</a>获取。</li><li>参数<b>ZoneId</b>和<b>ZoneName</b>至少配置其中一个。</li></ul></p>
     */
     @SerializedName("ZoneName")
     @Expose
     private String ZoneName;
 
     /**
-    * 创建实例的名称。
-仅支持长度小于60的中文、英文或者数字，短划线"-"、下划线"_"。
+    * <p>创建实例的名称。仅支持长度小于60的中文、英文或者数字，短划线"-"、下划线"_"。</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 指明创建的实例是否需要支持免密访问。<ul><li>true：免密实例。</li><li>false：非免密实例，默认为非免密实例。此时，需要设置访问密码。</li></ul>
+    * <p>指明创建的实例是否需要支持免密访问。<ul><li>true：免密实例。</li><li>false：非免密实例，默认为非免密实例。此时，需要设置访问密码。</li></ul></p>
     */
     @SerializedName("NoAuth")
     @Expose
     private Boolean NoAuth;
 
     /**
-    * 实例访问密码。<ul><li>当参数<b>NoAuth</b>为<b>true</b>时，Password为无需设置，否则Password为必填参数。</li>
-<li>密码复杂度要求：<ul><li>8-30个字符。</li><li>至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的2种。</li><li>不能以"/"开头。</li></ul></li></ul>
+    * <p>实例访问密码。<ul><li>当参数<b>NoAuth</b>为<b>true</b>时，Password为无需设置，否则Password为必填参数。</li><li>密码复杂度要求：<ul><li>8-30个字符。</li><li>至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&amp;*-+=_|{}[]:;&lt;&gt;,.?/ 中的2种。</li><li>不能以"/"开头。</li></ul></li></ul></p>
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * 自定义端口。默认为6379，范围[1024,65535]。
+    * <p>自定义端口。默认为6379，范围[1024,65535]。</p>
     */
     @SerializedName("VPort")
     @Expose
     private Long VPort;
 
     /**
-    * 包年包月计费的续费模式。<ul><li>0：默认状态，指手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</li></ul>
+    * <p>包年包月计费的续费模式。<ul><li>0：默认状态，指手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</li></ul></p>
     */
     @SerializedName("AutoRenew")
     @Expose
     private Long AutoRenew;
 
     /**
-    * 给实例设置安全组 ID 数组。
+    * <p>给实例设置安全组 ID 数组。</p>
     */
     @SerializedName("SecurityGroupIdList")
     @Expose
     private String [] SecurityGroupIdList;
 
     /**
-    * 给实例绑定标签。
+    * <p>给实例绑定标签。</p>
     */
     @SerializedName("ResourceTags")
     @Expose
     private ResourceTag [] ResourceTags;
 
     /**
-    * 混合存储版，单分片持久化内存容量，单位：GB。
-KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。
+    * <p>混合存储版，单分片持久化内存容量，单位：GB。KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/80808">产品规格</a>。</p>
     */
     @SerializedName("MemSize")
     @Expose
     private Long MemSize;
 
     /**
-    * 每个分片硬盘的容量。单位：GB。
-每一缓存分片容量，对应的磁盘容量范围不同。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。
+    * <p>每个分片硬盘的容量。单位：GB。每一缓存分片容量，对应的磁盘容量范围不同。具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/80808">产品规格</a>。</p>
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-    * 计算 CPU 核数，可忽略不传。CPU 核数与内存为固定搭配，具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。
+    * <p>计算 CPU 核数，可忽略不传。CPU 核数与内存为固定搭配，具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/80808">产品规格</a>。</p>
     */
     @SerializedName("MachineCpu")
     @Expose
     private Long MachineCpu;
 
     /**
-    * 项目id，取值以用户账户>用户账户相关接口查询>项目列表返回的projectId为准。
+    * <p>项目id，取值以用户账户&gt;用户账户相关接口查询&gt;项目列表返回的projectId为准。</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 数据压缩开关。<ul><li>ON：开启，默认开启压缩。</li><li>OFF：关闭。</li></ul>
+    * <p>数据压缩开关。<ul><li>ON：开启，默认开启压缩。</li><li>OFF：关闭。</li></ul></p>
     */
     @SerializedName("Compression")
     @Expose
     private String Compression;
 
     /**
-     * Get 产品版本。
-14：当前仅支持混合存储版。 
-     * @return TypeId 产品版本。
-14：当前仅支持混合存储版。
+     * Get <p>产品版本。14：极速版。</p> 
+     * @return TypeId <p>产品版本。14：极速版。</p>
      */
     public Long getTypeId() {
         return this.TypeId;
     }
 
     /**
-     * Set 产品版本。
-14：当前仅支持混合存储版。
-     * @param TypeId 产品版本。
-14：当前仅支持混合存储版。
+     * Set <p>产品版本。14：极速版。</p>
+     * @param TypeId <p>产品版本。14：极速版。</p>
      */
     public void setTypeId(Long TypeId) {
         this.TypeId = TypeId;
     }
 
     /**
-     * Get 私有网络唯一ID。
-请登录控制台在私有网络列表查询，如：vpc-azlk3***。 
-     * @return UniqVpcId 私有网络唯一ID。
-请登录控制台在私有网络列表查询，如：vpc-azlk3***。
+     * Get <p>私有网络唯一ID。请登录控制台在私有网络列表查询，如：vpc-azlk3***。</p> 
+     * @return UniqVpcId <p>私有网络唯一ID。请登录控制台在私有网络列表查询，如：vpc-azlk3***。</p>
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set 私有网络唯一ID。
-请登录控制台在私有网络列表查询，如：vpc-azlk3***。
-     * @param UniqVpcId 私有网络唯一ID。
-请登录控制台在私有网络列表查询，如：vpc-azlk3***。
+     * Set <p>私有网络唯一ID。请登录控制台在私有网络列表查询，如：vpc-azlk3***。</p>
+     * @param UniqVpcId <p>私有网络唯一ID。请登录控制台在私有网络列表查询，如：vpc-azlk3***。</p>
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get 私有网络所属子网唯一ID。
-请登录控制台在私有网络列表查询，如：subnet-8abje***。 
-     * @return UniqSubnetId 私有网络所属子网唯一ID。
-请登录控制台在私有网络列表查询，如：subnet-8abje***。
+     * Get <p>私有网络所属子网唯一ID。请登录控制台在私有网络列表查询，如：subnet-8abje***。</p> 
+     * @return UniqSubnetId <p>私有网络所属子网唯一ID。请登录控制台在私有网络列表查询，如：subnet-8abje***。</p>
      */
     public String getUniqSubnetId() {
         return this.UniqSubnetId;
     }
 
     /**
-     * Set 私有网络所属子网唯一ID。
-请登录控制台在私有网络列表查询，如：subnet-8abje***。
-     * @param UniqSubnetId 私有网络所属子网唯一ID。
-请登录控制台在私有网络列表查询，如：subnet-8abje***。
+     * Set <p>私有网络所属子网唯一ID。请登录控制台在私有网络列表查询，如：subnet-8abje***。</p>
+     * @param UniqSubnetId <p>私有网络所属子网唯一ID。请登录控制台在私有网络列表查询，如：subnet-8abje***。</p>
      */
     public void setUniqSubnetId(String UniqSubnetId) {
         this.UniqSubnetId = UniqSubnetId;
     }
 
     /**
-     * Get 计费模式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul> 
-     * @return BillingMode 计费模式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul>
+     * Get <p>计费模式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul></p> 
+     * @return BillingMode <p>计费模式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul></p>
      */
     public Long getBillingMode() {
         return this.BillingMode;
     }
 
     /**
-     * Set 计费模式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul>
-     * @param BillingMode 计费模式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul>
+     * Set <p>计费模式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul></p>
+     * @param BillingMode <p>计费模式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul></p>
      */
     public void setBillingMode(Long BillingMode) {
         this.BillingMode = BillingMode;
     }
 
     /**
-     * Get 实例数量，单次最大购买数量以查询产品售卖规格返回的数量为准。 
-     * @return GoodsNum 实例数量，单次最大购买数量以查询产品售卖规格返回的数量为准。
+     * Get <p>实例数量，单次最大购买数量以查询产品售卖规格返回的数量为准。</p> 
+     * @return GoodsNum <p>实例数量，单次最大购买数量以查询产品售卖规格返回的数量为准。</p>
      */
     public Long getGoodsNum() {
         return this.GoodsNum;
     }
 
     /**
-     * Set 实例数量，单次最大购买数量以查询产品售卖规格返回的数量为准。
-     * @param GoodsNum 实例数量，单次最大购买数量以查询产品售卖规格返回的数量为准。
+     * Set <p>实例数量，单次最大购买数量以查询产品售卖规格返回的数量为准。</p>
+     * @param GoodsNum <p>实例数量，单次最大购买数量以查询产品售卖规格返回的数量为准。</p>
      */
     public void setGoodsNum(Long GoodsNum) {
         this.GoodsNum = GoodsNum;
     }
 
     /**
-     * Get 选择包年包月计费模式（BillingMode 设置为1）时，您需要选择购买实例的时长。单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。按量计费（BillingMode 设置为0）实例该参数设置为1即可。 
-     * @return Period 选择包年包月计费模式（BillingMode 设置为1）时，您需要选择购买实例的时长。单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。按量计费（BillingMode 设置为0）实例该参数设置为1即可。
+     * Get <p>选择包年包月计费模式（BillingMode 设置为1）时，您需要选择购买实例的时长。单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。按量计费（BillingMode 设置为0）实例该参数设置为1即可。</p> 
+     * @return Period <p>选择包年包月计费模式（BillingMode 设置为1）时，您需要选择购买实例的时长。单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。按量计费（BillingMode 设置为0）实例该参数设置为1即可。</p>
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 选择包年包月计费模式（BillingMode 设置为1）时，您需要选择购买实例的时长。单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。按量计费（BillingMode 设置为0）实例该参数设置为1即可。
-     * @param Period 选择包年包月计费模式（BillingMode 设置为1）时，您需要选择购买实例的时长。单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。按量计费（BillingMode 设置为0）实例该参数设置为1即可。
+     * Set <p>选择包年包月计费模式（BillingMode 设置为1）时，您需要选择购买实例的时长。单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。按量计费（BillingMode 设置为0）实例该参数设置为1即可。</p>
+     * @param Period <p>选择包年包月计费模式（BillingMode 设置为1）时，您需要选择购买实例的时长。单位：月，取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。按量计费（BillingMode 设置为0）实例该参数设置为1即可。</p>
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 分片数量，支持选择3、5、6、8、9、10、12、15、16、18、20、21、24、25、27、30、32、33、35、36、39、40、42、45、48、50、51、54、55、56、57、60、63、64分片。 
-     * @return ShardNum 分片数量，支持选择3、5、6、8、9、10、12、15、16、18、20、21、24、25、27、30、32、33、35、36、39、40、42、45、48、50、51、54、55、56、57、60、63、64分片。
+     * Get <p>分片数量，支持选择3、5、6、8、9、10、12、15、16、18、20、21、24、25、27、30、32、33、35、36、39、40、42、45、48、50、51、54、55、56、57、60、63、64分片。</p> 
+     * @return ShardNum <p>分片数量，支持选择3、5、6、8、9、10、12、15、16、18、20、21、24、25、27、30、32、33、35、36、39、40、42、45、48、50、51、54、55、56、57、60、63、64分片。</p>
      */
     public Long getShardNum() {
         return this.ShardNum;
     }
 
     /**
-     * Set 分片数量，支持选择3、5、6、8、9、10、12、15、16、18、20、21、24、25、27、30、32、33、35、36、39、40、42、45、48、50、51、54、55、56、57、60、63、64分片。
-     * @param ShardNum 分片数量，支持选择3、5、6、8、9、10、12、15、16、18、20、21、24、25、27、30、32、33、35、36、39、40、42、45、48、50、51、54、55、56、57、60、63、64分片。
+     * Set <p>分片数量，支持选择3、5、6、8、9、10、12、15、16、18、20、21、24、25、27、30、32、33、35、36、39、40、42、45、48、50、51、54、55、56、57、60、63、64分片。</p>
+     * @param ShardNum <p>分片数量，支持选择3、5、6、8、9、10、12、15、16、18、20、21、24、25、27、30、32、33、35、36、39、40、42、45、48、50、51、54、55、56、57、60、63、64分片。</p>
      */
     public void setShardNum(Long ShardNum) {
         this.ShardNum = ShardNum;
     }
 
     /**
-     * Get 副本数。当前仅支持设置1个副本节点，即每一个分片仅包含1个主节点与1个副本节点，数据主从实时热备。 
-     * @return ReplicasNum 副本数。当前仅支持设置1个副本节点，即每一个分片仅包含1个主节点与1个副本节点，数据主从实时热备。
+     * Get <p>副本数。当前仅支持设置1个副本节点，即每一个分片仅包含1个主节点与1个副本节点，数据主从实时热备。</p> 
+     * @return ReplicasNum <p>副本数。当前仅支持设置1个副本节点，即每一个分片仅包含1个主节点与1个副本节点，数据主从实时热备。</p>
      */
     public Long getReplicasNum() {
         return this.ReplicasNum;
     }
 
     /**
-     * Set 副本数。当前仅支持设置1个副本节点，即每一个分片仅包含1个主节点与1个副本节点，数据主从实时热备。
-     * @param ReplicasNum 副本数。当前仅支持设置1个副本节点，即每一个分片仅包含1个主节点与1个副本节点，数据主从实时热备。
+     * Set <p>副本数。当前仅支持设置1个副本节点，即每一个分片仅包含1个主节点与1个副本节点，数据主从实时热备。</p>
+     * @param ReplicasNum <p>副本数。当前仅支持设置1个副本节点，即每一个分片仅包含1个主节点与1个副本节点，数据主从实时热备。</p>
      */
     public void setReplicasNum(Long ReplicasNum) {
         this.ReplicasNum = ReplicasNum;
     }
 
     /**
-     * Get 实例内存容量，单位：GB。
-KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。 
-     * @return MachineMemory 实例内存容量，单位：GB。
-KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。
+     * Get <p>实例内存容量，单位：GB。KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/80808">产品规格</a>。</p> 
+     * @return MachineMemory <p>实例内存容量，单位：GB。KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/80808">产品规格</a>。</p>
      */
     public Long getMachineMemory() {
         return this.MachineMemory;
     }
 
     /**
-     * Set 实例内存容量，单位：GB。
-KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。
-     * @param MachineMemory 实例内存容量，单位：GB。
-KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。
+     * Set <p>实例内存容量，单位：GB。KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/80808">产品规格</a>。</p>
+     * @param MachineMemory <p>实例内存容量，单位：GB。KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/80808">产品规格</a>。</p>
      */
     public void setMachineMemory(Long MachineMemory) {
         this.MachineMemory = MachineMemory;
     }
 
     /**
-     * Get 实例所属的可用区ID。<ul><li>具体取值，请参见[地域和可用区](https://cloud.tencent.com/document/product/239/4106)获取。</li><li>参数<b>ZoneId</b>和<b>ZoneName</b>至少配置其中一个。</li></ul> 
-     * @return ZoneId 实例所属的可用区ID。<ul><li>具体取值，请参见[地域和可用区](https://cloud.tencent.com/document/product/239/4106)获取。</li><li>参数<b>ZoneId</b>和<b>ZoneName</b>至少配置其中一个。</li></ul>
+     * Get <p>实例所属的可用区ID。<ul><li>具体取值，请参见<a href="https://cloud.tencent.com/document/product/239/4106">地域和可用区</a>获取。</li><li>参数<b>ZoneId</b>和<b>ZoneName</b>至少配置其中一个。</li></ul></p> 
+     * @return ZoneId <p>实例所属的可用区ID。<ul><li>具体取值，请参见<a href="https://cloud.tencent.com/document/product/239/4106">地域和可用区</a>获取。</li><li>参数<b>ZoneId</b>和<b>ZoneName</b>至少配置其中一个。</li></ul></p>
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 实例所属的可用区ID。<ul><li>具体取值，请参见[地域和可用区](https://cloud.tencent.com/document/product/239/4106)获取。</li><li>参数<b>ZoneId</b>和<b>ZoneName</b>至少配置其中一个。</li></ul>
-     * @param ZoneId 实例所属的可用区ID。<ul><li>具体取值，请参见[地域和可用区](https://cloud.tencent.com/document/product/239/4106)获取。</li><li>参数<b>ZoneId</b>和<b>ZoneName</b>至少配置其中一个。</li></ul>
+     * Set <p>实例所属的可用区ID。<ul><li>具体取值，请参见<a href="https://cloud.tencent.com/document/product/239/4106">地域和可用区</a>获取。</li><li>参数<b>ZoneId</b>和<b>ZoneName</b>至少配置其中一个。</li></ul></p>
+     * @param ZoneId <p>实例所属的可用区ID。<ul><li>具体取值，请参见<a href="https://cloud.tencent.com/document/product/239/4106">地域和可用区</a>获取。</li><li>参数<b>ZoneId</b>和<b>ZoneName</b>至少配置其中一个。</li></ul></p>
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 实例所属的可用区名称。<ul><li>具体取值，请参见[地域和可用区](https://cloud.tencent.com/document/product/239/4106)获取。</li><li>参数<b>ZoneId</b>和<b>ZoneName</b>至少配置其中一个。</li></ul> 
-     * @return ZoneName 实例所属的可用区名称。<ul><li>具体取值，请参见[地域和可用区](https://cloud.tencent.com/document/product/239/4106)获取。</li><li>参数<b>ZoneId</b>和<b>ZoneName</b>至少配置其中一个。</li></ul>
+     * Get <p>实例所属的可用区名称。<ul><li>具体取值，请参见<a href="https://cloud.tencent.com/document/product/239/4106">地域和可用区</a>获取。</li><li>参数<b>ZoneId</b>和<b>ZoneName</b>至少配置其中一个。</li></ul></p> 
+     * @return ZoneName <p>实例所属的可用区名称。<ul><li>具体取值，请参见<a href="https://cloud.tencent.com/document/product/239/4106">地域和可用区</a>获取。</li><li>参数<b>ZoneId</b>和<b>ZoneName</b>至少配置其中一个。</li></ul></p>
      */
     public String getZoneName() {
         return this.ZoneName;
     }
 
     /**
-     * Set 实例所属的可用区名称。<ul><li>具体取值，请参见[地域和可用区](https://cloud.tencent.com/document/product/239/4106)获取。</li><li>参数<b>ZoneId</b>和<b>ZoneName</b>至少配置其中一个。</li></ul>
-     * @param ZoneName 实例所属的可用区名称。<ul><li>具体取值，请参见[地域和可用区](https://cloud.tencent.com/document/product/239/4106)获取。</li><li>参数<b>ZoneId</b>和<b>ZoneName</b>至少配置其中一个。</li></ul>
+     * Set <p>实例所属的可用区名称。<ul><li>具体取值，请参见<a href="https://cloud.tencent.com/document/product/239/4106">地域和可用区</a>获取。</li><li>参数<b>ZoneId</b>和<b>ZoneName</b>至少配置其中一个。</li></ul></p>
+     * @param ZoneName <p>实例所属的可用区名称。<ul><li>具体取值，请参见<a href="https://cloud.tencent.com/document/product/239/4106">地域和可用区</a>获取。</li><li>参数<b>ZoneId</b>和<b>ZoneName</b>至少配置其中一个。</li></ul></p>
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;
     }
 
     /**
-     * Get 创建实例的名称。
-仅支持长度小于60的中文、英文或者数字，短划线"-"、下划线"_"。 
-     * @return InstanceName 创建实例的名称。
-仅支持长度小于60的中文、英文或者数字，短划线"-"、下划线"_"。
+     * Get <p>创建实例的名称。仅支持长度小于60的中文、英文或者数字，短划线"-"、下划线"_"。</p> 
+     * @return InstanceName <p>创建实例的名称。仅支持长度小于60的中文、英文或者数字，短划线"-"、下划线"_"。</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 创建实例的名称。
-仅支持长度小于60的中文、英文或者数字，短划线"-"、下划线"_"。
-     * @param InstanceName 创建实例的名称。
-仅支持长度小于60的中文、英文或者数字，短划线"-"、下划线"_"。
+     * Set <p>创建实例的名称。仅支持长度小于60的中文、英文或者数字，短划线"-"、下划线"_"。</p>
+     * @param InstanceName <p>创建实例的名称。仅支持长度小于60的中文、英文或者数字，短划线"-"、下划线"_"。</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 指明创建的实例是否需要支持免密访问。<ul><li>true：免密实例。</li><li>false：非免密实例，默认为非免密实例。此时，需要设置访问密码。</li></ul> 
-     * @return NoAuth 指明创建的实例是否需要支持免密访问。<ul><li>true：免密实例。</li><li>false：非免密实例，默认为非免密实例。此时，需要设置访问密码。</li></ul>
+     * Get <p>指明创建的实例是否需要支持免密访问。<ul><li>true：免密实例。</li><li>false：非免密实例，默认为非免密实例。此时，需要设置访问密码。</li></ul></p> 
+     * @return NoAuth <p>指明创建的实例是否需要支持免密访问。<ul><li>true：免密实例。</li><li>false：非免密实例，默认为非免密实例。此时，需要设置访问密码。</li></ul></p>
      */
     public Boolean getNoAuth() {
         return this.NoAuth;
     }
 
     /**
-     * Set 指明创建的实例是否需要支持免密访问。<ul><li>true：免密实例。</li><li>false：非免密实例，默认为非免密实例。此时，需要设置访问密码。</li></ul>
-     * @param NoAuth 指明创建的实例是否需要支持免密访问。<ul><li>true：免密实例。</li><li>false：非免密实例，默认为非免密实例。此时，需要设置访问密码。</li></ul>
+     * Set <p>指明创建的实例是否需要支持免密访问。<ul><li>true：免密实例。</li><li>false：非免密实例，默认为非免密实例。此时，需要设置访问密码。</li></ul></p>
+     * @param NoAuth <p>指明创建的实例是否需要支持免密访问。<ul><li>true：免密实例。</li><li>false：非免密实例，默认为非免密实例。此时，需要设置访问密码。</li></ul></p>
      */
     public void setNoAuth(Boolean NoAuth) {
         this.NoAuth = NoAuth;
     }
 
     /**
-     * Get 实例访问密码。<ul><li>当参数<b>NoAuth</b>为<b>true</b>时，Password为无需设置，否则Password为必填参数。</li>
-<li>密码复杂度要求：<ul><li>8-30个字符。</li><li>至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的2种。</li><li>不能以"/"开头。</li></ul></li></ul> 
-     * @return Password 实例访问密码。<ul><li>当参数<b>NoAuth</b>为<b>true</b>时，Password为无需设置，否则Password为必填参数。</li>
-<li>密码复杂度要求：<ul><li>8-30个字符。</li><li>至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的2种。</li><li>不能以"/"开头。</li></ul></li></ul>
+     * Get <p>实例访问密码。<ul><li>当参数<b>NoAuth</b>为<b>true</b>时，Password为无需设置，否则Password为必填参数。</li><li>密码复杂度要求：<ul><li>8-30个字符。</li><li>至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&amp;*-+=_|{}[]:;&lt;&gt;,.?/ 中的2种。</li><li>不能以"/"开头。</li></ul></li></ul></p> 
+     * @return Password <p>实例访问密码。<ul><li>当参数<b>NoAuth</b>为<b>true</b>时，Password为无需设置，否则Password为必填参数。</li><li>密码复杂度要求：<ul><li>8-30个字符。</li><li>至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&amp;*-+=_|{}[]:;&lt;&gt;,.?/ 中的2种。</li><li>不能以"/"开头。</li></ul></li></ul></p>
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set 实例访问密码。<ul><li>当参数<b>NoAuth</b>为<b>true</b>时，Password为无需设置，否则Password为必填参数。</li>
-<li>密码复杂度要求：<ul><li>8-30个字符。</li><li>至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的2种。</li><li>不能以"/"开头。</li></ul></li></ul>
-     * @param Password 实例访问密码。<ul><li>当参数<b>NoAuth</b>为<b>true</b>时，Password为无需设置，否则Password为必填参数。</li>
-<li>密码复杂度要求：<ul><li>8-30个字符。</li><li>至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的2种。</li><li>不能以"/"开头。</li></ul></li></ul>
+     * Set <p>实例访问密码。<ul><li>当参数<b>NoAuth</b>为<b>true</b>时，Password为无需设置，否则Password为必填参数。</li><li>密码复杂度要求：<ul><li>8-30个字符。</li><li>至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&amp;*-+=_|{}[]:;&lt;&gt;,.?/ 中的2种。</li><li>不能以"/"开头。</li></ul></li></ul></p>
+     * @param Password <p>实例访问密码。<ul><li>当参数<b>NoAuth</b>为<b>true</b>时，Password为无需设置，否则Password为必填参数。</li><li>密码复杂度要求：<ul><li>8-30个字符。</li><li>至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&amp;*-+=_|{}[]:;&lt;&gt;,.?/ 中的2种。</li><li>不能以"/"开头。</li></ul></li></ul></p>
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get 自定义端口。默认为6379，范围[1024,65535]。 
-     * @return VPort 自定义端口。默认为6379，范围[1024,65535]。
+     * Get <p>自定义端口。默认为6379，范围[1024,65535]。</p> 
+     * @return VPort <p>自定义端口。默认为6379，范围[1024,65535]。</p>
      */
     public Long getVPort() {
         return this.VPort;
     }
 
     /**
-     * Set 自定义端口。默认为6379，范围[1024,65535]。
-     * @param VPort 自定义端口。默认为6379，范围[1024,65535]。
+     * Set <p>自定义端口。默认为6379，范围[1024,65535]。</p>
+     * @param VPort <p>自定义端口。默认为6379，范围[1024,65535]。</p>
      */
     public void setVPort(Long VPort) {
         this.VPort = VPort;
     }
 
     /**
-     * Get 包年包月计费的续费模式。<ul><li>0：默认状态，指手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</li></ul> 
-     * @return AutoRenew 包年包月计费的续费模式。<ul><li>0：默认状态，指手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</li></ul>
+     * Get <p>包年包月计费的续费模式。<ul><li>0：默认状态，指手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</li></ul></p> 
+     * @return AutoRenew <p>包年包月计费的续费模式。<ul><li>0：默认状态，指手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</li></ul></p>
      */
     public Long getAutoRenew() {
         return this.AutoRenew;
     }
 
     /**
-     * Set 包年包月计费的续费模式。<ul><li>0：默认状态，指手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</li></ul>
-     * @param AutoRenew 包年包月计费的续费模式。<ul><li>0：默认状态，指手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</li></ul>
+     * Set <p>包年包月计费的续费模式。<ul><li>0：默认状态，指手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</li></ul></p>
+     * @param AutoRenew <p>包年包月计费的续费模式。<ul><li>0：默认状态，指手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</li></ul></p>
      */
     public void setAutoRenew(Long AutoRenew) {
         this.AutoRenew = AutoRenew;
     }
 
     /**
-     * Get 给实例设置安全组 ID 数组。 
-     * @return SecurityGroupIdList 给实例设置安全组 ID 数组。
+     * Get <p>给实例设置安全组 ID 数组。</p> 
+     * @return SecurityGroupIdList <p>给实例设置安全组 ID 数组。</p>
      */
     public String [] getSecurityGroupIdList() {
         return this.SecurityGroupIdList;
     }
 
     /**
-     * Set 给实例设置安全组 ID 数组。
-     * @param SecurityGroupIdList 给实例设置安全组 ID 数组。
+     * Set <p>给实例设置安全组 ID 数组。</p>
+     * @param SecurityGroupIdList <p>给实例设置安全组 ID 数组。</p>
      */
     public void setSecurityGroupIdList(String [] SecurityGroupIdList) {
         this.SecurityGroupIdList = SecurityGroupIdList;
     }
 
     /**
-     * Get 给实例绑定标签。 
-     * @return ResourceTags 给实例绑定标签。
+     * Get <p>给实例绑定标签。</p> 
+     * @return ResourceTags <p>给实例绑定标签。</p>
      */
     public ResourceTag [] getResourceTags() {
         return this.ResourceTags;
     }
 
     /**
-     * Set 给实例绑定标签。
-     * @param ResourceTags 给实例绑定标签。
+     * Set <p>给实例绑定标签。</p>
+     * @param ResourceTags <p>给实例绑定标签。</p>
      */
     public void setResourceTags(ResourceTag [] ResourceTags) {
         this.ResourceTags = ResourceTags;
     }
 
     /**
-     * Get 混合存储版，单分片持久化内存容量，单位：GB。
-KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。 
-     * @return MemSize 混合存储版，单分片持久化内存容量，单位：GB。
-KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。
+     * Get <p>混合存储版，单分片持久化内存容量，单位：GB。KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/80808">产品规格</a>。</p> 
+     * @return MemSize <p>混合存储版，单分片持久化内存容量，单位：GB。KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/80808">产品规格</a>。</p>
      */
     public Long getMemSize() {
         return this.MemSize;
     }
 
     /**
-     * Set 混合存储版，单分片持久化内存容量，单位：GB。
-KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。
-     * @param MemSize 混合存储版，单分片持久化内存容量，单位：GB。
-KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。
+     * Set <p>混合存储版，单分片持久化内存容量，单位：GB。KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/80808">产品规格</a>。</p>
+     * @param MemSize <p>混合存储版，单分片持久化内存容量，单位：GB。KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/80808">产品规格</a>。</p>
      */
     public void setMemSize(Long MemSize) {
         this.MemSize = MemSize;
     }
 
     /**
-     * Get 每个分片硬盘的容量。单位：GB。
-每一缓存分片容量，对应的磁盘容量范围不同。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。 
-     * @return DiskSize 每个分片硬盘的容量。单位：GB。
-每一缓存分片容量，对应的磁盘容量范围不同。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。
+     * Get <p>每个分片硬盘的容量。单位：GB。每一缓存分片容量，对应的磁盘容量范围不同。具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/80808">产品规格</a>。</p> 
+     * @return DiskSize <p>每个分片硬盘的容量。单位：GB。每一缓存分片容量，对应的磁盘容量范围不同。具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/80808">产品规格</a>。</p>
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set 每个分片硬盘的容量。单位：GB。
-每一缓存分片容量，对应的磁盘容量范围不同。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。
-     * @param DiskSize 每个分片硬盘的容量。单位：GB。
-每一缓存分片容量，对应的磁盘容量范围不同。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。
+     * Set <p>每个分片硬盘的容量。单位：GB。每一缓存分片容量，对应的磁盘容量范围不同。具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/80808">产品规格</a>。</p>
+     * @param DiskSize <p>每个分片硬盘的容量。单位：GB。每一缓存分片容量，对应的磁盘容量范围不同。具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/80808">产品规格</a>。</p>
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get 计算 CPU 核数，可忽略不传。CPU 核数与内存为固定搭配，具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。 
-     * @return MachineCpu 计算 CPU 核数，可忽略不传。CPU 核数与内存为固定搭配，具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。
+     * Get <p>计算 CPU 核数，可忽略不传。CPU 核数与内存为固定搭配，具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/80808">产品规格</a>。</p> 
+     * @return MachineCpu <p>计算 CPU 核数，可忽略不传。CPU 核数与内存为固定搭配，具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/80808">产品规格</a>。</p>
      */
     public Long getMachineCpu() {
         return this.MachineCpu;
     }
 
     /**
-     * Set 计算 CPU 核数，可忽略不传。CPU 核数与内存为固定搭配，具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。
-     * @param MachineCpu 计算 CPU 核数，可忽略不传。CPU 核数与内存为固定搭配，具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。
+     * Set <p>计算 CPU 核数，可忽略不传。CPU 核数与内存为固定搭配，具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/80808">产品规格</a>。</p>
+     * @param MachineCpu <p>计算 CPU 核数，可忽略不传。CPU 核数与内存为固定搭配，具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/80808">产品规格</a>。</p>
      */
     public void setMachineCpu(Long MachineCpu) {
         this.MachineCpu = MachineCpu;
     }
 
     /**
-     * Get 项目id，取值以用户账户>用户账户相关接口查询>项目列表返回的projectId为准。 
-     * @return ProjectId 项目id，取值以用户账户>用户账户相关接口查询>项目列表返回的projectId为准。
+     * Get <p>项目id，取值以用户账户&gt;用户账户相关接口查询&gt;项目列表返回的projectId为准。</p> 
+     * @return ProjectId <p>项目id，取值以用户账户&gt;用户账户相关接口查询&gt;项目列表返回的projectId为准。</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目id，取值以用户账户>用户账户相关接口查询>项目列表返回的projectId为准。
-     * @param ProjectId 项目id，取值以用户账户>用户账户相关接口查询>项目列表返回的projectId为准。
+     * Set <p>项目id，取值以用户账户&gt;用户账户相关接口查询&gt;项目列表返回的projectId为准。</p>
+     * @param ProjectId <p>项目id，取值以用户账户&gt;用户账户相关接口查询&gt;项目列表返回的projectId为准。</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 数据压缩开关。<ul><li>ON：开启，默认开启压缩。</li><li>OFF：关闭。</li></ul> 
-     * @return Compression 数据压缩开关。<ul><li>ON：开启，默认开启压缩。</li><li>OFF：关闭。</li></ul>
+     * Get <p>数据压缩开关。<ul><li>ON：开启，默认开启压缩。</li><li>OFF：关闭。</li></ul></p> 
+     * @return Compression <p>数据压缩开关。<ul><li>ON：开启，默认开启压缩。</li><li>OFF：关闭。</li></ul></p>
      */
     public String getCompression() {
         return this.Compression;
     }
 
     /**
-     * Set 数据压缩开关。<ul><li>ON：开启，默认开启压缩。</li><li>OFF：关闭。</li></ul>
-     * @param Compression 数据压缩开关。<ul><li>ON：开启，默认开启压缩。</li><li>OFF：关闭。</li></ul>
+     * Set <p>数据压缩开关。<ul><li>ON：开启，默认开启压缩。</li><li>OFF：关闭。</li></ul></p>
+     * @param Compression <p>数据压缩开关。<ul><li>ON：开启，默认开启压缩。</li><li>OFF：关闭。</li></ul></p>
      */
     public void setCompression(String Compression) {
         this.Compression = Compression;

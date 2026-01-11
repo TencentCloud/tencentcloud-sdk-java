@@ -101,6 +101,14 @@ public class TranscodeTemplate extends AbstractModel {
     private TEHDConfig TEHDConfig;
 
     /**
+    * 音视频增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnhanceConfig")
+    @Expose
+    private EnhanceConfig EnhanceConfig;
+
+    /**
     * 封装格式过滤条件，可选值：
 <li>Video：视频格式，可以同时包含视频流和音频流的封装格式；</li>
 <li>PureAudio：纯音频格式，只能包含音频流的封装格式板。</li>
@@ -319,6 +327,26 @@ public class TranscodeTemplate extends AbstractModel {
     }
 
     /**
+     * Get 音视频增强配置。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnhanceConfig 音视频增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public EnhanceConfig getEnhanceConfig() {
+        return this.EnhanceConfig;
+    }
+
+    /**
+     * Set 音视频增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnhanceConfig 音视频增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnhanceConfig(EnhanceConfig EnhanceConfig) {
+        this.EnhanceConfig = EnhanceConfig;
+    }
+
+    /**
      * Get 封装格式过滤条件，可选值：
 <li>Video：视频格式，可以同时包含视频流和音频流的封装格式；</li>
 <li>PureAudio：纯音频格式，只能包含音频流的封装格式板。</li> 
@@ -428,6 +456,9 @@ public class TranscodeTemplate extends AbstractModel {
         if (source.TEHDConfig != null) {
             this.TEHDConfig = new TEHDConfig(source.TEHDConfig);
         }
+        if (source.EnhanceConfig != null) {
+            this.EnhanceConfig = new EnhanceConfig(source.EnhanceConfig);
+        }
         if (source.ContainerType != null) {
             this.ContainerType = new String(source.ContainerType);
         }
@@ -457,6 +488,7 @@ public class TranscodeTemplate extends AbstractModel {
         this.setParamObj(map, prefix + "VideoTemplate.", this.VideoTemplate);
         this.setParamObj(map, prefix + "AudioTemplate.", this.AudioTemplate);
         this.setParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
+        this.setParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
         this.setParamSimple(map, prefix + "ContainerType", this.ContainerType);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
