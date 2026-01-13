@@ -138,6 +138,27 @@ OFF/ON/CREATING/DELETING
     private Boolean PublicIpReused;
 
     /**
+    * 公网控制台接入点操作的错误信息
+    */
+    @SerializedName("PublicWebConsoleErrorMessage")
+    @Expose
+    private String PublicWebConsoleErrorMessage;
+
+    /**
+    * 内网控制台接入点操作的错误信息
+    */
+    @SerializedName("VpcWebConsoleErrorMessage")
+    @Expose
+    private String VpcWebConsoleErrorMessage;
+
+    /**
+    * 公网接入点操作的错误信息
+    */
+    @SerializedName("PublicDataStreamErrorMessage")
+    @Expose
+    private String PublicDataStreamErrorMessage;
+
+    /**
      * Get 集群公网接入地址
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PublicAccessEndpoint 集群公网接入地址
@@ -401,6 +422,54 @@ OFF/ON/CREATING/DELETING
         this.PublicIpReused = PublicIpReused;
     }
 
+    /**
+     * Get 公网控制台接入点操作的错误信息 
+     * @return PublicWebConsoleErrorMessage 公网控制台接入点操作的错误信息
+     */
+    public String getPublicWebConsoleErrorMessage() {
+        return this.PublicWebConsoleErrorMessage;
+    }
+
+    /**
+     * Set 公网控制台接入点操作的错误信息
+     * @param PublicWebConsoleErrorMessage 公网控制台接入点操作的错误信息
+     */
+    public void setPublicWebConsoleErrorMessage(String PublicWebConsoleErrorMessage) {
+        this.PublicWebConsoleErrorMessage = PublicWebConsoleErrorMessage;
+    }
+
+    /**
+     * Get 内网控制台接入点操作的错误信息 
+     * @return VpcWebConsoleErrorMessage 内网控制台接入点操作的错误信息
+     */
+    public String getVpcWebConsoleErrorMessage() {
+        return this.VpcWebConsoleErrorMessage;
+    }
+
+    /**
+     * Set 内网控制台接入点操作的错误信息
+     * @param VpcWebConsoleErrorMessage 内网控制台接入点操作的错误信息
+     */
+    public void setVpcWebConsoleErrorMessage(String VpcWebConsoleErrorMessage) {
+        this.VpcWebConsoleErrorMessage = VpcWebConsoleErrorMessage;
+    }
+
+    /**
+     * Get 公网接入点操作的错误信息 
+     * @return PublicDataStreamErrorMessage 公网接入点操作的错误信息
+     */
+    public String getPublicDataStreamErrorMessage() {
+        return this.PublicDataStreamErrorMessage;
+    }
+
+    /**
+     * Set 公网接入点操作的错误信息
+     * @param PublicDataStreamErrorMessage 公网接入点操作的错误信息
+     */
+    public void setPublicDataStreamErrorMessage(String PublicDataStreamErrorMessage) {
+        this.PublicDataStreamErrorMessage = PublicDataStreamErrorMessage;
+    }
+
     public RabbitMQClusterAccessInfo() {
     }
 
@@ -457,6 +526,15 @@ OFF/ON/CREATING/DELETING
         if (source.PublicIpReused != null) {
             this.PublicIpReused = new Boolean(source.PublicIpReused);
         }
+        if (source.PublicWebConsoleErrorMessage != null) {
+            this.PublicWebConsoleErrorMessage = new String(source.PublicWebConsoleErrorMessage);
+        }
+        if (source.VpcWebConsoleErrorMessage != null) {
+            this.VpcWebConsoleErrorMessage = new String(source.VpcWebConsoleErrorMessage);
+        }
+        if (source.PublicDataStreamErrorMessage != null) {
+            this.PublicDataStreamErrorMessage = new String(source.PublicDataStreamErrorMessage);
+        }
     }
 
 
@@ -480,6 +558,9 @@ OFF/ON/CREATING/DELETING
         this.setParamObj(map, prefix + "ControlPlaneEndpointInfo.", this.ControlPlaneEndpointInfo);
         this.setParamSimple(map, prefix + "PublicTlsAccessEndpoint", this.PublicTlsAccessEndpoint);
         this.setParamSimple(map, prefix + "PublicIpReused", this.PublicIpReused);
+        this.setParamSimple(map, prefix + "PublicWebConsoleErrorMessage", this.PublicWebConsoleErrorMessage);
+        this.setParamSimple(map, prefix + "VpcWebConsoleErrorMessage", this.VpcWebConsoleErrorMessage);
+        this.setParamSimple(map, prefix + "PublicDataStreamErrorMessage", this.PublicDataStreamErrorMessage);
 
     }
 }

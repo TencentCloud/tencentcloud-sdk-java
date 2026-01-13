@@ -50,6 +50,17 @@ public class EsClient extends AbstractClient{
     }
 
     /**
+     *新建自动备份快照策略
+     * @param req CreateAutoBackUpStrategyRequest
+     * @return CreateAutoBackUpStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAutoBackUpStrategyResponse CreateAutoBackUpStrategy(CreateAutoBackUpStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAutoBackUpStrategy", CreateAutoBackUpStrategyResponse.class);
+    }
+
+    /**
      *集群快照手动创建
      * @param req CreateClusterSnapshotRequest
      * @return CreateClusterSnapshotResponse
@@ -127,6 +138,17 @@ public class EsClient extends AbstractClient{
     }
 
     /**
+     *删除自动备份快照策略
+     * @param req DeleteAutoBackUpStrategyRequest
+     * @return DeleteAutoBackUpStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAutoBackUpStrategyResponse DeleteAutoBackUpStrategy(DeleteAutoBackUpStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAutoBackUpStrategy", DeleteAutoBackUpStrategyResponse.class);
+    }
+
+    /**
      *删除快照仓库里备份的快照
      * @param req DeleteClusterSnapshotRequest
      * @return DeleteClusterSnapshotResponse
@@ -201,6 +223,17 @@ public class EsClient extends AbstractClient{
     public DeleteServerlessSpaceUserResponse DeleteServerlessSpaceUser(DeleteServerlessSpaceUserRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteServerlessSpaceUser", DeleteServerlessSpaceUserResponse.class);
+    }
+
+    /**
+     *获取自动备份快照策略信息
+     * @param req DescribeAutoBackUpStrategyRequest
+     * @return DescribeAutoBackUpStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAutoBackUpStrategyResponse DescribeAutoBackUpStrategy(DescribeAutoBackUpStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAutoBackUpStrategy", DescribeAutoBackUpStrategyResponse.class);
     }
 
     /**
@@ -488,6 +521,28 @@ public class EsClient extends AbstractClient{
     public InstallInstanceModelResponse InstallInstanceModel(InstallInstanceModelRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "InstallInstanceModel", InstallInstanceModelResponse.class);
+    }
+
+    /**
+     *修改自动备份快照策略公共信息
+     * @param req ModifyAutoBackUpCommonInfoRequest
+     * @return ModifyAutoBackUpCommonInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAutoBackUpCommonInfoResponse ModifyAutoBackUpCommonInfo(ModifyAutoBackUpCommonInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAutoBackUpCommonInfo", ModifyAutoBackUpCommonInfoResponse.class);
+    }
+
+    /**
+     *修改自动备份快照策略
+     * @param req ModifyAutoBackUpStrategyRequest
+     * @return ModifyAutoBackUpStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAutoBackUpStrategyResponse ModifyAutoBackUpStrategy(ModifyAutoBackUpStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAutoBackUpStrategy", ModifyAutoBackUpStrategyResponse.class);
     }
 
     /**

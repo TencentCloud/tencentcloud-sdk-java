@@ -23,6 +23,75 @@ import java.util.HashMap;
 
 public class QueryUserAuthorityRequest extends AbstractModel {
 
+    /**
+    * 实例ID
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * 分为知识库knowledge、数据源datasource、自定义场景scene
+    */
+    @SerializedName("Module")
+    @Expose
+    private String Module;
+
+    /**
+    * 对象id,分为知识库id、数据源id、场景id
+    */
+    @SerializedName("ObjectId")
+    @Expose
+    private String ObjectId;
+
+    /**
+     * Get 实例ID 
+     * @return InstanceId 实例ID
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 实例ID
+     * @param InstanceId 实例ID
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get 分为知识库knowledge、数据源datasource、自定义场景scene 
+     * @return Module 分为知识库knowledge、数据源datasource、自定义场景scene
+     */
+    public String getModule() {
+        return this.Module;
+    }
+
+    /**
+     * Set 分为知识库knowledge、数据源datasource、自定义场景scene
+     * @param Module 分为知识库knowledge、数据源datasource、自定义场景scene
+     */
+    public void setModule(String Module) {
+        this.Module = Module;
+    }
+
+    /**
+     * Get 对象id,分为知识库id、数据源id、场景id 
+     * @return ObjectId 对象id,分为知识库id、数据源id、场景id
+     */
+    public String getObjectId() {
+        return this.ObjectId;
+    }
+
+    /**
+     * Set 对象id,分为知识库id、数据源id、场景id
+     * @param ObjectId 对象id,分为知识库id、数据源id、场景id
+     */
+    public void setObjectId(String ObjectId) {
+        this.ObjectId = ObjectId;
+    }
+
     public QueryUserAuthorityRequest() {
     }
 
@@ -31,6 +100,15 @@ public class QueryUserAuthorityRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public QueryUserAuthorityRequest(QueryUserAuthorityRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
+        if (source.ObjectId != null) {
+            this.ObjectId = new String(source.ObjectId);
+        }
     }
 
 
@@ -38,6 +116,9 @@ public class QueryUserAuthorityRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "Module", this.Module);
+        this.setParamSimple(map, prefix + "ObjectId", this.ObjectId);
 
     }
 }

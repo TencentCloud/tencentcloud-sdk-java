@@ -80,6 +80,13 @@ public class CCN extends AbstractModel {
     private String InstanceChargeType;
 
     /**
+    * 计量类型
+    */
+    @SerializedName("InstanceMeteringType")
+    @Expose
+    private String InstanceMeteringType;
+
+    /**
     * 限速类型，`INTER_REGION_LIMIT` 为地域间限速；`OUTER_REGION_LIMIT` 为地域出口限速。
     */
     @SerializedName("BandwidthLimitType")
@@ -324,6 +331,22 @@ public class CCN extends AbstractModel {
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
+    }
+
+    /**
+     * Get 计量类型 
+     * @return InstanceMeteringType 计量类型
+     */
+    public String getInstanceMeteringType() {
+        return this.InstanceMeteringType;
+    }
+
+    /**
+     * Set 计量类型
+     * @param InstanceMeteringType 计量类型
+     */
+    public void setInstanceMeteringType(String InstanceMeteringType) {
+        this.InstanceMeteringType = InstanceMeteringType;
     }
 
     /**
@@ -630,6 +653,9 @@ public class CCN extends AbstractModel {
         if (source.InstanceChargeType != null) {
             this.InstanceChargeType = new String(source.InstanceChargeType);
         }
+        if (source.InstanceMeteringType != null) {
+            this.InstanceMeteringType = new String(source.InstanceMeteringType);
+        }
         if (source.BandwidthLimitType != null) {
             this.BandwidthLimitType = new String(source.BandwidthLimitType);
         }
@@ -699,6 +725,7 @@ public class CCN extends AbstractModel {
         this.setParamSimple(map, prefix + "State", this.State);
         this.setParamSimple(map, prefix + "QosLevel", this.QosLevel);
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
+        this.setParamSimple(map, prefix + "InstanceMeteringType", this.InstanceMeteringType);
         this.setParamSimple(map, prefix + "BandwidthLimitType", this.BandwidthLimitType);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamSimple(map, prefix + "RoutePriorityFlag", this.RoutePriorityFlag);

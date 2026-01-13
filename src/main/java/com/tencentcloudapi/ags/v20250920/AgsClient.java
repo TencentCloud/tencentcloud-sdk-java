@@ -62,6 +62,17 @@ public class AgsClient extends AbstractClient{
     }
 
     /**
+     *创建镜像预热任务
+     * @param req CreatePreCacheImageTaskRequest
+     * @return CreatePreCacheImageTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePreCacheImageTaskResponse CreatePreCacheImageTask(CreatePreCacheImageTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreatePreCacheImageTask", CreatePreCacheImageTaskResponse.class);
+    }
+
+    /**
      *创建沙箱工具
      * @param req CreateSandboxToolRequest
      * @return CreateSandboxToolResponse
@@ -103,6 +114,17 @@ public class AgsClient extends AbstractClient{
     public DescribeAPIKeyListResponse DescribeAPIKeyList(DescribeAPIKeyListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAPIKeyList", DescribeAPIKeyListResponse.class);
+    }
+
+    /**
+     *查询镜像预热任务信息
+     * @param req DescribePreCacheImageTaskRequest
+     * @return DescribePreCacheImageTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePreCacheImageTaskResponse DescribePreCacheImageTask(DescribePreCacheImageTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePreCacheImageTask", DescribePreCacheImageTaskResponse.class);
     }
 
     /**

@@ -48,7 +48,7 @@ public class RestoreMediaRequest extends AbstractModel {
     * 解冻模式。当媒体文件当前的存储类型为归档存储时，有以下取值：
 <li>极速模式：Expedited，解冻任务在5分钟后完成。</li>
 <li>标准模式：Standard，解冻任务在5小时后完成 。</li>
-<li>批量模式：Bulk，，解冻任务在12小时后完成。</li>
+<li>批量模式：Bulk，解冻任务在12小时后完成。</li>
 当媒体文件的存储类型为深度归档存储时，有以下取值：
 <li>标准模式：Standard，解冻任务在24小时后完成。</li>
 <li>批量模式：Bulk，解冻任务在48小时后完成。</li>
@@ -109,14 +109,14 @@ public class RestoreMediaRequest extends AbstractModel {
      * Get 解冻模式。当媒体文件当前的存储类型为归档存储时，有以下取值：
 <li>极速模式：Expedited，解冻任务在5分钟后完成。</li>
 <li>标准模式：Standard，解冻任务在5小时后完成 。</li>
-<li>批量模式：Bulk，，解冻任务在12小时后完成。</li>
+<li>批量模式：Bulk，解冻任务在12小时后完成。</li>
 当媒体文件的存储类型为深度归档存储时，有以下取值：
 <li>标准模式：Standard，解冻任务在24小时后完成。</li>
 <li>批量模式：Bulk，解冻任务在48小时后完成。</li> 
      * @return RestoreTier 解冻模式。当媒体文件当前的存储类型为归档存储时，有以下取值：
 <li>极速模式：Expedited，解冻任务在5分钟后完成。</li>
 <li>标准模式：Standard，解冻任务在5小时后完成 。</li>
-<li>批量模式：Bulk，，解冻任务在12小时后完成。</li>
+<li>批量模式：Bulk，解冻任务在12小时后完成。</li>
 当媒体文件的存储类型为深度归档存储时，有以下取值：
 <li>标准模式：Standard，解冻任务在24小时后完成。</li>
 <li>批量模式：Bulk，解冻任务在48小时后完成。</li>
@@ -129,14 +129,14 @@ public class RestoreMediaRequest extends AbstractModel {
      * Set 解冻模式。当媒体文件当前的存储类型为归档存储时，有以下取值：
 <li>极速模式：Expedited，解冻任务在5分钟后完成。</li>
 <li>标准模式：Standard，解冻任务在5小时后完成 。</li>
-<li>批量模式：Bulk，，解冻任务在12小时后完成。</li>
+<li>批量模式：Bulk，解冻任务在12小时后完成。</li>
 当媒体文件的存储类型为深度归档存储时，有以下取值：
 <li>标准模式：Standard，解冻任务在24小时后完成。</li>
 <li>批量模式：Bulk，解冻任务在48小时后完成。</li>
      * @param RestoreTier 解冻模式。当媒体文件当前的存储类型为归档存储时，有以下取值：
 <li>极速模式：Expedited，解冻任务在5分钟后完成。</li>
 <li>标准模式：Standard，解冻任务在5小时后完成 。</li>
-<li>批量模式：Bulk，，解冻任务在12小时后完成。</li>
+<li>批量模式：Bulk，解冻任务在12小时后完成。</li>
 当媒体文件的存储类型为深度归档存储时，有以下取值：
 <li>标准模式：Standard，解冻任务在24小时后完成。</li>
 <li>批量模式：Bulk，解冻任务在48小时后完成。</li>

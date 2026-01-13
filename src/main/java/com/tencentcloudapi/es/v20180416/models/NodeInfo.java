@@ -100,7 +100,7 @@ public class NodeInfo extends AbstractModel {
     private Long MemSize;
 
     /**
-    * /
+    * 硬盘额外性能
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskEnhance")
@@ -300,9 +300,9 @@ public class NodeInfo extends AbstractModel {
     }
 
     /**
-     * Get /
+     * Get 硬盘额外性能
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DiskEnhance /
+     * @return DiskEnhance 硬盘额外性能
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDiskEnhance() {
@@ -310,9 +310,9 @@ public class NodeInfo extends AbstractModel {
     }
 
     /**
-     * Set /
+     * Set 硬盘额外性能
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DiskEnhance /
+     * @param DiskEnhance 硬盘额外性能
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskEnhance(Long DiskEnhance) {

@@ -86,6 +86,13 @@ public class AutoCalloutTaskInfo extends AbstractModel {
     private Long TaskId;
 
     /**
+    * 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
+    */
+    @SerializedName("MaxRingTimeoutSecond")
+    @Expose
+    private Long MaxRingTimeoutSecond;
+
+    /**
      * Get 任务名 
      * @return Name 任务名
      */
@@ -237,6 +244,22 @@ public class AutoCalloutTaskInfo extends AbstractModel {
         this.TaskId = TaskId;
     }
 
+    /**
+     * Get 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数 
+     * @return MaxRingTimeoutSecond 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
+     */
+    public Long getMaxRingTimeoutSecond() {
+        return this.MaxRingTimeoutSecond;
+    }
+
+    /**
+     * Set 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
+     * @param MaxRingTimeoutSecond 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
+     */
+    public void setMaxRingTimeoutSecond(Long MaxRingTimeoutSecond) {
+        this.MaxRingTimeoutSecond = MaxRingTimeoutSecond;
+    }
+
     public AutoCalloutTaskInfo() {
     }
 
@@ -272,6 +295,9 @@ public class AutoCalloutTaskInfo extends AbstractModel {
         if (source.TaskId != null) {
             this.TaskId = new Long(source.TaskId);
         }
+        if (source.MaxRingTimeoutSecond != null) {
+            this.MaxRingTimeoutSecond = new Long(source.MaxRingTimeoutSecond);
+        }
     }
 
 
@@ -287,6 +313,7 @@ public class AutoCalloutTaskInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "IvrId", this.IvrId);
         this.setParamSimple(map, prefix + "State", this.State);
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "MaxRingTimeoutSecond", this.MaxRingTimeoutSecond);
 
     }
 }

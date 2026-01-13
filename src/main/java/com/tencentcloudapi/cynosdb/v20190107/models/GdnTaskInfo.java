@@ -73,6 +73,34 @@ public class GdnTaskInfo extends AbstractModel {
     private String StandbyClusterName;
 
     /**
+    * 是否已强切
+    */
+    @SerializedName("ForceSwitchGdn")
+    @Expose
+    private String ForceSwitchGdn;
+
+    /**
+    * 返回码
+    */
+    @SerializedName("Code")
+    @Expose
+    private Long Code;
+
+    /**
+    * 提示信息
+    */
+    @SerializedName("Message")
+    @Expose
+    private String Message;
+
+    /**
+    * 是否支持强切
+    */
+    @SerializedName("IsSupportForce")
+    @Expose
+    private String IsSupportForce;
+
+    /**
      * Get 全球数据库唯一标识 
      * @return GdnId 全球数据库唯一标识
      */
@@ -184,6 +212,70 @@ public class GdnTaskInfo extends AbstractModel {
         this.StandbyClusterName = StandbyClusterName;
     }
 
+    /**
+     * Get 是否已强切 
+     * @return ForceSwitchGdn 是否已强切
+     */
+    public String getForceSwitchGdn() {
+        return this.ForceSwitchGdn;
+    }
+
+    /**
+     * Set 是否已强切
+     * @param ForceSwitchGdn 是否已强切
+     */
+    public void setForceSwitchGdn(String ForceSwitchGdn) {
+        this.ForceSwitchGdn = ForceSwitchGdn;
+    }
+
+    /**
+     * Get 返回码 
+     * @return Code 返回码
+     */
+    public Long getCode() {
+        return this.Code;
+    }
+
+    /**
+     * Set 返回码
+     * @param Code 返回码
+     */
+    public void setCode(Long Code) {
+        this.Code = Code;
+    }
+
+    /**
+     * Get 提示信息 
+     * @return Message 提示信息
+     */
+    public String getMessage() {
+        return this.Message;
+    }
+
+    /**
+     * Set 提示信息
+     * @param Message 提示信息
+     */
+    public void setMessage(String Message) {
+        this.Message = Message;
+    }
+
+    /**
+     * Get 是否支持强切 
+     * @return IsSupportForce 是否支持强切
+     */
+    public String getIsSupportForce() {
+        return this.IsSupportForce;
+    }
+
+    /**
+     * Set 是否支持强切
+     * @param IsSupportForce 是否支持强切
+     */
+    public void setIsSupportForce(String IsSupportForce) {
+        this.IsSupportForce = IsSupportForce;
+    }
+
     public GdnTaskInfo() {
     }
 
@@ -213,6 +305,18 @@ public class GdnTaskInfo extends AbstractModel {
         if (source.StandbyClusterName != null) {
             this.StandbyClusterName = new String(source.StandbyClusterName);
         }
+        if (source.ForceSwitchGdn != null) {
+            this.ForceSwitchGdn = new String(source.ForceSwitchGdn);
+        }
+        if (source.Code != null) {
+            this.Code = new Long(source.Code);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+        if (source.IsSupportForce != null) {
+            this.IsSupportForce = new String(source.IsSupportForce);
+        }
     }
 
 
@@ -227,6 +331,10 @@ public class GdnTaskInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "StandbyClusterRegion", this.StandbyClusterRegion);
         this.setParamSimple(map, prefix + "StandbyClusterId", this.StandbyClusterId);
         this.setParamSimple(map, prefix + "StandbyClusterName", this.StandbyClusterName);
+        this.setParamSimple(map, prefix + "ForceSwitchGdn", this.ForceSwitchGdn);
+        this.setParamSimple(map, prefix + "Code", this.Code);
+        this.setParamSimple(map, prefix + "Message", this.Message);
+        this.setParamSimple(map, prefix + "IsSupportForce", this.IsSupportForce);
 
     }
 }

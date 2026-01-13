@@ -67,6 +67,13 @@ public class AddBandwidthPackageResourcesRequest extends AbstractModel {
     private String Protocol;
 
     /**
+    * 用于带宽包内添加IP资源时指定IP带宽值。<p>说明：当前功能处于内测中，如需使用，请提交[工单申请](https://console.cloud.tencent.com/workorder/category)。</p>
+    */
+    @SerializedName("InternetMaxBandwidthOut")
+    @Expose
+    private Long InternetMaxBandwidthOut;
+
+    /**
      * Get 资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'。EIP资源列表可通过[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取，LB资源列表可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/api/214/30685)接口获取。 
      * @return ResourceIds 资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'。EIP资源列表可通过[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取，LB资源列表可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/api/214/30685)接口获取。
      */
@@ -178,6 +185,22 @@ public class AddBandwidthPackageResourcesRequest extends AbstractModel {
         this.Protocol = Protocol;
     }
 
+    /**
+     * Get 用于带宽包内添加IP资源时指定IP带宽值。<p>说明：当前功能处于内测中，如需使用，请提交[工单申请](https://console.cloud.tencent.com/workorder/category)。</p> 
+     * @return InternetMaxBandwidthOut 用于带宽包内添加IP资源时指定IP带宽值。<p>说明：当前功能处于内测中，如需使用，请提交[工单申请](https://console.cloud.tencent.com/workorder/category)。</p>
+     */
+    public Long getInternetMaxBandwidthOut() {
+        return this.InternetMaxBandwidthOut;
+    }
+
+    /**
+     * Set 用于带宽包内添加IP资源时指定IP带宽值。<p>说明：当前功能处于内测中，如需使用，请提交[工单申请](https://console.cloud.tencent.com/workorder/category)。</p>
+     * @param InternetMaxBandwidthOut 用于带宽包内添加IP资源时指定IP带宽值。<p>说明：当前功能处于内测中，如需使用，请提交[工单申请](https://console.cloud.tencent.com/workorder/category)。</p>
+     */
+    public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
+        this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
+    }
+
     public AddBandwidthPackageResourcesRequest() {
     }
 
@@ -204,6 +227,9 @@ public class AddBandwidthPackageResourcesRequest extends AbstractModel {
         if (source.Protocol != null) {
             this.Protocol = new String(source.Protocol);
         }
+        if (source.InternetMaxBandwidthOut != null) {
+            this.InternetMaxBandwidthOut = new Long(source.InternetMaxBandwidthOut);
+        }
     }
 
 
@@ -216,6 +242,7 @@ public class AddBandwidthPackageResourcesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "NetworkType", this.NetworkType);
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
+        this.setParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
 
     }
 }

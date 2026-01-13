@@ -81,6 +81,13 @@ public class DescribeAutoCalloutTaskResponse extends AbstractModel {
     private Long State;
 
     /**
+    * 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
+    */
+    @SerializedName("MaxRingTimeoutSecond")
+    @Expose
+    private Long MaxRingTimeoutSecond;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -220,6 +227,22 @@ public class DescribeAutoCalloutTaskResponse extends AbstractModel {
     }
 
     /**
+     * Get 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数 
+     * @return MaxRingTimeoutSecond 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
+     */
+    public Long getMaxRingTimeoutSecond() {
+        return this.MaxRingTimeoutSecond;
+    }
+
+    /**
+     * Set 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
+     * @param MaxRingTimeoutSecond 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
+     */
+    public void setMaxRingTimeoutSecond(Long MaxRingTimeoutSecond) {
+        this.MaxRingTimeoutSecond = MaxRingTimeoutSecond;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -273,6 +296,9 @@ public class DescribeAutoCalloutTaskResponse extends AbstractModel {
         if (source.State != null) {
             this.State = new Long(source.State);
         }
+        if (source.MaxRingTimeoutSecond != null) {
+            this.MaxRingTimeoutSecond = new Long(source.MaxRingTimeoutSecond);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -291,6 +317,7 @@ public class DescribeAutoCalloutTaskResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Callees.", this.Callees);
         this.setParamSimple(map, prefix + "IvrId", this.IvrId);
         this.setParamSimple(map, prefix + "State", this.State);
+        this.setParamSimple(map, prefix + "MaxRingTimeoutSecond", this.MaxRingTimeoutSecond);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

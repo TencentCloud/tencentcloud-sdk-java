@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DescribeBandwidthRangeResponse extends AbstractModel {
 
     /**
-    * 标准带宽。指购买实例时，系统为每个节点分配的带宽。
+    * <p>标准带宽。指购买实例时，系统为每个节点分配的带宽。</p>单位： MB/s。
     */
     @SerializedName("BaseBandwidth")
     @Expose
     private Long BaseBandwidth;
 
     /**
-    * 指实例的附加带宽。标准带宽不满足需求的情况下，用户可自行增加的带宽。<ul><li>开启副本只读时，实例总带宽 = 附加带宽 * 分片数 + 标准带宽 * 分片数 * Max ([只读副本数量, 1])，标准架构的分片数 = 1。</li><li>没有开启副本只读时，实例总带宽 = 附加带宽 * 分片数 + 标准带宽 * 分片数，标准架构的分片数 = 1。</li></ul>
+    * <p>指实例的附加带宽。标准带宽不满足需求的情况下，用户可自行增加的带宽。</p><ul><li>开启副本只读时，实例总带宽 = 附加带宽 * 分片数 + 标准带宽 * 分片数 * Max ([只读副本数量, 1])，标准架构的分片数 = 1。</li><li>没有开启副本只读时，实例总带宽 = 附加带宽 * 分片数 + 标准带宽 * 分片数，标准架构的分片数 = 1。</li></ul>单位： MB/s。
     */
     @SerializedName("AddBandwidth")
     @Expose
     private Long AddBandwidth;
 
     /**
-    * 附加带宽设置下限。
+    * <p>附加带宽设置下限。</p>单位： MB/s。
     */
     @SerializedName("MinAddBandwidth")
     @Expose
     private Long MinAddBandwidth;
 
     /**
-    * 附加带宽设置上限。
+    * <p>附加带宽设置上限。</p>单位： MB/s。
     */
     @SerializedName("MaxAddBandwidth")
     @Expose
@@ -59,64 +59,64 @@ public class DescribeBandwidthRangeResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 标准带宽。指购买实例时，系统为每个节点分配的带宽。 
-     * @return BaseBandwidth 标准带宽。指购买实例时，系统为每个节点分配的带宽。
+     * Get <p>标准带宽。指购买实例时，系统为每个节点分配的带宽。</p>单位： MB/s。 
+     * @return BaseBandwidth <p>标准带宽。指购买实例时，系统为每个节点分配的带宽。</p>单位： MB/s。
      */
     public Long getBaseBandwidth() {
         return this.BaseBandwidth;
     }
 
     /**
-     * Set 标准带宽。指购买实例时，系统为每个节点分配的带宽。
-     * @param BaseBandwidth 标准带宽。指购买实例时，系统为每个节点分配的带宽。
+     * Set <p>标准带宽。指购买实例时，系统为每个节点分配的带宽。</p>单位： MB/s。
+     * @param BaseBandwidth <p>标准带宽。指购买实例时，系统为每个节点分配的带宽。</p>单位： MB/s。
      */
     public void setBaseBandwidth(Long BaseBandwidth) {
         this.BaseBandwidth = BaseBandwidth;
     }
 
     /**
-     * Get 指实例的附加带宽。标准带宽不满足需求的情况下，用户可自行增加的带宽。<ul><li>开启副本只读时，实例总带宽 = 附加带宽 * 分片数 + 标准带宽 * 分片数 * Max ([只读副本数量, 1])，标准架构的分片数 = 1。</li><li>没有开启副本只读时，实例总带宽 = 附加带宽 * 分片数 + 标准带宽 * 分片数，标准架构的分片数 = 1。</li></ul> 
-     * @return AddBandwidth 指实例的附加带宽。标准带宽不满足需求的情况下，用户可自行增加的带宽。<ul><li>开启副本只读时，实例总带宽 = 附加带宽 * 分片数 + 标准带宽 * 分片数 * Max ([只读副本数量, 1])，标准架构的分片数 = 1。</li><li>没有开启副本只读时，实例总带宽 = 附加带宽 * 分片数 + 标准带宽 * 分片数，标准架构的分片数 = 1。</li></ul>
+     * Get <p>指实例的附加带宽。标准带宽不满足需求的情况下，用户可自行增加的带宽。</p><ul><li>开启副本只读时，实例总带宽 = 附加带宽 * 分片数 + 标准带宽 * 分片数 * Max ([只读副本数量, 1])，标准架构的分片数 = 1。</li><li>没有开启副本只读时，实例总带宽 = 附加带宽 * 分片数 + 标准带宽 * 分片数，标准架构的分片数 = 1。</li></ul>单位： MB/s。 
+     * @return AddBandwidth <p>指实例的附加带宽。标准带宽不满足需求的情况下，用户可自行增加的带宽。</p><ul><li>开启副本只读时，实例总带宽 = 附加带宽 * 分片数 + 标准带宽 * 分片数 * Max ([只读副本数量, 1])，标准架构的分片数 = 1。</li><li>没有开启副本只读时，实例总带宽 = 附加带宽 * 分片数 + 标准带宽 * 分片数，标准架构的分片数 = 1。</li></ul>单位： MB/s。
      */
     public Long getAddBandwidth() {
         return this.AddBandwidth;
     }
 
     /**
-     * Set 指实例的附加带宽。标准带宽不满足需求的情况下，用户可自行增加的带宽。<ul><li>开启副本只读时，实例总带宽 = 附加带宽 * 分片数 + 标准带宽 * 分片数 * Max ([只读副本数量, 1])，标准架构的分片数 = 1。</li><li>没有开启副本只读时，实例总带宽 = 附加带宽 * 分片数 + 标准带宽 * 分片数，标准架构的分片数 = 1。</li></ul>
-     * @param AddBandwidth 指实例的附加带宽。标准带宽不满足需求的情况下，用户可自行增加的带宽。<ul><li>开启副本只读时，实例总带宽 = 附加带宽 * 分片数 + 标准带宽 * 分片数 * Max ([只读副本数量, 1])，标准架构的分片数 = 1。</li><li>没有开启副本只读时，实例总带宽 = 附加带宽 * 分片数 + 标准带宽 * 分片数，标准架构的分片数 = 1。</li></ul>
+     * Set <p>指实例的附加带宽。标准带宽不满足需求的情况下，用户可自行增加的带宽。</p><ul><li>开启副本只读时，实例总带宽 = 附加带宽 * 分片数 + 标准带宽 * 分片数 * Max ([只读副本数量, 1])，标准架构的分片数 = 1。</li><li>没有开启副本只读时，实例总带宽 = 附加带宽 * 分片数 + 标准带宽 * 分片数，标准架构的分片数 = 1。</li></ul>单位： MB/s。
+     * @param AddBandwidth <p>指实例的附加带宽。标准带宽不满足需求的情况下，用户可自行增加的带宽。</p><ul><li>开启副本只读时，实例总带宽 = 附加带宽 * 分片数 + 标准带宽 * 分片数 * Max ([只读副本数量, 1])，标准架构的分片数 = 1。</li><li>没有开启副本只读时，实例总带宽 = 附加带宽 * 分片数 + 标准带宽 * 分片数，标准架构的分片数 = 1。</li></ul>单位： MB/s。
      */
     public void setAddBandwidth(Long AddBandwidth) {
         this.AddBandwidth = AddBandwidth;
     }
 
     /**
-     * Get 附加带宽设置下限。 
-     * @return MinAddBandwidth 附加带宽设置下限。
+     * Get <p>附加带宽设置下限。</p>单位： MB/s。 
+     * @return MinAddBandwidth <p>附加带宽设置下限。</p>单位： MB/s。
      */
     public Long getMinAddBandwidth() {
         return this.MinAddBandwidth;
     }
 
     /**
-     * Set 附加带宽设置下限。
-     * @param MinAddBandwidth 附加带宽设置下限。
+     * Set <p>附加带宽设置下限。</p>单位： MB/s。
+     * @param MinAddBandwidth <p>附加带宽设置下限。</p>单位： MB/s。
      */
     public void setMinAddBandwidth(Long MinAddBandwidth) {
         this.MinAddBandwidth = MinAddBandwidth;
     }
 
     /**
-     * Get 附加带宽设置上限。 
-     * @return MaxAddBandwidth 附加带宽设置上限。
+     * Get <p>附加带宽设置上限。</p>单位： MB/s。 
+     * @return MaxAddBandwidth <p>附加带宽设置上限。</p>单位： MB/s。
      */
     public Long getMaxAddBandwidth() {
         return this.MaxAddBandwidth;
     }
 
     /**
-     * Set 附加带宽设置上限。
-     * @param MaxAddBandwidth 附加带宽设置上限。
+     * Set <p>附加带宽设置上限。</p>单位： MB/s。
+     * @param MaxAddBandwidth <p>附加带宽设置上限。</p>单位： MB/s。
      */
     public void setMaxAddBandwidth(Long MaxAddBandwidth) {
         this.MaxAddBandwidth = MaxAddBandwidth;

@@ -84,6 +84,7 @@ public class Invocation extends AbstractModel {
 
     /**
     * 执行活动结束时间。格式为：YYYY-MM-DDThh:mm:ssZ
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -336,8 +337,10 @@ public class Invocation extends AbstractModel {
     }
 
     /**
-     * Get 执行活动结束时间。格式为：YYYY-MM-DDThh:mm:ssZ 
+     * Get 执行活动结束时间。格式为：YYYY-MM-DDThh:mm:ssZ
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return EndTime 执行活动结束时间。格式为：YYYY-MM-DDThh:mm:ssZ
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -345,7 +348,9 @@ public class Invocation extends AbstractModel {
 
     /**
      * Set 执行活动结束时间。格式为：YYYY-MM-DDThh:mm:ssZ
+注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 执行活动结束时间。格式为：YYYY-MM-DDThh:mm:ssZ
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

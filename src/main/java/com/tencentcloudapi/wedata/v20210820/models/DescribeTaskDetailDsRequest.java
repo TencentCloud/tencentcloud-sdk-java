@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeTaskDetailDsRequest extends AbstractModel {
 
     /**
-    * 任务Id
+    * 任务ID
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 项目Id
+    * 项目ID （必填属性）
     */
     @SerializedName("ProjectId")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeTaskDetailDsRequest extends AbstractModel {
     private Long TaskAlarmStatus;
 
     /**
-     * Get 任务Id 
-     * @return TaskId 任务Id
+     * Get 任务ID 
+     * @return TaskId 任务ID
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务Id
-     * @param TaskId 任务Id
+     * Set 任务ID
+     * @param TaskId 任务ID
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 项目Id 
-     * @return ProjectId 项目Id
+     * Get 项目ID （必填属性） 
+     * @return ProjectId 项目ID （必填属性）
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目Id
-     * @param ProjectId 项目Id
+     * Set 项目ID （必填属性）
+     * @param ProjectId 项目ID （必填属性）
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;

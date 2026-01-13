@@ -216,14 +216,6 @@ public class TableMeta extends AbstractModel {
     private Boolean HasFavorite;
 
     /**
-    * 生命周期
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("LifeCycleTime")
-    @Expose
-    private Long LifeCycleTime;
-
-    /**
     * 存储量，已转为适合的单位展示
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -425,6 +417,14 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
     private String Location;
 
     /**
+    * 生命周期
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LifeCycleTime")
+    @Expose
+    private Long LifeCycleTime;
+
+    /**
     * 判断是否是分区表1 是 0否
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -439,6 +439,14 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
     @SerializedName("PartitionColumns")
     @Expose
     private String [] PartitionColumns;
+
+    /**
+    * 分区时间格式：yyyy-MM-dd
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DateFormat")
+    @Expose
+    private String DateFormat;
 
     /**
     * 生命周期-分区保留天数【分区保留策略时有效】
@@ -1145,26 +1153,6 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
     }
 
     /**
-     * Get 生命周期
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LifeCycleTime 生命周期
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getLifeCycleTime() {
-        return this.LifeCycleTime;
-    }
-
-    /**
-     * Set 生命周期
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param LifeCycleTime 生命周期
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setLifeCycleTime(Long LifeCycleTime) {
-        this.LifeCycleTime = LifeCycleTime;
-    }
-
-    /**
      * Get 存储量，已转为适合的单位展示
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return StorageSizeWithUnit 存储量，已转为适合的单位展示
@@ -1669,6 +1657,26 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
     }
 
     /**
+     * Get 生命周期
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LifeCycleTime 生命周期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getLifeCycleTime() {
+        return this.LifeCycleTime;
+    }
+
+    /**
+     * Set 生命周期
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LifeCycleTime 生命周期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLifeCycleTime(Long LifeCycleTime) {
+        this.LifeCycleTime = LifeCycleTime;
+    }
+
+    /**
      * Get 判断是否是分区表1 是 0否
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return IsPartitionTable 判断是否是分区表1 是 0否
@@ -1706,6 +1714,26 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
      */
     public void setPartitionColumns(String [] PartitionColumns) {
         this.PartitionColumns = PartitionColumns;
+    }
+
+    /**
+     * Get 分区时间格式：yyyy-MM-dd
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DateFormat 分区时间格式：yyyy-MM-dd
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDateFormat() {
+        return this.DateFormat;
+    }
+
+    /**
+     * Set 分区时间格式：yyyy-MM-dd
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DateFormat 分区时间格式：yyyy-MM-dd
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDateFormat(String DateFormat) {
+        this.DateFormat = DateFormat;
     }
 
     /**
@@ -2354,9 +2382,6 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
         if (source.HasFavorite != null) {
             this.HasFavorite = new Boolean(source.HasFavorite);
         }
-        if (source.LifeCycleTime != null) {
-            this.LifeCycleTime = new Long(source.LifeCycleTime);
-        }
         if (source.StorageSizeWithUnit != null) {
             this.StorageSizeWithUnit = new String(source.StorageSizeWithUnit);
         }
@@ -2435,6 +2460,9 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
         if (source.Location != null) {
             this.Location = new String(source.Location);
         }
+        if (source.LifeCycleTime != null) {
+            this.LifeCycleTime = new Long(source.LifeCycleTime);
+        }
         if (source.IsPartitionTable != null) {
             this.IsPartitionTable = new Long(source.IsPartitionTable);
         }
@@ -2443,6 +2471,9 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
             for (int i = 0; i < source.PartitionColumns.length; i++) {
                 this.PartitionColumns[i] = new String(source.PartitionColumns[i]);
             }
+        }
+        if (source.DateFormat != null) {
+            this.DateFormat = new String(source.DateFormat);
         }
         if (source.PartitionExpireDays != null) {
             this.PartitionExpireDays = new Long(source.PartitionExpireDays);
@@ -2571,7 +2602,6 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
         this.setParamArraySimple(map, prefix + "BizCatalogIds.", this.BizCatalogIds);
         this.setParamArraySimple(map, prefix + "BizCatalogNames.", this.BizCatalogNames);
         this.setParamSimple(map, prefix + "HasFavorite", this.HasFavorite);
-        this.setParamSimple(map, prefix + "LifeCycleTime", this.LifeCycleTime);
         this.setParamSimple(map, prefix + "StorageSizeWithUnit", this.StorageSizeWithUnit);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "TechnologyType", this.TechnologyType);
@@ -2597,8 +2627,10 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
         this.setParamSimple(map, prefix + "MetaCrawlType", this.MetaCrawlType);
         this.setParamSimple(map, prefix + "IsView", this.IsView);
         this.setParamSimple(map, prefix + "Location", this.Location);
+        this.setParamSimple(map, prefix + "LifeCycleTime", this.LifeCycleTime);
         this.setParamSimple(map, prefix + "IsPartitionTable", this.IsPartitionTable);
         this.setParamArraySimple(map, prefix + "PartitionColumns.", this.PartitionColumns);
+        this.setParamSimple(map, prefix + "DateFormat", this.DateFormat);
         this.setParamSimple(map, prefix + "PartitionExpireDays", this.PartitionExpireDays);
         this.setParamArrayObj(map, prefix + "TableProperties.", this.TableProperties);
         this.setParamSimple(map, prefix + "Environment", this.Environment);

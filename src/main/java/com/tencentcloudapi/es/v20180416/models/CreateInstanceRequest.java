@@ -256,7 +256,7 @@ public class CreateInstanceRequest extends AbstractModel {
     private Boolean EnableHybridStorage;
 
     /**
-    * 是否开启essd 增强型云盘
+    * 硬盘额外性能
     */
     @SerializedName("DiskEnhance")
     @Expose
@@ -870,16 +870,16 @@ public class CreateInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否开启essd 增强型云盘 
-     * @return DiskEnhance 是否开启essd 增强型云盘
+     * Get 硬盘额外性能 
+     * @return DiskEnhance 硬盘额外性能
      */
     public Long getDiskEnhance() {
         return this.DiskEnhance;
     }
 
     /**
-     * Set 是否开启essd 增强型云盘
-     * @param DiskEnhance 是否开启essd 增强型云盘
+     * Set 硬盘额外性能
+     * @param DiskEnhance 硬盘额外性能
      */
     public void setDiskEnhance(Long DiskEnhance) {
         this.DiskEnhance = DiskEnhance;

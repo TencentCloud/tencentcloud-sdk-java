@@ -48,11 +48,7 @@ false：不通知
     private Boolean OperateInform;
 
     /**
-    * 任务删除方式
-true：不针对下游任务实例进行强制失败
-false：针对下游任务实例进行强制失败
-不传默认false
-
+    * (本参数暂不生效)当前删除上游任务时，不会针对下游任务实例进行强制失败
     */
     @SerializedName("DeleteMode")
     @Expose
@@ -119,32 +115,16 @@ false：不通知
     }
 
     /**
-     * Get 任务删除方式
-true：不针对下游任务实例进行强制失败
-false：针对下游任务实例进行强制失败
-不传默认false
- 
-     * @return DeleteMode 任务删除方式
-true：不针对下游任务实例进行强制失败
-false：针对下游任务实例进行强制失败
-不传默认false
-
+     * Get (本参数暂不生效)当前删除上游任务时，不会针对下游任务实例进行强制失败 
+     * @return DeleteMode (本参数暂不生效)当前删除上游任务时，不会针对下游任务实例进行强制失败
      */
     public Boolean getDeleteMode() {
         return this.DeleteMode;
     }
 
     /**
-     * Set 任务删除方式
-true：不针对下游任务实例进行强制失败
-false：针对下游任务实例进行强制失败
-不传默认false
-
-     * @param DeleteMode 任务删除方式
-true：不针对下游任务实例进行强制失败
-false：针对下游任务实例进行强制失败
-不传默认false
-
+     * Set (本参数暂不生效)当前删除上游任务时，不会针对下游任务实例进行强制失败
+     * @param DeleteMode (本参数暂不生效)当前删除上游任务时，不会针对下游任务实例进行强制失败
      */
     public void setDeleteMode(Boolean DeleteMode) {
         this.DeleteMode = DeleteMode;

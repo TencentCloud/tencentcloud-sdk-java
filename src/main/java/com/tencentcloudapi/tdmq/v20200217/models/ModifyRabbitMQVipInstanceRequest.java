@@ -66,6 +66,13 @@ public class ModifyRabbitMQVipInstanceRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
+    * 是否开启集群风险提示
+    */
+    @SerializedName("EnableRiskWarning")
+    @Expose
+    private Boolean EnableRiskWarning;
+
+    /**
      * Get 实例Id 
      * @return InstanceId 实例Id
      */
@@ -161,6 +168,22 @@ public class ModifyRabbitMQVipInstanceRequest extends AbstractModel {
         this.Tags = Tags;
     }
 
+    /**
+     * Get 是否开启集群风险提示 
+     * @return EnableRiskWarning 是否开启集群风险提示
+     */
+    public Boolean getEnableRiskWarning() {
+        return this.EnableRiskWarning;
+    }
+
+    /**
+     * Set 是否开启集群风险提示
+     * @param EnableRiskWarning 是否开启集群风险提示
+     */
+    public void setEnableRiskWarning(Boolean EnableRiskWarning) {
+        this.EnableRiskWarning = EnableRiskWarning;
+    }
+
     public ModifyRabbitMQVipInstanceRequest() {
     }
 
@@ -190,6 +213,9 @@ public class ModifyRabbitMQVipInstanceRequest extends AbstractModel {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.EnableRiskWarning != null) {
+            this.EnableRiskWarning = new Boolean(source.EnableRiskWarning);
+        }
     }
 
 
@@ -203,6 +229,7 @@ public class ModifyRabbitMQVipInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableDeletionProtection", this.EnableDeletionProtection);
         this.setParamSimple(map, prefix + "RemoveAllTags", this.RemoveAllTags);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "EnableRiskWarning", this.EnableRiskWarning);
 
     }
 }

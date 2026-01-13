@@ -361,6 +361,21 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *此接口（CreateContractReviewChecklistWebUrl）用来创建新建审查要点清单web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
+
+适用场景：根据合同内容识别出合同的风险信息。审查结果由AI生成，仅供参考。请结合相关法律法规和公司制度要求综合判断。
+
+注意:  `如果文件资源为word类型生成的链接不能进行iframe嵌入，需要在单独窗口打开`
+     * @param req CreateContractReviewChecklistWebUrlRequest
+     * @return CreateContractReviewChecklistWebUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateContractReviewChecklistWebUrlResponse CreateContractReviewChecklistWebUrl(CreateContractReviewChecklistWebUrlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateContractReviewChecklistWebUrl", CreateContractReviewChecklistWebUrlResponse.class);
+    }
+
+    /**
      *此接口（CreateContractReviewWebUrl）用来创建合同审查web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
 
 适用场景：根据合同内容识别出合同的风险信息。审查结果由AI生成，仅供参考。请结合相关法律法规和公司制度要求综合判断。
@@ -1726,6 +1741,36 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *此接口（DescribeContractReviewChecklistWebUrl）用来创建查看审查要点清单web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
+
+适用场景：根据合同内容识别出合同的风险信息。审查结果由AI生成，仅供参考。请结合相关法律法规和公司制度要求综合判断。
+
+注意:  `如果文件资源为word类型生成的链接不能进行iframe嵌入，需要在单独窗口打开`
+     * @param req DescribeContractReviewChecklistWebUrlRequest
+     * @return DescribeContractReviewChecklistWebUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeContractReviewChecklistWebUrlResponse DescribeContractReviewChecklistWebUrl(DescribeContractReviewChecklistWebUrlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeContractReviewChecklistWebUrl", DescribeContractReviewChecklistWebUrlResponse.class);
+    }
+
+    /**
+     *此接口（DescribeContractReviewChecklistsWebUrl）用来创建审查要点清单列表web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
+
+适用场景：根据合同内容识别出合同的风险信息。审查结果由AI生成，仅供参考。请结合相关法律法规和公司制度要求综合判断。
+
+注意:  `如果文件资源为word类型生成的链接不能进行iframe嵌入，需要在单独窗口打开`
+     * @param req DescribeContractReviewChecklistsWebUrlRequest
+     * @return DescribeContractReviewChecklistsWebUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeContractReviewChecklistsWebUrlResponse DescribeContractReviewChecklistsWebUrl(DescribeContractReviewChecklistsWebUrlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeContractReviewChecklistsWebUrl", DescribeContractReviewChecklistsWebUrlResponse.class);
+    }
+
+    /**
      *本接口（DescribeContractReviewTask）用于获取合同审查任务详情，包括任务的状态和识别出的风险信息。
      * @param req DescribeContractReviewTaskRequest
      * @return DescribeContractReviewTaskResponse
@@ -1734,6 +1779,21 @@ public class EssClient extends AbstractClient{
     public DescribeContractReviewTaskResponse DescribeContractReviewTask(DescribeContractReviewTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeContractReviewTask", DescribeContractReviewTaskResponse.class);
+    }
+
+    /**
+     *此接口（DescribeContractReviewTaskListWebUrl）用来创建合同审查记录列表web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
+
+适用场景：根据合同内容识别出合同的风险信息。审查结果由AI生成，仅供参考。请结合相关法律法规和公司制度要求综合判断。
+
+注意:  `如果文件资源为word类型生成的链接不能进行iframe嵌入，需要在单独窗口打开`
+     * @param req DescribeContractReviewTaskListWebUrlRequest
+     * @return DescribeContractReviewTaskListWebUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeContractReviewTaskListWebUrlResponse DescribeContractReviewTaskListWebUrl(DescribeContractReviewTaskListWebUrlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeContractReviewTaskListWebUrl", DescribeContractReviewTaskListWebUrlResponse.class);
     }
 
     /**
@@ -2192,6 +2252,17 @@ public class EssClient extends AbstractClient{
     public ExportContractComparisonTaskResponse ExportContractComparisonTask(ExportContractComparisonTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ExportContractComparisonTask", ExportContractComparisonTaskResponse.class);
+    }
+
+    /**
+     *本接口（ExportContractReviewResult）用于导出和同审查结果。支持选择 1 “带风险批注文件”、 2 “审查结果＆摘要（.xIsx）”
+     * @param req ExportContractReviewResultRequest
+     * @return ExportContractReviewResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExportContractReviewResultResponse ExportContractReviewResult(ExportContractReviewResultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ExportContractReviewResult", ExportContractReviewResultResponse.class);
     }
 
     /**

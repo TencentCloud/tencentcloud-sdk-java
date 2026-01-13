@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class LifecycleInfo extends AbstractModel {
 
     /**
-    * 生命周期值
+    * 生命周期值，如果PartitionLifeCycle=custom时，表示自定义生命周期
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Lifecycle")
@@ -48,9 +48,9 @@ public class LifecycleInfo extends AbstractModel {
     private String [] DateFormat;
 
     /**
-     * Get 生命周期值
+     * Get 生命周期值，如果PartitionLifeCycle=custom时，表示自定义生命周期
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Lifecycle 生命周期值
+     * @return Lifecycle 生命周期值，如果PartitionLifeCycle=custom时，表示自定义生命周期
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLifecycle() {
@@ -58,9 +58,9 @@ public class LifecycleInfo extends AbstractModel {
     }
 
     /**
-     * Set 生命周期值
+     * Set 生命周期值，如果PartitionLifeCycle=custom时，表示自定义生命周期
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Lifecycle 生命周期值
+     * @param Lifecycle 生命周期值，如果PartitionLifeCycle=custom时，表示自定义生命周期
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLifecycle(Long Lifecycle) {

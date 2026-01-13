@@ -109,6 +109,10 @@ public class ServeParticipant extends AbstractModel {
 
     /**
     * 结束状态
+
+中文详情[参考](https://www.tencentcloud.com/zh/document/product/1229/71847)
+
+英文详情[参考](https://www.tencentcloud.com/document/product/1229/71847?lang=en)
     */
     @SerializedName("EndStatusString")
     @Expose
@@ -342,8 +346,16 @@ public class ServeParticipant extends AbstractModel {
     }
 
     /**
-     * Get 结束状态 
+     * Get 结束状态
+
+中文详情[参考](https://www.tencentcloud.com/zh/document/product/1229/71847)
+
+英文详情[参考](https://www.tencentcloud.com/document/product/1229/71847?lang=en) 
      * @return EndStatusString 结束状态
+
+中文详情[参考](https://www.tencentcloud.com/zh/document/product/1229/71847)
+
+英文详情[参考](https://www.tencentcloud.com/document/product/1229/71847?lang=en)
      */
     public String getEndStatusString() {
         return this.EndStatusString;
@@ -351,7 +363,15 @@ public class ServeParticipant extends AbstractModel {
 
     /**
      * Set 结束状态
+
+中文详情[参考](https://www.tencentcloud.com/zh/document/product/1229/71847)
+
+英文详情[参考](https://www.tencentcloud.com/document/product/1229/71847?lang=en)
      * @param EndStatusString 结束状态
+
+中文详情[参考](https://www.tencentcloud.com/zh/document/product/1229/71847)
+
+英文详情[参考](https://www.tencentcloud.com/document/product/1229/71847?lang=en)
      */
     public void setEndStatusString(String EndStatusString) {
         this.EndStatusString = EndStatusString;

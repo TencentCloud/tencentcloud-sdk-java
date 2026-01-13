@@ -70,6 +70,13 @@ public class CreateAIAgentCallRequest extends AbstractModel {
     private Variable [] Variables;
 
     /**
+    * 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
+    */
+    @SerializedName("MaxRingTimeoutSecond")
+    @Expose
+    private Long MaxRingTimeoutSecond;
+
+    /**
      * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
      * @return SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
@@ -185,6 +192,22 @@ public class CreateAIAgentCallRequest extends AbstractModel {
         this.Variables = Variables;
     }
 
+    /**
+     * Get 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数 
+     * @return MaxRingTimeoutSecond 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
+     */
+    public Long getMaxRingTimeoutSecond() {
+        return this.MaxRingTimeoutSecond;
+    }
+
+    /**
+     * Set 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
+     * @param MaxRingTimeoutSecond 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
+     */
+    public void setMaxRingTimeoutSecond(Long MaxRingTimeoutSecond) {
+        this.MaxRingTimeoutSecond = MaxRingTimeoutSecond;
+    }
+
     public CreateAIAgentCallRequest() {
     }
 
@@ -220,6 +243,9 @@ public class CreateAIAgentCallRequest extends AbstractModel {
                 this.Variables[i] = new Variable(source.Variables[i]);
             }
         }
+        if (source.MaxRingTimeoutSecond != null) {
+            this.MaxRingTimeoutSecond = new Long(source.MaxRingTimeoutSecond);
+        }
     }
 
 
@@ -233,6 +259,7 @@ public class CreateAIAgentCallRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "Callers.", this.Callers);
         this.setParamArrayObj(map, prefix + "PromptVariables.", this.PromptVariables);
         this.setParamArrayObj(map, prefix + "Variables.", this.Variables);
+        this.setParamSimple(map, prefix + "MaxRingTimeoutSecond", this.MaxRingTimeoutSecond);
 
     }
 }

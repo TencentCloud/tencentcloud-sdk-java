@@ -136,6 +136,13 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel {
     private Long RetryInterval;
 
     /**
+    * 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
+    */
+    @SerializedName("MaxRingTimeoutSecond")
+    @Expose
+    private Long MaxRingTimeoutSecond;
+
+    /**
      * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
      * @return SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
@@ -391,6 +398,22 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel {
         this.RetryInterval = RetryInterval;
     }
 
+    /**
+     * Get 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数 
+     * @return MaxRingTimeoutSecond 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
+     */
+    public Long getMaxRingTimeoutSecond() {
+        return this.MaxRingTimeoutSecond;
+    }
+
+    /**
+     * Set 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
+     * @param MaxRingTimeoutSecond 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
+     */
+    public void setMaxRingTimeoutSecond(Long MaxRingTimeoutSecond) {
+        this.MaxRingTimeoutSecond = MaxRingTimeoutSecond;
+    }
+
     public CreateAutoCalloutTaskRequest() {
     }
 
@@ -462,6 +485,9 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel {
         if (source.RetryInterval != null) {
             this.RetryInterval = new Long(source.RetryInterval);
         }
+        if (source.MaxRingTimeoutSecond != null) {
+            this.MaxRingTimeoutSecond = new Long(source.MaxRingTimeoutSecond);
+        }
     }
 
 
@@ -485,6 +511,7 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "AvailableTime.", this.AvailableTime);
         this.setParamSimple(map, prefix + "AIAgentId", this.AIAgentId);
         this.setParamSimple(map, prefix + "RetryInterval", this.RetryInterval);
+        this.setParamSimple(map, prefix + "MaxRingTimeoutSecond", this.MaxRingTimeoutSecond);
 
     }
 }

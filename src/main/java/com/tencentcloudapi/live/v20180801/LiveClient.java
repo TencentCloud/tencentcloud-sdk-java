@@ -162,6 +162,17 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
+     *创建关键词库，直播审核功能使用。
+     * @param req CreateAuditKeywordLibRequest
+     * @return CreateAuditKeywordLibResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAuditKeywordLibResponse CreateAuditKeywordLib(CreateAuditKeywordLibRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAuditKeywordLib", CreateAuditKeywordLibResponse.class);
+    }
+
+    /**
      *创建关键词，并关联到关键词库。
      * @param req CreateAuditKeywordsRequest
      * @return CreateAuditKeywordsResponse

@@ -59,6 +59,13 @@ public class VpcEndpointInfo extends AbstractModel {
     private String VpcTlsEndpoint;
 
     /**
+    * VPC 接入点操作失败的错误信息
+    */
+    @SerializedName("VpcErrorMessage")
+    @Expose
+    private String VpcErrorMessage;
+
+    /**
      * Get vpc的id 
      * @return VpcId vpc的id
      */
@@ -138,6 +145,22 @@ public class VpcEndpointInfo extends AbstractModel {
         this.VpcTlsEndpoint = VpcTlsEndpoint;
     }
 
+    /**
+     * Get VPC 接入点操作失败的错误信息 
+     * @return VpcErrorMessage VPC 接入点操作失败的错误信息
+     */
+    public String getVpcErrorMessage() {
+        return this.VpcErrorMessage;
+    }
+
+    /**
+     * Set VPC 接入点操作失败的错误信息
+     * @param VpcErrorMessage VPC 接入点操作失败的错误信息
+     */
+    public void setVpcErrorMessage(String VpcErrorMessage) {
+        this.VpcErrorMessage = VpcErrorMessage;
+    }
+
     public VpcEndpointInfo() {
     }
 
@@ -161,6 +184,9 @@ public class VpcEndpointInfo extends AbstractModel {
         if (source.VpcTlsEndpoint != null) {
             this.VpcTlsEndpoint = new String(source.VpcTlsEndpoint);
         }
+        if (source.VpcErrorMessage != null) {
+            this.VpcErrorMessage = new String(source.VpcErrorMessage);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class VpcEndpointInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "VpcEndpoint", this.VpcEndpoint);
         this.setParamSimple(map, prefix + "VpcDataStreamEndpointStatus", this.VpcDataStreamEndpointStatus);
         this.setParamSimple(map, prefix + "VpcTlsEndpoint", this.VpcTlsEndpoint);
+        this.setParamSimple(map, prefix + "VpcErrorMessage", this.VpcErrorMessage);
 
     }
 }

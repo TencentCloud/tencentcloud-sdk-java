@@ -222,6 +222,17 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *本接口用于创建仪表盘
+     * @param req CreateDashboardRequest
+     * @return CreateDashboardResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDashboardResponse CreateDashboard(CreateDashboardRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDashboard", CreateDashboardResponse.class);
+    }
+
+    /**
      *此接口用于创建仪表盘订阅
      * @param req CreateDashboardSubscribeRequest
      * @return CreateDashboardSubscribeResponse
@@ -549,6 +560,17 @@ public class ClsClient extends AbstractClient{
     public DeleteCosRechargeResponse DeleteCosRecharge(DeleteCosRechargeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteCosRecharge", DeleteCosRechargeResponse.class);
+    }
+
+    /**
+     *本接口用于删除仪表盘
+     * @param req DeleteDashboardRequest
+     * @return DeleteDashboardResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDashboardResponse DeleteDashboard(DeleteDashboardRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDashboard", DeleteDashboardResponse.class);
     }
 
     /**
@@ -1474,6 +1496,17 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
     public ModifyCosRechargeResponse ModifyCosRecharge(ModifyCosRechargeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyCosRecharge", ModifyCosRechargeResponse.class);
+    }
+
+    /**
+     *本接口用于修改仪表盘
+     * @param req ModifyDashboardRequest
+     * @return ModifyDashboardResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDashboardResponse ModifyDashboard(ModifyDashboardRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDashboard", ModifyDashboardResponse.class);
     }
 
     /**

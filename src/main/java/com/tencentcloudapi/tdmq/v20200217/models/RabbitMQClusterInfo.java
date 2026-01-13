@@ -221,6 +221,34 @@ public class RabbitMQClusterInfo extends AbstractModel {
     private Boolean EnableDeletionProtection;
 
     /**
+    * 是否有vhost未开启镜像队列风险
+    */
+    @SerializedName("MirroredQueueRisk")
+    @Expose
+    private Boolean MirroredQueueRisk;
+
+    /**
+    * 是否提示风险
+    */
+    @SerializedName("EnableRiskWarning")
+    @Expose
+    private Boolean EnableRiskWarning;
+
+    /**
+    * 消费超时时间
+    */
+    @SerializedName("ConsumeTimeout")
+    @Expose
+    private Long ConsumeTimeout;
+
+    /**
+    * 最大Channel数
+    */
+    @SerializedName("ChannelMax")
+    @Expose
+    private Long ChannelMax;
+
+    /**
      * Get 集群 ID 
      * @return ClusterId 集群 ID
      */
@@ -672,6 +700,70 @@ public class RabbitMQClusterInfo extends AbstractModel {
         this.EnableDeletionProtection = EnableDeletionProtection;
     }
 
+    /**
+     * Get 是否有vhost未开启镜像队列风险 
+     * @return MirroredQueueRisk 是否有vhost未开启镜像队列风险
+     */
+    public Boolean getMirroredQueueRisk() {
+        return this.MirroredQueueRisk;
+    }
+
+    /**
+     * Set 是否有vhost未开启镜像队列风险
+     * @param MirroredQueueRisk 是否有vhost未开启镜像队列风险
+     */
+    public void setMirroredQueueRisk(Boolean MirroredQueueRisk) {
+        this.MirroredQueueRisk = MirroredQueueRisk;
+    }
+
+    /**
+     * Get 是否提示风险 
+     * @return EnableRiskWarning 是否提示风险
+     */
+    public Boolean getEnableRiskWarning() {
+        return this.EnableRiskWarning;
+    }
+
+    /**
+     * Set 是否提示风险
+     * @param EnableRiskWarning 是否提示风险
+     */
+    public void setEnableRiskWarning(Boolean EnableRiskWarning) {
+        this.EnableRiskWarning = EnableRiskWarning;
+    }
+
+    /**
+     * Get 消费超时时间 
+     * @return ConsumeTimeout 消费超时时间
+     */
+    public Long getConsumeTimeout() {
+        return this.ConsumeTimeout;
+    }
+
+    /**
+     * Set 消费超时时间
+     * @param ConsumeTimeout 消费超时时间
+     */
+    public void setConsumeTimeout(Long ConsumeTimeout) {
+        this.ConsumeTimeout = ConsumeTimeout;
+    }
+
+    /**
+     * Get 最大Channel数 
+     * @return ChannelMax 最大Channel数
+     */
+    public Long getChannelMax() {
+        return this.ChannelMax;
+    }
+
+    /**
+     * Set 最大Channel数
+     * @param ChannelMax 最大Channel数
+     */
+    public void setChannelMax(Long ChannelMax) {
+        this.ChannelMax = ChannelMax;
+    }
+
     public RabbitMQClusterInfo() {
     }
 
@@ -773,6 +865,18 @@ public class RabbitMQClusterInfo extends AbstractModel {
         if (source.EnableDeletionProtection != null) {
             this.EnableDeletionProtection = new Boolean(source.EnableDeletionProtection);
         }
+        if (source.MirroredQueueRisk != null) {
+            this.MirroredQueueRisk = new Boolean(source.MirroredQueueRisk);
+        }
+        if (source.EnableRiskWarning != null) {
+            this.EnableRiskWarning = new Boolean(source.EnableRiskWarning);
+        }
+        if (source.ConsumeTimeout != null) {
+            this.ConsumeTimeout = new Long(source.ConsumeTimeout);
+        }
+        if (source.ChannelMax != null) {
+            this.ChannelMax = new Long(source.ChannelMax);
+        }
     }
 
 
@@ -808,6 +912,10 @@ public class RabbitMQClusterInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Container", this.Container);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "EnableDeletionProtection", this.EnableDeletionProtection);
+        this.setParamSimple(map, prefix + "MirroredQueueRisk", this.MirroredQueueRisk);
+        this.setParamSimple(map, prefix + "EnableRiskWarning", this.EnableRiskWarning);
+        this.setParamSimple(map, prefix + "ConsumeTimeout", this.ConsumeTimeout);
+        this.setParamSimple(map, prefix + "ChannelMax", this.ChannelMax);
 
     }
 }

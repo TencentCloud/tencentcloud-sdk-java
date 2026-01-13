@@ -363,6 +363,13 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     private Long AutoArchiveDelayHours;
 
     /**
+    * 内核小版本号
+    */
+    @SerializedName("CynosVersion")
+    @Expose
+    private String CynosVersion;
+
+    /**
      * Get 可用区 
      * @return Zone 可用区
      */
@@ -1178,6 +1185,22 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
         this.AutoArchiveDelayHours = AutoArchiveDelayHours;
     }
 
+    /**
+     * Get 内核小版本号 
+     * @return CynosVersion 内核小版本号
+     */
+    public String getCynosVersion() {
+        return this.CynosVersion;
+    }
+
+    /**
+     * Set 内核小版本号
+     * @param CynosVersion 内核小版本号
+     */
+    public void setCynosVersion(String CynosVersion) {
+        this.CynosVersion = CynosVersion;
+    }
+
     public CreateClustersRequest() {
     }
 
@@ -1336,6 +1359,9 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
         if (source.AutoArchiveDelayHours != null) {
             this.AutoArchiveDelayHours = new Long(source.AutoArchiveDelayHours);
         }
+        if (source.CynosVersion != null) {
+            this.CynosVersion = new String(source.CynosVersion);
+        }
     }
 
 
@@ -1388,6 +1414,7 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
         this.setParamObj(map, prefix + "ProxyConfig.", this.ProxyConfig);
         this.setParamSimple(map, prefix + "AutoArchive", this.AutoArchive);
         this.setParamSimple(map, prefix + "AutoArchiveDelayHours", this.AutoArchiveDelayHours);
+        this.setParamSimple(map, prefix + "CynosVersion", this.CynosVersion);
 
     }
 }

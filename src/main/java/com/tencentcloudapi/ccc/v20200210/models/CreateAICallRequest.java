@@ -446,6 +446,13 @@ HoaiMy
     private String LLMExtraBody;
 
     /**
+    * 最大通话时长， 默认不限制。单位毫秒(ms)
+    */
+    @SerializedName("MaxCallDurationMs")
+    @Expose
+    private Long MaxCallDurationMs;
+
+    /**
      * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
      * @return SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
@@ -1705,6 +1712,22 @@ HoaiMy
         this.LLMExtraBody = LLMExtraBody;
     }
 
+    /**
+     * Get 最大通话时长， 默认不限制。单位毫秒(ms) 
+     * @return MaxCallDurationMs 最大通话时长， 默认不限制。单位毫秒(ms)
+     */
+    public Long getMaxCallDurationMs() {
+        return this.MaxCallDurationMs;
+    }
+
+    /**
+     * Set 最大通话时长， 默认不限制。单位毫秒(ms)
+     * @param MaxCallDurationMs 最大通话时长， 默认不限制。单位毫秒(ms)
+     */
+    public void setMaxCallDurationMs(Long MaxCallDurationMs) {
+        this.MaxCallDurationMs = MaxCallDurationMs;
+    }
+
     public CreateAICallRequest() {
     }
 
@@ -1839,6 +1862,9 @@ HoaiMy
         if (source.LLMExtraBody != null) {
             this.LLMExtraBody = new String(source.LLMExtraBody);
         }
+        if (source.MaxCallDurationMs != null) {
+            this.MaxCallDurationMs = new Long(source.MaxCallDurationMs);
+        }
     }
 
 
@@ -1882,6 +1908,7 @@ HoaiMy
         this.setParamSimple(map, prefix + "EnableVoicemailDetection", this.EnableVoicemailDetection);
         this.setParamSimple(map, prefix + "VoicemailAction", this.VoicemailAction);
         this.setParamSimple(map, prefix + "LLMExtraBody", this.LLMExtraBody);
+        this.setParamSimple(map, prefix + "MaxCallDurationMs", this.MaxCallDurationMs);
 
     }
 }

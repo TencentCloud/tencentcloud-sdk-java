@@ -38,6 +38,7 @@ public class CreateBatchInitOrganizationUrlRequest extends AbstractModel {
 <li>AUTH_JOIN_ORGANIZATION_GROUP : 加入集团企业</li>
 <li>OPEN_AUTO_SIGN :开通企业自动签署</li>
 <li>PARTNER_AUTO_SIGN_AUTH :合作方企业授权自动签</li>
+<li>CHANGE_SUB_ORGANIZATION_ADMIN_AUTH :变更子企业超管授权(**授权后，主企业可变更子企业超管，此功能需联系客户经理开通白名单使用**)</li>
 </ul>
     */
     @SerializedName("OperateTypes")
@@ -70,6 +71,13 @@ public class CreateBatchInitOrganizationUrlRequest extends AbstractModel {
     private String AuthorizedOrganizationId;
 
     /**
+    * 初始化操作类型里含有CHANGE_SUB_ORGANIZATION_ADMIN_AUTH（变更子企业超管授权）操作类型时，授权协议中主企业的签署方是否使用自动签（需操作人有自动签授权）
+    */
+    @SerializedName("ChangeAdminAuthAutoSign")
+    @Expose
+    private Boolean ChangeAdminAuthAutoSign;
+
+    /**
      * Get 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
      * @return Operator 执行本接口操作的员工信息。
@@ -96,6 +104,7 @@ public class CreateBatchInitOrganizationUrlRequest extends AbstractModel {
 <li>AUTH_JOIN_ORGANIZATION_GROUP : 加入集团企业</li>
 <li>OPEN_AUTO_SIGN :开通企业自动签署</li>
 <li>PARTNER_AUTO_SIGN_AUTH :合作方企业授权自动签</li>
+<li>CHANGE_SUB_ORGANIZATION_ADMIN_AUTH :变更子企业超管授权(**授权后，主企业可变更子企业超管，此功能需联系客户经理开通白名单使用**)</li>
 </ul> 
      * @return OperateTypes 初始化操作类型
 <ul>
@@ -103,6 +112,7 @@ public class CreateBatchInitOrganizationUrlRequest extends AbstractModel {
 <li>AUTH_JOIN_ORGANIZATION_GROUP : 加入集团企业</li>
 <li>OPEN_AUTO_SIGN :开通企业自动签署</li>
 <li>PARTNER_AUTO_SIGN_AUTH :合作方企业授权自动签</li>
+<li>CHANGE_SUB_ORGANIZATION_ADMIN_AUTH :变更子企业超管授权(**授权后，主企业可变更子企业超管，此功能需联系客户经理开通白名单使用**)</li>
 </ul>
      */
     public String [] getOperateTypes() {
@@ -116,6 +126,7 @@ public class CreateBatchInitOrganizationUrlRequest extends AbstractModel {
 <li>AUTH_JOIN_ORGANIZATION_GROUP : 加入集团企业</li>
 <li>OPEN_AUTO_SIGN :开通企业自动签署</li>
 <li>PARTNER_AUTO_SIGN_AUTH :合作方企业授权自动签</li>
+<li>CHANGE_SUB_ORGANIZATION_ADMIN_AUTH :变更子企业超管授权(**授权后，主企业可变更子企业超管，此功能需联系客户经理开通白名单使用**)</li>
 </ul>
      * @param OperateTypes 初始化操作类型
 <ul>
@@ -123,6 +134,7 @@ public class CreateBatchInitOrganizationUrlRequest extends AbstractModel {
 <li>AUTH_JOIN_ORGANIZATION_GROUP : 加入集团企业</li>
 <li>OPEN_AUTO_SIGN :开通企业自动签署</li>
 <li>PARTNER_AUTO_SIGN_AUTH :合作方企业授权自动签</li>
+<li>CHANGE_SUB_ORGANIZATION_ADMIN_AUTH :变更子企业超管授权(**授权后，主企业可变更子企业超管，此功能需联系客户经理开通白名单使用**)</li>
 </ul>
      */
     public void setOperateTypes(String [] OperateTypes) {
@@ -193,6 +205,22 @@ public class CreateBatchInitOrganizationUrlRequest extends AbstractModel {
         this.AuthorizedOrganizationId = AuthorizedOrganizationId;
     }
 
+    /**
+     * Get 初始化操作类型里含有CHANGE_SUB_ORGANIZATION_ADMIN_AUTH（变更子企业超管授权）操作类型时，授权协议中主企业的签署方是否使用自动签（需操作人有自动签授权） 
+     * @return ChangeAdminAuthAutoSign 初始化操作类型里含有CHANGE_SUB_ORGANIZATION_ADMIN_AUTH（变更子企业超管授权）操作类型时，授权协议中主企业的签署方是否使用自动签（需操作人有自动签授权）
+     */
+    public Boolean getChangeAdminAuthAutoSign() {
+        return this.ChangeAdminAuthAutoSign;
+    }
+
+    /**
+     * Set 初始化操作类型里含有CHANGE_SUB_ORGANIZATION_ADMIN_AUTH（变更子企业超管授权）操作类型时，授权协议中主企业的签署方是否使用自动签（需操作人有自动签授权）
+     * @param ChangeAdminAuthAutoSign 初始化操作类型里含有CHANGE_SUB_ORGANIZATION_ADMIN_AUTH（变更子企业超管授权）操作类型时，授权协议中主企业的签署方是否使用自动签（需操作人有自动签授权）
+     */
+    public void setChangeAdminAuthAutoSign(Boolean ChangeAdminAuthAutoSign) {
+        this.ChangeAdminAuthAutoSign = ChangeAdminAuthAutoSign;
+    }
+
     public CreateBatchInitOrganizationUrlRequest() {
     }
 
@@ -222,6 +250,9 @@ public class CreateBatchInitOrganizationUrlRequest extends AbstractModel {
         if (source.AuthorizedOrganizationId != null) {
             this.AuthorizedOrganizationId = new String(source.AuthorizedOrganizationId);
         }
+        if (source.ChangeAdminAuthAutoSign != null) {
+            this.ChangeAdminAuthAutoSign = new Boolean(source.ChangeAdminAuthAutoSign);
+        }
     }
 
 
@@ -234,6 +265,7 @@ public class CreateBatchInitOrganizationUrlRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "OrganizationIds.", this.OrganizationIds);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "AuthorizedOrganizationId", this.AuthorizedOrganizationId);
+        this.setParamSimple(map, prefix + "ChangeAdminAuthAutoSign", this.ChangeAdminAuthAutoSign);
 
     }
 }
