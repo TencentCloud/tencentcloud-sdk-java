@@ -864,6 +864,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *使用请求中提供的权限集合，删除用户对应的权限
+     * @param req DeleteUserPermissionsRequest
+     * @return DeleteUserPermissionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteUserPermissionsResponse DeleteUserPermissions(DeleteUserPermissionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteUserPermissions", DeleteUserPermissionsResponse.class);
+    }
+
+    /**
      *获取addon列表
      * @param req DescribeAddonRequest
      * @return DescribeAddonResponse
@@ -1986,6 +1997,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *查询一个指定用户在当前地域下所有 TKE 集群中的聚合权限信息。返回用户在各集群中的 ClusterRoleBinding 和 RoleBinding 信息。
+     * @param req DescribeUserPermissionsRequest
+     * @return DescribeUserPermissionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserPermissionsResponse DescribeUserPermissions(DescribeUserPermissionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUserPermissions", DescribeUserPermissionsResponse.class);
+    }
+
+    /**
      *获取集群版本信息
      * @param req DescribeVersionsRequest
      * @return DescribeVersionsResponse
@@ -2203,6 +2225,17 @@ public class TkeClient extends AbstractClient{
     public GetUpgradeInstanceProgressResponse GetUpgradeInstanceProgress(GetUpgradeInstanceProgressRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetUpgradeInstanceProgress", GetUpgradeInstanceProgressResponse.class);
+    }
+
+    /**
+     *使用请求中提供的权限集合，为用户授予对应的 RBAC 权限。
+     * @param req GrantUserPermissionsRequest
+     * @return GrantUserPermissionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public GrantUserPermissionsResponse GrantUserPermissions(GrantUserPermissionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GrantUserPermissions", GrantUserPermissionsResponse.class);
     }
 
     /**

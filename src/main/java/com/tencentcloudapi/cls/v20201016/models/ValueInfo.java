@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class ValueInfo extends AbstractModel {
 
     /**
-    * 字段类型，目前支持的类型有：long、text、double
+    * 字段类型，支持的类型有：long、text、double、json
+注意：json 类型目前仅部分用户或日志主题支持，如需使用请联系我们开启功能白名单
     */
     @SerializedName("Type")
     @Expose
@@ -62,16 +63,36 @@ long及double类型字段需为空；
     private String Alias;
 
     /**
-     * Get 字段类型，目前支持的类型有：long、text、double 
-     * @return Type 字段类型，目前支持的类型有：long、text、double
+    * 仅为子节点开启索引，本字段不开启。
+注意：仅json类型字段可配置该参数
+    */
+    @SerializedName("OpenIndexForChildOnly")
+    @Expose
+    private Boolean OpenIndexForChildOnly;
+
+    /**
+    * json子节点列表
+注意：仅json类型字段可配置该参数
+    */
+    @SerializedName("ChildNode")
+    @Expose
+    private KeyValueInfo [] ChildNode;
+
+    /**
+     * Get 字段类型，支持的类型有：long、text、double、json
+注意：json 类型目前仅部分用户或日志主题支持，如需使用请联系我们开启功能白名单 
+     * @return Type 字段类型，支持的类型有：long、text、double、json
+注意：json 类型目前仅部分用户或日志主题支持，如需使用请联系我们开启功能白名单
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 字段类型，目前支持的类型有：long、text、double
-     * @param Type 字段类型，目前支持的类型有：long、text、double
+     * Set 字段类型，支持的类型有：long、text、double、json
+注意：json 类型目前仅部分用户或日志主题支持，如需使用请联系我们开启功能白名单
+     * @param Type 字段类型，支持的类型有：long、text、double、json
+注意：json 类型目前仅部分用户或日志主题支持，如需使用请联系我们开启功能白名单
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -153,6 +174,46 @@ long及double类型字段需为空；
         this.Alias = Alias;
     }
 
+    /**
+     * Get 仅为子节点开启索引，本字段不开启。
+注意：仅json类型字段可配置该参数 
+     * @return OpenIndexForChildOnly 仅为子节点开启索引，本字段不开启。
+注意：仅json类型字段可配置该参数
+     */
+    public Boolean getOpenIndexForChildOnly() {
+        return this.OpenIndexForChildOnly;
+    }
+
+    /**
+     * Set 仅为子节点开启索引，本字段不开启。
+注意：仅json类型字段可配置该参数
+     * @param OpenIndexForChildOnly 仅为子节点开启索引，本字段不开启。
+注意：仅json类型字段可配置该参数
+     */
+    public void setOpenIndexForChildOnly(Boolean OpenIndexForChildOnly) {
+        this.OpenIndexForChildOnly = OpenIndexForChildOnly;
+    }
+
+    /**
+     * Get json子节点列表
+注意：仅json类型字段可配置该参数 
+     * @return ChildNode json子节点列表
+注意：仅json类型字段可配置该参数
+     */
+    public KeyValueInfo [] getChildNode() {
+        return this.ChildNode;
+    }
+
+    /**
+     * Set json子节点列表
+注意：仅json类型字段可配置该参数
+     * @param ChildNode json子节点列表
+注意：仅json类型字段可配置该参数
+     */
+    public void setChildNode(KeyValueInfo [] ChildNode) {
+        this.ChildNode = ChildNode;
+    }
+
     public ValueInfo() {
     }
 
@@ -176,6 +237,15 @@ long及double类型字段需为空；
         if (source.Alias != null) {
             this.Alias = new String(source.Alias);
         }
+        if (source.OpenIndexForChildOnly != null) {
+            this.OpenIndexForChildOnly = new Boolean(source.OpenIndexForChildOnly);
+        }
+        if (source.ChildNode != null) {
+            this.ChildNode = new KeyValueInfo[source.ChildNode.length];
+            for (int i = 0; i < source.ChildNode.length; i++) {
+                this.ChildNode[i] = new KeyValueInfo(source.ChildNode[i]);
+            }
+        }
     }
 
 
@@ -188,6 +258,8 @@ long及double类型字段需为空；
         this.setParamSimple(map, prefix + "SqlFlag", this.SqlFlag);
         this.setParamSimple(map, prefix + "ContainZH", this.ContainZH);
         this.setParamSimple(map, prefix + "Alias", this.Alias);
+        this.setParamSimple(map, prefix + "OpenIndexForChildOnly", this.OpenIndexForChildOnly);
+        this.setParamArrayObj(map, prefix + "ChildNode.", this.ChildNode);
 
     }
 }

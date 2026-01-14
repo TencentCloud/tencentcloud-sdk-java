@@ -142,6 +142,17 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *调用该接口，针对指定模型进行主体创建。
+     * @param req CreateAigcCustomElementRequest
+     * @return CreateAigcCustomElementResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAigcCustomElementResponse CreateAigcCustomElement(CreateAigcCustomElementRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAigcCustomElement", CreateAigcCustomElementResponse.class);
+    }
+
+    /**
      *该接口用于[生成 AIGC 图片](https://cloud.tencent.com/document/product/266/124473)。<b>接口处于内测阶段，如需使用请[联系我们](https://cloud.tencent.com/online-service?from=sales_sales&source=PRESALE)，接口调用会产生实际费用，</b>请参考点播 [AIGC 生图片计费文档](https://cloud.tencent.com/document/product/266/95125#9c4dc6ff-4b3f-4b25-bf2d-393889dfb9ac)。该功能结算模式为[后付费](https://cloud.tencent.com/document/product/266/2838)，日结客户当天使用将在第二天出账，月结客户将在次月1日统一出上月使用费用。
      * @param req CreateAigcImageTaskRequest
      * @return CreateAigcImageTaskResponse
@@ -420,6 +431,17 @@ public class VodClient extends AbstractClient{
     public CreateSceneAigcImageTaskResponse CreateSceneAigcImageTask(CreateSceneAigcImageTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateSceneAigcImageTask", CreateSceneAigcImageTaskResponse.class);
+    }
+
+    /**
+     *该接口用于生成场景化 AIGC 图片。<b>接口处于内测阶段，如需使用请[联系我们](https://cloud.tencent.com/online-service?from=sales_sales&source=PRESALE)，接口调用会产生实际费用。</b>
+     * @param req CreateSceneAigcVideoTaskRequest
+     * @return CreateSceneAigcVideoTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSceneAigcVideoTaskResponse CreateSceneAigcVideoTask(CreateSceneAigcVideoTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSceneAigcVideoTask", CreateSceneAigcVideoTaskResponse.class);
     }
 
     /**

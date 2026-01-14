@@ -24,6 +24,14 @@ import java.util.HashMap;
 public class SubmitHunyuanTo3DProJobRequest extends AbstractModel {
 
     /**
+    * 混元生3D生成模型版本，默认为3.0，可选项：3.0，3.1
+选择3.1版本时，LowPoly参数不可用。
+    */
+    @SerializedName("Model")
+    @Expose
+    private String Model;
+
+    /**
     * 文生3D，3D内容的描述，中文正向提示词。
 最多支持1024个 utf-8 字符。
 ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
@@ -57,6 +65,10 @@ lmageBase64、lmageUr和 Prompt必填其一，且Prompt和lmageBase64/mageUr不�
 left：左视图；
 right：右视图；
 back：后视图；
+top：顶视图（仅3.1版本支持）；
+bottom：底视图（仅3.1版本支持）；
+left_front：左前45°视图（仅3.1版本支持）；
+right_front：右前45°视图（仅3.1版本支持）；
 
 每个视角仅限制一张图片。
 ●图片大小限制：编码后所有图片大小总和不可超过8M。（base64编码下图片大小总和不超过6M，因base64编码后图片大小会大30%左右）
@@ -111,6 +123,26 @@ quadrilateral: 四边形面与三角形面混合生成。
     @SerializedName("ResultFormat")
     @Expose
     private String ResultFormat;
+
+    /**
+     * Get 混元生3D生成模型版本，默认为3.0，可选项：3.0，3.1
+选择3.1版本时，LowPoly参数不可用。 
+     * @return Model 混元生3D生成模型版本，默认为3.0，可选项：3.0，3.1
+选择3.1版本时，LowPoly参数不可用。
+     */
+    public String getModel() {
+        return this.Model;
+    }
+
+    /**
+     * Set 混元生3D生成模型版本，默认为3.0，可选项：3.0，3.1
+选择3.1版本时，LowPoly参数不可用。
+     * @param Model 混元生3D生成模型版本，默认为3.0，可选项：3.0，3.1
+选择3.1版本时，LowPoly参数不可用。
+     */
+    public void setModel(String Model) {
+        this.Model = Model;
+    }
 
     /**
      * Get 文生3D，3D内容的描述，中文正向提示词。
@@ -197,6 +229,10 @@ lmageBase64、lmageUr和 Prompt必填其一，且Prompt和lmageBase64/mageUr不�
 left：左视图；
 right：右视图；
 back：后视图；
+top：顶视图（仅3.1版本支持）；
+bottom：底视图（仅3.1版本支持）；
+left_front：左前45°视图（仅3.1版本支持）；
+right_front：右前45°视图（仅3.1版本支持）；
 
 每个视角仅限制一张图片。
 ●图片大小限制：编码后所有图片大小总和不可超过8M。（base64编码下图片大小总和不超过6M，因base64编码后图片大小会大30%左右）
@@ -206,6 +242,10 @@ back：后视图；
 left：左视图；
 right：右视图；
 back：后视图；
+top：顶视图（仅3.1版本支持）；
+bottom：底视图（仅3.1版本支持）；
+left_front：左前45°视图（仅3.1版本支持）；
+right_front：右前45°视图（仅3.1版本支持）；
 
 每个视角仅限制一张图片。
 ●图片大小限制：编码后所有图片大小总和不可超过8M。（base64编码下图片大小总和不超过6M，因base64编码后图片大小会大30%左右）
@@ -221,6 +261,10 @@ back：后视图；
 left：左视图；
 right：右视图；
 back：后视图；
+top：顶视图（仅3.1版本支持）；
+bottom：底视图（仅3.1版本支持）；
+left_front：左前45°视图（仅3.1版本支持）；
+right_front：右前45°视图（仅3.1版本支持）；
 
 每个视角仅限制一张图片。
 ●图片大小限制：编码后所有图片大小总和不可超过8M。（base64编码下图片大小总和不超过6M，因base64编码后图片大小会大30%左右）
@@ -230,6 +274,10 @@ back：后视图；
 left：左视图；
 right：右视图；
 back：后视图；
+top：顶视图（仅3.1版本支持）；
+bottom：底视图（仅3.1版本支持）；
+left_front：左前45°视图（仅3.1版本支持）；
+right_front：右前45°视图（仅3.1版本支持）；
 
 每个视角仅限制一张图片。
 ●图片大小限制：编码后所有图片大小总和不可超过8M。（base64编码下图片大小总和不超过6M，因base64编码后图片大小会大30%左右）
@@ -368,6 +416,9 @@ quadrilateral: 四边形面与三角形面混合生成。
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public SubmitHunyuanTo3DProJobRequest(SubmitHunyuanTo3DProJobRequest source) {
+        if (source.Model != null) {
+            this.Model = new String(source.Model);
+        }
         if (source.Prompt != null) {
             this.Prompt = new String(source.Prompt);
         }
@@ -405,6 +456,7 @@ quadrilateral: 四边形面与三角形面混合生成。
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Model", this.Model);
         this.setParamSimple(map, prefix + "Prompt", this.Prompt);
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);

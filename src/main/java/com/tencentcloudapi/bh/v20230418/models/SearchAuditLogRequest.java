@@ -38,6 +38,20 @@ public class SearchAuditLogRequest extends AbstractModel {
     private String EndTime;
 
     /**
+    * 操作类型
+    */
+    @SerializedName("OperationSet")
+    @Expose
+    private Long [] OperationSet;
+
+    /**
+    * 会话类型
+    */
+    @SerializedName("ProtocolSet")
+    @Expose
+    private String [] ProtocolSet;
+
+    /**
     * 偏移量
     */
     @SerializedName("Offset")
@@ -81,6 +95,38 @@ public class SearchAuditLogRequest extends AbstractModel {
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
+    }
+
+    /**
+     * Get 操作类型 
+     * @return OperationSet 操作类型
+     */
+    public Long [] getOperationSet() {
+        return this.OperationSet;
+    }
+
+    /**
+     * Set 操作类型
+     * @param OperationSet 操作类型
+     */
+    public void setOperationSet(Long [] OperationSet) {
+        this.OperationSet = OperationSet;
+    }
+
+    /**
+     * Get 会话类型 
+     * @return ProtocolSet 会话类型
+     */
+    public String [] getProtocolSet() {
+        return this.ProtocolSet;
+    }
+
+    /**
+     * Set 会话类型
+     * @param ProtocolSet 会话类型
+     */
+    public void setProtocolSet(String [] ProtocolSet) {
+        this.ProtocolSet = ProtocolSet;
     }
 
     /**
@@ -129,6 +175,18 @@ public class SearchAuditLogRequest extends AbstractModel {
         if (source.EndTime != null) {
             this.EndTime = new String(source.EndTime);
         }
+        if (source.OperationSet != null) {
+            this.OperationSet = new Long[source.OperationSet.length];
+            for (int i = 0; i < source.OperationSet.length; i++) {
+                this.OperationSet[i] = new Long(source.OperationSet[i]);
+            }
+        }
+        if (source.ProtocolSet != null) {
+            this.ProtocolSet = new String[source.ProtocolSet.length];
+            for (int i = 0; i < source.ProtocolSet.length; i++) {
+                this.ProtocolSet[i] = new String(source.ProtocolSet[i]);
+            }
+        }
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
@@ -144,6 +202,8 @@ public class SearchAuditLogRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamArraySimple(map, prefix + "OperationSet.", this.OperationSet);
+        this.setParamArraySimple(map, prefix + "ProtocolSet.", this.ProtocolSet);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
 

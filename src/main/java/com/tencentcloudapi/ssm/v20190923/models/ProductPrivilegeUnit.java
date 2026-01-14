@@ -84,6 +84,62 @@ TableName - 显式指明所在表
     private String ColumnName;
 
     /**
+    * 仅当PrivilegeName为SchemaPrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+    */
+    @SerializedName("SchemaName")
+    @Expose
+    private String SchemaName;
+
+    /**
+    * 仅当PrivilegeName为SequencePrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+    */
+    @SerializedName("SequenceName")
+    @Expose
+    private String SequenceName;
+
+    /**
+    * 仅当PrivilegeName为ProcedurePrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+    */
+    @SerializedName("ProcedureName")
+    @Expose
+    private String ProcedureName;
+
+    /**
+    * 仅当PrivilegeName为TypePrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+    */
+    @SerializedName("TypeName")
+    @Expose
+    private String TypeName;
+
+    /**
+    * 仅当PrivilegeName为FunctionPrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+    */
+    @SerializedName("FunctionName")
+    @Expose
+    private String FunctionName;
+
+    /**
+    * 仅当PrivilegeName为ViewPrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+    */
+    @SerializedName("ViewName")
+    @Expose
+    private String ViewName;
+
+    /**
+    * 仅当PrivilegeName为MatviewPrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+    */
+    @SerializedName("MatviewName")
+    @Expose
+    private String MatviewName;
+
+    /**
      * Get 权限名称，当前可选：
 GlobalPrivileges
 DatabasePrivileges
@@ -263,6 +319,146 @@ TableName - 显式指明所在表
         this.ColumnName = ColumnName;
     }
 
+    /**
+     * Get 仅当PrivilegeName为SchemaPrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要 
+     * @return SchemaName 仅当PrivilegeName为SchemaPrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+     */
+    public String getSchemaName() {
+        return this.SchemaName;
+    }
+
+    /**
+     * Set 仅当PrivilegeName为SchemaPrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+     * @param SchemaName 仅当PrivilegeName为SchemaPrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+     */
+    public void setSchemaName(String SchemaName) {
+        this.SchemaName = SchemaName;
+    }
+
+    /**
+     * Get 仅当PrivilegeName为SequencePrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要 
+     * @return SequenceName 仅当PrivilegeName为SequencePrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+     */
+    public String getSequenceName() {
+        return this.SequenceName;
+    }
+
+    /**
+     * Set 仅当PrivilegeName为SequencePrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+     * @param SequenceName 仅当PrivilegeName为SequencePrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+     */
+    public void setSequenceName(String SequenceName) {
+        this.SequenceName = SequenceName;
+    }
+
+    /**
+     * Get 仅当PrivilegeName为ProcedurePrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要 
+     * @return ProcedureName 仅当PrivilegeName为ProcedurePrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+     */
+    public String getProcedureName() {
+        return this.ProcedureName;
+    }
+
+    /**
+     * Set 仅当PrivilegeName为ProcedurePrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+     * @param ProcedureName 仅当PrivilegeName为ProcedurePrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+     */
+    public void setProcedureName(String ProcedureName) {
+        this.ProcedureName = ProcedureName;
+    }
+
+    /**
+     * Get 仅当PrivilegeName为TypePrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要 
+     * @return TypeName 仅当PrivilegeName为TypePrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+     */
+    public String getTypeName() {
+        return this.TypeName;
+    }
+
+    /**
+     * Set 仅当PrivilegeName为TypePrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+     * @param TypeName 仅当PrivilegeName为TypePrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+     */
+    public void setTypeName(String TypeName) {
+        this.TypeName = TypeName;
+    }
+
+    /**
+     * Get 仅当PrivilegeName为FunctionPrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要 
+     * @return FunctionName 仅当PrivilegeName为FunctionPrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+     */
+    public String getFunctionName() {
+        return this.FunctionName;
+    }
+
+    /**
+     * Set 仅当PrivilegeName为FunctionPrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+     * @param FunctionName 仅当PrivilegeName为FunctionPrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+     */
+    public void setFunctionName(String FunctionName) {
+        this.FunctionName = FunctionName;
+    }
+
+    /**
+     * Get 仅当PrivilegeName为ViewPrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要 
+     * @return ViewName 仅当PrivilegeName为ViewPrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+     */
+    public String getViewName() {
+        return this.ViewName;
+    }
+
+    /**
+     * Set 仅当PrivilegeName为ViewPrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+     * @param ViewName 仅当PrivilegeName为ViewPrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+     */
+    public void setViewName(String ViewName) {
+        this.ViewName = ViewName;
+    }
+
+    /**
+     * Get 仅当PrivilegeName为MatviewPrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要 
+     * @return MatviewName 仅当PrivilegeName为MatviewPrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+     */
+    public String getMatviewName() {
+        return this.MatviewName;
+    }
+
+    /**
+     * Set 仅当PrivilegeName为MatviewPrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+     * @param MatviewName 仅当PrivilegeName为MatviewPrivileges时这个值才生效，并且此时必须填充：
+目前仅postgresSQL需要
+     */
+    public void setMatviewName(String MatviewName) {
+        this.MatviewName = MatviewName;
+    }
+
     public ProductPrivilegeUnit() {
     }
 
@@ -289,6 +485,27 @@ TableName - 显式指明所在表
         if (source.ColumnName != null) {
             this.ColumnName = new String(source.ColumnName);
         }
+        if (source.SchemaName != null) {
+            this.SchemaName = new String(source.SchemaName);
+        }
+        if (source.SequenceName != null) {
+            this.SequenceName = new String(source.SequenceName);
+        }
+        if (source.ProcedureName != null) {
+            this.ProcedureName = new String(source.ProcedureName);
+        }
+        if (source.TypeName != null) {
+            this.TypeName = new String(source.TypeName);
+        }
+        if (source.FunctionName != null) {
+            this.FunctionName = new String(source.FunctionName);
+        }
+        if (source.ViewName != null) {
+            this.ViewName = new String(source.ViewName);
+        }
+        if (source.MatviewName != null) {
+            this.MatviewName = new String(source.MatviewName);
+        }
     }
 
 
@@ -301,6 +518,13 @@ TableName - 显式指明所在表
         this.setParamSimple(map, prefix + "Database", this.Database);
         this.setParamSimple(map, prefix + "TableName", this.TableName);
         this.setParamSimple(map, prefix + "ColumnName", this.ColumnName);
+        this.setParamSimple(map, prefix + "SchemaName", this.SchemaName);
+        this.setParamSimple(map, prefix + "SequenceName", this.SequenceName);
+        this.setParamSimple(map, prefix + "ProcedureName", this.ProcedureName);
+        this.setParamSimple(map, prefix + "TypeName", this.TypeName);
+        this.setParamSimple(map, prefix + "FunctionName", this.FunctionName);
+        this.setParamSimple(map, prefix + "ViewName", this.ViewName);
+        this.setParamSimple(map, prefix + "MatviewName", this.MatviewName);
 
     }
 }

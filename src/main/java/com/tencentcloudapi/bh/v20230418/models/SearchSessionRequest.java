@@ -108,7 +108,7 @@ public class SearchSessionRequest extends AbstractModel {
     private String DeviceName;
 
     /**
-    * 状态，1为活跃，2为结束，3为强制离线，4为其他错误
+    * 状态，1为活跃，2为结束，3为强制离线，4为其他错误，5暂停会话
     */
     @SerializedName("Status")
     @Expose
@@ -349,16 +349,16 @@ public class SearchSessionRequest extends AbstractModel {
     }
 
     /**
-     * Get 状态，1为活跃，2为结束，3为强制离线，4为其他错误 
-     * @return Status 状态，1为活跃，2为结束，3为强制离线，4为其他错误
+     * Get 状态，1为活跃，2为结束，3为强制离线，4为其他错误，5暂停会话 
+     * @return Status 状态，1为活跃，2为结束，3为强制离线，4为其他错误，5暂停会话
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态，1为活跃，2为结束，3为强制离线，4为其他错误
-     * @param Status 状态，1为活跃，2为结束，3为强制离线，4为其他错误
+     * Set 状态，1为活跃，2为结束，3为强制离线，4为其他错误，5暂停会话
+     * @param Status 状态，1为活跃，2为结束，3为强制离线，4为其他错误，5暂停会话
      */
     public void setStatus(Long Status) {
         this.Status = Status;

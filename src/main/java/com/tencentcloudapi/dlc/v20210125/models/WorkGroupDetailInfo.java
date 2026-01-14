@@ -88,6 +88,20 @@ public class WorkGroupDetailInfo extends AbstractModel {
     private Policy CatalogPolicyInfo;
 
     /**
+    * 数据目录权限
+    */
+    @SerializedName("DataCatalogPolicyInfo")
+    @Expose
+    private Policys DataCatalogPolicyInfo;
+
+    /**
+    * 模型权限
+    */
+    @SerializedName("ModelPolicyInfo")
+    @Expose
+    private Policys ModelPolicyInfo;
+
+    /**
      * Get 工作组Id 
      * @return WorkGroupId 工作组Id
      */
@@ -235,6 +249,38 @@ public class WorkGroupDetailInfo extends AbstractModel {
         this.CatalogPolicyInfo = CatalogPolicyInfo;
     }
 
+    /**
+     * Get 数据目录权限 
+     * @return DataCatalogPolicyInfo 数据目录权限
+     */
+    public Policys getDataCatalogPolicyInfo() {
+        return this.DataCatalogPolicyInfo;
+    }
+
+    /**
+     * Set 数据目录权限
+     * @param DataCatalogPolicyInfo 数据目录权限
+     */
+    public void setDataCatalogPolicyInfo(Policys DataCatalogPolicyInfo) {
+        this.DataCatalogPolicyInfo = DataCatalogPolicyInfo;
+    }
+
+    /**
+     * Get 模型权限 
+     * @return ModelPolicyInfo 模型权限
+     */
+    public Policys getModelPolicyInfo() {
+        return this.ModelPolicyInfo;
+    }
+
+    /**
+     * Set 模型权限
+     * @param ModelPolicyInfo 模型权限
+     */
+    public void setModelPolicyInfo(Policys ModelPolicyInfo) {
+        this.ModelPolicyInfo = ModelPolicyInfo;
+    }
+
     public WorkGroupDetailInfo() {
     }
 
@@ -270,6 +316,12 @@ public class WorkGroupDetailInfo extends AbstractModel {
         if (source.CatalogPolicyInfo != null) {
             this.CatalogPolicyInfo = new Policy(source.CatalogPolicyInfo);
         }
+        if (source.DataCatalogPolicyInfo != null) {
+            this.DataCatalogPolicyInfo = new Policys(source.DataCatalogPolicyInfo);
+        }
+        if (source.ModelPolicyInfo != null) {
+            this.ModelPolicyInfo = new Policys(source.ModelPolicyInfo);
+        }
     }
 
 
@@ -286,6 +338,8 @@ public class WorkGroupDetailInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "WorkGroupDescription", this.WorkGroupDescription);
         this.setParamObj(map, prefix + "RowFilterInfo.", this.RowFilterInfo);
         this.setParamObj(map, prefix + "CatalogPolicyInfo.", this.CatalogPolicyInfo);
+        this.setParamObj(map, prefix + "DataCatalogPolicyInfo.", this.DataCatalogPolicyInfo);
+        this.setParamObj(map, prefix + "ModelPolicyInfo.", this.ModelPolicyInfo);
 
     }
 }

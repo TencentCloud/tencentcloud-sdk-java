@@ -95,6 +95,13 @@ Hls 格式录制此参数不生效。
     private Long FillType;
 
     /**
+    * 控制录制任务是否订阅混流回推机器人，1是订阅，0是不订阅，默认是0。如果是混流录制任务，建议用订阅白名单控制订阅用户，防止同时订阅混流回推机器人和上行主播，以避免混音效果。
+    */
+    @SerializedName("SubscribeAbility")
+    @Expose
+    private Long SubscribeAbility;
+
+    /**
      * Get 录制模式：
 1：单流录制，分别录制房间的订阅UserId的音频和视频，将录制文件上传至云存储；
 2：合流录制，将房间内订阅UserId的音视频混录成一个音视频文件，将录制文件上传至云存储； 
@@ -270,6 +277,22 @@ Hls 格式录制此参数不生效。
         this.FillType = FillType;
     }
 
+    /**
+     * Get 控制录制任务是否订阅混流回推机器人，1是订阅，0是不订阅，默认是0。如果是混流录制任务，建议用订阅白名单控制订阅用户，防止同时订阅混流回推机器人和上行主播，以避免混音效果。 
+     * @return SubscribeAbility 控制录制任务是否订阅混流回推机器人，1是订阅，0是不订阅，默认是0。如果是混流录制任务，建议用订阅白名单控制订阅用户，防止同时订阅混流回推机器人和上行主播，以避免混音效果。
+     */
+    public Long getSubscribeAbility() {
+        return this.SubscribeAbility;
+    }
+
+    /**
+     * Set 控制录制任务是否订阅混流回推机器人，1是订阅，0是不订阅，默认是0。如果是混流录制任务，建议用订阅白名单控制订阅用户，防止同时订阅混流回推机器人和上行主播，以避免混音效果。
+     * @param SubscribeAbility 控制录制任务是否订阅混流回推机器人，1是订阅，0是不订阅，默认是0。如果是混流录制任务，建议用订阅白名单控制订阅用户，防止同时订阅混流回推机器人和上行主播，以避免混音效果。
+     */
+    public void setSubscribeAbility(Long SubscribeAbility) {
+        this.SubscribeAbility = SubscribeAbility;
+    }
+
     public RecordParams() {
     }
 
@@ -305,6 +328,9 @@ Hls 格式录制此参数不生效。
         if (source.FillType != null) {
             this.FillType = new Long(source.FillType);
         }
+        if (source.SubscribeAbility != null) {
+            this.SubscribeAbility = new Long(source.SubscribeAbility);
+        }
     }
 
 
@@ -321,6 +347,7 @@ Hls 格式录制此参数不生效。
         this.setParamSimple(map, prefix + "MaxMediaFileDuration", this.MaxMediaFileDuration);
         this.setParamSimple(map, prefix + "MediaId", this.MediaId);
         this.setParamSimple(map, prefix + "FillType", this.FillType);
+        this.setParamSimple(map, prefix + "SubscribeAbility", this.SubscribeAbility);
 
     }
 }

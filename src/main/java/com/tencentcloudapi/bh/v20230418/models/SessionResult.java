@@ -199,6 +199,34 @@ public class SessionResult extends AbstractModel {
     private String PodName;
 
     /**
+    * 访问方式 1-直链 2-客户端 3-web 大部分情况下是2
+    */
+    @SerializedName("Mode")
+    @Expose
+    private Long Mode;
+
+    /**
+    * 是否禁用会话监控。0-不禁用；1-禁用会话，仅展示中断；2-禁用会话，不展示中断
+    */
+    @SerializedName("DisableMonitor")
+    @Expose
+    private Long DisableMonitor;
+
+    /**
+    * 实时入带宽，单位Mbps
+    */
+    @SerializedName("RealTimeBandwidthIn")
+    @Expose
+    private Float RealTimeBandwidthIn;
+
+    /**
+    * 实时出带宽，单位Mbps
+    */
+    @SerializedName("RealTimeBandwidthOut")
+    @Expose
+    private Float RealTimeBandwidthOut;
+
+    /**
      * Get 用户名 
      * @return UserName 用户名
      */
@@ -598,6 +626,70 @@ public class SessionResult extends AbstractModel {
         this.PodName = PodName;
     }
 
+    /**
+     * Get 访问方式 1-直链 2-客户端 3-web 大部分情况下是2 
+     * @return Mode 访问方式 1-直链 2-客户端 3-web 大部分情况下是2
+     */
+    public Long getMode() {
+        return this.Mode;
+    }
+
+    /**
+     * Set 访问方式 1-直链 2-客户端 3-web 大部分情况下是2
+     * @param Mode 访问方式 1-直链 2-客户端 3-web 大部分情况下是2
+     */
+    public void setMode(Long Mode) {
+        this.Mode = Mode;
+    }
+
+    /**
+     * Get 是否禁用会话监控。0-不禁用；1-禁用会话，仅展示中断；2-禁用会话，不展示中断 
+     * @return DisableMonitor 是否禁用会话监控。0-不禁用；1-禁用会话，仅展示中断；2-禁用会话，不展示中断
+     */
+    public Long getDisableMonitor() {
+        return this.DisableMonitor;
+    }
+
+    /**
+     * Set 是否禁用会话监控。0-不禁用；1-禁用会话，仅展示中断；2-禁用会话，不展示中断
+     * @param DisableMonitor 是否禁用会话监控。0-不禁用；1-禁用会话，仅展示中断；2-禁用会话，不展示中断
+     */
+    public void setDisableMonitor(Long DisableMonitor) {
+        this.DisableMonitor = DisableMonitor;
+    }
+
+    /**
+     * Get 实时入带宽，单位Mbps 
+     * @return RealTimeBandwidthIn 实时入带宽，单位Mbps
+     */
+    public Float getRealTimeBandwidthIn() {
+        return this.RealTimeBandwidthIn;
+    }
+
+    /**
+     * Set 实时入带宽，单位Mbps
+     * @param RealTimeBandwidthIn 实时入带宽，单位Mbps
+     */
+    public void setRealTimeBandwidthIn(Float RealTimeBandwidthIn) {
+        this.RealTimeBandwidthIn = RealTimeBandwidthIn;
+    }
+
+    /**
+     * Get 实时出带宽，单位Mbps 
+     * @return RealTimeBandwidthOut 实时出带宽，单位Mbps
+     */
+    public Float getRealTimeBandwidthOut() {
+        return this.RealTimeBandwidthOut;
+    }
+
+    /**
+     * Set 实时出带宽，单位Mbps
+     * @param RealTimeBandwidthOut 实时出带宽，单位Mbps
+     */
+    public void setRealTimeBandwidthOut(Float RealTimeBandwidthOut) {
+        this.RealTimeBandwidthOut = RealTimeBandwidthOut;
+    }
+
     public SessionResult() {
     }
 
@@ -681,6 +773,18 @@ public class SessionResult extends AbstractModel {
         if (source.PodName != null) {
             this.PodName = new String(source.PodName);
         }
+        if (source.Mode != null) {
+            this.Mode = new Long(source.Mode);
+        }
+        if (source.DisableMonitor != null) {
+            this.DisableMonitor = new Long(source.DisableMonitor);
+        }
+        if (source.RealTimeBandwidthIn != null) {
+            this.RealTimeBandwidthIn = new Float(source.RealTimeBandwidthIn);
+        }
+        if (source.RealTimeBandwidthOut != null) {
+            this.RealTimeBandwidthOut = new Float(source.RealTimeBandwidthOut);
+        }
     }
 
 
@@ -713,6 +817,10 @@ public class SessionResult extends AbstractModel {
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
         this.setParamSimple(map, prefix + "Workload", this.Workload);
         this.setParamSimple(map, prefix + "PodName", this.PodName);
+        this.setParamSimple(map, prefix + "Mode", this.Mode);
+        this.setParamSimple(map, prefix + "DisableMonitor", this.DisableMonitor);
+        this.setParamSimple(map, prefix + "RealTimeBandwidthIn", this.RealTimeBandwidthIn);
+        this.setParamSimple(map, prefix + "RealTimeBandwidthOut", this.RealTimeBandwidthOut);
 
     }
 }

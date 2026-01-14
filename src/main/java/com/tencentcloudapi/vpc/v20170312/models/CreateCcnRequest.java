@@ -52,6 +52,13 @@ public class CreateCcnRequest extends AbstractModel {
     private String InstanceChargeType;
 
     /**
+    * 计量模式
+    */
+    @SerializedName("InstanceMeteringType")
+    @Expose
+    private String InstanceMeteringType;
+
+    /**
     * 限速类型，`OUTER_REGION_LIMIT`表示地域出口限速，`INTER_REGION_LIMIT`为地域间限速，默认为`OUTER_REGION_LIMIT`。预付费模式仅支持地域间限速，后付费模式支持地域间限速和地域出口限速。
     */
     @SerializedName("BandwidthLimitType")
@@ -130,6 +137,22 @@ public class CreateCcnRequest extends AbstractModel {
     }
 
     /**
+     * Get 计量模式 
+     * @return InstanceMeteringType 计量模式
+     */
+    public String getInstanceMeteringType() {
+        return this.InstanceMeteringType;
+    }
+
+    /**
+     * Set 计量模式
+     * @param InstanceMeteringType 计量模式
+     */
+    public void setInstanceMeteringType(String InstanceMeteringType) {
+        this.InstanceMeteringType = InstanceMeteringType;
+    }
+
+    /**
      * Get 限速类型，`OUTER_REGION_LIMIT`表示地域出口限速，`INTER_REGION_LIMIT`为地域间限速，默认为`OUTER_REGION_LIMIT`。预付费模式仅支持地域间限速，后付费模式支持地域间限速和地域出口限速。 
      * @return BandwidthLimitType 限速类型，`OUTER_REGION_LIMIT`表示地域出口限速，`INTER_REGION_LIMIT`为地域间限速，默认为`OUTER_REGION_LIMIT`。预付费模式仅支持地域间限速，后付费模式支持地域间限速和地域出口限速。
      */
@@ -181,6 +204,9 @@ public class CreateCcnRequest extends AbstractModel {
         if (source.InstanceChargeType != null) {
             this.InstanceChargeType = new String(source.InstanceChargeType);
         }
+        if (source.InstanceMeteringType != null) {
+            this.InstanceMeteringType = new String(source.InstanceMeteringType);
+        }
         if (source.BandwidthLimitType != null) {
             this.BandwidthLimitType = new String(source.BandwidthLimitType);
         }
@@ -201,6 +227,7 @@ public class CreateCcnRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CcnDescription", this.CcnDescription);
         this.setParamSimple(map, prefix + "QosLevel", this.QosLevel);
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
+        this.setParamSimple(map, prefix + "InstanceMeteringType", this.InstanceMeteringType);
         this.setParamSimple(map, prefix + "BandwidthLimitType", this.BandwidthLimitType);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 

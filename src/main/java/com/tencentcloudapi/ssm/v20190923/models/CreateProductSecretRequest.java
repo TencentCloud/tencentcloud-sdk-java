@@ -127,6 +127,13 @@ False -- 不开启
     private String KmsHsmClusterId;
 
     /**
+    * 账户备注
+    */
+    @SerializedName("AccountRemark")
+    @Expose
+    private String AccountRemark;
+
+    /**
      * Get 凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。 
      * @return SecretName 凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。
      */
@@ -382,6 +389,22 @@ False -- 不开启
         this.KmsHsmClusterId = KmsHsmClusterId;
     }
 
+    /**
+     * Get 账户备注 
+     * @return AccountRemark 账户备注
+     */
+    public String getAccountRemark() {
+        return this.AccountRemark;
+    }
+
+    /**
+     * Set 账户备注
+     * @param AccountRemark 账户备注
+     */
+    public void setAccountRemark(String AccountRemark) {
+        this.AccountRemark = AccountRemark;
+    }
+
     public CreateProductSecretRequest() {
     }
 
@@ -438,6 +461,9 @@ False -- 不开启
         if (source.KmsHsmClusterId != null) {
             this.KmsHsmClusterId = new String(source.KmsHsmClusterId);
         }
+        if (source.AccountRemark != null) {
+            this.AccountRemark = new String(source.AccountRemark);
+        }
     }
 
 
@@ -458,6 +484,7 @@ False -- 不开启
         this.setParamSimple(map, prefix + "EnableRotation", this.EnableRotation);
         this.setParamSimple(map, prefix + "RotationFrequency", this.RotationFrequency);
         this.setParamSimple(map, prefix + "KmsHsmClusterId", this.KmsHsmClusterId);
+        this.setParamSimple(map, prefix + "AccountRemark", this.AccountRemark);
 
     }
 }

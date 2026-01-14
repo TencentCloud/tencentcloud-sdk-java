@@ -591,6 +591,17 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *获取入侵防御防护模式
+     * @param req DescribeIpsModeSwitchRequest
+     * @return DescribeIpsModeSwitchResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIpsModeSwitchResponse DescribeIpsModeSwitch(DescribeIpsModeSwitchRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIpsModeSwitch", DescribeIpsModeSwitchResponse.class);
+    }
+
+    /**
      *租户日志存储统计
      * @param req DescribeLogStorageStatisticRequest
      * @return DescribeLogStorageStatisticResponse
@@ -1054,6 +1065,17 @@ VPC间规则需指定EdgeId。Nat边界规则需指定地域Region与Direction�
     public ModifyFwGroupSwitchResponse ModifyFwGroupSwitch(ModifyFwGroupSwitchRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyFwGroupSwitch", ModifyFwGroupSwitchResponse.class);
+    }
+
+    /**
+     *修改入侵防御防护模式
+     * @param req ModifyIpsModeSwitchRequest
+     * @return ModifyIpsModeSwitchResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyIpsModeSwitchResponse ModifyIpsModeSwitch(ModifyIpsModeSwitchRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyIpsModeSwitch", ModifyIpsModeSwitchResponse.class);
     }
 
     /**

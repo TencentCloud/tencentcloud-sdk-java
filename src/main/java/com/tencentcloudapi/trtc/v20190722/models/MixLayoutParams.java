@@ -123,6 +123,13 @@ public class MixLayoutParams extends AbstractModel {
     private Long MaxResolutionUserAlign;
 
     /**
+    * 控制房间内纯音频用户是否占据混流布局，只在混流录制，模板布局生效。true: 代表纯音频用户不占位，false: 代表纯音频用户占位（默认为false）。
+    */
+    @SerializedName("PureAudioDisableLayout")
+    @Expose
+    private Boolean PureAudioDisableLayout;
+
+    /**
      * Get 布局模式:
 1：悬浮布局；
 2：屏幕分享布局；
@@ -374,6 +381,22 @@ public class MixLayoutParams extends AbstractModel {
         this.MaxResolutionUserAlign = MaxResolutionUserAlign;
     }
 
+    /**
+     * Get 控制房间内纯音频用户是否占据混流布局，只在混流录制，模板布局生效。true: 代表纯音频用户不占位，false: 代表纯音频用户占位（默认为false）。 
+     * @return PureAudioDisableLayout 控制房间内纯音频用户是否占据混流布局，只在混流录制，模板布局生效。true: 代表纯音频用户不占位，false: 代表纯音频用户占位（默认为false）。
+     */
+    public Boolean getPureAudioDisableLayout() {
+        return this.PureAudioDisableLayout;
+    }
+
+    /**
+     * Set 控制房间内纯音频用户是否占据混流布局，只在混流录制，模板布局生效。true: 代表纯音频用户不占位，false: 代表纯音频用户占位（默认为false）。
+     * @param PureAudioDisableLayout 控制房间内纯音频用户是否占据混流布局，只在混流录制，模板布局生效。true: 代表纯音频用户不占位，false: 代表纯音频用户占位（默认为false）。
+     */
+    public void setPureAudioDisableLayout(Boolean PureAudioDisableLayout) {
+        this.PureAudioDisableLayout = PureAudioDisableLayout;
+    }
+
     public MixLayoutParams() {
     }
 
@@ -424,6 +447,9 @@ public class MixLayoutParams extends AbstractModel {
         if (source.MaxResolutionUserAlign != null) {
             this.MaxResolutionUserAlign = new Long(source.MaxResolutionUserAlign);
         }
+        if (source.PureAudioDisableLayout != null) {
+            this.PureAudioDisableLayout = new Boolean(source.PureAudioDisableLayout);
+        }
     }
 
 
@@ -443,6 +469,7 @@ public class MixLayoutParams extends AbstractModel {
         this.setParamArrayObj(map, prefix + "WaterMarkList.", this.WaterMarkList);
         this.setParamSimple(map, prefix + "RenderMode", this.RenderMode);
         this.setParamSimple(map, prefix + "MaxResolutionUserAlign", this.MaxResolutionUserAlign);
+        this.setParamSimple(map, prefix + "PureAudioDisableLayout", this.PureAudioDisableLayout);
 
     }
 }
