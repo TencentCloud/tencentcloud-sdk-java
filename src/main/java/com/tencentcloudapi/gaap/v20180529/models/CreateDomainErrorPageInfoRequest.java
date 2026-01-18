@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class CreateDomainErrorPageInfoRequest extends AbstractModel {
 
     /**
-    * 监听器ID
+    * <p>监听器ID</p>
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * 域名
+    * <p>域名</p>
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 原始错误码
+    * <p>原始错误码</p>
     */
     @SerializedName("ErrorNos")
     @Expose
     private Long [] ErrorNos;
 
     /**
-    * 新的响应包体
+    * <p>新的响应包体</p>
     */
     @SerializedName("Body")
     @Expose
     private String Body;
 
     /**
-    * 新错误码
+    * <p>新错误码</p>
     */
     @SerializedName("NewErrorNo")
     @Expose
     private Long NewErrorNo;
 
     /**
-    * 需要删除的响应头
+    * <p>需要删除的响应头</p>
     */
     @SerializedName("ClearHeaders")
     @Expose
     private String [] ClearHeaders;
 
     /**
-    * 需要设置的响应头
+    * <p>需要设置的响应头</p>
     */
     @SerializedName("SetHeaders")
     @Expose
     private HttpHeaderParam [] SetHeaders;
 
     /**
-     * Get 监听器ID 
-     * @return ListenerId 监听器ID
+     * Get <p>监听器ID</p> 
+     * @return ListenerId <p>监听器ID</p>
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set 监听器ID
-     * @param ListenerId 监听器ID
+     * Set <p>监听器ID</p>
+     * @param ListenerId <p>监听器ID</p>
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get 域名 
-     * @return Domain 域名
+     * Get <p>域名</p> 
+     * @return Domain <p>域名</p>
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 域名
-     * @param Domain 域名
+     * Set <p>域名</p>
+     * @param Domain <p>域名</p>
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 原始错误码 
-     * @return ErrorNos 原始错误码
+     * Get <p>原始错误码</p> 
+     * @return ErrorNos <p>原始错误码</p>
      */
     public Long [] getErrorNos() {
         return this.ErrorNos;
     }
 
     /**
-     * Set 原始错误码
-     * @param ErrorNos 原始错误码
+     * Set <p>原始错误码</p>
+     * @param ErrorNos <p>原始错误码</p>
      */
     public void setErrorNos(Long [] ErrorNos) {
         this.ErrorNos = ErrorNos;
     }
 
     /**
-     * Get 新的响应包体 
-     * @return Body 新的响应包体
+     * Get <p>新的响应包体</p> 
+     * @return Body <p>新的响应包体</p>
      */
     public String getBody() {
         return this.Body;
     }
 
     /**
-     * Set 新的响应包体
-     * @param Body 新的响应包体
+     * Set <p>新的响应包体</p>
+     * @param Body <p>新的响应包体</p>
      */
     public void setBody(String Body) {
         this.Body = Body;
     }
 
     /**
-     * Get 新错误码 
-     * @return NewErrorNo 新错误码
+     * Get <p>新错误码</p> 
+     * @return NewErrorNo <p>新错误码</p>
      */
     public Long getNewErrorNo() {
         return this.NewErrorNo;
     }
 
     /**
-     * Set 新错误码
-     * @param NewErrorNo 新错误码
+     * Set <p>新错误码</p>
+     * @param NewErrorNo <p>新错误码</p>
      */
     public void setNewErrorNo(Long NewErrorNo) {
         this.NewErrorNo = NewErrorNo;
     }
 
     /**
-     * Get 需要删除的响应头 
-     * @return ClearHeaders 需要删除的响应头
+     * Get <p>需要删除的响应头</p> 
+     * @return ClearHeaders <p>需要删除的响应头</p>
      */
     public String [] getClearHeaders() {
         return this.ClearHeaders;
     }
 
     /**
-     * Set 需要删除的响应头
-     * @param ClearHeaders 需要删除的响应头
+     * Set <p>需要删除的响应头</p>
+     * @param ClearHeaders <p>需要删除的响应头</p>
      */
     public void setClearHeaders(String [] ClearHeaders) {
         this.ClearHeaders = ClearHeaders;
     }
 
     /**
-     * Get 需要设置的响应头 
-     * @return SetHeaders 需要设置的响应头
+     * Get <p>需要设置的响应头</p> 
+     * @return SetHeaders <p>需要设置的响应头</p>
      */
     public HttpHeaderParam [] getSetHeaders() {
         return this.SetHeaders;
     }
 
     /**
-     * Set 需要设置的响应头
-     * @param SetHeaders 需要设置的响应头
+     * Set <p>需要设置的响应头</p>
+     * @param SetHeaders <p>需要设置的响应头</p>
      */
     public void setSetHeaders(HttpHeaderParam [] SetHeaders) {
         this.SetHeaders = SetHeaders;

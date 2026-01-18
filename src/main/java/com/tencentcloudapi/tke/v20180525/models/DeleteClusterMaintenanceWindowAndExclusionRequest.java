@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteClusterMaintenanceWindowAndExclusionRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * 集群ID，可以从容器服务控制台计划升级功能集群维护窗口页面获取（https://console.cloud.tencent.com/tke2/upgrade-plan）。
     */
     @SerializedName("ClusterID")
     @Expose
     private String ClusterID;
 
     /**
-     * Get 集群ID 
-     * @return ClusterID 集群ID
+     * Get 集群ID，可以从容器服务控制台计划升级功能集群维护窗口页面获取（https://console.cloud.tencent.com/tke2/upgrade-plan）。 
+     * @return ClusterID 集群ID，可以从容器服务控制台计划升级功能集群维护窗口页面获取（https://console.cloud.tencent.com/tke2/upgrade-plan）。
      */
     public String getClusterID() {
         return this.ClusterID;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterID 集群ID
+     * Set 集群ID，可以从容器服务控制台计划升级功能集群维护窗口页面获取（https://console.cloud.tencent.com/tke2/upgrade-plan）。
+     * @param ClusterID 集群ID，可以从容器服务控制台计划升级功能集群维护窗口页面获取（https://console.cloud.tencent.com/tke2/upgrade-plan）。
      */
     public void setClusterID(String ClusterID) {
         this.ClusterID = ClusterID;

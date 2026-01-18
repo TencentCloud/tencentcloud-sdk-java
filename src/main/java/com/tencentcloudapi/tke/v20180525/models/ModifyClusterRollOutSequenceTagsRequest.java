@@ -24,46 +24,56 @@ import java.util.HashMap;
 public class ModifyClusterRollOutSequenceTagsRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * 集群ID，可以从容器服务集群控制台获取（https://console.cloud.tencent.com/tke2/cluster）。
     */
     @SerializedName("ClusterID")
     @Expose
     private String ClusterID;
 
     /**
-    * 集群发布序列标签（为空时表示移除集群标签）
+    * 集群发布序列标签（为空时表示移除集群标签）。支持以下集群标签：
+- 标签键："Env"，支持的标签值：["Test","Pre-Production","Production"]
+- 标签键："Protection-Level"，支持的标签值：["Low","Medium","High"]
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-     * Get 集群ID 
-     * @return ClusterID 集群ID
+     * Get 集群ID，可以从容器服务集群控制台获取（https://console.cloud.tencent.com/tke2/cluster）。 
+     * @return ClusterID 集群ID，可以从容器服务集群控制台获取（https://console.cloud.tencent.com/tke2/cluster）。
      */
     public String getClusterID() {
         return this.ClusterID;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterID 集群ID
+     * Set 集群ID，可以从容器服务集群控制台获取（https://console.cloud.tencent.com/tke2/cluster）。
+     * @param ClusterID 集群ID，可以从容器服务集群控制台获取（https://console.cloud.tencent.com/tke2/cluster）。
      */
     public void setClusterID(String ClusterID) {
         this.ClusterID = ClusterID;
     }
 
     /**
-     * Get 集群发布序列标签（为空时表示移除集群标签） 
-     * @return Tags 集群发布序列标签（为空时表示移除集群标签）
+     * Get 集群发布序列标签（为空时表示移除集群标签）。支持以下集群标签：
+- 标签键："Env"，支持的标签值：["Test","Pre-Production","Production"]
+- 标签键："Protection-Level"，支持的标签值：["Low","Medium","High"] 
+     * @return Tags 集群发布序列标签（为空时表示移除集群标签）。支持以下集群标签：
+- 标签键："Env"，支持的标签值：["Test","Pre-Production","Production"]
+- 标签键："Protection-Level"，支持的标签值：["Low","Medium","High"]
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 集群发布序列标签（为空时表示移除集群标签）
-     * @param Tags 集群发布序列标签（为空时表示移除集群标签）
+     * Set 集群发布序列标签（为空时表示移除集群标签）。支持以下集群标签：
+- 标签键："Env"，支持的标签值：["Test","Pre-Production","Production"]
+- 标签键："Protection-Level"，支持的标签值：["Low","Medium","High"]
+     * @param Tags 集群发布序列标签（为空时表示移除集群标签）。支持以下集群标签：
+- 标签键："Env"，支持的标签值：["Test","Pre-Production","Production"]
+- 标签键："Protection-Level"，支持的标签值：["Low","Medium","High"]
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;

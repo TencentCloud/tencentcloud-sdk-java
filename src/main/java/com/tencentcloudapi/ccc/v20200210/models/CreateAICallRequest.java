@@ -301,7 +301,7 @@ HoaiMy
         &quot;APIUrl&quot;: &quot;https://api.minimax.chat/v1/t2a_v2&quot;,
         &quot;APIKey&quot;: &quot;eyxxxx&quot;,
         &quot;GroupId&quot;: &quot;181000000000000&quot;,
-        &quot;VoiceType&quot;:&quot;female-tianmei-jingpin&quot;,
+        &quot;VoiceType&quot;:&quot;female-tianmei&quot;,
         &quot;Speed&quot;: 1.2
 }
 </code></pre>
@@ -451,6 +451,13 @@ HoaiMy
     @SerializedName("MaxCallDurationMs")
     @Expose
     private Long MaxCallDurationMs;
+
+    /**
+    * 最大振铃时长，达到时长阈值自动挂断。 **仅自携号码支持当前参数**
+    */
+    @SerializedName("MaxRingTimeoutSecond")
+    @Expose
+    private Long MaxRingTimeoutSecond;
 
     /**
      * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
@@ -1204,7 +1211,7 @@ HoaiMy
         &quot;APIUrl&quot;: &quot;https://api.minimax.chat/v1/t2a_v2&quot;,
         &quot;APIKey&quot;: &quot;eyxxxx&quot;,
         &quot;GroupId&quot;: &quot;181000000000000&quot;,
-        &quot;VoiceType&quot;:&quot;female-tianmei-jingpin&quot;,
+        &quot;VoiceType&quot;:&quot;female-tianmei&quot;,
         &quot;Speed&quot;: 1.2
 }
 </code></pre>
@@ -1278,7 +1285,7 @@ HoaiMy
         &quot;APIUrl&quot;: &quot;https://api.minimax.chat/v1/t2a_v2&quot;,
         &quot;APIKey&quot;: &quot;eyxxxx&quot;,
         &quot;GroupId&quot;: &quot;181000000000000&quot;,
-        &quot;VoiceType&quot;:&quot;female-tianmei-jingpin&quot;,
+        &quot;VoiceType&quot;:&quot;female-tianmei&quot;,
         &quot;Speed&quot;: 1.2
 }
 </code></pre>
@@ -1358,7 +1365,7 @@ HoaiMy
         &quot;APIUrl&quot;: &quot;https://api.minimax.chat/v1/t2a_v2&quot;,
         &quot;APIKey&quot;: &quot;eyxxxx&quot;,
         &quot;GroupId&quot;: &quot;181000000000000&quot;,
-        &quot;VoiceType&quot;:&quot;female-tianmei-jingpin&quot;,
+        &quot;VoiceType&quot;:&quot;female-tianmei&quot;,
         &quot;Speed&quot;: 1.2
 }
 </code></pre>
@@ -1432,7 +1439,7 @@ HoaiMy
         &quot;APIUrl&quot;: &quot;https://api.minimax.chat/v1/t2a_v2&quot;,
         &quot;APIKey&quot;: &quot;eyxxxx&quot;,
         &quot;GroupId&quot;: &quot;181000000000000&quot;,
-        &quot;VoiceType&quot;:&quot;female-tianmei-jingpin&quot;,
+        &quot;VoiceType&quot;:&quot;female-tianmei&quot;,
         &quot;Speed&quot;: 1.2
 }
 </code></pre>
@@ -1728,6 +1735,22 @@ HoaiMy
         this.MaxCallDurationMs = MaxCallDurationMs;
     }
 
+    /**
+     * Get 最大振铃时长，达到时长阈值自动挂断。 **仅自携号码支持当前参数** 
+     * @return MaxRingTimeoutSecond 最大振铃时长，达到时长阈值自动挂断。 **仅自携号码支持当前参数**
+     */
+    public Long getMaxRingTimeoutSecond() {
+        return this.MaxRingTimeoutSecond;
+    }
+
+    /**
+     * Set 最大振铃时长，达到时长阈值自动挂断。 **仅自携号码支持当前参数**
+     * @param MaxRingTimeoutSecond 最大振铃时长，达到时长阈值自动挂断。 **仅自携号码支持当前参数**
+     */
+    public void setMaxRingTimeoutSecond(Long MaxRingTimeoutSecond) {
+        this.MaxRingTimeoutSecond = MaxRingTimeoutSecond;
+    }
+
     public CreateAICallRequest() {
     }
 
@@ -1865,6 +1888,9 @@ HoaiMy
         if (source.MaxCallDurationMs != null) {
             this.MaxCallDurationMs = new Long(source.MaxCallDurationMs);
         }
+        if (source.MaxRingTimeoutSecond != null) {
+            this.MaxRingTimeoutSecond = new Long(source.MaxRingTimeoutSecond);
+        }
     }
 
 
@@ -1909,6 +1935,7 @@ HoaiMy
         this.setParamSimple(map, prefix + "VoicemailAction", this.VoicemailAction);
         this.setParamSimple(map, prefix + "LLMExtraBody", this.LLMExtraBody);
         this.setParamSimple(map, prefix + "MaxCallDurationMs", this.MaxCallDurationMs);
+        this.setParamSimple(map, prefix + "MaxRingTimeoutSecond", this.MaxRingTimeoutSecond);
 
     }
 }

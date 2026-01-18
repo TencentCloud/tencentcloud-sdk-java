@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateProxyGroupResponse extends AbstractModel {
 
     /**
-    * 通道组ID
+    * <p>通道组ID</p>
     */
     @SerializedName("GroupId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateProxyGroupResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 通道组ID 
-     * @return GroupId 通道组ID
+     * Get <p>通道组ID</p> 
+     * @return GroupId <p>通道组ID</p>
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 通道组ID
-     * @param GroupId 通道组ID
+     * Set <p>通道组ID</p>
+     * @param GroupId <p>通道组ID</p>
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;

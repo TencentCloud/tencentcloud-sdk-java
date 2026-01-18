@@ -9,6 +9,12 @@ public enum WimgsErrorCode {
      /* 请求的次数超过了频率限制。 */
      REQUESTLIMITEXCEEDED("RequestLimitExceeded"),
      
+     /* 服务未开通。 */
+     RESOURCENOTFOUND("ResourceNotFound"),
+     
+     /* 服务不可用。 */
+     RESOURCEUNAVAILABLE("ResourceUnavailable"),
+     
      /* 未授权操作。 */
      UNAUTHORIZEDOPERATION("UnauthorizedOperation");
      

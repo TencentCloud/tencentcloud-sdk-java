@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class DescribeHTTPListenersRequest extends AbstractModel {
 
     /**
-    * 通道ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
+    * <p>通道ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。</p>
     */
     @SerializedName("ProxyId")
     @Expose
     private String ProxyId;
 
     /**
-    * 通道组ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
+    * <p>通道组ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。</p>
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * 过滤条件，按照监听器ID进行精确查询。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
+    * <p>过滤条件，按照监听器ID进行精确查询。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。</p>
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * 过滤条件，按照监听器名称进行精确查询
+    * <p>过滤条件，按照监听器名称进行精确查询</p>
     */
     @SerializedName("ListenerName")
     @Expose
     private String ListenerName;
 
     /**
-    * 过滤条件，按照监听器端口进行精确查询
+    * <p>过滤条件，按照监听器端口进行精确查询</p>
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * 偏移量，默认为0
+    * <p>偏移量，默认为0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 限制数量，默认为20个
+    * <p>限制数量，默认为20个</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 过滤条件，支持按照端口或监听器名称进行模糊查询，该参数不能与ListenerName和Port同时使用
+    * <p>过滤条件，支持按照端口或监听器名称进行模糊查询，该参数不能与ListenerName和Port同时使用</p>
     */
     @SerializedName("SearchValue")
     @Expose
     private String SearchValue;
 
     /**
-     * Get 通道ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。 
-     * @return ProxyId 通道ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
+     * Get <p>通道ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。</p> 
+     * @return ProxyId <p>通道ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。</p>
      */
     public String getProxyId() {
         return this.ProxyId;
     }
 
     /**
-     * Set 通道ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
-     * @param ProxyId 通道ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
+     * Set <p>通道ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。</p>
+     * @param ProxyId <p>通道ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。</p>
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;
     }
 
     /**
-     * Get 通道组ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。 
-     * @return GroupId 通道组ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
+     * Get <p>通道组ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。</p> 
+     * @return GroupId <p>通道组ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。</p>
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 通道组ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
-     * @param GroupId 通道组ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
+     * Set <p>通道组ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。</p>
+     * @param GroupId <p>通道组ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。</p>
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 过滤条件，按照监听器ID进行精确查询。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。 
-     * @return ListenerId 过滤条件，按照监听器ID进行精确查询。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
+     * Get <p>过滤条件，按照监听器ID进行精确查询。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。</p> 
+     * @return ListenerId <p>过滤条件，按照监听器ID进行精确查询。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。</p>
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set 过滤条件，按照监听器ID进行精确查询。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
-     * @param ListenerId 过滤条件，按照监听器ID进行精确查询。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
+     * Set <p>过滤条件，按照监听器ID进行精确查询。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。</p>
+     * @param ListenerId <p>过滤条件，按照监听器ID进行精确查询。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。</p>
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get 过滤条件，按照监听器名称进行精确查询 
-     * @return ListenerName 过滤条件，按照监听器名称进行精确查询
+     * Get <p>过滤条件，按照监听器名称进行精确查询</p> 
+     * @return ListenerName <p>过滤条件，按照监听器名称进行精确查询</p>
      */
     public String getListenerName() {
         return this.ListenerName;
     }
 
     /**
-     * Set 过滤条件，按照监听器名称进行精确查询
-     * @param ListenerName 过滤条件，按照监听器名称进行精确查询
+     * Set <p>过滤条件，按照监听器名称进行精确查询</p>
+     * @param ListenerName <p>过滤条件，按照监听器名称进行精确查询</p>
      */
     public void setListenerName(String ListenerName) {
         this.ListenerName = ListenerName;
     }
 
     /**
-     * Get 过滤条件，按照监听器端口进行精确查询 
-     * @return Port 过滤条件，按照监听器端口进行精确查询
+     * Get <p>过滤条件，按照监听器端口进行精确查询</p> 
+     * @return Port <p>过滤条件，按照监听器端口进行精确查询</p>
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 过滤条件，按照监听器端口进行精确查询
-     * @param Port 过滤条件，按照监听器端口进行精确查询
+     * Set <p>过滤条件，按照监听器端口进行精确查询</p>
+     * @param Port <p>过滤条件，按照监听器端口进行精确查询</p>
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 偏移量，默认为0 
-     * @return Offset 偏移量，默认为0
+     * Get <p>偏移量，默认为0</p> 
+     * @return Offset <p>偏移量，默认为0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为0
-     * @param Offset 偏移量，默认为0
+     * Set <p>偏移量，默认为0</p>
+     * @param Offset <p>偏移量，默认为0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 限制数量，默认为20个 
-     * @return Limit 限制数量，默认为20个
+     * Get <p>限制数量，默认为20个</p> 
+     * @return Limit <p>限制数量，默认为20个</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 限制数量，默认为20个
-     * @param Limit 限制数量，默认为20个
+     * Set <p>限制数量，默认为20个</p>
+     * @param Limit <p>限制数量，默认为20个</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 过滤条件，支持按照端口或监听器名称进行模糊查询，该参数不能与ListenerName和Port同时使用 
-     * @return SearchValue 过滤条件，支持按照端口或监听器名称进行模糊查询，该参数不能与ListenerName和Port同时使用
+     * Get <p>过滤条件，支持按照端口或监听器名称进行模糊查询，该参数不能与ListenerName和Port同时使用</p> 
+     * @return SearchValue <p>过滤条件，支持按照端口或监听器名称进行模糊查询，该参数不能与ListenerName和Port同时使用</p>
      */
     public String getSearchValue() {
         return this.SearchValue;
     }
 
     /**
-     * Set 过滤条件，支持按照端口或监听器名称进行模糊查询，该参数不能与ListenerName和Port同时使用
-     * @param SearchValue 过滤条件，支持按照端口或监听器名称进行模糊查询，该参数不能与ListenerName和Port同时使用
+     * Set <p>过滤条件，支持按照端口或监听器名称进行模糊查询，该参数不能与ListenerName和Port同时使用</p>
+     * @param SearchValue <p>过滤条件，支持按照端口或监听器名称进行模糊查询，该参数不能与ListenerName和Port同时使用</p>
      */
     public void setSearchValue(String SearchValue) {
         this.SearchValue = SearchValue;

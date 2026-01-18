@@ -47,6 +47,13 @@ favicon：网站图标链接，部分不知名站点结果可能为空
     private String [] Pages;
 
     /**
+    * 用户版本：standard/premium/lite
+    */
+    @SerializedName("Version")
+    @Expose
+    private String Version;
+
+    /**
     * 提示信息
     */
     @SerializedName("Msg")
@@ -129,6 +136,22 @@ favicon：网站图标链接，部分不知名站点结果可能为空
     }
 
     /**
+     * Get 用户版本：standard/premium/lite 
+     * @return Version 用户版本：standard/premium/lite
+     */
+    public String getVersion() {
+        return this.Version;
+    }
+
+    /**
+     * Set 用户版本：standard/premium/lite
+     * @param Version 用户版本：standard/premium/lite
+     */
+    public void setVersion(String Version) {
+        this.Version = Version;
+    }
+
+    /**
      * Get 提示信息 
      * @return Msg 提示信息
      */
@@ -177,6 +200,9 @@ favicon：网站图标链接，部分不知名站点结果可能为空
                 this.Pages[i] = new String(source.Pages[i]);
             }
         }
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
+        }
         if (source.Msg != null) {
             this.Msg = new String(source.Msg);
         }
@@ -192,6 +218,7 @@ favicon：网站图标链接，部分不知名站点结果可能为空
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Query", this.Query);
         this.setParamArraySimple(map, prefix + "Pages.", this.Pages);
+        this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamSimple(map, prefix + "Msg", this.Msg);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

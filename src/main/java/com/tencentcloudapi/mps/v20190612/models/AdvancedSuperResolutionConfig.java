@@ -36,7 +36,8 @@ public class AdvancedSuperResolutionConfig extends AbstractModel {
     /**
     * 类型，可选值：
 <li>standard：通用超分</li>
-<li>super：高级超分。</li>
+<li>super：高级超分super版。</li>
+<li>ultra：高级超分ultra版。</li>
 默认值：standard。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -57,6 +58,7 @@ public class AdvancedSuperResolutionConfig extends AbstractModel {
 
     /**
     * 超分倍率，可以为小数。
+注意：当Mode等于percent时使用。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Percent")
@@ -65,6 +67,7 @@ public class AdvancedSuperResolutionConfig extends AbstractModel {
 
     /**
     * 目标图片宽度，不能超过4096。
+注意：当Mode等于aspect或fixed时，优先使用此配置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Width")
@@ -73,11 +76,30 @@ public class AdvancedSuperResolutionConfig extends AbstractModel {
 
     /**
     * 目标图片高度，不能超过4096。
+注意：当Mode等于aspect或fixed时，优先使用此配置。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
+
+    /**
+    * 目标图片长边长度，不能超过4096。
+注意：当Mode等于aspect或fixed，且未配置Width和Height字段时使用此配置。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LongSide")
+    @Expose
+    private Long LongSide;
+
+    /**
+    * 目标图片短边长度，不能超过4096。
+注意：当Mode等于aspect或fixed，且未配置Width和Height字段时使用此配置。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ShortSide")
+    @Expose
+    private Long ShortSide;
 
     /**
      * Get 能力配置开关，可选值：
@@ -110,12 +132,14 @@ public class AdvancedSuperResolutionConfig extends AbstractModel {
     /**
      * Get 类型，可选值：
 <li>standard：通用超分</li>
-<li>super：高级超分。</li>
+<li>super：高级超分super版。</li>
+<li>ultra：高级超分ultra版。</li>
 默认值：standard。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Type 类型，可选值：
 <li>standard：通用超分</li>
-<li>super：高级超分。</li>
+<li>super：高级超分super版。</li>
+<li>ultra：高级超分ultra版。</li>
 默认值：standard。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -126,12 +150,14 @@ public class AdvancedSuperResolutionConfig extends AbstractModel {
     /**
      * Set 类型，可选值：
 <li>standard：通用超分</li>
-<li>super：高级超分。</li>
+<li>super：高级超分super版。</li>
+<li>ultra：高级超分ultra版。</li>
 默认值：standard。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 类型，可选值：
 <li>standard：通用超分</li>
-<li>super：高级超分。</li>
+<li>super：高级超分super版。</li>
+<li>ultra：高级超分ultra版。</li>
 默认值：standard。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -173,8 +199,10 @@ public class AdvancedSuperResolutionConfig extends AbstractModel {
 
     /**
      * Get 超分倍率，可以为小数。
+注意：当Mode等于percent时使用。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Percent 超分倍率，可以为小数。
+注意：当Mode等于percent时使用。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getPercent() {
@@ -183,8 +211,10 @@ public class AdvancedSuperResolutionConfig extends AbstractModel {
 
     /**
      * Set 超分倍率，可以为小数。
+注意：当Mode等于percent时使用。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Percent 超分倍率，可以为小数。
+注意：当Mode等于percent时使用。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPercent(Float Percent) {
@@ -193,8 +223,10 @@ public class AdvancedSuperResolutionConfig extends AbstractModel {
 
     /**
      * Get 目标图片宽度，不能超过4096。
+注意：当Mode等于aspect或fixed时，优先使用此配置。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Width 目标图片宽度，不能超过4096。
+注意：当Mode等于aspect或fixed时，优先使用此配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWidth() {
@@ -203,8 +235,10 @@ public class AdvancedSuperResolutionConfig extends AbstractModel {
 
     /**
      * Set 目标图片宽度，不能超过4096。
+注意：当Mode等于aspect或fixed时，优先使用此配置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Width 目标图片宽度，不能超过4096。
+注意：当Mode等于aspect或fixed时，优先使用此配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWidth(Long Width) {
@@ -213,8 +247,10 @@ public class AdvancedSuperResolutionConfig extends AbstractModel {
 
     /**
      * Get 目标图片高度，不能超过4096。
+注意：当Mode等于aspect或fixed时，优先使用此配置。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Height 目标图片高度，不能超过4096。
+注意：当Mode等于aspect或fixed时，优先使用此配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHeight() {
@@ -223,12 +259,62 @@ public class AdvancedSuperResolutionConfig extends AbstractModel {
 
     /**
      * Set 目标图片高度，不能超过4096。
+注意：当Mode等于aspect或fixed时，优先使用此配置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Height 目标图片高度，不能超过4096。
+注意：当Mode等于aspect或fixed时，优先使用此配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeight(Long Height) {
         this.Height = Height;
+    }
+
+    /**
+     * Get 目标图片长边长度，不能超过4096。
+注意：当Mode等于aspect或fixed，且未配置Width和Height字段时使用此配置。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LongSide 目标图片长边长度，不能超过4096。
+注意：当Mode等于aspect或fixed，且未配置Width和Height字段时使用此配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getLongSide() {
+        return this.LongSide;
+    }
+
+    /**
+     * Set 目标图片长边长度，不能超过4096。
+注意：当Mode等于aspect或fixed，且未配置Width和Height字段时使用此配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LongSide 目标图片长边长度，不能超过4096。
+注意：当Mode等于aspect或fixed，且未配置Width和Height字段时使用此配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLongSide(Long LongSide) {
+        this.LongSide = LongSide;
+    }
+
+    /**
+     * Get 目标图片短边长度，不能超过4096。
+注意：当Mode等于aspect或fixed，且未配置Width和Height字段时使用此配置。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ShortSide 目标图片短边长度，不能超过4096。
+注意：当Mode等于aspect或fixed，且未配置Width和Height字段时使用此配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getShortSide() {
+        return this.ShortSide;
+    }
+
+    /**
+     * Set 目标图片短边长度，不能超过4096。
+注意：当Mode等于aspect或fixed，且未配置Width和Height字段时使用此配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ShortSide 目标图片短边长度，不能超过4096。
+注意：当Mode等于aspect或fixed，且未配置Width和Height字段时使用此配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setShortSide(Long ShortSide) {
+        this.ShortSide = ShortSide;
     }
 
     public AdvancedSuperResolutionConfig() {
@@ -257,6 +343,12 @@ public class AdvancedSuperResolutionConfig extends AbstractModel {
         if (source.Height != null) {
             this.Height = new Long(source.Height);
         }
+        if (source.LongSide != null) {
+            this.LongSide = new Long(source.LongSide);
+        }
+        if (source.ShortSide != null) {
+            this.ShortSide = new Long(source.ShortSide);
+        }
     }
 
 
@@ -270,6 +362,8 @@ public class AdvancedSuperResolutionConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "Percent", this.Percent);
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Height", this.Height);
+        this.setParamSimple(map, prefix + "LongSide", this.LongSide);
+        this.setParamSimple(map, prefix + "ShortSide", this.ShortSide);
 
     }
 }

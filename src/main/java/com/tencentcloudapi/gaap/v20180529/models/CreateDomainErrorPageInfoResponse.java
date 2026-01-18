@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateDomainErrorPageInfoResponse extends AbstractModel {
 
     /**
-    * 错误定制响应的配置ID
+    * <p>错误定制响应的配置ID</p>
     */
     @SerializedName("ErrorPageId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateDomainErrorPageInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 错误定制响应的配置ID 
-     * @return ErrorPageId 错误定制响应的配置ID
+     * Get <p>错误定制响应的配置ID</p> 
+     * @return ErrorPageId <p>错误定制响应的配置ID</p>
      */
     public String getErrorPageId() {
         return this.ErrorPageId;
     }
 
     /**
-     * Set 错误定制响应的配置ID
-     * @param ErrorPageId 错误定制响应的配置ID
+     * Set <p>错误定制响应的配置ID</p>
+     * @param ErrorPageId <p>错误定制响应的配置ID</p>
      */
     public void setErrorPageId(String ErrorPageId) {
         this.ErrorPageId = ErrorPageId;

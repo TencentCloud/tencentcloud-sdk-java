@@ -24,281 +24,276 @@ import java.util.HashMap;
 public class CreateRuleRequest extends AbstractModel {
 
     /**
-    * 7层监听器ID
+    * <p>7层监听器ID</p>
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * 转发规则的域名
+    * <p>转发规则的域名</p>
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 转发规则的路径
+    * <p>转发规则的路径</p>
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-    * 转发规则对应源站的类型，支持IP和DOMAIN类型。
+    * <p>转发规则对应源站的类型，支持IP和DOMAIN类型。</p>
     */
     @SerializedName("RealServerType")
     @Expose
     private String RealServerType;
 
     /**
-    * 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数。
+    * <p>监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数。</p>
     */
     @SerializedName("Scheduler")
     @Expose
     private String Scheduler;
 
     /**
-    * 规则是否开启健康检查，1开启，0关闭。
+    * <p>规则是否开启健康检查，1开启，0关闭。</p>
     */
     @SerializedName("HealthCheck")
     @Expose
     private Long HealthCheck;
 
     /**
-    * 源站健康检查相关参数
+    * <p>源站健康检查相关参数</p>
     */
     @SerializedName("CheckParams")
     @Expose
     private RuleCheckParams CheckParams;
 
     /**
-    * 加速通道转发到源站的协议类型：支持HTTP或HTTPS。
-不传递该字段时表示使用对应监听器的ForwardProtocol。
+    * <p>加速通道转发到源站的协议类型：支持HTTP或HTTPS。不传递该字段时表示使用对应监听器的ForwardProtocol。</p>
     */
     @SerializedName("ForwardProtocol")
     @Expose
     private String ForwardProtocol;
 
     /**
-    * 回源Host。加速通道转发到源站的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。
+    * <p>回源Host。加速通道转发到源站的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。</p>
     */
     @SerializedName("ForwardHost")
     @Expose
     private String ForwardHost;
 
     /**
-    * 服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。创建HTTP监听器转发规则时，SNI功能默认关闭。
+    * <p>服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。创建HTTP监听器转发规则时，SNI功能默认关闭。</p>
     */
     @SerializedName("ServerNameIndicationSwitch")
     @Expose
     private String ServerNameIndicationSwitch;
 
     /**
-    * 服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。
+    * <p>服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。</p>
     */
     @SerializedName("ServerNameIndication")
     @Expose
     private String ServerNameIndication;
 
     /**
-    * HTTP强制跳转HTTPS。输入当前规则对应的域名与地址。
+    * <p>HTTP强制跳转HTTPS。输入当前规则对应的域名与地址。</p>
     */
     @SerializedName("ForcedRedirect")
     @Expose
     private String ForcedRedirect;
 
     /**
-     * Get 7层监听器ID 
-     * @return ListenerId 7层监听器ID
+     * Get <p>7层监听器ID</p> 
+     * @return ListenerId <p>7层监听器ID</p>
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set 7层监听器ID
-     * @param ListenerId 7层监听器ID
+     * Set <p>7层监听器ID</p>
+     * @param ListenerId <p>7层监听器ID</p>
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get 转发规则的域名 
-     * @return Domain 转发规则的域名
+     * Get <p>转发规则的域名</p> 
+     * @return Domain <p>转发规则的域名</p>
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 转发规则的域名
-     * @param Domain 转发规则的域名
+     * Set <p>转发规则的域名</p>
+     * @param Domain <p>转发规则的域名</p>
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 转发规则的路径 
-     * @return Path 转发规则的路径
+     * Get <p>转发规则的路径</p> 
+     * @return Path <p>转发规则的路径</p>
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set 转发规则的路径
-     * @param Path 转发规则的路径
+     * Set <p>转发规则的路径</p>
+     * @param Path <p>转发规则的路径</p>
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get 转发规则对应源站的类型，支持IP和DOMAIN类型。 
-     * @return RealServerType 转发规则对应源站的类型，支持IP和DOMAIN类型。
+     * Get <p>转发规则对应源站的类型，支持IP和DOMAIN类型。</p> 
+     * @return RealServerType <p>转发规则对应源站的类型，支持IP和DOMAIN类型。</p>
      */
     public String getRealServerType() {
         return this.RealServerType;
     }
 
     /**
-     * Set 转发规则对应源站的类型，支持IP和DOMAIN类型。
-     * @param RealServerType 转发规则对应源站的类型，支持IP和DOMAIN类型。
+     * Set <p>转发规则对应源站的类型，支持IP和DOMAIN类型。</p>
+     * @param RealServerType <p>转发规则对应源站的类型，支持IP和DOMAIN类型。</p>
      */
     public void setRealServerType(String RealServerType) {
         this.RealServerType = RealServerType;
     }
 
     /**
-     * Get 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数。 
-     * @return Scheduler 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数。
+     * Get <p>监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数。</p> 
+     * @return Scheduler <p>监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数。</p>
      */
     public String getScheduler() {
         return this.Scheduler;
     }
 
     /**
-     * Set 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数。
-     * @param Scheduler 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数。
+     * Set <p>监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数。</p>
+     * @param Scheduler <p>监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数。</p>
      */
     public void setScheduler(String Scheduler) {
         this.Scheduler = Scheduler;
     }
 
     /**
-     * Get 规则是否开启健康检查，1开启，0关闭。 
-     * @return HealthCheck 规则是否开启健康检查，1开启，0关闭。
+     * Get <p>规则是否开启健康检查，1开启，0关闭。</p> 
+     * @return HealthCheck <p>规则是否开启健康检查，1开启，0关闭。</p>
      */
     public Long getHealthCheck() {
         return this.HealthCheck;
     }
 
     /**
-     * Set 规则是否开启健康检查，1开启，0关闭。
-     * @param HealthCheck 规则是否开启健康检查，1开启，0关闭。
+     * Set <p>规则是否开启健康检查，1开启，0关闭。</p>
+     * @param HealthCheck <p>规则是否开启健康检查，1开启，0关闭。</p>
      */
     public void setHealthCheck(Long HealthCheck) {
         this.HealthCheck = HealthCheck;
     }
 
     /**
-     * Get 源站健康检查相关参数 
-     * @return CheckParams 源站健康检查相关参数
+     * Get <p>源站健康检查相关参数</p> 
+     * @return CheckParams <p>源站健康检查相关参数</p>
      */
     public RuleCheckParams getCheckParams() {
         return this.CheckParams;
     }
 
     /**
-     * Set 源站健康检查相关参数
-     * @param CheckParams 源站健康检查相关参数
+     * Set <p>源站健康检查相关参数</p>
+     * @param CheckParams <p>源站健康检查相关参数</p>
      */
     public void setCheckParams(RuleCheckParams CheckParams) {
         this.CheckParams = CheckParams;
     }
 
     /**
-     * Get 加速通道转发到源站的协议类型：支持HTTP或HTTPS。
-不传递该字段时表示使用对应监听器的ForwardProtocol。 
-     * @return ForwardProtocol 加速通道转发到源站的协议类型：支持HTTP或HTTPS。
-不传递该字段时表示使用对应监听器的ForwardProtocol。
+     * Get <p>加速通道转发到源站的协议类型：支持HTTP或HTTPS。不传递该字段时表示使用对应监听器的ForwardProtocol。</p> 
+     * @return ForwardProtocol <p>加速通道转发到源站的协议类型：支持HTTP或HTTPS。不传递该字段时表示使用对应监听器的ForwardProtocol。</p>
      */
     public String getForwardProtocol() {
         return this.ForwardProtocol;
     }
 
     /**
-     * Set 加速通道转发到源站的协议类型：支持HTTP或HTTPS。
-不传递该字段时表示使用对应监听器的ForwardProtocol。
-     * @param ForwardProtocol 加速通道转发到源站的协议类型：支持HTTP或HTTPS。
-不传递该字段时表示使用对应监听器的ForwardProtocol。
+     * Set <p>加速通道转发到源站的协议类型：支持HTTP或HTTPS。不传递该字段时表示使用对应监听器的ForwardProtocol。</p>
+     * @param ForwardProtocol <p>加速通道转发到源站的协议类型：支持HTTP或HTTPS。不传递该字段时表示使用对应监听器的ForwardProtocol。</p>
      */
     public void setForwardProtocol(String ForwardProtocol) {
         this.ForwardProtocol = ForwardProtocol;
     }
 
     /**
-     * Get 回源Host。加速通道转发到源站的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。 
-     * @return ForwardHost 回源Host。加速通道转发到源站的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。
+     * Get <p>回源Host。加速通道转发到源站的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。</p> 
+     * @return ForwardHost <p>回源Host。加速通道转发到源站的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。</p>
      */
     public String getForwardHost() {
         return this.ForwardHost;
     }
 
     /**
-     * Set 回源Host。加速通道转发到源站的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。
-     * @param ForwardHost 回源Host。加速通道转发到源站的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。
+     * Set <p>回源Host。加速通道转发到源站的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。</p>
+     * @param ForwardHost <p>回源Host。加速通道转发到源站的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。</p>
      */
     public void setForwardHost(String ForwardHost) {
         this.ForwardHost = ForwardHost;
     }
 
     /**
-     * Get 服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。创建HTTP监听器转发规则时，SNI功能默认关闭。 
-     * @return ServerNameIndicationSwitch 服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。创建HTTP监听器转发规则时，SNI功能默认关闭。
+     * Get <p>服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。创建HTTP监听器转发规则时，SNI功能默认关闭。</p> 
+     * @return ServerNameIndicationSwitch <p>服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。创建HTTP监听器转发规则时，SNI功能默认关闭。</p>
      */
     public String getServerNameIndicationSwitch() {
         return this.ServerNameIndicationSwitch;
     }
 
     /**
-     * Set 服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。创建HTTP监听器转发规则时，SNI功能默认关闭。
-     * @param ServerNameIndicationSwitch 服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。创建HTTP监听器转发规则时，SNI功能默认关闭。
+     * Set <p>服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。创建HTTP监听器转发规则时，SNI功能默认关闭。</p>
+     * @param ServerNameIndicationSwitch <p>服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。创建HTTP监听器转发规则时，SNI功能默认关闭。</p>
      */
     public void setServerNameIndicationSwitch(String ServerNameIndicationSwitch) {
         this.ServerNameIndicationSwitch = ServerNameIndicationSwitch;
     }
 
     /**
-     * Get 服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。 
-     * @return ServerNameIndication 服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。
+     * Get <p>服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。</p> 
+     * @return ServerNameIndication <p>服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。</p>
      */
     public String getServerNameIndication() {
         return this.ServerNameIndication;
     }
 
     /**
-     * Set 服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。
-     * @param ServerNameIndication 服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。
+     * Set <p>服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。</p>
+     * @param ServerNameIndication <p>服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。</p>
      */
     public void setServerNameIndication(String ServerNameIndication) {
         this.ServerNameIndication = ServerNameIndication;
     }
 
     /**
-     * Get HTTP强制跳转HTTPS。输入当前规则对应的域名与地址。 
-     * @return ForcedRedirect HTTP强制跳转HTTPS。输入当前规则对应的域名与地址。
+     * Get <p>HTTP强制跳转HTTPS。输入当前规则对应的域名与地址。</p> 
+     * @return ForcedRedirect <p>HTTP强制跳转HTTPS。输入当前规则对应的域名与地址。</p>
      */
     public String getForcedRedirect() {
         return this.ForcedRedirect;
     }
 
     /**
-     * Set HTTP强制跳转HTTPS。输入当前规则对应的域名与地址。
-     * @param ForcedRedirect HTTP强制跳转HTTPS。输入当前规则对应的域名与地址。
+     * Set <p>HTTP强制跳转HTTPS。输入当前规则对应的域名与地址。</p>
+     * @param ForcedRedirect <p>HTTP强制跳转HTTPS。输入当前规则对应的域名与地址。</p>
      */
     public void setForcedRedirect(String ForcedRedirect) {
         this.ForcedRedirect = ForcedRedirect;

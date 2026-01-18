@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateRuleResponse extends AbstractModel {
 
     /**
-    * 创建转发规则成功返回规则ID
+    * <p>创建转发规则成功返回规则ID</p>
     */
     @SerializedName("RuleId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 创建转发规则成功返回规则ID 
-     * @return RuleId 创建转发规则成功返回规则ID
+     * Get <p>创建转发规则成功返回规则ID</p> 
+     * @return RuleId <p>创建转发规则成功返回规则ID</p>
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set 创建转发规则成功返回规则ID
-     * @param RuleId 创建转发规则成功返回规则ID
+     * Set <p>创建转发规则成功返回规则ID</p>
+     * @param RuleId <p>创建转发规则成功返回规则ID</p>
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;

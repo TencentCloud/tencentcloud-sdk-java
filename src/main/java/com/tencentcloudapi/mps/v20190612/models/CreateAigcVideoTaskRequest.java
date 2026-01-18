@@ -90,7 +90,7 @@ GV。
     * 模型将以此参数传入的图片作为尾帧画面来生成视频。
 支持此参数的模型：
 1. GV，传入尾帧图片时，必须同时传入ImageUrl作为首帧。
-2. Kling， 在Resolution:1080P的情况下 2.1版本支持首位帧。
+2. Kling， 在Resolution:1080P的情况下 2.1版本支持首尾帧。
 3. Vidu, q2-pro, q2-turbo 支持首尾帧。
 
 注意：
@@ -343,7 +343,7 @@ GV。
      * Get 模型将以此参数传入的图片作为尾帧画面来生成视频。
 支持此参数的模型：
 1. GV，传入尾帧图片时，必须同时传入ImageUrl作为首帧。
-2. Kling， 在Resolution:1080P的情况下 2.1版本支持首位帧。
+2. Kling， 在Resolution:1080P的情况下 2.1版本支持首尾帧。
 3. Vidu, q2-pro, q2-turbo 支持首尾帧。
 
 注意：
@@ -352,7 +352,7 @@ GV。
      * @return LastImageUrl 模型将以此参数传入的图片作为尾帧画面来生成视频。
 支持此参数的模型：
 1. GV，传入尾帧图片时，必须同时传入ImageUrl作为首帧。
-2. Kling， 在Resolution:1080P的情况下 2.1版本支持首位帧。
+2. Kling， 在Resolution:1080P的情况下 2.1版本支持首尾帧。
 3. Vidu, q2-pro, q2-turbo 支持首尾帧。
 
 注意：
@@ -367,7 +367,7 @@ GV。
      * Set 模型将以此参数传入的图片作为尾帧画面来生成视频。
 支持此参数的模型：
 1. GV，传入尾帧图片时，必须同时传入ImageUrl作为首帧。
-2. Kling， 在Resolution:1080P的情况下 2.1版本支持首位帧。
+2. Kling， 在Resolution:1080P的情况下 2.1版本支持首尾帧。
 3. Vidu, q2-pro, q2-turbo 支持首尾帧。
 
 注意：
@@ -376,7 +376,7 @@ GV。
      * @param LastImageUrl 模型将以此参数传入的图片作为尾帧画面来生成视频。
 支持此参数的模型：
 1. GV，传入尾帧图片时，必须同时传入ImageUrl作为首帧。
-2. Kling， 在Resolution:1080P的情况下 2.1版本支持首位帧。
+2. Kling， 在Resolution:1080P的情况下 2.1版本支持首尾帧。
 3. Vidu, q2-pro, q2-turbo 支持首尾帧。
 
 注意：

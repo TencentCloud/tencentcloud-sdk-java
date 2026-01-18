@@ -152,6 +152,20 @@ public class License extends AbstractModel {
     private String LicenseLevel;
 
     /**
+    * <p>License 内容信息</p>
+    */
+    @SerializedName("LicenseData")
+    @Expose
+    private LicenseData LicenseData;
+
+    /**
+    * <p>License 颁发地址</p>
+    */
+    @SerializedName("IssueURL")
+    @Expose
+    private String IssueURL;
+
+    /**
      * Get <p>License ID</p> 
      * @return LicenseId <p>License ID</p>
      */
@@ -447,6 +461,38 @@ public class License extends AbstractModel {
         this.LicenseLevel = LicenseLevel;
     }
 
+    /**
+     * Get <p>License 内容信息</p> 
+     * @return LicenseData <p>License 内容信息</p>
+     */
+    public LicenseData getLicenseData() {
+        return this.LicenseData;
+    }
+
+    /**
+     * Set <p>License 内容信息</p>
+     * @param LicenseData <p>License 内容信息</p>
+     */
+    public void setLicenseData(LicenseData LicenseData) {
+        this.LicenseData = LicenseData;
+    }
+
+    /**
+     * Get <p>License 颁发地址</p> 
+     * @return IssueURL <p>License 颁发地址</p>
+     */
+    public String getIssueURL() {
+        return this.IssueURL;
+    }
+
+    /**
+     * Set <p>License 颁发地址</p>
+     * @param IssueURL <p>License 颁发地址</p>
+     */
+    public void setIssueURL(String IssueURL) {
+        this.IssueURL = IssueURL;
+    }
+
     public License() {
     }
 
@@ -512,6 +558,12 @@ public class License extends AbstractModel {
         if (source.LicenseLevel != null) {
             this.LicenseLevel = new String(source.LicenseLevel);
         }
+        if (source.LicenseData != null) {
+            this.LicenseData = new LicenseData(source.LicenseData);
+        }
+        if (source.IssueURL != null) {
+            this.IssueURL = new String(source.IssueURL);
+        }
     }
 
 
@@ -537,6 +589,8 @@ public class License extends AbstractModel {
         this.setParamSimple(map, prefix + "LifeSpanUnit", this.LifeSpanUnit);
         this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
         this.setParamSimple(map, prefix + "LicenseLevel", this.LicenseLevel);
+        this.setParamObj(map, prefix + "LicenseData.", this.LicenseData);
+        this.setParamSimple(map, prefix + "IssueURL", this.IssueURL);
 
     }
 }

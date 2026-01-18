@@ -24,253 +24,253 @@ import java.util.HashMap;
 public class ModifyTCPListenerAttributeRequest extends AbstractModel {
 
     /**
-    * 监听器ID
+    * <p>监听器ID</p>
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * 通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
+    * <p>通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。</p>
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * 通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。
+    * <p>通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。</p>
     */
     @SerializedName("ProxyId")
     @Expose
     private String ProxyId;
 
     /**
-    * 监听器名称
+    * <p>监听器名称</p>
     */
     @SerializedName("ListenerName")
     @Expose
     private String ListenerName;
 
     /**
-    * 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。注意：lrtt需要开通白名单；RealServerType 为 DOMAIN 不支持wrr 和 lrtt。
+    * <p>监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。注意：lrtt需要开通白名单；RealServerType 为 DOMAIN 不支持wrr 和 lrtt。</p>
     */
     @SerializedName("Scheduler")
     @Expose
     private String Scheduler;
 
     /**
-    * 源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。
+    * <p>源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。</p>
     */
     @SerializedName("DelayLoop")
     @Expose
     private Long DelayLoop;
 
     /**
-    * 源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
+    * <p>源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。</p>
     */
     @SerializedName("ConnectTimeout")
     @Expose
     private Long ConnectTimeout;
 
     /**
-    * 是否开启健康检查，1开启，0关闭。
+    * <p>是否开启健康检查，1开启，0关闭。</p>
     */
     @SerializedName("HealthCheck")
     @Expose
     private Long HealthCheck;
 
     /**
-    * 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
+    * <p>源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启</p>
     */
     @SerializedName("FailoverSwitch")
     @Expose
     private Long FailoverSwitch;
 
     /**
-    * 健康阈值，表示连续检查成功多少次数后认定源站健康。范围为1到10
+    * <p>健康阈值，表示连续检查成功多少次数后认定源站健康。范围为1到10</p>
     */
     @SerializedName("HealthyThreshold")
     @Expose
     private Long HealthyThreshold;
 
     /**
-    * 不健康阈值，表示连续检查失败次数后认定源站不健康。范围为1到10
+    * <p>不健康阈值，表示连续检查失败次数后认定源站不健康。范围为1到10</p>
     */
     @SerializedName("UnhealthyThreshold")
     @Expose
     private Long UnhealthyThreshold;
 
     /**
-     * Get 监听器ID 
-     * @return ListenerId 监听器ID
+     * Get <p>监听器ID</p> 
+     * @return ListenerId <p>监听器ID</p>
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set 监听器ID
-     * @param ListenerId 监听器ID
+     * Set <p>监听器ID</p>
+     * @param ListenerId <p>监听器ID</p>
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get 通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。 
-     * @return GroupId 通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
+     * Get <p>通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。</p> 
+     * @return GroupId <p>通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。</p>
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
-     * @param GroupId 通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。
+     * Set <p>通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。</p>
+     * @param GroupId <p>通道组ID，ProxyId和GroupId必须设置一个，但不能同时设置。</p>
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。 
-     * @return ProxyId 通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。
+     * Get <p>通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。</p> 
+     * @return ProxyId <p>通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。</p>
      */
     public String getProxyId() {
         return this.ProxyId;
     }
 
     /**
-     * Set 通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。
-     * @param ProxyId 通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。
+     * Set <p>通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。</p>
+     * @param ProxyId <p>通道ID，ProxyId和GroupId必须设置一个，但不能同时设置。</p>
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;
     }
 
     /**
-     * Get 监听器名称 
-     * @return ListenerName 监听器名称
+     * Get <p>监听器名称</p> 
+     * @return ListenerName <p>监听器名称</p>
      */
     public String getListenerName() {
         return this.ListenerName;
     }
 
     /**
-     * Set 监听器名称
-     * @param ListenerName 监听器名称
+     * Set <p>监听器名称</p>
+     * @param ListenerName <p>监听器名称</p>
      */
     public void setListenerName(String ListenerName) {
         this.ListenerName = ListenerName;
     }
 
     /**
-     * Get 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。注意：lrtt需要开通白名单；RealServerType 为 DOMAIN 不支持wrr 和 lrtt。 
-     * @return Scheduler 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。注意：lrtt需要开通白名单；RealServerType 为 DOMAIN 不支持wrr 和 lrtt。
+     * Get <p>监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。注意：lrtt需要开通白名单；RealServerType 为 DOMAIN 不支持wrr 和 lrtt。</p> 
+     * @return Scheduler <p>监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。注意：lrtt需要开通白名单；RealServerType 为 DOMAIN 不支持wrr 和 lrtt。</p>
      */
     public String getScheduler() {
         return this.Scheduler;
     }
 
     /**
-     * Set 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。注意：lrtt需要开通白名单；RealServerType 为 DOMAIN 不支持wrr 和 lrtt。
-     * @param Scheduler 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。注意：lrtt需要开通白名单；RealServerType 为 DOMAIN 不支持wrr 和 lrtt。
+     * Set <p>监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。注意：lrtt需要开通白名单；RealServerType 为 DOMAIN 不支持wrr 和 lrtt。</p>
+     * @param Scheduler <p>监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。注意：lrtt需要开通白名单；RealServerType 为 DOMAIN 不支持wrr 和 lrtt。</p>
      */
     public void setScheduler(String Scheduler) {
         this.Scheduler = Scheduler;
     }
 
     /**
-     * Get 源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。 
-     * @return DelayLoop 源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。
+     * Get <p>源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。</p> 
+     * @return DelayLoop <p>源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。</p>
      */
     public Long getDelayLoop() {
         return this.DelayLoop;
     }
 
     /**
-     * Set 源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。
-     * @param DelayLoop 源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。
+     * Set <p>源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。</p>
+     * @param DelayLoop <p>源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。</p>
      */
     public void setDelayLoop(Long DelayLoop) {
         this.DelayLoop = DelayLoop;
     }
 
     /**
-     * Get 源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。 
-     * @return ConnectTimeout 源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
+     * Get <p>源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。</p> 
+     * @return ConnectTimeout <p>源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。</p>
      */
     public Long getConnectTimeout() {
         return this.ConnectTimeout;
     }
 
     /**
-     * Set 源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
-     * @param ConnectTimeout 源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
+     * Set <p>源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。</p>
+     * @param ConnectTimeout <p>源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。</p>
      */
     public void setConnectTimeout(Long ConnectTimeout) {
         this.ConnectTimeout = ConnectTimeout;
     }
 
     /**
-     * Get 是否开启健康检查，1开启，0关闭。 
-     * @return HealthCheck 是否开启健康检查，1开启，0关闭。
+     * Get <p>是否开启健康检查，1开启，0关闭。</p> 
+     * @return HealthCheck <p>是否开启健康检查，1开启，0关闭。</p>
      */
     public Long getHealthCheck() {
         return this.HealthCheck;
     }
 
     /**
-     * Set 是否开启健康检查，1开启，0关闭。
-     * @param HealthCheck 是否开启健康检查，1开启，0关闭。
+     * Set <p>是否开启健康检查，1开启，0关闭。</p>
+     * @param HealthCheck <p>是否开启健康检查，1开启，0关闭。</p>
      */
     public void setHealthCheck(Long HealthCheck) {
         this.HealthCheck = HealthCheck;
     }
 
     /**
-     * Get 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启 
-     * @return FailoverSwitch 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
+     * Get <p>源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启</p> 
+     * @return FailoverSwitch <p>源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启</p>
      */
     public Long getFailoverSwitch() {
         return this.FailoverSwitch;
     }
 
     /**
-     * Set 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
-     * @param FailoverSwitch 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
+     * Set <p>源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启</p>
+     * @param FailoverSwitch <p>源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启</p>
      */
     public void setFailoverSwitch(Long FailoverSwitch) {
         this.FailoverSwitch = FailoverSwitch;
     }
 
     /**
-     * Get 健康阈值，表示连续检查成功多少次数后认定源站健康。范围为1到10 
-     * @return HealthyThreshold 健康阈值，表示连续检查成功多少次数后认定源站健康。范围为1到10
+     * Get <p>健康阈值，表示连续检查成功多少次数后认定源站健康。范围为1到10</p> 
+     * @return HealthyThreshold <p>健康阈值，表示连续检查成功多少次数后认定源站健康。范围为1到10</p>
      */
     public Long getHealthyThreshold() {
         return this.HealthyThreshold;
     }
 
     /**
-     * Set 健康阈值，表示连续检查成功多少次数后认定源站健康。范围为1到10
-     * @param HealthyThreshold 健康阈值，表示连续检查成功多少次数后认定源站健康。范围为1到10
+     * Set <p>健康阈值，表示连续检查成功多少次数后认定源站健康。范围为1到10</p>
+     * @param HealthyThreshold <p>健康阈值，表示连续检查成功多少次数后认定源站健康。范围为1到10</p>
      */
     public void setHealthyThreshold(Long HealthyThreshold) {
         this.HealthyThreshold = HealthyThreshold;
     }
 
     /**
-     * Get 不健康阈值，表示连续检查失败次数后认定源站不健康。范围为1到10 
-     * @return UnhealthyThreshold 不健康阈值，表示连续检查失败次数后认定源站不健康。范围为1到10
+     * Get <p>不健康阈值，表示连续检查失败次数后认定源站不健康。范围为1到10</p> 
+     * @return UnhealthyThreshold <p>不健康阈值，表示连续检查失败次数后认定源站不健康。范围为1到10</p>
      */
     public Long getUnhealthyThreshold() {
         return this.UnhealthyThreshold;
     }
 
     /**
-     * Set 不健康阈值，表示连续检查失败次数后认定源站不健康。范围为1到10
-     * @param UnhealthyThreshold 不健康阈值，表示连续检查失败次数后认定源站不健康。范围为1到10
+     * Set <p>不健康阈值，表示连续检查失败次数后认定源站不健康。范围为1到10</p>
+     * @param UnhealthyThreshold <p>不健康阈值，表示连续检查失败次数后认定源站不健康。范围为1到10</p>
      */
     public void setUnhealthyThreshold(Long UnhealthyThreshold) {
         this.UnhealthyThreshold = UnhealthyThreshold;

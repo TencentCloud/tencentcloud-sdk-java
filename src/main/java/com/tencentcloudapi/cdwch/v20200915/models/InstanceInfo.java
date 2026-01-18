@@ -405,6 +405,20 @@ Modify 集群变更中；
     private String UpgradeZkVersions;
 
     /**
+    * 是否显示rip
+    */
+    @SerializedName("ShowRip")
+    @Expose
+    private String ShowRip;
+
+    /**
+    * 实例类型：标准型 standard，无keeper节点类型noKeeper；
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
+
+    /**
      * Get 集群实例ID, "cdw-xxxx" 字符串类型 
      * @return InstanceId 集群实例ID, "cdw-xxxx" 字符串类型
      */
@@ -1280,6 +1294,38 @@ Modify 集群变更中；
         this.UpgradeZkVersions = UpgradeZkVersions;
     }
 
+    /**
+     * Get 是否显示rip 
+     * @return ShowRip 是否显示rip
+     */
+    public String getShowRip() {
+        return this.ShowRip;
+    }
+
+    /**
+     * Set 是否显示rip
+     * @param ShowRip 是否显示rip
+     */
+    public void setShowRip(String ShowRip) {
+        this.ShowRip = ShowRip;
+    }
+
+    /**
+     * Get 实例类型：标准型 standard，无keeper节点类型noKeeper； 
+     * @return InstanceType 实例类型：标准型 standard，无keeper节点类型noKeeper；
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set 实例类型：标准型 standard，无keeper节点类型noKeeper；
+     * @param InstanceType 实例类型：标准型 standard，无keeper节点类型noKeeper；
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1459,6 +1505,12 @@ Modify 集群变更中；
         if (source.UpgradeZkVersions != null) {
             this.UpgradeZkVersions = new String(source.UpgradeZkVersions);
         }
+        if (source.ShowRip != null) {
+            this.ShowRip = new String(source.ShowRip);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
     }
 
 
@@ -1520,6 +1572,8 @@ Modify 集群变更中；
         this.setParamArraySimple(map, prefix + "BindSGs.", this.BindSGs);
         this.setParamSimple(map, prefix + "HasPublicCloudClb", this.HasPublicCloudClb);
         this.setParamSimple(map, prefix + "UpgradeZkVersions", this.UpgradeZkVersions);
+        this.setParamSimple(map, prefix + "ShowRip", this.ShowRip);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
 
     }
 }

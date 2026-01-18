@@ -24,207 +24,207 @@ import java.util.HashMap;
 public class CheckProxyCreateRequest extends AbstractModel {
 
     /**
-    * 通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到
+    * <p>通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到</p>
     */
     @SerializedName("AccessRegion")
     @Expose
     private String AccessRegion;
 
     /**
-    * 通道的源站区域。取值可通过接口DescribeDestRegions获取到
+    * <p>通道的源站区域。取值可通过接口DescribeDestRegions获取到</p>
     */
     @SerializedName("RealServerRegion")
     @Expose
     private String RealServerRegion;
 
     /**
-    * 通道带宽上限，单位：Mbps。
+    * <p>通道带宽上限，单位：Mbps。</p>
     */
     @SerializedName("Bandwidth")
     @Expose
     private Long Bandwidth;
 
     /**
-    * 通道并发量上限，表示同时在线的连接数，单位：万。
+    * <p>通道并发量上限，表示同时在线的连接数，单位：万。</p>
     */
     @SerializedName("Concurrent")
     @Expose
     private Long Concurrent;
 
     /**
-    * 如果在通道组下创建通道，需要填写通道组的ID
+    * <p>如果在通道组下创建通道，需要填写通道组的ID</p>
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * IP版本，可取值：IPv4、IPv6，默认值IPv4
+    * <p>IP版本，可取值：IPv4、IPv6，默认值IPv4</p>
     */
     @SerializedName("IPAddressVersion")
     @Expose
     private String IPAddressVersion;
 
     /**
-    * 网络类型，可取值：normal、cn2，默认值normal
+    * <p>网络类型，可取值：normal、cn2，默认值normal</p>
     */
     @SerializedName("NetworkType")
     @Expose
     private String NetworkType;
 
     /**
-    * 通道套餐类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道，CrossBorder表示跨境通道。
+    * <p>通道套餐类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道，CrossBorder表示跨境通道。</p>
     */
     @SerializedName("PackageType")
     @Expose
     private String PackageType;
 
     /**
-    * 该字段已废弃，当IPAddressVersion为IPv4时，所创建的通道默认支持Http3.0；当为IPv6，默认不支持Http3.0。
+    * <p>该字段已废弃，当IPAddressVersion为IPv4时，所创建的通道默认支持Http3.0；当为IPv6，默认不支持Http3.0。</p>
     */
     @SerializedName("Http3Supported")
     @Expose
     private Long Http3Supported;
 
     /**
-     * Get 通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到 
-     * @return AccessRegion 通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到
+     * Get <p>通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到</p> 
+     * @return AccessRegion <p>通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到</p>
      */
     public String getAccessRegion() {
         return this.AccessRegion;
     }
 
     /**
-     * Set 通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到
-     * @param AccessRegion 通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到
+     * Set <p>通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到</p>
+     * @param AccessRegion <p>通道的接入(加速)区域。取值可通过接口DescribeAccessRegionsByDestRegion获取到</p>
      */
     public void setAccessRegion(String AccessRegion) {
         this.AccessRegion = AccessRegion;
     }
 
     /**
-     * Get 通道的源站区域。取值可通过接口DescribeDestRegions获取到 
-     * @return RealServerRegion 通道的源站区域。取值可通过接口DescribeDestRegions获取到
+     * Get <p>通道的源站区域。取值可通过接口DescribeDestRegions获取到</p> 
+     * @return RealServerRegion <p>通道的源站区域。取值可通过接口DescribeDestRegions获取到</p>
      */
     public String getRealServerRegion() {
         return this.RealServerRegion;
     }
 
     /**
-     * Set 通道的源站区域。取值可通过接口DescribeDestRegions获取到
-     * @param RealServerRegion 通道的源站区域。取值可通过接口DescribeDestRegions获取到
+     * Set <p>通道的源站区域。取值可通过接口DescribeDestRegions获取到</p>
+     * @param RealServerRegion <p>通道的源站区域。取值可通过接口DescribeDestRegions获取到</p>
      */
     public void setRealServerRegion(String RealServerRegion) {
         this.RealServerRegion = RealServerRegion;
     }
 
     /**
-     * Get 通道带宽上限，单位：Mbps。 
-     * @return Bandwidth 通道带宽上限，单位：Mbps。
+     * Get <p>通道带宽上限，单位：Mbps。</p> 
+     * @return Bandwidth <p>通道带宽上限，单位：Mbps。</p>
      */
     public Long getBandwidth() {
         return this.Bandwidth;
     }
 
     /**
-     * Set 通道带宽上限，单位：Mbps。
-     * @param Bandwidth 通道带宽上限，单位：Mbps。
+     * Set <p>通道带宽上限，单位：Mbps。</p>
+     * @param Bandwidth <p>通道带宽上限，单位：Mbps。</p>
      */
     public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 
     /**
-     * Get 通道并发量上限，表示同时在线的连接数，单位：万。 
-     * @return Concurrent 通道并发量上限，表示同时在线的连接数，单位：万。
+     * Get <p>通道并发量上限，表示同时在线的连接数，单位：万。</p> 
+     * @return Concurrent <p>通道并发量上限，表示同时在线的连接数，单位：万。</p>
      */
     public Long getConcurrent() {
         return this.Concurrent;
     }
 
     /**
-     * Set 通道并发量上限，表示同时在线的连接数，单位：万。
-     * @param Concurrent 通道并发量上限，表示同时在线的连接数，单位：万。
+     * Set <p>通道并发量上限，表示同时在线的连接数，单位：万。</p>
+     * @param Concurrent <p>通道并发量上限，表示同时在线的连接数，单位：万。</p>
      */
     public void setConcurrent(Long Concurrent) {
         this.Concurrent = Concurrent;
     }
 
     /**
-     * Get 如果在通道组下创建通道，需要填写通道组的ID 
-     * @return GroupId 如果在通道组下创建通道，需要填写通道组的ID
+     * Get <p>如果在通道组下创建通道，需要填写通道组的ID</p> 
+     * @return GroupId <p>如果在通道组下创建通道，需要填写通道组的ID</p>
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 如果在通道组下创建通道，需要填写通道组的ID
-     * @param GroupId 如果在通道组下创建通道，需要填写通道组的ID
+     * Set <p>如果在通道组下创建通道，需要填写通道组的ID</p>
+     * @param GroupId <p>如果在通道组下创建通道，需要填写通道组的ID</p>
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get IP版本，可取值：IPv4、IPv6，默认值IPv4 
-     * @return IPAddressVersion IP版本，可取值：IPv4、IPv6，默认值IPv4
+     * Get <p>IP版本，可取值：IPv4、IPv6，默认值IPv4</p> 
+     * @return IPAddressVersion <p>IP版本，可取值：IPv4、IPv6，默认值IPv4</p>
      */
     public String getIPAddressVersion() {
         return this.IPAddressVersion;
     }
 
     /**
-     * Set IP版本，可取值：IPv4、IPv6，默认值IPv4
-     * @param IPAddressVersion IP版本，可取值：IPv4、IPv6，默认值IPv4
+     * Set <p>IP版本，可取值：IPv4、IPv6，默认值IPv4</p>
+     * @param IPAddressVersion <p>IP版本，可取值：IPv4、IPv6，默认值IPv4</p>
      */
     public void setIPAddressVersion(String IPAddressVersion) {
         this.IPAddressVersion = IPAddressVersion;
     }
 
     /**
-     * Get 网络类型，可取值：normal、cn2，默认值normal 
-     * @return NetworkType 网络类型，可取值：normal、cn2，默认值normal
+     * Get <p>网络类型，可取值：normal、cn2，默认值normal</p> 
+     * @return NetworkType <p>网络类型，可取值：normal、cn2，默认值normal</p>
      */
     public String getNetworkType() {
         return this.NetworkType;
     }
 
     /**
-     * Set 网络类型，可取值：normal、cn2，默认值normal
-     * @param NetworkType 网络类型，可取值：normal、cn2，默认值normal
+     * Set <p>网络类型，可取值：normal、cn2，默认值normal</p>
+     * @param NetworkType <p>网络类型，可取值：normal、cn2，默认值normal</p>
      */
     public void setNetworkType(String NetworkType) {
         this.NetworkType = NetworkType;
     }
 
     /**
-     * Get 通道套餐类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道，CrossBorder表示跨境通道。 
-     * @return PackageType 通道套餐类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道，CrossBorder表示跨境通道。
+     * Get <p>通道套餐类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道，CrossBorder表示跨境通道。</p> 
+     * @return PackageType <p>通道套餐类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道，CrossBorder表示跨境通道。</p>
      */
     public String getPackageType() {
         return this.PackageType;
     }
 
     /**
-     * Set 通道套餐类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道，CrossBorder表示跨境通道。
-     * @param PackageType 通道套餐类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道，CrossBorder表示跨境通道。
+     * Set <p>通道套餐类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道，CrossBorder表示跨境通道。</p>
+     * @param PackageType <p>通道套餐类型。Thunder表示标准通道组，Accelerator表示游戏加速器通道，CrossBorder表示跨境通道。</p>
      */
     public void setPackageType(String PackageType) {
         this.PackageType = PackageType;
     }
 
     /**
-     * Get 该字段已废弃，当IPAddressVersion为IPv4时，所创建的通道默认支持Http3.0；当为IPv6，默认不支持Http3.0。 
-     * @return Http3Supported 该字段已废弃，当IPAddressVersion为IPv4时，所创建的通道默认支持Http3.0；当为IPv6，默认不支持Http3.0。
+     * Get <p>该字段已废弃，当IPAddressVersion为IPv4时，所创建的通道默认支持Http3.0；当为IPv6，默认不支持Http3.0。</p> 
+     * @return Http3Supported <p>该字段已废弃，当IPAddressVersion为IPv4时，所创建的通道默认支持Http3.0；当为IPv6，默认不支持Http3.0。</p>
      */
     public Long getHttp3Supported() {
         return this.Http3Supported;
     }
 
     /**
-     * Set 该字段已废弃，当IPAddressVersion为IPv4时，所创建的通道默认支持Http3.0；当为IPv6，默认不支持Http3.0。
-     * @param Http3Supported 该字段已废弃，当IPAddressVersion为IPv4时，所创建的通道默认支持Http3.0；当为IPv6，默认不支持Http3.0。
+     * Set <p>该字段已废弃，当IPAddressVersion为IPv4时，所创建的通道默认支持Http3.0；当为IPv6，默认不支持Http3.0。</p>
+     * @param Http3Supported <p>该字段已废弃，当IPAddressVersion为IPv4时，所创建的通道默认支持Http3.0；当为IPv6，默认不支持Http3.0。</p>
      */
     public void setHttp3Supported(Long Http3Supported) {
         this.Http3Supported = Http3Supported;

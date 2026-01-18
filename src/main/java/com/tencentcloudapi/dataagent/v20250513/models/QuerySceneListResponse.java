@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class QuerySceneListResponse extends AbstractModel {
 
     /**
+    * 场景列表
+    */
+    @SerializedName("Datas")
+    @Expose
+    private Scene [] Datas;
+
+    /**
     * 总数
     */
     @SerializedName("Total")
@@ -36,6 +43,22 @@ public class QuerySceneListResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 场景列表 
+     * @return Datas 场景列表
+     */
+    public Scene [] getDatas() {
+        return this.Datas;
+    }
+
+    /**
+     * Set 场景列表
+     * @param Datas 场景列表
+     */
+    public void setDatas(Scene [] Datas) {
+        this.Datas = Datas;
+    }
 
     /**
      * Get 总数 
@@ -77,6 +100,12 @@ public class QuerySceneListResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public QuerySceneListResponse(QuerySceneListResponse source) {
+        if (source.Datas != null) {
+            this.Datas = new Scene[source.Datas.length];
+            for (int i = 0; i < source.Datas.length; i++) {
+                this.Datas[i] = new Scene(source.Datas[i]);
+            }
+        }
         if (source.Total != null) {
             this.Total = new Long(source.Total);
         }
@@ -90,6 +119,7 @@ public class QuerySceneListResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Datas.", this.Datas);
         this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

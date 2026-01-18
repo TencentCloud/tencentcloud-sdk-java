@@ -82,6 +82,13 @@ public class CreateSceneAigcVideoTaskRequest extends AbstractModel {
     private String ExtInfo;
 
     /**
+    * 用户自定义prompt
+    */
+    @SerializedName("Prompt")
+    @Expose
+    private String Prompt;
+
+    /**
      * Get **点播应用 ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。** 
      * @return SubAppId **点播应用 ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。**
      */
@@ -217,6 +224,22 @@ public class CreateSceneAigcVideoTaskRequest extends AbstractModel {
         this.ExtInfo = ExtInfo;
     }
 
+    /**
+     * Get 用户自定义prompt 
+     * @return Prompt 用户自定义prompt
+     */
+    public String getPrompt() {
+        return this.Prompt;
+    }
+
+    /**
+     * Set 用户自定义prompt
+     * @param Prompt 用户自定义prompt
+     */
+    public void setPrompt(String Prompt) {
+        this.Prompt = Prompt;
+    }
+
     public CreateSceneAigcVideoTaskRequest() {
     }
 
@@ -252,6 +275,9 @@ public class CreateSceneAigcVideoTaskRequest extends AbstractModel {
         if (source.ExtInfo != null) {
             this.ExtInfo = new String(source.ExtInfo);
         }
+        if (source.Prompt != null) {
+            this.Prompt = new String(source.Prompt);
+        }
     }
 
 
@@ -267,6 +293,7 @@ public class CreateSceneAigcVideoTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
         this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
+        this.setParamSimple(map, prefix + "Prompt", this.Prompt);
 
     }
 }

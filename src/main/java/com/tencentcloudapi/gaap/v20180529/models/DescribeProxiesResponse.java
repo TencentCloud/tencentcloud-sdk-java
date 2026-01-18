@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeProxiesResponse extends AbstractModel {
 
     /**
-    * 通道个数。
+    * <p>通道个数。</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * （旧参数，请切换到ProxySet）通道实例信息列表。
+    * <p>（旧参数，请切换到ProxySet）通道实例信息列表。</p>
     */
     @SerializedName("InstanceSet")
     @Expose
     private ProxyInfo [] InstanceSet;
 
     /**
-    * （新参数）通道实例信息列表。
+    * <p>（新参数）通道实例信息列表。</p>
     */
     @SerializedName("ProxySet")
     @Expose
@@ -52,48 +52,48 @@ public class DescribeProxiesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 通道个数。 
-     * @return TotalCount 通道个数。
+     * Get <p>通道个数。</p> 
+     * @return TotalCount <p>通道个数。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 通道个数。
-     * @param TotalCount 通道个数。
+     * Set <p>通道个数。</p>
+     * @param TotalCount <p>通道个数。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get （旧参数，请切换到ProxySet）通道实例信息列表。 
-     * @return InstanceSet （旧参数，请切换到ProxySet）通道实例信息列表。
+     * Get <p>（旧参数，请切换到ProxySet）通道实例信息列表。</p> 
+     * @return InstanceSet <p>（旧参数，请切换到ProxySet）通道实例信息列表。</p>
      */
     public ProxyInfo [] getInstanceSet() {
         return this.InstanceSet;
     }
 
     /**
-     * Set （旧参数，请切换到ProxySet）通道实例信息列表。
-     * @param InstanceSet （旧参数，请切换到ProxySet）通道实例信息列表。
+     * Set <p>（旧参数，请切换到ProxySet）通道实例信息列表。</p>
+     * @param InstanceSet <p>（旧参数，请切换到ProxySet）通道实例信息列表。</p>
      */
     public void setInstanceSet(ProxyInfo [] InstanceSet) {
         this.InstanceSet = InstanceSet;
     }
 
     /**
-     * Get （新参数）通道实例信息列表。 
-     * @return ProxySet （新参数）通道实例信息列表。
+     * Get <p>（新参数）通道实例信息列表。</p> 
+     * @return ProxySet <p>（新参数）通道实例信息列表。</p>
      */
     public ProxyInfo [] getProxySet() {
         return this.ProxySet;
     }
 
     /**
-     * Set （新参数）通道实例信息列表。
-     * @param ProxySet （新参数）通道实例信息列表。
+     * Set <p>（新参数）通道实例信息列表。</p>
+     * @param ProxySet <p>（新参数）通道实例信息列表。</p>
      */
     public void setProxySet(ProxyInfo [] ProxySet) {
         this.ProxySet = ProxySet;

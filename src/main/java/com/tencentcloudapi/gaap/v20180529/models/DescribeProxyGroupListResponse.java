@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeProxyGroupListResponse extends AbstractModel {
 
     /**
-    * 通道组总数。
+    * <p>通道组总数。</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 通道组列表。
+    * <p>通道组列表。</p>
     */
     @SerializedName("ProxyGroupList")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeProxyGroupListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 通道组总数。 
-     * @return TotalCount 通道组总数。
+     * Get <p>通道组总数。</p> 
+     * @return TotalCount <p>通道组总数。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 通道组总数。
-     * @param TotalCount 通道组总数。
+     * Set <p>通道组总数。</p>
+     * @param TotalCount <p>通道组总数。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 通道组列表。 
-     * @return ProxyGroupList 通道组列表。
+     * Get <p>通道组列表。</p> 
+     * @return ProxyGroupList <p>通道组列表。</p>
      */
     public ProxyGroupInfo [] getProxyGroupList() {
         return this.ProxyGroupList;
     }
 
     /**
-     * Set 通道组列表。
-     * @param ProxyGroupList 通道组列表。
+     * Set <p>通道组列表。</p>
+     * @param ProxyGroupList <p>通道组列表。</p>
      */
     public void setProxyGroupList(ProxyGroupInfo [] ProxyGroupList) {
         this.ProxyGroupList = ProxyGroupList;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeCcGeoIPBlockConfigListRequest extends AbstractModel {
 
     /**
-    * DDoS防护子产品代号（bgpip-multip：表示高防包；bgpip：表示高防IP）
+    * DDoS防护子产品代号（bgp-multip：表示高防包；bgpip：表示高防IP）
     */
     @SerializedName("Business")
     @Expose
@@ -73,16 +73,16 @@ public class DescribeCcGeoIPBlockConfigListRequest extends AbstractModel {
     private String Protocol;
 
     /**
-     * Get DDoS防护子产品代号（bgpip-multip：表示高防包；bgpip：表示高防IP） 
-     * @return Business DDoS防护子产品代号（bgpip-multip：表示高防包；bgpip：表示高防IP）
+     * Get DDoS防护子产品代号（bgp-multip：表示高防包；bgpip：表示高防IP） 
+     * @return Business DDoS防护子产品代号（bgp-multip：表示高防包；bgpip：表示高防IP）
      */
     public String getBusiness() {
         return this.Business;
     }
 
     /**
-     * Set DDoS防护子产品代号（bgpip-multip：表示高防包；bgpip：表示高防IP）
-     * @param Business DDoS防护子产品代号（bgpip-multip：表示高防包；bgpip：表示高防IP）
+     * Set DDoS防护子产品代号（bgp-multip：表示高防包；bgpip：表示高防IP）
+     * @param Business DDoS防护子产品代号（bgp-multip：表示高防包；bgpip：表示高防IP）
      */
     public void setBusiness(String Business) {
         this.Business = Business;

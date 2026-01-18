@@ -45,6 +45,13 @@ public class UpgradePlan extends AbstractModel {
     private String ClusterName;
 
     /**
+    * 集群地域
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
     * 预计开始时间
     */
     @SerializedName("PlanedStartAt")
@@ -125,6 +132,22 @@ public class UpgradePlan extends AbstractModel {
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
+    }
+
+    /**
+     * Get 集群地域 
+     * @return Region 集群地域
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set 集群地域
+     * @param Region 集群地域
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
     }
 
     /**
@@ -224,6 +247,9 @@ public class UpgradePlan extends AbstractModel {
         if (source.ClusterName != null) {
             this.ClusterName = new String(source.ClusterName);
         }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
         if (source.PlanedStartAt != null) {
             this.PlanedStartAt = new String(source.PlanedStartAt);
         }
@@ -249,6 +275,7 @@ public class UpgradePlan extends AbstractModel {
         this.setParamSimple(map, prefix + "ID", this.ID);
         this.setParamSimple(map, prefix + "ClusterID", this.ClusterID);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
+        this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "PlanedStartAt", this.PlanedStartAt);
         this.setParamSimple(map, prefix + "UpgradeStartAt", this.UpgradeStartAt);
         this.setParamSimple(map, prefix + "UpgradeEndAt", this.UpgradeEndAt);

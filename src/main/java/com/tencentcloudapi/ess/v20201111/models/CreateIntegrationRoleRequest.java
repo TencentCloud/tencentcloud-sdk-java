@@ -67,7 +67,7 @@ public class CreateIntegrationRoleRequest extends AbstractModel {
     */
     @SerializedName("SubOrganizationIds")
     @Expose
-    private String SubOrganizationIds;
+    private String [] SubOrganizationIds;
 
     /**
     * 代理企业和员工的信息。
@@ -177,7 +177,7 @@ public class CreateIntegrationRoleRequest extends AbstractModel {
      * Get 集团角色的话，需要传递集团子企业列表，如果是全选，则传1 
      * @return SubOrganizationIds 集团角色的话，需要传递集团子企业列表，如果是全选，则传1
      */
-    public String getSubOrganizationIds() {
+    public String [] getSubOrganizationIds() {
         return this.SubOrganizationIds;
     }
 
@@ -185,7 +185,7 @@ public class CreateIntegrationRoleRequest extends AbstractModel {
      * Set 集团角色的话，需要传递集团子企业列表，如果是全选，则传1
      * @param SubOrganizationIds 集团角色的话，需要传递集团子企业列表，如果是全选，则传1
      */
-    public void setSubOrganizationIds(String SubOrganizationIds) {
+    public void setSubOrganizationIds(String [] SubOrganizationIds) {
         this.SubOrganizationIds = SubOrganizationIds;
     }
 
@@ -236,7 +236,10 @@ public class CreateIntegrationRoleRequest extends AbstractModel {
             }
         }
         if (source.SubOrganizationIds != null) {
-            this.SubOrganizationIds = new String(source.SubOrganizationIds);
+            this.SubOrganizationIds = new String[source.SubOrganizationIds.length];
+            for (int i = 0; i < source.SubOrganizationIds.length; i++) {
+                this.SubOrganizationIds[i] = new String(source.SubOrganizationIds[i]);
+            }
         }
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
@@ -253,7 +256,7 @@ public class CreateIntegrationRoleRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "IsGroupRole", this.IsGroupRole);
         this.setParamArrayObj(map, prefix + "PermissionGroups.", this.PermissionGroups);
-        this.setParamSimple(map, prefix + "SubOrganizationIds", this.SubOrganizationIds);
+        this.setParamArraySimple(map, prefix + "SubOrganizationIds.", this.SubOrganizationIds);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
 
     }

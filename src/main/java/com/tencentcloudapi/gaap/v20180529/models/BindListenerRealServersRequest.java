@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class BindListenerRealServersRequest extends AbstractModel {
 
     /**
-    * 监听器ID
+    * <p>监听器ID</p>
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * 待绑定源站列表。如果该监听器的源站调度策略是加权轮询，需要填写源站权重 RealServerWeight, 不填或者其他调度类型默认源站权重为1。
+    * <p>待绑定源站列表。如果该监听器的源站调度策略是加权轮询，需要填写源站权重 RealServerWeight, 不填或者其他调度类型默认源站权重为1。</p>
     */
     @SerializedName("RealServerBindSet")
     @Expose
     private RealServerBindSetReq [] RealServerBindSet;
 
     /**
-     * Get 监听器ID 
-     * @return ListenerId 监听器ID
+     * Get <p>监听器ID</p> 
+     * @return ListenerId <p>监听器ID</p>
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set 监听器ID
-     * @param ListenerId 监听器ID
+     * Set <p>监听器ID</p>
+     * @param ListenerId <p>监听器ID</p>
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get 待绑定源站列表。如果该监听器的源站调度策略是加权轮询，需要填写源站权重 RealServerWeight, 不填或者其他调度类型默认源站权重为1。 
-     * @return RealServerBindSet 待绑定源站列表。如果该监听器的源站调度策略是加权轮询，需要填写源站权重 RealServerWeight, 不填或者其他调度类型默认源站权重为1。
+     * Get <p>待绑定源站列表。如果该监听器的源站调度策略是加权轮询，需要填写源站权重 RealServerWeight, 不填或者其他调度类型默认源站权重为1。</p> 
+     * @return RealServerBindSet <p>待绑定源站列表。如果该监听器的源站调度策略是加权轮询，需要填写源站权重 RealServerWeight, 不填或者其他调度类型默认源站权重为1。</p>
      */
     public RealServerBindSetReq [] getRealServerBindSet() {
         return this.RealServerBindSet;
     }
 
     /**
-     * Set 待绑定源站列表。如果该监听器的源站调度策略是加权轮询，需要填写源站权重 RealServerWeight, 不填或者其他调度类型默认源站权重为1。
-     * @param RealServerBindSet 待绑定源站列表。如果该监听器的源站调度策略是加权轮询，需要填写源站权重 RealServerWeight, 不填或者其他调度类型默认源站权重为1。
+     * Set <p>待绑定源站列表。如果该监听器的源站调度策略是加权轮询，需要填写源站权重 RealServerWeight, 不填或者其他调度类型默认源站权重为1。</p>
+     * @param RealServerBindSet <p>待绑定源站列表。如果该监听器的源站调度策略是加权轮询，需要填写源站权重 RealServerWeight, 不填或者其他调度类型默认源站权重为1。</p>
      */
     public void setRealServerBindSet(RealServerBindSetReq [] RealServerBindSet) {
         this.RealServerBindSet = RealServerBindSet;

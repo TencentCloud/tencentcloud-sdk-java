@@ -31,6 +31,15 @@ public class AigcVideoTaskInputFileInfo extends AbstractModel {
     private String Type;
 
     /**
+    * 文件分类。取值为：
+<li>Image: 图片；</li>
+<li>Video: 视频。</li>
+    */
+    @SerializedName("Category")
+    @Expose
+    private String Category;
+
+    /**
     * 媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。当 Type 取值为 File 时，本参数有效。说明：
 1. 推荐使用小于10M的图片；
 2. 图片格式的取值为：jpeg，jpg, png。
@@ -90,6 +99,30 @@ public class AigcVideoTaskInputFileInfo extends AbstractModel {
      */
     public void setType(String Type) {
         this.Type = Type;
+    }
+
+    /**
+     * Get 文件分类。取值为：
+<li>Image: 图片；</li>
+<li>Video: 视频。</li> 
+     * @return Category 文件分类。取值为：
+<li>Image: 图片；</li>
+<li>Video: 视频。</li>
+     */
+    public String getCategory() {
+        return this.Category;
+    }
+
+    /**
+     * Set 文件分类。取值为：
+<li>Image: 图片；</li>
+<li>Video: 视频。</li>
+     * @param Category 文件分类。取值为：
+<li>Image: 图片；</li>
+<li>Video: 视频。</li>
+     */
+    public void setCategory(String Category) {
+        this.Category = Category;
     }
 
     /**
@@ -227,6 +260,9 @@ public class AigcVideoTaskInputFileInfo extends AbstractModel {
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
+        if (source.Category != null) {
+            this.Category = new String(source.Category);
+        }
         if (source.FileId != null) {
             this.FileId = new String(source.FileId);
         }
@@ -250,6 +286,7 @@ public class AigcVideoTaskInputFileInfo extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "Category", this.Category);
         this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "ReferenceType", this.ReferenceType);

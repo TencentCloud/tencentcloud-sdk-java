@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeGroupAndStatisticsProxyResponse extends AbstractModel {
 
     /**
-    * 可以统计的通道组信息
+    * <p>可以统计的通道组信息</p>
     */
     @SerializedName("GroupSet")
     @Expose
     private GroupStatisticsInfo [] GroupSet;
 
     /**
-    * 通道组数量
+    * <p>通道组数量</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeGroupAndStatisticsProxyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 可以统计的通道组信息 
-     * @return GroupSet 可以统计的通道组信息
+     * Get <p>可以统计的通道组信息</p> 
+     * @return GroupSet <p>可以统计的通道组信息</p>
      */
     public GroupStatisticsInfo [] getGroupSet() {
         return this.GroupSet;
     }
 
     /**
-     * Set 可以统计的通道组信息
-     * @param GroupSet 可以统计的通道组信息
+     * Set <p>可以统计的通道组信息</p>
+     * @param GroupSet <p>可以统计的通道组信息</p>
      */
     public void setGroupSet(GroupStatisticsInfo [] GroupSet) {
         this.GroupSet = GroupSet;
     }
 
     /**
-     * Get 通道组数量 
-     * @return TotalCount 通道组数量
+     * Get <p>通道组数量</p> 
+     * @return TotalCount <p>通道组数量</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 通道组数量
-     * @param TotalCount 通道组数量
+     * Set <p>通道组数量</p>
+     * @param TotalCount <p>通道组数量</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

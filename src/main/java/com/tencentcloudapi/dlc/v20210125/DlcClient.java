@@ -336,6 +336,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *创建数据源
+     * @param req CreateDatasourceConnectionRequest
+     * @return CreateDatasourceConnectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDatasourceConnectionResponse CreateDatasourceConnection(CreateDatasourceConnectionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDatasourceConnection", CreateDatasourceConnectionResponse.class);
+    }
+
+    /**
      *该接口（CreateExportTask）用于创建导出任务
      * @param req CreateExportTaskRequest
      * @return CreateExportTaskResponse

@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class ModifyGlobalDomainDnsRequest extends AbstractModel {
 
     /**
-    * 解析记录ID
+    * <p>解析记录ID</p>
     */
     @SerializedName("DnsRecordId")
     @Expose
     private Long DnsRecordId;
 
     /**
-    * 域名ID
+    * <p>域名ID</p>
     */
     @SerializedName("DomainId")
     @Expose
     private String DomainId;
 
     /**
-    * 国家ID列表
+    * <p>国家ID列表</p>
     */
     @SerializedName("NationCountryInnerCodes")
     @Expose
     private String [] NationCountryInnerCodes;
 
     /**
-    * 通道ID列表
+    * <p>通道ID列表</p>
     */
     @SerializedName("ProxyIdList")
     @Expose
     private String [] ProxyIdList;
 
     /**
-     * Get 解析记录ID 
-     * @return DnsRecordId 解析记录ID
+     * Get <p>解析记录ID</p> 
+     * @return DnsRecordId <p>解析记录ID</p>
      */
     public Long getDnsRecordId() {
         return this.DnsRecordId;
     }
 
     /**
-     * Set 解析记录ID
-     * @param DnsRecordId 解析记录ID
+     * Set <p>解析记录ID</p>
+     * @param DnsRecordId <p>解析记录ID</p>
      */
     public void setDnsRecordId(Long DnsRecordId) {
         this.DnsRecordId = DnsRecordId;
     }
 
     /**
-     * Get 域名ID 
-     * @return DomainId 域名ID
+     * Get <p>域名ID</p> 
+     * @return DomainId <p>域名ID</p>
      */
     public String getDomainId() {
         return this.DomainId;
     }
 
     /**
-     * Set 域名ID
-     * @param DomainId 域名ID
+     * Set <p>域名ID</p>
+     * @param DomainId <p>域名ID</p>
      */
     public void setDomainId(String DomainId) {
         this.DomainId = DomainId;
     }
 
     /**
-     * Get 国家ID列表 
-     * @return NationCountryInnerCodes 国家ID列表
+     * Get <p>国家ID列表</p> 
+     * @return NationCountryInnerCodes <p>国家ID列表</p>
      */
     public String [] getNationCountryInnerCodes() {
         return this.NationCountryInnerCodes;
     }
 
     /**
-     * Set 国家ID列表
-     * @param NationCountryInnerCodes 国家ID列表
+     * Set <p>国家ID列表</p>
+     * @param NationCountryInnerCodes <p>国家ID列表</p>
      */
     public void setNationCountryInnerCodes(String [] NationCountryInnerCodes) {
         this.NationCountryInnerCodes = NationCountryInnerCodes;
     }
 
     /**
-     * Get 通道ID列表 
-     * @return ProxyIdList 通道ID列表
+     * Get <p>通道ID列表</p> 
+     * @return ProxyIdList <p>通道ID列表</p>
      */
     public String [] getProxyIdList() {
         return this.ProxyIdList;
     }
 
     /**
-     * Set 通道ID列表
-     * @param ProxyIdList 通道ID列表
+     * Set <p>通道ID列表</p>
+     * @param ProxyIdList <p>通道ID列表</p>
      */
     public void setProxyIdList(String [] ProxyIdList) {
         this.ProxyIdList = ProxyIdList;

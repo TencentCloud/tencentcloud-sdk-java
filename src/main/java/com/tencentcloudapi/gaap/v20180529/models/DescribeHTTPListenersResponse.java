@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeHTTPListenersResponse extends AbstractModel {
 
     /**
-    * 监听器数量
+    * <p>监听器数量</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * HTTP监听器列表
+    * <p>HTTP监听器列表</p>
     */
     @SerializedName("ListenerSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeHTTPListenersResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 监听器数量 
-     * @return TotalCount 监听器数量
+     * Get <p>监听器数量</p> 
+     * @return TotalCount <p>监听器数量</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 监听器数量
-     * @param TotalCount 监听器数量
+     * Set <p>监听器数量</p>
+     * @param TotalCount <p>监听器数量</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get HTTP监听器列表 
-     * @return ListenerSet HTTP监听器列表
+     * Get <p>HTTP监听器列表</p> 
+     * @return ListenerSet <p>HTTP监听器列表</p>
      */
     public HTTPListener [] getListenerSet() {
         return this.ListenerSet;
     }
 
     /**
-     * Set HTTP监听器列表
-     * @param ListenerSet HTTP监听器列表
+     * Set <p>HTTP监听器列表</p>
+     * @param ListenerSet <p>HTTP监听器列表</p>
      */
     public void setListenerSet(HTTPListener [] ListenerSet) {
         this.ListenerSet = ListenerSet;

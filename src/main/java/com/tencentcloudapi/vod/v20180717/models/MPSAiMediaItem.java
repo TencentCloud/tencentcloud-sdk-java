@@ -24,46 +24,126 @@ import java.util.HashMap;
 public class MPSAiMediaItem extends AbstractModel {
 
     /**
-    * MPS智能处理任务类型
+    * MPS智能处理任务类型，可取值：
+<li>AiAnalysis.ClassificationTask：智能分类任务。</li>
+<li>AiAnalysis.CoverTask：智能封面任务。</li>
+<li>AiAnalysis.TagTask：智能标签任务。</li>
+<li>AiAnalysis.FrameTagTask：智能按帧标签任务。</li>
+<li>AiAnalysis.HighlightTask：智能高光任务。</li>
+<li>AiAnalysis.SegmentTask：智能拆条任务。</li>
+<li>AiAnalysis.HeadTailTask：智能片头片尾任务。</li>
+<li>AiAnalysis.DescriptionTask：智能摘要任务。</li>
+<li>AiAnalysis.HorizontalToVerticalTask：智能横转竖任务。</li>
+<li>AiAnalysis.DubbingTask：智能译制任务。</li>
+<li>AiAnalysis.VideoRemakeTask：智能去重任务。</li>
+<li>AiAnalysis.VideoComprehensionTask：视频理解任务。</li>
+<li>SmartSubtitle.AsrFullTextTask：智能语音全文识别任务。</li>
+<li>SmartSubtitle.TransTextTask：	翻译结果。</li>
+<li>SmartSubtitle.PureSubtitleTransTask：返回纯字幕文件翻译结果。</li>
+<li>SmartSubtitle.OcrFullTextTask：智能文字提取字幕任务。</li>
     */
     @SerializedName("TaskType")
     @Expose
     private String TaskType;
 
     /**
-    * MPS 智能媒资任务输出
+    * MPS 智能处理任务结果集合
     */
     @SerializedName("AiMediaTasks")
     @Expose
     private MPSAiMediaTask [] AiMediaTasks;
 
     /**
-     * Get MPS智能处理任务类型 
-     * @return TaskType MPS智能处理任务类型
+     * Get MPS智能处理任务类型，可取值：
+<li>AiAnalysis.ClassificationTask：智能分类任务。</li>
+<li>AiAnalysis.CoverTask：智能封面任务。</li>
+<li>AiAnalysis.TagTask：智能标签任务。</li>
+<li>AiAnalysis.FrameTagTask：智能按帧标签任务。</li>
+<li>AiAnalysis.HighlightTask：智能高光任务。</li>
+<li>AiAnalysis.SegmentTask：智能拆条任务。</li>
+<li>AiAnalysis.HeadTailTask：智能片头片尾任务。</li>
+<li>AiAnalysis.DescriptionTask：智能摘要任务。</li>
+<li>AiAnalysis.HorizontalToVerticalTask：智能横转竖任务。</li>
+<li>AiAnalysis.DubbingTask：智能译制任务。</li>
+<li>AiAnalysis.VideoRemakeTask：智能去重任务。</li>
+<li>AiAnalysis.VideoComprehensionTask：视频理解任务。</li>
+<li>SmartSubtitle.AsrFullTextTask：智能语音全文识别任务。</li>
+<li>SmartSubtitle.TransTextTask：	翻译结果。</li>
+<li>SmartSubtitle.PureSubtitleTransTask：返回纯字幕文件翻译结果。</li>
+<li>SmartSubtitle.OcrFullTextTask：智能文字提取字幕任务。</li> 
+     * @return TaskType MPS智能处理任务类型，可取值：
+<li>AiAnalysis.ClassificationTask：智能分类任务。</li>
+<li>AiAnalysis.CoverTask：智能封面任务。</li>
+<li>AiAnalysis.TagTask：智能标签任务。</li>
+<li>AiAnalysis.FrameTagTask：智能按帧标签任务。</li>
+<li>AiAnalysis.HighlightTask：智能高光任务。</li>
+<li>AiAnalysis.SegmentTask：智能拆条任务。</li>
+<li>AiAnalysis.HeadTailTask：智能片头片尾任务。</li>
+<li>AiAnalysis.DescriptionTask：智能摘要任务。</li>
+<li>AiAnalysis.HorizontalToVerticalTask：智能横转竖任务。</li>
+<li>AiAnalysis.DubbingTask：智能译制任务。</li>
+<li>AiAnalysis.VideoRemakeTask：智能去重任务。</li>
+<li>AiAnalysis.VideoComprehensionTask：视频理解任务。</li>
+<li>SmartSubtitle.AsrFullTextTask：智能语音全文识别任务。</li>
+<li>SmartSubtitle.TransTextTask：	翻译结果。</li>
+<li>SmartSubtitle.PureSubtitleTransTask：返回纯字幕文件翻译结果。</li>
+<li>SmartSubtitle.OcrFullTextTask：智能文字提取字幕任务。</li>
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set MPS智能处理任务类型
-     * @param TaskType MPS智能处理任务类型
+     * Set MPS智能处理任务类型，可取值：
+<li>AiAnalysis.ClassificationTask：智能分类任务。</li>
+<li>AiAnalysis.CoverTask：智能封面任务。</li>
+<li>AiAnalysis.TagTask：智能标签任务。</li>
+<li>AiAnalysis.FrameTagTask：智能按帧标签任务。</li>
+<li>AiAnalysis.HighlightTask：智能高光任务。</li>
+<li>AiAnalysis.SegmentTask：智能拆条任务。</li>
+<li>AiAnalysis.HeadTailTask：智能片头片尾任务。</li>
+<li>AiAnalysis.DescriptionTask：智能摘要任务。</li>
+<li>AiAnalysis.HorizontalToVerticalTask：智能横转竖任务。</li>
+<li>AiAnalysis.DubbingTask：智能译制任务。</li>
+<li>AiAnalysis.VideoRemakeTask：智能去重任务。</li>
+<li>AiAnalysis.VideoComprehensionTask：视频理解任务。</li>
+<li>SmartSubtitle.AsrFullTextTask：智能语音全文识别任务。</li>
+<li>SmartSubtitle.TransTextTask：	翻译结果。</li>
+<li>SmartSubtitle.PureSubtitleTransTask：返回纯字幕文件翻译结果。</li>
+<li>SmartSubtitle.OcrFullTextTask：智能文字提取字幕任务。</li>
+     * @param TaskType MPS智能处理任务类型，可取值：
+<li>AiAnalysis.ClassificationTask：智能分类任务。</li>
+<li>AiAnalysis.CoverTask：智能封面任务。</li>
+<li>AiAnalysis.TagTask：智能标签任务。</li>
+<li>AiAnalysis.FrameTagTask：智能按帧标签任务。</li>
+<li>AiAnalysis.HighlightTask：智能高光任务。</li>
+<li>AiAnalysis.SegmentTask：智能拆条任务。</li>
+<li>AiAnalysis.HeadTailTask：智能片头片尾任务。</li>
+<li>AiAnalysis.DescriptionTask：智能摘要任务。</li>
+<li>AiAnalysis.HorizontalToVerticalTask：智能横转竖任务。</li>
+<li>AiAnalysis.DubbingTask：智能译制任务。</li>
+<li>AiAnalysis.VideoRemakeTask：智能去重任务。</li>
+<li>AiAnalysis.VideoComprehensionTask：视频理解任务。</li>
+<li>SmartSubtitle.AsrFullTextTask：智能语音全文识别任务。</li>
+<li>SmartSubtitle.TransTextTask：	翻译结果。</li>
+<li>SmartSubtitle.PureSubtitleTransTask：返回纯字幕文件翻译结果。</li>
+<li>SmartSubtitle.OcrFullTextTask：智能文字提取字幕任务。</li>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get MPS 智能媒资任务输出 
-     * @return AiMediaTasks MPS 智能媒资任务输出
+     * Get MPS 智能处理任务结果集合 
+     * @return AiMediaTasks MPS 智能处理任务结果集合
      */
     public MPSAiMediaTask [] getAiMediaTasks() {
         return this.AiMediaTasks;
     }
 
     /**
-     * Set MPS 智能媒资任务输出
-     * @param AiMediaTasks MPS 智能媒资任务输出
+     * Set MPS 智能处理任务结果集合
+     * @param AiMediaTasks MPS 智能处理任务结果集合
      */
     public void setAiMediaTasks(MPSAiMediaTask [] AiMediaTasks) {
         this.AiMediaTasks = AiMediaTasks;

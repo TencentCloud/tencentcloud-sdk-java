@@ -56,6 +56,27 @@ public class AigcVideoExtraParam extends AbstractModel {
     private String AspectRatio;
 
     /**
+    * 是否添加图标水印。
+1. Hailuo 支持此参数。
+2. Kling 支持此参数。
+3. Vidu 支持此参数。
+    */
+    @SerializedName("LogoAdd")
+    @Expose
+    private Long LogoAdd;
+
+    /**
+    * 为视频生成音频。接受的值包括 true 或 false。 
+
+支持此参数的模型：
+1. GV，默认true。
+2. OS，默认true。
+    */
+    @SerializedName("EnableAudio")
+    @Expose
+    private Boolean EnableAudio;
+
+    /**
     * 错峰模型，目前仅支持Vidu模型。
 错峰模式下提交的任务，会在48小时内生成，未能完成的任务会被自动取消。
     */
@@ -168,6 +189,66 @@ public class AigcVideoExtraParam extends AbstractModel {
     }
 
     /**
+     * Get 是否添加图标水印。
+1. Hailuo 支持此参数。
+2. Kling 支持此参数。
+3. Vidu 支持此参数。 
+     * @return LogoAdd 是否添加图标水印。
+1. Hailuo 支持此参数。
+2. Kling 支持此参数。
+3. Vidu 支持此参数。
+     */
+    public Long getLogoAdd() {
+        return this.LogoAdd;
+    }
+
+    /**
+     * Set 是否添加图标水印。
+1. Hailuo 支持此参数。
+2. Kling 支持此参数。
+3. Vidu 支持此参数。
+     * @param LogoAdd 是否添加图标水印。
+1. Hailuo 支持此参数。
+2. Kling 支持此参数。
+3. Vidu 支持此参数。
+     */
+    public void setLogoAdd(Long LogoAdd) {
+        this.LogoAdd = LogoAdd;
+    }
+
+    /**
+     * Get 为视频生成音频。接受的值包括 true 或 false。 
+
+支持此参数的模型：
+1. GV，默认true。
+2. OS，默认true。 
+     * @return EnableAudio 为视频生成音频。接受的值包括 true 或 false。 
+
+支持此参数的模型：
+1. GV，默认true。
+2. OS，默认true。
+     */
+    public Boolean getEnableAudio() {
+        return this.EnableAudio;
+    }
+
+    /**
+     * Set 为视频生成音频。接受的值包括 true 或 false。 
+
+支持此参数的模型：
+1. GV，默认true。
+2. OS，默认true。
+     * @param EnableAudio 为视频生成音频。接受的值包括 true 或 false。 
+
+支持此参数的模型：
+1. GV，默认true。
+2. OS，默认true。
+     */
+    public void setEnableAudio(Boolean EnableAudio) {
+        this.EnableAudio = EnableAudio;
+    }
+
+    /**
      * Get 错峰模型，目前仅支持Vidu模型。
 错峰模式下提交的任务，会在48小时内生成，未能完成的任务会被自动取消。 
      * @return OffPeak 错峰模型，目前仅支持Vidu模型。
@@ -201,6 +282,12 @@ public class AigcVideoExtraParam extends AbstractModel {
         if (source.AspectRatio != null) {
             this.AspectRatio = new String(source.AspectRatio);
         }
+        if (source.LogoAdd != null) {
+            this.LogoAdd = new Long(source.LogoAdd);
+        }
+        if (source.EnableAudio != null) {
+            this.EnableAudio = new Boolean(source.EnableAudio);
+        }
         if (source.OffPeak != null) {
             this.OffPeak = new Boolean(source.OffPeak);
         }
@@ -213,6 +300,8 @@ public class AigcVideoExtraParam extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Resolution", this.Resolution);
         this.setParamSimple(map, prefix + "AspectRatio", this.AspectRatio);
+        this.setParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
+        this.setParamSimple(map, prefix + "EnableAudio", this.EnableAudio);
         this.setParamSimple(map, prefix + "OffPeak", this.OffPeak);
 
     }

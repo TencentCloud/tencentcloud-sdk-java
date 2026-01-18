@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CheckProxyCreateResponse extends AbstractModel {
 
     /**
-    * 查询能否创建给定配置的通道，1可以创建，0不可创建。
+    * <p>查询能否创建给定配置的通道，1可以创建，0不可创建。</p>
     */
     @SerializedName("CheckFlag")
     @Expose
@@ -38,16 +38,16 @@ public class CheckProxyCreateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 查询能否创建给定配置的通道，1可以创建，0不可创建。 
-     * @return CheckFlag 查询能否创建给定配置的通道，1可以创建，0不可创建。
+     * Get <p>查询能否创建给定配置的通道，1可以创建，0不可创建。</p> 
+     * @return CheckFlag <p>查询能否创建给定配置的通道，1可以创建，0不可创建。</p>
      */
     public Long getCheckFlag() {
         return this.CheckFlag;
     }
 
     /**
-     * Set 查询能否创建给定配置的通道，1可以创建，0不可创建。
-     * @param CheckFlag 查询能否创建给定配置的通道，1可以创建，0不可创建。
+     * Set <p>查询能否创建给定配置的通道，1可以创建，0不可创建。</p>
+     * @param CheckFlag <p>查询能否创建给定配置的通道，1可以创建，0不可创建。</p>
      */
     public void setCheckFlag(Long CheckFlag) {
         this.CheckFlag = CheckFlag;

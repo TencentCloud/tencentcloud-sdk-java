@@ -314,6 +314,17 @@ public class RumClient extends AbstractClient{
     }
 
     /**
+     *获取DescribeDataPvUrlStatistics信息
+     * @param req DescribeDataPvUrlStatisticsV2Request
+     * @return DescribeDataPvUrlStatisticsV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataPvUrlStatisticsV2Response DescribeDataPvUrlStatisticsV2(DescribeDataPvUrlStatisticsV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataPvUrlStatisticsV2", DescribeDataPvUrlStatisticsV2Response.class);
+    }
+
+    /**
      *获取项目上报量
      * @param req DescribeDataReportCountRequest
      * @return DescribeDataReportCountResponse

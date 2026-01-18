@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class CreateHTTPListenerRequest extends AbstractModel {
 
     /**
-    * 监听器名称
+    * <p>监听器名称</p>
     */
     @SerializedName("ListenerName")
     @Expose
     private String ListenerName;
 
     /**
-    * 监听器端口，基于同种传输层协议（TCP 或 UDP）的监听器，端口不可重复
+    * <p>监听器端口，基于同种传输层协议（TCP 或 UDP）的监听器，端口不可重复</p>
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * 通道ID，与GroupId不能同时设置，对应为通道创建监听器
+    * <p>通道ID，与GroupId不能同时设置，对应为通道创建监听器</p>
     */
     @SerializedName("ProxyId")
     @Expose
     private String ProxyId;
 
     /**
-    * 通道组ID，与ProxyId不能同时设置，对应为通道组创建监听器
+    * <p>通道组ID，与ProxyId不能同时设置，对应为通道组创建监听器</p>
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-     * Get 监听器名称 
-     * @return ListenerName 监听器名称
+     * Get <p>监听器名称</p> 
+     * @return ListenerName <p>监听器名称</p>
      */
     public String getListenerName() {
         return this.ListenerName;
     }
 
     /**
-     * Set 监听器名称
-     * @param ListenerName 监听器名称
+     * Set <p>监听器名称</p>
+     * @param ListenerName <p>监听器名称</p>
      */
     public void setListenerName(String ListenerName) {
         this.ListenerName = ListenerName;
     }
 
     /**
-     * Get 监听器端口，基于同种传输层协议（TCP 或 UDP）的监听器，端口不可重复 
-     * @return Port 监听器端口，基于同种传输层协议（TCP 或 UDP）的监听器，端口不可重复
+     * Get <p>监听器端口，基于同种传输层协议（TCP 或 UDP）的监听器，端口不可重复</p> 
+     * @return Port <p>监听器端口，基于同种传输层协议（TCP 或 UDP）的监听器，端口不可重复</p>
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 监听器端口，基于同种传输层协议（TCP 或 UDP）的监听器，端口不可重复
-     * @param Port 监听器端口，基于同种传输层协议（TCP 或 UDP）的监听器，端口不可重复
+     * Set <p>监听器端口，基于同种传输层协议（TCP 或 UDP）的监听器，端口不可重复</p>
+     * @param Port <p>监听器端口，基于同种传输层协议（TCP 或 UDP）的监听器，端口不可重复</p>
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 通道ID，与GroupId不能同时设置，对应为通道创建监听器 
-     * @return ProxyId 通道ID，与GroupId不能同时设置，对应为通道创建监听器
+     * Get <p>通道ID，与GroupId不能同时设置，对应为通道创建监听器</p> 
+     * @return ProxyId <p>通道ID，与GroupId不能同时设置，对应为通道创建监听器</p>
      */
     public String getProxyId() {
         return this.ProxyId;
     }
 
     /**
-     * Set 通道ID，与GroupId不能同时设置，对应为通道创建监听器
-     * @param ProxyId 通道ID，与GroupId不能同时设置，对应为通道创建监听器
+     * Set <p>通道ID，与GroupId不能同时设置，对应为通道创建监听器</p>
+     * @param ProxyId <p>通道ID，与GroupId不能同时设置，对应为通道创建监听器</p>
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;
     }
 
     /**
-     * Get 通道组ID，与ProxyId不能同时设置，对应为通道组创建监听器 
-     * @return GroupId 通道组ID，与ProxyId不能同时设置，对应为通道组创建监听器
+     * Get <p>通道组ID，与ProxyId不能同时设置，对应为通道组创建监听器</p> 
+     * @return GroupId <p>通道组ID，与ProxyId不能同时设置，对应为通道组创建监听器</p>
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 通道组ID，与ProxyId不能同时设置，对应为通道组创建监听器
-     * @param GroupId 通道组ID，与ProxyId不能同时设置，对应为通道组创建监听器
+     * Set <p>通道组ID，与ProxyId不能同时设置，对应为通道组创建监听器</p>
+     * @param GroupId <p>通道组ID，与ProxyId不能同时设置，对应为通道组创建监听器</p>
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeProxyGroupStatisticsResponse extends AbstractModel {
 
     /**
-    * 通道组统计数据
+    * <p>通道组统计数据</p>
     */
     @SerializedName("StatisticsData")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeProxyGroupStatisticsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 通道组统计数据 
-     * @return StatisticsData 通道组统计数据
+     * Get <p>通道组统计数据</p> 
+     * @return StatisticsData <p>通道组统计数据</p>
      */
     public MetricStatisticsInfo [] getStatisticsData() {
         return this.StatisticsData;
     }
 
     /**
-     * Set 通道组统计数据
-     * @param StatisticsData 通道组统计数据
+     * Set <p>通道组统计数据</p>
+     * @param StatisticsData <p>通道组统计数据</p>
      */
     public void setStatisticsData(MetricStatisticsInfo [] StatisticsData) {
         this.StatisticsData = StatisticsData;

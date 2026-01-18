@@ -278,6 +278,18 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
+     *使用该接口生成云端特效。特效可用于叠加到直播流上，供播放端观看。
+注意：云端特效生成需要一定时间，调用生成接口后，可通过查询接口，获取是否特效已生成。
+     * @param req CreateLiveCloudEffectRequest
+     * @return CreateLiveCloudEffectResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLiveCloudEffectResponse CreateLiveCloudEffect(CreateLiveCloudEffectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateLiveCloudEffect", CreateLiveCloudEffectResponse.class);
+    }
+
+    /**
      *创建直播垫片规则。
      * @param req CreateLivePadRuleRequest
      * @return CreateLivePadRuleResponse

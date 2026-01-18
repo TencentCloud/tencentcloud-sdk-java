@@ -1119,6 +1119,17 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *TCR实例存储桶切换
+     * @param req ModifyInstanceStorageRequest
+     * @return ModifyInstanceStorageResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceStorageResponse ModifyInstanceStorage(ModifyInstanceStorageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInstanceStorage", ModifyInstanceStorageResponse.class);
+    }
+
+    /**
      *更新实例内指定长期访问凭证的启用状态
      * @param req ModifyInstanceTokenRequest
      * @return ModifyInstanceTokenResponse
@@ -1248,6 +1259,17 @@ public class TcrClient extends AbstractClient{
     public RenewInstanceResponse RenewInstance(RenewInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RenewInstance", RenewInstanceResponse.class);
+    }
+
+    /**
+     *终止制品清理任务
+     * @param req TerminateGCJobRequest
+     * @return TerminateGCJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public TerminateGCJobResponse TerminateGCJob(TerminateGCJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TerminateGCJob", TerminateGCJobResponse.class);
     }
 
     /**

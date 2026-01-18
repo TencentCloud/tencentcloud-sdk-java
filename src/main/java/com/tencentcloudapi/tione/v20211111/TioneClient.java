@@ -473,6 +473,17 @@ https://cloud.tencent.com/document/product/1278/85305
     }
 
     /**
+     *批量查询子账号Linux用户信息
+     * @param req DescribeSubAccountLinuxUserInfosRequest
+     * @return DescribeSubAccountLinuxUserInfosResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSubAccountLinuxUserInfosResponse DescribeSubAccountLinuxUserInfos(DescribeSubAccountLinuxUserInfosRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSubAccountLinuxUserInfos", DescribeSubAccountLinuxUserInfosResponse.class);
+    }
+
+    /**
      *查询模型版本
      * @param req DescribeTrainingModelVersionRequest
      * @return DescribeTrainingModelVersionResponse
@@ -646,6 +657,17 @@ https://cloud.tencent.com/document/product/1278/85305
     public StopTrainingTaskResponse StopTrainingTask(StopTrainingTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StopTrainingTask", StopTrainingTaskResponse.class);
+    }
+
+    /**
+     *更新子账号Linux用户信息
+     * @param req UpdateSubAccountLinuxUserInfoRequest
+     * @return UpdateSubAccountLinuxUserInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateSubAccountLinuxUserInfoResponse UpdateSubAccountLinuxUserInfo(UpdateSubAccountLinuxUserInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateSubAccountLinuxUserInfo", UpdateSubAccountLinuxUserInfoResponse.class);
     }
 
 }

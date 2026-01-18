@@ -24,153 +24,138 @@ import java.util.HashMap;
 public class ModifyProxyConfigurationRequest extends AbstractModel {
 
     /**
-    * （旧参数，请切换到ProxyId）通道的实例ID。
+    * <p>（旧参数，请切换到ProxyId）通道的实例ID。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 需要调整到的目标带宽，单位：Mbps。
-Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAccessRegionsByDestRegion接口获取得到
+    * <p>需要调整到的目标带宽，单位：Mbps。Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAccessRegionsByDestRegion接口获取得到</p>
     */
     @SerializedName("Bandwidth")
     @Expose
     private Long Bandwidth;
 
     /**
-    * 需要调整到的目标并发值，单位：万。
-Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAccessRegionsByDestRegion接口获取得到
+    * <p>需要调整到的目标并发值，单位：万。Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAccessRegionsByDestRegion接口获取得到</p>
     */
     @SerializedName("Concurrent")
     @Expose
     private Long Concurrent;
 
     /**
-    * 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
-更多详细信息请参阅：如何保证幂等性。
+    * <p>用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。更多详细信息请参阅：如何保证幂等性。</p>
     */
     @SerializedName("ClientToken")
     @Expose
     private String ClientToken;
 
     /**
-    * （新参数）通道的实例ID。
+    * <p>（新参数）通道的实例ID。</p>
     */
     @SerializedName("ProxyId")
     @Expose
     private String ProxyId;
 
     /**
-    * 计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）
+    * <p>计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）</p>
     */
     @SerializedName("BillingType")
     @Expose
     private Long BillingType;
 
     /**
-     * Get （旧参数，请切换到ProxyId）通道的实例ID。 
-     * @return InstanceId （旧参数，请切换到ProxyId）通道的实例ID。
+     * Get <p>（旧参数，请切换到ProxyId）通道的实例ID。</p> 
+     * @return InstanceId <p>（旧参数，请切换到ProxyId）通道的实例ID。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set （旧参数，请切换到ProxyId）通道的实例ID。
-     * @param InstanceId （旧参数，请切换到ProxyId）通道的实例ID。
+     * Set <p>（旧参数，请切换到ProxyId）通道的实例ID。</p>
+     * @param InstanceId <p>（旧参数，请切换到ProxyId）通道的实例ID。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 需要调整到的目标带宽，单位：Mbps。
-Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAccessRegionsByDestRegion接口获取得到 
-     * @return Bandwidth 需要调整到的目标带宽，单位：Mbps。
-Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAccessRegionsByDestRegion接口获取得到
+     * Get <p>需要调整到的目标带宽，单位：Mbps。Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAccessRegionsByDestRegion接口获取得到</p> 
+     * @return Bandwidth <p>需要调整到的目标带宽，单位：Mbps。Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAccessRegionsByDestRegion接口获取得到</p>
      */
     public Long getBandwidth() {
         return this.Bandwidth;
     }
 
     /**
-     * Set 需要调整到的目标带宽，单位：Mbps。
-Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAccessRegionsByDestRegion接口获取得到
-     * @param Bandwidth 需要调整到的目标带宽，单位：Mbps。
-Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAccessRegionsByDestRegion接口获取得到
+     * Set <p>需要调整到的目标带宽，单位：Mbps。Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAccessRegionsByDestRegion接口获取得到</p>
+     * @param Bandwidth <p>需要调整到的目标带宽，单位：Mbps。Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAccessRegionsByDestRegion接口获取得到</p>
      */
     public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 
     /**
-     * Get 需要调整到的目标并发值，单位：万。
-Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAccessRegionsByDestRegion接口获取得到 
-     * @return Concurrent 需要调整到的目标并发值，单位：万。
-Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAccessRegionsByDestRegion接口获取得到
+     * Get <p>需要调整到的目标并发值，单位：万。Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAccessRegionsByDestRegion接口获取得到</p> 
+     * @return Concurrent <p>需要调整到的目标并发值，单位：万。Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAccessRegionsByDestRegion接口获取得到</p>
      */
     public Long getConcurrent() {
         return this.Concurrent;
     }
 
     /**
-     * Set 需要调整到的目标并发值，单位：万。
-Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAccessRegionsByDestRegion接口获取得到
-     * @param Concurrent 需要调整到的目标并发值，单位：万。
-Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAccessRegionsByDestRegion接口获取得到
+     * Set <p>需要调整到的目标并发值，单位：万。Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAccessRegionsByDestRegion接口获取得到</p>
+     * @param Concurrent <p>需要调整到的目标并发值，单位：万。Bandwidth与Concurrent必须至少设置一个。取值范围根据DescribeAccessRegionsByDestRegion接口获取得到</p>
      */
     public void setConcurrent(Long Concurrent) {
         this.Concurrent = Concurrent;
     }
 
     /**
-     * Get 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
-更多详细信息请参阅：如何保证幂等性。 
-     * @return ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
-更多详细信息请参阅：如何保证幂等性。
+     * Get <p>用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。更多详细信息请参阅：如何保证幂等性。</p> 
+     * @return ClientToken <p>用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。更多详细信息请参阅：如何保证幂等性。</p>
      */
     public String getClientToken() {
         return this.ClientToken;
     }
 
     /**
-     * Set 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
-更多详细信息请参阅：如何保证幂等性。
-     * @param ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
-更多详细信息请参阅：如何保证幂等性。
+     * Set <p>用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。更多详细信息请参阅：如何保证幂等性。</p>
+     * @param ClientToken <p>用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。更多详细信息请参阅：如何保证幂等性。</p>
      */
     public void setClientToken(String ClientToken) {
         this.ClientToken = ClientToken;
     }
 
     /**
-     * Get （新参数）通道的实例ID。 
-     * @return ProxyId （新参数）通道的实例ID。
+     * Get <p>（新参数）通道的实例ID。</p> 
+     * @return ProxyId <p>（新参数）通道的实例ID。</p>
      */
     public String getProxyId() {
         return this.ProxyId;
     }
 
     /**
-     * Set （新参数）通道的实例ID。
-     * @param ProxyId （新参数）通道的实例ID。
+     * Set <p>（新参数）通道的实例ID。</p>
+     * @param ProxyId <p>（新参数）通道的实例ID。</p>
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;
     }
 
     /**
-     * Get 计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费） 
-     * @return BillingType 计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）
+     * Get <p>计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）</p> 
+     * @return BillingType <p>计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）</p>
      */
     public Long getBillingType() {
         return this.BillingType;
     }
 
     /**
-     * Set 计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）
-     * @param BillingType 计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）
+     * Set <p>计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）</p>
+     * @param BillingType <p>计费方式 (0:按带宽计费，1:按流量计费 默认按带宽计费）</p>
      */
     public void setBillingType(Long BillingType) {
         this.BillingType = BillingType;

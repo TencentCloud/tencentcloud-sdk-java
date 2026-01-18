@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class CreateProxyGroupRequest extends AbstractModel {
 
     /**
-    * 通道组所属项目ID
+    * <p>通道组所属项目ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 通道组别名
+    * <p>通道组别名</p>
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-    * 源站地域，参考接口 [https://cloud.tencent.com/document/api/608/36964] 返回参数RegionDetail中的RegionId
+    * <p>源站地域，参考接口 [https://cloud.tencent.com/document/api/608/36964] 返回参数RegionDetail中的RegionId</p>
     */
     @SerializedName("RealServerRegion")
     @Expose
     private String RealServerRegion;
 
     /**
-    * 标签列表
+    * <p>标签列表</p>
     */
     @SerializedName("TagSet")
     @Expose
     private TagPair [] TagSet;
 
     /**
-    * 加速地域列表，包括加速地域名，及该地域对应的带宽和并发配置。
+    * <p>加速地域列表，包括加速地域名，及该地域对应的带宽和并发配置。</p>
     */
     @SerializedName("AccessRegionSet")
     @Expose
     private AccessConfiguration [] AccessRegionSet;
 
     /**
-    * IP版本，可取值：IPv4、IPv6，默认值IPv4
+    * <p>IP版本，可取值：IPv4、IPv6，默认值IPv4</p>
     */
     @SerializedName("IPAddressVersion")
     @Expose
     private String IPAddressVersion;
 
     /**
-    * 通道组套餐类型，可取值：Thunder、Accelerator，默认值Thunder
+    * <p>通道组套餐类型，可取值：Thunder、Accelerator，默认值Thunder</p>
     */
     @SerializedName("PackageType")
     @Expose
     private String PackageType;
 
     /**
-    * 该字段已废弃，当IPAddressVersion为IPv4时，所创建的通道组默认支持Http3.0；当为IPv6，默认不支持Http3.0。
+    * <p>该字段已废弃，当IPAddressVersion为IPv4时，所创建的通道组默认支持Http3.0；当为IPv6，默认不支持Http3.0。</p>
     */
     @SerializedName("Http3Supported")
     @Expose
     private Long Http3Supported;
 
     /**
-     * Get 通道组所属项目ID 
-     * @return ProjectId 通道组所属项目ID
+     * Get <p>通道组所属项目ID</p> 
+     * @return ProjectId <p>通道组所属项目ID</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 通道组所属项目ID
-     * @param ProjectId 通道组所属项目ID
+     * Set <p>通道组所属项目ID</p>
+     * @param ProjectId <p>通道组所属项目ID</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 通道组别名 
-     * @return GroupName 通道组别名
+     * Get <p>通道组别名</p> 
+     * @return GroupName <p>通道组别名</p>
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set 通道组别名
-     * @param GroupName 通道组别名
+     * Set <p>通道组别名</p>
+     * @param GroupName <p>通道组别名</p>
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 源站地域，参考接口 [https://cloud.tencent.com/document/api/608/36964] 返回参数RegionDetail中的RegionId 
-     * @return RealServerRegion 源站地域，参考接口 [https://cloud.tencent.com/document/api/608/36964] 返回参数RegionDetail中的RegionId
+     * Get <p>源站地域，参考接口 [https://cloud.tencent.com/document/api/608/36964] 返回参数RegionDetail中的RegionId</p> 
+     * @return RealServerRegion <p>源站地域，参考接口 [https://cloud.tencent.com/document/api/608/36964] 返回参数RegionDetail中的RegionId</p>
      */
     public String getRealServerRegion() {
         return this.RealServerRegion;
     }
 
     /**
-     * Set 源站地域，参考接口 [https://cloud.tencent.com/document/api/608/36964] 返回参数RegionDetail中的RegionId
-     * @param RealServerRegion 源站地域，参考接口 [https://cloud.tencent.com/document/api/608/36964] 返回参数RegionDetail中的RegionId
+     * Set <p>源站地域，参考接口 [https://cloud.tencent.com/document/api/608/36964] 返回参数RegionDetail中的RegionId</p>
+     * @param RealServerRegion <p>源站地域，参考接口 [https://cloud.tencent.com/document/api/608/36964] 返回参数RegionDetail中的RegionId</p>
      */
     public void setRealServerRegion(String RealServerRegion) {
         this.RealServerRegion = RealServerRegion;
     }
 
     /**
-     * Get 标签列表 
-     * @return TagSet 标签列表
+     * Get <p>标签列表</p> 
+     * @return TagSet <p>标签列表</p>
      */
     public TagPair [] getTagSet() {
         return this.TagSet;
     }
 
     /**
-     * Set 标签列表
-     * @param TagSet 标签列表
+     * Set <p>标签列表</p>
+     * @param TagSet <p>标签列表</p>
      */
     public void setTagSet(TagPair [] TagSet) {
         this.TagSet = TagSet;
     }
 
     /**
-     * Get 加速地域列表，包括加速地域名，及该地域对应的带宽和并发配置。 
-     * @return AccessRegionSet 加速地域列表，包括加速地域名，及该地域对应的带宽和并发配置。
+     * Get <p>加速地域列表，包括加速地域名，及该地域对应的带宽和并发配置。</p> 
+     * @return AccessRegionSet <p>加速地域列表，包括加速地域名，及该地域对应的带宽和并发配置。</p>
      */
     public AccessConfiguration [] getAccessRegionSet() {
         return this.AccessRegionSet;
     }
 
     /**
-     * Set 加速地域列表，包括加速地域名，及该地域对应的带宽和并发配置。
-     * @param AccessRegionSet 加速地域列表，包括加速地域名，及该地域对应的带宽和并发配置。
+     * Set <p>加速地域列表，包括加速地域名，及该地域对应的带宽和并发配置。</p>
+     * @param AccessRegionSet <p>加速地域列表，包括加速地域名，及该地域对应的带宽和并发配置。</p>
      */
     public void setAccessRegionSet(AccessConfiguration [] AccessRegionSet) {
         this.AccessRegionSet = AccessRegionSet;
     }
 
     /**
-     * Get IP版本，可取值：IPv4、IPv6，默认值IPv4 
-     * @return IPAddressVersion IP版本，可取值：IPv4、IPv6，默认值IPv4
+     * Get <p>IP版本，可取值：IPv4、IPv6，默认值IPv4</p> 
+     * @return IPAddressVersion <p>IP版本，可取值：IPv4、IPv6，默认值IPv4</p>
      */
     public String getIPAddressVersion() {
         return this.IPAddressVersion;
     }
 
     /**
-     * Set IP版本，可取值：IPv4、IPv6，默认值IPv4
-     * @param IPAddressVersion IP版本，可取值：IPv4、IPv6，默认值IPv4
+     * Set <p>IP版本，可取值：IPv4、IPv6，默认值IPv4</p>
+     * @param IPAddressVersion <p>IP版本，可取值：IPv4、IPv6，默认值IPv4</p>
      */
     public void setIPAddressVersion(String IPAddressVersion) {
         this.IPAddressVersion = IPAddressVersion;
     }
 
     /**
-     * Get 通道组套餐类型，可取值：Thunder、Accelerator，默认值Thunder 
-     * @return PackageType 通道组套餐类型，可取值：Thunder、Accelerator，默认值Thunder
+     * Get <p>通道组套餐类型，可取值：Thunder、Accelerator，默认值Thunder</p> 
+     * @return PackageType <p>通道组套餐类型，可取值：Thunder、Accelerator，默认值Thunder</p>
      */
     public String getPackageType() {
         return this.PackageType;
     }
 
     /**
-     * Set 通道组套餐类型，可取值：Thunder、Accelerator，默认值Thunder
-     * @param PackageType 通道组套餐类型，可取值：Thunder、Accelerator，默认值Thunder
+     * Set <p>通道组套餐类型，可取值：Thunder、Accelerator，默认值Thunder</p>
+     * @param PackageType <p>通道组套餐类型，可取值：Thunder、Accelerator，默认值Thunder</p>
      */
     public void setPackageType(String PackageType) {
         this.PackageType = PackageType;
     }
 
     /**
-     * Get 该字段已废弃，当IPAddressVersion为IPv4时，所创建的通道组默认支持Http3.0；当为IPv6，默认不支持Http3.0。 
-     * @return Http3Supported 该字段已废弃，当IPAddressVersion为IPv4时，所创建的通道组默认支持Http3.0；当为IPv6，默认不支持Http3.0。
+     * Get <p>该字段已废弃，当IPAddressVersion为IPv4时，所创建的通道组默认支持Http3.0；当为IPv6，默认不支持Http3.0。</p> 
+     * @return Http3Supported <p>该字段已废弃，当IPAddressVersion为IPv4时，所创建的通道组默认支持Http3.0；当为IPv6，默认不支持Http3.0。</p>
      */
     public Long getHttp3Supported() {
         return this.Http3Supported;
     }
 
     /**
-     * Set 该字段已废弃，当IPAddressVersion为IPv4时，所创建的通道组默认支持Http3.0；当为IPv6，默认不支持Http3.0。
-     * @param Http3Supported 该字段已废弃，当IPAddressVersion为IPv4时，所创建的通道组默认支持Http3.0；当为IPv6，默认不支持Http3.0。
+     * Set <p>该字段已废弃，当IPAddressVersion为IPv4时，所创建的通道组默认支持Http3.0；当为IPv6，默认不支持Http3.0。</p>
+     * @param Http3Supported <p>该字段已废弃，当IPAddressVersion为IPv4时，所创建的通道组默认支持Http3.0；当为IPv6，默认不支持Http3.0。</p>
      */
     public void setHttp3Supported(Long Http3Supported) {
         this.Http3Supported = Http3Supported;

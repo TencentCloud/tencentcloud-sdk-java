@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateClusterMaintenanceWindowAndExclusionsRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * 集群ID，可以从容器服务集群控制台获取（https://console.cloud.tencent.com/tke2/cluster）。
     */
     @SerializedName("ClusterID")
     @Expose
@@ -45,7 +45,15 @@ public class CreateClusterMaintenanceWindowAndExclusionsRequest extends Abstract
     private Long Duration;
 
     /**
-    * 维护周期（一周中的哪几天）
+    * 维护周期（一周中的哪几天），支持的参数值如下：
+
+- MO：周一
+- TU：周二
+- WE：周三
+- TH：周四
+- FR：周五
+- SA：周六
+- SU：周日
     */
     @SerializedName("DayOfWeek")
     @Expose
@@ -59,16 +67,16 @@ public class CreateClusterMaintenanceWindowAndExclusionsRequest extends Abstract
     private MaintenanceExclusion [] Exclusions;
 
     /**
-     * Get 集群ID 
-     * @return ClusterID 集群ID
+     * Get 集群ID，可以从容器服务集群控制台获取（https://console.cloud.tencent.com/tke2/cluster）。 
+     * @return ClusterID 集群ID，可以从容器服务集群控制台获取（https://console.cloud.tencent.com/tke2/cluster）。
      */
     public String getClusterID() {
         return this.ClusterID;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterID 集群ID
+     * Set 集群ID，可以从容器服务集群控制台获取（https://console.cloud.tencent.com/tke2/cluster）。
+     * @param ClusterID 集群ID，可以从容器服务集群控制台获取（https://console.cloud.tencent.com/tke2/cluster）。
      */
     public void setClusterID(String ClusterID) {
         this.ClusterID = ClusterID;
@@ -107,16 +115,48 @@ public class CreateClusterMaintenanceWindowAndExclusionsRequest extends Abstract
     }
 
     /**
-     * Get 维护周期（一周中的哪几天） 
-     * @return DayOfWeek 维护周期（一周中的哪几天）
+     * Get 维护周期（一周中的哪几天），支持的参数值如下：
+
+- MO：周一
+- TU：周二
+- WE：周三
+- TH：周四
+- FR：周五
+- SA：周六
+- SU：周日 
+     * @return DayOfWeek 维护周期（一周中的哪几天），支持的参数值如下：
+
+- MO：周一
+- TU：周二
+- WE：周三
+- TH：周四
+- FR：周五
+- SA：周六
+- SU：周日
      */
     public String [] getDayOfWeek() {
         return this.DayOfWeek;
     }
 
     /**
-     * Set 维护周期（一周中的哪几天）
-     * @param DayOfWeek 维护周期（一周中的哪几天）
+     * Set 维护周期（一周中的哪几天），支持的参数值如下：
+
+- MO：周一
+- TU：周二
+- WE：周三
+- TH：周四
+- FR：周五
+- SA：周六
+- SU：周日
+     * @param DayOfWeek 维护周期（一周中的哪几天），支持的参数值如下：
+
+- MO：周一
+- TU：周二
+- WE：周三
+- TH：周四
+- FR：周五
+- SA：周六
+- SU：周日
      */
     public void setDayOfWeek(String [] DayOfWeek) {
         this.DayOfWeek = DayOfWeek;

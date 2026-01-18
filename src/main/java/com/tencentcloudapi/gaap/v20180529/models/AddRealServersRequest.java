@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class AddRealServersRequest extends AbstractModel {
 
     /**
-    * 源站对应的项目ID
+    * <p>源站对应的项目ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 源站对应的IP或域名
+    * <p>源站对应的IP或域名</p>
     */
     @SerializedName("RealServerIP")
     @Expose
     private String [] RealServerIP;
 
     /**
-    * 源站名称
+    * <p>源站名称</p>
     */
     @SerializedName("RealServerName")
     @Expose
     private String RealServerName;
 
     /**
-    * 标签列表
+    * <p>标签列表</p>
     */
     @SerializedName("TagSet")
     @Expose
     private TagPair [] TagSet;
 
     /**
-     * Get 源站对应的项目ID 
-     * @return ProjectId 源站对应的项目ID
+     * Get <p>源站对应的项目ID</p> 
+     * @return ProjectId <p>源站对应的项目ID</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 源站对应的项目ID
-     * @param ProjectId 源站对应的项目ID
+     * Set <p>源站对应的项目ID</p>
+     * @param ProjectId <p>源站对应的项目ID</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 源站对应的IP或域名 
-     * @return RealServerIP 源站对应的IP或域名
+     * Get <p>源站对应的IP或域名</p> 
+     * @return RealServerIP <p>源站对应的IP或域名</p>
      */
     public String [] getRealServerIP() {
         return this.RealServerIP;
     }
 
     /**
-     * Set 源站对应的IP或域名
-     * @param RealServerIP 源站对应的IP或域名
+     * Set <p>源站对应的IP或域名</p>
+     * @param RealServerIP <p>源站对应的IP或域名</p>
      */
     public void setRealServerIP(String [] RealServerIP) {
         this.RealServerIP = RealServerIP;
     }
 
     /**
-     * Get 源站名称 
-     * @return RealServerName 源站名称
+     * Get <p>源站名称</p> 
+     * @return RealServerName <p>源站名称</p>
      */
     public String getRealServerName() {
         return this.RealServerName;
     }
 
     /**
-     * Set 源站名称
-     * @param RealServerName 源站名称
+     * Set <p>源站名称</p>
+     * @param RealServerName <p>源站名称</p>
      */
     public void setRealServerName(String RealServerName) {
         this.RealServerName = RealServerName;
     }
 
     /**
-     * Get 标签列表 
-     * @return TagSet 标签列表
+     * Get <p>标签列表</p> 
+     * @return TagSet <p>标签列表</p>
      */
     public TagPair [] getTagSet() {
         return this.TagSet;
     }
 
     /**
-     * Set 标签列表
-     * @param TagSet 标签列表
+     * Set <p>标签列表</p>
+     * @param TagSet <p>标签列表</p>
      */
     public void setTagSet(TagPair [] TagSet) {
         this.TagSet = TagSet;

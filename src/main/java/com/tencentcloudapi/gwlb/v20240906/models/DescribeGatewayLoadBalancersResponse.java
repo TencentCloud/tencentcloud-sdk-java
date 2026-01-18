@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeGatewayLoadBalancersResponse extends AbstractModel {
 
     /**
-    * 满足过滤条件的负载均衡实例总数。此数值与入参中的Limit无关。
+    * <p>满足过滤条件的负载均衡实例总数。此数值与入参中的Limit无关。</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 返回的网关负载均衡实例数组。
+    * <p>返回的网关负载均衡实例数组。</p>
     */
     @SerializedName("LoadBalancerSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeGatewayLoadBalancersResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 满足过滤条件的负载均衡实例总数。此数值与入参中的Limit无关。 
-     * @return TotalCount 满足过滤条件的负载均衡实例总数。此数值与入参中的Limit无关。
+     * Get <p>满足过滤条件的负载均衡实例总数。此数值与入参中的Limit无关。</p> 
+     * @return TotalCount <p>满足过滤条件的负载均衡实例总数。此数值与入参中的Limit无关。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 满足过滤条件的负载均衡实例总数。此数值与入参中的Limit无关。
-     * @param TotalCount 满足过滤条件的负载均衡实例总数。此数值与入参中的Limit无关。
+     * Set <p>满足过滤条件的负载均衡实例总数。此数值与入参中的Limit无关。</p>
+     * @param TotalCount <p>满足过滤条件的负载均衡实例总数。此数值与入参中的Limit无关。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 返回的网关负载均衡实例数组。 
-     * @return LoadBalancerSet 返回的网关负载均衡实例数组。
+     * Get <p>返回的网关负载均衡实例数组。</p> 
+     * @return LoadBalancerSet <p>返回的网关负载均衡实例数组。</p>
      */
     public GatewayLoadBalancer [] getLoadBalancerSet() {
         return this.LoadBalancerSet;
     }
 
     /**
-     * Set 返回的网关负载均衡实例数组。
-     * @param LoadBalancerSet 返回的网关负载均衡实例数组。
+     * Set <p>返回的网关负载均衡实例数组。</p>
+     * @param LoadBalancerSet <p>返回的网关负载均衡实例数组。</p>
      */
     public void setLoadBalancerSet(GatewayLoadBalancer [] LoadBalancerSet) {
         this.LoadBalancerSet = LoadBalancerSet;

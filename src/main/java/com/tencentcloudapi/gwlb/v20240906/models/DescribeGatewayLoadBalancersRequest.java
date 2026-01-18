@@ -24,140 +24,115 @@ import java.util.HashMap;
 public class DescribeGatewayLoadBalancersRequest extends AbstractModel {
 
     /**
-    * 网关负载均衡实例ID。支持批量筛选的实例ID数量上限为20个。
+    * <p>网关负载均衡实例ID。支持批量筛选的实例ID数量上限为20个。</p>
     */
     @SerializedName("LoadBalancerIds")
     @Expose
     private String [] LoadBalancerIds;
 
     /**
-    * 一次批量返回网关负载均衡实例的数量，默认为20，最大值为100。
+    * <p>一次批量返回网关负载均衡实例的数量，默认为20，最大值为100。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 返回网关负载均衡实例列表的起始偏移量，默认0。
+    * <p>返回网关负载均衡实例列表的起始偏移量，默认0。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 查询负载均衡详细信息列表的过滤条件，每次请求的Filters的上限为10，Filter.Values的上限为100。
-Filter.Name和Filter.Values皆为必填项。详细的过滤条件如下：
-- VpcId - String - 是否必填：否 - （过滤条件）按照网关负载均衡实例所属的私有网络过滤，如“vpc-bhqk****”。
-- Vips - String  - 是否必填：否 - （过滤条件）按照网关负载均衡实例所属的私有网络过滤，如“10.1.1.1”
-- tag:tag-key - String - 是否必填：否 - （过滤条件）按照GWLB标签键值对进行过滤，tag-key使用具体的标签键进行替换。
-
+    * <p>查询负载均衡详细信息列表的过滤条件，每次请求的Filters的上限为10，Filter.Values的上限为100。Filter.Name和Filter.Values皆为必填项。详细的过滤条件如下：- VpcId - String - 是否必填：否 - （过滤条件）按照网关负载均衡实例所属的私有网络过滤，如“vpc-bhqk****”。- Vips - String  - 是否必填：否 - （过滤条件）按照网关负载均衡实例的VIP进行过滤，如“10.1.1.1”- tag:tag-key - String - 是否必填：否 - （过滤条件）按照GWLB标签键值对进行过滤，tag-key使用具体的标签键进行替换。</p>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 搜索字段，模糊匹配名称、VIP。
+    * <p>搜索字段，模糊匹配名称、VIP。</p>
     */
     @SerializedName("SearchKey")
     @Expose
     private String SearchKey;
 
     /**
-     * Get 网关负载均衡实例ID。支持批量筛选的实例ID数量上限为20个。 
-     * @return LoadBalancerIds 网关负载均衡实例ID。支持批量筛选的实例ID数量上限为20个。
+     * Get <p>网关负载均衡实例ID。支持批量筛选的实例ID数量上限为20个。</p> 
+     * @return LoadBalancerIds <p>网关负载均衡实例ID。支持批量筛选的实例ID数量上限为20个。</p>
      */
     public String [] getLoadBalancerIds() {
         return this.LoadBalancerIds;
     }
 
     /**
-     * Set 网关负载均衡实例ID。支持批量筛选的实例ID数量上限为20个。
-     * @param LoadBalancerIds 网关负载均衡实例ID。支持批量筛选的实例ID数量上限为20个。
+     * Set <p>网关负载均衡实例ID。支持批量筛选的实例ID数量上限为20个。</p>
+     * @param LoadBalancerIds <p>网关负载均衡实例ID。支持批量筛选的实例ID数量上限为20个。</p>
      */
     public void setLoadBalancerIds(String [] LoadBalancerIds) {
         this.LoadBalancerIds = LoadBalancerIds;
     }
 
     /**
-     * Get 一次批量返回网关负载均衡实例的数量，默认为20，最大值为100。 
-     * @return Limit 一次批量返回网关负载均衡实例的数量，默认为20，最大值为100。
+     * Get <p>一次批量返回网关负载均衡实例的数量，默认为20，最大值为100。</p> 
+     * @return Limit <p>一次批量返回网关负载均衡实例的数量，默认为20，最大值为100。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 一次批量返回网关负载均衡实例的数量，默认为20，最大值为100。
-     * @param Limit 一次批量返回网关负载均衡实例的数量，默认为20，最大值为100。
+     * Set <p>一次批量返回网关负载均衡实例的数量，默认为20，最大值为100。</p>
+     * @param Limit <p>一次批量返回网关负载均衡实例的数量，默认为20，最大值为100。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 返回网关负载均衡实例列表的起始偏移量，默认0。 
-     * @return Offset 返回网关负载均衡实例列表的起始偏移量，默认0。
+     * Get <p>返回网关负载均衡实例列表的起始偏移量，默认0。</p> 
+     * @return Offset <p>返回网关负载均衡实例列表的起始偏移量，默认0。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 返回网关负载均衡实例列表的起始偏移量，默认0。
-     * @param Offset 返回网关负载均衡实例列表的起始偏移量，默认0。
+     * Set <p>返回网关负载均衡实例列表的起始偏移量，默认0。</p>
+     * @param Offset <p>返回网关负载均衡实例列表的起始偏移量，默认0。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 查询负载均衡详细信息列表的过滤条件，每次请求的Filters的上限为10，Filter.Values的上限为100。
-Filter.Name和Filter.Values皆为必填项。详细的过滤条件如下：
-- VpcId - String - 是否必填：否 - （过滤条件）按照网关负载均衡实例所属的私有网络过滤，如“vpc-bhqk****”。
-- Vips - String  - 是否必填：否 - （过滤条件）按照网关负载均衡实例所属的私有网络过滤，如“10.1.1.1”
-- tag:tag-key - String - 是否必填：否 - （过滤条件）按照GWLB标签键值对进行过滤，tag-key使用具体的标签键进行替换。
- 
-     * @return Filters 查询负载均衡详细信息列表的过滤条件，每次请求的Filters的上限为10，Filter.Values的上限为100。
-Filter.Name和Filter.Values皆为必填项。详细的过滤条件如下：
-- VpcId - String - 是否必填：否 - （过滤条件）按照网关负载均衡实例所属的私有网络过滤，如“vpc-bhqk****”。
-- Vips - String  - 是否必填：否 - （过滤条件）按照网关负载均衡实例所属的私有网络过滤，如“10.1.1.1”
-- tag:tag-key - String - 是否必填：否 - （过滤条件）按照GWLB标签键值对进行过滤，tag-key使用具体的标签键进行替换。
-
+     * Get <p>查询负载均衡详细信息列表的过滤条件，每次请求的Filters的上限为10，Filter.Values的上限为100。Filter.Name和Filter.Values皆为必填项。详细的过滤条件如下：- VpcId - String - 是否必填：否 - （过滤条件）按照网关负载均衡实例所属的私有网络过滤，如“vpc-bhqk****”。- Vips - String  - 是否必填：否 - （过滤条件）按照网关负载均衡实例的VIP进行过滤，如“10.1.1.1”- tag:tag-key - String - 是否必填：否 - （过滤条件）按照GWLB标签键值对进行过滤，tag-key使用具体的标签键进行替换。</p> 
+     * @return Filters <p>查询负载均衡详细信息列表的过滤条件，每次请求的Filters的上限为10，Filter.Values的上限为100。Filter.Name和Filter.Values皆为必填项。详细的过滤条件如下：- VpcId - String - 是否必填：否 - （过滤条件）按照网关负载均衡实例所属的私有网络过滤，如“vpc-bhqk****”。- Vips - String  - 是否必填：否 - （过滤条件）按照网关负载均衡实例的VIP进行过滤，如“10.1.1.1”- tag:tag-key - String - 是否必填：否 - （过滤条件）按照GWLB标签键值对进行过滤，tag-key使用具体的标签键进行替换。</p>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 查询负载均衡详细信息列表的过滤条件，每次请求的Filters的上限为10，Filter.Values的上限为100。
-Filter.Name和Filter.Values皆为必填项。详细的过滤条件如下：
-- VpcId - String - 是否必填：否 - （过滤条件）按照网关负载均衡实例所属的私有网络过滤，如“vpc-bhqk****”。
-- Vips - String  - 是否必填：否 - （过滤条件）按照网关负载均衡实例所属的私有网络过滤，如“10.1.1.1”
-- tag:tag-key - String - 是否必填：否 - （过滤条件）按照GWLB标签键值对进行过滤，tag-key使用具体的标签键进行替换。
-
-     * @param Filters 查询负载均衡详细信息列表的过滤条件，每次请求的Filters的上限为10，Filter.Values的上限为100。
-Filter.Name和Filter.Values皆为必填项。详细的过滤条件如下：
-- VpcId - String - 是否必填：否 - （过滤条件）按照网关负载均衡实例所属的私有网络过滤，如“vpc-bhqk****”。
-- Vips - String  - 是否必填：否 - （过滤条件）按照网关负载均衡实例所属的私有网络过滤，如“10.1.1.1”
-- tag:tag-key - String - 是否必填：否 - （过滤条件）按照GWLB标签键值对进行过滤，tag-key使用具体的标签键进行替换。
-
+     * Set <p>查询负载均衡详细信息列表的过滤条件，每次请求的Filters的上限为10，Filter.Values的上限为100。Filter.Name和Filter.Values皆为必填项。详细的过滤条件如下：- VpcId - String - 是否必填：否 - （过滤条件）按照网关负载均衡实例所属的私有网络过滤，如“vpc-bhqk****”。- Vips - String  - 是否必填：否 - （过滤条件）按照网关负载均衡实例的VIP进行过滤，如“10.1.1.1”- tag:tag-key - String - 是否必填：否 - （过滤条件）按照GWLB标签键值对进行过滤，tag-key使用具体的标签键进行替换。</p>
+     * @param Filters <p>查询负载均衡详细信息列表的过滤条件，每次请求的Filters的上限为10，Filter.Values的上限为100。Filter.Name和Filter.Values皆为必填项。详细的过滤条件如下：- VpcId - String - 是否必填：否 - （过滤条件）按照网关负载均衡实例所属的私有网络过滤，如“vpc-bhqk****”。- Vips - String  - 是否必填：否 - （过滤条件）按照网关负载均衡实例的VIP进行过滤，如“10.1.1.1”- tag:tag-key - String - 是否必填：否 - （过滤条件）按照GWLB标签键值对进行过滤，tag-key使用具体的标签键进行替换。</p>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 搜索字段，模糊匹配名称、VIP。 
-     * @return SearchKey 搜索字段，模糊匹配名称、VIP。
+     * Get <p>搜索字段，模糊匹配名称、VIP。</p> 
+     * @return SearchKey <p>搜索字段，模糊匹配名称、VIP。</p>
      */
     public String getSearchKey() {
         return this.SearchKey;
     }
 
     /**
-     * Set 搜索字段，模糊匹配名称、VIP。
-     * @param SearchKey 搜索字段，模糊匹配名称、VIP。
+     * Set <p>搜索字段，模糊匹配名称、VIP。</p>
+     * @param SearchKey <p>搜索字段，模糊匹配名称、VIP。</p>
      */
     public void setSearchKey(String SearchKey) {
         this.SearchKey = SearchKey;

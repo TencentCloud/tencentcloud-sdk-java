@@ -63,6 +63,13 @@ public class ImageTaskInput extends AbstractModel {
     private BeautyConfig BeautyConfig;
 
     /**
+    * 图片基础转换能力。
+    */
+    @SerializedName("TransformConfig")
+    @Expose
+    private ImageTransformConfig TransformConfig;
+
+    /**
      * Get 图片编码配置。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return EncodeConfig 图片编码配置。
@@ -158,6 +165,22 @@ public class ImageTaskInput extends AbstractModel {
         this.BeautyConfig = BeautyConfig;
     }
 
+    /**
+     * Get 图片基础转换能力。 
+     * @return TransformConfig 图片基础转换能力。
+     */
+    public ImageTransformConfig getTransformConfig() {
+        return this.TransformConfig;
+    }
+
+    /**
+     * Set 图片基础转换能力。
+     * @param TransformConfig 图片基础转换能力。
+     */
+    public void setTransformConfig(ImageTransformConfig TransformConfig) {
+        this.TransformConfig = TransformConfig;
+    }
+
     public ImageTaskInput() {
     }
 
@@ -181,6 +204,9 @@ public class ImageTaskInput extends AbstractModel {
         if (source.BeautyConfig != null) {
             this.BeautyConfig = new BeautyConfig(source.BeautyConfig);
         }
+        if (source.TransformConfig != null) {
+            this.TransformConfig = new ImageTransformConfig(source.TransformConfig);
+        }
     }
 
 
@@ -193,6 +219,7 @@ public class ImageTaskInput extends AbstractModel {
         this.setParamObj(map, prefix + "EraseConfig.", this.EraseConfig);
         this.setParamObj(map, prefix + "BlindWatermarkConfig.", this.BlindWatermarkConfig);
         this.setParamObj(map, prefix + "BeautyConfig.", this.BeautyConfig);
+        this.setParamObj(map, prefix + "TransformConfig.", this.TransformConfig);
 
     }
 }

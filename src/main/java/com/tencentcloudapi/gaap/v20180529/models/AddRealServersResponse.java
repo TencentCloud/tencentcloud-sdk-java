@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AddRealServersResponse extends AbstractModel {
 
     /**
-    * 源站信息列表
+    * <p>源站信息列表</p>
     */
     @SerializedName("RealServerSet")
     @Expose
@@ -38,16 +38,16 @@ public class AddRealServersResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 源站信息列表 
-     * @return RealServerSet 源站信息列表
+     * Get <p>源站信息列表</p> 
+     * @return RealServerSet <p>源站信息列表</p>
      */
     public NewRealServer [] getRealServerSet() {
         return this.RealServerSet;
     }
 
     /**
-     * Set 源站信息列表
-     * @param RealServerSet 源站信息列表
+     * Set <p>源站信息列表</p>
+     * @param RealServerSet <p>源站信息列表</p>
      */
     public void setRealServerSet(NewRealServer [] RealServerSet) {
         this.RealServerSet = RealServerSet;

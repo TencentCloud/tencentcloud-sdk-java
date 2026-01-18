@@ -160,6 +160,17 @@ public class CdwchClient extends AbstractClient{
     }
 
     /**
+     *获取产生的事件
+     * @param req DescribeEventTasksRequest
+     * @return DescribeEventTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEventTasksResponse DescribeEventTasks(DescribeEventTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEventTasks", DescribeEventTasksResponse.class);
+    }
+
+    /**
      *根据实例ID查询某个实例的具体信息
      * @param req DescribeInstanceRequest
      * @return DescribeInstanceResponse

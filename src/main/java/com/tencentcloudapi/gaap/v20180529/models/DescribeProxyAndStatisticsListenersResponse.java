@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeProxyAndStatisticsListenersResponse extends AbstractModel {
 
     /**
-    * 可以统计的通道信息
+    * <p>可以统计的通道信息</p>
     */
     @SerializedName("ProxySet")
     @Expose
     private ProxySimpleInfo [] ProxySet;
 
     /**
-    * 通道数量
+    * <p>通道数量</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeProxyAndStatisticsListenersResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 可以统计的通道信息 
-     * @return ProxySet 可以统计的通道信息
+     * Get <p>可以统计的通道信息</p> 
+     * @return ProxySet <p>可以统计的通道信息</p>
      */
     public ProxySimpleInfo [] getProxySet() {
         return this.ProxySet;
     }
 
     /**
-     * Set 可以统计的通道信息
-     * @param ProxySet 可以统计的通道信息
+     * Set <p>可以统计的通道信息</p>
+     * @param ProxySet <p>可以统计的通道信息</p>
      */
     public void setProxySet(ProxySimpleInfo [] ProxySet) {
         this.ProxySet = ProxySet;
     }
 
     /**
-     * Get 通道数量 
-     * @return TotalCount 通道数量
+     * Get <p>通道数量</p> 
+     * @return TotalCount <p>通道数量</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 通道数量
-     * @param TotalCount 通道数量
+     * Set <p>通道数量</p>
+     * @param TotalCount <p>通道数量</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

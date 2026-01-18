@@ -52,6 +52,16 @@ public class AigcVideoTaskInput extends AbstractModel {
     private String LastFrameFileId;
 
     /**
+    * 用于作为尾帧画面来生成视频的媒体文件 URL。说明：
+1. 只支持模型 GV 、Kling、Vidu，其他模型暂不支持。当 ModelName 为 GV 时，如果指定该参数，则需同时指定 FileInfos 作为待生成视频的首帧。当 ModelName 为 Kling 、ModelVersion 为 2.1 并且指定输出分辨率 Resolution 为 1080P 时，才能指定该参数。当 ModelName 为 Vidu、ModelVersion 为 q2-pro、q2-turbo 时，才能指定该参数。
+2. 图片大小需小于5M。
+3. 3. 图片格式的取值为：jpeg，jpg, png, webp。
+    */
+    @SerializedName("LastFrameUrl")
+    @Expose
+    private String LastFrameUrl;
+
+    /**
     * 生成视频的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。
     */
     @SerializedName("Prompt")
@@ -85,6 +95,20 @@ public class AigcVideoTaskInput extends AbstractModel {
     @SerializedName("OutputConfig")
     @Expose
     private AigcVideoOutputConfig OutputConfig;
+
+    /**
+    * 输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。
+    */
+    @SerializedName("InputRegion")
+    @Expose
+    private String InputRegion;
+
+    /**
+    * 场景类型。取值如下：<li>当 ModelName 为 Kling 时，取值 motion_control 表示动作控制；</li><li>其他 ModelName 暂不支持。</li>
+    */
+    @SerializedName("SceneType")
+    @Expose
+    private String SceneType;
 
     /**
      * Get 模型名称。 
@@ -148,6 +172,34 @@ public class AigcVideoTaskInput extends AbstractModel {
      */
     public void setLastFrameFileId(String LastFrameFileId) {
         this.LastFrameFileId = LastFrameFileId;
+    }
+
+    /**
+     * Get 用于作为尾帧画面来生成视频的媒体文件 URL。说明：
+1. 只支持模型 GV 、Kling、Vidu，其他模型暂不支持。当 ModelName 为 GV 时，如果指定该参数，则需同时指定 FileInfos 作为待生成视频的首帧。当 ModelName 为 Kling 、ModelVersion 为 2.1 并且指定输出分辨率 Resolution 为 1080P 时，才能指定该参数。当 ModelName 为 Vidu、ModelVersion 为 q2-pro、q2-turbo 时，才能指定该参数。
+2. 图片大小需小于5M。
+3. 3. 图片格式的取值为：jpeg，jpg, png, webp。 
+     * @return LastFrameUrl 用于作为尾帧画面来生成视频的媒体文件 URL。说明：
+1. 只支持模型 GV 、Kling、Vidu，其他模型暂不支持。当 ModelName 为 GV 时，如果指定该参数，则需同时指定 FileInfos 作为待生成视频的首帧。当 ModelName 为 Kling 、ModelVersion 为 2.1 并且指定输出分辨率 Resolution 为 1080P 时，才能指定该参数。当 ModelName 为 Vidu、ModelVersion 为 q2-pro、q2-turbo 时，才能指定该参数。
+2. 图片大小需小于5M。
+3. 3. 图片格式的取值为：jpeg，jpg, png, webp。
+     */
+    public String getLastFrameUrl() {
+        return this.LastFrameUrl;
+    }
+
+    /**
+     * Set 用于作为尾帧画面来生成视频的媒体文件 URL。说明：
+1. 只支持模型 GV 、Kling、Vidu，其他模型暂不支持。当 ModelName 为 GV 时，如果指定该参数，则需同时指定 FileInfos 作为待生成视频的首帧。当 ModelName 为 Kling 、ModelVersion 为 2.1 并且指定输出分辨率 Resolution 为 1080P 时，才能指定该参数。当 ModelName 为 Vidu、ModelVersion 为 q2-pro、q2-turbo 时，才能指定该参数。
+2. 图片大小需小于5M。
+3. 3. 图片格式的取值为：jpeg，jpg, png, webp。
+     * @param LastFrameUrl 用于作为尾帧画面来生成视频的媒体文件 URL。说明：
+1. 只支持模型 GV 、Kling、Vidu，其他模型暂不支持。当 ModelName 为 GV 时，如果指定该参数，则需同时指定 FileInfos 作为待生成视频的首帧。当 ModelName 为 Kling 、ModelVersion 为 2.1 并且指定输出分辨率 Resolution 为 1080P 时，才能指定该参数。当 ModelName 为 Vidu、ModelVersion 为 q2-pro、q2-turbo 时，才能指定该参数。
+2. 图片大小需小于5M。
+3. 3. 图片格式的取值为：jpeg，jpg, png, webp。
+     */
+    public void setLastFrameUrl(String LastFrameUrl) {
+        this.LastFrameUrl = LastFrameUrl;
     }
 
     /**
@@ -230,6 +282,38 @@ public class AigcVideoTaskInput extends AbstractModel {
         this.OutputConfig = OutputConfig;
     }
 
+    /**
+     * Get 输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。 
+     * @return InputRegion 输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。
+     */
+    public String getInputRegion() {
+        return this.InputRegion;
+    }
+
+    /**
+     * Set 输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。
+     * @param InputRegion 输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。
+     */
+    public void setInputRegion(String InputRegion) {
+        this.InputRegion = InputRegion;
+    }
+
+    /**
+     * Get 场景类型。取值如下：<li>当 ModelName 为 Kling 时，取值 motion_control 表示动作控制；</li><li>其他 ModelName 暂不支持。</li> 
+     * @return SceneType 场景类型。取值如下：<li>当 ModelName 为 Kling 时，取值 motion_control 表示动作控制；</li><li>其他 ModelName 暂不支持。</li>
+     */
+    public String getSceneType() {
+        return this.SceneType;
+    }
+
+    /**
+     * Set 场景类型。取值如下：<li>当 ModelName 为 Kling 时，取值 motion_control 表示动作控制；</li><li>其他 ModelName 暂不支持。</li>
+     * @param SceneType 场景类型。取值如下：<li>当 ModelName 为 Kling 时，取值 motion_control 表示动作控制；</li><li>其他 ModelName 暂不支持。</li>
+     */
+    public void setSceneType(String SceneType) {
+        this.SceneType = SceneType;
+    }
+
     public AigcVideoTaskInput() {
     }
 
@@ -253,6 +337,9 @@ public class AigcVideoTaskInput extends AbstractModel {
         if (source.LastFrameFileId != null) {
             this.LastFrameFileId = new String(source.LastFrameFileId);
         }
+        if (source.LastFrameUrl != null) {
+            this.LastFrameUrl = new String(source.LastFrameUrl);
+        }
         if (source.Prompt != null) {
             this.Prompt = new String(source.Prompt);
         }
@@ -268,6 +355,12 @@ public class AigcVideoTaskInput extends AbstractModel {
         if (source.OutputConfig != null) {
             this.OutputConfig = new AigcVideoOutputConfig(source.OutputConfig);
         }
+        if (source.InputRegion != null) {
+            this.InputRegion = new String(source.InputRegion);
+        }
+        if (source.SceneType != null) {
+            this.SceneType = new String(source.SceneType);
+        }
     }
 
 
@@ -279,11 +372,14 @@ public class AigcVideoTaskInput extends AbstractModel {
         this.setParamSimple(map, prefix + "ModelVersion", this.ModelVersion);
         this.setParamArrayObj(map, prefix + "FileInfos.", this.FileInfos);
         this.setParamSimple(map, prefix + "LastFrameFileId", this.LastFrameFileId);
+        this.setParamSimple(map, prefix + "LastFrameUrl", this.LastFrameUrl);
         this.setParamSimple(map, prefix + "Prompt", this.Prompt);
         this.setParamSimple(map, prefix + "NegativePrompt", this.NegativePrompt);
         this.setParamSimple(map, prefix + "EnhancePrompt", this.EnhancePrompt);
         this.setParamSimple(map, prefix + "GenerationMode", this.GenerationMode);
         this.setParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
+        this.setParamSimple(map, prefix + "InputRegion", this.InputRegion);
+        this.setParamSimple(map, prefix + "SceneType", this.SceneType);
 
     }
 }
