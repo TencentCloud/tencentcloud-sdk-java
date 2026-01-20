@@ -45,6 +45,13 @@ public class DescribeCheckViewRisksResponse extends AbstractModel {
     private StandardItem [] StandardNameList;
 
     /**
+    * 资产类型集合
+    */
+    @SerializedName("AssetTypeList")
+    @Expose
+    private AttributeOptionSet [] AssetTypeList;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -100,6 +107,22 @@ public class DescribeCheckViewRisksResponse extends AbstractModel {
     }
 
     /**
+     * Get 资产类型集合 
+     * @return AssetTypeList 资产类型集合
+     */
+    public AttributeOptionSet [] getAssetTypeList() {
+        return this.AssetTypeList;
+    }
+
+    /**
+     * Set 资产类型集合
+     * @param AssetTypeList 资产类型集合
+     */
+    public void setAssetTypeList(AttributeOptionSet [] AssetTypeList) {
+        this.AssetTypeList = AssetTypeList;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -138,6 +161,12 @@ public class DescribeCheckViewRisksResponse extends AbstractModel {
                 this.StandardNameList[i] = new StandardItem(source.StandardNameList[i]);
             }
         }
+        if (source.AssetTypeList != null) {
+            this.AssetTypeList = new AttributeOptionSet[source.AssetTypeList.length];
+            for (int i = 0; i < source.AssetTypeList.length; i++) {
+                this.AssetTypeList[i] = new AttributeOptionSet(source.AssetTypeList[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -151,6 +180,7 @@ public class DescribeCheckViewRisksResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "CheckViewRiskList.", this.CheckViewRiskList);
         this.setParamArrayObj(map, prefix + "StandardNameList.", this.StandardNameList);
+        this.setParamArrayObj(map, prefix + "AssetTypeList.", this.AssetTypeList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

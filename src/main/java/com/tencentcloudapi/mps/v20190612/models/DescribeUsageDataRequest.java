@@ -52,6 +52,7 @@ public class DescribeUsageDataRequest extends AbstractModel {
 <li>AddBlindWatermark: 添加基础版权数字水印</li>
 <li>AddNagraWatermark: 添加NAGRA数字水印</li>
 <li>ExtractBlindWatermark: 提取基础版权数字水印</li>
+<li>AIGC: AIGC</li>
     */
     @SerializedName("Types")
     @Expose
@@ -126,7 +127,8 @@ public class DescribeUsageDataRequest extends AbstractModel {
 <li>ImageProcess: 图片处理</li>
 <li>AddBlindWatermark: 添加基础版权数字水印</li>
 <li>AddNagraWatermark: 添加NAGRA数字水印</li>
-<li>ExtractBlindWatermark: 提取基础版权数字水印</li> 
+<li>ExtractBlindWatermark: 提取基础版权数字水印</li>
+<li>AIGC: AIGC</li> 
      * @return Types 查询媒体处理任务类型，默认查询转码。
 <li>Transcode：转码</li>
 <li>Enhance：增强</li>
@@ -141,6 +143,7 @@ public class DescribeUsageDataRequest extends AbstractModel {
 <li>AddBlindWatermark: 添加基础版权数字水印</li>
 <li>AddNagraWatermark: 添加NAGRA数字水印</li>
 <li>ExtractBlindWatermark: 提取基础版权数字水印</li>
+<li>AIGC: AIGC</li>
      */
     public String [] getTypes() {
         return this.Types;
@@ -161,6 +164,7 @@ public class DescribeUsageDataRequest extends AbstractModel {
 <li>AddBlindWatermark: 添加基础版权数字水印</li>
 <li>AddNagraWatermark: 添加NAGRA数字水印</li>
 <li>ExtractBlindWatermark: 提取基础版权数字水印</li>
+<li>AIGC: AIGC</li>
      * @param Types 查询媒体处理任务类型，默认查询转码。
 <li>Transcode：转码</li>
 <li>Enhance：增强</li>
@@ -175,6 +179,7 @@ public class DescribeUsageDataRequest extends AbstractModel {
 <li>AddBlindWatermark: 添加基础版权数字水印</li>
 <li>AddNagraWatermark: 添加NAGRA数字水印</li>
 <li>ExtractBlindWatermark: 提取基础版权数字水印</li>
+<li>AIGC: AIGC</li>
      */
     public void setTypes(String [] Types) {
         this.Types = Types;

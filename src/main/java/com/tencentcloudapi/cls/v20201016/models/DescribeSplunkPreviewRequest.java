@@ -24,54 +24,72 @@ import java.util.HashMap;
 public class DescribeSplunkPreviewRequest extends AbstractModel {
 
     /**
-    * 日志主题id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+    * <p>日志主题id。- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * splunk投递任务-元信息
+    * <p>splunk投递任务-元信息</p>
     */
     @SerializedName("MetadataInfo")
     @Expose
     private MetadataInfo MetadataInfo;
 
     /**
-     * Get 日志主题id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。 
-     * @return TopicId 日志主题id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+    * <p>splunk投递任务-投递 splunk过滤原始日志语句</p>
+    */
+    @SerializedName("DSLFilter")
+    @Expose
+    private String DSLFilter;
+
+    /**
+     * Get <p>日志主题id。- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p> 
+     * @return TopicId <p>日志主题id。- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 日志主题id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
-     * @param TopicId 日志主题id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * Set <p>日志主题id。- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
+     * @param TopicId <p>日志主题id。- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get splunk投递任务-元信息 
-     * @return MetadataInfo splunk投递任务-元信息
+     * Get <p>splunk投递任务-元信息</p> 
+     * @return MetadataInfo <p>splunk投递任务-元信息</p>
      */
     public MetadataInfo getMetadataInfo() {
         return this.MetadataInfo;
     }
 
     /**
-     * Set splunk投递任务-元信息
-     * @param MetadataInfo splunk投递任务-元信息
+     * Set <p>splunk投递任务-元信息</p>
+     * @param MetadataInfo <p>splunk投递任务-元信息</p>
      */
     public void setMetadataInfo(MetadataInfo MetadataInfo) {
         this.MetadataInfo = MetadataInfo;
+    }
+
+    /**
+     * Get <p>splunk投递任务-投递 splunk过滤原始日志语句</p> 
+     * @return DSLFilter <p>splunk投递任务-投递 splunk过滤原始日志语句</p>
+     */
+    public String getDSLFilter() {
+        return this.DSLFilter;
+    }
+
+    /**
+     * Set <p>splunk投递任务-投递 splunk过滤原始日志语句</p>
+     * @param DSLFilter <p>splunk投递任务-投递 splunk过滤原始日志语句</p>
+     */
+    public void setDSLFilter(String DSLFilter) {
+        this.DSLFilter = DSLFilter;
     }
 
     public DescribeSplunkPreviewRequest() {
@@ -88,6 +106,9 @@ public class DescribeSplunkPreviewRequest extends AbstractModel {
         if (source.MetadataInfo != null) {
             this.MetadataInfo = new MetadataInfo(source.MetadataInfo);
         }
+        if (source.DSLFilter != null) {
+            this.DSLFilter = new String(source.DSLFilter);
+        }
     }
 
 
@@ -97,6 +118,7 @@ public class DescribeSplunkPreviewRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TopicId", this.TopicId);
         this.setParamObj(map, prefix + "MetadataInfo.", this.MetadataInfo);
+        this.setParamSimple(map, prefix + "DSLFilter", this.DSLFilter);
 
     }
 }

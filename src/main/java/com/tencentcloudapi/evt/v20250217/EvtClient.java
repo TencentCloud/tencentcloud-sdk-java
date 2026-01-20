@@ -73,6 +73,17 @@ public class EvtClient extends AbstractClient{
 
     /**
      *推送事件数据
+     * @param req PutEventRequest
+     * @return PutEventResponse
+     * @throws TencentCloudSDKException
+     */
+    public PutEventResponse PutEvent(PutEventRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "PutEvent", PutEventResponse.class);
+    }
+
+    /**
+     *推送事件数据
      * @param req PutMessageRequest
      * @return PutMessageResponse
      * @throws TencentCloudSDKException

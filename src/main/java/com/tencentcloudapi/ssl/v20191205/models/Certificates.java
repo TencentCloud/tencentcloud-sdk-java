@@ -24,480 +24,392 @@ import java.util.HashMap;
 public class Certificates extends AbstractModel {
 
     /**
-    * 用户 UIN。
+    * <p>用户 UIN。</p>
     */
     @SerializedName("OwnerUin")
     @Expose
     private String OwnerUin;
 
     /**
-    * 项目 ID。
+    * <p>项目 ID。</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * 证书来源：
-trustasia：亚洲诚信，
-upload：用户上传。
-wosign：沃通
-sheca：上海CA
+    * <p>证书来源：trustasia：亚洲诚信，upload：用户上传。wosign：沃通sheca：上海CA</p>
     */
     @SerializedName("From")
     @Expose
     private String From;
 
     /**
-    * 证书套餐类型：
-null：用户上传证书（没有套餐类型），
-2：TrustAsia TLS RSA CA， 
-3：SecureSite 增强型企业版（EV Pro）， 
-4：SecureSite 增强型（EV）， 
-5：SecureSite 企业型专业版（OV Pro），
-6：SecureSite 企业型（OV）， 
-7：SecureSite 企业型（OV）通配符， 
-8：Geotrust 增强型（EV）， 
-9：Geotrust 企业型（OV）， 
-10：Geotrust 企业型（OV）通配符， 
-11：TrustAsia 域名型多域名 SSL 证书， 
-12：TrustAsia 域名型（DV）通配符， 
-13：TrustAsia 企业型通配符（OV）SSL 证书（D3）， 
-14：TrustAsia 企业型（OV）SSL 证书（D3）， 
-15：TrustAsia 企业型多域名 （OV）SSL 证书（D3）， 
-16：TrustAsia 增强型 （EV）SSL 证书（D3）， 
-17：TrustAsia 增强型多域名（EV）SSL 证书（D3）， 
-18：GlobalSign 企业型（OV）SSL 证书， 
-19：GlobalSign 企业型通配符 （OV）SSL 证书， 
-20：GlobalSign 增强型 （EV）SSL 证书， 
-21：TrustAsia 企业型通配符多域名（OV）SSL 证书（D3）， 
-22：GlobalSign 企业型多域名（OV）SSL 证书， 
-23：GlobalSign 企业型通配符多域名（OV）SSL 证书，
-24：GlobalSign 增强型多域名（EV）SSL 证书，
-25：Wotrus 域名型证书，
-26：Wotrus 域名型多域名证书，
-27：Wotrus 域名型通配符证书，
-28：Wotrus 企业型证书，
-29：Wotrus 企业型多域名证书，
-30：Wotrus 企业型通配符证书，
-31：Wotrus 增强型证书，
-32：Wotrus 增强型多域名证书，
-33：WoTrus-国密域名型证书，
-34：WoTrus-国密域名型证书（多域名），
-35：WoTrus-国密域名型证书（通配符），
-37：WoTrus-国密企业型证书，
-38：WoTrus-国密企业型证书（多域名），
-39：WoTrus-国密企业型证书（通配符），
-40：WoTrus-国密增强型证书，
-41：WoTrus-国密增强型证书（多域名），
-42：TrustAsia-域名型证书（通配符多域名），
-43：DNSPod-企业型(OV)SSL证书
-44：DNSPod-企业型(OV)通配符SSL证书
-45：DNSPod-企业型(OV)多域名SSL证书
-46：DNSPod-增强型(EV)SSL证书
-47：DNSPod-增强型(EV)多域名SSL证书
-48：DNSPod-域名型(DV)SSL证书
-49：DNSPod-域名型(DV)通配符SSL证书
-50：DNSPod-域名型(DV)多域名SSL证书
-51：DNSPod（国密）-企业型(OV)SSL证书
-52：DNSPod（国密）-企业型(OV)通配符SSL证书
-53：DNSPod（国密）-企业型(OV)多域名SSL证书
-54：DNSPod（国密）-域名型(DV)SSL证书
-55：DNSPod（国密）-域名型(DV)通配符SSL证书
-56：DNSPod（国密）-域名型(DV)多域名SSL证书
-57：SecureSite 企业型专业版多域名(OV Pro)
-58：SecureSite 企业型多域名(OV)
-59：SecureSite 增强型专业版多域名(EV Pro)
-60：SecureSite 增强型多域名(EV)
-61：Geotrust 增强型多域名(EV)
-75：SecureSite 企业型(OV)
-76：SecureSite 企业型(OV)通配符
-77：SecureSite 增强型(EV)
-78：Geotrust 企业型(OV)
-79：Geotrust 企业型(OV)通配符
-80：Geotrust 增强型(EV)
-81：GlobalSign 企业型（OV）SSL证书
-82：GlobalSign 企业型通配符 （OV）SSL证书
-83：TrustAsia C1 DV Free
-85：GlobalSign 增强型 （EV）SSL证书
-88：GlobalSign 企业型通配符多域名 （OV）SSL证书
-89：GlobalSign 企业型多域名 （OV）SSL证书
-90：GlobalSign 增强型多域名（EV） SSL证书
-91：Geotrust 增强型多域名(EV)
-92：SecureSite 企业型专业版多域名(OV Pro)
-93：SecureSite 企业型多域名(OV)
-94：SecureSite 增强型专业版多域名(EV Pro)
-95：SecureSite 增强型多域名(EV)
-96：SecureSite 增强型专业版(EV Pro)
-97：SecureSite 企业型专业版(OV Pro)
-98：CFCA 企业型(OV)SSL证书
-99：CFCA 企业型多域名(OV)SSL证书
-100：CFCA 企业型通配符(OV)SSL证书
-101：CFCA 增强型(EV)SSL证书
+    * <p>证书套餐类型：null：用户上传证书（没有套餐类型），2：TrustAsia TLS RSA CA， 3：SecureSite 增强型企业版（EV Pro）， 4：SecureSite 增强型（EV）， 5：SecureSite 企业型专业版（OV Pro），6：SecureSite 企业型（OV）， 7：SecureSite 企业型（OV）通配符， 8：Geotrust 增强型（EV）， 9：Geotrust 企业型（OV）， 10：Geotrust 企业型（OV）通配符， 11：TrustAsia 域名型多域名 SSL 证书， 12：TrustAsia 域名型（DV）通配符， 13：TrustAsia 企业型通配符（OV）SSL 证书（D3）， 14：TrustAsia 企业型（OV）SSL 证书（D3）， 15：TrustAsia 企业型多域名 （OV）SSL 证书（D3）， 16：TrustAsia 增强型 （EV）SSL 证书（D3）， 17：TrustAsia 增强型多域名（EV）SSL 证书（D3）， 18：GlobalSign 企业型（OV）SSL 证书， 19：GlobalSign 企业型通配符 （OV）SSL 证书， 20：GlobalSign 增强型 （EV）SSL 证书， 21：TrustAsia 企业型通配符多域名（OV）SSL 证书（D3）， 22：GlobalSign 企业型多域名（OV）SSL 证书， 23：GlobalSign 企业型通配符多域名（OV）SSL 证书，24：GlobalSign 增强型多域名（EV）SSL 证书，25：Wotrus 域名型证书，26：Wotrus 域名型多域名证书，27：Wotrus 域名型通配符证书，28：Wotrus 企业型证书，29：Wotrus 企业型多域名证书，30：Wotrus 企业型通配符证书，31：Wotrus 增强型证书，32：Wotrus 增强型多域名证书，33：WoTrus-国密域名型证书，34：WoTrus-国密域名型证书（多域名），35：WoTrus-国密域名型证书（通配符），37：WoTrus-国密企业型证书，38：WoTrus-国密企业型证书（多域名），39：WoTrus-国密企业型证书（通配符），40：WoTrus-国密增强型证书，41：WoTrus-国密增强型证书（多域名），42：TrustAsia-域名型证书（通配符多域名），43：DNSPod-企业型(OV)SSL证书44：DNSPod-企业型(OV)通配符SSL证书45：DNSPod-企业型(OV)多域名SSL证书46：DNSPod-增强型(EV)SSL证书47：DNSPod-增强型(EV)多域名SSL证书48：DNSPod-域名型(DV)SSL证书49：DNSPod-域名型(DV)通配符SSL证书50：DNSPod-域名型(DV)多域名SSL证书51：DNSPod（国密）-企业型(OV)SSL证书52：DNSPod（国密）-企业型(OV)通配符SSL证书53：DNSPod（国密）-企业型(OV)多域名SSL证书54：DNSPod（国密）-域名型(DV)SSL证书55：DNSPod（国密）-域名型(DV)通配符SSL证书56：DNSPod（国密）-域名型(DV)多域名SSL证书57：SecureSite 企业型专业版多域名(OV Pro)58：SecureSite 企业型多域名(OV)59：SecureSite 增强型专业版多域名(EV Pro)60：SecureSite 增强型多域名(EV)61：Geotrust 增强型多域名(EV)75：SecureSite 企业型(OV)76：SecureSite 企业型(OV)通配符77：SecureSite 增强型(EV)78：Geotrust 企业型(OV)79：Geotrust 企业型(OV)通配符80：Geotrust 增强型(EV)81：GlobalSign 企业型（OV）SSL证书82：GlobalSign 企业型通配符 （OV）SSL证书83：TrustAsia C1 DV Free85：GlobalSign 增强型 （EV）SSL证书88：GlobalSign 企业型通配符多域名 （OV）SSL证书89：GlobalSign 企业型多域名 （OV）SSL证书90：GlobalSign 增强型多域名（EV） SSL证书91：Geotrust 增强型多域名(EV)92：SecureSite 企业型专业版多域名(OV Pro)93：SecureSite 企业型多域名(OV)94：SecureSite 增强型专业版多域名(EV Pro)95：SecureSite 增强型多域名(EV)96：SecureSite 增强型专业版(EV Pro)97：SecureSite 企业型专业版(OV Pro)98：CFCA 企业型(OV)SSL证书99：CFCA 企业型多域名(OV)SSL证书100：CFCA 企业型通配符(OV)SSL证书101：CFCA 增强型(EV)SSL证书</p>
     */
     @SerializedName("PackageType")
     @Expose
     private String PackageType;
 
     /**
-    * 证书类型：CA = 客户端证书，SVR = 服务器证书。
+    * <p>证书类型：CA = 客户端证书，SVR = 服务器证书。</p>
     */
     @SerializedName("CertificateType")
     @Expose
     private String CertificateType;
 
     /**
-    * 证书产品名称
+    * <p>证书产品名称</p>
     */
     @SerializedName("ProductZhName")
     @Expose
     private String ProductZhName;
 
     /**
-    * 主域名。
+    * <p>主域名。</p>
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 备注名称。
+    * <p>备注名称。</p>
     */
     @SerializedName("Alias")
     @Expose
     private String Alias;
 
     /**
-    * 证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 自动添加DNS记录，5 = 企业证书，待提交资料，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。14 = 证书已退款。 15 = 证书迁移中
+    * <p>证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 自动添加DNS记录，5 = 企业证书，待提交资料，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。14 = 证书已退款。 15 = 证书迁移中</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 证书扩展信息。
+    * <p>证书扩展信息。</p>
     */
     @SerializedName("CertificateExtra")
     @Expose
     private CertificateExtra CertificateExtra;
 
     /**
-    * 漏洞扫描状态：INACTIVE = 未开启，ACTIVE = 已开启
+    * <p>漏洞扫描状态：INACTIVE = 未开启，ACTIVE = 已开启</p>
     */
     @SerializedName("VulnerabilityStatus")
     @Expose
     private String VulnerabilityStatus;
 
     /**
-    * 状态信息。
+    * <p>状态信息。</p>
     */
     @SerializedName("StatusMsg")
     @Expose
     private String StatusMsg;
 
     /**
-    * 验证类型：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证，DNS_PROXY = DNS代理验证。FILE_PROXY = 文件代理验证
+    * <p>验证类型：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证，DNS_PROXY = DNS代理验证。FILE_PROXY = 文件代理验证</p>
     */
     @SerializedName("VerifyType")
     @Expose
     private String VerifyType;
 
     /**
-    * 证书生效时间。时区为GMT+8:00
+    * <p>证书生效时间。时区为GMT+8:00</p>
     */
     @SerializedName("CertBeginTime")
     @Expose
     private String CertBeginTime;
 
     /**
-    * 证书过期时间。时区为GMT+8:00
+    * <p>证书过期时间。时区为GMT+8:00</p>
     */
     @SerializedName("CertEndTime")
     @Expose
     private String CertEndTime;
 
     /**
-    * 证书有效期，单位（月）。
+    * <p>证书有效期，单位（月）。</p>
     */
     @SerializedName("ValidityPeriod")
     @Expose
     private String ValidityPeriod;
 
     /**
-    * 创建时间。时区为GMT+8:00
+    * <p>创建时间。时区为GMT+8:00</p>
     */
     @SerializedName("InsertTime")
     @Expose
     private String InsertTime;
 
     /**
-    * 证书 ID。
+    * <p>证书 ID。</p>
     */
     @SerializedName("CertificateId")
     @Expose
     private String CertificateId;
 
     /**
-    * 证书包含的多个域名（包含主域名）。
+    * <p>证书包含的多个域名（包含主域名）。</p>
     */
     @SerializedName("SubjectAltName")
     @Expose
     private String [] SubjectAltName;
 
     /**
-    * 证书类型名称。
+    * <p>证书类型名称。</p>
     */
     @SerializedName("PackageTypeName")
     @Expose
     private String PackageTypeName;
 
     /**
-    * 状态名称。
+    * <p>状态名称。</p>
     */
     @SerializedName("StatusName")
     @Expose
     private String StatusName;
 
     /**
-    * 是否为 VIP 客户。
+    * <p>是否为 VIP 客户。</p>
     */
     @SerializedName("IsVip")
     @Expose
     private Boolean IsVip;
 
     /**
-    * 是否为 DV 版证书。
+    * <p>是否为 DV 版证书。</p>
     */
     @SerializedName("IsDv")
     @Expose
     private Boolean IsDv;
 
     /**
-    * 是否为泛域名证书。
+    * <p>是否为泛域名证书。</p>
     */
     @SerializedName("IsWildcard")
     @Expose
     private Boolean IsWildcard;
 
     /**
-    * 是否启用了漏洞扫描功能。
+    * <p>是否启用了漏洞扫描功能。</p>
     */
     @SerializedName("IsVulnerability")
     @Expose
     private Boolean IsVulnerability;
 
     /**
-    * 是否可续费。
+    * <p>是否可续费。</p>
     */
     @SerializedName("RenewAble")
     @Expose
     private Boolean RenewAble;
 
     /**
-    * 项目信息。
+    * <p>项目信息。</p>
     */
     @SerializedName("ProjectInfo")
     @Expose
     private ProjectInfo ProjectInfo;
 
     /**
-    * 关联的云资源，暂不可用
+    * <p>关联的云资源，暂不可用</p>
     */
     @SerializedName("BoundResource")
     @Expose
     private String [] BoundResource;
 
     /**
-    * 是否可部署。
+    * <p>是否可部署。</p>
     */
     @SerializedName("Deployable")
     @Expose
     private Boolean Deployable;
 
     /**
-    * 标签列表
+    * <p>标签列表</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tags [] Tags;
 
     /**
-    * 是否已忽略到期通知
+    * <p>是否已忽略到期通知</p>
     */
     @SerializedName("IsIgnore")
     @Expose
     private Boolean IsIgnore;
 
     /**
-    * 是否国密证书
+    * <p>是否国密证书</p>
     */
     @SerializedName("IsSM")
     @Expose
     private Boolean IsSM;
 
     /**
-    * 证书算法
+    * <p>证书算法</p>
     */
     @SerializedName("EncryptAlgorithm")
     @Expose
     private String EncryptAlgorithm;
 
     /**
-    * 上传CA证书的加密算法
+    * <p>上传CA证书的加密算法</p>
     */
     @SerializedName("CAEncryptAlgorithms")
     @Expose
     private String [] CAEncryptAlgorithms;
 
     /**
-    * 上传CA证书的过期时间
+    * <p>上传CA证书的过期时间</p>
     */
     @SerializedName("CAEndTimes")
     @Expose
     private String [] CAEndTimes;
 
     /**
-    * 上传CA证书的通用名称
+    * <p>上传CA证书的通用名称</p>
     */
     @SerializedName("CACommonNames")
     @Expose
     private String [] CACommonNames;
 
     /**
-    * 证书预审核信息
+    * <p>证书预审核信息</p>
     */
     @SerializedName("PreAuditInfo")
     @Expose
     private PreAuditInfo PreAuditInfo;
 
     /**
-    * 是否自动续费
+    * <p>是否自动续费</p>
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-    * 托管状态，0，托管中，5，资源替换中， 10， 托管完成， -1未托管 
+    * <p>托管状态，0，托管中，5，资源替换中， 10， 托管完成， -1未托管 </p>
     */
     @SerializedName("HostingStatus")
     @Expose
     private Long HostingStatus;
 
     /**
-    * 托管完成时间
+    * <p>托管完成时间</p>
     */
     @SerializedName("HostingCompleteTime")
     @Expose
     private String HostingCompleteTime;
 
     /**
-    * 托管新证书ID
+    * <p>托管新证书ID</p>
     */
     @SerializedName("HostingRenewCertId")
     @Expose
     private String HostingRenewCertId;
 
     /**
-    * 存在的续费证书ID
+    * <p>存在的续费证书ID</p>
     */
     @SerializedName("HasRenewOrder")
     @Expose
     private String HasRenewOrder;
 
     /**
-    * 重颁发证书原证书是否删除
+    * <p>重颁发证书原证书是否删除</p>
     */
     @SerializedName("ReplaceOriCertIsDelete")
     @Expose
     private Boolean ReplaceOriCertIsDelete;
 
     /**
-    * 是否即将过期， 证书即将到期的30天内为即将过期
+    * <p>是否即将过期， 证书即将到期的30天内为即将过期</p>
     */
     @SerializedName("IsExpiring")
     @Expose
     private Boolean IsExpiring;
 
     /**
-    * DV证书添加验证截止时间，时区为GMT+8:00
+    * <p>DV证书添加验证截止时间，时区为GMT+8:00</p>
     */
     @SerializedName("DVAuthDeadline")
     @Expose
     private String DVAuthDeadline;
 
     /**
-    * 域名验证通过时间，时区为GMT+8:00
+    * <p>域名验证通过时间，时区为GMT+8:00</p>
     */
     @SerializedName("ValidationPassedTime")
     @Expose
     private String ValidationPassedTime;
 
     /**
-    * 证书关联的多域名
+    * <p>证书关联的多域名</p>
     */
     @SerializedName("CertSANs")
     @Expose
     private String [] CertSANs;
 
     /**
-    * 域名验证驳回信息
+    * <p>域名验证驳回信息</p>
     */
     @SerializedName("AwaitingValidationMsg")
     @Expose
     private String AwaitingValidationMsg;
 
     /**
-    * 是否允许下载
+    * <p>是否允许下载</p>
     */
     @SerializedName("AllowDownload")
     @Expose
     private Boolean AllowDownload;
 
     /**
-    * 证书域名是否全部在DNSPOD托管解析
+    * <p>证书域名是否全部在DNSPOD托管解析</p>
     */
     @SerializedName("IsDNSPODResolve")
     @Expose
     private Boolean IsDNSPODResolve;
 
     /**
-    * 是否是权益点购买的证书
+    * <p>是否是权益点购买的证书</p>
     */
     @SerializedName("IsPackage")
     @Expose
     private Boolean IsPackage;
 
     /**
-    * 是否存在私钥密码
+    * <p>是否存在私钥密码</p>
     */
     @SerializedName("KeyPasswordCustomFlag")
     @Expose
     private Boolean KeyPasswordCustomFlag;
 
     /**
-    * 支持下载的WEB服务器类型： nginx、apache、iis、tomcat、jks、root、other
+    * <p>支持下载的WEB服务器类型： nginx、apache、iis、tomcat、jks、root、other</p>
     */
     @SerializedName("SupportDownloadType")
     @Expose
     private SupportDownloadType SupportDownloadType;
 
     /**
-    * 证书吊销完成时间，时区为GMT+8:00
+    * <p>证书吊销完成时间，时区为GMT+8:00</p>
     */
     @SerializedName("CertRevokedTime")
     @Expose
     private String CertRevokedTime;
 
     /**
-    * 托管资源类型列表
+    * <p>托管资源类型列表</p>
     */
     @SerializedName("HostingResourceTypes")
     @Expose
     private String [] HostingResourceTypes;
 
     /**
-    * 托管配置信息
+    * <p>托管配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostingConfig")
@@ -505,1248 +417,924 @@ null：用户上传证书（没有套餐类型），
     private HostingConfig HostingConfig;
 
     /**
-    * 是否是上传托管续费证书
+    * <p>是否是上传托管续费证书</p>
     */
     @SerializedName("IsHostingUploadRenewCert")
     @Expose
     private Boolean IsHostingUploadRenewCert;
 
     /**
-     * Get 用户 UIN。 
-     * @return OwnerUin 用户 UIN。
+    * <p>订阅服务ID</p>
+    */
+    @SerializedName("ServiceId")
+    @Expose
+    private String ServiceId;
+
+    /**
+    * <p>订阅服务状态</p>枚举值：<ul><li> initing： 未激活</li><li> running： 生效中</li><li> expired： 已过期</li><li> refunded： 已退款</li><li> nearExpire： 即将到期</li></ul>
+    */
+    @SerializedName("ServiceStatus")
+    @Expose
+    private String ServiceStatus;
+
+    /**
+    * <p>订阅服务开始时间</p>
+    */
+    @SerializedName("CertServiceBeginTime")
+    @Expose
+    private String CertServiceBeginTime;
+
+    /**
+    * <p>订阅服务结束时间</p>
+    */
+    @SerializedName("CertServiceEndTime")
+    @Expose
+    private String CertServiceEndTime;
+
+    /**
+     * Get <p>用户 UIN。</p> 
+     * @return OwnerUin <p>用户 UIN。</p>
      */
     public String getOwnerUin() {
         return this.OwnerUin;
     }
 
     /**
-     * Set 用户 UIN。
-     * @param OwnerUin 用户 UIN。
+     * Set <p>用户 UIN。</p>
+     * @param OwnerUin <p>用户 UIN。</p>
      */
     public void setOwnerUin(String OwnerUin) {
         this.OwnerUin = OwnerUin;
     }
 
     /**
-     * Get 项目 ID。 
-     * @return ProjectId 项目 ID。
+     * Get <p>项目 ID。</p> 
+     * @return ProjectId <p>项目 ID。</p>
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目 ID。
-     * @param ProjectId 项目 ID。
+     * Set <p>项目 ID。</p>
+     * @param ProjectId <p>项目 ID。</p>
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 证书来源：
-trustasia：亚洲诚信，
-upload：用户上传。
-wosign：沃通
-sheca：上海CA 
-     * @return From 证书来源：
-trustasia：亚洲诚信，
-upload：用户上传。
-wosign：沃通
-sheca：上海CA
+     * Get <p>证书来源：trustasia：亚洲诚信，upload：用户上传。wosign：沃通sheca：上海CA</p> 
+     * @return From <p>证书来源：trustasia：亚洲诚信，upload：用户上传。wosign：沃通sheca：上海CA</p>
      */
     public String getFrom() {
         return this.From;
     }
 
     /**
-     * Set 证书来源：
-trustasia：亚洲诚信，
-upload：用户上传。
-wosign：沃通
-sheca：上海CA
-     * @param From 证书来源：
-trustasia：亚洲诚信，
-upload：用户上传。
-wosign：沃通
-sheca：上海CA
+     * Set <p>证书来源：trustasia：亚洲诚信，upload：用户上传。wosign：沃通sheca：上海CA</p>
+     * @param From <p>证书来源：trustasia：亚洲诚信，upload：用户上传。wosign：沃通sheca：上海CA</p>
      */
     public void setFrom(String From) {
         this.From = From;
     }
 
     /**
-     * Get 证书套餐类型：
-null：用户上传证书（没有套餐类型），
-2：TrustAsia TLS RSA CA， 
-3：SecureSite 增强型企业版（EV Pro）， 
-4：SecureSite 增强型（EV）， 
-5：SecureSite 企业型专业版（OV Pro），
-6：SecureSite 企业型（OV）， 
-7：SecureSite 企业型（OV）通配符， 
-8：Geotrust 增强型（EV）， 
-9：Geotrust 企业型（OV）， 
-10：Geotrust 企业型（OV）通配符， 
-11：TrustAsia 域名型多域名 SSL 证书， 
-12：TrustAsia 域名型（DV）通配符， 
-13：TrustAsia 企业型通配符（OV）SSL 证书（D3）， 
-14：TrustAsia 企业型（OV）SSL 证书（D3）， 
-15：TrustAsia 企业型多域名 （OV）SSL 证书（D3）， 
-16：TrustAsia 增强型 （EV）SSL 证书（D3）， 
-17：TrustAsia 增强型多域名（EV）SSL 证书（D3）， 
-18：GlobalSign 企业型（OV）SSL 证书， 
-19：GlobalSign 企业型通配符 （OV）SSL 证书， 
-20：GlobalSign 增强型 （EV）SSL 证书， 
-21：TrustAsia 企业型通配符多域名（OV）SSL 证书（D3）， 
-22：GlobalSign 企业型多域名（OV）SSL 证书， 
-23：GlobalSign 企业型通配符多域名（OV）SSL 证书，
-24：GlobalSign 增强型多域名（EV）SSL 证书，
-25：Wotrus 域名型证书，
-26：Wotrus 域名型多域名证书，
-27：Wotrus 域名型通配符证书，
-28：Wotrus 企业型证书，
-29：Wotrus 企业型多域名证书，
-30：Wotrus 企业型通配符证书，
-31：Wotrus 增强型证书，
-32：Wotrus 增强型多域名证书，
-33：WoTrus-国密域名型证书，
-34：WoTrus-国密域名型证书（多域名），
-35：WoTrus-国密域名型证书（通配符），
-37：WoTrus-国密企业型证书，
-38：WoTrus-国密企业型证书（多域名），
-39：WoTrus-国密企业型证书（通配符），
-40：WoTrus-国密增强型证书，
-41：WoTrus-国密增强型证书（多域名），
-42：TrustAsia-域名型证书（通配符多域名），
-43：DNSPod-企业型(OV)SSL证书
-44：DNSPod-企业型(OV)通配符SSL证书
-45：DNSPod-企业型(OV)多域名SSL证书
-46：DNSPod-增强型(EV)SSL证书
-47：DNSPod-增强型(EV)多域名SSL证书
-48：DNSPod-域名型(DV)SSL证书
-49：DNSPod-域名型(DV)通配符SSL证书
-50：DNSPod-域名型(DV)多域名SSL证书
-51：DNSPod（国密）-企业型(OV)SSL证书
-52：DNSPod（国密）-企业型(OV)通配符SSL证书
-53：DNSPod（国密）-企业型(OV)多域名SSL证书
-54：DNSPod（国密）-域名型(DV)SSL证书
-55：DNSPod（国密）-域名型(DV)通配符SSL证书
-56：DNSPod（国密）-域名型(DV)多域名SSL证书
-57：SecureSite 企业型专业版多域名(OV Pro)
-58：SecureSite 企业型多域名(OV)
-59：SecureSite 增强型专业版多域名(EV Pro)
-60：SecureSite 增强型多域名(EV)
-61：Geotrust 增强型多域名(EV)
-75：SecureSite 企业型(OV)
-76：SecureSite 企业型(OV)通配符
-77：SecureSite 增强型(EV)
-78：Geotrust 企业型(OV)
-79：Geotrust 企业型(OV)通配符
-80：Geotrust 增强型(EV)
-81：GlobalSign 企业型（OV）SSL证书
-82：GlobalSign 企业型通配符 （OV）SSL证书
-83：TrustAsia C1 DV Free
-85：GlobalSign 增强型 （EV）SSL证书
-88：GlobalSign 企业型通配符多域名 （OV）SSL证书
-89：GlobalSign 企业型多域名 （OV）SSL证书
-90：GlobalSign 增强型多域名（EV） SSL证书
-91：Geotrust 增强型多域名(EV)
-92：SecureSite 企业型专业版多域名(OV Pro)
-93：SecureSite 企业型多域名(OV)
-94：SecureSite 增强型专业版多域名(EV Pro)
-95：SecureSite 增强型多域名(EV)
-96：SecureSite 增强型专业版(EV Pro)
-97：SecureSite 企业型专业版(OV Pro)
-98：CFCA 企业型(OV)SSL证书
-99：CFCA 企业型多域名(OV)SSL证书
-100：CFCA 企业型通配符(OV)SSL证书
-101：CFCA 增强型(EV)SSL证书 
-     * @return PackageType 证书套餐类型：
-null：用户上传证书（没有套餐类型），
-2：TrustAsia TLS RSA CA， 
-3：SecureSite 增强型企业版（EV Pro）， 
-4：SecureSite 增强型（EV）， 
-5：SecureSite 企业型专业版（OV Pro），
-6：SecureSite 企业型（OV）， 
-7：SecureSite 企业型（OV）通配符， 
-8：Geotrust 增强型（EV）， 
-9：Geotrust 企业型（OV）， 
-10：Geotrust 企业型（OV）通配符， 
-11：TrustAsia 域名型多域名 SSL 证书， 
-12：TrustAsia 域名型（DV）通配符， 
-13：TrustAsia 企业型通配符（OV）SSL 证书（D3）， 
-14：TrustAsia 企业型（OV）SSL 证书（D3）， 
-15：TrustAsia 企业型多域名 （OV）SSL 证书（D3）， 
-16：TrustAsia 增强型 （EV）SSL 证书（D3）， 
-17：TrustAsia 增强型多域名（EV）SSL 证书（D3）， 
-18：GlobalSign 企业型（OV）SSL 证书， 
-19：GlobalSign 企业型通配符 （OV）SSL 证书， 
-20：GlobalSign 增强型 （EV）SSL 证书， 
-21：TrustAsia 企业型通配符多域名（OV）SSL 证书（D3）， 
-22：GlobalSign 企业型多域名（OV）SSL 证书， 
-23：GlobalSign 企业型通配符多域名（OV）SSL 证书，
-24：GlobalSign 增强型多域名（EV）SSL 证书，
-25：Wotrus 域名型证书，
-26：Wotrus 域名型多域名证书，
-27：Wotrus 域名型通配符证书，
-28：Wotrus 企业型证书，
-29：Wotrus 企业型多域名证书，
-30：Wotrus 企业型通配符证书，
-31：Wotrus 增强型证书，
-32：Wotrus 增强型多域名证书，
-33：WoTrus-国密域名型证书，
-34：WoTrus-国密域名型证书（多域名），
-35：WoTrus-国密域名型证书（通配符），
-37：WoTrus-国密企业型证书，
-38：WoTrus-国密企业型证书（多域名），
-39：WoTrus-国密企业型证书（通配符），
-40：WoTrus-国密增强型证书，
-41：WoTrus-国密增强型证书（多域名），
-42：TrustAsia-域名型证书（通配符多域名），
-43：DNSPod-企业型(OV)SSL证书
-44：DNSPod-企业型(OV)通配符SSL证书
-45：DNSPod-企业型(OV)多域名SSL证书
-46：DNSPod-增强型(EV)SSL证书
-47：DNSPod-增强型(EV)多域名SSL证书
-48：DNSPod-域名型(DV)SSL证书
-49：DNSPod-域名型(DV)通配符SSL证书
-50：DNSPod-域名型(DV)多域名SSL证书
-51：DNSPod（国密）-企业型(OV)SSL证书
-52：DNSPod（国密）-企业型(OV)通配符SSL证书
-53：DNSPod（国密）-企业型(OV)多域名SSL证书
-54：DNSPod（国密）-域名型(DV)SSL证书
-55：DNSPod（国密）-域名型(DV)通配符SSL证书
-56：DNSPod（国密）-域名型(DV)多域名SSL证书
-57：SecureSite 企业型专业版多域名(OV Pro)
-58：SecureSite 企业型多域名(OV)
-59：SecureSite 增强型专业版多域名(EV Pro)
-60：SecureSite 增强型多域名(EV)
-61：Geotrust 增强型多域名(EV)
-75：SecureSite 企业型(OV)
-76：SecureSite 企业型(OV)通配符
-77：SecureSite 增强型(EV)
-78：Geotrust 企业型(OV)
-79：Geotrust 企业型(OV)通配符
-80：Geotrust 增强型(EV)
-81：GlobalSign 企业型（OV）SSL证书
-82：GlobalSign 企业型通配符 （OV）SSL证书
-83：TrustAsia C1 DV Free
-85：GlobalSign 增强型 （EV）SSL证书
-88：GlobalSign 企业型通配符多域名 （OV）SSL证书
-89：GlobalSign 企业型多域名 （OV）SSL证书
-90：GlobalSign 增强型多域名（EV） SSL证书
-91：Geotrust 增强型多域名(EV)
-92：SecureSite 企业型专业版多域名(OV Pro)
-93：SecureSite 企业型多域名(OV)
-94：SecureSite 增强型专业版多域名(EV Pro)
-95：SecureSite 增强型多域名(EV)
-96：SecureSite 增强型专业版(EV Pro)
-97：SecureSite 企业型专业版(OV Pro)
-98：CFCA 企业型(OV)SSL证书
-99：CFCA 企业型多域名(OV)SSL证书
-100：CFCA 企业型通配符(OV)SSL证书
-101：CFCA 增强型(EV)SSL证书
+     * Get <p>证书套餐类型：null：用户上传证书（没有套餐类型），2：TrustAsia TLS RSA CA， 3：SecureSite 增强型企业版（EV Pro）， 4：SecureSite 增强型（EV）， 5：SecureSite 企业型专业版（OV Pro），6：SecureSite 企业型（OV）， 7：SecureSite 企业型（OV）通配符， 8：Geotrust 增强型（EV）， 9：Geotrust 企业型（OV）， 10：Geotrust 企业型（OV）通配符， 11：TrustAsia 域名型多域名 SSL 证书， 12：TrustAsia 域名型（DV）通配符， 13：TrustAsia 企业型通配符（OV）SSL 证书（D3）， 14：TrustAsia 企业型（OV）SSL 证书（D3）， 15：TrustAsia 企业型多域名 （OV）SSL 证书（D3）， 16：TrustAsia 增强型 （EV）SSL 证书（D3）， 17：TrustAsia 增强型多域名（EV）SSL 证书（D3）， 18：GlobalSign 企业型（OV）SSL 证书， 19：GlobalSign 企业型通配符 （OV）SSL 证书， 20：GlobalSign 增强型 （EV）SSL 证书， 21：TrustAsia 企业型通配符多域名（OV）SSL 证书（D3）， 22：GlobalSign 企业型多域名（OV）SSL 证书， 23：GlobalSign 企业型通配符多域名（OV）SSL 证书，24：GlobalSign 增强型多域名（EV）SSL 证书，25：Wotrus 域名型证书，26：Wotrus 域名型多域名证书，27：Wotrus 域名型通配符证书，28：Wotrus 企业型证书，29：Wotrus 企业型多域名证书，30：Wotrus 企业型通配符证书，31：Wotrus 增强型证书，32：Wotrus 增强型多域名证书，33：WoTrus-国密域名型证书，34：WoTrus-国密域名型证书（多域名），35：WoTrus-国密域名型证书（通配符），37：WoTrus-国密企业型证书，38：WoTrus-国密企业型证书（多域名），39：WoTrus-国密企业型证书（通配符），40：WoTrus-国密增强型证书，41：WoTrus-国密增强型证书（多域名），42：TrustAsia-域名型证书（通配符多域名），43：DNSPod-企业型(OV)SSL证书44：DNSPod-企业型(OV)通配符SSL证书45：DNSPod-企业型(OV)多域名SSL证书46：DNSPod-增强型(EV)SSL证书47：DNSPod-增强型(EV)多域名SSL证书48：DNSPod-域名型(DV)SSL证书49：DNSPod-域名型(DV)通配符SSL证书50：DNSPod-域名型(DV)多域名SSL证书51：DNSPod（国密）-企业型(OV)SSL证书52：DNSPod（国密）-企业型(OV)通配符SSL证书53：DNSPod（国密）-企业型(OV)多域名SSL证书54：DNSPod（国密）-域名型(DV)SSL证书55：DNSPod（国密）-域名型(DV)通配符SSL证书56：DNSPod（国密）-域名型(DV)多域名SSL证书57：SecureSite 企业型专业版多域名(OV Pro)58：SecureSite 企业型多域名(OV)59：SecureSite 增强型专业版多域名(EV Pro)60：SecureSite 增强型多域名(EV)61：Geotrust 增强型多域名(EV)75：SecureSite 企业型(OV)76：SecureSite 企业型(OV)通配符77：SecureSite 增强型(EV)78：Geotrust 企业型(OV)79：Geotrust 企业型(OV)通配符80：Geotrust 增强型(EV)81：GlobalSign 企业型（OV）SSL证书82：GlobalSign 企业型通配符 （OV）SSL证书83：TrustAsia C1 DV Free85：GlobalSign 增强型 （EV）SSL证书88：GlobalSign 企业型通配符多域名 （OV）SSL证书89：GlobalSign 企业型多域名 （OV）SSL证书90：GlobalSign 增强型多域名（EV） SSL证书91：Geotrust 增强型多域名(EV)92：SecureSite 企业型专业版多域名(OV Pro)93：SecureSite 企业型多域名(OV)94：SecureSite 增强型专业版多域名(EV Pro)95：SecureSite 增强型多域名(EV)96：SecureSite 增强型专业版(EV Pro)97：SecureSite 企业型专业版(OV Pro)98：CFCA 企业型(OV)SSL证书99：CFCA 企业型多域名(OV)SSL证书100：CFCA 企业型通配符(OV)SSL证书101：CFCA 增强型(EV)SSL证书</p> 
+     * @return PackageType <p>证书套餐类型：null：用户上传证书（没有套餐类型），2：TrustAsia TLS RSA CA， 3：SecureSite 增强型企业版（EV Pro）， 4：SecureSite 增强型（EV）， 5：SecureSite 企业型专业版（OV Pro），6：SecureSite 企业型（OV）， 7：SecureSite 企业型（OV）通配符， 8：Geotrust 增强型（EV）， 9：Geotrust 企业型（OV）， 10：Geotrust 企业型（OV）通配符， 11：TrustAsia 域名型多域名 SSL 证书， 12：TrustAsia 域名型（DV）通配符， 13：TrustAsia 企业型通配符（OV）SSL 证书（D3）， 14：TrustAsia 企业型（OV）SSL 证书（D3）， 15：TrustAsia 企业型多域名 （OV）SSL 证书（D3）， 16：TrustAsia 增强型 （EV）SSL 证书（D3）， 17：TrustAsia 增强型多域名（EV）SSL 证书（D3）， 18：GlobalSign 企业型（OV）SSL 证书， 19：GlobalSign 企业型通配符 （OV）SSL 证书， 20：GlobalSign 增强型 （EV）SSL 证书， 21：TrustAsia 企业型通配符多域名（OV）SSL 证书（D3）， 22：GlobalSign 企业型多域名（OV）SSL 证书， 23：GlobalSign 企业型通配符多域名（OV）SSL 证书，24：GlobalSign 增强型多域名（EV）SSL 证书，25：Wotrus 域名型证书，26：Wotrus 域名型多域名证书，27：Wotrus 域名型通配符证书，28：Wotrus 企业型证书，29：Wotrus 企业型多域名证书，30：Wotrus 企业型通配符证书，31：Wotrus 增强型证书，32：Wotrus 增强型多域名证书，33：WoTrus-国密域名型证书，34：WoTrus-国密域名型证书（多域名），35：WoTrus-国密域名型证书（通配符），37：WoTrus-国密企业型证书，38：WoTrus-国密企业型证书（多域名），39：WoTrus-国密企业型证书（通配符），40：WoTrus-国密增强型证书，41：WoTrus-国密增强型证书（多域名），42：TrustAsia-域名型证书（通配符多域名），43：DNSPod-企业型(OV)SSL证书44：DNSPod-企业型(OV)通配符SSL证书45：DNSPod-企业型(OV)多域名SSL证书46：DNSPod-增强型(EV)SSL证书47：DNSPod-增强型(EV)多域名SSL证书48：DNSPod-域名型(DV)SSL证书49：DNSPod-域名型(DV)通配符SSL证书50：DNSPod-域名型(DV)多域名SSL证书51：DNSPod（国密）-企业型(OV)SSL证书52：DNSPod（国密）-企业型(OV)通配符SSL证书53：DNSPod（国密）-企业型(OV)多域名SSL证书54：DNSPod（国密）-域名型(DV)SSL证书55：DNSPod（国密）-域名型(DV)通配符SSL证书56：DNSPod（国密）-域名型(DV)多域名SSL证书57：SecureSite 企业型专业版多域名(OV Pro)58：SecureSite 企业型多域名(OV)59：SecureSite 增强型专业版多域名(EV Pro)60：SecureSite 增强型多域名(EV)61：Geotrust 增强型多域名(EV)75：SecureSite 企业型(OV)76：SecureSite 企业型(OV)通配符77：SecureSite 增强型(EV)78：Geotrust 企业型(OV)79：Geotrust 企业型(OV)通配符80：Geotrust 增强型(EV)81：GlobalSign 企业型（OV）SSL证书82：GlobalSign 企业型通配符 （OV）SSL证书83：TrustAsia C1 DV Free85：GlobalSign 增强型 （EV）SSL证书88：GlobalSign 企业型通配符多域名 （OV）SSL证书89：GlobalSign 企业型多域名 （OV）SSL证书90：GlobalSign 增强型多域名（EV） SSL证书91：Geotrust 增强型多域名(EV)92：SecureSite 企业型专业版多域名(OV Pro)93：SecureSite 企业型多域名(OV)94：SecureSite 增强型专业版多域名(EV Pro)95：SecureSite 增强型多域名(EV)96：SecureSite 增强型专业版(EV Pro)97：SecureSite 企业型专业版(OV Pro)98：CFCA 企业型(OV)SSL证书99：CFCA 企业型多域名(OV)SSL证书100：CFCA 企业型通配符(OV)SSL证书101：CFCA 增强型(EV)SSL证书</p>
      */
     public String getPackageType() {
         return this.PackageType;
     }
 
     /**
-     * Set 证书套餐类型：
-null：用户上传证书（没有套餐类型），
-2：TrustAsia TLS RSA CA， 
-3：SecureSite 增强型企业版（EV Pro）， 
-4：SecureSite 增强型（EV）， 
-5：SecureSite 企业型专业版（OV Pro），
-6：SecureSite 企业型（OV）， 
-7：SecureSite 企业型（OV）通配符， 
-8：Geotrust 增强型（EV）， 
-9：Geotrust 企业型（OV）， 
-10：Geotrust 企业型（OV）通配符， 
-11：TrustAsia 域名型多域名 SSL 证书， 
-12：TrustAsia 域名型（DV）通配符， 
-13：TrustAsia 企业型通配符（OV）SSL 证书（D3）， 
-14：TrustAsia 企业型（OV）SSL 证书（D3）， 
-15：TrustAsia 企业型多域名 （OV）SSL 证书（D3）， 
-16：TrustAsia 增强型 （EV）SSL 证书（D3）， 
-17：TrustAsia 增强型多域名（EV）SSL 证书（D3）， 
-18：GlobalSign 企业型（OV）SSL 证书， 
-19：GlobalSign 企业型通配符 （OV）SSL 证书， 
-20：GlobalSign 增强型 （EV）SSL 证书， 
-21：TrustAsia 企业型通配符多域名（OV）SSL 证书（D3）， 
-22：GlobalSign 企业型多域名（OV）SSL 证书， 
-23：GlobalSign 企业型通配符多域名（OV）SSL 证书，
-24：GlobalSign 增强型多域名（EV）SSL 证书，
-25：Wotrus 域名型证书，
-26：Wotrus 域名型多域名证书，
-27：Wotrus 域名型通配符证书，
-28：Wotrus 企业型证书，
-29：Wotrus 企业型多域名证书，
-30：Wotrus 企业型通配符证书，
-31：Wotrus 增强型证书，
-32：Wotrus 增强型多域名证书，
-33：WoTrus-国密域名型证书，
-34：WoTrus-国密域名型证书（多域名），
-35：WoTrus-国密域名型证书（通配符），
-37：WoTrus-国密企业型证书，
-38：WoTrus-国密企业型证书（多域名），
-39：WoTrus-国密企业型证书（通配符），
-40：WoTrus-国密增强型证书，
-41：WoTrus-国密增强型证书（多域名），
-42：TrustAsia-域名型证书（通配符多域名），
-43：DNSPod-企业型(OV)SSL证书
-44：DNSPod-企业型(OV)通配符SSL证书
-45：DNSPod-企业型(OV)多域名SSL证书
-46：DNSPod-增强型(EV)SSL证书
-47：DNSPod-增强型(EV)多域名SSL证书
-48：DNSPod-域名型(DV)SSL证书
-49：DNSPod-域名型(DV)通配符SSL证书
-50：DNSPod-域名型(DV)多域名SSL证书
-51：DNSPod（国密）-企业型(OV)SSL证书
-52：DNSPod（国密）-企业型(OV)通配符SSL证书
-53：DNSPod（国密）-企业型(OV)多域名SSL证书
-54：DNSPod（国密）-域名型(DV)SSL证书
-55：DNSPod（国密）-域名型(DV)通配符SSL证书
-56：DNSPod（国密）-域名型(DV)多域名SSL证书
-57：SecureSite 企业型专业版多域名(OV Pro)
-58：SecureSite 企业型多域名(OV)
-59：SecureSite 增强型专业版多域名(EV Pro)
-60：SecureSite 增强型多域名(EV)
-61：Geotrust 增强型多域名(EV)
-75：SecureSite 企业型(OV)
-76：SecureSite 企业型(OV)通配符
-77：SecureSite 增强型(EV)
-78：Geotrust 企业型(OV)
-79：Geotrust 企业型(OV)通配符
-80：Geotrust 增强型(EV)
-81：GlobalSign 企业型（OV）SSL证书
-82：GlobalSign 企业型通配符 （OV）SSL证书
-83：TrustAsia C1 DV Free
-85：GlobalSign 增强型 （EV）SSL证书
-88：GlobalSign 企业型通配符多域名 （OV）SSL证书
-89：GlobalSign 企业型多域名 （OV）SSL证书
-90：GlobalSign 增强型多域名（EV） SSL证书
-91：Geotrust 增强型多域名(EV)
-92：SecureSite 企业型专业版多域名(OV Pro)
-93：SecureSite 企业型多域名(OV)
-94：SecureSite 增强型专业版多域名(EV Pro)
-95：SecureSite 增强型多域名(EV)
-96：SecureSite 增强型专业版(EV Pro)
-97：SecureSite 企业型专业版(OV Pro)
-98：CFCA 企业型(OV)SSL证书
-99：CFCA 企业型多域名(OV)SSL证书
-100：CFCA 企业型通配符(OV)SSL证书
-101：CFCA 增强型(EV)SSL证书
-     * @param PackageType 证书套餐类型：
-null：用户上传证书（没有套餐类型），
-2：TrustAsia TLS RSA CA， 
-3：SecureSite 增强型企业版（EV Pro）， 
-4：SecureSite 增强型（EV）， 
-5：SecureSite 企业型专业版（OV Pro），
-6：SecureSite 企业型（OV）， 
-7：SecureSite 企业型（OV）通配符， 
-8：Geotrust 增强型（EV）， 
-9：Geotrust 企业型（OV）， 
-10：Geotrust 企业型（OV）通配符， 
-11：TrustAsia 域名型多域名 SSL 证书， 
-12：TrustAsia 域名型（DV）通配符， 
-13：TrustAsia 企业型通配符（OV）SSL 证书（D3）， 
-14：TrustAsia 企业型（OV）SSL 证书（D3）， 
-15：TrustAsia 企业型多域名 （OV）SSL 证书（D3）， 
-16：TrustAsia 增强型 （EV）SSL 证书（D3）， 
-17：TrustAsia 增强型多域名（EV）SSL 证书（D3）， 
-18：GlobalSign 企业型（OV）SSL 证书， 
-19：GlobalSign 企业型通配符 （OV）SSL 证书， 
-20：GlobalSign 增强型 （EV）SSL 证书， 
-21：TrustAsia 企业型通配符多域名（OV）SSL 证书（D3）， 
-22：GlobalSign 企业型多域名（OV）SSL 证书， 
-23：GlobalSign 企业型通配符多域名（OV）SSL 证书，
-24：GlobalSign 增强型多域名（EV）SSL 证书，
-25：Wotrus 域名型证书，
-26：Wotrus 域名型多域名证书，
-27：Wotrus 域名型通配符证书，
-28：Wotrus 企业型证书，
-29：Wotrus 企业型多域名证书，
-30：Wotrus 企业型通配符证书，
-31：Wotrus 增强型证书，
-32：Wotrus 增强型多域名证书，
-33：WoTrus-国密域名型证书，
-34：WoTrus-国密域名型证书（多域名），
-35：WoTrus-国密域名型证书（通配符），
-37：WoTrus-国密企业型证书，
-38：WoTrus-国密企业型证书（多域名），
-39：WoTrus-国密企业型证书（通配符），
-40：WoTrus-国密增强型证书，
-41：WoTrus-国密增强型证书（多域名），
-42：TrustAsia-域名型证书（通配符多域名），
-43：DNSPod-企业型(OV)SSL证书
-44：DNSPod-企业型(OV)通配符SSL证书
-45：DNSPod-企业型(OV)多域名SSL证书
-46：DNSPod-增强型(EV)SSL证书
-47：DNSPod-增强型(EV)多域名SSL证书
-48：DNSPod-域名型(DV)SSL证书
-49：DNSPod-域名型(DV)通配符SSL证书
-50：DNSPod-域名型(DV)多域名SSL证书
-51：DNSPod（国密）-企业型(OV)SSL证书
-52：DNSPod（国密）-企业型(OV)通配符SSL证书
-53：DNSPod（国密）-企业型(OV)多域名SSL证书
-54：DNSPod（国密）-域名型(DV)SSL证书
-55：DNSPod（国密）-域名型(DV)通配符SSL证书
-56：DNSPod（国密）-域名型(DV)多域名SSL证书
-57：SecureSite 企业型专业版多域名(OV Pro)
-58：SecureSite 企业型多域名(OV)
-59：SecureSite 增强型专业版多域名(EV Pro)
-60：SecureSite 增强型多域名(EV)
-61：Geotrust 增强型多域名(EV)
-75：SecureSite 企业型(OV)
-76：SecureSite 企业型(OV)通配符
-77：SecureSite 增强型(EV)
-78：Geotrust 企业型(OV)
-79：Geotrust 企业型(OV)通配符
-80：Geotrust 增强型(EV)
-81：GlobalSign 企业型（OV）SSL证书
-82：GlobalSign 企业型通配符 （OV）SSL证书
-83：TrustAsia C1 DV Free
-85：GlobalSign 增强型 （EV）SSL证书
-88：GlobalSign 企业型通配符多域名 （OV）SSL证书
-89：GlobalSign 企业型多域名 （OV）SSL证书
-90：GlobalSign 增强型多域名（EV） SSL证书
-91：Geotrust 增强型多域名(EV)
-92：SecureSite 企业型专业版多域名(OV Pro)
-93：SecureSite 企业型多域名(OV)
-94：SecureSite 增强型专业版多域名(EV Pro)
-95：SecureSite 增强型多域名(EV)
-96：SecureSite 增强型专业版(EV Pro)
-97：SecureSite 企业型专业版(OV Pro)
-98：CFCA 企业型(OV)SSL证书
-99：CFCA 企业型多域名(OV)SSL证书
-100：CFCA 企业型通配符(OV)SSL证书
-101：CFCA 增强型(EV)SSL证书
+     * Set <p>证书套餐类型：null：用户上传证书（没有套餐类型），2：TrustAsia TLS RSA CA， 3：SecureSite 增强型企业版（EV Pro）， 4：SecureSite 增强型（EV）， 5：SecureSite 企业型专业版（OV Pro），6：SecureSite 企业型（OV）， 7：SecureSite 企业型（OV）通配符， 8：Geotrust 增强型（EV）， 9：Geotrust 企业型（OV）， 10：Geotrust 企业型（OV）通配符， 11：TrustAsia 域名型多域名 SSL 证书， 12：TrustAsia 域名型（DV）通配符， 13：TrustAsia 企业型通配符（OV）SSL 证书（D3）， 14：TrustAsia 企业型（OV）SSL 证书（D3）， 15：TrustAsia 企业型多域名 （OV）SSL 证书（D3）， 16：TrustAsia 增强型 （EV）SSL 证书（D3）， 17：TrustAsia 增强型多域名（EV）SSL 证书（D3）， 18：GlobalSign 企业型（OV）SSL 证书， 19：GlobalSign 企业型通配符 （OV）SSL 证书， 20：GlobalSign 增强型 （EV）SSL 证书， 21：TrustAsia 企业型通配符多域名（OV）SSL 证书（D3）， 22：GlobalSign 企业型多域名（OV）SSL 证书， 23：GlobalSign 企业型通配符多域名（OV）SSL 证书，24：GlobalSign 增强型多域名（EV）SSL 证书，25：Wotrus 域名型证书，26：Wotrus 域名型多域名证书，27：Wotrus 域名型通配符证书，28：Wotrus 企业型证书，29：Wotrus 企业型多域名证书，30：Wotrus 企业型通配符证书，31：Wotrus 增强型证书，32：Wotrus 增强型多域名证书，33：WoTrus-国密域名型证书，34：WoTrus-国密域名型证书（多域名），35：WoTrus-国密域名型证书（通配符），37：WoTrus-国密企业型证书，38：WoTrus-国密企业型证书（多域名），39：WoTrus-国密企业型证书（通配符），40：WoTrus-国密增强型证书，41：WoTrus-国密增强型证书（多域名），42：TrustAsia-域名型证书（通配符多域名），43：DNSPod-企业型(OV)SSL证书44：DNSPod-企业型(OV)通配符SSL证书45：DNSPod-企业型(OV)多域名SSL证书46：DNSPod-增强型(EV)SSL证书47：DNSPod-增强型(EV)多域名SSL证书48：DNSPod-域名型(DV)SSL证书49：DNSPod-域名型(DV)通配符SSL证书50：DNSPod-域名型(DV)多域名SSL证书51：DNSPod（国密）-企业型(OV)SSL证书52：DNSPod（国密）-企业型(OV)通配符SSL证书53：DNSPod（国密）-企业型(OV)多域名SSL证书54：DNSPod（国密）-域名型(DV)SSL证书55：DNSPod（国密）-域名型(DV)通配符SSL证书56：DNSPod（国密）-域名型(DV)多域名SSL证书57：SecureSite 企业型专业版多域名(OV Pro)58：SecureSite 企业型多域名(OV)59：SecureSite 增强型专业版多域名(EV Pro)60：SecureSite 增强型多域名(EV)61：Geotrust 增强型多域名(EV)75：SecureSite 企业型(OV)76：SecureSite 企业型(OV)通配符77：SecureSite 增强型(EV)78：Geotrust 企业型(OV)79：Geotrust 企业型(OV)通配符80：Geotrust 增强型(EV)81：GlobalSign 企业型（OV）SSL证书82：GlobalSign 企业型通配符 （OV）SSL证书83：TrustAsia C1 DV Free85：GlobalSign 增强型 （EV）SSL证书88：GlobalSign 企业型通配符多域名 （OV）SSL证书89：GlobalSign 企业型多域名 （OV）SSL证书90：GlobalSign 增强型多域名（EV） SSL证书91：Geotrust 增强型多域名(EV)92：SecureSite 企业型专业版多域名(OV Pro)93：SecureSite 企业型多域名(OV)94：SecureSite 增强型专业版多域名(EV Pro)95：SecureSite 增强型多域名(EV)96：SecureSite 增强型专业版(EV Pro)97：SecureSite 企业型专业版(OV Pro)98：CFCA 企业型(OV)SSL证书99：CFCA 企业型多域名(OV)SSL证书100：CFCA 企业型通配符(OV)SSL证书101：CFCA 增强型(EV)SSL证书</p>
+     * @param PackageType <p>证书套餐类型：null：用户上传证书（没有套餐类型），2：TrustAsia TLS RSA CA， 3：SecureSite 增强型企业版（EV Pro）， 4：SecureSite 增强型（EV）， 5：SecureSite 企业型专业版（OV Pro），6：SecureSite 企业型（OV）， 7：SecureSite 企业型（OV）通配符， 8：Geotrust 增强型（EV）， 9：Geotrust 企业型（OV）， 10：Geotrust 企业型（OV）通配符， 11：TrustAsia 域名型多域名 SSL 证书， 12：TrustAsia 域名型（DV）通配符， 13：TrustAsia 企业型通配符（OV）SSL 证书（D3）， 14：TrustAsia 企业型（OV）SSL 证书（D3）， 15：TrustAsia 企业型多域名 （OV）SSL 证书（D3）， 16：TrustAsia 增强型 （EV）SSL 证书（D3）， 17：TrustAsia 增强型多域名（EV）SSL 证书（D3）， 18：GlobalSign 企业型（OV）SSL 证书， 19：GlobalSign 企业型通配符 （OV）SSL 证书， 20：GlobalSign 增强型 （EV）SSL 证书， 21：TrustAsia 企业型通配符多域名（OV）SSL 证书（D3）， 22：GlobalSign 企业型多域名（OV）SSL 证书， 23：GlobalSign 企业型通配符多域名（OV）SSL 证书，24：GlobalSign 增强型多域名（EV）SSL 证书，25：Wotrus 域名型证书，26：Wotrus 域名型多域名证书，27：Wotrus 域名型通配符证书，28：Wotrus 企业型证书，29：Wotrus 企业型多域名证书，30：Wotrus 企业型通配符证书，31：Wotrus 增强型证书，32：Wotrus 增强型多域名证书，33：WoTrus-国密域名型证书，34：WoTrus-国密域名型证书（多域名），35：WoTrus-国密域名型证书（通配符），37：WoTrus-国密企业型证书，38：WoTrus-国密企业型证书（多域名），39：WoTrus-国密企业型证书（通配符），40：WoTrus-国密增强型证书，41：WoTrus-国密增强型证书（多域名），42：TrustAsia-域名型证书（通配符多域名），43：DNSPod-企业型(OV)SSL证书44：DNSPod-企业型(OV)通配符SSL证书45：DNSPod-企业型(OV)多域名SSL证书46：DNSPod-增强型(EV)SSL证书47：DNSPod-增强型(EV)多域名SSL证书48：DNSPod-域名型(DV)SSL证书49：DNSPod-域名型(DV)通配符SSL证书50：DNSPod-域名型(DV)多域名SSL证书51：DNSPod（国密）-企业型(OV)SSL证书52：DNSPod（国密）-企业型(OV)通配符SSL证书53：DNSPod（国密）-企业型(OV)多域名SSL证书54：DNSPod（国密）-域名型(DV)SSL证书55：DNSPod（国密）-域名型(DV)通配符SSL证书56：DNSPod（国密）-域名型(DV)多域名SSL证书57：SecureSite 企业型专业版多域名(OV Pro)58：SecureSite 企业型多域名(OV)59：SecureSite 增强型专业版多域名(EV Pro)60：SecureSite 增强型多域名(EV)61：Geotrust 增强型多域名(EV)75：SecureSite 企业型(OV)76：SecureSite 企业型(OV)通配符77：SecureSite 增强型(EV)78：Geotrust 企业型(OV)79：Geotrust 企业型(OV)通配符80：Geotrust 增强型(EV)81：GlobalSign 企业型（OV）SSL证书82：GlobalSign 企业型通配符 （OV）SSL证书83：TrustAsia C1 DV Free85：GlobalSign 增强型 （EV）SSL证书88：GlobalSign 企业型通配符多域名 （OV）SSL证书89：GlobalSign 企业型多域名 （OV）SSL证书90：GlobalSign 增强型多域名（EV） SSL证书91：Geotrust 增强型多域名(EV)92：SecureSite 企业型专业版多域名(OV Pro)93：SecureSite 企业型多域名(OV)94：SecureSite 增强型专业版多域名(EV Pro)95：SecureSite 增强型多域名(EV)96：SecureSite 增强型专业版(EV Pro)97：SecureSite 企业型专业版(OV Pro)98：CFCA 企业型(OV)SSL证书99：CFCA 企业型多域名(OV)SSL证书100：CFCA 企业型通配符(OV)SSL证书101：CFCA 增强型(EV)SSL证书</p>
      */
     public void setPackageType(String PackageType) {
         this.PackageType = PackageType;
     }
 
     /**
-     * Get 证书类型：CA = 客户端证书，SVR = 服务器证书。 
-     * @return CertificateType 证书类型：CA = 客户端证书，SVR = 服务器证书。
+     * Get <p>证书类型：CA = 客户端证书，SVR = 服务器证书。</p> 
+     * @return CertificateType <p>证书类型：CA = 客户端证书，SVR = 服务器证书。</p>
      */
     public String getCertificateType() {
         return this.CertificateType;
     }
 
     /**
-     * Set 证书类型：CA = 客户端证书，SVR = 服务器证书。
-     * @param CertificateType 证书类型：CA = 客户端证书，SVR = 服务器证书。
+     * Set <p>证书类型：CA = 客户端证书，SVR = 服务器证书。</p>
+     * @param CertificateType <p>证书类型：CA = 客户端证书，SVR = 服务器证书。</p>
      */
     public void setCertificateType(String CertificateType) {
         this.CertificateType = CertificateType;
     }
 
     /**
-     * Get 证书产品名称 
-     * @return ProductZhName 证书产品名称
+     * Get <p>证书产品名称</p> 
+     * @return ProductZhName <p>证书产品名称</p>
      */
     public String getProductZhName() {
         return this.ProductZhName;
     }
 
     /**
-     * Set 证书产品名称
-     * @param ProductZhName 证书产品名称
+     * Set <p>证书产品名称</p>
+     * @param ProductZhName <p>证书产品名称</p>
      */
     public void setProductZhName(String ProductZhName) {
         this.ProductZhName = ProductZhName;
     }
 
     /**
-     * Get 主域名。 
-     * @return Domain 主域名。
+     * Get <p>主域名。</p> 
+     * @return Domain <p>主域名。</p>
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 主域名。
-     * @param Domain 主域名。
+     * Set <p>主域名。</p>
+     * @param Domain <p>主域名。</p>
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 备注名称。 
-     * @return Alias 备注名称。
+     * Get <p>备注名称。</p> 
+     * @return Alias <p>备注名称。</p>
      */
     public String getAlias() {
         return this.Alias;
     }
 
     /**
-     * Set 备注名称。
-     * @param Alias 备注名称。
+     * Set <p>备注名称。</p>
+     * @param Alias <p>备注名称。</p>
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;
     }
 
     /**
-     * Get 证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 自动添加DNS记录，5 = 企业证书，待提交资料，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。14 = 证书已退款。 15 = 证书迁移中 
-     * @return Status 证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 自动添加DNS记录，5 = 企业证书，待提交资料，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。14 = 证书已退款。 15 = 证书迁移中
+     * Get <p>证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 自动添加DNS记录，5 = 企业证书，待提交资料，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。14 = 证书已退款。 15 = 证书迁移中</p> 
+     * @return Status <p>证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 自动添加DNS记录，5 = 企业证书，待提交资料，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。14 = 证书已退款。 15 = 证书迁移中</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 自动添加DNS记录，5 = 企业证书，待提交资料，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。14 = 证书已退款。 15 = 证书迁移中
-     * @param Status 证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 自动添加DNS记录，5 = 企业证书，待提交资料，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。14 = 证书已退款。 15 = 证书迁移中
+     * Set <p>证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 自动添加DNS记录，5 = 企业证书，待提交资料，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。14 = 证书已退款。 15 = 证书迁移中</p>
+     * @param Status <p>证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 自动添加DNS记录，5 = 企业证书，待提交资料，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。14 = 证书已退款。 15 = 证书迁移中</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 证书扩展信息。 
-     * @return CertificateExtra 证书扩展信息。
+     * Get <p>证书扩展信息。</p> 
+     * @return CertificateExtra <p>证书扩展信息。</p>
      */
     public CertificateExtra getCertificateExtra() {
         return this.CertificateExtra;
     }
 
     /**
-     * Set 证书扩展信息。
-     * @param CertificateExtra 证书扩展信息。
+     * Set <p>证书扩展信息。</p>
+     * @param CertificateExtra <p>证书扩展信息。</p>
      */
     public void setCertificateExtra(CertificateExtra CertificateExtra) {
         this.CertificateExtra = CertificateExtra;
     }
 
     /**
-     * Get 漏洞扫描状态：INACTIVE = 未开启，ACTIVE = 已开启 
-     * @return VulnerabilityStatus 漏洞扫描状态：INACTIVE = 未开启，ACTIVE = 已开启
+     * Get <p>漏洞扫描状态：INACTIVE = 未开启，ACTIVE = 已开启</p> 
+     * @return VulnerabilityStatus <p>漏洞扫描状态：INACTIVE = 未开启，ACTIVE = 已开启</p>
      */
     public String getVulnerabilityStatus() {
         return this.VulnerabilityStatus;
     }
 
     /**
-     * Set 漏洞扫描状态：INACTIVE = 未开启，ACTIVE = 已开启
-     * @param VulnerabilityStatus 漏洞扫描状态：INACTIVE = 未开启，ACTIVE = 已开启
+     * Set <p>漏洞扫描状态：INACTIVE = 未开启，ACTIVE = 已开启</p>
+     * @param VulnerabilityStatus <p>漏洞扫描状态：INACTIVE = 未开启，ACTIVE = 已开启</p>
      */
     public void setVulnerabilityStatus(String VulnerabilityStatus) {
         this.VulnerabilityStatus = VulnerabilityStatus;
     }
 
     /**
-     * Get 状态信息。 
-     * @return StatusMsg 状态信息。
+     * Get <p>状态信息。</p> 
+     * @return StatusMsg <p>状态信息。</p>
      */
     public String getStatusMsg() {
         return this.StatusMsg;
     }
 
     /**
-     * Set 状态信息。
-     * @param StatusMsg 状态信息。
+     * Set <p>状态信息。</p>
+     * @param StatusMsg <p>状态信息。</p>
      */
     public void setStatusMsg(String StatusMsg) {
         this.StatusMsg = StatusMsg;
     }
 
     /**
-     * Get 验证类型：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证，DNS_PROXY = DNS代理验证。FILE_PROXY = 文件代理验证 
-     * @return VerifyType 验证类型：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证，DNS_PROXY = DNS代理验证。FILE_PROXY = 文件代理验证
+     * Get <p>验证类型：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证，DNS_PROXY = DNS代理验证。FILE_PROXY = 文件代理验证</p> 
+     * @return VerifyType <p>验证类型：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证，DNS_PROXY = DNS代理验证。FILE_PROXY = 文件代理验证</p>
      */
     public String getVerifyType() {
         return this.VerifyType;
     }
 
     /**
-     * Set 验证类型：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证，DNS_PROXY = DNS代理验证。FILE_PROXY = 文件代理验证
-     * @param VerifyType 验证类型：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证，DNS_PROXY = DNS代理验证。FILE_PROXY = 文件代理验证
+     * Set <p>验证类型：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证，DNS_PROXY = DNS代理验证。FILE_PROXY = 文件代理验证</p>
+     * @param VerifyType <p>验证类型：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证，DNS_PROXY = DNS代理验证。FILE_PROXY = 文件代理验证</p>
      */
     public void setVerifyType(String VerifyType) {
         this.VerifyType = VerifyType;
     }
 
     /**
-     * Get 证书生效时间。时区为GMT+8:00 
-     * @return CertBeginTime 证书生效时间。时区为GMT+8:00
+     * Get <p>证书生效时间。时区为GMT+8:00</p> 
+     * @return CertBeginTime <p>证书生效时间。时区为GMT+8:00</p>
      */
     public String getCertBeginTime() {
         return this.CertBeginTime;
     }
 
     /**
-     * Set 证书生效时间。时区为GMT+8:00
-     * @param CertBeginTime 证书生效时间。时区为GMT+8:00
+     * Set <p>证书生效时间。时区为GMT+8:00</p>
+     * @param CertBeginTime <p>证书生效时间。时区为GMT+8:00</p>
      */
     public void setCertBeginTime(String CertBeginTime) {
         this.CertBeginTime = CertBeginTime;
     }
 
     /**
-     * Get 证书过期时间。时区为GMT+8:00 
-     * @return CertEndTime 证书过期时间。时区为GMT+8:00
+     * Get <p>证书过期时间。时区为GMT+8:00</p> 
+     * @return CertEndTime <p>证书过期时间。时区为GMT+8:00</p>
      */
     public String getCertEndTime() {
         return this.CertEndTime;
     }
 
     /**
-     * Set 证书过期时间。时区为GMT+8:00
-     * @param CertEndTime 证书过期时间。时区为GMT+8:00
+     * Set <p>证书过期时间。时区为GMT+8:00</p>
+     * @param CertEndTime <p>证书过期时间。时区为GMT+8:00</p>
      */
     public void setCertEndTime(String CertEndTime) {
         this.CertEndTime = CertEndTime;
     }
 
     /**
-     * Get 证书有效期，单位（月）。 
-     * @return ValidityPeriod 证书有效期，单位（月）。
+     * Get <p>证书有效期，单位（月）。</p> 
+     * @return ValidityPeriod <p>证书有效期，单位（月）。</p>
      */
     public String getValidityPeriod() {
         return this.ValidityPeriod;
     }
 
     /**
-     * Set 证书有效期，单位（月）。
-     * @param ValidityPeriod 证书有效期，单位（月）。
+     * Set <p>证书有效期，单位（月）。</p>
+     * @param ValidityPeriod <p>证书有效期，单位（月）。</p>
      */
     public void setValidityPeriod(String ValidityPeriod) {
         this.ValidityPeriod = ValidityPeriod;
     }
 
     /**
-     * Get 创建时间。时区为GMT+8:00 
-     * @return InsertTime 创建时间。时区为GMT+8:00
+     * Get <p>创建时间。时区为GMT+8:00</p> 
+     * @return InsertTime <p>创建时间。时区为GMT+8:00</p>
      */
     public String getInsertTime() {
         return this.InsertTime;
     }
 
     /**
-     * Set 创建时间。时区为GMT+8:00
-     * @param InsertTime 创建时间。时区为GMT+8:00
+     * Set <p>创建时间。时区为GMT+8:00</p>
+     * @param InsertTime <p>创建时间。时区为GMT+8:00</p>
      */
     public void setInsertTime(String InsertTime) {
         this.InsertTime = InsertTime;
     }
 
     /**
-     * Get 证书 ID。 
-     * @return CertificateId 证书 ID。
+     * Get <p>证书 ID。</p> 
+     * @return CertificateId <p>证书 ID。</p>
      */
     public String getCertificateId() {
         return this.CertificateId;
     }
 
     /**
-     * Set 证书 ID。
-     * @param CertificateId 证书 ID。
+     * Set <p>证书 ID。</p>
+     * @param CertificateId <p>证书 ID。</p>
      */
     public void setCertificateId(String CertificateId) {
         this.CertificateId = CertificateId;
     }
 
     /**
-     * Get 证书包含的多个域名（包含主域名）。 
-     * @return SubjectAltName 证书包含的多个域名（包含主域名）。
+     * Get <p>证书包含的多个域名（包含主域名）。</p> 
+     * @return SubjectAltName <p>证书包含的多个域名（包含主域名）。</p>
      */
     public String [] getSubjectAltName() {
         return this.SubjectAltName;
     }
 
     /**
-     * Set 证书包含的多个域名（包含主域名）。
-     * @param SubjectAltName 证书包含的多个域名（包含主域名）。
+     * Set <p>证书包含的多个域名（包含主域名）。</p>
+     * @param SubjectAltName <p>证书包含的多个域名（包含主域名）。</p>
      */
     public void setSubjectAltName(String [] SubjectAltName) {
         this.SubjectAltName = SubjectAltName;
     }
 
     /**
-     * Get 证书类型名称。 
-     * @return PackageTypeName 证书类型名称。
+     * Get <p>证书类型名称。</p> 
+     * @return PackageTypeName <p>证书类型名称。</p>
      */
     public String getPackageTypeName() {
         return this.PackageTypeName;
     }
 
     /**
-     * Set 证书类型名称。
-     * @param PackageTypeName 证书类型名称。
+     * Set <p>证书类型名称。</p>
+     * @param PackageTypeName <p>证书类型名称。</p>
      */
     public void setPackageTypeName(String PackageTypeName) {
         this.PackageTypeName = PackageTypeName;
     }
 
     /**
-     * Get 状态名称。 
-     * @return StatusName 状态名称。
+     * Get <p>状态名称。</p> 
+     * @return StatusName <p>状态名称。</p>
      */
     public String getStatusName() {
         return this.StatusName;
     }
 
     /**
-     * Set 状态名称。
-     * @param StatusName 状态名称。
+     * Set <p>状态名称。</p>
+     * @param StatusName <p>状态名称。</p>
      */
     public void setStatusName(String StatusName) {
         this.StatusName = StatusName;
     }
 
     /**
-     * Get 是否为 VIP 客户。 
-     * @return IsVip 是否为 VIP 客户。
+     * Get <p>是否为 VIP 客户。</p> 
+     * @return IsVip <p>是否为 VIP 客户。</p>
      */
     public Boolean getIsVip() {
         return this.IsVip;
     }
 
     /**
-     * Set 是否为 VIP 客户。
-     * @param IsVip 是否为 VIP 客户。
+     * Set <p>是否为 VIP 客户。</p>
+     * @param IsVip <p>是否为 VIP 客户。</p>
      */
     public void setIsVip(Boolean IsVip) {
         this.IsVip = IsVip;
     }
 
     /**
-     * Get 是否为 DV 版证书。 
-     * @return IsDv 是否为 DV 版证书。
+     * Get <p>是否为 DV 版证书。</p> 
+     * @return IsDv <p>是否为 DV 版证书。</p>
      */
     public Boolean getIsDv() {
         return this.IsDv;
     }
 
     /**
-     * Set 是否为 DV 版证书。
-     * @param IsDv 是否为 DV 版证书。
+     * Set <p>是否为 DV 版证书。</p>
+     * @param IsDv <p>是否为 DV 版证书。</p>
      */
     public void setIsDv(Boolean IsDv) {
         this.IsDv = IsDv;
     }
 
     /**
-     * Get 是否为泛域名证书。 
-     * @return IsWildcard 是否为泛域名证书。
+     * Get <p>是否为泛域名证书。</p> 
+     * @return IsWildcard <p>是否为泛域名证书。</p>
      */
     public Boolean getIsWildcard() {
         return this.IsWildcard;
     }
 
     /**
-     * Set 是否为泛域名证书。
-     * @param IsWildcard 是否为泛域名证书。
+     * Set <p>是否为泛域名证书。</p>
+     * @param IsWildcard <p>是否为泛域名证书。</p>
      */
     public void setIsWildcard(Boolean IsWildcard) {
         this.IsWildcard = IsWildcard;
     }
 
     /**
-     * Get 是否启用了漏洞扫描功能。 
-     * @return IsVulnerability 是否启用了漏洞扫描功能。
+     * Get <p>是否启用了漏洞扫描功能。</p> 
+     * @return IsVulnerability <p>是否启用了漏洞扫描功能。</p>
      */
     public Boolean getIsVulnerability() {
         return this.IsVulnerability;
     }
 
     /**
-     * Set 是否启用了漏洞扫描功能。
-     * @param IsVulnerability 是否启用了漏洞扫描功能。
+     * Set <p>是否启用了漏洞扫描功能。</p>
+     * @param IsVulnerability <p>是否启用了漏洞扫描功能。</p>
      */
     public void setIsVulnerability(Boolean IsVulnerability) {
         this.IsVulnerability = IsVulnerability;
     }
 
     /**
-     * Get 是否可续费。 
-     * @return RenewAble 是否可续费。
+     * Get <p>是否可续费。</p> 
+     * @return RenewAble <p>是否可续费。</p>
      */
     public Boolean getRenewAble() {
         return this.RenewAble;
     }
 
     /**
-     * Set 是否可续费。
-     * @param RenewAble 是否可续费。
+     * Set <p>是否可续费。</p>
+     * @param RenewAble <p>是否可续费。</p>
      */
     public void setRenewAble(Boolean RenewAble) {
         this.RenewAble = RenewAble;
     }
 
     /**
-     * Get 项目信息。 
-     * @return ProjectInfo 项目信息。
+     * Get <p>项目信息。</p> 
+     * @return ProjectInfo <p>项目信息。</p>
      */
     public ProjectInfo getProjectInfo() {
         return this.ProjectInfo;
     }
 
     /**
-     * Set 项目信息。
-     * @param ProjectInfo 项目信息。
+     * Set <p>项目信息。</p>
+     * @param ProjectInfo <p>项目信息。</p>
      */
     public void setProjectInfo(ProjectInfo ProjectInfo) {
         this.ProjectInfo = ProjectInfo;
     }
 
     /**
-     * Get 关联的云资源，暂不可用 
-     * @return BoundResource 关联的云资源，暂不可用
+     * Get <p>关联的云资源，暂不可用</p> 
+     * @return BoundResource <p>关联的云资源，暂不可用</p>
      */
     public String [] getBoundResource() {
         return this.BoundResource;
     }
 
     /**
-     * Set 关联的云资源，暂不可用
-     * @param BoundResource 关联的云资源，暂不可用
+     * Set <p>关联的云资源，暂不可用</p>
+     * @param BoundResource <p>关联的云资源，暂不可用</p>
      */
     public void setBoundResource(String [] BoundResource) {
         this.BoundResource = BoundResource;
     }
 
     /**
-     * Get 是否可部署。 
-     * @return Deployable 是否可部署。
+     * Get <p>是否可部署。</p> 
+     * @return Deployable <p>是否可部署。</p>
      */
     public Boolean getDeployable() {
         return this.Deployable;
     }
 
     /**
-     * Set 是否可部署。
-     * @param Deployable 是否可部署。
+     * Set <p>是否可部署。</p>
+     * @param Deployable <p>是否可部署。</p>
      */
     public void setDeployable(Boolean Deployable) {
         this.Deployable = Deployable;
     }
 
     /**
-     * Get 标签列表 
-     * @return Tags 标签列表
+     * Get <p>标签列表</p> 
+     * @return Tags <p>标签列表</p>
      */
     public Tags [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签列表
-     * @param Tags 标签列表
+     * Set <p>标签列表</p>
+     * @param Tags <p>标签列表</p>
      */
     public void setTags(Tags [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 是否已忽略到期通知 
-     * @return IsIgnore 是否已忽略到期通知
+     * Get <p>是否已忽略到期通知</p> 
+     * @return IsIgnore <p>是否已忽略到期通知</p>
      */
     public Boolean getIsIgnore() {
         return this.IsIgnore;
     }
 
     /**
-     * Set 是否已忽略到期通知
-     * @param IsIgnore 是否已忽略到期通知
+     * Set <p>是否已忽略到期通知</p>
+     * @param IsIgnore <p>是否已忽略到期通知</p>
      */
     public void setIsIgnore(Boolean IsIgnore) {
         this.IsIgnore = IsIgnore;
     }
 
     /**
-     * Get 是否国密证书 
-     * @return IsSM 是否国密证书
+     * Get <p>是否国密证书</p> 
+     * @return IsSM <p>是否国密证书</p>
      */
     public Boolean getIsSM() {
         return this.IsSM;
     }
 
     /**
-     * Set 是否国密证书
-     * @param IsSM 是否国密证书
+     * Set <p>是否国密证书</p>
+     * @param IsSM <p>是否国密证书</p>
      */
     public void setIsSM(Boolean IsSM) {
         this.IsSM = IsSM;
     }
 
     /**
-     * Get 证书算法 
-     * @return EncryptAlgorithm 证书算法
+     * Get <p>证书算法</p> 
+     * @return EncryptAlgorithm <p>证书算法</p>
      */
     public String getEncryptAlgorithm() {
         return this.EncryptAlgorithm;
     }
 
     /**
-     * Set 证书算法
-     * @param EncryptAlgorithm 证书算法
+     * Set <p>证书算法</p>
+     * @param EncryptAlgorithm <p>证书算法</p>
      */
     public void setEncryptAlgorithm(String EncryptAlgorithm) {
         this.EncryptAlgorithm = EncryptAlgorithm;
     }
 
     /**
-     * Get 上传CA证书的加密算法 
-     * @return CAEncryptAlgorithms 上传CA证书的加密算法
+     * Get <p>上传CA证书的加密算法</p> 
+     * @return CAEncryptAlgorithms <p>上传CA证书的加密算法</p>
      */
     public String [] getCAEncryptAlgorithms() {
         return this.CAEncryptAlgorithms;
     }
 
     /**
-     * Set 上传CA证书的加密算法
-     * @param CAEncryptAlgorithms 上传CA证书的加密算法
+     * Set <p>上传CA证书的加密算法</p>
+     * @param CAEncryptAlgorithms <p>上传CA证书的加密算法</p>
      */
     public void setCAEncryptAlgorithms(String [] CAEncryptAlgorithms) {
         this.CAEncryptAlgorithms = CAEncryptAlgorithms;
     }
 
     /**
-     * Get 上传CA证书的过期时间 
-     * @return CAEndTimes 上传CA证书的过期时间
+     * Get <p>上传CA证书的过期时间</p> 
+     * @return CAEndTimes <p>上传CA证书的过期时间</p>
      */
     public String [] getCAEndTimes() {
         return this.CAEndTimes;
     }
 
     /**
-     * Set 上传CA证书的过期时间
-     * @param CAEndTimes 上传CA证书的过期时间
+     * Set <p>上传CA证书的过期时间</p>
+     * @param CAEndTimes <p>上传CA证书的过期时间</p>
      */
     public void setCAEndTimes(String [] CAEndTimes) {
         this.CAEndTimes = CAEndTimes;
     }
 
     /**
-     * Get 上传CA证书的通用名称 
-     * @return CACommonNames 上传CA证书的通用名称
+     * Get <p>上传CA证书的通用名称</p> 
+     * @return CACommonNames <p>上传CA证书的通用名称</p>
      */
     public String [] getCACommonNames() {
         return this.CACommonNames;
     }
 
     /**
-     * Set 上传CA证书的通用名称
-     * @param CACommonNames 上传CA证书的通用名称
+     * Set <p>上传CA证书的通用名称</p>
+     * @param CACommonNames <p>上传CA证书的通用名称</p>
      */
     public void setCACommonNames(String [] CACommonNames) {
         this.CACommonNames = CACommonNames;
     }
 
     /**
-     * Get 证书预审核信息 
-     * @return PreAuditInfo 证书预审核信息
+     * Get <p>证书预审核信息</p> 
+     * @return PreAuditInfo <p>证书预审核信息</p>
      */
     public PreAuditInfo getPreAuditInfo() {
         return this.PreAuditInfo;
     }
 
     /**
-     * Set 证书预审核信息
-     * @param PreAuditInfo 证书预审核信息
+     * Set <p>证书预审核信息</p>
+     * @param PreAuditInfo <p>证书预审核信息</p>
      */
     public void setPreAuditInfo(PreAuditInfo PreAuditInfo) {
         this.PreAuditInfo = PreAuditInfo;
     }
 
     /**
-     * Get 是否自动续费 
-     * @return AutoRenewFlag 是否自动续费
+     * Get <p>是否自动续费</p> 
+     * @return AutoRenewFlag <p>是否自动续费</p>
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set 是否自动续费
-     * @param AutoRenewFlag 是否自动续费
+     * Set <p>是否自动续费</p>
+     * @param AutoRenewFlag <p>是否自动续费</p>
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get 托管状态，0，托管中，5，资源替换中， 10， 托管完成， -1未托管  
-     * @return HostingStatus 托管状态，0，托管中，5，资源替换中， 10， 托管完成， -1未托管 
+     * Get <p>托管状态，0，托管中，5，资源替换中， 10， 托管完成， -1未托管 </p> 
+     * @return HostingStatus <p>托管状态，0，托管中，5，资源替换中， 10， 托管完成， -1未托管 </p>
      */
     public Long getHostingStatus() {
         return this.HostingStatus;
     }
 
     /**
-     * Set 托管状态，0，托管中，5，资源替换中， 10， 托管完成， -1未托管 
-     * @param HostingStatus 托管状态，0，托管中，5，资源替换中， 10， 托管完成， -1未托管 
+     * Set <p>托管状态，0，托管中，5，资源替换中， 10， 托管完成， -1未托管 </p>
+     * @param HostingStatus <p>托管状态，0，托管中，5，资源替换中， 10， 托管完成， -1未托管 </p>
      */
     public void setHostingStatus(Long HostingStatus) {
         this.HostingStatus = HostingStatus;
     }
 
     /**
-     * Get 托管完成时间 
-     * @return HostingCompleteTime 托管完成时间
+     * Get <p>托管完成时间</p> 
+     * @return HostingCompleteTime <p>托管完成时间</p>
      */
     public String getHostingCompleteTime() {
         return this.HostingCompleteTime;
     }
 
     /**
-     * Set 托管完成时间
-     * @param HostingCompleteTime 托管完成时间
+     * Set <p>托管完成时间</p>
+     * @param HostingCompleteTime <p>托管完成时间</p>
      */
     public void setHostingCompleteTime(String HostingCompleteTime) {
         this.HostingCompleteTime = HostingCompleteTime;
     }
 
     /**
-     * Get 托管新证书ID 
-     * @return HostingRenewCertId 托管新证书ID
+     * Get <p>托管新证书ID</p> 
+     * @return HostingRenewCertId <p>托管新证书ID</p>
      */
     public String getHostingRenewCertId() {
         return this.HostingRenewCertId;
     }
 
     /**
-     * Set 托管新证书ID
-     * @param HostingRenewCertId 托管新证书ID
+     * Set <p>托管新证书ID</p>
+     * @param HostingRenewCertId <p>托管新证书ID</p>
      */
     public void setHostingRenewCertId(String HostingRenewCertId) {
         this.HostingRenewCertId = HostingRenewCertId;
     }
 
     /**
-     * Get 存在的续费证书ID 
-     * @return HasRenewOrder 存在的续费证书ID
+     * Get <p>存在的续费证书ID</p> 
+     * @return HasRenewOrder <p>存在的续费证书ID</p>
      */
     public String getHasRenewOrder() {
         return this.HasRenewOrder;
     }
 
     /**
-     * Set 存在的续费证书ID
-     * @param HasRenewOrder 存在的续费证书ID
+     * Set <p>存在的续费证书ID</p>
+     * @param HasRenewOrder <p>存在的续费证书ID</p>
      */
     public void setHasRenewOrder(String HasRenewOrder) {
         this.HasRenewOrder = HasRenewOrder;
     }
 
     /**
-     * Get 重颁发证书原证书是否删除 
-     * @return ReplaceOriCertIsDelete 重颁发证书原证书是否删除
+     * Get <p>重颁发证书原证书是否删除</p> 
+     * @return ReplaceOriCertIsDelete <p>重颁发证书原证书是否删除</p>
      */
     public Boolean getReplaceOriCertIsDelete() {
         return this.ReplaceOriCertIsDelete;
     }
 
     /**
-     * Set 重颁发证书原证书是否删除
-     * @param ReplaceOriCertIsDelete 重颁发证书原证书是否删除
+     * Set <p>重颁发证书原证书是否删除</p>
+     * @param ReplaceOriCertIsDelete <p>重颁发证书原证书是否删除</p>
      */
     public void setReplaceOriCertIsDelete(Boolean ReplaceOriCertIsDelete) {
         this.ReplaceOriCertIsDelete = ReplaceOriCertIsDelete;
     }
 
     /**
-     * Get 是否即将过期， 证书即将到期的30天内为即将过期 
-     * @return IsExpiring 是否即将过期， 证书即将到期的30天内为即将过期
+     * Get <p>是否即将过期， 证书即将到期的30天内为即将过期</p> 
+     * @return IsExpiring <p>是否即将过期， 证书即将到期的30天内为即将过期</p>
      */
     public Boolean getIsExpiring() {
         return this.IsExpiring;
     }
 
     /**
-     * Set 是否即将过期， 证书即将到期的30天内为即将过期
-     * @param IsExpiring 是否即将过期， 证书即将到期的30天内为即将过期
+     * Set <p>是否即将过期， 证书即将到期的30天内为即将过期</p>
+     * @param IsExpiring <p>是否即将过期， 证书即将到期的30天内为即将过期</p>
      */
     public void setIsExpiring(Boolean IsExpiring) {
         this.IsExpiring = IsExpiring;
     }
 
     /**
-     * Get DV证书添加验证截止时间，时区为GMT+8:00 
-     * @return DVAuthDeadline DV证书添加验证截止时间，时区为GMT+8:00
+     * Get <p>DV证书添加验证截止时间，时区为GMT+8:00</p> 
+     * @return DVAuthDeadline <p>DV证书添加验证截止时间，时区为GMT+8:00</p>
      */
     public String getDVAuthDeadline() {
         return this.DVAuthDeadline;
     }
 
     /**
-     * Set DV证书添加验证截止时间，时区为GMT+8:00
-     * @param DVAuthDeadline DV证书添加验证截止时间，时区为GMT+8:00
+     * Set <p>DV证书添加验证截止时间，时区为GMT+8:00</p>
+     * @param DVAuthDeadline <p>DV证书添加验证截止时间，时区为GMT+8:00</p>
      */
     public void setDVAuthDeadline(String DVAuthDeadline) {
         this.DVAuthDeadline = DVAuthDeadline;
     }
 
     /**
-     * Get 域名验证通过时间，时区为GMT+8:00 
-     * @return ValidationPassedTime 域名验证通过时间，时区为GMT+8:00
+     * Get <p>域名验证通过时间，时区为GMT+8:00</p> 
+     * @return ValidationPassedTime <p>域名验证通过时间，时区为GMT+8:00</p>
      */
     public String getValidationPassedTime() {
         return this.ValidationPassedTime;
     }
 
     /**
-     * Set 域名验证通过时间，时区为GMT+8:00
-     * @param ValidationPassedTime 域名验证通过时间，时区为GMT+8:00
+     * Set <p>域名验证通过时间，时区为GMT+8:00</p>
+     * @param ValidationPassedTime <p>域名验证通过时间，时区为GMT+8:00</p>
      */
     public void setValidationPassedTime(String ValidationPassedTime) {
         this.ValidationPassedTime = ValidationPassedTime;
     }
 
     /**
-     * Get 证书关联的多域名 
-     * @return CertSANs 证书关联的多域名
+     * Get <p>证书关联的多域名</p> 
+     * @return CertSANs <p>证书关联的多域名</p>
      */
     public String [] getCertSANs() {
         return this.CertSANs;
     }
 
     /**
-     * Set 证书关联的多域名
-     * @param CertSANs 证书关联的多域名
+     * Set <p>证书关联的多域名</p>
+     * @param CertSANs <p>证书关联的多域名</p>
      */
     public void setCertSANs(String [] CertSANs) {
         this.CertSANs = CertSANs;
     }
 
     /**
-     * Get 域名验证驳回信息 
-     * @return AwaitingValidationMsg 域名验证驳回信息
+     * Get <p>域名验证驳回信息</p> 
+     * @return AwaitingValidationMsg <p>域名验证驳回信息</p>
      */
     public String getAwaitingValidationMsg() {
         return this.AwaitingValidationMsg;
     }
 
     /**
-     * Set 域名验证驳回信息
-     * @param AwaitingValidationMsg 域名验证驳回信息
+     * Set <p>域名验证驳回信息</p>
+     * @param AwaitingValidationMsg <p>域名验证驳回信息</p>
      */
     public void setAwaitingValidationMsg(String AwaitingValidationMsg) {
         this.AwaitingValidationMsg = AwaitingValidationMsg;
     }
 
     /**
-     * Get 是否允许下载 
-     * @return AllowDownload 是否允许下载
+     * Get <p>是否允许下载</p> 
+     * @return AllowDownload <p>是否允许下载</p>
      */
     public Boolean getAllowDownload() {
         return this.AllowDownload;
     }
 
     /**
-     * Set 是否允许下载
-     * @param AllowDownload 是否允许下载
+     * Set <p>是否允许下载</p>
+     * @param AllowDownload <p>是否允许下载</p>
      */
     public void setAllowDownload(Boolean AllowDownload) {
         this.AllowDownload = AllowDownload;
     }
 
     /**
-     * Get 证书域名是否全部在DNSPOD托管解析 
-     * @return IsDNSPODResolve 证书域名是否全部在DNSPOD托管解析
+     * Get <p>证书域名是否全部在DNSPOD托管解析</p> 
+     * @return IsDNSPODResolve <p>证书域名是否全部在DNSPOD托管解析</p>
      */
     public Boolean getIsDNSPODResolve() {
         return this.IsDNSPODResolve;
     }
 
     /**
-     * Set 证书域名是否全部在DNSPOD托管解析
-     * @param IsDNSPODResolve 证书域名是否全部在DNSPOD托管解析
+     * Set <p>证书域名是否全部在DNSPOD托管解析</p>
+     * @param IsDNSPODResolve <p>证书域名是否全部在DNSPOD托管解析</p>
      */
     public void setIsDNSPODResolve(Boolean IsDNSPODResolve) {
         this.IsDNSPODResolve = IsDNSPODResolve;
     }
 
     /**
-     * Get 是否是权益点购买的证书 
-     * @return IsPackage 是否是权益点购买的证书
+     * Get <p>是否是权益点购买的证书</p> 
+     * @return IsPackage <p>是否是权益点购买的证书</p>
      */
     public Boolean getIsPackage() {
         return this.IsPackage;
     }
 
     /**
-     * Set 是否是权益点购买的证书
-     * @param IsPackage 是否是权益点购买的证书
+     * Set <p>是否是权益点购买的证书</p>
+     * @param IsPackage <p>是否是权益点购买的证书</p>
      */
     public void setIsPackage(Boolean IsPackage) {
         this.IsPackage = IsPackage;
     }
 
     /**
-     * Get 是否存在私钥密码 
-     * @return KeyPasswordCustomFlag 是否存在私钥密码
+     * Get <p>是否存在私钥密码</p> 
+     * @return KeyPasswordCustomFlag <p>是否存在私钥密码</p>
      */
     public Boolean getKeyPasswordCustomFlag() {
         return this.KeyPasswordCustomFlag;
     }
 
     /**
-     * Set 是否存在私钥密码
-     * @param KeyPasswordCustomFlag 是否存在私钥密码
+     * Set <p>是否存在私钥密码</p>
+     * @param KeyPasswordCustomFlag <p>是否存在私钥密码</p>
      */
     public void setKeyPasswordCustomFlag(Boolean KeyPasswordCustomFlag) {
         this.KeyPasswordCustomFlag = KeyPasswordCustomFlag;
     }
 
     /**
-     * Get 支持下载的WEB服务器类型： nginx、apache、iis、tomcat、jks、root、other 
-     * @return SupportDownloadType 支持下载的WEB服务器类型： nginx、apache、iis、tomcat、jks、root、other
+     * Get <p>支持下载的WEB服务器类型： nginx、apache、iis、tomcat、jks、root、other</p> 
+     * @return SupportDownloadType <p>支持下载的WEB服务器类型： nginx、apache、iis、tomcat、jks、root、other</p>
      */
     public SupportDownloadType getSupportDownloadType() {
         return this.SupportDownloadType;
     }
 
     /**
-     * Set 支持下载的WEB服务器类型： nginx、apache、iis、tomcat、jks、root、other
-     * @param SupportDownloadType 支持下载的WEB服务器类型： nginx、apache、iis、tomcat、jks、root、other
+     * Set <p>支持下载的WEB服务器类型： nginx、apache、iis、tomcat、jks、root、other</p>
+     * @param SupportDownloadType <p>支持下载的WEB服务器类型： nginx、apache、iis、tomcat、jks、root、other</p>
      */
     public void setSupportDownloadType(SupportDownloadType SupportDownloadType) {
         this.SupportDownloadType = SupportDownloadType;
     }
 
     /**
-     * Get 证书吊销完成时间，时区为GMT+8:00 
-     * @return CertRevokedTime 证书吊销完成时间，时区为GMT+8:00
+     * Get <p>证书吊销完成时间，时区为GMT+8:00</p> 
+     * @return CertRevokedTime <p>证书吊销完成时间，时区为GMT+8:00</p>
      */
     public String getCertRevokedTime() {
         return this.CertRevokedTime;
     }
 
     /**
-     * Set 证书吊销完成时间，时区为GMT+8:00
-     * @param CertRevokedTime 证书吊销完成时间，时区为GMT+8:00
+     * Set <p>证书吊销完成时间，时区为GMT+8:00</p>
+     * @param CertRevokedTime <p>证书吊销完成时间，时区为GMT+8:00</p>
      */
     public void setCertRevokedTime(String CertRevokedTime) {
         this.CertRevokedTime = CertRevokedTime;
     }
 
     /**
-     * Get 托管资源类型列表 
-     * @return HostingResourceTypes 托管资源类型列表
+     * Get <p>托管资源类型列表</p> 
+     * @return HostingResourceTypes <p>托管资源类型列表</p>
      */
     public String [] getHostingResourceTypes() {
         return this.HostingResourceTypes;
     }
 
     /**
-     * Set 托管资源类型列表
-     * @param HostingResourceTypes 托管资源类型列表
+     * Set <p>托管资源类型列表</p>
+     * @param HostingResourceTypes <p>托管资源类型列表</p>
      */
     public void setHostingResourceTypes(String [] HostingResourceTypes) {
         this.HostingResourceTypes = HostingResourceTypes;
     }
 
     /**
-     * Get 托管配置信息
+     * Get <p>托管配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HostingConfig 托管配置信息
+     * @return HostingConfig <p>托管配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public HostingConfig getHostingConfig() {
@@ -1754,9 +1342,9 @@ null：用户上传证书（没有套餐类型），
     }
 
     /**
-     * Set 托管配置信息
+     * Set <p>托管配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HostingConfig 托管配置信息
+     * @param HostingConfig <p>托管配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostingConfig(HostingConfig HostingConfig) {
@@ -1764,19 +1352,83 @@ null：用户上传证书（没有套餐类型），
     }
 
     /**
-     * Get 是否是上传托管续费证书 
-     * @return IsHostingUploadRenewCert 是否是上传托管续费证书
+     * Get <p>是否是上传托管续费证书</p> 
+     * @return IsHostingUploadRenewCert <p>是否是上传托管续费证书</p>
      */
     public Boolean getIsHostingUploadRenewCert() {
         return this.IsHostingUploadRenewCert;
     }
 
     /**
-     * Set 是否是上传托管续费证书
-     * @param IsHostingUploadRenewCert 是否是上传托管续费证书
+     * Set <p>是否是上传托管续费证书</p>
+     * @param IsHostingUploadRenewCert <p>是否是上传托管续费证书</p>
      */
     public void setIsHostingUploadRenewCert(Boolean IsHostingUploadRenewCert) {
         this.IsHostingUploadRenewCert = IsHostingUploadRenewCert;
+    }
+
+    /**
+     * Get <p>订阅服务ID</p> 
+     * @return ServiceId <p>订阅服务ID</p>
+     */
+    public String getServiceId() {
+        return this.ServiceId;
+    }
+
+    /**
+     * Set <p>订阅服务ID</p>
+     * @param ServiceId <p>订阅服务ID</p>
+     */
+    public void setServiceId(String ServiceId) {
+        this.ServiceId = ServiceId;
+    }
+
+    /**
+     * Get <p>订阅服务状态</p>枚举值：<ul><li> initing： 未激活</li><li> running： 生效中</li><li> expired： 已过期</li><li> refunded： 已退款</li><li> nearExpire： 即将到期</li></ul> 
+     * @return ServiceStatus <p>订阅服务状态</p>枚举值：<ul><li> initing： 未激活</li><li> running： 生效中</li><li> expired： 已过期</li><li> refunded： 已退款</li><li> nearExpire： 即将到期</li></ul>
+     */
+    public String getServiceStatus() {
+        return this.ServiceStatus;
+    }
+
+    /**
+     * Set <p>订阅服务状态</p>枚举值：<ul><li> initing： 未激活</li><li> running： 生效中</li><li> expired： 已过期</li><li> refunded： 已退款</li><li> nearExpire： 即将到期</li></ul>
+     * @param ServiceStatus <p>订阅服务状态</p>枚举值：<ul><li> initing： 未激活</li><li> running： 生效中</li><li> expired： 已过期</li><li> refunded： 已退款</li><li> nearExpire： 即将到期</li></ul>
+     */
+    public void setServiceStatus(String ServiceStatus) {
+        this.ServiceStatus = ServiceStatus;
+    }
+
+    /**
+     * Get <p>订阅服务开始时间</p> 
+     * @return CertServiceBeginTime <p>订阅服务开始时间</p>
+     */
+    public String getCertServiceBeginTime() {
+        return this.CertServiceBeginTime;
+    }
+
+    /**
+     * Set <p>订阅服务开始时间</p>
+     * @param CertServiceBeginTime <p>订阅服务开始时间</p>
+     */
+    public void setCertServiceBeginTime(String CertServiceBeginTime) {
+        this.CertServiceBeginTime = CertServiceBeginTime;
+    }
+
+    /**
+     * Get <p>订阅服务结束时间</p> 
+     * @return CertServiceEndTime <p>订阅服务结束时间</p>
+     */
+    public String getCertServiceEndTime() {
+        return this.CertServiceEndTime;
+    }
+
+    /**
+     * Set <p>订阅服务结束时间</p>
+     * @param CertServiceEndTime <p>订阅服务结束时间</p>
+     */
+    public void setCertServiceEndTime(String CertServiceEndTime) {
+        this.CertServiceEndTime = CertServiceEndTime;
     }
 
     public Certificates() {
@@ -1982,6 +1634,18 @@ null：用户上传证书（没有套餐类型），
         if (source.IsHostingUploadRenewCert != null) {
             this.IsHostingUploadRenewCert = new Boolean(source.IsHostingUploadRenewCert);
         }
+        if (source.ServiceId != null) {
+            this.ServiceId = new String(source.ServiceId);
+        }
+        if (source.ServiceStatus != null) {
+            this.ServiceStatus = new String(source.ServiceStatus);
+        }
+        if (source.CertServiceBeginTime != null) {
+            this.CertServiceBeginTime = new String(source.CertServiceBeginTime);
+        }
+        if (source.CertServiceEndTime != null) {
+            this.CertServiceEndTime = new String(source.CertServiceEndTime);
+        }
     }
 
 
@@ -2046,6 +1710,10 @@ null：用户上传证书（没有套餐类型），
         this.setParamArraySimple(map, prefix + "HostingResourceTypes.", this.HostingResourceTypes);
         this.setParamObj(map, prefix + "HostingConfig.", this.HostingConfig);
         this.setParamSimple(map, prefix + "IsHostingUploadRenewCert", this.IsHostingUploadRenewCert);
+        this.setParamSimple(map, prefix + "ServiceId", this.ServiceId);
+        this.setParamSimple(map, prefix + "ServiceStatus", this.ServiceStatus);
+        this.setParamSimple(map, prefix + "CertServiceBeginTime", this.CertServiceBeginTime);
+        this.setParamSimple(map, prefix + "CertServiceEndTime", this.CertServiceEndTime);
 
     }
 }

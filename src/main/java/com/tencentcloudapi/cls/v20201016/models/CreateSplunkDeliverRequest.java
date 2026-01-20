@@ -24,268 +24,256 @@ import java.util.HashMap;
 public class CreateSplunkDeliverRequest extends AbstractModel {
 
     /**
-    * 日志主题id
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+    * <p>日志主题id- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * splunk投递任务名称；
-name有如下限制：
-- 不能为空
-- 长度不大于64
-- 只能包含aA-zZ、下划线、-、0-9
+    * <p>splunk投递任务名称；name有如下限制：- 不能为空- 长度不大于64- 只能包含aA-zZ、下划线、-、0-9</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Splunk投递任务-目标配置-网络信息
+    * <p>Splunk投递任务-目标配置-网络信息</p>
     */
     @SerializedName("NetInfo")
     @Expose
     private NetInfo NetInfo;
 
     /**
-    * Splunk投递任务元信息
+    * <p>Splunk投递任务元信息</p>
     */
     @SerializedName("MetadataInfo")
     @Expose
     private MetadataInfo MetadataInfo;
 
     /**
-    * 是否开启服务日志 1:关闭；2:开启 ;默认开启
+    * <p>是否开启服务日志 1:关闭；2:开启 ;默认开启</p>
     */
     @SerializedName("HasServiceLog")
     @Expose
     private Long HasServiceLog;
 
     /**
-    * 高级配置-是否启用索引器；1-不启用；2-启用；
-默认：1
+    * <p>高级配置-是否启用索引器；1-不启用；2-启用；默认：1</p>
     */
     @SerializedName("IndexAck")
     @Expose
     private Long IndexAck;
 
     /**
-    * 高级配置-数据来源；不超过64个字符
+    * <p>高级配置-数据来源；不超过64个字符</p>
     */
     @SerializedName("Source")
     @Expose
     private String Source;
 
     /**
-    * 高级配置-数据来源类型；不超过64个字符
+    * <p>高级配置-数据来源类型；不超过64个字符</p>
     */
     @SerializedName("SourceType")
     @Expose
     private String SourceType;
 
     /**
-    * 高级配置-Splunk写入的索引；不超过64个字符
+    * <p>高级配置-Splunk写入的索引；不超过64个字符</p>
     */
     @SerializedName("Index")
     @Expose
     private String Index;
 
     /**
-    * 高级配置-通道
-需满足限制：如果启用索引器，那么Channel必填
+    * <p>高级配置-通道需满足限制：如果启用索引器，那么Channel必填</p>
     */
     @SerializedName("Channel")
     @Expose
     private String Channel;
 
     /**
-     * Get 日志主题id
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。 
-     * @return TopicId 日志主题id
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+    * <p>日志预过滤-数据写入 Splunk 的原始数据进行预过滤处理</p>
+    */
+    @SerializedName("DSLFilter")
+    @Expose
+    private String DSLFilter;
+
+    /**
+     * Get <p>日志主题id- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p> 
+     * @return TopicId <p>日志主题id- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 日志主题id
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
-     * @param TopicId 日志主题id
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * Set <p>日志主题id- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
+     * @param TopicId <p>日志主题id- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get splunk投递任务名称；
-name有如下限制：
-- 不能为空
-- 长度不大于64
-- 只能包含aA-zZ、下划线、-、0-9 
-     * @return Name splunk投递任务名称；
-name有如下限制：
-- 不能为空
-- 长度不大于64
-- 只能包含aA-zZ、下划线、-、0-9
+     * Get <p>splunk投递任务名称；name有如下限制：- 不能为空- 长度不大于64- 只能包含aA-zZ、下划线、-、0-9</p> 
+     * @return Name <p>splunk投递任务名称；name有如下限制：- 不能为空- 长度不大于64- 只能包含aA-zZ、下划线、-、0-9</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set splunk投递任务名称；
-name有如下限制：
-- 不能为空
-- 长度不大于64
-- 只能包含aA-zZ、下划线、-、0-9
-     * @param Name splunk投递任务名称；
-name有如下限制：
-- 不能为空
-- 长度不大于64
-- 只能包含aA-zZ、下划线、-、0-9
+     * Set <p>splunk投递任务名称；name有如下限制：- 不能为空- 长度不大于64- 只能包含aA-zZ、下划线、-、0-9</p>
+     * @param Name <p>splunk投递任务名称；name有如下限制：- 不能为空- 长度不大于64- 只能包含aA-zZ、下划线、-、0-9</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Splunk投递任务-目标配置-网络信息 
-     * @return NetInfo Splunk投递任务-目标配置-网络信息
+     * Get <p>Splunk投递任务-目标配置-网络信息</p> 
+     * @return NetInfo <p>Splunk投递任务-目标配置-网络信息</p>
      */
     public NetInfo getNetInfo() {
         return this.NetInfo;
     }
 
     /**
-     * Set Splunk投递任务-目标配置-网络信息
-     * @param NetInfo Splunk投递任务-目标配置-网络信息
+     * Set <p>Splunk投递任务-目标配置-网络信息</p>
+     * @param NetInfo <p>Splunk投递任务-目标配置-网络信息</p>
      */
     public void setNetInfo(NetInfo NetInfo) {
         this.NetInfo = NetInfo;
     }
 
     /**
-     * Get Splunk投递任务元信息 
-     * @return MetadataInfo Splunk投递任务元信息
+     * Get <p>Splunk投递任务元信息</p> 
+     * @return MetadataInfo <p>Splunk投递任务元信息</p>
      */
     public MetadataInfo getMetadataInfo() {
         return this.MetadataInfo;
     }
 
     /**
-     * Set Splunk投递任务元信息
-     * @param MetadataInfo Splunk投递任务元信息
+     * Set <p>Splunk投递任务元信息</p>
+     * @param MetadataInfo <p>Splunk投递任务元信息</p>
      */
     public void setMetadataInfo(MetadataInfo MetadataInfo) {
         this.MetadataInfo = MetadataInfo;
     }
 
     /**
-     * Get 是否开启服务日志 1:关闭；2:开启 ;默认开启 
-     * @return HasServiceLog 是否开启服务日志 1:关闭；2:开启 ;默认开启
+     * Get <p>是否开启服务日志 1:关闭；2:开启 ;默认开启</p> 
+     * @return HasServiceLog <p>是否开启服务日志 1:关闭；2:开启 ;默认开启</p>
      */
     public Long getHasServiceLog() {
         return this.HasServiceLog;
     }
 
     /**
-     * Set 是否开启服务日志 1:关闭；2:开启 ;默认开启
-     * @param HasServiceLog 是否开启服务日志 1:关闭；2:开启 ;默认开启
+     * Set <p>是否开启服务日志 1:关闭；2:开启 ;默认开启</p>
+     * @param HasServiceLog <p>是否开启服务日志 1:关闭；2:开启 ;默认开启</p>
      */
     public void setHasServiceLog(Long HasServiceLog) {
         this.HasServiceLog = HasServiceLog;
     }
 
     /**
-     * Get 高级配置-是否启用索引器；1-不启用；2-启用；
-默认：1 
-     * @return IndexAck 高级配置-是否启用索引器；1-不启用；2-启用；
-默认：1
+     * Get <p>高级配置-是否启用索引器；1-不启用；2-启用；默认：1</p> 
+     * @return IndexAck <p>高级配置-是否启用索引器；1-不启用；2-启用；默认：1</p>
      */
     public Long getIndexAck() {
         return this.IndexAck;
     }
 
     /**
-     * Set 高级配置-是否启用索引器；1-不启用；2-启用；
-默认：1
-     * @param IndexAck 高级配置-是否启用索引器；1-不启用；2-启用；
-默认：1
+     * Set <p>高级配置-是否启用索引器；1-不启用；2-启用；默认：1</p>
+     * @param IndexAck <p>高级配置-是否启用索引器；1-不启用；2-启用；默认：1</p>
      */
     public void setIndexAck(Long IndexAck) {
         this.IndexAck = IndexAck;
     }
 
     /**
-     * Get 高级配置-数据来源；不超过64个字符 
-     * @return Source 高级配置-数据来源；不超过64个字符
+     * Get <p>高级配置-数据来源；不超过64个字符</p> 
+     * @return Source <p>高级配置-数据来源；不超过64个字符</p>
      */
     public String getSource() {
         return this.Source;
     }
 
     /**
-     * Set 高级配置-数据来源；不超过64个字符
-     * @param Source 高级配置-数据来源；不超过64个字符
+     * Set <p>高级配置-数据来源；不超过64个字符</p>
+     * @param Source <p>高级配置-数据来源；不超过64个字符</p>
      */
     public void setSource(String Source) {
         this.Source = Source;
     }
 
     /**
-     * Get 高级配置-数据来源类型；不超过64个字符 
-     * @return SourceType 高级配置-数据来源类型；不超过64个字符
+     * Get <p>高级配置-数据来源类型；不超过64个字符</p> 
+     * @return SourceType <p>高级配置-数据来源类型；不超过64个字符</p>
      */
     public String getSourceType() {
         return this.SourceType;
     }
 
     /**
-     * Set 高级配置-数据来源类型；不超过64个字符
-     * @param SourceType 高级配置-数据来源类型；不超过64个字符
+     * Set <p>高级配置-数据来源类型；不超过64个字符</p>
+     * @param SourceType <p>高级配置-数据来源类型；不超过64个字符</p>
      */
     public void setSourceType(String SourceType) {
         this.SourceType = SourceType;
     }
 
     /**
-     * Get 高级配置-Splunk写入的索引；不超过64个字符 
-     * @return Index 高级配置-Splunk写入的索引；不超过64个字符
+     * Get <p>高级配置-Splunk写入的索引；不超过64个字符</p> 
+     * @return Index <p>高级配置-Splunk写入的索引；不超过64个字符</p>
      */
     public String getIndex() {
         return this.Index;
     }
 
     /**
-     * Set 高级配置-Splunk写入的索引；不超过64个字符
-     * @param Index 高级配置-Splunk写入的索引；不超过64个字符
+     * Set <p>高级配置-Splunk写入的索引；不超过64个字符</p>
+     * @param Index <p>高级配置-Splunk写入的索引；不超过64个字符</p>
      */
     public void setIndex(String Index) {
         this.Index = Index;
     }
 
     /**
-     * Get 高级配置-通道
-需满足限制：如果启用索引器，那么Channel必填 
-     * @return Channel 高级配置-通道
-需满足限制：如果启用索引器，那么Channel必填
+     * Get <p>高级配置-通道需满足限制：如果启用索引器，那么Channel必填</p> 
+     * @return Channel <p>高级配置-通道需满足限制：如果启用索引器，那么Channel必填</p>
      */
     public String getChannel() {
         return this.Channel;
     }
 
     /**
-     * Set 高级配置-通道
-需满足限制：如果启用索引器，那么Channel必填
-     * @param Channel 高级配置-通道
-需满足限制：如果启用索引器，那么Channel必填
+     * Set <p>高级配置-通道需满足限制：如果启用索引器，那么Channel必填</p>
+     * @param Channel <p>高级配置-通道需满足限制：如果启用索引器，那么Channel必填</p>
      */
     public void setChannel(String Channel) {
         this.Channel = Channel;
+    }
+
+    /**
+     * Get <p>日志预过滤-数据写入 Splunk 的原始数据进行预过滤处理</p> 
+     * @return DSLFilter <p>日志预过滤-数据写入 Splunk 的原始数据进行预过滤处理</p>
+     */
+    public String getDSLFilter() {
+        return this.DSLFilter;
+    }
+
+    /**
+     * Set <p>日志预过滤-数据写入 Splunk 的原始数据进行预过滤处理</p>
+     * @param DSLFilter <p>日志预过滤-数据写入 Splunk 的原始数据进行预过滤处理</p>
+     */
+    public void setDSLFilter(String DSLFilter) {
+        this.DSLFilter = DSLFilter;
     }
 
     public CreateSplunkDeliverRequest() {
@@ -326,6 +314,9 @@ name有如下限制：
         if (source.Channel != null) {
             this.Channel = new String(source.Channel);
         }
+        if (source.DSLFilter != null) {
+            this.DSLFilter = new String(source.DSLFilter);
+        }
     }
 
 
@@ -343,6 +334,7 @@ name有如下限制：
         this.setParamSimple(map, prefix + "SourceType", this.SourceType);
         this.setParamSimple(map, prefix + "Index", this.Index);
         this.setParamSimple(map, prefix + "Channel", this.Channel);
+        this.setParamSimple(map, prefix + "DSLFilter", this.DSLFilter);
 
     }
 }

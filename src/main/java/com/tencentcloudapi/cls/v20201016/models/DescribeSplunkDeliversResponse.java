@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeSplunkDeliversResponse extends AbstractModel {
 
     /**
-    * Splunk投递任务信息列表
+    * <p>Splunk投递任务信息列表</p>
     */
     @SerializedName("Infos")
     @Expose
     private SplunkDeliverInfo [] Infos;
 
     /**
-    * 符合条件的任务总数。
+    * <p>符合条件的任务总数。</p>
     */
     @SerializedName("Total")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeSplunkDeliversResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Splunk投递任务信息列表 
-     * @return Infos Splunk投递任务信息列表
+     * Get <p>Splunk投递任务信息列表</p> 
+     * @return Infos <p>Splunk投递任务信息列表</p>
      */
     public SplunkDeliverInfo [] getInfos() {
         return this.Infos;
     }
 
     /**
-     * Set Splunk投递任务信息列表
-     * @param Infos Splunk投递任务信息列表
+     * Set <p>Splunk投递任务信息列表</p>
+     * @param Infos <p>Splunk投递任务信息列表</p>
      */
     public void setInfos(SplunkDeliverInfo [] Infos) {
         this.Infos = Infos;
     }
 
     /**
-     * Get 符合条件的任务总数。 
-     * @return Total 符合条件的任务总数。
+     * Get <p>符合条件的任务总数。</p> 
+     * @return Total <p>符合条件的任务总数。</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 符合条件的任务总数。
-     * @param Total 符合条件的任务总数。
+     * Set <p>符合条件的任务总数。</p>
+     * @param Total <p>符合条件的任务总数。</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;

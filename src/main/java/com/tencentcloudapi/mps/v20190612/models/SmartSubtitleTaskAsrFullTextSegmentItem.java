@@ -60,6 +60,13 @@ public class SmartSubtitleTaskAsrFullTextSegmentItem extends AbstractModel {
     private WordResult [] Wordlist;
 
     /**
+    * 说话人ID（如启用说话人识别）
+    */
+    @SerializedName("SpeakerId")
+    @Expose
+    private String SpeakerId;
+
+    /**
      * Get 识别片段置信度。取值：0~100。 
      * @return Confidence 识别片段置信度。取值：0~100。
      */
@@ -143,6 +150,22 @@ public class SmartSubtitleTaskAsrFullTextSegmentItem extends AbstractModel {
         this.Wordlist = Wordlist;
     }
 
+    /**
+     * Get 说话人ID（如启用说话人识别） 
+     * @return SpeakerId 说话人ID（如启用说话人识别）
+     */
+    public String getSpeakerId() {
+        return this.SpeakerId;
+    }
+
+    /**
+     * Set 说话人ID（如启用说话人识别）
+     * @param SpeakerId 说话人ID（如启用说话人识别）
+     */
+    public void setSpeakerId(String SpeakerId) {
+        this.SpeakerId = SpeakerId;
+    }
+
     public SmartSubtitleTaskAsrFullTextSegmentItem() {
     }
 
@@ -169,6 +192,9 @@ public class SmartSubtitleTaskAsrFullTextSegmentItem extends AbstractModel {
                 this.Wordlist[i] = new WordResult(source.Wordlist[i]);
             }
         }
+        if (source.SpeakerId != null) {
+            this.SpeakerId = new String(source.SpeakerId);
+        }
     }
 
 
@@ -181,6 +207,7 @@ public class SmartSubtitleTaskAsrFullTextSegmentItem extends AbstractModel {
         this.setParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
         this.setParamSimple(map, prefix + "Text", this.Text);
         this.setParamArrayObj(map, prefix + "Wordlist.", this.Wordlist);
+        this.setParamSimple(map, prefix + "SpeakerId", this.SpeakerId);
 
     }
 }

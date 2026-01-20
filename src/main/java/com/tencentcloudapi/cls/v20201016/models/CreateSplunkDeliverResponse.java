@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateSplunkDeliverResponse extends AbstractModel {
 
     /**
-    * splunk投递任务id
+    * <p>splunk投递任务id</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateSplunkDeliverResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get splunk投递任务id 
-     * @return TaskId splunk投递任务id
+     * Get <p>splunk投递任务id</p> 
+     * @return TaskId <p>splunk投递任务id</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set splunk投递任务id
-     * @param TaskId splunk投递任务id
+     * Set <p>splunk投递任务id</p>
+     * @param TaskId <p>splunk投递任务id</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

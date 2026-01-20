@@ -49,6 +49,13 @@ Base64 和 Url 必须提供一个，如果都提供以ImageUrl为准。
     private String Resolution;
 
     /**
+    * 生成视频的帧率，从16, 24, 30中选择。默认值：30
+    */
+    @SerializedName("Fps")
+    @Expose
+    private Long Fps;
+
+    /**
     * 为生成视频添加标识的开关，默认为1，0 需前往 控制台 申请开启显示标识自主完成方可生效。  1：添加标识；  0：不添加标识；  其他数值：默认按1处理。
     */
     @SerializedName("LogoAdd")
@@ -127,6 +134,22 @@ Base64 和 Url 必须提供一个，如果都提供以ImageUrl为准。
     }
 
     /**
+     * Get 生成视频的帧率，从16, 24, 30中选择。默认值：30 
+     * @return Fps 生成视频的帧率，从16, 24, 30中选择。默认值：30
+     */
+    public Long getFps() {
+        return this.Fps;
+    }
+
+    /**
+     * Set 生成视频的帧率，从16, 24, 30中选择。默认值：30
+     * @param Fps 生成视频的帧率，从16, 24, 30中选择。默认值：30
+     */
+    public void setFps(Long Fps) {
+        this.Fps = Fps;
+    }
+
+    /**
      * Get 为生成视频添加标识的开关，默认为1，0 需前往 控制台 申请开启显示标识自主完成方可生效。  1：添加标识；  0：不添加标识；  其他数值：默认按1处理。 
      * @return LogoAdd 为生成视频添加标识的开关，默认为1，0 需前往 控制台 申请开启显示标识自主完成方可生效。  1：添加标识；  0：不添加标识；  其他数值：默认按1处理。
      */
@@ -175,6 +198,9 @@ Base64 和 Url 必须提供一个，如果都提供以ImageUrl为准。
         if (source.Resolution != null) {
             this.Resolution = new String(source.Resolution);
         }
+        if (source.Fps != null) {
+            this.Fps = new Long(source.Fps);
+        }
         if (source.LogoAdd != null) {
             this.LogoAdd = new Long(source.LogoAdd);
         }
@@ -191,6 +217,7 @@ Base64 和 Url 必须提供一个，如果都提供以ImageUrl为准。
         this.setParamObj(map, prefix + "Image.", this.Image);
         this.setParamSimple(map, prefix + "Prompt", this.Prompt);
         this.setParamSimple(map, prefix + "Resolution", this.Resolution);
+        this.setParamSimple(map, prefix + "Fps", this.Fps);
         this.setParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
         this.setParamObj(map, prefix + "LogoParam.", this.LogoParam);
 

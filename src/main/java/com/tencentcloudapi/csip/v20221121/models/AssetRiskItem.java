@@ -136,6 +136,13 @@ public class AssetRiskItem extends AbstractModel {
     private StandardTerm [] StandardTerms;
 
     /**
+    * 资产类型
+    */
+    @SerializedName("AssetType")
+    @Expose
+    private String AssetType;
+
+    /**
      * Get 租户ID 
      * @return AppId 租户ID
      */
@@ -391,6 +398,22 @@ public class AssetRiskItem extends AbstractModel {
         this.StandardTerms = StandardTerms;
     }
 
+    /**
+     * Get 资产类型 
+     * @return AssetType 资产类型
+     */
+    public String getAssetType() {
+        return this.AssetType;
+    }
+
+    /**
+     * Set 资产类型
+     * @param AssetType 资产类型
+     */
+    public void setAssetType(String AssetType) {
+        this.AssetType = AssetType;
+    }
+
     public AssetRiskItem() {
     }
 
@@ -450,6 +473,9 @@ public class AssetRiskItem extends AbstractModel {
                 this.StandardTerms[i] = new StandardTerm(source.StandardTerms[i]);
             }
         }
+        if (source.AssetType != null) {
+            this.AssetType = new String(source.AssetType);
+        }
     }
 
 
@@ -473,6 +499,7 @@ public class AssetRiskItem extends AbstractModel {
         this.setParamSimple(map, prefix + "RiskRuleId", this.RiskRuleId);
         this.setParamSimple(map, prefix + "Classify", this.Classify);
         this.setParamArrayObj(map, prefix + "StandardTerms.", this.StandardTerms);
+        this.setParamSimple(map, prefix + "AssetType", this.AssetType);
 
     }
 }

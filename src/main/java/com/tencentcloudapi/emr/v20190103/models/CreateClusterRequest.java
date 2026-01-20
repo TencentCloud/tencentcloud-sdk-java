@@ -218,6 +218,13 @@ public class CreateClusterRequest extends AbstractModel {
     private Long NeedCdbAudit;
 
     /**
+    * 安全指定来源ip
+    */
+    @SerializedName("SgIP")
+    @Expose
+    private String SgIP;
+
+    /**
      * Get EMR产品版本名称如EMR-V2.3.0 表示2.3.0版本的EMR， 当前支持产品版本名称查询：[产品版本名称](https://cloud.tencent.com/document/product/589/66338) 
      * @return ProductVersion EMR产品版本名称如EMR-V2.3.0 表示2.3.0版本的EMR， 当前支持产品版本名称查询：[产品版本名称](https://cloud.tencent.com/document/product/589/66338)
      */
@@ -693,6 +700,22 @@ public class CreateClusterRequest extends AbstractModel {
         this.NeedCdbAudit = NeedCdbAudit;
     }
 
+    /**
+     * Get 安全指定来源ip 
+     * @return SgIP 安全指定来源ip
+     */
+    public String getSgIP() {
+        return this.SgIP;
+    }
+
+    /**
+     * Set 安全指定来源ip
+     * @param SgIP 安全指定来源ip
+     */
+    public void setSgIP(String SgIP) {
+        this.SgIP = SgIP;
+    }
+
     public CreateClusterRequest() {
     }
 
@@ -797,6 +820,9 @@ public class CreateClusterRequest extends AbstractModel {
         if (source.NeedCdbAudit != null) {
             this.NeedCdbAudit = new Long(source.NeedCdbAudit);
         }
+        if (source.SgIP != null) {
+            this.SgIP = new String(source.SgIP);
+        }
     }
 
 
@@ -829,6 +855,7 @@ public class CreateClusterRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
         this.setParamSimple(map, prefix + "DefaultMetaVersion", this.DefaultMetaVersion);
         this.setParamSimple(map, prefix + "NeedCdbAudit", this.NeedCdbAudit);
+        this.setParamSimple(map, prefix + "SgIP", this.SgIP);
 
     }
 }

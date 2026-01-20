@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SubmitTemplateToImageJobResponse extends AbstractModel {
 
     /**
-    * 任务 ID。
+    * <p>任务 ID。</p>
     */
     @SerializedName("JobId")
     @Expose
@@ -38,16 +38,16 @@ public class SubmitTemplateToImageJobResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务 ID。 
-     * @return JobId 任务 ID。
+     * Get <p>任务 ID。</p> 
+     * @return JobId <p>任务 ID。</p>
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 任务 ID。
-     * @param JobId 任务 ID。
+     * Set <p>任务 ID。</p>
+     * @param JobId <p>任务 ID。</p>
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;

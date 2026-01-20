@@ -1158,6 +1158,17 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
+     *使用该接口查询云端特效配置信息。
+     * @param req DescribeLiveCloudEffectConfigRequest
+     * @return DescribeLiveCloudEffectConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveCloudEffectConfigResponse DescribeLiveCloudEffectConfig(DescribeLiveCloudEffectConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLiveCloudEffectConfig", DescribeLiveCloudEffectConfigResponse.class);
+    }
+
+    /**
      *使用该接口查询云端特效列表，特效列表中包含一部分官方精品特效，同时包含用户自定义生成的特效。
      * @param req DescribeLiveCloudEffectListRequest
      * @return DescribeLiveCloudEffectListResponse

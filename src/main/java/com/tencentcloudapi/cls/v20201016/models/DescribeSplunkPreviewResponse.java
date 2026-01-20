@@ -24,11 +24,18 @@ import java.util.HashMap;
 public class DescribeSplunkPreviewResponse extends AbstractModel {
 
     /**
-    * 预览结果
+    * <p>预览结果</p>
     */
     @SerializedName("PreviewInfos")
     @Expose
     private String [] PreviewInfos;
+
+    /**
+    * <p>数据过滤结果</p>
+    */
+    @SerializedName("FilterStats")
+    @Expose
+    private FilterStatistics FilterStats;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +45,35 @@ public class DescribeSplunkPreviewResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 预览结果 
-     * @return PreviewInfos 预览结果
+     * Get <p>预览结果</p> 
+     * @return PreviewInfos <p>预览结果</p>
      */
     public String [] getPreviewInfos() {
         return this.PreviewInfos;
     }
 
     /**
-     * Set 预览结果
-     * @param PreviewInfos 预览结果
+     * Set <p>预览结果</p>
+     * @param PreviewInfos <p>预览结果</p>
      */
     public void setPreviewInfos(String [] PreviewInfos) {
         this.PreviewInfos = PreviewInfos;
+    }
+
+    /**
+     * Get <p>数据过滤结果</p> 
+     * @return FilterStats <p>数据过滤结果</p>
+     */
+    public FilterStatistics getFilterStats() {
+        return this.FilterStats;
+    }
+
+    /**
+     * Set <p>数据过滤结果</p>
+     * @param FilterStats <p>数据过滤结果</p>
+     */
+    public void setFilterStats(FilterStatistics FilterStats) {
+        this.FilterStats = FilterStats;
     }
 
     /**
@@ -83,6 +106,9 @@ public class DescribeSplunkPreviewResponse extends AbstractModel {
                 this.PreviewInfos[i] = new String(source.PreviewInfos[i]);
             }
         }
+        if (source.FilterStats != null) {
+            this.FilterStats = new FilterStatistics(source.FilterStats);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -94,6 +120,7 @@ public class DescribeSplunkPreviewResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "PreviewInfos.", this.PreviewInfos);
+        this.setParamObj(map, prefix + "FilterStats.", this.FilterStats);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

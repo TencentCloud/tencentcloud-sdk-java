@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ssl.v20191205.models;
+package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,21 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCertificatesResponse extends AbstractModel {
+public class DescribeLiveCloudEffectConfigResponse extends AbstractModel {
 
     /**
-    * <p>总数量。</p>
+    * <p>模板生礼物的模板信息列表。</p>
     */
-    @SerializedName("TotalCount")
+    @SerializedName("EffectTemplateList")
     @Expose
-    private Long TotalCount;
-
-    /**
-    * <p>列表。</p>
-    */
-    @SerializedName("Certificates")
-    @Expose
-    private Certificates [] Certificates;
+    private CloudEffectTemplateInfo [] EffectTemplateList;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +38,19 @@ public class DescribeCertificatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>总数量。</p> 
-     * @return TotalCount <p>总数量。</p>
+     * Get <p>模板生礼物的模板信息列表。</p> 
+     * @return EffectTemplateList <p>模板生礼物的模板信息列表。</p>
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public CloudEffectTemplateInfo [] getEffectTemplateList() {
+        return this.EffectTemplateList;
     }
 
     /**
-     * Set <p>总数量。</p>
-     * @param TotalCount <p>总数量。</p>
+     * Set <p>模板生礼物的模板信息列表。</p>
+     * @param EffectTemplateList <p>模板生礼物的模板信息列表。</p>
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
-
-    /**
-     * Get <p>列表。</p> 
-     * @return Certificates <p>列表。</p>
-     */
-    public Certificates [] getCertificates() {
-        return this.Certificates;
-    }
-
-    /**
-     * Set <p>列表。</p>
-     * @param Certificates <p>列表。</p>
-     */
-    public void setCertificates(Certificates [] Certificates) {
-        this.Certificates = Certificates;
+    public void setEffectTemplateList(CloudEffectTemplateInfo [] EffectTemplateList) {
+        this.EffectTemplateList = EffectTemplateList;
     }
 
     /**
@@ -92,21 +69,18 @@ public class DescribeCertificatesResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeCertificatesResponse() {
+    public DescribeLiveCloudEffectConfigResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeCertificatesResponse(DescribeCertificatesResponse source) {
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
-        }
-        if (source.Certificates != null) {
-            this.Certificates = new Certificates[source.Certificates.length];
-            for (int i = 0; i < source.Certificates.length; i++) {
-                this.Certificates[i] = new Certificates(source.Certificates[i]);
+    public DescribeLiveCloudEffectConfigResponse(DescribeLiveCloudEffectConfigResponse source) {
+        if (source.EffectTemplateList != null) {
+            this.EffectTemplateList = new CloudEffectTemplateInfo[source.EffectTemplateList.length];
+            for (int i = 0; i < source.EffectTemplateList.length; i++) {
+                this.EffectTemplateList[i] = new CloudEffectTemplateInfo(source.EffectTemplateList[i]);
             }
         }
         if (source.RequestId != null) {
@@ -119,8 +93,7 @@ public class DescribeCertificatesResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "Certificates.", this.Certificates);
+        this.setParamArrayObj(map, prefix + "EffectTemplateList.", this.EffectTemplateList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

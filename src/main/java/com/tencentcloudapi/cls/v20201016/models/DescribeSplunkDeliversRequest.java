@@ -24,112 +24,92 @@ import java.util.HashMap;
 public class DescribeSplunkDeliversRequest extends AbstractModel {
 
     /**
-    * 日志主题Id
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+    * <p>日志主题Id- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * - taskId 按照【任务id】进行过滤。 类型：String 必选：否  
-- name 按照【任务名称】进行过滤。 类型：String 必选：否  
-- statusFlag 按照【状态】进行过滤。 类型：String 必选：否  
- 每次请求的Filters的上限为10，Filter.Values的上限为10。
+    * <ul><li>taskId 按照【任务id】进行过滤。 类型：String 必选：否  </li><li>name 按照【任务名称】进行过滤。 类型：String 必选：否  </li><li>statusFlag 按照【状态】进行过滤。 类型：String 必选：否<br /> 每次请求的Filters的上限为10，Filter.Values的上限为10。</li></ul>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 分页的偏移量，默认值为0。
+    * <p>分页的偏移量，默认值为0。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 分页单页限制数目，默认值为20，最大值100。
+    * <p>分页单页限制数目，默认值为20，最大值100。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 日志主题Id
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。 
-     * @return TopicId 日志主题Id
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * Get <p>日志主题Id- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p> 
+     * @return TopicId <p>日志主题Id- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 日志主题Id
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
-     * @param TopicId 日志主题Id
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * Set <p>日志主题Id- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
+     * @param TopicId <p>日志主题Id- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get - taskId 按照【任务id】进行过滤。 类型：String 必选：否  
-- name 按照【任务名称】进行过滤。 类型：String 必选：否  
-- statusFlag 按照【状态】进行过滤。 类型：String 必选：否  
- 每次请求的Filters的上限为10，Filter.Values的上限为10。 
-     * @return Filters - taskId 按照【任务id】进行过滤。 类型：String 必选：否  
-- name 按照【任务名称】进行过滤。 类型：String 必选：否  
-- statusFlag 按照【状态】进行过滤。 类型：String 必选：否  
- 每次请求的Filters的上限为10，Filter.Values的上限为10。
+     * Get <ul><li>taskId 按照【任务id】进行过滤。 类型：String 必选：否  </li><li>name 按照【任务名称】进行过滤。 类型：String 必选：否  </li><li>statusFlag 按照【状态】进行过滤。 类型：String 必选：否<br /> 每次请求的Filters的上限为10，Filter.Values的上限为10。</li></ul> 
+     * @return Filters <ul><li>taskId 按照【任务id】进行过滤。 类型：String 必选：否  </li><li>name 按照【任务名称】进行过滤。 类型：String 必选：否  </li><li>statusFlag 按照【状态】进行过滤。 类型：String 必选：否<br /> 每次请求的Filters的上限为10，Filter.Values的上限为10。</li></ul>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set - taskId 按照【任务id】进行过滤。 类型：String 必选：否  
-- name 按照【任务名称】进行过滤。 类型：String 必选：否  
-- statusFlag 按照【状态】进行过滤。 类型：String 必选：否  
- 每次请求的Filters的上限为10，Filter.Values的上限为10。
-     * @param Filters - taskId 按照【任务id】进行过滤。 类型：String 必选：否  
-- name 按照【任务名称】进行过滤。 类型：String 必选：否  
-- statusFlag 按照【状态】进行过滤。 类型：String 必选：否  
- 每次请求的Filters的上限为10，Filter.Values的上限为10。
+     * Set <ul><li>taskId 按照【任务id】进行过滤。 类型：String 必选：否  </li><li>name 按照【任务名称】进行过滤。 类型：String 必选：否  </li><li>statusFlag 按照【状态】进行过滤。 类型：String 必选：否<br /> 每次请求的Filters的上限为10，Filter.Values的上限为10。</li></ul>
+     * @param Filters <ul><li>taskId 按照【任务id】进行过滤。 类型：String 必选：否  </li><li>name 按照【任务名称】进行过滤。 类型：String 必选：否  </li><li>statusFlag 按照【状态】进行过滤。 类型：String 必选：否<br /> 每次请求的Filters的上限为10，Filter.Values的上限为10。</li></ul>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 分页的偏移量，默认值为0。 
-     * @return Offset 分页的偏移量，默认值为0。
+     * Get <p>分页的偏移量，默认值为0。</p> 
+     * @return Offset <p>分页的偏移量，默认值为0。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页的偏移量，默认值为0。
-     * @param Offset 分页的偏移量，默认值为0。
+     * Set <p>分页的偏移量，默认值为0。</p>
+     * @param Offset <p>分页的偏移量，默认值为0。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 分页单页限制数目，默认值为20，最大值100。 
-     * @return Limit 分页单页限制数目，默认值为20，最大值100。
+     * Get <p>分页单页限制数目，默认值为20，最大值100。</p> 
+     * @return Limit <p>分页单页限制数目，默认值为20，最大值100。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页单页限制数目，默认值为20，最大值100。
-     * @param Limit 分页单页限制数目，默认值为20，最大值100。
+     * Set <p>分页单页限制数目，默认值为20，最大值100。</p>
+     * @param Limit <p>分页单页限制数目，默认值为20，最大值100。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

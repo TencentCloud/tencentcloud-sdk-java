@@ -24,371 +24,394 @@ import java.util.HashMap;
 public class SplunkDeliverInfo extends AbstractModel {
 
     /**
-    * 任务id
+    * <p>任务id</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 任务名称
+    * <p>任务名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 用户id
+    * <p>用户id</p>
     */
     @SerializedName("Uin")
     @Expose
     private Long Uin;
 
     /**
-    * 日志主题id
+    * <p>日志主题id</p>
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * 任务状态；1.运行中；2:暂停；3：异常
+    * <p>任务状态；1.运行中；2:暂停；3：异常</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 启用状态；0:禁用；1:启用
+    * <p>启用状态；0:禁用；1:启用</p>
     */
     @SerializedName("Enable")
     @Expose
     private Long Enable;
 
     /**
-    * 创建时间；单位：秒
+    * <p>创建时间；单位：秒</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
 
     /**
-    * 更新时间；单位：秒
+    * <p>更新时间；单位：秒</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private Long UpdateTime;
 
     /**
-    * splunk投递任务-目标配置
+    * <p>splunk投递任务-目标配置</p>
     */
     @SerializedName("NetInfo")
     @Expose
     private NetInfo NetInfo;
 
     /**
-    * splunk投递任务元信息
+    * <p>splunk投递任务元信息</p>
     */
     @SerializedName("Metadata")
     @Expose
     private MetadataInfo Metadata;
 
     /**
-    * 是否启用服务日志；1:关闭；2:开启
+    * <p>是否启用服务日志；1:关闭；2:开启</p>
     */
     @SerializedName("HasServiceLog")
     @Expose
     private Long HasServiceLog;
 
     /**
-    * 高级配置-数据来源；
+    * <p>高级配置-数据来源；</p>
     */
     @SerializedName("Source")
     @Expose
     private String Source;
 
     /**
-    * 高级配置-数据来源类型；
+    * <p>高级配置-数据来源类型；</p>
     */
     @SerializedName("SourceType")
     @Expose
     private String SourceType;
 
     /**
-    * 高级配置-Splunk写入的索引
+    * <p>高级配置-Splunk写入的索引</p>
     */
     @SerializedName("Index")
     @Expose
     private String Index;
 
     /**
-    * 高级配置-是否启用索引器；1-不开启；2-开启；
+    * <p>高级配置-是否启用索引器；1-不开启；2-开启；</p>
     */
     @SerializedName("IndexAck")
     @Expose
     private Long IndexAck;
 
     /**
-    * 高级配置-通道
+    * <p>高级配置-通道</p>
     */
     @SerializedName("Channel")
     @Expose
     private String Channel;
 
     /**
-     * Get 任务id 
-     * @return TaskId 任务id
+    * <p>预过滤处理-对写入 Splunk 原始数据进行预过滤处理语句</p>
+    */
+    @SerializedName("DSLFilter")
+    @Expose
+    private String DSLFilter;
+
+    /**
+     * Get <p>任务id</p> 
+     * @return TaskId <p>任务id</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务id
-     * @param TaskId 任务id
+     * Set <p>任务id</p>
+     * @param TaskId <p>任务id</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 任务名称 
-     * @return Name 任务名称
+     * Get <p>任务名称</p> 
+     * @return Name <p>任务名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 任务名称
-     * @param Name 任务名称
+     * Set <p>任务名称</p>
+     * @param Name <p>任务名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 用户id 
-     * @return Uin 用户id
+     * Get <p>用户id</p> 
+     * @return Uin <p>用户id</p>
      */
     public Long getUin() {
         return this.Uin;
     }
 
     /**
-     * Set 用户id
-     * @param Uin 用户id
+     * Set <p>用户id</p>
+     * @param Uin <p>用户id</p>
      */
     public void setUin(Long Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 日志主题id 
-     * @return TopicId 日志主题id
+     * Get <p>日志主题id</p> 
+     * @return TopicId <p>日志主题id</p>
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 日志主题id
-     * @param TopicId 日志主题id
+     * Set <p>日志主题id</p>
+     * @param TopicId <p>日志主题id</p>
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 任务状态；1.运行中；2:暂停；3：异常 
-     * @return Status 任务状态；1.运行中；2:暂停；3：异常
+     * Get <p>任务状态；1.运行中；2:暂停；3：异常</p> 
+     * @return Status <p>任务状态；1.运行中；2:暂停；3：异常</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 任务状态；1.运行中；2:暂停；3：异常
-     * @param Status 任务状态；1.运行中；2:暂停；3：异常
+     * Set <p>任务状态；1.运行中；2:暂停；3：异常</p>
+     * @param Status <p>任务状态；1.运行中；2:暂停；3：异常</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 启用状态；0:禁用；1:启用 
-     * @return Enable 启用状态；0:禁用；1:启用
+     * Get <p>启用状态；0:禁用；1:启用</p> 
+     * @return Enable <p>启用状态；0:禁用；1:启用</p>
      */
     public Long getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set 启用状态；0:禁用；1:启用
-     * @param Enable 启用状态；0:禁用；1:启用
+     * Set <p>启用状态；0:禁用；1:启用</p>
+     * @param Enable <p>启用状态；0:禁用；1:启用</p>
      */
     public void setEnable(Long Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get 创建时间；单位：秒 
-     * @return CreateTime 创建时间；单位：秒
+     * Get <p>创建时间；单位：秒</p> 
+     * @return CreateTime <p>创建时间；单位：秒</p>
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间；单位：秒
-     * @param CreateTime 创建时间；单位：秒
+     * Set <p>创建时间；单位：秒</p>
+     * @param CreateTime <p>创建时间；单位：秒</p>
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 更新时间；单位：秒 
-     * @return UpdateTime 更新时间；单位：秒
+     * Get <p>更新时间；单位：秒</p> 
+     * @return UpdateTime <p>更新时间；单位：秒</p>
      */
     public Long getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 更新时间；单位：秒
-     * @param UpdateTime 更新时间；单位：秒
+     * Set <p>更新时间；单位：秒</p>
+     * @param UpdateTime <p>更新时间；单位：秒</p>
      */
     public void setUpdateTime(Long UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get splunk投递任务-目标配置 
-     * @return NetInfo splunk投递任务-目标配置
+     * Get <p>splunk投递任务-目标配置</p> 
+     * @return NetInfo <p>splunk投递任务-目标配置</p>
      */
     public NetInfo getNetInfo() {
         return this.NetInfo;
     }
 
     /**
-     * Set splunk投递任务-目标配置
-     * @param NetInfo splunk投递任务-目标配置
+     * Set <p>splunk投递任务-目标配置</p>
+     * @param NetInfo <p>splunk投递任务-目标配置</p>
      */
     public void setNetInfo(NetInfo NetInfo) {
         this.NetInfo = NetInfo;
     }
 
     /**
-     * Get splunk投递任务元信息 
-     * @return Metadata splunk投递任务元信息
+     * Get <p>splunk投递任务元信息</p> 
+     * @return Metadata <p>splunk投递任务元信息</p>
      */
     public MetadataInfo getMetadata() {
         return this.Metadata;
     }
 
     /**
-     * Set splunk投递任务元信息
-     * @param Metadata splunk投递任务元信息
+     * Set <p>splunk投递任务元信息</p>
+     * @param Metadata <p>splunk投递任务元信息</p>
      */
     public void setMetadata(MetadataInfo Metadata) {
         this.Metadata = Metadata;
     }
 
     /**
-     * Get 是否启用服务日志；1:关闭；2:开启 
-     * @return HasServiceLog 是否启用服务日志；1:关闭；2:开启
+     * Get <p>是否启用服务日志；1:关闭；2:开启</p> 
+     * @return HasServiceLog <p>是否启用服务日志；1:关闭；2:开启</p>
      */
     public Long getHasServiceLog() {
         return this.HasServiceLog;
     }
 
     /**
-     * Set 是否启用服务日志；1:关闭；2:开启
-     * @param HasServiceLog 是否启用服务日志；1:关闭；2:开启
+     * Set <p>是否启用服务日志；1:关闭；2:开启</p>
+     * @param HasServiceLog <p>是否启用服务日志；1:关闭；2:开启</p>
      */
     public void setHasServiceLog(Long HasServiceLog) {
         this.HasServiceLog = HasServiceLog;
     }
 
     /**
-     * Get 高级配置-数据来源； 
-     * @return Source 高级配置-数据来源；
+     * Get <p>高级配置-数据来源；</p> 
+     * @return Source <p>高级配置-数据来源；</p>
      */
     public String getSource() {
         return this.Source;
     }
 
     /**
-     * Set 高级配置-数据来源；
-     * @param Source 高级配置-数据来源；
+     * Set <p>高级配置-数据来源；</p>
+     * @param Source <p>高级配置-数据来源；</p>
      */
     public void setSource(String Source) {
         this.Source = Source;
     }
 
     /**
-     * Get 高级配置-数据来源类型； 
-     * @return SourceType 高级配置-数据来源类型；
+     * Get <p>高级配置-数据来源类型；</p> 
+     * @return SourceType <p>高级配置-数据来源类型；</p>
      */
     public String getSourceType() {
         return this.SourceType;
     }
 
     /**
-     * Set 高级配置-数据来源类型；
-     * @param SourceType 高级配置-数据来源类型；
+     * Set <p>高级配置-数据来源类型；</p>
+     * @param SourceType <p>高级配置-数据来源类型；</p>
      */
     public void setSourceType(String SourceType) {
         this.SourceType = SourceType;
     }
 
     /**
-     * Get 高级配置-Splunk写入的索引 
-     * @return Index 高级配置-Splunk写入的索引
+     * Get <p>高级配置-Splunk写入的索引</p> 
+     * @return Index <p>高级配置-Splunk写入的索引</p>
      */
     public String getIndex() {
         return this.Index;
     }
 
     /**
-     * Set 高级配置-Splunk写入的索引
-     * @param Index 高级配置-Splunk写入的索引
+     * Set <p>高级配置-Splunk写入的索引</p>
+     * @param Index <p>高级配置-Splunk写入的索引</p>
      */
     public void setIndex(String Index) {
         this.Index = Index;
     }
 
     /**
-     * Get 高级配置-是否启用索引器；1-不开启；2-开启； 
-     * @return IndexAck 高级配置-是否启用索引器；1-不开启；2-开启；
+     * Get <p>高级配置-是否启用索引器；1-不开启；2-开启；</p> 
+     * @return IndexAck <p>高级配置-是否启用索引器；1-不开启；2-开启；</p>
      */
     public Long getIndexAck() {
         return this.IndexAck;
     }
 
     /**
-     * Set 高级配置-是否启用索引器；1-不开启；2-开启；
-     * @param IndexAck 高级配置-是否启用索引器；1-不开启；2-开启；
+     * Set <p>高级配置-是否启用索引器；1-不开启；2-开启；</p>
+     * @param IndexAck <p>高级配置-是否启用索引器；1-不开启；2-开启；</p>
      */
     public void setIndexAck(Long IndexAck) {
         this.IndexAck = IndexAck;
     }
 
     /**
-     * Get 高级配置-通道 
-     * @return Channel 高级配置-通道
+     * Get <p>高级配置-通道</p> 
+     * @return Channel <p>高级配置-通道</p>
      */
     public String getChannel() {
         return this.Channel;
     }
 
     /**
-     * Set 高级配置-通道
-     * @param Channel 高级配置-通道
+     * Set <p>高级配置-通道</p>
+     * @param Channel <p>高级配置-通道</p>
      */
     public void setChannel(String Channel) {
         this.Channel = Channel;
+    }
+
+    /**
+     * Get <p>预过滤处理-对写入 Splunk 原始数据进行预过滤处理语句</p> 
+     * @return DSLFilter <p>预过滤处理-对写入 Splunk 原始数据进行预过滤处理语句</p>
+     */
+    public String getDSLFilter() {
+        return this.DSLFilter;
+    }
+
+    /**
+     * Set <p>预过滤处理-对写入 Splunk 原始数据进行预过滤处理语句</p>
+     * @param DSLFilter <p>预过滤处理-对写入 Splunk 原始数据进行预过滤处理语句</p>
+     */
+    public void setDSLFilter(String DSLFilter) {
+        this.DSLFilter = DSLFilter;
     }
 
     public SplunkDeliverInfo() {
@@ -447,6 +470,9 @@ public class SplunkDeliverInfo extends AbstractModel {
         if (source.Channel != null) {
             this.Channel = new String(source.Channel);
         }
+        if (source.DSLFilter != null) {
+            this.DSLFilter = new String(source.DSLFilter);
+        }
     }
 
 
@@ -470,6 +496,7 @@ public class SplunkDeliverInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Index", this.Index);
         this.setParamSimple(map, prefix + "IndexAck", this.IndexAck);
         this.setParamSimple(map, prefix + "Channel", this.Channel);
+        this.setParamSimple(map, prefix + "DSLFilter", this.DSLFilter);
 
     }
 }

@@ -322,6 +322,13 @@ Hadoop-Hbase
     private Long NeedCdbAudit;
 
     /**
+    * 安全组指定来源ip
+    */
+    @SerializedName("SgIP")
+    @Expose
+    private String SgIP;
+
+    /**
      * Get 产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
 51:表示STARROCKS-V1.4.0
 54:表示STARROCKS-V2.0.0
@@ -1069,6 +1076,22 @@ Hadoop-Hbase
         this.NeedCdbAudit = NeedCdbAudit;
     }
 
+    /**
+     * Get 安全组指定来源ip 
+     * @return SgIP 安全组指定来源ip
+     */
+    public String getSgIP() {
+        return this.SgIP;
+    }
+
+    /**
+     * Set 安全组指定来源ip
+     * @param SgIP 安全组指定来源ip
+     */
+    public void setSgIP(String SgIP) {
+        this.SgIP = SgIP;
+    }
+
     public CreateInstanceRequest() {
     }
 
@@ -1209,6 +1232,9 @@ Hadoop-Hbase
         if (source.NeedCdbAudit != null) {
             this.NeedCdbAudit = new Long(source.NeedCdbAudit);
         }
+        if (source.SgIP != null) {
+            this.SgIP = new String(source.SgIP);
+        }
     }
 
 
@@ -1253,6 +1279,7 @@ Hadoop-Hbase
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
         this.setParamSimple(map, prefix + "DefaultMetaVersion", this.DefaultMetaVersion);
         this.setParamSimple(map, prefix + "NeedCdbAudit", this.NeedCdbAudit);
+        this.setParamSimple(map, prefix + "SgIP", this.SgIP);
 
     }
 }
