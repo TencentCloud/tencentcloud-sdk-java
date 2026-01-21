@@ -122,11 +122,24 @@ zu: 祖鲁语
     /**
     * 音频数据格式，默认为 pcm
 
-支持的格式：pcm (16k 采样率的单声道 16 位采样 pcm 数据)
+支持的格式：
+pcm (16000 采样率的单声道 16 位采样 pcm 数据)
+ogg-opus (16000 / 24000 / 48000 采样率的单声道 opus 编码的 ogg 数据)
     */
     @SerializedName("AudioFormat")
     @Expose
     private String AudioFormat;
+
+    /**
+    * 音频的采样率
+
+支持的采样率：
+pcm 16000
+ogg-opus 16000 / 24000 / 48000
+    */
+    @SerializedName("SampleRate")
+    @Expose
+    private Long SampleRate;
 
     /**
     * 扩展参数，默认不填，特殊需求使用
@@ -498,10 +511,14 @@ zu: 祖鲁语
     /**
      * Get 音频数据格式，默认为 pcm
 
-支持的格式：pcm (16k 采样率的单声道 16 位采样 pcm 数据) 
+支持的格式：
+pcm (16000 采样率的单声道 16 位采样 pcm 数据)
+ogg-opus (16000 / 24000 / 48000 采样率的单声道 opus 编码的 ogg 数据) 
      * @return AudioFormat 音频数据格式，默认为 pcm
 
-支持的格式：pcm (16k 采样率的单声道 16 位采样 pcm 数据)
+支持的格式：
+pcm (16000 采样率的单声道 16 位采样 pcm 数据)
+ogg-opus (16000 / 24000 / 48000 采样率的单声道 opus 编码的 ogg 数据)
      */
     public String getAudioFormat() {
         return this.AudioFormat;
@@ -510,13 +527,49 @@ zu: 祖鲁语
     /**
      * Set 音频数据格式，默认为 pcm
 
-支持的格式：pcm (16k 采样率的单声道 16 位采样 pcm 数据)
+支持的格式：
+pcm (16000 采样率的单声道 16 位采样 pcm 数据)
+ogg-opus (16000 / 24000 / 48000 采样率的单声道 opus 编码的 ogg 数据)
      * @param AudioFormat 音频数据格式，默认为 pcm
 
-支持的格式：pcm (16k 采样率的单声道 16 位采样 pcm 数据)
+支持的格式：
+pcm (16000 采样率的单声道 16 位采样 pcm 数据)
+ogg-opus (16000 / 24000 / 48000 采样率的单声道 opus 编码的 ogg 数据)
      */
     public void setAudioFormat(String AudioFormat) {
         this.AudioFormat = AudioFormat;
+    }
+
+    /**
+     * Get 音频的采样率
+
+支持的采样率：
+pcm 16000
+ogg-opus 16000 / 24000 / 48000 
+     * @return SampleRate 音频的采样率
+
+支持的采样率：
+pcm 16000
+ogg-opus 16000 / 24000 / 48000
+     */
+    public Long getSampleRate() {
+        return this.SampleRate;
+    }
+
+    /**
+     * Set 音频的采样率
+
+支持的采样率：
+pcm 16000
+ogg-opus 16000 / 24000 / 48000
+     * @param SampleRate 音频的采样率
+
+支持的采样率：
+pcm 16000
+ogg-opus 16000 / 24000 / 48000
+     */
+    public void setSampleRate(Long SampleRate) {
+        this.SampleRate = SampleRate;
     }
 
     /**
@@ -552,6 +605,9 @@ zu: 祖鲁语
         if (source.AudioFormat != null) {
             this.AudioFormat = new String(source.AudioFormat);
         }
+        if (source.SampleRate != null) {
+            this.SampleRate = new Long(source.SampleRate);
+        }
         if (source.UserExtPara != null) {
             this.UserExtPara = new String(source.UserExtPara);
         }
@@ -565,6 +621,7 @@ zu: 祖鲁语
         this.setParamSimple(map, prefix + "AudioData", this.AudioData);
         this.setParamSimple(map, prefix + "Source", this.Source);
         this.setParamSimple(map, prefix + "AudioFormat", this.AudioFormat);
+        this.setParamSimple(map, prefix + "SampleRate", this.SampleRate);
         this.setParamSimple(map, prefix + "UserExtPara", this.UserExtPara);
 
     }

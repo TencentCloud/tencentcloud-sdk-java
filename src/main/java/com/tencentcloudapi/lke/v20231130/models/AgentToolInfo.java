@@ -167,6 +167,20 @@ public class AgentToolInfo extends AbstractModel {
     private ToolAdvanceConfig ToolAdvanceConfig;
 
     /**
+    * 授权模式； 0-开发者授权；1-使用者授权
+    */
+    @SerializedName("AuthMode")
+    @Expose
+    private Long AuthMode;
+
+    /**
+    * 授权类型; 0-无鉴权；1-APIKey；2-CAM授权；3-Oauth2.0授权；
+    */
+    @SerializedName("AuthType")
+    @Expose
+    private Long AuthType;
+
+    /**
      * Get 插件id 
      * @return PluginId 插件id
      */
@@ -498,6 +512,38 @@ public class AgentToolInfo extends AbstractModel {
         this.ToolAdvanceConfig = ToolAdvanceConfig;
     }
 
+    /**
+     * Get 授权模式； 0-开发者授权；1-使用者授权 
+     * @return AuthMode 授权模式； 0-开发者授权；1-使用者授权
+     */
+    public Long getAuthMode() {
+        return this.AuthMode;
+    }
+
+    /**
+     * Set 授权模式； 0-开发者授权；1-使用者授权
+     * @param AuthMode 授权模式； 0-开发者授权；1-使用者授权
+     */
+    public void setAuthMode(Long AuthMode) {
+        this.AuthMode = AuthMode;
+    }
+
+    /**
+     * Get 授权类型; 0-无鉴权；1-APIKey；2-CAM授权；3-Oauth2.0授权； 
+     * @return AuthType 授权类型; 0-无鉴权；1-APIKey；2-CAM授权；3-Oauth2.0授权；
+     */
+    public Long getAuthType() {
+        return this.AuthType;
+    }
+
+    /**
+     * Set 授权类型; 0-无鉴权；1-APIKey；2-CAM授权；3-Oauth2.0授权；
+     * @param AuthType 授权类型; 0-无鉴权；1-APIKey；2-CAM授权；3-Oauth2.0授权；
+     */
+    public void setAuthType(Long AuthType) {
+        this.AuthType = AuthType;
+    }
+
     public AgentToolInfo() {
     }
 
@@ -578,6 +624,12 @@ public class AgentToolInfo extends AbstractModel {
         if (source.ToolAdvanceConfig != null) {
             this.ToolAdvanceConfig = new ToolAdvanceConfig(source.ToolAdvanceConfig);
         }
+        if (source.AuthMode != null) {
+            this.AuthMode = new Long(source.AuthMode);
+        }
+        if (source.AuthType != null) {
+            this.AuthType = new Long(source.AuthType);
+        }
     }
 
 
@@ -605,6 +657,8 @@ public class AgentToolInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ToolSource", this.ToolSource);
         this.setParamSimple(map, prefix + "FinanceType", this.FinanceType);
         this.setParamObj(map, prefix + "ToolAdvanceConfig.", this.ToolAdvanceConfig);
+        this.setParamSimple(map, prefix + "AuthMode", this.AuthMode);
+        this.setParamSimple(map, prefix + "AuthType", this.AuthType);
 
     }
 }

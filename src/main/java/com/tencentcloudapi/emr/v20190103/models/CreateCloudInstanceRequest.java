@@ -162,6 +162,13 @@ MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser M
     private Long NeedCdbAudit;
 
     /**
+    * 安全组来源IP
+    */
+    @SerializedName("SgIP")
+    @Expose
+    private String SgIP;
+
+    /**
      * Get 实例名称。
 <li>长度限制为6-36个字符。</li>
 <li>只允许包含中文、字母、数字、-、_。</li> 
@@ -497,6 +504,22 @@ MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser M
         this.NeedCdbAudit = NeedCdbAudit;
     }
 
+    /**
+     * Get 安全组来源IP 
+     * @return SgIP 安全组来源IP
+     */
+    public String getSgIP() {
+        return this.SgIP;
+    }
+
+    /**
+     * Set 安全组来源IP
+     * @param SgIP 安全组来源IP
+     */
+    public void setSgIP(String SgIP) {
+        this.SgIP = SgIP;
+    }
+
     public CreateCloudInstanceRequest() {
     }
 
@@ -571,6 +594,9 @@ MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser M
         if (source.NeedCdbAudit != null) {
             this.NeedCdbAudit = new Long(source.NeedCdbAudit);
         }
+        if (source.SgIP != null) {
+            this.SgIP = new String(source.SgIP);
+        }
     }
 
 
@@ -596,6 +622,7 @@ MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser M
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "DefaultMetaVersion", this.DefaultMetaVersion);
         this.setParamSimple(map, prefix + "NeedCdbAudit", this.NeedCdbAudit);
+        this.setParamSimple(map, prefix + "SgIP", this.SgIP);
 
     }
 }

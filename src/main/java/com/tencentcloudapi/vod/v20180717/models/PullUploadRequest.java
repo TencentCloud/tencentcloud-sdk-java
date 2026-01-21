@@ -126,6 +126,13 @@ public class PullUploadRequest extends AbstractModel {
     private String SourceContext;
 
     /**
+    * 媒体存储路径，以/开头。
+    */
+    @SerializedName("MediaStoragePath")
+    @Expose
+    private String MediaStoragePath;
+
+    /**
      * Get 要拉取的媒体 URL，暂不支持拉取 Dash 格式（可以支持 HLS）。
 支持的扩展名详见[媒体类型](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B)。请确保媒体 URL 可以访问。 
      * @return MediaUrl 要拉取的媒体 URL，暂不支持拉取 Dash 格式（可以支持 HLS）。
@@ -365,6 +372,22 @@ public class PullUploadRequest extends AbstractModel {
         this.SourceContext = SourceContext;
     }
 
+    /**
+     * Get 媒体存储路径，以/开头。 
+     * @return MediaStoragePath 媒体存储路径，以/开头。
+     */
+    public String getMediaStoragePath() {
+        return this.MediaStoragePath;
+    }
+
+    /**
+     * Set 媒体存储路径，以/开头。
+     * @param MediaStoragePath 媒体存储路径，以/开头。
+     */
+    public void setMediaStoragePath(String MediaStoragePath) {
+        this.MediaStoragePath = MediaStoragePath;
+    }
+
     public PullUploadRequest() {
     }
 
@@ -415,6 +438,9 @@ public class PullUploadRequest extends AbstractModel {
         if (source.SourceContext != null) {
             this.SourceContext = new String(source.SourceContext);
         }
+        if (source.MediaStoragePath != null) {
+            this.MediaStoragePath = new String(source.MediaStoragePath);
+        }
     }
 
 
@@ -436,6 +462,7 @@ public class PullUploadRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
         this.setParamSimple(map, prefix + "SourceContext", this.SourceContext);
+        this.setParamSimple(map, prefix + "MediaStoragePath", this.MediaStoragePath);
 
     }
 }

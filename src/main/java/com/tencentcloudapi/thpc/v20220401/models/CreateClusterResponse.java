@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateClusterResponse extends AbstractModel {
 
     /**
-    * 集群ID。
+    * <p>集群ID。</p>
     */
     @SerializedName("ClusterId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateClusterResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 集群ID。 
-     * @return ClusterId 集群ID。
+     * Get <p>集群ID。</p> 
+     * @return ClusterId <p>集群ID。</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID。
-     * @param ClusterId 集群ID。
+     * Set <p>集群ID。</p>
+     * @param ClusterId <p>集群ID。</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;

@@ -102,6 +102,13 @@ public class ApplyUploadRequest extends AbstractModel {
     private String ExtInfo;
 
     /**
+    * 媒体存储路径，以/开头。
+    */
+    @SerializedName("MediaStoragePath")
+    @Expose
+    private String MediaStoragePath;
+
+    /**
      * Get 媒体类型，可选值请参考 [上传能力综述](/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B)。 
      * @return MediaType 媒体类型，可选值请参考 [上传能力综述](/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B)。
      */
@@ -281,6 +288,22 @@ public class ApplyUploadRequest extends AbstractModel {
         this.ExtInfo = ExtInfo;
     }
 
+    /**
+     * Get 媒体存储路径，以/开头。 
+     * @return MediaStoragePath 媒体存储路径，以/开头。
+     */
+    public String getMediaStoragePath() {
+        return this.MediaStoragePath;
+    }
+
+    /**
+     * Set 媒体存储路径，以/开头。
+     * @param MediaStoragePath 媒体存储路径，以/开头。
+     */
+    public void setMediaStoragePath(String MediaStoragePath) {
+        this.MediaStoragePath = MediaStoragePath;
+    }
+
     public ApplyUploadRequest() {
     }
 
@@ -322,6 +345,9 @@ public class ApplyUploadRequest extends AbstractModel {
         if (source.ExtInfo != null) {
             this.ExtInfo = new String(source.ExtInfo);
         }
+        if (source.MediaStoragePath != null) {
+            this.MediaStoragePath = new String(source.MediaStoragePath);
+        }
     }
 
 
@@ -340,6 +366,7 @@ public class ApplyUploadRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SourceContext", this.SourceContext);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
+        this.setParamSimple(map, prefix + "MediaStoragePath", this.MediaStoragePath);
 
     }
 }

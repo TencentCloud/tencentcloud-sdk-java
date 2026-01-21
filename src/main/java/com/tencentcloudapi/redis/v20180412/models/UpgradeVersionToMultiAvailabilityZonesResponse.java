@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UpgradeVersionToMultiAvailabilityZonesResponse extends AbstractModel {
 
     /**
-    * 任务ID
+    * <p>任务ID</p>
     */
     @SerializedName("FlowId")
     @Expose
@@ -38,16 +38,16 @@ public class UpgradeVersionToMultiAvailabilityZonesResponse extends AbstractMode
     private String RequestId;
 
     /**
-     * Get 任务ID 
-     * @return FlowId 任务ID
+     * Get <p>任务ID</p> 
+     * @return FlowId <p>任务ID</p>
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 任务ID
-     * @param FlowId 任务ID
+     * Set <p>任务ID</p>
+     * @param FlowId <p>任务ID</p>
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;

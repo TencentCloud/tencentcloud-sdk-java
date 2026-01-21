@@ -24,135 +24,115 @@ import java.util.HashMap;
 public class SetAutoScalingConfigurationRequest extends AbstractModel {
 
     /**
-    * 集群ID。
+    * <p>集群ID。</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 任务连续等待时间，队列的任务处于连续等待的时间。单位秒。默认值120。
+    * <p>任务连续等待时间，队列的任务处于连续等待的时间。单位秒。默认值120。</p>
     */
     @SerializedName("ExpansionBusyTime")
     @Expose
     private Long ExpansionBusyTime;
 
     /**
-    * 节点连续空闲（未运行作业）时间，一个节点连续处于空闲状态时间。单位秒。默认值300。
+    * <p>节点连续空闲（未运行作业）时间，一个节点连续处于空闲状态时间。单位秒。默认值300。</p>
     */
     @SerializedName("ShrinkIdleTime")
     @Expose
     private Long ShrinkIdleTime;
 
     /**
-    * 扩容队列配置列表。
+    * <p>扩容队列配置列表。</p>
     */
     @SerializedName("QueueConfigs")
     @Expose
     private QueueConfig [] QueueConfigs;
 
     /**
-    * 是否只预检此次请求。
-true：发送检查请求，不会绑定弹性伸缩组。检查项包括是否填写了必需参数，请求格式，业务限制。
-如果检查不通过，则返回对应错误码；
-如果检查通过，则返回RequestId。
-false（默认）：发送正常请求，通过检查后直接绑定弹性伸缩组。
+    * <p>是否只预检此次请求。<br>true：发送检查请求，不会绑定弹性伸缩组。检查项包括是否填写了必需参数，请求格式，业务限制。<br>如果检查不通过，则返回对应错误码；<br>如果检查通过，则返回RequestId。<br>false（默认）：发送正常请求，通过检查后直接绑定弹性伸缩组。</p>
     */
     @SerializedName("DryRun")
     @Expose
     private Boolean DryRun;
 
     /**
-     * Get 集群ID。 
-     * @return ClusterId 集群ID。
+     * Get <p>集群ID。</p> 
+     * @return ClusterId <p>集群ID。</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID。
-     * @param ClusterId 集群ID。
+     * Set <p>集群ID。</p>
+     * @param ClusterId <p>集群ID。</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 任务连续等待时间，队列的任务处于连续等待的时间。单位秒。默认值120。 
-     * @return ExpansionBusyTime 任务连续等待时间，队列的任务处于连续等待的时间。单位秒。默认值120。
+     * Get <p>任务连续等待时间，队列的任务处于连续等待的时间。单位秒。默认值120。</p> 
+     * @return ExpansionBusyTime <p>任务连续等待时间，队列的任务处于连续等待的时间。单位秒。默认值120。</p>
      */
     public Long getExpansionBusyTime() {
         return this.ExpansionBusyTime;
     }
 
     /**
-     * Set 任务连续等待时间，队列的任务处于连续等待的时间。单位秒。默认值120。
-     * @param ExpansionBusyTime 任务连续等待时间，队列的任务处于连续等待的时间。单位秒。默认值120。
+     * Set <p>任务连续等待时间，队列的任务处于连续等待的时间。单位秒。默认值120。</p>
+     * @param ExpansionBusyTime <p>任务连续等待时间，队列的任务处于连续等待的时间。单位秒。默认值120。</p>
      */
     public void setExpansionBusyTime(Long ExpansionBusyTime) {
         this.ExpansionBusyTime = ExpansionBusyTime;
     }
 
     /**
-     * Get 节点连续空闲（未运行作业）时间，一个节点连续处于空闲状态时间。单位秒。默认值300。 
-     * @return ShrinkIdleTime 节点连续空闲（未运行作业）时间，一个节点连续处于空闲状态时间。单位秒。默认值300。
+     * Get <p>节点连续空闲（未运行作业）时间，一个节点连续处于空闲状态时间。单位秒。默认值300。</p> 
+     * @return ShrinkIdleTime <p>节点连续空闲（未运行作业）时间，一个节点连续处于空闲状态时间。单位秒。默认值300。</p>
      */
     public Long getShrinkIdleTime() {
         return this.ShrinkIdleTime;
     }
 
     /**
-     * Set 节点连续空闲（未运行作业）时间，一个节点连续处于空闲状态时间。单位秒。默认值300。
-     * @param ShrinkIdleTime 节点连续空闲（未运行作业）时间，一个节点连续处于空闲状态时间。单位秒。默认值300。
+     * Set <p>节点连续空闲（未运行作业）时间，一个节点连续处于空闲状态时间。单位秒。默认值300。</p>
+     * @param ShrinkIdleTime <p>节点连续空闲（未运行作业）时间，一个节点连续处于空闲状态时间。单位秒。默认值300。</p>
      */
     public void setShrinkIdleTime(Long ShrinkIdleTime) {
         this.ShrinkIdleTime = ShrinkIdleTime;
     }
 
     /**
-     * Get 扩容队列配置列表。 
-     * @return QueueConfigs 扩容队列配置列表。
+     * Get <p>扩容队列配置列表。</p> 
+     * @return QueueConfigs <p>扩容队列配置列表。</p>
      */
     public QueueConfig [] getQueueConfigs() {
         return this.QueueConfigs;
     }
 
     /**
-     * Set 扩容队列配置列表。
-     * @param QueueConfigs 扩容队列配置列表。
+     * Set <p>扩容队列配置列表。</p>
+     * @param QueueConfigs <p>扩容队列配置列表。</p>
      */
     public void setQueueConfigs(QueueConfig [] QueueConfigs) {
         this.QueueConfigs = QueueConfigs;
     }
 
     /**
-     * Get 是否只预检此次请求。
-true：发送检查请求，不会绑定弹性伸缩组。检查项包括是否填写了必需参数，请求格式，业务限制。
-如果检查不通过，则返回对应错误码；
-如果检查通过，则返回RequestId。
-false（默认）：发送正常请求，通过检查后直接绑定弹性伸缩组。 
-     * @return DryRun 是否只预检此次请求。
-true：发送检查请求，不会绑定弹性伸缩组。检查项包括是否填写了必需参数，请求格式，业务限制。
-如果检查不通过，则返回对应错误码；
-如果检查通过，则返回RequestId。
-false（默认）：发送正常请求，通过检查后直接绑定弹性伸缩组。
+     * Get <p>是否只预检此次请求。<br>true：发送检查请求，不会绑定弹性伸缩组。检查项包括是否填写了必需参数，请求格式，业务限制。<br>如果检查不通过，则返回对应错误码；<br>如果检查通过，则返回RequestId。<br>false（默认）：发送正常请求，通过检查后直接绑定弹性伸缩组。</p> 
+     * @return DryRun <p>是否只预检此次请求。<br>true：发送检查请求，不会绑定弹性伸缩组。检查项包括是否填写了必需参数，请求格式，业务限制。<br>如果检查不通过，则返回对应错误码；<br>如果检查通过，则返回RequestId。<br>false（默认）：发送正常请求，通过检查后直接绑定弹性伸缩组。</p>
      */
     public Boolean getDryRun() {
         return this.DryRun;
     }
 
     /**
-     * Set 是否只预检此次请求。
-true：发送检查请求，不会绑定弹性伸缩组。检查项包括是否填写了必需参数，请求格式，业务限制。
-如果检查不通过，则返回对应错误码；
-如果检查通过，则返回RequestId。
-false（默认）：发送正常请求，通过检查后直接绑定弹性伸缩组。
-     * @param DryRun 是否只预检此次请求。
-true：发送检查请求，不会绑定弹性伸缩组。检查项包括是否填写了必需参数，请求格式，业务限制。
-如果检查不通过，则返回对应错误码；
-如果检查通过，则返回RequestId。
-false（默认）：发送正常请求，通过检查后直接绑定弹性伸缩组。
+     * Set <p>是否只预检此次请求。<br>true：发送检查请求，不会绑定弹性伸缩组。检查项包括是否填写了必需参数，请求格式，业务限制。<br>如果检查不通过，则返回对应错误码；<br>如果检查通过，则返回RequestId。<br>false（默认）：发送正常请求，通过检查后直接绑定弹性伸缩组。</p>
+     * @param DryRun <p>是否只预检此次请求。<br>true：发送检查请求，不会绑定弹性伸缩组。检查项包括是否填写了必需参数，请求格式，业务限制。<br>如果检查不通过，则返回对应错误码；<br>如果检查通过，则返回RequestId。<br>false（默认）：发送正常请求，通过检查后直接绑定弹性伸缩组。</p>
      */
     public void setDryRun(Boolean DryRun) {
         this.DryRun = DryRun;

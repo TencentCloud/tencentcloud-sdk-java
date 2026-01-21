@@ -38,6 +38,13 @@ public class AddOnParameter extends AbstractModel {
     private ImageProcessOutputConfig OutputConfig;
 
     /**
+    * 图片处理附加 prompt，只针对某些场景可用。
+    */
+    @SerializedName("ExtPrompt")
+    @Expose
+    private ImageProcessPrompt [] ExtPrompt;
+
+    /**
      * Get 附加图片输入。 
      * @return ImageSet 附加图片输入。
      */
@@ -69,6 +76,22 @@ public class AddOnParameter extends AbstractModel {
         this.OutputConfig = OutputConfig;
     }
 
+    /**
+     * Get 图片处理附加 prompt，只针对某些场景可用。 
+     * @return ExtPrompt 图片处理附加 prompt，只针对某些场景可用。
+     */
+    public ImageProcessPrompt [] getExtPrompt() {
+        return this.ExtPrompt;
+    }
+
+    /**
+     * Set 图片处理附加 prompt，只针对某些场景可用。
+     * @param ExtPrompt 图片处理附加 prompt，只针对某些场景可用。
+     */
+    public void setExtPrompt(ImageProcessPrompt [] ExtPrompt) {
+        this.ExtPrompt = ExtPrompt;
+    }
+
     public AddOnParameter() {
     }
 
@@ -86,6 +109,12 @@ public class AddOnParameter extends AbstractModel {
         if (source.OutputConfig != null) {
             this.OutputConfig = new ImageProcessOutputConfig(source.OutputConfig);
         }
+        if (source.ExtPrompt != null) {
+            this.ExtPrompt = new ImageProcessPrompt[source.ExtPrompt.length];
+            for (int i = 0; i < source.ExtPrompt.length; i++) {
+                this.ExtPrompt[i] = new ImageProcessPrompt(source.ExtPrompt[i]);
+            }
+        }
     }
 
 
@@ -95,6 +124,7 @@ public class AddOnParameter extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "ImageSet.", this.ImageSet);
         this.setParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
+        this.setParamArrayObj(map, prefix + "ExtPrompt.", this.ExtPrompt);
 
     }
 }

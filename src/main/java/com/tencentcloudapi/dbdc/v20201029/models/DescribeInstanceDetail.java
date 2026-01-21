@@ -220,6 +220,13 @@ public class DescribeInstanceDetail extends AbstractModel {
     private String CpuType;
 
     /**
+    * 可用区列表
+    */
+    @SerializedName("Zones")
+    @Expose
+    private String [] Zones;
+
+    /**
      * Get 独享集群实例Id 
      * @return InstanceId 独享集群实例Id
      */
@@ -667,6 +674,22 @@ public class DescribeInstanceDetail extends AbstractModel {
         this.CpuType = CpuType;
     }
 
+    /**
+     * Get 可用区列表 
+     * @return Zones 可用区列表
+     */
+    public String [] getZones() {
+        return this.Zones;
+    }
+
+    /**
+     * Set 可用区列表
+     * @param Zones 可用区列表
+     */
+    public void setZones(String [] Zones) {
+        this.Zones = Zones;
+    }
+
     public DescribeInstanceDetail() {
     }
 
@@ -762,6 +785,12 @@ public class DescribeInstanceDetail extends AbstractModel {
         if (source.CpuType != null) {
             this.CpuType = new String(source.CpuType);
         }
+        if (source.Zones != null) {
+            this.Zones = new String[source.Zones.length];
+            for (int i = 0; i < source.Zones.length; i++) {
+                this.Zones[i] = new String(source.Zones[i]);
+            }
+        }
     }
 
 
@@ -797,6 +826,7 @@ public class DescribeInstanceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         this.setParamSimple(map, prefix + "CpuType", this.CpuType);
+        this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
 
     }
 }

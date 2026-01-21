@@ -594,6 +594,17 @@ https://cloud.tencent.com/document/product/1278/85305
     }
 
     /**
+     *更新推理服务组流量分配
+     * @param req ModifyServiceGroupWeightsRequest
+     * @return ModifyServiceGroupWeightsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyServiceGroupWeightsResponse ModifyServiceGroupWeights(ModifyServiceGroupWeightsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyServiceGroupWeights", ModifyServiceGroupWeightsResponse.class);
+    }
+
+    /**
      *上报训练自定义指标
      * @param req PushTrainingMetricsRequest
      * @return PushTrainingMetricsResponse

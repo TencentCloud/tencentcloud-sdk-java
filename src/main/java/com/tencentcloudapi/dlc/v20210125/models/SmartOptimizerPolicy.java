@@ -31,7 +31,7 @@ public class SmartOptimizerPolicy extends AbstractModel {
     private String Inherit;
 
     /**
-    * ResourceInfo
+    * 数据治理资源
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Resources")
@@ -39,7 +39,7 @@ public class SmartOptimizerPolicy extends AbstractModel {
     private ResourceInfo [] Resources;
 
     /**
-    * SmartOptimizerWrittenPolicy
+    * 数据重写策略
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Written")
@@ -47,7 +47,7 @@ public class SmartOptimizerPolicy extends AbstractModel {
     private SmartOptimizerWrittenPolicy Written;
 
     /**
-    * SmartOptimizerLifecyclePolicy
+    * 数据过期策略
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Lifecycle")
@@ -87,9 +87,9 @@ public class SmartOptimizerPolicy extends AbstractModel {
     }
 
     /**
-     * Get ResourceInfo
+     * Get 数据治理资源
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Resources ResourceInfo
+     * @return Resources 数据治理资源
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ResourceInfo [] getResources() {
@@ -97,9 +97,9 @@ public class SmartOptimizerPolicy extends AbstractModel {
     }
 
     /**
-     * Set ResourceInfo
+     * Set 数据治理资源
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Resources ResourceInfo
+     * @param Resources 数据治理资源
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResources(ResourceInfo [] Resources) {
@@ -107,9 +107,9 @@ public class SmartOptimizerPolicy extends AbstractModel {
     }
 
     /**
-     * Get SmartOptimizerWrittenPolicy
+     * Get 数据重写策略
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Written SmartOptimizerWrittenPolicy
+     * @return Written 数据重写策略
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SmartOptimizerWrittenPolicy getWritten() {
@@ -117,9 +117,9 @@ public class SmartOptimizerPolicy extends AbstractModel {
     }
 
     /**
-     * Set SmartOptimizerWrittenPolicy
+     * Set 数据重写策略
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Written SmartOptimizerWrittenPolicy
+     * @param Written 数据重写策略
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWritten(SmartOptimizerWrittenPolicy Written) {
@@ -127,9 +127,9 @@ public class SmartOptimizerPolicy extends AbstractModel {
     }
 
     /**
-     * Get SmartOptimizerLifecyclePolicy
+     * Get 数据过期策略
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Lifecycle SmartOptimizerLifecyclePolicy
+     * @return Lifecycle 数据过期策略
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SmartOptimizerLifecyclePolicy getLifecycle() {
@@ -137,9 +137,9 @@ public class SmartOptimizerPolicy extends AbstractModel {
     }
 
     /**
-     * Set SmartOptimizerLifecyclePolicy
+     * Set 数据过期策略
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Lifecycle SmartOptimizerLifecyclePolicy
+     * @param Lifecycle 数据过期策略
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLifecycle(SmartOptimizerLifecyclePolicy Lifecycle) {

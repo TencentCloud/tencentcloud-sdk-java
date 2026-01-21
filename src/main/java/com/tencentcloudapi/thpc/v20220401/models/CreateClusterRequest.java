@@ -24,457 +24,437 @@ import java.util.HashMap;
 public class CreateClusterRequest extends AbstractModel {
 
     /**
-    * 集群中实例所在的位置。
+    * <p>集群中实例所在的位置。</p>
     */
     @SerializedName("Placement")
     @Expose
     private Placement Placement;
 
     /**
-    * 指定管理节点。
+    * <p>指定管理节点。</p>
     */
     @SerializedName("ManagerNode")
     @Expose
     private ManagerNode ManagerNode;
 
     /**
-    * 指定管理节点的数量。默认取值：1。取值范围：1～2。
+    * <p>指定管理节点的数量。默认取值：1。取值范围：1～2。</p>
     */
     @SerializedName("ManagerNodeCount")
     @Expose
     private Long ManagerNodeCount;
 
     /**
-    * 指定计算节点。
+    * <p>指定计算节点。</p>
     */
     @SerializedName("ComputeNode")
     @Expose
     private ComputeNode ComputeNode;
 
     /**
-    * 指定计算节点的数量。默认取值：0。
+    * <p>指定计算节点的数量。默认取值：0。</p>
     */
     @SerializedName("ComputeNodeCount")
     @Expose
     private Long ComputeNodeCount;
 
     /**
-    * 调度器类型。默认取值：SLURM。<br><li>SLURM：SLURM调度器。</li>
+    * <p>调度器类型。默认取值：SLURM。<br><li>SLURM：SLURM调度器。</li></p>
     */
     @SerializedName("SchedulerType")
     @Expose
     private String SchedulerType;
 
     /**
-    * 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前支持部分公有镜像和自定义镜像。
+    * <p>指定有效的<a href="https://cloud.tencent.com/document/product/213/4940">镜像</a>ID，格式形如<code>img-xxx</code>。目前支持部分公有镜像和自定义镜像。</p>
     */
     @SerializedName("ImageId")
     @Expose
     private String ImageId;
 
     /**
-    * 私有网络相关信息配置。
+    * <p>私有网络相关信息配置。</p>
     */
     @SerializedName("VirtualPrivateCloud")
     @Expose
     private VirtualPrivateCloud VirtualPrivateCloud;
 
     /**
-    * 集群登录设置。
+    * <p>集群登录设置。</p>
     */
     @SerializedName("LoginSettings")
     @Expose
     private LoginSettings LoginSettings;
 
     /**
-    * 集群中实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
+    * <p>集群中实例所属安全组。该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。</p>
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-    * 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+    * <p>用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。</p>
     */
     @SerializedName("ClientToken")
     @Expose
     private String ClientToken;
 
     /**
-    * 是否只预检此次请求。
-true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制和云服务器库存。
-如果检查不通过，则返回对应错误码；
-如果检查通过，则返回RequestId.
-false（默认）：发送正常请求，通过检查后直接创建实例
+    * <p>是否只预检此次请求。<br>true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制和云服务器库存。<br>如果检查不通过，则返回对应错误码；<br>如果检查通过，则返回RequestId.<br>false（默认）：发送正常请求，通过检查后直接创建实例</p>
     */
     @SerializedName("DryRun")
     @Expose
     private Boolean DryRun;
 
     /**
-    * 域名字服务类型。默认取值：NIS。<li>NIS：NIS域名字服务。</li>
+    * <p>域名字服务类型。默认取值：NIS。<li>NIS：NIS域名字服务。</li></p>
     */
     @SerializedName("AccountType")
     @Expose
     private String AccountType;
 
     /**
-    * 集群显示名称。
+    * <p>集群显示名称。</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * 集群存储选项
+    * <p>集群存储选项</p>
     */
     @SerializedName("StorageOption")
     @Expose
     private StorageOption StorageOption;
 
     /**
-    * 指定登录节点。
+    * <p>指定登录节点。</p>
     */
     @SerializedName("LoginNode")
     @Expose
     private LoginNode LoginNode;
 
     /**
-    * 指定登录节点的数量。默认取值：0。取值范围：0～10。
+    * <p>指定登录节点的数量。默认取值：0。取值范围：0～10。</p>
     */
     @SerializedName("LoginNodeCount")
     @Expose
     private Long LoginNodeCount;
 
     /**
-    * 创建集群时同时绑定的标签对说明。
+    * <p>创建集群时同时绑定的标签对说明。</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 弹性伸缩类型。<br><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。</li><br><li>THPC_AS：集群自动扩缩容由THPC产品内部实现。</li>
+    * <p>弹性伸缩类型。<br><li>AS：集群自动扩缩容由<a href="https://cloud.tencent.com/document/product/377/3154">弹性伸缩</a>产品实现。</li><br><li>THPC_AS：集群自动扩缩容由THPC产品内部实现。</li></p>
     */
     @SerializedName("AutoScalingType")
     @Expose
     private String AutoScalingType;
 
     /**
-     * Get 集群中实例所在的位置。 
-     * @return Placement 集群中实例所在的位置。
+     * Get <p>集群中实例所在的位置。</p> 
+     * @return Placement <p>集群中实例所在的位置。</p>
      */
     public Placement getPlacement() {
         return this.Placement;
     }
 
     /**
-     * Set 集群中实例所在的位置。
-     * @param Placement 集群中实例所在的位置。
+     * Set <p>集群中实例所在的位置。</p>
+     * @param Placement <p>集群中实例所在的位置。</p>
      */
     public void setPlacement(Placement Placement) {
         this.Placement = Placement;
     }
 
     /**
-     * Get 指定管理节点。 
-     * @return ManagerNode 指定管理节点。
+     * Get <p>指定管理节点。</p> 
+     * @return ManagerNode <p>指定管理节点。</p>
      */
     public ManagerNode getManagerNode() {
         return this.ManagerNode;
     }
 
     /**
-     * Set 指定管理节点。
-     * @param ManagerNode 指定管理节点。
+     * Set <p>指定管理节点。</p>
+     * @param ManagerNode <p>指定管理节点。</p>
      */
     public void setManagerNode(ManagerNode ManagerNode) {
         this.ManagerNode = ManagerNode;
     }
 
     /**
-     * Get 指定管理节点的数量。默认取值：1。取值范围：1～2。 
-     * @return ManagerNodeCount 指定管理节点的数量。默认取值：1。取值范围：1～2。
+     * Get <p>指定管理节点的数量。默认取值：1。取值范围：1～2。</p> 
+     * @return ManagerNodeCount <p>指定管理节点的数量。默认取值：1。取值范围：1～2。</p>
      */
     public Long getManagerNodeCount() {
         return this.ManagerNodeCount;
     }
 
     /**
-     * Set 指定管理节点的数量。默认取值：1。取值范围：1～2。
-     * @param ManagerNodeCount 指定管理节点的数量。默认取值：1。取值范围：1～2。
+     * Set <p>指定管理节点的数量。默认取值：1。取值范围：1～2。</p>
+     * @param ManagerNodeCount <p>指定管理节点的数量。默认取值：1。取值范围：1～2。</p>
      */
     public void setManagerNodeCount(Long ManagerNodeCount) {
         this.ManagerNodeCount = ManagerNodeCount;
     }
 
     /**
-     * Get 指定计算节点。 
-     * @return ComputeNode 指定计算节点。
+     * Get <p>指定计算节点。</p> 
+     * @return ComputeNode <p>指定计算节点。</p>
      */
     public ComputeNode getComputeNode() {
         return this.ComputeNode;
     }
 
     /**
-     * Set 指定计算节点。
-     * @param ComputeNode 指定计算节点。
+     * Set <p>指定计算节点。</p>
+     * @param ComputeNode <p>指定计算节点。</p>
      */
     public void setComputeNode(ComputeNode ComputeNode) {
         this.ComputeNode = ComputeNode;
     }
 
     /**
-     * Get 指定计算节点的数量。默认取值：0。 
-     * @return ComputeNodeCount 指定计算节点的数量。默认取值：0。
+     * Get <p>指定计算节点的数量。默认取值：0。</p> 
+     * @return ComputeNodeCount <p>指定计算节点的数量。默认取值：0。</p>
      */
     public Long getComputeNodeCount() {
         return this.ComputeNodeCount;
     }
 
     /**
-     * Set 指定计算节点的数量。默认取值：0。
-     * @param ComputeNodeCount 指定计算节点的数量。默认取值：0。
+     * Set <p>指定计算节点的数量。默认取值：0。</p>
+     * @param ComputeNodeCount <p>指定计算节点的数量。默认取值：0。</p>
      */
     public void setComputeNodeCount(Long ComputeNodeCount) {
         this.ComputeNodeCount = ComputeNodeCount;
     }
 
     /**
-     * Get 调度器类型。默认取值：SLURM。<br><li>SLURM：SLURM调度器。</li> 
-     * @return SchedulerType 调度器类型。默认取值：SLURM。<br><li>SLURM：SLURM调度器。</li>
+     * Get <p>调度器类型。默认取值：SLURM。<br><li>SLURM：SLURM调度器。</li></p> 
+     * @return SchedulerType <p>调度器类型。默认取值：SLURM。<br><li>SLURM：SLURM调度器。</li></p>
      */
     public String getSchedulerType() {
         return this.SchedulerType;
     }
 
     /**
-     * Set 调度器类型。默认取值：SLURM。<br><li>SLURM：SLURM调度器。</li>
-     * @param SchedulerType 调度器类型。默认取值：SLURM。<br><li>SLURM：SLURM调度器。</li>
+     * Set <p>调度器类型。默认取值：SLURM。<br><li>SLURM：SLURM调度器。</li></p>
+     * @param SchedulerType <p>调度器类型。默认取值：SLURM。<br><li>SLURM：SLURM调度器。</li></p>
      */
     public void setSchedulerType(String SchedulerType) {
         this.SchedulerType = SchedulerType;
     }
 
     /**
-     * Get 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前支持部分公有镜像和自定义镜像。 
-     * @return ImageId 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前支持部分公有镜像和自定义镜像。
+     * Get <p>指定有效的<a href="https://cloud.tencent.com/document/product/213/4940">镜像</a>ID，格式形如<code>img-xxx</code>。目前支持部分公有镜像和自定义镜像。</p> 
+     * @return ImageId <p>指定有效的<a href="https://cloud.tencent.com/document/product/213/4940">镜像</a>ID，格式形如<code>img-xxx</code>。目前支持部分公有镜像和自定义镜像。</p>
      */
     public String getImageId() {
         return this.ImageId;
     }
 
     /**
-     * Set 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前支持部分公有镜像和自定义镜像。
-     * @param ImageId 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前支持部分公有镜像和自定义镜像。
+     * Set <p>指定有效的<a href="https://cloud.tencent.com/document/product/213/4940">镜像</a>ID，格式形如<code>img-xxx</code>。目前支持部分公有镜像和自定义镜像。</p>
+     * @param ImageId <p>指定有效的<a href="https://cloud.tencent.com/document/product/213/4940">镜像</a>ID，格式形如<code>img-xxx</code>。目前支持部分公有镜像和自定义镜像。</p>
      */
     public void setImageId(String ImageId) {
         this.ImageId = ImageId;
     }
 
     /**
-     * Get 私有网络相关信息配置。 
-     * @return VirtualPrivateCloud 私有网络相关信息配置。
+     * Get <p>私有网络相关信息配置。</p> 
+     * @return VirtualPrivateCloud <p>私有网络相关信息配置。</p>
      */
     public VirtualPrivateCloud getVirtualPrivateCloud() {
         return this.VirtualPrivateCloud;
     }
 
     /**
-     * Set 私有网络相关信息配置。
-     * @param VirtualPrivateCloud 私有网络相关信息配置。
+     * Set <p>私有网络相关信息配置。</p>
+     * @param VirtualPrivateCloud <p>私有网络相关信息配置。</p>
      */
     public void setVirtualPrivateCloud(VirtualPrivateCloud VirtualPrivateCloud) {
         this.VirtualPrivateCloud = VirtualPrivateCloud;
     }
 
     /**
-     * Get 集群登录设置。 
-     * @return LoginSettings 集群登录设置。
+     * Get <p>集群登录设置。</p> 
+     * @return LoginSettings <p>集群登录设置。</p>
      */
     public LoginSettings getLoginSettings() {
         return this.LoginSettings;
     }
 
     /**
-     * Set 集群登录设置。
-     * @param LoginSettings 集群登录设置。
+     * Set <p>集群登录设置。</p>
+     * @param LoginSettings <p>集群登录设置。</p>
      */
     public void setLoginSettings(LoginSettings LoginSettings) {
         this.LoginSettings = LoginSettings;
     }
 
     /**
-     * Get 集群中实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。 
-     * @return SecurityGroupIds 集群中实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
+     * Get <p>集群中实例所属安全组。该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。</p> 
+     * @return SecurityGroupIds <p>集群中实例所属安全组。该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。</p>
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set 集群中实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
-     * @param SecurityGroupIds 集群中实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
+     * Set <p>集群中实例所属安全组。该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。</p>
+     * @param SecurityGroupIds <p>集群中实例所属安全组。该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。</p>
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
-     * Get 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。 
-     * @return ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+     * Get <p>用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。</p> 
+     * @return ClientToken <p>用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。</p>
      */
     public String getClientToken() {
         return this.ClientToken;
     }
 
     /**
-     * Set 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
-     * @param ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+     * Set <p>用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。</p>
+     * @param ClientToken <p>用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。</p>
      */
     public void setClientToken(String ClientToken) {
         this.ClientToken = ClientToken;
     }
 
     /**
-     * Get 是否只预检此次请求。
-true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制和云服务器库存。
-如果检查不通过，则返回对应错误码；
-如果检查通过，则返回RequestId.
-false（默认）：发送正常请求，通过检查后直接创建实例 
-     * @return DryRun 是否只预检此次请求。
-true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制和云服务器库存。
-如果检查不通过，则返回对应错误码；
-如果检查通过，则返回RequestId.
-false（默认）：发送正常请求，通过检查后直接创建实例
+     * Get <p>是否只预检此次请求。<br>true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制和云服务器库存。<br>如果检查不通过，则返回对应错误码；<br>如果检查通过，则返回RequestId.<br>false（默认）：发送正常请求，通过检查后直接创建实例</p> 
+     * @return DryRun <p>是否只预检此次请求。<br>true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制和云服务器库存。<br>如果检查不通过，则返回对应错误码；<br>如果检查通过，则返回RequestId.<br>false（默认）：发送正常请求，通过检查后直接创建实例</p>
      */
     public Boolean getDryRun() {
         return this.DryRun;
     }
 
     /**
-     * Set 是否只预检此次请求。
-true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制和云服务器库存。
-如果检查不通过，则返回对应错误码；
-如果检查通过，则返回RequestId.
-false（默认）：发送正常请求，通过检查后直接创建实例
-     * @param DryRun 是否只预检此次请求。
-true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制和云服务器库存。
-如果检查不通过，则返回对应错误码；
-如果检查通过，则返回RequestId.
-false（默认）：发送正常请求，通过检查后直接创建实例
+     * Set <p>是否只预检此次请求。<br>true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制和云服务器库存。<br>如果检查不通过，则返回对应错误码；<br>如果检查通过，则返回RequestId.<br>false（默认）：发送正常请求，通过检查后直接创建实例</p>
+     * @param DryRun <p>是否只预检此次请求。<br>true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制和云服务器库存。<br>如果检查不通过，则返回对应错误码；<br>如果检查通过，则返回RequestId.<br>false（默认）：发送正常请求，通过检查后直接创建实例</p>
      */
     public void setDryRun(Boolean DryRun) {
         this.DryRun = DryRun;
     }
 
     /**
-     * Get 域名字服务类型。默认取值：NIS。<li>NIS：NIS域名字服务。</li> 
-     * @return AccountType 域名字服务类型。默认取值：NIS。<li>NIS：NIS域名字服务。</li>
+     * Get <p>域名字服务类型。默认取值：NIS。<li>NIS：NIS域名字服务。</li></p> 
+     * @return AccountType <p>域名字服务类型。默认取值：NIS。<li>NIS：NIS域名字服务。</li></p>
      */
     public String getAccountType() {
         return this.AccountType;
     }
 
     /**
-     * Set 域名字服务类型。默认取值：NIS。<li>NIS：NIS域名字服务。</li>
-     * @param AccountType 域名字服务类型。默认取值：NIS。<li>NIS：NIS域名字服务。</li>
+     * Set <p>域名字服务类型。默认取值：NIS。<li>NIS：NIS域名字服务。</li></p>
+     * @param AccountType <p>域名字服务类型。默认取值：NIS。<li>NIS：NIS域名字服务。</li></p>
      */
     public void setAccountType(String AccountType) {
         this.AccountType = AccountType;
     }
 
     /**
-     * Get 集群显示名称。 
-     * @return ClusterName 集群显示名称。
+     * Get <p>集群显示名称。</p> 
+     * @return ClusterName <p>集群显示名称。</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set 集群显示名称。
-     * @param ClusterName 集群显示名称。
+     * Set <p>集群显示名称。</p>
+     * @param ClusterName <p>集群显示名称。</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 集群存储选项 
-     * @return StorageOption 集群存储选项
+     * Get <p>集群存储选项</p> 
+     * @return StorageOption <p>集群存储选项</p>
      */
     public StorageOption getStorageOption() {
         return this.StorageOption;
     }
 
     /**
-     * Set 集群存储选项
-     * @param StorageOption 集群存储选项
+     * Set <p>集群存储选项</p>
+     * @param StorageOption <p>集群存储选项</p>
      */
     public void setStorageOption(StorageOption StorageOption) {
         this.StorageOption = StorageOption;
     }
 
     /**
-     * Get 指定登录节点。 
-     * @return LoginNode 指定登录节点。
+     * Get <p>指定登录节点。</p> 
+     * @return LoginNode <p>指定登录节点。</p>
      */
     public LoginNode getLoginNode() {
         return this.LoginNode;
     }
 
     /**
-     * Set 指定登录节点。
-     * @param LoginNode 指定登录节点。
+     * Set <p>指定登录节点。</p>
+     * @param LoginNode <p>指定登录节点。</p>
      */
     public void setLoginNode(LoginNode LoginNode) {
         this.LoginNode = LoginNode;
     }
 
     /**
-     * Get 指定登录节点的数量。默认取值：0。取值范围：0～10。 
-     * @return LoginNodeCount 指定登录节点的数量。默认取值：0。取值范围：0～10。
+     * Get <p>指定登录节点的数量。默认取值：0。取值范围：0～10。</p> 
+     * @return LoginNodeCount <p>指定登录节点的数量。默认取值：0。取值范围：0～10。</p>
      */
     public Long getLoginNodeCount() {
         return this.LoginNodeCount;
     }
 
     /**
-     * Set 指定登录节点的数量。默认取值：0。取值范围：0～10。
-     * @param LoginNodeCount 指定登录节点的数量。默认取值：0。取值范围：0～10。
+     * Set <p>指定登录节点的数量。默认取值：0。取值范围：0～10。</p>
+     * @param LoginNodeCount <p>指定登录节点的数量。默认取值：0。取值范围：0～10。</p>
      */
     public void setLoginNodeCount(Long LoginNodeCount) {
         this.LoginNodeCount = LoginNodeCount;
     }
 
     /**
-     * Get 创建集群时同时绑定的标签对说明。 
-     * @return Tags 创建集群时同时绑定的标签对说明。
+     * Get <p>创建集群时同时绑定的标签对说明。</p> 
+     * @return Tags <p>创建集群时同时绑定的标签对说明。</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 创建集群时同时绑定的标签对说明。
-     * @param Tags 创建集群时同时绑定的标签对说明。
+     * Set <p>创建集群时同时绑定的标签对说明。</p>
+     * @param Tags <p>创建集群时同时绑定的标签对说明。</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 弹性伸缩类型。<br><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。</li><br><li>THPC_AS：集群自动扩缩容由THPC产品内部实现。</li> 
-     * @return AutoScalingType 弹性伸缩类型。<br><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。</li><br><li>THPC_AS：集群自动扩缩容由THPC产品内部实现。</li>
+     * Get <p>弹性伸缩类型。<br><li>AS：集群自动扩缩容由<a href="https://cloud.tencent.com/document/product/377/3154">弹性伸缩</a>产品实现。</li><br><li>THPC_AS：集群自动扩缩容由THPC产品内部实现。</li></p> 
+     * @return AutoScalingType <p>弹性伸缩类型。<br><li>AS：集群自动扩缩容由<a href="https://cloud.tencent.com/document/product/377/3154">弹性伸缩</a>产品实现。</li><br><li>THPC_AS：集群自动扩缩容由THPC产品内部实现。</li></p>
      */
     public String getAutoScalingType() {
         return this.AutoScalingType;
     }
 
     /**
-     * Set 弹性伸缩类型。<br><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。</li><br><li>THPC_AS：集群自动扩缩容由THPC产品内部实现。</li>
-     * @param AutoScalingType 弹性伸缩类型。<br><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。</li><br><li>THPC_AS：集群自动扩缩容由THPC产品内部实现。</li>
+     * Set <p>弹性伸缩类型。<br><li>AS：集群自动扩缩容由<a href="https://cloud.tencent.com/document/product/377/3154">弹性伸缩</a>产品实现。</li><br><li>THPC_AS：集群自动扩缩容由THPC产品内部实现。</li></p>
+     * @param AutoScalingType <p>弹性伸缩类型。<br><li>AS：集群自动扩缩容由<a href="https://cloud.tencent.com/document/product/377/3154">弹性伸缩</a>产品实现。</li><br><li>THPC_AS：集群自动扩缩容由THPC产品内部实现。</li></p>
      */
     public void setAutoScalingType(String AutoScalingType) {
         this.AutoScalingType = AutoScalingType;

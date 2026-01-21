@@ -39,6 +39,13 @@ public class AiAnalysisTaskDubbingOutput extends AbstractModel {
     private String SpeakerPath;
 
     /**
+    * 音色id
+    */
+    @SerializedName("VoiceId")
+    @Expose
+    private String VoiceId;
+
+    /**
     * 译制视频存储位置。
     */
     @SerializedName("OutputStorage")
@@ -82,6 +89,22 @@ public class AiAnalysisTaskDubbingOutput extends AbstractModel {
     }
 
     /**
+     * Get 音色id 
+     * @return VoiceId 音色id
+     */
+    public String getVoiceId() {
+        return this.VoiceId;
+    }
+
+    /**
+     * Set 音色id
+     * @param VoiceId 音色id
+     */
+    public void setVoiceId(String VoiceId) {
+        this.VoiceId = VoiceId;
+    }
+
+    /**
      * Get 译制视频存储位置。 
      * @return OutputStorage 译制视频存储位置。
      */
@@ -111,6 +134,9 @@ public class AiAnalysisTaskDubbingOutput extends AbstractModel {
         if (source.SpeakerPath != null) {
             this.SpeakerPath = new String(source.SpeakerPath);
         }
+        if (source.VoiceId != null) {
+            this.VoiceId = new String(source.VoiceId);
+        }
         if (source.OutputStorage != null) {
             this.OutputStorage = new TaskOutputStorage(source.OutputStorage);
         }
@@ -123,6 +149,7 @@ public class AiAnalysisTaskDubbingOutput extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VideoPath", this.VideoPath);
         this.setParamSimple(map, prefix + "SpeakerPath", this.SpeakerPath);
+        this.setParamSimple(map, prefix + "VoiceId", this.VoiceId);
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
 
     }

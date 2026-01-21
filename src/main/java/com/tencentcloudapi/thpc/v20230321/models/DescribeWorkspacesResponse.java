@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeWorkspacesResponse extends AbstractModel {
 
     /**
-    * 集群概览信息列表
+    * <p>集群概览信息列表</p>
     */
     @SerializedName("SpaceSet")
     @Expose
     private SpaceInfo [] SpaceSet;
 
     /**
-    * 集群数量
+    * <p>集群数量</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeWorkspacesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 集群概览信息列表 
-     * @return SpaceSet 集群概览信息列表
+     * Get <p>集群概览信息列表</p> 
+     * @return SpaceSet <p>集群概览信息列表</p>
      */
     public SpaceInfo [] getSpaceSet() {
         return this.SpaceSet;
     }
 
     /**
-     * Set 集群概览信息列表
-     * @param SpaceSet 集群概览信息列表
+     * Set <p>集群概览信息列表</p>
+     * @param SpaceSet <p>集群概览信息列表</p>
      */
     public void setSpaceSet(SpaceInfo [] SpaceSet) {
         this.SpaceSet = SpaceSet;
     }
 
     /**
-     * Get 集群数量 
-     * @return TotalCount 集群数量
+     * Get <p>集群数量</p> 
+     * @return TotalCount <p>集群数量</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 集群数量
-     * @param TotalCount 集群数量
+     * Set <p>集群数量</p>
+     * @param TotalCount <p>集群数量</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

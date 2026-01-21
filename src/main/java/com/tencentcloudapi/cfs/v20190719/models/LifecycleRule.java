@@ -69,6 +69,40 @@ public class LifecycleRule extends AbstractModel {
     private String FileMinSize;
 
     /**
+    * 策略类型
+    */
+    @SerializedName("PolicyType")
+    @Expose
+    private String PolicyType;
+
+    /**
+    * 阈值范围[10-90]
+    */
+    @SerializedName("ExpireThreshold")
+    @Expose
+    private Long ExpireThreshold;
+
+    /**
+    * 阈值范围[10-90]
+    */
+    @SerializedName("TargetThreshold")
+    @Expose
+    private Long TargetThreshold;
+
+    /**
+    * 当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。
+
+ture：覆盖
+
+false：不覆盖（同时也不会释放热存数据）
+
+为空时，默认为false
+    */
+    @SerializedName("IsOverwrite")
+    @Expose
+    private Boolean IsOverwrite;
+
+    /**
      * Get 数据转储后的存储类型。其中：InfrequentAccess：低频介质存储；ColdStorage：冷存储。 
      * @return StorageType 数据转储后的存储类型。其中：InfrequentAccess：低频介质存储；ColdStorage：冷存储。
      */
@@ -176,6 +210,94 @@ public class LifecycleRule extends AbstractModel {
         this.FileMinSize = FileMinSize;
     }
 
+    /**
+     * Get 策略类型 
+     * @return PolicyType 策略类型
+     */
+    public String getPolicyType() {
+        return this.PolicyType;
+    }
+
+    /**
+     * Set 策略类型
+     * @param PolicyType 策略类型
+     */
+    public void setPolicyType(String PolicyType) {
+        this.PolicyType = PolicyType;
+    }
+
+    /**
+     * Get 阈值范围[10-90] 
+     * @return ExpireThreshold 阈值范围[10-90]
+     */
+    public Long getExpireThreshold() {
+        return this.ExpireThreshold;
+    }
+
+    /**
+     * Set 阈值范围[10-90]
+     * @param ExpireThreshold 阈值范围[10-90]
+     */
+    public void setExpireThreshold(Long ExpireThreshold) {
+        this.ExpireThreshold = ExpireThreshold;
+    }
+
+    /**
+     * Get 阈值范围[10-90] 
+     * @return TargetThreshold 阈值范围[10-90]
+     */
+    public Long getTargetThreshold() {
+        return this.TargetThreshold;
+    }
+
+    /**
+     * Set 阈值范围[10-90]
+     * @param TargetThreshold 阈值范围[10-90]
+     */
+    public void setTargetThreshold(Long TargetThreshold) {
+        this.TargetThreshold = TargetThreshold;
+    }
+
+    /**
+     * Get 当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。
+
+ture：覆盖
+
+false：不覆盖（同时也不会释放热存数据）
+
+为空时，默认为false 
+     * @return IsOverwrite 当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。
+
+ture：覆盖
+
+false：不覆盖（同时也不会释放热存数据）
+
+为空时，默认为false
+     */
+    public Boolean getIsOverwrite() {
+        return this.IsOverwrite;
+    }
+
+    /**
+     * Set 当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。
+
+ture：覆盖
+
+false：不覆盖（同时也不会释放热存数据）
+
+为空时，默认为false
+     * @param IsOverwrite 当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。
+
+ture：覆盖
+
+false：不覆盖（同时也不会释放热存数据）
+
+为空时，默认为false
+     */
+    public void setIsOverwrite(Boolean IsOverwrite) {
+        this.IsOverwrite = IsOverwrite;
+    }
+
     public LifecycleRule() {
     }
 
@@ -202,6 +324,18 @@ public class LifecycleRule extends AbstractModel {
         if (source.FileMinSize != null) {
             this.FileMinSize = new String(source.FileMinSize);
         }
+        if (source.PolicyType != null) {
+            this.PolicyType = new String(source.PolicyType);
+        }
+        if (source.ExpireThreshold != null) {
+            this.ExpireThreshold = new Long(source.ExpireThreshold);
+        }
+        if (source.TargetThreshold != null) {
+            this.TargetThreshold = new Long(source.TargetThreshold);
+        }
+        if (source.IsOverwrite != null) {
+            this.IsOverwrite = new Boolean(source.IsOverwrite);
+        }
     }
 
 
@@ -215,6 +349,10 @@ public class LifecycleRule extends AbstractModel {
         this.setParamSimple(map, prefix + "Interval", this.Interval);
         this.setParamSimple(map, prefix + "FileMaxSize", this.FileMaxSize);
         this.setParamSimple(map, prefix + "FileMinSize", this.FileMinSize);
+        this.setParamSimple(map, prefix + "PolicyType", this.PolicyType);
+        this.setParamSimple(map, prefix + "ExpireThreshold", this.ExpireThreshold);
+        this.setParamSimple(map, prefix + "TargetThreshold", this.TargetThreshold);
+        this.setParamSimple(map, prefix + "IsOverwrite", this.IsOverwrite);
 
     }
 }

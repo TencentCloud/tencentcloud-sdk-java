@@ -159,6 +159,18 @@ running：执行中，finished：已完成
     private String DataFlowId;
 
     /**
+    * 当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。
+
+ture：覆盖
+
+false：不覆盖（同时也不会释放热存数据）
+为空时，默认为false
+    */
+    @SerializedName("IsOverwrite")
+    @Expose
+    private Boolean IsOverwrite;
+
+    /**
      * Get 任务id 
      * @return TaskId 任务id
      */
@@ -482,6 +494,42 @@ running：执行中，finished：已完成
         this.DataFlowId = DataFlowId;
     }
 
+    /**
+     * Get 当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。
+
+ture：覆盖
+
+false：不覆盖（同时也不会释放热存数据）
+为空时，默认为false 
+     * @return IsOverwrite 当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。
+
+ture：覆盖
+
+false：不覆盖（同时也不会释放热存数据）
+为空时，默认为false
+     */
+    public Boolean getIsOverwrite() {
+        return this.IsOverwrite;
+    }
+
+    /**
+     * Set 当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。
+
+ture：覆盖
+
+false：不覆盖（同时也不会释放热存数据）
+为空时，默认为false
+     * @param IsOverwrite 当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。
+
+ture：覆盖
+
+false：不覆盖（同时也不会释放热存数据）
+为空时，默认为false
+     */
+    public void setIsOverwrite(Boolean IsOverwrite) {
+        this.IsOverwrite = IsOverwrite;
+    }
+
     public LifecycleDataTaskInfo() {
     }
 
@@ -544,6 +592,9 @@ running：执行中，finished：已完成
         if (source.DataFlowId != null) {
             this.DataFlowId = new String(source.DataFlowId);
         }
+        if (source.IsOverwrite != null) {
+            this.IsOverwrite = new Boolean(source.IsOverwrite);
+        }
     }
 
 
@@ -569,6 +620,7 @@ running：执行中，finished：已完成
         this.setParamSimple(map, prefix + "TaskPath", this.TaskPath);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "DataFlowId", this.DataFlowId);
+        this.setParamSimple(map, prefix + "IsOverwrite", this.IsOverwrite);
 
     }
 }

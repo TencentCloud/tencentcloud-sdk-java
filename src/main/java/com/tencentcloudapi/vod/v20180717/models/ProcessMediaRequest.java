@@ -25,10 +25,19 @@ public class ProcessMediaRequest extends AbstractModel {
 
     /**
     * 媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。
+FileId和MediaStoragePath必须提供其中一个。
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
+
+    /**
+    * 媒体的存储路径。
+FileId和MediaStoragePath必须提供其中一个。
+    */
+    @SerializedName("MediaStoragePath")
+    @Expose
+    private String MediaStoragePath;
 
     /**
     * <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
@@ -102,8 +111,10 @@ public class ProcessMediaRequest extends AbstractModel {
     private String ExtInfo;
 
     /**
-     * Get 媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。 
+     * Get 媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。
+FileId和MediaStoragePath必须提供其中一个。 
      * @return FileId 媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。
+FileId和MediaStoragePath必须提供其中一个。
      */
     public String getFileId() {
         return this.FileId;
@@ -111,10 +122,32 @@ public class ProcessMediaRequest extends AbstractModel {
 
     /**
      * Set 媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。
+FileId和MediaStoragePath必须提供其中一个。
      * @param FileId 媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。
+FileId和MediaStoragePath必须提供其中一个。
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
+    }
+
+    /**
+     * Get 媒体的存储路径。
+FileId和MediaStoragePath必须提供其中一个。 
+     * @return MediaStoragePath 媒体的存储路径。
+FileId和MediaStoragePath必须提供其中一个。
+     */
+    public String getMediaStoragePath() {
+        return this.MediaStoragePath;
+    }
+
+    /**
+     * Set 媒体的存储路径。
+FileId和MediaStoragePath必须提供其中一个。
+     * @param MediaStoragePath 媒体的存储路径。
+FileId和MediaStoragePath必须提供其中一个。
+     */
+    public void setMediaStoragePath(String MediaStoragePath) {
+        this.MediaStoragePath = MediaStoragePath;
     }
 
     /**
@@ -292,6 +325,9 @@ public class ProcessMediaRequest extends AbstractModel {
         if (source.FileId != null) {
             this.FileId = new String(source.FileId);
         }
+        if (source.MediaStoragePath != null) {
+            this.MediaStoragePath = new String(source.MediaStoragePath);
+        }
         if (source.SubAppId != null) {
             this.SubAppId = new Long(source.SubAppId);
         }
@@ -330,6 +366,7 @@ public class ProcessMediaRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileId", this.FileId);
+        this.setParamSimple(map, prefix + "MediaStoragePath", this.MediaStoragePath);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamObj(map, prefix + "MediaProcessTask.", this.MediaProcessTask);
         this.setParamObj(map, prefix + "AiContentReviewTask.", this.AiContentReviewTask);

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateDlcDeliverResponse extends AbstractModel {
 
     /**
-    * 配置id
+    * <p>配置id</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateDlcDeliverResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 配置id 
-     * @return TaskId 配置id
+     * Get <p>配置id</p> 
+     * @return TaskId <p>配置id</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 配置id
-     * @param TaskId 配置id
+     * Set <p>配置id</p>
+     * @param TaskId <p>配置id</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

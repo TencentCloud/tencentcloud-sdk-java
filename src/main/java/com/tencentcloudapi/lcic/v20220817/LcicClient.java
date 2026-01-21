@@ -169,6 +169,17 @@ public class LcicClient extends AbstractClient{
     }
 
     /**
+     *创建分组直播参加码
+     * @param req CreateGroupLiveCodesRequest
+     * @return CreateGroupLiveCodesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateGroupLiveCodesResponse CreateGroupLiveCodes(CreateGroupLiveCodesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateGroupLiveCodes", CreateGroupLiveCodesResponse.class);
+    }
+
+    /**
      *此接口根据成员列表创建群组
      * @param req CreateGroupWithMembersRequest
      * @return CreateGroupWithMembersResponse
@@ -411,6 +422,17 @@ public class LcicClient extends AbstractClient{
     public DescribeGroupListResponse DescribeGroupList(DescribeGroupListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeGroupList", DescribeGroupListResponse.class);
+    }
+
+    /**
+     *获取分组直播参加码
+     * @param req DescribeGroupLiveCodesRequest
+     * @return DescribeGroupLiveCodesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGroupLiveCodesResponse DescribeGroupLiveCodes(DescribeGroupLiveCodesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeGroupLiveCodes", DescribeGroupLiveCodesResponse.class);
     }
 
     /**

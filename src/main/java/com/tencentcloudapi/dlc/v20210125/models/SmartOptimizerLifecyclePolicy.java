@@ -38,7 +38,7 @@ public class SmartOptimizerLifecyclePolicy extends AbstractModel {
     private Long Expiration;
 
     /**
-    * 是否删表
+    * 是否删表，该字段废弃已使用，用TableExpiration策略替代
     */
     @SerializedName("DropTable")
     @Expose
@@ -91,17 +91,21 @@ public class SmartOptimizerLifecyclePolicy extends AbstractModel {
     }
 
     /**
-     * Get 是否删表 
-     * @return DropTable 是否删表
+     * Get 是否删表，该字段废弃已使用，用TableExpiration策略替代 
+     * @return DropTable 是否删表，该字段废弃已使用，用TableExpiration策略替代
+     * @deprecated
      */
+    @Deprecated
     public Boolean getDropTable() {
         return this.DropTable;
     }
 
     /**
-     * Set 是否删表
-     * @param DropTable 是否删表
+     * Set 是否删表，该字段废弃已使用，用TableExpiration策略替代
+     * @param DropTable 是否删表，该字段废弃已使用，用TableExpiration策略替代
+     * @deprecated
      */
+    @Deprecated
     public void setDropTable(Boolean DropTable) {
         this.DropTable = DropTable;
     }

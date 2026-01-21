@@ -5147,6 +5147,17 @@ LimitTypes取值范围：
     }
 
     /**
+     *本接口（UpgradeNatGatewayProductVersion）用于升级NAT实例产品版本，将传统型NAT实例升级到标准型NAT。
+     * @param req UpgradeNatGatewayProductVersionRequest
+     * @return UpgradeNatGatewayProductVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeNatGatewayProductVersionResponse UpgradeNatGatewayProductVersion(UpgradeNatGatewayProductVersionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpgradeNatGatewayProductVersion", UpgradeNatGatewayProductVersionResponse.class);
+    }
+
+    /**
      *本接口（WithdrawNotifyRoutes）用于撤销已发布到云联网的路由。路由表列表页操作增加“从云联网撤销”。
      * @param req WithdrawNotifyRoutesRequest
      * @return WithdrawNotifyRoutesResponse

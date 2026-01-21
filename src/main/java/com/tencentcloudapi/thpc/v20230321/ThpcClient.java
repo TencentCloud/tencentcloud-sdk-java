@@ -321,6 +321,17 @@ public class ThpcClient extends AbstractClient{
     }
 
     /**
+     *本接口用于修改节点属性
+     * @param req ModifyNodeAttributeRequest
+     * @return ModifyNodeAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNodeAttributeResponse ModifyNodeAttribute(ModifyNodeAttributeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyNodeAttribute", ModifyNodeAttributeResponse.class);
+    }
+
+    /**
      *本接口 (ModifyWorkspacesAttribute) 用于修改工作空间的属性（目前只支持修改工作空间的名称）。
      * @param req ModifyWorkspacesAttributeRequest
      * @return ModifyWorkspacesAttributeResponse

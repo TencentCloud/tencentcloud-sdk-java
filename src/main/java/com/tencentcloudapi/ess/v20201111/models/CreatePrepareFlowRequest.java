@@ -135,24 +135,30 @@ public class CreatePrepareFlowRequest extends AbstractModel {
     private CreateFlowOption FlowOption;
 
     /**
-    * 发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
-<ul><li> **false**：（默认）不需要审批，直接签署。</li>
-<li> **true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
-企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
-<ul><li> 如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
-<li> 如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
-注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
+    * 发起方企业签署员工，在进行签署操作前，是否需要先通过企业内部审批流程 （签署审核）
+1. **false（默认）**：  无需审批，发起方企业签署员工可直接进行签署操作。
+2. **true**：  需要先走企业内部审批流程。 当流程进展到发起方企业签署员工时，其签署操作会被阻塞，等待企业内部审批结果。
+
+企业应通过 <a href="https://qian.tencent.com/developers/companyApis/operateFlows/CreateFlowSignReview" target="_blank">提交签署流程审批结果</a>审批接口，将内部审批结果通知腾讯电子签平台：
+1. 若通知为“审核通过”，发起方企业签署员工可继续完成签署操作。
+2. 若通知为“审核未通过”，平台将继续阻塞该签署方的签署操作，直到企业再次通知平台审核通过为止。
+
+说明： 此能力可用于与企业内部审批流程打通，适用于手动签署和自动签署两种模式。
     */
     @SerializedName("NeedSignReview")
     @Expose
     private Boolean NeedSignReview;
 
     /**
-    * 发起方企业的签署人进行发起操作是否需要企业内部审批。使用此功能需要发起方企业有参与签署。
+    * 发起方在创建合同流程前，是否必须先通过企业内部审批流程 （发起审核）
 
-若设置为true，发起审核结果需通过接口 CreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行发起操作，否则会阻塞其发起操作。
+当设置为 `true` 时：  
+  1. 您需要在企业内部完成审批，并通过接口 <a href="https://qian.tencent.com/developers/companyApis/operateFlows/CreateFlowSignReview" target="_blank">提交签署流程审批结果</a> 将审批结果回传给腾讯电子签。 
+  2. 只有当审核状态为“通过”时，合同流程正常发起。  
+  3. 若未通过或未回传审核结果，发起操作将被阻塞，阻止合同流程。
 
-
+当设置为 `false` （默认值）时：  
+  发起方无需经过企业内部审批，可直接发起合同流程。
     */
     @SerializedName("NeedCreateReview")
     @Expose
@@ -518,72 +524,96 @@ public class CreatePrepareFlowRequest extends AbstractModel {
     }
 
     /**
-     * Get 发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
-<ul><li> **false**：（默认）不需要审批，直接签署。</li>
-<li> **true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
-企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
-<ul><li> 如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
-<li> 如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
-注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同` 
-     * @return NeedSignReview 发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
-<ul><li> **false**：（默认）不需要审批，直接签署。</li>
-<li> **true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
-企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
-<ul><li> 如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
-<li> 如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
-注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
+     * Get 发起方企业签署员工，在进行签署操作前，是否需要先通过企业内部审批流程 （签署审核）
+1. **false（默认）**：  无需审批，发起方企业签署员工可直接进行签署操作。
+2. **true**：  需要先走企业内部审批流程。 当流程进展到发起方企业签署员工时，其签署操作会被阻塞，等待企业内部审批结果。
+
+企业应通过 <a href="https://qian.tencent.com/developers/companyApis/operateFlows/CreateFlowSignReview" target="_blank">提交签署流程审批结果</a>审批接口，将内部审批结果通知腾讯电子签平台：
+1. 若通知为“审核通过”，发起方企业签署员工可继续完成签署操作。
+2. 若通知为“审核未通过”，平台将继续阻塞该签署方的签署操作，直到企业再次通知平台审核通过为止。
+
+说明： 此能力可用于与企业内部审批流程打通，适用于手动签署和自动签署两种模式。 
+     * @return NeedSignReview 发起方企业签署员工，在进行签署操作前，是否需要先通过企业内部审批流程 （签署审核）
+1. **false（默认）**：  无需审批，发起方企业签署员工可直接进行签署操作。
+2. **true**：  需要先走企业内部审批流程。 当流程进展到发起方企业签署员工时，其签署操作会被阻塞，等待企业内部审批结果。
+
+企业应通过 <a href="https://qian.tencent.com/developers/companyApis/operateFlows/CreateFlowSignReview" target="_blank">提交签署流程审批结果</a>审批接口，将内部审批结果通知腾讯电子签平台：
+1. 若通知为“审核通过”，发起方企业签署员工可继续完成签署操作。
+2. 若通知为“审核未通过”，平台将继续阻塞该签署方的签署操作，直到企业再次通知平台审核通过为止。
+
+说明： 此能力可用于与企业内部审批流程打通，适用于手动签署和自动签署两种模式。
      */
     public Boolean getNeedSignReview() {
         return this.NeedSignReview;
     }
 
     /**
-     * Set 发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
-<ul><li> **false**：（默认）不需要审批，直接签署。</li>
-<li> **true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
-企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
-<ul><li> 如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
-<li> 如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
-注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
-     * @param NeedSignReview 发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
-<ul><li> **false**：（默认）不需要审批，直接签署。</li>
-<li> **true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
-企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
-<ul><li> 如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
-<li> 如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
-注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
+     * Set 发起方企业签署员工，在进行签署操作前，是否需要先通过企业内部审批流程 （签署审核）
+1. **false（默认）**：  无需审批，发起方企业签署员工可直接进行签署操作。
+2. **true**：  需要先走企业内部审批流程。 当流程进展到发起方企业签署员工时，其签署操作会被阻塞，等待企业内部审批结果。
+
+企业应通过 <a href="https://qian.tencent.com/developers/companyApis/operateFlows/CreateFlowSignReview" target="_blank">提交签署流程审批结果</a>审批接口，将内部审批结果通知腾讯电子签平台：
+1. 若通知为“审核通过”，发起方企业签署员工可继续完成签署操作。
+2. 若通知为“审核未通过”，平台将继续阻塞该签署方的签署操作，直到企业再次通知平台审核通过为止。
+
+说明： 此能力可用于与企业内部审批流程打通，适用于手动签署和自动签署两种模式。
+     * @param NeedSignReview 发起方企业签署员工，在进行签署操作前，是否需要先通过企业内部审批流程 （签署审核）
+1. **false（默认）**：  无需审批，发起方企业签署员工可直接进行签署操作。
+2. **true**：  需要先走企业内部审批流程。 当流程进展到发起方企业签署员工时，其签署操作会被阻塞，等待企业内部审批结果。
+
+企业应通过 <a href="https://qian.tencent.com/developers/companyApis/operateFlows/CreateFlowSignReview" target="_blank">提交签署流程审批结果</a>审批接口，将内部审批结果通知腾讯电子签平台：
+1. 若通知为“审核通过”，发起方企业签署员工可继续完成签署操作。
+2. 若通知为“审核未通过”，平台将继续阻塞该签署方的签署操作，直到企业再次通知平台审核通过为止。
+
+说明： 此能力可用于与企业内部审批流程打通，适用于手动签署和自动签署两种模式。
      */
     public void setNeedSignReview(Boolean NeedSignReview) {
         this.NeedSignReview = NeedSignReview;
     }
 
     /**
-     * Get 发起方企业的签署人进行发起操作是否需要企业内部审批。使用此功能需要发起方企业有参与签署。
+     * Get 发起方在创建合同流程前，是否必须先通过企业内部审批流程 （发起审核）
 
-若设置为true，发起审核结果需通过接口 CreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行发起操作，否则会阻塞其发起操作。
+当设置为 `true` 时：  
+  1. 您需要在企业内部完成审批，并通过接口 <a href="https://qian.tencent.com/developers/companyApis/operateFlows/CreateFlowSignReview" target="_blank">提交签署流程审批结果</a> 将审批结果回传给腾讯电子签。 
+  2. 只有当审核状态为“通过”时，合同流程正常发起。  
+  3. 若未通过或未回传审核结果，发起操作将被阻塞，阻止合同流程。
 
- 
-     * @return NeedCreateReview 发起方企业的签署人进行发起操作是否需要企业内部审批。使用此功能需要发起方企业有参与签署。
+当设置为 `false` （默认值）时：  
+  发起方无需经过企业内部审批，可直接发起合同流程。 
+     * @return NeedCreateReview 发起方在创建合同流程前，是否必须先通过企业内部审批流程 （发起审核）
 
-若设置为true，发起审核结果需通过接口 CreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行发起操作，否则会阻塞其发起操作。
+当设置为 `true` 时：  
+  1. 您需要在企业内部完成审批，并通过接口 <a href="https://qian.tencent.com/developers/companyApis/operateFlows/CreateFlowSignReview" target="_blank">提交签署流程审批结果</a> 将审批结果回传给腾讯电子签。 
+  2. 只有当审核状态为“通过”时，合同流程正常发起。  
+  3. 若未通过或未回传审核结果，发起操作将被阻塞，阻止合同流程。
 
-
+当设置为 `false` （默认值）时：  
+  发起方无需经过企业内部审批，可直接发起合同流程。
      */
     public Boolean getNeedCreateReview() {
         return this.NeedCreateReview;
     }
 
     /**
-     * Set 发起方企业的签署人进行发起操作是否需要企业内部审批。使用此功能需要发起方企业有参与签署。
+     * Set 发起方在创建合同流程前，是否必须先通过企业内部审批流程 （发起审核）
 
-若设置为true，发起审核结果需通过接口 CreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行发起操作，否则会阻塞其发起操作。
+当设置为 `true` 时：  
+  1. 您需要在企业内部完成审批，并通过接口 <a href="https://qian.tencent.com/developers/companyApis/operateFlows/CreateFlowSignReview" target="_blank">提交签署流程审批结果</a> 将审批结果回传给腾讯电子签。 
+  2. 只有当审核状态为“通过”时，合同流程正常发起。  
+  3. 若未通过或未回传审核结果，发起操作将被阻塞，阻止合同流程。
 
+当设置为 `false` （默认值）时：  
+  发起方无需经过企业内部审批，可直接发起合同流程。
+     * @param NeedCreateReview 发起方在创建合同流程前，是否必须先通过企业内部审批流程 （发起审核）
 
-     * @param NeedCreateReview 发起方企业的签署人进行发起操作是否需要企业内部审批。使用此功能需要发起方企业有参与签署。
+当设置为 `true` 时：  
+  1. 您需要在企业内部完成审批，并通过接口 <a href="https://qian.tencent.com/developers/companyApis/operateFlows/CreateFlowSignReview" target="_blank">提交签署流程审批结果</a> 将审批结果回传给腾讯电子签。 
+  2. 只有当审核状态为“通过”时，合同流程正常发起。  
+  3. 若未通过或未回传审核结果，发起操作将被阻塞，阻止合同流程。
 
-若设置为true，发起审核结果需通过接口 CreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行发起操作，否则会阻塞其发起操作。
-
-
+当设置为 `false` （默认值）时：  
+  发起方无需经过企业内部审批，可直接发起合同流程。
      */
     public void setNeedCreateReview(Boolean NeedCreateReview) {
         this.NeedCreateReview = NeedCreateReview;

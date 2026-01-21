@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateRoomResponse extends AbstractModel {
 
     /**
-    * 房间ID。
+    * <p>房间ID。</p>
     */
     @SerializedName("RoomId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateRoomResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 房间ID。 
-     * @return RoomId 房间ID。
+     * Get <p>房间ID。</p> 
+     * @return RoomId <p>房间ID。</p>
      */
     public Long getRoomId() {
         return this.RoomId;
     }
 
     /**
-     * Set 房间ID。
-     * @param RoomId 房间ID。
+     * Set <p>房间ID。</p>
+     * @param RoomId <p>房间ID。</p>
      */
     public void setRoomId(Long RoomId) {
         this.RoomId = RoomId;

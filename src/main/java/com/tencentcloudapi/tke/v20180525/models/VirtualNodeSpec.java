@@ -45,6 +45,13 @@ public class VirtualNodeSpec extends AbstractModel {
     private Tag [] Tags;
 
     /**
+    * 按量配额
+    */
+    @SerializedName("Quota")
+    @Expose
+    private SuperNodeResource Quota;
+
+    /**
      * Get 节点展示名称，建议不超过20个字符 
      * @return DisplayName 节点展示名称，建议不超过20个字符
      */
@@ -92,6 +99,22 @@ public class VirtualNodeSpec extends AbstractModel {
         this.Tags = Tags;
     }
 
+    /**
+     * Get 按量配额 
+     * @return Quota 按量配额
+     */
+    public SuperNodeResource getQuota() {
+        return this.Quota;
+    }
+
+    /**
+     * Set 按量配额
+     * @param Quota 按量配额
+     */
+    public void setQuota(SuperNodeResource Quota) {
+        this.Quota = Quota;
+    }
+
     public VirtualNodeSpec() {
     }
 
@@ -112,6 +135,9 @@ public class VirtualNodeSpec extends AbstractModel {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.Quota != null) {
+            this.Quota = new SuperNodeResource(source.Quota);
+        }
     }
 
 
@@ -122,6 +148,7 @@ public class VirtualNodeSpec extends AbstractModel {
         this.setParamSimple(map, prefix + "DisplayName", this.DisplayName);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamObj(map, prefix + "Quota.", this.Quota);
 
     }
 }

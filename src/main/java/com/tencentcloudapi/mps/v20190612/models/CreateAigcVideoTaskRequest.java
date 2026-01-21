@@ -50,6 +50,17 @@ GV。
     private String ModelVersion;
 
     /**
+    * 指定场景生视频。
+注意：仅部分模型支持指定场景。
+1. Kling支持动作控制，motion_control。
+2. Mingmou支持横转竖，land2port。
+3. Vidu支持特效模板，template_effect。
+    */
+    @SerializedName("SceneType")
+    @Expose
+    private String SceneType;
+
+    /**
     * 生成视频的描述。(注：最大支持2000字符)。当未传入图片时，此参数必填。
     */
     @SerializedName("Prompt")
@@ -237,6 +248,38 @@ GV。
      */
     public void setModelVersion(String ModelVersion) {
         this.ModelVersion = ModelVersion;
+    }
+
+    /**
+     * Get 指定场景生视频。
+注意：仅部分模型支持指定场景。
+1. Kling支持动作控制，motion_control。
+2. Mingmou支持横转竖，land2port。
+3. Vidu支持特效模板，template_effect。 
+     * @return SceneType 指定场景生视频。
+注意：仅部分模型支持指定场景。
+1. Kling支持动作控制，motion_control。
+2. Mingmou支持横转竖，land2port。
+3. Vidu支持特效模板，template_effect。
+     */
+    public String getSceneType() {
+        return this.SceneType;
+    }
+
+    /**
+     * Set 指定场景生视频。
+注意：仅部分模型支持指定场景。
+1. Kling支持动作控制，motion_control。
+2. Mingmou支持横转竖，land2port。
+3. Vidu支持特效模板，template_effect。
+     * @param SceneType 指定场景生视频。
+注意：仅部分模型支持指定场景。
+1. Kling支持动作控制，motion_control。
+2. Mingmou支持横转竖，land2port。
+3. Vidu支持特效模板，template_effect。
+     */
+    public void setSceneType(String SceneType) {
+        this.SceneType = SceneType;
     }
 
     /**
@@ -561,6 +604,9 @@ GV。
         if (source.ModelVersion != null) {
             this.ModelVersion = new String(source.ModelVersion);
         }
+        if (source.SceneType != null) {
+            this.SceneType = new String(source.SceneType);
+        }
         if (source.Prompt != null) {
             this.Prompt = new String(source.Prompt);
         }
@@ -606,6 +652,7 @@ GV。
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ModelName", this.ModelName);
         this.setParamSimple(map, prefix + "ModelVersion", this.ModelVersion);
+        this.setParamSimple(map, prefix + "SceneType", this.SceneType);
         this.setParamSimple(map, prefix + "Prompt", this.Prompt);
         this.setParamSimple(map, prefix + "NegativePrompt", this.NegativePrompt);
         this.setParamSimple(map, prefix + "EnhancePrompt", this.EnhancePrompt);

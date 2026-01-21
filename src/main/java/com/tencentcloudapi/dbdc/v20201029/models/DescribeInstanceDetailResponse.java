@@ -220,6 +220,13 @@ public class DescribeInstanceDetailResponse extends AbstractModel {
     private String CpuType;
 
     /**
+    * 可用区列表
+    */
+    @SerializedName("Zones")
+    @Expose
+    private String [] Zones;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -675,6 +682,22 @@ public class DescribeInstanceDetailResponse extends AbstractModel {
     }
 
     /**
+     * Get 可用区列表 
+     * @return Zones 可用区列表
+     */
+    public String [] getZones() {
+        return this.Zones;
+    }
+
+    /**
+     * Set 可用区列表
+     * @param Zones 可用区列表
+     */
+    public void setZones(String [] Zones) {
+        this.Zones = Zones;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -785,6 +808,12 @@ public class DescribeInstanceDetailResponse extends AbstractModel {
         if (source.CpuType != null) {
             this.CpuType = new String(source.CpuType);
         }
+        if (source.Zones != null) {
+            this.Zones = new String[source.Zones.length];
+            for (int i = 0; i < source.Zones.length; i++) {
+                this.Zones[i] = new String(source.Zones[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -823,6 +852,7 @@ public class DescribeInstanceDetailResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         this.setParamSimple(map, prefix + "CpuType", this.CpuType);
+        this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

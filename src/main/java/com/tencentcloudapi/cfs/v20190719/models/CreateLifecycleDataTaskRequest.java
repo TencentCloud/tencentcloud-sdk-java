@@ -59,6 +59,13 @@ public class CreateLifecycleDataTaskRequest extends AbstractModel {
     private String DataFlowId;
 
     /**
+    * 	 当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。  ture：覆盖  false：不覆盖（同时也不会释放热存数据）  为空时，默认为false
+    */
+    @SerializedName("IsOverwrite")
+    @Expose
+    private Boolean IsOverwrite;
+
+    /**
      * Get 文件系统唯一 ID 
      * @return FileSystemId 文件系统唯一 ID
      */
@@ -138,6 +145,22 @@ public class CreateLifecycleDataTaskRequest extends AbstractModel {
         this.DataFlowId = DataFlowId;
     }
 
+    /**
+     * Get 	 当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。  ture：覆盖  false：不覆盖（同时也不会释放热存数据）  为空时，默认为false 
+     * @return IsOverwrite 	 当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。  ture：覆盖  false：不覆盖（同时也不会释放热存数据）  为空时，默认为false
+     */
+    public Boolean getIsOverwrite() {
+        return this.IsOverwrite;
+    }
+
+    /**
+     * Set 	 当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。  ture：覆盖  false：不覆盖（同时也不会释放热存数据）  为空时，默认为false
+     * @param IsOverwrite 	 当CFSTurbo内的文件和外置存储存在同名情况时，是否覆盖。  ture：覆盖  false：不覆盖（同时也不会释放热存数据）  为空时，默认为false
+     */
+    public void setIsOverwrite(Boolean IsOverwrite) {
+        this.IsOverwrite = IsOverwrite;
+    }
+
     public CreateLifecycleDataTaskRequest() {
     }
 
@@ -161,6 +184,9 @@ public class CreateLifecycleDataTaskRequest extends AbstractModel {
         if (source.DataFlowId != null) {
             this.DataFlowId = new String(source.DataFlowId);
         }
+        if (source.IsOverwrite != null) {
+            this.IsOverwrite = new Boolean(source.IsOverwrite);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class CreateLifecycleDataTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskPath", this.TaskPath);
         this.setParamSimple(map, prefix + "TaskName", this.TaskName);
         this.setParamSimple(map, prefix + "DataFlowId", this.DataFlowId);
+        this.setParamSimple(map, prefix + "IsOverwrite", this.IsOverwrite);
 
     }
 }

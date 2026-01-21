@@ -171,6 +171,13 @@ public class DBInstanceDetail extends AbstractModel {
     private String CreateTime;
 
     /**
+    * 可用区列表
+    */
+    @SerializedName("Zones")
+    @Expose
+    private String [] Zones;
+
+    /**
      * Get DB实例Id 
      * @return InstanceId DB实例Id
      */
@@ -506,6 +513,22 @@ public class DBInstanceDetail extends AbstractModel {
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get 可用区列表 
+     * @return Zones 可用区列表
+     */
+    public String [] getZones() {
+        return this.Zones;
+    }
+
+    /**
+     * Set 可用区列表
+     * @param Zones 可用区列表
+     */
+    public void setZones(String [] Zones) {
+        this.Zones = Zones;
+    }
+
     public DBInstanceDetail() {
     }
 
@@ -577,6 +600,12 @@ public class DBInstanceDetail extends AbstractModel {
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.Zones != null) {
+            this.Zones = new String[source.Zones.length];
+            for (int i = 0; i < source.Zones.length; i++) {
+                this.Zones[i] = new String(source.Zones[i]);
+            }
+        }
     }
 
 
@@ -605,6 +634,7 @@ public class DBInstanceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "HostRole", this.HostRole);
         this.setParamSimple(map, prefix + "DbEngine", this.DbEngine);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
 
     }
 }

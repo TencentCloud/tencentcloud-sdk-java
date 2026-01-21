@@ -24,18 +24,27 @@ import java.util.HashMap;
 public class ProcessMediaByProcedureRequest extends AbstractModel {
 
     /**
+    * [任务流](https://cloud.tencent.com/document/product/266/33475#.E4.BB.BB.E5.8A.A1.E6.B5.81)名称。
+    */
+    @SerializedName("ProcedureName")
+    @Expose
+    private String ProcedureName;
+
+    /**
     * 媒体文件 ID。
+FileId和MediaStoragePath必须提供其中一个。
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * [任务流](https://cloud.tencent.com/document/product/266/33475#.E4.BB.BB.E5.8A.A1.E6.B5.81)名称。
+    * 媒体的存储路径。
+FileId和MediaStoragePath必须提供其中一个。
     */
-    @SerializedName("ProcedureName")
+    @SerializedName("MediaStoragePath")
     @Expose
-    private String ProcedureName;
+    private String MediaStoragePath;
 
     /**
     * <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
@@ -80,22 +89,6 @@ public class ProcessMediaByProcedureRequest extends AbstractModel {
     private String ExtInfo;
 
     /**
-     * Get 媒体文件 ID。 
-     * @return FileId 媒体文件 ID。
-     */
-    public String getFileId() {
-        return this.FileId;
-    }
-
-    /**
-     * Set 媒体文件 ID。
-     * @param FileId 媒体文件 ID。
-     */
-    public void setFileId(String FileId) {
-        this.FileId = FileId;
-    }
-
-    /**
      * Get [任务流](https://cloud.tencent.com/document/product/266/33475#.E4.BB.BB.E5.8A.A1.E6.B5.81)名称。 
      * @return ProcedureName [任务流](https://cloud.tencent.com/document/product/266/33475#.E4.BB.BB.E5.8A.A1.E6.B5.81)名称。
      */
@@ -109,6 +102,46 @@ public class ProcessMediaByProcedureRequest extends AbstractModel {
      */
     public void setProcedureName(String ProcedureName) {
         this.ProcedureName = ProcedureName;
+    }
+
+    /**
+     * Get 媒体文件 ID。
+FileId和MediaStoragePath必须提供其中一个。 
+     * @return FileId 媒体文件 ID。
+FileId和MediaStoragePath必须提供其中一个。
+     */
+    public String getFileId() {
+        return this.FileId;
+    }
+
+    /**
+     * Set 媒体文件 ID。
+FileId和MediaStoragePath必须提供其中一个。
+     * @param FileId 媒体文件 ID。
+FileId和MediaStoragePath必须提供其中一个。
+     */
+    public void setFileId(String FileId) {
+        this.FileId = FileId;
+    }
+
+    /**
+     * Get 媒体的存储路径。
+FileId和MediaStoragePath必须提供其中一个。 
+     * @return MediaStoragePath 媒体的存储路径。
+FileId和MediaStoragePath必须提供其中一个。
+     */
+    public String getMediaStoragePath() {
+        return this.MediaStoragePath;
+    }
+
+    /**
+     * Set 媒体的存储路径。
+FileId和MediaStoragePath必须提供其中一个。
+     * @param MediaStoragePath 媒体的存储路径。
+FileId和MediaStoragePath必须提供其中一个。
+     */
+    public void setMediaStoragePath(String MediaStoragePath) {
+        this.MediaStoragePath = MediaStoragePath;
     }
 
     /**
@@ -215,11 +248,14 @@ public class ProcessMediaByProcedureRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ProcessMediaByProcedureRequest(ProcessMediaByProcedureRequest source) {
+        if (source.ProcedureName != null) {
+            this.ProcedureName = new String(source.ProcedureName);
+        }
         if (source.FileId != null) {
             this.FileId = new String(source.FileId);
         }
-        if (source.ProcedureName != null) {
-            this.ProcedureName = new String(source.ProcedureName);
+        if (source.MediaStoragePath != null) {
+            this.MediaStoragePath = new String(source.MediaStoragePath);
         }
         if (source.SubAppId != null) {
             this.SubAppId = new Long(source.SubAppId);
@@ -246,8 +282,9 @@ public class ProcessMediaByProcedureRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamSimple(map, prefix + "ProcedureName", this.ProcedureName);
+        this.setParamSimple(map, prefix + "FileId", this.FileId);
+        this.setParamSimple(map, prefix + "MediaStoragePath", this.MediaStoragePath);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
         this.setParamSimple(map, prefix + "TasksNotifyMode", this.TasksNotifyMode);

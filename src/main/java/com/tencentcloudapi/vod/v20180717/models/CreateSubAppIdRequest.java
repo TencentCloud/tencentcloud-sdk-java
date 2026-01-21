@@ -45,6 +45,30 @@ public class CreateSubAppIdRequest extends AbstractModel {
     private String Type;
 
     /**
+    * 此应用的模式，可选值为：
+- fileid：仅FileID模式
+- fileid+path：FileID & Path模式
+留空时默认选择仅FileID模式
+    */
+    @SerializedName("Mode")
+    @Expose
+    private String Mode;
+
+    /**
+    * 存储地域
+    */
+    @SerializedName("StorageRegion")
+    @Expose
+    private String StorageRegion;
+
+    /**
+    * 此应用需要绑定的tag
+    */
+    @SerializedName("Tags")
+    @Expose
+    private ResourceTag [] Tags;
+
+    /**
      * Get 应用名称，长度限制：40个字符。 
      * @return Name 应用名称，长度限制：40个字符。
      */
@@ -92,6 +116,66 @@ public class CreateSubAppIdRequest extends AbstractModel {
         this.Type = Type;
     }
 
+    /**
+     * Get 此应用的模式，可选值为：
+- fileid：仅FileID模式
+- fileid+path：FileID & Path模式
+留空时默认选择仅FileID模式 
+     * @return Mode 此应用的模式，可选值为：
+- fileid：仅FileID模式
+- fileid+path：FileID & Path模式
+留空时默认选择仅FileID模式
+     */
+    public String getMode() {
+        return this.Mode;
+    }
+
+    /**
+     * Set 此应用的模式，可选值为：
+- fileid：仅FileID模式
+- fileid+path：FileID & Path模式
+留空时默认选择仅FileID模式
+     * @param Mode 此应用的模式，可选值为：
+- fileid：仅FileID模式
+- fileid+path：FileID & Path模式
+留空时默认选择仅FileID模式
+     */
+    public void setMode(String Mode) {
+        this.Mode = Mode;
+    }
+
+    /**
+     * Get 存储地域 
+     * @return StorageRegion 存储地域
+     */
+    public String getStorageRegion() {
+        return this.StorageRegion;
+    }
+
+    /**
+     * Set 存储地域
+     * @param StorageRegion 存储地域
+     */
+    public void setStorageRegion(String StorageRegion) {
+        this.StorageRegion = StorageRegion;
+    }
+
+    /**
+     * Get 此应用需要绑定的tag 
+     * @return Tags 此应用需要绑定的tag
+     */
+    public ResourceTag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 此应用需要绑定的tag
+     * @param Tags 此应用需要绑定的tag
+     */
+    public void setTags(ResourceTag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateSubAppIdRequest() {
     }
 
@@ -109,6 +193,18 @@ public class CreateSubAppIdRequest extends AbstractModel {
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
+        if (source.Mode != null) {
+            this.Mode = new String(source.Mode);
+        }
+        if (source.StorageRegion != null) {
+            this.StorageRegion = new String(source.StorageRegion);
+        }
+        if (source.Tags != null) {
+            this.Tags = new ResourceTag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new ResourceTag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -119,6 +215,9 @@ public class CreateSubAppIdRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "Mode", this.Mode);
+        this.setParamSimple(map, prefix + "StorageRegion", this.StorageRegion);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

@@ -248,6 +248,14 @@ public class MsgRecord extends AbstractModel {
     private WidgetAction WidgetAction;
 
     /**
+    * 音频信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Audios")
+    @Expose
+    private Audio [] Audios;
+
+    /**
      * Get 内容 
      * @return Content 内容
      */
@@ -807,6 +815,26 @@ public class MsgRecord extends AbstractModel {
         this.WidgetAction = WidgetAction;
     }
 
+    /**
+     * Get 音频信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Audios 音频信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Audio [] getAudios() {
+        return this.Audios;
+    }
+
+    /**
+     * Set 音频信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Audios 音频信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAudios(Audio [] Audios) {
+        this.Audios = Audios;
+    }
+
     public MsgRecord() {
     }
 
@@ -920,6 +948,12 @@ public class MsgRecord extends AbstractModel {
         if (source.WidgetAction != null) {
             this.WidgetAction = new WidgetAction(source.WidgetAction);
         }
+        if (source.Audios != null) {
+            this.Audios = new Audio[source.Audios.length];
+            for (int i = 0; i < source.Audios.length; i++) {
+                this.Audios[i] = new Audio(source.Audios[i]);
+            }
+        }
     }
 
 
@@ -955,6 +989,7 @@ public class MsgRecord extends AbstractModel {
         this.setParamObj(map, prefix + "WorkFlow.", this.WorkFlow);
         this.setParamArrayObj(map, prefix + "Widgets.", this.Widgets);
         this.setParamObj(map, prefix + "WidgetAction.", this.WidgetAction);
+        this.setParamArrayObj(map, prefix + "Audios.", this.Audios);
 
     }
 }

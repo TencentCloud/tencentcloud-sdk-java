@@ -31,6 +31,14 @@ public class ListReferShareKnowledgeResponse extends AbstractModel {
     private KnowledgeBaseInfo [] List;
 
     /**
+    * 共享知识库数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Total")
+    @Expose
+    private String Total;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +59,26 @@ public class ListReferShareKnowledgeResponse extends AbstractModel {
      */
     public void setList(KnowledgeBaseInfo [] List) {
         this.List = List;
+    }
+
+    /**
+     * Get 共享知识库数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Total 共享知识库数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTotal() {
+        return this.Total;
+    }
+
+    /**
+     * Set 共享知识库数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Total 共享知识库数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTotal(String Total) {
+        this.Total = Total;
     }
 
     /**
@@ -83,6 +111,9 @@ public class ListReferShareKnowledgeResponse extends AbstractModel {
                 this.List[i] = new KnowledgeBaseInfo(source.List[i]);
             }
         }
+        if (source.Total != null) {
+            this.Total = new String(source.Total);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -94,6 +125,7 @@ public class ListReferShareKnowledgeResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "List.", this.List);
+        this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

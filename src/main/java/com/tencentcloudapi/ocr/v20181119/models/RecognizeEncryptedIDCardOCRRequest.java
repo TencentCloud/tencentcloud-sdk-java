@@ -61,23 +61,7 @@ BACK：身份证有国徽的一面（国徽面），
     private String CardSide;
 
     /**
-    * 以下可选字段均为bool 类型，默认false：
-CropIdCard，身份证照片裁剪（去掉证件外多余的边缘、自动矫正拍摄角度）
-CropPortrait，人像照片裁剪（自动抠取身份证头像区域）
-CopyWarn，复印件告警
-BorderCheckWarn，边框和框内遮挡告警
-ReshootWarn，翻拍告警
-DetectPsWarn，疑似存在PS痕迹告警
-TempIdWarn，临时身份证告警
-InvalidDateWarn，身份证有效日期不合法告警
-Quality，图片质量分数（评价图片的模糊程度）
-MultiCardDetect，是否开启正反面同框识别（仅支持二代身份证正反页同框识别或临时身份证正反页同框识别）
-ReflectWarn，是否开启反光检测
-
-SDK 设置方式参考：
-Config = Json.stringify({"CropIdCard":true,"CropPortrait":true})
-API 3.0 Explorer 设置方式参考：
-Config = {"CropIdCard":true,"CropPortrait":true}
+    * 以下可选字段均为bool 类型，默认false：CropIdCard，身份证照片裁剪（去掉证件外多余的边缘、自动矫正拍摄角度）CropPortrait，人像照片裁剪（自动抠取身份证头像区域）CopyWarn，复印件告警BorderCheckWarn，边框和框内遮挡告警ReshootWarn，DetectPsWarn，疑似存在PS痕迹告警（CardWarnType参数为 Advanced时同时开启电子身份证告警）TempIdWarn，临时身份证告警InvalidDateWarn，身份证有效日期不合法告警Quality，图片质量分数（评价图片的模糊程度）MultiCardDetect，是否开启正反面同框识别（仅支持二代身份证正反页同框识别或临时身份证正反页同框识别）ReflectWarn，是否开启反光检测SDK 设置方式参考：Config = Json.stringify({"CropIdCard":true,"CropPortrait":true})API 3.0 Explorer 设置方式参考：Config = {"CropIdCard":true,"CropPortrait":true}
     */
     @SerializedName("Config")
     @Expose
@@ -98,6 +82,13 @@ Config = {"CropIdCard":true,"CropPortrait":true}
     @SerializedName("EnableReflectDetail")
     @Expose
     private Boolean EnableReflectDetail;
+
+    /**
+    * Basic：使用基础卡证告警能力（含基础PS告警）； Advanced：开启进阶PS告警能力，PS告警效果更佳但需要更长耗时；建议测试对比后选用，默认值为 Basic
+    */
+    @SerializedName("CardWarnType")
+    @Expose
+    private String CardWarnType;
 
     /**
      * Get 请求体被加密后的密文（Base64编码），本接口只支持加密传输 
@@ -188,80 +179,16 @@ BACK：身份证有国徽的一面（国徽面），
     }
 
     /**
-     * Get 以下可选字段均为bool 类型，默认false：
-CropIdCard，身份证照片裁剪（去掉证件外多余的边缘、自动矫正拍摄角度）
-CropPortrait，人像照片裁剪（自动抠取身份证头像区域）
-CopyWarn，复印件告警
-BorderCheckWarn，边框和框内遮挡告警
-ReshootWarn，翻拍告警
-DetectPsWarn，疑似存在PS痕迹告警
-TempIdWarn，临时身份证告警
-InvalidDateWarn，身份证有效日期不合法告警
-Quality，图片质量分数（评价图片的模糊程度）
-MultiCardDetect，是否开启正反面同框识别（仅支持二代身份证正反页同框识别或临时身份证正反页同框识别）
-ReflectWarn，是否开启反光检测
-
-SDK 设置方式参考：
-Config = Json.stringify({"CropIdCard":true,"CropPortrait":true})
-API 3.0 Explorer 设置方式参考：
-Config = {"CropIdCard":true,"CropPortrait":true} 
-     * @return Config 以下可选字段均为bool 类型，默认false：
-CropIdCard，身份证照片裁剪（去掉证件外多余的边缘、自动矫正拍摄角度）
-CropPortrait，人像照片裁剪（自动抠取身份证头像区域）
-CopyWarn，复印件告警
-BorderCheckWarn，边框和框内遮挡告警
-ReshootWarn，翻拍告警
-DetectPsWarn，疑似存在PS痕迹告警
-TempIdWarn，临时身份证告警
-InvalidDateWarn，身份证有效日期不合法告警
-Quality，图片质量分数（评价图片的模糊程度）
-MultiCardDetect，是否开启正反面同框识别（仅支持二代身份证正反页同框识别或临时身份证正反页同框识别）
-ReflectWarn，是否开启反光检测
-
-SDK 设置方式参考：
-Config = Json.stringify({"CropIdCard":true,"CropPortrait":true})
-API 3.0 Explorer 设置方式参考：
-Config = {"CropIdCard":true,"CropPortrait":true}
+     * Get 以下可选字段均为bool 类型，默认false：CropIdCard，身份证照片裁剪（去掉证件外多余的边缘、自动矫正拍摄角度）CropPortrait，人像照片裁剪（自动抠取身份证头像区域）CopyWarn，复印件告警BorderCheckWarn，边框和框内遮挡告警ReshootWarn，DetectPsWarn，疑似存在PS痕迹告警（CardWarnType参数为 Advanced时同时开启电子身份证告警）TempIdWarn，临时身份证告警InvalidDateWarn，身份证有效日期不合法告警Quality，图片质量分数（评价图片的模糊程度）MultiCardDetect，是否开启正反面同框识别（仅支持二代身份证正反页同框识别或临时身份证正反页同框识别）ReflectWarn，是否开启反光检测SDK 设置方式参考：Config = Json.stringify({"CropIdCard":true,"CropPortrait":true})API 3.0 Explorer 设置方式参考：Config = {"CropIdCard":true,"CropPortrait":true} 
+     * @return Config 以下可选字段均为bool 类型，默认false：CropIdCard，身份证照片裁剪（去掉证件外多余的边缘、自动矫正拍摄角度）CropPortrait，人像照片裁剪（自动抠取身份证头像区域）CopyWarn，复印件告警BorderCheckWarn，边框和框内遮挡告警ReshootWarn，DetectPsWarn，疑似存在PS痕迹告警（CardWarnType参数为 Advanced时同时开启电子身份证告警）TempIdWarn，临时身份证告警InvalidDateWarn，身份证有效日期不合法告警Quality，图片质量分数（评价图片的模糊程度）MultiCardDetect，是否开启正反面同框识别（仅支持二代身份证正反页同框识别或临时身份证正反页同框识别）ReflectWarn，是否开启反光检测SDK 设置方式参考：Config = Json.stringify({"CropIdCard":true,"CropPortrait":true})API 3.0 Explorer 设置方式参考：Config = {"CropIdCard":true,"CropPortrait":true}
      */
     public String getConfig() {
         return this.Config;
     }
 
     /**
-     * Set 以下可选字段均为bool 类型，默认false：
-CropIdCard，身份证照片裁剪（去掉证件外多余的边缘、自动矫正拍摄角度）
-CropPortrait，人像照片裁剪（自动抠取身份证头像区域）
-CopyWarn，复印件告警
-BorderCheckWarn，边框和框内遮挡告警
-ReshootWarn，翻拍告警
-DetectPsWarn，疑似存在PS痕迹告警
-TempIdWarn，临时身份证告警
-InvalidDateWarn，身份证有效日期不合法告警
-Quality，图片质量分数（评价图片的模糊程度）
-MultiCardDetect，是否开启正反面同框识别（仅支持二代身份证正反页同框识别或临时身份证正反页同框识别）
-ReflectWarn，是否开启反光检测
-
-SDK 设置方式参考：
-Config = Json.stringify({"CropIdCard":true,"CropPortrait":true})
-API 3.0 Explorer 设置方式参考：
-Config = {"CropIdCard":true,"CropPortrait":true}
-     * @param Config 以下可选字段均为bool 类型，默认false：
-CropIdCard，身份证照片裁剪（去掉证件外多余的边缘、自动矫正拍摄角度）
-CropPortrait，人像照片裁剪（自动抠取身份证头像区域）
-CopyWarn，复印件告警
-BorderCheckWarn，边框和框内遮挡告警
-ReshootWarn，翻拍告警
-DetectPsWarn，疑似存在PS痕迹告警
-TempIdWarn，临时身份证告警
-InvalidDateWarn，身份证有效日期不合法告警
-Quality，图片质量分数（评价图片的模糊程度）
-MultiCardDetect，是否开启正反面同框识别（仅支持二代身份证正反页同框识别或临时身份证正反页同框识别）
-ReflectWarn，是否开启反光检测
-
-SDK 设置方式参考：
-Config = Json.stringify({"CropIdCard":true,"CropPortrait":true})
-API 3.0 Explorer 设置方式参考：
-Config = {"CropIdCard":true,"CropPortrait":true}
+     * Set 以下可选字段均为bool 类型，默认false：CropIdCard，身份证照片裁剪（去掉证件外多余的边缘、自动矫正拍摄角度）CropPortrait，人像照片裁剪（自动抠取身份证头像区域）CopyWarn，复印件告警BorderCheckWarn，边框和框内遮挡告警ReshootWarn，DetectPsWarn，疑似存在PS痕迹告警（CardWarnType参数为 Advanced时同时开启电子身份证告警）TempIdWarn，临时身份证告警InvalidDateWarn，身份证有效日期不合法告警Quality，图片质量分数（评价图片的模糊程度）MultiCardDetect，是否开启正反面同框识别（仅支持二代身份证正反页同框识别或临时身份证正反页同框识别）ReflectWarn，是否开启反光检测SDK 设置方式参考：Config = Json.stringify({"CropIdCard":true,"CropPortrait":true})API 3.0 Explorer 设置方式参考：Config = {"CropIdCard":true,"CropPortrait":true}
+     * @param Config 以下可选字段均为bool 类型，默认false：CropIdCard，身份证照片裁剪（去掉证件外多余的边缘、自动矫正拍摄角度）CropPortrait，人像照片裁剪（自动抠取身份证头像区域）CopyWarn，复印件告警BorderCheckWarn，边框和框内遮挡告警ReshootWarn，DetectPsWarn，疑似存在PS痕迹告警（CardWarnType参数为 Advanced时同时开启电子身份证告警）TempIdWarn，临时身份证告警InvalidDateWarn，身份证有效日期不合法告警Quality，图片质量分数（评价图片的模糊程度）MultiCardDetect，是否开启正反面同框识别（仅支持二代身份证正反页同框识别或临时身份证正反页同框识别）ReflectWarn，是否开启反光检测SDK 设置方式参考：Config = Json.stringify({"CropIdCard":true,"CropPortrait":true})API 3.0 Explorer 设置方式参考：Config = {"CropIdCard":true,"CropPortrait":true}
      */
     public void setConfig(String Config) {
         this.Config = Config;
@@ -307,6 +234,22 @@ Config = {"CropIdCard":true,"CropPortrait":true}
         this.EnableReflectDetail = EnableReflectDetail;
     }
 
+    /**
+     * Get Basic：使用基础卡证告警能力（含基础PS告警）； Advanced：开启进阶PS告警能力，PS告警效果更佳但需要更长耗时；建议测试对比后选用，默认值为 Basic 
+     * @return CardWarnType Basic：使用基础卡证告警能力（含基础PS告警）； Advanced：开启进阶PS告警能力，PS告警效果更佳但需要更长耗时；建议测试对比后选用，默认值为 Basic
+     */
+    public String getCardWarnType() {
+        return this.CardWarnType;
+    }
+
+    /**
+     * Set Basic：使用基础卡证告警能力（含基础PS告警）； Advanced：开启进阶PS告警能力，PS告警效果更佳但需要更长耗时；建议测试对比后选用，默认值为 Basic
+     * @param CardWarnType Basic：使用基础卡证告警能力（含基础PS告警）； Advanced：开启进阶PS告警能力，PS告警效果更佳但需要更长耗时；建议测试对比后选用，默认值为 Basic
+     */
+    public void setCardWarnType(String CardWarnType) {
+        this.CardWarnType = CardWarnType;
+    }
+
     public RecognizeEncryptedIDCardOCRRequest() {
     }
 
@@ -339,6 +282,9 @@ Config = {"CropIdCard":true,"CropPortrait":true}
         if (source.EnableReflectDetail != null) {
             this.EnableReflectDetail = new Boolean(source.EnableReflectDetail);
         }
+        if (source.CardWarnType != null) {
+            this.CardWarnType = new String(source.CardWarnType);
+        }
     }
 
 
@@ -354,6 +300,7 @@ Config = {"CropIdCard":true,"CropPortrait":true}
         this.setParamSimple(map, prefix + "Config", this.Config);
         this.setParamSimple(map, prefix + "EnableRecognitionRectify", this.EnableRecognitionRectify);
         this.setParamSimple(map, prefix + "EnableReflectDetail", this.EnableReflectDetail);
+        this.setParamSimple(map, prefix + "CardWarnType", this.CardWarnType);
 
     }
 }

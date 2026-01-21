@@ -31,14 +31,14 @@ public class ModifyNatGatewayAttributeRequest extends AbstractModel {
     private String NatGatewayId;
 
     /**
-    * NAT网关的名称，形如：`test_nat`。
+    * NAT网关的名称，形如：`test_nat`，边界值：[1,60] 字符。
     */
     @SerializedName("NatGatewayName")
     @Expose
     private String NatGatewayName;
 
     /**
-    * NAT网关最大外网出带宽(单位:Mbps)。
+    * NAT网关最大外网出带宽(单位:Mbps)，边界值：[0,50000]。
     */
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
@@ -66,6 +66,13 @@ public class ModifyNatGatewayAttributeRequest extends AbstractModel {
     private Boolean DeletionProtectionEnabled;
 
     /**
+    * 同一个内网地址通过NAT网关访问同一个目的IP时，是否使用固定的弹性公网IP。默认为true，使用固定IP；false代表使用随机IP。当前适用于标准型NAT网关。
+    */
+    @SerializedName("PublicAddressAffinity")
+    @Expose
+    private Boolean PublicAddressAffinity;
+
+    /**
      * Get NAT网关的ID，形如：`nat-df45454`。 
      * @return NatGatewayId NAT网关的ID，形如：`nat-df45454`。
      */
@@ -82,32 +89,32 @@ public class ModifyNatGatewayAttributeRequest extends AbstractModel {
     }
 
     /**
-     * Get NAT网关的名称，形如：`test_nat`。 
-     * @return NatGatewayName NAT网关的名称，形如：`test_nat`。
+     * Get NAT网关的名称，形如：`test_nat`，边界值：[1,60] 字符。 
+     * @return NatGatewayName NAT网关的名称，形如：`test_nat`，边界值：[1,60] 字符。
      */
     public String getNatGatewayName() {
         return this.NatGatewayName;
     }
 
     /**
-     * Set NAT网关的名称，形如：`test_nat`。
-     * @param NatGatewayName NAT网关的名称，形如：`test_nat`。
+     * Set NAT网关的名称，形如：`test_nat`，边界值：[1,60] 字符。
+     * @param NatGatewayName NAT网关的名称，形如：`test_nat`，边界值：[1,60] 字符。
      */
     public void setNatGatewayName(String NatGatewayName) {
         this.NatGatewayName = NatGatewayName;
     }
 
     /**
-     * Get NAT网关最大外网出带宽(单位:Mbps)。 
-     * @return InternetMaxBandwidthOut NAT网关最大外网出带宽(单位:Mbps)。
+     * Get NAT网关最大外网出带宽(单位:Mbps)，边界值：[0,50000]。 
+     * @return InternetMaxBandwidthOut NAT网关最大外网出带宽(单位:Mbps)，边界值：[0,50000]。
      */
     public Long getInternetMaxBandwidthOut() {
         return this.InternetMaxBandwidthOut;
     }
 
     /**
-     * Set NAT网关最大外网出带宽(单位:Mbps)。
-     * @param InternetMaxBandwidthOut NAT网关最大外网出带宽(单位:Mbps)。
+     * Set NAT网关最大外网出带宽(单位:Mbps)，边界值：[0,50000]。
+     * @param InternetMaxBandwidthOut NAT网关最大外网出带宽(单位:Mbps)，边界值：[0,50000]。
      */
     public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
@@ -161,6 +168,22 @@ public class ModifyNatGatewayAttributeRequest extends AbstractModel {
         this.DeletionProtectionEnabled = DeletionProtectionEnabled;
     }
 
+    /**
+     * Get 同一个内网地址通过NAT网关访问同一个目的IP时，是否使用固定的弹性公网IP。默认为true，使用固定IP；false代表使用随机IP。当前适用于标准型NAT网关。 
+     * @return PublicAddressAffinity 同一个内网地址通过NAT网关访问同一个目的IP时，是否使用固定的弹性公网IP。默认为true，使用固定IP；false代表使用随机IP。当前适用于标准型NAT网关。
+     */
+    public Boolean getPublicAddressAffinity() {
+        return this.PublicAddressAffinity;
+    }
+
+    /**
+     * Set 同一个内网地址通过NAT网关访问同一个目的IP时，是否使用固定的弹性公网IP。默认为true，使用固定IP；false代表使用随机IP。当前适用于标准型NAT网关。
+     * @param PublicAddressAffinity 同一个内网地址通过NAT网关访问同一个目的IP时，是否使用固定的弹性公网IP。默认为true，使用固定IP；false代表使用随机IP。当前适用于标准型NAT网关。
+     */
+    public void setPublicAddressAffinity(Boolean PublicAddressAffinity) {
+        this.PublicAddressAffinity = PublicAddressAffinity;
+    }
+
     public ModifyNatGatewayAttributeRequest() {
     }
 
@@ -190,6 +213,9 @@ public class ModifyNatGatewayAttributeRequest extends AbstractModel {
         if (source.DeletionProtectionEnabled != null) {
             this.DeletionProtectionEnabled = new Boolean(source.DeletionProtectionEnabled);
         }
+        if (source.PublicAddressAffinity != null) {
+            this.PublicAddressAffinity = new Boolean(source.PublicAddressAffinity);
+        }
     }
 
 
@@ -203,6 +229,7 @@ public class ModifyNatGatewayAttributeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ModifySecurityGroup", this.ModifySecurityGroup);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamSimple(map, prefix + "DeletionProtectionEnabled", this.DeletionProtectionEnabled);
+        this.setParamSimple(map, prefix + "PublicAddressAffinity", this.PublicAddressAffinity);
 
     }
 }

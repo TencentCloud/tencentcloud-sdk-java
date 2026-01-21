@@ -62,6 +62,13 @@ public class UpdateExporterIntegrationRequest extends AbstractModel {
     private String ClusterId;
 
     /**
+    * 值为true时禁用集成
+    */
+    @SerializedName("Disable")
+    @Expose
+    private Boolean Disable;
+
+    /**
      * Get Prometheus 实例 ID 
      * @return InstanceId Prometheus 实例 ID
      */
@@ -153,6 +160,22 @@ public class UpdateExporterIntegrationRequest extends AbstractModel {
         this.ClusterId = ClusterId;
     }
 
+    /**
+     * Get 值为true时禁用集成 
+     * @return Disable 值为true时禁用集成
+     */
+    public Boolean getDisable() {
+        return this.Disable;
+    }
+
+    /**
+     * Set 值为true时禁用集成
+     * @param Disable 值为true时禁用集成
+     */
+    public void setDisable(Boolean Disable) {
+        this.Disable = Disable;
+    }
+
     public UpdateExporterIntegrationRequest() {
     }
 
@@ -176,6 +199,9 @@ public class UpdateExporterIntegrationRequest extends AbstractModel {
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
         }
+        if (source.Disable != null) {
+            this.Disable = new Boolean(source.Disable);
+        }
     }
 
 
@@ -188,6 +214,7 @@ public class UpdateExporterIntegrationRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Content", this.Content);
         this.setParamSimple(map, prefix + "KubeType", this.KubeType);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "Disable", this.Disable);
 
     }
 }

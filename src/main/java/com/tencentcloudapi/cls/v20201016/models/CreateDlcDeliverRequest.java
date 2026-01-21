@@ -24,212 +24,207 @@ import java.util.HashMap;
 public class CreateDlcDeliverRequest extends AbstractModel {
 
     /**
-    * 日志主题id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+    * <p>日志主题id。</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * 名称：长度不超过64字符，以字母开头，接受0-9,a-z,A-Z, _,-,中文字符。
+    * <p>名称：长度不超过64字符，以字母开头，接受0-9,a-z,A-Z, _,-,中文字符。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 投递类型。0:批投递,1:实时投递
+    * <p>投递类型。0:批投递,1:实时投递</p>
     */
     @SerializedName("DeliverType")
     @Expose
     private Long DeliverType;
 
     /**
-    * 投递时间范围的开始时间
+    * <p>投递时间范围的开始时间</p>
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * dlc配置信息
+    * <p>dlc配置信息</p>
     */
     @SerializedName("DlcInfo")
     @Expose
     private DlcInfo DlcInfo;
 
     /**
-    * 投递文件大小,单位MB。 DeliverType=0时必填，范围 5<= MaxSize <= 256。
+    * <p>投递文件大小,单位MB。 DeliverType=0时必填，范围 5&lt;= MaxSize &lt;= 256。</p>
     */
     @SerializedName("MaxSize")
     @Expose
     private Long MaxSize;
 
     /**
-    * 投递间隔，单位秒。 DeliverType=0时必填，范围 300<= Interval <=900。
+    * <p>投递间隔，单位秒。 DeliverType=0时必填，范围 300&lt;= Interval &lt;=900。</p>
     */
     @SerializedName("Interval")
     @Expose
     private Long Interval;
 
     /**
-    * 投递时间范围的结束时间。 如果为空，则表示不限时。EndTime不为空时，需要大于StartTime。
+    * <p>投递时间范围的结束时间。 如果为空，则表示不限时。EndTime不为空时，需要大于StartTime。</p>
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * 是否开启投递服务日志。1关闭，2开启。默认开启
+    * <p>是否开启投递服务日志。1关闭，2开启。默认开启</p>
     */
     @SerializedName("HasServicesLog")
     @Expose
     private Long HasServicesLog;
 
     /**
-     * Get 日志主题id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。 
-     * @return TopicId 日志主题id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * Get <p>日志主题id。</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul> 
+     * @return TopicId <p>日志主题id。</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 日志主题id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
-     * @param TopicId 日志主题id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * Set <p>日志主题id。</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
+     * @param TopicId <p>日志主题id。</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 名称：长度不超过64字符，以字母开头，接受0-9,a-z,A-Z, _,-,中文字符。 
-     * @return Name 名称：长度不超过64字符，以字母开头，接受0-9,a-z,A-Z, _,-,中文字符。
+     * Get <p>名称：长度不超过64字符，以字母开头，接受0-9,a-z,A-Z, _,-,中文字符。</p> 
+     * @return Name <p>名称：长度不超过64字符，以字母开头，接受0-9,a-z,A-Z, _,-,中文字符。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 名称：长度不超过64字符，以字母开头，接受0-9,a-z,A-Z, _,-,中文字符。
-     * @param Name 名称：长度不超过64字符，以字母开头，接受0-9,a-z,A-Z, _,-,中文字符。
+     * Set <p>名称：长度不超过64字符，以字母开头，接受0-9,a-z,A-Z, _,-,中文字符。</p>
+     * @param Name <p>名称：长度不超过64字符，以字母开头，接受0-9,a-z,A-Z, _,-,中文字符。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 投递类型。0:批投递,1:实时投递 
-     * @return DeliverType 投递类型。0:批投递,1:实时投递
+     * Get <p>投递类型。0:批投递,1:实时投递</p> 
+     * @return DeliverType <p>投递类型。0:批投递,1:实时投递</p>
      */
     public Long getDeliverType() {
         return this.DeliverType;
     }
 
     /**
-     * Set 投递类型。0:批投递,1:实时投递
-     * @param DeliverType 投递类型。0:批投递,1:实时投递
+     * Set <p>投递类型。0:批投递,1:实时投递</p>
+     * @param DeliverType <p>投递类型。0:批投递,1:实时投递</p>
      */
     public void setDeliverType(Long DeliverType) {
         this.DeliverType = DeliverType;
     }
 
     /**
-     * Get 投递时间范围的开始时间 
-     * @return StartTime 投递时间范围的开始时间
+     * Get <p>投递时间范围的开始时间</p> 
+     * @return StartTime <p>投递时间范围的开始时间</p>
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 投递时间范围的开始时间
-     * @param StartTime 投递时间范围的开始时间
+     * Set <p>投递时间范围的开始时间</p>
+     * @param StartTime <p>投递时间范围的开始时间</p>
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get dlc配置信息 
-     * @return DlcInfo dlc配置信息
+     * Get <p>dlc配置信息</p> 
+     * @return DlcInfo <p>dlc配置信息</p>
      */
     public DlcInfo getDlcInfo() {
         return this.DlcInfo;
     }
 
     /**
-     * Set dlc配置信息
-     * @param DlcInfo dlc配置信息
+     * Set <p>dlc配置信息</p>
+     * @param DlcInfo <p>dlc配置信息</p>
      */
     public void setDlcInfo(DlcInfo DlcInfo) {
         this.DlcInfo = DlcInfo;
     }
 
     /**
-     * Get 投递文件大小,单位MB。 DeliverType=0时必填，范围 5<= MaxSize <= 256。 
-     * @return MaxSize 投递文件大小,单位MB。 DeliverType=0时必填，范围 5<= MaxSize <= 256。
+     * Get <p>投递文件大小,单位MB。 DeliverType=0时必填，范围 5&lt;= MaxSize &lt;= 256。</p> 
+     * @return MaxSize <p>投递文件大小,单位MB。 DeliverType=0时必填，范围 5&lt;= MaxSize &lt;= 256。</p>
      */
     public Long getMaxSize() {
         return this.MaxSize;
     }
 
     /**
-     * Set 投递文件大小,单位MB。 DeliverType=0时必填，范围 5<= MaxSize <= 256。
-     * @param MaxSize 投递文件大小,单位MB。 DeliverType=0时必填，范围 5<= MaxSize <= 256。
+     * Set <p>投递文件大小,单位MB。 DeliverType=0时必填，范围 5&lt;= MaxSize &lt;= 256。</p>
+     * @param MaxSize <p>投递文件大小,单位MB。 DeliverType=0时必填，范围 5&lt;= MaxSize &lt;= 256。</p>
      */
     public void setMaxSize(Long MaxSize) {
         this.MaxSize = MaxSize;
     }
 
     /**
-     * Get 投递间隔，单位秒。 DeliverType=0时必填，范围 300<= Interval <=900。 
-     * @return Interval 投递间隔，单位秒。 DeliverType=0时必填，范围 300<= Interval <=900。
+     * Get <p>投递间隔，单位秒。 DeliverType=0时必填，范围 300&lt;= Interval &lt;=900。</p> 
+     * @return Interval <p>投递间隔，单位秒。 DeliverType=0时必填，范围 300&lt;= Interval &lt;=900。</p>
      */
     public Long getInterval() {
         return this.Interval;
     }
 
     /**
-     * Set 投递间隔，单位秒。 DeliverType=0时必填，范围 300<= Interval <=900。
-     * @param Interval 投递间隔，单位秒。 DeliverType=0时必填，范围 300<= Interval <=900。
+     * Set <p>投递间隔，单位秒。 DeliverType=0时必填，范围 300&lt;= Interval &lt;=900。</p>
+     * @param Interval <p>投递间隔，单位秒。 DeliverType=0时必填，范围 300&lt;= Interval &lt;=900。</p>
      */
     public void setInterval(Long Interval) {
         this.Interval = Interval;
     }
 
     /**
-     * Get 投递时间范围的结束时间。 如果为空，则表示不限时。EndTime不为空时，需要大于StartTime。 
-     * @return EndTime 投递时间范围的结束时间。 如果为空，则表示不限时。EndTime不为空时，需要大于StartTime。
+     * Get <p>投递时间范围的结束时间。 如果为空，则表示不限时。EndTime不为空时，需要大于StartTime。</p> 
+     * @return EndTime <p>投递时间范围的结束时间。 如果为空，则表示不限时。EndTime不为空时，需要大于StartTime。</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 投递时间范围的结束时间。 如果为空，则表示不限时。EndTime不为空时，需要大于StartTime。
-     * @param EndTime 投递时间范围的结束时间。 如果为空，则表示不限时。EndTime不为空时，需要大于StartTime。
+     * Set <p>投递时间范围的结束时间。 如果为空，则表示不限时。EndTime不为空时，需要大于StartTime。</p>
+     * @param EndTime <p>投递时间范围的结束时间。 如果为空，则表示不限时。EndTime不为空时，需要大于StartTime。</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 是否开启投递服务日志。1关闭，2开启。默认开启 
-     * @return HasServicesLog 是否开启投递服务日志。1关闭，2开启。默认开启
+     * Get <p>是否开启投递服务日志。1关闭，2开启。默认开启</p> 
+     * @return HasServicesLog <p>是否开启投递服务日志。1关闭，2开启。默认开启</p>
      */
     public Long getHasServicesLog() {
         return this.HasServicesLog;
     }
 
     /**
-     * Set 是否开启投递服务日志。1关闭，2开启。默认开启
-     * @param HasServicesLog 是否开启投递服务日志。1关闭，2开启。默认开启
+     * Set <p>是否开启投递服务日志。1关闭，2开启。默认开启</p>
+     * @param HasServicesLog <p>是否开启投递服务日志。1关闭，2开启。默认开启</p>
      */
     public void setHasServicesLog(Long HasServicesLog) {
         this.HasServicesLog = HasServicesLog;

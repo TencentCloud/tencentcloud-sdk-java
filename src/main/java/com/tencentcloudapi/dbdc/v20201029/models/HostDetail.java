@@ -192,6 +192,13 @@ public class HostDetail extends AbstractModel {
     private String InstanceId;
 
     /**
+    * 可用区列表
+    */
+    @SerializedName("Zones")
+    @Expose
+    private String [] Zones;
+
+    /**
      * Get 主机Id 
      * @return HostId 主机Id
      */
@@ -575,6 +582,22 @@ public class HostDetail extends AbstractModel {
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get 可用区列表 
+     * @return Zones 可用区列表
+     */
+    public String [] getZones() {
+        return this.Zones;
+    }
+
+    /**
+     * Set 可用区列表
+     * @param Zones 可用区列表
+     */
+    public void setZones(String [] Zones) {
+        this.Zones = Zones;
+    }
+
     public HostDetail() {
     }
 
@@ -655,6 +678,12 @@ public class HostDetail extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.Zones != null) {
+            this.Zones = new String[source.Zones.length];
+            for (int i = 0; i < source.Zones.length; i++) {
+                this.Zones[i] = new String(source.Zones[i]);
+            }
+        }
     }
 
 
@@ -686,6 +715,7 @@ public class HostDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "PidTag", this.PidTag);
         this.setParamSimple(map, prefix + "Pid", this.Pid);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
 
     }
 }

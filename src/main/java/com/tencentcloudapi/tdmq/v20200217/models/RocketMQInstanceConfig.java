@@ -156,6 +156,21 @@ public class RocketMQInstanceConfig extends AbstractModel {
     private Float SendReceiveRatio;
 
     /**
+    * 收发 TPS 峰值上限
+    */
+    @SerializedName("TpsLimit")
+    @Expose
+    private Long TpsLimit;
+
+    /**
+    * 通用集群规格
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GeneralSkuCode")
+    @Expose
+    private String GeneralSkuCode;
+
+    /**
      * Get 单命名空间TPS上线 
      * @return MaxTpsPerNamespace 单命名空间TPS上线
      */
@@ -467,6 +482,42 @@ public class RocketMQInstanceConfig extends AbstractModel {
         this.SendReceiveRatio = SendReceiveRatio;
     }
 
+    /**
+     * Get 收发 TPS 峰值上限 
+     * @return TpsLimit 收发 TPS 峰值上限
+     */
+    public Long getTpsLimit() {
+        return this.TpsLimit;
+    }
+
+    /**
+     * Set 收发 TPS 峰值上限
+     * @param TpsLimit 收发 TPS 峰值上限
+     */
+    public void setTpsLimit(Long TpsLimit) {
+        this.TpsLimit = TpsLimit;
+    }
+
+    /**
+     * Get 通用集群规格
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GeneralSkuCode 通用集群规格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGeneralSkuCode() {
+        return this.GeneralSkuCode;
+    }
+
+    /**
+     * Set 通用集群规格
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GeneralSkuCode 通用集群规格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGeneralSkuCode(String GeneralSkuCode) {
+        this.GeneralSkuCode = GeneralSkuCode;
+    }
+
     public RocketMQInstanceConfig() {
     }
 
@@ -535,6 +586,12 @@ public class RocketMQInstanceConfig extends AbstractModel {
         if (source.SendReceiveRatio != null) {
             this.SendReceiveRatio = new Float(source.SendReceiveRatio);
         }
+        if (source.TpsLimit != null) {
+            this.TpsLimit = new Long(source.TpsLimit);
+        }
+        if (source.GeneralSkuCode != null) {
+            this.GeneralSkuCode = new String(source.GeneralSkuCode);
+        }
     }
 
 
@@ -560,6 +617,8 @@ public class RocketMQInstanceConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "TopicNumLowerLimit", this.TopicNumLowerLimit);
         this.setParamSimple(map, prefix + "TopicNumUpperLimit", this.TopicNumUpperLimit);
         this.setParamSimple(map, prefix + "SendReceiveRatio", this.SendReceiveRatio);
+        this.setParamSimple(map, prefix + "TpsLimit", this.TpsLimit);
+        this.setParamSimple(map, prefix + "GeneralSkuCode", this.GeneralSkuCode);
 
     }
 }

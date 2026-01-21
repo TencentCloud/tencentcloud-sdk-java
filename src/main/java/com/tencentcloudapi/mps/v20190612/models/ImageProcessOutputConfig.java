@@ -60,6 +60,20 @@ public class ImageProcessOutputConfig extends AbstractModel {
     private String ImageSize;
 
     /**
+    * 图片输出编码格式，可取值：PNG、JPG、WEBP、HEIF、AVIF。
+    */
+    @SerializedName("Format")
+    @Expose
+    private String Format;
+
+    /**
+    * 图片质量，对于某些输出格式可用，只有Format 有效的情况下生效，取值范围 0-100。
+    */
+    @SerializedName("Quality")
+    @Expose
+    private Long Quality;
+
+    /**
      * Get 输出图片的宽高比。可以配合ImageWidth 和 ImageHeight 使用，规则如下：
 
 1. 仅指定 AspectRatio 时，根据原图输入进行自适应调整。
@@ -155,6 +169,38 @@ public class ImageProcessOutputConfig extends AbstractModel {
         this.ImageSize = ImageSize;
     }
 
+    /**
+     * Get 图片输出编码格式，可取值：PNG、JPG、WEBP、HEIF、AVIF。 
+     * @return Format 图片输出编码格式，可取值：PNG、JPG、WEBP、HEIF、AVIF。
+     */
+    public String getFormat() {
+        return this.Format;
+    }
+
+    /**
+     * Set 图片输出编码格式，可取值：PNG、JPG、WEBP、HEIF、AVIF。
+     * @param Format 图片输出编码格式，可取值：PNG、JPG、WEBP、HEIF、AVIF。
+     */
+    public void setFormat(String Format) {
+        this.Format = Format;
+    }
+
+    /**
+     * Get 图片质量，对于某些输出格式可用，只有Format 有效的情况下生效，取值范围 0-100。 
+     * @return Quality 图片质量，对于某些输出格式可用，只有Format 有效的情况下生效，取值范围 0-100。
+     */
+    public Long getQuality() {
+        return this.Quality;
+    }
+
+    /**
+     * Set 图片质量，对于某些输出格式可用，只有Format 有效的情况下生效，取值范围 0-100。
+     * @param Quality 图片质量，对于某些输出格式可用，只有Format 有效的情况下生效，取值范围 0-100。
+     */
+    public void setQuality(Long Quality) {
+        this.Quality = Quality;
+    }
+
     public ImageProcessOutputConfig() {
     }
 
@@ -175,6 +221,12 @@ public class ImageProcessOutputConfig extends AbstractModel {
         if (source.ImageSize != null) {
             this.ImageSize = new String(source.ImageSize);
         }
+        if (source.Format != null) {
+            this.Format = new String(source.Format);
+        }
+        if (source.Quality != null) {
+            this.Quality = new Long(source.Quality);
+        }
     }
 
 
@@ -186,6 +238,8 @@ public class ImageProcessOutputConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "ImageHeight", this.ImageHeight);
         this.setParamSimple(map, prefix + "ImageWidth", this.ImageWidth);
         this.setParamSimple(map, prefix + "ImageSize", this.ImageSize);
+        this.setParamSimple(map, prefix + "Format", this.Format);
+        this.setParamSimple(map, prefix + "Quality", this.Quality);
 
     }
 }

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeParamTemplatesResponse extends AbstractModel {
 
     /**
-    * 该用户的参数模板数量。
+    * <p>该用户的参数模板数量。</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 参数模板详情。
+    * <p>参数模板详情。</p>
     */
     @SerializedName("Items")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeParamTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 该用户的参数模板数量。 
-     * @return TotalCount 该用户的参数模板数量。
+     * Get <p>该用户的参数模板数量。</p> 
+     * @return TotalCount <p>该用户的参数模板数量。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 该用户的参数模板数量。
-     * @param TotalCount 该用户的参数模板数量。
+     * Set <p>该用户的参数模板数量。</p>
+     * @param TotalCount <p>该用户的参数模板数量。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 参数模板详情。 
-     * @return Items 参数模板详情。
+     * Get <p>参数模板详情。</p> 
+     * @return Items <p>参数模板详情。</p>
      */
     public ParamTemplateInfo [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set 参数模板详情。
-     * @param Items 参数模板详情。
+     * Set <p>参数模板详情。</p>
+     * @param Items <p>参数模板详情。</p>
      */
     public void setItems(ParamTemplateInfo [] Items) {
         this.Items = Items;

@@ -116,6 +116,13 @@ public class MediaBasicInfo extends AbstractModel {
     private String StorageRegion;
 
     /**
+    * 媒体的存储路径。
+    */
+    @SerializedName("StoragePath")
+    @Expose
+    private String StoragePath;
+
+    /**
     * 媒体文件的标签信息。
     */
     @SerializedName("TagSet")
@@ -370,6 +377,22 @@ public class MediaBasicInfo extends AbstractModel {
     }
 
     /**
+     * Get 媒体的存储路径。 
+     * @return StoragePath 媒体的存储路径。
+     */
+    public String getStoragePath() {
+        return this.StoragePath;
+    }
+
+    /**
+     * Set 媒体的存储路径。
+     * @param StoragePath 媒体的存储路径。
+     */
+    public void setStoragePath(String StoragePath) {
+        this.StoragePath = StoragePath;
+    }
+
+    /**
      * Get 媒体文件的标签信息。 
      * @return TagSet 媒体文件的标签信息。
      */
@@ -524,6 +547,9 @@ public class MediaBasicInfo extends AbstractModel {
         if (source.StorageRegion != null) {
             this.StorageRegion = new String(source.StorageRegion);
         }
+        if (source.StoragePath != null) {
+            this.StoragePath = new String(source.StoragePath);
+        }
         if (source.TagSet != null) {
             this.TagSet = new String[source.TagSet.length];
             for (int i = 0; i < source.TagSet.length; i++) {
@@ -562,6 +588,7 @@ public class MediaBasicInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "MediaUrl", this.MediaUrl);
         this.setParamObj(map, prefix + "SourceInfo.", this.SourceInfo);
         this.setParamSimple(map, prefix + "StorageRegion", this.StorageRegion);
+        this.setParamSimple(map, prefix + "StoragePath", this.StoragePath);
         this.setParamArraySimple(map, prefix + "TagSet.", this.TagSet);
         this.setParamSimple(map, prefix + "Vid", this.Vid);
         this.setParamSimple(map, prefix + "Category", this.Category);

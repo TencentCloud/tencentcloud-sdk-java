@@ -70,6 +70,30 @@ public class SubAppIdInfo extends AbstractModel {
     private String Name;
 
     /**
+    * 此应用的模式，可选值为：
+- fileid：仅FileID模式
+- - fileid+path：FileID & Path模式
+留空时默认选择仅FileID模式
+    */
+    @SerializedName("Mode")
+    @Expose
+    private String Mode;
+
+    /**
+    * 子应用已启用的存储地域。
+    */
+    @SerializedName("StorageRegions")
+    @Expose
+    private String [] StorageRegions;
+
+    /**
+    * 子应用绑定的tag。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private ResourceTag [] Tags;
+
+    /**
      * Get 子应用 ID。 
      * @return SubAppId 子应用 ID。
      */
@@ -181,6 +205,66 @@ public class SubAppIdInfo extends AbstractModel {
         this.Name = Name;
     }
 
+    /**
+     * Get 此应用的模式，可选值为：
+- fileid：仅FileID模式
+- - fileid+path：FileID & Path模式
+留空时默认选择仅FileID模式 
+     * @return Mode 此应用的模式，可选值为：
+- fileid：仅FileID模式
+- - fileid+path：FileID & Path模式
+留空时默认选择仅FileID模式
+     */
+    public String getMode() {
+        return this.Mode;
+    }
+
+    /**
+     * Set 此应用的模式，可选值为：
+- fileid：仅FileID模式
+- - fileid+path：FileID & Path模式
+留空时默认选择仅FileID模式
+     * @param Mode 此应用的模式，可选值为：
+- fileid：仅FileID模式
+- - fileid+path：FileID & Path模式
+留空时默认选择仅FileID模式
+     */
+    public void setMode(String Mode) {
+        this.Mode = Mode;
+    }
+
+    /**
+     * Get 子应用已启用的存储地域。 
+     * @return StorageRegions 子应用已启用的存储地域。
+     */
+    public String [] getStorageRegions() {
+        return this.StorageRegions;
+    }
+
+    /**
+     * Set 子应用已启用的存储地域。
+     * @param StorageRegions 子应用已启用的存储地域。
+     */
+    public void setStorageRegions(String [] StorageRegions) {
+        this.StorageRegions = StorageRegions;
+    }
+
+    /**
+     * Get 子应用绑定的tag。 
+     * @return Tags 子应用绑定的tag。
+     */
+    public ResourceTag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 子应用绑定的tag。
+     * @param Tags 子应用绑定的tag。
+     */
+    public void setTags(ResourceTag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public SubAppIdInfo() {
     }
 
@@ -207,6 +291,21 @@ public class SubAppIdInfo extends AbstractModel {
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.Mode != null) {
+            this.Mode = new String(source.Mode);
+        }
+        if (source.StorageRegions != null) {
+            this.StorageRegions = new String[source.StorageRegions.length];
+            for (int i = 0; i < source.StorageRegions.length; i++) {
+                this.StorageRegions[i] = new String(source.StorageRegions[i]);
+            }
+        }
+        if (source.Tags != null) {
+            this.Tags = new ResourceTag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new ResourceTag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -220,6 +319,9 @@ public class SubAppIdInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Mode", this.Mode);
+        this.setParamArraySimple(map, prefix + "StorageRegions.", this.StorageRegions);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

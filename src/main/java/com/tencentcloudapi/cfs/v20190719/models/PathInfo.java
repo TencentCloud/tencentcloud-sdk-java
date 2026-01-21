@@ -38,6 +38,13 @@ public class PathInfo extends AbstractModel {
     private String Path;
 
     /**
+    * 数据流动Id
+    */
+    @SerializedName("DataFlowId")
+    @Expose
+    private String DataFlowId;
+
+    /**
      * Get 文件系统ID 
      * @return FileSystemId 文件系统ID
      */
@@ -69,6 +76,22 @@ public class PathInfo extends AbstractModel {
         this.Path = Path;
     }
 
+    /**
+     * Get 数据流动Id 
+     * @return DataFlowId 数据流动Id
+     */
+    public String getDataFlowId() {
+        return this.DataFlowId;
+    }
+
+    /**
+     * Set 数据流动Id
+     * @param DataFlowId 数据流动Id
+     */
+    public void setDataFlowId(String DataFlowId) {
+        this.DataFlowId = DataFlowId;
+    }
+
     public PathInfo() {
     }
 
@@ -83,6 +106,9 @@ public class PathInfo extends AbstractModel {
         if (source.Path != null) {
             this.Path = new String(source.Path);
         }
+        if (source.DataFlowId != null) {
+            this.DataFlowId = new String(source.DataFlowId);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class PathInfo extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
         this.setParamSimple(map, prefix + "Path", this.Path);
+        this.setParamSimple(map, prefix + "DataFlowId", this.DataFlowId);
 
     }
 }

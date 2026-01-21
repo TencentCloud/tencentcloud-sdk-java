@@ -1438,6 +1438,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *获取集团账号角色
+     * @param req GetOrganizationRoleRequest
+     * @return GetOrganizationRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetOrganizationRoleResponse GetOrganizationRole(GetOrganizationRoleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetOrganizationRole", GetOrganizationRoleResponse.class);
+    }
+
+    /**
      *导入IP黑白名单
      * @param req ImportIpAccessControlRequest
      * @return ImportIpAccessControlResponse

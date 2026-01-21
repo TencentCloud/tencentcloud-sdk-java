@@ -24,6 +24,14 @@ import java.util.HashMap;
 public class EnhanceMediaQualityRequest extends AbstractModel {
 
     /**
+    * 音画质重生模板 ID。
+针对典型的使用场景，云点播提供了多个[预置模板](https://cloud.tencent.com/document/product/266/102586#50604b3f-0286-4a10-a3f7-18218116aff7)。
+    */
+    @SerializedName("Definition")
+    @Expose
+    private Long Definition;
+
+    /**
     * 媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。
     */
     @SerializedName("FileId")
@@ -31,12 +39,12 @@ public class EnhanceMediaQualityRequest extends AbstractModel {
     private String FileId;
 
     /**
-    * 音画质重生模板 ID。
-针对典型的使用场景，云点播提供了多个[预置模板](https://cloud.tencent.com/document/product/266/102586#50604b3f-0286-4a10-a3f7-18218116aff7)。
+    * 媒体的存储路径。
+FileId和MediaStoragePath必须提供其中一个。
     */
-    @SerializedName("Definition")
+    @SerializedName("MediaStoragePath")
     @Expose
-    private Long Definition;
+    private String MediaStoragePath;
 
     /**
     * <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
@@ -74,22 +82,6 @@ public class EnhanceMediaQualityRequest extends AbstractModel {
     private Long TasksPriority;
 
     /**
-     * Get 媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。 
-     * @return FileId 媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。
-     */
-    public String getFileId() {
-        return this.FileId;
-    }
-
-    /**
-     * Set 媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。
-     * @param FileId 媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。
-     */
-    public void setFileId(String FileId) {
-        this.FileId = FileId;
-    }
-
-    /**
      * Get 音画质重生模板 ID。
 针对典型的使用场景，云点播提供了多个[预置模板](https://cloud.tencent.com/document/product/266/102586#50604b3f-0286-4a10-a3f7-18218116aff7)。 
      * @return Definition 音画质重生模板 ID。
@@ -107,6 +99,42 @@ public class EnhanceMediaQualityRequest extends AbstractModel {
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
+    }
+
+    /**
+     * Get 媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。 
+     * @return FileId 媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。
+     */
+    public String getFileId() {
+        return this.FileId;
+    }
+
+    /**
+     * Set 媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。
+     * @param FileId 媒体文件 ID，即该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。
+     */
+    public void setFileId(String FileId) {
+        this.FileId = FileId;
+    }
+
+    /**
+     * Get 媒体的存储路径。
+FileId和MediaStoragePath必须提供其中一个。 
+     * @return MediaStoragePath 媒体的存储路径。
+FileId和MediaStoragePath必须提供其中一个。
+     */
+    public String getMediaStoragePath() {
+        return this.MediaStoragePath;
+    }
+
+    /**
+     * Set 媒体的存储路径。
+FileId和MediaStoragePath必须提供其中一个。
+     * @param MediaStoragePath 媒体的存储路径。
+FileId和MediaStoragePath必须提供其中一个。
+     */
+    public void setMediaStoragePath(String MediaStoragePath) {
+        this.MediaStoragePath = MediaStoragePath;
     }
 
     /**
@@ -197,11 +225,14 @@ public class EnhanceMediaQualityRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public EnhanceMediaQualityRequest(EnhanceMediaQualityRequest source) {
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
         if (source.FileId != null) {
             this.FileId = new String(source.FileId);
         }
-        if (source.Definition != null) {
-            this.Definition = new Long(source.Definition);
+        if (source.MediaStoragePath != null) {
+            this.MediaStoragePath = new String(source.MediaStoragePath);
         }
         if (source.SubAppId != null) {
             this.SubAppId = new Long(source.SubAppId);
@@ -225,8 +256,9 @@ public class EnhanceMediaQualityRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamSimple(map, prefix + "Definition", this.Definition);
+        this.setParamSimple(map, prefix + "FileId", this.FileId);
+        this.setParamSimple(map, prefix + "MediaStoragePath", this.MediaStoragePath);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);

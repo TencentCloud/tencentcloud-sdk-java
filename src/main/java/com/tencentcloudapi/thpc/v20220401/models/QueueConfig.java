@@ -24,233 +24,256 @@ import java.util.HashMap;
 public class QueueConfig extends AbstractModel {
 
     /**
-    * 队列名称。
+    * <p>队列名称。</p>
     */
     @SerializedName("QueueName")
     @Expose
     private String QueueName;
 
     /**
-    * 队列中弹性节点数量最小值。取值范围0～200。
+    * <p>队列中弹性节点数量最小值。取值范围0～200。</p>
     */
     @SerializedName("MinSize")
     @Expose
     private Long MinSize;
 
     /**
-    * 队列中弹性节点数量最大值。取值范围0～200。
+    * <p>队列中弹性节点数量最大值。取值范围0～200。</p>
     */
     @SerializedName("MaxSize")
     @Expose
     private Long MaxSize;
 
     /**
-    * 是否开启自动扩容。
+    * <p>是否开启自动扩容。</p>
     */
     @SerializedName("EnableAutoExpansion")
     @Expose
     private Boolean EnableAutoExpansion;
 
     /**
-    * 是否开启自动缩容。
+    * <p>是否开启自动缩容。</p>
     */
     @SerializedName("EnableAutoShrink")
     @Expose
     private Boolean EnableAutoShrink;
 
     /**
-    * 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前仅支持公有镜和特定自定义镜像。
+    * <p>指定有效的<a href="https://cloud.tencent.com/document/product/213/4940">镜像</a>ID，格式形如<code>img-xxx</code>。目前仅支持公有镜和特定自定义镜像。</p>
     */
     @SerializedName("ImageId")
     @Expose
     private String ImageId;
 
     /**
-    * 节点系统盘配置信息。若不指定该参数，则按照系统默认值进行分配。
+    * <p>节点系统盘配置信息。若不指定该参数，则按照系统默认值进行分配。</p>
     */
     @SerializedName("SystemDisk")
     @Expose
     private SystemDisk SystemDisk;
 
     /**
-    * 节点数据盘配置信息。若不指定该参数，则默认不购买数据盘。支持购买的时候指定21块数据盘，其中最多包含1块LOCAL_BASIC数据盘或者LOCAL_SSD数据盘，最多包含20块CLOUD_BASIC数据盘、CLOUD_PREMIUM数据盘或者CLOUD_SSD数据盘。
+    * <p>节点数据盘配置信息。若不指定该参数，则默认不购买数据盘。支持购买的时候指定21块数据盘，其中最多包含1块LOCAL_BASIC数据盘或者LOCAL_SSD数据盘，最多包含20块CLOUD_BASIC数据盘、CLOUD_PREMIUM数据盘或者CLOUD_SSD数据盘。</p>
     */
     @SerializedName("DataDisks")
     @Expose
     private DataDisk [] DataDisks;
 
     /**
-    * 公网带宽相关信息设置。若不指定该参数，则默认公网带宽为0Mbps。
+    * <p>公网带宽相关信息设置。若不指定该参数，则默认公网带宽为0Mbps。</p>
     */
     @SerializedName("InternetAccessible")
     @Expose
     private InternetAccessible InternetAccessible;
 
     /**
-    * 扩容节点配置信息。
+    * <p>扩容节点配置信息。</p>
     */
     @SerializedName("ExpansionNodeConfigs")
     @Expose
     private ExpansionNodeConfig [] ExpansionNodeConfigs;
 
     /**
-     * Get 队列名称。 
-     * @return QueueName 队列名称。
+    * <p>扩容实例模板，可以在cvm侧进行设置</p>
+    */
+    @SerializedName("LaunchTemplateIds")
+    @Expose
+    private String [] LaunchTemplateIds;
+
+    /**
+     * Get <p>队列名称。</p> 
+     * @return QueueName <p>队列名称。</p>
      */
     public String getQueueName() {
         return this.QueueName;
     }
 
     /**
-     * Set 队列名称。
-     * @param QueueName 队列名称。
+     * Set <p>队列名称。</p>
+     * @param QueueName <p>队列名称。</p>
      */
     public void setQueueName(String QueueName) {
         this.QueueName = QueueName;
     }
 
     /**
-     * Get 队列中弹性节点数量最小值。取值范围0～200。 
-     * @return MinSize 队列中弹性节点数量最小值。取值范围0～200。
+     * Get <p>队列中弹性节点数量最小值。取值范围0～200。</p> 
+     * @return MinSize <p>队列中弹性节点数量最小值。取值范围0～200。</p>
      */
     public Long getMinSize() {
         return this.MinSize;
     }
 
     /**
-     * Set 队列中弹性节点数量最小值。取值范围0～200。
-     * @param MinSize 队列中弹性节点数量最小值。取值范围0～200。
+     * Set <p>队列中弹性节点数量最小值。取值范围0～200。</p>
+     * @param MinSize <p>队列中弹性节点数量最小值。取值范围0～200。</p>
      */
     public void setMinSize(Long MinSize) {
         this.MinSize = MinSize;
     }
 
     /**
-     * Get 队列中弹性节点数量最大值。取值范围0～200。 
-     * @return MaxSize 队列中弹性节点数量最大值。取值范围0～200。
+     * Get <p>队列中弹性节点数量最大值。取值范围0～200。</p> 
+     * @return MaxSize <p>队列中弹性节点数量最大值。取值范围0～200。</p>
      */
     public Long getMaxSize() {
         return this.MaxSize;
     }
 
     /**
-     * Set 队列中弹性节点数量最大值。取值范围0～200。
-     * @param MaxSize 队列中弹性节点数量最大值。取值范围0～200。
+     * Set <p>队列中弹性节点数量最大值。取值范围0～200。</p>
+     * @param MaxSize <p>队列中弹性节点数量最大值。取值范围0～200。</p>
      */
     public void setMaxSize(Long MaxSize) {
         this.MaxSize = MaxSize;
     }
 
     /**
-     * Get 是否开启自动扩容。 
-     * @return EnableAutoExpansion 是否开启自动扩容。
+     * Get <p>是否开启自动扩容。</p> 
+     * @return EnableAutoExpansion <p>是否开启自动扩容。</p>
      */
     public Boolean getEnableAutoExpansion() {
         return this.EnableAutoExpansion;
     }
 
     /**
-     * Set 是否开启自动扩容。
-     * @param EnableAutoExpansion 是否开启自动扩容。
+     * Set <p>是否开启自动扩容。</p>
+     * @param EnableAutoExpansion <p>是否开启自动扩容。</p>
      */
     public void setEnableAutoExpansion(Boolean EnableAutoExpansion) {
         this.EnableAutoExpansion = EnableAutoExpansion;
     }
 
     /**
-     * Get 是否开启自动缩容。 
-     * @return EnableAutoShrink 是否开启自动缩容。
+     * Get <p>是否开启自动缩容。</p> 
+     * @return EnableAutoShrink <p>是否开启自动缩容。</p>
      */
     public Boolean getEnableAutoShrink() {
         return this.EnableAutoShrink;
     }
 
     /**
-     * Set 是否开启自动缩容。
-     * @param EnableAutoShrink 是否开启自动缩容。
+     * Set <p>是否开启自动缩容。</p>
+     * @param EnableAutoShrink <p>是否开启自动缩容。</p>
      */
     public void setEnableAutoShrink(Boolean EnableAutoShrink) {
         this.EnableAutoShrink = EnableAutoShrink;
     }
 
     /**
-     * Get 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前仅支持公有镜和特定自定义镜像。 
-     * @return ImageId 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前仅支持公有镜和特定自定义镜像。
+     * Get <p>指定有效的<a href="https://cloud.tencent.com/document/product/213/4940">镜像</a>ID，格式形如<code>img-xxx</code>。目前仅支持公有镜和特定自定义镜像。</p> 
+     * @return ImageId <p>指定有效的<a href="https://cloud.tencent.com/document/product/213/4940">镜像</a>ID，格式形如<code>img-xxx</code>。目前仅支持公有镜和特定自定义镜像。</p>
      */
     public String getImageId() {
         return this.ImageId;
     }
 
     /**
-     * Set 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前仅支持公有镜和特定自定义镜像。
-     * @param ImageId 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前仅支持公有镜和特定自定义镜像。
+     * Set <p>指定有效的<a href="https://cloud.tencent.com/document/product/213/4940">镜像</a>ID，格式形如<code>img-xxx</code>。目前仅支持公有镜和特定自定义镜像。</p>
+     * @param ImageId <p>指定有效的<a href="https://cloud.tencent.com/document/product/213/4940">镜像</a>ID，格式形如<code>img-xxx</code>。目前仅支持公有镜和特定自定义镜像。</p>
      */
     public void setImageId(String ImageId) {
         this.ImageId = ImageId;
     }
 
     /**
-     * Get 节点系统盘配置信息。若不指定该参数，则按照系统默认值进行分配。 
-     * @return SystemDisk 节点系统盘配置信息。若不指定该参数，则按照系统默认值进行分配。
+     * Get <p>节点系统盘配置信息。若不指定该参数，则按照系统默认值进行分配。</p> 
+     * @return SystemDisk <p>节点系统盘配置信息。若不指定该参数，则按照系统默认值进行分配。</p>
      */
     public SystemDisk getSystemDisk() {
         return this.SystemDisk;
     }
 
     /**
-     * Set 节点系统盘配置信息。若不指定该参数，则按照系统默认值进行分配。
-     * @param SystemDisk 节点系统盘配置信息。若不指定该参数，则按照系统默认值进行分配。
+     * Set <p>节点系统盘配置信息。若不指定该参数，则按照系统默认值进行分配。</p>
+     * @param SystemDisk <p>节点系统盘配置信息。若不指定该参数，则按照系统默认值进行分配。</p>
      */
     public void setSystemDisk(SystemDisk SystemDisk) {
         this.SystemDisk = SystemDisk;
     }
 
     /**
-     * Get 节点数据盘配置信息。若不指定该参数，则默认不购买数据盘。支持购买的时候指定21块数据盘，其中最多包含1块LOCAL_BASIC数据盘或者LOCAL_SSD数据盘，最多包含20块CLOUD_BASIC数据盘、CLOUD_PREMIUM数据盘或者CLOUD_SSD数据盘。 
-     * @return DataDisks 节点数据盘配置信息。若不指定该参数，则默认不购买数据盘。支持购买的时候指定21块数据盘，其中最多包含1块LOCAL_BASIC数据盘或者LOCAL_SSD数据盘，最多包含20块CLOUD_BASIC数据盘、CLOUD_PREMIUM数据盘或者CLOUD_SSD数据盘。
+     * Get <p>节点数据盘配置信息。若不指定该参数，则默认不购买数据盘。支持购买的时候指定21块数据盘，其中最多包含1块LOCAL_BASIC数据盘或者LOCAL_SSD数据盘，最多包含20块CLOUD_BASIC数据盘、CLOUD_PREMIUM数据盘或者CLOUD_SSD数据盘。</p> 
+     * @return DataDisks <p>节点数据盘配置信息。若不指定该参数，则默认不购买数据盘。支持购买的时候指定21块数据盘，其中最多包含1块LOCAL_BASIC数据盘或者LOCAL_SSD数据盘，最多包含20块CLOUD_BASIC数据盘、CLOUD_PREMIUM数据盘或者CLOUD_SSD数据盘。</p>
      */
     public DataDisk [] getDataDisks() {
         return this.DataDisks;
     }
 
     /**
-     * Set 节点数据盘配置信息。若不指定该参数，则默认不购买数据盘。支持购买的时候指定21块数据盘，其中最多包含1块LOCAL_BASIC数据盘或者LOCAL_SSD数据盘，最多包含20块CLOUD_BASIC数据盘、CLOUD_PREMIUM数据盘或者CLOUD_SSD数据盘。
-     * @param DataDisks 节点数据盘配置信息。若不指定该参数，则默认不购买数据盘。支持购买的时候指定21块数据盘，其中最多包含1块LOCAL_BASIC数据盘或者LOCAL_SSD数据盘，最多包含20块CLOUD_BASIC数据盘、CLOUD_PREMIUM数据盘或者CLOUD_SSD数据盘。
+     * Set <p>节点数据盘配置信息。若不指定该参数，则默认不购买数据盘。支持购买的时候指定21块数据盘，其中最多包含1块LOCAL_BASIC数据盘或者LOCAL_SSD数据盘，最多包含20块CLOUD_BASIC数据盘、CLOUD_PREMIUM数据盘或者CLOUD_SSD数据盘。</p>
+     * @param DataDisks <p>节点数据盘配置信息。若不指定该参数，则默认不购买数据盘。支持购买的时候指定21块数据盘，其中最多包含1块LOCAL_BASIC数据盘或者LOCAL_SSD数据盘，最多包含20块CLOUD_BASIC数据盘、CLOUD_PREMIUM数据盘或者CLOUD_SSD数据盘。</p>
      */
     public void setDataDisks(DataDisk [] DataDisks) {
         this.DataDisks = DataDisks;
     }
 
     /**
-     * Get 公网带宽相关信息设置。若不指定该参数，则默认公网带宽为0Mbps。 
-     * @return InternetAccessible 公网带宽相关信息设置。若不指定该参数，则默认公网带宽为0Mbps。
+     * Get <p>公网带宽相关信息设置。若不指定该参数，则默认公网带宽为0Mbps。</p> 
+     * @return InternetAccessible <p>公网带宽相关信息设置。若不指定该参数，则默认公网带宽为0Mbps。</p>
      */
     public InternetAccessible getInternetAccessible() {
         return this.InternetAccessible;
     }
 
     /**
-     * Set 公网带宽相关信息设置。若不指定该参数，则默认公网带宽为0Mbps。
-     * @param InternetAccessible 公网带宽相关信息设置。若不指定该参数，则默认公网带宽为0Mbps。
+     * Set <p>公网带宽相关信息设置。若不指定该参数，则默认公网带宽为0Mbps。</p>
+     * @param InternetAccessible <p>公网带宽相关信息设置。若不指定该参数，则默认公网带宽为0Mbps。</p>
      */
     public void setInternetAccessible(InternetAccessible InternetAccessible) {
         this.InternetAccessible = InternetAccessible;
     }
 
     /**
-     * Get 扩容节点配置信息。 
-     * @return ExpansionNodeConfigs 扩容节点配置信息。
+     * Get <p>扩容节点配置信息。</p> 
+     * @return ExpansionNodeConfigs <p>扩容节点配置信息。</p>
      */
     public ExpansionNodeConfig [] getExpansionNodeConfigs() {
         return this.ExpansionNodeConfigs;
     }
 
     /**
-     * Set 扩容节点配置信息。
-     * @param ExpansionNodeConfigs 扩容节点配置信息。
+     * Set <p>扩容节点配置信息。</p>
+     * @param ExpansionNodeConfigs <p>扩容节点配置信息。</p>
      */
     public void setExpansionNodeConfigs(ExpansionNodeConfig [] ExpansionNodeConfigs) {
         this.ExpansionNodeConfigs = ExpansionNodeConfigs;
+    }
+
+    /**
+     * Get <p>扩容实例模板，可以在cvm侧进行设置</p> 
+     * @return LaunchTemplateIds <p>扩容实例模板，可以在cvm侧进行设置</p>
+     */
+    public String [] getLaunchTemplateIds() {
+        return this.LaunchTemplateIds;
+    }
+
+    /**
+     * Set <p>扩容实例模板，可以在cvm侧进行设置</p>
+     * @param LaunchTemplateIds <p>扩容实例模板，可以在cvm侧进行设置</p>
+     */
+    public void setLaunchTemplateIds(String [] LaunchTemplateIds) {
+        this.LaunchTemplateIds = LaunchTemplateIds;
     }
 
     public QueueConfig() {
@@ -297,6 +320,12 @@ public class QueueConfig extends AbstractModel {
                 this.ExpansionNodeConfigs[i] = new ExpansionNodeConfig(source.ExpansionNodeConfigs[i]);
             }
         }
+        if (source.LaunchTemplateIds != null) {
+            this.LaunchTemplateIds = new String[source.LaunchTemplateIds.length];
+            for (int i = 0; i < source.LaunchTemplateIds.length; i++) {
+                this.LaunchTemplateIds[i] = new String(source.LaunchTemplateIds[i]);
+            }
+        }
     }
 
 
@@ -314,6 +343,7 @@ public class QueueConfig extends AbstractModel {
         this.setParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
         this.setParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
         this.setParamArrayObj(map, prefix + "ExpansionNodeConfigs.", this.ExpansionNodeConfigs);
+        this.setParamArraySimple(map, prefix + "LaunchTemplateIds.", this.LaunchTemplateIds);
 
     }
 }

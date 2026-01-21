@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeClusterActivitiesResponse extends AbstractModel {
 
     /**
-    * 集群活动历史记录列表。
+    * <p>集群活动历史记录列表。</p>
     */
     @SerializedName("ClusterActivitySet")
     @Expose
     private ClusterActivity [] ClusterActivitySet;
 
     /**
-    * 集群活动历史记录数量。
+    * <p>集群活动历史记录数量。</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeClusterActivitiesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 集群活动历史记录列表。 
-     * @return ClusterActivitySet 集群活动历史记录列表。
+     * Get <p>集群活动历史记录列表。</p> 
+     * @return ClusterActivitySet <p>集群活动历史记录列表。</p>
      */
     public ClusterActivity [] getClusterActivitySet() {
         return this.ClusterActivitySet;
     }
 
     /**
-     * Set 集群活动历史记录列表。
-     * @param ClusterActivitySet 集群活动历史记录列表。
+     * Set <p>集群活动历史记录列表。</p>
+     * @param ClusterActivitySet <p>集群活动历史记录列表。</p>
      */
     public void setClusterActivitySet(ClusterActivity [] ClusterActivitySet) {
         this.ClusterActivitySet = ClusterActivitySet;
     }
 
     /**
-     * Get 集群活动历史记录数量。 
-     * @return TotalCount 集群活动历史记录数量。
+     * Get <p>集群活动历史记录数量。</p> 
+     * @return TotalCount <p>集群活动历史记录数量。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 集群活动历史记录数量。
-     * @param TotalCount 集群活动历史记录数量。
+     * Set <p>集群活动历史记录数量。</p>
+     * @param TotalCount <p>集群活动历史记录数量。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

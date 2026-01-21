@@ -192,6 +192,7 @@ public class InputManageMarketingRisk extends AbstractModel {
 
     /**
     * 数据授权信息。
+注意：新接入通用业务欺诈保护（RCE）服务的客户该字段【必传】。
     */
     @SerializedName("DataAuthorization")
     @Expose
@@ -602,8 +603,10 @@ public class InputManageMarketingRisk extends AbstractModel {
     }
 
     /**
-     * Get 数据授权信息。 
+     * Get 数据授权信息。
+注意：新接入通用业务欺诈保护（RCE）服务的客户该字段【必传】。 
      * @return DataAuthorization 数据授权信息。
+注意：新接入通用业务欺诈保护（RCE）服务的客户该字段【必传】。
      */
     public DataAuthorizationInfo getDataAuthorization() {
         return this.DataAuthorization;
@@ -611,7 +614,9 @@ public class InputManageMarketingRisk extends AbstractModel {
 
     /**
      * Set 数据授权信息。
+注意：新接入通用业务欺诈保护（RCE）服务的客户该字段【必传】。
      * @param DataAuthorization 数据授权信息。
+注意：新接入通用业务欺诈保护（RCE）服务的客户该字段【必传】。
      */
     public void setDataAuthorization(DataAuthorizationInfo DataAuthorization) {
         this.DataAuthorization = DataAuthorization;

@@ -136,6 +136,15 @@ public class AndroidInstance extends AbstractModel {
     private String HostServerSerialNumber;
 
     /**
+    * 服务状态。
+IDLE：未连接
+ESTABLISHED：连接中
+    */
+    @SerializedName("ServiceStatus")
+    @Expose
+    private String ServiceStatus;
+
+    /**
      * Get 实例 ID 
      * @return AndroidInstanceId 实例 ID
      */
@@ -391,6 +400,30 @@ public class AndroidInstance extends AbstractModel {
         this.HostServerSerialNumber = HostServerSerialNumber;
     }
 
+    /**
+     * Get 服务状态。
+IDLE：未连接
+ESTABLISHED：连接中 
+     * @return ServiceStatus 服务状态。
+IDLE：未连接
+ESTABLISHED：连接中
+     */
+    public String getServiceStatus() {
+        return this.ServiceStatus;
+    }
+
+    /**
+     * Set 服务状态。
+IDLE：未连接
+ESTABLISHED：连接中
+     * @param ServiceStatus 服务状态。
+IDLE：未连接
+ESTABLISHED：连接中
+     */
+    public void setServiceStatus(String ServiceStatus) {
+        this.ServiceStatus = ServiceStatus;
+    }
+
     public AndroidInstance() {
     }
 
@@ -450,6 +483,9 @@ public class AndroidInstance extends AbstractModel {
         if (source.HostServerSerialNumber != null) {
             this.HostServerSerialNumber = new String(source.HostServerSerialNumber);
         }
+        if (source.ServiceStatus != null) {
+            this.ServiceStatus = new String(source.ServiceStatus);
+        }
     }
 
 
@@ -473,6 +509,7 @@ public class AndroidInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "PrivateIP", this.PrivateIP);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "HostServerSerialNumber", this.HostServerSerialNumber);
+        this.setParamSimple(map, prefix + "ServiceStatus", this.ServiceStatus);
 
     }
 }

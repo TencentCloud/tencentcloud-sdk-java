@@ -38,13 +38,6 @@ public class CreateRocketMQVipInstanceRequest extends AbstractModel {
     private String Spec;
 
     /**
-    * 节点数量，最小2，最大20
-    */
-    @SerializedName("NodeCount")
-    @Expose
-    private Long NodeCount;
-
-    /**
     * 单节点存储空间，GB为单位，最低200GB
     */
     @SerializedName("StorageSize")
@@ -71,6 +64,20 @@ public class CreateRocketMQVipInstanceRequest extends AbstractModel {
     @SerializedName("TimeSpan")
     @Expose
     private Long TimeSpan;
+
+    /**
+    * 节点数量，创建专享集群时必填
+    */
+    @SerializedName("NodeCount")
+    @Expose
+    private Long NodeCount;
+
+    /**
+    * 通用集群规格标识，新购通用集群时必填，从 [DescribeRocketMQGeneralSKUs](https://cloud.tencent.com/document/api/1179/127066) 接口返回的 [GeneralSKU](https://cloud.tencent.com/document/api/1179/46089#GeneralSKU) 字段获取。
+    */
+    @SerializedName("GeneralSkuCode")
+    @Expose
+    private String GeneralSkuCode;
 
     /**
     * 是否用于迁移上云，默认为false
@@ -140,22 +147,6 @@ public class CreateRocketMQVipInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 节点数量，最小2，最大20 
-     * @return NodeCount 节点数量，最小2，最大20
-     */
-    public Long getNodeCount() {
-        return this.NodeCount;
-    }
-
-    /**
-     * Set 节点数量，最小2，最大20
-     * @param NodeCount 节点数量，最小2，最大20
-     */
-    public void setNodeCount(Long NodeCount) {
-        this.NodeCount = NodeCount;
-    }
-
-    /**
      * Get 单节点存储空间，GB为单位，最低200GB 
      * @return StorageSize 单节点存储空间，GB为单位，最低200GB
      */
@@ -217,6 +208,38 @@ public class CreateRocketMQVipInstanceRequest extends AbstractModel {
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
+    }
+
+    /**
+     * Get 节点数量，创建专享集群时必填 
+     * @return NodeCount 节点数量，创建专享集群时必填
+     */
+    public Long getNodeCount() {
+        return this.NodeCount;
+    }
+
+    /**
+     * Set 节点数量，创建专享集群时必填
+     * @param NodeCount 节点数量，创建专享集群时必填
+     */
+    public void setNodeCount(Long NodeCount) {
+        this.NodeCount = NodeCount;
+    }
+
+    /**
+     * Get 通用集群规格标识，新购通用集群时必填，从 [DescribeRocketMQGeneralSKUs](https://cloud.tencent.com/document/api/1179/127066) 接口返回的 [GeneralSKU](https://cloud.tencent.com/document/api/1179/46089#GeneralSKU) 字段获取。 
+     * @return GeneralSkuCode 通用集群规格标识，新购通用集群时必填，从 [DescribeRocketMQGeneralSKUs](https://cloud.tencent.com/document/api/1179/127066) 接口返回的 [GeneralSKU](https://cloud.tencent.com/document/api/1179/46089#GeneralSKU) 字段获取。
+     */
+    public String getGeneralSkuCode() {
+        return this.GeneralSkuCode;
+    }
+
+    /**
+     * Set 通用集群规格标识，新购通用集群时必填，从 [DescribeRocketMQGeneralSKUs](https://cloud.tencent.com/document/api/1179/127066) 接口返回的 [GeneralSKU](https://cloud.tencent.com/document/api/1179/46089#GeneralSKU) 字段获取。
+     * @param GeneralSkuCode 通用集群规格标识，新购通用集群时必填，从 [DescribeRocketMQGeneralSKUs](https://cloud.tencent.com/document/api/1179/127066) 接口返回的 [GeneralSKU](https://cloud.tencent.com/document/api/1179/46089#GeneralSKU) 字段获取。
+     */
+    public void setGeneralSkuCode(String GeneralSkuCode) {
+        this.GeneralSkuCode = GeneralSkuCode;
     }
 
     /**
@@ -313,9 +336,6 @@ public class CreateRocketMQVipInstanceRequest extends AbstractModel {
         if (source.Spec != null) {
             this.Spec = new String(source.Spec);
         }
-        if (source.NodeCount != null) {
-            this.NodeCount = new Long(source.NodeCount);
-        }
         if (source.StorageSize != null) {
             this.StorageSize = new Long(source.StorageSize);
         }
@@ -330,6 +350,12 @@ public class CreateRocketMQVipInstanceRequest extends AbstractModel {
         }
         if (source.TimeSpan != null) {
             this.TimeSpan = new Long(source.TimeSpan);
+        }
+        if (source.NodeCount != null) {
+            this.NodeCount = new Long(source.NodeCount);
+        }
+        if (source.GeneralSkuCode != null) {
+            this.GeneralSkuCode = new String(source.GeneralSkuCode);
         }
         if (source.SupportsMigrateToCloud != null) {
             this.SupportsMigrateToCloud = new Boolean(source.SupportsMigrateToCloud);
@@ -361,11 +387,12 @@ public class CreateRocketMQVipInstanceRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Spec", this.Spec);
-        this.setParamSimple(map, prefix + "NodeCount", this.NodeCount);
         this.setParamSimple(map, prefix + "StorageSize", this.StorageSize);
         this.setParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
         this.setParamObj(map, prefix + "VpcInfo.", this.VpcInfo);
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
+        this.setParamSimple(map, prefix + "NodeCount", this.NodeCount);
+        this.setParamSimple(map, prefix + "GeneralSkuCode", this.GeneralSkuCode);
         this.setParamSimple(map, prefix + "SupportsMigrateToCloud", this.SupportsMigrateToCloud);
         this.setParamSimple(map, prefix + "EnablePublic", this.EnablePublic);
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
