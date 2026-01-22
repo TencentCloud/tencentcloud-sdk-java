@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DetachPolicyRequest extends AbstractModel {
 
     /**
-    * 解绑策略目标ID。成员Uin或部门ID
+    * <p>解绑策略目标ID。成员Uin或部门ID</p>
     */
     @SerializedName("TargetId")
     @Expose
     private Long TargetId;
 
     /**
-    * 目标类型。取值范围：NODE-部门、MEMBER-成员
+    * <p>目标类型。取值范围：NODE-部门、MEMBER-成员</p>
     */
     @SerializedName("TargetType")
     @Expose
     private String TargetType;
 
     /**
-    * 策略ID。
+    * <p>策略Id。可以调用<a href="https://cloud.tencent.com/document/product/850/105311">ListPolicies</a>获取</p>
     */
     @SerializedName("PolicyId")
     @Expose
     private Long PolicyId;
 
     /**
-    * 策略类型。默认值SERVICE_CONTROL_POLICY，取值范围：SERVICE_CONTROL_POLICY-服务控制策略、TAG_POLICY-标签策略
+    * <p>策略类型。默认值SERVICE_CONTROL_POLICY，取值范围：SERVICE_CONTROL_POLICY-服务控制策略、TAG_POLICY-标签策略</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get 解绑策略目标ID。成员Uin或部门ID 
-     * @return TargetId 解绑策略目标ID。成员Uin或部门ID
+     * Get <p>解绑策略目标ID。成员Uin或部门ID</p> 
+     * @return TargetId <p>解绑策略目标ID。成员Uin或部门ID</p>
      */
     public Long getTargetId() {
         return this.TargetId;
     }
 
     /**
-     * Set 解绑策略目标ID。成员Uin或部门ID
-     * @param TargetId 解绑策略目标ID。成员Uin或部门ID
+     * Set <p>解绑策略目标ID。成员Uin或部门ID</p>
+     * @param TargetId <p>解绑策略目标ID。成员Uin或部门ID</p>
      */
     public void setTargetId(Long TargetId) {
         this.TargetId = TargetId;
     }
 
     /**
-     * Get 目标类型。取值范围：NODE-部门、MEMBER-成员 
-     * @return TargetType 目标类型。取值范围：NODE-部门、MEMBER-成员
+     * Get <p>目标类型。取值范围：NODE-部门、MEMBER-成员</p> 
+     * @return TargetType <p>目标类型。取值范围：NODE-部门、MEMBER-成员</p>
      */
     public String getTargetType() {
         return this.TargetType;
     }
 
     /**
-     * Set 目标类型。取值范围：NODE-部门、MEMBER-成员
-     * @param TargetType 目标类型。取值范围：NODE-部门、MEMBER-成员
+     * Set <p>目标类型。取值范围：NODE-部门、MEMBER-成员</p>
+     * @param TargetType <p>目标类型。取值范围：NODE-部门、MEMBER-成员</p>
      */
     public void setTargetType(String TargetType) {
         this.TargetType = TargetType;
     }
 
     /**
-     * Get 策略ID。 
-     * @return PolicyId 策略ID。
+     * Get <p>策略Id。可以调用<a href="https://cloud.tencent.com/document/product/850/105311">ListPolicies</a>获取</p> 
+     * @return PolicyId <p>策略Id。可以调用<a href="https://cloud.tencent.com/document/product/850/105311">ListPolicies</a>获取</p>
      */
     public Long getPolicyId() {
         return this.PolicyId;
     }
 
     /**
-     * Set 策略ID。
-     * @param PolicyId 策略ID。
+     * Set <p>策略Id。可以调用<a href="https://cloud.tencent.com/document/product/850/105311">ListPolicies</a>获取</p>
+     * @param PolicyId <p>策略Id。可以调用<a href="https://cloud.tencent.com/document/product/850/105311">ListPolicies</a>获取</p>
      */
     public void setPolicyId(Long PolicyId) {
         this.PolicyId = PolicyId;
     }
 
     /**
-     * Get 策略类型。默认值SERVICE_CONTROL_POLICY，取值范围：SERVICE_CONTROL_POLICY-服务控制策略、TAG_POLICY-标签策略 
-     * @return Type 策略类型。默认值SERVICE_CONTROL_POLICY，取值范围：SERVICE_CONTROL_POLICY-服务控制策略、TAG_POLICY-标签策略
+     * Get <p>策略类型。默认值SERVICE_CONTROL_POLICY，取值范围：SERVICE_CONTROL_POLICY-服务控制策略、TAG_POLICY-标签策略</p> 
+     * @return Type <p>策略类型。默认值SERVICE_CONTROL_POLICY，取值范围：SERVICE_CONTROL_POLICY-服务控制策略、TAG_POLICY-标签策略</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 策略类型。默认值SERVICE_CONTROL_POLICY，取值范围：SERVICE_CONTROL_POLICY-服务控制策略、TAG_POLICY-标签策略
-     * @param Type 策略类型。默认值SERVICE_CONTROL_POLICY，取值范围：SERVICE_CONTROL_POLICY-服务控制策略、TAG_POLICY-标签策略
+     * Set <p>策略类型。默认值SERVICE_CONTROL_POLICY，取值范围：SERVICE_CONTROL_POLICY-服务控制策略、TAG_POLICY-标签策略</p>
+     * @param Type <p>策略类型。默认值SERVICE_CONTROL_POLICY，取值范围：SERVICE_CONTROL_POLICY-服务控制策略、TAG_POLICY-标签策略</p>
      */
     public void setType(String Type) {
         this.Type = Type;

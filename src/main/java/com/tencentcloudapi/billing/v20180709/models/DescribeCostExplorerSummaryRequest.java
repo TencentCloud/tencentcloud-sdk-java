@@ -72,7 +72,7 @@ ownerUin=使用者账号
     private String Dimensions;
 
     /**
-    * 费用类型：cost-总费用，totalCost-原价费用
+    * 费用类型：cost-折后总费用，totalCost-原价费用
     */
     @SerializedName("FeeType")
     @Expose
@@ -246,16 +246,16 @@ ownerUin=使用者账号
     }
 
     /**
-     * Get 费用类型：cost-总费用，totalCost-原价费用 
-     * @return FeeType 费用类型：cost-总费用，totalCost-原价费用
+     * Get 费用类型：cost-折后总费用，totalCost-原价费用 
+     * @return FeeType 费用类型：cost-折后总费用，totalCost-原价费用
      */
     public String getFeeType() {
         return this.FeeType;
     }
 
     /**
-     * Set 费用类型：cost-总费用，totalCost-原价费用
-     * @param FeeType 费用类型：cost-总费用，totalCost-原价费用
+     * Set 费用类型：cost-折后总费用，totalCost-原价费用
+     * @param FeeType 费用类型：cost-折后总费用，totalCost-原价费用
      */
     public void setFeeType(String FeeType) {
         this.FeeType = FeeType;

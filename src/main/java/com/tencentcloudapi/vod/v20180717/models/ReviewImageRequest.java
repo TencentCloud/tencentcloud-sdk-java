@@ -41,6 +41,7 @@ FileId和MediaStoragePath必须提供其中一个。
 
     /**
     * 媒体的存储路径。
+只有[FileID + Path 模式](https://cloud.tencent.com/document/product/266/126825)的子应用可以通过MediaStoragePath发起任务。
 FileId和MediaStoragePath必须提供其中一个。
     */
     @SerializedName("MediaStoragePath")
@@ -96,8 +97,10 @@ FileId和MediaStoragePath必须提供其中一个。
 
     /**
      * Get 媒体的存储路径。
+只有[FileID + Path 模式](https://cloud.tencent.com/document/product/266/126825)的子应用可以通过MediaStoragePath发起任务。
 FileId和MediaStoragePath必须提供其中一个。 
      * @return MediaStoragePath 媒体的存储路径。
+只有[FileID + Path 模式](https://cloud.tencent.com/document/product/266/126825)的子应用可以通过MediaStoragePath发起任务。
 FileId和MediaStoragePath必须提供其中一个。
      */
     public String getMediaStoragePath() {
@@ -106,8 +109,10 @@ FileId和MediaStoragePath必须提供其中一个。
 
     /**
      * Set 媒体的存储路径。
+只有[FileID + Path 模式](https://cloud.tencent.com/document/product/266/126825)的子应用可以通过MediaStoragePath发起任务。
 FileId和MediaStoragePath必须提供其中一个。
      * @param MediaStoragePath 媒体的存储路径。
+只有[FileID + Path 模式](https://cloud.tencent.com/document/product/266/126825)的子应用可以通过MediaStoragePath发起任务。
 FileId和MediaStoragePath必须提供其中一个。
      */
     public void setMediaStoragePath(String MediaStoragePath) {

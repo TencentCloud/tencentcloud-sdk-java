@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class DescribeLiveTranscodeDetailInfoResponse extends AbstractModel {
 
     /**
-    * 统计数据列表。
+    * <p>统计数据列表。</p>
     */
     @SerializedName("DataInfoList")
     @Expose
     private TranscodeDetailInfo [] DataInfoList;
 
     /**
-    * 页码。
+    * <p>页码。</p>
     */
     @SerializedName("PageNum")
     @Expose
     private Long PageNum;
 
     /**
-    * 每页个数。
+    * <p>每页个数。</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 总个数。
+    * <p>总个数。</p>
     */
     @SerializedName("TotalNum")
     @Expose
     private Long TotalNum;
 
     /**
-    * 总页数。
+    * <p>总页数。</p>
     */
     @SerializedName("TotalPage")
     @Expose
@@ -66,80 +66,80 @@ public class DescribeLiveTranscodeDetailInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 统计数据列表。 
-     * @return DataInfoList 统计数据列表。
+     * Get <p>统计数据列表。</p> 
+     * @return DataInfoList <p>统计数据列表。</p>
      */
     public TranscodeDetailInfo [] getDataInfoList() {
         return this.DataInfoList;
     }
 
     /**
-     * Set 统计数据列表。
-     * @param DataInfoList 统计数据列表。
+     * Set <p>统计数据列表。</p>
+     * @param DataInfoList <p>统计数据列表。</p>
      */
     public void setDataInfoList(TranscodeDetailInfo [] DataInfoList) {
         this.DataInfoList = DataInfoList;
     }
 
     /**
-     * Get 页码。 
-     * @return PageNum 页码。
+     * Get <p>页码。</p> 
+     * @return PageNum <p>页码。</p>
      */
     public Long getPageNum() {
         return this.PageNum;
     }
 
     /**
-     * Set 页码。
-     * @param PageNum 页码。
+     * Set <p>页码。</p>
+     * @param PageNum <p>页码。</p>
      */
     public void setPageNum(Long PageNum) {
         this.PageNum = PageNum;
     }
 
     /**
-     * Get 每页个数。 
-     * @return PageSize 每页个数。
+     * Get <p>每页个数。</p> 
+     * @return PageSize <p>每页个数。</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 每页个数。
-     * @param PageSize 每页个数。
+     * Set <p>每页个数。</p>
+     * @param PageSize <p>每页个数。</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 总个数。 
-     * @return TotalNum 总个数。
+     * Get <p>总个数。</p> 
+     * @return TotalNum <p>总个数。</p>
      */
     public Long getTotalNum() {
         return this.TotalNum;
     }
 
     /**
-     * Set 总个数。
-     * @param TotalNum 总个数。
+     * Set <p>总个数。</p>
+     * @param TotalNum <p>总个数。</p>
      */
     public void setTotalNum(Long TotalNum) {
         this.TotalNum = TotalNum;
     }
 
     /**
-     * Get 总页数。 
-     * @return TotalPage 总页数。
+     * Get <p>总页数。</p> 
+     * @return TotalPage <p>总页数。</p>
      */
     public Long getTotalPage() {
         return this.TotalPage;
     }
 
     /**
-     * Set 总页数。
-     * @param TotalPage 总页数。
+     * Set <p>总页数。</p>
+     * @param TotalPage <p>总页数。</p>
      */
     public void setTotalPage(Long TotalPage) {
         this.TotalPage = TotalPage;

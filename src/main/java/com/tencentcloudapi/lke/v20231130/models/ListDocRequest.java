@@ -54,7 +54,7 @@ public class ListDocRequest extends AbstractModel {
     private String Query;
 
     /**
-    * 文档状态： 1-未生成 2-生成中 3-生成成功 4-生成失败 5-删除中 6-删除成功  7-审核中  8-审核失败 9-审核成功  10-待发布  11-发布中  12-已发布  13-学习中  14-学习失败  15-更新中  16-更新失败  17-解析中  18-解析失败  19-导入失败   20-已过期 21-超量失效 22-超量失效恢复
+    * 文档状态： 1-未生成 2-生成中 3-生成成功 4-生成失败 5-删除中 6-删除成功  7-审核中  8-审核失败 9-审核成功  10,12-导入成功  13-学习中  14-学习失败  15-更新中  16-更新失败  17-解析中  18-解析失败  19-导入失败   20-已过期 21-超量失效 22-超量失效恢复
     */
     @SerializedName("Status")
     @Expose
@@ -68,7 +68,7 @@ public class ListDocRequest extends AbstractModel {
     private String QueryType;
 
     /**
-    * 分类ID, 调用接口[ListDocCate](https://capi.woa.com/api/detail?product=lke&version=2023-11-30&action=ListDocCate)获取
+    * 分类ID, 可以通过调用ListDocCate接口,查看其返回结果获取
     */
     @SerializedName("CateBizId")
     @Expose
@@ -96,7 +96,8 @@ public class ListDocRequest extends AbstractModel {
     private Long ShowCurrCate;
 
     /**
-    * 文档生效域；不检索默认为0
+    * 文档生效域；不检索默认为0。检索枚举值如下：
+1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
     */
     @SerializedName("EnableScope")
     @Expose
@@ -175,16 +176,16 @@ public class ListDocRequest extends AbstractModel {
     }
 
     /**
-     * Get 文档状态： 1-未生成 2-生成中 3-生成成功 4-生成失败 5-删除中 6-删除成功  7-审核中  8-审核失败 9-审核成功  10-待发布  11-发布中  12-已发布  13-学习中  14-学习失败  15-更新中  16-更新失败  17-解析中  18-解析失败  19-导入失败   20-已过期 21-超量失效 22-超量失效恢复 
-     * @return Status 文档状态： 1-未生成 2-生成中 3-生成成功 4-生成失败 5-删除中 6-删除成功  7-审核中  8-审核失败 9-审核成功  10-待发布  11-发布中  12-已发布  13-学习中  14-学习失败  15-更新中  16-更新失败  17-解析中  18-解析失败  19-导入失败   20-已过期 21-超量失效 22-超量失效恢复
+     * Get 文档状态： 1-未生成 2-生成中 3-生成成功 4-生成失败 5-删除中 6-删除成功  7-审核中  8-审核失败 9-审核成功  10,12-导入成功  13-学习中  14-学习失败  15-更新中  16-更新失败  17-解析中  18-解析失败  19-导入失败   20-已过期 21-超量失效 22-超量失效恢复 
+     * @return Status 文档状态： 1-未生成 2-生成中 3-生成成功 4-生成失败 5-删除中 6-删除成功  7-审核中  8-审核失败 9-审核成功  10,12-导入成功  13-学习中  14-学习失败  15-更新中  16-更新失败  17-解析中  18-解析失败  19-导入失败   20-已过期 21-超量失效 22-超量失效恢复
      */
     public Long [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 文档状态： 1-未生成 2-生成中 3-生成成功 4-生成失败 5-删除中 6-删除成功  7-审核中  8-审核失败 9-审核成功  10-待发布  11-发布中  12-已发布  13-学习中  14-学习失败  15-更新中  16-更新失败  17-解析中  18-解析失败  19-导入失败   20-已过期 21-超量失效 22-超量失效恢复
-     * @param Status 文档状态： 1-未生成 2-生成中 3-生成成功 4-生成失败 5-删除中 6-删除成功  7-审核中  8-审核失败 9-审核成功  10-待发布  11-发布中  12-已发布  13-学习中  14-学习失败  15-更新中  16-更新失败  17-解析中  18-解析失败  19-导入失败   20-已过期 21-超量失效 22-超量失效恢复
+     * Set 文档状态： 1-未生成 2-生成中 3-生成成功 4-生成失败 5-删除中 6-删除成功  7-审核中  8-审核失败 9-审核成功  10,12-导入成功  13-学习中  14-学习失败  15-更新中  16-更新失败  17-解析中  18-解析失败  19-导入失败   20-已过期 21-超量失效 22-超量失效恢复
+     * @param Status 文档状态： 1-未生成 2-生成中 3-生成成功 4-生成失败 5-删除中 6-删除成功  7-审核中  8-审核失败 9-审核成功  10,12-导入成功  13-学习中  14-学习失败  15-更新中  16-更新失败  17-解析中  18-解析失败  19-导入失败   20-已过期 21-超量失效 22-超量失效恢复
      */
     public void setStatus(Long [] Status) {
         this.Status = Status;
@@ -207,16 +208,16 @@ public class ListDocRequest extends AbstractModel {
     }
 
     /**
-     * Get 分类ID, 调用接口[ListDocCate](https://capi.woa.com/api/detail?product=lke&version=2023-11-30&action=ListDocCate)获取 
-     * @return CateBizId 分类ID, 调用接口[ListDocCate](https://capi.woa.com/api/detail?product=lke&version=2023-11-30&action=ListDocCate)获取
+     * Get 分类ID, 可以通过调用ListDocCate接口,查看其返回结果获取 
+     * @return CateBizId 分类ID, 可以通过调用ListDocCate接口,查看其返回结果获取
      */
     public String getCateBizId() {
         return this.CateBizId;
     }
 
     /**
-     * Set 分类ID, 调用接口[ListDocCate](https://capi.woa.com/api/detail?product=lke&version=2023-11-30&action=ListDocCate)获取
-     * @param CateBizId 分类ID, 调用接口[ListDocCate](https://capi.woa.com/api/detail?product=lke&version=2023-11-30&action=ListDocCate)获取
+     * Set 分类ID, 可以通过调用ListDocCate接口,查看其返回结果获取
+     * @param CateBizId 分类ID, 可以通过调用ListDocCate接口,查看其返回结果获取
      */
     public void setCateBizId(String CateBizId) {
         this.CateBizId = CateBizId;
@@ -271,16 +272,20 @@ public class ListDocRequest extends AbstractModel {
     }
 
     /**
-     * Get 文档生效域；不检索默认为0 
-     * @return EnableScope 文档生效域；不检索默认为0
+     * Get 文档生效域；不检索默认为0。检索枚举值如下：
+1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效 
+     * @return EnableScope 文档生效域；不检索默认为0。检索枚举值如下：
+1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
      */
     public Long getEnableScope() {
         return this.EnableScope;
     }
 
     /**
-     * Set 文档生效域；不检索默认为0
-     * @param EnableScope 文档生效域；不检索默认为0
+     * Set 文档生效域；不检索默认为0。检索枚举值如下：
+1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
+     * @param EnableScope 文档生效域；不检索默认为0。检索枚举值如下：
+1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
      */
     public void setEnableScope(Long EnableScope) {
         this.EnableScope = EnableScope;

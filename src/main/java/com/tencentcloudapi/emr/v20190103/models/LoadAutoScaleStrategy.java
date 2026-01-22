@@ -194,6 +194,13 @@ public class LoadAutoScaleStrategy extends AbstractModel {
     private String Soft;
 
     /**
+    * 任务保护时间
+    */
+    @SerializedName("GraceDownProtectTime")
+    @Expose
+    private Long GraceDownProtectTime;
+
+    /**
      * Get 规则ID。 
      * @return StrategyId 规则ID。
      */
@@ -597,6 +604,22 @@ public class LoadAutoScaleStrategy extends AbstractModel {
         this.Soft = Soft;
     }
 
+    /**
+     * Get 任务保护时间 
+     * @return GraceDownProtectTime 任务保护时间
+     */
+    public Long getGraceDownProtectTime() {
+        return this.GraceDownProtectTime;
+    }
+
+    /**
+     * Set 任务保护时间
+     * @param GraceDownProtectTime 任务保护时间
+     */
+    public void setGraceDownProtectTime(Long GraceDownProtectTime) {
+        this.GraceDownProtectTime = GraceDownProtectTime;
+    }
+
     public LoadAutoScaleStrategy() {
     }
 
@@ -686,6 +709,9 @@ public class LoadAutoScaleStrategy extends AbstractModel {
         if (source.Soft != null) {
             this.Soft = new String(source.Soft);
         }
+        if (source.GraceDownProtectTime != null) {
+            this.GraceDownProtectTime = new Long(source.GraceDownProtectTime);
+        }
     }
 
 
@@ -716,6 +742,7 @@ public class LoadAutoScaleStrategy extends AbstractModel {
         this.setParamObj(map, prefix + "LoadMetricsConditions.", this.LoadMetricsConditions);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "Soft", this.Soft);
+        this.setParamSimple(map, prefix + "GraceDownProtectTime", this.GraceDownProtectTime);
 
     }
 }

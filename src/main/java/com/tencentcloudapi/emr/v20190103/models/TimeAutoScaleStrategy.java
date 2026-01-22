@@ -186,6 +186,13 @@ public class TimeAutoScaleStrategy extends AbstractModel {
     private TkeLabel [] GraceDownLabel;
 
     /**
+    * 任务保护时间
+    */
+    @SerializedName("GraceDownProtectTime")
+    @Expose
+    private Long GraceDownProtectTime;
+
+    /**
      * Get 策略名字，集群内唯一。 
      * @return StrategyName 策略名字，集群内唯一。
      */
@@ -569,6 +576,22 @@ public class TimeAutoScaleStrategy extends AbstractModel {
         this.GraceDownLabel = GraceDownLabel;
     }
 
+    /**
+     * Get 任务保护时间 
+     * @return GraceDownProtectTime 任务保护时间
+     */
+    public Long getGraceDownProtectTime() {
+        return this.GraceDownProtectTime;
+    }
+
+    /**
+     * Set 任务保护时间
+     * @param GraceDownProtectTime 任务保护时间
+     */
+    public void setGraceDownProtectTime(Long GraceDownProtectTime) {
+        this.GraceDownProtectTime = GraceDownProtectTime;
+    }
+
     public TimeAutoScaleStrategy() {
     }
 
@@ -655,6 +678,9 @@ public class TimeAutoScaleStrategy extends AbstractModel {
                 this.GraceDownLabel[i] = new TkeLabel(source.GraceDownLabel[i]);
             }
         }
+        if (source.GraceDownProtectTime != null) {
+            this.GraceDownProtectTime = new Long(source.GraceDownProtectTime);
+        }
     }
 
 
@@ -684,6 +710,7 @@ public class TimeAutoScaleStrategy extends AbstractModel {
         this.setParamSimple(map, prefix + "CompensateFlag", this.CompensateFlag);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamArrayObj(map, prefix + "GraceDownLabel.", this.GraceDownLabel);
+        this.setParamSimple(map, prefix + "GraceDownProtectTime", this.GraceDownProtectTime);
 
     }
 }

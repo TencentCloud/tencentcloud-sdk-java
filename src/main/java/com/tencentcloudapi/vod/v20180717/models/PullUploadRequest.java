@@ -127,6 +127,7 @@ public class PullUploadRequest extends AbstractModel {
 
     /**
     * 媒体存储路径，以/开头。
+只有[FileID + Path 模式](https://cloud.tencent.com/document/product/266/126825)的子应用可以指定存储路径。
     */
     @SerializedName("MediaStoragePath")
     @Expose
@@ -373,8 +374,10 @@ public class PullUploadRequest extends AbstractModel {
     }
 
     /**
-     * Get 媒体存储路径，以/开头。 
+     * Get 媒体存储路径，以/开头。
+只有[FileID + Path 模式](https://cloud.tencent.com/document/product/266/126825)的子应用可以指定存储路径。 
      * @return MediaStoragePath 媒体存储路径，以/开头。
+只有[FileID + Path 模式](https://cloud.tencent.com/document/product/266/126825)的子应用可以指定存储路径。
      */
     public String getMediaStoragePath() {
         return this.MediaStoragePath;
@@ -382,7 +385,9 @@ public class PullUploadRequest extends AbstractModel {
 
     /**
      * Set 媒体存储路径，以/开头。
+只有[FileID + Path 模式](https://cloud.tencent.com/document/product/266/126825)的子应用可以指定存储路径。
      * @param MediaStoragePath 媒体存储路径，以/开头。
+只有[FileID + Path 模式](https://cloud.tencent.com/document/product/266/126825)的子应用可以指定存储路径。
      */
     public void setMediaStoragePath(String MediaStoragePath) {
         this.MediaStoragePath = MediaStoragePath;

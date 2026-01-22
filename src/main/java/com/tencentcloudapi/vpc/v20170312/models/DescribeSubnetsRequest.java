@@ -66,6 +66,20 @@ public class DescribeSubnetsRequest extends AbstractModel {
     private String Limit;
 
     /**
+    * 每次调用返回的最大结果数。如果查询返回的时候有NextToken返回，您可以使用NextToken值获取更多页结果， 当NextToke返回空或者返回的结果数量小于MaxResults时，表示没有更多数据了。允许的最大页面大小为 100。
+    */
+    @SerializedName("MaxResults")
+    @Expose
+    private Long MaxResults;
+
+    /**
+    * 如果NextToken返回非空字符串 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。
+    */
+    @SerializedName("NextToken")
+    @Expose
+    private String NextToken;
+
+    /**
      * Get 子网实例ID查询。形如：subnet-pxir56ns。每次请求的实例的上限为100（该参数指定的子网是否返回，需要结合分页拉取参数Limit和Offset）。参数不支持同时指定SubnetIds和Filters。 
      * @return SubnetIds 子网实例ID查询。形如：subnet-pxir56ns。每次请求的实例的上限为100（该参数指定的子网是否返回，需要结合分页拉取参数Limit和Offset）。参数不支持同时指定SubnetIds和Filters。
      */
@@ -185,6 +199,38 @@ public class DescribeSubnetsRequest extends AbstractModel {
         this.Limit = Limit;
     }
 
+    /**
+     * Get 每次调用返回的最大结果数。如果查询返回的时候有NextToken返回，您可以使用NextToken值获取更多页结果， 当NextToke返回空或者返回的结果数量小于MaxResults时，表示没有更多数据了。允许的最大页面大小为 100。 
+     * @return MaxResults 每次调用返回的最大结果数。如果查询返回的时候有NextToken返回，您可以使用NextToken值获取更多页结果， 当NextToke返回空或者返回的结果数量小于MaxResults时，表示没有更多数据了。允许的最大页面大小为 100。
+     */
+    public Long getMaxResults() {
+        return this.MaxResults;
+    }
+
+    /**
+     * Set 每次调用返回的最大结果数。如果查询返回的时候有NextToken返回，您可以使用NextToken值获取更多页结果， 当NextToke返回空或者返回的结果数量小于MaxResults时，表示没有更多数据了。允许的最大页面大小为 100。
+     * @param MaxResults 每次调用返回的最大结果数。如果查询返回的时候有NextToken返回，您可以使用NextToken值获取更多页结果， 当NextToke返回空或者返回的结果数量小于MaxResults时，表示没有更多数据了。允许的最大页面大小为 100。
+     */
+    public void setMaxResults(Long MaxResults) {
+        this.MaxResults = MaxResults;
+    }
+
+    /**
+     * Get 如果NextToken返回非空字符串 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。 
+     * @return NextToken 如果NextToken返回非空字符串 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。
+     */
+    public String getNextToken() {
+        return this.NextToken;
+    }
+
+    /**
+     * Set 如果NextToken返回非空字符串 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。
+     * @param NextToken 如果NextToken返回非空字符串 ，表示还有更多可用结果。 NextToken是每个页面唯一的分页令牌。使用返回的令牌再次调用以检索下一页。需要保持所有其他参数不变。每个分页令牌在 24 小时后过期。
+     */
+    public void setNextToken(String NextToken) {
+        this.NextToken = NextToken;
+    }
+
     public DescribeSubnetsRequest() {
     }
 
@@ -211,6 +257,12 @@ public class DescribeSubnetsRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new String(source.Limit);
         }
+        if (source.MaxResults != null) {
+            this.MaxResults = new Long(source.MaxResults);
+        }
+        if (source.NextToken != null) {
+            this.NextToken = new String(source.NextToken);
+        }
     }
 
 
@@ -222,6 +274,8 @@ public class DescribeSubnetsRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "MaxResults", this.MaxResults);
+        this.setParamSimple(map, prefix + "NextToken", this.NextToken);
 
     }
 }

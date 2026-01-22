@@ -39,6 +39,17 @@ public class AdvisorClient extends AbstractClient{
     }
 
     /**
+     *开启智能顾问授权。会同步开启报告解读和云架构协作权限
+     * @param req CreateAdvisorAuthorizationRequest
+     * @return CreateAdvisorAuthorizationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAdvisorAuthorizationResponse CreateAdvisorAuthorization(CreateAdvisorAuthorizationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAdvisorAuthorization", CreateAdvisorAuthorizationResponse.class);
+    }
+
+    /**
      *用于查询评估项的信息
      * @param req DescribeStrategiesRequest
      * @return DescribeStrategiesResponse

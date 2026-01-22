@@ -74,7 +74,7 @@ public class DescribeAutoCalloutTaskResponse extends AbstractModel {
     private Long IvrId;
 
     /**
-    * 任务状态 0初始 1运行中 2已完成 3结束中 4已终止
+    * 任务状态 0初始 1运行中 2已完成 3结束中 4已终止 5已暂停
     */
     @SerializedName("State")
     @Expose
@@ -211,16 +211,16 @@ public class DescribeAutoCalloutTaskResponse extends AbstractModel {
     }
 
     /**
-     * Get 任务状态 0初始 1运行中 2已完成 3结束中 4已终止 
-     * @return State 任务状态 0初始 1运行中 2已完成 3结束中 4已终止
+     * Get 任务状态 0初始 1运行中 2已完成 3结束中 4已终止 5已暂停 
+     * @return State 任务状态 0初始 1运行中 2已完成 3结束中 4已终止 5已暂停
      */
     public Long getState() {
         return this.State;
     }
 
     /**
-     * Set 任务状态 0初始 1运行中 2已完成 3结束中 4已终止
-     * @param State 任务状态 0初始 1运行中 2已完成 3结束中 4已终止
+     * Set 任务状态 0初始 1运行中 2已完成 3结束中 4已终止 5已暂停
+     * @param State 任务状态 0初始 1运行中 2已完成 3结束中 4已终止 5已暂停
      */
     public void setState(Long State) {
         this.State = State;

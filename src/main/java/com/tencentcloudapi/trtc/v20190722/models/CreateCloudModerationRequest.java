@@ -45,13 +45,6 @@ public class CreateCloudModerationRequest extends AbstractModel {
     private String UserId;
 
     /**
-    * 机器人UserId对应的校验签名，即UserId和UserSig相当于机器人进房的登录密码，具体计算方法请参考TRTC计算UserSig的方案。
-    */
-    @SerializedName("UserSig")
-    @Expose
-    private String UserSig;
-
-    /**
     * 云端审核控制参数。
     */
     @SerializedName("ModerationParams")
@@ -59,7 +52,14 @@ public class CreateCloudModerationRequest extends AbstractModel {
     private ModerationParams ModerationParams;
 
     /**
-    * 云端审核文件上传到云存储的参数
+    * 机器人UserId对应的校验签名，即UserId和UserSig相当于机器人进房的登录密码，具体计算方法请参考TRTC计算UserSig的方案。
+    */
+    @SerializedName("UserSig")
+    @Expose
+    private String UserSig;
+
+    /**
+    * 云端审核文件上传到云存储的参数。
     */
     @SerializedName("ModerationStorageParams")
     @Expose
@@ -128,22 +128,6 @@ public class CreateCloudModerationRequest extends AbstractModel {
     }
 
     /**
-     * Get 机器人UserId对应的校验签名，即UserId和UserSig相当于机器人进房的登录密码，具体计算方法请参考TRTC计算UserSig的方案。 
-     * @return UserSig 机器人UserId对应的校验签名，即UserId和UserSig相当于机器人进房的登录密码，具体计算方法请参考TRTC计算UserSig的方案。
-     */
-    public String getUserSig() {
-        return this.UserSig;
-    }
-
-    /**
-     * Set 机器人UserId对应的校验签名，即UserId和UserSig相当于机器人进房的登录密码，具体计算方法请参考TRTC计算UserSig的方案。
-     * @param UserSig 机器人UserId对应的校验签名，即UserId和UserSig相当于机器人进房的登录密码，具体计算方法请参考TRTC计算UserSig的方案。
-     */
-    public void setUserSig(String UserSig) {
-        this.UserSig = UserSig;
-    }
-
-    /**
      * Get 云端审核控制参数。 
      * @return ModerationParams 云端审核控制参数。
      */
@@ -160,16 +144,32 @@ public class CreateCloudModerationRequest extends AbstractModel {
     }
 
     /**
-     * Get 云端审核文件上传到云存储的参数 
-     * @return ModerationStorageParams 云端审核文件上传到云存储的参数
+     * Get 机器人UserId对应的校验签名，即UserId和UserSig相当于机器人进房的登录密码，具体计算方法请参考TRTC计算UserSig的方案。 
+     * @return UserSig 机器人UserId对应的校验签名，即UserId和UserSig相当于机器人进房的登录密码，具体计算方法请参考TRTC计算UserSig的方案。
+     */
+    public String getUserSig() {
+        return this.UserSig;
+    }
+
+    /**
+     * Set 机器人UserId对应的校验签名，即UserId和UserSig相当于机器人进房的登录密码，具体计算方法请参考TRTC计算UserSig的方案。
+     * @param UserSig 机器人UserId对应的校验签名，即UserId和UserSig相当于机器人进房的登录密码，具体计算方法请参考TRTC计算UserSig的方案。
+     */
+    public void setUserSig(String UserSig) {
+        this.UserSig = UserSig;
+    }
+
+    /**
+     * Get 云端审核文件上传到云存储的参数。 
+     * @return ModerationStorageParams 云端审核文件上传到云存储的参数。
      */
     public ModerationStorageParams getModerationStorageParams() {
         return this.ModerationStorageParams;
     }
 
     /**
-     * Set 云端审核文件上传到云存储的参数
-     * @param ModerationStorageParams 云端审核文件上传到云存储的参数
+     * Set 云端审核文件上传到云存储的参数。
+     * @param ModerationStorageParams 云端审核文件上传到云存储的参数。
      */
     public void setModerationStorageParams(ModerationStorageParams ModerationStorageParams) {
         this.ModerationStorageParams = ModerationStorageParams;
@@ -224,11 +224,11 @@ public class CreateCloudModerationRequest extends AbstractModel {
         if (source.UserId != null) {
             this.UserId = new String(source.UserId);
         }
-        if (source.UserSig != null) {
-            this.UserSig = new String(source.UserSig);
-        }
         if (source.ModerationParams != null) {
             this.ModerationParams = new ModerationParams(source.ModerationParams);
+        }
+        if (source.UserSig != null) {
+            this.UserSig = new String(source.UserSig);
         }
         if (source.ModerationStorageParams != null) {
             this.ModerationStorageParams = new ModerationStorageParams(source.ModerationStorageParams);
@@ -249,8 +249,8 @@ public class CreateCloudModerationRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
         this.setParamSimple(map, prefix + "RoomId", this.RoomId);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
-        this.setParamSimple(map, prefix + "UserSig", this.UserSig);
         this.setParamObj(map, prefix + "ModerationParams.", this.ModerationParams);
+        this.setParamSimple(map, prefix + "UserSig", this.UserSig);
         this.setParamObj(map, prefix + "ModerationStorageParams.", this.ModerationStorageParams);
         this.setParamSimple(map, prefix + "RoomIdType", this.RoomIdType);
         this.setParamSimple(map, prefix + "ResourceExpiredHour", this.ResourceExpiredHour);
