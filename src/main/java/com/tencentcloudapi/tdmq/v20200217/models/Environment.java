@@ -111,6 +111,13 @@ public class Environment extends AbstractModel {
     private Boolean SubscriptionExpirationTimeEnable;
 
     /**
+    * 命名空间标签
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 命名空间名称 
      * @return EnvironmentId 命名空间名称
      */
@@ -314,6 +321,22 @@ public class Environment extends AbstractModel {
         this.SubscriptionExpirationTimeEnable = SubscriptionExpirationTimeEnable;
     }
 
+    /**
+     * Get 命名空间标签 
+     * @return Tags 命名空间标签
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 命名空间标签
+     * @param Tags 命名空间标签
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public Environment() {
     }
 
@@ -358,6 +381,12 @@ public class Environment extends AbstractModel {
         if (source.SubscriptionExpirationTimeEnable != null) {
             this.SubscriptionExpirationTimeEnable = new Boolean(source.SubscriptionExpirationTimeEnable);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -377,6 +406,7 @@ public class Environment extends AbstractModel {
         this.setParamSimple(map, prefix + "AutoSubscriptionCreation", this.AutoSubscriptionCreation);
         this.setParamSimple(map, prefix + "SubscriptionExpirationTime", this.SubscriptionExpirationTime);
         this.setParamSimple(map, prefix + "SubscriptionExpirationTimeEnable", this.SubscriptionExpirationTimeEnable);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

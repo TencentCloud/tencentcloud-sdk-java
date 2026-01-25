@@ -56,7 +56,7 @@ public class DescribeProxyNodesRequest extends AbstractModel {
     private String OrderByType;
 
     /**
-    * 搜索条件，若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
+    * 搜索条件，若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。目前支持的搜索字段：Status、ProxyNodeId、ClusterId、OssProxyNodeName。
     */
     @SerializedName("Filters")
     @Expose
@@ -143,16 +143,16 @@ public class DescribeProxyNodesRequest extends AbstractModel {
     }
 
     /**
-     * Get 搜索条件，若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。 
-     * @return Filters 搜索条件，若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
+     * Get 搜索条件，若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。目前支持的搜索字段：Status、ProxyNodeId、ClusterId、OssProxyNodeName。 
+     * @return Filters 搜索条件，若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。目前支持的搜索字段：Status、ProxyNodeId、ClusterId、OssProxyNodeName。
      */
     public QueryFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 搜索条件，若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
-     * @param Filters 搜索条件，若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
+     * Set 搜索条件，若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。目前支持的搜索字段：Status、ProxyNodeId、ClusterId、OssProxyNodeName。
+     * @param Filters 搜索条件，若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。目前支持的搜索字段：Status、ProxyNodeId、ClusterId、OssProxyNodeName。
      */
     public void setFilters(QueryFilter [] Filters) {
         this.Filters = Filters;

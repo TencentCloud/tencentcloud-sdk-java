@@ -31,6 +31,13 @@ public class SubmitHunyuan3DPartJobRequest extends AbstractModel {
     private InputFile3D File;
 
     /**
+    * 组件生成模型版本，默认为1.0，可选项：1.0，1.5；
+    */
+    @SerializedName("Model")
+    @Expose
+    private String Model;
+
+    /**
      * Get 需进行组件生成的3D模型文件，仅支持FBX格式。 
      * @return File 需进行组件生成的3D模型文件，仅支持FBX格式。
      */
@@ -46,6 +53,22 @@ public class SubmitHunyuan3DPartJobRequest extends AbstractModel {
         this.File = File;
     }
 
+    /**
+     * Get 组件生成模型版本，默认为1.0，可选项：1.0，1.5； 
+     * @return Model 组件生成模型版本，默认为1.0，可选项：1.0，1.5；
+     */
+    public String getModel() {
+        return this.Model;
+    }
+
+    /**
+     * Set 组件生成模型版本，默认为1.0，可选项：1.0，1.5；
+     * @param Model 组件生成模型版本，默认为1.0，可选项：1.0，1.5；
+     */
+    public void setModel(String Model) {
+        this.Model = Model;
+    }
+
     public SubmitHunyuan3DPartJobRequest() {
     }
 
@@ -57,6 +80,9 @@ public class SubmitHunyuan3DPartJobRequest extends AbstractModel {
         if (source.File != null) {
             this.File = new InputFile3D(source.File);
         }
+        if (source.Model != null) {
+            this.Model = new String(source.Model);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class SubmitHunyuan3DPartJobRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "File.", this.File);
+        this.setParamSimple(map, prefix + "Model", this.Model);
 
     }
 }

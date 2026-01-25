@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cfs.v20190719.models;
+package com.tencentcloudapi.mna.v20210119.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,25 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DoDirectoryOperationResponse extends AbstractModel {
+public class GetNetMonitorByNameResponse extends AbstractModel {
 
     /**
-    * 1:成功 0:失败。创建目录的操作，1表示创建成功，0表示创建失败。  确认目录是否存在的操作，1表示目录存在，0表示目录不存在。此外，创建目录操作若目录已存在，也会返回创建成功。
+    * 监控数据
     */
-    @SerializedName("Result")
+    @SerializedName("MonitorData")
     @Expose
-    private Long Result;
+    private MonitorData [] MonitorData;
+
+    /**
+    * 接入区域。取值范围：['MC','AP','EU','AM']
+MC=中国大陆
+AP=亚太
+EU=欧洲
+AM=美洲
+    */
+    @SerializedName("AccessRegion")
+    @Expose
+    private String AccessRegion;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +49,51 @@ public class DoDirectoryOperationResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 1:成功 0:失败。创建目录的操作，1表示创建成功，0表示创建失败。  确认目录是否存在的操作，1表示目录存在，0表示目录不存在。此外，创建目录操作若目录已存在，也会返回创建成功。 
-     * @return Result 1:成功 0:失败。创建目录的操作，1表示创建成功，0表示创建失败。  确认目录是否存在的操作，1表示目录存在，0表示目录不存在。此外，创建目录操作若目录已存在，也会返回创建成功。
+     * Get 监控数据 
+     * @return MonitorData 监控数据
      */
-    public Long getResult() {
-        return this.Result;
+    public MonitorData [] getMonitorData() {
+        return this.MonitorData;
     }
 
     /**
-     * Set 1:成功 0:失败。创建目录的操作，1表示创建成功，0表示创建失败。  确认目录是否存在的操作，1表示目录存在，0表示目录不存在。此外，创建目录操作若目录已存在，也会返回创建成功。
-     * @param Result 1:成功 0:失败。创建目录的操作，1表示创建成功，0表示创建失败。  确认目录是否存在的操作，1表示目录存在，0表示目录不存在。此外，创建目录操作若目录已存在，也会返回创建成功。
+     * Set 监控数据
+     * @param MonitorData 监控数据
      */
-    public void setResult(Long Result) {
-        this.Result = Result;
+    public void setMonitorData(MonitorData [] MonitorData) {
+        this.MonitorData = MonitorData;
+    }
+
+    /**
+     * Get 接入区域。取值范围：['MC','AP','EU','AM']
+MC=中国大陆
+AP=亚太
+EU=欧洲
+AM=美洲 
+     * @return AccessRegion 接入区域。取值范围：['MC','AP','EU','AM']
+MC=中国大陆
+AP=亚太
+EU=欧洲
+AM=美洲
+     */
+    public String getAccessRegion() {
+        return this.AccessRegion;
+    }
+
+    /**
+     * Set 接入区域。取值范围：['MC','AP','EU','AM']
+MC=中国大陆
+AP=亚太
+EU=欧洲
+AM=美洲
+     * @param AccessRegion 接入区域。取值范围：['MC','AP','EU','AM']
+MC=中国大陆
+AP=亚太
+EU=欧洲
+AM=美洲
+     */
+    public void setAccessRegion(String AccessRegion) {
+        this.AccessRegion = AccessRegion;
     }
 
     /**
@@ -69,16 +112,22 @@ public class DoDirectoryOperationResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DoDirectoryOperationResponse() {
+    public GetNetMonitorByNameResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DoDirectoryOperationResponse(DoDirectoryOperationResponse source) {
-        if (source.Result != null) {
-            this.Result = new Long(source.Result);
+    public GetNetMonitorByNameResponse(GetNetMonitorByNameResponse source) {
+        if (source.MonitorData != null) {
+            this.MonitorData = new MonitorData[source.MonitorData.length];
+            for (int i = 0; i < source.MonitorData.length; i++) {
+                this.MonitorData[i] = new MonitorData(source.MonitorData[i]);
+            }
+        }
+        if (source.AccessRegion != null) {
+            this.AccessRegion = new String(source.AccessRegion);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +139,8 @@ public class DoDirectoryOperationResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Result", this.Result);
+        this.setParamArrayObj(map, prefix + "MonitorData.", this.MonitorData);
+        this.setParamSimple(map, prefix + "AccessRegion", this.AccessRegion);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

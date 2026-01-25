@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateTargetGroupRequest extends AbstractModel {
 
     /**
-    * <p>目标组名称，限定60个字符。</p>
+    * <p>目标组名称。命名规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p>
     */
     @SerializedName("TargetGroupName")
     @Expose
@@ -52,7 +52,7 @@ public class CreateTargetGroupRequest extends AbstractModel {
     private TargetGroupInstance [] TargetGroupInstances;
 
     /**
-    * <p>网关负载均衡目标组协议。- TENCENT_GENEVE ：GENEVE 标准协议- AWS_GENEVE：GENEVE 兼容协议</p>
+    * <p>网关负载均衡目标组协议。</p><ul><li>TENCENT_GENEVE ：GENEVE 标准协议</li><li>AWS_GENEVE：GENEVE 兼容协议</li></ul>
     */
     @SerializedName("Protocol")
     @Expose
@@ -136,16 +136,16 @@ public class CreateTargetGroupRequest extends AbstractModel {
     private Long RescheduleUnhealthyStartTime;
 
     /**
-     * Get <p>目标组名称，限定60个字符。</p> 
-     * @return TargetGroupName <p>目标组名称，限定60个字符。</p>
+     * Get <p>目标组名称。命名规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p> 
+     * @return TargetGroupName <p>目标组名称。命名规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p>
      */
     public String getTargetGroupName() {
         return this.TargetGroupName;
     }
 
     /**
-     * Set <p>目标组名称，限定60个字符。</p>
-     * @param TargetGroupName <p>目标组名称，限定60个字符。</p>
+     * Set <p>目标组名称。命名规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p>
+     * @param TargetGroupName <p>目标组名称。命名规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p>
      */
     public void setTargetGroupName(String TargetGroupName) {
         this.TargetGroupName = TargetGroupName;
@@ -200,16 +200,16 @@ public class CreateTargetGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>网关负载均衡目标组协议。- TENCENT_GENEVE ：GENEVE 标准协议- AWS_GENEVE：GENEVE 兼容协议</p> 
-     * @return Protocol <p>网关负载均衡目标组协议。- TENCENT_GENEVE ：GENEVE 标准协议- AWS_GENEVE：GENEVE 兼容协议</p>
+     * Get <p>网关负载均衡目标组协议。</p><ul><li>TENCENT_GENEVE ：GENEVE 标准协议</li><li>AWS_GENEVE：GENEVE 兼容协议</li></ul> 
+     * @return Protocol <p>网关负载均衡目标组协议。</p><ul><li>TENCENT_GENEVE ：GENEVE 标准协议</li><li>AWS_GENEVE：GENEVE 兼容协议</li></ul>
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set <p>网关负载均衡目标组协议。- TENCENT_GENEVE ：GENEVE 标准协议- AWS_GENEVE：GENEVE 兼容协议</p>
-     * @param Protocol <p>网关负载均衡目标组协议。- TENCENT_GENEVE ：GENEVE 标准协议- AWS_GENEVE：GENEVE 兼容协议</p>
+     * Set <p>网关负载均衡目标组协议。</p><ul><li>TENCENT_GENEVE ：GENEVE 标准协议</li><li>AWS_GENEVE：GENEVE 兼容协议</li></ul>
+     * @param Protocol <p>网关负载均衡目标组协议。</p><ul><li>TENCENT_GENEVE ：GENEVE 标准协议</li><li>AWS_GENEVE：GENEVE 兼容协议</li></ul>
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;

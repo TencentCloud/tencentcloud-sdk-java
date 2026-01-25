@@ -38,7 +38,7 @@ public class ListCatalogRequest extends AbstractModel {
     private Long PageSize;
 
     /**
-    * 父目录ID
+    * 父目录ID(此参数还未支持)
     */
     @SerializedName("ParentCatalogId")
     @Expose
@@ -77,16 +77,16 @@ public class ListCatalogRequest extends AbstractModel {
     }
 
     /**
-     * Get 父目录ID 
-     * @return ParentCatalogId 父目录ID
+     * Get 父目录ID(此参数还未支持) 
+     * @return ParentCatalogId 父目录ID(此参数还未支持)
      */
     public String getParentCatalogId() {
         return this.ParentCatalogId;
     }
 
     /**
-     * Set 父目录ID
-     * @param ParentCatalogId 父目录ID
+     * Set 父目录ID(此参数还未支持)
+     * @param ParentCatalogId 父目录ID(此参数还未支持)
      */
     public void setParentCatalogId(String ParentCatalogId) {
         this.ParentCatalogId = ParentCatalogId;

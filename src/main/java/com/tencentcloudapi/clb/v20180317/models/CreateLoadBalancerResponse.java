@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class CreateLoadBalancerResponse extends AbstractModel {
 
     /**
-    * 由负载均衡实例唯一 ID 组成的数组。
-存在某些场景，如创建出现延迟时，此字段可能返回为空；此时可以根据接口返回的RequestId或DealName参数，通过DescribeTaskStatus接口查询创建的资源ID。
+    * <p>由负载均衡实例唯一 ID 组成的数组。<br>存在某些场景，如创建出现延迟时，此字段可能返回为空；此时可以根据接口返回的RequestId或DealName参数，通过DescribeTaskStatus接口查询创建的资源ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LoadBalancerIds")
@@ -33,7 +32,7 @@ public class CreateLoadBalancerResponse extends AbstractModel {
     private String [] LoadBalancerIds;
 
     /**
-    * 订单号。
+    * <p>订单号。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DealName")
@@ -48,11 +47,9 @@ public class CreateLoadBalancerResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 由负载均衡实例唯一 ID 组成的数组。
-存在某些场景，如创建出现延迟时，此字段可能返回为空；此时可以根据接口返回的RequestId或DealName参数，通过DescribeTaskStatus接口查询创建的资源ID。
+     * Get <p>由负载均衡实例唯一 ID 组成的数组。<br>存在某些场景，如创建出现延迟时，此字段可能返回为空；此时可以根据接口返回的RequestId或DealName参数，通过DescribeTaskStatus接口查询创建的资源ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LoadBalancerIds 由负载均衡实例唯一 ID 组成的数组。
-存在某些场景，如创建出现延迟时，此字段可能返回为空；此时可以根据接口返回的RequestId或DealName参数，通过DescribeTaskStatus接口查询创建的资源ID。
+     * @return LoadBalancerIds <p>由负载均衡实例唯一 ID 组成的数组。<br>存在某些场景，如创建出现延迟时，此字段可能返回为空；此时可以根据接口返回的RequestId或DealName参数，通过DescribeTaskStatus接口查询创建的资源ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getLoadBalancerIds() {
@@ -60,11 +57,9 @@ public class CreateLoadBalancerResponse extends AbstractModel {
     }
 
     /**
-     * Set 由负载均衡实例唯一 ID 组成的数组。
-存在某些场景，如创建出现延迟时，此字段可能返回为空；此时可以根据接口返回的RequestId或DealName参数，通过DescribeTaskStatus接口查询创建的资源ID。
+     * Set <p>由负载均衡实例唯一 ID 组成的数组。<br>存在某些场景，如创建出现延迟时，此字段可能返回为空；此时可以根据接口返回的RequestId或DealName参数，通过DescribeTaskStatus接口查询创建的资源ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LoadBalancerIds 由负载均衡实例唯一 ID 组成的数组。
-存在某些场景，如创建出现延迟时，此字段可能返回为空；此时可以根据接口返回的RequestId或DealName参数，通过DescribeTaskStatus接口查询创建的资源ID。
+     * @param LoadBalancerIds <p>由负载均衡实例唯一 ID 组成的数组。<br>存在某些场景，如创建出现延迟时，此字段可能返回为空；此时可以根据接口返回的RequestId或DealName参数，通过DescribeTaskStatus接口查询创建的资源ID。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLoadBalancerIds(String [] LoadBalancerIds) {
@@ -72,9 +67,9 @@ public class CreateLoadBalancerResponse extends AbstractModel {
     }
 
     /**
-     * Get 订单号。
+     * Get <p>订单号。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DealName 订单号。
+     * @return DealName <p>订单号。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDealName() {
@@ -82,9 +77,9 @@ public class CreateLoadBalancerResponse extends AbstractModel {
     }
 
     /**
-     * Set 订单号。
+     * Set <p>订单号。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DealName 订单号。
+     * @param DealName <p>订单号。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDealName(String DealName) {

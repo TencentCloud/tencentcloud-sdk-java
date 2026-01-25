@@ -72,6 +72,22 @@ public class DatabaseInfo extends AbstractModel {
     private Long StorageSize;
 
     /**
+    * 数据源ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DatasourceId")
+    @Expose
+    private Long DatasourceId;
+
+    /**
+    * 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DatasourceType")
+    @Expose
+    private String DatasourceType;
+
+    /**
      * Get 数据库GUID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Guid 数据库GUID
@@ -191,6 +207,46 @@ public class DatabaseInfo extends AbstractModel {
         this.StorageSize = StorageSize;
     }
 
+    /**
+     * Get 数据源ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DatasourceId 数据源ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDatasourceId() {
+        return this.DatasourceId;
+    }
+
+    /**
+     * Set 数据源ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DatasourceId 数据源ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDatasourceId(Long DatasourceId) {
+        this.DatasourceId = DatasourceId;
+    }
+
+    /**
+     * Get 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DatasourceType 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDatasourceType() {
+        return this.DatasourceType;
+    }
+
+    /**
+     * Set 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DatasourceType 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDatasourceType(String DatasourceType) {
+        this.DatasourceType = DatasourceType;
+    }
+
     public DatabaseInfo() {
     }
 
@@ -217,6 +273,12 @@ public class DatabaseInfo extends AbstractModel {
         if (source.StorageSize != null) {
             this.StorageSize = new Long(source.StorageSize);
         }
+        if (source.DatasourceId != null) {
+            this.DatasourceId = new Long(source.DatasourceId);
+        }
+        if (source.DatasourceType != null) {
+            this.DatasourceType = new String(source.DatasourceType);
+        }
     }
 
 
@@ -230,6 +292,8 @@ public class DatabaseInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Location", this.Location);
         this.setParamSimple(map, prefix + "StorageSize", this.StorageSize);
+        this.setParamSimple(map, prefix + "DatasourceId", this.DatasourceId);
+        this.setParamSimple(map, prefix + "DatasourceType", this.DatasourceType);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DoDirectoryOperationRequest extends AbstractModel {
 
     /**
-    * 文件系统Id
+    * 文件系统 ID。当前仅 Turbo 系列文件系统支持调用此接口，通用系列文件系统（含增强型）不支持调用。
     */
     @SerializedName("FileSystemId")
     @Expose
@@ -47,30 +47,30 @@ move：对文件/目录进行重命名，等同于mv。
     private String DirectoryPath;
 
     /**
-    * 创建目录的权限，若不传，默认为0755  若Operation Type为check，此值无实际意义
+    * 创建目录的权限，若不传，默认为0755。若OperationType为 check，此值无实际意义。
     */
     @SerializedName("Mode")
     @Expose
     private String Mode;
 
     /**
-    * mv操作的目标目录名称；如果是turbo文件系统必须以/cfs/开头
+    * mv 操作的目标目录名称。路径必须以/cfs/开头
     */
     @SerializedName("DestPath")
     @Expose
     private String DestPath;
 
     /**
-     * Get 文件系统Id 
-     * @return FileSystemId 文件系统Id
+     * Get 文件系统 ID。当前仅 Turbo 系列文件系统支持调用此接口，通用系列文件系统（含增强型）不支持调用。 
+     * @return FileSystemId 文件系统 ID。当前仅 Turbo 系列文件系统支持调用此接口，通用系列文件系统（含增强型）不支持调用。
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set 文件系统Id
-     * @param FileSystemId 文件系统Id
+     * Set 文件系统 ID。当前仅 Turbo 系列文件系统支持调用此接口，通用系列文件系统（含增强型）不支持调用。
+     * @param FileSystemId 文件系统 ID。当前仅 Turbo 系列文件系统支持调用此接口，通用系列文件系统（含增强型）不支持调用。
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;
@@ -117,32 +117,32 @@ move：对文件/目录进行重命名，等同于mv。
     }
 
     /**
-     * Get 创建目录的权限，若不传，默认为0755  若Operation Type为check，此值无实际意义 
-     * @return Mode 创建目录的权限，若不传，默认为0755  若Operation Type为check，此值无实际意义
+     * Get 创建目录的权限，若不传，默认为0755。若OperationType为 check，此值无实际意义。 
+     * @return Mode 创建目录的权限，若不传，默认为0755。若OperationType为 check，此值无实际意义。
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set 创建目录的权限，若不传，默认为0755  若Operation Type为check，此值无实际意义
-     * @param Mode 创建目录的权限，若不传，默认为0755  若Operation Type为check，此值无实际意义
+     * Set 创建目录的权限，若不传，默认为0755。若OperationType为 check，此值无实际意义。
+     * @param Mode 创建目录的权限，若不传，默认为0755。若OperationType为 check，此值无实际意义。
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get mv操作的目标目录名称；如果是turbo文件系统必须以/cfs/开头 
-     * @return DestPath mv操作的目标目录名称；如果是turbo文件系统必须以/cfs/开头
+     * Get mv 操作的目标目录名称。路径必须以/cfs/开头 
+     * @return DestPath mv 操作的目标目录名称。路径必须以/cfs/开头
      */
     public String getDestPath() {
         return this.DestPath;
     }
 
     /**
-     * Set mv操作的目标目录名称；如果是turbo文件系统必须以/cfs/开头
-     * @param DestPath mv操作的目标目录名称；如果是turbo文件系统必须以/cfs/开头
+     * Set mv 操作的目标目录名称。路径必须以/cfs/开头
+     * @param DestPath mv 操作的目标目录名称。路径必须以/cfs/开头
      */
     public void setDestPath(String DestPath) {
         this.DestPath = DestPath;

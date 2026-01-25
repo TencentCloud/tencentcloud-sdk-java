@@ -88,6 +88,13 @@ public class ModifyTopicRequest extends AbstractModel {
     private Long AckTimeOut;
 
     /**
+    * defaultPolicy/timingwheelPolicy不传默认是社区版本延迟消息策略
+    */
+    @SerializedName("DelayMessagePolicy")
+    @Expose
+    private String DelayMessagePolicy;
+
+    /**
      * Get 环境（命名空间）名称。 
      * @return EnvironmentId 环境（命名空间）名称。
      */
@@ -235,6 +242,22 @@ public class ModifyTopicRequest extends AbstractModel {
         this.AckTimeOut = AckTimeOut;
     }
 
+    /**
+     * Get defaultPolicy/timingwheelPolicy不传默认是社区版本延迟消息策略 
+     * @return DelayMessagePolicy defaultPolicy/timingwheelPolicy不传默认是社区版本延迟消息策略
+     */
+    public String getDelayMessagePolicy() {
+        return this.DelayMessagePolicy;
+    }
+
+    /**
+     * Set defaultPolicy/timingwheelPolicy不传默认是社区版本延迟消息策略
+     * @param DelayMessagePolicy defaultPolicy/timingwheelPolicy不传默认是社区版本延迟消息策略
+     */
+    public void setDelayMessagePolicy(String DelayMessagePolicy) {
+        this.DelayMessagePolicy = DelayMessagePolicy;
+    }
+
     public ModifyTopicRequest() {
     }
 
@@ -270,6 +293,9 @@ public class ModifyTopicRequest extends AbstractModel {
         if (source.AckTimeOut != null) {
             this.AckTimeOut = new Long(source.AckTimeOut);
         }
+        if (source.DelayMessagePolicy != null) {
+            this.DelayMessagePolicy = new String(source.DelayMessagePolicy);
+        }
     }
 
 
@@ -286,6 +312,7 @@ public class ModifyTopicRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "UnackPolicy", this.UnackPolicy);
         this.setParamSimple(map, prefix + "IsolateConsumerEnable", this.IsolateConsumerEnable);
         this.setParamSimple(map, prefix + "AckTimeOut", this.AckTimeOut);
+        this.setParamSimple(map, prefix + "DelayMessagePolicy", this.DelayMessagePolicy);
 
     }
 }

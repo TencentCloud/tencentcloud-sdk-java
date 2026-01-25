@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ChannelDescribeSignFaceVideoResponse extends AbstractModel {
 
     /**
-    * 核身视频结果。
+    * <p>核身视频结果。</p>
     */
     @SerializedName("VideoData")
     @Expose
     private DetectInfoVideoData VideoData;
 
     /**
-    * 意愿核身问答模式结果。若未使用该意愿核身功能，该字段返回值可以不处理。
+    * <p>意愿核身问答模式结果。若未使用该意愿核身功能，该字段返回值可以不处理。</p>
     */
     @SerializedName("IntentionQuestionResult")
     @Expose
     private IntentionQuestionResult IntentionQuestionResult;
 
     /**
-    * 意愿核身点头确认模式的结果信息，若未使用该意愿核身功能，该字段返回值可以不处理。
+    * <p>意愿核身点头确认模式的结果信息，若未使用该意愿核身功能，该字段返回值可以不处理。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IntentionActionResult")
@@ -53,41 +53,41 @@ public class ChannelDescribeSignFaceVideoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 核身视频结果。 
-     * @return VideoData 核身视频结果。
+     * Get <p>核身视频结果。</p> 
+     * @return VideoData <p>核身视频结果。</p>
      */
     public DetectInfoVideoData getVideoData() {
         return this.VideoData;
     }
 
     /**
-     * Set 核身视频结果。
-     * @param VideoData 核身视频结果。
+     * Set <p>核身视频结果。</p>
+     * @param VideoData <p>核身视频结果。</p>
      */
     public void setVideoData(DetectInfoVideoData VideoData) {
         this.VideoData = VideoData;
     }
 
     /**
-     * Get 意愿核身问答模式结果。若未使用该意愿核身功能，该字段返回值可以不处理。 
-     * @return IntentionQuestionResult 意愿核身问答模式结果。若未使用该意愿核身功能，该字段返回值可以不处理。
+     * Get <p>意愿核身问答模式结果。若未使用该意愿核身功能，该字段返回值可以不处理。</p> 
+     * @return IntentionQuestionResult <p>意愿核身问答模式结果。若未使用该意愿核身功能，该字段返回值可以不处理。</p>
      */
     public IntentionQuestionResult getIntentionQuestionResult() {
         return this.IntentionQuestionResult;
     }
 
     /**
-     * Set 意愿核身问答模式结果。若未使用该意愿核身功能，该字段返回值可以不处理。
-     * @param IntentionQuestionResult 意愿核身问答模式结果。若未使用该意愿核身功能，该字段返回值可以不处理。
+     * Set <p>意愿核身问答模式结果。若未使用该意愿核身功能，该字段返回值可以不处理。</p>
+     * @param IntentionQuestionResult <p>意愿核身问答模式结果。若未使用该意愿核身功能，该字段返回值可以不处理。</p>
      */
     public void setIntentionQuestionResult(IntentionQuestionResult IntentionQuestionResult) {
         this.IntentionQuestionResult = IntentionQuestionResult;
     }
 
     /**
-     * Get 意愿核身点头确认模式的结果信息，若未使用该意愿核身功能，该字段返回值可以不处理。
+     * Get <p>意愿核身点头确认模式的结果信息，若未使用该意愿核身功能，该字段返回值可以不处理。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IntentionActionResult 意愿核身点头确认模式的结果信息，若未使用该意愿核身功能，该字段返回值可以不处理。
+     * @return IntentionActionResult <p>意愿核身点头确认模式的结果信息，若未使用该意愿核身功能，该字段返回值可以不处理。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public IntentionActionResult getIntentionActionResult() {
@@ -95,9 +95,9 @@ public class ChannelDescribeSignFaceVideoResponse extends AbstractModel {
     }
 
     /**
-     * Set 意愿核身点头确认模式的结果信息，若未使用该意愿核身功能，该字段返回值可以不处理。
+     * Set <p>意愿核身点头确认模式的结果信息，若未使用该意愿核身功能，该字段返回值可以不处理。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IntentionActionResult 意愿核身点头确认模式的结果信息，若未使用该意愿核身功能，该字段返回值可以不处理。
+     * @param IntentionActionResult <p>意愿核身点头确认模式的结果信息，若未使用该意愿核身功能，该字段返回值可以不处理。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIntentionActionResult(IntentionActionResult IntentionActionResult) {

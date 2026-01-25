@@ -117,6 +117,20 @@ public class CreateTopicRequest extends AbstractModel {
     private Long PulsarTopicMessageType;
 
     /**
+    * 主题标签
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
+    * defaultPolicy/timingwheelPolicy不传默认是社区版本延迟消息策略
+    */
+    @SerializedName("DelayMessagePolicy")
+    @Expose
+    private String DelayMessagePolicy;
+
+    /**
      * Get 环境（命名空间）名称。 
      * @return EnvironmentId 环境（命名空间）名称。
      */
@@ -344,6 +358,38 @@ public class CreateTopicRequest extends AbstractModel {
         this.PulsarTopicMessageType = PulsarTopicMessageType;
     }
 
+    /**
+     * Get 主题标签 
+     * @return Tags 主题标签
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 主题标签
+     * @param Tags 主题标签
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get defaultPolicy/timingwheelPolicy不传默认是社区版本延迟消息策略 
+     * @return DelayMessagePolicy defaultPolicy/timingwheelPolicy不传默认是社区版本延迟消息策略
+     */
+    public String getDelayMessagePolicy() {
+        return this.DelayMessagePolicy;
+    }
+
+    /**
+     * Set defaultPolicy/timingwheelPolicy不传默认是社区版本延迟消息策略
+     * @param DelayMessagePolicy defaultPolicy/timingwheelPolicy不传默认是社区版本延迟消息策略
+     */
+    public void setDelayMessagePolicy(String DelayMessagePolicy) {
+        this.DelayMessagePolicy = DelayMessagePolicy;
+    }
+
     public CreateTopicRequest() {
     }
 
@@ -388,6 +434,15 @@ public class CreateTopicRequest extends AbstractModel {
         if (source.PulsarTopicMessageType != null) {
             this.PulsarTopicMessageType = new Long(source.PulsarTopicMessageType);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.DelayMessagePolicy != null) {
+            this.DelayMessagePolicy = new String(source.DelayMessagePolicy);
+        }
     }
 
 
@@ -407,6 +462,8 @@ public class CreateTopicRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IsolateConsumerEnable", this.IsolateConsumerEnable);
         this.setParamSimple(map, prefix + "AckTimeOut", this.AckTimeOut);
         this.setParamSimple(map, prefix + "PulsarTopicMessageType", this.PulsarTopicMessageType);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "DelayMessagePolicy", this.DelayMessagePolicy);
 
     }
 }

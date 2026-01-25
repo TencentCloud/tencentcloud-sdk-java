@@ -24,340 +24,348 @@ import java.util.HashMap;
 public class CreateTargetGroupRequest extends AbstractModel {
 
     /**
-    * 目标组名称，限定50个字符
+    * <p>目标组名称。命名规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p>
     */
     @SerializedName("TargetGroupName")
     @Expose
     private String TargetGroupName;
 
     /**
-    * 目标组的vpcId属性，不填则使用默认vpc。
+    * <p>目标组的vpcId属性，不填则使用默认vpc。</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 目标组的默认端口， 后续添加服务器时可使用该默认端口。全监听目标组不支持此参数，非全监听目标组Port和TargetGroupInstances.N中的port二者必填其一。
-
+    * <p>目标组的默认端口， 后续添加服务器时可使用该默认端口。全监听目标组不支持此参数，非全监听目标组Port和TargetGroupInstances.N中的port二者必填其一。</p>
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * 目标组绑定的后端服务器，单次最多支持50个。
+    * <p>目标组绑定的后端服务器，单次最多支持50个。</p>
     */
     @SerializedName("TargetGroupInstances")
     @Expose
     private TargetGroupInstance [] TargetGroupInstances;
 
     /**
-    * 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), 默认为v1(旧版目标组)。
+    * <p>目标组类型，当前支持v1(旧版目标组), v2(新版目标组), 默认为v1(旧版目标组)。</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 目标组后端转发协议。v2新版目标组该项必填。目前支持TCP、UDP、HTTP、HTTPS、GRPC。
+    * <p>目标组后端转发协议。v2新版目标组该项必填。目前支持TCP、UDP、HTTP、HTTPS、GRPC。</p>
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * 健康检查。
+    * <p>健康检查。</p>
     */
     @SerializedName("HealthCheck")
     @Expose
     private TargetGroupHealthCheck HealthCheck;
 
     /**
-    * 调度算法，仅V2新版目标组，且后端转发协议为(HTTP|HTTPS|GRPC)时该参数有效。可选值：
-<ur><li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li><li>默认为 WRR。</li><ur>
+    * <p>调度算法，仅V2新版目标组，且后端转发协议为(HTTP|HTTPS|GRPC)时该参数有效。可选值：<br>&lt;ur&gt;<li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li><li>默认为 WRR。</li>&lt;ur&gt;</p>
     */
     @SerializedName("ScheduleAlgorithm")
     @Expose
     private String ScheduleAlgorithm;
 
     /**
-    * 标签。
+    * <p>标签。</p>
     */
     @SerializedName("Tags")
     @Expose
     private TagInfo [] Tags;
 
     /**
-    * 后端服务默认权重, 其中：
-<ul><li>取值范围[0, 100]</li><li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li><li>v1 目标组类型不支持设置 Weight 参数。</li></ul>
+    * <p>后端服务默认权重, 其中：</p><ul><li>取值范围[0, 100]</li><li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li><li>v1 目标组类型不支持设置 Weight 参数。</li></ul>
     */
     @SerializedName("Weight")
     @Expose
     private Long Weight;
 
     /**
-    * 全监听目标组标识，true表示是全监听目标组，false表示不是全监听目标组。仅V2新版类型目标组支持该参数。
+    * <p>全监听目标组标识，true表示是全监听目标组，false表示不是全监听目标组。仅V2新版类型目标组支持该参数。</p>
     */
     @SerializedName("FullListenSwitch")
     @Expose
     private Boolean FullListenSwitch;
 
     /**
-    * 是否开启长连接，此参数仅适用于HTTP/HTTPS目标组，0:关闭；1:开启， 默认关闭。
+    * <p>是否开启长连接，此参数仅适用于HTTP/HTTPS目标组，0:关闭；1:开启， 默认关闭。</p>
     */
     @SerializedName("KeepaliveEnable")
     @Expose
     private Boolean KeepaliveEnable;
 
     /**
-    * 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。仅V2新版且后端转发协议为HTTP/HTTPS/GRPC目标组支持该参数。
+    * <p>会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。仅V2新版且后端转发协议为HTTP/HTTPS/GRPC目标组支持该参数。</p>
     */
     @SerializedName("SessionExpireTime")
     @Expose
     private Long SessionExpireTime;
 
     /**
-    * IP版本类型。
+    * <p>IP版本类型。</p>
     */
     @SerializedName("IpVersion")
     @Expose
     private String IpVersion;
 
     /**
-     * Get 目标组名称，限定50个字符 
-     * @return TargetGroupName 目标组名称，限定50个字符
+    * <p>是否开启SNAT（源IP替换），True（开启）、False（关闭）。默认为关闭。注意：SnatEnable开启时会替换客户端源IP，此时<code>透传客户端源IP</code>选项关闭，反之亦然。</p>
+    */
+    @SerializedName("SnatEnable")
+    @Expose
+    private Boolean SnatEnable;
+
+    /**
+     * Get <p>目标组名称。命名规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p> 
+     * @return TargetGroupName <p>目标组名称。命名规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p>
      */
     public String getTargetGroupName() {
         return this.TargetGroupName;
     }
 
     /**
-     * Set 目标组名称，限定50个字符
-     * @param TargetGroupName 目标组名称，限定50个字符
+     * Set <p>目标组名称。命名规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p>
+     * @param TargetGroupName <p>目标组名称。命名规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p>
      */
     public void setTargetGroupName(String TargetGroupName) {
         this.TargetGroupName = TargetGroupName;
     }
 
     /**
-     * Get 目标组的vpcId属性，不填则使用默认vpc。 
-     * @return VpcId 目标组的vpcId属性，不填则使用默认vpc。
+     * Get <p>目标组的vpcId属性，不填则使用默认vpc。</p> 
+     * @return VpcId <p>目标组的vpcId属性，不填则使用默认vpc。</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 目标组的vpcId属性，不填则使用默认vpc。
-     * @param VpcId 目标组的vpcId属性，不填则使用默认vpc。
+     * Set <p>目标组的vpcId属性，不填则使用默认vpc。</p>
+     * @param VpcId <p>目标组的vpcId属性，不填则使用默认vpc。</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 目标组的默认端口， 后续添加服务器时可使用该默认端口。全监听目标组不支持此参数，非全监听目标组Port和TargetGroupInstances.N中的port二者必填其一。
- 
-     * @return Port 目标组的默认端口， 后续添加服务器时可使用该默认端口。全监听目标组不支持此参数，非全监听目标组Port和TargetGroupInstances.N中的port二者必填其一。
-
+     * Get <p>目标组的默认端口， 后续添加服务器时可使用该默认端口。全监听目标组不支持此参数，非全监听目标组Port和TargetGroupInstances.N中的port二者必填其一。</p> 
+     * @return Port <p>目标组的默认端口， 后续添加服务器时可使用该默认端口。全监听目标组不支持此参数，非全监听目标组Port和TargetGroupInstances.N中的port二者必填其一。</p>
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 目标组的默认端口， 后续添加服务器时可使用该默认端口。全监听目标组不支持此参数，非全监听目标组Port和TargetGroupInstances.N中的port二者必填其一。
-
-     * @param Port 目标组的默认端口， 后续添加服务器时可使用该默认端口。全监听目标组不支持此参数，非全监听目标组Port和TargetGroupInstances.N中的port二者必填其一。
-
+     * Set <p>目标组的默认端口， 后续添加服务器时可使用该默认端口。全监听目标组不支持此参数，非全监听目标组Port和TargetGroupInstances.N中的port二者必填其一。</p>
+     * @param Port <p>目标组的默认端口， 后续添加服务器时可使用该默认端口。全监听目标组不支持此参数，非全监听目标组Port和TargetGroupInstances.N中的port二者必填其一。</p>
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 目标组绑定的后端服务器，单次最多支持50个。 
-     * @return TargetGroupInstances 目标组绑定的后端服务器，单次最多支持50个。
+     * Get <p>目标组绑定的后端服务器，单次最多支持50个。</p> 
+     * @return TargetGroupInstances <p>目标组绑定的后端服务器，单次最多支持50个。</p>
      */
     public TargetGroupInstance [] getTargetGroupInstances() {
         return this.TargetGroupInstances;
     }
 
     /**
-     * Set 目标组绑定的后端服务器，单次最多支持50个。
-     * @param TargetGroupInstances 目标组绑定的后端服务器，单次最多支持50个。
+     * Set <p>目标组绑定的后端服务器，单次最多支持50个。</p>
+     * @param TargetGroupInstances <p>目标组绑定的后端服务器，单次最多支持50个。</p>
      */
     public void setTargetGroupInstances(TargetGroupInstance [] TargetGroupInstances) {
         this.TargetGroupInstances = TargetGroupInstances;
     }
 
     /**
-     * Get 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), 默认为v1(旧版目标组)。 
-     * @return Type 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), 默认为v1(旧版目标组)。
+     * Get <p>目标组类型，当前支持v1(旧版目标组), v2(新版目标组), 默认为v1(旧版目标组)。</p> 
+     * @return Type <p>目标组类型，当前支持v1(旧版目标组), v2(新版目标组), 默认为v1(旧版目标组)。</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), 默认为v1(旧版目标组)。
-     * @param Type 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), 默认为v1(旧版目标组)。
+     * Set <p>目标组类型，当前支持v1(旧版目标组), v2(新版目标组), 默认为v1(旧版目标组)。</p>
+     * @param Type <p>目标组类型，当前支持v1(旧版目标组), v2(新版目标组), 默认为v1(旧版目标组)。</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 目标组后端转发协议。v2新版目标组该项必填。目前支持TCP、UDP、HTTP、HTTPS、GRPC。 
-     * @return Protocol 目标组后端转发协议。v2新版目标组该项必填。目前支持TCP、UDP、HTTP、HTTPS、GRPC。
+     * Get <p>目标组后端转发协议。v2新版目标组该项必填。目前支持TCP、UDP、HTTP、HTTPS、GRPC。</p> 
+     * @return Protocol <p>目标组后端转发协议。v2新版目标组该项必填。目前支持TCP、UDP、HTTP、HTTPS、GRPC。</p>
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 目标组后端转发协议。v2新版目标组该项必填。目前支持TCP、UDP、HTTP、HTTPS、GRPC。
-     * @param Protocol 目标组后端转发协议。v2新版目标组该项必填。目前支持TCP、UDP、HTTP、HTTPS、GRPC。
+     * Set <p>目标组后端转发协议。v2新版目标组该项必填。目前支持TCP、UDP、HTTP、HTTPS、GRPC。</p>
+     * @param Protocol <p>目标组后端转发协议。v2新版目标组该项必填。目前支持TCP、UDP、HTTP、HTTPS、GRPC。</p>
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 健康检查。 
-     * @return HealthCheck 健康检查。
+     * Get <p>健康检查。</p> 
+     * @return HealthCheck <p>健康检查。</p>
      */
     public TargetGroupHealthCheck getHealthCheck() {
         return this.HealthCheck;
     }
 
     /**
-     * Set 健康检查。
-     * @param HealthCheck 健康检查。
+     * Set <p>健康检查。</p>
+     * @param HealthCheck <p>健康检查。</p>
      */
     public void setHealthCheck(TargetGroupHealthCheck HealthCheck) {
         this.HealthCheck = HealthCheck;
     }
 
     /**
-     * Get 调度算法，仅V2新版目标组，且后端转发协议为(HTTP|HTTPS|GRPC)时该参数有效。可选值：
-<ur><li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li><li>默认为 WRR。</li><ur> 
-     * @return ScheduleAlgorithm 调度算法，仅V2新版目标组，且后端转发协议为(HTTP|HTTPS|GRPC)时该参数有效。可选值：
-<ur><li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li><li>默认为 WRR。</li><ur>
+     * Get <p>调度算法，仅V2新版目标组，且后端转发协议为(HTTP|HTTPS|GRPC)时该参数有效。可选值：<br>&lt;ur&gt;<li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li><li>默认为 WRR。</li>&lt;ur&gt;</p> 
+     * @return ScheduleAlgorithm <p>调度算法，仅V2新版目标组，且后端转发协议为(HTTP|HTTPS|GRPC)时该参数有效。可选值：<br>&lt;ur&gt;<li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li><li>默认为 WRR。</li>&lt;ur&gt;</p>
      */
     public String getScheduleAlgorithm() {
         return this.ScheduleAlgorithm;
     }
 
     /**
-     * Set 调度算法，仅V2新版目标组，且后端转发协议为(HTTP|HTTPS|GRPC)时该参数有效。可选值：
-<ur><li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li><li>默认为 WRR。</li><ur>
-     * @param ScheduleAlgorithm 调度算法，仅V2新版目标组，且后端转发协议为(HTTP|HTTPS|GRPC)时该参数有效。可选值：
-<ur><li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li><li>默认为 WRR。</li><ur>
+     * Set <p>调度算法，仅V2新版目标组，且后端转发协议为(HTTP|HTTPS|GRPC)时该参数有效。可选值：<br>&lt;ur&gt;<li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li><li>默认为 WRR。</li>&lt;ur&gt;</p>
+     * @param ScheduleAlgorithm <p>调度算法，仅V2新版目标组，且后端转发协议为(HTTP|HTTPS|GRPC)时该参数有效。可选值：<br>&lt;ur&gt;<li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li><li>默认为 WRR。</li>&lt;ur&gt;</p>
      */
     public void setScheduleAlgorithm(String ScheduleAlgorithm) {
         this.ScheduleAlgorithm = ScheduleAlgorithm;
     }
 
     /**
-     * Get 标签。 
-     * @return Tags 标签。
+     * Get <p>标签。</p> 
+     * @return Tags <p>标签。</p>
      */
     public TagInfo [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签。
-     * @param Tags 标签。
+     * Set <p>标签。</p>
+     * @param Tags <p>标签。</p>
      */
     public void setTags(TagInfo [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 后端服务默认权重, 其中：
-<ul><li>取值范围[0, 100]</li><li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li><li>v1 目标组类型不支持设置 Weight 参数。</li></ul> 
-     * @return Weight 后端服务默认权重, 其中：
-<ul><li>取值范围[0, 100]</li><li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li><li>v1 目标组类型不支持设置 Weight 参数。</li></ul>
+     * Get <p>后端服务默认权重, 其中：</p><ul><li>取值范围[0, 100]</li><li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li><li>v1 目标组类型不支持设置 Weight 参数。</li></ul> 
+     * @return Weight <p>后端服务默认权重, 其中：</p><ul><li>取值范围[0, 100]</li><li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li><li>v1 目标组类型不支持设置 Weight 参数。</li></ul>
      */
     public Long getWeight() {
         return this.Weight;
     }
 
     /**
-     * Set 后端服务默认权重, 其中：
-<ul><li>取值范围[0, 100]</li><li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li><li>v1 目标组类型不支持设置 Weight 参数。</li></ul>
-     * @param Weight 后端服务默认权重, 其中：
-<ul><li>取值范围[0, 100]</li><li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li><li>v1 目标组类型不支持设置 Weight 参数。</li></ul>
+     * Set <p>后端服务默认权重, 其中：</p><ul><li>取值范围[0, 100]</li><li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li><li>v1 目标组类型不支持设置 Weight 参数。</li></ul>
+     * @param Weight <p>后端服务默认权重, 其中：</p><ul><li>取值范围[0, 100]</li><li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li><li>v1 目标组类型不支持设置 Weight 参数。</li></ul>
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;
     }
 
     /**
-     * Get 全监听目标组标识，true表示是全监听目标组，false表示不是全监听目标组。仅V2新版类型目标组支持该参数。 
-     * @return FullListenSwitch 全监听目标组标识，true表示是全监听目标组，false表示不是全监听目标组。仅V2新版类型目标组支持该参数。
+     * Get <p>全监听目标组标识，true表示是全监听目标组，false表示不是全监听目标组。仅V2新版类型目标组支持该参数。</p> 
+     * @return FullListenSwitch <p>全监听目标组标识，true表示是全监听目标组，false表示不是全监听目标组。仅V2新版类型目标组支持该参数。</p>
      */
     public Boolean getFullListenSwitch() {
         return this.FullListenSwitch;
     }
 
     /**
-     * Set 全监听目标组标识，true表示是全监听目标组，false表示不是全监听目标组。仅V2新版类型目标组支持该参数。
-     * @param FullListenSwitch 全监听目标组标识，true表示是全监听目标组，false表示不是全监听目标组。仅V2新版类型目标组支持该参数。
+     * Set <p>全监听目标组标识，true表示是全监听目标组，false表示不是全监听目标组。仅V2新版类型目标组支持该参数。</p>
+     * @param FullListenSwitch <p>全监听目标组标识，true表示是全监听目标组，false表示不是全监听目标组。仅V2新版类型目标组支持该参数。</p>
      */
     public void setFullListenSwitch(Boolean FullListenSwitch) {
         this.FullListenSwitch = FullListenSwitch;
     }
 
     /**
-     * Get 是否开启长连接，此参数仅适用于HTTP/HTTPS目标组，0:关闭；1:开启， 默认关闭。 
-     * @return KeepaliveEnable 是否开启长连接，此参数仅适用于HTTP/HTTPS目标组，0:关闭；1:开启， 默认关闭。
+     * Get <p>是否开启长连接，此参数仅适用于HTTP/HTTPS目标组，0:关闭；1:开启， 默认关闭。</p> 
+     * @return KeepaliveEnable <p>是否开启长连接，此参数仅适用于HTTP/HTTPS目标组，0:关闭；1:开启， 默认关闭。</p>
      */
     public Boolean getKeepaliveEnable() {
         return this.KeepaliveEnable;
     }
 
     /**
-     * Set 是否开启长连接，此参数仅适用于HTTP/HTTPS目标组，0:关闭；1:开启， 默认关闭。
-     * @param KeepaliveEnable 是否开启长连接，此参数仅适用于HTTP/HTTPS目标组，0:关闭；1:开启， 默认关闭。
+     * Set <p>是否开启长连接，此参数仅适用于HTTP/HTTPS目标组，0:关闭；1:开启， 默认关闭。</p>
+     * @param KeepaliveEnable <p>是否开启长连接，此参数仅适用于HTTP/HTTPS目标组，0:关闭；1:开启， 默认关闭。</p>
      */
     public void setKeepaliveEnable(Boolean KeepaliveEnable) {
         this.KeepaliveEnable = KeepaliveEnable;
     }
 
     /**
-     * Get 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。仅V2新版且后端转发协议为HTTP/HTTPS/GRPC目标组支持该参数。 
-     * @return SessionExpireTime 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。仅V2新版且后端转发协议为HTTP/HTTPS/GRPC目标组支持该参数。
+     * Get <p>会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。仅V2新版且后端转发协议为HTTP/HTTPS/GRPC目标组支持该参数。</p> 
+     * @return SessionExpireTime <p>会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。仅V2新版且后端转发协议为HTTP/HTTPS/GRPC目标组支持该参数。</p>
      */
     public Long getSessionExpireTime() {
         return this.SessionExpireTime;
     }
 
     /**
-     * Set 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。仅V2新版且后端转发协议为HTTP/HTTPS/GRPC目标组支持该参数。
-     * @param SessionExpireTime 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。仅V2新版且后端转发协议为HTTP/HTTPS/GRPC目标组支持该参数。
+     * Set <p>会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。仅V2新版且后端转发协议为HTTP/HTTPS/GRPC目标组支持该参数。</p>
+     * @param SessionExpireTime <p>会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。仅V2新版且后端转发协议为HTTP/HTTPS/GRPC目标组支持该参数。</p>
      */
     public void setSessionExpireTime(Long SessionExpireTime) {
         this.SessionExpireTime = SessionExpireTime;
     }
 
     /**
-     * Get IP版本类型。 
-     * @return IpVersion IP版本类型。
+     * Get <p>IP版本类型。</p> 
+     * @return IpVersion <p>IP版本类型。</p>
      */
     public String getIpVersion() {
         return this.IpVersion;
     }
 
     /**
-     * Set IP版本类型。
-     * @param IpVersion IP版本类型。
+     * Set <p>IP版本类型。</p>
+     * @param IpVersion <p>IP版本类型。</p>
      */
     public void setIpVersion(String IpVersion) {
         this.IpVersion = IpVersion;
+    }
+
+    /**
+     * Get <p>是否开启SNAT（源IP替换），True（开启）、False（关闭）。默认为关闭。注意：SnatEnable开启时会替换客户端源IP，此时<code>透传客户端源IP</code>选项关闭，反之亦然。</p> 
+     * @return SnatEnable <p>是否开启SNAT（源IP替换），True（开启）、False（关闭）。默认为关闭。注意：SnatEnable开启时会替换客户端源IP，此时<code>透传客户端源IP</code>选项关闭，反之亦然。</p>
+     */
+    public Boolean getSnatEnable() {
+        return this.SnatEnable;
+    }
+
+    /**
+     * Set <p>是否开启SNAT（源IP替换），True（开启）、False（关闭）。默认为关闭。注意：SnatEnable开启时会替换客户端源IP，此时<code>透传客户端源IP</code>选项关闭，反之亦然。</p>
+     * @param SnatEnable <p>是否开启SNAT（源IP替换），True（开启）、False（关闭）。默认为关闭。注意：SnatEnable开启时会替换客户端源IP，此时<code>透传客户端源IP</code>选项关闭，反之亦然。</p>
+     */
+    public void setSnatEnable(Boolean SnatEnable) {
+        this.SnatEnable = SnatEnable;
     }
 
     public CreateTargetGroupRequest() {
@@ -416,6 +424,9 @@ public class CreateTargetGroupRequest extends AbstractModel {
         if (source.IpVersion != null) {
             this.IpVersion = new String(source.IpVersion);
         }
+        if (source.SnatEnable != null) {
+            this.SnatEnable = new Boolean(source.SnatEnable);
+        }
     }
 
 
@@ -437,6 +448,7 @@ public class CreateTargetGroupRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
         this.setParamSimple(map, prefix + "SessionExpireTime", this.SessionExpireTime);
         this.setParamSimple(map, prefix + "IpVersion", this.IpVersion);
+        this.setParamSimple(map, prefix + "SnatEnable", this.SnatEnable);
 
     }
 }

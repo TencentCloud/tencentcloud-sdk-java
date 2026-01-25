@@ -52,7 +52,7 @@ public class PulsarProClusterSpecInfo extends AbstractModel {
     private Long MaxNamespaces;
 
     /**
-    * 最大主题分区数
+    * 可以创建的最大主题数
     */
     @SerializedName("MaxTopics")
     @Expose
@@ -76,11 +76,39 @@ public class PulsarProClusterSpecInfo extends AbstractModel {
     private Long MaxPartitions;
 
     /**
-    * 商品最大延迟消息数量。0代表没有限制	
+    * 最大延迟消息数量。0代表没有限制	
     */
     @SerializedName("MaxDelayedMessages")
     @Expose
     private Long MaxDelayedMessages;
+
+    /**
+    * 可以创建的最大主题分区数
+    */
+    @SerializedName("MaxTopicsPartitioned")
+    @Expose
+    private Long MaxTopicsPartitioned;
+
+    /**
+    * 单broker最大链接数
+    */
+    @SerializedName("BrokerMaxConnections")
+    @Expose
+    private Long BrokerMaxConnections;
+
+    /**
+    * 单IP最大链接数
+    */
+    @SerializedName("BrokerMaxConnectionsPerIp")
+    @Expose
+    private Long BrokerMaxConnectionsPerIp;
+
+    /**
+    * 弹性存储集群最大存储规格；固定存储该值为0
+    */
+    @SerializedName("MaximumElasticStorage")
+    @Expose
+    private Long MaximumElasticStorage;
 
     /**
      * Get 集群规格名称 
@@ -147,16 +175,16 @@ public class PulsarProClusterSpecInfo extends AbstractModel {
     }
 
     /**
-     * Get 最大主题分区数 
-     * @return MaxTopics 最大主题分区数
+     * Get 可以创建的最大主题数 
+     * @return MaxTopics 可以创建的最大主题数
      */
     public Long getMaxTopics() {
         return this.MaxTopics;
     }
 
     /**
-     * Set 最大主题分区数
-     * @param MaxTopics 最大主题分区数
+     * Set 可以创建的最大主题数
+     * @param MaxTopics 可以创建的最大主题数
      */
     public void setMaxTopics(Long MaxTopics) {
         this.MaxTopics = MaxTopics;
@@ -207,19 +235,83 @@ public class PulsarProClusterSpecInfo extends AbstractModel {
     }
 
     /**
-     * Get 商品最大延迟消息数量。0代表没有限制	 
-     * @return MaxDelayedMessages 商品最大延迟消息数量。0代表没有限制	
+     * Get 最大延迟消息数量。0代表没有限制	 
+     * @return MaxDelayedMessages 最大延迟消息数量。0代表没有限制	
      */
     public Long getMaxDelayedMessages() {
         return this.MaxDelayedMessages;
     }
 
     /**
-     * Set 商品最大延迟消息数量。0代表没有限制	
-     * @param MaxDelayedMessages 商品最大延迟消息数量。0代表没有限制	
+     * Set 最大延迟消息数量。0代表没有限制	
+     * @param MaxDelayedMessages 最大延迟消息数量。0代表没有限制	
      */
     public void setMaxDelayedMessages(Long MaxDelayedMessages) {
         this.MaxDelayedMessages = MaxDelayedMessages;
+    }
+
+    /**
+     * Get 可以创建的最大主题分区数 
+     * @return MaxTopicsPartitioned 可以创建的最大主题分区数
+     */
+    public Long getMaxTopicsPartitioned() {
+        return this.MaxTopicsPartitioned;
+    }
+
+    /**
+     * Set 可以创建的最大主题分区数
+     * @param MaxTopicsPartitioned 可以创建的最大主题分区数
+     */
+    public void setMaxTopicsPartitioned(Long MaxTopicsPartitioned) {
+        this.MaxTopicsPartitioned = MaxTopicsPartitioned;
+    }
+
+    /**
+     * Get 单broker最大链接数 
+     * @return BrokerMaxConnections 单broker最大链接数
+     */
+    public Long getBrokerMaxConnections() {
+        return this.BrokerMaxConnections;
+    }
+
+    /**
+     * Set 单broker最大链接数
+     * @param BrokerMaxConnections 单broker最大链接数
+     */
+    public void setBrokerMaxConnections(Long BrokerMaxConnections) {
+        this.BrokerMaxConnections = BrokerMaxConnections;
+    }
+
+    /**
+     * Get 单IP最大链接数 
+     * @return BrokerMaxConnectionsPerIp 单IP最大链接数
+     */
+    public Long getBrokerMaxConnectionsPerIp() {
+        return this.BrokerMaxConnectionsPerIp;
+    }
+
+    /**
+     * Set 单IP最大链接数
+     * @param BrokerMaxConnectionsPerIp 单IP最大链接数
+     */
+    public void setBrokerMaxConnectionsPerIp(Long BrokerMaxConnectionsPerIp) {
+        this.BrokerMaxConnectionsPerIp = BrokerMaxConnectionsPerIp;
+    }
+
+    /**
+     * Get 弹性存储集群最大存储规格；固定存储该值为0 
+     * @return MaximumElasticStorage 弹性存储集群最大存储规格；固定存储该值为0
+     */
+    public Long getMaximumElasticStorage() {
+        return this.MaximumElasticStorage;
+    }
+
+    /**
+     * Set 弹性存储集群最大存储规格；固定存储该值为0
+     * @param MaximumElasticStorage 弹性存储集群最大存储规格；固定存储该值为0
+     */
+    public void setMaximumElasticStorage(Long MaximumElasticStorage) {
+        this.MaximumElasticStorage = MaximumElasticStorage;
     }
 
     public PulsarProClusterSpecInfo() {
@@ -254,6 +346,18 @@ public class PulsarProClusterSpecInfo extends AbstractModel {
         if (source.MaxDelayedMessages != null) {
             this.MaxDelayedMessages = new Long(source.MaxDelayedMessages);
         }
+        if (source.MaxTopicsPartitioned != null) {
+            this.MaxTopicsPartitioned = new Long(source.MaxTopicsPartitioned);
+        }
+        if (source.BrokerMaxConnections != null) {
+            this.BrokerMaxConnections = new Long(source.BrokerMaxConnections);
+        }
+        if (source.BrokerMaxConnectionsPerIp != null) {
+            this.BrokerMaxConnectionsPerIp = new Long(source.BrokerMaxConnectionsPerIp);
+        }
+        if (source.MaximumElasticStorage != null) {
+            this.MaximumElasticStorage = new Long(source.MaximumElasticStorage);
+        }
     }
 
 
@@ -269,6 +373,10 @@ public class PulsarProClusterSpecInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ScalableTps", this.ScalableTps);
         this.setParamSimple(map, prefix + "MaxPartitions", this.MaxPartitions);
         this.setParamSimple(map, prefix + "MaxDelayedMessages", this.MaxDelayedMessages);
+        this.setParamSimple(map, prefix + "MaxTopicsPartitioned", this.MaxTopicsPartitioned);
+        this.setParamSimple(map, prefix + "BrokerMaxConnections", this.BrokerMaxConnections);
+        this.setParamSimple(map, prefix + "BrokerMaxConnectionsPerIp", this.BrokerMaxConnectionsPerIp);
+        this.setParamSimple(map, prefix + "MaximumElasticStorage", this.MaximumElasticStorage);
 
     }
 }

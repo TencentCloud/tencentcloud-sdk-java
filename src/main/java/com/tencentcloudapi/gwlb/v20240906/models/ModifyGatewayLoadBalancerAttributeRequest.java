@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ModifyGatewayLoadBalancerAttributeRequest extends AbstractModel {
 
     /**
-    * 网关负载均衡的唯一ID。可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/api/1782/111683) 接口获取。
+    * <p>网关负载均衡的唯一ID。可通过<a href="https://cloud.tencent.com/document/api/1782/111683">DescribeGatewayLoadBalancers</a> 接口获取。</p>
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * 网关负载均衡实例名称。可支持输入1-60个字符。
+    * <p>网关负载均衡实例名称。命名规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p>
     */
     @SerializedName("LoadBalancerName")
     @Expose
     private String LoadBalancerName;
 
     /**
-    * 是否开启删除保护。
+    * <p>是否开启删除保护。</p>
     */
     @SerializedName("DeleteProtect")
     @Expose
     private Boolean DeleteProtect;
 
     /**
-     * Get 网关负载均衡的唯一ID。可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/api/1782/111683) 接口获取。 
-     * @return LoadBalancerId 网关负载均衡的唯一ID。可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/api/1782/111683) 接口获取。
+     * Get <p>网关负载均衡的唯一ID。可通过<a href="https://cloud.tencent.com/document/api/1782/111683">DescribeGatewayLoadBalancers</a> 接口获取。</p> 
+     * @return LoadBalancerId <p>网关负载均衡的唯一ID。可通过<a href="https://cloud.tencent.com/document/api/1782/111683">DescribeGatewayLoadBalancers</a> 接口获取。</p>
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set 网关负载均衡的唯一ID。可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/api/1782/111683) 接口获取。
-     * @param LoadBalancerId 网关负载均衡的唯一ID。可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/api/1782/111683) 接口获取。
+     * Set <p>网关负载均衡的唯一ID。可通过<a href="https://cloud.tencent.com/document/api/1782/111683">DescribeGatewayLoadBalancers</a> 接口获取。</p>
+     * @param LoadBalancerId <p>网关负载均衡的唯一ID。可通过<a href="https://cloud.tencent.com/document/api/1782/111683">DescribeGatewayLoadBalancers</a> 接口获取。</p>
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get 网关负载均衡实例名称。可支持输入1-60个字符。 
-     * @return LoadBalancerName 网关负载均衡实例名称。可支持输入1-60个字符。
+     * Get <p>网关负载均衡实例名称。命名规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p> 
+     * @return LoadBalancerName <p>网关负载均衡实例名称。命名规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p>
      */
     public String getLoadBalancerName() {
         return this.LoadBalancerName;
     }
 
     /**
-     * Set 网关负载均衡实例名称。可支持输入1-60个字符。
-     * @param LoadBalancerName 网关负载均衡实例名称。可支持输入1-60个字符。
+     * Set <p>网关负载均衡实例名称。命名规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p>
+     * @param LoadBalancerName <p>网关负载均衡实例名称。命名规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p>
      */
     public void setLoadBalancerName(String LoadBalancerName) {
         this.LoadBalancerName = LoadBalancerName;
     }
 
     /**
-     * Get 是否开启删除保护。 
-     * @return DeleteProtect 是否开启删除保护。
+     * Get <p>是否开启删除保护。</p> 
+     * @return DeleteProtect <p>是否开启删除保护。</p>
      */
     public Boolean getDeleteProtect() {
         return this.DeleteProtect;
     }
 
     /**
-     * Set 是否开启删除保护。
-     * @param DeleteProtect 是否开启删除保护。
+     * Set <p>是否开启删除保护。</p>
+     * @param DeleteProtect <p>是否开启删除保护。</p>
      */
     public void setDeleteProtect(Boolean DeleteProtect) {
         this.DeleteProtect = DeleteProtect;

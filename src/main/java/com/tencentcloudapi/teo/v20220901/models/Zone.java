@@ -218,6 +218,13 @@ public class Zone extends AbstractModel {
     private VanityNameServersIps [] VanityNameServersIps;
 
     /**
+    * 版本管理配置组工作模式。站点各配置模块可按照配置组维度开启「版本管理模式」或「即时生效模式」，详情请参考 [版本管理](https://cloud.tencent.com/document/product/1552/113690)。
+    */
+    @SerializedName("WorkModeInfos")
+    @Expose
+    private ConfigGroupWorkModeInfo [] WorkModeInfos;
+
+    /**
      * Get 站点 ID。 
      * @return ZoneId 站点 ID。
      */
@@ -705,6 +712,22 @@ public class Zone extends AbstractModel {
         this.VanityNameServersIps = VanityNameServersIps;
     }
 
+    /**
+     * Get 版本管理配置组工作模式。站点各配置模块可按照配置组维度开启「版本管理模式」或「即时生效模式」，详情请参考 [版本管理](https://cloud.tencent.com/document/product/1552/113690)。 
+     * @return WorkModeInfos 版本管理配置组工作模式。站点各配置模块可按照配置组维度开启「版本管理模式」或「即时生效模式」，详情请参考 [版本管理](https://cloud.tencent.com/document/product/1552/113690)。
+     */
+    public ConfigGroupWorkModeInfo [] getWorkModeInfos() {
+        return this.WorkModeInfos;
+    }
+
+    /**
+     * Set 版本管理配置组工作模式。站点各配置模块可按照配置组维度开启「版本管理模式」或「即时生效模式」，详情请参考 [版本管理](https://cloud.tencent.com/document/product/1552/113690)。
+     * @param WorkModeInfos 版本管理配置组工作模式。站点各配置模块可按照配置组维度开启「版本管理模式」或「即时生效模式」，详情请参考 [版本管理](https://cloud.tencent.com/document/product/1552/113690)。
+     */
+    public void setWorkModeInfos(ConfigGroupWorkModeInfo [] WorkModeInfos) {
+        this.WorkModeInfos = WorkModeInfos;
+    }
+
     public Zone() {
     }
 
@@ -800,6 +823,12 @@ public class Zone extends AbstractModel {
                 this.VanityNameServersIps[i] = new VanityNameServersIps(source.VanityNameServersIps[i]);
             }
         }
+        if (source.WorkModeInfos != null) {
+            this.WorkModeInfos = new ConfigGroupWorkModeInfo[source.WorkModeInfos.length];
+            for (int i = 0; i < source.WorkModeInfos.length; i++) {
+                this.WorkModeInfos[i] = new ConfigGroupWorkModeInfo(source.WorkModeInfos[i]);
+            }
+        }
     }
 
 
@@ -831,6 +860,7 @@ public class Zone extends AbstractModel {
         this.setParamArraySimple(map, prefix + "NameServers.", this.NameServers);
         this.setParamObj(map, prefix + "VanityNameServers.", this.VanityNameServers);
         this.setParamArrayObj(map, prefix + "VanityNameServersIps.", this.VanityNameServersIps);
+        this.setParamArrayObj(map, prefix + "WorkModeInfos.", this.WorkModeInfos);
 
     }
 }

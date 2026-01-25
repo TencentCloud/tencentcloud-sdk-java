@@ -2289,6 +2289,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *本接口用于修改站点下各配置模块的工作模式。站点各配置模块可按照配置组维度开启「版本管理模式」或「即时生效模式」，详情请参考 [版本管理](https://cloud.tencent.com/document/product/1552/113690)。
+     * @param req ModifyZoneWorkModeRequest
+     * @return ModifyZoneWorkModeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyZoneWorkModeResponse ModifyZoneWorkMode(ModifyZoneWorkModeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyZoneWorkMode", ModifyZoneWorkModeResponse.class);
+    }
+
+    /**
      *通过本接口刷新多通道安全加速网关的密钥。客户基于接入密钥签名接入多通道安全加速网关。每个站点下只有一个密钥，可用于接入该站点下的所有网关，刷新密钥后，原始密钥会失效。
      * @param req RefreshMultiPathGatewaySecretKeyRequest
      * @return RefreshMultiPathGatewaySecretKeyResponse

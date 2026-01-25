@@ -99,6 +99,13 @@ public class ProcessImageRequest extends AbstractModel {
     private AddOnParameter AddOnParameter;
 
     /**
+    * 图片处理拓展参数。
+    */
+    @SerializedName("StdExtInfo")
+    @Expose
+    private String StdExtInfo;
+
+    /**
      * Get 图片处理的文件输入信息。 
      * @return InputInfo 图片处理的文件输入信息。
      */
@@ -290,6 +297,22 @@ public class ProcessImageRequest extends AbstractModel {
         this.AddOnParameter = AddOnParameter;
     }
 
+    /**
+     * Get 图片处理拓展参数。 
+     * @return StdExtInfo 图片处理拓展参数。
+     */
+    public String getStdExtInfo() {
+        return this.StdExtInfo;
+    }
+
+    /**
+     * Set 图片处理拓展参数。
+     * @param StdExtInfo 图片处理拓展参数。
+     */
+    public void setStdExtInfo(String StdExtInfo) {
+        this.StdExtInfo = StdExtInfo;
+    }
+
     public ProcessImageRequest() {
     }
 
@@ -325,6 +348,9 @@ public class ProcessImageRequest extends AbstractModel {
         if (source.AddOnParameter != null) {
             this.AddOnParameter = new AddOnParameter(source.AddOnParameter);
         }
+        if (source.StdExtInfo != null) {
+            this.StdExtInfo = new String(source.StdExtInfo);
+        }
     }
 
 
@@ -341,6 +367,7 @@ public class ProcessImageRequest extends AbstractModel {
         this.setParamObj(map, prefix + "ImageTask.", this.ImageTask);
         this.setParamSimple(map, prefix + "ScheduleId", this.ScheduleId);
         this.setParamObj(map, prefix + "AddOnParameter.", this.AddOnParameter);
+        this.setParamSimple(map, prefix + "StdExtInfo", this.StdExtInfo);
 
     }
 }

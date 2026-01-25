@@ -104,6 +104,30 @@ public class TableInfo extends AbstractModel {
     private BusinessMetadata BusinessMetadata;
 
     /**
+    * 数据目录
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CatalogName")
+    @Expose
+    private String CatalogName;
+
+    /**
+    * 数据源ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DatasourceId")
+    @Expose
+    private Long DatasourceId;
+
+    /**
+    * 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DatasourceType")
+    @Expose
+    private String DatasourceType;
+
+    /**
      * Get 数据表GUID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Guid 数据表GUID
@@ -303,6 +327,66 @@ public class TableInfo extends AbstractModel {
         this.BusinessMetadata = BusinessMetadata;
     }
 
+    /**
+     * Get 数据目录
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CatalogName 数据目录
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCatalogName() {
+        return this.CatalogName;
+    }
+
+    /**
+     * Set 数据目录
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CatalogName 数据目录
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCatalogName(String CatalogName) {
+        this.CatalogName = CatalogName;
+    }
+
+    /**
+     * Get 数据源ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DatasourceId 数据源ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDatasourceId() {
+        return this.DatasourceId;
+    }
+
+    /**
+     * Set 数据源ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DatasourceId 数据源ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDatasourceId(Long DatasourceId) {
+        this.DatasourceId = DatasourceId;
+    }
+
+    /**
+     * Get 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DatasourceType 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDatasourceType() {
+        return this.DatasourceType;
+    }
+
+    /**
+     * Set 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DatasourceType 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDatasourceType(String DatasourceType) {
+        this.DatasourceType = DatasourceType;
+    }
+
     public TableInfo() {
     }
 
@@ -341,6 +425,15 @@ public class TableInfo extends AbstractModel {
         if (source.BusinessMetadata != null) {
             this.BusinessMetadata = new BusinessMetadata(source.BusinessMetadata);
         }
+        if (source.CatalogName != null) {
+            this.CatalogName = new String(source.CatalogName);
+        }
+        if (source.DatasourceId != null) {
+            this.DatasourceId = new Long(source.DatasourceId);
+        }
+        if (source.DatasourceType != null) {
+            this.DatasourceType = new String(source.DatasourceType);
+        }
     }
 
 
@@ -358,6 +451,9 @@ public class TableInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamObj(map, prefix + "TechnicalMetadata.", this.TechnicalMetadata);
         this.setParamObj(map, prefix + "BusinessMetadata.", this.BusinessMetadata);
+        this.setParamSimple(map, prefix + "CatalogName", this.CatalogName);
+        this.setParamSimple(map, prefix + "DatasourceId", this.DatasourceId);
+        this.setParamSimple(map, prefix + "DatasourceType", this.DatasourceType);
 
     }
 }

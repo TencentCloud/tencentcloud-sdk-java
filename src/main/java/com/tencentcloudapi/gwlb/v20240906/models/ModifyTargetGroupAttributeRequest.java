@@ -24,230 +24,230 @@ import java.util.HashMap;
 public class ModifyTargetGroupAttributeRequest extends AbstractModel {
 
     /**
-    * 目标组的ID，可以通过[DescribeTargetGroups](https://cloud.tencent.com/document/product/214/40554)获取。
+    * <p>目标组的ID，可以通过<a href="https://cloud.tencent.com/document/product/214/40554">DescribeTargetGroups</a>获取。</p>
     */
     @SerializedName("TargetGroupId")
     @Expose
     private String TargetGroupId;
 
     /**
-    * 目标组的新名称。
+    * <p>目标组的新名称。命名规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p>
     */
     @SerializedName("TargetGroupName")
     @Expose
     private String TargetGroupName;
 
     /**
-    * 健康检查详情。
+    * <p>健康检查详情。</p>
     */
     @SerializedName("HealthCheck")
     @Expose
     private TargetGroupHealthCheck HealthCheck;
 
     /**
-    * 是否支持全死全活。
+    * <p>是否支持全死全活。</p>
     */
     @SerializedName("AllDeadToAlive")
     @Expose
     private Boolean AllDeadToAlive;
 
     /**
-    * TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。
+    * <p>TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。</p>
     */
     @SerializedName("TcpIdleConnectTimeout")
     @Expose
     private Long TcpIdleConnectTimeout;
 
     /**
-    * 其他协议连接空闲超时时间，可配置5s-180s，默认120s
+    * <p>其他协议连接空闲超时时间，可配置5s-180s，默认120s</p>
     */
     @SerializedName("OthersIdleConnectTimeout")
     @Expose
     private Long OthersIdleConnectTimeout;
 
     /**
-    * 重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。
+    * <p>重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。</p>
     */
     @SerializedName("RescheduleUnbindRs")
     @Expose
     private Boolean RescheduleUnbindRs;
 
     /**
-    * 解绑RS后开启重调度的时间，可配置0s-3600s，默认0s
+    * <p>解绑RS后开启重调度的时间，可配置0s-3600s，默认0s</p>
     */
     @SerializedName("RescheduleUnbindRsStartTime")
     @Expose
     private Long RescheduleUnbindRsStartTime;
 
     /**
-    * 重新调度功能内的后端服务健康探测异常开关，开关打开后后端服务健康检查异常会触发重新调度。
+    * <p>重新调度功能内的后端服务健康探测异常开关，开关打开后后端服务健康检查异常会触发重新调度。</p>
     */
     @SerializedName("RescheduleUnhealthy")
     @Expose
     private Boolean RescheduleUnhealthy;
 
     /**
-    * 后端服务健康探测异常后开启重调度的时间，可配置0s-3600s，默认0s
+    * <p>后端服务健康探测异常后开启重调度的时间，可配置0s-3600s，默认0s</p>
     */
     @SerializedName("RescheduleUnhealthyStartTime")
     @Expose
     private Long RescheduleUnhealthyStartTime;
 
     /**
-     * Get 目标组的ID，可以通过[DescribeTargetGroups](https://cloud.tencent.com/document/product/214/40554)获取。 
-     * @return TargetGroupId 目标组的ID，可以通过[DescribeTargetGroups](https://cloud.tencent.com/document/product/214/40554)获取。
+     * Get <p>目标组的ID，可以通过<a href="https://cloud.tencent.com/document/product/214/40554">DescribeTargetGroups</a>获取。</p> 
+     * @return TargetGroupId <p>目标组的ID，可以通过<a href="https://cloud.tencent.com/document/product/214/40554">DescribeTargetGroups</a>获取。</p>
      */
     public String getTargetGroupId() {
         return this.TargetGroupId;
     }
 
     /**
-     * Set 目标组的ID，可以通过[DescribeTargetGroups](https://cloud.tencent.com/document/product/214/40554)获取。
-     * @param TargetGroupId 目标组的ID，可以通过[DescribeTargetGroups](https://cloud.tencent.com/document/product/214/40554)获取。
+     * Set <p>目标组的ID，可以通过<a href="https://cloud.tencent.com/document/product/214/40554">DescribeTargetGroups</a>获取。</p>
+     * @param TargetGroupId <p>目标组的ID，可以通过<a href="https://cloud.tencent.com/document/product/214/40554">DescribeTargetGroups</a>获取。</p>
      */
     public void setTargetGroupId(String TargetGroupId) {
         this.TargetGroupId = TargetGroupId;
     }
 
     /**
-     * Get 目标组的新名称。 
-     * @return TargetGroupName 目标组的新名称。
+     * Get <p>目标组的新名称。命名规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p> 
+     * @return TargetGroupName <p>目标组的新名称。命名规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p>
      */
     public String getTargetGroupName() {
         return this.TargetGroupName;
     }
 
     /**
-     * Set 目标组的新名称。
-     * @param TargetGroupName 目标组的新名称。
+     * Set <p>目标组的新名称。命名规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p>
+     * @param TargetGroupName <p>目标组的新名称。命名规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p>
      */
     public void setTargetGroupName(String TargetGroupName) {
         this.TargetGroupName = TargetGroupName;
     }
 
     /**
-     * Get 健康检查详情。 
-     * @return HealthCheck 健康检查详情。
+     * Get <p>健康检查详情。</p> 
+     * @return HealthCheck <p>健康检查详情。</p>
      */
     public TargetGroupHealthCheck getHealthCheck() {
         return this.HealthCheck;
     }
 
     /**
-     * Set 健康检查详情。
-     * @param HealthCheck 健康检查详情。
+     * Set <p>健康检查详情。</p>
+     * @param HealthCheck <p>健康检查详情。</p>
      */
     public void setHealthCheck(TargetGroupHealthCheck HealthCheck) {
         this.HealthCheck = HealthCheck;
     }
 
     /**
-     * Get 是否支持全死全活。 
-     * @return AllDeadToAlive 是否支持全死全活。
+     * Get <p>是否支持全死全活。</p> 
+     * @return AllDeadToAlive <p>是否支持全死全活。</p>
      */
     public Boolean getAllDeadToAlive() {
         return this.AllDeadToAlive;
     }
 
     /**
-     * Set 是否支持全死全活。
-     * @param AllDeadToAlive 是否支持全死全活。
+     * Set <p>是否支持全死全活。</p>
+     * @param AllDeadToAlive <p>是否支持全死全活。</p>
      */
     public void setAllDeadToAlive(Boolean AllDeadToAlive) {
         this.AllDeadToAlive = AllDeadToAlive;
     }
 
     /**
-     * Get TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。 
-     * @return TcpIdleConnectTimeout TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。
+     * Get <p>TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。</p> 
+     * @return TcpIdleConnectTimeout <p>TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。</p>
      */
     public Long getTcpIdleConnectTimeout() {
         return this.TcpIdleConnectTimeout;
     }
 
     /**
-     * Set TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。
-     * @param TcpIdleConnectTimeout TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。
+     * Set <p>TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。</p>
+     * @param TcpIdleConnectTimeout <p>TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。</p>
      */
     public void setTcpIdleConnectTimeout(Long TcpIdleConnectTimeout) {
         this.TcpIdleConnectTimeout = TcpIdleConnectTimeout;
     }
 
     /**
-     * Get 其他协议连接空闲超时时间，可配置5s-180s，默认120s 
-     * @return OthersIdleConnectTimeout 其他协议连接空闲超时时间，可配置5s-180s，默认120s
+     * Get <p>其他协议连接空闲超时时间，可配置5s-180s，默认120s</p> 
+     * @return OthersIdleConnectTimeout <p>其他协议连接空闲超时时间，可配置5s-180s，默认120s</p>
      */
     public Long getOthersIdleConnectTimeout() {
         return this.OthersIdleConnectTimeout;
     }
 
     /**
-     * Set 其他协议连接空闲超时时间，可配置5s-180s，默认120s
-     * @param OthersIdleConnectTimeout 其他协议连接空闲超时时间，可配置5s-180s，默认120s
+     * Set <p>其他协议连接空闲超时时间，可配置5s-180s，默认120s</p>
+     * @param OthersIdleConnectTimeout <p>其他协议连接空闲超时时间，可配置5s-180s，默认120s</p>
      */
     public void setOthersIdleConnectTimeout(Long OthersIdleConnectTimeout) {
         this.OthersIdleConnectTimeout = OthersIdleConnectTimeout;
     }
 
     /**
-     * Get 重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。 
-     * @return RescheduleUnbindRs 重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。
+     * Get <p>重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。</p> 
+     * @return RescheduleUnbindRs <p>重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。</p>
      */
     public Boolean getRescheduleUnbindRs() {
         return this.RescheduleUnbindRs;
     }
 
     /**
-     * Set 重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。
-     * @param RescheduleUnbindRs 重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。
+     * Set <p>重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。</p>
+     * @param RescheduleUnbindRs <p>重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。</p>
      */
     public void setRescheduleUnbindRs(Boolean RescheduleUnbindRs) {
         this.RescheduleUnbindRs = RescheduleUnbindRs;
     }
 
     /**
-     * Get 解绑RS后开启重调度的时间，可配置0s-3600s，默认0s 
-     * @return RescheduleUnbindRsStartTime 解绑RS后开启重调度的时间，可配置0s-3600s，默认0s
+     * Get <p>解绑RS后开启重调度的时间，可配置0s-3600s，默认0s</p> 
+     * @return RescheduleUnbindRsStartTime <p>解绑RS后开启重调度的时间，可配置0s-3600s，默认0s</p>
      */
     public Long getRescheduleUnbindRsStartTime() {
         return this.RescheduleUnbindRsStartTime;
     }
 
     /**
-     * Set 解绑RS后开启重调度的时间，可配置0s-3600s，默认0s
-     * @param RescheduleUnbindRsStartTime 解绑RS后开启重调度的时间，可配置0s-3600s，默认0s
+     * Set <p>解绑RS后开启重调度的时间，可配置0s-3600s，默认0s</p>
+     * @param RescheduleUnbindRsStartTime <p>解绑RS后开启重调度的时间，可配置0s-3600s，默认0s</p>
      */
     public void setRescheduleUnbindRsStartTime(Long RescheduleUnbindRsStartTime) {
         this.RescheduleUnbindRsStartTime = RescheduleUnbindRsStartTime;
     }
 
     /**
-     * Get 重新调度功能内的后端服务健康探测异常开关，开关打开后后端服务健康检查异常会触发重新调度。 
-     * @return RescheduleUnhealthy 重新调度功能内的后端服务健康探测异常开关，开关打开后后端服务健康检查异常会触发重新调度。
+     * Get <p>重新调度功能内的后端服务健康探测异常开关，开关打开后后端服务健康检查异常会触发重新调度。</p> 
+     * @return RescheduleUnhealthy <p>重新调度功能内的后端服务健康探测异常开关，开关打开后后端服务健康检查异常会触发重新调度。</p>
      */
     public Boolean getRescheduleUnhealthy() {
         return this.RescheduleUnhealthy;
     }
 
     /**
-     * Set 重新调度功能内的后端服务健康探测异常开关，开关打开后后端服务健康检查异常会触发重新调度。
-     * @param RescheduleUnhealthy 重新调度功能内的后端服务健康探测异常开关，开关打开后后端服务健康检查异常会触发重新调度。
+     * Set <p>重新调度功能内的后端服务健康探测异常开关，开关打开后后端服务健康检查异常会触发重新调度。</p>
+     * @param RescheduleUnhealthy <p>重新调度功能内的后端服务健康探测异常开关，开关打开后后端服务健康检查异常会触发重新调度。</p>
      */
     public void setRescheduleUnhealthy(Boolean RescheduleUnhealthy) {
         this.RescheduleUnhealthy = RescheduleUnhealthy;
     }
 
     /**
-     * Get 后端服务健康探测异常后开启重调度的时间，可配置0s-3600s，默认0s 
-     * @return RescheduleUnhealthyStartTime 后端服务健康探测异常后开启重调度的时间，可配置0s-3600s，默认0s
+     * Get <p>后端服务健康探测异常后开启重调度的时间，可配置0s-3600s，默认0s</p> 
+     * @return RescheduleUnhealthyStartTime <p>后端服务健康探测异常后开启重调度的时间，可配置0s-3600s，默认0s</p>
      */
     public Long getRescheduleUnhealthyStartTime() {
         return this.RescheduleUnhealthyStartTime;
     }
 
     /**
-     * Set 后端服务健康探测异常后开启重调度的时间，可配置0s-3600s，默认0s
-     * @param RescheduleUnhealthyStartTime 后端服务健康探测异常后开启重调度的时间，可配置0s-3600s，默认0s
+     * Set <p>后端服务健康探测异常后开启重调度的时间，可配置0s-3600s，默认0s</p>
+     * @param RescheduleUnhealthyStartTime <p>后端服务健康探测异常后开启重调度的时间，可配置0s-3600s，默认0s</p>
      */
     public void setRescheduleUnhealthyStartTime(Long RescheduleUnhealthyStartTime) {
         this.RescheduleUnhealthyStartTime = RescheduleUnhealthyStartTime;

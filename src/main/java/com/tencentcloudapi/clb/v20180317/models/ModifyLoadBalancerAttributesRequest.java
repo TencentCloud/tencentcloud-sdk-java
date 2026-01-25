@@ -31,7 +31,7 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel {
     private String LoadBalancerId;
 
     /**
-    * <p>负载均衡实例名称，规则：1-60 个英文、汉字、数字、连接线“-”或下划线“_”。</p>
+    * <p>负载均衡实例名称，规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p>
     */
     @SerializedName("LoadBalancerName")
     @Expose
@@ -52,7 +52,7 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel {
     private InternetAccessible InternetChargeInfo;
 
     /**
-    * <p>Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。不填则不修改。</p>
+    * <p>Target是否放通来自CLB的流量。<br>开启放通（true）：只验证CLB上的安全组；<br>不开启放通（false）：需同时验证CLB和后端实例上的安全组。<br>不填则不修改。</p>
     */
     @SerializedName("LoadBalancerPassToTarget")
     @Expose
@@ -110,16 +110,16 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>负载均衡实例名称，规则：1-60 个英文、汉字、数字、连接线“-”或下划线“_”。</p> 
-     * @return LoadBalancerName <p>负载均衡实例名称，规则：1-60 个英文、汉字、数字、连接线“-”或下划线“_”。</p>
+     * Get <p>负载均衡实例名称，规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p> 
+     * @return LoadBalancerName <p>负载均衡实例名称，规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p>
      */
     public String getLoadBalancerName() {
         return this.LoadBalancerName;
     }
 
     /**
-     * Set <p>负载均衡实例名称，规则：1-60 个英文、汉字、数字、连接线“-”或下划线“_”。</p>
-     * @param LoadBalancerName <p>负载均衡实例名称，规则：1-60 个英文、汉字、数字、连接线“-”或下划线“_”。</p>
+     * Set <p>负载均衡实例名称，规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p>
+     * @param LoadBalancerName <p>负载均衡实例名称，规则：1-80 个英文字母、汉字等国际通用语言字符，数字，连接线“-”、下划线“_”等常见字符（禁止Unicode补充字符，如emoji表情、生僻汉字等）。</p>
      */
     public void setLoadBalancerName(String LoadBalancerName) {
         this.LoadBalancerName = LoadBalancerName;
@@ -158,16 +158,16 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。不填则不修改。</p> 
-     * @return LoadBalancerPassToTarget <p>Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。不填则不修改。</p>
+     * Get <p>Target是否放通来自CLB的流量。<br>开启放通（true）：只验证CLB上的安全组；<br>不开启放通（false）：需同时验证CLB和后端实例上的安全组。<br>不填则不修改。</p> 
+     * @return LoadBalancerPassToTarget <p>Target是否放通来自CLB的流量。<br>开启放通（true）：只验证CLB上的安全组；<br>不开启放通（false）：需同时验证CLB和后端实例上的安全组。<br>不填则不修改。</p>
      */
     public Boolean getLoadBalancerPassToTarget() {
         return this.LoadBalancerPassToTarget;
     }
 
     /**
-     * Set <p>Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。不填则不修改。</p>
-     * @param LoadBalancerPassToTarget <p>Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。不填则不修改。</p>
+     * Set <p>Target是否放通来自CLB的流量。<br>开启放通（true）：只验证CLB上的安全组；<br>不开启放通（false）：需同时验证CLB和后端实例上的安全组。<br>不填则不修改。</p>
+     * @param LoadBalancerPassToTarget <p>Target是否放通来自CLB的流量。<br>开启放通（true）：只验证CLB上的安全组；<br>不开启放通（false）：需同时验证CLB和后端实例上的安全组。<br>不填则不修改。</p>
      */
     public void setLoadBalancerPassToTarget(Boolean LoadBalancerPassToTarget) {
         this.LoadBalancerPassToTarget = LoadBalancerPassToTarget;

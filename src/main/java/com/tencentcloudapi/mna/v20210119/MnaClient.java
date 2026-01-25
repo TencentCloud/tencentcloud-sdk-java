@@ -160,6 +160,17 @@ public class MnaClient extends AbstractClient{
     }
 
     /**
+     *统计单个设备访问目标IP地址信息
+     * @param req GetDestIPByNameRequest
+     * @return GetDestIPByNameResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetDestIPByNameResponse GetDestIPByName(GetDestIPByNameRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetDestIPByName", GetDestIPByNameResponse.class);
+    }
+
+    /**
      *通过指定设备的ID查找设备详细信息
      * @param req GetDeviceRequest
      * @return GetDeviceResponse
@@ -237,6 +248,17 @@ public class MnaClient extends AbstractClient{
     }
 
     /**
+     *获取指定设备Id，指定时间点数据流量使用情况
+     * @param req GetFlowStatisticByNameRequest
+     * @return GetFlowStatisticByNameResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetFlowStatisticByNameResponse GetFlowStatisticByName(GetFlowStatisticByNameRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetFlowStatisticByName", GetFlowStatisticByNameResponse.class);
+    }
+
+    /**
      *获取指定区域，指定时间点数据流量使用情况
      * @param req GetFlowStatisticByRegionRequest
      * @return GetFlowStatisticByRegionResponse
@@ -292,6 +314,17 @@ public class MnaClient extends AbstractClient{
     }
 
     /**
+     *获取单个设备所有监控指标的下载文件链接
+     * @param req GetMonitorDataByNameRequest
+     * @return GetMonitorDataByNameResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetMonitorDataByNameResponse GetMonitorDataByName(GetMonitorDataByNameRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetMonitorDataByName", GetMonitorDataByNameResponse.class);
+    }
+
+    /**
      *批量获取设备流量统计曲线
      * @param req GetMultiFlowStatisticRequest
      * @return GetMultiFlowStatisticResponse
@@ -314,6 +347,17 @@ public class MnaClient extends AbstractClient{
     }
 
     /**
+     *获取单设备的实时流量统计指标
+     * @param req GetNetMonitorByNameRequest
+     * @return GetNetMonitorByNameResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetNetMonitorByNameResponse GetNetMonitorByName(GetNetMonitorByNameRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetNetMonitorByName", GetNetMonitorByNameResponse.class);
+    }
+
+    /**
      *获取公钥用于验签
      * @param req GetPublicKeyRequest
      * @return GetPublicKeyResponse
@@ -333,6 +377,17 @@ public class MnaClient extends AbstractClient{
     public GetStatisticDataResponse GetStatisticData(GetStatisticDataRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetStatisticData", GetStatisticDataResponse.class);
+    }
+
+    /**
+     *在用量统计页面下载流量数据
+     * @param req GetStatisticDataByNameRequest
+     * @return GetStatisticDataByNameResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetStatisticDataByNameResponse GetStatisticDataByName(GetStatisticDataByNameRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetStatisticDataByName", GetStatisticDataByNameResponse.class);
     }
 
     /**
