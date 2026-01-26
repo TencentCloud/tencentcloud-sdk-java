@@ -52,6 +52,13 @@ public class DescribeDeviceGroupMembersRequest extends AbstractModel {
     private String Name;
 
     /**
+    * 主机绑定的堡垒机服务ID集合  未绑定的通过Filters进行传递
+    */
+    @SerializedName("ResourceIdSet")
+    @Expose
+    private String [] ResourceIdSet;
+
+    /**
     * 分页偏移位置，默认值为0
     */
     @SerializedName("Offset")
@@ -85,6 +92,13 @@ public class DescribeDeviceGroupMembersRequest extends AbstractModel {
     @SerializedName("DepartmentId")
     @Expose
     private String DepartmentId;
+
+    /**
+    * 过滤条件,支持 BindingStatus｜VpcId ｜InstanceId ｜DeviceAccount ｜ManageDimension｜DomainId｜Ip｜Name
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
 
     /**
     * 过滤条件，可按照标签键、标签进行过滤。如果同时指定标签键和标签过滤条件，它们之间为“AND”的关系
@@ -155,6 +169,22 @@ public class DescribeDeviceGroupMembersRequest extends AbstractModel {
      */
     public void setName(String Name) {
         this.Name = Name;
+    }
+
+    /**
+     * Get 主机绑定的堡垒机服务ID集合  未绑定的通过Filters进行传递 
+     * @return ResourceIdSet 主机绑定的堡垒机服务ID集合  未绑定的通过Filters进行传递
+     */
+    public String [] getResourceIdSet() {
+        return this.ResourceIdSet;
+    }
+
+    /**
+     * Set 主机绑定的堡垒机服务ID集合  未绑定的通过Filters进行传递
+     * @param ResourceIdSet 主机绑定的堡垒机服务ID集合  未绑定的通过Filters进行传递
+     */
+    public void setResourceIdSet(String [] ResourceIdSet) {
+        this.ResourceIdSet = ResourceIdSet;
     }
 
     /**
@@ -238,6 +268,22 @@ public class DescribeDeviceGroupMembersRequest extends AbstractModel {
     }
 
     /**
+     * Get 过滤条件,支持 BindingStatus｜VpcId ｜InstanceId ｜DeviceAccount ｜ManageDimension｜DomainId｜Ip｜Name 
+     * @return Filters 过滤条件,支持 BindingStatus｜VpcId ｜InstanceId ｜DeviceAccount ｜ManageDimension｜DomainId｜Ip｜Name
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 过滤条件,支持 BindingStatus｜VpcId ｜InstanceId ｜DeviceAccount ｜ManageDimension｜DomainId｜Ip｜Name
+     * @param Filters 过滤条件,支持 BindingStatus｜VpcId ｜InstanceId ｜DeviceAccount ｜ManageDimension｜DomainId｜Ip｜Name
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
+    /**
      * Get 过滤条件，可按照标签键、标签进行过滤。如果同时指定标签键和标签过滤条件，它们之间为“AND”的关系 
      * @return TagFilters 过滤条件，可按照标签键、标签进行过滤。如果同时指定标签键和标签过滤条件，它们之间为“AND”的关系
      */
@@ -276,6 +322,12 @@ public class DescribeDeviceGroupMembersRequest extends AbstractModel {
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.ResourceIdSet != null) {
+            this.ResourceIdSet = new String[source.ResourceIdSet.length];
+            for (int i = 0; i < source.ResourceIdSet.length; i++) {
+                this.ResourceIdSet[i] = new String(source.ResourceIdSet[i]);
+            }
+        }
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
@@ -294,6 +346,12 @@ public class DescribeDeviceGroupMembersRequest extends AbstractModel {
         if (source.DepartmentId != null) {
             this.DepartmentId = new String(source.DepartmentId);
         }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
         if (source.TagFilters != null) {
             this.TagFilters = new TagFilter[source.TagFilters.length];
             for (int i = 0; i < source.TagFilters.length; i++) {
@@ -311,11 +369,13 @@ public class DescribeDeviceGroupMembersRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamArraySimple(map, prefix + "IdSet.", this.IdSet);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamArraySimple(map, prefix + "ResourceIdSet.", this.ResourceIdSet);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Kind", this.Kind);
         this.setParamArraySimple(map, prefix + "KindSet.", this.KindSet);
         this.setParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
 
     }

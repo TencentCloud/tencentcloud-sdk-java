@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.trro.v20220325.models;
+package com.tencentcloudapi.billing.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,28 +21,22 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDeviceListResponse extends AbstractModel {
+public class DescribeRenewInstancesResponse extends AbstractModel {
 
     /**
-    * <p>设备信息列表</p>
+    * 实例汇总列表。
     */
-    @SerializedName("Devices")
+    @SerializedName("InstanceList")
     @Expose
-    private DeviceInfo [] Devices;
+    private RenewInstance [] InstanceList;
 
     /**
-    * <p>设备总数</p>
+    * 查询返回结果下一页的令牌。
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Total")
+    @SerializedName("NextToken")
     @Expose
-    private Long Total;
-
-    /**
-    * <p>本次返回的设备数</p>
-    */
-    @SerializedName("Num")
-    @Expose
-    private Long Num;
+    private String NextToken;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -52,51 +46,39 @@ public class DescribeDeviceListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>设备信息列表</p> 
-     * @return Devices <p>设备信息列表</p>
+     * Get 实例汇总列表。 
+     * @return InstanceList 实例汇总列表。
      */
-    public DeviceInfo [] getDevices() {
-        return this.Devices;
+    public RenewInstance [] getInstanceList() {
+        return this.InstanceList;
     }
 
     /**
-     * Set <p>设备信息列表</p>
-     * @param Devices <p>设备信息列表</p>
+     * Set 实例汇总列表。
+     * @param InstanceList 实例汇总列表。
      */
-    public void setDevices(DeviceInfo [] Devices) {
-        this.Devices = Devices;
+    public void setInstanceList(RenewInstance [] InstanceList) {
+        this.InstanceList = InstanceList;
     }
 
     /**
-     * Get <p>设备总数</p> 
-     * @return Total <p>设备总数</p>
+     * Get 查询返回结果下一页的令牌。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NextToken 查询返回结果下一页的令牌。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getTotal() {
-        return this.Total;
+    public String getNextToken() {
+        return this.NextToken;
     }
 
     /**
-     * Set <p>设备总数</p>
-     * @param Total <p>设备总数</p>
+     * Set 查询返回结果下一页的令牌。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NextToken 查询返回结果下一页的令牌。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTotal(Long Total) {
-        this.Total = Total;
-    }
-
-    /**
-     * Get <p>本次返回的设备数</p> 
-     * @return Num <p>本次返回的设备数</p>
-     */
-    public Long getNum() {
-        return this.Num;
-    }
-
-    /**
-     * Set <p>本次返回的设备数</p>
-     * @param Num <p>本次返回的设备数</p>
-     */
-    public void setNum(Long Num) {
-        this.Num = Num;
+    public void setNextToken(String NextToken) {
+        this.NextToken = NextToken;
     }
 
     /**
@@ -115,25 +97,22 @@ public class DescribeDeviceListResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeDeviceListResponse() {
+    public DescribeRenewInstancesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeDeviceListResponse(DescribeDeviceListResponse source) {
-        if (source.Devices != null) {
-            this.Devices = new DeviceInfo[source.Devices.length];
-            for (int i = 0; i < source.Devices.length; i++) {
-                this.Devices[i] = new DeviceInfo(source.Devices[i]);
+    public DescribeRenewInstancesResponse(DescribeRenewInstancesResponse source) {
+        if (source.InstanceList != null) {
+            this.InstanceList = new RenewInstance[source.InstanceList.length];
+            for (int i = 0; i < source.InstanceList.length; i++) {
+                this.InstanceList[i] = new RenewInstance(source.InstanceList[i]);
             }
         }
-        if (source.Total != null) {
-            this.Total = new Long(source.Total);
-        }
-        if (source.Num != null) {
-            this.Num = new Long(source.Num);
+        if (source.NextToken != null) {
+            this.NextToken = new String(source.NextToken);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -145,9 +124,8 @@ public class DescribeDeviceListResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Devices.", this.Devices);
-        this.setParamSimple(map, prefix + "Total", this.Total);
-        this.setParamSimple(map, prefix + "Num", this.Num);
+        this.setParamArrayObj(map, prefix + "InstanceList.", this.InstanceList);
+        this.setParamSimple(map, prefix + "NextToken", this.NextToken);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

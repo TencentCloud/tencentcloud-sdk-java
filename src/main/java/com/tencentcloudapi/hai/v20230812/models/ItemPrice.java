@@ -60,6 +60,20 @@ public class ItemPrice extends AbstractModel {
     private Long Amount;
 
     /**
+    * 原价
+    */
+    @SerializedName("OriginPrice")
+    @Expose
+    private Float OriginPrice;
+
+    /**
+    * 折扣价
+    */
+    @SerializedName("DiscountPrice")
+    @Expose
+    private Float DiscountPrice;
+
+    /**
      * Get 原单价，元 
      * @return UnitPrice 原单价，元
      */
@@ -143,6 +157,38 @@ public class ItemPrice extends AbstractModel {
         this.Amount = Amount;
     }
 
+    /**
+     * Get 原价 
+     * @return OriginPrice 原价
+     */
+    public Float getOriginPrice() {
+        return this.OriginPrice;
+    }
+
+    /**
+     * Set 原价
+     * @param OriginPrice 原价
+     */
+    public void setOriginPrice(Float OriginPrice) {
+        this.OriginPrice = OriginPrice;
+    }
+
+    /**
+     * Get 折扣价 
+     * @return DiscountPrice 折扣价
+     */
+    public Float getDiscountPrice() {
+        return this.DiscountPrice;
+    }
+
+    /**
+     * Set 折扣价
+     * @param DiscountPrice 折扣价
+     */
+    public void setDiscountPrice(Float DiscountPrice) {
+        this.DiscountPrice = DiscountPrice;
+    }
+
     public ItemPrice() {
     }
 
@@ -166,6 +212,12 @@ public class ItemPrice extends AbstractModel {
         if (source.Amount != null) {
             this.Amount = new Long(source.Amount);
         }
+        if (source.OriginPrice != null) {
+            this.OriginPrice = new Float(source.OriginPrice);
+        }
+        if (source.DiscountPrice != null) {
+            this.DiscountPrice = new Float(source.DiscountPrice);
+        }
     }
 
 
@@ -178,6 +230,8 @@ public class ItemPrice extends AbstractModel {
         this.setParamSimple(map, prefix + "Discount", this.Discount);
         this.setParamSimple(map, prefix + "ChargeUnit", this.ChargeUnit);
         this.setParamSimple(map, prefix + "Amount", this.Amount);
+        this.setParamSimple(map, prefix + "OriginPrice", this.OriginPrice);
+        this.setParamSimple(map, prefix + "DiscountPrice", this.DiscountPrice);
 
     }
 }

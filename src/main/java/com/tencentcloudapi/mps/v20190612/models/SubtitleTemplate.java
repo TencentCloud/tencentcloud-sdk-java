@@ -52,6 +52,14 @@ public class SubtitleTemplate extends AbstractModel {
     private MediaInputInfo SubtitleFileInput;
 
     /**
+    * 压制字幕字体文件的输入信息，目前仅支持url和cos。都填时url优先于cos。填了FontFileInput时FontFileInput优先于FontType
+
+    */
+    @SerializedName("FontFileInput")
+    @Expose
+    private MediaInputInfo FontFileInput;
+
+    /**
     * 字体类型，支持：
 <li>hei.ttf：黑体</li>
 <li>song.ttf：宋体</li>
@@ -70,7 +78,11 @@ public class SubtitleTemplate extends AbstractModel {
 <li>korean.ttf：韩语</li>
 <li>japanese.ttf：日语</li>
 <li>thai.ttf：泰语</li>
-默认：hei.ttf 黑体。注意：楷体推荐使用kai.ttf
+默认：hei.ttf 黑体。
+<br>注意：
+<li>楷体推荐使用kai.ttf</li>
+<li>填了FontFileInput时FontFileInput优先</li>
+
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FontType")
@@ -78,8 +90,13 @@ public class SubtitleTemplate extends AbstractModel {
     private String FontType;
 
     /**
-    * 字体大小，格式：Npx，N 为数值，不指定则以字幕文件中为准。
-默认源视频高度的5%。
+    * 字体大小，不指定则以字幕文件中为准。支持像素和百分比格式：
+
+- 像素：Npx，N范围：(0,4096]。
+- 百分百：N%，N范围：(0,100]；例如10%表示字幕字体大小=10%*源视频高度。
+
+不填且字幕文件无设置时，默认源视频高度的5%。
+
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FontSize")
@@ -138,8 +155,10 @@ public class SubtitleTemplate extends AbstractModel {
     private String BoardY;
 
     /**
-    * 底板的宽度，单位为像素，取值范围：[0,4096]。
-默认源视频宽像素的90%。
+    * 底板的宽度，正整数。
+- 代表像素时，取值范围：[0,4096]。
+- 代表百分数时，[0, 100]。
+开启底板且不填此值时，默认源视频宽像素的90%。
 
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -148,8 +167,11 @@ public class SubtitleTemplate extends AbstractModel {
     private Long BoardWidth;
 
     /**
-    * 底板的高度。单位为像素，取值范围：[0,4096]。
-默认为源视频高像素的15%。
+    * 底板的高度，正整数。
+- 代表像素时，取值范围：[0,4096]。
+- 代表百分数时，[0, 100]。
+开启底板且不填此值时，默认为源视频高像素的15%。
+
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BoardHeight")
@@ -177,68 +199,116 @@ public class SubtitleTemplate extends AbstractModel {
     private Float BoardAlpha;
 
     /**
-    * 描边宽度
-注意：此字段可能返回 null，表示取不到有效值。
+    * 描边宽度。浮点数。
+- 代表像素值时， [0, 1000]。
+- 代表百分数时，[0, 100]。
+不填默认源视频高度的0.3%。
+
     */
     @SerializedName("OutlineWidth")
     @Expose
     private Float OutlineWidth;
 
     /**
-    * 描边颜色。6位16进制RGB
-注意：此字段可能返回 null，表示取不到有效值。
+    * 描边颜色。6位16进制RGB。不填默认黑色。
+
     */
     @SerializedName("OutlineColor")
     @Expose
     private String OutlineColor;
 
     /**
-    * 描边透明度。(0，1] 正浮点数
-注意：此字段可能返回 null，表示取不到有效值。
+    * 描边透明度。(0，1] 正浮点数。不填默认1，完全不透明
+
     */
     @SerializedName("OutlineAlpha")
     @Expose
     private Float OutlineAlpha;
 
     /**
-    * 阴影宽度。浮点数  [0, 1000]
-注意：此字段可能返回 null，表示取不到有效值。
+    * 阴影宽度。浮点数。
+- 代表像素值时， [0, 1000]。
+- 代表百分数时，[0, 100]。
+不填默认无阴影。
+
     */
     @SerializedName("ShadowWidth")
     @Expose
     private Float ShadowWidth;
 
     /**
-    * 阴影颜色。6位16进制RGB
-注意：此字段可能返回 null，表示取不到有效值。
+    * 阴影颜色。6位16进制RGB。不填默认黑色（有设置阴影的情况下）
+
     */
     @SerializedName("ShadowColor")
     @Expose
     private String ShadowColor;
 
     /**
-    * 阴影透明度。(0，1] 正浮点数
-注意：此字段可能返回 null，表示取不到有效值。
+    * 阴影透明度。(0，1] 正浮点数。不填默认1，完全不透明（有设置阴影的情况下）
+
     */
     @SerializedName("ShadowAlpha")
     @Expose
     private Float ShadowAlpha;
 
     /**
-    * 行间距。正整数  [0, 1000]
-注意：此字段可能返回 null，表示取不到有效值。
+    * 行间距。正整数。
+- 代表像素值时， [0, 1000]。
+- 代表百分数时，[0, 100]。不填默认0。
+
     */
     @SerializedName("LineSpacing")
     @Expose
     private Long LineSpacing;
 
     /**
-    * 对齐方式，，取值：top: 顶部对齐，字幕顶部按位置固定，底部随行数变化。bottom: 底部对齐，字幕底部按位置固定，顶部随行数变化。
-注意：此字段可能返回 null，表示取不到有效值。
+    * 对齐方式，取值：top: 顶部对齐，字幕顶部按位置固定，底部随行数变化。bottom: 底部对齐，字幕底部按位置固定，顶部随行数变化。不填默认底部对齐。
+
     */
     @SerializedName("Alignment")
     @Expose
     private String Alignment;
+
+    /**
+    * 默认0。为1时BoardWidth代表百分之几，以视频宽为基准
+
+    */
+    @SerializedName("BoardWidthUnit")
+    @Expose
+    private Long BoardWidthUnit;
+
+    /**
+    * 默认0。为1时BoardHeight代表百分之几，以视频高为基准
+
+    */
+    @SerializedName("BoardHeightUnit")
+    @Expose
+    private Long BoardHeightUnit;
+
+    /**
+    * 默认0。为1时OutlineWidth代表百分之几，以视频高为基准
+
+    */
+    @SerializedName("OutlineWidthUnit")
+    @Expose
+    private Long OutlineWidthUnit;
+
+    /**
+    * 默认0。为1时ShadowWidth代表百分之几，以视频高为基准
+
+    */
+    @SerializedName("ShadowWidthUnit")
+    @Expose
+    private Long ShadowWidthUnit;
+
+    /**
+    * 默认0。为1时LineSpacing代表百分之几，以视频高为基准
+
+    */
+    @SerializedName("LineSpacingUnit")
+    @Expose
+    private Long LineSpacingUnit;
 
     /**
      * Get 要压制到视频中的字幕文件地址。
@@ -317,6 +387,26 @@ public class SubtitleTemplate extends AbstractModel {
     }
 
     /**
+     * Get 压制字幕字体文件的输入信息，目前仅支持url和cos。都填时url优先于cos。填了FontFileInput时FontFileInput优先于FontType
+ 
+     * @return FontFileInput 压制字幕字体文件的输入信息，目前仅支持url和cos。都填时url优先于cos。填了FontFileInput时FontFileInput优先于FontType
+
+     */
+    public MediaInputInfo getFontFileInput() {
+        return this.FontFileInput;
+    }
+
+    /**
+     * Set 压制字幕字体文件的输入信息，目前仅支持url和cos。都填时url优先于cos。填了FontFileInput时FontFileInput优先于FontType
+
+     * @param FontFileInput 压制字幕字体文件的输入信息，目前仅支持url和cos。都填时url优先于cos。填了FontFileInput时FontFileInput优先于FontType
+
+     */
+    public void setFontFileInput(MediaInputInfo FontFileInput) {
+        this.FontFileInput = FontFileInput;
+    }
+
+    /**
      * Get 字体类型，支持：
 <li>hei.ttf：黑体</li>
 <li>song.ttf：宋体</li>
@@ -335,7 +425,11 @@ public class SubtitleTemplate extends AbstractModel {
 <li>korean.ttf：韩语</li>
 <li>japanese.ttf：日语</li>
 <li>thai.ttf：泰语</li>
-默认：hei.ttf 黑体。注意：楷体推荐使用kai.ttf
+默认：hei.ttf 黑体。
+<br>注意：
+<li>楷体推荐使用kai.ttf</li>
+<li>填了FontFileInput时FontFileInput优先</li>
+
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FontType 字体类型，支持：
 <li>hei.ttf：黑体</li>
@@ -355,7 +449,11 @@ public class SubtitleTemplate extends AbstractModel {
 <li>korean.ttf：韩语</li>
 <li>japanese.ttf：日语</li>
 <li>thai.ttf：泰语</li>
-默认：hei.ttf 黑体。注意：楷体推荐使用kai.ttf
+默认：hei.ttf 黑体。
+<br>注意：
+<li>楷体推荐使用kai.ttf</li>
+<li>填了FontFileInput时FontFileInput优先</li>
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFontType() {
@@ -381,7 +479,11 @@ public class SubtitleTemplate extends AbstractModel {
 <li>korean.ttf：韩语</li>
 <li>japanese.ttf：日语</li>
 <li>thai.ttf：泰语</li>
-默认：hei.ttf 黑体。注意：楷体推荐使用kai.ttf
+默认：hei.ttf 黑体。
+<br>注意：
+<li>楷体推荐使用kai.ttf</li>
+<li>填了FontFileInput时FontFileInput优先</li>
+
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FontType 字体类型，支持：
 <li>hei.ttf：黑体</li>
@@ -401,7 +503,11 @@ public class SubtitleTemplate extends AbstractModel {
 <li>korean.ttf：韩语</li>
 <li>japanese.ttf：日语</li>
 <li>thai.ttf：泰语</li>
-默认：hei.ttf 黑体。注意：楷体推荐使用kai.ttf
+默认：hei.ttf 黑体。
+<br>注意：
+<li>楷体推荐使用kai.ttf</li>
+<li>填了FontFileInput时FontFileInput优先</li>
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFontType(String FontType) {
@@ -409,11 +515,21 @@ public class SubtitleTemplate extends AbstractModel {
     }
 
     /**
-     * Get 字体大小，格式：Npx，N 为数值，不指定则以字幕文件中为准。
-默认源视频高度的5%。
+     * Get 字体大小，不指定则以字幕文件中为准。支持像素和百分比格式：
+
+- 像素：Npx，N范围：(0,4096]。
+- 百分百：N%，N范围：(0,100]；例如10%表示字幕字体大小=10%*源视频高度。
+
+不填且字幕文件无设置时，默认源视频高度的5%。
+
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FontSize 字体大小，格式：Npx，N 为数值，不指定则以字幕文件中为准。
-默认源视频高度的5%。
+     * @return FontSize 字体大小，不指定则以字幕文件中为准。支持像素和百分比格式：
+
+- 像素：Npx，N范围：(0,4096]。
+- 百分百：N%，N范围：(0,100]；例如10%表示字幕字体大小=10%*源视频高度。
+
+不填且字幕文件无设置时，默认源视频高度的5%。
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFontSize() {
@@ -421,11 +537,21 @@ public class SubtitleTemplate extends AbstractModel {
     }
 
     /**
-     * Set 字体大小，格式：Npx，N 为数值，不指定则以字幕文件中为准。
-默认源视频高度的5%。
+     * Set 字体大小，不指定则以字幕文件中为准。支持像素和百分比格式：
+
+- 像素：Npx，N范围：(0,4096]。
+- 百分百：N%，N范围：(0,100]；例如10%表示字幕字体大小=10%*源视频高度。
+
+不填且字幕文件无设置时，默认源视频高度的5%。
+
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FontSize 字体大小，格式：Npx，N 为数值，不指定则以字幕文件中为准。
-默认源视频高度的5%。
+     * @param FontSize 字体大小，不指定则以字幕文件中为准。支持像素和百分比格式：
+
+- 像素：Npx，N范围：(0,4096]。
+- 百分百：N%，N范围：(0,100]；例如10%表示字幕字体大小=10%*源视频高度。
+
+不填且字幕文件无设置时，默认源视频高度的5%。
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFontSize(String FontSize) {
@@ -589,12 +715,16 @@ public class SubtitleTemplate extends AbstractModel {
     }
 
     /**
-     * Get 底板的宽度，单位为像素，取值范围：[0,4096]。
-默认源视频宽像素的90%。
+     * Get 底板的宽度，正整数。
+- 代表像素时，取值范围：[0,4096]。
+- 代表百分数时，[0, 100]。
+开启底板且不填此值时，默认源视频宽像素的90%。
 
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BoardWidth 底板的宽度，单位为像素，取值范围：[0,4096]。
-默认源视频宽像素的90%。
+     * @return BoardWidth 底板的宽度，正整数。
+- 代表像素时，取值范围：[0,4096]。
+- 代表百分数时，[0, 100]。
+开启底板且不填此值时，默认源视频宽像素的90%。
 
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -603,12 +733,16 @@ public class SubtitleTemplate extends AbstractModel {
     }
 
     /**
-     * Set 底板的宽度，单位为像素，取值范围：[0,4096]。
-默认源视频宽像素的90%。
+     * Set 底板的宽度，正整数。
+- 代表像素时，取值范围：[0,4096]。
+- 代表百分数时，[0, 100]。
+开启底板且不填此值时，默认源视频宽像素的90%。
 
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BoardWidth 底板的宽度，单位为像素，取值范围：[0,4096]。
-默认源视频宽像素的90%。
+     * @param BoardWidth 底板的宽度，正整数。
+- 代表像素时，取值范围：[0,4096]。
+- 代表百分数时，[0, 100]。
+开启底板且不填此值时，默认源视频宽像素的90%。
 
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -617,11 +751,17 @@ public class SubtitleTemplate extends AbstractModel {
     }
 
     /**
-     * Get 底板的高度。单位为像素，取值范围：[0,4096]。
-默认为源视频高像素的15%。
+     * Get 底板的高度，正整数。
+- 代表像素时，取值范围：[0,4096]。
+- 代表百分数时，[0, 100]。
+开启底板且不填此值时，默认为源视频高像素的15%。
+
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BoardHeight 底板的高度。单位为像素，取值范围：[0,4096]。
-默认为源视频高像素的15%。
+     * @return BoardHeight 底板的高度，正整数。
+- 代表像素时，取值范围：[0,4096]。
+- 代表百分数时，[0, 100]。
+开启底板且不填此值时，默认为源视频高像素的15%。
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBoardHeight() {
@@ -629,11 +769,17 @@ public class SubtitleTemplate extends AbstractModel {
     }
 
     /**
-     * Set 底板的高度。单位为像素，取值范围：[0,4096]。
-默认为源视频高像素的15%。
+     * Set 底板的高度，正整数。
+- 代表像素时，取值范围：[0,4096]。
+- 代表百分数时，[0, 100]。
+开启底板且不填此值时，默认为源视频高像素的15%。
+
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BoardHeight 底板的高度。单位为像素，取值范围：[0,4096]。
-默认为源视频高像素的15%。
+     * @param BoardHeight 底板的高度，正整数。
+- 代表像素时，取值范围：[0,4096]。
+- 代表百分数时，[0, 100]。
+开启底板且不填此值时，默认为源视频高像素的15%。
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBoardHeight(Long BoardHeight) {
@@ -697,163 +843,295 @@ public class SubtitleTemplate extends AbstractModel {
     }
 
     /**
-     * Get 描边宽度
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OutlineWidth 描边宽度
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 描边宽度。浮点数。
+- 代表像素值时， [0, 1000]。
+- 代表百分数时，[0, 100]。
+不填默认源视频高度的0.3%。
+ 
+     * @return OutlineWidth 描边宽度。浮点数。
+- 代表像素值时， [0, 1000]。
+- 代表百分数时，[0, 100]。
+不填默认源视频高度的0.3%。
+
      */
     public Float getOutlineWidth() {
         return this.OutlineWidth;
     }
 
     /**
-     * Set 描边宽度
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param OutlineWidth 描边宽度
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 描边宽度。浮点数。
+- 代表像素值时， [0, 1000]。
+- 代表百分数时，[0, 100]。
+不填默认源视频高度的0.3%。
+
+     * @param OutlineWidth 描边宽度。浮点数。
+- 代表像素值时， [0, 1000]。
+- 代表百分数时，[0, 100]。
+不填默认源视频高度的0.3%。
+
      */
     public void setOutlineWidth(Float OutlineWidth) {
         this.OutlineWidth = OutlineWidth;
     }
 
     /**
-     * Get 描边颜色。6位16进制RGB
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OutlineColor 描边颜色。6位16进制RGB
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 描边颜色。6位16进制RGB。不填默认黑色。
+ 
+     * @return OutlineColor 描边颜色。6位16进制RGB。不填默认黑色。
+
      */
     public String getOutlineColor() {
         return this.OutlineColor;
     }
 
     /**
-     * Set 描边颜色。6位16进制RGB
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param OutlineColor 描边颜色。6位16进制RGB
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 描边颜色。6位16进制RGB。不填默认黑色。
+
+     * @param OutlineColor 描边颜色。6位16进制RGB。不填默认黑色。
+
      */
     public void setOutlineColor(String OutlineColor) {
         this.OutlineColor = OutlineColor;
     }
 
     /**
-     * Get 描边透明度。(0，1] 正浮点数
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OutlineAlpha 描边透明度。(0，1] 正浮点数
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 描边透明度。(0，1] 正浮点数。不填默认1，完全不透明
+ 
+     * @return OutlineAlpha 描边透明度。(0，1] 正浮点数。不填默认1，完全不透明
+
      */
     public Float getOutlineAlpha() {
         return this.OutlineAlpha;
     }
 
     /**
-     * Set 描边透明度。(0，1] 正浮点数
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param OutlineAlpha 描边透明度。(0，1] 正浮点数
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 描边透明度。(0，1] 正浮点数。不填默认1，完全不透明
+
+     * @param OutlineAlpha 描边透明度。(0，1] 正浮点数。不填默认1，完全不透明
+
      */
     public void setOutlineAlpha(Float OutlineAlpha) {
         this.OutlineAlpha = OutlineAlpha;
     }
 
     /**
-     * Get 阴影宽度。浮点数  [0, 1000]
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ShadowWidth 阴影宽度。浮点数  [0, 1000]
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 阴影宽度。浮点数。
+- 代表像素值时， [0, 1000]。
+- 代表百分数时，[0, 100]。
+不填默认无阴影。
+ 
+     * @return ShadowWidth 阴影宽度。浮点数。
+- 代表像素值时， [0, 1000]。
+- 代表百分数时，[0, 100]。
+不填默认无阴影。
+
      */
     public Float getShadowWidth() {
         return this.ShadowWidth;
     }
 
     /**
-     * Set 阴影宽度。浮点数  [0, 1000]
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ShadowWidth 阴影宽度。浮点数  [0, 1000]
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 阴影宽度。浮点数。
+- 代表像素值时， [0, 1000]。
+- 代表百分数时，[0, 100]。
+不填默认无阴影。
+
+     * @param ShadowWidth 阴影宽度。浮点数。
+- 代表像素值时， [0, 1000]。
+- 代表百分数时，[0, 100]。
+不填默认无阴影。
+
      */
     public void setShadowWidth(Float ShadowWidth) {
         this.ShadowWidth = ShadowWidth;
     }
 
     /**
-     * Get 阴影颜色。6位16进制RGB
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ShadowColor 阴影颜色。6位16进制RGB
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 阴影颜色。6位16进制RGB。不填默认黑色（有设置阴影的情况下）
+ 
+     * @return ShadowColor 阴影颜色。6位16进制RGB。不填默认黑色（有设置阴影的情况下）
+
      */
     public String getShadowColor() {
         return this.ShadowColor;
     }
 
     /**
-     * Set 阴影颜色。6位16进制RGB
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ShadowColor 阴影颜色。6位16进制RGB
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 阴影颜色。6位16进制RGB。不填默认黑色（有设置阴影的情况下）
+
+     * @param ShadowColor 阴影颜色。6位16进制RGB。不填默认黑色（有设置阴影的情况下）
+
      */
     public void setShadowColor(String ShadowColor) {
         this.ShadowColor = ShadowColor;
     }
 
     /**
-     * Get 阴影透明度。(0，1] 正浮点数
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ShadowAlpha 阴影透明度。(0，1] 正浮点数
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 阴影透明度。(0，1] 正浮点数。不填默认1，完全不透明（有设置阴影的情况下）
+ 
+     * @return ShadowAlpha 阴影透明度。(0，1] 正浮点数。不填默认1，完全不透明（有设置阴影的情况下）
+
      */
     public Float getShadowAlpha() {
         return this.ShadowAlpha;
     }
 
     /**
-     * Set 阴影透明度。(0，1] 正浮点数
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ShadowAlpha 阴影透明度。(0，1] 正浮点数
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 阴影透明度。(0，1] 正浮点数。不填默认1，完全不透明（有设置阴影的情况下）
+
+     * @param ShadowAlpha 阴影透明度。(0，1] 正浮点数。不填默认1，完全不透明（有设置阴影的情况下）
+
      */
     public void setShadowAlpha(Float ShadowAlpha) {
         this.ShadowAlpha = ShadowAlpha;
     }
 
     /**
-     * Get 行间距。正整数  [0, 1000]
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LineSpacing 行间距。正整数  [0, 1000]
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 行间距。正整数。
+- 代表像素值时， [0, 1000]。
+- 代表百分数时，[0, 100]。不填默认0。
+ 
+     * @return LineSpacing 行间距。正整数。
+- 代表像素值时， [0, 1000]。
+- 代表百分数时，[0, 100]。不填默认0。
+
      */
     public Long getLineSpacing() {
         return this.LineSpacing;
     }
 
     /**
-     * Set 行间距。正整数  [0, 1000]
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param LineSpacing 行间距。正整数  [0, 1000]
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 行间距。正整数。
+- 代表像素值时， [0, 1000]。
+- 代表百分数时，[0, 100]。不填默认0。
+
+     * @param LineSpacing 行间距。正整数。
+- 代表像素值时， [0, 1000]。
+- 代表百分数时，[0, 100]。不填默认0。
+
      */
     public void setLineSpacing(Long LineSpacing) {
         this.LineSpacing = LineSpacing;
     }
 
     /**
-     * Get 对齐方式，，取值：top: 顶部对齐，字幕顶部按位置固定，底部随行数变化。bottom: 底部对齐，字幕底部按位置固定，顶部随行数变化。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Alignment 对齐方式，，取值：top: 顶部对齐，字幕顶部按位置固定，底部随行数变化。bottom: 底部对齐，字幕底部按位置固定，顶部随行数变化。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 对齐方式，取值：top: 顶部对齐，字幕顶部按位置固定，底部随行数变化。bottom: 底部对齐，字幕底部按位置固定，顶部随行数变化。不填默认底部对齐。
+ 
+     * @return Alignment 对齐方式，取值：top: 顶部对齐，字幕顶部按位置固定，底部随行数变化。bottom: 底部对齐，字幕底部按位置固定，顶部随行数变化。不填默认底部对齐。
+
      */
     public String getAlignment() {
         return this.Alignment;
     }
 
     /**
-     * Set 对齐方式，，取值：top: 顶部对齐，字幕顶部按位置固定，底部随行数变化。bottom: 底部对齐，字幕底部按位置固定，顶部随行数变化。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Alignment 对齐方式，，取值：top: 顶部对齐，字幕顶部按位置固定，底部随行数变化。bottom: 底部对齐，字幕底部按位置固定，顶部随行数变化。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 对齐方式，取值：top: 顶部对齐，字幕顶部按位置固定，底部随行数变化。bottom: 底部对齐，字幕底部按位置固定，顶部随行数变化。不填默认底部对齐。
+
+     * @param Alignment 对齐方式，取值：top: 顶部对齐，字幕顶部按位置固定，底部随行数变化。bottom: 底部对齐，字幕底部按位置固定，顶部随行数变化。不填默认底部对齐。
+
      */
     public void setAlignment(String Alignment) {
         this.Alignment = Alignment;
+    }
+
+    /**
+     * Get 默认0。为1时BoardWidth代表百分之几，以视频宽为基准
+ 
+     * @return BoardWidthUnit 默认0。为1时BoardWidth代表百分之几，以视频宽为基准
+
+     */
+    public Long getBoardWidthUnit() {
+        return this.BoardWidthUnit;
+    }
+
+    /**
+     * Set 默认0。为1时BoardWidth代表百分之几，以视频宽为基准
+
+     * @param BoardWidthUnit 默认0。为1时BoardWidth代表百分之几，以视频宽为基准
+
+     */
+    public void setBoardWidthUnit(Long BoardWidthUnit) {
+        this.BoardWidthUnit = BoardWidthUnit;
+    }
+
+    /**
+     * Get 默认0。为1时BoardHeight代表百分之几，以视频高为基准
+ 
+     * @return BoardHeightUnit 默认0。为1时BoardHeight代表百分之几，以视频高为基准
+
+     */
+    public Long getBoardHeightUnit() {
+        return this.BoardHeightUnit;
+    }
+
+    /**
+     * Set 默认0。为1时BoardHeight代表百分之几，以视频高为基准
+
+     * @param BoardHeightUnit 默认0。为1时BoardHeight代表百分之几，以视频高为基准
+
+     */
+    public void setBoardHeightUnit(Long BoardHeightUnit) {
+        this.BoardHeightUnit = BoardHeightUnit;
+    }
+
+    /**
+     * Get 默认0。为1时OutlineWidth代表百分之几，以视频高为基准
+ 
+     * @return OutlineWidthUnit 默认0。为1时OutlineWidth代表百分之几，以视频高为基准
+
+     */
+    public Long getOutlineWidthUnit() {
+        return this.OutlineWidthUnit;
+    }
+
+    /**
+     * Set 默认0。为1时OutlineWidth代表百分之几，以视频高为基准
+
+     * @param OutlineWidthUnit 默认0。为1时OutlineWidth代表百分之几，以视频高为基准
+
+     */
+    public void setOutlineWidthUnit(Long OutlineWidthUnit) {
+        this.OutlineWidthUnit = OutlineWidthUnit;
+    }
+
+    /**
+     * Get 默认0。为1时ShadowWidth代表百分之几，以视频高为基准
+ 
+     * @return ShadowWidthUnit 默认0。为1时ShadowWidth代表百分之几，以视频高为基准
+
+     */
+    public Long getShadowWidthUnit() {
+        return this.ShadowWidthUnit;
+    }
+
+    /**
+     * Set 默认0。为1时ShadowWidth代表百分之几，以视频高为基准
+
+     * @param ShadowWidthUnit 默认0。为1时ShadowWidth代表百分之几，以视频高为基准
+
+     */
+    public void setShadowWidthUnit(Long ShadowWidthUnit) {
+        this.ShadowWidthUnit = ShadowWidthUnit;
+    }
+
+    /**
+     * Get 默认0。为1时LineSpacing代表百分之几，以视频高为基准
+ 
+     * @return LineSpacingUnit 默认0。为1时LineSpacing代表百分之几，以视频高为基准
+
+     */
+    public Long getLineSpacingUnit() {
+        return this.LineSpacingUnit;
+    }
+
+    /**
+     * Set 默认0。为1时LineSpacing代表百分之几，以视频高为基准
+
+     * @param LineSpacingUnit 默认0。为1时LineSpacing代表百分之几，以视频高为基准
+
+     */
+    public void setLineSpacingUnit(Long LineSpacingUnit) {
+        this.LineSpacingUnit = LineSpacingUnit;
     }
 
     public SubtitleTemplate() {
@@ -872,6 +1150,9 @@ public class SubtitleTemplate extends AbstractModel {
         }
         if (source.SubtitleFileInput != null) {
             this.SubtitleFileInput = new MediaInputInfo(source.SubtitleFileInput);
+        }
+        if (source.FontFileInput != null) {
+            this.FontFileInput = new MediaInputInfo(source.FontFileInput);
         }
         if (source.FontType != null) {
             this.FontType = new String(source.FontType);
@@ -927,6 +1208,21 @@ public class SubtitleTemplate extends AbstractModel {
         if (source.Alignment != null) {
             this.Alignment = new String(source.Alignment);
         }
+        if (source.BoardWidthUnit != null) {
+            this.BoardWidthUnit = new Long(source.BoardWidthUnit);
+        }
+        if (source.BoardHeightUnit != null) {
+            this.BoardHeightUnit = new Long(source.BoardHeightUnit);
+        }
+        if (source.OutlineWidthUnit != null) {
+            this.OutlineWidthUnit = new Long(source.OutlineWidthUnit);
+        }
+        if (source.ShadowWidthUnit != null) {
+            this.ShadowWidthUnit = new Long(source.ShadowWidthUnit);
+        }
+        if (source.LineSpacingUnit != null) {
+            this.LineSpacingUnit = new Long(source.LineSpacingUnit);
+        }
     }
 
 
@@ -937,6 +1233,7 @@ public class SubtitleTemplate extends AbstractModel {
         this.setParamSimple(map, prefix + "Path", this.Path);
         this.setParamSimple(map, prefix + "StreamIndex", this.StreamIndex);
         this.setParamObj(map, prefix + "SubtitleFileInput.", this.SubtitleFileInput);
+        this.setParamObj(map, prefix + "FontFileInput.", this.FontFileInput);
         this.setParamSimple(map, prefix + "FontType", this.FontType);
         this.setParamSimple(map, prefix + "FontSize", this.FontSize);
         this.setParamSimple(map, prefix + "FontColor", this.FontColor);
@@ -955,6 +1252,11 @@ public class SubtitleTemplate extends AbstractModel {
         this.setParamSimple(map, prefix + "ShadowAlpha", this.ShadowAlpha);
         this.setParamSimple(map, prefix + "LineSpacing", this.LineSpacing);
         this.setParamSimple(map, prefix + "Alignment", this.Alignment);
+        this.setParamSimple(map, prefix + "BoardWidthUnit", this.BoardWidthUnit);
+        this.setParamSimple(map, prefix + "BoardHeightUnit", this.BoardHeightUnit);
+        this.setParamSimple(map, prefix + "OutlineWidthUnit", this.OutlineWidthUnit);
+        this.setParamSimple(map, prefix + "ShadowWidthUnit", this.ShadowWidthUnit);
+        this.setParamSimple(map, prefix + "LineSpacingUnit", this.LineSpacingUnit);
 
     }
 }

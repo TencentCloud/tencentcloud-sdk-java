@@ -72,6 +72,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *Catalog模式下授权
+     * @param req AuthorizePrivilegesRequest
+     * @return AuthorizePrivilegesResponse
+     * @throws TencentCloudSDKException
+     */
+    public AuthorizePrivilegesResponse AuthorizePrivileges(AuthorizePrivilegesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AuthorizePrivileges", AuthorizePrivilegesResponse.class);
+    }
+
+    /**
      *新建代码文件
      * @param req CreateCodeFileRequest
      * @return CreateCodeFileResponse
@@ -1227,6 +1238,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *获取可授权权限详情
+     * @param req ListPermissionsRequest
+     * @return ListPermissionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListPermissionsResponse ListPermissions(ListPermissionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListPermissions", ListPermissionsResponse.class);
+    }
+
+    /**
      *获取资产血缘信息
      * @param req ListProcessLineageRequest
      * @return ListProcessLineageResponse
@@ -1678,6 +1700,17 @@ public class WedataClient extends AbstractClient{
     public RevokeDataSourceAuthorizationResponse RevokeDataSourceAuthorization(RevokeDataSourceAuthorizationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RevokeDataSourceAuthorization", RevokeDataSourceAuthorizationResponse.class);
+    }
+
+    /**
+     *Catalog模式下授权回收
+     * @param req RevokePrivilegesRequest
+     * @return RevokePrivilegesResponse
+     * @throws TencentCloudSDKException
+     */
+    public RevokePrivilegesResponse RevokePrivileges(RevokePrivilegesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RevokePrivileges", RevokePrivilegesResponse.class);
     }
 
     /**

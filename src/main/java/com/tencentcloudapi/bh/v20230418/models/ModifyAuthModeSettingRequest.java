@@ -24,46 +24,84 @@ import java.util.HashMap;
 public class ModifyAuthModeSettingRequest extends AbstractModel {
 
     /**
-    * 双因子认证，0-不开启，1-OTP，2-短信，3-USB Key
+    * 双因子认证，0-不开启（暂停使用），1-OTP，2-短信，3-USB Key（只有ResourceType=1且AuthModeGM不传时有效，其他情况不能为3）    
+备注：AuthMode和AuthModeGM至少有一个有效传参
     */
     @SerializedName("AuthMode")
     @Expose
     private Long AuthMode;
 
     /**
-    * 资源类型，0：普通 1：国密
+    * 国密双因子认证，0-不开启（暂停使用），1-OTP，2-短信，3-USB Key
+备注：AuthMode和AuthModeGM至少有一个有效传参，AuthModeGM优先级高于ResourceType
+    */
+    @SerializedName("AuthModeGM")
+    @Expose
+    private Long AuthModeGM;
+
+    /**
+    * 资源类型，0：普通（暂停使用，由AuthMode和AuthModeGM传参决定） 1：国密
+
     */
     @SerializedName("ResourceType")
     @Expose
     private Long ResourceType;
 
     /**
-     * Get 双因子认证，0-不开启，1-OTP，2-短信，3-USB Key 
-     * @return AuthMode 双因子认证，0-不开启，1-OTP，2-短信，3-USB Key
+     * Get 双因子认证，0-不开启（暂停使用），1-OTP，2-短信，3-USB Key（只有ResourceType=1且AuthModeGM不传时有效，其他情况不能为3）    
+备注：AuthMode和AuthModeGM至少有一个有效传参 
+     * @return AuthMode 双因子认证，0-不开启（暂停使用），1-OTP，2-短信，3-USB Key（只有ResourceType=1且AuthModeGM不传时有效，其他情况不能为3）    
+备注：AuthMode和AuthModeGM至少有一个有效传参
      */
     public Long getAuthMode() {
         return this.AuthMode;
     }
 
     /**
-     * Set 双因子认证，0-不开启，1-OTP，2-短信，3-USB Key
-     * @param AuthMode 双因子认证，0-不开启，1-OTP，2-短信，3-USB Key
+     * Set 双因子认证，0-不开启（暂停使用），1-OTP，2-短信，3-USB Key（只有ResourceType=1且AuthModeGM不传时有效，其他情况不能为3）    
+备注：AuthMode和AuthModeGM至少有一个有效传参
+     * @param AuthMode 双因子认证，0-不开启（暂停使用），1-OTP，2-短信，3-USB Key（只有ResourceType=1且AuthModeGM不传时有效，其他情况不能为3）    
+备注：AuthMode和AuthModeGM至少有一个有效传参
      */
     public void setAuthMode(Long AuthMode) {
         this.AuthMode = AuthMode;
     }
 
     /**
-     * Get 资源类型，0：普通 1：国密 
-     * @return ResourceType 资源类型，0：普通 1：国密
+     * Get 国密双因子认证，0-不开启（暂停使用），1-OTP，2-短信，3-USB Key
+备注：AuthMode和AuthModeGM至少有一个有效传参，AuthModeGM优先级高于ResourceType 
+     * @return AuthModeGM 国密双因子认证，0-不开启（暂停使用），1-OTP，2-短信，3-USB Key
+备注：AuthMode和AuthModeGM至少有一个有效传参，AuthModeGM优先级高于ResourceType
+     */
+    public Long getAuthModeGM() {
+        return this.AuthModeGM;
+    }
+
+    /**
+     * Set 国密双因子认证，0-不开启（暂停使用），1-OTP，2-短信，3-USB Key
+备注：AuthMode和AuthModeGM至少有一个有效传参，AuthModeGM优先级高于ResourceType
+     * @param AuthModeGM 国密双因子认证，0-不开启（暂停使用），1-OTP，2-短信，3-USB Key
+备注：AuthMode和AuthModeGM至少有一个有效传参，AuthModeGM优先级高于ResourceType
+     */
+    public void setAuthModeGM(Long AuthModeGM) {
+        this.AuthModeGM = AuthModeGM;
+    }
+
+    /**
+     * Get 资源类型，0：普通（暂停使用，由AuthMode和AuthModeGM传参决定） 1：国密
+ 
+     * @return ResourceType 资源类型，0：普通（暂停使用，由AuthMode和AuthModeGM传参决定） 1：国密
+
      */
     public Long getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set 资源类型，0：普通 1：国密
-     * @param ResourceType 资源类型，0：普通 1：国密
+     * Set 资源类型，0：普通（暂停使用，由AuthMode和AuthModeGM传参决定） 1：国密
+
+     * @param ResourceType 资源类型，0：普通（暂停使用，由AuthMode和AuthModeGM传参决定） 1：国密
+
      */
     public void setResourceType(Long ResourceType) {
         this.ResourceType = ResourceType;
@@ -80,6 +118,9 @@ public class ModifyAuthModeSettingRequest extends AbstractModel {
         if (source.AuthMode != null) {
             this.AuthMode = new Long(source.AuthMode);
         }
+        if (source.AuthModeGM != null) {
+            this.AuthModeGM = new Long(source.AuthModeGM);
+        }
         if (source.ResourceType != null) {
             this.ResourceType = new Long(source.ResourceType);
         }
@@ -91,6 +132,7 @@ public class ModifyAuthModeSettingRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AuthMode", this.AuthMode);
+        this.setParamSimple(map, prefix + "AuthModeGM", this.AuthModeGM);
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
 
     }

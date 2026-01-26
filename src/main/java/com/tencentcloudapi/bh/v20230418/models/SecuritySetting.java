@@ -24,6 +24,41 @@ import java.util.HashMap;
 public class SecuritySetting extends AbstractModel {
 
     /**
+    * 认证方式设置
+    */
+    @SerializedName("AuthMode")
+    @Expose
+    private AuthModeSetting AuthMode;
+
+    /**
+    * 密码安全设置
+    */
+    @SerializedName("Password")
+    @Expose
+    private PasswordSetting Password;
+
+    /**
+    * 登录安全设置
+    */
+    @SerializedName("Login")
+    @Expose
+    private LoginSetting Login;
+
+    /**
+    * LDAP配置信息
+    */
+    @SerializedName("LDAP")
+    @Expose
+    private LDAPSetting LDAP;
+
+    /**
+    * OAuth配置信息
+    */
+    @SerializedName("OAuth")
+    @Expose
+    private OAuthSetting OAuth;
+
+    /**
     * 国密认证方式设置
     */
     @SerializedName("AuthModeGM")
@@ -43,6 +78,86 @@ public class SecuritySetting extends AbstractModel {
     @SerializedName("EnvInternetAccess")
     @Expose
     private EnvInternetAccessSetting EnvInternetAccess;
+
+    /**
+     * Get 认证方式设置 
+     * @return AuthMode 认证方式设置
+     */
+    public AuthModeSetting getAuthMode() {
+        return this.AuthMode;
+    }
+
+    /**
+     * Set 认证方式设置
+     * @param AuthMode 认证方式设置
+     */
+    public void setAuthMode(AuthModeSetting AuthMode) {
+        this.AuthMode = AuthMode;
+    }
+
+    /**
+     * Get 密码安全设置 
+     * @return Password 密码安全设置
+     */
+    public PasswordSetting getPassword() {
+        return this.Password;
+    }
+
+    /**
+     * Set 密码安全设置
+     * @param Password 密码安全设置
+     */
+    public void setPassword(PasswordSetting Password) {
+        this.Password = Password;
+    }
+
+    /**
+     * Get 登录安全设置 
+     * @return Login 登录安全设置
+     */
+    public LoginSetting getLogin() {
+        return this.Login;
+    }
+
+    /**
+     * Set 登录安全设置
+     * @param Login 登录安全设置
+     */
+    public void setLogin(LoginSetting Login) {
+        this.Login = Login;
+    }
+
+    /**
+     * Get LDAP配置信息 
+     * @return LDAP LDAP配置信息
+     */
+    public LDAPSetting getLDAP() {
+        return this.LDAP;
+    }
+
+    /**
+     * Set LDAP配置信息
+     * @param LDAP LDAP配置信息
+     */
+    public void setLDAP(LDAPSetting LDAP) {
+        this.LDAP = LDAP;
+    }
+
+    /**
+     * Get OAuth配置信息 
+     * @return OAuth OAuth配置信息
+     */
+    public OAuthSetting getOAuth() {
+        return this.OAuth;
+    }
+
+    /**
+     * Set OAuth配置信息
+     * @param OAuth OAuth配置信息
+     */
+    public void setOAuth(OAuthSetting OAuth) {
+        this.OAuth = OAuth;
+    }
 
     /**
      * Get 国密认证方式设置 
@@ -100,6 +215,21 @@ public class SecuritySetting extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public SecuritySetting(SecuritySetting source) {
+        if (source.AuthMode != null) {
+            this.AuthMode = new AuthModeSetting(source.AuthMode);
+        }
+        if (source.Password != null) {
+            this.Password = new PasswordSetting(source.Password);
+        }
+        if (source.Login != null) {
+            this.Login = new LoginSetting(source.Login);
+        }
+        if (source.LDAP != null) {
+            this.LDAP = new LDAPSetting(source.LDAP);
+        }
+        if (source.OAuth != null) {
+            this.OAuth = new OAuthSetting(source.OAuth);
+        }
         if (source.AuthModeGM != null) {
             this.AuthModeGM = new AuthModeSetting(source.AuthModeGM);
         }
@@ -116,6 +246,11 @@ public class SecuritySetting extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "AuthMode.", this.AuthMode);
+        this.setParamObj(map, prefix + "Password.", this.Password);
+        this.setParamObj(map, prefix + "Login.", this.Login);
+        this.setParamObj(map, prefix + "LDAP.", this.LDAP);
+        this.setParamObj(map, prefix + "OAuth.", this.OAuth);
         this.setParamObj(map, prefix + "AuthModeGM.", this.AuthModeGM);
         this.setParamObj(map, prefix + "Reconnection.", this.Reconnection);
         this.setParamObj(map, prefix + "EnvInternetAccess.", this.EnvInternetAccess);

@@ -2140,6 +2140,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *Eks集群开启事件持久化功能
+     * @param req EnableEksEventPersistenceRequest
+     * @return EnableEksEventPersistenceResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableEksEventPersistenceResponse EnableEksEventPersistence(EnableEksEventPersistenceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EnableEksEventPersistence", EnableEksEventPersistenceResponse.class);
+    }
+
+    /**
      *开启加密数据保护，需要先开启KMS能力，完成KMS授权
      * @param req EnableEncryptionProtectionRequest
      * @return EnableEncryptionProtectionResponse

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeDedicatedSupportedZonesResponse extends AbstractModel {
 
     /**
-    * 支持的可用区列表
+    * <p>支持的可用区列表</p>
     */
     @SerializedName("ZoneSet")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeDedicatedSupportedZonesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 支持的可用区列表 
-     * @return ZoneSet 支持的可用区列表
+     * Get <p>支持的可用区列表</p> 
+     * @return ZoneSet <p>支持的可用区列表</p>
      */
     public RegionZoneInfo [] getZoneSet() {
         return this.ZoneSet;
     }
 
     /**
-     * Set 支持的可用区列表
-     * @param ZoneSet 支持的可用区列表
+     * Set <p>支持的可用区列表</p>
+     * @param ZoneSet <p>支持的可用区列表</p>
      */
     public void setZoneSet(RegionZoneInfo [] ZoneSet) {
         this.ZoneSet = ZoneSet;

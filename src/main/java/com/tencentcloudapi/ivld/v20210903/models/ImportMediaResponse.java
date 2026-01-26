@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ImportMediaResponse extends AbstractModel {
 
     /**
-    * 媒资文件在系统中的ID
+    * <p>媒资文件在系统中的ID</p>
     */
     @SerializedName("MediaId")
     @Expose
@@ -38,16 +38,16 @@ public class ImportMediaResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 媒资文件在系统中的ID 
-     * @return MediaId 媒资文件在系统中的ID
+     * Get <p>媒资文件在系统中的ID</p> 
+     * @return MediaId <p>媒资文件在系统中的ID</p>
      */
     public String getMediaId() {
         return this.MediaId;
     }
 
     /**
-     * Set 媒资文件在系统中的ID
-     * @param MediaId 媒资文件在系统中的ID
+     * Set <p>媒资文件在系统中的ID</p>
+     * @param MediaId <p>媒资文件在系统中的ID</p>
      */
     public void setMediaId(String MediaId) {
         this.MediaId = MediaId;

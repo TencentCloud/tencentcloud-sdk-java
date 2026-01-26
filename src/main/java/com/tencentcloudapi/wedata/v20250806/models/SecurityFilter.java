@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdc.v20201214.models;
+package com.tencentcloudapi.wedata.v20250806.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,43 +21,74 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDedicatedSupportedZonesRequest extends AbstractModel {
+public class SecurityFilter extends AbstractModel {
 
     /**
-    * <p>传入region列表</p>
+    * key
     */
-    @SerializedName("Regions")
+    @SerializedName("Name")
     @Expose
-    private Long [] Regions;
+    private String Name;
 
     /**
-     * Get <p>传入region列表</p> 
-     * @return Regions <p>传入region列表</p>
+    * values
+
+    */
+    @SerializedName("Values")
+    @Expose
+    private String [] Values;
+
+    /**
+     * Get key 
+     * @return Name key
      */
-    public Long [] getRegions() {
-        return this.Regions;
+    public String getName() {
+        return this.Name;
     }
 
     /**
-     * Set <p>传入region列表</p>
-     * @param Regions <p>传入region列表</p>
+     * Set key
+     * @param Name key
      */
-    public void setRegions(Long [] Regions) {
-        this.Regions = Regions;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
-    public DescribeDedicatedSupportedZonesRequest() {
+    /**
+     * Get values
+ 
+     * @return Values values
+
+     */
+    public String [] getValues() {
+        return this.Values;
+    }
+
+    /**
+     * Set values
+
+     * @param Values values
+
+     */
+    public void setValues(String [] Values) {
+        this.Values = Values;
+    }
+
+    public SecurityFilter() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeDedicatedSupportedZonesRequest(DescribeDedicatedSupportedZonesRequest source) {
-        if (source.Regions != null) {
-            this.Regions = new Long[source.Regions.length];
-            for (int i = 0; i < source.Regions.length; i++) {
-                this.Regions[i] = new Long(source.Regions[i]);
+    public SecurityFilter(SecurityFilter source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Values != null) {
+            this.Values = new String[source.Values.length];
+            for (int i = 0; i < source.Values.length; i++) {
+                this.Values[i] = new String(source.Values[i]);
             }
         }
     }
@@ -67,7 +98,8 @@ public class DescribeDedicatedSupportedZonesRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "Regions.", this.Regions);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamArraySimple(map, prefix + "Values.", this.Values);
 
     }
 }

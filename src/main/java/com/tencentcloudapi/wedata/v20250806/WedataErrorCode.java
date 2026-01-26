@@ -3,6 +3,9 @@ public enum WedataErrorCode {
      /* CAM签名/鉴权错误。 */
      AUTHFAILURE("AuthFailure"),
      
+     /* 未登录或登录已过期。 */
+     AUTHFAILURE_SIGNATUREEXPIRE("AuthFailure.SignatureExpire"),
+     
      /* 操作失败。 */
      FAILEDOPERATION("FailedOperation"),
      
@@ -11,6 +14,9 @@ public enum WedataErrorCode {
      
      /* 内部错误。 */
      INTERNALERROR("InternalError"),
+     
+     /* 缺少参数或参数不合法 */
+     INTERNALERROR_INVALIDPARAMETER("InternalError.InvalidParameter"),
      
      /* 参数错误。 */
      INVALIDPARAMETER("InvalidParameter"),
@@ -23,6 +29,9 @@ public enum WedataErrorCode {
      
      /* 查询过滤条件参数错误。 */
      INVALIDPARAMETER_INVALIDFILTERPARAMETER("InvalidParameter.InvalidFilterParameter"),
+     
+     /* 非法参数 */
+     INVALIDPARAMETER_INVALIDPARAMSERROR("InvalidParameter.InvalidParamsError"),
      
      /* Missing Servlet Request Parameter */
      INVALIDPARAMETER_MISSINGREQUESTPARAMETER("InvalidParameter.MissingRequestParameter"),

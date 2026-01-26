@@ -24,141 +24,164 @@ import java.util.HashMap;
 public class DescribeDeviceListRequest extends AbstractModel {
 
     /**
-    * 设备所属项目ID
+    * <p>设备所属项目ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * 设备类型筛选，不填默认为全部设备类型
+    * <p>设备类型筛选，不填默认为全部设备类型</p>
     */
     @SerializedName("DeviceType")
     @Expose
     private String DeviceType;
 
     /**
-    * 对设备ID或Name按关键字进行模糊匹配，不填则不进行模糊匹配
+    * <p>对设备ID或Name按关键字进行模糊匹配，不填则不进行模糊匹配</p>
     */
     @SerializedName("SearchWords")
     @Expose
     private String SearchWords;
 
     /**
-    * 每页返回的最大设备数，不填默认为10
+    * <p>每页返回的最大设备数，不填默认为10</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 当前页码，不填默认为1（首页）
+    * <p>当前页码，不填默认为1（首页）</p>
     */
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
 
     /**
-    * 设备状态筛选，不填默认为不过滤。取值：["ready","connected","online"]，online代表ready或connected
+    * <p>设备状态筛选，不填默认为不过滤。取值：[&quot;ready&quot;,&quot;connected&quot;,&quot;online&quot;]，online代表ready或connected</p>
     */
     @SerializedName("DeviceStatus")
     @Expose
     private String DeviceStatus;
 
     /**
-     * Get 设备所属项目ID 
-     * @return ProjectId 设备所属项目ID
+    * <p>标识查询项目下的设备注册类型，默认不包含免注册登录设备。 若存在免注册登录设备，该参数传&quot;1&quot;</p><p>枚举值：</p><ul><li>0： 项目不包含免注册登录设备</li><li>1： 项目包含免注册登录设备</li></ul><p>默认值：0</p>
+    */
+    @SerializedName("RegisterType")
+    @Expose
+    private Long RegisterType;
+
+    /**
+     * Get <p>设备所属项目ID</p> 
+     * @return ProjectId <p>设备所属项目ID</p>
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 设备所属项目ID
-     * @param ProjectId 设备所属项目ID
+     * Set <p>设备所属项目ID</p>
+     * @param ProjectId <p>设备所属项目ID</p>
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 设备类型筛选，不填默认为全部设备类型 
-     * @return DeviceType 设备类型筛选，不填默认为全部设备类型
+     * Get <p>设备类型筛选，不填默认为全部设备类型</p> 
+     * @return DeviceType <p>设备类型筛选，不填默认为全部设备类型</p>
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set 设备类型筛选，不填默认为全部设备类型
-     * @param DeviceType 设备类型筛选，不填默认为全部设备类型
+     * Set <p>设备类型筛选，不填默认为全部设备类型</p>
+     * @param DeviceType <p>设备类型筛选，不填默认为全部设备类型</p>
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;
     }
 
     /**
-     * Get 对设备ID或Name按关键字进行模糊匹配，不填则不进行模糊匹配 
-     * @return SearchWords 对设备ID或Name按关键字进行模糊匹配，不填则不进行模糊匹配
+     * Get <p>对设备ID或Name按关键字进行模糊匹配，不填则不进行模糊匹配</p> 
+     * @return SearchWords <p>对设备ID或Name按关键字进行模糊匹配，不填则不进行模糊匹配</p>
      */
     public String getSearchWords() {
         return this.SearchWords;
     }
 
     /**
-     * Set 对设备ID或Name按关键字进行模糊匹配，不填则不进行模糊匹配
-     * @param SearchWords 对设备ID或Name按关键字进行模糊匹配，不填则不进行模糊匹配
+     * Set <p>对设备ID或Name按关键字进行模糊匹配，不填则不进行模糊匹配</p>
+     * @param SearchWords <p>对设备ID或Name按关键字进行模糊匹配，不填则不进行模糊匹配</p>
      */
     public void setSearchWords(String SearchWords) {
         this.SearchWords = SearchWords;
     }
 
     /**
-     * Get 每页返回的最大设备数，不填默认为10 
-     * @return PageSize 每页返回的最大设备数，不填默认为10
+     * Get <p>每页返回的最大设备数，不填默认为10</p> 
+     * @return PageSize <p>每页返回的最大设备数，不填默认为10</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 每页返回的最大设备数，不填默认为10
-     * @param PageSize 每页返回的最大设备数，不填默认为10
+     * Set <p>每页返回的最大设备数，不填默认为10</p>
+     * @param PageSize <p>每页返回的最大设备数，不填默认为10</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 当前页码，不填默认为1（首页） 
-     * @return PageNumber 当前页码，不填默认为1（首页）
+     * Get <p>当前页码，不填默认为1（首页）</p> 
+     * @return PageNumber <p>当前页码，不填默认为1（首页）</p>
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set 当前页码，不填默认为1（首页）
-     * @param PageNumber 当前页码，不填默认为1（首页）
+     * Set <p>当前页码，不填默认为1（首页）</p>
+     * @param PageNumber <p>当前页码，不填默认为1（首页）</p>
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 设备状态筛选，不填默认为不过滤。取值：["ready","connected","online"]，online代表ready或connected 
-     * @return DeviceStatus 设备状态筛选，不填默认为不过滤。取值：["ready","connected","online"]，online代表ready或connected
+     * Get <p>设备状态筛选，不填默认为不过滤。取值：[&quot;ready&quot;,&quot;connected&quot;,&quot;online&quot;]，online代表ready或connected</p> 
+     * @return DeviceStatus <p>设备状态筛选，不填默认为不过滤。取值：[&quot;ready&quot;,&quot;connected&quot;,&quot;online&quot;]，online代表ready或connected</p>
      */
     public String getDeviceStatus() {
         return this.DeviceStatus;
     }
 
     /**
-     * Set 设备状态筛选，不填默认为不过滤。取值：["ready","connected","online"]，online代表ready或connected
-     * @param DeviceStatus 设备状态筛选，不填默认为不过滤。取值：["ready","connected","online"]，online代表ready或connected
+     * Set <p>设备状态筛选，不填默认为不过滤。取值：[&quot;ready&quot;,&quot;connected&quot;,&quot;online&quot;]，online代表ready或connected</p>
+     * @param DeviceStatus <p>设备状态筛选，不填默认为不过滤。取值：[&quot;ready&quot;,&quot;connected&quot;,&quot;online&quot;]，online代表ready或connected</p>
      */
     public void setDeviceStatus(String DeviceStatus) {
         this.DeviceStatus = DeviceStatus;
+    }
+
+    /**
+     * Get <p>标识查询项目下的设备注册类型，默认不包含免注册登录设备。 若存在免注册登录设备，该参数传&quot;1&quot;</p><p>枚举值：</p><ul><li>0： 项目不包含免注册登录设备</li><li>1： 项目包含免注册登录设备</li></ul><p>默认值：0</p> 
+     * @return RegisterType <p>标识查询项目下的设备注册类型，默认不包含免注册登录设备。 若存在免注册登录设备，该参数传&quot;1&quot;</p><p>枚举值：</p><ul><li>0： 项目不包含免注册登录设备</li><li>1： 项目包含免注册登录设备</li></ul><p>默认值：0</p>
+     */
+    public Long getRegisterType() {
+        return this.RegisterType;
+    }
+
+    /**
+     * Set <p>标识查询项目下的设备注册类型，默认不包含免注册登录设备。 若存在免注册登录设备，该参数传&quot;1&quot;</p><p>枚举值：</p><ul><li>0： 项目不包含免注册登录设备</li><li>1： 项目包含免注册登录设备</li></ul><p>默认值：0</p>
+     * @param RegisterType <p>标识查询项目下的设备注册类型，默认不包含免注册登录设备。 若存在免注册登录设备，该参数传&quot;1&quot;</p><p>枚举值：</p><ul><li>0： 项目不包含免注册登录设备</li><li>1： 项目包含免注册登录设备</li></ul><p>默认值：0</p>
+     */
+    public void setRegisterType(Long RegisterType) {
+        this.RegisterType = RegisterType;
     }
 
     public DescribeDeviceListRequest() {
@@ -187,6 +210,9 @@ public class DescribeDeviceListRequest extends AbstractModel {
         if (source.DeviceStatus != null) {
             this.DeviceStatus = new String(source.DeviceStatus);
         }
+        if (source.RegisterType != null) {
+            this.RegisterType = new Long(source.RegisterType);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class DescribeDeviceListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
         this.setParamSimple(map, prefix + "DeviceStatus", this.DeviceStatus);
+        this.setParamSimple(map, prefix + "RegisterType", this.RegisterType);
 
     }
 }

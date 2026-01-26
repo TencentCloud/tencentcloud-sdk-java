@@ -651,6 +651,19 @@ public class BillingClient extends AbstractClient{
     }
 
     /**
+     *注意事项：
+1、本接口支持查询已接入续费管理页的包年包月实例，包括运行中、已隔离（部分产品不支持）
+2、子用户使用该接口时，应具备QcloudFinanceRenewManageFullAccess权限策略。
+     * @param req DescribeRenewInstancesRequest
+     * @return DescribeRenewInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRenewInstancesResponse DescribeRenewInstances(DescribeRenewInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRenewInstances", DescribeRenewInstancesResponse.class);
+    }
+
+    /**
      *查询节省计划详情
      * @param req DescribeSavingPlanResourceInfoRequest
      * @return DescribeSavingPlanResourceInfoResponse

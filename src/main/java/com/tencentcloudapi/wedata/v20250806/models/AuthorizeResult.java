@@ -21,129 +21,108 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LineageNodeInfo extends AbstractModel {
+public class AuthorizeResult extends AbstractModel {
 
     /**
-    * 当前资源
+    * 授权资源
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Resource")
     @Expose
-    private LineageResource Resource;
+    private PrivilegeResource Resource;
 
     /**
-    * 关系
+    * 结果
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Relation")
+    @SerializedName("Result")
     @Expose
-    private LineageRelation Relation;
+    private Boolean Result;
 
     /**
-    * 上游数量
+    * 原因
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("DownStreamCount")
+    @SerializedName("Reason")
     @Expose
-    private Long DownStreamCount;
+    private String Reason;
 
     /**
-    * 下游数量
-    */
-    @SerializedName("UpStreamCount")
-    @Expose
-    private Long UpStreamCount;
-
-    /**
-     * Get 当前资源
+     * Get 授权资源
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Resource 当前资源
+     * @return Resource 授权资源
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public LineageResource getResource() {
+    public PrivilegeResource getResource() {
         return this.Resource;
     }
 
     /**
-     * Set 当前资源
+     * Set 授权资源
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Resource 当前资源
+     * @param Resource 授权资源
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setResource(LineageResource Resource) {
+    public void setResource(PrivilegeResource Resource) {
         this.Resource = Resource;
     }
 
     /**
-     * Get 关系
+     * Get 结果
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Relation 关系
+     * @return Result 结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public LineageRelation getRelation() {
-        return this.Relation;
+    public Boolean getResult() {
+        return this.Result;
     }
 
     /**
-     * Set 关系
+     * Set 结果
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Relation 关系
+     * @param Result 结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setRelation(LineageRelation Relation) {
-        this.Relation = Relation;
+    public void setResult(Boolean Result) {
+        this.Result = Result;
     }
 
     /**
-     * Get 上游数量 
-     * @return DownStreamCount 上游数量
+     * Get 原因
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Reason 原因
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getDownStreamCount() {
-        return this.DownStreamCount;
+    public String getReason() {
+        return this.Reason;
     }
 
     /**
-     * Set 上游数量
-     * @param DownStreamCount 上游数量
+     * Set 原因
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Reason 原因
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setDownStreamCount(Long DownStreamCount) {
-        this.DownStreamCount = DownStreamCount;
+    public void setReason(String Reason) {
+        this.Reason = Reason;
     }
 
-    /**
-     * Get 下游数量 
-     * @return UpStreamCount 下游数量
-     */
-    public Long getUpStreamCount() {
-        return this.UpStreamCount;
-    }
-
-    /**
-     * Set 下游数量
-     * @param UpStreamCount 下游数量
-     */
-    public void setUpStreamCount(Long UpStreamCount) {
-        this.UpStreamCount = UpStreamCount;
-    }
-
-    public LineageNodeInfo() {
+    public AuthorizeResult() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public LineageNodeInfo(LineageNodeInfo source) {
+    public AuthorizeResult(AuthorizeResult source) {
         if (source.Resource != null) {
-            this.Resource = new LineageResource(source.Resource);
+            this.Resource = new PrivilegeResource(source.Resource);
         }
-        if (source.Relation != null) {
-            this.Relation = new LineageRelation(source.Relation);
+        if (source.Result != null) {
+            this.Result = new Boolean(source.Result);
         }
-        if (source.DownStreamCount != null) {
-            this.DownStreamCount = new Long(source.DownStreamCount);
-        }
-        if (source.UpStreamCount != null) {
-            this.UpStreamCount = new Long(source.UpStreamCount);
+        if (source.Reason != null) {
+            this.Reason = new String(source.Reason);
         }
     }
 
@@ -153,9 +132,8 @@ public class LineageNodeInfo extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Resource.", this.Resource);
-        this.setParamObj(map, prefix + "Relation.", this.Relation);
-        this.setParamSimple(map, prefix + "DownStreamCount", this.DownStreamCount);
-        this.setParamSimple(map, prefix + "UpStreamCount", this.UpStreamCount);
+        this.setParamSimple(map, prefix + "Result", this.Result);
+        this.setParamSimple(map, prefix + "Reason", this.Reason);
 
     }
 }
