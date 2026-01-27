@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateAuditTrackResponse extends AbstractModel {
 
     /**
-    * 跟踪集 ID
+    * <p>跟踪集 ID</p>
     */
     @SerializedName("TrackId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateAuditTrackResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 跟踪集 ID 
-     * @return TrackId 跟踪集 ID
+     * Get <p>跟踪集 ID</p> 
+     * @return TrackId <p>跟踪集 ID</p>
      */
     public Long getTrackId() {
         return this.TrackId;
     }
 
     /**
-     * Set 跟踪集 ID
-     * @param TrackId 跟踪集 ID
+     * Set <p>跟踪集 ID</p>
+     * @param TrackId <p>跟踪集 ID</p>
      */
     public void setTrackId(Long TrackId) {
         this.TrackId = TrackId;

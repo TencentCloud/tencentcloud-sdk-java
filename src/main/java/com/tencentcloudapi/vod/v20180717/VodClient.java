@@ -364,6 +364,17 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *创建用户自定义图像异步处理模板，数量上限：50。暂时不支持 HLS 格式。
+     * @param req CreateProcessImageAsyncTemplateRequest
+     * @return CreateProcessImageAsyncTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateProcessImageAsyncTemplateResponse CreateProcessImageAsyncTemplate(CreateProcessImageAsyncTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateProcessImageAsyncTemplate", CreateProcessImageAsyncTemplateResponse.class);
+    }
+
+    /**
      *创建音画质检测模板。
      * @param req CreateQualityInspectTemplateRequest
      * @return CreateQualityInspectTemplateResponse
@@ -717,6 +728,19 @@ public class VodClient extends AbstractClient{
     public DeleteProcedureTemplateResponse DeleteProcedureTemplate(DeleteProcedureTemplateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteProcedureTemplate", DeleteProcedureTemplateResponse.class);
+    }
+
+    /**
+     *删除用户自定义图像异步处理模板。
+
+注意：模板 ID 为 10000 以下的为系统预置模板，不允许删除。
+     * @param req DeleteProcessImageAsyncTemplateRequest
+     * @return DeleteProcessImageAsyncTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteProcessImageAsyncTemplateResponse DeleteProcessImageAsyncTemplate(DeleteProcessImageAsyncTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteProcessImageAsyncTemplate", DeleteProcessImageAsyncTemplateResponse.class);
     }
 
     /**
@@ -1334,6 +1358,17 @@ public class VodClient extends AbstractClient{
     public DescribeProcedureTemplatesResponse DescribeProcedureTemplates(DescribeProcedureTemplatesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeProcedureTemplates", DescribeProcedureTemplatesResponse.class);
+    }
+
+    /**
+     *根据图像异步处理模板唯一标识，获取图像异步处理模板详情列表。返回结果包含符合条件的所有用户自定义图像异步处理模板。
+     * @param req DescribeProcessImageAsyncTemplatesRequest
+     * @return DescribeProcessImageAsyncTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProcessImageAsyncTemplatesResponse DescribeProcessImageAsyncTemplates(DescribeProcessImageAsyncTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeProcessImageAsyncTemplates", DescribeProcessImageAsyncTemplatesResponse.class);
     }
 
     /**
@@ -1965,6 +2000,19 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *修改用户自定义图像异步处理模板。
+
+注意：模板 ID 10000 以下的为系统预置模板，不允许修改。
+     * @param req ModifyProcessImageAsyncTemplateRequest
+     * @return ModifyProcessImageAsyncTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyProcessImageAsyncTemplateResponse ModifyProcessImageAsyncTemplate(ModifyProcessImageAsyncTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyProcessImageAsyncTemplate", ModifyProcessImageAsyncTemplateResponse.class);
+    }
+
+    /**
      *修改音画质检测模板。
      * @param req ModifyQualityInspectTemplateRequest
      * @return ModifyQualityInspectTemplateResponse
@@ -2152,6 +2200,17 @@ public class VodClient extends AbstractClient{
     public ProcessImageResponse ProcessImage(ProcessImageRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ProcessImage", ProcessImageResponse.class);
+    }
+
+    /**
+     *该接口用于图片处理任务
+     * @param req ProcessImageAsyncRequest
+     * @return ProcessImageAsyncResponse
+     * @throws TencentCloudSDKException
+     */
+    public ProcessImageAsyncResponse ProcessImageAsync(ProcessImageAsyncRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ProcessImageAsync", ProcessImageAsyncResponse.class);
     }
 
     /**

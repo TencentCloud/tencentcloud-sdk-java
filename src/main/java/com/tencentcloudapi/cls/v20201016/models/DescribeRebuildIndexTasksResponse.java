@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeRebuildIndexTasksResponse extends AbstractModel {
 
     /**
-    * 索引重建任务列表
+    * <p>索引重建任务列表</p>
     */
     @SerializedName("RebuildTasks")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeRebuildIndexTasksResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 索引重建任务列表 
-     * @return RebuildTasks 索引重建任务列表
+     * Get <p>索引重建任务列表</p> 
+     * @return RebuildTasks <p>索引重建任务列表</p>
      */
     public RebuildIndexTaskInfo [] getRebuildTasks() {
         return this.RebuildTasks;
     }
 
     /**
-     * Set 索引重建任务列表
-     * @param RebuildTasks 索引重建任务列表
+     * Set <p>索引重建任务列表</p>
+     * @param RebuildTasks <p>索引重建任务列表</p>
      */
     public void setRebuildTasks(RebuildIndexTaskInfo [] RebuildTasks) {
         this.RebuildTasks = RebuildTasks;

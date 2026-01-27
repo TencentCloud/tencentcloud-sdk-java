@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class KMSConfiguration extends AbstractModel {
 
     /**
-    * kms id，可以在密钥管理控制台获取
+    * 自定义密钥,当不指定KeyId时，采用默认生成密钥（TKE-KMS）
     */
     @SerializedName("KeyId")
     @Expose
     private String KeyId;
 
     /**
-    * kms 地域
+    * 默认生成密钥或自定义密钥地域信息
     */
     @SerializedName("KmsRegion")
     @Expose
     private String KmsRegion;
 
     /**
-     * Get kms id，可以在密钥管理控制台获取 
-     * @return KeyId kms id，可以在密钥管理控制台获取
+     * Get 自定义密钥,当不指定KeyId时，采用默认生成密钥（TKE-KMS） 
+     * @return KeyId 自定义密钥,当不指定KeyId时，采用默认生成密钥（TKE-KMS）
      */
     public String getKeyId() {
         return this.KeyId;
     }
 
     /**
-     * Set kms id，可以在密钥管理控制台获取
-     * @param KeyId kms id，可以在密钥管理控制台获取
+     * Set 自定义密钥,当不指定KeyId时，采用默认生成密钥（TKE-KMS）
+     * @param KeyId 自定义密钥,当不指定KeyId时，采用默认生成密钥（TKE-KMS）
      */
     public void setKeyId(String KeyId) {
         this.KeyId = KeyId;
     }
 
     /**
-     * Get kms 地域 
-     * @return KmsRegion kms 地域
+     * Get 默认生成密钥或自定义密钥地域信息 
+     * @return KmsRegion 默认生成密钥或自定义密钥地域信息
      */
     public String getKmsRegion() {
         return this.KmsRegion;
     }
 
     /**
-     * Set kms 地域
-     * @param KmsRegion kms 地域
+     * Set 默认生成密钥或自定义密钥地域信息
+     * @param KmsRegion 默认生成密钥或自定义密钥地域信息
      */
     public void setKmsRegion(String KmsRegion) {
         this.KmsRegion = KmsRegion;

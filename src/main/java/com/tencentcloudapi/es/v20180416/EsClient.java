@@ -72,6 +72,17 @@ public class EsClient extends AbstractClient{
     }
 
     /**
+     *用于创建Beats采集器
+     * @param req CreateCollectorRequest
+     * @return CreateCollectorResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCollectorResponse CreateCollector(CreateCollectorRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCollector", CreateCollectorResponse.class);
+    }
+
+    /**
      *cos迁移流程
      * @param req CreateCosMigrateToServerlessInstanceRequest
      * @return CreateCosMigrateToServerlessInstanceResponse

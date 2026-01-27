@@ -80,6 +80,13 @@ public class ModifyBackupConfigRequest extends AbstractModel {
     private Boolean DeleteAutoLogicBackup;
 
     /**
+    * 二级快照备份参数
+    */
+    @SerializedName("SnapshotSecondaryBackupConfig")
+    @Expose
+    private SnapshotBackupConfig SnapshotSecondaryBackupConfig;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -207,6 +214,22 @@ public class ModifyBackupConfigRequest extends AbstractModel {
         this.DeleteAutoLogicBackup = DeleteAutoLogicBackup;
     }
 
+    /**
+     * Get 二级快照备份参数 
+     * @return SnapshotSecondaryBackupConfig 二级快照备份参数
+     */
+    public SnapshotBackupConfig getSnapshotSecondaryBackupConfig() {
+        return this.SnapshotSecondaryBackupConfig;
+    }
+
+    /**
+     * Set 二级快照备份参数
+     * @param SnapshotSecondaryBackupConfig 二级快照备份参数
+     */
+    public void setSnapshotSecondaryBackupConfig(SnapshotBackupConfig SnapshotSecondaryBackupConfig) {
+        this.SnapshotSecondaryBackupConfig = SnapshotSecondaryBackupConfig;
+    }
+
     public ModifyBackupConfigRequest() {
     }
 
@@ -242,6 +265,9 @@ public class ModifyBackupConfigRequest extends AbstractModel {
         if (source.DeleteAutoLogicBackup != null) {
             this.DeleteAutoLogicBackup = new Boolean(source.DeleteAutoLogicBackup);
         }
+        if (source.SnapshotSecondaryBackupConfig != null) {
+            this.SnapshotSecondaryBackupConfig = new SnapshotBackupConfig(source.SnapshotSecondaryBackupConfig);
+        }
     }
 
 
@@ -257,6 +283,7 @@ public class ModifyBackupConfigRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "BackupType", this.BackupType);
         this.setParamObj(map, prefix + "LogicBackupConfig.", this.LogicBackupConfig);
         this.setParamSimple(map, prefix + "DeleteAutoLogicBackup", this.DeleteAutoLogicBackup);
+        this.setParamObj(map, prefix + "SnapshotSecondaryBackupConfig.", this.SnapshotSecondaryBackupConfig);
 
     }
 }

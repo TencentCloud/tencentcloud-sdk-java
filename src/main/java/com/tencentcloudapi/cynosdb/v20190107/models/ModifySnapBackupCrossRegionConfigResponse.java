@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.nlp.v20190408.models;
+package com.tencentcloudapi.cynosdb.v20190107.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EvaluateSentenceSimilarityResponse extends AbstractModel {
+public class ModifySnapBackupCrossRegionConfigResponse extends AbstractModel {
 
     /**
-    * 每个句子对的相似度分值。
+    * 任务id
     */
-    @SerializedName("ScoreList")
+    @SerializedName("TaskId")
     @Expose
-    private Float [] ScoreList;
+    private Long TaskId;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +38,19 @@ public class EvaluateSentenceSimilarityResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 每个句子对的相似度分值。 
-     * @return ScoreList 每个句子对的相似度分值。
+     * Get 任务id 
+     * @return TaskId 任务id
      */
-    public Float [] getScoreList() {
-        return this.ScoreList;
+    public Long getTaskId() {
+        return this.TaskId;
     }
 
     /**
-     * Set 每个句子对的相似度分值。
-     * @param ScoreList 每个句子对的相似度分值。
+     * Set 任务id
+     * @param TaskId 任务id
      */
-    public void setScoreList(Float [] ScoreList) {
-        this.ScoreList = ScoreList;
+    public void setTaskId(Long TaskId) {
+        this.TaskId = TaskId;
     }
 
     /**
@@ -69,19 +69,16 @@ public class EvaluateSentenceSimilarityResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public EvaluateSentenceSimilarityResponse() {
+    public ModifySnapBackupCrossRegionConfigResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public EvaluateSentenceSimilarityResponse(EvaluateSentenceSimilarityResponse source) {
-        if (source.ScoreList != null) {
-            this.ScoreList = new Float[source.ScoreList.length];
-            for (int i = 0; i < source.ScoreList.length; i++) {
-                this.ScoreList[i] = new Float(source.ScoreList[i]);
-            }
+    public ModifySnapBackupCrossRegionConfigResponse(ModifySnapBackupCrossRegionConfigResponse source) {
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -93,7 +90,7 @@ public class EvaluateSentenceSimilarityResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "ScoreList.", this.ScoreList);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

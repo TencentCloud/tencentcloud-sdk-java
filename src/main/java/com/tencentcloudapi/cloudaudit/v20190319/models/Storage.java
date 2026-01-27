@@ -24,166 +24,161 @@ import java.util.HashMap;
 public class Storage extends AbstractModel {
 
     /**
-    * 存储类型（目前支持 cos、cls）
+    * <p>存储类型（目前支持 cos、cls、ckafka）</p>
     */
     @SerializedName("StorageType")
     @Expose
     private String StorageType;
 
     /**
-    * 存储所在地域
+    * <p>存储所在地域</p>
     */
     @SerializedName("StorageRegion")
     @Expose
     private String StorageRegion;
 
     /**
-    * 存储名称(cos：存储名称为用户自定义的存储桶名称，不包含"-APPID"，仅支持小写字母、数字以及中划线"-"的组合，不能超过50字符，且不支持中划线"-"开头或结尾； cls：存储名称为日志主题id，字符长度为1-50个字符)
+    * <p>存储名称(cos：存储名称为用户自定义的存储桶名称，不包含&quot;-APPID&quot;，仅支持小写字母、数字以及中划线&quot;-&quot;的组合，不能超过50字符，且不支持中划线&quot;-&quot;开头或结尾； cls：存储名称为日志主题id，字符长度为1-50个字符； ckafka： ckafka实例ID/topic. 举例：ckafka-xxxxxx/tencent_test_audit_log)</p>
     */
     @SerializedName("StorageName")
     @Expose
     private String StorageName;
 
     /**
-    * 存储目录前缀，cos日志文件前缀仅支持字母和数字的组合，3-40个字符
+    * <p>存储目录前缀，cos日志文件前缀仅支持字母和数字的组合，3-40个字符</p>
     */
     @SerializedName("StoragePrefix")
     @Expose
     private String StoragePrefix;
 
     /**
-    * 被指定存储用户ID
+    * <p>被指定存储用户ID</p>
     */
     @SerializedName("StorageAccountId")
     @Expose
     private String StorageAccountId;
 
     /**
-    * 被指定存储用户appid
+    * <p>被指定存储用户appid</p>
     */
     @SerializedName("StorageAppId")
     @Expose
     private String StorageAppId;
 
     /**
-    * 是否压缩。
-1:压缩  2:不压缩
+    * <p>是否压缩。<br>1:压缩  2:不压缩</p>
     */
     @SerializedName("Compress")
     @Expose
     private Long Compress;
 
     /**
-     * Get 存储类型（目前支持 cos、cls） 
-     * @return StorageType 存储类型（目前支持 cos、cls）
+     * Get <p>存储类型（目前支持 cos、cls、ckafka）</p> 
+     * @return StorageType <p>存储类型（目前支持 cos、cls、ckafka）</p>
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set 存储类型（目前支持 cos、cls）
-     * @param StorageType 存储类型（目前支持 cos、cls）
+     * Set <p>存储类型（目前支持 cos、cls、ckafka）</p>
+     * @param StorageType <p>存储类型（目前支持 cos、cls、ckafka）</p>
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;
     }
 
     /**
-     * Get 存储所在地域 
-     * @return StorageRegion 存储所在地域
+     * Get <p>存储所在地域</p> 
+     * @return StorageRegion <p>存储所在地域</p>
      */
     public String getStorageRegion() {
         return this.StorageRegion;
     }
 
     /**
-     * Set 存储所在地域
-     * @param StorageRegion 存储所在地域
+     * Set <p>存储所在地域</p>
+     * @param StorageRegion <p>存储所在地域</p>
      */
     public void setStorageRegion(String StorageRegion) {
         this.StorageRegion = StorageRegion;
     }
 
     /**
-     * Get 存储名称(cos：存储名称为用户自定义的存储桶名称，不包含"-APPID"，仅支持小写字母、数字以及中划线"-"的组合，不能超过50字符，且不支持中划线"-"开头或结尾； cls：存储名称为日志主题id，字符长度为1-50个字符) 
-     * @return StorageName 存储名称(cos：存储名称为用户自定义的存储桶名称，不包含"-APPID"，仅支持小写字母、数字以及中划线"-"的组合，不能超过50字符，且不支持中划线"-"开头或结尾； cls：存储名称为日志主题id，字符长度为1-50个字符)
+     * Get <p>存储名称(cos：存储名称为用户自定义的存储桶名称，不包含&quot;-APPID&quot;，仅支持小写字母、数字以及中划线&quot;-&quot;的组合，不能超过50字符，且不支持中划线&quot;-&quot;开头或结尾； cls：存储名称为日志主题id，字符长度为1-50个字符； ckafka： ckafka实例ID/topic. 举例：ckafka-xxxxxx/tencent_test_audit_log)</p> 
+     * @return StorageName <p>存储名称(cos：存储名称为用户自定义的存储桶名称，不包含&quot;-APPID&quot;，仅支持小写字母、数字以及中划线&quot;-&quot;的组合，不能超过50字符，且不支持中划线&quot;-&quot;开头或结尾； cls：存储名称为日志主题id，字符长度为1-50个字符； ckafka： ckafka实例ID/topic. 举例：ckafka-xxxxxx/tencent_test_audit_log)</p>
      */
     public String getStorageName() {
         return this.StorageName;
     }
 
     /**
-     * Set 存储名称(cos：存储名称为用户自定义的存储桶名称，不包含"-APPID"，仅支持小写字母、数字以及中划线"-"的组合，不能超过50字符，且不支持中划线"-"开头或结尾； cls：存储名称为日志主题id，字符长度为1-50个字符)
-     * @param StorageName 存储名称(cos：存储名称为用户自定义的存储桶名称，不包含"-APPID"，仅支持小写字母、数字以及中划线"-"的组合，不能超过50字符，且不支持中划线"-"开头或结尾； cls：存储名称为日志主题id，字符长度为1-50个字符)
+     * Set <p>存储名称(cos：存储名称为用户自定义的存储桶名称，不包含&quot;-APPID&quot;，仅支持小写字母、数字以及中划线&quot;-&quot;的组合，不能超过50字符，且不支持中划线&quot;-&quot;开头或结尾； cls：存储名称为日志主题id，字符长度为1-50个字符； ckafka： ckafka实例ID/topic. 举例：ckafka-xxxxxx/tencent_test_audit_log)</p>
+     * @param StorageName <p>存储名称(cos：存储名称为用户自定义的存储桶名称，不包含&quot;-APPID&quot;，仅支持小写字母、数字以及中划线&quot;-&quot;的组合，不能超过50字符，且不支持中划线&quot;-&quot;开头或结尾； cls：存储名称为日志主题id，字符长度为1-50个字符； ckafka： ckafka实例ID/topic. 举例：ckafka-xxxxxx/tencent_test_audit_log)</p>
      */
     public void setStorageName(String StorageName) {
         this.StorageName = StorageName;
     }
 
     /**
-     * Get 存储目录前缀，cos日志文件前缀仅支持字母和数字的组合，3-40个字符 
-     * @return StoragePrefix 存储目录前缀，cos日志文件前缀仅支持字母和数字的组合，3-40个字符
+     * Get <p>存储目录前缀，cos日志文件前缀仅支持字母和数字的组合，3-40个字符</p> 
+     * @return StoragePrefix <p>存储目录前缀，cos日志文件前缀仅支持字母和数字的组合，3-40个字符</p>
      */
     public String getStoragePrefix() {
         return this.StoragePrefix;
     }
 
     /**
-     * Set 存储目录前缀，cos日志文件前缀仅支持字母和数字的组合，3-40个字符
-     * @param StoragePrefix 存储目录前缀，cos日志文件前缀仅支持字母和数字的组合，3-40个字符
+     * Set <p>存储目录前缀，cos日志文件前缀仅支持字母和数字的组合，3-40个字符</p>
+     * @param StoragePrefix <p>存储目录前缀，cos日志文件前缀仅支持字母和数字的组合，3-40个字符</p>
      */
     public void setStoragePrefix(String StoragePrefix) {
         this.StoragePrefix = StoragePrefix;
     }
 
     /**
-     * Get 被指定存储用户ID 
-     * @return StorageAccountId 被指定存储用户ID
+     * Get <p>被指定存储用户ID</p> 
+     * @return StorageAccountId <p>被指定存储用户ID</p>
      */
     public String getStorageAccountId() {
         return this.StorageAccountId;
     }
 
     /**
-     * Set 被指定存储用户ID
-     * @param StorageAccountId 被指定存储用户ID
+     * Set <p>被指定存储用户ID</p>
+     * @param StorageAccountId <p>被指定存储用户ID</p>
      */
     public void setStorageAccountId(String StorageAccountId) {
         this.StorageAccountId = StorageAccountId;
     }
 
     /**
-     * Get 被指定存储用户appid 
-     * @return StorageAppId 被指定存储用户appid
+     * Get <p>被指定存储用户appid</p> 
+     * @return StorageAppId <p>被指定存储用户appid</p>
      */
     public String getStorageAppId() {
         return this.StorageAppId;
     }
 
     /**
-     * Set 被指定存储用户appid
-     * @param StorageAppId 被指定存储用户appid
+     * Set <p>被指定存储用户appid</p>
+     * @param StorageAppId <p>被指定存储用户appid</p>
      */
     public void setStorageAppId(String StorageAppId) {
         this.StorageAppId = StorageAppId;
     }
 
     /**
-     * Get 是否压缩。
-1:压缩  2:不压缩 
-     * @return Compress 是否压缩。
-1:压缩  2:不压缩
+     * Get <p>是否压缩。<br>1:压缩  2:不压缩</p> 
+     * @return Compress <p>是否压缩。<br>1:压缩  2:不压缩</p>
      */
     public Long getCompress() {
         return this.Compress;
     }
 
     /**
-     * Set 是否压缩。
-1:压缩  2:不压缩
-     * @param Compress 是否压缩。
-1:压缩  2:不压缩
+     * Set <p>是否压缩。<br>1:压缩  2:不压缩</p>
+     * @param Compress <p>是否压缩。<br>1:压缩  2:不压缩</p>
      */
     public void setCompress(Long Compress) {
         this.Compress = Compress;

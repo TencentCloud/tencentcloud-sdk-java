@@ -281,6 +281,13 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     private SceneAigcVideoTask SceneAigcVideoTask;
 
     /**
+    * 图像异步处理任务信息，仅当 TaskType 为 ProcessImageAsync，该字段有值。
+    */
+    @SerializedName("ProcessImageAsyncTask")
+    @Expose
+    private ProcessImageAsync ProcessImageAsyncTask;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -920,6 +927,22 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
+     * Get 图像异步处理任务信息，仅当 TaskType 为 ProcessImageAsync，该字段有值。 
+     * @return ProcessImageAsyncTask 图像异步处理任务信息，仅当 TaskType 为 ProcessImageAsync，该字段有值。
+     */
+    public ProcessImageAsync getProcessImageAsyncTask() {
+        return this.ProcessImageAsyncTask;
+    }
+
+    /**
+     * Set 图像异步处理任务信息，仅当 TaskType 为 ProcessImageAsync，该字段有值。
+     * @param ProcessImageAsyncTask 图像异步处理任务信息，仅当 TaskType 为 ProcessImageAsync，该字段有值。
+     */
+    public void setProcessImageAsyncTask(ProcessImageAsync ProcessImageAsyncTask) {
+        this.ProcessImageAsyncTask = ProcessImageAsyncTask;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -1042,6 +1065,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
         if (source.SceneAigcVideoTask != null) {
             this.SceneAigcVideoTask = new SceneAigcVideoTask(source.SceneAigcVideoTask);
         }
+        if (source.ProcessImageAsyncTask != null) {
+            this.ProcessImageAsyncTask = new ProcessImageAsync(source.ProcessImageAsyncTask);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1085,6 +1111,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
         this.setParamObj(map, prefix + "ImportMediaKnowledge.", this.ImportMediaKnowledge);
         this.setParamObj(map, prefix + "SceneAigcImageTask.", this.SceneAigcImageTask);
         this.setParamObj(map, prefix + "SceneAigcVideoTask.", this.SceneAigcVideoTask);
+        this.setParamObj(map, prefix + "ProcessImageAsyncTask.", this.ProcessImageAsyncTask);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -394,6 +394,17 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeSRVConnectionDomain）用于查询MongoDB数据库当前的域名信息。
+     * @param req DescribeSRVConnectionDomainRequest
+     * @return DescribeSRVConnectionDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSRVConnectionDomainResponse DescribeSRVConnectionDomain(DescribeSRVConnectionDomainRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSRVConnectionDomain", DescribeSRVConnectionDomainResponse.class);
+    }
+
+    /**
      *本接口（DescribeSecurityGroup）用于查询实例绑定的安全组。
      * @param req DescribeSecurityGroupRequest
      * @return DescribeSecurityGroupResponse
@@ -449,6 +460,17 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *本接口（DisableSRVConnectionUrl）用于关闭MongoDB数据库的SRV访问地址。
+     * @param req DisableSRVConnectionUrlRequest
+     * @return DisableSRVConnectionUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableSRVConnectionUrlResponse DisableSRVConnectionUrl(DisableSRVConnectionUrlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DisableSRVConnectionUrl", DisableSRVConnectionUrlResponse.class);
+    }
+
+    /**
      *本接口(DropDBInstanceParamTpl )用于删除云数据库MongoDB实例的参数模板
 **说明：DropDBInstanceParamTpl  API正在公测中，在此期间，该接口仅对公测用户开放**
      * @param req DropDBInstanceParamTplRequest
@@ -458,6 +480,17 @@ public class MongodbClient extends AbstractClient{
     public DropDBInstanceParamTplResponse DropDBInstanceParamTpl(DropDBInstanceParamTplRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DropDBInstanceParamTpl", DropDBInstanceParamTplResponse.class);
+    }
+
+    /**
+     *本接口（EnableSRVConnectionUrl）用于开启MongoDB数据库的SRV访问地址。
+     * @param req EnableSRVConnectionUrlRequest
+     * @return EnableSRVConnectionUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableSRVConnectionUrlResponse EnableSRVConnectionUrl(EnableSRVConnectionUrlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EnableSRVConnectionUrl", EnableSRVConnectionUrlResponse.class);
     }
 
     /**
@@ -625,6 +658,17 @@ public class MongodbClient extends AbstractClient{
     public ModifyInstanceParamsResponse ModifyInstanceParams(ModifyInstanceParamsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyInstanceParams", ModifyInstanceParamsResponse.class);
+    }
+
+    /**
+     *本接口（DisableSRVConnectionUrl）用于修改MongoDB数据库的SRV访问地址的TTL时长。
+     * @param req ModifySRVConnectionUrlRequest
+     * @return ModifySRVConnectionUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySRVConnectionUrlResponse ModifySRVConnectionUrl(ModifySRVConnectionUrlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySRVConnectionUrl", ModifySRVConnectionUrlResponse.class);
     }
 
     /**

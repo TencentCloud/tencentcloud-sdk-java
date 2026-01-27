@@ -432,6 +432,13 @@ pausing
     private Long ArchiveProgress;
 
     /**
+    * 是否开启透明加密
+    */
+    @SerializedName("IsOpenTDE")
+    @Expose
+    private Boolean IsOpenTDE;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -1391,6 +1398,22 @@ pausing
         this.ArchiveProgress = ArchiveProgress;
     }
 
+    /**
+     * Get 是否开启透明加密 
+     * @return IsOpenTDE 是否开启透明加密
+     */
+    public Boolean getIsOpenTDE() {
+        return this.IsOpenTDE;
+    }
+
+    /**
+     * Set 是否开启透明加密
+     * @param IsOpenTDE 是否开启透明加密
+     */
+    public void setIsOpenTDE(Boolean IsOpenTDE) {
+        this.IsOpenTDE = IsOpenTDE;
+    }
+
     public CynosdbClusterDetail() {
     }
 
@@ -1588,6 +1611,9 @@ pausing
         if (source.ArchiveProgress != null) {
             this.ArchiveProgress = new Long(source.ArchiveProgress);
         }
+        if (source.IsOpenTDE != null) {
+            this.IsOpenTDE = new Boolean(source.IsOpenTDE);
+        }
     }
 
 
@@ -1651,6 +1677,7 @@ pausing
         this.setParamSimple(map, prefix + "UsedArchiveStorage", this.UsedArchiveStorage);
         this.setParamSimple(map, prefix + "ArchiveStatus", this.ArchiveStatus);
         this.setParamSimple(map, prefix + "ArchiveProgress", this.ArchiveProgress);
+        this.setParamSimple(map, prefix + "IsOpenTDE", this.IsOpenTDE);
 
     }
 }

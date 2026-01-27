@@ -45,7 +45,7 @@ public class ModifyAccountPasswordRequest extends AbstractModel {
     private Account [] Accounts;
 
     /**
-    * 是否跳过校验密码复杂度
+    * 该字段已废弃。
     */
     @SerializedName("SkipValidatePassword")
     @Expose
@@ -100,8 +100,8 @@ public class ModifyAccountPasswordRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否跳过校验密码复杂度 
-     * @return SkipValidatePassword 是否跳过校验密码复杂度
+     * Get 该字段已废弃。 
+     * @return SkipValidatePassword 该字段已废弃。
      * @deprecated
      */
     @Deprecated
@@ -110,8 +110,8 @@ public class ModifyAccountPasswordRequest extends AbstractModel {
     }
 
     /**
-     * Set 是否跳过校验密码复杂度
-     * @param SkipValidatePassword 是否跳过校验密码复杂度
+     * Set 该字段已废弃。
+     * @param SkipValidatePassword 该字段已废弃。
      * @deprecated
      */
     @Deprecated

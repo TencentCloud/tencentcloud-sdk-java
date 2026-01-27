@@ -31,6 +31,13 @@ public class ChangeClothesConfig extends AbstractModel {
     private SceneAigcImageTaskInputFileInfo [] ClothesFileInfos;
 
     /**
+    * AI换衣的提示词。
+    */
+    @SerializedName("Prompt")
+    @Expose
+    private String Prompt;
+
+    /**
      * Get 输入需要更换的**衣物**图片列表。目前最大支持4张图片。 
      * @return ClothesFileInfos 输入需要更换的**衣物**图片列表。目前最大支持4张图片。
      */
@@ -44,6 +51,22 @@ public class ChangeClothesConfig extends AbstractModel {
      */
     public void setClothesFileInfos(SceneAigcImageTaskInputFileInfo [] ClothesFileInfos) {
         this.ClothesFileInfos = ClothesFileInfos;
+    }
+
+    /**
+     * Get AI换衣的提示词。 
+     * @return Prompt AI换衣的提示词。
+     */
+    public String getPrompt() {
+        return this.Prompt;
+    }
+
+    /**
+     * Set AI换衣的提示词。
+     * @param Prompt AI换衣的提示词。
+     */
+    public void setPrompt(String Prompt) {
+        this.Prompt = Prompt;
     }
 
     public ChangeClothesConfig() {
@@ -60,6 +83,9 @@ public class ChangeClothesConfig extends AbstractModel {
                 this.ClothesFileInfos[i] = new SceneAigcImageTaskInputFileInfo(source.ClothesFileInfos[i]);
             }
         }
+        if (source.Prompt != null) {
+            this.Prompt = new String(source.Prompt);
+        }
     }
 
 
@@ -68,6 +94,7 @@ public class ChangeClothesConfig extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "ClothesFileInfos.", this.ClothesFileInfos);
+        this.setParamSimple(map, prefix + "Prompt", this.Prompt);
 
     }
 }

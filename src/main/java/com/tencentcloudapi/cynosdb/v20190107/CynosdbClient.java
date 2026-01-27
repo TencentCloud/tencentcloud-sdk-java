@@ -369,6 +369,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *本接口（DeleteClusterSaveBackup）用于为集群删除遗留备份
+     * @param req DeleteClusterSaveBackupRequest
+     * @return DeleteClusterSaveBackupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteClusterSaveBackupResponse DeleteClusterSaveBackup(DeleteClusterSaveBackupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteClusterSaveBackup", DeleteClusterSaveBackupResponse.class);
+    }
+
+    /**
      *本接口（DeleteParamTemplate）用于删除用户创建的参数模板。
      * @param req DeleteParamTemplateRequest
      * @return DeleteParamTemplateResponse
@@ -919,6 +930,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeRedoLogs）用于查询redo日志列表。
+     * @param req DescribeRedoLogsRequest
+     * @return DescribeRedoLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRedoLogsResponse DescribeRedoLogs(DescribeRedoLogsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRedoLogs", DescribeRedoLogsResponse.class);
+    }
+
+    /**
      *本接口（DescribeResourcePackageDetail）用于查询资源包使用详情。
      * @param req DescribeResourcePackageDetailRequest
      * @return DescribeResourcePackageDetailResponse
@@ -982,6 +1004,17 @@ public class CynosdbClient extends AbstractClient{
     public DescribeSSLStatusResponse DescribeSSLStatus(DescribeSSLStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSSLStatus", DescribeSSLStatusResponse.class);
+    }
+
+    /**
+     *本接口（DescribeSaveBackupClusters）用于查询遗留备份集群信息。
+     * @param req DescribeSaveBackupClustersRequest
+     * @return DescribeSaveBackupClustersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSaveBackupClustersResponse DescribeSaveBackupClusters(DescribeSaveBackupClustersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSaveBackupClusters", DescribeSaveBackupClustersResponse.class);
     }
 
     /**
@@ -1521,6 +1554,17 @@ public class CynosdbClient extends AbstractClient{
     public ModifyServerlessStrategyResponse ModifyServerlessStrategy(ModifyServerlessStrategyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyServerlessStrategy", ModifyServerlessStrategyResponse.class);
+    }
+
+    /**
+     *本接口（ModifySnapBackupCrossRegionConfig）用于修改指定集群的快照备份跨地域配置。
+     * @param req ModifySnapBackupCrossRegionConfigRequest
+     * @return ModifySnapBackupCrossRegionConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySnapBackupCrossRegionConfigResponse ModifySnapBackupCrossRegionConfig(ModifySnapBackupCrossRegionConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySnapBackupCrossRegionConfig", ModifySnapBackupCrossRegionConfigResponse.class);
     }
 
     /**

@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class ModifyAuditTrackRequest extends AbstractModel {
 
     /**
-    * 跟踪集 ID
+    * <p>跟踪集 ID</p>
     */
     @SerializedName("TrackId")
     @Expose
     private Long TrackId;
 
     /**
-    * 跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符
+    * <p>跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 跟踪事件类型（读：Read；写：Write；全部：*）
+    * <p>跟踪事件类型（读：Read；写：Write；全部：*）</p>
     */
     @SerializedName("ActionType")
     @Expose
     private String ActionType;
 
     /**
-    * 跟踪事件所属产品（支持全部产品或单个产品，如：cos，全部：*）
+    * <p>跟踪事件所属产品（支持全部产品或单个产品，如：cos，全部：*）</p>
     */
     @SerializedName("ResourceType")
     @Expose
     private String ResourceType;
 
     /**
-    * 跟踪集状态（未开启：0；开启：1）
+    * <p>跟踪集状态（未开启：0；开启：1）</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 跟踪事件接口名列表（ResourceType为 * 时，EventNames必须为全部：["*"]；指定ResourceType时，支持全部接口：["*"]；支持部分接口：["cos", "cls"]，接口列表上限10个）
+    * <p>跟踪事件接口名列表（ResourceType为 * 时，EventNames必须为全部：[&quot;*&quot;]；指定ResourceType时，支持全部接口：[&quot;*&quot;]；支持部分接口：[&quot;cos&quot;, &quot;cls&quot;]，接口列表上限10个）</p>
     */
     @SerializedName("EventNames")
     @Expose
     private String [] EventNames;
 
     /**
-    * 数据投递存储（目前支持 cos、cls）
+    * <p>数据投递存储（目前支持 cos、cls、ckafka）</p>
     */
     @SerializedName("Storage")
     @Expose
     private Storage Storage;
 
     /**
-    * 是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能)
+    * <p>是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能)</p>
     */
     @SerializedName("TrackForAllMembers")
     @Expose
     private Long TrackForAllMembers;
 
     /**
-     * Get 跟踪集 ID 
-     * @return TrackId 跟踪集 ID
+     * Get <p>跟踪集 ID</p> 
+     * @return TrackId <p>跟踪集 ID</p>
      */
     public Long getTrackId() {
         return this.TrackId;
     }
 
     /**
-     * Set 跟踪集 ID
-     * @param TrackId 跟踪集 ID
+     * Set <p>跟踪集 ID</p>
+     * @param TrackId <p>跟踪集 ID</p>
      */
     public void setTrackId(Long TrackId) {
         this.TrackId = TrackId;
     }
 
     /**
-     * Get 跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符 
-     * @return Name 跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符
+     * Get <p>跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符</p> 
+     * @return Name <p>跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符
-     * @param Name 跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符
+     * Set <p>跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符</p>
+     * @param Name <p>跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 跟踪事件类型（读：Read；写：Write；全部：*） 
-     * @return ActionType 跟踪事件类型（读：Read；写：Write；全部：*）
+     * Get <p>跟踪事件类型（读：Read；写：Write；全部：*）</p> 
+     * @return ActionType <p>跟踪事件类型（读：Read；写：Write；全部：*）</p>
      */
     public String getActionType() {
         return this.ActionType;
     }
 
     /**
-     * Set 跟踪事件类型（读：Read；写：Write；全部：*）
-     * @param ActionType 跟踪事件类型（读：Read；写：Write；全部：*）
+     * Set <p>跟踪事件类型（读：Read；写：Write；全部：*）</p>
+     * @param ActionType <p>跟踪事件类型（读：Read；写：Write；全部：*）</p>
      */
     public void setActionType(String ActionType) {
         this.ActionType = ActionType;
     }
 
     /**
-     * Get 跟踪事件所属产品（支持全部产品或单个产品，如：cos，全部：*） 
-     * @return ResourceType 跟踪事件所属产品（支持全部产品或单个产品，如：cos，全部：*）
+     * Get <p>跟踪事件所属产品（支持全部产品或单个产品，如：cos，全部：*）</p> 
+     * @return ResourceType <p>跟踪事件所属产品（支持全部产品或单个产品，如：cos，全部：*）</p>
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set 跟踪事件所属产品（支持全部产品或单个产品，如：cos，全部：*）
-     * @param ResourceType 跟踪事件所属产品（支持全部产品或单个产品，如：cos，全部：*）
+     * Set <p>跟踪事件所属产品（支持全部产品或单个产品，如：cos，全部：*）</p>
+     * @param ResourceType <p>跟踪事件所属产品（支持全部产品或单个产品，如：cos，全部：*）</p>
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get 跟踪集状态（未开启：0；开启：1） 
-     * @return Status 跟踪集状态（未开启：0；开启：1）
+     * Get <p>跟踪集状态（未开启：0；开启：1）</p> 
+     * @return Status <p>跟踪集状态（未开启：0；开启：1）</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 跟踪集状态（未开启：0；开启：1）
-     * @param Status 跟踪集状态（未开启：0；开启：1）
+     * Set <p>跟踪集状态（未开启：0；开启：1）</p>
+     * @param Status <p>跟踪集状态（未开启：0；开启：1）</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 跟踪事件接口名列表（ResourceType为 * 时，EventNames必须为全部：["*"]；指定ResourceType时，支持全部接口：["*"]；支持部分接口：["cos", "cls"]，接口列表上限10个） 
-     * @return EventNames 跟踪事件接口名列表（ResourceType为 * 时，EventNames必须为全部：["*"]；指定ResourceType时，支持全部接口：["*"]；支持部分接口：["cos", "cls"]，接口列表上限10个）
+     * Get <p>跟踪事件接口名列表（ResourceType为 * 时，EventNames必须为全部：[&quot;*&quot;]；指定ResourceType时，支持全部接口：[&quot;*&quot;]；支持部分接口：[&quot;cos&quot;, &quot;cls&quot;]，接口列表上限10个）</p> 
+     * @return EventNames <p>跟踪事件接口名列表（ResourceType为 * 时，EventNames必须为全部：[&quot;*&quot;]；指定ResourceType时，支持全部接口：[&quot;*&quot;]；支持部分接口：[&quot;cos&quot;, &quot;cls&quot;]，接口列表上限10个）</p>
      */
     public String [] getEventNames() {
         return this.EventNames;
     }
 
     /**
-     * Set 跟踪事件接口名列表（ResourceType为 * 时，EventNames必须为全部：["*"]；指定ResourceType时，支持全部接口：["*"]；支持部分接口：["cos", "cls"]，接口列表上限10个）
-     * @param EventNames 跟踪事件接口名列表（ResourceType为 * 时，EventNames必须为全部：["*"]；指定ResourceType时，支持全部接口：["*"]；支持部分接口：["cos", "cls"]，接口列表上限10个）
+     * Set <p>跟踪事件接口名列表（ResourceType为 * 时，EventNames必须为全部：[&quot;*&quot;]；指定ResourceType时，支持全部接口：[&quot;*&quot;]；支持部分接口：[&quot;cos&quot;, &quot;cls&quot;]，接口列表上限10个）</p>
+     * @param EventNames <p>跟踪事件接口名列表（ResourceType为 * 时，EventNames必须为全部：[&quot;*&quot;]；指定ResourceType时，支持全部接口：[&quot;*&quot;]；支持部分接口：[&quot;cos&quot;, &quot;cls&quot;]，接口列表上限10个）</p>
      */
     public void setEventNames(String [] EventNames) {
         this.EventNames = EventNames;
     }
 
     /**
-     * Get 数据投递存储（目前支持 cos、cls） 
-     * @return Storage 数据投递存储（目前支持 cos、cls）
+     * Get <p>数据投递存储（目前支持 cos、cls、ckafka）</p> 
+     * @return Storage <p>数据投递存储（目前支持 cos、cls、ckafka）</p>
      */
     public Storage getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set 数据投递存储（目前支持 cos、cls）
-     * @param Storage 数据投递存储（目前支持 cos、cls）
+     * Set <p>数据投递存储（目前支持 cos、cls、ckafka）</p>
+     * @param Storage <p>数据投递存储（目前支持 cos、cls、ckafka）</p>
      */
     public void setStorage(Storage Storage) {
         this.Storage = Storage;
     }
 
     /**
-     * Get 是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能) 
-     * @return TrackForAllMembers 是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能)
+     * Get <p>是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能)</p> 
+     * @return TrackForAllMembers <p>是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能)</p>
      */
     public Long getTrackForAllMembers() {
         return this.TrackForAllMembers;
     }
 
     /**
-     * Set 是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能)
-     * @param TrackForAllMembers 是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能)
+     * Set <p>是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能)</p>
+     * @param TrackForAllMembers <p>是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能)</p>
      */
     public void setTrackForAllMembers(Long TrackForAllMembers) {
         this.TrackForAllMembers = TrackForAllMembers;

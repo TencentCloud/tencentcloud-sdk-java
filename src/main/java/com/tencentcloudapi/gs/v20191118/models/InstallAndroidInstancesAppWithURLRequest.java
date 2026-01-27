@@ -38,6 +38,13 @@ public class InstallAndroidInstancesAppWithURLRequest extends AbstractModel {
     private String AndroidAppURL;
 
     /**
+    * 安卓应用MD5码值（32位小写十六进制字符串）
+    */
+    @SerializedName("AndroidAppMD5")
+    @Expose
+    private String AndroidAppMD5;
+
+    /**
      * Get 实例ID 
      * @return AndroidInstanceIds 实例ID
      */
@@ -69,6 +76,22 @@ public class InstallAndroidInstancesAppWithURLRequest extends AbstractModel {
         this.AndroidAppURL = AndroidAppURL;
     }
 
+    /**
+     * Get 安卓应用MD5码值（32位小写十六进制字符串） 
+     * @return AndroidAppMD5 安卓应用MD5码值（32位小写十六进制字符串）
+     */
+    public String getAndroidAppMD5() {
+        return this.AndroidAppMD5;
+    }
+
+    /**
+     * Set 安卓应用MD5码值（32位小写十六进制字符串）
+     * @param AndroidAppMD5 安卓应用MD5码值（32位小写十六进制字符串）
+     */
+    public void setAndroidAppMD5(String AndroidAppMD5) {
+        this.AndroidAppMD5 = AndroidAppMD5;
+    }
+
     public InstallAndroidInstancesAppWithURLRequest() {
     }
 
@@ -86,6 +109,9 @@ public class InstallAndroidInstancesAppWithURLRequest extends AbstractModel {
         if (source.AndroidAppURL != null) {
             this.AndroidAppURL = new String(source.AndroidAppURL);
         }
+        if (source.AndroidAppMD5 != null) {
+            this.AndroidAppMD5 = new String(source.AndroidAppMD5);
+        }
     }
 
 
@@ -95,6 +121,7 @@ public class InstallAndroidInstancesAppWithURLRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "AndroidInstanceIds.", this.AndroidInstanceIds);
         this.setParamSimple(map, prefix + "AndroidAppURL", this.AndroidAppURL);
+        this.setParamSimple(map, prefix + "AndroidAppMD5", this.AndroidAppMD5);
 
     }
 }

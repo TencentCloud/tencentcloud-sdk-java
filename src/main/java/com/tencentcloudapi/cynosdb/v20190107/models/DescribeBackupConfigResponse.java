@@ -73,6 +73,14 @@ public class DescribeBackupConfigResponse extends AbstractModel {
     private LogicBackupConfigInfo LogicBackupConfig;
 
     /**
+    * 二级快照备份配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SnapshotSecondaryBackupConfig")
+    @Expose
+    private BackupConfigInfo SnapshotSecondaryBackupConfig;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -192,6 +200,26 @@ public class DescribeBackupConfigResponse extends AbstractModel {
     }
 
     /**
+     * Get 二级快照备份配置信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SnapshotSecondaryBackupConfig 二级快照备份配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BackupConfigInfo getSnapshotSecondaryBackupConfig() {
+        return this.SnapshotSecondaryBackupConfig;
+    }
+
+    /**
+     * Set 二级快照备份配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SnapshotSecondaryBackupConfig 二级快照备份配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSnapshotSecondaryBackupConfig(BackupConfigInfo SnapshotSecondaryBackupConfig) {
+        this.SnapshotSecondaryBackupConfig = SnapshotSecondaryBackupConfig;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -239,6 +267,9 @@ public class DescribeBackupConfigResponse extends AbstractModel {
         if (source.LogicBackupConfig != null) {
             this.LogicBackupConfig = new LogicBackupConfigInfo(source.LogicBackupConfig);
         }
+        if (source.SnapshotSecondaryBackupConfig != null) {
+            this.SnapshotSecondaryBackupConfig = new BackupConfigInfo(source.SnapshotSecondaryBackupConfig);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -256,6 +287,7 @@ public class DescribeBackupConfigResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "BackupType", this.BackupType);
         this.setParamSimple(map, prefix + "LogicCrossRegionsConfigUpdateTime", this.LogicCrossRegionsConfigUpdateTime);
         this.setParamObj(map, prefix + "LogicBackupConfig.", this.LogicBackupConfig);
+        this.setParamObj(map, prefix + "SnapshotSecondaryBackupConfig.", this.SnapshotSecondaryBackupConfig);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

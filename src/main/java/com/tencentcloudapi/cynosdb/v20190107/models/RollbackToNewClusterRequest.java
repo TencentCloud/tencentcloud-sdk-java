@@ -229,6 +229,13 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     private String AutoArchive;
 
     /**
+    * 是否从保存备份中恢复
+    */
+    @SerializedName("FromSaveBackup")
+    @Expose
+    private Boolean FromSaveBackup;
+
+    /**
      * Get 可用区 
      * @return Zone 可用区
      */
@@ -712,6 +719,22 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
         this.AutoArchive = AutoArchive;
     }
 
+    /**
+     * Get 是否从保存备份中恢复 
+     * @return FromSaveBackup 是否从保存备份中恢复
+     */
+    public Boolean getFromSaveBackup() {
+        return this.FromSaveBackup;
+    }
+
+    /**
+     * Set 是否从保存备份中恢复
+     * @param FromSaveBackup 是否从保存备份中恢复
+     */
+    public void setFromSaveBackup(Boolean FromSaveBackup) {
+        this.FromSaveBackup = FromSaveBackup;
+    }
+
     public RollbackToNewClusterRequest() {
     }
 
@@ -828,6 +851,9 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
         if (source.AutoArchive != null) {
             this.AutoArchive = new String(source.AutoArchive);
         }
+        if (source.FromSaveBackup != null) {
+            this.FromSaveBackup = new Boolean(source.FromSaveBackup);
+        }
     }
 
 
@@ -863,6 +889,7 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
         this.setParamArraySimple(map, prefix + "OriginalROInstanceList.", this.OriginalROInstanceList);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "AutoArchive", this.AutoArchive);
+        this.setParamSimple(map, prefix + "FromSaveBackup", this.FromSaveBackup);
 
     }
 }

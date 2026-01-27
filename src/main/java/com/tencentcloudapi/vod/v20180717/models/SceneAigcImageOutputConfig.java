@@ -63,6 +63,13 @@ public class SceneAigcImageOutputConfig extends AbstractModel {
     private String AspectRatio;
 
     /**
+    * 输出图片编码格式参数。**仅AI换衣场景有效。**
+    */
+    @SerializedName("EncodeConfig")
+    @Expose
+    private ImageSceneAigcEncodeConfig EncodeConfig;
+
+    /**
      * Get 存储模式。取值有： <li>Permanent：永久存储，生成的图片文件将存储到云点播，可在事件通知中获取到 FileId；</li> <li>Temporary：临时存储，生成的图片文件不会存储到云点播，可在事件通知中获取到临时访问的 URL；</li>
 默认值：Temporary 
      * @return StorageMode 存储模式。取值有： <li>Permanent：永久存储，生成的图片文件将存储到云点播，可在事件通知中获取到 FileId；</li> <li>Temporary：临时存储，生成的图片文件不会存储到云点播，可在事件通知中获取到临时访问的 URL；</li>
@@ -158,6 +165,22 @@ public class SceneAigcImageOutputConfig extends AbstractModel {
         this.AspectRatio = AspectRatio;
     }
 
+    /**
+     * Get 输出图片编码格式参数。**仅AI换衣场景有效。** 
+     * @return EncodeConfig 输出图片编码格式参数。**仅AI换衣场景有效。**
+     */
+    public ImageSceneAigcEncodeConfig getEncodeConfig() {
+        return this.EncodeConfig;
+    }
+
+    /**
+     * Set 输出图片编码格式参数。**仅AI换衣场景有效。**
+     * @param EncodeConfig 输出图片编码格式参数。**仅AI换衣场景有效。**
+     */
+    public void setEncodeConfig(ImageSceneAigcEncodeConfig EncodeConfig) {
+        this.EncodeConfig = EncodeConfig;
+    }
+
     public SceneAigcImageOutputConfig() {
     }
 
@@ -181,6 +204,9 @@ public class SceneAigcImageOutputConfig extends AbstractModel {
         if (source.AspectRatio != null) {
             this.AspectRatio = new String(source.AspectRatio);
         }
+        if (source.EncodeConfig != null) {
+            this.EncodeConfig = new ImageSceneAigcEncodeConfig(source.EncodeConfig);
+        }
     }
 
 
@@ -193,6 +219,7 @@ public class SceneAigcImageOutputConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "ClassId", this.ClassId);
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         this.setParamSimple(map, prefix + "AspectRatio", this.AspectRatio);
+        this.setParamObj(map, prefix + "EncodeConfig.", this.EncodeConfig);
 
     }
 }

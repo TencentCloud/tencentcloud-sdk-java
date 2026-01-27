@@ -39,7 +39,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *容器网络创建网络策略添加并发布任务
+     *功能已下线待三合一重构
+
+容器网络创建网络策略添加并发布任务
      * @param req AddAndPublishNetworkFirewallPolicyDetailRequest
      * @return AddAndPublishNetworkFirewallPolicyDetailResponse
      * @throws TencentCloudSDKException
@@ -50,7 +52,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *容器网络创建Yaml网络策略并发布任务
+     *功能已下线待三合一重构
+
+容器网络创建Yaml网络策略并发布任务
      * @param req AddAndPublishNetworkFirewallPolicyYamlDetailRequest
      * @return AddAndPublishNetworkFirewallPolicyYamlDetailResponse
      * @throws TencentCloudSDKException
@@ -195,7 +199,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *容器网络创建网络策略添加任务
+     *功能已下线待三合一重构
+
+容器网络创建网络策略添加任务
      * @param req AddNetworkFirewallPolicyDetailRequest
      * @return AddNetworkFirewallPolicyDetailResponse
      * @throws TencentCloudSDKException
@@ -206,7 +212,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *容器网络创建Yaml网络策略添加任务
+     *功能已下线待三合一重构
+
+容器网络创建Yaml网络策略添加任务
      * @param req AddNetworkFirewallPolicyYamlDetailRequest
      * @return AddNetworkFirewallPolicyYamlDetailResponse
      * @throws TencentCloudSDKException
@@ -217,7 +225,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *容器网络创建检查Yaml网络策略任务
+     *功能已下线待三合一重构
+
+容器网络创建检查Yaml网络策略任务
      * @param req CheckNetworkFirewallPolicyYamlRequest
      * @return CheckNetworkFirewallPolicyYamlResponse
      * @throws TencentCloudSDKException
@@ -239,7 +249,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *容器网络创建网络策略确认任务
+     *功能已下线待三合一重构
+
+容器网络创建网络策略确认任务
      * @param req ConfirmNetworkFirewallPolicyRequest
      * @return ConfirmNetworkFirewallPolicyResponse
      * @throws TencentCloudSDKException
@@ -492,7 +504,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *容器网络集群下发刷新任务
+     *功能已下线待三合一重构
+
+容器网络集群下发刷新任务
      * @param req CreateNetworkFirewallClusterRefreshRequest
      * @return CreateNetworkFirewallClusterRefreshResponse
      * @throws TencentCloudSDKException
@@ -503,7 +517,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *容器网络集群网络策略创建自动发现任务
+     *功能已下线待三合一重构
+
+容器网络集群网络策略创建自动发现任务
      * @param req CreateNetworkFirewallPolicyDiscoverRequest
      * @return CreateNetworkFirewallPolicyDiscoverResponse
      * @throws TencentCloudSDKException
@@ -514,7 +530,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *容器网络创建网络策略发布任务
+     *功能已下线待三合一重构
+
+容器网络创建网络策略发布任务
      * @param req CreateNetworkFirewallPublishRequest
      * @return CreateNetworkFirewallPublishResponse
      * @throws TencentCloudSDKException
@@ -525,7 +543,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *容器网络创建网络策略撤销任务
+     *功能已下线待三合一重构
+
+容器网络创建网络策略撤销任务
      * @param req CreateNetworkFirewallUndoPublishRequest
      * @return CreateNetworkFirewallUndoPublishResponse
      * @throws TencentCloudSDKException
@@ -803,7 +823,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *容器网络创建网络策略删除任务
+     *功能已下线待三合一重构
+
+容器网络创建网络策略删除任务
      * @param req DeleteNetworkFirewallPolicyDetailRequest
      * @return DeleteNetworkFirewallPolicyDetailResponse
      * @throws TencentCloudSDKException
@@ -2090,7 +2112,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *查询集群策略审计列表
+     *功能已下线待三合一重构
+
+查询集群策略审计列表
      * @param req DescribeNetworkFirewallAuditRecordRequest
      * @return DescribeNetworkFirewallAuditRecordResponse
      * @throws TencentCloudSDKException
@@ -2101,7 +2125,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *查询集群策略列表
+     *功能已下线待三合一重构
+
+查询集群策略列表
      * @param req DescribeNetworkFirewallClusterListRequest
      * @return DescribeNetworkFirewallClusterListResponse
      * @throws TencentCloudSDKException
@@ -2112,7 +2138,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *容器网络查询资产任务进度
+     *功能已下线待三合一重构
+
+容器网络查询资产任务进度
      * @param req DescribeNetworkFirewallClusterRefreshStatusRequest
      * @return DescribeNetworkFirewallClusterRefreshStatusResponse
      * @throws TencentCloudSDKException
@@ -2123,7 +2151,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *查询集群网络空间标签列表
+     *功能已下线待三合一重构
+
+查询集群网络空间标签列表
      * @param req DescribeNetworkFirewallNamespaceLabelListRequest
      * @return DescribeNetworkFirewallNamespaceLabelListResponse
      * @throws TencentCloudSDKException
@@ -2134,7 +2164,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *查询集群网络空间列表
+     *功能已下线待三合一重构
+
+查询集群网络空间列表
      * @param req DescribeNetworkFirewallNamespaceListRequest
      * @return DescribeNetworkFirewallNamespaceListResponse
      * @throws TencentCloudSDKException
@@ -2145,7 +2177,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *查询集群网络pod标签
+     *功能已下线待三合一重构
+
+查询集群网络pod标签
      * @param req DescribeNetworkFirewallPodLabelsListRequest
      * @return DescribeNetworkFirewallPodLabelsListResponse
      * @throws TencentCloudSDKException
@@ -2156,7 +2190,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *容器网络集群查看策略详情
+     *功能已下线待三合一重构
+
+容器网络集群查看策略详情
      * @param req DescribeNetworkFirewallPolicyDetailRequest
      * @return DescribeNetworkFirewallPolicyDetailResponse
      * @throws TencentCloudSDKException
@@ -2167,7 +2203,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *容器网络查询网络策略自动发现任务进度
+     *功能已下线待三合一重构
+
+容器网络查询网络策略自动发现任务进度
      * @param req DescribeNetworkFirewallPolicyDiscoverRequest
      * @return DescribeNetworkFirewallPolicyDiscoverResponse
      * @throws TencentCloudSDKException
@@ -2178,7 +2216,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *查询集群网络策略列表
+     *功能已下线待三合一重构
+
+查询集群网络策略列表
      * @param req DescribeNetworkFirewallPolicyListRequest
      * @return DescribeNetworkFirewallPolicyListResponse
      * @throws TencentCloudSDKException
@@ -2189,7 +2229,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *容器网络查询网络策略策略执行状态
+     *功能已下线待三合一重构
+
+容器网络查询网络策略策略执行状态
      * @param req DescribeNetworkFirewallPolicyStatusRequest
      * @return DescribeNetworkFirewallPolicyStatusResponse
      * @throws TencentCloudSDKException
@@ -2200,7 +2242,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *容器网络集群查看Yaml网络策略详情
+     *功能已下线待三合一重构
+
+容器网络集群查看Yaml网络策略详情
      * @param req DescribeNetworkFirewallPolicyYamlDetailRequest
      * @return DescribeNetworkFirewallPolicyYamlDetailResponse
      * @throws TencentCloudSDKException
@@ -3729,7 +3773,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *容器网络创建网络策略更新并发布任务
+     *功能已下线待三合一重构
+
+容器网络创建网络策略更新并发布任务
      * @param req UpdateAndPublishNetworkFirewallPolicyDetailRequest
      * @return UpdateAndPublishNetworkFirewallPolicyDetailResponse
      * @throws TencentCloudSDKException
@@ -3740,7 +3786,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *容器网络更新Yaml网络策略并发布任务
+     *功能已下线待三合一重构
+
+容器网络更新Yaml网络策略并发布任务
      * @param req UpdateAndPublishNetworkFirewallPolicyYamlDetailRequest
      * @return UpdateAndPublishNetworkFirewallPolicyYamlDetailResponse
      * @throws TencentCloudSDKException
@@ -3773,7 +3821,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *容器网络创建网络策略更新任务
+     *功能已下线待三合一重构
+
+容器网络创建网络策略更新任务
      * @param req UpdateNetworkFirewallPolicyDetailRequest
      * @return UpdateNetworkFirewallPolicyDetailResponse
      * @throws TencentCloudSDKException
@@ -3784,7 +3834,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *容器网络更新Yaml网络策略任务
+     *功能已下线待三合一重构
+
+容器网络更新Yaml网络策略任务
      * @param req UpdateNetworkFirewallPolicyYamlDetailRequest
      * @return UpdateNetworkFirewallPolicyYamlDetailResponse
      * @throws TencentCloudSDKException

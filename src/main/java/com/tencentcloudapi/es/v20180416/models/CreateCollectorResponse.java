@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.nlp.v20190408.models;
+package com.tencentcloudapi.es.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,28 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ComposeCoupletResponse extends AbstractModel {
+public class CreateCollectorResponse extends AbstractModel {
 
     /**
-    * 横批。
+    * 采集器ID
     */
-    @SerializedName("TopScroll")
+    @SerializedName("CollectorId")
     @Expose
-    private String TopScroll;
-
-    /**
-    * 上联与下联。
-    */
-    @SerializedName("Content")
-    @Expose
-    private String [] Content;
-
-    /**
-    * 当对联随机生成时，展示随机生成原因。
-    */
-    @SerializedName("RandomCause")
-    @Expose
-    private String RandomCause;
+    private String CollectorId;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -52,51 +38,19 @@ public class ComposeCoupletResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 横批。 
-     * @return TopScroll 横批。
+     * Get 采集器ID 
+     * @return CollectorId 采集器ID
      */
-    public String getTopScroll() {
-        return this.TopScroll;
+    public String getCollectorId() {
+        return this.CollectorId;
     }
 
     /**
-     * Set 横批。
-     * @param TopScroll 横批。
+     * Set 采集器ID
+     * @param CollectorId 采集器ID
      */
-    public void setTopScroll(String TopScroll) {
-        this.TopScroll = TopScroll;
-    }
-
-    /**
-     * Get 上联与下联。 
-     * @return Content 上联与下联。
-     */
-    public String [] getContent() {
-        return this.Content;
-    }
-
-    /**
-     * Set 上联与下联。
-     * @param Content 上联与下联。
-     */
-    public void setContent(String [] Content) {
-        this.Content = Content;
-    }
-
-    /**
-     * Get 当对联随机生成时，展示随机生成原因。 
-     * @return RandomCause 当对联随机生成时，展示随机生成原因。
-     */
-    public String getRandomCause() {
-        return this.RandomCause;
-    }
-
-    /**
-     * Set 当对联随机生成时，展示随机生成原因。
-     * @param RandomCause 当对联随机生成时，展示随机生成原因。
-     */
-    public void setRandomCause(String RandomCause) {
-        this.RandomCause = RandomCause;
+    public void setCollectorId(String CollectorId) {
+        this.CollectorId = CollectorId;
     }
 
     /**
@@ -115,25 +69,16 @@ public class ComposeCoupletResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public ComposeCoupletResponse() {
+    public CreateCollectorResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ComposeCoupletResponse(ComposeCoupletResponse source) {
-        if (source.TopScroll != null) {
-            this.TopScroll = new String(source.TopScroll);
-        }
-        if (source.Content != null) {
-            this.Content = new String[source.Content.length];
-            for (int i = 0; i < source.Content.length; i++) {
-                this.Content[i] = new String(source.Content[i]);
-            }
-        }
-        if (source.RandomCause != null) {
-            this.RandomCause = new String(source.RandomCause);
+    public CreateCollectorResponse(CreateCollectorResponse source) {
+        if (source.CollectorId != null) {
+            this.CollectorId = new String(source.CollectorId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -145,9 +90,7 @@ public class ComposeCoupletResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TopScroll", this.TopScroll);
-        this.setParamArraySimple(map, prefix + "Content.", this.Content);
-        this.setParamSimple(map, prefix + "RandomCause", this.RandomCause);
+        this.setParamSimple(map, prefix + "CollectorId", this.CollectorId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

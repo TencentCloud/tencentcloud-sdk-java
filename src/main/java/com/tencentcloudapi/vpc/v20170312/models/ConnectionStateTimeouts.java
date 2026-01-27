@@ -40,9 +40,9 @@ public class ConnectionStateTimeouts extends AbstractModel {
     /**
     * TCP TIME_WAIT超时，指完全关闭的TCP连接在到期后保留在NAT映射中的秒数。取值范围为：10-600秒，默认为120秒。
     */
-    @SerializedName("TcpTimeWaitTimeout")
+    @SerializedName("TCPTimeWaitTimeout")
     @Expose
-    private Long TcpTimeWaitTimeout;
+    private Long TCPTimeWaitTimeout;
 
     /**
      * Get UDP映射空闲时间，指多少秒以后UDP流停止向端点发送。取值范围为：3-7200秒，默认为10秒。 
@@ -78,18 +78,18 @@ public class ConnectionStateTimeouts extends AbstractModel {
 
     /**
      * Get TCP TIME_WAIT超时，指完全关闭的TCP连接在到期后保留在NAT映射中的秒数。取值范围为：10-600秒，默认为120秒。 
-     * @return TcpTimeWaitTimeout TCP TIME_WAIT超时，指完全关闭的TCP连接在到期后保留在NAT映射中的秒数。取值范围为：10-600秒，默认为120秒。
+     * @return TCPTimeWaitTimeout TCP TIME_WAIT超时，指完全关闭的TCP连接在到期后保留在NAT映射中的秒数。取值范围为：10-600秒，默认为120秒。
      */
-    public Long getTcpTimeWaitTimeout() {
-        return this.TcpTimeWaitTimeout;
+    public Long getTCPTimeWaitTimeout() {
+        return this.TCPTimeWaitTimeout;
     }
 
     /**
      * Set TCP TIME_WAIT超时，指完全关闭的TCP连接在到期后保留在NAT映射中的秒数。取值范围为：10-600秒，默认为120秒。
-     * @param TcpTimeWaitTimeout TCP TIME_WAIT超时，指完全关闭的TCP连接在到期后保留在NAT映射中的秒数。取值范围为：10-600秒，默认为120秒。
+     * @param TCPTimeWaitTimeout TCP TIME_WAIT超时，指完全关闭的TCP连接在到期后保留在NAT映射中的秒数。取值范围为：10-600秒，默认为120秒。
      */
-    public void setTcpTimeWaitTimeout(Long TcpTimeWaitTimeout) {
-        this.TcpTimeWaitTimeout = TcpTimeWaitTimeout;
+    public void setTCPTimeWaitTimeout(Long TCPTimeWaitTimeout) {
+        this.TCPTimeWaitTimeout = TCPTimeWaitTimeout;
     }
 
     public ConnectionStateTimeouts() {
@@ -106,8 +106,8 @@ public class ConnectionStateTimeouts extends AbstractModel {
         if (source.TCPEstablishedConnectionTimeout != null) {
             this.TCPEstablishedConnectionTimeout = new Long(source.TCPEstablishedConnectionTimeout);
         }
-        if (source.TcpTimeWaitTimeout != null) {
-            this.TcpTimeWaitTimeout = new Long(source.TcpTimeWaitTimeout);
+        if (source.TCPTimeWaitTimeout != null) {
+            this.TCPTimeWaitTimeout = new Long(source.TCPTimeWaitTimeout);
         }
     }
 
@@ -118,7 +118,7 @@ public class ConnectionStateTimeouts extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "UDPMappingTimeout", this.UDPMappingTimeout);
         this.setParamSimple(map, prefix + "TCPEstablishedConnectionTimeout", this.TCPEstablishedConnectionTimeout);
-        this.setParamSimple(map, prefix + "TcpTimeWaitTimeout", this.TcpTimeWaitTimeout);
+        this.setParamSimple(map, prefix + "TCPTimeWaitTimeout", this.TCPTimeWaitTimeout);
 
     }
 }

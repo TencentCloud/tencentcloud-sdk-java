@@ -52,6 +52,13 @@ public class IsolateClusterRequest extends AbstractModel {
     private String IsolateReason;
 
     /**
+    * 保留备份,true-保留（会产生费用）
+    */
+    @SerializedName("SaveBackup")
+    @Expose
+    private Boolean SaveBackup;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -115,6 +122,22 @@ public class IsolateClusterRequest extends AbstractModel {
         this.IsolateReason = IsolateReason;
     }
 
+    /**
+     * Get 保留备份,true-保留（会产生费用） 
+     * @return SaveBackup 保留备份,true-保留（会产生费用）
+     */
+    public Boolean getSaveBackup() {
+        return this.SaveBackup;
+    }
+
+    /**
+     * Set 保留备份,true-保留（会产生费用）
+     * @param SaveBackup 保留备份,true-保留（会产生费用）
+     */
+    public void setSaveBackup(Boolean SaveBackup) {
+        this.SaveBackup = SaveBackup;
+    }
+
     public IsolateClusterRequest() {
     }
 
@@ -138,6 +161,9 @@ public class IsolateClusterRequest extends AbstractModel {
         if (source.IsolateReason != null) {
             this.IsolateReason = new String(source.IsolateReason);
         }
+        if (source.SaveBackup != null) {
+            this.SaveBackup = new Boolean(source.SaveBackup);
+        }
     }
 
 
@@ -149,6 +175,7 @@ public class IsolateClusterRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DbType", this.DbType);
         this.setParamArraySimple(map, prefix + "IsolateReasonTypes.", this.IsolateReasonTypes);
         this.setParamSimple(map, prefix + "IsolateReason", this.IsolateReason);
+        this.setParamSimple(map, prefix + "SaveBackup", this.SaveBackup);
 
     }
 }

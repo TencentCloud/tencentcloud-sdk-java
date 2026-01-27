@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class CreateEventsAuditTrackRequest extends AbstractModel {
 
     /**
-    * 跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符
+    * <p>跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 跟踪集状态（未开启：0；开启：1）
+    * <p>跟踪集状态（未开启：0；开启：1）</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 数据投递存储（目前支持 cos、cls）
+    * <p>数据投递存储（目前支持 cos、cls、ckafka）</p>
     */
     @SerializedName("Storage")
     @Expose
     private Storage Storage;
 
     /**
-    * 数据过滤条件
+    * <p>数据过滤条件</p>
     */
     @SerializedName("Filters")
     @Expose
     private Filter Filters;
 
     /**
-    * 是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能) 
+    * <p>是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能)</p>
     */
     @SerializedName("TrackForAllMembers")
     @Expose
     private Long TrackForAllMembers;
 
     /**
-     * Get 跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符 
-     * @return Name 跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符
+     * Get <p>跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符</p> 
+     * @return Name <p>跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符
-     * @param Name 跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符
+     * Set <p>跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符</p>
+     * @param Name <p>跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 跟踪集状态（未开启：0；开启：1） 
-     * @return Status 跟踪集状态（未开启：0；开启：1）
+     * Get <p>跟踪集状态（未开启：0；开启：1）</p> 
+     * @return Status <p>跟踪集状态（未开启：0；开启：1）</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 跟踪集状态（未开启：0；开启：1）
-     * @param Status 跟踪集状态（未开启：0；开启：1）
+     * Set <p>跟踪集状态（未开启：0；开启：1）</p>
+     * @param Status <p>跟踪集状态（未开启：0；开启：1）</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 数据投递存储（目前支持 cos、cls） 
-     * @return Storage 数据投递存储（目前支持 cos、cls）
+     * Get <p>数据投递存储（目前支持 cos、cls、ckafka）</p> 
+     * @return Storage <p>数据投递存储（目前支持 cos、cls、ckafka）</p>
      */
     public Storage getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set 数据投递存储（目前支持 cos、cls）
-     * @param Storage 数据投递存储（目前支持 cos、cls）
+     * Set <p>数据投递存储（目前支持 cos、cls、ckafka）</p>
+     * @param Storage <p>数据投递存储（目前支持 cos、cls、ckafka）</p>
      */
     public void setStorage(Storage Storage) {
         this.Storage = Storage;
     }
 
     /**
-     * Get 数据过滤条件 
-     * @return Filters 数据过滤条件
+     * Get <p>数据过滤条件</p> 
+     * @return Filters <p>数据过滤条件</p>
      */
     public Filter getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 数据过滤条件
-     * @param Filters 数据过滤条件
+     * Set <p>数据过滤条件</p>
+     * @param Filters <p>数据过滤条件</p>
      */
     public void setFilters(Filter Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能)  
-     * @return TrackForAllMembers 是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能) 
+     * Get <p>是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能)</p> 
+     * @return TrackForAllMembers <p>是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能)</p>
      */
     public Long getTrackForAllMembers() {
         return this.TrackForAllMembers;
     }
 
     /**
-     * Set 是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能) 
-     * @param TrackForAllMembers 是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能) 
+     * Set <p>是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能)</p>
+     * @param TrackForAllMembers <p>是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能)</p>
      */
     public void setTrackForAllMembers(Long TrackForAllMembers) {
         this.TrackForAllMembers = TrackForAllMembers;

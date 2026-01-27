@@ -24,72 +24,95 @@ import java.util.HashMap;
 public class DeleteRepositoryRequest extends AbstractModel {
 
     /**
-    * 实例Id
+    * <p>实例Id</p>
     */
     @SerializedName("RegistryId")
     @Expose
     private String RegistryId;
 
     /**
-    * 命名空间的名称
+    * <p>命名空间的名称</p>
     */
     @SerializedName("NamespaceName")
     @Expose
     private String NamespaceName;
 
     /**
-    * 镜像仓库的名称
+    * <p>镜像仓库的名称</p>
     */
     @SerializedName("RepositoryName")
     @Expose
     private String RepositoryName;
 
     /**
-     * Get 实例Id 
-     * @return RegistryId 实例Id
+    * <p>默认值为true，表示无论仓库是否存在镜像都直接删除；false代表删除仓库前需检查是否存在镜像。</p>
+    */
+    @SerializedName("ForceDelete")
+    @Expose
+    private Boolean ForceDelete;
+
+    /**
+     * Get <p>实例Id</p> 
+     * @return RegistryId <p>实例Id</p>
      */
     public String getRegistryId() {
         return this.RegistryId;
     }
 
     /**
-     * Set 实例Id
-     * @param RegistryId 实例Id
+     * Set <p>实例Id</p>
+     * @param RegistryId <p>实例Id</p>
      */
     public void setRegistryId(String RegistryId) {
         this.RegistryId = RegistryId;
     }
 
     /**
-     * Get 命名空间的名称 
-     * @return NamespaceName 命名空间的名称
+     * Get <p>命名空间的名称</p> 
+     * @return NamespaceName <p>命名空间的名称</p>
      */
     public String getNamespaceName() {
         return this.NamespaceName;
     }
 
     /**
-     * Set 命名空间的名称
-     * @param NamespaceName 命名空间的名称
+     * Set <p>命名空间的名称</p>
+     * @param NamespaceName <p>命名空间的名称</p>
      */
     public void setNamespaceName(String NamespaceName) {
         this.NamespaceName = NamespaceName;
     }
 
     /**
-     * Get 镜像仓库的名称 
-     * @return RepositoryName 镜像仓库的名称
+     * Get <p>镜像仓库的名称</p> 
+     * @return RepositoryName <p>镜像仓库的名称</p>
      */
     public String getRepositoryName() {
         return this.RepositoryName;
     }
 
     /**
-     * Set 镜像仓库的名称
-     * @param RepositoryName 镜像仓库的名称
+     * Set <p>镜像仓库的名称</p>
+     * @param RepositoryName <p>镜像仓库的名称</p>
      */
     public void setRepositoryName(String RepositoryName) {
         this.RepositoryName = RepositoryName;
+    }
+
+    /**
+     * Get <p>默认值为true，表示无论仓库是否存在镜像都直接删除；false代表删除仓库前需检查是否存在镜像。</p> 
+     * @return ForceDelete <p>默认值为true，表示无论仓库是否存在镜像都直接删除；false代表删除仓库前需检查是否存在镜像。</p>
+     */
+    public Boolean getForceDelete() {
+        return this.ForceDelete;
+    }
+
+    /**
+     * Set <p>默认值为true，表示无论仓库是否存在镜像都直接删除；false代表删除仓库前需检查是否存在镜像。</p>
+     * @param ForceDelete <p>默认值为true，表示无论仓库是否存在镜像都直接删除；false代表删除仓库前需检查是否存在镜像。</p>
+     */
+    public void setForceDelete(Boolean ForceDelete) {
+        this.ForceDelete = ForceDelete;
     }
 
     public DeleteRepositoryRequest() {
@@ -109,6 +132,9 @@ public class DeleteRepositoryRequest extends AbstractModel {
         if (source.RepositoryName != null) {
             this.RepositoryName = new String(source.RepositoryName);
         }
+        if (source.ForceDelete != null) {
+            this.ForceDelete = new Boolean(source.ForceDelete);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class DeleteRepositoryRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RegistryId", this.RegistryId);
         this.setParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
         this.setParamSimple(map, prefix + "RepositoryName", this.RepositoryName);
+        this.setParamSimple(map, prefix + "ForceDelete", this.ForceDelete);
 
     }
 }

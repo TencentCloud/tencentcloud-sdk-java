@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeTagRetentionRulesResponse extends AbstractModel {
 
     /**
-    * 版本保留策略列表
+    * <p>版本保留策略列表</p>
     */
     @SerializedName("RetentionPolicyList")
     @Expose
     private RetentionPolicy [] RetentionPolicyList;
 
     /**
-    * 版本保留策略总数
+    * <p>版本保留策略总数</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeTagRetentionRulesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 版本保留策略列表 
-     * @return RetentionPolicyList 版本保留策略列表
+     * Get <p>版本保留策略列表</p> 
+     * @return RetentionPolicyList <p>版本保留策略列表</p>
      */
     public RetentionPolicy [] getRetentionPolicyList() {
         return this.RetentionPolicyList;
     }
 
     /**
-     * Set 版本保留策略列表
-     * @param RetentionPolicyList 版本保留策略列表
+     * Set <p>版本保留策略列表</p>
+     * @param RetentionPolicyList <p>版本保留策略列表</p>
      */
     public void setRetentionPolicyList(RetentionPolicy [] RetentionPolicyList) {
         this.RetentionPolicyList = RetentionPolicyList;
     }
 
     /**
-     * Get 版本保留策略总数 
-     * @return TotalCount 版本保留策略总数
+     * Get <p>版本保留策略总数</p> 
+     * @return TotalCount <p>版本保留策略总数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 版本保留策略总数
-     * @param TotalCount 版本保留策略总数
+     * Set <p>版本保留策略总数</p>
+     * @param TotalCount <p>版本保留策略总数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

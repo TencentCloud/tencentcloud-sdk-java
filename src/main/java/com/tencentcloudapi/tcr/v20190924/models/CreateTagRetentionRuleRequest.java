@@ -24,115 +24,138 @@ import java.util.HashMap;
 public class CreateTagRetentionRuleRequest extends AbstractModel {
 
     /**
-    * 主实例iD
+    * <p>主实例iD</p>
     */
     @SerializedName("RegistryId")
     @Expose
     private String RegistryId;
 
     /**
-    * 命名空间的Id
+    * <p>命名空间的Id</p>
     */
     @SerializedName("NamespaceId")
     @Expose
     private Long NamespaceId;
 
     /**
-    * 保留策略
-    */
-    @SerializedName("RetentionRule")
-    @Expose
-    private RetentionRule RetentionRule;
-
-    /**
-    * 执行周期，当前只能选择： manual;daily;weekly;monthly
+    * <p>执行周期，当前只能选择： manual;daily;weekly;monthly</p>
     */
     @SerializedName("CronSetting")
     @Expose
     private String CronSetting;
 
     /**
-    * 是否禁用规则，默认值为false
+    * <p>保留策略，当基本保留策略和高级保留策略同时配置时，优先使用高级保留策略</p>
+    */
+    @SerializedName("RetentionRule")
+    @Expose
+    private RetentionRule RetentionRule;
+
+    /**
+    * <p>高级版本保留策略，当基本保留策略和高级保留策略同时配置时，优先使用高级保留策略</p>
+    */
+    @SerializedName("AdvancedRuleItems")
+    @Expose
+    private RetentionRuleItem [] AdvancedRuleItems;
+
+    /**
+    * <p>是否禁用规则，默认值为false</p>
     */
     @SerializedName("Disabled")
     @Expose
     private Boolean Disabled;
 
     /**
-     * Get 主实例iD 
-     * @return RegistryId 主实例iD
+     * Get <p>主实例iD</p> 
+     * @return RegistryId <p>主实例iD</p>
      */
     public String getRegistryId() {
         return this.RegistryId;
     }
 
     /**
-     * Set 主实例iD
-     * @param RegistryId 主实例iD
+     * Set <p>主实例iD</p>
+     * @param RegistryId <p>主实例iD</p>
      */
     public void setRegistryId(String RegistryId) {
         this.RegistryId = RegistryId;
     }
 
     /**
-     * Get 命名空间的Id 
-     * @return NamespaceId 命名空间的Id
+     * Get <p>命名空间的Id</p> 
+     * @return NamespaceId <p>命名空间的Id</p>
      */
     public Long getNamespaceId() {
         return this.NamespaceId;
     }
 
     /**
-     * Set 命名空间的Id
-     * @param NamespaceId 命名空间的Id
+     * Set <p>命名空间的Id</p>
+     * @param NamespaceId <p>命名空间的Id</p>
      */
     public void setNamespaceId(Long NamespaceId) {
         this.NamespaceId = NamespaceId;
     }
 
     /**
-     * Get 保留策略 
-     * @return RetentionRule 保留策略
-     */
-    public RetentionRule getRetentionRule() {
-        return this.RetentionRule;
-    }
-
-    /**
-     * Set 保留策略
-     * @param RetentionRule 保留策略
-     */
-    public void setRetentionRule(RetentionRule RetentionRule) {
-        this.RetentionRule = RetentionRule;
-    }
-
-    /**
-     * Get 执行周期，当前只能选择： manual;daily;weekly;monthly 
-     * @return CronSetting 执行周期，当前只能选择： manual;daily;weekly;monthly
+     * Get <p>执行周期，当前只能选择： manual;daily;weekly;monthly</p> 
+     * @return CronSetting <p>执行周期，当前只能选择： manual;daily;weekly;monthly</p>
      */
     public String getCronSetting() {
         return this.CronSetting;
     }
 
     /**
-     * Set 执行周期，当前只能选择： manual;daily;weekly;monthly
-     * @param CronSetting 执行周期，当前只能选择： manual;daily;weekly;monthly
+     * Set <p>执行周期，当前只能选择： manual;daily;weekly;monthly</p>
+     * @param CronSetting <p>执行周期，当前只能选择： manual;daily;weekly;monthly</p>
      */
     public void setCronSetting(String CronSetting) {
         this.CronSetting = CronSetting;
     }
 
     /**
-     * Get 是否禁用规则，默认值为false 
-     * @return Disabled 是否禁用规则，默认值为false
+     * Get <p>保留策略，当基本保留策略和高级保留策略同时配置时，优先使用高级保留策略</p> 
+     * @return RetentionRule <p>保留策略，当基本保留策略和高级保留策略同时配置时，优先使用高级保留策略</p>
+     */
+    public RetentionRule getRetentionRule() {
+        return this.RetentionRule;
+    }
+
+    /**
+     * Set <p>保留策略，当基本保留策略和高级保留策略同时配置时，优先使用高级保留策略</p>
+     * @param RetentionRule <p>保留策略，当基本保留策略和高级保留策略同时配置时，优先使用高级保留策略</p>
+     */
+    public void setRetentionRule(RetentionRule RetentionRule) {
+        this.RetentionRule = RetentionRule;
+    }
+
+    /**
+     * Get <p>高级版本保留策略，当基本保留策略和高级保留策略同时配置时，优先使用高级保留策略</p> 
+     * @return AdvancedRuleItems <p>高级版本保留策略，当基本保留策略和高级保留策略同时配置时，优先使用高级保留策略</p>
+     */
+    public RetentionRuleItem [] getAdvancedRuleItems() {
+        return this.AdvancedRuleItems;
+    }
+
+    /**
+     * Set <p>高级版本保留策略，当基本保留策略和高级保留策略同时配置时，优先使用高级保留策略</p>
+     * @param AdvancedRuleItems <p>高级版本保留策略，当基本保留策略和高级保留策略同时配置时，优先使用高级保留策略</p>
+     */
+    public void setAdvancedRuleItems(RetentionRuleItem [] AdvancedRuleItems) {
+        this.AdvancedRuleItems = AdvancedRuleItems;
+    }
+
+    /**
+     * Get <p>是否禁用规则，默认值为false</p> 
+     * @return Disabled <p>是否禁用规则，默认值为false</p>
      */
     public Boolean getDisabled() {
         return this.Disabled;
     }
 
     /**
-     * Set 是否禁用规则，默认值为false
-     * @param Disabled 是否禁用规则，默认值为false
+     * Set <p>是否禁用规则，默认值为false</p>
+     * @param Disabled <p>是否禁用规则，默认值为false</p>
      */
     public void setDisabled(Boolean Disabled) {
         this.Disabled = Disabled;
@@ -152,11 +175,17 @@ public class CreateTagRetentionRuleRequest extends AbstractModel {
         if (source.NamespaceId != null) {
             this.NamespaceId = new Long(source.NamespaceId);
         }
+        if (source.CronSetting != null) {
+            this.CronSetting = new String(source.CronSetting);
+        }
         if (source.RetentionRule != null) {
             this.RetentionRule = new RetentionRule(source.RetentionRule);
         }
-        if (source.CronSetting != null) {
-            this.CronSetting = new String(source.CronSetting);
+        if (source.AdvancedRuleItems != null) {
+            this.AdvancedRuleItems = new RetentionRuleItem[source.AdvancedRuleItems.length];
+            for (int i = 0; i < source.AdvancedRuleItems.length; i++) {
+                this.AdvancedRuleItems[i] = new RetentionRuleItem(source.AdvancedRuleItems[i]);
+            }
         }
         if (source.Disabled != null) {
             this.Disabled = new Boolean(source.Disabled);
@@ -170,8 +199,9 @@ public class CreateTagRetentionRuleRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RegistryId", this.RegistryId);
         this.setParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
-        this.setParamObj(map, prefix + "RetentionRule.", this.RetentionRule);
         this.setParamSimple(map, prefix + "CronSetting", this.CronSetting);
+        this.setParamObj(map, prefix + "RetentionRule.", this.RetentionRule);
+        this.setParamArrayObj(map, prefix + "AdvancedRuleItems.", this.AdvancedRuleItems);
         this.setParamSimple(map, prefix + "Disabled", this.Disabled);
 
     }

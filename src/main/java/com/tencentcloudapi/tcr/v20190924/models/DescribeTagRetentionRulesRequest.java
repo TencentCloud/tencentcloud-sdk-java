@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribeTagRetentionRulesRequest extends AbstractModel {
 
     /**
-    * 主实例iD
+    * <p>主实例iD</p>
     */
     @SerializedName("RegistryId")
     @Expose
     private String RegistryId;
 
     /**
-    * 命名空间的名称
+    * <p>命名空间的名称</p>
     */
     @SerializedName("NamespaceName")
     @Expose
     private String NamespaceName;
 
     /**
-    * 分页PageSize
+    * <p>分页PageSize</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 分页Page
+    * <p>分页Page</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get 主实例iD 
-     * @return RegistryId 主实例iD
+     * Get <p>主实例iD</p> 
+     * @return RegistryId <p>主实例iD</p>
      */
     public String getRegistryId() {
         return this.RegistryId;
     }
 
     /**
-     * Set 主实例iD
-     * @param RegistryId 主实例iD
+     * Set <p>主实例iD</p>
+     * @param RegistryId <p>主实例iD</p>
      */
     public void setRegistryId(String RegistryId) {
         this.RegistryId = RegistryId;
     }
 
     /**
-     * Get 命名空间的名称 
-     * @return NamespaceName 命名空间的名称
+     * Get <p>命名空间的名称</p> 
+     * @return NamespaceName <p>命名空间的名称</p>
      */
     public String getNamespaceName() {
         return this.NamespaceName;
     }
 
     /**
-     * Set 命名空间的名称
-     * @param NamespaceName 命名空间的名称
+     * Set <p>命名空间的名称</p>
+     * @param NamespaceName <p>命名空间的名称</p>
      */
     public void setNamespaceName(String NamespaceName) {
         this.NamespaceName = NamespaceName;
     }
 
     /**
-     * Get 分页PageSize 
-     * @return Limit 分页PageSize
+     * Get <p>分页PageSize</p> 
+     * @return Limit <p>分页PageSize</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页PageSize
-     * @param Limit 分页PageSize
+     * Set <p>分页PageSize</p>
+     * @param Limit <p>分页PageSize</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页Page 
-     * @return Offset 分页Page
+     * Get <p>分页Page</p> 
+     * @return Offset <p>分页Page</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页Page
-     * @param Offset 分页Page
+     * Set <p>分页Page</p>
+     * @param Offset <p>分页Page</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

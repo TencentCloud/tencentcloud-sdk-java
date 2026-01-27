@@ -87,6 +87,9 @@ public enum VpcErrorCode {
      /* 参数不支持同时指定。 */
      INVALIDPARAMETER_COEXIST("InvalidParameter.Coexist"),
      
+     /* 指定的两个参数冲突，不能同时存在。 */
+     INVALIDPARAMETER_CONFLICT("InvalidParameter.Conflict"),
+     
      /* 当前IP已在其他公网IP类型的流量镜像中使用。 */
      INVALIDPARAMETER_DUPLICATEDLBTRAFFICMIRRORCOLLECTORS("InvalidParameter.DuplicatedLbTrafficMirrorCollectors"),
      
@@ -252,6 +255,9 @@ public enum VpcErrorCode {
      /* 该实例不支持AnycastEIP。 */
      INVALIDPARAMETERVALUE_INSTANCEDOESNOTSUPPORTANYCAST("InvalidParameterValue.InstanceDoesNotSupportAnycast"),
      
+     /* 实例不支持在网卡上显示EIP。支持的实例ID格式为 ins-xxxxxxxx 和 eks-xxxxxxxx */
+     INVALIDPARAMETERVALUE_INSTANCEDOESNOTSUPPORTEIPVISIBLEONENI("InvalidParameterValue.InstanceDoesNotSupportEipVisibleOnEni"),
+     
      /* 实例不存在公网IP。 */
      INVALIDPARAMETERVALUE_INSTANCEHASNOWANIP("InvalidParameterValue.InstanceHasNoWanIP"),
      
@@ -272,6 +278,9 @@ public enum VpcErrorCode {
      
      /* 弹性网卡绑定的实例与地址绑定的实例不一致。 */
      INVALIDPARAMETERVALUE_INSTANCENOTMATCHASSOCIATEENI("InvalidParameterValue.InstanceNotMatchAssociateEni"),
+     
+     /* 实例所属的VPC不支持在网卡上显示EIP */
+     INVALIDPARAMETERVALUE_INSTANCEVPCDOESNOTSUPPORTEIPVISIBLEONENI("InvalidParameterValue.InstanceVpcDoesNotSupportEipVisibleOnEni"),
      
      /* 网络计费模式没有更改。 */
      INVALIDPARAMETERVALUE_INTERNETCHARGETYPENOTCHANGED("InvalidParameterValue.InternetChargeTypeNotChanged"),
@@ -378,6 +387,9 @@ public enum VpcErrorCode {
      /* 网络接口ID不正确。 */
      INVALIDPARAMETERVALUE_NETWORKINTERFACEIDMALFORMED("InvalidParameterValue.NetworkInterfaceIdMalformed"),
      
+     /* 指定的弹性公网IP地址已绑定到网卡 ，不支持绑定到不同的网卡。 */
+     INVALIDPARAMETERVALUE_NETWORKINTERFACEIDNOTMATCH("InvalidParameterValue.NetworkInterfaceIdNotMatch"),
+     
      /* 网卡所绑定实例不支持绑定弹性公网IPv6 */
      INVALIDPARAMETERVALUE_NETWORKINTERFACEINSTANCENOTSUPPORT("InvalidParameterValue.NetworkInterfaceInstanceNotSupport"),
      
@@ -401,6 +413,12 @@ public enum VpcErrorCode {
      
      /* 参数值格式不匹配。 */
      INVALIDPARAMETERVALUE_PARAMETERMISMATCH("InvalidParameterValue.ParameterMismatch"),
+     
+     /* 私网IP是一个辅助IP，不支持其绑定的EIP在网卡上显示 */
+     INVALIDPARAMETERVALUE_PRIVATEIPADDRESSDOESNOTSUPPORTEIPVISIBLEONENI("InvalidParameterValue.PrivateIpAddressDoesNotSupportEipVisibleOnEni"),
+     
+     /* 指定的弹性公网IP地址已绑定到私有IP地址，不支持绑定到不同的私有IP地址。 */
+     INVALIDPARAMETERVALUE_PRIVATEIPADDRESSNOTMATCH("InvalidParameterValue.PrivateIpAddressNotMatch"),
      
      /* 私网NAT网关不存在 */
      INVALIDPARAMETERVALUE_PRIVATENATNOTEXISTS("InvalidParameterValue.PrivateNatNotExists"),
@@ -731,6 +749,9 @@ public enum VpcErrorCode {
      
      /* 互斥的任务正在执行。 */
      OPERATIONDENIED_MUTEXTASKRUNNING("OperationDenied.MutexTaskRunning"),
+     
+     /* 请求的次数超过了频率限制。 */
+     REQUESTLIMITEXCEEDED("RequestLimitExceeded"),
      
      /* 资源被占用。 */
      RESOURCEINUSE("ResourceInUse"),
