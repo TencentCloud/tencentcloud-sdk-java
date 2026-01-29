@@ -80,7 +80,9 @@ public class GoodsSpec extends AbstractModel {
     private String TimeUnit;
 
     /**
-    * 机器类型
+    * 实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
     */
     @SerializedName("DeviceType")
     @Expose
@@ -227,16 +229,24 @@ public class GoodsSpec extends AbstractModel {
     }
 
     /**
-     * Get 机器类型 
-     * @return DeviceType 机器类型
+     * Get 实例机器类型
+1. common，通用型。
+2. exclusive，独享型。 
+     * @return DeviceType 实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set 机器类型
-     * @param DeviceType 机器类型
+     * Set 实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
+     * @param DeviceType 实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;

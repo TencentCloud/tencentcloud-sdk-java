@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeRoomInfoRequest extends AbstractModel {
 
     /**
-    * 应用ID，登录[控制台 - 服务管理](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
+    * <p>应用ID，登录<a href="https://console.cloud.tencent.com/gamegme">控制台 - 服务管理</a>创建应用得到的AppID</p>
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-    * 房间号列表，最大不能超过10个（RoomIds、StrRoomIds必须填一个）
+    * <p>房间号列表，最大不能超过10个（RoomIds、StrRoomIds必须填一个）</p>
     */
     @SerializedName("RoomIds")
     @Expose
     private Long [] RoomIds;
 
     /**
-    * 字符串类型房间号列表，最大不能超过10个（RoomIds、StrRoomIds必须填一个）
+    * <p>字符串类型房间号列表，最大不能超过10个（RoomIds、StrRoomIds必须填一个）</p>
     */
     @SerializedName("StrRoomIds")
     @Expose
     private String [] StrRoomIds;
 
     /**
-     * Get 应用ID，登录[控制台 - 服务管理](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID 
-     * @return SdkAppId 应用ID，登录[控制台 - 服务管理](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
+     * Get <p>应用ID，登录<a href="https://console.cloud.tencent.com/gamegme">控制台 - 服务管理</a>创建应用得到的AppID</p> 
+     * @return SdkAppId <p>应用ID，登录<a href="https://console.cloud.tencent.com/gamegme">控制台 - 服务管理</a>创建应用得到的AppID</p>
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set 应用ID，登录[控制台 - 服务管理](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
-     * @param SdkAppId 应用ID，登录[控制台 - 服务管理](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
+     * Set <p>应用ID，登录<a href="https://console.cloud.tencent.com/gamegme">控制台 - 服务管理</a>创建应用得到的AppID</p>
+     * @param SdkAppId <p>应用ID，登录<a href="https://console.cloud.tencent.com/gamegme">控制台 - 服务管理</a>创建应用得到的AppID</p>
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get 房间号列表，最大不能超过10个（RoomIds、StrRoomIds必须填一个） 
-     * @return RoomIds 房间号列表，最大不能超过10个（RoomIds、StrRoomIds必须填一个）
+     * Get <p>房间号列表，最大不能超过10个（RoomIds、StrRoomIds必须填一个）</p> 
+     * @return RoomIds <p>房间号列表，最大不能超过10个（RoomIds、StrRoomIds必须填一个）</p>
      */
     public Long [] getRoomIds() {
         return this.RoomIds;
     }
 
     /**
-     * Set 房间号列表，最大不能超过10个（RoomIds、StrRoomIds必须填一个）
-     * @param RoomIds 房间号列表，最大不能超过10个（RoomIds、StrRoomIds必须填一个）
+     * Set <p>房间号列表，最大不能超过10个（RoomIds、StrRoomIds必须填一个）</p>
+     * @param RoomIds <p>房间号列表，最大不能超过10个（RoomIds、StrRoomIds必须填一个）</p>
      */
     public void setRoomIds(Long [] RoomIds) {
         this.RoomIds = RoomIds;
     }
 
     /**
-     * Get 字符串类型房间号列表，最大不能超过10个（RoomIds、StrRoomIds必须填一个） 
-     * @return StrRoomIds 字符串类型房间号列表，最大不能超过10个（RoomIds、StrRoomIds必须填一个）
+     * Get <p>字符串类型房间号列表，最大不能超过10个（RoomIds、StrRoomIds必须填一个）</p> 
+     * @return StrRoomIds <p>字符串类型房间号列表，最大不能超过10个（RoomIds、StrRoomIds必须填一个）</p>
      */
     public String [] getStrRoomIds() {
         return this.StrRoomIds;
     }
 
     /**
-     * Set 字符串类型房间号列表，最大不能超过10个（RoomIds、StrRoomIds必须填一个）
-     * @param StrRoomIds 字符串类型房间号列表，最大不能超过10个（RoomIds、StrRoomIds必须填一个）
+     * Set <p>字符串类型房间号列表，最大不能超过10个（RoomIds、StrRoomIds必须填一个）</p>
+     * @param StrRoomIds <p>字符串类型房间号列表，最大不能超过10个（RoomIds、StrRoomIds必须填一个）</p>
      */
     public void setStrRoomIds(String [] StrRoomIds) {
         this.StrRoomIds = StrRoomIds;

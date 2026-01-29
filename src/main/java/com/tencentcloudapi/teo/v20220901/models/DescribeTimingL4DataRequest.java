@@ -39,12 +39,14 @@ public class DescribeTimingL4DataRequest extends AbstractModel {
 
     /**
     * 查询指标，取值有：
-<li>l4Flow_connections: 访问并发连接数；</li>
-<li>l4Flow_flux: 访问总流量；</li>
-<li>l4Flow_inFlux: 访问入流量；</li>
-<li>l4Flow_outFlux: 访问出流量；</li>
-<li>l4Flow_inBandwidth: 访问入向带宽峰值；</li>
-<li>l4Flow_outBandwidth: 访问出向带宽峰值。</li>
+<ul><li>**l4Flow_flux**: 访问总流量，单位：Byte，指标值类型：Integer；</li>
+<li>**l4Flow_inFlux**: 访问入流量，单位：Byte，指标值类型：Integer；</li>
+<li>**l4Flow_outFlux**: 访问出流量，单位：Byte，指标值类型：Integer；</li>
+<li>**l4Flow_inBandwidth**: 访问入向带宽峰值，单位：bps，指标值类型：Integer；</li>
+<li>**l4Flow_outBandwidth**: 访问出向带宽峰值，单位：bps，指标值类型：Integer；</li>
+<li>**l4Flow_connections**: 访问并发连接数，单位：个，指标值类型：Integer ；</li>
+<li>**l4Flow_newConnectionsRate**: 新建连接数速率，单位：个/秒，指标值类型： Float，保留两位小数。</li></ul>**注意**：<ul><li><code> Integer</code> 值类型的指标将从  <code>Data.N.TypeValue</code> 返回对应时序数据；</li>
+<li><code>Float</code> 值类型的指标将从 <code>Data.N.FloatTypeValue</code> 返回对应时序数据。</li></ul>
     */
     @SerializedName("MetricNames")
     @Expose
@@ -67,10 +69,10 @@ public class DescribeTimingL4DataRequest extends AbstractModel {
 
     /**
     * 查询时间粒度，取值有：
-<li>min: 1分钟 ；</li>
-<li>5min: 5分钟 ；</li>
-<li>hour: 1小时 ；</li>
-<li>day: 1天 。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：1小时范围内以min粒度查询，2天范围内以5min粒度查询，7天范围内以hour粒度查询，超过7天以day粒度查询。
+<ul><li>**min**: 1分钟 ；</li>
+<li>**5min**: 5分钟 ；</li>
+<li>**hour**: 1小时 ；</li>
+<li>**day**: 1天 。</li></ul>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：1小时范围内以 <code>min</code> 粒度查询，2天范围内以 <code>5min</code> 粒度查询，7天范围内以 <code>hour</code> 粒度查询，超过7天以 <code>day</code> 粒度查询。
     */
     @SerializedName("Interval")
     @Expose
@@ -78,8 +80,8 @@ public class DescribeTimingL4DataRequest extends AbstractModel {
 
     /**
     * 过滤条件，详细的过滤条件Key值如下：
-<li>ruleId：按照转发规则 ID 进行过滤。</li>
-<li>proxyId：按照四层代理实例 ID 进行过滤。</li>
+<ul><li>**ruleId**：按照转发规则 ID 进行过滤。</li>
+<li>**proxyId**：按照四层代理实例 ID 进行过滤。</li></ul>
     */
     @SerializedName("Filters")
     @Expose
@@ -126,19 +128,23 @@ public class DescribeTimingL4DataRequest extends AbstractModel {
 
     /**
      * Get 查询指标，取值有：
-<li>l4Flow_connections: 访问并发连接数；</li>
-<li>l4Flow_flux: 访问总流量；</li>
-<li>l4Flow_inFlux: 访问入流量；</li>
-<li>l4Flow_outFlux: 访问出流量；</li>
-<li>l4Flow_inBandwidth: 访问入向带宽峰值；</li>
-<li>l4Flow_outBandwidth: 访问出向带宽峰值。</li> 
+<ul><li>**l4Flow_flux**: 访问总流量，单位：Byte，指标值类型：Integer；</li>
+<li>**l4Flow_inFlux**: 访问入流量，单位：Byte，指标值类型：Integer；</li>
+<li>**l4Flow_outFlux**: 访问出流量，单位：Byte，指标值类型：Integer；</li>
+<li>**l4Flow_inBandwidth**: 访问入向带宽峰值，单位：bps，指标值类型：Integer；</li>
+<li>**l4Flow_outBandwidth**: 访问出向带宽峰值，单位：bps，指标值类型：Integer；</li>
+<li>**l4Flow_connections**: 访问并发连接数，单位：个，指标值类型：Integer ；</li>
+<li>**l4Flow_newConnectionsRate**: 新建连接数速率，单位：个/秒，指标值类型： Float，保留两位小数。</li></ul>**注意**：<ul><li><code> Integer</code> 值类型的指标将从  <code>Data.N.TypeValue</code> 返回对应时序数据；</li>
+<li><code>Float</code> 值类型的指标将从 <code>Data.N.FloatTypeValue</code> 返回对应时序数据。</li></ul> 
      * @return MetricNames 查询指标，取值有：
-<li>l4Flow_connections: 访问并发连接数；</li>
-<li>l4Flow_flux: 访问总流量；</li>
-<li>l4Flow_inFlux: 访问入流量；</li>
-<li>l4Flow_outFlux: 访问出流量；</li>
-<li>l4Flow_inBandwidth: 访问入向带宽峰值；</li>
-<li>l4Flow_outBandwidth: 访问出向带宽峰值。</li>
+<ul><li>**l4Flow_flux**: 访问总流量，单位：Byte，指标值类型：Integer；</li>
+<li>**l4Flow_inFlux**: 访问入流量，单位：Byte，指标值类型：Integer；</li>
+<li>**l4Flow_outFlux**: 访问出流量，单位：Byte，指标值类型：Integer；</li>
+<li>**l4Flow_inBandwidth**: 访问入向带宽峰值，单位：bps，指标值类型：Integer；</li>
+<li>**l4Flow_outBandwidth**: 访问出向带宽峰值，单位：bps，指标值类型：Integer；</li>
+<li>**l4Flow_connections**: 访问并发连接数，单位：个，指标值类型：Integer ；</li>
+<li>**l4Flow_newConnectionsRate**: 新建连接数速率，单位：个/秒，指标值类型： Float，保留两位小数。</li></ul>**注意**：<ul><li><code> Integer</code> 值类型的指标将从  <code>Data.N.TypeValue</code> 返回对应时序数据；</li>
+<li><code>Float</code> 值类型的指标将从 <code>Data.N.FloatTypeValue</code> 返回对应时序数据。</li></ul>
      */
     public String [] getMetricNames() {
         return this.MetricNames;
@@ -146,19 +152,23 @@ public class DescribeTimingL4DataRequest extends AbstractModel {
 
     /**
      * Set 查询指标，取值有：
-<li>l4Flow_connections: 访问并发连接数；</li>
-<li>l4Flow_flux: 访问总流量；</li>
-<li>l4Flow_inFlux: 访问入流量；</li>
-<li>l4Flow_outFlux: 访问出流量；</li>
-<li>l4Flow_inBandwidth: 访问入向带宽峰值；</li>
-<li>l4Flow_outBandwidth: 访问出向带宽峰值。</li>
+<ul><li>**l4Flow_flux**: 访问总流量，单位：Byte，指标值类型：Integer；</li>
+<li>**l4Flow_inFlux**: 访问入流量，单位：Byte，指标值类型：Integer；</li>
+<li>**l4Flow_outFlux**: 访问出流量，单位：Byte，指标值类型：Integer；</li>
+<li>**l4Flow_inBandwidth**: 访问入向带宽峰值，单位：bps，指标值类型：Integer；</li>
+<li>**l4Flow_outBandwidth**: 访问出向带宽峰值，单位：bps，指标值类型：Integer；</li>
+<li>**l4Flow_connections**: 访问并发连接数，单位：个，指标值类型：Integer ；</li>
+<li>**l4Flow_newConnectionsRate**: 新建连接数速率，单位：个/秒，指标值类型： Float，保留两位小数。</li></ul>**注意**：<ul><li><code> Integer</code> 值类型的指标将从  <code>Data.N.TypeValue</code> 返回对应时序数据；</li>
+<li><code>Float</code> 值类型的指标将从 <code>Data.N.FloatTypeValue</code> 返回对应时序数据。</li></ul>
      * @param MetricNames 查询指标，取值有：
-<li>l4Flow_connections: 访问并发连接数；</li>
-<li>l4Flow_flux: 访问总流量；</li>
-<li>l4Flow_inFlux: 访问入流量；</li>
-<li>l4Flow_outFlux: 访问出流量；</li>
-<li>l4Flow_inBandwidth: 访问入向带宽峰值；</li>
-<li>l4Flow_outBandwidth: 访问出向带宽峰值。</li>
+<ul><li>**l4Flow_flux**: 访问总流量，单位：Byte，指标值类型：Integer；</li>
+<li>**l4Flow_inFlux**: 访问入流量，单位：Byte，指标值类型：Integer；</li>
+<li>**l4Flow_outFlux**: 访问出流量，单位：Byte，指标值类型：Integer；</li>
+<li>**l4Flow_inBandwidth**: 访问入向带宽峰值，单位：bps，指标值类型：Integer；</li>
+<li>**l4Flow_outBandwidth**: 访问出向带宽峰值，单位：bps，指标值类型：Integer；</li>
+<li>**l4Flow_connections**: 访问并发连接数，单位：个，指标值类型：Integer ；</li>
+<li>**l4Flow_newConnectionsRate**: 新建连接数速率，单位：个/秒，指标值类型： Float，保留两位小数。</li></ul>**注意**：<ul><li><code> Integer</code> 值类型的指标将从  <code>Data.N.TypeValue</code> 返回对应时序数据；</li>
+<li><code>Float</code> 值类型的指标将从 <code>Data.N.FloatTypeValue</code> 返回对应时序数据。</li></ul>
      */
     public void setMetricNames(String [] MetricNames) {
         this.MetricNames = MetricNames;
@@ -202,15 +212,15 @@ public class DescribeTimingL4DataRequest extends AbstractModel {
 
     /**
      * Get 查询时间粒度，取值有：
-<li>min: 1分钟 ；</li>
-<li>5min: 5分钟 ；</li>
-<li>hour: 1小时 ；</li>
-<li>day: 1天 。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：1小时范围内以min粒度查询，2天范围内以5min粒度查询，7天范围内以hour粒度查询，超过7天以day粒度查询。 
+<ul><li>**min**: 1分钟 ；</li>
+<li>**5min**: 5分钟 ；</li>
+<li>**hour**: 1小时 ；</li>
+<li>**day**: 1天 。</li></ul>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：1小时范围内以 <code>min</code> 粒度查询，2天范围内以 <code>5min</code> 粒度查询，7天范围内以 <code>hour</code> 粒度查询，超过7天以 <code>day</code> 粒度查询。 
      * @return Interval 查询时间粒度，取值有：
-<li>min: 1分钟 ；</li>
-<li>5min: 5分钟 ；</li>
-<li>hour: 1小时 ；</li>
-<li>day: 1天 。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：1小时范围内以min粒度查询，2天范围内以5min粒度查询，7天范围内以hour粒度查询，超过7天以day粒度查询。
+<ul><li>**min**: 1分钟 ；</li>
+<li>**5min**: 5分钟 ；</li>
+<li>**hour**: 1小时 ；</li>
+<li>**day**: 1天 。</li></ul>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：1小时范围内以 <code>min</code> 粒度查询，2天范围内以 <code>5min</code> 粒度查询，7天范围内以 <code>hour</code> 粒度查询，超过7天以 <code>day</code> 粒度查询。
      */
     public String getInterval() {
         return this.Interval;
@@ -218,15 +228,15 @@ public class DescribeTimingL4DataRequest extends AbstractModel {
 
     /**
      * Set 查询时间粒度，取值有：
-<li>min: 1分钟 ；</li>
-<li>5min: 5分钟 ；</li>
-<li>hour: 1小时 ；</li>
-<li>day: 1天 。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：1小时范围内以min粒度查询，2天范围内以5min粒度查询，7天范围内以hour粒度查询，超过7天以day粒度查询。
+<ul><li>**min**: 1分钟 ；</li>
+<li>**5min**: 5分钟 ；</li>
+<li>**hour**: 1小时 ；</li>
+<li>**day**: 1天 。</li></ul>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：1小时范围内以 <code>min</code> 粒度查询，2天范围内以 <code>5min</code> 粒度查询，7天范围内以 <code>hour</code> 粒度查询，超过7天以 <code>day</code> 粒度查询。
      * @param Interval 查询时间粒度，取值有：
-<li>min: 1分钟 ；</li>
-<li>5min: 5分钟 ；</li>
-<li>hour: 1小时 ；</li>
-<li>day: 1天 。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：1小时范围内以min粒度查询，2天范围内以5min粒度查询，7天范围内以hour粒度查询，超过7天以day粒度查询。
+<ul><li>**min**: 1分钟 ；</li>
+<li>**5min**: 5分钟 ；</li>
+<li>**hour**: 1小时 ；</li>
+<li>**day**: 1天 。</li></ul>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：1小时范围内以 <code>min</code> 粒度查询，2天范围内以 <code>5min</code> 粒度查询，7天范围内以 <code>hour</code> 粒度查询，超过7天以 <code>day</code> 粒度查询。
      */
     public void setInterval(String Interval) {
         this.Interval = Interval;
@@ -234,11 +244,11 @@ public class DescribeTimingL4DataRequest extends AbstractModel {
 
     /**
      * Get 过滤条件，详细的过滤条件Key值如下：
-<li>ruleId：按照转发规则 ID 进行过滤。</li>
-<li>proxyId：按照四层代理实例 ID 进行过滤。</li> 
+<ul><li>**ruleId**：按照转发规则 ID 进行过滤。</li>
+<li>**proxyId**：按照四层代理实例 ID 进行过滤。</li></ul> 
      * @return Filters 过滤条件，详细的过滤条件Key值如下：
-<li>ruleId：按照转发规则 ID 进行过滤。</li>
-<li>proxyId：按照四层代理实例 ID 进行过滤。</li>
+<ul><li>**ruleId**：按照转发规则 ID 进行过滤。</li>
+<li>**proxyId**：按照四层代理实例 ID 进行过滤。</li></ul>
      */
     public QueryCondition [] getFilters() {
         return this.Filters;
@@ -246,11 +256,11 @@ public class DescribeTimingL4DataRequest extends AbstractModel {
 
     /**
      * Set 过滤条件，详细的过滤条件Key值如下：
-<li>ruleId：按照转发规则 ID 进行过滤。</li>
-<li>proxyId：按照四层代理实例 ID 进行过滤。</li>
+<ul><li>**ruleId**：按照转发规则 ID 进行过滤。</li>
+<li>**proxyId**：按照四层代理实例 ID 进行过滤。</li></ul>
      * @param Filters 过滤条件，详细的过滤条件Key值如下：
-<li>ruleId：按照转发规则 ID 进行过滤。</li>
-<li>proxyId：按照四层代理实例 ID 进行过滤。</li>
+<ul><li>**ruleId**：按照转发规则 ID 进行过滤。</li>
+<li>**proxyId**：按照四层代理实例 ID 进行过滤。</li></ul>
      */
     public void setFilters(QueryCondition [] Filters) {
         this.Filters = Filters;
@@ -259,7 +269,9 @@ public class DescribeTimingL4DataRequest extends AbstractModel {
     /**
      * Get 数据归属地区。该参数已废弃。请在 Filters.country 中按客户端地域过滤数据。 
      * @return Area 数据归属地区。该参数已废弃。请在 Filters.country 中按客户端地域过滤数据。
+     * @deprecated
      */
+    @Deprecated
     public String getArea() {
         return this.Area;
     }
@@ -267,7 +279,9 @@ public class DescribeTimingL4DataRequest extends AbstractModel {
     /**
      * Set 数据归属地区。该参数已废弃。请在 Filters.country 中按客户端地域过滤数据。
      * @param Area 数据归属地区。该参数已废弃。请在 Filters.country 中按客户端地域过滤数据。
+     * @deprecated
      */
+    @Deprecated
     public void setArea(String Area) {
         this.Area = Area;
     }

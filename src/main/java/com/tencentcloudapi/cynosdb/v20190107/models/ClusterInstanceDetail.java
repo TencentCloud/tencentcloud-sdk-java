@@ -123,6 +123,8 @@ public class ClusterInstanceDetail extends AbstractModel {
 
     /**
     * 实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
     */
     @SerializedName("InstanceDeviceType")
     @Expose
@@ -376,8 +378,12 @@ public class ClusterInstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get 实例机器类型 
+     * Get 实例机器类型
+1. common，通用型。
+2. exclusive，独享型。 
      * @return InstanceDeviceType 实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
      */
     public String getInstanceDeviceType() {
         return this.InstanceDeviceType;
@@ -385,7 +391,11 @@ public class ClusterInstanceDetail extends AbstractModel {
 
     /**
      * Set 实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
      * @param InstanceDeviceType 实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
      */
     public void setInstanceDeviceType(String InstanceDeviceType) {
         this.InstanceDeviceType = InstanceDeviceType;

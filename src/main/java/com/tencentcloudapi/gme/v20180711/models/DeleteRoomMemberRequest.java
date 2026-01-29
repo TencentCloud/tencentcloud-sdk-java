@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DeleteRoomMemberRequest extends AbstractModel {
 
     /**
-    * 要操作的房间id
+    * <p>要操作的房间id</p>
     */
     @SerializedName("RoomId")
     @Expose
     private String RoomId;
 
     /**
-    * 剔除类型 1-删除房间 2-剔除用户
+    * <p>剔除类型 1-删除房间 2-剔除用户</p>
     */
     @SerializedName("DeleteType")
     @Expose
     private Long DeleteType;
 
     /**
-    * 应用id
+    * <p>应用id</p>
     */
     @SerializedName("BizId")
     @Expose
     private Long BizId;
 
     /**
-    * 要剔除的用户列表（整型）
+    * <p>要剔除的用户列表（整型）</p>
     */
     @SerializedName("Uids")
     @Expose
     private String [] Uids;
 
     /**
-    * 要剔除的用户列表（字符串类型）
+    * <p>要剔除的用户列表（字符串类型）</p>
     */
     @SerializedName("StrUids")
     @Expose
     private String [] StrUids;
 
     /**
-     * Get 要操作的房间id 
-     * @return RoomId 要操作的房间id
+     * Get <p>要操作的房间id</p> 
+     * @return RoomId <p>要操作的房间id</p>
      */
     public String getRoomId() {
         return this.RoomId;
     }
 
     /**
-     * Set 要操作的房间id
-     * @param RoomId 要操作的房间id
+     * Set <p>要操作的房间id</p>
+     * @param RoomId <p>要操作的房间id</p>
      */
     public void setRoomId(String RoomId) {
         this.RoomId = RoomId;
     }
 
     /**
-     * Get 剔除类型 1-删除房间 2-剔除用户 
-     * @return DeleteType 剔除类型 1-删除房间 2-剔除用户
+     * Get <p>剔除类型 1-删除房间 2-剔除用户</p> 
+     * @return DeleteType <p>剔除类型 1-删除房间 2-剔除用户</p>
      */
     public Long getDeleteType() {
         return this.DeleteType;
     }
 
     /**
-     * Set 剔除类型 1-删除房间 2-剔除用户
-     * @param DeleteType 剔除类型 1-删除房间 2-剔除用户
+     * Set <p>剔除类型 1-删除房间 2-剔除用户</p>
+     * @param DeleteType <p>剔除类型 1-删除房间 2-剔除用户</p>
      */
     public void setDeleteType(Long DeleteType) {
         this.DeleteType = DeleteType;
     }
 
     /**
-     * Get 应用id 
-     * @return BizId 应用id
+     * Get <p>应用id</p> 
+     * @return BizId <p>应用id</p>
      */
     public Long getBizId() {
         return this.BizId;
     }
 
     /**
-     * Set 应用id
-     * @param BizId 应用id
+     * Set <p>应用id</p>
+     * @param BizId <p>应用id</p>
      */
     public void setBizId(Long BizId) {
         this.BizId = BizId;
     }
 
     /**
-     * Get 要剔除的用户列表（整型） 
-     * @return Uids 要剔除的用户列表（整型）
+     * Get <p>要剔除的用户列表（整型）</p> 
+     * @return Uids <p>要剔除的用户列表（整型）</p>
      */
     public String [] getUids() {
         return this.Uids;
     }
 
     /**
-     * Set 要剔除的用户列表（整型）
-     * @param Uids 要剔除的用户列表（整型）
+     * Set <p>要剔除的用户列表（整型）</p>
+     * @param Uids <p>要剔除的用户列表（整型）</p>
      */
     public void setUids(String [] Uids) {
         this.Uids = Uids;
     }
 
     /**
-     * Get 要剔除的用户列表（字符串类型） 
-     * @return StrUids 要剔除的用户列表（字符串类型）
+     * Get <p>要剔除的用户列表（字符串类型）</p> 
+     * @return StrUids <p>要剔除的用户列表（字符串类型）</p>
      */
     public String [] getStrUids() {
         return this.StrUids;
     }
 
     /**
-     * Set 要剔除的用户列表（字符串类型）
-     * @param StrUids 要剔除的用户列表（字符串类型）
+     * Set <p>要剔除的用户列表（字符串类型）</p>
+     * @param StrUids <p>要剔除的用户列表（字符串类型）</p>
      */
     public void setStrUids(String [] StrUids) {
         this.StrUids = StrUids;

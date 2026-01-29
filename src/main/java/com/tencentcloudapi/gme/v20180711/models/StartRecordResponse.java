@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class StartRecordResponse extends AbstractModel {
 
     /**
-    * 任务taskid。
+    * <p>任务taskid。</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class StartRecordResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务taskid。 
-     * @return TaskId 任务taskid。
+     * Get <p>任务taskid。</p> 
+     * @return TaskId <p>任务taskid。</p>
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务taskid。
-     * @param TaskId 任务taskid。
+     * Set <p>任务taskid。</p>
+     * @param TaskId <p>任务taskid。</p>
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

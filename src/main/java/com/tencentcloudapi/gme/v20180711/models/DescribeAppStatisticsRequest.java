@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribeAppStatisticsRequest extends AbstractModel {
 
     /**
-    * GME应用ID
+    * <p>GME应用ID</p>
     */
     @SerializedName("BizId")
     @Expose
     private Long BizId;
 
     /**
-    * 数据开始时间，东八区时间，格式: 年-月-日，如: 2018-07-13
+    * <p>数据开始时间，东八区时间，格式: 年-月-日，如: 2018-07-13</p>
     */
     @SerializedName("StartDate")
     @Expose
     private String StartDate;
 
     /**
-    * 数据结束时间，东八区时间，格式: 年-月-日，如: 2018-07-13
+    * <p>数据结束时间，东八区时间，格式: 年-月-日，如: 2018-07-13</p>
     */
     @SerializedName("EndDate")
     @Expose
     private String EndDate;
 
     /**
-    * 要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter/SpeechToText
+    * <p>要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter/SpeechToText</p>
     */
     @SerializedName("Services")
     @Expose
     private String [] Services;
 
     /**
-     * Get GME应用ID 
-     * @return BizId GME应用ID
+     * Get <p>GME应用ID</p> 
+     * @return BizId <p>GME应用ID</p>
      */
     public Long getBizId() {
         return this.BizId;
     }
 
     /**
-     * Set GME应用ID
-     * @param BizId GME应用ID
+     * Set <p>GME应用ID</p>
+     * @param BizId <p>GME应用ID</p>
      */
     public void setBizId(Long BizId) {
         this.BizId = BizId;
     }
 
     /**
-     * Get 数据开始时间，东八区时间，格式: 年-月-日，如: 2018-07-13 
-     * @return StartDate 数据开始时间，东八区时间，格式: 年-月-日，如: 2018-07-13
+     * Get <p>数据开始时间，东八区时间，格式: 年-月-日，如: 2018-07-13</p> 
+     * @return StartDate <p>数据开始时间，东八区时间，格式: 年-月-日，如: 2018-07-13</p>
      */
     public String getStartDate() {
         return this.StartDate;
     }
 
     /**
-     * Set 数据开始时间，东八区时间，格式: 年-月-日，如: 2018-07-13
-     * @param StartDate 数据开始时间，东八区时间，格式: 年-月-日，如: 2018-07-13
+     * Set <p>数据开始时间，东八区时间，格式: 年-月-日，如: 2018-07-13</p>
+     * @param StartDate <p>数据开始时间，东八区时间，格式: 年-月-日，如: 2018-07-13</p>
      */
     public void setStartDate(String StartDate) {
         this.StartDate = StartDate;
     }
 
     /**
-     * Get 数据结束时间，东八区时间，格式: 年-月-日，如: 2018-07-13 
-     * @return EndDate 数据结束时间，东八区时间，格式: 年-月-日，如: 2018-07-13
+     * Get <p>数据结束时间，东八区时间，格式: 年-月-日，如: 2018-07-13</p> 
+     * @return EndDate <p>数据结束时间，东八区时间，格式: 年-月-日，如: 2018-07-13</p>
      */
     public String getEndDate() {
         return this.EndDate;
     }
 
     /**
-     * Set 数据结束时间，东八区时间，格式: 年-月-日，如: 2018-07-13
-     * @param EndDate 数据结束时间，东八区时间，格式: 年-月-日，如: 2018-07-13
+     * Set <p>数据结束时间，东八区时间，格式: 年-月-日，如: 2018-07-13</p>
+     * @param EndDate <p>数据结束时间，东八区时间，格式: 年-月-日，如: 2018-07-13</p>
      */
     public void setEndDate(String EndDate) {
         this.EndDate = EndDate;
     }
 
     /**
-     * Get 要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter/SpeechToText 
-     * @return Services 要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter/SpeechToText
+     * Get <p>要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter/SpeechToText</p> 
+     * @return Services <p>要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter/SpeechToText</p>
      */
     public String [] getServices() {
         return this.Services;
     }
 
     /**
-     * Set 要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter/SpeechToText
-     * @param Services 要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter/SpeechToText
+     * Set <p>要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter/SpeechToText</p>
+     * @param Services <p>要查询的服务列表，取值：RealTimeSpeech/VoiceMessage/VoiceFilter/SpeechToText</p>
      */
     public void setServices(String [] Services) {
         this.Services = Services;

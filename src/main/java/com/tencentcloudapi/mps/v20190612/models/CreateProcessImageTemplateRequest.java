@@ -45,6 +45,13 @@ public class CreateProcessImageTemplateRequest extends AbstractModel {
     private String Comment;
 
     /**
+    * 图片处理模板拓展参数。
+    */
+    @SerializedName("StdExtInfo")
+    @Expose
+    private String StdExtInfo;
+
+    /**
      * Get 图片处理模板。 
      * @return ProcessImageTemplate 图片处理模板。
      */
@@ -92,6 +99,22 @@ public class CreateProcessImageTemplateRequest extends AbstractModel {
         this.Comment = Comment;
     }
 
+    /**
+     * Get 图片处理模板拓展参数。 
+     * @return StdExtInfo 图片处理模板拓展参数。
+     */
+    public String getStdExtInfo() {
+        return this.StdExtInfo;
+    }
+
+    /**
+     * Set 图片处理模板拓展参数。
+     * @param StdExtInfo 图片处理模板拓展参数。
+     */
+    public void setStdExtInfo(String StdExtInfo) {
+        this.StdExtInfo = StdExtInfo;
+    }
+
     public CreateProcessImageTemplateRequest() {
     }
 
@@ -109,6 +132,9 @@ public class CreateProcessImageTemplateRequest extends AbstractModel {
         if (source.Comment != null) {
             this.Comment = new String(source.Comment);
         }
+        if (source.StdExtInfo != null) {
+            this.StdExtInfo = new String(source.StdExtInfo);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class CreateProcessImageTemplateRequest extends AbstractModel {
         this.setParamObj(map, prefix + "ProcessImageTemplate.", this.ProcessImageTemplate);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
+        this.setParamSimple(map, prefix + "StdExtInfo", this.StdExtInfo);
 
     }
 }

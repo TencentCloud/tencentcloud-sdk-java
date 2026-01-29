@@ -122,6 +122,13 @@ public class TalkAIBotInfo extends AbstractModel {
     private Long UpdateTime;
 
     /**
+    * 已关联产品信息列表
+    */
+    @SerializedName("BoundProducts")
+    @Expose
+    private TalkProductInfo [] BoundProducts;
+
+    /**
      * Get UIN 
      * @return Uin UIN
      */
@@ -300,7 +307,9 @@ public class TalkAIBotInfo extends AbstractModel {
     /**
      * Get 产品信息列表 
      * @return ProductList 产品信息列表
+     * @deprecated
      */
+    @Deprecated
     public TalkProductInfo getProductList() {
         return this.ProductList;
     }
@@ -308,7 +317,9 @@ public class TalkAIBotInfo extends AbstractModel {
     /**
      * Set 产品信息列表
      * @param ProductList 产品信息列表
+     * @deprecated
      */
+    @Deprecated
     public void setProductList(TalkProductInfo ProductList) {
         this.ProductList = ProductList;
     }
@@ -343,6 +354,22 @@ public class TalkAIBotInfo extends AbstractModel {
      */
     public void setUpdateTime(Long UpdateTime) {
         this.UpdateTime = UpdateTime;
+    }
+
+    /**
+     * Get 已关联产品信息列表 
+     * @return BoundProducts 已关联产品信息列表
+     */
+    public TalkProductInfo [] getBoundProducts() {
+        return this.BoundProducts;
+    }
+
+    /**
+     * Set 已关联产品信息列表
+     * @param BoundProducts 已关联产品信息列表
+     */
+    public void setBoundProducts(TalkProductInfo [] BoundProducts) {
+        this.BoundProducts = BoundProducts;
     }
 
     public TalkAIBotInfo() {
@@ -395,6 +422,12 @@ public class TalkAIBotInfo extends AbstractModel {
         if (source.UpdateTime != null) {
             this.UpdateTime = new Long(source.UpdateTime);
         }
+        if (source.BoundProducts != null) {
+            this.BoundProducts = new TalkProductInfo[source.BoundProducts.length];
+            for (int i = 0; i < source.BoundProducts.length; i++) {
+                this.BoundProducts[i] = new TalkProductInfo(source.BoundProducts[i]);
+            }
+        }
     }
 
 
@@ -416,6 +449,7 @@ public class TalkAIBotInfo extends AbstractModel {
         this.setParamObj(map, prefix + "ProductList.", this.ProductList);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamArrayObj(map, prefix + "BoundProducts.", this.BoundProducts);
 
     }
 }

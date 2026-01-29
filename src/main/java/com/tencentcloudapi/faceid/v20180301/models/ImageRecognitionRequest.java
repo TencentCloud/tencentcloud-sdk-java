@@ -24,125 +24,115 @@ import java.util.HashMap;
 public class ImageRecognitionRequest extends AbstractModel {
 
     /**
-    * 身份证号
+    * <p>身份证号</p>
     */
     @SerializedName("IdCard")
     @Expose
     private String IdCard;
 
     /**
-    * 姓名。中文请使用UTF-8编码。
+    * <p>姓名。中文请使用UTF-8编码。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 用于人脸比对的照片，图片的Base64值；
-Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
-请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
+    * <p>用于人脸比对的照片，图片的Base64值；<br>Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。<br>请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。</p>
     */
     @SerializedName("ImageBase64")
     @Expose
     private String ImageBase64;
 
     /**
-    * 本接口不需要传递此参数。
+    * <p>本接口不需要传递此参数。</p>
     */
     @SerializedName("Optional")
     @Expose
     private String Optional;
 
     /**
-    * 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+    * <p>敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。</p>
     */
     @SerializedName("Encryption")
     @Expose
     private Encryption Encryption;
 
     /**
-     * Get 身份证号 
-     * @return IdCard 身份证号
+     * Get <p>身份证号</p> 
+     * @return IdCard <p>身份证号</p>
      */
     public String getIdCard() {
         return this.IdCard;
     }
 
     /**
-     * Set 身份证号
-     * @param IdCard 身份证号
+     * Set <p>身份证号</p>
+     * @param IdCard <p>身份证号</p>
      */
     public void setIdCard(String IdCard) {
         this.IdCard = IdCard;
     }
 
     /**
-     * Get 姓名。中文请使用UTF-8编码。 
-     * @return Name 姓名。中文请使用UTF-8编码。
+     * Get <p>姓名。中文请使用UTF-8编码。</p> 
+     * @return Name <p>姓名。中文请使用UTF-8编码。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 姓名。中文请使用UTF-8编码。
-     * @param Name 姓名。中文请使用UTF-8编码。
+     * Set <p>姓名。中文请使用UTF-8编码。</p>
+     * @param Name <p>姓名。中文请使用UTF-8编码。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 用于人脸比对的照片，图片的Base64值；
-Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
-请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。 
-     * @return ImageBase64 用于人脸比对的照片，图片的Base64值；
-Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
-请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
+     * Get <p>用于人脸比对的照片，图片的Base64值；<br>Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。<br>请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。</p> 
+     * @return ImageBase64 <p>用于人脸比对的照片，图片的Base64值；<br>Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。<br>请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。</p>
      */
     public String getImageBase64() {
         return this.ImageBase64;
     }
 
     /**
-     * Set 用于人脸比对的照片，图片的Base64值；
-Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
-请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
-     * @param ImageBase64 用于人脸比对的照片，图片的Base64值；
-Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
-请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
+     * Set <p>用于人脸比对的照片，图片的Base64值；<br>Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。<br>请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。</p>
+     * @param ImageBase64 <p>用于人脸比对的照片，图片的Base64值；<br>Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。<br>请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。</p>
      */
     public void setImageBase64(String ImageBase64) {
         this.ImageBase64 = ImageBase64;
     }
 
     /**
-     * Get 本接口不需要传递此参数。 
-     * @return Optional 本接口不需要传递此参数。
+     * Get <p>本接口不需要传递此参数。</p> 
+     * @return Optional <p>本接口不需要传递此参数。</p>
      */
     public String getOptional() {
         return this.Optional;
     }
 
     /**
-     * Set 本接口不需要传递此参数。
-     * @param Optional 本接口不需要传递此参数。
+     * Set <p>本接口不需要传递此参数。</p>
+     * @param Optional <p>本接口不需要传递此参数。</p>
      */
     public void setOptional(String Optional) {
         this.Optional = Optional;
     }
 
     /**
-     * Get 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。 
-     * @return Encryption 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * Get <p>敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。</p> 
+     * @return Encryption <p>敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。</p>
      */
     public Encryption getEncryption() {
         return this.Encryption;
     }
 
     /**
-     * Set 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
-     * @param Encryption 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * Set <p>敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。</p>
+     * @param Encryption <p>敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。</p>
      */
     public void setEncryption(Encryption Encryption) {
         this.Encryption = Encryption;

@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class StartRecordRequest extends AbstractModel {
 
     /**
-    * 应用ID。
+    * <p>应用ID。</p>
     */
     @SerializedName("BizId")
     @Expose
     private Long BizId;
 
     /**
-    * 房间ID。
+    * <p>房间ID。</p>
     */
     @SerializedName("RoomId")
     @Expose
     private String RoomId;
 
     /**
-    * 录制类型：1代表单流 2代表混流 3代表单流和混流。
+    * <p>录制类型：1代表单流 2代表混流 3代表单流和混流。</p>
     */
     @SerializedName("RecordMode")
     @Expose
     private Long RecordMode;
 
     /**
-    * 指定订阅流白名单或者黑名单（不传默认订阅房间内所有音频流）。
+    * <p>指定订阅流白名单或者黑名单（不传默认订阅房间内所有音频流）。</p>
     */
     @SerializedName("SubscribeRecordUserIds")
     @Expose
     private SubscribeRecordUserIds SubscribeRecordUserIds;
 
     /**
-     * Get 应用ID。 
-     * @return BizId 应用ID。
+     * Get <p>应用ID。</p> 
+     * @return BizId <p>应用ID。</p>
      */
     public Long getBizId() {
         return this.BizId;
     }
 
     /**
-     * Set 应用ID。
-     * @param BizId 应用ID。
+     * Set <p>应用ID。</p>
+     * @param BizId <p>应用ID。</p>
      */
     public void setBizId(Long BizId) {
         this.BizId = BizId;
     }
 
     /**
-     * Get 房间ID。 
-     * @return RoomId 房间ID。
+     * Get <p>房间ID。</p> 
+     * @return RoomId <p>房间ID。</p>
      */
     public String getRoomId() {
         return this.RoomId;
     }
 
     /**
-     * Set 房间ID。
-     * @param RoomId 房间ID。
+     * Set <p>房间ID。</p>
+     * @param RoomId <p>房间ID。</p>
      */
     public void setRoomId(String RoomId) {
         this.RoomId = RoomId;
     }
 
     /**
-     * Get 录制类型：1代表单流 2代表混流 3代表单流和混流。 
-     * @return RecordMode 录制类型：1代表单流 2代表混流 3代表单流和混流。
+     * Get <p>录制类型：1代表单流 2代表混流 3代表单流和混流。</p> 
+     * @return RecordMode <p>录制类型：1代表单流 2代表混流 3代表单流和混流。</p>
      */
     public Long getRecordMode() {
         return this.RecordMode;
     }
 
     /**
-     * Set 录制类型：1代表单流 2代表混流 3代表单流和混流。
-     * @param RecordMode 录制类型：1代表单流 2代表混流 3代表单流和混流。
+     * Set <p>录制类型：1代表单流 2代表混流 3代表单流和混流。</p>
+     * @param RecordMode <p>录制类型：1代表单流 2代表混流 3代表单流和混流。</p>
      */
     public void setRecordMode(Long RecordMode) {
         this.RecordMode = RecordMode;
     }
 
     /**
-     * Get 指定订阅流白名单或者黑名单（不传默认订阅房间内所有音频流）。 
-     * @return SubscribeRecordUserIds 指定订阅流白名单或者黑名单（不传默认订阅房间内所有音频流）。
+     * Get <p>指定订阅流白名单或者黑名单（不传默认订阅房间内所有音频流）。</p> 
+     * @return SubscribeRecordUserIds <p>指定订阅流白名单或者黑名单（不传默认订阅房间内所有音频流）。</p>
      */
     public SubscribeRecordUserIds getSubscribeRecordUserIds() {
         return this.SubscribeRecordUserIds;
     }
 
     /**
-     * Set 指定订阅流白名单或者黑名单（不传默认订阅房间内所有音频流）。
-     * @param SubscribeRecordUserIds 指定订阅流白名单或者黑名单（不传默认订阅房间内所有音频流）。
+     * Set <p>指定订阅流白名单或者黑名单（不传默认订阅房间内所有音频流）。</p>
+     * @param SubscribeRecordUserIds <p>指定订阅流白名单或者黑名单（不传默认订阅房间内所有音频流）。</p>
      */
     public void setSubscribeRecordUserIds(SubscribeRecordUserIds SubscribeRecordUserIds) {
         this.SubscribeRecordUserIds = SubscribeRecordUserIds;

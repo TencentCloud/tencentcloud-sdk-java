@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.mariadb.v20170312.models;
+package com.tencentcloudapi.ags.v20250920.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,39 +21,39 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBInstanceDetailRequest extends AbstractModel {
+public class PauseSandboxInstanceRequest extends AbstractModel {
 
     /**
-    * <p>实例Id形如：tdsql-ow728lmc。</p>
+    * 沙箱实例ID
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get <p>实例Id形如：tdsql-ow728lmc。</p> 
-     * @return InstanceId <p>实例Id形如：tdsql-ow728lmc。</p>
+     * Get 沙箱实例ID 
+     * @return InstanceId 沙箱实例ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set <p>实例Id形如：tdsql-ow728lmc。</p>
-     * @param InstanceId <p>实例Id形如：tdsql-ow728lmc。</p>
+     * Set 沙箱实例ID
+     * @param InstanceId 沙箱实例ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
-    public DescribeDBInstanceDetailRequest() {
+    public PauseSandboxInstanceRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeDBInstanceDetailRequest(DescribeDBInstanceDetailRequest source) {
+    public PauseSandboxInstanceRequest(PauseSandboxInstanceRequest source) {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }

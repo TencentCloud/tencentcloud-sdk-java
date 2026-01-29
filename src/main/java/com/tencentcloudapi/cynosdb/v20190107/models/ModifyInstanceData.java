@@ -67,6 +67,8 @@ public class ModifyInstanceData extends AbstractModel {
 
     /**
     * 变配前实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
     */
     @SerializedName("OldDeviceType")
     @Expose
@@ -74,6 +76,8 @@ public class ModifyInstanceData extends AbstractModel {
 
     /**
     * 变配后实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
     */
     @SerializedName("DeviceType")
     @Expose
@@ -197,8 +201,12 @@ public class ModifyInstanceData extends AbstractModel {
     }
 
     /**
-     * Get 变配前实例机器类型 
+     * Get 变配前实例机器类型
+1. common，通用型。
+2. exclusive，独享型。 
      * @return OldDeviceType 变配前实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
      */
     public String getOldDeviceType() {
         return this.OldDeviceType;
@@ -206,15 +214,23 @@ public class ModifyInstanceData extends AbstractModel {
 
     /**
      * Set 变配前实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
      * @param OldDeviceType 变配前实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
      */
     public void setOldDeviceType(String OldDeviceType) {
         this.OldDeviceType = OldDeviceType;
     }
 
     /**
-     * Get 变配后实例机器类型 
+     * Get 变配后实例机器类型
+1. common，通用型。
+2. exclusive，独享型。 
      * @return DeviceType 变配后实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
      */
     public String getDeviceType() {
         return this.DeviceType;
@@ -222,7 +238,11 @@ public class ModifyInstanceData extends AbstractModel {
 
     /**
      * Set 变配后实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
      * @param DeviceType 变配后实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;

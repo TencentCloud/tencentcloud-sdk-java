@@ -31,6 +31,13 @@ public class GetTWeTalkAIBotListRequest extends AbstractModel {
     private String BotId;
 
     /**
+    * 智能体名称
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
     * 产品ID
     */
     @SerializedName("ProductId")
@@ -79,6 +86,22 @@ public class GetTWeTalkAIBotListRequest extends AbstractModel {
      */
     public void setBotId(String BotId) {
         this.BotId = BotId;
+    }
+
+    /**
+     * Get 智能体名称 
+     * @return Name 智能体名称
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 智能体名称
+     * @param Name 智能体名称
+     */
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
     /**
@@ -172,6 +195,9 @@ public class GetTWeTalkAIBotListRequest extends AbstractModel {
         if (source.BotId != null) {
             this.BotId = new String(source.BotId);
         }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
         if (source.ProductId != null) {
             this.ProductId = new String(source.ProductId);
         }
@@ -195,6 +221,7 @@ public class GetTWeTalkAIBotListRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BotId", this.BotId);
+        this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "IncludeCredentials", this.IncludeCredentials);

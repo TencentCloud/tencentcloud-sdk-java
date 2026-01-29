@@ -67,6 +67,13 @@ public class ScheduleQualityControlTaskResult extends AbstractModel {
     private QualityControlData Output;
 
     /**
+    * 任务执行进度。
+    */
+    @SerializedName("Progress")
+    @Expose
+    private Long Progress;
+
+    /**
      * Get 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。 
      * @return Status 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
      */
@@ -166,6 +173,22 @@ public class ScheduleQualityControlTaskResult extends AbstractModel {
         this.Output = Output;
     }
 
+    /**
+     * Get 任务执行进度。 
+     * @return Progress 任务执行进度。
+     */
+    public Long getProgress() {
+        return this.Progress;
+    }
+
+    /**
+     * Set 任务执行进度。
+     * @param Progress 任务执行进度。
+     */
+    public void setProgress(Long Progress) {
+        this.Progress = Progress;
+    }
+
     public ScheduleQualityControlTaskResult() {
     }
 
@@ -192,6 +215,9 @@ public class ScheduleQualityControlTaskResult extends AbstractModel {
         if (source.Output != null) {
             this.Output = new QualityControlData(source.Output);
         }
+        if (source.Progress != null) {
+            this.Progress = new Long(source.Progress);
+        }
     }
 
 
@@ -205,6 +231,7 @@ public class ScheduleQualityControlTaskResult extends AbstractModel {
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamObj(map, prefix + "Input.", this.Input);
         this.setParamObj(map, prefix + "Output.", this.Output);
+        this.setParamSimple(map, prefix + "Progress", this.Progress);
 
     }
 }

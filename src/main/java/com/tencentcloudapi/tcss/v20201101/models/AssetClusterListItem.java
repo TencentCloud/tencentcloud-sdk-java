@@ -86,6 +86,29 @@ CT_TKE_SERVERLESS:TKE Serverless集群;
     private Long CpuLimit;
 
     /**
+    * 集群审计开关状态：
+已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed
+    */
+    @SerializedName("ClusterAuditStatus")
+    @Expose
+    private String ClusterAuditStatus;
+
+    /**
+    * 接入状态:
+未接入: AccessedNone
+已防护: AccessedDefended
+未防护: AccessedInstalled
+部分防护: AccessedPartialDefence
+接入异常: AccessedException
+卸载异常: AccessedUninstallException
+接入中: AccessedInstalling
+卸载中: AccessedUninstalling
+    */
+    @SerializedName("AccessedStatus")
+    @Expose
+    private String AccessedStatus;
+
+    /**
      * Get 集群ID 
      * @return ClusterID 集群ID
      */
@@ -237,6 +260,74 @@ CT_TKE_SERVERLESS:TKE Serverless集群;
         this.CpuLimit = CpuLimit;
     }
 
+    /**
+     * Get 集群审计开关状态：
+已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed 
+     * @return ClusterAuditStatus 集群审计开关状态：
+已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed
+     */
+    public String getClusterAuditStatus() {
+        return this.ClusterAuditStatus;
+    }
+
+    /**
+     * Set 集群审计开关状态：
+已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed
+     * @param ClusterAuditStatus 集群审计开关状态：
+已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed
+     */
+    public void setClusterAuditStatus(String ClusterAuditStatus) {
+        this.ClusterAuditStatus = ClusterAuditStatus;
+    }
+
+    /**
+     * Get 接入状态:
+未接入: AccessedNone
+已防护: AccessedDefended
+未防护: AccessedInstalled
+部分防护: AccessedPartialDefence
+接入异常: AccessedException
+卸载异常: AccessedUninstallException
+接入中: AccessedInstalling
+卸载中: AccessedUninstalling 
+     * @return AccessedStatus 接入状态:
+未接入: AccessedNone
+已防护: AccessedDefended
+未防护: AccessedInstalled
+部分防护: AccessedPartialDefence
+接入异常: AccessedException
+卸载异常: AccessedUninstallException
+接入中: AccessedInstalling
+卸载中: AccessedUninstalling
+     */
+    public String getAccessedStatus() {
+        return this.AccessedStatus;
+    }
+
+    /**
+     * Set 接入状态:
+未接入: AccessedNone
+已防护: AccessedDefended
+未防护: AccessedInstalled
+部分防护: AccessedPartialDefence
+接入异常: AccessedException
+卸载异常: AccessedUninstallException
+接入中: AccessedInstalling
+卸载中: AccessedUninstalling
+     * @param AccessedStatus 接入状态:
+未接入: AccessedNone
+已防护: AccessedDefended
+未防护: AccessedInstalled
+部分防护: AccessedPartialDefence
+接入异常: AccessedException
+卸载异常: AccessedUninstallException
+接入中: AccessedInstalling
+卸载中: AccessedUninstalling
+     */
+    public void setAccessedStatus(String AccessedStatus) {
+        this.AccessedStatus = AccessedStatus;
+    }
+
     public AssetClusterListItem() {
     }
 
@@ -269,6 +360,12 @@ CT_TKE_SERVERLESS:TKE Serverless集群;
         if (source.CpuLimit != null) {
             this.CpuLimit = new Long(source.CpuLimit);
         }
+        if (source.ClusterAuditStatus != null) {
+            this.ClusterAuditStatus = new String(source.ClusterAuditStatus);
+        }
+        if (source.AccessedStatus != null) {
+            this.AccessedStatus = new String(source.AccessedStatus);
+        }
     }
 
 
@@ -284,6 +381,8 @@ CT_TKE_SERVERLESS:TKE Serverless集群;
         this.setParamSimple(map, prefix + "ClusterVersion", this.ClusterVersion);
         this.setParamSimple(map, prefix + "MemLimit", this.MemLimit);
         this.setParamSimple(map, prefix + "CpuLimit", this.CpuLimit);
+        this.setParamSimple(map, prefix + "ClusterAuditStatus", this.ClusterAuditStatus);
+        this.setParamSimple(map, prefix + "AccessedStatus", this.AccessedStatus);
 
     }
 }

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.iotexplorer.v20190423.models;
+package com.tencentcloudapi.ags.v20250920.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CancelAssignTWeCallLicenseRequest extends AbstractModel {
+public class ResumeSandboxInstanceRequest extends AbstractModel {
 
     /**
-    * 订单号
+    * 沙箱实例ID
     */
-    @SerializedName("PkgId")
+    @SerializedName("InstanceId")
     @Expose
-    private String PkgId;
+    private String InstanceId;
 
     /**
-     * Get 订单号 
-     * @return PkgId 订单号
+     * Get 沙箱实例ID 
+     * @return InstanceId 沙箱实例ID
      */
-    public String getPkgId() {
-        return this.PkgId;
+    public String getInstanceId() {
+        return this.InstanceId;
     }
 
     /**
-     * Set 订单号
-     * @param PkgId 订单号
+     * Set 沙箱实例ID
+     * @param InstanceId 沙箱实例ID
      */
-    public void setPkgId(String PkgId) {
-        this.PkgId = PkgId;
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
-    public CancelAssignTWeCallLicenseRequest() {
+    public ResumeSandboxInstanceRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CancelAssignTWeCallLicenseRequest(CancelAssignTWeCallLicenseRequest source) {
-        if (source.PkgId != null) {
-            this.PkgId = new String(source.PkgId);
+    public ResumeSandboxInstanceRequest(ResumeSandboxInstanceRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
         }
     }
 
@@ -64,7 +64,7 @@ public class CancelAssignTWeCallLicenseRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "PkgId", this.PkgId);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

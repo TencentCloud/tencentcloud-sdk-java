@@ -31,11 +31,18 @@ public class TimingDataRecord extends AbstractModel {
     private String TypeKey;
 
     /**
-    * 详细时序数据。
+    * <code>Integer</code> 类型的详细时序数据，查询指标值类型为 <code>Integer</code> 指标会由本字段返回对应时序数据。<br> **注意**：若查询指标未明确说明指标值类型，默认由本字段返回数据。
     */
     @SerializedName("TypeValue")
     @Expose
     private TimingTypeValue [] TypeValue;
+
+    /**
+    * <code>Float</code> 类型的详细时序数据，查询指标值类型为 <code>Float</code> 指标会由本字段返回对应时序数据。
+    */
+    @SerializedName("FloatTypeValue")
+    @Expose
+    private FloatTimingTypeValue [] FloatTypeValue;
 
     /**
      * Get 查询维度值。 
@@ -54,19 +61,35 @@ public class TimingDataRecord extends AbstractModel {
     }
 
     /**
-     * Get 详细时序数据。 
-     * @return TypeValue 详细时序数据。
+     * Get <code>Integer</code> 类型的详细时序数据，查询指标值类型为 <code>Integer</code> 指标会由本字段返回对应时序数据。<br> **注意**：若查询指标未明确说明指标值类型，默认由本字段返回数据。 
+     * @return TypeValue <code>Integer</code> 类型的详细时序数据，查询指标值类型为 <code>Integer</code> 指标会由本字段返回对应时序数据。<br> **注意**：若查询指标未明确说明指标值类型，默认由本字段返回数据。
      */
     public TimingTypeValue [] getTypeValue() {
         return this.TypeValue;
     }
 
     /**
-     * Set 详细时序数据。
-     * @param TypeValue 详细时序数据。
+     * Set <code>Integer</code> 类型的详细时序数据，查询指标值类型为 <code>Integer</code> 指标会由本字段返回对应时序数据。<br> **注意**：若查询指标未明确说明指标值类型，默认由本字段返回数据。
+     * @param TypeValue <code>Integer</code> 类型的详细时序数据，查询指标值类型为 <code>Integer</code> 指标会由本字段返回对应时序数据。<br> **注意**：若查询指标未明确说明指标值类型，默认由本字段返回数据。
      */
     public void setTypeValue(TimingTypeValue [] TypeValue) {
         this.TypeValue = TypeValue;
+    }
+
+    /**
+     * Get <code>Float</code> 类型的详细时序数据，查询指标值类型为 <code>Float</code> 指标会由本字段返回对应时序数据。 
+     * @return FloatTypeValue <code>Float</code> 类型的详细时序数据，查询指标值类型为 <code>Float</code> 指标会由本字段返回对应时序数据。
+     */
+    public FloatTimingTypeValue [] getFloatTypeValue() {
+        return this.FloatTypeValue;
+    }
+
+    /**
+     * Set <code>Float</code> 类型的详细时序数据，查询指标值类型为 <code>Float</code> 指标会由本字段返回对应时序数据。
+     * @param FloatTypeValue <code>Float</code> 类型的详细时序数据，查询指标值类型为 <code>Float</code> 指标会由本字段返回对应时序数据。
+     */
+    public void setFloatTypeValue(FloatTimingTypeValue [] FloatTypeValue) {
+        this.FloatTypeValue = FloatTypeValue;
     }
 
     public TimingDataRecord() {
@@ -86,6 +109,12 @@ public class TimingDataRecord extends AbstractModel {
                 this.TypeValue[i] = new TimingTypeValue(source.TypeValue[i]);
             }
         }
+        if (source.FloatTypeValue != null) {
+            this.FloatTypeValue = new FloatTimingTypeValue[source.FloatTypeValue.length];
+            for (int i = 0; i < source.FloatTypeValue.length; i++) {
+                this.FloatTypeValue[i] = new FloatTimingTypeValue(source.FloatTypeValue[i]);
+            }
+        }
     }
 
 
@@ -95,6 +124,7 @@ public class TimingDataRecord extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TypeKey", this.TypeKey);
         this.setParamArrayObj(map, prefix + "TypeValue.", this.TypeValue);
+        this.setParamArrayObj(map, prefix + "FloatTypeValue.", this.FloatTypeValue);
 
     }
 }

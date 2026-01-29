@@ -81,6 +81,8 @@ public class InstanceInitInfo extends AbstractModel {
 
     /**
     * 实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
     */
     @SerializedName("DeviceType")
     @Expose
@@ -215,8 +217,12 @@ public class InstanceInitInfo extends AbstractModel {
     }
 
     /**
-     * Get 实例机器类型 
+     * Get 实例机器类型
+1. common，通用型。
+2. exclusive，独享型。 
      * @return DeviceType 实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
      */
     public String getDeviceType() {
         return this.DeviceType;
@@ -224,7 +230,11 @@ public class InstanceInitInfo extends AbstractModel {
 
     /**
      * Set 实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
      * @param DeviceType 实例机器类型
+1. common，通用型。
+2. exclusive，独享型。
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;

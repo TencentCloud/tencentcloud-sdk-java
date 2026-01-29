@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class ModifyRecordInfoRequest extends AbstractModel {
 
     /**
-    * 进行中的任务taskid（StartRecord接口返回）。
+    * <p>进行中的任务taskid（StartRecord接口返回）。</p>
     */
     @SerializedName("TaskId")
     @Expose
     private Long TaskId;
 
     /**
-    * 录制类型：1代表单流 2代表混流 3代表单流和混流。
+    * <p>录制类型：1代表单流 2代表混流 3代表单流和混流。</p>
     */
     @SerializedName("RecordMode")
     @Expose
     private Long RecordMode;
 
     /**
-    * 应用ID。
+    * <p>应用ID。</p>
     */
     @SerializedName("BizId")
     @Expose
     private Long BizId;
 
     /**
-    * 指定订阅流白名单或者黑名单。
+    * <p>指定订阅流白名单或者黑名单。</p>
     */
     @SerializedName("SubscribeRecordUserIds")
     @Expose
     private SubscribeRecordUserIds SubscribeRecordUserIds;
 
     /**
-     * Get 进行中的任务taskid（StartRecord接口返回）。 
-     * @return TaskId 进行中的任务taskid（StartRecord接口返回）。
+     * Get <p>进行中的任务taskid（StartRecord接口返回）。</p> 
+     * @return TaskId <p>进行中的任务taskid（StartRecord接口返回）。</p>
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 进行中的任务taskid（StartRecord接口返回）。
-     * @param TaskId 进行中的任务taskid（StartRecord接口返回）。
+     * Set <p>进行中的任务taskid（StartRecord接口返回）。</p>
+     * @param TaskId <p>进行中的任务taskid（StartRecord接口返回）。</p>
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 录制类型：1代表单流 2代表混流 3代表单流和混流。 
-     * @return RecordMode 录制类型：1代表单流 2代表混流 3代表单流和混流。
+     * Get <p>录制类型：1代表单流 2代表混流 3代表单流和混流。</p> 
+     * @return RecordMode <p>录制类型：1代表单流 2代表混流 3代表单流和混流。</p>
      */
     public Long getRecordMode() {
         return this.RecordMode;
     }
 
     /**
-     * Set 录制类型：1代表单流 2代表混流 3代表单流和混流。
-     * @param RecordMode 录制类型：1代表单流 2代表混流 3代表单流和混流。
+     * Set <p>录制类型：1代表单流 2代表混流 3代表单流和混流。</p>
+     * @param RecordMode <p>录制类型：1代表单流 2代表混流 3代表单流和混流。</p>
      */
     public void setRecordMode(Long RecordMode) {
         this.RecordMode = RecordMode;
     }
 
     /**
-     * Get 应用ID。 
-     * @return BizId 应用ID。
+     * Get <p>应用ID。</p> 
+     * @return BizId <p>应用ID。</p>
      */
     public Long getBizId() {
         return this.BizId;
     }
 
     /**
-     * Set 应用ID。
-     * @param BizId 应用ID。
+     * Set <p>应用ID。</p>
+     * @param BizId <p>应用ID。</p>
      */
     public void setBizId(Long BizId) {
         this.BizId = BizId;
     }
 
     /**
-     * Get 指定订阅流白名单或者黑名单。 
-     * @return SubscribeRecordUserIds 指定订阅流白名单或者黑名单。
+     * Get <p>指定订阅流白名单或者黑名单。</p> 
+     * @return SubscribeRecordUserIds <p>指定订阅流白名单或者黑名单。</p>
      */
     public SubscribeRecordUserIds getSubscribeRecordUserIds() {
         return this.SubscribeRecordUserIds;
     }
 
     /**
-     * Set 指定订阅流白名单或者黑名单。
-     * @param SubscribeRecordUserIds 指定订阅流白名单或者黑名单。
+     * Set <p>指定订阅流白名单或者黑名单。</p>
+     * @param SubscribeRecordUserIds <p>指定订阅流白名单或者黑名单。</p>
      */
     public void setSubscribeRecordUserIds(SubscribeRecordUserIds SubscribeRecordUserIds) {
         this.SubscribeRecordUserIds = SubscribeRecordUserIds;

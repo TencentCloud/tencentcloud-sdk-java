@@ -87,7 +87,7 @@ public class TalkAgentConfigInfo extends AbstractModel {
     private Boolean NoiseFilterEnabled;
 
     /**
-    * 是否开启长记忆，默认开启
+    * 是否开启长记忆，默认关闭
     */
     @SerializedName("LongTermMemoryEnabled")
     @Expose
@@ -266,16 +266,16 @@ public class TalkAgentConfigInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否开启长记忆，默认开启 
-     * @return LongTermMemoryEnabled 是否开启长记忆，默认开启
+     * Get 是否开启长记忆，默认关闭 
+     * @return LongTermMemoryEnabled 是否开启长记忆，默认关闭
      */
     public Boolean getLongTermMemoryEnabled() {
         return this.LongTermMemoryEnabled;
     }
 
     /**
-     * Set 是否开启长记忆，默认开启
-     * @param LongTermMemoryEnabled 是否开启长记忆，默认开启
+     * Set 是否开启长记忆，默认关闭
+     * @param LongTermMemoryEnabled 是否开启长记忆，默认关闭
      */
     public void setLongTermMemoryEnabled(Boolean LongTermMemoryEnabled) {
         this.LongTermMemoryEnabled = LongTermMemoryEnabled;

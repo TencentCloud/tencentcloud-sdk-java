@@ -166,6 +166,20 @@ public class License extends AbstractModel {
     private String IssueURL;
 
     /**
+    * <p>商品供应商 UIN</p>
+    */
+    @SerializedName("ProviderUin")
+    @Expose
+    private String ProviderUin;
+
+    /**
+    * <p>License 创建来源 ID</p>
+    */
+    @SerializedName("CreateSource")
+    @Expose
+    private String CreateSource;
+
+    /**
      * Get <p>License ID</p> 
      * @return LicenseId <p>License ID</p>
      */
@@ -493,6 +507,38 @@ public class License extends AbstractModel {
         this.IssueURL = IssueURL;
     }
 
+    /**
+     * Get <p>商品供应商 UIN</p> 
+     * @return ProviderUin <p>商品供应商 UIN</p>
+     */
+    public String getProviderUin() {
+        return this.ProviderUin;
+    }
+
+    /**
+     * Set <p>商品供应商 UIN</p>
+     * @param ProviderUin <p>商品供应商 UIN</p>
+     */
+    public void setProviderUin(String ProviderUin) {
+        this.ProviderUin = ProviderUin;
+    }
+
+    /**
+     * Get <p>License 创建来源 ID</p> 
+     * @return CreateSource <p>License 创建来源 ID</p>
+     */
+    public String getCreateSource() {
+        return this.CreateSource;
+    }
+
+    /**
+     * Set <p>License 创建来源 ID</p>
+     * @param CreateSource <p>License 创建来源 ID</p>
+     */
+    public void setCreateSource(String CreateSource) {
+        this.CreateSource = CreateSource;
+    }
+
     public License() {
     }
 
@@ -564,6 +610,12 @@ public class License extends AbstractModel {
         if (source.IssueURL != null) {
             this.IssueURL = new String(source.IssueURL);
         }
+        if (source.ProviderUin != null) {
+            this.ProviderUin = new String(source.ProviderUin);
+        }
+        if (source.CreateSource != null) {
+            this.CreateSource = new String(source.CreateSource);
+        }
     }
 
 
@@ -591,6 +643,8 @@ public class License extends AbstractModel {
         this.setParamSimple(map, prefix + "LicenseLevel", this.LicenseLevel);
         this.setParamObj(map, prefix + "LicenseData.", this.LicenseData);
         this.setParamSimple(map, prefix + "IssueURL", this.IssueURL);
+        this.setParamSimple(map, prefix + "ProviderUin", this.ProviderUin);
+        this.setParamSimple(map, prefix + "CreateSource", this.CreateSource);
 
     }
 }

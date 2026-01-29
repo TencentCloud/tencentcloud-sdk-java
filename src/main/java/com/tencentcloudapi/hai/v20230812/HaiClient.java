@@ -216,4 +216,15 @@ public class HaiClient extends AbstractClient{
         return this.internalRequest(req, "TerminateInstances", TerminateInstancesResponse.class);
     }
 
+    /**
+     *本接口(UpdateServiceConfigs)用于更新服务配置
+     * @param req UpdateServiceConfigsRequest
+     * @return UpdateServiceConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateServiceConfigsResponse UpdateServiceConfigs(UpdateServiceConfigsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateServiceConfigs", UpdateServiceConfigsResponse.class);
+    }
+
 }

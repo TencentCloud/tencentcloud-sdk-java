@@ -149,19 +149,6 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
-     *业务已下线
-
-取消分配
-     * @param req CancelAssignTWeCallLicenseRequest
-     * @return CancelAssignTWeCallLicenseResponse
-     * @throws TencentCloudSDKException
-     */
-    public CancelAssignTWeCallLicenseResponse CancelAssignTWeCallLicense(CancelAssignTWeCallLicenseRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CancelAssignTWeCallLicense", CancelAssignTWeCallLicenseResponse.class);
-    }
-
-    /**
      *p2p路线切换（此接口目前处于内测接口，可以联系申请加白 ）
      * @param req ChangeP2PRouteRequest
      * @return ChangeP2PRouteResponse
@@ -258,6 +245,17 @@ public class IotexplorerClient extends AbstractClient{
     public CreateDeviceChannelResponse CreateDeviceChannel(CreateDeviceChannelRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateDeviceChannel", CreateDeviceChannelResponse.class);
+    }
+
+    /**
+     *创建设备SDP应答
+     * @param req CreateDeviceSDPAnswerRequest
+     * @return CreateDeviceSDPAnswerResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDeviceSDPAnswerResponse CreateDeviceSDPAnswer(CreateDeviceSDPAnswerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDeviceSDPAnswer", CreateDeviceSDPAnswerResponse.class);
     }
 
     /**

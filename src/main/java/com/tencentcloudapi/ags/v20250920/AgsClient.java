@@ -150,6 +150,28 @@ public class AgsClient extends AbstractClient{
     }
 
     /**
+     *暂停沙箱实例
+     * @param req PauseSandboxInstanceRequest
+     * @return PauseSandboxInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public PauseSandboxInstanceResponse PauseSandboxInstance(PauseSandboxInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "PauseSandboxInstance", PauseSandboxInstanceResponse.class);
+    }
+
+    /**
+     *恢复沙箱实例
+     * @param req ResumeSandboxInstanceRequest
+     * @return ResumeSandboxInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResumeSandboxInstanceResponse ResumeSandboxInstance(ResumeSandboxInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResumeSandboxInstance", ResumeSandboxInstanceResponse.class);
+    }
+
+    /**
      *启动沙箱实例
      * @param req StartSandboxInstanceRequest
      * @return StartSandboxInstanceResponse

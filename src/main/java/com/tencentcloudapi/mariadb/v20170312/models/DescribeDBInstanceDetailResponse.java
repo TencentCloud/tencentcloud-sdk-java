@@ -24,364 +24,364 @@ import java.util.HashMap;
 public class DescribeDBInstanceDetailResponse extends AbstractModel {
 
     /**
-    * 实例Id
+    * <p>实例Id</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例名称
+    * <p>实例名称</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 实例状态
+    * <p>实例状态</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 实例目前运行状态描述
+    * <p>实例目前运行状态描述</p>
     */
     @SerializedName("StatusDesc")
     @Expose
     private String StatusDesc;
 
     /**
-    * 内网 IP 地址
+    * <p>内网 IP 地址</p>
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * 内网端口
+    * <p>内网端口</p>
     */
     @SerializedName("Vport")
     @Expose
     private Long Vport;
 
     /**
-    * 是否临时实例，0为否，非0为是
+    * <p>是否临时实例，0为否，非0为是</p>
     */
     @SerializedName("IsTmp")
     @Expose
     private Long IsTmp;
 
     /**
-    * 节点数，2为一主一从，3为一主二从
+    * <p>节点数，2为一主一从，3为一主二从</p>
     */
     @SerializedName("NodeCount")
     @Expose
     private Long NodeCount;
 
     /**
-    * 实例所在地域名称，如 ap-shanghai
+    * <p>实例所在地域名称，如 ap-shanghai</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 实例所在可用区名称，如 ap-shanghai-1
+    * <p>实例所在可用区名称，如 ap-shanghai-2</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 字符串型的私有网络Id
+    * <p>字符串型的私有网络Id</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 字符串型的私有网络子网Id
+    * <p>字符串型的私有网络子网Id</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 外网状态，0-未开通；1-已开通；2-关闭；3-开通中；4-关闭中
+    * <p>外网状态，0-未开通；1-已开通；2-关闭；3-开通中；4-关闭中</p>
     */
     @SerializedName("WanStatus")
     @Expose
     private Long WanStatus;
 
     /**
-    * 外网访问的域名，公网可解析
+    * <p>外网访问的域名，公网可解析</p>
     */
     @SerializedName("WanDomain")
     @Expose
     private String WanDomain;
 
     /**
-    * 外网 IP 地址，公网可访问
+    * <p>外网 IP 地址，公网可访问</p>
     */
     @SerializedName("WanVip")
     @Expose
     private String WanVip;
 
     /**
-    * 外网端口
+    * <p>外网端口</p>
     */
     @SerializedName("WanPort")
     @Expose
     private Long WanPort;
 
     /**
-    * 实例所属项目 Id
+    * <p>实例所属项目 Id</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * TDSQL 版本信息
+    * <p>TDSQL 版本信息</p>
     */
     @SerializedName("TdsqlVersion")
     @Expose
     private String TdsqlVersion;
 
     /**
-    * 实例内存大小，单位 GB
+    * <p>实例内存大小，单位 GB</p>
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * 实例存储大小，单位 GB
+    * <p>实例存储大小，单位 GB</p>
     */
     @SerializedName("Storage")
     @Expose
     private Long Storage;
 
     /**
-    * 主可用区，如 ap-shanghai-1
+    * <p>主可用区，如 ap-shanghai-2</p>
     */
     @SerializedName("MasterZone")
     @Expose
     private String MasterZone;
 
     /**
-    * 从可用区列表，如 [ap-shanghai-2]
+    * <p>从可用区列表，如 [ap-shanghai-2]</p>
     */
     @SerializedName("SlaveZones")
     @Expose
     private String [] SlaveZones;
 
     /**
-    * 自动续费标志：0 否，1 是
+    * <p>自动续费标志：0 否，1 是</p>
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-    * 独享集群Id，普通实例为空
+    * <p>独享集群Id，普通实例为空</p>
     */
     @SerializedName("ExclusterId")
     @Expose
     private String ExclusterId;
 
     /**
-    * 付费模式：prepaid 表示预付费
+    * <p>付费模式：prepaid 表示预付费</p>
     */
     @SerializedName("PayMode")
     @Expose
     private String PayMode;
 
     /**
-    * 实例创建时间，格式为 2006-01-02 15:04:05
+    * <p>实例创建时间，格式为 2006-01-02 15:04:05</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 实例是否支持审计
+    * <p>实例是否支持审计</p>
     */
     @SerializedName("IsAuditSupported")
     @Expose
     private Boolean IsAuditSupported;
 
     /**
-    * 实例到期时间，格式为 2006-01-02 15:04:05
+    * <p>实例到期时间，格式为 2006-01-02 15:04:05</p>
     */
     @SerializedName("PeriodEndTime")
     @Expose
     private String PeriodEndTime;
 
     /**
-    * 机型信息
+    * <p>机型信息</p>
     */
     @SerializedName("Machine")
     @Expose
     private String Machine;
 
     /**
-    * 存储空间使用率
+    * <p>存储空间使用率</p>
     */
     @SerializedName("StorageUsage")
     @Expose
     private String StorageUsage;
 
     /**
-    * 日志存储空间大小，单位 GB
+    * <p>日志存储空间大小，单位 GB</p>
     */
     @SerializedName("LogStorage")
     @Expose
     private Long LogStorage;
 
     /**
-    * 是否支持数据加密。1-支持；0-不支持
+    * <p>是否支持数据加密。1-支持；0-不支持</p>
     */
     @SerializedName("IsEncryptSupported")
     @Expose
     private Long IsEncryptSupported;
 
     /**
-    * 内网IPv6
+    * <p>内网IPv6</p>
     */
     @SerializedName("Vip6")
     @Expose
     private String Vip6;
 
     /**
-    * 实例Cpu核数
+    * <p>实例Cpu核数</p>
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * 产品类型ID
+    * <p>产品类型ID</p>
     */
     @SerializedName("Pid")
     @Expose
     private Long Pid;
 
     /**
-    * 最大QPS
+    * <p>最大QPS</p>
     */
     @SerializedName("Qps")
     @Expose
     private Long Qps;
 
     /**
-    * 是否支持IPv6
+    * <p>是否支持IPv6</p>
     */
     @SerializedName("Ipv6Flag")
     @Expose
     private Long Ipv6Flag;
 
     /**
-    * 外网IPv6地址，公网可访问
+    * <p>外网IPv6地址，公网可访问</p>
     */
     @SerializedName("WanVipv6")
     @Expose
     private String WanVipv6;
 
     /**
-    * 外网状态，0-未开通；1-已开通；2-关闭；3-开通中；4-关闭中
+    * <p>外网状态，0-未开通；1-已开通；2-关闭；3-开通中；4-关闭中</p>
     */
     @SerializedName("WanStatusIpv6")
     @Expose
     private Long WanStatusIpv6;
 
     /**
-    * 外网IPv6端口
+    * <p>外网IPv6端口</p>
     */
     @SerializedName("WanPortIpv6")
     @Expose
     private Long WanPortIpv6;
 
     /**
-    * 数据库引擎
+    * <p>数据库引擎</p>
     */
     @SerializedName("DbEngine")
     @Expose
     private String DbEngine;
 
     /**
-    * 数据库版本
+    * <p>数据库版本</p>
     */
     @SerializedName("DbVersion")
     @Expose
     private String DbVersion;
 
     /**
-    * 标签信息
+    * <p>标签信息</p>
     */
     @SerializedName("ResourceTags")
     @Expose
     private ResourceTag [] ResourceTags;
 
     /**
-    * DCN标志，0-无，1-主实例，2-灾备实例
+    * <p>DCN标志，0-无，1-主实例，2-灾备实例</p>
     */
     @SerializedName("DcnFlag")
     @Expose
     private Long DcnFlag;
 
     /**
-    * DCN状态，0-无，1-创建中，2-同步中，3-已断开
+    * <p>DCN状态，0-无，1-创建中，2-同步中，3-已断开</p>
     */
     @SerializedName("DcnStatus")
     @Expose
     private Long DcnStatus;
 
     /**
-    * DCN灾备实例数
+    * <p>DCN灾备实例数</p>
     */
     @SerializedName("DcnDstNum")
     @Expose
     private Long DcnDstNum;
 
     /**
-    * 1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
+    * <p>1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private Long InstanceType;
 
     /**
-    * 实例的各个DB节点信息
+    * <p>实例的各个DB节点信息</p>
     */
     @SerializedName("NodesInfo")
     @Expose
     private NodeInfo [] NodesInfo;
 
     /**
-    * 实例是否支持设置用户连接数限制，内核为10.1暂不支持。
+    * <p>实例是否支持设置用户连接数限制，内核为10.1暂不支持。</p>
     */
     @SerializedName("IsMaxUserConnectionsSupported")
     @Expose
     private Boolean IsMaxUserConnectionsSupported;
 
     /**
-    * 对外显示的数据库版本
+    * <p>对外显示的数据库版本</p>
     */
     @SerializedName("DbVersionId")
     @Expose
     private String DbVersionId;
 
     /**
-    * 加密状态, 0-未开启，1-已开启
+    * <p>加密状态, 0-未开启，1-已开启</p>
     */
     @SerializedName("EncryptStatus")
     @Expose
     private Long EncryptStatus;
 
     /**
-    * DCN的配置信息
+    * <p>DCN的配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReplicaConfig")
@@ -389,7 +389,7 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
     private DCNReplicaConfig ReplicaConfig;
 
     /**
-    * DCN的运行状态
+    * <p>DCN的运行状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReplicaStatus")
@@ -397,70 +397,70 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
     private DCNReplicaStatus ReplicaStatus;
 
     /**
-    * 独享集群类型，0:公有云, 1:金融围笼, 2:CDC集群
+    * <p>独享集群类型，0:公有云, 1:金融围笼, 2:CDC集群</p>
     */
     @SerializedName("ExclusterType")
     @Expose
     private Long ExclusterType;
 
     /**
-    * VPC就近访问
+    * <p>VPC就近访问</p>
     */
     @SerializedName("RsAccessStrategy")
     @Expose
     private Long RsAccessStrategy;
 
     /**
-    * 尚未回收的网络资源
+    * <p>尚未回收的网络资源</p>
     */
     @SerializedName("ReservedNetResources")
     @Expose
     private ReservedNetResource [] ReservedNetResources;
 
     /**
-    * 是否支持物理复制
+    * <p>是否支持物理复制</p>
     */
     @SerializedName("IsPhysicalReplicationSupported")
     @Expose
     private Boolean IsPhysicalReplicationSupported;
 
     /**
-    * 是否支持强同步DCN
+    * <p>是否支持强同步DCN</p>
     */
     @SerializedName("IsDcnStrongSyncSupported")
     @Expose
     private Long IsDcnStrongSyncSupported;
 
     /**
-    * 是否支持DCN切换
+    * <p>是否支持DCN切换</p>
     */
     @SerializedName("IsDcnSwitchSupported")
     @Expose
     private Long IsDcnSwitchSupported;
 
     /**
-    * proxy版本号
+    * <p>proxy版本号</p>
     */
     @SerializedName("ProxyVersion")
     @Expose
     private String ProxyVersion;
 
     /**
-    * Cpu类型，如：英特尔：Intel/AMD，海光：Hygon
+    * <p>Cpu类型，如：英特尔：Intel/AMD，海光：Hygon</p>
     */
     @SerializedName("CpuType")
     @Expose
     private String CpuType;
 
     /**
-    * 删除保护标记，1: 已开启删除保护，0: 未开启删除保护
+    * <p>删除保护标记，1: 已开启删除保护，0: 未开启删除保护</p>
     */
     @SerializedName("ProtectedProperty")
     @Expose
     private Long ProtectedProperty;
 
     /**
-    * 流程Id，标志实例当前所处的异步任务
+    * <p>流程Id，标志实例当前所处的异步任务</p>
     */
     @SerializedName("FlowId")
     @Expose
@@ -474,825 +474,825 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实例Id 
-     * @return InstanceId 实例Id
+     * Get <p>实例Id</p> 
+     * @return InstanceId <p>实例Id</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例Id
-     * @param InstanceId 实例Id
+     * Set <p>实例Id</p>
+     * @param InstanceId <p>实例Id</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例名称 
-     * @return InstanceName 实例名称
+     * Get <p>实例名称</p> 
+     * @return InstanceName <p>实例名称</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称
-     * @param InstanceName 实例名称
+     * Set <p>实例名称</p>
+     * @param InstanceName <p>实例名称</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 实例状态 
-     * @return Status 实例状态
+     * Get <p>实例状态</p> 
+     * @return Status <p>实例状态</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 实例状态
-     * @param Status 实例状态
+     * Set <p>实例状态</p>
+     * @param Status <p>实例状态</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 实例目前运行状态描述 
-     * @return StatusDesc 实例目前运行状态描述
+     * Get <p>实例目前运行状态描述</p> 
+     * @return StatusDesc <p>实例目前运行状态描述</p>
      */
     public String getStatusDesc() {
         return this.StatusDesc;
     }
 
     /**
-     * Set 实例目前运行状态描述
-     * @param StatusDesc 实例目前运行状态描述
+     * Set <p>实例目前运行状态描述</p>
+     * @param StatusDesc <p>实例目前运行状态描述</p>
      */
     public void setStatusDesc(String StatusDesc) {
         this.StatusDesc = StatusDesc;
     }
 
     /**
-     * Get 内网 IP 地址 
-     * @return Vip 内网 IP 地址
+     * Get <p>内网 IP 地址</p> 
+     * @return Vip <p>内网 IP 地址</p>
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set 内网 IP 地址
-     * @param Vip 内网 IP 地址
+     * Set <p>内网 IP 地址</p>
+     * @param Vip <p>内网 IP 地址</p>
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get 内网端口 
-     * @return Vport 内网端口
+     * Get <p>内网端口</p> 
+     * @return Vport <p>内网端口</p>
      */
     public Long getVport() {
         return this.Vport;
     }
 
     /**
-     * Set 内网端口
-     * @param Vport 内网端口
+     * Set <p>内网端口</p>
+     * @param Vport <p>内网端口</p>
      */
     public void setVport(Long Vport) {
         this.Vport = Vport;
     }
 
     /**
-     * Get 是否临时实例，0为否，非0为是 
-     * @return IsTmp 是否临时实例，0为否，非0为是
+     * Get <p>是否临时实例，0为否，非0为是</p> 
+     * @return IsTmp <p>是否临时实例，0为否，非0为是</p>
      */
     public Long getIsTmp() {
         return this.IsTmp;
     }
 
     /**
-     * Set 是否临时实例，0为否，非0为是
-     * @param IsTmp 是否临时实例，0为否，非0为是
+     * Set <p>是否临时实例，0为否，非0为是</p>
+     * @param IsTmp <p>是否临时实例，0为否，非0为是</p>
      */
     public void setIsTmp(Long IsTmp) {
         this.IsTmp = IsTmp;
     }
 
     /**
-     * Get 节点数，2为一主一从，3为一主二从 
-     * @return NodeCount 节点数，2为一主一从，3为一主二从
+     * Get <p>节点数，2为一主一从，3为一主二从</p> 
+     * @return NodeCount <p>节点数，2为一主一从，3为一主二从</p>
      */
     public Long getNodeCount() {
         return this.NodeCount;
     }
 
     /**
-     * Set 节点数，2为一主一从，3为一主二从
-     * @param NodeCount 节点数，2为一主一从，3为一主二从
+     * Set <p>节点数，2为一主一从，3为一主二从</p>
+     * @param NodeCount <p>节点数，2为一主一从，3为一主二从</p>
      */
     public void setNodeCount(Long NodeCount) {
         this.NodeCount = NodeCount;
     }
 
     /**
-     * Get 实例所在地域名称，如 ap-shanghai 
-     * @return Region 实例所在地域名称，如 ap-shanghai
+     * Get <p>实例所在地域名称，如 ap-shanghai</p> 
+     * @return Region <p>实例所在地域名称，如 ap-shanghai</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 实例所在地域名称，如 ap-shanghai
-     * @param Region 实例所在地域名称，如 ap-shanghai
+     * Set <p>实例所在地域名称，如 ap-shanghai</p>
+     * @param Region <p>实例所在地域名称，如 ap-shanghai</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 实例所在可用区名称，如 ap-shanghai-1 
-     * @return Zone 实例所在可用区名称，如 ap-shanghai-1
+     * Get <p>实例所在可用区名称，如 ap-shanghai-2</p> 
+     * @return Zone <p>实例所在可用区名称，如 ap-shanghai-2</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 实例所在可用区名称，如 ap-shanghai-1
-     * @param Zone 实例所在可用区名称，如 ap-shanghai-1
+     * Set <p>实例所在可用区名称，如 ap-shanghai-2</p>
+     * @param Zone <p>实例所在可用区名称，如 ap-shanghai-2</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 字符串型的私有网络Id 
-     * @return VpcId 字符串型的私有网络Id
+     * Get <p>字符串型的私有网络Id</p> 
+     * @return VpcId <p>字符串型的私有网络Id</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 字符串型的私有网络Id
-     * @param VpcId 字符串型的私有网络Id
+     * Set <p>字符串型的私有网络Id</p>
+     * @param VpcId <p>字符串型的私有网络Id</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 字符串型的私有网络子网Id 
-     * @return SubnetId 字符串型的私有网络子网Id
+     * Get <p>字符串型的私有网络子网Id</p> 
+     * @return SubnetId <p>字符串型的私有网络子网Id</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 字符串型的私有网络子网Id
-     * @param SubnetId 字符串型的私有网络子网Id
+     * Set <p>字符串型的私有网络子网Id</p>
+     * @param SubnetId <p>字符串型的私有网络子网Id</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 外网状态，0-未开通；1-已开通；2-关闭；3-开通中；4-关闭中 
-     * @return WanStatus 外网状态，0-未开通；1-已开通；2-关闭；3-开通中；4-关闭中
+     * Get <p>外网状态，0-未开通；1-已开通；2-关闭；3-开通中；4-关闭中</p> 
+     * @return WanStatus <p>外网状态，0-未开通；1-已开通；2-关闭；3-开通中；4-关闭中</p>
      */
     public Long getWanStatus() {
         return this.WanStatus;
     }
 
     /**
-     * Set 外网状态，0-未开通；1-已开通；2-关闭；3-开通中；4-关闭中
-     * @param WanStatus 外网状态，0-未开通；1-已开通；2-关闭；3-开通中；4-关闭中
+     * Set <p>外网状态，0-未开通；1-已开通；2-关闭；3-开通中；4-关闭中</p>
+     * @param WanStatus <p>外网状态，0-未开通；1-已开通；2-关闭；3-开通中；4-关闭中</p>
      */
     public void setWanStatus(Long WanStatus) {
         this.WanStatus = WanStatus;
     }
 
     /**
-     * Get 外网访问的域名，公网可解析 
-     * @return WanDomain 外网访问的域名，公网可解析
+     * Get <p>外网访问的域名，公网可解析</p> 
+     * @return WanDomain <p>外网访问的域名，公网可解析</p>
      */
     public String getWanDomain() {
         return this.WanDomain;
     }
 
     /**
-     * Set 外网访问的域名，公网可解析
-     * @param WanDomain 外网访问的域名，公网可解析
+     * Set <p>外网访问的域名，公网可解析</p>
+     * @param WanDomain <p>外网访问的域名，公网可解析</p>
      */
     public void setWanDomain(String WanDomain) {
         this.WanDomain = WanDomain;
     }
 
     /**
-     * Get 外网 IP 地址，公网可访问 
-     * @return WanVip 外网 IP 地址，公网可访问
+     * Get <p>外网 IP 地址，公网可访问</p> 
+     * @return WanVip <p>外网 IP 地址，公网可访问</p>
      */
     public String getWanVip() {
         return this.WanVip;
     }
 
     /**
-     * Set 外网 IP 地址，公网可访问
-     * @param WanVip 外网 IP 地址，公网可访问
+     * Set <p>外网 IP 地址，公网可访问</p>
+     * @param WanVip <p>外网 IP 地址，公网可访问</p>
      */
     public void setWanVip(String WanVip) {
         this.WanVip = WanVip;
     }
 
     /**
-     * Get 外网端口 
-     * @return WanPort 外网端口
+     * Get <p>外网端口</p> 
+     * @return WanPort <p>外网端口</p>
      */
     public Long getWanPort() {
         return this.WanPort;
     }
 
     /**
-     * Set 外网端口
-     * @param WanPort 外网端口
+     * Set <p>外网端口</p>
+     * @param WanPort <p>外网端口</p>
      */
     public void setWanPort(Long WanPort) {
         this.WanPort = WanPort;
     }
 
     /**
-     * Get 实例所属项目 Id 
-     * @return ProjectId 实例所属项目 Id
+     * Get <p>实例所属项目 Id</p> 
+     * @return ProjectId <p>实例所属项目 Id</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 实例所属项目 Id
-     * @param ProjectId 实例所属项目 Id
+     * Set <p>实例所属项目 Id</p>
+     * @param ProjectId <p>实例所属项目 Id</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get TDSQL 版本信息 
-     * @return TdsqlVersion TDSQL 版本信息
+     * Get <p>TDSQL 版本信息</p> 
+     * @return TdsqlVersion <p>TDSQL 版本信息</p>
      */
     public String getTdsqlVersion() {
         return this.TdsqlVersion;
     }
 
     /**
-     * Set TDSQL 版本信息
-     * @param TdsqlVersion TDSQL 版本信息
+     * Set <p>TDSQL 版本信息</p>
+     * @param TdsqlVersion <p>TDSQL 版本信息</p>
      */
     public void setTdsqlVersion(String TdsqlVersion) {
         this.TdsqlVersion = TdsqlVersion;
     }
 
     /**
-     * Get 实例内存大小，单位 GB 
-     * @return Memory 实例内存大小，单位 GB
+     * Get <p>实例内存大小，单位 GB</p> 
+     * @return Memory <p>实例内存大小，单位 GB</p>
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 实例内存大小，单位 GB
-     * @param Memory 实例内存大小，单位 GB
+     * Set <p>实例内存大小，单位 GB</p>
+     * @param Memory <p>实例内存大小，单位 GB</p>
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get 实例存储大小，单位 GB 
-     * @return Storage 实例存储大小，单位 GB
+     * Get <p>实例存储大小，单位 GB</p> 
+     * @return Storage <p>实例存储大小，单位 GB</p>
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set 实例存储大小，单位 GB
-     * @param Storage 实例存储大小，单位 GB
+     * Set <p>实例存储大小，单位 GB</p>
+     * @param Storage <p>实例存储大小，单位 GB</p>
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
     }
 
     /**
-     * Get 主可用区，如 ap-shanghai-1 
-     * @return MasterZone 主可用区，如 ap-shanghai-1
+     * Get <p>主可用区，如 ap-shanghai-2</p> 
+     * @return MasterZone <p>主可用区，如 ap-shanghai-2</p>
      */
     public String getMasterZone() {
         return this.MasterZone;
     }
 
     /**
-     * Set 主可用区，如 ap-shanghai-1
-     * @param MasterZone 主可用区，如 ap-shanghai-1
+     * Set <p>主可用区，如 ap-shanghai-2</p>
+     * @param MasterZone <p>主可用区，如 ap-shanghai-2</p>
      */
     public void setMasterZone(String MasterZone) {
         this.MasterZone = MasterZone;
     }
 
     /**
-     * Get 从可用区列表，如 [ap-shanghai-2] 
-     * @return SlaveZones 从可用区列表，如 [ap-shanghai-2]
+     * Get <p>从可用区列表，如 [ap-shanghai-2]</p> 
+     * @return SlaveZones <p>从可用区列表，如 [ap-shanghai-2]</p>
      */
     public String [] getSlaveZones() {
         return this.SlaveZones;
     }
 
     /**
-     * Set 从可用区列表，如 [ap-shanghai-2]
-     * @param SlaveZones 从可用区列表，如 [ap-shanghai-2]
+     * Set <p>从可用区列表，如 [ap-shanghai-2]</p>
+     * @param SlaveZones <p>从可用区列表，如 [ap-shanghai-2]</p>
      */
     public void setSlaveZones(String [] SlaveZones) {
         this.SlaveZones = SlaveZones;
     }
 
     /**
-     * Get 自动续费标志：0 否，1 是 
-     * @return AutoRenewFlag 自动续费标志：0 否，1 是
+     * Get <p>自动续费标志：0 否，1 是</p> 
+     * @return AutoRenewFlag <p>自动续费标志：0 否，1 是</p>
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set 自动续费标志：0 否，1 是
-     * @param AutoRenewFlag 自动续费标志：0 否，1 是
+     * Set <p>自动续费标志：0 否，1 是</p>
+     * @param AutoRenewFlag <p>自动续费标志：0 否，1 是</p>
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get 独享集群Id，普通实例为空 
-     * @return ExclusterId 独享集群Id，普通实例为空
+     * Get <p>独享集群Id，普通实例为空</p> 
+     * @return ExclusterId <p>独享集群Id，普通实例为空</p>
      */
     public String getExclusterId() {
         return this.ExclusterId;
     }
 
     /**
-     * Set 独享集群Id，普通实例为空
-     * @param ExclusterId 独享集群Id，普通实例为空
+     * Set <p>独享集群Id，普通实例为空</p>
+     * @param ExclusterId <p>独享集群Id，普通实例为空</p>
      */
     public void setExclusterId(String ExclusterId) {
         this.ExclusterId = ExclusterId;
     }
 
     /**
-     * Get 付费模式：prepaid 表示预付费 
-     * @return PayMode 付费模式：prepaid 表示预付费
+     * Get <p>付费模式：prepaid 表示预付费</p> 
+     * @return PayMode <p>付费模式：prepaid 表示预付费</p>
      */
     public String getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 付费模式：prepaid 表示预付费
-     * @param PayMode 付费模式：prepaid 表示预付费
+     * Set <p>付费模式：prepaid 表示预付费</p>
+     * @param PayMode <p>付费模式：prepaid 表示预付费</p>
      */
     public void setPayMode(String PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 实例创建时间，格式为 2006-01-02 15:04:05 
-     * @return CreateTime 实例创建时间，格式为 2006-01-02 15:04:05
+     * Get <p>实例创建时间，格式为 2006-01-02 15:04:05</p> 
+     * @return CreateTime <p>实例创建时间，格式为 2006-01-02 15:04:05</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 实例创建时间，格式为 2006-01-02 15:04:05
-     * @param CreateTime 实例创建时间，格式为 2006-01-02 15:04:05
+     * Set <p>实例创建时间，格式为 2006-01-02 15:04:05</p>
+     * @param CreateTime <p>实例创建时间，格式为 2006-01-02 15:04:05</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 实例是否支持审计 
-     * @return IsAuditSupported 实例是否支持审计
+     * Get <p>实例是否支持审计</p> 
+     * @return IsAuditSupported <p>实例是否支持审计</p>
      */
     public Boolean getIsAuditSupported() {
         return this.IsAuditSupported;
     }
 
     /**
-     * Set 实例是否支持审计
-     * @param IsAuditSupported 实例是否支持审计
+     * Set <p>实例是否支持审计</p>
+     * @param IsAuditSupported <p>实例是否支持审计</p>
      */
     public void setIsAuditSupported(Boolean IsAuditSupported) {
         this.IsAuditSupported = IsAuditSupported;
     }
 
     /**
-     * Get 实例到期时间，格式为 2006-01-02 15:04:05 
-     * @return PeriodEndTime 实例到期时间，格式为 2006-01-02 15:04:05
+     * Get <p>实例到期时间，格式为 2006-01-02 15:04:05</p> 
+     * @return PeriodEndTime <p>实例到期时间，格式为 2006-01-02 15:04:05</p>
      */
     public String getPeriodEndTime() {
         return this.PeriodEndTime;
     }
 
     /**
-     * Set 实例到期时间，格式为 2006-01-02 15:04:05
-     * @param PeriodEndTime 实例到期时间，格式为 2006-01-02 15:04:05
+     * Set <p>实例到期时间，格式为 2006-01-02 15:04:05</p>
+     * @param PeriodEndTime <p>实例到期时间，格式为 2006-01-02 15:04:05</p>
      */
     public void setPeriodEndTime(String PeriodEndTime) {
         this.PeriodEndTime = PeriodEndTime;
     }
 
     /**
-     * Get 机型信息 
-     * @return Machine 机型信息
+     * Get <p>机型信息</p> 
+     * @return Machine <p>机型信息</p>
      */
     public String getMachine() {
         return this.Machine;
     }
 
     /**
-     * Set 机型信息
-     * @param Machine 机型信息
+     * Set <p>机型信息</p>
+     * @param Machine <p>机型信息</p>
      */
     public void setMachine(String Machine) {
         this.Machine = Machine;
     }
 
     /**
-     * Get 存储空间使用率 
-     * @return StorageUsage 存储空间使用率
+     * Get <p>存储空间使用率</p> 
+     * @return StorageUsage <p>存储空间使用率</p>
      */
     public String getStorageUsage() {
         return this.StorageUsage;
     }
 
     /**
-     * Set 存储空间使用率
-     * @param StorageUsage 存储空间使用率
+     * Set <p>存储空间使用率</p>
+     * @param StorageUsage <p>存储空间使用率</p>
      */
     public void setStorageUsage(String StorageUsage) {
         this.StorageUsage = StorageUsage;
     }
 
     /**
-     * Get 日志存储空间大小，单位 GB 
-     * @return LogStorage 日志存储空间大小，单位 GB
+     * Get <p>日志存储空间大小，单位 GB</p> 
+     * @return LogStorage <p>日志存储空间大小，单位 GB</p>
      */
     public Long getLogStorage() {
         return this.LogStorage;
     }
 
     /**
-     * Set 日志存储空间大小，单位 GB
-     * @param LogStorage 日志存储空间大小，单位 GB
+     * Set <p>日志存储空间大小，单位 GB</p>
+     * @param LogStorage <p>日志存储空间大小，单位 GB</p>
      */
     public void setLogStorage(Long LogStorage) {
         this.LogStorage = LogStorage;
     }
 
     /**
-     * Get 是否支持数据加密。1-支持；0-不支持 
-     * @return IsEncryptSupported 是否支持数据加密。1-支持；0-不支持
+     * Get <p>是否支持数据加密。1-支持；0-不支持</p> 
+     * @return IsEncryptSupported <p>是否支持数据加密。1-支持；0-不支持</p>
      */
     public Long getIsEncryptSupported() {
         return this.IsEncryptSupported;
     }
 
     /**
-     * Set 是否支持数据加密。1-支持；0-不支持
-     * @param IsEncryptSupported 是否支持数据加密。1-支持；0-不支持
+     * Set <p>是否支持数据加密。1-支持；0-不支持</p>
+     * @param IsEncryptSupported <p>是否支持数据加密。1-支持；0-不支持</p>
      */
     public void setIsEncryptSupported(Long IsEncryptSupported) {
         this.IsEncryptSupported = IsEncryptSupported;
     }
 
     /**
-     * Get 内网IPv6 
-     * @return Vip6 内网IPv6
+     * Get <p>内网IPv6</p> 
+     * @return Vip6 <p>内网IPv6</p>
      */
     public String getVip6() {
         return this.Vip6;
     }
 
     /**
-     * Set 内网IPv6
-     * @param Vip6 内网IPv6
+     * Set <p>内网IPv6</p>
+     * @param Vip6 <p>内网IPv6</p>
      */
     public void setVip6(String Vip6) {
         this.Vip6 = Vip6;
     }
 
     /**
-     * Get 实例Cpu核数 
-     * @return Cpu 实例Cpu核数
+     * Get <p>实例Cpu核数</p> 
+     * @return Cpu <p>实例Cpu核数</p>
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set 实例Cpu核数
-     * @param Cpu 实例Cpu核数
+     * Set <p>实例Cpu核数</p>
+     * @param Cpu <p>实例Cpu核数</p>
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get 产品类型ID 
-     * @return Pid 产品类型ID
+     * Get <p>产品类型ID</p> 
+     * @return Pid <p>产品类型ID</p>
      */
     public Long getPid() {
         return this.Pid;
     }
 
     /**
-     * Set 产品类型ID
-     * @param Pid 产品类型ID
+     * Set <p>产品类型ID</p>
+     * @param Pid <p>产品类型ID</p>
      */
     public void setPid(Long Pid) {
         this.Pid = Pid;
     }
 
     /**
-     * Get 最大QPS 
-     * @return Qps 最大QPS
+     * Get <p>最大QPS</p> 
+     * @return Qps <p>最大QPS</p>
      */
     public Long getQps() {
         return this.Qps;
     }
 
     /**
-     * Set 最大QPS
-     * @param Qps 最大QPS
+     * Set <p>最大QPS</p>
+     * @param Qps <p>最大QPS</p>
      */
     public void setQps(Long Qps) {
         this.Qps = Qps;
     }
 
     /**
-     * Get 是否支持IPv6 
-     * @return Ipv6Flag 是否支持IPv6
+     * Get <p>是否支持IPv6</p> 
+     * @return Ipv6Flag <p>是否支持IPv6</p>
      */
     public Long getIpv6Flag() {
         return this.Ipv6Flag;
     }
 
     /**
-     * Set 是否支持IPv6
-     * @param Ipv6Flag 是否支持IPv6
+     * Set <p>是否支持IPv6</p>
+     * @param Ipv6Flag <p>是否支持IPv6</p>
      */
     public void setIpv6Flag(Long Ipv6Flag) {
         this.Ipv6Flag = Ipv6Flag;
     }
 
     /**
-     * Get 外网IPv6地址，公网可访问 
-     * @return WanVipv6 外网IPv6地址，公网可访问
+     * Get <p>外网IPv6地址，公网可访问</p> 
+     * @return WanVipv6 <p>外网IPv6地址，公网可访问</p>
      */
     public String getWanVipv6() {
         return this.WanVipv6;
     }
 
     /**
-     * Set 外网IPv6地址，公网可访问
-     * @param WanVipv6 外网IPv6地址，公网可访问
+     * Set <p>外网IPv6地址，公网可访问</p>
+     * @param WanVipv6 <p>外网IPv6地址，公网可访问</p>
      */
     public void setWanVipv6(String WanVipv6) {
         this.WanVipv6 = WanVipv6;
     }
 
     /**
-     * Get 外网状态，0-未开通；1-已开通；2-关闭；3-开通中；4-关闭中 
-     * @return WanStatusIpv6 外网状态，0-未开通；1-已开通；2-关闭；3-开通中；4-关闭中
+     * Get <p>外网状态，0-未开通；1-已开通；2-关闭；3-开通中；4-关闭中</p> 
+     * @return WanStatusIpv6 <p>外网状态，0-未开通；1-已开通；2-关闭；3-开通中；4-关闭中</p>
      */
     public Long getWanStatusIpv6() {
         return this.WanStatusIpv6;
     }
 
     /**
-     * Set 外网状态，0-未开通；1-已开通；2-关闭；3-开通中；4-关闭中
-     * @param WanStatusIpv6 外网状态，0-未开通；1-已开通；2-关闭；3-开通中；4-关闭中
+     * Set <p>外网状态，0-未开通；1-已开通；2-关闭；3-开通中；4-关闭中</p>
+     * @param WanStatusIpv6 <p>外网状态，0-未开通；1-已开通；2-关闭；3-开通中；4-关闭中</p>
      */
     public void setWanStatusIpv6(Long WanStatusIpv6) {
         this.WanStatusIpv6 = WanStatusIpv6;
     }
 
     /**
-     * Get 外网IPv6端口 
-     * @return WanPortIpv6 外网IPv6端口
+     * Get <p>外网IPv6端口</p> 
+     * @return WanPortIpv6 <p>外网IPv6端口</p>
      */
     public Long getWanPortIpv6() {
         return this.WanPortIpv6;
     }
 
     /**
-     * Set 外网IPv6端口
-     * @param WanPortIpv6 外网IPv6端口
+     * Set <p>外网IPv6端口</p>
+     * @param WanPortIpv6 <p>外网IPv6端口</p>
      */
     public void setWanPortIpv6(Long WanPortIpv6) {
         this.WanPortIpv6 = WanPortIpv6;
     }
 
     /**
-     * Get 数据库引擎 
-     * @return DbEngine 数据库引擎
+     * Get <p>数据库引擎</p> 
+     * @return DbEngine <p>数据库引擎</p>
      */
     public String getDbEngine() {
         return this.DbEngine;
     }
 
     /**
-     * Set 数据库引擎
-     * @param DbEngine 数据库引擎
+     * Set <p>数据库引擎</p>
+     * @param DbEngine <p>数据库引擎</p>
      */
     public void setDbEngine(String DbEngine) {
         this.DbEngine = DbEngine;
     }
 
     /**
-     * Get 数据库版本 
-     * @return DbVersion 数据库版本
+     * Get <p>数据库版本</p> 
+     * @return DbVersion <p>数据库版本</p>
      */
     public String getDbVersion() {
         return this.DbVersion;
     }
 
     /**
-     * Set 数据库版本
-     * @param DbVersion 数据库版本
+     * Set <p>数据库版本</p>
+     * @param DbVersion <p>数据库版本</p>
      */
     public void setDbVersion(String DbVersion) {
         this.DbVersion = DbVersion;
     }
 
     /**
-     * Get 标签信息 
-     * @return ResourceTags 标签信息
+     * Get <p>标签信息</p> 
+     * @return ResourceTags <p>标签信息</p>
      */
     public ResourceTag [] getResourceTags() {
         return this.ResourceTags;
     }
 
     /**
-     * Set 标签信息
-     * @param ResourceTags 标签信息
+     * Set <p>标签信息</p>
+     * @param ResourceTags <p>标签信息</p>
      */
     public void setResourceTags(ResourceTag [] ResourceTags) {
         this.ResourceTags = ResourceTags;
     }
 
     /**
-     * Get DCN标志，0-无，1-主实例，2-灾备实例 
-     * @return DcnFlag DCN标志，0-无，1-主实例，2-灾备实例
+     * Get <p>DCN标志，0-无，1-主实例，2-灾备实例</p> 
+     * @return DcnFlag <p>DCN标志，0-无，1-主实例，2-灾备实例</p>
      */
     public Long getDcnFlag() {
         return this.DcnFlag;
     }
 
     /**
-     * Set DCN标志，0-无，1-主实例，2-灾备实例
-     * @param DcnFlag DCN标志，0-无，1-主实例，2-灾备实例
+     * Set <p>DCN标志，0-无，1-主实例，2-灾备实例</p>
+     * @param DcnFlag <p>DCN标志，0-无，1-主实例，2-灾备实例</p>
      */
     public void setDcnFlag(Long DcnFlag) {
         this.DcnFlag = DcnFlag;
     }
 
     /**
-     * Get DCN状态，0-无，1-创建中，2-同步中，3-已断开 
-     * @return DcnStatus DCN状态，0-无，1-创建中，2-同步中，3-已断开
+     * Get <p>DCN状态，0-无，1-创建中，2-同步中，3-已断开</p> 
+     * @return DcnStatus <p>DCN状态，0-无，1-创建中，2-同步中，3-已断开</p>
      */
     public Long getDcnStatus() {
         return this.DcnStatus;
     }
 
     /**
-     * Set DCN状态，0-无，1-创建中，2-同步中，3-已断开
-     * @param DcnStatus DCN状态，0-无，1-创建中，2-同步中，3-已断开
+     * Set <p>DCN状态，0-无，1-创建中，2-同步中，3-已断开</p>
+     * @param DcnStatus <p>DCN状态，0-无，1-创建中，2-同步中，3-已断开</p>
      */
     public void setDcnStatus(Long DcnStatus) {
         this.DcnStatus = DcnStatus;
     }
 
     /**
-     * Get DCN灾备实例数 
-     * @return DcnDstNum DCN灾备实例数
+     * Get <p>DCN灾备实例数</p> 
+     * @return DcnDstNum <p>DCN灾备实例数</p>
      */
     public Long getDcnDstNum() {
         return this.DcnDstNum;
     }
 
     /**
-     * Set DCN灾备实例数
-     * @param DcnDstNum DCN灾备实例数
+     * Set <p>DCN灾备实例数</p>
+     * @param DcnDstNum <p>DCN灾备实例数</p>
      */
     public void setDcnDstNum(Long DcnDstNum) {
         this.DcnDstNum = DcnDstNum;
     }
 
     /**
-     * Get 1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型） 
-     * @return InstanceType 1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
+     * Get <p>1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）</p> 
+     * @return InstanceType <p>1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）</p>
      */
     public Long getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
-     * @param InstanceType 1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
+     * Set <p>1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）</p>
+     * @param InstanceType <p>1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）</p>
      */
     public void setInstanceType(Long InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 实例的各个DB节点信息 
-     * @return NodesInfo 实例的各个DB节点信息
+     * Get <p>实例的各个DB节点信息</p> 
+     * @return NodesInfo <p>实例的各个DB节点信息</p>
      */
     public NodeInfo [] getNodesInfo() {
         return this.NodesInfo;
     }
 
     /**
-     * Set 实例的各个DB节点信息
-     * @param NodesInfo 实例的各个DB节点信息
+     * Set <p>实例的各个DB节点信息</p>
+     * @param NodesInfo <p>实例的各个DB节点信息</p>
      */
     public void setNodesInfo(NodeInfo [] NodesInfo) {
         this.NodesInfo = NodesInfo;
     }
 
     /**
-     * Get 实例是否支持设置用户连接数限制，内核为10.1暂不支持。 
-     * @return IsMaxUserConnectionsSupported 实例是否支持设置用户连接数限制，内核为10.1暂不支持。
+     * Get <p>实例是否支持设置用户连接数限制，内核为10.1暂不支持。</p> 
+     * @return IsMaxUserConnectionsSupported <p>实例是否支持设置用户连接数限制，内核为10.1暂不支持。</p>
      */
     public Boolean getIsMaxUserConnectionsSupported() {
         return this.IsMaxUserConnectionsSupported;
     }
 
     /**
-     * Set 实例是否支持设置用户连接数限制，内核为10.1暂不支持。
-     * @param IsMaxUserConnectionsSupported 实例是否支持设置用户连接数限制，内核为10.1暂不支持。
+     * Set <p>实例是否支持设置用户连接数限制，内核为10.1暂不支持。</p>
+     * @param IsMaxUserConnectionsSupported <p>实例是否支持设置用户连接数限制，内核为10.1暂不支持。</p>
      */
     public void setIsMaxUserConnectionsSupported(Boolean IsMaxUserConnectionsSupported) {
         this.IsMaxUserConnectionsSupported = IsMaxUserConnectionsSupported;
     }
 
     /**
-     * Get 对外显示的数据库版本 
-     * @return DbVersionId 对外显示的数据库版本
+     * Get <p>对外显示的数据库版本</p> 
+     * @return DbVersionId <p>对外显示的数据库版本</p>
      */
     public String getDbVersionId() {
         return this.DbVersionId;
     }
 
     /**
-     * Set 对外显示的数据库版本
-     * @param DbVersionId 对外显示的数据库版本
+     * Set <p>对外显示的数据库版本</p>
+     * @param DbVersionId <p>对外显示的数据库版本</p>
      */
     public void setDbVersionId(String DbVersionId) {
         this.DbVersionId = DbVersionId;
     }
 
     /**
-     * Get 加密状态, 0-未开启，1-已开启 
-     * @return EncryptStatus 加密状态, 0-未开启，1-已开启
+     * Get <p>加密状态, 0-未开启，1-已开启</p> 
+     * @return EncryptStatus <p>加密状态, 0-未开启，1-已开启</p>
      */
     public Long getEncryptStatus() {
         return this.EncryptStatus;
     }
 
     /**
-     * Set 加密状态, 0-未开启，1-已开启
-     * @param EncryptStatus 加密状态, 0-未开启，1-已开启
+     * Set <p>加密状态, 0-未开启，1-已开启</p>
+     * @param EncryptStatus <p>加密状态, 0-未开启，1-已开启</p>
      */
     public void setEncryptStatus(Long EncryptStatus) {
         this.EncryptStatus = EncryptStatus;
     }
 
     /**
-     * Get DCN的配置信息
+     * Get <p>DCN的配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReplicaConfig DCN的配置信息
+     * @return ReplicaConfig <p>DCN的配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DCNReplicaConfig getReplicaConfig() {
@@ -1300,9 +1300,9 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set DCN的配置信息
+     * Set <p>DCN的配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReplicaConfig DCN的配置信息
+     * @param ReplicaConfig <p>DCN的配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReplicaConfig(DCNReplicaConfig ReplicaConfig) {
@@ -1310,9 +1310,9 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get DCN的运行状态
+     * Get <p>DCN的运行状态</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReplicaStatus DCN的运行状态
+     * @return ReplicaStatus <p>DCN的运行状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DCNReplicaStatus getReplicaStatus() {
@@ -1320,9 +1320,9 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set DCN的运行状态
+     * Set <p>DCN的运行状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReplicaStatus DCN的运行状态
+     * @param ReplicaStatus <p>DCN的运行状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReplicaStatus(DCNReplicaStatus ReplicaStatus) {
@@ -1330,160 +1330,160 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 独享集群类型，0:公有云, 1:金融围笼, 2:CDC集群 
-     * @return ExclusterType 独享集群类型，0:公有云, 1:金融围笼, 2:CDC集群
+     * Get <p>独享集群类型，0:公有云, 1:金融围笼, 2:CDC集群</p> 
+     * @return ExclusterType <p>独享集群类型，0:公有云, 1:金融围笼, 2:CDC集群</p>
      */
     public Long getExclusterType() {
         return this.ExclusterType;
     }
 
     /**
-     * Set 独享集群类型，0:公有云, 1:金融围笼, 2:CDC集群
-     * @param ExclusterType 独享集群类型，0:公有云, 1:金融围笼, 2:CDC集群
+     * Set <p>独享集群类型，0:公有云, 1:金融围笼, 2:CDC集群</p>
+     * @param ExclusterType <p>独享集群类型，0:公有云, 1:金融围笼, 2:CDC集群</p>
      */
     public void setExclusterType(Long ExclusterType) {
         this.ExclusterType = ExclusterType;
     }
 
     /**
-     * Get VPC就近访问 
-     * @return RsAccessStrategy VPC就近访问
+     * Get <p>VPC就近访问</p> 
+     * @return RsAccessStrategy <p>VPC就近访问</p>
      */
     public Long getRsAccessStrategy() {
         return this.RsAccessStrategy;
     }
 
     /**
-     * Set VPC就近访问
-     * @param RsAccessStrategy VPC就近访问
+     * Set <p>VPC就近访问</p>
+     * @param RsAccessStrategy <p>VPC就近访问</p>
      */
     public void setRsAccessStrategy(Long RsAccessStrategy) {
         this.RsAccessStrategy = RsAccessStrategy;
     }
 
     /**
-     * Get 尚未回收的网络资源 
-     * @return ReservedNetResources 尚未回收的网络资源
+     * Get <p>尚未回收的网络资源</p> 
+     * @return ReservedNetResources <p>尚未回收的网络资源</p>
      */
     public ReservedNetResource [] getReservedNetResources() {
         return this.ReservedNetResources;
     }
 
     /**
-     * Set 尚未回收的网络资源
-     * @param ReservedNetResources 尚未回收的网络资源
+     * Set <p>尚未回收的网络资源</p>
+     * @param ReservedNetResources <p>尚未回收的网络资源</p>
      */
     public void setReservedNetResources(ReservedNetResource [] ReservedNetResources) {
         this.ReservedNetResources = ReservedNetResources;
     }
 
     /**
-     * Get 是否支持物理复制 
-     * @return IsPhysicalReplicationSupported 是否支持物理复制
+     * Get <p>是否支持物理复制</p> 
+     * @return IsPhysicalReplicationSupported <p>是否支持物理复制</p>
      */
     public Boolean getIsPhysicalReplicationSupported() {
         return this.IsPhysicalReplicationSupported;
     }
 
     /**
-     * Set 是否支持物理复制
-     * @param IsPhysicalReplicationSupported 是否支持物理复制
+     * Set <p>是否支持物理复制</p>
+     * @param IsPhysicalReplicationSupported <p>是否支持物理复制</p>
      */
     public void setIsPhysicalReplicationSupported(Boolean IsPhysicalReplicationSupported) {
         this.IsPhysicalReplicationSupported = IsPhysicalReplicationSupported;
     }
 
     /**
-     * Get 是否支持强同步DCN 
-     * @return IsDcnStrongSyncSupported 是否支持强同步DCN
+     * Get <p>是否支持强同步DCN</p> 
+     * @return IsDcnStrongSyncSupported <p>是否支持强同步DCN</p>
      */
     public Long getIsDcnStrongSyncSupported() {
         return this.IsDcnStrongSyncSupported;
     }
 
     /**
-     * Set 是否支持强同步DCN
-     * @param IsDcnStrongSyncSupported 是否支持强同步DCN
+     * Set <p>是否支持强同步DCN</p>
+     * @param IsDcnStrongSyncSupported <p>是否支持强同步DCN</p>
      */
     public void setIsDcnStrongSyncSupported(Long IsDcnStrongSyncSupported) {
         this.IsDcnStrongSyncSupported = IsDcnStrongSyncSupported;
     }
 
     /**
-     * Get 是否支持DCN切换 
-     * @return IsDcnSwitchSupported 是否支持DCN切换
+     * Get <p>是否支持DCN切换</p> 
+     * @return IsDcnSwitchSupported <p>是否支持DCN切换</p>
      */
     public Long getIsDcnSwitchSupported() {
         return this.IsDcnSwitchSupported;
     }
 
     /**
-     * Set 是否支持DCN切换
-     * @param IsDcnSwitchSupported 是否支持DCN切换
+     * Set <p>是否支持DCN切换</p>
+     * @param IsDcnSwitchSupported <p>是否支持DCN切换</p>
      */
     public void setIsDcnSwitchSupported(Long IsDcnSwitchSupported) {
         this.IsDcnSwitchSupported = IsDcnSwitchSupported;
     }
 
     /**
-     * Get proxy版本号 
-     * @return ProxyVersion proxy版本号
+     * Get <p>proxy版本号</p> 
+     * @return ProxyVersion <p>proxy版本号</p>
      */
     public String getProxyVersion() {
         return this.ProxyVersion;
     }
 
     /**
-     * Set proxy版本号
-     * @param ProxyVersion proxy版本号
+     * Set <p>proxy版本号</p>
+     * @param ProxyVersion <p>proxy版本号</p>
      */
     public void setProxyVersion(String ProxyVersion) {
         this.ProxyVersion = ProxyVersion;
     }
 
     /**
-     * Get Cpu类型，如：英特尔：Intel/AMD，海光：Hygon 
-     * @return CpuType Cpu类型，如：英特尔：Intel/AMD，海光：Hygon
+     * Get <p>Cpu类型，如：英特尔：Intel/AMD，海光：Hygon</p> 
+     * @return CpuType <p>Cpu类型，如：英特尔：Intel/AMD，海光：Hygon</p>
      */
     public String getCpuType() {
         return this.CpuType;
     }
 
     /**
-     * Set Cpu类型，如：英特尔：Intel/AMD，海光：Hygon
-     * @param CpuType Cpu类型，如：英特尔：Intel/AMD，海光：Hygon
+     * Set <p>Cpu类型，如：英特尔：Intel/AMD，海光：Hygon</p>
+     * @param CpuType <p>Cpu类型，如：英特尔：Intel/AMD，海光：Hygon</p>
      */
     public void setCpuType(String CpuType) {
         this.CpuType = CpuType;
     }
 
     /**
-     * Get 删除保护标记，1: 已开启删除保护，0: 未开启删除保护 
-     * @return ProtectedProperty 删除保护标记，1: 已开启删除保护，0: 未开启删除保护
+     * Get <p>删除保护标记，1: 已开启删除保护，0: 未开启删除保护</p> 
+     * @return ProtectedProperty <p>删除保护标记，1: 已开启删除保护，0: 未开启删除保护</p>
      */
     public Long getProtectedProperty() {
         return this.ProtectedProperty;
     }
 
     /**
-     * Set 删除保护标记，1: 已开启删除保护，0: 未开启删除保护
-     * @param ProtectedProperty 删除保护标记，1: 已开启删除保护，0: 未开启删除保护
+     * Set <p>删除保护标记，1: 已开启删除保护，0: 未开启删除保护</p>
+     * @param ProtectedProperty <p>删除保护标记，1: 已开启删除保护，0: 未开启删除保护</p>
      */
     public void setProtectedProperty(Long ProtectedProperty) {
         this.ProtectedProperty = ProtectedProperty;
     }
 
     /**
-     * Get 流程Id，标志实例当前所处的异步任务 
-     * @return FlowId 流程Id，标志实例当前所处的异步任务
+     * Get <p>流程Id，标志实例当前所处的异步任务</p> 
+     * @return FlowId <p>流程Id，标志实例当前所处的异步任务</p>
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 流程Id，标志实例当前所处的异步任务
-     * @param FlowId 流程Id，标志实例当前所处的异步任务
+     * Set <p>流程Id，标志实例当前所处的异步任务</p>
+     * @param FlowId <p>流程Id，标志实例当前所处的异步任务</p>
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;

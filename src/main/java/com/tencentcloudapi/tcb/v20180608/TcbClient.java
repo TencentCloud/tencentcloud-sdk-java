@@ -747,14 +747,14 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
-     *搜索CLS日志，TCB角色密钥访问
-     * @param req SearchClsLogRequest
-     * @return SearchClsLogResponse
+     *执行SQL语句
+     * @param req RunSqlRequest
+     * @return RunSqlResponse
      * @throws TencentCloudSDKException
      */
-    public SearchClsLogResponse SearchClsLog(SearchClsLogRequest req) throws TencentCloudSDKException{
+    public RunSqlResponse RunSql(RunSqlRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
-        return this.internalRequest(req, "SearchClsLog", SearchClsLogResponse.class);
+        return this.internalRequest(req, "RunSql", RunSqlResponse.class);
     }
 
     /**

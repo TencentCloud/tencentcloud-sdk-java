@@ -59,6 +59,13 @@ public class DescribeLaneRulesRequest extends AbstractModel {
     private String [] RuleIdList;
 
     /**
+    * 查询全部标记
+    */
+    @SerializedName("QueryAll")
+    @Expose
+    private Boolean QueryAll;
+
+    /**
      * Get 返回数量，默认为20，最大值为500。 
      * @return Limit 返回数量，默认为20，最大值为500。
      */
@@ -138,6 +145,22 @@ public class DescribeLaneRulesRequest extends AbstractModel {
         this.RuleIdList = RuleIdList;
     }
 
+    /**
+     * Get 查询全部标记 
+     * @return QueryAll 查询全部标记
+     */
+    public Boolean getQueryAll() {
+        return this.QueryAll;
+    }
+
+    /**
+     * Set 查询全部标记
+     * @param QueryAll 查询全部标记
+     */
+    public void setQueryAll(Boolean QueryAll) {
+        this.QueryAll = QueryAll;
+    }
+
     public DescribeLaneRulesRequest() {
     }
 
@@ -164,6 +187,9 @@ public class DescribeLaneRulesRequest extends AbstractModel {
                 this.RuleIdList[i] = new String(source.RuleIdList[i]);
             }
         }
+        if (source.QueryAll != null) {
+            this.QueryAll = new Boolean(source.QueryAll);
+        }
     }
 
 
@@ -176,6 +202,7 @@ public class DescribeLaneRulesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SearchWord", this.SearchWord);
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamArraySimple(map, prefix + "RuleIdList.", this.RuleIdList);
+        this.setParamSimple(map, prefix + "QueryAll", this.QueryAll);
 
     }
 }

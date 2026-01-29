@@ -21,7 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CancelAssignTWeCallLicenseResponse extends AbstractModel {
+public class CreateDeviceSDPAnswerResponse extends AbstractModel {
+
+    /**
+    * SDP应答
+    */
+    @SerializedName("SDPAnswer")
+    @Expose
+    private String SDPAnswer;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -29,6 +36,22 @@ public class CancelAssignTWeCallLicenseResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get SDP应答 
+     * @return SDPAnswer SDP应答
+     */
+    public String getSDPAnswer() {
+        return this.SDPAnswer;
+    }
+
+    /**
+     * Set SDP应答
+     * @param SDPAnswer SDP应答
+     */
+    public void setSDPAnswer(String SDPAnswer) {
+        this.SDPAnswer = SDPAnswer;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -46,14 +69,17 @@ public class CancelAssignTWeCallLicenseResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CancelAssignTWeCallLicenseResponse() {
+    public CreateDeviceSDPAnswerResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CancelAssignTWeCallLicenseResponse(CancelAssignTWeCallLicenseResponse source) {
+    public CreateDeviceSDPAnswerResponse(CreateDeviceSDPAnswerResponse source) {
+        if (source.SDPAnswer != null) {
+            this.SDPAnswer = new String(source.SDPAnswer);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +90,7 @@ public class CancelAssignTWeCallLicenseResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "SDPAnswer", this.SDPAnswer);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

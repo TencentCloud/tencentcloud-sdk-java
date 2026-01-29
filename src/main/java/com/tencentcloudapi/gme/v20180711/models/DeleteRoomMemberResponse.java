@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteRoomMemberResponse extends AbstractModel {
 
     /**
-    * 剔除房间或成员的操作结果
+    * <p>剔除房间或成员的操作结果</p>
     */
     @SerializedName("DeleteResult")
     @Expose
@@ -38,16 +38,16 @@ public class DeleteRoomMemberResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 剔除房间或成员的操作结果 
-     * @return DeleteResult 剔除房间或成员的操作结果
+     * Get <p>剔除房间或成员的操作结果</p> 
+     * @return DeleteResult <p>剔除房间或成员的操作结果</p>
      */
     public DeleteResult getDeleteResult() {
         return this.DeleteResult;
     }
 
     /**
-     * Set 剔除房间或成员的操作结果
-     * @param DeleteResult 剔除房间或成员的操作结果
+     * Set <p>剔除房间或成员的操作结果</p>
+     * @param DeleteResult <p>剔除房间或成员的操作结果</p>
      */
     public void setDeleteResult(DeleteResult DeleteResult) {
         this.DeleteResult = DeleteResult;

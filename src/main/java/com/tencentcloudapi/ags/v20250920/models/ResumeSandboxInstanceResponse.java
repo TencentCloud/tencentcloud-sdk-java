@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.gme.v20180711.models;
+package com.tencentcloudapi.ags.v20250920.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAppStatisticsResponse extends AbstractModel {
-
-    /**
-    * <p>应用用量统计数据</p>
-    */
-    @SerializedName("Data")
-    @Expose
-    private DescribeAppStatisticsResp Data;
+public class ResumeSandboxInstanceResponse extends AbstractModel {
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -36,22 +29,6 @@ public class DescribeAppStatisticsResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get <p>应用用量统计数据</p> 
-     * @return Data <p>应用用量统计数据</p>
-     */
-    public DescribeAppStatisticsResp getData() {
-        return this.Data;
-    }
-
-    /**
-     * Set <p>应用用量统计数据</p>
-     * @param Data <p>应用用量统计数据</p>
-     */
-    public void setData(DescribeAppStatisticsResp Data) {
-        this.Data = Data;
-    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -69,17 +46,14 @@ public class DescribeAppStatisticsResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeAppStatisticsResponse() {
+    public ResumeSandboxInstanceResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeAppStatisticsResponse(DescribeAppStatisticsResponse source) {
-        if (source.Data != null) {
-            this.Data = new DescribeAppStatisticsResp(source.Data);
-        }
+    public ResumeSandboxInstanceResponse(ResumeSandboxInstanceResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,7 +64,6 @@ public class DescribeAppStatisticsResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
