@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class UpdateCertificateInstanceResponse extends AbstractModel {
 
     /**
-    * 云资源更新任务ID， DeployRecordId为0表示任务进行中， 重复请求这个接口， 当返回DeployRecordId大于0则表示任务创建成功。 未创建成功则会抛出异常
+    * <p>云资源更新任务ID， DeployRecordId为0表示任务进行中， 重复请求这个接口， 当返回DeployRecordId大于0则表示任务创建成功。 未创建成功则会抛出异常</p>
     */
     @SerializedName("DeployRecordId")
     @Expose
     private Long DeployRecordId;
 
     /**
-    * 更新任务创建状态；1表示创建成功； 0表示当前存在更新中的任务，未创建新的更新任务；返回值DeployRecordId为更新中的任务ID
+    * <p>更新任务创建状态；1表示创建成功； 0表示当前存在更新中的任务，未创建新的更新任务；返回值DeployRecordId为更新中的任务ID</p>
     */
     @SerializedName("DeployStatus")
     @Expose
     private Long DeployStatus;
 
     /**
-    * 更新异步创建任务进度详情
+    * <p>更新异步创建任务进度详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateSyncProgress")
@@ -53,41 +53,41 @@ public class UpdateCertificateInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 云资源更新任务ID， DeployRecordId为0表示任务进行中， 重复请求这个接口， 当返回DeployRecordId大于0则表示任务创建成功。 未创建成功则会抛出异常 
-     * @return DeployRecordId 云资源更新任务ID， DeployRecordId为0表示任务进行中， 重复请求这个接口， 当返回DeployRecordId大于0则表示任务创建成功。 未创建成功则会抛出异常
+     * Get <p>云资源更新任务ID， DeployRecordId为0表示任务进行中， 重复请求这个接口， 当返回DeployRecordId大于0则表示任务创建成功。 未创建成功则会抛出异常</p> 
+     * @return DeployRecordId <p>云资源更新任务ID， DeployRecordId为0表示任务进行中， 重复请求这个接口， 当返回DeployRecordId大于0则表示任务创建成功。 未创建成功则会抛出异常</p>
      */
     public Long getDeployRecordId() {
         return this.DeployRecordId;
     }
 
     /**
-     * Set 云资源更新任务ID， DeployRecordId为0表示任务进行中， 重复请求这个接口， 当返回DeployRecordId大于0则表示任务创建成功。 未创建成功则会抛出异常
-     * @param DeployRecordId 云资源更新任务ID， DeployRecordId为0表示任务进行中， 重复请求这个接口， 当返回DeployRecordId大于0则表示任务创建成功。 未创建成功则会抛出异常
+     * Set <p>云资源更新任务ID， DeployRecordId为0表示任务进行中， 重复请求这个接口， 当返回DeployRecordId大于0则表示任务创建成功。 未创建成功则会抛出异常</p>
+     * @param DeployRecordId <p>云资源更新任务ID， DeployRecordId为0表示任务进行中， 重复请求这个接口， 当返回DeployRecordId大于0则表示任务创建成功。 未创建成功则会抛出异常</p>
      */
     public void setDeployRecordId(Long DeployRecordId) {
         this.DeployRecordId = DeployRecordId;
     }
 
     /**
-     * Get 更新任务创建状态；1表示创建成功； 0表示当前存在更新中的任务，未创建新的更新任务；返回值DeployRecordId为更新中的任务ID 
-     * @return DeployStatus 更新任务创建状态；1表示创建成功； 0表示当前存在更新中的任务，未创建新的更新任务；返回值DeployRecordId为更新中的任务ID
+     * Get <p>更新任务创建状态；1表示创建成功； 0表示当前存在更新中的任务，未创建新的更新任务；返回值DeployRecordId为更新中的任务ID</p> 
+     * @return DeployStatus <p>更新任务创建状态；1表示创建成功； 0表示当前存在更新中的任务，未创建新的更新任务；返回值DeployRecordId为更新中的任务ID</p>
      */
     public Long getDeployStatus() {
         return this.DeployStatus;
     }
 
     /**
-     * Set 更新任务创建状态；1表示创建成功； 0表示当前存在更新中的任务，未创建新的更新任务；返回值DeployRecordId为更新中的任务ID
-     * @param DeployStatus 更新任务创建状态；1表示创建成功； 0表示当前存在更新中的任务，未创建新的更新任务；返回值DeployRecordId为更新中的任务ID
+     * Set <p>更新任务创建状态；1表示创建成功； 0表示当前存在更新中的任务，未创建新的更新任务；返回值DeployRecordId为更新中的任务ID</p>
+     * @param DeployStatus <p>更新任务创建状态；1表示创建成功； 0表示当前存在更新中的任务，未创建新的更新任务；返回值DeployRecordId为更新中的任务ID</p>
      */
     public void setDeployStatus(Long DeployStatus) {
         this.DeployStatus = DeployStatus;
     }
 
     /**
-     * Get 更新异步创建任务进度详情
+     * Get <p>更新异步创建任务进度详情</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateSyncProgress 更新异步创建任务进度详情
+     * @return UpdateSyncProgress <p>更新异步创建任务进度详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public UpdateSyncProgress [] getUpdateSyncProgress() {
@@ -95,9 +95,9 @@ public class UpdateCertificateInstanceResponse extends AbstractModel {
     }
 
     /**
-     * Set 更新异步创建任务进度详情
+     * Set <p>更新异步创建任务进度详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateSyncProgress 更新异步创建任务进度详情
+     * @param UpdateSyncProgress <p>更新异步创建任务进度详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateSyncProgress(UpdateSyncProgress [] UpdateSyncProgress) {

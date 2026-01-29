@@ -1101,6 +1101,17 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *此接口（CreateLMInformationExtractionTaskFieldFeedback）用于创建合同智能提取任务字段结果的反馈。
+     * @param req CreateLMInformationExtractionTaskFieldFeedbackRequest
+     * @return CreateLMInformationExtractionTaskFieldFeedbackResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLMInformationExtractionTaskFieldFeedbackResponse CreateLMInformationExtractionTaskFieldFeedback(CreateLMInformationExtractionTaskFieldFeedbackRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateLMInformationExtractionTaskFieldFeedback", CreateLMInformationExtractionTaskFieldFeedbackResponse.class);
+    }
+
+    /**
      *该接口用于获取创建法人章的二维码，需要通过微信扫描。扫描后将跳转到腾讯电子签署，进入到创建法人章的流程。
 
 **注意**
@@ -1409,6 +1420,17 @@ public class EssClient extends AbstractClient{
     public CreateReleaseFlowResponse CreateReleaseFlow(CreateReleaseFlowRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateReleaseFlow", CreateReleaseFlowResponse.class);
+    }
+
+    /**
+     *此接口（CreateRiskIdentificationTaskFeedback）用于创建合同审查任务结果反馈。
+     * @param req CreateRiskIdentificationTaskFeedbackRequest
+     * @return CreateRiskIdentificationTaskFeedbackResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRiskIdentificationTaskFeedbackResponse CreateRiskIdentificationTaskFeedback(CreateRiskIdentificationTaskFeedbackRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateRiskIdentificationTaskFeedback", CreateRiskIdentificationTaskFeedbackResponse.class);
     }
 
     /**
@@ -2102,6 +2124,17 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *此接口（DescribeLMInformationExtractionTaskFieldFeedback）用于查询合同智能提取任务字段反馈信息。
+     * @param req DescribeLMInformationExtractionTaskFieldFeedbackRequest
+     * @return DescribeLMInformationExtractionTaskFieldFeedbackResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLMInformationExtractionTaskFieldFeedbackResponse DescribeLMInformationExtractionTaskFieldFeedback(DescribeLMInformationExtractionTaskFieldFeedbackRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLMInformationExtractionTaskFieldFeedback", DescribeLMInformationExtractionTaskFieldFeedbackResponse.class);
+    }
+
+    /**
      *查询企业认证状态- 仅通过[CreateOrganizationAuthUrl](https://qian.tencent.com/developers/companyApis/organizations/CreateOrganizationAuthUrl) 和[CreateBatchOrganizationRegistrationTasks](https://qian.tencent.com/developers/companyApis/organizations/CreateBatchOrganizationRegistrationTasks)这两个接口进行引导认证的企业，调用方企业可以依据这个接口，查询认证状态。
      * @param req DescribeOrganizationAuthStatusRequest
      * @return DescribeOrganizationAuthStatusResponse
@@ -2158,6 +2191,17 @@ public class EssClient extends AbstractClient{
     public DescribePersonCertificateResponse DescribePersonCertificate(DescribePersonCertificateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribePersonCertificate", DescribePersonCertificateResponse.class);
+    }
+
+    /**
+     *此接口（DescribeRiskIdentificationTaskFeedback）用于查询合同审查任务结果反馈信息
+     * @param req DescribeRiskIdentificationTaskFeedbackRequest
+     * @return DescribeRiskIdentificationTaskFeedbackResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRiskIdentificationTaskFeedbackResponse DescribeRiskIdentificationTaskFeedback(DescribeRiskIdentificationTaskFeedbackRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRiskIdentificationTaskFeedback", DescribeRiskIdentificationTaskFeedbackResponse.class);
     }
 
     /**

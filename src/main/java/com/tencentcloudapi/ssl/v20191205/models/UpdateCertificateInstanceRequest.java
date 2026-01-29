@@ -24,140 +24,140 @@ import java.util.HashMap;
 public class UpdateCertificateInstanceRequest extends AbstractModel {
 
     /**
-    * 一键更新的旧证书ID。 通过查询该证书ID绑定的云资源，然后使用新证书对这些云资源进行更新
+    * <p>一键更新的旧证书ID。 通过查询该证书ID绑定的云资源，然后使用新证书对这些云资源进行更新</p>
     */
     @SerializedName("OldCertificateId")
     @Expose
     private String OldCertificateId;
 
     /**
-    * 需要部署的资源类型，参数值可选（小写）：clb、cdn、waf、live、ddos、teo、apigateway、vod、tke、tcb、tse、cos
+    * <p>需要部署的资源类型，参数值可选（小写）：clb、cdn、waf、live、ddos、teo、apigateway、vod、tke、tcb、tse、cos、mqtt、scf、tdmq、gaap</p>
     */
     @SerializedName("ResourceTypes")
     @Expose
     private String [] ResourceTypes;
 
     /**
-    * 一键更新的新证书ID。 不传该参数，则公钥证书和私钥证书必传
+    * <p>一键更新的新证书ID。 不传该参数，则公钥证书和私钥证书必传</p>
     */
     @SerializedName("CertificateId")
     @Expose
     private String CertificateId;
 
     /**
-    * 需要部署的地域列表（废弃）
+    * <p>需要部署的地域列表（废弃）</p>
     */
     @SerializedName("Regions")
     @Expose
     private String [] Regions;
 
     /**
-    * 云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb、tke、apigateway、waf、tcb、tse、cos、mqtt
+    * <p>云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb、tke、apigateway、waf、tcb、tse、cos、mqtt、scf、tdmq</p>
     */
     @SerializedName("ResourceTypesRegions")
     @Expose
     private ResourceTypeRegions [] ResourceTypesRegions;
 
     /**
-    * 公钥证书， 若上传公钥证书，那么私钥证书必传。  则CertificateId不用传
+    * <p>公钥证书， 若上传公钥证书，那么私钥证书必传。  则CertificateId不用传</p>
     */
     @SerializedName("CertificatePublicKey")
     @Expose
     private String CertificatePublicKey;
 
     /**
-    * 私钥证书，若上传私钥证书， 那么公钥证书必传；  则CertificateId不用传
+    * <p>私钥证书，若上传私钥证书， 那么公钥证书必传；  则CertificateId不用传</p>
     */
     @SerializedName("CertificatePrivateKey")
     @Expose
     private String CertificatePrivateKey;
 
     /**
-    * 旧证书是否忽略到期提醒  0:不忽略通知。1:忽略通知，忽略OldCertificateId到期提醒
+    * <p>旧证书是否忽略到期提醒  0:不忽略通知。1:忽略通知，忽略OldCertificateId到期提醒</p>
     */
     @SerializedName("ExpiringNotificationSwitch")
     @Expose
     private Long ExpiringNotificationSwitch;
 
     /**
-    * 相同的证书是否允许重复上传，若选择上传公钥私钥证书， 则可以配置该参数。 若存在相同重复证书，则更新任务会失败
+    * <p>相同的证书是否允许重复上传，若选择上传公钥私钥证书， 则可以配置该参数。 若存在相同重复证书，则更新任务会失败</p>
     */
     @SerializedName("Repeatable")
     @Expose
     private Boolean Repeatable;
 
     /**
-    * 是否允许下载，若选择上传公私钥证书， 则可以配置该参数
+    * <p>是否允许下载，若选择上传公私钥证书， 则可以配置该参数</p>
     */
     @SerializedName("AllowDownload")
     @Expose
     private Boolean AllowDownload;
 
     /**
-    * 标签列表，若选择上传公私钥证书， 则可以配置该参数
+    * <p>标签列表，若选择上传公私钥证书， 则可以配置该参数</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tags [] Tags;
 
     /**
-    * 项目 ID，若选择上传公私钥证书， 则可以配置该参数
+    * <p>项目 ID，若选择上传公私钥证书， 则可以配置该参数</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-     * Get 一键更新的旧证书ID。 通过查询该证书ID绑定的云资源，然后使用新证书对这些云资源进行更新 
-     * @return OldCertificateId 一键更新的旧证书ID。 通过查询该证书ID绑定的云资源，然后使用新证书对这些云资源进行更新
+     * Get <p>一键更新的旧证书ID。 通过查询该证书ID绑定的云资源，然后使用新证书对这些云资源进行更新</p> 
+     * @return OldCertificateId <p>一键更新的旧证书ID。 通过查询该证书ID绑定的云资源，然后使用新证书对这些云资源进行更新</p>
      */
     public String getOldCertificateId() {
         return this.OldCertificateId;
     }
 
     /**
-     * Set 一键更新的旧证书ID。 通过查询该证书ID绑定的云资源，然后使用新证书对这些云资源进行更新
-     * @param OldCertificateId 一键更新的旧证书ID。 通过查询该证书ID绑定的云资源，然后使用新证书对这些云资源进行更新
+     * Set <p>一键更新的旧证书ID。 通过查询该证书ID绑定的云资源，然后使用新证书对这些云资源进行更新</p>
+     * @param OldCertificateId <p>一键更新的旧证书ID。 通过查询该证书ID绑定的云资源，然后使用新证书对这些云资源进行更新</p>
      */
     public void setOldCertificateId(String OldCertificateId) {
         this.OldCertificateId = OldCertificateId;
     }
 
     /**
-     * Get 需要部署的资源类型，参数值可选（小写）：clb、cdn、waf、live、ddos、teo、apigateway、vod、tke、tcb、tse、cos 
-     * @return ResourceTypes 需要部署的资源类型，参数值可选（小写）：clb、cdn、waf、live、ddos、teo、apigateway、vod、tke、tcb、tse、cos
+     * Get <p>需要部署的资源类型，参数值可选（小写）：clb、cdn、waf、live、ddos、teo、apigateway、vod、tke、tcb、tse、cos、mqtt、scf、tdmq、gaap</p> 
+     * @return ResourceTypes <p>需要部署的资源类型，参数值可选（小写）：clb、cdn、waf、live、ddos、teo、apigateway、vod、tke、tcb、tse、cos、mqtt、scf、tdmq、gaap</p>
      */
     public String [] getResourceTypes() {
         return this.ResourceTypes;
     }
 
     /**
-     * Set 需要部署的资源类型，参数值可选（小写）：clb、cdn、waf、live、ddos、teo、apigateway、vod、tke、tcb、tse、cos
-     * @param ResourceTypes 需要部署的资源类型，参数值可选（小写）：clb、cdn、waf、live、ddos、teo、apigateway、vod、tke、tcb、tse、cos
+     * Set <p>需要部署的资源类型，参数值可选（小写）：clb、cdn、waf、live、ddos、teo、apigateway、vod、tke、tcb、tse、cos、mqtt、scf、tdmq、gaap</p>
+     * @param ResourceTypes <p>需要部署的资源类型，参数值可选（小写）：clb、cdn、waf、live、ddos、teo、apigateway、vod、tke、tcb、tse、cos、mqtt、scf、tdmq、gaap</p>
      */
     public void setResourceTypes(String [] ResourceTypes) {
         this.ResourceTypes = ResourceTypes;
     }
 
     /**
-     * Get 一键更新的新证书ID。 不传该参数，则公钥证书和私钥证书必传 
-     * @return CertificateId 一键更新的新证书ID。 不传该参数，则公钥证书和私钥证书必传
+     * Get <p>一键更新的新证书ID。 不传该参数，则公钥证书和私钥证书必传</p> 
+     * @return CertificateId <p>一键更新的新证书ID。 不传该参数，则公钥证书和私钥证书必传</p>
      */
     public String getCertificateId() {
         return this.CertificateId;
     }
 
     /**
-     * Set 一键更新的新证书ID。 不传该参数，则公钥证书和私钥证书必传
-     * @param CertificateId 一键更新的新证书ID。 不传该参数，则公钥证书和私钥证书必传
+     * Set <p>一键更新的新证书ID。 不传该参数，则公钥证书和私钥证书必传</p>
+     * @param CertificateId <p>一键更新的新证书ID。 不传该参数，则公钥证书和私钥证书必传</p>
      */
     public void setCertificateId(String CertificateId) {
         this.CertificateId = CertificateId;
     }
 
     /**
-     * Get 需要部署的地域列表（废弃） 
-     * @return Regions 需要部署的地域列表（废弃）
+     * Get <p>需要部署的地域列表（废弃）</p> 
+     * @return Regions <p>需要部署的地域列表（废弃）</p>
      * @deprecated
      */
     @Deprecated
@@ -166,8 +166,8 @@ public class UpdateCertificateInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Set 需要部署的地域列表（废弃）
-     * @param Regions 需要部署的地域列表（废弃）
+     * Set <p>需要部署的地域列表（废弃）</p>
+     * @param Regions <p>需要部署的地域列表（废弃）</p>
      * @deprecated
      */
     @Deprecated
@@ -176,128 +176,128 @@ public class UpdateCertificateInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb、tke、apigateway、waf、tcb、tse、cos、mqtt 
-     * @return ResourceTypesRegions 云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb、tke、apigateway、waf、tcb、tse、cos、mqtt
+     * Get <p>云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb、tke、apigateway、waf、tcb、tse、cos、mqtt、scf、tdmq</p> 
+     * @return ResourceTypesRegions <p>云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb、tke、apigateway、waf、tcb、tse、cos、mqtt、scf、tdmq</p>
      */
     public ResourceTypeRegions [] getResourceTypesRegions() {
         return this.ResourceTypesRegions;
     }
 
     /**
-     * Set 云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb、tke、apigateway、waf、tcb、tse、cos、mqtt
-     * @param ResourceTypesRegions 云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb、tke、apigateway、waf、tcb、tse、cos、mqtt
+     * Set <p>云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb、tke、apigateway、waf、tcb、tse、cos、mqtt、scf、tdmq</p>
+     * @param ResourceTypesRegions <p>云资源需要部署的地域列表，支持地域的云资源类型必传，取值：clb、tke、apigateway、waf、tcb、tse、cos、mqtt、scf、tdmq</p>
      */
     public void setResourceTypesRegions(ResourceTypeRegions [] ResourceTypesRegions) {
         this.ResourceTypesRegions = ResourceTypesRegions;
     }
 
     /**
-     * Get 公钥证书， 若上传公钥证书，那么私钥证书必传。  则CertificateId不用传 
-     * @return CertificatePublicKey 公钥证书， 若上传公钥证书，那么私钥证书必传。  则CertificateId不用传
+     * Get <p>公钥证书， 若上传公钥证书，那么私钥证书必传。  则CertificateId不用传</p> 
+     * @return CertificatePublicKey <p>公钥证书， 若上传公钥证书，那么私钥证书必传。  则CertificateId不用传</p>
      */
     public String getCertificatePublicKey() {
         return this.CertificatePublicKey;
     }
 
     /**
-     * Set 公钥证书， 若上传公钥证书，那么私钥证书必传。  则CertificateId不用传
-     * @param CertificatePublicKey 公钥证书， 若上传公钥证书，那么私钥证书必传。  则CertificateId不用传
+     * Set <p>公钥证书， 若上传公钥证书，那么私钥证书必传。  则CertificateId不用传</p>
+     * @param CertificatePublicKey <p>公钥证书， 若上传公钥证书，那么私钥证书必传。  则CertificateId不用传</p>
      */
     public void setCertificatePublicKey(String CertificatePublicKey) {
         this.CertificatePublicKey = CertificatePublicKey;
     }
 
     /**
-     * Get 私钥证书，若上传私钥证书， 那么公钥证书必传；  则CertificateId不用传 
-     * @return CertificatePrivateKey 私钥证书，若上传私钥证书， 那么公钥证书必传；  则CertificateId不用传
+     * Get <p>私钥证书，若上传私钥证书， 那么公钥证书必传；  则CertificateId不用传</p> 
+     * @return CertificatePrivateKey <p>私钥证书，若上传私钥证书， 那么公钥证书必传；  则CertificateId不用传</p>
      */
     public String getCertificatePrivateKey() {
         return this.CertificatePrivateKey;
     }
 
     /**
-     * Set 私钥证书，若上传私钥证书， 那么公钥证书必传；  则CertificateId不用传
-     * @param CertificatePrivateKey 私钥证书，若上传私钥证书， 那么公钥证书必传；  则CertificateId不用传
+     * Set <p>私钥证书，若上传私钥证书， 那么公钥证书必传；  则CertificateId不用传</p>
+     * @param CertificatePrivateKey <p>私钥证书，若上传私钥证书， 那么公钥证书必传；  则CertificateId不用传</p>
      */
     public void setCertificatePrivateKey(String CertificatePrivateKey) {
         this.CertificatePrivateKey = CertificatePrivateKey;
     }
 
     /**
-     * Get 旧证书是否忽略到期提醒  0:不忽略通知。1:忽略通知，忽略OldCertificateId到期提醒 
-     * @return ExpiringNotificationSwitch 旧证书是否忽略到期提醒  0:不忽略通知。1:忽略通知，忽略OldCertificateId到期提醒
+     * Get <p>旧证书是否忽略到期提醒  0:不忽略通知。1:忽略通知，忽略OldCertificateId到期提醒</p> 
+     * @return ExpiringNotificationSwitch <p>旧证书是否忽略到期提醒  0:不忽略通知。1:忽略通知，忽略OldCertificateId到期提醒</p>
      */
     public Long getExpiringNotificationSwitch() {
         return this.ExpiringNotificationSwitch;
     }
 
     /**
-     * Set 旧证书是否忽略到期提醒  0:不忽略通知。1:忽略通知，忽略OldCertificateId到期提醒
-     * @param ExpiringNotificationSwitch 旧证书是否忽略到期提醒  0:不忽略通知。1:忽略通知，忽略OldCertificateId到期提醒
+     * Set <p>旧证书是否忽略到期提醒  0:不忽略通知。1:忽略通知，忽略OldCertificateId到期提醒</p>
+     * @param ExpiringNotificationSwitch <p>旧证书是否忽略到期提醒  0:不忽略通知。1:忽略通知，忽略OldCertificateId到期提醒</p>
      */
     public void setExpiringNotificationSwitch(Long ExpiringNotificationSwitch) {
         this.ExpiringNotificationSwitch = ExpiringNotificationSwitch;
     }
 
     /**
-     * Get 相同的证书是否允许重复上传，若选择上传公钥私钥证书， 则可以配置该参数。 若存在相同重复证书，则更新任务会失败 
-     * @return Repeatable 相同的证书是否允许重复上传，若选择上传公钥私钥证书， 则可以配置该参数。 若存在相同重复证书，则更新任务会失败
+     * Get <p>相同的证书是否允许重复上传，若选择上传公钥私钥证书， 则可以配置该参数。 若存在相同重复证书，则更新任务会失败</p> 
+     * @return Repeatable <p>相同的证书是否允许重复上传，若选择上传公钥私钥证书， 则可以配置该参数。 若存在相同重复证书，则更新任务会失败</p>
      */
     public Boolean getRepeatable() {
         return this.Repeatable;
     }
 
     /**
-     * Set 相同的证书是否允许重复上传，若选择上传公钥私钥证书， 则可以配置该参数。 若存在相同重复证书，则更新任务会失败
-     * @param Repeatable 相同的证书是否允许重复上传，若选择上传公钥私钥证书， 则可以配置该参数。 若存在相同重复证书，则更新任务会失败
+     * Set <p>相同的证书是否允许重复上传，若选择上传公钥私钥证书， 则可以配置该参数。 若存在相同重复证书，则更新任务会失败</p>
+     * @param Repeatable <p>相同的证书是否允许重复上传，若选择上传公钥私钥证书， 则可以配置该参数。 若存在相同重复证书，则更新任务会失败</p>
      */
     public void setRepeatable(Boolean Repeatable) {
         this.Repeatable = Repeatable;
     }
 
     /**
-     * Get 是否允许下载，若选择上传公私钥证书， 则可以配置该参数 
-     * @return AllowDownload 是否允许下载，若选择上传公私钥证书， 则可以配置该参数
+     * Get <p>是否允许下载，若选择上传公私钥证书， 则可以配置该参数</p> 
+     * @return AllowDownload <p>是否允许下载，若选择上传公私钥证书， 则可以配置该参数</p>
      */
     public Boolean getAllowDownload() {
         return this.AllowDownload;
     }
 
     /**
-     * Set 是否允许下载，若选择上传公私钥证书， 则可以配置该参数
-     * @param AllowDownload 是否允许下载，若选择上传公私钥证书， 则可以配置该参数
+     * Set <p>是否允许下载，若选择上传公私钥证书， 则可以配置该参数</p>
+     * @param AllowDownload <p>是否允许下载，若选择上传公私钥证书， 则可以配置该参数</p>
      */
     public void setAllowDownload(Boolean AllowDownload) {
         this.AllowDownload = AllowDownload;
     }
 
     /**
-     * Get 标签列表，若选择上传公私钥证书， 则可以配置该参数 
-     * @return Tags 标签列表，若选择上传公私钥证书， 则可以配置该参数
+     * Get <p>标签列表，若选择上传公私钥证书， 则可以配置该参数</p> 
+     * @return Tags <p>标签列表，若选择上传公私钥证书， 则可以配置该参数</p>
      */
     public Tags [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签列表，若选择上传公私钥证书， 则可以配置该参数
-     * @param Tags 标签列表，若选择上传公私钥证书， 则可以配置该参数
+     * Set <p>标签列表，若选择上传公私钥证书， 则可以配置该参数</p>
+     * @param Tags <p>标签列表，若选择上传公私钥证书， 则可以配置该参数</p>
      */
     public void setTags(Tags [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 项目 ID，若选择上传公私钥证书， 则可以配置该参数 
-     * @return ProjectId 项目 ID，若选择上传公私钥证书， 则可以配置该参数
+     * Get <p>项目 ID，若选择上传公私钥证书， 则可以配置该参数</p> 
+     * @return ProjectId <p>项目 ID，若选择上传公私钥证书， 则可以配置该参数</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目 ID，若选择上传公私钥证书， 则可以配置该参数
-     * @param ProjectId 项目 ID，若选择上传公私钥证书， 则可以配置该参数
+     * Set <p>项目 ID，若选择上传公私钥证书， 则可以配置该参数</p>
+     * @param ProjectId <p>项目 ID，若选择上传公私钥证书， 则可以配置该参数</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;

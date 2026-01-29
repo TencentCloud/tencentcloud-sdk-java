@@ -784,4 +784,18 @@ public class BillingClient extends AbstractClient{
         return this.internalRequest(req, "RenewInstance", RenewInstanceResponse.class);
     }
 
+    /**
+     *注意事项：
+1、本接口支持对包年包月实例设置自动续费模式及周期
+2、可通过实例查询接口获取到产品编码、地域编码
+3、子用户使用该接口时，应具备QcloudFinanceRenewManageFullAccess权限策略。
+     * @param req SetRenewalRequest
+     * @return SetRenewalResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetRenewalResponse SetRenewal(SetRenewalRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SetRenewal", SetRenewalResponse.class);
+    }
+
 }

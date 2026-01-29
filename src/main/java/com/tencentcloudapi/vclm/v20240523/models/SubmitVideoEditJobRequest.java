@@ -67,6 +67,13 @@ public class SubmitVideoEditJobRequest extends AbstractModel {
     private Image Image;
 
     /**
+    * 扩展字段。
+    */
+    @SerializedName("VideoEditParam")
+    @Expose
+    private VideoEditParam VideoEditParam;
+
+    /**
     * 为生成视频添加标识的开关，默认为1。传0 需前往  [控制台](https://console.cloud.tencent.com/vtc/setting)  申请开启显式标识自主完成后方可生效。
 1：添加标识；
 0：不添加标识；
@@ -216,6 +223,22 @@ public class SubmitVideoEditJobRequest extends AbstractModel {
     }
 
     /**
+     * Get 扩展字段。 
+     * @return VideoEditParam 扩展字段。
+     */
+    public VideoEditParam getVideoEditParam() {
+        return this.VideoEditParam;
+    }
+
+    /**
+     * Set 扩展字段。
+     * @param VideoEditParam 扩展字段。
+     */
+    public void setVideoEditParam(VideoEditParam VideoEditParam) {
+        this.VideoEditParam = VideoEditParam;
+    }
+
+    /**
      * Get 为生成视频添加标识的开关，默认为1。传0 需前往  [控制台](https://console.cloud.tencent.com/vtc/setting)  申请开启显式标识自主完成后方可生效。
 1：添加标识；
 0：不添加标识；
@@ -298,6 +321,9 @@ public class SubmitVideoEditJobRequest extends AbstractModel {
         if (source.Image != null) {
             this.Image = new Image(source.Image);
         }
+        if (source.VideoEditParam != null) {
+            this.VideoEditParam = new VideoEditParam(source.VideoEditParam);
+        }
         if (source.LogoAdd != null) {
             this.LogoAdd = new Long(source.LogoAdd);
         }
@@ -315,6 +341,7 @@ public class SubmitVideoEditJobRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Prompt", this.Prompt);
         this.setParamArrayObj(map, prefix + "Images.", this.Images);
         this.setParamObj(map, prefix + "Image.", this.Image);
+        this.setParamObj(map, prefix + "VideoEditParam.", this.VideoEditParam);
         this.setParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
         this.setParamObj(map, prefix + "LogoParam.", this.LogoParam);
 

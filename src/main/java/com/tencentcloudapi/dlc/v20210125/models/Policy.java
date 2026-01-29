@@ -170,6 +170,13 @@ public class Policy extends AbstractModel {
     private String Model;
 
     /**
+    * 权限来源是否为管理员
+    */
+    @SerializedName("IsAdminPolicy")
+    @Expose
+    private Boolean IsAdminPolicy;
+
+    /**
      * Get 需要授权的数据库名，填 * 代表当前Catalog下所有数据库。当授权类型为管理员级别时，只允许填 “*”，当授权类型为数据连接级别时只允许填空，其他类型下可以任意指定数据库。 
      * @return Database 需要授权的数据库名，填 * 代表当前Catalog下所有数据库。当授权类型为管理员级别时，只允许填 “*”，当授权类型为数据连接级别时只允许填空，其他类型下可以任意指定数据库。
      */
@@ -525,6 +532,22 @@ public class Policy extends AbstractModel {
         this.Model = Model;
     }
 
+    /**
+     * Get 权限来源是否为管理员 
+     * @return IsAdminPolicy 权限来源是否为管理员
+     */
+    public Boolean getIsAdminPolicy() {
+        return this.IsAdminPolicy;
+    }
+
+    /**
+     * Set 权限来源是否为管理员
+     * @param IsAdminPolicy 权限来源是否为管理员
+     */
+    public void setIsAdminPolicy(Boolean IsAdminPolicy) {
+        this.IsAdminPolicy = IsAdminPolicy;
+    }
+
     public Policy() {
     }
 
@@ -590,6 +613,9 @@ public class Policy extends AbstractModel {
         if (source.Model != null) {
             this.Model = new String(source.Model);
         }
+        if (source.IsAdminPolicy != null) {
+            this.IsAdminPolicy = new Boolean(source.IsAdminPolicy);
+        }
     }
 
 
@@ -616,6 +642,7 @@ public class Policy extends AbstractModel {
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "EngineGeneration", this.EngineGeneration);
         this.setParamSimple(map, prefix + "Model", this.Model);
+        this.setParamSimple(map, prefix + "IsAdminPolicy", this.IsAdminPolicy);
 
     }
 }

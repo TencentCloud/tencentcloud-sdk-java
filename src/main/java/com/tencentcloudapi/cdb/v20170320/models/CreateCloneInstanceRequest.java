@@ -215,6 +215,13 @@ public class CreateCloneInstanceRequest extends AbstractModel {
     private String MasterZone;
 
     /**
+    * 新产生的克隆实例主库的可用区信息，默认同源实例 Zone 的值。
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
+
+    /**
      * Get 克隆源实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/api/236/15872) 接口获取。 
      * @return InstanceId 克隆源实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/api/236/15872) 接口获取。
      */
@@ -641,7 +648,9 @@ public class CreateCloneInstanceRequest extends AbstractModel {
     /**
      * Get 新产生的克隆实例主库的可用区信息，默认同源实例 Zone 的值。 
      * @return MasterZone 新产生的克隆实例主库的可用区信息，默认同源实例 Zone 的值。
+     * @deprecated
      */
+    @Deprecated
     public String getMasterZone() {
         return this.MasterZone;
     }
@@ -649,9 +658,27 @@ public class CreateCloneInstanceRequest extends AbstractModel {
     /**
      * Set 新产生的克隆实例主库的可用区信息，默认同源实例 Zone 的值。
      * @param MasterZone 新产生的克隆实例主库的可用区信息，默认同源实例 Zone 的值。
+     * @deprecated
      */
+    @Deprecated
     public void setMasterZone(String MasterZone) {
         this.MasterZone = MasterZone;
+    }
+
+    /**
+     * Get 新产生的克隆实例主库的可用区信息，默认同源实例 Zone 的值。 
+     * @return Zone 新产生的克隆实例主库的可用区信息，默认同源实例 Zone 的值。
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * Set 新产生的克隆实例主库的可用区信息，默认同源实例 Zone 的值。
+     * @param Zone 新产生的克隆实例主库的可用区信息，默认同源实例 Zone 的值。
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
     }
 
     public CreateCloneInstanceRequest() {
@@ -749,6 +776,9 @@ public class CreateCloneInstanceRequest extends AbstractModel {
         if (source.MasterZone != null) {
             this.MasterZone = new String(source.MasterZone);
         }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
     }
 
 
@@ -783,6 +813,7 @@ public class CreateCloneInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SrcRegion", this.SrcRegion);
         this.setParamSimple(map, prefix + "SpecifiedSubBackupId", this.SpecifiedSubBackupId);
         this.setParamSimple(map, prefix + "MasterZone", this.MasterZone);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
 
     }
 }

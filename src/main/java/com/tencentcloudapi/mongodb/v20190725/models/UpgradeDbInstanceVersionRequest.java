@@ -31,14 +31,23 @@ public class UpgradeDbInstanceVersionRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 新升级的数据库版本，当前仅支持MONGO_40_WT（MongoDB 4.0 WiredTiger存储引擎版本）及MONGO_42_WT（MongoDB 4.0 WiredTiger存储引擎版本）。
+    * 新升级的数据库版本。当前支持版本如下所示，支持旧版本向高版本升级，不支持跨版本升级。
+- MONGO_40_WT：4.0 版本。
+- MONGO_42_WT：4.2 版本。
+- MONGO_44_WT：4.4 版本
+- MONGO_50_WT：5.0 版本
+- MONGO_60_WT：6.0 版本。
+- MONGO_70_WT：7.0 版本。
+- MONGO_80_WT：8.0 版本。
     */
     @SerializedName("MongoVersion")
     @Expose
     private String MongoVersion;
 
     /**
-    * 是否在维护时间内升级。0-立即升级 1-维护时间内升级
+    * 指定升级操作是否在维护时间内进行。
+- 0：立即升级。
+- 1：维护时间窗升级。
     */
     @SerializedName("InMaintenance")
     @Expose
@@ -61,32 +70,68 @@ public class UpgradeDbInstanceVersionRequest extends AbstractModel {
     }
 
     /**
-     * Get 新升级的数据库版本，当前仅支持MONGO_40_WT（MongoDB 4.0 WiredTiger存储引擎版本）及MONGO_42_WT（MongoDB 4.0 WiredTiger存储引擎版本）。 
-     * @return MongoVersion 新升级的数据库版本，当前仅支持MONGO_40_WT（MongoDB 4.0 WiredTiger存储引擎版本）及MONGO_42_WT（MongoDB 4.0 WiredTiger存储引擎版本）。
+     * Get 新升级的数据库版本。当前支持版本如下所示，支持旧版本向高版本升级，不支持跨版本升级。
+- MONGO_40_WT：4.0 版本。
+- MONGO_42_WT：4.2 版本。
+- MONGO_44_WT：4.4 版本
+- MONGO_50_WT：5.0 版本
+- MONGO_60_WT：6.0 版本。
+- MONGO_70_WT：7.0 版本。
+- MONGO_80_WT：8.0 版本。 
+     * @return MongoVersion 新升级的数据库版本。当前支持版本如下所示，支持旧版本向高版本升级，不支持跨版本升级。
+- MONGO_40_WT：4.0 版本。
+- MONGO_42_WT：4.2 版本。
+- MONGO_44_WT：4.4 版本
+- MONGO_50_WT：5.0 版本
+- MONGO_60_WT：6.0 版本。
+- MONGO_70_WT：7.0 版本。
+- MONGO_80_WT：8.0 版本。
      */
     public String getMongoVersion() {
         return this.MongoVersion;
     }
 
     /**
-     * Set 新升级的数据库版本，当前仅支持MONGO_40_WT（MongoDB 4.0 WiredTiger存储引擎版本）及MONGO_42_WT（MongoDB 4.0 WiredTiger存储引擎版本）。
-     * @param MongoVersion 新升级的数据库版本，当前仅支持MONGO_40_WT（MongoDB 4.0 WiredTiger存储引擎版本）及MONGO_42_WT（MongoDB 4.0 WiredTiger存储引擎版本）。
+     * Set 新升级的数据库版本。当前支持版本如下所示，支持旧版本向高版本升级，不支持跨版本升级。
+- MONGO_40_WT：4.0 版本。
+- MONGO_42_WT：4.2 版本。
+- MONGO_44_WT：4.4 版本
+- MONGO_50_WT：5.0 版本
+- MONGO_60_WT：6.0 版本。
+- MONGO_70_WT：7.0 版本。
+- MONGO_80_WT：8.0 版本。
+     * @param MongoVersion 新升级的数据库版本。当前支持版本如下所示，支持旧版本向高版本升级，不支持跨版本升级。
+- MONGO_40_WT：4.0 版本。
+- MONGO_42_WT：4.2 版本。
+- MONGO_44_WT：4.4 版本
+- MONGO_50_WT：5.0 版本
+- MONGO_60_WT：6.0 版本。
+- MONGO_70_WT：7.0 版本。
+- MONGO_80_WT：8.0 版本。
      */
     public void setMongoVersion(String MongoVersion) {
         this.MongoVersion = MongoVersion;
     }
 
     /**
-     * Get 是否在维护时间内升级。0-立即升级 1-维护时间内升级 
-     * @return InMaintenance 是否在维护时间内升级。0-立即升级 1-维护时间内升级
+     * Get 指定升级操作是否在维护时间内进行。
+- 0：立即升级。
+- 1：维护时间窗升级。 
+     * @return InMaintenance 指定升级操作是否在维护时间内进行。
+- 0：立即升级。
+- 1：维护时间窗升级。
      */
     public Long getInMaintenance() {
         return this.InMaintenance;
     }
 
     /**
-     * Set 是否在维护时间内升级。0-立即升级 1-维护时间内升级
-     * @param InMaintenance 是否在维护时间内升级。0-立即升级 1-维护时间内升级
+     * Set 指定升级操作是否在维护时间内进行。
+- 0：立即升级。
+- 1：维护时间窗升级。
+     * @param InMaintenance 指定升级操作是否在维护时间内进行。
+- 0：立即升级。
+- 1：维护时间窗升级。
      */
     public void setInMaintenance(Long InMaintenance) {
         this.InMaintenance = InMaintenance;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyOrganizationAccountStatusRequest extends AbstractModel {
 
     /**
-    * 修改集团账号状态，1 开启， 2关闭
+    * 修改集团账号状态，1 开启， 0关闭
     */
     @SerializedName("Status")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyOrganizationAccountStatusRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-     * Get 修改集团账号状态，1 开启， 2关闭 
-     * @return Status 修改集团账号状态，1 开启， 2关闭
+     * Get 修改集团账号状态，1 开启， 0关闭 
+     * @return Status 修改集团账号状态，1 开启， 0关闭
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 修改集团账号状态，1 开启， 2关闭
-     * @param Status 修改集团账号状态，1 开启， 2关闭
+     * Set 修改集团账号状态，1 开启， 0关闭
+     * @param Status 修改集团账号状态，1 开启， 0关闭
      */
     public void setStatus(Long Status) {
         this.Status = Status;

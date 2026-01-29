@@ -38,7 +38,7 @@ public class LakeFsInfo extends AbstractModel {
     private String Type;
 
     /**
-    * 容量
+    * 存储用量
     */
     @SerializedName("SpaceUsedSize")
     @Expose
@@ -80,6 +80,13 @@ public class LakeFsInfo extends AbstractModel {
     private String Status;
 
     /**
+    * 托管存储桶标签列表
+    */
+    @SerializedName("TagList")
+    @Expose
+    private TagInfo [] TagList;
+
+    /**
      * Get 托管存储名称 
      * @return Name 托管存储名称
      */
@@ -112,16 +119,16 @@ public class LakeFsInfo extends AbstractModel {
     }
 
     /**
-     * Get 容量 
-     * @return SpaceUsedSize 容量
+     * Get 存储用量 
+     * @return SpaceUsedSize 存储用量
      */
     public Float getSpaceUsedSize() {
         return this.SpaceUsedSize;
     }
 
     /**
-     * Set 容量
-     * @param SpaceUsedSize 容量
+     * Set 存储用量
+     * @param SpaceUsedSize 存储用量
      */
     public void setSpaceUsedSize(Float SpaceUsedSize) {
         this.SpaceUsedSize = SpaceUsedSize;
@@ -207,6 +214,22 @@ public class LakeFsInfo extends AbstractModel {
         this.Status = Status;
     }
 
+    /**
+     * Get 托管存储桶标签列表 
+     * @return TagList 托管存储桶标签列表
+     */
+    public TagInfo [] getTagList() {
+        return this.TagList;
+    }
+
+    /**
+     * Set 托管存储桶标签列表
+     * @param TagList 托管存储桶标签列表
+     */
+    public void setTagList(TagInfo [] TagList) {
+        this.TagList = TagList;
+    }
+
     public LakeFsInfo() {
     }
 
@@ -239,6 +262,12 @@ public class LakeFsInfo extends AbstractModel {
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.TagList != null) {
+            this.TagList = new TagInfo[source.TagList.length];
+            for (int i = 0; i < source.TagList.length; i++) {
+                this.TagList[i] = new TagInfo(source.TagList[i]);
+            }
+        }
     }
 
 
@@ -254,6 +283,7 @@ public class LakeFsInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ShortName", this.ShortName);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
 
     }
 }

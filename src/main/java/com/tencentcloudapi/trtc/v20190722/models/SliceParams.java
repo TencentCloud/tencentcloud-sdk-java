@@ -65,6 +65,14 @@ public class SliceParams extends AbstractModel {
     private SubscribeStreamUserIds SubscribeStreamUserIds;
 
     /**
+    * 知道图片格式类型：
+0 png, 1 jpg默认0
+    */
+    @SerializedName("SliceImageType")
+    @Expose
+    private Long SliceImageType;
+
+    /**
     * 已废弃，从控制台配置回调url
     */
     @SerializedName("SliceCallbackUrl")
@@ -176,6 +184,26 @@ public class SliceParams extends AbstractModel {
     }
 
     /**
+     * Get 知道图片格式类型：
+0 png, 1 jpg默认0 
+     * @return SliceImageType 知道图片格式类型：
+0 png, 1 jpg默认0
+     */
+    public Long getSliceImageType() {
+        return this.SliceImageType;
+    }
+
+    /**
+     * Set 知道图片格式类型：
+0 png, 1 jpg默认0
+     * @param SliceImageType 知道图片格式类型：
+0 png, 1 jpg默认0
+     */
+    public void setSliceImageType(Long SliceImageType) {
+        this.SliceImageType = SliceImageType;
+    }
+
+    /**
      * Get 已废弃，从控制台配置回调url 
      * @return SliceCallbackUrl 已废弃，从控制台配置回调url
      */
@@ -214,6 +242,9 @@ public class SliceParams extends AbstractModel {
         if (source.SubscribeStreamUserIds != null) {
             this.SubscribeStreamUserIds = new SubscribeStreamUserIds(source.SubscribeStreamUserIds);
         }
+        if (source.SliceImageType != null) {
+            this.SliceImageType = new Long(source.SliceImageType);
+        }
         if (source.SliceCallbackUrl != null) {
             this.SliceCallbackUrl = new String(source.SliceCallbackUrl);
         }
@@ -229,6 +260,7 @@ public class SliceParams extends AbstractModel {
         this.setParamSimple(map, prefix + "SliceAudio", this.SliceAudio);
         this.setParamSimple(map, prefix + "SliceVideo", this.SliceVideo);
         this.setParamObj(map, prefix + "SubscribeStreamUserIds.", this.SubscribeStreamUserIds);
+        this.setParamSimple(map, prefix + "SliceImageType", this.SliceImageType);
         this.setParamSimple(map, prefix + "SliceCallbackUrl", this.SliceCallbackUrl);
 
     }

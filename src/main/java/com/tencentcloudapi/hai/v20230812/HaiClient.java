@@ -149,6 +149,17 @@ public class HaiClient extends AbstractClient{
     }
 
     /**
+     *本接口(InquirePriceUpdateServiceConfigs)用于更新服务配置询价
+     * @param req InquirePriceUpdateServiceConfigsRequest
+     * @return InquirePriceUpdateServiceConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquirePriceUpdateServiceConfigsResponse InquirePriceUpdateServiceConfigs(InquirePriceUpdateServiceConfigsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InquirePriceUpdateServiceConfigs", InquirePriceUpdateServiceConfigsResponse.class);
+    }
+
+    /**
      *本接口 (ResetInstancesPassword) 用于重置实例的用户密码。
      * @param req ResetInstancesPasswordRequest
      * @return ResetInstancesPasswordResponse

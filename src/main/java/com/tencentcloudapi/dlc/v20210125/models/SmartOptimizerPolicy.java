@@ -71,6 +71,13 @@ public class SmartOptimizerPolicy extends AbstractModel {
     private SmartOptimizerChangeTablePolicy ChangeTable;
 
     /**
+    * 表过期策略
+    */
+    @SerializedName("TableExpiration")
+    @Expose
+    private TableExpirationPolicy TableExpiration;
+
+    /**
      * Get 是否继承 
      * @return Inherit 是否继承
      */
@@ -186,6 +193,22 @@ public class SmartOptimizerPolicy extends AbstractModel {
         this.ChangeTable = ChangeTable;
     }
 
+    /**
+     * Get 表过期策略 
+     * @return TableExpiration 表过期策略
+     */
+    public TableExpirationPolicy getTableExpiration() {
+        return this.TableExpiration;
+    }
+
+    /**
+     * Set 表过期策略
+     * @param TableExpiration 表过期策略
+     */
+    public void setTableExpiration(TableExpirationPolicy TableExpiration) {
+        this.TableExpiration = TableExpiration;
+    }
+
     public SmartOptimizerPolicy() {
     }
 
@@ -215,6 +238,9 @@ public class SmartOptimizerPolicy extends AbstractModel {
         if (source.ChangeTable != null) {
             this.ChangeTable = new SmartOptimizerChangeTablePolicy(source.ChangeTable);
         }
+        if (source.TableExpiration != null) {
+            this.TableExpiration = new TableExpirationPolicy(source.TableExpiration);
+        }
     }
 
 
@@ -228,6 +254,7 @@ public class SmartOptimizerPolicy extends AbstractModel {
         this.setParamObj(map, prefix + "Lifecycle.", this.Lifecycle);
         this.setParamObj(map, prefix + "Index.", this.Index);
         this.setParamObj(map, prefix + "ChangeTable.", this.ChangeTable);
+        this.setParamObj(map, prefix + "TableExpiration.", this.TableExpiration);
 
     }
 }

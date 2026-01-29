@@ -149,6 +149,28 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *本接口(CreateTable)用于创建表，支持创建capped类型集合，暂时不支持分片表
+     * @param req CreateTableRequest
+     * @return CreateTableResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTableResponse CreateTable(CreateTableRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTable", CreateTableResponse.class);
+    }
+
+    /**
+     *创建tcb用户
+     * @param req CreateUserRequest
+     * @return CreateUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateUserResponse CreateUser(CreateUserRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateUser", CreateUserResponse.class);
+    }
+
+    /**
      *删除云项目
      * @param req DeleteCloudBaseProjectLatestVersionRequest
      * @return DeleteCloudBaseProjectLatestVersionResponse
@@ -179,6 +201,28 @@ public class TcbClient extends AbstractClient{
     public DeleteGatewayVersionResponse DeleteGatewayVersion(DeleteGatewayVersionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteGatewayVersion", DeleteGatewayVersionResponse.class);
+    }
+
+    /**
+     *本接口(DeleteTable)用于删除表，删除表后表中数据将会被删除且无法恢复，请谨慎操作
+     * @param req DeleteTableRequest
+     * @return DeleteTableResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTableResponse DeleteTable(DeleteTableRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteTable", DeleteTableResponse.class);
+    }
+
+    /**
+     *删除tcb用户
+     * @param req DeleteUsersRequest
+     * @return DeleteUsersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteUsersResponse DeleteUsers(DeleteUsersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteUsers", DeleteUsersResponse.class);
     }
 
     /**
@@ -560,6 +604,28 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *查询表的相关信息，包括索引等信息
+     * @param req DescribeTableRequest
+     * @return DescribeTableResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTableResponse DescribeTable(DescribeTableRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTable", DescribeTableResponse.class);
+    }
+
+    /**
+     *本接口(ListTables)用于查询所有表信息，包括表名、表中数据条数、表中数据量、索引个数及索引的大小等
+     * @param req DescribeTablesRequest
+     * @return DescribeTablesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTablesResponse DescribeTables(DescribeTablesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTables", DescribeTablesResponse.class);
+    }
+
+    /**
      *查询用户活动信息
      * @param req DescribeUserActivityInfoRequest
      * @return DescribeUserActivityInfoResponse
@@ -568,6 +634,17 @@ public class TcbClient extends AbstractClient{
     public DescribeUserActivityInfoResponse DescribeUserActivityInfo(DescribeUserActivityInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeUserActivityInfo", DescribeUserActivityInfoResponse.class);
+    }
+
+    /**
+     *查询tcb用户列表
+     * @param req DescribeUserListRequest
+     * @return DescribeUserListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserListResponse DescribeUserList(DescribeUserListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUserList", DescribeUserListResponse.class);
     }
 
     /**
@@ -659,6 +736,17 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *本接口(ListTables)用于查询所有表信息，包括表名、表中数据条数、表中数据量、索引个数及索引的大小等
+     * @param req ListTablesRequest
+     * @return ListTablesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListTablesResponse ListTables(ListTablesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListTables", ListTablesResponse.class);
+    }
+
+    /**
      *修改容器内的版本流量配置
      * @param req ModifyCloudBaseRunServerFlowConfRequest
      * @return ModifyCloudBaseRunServerFlowConfResponse
@@ -725,6 +813,17 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *修改tcb用户
+     * @param req ModifyUserRequest
+     * @return ModifyUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyUserResponse ModifyUser(ModifyUserRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyUser", ModifyUserResponse.class);
+    }
+
+    /**
      *针对已隔离的免费环境，可以通过本接口将其恢复访问。
      * @param req ReinstateEnvRequest
      * @return ReinstateEnvResponse
@@ -766,6 +865,17 @@ public class TcbClient extends AbstractClient{
     public UnfreezeCloudBaseRunServersResponse UnfreezeCloudBaseRunServers(UnfreezeCloudBaseRunServersRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UnfreezeCloudBaseRunServers", UnfreezeCloudBaseRunServersResponse.class);
+    }
+
+    /**
+     *本接口(UpdateTable)用于修改表信息，当前可以支持创建和删除索引
+     * @param req UpdateTableRequest
+     * @return UpdateTableResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateTableResponse UpdateTable(UpdateTableRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateTable", UpdateTableResponse.class);
     }
 
 }

@@ -88,6 +88,13 @@ public class UpdateUserOIDCConfigRequest extends AbstractModel {
     private String Description;
 
     /**
+    * OIDC公钥自动轮转开关（默认为0代表关闭，1代表开启）如果不传的话，会默认置0
+    */
+    @SerializedName("AutoRotateKey")
+    @Expose
+    private Long AutoRotateKey;
+
+    /**
      * Get 身份提供商URL。OpenID Connect身份提供商标识。
 对应企业IdP提供的Openid-configuration中"issuer"字段的值，该URL必须以https开头，符合标准URL格式，不允许带有query参数（以?标识）、fragment片段（以#标识）和登录信息（以@标识）。 
      * @return IdentityUrl 身份提供商URL。OpenID Connect身份提供商标识。
@@ -235,6 +242,22 @@ public class UpdateUserOIDCConfigRequest extends AbstractModel {
         this.Description = Description;
     }
 
+    /**
+     * Get OIDC公钥自动轮转开关（默认为0代表关闭，1代表开启）如果不传的话，会默认置0 
+     * @return AutoRotateKey OIDC公钥自动轮转开关（默认为0代表关闭，1代表开启）如果不传的话，会默认置0
+     */
+    public Long getAutoRotateKey() {
+        return this.AutoRotateKey;
+    }
+
+    /**
+     * Set OIDC公钥自动轮转开关（默认为0代表关闭，1代表开启）如果不传的话，会默认置0
+     * @param AutoRotateKey OIDC公钥自动轮转开关（默认为0代表关闭，1代表开启）如果不传的话，会默认置0
+     */
+    public void setAutoRotateKey(Long AutoRotateKey) {
+        this.AutoRotateKey = AutoRotateKey;
+    }
+
     public UpdateUserOIDCConfigRequest() {
     }
 
@@ -273,6 +296,9 @@ public class UpdateUserOIDCConfigRequest extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.AutoRotateKey != null) {
+            this.AutoRotateKey = new Long(source.AutoRotateKey);
+        }
     }
 
 
@@ -289,6 +315,7 @@ public class UpdateUserOIDCConfigRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IdentityKey", this.IdentityKey);
         this.setParamArraySimple(map, prefix + "Scope.", this.Scope);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "AutoRotateKey", this.AutoRotateKey);
 
     }
 }

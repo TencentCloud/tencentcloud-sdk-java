@@ -101,6 +101,13 @@ public class DescribeUserOIDCConfigResponse extends AbstractModel {
     private String Description;
 
     /**
+    * OIDC公钥自动轮转开关（默认为0代表关闭，1代表开启）
+    */
+    @SerializedName("AutoRotateKey")
+    @Expose
+    private Long AutoRotateKey;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -284,6 +291,22 @@ public class DescribeUserOIDCConfigResponse extends AbstractModel {
     }
 
     /**
+     * Get OIDC公钥自动轮转开关（默认为0代表关闭，1代表开启） 
+     * @return AutoRotateKey OIDC公钥自动轮转开关（默认为0代表关闭，1代表开启）
+     */
+    public Long getAutoRotateKey() {
+        return this.AutoRotateKey;
+    }
+
+    /**
+     * Set OIDC公钥自动轮转开关（默认为0代表关闭，1代表开启）
+     * @param AutoRotateKey OIDC公钥自动轮转开关（默认为0代表关闭，1代表开启）
+     */
+    public void setAutoRotateKey(Long AutoRotateKey) {
+        this.AutoRotateKey = AutoRotateKey;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -343,6 +366,9 @@ public class DescribeUserOIDCConfigResponse extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.AutoRotateKey != null) {
+            this.AutoRotateKey = new Long(source.AutoRotateKey);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -364,6 +390,7 @@ public class DescribeUserOIDCConfigResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ResponseMode", this.ResponseMode);
         this.setParamSimple(map, prefix + "MappingFiled", this.MappingFiled);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "AutoRotateKey", this.AutoRotateKey);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

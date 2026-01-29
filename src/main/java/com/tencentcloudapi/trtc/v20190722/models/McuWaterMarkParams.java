@@ -31,7 +31,7 @@ public class McuWaterMarkParams extends AbstractModel {
     private Long WaterMarkType;
 
     /**
-    * 图片水印参数。WaterMarkType为0指定。
+    * 图片水印参数。WaterMarkType为0指定。图片分辨率限制不超过2K，图片大小限制不超过5MB。
     */
     @SerializedName("WaterMarkImage")
     @Expose
@@ -61,16 +61,16 @@ public class McuWaterMarkParams extends AbstractModel {
     }
 
     /**
-     * Get 图片水印参数。WaterMarkType为0指定。 
-     * @return WaterMarkImage 图片水印参数。WaterMarkType为0指定。
+     * Get 图片水印参数。WaterMarkType为0指定。图片分辨率限制不超过2K，图片大小限制不超过5MB。 
+     * @return WaterMarkImage 图片水印参数。WaterMarkType为0指定。图片分辨率限制不超过2K，图片大小限制不超过5MB。
      */
     public McuWaterMarkImage getWaterMarkImage() {
         return this.WaterMarkImage;
     }
 
     /**
-     * Set 图片水印参数。WaterMarkType为0指定。
-     * @param WaterMarkImage 图片水印参数。WaterMarkType为0指定。
+     * Set 图片水印参数。WaterMarkType为0指定。图片分辨率限制不超过2K，图片大小限制不超过5MB。
+     * @param WaterMarkImage 图片水印参数。WaterMarkType为0指定。图片分辨率限制不超过2K，图片大小限制不超过5MB。
      */
     public void setWaterMarkImage(McuWaterMarkImage WaterMarkImage) {
         this.WaterMarkImage = WaterMarkImage;

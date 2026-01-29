@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyDocAttrRangeRequest extends AbstractModel {
 
     /**
-    * 应用ID
+    * 应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
     */
     @SerializedName("BotBizId")
     @Expose
@@ -45,23 +45,23 @@ public class ModifyDocAttrRangeRequest extends AbstractModel {
     private Long AttrRange;
 
     /**
-    * 属性标签引用
+    * 属性标签引用，LabelBizIds可通过 DescribeAttributeLabel 接口获取
     */
     @SerializedName("AttrLabels")
     @Expose
     private AttrLabelRefer [] AttrLabels;
 
     /**
-     * Get 应用ID 
-     * @return BotBizId 应用ID
+     * Get 应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa) 
+     * @return BotBizId 应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      */
     public String getBotBizId() {
         return this.BotBizId;
     }
 
     /**
-     * Set 应用ID
-     * @param BotBizId 应用ID
+     * Set 应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+     * @param BotBizId 应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      */
     public void setBotBizId(String BotBizId) {
         this.BotBizId = BotBizId;
@@ -100,16 +100,16 @@ public class ModifyDocAttrRangeRequest extends AbstractModel {
     }
 
     /**
-     * Get 属性标签引用 
-     * @return AttrLabels 属性标签引用
+     * Get 属性标签引用，LabelBizIds可通过 DescribeAttributeLabel 接口获取 
+     * @return AttrLabels 属性标签引用，LabelBizIds可通过 DescribeAttributeLabel 接口获取
      */
     public AttrLabelRefer [] getAttrLabels() {
         return this.AttrLabels;
     }
 
     /**
-     * Set 属性标签引用
-     * @param AttrLabels 属性标签引用
+     * Set 属性标签引用，LabelBizIds可通过 DescribeAttributeLabel 接口获取
+     * @param AttrLabels 属性标签引用，LabelBizIds可通过 DescribeAttributeLabel 接口获取
      */
     public void setAttrLabels(AttrLabelRefer [] AttrLabels) {
         this.AttrLabels = AttrLabels;
