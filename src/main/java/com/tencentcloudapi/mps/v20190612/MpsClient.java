@@ -1764,6 +1764,19 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *# 同步配音接口
+## 音色克隆
+## 语音合成
+     * @param req SyncDubbingRequest
+     * @return SyncDubbingResponse
+     * @throws TencentCloudSDKException
+     */
+    public SyncDubbingResponse SyncDubbing(SyncDubbingRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SyncDubbing", SyncDubbingResponse.class);
+    }
+
+    /**
      *文本翻译
      * @param req TextTranslationRequest
      * @return TextTranslationResponse

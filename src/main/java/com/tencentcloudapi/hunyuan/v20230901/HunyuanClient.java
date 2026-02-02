@@ -100,18 +100,6 @@ public class HunyuanClient extends AbstractClient{
     }
 
     /**
-     *混元生3D接口，采用 Polygon 1.5模型，输入3D 高模后，可生成布线规整，较低面数的3D 模型。
-默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
-     * @param req Describe3DSmartTopologyJobRequest
-     * @return Describe3DSmartTopologyJobResponse
-     * @throws TencentCloudSDKException
-     */
-    public Describe3DSmartTopologyJobResponse Describe3DSmartTopologyJob(Describe3DSmartTopologyJobRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "Describe3DSmartTopologyJob", Describe3DSmartTopologyJobResponse.class);
-    }
-
-    /**
      *删除文件。
      * @param req FilesDeletionsRequest
      * @return FilesDeletionsResponse
@@ -304,18 +292,6 @@ public class HunyuanClient extends AbstractClient{
     public SetPayModeResponse SetPayMode(SetPayModeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SetPayMode", SetPayModeResponse.class);
-    }
-
-    /**
-     *混元生3D接口，采用 Polygon 1.5模型，输入3D 高模后，可生成布线规整，较低面数的3D 模型。
-默认提供1个并发，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后，才能开始处理下一个任务。
-     * @param req Submit3DSmartTopologyJobRequest
-     * @return Submit3DSmartTopologyJobResponse
-     * @throws TencentCloudSDKException
-     */
-    public Submit3DSmartTopologyJobResponse Submit3DSmartTopologyJob(Submit3DSmartTopologyJobRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "Submit3DSmartTopologyJob", Submit3DSmartTopologyJobResponse.class);
     }
 
     /**

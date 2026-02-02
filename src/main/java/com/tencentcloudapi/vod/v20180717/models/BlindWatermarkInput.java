@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.hunyuan.v20230901.models;
+package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,67 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InputFile3D extends AbstractModel {
+public class BlindWatermarkInput extends AbstractModel {
 
     /**
-    * 文件的Url（有效期24小时）	
+    * 数字水印模板ID
     */
-    @SerializedName("Url")
+    @SerializedName("Definition")
     @Expose
-    private String Url;
+    private Long Definition;
 
     /**
-    * 文件格式	
-    */
-    @SerializedName("Type")
-    @Expose
-    private String Type;
-
-    /**
-     * Get 文件的Url（有效期24小时）	 
-     * @return Url 文件的Url（有效期24小时）	
+     * Get 数字水印模板ID 
+     * @return Definition 数字水印模板ID
      */
-    public String getUrl() {
-        return this.Url;
+    public Long getDefinition() {
+        return this.Definition;
     }
 
     /**
-     * Set 文件的Url（有效期24小时）	
-     * @param Url 文件的Url（有效期24小时）	
+     * Set 数字水印模板ID
+     * @param Definition 数字水印模板ID
      */
-    public void setUrl(String Url) {
-        this.Url = Url;
+    public void setDefinition(Long Definition) {
+        this.Definition = Definition;
     }
 
-    /**
-     * Get 文件格式	 
-     * @return Type 文件格式	
-     */
-    public String getType() {
-        return this.Type;
-    }
-
-    /**
-     * Set 文件格式	
-     * @param Type 文件格式	
-     */
-    public void setType(String Type) {
-        this.Type = Type;
-    }
-
-    public InputFile3D() {
+    public BlindWatermarkInput() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public InputFile3D(InputFile3D source) {
-        if (source.Url != null) {
-            this.Url = new String(source.Url);
-        }
-        if (source.Type != null) {
-            this.Type = new String(source.Type);
+    public BlindWatermarkInput(BlindWatermarkInput source) {
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
         }
     }
 
@@ -90,8 +64,7 @@ public class InputFile3D extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Url", this.Url);
-        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "Definition", this.Definition);
 
     }
 }

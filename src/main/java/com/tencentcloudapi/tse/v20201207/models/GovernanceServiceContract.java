@@ -102,7 +102,6 @@ public class GovernanceServiceContract extends AbstractModel {
 
     /**
     * 元数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Metadatas")
     @Expose
@@ -285,10 +284,8 @@ public class GovernanceServiceContract extends AbstractModel {
     }
 
     /**
-     * Get 元数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 元数据 
      * @return Metadatas 元数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Metadata [] getMetadatas() {
         return this.Metadatas;
@@ -296,9 +293,7 @@ public class GovernanceServiceContract extends AbstractModel {
 
     /**
      * Set 元数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Metadatas 元数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetadatas(Metadata [] Metadatas) {
         this.Metadatas = Metadatas;

@@ -43,15 +43,6 @@ public class CreateFlowByFilesRequest extends AbstractModel {
     private String FlowName;
 
     /**
-    * 合同流程的参与方列表，最多可支持50个参与方，可在列表中指定企业B端签署方和个人C端签署方的联系和认证方式等信息，具体定义可以参考开发者中心的ApproverInfo结构体。
-
-如果合同流程是有序签署，Approvers列表中参与人的顺序就是默认的签署顺序，请确保列表中参与人的顺序符合实际签署顺序。
-    */
-    @SerializedName("Approvers")
-    @Expose
-    private ApproverInfo [] Approvers;
-
-    /**
     * 本合同流程需包含的PDF文件资源编号列表，通过[UploadFiles](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口获取PDF文件资源编号。
 
 注:  `目前，此接口仅支持单个文件发起。`
@@ -59,6 +50,15 @@ public class CreateFlowByFilesRequest extends AbstractModel {
     @SerializedName("FileIds")
     @Expose
     private String [] FileIds;
+
+    /**
+    * 合同流程的参与方列表，最多可支持50个参与方，可在列表中指定企业B端签署方和个人C端签署方的联系和认证方式等信息，具体定义可以参考开发者中心的ApproverInfo结构体。
+
+如果合同流程是有序签署，Approvers列表中参与人的顺序就是默认的签署顺序，请确保列表中参与人的顺序符合实际签署顺序。
+    */
+    @SerializedName("Approvers")
+    @Expose
+    private ApproverInfo [] Approvers;
 
     /**
     * 合同流程描述信息(可自定义此描述)，最大长度1000个字符。
@@ -248,9 +248,7 @@ public class CreateFlowByFilesRequest extends AbstractModel {
     private Long FlowDisplayType;
 
     /**
-    * 是否开启动态签署合同：
-<ul><li> **true**：开启动态签署合同，可在签署过程中追加签署人（必须满足：1，发起方企业开启了模块化计费能力；2，发起方企业在企业应用管理中开启了动态签署人2.0能力）    。</li>
-<li> **false**：不开启动态签署合同。</li></ul>
+    * 是否开启动态签署合同：<ul><li> **true**：开启动态签署合同，可在发起时可以不传签署人，在签署过程中追加签署人（必须满足：1，发起方企业开启了模块化计费能力；2，发起方企业在企业应用管理中开启了动态签署人2.0能力）    。</li><li> **false**：不开启动态签署合同。</li></ul>
     */
     @SerializedName("OpenDynamicSignFlow")
     @Expose
@@ -309,30 +307,6 @@ public class CreateFlowByFilesRequest extends AbstractModel {
     }
 
     /**
-     * Get 合同流程的参与方列表，最多可支持50个参与方，可在列表中指定企业B端签署方和个人C端签署方的联系和认证方式等信息，具体定义可以参考开发者中心的ApproverInfo结构体。
-
-如果合同流程是有序签署，Approvers列表中参与人的顺序就是默认的签署顺序，请确保列表中参与人的顺序符合实际签署顺序。 
-     * @return Approvers 合同流程的参与方列表，最多可支持50个参与方，可在列表中指定企业B端签署方和个人C端签署方的联系和认证方式等信息，具体定义可以参考开发者中心的ApproverInfo结构体。
-
-如果合同流程是有序签署，Approvers列表中参与人的顺序就是默认的签署顺序，请确保列表中参与人的顺序符合实际签署顺序。
-     */
-    public ApproverInfo [] getApprovers() {
-        return this.Approvers;
-    }
-
-    /**
-     * Set 合同流程的参与方列表，最多可支持50个参与方，可在列表中指定企业B端签署方和个人C端签署方的联系和认证方式等信息，具体定义可以参考开发者中心的ApproverInfo结构体。
-
-如果合同流程是有序签署，Approvers列表中参与人的顺序就是默认的签署顺序，请确保列表中参与人的顺序符合实际签署顺序。
-     * @param Approvers 合同流程的参与方列表，最多可支持50个参与方，可在列表中指定企业B端签署方和个人C端签署方的联系和认证方式等信息，具体定义可以参考开发者中心的ApproverInfo结构体。
-
-如果合同流程是有序签署，Approvers列表中参与人的顺序就是默认的签署顺序，请确保列表中参与人的顺序符合实际签署顺序。
-     */
-    public void setApprovers(ApproverInfo [] Approvers) {
-        this.Approvers = Approvers;
-    }
-
-    /**
      * Get 本合同流程需包含的PDF文件资源编号列表，通过[UploadFiles](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口获取PDF文件资源编号。
 
 注:  `目前，此接口仅支持单个文件发起。` 
@@ -354,6 +328,30 @@ public class CreateFlowByFilesRequest extends AbstractModel {
      */
     public void setFileIds(String [] FileIds) {
         this.FileIds = FileIds;
+    }
+
+    /**
+     * Get 合同流程的参与方列表，最多可支持50个参与方，可在列表中指定企业B端签署方和个人C端签署方的联系和认证方式等信息，具体定义可以参考开发者中心的ApproverInfo结构体。
+
+如果合同流程是有序签署，Approvers列表中参与人的顺序就是默认的签署顺序，请确保列表中参与人的顺序符合实际签署顺序。 
+     * @return Approvers 合同流程的参与方列表，最多可支持50个参与方，可在列表中指定企业B端签署方和个人C端签署方的联系和认证方式等信息，具体定义可以参考开发者中心的ApproverInfo结构体。
+
+如果合同流程是有序签署，Approvers列表中参与人的顺序就是默认的签署顺序，请确保列表中参与人的顺序符合实际签署顺序。
+     */
+    public ApproverInfo [] getApprovers() {
+        return this.Approvers;
+    }
+
+    /**
+     * Set 合同流程的参与方列表，最多可支持50个参与方，可在列表中指定企业B端签署方和个人C端签署方的联系和认证方式等信息，具体定义可以参考开发者中心的ApproverInfo结构体。
+
+如果合同流程是有序签署，Approvers列表中参与人的顺序就是默认的签署顺序，请确保列表中参与人的顺序符合实际签署顺序。
+     * @param Approvers 合同流程的参与方列表，最多可支持50个参与方，可在列表中指定企业B端签署方和个人C端签署方的联系和认证方式等信息，具体定义可以参考开发者中心的ApproverInfo结构体。
+
+如果合同流程是有序签署，Approvers列表中参与人的顺序就是默认的签署顺序，请确保列表中参与人的顺序符合实际签署顺序。
+     */
+    public void setApprovers(ApproverInfo [] Approvers) {
+        this.Approvers = Approvers;
     }
 
     /**
@@ -889,24 +887,16 @@ public class CreateFlowByFilesRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否开启动态签署合同：
-<ul><li> **true**：开启动态签署合同，可在签署过程中追加签署人（必须满足：1，发起方企业开启了模块化计费能力；2，发起方企业在企业应用管理中开启了动态签署人2.0能力）    。</li>
-<li> **false**：不开启动态签署合同。</li></ul> 
-     * @return OpenDynamicSignFlow 是否开启动态签署合同：
-<ul><li> **true**：开启动态签署合同，可在签署过程中追加签署人（必须满足：1，发起方企业开启了模块化计费能力；2，发起方企业在企业应用管理中开启了动态签署人2.0能力）    。</li>
-<li> **false**：不开启动态签署合同。</li></ul>
+     * Get 是否开启动态签署合同：<ul><li> **true**：开启动态签署合同，可在发起时可以不传签署人，在签署过程中追加签署人（必须满足：1，发起方企业开启了模块化计费能力；2，发起方企业在企业应用管理中开启了动态签署人2.0能力）    。</li><li> **false**：不开启动态签署合同。</li></ul> 
+     * @return OpenDynamicSignFlow 是否开启动态签署合同：<ul><li> **true**：开启动态签署合同，可在发起时可以不传签署人，在签署过程中追加签署人（必须满足：1，发起方企业开启了模块化计费能力；2，发起方企业在企业应用管理中开启了动态签署人2.0能力）    。</li><li> **false**：不开启动态签署合同。</li></ul>
      */
     public Boolean getOpenDynamicSignFlow() {
         return this.OpenDynamicSignFlow;
     }
 
     /**
-     * Set 是否开启动态签署合同：
-<ul><li> **true**：开启动态签署合同，可在签署过程中追加签署人（必须满足：1，发起方企业开启了模块化计费能力；2，发起方企业在企业应用管理中开启了动态签署人2.0能力）    。</li>
-<li> **false**：不开启动态签署合同。</li></ul>
-     * @param OpenDynamicSignFlow 是否开启动态签署合同：
-<ul><li> **true**：开启动态签署合同，可在签署过程中追加签署人（必须满足：1，发起方企业开启了模块化计费能力；2，发起方企业在企业应用管理中开启了动态签署人2.0能力）    。</li>
-<li> **false**：不开启动态签署合同。</li></ul>
+     * Set 是否开启动态签署合同：<ul><li> **true**：开启动态签署合同，可在发起时可以不传签署人，在签署过程中追加签署人（必须满足：1，发起方企业开启了模块化计费能力；2，发起方企业在企业应用管理中开启了动态签署人2.0能力）    。</li><li> **false**：不开启动态签署合同。</li></ul>
+     * @param OpenDynamicSignFlow 是否开启动态签署合同：<ul><li> **true**：开启动态签署合同，可在发起时可以不传签署人，在签署过程中追加签署人（必须满足：1，发起方企业开启了模块化计费能力；2，发起方企业在企业应用管理中开启了动态签署人2.0能力）    。</li><li> **false**：不开启动态签署合同。</li></ul>
      */
     public void setOpenDynamicSignFlow(Boolean OpenDynamicSignFlow) {
         this.OpenDynamicSignFlow = OpenDynamicSignFlow;
@@ -926,16 +916,16 @@ public class CreateFlowByFilesRequest extends AbstractModel {
         if (source.FlowName != null) {
             this.FlowName = new String(source.FlowName);
         }
-        if (source.Approvers != null) {
-            this.Approvers = new ApproverInfo[source.Approvers.length];
-            for (int i = 0; i < source.Approvers.length; i++) {
-                this.Approvers[i] = new ApproverInfo(source.Approvers[i]);
-            }
-        }
         if (source.FileIds != null) {
             this.FileIds = new String[source.FileIds.length];
             for (int i = 0; i < source.FileIds.length; i++) {
                 this.FileIds[i] = new String(source.FileIds[i]);
+            }
+        }
+        if (source.Approvers != null) {
+            this.Approvers = new ApproverInfo[source.Approvers.length];
+            for (int i = 0; i < source.Approvers.length; i++) {
+                this.Approvers[i] = new ApproverInfo(source.Approvers[i]);
             }
         }
         if (source.FlowDescription != null) {
@@ -1010,8 +1000,8 @@ public class CreateFlowByFilesRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "FlowName", this.FlowName);
-        this.setParamArrayObj(map, prefix + "Approvers.", this.Approvers);
         this.setParamArraySimple(map, prefix + "FileIds.", this.FileIds);
+        this.setParamArrayObj(map, prefix + "Approvers.", this.Approvers);
         this.setParamSimple(map, prefix + "FlowDescription", this.FlowDescription);
         this.setParamSimple(map, prefix + "FlowType", this.FlowType);
         this.setParamArrayObj(map, prefix + "Components.", this.Components);

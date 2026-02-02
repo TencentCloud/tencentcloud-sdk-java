@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CheckCnameStatusResponse extends AbstractModel {
 
     /**
-    * 加速域名 CNAME 状态信息列表。
+    * 接入域名的 CNAME 配置状态信息列表。
     */
     @SerializedName("CnameStatus")
     @Expose
@@ -38,16 +38,16 @@ public class CheckCnameStatusResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 加速域名 CNAME 状态信息列表。 
-     * @return CnameStatus 加速域名 CNAME 状态信息列表。
+     * Get 接入域名的 CNAME 配置状态信息列表。 
+     * @return CnameStatus 接入域名的 CNAME 配置状态信息列表。
      */
     public CnameStatus [] getCnameStatus() {
         return this.CnameStatus;
     }
 
     /**
-     * Set 加速域名 CNAME 状态信息列表。
-     * @param CnameStatus 加速域名 CNAME 状态信息列表。
+     * Set 接入域名的 CNAME 配置状态信息列表。
+     * @param CnameStatus 接入域名的 CNAME 配置状态信息列表。
      */
     public void setCnameStatus(CnameStatus [] CnameStatus) {
         this.CnameStatus = CnameStatus;

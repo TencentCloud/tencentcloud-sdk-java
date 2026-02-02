@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.hunyuan.v20230901.models;
+package com.tencentcloudapi.teo.v20220901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Describe3DSmartTopologyJobRequest extends AbstractModel {
+public class CAPTCHAPageChallenge extends AbstractModel {
 
     /**
-    * 任务ID。	
+    * 人机校验页是否开启，取值有：<li>on：开启；</li><li>off：关闭。</li>
     */
-    @SerializedName("JobId")
+    @SerializedName("Enabled")
     @Expose
-    private String JobId;
+    private String Enabled;
 
     /**
-     * Get 任务ID。	 
-     * @return JobId 任务ID。	
+     * Get 人机校验页是否开启，取值有：<li>on：开启；</li><li>off：关闭。</li> 
+     * @return Enabled 人机校验页是否开启，取值有：<li>on：开启；</li><li>off：关闭。</li>
      */
-    public String getJobId() {
-        return this.JobId;
+    public String getEnabled() {
+        return this.Enabled;
     }
 
     /**
-     * Set 任务ID。	
-     * @param JobId 任务ID。	
+     * Set 人机校验页是否开启，取值有：<li>on：开启；</li><li>off：关闭。</li>
+     * @param Enabled 人机校验页是否开启，取值有：<li>on：开启；</li><li>off：关闭。</li>
      */
-    public void setJobId(String JobId) {
-        this.JobId = JobId;
+    public void setEnabled(String Enabled) {
+        this.Enabled = Enabled;
     }
 
-    public Describe3DSmartTopologyJobRequest() {
+    public CAPTCHAPageChallenge() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public Describe3DSmartTopologyJobRequest(Describe3DSmartTopologyJobRequest source) {
-        if (source.JobId != null) {
-            this.JobId = new String(source.JobId);
+    public CAPTCHAPageChallenge(CAPTCHAPageChallenge source) {
+        if (source.Enabled != null) {
+            this.Enabled = new String(source.Enabled);
         }
     }
 
@@ -64,7 +64,7 @@ public class Describe3DSmartTopologyJobRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "JobId", this.JobId);
+        this.setParamSimple(map, prefix + "Enabled", this.Enabled);
 
     }
 }

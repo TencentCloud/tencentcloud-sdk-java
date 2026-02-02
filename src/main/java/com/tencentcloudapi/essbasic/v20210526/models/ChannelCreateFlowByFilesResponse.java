@@ -24,25 +24,21 @@ import java.util.HashMap;
 public class ChannelCreateFlowByFilesResponse extends AbstractModel {
 
     /**
-    * 合同流程ID，为32位字符串。
-建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
-
-[点击查看FlowId在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
+    * <p>合同流程ID，为32位字符串。<br>建议开发者妥善保存此流程ID，以便于顺利进行后续操作。</p><p><a href="https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png">点击查看FlowId在控制台上的位置</a></p>
     */
     @SerializedName("FlowId")
     @Expose
     private String FlowId;
 
     /**
-    * 签署方信息，如角色ID、角色名称等
+    * <p>签署方信息，如角色ID、角色名称等</p>
     */
     @SerializedName("Approvers")
     @Expose
     private ApproverItem [] Approvers;
 
     /**
-    * 预览链接，有效期5分钟
-注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
+    * <p>预览链接，有效期5分钟<br>注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL</p>
     */
     @SerializedName("PreviewUrl")
     @Expose
@@ -56,64 +52,48 @@ public class ChannelCreateFlowByFilesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 合同流程ID，为32位字符串。
-建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
-
-[点击查看FlowId在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png) 
-     * @return FlowId 合同流程ID，为32位字符串。
-建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
-
-[点击查看FlowId在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
+     * Get <p>合同流程ID，为32位字符串。<br>建议开发者妥善保存此流程ID，以便于顺利进行后续操作。</p><p><a href="https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png">点击查看FlowId在控制台上的位置</a></p> 
+     * @return FlowId <p>合同流程ID，为32位字符串。<br>建议开发者妥善保存此流程ID，以便于顺利进行后续操作。</p><p><a href="https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png">点击查看FlowId在控制台上的位置</a></p>
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 合同流程ID，为32位字符串。
-建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
-
-[点击查看FlowId在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
-     * @param FlowId 合同流程ID，为32位字符串。
-建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
-
-[点击查看FlowId在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
+     * Set <p>合同流程ID，为32位字符串。<br>建议开发者妥善保存此流程ID，以便于顺利进行后续操作。</p><p><a href="https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png">点击查看FlowId在控制台上的位置</a></p>
+     * @param FlowId <p>合同流程ID，为32位字符串。<br>建议开发者妥善保存此流程ID，以便于顺利进行后续操作。</p><p><a href="https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png">点击查看FlowId在控制台上的位置</a></p>
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get 签署方信息，如角色ID、角色名称等 
-     * @return Approvers 签署方信息，如角色ID、角色名称等
+     * Get <p>签署方信息，如角色ID、角色名称等</p> 
+     * @return Approvers <p>签署方信息，如角色ID、角色名称等</p>
      */
     public ApproverItem [] getApprovers() {
         return this.Approvers;
     }
 
     /**
-     * Set 签署方信息，如角色ID、角色名称等
-     * @param Approvers 签署方信息，如角色ID、角色名称等
+     * Set <p>签署方信息，如角色ID、角色名称等</p>
+     * @param Approvers <p>签署方信息，如角色ID、角色名称等</p>
      */
     public void setApprovers(ApproverItem [] Approvers) {
         this.Approvers = Approvers;
     }
 
     /**
-     * Get 预览链接，有效期5分钟
-注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL 
-     * @return PreviewUrl 预览链接，有效期5分钟
-注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
+     * Get <p>预览链接，有效期5分钟<br>注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL</p> 
+     * @return PreviewUrl <p>预览链接，有效期5分钟<br>注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL</p>
      */
     public String getPreviewUrl() {
         return this.PreviewUrl;
     }
 
     /**
-     * Set 预览链接，有效期5分钟
-注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
-     * @param PreviewUrl 预览链接，有效期5分钟
-注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
+     * Set <p>预览链接，有效期5分钟<br>注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL</p>
+     * @param PreviewUrl <p>预览链接，有效期5分钟<br>注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL</p>
      */
     public void setPreviewUrl(String PreviewUrl) {
         this.PreviewUrl = PreviewUrl;

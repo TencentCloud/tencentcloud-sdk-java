@@ -66,6 +66,13 @@ public class SecurityPolicy extends AbstractModel {
     private BotManagement BotManagement;
 
     /**
+    * 基础 Bot 管理配置。
+    */
+    @SerializedName("BotManagementLite")
+    @Expose
+    private BotManagementLite BotManagementLite;
+
+    /**
      * Get 自定义规则配置。 
      * @return CustomRules 自定义规则配置。
      */
@@ -161,6 +168,22 @@ public class SecurityPolicy extends AbstractModel {
         this.BotManagement = BotManagement;
     }
 
+    /**
+     * Get 基础 Bot 管理配置。 
+     * @return BotManagementLite 基础 Bot 管理配置。
+     */
+    public BotManagementLite getBotManagementLite() {
+        return this.BotManagementLite;
+    }
+
+    /**
+     * Set 基础 Bot 管理配置。
+     * @param BotManagementLite 基础 Bot 管理配置。
+     */
+    public void setBotManagementLite(BotManagementLite BotManagementLite) {
+        this.BotManagementLite = BotManagementLite;
+    }
+
     public SecurityPolicy() {
     }
 
@@ -187,6 +210,9 @@ public class SecurityPolicy extends AbstractModel {
         if (source.BotManagement != null) {
             this.BotManagement = new BotManagement(source.BotManagement);
         }
+        if (source.BotManagementLite != null) {
+            this.BotManagementLite = new BotManagementLite(source.BotManagementLite);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class SecurityPolicy extends AbstractModel {
         this.setParamObj(map, prefix + "RateLimitingRules.", this.RateLimitingRules);
         this.setParamObj(map, prefix + "ExceptionRules.", this.ExceptionRules);
         this.setParamObj(map, prefix + "BotManagement.", this.BotManagement);
+        this.setParamObj(map, prefix + "BotManagementLite.", this.BotManagementLite);
 
     }
 }

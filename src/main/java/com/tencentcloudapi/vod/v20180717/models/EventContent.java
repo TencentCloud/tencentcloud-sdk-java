@@ -303,6 +303,27 @@ public class EventContent extends AbstractModel {
     private AigcVideoTask AigcVideoCompleteEvent;
 
     /**
+    * 提取数字水印信息，仅当 EventType 为 ExtractBlindWatermarkComplete 时有效。
+    */
+    @SerializedName("ExtractBlindWatermarkComplete")
+    @Expose
+    private ExtractBlindWatermarkTask ExtractBlindWatermarkComplete;
+
+    /**
+    * AIGC 场景化生图任务信息，仅当 EventType 为 SceneAigcImageCompleteEvent 时有效。
+    */
+    @SerializedName("SceneAigcImageCompleteEvent")
+    @Expose
+    private SceneAigcImageTask SceneAigcImageCompleteEvent;
+
+    /**
+    * 图片异步处理任务信息，仅当 EventType 为 ProcessImageAsyncCompleteEvent 时有效。
+    */
+    @SerializedName("ProcessImageAsyncCompleteEvent")
+    @Expose
+    private ProcessImageAsyncTask ProcessImageAsyncCompleteEvent;
+
+    /**
      * Get 事件句柄，调用方必须调用 ConfirmEvents 来确认消息已经收到，确认有效时间 30 秒。失效后，事件可重新被获取。 
      * @return EventHandle 事件句柄，调用方必须调用 ConfirmEvents 来确认消息已经收到，确认有效时间 30 秒。失效后，事件可重新被获取。
      */
@@ -1034,6 +1055,54 @@ public class EventContent extends AbstractModel {
         this.AigcVideoCompleteEvent = AigcVideoCompleteEvent;
     }
 
+    /**
+     * Get 提取数字水印信息，仅当 EventType 为 ExtractBlindWatermarkComplete 时有效。 
+     * @return ExtractBlindWatermarkComplete 提取数字水印信息，仅当 EventType 为 ExtractBlindWatermarkComplete 时有效。
+     */
+    public ExtractBlindWatermarkTask getExtractBlindWatermarkComplete() {
+        return this.ExtractBlindWatermarkComplete;
+    }
+
+    /**
+     * Set 提取数字水印信息，仅当 EventType 为 ExtractBlindWatermarkComplete 时有效。
+     * @param ExtractBlindWatermarkComplete 提取数字水印信息，仅当 EventType 为 ExtractBlindWatermarkComplete 时有效。
+     */
+    public void setExtractBlindWatermarkComplete(ExtractBlindWatermarkTask ExtractBlindWatermarkComplete) {
+        this.ExtractBlindWatermarkComplete = ExtractBlindWatermarkComplete;
+    }
+
+    /**
+     * Get AIGC 场景化生图任务信息，仅当 EventType 为 SceneAigcImageCompleteEvent 时有效。 
+     * @return SceneAigcImageCompleteEvent AIGC 场景化生图任务信息，仅当 EventType 为 SceneAigcImageCompleteEvent 时有效。
+     */
+    public SceneAigcImageTask getSceneAigcImageCompleteEvent() {
+        return this.SceneAigcImageCompleteEvent;
+    }
+
+    /**
+     * Set AIGC 场景化生图任务信息，仅当 EventType 为 SceneAigcImageCompleteEvent 时有效。
+     * @param SceneAigcImageCompleteEvent AIGC 场景化生图任务信息，仅当 EventType 为 SceneAigcImageCompleteEvent 时有效。
+     */
+    public void setSceneAigcImageCompleteEvent(SceneAigcImageTask SceneAigcImageCompleteEvent) {
+        this.SceneAigcImageCompleteEvent = SceneAigcImageCompleteEvent;
+    }
+
+    /**
+     * Get 图片异步处理任务信息，仅当 EventType 为 ProcessImageAsyncCompleteEvent 时有效。 
+     * @return ProcessImageAsyncCompleteEvent 图片异步处理任务信息，仅当 EventType 为 ProcessImageAsyncCompleteEvent 时有效。
+     */
+    public ProcessImageAsyncTask getProcessImageAsyncCompleteEvent() {
+        return this.ProcessImageAsyncCompleteEvent;
+    }
+
+    /**
+     * Set 图片异步处理任务信息，仅当 EventType 为 ProcessImageAsyncCompleteEvent 时有效。
+     * @param ProcessImageAsyncCompleteEvent 图片异步处理任务信息，仅当 EventType 为 ProcessImageAsyncCompleteEvent 时有效。
+     */
+    public void setProcessImageAsyncCompleteEvent(ProcessImageAsyncTask ProcessImageAsyncCompleteEvent) {
+        this.ProcessImageAsyncCompleteEvent = ProcessImageAsyncCompleteEvent;
+    }
+
     public EventContent() {
     }
 
@@ -1138,6 +1207,15 @@ public class EventContent extends AbstractModel {
         if (source.AigcVideoCompleteEvent != null) {
             this.AigcVideoCompleteEvent = new AigcVideoTask(source.AigcVideoCompleteEvent);
         }
+        if (source.ExtractBlindWatermarkComplete != null) {
+            this.ExtractBlindWatermarkComplete = new ExtractBlindWatermarkTask(source.ExtractBlindWatermarkComplete);
+        }
+        if (source.SceneAigcImageCompleteEvent != null) {
+            this.SceneAigcImageCompleteEvent = new SceneAigcImageTask(source.SceneAigcImageCompleteEvent);
+        }
+        if (source.ProcessImageAsyncCompleteEvent != null) {
+            this.ProcessImageAsyncCompleteEvent = new ProcessImageAsyncTask(source.ProcessImageAsyncCompleteEvent);
+        }
     }
 
 
@@ -1177,6 +1255,9 @@ public class EventContent extends AbstractModel {
         this.setParamObj(map, prefix + "ProcessMediaByMPSCompleteEvent.", this.ProcessMediaByMPSCompleteEvent);
         this.setParamObj(map, prefix + "AigcImageCompleteEvent.", this.AigcImageCompleteEvent);
         this.setParamObj(map, prefix + "AigcVideoCompleteEvent.", this.AigcVideoCompleteEvent);
+        this.setParamObj(map, prefix + "ExtractBlindWatermarkComplete.", this.ExtractBlindWatermarkComplete);
+        this.setParamObj(map, prefix + "SceneAigcImageCompleteEvent.", this.SceneAigcImageCompleteEvent);
+        this.setParamObj(map, prefix + "ProcessImageAsyncCompleteEvent.", this.ProcessImageAsyncCompleteEvent);
 
     }
 }

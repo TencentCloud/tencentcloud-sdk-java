@@ -142,6 +142,17 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *创建AIGC调用API的Token。创建后数据同步有延时，约30秒后可查询或删除。
+     * @param req CreateAigcApiTokenRequest
+     * @return CreateAigcApiTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAigcApiTokenResponse CreateAigcApiToken(CreateAigcApiTokenRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAigcApiToken", CreateAigcApiTokenResponse.class);
+    }
+
+    /**
      *调用该接口，针对指定模型进行主体创建。
      * @param req CreateAigcCustomElementRequest
      * @return CreateAigcCustomElementResponse
@@ -583,6 +594,17 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *删除 AIGC API Token
+     * @param req DeleteAigcApiTokenRequest
+     * @return DeleteAigcApiTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAigcApiTokenResponse DeleteAigcApiToken(DeleteAigcApiTokenRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAigcApiToken", DeleteAigcApiTokenResponse.class);
+    }
+
+    /**
      *删除用户自定义转动图模板。
      * @param req DeleteAnimatedGraphicsTemplateRequest
      * @return DeleteAnimatedGraphicsTemplateResponse
@@ -900,6 +922,28 @@ public class VodClient extends AbstractClient{
     public DescribeAdaptiveDynamicStreamingTemplatesResponse DescribeAdaptiveDynamicStreamingTemplates(DescribeAdaptiveDynamicStreamingTemplatesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAdaptiveDynamicStreamingTemplates", DescribeAdaptiveDynamicStreamingTemplatesResponse.class);
+    }
+
+    /**
+     *查询 AIGC API Token 列表。创建或删除后数据同步有延时，约30秒后可查询最新数据。
+     * @param req DescribeAigcApiTokensRequest
+     * @return DescribeAigcApiTokensResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAigcApiTokensResponse DescribeAigcApiTokens(DescribeAigcApiTokensRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAigcApiTokens", DescribeAigcApiTokensResponse.class);
+    }
+
+    /**
+     *该接口用于获取 AIGC 人脸信息。注意，调用本接口会产生人脸识别费用，请参考[计费文档](https://cloud.tencent.com/document/product/266/95125#96b3b59a-f9e1-49e9-966a-bedb70a4bf12)。
+     * @param req DescribeAigcFaceInfoRequest
+     * @return DescribeAigcFaceInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAigcFaceInfoResponse DescribeAigcFaceInfo(DescribeAigcFaceInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAigcFaceInfo", DescribeAigcFaceInfoResponse.class);
     }
 
     /**

@@ -24,148 +24,138 @@ import java.util.HashMap;
 public class ScanVoiceRequest extends AbstractModel {
 
     /**
-    * 应用ID，登录[控制台 - 服务管理](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
+    * <p>应用ID，登录<a href="https://console.cloud.tencent.com/gamegme">控制台 - 服务管理</a>创建应用得到的AppID</p>
     */
     @SerializedName("BizId")
     @Expose
     private Long BizId;
 
     /**
-    * 语音检测场景，参数值目前要求为 default。 预留场景设置： 谩骂、色情、广告、违禁等场景，<a href="#Label_Value">具体取值见上述 Label 说明。</a>
+    * <p>语音检测场景，参数值目前要求为 default。 预留场景设置： 谩骂、色情、广告、违禁等场景，<a href="#Label_Value">具体取值见上述 Label 说明。</a></p>
     */
     @SerializedName("Scenes")
     @Expose
     private String [] Scenes;
 
     /**
-    * 是否为直播流。值为 false 时表示普通语音文件检测；为 true 时表示语音流检测。
+    * <p>是否为直播流。值为 false 时表示普通语音文件检测；为 true 时表示语音流检测。</p>
     */
     @SerializedName("Live")
     @Expose
     private Boolean Live;
 
     /**
-    * 语音检测任务列表，列表最多支持100个检测任务。结构体中包含：
-<li>DataId：数据的唯一ID</li>
-<li>Url：数据文件的url，为 urlencode 编码，流式则为拉流地址</li>
+    * <p>语音检测任务列表，列表最多支持100个检测任务。结构体中包含：</p><li>DataId：数据的唯一ID</li><li>Url：数据文件的url，为 urlencode 编码，流式则为拉流地址</li>
     */
     @SerializedName("Tasks")
     @Expose
     private Task [] Tasks;
 
     /**
-    * 异步检测结果回调地址，具体见上述<a href="#Callback_Declare">回调相关说明</a>。（说明：该字段为空时，必须通过接口(查询语音检测结果)获取检测结果）。
+    * <p>异步检测结果回调地址，具体见上述<a href="#Callback_Declare">回调相关说明</a>。（说明：该字段为空时，必须通过接口(查询语音检测结果)获取检测结果）。</p>
     */
     @SerializedName("Callback")
     @Expose
     private String Callback;
 
     /**
-    * 语种，不传默认中文
+    * <p>语种，不传默认中文</p>
     */
     @SerializedName("Lang")
     @Expose
     private String Lang;
 
     /**
-     * Get 应用ID，登录[控制台 - 服务管理](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID 
-     * @return BizId 应用ID，登录[控制台 - 服务管理](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
+     * Get <p>应用ID，登录<a href="https://console.cloud.tencent.com/gamegme">控制台 - 服务管理</a>创建应用得到的AppID</p> 
+     * @return BizId <p>应用ID，登录<a href="https://console.cloud.tencent.com/gamegme">控制台 - 服务管理</a>创建应用得到的AppID</p>
      */
     public Long getBizId() {
         return this.BizId;
     }
 
     /**
-     * Set 应用ID，登录[控制台 - 服务管理](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
-     * @param BizId 应用ID，登录[控制台 - 服务管理](https://console.cloud.tencent.com/gamegme)创建应用得到的AppID
+     * Set <p>应用ID，登录<a href="https://console.cloud.tencent.com/gamegme">控制台 - 服务管理</a>创建应用得到的AppID</p>
+     * @param BizId <p>应用ID，登录<a href="https://console.cloud.tencent.com/gamegme">控制台 - 服务管理</a>创建应用得到的AppID</p>
      */
     public void setBizId(Long BizId) {
         this.BizId = BizId;
     }
 
     /**
-     * Get 语音检测场景，参数值目前要求为 default。 预留场景设置： 谩骂、色情、广告、违禁等场景，<a href="#Label_Value">具体取值见上述 Label 说明。</a> 
-     * @return Scenes 语音检测场景，参数值目前要求为 default。 预留场景设置： 谩骂、色情、广告、违禁等场景，<a href="#Label_Value">具体取值见上述 Label 说明。</a>
+     * Get <p>语音检测场景，参数值目前要求为 default。 预留场景设置： 谩骂、色情、广告、违禁等场景，<a href="#Label_Value">具体取值见上述 Label 说明。</a></p> 
+     * @return Scenes <p>语音检测场景，参数值目前要求为 default。 预留场景设置： 谩骂、色情、广告、违禁等场景，<a href="#Label_Value">具体取值见上述 Label 说明。</a></p>
      */
     public String [] getScenes() {
         return this.Scenes;
     }
 
     /**
-     * Set 语音检测场景，参数值目前要求为 default。 预留场景设置： 谩骂、色情、广告、违禁等场景，<a href="#Label_Value">具体取值见上述 Label 说明。</a>
-     * @param Scenes 语音检测场景，参数值目前要求为 default。 预留场景设置： 谩骂、色情、广告、违禁等场景，<a href="#Label_Value">具体取值见上述 Label 说明。</a>
+     * Set <p>语音检测场景，参数值目前要求为 default。 预留场景设置： 谩骂、色情、广告、违禁等场景，<a href="#Label_Value">具体取值见上述 Label 说明。</a></p>
+     * @param Scenes <p>语音检测场景，参数值目前要求为 default。 预留场景设置： 谩骂、色情、广告、违禁等场景，<a href="#Label_Value">具体取值见上述 Label 说明。</a></p>
      */
     public void setScenes(String [] Scenes) {
         this.Scenes = Scenes;
     }
 
     /**
-     * Get 是否为直播流。值为 false 时表示普通语音文件检测；为 true 时表示语音流检测。 
-     * @return Live 是否为直播流。值为 false 时表示普通语音文件检测；为 true 时表示语音流检测。
+     * Get <p>是否为直播流。值为 false 时表示普通语音文件检测；为 true 时表示语音流检测。</p> 
+     * @return Live <p>是否为直播流。值为 false 时表示普通语音文件检测；为 true 时表示语音流检测。</p>
      */
     public Boolean getLive() {
         return this.Live;
     }
 
     /**
-     * Set 是否为直播流。值为 false 时表示普通语音文件检测；为 true 时表示语音流检测。
-     * @param Live 是否为直播流。值为 false 时表示普通语音文件检测；为 true 时表示语音流检测。
+     * Set <p>是否为直播流。值为 false 时表示普通语音文件检测；为 true 时表示语音流检测。</p>
+     * @param Live <p>是否为直播流。值为 false 时表示普通语音文件检测；为 true 时表示语音流检测。</p>
      */
     public void setLive(Boolean Live) {
         this.Live = Live;
     }
 
     /**
-     * Get 语音检测任务列表，列表最多支持100个检测任务。结构体中包含：
-<li>DataId：数据的唯一ID</li>
-<li>Url：数据文件的url，为 urlencode 编码，流式则为拉流地址</li> 
-     * @return Tasks 语音检测任务列表，列表最多支持100个检测任务。结构体中包含：
-<li>DataId：数据的唯一ID</li>
-<li>Url：数据文件的url，为 urlencode 编码，流式则为拉流地址</li>
+     * Get <p>语音检测任务列表，列表最多支持100个检测任务。结构体中包含：</p><li>DataId：数据的唯一ID</li><li>Url：数据文件的url，为 urlencode 编码，流式则为拉流地址</li> 
+     * @return Tasks <p>语音检测任务列表，列表最多支持100个检测任务。结构体中包含：</p><li>DataId：数据的唯一ID</li><li>Url：数据文件的url，为 urlencode 编码，流式则为拉流地址</li>
      */
     public Task [] getTasks() {
         return this.Tasks;
     }
 
     /**
-     * Set 语音检测任务列表，列表最多支持100个检测任务。结构体中包含：
-<li>DataId：数据的唯一ID</li>
-<li>Url：数据文件的url，为 urlencode 编码，流式则为拉流地址</li>
-     * @param Tasks 语音检测任务列表，列表最多支持100个检测任务。结构体中包含：
-<li>DataId：数据的唯一ID</li>
-<li>Url：数据文件的url，为 urlencode 编码，流式则为拉流地址</li>
+     * Set <p>语音检测任务列表，列表最多支持100个检测任务。结构体中包含：</p><li>DataId：数据的唯一ID</li><li>Url：数据文件的url，为 urlencode 编码，流式则为拉流地址</li>
+     * @param Tasks <p>语音检测任务列表，列表最多支持100个检测任务。结构体中包含：</p><li>DataId：数据的唯一ID</li><li>Url：数据文件的url，为 urlencode 编码，流式则为拉流地址</li>
      */
     public void setTasks(Task [] Tasks) {
         this.Tasks = Tasks;
     }
 
     /**
-     * Get 异步检测结果回调地址，具体见上述<a href="#Callback_Declare">回调相关说明</a>。（说明：该字段为空时，必须通过接口(查询语音检测结果)获取检测结果）。 
-     * @return Callback 异步检测结果回调地址，具体见上述<a href="#Callback_Declare">回调相关说明</a>。（说明：该字段为空时，必须通过接口(查询语音检测结果)获取检测结果）。
+     * Get <p>异步检测结果回调地址，具体见上述<a href="#Callback_Declare">回调相关说明</a>。（说明：该字段为空时，必须通过接口(查询语音检测结果)获取检测结果）。</p> 
+     * @return Callback <p>异步检测结果回调地址，具体见上述<a href="#Callback_Declare">回调相关说明</a>。（说明：该字段为空时，必须通过接口(查询语音检测结果)获取检测结果）。</p>
      */
     public String getCallback() {
         return this.Callback;
     }
 
     /**
-     * Set 异步检测结果回调地址，具体见上述<a href="#Callback_Declare">回调相关说明</a>。（说明：该字段为空时，必须通过接口(查询语音检测结果)获取检测结果）。
-     * @param Callback 异步检测结果回调地址，具体见上述<a href="#Callback_Declare">回调相关说明</a>。（说明：该字段为空时，必须通过接口(查询语音检测结果)获取检测结果）。
+     * Set <p>异步检测结果回调地址，具体见上述<a href="#Callback_Declare">回调相关说明</a>。（说明：该字段为空时，必须通过接口(查询语音检测结果)获取检测结果）。</p>
+     * @param Callback <p>异步检测结果回调地址，具体见上述<a href="#Callback_Declare">回调相关说明</a>。（说明：该字段为空时，必须通过接口(查询语音检测结果)获取检测结果）。</p>
      */
     public void setCallback(String Callback) {
         this.Callback = Callback;
     }
 
     /**
-     * Get 语种，不传默认中文 
-     * @return Lang 语种，不传默认中文
+     * Get <p>语种，不传默认中文</p> 
+     * @return Lang <p>语种，不传默认中文</p>
      */
     public String getLang() {
         return this.Lang;
     }
 
     /**
-     * Set 语种，不传默认中文
-     * @param Lang 语种，不传默认中文
+     * Set <p>语种，不传默认中文</p>
+     * @param Lang <p>语种，不传默认中文</p>
      */
     public void setLang(String Lang) {
         this.Lang = Lang;

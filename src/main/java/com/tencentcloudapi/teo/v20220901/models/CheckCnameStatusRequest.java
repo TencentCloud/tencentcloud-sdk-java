@@ -31,7 +31,7 @@ public class CheckCnameStatusRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * 加速域名列表。
+    * 需要检测 CNAME 配置状态的域名列表，可以为：<li>加速域名;</li><li>别称域名。</li>
     */
     @SerializedName("RecordNames")
     @Expose
@@ -54,16 +54,16 @@ public class CheckCnameStatusRequest extends AbstractModel {
     }
 
     /**
-     * Get 加速域名列表。 
-     * @return RecordNames 加速域名列表。
+     * Get 需要检测 CNAME 配置状态的域名列表，可以为：<li>加速域名;</li><li>别称域名。</li> 
+     * @return RecordNames 需要检测 CNAME 配置状态的域名列表，可以为：<li>加速域名;</li><li>别称域名。</li>
      */
     public String [] getRecordNames() {
         return this.RecordNames;
     }
 
     /**
-     * Set 加速域名列表。
-     * @param RecordNames 加速域名列表。
+     * Set 需要检测 CNAME 配置状态的域名列表，可以为：<li>加速域名;</li><li>别称域名。</li>
+     * @param RecordNames 需要检测 CNAME 配置状态的域名列表，可以为：<li>加速域名;</li><li>别称域名。</li>
      */
     public void setRecordNames(String [] RecordNames) {
         this.RecordNames = RecordNames;

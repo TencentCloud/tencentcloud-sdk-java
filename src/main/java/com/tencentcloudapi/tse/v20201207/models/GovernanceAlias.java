@@ -88,7 +88,6 @@ public class GovernanceAlias extends AbstractModel {
 
     /**
     * 元数据信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Metadatas")
     @Expose
@@ -239,10 +238,8 @@ public class GovernanceAlias extends AbstractModel {
     }
 
     /**
-     * Get 元数据信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 元数据信息 
      * @return Metadatas 元数据信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Metadata [] getMetadatas() {
         return this.Metadatas;
@@ -250,9 +247,7 @@ public class GovernanceAlias extends AbstractModel {
 
     /**
      * Set 元数据信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Metadatas 元数据信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetadatas(Metadata [] Metadatas) {
         this.Metadatas = Metadatas;

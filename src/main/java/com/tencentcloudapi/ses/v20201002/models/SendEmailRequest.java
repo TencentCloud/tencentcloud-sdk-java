@@ -31,18 +31,19 @@ public class SendEmailRequest extends AbstractModel {
     private String FromEmailAddress;
 
     /**
-    * 收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
-    */
-    @SerializedName("Destination")
-    @Expose
-    private String [] Destination;
-
-    /**
     * 邮件主题
     */
     @SerializedName("Subject")
     @Expose
     private String Subject;
+
+    /**
+    * 收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
+Destination/Cc/Bcc三个参数必须至少存在一个。
+    */
+    @SerializedName("Destination")
+    @Expose
+    private String [] Destination;
 
     /**
     * 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。
@@ -140,22 +141,6 @@ public class SendEmailRequest extends AbstractModel {
     }
 
     /**
-     * Get 收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。 
-     * @return Destination 收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
-     */
-    public String [] getDestination() {
-        return this.Destination;
-    }
-
-    /**
-     * Set 收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
-     * @param Destination 收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
-     */
-    public void setDestination(String [] Destination) {
-        this.Destination = Destination;
-    }
-
-    /**
      * Get 邮件主题 
      * @return Subject 邮件主题
      */
@@ -169,6 +154,26 @@ public class SendEmailRequest extends AbstractModel {
      */
     public void setSubject(String Subject) {
         this.Subject = Subject;
+    }
+
+    /**
+     * Get 收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
+Destination/Cc/Bcc三个参数必须至少存在一个。 
+     * @return Destination 收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
+Destination/Cc/Bcc三个参数必须至少存在一个。
+     */
+    public String [] getDestination() {
+        return this.Destination;
+    }
+
+    /**
+     * Set 收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
+Destination/Cc/Bcc三个参数必须至少存在一个。
+     * @param Destination 收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
+Destination/Cc/Bcc三个参数必须至少存在一个。
+     */
+    public void setDestination(String [] Destination) {
+        this.Destination = Destination;
     }
 
     /**
@@ -366,14 +371,14 @@ public class SendEmailRequest extends AbstractModel {
         if (source.FromEmailAddress != null) {
             this.FromEmailAddress = new String(source.FromEmailAddress);
         }
+        if (source.Subject != null) {
+            this.Subject = new String(source.Subject);
+        }
         if (source.Destination != null) {
             this.Destination = new String[source.Destination.length];
             for (int i = 0; i < source.Destination.length; i++) {
                 this.Destination[i] = new String(source.Destination[i]);
             }
-        }
-        if (source.Subject != null) {
-            this.Subject = new String(source.Subject);
         }
         if (source.ReplyToAddresses != null) {
             this.ReplyToAddresses = new String(source.ReplyToAddresses);
@@ -425,8 +430,8 @@ public class SendEmailRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FromEmailAddress", this.FromEmailAddress);
-        this.setParamArraySimple(map, prefix + "Destination.", this.Destination);
         this.setParamSimple(map, prefix + "Subject", this.Subject);
+        this.setParamArraySimple(map, prefix + "Destination.", this.Destination);
         this.setParamSimple(map, prefix + "ReplyToAddresses", this.ReplyToAddresses);
         this.setParamArraySimple(map, prefix + "Cc.", this.Cc);
         this.setParamArraySimple(map, prefix + "Bcc.", this.Bcc);

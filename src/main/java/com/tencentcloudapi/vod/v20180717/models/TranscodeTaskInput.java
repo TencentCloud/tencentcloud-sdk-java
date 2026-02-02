@@ -52,6 +52,13 @@ public class TranscodeTaskInput extends AbstractModel {
     private CopyRightWatermarkInput CopyRightWatermark;
 
     /**
+    * 数字水印。
+    */
+    @SerializedName("BlindWatermark")
+    @Expose
+    private BlindWatermarkInput BlindWatermark;
+
+    /**
     * 马赛克列表，最大可支持 10 张。
     */
     @SerializedName("MosaicSet")
@@ -147,6 +154,22 @@ public class TranscodeTaskInput extends AbstractModel {
      */
     public void setCopyRightWatermark(CopyRightWatermarkInput CopyRightWatermark) {
         this.CopyRightWatermark = CopyRightWatermark;
+    }
+
+    /**
+     * Get 数字水印。 
+     * @return BlindWatermark 数字水印。
+     */
+    public BlindWatermarkInput getBlindWatermark() {
+        return this.BlindWatermark;
+    }
+
+    /**
+     * Set 数字水印。
+     * @param BlindWatermark 数字水印。
+     */
+    public void setBlindWatermark(BlindWatermarkInput BlindWatermark) {
+        this.BlindWatermark = BlindWatermark;
     }
 
     /**
@@ -260,6 +283,9 @@ public class TranscodeTaskInput extends AbstractModel {
         if (source.CopyRightWatermark != null) {
             this.CopyRightWatermark = new CopyRightWatermarkInput(source.CopyRightWatermark);
         }
+        if (source.BlindWatermark != null) {
+            this.BlindWatermark = new BlindWatermarkInput(source.BlindWatermark);
+        }
         if (source.MosaicSet != null) {
             this.MosaicSet = new MosaicInput[source.MosaicSet.length];
             for (int i = 0; i < source.MosaicSet.length; i++) {
@@ -289,6 +315,7 @@ public class TranscodeTaskInput extends AbstractModel {
         this.setParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
         this.setParamObj(map, prefix + "TraceWatermark.", this.TraceWatermark);
         this.setParamObj(map, prefix + "CopyRightWatermark.", this.CopyRightWatermark);
+        this.setParamObj(map, prefix + "BlindWatermark.", this.BlindWatermark);
         this.setParamArrayObj(map, prefix + "MosaicSet.", this.MosaicSet);
         this.setParamArrayObj(map, prefix + "HeadTailSet.", this.HeadTailSet);
         this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);

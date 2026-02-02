@@ -131,6 +131,14 @@ public class AigcVideoOutputConfig extends AbstractModel {
     private String FrameInterpolate;
 
     /**
+    * 是否开启图标水印。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 
+目前支持的模型有 Vidu，其他模型暂不支持。
+    */
+    @SerializedName("LogoAdd")
+    @Expose
+    private String LogoAdd;
+
+    /**
      * Get 存储模式。取值有： <li>Permanent：永久存储，生成的视频文件将存储到云点播，可在事件通知中获取到 FileId；</li> <li>Temporary：临时存储，生成的视频文件不会存储到云点播，可在事件通知中获取到临时访问的 URL；</li>
 默认值：Temporary 
      * @return StorageMode 存储模式。取值有： <li>Permanent：永久存储，生成的视频文件将存储到云点播，可在事件通知中获取到 FileId；</li> <li>Temporary：临时存储，生成的视频文件不会存储到云点播，可在事件通知中获取到临时访问的 URL；</li>
@@ -402,6 +410,26 @@ public class AigcVideoOutputConfig extends AbstractModel {
         this.FrameInterpolate = FrameInterpolate;
     }
 
+    /**
+     * Get 是否开启图标水印。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 
+目前支持的模型有 Vidu，其他模型暂不支持。 
+     * @return LogoAdd 是否开启图标水印。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 
+目前支持的模型有 Vidu，其他模型暂不支持。
+     */
+    public String getLogoAdd() {
+        return this.LogoAdd;
+    }
+
+    /**
+     * Set 是否开启图标水印。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 
+目前支持的模型有 Vidu，其他模型暂不支持。
+     * @param LogoAdd 是否开启图标水印。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 
+目前支持的模型有 Vidu，其他模型暂不支持。
+     */
+    public void setLogoAdd(String LogoAdd) {
+        this.LogoAdd = LogoAdd;
+    }
+
     public AigcVideoOutputConfig() {
     }
 
@@ -449,6 +477,9 @@ public class AigcVideoOutputConfig extends AbstractModel {
         if (source.FrameInterpolate != null) {
             this.FrameInterpolate = new String(source.FrameInterpolate);
         }
+        if (source.LogoAdd != null) {
+            this.LogoAdd = new String(source.LogoAdd);
+        }
     }
 
 
@@ -469,6 +500,7 @@ public class AigcVideoOutputConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "OutputComplianceCheck", this.OutputComplianceCheck);
         this.setParamSimple(map, prefix + "EnhanceSwitch", this.EnhanceSwitch);
         this.setParamSimple(map, prefix + "FrameInterpolate", this.FrameInterpolate);
+        this.setParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
 
     }
 }

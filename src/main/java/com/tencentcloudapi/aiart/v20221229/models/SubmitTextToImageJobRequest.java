@@ -24,218 +24,161 @@ import java.util.HashMap;
 public class SubmitTextToImageJobRequest extends AbstractModel {
 
     /**
-    * 文本描述。 
-算法将根据输入的文本智能生成与之相关的图像。 
-不能为空，推荐使用中文。最多可传1024个 utf-8 字符。
+    * <p>文本描述。<br>算法将根据输入的文本智能生成与之相关的图像。<br>不能为空，推荐使用中文。最多可传1024个 utf-8 字符。</p>
     */
     @SerializedName("Prompt")
     @Expose
     private String Prompt;
 
     /**
-    * 生成图分辨率，默认1024:1024：
- - 宽高维度均在 [512, 2048] 像素范围内;
- - 宽高乘积（即图像面积）不超过 1024×1024 像素;
+    * <p>垫图url列表，大小不超过10MB，支持 jpg jpeg png webp格式，最多3张图</p>
+    */
+    @SerializedName("Images")
+    @Expose
+    private String [] Images;
+
+    /**
+    * <p>生成图分辨率，默认1024:1024：</p><ul><li>宽高维度均在 [512, 2048] 像素范围内;</li><li>宽高乘积（即图像面积）不超过 1024×1024 像素;</li></ul>
     */
     @SerializedName("Resolution")
     @Expose
     private String Resolution;
 
     /**
-    * 随机种子，默认随机。
-不传：随机种子生成。
-正数：固定种子生成。
-扩写开启时固定种子不生效，将保持随机。
+    * <p>随机种子，默认随机。<br>不传：随机种子生成。<br>正数：固定种子生成。<br>扩写开启时固定种子不生效，将保持随机。</p>
     */
     @SerializedName("Seed")
     @Expose
     private Long Seed;
 
     /**
-    * 为生成结果图添加显式水印标识的开关，默认为1。  
-1：添加。  
-0：不添加。  
-其他数值：默认按1处理。  
-建议您使用显著标识来提示结果图使用了 AI 绘画技术，是 AI 生成的图片。
+    * <p>为生成结果图添加显式水印标识的开关，默认为1。<br>1：添加。<br>0：不添加。<br>其他数值：默认按1处理。<br>建议您使用显著标识来提示结果图使用了 AI 绘画技术，是 AI 生成的图片。</p>
     */
     @SerializedName("LogoAdd")
     @Expose
     private Long LogoAdd;
 
     /**
-    * 标识内容设置。
-默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
+    * <p>标识内容设置。<br>默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。</p>
     */
     @SerializedName("LogoParam")
     @Expose
     private LogoParam LogoParam;
 
     /**
-    * 是否开启prompt改写，为空时默认开启，改写预计会增加20s左右耗时。
-0：关闭改写
-1：开启改写
-建议默认开启，如果关闭改写，需要调用方自己接改写，否则对生图效果有较大影响，改写方法可以参考：[改写](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0/tree/main/PE)
-示例值：1
+    * <p>是否开启prompt改写，为空时默认开启，改写预计会增加20s左右耗时。<br>0：关闭改写<br>1：开启改写<br>建议默认开启，如果关闭改写，需要调用方自己接改写，否则对生图效果有较大影响，改写方法可以参考：<a href="https://github.com/Tencent-Hunyuan/HunyuanImage-3.0/tree/main/PE">改写</a><br>示例值：1</p>
     */
     @SerializedName("Revise")
     @Expose
     private Long Revise;
 
     /**
-     * Get 文本描述。 
-算法将根据输入的文本智能生成与之相关的图像。 
-不能为空，推荐使用中文。最多可传1024个 utf-8 字符。 
-     * @return Prompt 文本描述。 
-算法将根据输入的文本智能生成与之相关的图像。 
-不能为空，推荐使用中文。最多可传1024个 utf-8 字符。
+     * Get <p>文本描述。<br>算法将根据输入的文本智能生成与之相关的图像。<br>不能为空，推荐使用中文。最多可传1024个 utf-8 字符。</p> 
+     * @return Prompt <p>文本描述。<br>算法将根据输入的文本智能生成与之相关的图像。<br>不能为空，推荐使用中文。最多可传1024个 utf-8 字符。</p>
      */
     public String getPrompt() {
         return this.Prompt;
     }
 
     /**
-     * Set 文本描述。 
-算法将根据输入的文本智能生成与之相关的图像。 
-不能为空，推荐使用中文。最多可传1024个 utf-8 字符。
-     * @param Prompt 文本描述。 
-算法将根据输入的文本智能生成与之相关的图像。 
-不能为空，推荐使用中文。最多可传1024个 utf-8 字符。
+     * Set <p>文本描述。<br>算法将根据输入的文本智能生成与之相关的图像。<br>不能为空，推荐使用中文。最多可传1024个 utf-8 字符。</p>
+     * @param Prompt <p>文本描述。<br>算法将根据输入的文本智能生成与之相关的图像。<br>不能为空，推荐使用中文。最多可传1024个 utf-8 字符。</p>
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
     }
 
     /**
-     * Get 生成图分辨率，默认1024:1024：
- - 宽高维度均在 [512, 2048] 像素范围内;
- - 宽高乘积（即图像面积）不超过 1024×1024 像素; 
-     * @return Resolution 生成图分辨率，默认1024:1024：
- - 宽高维度均在 [512, 2048] 像素范围内;
- - 宽高乘积（即图像面积）不超过 1024×1024 像素;
+     * Get <p>垫图url列表，大小不超过10MB，支持 jpg jpeg png webp格式，最多3张图</p> 
+     * @return Images <p>垫图url列表，大小不超过10MB，支持 jpg jpeg png webp格式，最多3张图</p>
+     */
+    public String [] getImages() {
+        return this.Images;
+    }
+
+    /**
+     * Set <p>垫图url列表，大小不超过10MB，支持 jpg jpeg png webp格式，最多3张图</p>
+     * @param Images <p>垫图url列表，大小不超过10MB，支持 jpg jpeg png webp格式，最多3张图</p>
+     */
+    public void setImages(String [] Images) {
+        this.Images = Images;
+    }
+
+    /**
+     * Get <p>生成图分辨率，默认1024:1024：</p><ul><li>宽高维度均在 [512, 2048] 像素范围内;</li><li>宽高乘积（即图像面积）不超过 1024×1024 像素;</li></ul> 
+     * @return Resolution <p>生成图分辨率，默认1024:1024：</p><ul><li>宽高维度均在 [512, 2048] 像素范围内;</li><li>宽高乘积（即图像面积）不超过 1024×1024 像素;</li></ul>
      */
     public String getResolution() {
         return this.Resolution;
     }
 
     /**
-     * Set 生成图分辨率，默认1024:1024：
- - 宽高维度均在 [512, 2048] 像素范围内;
- - 宽高乘积（即图像面积）不超过 1024×1024 像素;
-     * @param Resolution 生成图分辨率，默认1024:1024：
- - 宽高维度均在 [512, 2048] 像素范围内;
- - 宽高乘积（即图像面积）不超过 1024×1024 像素;
+     * Set <p>生成图分辨率，默认1024:1024：</p><ul><li>宽高维度均在 [512, 2048] 像素范围内;</li><li>宽高乘积（即图像面积）不超过 1024×1024 像素;</li></ul>
+     * @param Resolution <p>生成图分辨率，默认1024:1024：</p><ul><li>宽高维度均在 [512, 2048] 像素范围内;</li><li>宽高乘积（即图像面积）不超过 1024×1024 像素;</li></ul>
      */
     public void setResolution(String Resolution) {
         this.Resolution = Resolution;
     }
 
     /**
-     * Get 随机种子，默认随机。
-不传：随机种子生成。
-正数：固定种子生成。
-扩写开启时固定种子不生效，将保持随机。 
-     * @return Seed 随机种子，默认随机。
-不传：随机种子生成。
-正数：固定种子生成。
-扩写开启时固定种子不生效，将保持随机。
+     * Get <p>随机种子，默认随机。<br>不传：随机种子生成。<br>正数：固定种子生成。<br>扩写开启时固定种子不生效，将保持随机。</p> 
+     * @return Seed <p>随机种子，默认随机。<br>不传：随机种子生成。<br>正数：固定种子生成。<br>扩写开启时固定种子不生效，将保持随机。</p>
      */
     public Long getSeed() {
         return this.Seed;
     }
 
     /**
-     * Set 随机种子，默认随机。
-不传：随机种子生成。
-正数：固定种子生成。
-扩写开启时固定种子不生效，将保持随机。
-     * @param Seed 随机种子，默认随机。
-不传：随机种子生成。
-正数：固定种子生成。
-扩写开启时固定种子不生效，将保持随机。
+     * Set <p>随机种子，默认随机。<br>不传：随机种子生成。<br>正数：固定种子生成。<br>扩写开启时固定种子不生效，将保持随机。</p>
+     * @param Seed <p>随机种子，默认随机。<br>不传：随机种子生成。<br>正数：固定种子生成。<br>扩写开启时固定种子不生效，将保持随机。</p>
      */
     public void setSeed(Long Seed) {
         this.Seed = Seed;
     }
 
     /**
-     * Get 为生成结果图添加显式水印标识的开关，默认为1。  
-1：添加。  
-0：不添加。  
-其他数值：默认按1处理。  
-建议您使用显著标识来提示结果图使用了 AI 绘画技术，是 AI 生成的图片。 
-     * @return LogoAdd 为生成结果图添加显式水印标识的开关，默认为1。  
-1：添加。  
-0：不添加。  
-其他数值：默认按1处理。  
-建议您使用显著标识来提示结果图使用了 AI 绘画技术，是 AI 生成的图片。
+     * Get <p>为生成结果图添加显式水印标识的开关，默认为1。<br>1：添加。<br>0：不添加。<br>其他数值：默认按1处理。<br>建议您使用显著标识来提示结果图使用了 AI 绘画技术，是 AI 生成的图片。</p> 
+     * @return LogoAdd <p>为生成结果图添加显式水印标识的开关，默认为1。<br>1：添加。<br>0：不添加。<br>其他数值：默认按1处理。<br>建议您使用显著标识来提示结果图使用了 AI 绘画技术，是 AI 生成的图片。</p>
      */
     public Long getLogoAdd() {
         return this.LogoAdd;
     }
 
     /**
-     * Set 为生成结果图添加显式水印标识的开关，默认为1。  
-1：添加。  
-0：不添加。  
-其他数值：默认按1处理。  
-建议您使用显著标识来提示结果图使用了 AI 绘画技术，是 AI 生成的图片。
-     * @param LogoAdd 为生成结果图添加显式水印标识的开关，默认为1。  
-1：添加。  
-0：不添加。  
-其他数值：默认按1处理。  
-建议您使用显著标识来提示结果图使用了 AI 绘画技术，是 AI 生成的图片。
+     * Set <p>为生成结果图添加显式水印标识的开关，默认为1。<br>1：添加。<br>0：不添加。<br>其他数值：默认按1处理。<br>建议您使用显著标识来提示结果图使用了 AI 绘画技术，是 AI 生成的图片。</p>
+     * @param LogoAdd <p>为生成结果图添加显式水印标识的开关，默认为1。<br>1：添加。<br>0：不添加。<br>其他数值：默认按1处理。<br>建议您使用显著标识来提示结果图使用了 AI 绘画技术，是 AI 生成的图片。</p>
      */
     public void setLogoAdd(Long LogoAdd) {
         this.LogoAdd = LogoAdd;
     }
 
     /**
-     * Get 标识内容设置。
-默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。 
-     * @return LogoParam 标识内容设置。
-默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
+     * Get <p>标识内容设置。<br>默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。</p> 
+     * @return LogoParam <p>标识内容设置。<br>默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。</p>
      */
     public LogoParam getLogoParam() {
         return this.LogoParam;
     }
 
     /**
-     * Set 标识内容设置。
-默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
-     * @param LogoParam 标识内容设置。
-默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
+     * Set <p>标识内容设置。<br>默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。</p>
+     * @param LogoParam <p>标识内容设置。<br>默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。</p>
      */
     public void setLogoParam(LogoParam LogoParam) {
         this.LogoParam = LogoParam;
     }
 
     /**
-     * Get 是否开启prompt改写，为空时默认开启，改写预计会增加20s左右耗时。
-0：关闭改写
-1：开启改写
-建议默认开启，如果关闭改写，需要调用方自己接改写，否则对生图效果有较大影响，改写方法可以参考：[改写](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0/tree/main/PE)
-示例值：1 
-     * @return Revise 是否开启prompt改写，为空时默认开启，改写预计会增加20s左右耗时。
-0：关闭改写
-1：开启改写
-建议默认开启，如果关闭改写，需要调用方自己接改写，否则对生图效果有较大影响，改写方法可以参考：[改写](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0/tree/main/PE)
-示例值：1
+     * Get <p>是否开启prompt改写，为空时默认开启，改写预计会增加20s左右耗时。<br>0：关闭改写<br>1：开启改写<br>建议默认开启，如果关闭改写，需要调用方自己接改写，否则对生图效果有较大影响，改写方法可以参考：<a href="https://github.com/Tencent-Hunyuan/HunyuanImage-3.0/tree/main/PE">改写</a><br>示例值：1</p> 
+     * @return Revise <p>是否开启prompt改写，为空时默认开启，改写预计会增加20s左右耗时。<br>0：关闭改写<br>1：开启改写<br>建议默认开启，如果关闭改写，需要调用方自己接改写，否则对生图效果有较大影响，改写方法可以参考：<a href="https://github.com/Tencent-Hunyuan/HunyuanImage-3.0/tree/main/PE">改写</a><br>示例值：1</p>
      */
     public Long getRevise() {
         return this.Revise;
     }
 
     /**
-     * Set 是否开启prompt改写，为空时默认开启，改写预计会增加20s左右耗时。
-0：关闭改写
-1：开启改写
-建议默认开启，如果关闭改写，需要调用方自己接改写，否则对生图效果有较大影响，改写方法可以参考：[改写](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0/tree/main/PE)
-示例值：1
-     * @param Revise 是否开启prompt改写，为空时默认开启，改写预计会增加20s左右耗时。
-0：关闭改写
-1：开启改写
-建议默认开启，如果关闭改写，需要调用方自己接改写，否则对生图效果有较大影响，改写方法可以参考：[改写](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0/tree/main/PE)
-示例值：1
+     * Set <p>是否开启prompt改写，为空时默认开启，改写预计会增加20s左右耗时。<br>0：关闭改写<br>1：开启改写<br>建议默认开启，如果关闭改写，需要调用方自己接改写，否则对生图效果有较大影响，改写方法可以参考：<a href="https://github.com/Tencent-Hunyuan/HunyuanImage-3.0/tree/main/PE">改写</a><br>示例值：1</p>
+     * @param Revise <p>是否开启prompt改写，为空时默认开启，改写预计会增加20s左右耗时。<br>0：关闭改写<br>1：开启改写<br>建议默认开启，如果关闭改写，需要调用方自己接改写，否则对生图效果有较大影响，改写方法可以参考：<a href="https://github.com/Tencent-Hunyuan/HunyuanImage-3.0/tree/main/PE">改写</a><br>示例值：1</p>
      */
     public void setRevise(Long Revise) {
         this.Revise = Revise;
@@ -251,6 +194,12 @@ public class SubmitTextToImageJobRequest extends AbstractModel {
     public SubmitTextToImageJobRequest(SubmitTextToImageJobRequest source) {
         if (source.Prompt != null) {
             this.Prompt = new String(source.Prompt);
+        }
+        if (source.Images != null) {
+            this.Images = new String[source.Images.length];
+            for (int i = 0; i < source.Images.length; i++) {
+                this.Images[i] = new String(source.Images[i]);
+            }
         }
         if (source.Resolution != null) {
             this.Resolution = new String(source.Resolution);
@@ -275,6 +224,7 @@ public class SubmitTextToImageJobRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Prompt", this.Prompt);
+        this.setParamArraySimple(map, prefix + "Images.", this.Images);
         this.setParamSimple(map, prefix + "Resolution", this.Resolution);
         this.setParamSimple(map, prefix + "Seed", this.Seed);
         this.setParamSimple(map, prefix + "LogoAdd", this.LogoAdd);

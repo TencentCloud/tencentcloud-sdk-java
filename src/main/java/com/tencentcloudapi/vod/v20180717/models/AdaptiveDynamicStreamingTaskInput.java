@@ -52,6 +52,13 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel {
     private CopyRightWatermarkInput CopyRightWatermark;
 
     /**
+    * 数字水印。
+    */
+    @SerializedName("BlindWatermark")
+    @Expose
+    private BlindWatermarkInput BlindWatermark;
+
+    /**
     * 字幕列表，元素为字幕 ID，支持多个字幕，最大可支持16个。
     */
     @SerializedName("SubtitleSet")
@@ -123,6 +130,22 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel {
     }
 
     /**
+     * Get 数字水印。 
+     * @return BlindWatermark 数字水印。
+     */
+    public BlindWatermarkInput getBlindWatermark() {
+        return this.BlindWatermark;
+    }
+
+    /**
+     * Set 数字水印。
+     * @param BlindWatermark 数字水印。
+     */
+    public void setBlindWatermark(BlindWatermarkInput BlindWatermark) {
+        this.BlindWatermark = BlindWatermark;
+    }
+
+    /**
      * Get 字幕列表，元素为字幕 ID，支持多个字幕，最大可支持16个。 
      * @return SubtitleSet 字幕列表，元素为字幕 ID，支持多个字幕，最大可支持16个。
      */
@@ -161,6 +184,9 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel {
         if (source.CopyRightWatermark != null) {
             this.CopyRightWatermark = new CopyRightWatermarkInput(source.CopyRightWatermark);
         }
+        if (source.BlindWatermark != null) {
+            this.BlindWatermark = new BlindWatermarkInput(source.BlindWatermark);
+        }
         if (source.SubtitleSet != null) {
             this.SubtitleSet = new String[source.SubtitleSet.length];
             for (int i = 0; i < source.SubtitleSet.length; i++) {
@@ -178,6 +204,7 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel {
         this.setParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
         this.setParamObj(map, prefix + "TraceWatermark.", this.TraceWatermark);
         this.setParamObj(map, prefix + "CopyRightWatermark.", this.CopyRightWatermark);
+        this.setParamObj(map, prefix + "BlindWatermark.", this.BlindWatermark);
         this.setParamArraySimple(map, prefix + "SubtitleSet.", this.SubtitleSet);
 
     }

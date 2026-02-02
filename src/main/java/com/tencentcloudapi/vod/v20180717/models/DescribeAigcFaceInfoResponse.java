@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.gme.v20180711.models;
+package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ScanVoiceResponse extends AbstractModel {
+public class DescribeAigcFaceInfoResponse extends AbstractModel {
 
     /**
-    * <p>语音检测返回。Data 字段是 JSON 数组，每一个元素包含：<li>DataId： 请求中对应的 DataId。</li></p><li>TaskID ：该检测任务的 ID，用于轮询语音检测结果。</li>
+    * 人脸信息。
     */
-    @SerializedName("Data")
+    @SerializedName("FaceInfoSet")
     @Expose
-    private ScanVoiceResult [] Data;
+    private AigcFaceInfo [] FaceInfoSet;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +38,19 @@ public class ScanVoiceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>语音检测返回。Data 字段是 JSON 数组，每一个元素包含：<li>DataId： 请求中对应的 DataId。</li></p><li>TaskID ：该检测任务的 ID，用于轮询语音检测结果。</li> 
-     * @return Data <p>语音检测返回。Data 字段是 JSON 数组，每一个元素包含：<li>DataId： 请求中对应的 DataId。</li></p><li>TaskID ：该检测任务的 ID，用于轮询语音检测结果。</li>
+     * Get 人脸信息。 
+     * @return FaceInfoSet 人脸信息。
      */
-    public ScanVoiceResult [] getData() {
-        return this.Data;
+    public AigcFaceInfo [] getFaceInfoSet() {
+        return this.FaceInfoSet;
     }
 
     /**
-     * Set <p>语音检测返回。Data 字段是 JSON 数组，每一个元素包含：<li>DataId： 请求中对应的 DataId。</li></p><li>TaskID ：该检测任务的 ID，用于轮询语音检测结果。</li>
-     * @param Data <p>语音检测返回。Data 字段是 JSON 数组，每一个元素包含：<li>DataId： 请求中对应的 DataId。</li></p><li>TaskID ：该检测任务的 ID，用于轮询语音检测结果。</li>
+     * Set 人脸信息。
+     * @param FaceInfoSet 人脸信息。
      */
-    public void setData(ScanVoiceResult [] Data) {
-        this.Data = Data;
+    public void setFaceInfoSet(AigcFaceInfo [] FaceInfoSet) {
+        this.FaceInfoSet = FaceInfoSet;
     }
 
     /**
@@ -69,18 +69,18 @@ public class ScanVoiceResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public ScanVoiceResponse() {
+    public DescribeAigcFaceInfoResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ScanVoiceResponse(ScanVoiceResponse source) {
-        if (source.Data != null) {
-            this.Data = new ScanVoiceResult[source.Data.length];
-            for (int i = 0; i < source.Data.length; i++) {
-                this.Data[i] = new ScanVoiceResult(source.Data[i]);
+    public DescribeAigcFaceInfoResponse(DescribeAigcFaceInfoResponse source) {
+        if (source.FaceInfoSet != null) {
+            this.FaceInfoSet = new AigcFaceInfo[source.FaceInfoSet.length];
+            for (int i = 0; i < source.FaceInfoSet.length; i++) {
+                this.FaceInfoSet[i] = new AigcFaceInfo(source.FaceInfoSet[i]);
             }
         }
         if (source.RequestId != null) {
@@ -93,7 +93,7 @@ public class ScanVoiceResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamArrayObj(map, prefix + "FaceInfoSet.", this.FaceInfoSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

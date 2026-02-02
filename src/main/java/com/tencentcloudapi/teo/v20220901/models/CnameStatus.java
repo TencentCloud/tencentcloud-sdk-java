@@ -24,84 +24,84 @@ import java.util.HashMap;
 public class CnameStatus extends AbstractModel {
 
     /**
-    * 记录名称。
+    * 接入域名。
     */
     @SerializedName("RecordName")
     @Expose
     private String RecordName;
 
     /**
-    * CNAME 地址。
-注意：此字段可能返回 null，表示取不到有效值。
+    * EdgeOne 分配给接入域名的 CNAME。
     */
     @SerializedName("Cname")
     @Expose
     private String Cname;
 
     /**
-    * CNAME 状态信息，取值有：
-<li>active：生效；</li>
-<li>moved：不生效；</li>
+    * CNAME 配置状态校验结果，取值有：
+<li>active：表示接入域名已正确配置到 EdgeOne 为其分配的指定 CNAME；</li>
+<li>moved：表示接入域名未配置到 EdgeOne 为其分配的指定 CNAME；</li>
+<li>invalid：表示接入域名配置的 CNAME 为 EdgeOne 为其他域名分配的 CNAME，会导致服务异常，请修改为 EdgeOne 为该接入域名提供的指定 CNAME，您可通过本结构体的 Cname 字段获取 EdgeOne 为该接入域名提供的 CNAME。</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get 记录名称。 
-     * @return RecordName 记录名称。
+     * Get 接入域名。 
+     * @return RecordName 接入域名。
      */
     public String getRecordName() {
         return this.RecordName;
     }
 
     /**
-     * Set 记录名称。
-     * @param RecordName 记录名称。
+     * Set 接入域名。
+     * @param RecordName 接入域名。
      */
     public void setRecordName(String RecordName) {
         this.RecordName = RecordName;
     }
 
     /**
-     * Get CNAME 地址。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Cname CNAME 地址。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get EdgeOne 分配给接入域名的 CNAME。 
+     * @return Cname EdgeOne 分配给接入域名的 CNAME。
      */
     public String getCname() {
         return this.Cname;
     }
 
     /**
-     * Set CNAME 地址。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Cname CNAME 地址。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set EdgeOne 分配给接入域名的 CNAME。
+     * @param Cname EdgeOne 分配给接入域名的 CNAME。
      */
     public void setCname(String Cname) {
         this.Cname = Cname;
     }
 
     /**
-     * Get CNAME 状态信息，取值有：
-<li>active：生效；</li>
-<li>moved：不生效；</li> 
-     * @return Status CNAME 状态信息，取值有：
-<li>active：生效；</li>
-<li>moved：不生效；</li>
+     * Get CNAME 配置状态校验结果，取值有：
+<li>active：表示接入域名已正确配置到 EdgeOne 为其分配的指定 CNAME；</li>
+<li>moved：表示接入域名未配置到 EdgeOne 为其分配的指定 CNAME；</li>
+<li>invalid：表示接入域名配置的 CNAME 为 EdgeOne 为其他域名分配的 CNAME，会导致服务异常，请修改为 EdgeOne 为该接入域名提供的指定 CNAME，您可通过本结构体的 Cname 字段获取 EdgeOne 为该接入域名提供的 CNAME。</li> 
+     * @return Status CNAME 配置状态校验结果，取值有：
+<li>active：表示接入域名已正确配置到 EdgeOne 为其分配的指定 CNAME；</li>
+<li>moved：表示接入域名未配置到 EdgeOne 为其分配的指定 CNAME；</li>
+<li>invalid：表示接入域名配置的 CNAME 为 EdgeOne 为其他域名分配的 CNAME，会导致服务异常，请修改为 EdgeOne 为该接入域名提供的指定 CNAME，您可通过本结构体的 Cname 字段获取 EdgeOne 为该接入域名提供的 CNAME。</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set CNAME 状态信息，取值有：
-<li>active：生效；</li>
-<li>moved：不生效；</li>
-     * @param Status CNAME 状态信息，取值有：
-<li>active：生效；</li>
-<li>moved：不生效；</li>
+     * Set CNAME 配置状态校验结果，取值有：
+<li>active：表示接入域名已正确配置到 EdgeOne 为其分配的指定 CNAME；</li>
+<li>moved：表示接入域名未配置到 EdgeOne 为其分配的指定 CNAME；</li>
+<li>invalid：表示接入域名配置的 CNAME 为 EdgeOne 为其他域名分配的 CNAME，会导致服务异常，请修改为 EdgeOne 为该接入域名提供的指定 CNAME，您可通过本结构体的 Cname 字段获取 EdgeOne 为该接入域名提供的 CNAME。</li>
+     * @param Status CNAME 配置状态校验结果，取值有：
+<li>active：表示接入域名已正确配置到 EdgeOne 为其分配的指定 CNAME；</li>
+<li>moved：表示接入域名未配置到 EdgeOne 为其分配的指定 CNAME；</li>
+<li>invalid：表示接入域名配置的 CNAME 为 EdgeOne 为其他域名分配的 CNAME，会导致服务异常，请修改为 EdgeOne 为该接入域名提供的指定 CNAME，您可通过本结构体的 Cname 字段获取 EdgeOne 为该接入域名提供的 CNAME。</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;

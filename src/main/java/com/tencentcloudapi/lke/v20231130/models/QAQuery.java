@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class QAQuery extends AbstractModel {
 
     /**
-    * 页码
-
+    * 页码 从1开始
 
     */
     @SerializedName("PageNumber")
@@ -33,7 +32,7 @@ public class QAQuery extends AbstractModel {
     private Long PageNumber;
 
     /**
-    * 每页数量
+    * 页大小 默认15 最大100
 
     */
     @SerializedName("PageSize")
@@ -64,7 +63,7 @@ public class QAQuery extends AbstractModel {
     private String CateBizId;
 
     /**
-    * 校验状态
+    * 校验状态的枚举值
 
     */
     @SerializedName("AcceptStatus")
@@ -72,7 +71,7 @@ public class QAQuery extends AbstractModel {
     private Long [] AcceptStatus;
 
     /**
-    * 发布状态
+    * 发布状态的枚举值
 
     */
     @SerializedName("ReleaseStatus")
@@ -119,11 +118,17 @@ public class QAQuery extends AbstractModel {
     private String QueryType;
 
     /**
-     * Get 页码
+    * 问答生效域检索，不检索不传。枚举值如下：
+1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。
+    */
+    @SerializedName("EnableScope")
+    @Expose
+    private Long EnableScope;
 
+    /**
+     * Get 页码 从1开始
  
-     * @return PageNumber 页码
-
+     * @return PageNumber 页码 从1开始
 
      */
     public Long getPageNumber() {
@@ -131,11 +136,9 @@ public class QAQuery extends AbstractModel {
     }
 
     /**
-     * Set 页码
+     * Set 页码 从1开始
 
-
-     * @param PageNumber 页码
-
+     * @param PageNumber 页码 从1开始
 
      */
     public void setPageNumber(Long PageNumber) {
@@ -143,9 +146,9 @@ public class QAQuery extends AbstractModel {
     }
 
     /**
-     * Get 每页数量
+     * Get 页大小 默认15 最大100
  
-     * @return PageSize 每页数量
+     * @return PageSize 页大小 默认15 最大100
 
      */
     public Long getPageSize() {
@@ -153,9 +156,9 @@ public class QAQuery extends AbstractModel {
     }
 
     /**
-     * Set 每页数量
+     * Set 页大小 默认15 最大100
 
-     * @param PageSize 每页数量
+     * @param PageSize 页大小 默认15 最大100
 
      */
     public void setPageSize(Long PageSize) {
@@ -219,9 +222,9 @@ public class QAQuery extends AbstractModel {
     }
 
     /**
-     * Get 校验状态
+     * Get 校验状态的枚举值
  
-     * @return AcceptStatus 校验状态
+     * @return AcceptStatus 校验状态的枚举值
 
      */
     public Long [] getAcceptStatus() {
@@ -229,9 +232,9 @@ public class QAQuery extends AbstractModel {
     }
 
     /**
-     * Set 校验状态
+     * Set 校验状态的枚举值
 
-     * @param AcceptStatus 校验状态
+     * @param AcceptStatus 校验状态的枚举值
 
      */
     public void setAcceptStatus(Long [] AcceptStatus) {
@@ -239,9 +242,9 @@ public class QAQuery extends AbstractModel {
     }
 
     /**
-     * Get 发布状态
+     * Get 发布状态的枚举值
  
-     * @return ReleaseStatus 发布状态
+     * @return ReleaseStatus 发布状态的枚举值
 
      */
     public Long [] getReleaseStatus() {
@@ -249,9 +252,9 @@ public class QAQuery extends AbstractModel {
     }
 
     /**
-     * Set 发布状态
+     * Set 发布状态的枚举值
 
-     * @param ReleaseStatus 发布状态
+     * @param ReleaseStatus 发布状态的枚举值
 
      */
     public void setReleaseStatus(Long [] ReleaseStatus) {
@@ -354,6 +357,26 @@ public class QAQuery extends AbstractModel {
         this.QueryType = QueryType;
     }
 
+    /**
+     * Get 问答生效域检索，不检索不传。枚举值如下：
+1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。 
+     * @return EnableScope 问答生效域检索，不检索不传。枚举值如下：
+1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。
+     */
+    public Long getEnableScope() {
+        return this.EnableScope;
+    }
+
+    /**
+     * Set 问答生效域检索，不检索不传。枚举值如下：
+1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。
+     * @param EnableScope 问答生效域检索，不检索不传。枚举值如下：
+1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效。
+     */
+    public void setEnableScope(Long EnableScope) {
+        this.EnableScope = EnableScope;
+    }
+
     public QAQuery() {
     }
 
@@ -404,6 +427,9 @@ public class QAQuery extends AbstractModel {
         if (source.QueryType != null) {
             this.QueryType = new String(source.QueryType);
         }
+        if (source.EnableScope != null) {
+            this.EnableScope = new Long(source.EnableScope);
+        }
     }
 
 
@@ -423,6 +449,7 @@ public class QAQuery extends AbstractModel {
         this.setParamSimple(map, prefix + "Source", this.Source);
         this.setParamSimple(map, prefix + "QueryAnswer", this.QueryAnswer);
         this.setParamSimple(map, prefix + "QueryType", this.QueryType);
+        this.setParamSimple(map, prefix + "EnableScope", this.EnableScope);
 
     }
 }
