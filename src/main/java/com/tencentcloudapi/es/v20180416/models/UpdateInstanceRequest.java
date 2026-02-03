@@ -367,6 +367,13 @@ CLOSE 关闭
     private String [] AutoScaleDiskDeleteNodeTypeList;
 
     /**
+    * 其他附加配置，jvm或者yml
+    */
+    @SerializedName("OtherConfig")
+    @Expose
+    private OtherConfig OtherConfig;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -1186,6 +1193,22 @@ CLOSE 关闭
         this.AutoScaleDiskDeleteNodeTypeList = AutoScaleDiskDeleteNodeTypeList;
     }
 
+    /**
+     * Get 其他附加配置，jvm或者yml 
+     * @return OtherConfig 其他附加配置，jvm或者yml
+     */
+    public OtherConfig getOtherConfig() {
+        return this.OtherConfig;
+    }
+
+    /**
+     * Set 其他附加配置，jvm或者yml
+     * @param OtherConfig 其他附加配置，jvm或者yml
+     */
+    public void setOtherConfig(OtherConfig OtherConfig) {
+        this.OtherConfig = OtherConfig;
+    }
+
     public UpdateInstanceRequest() {
     }
 
@@ -1347,6 +1370,9 @@ CLOSE 关闭
                 this.AutoScaleDiskDeleteNodeTypeList[i] = new String(source.AutoScaleDiskDeleteNodeTypeList[i]);
             }
         }
+        if (source.OtherConfig != null) {
+            this.OtherConfig = new OtherConfig(source.OtherConfig);
+        }
     }
 
 
@@ -1400,6 +1426,7 @@ CLOSE 关闭
         this.setParamSimple(map, prefix + "EnableDestroyProtection", this.EnableDestroyProtection);
         this.setParamArrayObj(map, prefix + "AutoScaleDiskInfoList.", this.AutoScaleDiskInfoList);
         this.setParamArraySimple(map, prefix + "AutoScaleDiskDeleteNodeTypeList.", this.AutoScaleDiskDeleteNodeTypeList);
+        this.setParamObj(map, prefix + "OtherConfig.", this.OtherConfig);
 
     }
 }

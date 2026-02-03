@@ -88,6 +88,13 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel {
     private String CopyRightWatermarkText;
 
     /**
+    * 数字水印模板id。
+    */
+    @SerializedName("BlindWatermarkDefinition")
+    @Expose
+    private Long BlindWatermarkDefinition;
+
+    /**
     * 字幕信息列表。
     */
     @SerializedName("SubtitleSet")
@@ -262,6 +269,22 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel {
     }
 
     /**
+     * Get 数字水印模板id。 
+     * @return BlindWatermarkDefinition 数字水印模板id。
+     */
+    public Long getBlindWatermarkDefinition() {
+        return this.BlindWatermarkDefinition;
+    }
+
+    /**
+     * Set 数字水印模板id。
+     * @param BlindWatermarkDefinition 数字水印模板id。
+     */
+    public void setBlindWatermarkDefinition(Long BlindWatermarkDefinition) {
+        this.BlindWatermarkDefinition = BlindWatermarkDefinition;
+    }
+
+    /**
      * Get 字幕信息列表。 
      * @return SubtitleSet 字幕信息列表。
      */
@@ -328,6 +351,9 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel {
         if (source.CopyRightWatermarkText != null) {
             this.CopyRightWatermarkText = new String(source.CopyRightWatermarkText);
         }
+        if (source.BlindWatermarkDefinition != null) {
+            this.BlindWatermarkDefinition = new Long(source.BlindWatermarkDefinition);
+        }
         if (source.SubtitleSet != null) {
             this.SubtitleSet = new MediaSubtitleItem[source.SubtitleSet.length];
             for (int i = 0; i < source.SubtitleSet.length; i++) {
@@ -352,6 +378,7 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel {
         this.setParamSimple(map, prefix + "DigitalWatermarkType", this.DigitalWatermarkType);
         this.setParamArrayObj(map, prefix + "SubStreamSet.", this.SubStreamSet);
         this.setParamSimple(map, prefix + "CopyRightWatermarkText", this.CopyRightWatermarkText);
+        this.setParamSimple(map, prefix + "BlindWatermarkDefinition", this.BlindWatermarkDefinition);
         this.setParamArrayObj(map, prefix + "SubtitleSet.", this.SubtitleSet);
         this.setParamSimple(map, prefix + "DefaultSubtitleId", this.DefaultSubtitleId);
 

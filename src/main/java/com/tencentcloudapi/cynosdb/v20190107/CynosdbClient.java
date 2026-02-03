@@ -50,6 +50,28 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *解除分析集群隔离状态
+     * @param req ActivateLibraDBClusterRequest
+     * @return ActivateLibraDBClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public ActivateLibraDBClusterResponse ActivateLibraDBCluster(ActivateLibraDBClusterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ActivateLibraDBCluster", ActivateLibraDBClusterResponse.class);
+    }
+
+    /**
+     *本接口（ActivateLibraDBInstance）用于解除已隔离的只读分析引擎实例。
+     * @param req ActivateLibraDBInstanceRequest
+     * @return ActivateLibraDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ActivateLibraDBInstanceResponse ActivateLibraDBInstance(ActivateLibraDBInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ActivateLibraDBInstance", ActivateLibraDBInstanceResponse.class);
+    }
+
+    /**
      *本接口（AddClusterSlaveZone）用于对集群开启多可用区部署。
      * @param req AddClusterSlaveZoneRequest
      * @return AddClusterSlaveZoneResponse
@@ -91,6 +113,17 @@ public class CynosdbClient extends AbstractClient{
     public BindClusterResourcePackagesResponse BindClusterResourcePackages(BindClusterResourcePackagesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "BindClusterResourcePackages", BindClusterResourcePackagesResponse.class);
+    }
+
+    /**
+     *本接口（CheckCreateLibraDBInstance）用于校验集群是否可以添加只读分析引擎实例
+     * @param req CheckCreateLibraDBInstanceRequest
+     * @return CheckCreateLibraDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckCreateLibraDBInstanceResponse CheckCreateLibraDBInstance(CheckCreateLibraDBInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckCreateLibraDBInstance", CheckCreateLibraDBInstanceResponse.class);
     }
 
     /**
@@ -259,6 +292,28 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateLibraDBClusterAccounts）用于创建分析集群账号
+     * @param req CreateLibraDBClusterAccountsRequest
+     * @return CreateLibraDBClusterAccountsResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLibraDBClusterAccountsResponse CreateLibraDBClusterAccounts(CreateLibraDBClusterAccountsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateLibraDBClusterAccounts", CreateLibraDBClusterAccountsResponse.class);
+    }
+
+    /**
+     *创建 TDSQL-C 分析集群
+     * @param req CreateLibraDBClustersRequest
+     * @return CreateLibraDBClustersResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLibraDBClustersResponse CreateLibraDBClusters(CreateLibraDBClustersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateLibraDBClusters", CreateLibraDBClustersResponse.class);
+    }
+
+    /**
      *本接口（CreateParamTemplate）用于创建参数模板。
      * @param req CreateParamTemplateRequest
      * @return CreateParamTemplateResponse
@@ -377,6 +432,28 @@ public class CynosdbClient extends AbstractClient{
     public DeleteClusterSaveBackupResponse DeleteClusterSaveBackup(DeleteClusterSaveBackupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteClusterSaveBackup", DeleteClusterSaveBackupResponse.class);
+    }
+
+    /**
+     *删除 TDSQL-C 分析集群
+     * @param req DeleteLibraDBClusterRequest
+     * @return DeleteLibraDBClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLibraDBClusterResponse DeleteLibraDBCluster(DeleteLibraDBClusterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteLibraDBCluster", DeleteLibraDBClusterResponse.class);
+    }
+
+    /**
+     *本接口（DeleteLibraDBClusterAccounts）用于删除分析集群账号
+     * @param req DeleteLibraDBClusterAccountsRequest
+     * @return DeleteLibraDBClusterAccountsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLibraDBClusterAccountsResponse DeleteLibraDBClusterAccounts(DeleteLibraDBClusterAccountsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteLibraDBClusterAccounts", DeleteLibraDBClusterAccountsResponse.class);
     }
 
     /**
@@ -853,6 +930,149 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeLibraDBClusterAccountAllPrivileges）用于查询分析集群账号全部权限
+     * @param req DescribeLibraDBClusterAccountAllPrivilegesRequest
+     * @return DescribeLibraDBClusterAccountAllPrivilegesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLibraDBClusterAccountAllPrivilegesResponse DescribeLibraDBClusterAccountAllPrivileges(DescribeLibraDBClusterAccountAllPrivilegesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLibraDBClusterAccountAllPrivileges", DescribeLibraDBClusterAccountAllPrivilegesResponse.class);
+    }
+
+    /**
+     *本接口（DescribeLibraDBClusterAccountPrivileges）用于查询分析集群账号权限
+     * @param req DescribeLibraDBClusterAccountPrivilegesRequest
+     * @return DescribeLibraDBClusterAccountPrivilegesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLibraDBClusterAccountPrivilegesResponse DescribeLibraDBClusterAccountPrivileges(DescribeLibraDBClusterAccountPrivilegesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLibraDBClusterAccountPrivileges", DescribeLibraDBClusterAccountPrivilegesResponse.class);
+    }
+
+    /**
+     *本接口（DescribeLibraDBClusterAccounts）用于查询分析集群账号
+     * @param req DescribeLibraDBClusterAccountsRequest
+     * @return DescribeLibraDBClusterAccountsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLibraDBClusterAccountsResponse DescribeLibraDBClusterAccounts(DescribeLibraDBClusterAccountsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLibraDBClusterAccounts", DescribeLibraDBClusterAccountsResponse.class);
+    }
+
+    /**
+     *本接口（DescribeLibraDBClusterAutoMapRule）用于查看分析集群高级映射规则
+     * @param req DescribeLibraDBClusterAutoMapRuleRequest
+     * @return DescribeLibraDBClusterAutoMapRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLibraDBClusterAutoMapRuleResponse DescribeLibraDBClusterAutoMapRule(DescribeLibraDBClusterAutoMapRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLibraDBClusterAutoMapRule", DescribeLibraDBClusterAutoMapRuleResponse.class);
+    }
+
+    /**
+     *查询 TDSQL-C 分析集群信息
+     * @param req DescribeLibraDBClusterDetailRequest
+     * @return DescribeLibraDBClusterDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLibraDBClusterDetailResponse DescribeLibraDBClusterDetail(DescribeLibraDBClusterDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLibraDBClusterDetail", DescribeLibraDBClusterDetailResponse.class);
+    }
+
+    /**
+     *本接口（ModifyLibraDBForwardConfig）用于查看分析集群库表映射关系
+     * @param req DescribeLibraDBClusterTableMappingRequest
+     * @return DescribeLibraDBClusterTableMappingResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLibraDBClusterTableMappingResponse DescribeLibraDBClusterTableMapping(DescribeLibraDBClusterTableMappingRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLibraDBClusterTableMapping", DescribeLibraDBClusterTableMappingResponse.class);
+    }
+
+    /**
+     *查询分析集群列表
+     * @param req DescribeLibraDBClustersRequest
+     * @return DescribeLibraDBClustersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLibraDBClustersResponse DescribeLibraDBClusters(DescribeLibraDBClustersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLibraDBClusters", DescribeLibraDBClustersResponse.class);
+    }
+
+    /**
+     *本接口（DescribeLibraDBDataSource）用于查询分析集群的源实例信息
+     * @param req DescribeLibraDBDataSourceRequest
+     * @return DescribeLibraDBDataSourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLibraDBDataSourceResponse DescribeLibraDBDataSource(DescribeLibraDBDataSourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLibraDBDataSource", DescribeLibraDBDataSourceResponse.class);
+    }
+
+    /**
+     *本接口（DescribeLibraDBForwardConfig）用于查询分析引擎转发参数
+     * @param req DescribeLibraDBForwardConfigRequest
+     * @return DescribeLibraDBForwardConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLibraDBForwardConfigResponse DescribeLibraDBForwardConfig(DescribeLibraDBForwardConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLibraDBForwardConfig", DescribeLibraDBForwardConfigResponse.class);
+    }
+
+    /**
+     *本接口(DescribeLibraDBInstanceDetail)用于查询只读分析引擎详情
+     * @param req DescribeLibraDBInstanceDetailRequest
+     * @return DescribeLibraDBInstanceDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLibraDBInstanceDetailResponse DescribeLibraDBInstanceDetail(DescribeLibraDBInstanceDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLibraDBInstanceDetail", DescribeLibraDBInstanceDetailResponse.class);
+    }
+
+    /**
+     *本接口(DescribeLibraDBInstanceSpecs)用于查询只读分析引擎在该地域支持的规格列表信息
+     * @param req DescribeLibraDBInstanceSpecsRequest
+     * @return DescribeLibraDBInstanceSpecsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLibraDBInstanceSpecsResponse DescribeLibraDBInstanceSpecs(DescribeLibraDBInstanceSpecsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLibraDBInstanceSpecs", DescribeLibraDBInstanceSpecsResponse.class);
+    }
+
+    /**
+     *本接口（DescribeLibraDBSlowLogs）为只读分析引擎的慢 SQL 明细查询接口
+     * @param req DescribeLibraDBSlowLogsRequest
+     * @return DescribeLibraDBSlowLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLibraDBSlowLogsResponse DescribeLibraDBSlowLogs(DescribeLibraDBSlowLogsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLibraDBSlowLogs", DescribeLibraDBSlowLogsResponse.class);
+    }
+
+    /**
+     *查询只读分析引擎支持的版本列表
+     * @param req DescribeLibraDBVersionRequest
+     * @return DescribeLibraDBVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLibraDBVersionResponse DescribeLibraDBVersion(DescribeLibraDBVersionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLibraDBVersion", DescribeLibraDBVersionResponse.class);
+    }
+
+    /**
      *本接口（DescribeMaintainPeriod）用于查询实例维护时间窗。
      * @param req DescribeMaintainPeriodRequest
      * @return DescribeMaintainPeriodResponse
@@ -1095,6 +1315,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *下载分析集群列表
+     * @param req DownloadLibraDBClusterListRequest
+     * @return DownloadLibraDBClusterListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DownloadLibraDBClusterListResponse DownloadLibraDBClusterList(DownloadLibraDBClusterListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DownloadLibraDBClusterList", DownloadLibraDBClusterListResponse.class);
+    }
+
+    /**
      *此接口（ExportInstanceErrorLogs）用于导出实例错误日志。
      * @param req ExportInstanceErrorLogsRequest
      * @return ExportInstanceErrorLogsResponse
@@ -1202,6 +1433,28 @@ public class CynosdbClient extends AbstractClient{
     public IsolateInstanceResponse IsolateInstance(IsolateInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "IsolateInstance", IsolateInstanceResponse.class);
+    }
+
+    /**
+     *隔离 TDSQL-C 分析集群
+     * @param req IsolateLibraDBClusterRequest
+     * @return IsolateLibraDBClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public IsolateLibraDBClusterResponse IsolateLibraDBCluster(IsolateLibraDBClusterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "IsolateLibraDBCluster", IsolateLibraDBClusterResponse.class);
+    }
+
+    /**
+     *本接口(IsolateLibraDBInstance)用于隔离的只读分析引擎实例。
+     * @param req IsolateLibraDBInstanceRequest
+     * @return IsolateLibraDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public IsolateLibraDBInstanceResponse IsolateLibraDBInstance(IsolateLibraDBInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "IsolateLibraDBInstance", IsolateLibraDBInstanceResponse.class);
     }
 
     /**
@@ -1469,6 +1722,94 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *本接口（ModifyLibraDBClusterAccountDescription）用于修改分析集群账号描述
+     * @param req ModifyLibraDBClusterAccountDescriptionRequest
+     * @return ModifyLibraDBClusterAccountDescriptionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLibraDBClusterAccountDescriptionResponse ModifyLibraDBClusterAccountDescription(ModifyLibraDBClusterAccountDescriptionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLibraDBClusterAccountDescription", ModifyLibraDBClusterAccountDescriptionResponse.class);
+    }
+
+    /**
+     *本接口（ModifyLibraDBClusterAccountHost）用于修改分析集群账号的可登录主机信息
+     * @param req ModifyLibraDBClusterAccountHostRequest
+     * @return ModifyLibraDBClusterAccountHostResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLibraDBClusterAccountHostResponse ModifyLibraDBClusterAccountHost(ModifyLibraDBClusterAccountHostRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLibraDBClusterAccountHost", ModifyLibraDBClusterAccountHostResponse.class);
+    }
+
+    /**
+     *本接口（ModifyLibraDBClusterAccountPrivilege）用于修改分析集群账号权限
+     * @param req ModifyLibraDBClusterAccountPrivilegeRequest
+     * @return ModifyLibraDBClusterAccountPrivilegeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLibraDBClusterAccountPrivilegeResponse ModifyLibraDBClusterAccountPrivilege(ModifyLibraDBClusterAccountPrivilegeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLibraDBClusterAccountPrivilege", ModifyLibraDBClusterAccountPrivilegeResponse.class);
+    }
+
+    /**
+     *本接口（ModifyLibraDBClusterDataSource）用于修改 TDSQL-C 分析集群数据源
+     * @param req ModifyLibraDBClusterDataSourceRequest
+     * @return ModifyLibraDBClusterDataSourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLibraDBClusterDataSourceResponse ModifyLibraDBClusterDataSource(ModifyLibraDBClusterDataSourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLibraDBClusterDataSource", ModifyLibraDBClusterDataSourceResponse.class);
+    }
+
+    /**
+     *修改分析集群名称
+     * @param req ModifyLibraDBClusterNameRequest
+     * @return ModifyLibraDBClusterNameResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLibraDBClusterNameResponse ModifyLibraDBClusterName(ModifyLibraDBClusterNameRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLibraDBClusterName", ModifyLibraDBClusterNameResponse.class);
+    }
+
+    /**
+     *修改分析集群项目 ID
+     * @param req ModifyLibraDBClusterProjectRequest
+     * @return ModifyLibraDBClusterProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLibraDBClusterProjectResponse ModifyLibraDBClusterProject(ModifyLibraDBClusterProjectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLibraDBClusterProject", ModifyLibraDBClusterProjectResponse.class);
+    }
+
+    /**
+     *本接口（ModifyLibraDBClusterReplicationObject）用于修改分析集群同步对象
+     * @param req ModifyLibraDBClusterReplicationObjectRequest
+     * @return ModifyLibraDBClusterReplicationObjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLibraDBClusterReplicationObjectResponse ModifyLibraDBClusterReplicationObject(ModifyLibraDBClusterReplicationObjectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLibraDBClusterReplicationObject", ModifyLibraDBClusterReplicationObjectResponse.class);
+    }
+
+    /**
+     *本接口（ModifyLibraDBForwardConfig）用于修改只读分析实例自动转发参数
+     * @param req ModifyLibraDBForwardConfigRequest
+     * @return ModifyLibraDBForwardConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLibraDBForwardConfigResponse ModifyLibraDBForwardConfig(ModifyLibraDBForwardConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLibraDBForwardConfig", ModifyLibraDBForwardConfigResponse.class);
+    }
+
+    /**
      *本接口（ModifyMaintainPeriodConfig）用于修改维护时间配置。
      * @param req ModifyMaintainPeriodConfigRequest
      * @return ModifyMaintainPeriodConfigResponse
@@ -1598,6 +1939,28 @@ public class CynosdbClient extends AbstractClient{
     public OfflineInstanceResponse OfflineInstance(OfflineInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "OfflineInstance", OfflineInstanceResponse.class);
+    }
+
+    /**
+     *下线分析集群
+     * @param req OfflineLibraDBClusterRequest
+     * @return OfflineLibraDBClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public OfflineLibraDBClusterResponse OfflineLibraDBCluster(OfflineLibraDBClusterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "OfflineLibraDBCluster", OfflineLibraDBClusterResponse.class);
+    }
+
+    /**
+     *本接口(OfflineLibraDBInstance)用于下线的只读分析引擎实例。
+     * @param req OfflineLibraDBInstanceRequest
+     * @return OfflineLibraDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public OfflineLibraDBInstanceResponse OfflineLibraDBInstance(OfflineLibraDBInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "OfflineLibraDBInstance", OfflineLibraDBInstanceResponse.class);
     }
 
     /**
@@ -1733,6 +2096,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *续费分析集群
+     * @param req RenewLibraDBClustersRequest
+     * @return RenewLibraDBClustersResponse
+     * @throws TencentCloudSDKException
+     */
+    public RenewLibraDBClustersResponse RenewLibraDBClusters(RenewLibraDBClustersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RenewLibraDBClusters", RenewLibraDBClustersResponse.class);
+    }
+
+    /**
      *回放实例审计日志
      * @param req ReplayInstanceAuditLogRequest
      * @return ReplayInstanceAuditLogResponse
@@ -1755,6 +2129,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *修改分析集群账号密码
+     * @param req ResetLibraDBClusterAccountPasswordRequest
+     * @return ResetLibraDBClusterAccountPasswordResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetLibraDBClusterAccountPasswordResponse ResetLibraDBClusterAccountPassword(ResetLibraDBClusterAccountPasswordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResetLibraDBClusterAccountPassword", ResetLibraDBClusterAccountPasswordResponse.class);
+    }
+
+    /**
      *本接口（RestartInstance）用于重启实例。
      * @param req RestartInstanceRequest
      * @return RestartInstanceResponse
@@ -1763,6 +2148,17 @@ public class CynosdbClient extends AbstractClient{
     public RestartInstanceResponse RestartInstance(RestartInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RestartInstance", RestartInstanceResponse.class);
+    }
+
+    /**
+     *重启只读分析引擎
+     * @param req RestartLibraDBInstanceRequest
+     * @return RestartLibraDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public RestartLibraDBInstanceResponse RestartLibraDBInstance(RestartLibraDBInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RestartLibraDBInstance", RestartLibraDBInstanceResponse.class);
     }
 
     /**
@@ -1829,6 +2225,17 @@ public class CynosdbClient extends AbstractClient{
     public SearchClusterTablesResponse SearchClusterTables(SearchClusterTablesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SearchClusterTables", SearchClusterTablesResponse.class);
+    }
+
+    /**
+     *设置 TDSQL-C 分析集群是否续费
+     * @param req SetLibraDBClusterRenewFlagRequest
+     * @return SetLibraDBClusterRenewFlagResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetLibraDBClusterRenewFlagResponse SetLibraDBClusterRenewFlag(SetLibraDBClusterRenewFlagRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SetLibraDBClusterRenewFlag", SetLibraDBClusterRenewFlagResponse.class);
     }
 
     /**

@@ -52,6 +52,13 @@ public class DescribeCallRecordRequest extends AbstractModel {
     private String AccUin;
 
     /**
+    * 访问密钥，注意：不支持临时密钥的情况
+    */
+    @SerializedName("AccessKey")
+    @Expose
+    private String AccessKey;
+
+    /**
     * 过滤器
     */
     @SerializedName("Filter")
@@ -123,6 +130,22 @@ public class DescribeCallRecordRequest extends AbstractModel {
     }
 
     /**
+     * Get 访问密钥，注意：不支持临时密钥的情况 
+     * @return AccessKey 访问密钥，注意：不支持临时密钥的情况
+     */
+    public String getAccessKey() {
+        return this.AccessKey;
+    }
+
+    /**
+     * Set 访问密钥，注意：不支持临时密钥的情况
+     * @param AccessKey 访问密钥，注意：不支持临时密钥的情况
+     */
+    public void setAccessKey(String AccessKey) {
+        this.AccessKey = AccessKey;
+    }
+
+    /**
      * Get 过滤器 
      * @return Filter 过滤器
      */
@@ -161,6 +184,9 @@ public class DescribeCallRecordRequest extends AbstractModel {
         if (source.AccUin != null) {
             this.AccUin = new String(source.AccUin);
         }
+        if (source.AccessKey != null) {
+            this.AccessKey = new String(source.AccessKey);
+        }
         if (source.Filter != null) {
             this.Filter = new Filter(source.Filter);
         }
@@ -175,6 +201,7 @@ public class DescribeCallRecordRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AccessKeyID", this.AccessKeyID);
         this.setParamSimple(map, prefix + "SourceIPID", this.SourceIPID);
         this.setParamSimple(map, prefix + "AccUin", this.AccUin);
+        this.setParamSimple(map, prefix + "AccessKey", this.AccessKey);
         this.setParamObj(map, prefix + "Filter.", this.Filter);
 
     }

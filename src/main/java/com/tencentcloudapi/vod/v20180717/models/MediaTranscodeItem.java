@@ -120,6 +120,13 @@ public class MediaTranscodeItem extends AbstractModel {
     private String CopyRightWatermarkText;
 
     /**
+    * 数字水印模板id。
+    */
+    @SerializedName("BlindWatermarkDefinition")
+    @Expose
+    private Long BlindWatermarkDefinition;
+
+    /**
      * Get 转码后的视频文件地址。 
      * @return Url 转码后的视频文件地址。
      */
@@ -347,6 +354,22 @@ public class MediaTranscodeItem extends AbstractModel {
         this.CopyRightWatermarkText = CopyRightWatermarkText;
     }
 
+    /**
+     * Get 数字水印模板id。 
+     * @return BlindWatermarkDefinition 数字水印模板id。
+     */
+    public Long getBlindWatermarkDefinition() {
+        return this.BlindWatermarkDefinition;
+    }
+
+    /**
+     * Set 数字水印模板id。
+     * @param BlindWatermarkDefinition 数字水印模板id。
+     */
+    public void setBlindWatermarkDefinition(Long BlindWatermarkDefinition) {
+        this.BlindWatermarkDefinition = BlindWatermarkDefinition;
+    }
+
     public MediaTranscodeItem() {
     }
 
@@ -400,6 +423,9 @@ public class MediaTranscodeItem extends AbstractModel {
         if (source.CopyRightWatermarkText != null) {
             this.CopyRightWatermarkText = new String(source.CopyRightWatermarkText);
         }
+        if (source.BlindWatermarkDefinition != null) {
+            this.BlindWatermarkDefinition = new Long(source.BlindWatermarkDefinition);
+        }
     }
 
 
@@ -420,6 +446,7 @@ public class MediaTranscodeItem extends AbstractModel {
         this.setParamArrayObj(map, prefix + "AudioStreamSet.", this.AudioStreamSet);
         this.setParamSimple(map, prefix + "DigitalWatermarkType", this.DigitalWatermarkType);
         this.setParamSimple(map, prefix + "CopyRightWatermarkText", this.CopyRightWatermarkText);
+        this.setParamSimple(map, prefix + "BlindWatermarkDefinition", this.BlindWatermarkDefinition);
 
     }
 }

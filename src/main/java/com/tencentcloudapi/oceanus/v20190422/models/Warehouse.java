@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Warehouse extends AbstractModel {
 
     /**
-    * 状态
+    * <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -32,7 +32,7 @@ public class Warehouse extends AbstractModel {
     private Long Status;
 
     /**
-    * location
+    * <p>location</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Location")
@@ -40,7 +40,7 @@ public class Warehouse extends AbstractModel {
     private String Location;
 
     /**
-    * catalogtype
+    * <p>catalogtype</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CatalogType")
@@ -48,7 +48,7 @@ public class Warehouse extends AbstractModel {
     private String CatalogType;
 
     /**
-    * uri
+    * <p>uri</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uri")
@@ -56,7 +56,7 @@ public class Warehouse extends AbstractModel {
     private String Uri;
 
     /**
-    * warehouse url
+    * <p>warehouse url</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WarehouseUrl")
@@ -64,7 +64,7 @@ public class Warehouse extends AbstractModel {
     private String WarehouseUrl;
 
     /**
-    * 认证方式
+    * <p>认证方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Authentication")
@@ -72,7 +72,7 @@ public class Warehouse extends AbstractModel {
     private String Authentication;
 
     /**
-    * 资源
+    * <p>资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceRefs")
@@ -80,7 +80,7 @@ public class Warehouse extends AbstractModel {
     private ResourceRefLatest [] ResourceRefs;
 
     /**
-    * hive warehouse uri
+    * <p>hive warehouse uri</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HiveUri")
@@ -88,7 +88,7 @@ public class Warehouse extends AbstractModel {
     private String HiveUri;
 
     /**
-    * 高级参数
+    * <p>高级参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Properties")
@@ -96,9 +96,16 @@ public class Warehouse extends AbstractModel {
     private Property [] Properties;
 
     /**
-     * Get 状态
+    * <p>hive cata 类型</p>
+    */
+    @SerializedName("HiveCatalogType")
+    @Expose
+    private Long HiveCatalogType;
+
+    /**
+     * Get <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 状态
+     * @return Status <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -106,9 +113,9 @@ public class Warehouse extends AbstractModel {
     }
 
     /**
-     * Set 状态
+     * Set <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 状态
+     * @param Status <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
@@ -116,9 +123,9 @@ public class Warehouse extends AbstractModel {
     }
 
     /**
-     * Get location
+     * Get <p>location</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Location location
+     * @return Location <p>location</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLocation() {
@@ -126,9 +133,9 @@ public class Warehouse extends AbstractModel {
     }
 
     /**
-     * Set location
+     * Set <p>location</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Location location
+     * @param Location <p>location</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocation(String Location) {
@@ -136,9 +143,9 @@ public class Warehouse extends AbstractModel {
     }
 
     /**
-     * Get catalogtype
+     * Get <p>catalogtype</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CatalogType catalogtype
+     * @return CatalogType <p>catalogtype</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCatalogType() {
@@ -146,9 +153,9 @@ public class Warehouse extends AbstractModel {
     }
 
     /**
-     * Set catalogtype
+     * Set <p>catalogtype</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CatalogType catalogtype
+     * @param CatalogType <p>catalogtype</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCatalogType(String CatalogType) {
@@ -156,9 +163,9 @@ public class Warehouse extends AbstractModel {
     }
 
     /**
-     * Get uri
+     * Get <p>uri</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Uri uri
+     * @return Uri <p>uri</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUri() {
@@ -166,9 +173,9 @@ public class Warehouse extends AbstractModel {
     }
 
     /**
-     * Set uri
+     * Set <p>uri</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Uri uri
+     * @param Uri <p>uri</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUri(String Uri) {
@@ -176,9 +183,9 @@ public class Warehouse extends AbstractModel {
     }
 
     /**
-     * Get warehouse url
+     * Get <p>warehouse url</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WarehouseUrl warehouse url
+     * @return WarehouseUrl <p>warehouse url</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWarehouseUrl() {
@@ -186,9 +193,9 @@ public class Warehouse extends AbstractModel {
     }
 
     /**
-     * Set warehouse url
+     * Set <p>warehouse url</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WarehouseUrl warehouse url
+     * @param WarehouseUrl <p>warehouse url</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWarehouseUrl(String WarehouseUrl) {
@@ -196,9 +203,9 @@ public class Warehouse extends AbstractModel {
     }
 
     /**
-     * Get 认证方式
+     * Get <p>认证方式</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Authentication 认证方式
+     * @return Authentication <p>认证方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAuthentication() {
@@ -206,9 +213,9 @@ public class Warehouse extends AbstractModel {
     }
 
     /**
-     * Set 认证方式
+     * Set <p>认证方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Authentication 认证方式
+     * @param Authentication <p>认证方式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuthentication(String Authentication) {
@@ -216,9 +223,9 @@ public class Warehouse extends AbstractModel {
     }
 
     /**
-     * Get 资源
+     * Get <p>资源</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceRefs 资源
+     * @return ResourceRefs <p>资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ResourceRefLatest [] getResourceRefs() {
@@ -226,9 +233,9 @@ public class Warehouse extends AbstractModel {
     }
 
     /**
-     * Set 资源
+     * Set <p>资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceRefs 资源
+     * @param ResourceRefs <p>资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceRefs(ResourceRefLatest [] ResourceRefs) {
@@ -236,9 +243,9 @@ public class Warehouse extends AbstractModel {
     }
 
     /**
-     * Get hive warehouse uri
+     * Get <p>hive warehouse uri</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HiveUri hive warehouse uri
+     * @return HiveUri <p>hive warehouse uri</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHiveUri() {
@@ -246,9 +253,9 @@ public class Warehouse extends AbstractModel {
     }
 
     /**
-     * Set hive warehouse uri
+     * Set <p>hive warehouse uri</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HiveUri hive warehouse uri
+     * @param HiveUri <p>hive warehouse uri</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHiveUri(String HiveUri) {
@@ -256,9 +263,9 @@ public class Warehouse extends AbstractModel {
     }
 
     /**
-     * Get 高级参数
+     * Get <p>高级参数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Properties 高级参数
+     * @return Properties <p>高级参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Property [] getProperties() {
@@ -266,13 +273,29 @@ public class Warehouse extends AbstractModel {
     }
 
     /**
-     * Set 高级参数
+     * Set <p>高级参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Properties 高级参数
+     * @param Properties <p>高级参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProperties(Property [] Properties) {
         this.Properties = Properties;
+    }
+
+    /**
+     * Get <p>hive cata 类型</p> 
+     * @return HiveCatalogType <p>hive cata 类型</p>
+     */
+    public Long getHiveCatalogType() {
+        return this.HiveCatalogType;
+    }
+
+    /**
+     * Set <p>hive cata 类型</p>
+     * @param HiveCatalogType <p>hive cata 类型</p>
+     */
+    public void setHiveCatalogType(Long HiveCatalogType) {
+        this.HiveCatalogType = HiveCatalogType;
     }
 
     public Warehouse() {
@@ -316,6 +339,9 @@ public class Warehouse extends AbstractModel {
                 this.Properties[i] = new Property(source.Properties[i]);
             }
         }
+        if (source.HiveCatalogType != null) {
+            this.HiveCatalogType = new Long(source.HiveCatalogType);
+        }
     }
 
 
@@ -332,6 +358,7 @@ public class Warehouse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ResourceRefs.", this.ResourceRefs);
         this.setParamSimple(map, prefix + "HiveUri", this.HiveUri);
         this.setParamArrayObj(map, prefix + "Properties.", this.Properties);
+        this.setParamSimple(map, prefix + "HiveCatalogType", this.HiveCatalogType);
 
     }
 }

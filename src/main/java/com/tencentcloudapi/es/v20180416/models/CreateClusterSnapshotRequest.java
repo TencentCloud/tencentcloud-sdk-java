@@ -101,6 +101,13 @@ public class CreateClusterSnapshotRequest extends AbstractModel {
     private String RemoteCosRegion;
 
     /**
+    * cos多AZ备份 0 单AZ; 1 多AZ
+    */
+    @SerializedName("MultiAz")
+    @Expose
+    private Long MultiAz;
+
+    /**
      * Get 实例名称 
      * @return InstanceId 实例名称
      */
@@ -276,6 +283,22 @@ public class CreateClusterSnapshotRequest extends AbstractModel {
         this.RemoteCosRegion = RemoteCosRegion;
     }
 
+    /**
+     * Get cos多AZ备份 0 单AZ; 1 多AZ 
+     * @return MultiAz cos多AZ备份 0 单AZ; 1 多AZ
+     */
+    public Long getMultiAz() {
+        return this.MultiAz;
+    }
+
+    /**
+     * Set cos多AZ备份 0 单AZ; 1 多AZ
+     * @param MultiAz cos多AZ备份 0 单AZ; 1 多AZ
+     */
+    public void setMultiAz(Long MultiAz) {
+        this.MultiAz = MultiAz;
+    }
+
     public CreateClusterSnapshotRequest() {
     }
 
@@ -317,6 +340,9 @@ public class CreateClusterSnapshotRequest extends AbstractModel {
         if (source.RemoteCosRegion != null) {
             this.RemoteCosRegion = new String(source.RemoteCosRegion);
         }
+        if (source.MultiAz != null) {
+            this.MultiAz = new Long(source.MultiAz);
+        }
     }
 
 
@@ -335,6 +361,7 @@ public class CreateClusterSnapshotRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RetentionGraceTime", this.RetentionGraceTime);
         this.setParamSimple(map, prefix + "RemoteCos", this.RemoteCos);
         this.setParamSimple(map, prefix + "RemoteCosRegion", this.RemoteCosRegion);
+        this.setParamSimple(map, prefix + "MultiAz", this.MultiAz);
 
     }
 }

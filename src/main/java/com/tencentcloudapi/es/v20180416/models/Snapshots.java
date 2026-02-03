@@ -264,6 +264,14 @@ SUCCESS     备份成功
     private String StrategyName;
 
     /**
+    * cos多AZ备份 0 单AZ; 1 多AZ
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MultiAz")
+    @Expose
+    private Long MultiAz;
+
+    /**
      * Get 快照名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SnapshotName 快照名称
@@ -875,6 +883,26 @@ SUCCESS     备份成功
         this.StrategyName = StrategyName;
     }
 
+    /**
+     * Get cos多AZ备份 0 单AZ; 1 多AZ
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MultiAz cos多AZ备份 0 单AZ; 1 多AZ
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMultiAz() {
+        return this.MultiAz;
+    }
+
+    /**
+     * Set cos多AZ备份 0 单AZ; 1 多AZ
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MultiAz cos多AZ备份 0 单AZ; 1 多AZ
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMultiAz(Long MultiAz) {
+        this.MultiAz = MultiAz;
+    }
+
     public Snapshots() {
     }
 
@@ -979,6 +1007,9 @@ SUCCESS     备份成功
         if (source.StrategyName != null) {
             this.StrategyName = new String(source.StrategyName);
         }
+        if (source.MultiAz != null) {
+            this.MultiAz = new Long(source.MultiAz);
+        }
     }
 
 
@@ -1015,6 +1046,7 @@ SUCCESS     备份成功
         this.setParamSimple(map, prefix + "CosEncryption", this.CosEncryption);
         this.setParamSimple(map, prefix + "KmsKey", this.KmsKey);
         this.setParamSimple(map, prefix + "StrategyName", this.StrategyName);
+        this.setParamSimple(map, prefix + "MultiAz", this.MultiAz);
 
     }
 }

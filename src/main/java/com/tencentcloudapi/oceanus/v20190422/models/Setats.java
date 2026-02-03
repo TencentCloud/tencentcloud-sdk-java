@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Setats extends AbstractModel {
 
     /**
-    * setats serialId
+    * <p>setats serialId</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SetatsSerialId")
@@ -32,14 +32,7 @@ public class Setats extends AbstractModel {
     private String SetatsSerialId;
 
     /**
-    * 1  // 停止
-2  // 运行中
-3  // 初始化中
-4  // 扩容中
-5  // Warehoouse未配置
-6  // Warehoouse配置中
-7  // 重启中
--2 // 已删除(集群被销毁时更新为此状态)
+    * <p>1  // 停止<br>2  // 运行中<br>3  // 初始化中<br>4  // 扩容中<br>5  // Warehoouse未配置<br>6  // Warehoouse配置中<br>7  // 重启中<br>-2 // 已删除(集群被销毁时更新为此状态)</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -47,7 +40,7 @@ public class Setats extends AbstractModel {
     private Long Status;
 
     /**
-    * setats warehouse
+    * <p>setats warehouse</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Warehouse")
@@ -55,7 +48,7 @@ public class Setats extends AbstractModel {
     private Warehouse Warehouse;
 
     /**
-    * setats master 机器规格
+    * <p>setats master 机器规格</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MasterInfo")
@@ -63,7 +56,7 @@ public class Setats extends AbstractModel {
     private SetatsCvmInfo MasterInfo;
 
     /**
-    * setats worker规格
+    * <p>setats worker规格</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkerInfo")
@@ -71,7 +64,7 @@ public class Setats extends AbstractModel {
     private SetatsCvmInfo WorkerInfo;
 
     /**
-    * 标签
+    * <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
@@ -79,7 +72,7 @@ public class Setats extends AbstractModel {
     private Tag [] Tags;
 
     /**
-    * 自动续费
+    * <p>自动续费</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoRenewFlag")
@@ -87,7 +80,7 @@ public class Setats extends AbstractModel {
     private Long AutoRenewFlag;
 
     /**
-    * 过期时间
+    * <p>过期时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpireTime")
@@ -95,7 +88,7 @@ public class Setats extends AbstractModel {
     private String ExpireTime;
 
     /**
-    * 过期时间 秒
+    * <p>过期时间 秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecondsUntilExpiry")
@@ -103,7 +96,7 @@ public class Setats extends AbstractModel {
     private String SecondsUntilExpiry;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
@@ -111,7 +104,7 @@ public class Setats extends AbstractModel {
     private String CreateTime;
 
     /**
-    * manager url
+    * <p>manager url</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ManagerUrl")
@@ -119,7 +112,7 @@ public class Setats extends AbstractModel {
     private String ManagerUrl;
 
     /**
-    * 隔离时间
+    * <p>隔离时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsolatedTime")
@@ -127,9 +120,37 @@ public class Setats extends AbstractModel {
     private String IsolatedTime;
 
     /**
-     * Get setats serialId
+    * <p>Setats集群自己的id</p>
+    */
+    @SerializedName("OwnerClusterGroupSerialId")
+    @Expose
+    private String OwnerClusterGroupSerialId;
+
+    /**
+    * <p>setats 集群类型</p>
+    */
+    @SerializedName("Type")
+    @Expose
+    private Long Type;
+
+    /**
+    * <p>Setats UI url</p>
+    */
+    @SerializedName("SetatsUiUrl")
+    @Expose
+    private String SetatsUiUrl;
+
+    /**
+    * <p>setats镜像版本</p>
+    */
+    @SerializedName("ImageVersion")
+    @Expose
+    private String ImageVersion;
+
+    /**
+     * Get <p>setats serialId</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SetatsSerialId setats serialId
+     * @return SetatsSerialId <p>setats serialId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSetatsSerialId() {
@@ -137,9 +158,9 @@ public class Setats extends AbstractModel {
     }
 
     /**
-     * Set setats serialId
+     * Set <p>setats serialId</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SetatsSerialId setats serialId
+     * @param SetatsSerialId <p>setats serialId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSetatsSerialId(String SetatsSerialId) {
@@ -147,23 +168,9 @@ public class Setats extends AbstractModel {
     }
 
     /**
-     * Get 1  // 停止
-2  // 运行中
-3  // 初始化中
-4  // 扩容中
-5  // Warehoouse未配置
-6  // Warehoouse配置中
-7  // 重启中
--2 // 已删除(集群被销毁时更新为此状态)
+     * Get <p>1  // 停止<br>2  // 运行中<br>3  // 初始化中<br>4  // 扩容中<br>5  // Warehoouse未配置<br>6  // Warehoouse配置中<br>7  // 重启中<br>-2 // 已删除(集群被销毁时更新为此状态)</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 1  // 停止
-2  // 运行中
-3  // 初始化中
-4  // 扩容中
-5  // Warehoouse未配置
-6  // Warehoouse配置中
-7  // 重启中
--2 // 已删除(集群被销毁时更新为此状态)
+     * @return Status <p>1  // 停止<br>2  // 运行中<br>3  // 初始化中<br>4  // 扩容中<br>5  // Warehoouse未配置<br>6  // Warehoouse配置中<br>7  // 重启中<br>-2 // 已删除(集群被销毁时更新为此状态)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -171,23 +178,9 @@ public class Setats extends AbstractModel {
     }
 
     /**
-     * Set 1  // 停止
-2  // 运行中
-3  // 初始化中
-4  // 扩容中
-5  // Warehoouse未配置
-6  // Warehoouse配置中
-7  // 重启中
--2 // 已删除(集群被销毁时更新为此状态)
+     * Set <p>1  // 停止<br>2  // 运行中<br>3  // 初始化中<br>4  // 扩容中<br>5  // Warehoouse未配置<br>6  // Warehoouse配置中<br>7  // 重启中<br>-2 // 已删除(集群被销毁时更新为此状态)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 1  // 停止
-2  // 运行中
-3  // 初始化中
-4  // 扩容中
-5  // Warehoouse未配置
-6  // Warehoouse配置中
-7  // 重启中
--2 // 已删除(集群被销毁时更新为此状态)
+     * @param Status <p>1  // 停止<br>2  // 运行中<br>3  // 初始化中<br>4  // 扩容中<br>5  // Warehoouse未配置<br>6  // Warehoouse配置中<br>7  // 重启中<br>-2 // 已删除(集群被销毁时更新为此状态)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
@@ -195,9 +188,9 @@ public class Setats extends AbstractModel {
     }
 
     /**
-     * Get setats warehouse
+     * Get <p>setats warehouse</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Warehouse setats warehouse
+     * @return Warehouse <p>setats warehouse</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Warehouse getWarehouse() {
@@ -205,9 +198,9 @@ public class Setats extends AbstractModel {
     }
 
     /**
-     * Set setats warehouse
+     * Set <p>setats warehouse</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Warehouse setats warehouse
+     * @param Warehouse <p>setats warehouse</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWarehouse(Warehouse Warehouse) {
@@ -215,9 +208,9 @@ public class Setats extends AbstractModel {
     }
 
     /**
-     * Get setats master 机器规格
+     * Get <p>setats master 机器规格</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MasterInfo setats master 机器规格
+     * @return MasterInfo <p>setats master 机器规格</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SetatsCvmInfo getMasterInfo() {
@@ -225,9 +218,9 @@ public class Setats extends AbstractModel {
     }
 
     /**
-     * Set setats master 机器规格
+     * Set <p>setats master 机器规格</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MasterInfo setats master 机器规格
+     * @param MasterInfo <p>setats master 机器规格</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMasterInfo(SetatsCvmInfo MasterInfo) {
@@ -235,9 +228,9 @@ public class Setats extends AbstractModel {
     }
 
     /**
-     * Get setats worker规格
+     * Get <p>setats worker规格</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkerInfo setats worker规格
+     * @return WorkerInfo <p>setats worker规格</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SetatsCvmInfo getWorkerInfo() {
@@ -245,9 +238,9 @@ public class Setats extends AbstractModel {
     }
 
     /**
-     * Set setats worker规格
+     * Set <p>setats worker规格</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkerInfo setats worker规格
+     * @param WorkerInfo <p>setats worker规格</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkerInfo(SetatsCvmInfo WorkerInfo) {
@@ -255,9 +248,9 @@ public class Setats extends AbstractModel {
     }
 
     /**
-     * Get 标签
+     * Get <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tags 标签
+     * @return Tags <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
@@ -265,9 +258,9 @@ public class Setats extends AbstractModel {
     }
 
     /**
-     * Set 标签
+     * Set <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tags 标签
+     * @param Tags <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {
@@ -275,9 +268,9 @@ public class Setats extends AbstractModel {
     }
 
     /**
-     * Get 自动续费
+     * Get <p>自动续费</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AutoRenewFlag 自动续费
+     * @return AutoRenewFlag <p>自动续费</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAutoRenewFlag() {
@@ -285,9 +278,9 @@ public class Setats extends AbstractModel {
     }
 
     /**
-     * Set 自动续费
+     * Set <p>自动续费</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AutoRenewFlag 自动续费
+     * @param AutoRenewFlag <p>自动续费</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
@@ -295,9 +288,9 @@ public class Setats extends AbstractModel {
     }
 
     /**
-     * Get 过期时间
+     * Get <p>过期时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExpireTime 过期时间
+     * @return ExpireTime <p>过期时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpireTime() {
@@ -305,9 +298,9 @@ public class Setats extends AbstractModel {
     }
 
     /**
-     * Set 过期时间
+     * Set <p>过期时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExpireTime 过期时间
+     * @param ExpireTime <p>过期时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpireTime(String ExpireTime) {
@@ -315,9 +308,9 @@ public class Setats extends AbstractModel {
     }
 
     /**
-     * Get 过期时间 秒
+     * Get <p>过期时间 秒</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SecondsUntilExpiry 过期时间 秒
+     * @return SecondsUntilExpiry <p>过期时间 秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSecondsUntilExpiry() {
@@ -325,9 +318,9 @@ public class Setats extends AbstractModel {
     }
 
     /**
-     * Set 过期时间 秒
+     * Set <p>过期时间 秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SecondsUntilExpiry 过期时间 秒
+     * @param SecondsUntilExpiry <p>过期时间 秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecondsUntilExpiry(String SecondsUntilExpiry) {
@@ -335,9 +328,9 @@ public class Setats extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
+     * Get <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 创建时间
+     * @return CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
@@ -345,9 +338,9 @@ public class Setats extends AbstractModel {
     }
 
     /**
-     * Set 创建时间
+     * Set <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 创建时间
+     * @param CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
@@ -355,9 +348,9 @@ public class Setats extends AbstractModel {
     }
 
     /**
-     * Get manager url
+     * Get <p>manager url</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ManagerUrl manager url
+     * @return ManagerUrl <p>manager url</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getManagerUrl() {
@@ -365,9 +358,9 @@ public class Setats extends AbstractModel {
     }
 
     /**
-     * Set manager url
+     * Set <p>manager url</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ManagerUrl manager url
+     * @param ManagerUrl <p>manager url</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setManagerUrl(String ManagerUrl) {
@@ -375,9 +368,9 @@ public class Setats extends AbstractModel {
     }
 
     /**
-     * Get 隔离时间
+     * Get <p>隔离时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsolatedTime 隔离时间
+     * @return IsolatedTime <p>隔离时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIsolatedTime() {
@@ -385,13 +378,77 @@ public class Setats extends AbstractModel {
     }
 
     /**
-     * Set 隔离时间
+     * Set <p>隔离时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsolatedTime 隔离时间
+     * @param IsolatedTime <p>隔离时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsolatedTime(String IsolatedTime) {
         this.IsolatedTime = IsolatedTime;
+    }
+
+    /**
+     * Get <p>Setats集群自己的id</p> 
+     * @return OwnerClusterGroupSerialId <p>Setats集群自己的id</p>
+     */
+    public String getOwnerClusterGroupSerialId() {
+        return this.OwnerClusterGroupSerialId;
+    }
+
+    /**
+     * Set <p>Setats集群自己的id</p>
+     * @param OwnerClusterGroupSerialId <p>Setats集群自己的id</p>
+     */
+    public void setOwnerClusterGroupSerialId(String OwnerClusterGroupSerialId) {
+        this.OwnerClusterGroupSerialId = OwnerClusterGroupSerialId;
+    }
+
+    /**
+     * Get <p>setats 集群类型</p> 
+     * @return Type <p>setats 集群类型</p>
+     */
+    public Long getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set <p>setats 集群类型</p>
+     * @param Type <p>setats 集群类型</p>
+     */
+    public void setType(Long Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get <p>Setats UI url</p> 
+     * @return SetatsUiUrl <p>Setats UI url</p>
+     */
+    public String getSetatsUiUrl() {
+        return this.SetatsUiUrl;
+    }
+
+    /**
+     * Set <p>Setats UI url</p>
+     * @param SetatsUiUrl <p>Setats UI url</p>
+     */
+    public void setSetatsUiUrl(String SetatsUiUrl) {
+        this.SetatsUiUrl = SetatsUiUrl;
+    }
+
+    /**
+     * Get <p>setats镜像版本</p> 
+     * @return ImageVersion <p>setats镜像版本</p>
+     */
+    public String getImageVersion() {
+        return this.ImageVersion;
+    }
+
+    /**
+     * Set <p>setats镜像版本</p>
+     * @param ImageVersion <p>setats镜像版本</p>
+     */
+    public void setImageVersion(String ImageVersion) {
+        this.ImageVersion = ImageVersion;
     }
 
     public Setats() {
@@ -441,6 +498,18 @@ public class Setats extends AbstractModel {
         if (source.IsolatedTime != null) {
             this.IsolatedTime = new String(source.IsolatedTime);
         }
+        if (source.OwnerClusterGroupSerialId != null) {
+            this.OwnerClusterGroupSerialId = new String(source.OwnerClusterGroupSerialId);
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.SetatsUiUrl != null) {
+            this.SetatsUiUrl = new String(source.SetatsUiUrl);
+        }
+        if (source.ImageVersion != null) {
+            this.ImageVersion = new String(source.ImageVersion);
+        }
     }
 
 
@@ -460,6 +529,10 @@ public class Setats extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "ManagerUrl", this.ManagerUrl);
         this.setParamSimple(map, prefix + "IsolatedTime", this.IsolatedTime);
+        this.setParamSimple(map, prefix + "OwnerClusterGroupSerialId", this.OwnerClusterGroupSerialId);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "SetatsUiUrl", this.SetatsUiUrl);
+        this.setParamSimple(map, prefix + "ImageVersion", this.ImageVersion);
 
     }
 }

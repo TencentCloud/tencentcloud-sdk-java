@@ -136,6 +136,13 @@ public class CosBackup extends AbstractModel {
     private String Indices;
 
     /**
+    * cos多AZ备份 0 单AZ; 1 多AZ
+    */
+    @SerializedName("MultiAz")
+    @Expose
+    private Long MultiAz;
+
+    /**
     * 策略创建时间
     */
     @SerializedName("CreateTime")
@@ -399,6 +406,22 @@ public class CosBackup extends AbstractModel {
     }
 
     /**
+     * Get cos多AZ备份 0 单AZ; 1 多AZ 
+     * @return MultiAz cos多AZ备份 0 单AZ; 1 多AZ
+     */
+    public Long getMultiAz() {
+        return this.MultiAz;
+    }
+
+    /**
+     * Set cos多AZ备份 0 单AZ; 1 多AZ
+     * @param MultiAz cos多AZ备份 0 单AZ; 1 多AZ
+     */
+    public void setMultiAz(Long MultiAz) {
+        this.MultiAz = MultiAz;
+    }
+
+    /**
      * Get 策略创建时间 
      * @return CreateTime 策略创建时间
      */
@@ -470,6 +493,9 @@ public class CosBackup extends AbstractModel {
         if (source.Indices != null) {
             this.Indices = new String(source.Indices);
         }
+        if (source.MultiAz != null) {
+            this.MultiAz = new Long(source.MultiAz);
+        }
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
@@ -496,6 +522,7 @@ public class CosBackup extends AbstractModel {
         this.setParamSimple(map, prefix + "RemoteCosRegion", this.RemoteCosRegion);
         this.setParamSimple(map, prefix + "StrategyName", this.StrategyName);
         this.setParamSimple(map, prefix + "Indices", this.Indices);
+        this.setParamSimple(map, prefix + "MultiAz", this.MultiAz);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }

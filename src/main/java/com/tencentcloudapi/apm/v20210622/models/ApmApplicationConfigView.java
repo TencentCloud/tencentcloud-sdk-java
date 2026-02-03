@@ -199,6 +199,13 @@ public class ApmApplicationConfigView extends AbstractModel {
     private String DesensitizationRule;
 
     /**
+    * 自动性能剖析任务配置
+    */
+    @SerializedName("AutoProfilingConfig")
+    @Expose
+    private AutoProfilingConfig AutoProfilingConfig;
+
+    /**
      * Get 业务系统 ID 
      * @return InstanceKey 业务系统 ID
      */
@@ -598,6 +605,22 @@ public class ApmApplicationConfigView extends AbstractModel {
         this.DesensitizationRule = DesensitizationRule;
     }
 
+    /**
+     * Get 自动性能剖析任务配置 
+     * @return AutoProfilingConfig 自动性能剖析任务配置
+     */
+    public AutoProfilingConfig getAutoProfilingConfig() {
+        return this.AutoProfilingConfig;
+    }
+
+    /**
+     * Set 自动性能剖析任务配置
+     * @param AutoProfilingConfig 自动性能剖析任务配置
+     */
+    public void setAutoProfilingConfig(AutoProfilingConfig AutoProfilingConfig) {
+        this.AutoProfilingConfig = AutoProfilingConfig;
+    }
+
     public ApmApplicationConfigView() {
     }
 
@@ -687,6 +710,9 @@ public class ApmApplicationConfigView extends AbstractModel {
         if (source.DesensitizationRule != null) {
             this.DesensitizationRule = new String(source.DesensitizationRule);
         }
+        if (source.AutoProfilingConfig != null) {
+            this.AutoProfilingConfig = new AutoProfilingConfig(source.AutoProfilingConfig);
+        }
     }
 
 
@@ -719,6 +745,7 @@ public class ApmApplicationConfigView extends AbstractModel {
         this.setParamArrayObj(map, prefix + "SlowSQLThresholds.", this.SlowSQLThresholds);
         this.setParamSimple(map, prefix + "EnableDesensitizationRule", this.EnableDesensitizationRule);
         this.setParamSimple(map, prefix + "DesensitizationRule", this.DesensitizationRule);
+        this.setParamObj(map, prefix + "AutoProfilingConfig.", this.AutoProfilingConfig);
 
     }
 }

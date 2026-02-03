@@ -1,0 +1,212 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.cynosdb.v20190107.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class DescribeLibraDBClusterAccountsRequest extends AbstractModel {
+
+    /**
+    * 分析集群id
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
+    * 账号名
+    */
+    @SerializedName("AccountNames")
+    @Expose
+    private String [] AccountNames;
+
+    /**
+    * 模糊匹配关键字
+    */
+    @SerializedName("AccountRegular")
+    @Expose
+    private String AccountRegular;
+
+    /**
+    * 主机名
+    */
+    @SerializedName("Hosts")
+    @Expose
+    private String [] Hosts;
+
+    /**
+    * 限制
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * 偏移
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+     * Get 分析集群id 
+     * @return ClusterId 分析集群id
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set 分析集群id
+     * @param ClusterId 分析集群id
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
+    /**
+     * Get 账号名 
+     * @return AccountNames 账号名
+     */
+    public String [] getAccountNames() {
+        return this.AccountNames;
+    }
+
+    /**
+     * Set 账号名
+     * @param AccountNames 账号名
+     */
+    public void setAccountNames(String [] AccountNames) {
+        this.AccountNames = AccountNames;
+    }
+
+    /**
+     * Get 模糊匹配关键字 
+     * @return AccountRegular 模糊匹配关键字
+     */
+    public String getAccountRegular() {
+        return this.AccountRegular;
+    }
+
+    /**
+     * Set 模糊匹配关键字
+     * @param AccountRegular 模糊匹配关键字
+     */
+    public void setAccountRegular(String AccountRegular) {
+        this.AccountRegular = AccountRegular;
+    }
+
+    /**
+     * Get 主机名 
+     * @return Hosts 主机名
+     */
+    public String [] getHosts() {
+        return this.Hosts;
+    }
+
+    /**
+     * Set 主机名
+     * @param Hosts 主机名
+     */
+    public void setHosts(String [] Hosts) {
+        this.Hosts = Hosts;
+    }
+
+    /**
+     * Get 限制 
+     * @return Limit 限制
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 限制
+     * @param Limit 限制
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get 偏移 
+     * @return Offset 偏移
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 偏移
+     * @param Offset 偏移
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    public DescribeLibraDBClusterAccountsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeLibraDBClusterAccountsRequest(DescribeLibraDBClusterAccountsRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.AccountNames != null) {
+            this.AccountNames = new String[source.AccountNames.length];
+            for (int i = 0; i < source.AccountNames.length; i++) {
+                this.AccountNames[i] = new String(source.AccountNames[i]);
+            }
+        }
+        if (source.AccountRegular != null) {
+            this.AccountRegular = new String(source.AccountRegular);
+        }
+        if (source.Hosts != null) {
+            this.Hosts = new String[source.Hosts.length];
+            for (int i = 0; i < source.Hosts.length; i++) {
+                this.Hosts[i] = new String(source.Hosts[i]);
+            }
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamArraySimple(map, prefix + "AccountNames.", this.AccountNames);
+        this.setParamSimple(map, prefix + "AccountRegular", this.AccountRegular);
+        this.setParamArraySimple(map, prefix + "Hosts.", this.Hosts);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+
+    }
+}
+

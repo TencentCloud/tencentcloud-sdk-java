@@ -402,6 +402,13 @@ public class ModifyApmApplicationConfigRequest extends AbstractModel {
     private String LogSpanIdKey;
 
     /**
+    * 自动性能剖析任务配置
+    */
+    @SerializedName("AutoProfilingConfig")
+    @Expose
+    private AutoProfilingConfig AutoProfilingConfig;
+
+    /**
      * Get 业务系统 ID 
      * @return InstanceId 业务系统 ID
      */
@@ -1265,6 +1272,22 @@ public class ModifyApmApplicationConfigRequest extends AbstractModel {
         this.LogSpanIdKey = LogSpanIdKey;
     }
 
+    /**
+     * Get 自动性能剖析任务配置 
+     * @return AutoProfilingConfig 自动性能剖析任务配置
+     */
+    public AutoProfilingConfig getAutoProfilingConfig() {
+        return this.AutoProfilingConfig;
+    }
+
+    /**
+     * Set 自动性能剖析任务配置
+     * @param AutoProfilingConfig 自动性能剖析任务配置
+     */
+    public void setAutoProfilingConfig(AutoProfilingConfig AutoProfilingConfig) {
+        this.AutoProfilingConfig = AutoProfilingConfig;
+    }
+
     public ModifyApmApplicationConfigRequest() {
     }
 
@@ -1441,6 +1464,9 @@ public class ModifyApmApplicationConfigRequest extends AbstractModel {
         if (source.LogSpanIdKey != null) {
             this.LogSpanIdKey = new String(source.LogSpanIdKey);
         }
+        if (source.AutoProfilingConfig != null) {
+            this.AutoProfilingConfig = new AutoProfilingConfig(source.AutoProfilingConfig);
+        }
     }
 
 
@@ -1502,6 +1528,7 @@ public class ModifyApmApplicationConfigRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableDesensitizationRule", this.EnableDesensitizationRule);
         this.setParamSimple(map, prefix + "DesensitizationRule", this.DesensitizationRule);
         this.setParamSimple(map, prefix + "LogSpanIdKey", this.LogSpanIdKey);
+        this.setParamObj(map, prefix + "AutoProfilingConfig.", this.AutoProfilingConfig);
 
     }
 }

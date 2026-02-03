@@ -163,6 +163,17 @@ public class CloudappClient extends AbstractClient{
     }
 
     /**
+     *颁发 License
+     * @param req IssueLicenseRequest
+     * @return IssueLicenseResponse
+     * @throws TencentCloudSDKException
+     */
+    public IssueLicenseResponse IssueLicense(IssueLicenseRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "IssueLicense", IssueLicenseResponse.class);
+    }
+
+    /**
      *从软件进程读取 LICENSE。
      * @param req VerifyLicenseRequest
      * @return VerifyLicenseResponse

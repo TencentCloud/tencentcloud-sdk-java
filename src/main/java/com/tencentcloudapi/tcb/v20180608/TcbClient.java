@@ -39,6 +39,28 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *绑定云开发自定义域名，用于云接入和静态托管
+     * @param req BindCloudBaseAccessDomainRequest
+     * @return BindCloudBaseAccessDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindCloudBaseAccessDomainResponse BindCloudBaseAccessDomain(BindCloudBaseAccessDomainRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BindCloudBaseAccessDomain", BindCloudBaseAccessDomainResponse.class);
+    }
+
+    /**
+     *绑定自定义域名
+     * @param req BindCloudBaseGWDomainRequest
+     * @return BindCloudBaseGWDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindCloudBaseGWDomainResponse BindCloudBaseGWDomain(BindCloudBaseGWDomainRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BindCloudBaseGWDomain", BindCloudBaseGWDomainResponse.class);
+    }
+
+    /**
      *绑定另外一个环境下的网关，callContainer请求可以访问到该网关
      * @param req BindEnvGatewayRequest
      * @return BindEnvGatewayResponse
@@ -91,6 +113,28 @@ public class TcbClient extends AbstractClient{
     public CreateAuthDomainResponse CreateAuthDomain(CreateAuthDomainRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateAuthDomain", CreateAuthDomainResponse.class);
+    }
+
+    /**
+     *创建云开发产品计费订单
+     * @param req CreateBillDealRequest
+     * @return CreateBillDealResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBillDealResponse CreateBillDeal(CreateBillDealRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateBillDeal", CreateBillDealResponse.class);
+    }
+
+    /**
+     *创建云开发网关API
+     * @param req CreateCloudBaseGWAPIRequest
+     * @return CreateCloudBaseGWAPIResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCloudBaseGWAPIResponse CreateCloudBaseGWAPI(CreateCloudBaseGWAPIRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCloudBaseGWAPI", CreateCloudBaseGWAPIResponse.class);
     }
 
     /**
@@ -168,6 +212,28 @@ public class TcbClient extends AbstractClient{
     public CreateUserResponse CreateUser(CreateUserRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateUser", CreateUserResponse.class);
+    }
+
+    /**
+     *删除网关API
+     * @param req DeleteCloudBaseGWAPIRequest
+     * @return DeleteCloudBaseGWAPIResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCloudBaseGWAPIResponse DeleteCloudBaseGWAPI(DeleteCloudBaseGWAPIRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCloudBaseGWAPI", DeleteCloudBaseGWAPIResponse.class);
+    }
+
+    /**
+     *删除网关域名
+     * @param req DeleteCloudBaseGWDomainRequest
+     * @return DeleteCloudBaseGWDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCloudBaseGWDomainResponse DeleteCloudBaseGWDomain(DeleteCloudBaseGWDomainRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCloudBaseGWDomain", DeleteCloudBaseGWDomainResponse.class);
     }
 
     /**
@@ -303,6 +369,28 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *获取网关API列表
+     * @param req DescribeCloudBaseGWAPIRequest
+     * @return DescribeCloudBaseGWAPIResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudBaseGWAPIResponse DescribeCloudBaseGWAPI(DescribeCloudBaseGWAPIRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudBaseGWAPI", DescribeCloudBaseGWAPIResponse.class);
+    }
+
+    /**
+     *获取网关服务
+     * @param req DescribeCloudBaseGWServiceRequest
+     * @return DescribeCloudBaseGWServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudBaseGWServiceResponse DescribeCloudBaseGWService(DescribeCloudBaseGWServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudBaseGWService", DescribeCloudBaseGWServiceResponse.class);
+    }
+
+    /**
      *获取云开发项目列表
      * @param req DescribeCloudBaseProjectLatestVersionListRequest
      * @return DescribeCloudBaseProjectLatestVersionListResponse
@@ -421,6 +509,17 @@ public class TcbClient extends AbstractClient{
     public DescribeDownloadFileResponse DescribeDownloadFile(DescribeDownloadFileRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDownloadFile", DescribeDownloadFileResponse.class);
+    }
+
+    /**
+     *查询环境计费周期
+     * @param req DescribeEnvAccountCircleRequest
+     * @return DescribeEnvAccountCircleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEnvAccountCircleResponse DescribeEnvAccountCircle(DescribeEnvAccountCircleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEnvAccountCircle", DescribeEnvAccountCircleResponse.class);
     }
 
     /**
@@ -579,6 +678,17 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *查询数据库安全规则
+     * @param req DescribeSafeRuleRequest
+     * @return DescribeSafeRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSafeRuleResponse DescribeSafeRule(DescribeSafeRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSafeRule", DescribeSafeRuleResponse.class);
+    }
+
+    /**
      *查询后付费短信资源量
 1 有免费包的返回SmsFreeQuota结构所有字段
 2 没有免费包，有付费包，付费返回复用SmsFreeQuota结构，其中只有 TodayUsedQuota 字段有效
@@ -601,6 +711,17 @@ public class TcbClient extends AbstractClient{
     public DescribeSpecialCostItemsResponse DescribeSpecialCostItems(DescribeSpecialCostItemsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSpecialCostItems", DescribeSpecialCostItemsResponse.class);
+    }
+
+    /**
+     *查看当前环境下静态托管资源信息，根据返回结果判断静态资源的状态
+     * @param req DescribeStaticStoreRequest
+     * @return DescribeStaticStoreResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStaticStoreResponse DescribeStaticStore(DescribeStaticStoreRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStaticStore", DescribeStaticStoreResponse.class);
     }
 
     /**
@@ -747,6 +868,17 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *修改云开发网关API
+     * @param req ModifyCloudBaseGWAPIRequest
+     * @return ModifyCloudBaseGWAPIResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCloudBaseGWAPIResponse ModifyCloudBaseGWAPI(ModifyCloudBaseGWAPIRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCloudBaseGWAPI", ModifyCloudBaseGWAPIResponse.class);
+    }
+
+    /**
      *修改容器内的版本流量配置
      * @param req ModifyCloudBaseRunServerFlowConfRequest
      * @return ModifyCloudBaseRunServerFlowConfResponse
@@ -854,6 +986,17 @@ public class TcbClient extends AbstractClient{
     public RunSqlResponse RunSql(RunSqlRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RunSql", RunSqlResponse.class);
+    }
+
+    /**
+     *搜索CLS日志，TCB角色密钥访问
+     * @param req SearchClsLogRequest
+     * @return SearchClsLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public SearchClsLogResponse SearchClsLog(SearchClsLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SearchClsLog", SearchClsLogResponse.class);
     }
 
     /**

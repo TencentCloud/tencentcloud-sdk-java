@@ -39,6 +39,17 @@ public class CtsdbClient extends AbstractClient{
     }
 
     /**
+     *查询实例详情
+     * @param req DescribeClusterDetailRequest
+     * @return DescribeClusterDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterDetailResponse DescribeClusterDetail(DescribeClusterDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClusterDetail", DescribeClusterDetailResponse.class);
+    }
+
+    /**
      *查询实例列表及详情
      * @param req DescribeClustersRequest
      * @return DescribeClustersResponse

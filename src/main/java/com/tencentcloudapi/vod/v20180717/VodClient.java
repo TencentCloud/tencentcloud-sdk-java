@@ -197,6 +197,17 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *创建用户自定义数字水印模板。
+     * @param req CreateBlindWatermarkTemplateRequest
+     * @return CreateBlindWatermarkTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBlindWatermarkTemplateResponse CreateBlindWatermarkTemplate(CreateBlindWatermarkTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateBlindWatermarkTemplate", CreateBlindWatermarkTemplateResponse.class);
+    }
+
+    /**
      *由 VOD 创建新的日志集。
      * @param req CreateCLSLogsetRequest
      * @return CreateCLSLogsetResponse
@@ -616,6 +627,17 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *删除用户自定义数字水印模板。
+     * @param req DeleteBlindWatermarkTemplateRequest
+     * @return DeleteBlindWatermarkTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteBlindWatermarkTemplateResponse DeleteBlindWatermarkTemplate(DeleteBlindWatermarkTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteBlindWatermarkTemplate", DeleteBlindWatermarkTemplateResponse.class);
+    }
+
+    /**
      *删除点播开通的日志主题。
      * @param req DeleteCLSTopicRequest
      * @return DeleteCLSTopicResponse
@@ -980,6 +1002,17 @@ public class VodClient extends AbstractClient{
     public DescribeAnimatedGraphicsTemplatesResponse DescribeAnimatedGraphicsTemplates(DescribeAnimatedGraphicsTemplatesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAnimatedGraphicsTemplates", DescribeAnimatedGraphicsTemplatesResponse.class);
+    }
+
+    /**
+     *查询用户自定义数字水印模板。
+     * @param req DescribeBlindWatermarkTemplatesRequest
+     * @return DescribeBlindWatermarkTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBlindWatermarkTemplatesResponse DescribeBlindWatermarkTemplates(DescribeBlindWatermarkTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBlindWatermarkTemplates", DescribeBlindWatermarkTemplatesResponse.class);
     }
 
     /**
@@ -1689,6 +1722,17 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *用于发起提取视频数字水印任务，提取结果可以通过DescribeTaskDetail查询。
+     * @param req ExtractBlindWatermarkRequest
+     * @return ExtractBlindWatermarkResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExtractBlindWatermarkResponse ExtractBlindWatermark(ExtractBlindWatermarkRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ExtractBlindWatermark", ExtractBlindWatermarkResponse.class);
+    }
+
+    /**
      *如果有盗录溯源需求，请参考 [幽灵水印](https://cloud.tencent.com/document/product/266/94228)。
      * @param req ExtractCopyRightWatermarkRequest
      * @return ExtractCopyRightWatermarkResponse
@@ -1875,6 +1919,17 @@ public class VodClient extends AbstractClient{
     public ModifyAnimatedGraphicsTemplateResponse ModifyAnimatedGraphicsTemplate(ModifyAnimatedGraphicsTemplateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyAnimatedGraphicsTemplate", ModifyAnimatedGraphicsTemplateResponse.class);
+    }
+
+    /**
+     *修改用户自定义数字水印模板，数字水印类型不允许修改。
+     * @param req ModifyBlindWatermarkTemplateRequest
+     * @return ModifyBlindWatermarkTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBlindWatermarkTemplateResponse ModifyBlindWatermarkTemplate(ModifyBlindWatermarkTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyBlindWatermarkTemplate", ModifyBlindWatermarkTemplateResponse.class);
     }
 
     /**

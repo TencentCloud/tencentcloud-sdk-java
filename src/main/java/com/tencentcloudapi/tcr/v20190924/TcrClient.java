@@ -94,6 +94,17 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *创建 GC 作业
+     * @param req CreateGCJobRequest
+     * @return CreateGCJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateGCJobResponse CreateGCJob(CreateGCJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateGCJob", CreateGCJobResponse.class);
+    }
+
+    /**
      *创建镜像加速服务
      * @param req CreateImageAccelerationServiceRequest
      * @return CreateImageAccelerationServiceResponse
