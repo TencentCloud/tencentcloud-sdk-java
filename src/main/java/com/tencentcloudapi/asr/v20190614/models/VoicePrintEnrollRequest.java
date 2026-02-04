@@ -24,118 +24,141 @@ import java.util.HashMap;
 public class VoicePrintEnrollRequest extends AbstractModel {
 
     /**
-    * 音频格式 0: pcm, 1: wav
+    * <p>音频格式 0: pcm, 1: wav</p>
     */
     @SerializedName("VoiceFormat")
     @Expose
     private Long VoiceFormat;
 
     /**
-    * 音频采样率，目前支持16000，单位：Hz，必填
+    * <p>音频采样率，目前支持16000，单位：Hz，必填</p>
     */
     @SerializedName("SampleRate")
     @Expose
     private Long SampleRate;
 
     /**
-    * 音频数据, base64 编码, 音频时长不能超过30s，数据大小不超过2M
+    * <p>音频数据, base64 编码, 音频时长不能超过30s，数据大小不超过2M</p>
     */
     @SerializedName("Data")
     @Expose
     private String Data;
 
     /**
-    * 说话人昵称  不超过32字节
+    * <p>说话人昵称  不超过32字节</p>
     */
     @SerializedName("SpeakerNick")
     @Expose
     private String SpeakerNick;
 
     /**
-    * 分组id, 仅支持大小写字母和下划线的组合，不超过128个字符
+    * <p>分组id, 仅支持大小写字母和下划线的组合，不超过128个字符</p>
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-     * Get 音频格式 0: pcm, 1: wav 
-     * @return VoiceFormat 音频格式 0: pcm, 1: wav
+    * <p>声纹cos url 注意:仅支持腾讯云cos url 地址</p>
+    */
+    @SerializedName("AudioUrl")
+    @Expose
+    private String AudioUrl;
+
+    /**
+     * Get <p>音频格式 0: pcm, 1: wav</p> 
+     * @return VoiceFormat <p>音频格式 0: pcm, 1: wav</p>
      */
     public Long getVoiceFormat() {
         return this.VoiceFormat;
     }
 
     /**
-     * Set 音频格式 0: pcm, 1: wav
-     * @param VoiceFormat 音频格式 0: pcm, 1: wav
+     * Set <p>音频格式 0: pcm, 1: wav</p>
+     * @param VoiceFormat <p>音频格式 0: pcm, 1: wav</p>
      */
     public void setVoiceFormat(Long VoiceFormat) {
         this.VoiceFormat = VoiceFormat;
     }
 
     /**
-     * Get 音频采样率，目前支持16000，单位：Hz，必填 
-     * @return SampleRate 音频采样率，目前支持16000，单位：Hz，必填
+     * Get <p>音频采样率，目前支持16000，单位：Hz，必填</p> 
+     * @return SampleRate <p>音频采样率，目前支持16000，单位：Hz，必填</p>
      */
     public Long getSampleRate() {
         return this.SampleRate;
     }
 
     /**
-     * Set 音频采样率，目前支持16000，单位：Hz，必填
-     * @param SampleRate 音频采样率，目前支持16000，单位：Hz，必填
+     * Set <p>音频采样率，目前支持16000，单位：Hz，必填</p>
+     * @param SampleRate <p>音频采样率，目前支持16000，单位：Hz，必填</p>
      */
     public void setSampleRate(Long SampleRate) {
         this.SampleRate = SampleRate;
     }
 
     /**
-     * Get 音频数据, base64 编码, 音频时长不能超过30s，数据大小不超过2M 
-     * @return Data 音频数据, base64 编码, 音频时长不能超过30s，数据大小不超过2M
+     * Get <p>音频数据, base64 编码, 音频时长不能超过30s，数据大小不超过2M</p> 
+     * @return Data <p>音频数据, base64 编码, 音频时长不能超过30s，数据大小不超过2M</p>
      */
     public String getData() {
         return this.Data;
     }
 
     /**
-     * Set 音频数据, base64 编码, 音频时长不能超过30s，数据大小不超过2M
-     * @param Data 音频数据, base64 编码, 音频时长不能超过30s，数据大小不超过2M
+     * Set <p>音频数据, base64 编码, 音频时长不能超过30s，数据大小不超过2M</p>
+     * @param Data <p>音频数据, base64 编码, 音频时长不能超过30s，数据大小不超过2M</p>
      */
     public void setData(String Data) {
         this.Data = Data;
     }
 
     /**
-     * Get 说话人昵称  不超过32字节 
-     * @return SpeakerNick 说话人昵称  不超过32字节
+     * Get <p>说话人昵称  不超过32字节</p> 
+     * @return SpeakerNick <p>说话人昵称  不超过32字节</p>
      */
     public String getSpeakerNick() {
         return this.SpeakerNick;
     }
 
     /**
-     * Set 说话人昵称  不超过32字节
-     * @param SpeakerNick 说话人昵称  不超过32字节
+     * Set <p>说话人昵称  不超过32字节</p>
+     * @param SpeakerNick <p>说话人昵称  不超过32字节</p>
      */
     public void setSpeakerNick(String SpeakerNick) {
         this.SpeakerNick = SpeakerNick;
     }
 
     /**
-     * Get 分组id, 仅支持大小写字母和下划线的组合，不超过128个字符 
-     * @return GroupId 分组id, 仅支持大小写字母和下划线的组合，不超过128个字符
+     * Get <p>分组id, 仅支持大小写字母和下划线的组合，不超过128个字符</p> 
+     * @return GroupId <p>分组id, 仅支持大小写字母和下划线的组合，不超过128个字符</p>
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 分组id, 仅支持大小写字母和下划线的组合，不超过128个字符
-     * @param GroupId 分组id, 仅支持大小写字母和下划线的组合，不超过128个字符
+     * Set <p>分组id, 仅支持大小写字母和下划线的组合，不超过128个字符</p>
+     * @param GroupId <p>分组id, 仅支持大小写字母和下划线的组合，不超过128个字符</p>
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
+    }
+
+    /**
+     * Get <p>声纹cos url 注意:仅支持腾讯云cos url 地址</p> 
+     * @return AudioUrl <p>声纹cos url 注意:仅支持腾讯云cos url 地址</p>
+     */
+    public String getAudioUrl() {
+        return this.AudioUrl;
+    }
+
+    /**
+     * Set <p>声纹cos url 注意:仅支持腾讯云cos url 地址</p>
+     * @param AudioUrl <p>声纹cos url 注意:仅支持腾讯云cos url 地址</p>
+     */
+    public void setAudioUrl(String AudioUrl) {
+        this.AudioUrl = AudioUrl;
     }
 
     public VoicePrintEnrollRequest() {
@@ -161,6 +184,9 @@ public class VoicePrintEnrollRequest extends AbstractModel {
         if (source.GroupId != null) {
             this.GroupId = new String(source.GroupId);
         }
+        if (source.AudioUrl != null) {
+            this.AudioUrl = new String(source.AudioUrl);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class VoicePrintEnrollRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Data", this.Data);
         this.setParamSimple(map, prefix + "SpeakerNick", this.SpeakerNick);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamSimple(map, prefix + "AudioUrl", this.AudioUrl);
 
     }
 }

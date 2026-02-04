@@ -101,6 +101,13 @@ public class DescribeBotSceneUCBRuleRequest extends AbstractModel {
     private String RuleId;
 
     /**
+    * batch表示批量规则、scene表示场景规则，不传表示全部
+    */
+    @SerializedName("Source")
+    @Expose
+    private String Source;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -276,6 +283,22 @@ public class DescribeBotSceneUCBRuleRequest extends AbstractModel {
         this.RuleId = RuleId;
     }
 
+    /**
+     * Get batch表示批量规则、scene表示场景规则，不传表示全部 
+     * @return Source batch表示批量规则、scene表示场景规则，不传表示全部
+     */
+    public String getSource() {
+        return this.Source;
+    }
+
+    /**
+     * Set batch表示批量规则、scene表示场景规则，不传表示全部
+     * @param Source batch表示批量规则、scene表示场景规则，不传表示全部
+     */
+    public void setSource(String Source) {
+        this.Source = Source;
+    }
+
     public DescribeBotSceneUCBRuleRequest() {
     }
 
@@ -317,6 +340,9 @@ public class DescribeBotSceneUCBRuleRequest extends AbstractModel {
         if (source.RuleId != null) {
             this.RuleId = new String(source.RuleId);
         }
+        if (source.Source != null) {
+            this.Source = new String(source.Source);
+        }
     }
 
 
@@ -335,6 +361,7 @@ public class DescribeBotSceneUCBRuleRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TimerType", this.TimerType);
         this.setParamSimple(map, prefix + "ValidStatus", this.ValidStatus);
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
+        this.setParamSimple(map, prefix + "Source", this.Source);
 
     }
 }

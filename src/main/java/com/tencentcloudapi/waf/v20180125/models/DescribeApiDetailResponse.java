@@ -31,6 +31,13 @@ public class DescribeApiDetailResponse extends AbstractModel {
     private String Log;
 
     /**
+    * 完整请求样例
+    */
+    @SerializedName("FullReqLog")
+    @Expose
+    private String FullReqLog;
+
+    /**
     * 请求参数样例列表
     */
     @SerializedName("ParameterList")
@@ -135,6 +142,22 @@ public class DescribeApiDetailResponse extends AbstractModel {
      */
     public void setLog(String Log) {
         this.Log = Log;
+    }
+
+    /**
+     * Get 完整请求样例 
+     * @return FullReqLog 完整请求样例
+     */
+    public String getFullReqLog() {
+        return this.FullReqLog;
+    }
+
+    /**
+     * Set 完整请求样例
+     * @param FullReqLog 完整请求样例
+     */
+    public void setFullReqLog(String FullReqLog) {
+        this.FullReqLog = FullReqLog;
     }
 
     /**
@@ -356,6 +379,9 @@ public class DescribeApiDetailResponse extends AbstractModel {
         if (source.Log != null) {
             this.Log = new String(source.Log);
         }
+        if (source.FullReqLog != null) {
+            this.FullReqLog = new String(source.FullReqLog);
+        }
         if (source.ParameterList != null) {
             this.ParameterList = new ApiParameterType[source.ParameterList.length];
             for (int i = 0; i < source.ParameterList.length; i++) {
@@ -412,6 +438,7 @@ public class DescribeApiDetailResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Log", this.Log);
+        this.setParamSimple(map, prefix + "FullReqLog", this.FullReqLog);
         this.setParamArrayObj(map, prefix + "ParameterList.", this.ParameterList);
         this.setParamSimple(map, prefix + "Scene", this.Scene);
         this.setParamArraySimple(map, prefix + "SensitiveFields.", this.SensitiveFields);

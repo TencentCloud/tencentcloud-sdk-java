@@ -24,233 +24,256 @@ import java.util.HashMap;
 public class ManagerShareUnit extends AbstractModel {
 
     /**
-    * 共享单元ID。
+    * <p>共享单元ID。</p>
     */
     @SerializedName("UnitId")
     @Expose
     private String UnitId;
 
     /**
-    * 共享单元名称。
+    * <p>共享单元名称。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 共享单元管理员Uin。
+    * <p>共享单元管理员Uin。</p>
     */
     @SerializedName("Uin")
     @Expose
     private Long Uin;
 
     /**
-    * 共享单元管理员OwnerUin。
+    * <p>共享单元管理员OwnerUin。</p>
     */
     @SerializedName("OwnerUin")
     @Expose
     private Long OwnerUin;
 
     /**
-    * 共享单元地域。
+    * <p>共享单元地域。</p>
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-    * 描述。
+    * <p>描述。</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 创建时间。
+    * <p>创建时间。</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 共享单元资源数。
+    * <p>共享单元资源数。</p>
     */
     @SerializedName("ShareResourceNum")
     @Expose
     private Long ShareResourceNum;
 
     /**
-    * 共享单元成员数。
+    * <p>共享单元成员数。</p>
     */
     @SerializedName("ShareMemberNum")
     @Expose
     private Long ShareMemberNum;
 
     /**
-    * 共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号
+    * <p>共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号</p>
     */
     @SerializedName("ShareScope")
     @Expose
     private Long ShareScope;
 
     /**
-     * Get 共享单元ID。 
-     * @return UnitId 共享单元ID。
+    * <p>共享单元部门数。</p>
+    */
+    @SerializedName("ShareNodeNum")
+    @Expose
+    private Long ShareNodeNum;
+
+    /**
+     * Get <p>共享单元ID。</p> 
+     * @return UnitId <p>共享单元ID。</p>
      */
     public String getUnitId() {
         return this.UnitId;
     }
 
     /**
-     * Set 共享单元ID。
-     * @param UnitId 共享单元ID。
+     * Set <p>共享单元ID。</p>
+     * @param UnitId <p>共享单元ID。</p>
      */
     public void setUnitId(String UnitId) {
         this.UnitId = UnitId;
     }
 
     /**
-     * Get 共享单元名称。 
-     * @return Name 共享单元名称。
+     * Get <p>共享单元名称。</p> 
+     * @return Name <p>共享单元名称。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 共享单元名称。
-     * @param Name 共享单元名称。
+     * Set <p>共享单元名称。</p>
+     * @param Name <p>共享单元名称。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 共享单元管理员Uin。 
-     * @return Uin 共享单元管理员Uin。
+     * Get <p>共享单元管理员Uin。</p> 
+     * @return Uin <p>共享单元管理员Uin。</p>
      */
     public Long getUin() {
         return this.Uin;
     }
 
     /**
-     * Set 共享单元管理员Uin。
-     * @param Uin 共享单元管理员Uin。
+     * Set <p>共享单元管理员Uin。</p>
+     * @param Uin <p>共享单元管理员Uin。</p>
      */
     public void setUin(Long Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 共享单元管理员OwnerUin。 
-     * @return OwnerUin 共享单元管理员OwnerUin。
+     * Get <p>共享单元管理员OwnerUin。</p> 
+     * @return OwnerUin <p>共享单元管理员OwnerUin。</p>
      */
     public Long getOwnerUin() {
         return this.OwnerUin;
     }
 
     /**
-     * Set 共享单元管理员OwnerUin。
-     * @param OwnerUin 共享单元管理员OwnerUin。
+     * Set <p>共享单元管理员OwnerUin。</p>
+     * @param OwnerUin <p>共享单元管理员OwnerUin。</p>
      */
     public void setOwnerUin(Long OwnerUin) {
         this.OwnerUin = OwnerUin;
     }
 
     /**
-     * Get 共享单元地域。 
-     * @return Area 共享单元地域。
+     * Get <p>共享单元地域。</p> 
+     * @return Area <p>共享单元地域。</p>
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set 共享单元地域。
-     * @param Area 共享单元地域。
+     * Set <p>共享单元地域。</p>
+     * @param Area <p>共享单元地域。</p>
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * Get 描述。 
-     * @return Description 描述。
+     * Get <p>描述。</p> 
+     * @return Description <p>描述。</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 描述。
-     * @param Description 描述。
+     * Set <p>描述。</p>
+     * @param Description <p>描述。</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 创建时间。 
-     * @return CreateTime 创建时间。
+     * Get <p>创建时间。</p> 
+     * @return CreateTime <p>创建时间。</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间。
-     * @param CreateTime 创建时间。
+     * Set <p>创建时间。</p>
+     * @param CreateTime <p>创建时间。</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 共享单元资源数。 
-     * @return ShareResourceNum 共享单元资源数。
+     * Get <p>共享单元资源数。</p> 
+     * @return ShareResourceNum <p>共享单元资源数。</p>
      */
     public Long getShareResourceNum() {
         return this.ShareResourceNum;
     }
 
     /**
-     * Set 共享单元资源数。
-     * @param ShareResourceNum 共享单元资源数。
+     * Set <p>共享单元资源数。</p>
+     * @param ShareResourceNum <p>共享单元资源数。</p>
      */
     public void setShareResourceNum(Long ShareResourceNum) {
         this.ShareResourceNum = ShareResourceNum;
     }
 
     /**
-     * Get 共享单元成员数。 
-     * @return ShareMemberNum 共享单元成员数。
+     * Get <p>共享单元成员数。</p> 
+     * @return ShareMemberNum <p>共享单元成员数。</p>
      */
     public Long getShareMemberNum() {
         return this.ShareMemberNum;
     }
 
     /**
-     * Set 共享单元成员数。
-     * @param ShareMemberNum 共享单元成员数。
+     * Set <p>共享单元成员数。</p>
+     * @param ShareMemberNum <p>共享单元成员数。</p>
      */
     public void setShareMemberNum(Long ShareMemberNum) {
         this.ShareMemberNum = ShareMemberNum;
     }
 
     /**
-     * Get 共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号 
-     * @return ShareScope 共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号
+     * Get <p>共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号</p> 
+     * @return ShareScope <p>共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号</p>
      */
     public Long getShareScope() {
         return this.ShareScope;
     }
 
     /**
-     * Set 共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号
-     * @param ShareScope 共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号
+     * Set <p>共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号</p>
+     * @param ShareScope <p>共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号</p>
      */
     public void setShareScope(Long ShareScope) {
         this.ShareScope = ShareScope;
+    }
+
+    /**
+     * Get <p>共享单元部门数。</p> 
+     * @return ShareNodeNum <p>共享单元部门数。</p>
+     */
+    public Long getShareNodeNum() {
+        return this.ShareNodeNum;
+    }
+
+    /**
+     * Set <p>共享单元部门数。</p>
+     * @param ShareNodeNum <p>共享单元部门数。</p>
+     */
+    public void setShareNodeNum(Long ShareNodeNum) {
+        this.ShareNodeNum = ShareNodeNum;
     }
 
     public ManagerShareUnit() {
@@ -291,6 +314,9 @@ public class ManagerShareUnit extends AbstractModel {
         if (source.ShareScope != null) {
             this.ShareScope = new Long(source.ShareScope);
         }
+        if (source.ShareNodeNum != null) {
+            this.ShareNodeNum = new Long(source.ShareNodeNum);
+        }
     }
 
 
@@ -308,6 +334,7 @@ public class ManagerShareUnit extends AbstractModel {
         this.setParamSimple(map, prefix + "ShareResourceNum", this.ShareResourceNum);
         this.setParamSimple(map, prefix + "ShareMemberNum", this.ShareMemberNum);
         this.setParamSimple(map, prefix + "ShareScope", this.ShareScope);
+        this.setParamSimple(map, prefix + "ShareNodeNum", this.ShareNodeNum);
 
     }
 }

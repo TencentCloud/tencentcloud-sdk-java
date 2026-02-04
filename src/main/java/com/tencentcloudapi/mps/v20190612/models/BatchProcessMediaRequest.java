@@ -32,7 +32,7 @@ public class BatchProcessMediaRequest extends AbstractModel {
 
     /**
     * 媒体处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
-注意：当InputInfo.Type为URL时，该参数是必填项
+注意：当InputInfo.Type为URL时，该参数是必填项，目前只支持COS输出
     */
     @SerializedName("OutputStorage")
     @Expose
@@ -75,7 +75,7 @@ public class BatchProcessMediaRequest extends AbstractModel {
     private String SessionContext;
 
     /**
-    * 资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
+    * 资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。
     */
     @SerializedName("ResourceId")
     @Expose
@@ -109,9 +109,9 @@ public class BatchProcessMediaRequest extends AbstractModel {
 
     /**
      * Get 媒体处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
-注意：当InputInfo.Type为URL时，该参数是必填项 
+注意：当InputInfo.Type为URL时，该参数是必填项，目前只支持COS输出 
      * @return OutputStorage 媒体处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
-注意：当InputInfo.Type为URL时，该参数是必填项
+注意：当InputInfo.Type为URL时，该参数是必填项，目前只支持COS输出
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
@@ -119,9 +119,9 @@ public class BatchProcessMediaRequest extends AbstractModel {
 
     /**
      * Set 媒体处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
-注意：当InputInfo.Type为URL时，该参数是必填项
+注意：当InputInfo.Type为URL时，该参数是必填项，目前只支持COS输出
      * @param OutputStorage 媒体处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
-注意：当InputInfo.Type为URL时，该参数是必填项
+注意：当InputInfo.Type为URL时，该参数是必填项，目前只支持COS输出
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
@@ -212,16 +212,16 @@ public class BatchProcessMediaRequest extends AbstractModel {
     }
 
     /**
-     * Get 资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。 
-     * @return ResourceId 资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
+     * Get 资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。 
+     * @return ResourceId 资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
-     * @param ResourceId 资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。
+     * Set 资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。
+     * @param ResourceId 资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;

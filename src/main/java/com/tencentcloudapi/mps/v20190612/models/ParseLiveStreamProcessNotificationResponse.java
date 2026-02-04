@@ -30,6 +30,7 @@ public class ParseLiveStreamProcessNotificationResponse extends AbstractModel {
 <li>LiveRecordResult：直播录制结果；</li>
 <li>AiQualityControlResult：媒体质检结果；</li>
 <li>AiAnalysisResult：内容分析结果；</li>
+<li>AiSmartSubtitleResult：智能字幕结果；</li>
 <li>ProcessEof：直播流处理结束。</li>
     */
     @SerializedName("NotificationType")
@@ -92,6 +93,13 @@ public class ParseLiveStreamProcessNotificationResponse extends AbstractModel {
     private LiveStreamRecordResultInfo LiveRecordResultInfo;
 
     /**
+    * 智能字幕结果，当 NotificationType 为 AiSmartSubtitleResult 时有效。
+    */
+    @SerializedName("AiSmartSubtitleResultInfo")
+    @Expose
+    private LiveStreamAiSmartSubtitleResultInfo AiSmartSubtitleResultInfo;
+
+    /**
     * 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长50个字符，不带或者带空字符串表示不做去重。
     */
     @SerializedName("SessionId")
@@ -133,6 +141,7 @@ public class ParseLiveStreamProcessNotificationResponse extends AbstractModel {
 <li>LiveRecordResult：直播录制结果；</li>
 <li>AiQualityControlResult：媒体质检结果；</li>
 <li>AiAnalysisResult：内容分析结果；</li>
+<li>AiSmartSubtitleResult：智能字幕结果；</li>
 <li>ProcessEof：直播流处理结束。</li> 
      * @return NotificationType 直播流处理结果类型，包含：
 <li>AiReviewResult：内容审核结果；</li>
@@ -140,6 +149,7 @@ public class ParseLiveStreamProcessNotificationResponse extends AbstractModel {
 <li>LiveRecordResult：直播录制结果；</li>
 <li>AiQualityControlResult：媒体质检结果；</li>
 <li>AiAnalysisResult：内容分析结果；</li>
+<li>AiSmartSubtitleResult：智能字幕结果；</li>
 <li>ProcessEof：直播流处理结束。</li>
      */
     public String getNotificationType() {
@@ -153,6 +163,7 @@ public class ParseLiveStreamProcessNotificationResponse extends AbstractModel {
 <li>LiveRecordResult：直播录制结果；</li>
 <li>AiQualityControlResult：媒体质检结果；</li>
 <li>AiAnalysisResult：内容分析结果；</li>
+<li>AiSmartSubtitleResult：智能字幕结果；</li>
 <li>ProcessEof：直播流处理结束。</li>
      * @param NotificationType 直播流处理结果类型，包含：
 <li>AiReviewResult：内容审核结果；</li>
@@ -160,6 +171,7 @@ public class ParseLiveStreamProcessNotificationResponse extends AbstractModel {
 <li>LiveRecordResult：直播录制结果；</li>
 <li>AiQualityControlResult：媒体质检结果；</li>
 <li>AiAnalysisResult：内容分析结果；</li>
+<li>AiSmartSubtitleResult：智能字幕结果；</li>
 <li>ProcessEof：直播流处理结束。</li>
      */
     public void setNotificationType(String NotificationType) {
@@ -303,6 +315,22 @@ public class ParseLiveStreamProcessNotificationResponse extends AbstractModel {
     }
 
     /**
+     * Get 智能字幕结果，当 NotificationType 为 AiSmartSubtitleResult 时有效。 
+     * @return AiSmartSubtitleResultInfo 智能字幕结果，当 NotificationType 为 AiSmartSubtitleResult 时有效。
+     */
+    public LiveStreamAiSmartSubtitleResultInfo getAiSmartSubtitleResultInfo() {
+        return this.AiSmartSubtitleResultInfo;
+    }
+
+    /**
+     * Set 智能字幕结果，当 NotificationType 为 AiSmartSubtitleResult 时有效。
+     * @param AiSmartSubtitleResultInfo 智能字幕结果，当 NotificationType 为 AiSmartSubtitleResult 时有效。
+     */
+    public void setAiSmartSubtitleResultInfo(LiveStreamAiSmartSubtitleResultInfo AiSmartSubtitleResultInfo) {
+        this.AiSmartSubtitleResultInfo = AiSmartSubtitleResultInfo;
+    }
+
+    /**
      * Get 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长50个字符，不带或者带空字符串表示不做去重。 
      * @return SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长50个字符，不带或者带空字符串表示不做去重。
      */
@@ -414,6 +442,9 @@ public class ParseLiveStreamProcessNotificationResponse extends AbstractModel {
         if (source.LiveRecordResultInfo != null) {
             this.LiveRecordResultInfo = new LiveStreamRecordResultInfo(source.LiveRecordResultInfo);
         }
+        if (source.AiSmartSubtitleResultInfo != null) {
+            this.AiSmartSubtitleResultInfo = new LiveStreamAiSmartSubtitleResultInfo(source.AiSmartSubtitleResultInfo);
+        }
         if (source.SessionId != null) {
             this.SessionId = new String(source.SessionId);
         }
@@ -444,6 +475,7 @@ public class ParseLiveStreamProcessNotificationResponse extends AbstractModel {
         this.setParamObj(map, prefix + "AiAnalysisResultInfo.", this.AiAnalysisResultInfo);
         this.setParamObj(map, prefix + "AiQualityControlResultInfo.", this.AiQualityControlResultInfo);
         this.setParamObj(map, prefix + "LiveRecordResultInfo.", this.LiveRecordResultInfo);
+        this.setParamObj(map, prefix + "AiSmartSubtitleResultInfo.", this.AiSmartSubtitleResultInfo);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "Timestamp", this.Timestamp);

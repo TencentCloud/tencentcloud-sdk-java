@@ -24,11 +24,22 @@ import java.util.HashMap;
 public class AiAnalysisTaskReelOutput extends AbstractModel {
 
     /**
-    * 成片视频路径。
+    * 解说视频路径。
     */
     @SerializedName("VideoPath")
     @Expose
     private String VideoPath;
+
+    /**
+    * 解说视频路径列表。
+
+**注意**：
+1. 当返回一个文件时，`VideoPath `返回一个文件路径，`VideoPaths `也会填充同样路径的一个元素。
+2. 当返回多个文件时，`VideoPath `返回为空字符串，`VideoPaths `返回多文件路径列表。
+    */
+    @SerializedName("VideoPaths")
+    @Expose
+    private String [] VideoPaths;
 
     /**
     * 脚本文件路径
@@ -39,26 +50,58 @@ public class AiAnalysisTaskReelOutput extends AbstractModel {
     private String ScriptPath;
 
     /**
-    * 成片视频存储位置。
+    * 解说视频存储位置。
     */
     @SerializedName("OutputStorage")
     @Expose
     private TaskOutputStorage OutputStorage;
 
     /**
-     * Get 成片视频路径。 
-     * @return VideoPath 成片视频路径。
+     * Get 解说视频路径。 
+     * @return VideoPath 解说视频路径。
      */
     public String getVideoPath() {
         return this.VideoPath;
     }
 
     /**
-     * Set 成片视频路径。
-     * @param VideoPath 成片视频路径。
+     * Set 解说视频路径。
+     * @param VideoPath 解说视频路径。
      */
     public void setVideoPath(String VideoPath) {
         this.VideoPath = VideoPath;
+    }
+
+    /**
+     * Get 解说视频路径列表。
+
+**注意**：
+1. 当返回一个文件时，`VideoPath `返回一个文件路径，`VideoPaths `也会填充同样路径的一个元素。
+2. 当返回多个文件时，`VideoPath `返回为空字符串，`VideoPaths `返回多文件路径列表。 
+     * @return VideoPaths 解说视频路径列表。
+
+**注意**：
+1. 当返回一个文件时，`VideoPath `返回一个文件路径，`VideoPaths `也会填充同样路径的一个元素。
+2. 当返回多个文件时，`VideoPath `返回为空字符串，`VideoPaths `返回多文件路径列表。
+     */
+    public String [] getVideoPaths() {
+        return this.VideoPaths;
+    }
+
+    /**
+     * Set 解说视频路径列表。
+
+**注意**：
+1. 当返回一个文件时，`VideoPath `返回一个文件路径，`VideoPaths `也会填充同样路径的一个元素。
+2. 当返回多个文件时，`VideoPath `返回为空字符串，`VideoPaths `返回多文件路径列表。
+     * @param VideoPaths 解说视频路径列表。
+
+**注意**：
+1. 当返回一个文件时，`VideoPath `返回一个文件路径，`VideoPaths `也会填充同样路径的一个元素。
+2. 当返回多个文件时，`VideoPath `返回为空字符串，`VideoPaths `返回多文件路径列表。
+     */
+    public void setVideoPaths(String [] VideoPaths) {
+        this.VideoPaths = VideoPaths;
     }
 
     /**
@@ -82,16 +125,16 @@ public class AiAnalysisTaskReelOutput extends AbstractModel {
     }
 
     /**
-     * Get 成片视频存储位置。 
-     * @return OutputStorage 成片视频存储位置。
+     * Get 解说视频存储位置。 
+     * @return OutputStorage 解说视频存储位置。
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set 成片视频存储位置。
-     * @param OutputStorage 成片视频存储位置。
+     * Set 解说视频存储位置。
+     * @param OutputStorage 解说视频存储位置。
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
@@ -108,6 +151,12 @@ public class AiAnalysisTaskReelOutput extends AbstractModel {
         if (source.VideoPath != null) {
             this.VideoPath = new String(source.VideoPath);
         }
+        if (source.VideoPaths != null) {
+            this.VideoPaths = new String[source.VideoPaths.length];
+            for (int i = 0; i < source.VideoPaths.length; i++) {
+                this.VideoPaths[i] = new String(source.VideoPaths[i]);
+            }
+        }
         if (source.ScriptPath != null) {
             this.ScriptPath = new String(source.ScriptPath);
         }
@@ -122,6 +171,7 @@ public class AiAnalysisTaskReelOutput extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VideoPath", this.VideoPath);
+        this.setParamArraySimple(map, prefix + "VideoPaths.", this.VideoPaths);
         this.setParamSimple(map, prefix + "ScriptPath", this.ScriptPath);
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
 

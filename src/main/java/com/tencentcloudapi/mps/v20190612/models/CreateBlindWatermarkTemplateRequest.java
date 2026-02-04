@@ -52,6 +52,16 @@ public class CreateBlindWatermarkTemplateRequest extends AbstractModel {
     private String Comment;
 
     /**
+    * 数字水印强度。
+default: 默认，高清画质和抗性平衡
+stronger:画质清晰，抗性较强
+strongest:画质一般，抗性最强
+    */
+    @SerializedName("Strength")
+    @Expose
+    private String Strength;
+
+    /**
      * Get 数字水印类型，可选值：<li>blind-basic：基础版权数字水印；</li><li>blind-nagra：NAGRA水印；</li> 
      * @return Type 数字水印类型，可选值：<li>blind-basic：基础版权数字水印；</li><li>blind-nagra：NAGRA水印；</li>
      */
@@ -115,6 +125,34 @@ public class CreateBlindWatermarkTemplateRequest extends AbstractModel {
         this.Comment = Comment;
     }
 
+    /**
+     * Get 数字水印强度。
+default: 默认，高清画质和抗性平衡
+stronger:画质清晰，抗性较强
+strongest:画质一般，抗性最强 
+     * @return Strength 数字水印强度。
+default: 默认，高清画质和抗性平衡
+stronger:画质清晰，抗性较强
+strongest:画质一般，抗性最强
+     */
+    public String getStrength() {
+        return this.Strength;
+    }
+
+    /**
+     * Set 数字水印强度。
+default: 默认，高清画质和抗性平衡
+stronger:画质清晰，抗性较强
+strongest:画质一般，抗性最强
+     * @param Strength 数字水印强度。
+default: 默认，高清画质和抗性平衡
+stronger:画质清晰，抗性较强
+strongest:画质一般，抗性最强
+     */
+    public void setStrength(String Strength) {
+        this.Strength = Strength;
+    }
+
     public CreateBlindWatermarkTemplateRequest() {
     }
 
@@ -135,6 +173,9 @@ public class CreateBlindWatermarkTemplateRequest extends AbstractModel {
         if (source.Comment != null) {
             this.Comment = new String(source.Comment);
         }
+        if (source.Strength != null) {
+            this.Strength = new String(source.Strength);
+        }
     }
 
 
@@ -146,6 +187,7 @@ public class CreateBlindWatermarkTemplateRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TextContent", this.TextContent);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
+        this.setParamSimple(map, prefix + "Strength", this.Strength);
 
     }
 }

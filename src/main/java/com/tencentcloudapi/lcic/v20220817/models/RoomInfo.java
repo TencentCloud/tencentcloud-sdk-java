@@ -24,455 +24,431 @@ import java.util.HashMap;
 public class RoomInfo extends AbstractModel {
 
     /**
-    * 房间名称。
-字符数不超过256
+    * <p>房间名称。<br>字符数不超过256</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 预定的房间开始时间，unix时间戳。
+    * <p>预定的房间开始时间，unix时间戳。</p>
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 预定的房间结束时间，unix时间戳。
+    * <p>预定的房间结束时间，unix时间戳。</p>
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * 头像区域，摄像头视频画面的分辨率。可以有如下取值：
-1 标清
-2 高清
-3 全高清
+    * <p>头像区域，摄像头视频画面的分辨率。可以有如下取值：<br>1 标清<br>2 高清<br>3 全高清</p>
     */
     @SerializedName("Resolution")
     @Expose
     private Long Resolution;
 
     /**
-    * 设置房间/课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。
+    * <p>设置房间/课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。</p>
     */
     @SerializedName("MaxMicNumber")
     @Expose
     private Long MaxMicNumber;
 
     /**
-    * 房间子类型，可以有以下取值： videodoc 文档+视频 video 纯视频
+    * <p>房间子类型，可以有以下取值： videodoc 文档+视频 video 纯视频</p>
     */
     @SerializedName("SubType")
     @Expose
     private String SubType;
 
     /**
-    * 老师ID。通过[注册用户]接口获取的UserId。
+    * <p>老师ID。通过[注册用户]接口获取的UserId。</p>
     */
     @SerializedName("TeacherId")
     @Expose
     private String TeacherId;
 
     /**
-    * 进入课堂时是否自动连麦。可以有以下取值： 0 不自动连麦（需要手动申请上麦，默认值） 1 自动连麦
+    * <p>进入课堂时是否自动连麦。可以有以下取值： 0 不自动连麦（需要手动申请上麦，默认值） 1 自动连麦</p>
     */
     @SerializedName("AutoMic")
     @Expose
     private Long AutoMic;
 
     /**
-    * 释放音视频权限后是否自动取消连麦。可以有以下取值： 0 自动取消连麦（默认值） 1 保持连麦状态
+    * <p>释放音视频权限后是否自动取消连麦。可以有以下取值： 0 自动取消连麦（默认值） 1 保持连麦状态</p>
     */
     @SerializedName("TurnOffMic")
     @Expose
     private Long TurnOffMic;
 
     /**
-    * 高音质模式。可以有以下取值： 0 不开启高音质（默认值） 1 开启高音质
+    * <p>高音质模式。可以有以下取值： 0 不开启高音质（默认值） 1 开启高音质</p>
     */
     @SerializedName("AudioQuality")
     @Expose
     private Long AudioQuality;
 
     /**
-    * 上课后是否禁止自动录制。可以有以下取值： 0 不禁止录制（自动开启录制，默认值） 1 禁止录制 注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。
+    * <p>上课后是否禁止自动录制。可以有以下取值： 0 不禁止录制（自动开启录制，默认值） 1 禁止录制 注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。</p>
     */
     @SerializedName("DisableRecord")
     @Expose
     private Long DisableRecord;
 
     /**
-    * 助教Id列表。通过[注册用户]接口获取的UserId。
+    * <p>助教Id列表。通过[注册用户]接口获取的UserId。</p>
     */
     @SerializedName("Assistants")
     @Expose
     private String [] Assistants;
 
     /**
-    * rtc人数。
+    * <p>rtc人数。</p>
     */
     @SerializedName("RTCAudienceNumber")
     @Expose
     private Long RTCAudienceNumber;
 
     /**
-    * 观看类型。
+    * <p>观看类型。</p>
     */
     @SerializedName("AudienceType")
     @Expose
     private Long AudienceType;
 
     /**
-    * 录制布局。
+    * <p>录制布局。</p>
     */
     @SerializedName("RecordLayout")
     @Expose
     private Long RecordLayout;
 
     /**
-    * 房间绑定的群组ID
+    * <p>房间绑定的群组ID</p>
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * 打开学生麦克风/摄像头的授权开关
+    * <p>打开学生麦克风/摄像头的授权开关</p>
     */
     @SerializedName("EnableDirectControl")
     @Expose
     private Long EnableDirectControl;
 
     /**
-    * 开启专注模式。 0 收看全部角色音视频(默认) 1 只看老师和助教
+    * <p>开启专注模式。 0 收看全部角色音视频(默认) 1 只看老师和助教</p>
     */
     @SerializedName("InteractionMode")
     @Expose
     private Long InteractionMode;
 
     /**
-    * 横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型
+    * <p>横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型</p>
     */
     @SerializedName("VideoOrientation")
     @Expose
     private Long VideoOrientation;
 
     /**
-    * 开启课后评分。 0：不开启(默认)  1：开启
+    * <p>开启课后评分。 0：不开启(默认)  1：开启</p>
     */
     @SerializedName("IsGradingRequiredPostClass")
     @Expose
     private Long IsGradingRequiredPostClass;
 
     /**
-    * 课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放); 3 圆桌会议 注：大班课的布局(layout)只有三分屏
+    * <p>课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放); 3 圆桌会议 注：大班课的布局(layout)只有三分屏</p>
     */
     @SerializedName("RoomType")
     @Expose
     private Long RoomType;
 
     /**
-    * 拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
+    * <p>拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟</p>
     */
     @SerializedName("EndDelayTime")
     @Expose
     private Long EndDelayTime;
 
     /**
-    * 直播类型：0 常规（默认）1 伪直播 2 RTMP推流直播
+    * <p>直播类型：0 常规（默认）1 伪直播 2 RTMP推流直播</p>
     */
     @SerializedName("LiveType")
     @Expose
     private Long LiveType;
 
     /**
-    * 伪直播回放链接
+    * <p>伪直播链接。 支持的协议以及格式： 协议：HTTP、HTTPS、RTMP、HLS 。格式：FLV、MP3、MP4、MPEG-TS、MOV、MKV、M4A。视频编码：H.264、VP8。音频编码：AAC、OPUS。</p><p>注意：伪直播视频规格建议最高使用1080p 30fps，4k视频会有兼容性问题导致直播失败。</p>
     */
     @SerializedName("RecordLiveUrl")
     @Expose
     private String RecordLiveUrl;
 
     /**
-    * 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1或2的时候有效
+    * <p>是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1或2的时候有效</p>
     */
     @SerializedName("EnableAutoStart")
     @Expose
     private Long EnableAutoStart;
 
     /**
-    * 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
+    * <p>录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道</p>
     */
     @SerializedName("RecordBackground")
     @Expose
     private String RecordBackground;
 
     /**
-    * 录制自定义场景。注意：仅recordlayout=9的时候此参数有效。需注意各类参数配置正确能够生效。不然会造成录制失败，失败后无法补救。数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。自定义场景参数的含义。如下：     scene：自定义js/css对应的场景值。如scene=recordScene，会加载 recordScene 场景对应的 js/css，这样就可以自定义录制页面的元素。     lng：录制页面对应的语种。如lng=en，则录制界面为en。（枚举值：en,zh，zh-TW，jp，ar，kr，vi）     customToken：录制页面中涉及客户自己的服务需要鉴权时进行配置。一般情况下，无需配置。
+    * <p>录制自定义场景。注意：仅recordlayout=9的时候此参数有效。需注意各类参数配置正确能够生效。不然会造成录制失败，失败后无法补救。数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。自定义场景参数的含义。如下：     scene：自定义js/css对应的场景值。如scene=recordScene，会加载 recordScene 场景对应的 js/css，这样就可以自定义录制页面的元素。     lng：录制页面对应的语种。如lng=en，则录制界面为en。（枚举值：en,zh，zh-TW，jp，ar，kr，vi）     customToken：录制页面中涉及客户自己的服务需要鉴权时进行配置。一般情况下，无需配置。</p>
     */
     @SerializedName("RecordScene")
     @Expose
     private String RecordScene;
 
     /**
-    * 录制自定义语言，仅recordlayout=9的时候此参数有效
+    * <p>录制自定义语言，仅recordlayout=9的时候此参数有效</p>
     */
     @SerializedName("RecordLang")
     @Expose
     private String RecordLang;
 
     /**
-    * 录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0
+    * <p>录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0</p>
     */
     @SerializedName("RecordStream")
     @Expose
     private Long RecordStream;
 
     /**
-    * 板书截图生成类型。0 不生成板书（默认）；1 全量模式；2 单页去重模式
+    * <p>板书截图生成类型。0 不生成板书（默认）；1 全量模式；2 单页去重模式</p>
     */
     @SerializedName("WhiteBoardSnapshotMode")
     @Expose
     private Long WhiteBoardSnapshotMode;
 
     /**
-    * 字幕转写功能开关。可以有以下取值：
-0 不开启字幕转写功能（默认值）
-1 自动转写模式：上课自动开启，下课自动停止
-2 手动转写模式：支持老师或者助教通过客户端API手动开启/关闭字幕转写
-设置0和1时客户端均不展示手动开关，设置2时老师或者助教端展示字幕转写开关
+    * <p>字幕转写功能开关。可以有以下取值：<br>0 不开启字幕转写功能（默认值）<br>1 自动转写模式：上课自动开启，下课自动停止<br>2 手动转写模式：支持老师或者助教通过客户端API手动开启/关闭字幕转写<br>设置0和1时客户端均不展示手动开关，设置2时老师或者助教端展示字幕转写开关</p>
     */
     @SerializedName("SubtitlesTranscription")
     @Expose
     private Long SubtitlesTranscription;
 
     /**
-    * 嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效
+    * <p>嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效</p>
     */
     @SerializedName("Guests")
     @Expose
     private String [] Guests;
 
     /**
-    * 录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效
+    * <p>录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效</p>
     */
     @SerializedName("RecordMerge")
     @Expose
     private Long RecordMerge;
 
     /**
-     * Get 房间名称。
-字符数不超过256 
-     * @return Name 房间名称。
-字符数不超过256
+     * Get <p>房间名称。<br>字符数不超过256</p> 
+     * @return Name <p>房间名称。<br>字符数不超过256</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 房间名称。
-字符数不超过256
-     * @param Name 房间名称。
-字符数不超过256
+     * Set <p>房间名称。<br>字符数不超过256</p>
+     * @param Name <p>房间名称。<br>字符数不超过256</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 预定的房间开始时间，unix时间戳。 
-     * @return StartTime 预定的房间开始时间，unix时间戳。
+     * Get <p>预定的房间开始时间，unix时间戳。</p> 
+     * @return StartTime <p>预定的房间开始时间，unix时间戳。</p>
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 预定的房间开始时间，unix时间戳。
-     * @param StartTime 预定的房间开始时间，unix时间戳。
+     * Set <p>预定的房间开始时间，unix时间戳。</p>
+     * @param StartTime <p>预定的房间开始时间，unix时间戳。</p>
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 预定的房间结束时间，unix时间戳。 
-     * @return EndTime 预定的房间结束时间，unix时间戳。
+     * Get <p>预定的房间结束时间，unix时间戳。</p> 
+     * @return EndTime <p>预定的房间结束时间，unix时间戳。</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 预定的房间结束时间，unix时间戳。
-     * @param EndTime 预定的房间结束时间，unix时间戳。
+     * Set <p>预定的房间结束时间，unix时间戳。</p>
+     * @param EndTime <p>预定的房间结束时间，unix时间戳。</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 头像区域，摄像头视频画面的分辨率。可以有如下取值：
-1 标清
-2 高清
-3 全高清 
-     * @return Resolution 头像区域，摄像头视频画面的分辨率。可以有如下取值：
-1 标清
-2 高清
-3 全高清
+     * Get <p>头像区域，摄像头视频画面的分辨率。可以有如下取值：<br>1 标清<br>2 高清<br>3 全高清</p> 
+     * @return Resolution <p>头像区域，摄像头视频画面的分辨率。可以有如下取值：<br>1 标清<br>2 高清<br>3 全高清</p>
      */
     public Long getResolution() {
         return this.Resolution;
     }
 
     /**
-     * Set 头像区域，摄像头视频画面的分辨率。可以有如下取值：
-1 标清
-2 高清
-3 全高清
-     * @param Resolution 头像区域，摄像头视频画面的分辨率。可以有如下取值：
-1 标清
-2 高清
-3 全高清
+     * Set <p>头像区域，摄像头视频画面的分辨率。可以有如下取值：<br>1 标清<br>2 高清<br>3 全高清</p>
+     * @param Resolution <p>头像区域，摄像头视频画面的分辨率。可以有如下取值：<br>1 标清<br>2 高清<br>3 全高清</p>
      */
     public void setResolution(Long Resolution) {
         this.Resolution = Resolution;
     }
 
     /**
-     * Get 设置房间/课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。 
-     * @return MaxMicNumber 设置房间/课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。
+     * Get <p>设置房间/课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。</p> 
+     * @return MaxMicNumber <p>设置房间/课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。</p>
      */
     public Long getMaxMicNumber() {
         return this.MaxMicNumber;
     }
 
     /**
-     * Set 设置房间/课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。
-     * @param MaxMicNumber 设置房间/课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。
+     * Set <p>设置房间/课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。</p>
+     * @param MaxMicNumber <p>设置房间/课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。</p>
      */
     public void setMaxMicNumber(Long MaxMicNumber) {
         this.MaxMicNumber = MaxMicNumber;
     }
 
     /**
-     * Get 房间子类型，可以有以下取值： videodoc 文档+视频 video 纯视频 
-     * @return SubType 房间子类型，可以有以下取值： videodoc 文档+视频 video 纯视频
+     * Get <p>房间子类型，可以有以下取值： videodoc 文档+视频 video 纯视频</p> 
+     * @return SubType <p>房间子类型，可以有以下取值： videodoc 文档+视频 video 纯视频</p>
      */
     public String getSubType() {
         return this.SubType;
     }
 
     /**
-     * Set 房间子类型，可以有以下取值： videodoc 文档+视频 video 纯视频
-     * @param SubType 房间子类型，可以有以下取值： videodoc 文档+视频 video 纯视频
+     * Set <p>房间子类型，可以有以下取值： videodoc 文档+视频 video 纯视频</p>
+     * @param SubType <p>房间子类型，可以有以下取值： videodoc 文档+视频 video 纯视频</p>
      */
     public void setSubType(String SubType) {
         this.SubType = SubType;
     }
 
     /**
-     * Get 老师ID。通过[注册用户]接口获取的UserId。 
-     * @return TeacherId 老师ID。通过[注册用户]接口获取的UserId。
+     * Get <p>老师ID。通过[注册用户]接口获取的UserId。</p> 
+     * @return TeacherId <p>老师ID。通过[注册用户]接口获取的UserId。</p>
      */
     public String getTeacherId() {
         return this.TeacherId;
     }
 
     /**
-     * Set 老师ID。通过[注册用户]接口获取的UserId。
-     * @param TeacherId 老师ID。通过[注册用户]接口获取的UserId。
+     * Set <p>老师ID。通过[注册用户]接口获取的UserId。</p>
+     * @param TeacherId <p>老师ID。通过[注册用户]接口获取的UserId。</p>
      */
     public void setTeacherId(String TeacherId) {
         this.TeacherId = TeacherId;
     }
 
     /**
-     * Get 进入课堂时是否自动连麦。可以有以下取值： 0 不自动连麦（需要手动申请上麦，默认值） 1 自动连麦 
-     * @return AutoMic 进入课堂时是否自动连麦。可以有以下取值： 0 不自动连麦（需要手动申请上麦，默认值） 1 自动连麦
+     * Get <p>进入课堂时是否自动连麦。可以有以下取值： 0 不自动连麦（需要手动申请上麦，默认值） 1 自动连麦</p> 
+     * @return AutoMic <p>进入课堂时是否自动连麦。可以有以下取值： 0 不自动连麦（需要手动申请上麦，默认值） 1 自动连麦</p>
      */
     public Long getAutoMic() {
         return this.AutoMic;
     }
 
     /**
-     * Set 进入课堂时是否自动连麦。可以有以下取值： 0 不自动连麦（需要手动申请上麦，默认值） 1 自动连麦
-     * @param AutoMic 进入课堂时是否自动连麦。可以有以下取值： 0 不自动连麦（需要手动申请上麦，默认值） 1 自动连麦
+     * Set <p>进入课堂时是否自动连麦。可以有以下取值： 0 不自动连麦（需要手动申请上麦，默认值） 1 自动连麦</p>
+     * @param AutoMic <p>进入课堂时是否自动连麦。可以有以下取值： 0 不自动连麦（需要手动申请上麦，默认值） 1 自动连麦</p>
      */
     public void setAutoMic(Long AutoMic) {
         this.AutoMic = AutoMic;
     }
 
     /**
-     * Get 释放音视频权限后是否自动取消连麦。可以有以下取值： 0 自动取消连麦（默认值） 1 保持连麦状态 
-     * @return TurnOffMic 释放音视频权限后是否自动取消连麦。可以有以下取值： 0 自动取消连麦（默认值） 1 保持连麦状态
+     * Get <p>释放音视频权限后是否自动取消连麦。可以有以下取值： 0 自动取消连麦（默认值） 1 保持连麦状态</p> 
+     * @return TurnOffMic <p>释放音视频权限后是否自动取消连麦。可以有以下取值： 0 自动取消连麦（默认值） 1 保持连麦状态</p>
      */
     public Long getTurnOffMic() {
         return this.TurnOffMic;
     }
 
     /**
-     * Set 释放音视频权限后是否自动取消连麦。可以有以下取值： 0 自动取消连麦（默认值） 1 保持连麦状态
-     * @param TurnOffMic 释放音视频权限后是否自动取消连麦。可以有以下取值： 0 自动取消连麦（默认值） 1 保持连麦状态
+     * Set <p>释放音视频权限后是否自动取消连麦。可以有以下取值： 0 自动取消连麦（默认值） 1 保持连麦状态</p>
+     * @param TurnOffMic <p>释放音视频权限后是否自动取消连麦。可以有以下取值： 0 自动取消连麦（默认值） 1 保持连麦状态</p>
      */
     public void setTurnOffMic(Long TurnOffMic) {
         this.TurnOffMic = TurnOffMic;
     }
 
     /**
-     * Get 高音质模式。可以有以下取值： 0 不开启高音质（默认值） 1 开启高音质 
-     * @return AudioQuality 高音质模式。可以有以下取值： 0 不开启高音质（默认值） 1 开启高音质
+     * Get <p>高音质模式。可以有以下取值： 0 不开启高音质（默认值） 1 开启高音质</p> 
+     * @return AudioQuality <p>高音质模式。可以有以下取值： 0 不开启高音质（默认值） 1 开启高音质</p>
      */
     public Long getAudioQuality() {
         return this.AudioQuality;
     }
 
     /**
-     * Set 高音质模式。可以有以下取值： 0 不开启高音质（默认值） 1 开启高音质
-     * @param AudioQuality 高音质模式。可以有以下取值： 0 不开启高音质（默认值） 1 开启高音质
+     * Set <p>高音质模式。可以有以下取值： 0 不开启高音质（默认值） 1 开启高音质</p>
+     * @param AudioQuality <p>高音质模式。可以有以下取值： 0 不开启高音质（默认值） 1 开启高音质</p>
      */
     public void setAudioQuality(Long AudioQuality) {
         this.AudioQuality = AudioQuality;
     }
 
     /**
-     * Get 上课后是否禁止自动录制。可以有以下取值： 0 不禁止录制（自动开启录制，默认值） 1 禁止录制 注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。 
-     * @return DisableRecord 上课后是否禁止自动录制。可以有以下取值： 0 不禁止录制（自动开启录制，默认值） 1 禁止录制 注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。
+     * Get <p>上课后是否禁止自动录制。可以有以下取值： 0 不禁止录制（自动开启录制，默认值） 1 禁止录制 注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。</p> 
+     * @return DisableRecord <p>上课后是否禁止自动录制。可以有以下取值： 0 不禁止录制（自动开启录制，默认值） 1 禁止录制 注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。</p>
      */
     public Long getDisableRecord() {
         return this.DisableRecord;
     }
 
     /**
-     * Set 上课后是否禁止自动录制。可以有以下取值： 0 不禁止录制（自动开启录制，默认值） 1 禁止录制 注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。
-     * @param DisableRecord 上课后是否禁止自动录制。可以有以下取值： 0 不禁止录制（自动开启录制，默认值） 1 禁止录制 注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。
+     * Set <p>上课后是否禁止自动录制。可以有以下取值： 0 不禁止录制（自动开启录制，默认值） 1 禁止录制 注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。</p>
+     * @param DisableRecord <p>上课后是否禁止自动录制。可以有以下取值： 0 不禁止录制（自动开启录制，默认值） 1 禁止录制 注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。</p>
      */
     public void setDisableRecord(Long DisableRecord) {
         this.DisableRecord = DisableRecord;
     }
 
     /**
-     * Get 助教Id列表。通过[注册用户]接口获取的UserId。 
-     * @return Assistants 助教Id列表。通过[注册用户]接口获取的UserId。
+     * Get <p>助教Id列表。通过[注册用户]接口获取的UserId。</p> 
+     * @return Assistants <p>助教Id列表。通过[注册用户]接口获取的UserId。</p>
      */
     public String [] getAssistants() {
         return this.Assistants;
     }
 
     /**
-     * Set 助教Id列表。通过[注册用户]接口获取的UserId。
-     * @param Assistants 助教Id列表。通过[注册用户]接口获取的UserId。
+     * Set <p>助教Id列表。通过[注册用户]接口获取的UserId。</p>
+     * @param Assistants <p>助教Id列表。通过[注册用户]接口获取的UserId。</p>
      */
     public void setAssistants(String [] Assistants) {
         this.Assistants = Assistants;
     }
 
     /**
-     * Get rtc人数。 
-     * @return RTCAudienceNumber rtc人数。
+     * Get <p>rtc人数。</p> 
+     * @return RTCAudienceNumber <p>rtc人数。</p>
      * @deprecated
      */
     @Deprecated
@@ -481,8 +457,8 @@ public class RoomInfo extends AbstractModel {
     }
 
     /**
-     * Set rtc人数。
-     * @param RTCAudienceNumber rtc人数。
+     * Set <p>rtc人数。</p>
+     * @param RTCAudienceNumber <p>rtc人数。</p>
      * @deprecated
      */
     @Deprecated
@@ -491,232 +467,232 @@ public class RoomInfo extends AbstractModel {
     }
 
     /**
-     * Get 观看类型。 
-     * @return AudienceType 观看类型。
+     * Get <p>观看类型。</p> 
+     * @return AudienceType <p>观看类型。</p>
      */
     public Long getAudienceType() {
         return this.AudienceType;
     }
 
     /**
-     * Set 观看类型。
-     * @param AudienceType 观看类型。
+     * Set <p>观看类型。</p>
+     * @param AudienceType <p>观看类型。</p>
      */
     public void setAudienceType(Long AudienceType) {
         this.AudienceType = AudienceType;
     }
 
     /**
-     * Get 录制布局。 
-     * @return RecordLayout 录制布局。
+     * Get <p>录制布局。</p> 
+     * @return RecordLayout <p>录制布局。</p>
      */
     public Long getRecordLayout() {
         return this.RecordLayout;
     }
 
     /**
-     * Set 录制布局。
-     * @param RecordLayout 录制布局。
+     * Set <p>录制布局。</p>
+     * @param RecordLayout <p>录制布局。</p>
      */
     public void setRecordLayout(Long RecordLayout) {
         this.RecordLayout = RecordLayout;
     }
 
     /**
-     * Get 房间绑定的群组ID 
-     * @return GroupId 房间绑定的群组ID
+     * Get <p>房间绑定的群组ID</p> 
+     * @return GroupId <p>房间绑定的群组ID</p>
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 房间绑定的群组ID
-     * @param GroupId 房间绑定的群组ID
+     * Set <p>房间绑定的群组ID</p>
+     * @param GroupId <p>房间绑定的群组ID</p>
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 打开学生麦克风/摄像头的授权开关 
-     * @return EnableDirectControl 打开学生麦克风/摄像头的授权开关
+     * Get <p>打开学生麦克风/摄像头的授权开关</p> 
+     * @return EnableDirectControl <p>打开学生麦克风/摄像头的授权开关</p>
      */
     public Long getEnableDirectControl() {
         return this.EnableDirectControl;
     }
 
     /**
-     * Set 打开学生麦克风/摄像头的授权开关
-     * @param EnableDirectControl 打开学生麦克风/摄像头的授权开关
+     * Set <p>打开学生麦克风/摄像头的授权开关</p>
+     * @param EnableDirectControl <p>打开学生麦克风/摄像头的授权开关</p>
      */
     public void setEnableDirectControl(Long EnableDirectControl) {
         this.EnableDirectControl = EnableDirectControl;
     }
 
     /**
-     * Get 开启专注模式。 0 收看全部角色音视频(默认) 1 只看老师和助教 
-     * @return InteractionMode 开启专注模式。 0 收看全部角色音视频(默认) 1 只看老师和助教
+     * Get <p>开启专注模式。 0 收看全部角色音视频(默认) 1 只看老师和助教</p> 
+     * @return InteractionMode <p>开启专注模式。 0 收看全部角色音视频(默认) 1 只看老师和助教</p>
      */
     public Long getInteractionMode() {
         return this.InteractionMode;
     }
 
     /**
-     * Set 开启专注模式。 0 收看全部角色音视频(默认) 1 只看老师和助教
-     * @param InteractionMode 开启专注模式。 0 收看全部角色音视频(默认) 1 只看老师和助教
+     * Set <p>开启专注模式。 0 收看全部角色音视频(默认) 1 只看老师和助教</p>
+     * @param InteractionMode <p>开启专注模式。 0 收看全部角色音视频(默认) 1 只看老师和助教</p>
      */
     public void setInteractionMode(Long InteractionMode) {
         this.InteractionMode = InteractionMode;
     }
 
     /**
-     * Get 横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型 
-     * @return VideoOrientation 横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型
+     * Get <p>横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型</p> 
+     * @return VideoOrientation <p>横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型</p>
      */
     public Long getVideoOrientation() {
         return this.VideoOrientation;
     }
 
     /**
-     * Set 横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型
-     * @param VideoOrientation 横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型
+     * Set <p>横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型</p>
+     * @param VideoOrientation <p>横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型</p>
      */
     public void setVideoOrientation(Long VideoOrientation) {
         this.VideoOrientation = VideoOrientation;
     }
 
     /**
-     * Get 开启课后评分。 0：不开启(默认)  1：开启 
-     * @return IsGradingRequiredPostClass 开启课后评分。 0：不开启(默认)  1：开启
+     * Get <p>开启课后评分。 0：不开启(默认)  1：开启</p> 
+     * @return IsGradingRequiredPostClass <p>开启课后评分。 0：不开启(默认)  1：开启</p>
      */
     public Long getIsGradingRequiredPostClass() {
         return this.IsGradingRequiredPostClass;
     }
 
     /**
-     * Set 开启课后评分。 0：不开启(默认)  1：开启
-     * @param IsGradingRequiredPostClass 开启课后评分。 0：不开启(默认)  1：开启
+     * Set <p>开启课后评分。 0：不开启(默认)  1：开启</p>
+     * @param IsGradingRequiredPostClass <p>开启课后评分。 0：不开启(默认)  1：开启</p>
      */
     public void setIsGradingRequiredPostClass(Long IsGradingRequiredPostClass) {
         this.IsGradingRequiredPostClass = IsGradingRequiredPostClass;
     }
 
     /**
-     * Get 课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放); 3 圆桌会议 注：大班课的布局(layout)只有三分屏 
-     * @return RoomType 课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放); 3 圆桌会议 注：大班课的布局(layout)只有三分屏
+     * Get <p>课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放); 3 圆桌会议 注：大班课的布局(layout)只有三分屏</p> 
+     * @return RoomType <p>课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放); 3 圆桌会议 注：大班课的布局(layout)只有三分屏</p>
      */
     public Long getRoomType() {
         return this.RoomType;
     }
 
     /**
-     * Set 课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放); 3 圆桌会议 注：大班课的布局(layout)只有三分屏
-     * @param RoomType 课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放); 3 圆桌会议 注：大班课的布局(layout)只有三分屏
+     * Set <p>课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放); 3 圆桌会议 注：大班课的布局(layout)只有三分屏</p>
+     * @param RoomType <p>课堂类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (预留参数，暂未开放); 3 圆桌会议 注：大班课的布局(layout)只有三分屏</p>
      */
     public void setRoomType(Long RoomType) {
         this.RoomType = RoomType;
     }
 
     /**
-     * Get 拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟 
-     * @return EndDelayTime 拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
+     * Get <p>拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟</p> 
+     * @return EndDelayTime <p>拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟</p>
      */
     public Long getEndDelayTime() {
         return this.EndDelayTime;
     }
 
     /**
-     * Set 拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
-     * @param EndDelayTime 拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟
+     * Set <p>拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟</p>
+     * @param EndDelayTime <p>拖堂时间：单位分钟，0为不限制(默认值), -1为不能拖堂，大于0为拖堂的时间，最大值120分钟</p>
      */
     public void setEndDelayTime(Long EndDelayTime) {
         this.EndDelayTime = EndDelayTime;
     }
 
     /**
-     * Get 直播类型：0 常规（默认）1 伪直播 2 RTMP推流直播 
-     * @return LiveType 直播类型：0 常规（默认）1 伪直播 2 RTMP推流直播
+     * Get <p>直播类型：0 常规（默认）1 伪直播 2 RTMP推流直播</p> 
+     * @return LiveType <p>直播类型：0 常规（默认）1 伪直播 2 RTMP推流直播</p>
      */
     public Long getLiveType() {
         return this.LiveType;
     }
 
     /**
-     * Set 直播类型：0 常规（默认）1 伪直播 2 RTMP推流直播
-     * @param LiveType 直播类型：0 常规（默认）1 伪直播 2 RTMP推流直播
+     * Set <p>直播类型：0 常规（默认）1 伪直播 2 RTMP推流直播</p>
+     * @param LiveType <p>直播类型：0 常规（默认）1 伪直播 2 RTMP推流直播</p>
      */
     public void setLiveType(Long LiveType) {
         this.LiveType = LiveType;
     }
 
     /**
-     * Get 伪直播回放链接 
-     * @return RecordLiveUrl 伪直播回放链接
+     * Get <p>伪直播链接。 支持的协议以及格式： 协议：HTTP、HTTPS、RTMP、HLS 。格式：FLV、MP3、MP4、MPEG-TS、MOV、MKV、M4A。视频编码：H.264、VP8。音频编码：AAC、OPUS。</p><p>注意：伪直播视频规格建议最高使用1080p 30fps，4k视频会有兼容性问题导致直播失败。</p> 
+     * @return RecordLiveUrl <p>伪直播链接。 支持的协议以及格式： 协议：HTTP、HTTPS、RTMP、HLS 。格式：FLV、MP3、MP4、MPEG-TS、MOV、MKV、M4A。视频编码：H.264、VP8。音频编码：AAC、OPUS。</p><p>注意：伪直播视频规格建议最高使用1080p 30fps，4k视频会有兼容性问题导致直播失败。</p>
      */
     public String getRecordLiveUrl() {
         return this.RecordLiveUrl;
     }
 
     /**
-     * Set 伪直播回放链接
-     * @param RecordLiveUrl 伪直播回放链接
+     * Set <p>伪直播链接。 支持的协议以及格式： 协议：HTTP、HTTPS、RTMP、HLS 。格式：FLV、MP3、MP4、MPEG-TS、MOV、MKV、M4A。视频编码：H.264、VP8。音频编码：AAC、OPUS。</p><p>注意：伪直播视频规格建议最高使用1080p 30fps，4k视频会有兼容性问题导致直播失败。</p>
+     * @param RecordLiveUrl <p>伪直播链接。 支持的协议以及格式： 协议：HTTP、HTTPS、RTMP、HLS 。格式：FLV、MP3、MP4、MPEG-TS、MOV、MKV、M4A。视频编码：H.264、VP8。音频编码：AAC、OPUS。</p><p>注意：伪直播视频规格建议最高使用1080p 30fps，4k视频会有兼容性问题导致直播失败。</p>
      */
     public void setRecordLiveUrl(String RecordLiveUrl) {
         this.RecordLiveUrl = RecordLiveUrl;
     }
 
     /**
-     * Get 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1或2的时候有效 
-     * @return EnableAutoStart 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1或2的时候有效
+     * Get <p>是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1或2的时候有效</p> 
+     * @return EnableAutoStart <p>是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1或2的时候有效</p>
      */
     public Long getEnableAutoStart() {
         return this.EnableAutoStart;
     }
 
     /**
-     * Set 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1或2的时候有效
-     * @param EnableAutoStart 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1或2的时候有效
+     * Set <p>是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1或2的时候有效</p>
+     * @param EnableAutoStart <p>是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1或2的时候有效</p>
      */
     public void setEnableAutoStart(Long EnableAutoStart) {
         this.EnableAutoStart = EnableAutoStart;
     }
 
     /**
-     * Get 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道 
-     * @return RecordBackground 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
+     * Get <p>录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道</p> 
+     * @return RecordBackground <p>录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道</p>
      */
     public String getRecordBackground() {
         return this.RecordBackground;
     }
 
     /**
-     * Set 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
-     * @param RecordBackground 录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道
+     * Set <p>录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道</p>
+     * @param RecordBackground <p>录制文件背景图片，支持png、jpg、jpeg、bmp格式，暂不支持透明通道</p>
      */
     public void setRecordBackground(String RecordBackground) {
         this.RecordBackground = RecordBackground;
     }
 
     /**
-     * Get 录制自定义场景。注意：仅recordlayout=9的时候此参数有效。需注意各类参数配置正确能够生效。不然会造成录制失败，失败后无法补救。数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。自定义场景参数的含义。如下：     scene：自定义js/css对应的场景值。如scene=recordScene，会加载 recordScene 场景对应的 js/css，这样就可以自定义录制页面的元素。     lng：录制页面对应的语种。如lng=en，则录制界面为en。（枚举值：en,zh，zh-TW，jp，ar，kr，vi）     customToken：录制页面中涉及客户自己的服务需要鉴权时进行配置。一般情况下，无需配置。 
-     * @return RecordScene 录制自定义场景。注意：仅recordlayout=9的时候此参数有效。需注意各类参数配置正确能够生效。不然会造成录制失败，失败后无法补救。数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。自定义场景参数的含义。如下：     scene：自定义js/css对应的场景值。如scene=recordScene，会加载 recordScene 场景对应的 js/css，这样就可以自定义录制页面的元素。     lng：录制页面对应的语种。如lng=en，则录制界面为en。（枚举值：en,zh，zh-TW，jp，ar，kr，vi）     customToken：录制页面中涉及客户自己的服务需要鉴权时进行配置。一般情况下，无需配置。
+     * Get <p>录制自定义场景。注意：仅recordlayout=9的时候此参数有效。需注意各类参数配置正确能够生效。不然会造成录制失败，失败后无法补救。数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。自定义场景参数的含义。如下：     scene：自定义js/css对应的场景值。如scene=recordScene，会加载 recordScene 场景对应的 js/css，这样就可以自定义录制页面的元素。     lng：录制页面对应的语种。如lng=en，则录制界面为en。（枚举值：en,zh，zh-TW，jp，ar，kr，vi）     customToken：录制页面中涉及客户自己的服务需要鉴权时进行配置。一般情况下，无需配置。</p> 
+     * @return RecordScene <p>录制自定义场景。注意：仅recordlayout=9的时候此参数有效。需注意各类参数配置正确能够生效。不然会造成录制失败，失败后无法补救。数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。自定义场景参数的含义。如下：     scene：自定义js/css对应的场景值。如scene=recordScene，会加载 recordScene 场景对应的 js/css，这样就可以自定义录制页面的元素。     lng：录制页面对应的语种。如lng=en，则录制界面为en。（枚举值：en,zh，zh-TW，jp，ar，kr，vi）     customToken：录制页面中涉及客户自己的服务需要鉴权时进行配置。一般情况下，无需配置。</p>
      */
     public String getRecordScene() {
         return this.RecordScene;
     }
 
     /**
-     * Set 录制自定义场景。注意：仅recordlayout=9的时候此参数有效。需注意各类参数配置正确能够生效。不然会造成录制失败，失败后无法补救。数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。自定义场景参数的含义。如下：     scene：自定义js/css对应的场景值。如scene=recordScene，会加载 recordScene 场景对应的 js/css，这样就可以自定义录制页面的元素。     lng：录制页面对应的语种。如lng=en，则录制界面为en。（枚举值：en,zh，zh-TW，jp，ar，kr，vi）     customToken：录制页面中涉及客户自己的服务需要鉴权时进行配置。一般情况下，无需配置。
-     * @param RecordScene 录制自定义场景。注意：仅recordlayout=9的时候此参数有效。需注意各类参数配置正确能够生效。不然会造成录制失败，失败后无法补救。数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。自定义场景参数的含义。如下：     scene：自定义js/css对应的场景值。如scene=recordScene，会加载 recordScene 场景对应的 js/css，这样就可以自定义录制页面的元素。     lng：录制页面对应的语种。如lng=en，则录制界面为en。（枚举值：en,zh，zh-TW，jp，ar，kr，vi）     customToken：录制页面中涉及客户自己的服务需要鉴权时进行配置。一般情况下，无需配置。
+     * Set <p>录制自定义场景。注意：仅recordlayout=9的时候此参数有效。需注意各类参数配置正确能够生效。不然会造成录制失败，失败后无法补救。数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。自定义场景参数的含义。如下：     scene：自定义js/css对应的场景值。如scene=recordScene，会加载 recordScene 场景对应的 js/css，这样就可以自定义录制页面的元素。     lng：录制页面对应的语种。如lng=en，则录制界面为en。（枚举值：en,zh，zh-TW，jp，ar，kr，vi）     customToken：录制页面中涉及客户自己的服务需要鉴权时进行配置。一般情况下，无需配置。</p>
+     * @param RecordScene <p>录制自定义场景。注意：仅recordlayout=9的时候此参数有效。需注意各类参数配置正确能够生效。不然会造成录制失败，失败后无法补救。数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。自定义场景参数的含义。如下：     scene：自定义js/css对应的场景值。如scene=recordScene，会加载 recordScene 场景对应的 js/css，这样就可以自定义录制页面的元素。     lng：录制页面对应的语种。如lng=en，则录制界面为en。（枚举值：en,zh，zh-TW，jp，ar，kr，vi）     customToken：录制页面中涉及客户自己的服务需要鉴权时进行配置。一般情况下，无需配置。</p>
      */
     public void setRecordScene(String RecordScene) {
         this.RecordScene = RecordScene;
     }
 
     /**
-     * Get 录制自定义语言，仅recordlayout=9的时候此参数有效 
-     * @return RecordLang 录制自定义语言，仅recordlayout=9的时候此参数有效
+     * Get <p>录制自定义语言，仅recordlayout=9的时候此参数有效</p> 
+     * @return RecordLang <p>录制自定义语言，仅recordlayout=9的时候此参数有效</p>
      * @deprecated
      */
     @Deprecated
@@ -725,8 +701,8 @@ public class RoomInfo extends AbstractModel {
     }
 
     /**
-     * Set 录制自定义语言，仅recordlayout=9的时候此参数有效
-     * @param RecordLang 录制自定义语言，仅recordlayout=9的时候此参数有效
+     * Set <p>录制自定义语言，仅recordlayout=9的时候此参数有效</p>
+     * @param RecordLang <p>录制自定义语言，仅recordlayout=9的时候此参数有效</p>
      * @deprecated
      */
     @Deprecated
@@ -735,96 +711,80 @@ public class RoomInfo extends AbstractModel {
     }
 
     /**
-     * Get 录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0 
-     * @return RecordStream 录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0
+     * Get <p>录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0</p> 
+     * @return RecordStream <p>录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0</p>
      */
     public Long getRecordStream() {
         return this.RecordStream;
     }
 
     /**
-     * Set 录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0
-     * @param RecordStream 录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0
+     * Set <p>录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0</p>
+     * @param RecordStream <p>录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0</p>
      */
     public void setRecordStream(Long RecordStream) {
         this.RecordStream = RecordStream;
     }
 
     /**
-     * Get 板书截图生成类型。0 不生成板书（默认）；1 全量模式；2 单页去重模式 
-     * @return WhiteBoardSnapshotMode 板书截图生成类型。0 不生成板书（默认）；1 全量模式；2 单页去重模式
+     * Get <p>板书截图生成类型。0 不生成板书（默认）；1 全量模式；2 单页去重模式</p> 
+     * @return WhiteBoardSnapshotMode <p>板书截图生成类型。0 不生成板书（默认）；1 全量模式；2 单页去重模式</p>
      */
     public Long getWhiteBoardSnapshotMode() {
         return this.WhiteBoardSnapshotMode;
     }
 
     /**
-     * Set 板书截图生成类型。0 不生成板书（默认）；1 全量模式；2 单页去重模式
-     * @param WhiteBoardSnapshotMode 板书截图生成类型。0 不生成板书（默认）；1 全量模式；2 单页去重模式
+     * Set <p>板书截图生成类型。0 不生成板书（默认）；1 全量模式；2 单页去重模式</p>
+     * @param WhiteBoardSnapshotMode <p>板书截图生成类型。0 不生成板书（默认）；1 全量模式；2 单页去重模式</p>
      */
     public void setWhiteBoardSnapshotMode(Long WhiteBoardSnapshotMode) {
         this.WhiteBoardSnapshotMode = WhiteBoardSnapshotMode;
     }
 
     /**
-     * Get 字幕转写功能开关。可以有以下取值：
-0 不开启字幕转写功能（默认值）
-1 自动转写模式：上课自动开启，下课自动停止
-2 手动转写模式：支持老师或者助教通过客户端API手动开启/关闭字幕转写
-设置0和1时客户端均不展示手动开关，设置2时老师或者助教端展示字幕转写开关 
-     * @return SubtitlesTranscription 字幕转写功能开关。可以有以下取值：
-0 不开启字幕转写功能（默认值）
-1 自动转写模式：上课自动开启，下课自动停止
-2 手动转写模式：支持老师或者助教通过客户端API手动开启/关闭字幕转写
-设置0和1时客户端均不展示手动开关，设置2时老师或者助教端展示字幕转写开关
+     * Get <p>字幕转写功能开关。可以有以下取值：<br>0 不开启字幕转写功能（默认值）<br>1 自动转写模式：上课自动开启，下课自动停止<br>2 手动转写模式：支持老师或者助教通过客户端API手动开启/关闭字幕转写<br>设置0和1时客户端均不展示手动开关，设置2时老师或者助教端展示字幕转写开关</p> 
+     * @return SubtitlesTranscription <p>字幕转写功能开关。可以有以下取值：<br>0 不开启字幕转写功能（默认值）<br>1 自动转写模式：上课自动开启，下课自动停止<br>2 手动转写模式：支持老师或者助教通过客户端API手动开启/关闭字幕转写<br>设置0和1时客户端均不展示手动开关，设置2时老师或者助教端展示字幕转写开关</p>
      */
     public Long getSubtitlesTranscription() {
         return this.SubtitlesTranscription;
     }
 
     /**
-     * Set 字幕转写功能开关。可以有以下取值：
-0 不开启字幕转写功能（默认值）
-1 自动转写模式：上课自动开启，下课自动停止
-2 手动转写模式：支持老师或者助教通过客户端API手动开启/关闭字幕转写
-设置0和1时客户端均不展示手动开关，设置2时老师或者助教端展示字幕转写开关
-     * @param SubtitlesTranscription 字幕转写功能开关。可以有以下取值：
-0 不开启字幕转写功能（默认值）
-1 自动转写模式：上课自动开启，下课自动停止
-2 手动转写模式：支持老师或者助教通过客户端API手动开启/关闭字幕转写
-设置0和1时客户端均不展示手动开关，设置2时老师或者助教端展示字幕转写开关
+     * Set <p>字幕转写功能开关。可以有以下取值：<br>0 不开启字幕转写功能（默认值）<br>1 自动转写模式：上课自动开启，下课自动停止<br>2 手动转写模式：支持老师或者助教通过客户端API手动开启/关闭字幕转写<br>设置0和1时客户端均不展示手动开关，设置2时老师或者助教端展示字幕转写开关</p>
+     * @param SubtitlesTranscription <p>字幕转写功能开关。可以有以下取值：<br>0 不开启字幕转写功能（默认值）<br>1 自动转写模式：上课自动开启，下课自动停止<br>2 手动转写模式：支持老师或者助教通过客户端API手动开启/关闭字幕转写<br>设置0和1时客户端均不展示手动开关，设置2时老师或者助教端展示字幕转写开关</p>
      */
     public void setSubtitlesTranscription(Long SubtitlesTranscription) {
         this.SubtitlesTranscription = SubtitlesTranscription;
     }
 
     /**
-     * Get 嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效 
-     * @return Guests 嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效
+     * Get <p>嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效</p> 
+     * @return Guests <p>嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效</p>
      */
     public String [] getGuests() {
         return this.Guests;
     }
 
     /**
-     * Set 嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效
-     * @param Guests 嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效
+     * Set <p>嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效</p>
+     * @param Guests <p>嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效</p>
      */
     public void setGuests(String [] Guests) {
         this.Guests = Guests;
     }
 
     /**
-     * Get 录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效 
-     * @return RecordMerge 录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效
+     * Get <p>录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效</p> 
+     * @return RecordMerge <p>录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效</p>
      */
     public Long getRecordMerge() {
         return this.RecordMerge;
     }
 
     /**
-     * Set 录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效
-     * @param RecordMerge 录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效
+     * Set <p>录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效</p>
+     * @param RecordMerge <p>录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效</p>
      */
     public void setRecordMerge(Long RecordMerge) {
         this.RecordMerge = RecordMerge;

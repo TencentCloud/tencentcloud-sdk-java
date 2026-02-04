@@ -105,6 +105,17 @@ public class ApmClient extends AbstractClient{
     }
 
     /**
+     *查询用户所有漏洞信息
+     * @param req DescribeApmAllVulCountRequest
+     * @return DescribeApmAllVulCountResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApmAllVulCountResponse DescribeApmAllVulCount(DescribeApmAllVulCountRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeApmAllVulCount", DescribeApmAllVulCountResponse.class);
+    }
+
+    /**
      *查询应用配置接口
      * @param req DescribeApmApplicationConfigRequest
      * @return DescribeApmApplicationConfigResponse
@@ -168,6 +179,28 @@ public class ApmClient extends AbstractClient{
     public DescribeApmServiceMetricResponse DescribeApmServiceMetric(DescribeApmServiceMetricRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeApmServiceMetric", DescribeApmServiceMetricResponse.class);
+    }
+
+    /**
+     *查询漏洞指标
+     * @param req DescribeApmVulnerabilityCountRequest
+     * @return DescribeApmVulnerabilityCountResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApmVulnerabilityCountResponse DescribeApmVulnerabilityCount(DescribeApmVulnerabilityCountRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeApmVulnerabilityCount", DescribeApmVulnerabilityCountResponse.class);
+    }
+
+    /**
+     *查询漏洞详情
+     * @param req DescribeApmVulnerabilityDetailRequest
+     * @return DescribeApmVulnerabilityDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApmVulnerabilityDetailResponse DescribeApmVulnerabilityDetail(DescribeApmVulnerabilityDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeApmVulnerabilityDetail", DescribeApmVulnerabilityDetailResponse.class);
     }
 
     /**
@@ -244,6 +277,17 @@ public class ApmClient extends AbstractClient{
     public DescribeMetricRecordsResponse DescribeMetricRecords(DescribeMetricRecordsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeMetricRecords", DescribeMetricRecordsResponse.class);
+    }
+
+    /**
+     *查询用户所有漏洞信息
+     * @param req DescribeOPRAllVulCountRequest
+     * @return DescribeOPRAllVulCountResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOPRAllVulCountResponse DescribeOPRAllVulCount(DescribeOPRAllVulCountRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeOPRAllVulCount", DescribeOPRAllVulCountResponse.class);
     }
 
     /**

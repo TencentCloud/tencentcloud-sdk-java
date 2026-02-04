@@ -193,6 +193,13 @@ POSTPAID_BY_HOUR 按量计费
     private CodeRepoConfig [] CodeRepos;
 
     /**
+    * 网络暴露配置
+    */
+    @SerializedName("ExposeNetworkConfig")
+    @Expose
+    private ExposeNetworkConfig ExposeNetworkConfig;
+
+    /**
      * Get 训练任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头 
      * @return Name 训练任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
      */
@@ -580,6 +587,22 @@ POSTPAID_BY_HOUR 按量计费
         this.CodeRepos = CodeRepos;
     }
 
+    /**
+     * Get 网络暴露配置 
+     * @return ExposeNetworkConfig 网络暴露配置
+     */
+    public ExposeNetworkConfig getExposeNetworkConfig() {
+        return this.ExposeNetworkConfig;
+    }
+
+    /**
+     * Set 网络暴露配置
+     * @param ExposeNetworkConfig 网络暴露配置
+     */
+    public void setExposeNetworkConfig(ExposeNetworkConfig ExposeNetworkConfig) {
+        this.ExposeNetworkConfig = ExposeNetworkConfig;
+    }
+
     public CreateTrainingTaskRequest() {
     }
 
@@ -672,6 +695,9 @@ POSTPAID_BY_HOUR 按量计费
                 this.CodeRepos[i] = new CodeRepoConfig(source.CodeRepos[i]);
             }
         }
+        if (source.ExposeNetworkConfig != null) {
+            this.ExposeNetworkConfig = new ExposeNetworkConfig(source.ExposeNetworkConfig);
+        }
     }
 
 
@@ -703,6 +729,7 @@ POSTPAID_BY_HOUR 按量计费
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
         this.setParamObj(map, prefix + "EncodedStartCmdInfo.", this.EncodedStartCmdInfo);
         this.setParamArrayObj(map, prefix + "CodeRepos.", this.CodeRepos);
+        this.setParamObj(map, prefix + "ExposeNetworkConfig.", this.ExposeNetworkConfig);
 
     }
 }

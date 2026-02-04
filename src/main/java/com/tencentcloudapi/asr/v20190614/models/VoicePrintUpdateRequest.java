@@ -24,118 +24,141 @@ import java.util.HashMap;
 public class VoicePrintUpdateRequest extends AbstractModel {
 
     /**
-    * 音频格式 0: pcm, 1: wav
+    * <p>音频格式 0: pcm, 1: wav</p>
     */
     @SerializedName("VoiceFormat")
     @Expose
     private Long VoiceFormat;
 
     /**
-    * 音频采样率 目前仅支持16000 单位Hz
+    * <p>音频采样率 目前仅支持16000 单位Hz</p>
     */
     @SerializedName("SampleRate")
     @Expose
     private Long SampleRate;
 
     /**
-    * 说话人id， 说话人唯一标识
+    * <p>说话人id， 说话人唯一标识</p>
     */
     @SerializedName("VoicePrintId")
     @Expose
     private String VoicePrintId;
 
     /**
-    * 音频数据, base64 编码, 音频时长不能超过30s，数据大小不超过2M	
+    * <p>音频数据, base64 编码, 音频时长不能超过30s，数据大小不超过2M</p>
     */
     @SerializedName("Data")
     @Expose
     private String Data;
 
     /**
-    * 说话人昵称  不超过32字节
+    * <p>说话人昵称  不超过32字节</p>
     */
     @SerializedName("SpeakerNick")
     @Expose
     private String SpeakerNick;
 
     /**
-     * Get 音频格式 0: pcm, 1: wav 
-     * @return VoiceFormat 音频格式 0: pcm, 1: wav
+    * <p>声纹cos url 注意:仅支持腾讯云cos url 地址</p>
+    */
+    @SerializedName("AudioUrl")
+    @Expose
+    private String AudioUrl;
+
+    /**
+     * Get <p>音频格式 0: pcm, 1: wav</p> 
+     * @return VoiceFormat <p>音频格式 0: pcm, 1: wav</p>
      */
     public Long getVoiceFormat() {
         return this.VoiceFormat;
     }
 
     /**
-     * Set 音频格式 0: pcm, 1: wav
-     * @param VoiceFormat 音频格式 0: pcm, 1: wav
+     * Set <p>音频格式 0: pcm, 1: wav</p>
+     * @param VoiceFormat <p>音频格式 0: pcm, 1: wav</p>
      */
     public void setVoiceFormat(Long VoiceFormat) {
         this.VoiceFormat = VoiceFormat;
     }
 
     /**
-     * Get 音频采样率 目前仅支持16000 单位Hz 
-     * @return SampleRate 音频采样率 目前仅支持16000 单位Hz
+     * Get <p>音频采样率 目前仅支持16000 单位Hz</p> 
+     * @return SampleRate <p>音频采样率 目前仅支持16000 单位Hz</p>
      */
     public Long getSampleRate() {
         return this.SampleRate;
     }
 
     /**
-     * Set 音频采样率 目前仅支持16000 单位Hz
-     * @param SampleRate 音频采样率 目前仅支持16000 单位Hz
+     * Set <p>音频采样率 目前仅支持16000 单位Hz</p>
+     * @param SampleRate <p>音频采样率 目前仅支持16000 单位Hz</p>
      */
     public void setSampleRate(Long SampleRate) {
         this.SampleRate = SampleRate;
     }
 
     /**
-     * Get 说话人id， 说话人唯一标识 
-     * @return VoicePrintId 说话人id， 说话人唯一标识
+     * Get <p>说话人id， 说话人唯一标识</p> 
+     * @return VoicePrintId <p>说话人id， 说话人唯一标识</p>
      */
     public String getVoicePrintId() {
         return this.VoicePrintId;
     }
 
     /**
-     * Set 说话人id， 说话人唯一标识
-     * @param VoicePrintId 说话人id， 说话人唯一标识
+     * Set <p>说话人id， 说话人唯一标识</p>
+     * @param VoicePrintId <p>说话人id， 说话人唯一标识</p>
      */
     public void setVoicePrintId(String VoicePrintId) {
         this.VoicePrintId = VoicePrintId;
     }
 
     /**
-     * Get 音频数据, base64 编码, 音频时长不能超过30s，数据大小不超过2M	 
-     * @return Data 音频数据, base64 编码, 音频时长不能超过30s，数据大小不超过2M	
+     * Get <p>音频数据, base64 编码, 音频时长不能超过30s，数据大小不超过2M</p> 
+     * @return Data <p>音频数据, base64 编码, 音频时长不能超过30s，数据大小不超过2M</p>
      */
     public String getData() {
         return this.Data;
     }
 
     /**
-     * Set 音频数据, base64 编码, 音频时长不能超过30s，数据大小不超过2M	
-     * @param Data 音频数据, base64 编码, 音频时长不能超过30s，数据大小不超过2M	
+     * Set <p>音频数据, base64 编码, 音频时长不能超过30s，数据大小不超过2M</p>
+     * @param Data <p>音频数据, base64 编码, 音频时长不能超过30s，数据大小不超过2M</p>
      */
     public void setData(String Data) {
         this.Data = Data;
     }
 
     /**
-     * Get 说话人昵称  不超过32字节 
-     * @return SpeakerNick 说话人昵称  不超过32字节
+     * Get <p>说话人昵称  不超过32字节</p> 
+     * @return SpeakerNick <p>说话人昵称  不超过32字节</p>
      */
     public String getSpeakerNick() {
         return this.SpeakerNick;
     }
 
     /**
-     * Set 说话人昵称  不超过32字节
-     * @param SpeakerNick 说话人昵称  不超过32字节
+     * Set <p>说话人昵称  不超过32字节</p>
+     * @param SpeakerNick <p>说话人昵称  不超过32字节</p>
      */
     public void setSpeakerNick(String SpeakerNick) {
         this.SpeakerNick = SpeakerNick;
+    }
+
+    /**
+     * Get <p>声纹cos url 注意:仅支持腾讯云cos url 地址</p> 
+     * @return AudioUrl <p>声纹cos url 注意:仅支持腾讯云cos url 地址</p>
+     */
+    public String getAudioUrl() {
+        return this.AudioUrl;
+    }
+
+    /**
+     * Set <p>声纹cos url 注意:仅支持腾讯云cos url 地址</p>
+     * @param AudioUrl <p>声纹cos url 注意:仅支持腾讯云cos url 地址</p>
+     */
+    public void setAudioUrl(String AudioUrl) {
+        this.AudioUrl = AudioUrl;
     }
 
     public VoicePrintUpdateRequest() {
@@ -161,6 +184,9 @@ public class VoicePrintUpdateRequest extends AbstractModel {
         if (source.SpeakerNick != null) {
             this.SpeakerNick = new String(source.SpeakerNick);
         }
+        if (source.AudioUrl != null) {
+            this.AudioUrl = new String(source.AudioUrl);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class VoicePrintUpdateRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "VoicePrintId", this.VoicePrintId);
         this.setParamSimple(map, prefix + "Data", this.Data);
         this.setParamSimple(map, prefix + "SpeakerNick", this.SpeakerNick);
+        this.setParamSimple(map, prefix + "AudioUrl", this.AudioUrl);
 
     }
 }

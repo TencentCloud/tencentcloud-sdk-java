@@ -80,6 +80,13 @@ public class ModifyClusterAttributeRequest extends AbstractModel {
     private ClusterProperty ClusterProperty;
 
     /**
+    * 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行
+    */
+    @SerializedName("IsHighAvailability")
+    @Expose
+    private Boolean IsHighAvailability;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -207,6 +214,22 @@ public class ModifyClusterAttributeRequest extends AbstractModel {
         this.ClusterProperty = ClusterProperty;
     }
 
+    /**
+     * Get 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行 
+     * @return IsHighAvailability 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行
+     */
+    public Boolean getIsHighAvailability() {
+        return this.IsHighAvailability;
+    }
+
+    /**
+     * Set 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行
+     * @param IsHighAvailability 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行
+     */
+    public void setIsHighAvailability(Boolean IsHighAvailability) {
+        this.IsHighAvailability = IsHighAvailability;
+    }
+
     public ModifyClusterAttributeRequest() {
     }
 
@@ -239,6 +262,9 @@ public class ModifyClusterAttributeRequest extends AbstractModel {
         if (source.ClusterProperty != null) {
             this.ClusterProperty = new ClusterProperty(source.ClusterProperty);
         }
+        if (source.IsHighAvailability != null) {
+            this.IsHighAvailability = new Boolean(source.IsHighAvailability);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class ModifyClusterAttributeRequest extends AbstractModel {
         this.setParamObj(map, prefix + "AutoUpgradeClusterLevel.", this.AutoUpgradeClusterLevel);
         this.setParamSimple(map, prefix + "QGPUShareEnable", this.QGPUShareEnable);
         this.setParamObj(map, prefix + "ClusterProperty.", this.ClusterProperty);
+        this.setParamSimple(map, prefix + "IsHighAvailability", this.IsHighAvailability);
 
     }
 }

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeTargetGroupListResponse extends AbstractModel {
 
     /**
-    * 显示的结果数量。
+    * <p>显示的结果数量。</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 显示的目标组信息集合。
+    * <p>显示的目标组信息集合。</p>
     */
     @SerializedName("TargetGroupSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeTargetGroupListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 显示的结果数量。 
-     * @return TotalCount 显示的结果数量。
+     * Get <p>显示的结果数量。</p> 
+     * @return TotalCount <p>显示的结果数量。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 显示的结果数量。
-     * @param TotalCount 显示的结果数量。
+     * Set <p>显示的结果数量。</p>
+     * @param TotalCount <p>显示的结果数量。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 显示的目标组信息集合。 
-     * @return TargetGroupSet 显示的目标组信息集合。
+     * Get <p>显示的目标组信息集合。</p> 
+     * @return TargetGroupSet <p>显示的目标组信息集合。</p>
      */
     public TargetGroupInfo [] getTargetGroupSet() {
         return this.TargetGroupSet;
     }
 
     /**
-     * Set 显示的目标组信息集合。
-     * @param TargetGroupSet 显示的目标组信息集合。
+     * Set <p>显示的目标组信息集合。</p>
+     * @param TargetGroupSet <p>显示的目标组信息集合。</p>
      */
     public void setTargetGroupSet(TargetGroupInfo [] TargetGroupSet) {
         this.TargetGroupSet = TargetGroupSet;

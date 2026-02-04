@@ -336,6 +336,13 @@ public class TrainingTaskDetail extends AbstractModel {
     private CodeRepoConfig [] CodeRepos;
 
     /**
+    * 暴露网络配置
+    */
+    @SerializedName("ExposeNetworkConfig")
+    @Expose
+    private ExposeNetworkConfig ExposeNetworkConfig;
+
+    /**
      * Get 训练任务ID 
      * @return Id 训练任务ID
      */
@@ -1091,6 +1098,22 @@ public class TrainingTaskDetail extends AbstractModel {
         this.CodeRepos = CodeRepos;
     }
 
+    /**
+     * Get 暴露网络配置 
+     * @return ExposeNetworkConfig 暴露网络配置
+     */
+    public ExposeNetworkConfig getExposeNetworkConfig() {
+        return this.ExposeNetworkConfig;
+    }
+
+    /**
+     * Set 暴露网络配置
+     * @param ExposeNetworkConfig 暴露网络配置
+     */
+    public void setExposeNetworkConfig(ExposeNetworkConfig ExposeNetworkConfig) {
+        this.ExposeNetworkConfig = ExposeNetworkConfig;
+    }
+
     public TrainingTaskDetail() {
     }
 
@@ -1234,6 +1257,9 @@ public class TrainingTaskDetail extends AbstractModel {
                 this.CodeRepos[i] = new CodeRepoConfig(source.CodeRepos[i]);
             }
         }
+        if (source.ExposeNetworkConfig != null) {
+            this.ExposeNetworkConfig = new ExposeNetworkConfig(source.ExposeNetworkConfig);
+        }
     }
 
 
@@ -1282,6 +1308,7 @@ public class TrainingTaskDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
         this.setParamArrayObj(map, prefix + "CodeRepos.", this.CodeRepos);
+        this.setParamObj(map, prefix + "ExposeNetworkConfig.", this.ExposeNetworkConfig);
 
     }
 }

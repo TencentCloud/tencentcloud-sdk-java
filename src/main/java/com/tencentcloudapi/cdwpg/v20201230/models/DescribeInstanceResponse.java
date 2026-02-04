@@ -31,6 +31,13 @@ public class DescribeInstanceResponse extends AbstractModel {
     private InstanceInfo InstanceInfo;
 
     /**
+    * 错误信息
+    */
+    @SerializedName("ErrorMsg")
+    @Expose
+    private String ErrorMsg;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +58,22 @@ public class DescribeInstanceResponse extends AbstractModel {
      */
     public void setInstanceInfo(InstanceInfo InstanceInfo) {
         this.InstanceInfo = InstanceInfo;
+    }
+
+    /**
+     * Get 错误信息 
+     * @return ErrorMsg 错误信息
+     */
+    public String getErrorMsg() {
+        return this.ErrorMsg;
+    }
+
+    /**
+     * Set 错误信息
+     * @param ErrorMsg 错误信息
+     */
+    public void setErrorMsg(String ErrorMsg) {
+        this.ErrorMsg = ErrorMsg;
     }
 
     /**
@@ -80,6 +103,9 @@ public class DescribeInstanceResponse extends AbstractModel {
         if (source.InstanceInfo != null) {
             this.InstanceInfo = new InstanceInfo(source.InstanceInfo);
         }
+        if (source.ErrorMsg != null) {
+            this.ErrorMsg = new String(source.ErrorMsg);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -91,6 +117,7 @@ public class DescribeInstanceResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "InstanceInfo.", this.InstanceInfo);
+        this.setParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

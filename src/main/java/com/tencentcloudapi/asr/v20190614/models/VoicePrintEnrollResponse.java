@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class VoicePrintEnrollResponse extends AbstractModel {
 
     /**
-    * 说话人基本数据
+    * <p>说话人基本数据</p>
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class VoicePrintEnrollResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 说话人基本数据 
-     * @return Data 说话人基本数据
+     * Get <p>说话人基本数据</p> 
+     * @return Data <p>说话人基本数据</p>
      */
     public VoicePrintBaseData getData() {
         return this.Data;
     }
 
     /**
-     * Set 说话人基本数据
-     * @param Data 说话人基本数据
+     * Set <p>说话人基本数据</p>
+     * @param Data <p>说话人基本数据</p>
      */
     public void setData(VoicePrintBaseData Data) {
         this.Data = Data;

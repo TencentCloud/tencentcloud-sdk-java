@@ -46,35 +46,35 @@ public class CreateAccelerationDomainRequest extends AbstractModel {
 
     /**
     * 回源协议，取值有：
-<li>FOLLOW: 协议跟随；</li>
-<li>HTTP: HTTP协议回源；</li>
-<li>HTTPS: HTTPS协议回源。</li>
-<li>不填默认为： FOLLOW。</li>
+<li>FOLLOW：协议跟随；</li>
+<li>HTTP：HTTP 协议回源；</li>
+<li>HTTPS：HTTPS 协议回源。</li>不填默认为：FOLLOW。
     */
     @SerializedName("OriginProtocol")
     @Expose
     private String OriginProtocol;
 
     /**
-    * HTTP回源端口，取值为1-65535，当OriginProtocol=FOLLOW/HTTP时生效, 不填默认为80。
+    * HTTP 回源端口，默认值80，取值：1～65535。
+当 OriginProtocol = FOLLOW 或 HTTP 时生效。
     */
     @SerializedName("HttpOriginPort")
     @Expose
     private Long HttpOriginPort;
 
     /**
-    * HTTPS回源端口，取值为1-65535，当OriginProtocol=FOLLOW/HTTPS时生效，不填默认为443。
+    * HTTPS 回源端口，默认值443，取值：1～65535。
+当 OriginProtocol = FOLLOW 或 HTTPS 时生效。
     */
     @SerializedName("HttpsOriginPort")
     @Expose
     private Long HttpsOriginPort;
 
     /**
-    * IPv6状态，取值有：
-<li>follow：遵循站点IPv6配置；</li>
+    * IPv6 状态，取值有：
+<li>follow：遵循站点 IPv6 配置；</li>
 <li>on：开启状态；</li>
-<li>off：关闭状态。</li>
-<li>不填默认为：follow。</li>
+<li>off：关闭状态。</li>不填默认为：follow。
     */
     @SerializedName("IPv6Status")
     @Expose
@@ -130,15 +130,13 @@ public class CreateAccelerationDomainRequest extends AbstractModel {
 
     /**
      * Get 回源协议，取值有：
-<li>FOLLOW: 协议跟随；</li>
-<li>HTTP: HTTP协议回源；</li>
-<li>HTTPS: HTTPS协议回源。</li>
-<li>不填默认为： FOLLOW。</li> 
+<li>FOLLOW：协议跟随；</li>
+<li>HTTP：HTTP 协议回源；</li>
+<li>HTTPS：HTTPS 协议回源。</li>不填默认为：FOLLOW。 
      * @return OriginProtocol 回源协议，取值有：
-<li>FOLLOW: 协议跟随；</li>
-<li>HTTP: HTTP协议回源；</li>
-<li>HTTPS: HTTPS协议回源。</li>
-<li>不填默认为： FOLLOW。</li>
+<li>FOLLOW：协议跟随；</li>
+<li>HTTP：HTTP 协议回源；</li>
+<li>HTTPS：HTTPS 协议回源。</li>不填默认为：FOLLOW。
      */
     public String getOriginProtocol() {
         return this.OriginProtocol;
@@ -146,79 +144,81 @@ public class CreateAccelerationDomainRequest extends AbstractModel {
 
     /**
      * Set 回源协议，取值有：
-<li>FOLLOW: 协议跟随；</li>
-<li>HTTP: HTTP协议回源；</li>
-<li>HTTPS: HTTPS协议回源。</li>
-<li>不填默认为： FOLLOW。</li>
+<li>FOLLOW：协议跟随；</li>
+<li>HTTP：HTTP 协议回源；</li>
+<li>HTTPS：HTTPS 协议回源。</li>不填默认为：FOLLOW。
      * @param OriginProtocol 回源协议，取值有：
-<li>FOLLOW: 协议跟随；</li>
-<li>HTTP: HTTP协议回源；</li>
-<li>HTTPS: HTTPS协议回源。</li>
-<li>不填默认为： FOLLOW。</li>
+<li>FOLLOW：协议跟随；</li>
+<li>HTTP：HTTP 协议回源；</li>
+<li>HTTPS：HTTPS 协议回源。</li>不填默认为：FOLLOW。
      */
     public void setOriginProtocol(String OriginProtocol) {
         this.OriginProtocol = OriginProtocol;
     }
 
     /**
-     * Get HTTP回源端口，取值为1-65535，当OriginProtocol=FOLLOW/HTTP时生效, 不填默认为80。 
-     * @return HttpOriginPort HTTP回源端口，取值为1-65535，当OriginProtocol=FOLLOW/HTTP时生效, 不填默认为80。
+     * Get HTTP 回源端口，默认值80，取值：1～65535。
+当 OriginProtocol = FOLLOW 或 HTTP 时生效。 
+     * @return HttpOriginPort HTTP 回源端口，默认值80，取值：1～65535。
+当 OriginProtocol = FOLLOW 或 HTTP 时生效。
      */
     public Long getHttpOriginPort() {
         return this.HttpOriginPort;
     }
 
     /**
-     * Set HTTP回源端口，取值为1-65535，当OriginProtocol=FOLLOW/HTTP时生效, 不填默认为80。
-     * @param HttpOriginPort HTTP回源端口，取值为1-65535，当OriginProtocol=FOLLOW/HTTP时生效, 不填默认为80。
+     * Set HTTP 回源端口，默认值80，取值：1～65535。
+当 OriginProtocol = FOLLOW 或 HTTP 时生效。
+     * @param HttpOriginPort HTTP 回源端口，默认值80，取值：1～65535。
+当 OriginProtocol = FOLLOW 或 HTTP 时生效。
      */
     public void setHttpOriginPort(Long HttpOriginPort) {
         this.HttpOriginPort = HttpOriginPort;
     }
 
     /**
-     * Get HTTPS回源端口，取值为1-65535，当OriginProtocol=FOLLOW/HTTPS时生效，不填默认为443。 
-     * @return HttpsOriginPort HTTPS回源端口，取值为1-65535，当OriginProtocol=FOLLOW/HTTPS时生效，不填默认为443。
+     * Get HTTPS 回源端口，默认值443，取值：1～65535。
+当 OriginProtocol = FOLLOW 或 HTTPS 时生效。 
+     * @return HttpsOriginPort HTTPS 回源端口，默认值443，取值：1～65535。
+当 OriginProtocol = FOLLOW 或 HTTPS 时生效。
      */
     public Long getHttpsOriginPort() {
         return this.HttpsOriginPort;
     }
 
     /**
-     * Set HTTPS回源端口，取值为1-65535，当OriginProtocol=FOLLOW/HTTPS时生效，不填默认为443。
-     * @param HttpsOriginPort HTTPS回源端口，取值为1-65535，当OriginProtocol=FOLLOW/HTTPS时生效，不填默认为443。
+     * Set HTTPS 回源端口，默认值443，取值：1～65535。
+当 OriginProtocol = FOLLOW 或 HTTPS 时生效。
+     * @param HttpsOriginPort HTTPS 回源端口，默认值443，取值：1～65535。
+当 OriginProtocol = FOLLOW 或 HTTPS 时生效。
      */
     public void setHttpsOriginPort(Long HttpsOriginPort) {
         this.HttpsOriginPort = HttpsOriginPort;
     }
 
     /**
-     * Get IPv6状态，取值有：
-<li>follow：遵循站点IPv6配置；</li>
+     * Get IPv6 状态，取值有：
+<li>follow：遵循站点 IPv6 配置；</li>
 <li>on：开启状态；</li>
-<li>off：关闭状态。</li>
-<li>不填默认为：follow。</li> 
-     * @return IPv6Status IPv6状态，取值有：
-<li>follow：遵循站点IPv6配置；</li>
+<li>off：关闭状态。</li>不填默认为：follow。 
+     * @return IPv6Status IPv6 状态，取值有：
+<li>follow：遵循站点 IPv6 配置；</li>
 <li>on：开启状态；</li>
-<li>off：关闭状态。</li>
-<li>不填默认为：follow。</li>
+<li>off：关闭状态。</li>不填默认为：follow。
      */
     public String getIPv6Status() {
         return this.IPv6Status;
     }
 
     /**
-     * Set IPv6状态，取值有：
-<li>follow：遵循站点IPv6配置；</li>
+     * Set IPv6 状态，取值有：
+<li>follow：遵循站点 IPv6 配置；</li>
 <li>on：开启状态；</li>
-<li>off：关闭状态。</li>
-<li>不填默认为：follow。</li>
-     * @param IPv6Status IPv6状态，取值有：
-<li>follow：遵循站点IPv6配置；</li>
+<li>off：关闭状态。</li>不填默认为：follow。
+     * @param IPv6Status IPv6 状态，取值有：
+<li>follow：遵循站点 IPv6 配置；</li>
 <li>on：开启状态；</li>
-<li>off：关闭状态。</li>
-<li>不填默认为：follow。</li>
+<li>off：关闭状态。</li>不填默认为：follow。
      */
     public void setIPv6Status(String IPv6Status) {
         this.IPv6Status = IPv6Status;

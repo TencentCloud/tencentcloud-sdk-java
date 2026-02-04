@@ -73,6 +73,13 @@ public class BlindWatermarkTemplate extends AbstractModel {
     private String UpdateTime;
 
     /**
+    * 数字水印强度。 default: 默认，高清画质和抗性平衡 stronger:画质清晰，抗性较强 strongest:画质一般，抗性最强
+    */
+    @SerializedName("Strength")
+    @Expose
+    private String Strength;
+
+    /**
      * Get 数字水印模板唯一标识。 
      * @return Definition 数字水印模板唯一标识。
      */
@@ -184,6 +191,22 @@ public class BlindWatermarkTemplate extends AbstractModel {
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get 数字水印强度。 default: 默认，高清画质和抗性平衡 stronger:画质清晰，抗性较强 strongest:画质一般，抗性最强 
+     * @return Strength 数字水印强度。 default: 默认，高清画质和抗性平衡 stronger:画质清晰，抗性较强 strongest:画质一般，抗性最强
+     */
+    public String getStrength() {
+        return this.Strength;
+    }
+
+    /**
+     * Set 数字水印强度。 default: 默认，高清画质和抗性平衡 stronger:画质清晰，抗性较强 strongest:画质一般，抗性最强
+     * @param Strength 数字水印强度。 default: 默认，高清画质和抗性平衡 stronger:画质清晰，抗性较强 strongest:画质一般，抗性最强
+     */
+    public void setStrength(String Strength) {
+        this.Strength = Strength;
+    }
+
     public BlindWatermarkTemplate() {
     }
 
@@ -213,6 +236,9 @@ public class BlindWatermarkTemplate extends AbstractModel {
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.Strength != null) {
+            this.Strength = new String(source.Strength);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class BlindWatermarkTemplate extends AbstractModel {
         this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "Strength", this.Strength);
 
     }
 }

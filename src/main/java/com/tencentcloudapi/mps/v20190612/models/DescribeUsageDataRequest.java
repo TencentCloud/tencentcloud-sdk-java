@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeUsageDataRequest extends AbstractModel {
 
     /**
-    * 起始日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+    * 起始日期。使用 ISO 日期格式。
     */
     @SerializedName("StartTime")
     @Expose
@@ -82,16 +82,16 @@ public class DescribeUsageDataRequest extends AbstractModel {
     private String [] ProcessRegions;
 
     /**
-     * Get 起始日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。 
-     * @return StartTime 起始日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Get 起始日期。使用 ISO 日期格式。 
+     * @return StartTime 起始日期。使用 ISO 日期格式。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 起始日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
-     * @param StartTime 起始日期。使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
+     * Set 起始日期。使用 ISO 日期格式。
+     * @param StartTime 起始日期。使用 ISO 日期格式。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;

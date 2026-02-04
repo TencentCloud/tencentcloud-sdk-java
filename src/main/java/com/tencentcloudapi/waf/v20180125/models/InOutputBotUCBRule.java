@@ -192,6 +192,20 @@ public class InOutputBotUCBRule extends AbstractModel {
     private Long DelayTime;
 
     /**
+    * 是否为批量规则：0表示场景规则，1表示批量规则
+    */
+    @SerializedName("Batch")
+    @Expose
+    private Long Batch;
+
+    /**
+    * 24小时内命中数
+    */
+    @SerializedName("HitCount")
+    @Expose
+    private Long HitCount;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -575,6 +589,38 @@ public class InOutputBotUCBRule extends AbstractModel {
         this.DelayTime = DelayTime;
     }
 
+    /**
+     * Get 是否为批量规则：0表示场景规则，1表示批量规则 
+     * @return Batch 是否为批量规则：0表示场景规则，1表示批量规则
+     */
+    public Long getBatch() {
+        return this.Batch;
+    }
+
+    /**
+     * Set 是否为批量规则：0表示场景规则，1表示批量规则
+     * @param Batch 是否为批量规则：0表示场景规则，1表示批量规则
+     */
+    public void setBatch(Long Batch) {
+        this.Batch = Batch;
+    }
+
+    /**
+     * Get 24小时内命中数 
+     * @return HitCount 24小时内命中数
+     */
+    public Long getHitCount() {
+        return this.HitCount;
+    }
+
+    /**
+     * Set 24小时内命中数
+     * @param HitCount 24小时内命中数
+     */
+    public void setHitCount(Long HitCount) {
+        this.HitCount = HitCount;
+    }
+
     public InOutputBotUCBRule() {
     }
 
@@ -661,6 +707,12 @@ public class InOutputBotUCBRule extends AbstractModel {
         if (source.DelayTime != null) {
             this.DelayTime = new Long(source.DelayTime);
         }
+        if (source.Batch != null) {
+            this.Batch = new Long(source.Batch);
+        }
+        if (source.HitCount != null) {
+            this.HitCount = new Long(source.HitCount);
+        }
     }
 
 
@@ -692,6 +744,8 @@ public class InOutputBotUCBRule extends AbstractModel {
         this.setParamSimple(map, prefix + "BlockPageId", this.BlockPageId);
         this.setParamArrayObj(map, prefix + "ActionList.", this.ActionList);
         this.setParamSimple(map, prefix + "DelayTime", this.DelayTime);
+        this.setParamSimple(map, prefix + "Batch", this.Batch);
+        this.setParamSimple(map, prefix + "HitCount", this.HitCount);
 
     }
 }

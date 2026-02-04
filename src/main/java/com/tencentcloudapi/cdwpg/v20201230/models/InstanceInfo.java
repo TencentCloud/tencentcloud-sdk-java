@@ -207,6 +207,41 @@ public class InstanceInfo extends AbstractModel {
     private AccessInfo [] AccessDetails;
 
     /**
+    * 集群是否跨az，为0不跨az；为1跨az
+    */
+    @SerializedName("IsAz")
+    @Expose
+    private Long IsAz;
+
+    /**
+    * 备可用区
+    */
+    @SerializedName("SecondaryZone")
+    @Expose
+    private String SecondaryZone;
+
+    /**
+    * 备子网
+    */
+    @SerializedName("SecondarySubnet")
+    @Expose
+    private String SecondarySubnet;
+
+    /**
+    * 访问信息
+    */
+    @SerializedName("AccessInfo")
+    @Expose
+    private String AccessInfo;
+
+    /**
+    * GTM节点信息
+    */
+    @SerializedName("GTMNodes")
+    @Expose
+    private InstanceNodeGroup [] GTMNodes;
+
+    /**
      * Get ID值 
      * @return ID ID值
      */
@@ -626,6 +661,86 @@ public class InstanceInfo extends AbstractModel {
         this.AccessDetails = AccessDetails;
     }
 
+    /**
+     * Get 集群是否跨az，为0不跨az；为1跨az 
+     * @return IsAz 集群是否跨az，为0不跨az；为1跨az
+     */
+    public Long getIsAz() {
+        return this.IsAz;
+    }
+
+    /**
+     * Set 集群是否跨az，为0不跨az；为1跨az
+     * @param IsAz 集群是否跨az，为0不跨az；为1跨az
+     */
+    public void setIsAz(Long IsAz) {
+        this.IsAz = IsAz;
+    }
+
+    /**
+     * Get 备可用区 
+     * @return SecondaryZone 备可用区
+     */
+    public String getSecondaryZone() {
+        return this.SecondaryZone;
+    }
+
+    /**
+     * Set 备可用区
+     * @param SecondaryZone 备可用区
+     */
+    public void setSecondaryZone(String SecondaryZone) {
+        this.SecondaryZone = SecondaryZone;
+    }
+
+    /**
+     * Get 备子网 
+     * @return SecondarySubnet 备子网
+     */
+    public String getSecondarySubnet() {
+        return this.SecondarySubnet;
+    }
+
+    /**
+     * Set 备子网
+     * @param SecondarySubnet 备子网
+     */
+    public void setSecondarySubnet(String SecondarySubnet) {
+        this.SecondarySubnet = SecondarySubnet;
+    }
+
+    /**
+     * Get 访问信息 
+     * @return AccessInfo 访问信息
+     */
+    public String getAccessInfo() {
+        return this.AccessInfo;
+    }
+
+    /**
+     * Set 访问信息
+     * @param AccessInfo 访问信息
+     */
+    public void setAccessInfo(String AccessInfo) {
+        this.AccessInfo = AccessInfo;
+    }
+
+    /**
+     * Get GTM节点信息 
+     * @return GTMNodes GTM节点信息
+     */
+    public InstanceNodeGroup [] getGTMNodes() {
+        return this.GTMNodes;
+    }
+
+    /**
+     * Set GTM节点信息
+     * @param GTMNodes GTM节点信息
+     */
+    public void setGTMNodes(InstanceNodeGroup [] GTMNodes) {
+        this.GTMNodes = GTMNodes;
+    }
+
     public InstanceInfo() {
     }
 
@@ -724,6 +839,24 @@ public class InstanceInfo extends AbstractModel {
                 this.AccessDetails[i] = new AccessInfo(source.AccessDetails[i]);
             }
         }
+        if (source.IsAz != null) {
+            this.IsAz = new Long(source.IsAz);
+        }
+        if (source.SecondaryZone != null) {
+            this.SecondaryZone = new String(source.SecondaryZone);
+        }
+        if (source.SecondarySubnet != null) {
+            this.SecondarySubnet = new String(source.SecondarySubnet);
+        }
+        if (source.AccessInfo != null) {
+            this.AccessInfo = new String(source.AccessInfo);
+        }
+        if (source.GTMNodes != null) {
+            this.GTMNodes = new InstanceNodeGroup[source.GTMNodes.length];
+            for (int i = 0; i < source.GTMNodes.length; i++) {
+                this.GTMNodes[i] = new InstanceNodeGroup(source.GTMNodes[i]);
+            }
+        }
     }
 
 
@@ -757,6 +890,11 @@ public class InstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamArrayObj(map, prefix + "AccessDetails.", this.AccessDetails);
+        this.setParamSimple(map, prefix + "IsAz", this.IsAz);
+        this.setParamSimple(map, prefix + "SecondaryZone", this.SecondaryZone);
+        this.setParamSimple(map, prefix + "SecondarySubnet", this.SecondarySubnet);
+        this.setParamSimple(map, prefix + "AccessInfo", this.AccessInfo);
+        this.setParamArrayObj(map, prefix + "GTMNodes.", this.GTMNodes);
 
     }
 }

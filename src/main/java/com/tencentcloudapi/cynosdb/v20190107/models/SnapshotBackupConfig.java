@@ -66,7 +66,7 @@ public class SnapshotBackupConfig extends AbstractModel {
     private Long ReserveDuration;
 
     /**
-    * 动数据备份触发策略，periodically:自动周期备份,frequent:高频备份
+    * 自动数据备份触发策略，periodically:自动周期备份,frequent:高频备份
     */
     @SerializedName("BackupTriggerStrategy")
     @Expose
@@ -169,16 +169,16 @@ public class SnapshotBackupConfig extends AbstractModel {
     }
 
     /**
-     * Get 动数据备份触发策略，periodically:自动周期备份,frequent:高频备份 
-     * @return BackupTriggerStrategy 动数据备份触发策略，periodically:自动周期备份,frequent:高频备份
+     * Get 自动数据备份触发策略，periodically:自动周期备份,frequent:高频备份 
+     * @return BackupTriggerStrategy 自动数据备份触发策略，periodically:自动周期备份,frequent:高频备份
      */
     public String getBackupTriggerStrategy() {
         return this.BackupTriggerStrategy;
     }
 
     /**
-     * Set 动数据备份触发策略，periodically:自动周期备份,frequent:高频备份
-     * @param BackupTriggerStrategy 动数据备份触发策略，periodically:自动周期备份,frequent:高频备份
+     * Set 自动数据备份触发策略，periodically:自动周期备份,frequent:高频备份
+     * @param BackupTriggerStrategy 自动数据备份触发策略，periodically:自动周期备份,frequent:高频备份
      */
     public void setBackupTriggerStrategy(String BackupTriggerStrategy) {
         this.BackupTriggerStrategy = BackupTriggerStrategy;

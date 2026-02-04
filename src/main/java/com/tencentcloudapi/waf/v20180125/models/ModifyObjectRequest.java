@@ -38,7 +38,7 @@ public class ModifyObjectRequest extends AbstractModel {
     private String OpType;
 
     /**
-    * 新的Waf开关状态，如果和已有状态相同认为修改成功
+    * 新的Waf开关状态，如果和已有状态相同认为修改成功。状态可以为0或1
     */
     @SerializedName("Status")
     @Expose
@@ -112,16 +112,16 @@ public class ModifyObjectRequest extends AbstractModel {
     }
 
     /**
-     * Get 新的Waf开关状态，如果和已有状态相同认为修改成功 
-     * @return Status 新的Waf开关状态，如果和已有状态相同认为修改成功
+     * Get 新的Waf开关状态，如果和已有状态相同认为修改成功。状态可以为0或1 
+     * @return Status 新的Waf开关状态，如果和已有状态相同认为修改成功。状态可以为0或1
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 新的Waf开关状态，如果和已有状态相同认为修改成功
-     * @param Status 新的Waf开关状态，如果和已有状态相同认为修改成功
+     * Set 新的Waf开关状态，如果和已有状态相同认为修改成功。状态可以为0或1
+     * @param Status 新的Waf开关状态，如果和已有状态相同认为修改成功。状态可以为0或1
      */
     public void setStatus(Long Status) {
         this.Status = Status;

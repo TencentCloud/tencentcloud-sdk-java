@@ -180,6 +180,13 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
     private String VpcCniType;
 
     /**
+    * 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行，默认为true
+    */
+    @SerializedName("IsHighAvailability")
+    @Expose
+    private Boolean IsHighAvailability;
+
+    /**
      * Get 是否启用集群节点自动扩缩容(创建集群流程不支持开启此功能) 
      * @return AsEnabled 是否启用集群节点自动扩缩容(创建集群流程不支持开启此功能)
      */
@@ -551,6 +558,22 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
         this.VpcCniType = VpcCniType;
     }
 
+    /**
+     * Get 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行，默认为true 
+     * @return IsHighAvailability 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行，默认为true
+     */
+    public Boolean getIsHighAvailability() {
+        return this.IsHighAvailability;
+    }
+
+    /**
+     * Set 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行，默认为true
+     * @param IsHighAvailability 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行，默认为true
+     */
+    public void setIsHighAvailability(Boolean IsHighAvailability) {
+        this.IsHighAvailability = IsHighAvailability;
+    }
+
     public ClusterAdvancedSettings() {
     }
 
@@ -625,6 +648,9 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
         if (source.VpcCniType != null) {
             this.VpcCniType = new String(source.VpcCniType);
         }
+        if (source.IsHighAvailability != null) {
+            this.IsHighAvailability = new Boolean(source.IsHighAvailability);
+        }
     }
 
 
@@ -653,6 +679,7 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
         this.setParamSimple(map, prefix + "QGPUShareEnable", this.QGPUShareEnable);
         this.setParamSimple(map, prefix + "RuntimeVersion", this.RuntimeVersion);
         this.setParamSimple(map, prefix + "VpcCniType", this.VpcCniType);
+        this.setParamSimple(map, prefix + "IsHighAvailability", this.IsHighAvailability);
 
     }
 }

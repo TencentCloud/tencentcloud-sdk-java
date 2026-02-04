@@ -80,6 +80,13 @@ public class PostCLSFlowInfo extends AbstractModel {
     private String LogTopicID;
 
     /**
+    * 写配置
+    */
+    @SerializedName("WriteConfig")
+    @Expose
+    private FieldWriteConfig WriteConfig;
+
+    /**
      * Get 投递流唯一ID 
      * @return FlowId 投递流唯一ID
      */
@@ -207,6 +214,22 @@ public class PostCLSFlowInfo extends AbstractModel {
         this.LogTopicID = LogTopicID;
     }
 
+    /**
+     * Get 写配置 
+     * @return WriteConfig 写配置
+     */
+    public FieldWriteConfig getWriteConfig() {
+        return this.WriteConfig;
+    }
+
+    /**
+     * Set 写配置
+     * @param WriteConfig 写配置
+     */
+    public void setWriteConfig(FieldWriteConfig WriteConfig) {
+        this.WriteConfig = WriteConfig;
+    }
+
     public PostCLSFlowInfo() {
     }
 
@@ -239,6 +262,9 @@ public class PostCLSFlowInfo extends AbstractModel {
         if (source.LogTopicID != null) {
             this.LogTopicID = new String(source.LogTopicID);
         }
+        if (source.WriteConfig != null) {
+            this.WriteConfig = new FieldWriteConfig(source.WriteConfig);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class PostCLSFlowInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "LogsetID", this.LogsetID);
         this.setParamSimple(map, prefix + "LogTopicName", this.LogTopicName);
         this.setParamSimple(map, prefix + "LogTopicID", this.LogTopicID);
+        this.setParamObj(map, prefix + "WriteConfig.", this.WriteConfig);
 
     }
 }

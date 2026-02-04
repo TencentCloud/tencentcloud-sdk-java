@@ -66,7 +66,10 @@ public class QuestionSplitOCRRequest extends AbstractModel {
     private Boolean EnableOnlyDetectBorder;
 
     /**
-    * false: 使用当前默认模型  true: 使用新的多模态推理模型，速度更快推理效果更强，仅 `EnableOnlyDetectBorder` 为 `true` 时生效，公测中
+    * false: 使用当前默认模型(结构化信息更全面，但手写答案坐标精度一般)  
+true:  使用多模态推理模型，推理效果更强（题目框选、手写答案坐标定位能力更优，但不返回题目选项和题目类型信息）
+
+API默认false, demo默认使用的是true
     */
     @SerializedName("UseNewModel")
     @Expose
@@ -169,16 +172,28 @@ public class QuestionSplitOCRRequest extends AbstractModel {
     }
 
     /**
-     * Get false: 使用当前默认模型  true: 使用新的多模态推理模型，速度更快推理效果更强，仅 `EnableOnlyDetectBorder` 为 `true` 时生效，公测中 
-     * @return UseNewModel false: 使用当前默认模型  true: 使用新的多模态推理模型，速度更快推理效果更强，仅 `EnableOnlyDetectBorder` 为 `true` 时生效，公测中
+     * Get false: 使用当前默认模型(结构化信息更全面，但手写答案坐标精度一般)  
+true:  使用多模态推理模型，推理效果更强（题目框选、手写答案坐标定位能力更优，但不返回题目选项和题目类型信息）
+
+API默认false, demo默认使用的是true 
+     * @return UseNewModel false: 使用当前默认模型(结构化信息更全面，但手写答案坐标精度一般)  
+true:  使用多模态推理模型，推理效果更强（题目框选、手写答案坐标定位能力更优，但不返回题目选项和题目类型信息）
+
+API默认false, demo默认使用的是true
      */
     public Boolean getUseNewModel() {
         return this.UseNewModel;
     }
 
     /**
-     * Set false: 使用当前默认模型  true: 使用新的多模态推理模型，速度更快推理效果更强，仅 `EnableOnlyDetectBorder` 为 `true` 时生效，公测中
-     * @param UseNewModel false: 使用当前默认模型  true: 使用新的多模态推理模型，速度更快推理效果更强，仅 `EnableOnlyDetectBorder` 为 `true` 时生效，公测中
+     * Set false: 使用当前默认模型(结构化信息更全面，但手写答案坐标精度一般)  
+true:  使用多模态推理模型，推理效果更强（题目框选、手写答案坐标定位能力更优，但不返回题目选项和题目类型信息）
+
+API默认false, demo默认使用的是true
+     * @param UseNewModel false: 使用当前默认模型(结构化信息更全面，但手写答案坐标精度一般)  
+true:  使用多模态推理模型，推理效果更强（题目框选、手写答案坐标定位能力更优，但不返回题目选项和题目类型信息）
+
+API默认false, demo默认使用的是true
      */
     public void setUseNewModel(Boolean UseNewModel) {
         this.UseNewModel = UseNewModel;

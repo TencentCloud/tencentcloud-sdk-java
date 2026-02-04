@@ -80,6 +80,13 @@ public class DescribeInstanceStateResponse extends AbstractModel {
     private Long BackupStatus;
 
     /**
+    * 集群备份任务开启状态2
+    */
+    @SerializedName("BackupOpenStatus")
+    @Expose
+    private Long BackupOpenStatus;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -215,6 +222,22 @@ public class DescribeInstanceStateResponse extends AbstractModel {
     }
 
     /**
+     * Get 集群备份任务开启状态2 
+     * @return BackupOpenStatus 集群备份任务开启状态2
+     */
+    public Long getBackupOpenStatus() {
+        return this.BackupOpenStatus;
+    }
+
+    /**
+     * Set 集群备份任务开启状态2
+     * @param BackupOpenStatus 集群备份任务开启状态2
+     */
+    public void setBackupOpenStatus(Long BackupOpenStatus) {
+        this.BackupOpenStatus = BackupOpenStatus;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -262,6 +285,9 @@ public class DescribeInstanceStateResponse extends AbstractModel {
         if (source.BackupStatus != null) {
             this.BackupStatus = new Long(source.BackupStatus);
         }
+        if (source.BackupOpenStatus != null) {
+            this.BackupOpenStatus = new Long(source.BackupOpenStatus);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -280,6 +306,7 @@ public class DescribeInstanceStateResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "FlowMsg", this.FlowMsg);
         this.setParamSimple(map, prefix + "ProcessName", this.ProcessName);
         this.setParamSimple(map, prefix + "BackupStatus", this.BackupStatus);
+        this.setParamSimple(map, prefix + "BackupOpenStatus", this.BackupOpenStatus);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

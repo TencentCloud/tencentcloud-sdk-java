@@ -39,6 +39,13 @@ public class DescribeUpgradeListResponse extends AbstractModel {
     private String TotalCount;
 
     /**
+    * 错误信息
+    */
+    @SerializedName("ErrorMsg")
+    @Expose
+    private String ErrorMsg;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -82,6 +89,22 @@ public class DescribeUpgradeListResponse extends AbstractModel {
     }
 
     /**
+     * Get 错误信息 
+     * @return ErrorMsg 错误信息
+     */
+    public String getErrorMsg() {
+        return this.ErrorMsg;
+    }
+
+    /**
+     * Set 错误信息
+     * @param ErrorMsg 错误信息
+     */
+    public void setErrorMsg(String ErrorMsg) {
+        this.ErrorMsg = ErrorMsg;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -114,6 +137,9 @@ public class DescribeUpgradeListResponse extends AbstractModel {
         if (source.TotalCount != null) {
             this.TotalCount = new String(source.TotalCount);
         }
+        if (source.ErrorMsg != null) {
+            this.ErrorMsg = new String(source.ErrorMsg);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -126,6 +152,7 @@ public class DescribeUpgradeListResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "UpgradeItems.", this.UpgradeItems);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

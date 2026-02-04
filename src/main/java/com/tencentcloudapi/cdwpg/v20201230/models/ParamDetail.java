@@ -80,6 +80,13 @@ public class ParamDetail extends AbstractModel {
     private String ParameterName;
 
     /**
+    * 最新修改值
+    */
+    @SerializedName("LatestValue")
+    @Expose
+    private String LatestValue;
+
+    /**
      * Get 参数名 
      * @return ParamName 参数名
      */
@@ -207,6 +214,22 @@ public class ParamDetail extends AbstractModel {
         this.ParameterName = ParameterName;
     }
 
+    /**
+     * Get 最新修改值 
+     * @return LatestValue 最新修改值
+     */
+    public String getLatestValue() {
+        return this.LatestValue;
+    }
+
+    /**
+     * Set 最新修改值
+     * @param LatestValue 最新修改值
+     */
+    public void setLatestValue(String LatestValue) {
+        this.LatestValue = LatestValue;
+    }
+
     public ParamDetail() {
     }
 
@@ -239,6 +262,9 @@ public class ParamDetail extends AbstractModel {
         if (source.ParameterName != null) {
             this.ParameterName = new String(source.ParameterName);
         }
+        if (source.LatestValue != null) {
+            this.LatestValue = new String(source.LatestValue);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class ParamDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "Unit", this.Unit);
         this.setParamSimple(map, prefix + "ShortDesc", this.ShortDesc);
         this.setParamSimple(map, prefix + "ParameterName", this.ParameterName);
+        this.setParamSimple(map, prefix + "LatestValue", this.LatestValue);
 
     }
 }

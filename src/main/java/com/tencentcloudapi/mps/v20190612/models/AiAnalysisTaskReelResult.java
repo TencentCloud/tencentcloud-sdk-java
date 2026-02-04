@@ -45,14 +45,14 @@ public class AiAnalysisTaskReelResult extends AbstractModel {
     private String Message;
 
     /**
-    * 智能成片任务输入。
+    * AI解说二创任务输入。
     */
     @SerializedName("Input")
     @Expose
     private AiAnalysisTaskReelInput Input;
 
     /**
-    * 智能成片任务输出。
+    * AI解说二创任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Output")
@@ -140,25 +140,25 @@ public class AiAnalysisTaskReelResult extends AbstractModel {
     }
 
     /**
-     * Get 智能成片任务输入。 
-     * @return Input 智能成片任务输入。
+     * Get AI解说二创任务输入。 
+     * @return Input AI解说二创任务输入。
      */
     public AiAnalysisTaskReelInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set 智能成片任务输入。
-     * @param Input 智能成片任务输入。
+     * Set AI解说二创任务输入。
+     * @param Input AI解说二创任务输入。
      */
     public void setInput(AiAnalysisTaskReelInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get 智能成片任务输出。
+     * Get AI解说二创任务输出。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Output 智能成片任务输出。
+     * @return Output AI解说二创任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiAnalysisTaskReelOutput getOutput() {
@@ -166,9 +166,9 @@ public class AiAnalysisTaskReelResult extends AbstractModel {
     }
 
     /**
-     * Set 智能成片任务输出。
+     * Set AI解说二创任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Output 智能成片任务输出。
+     * @param Output AI解说二创任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutput(AiAnalysisTaskReelOutput Output) {

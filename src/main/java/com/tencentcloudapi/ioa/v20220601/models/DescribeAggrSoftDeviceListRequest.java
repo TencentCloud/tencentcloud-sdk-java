@@ -45,6 +45,20 @@ public class DescribeAggrSoftDeviceListRequest extends AbstractModel {
     private Long OsType;
 
     /**
+    * 分组ID
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private Long GroupId;
+
+    /**
+    * 分组类型 1-终端分组 2-组织架构(账号分组) 3/4-虚拟分组
+    */
+    @SerializedName("GroupType")
+    @Expose
+    private Long GroupType;
+
+    /**
      * Get 过滤条件 
      * @return Condition 过滤条件
      */
@@ -92,6 +106,38 @@ public class DescribeAggrSoftDeviceListRequest extends AbstractModel {
         this.OsType = OsType;
     }
 
+    /**
+     * Get 分组ID 
+     * @return GroupId 分组ID
+     */
+    public Long getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set 分组ID
+     * @param GroupId 分组ID
+     */
+    public void setGroupId(Long GroupId) {
+        this.GroupId = GroupId;
+    }
+
+    /**
+     * Get 分组类型 1-终端分组 2-组织架构(账号分组) 3/4-虚拟分组 
+     * @return GroupType 分组类型 1-终端分组 2-组织架构(账号分组) 3/4-虚拟分组
+     */
+    public Long getGroupType() {
+        return this.GroupType;
+    }
+
+    /**
+     * Set 分组类型 1-终端分组 2-组织架构(账号分组) 3/4-虚拟分组
+     * @param GroupType 分组类型 1-终端分组 2-组织架构(账号分组) 3/4-虚拟分组
+     */
+    public void setGroupType(Long GroupType) {
+        this.GroupType = GroupType;
+    }
+
     public DescribeAggrSoftDeviceListRequest() {
     }
 
@@ -109,6 +155,12 @@ public class DescribeAggrSoftDeviceListRequest extends AbstractModel {
         if (source.OsType != null) {
             this.OsType = new Long(source.OsType);
         }
+        if (source.GroupId != null) {
+            this.GroupId = new Long(source.GroupId);
+        }
+        if (source.GroupType != null) {
+            this.GroupType = new Long(source.GroupType);
+        }
     }
 
 
@@ -119,6 +171,8 @@ public class DescribeAggrSoftDeviceListRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Condition.", this.Condition);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "OsType", this.OsType);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamSimple(map, prefix + "GroupType", this.GroupType);
 
     }
 }

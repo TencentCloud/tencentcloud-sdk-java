@@ -52,6 +52,13 @@ public class ModifyBlindWatermarkTemplateRequest extends AbstractModel {
     private String TextContent;
 
     /**
+    * 数字水印强度。 default: 默认，高清画质和抗性平衡 stronger:画质清晰，抗性较强 strongest:画质一般，抗性最强
+    */
+    @SerializedName("Strength")
+    @Expose
+    private String Strength;
+
+    /**
      * Get 数字水印模板唯一标识。 
      * @return Definition 数字水印模板唯一标识。
      */
@@ -115,6 +122,22 @@ public class ModifyBlindWatermarkTemplateRequest extends AbstractModel {
         this.TextContent = TextContent;
     }
 
+    /**
+     * Get 数字水印强度。 default: 默认，高清画质和抗性平衡 stronger:画质清晰，抗性较强 strongest:画质一般，抗性最强 
+     * @return Strength 数字水印强度。 default: 默认，高清画质和抗性平衡 stronger:画质清晰，抗性较强 strongest:画质一般，抗性最强
+     */
+    public String getStrength() {
+        return this.Strength;
+    }
+
+    /**
+     * Set 数字水印强度。 default: 默认，高清画质和抗性平衡 stronger:画质清晰，抗性较强 strongest:画质一般，抗性最强
+     * @param Strength 数字水印强度。 default: 默认，高清画质和抗性平衡 stronger:画质清晰，抗性较强 strongest:画质一般，抗性最强
+     */
+    public void setStrength(String Strength) {
+        this.Strength = Strength;
+    }
+
     public ModifyBlindWatermarkTemplateRequest() {
     }
 
@@ -135,6 +158,9 @@ public class ModifyBlindWatermarkTemplateRequest extends AbstractModel {
         if (source.TextContent != null) {
             this.TextContent = new String(source.TextContent);
         }
+        if (source.Strength != null) {
+            this.Strength = new String(source.Strength);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class ModifyBlindWatermarkTemplateRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamSimple(map, prefix + "TextContent", this.TextContent);
+        this.setParamSimple(map, prefix + "Strength", this.Strength);
 
     }
 }

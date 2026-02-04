@@ -31,6 +31,20 @@ public class AiAnalysisTaskVideoComprehensionOutput extends AbstractModel {
     private String VideoComprehensionAnalysisResult;
 
     /**
+    * 视频（音频）理解扩展信息
+    */
+    @SerializedName("VideoComprehensionExtInfo")
+    @Expose
+    private String VideoComprehensionExtInfo;
+
+    /**
+    * 视频分镜理解结果
+    */
+    @SerializedName("VideoComprehensionResultList")
+    @Expose
+    private VideoComprehensionResultItem [] VideoComprehensionResultList;
+
+    /**
      * Get 视频（音频）理解内容详情 
      * @return VideoComprehensionAnalysisResult 视频（音频）理解内容详情
      */
@@ -46,6 +60,38 @@ public class AiAnalysisTaskVideoComprehensionOutput extends AbstractModel {
         this.VideoComprehensionAnalysisResult = VideoComprehensionAnalysisResult;
     }
 
+    /**
+     * Get 视频（音频）理解扩展信息 
+     * @return VideoComprehensionExtInfo 视频（音频）理解扩展信息
+     */
+    public String getVideoComprehensionExtInfo() {
+        return this.VideoComprehensionExtInfo;
+    }
+
+    /**
+     * Set 视频（音频）理解扩展信息
+     * @param VideoComprehensionExtInfo 视频（音频）理解扩展信息
+     */
+    public void setVideoComprehensionExtInfo(String VideoComprehensionExtInfo) {
+        this.VideoComprehensionExtInfo = VideoComprehensionExtInfo;
+    }
+
+    /**
+     * Get 视频分镜理解结果 
+     * @return VideoComprehensionResultList 视频分镜理解结果
+     */
+    public VideoComprehensionResultItem [] getVideoComprehensionResultList() {
+        return this.VideoComprehensionResultList;
+    }
+
+    /**
+     * Set 视频分镜理解结果
+     * @param VideoComprehensionResultList 视频分镜理解结果
+     */
+    public void setVideoComprehensionResultList(VideoComprehensionResultItem [] VideoComprehensionResultList) {
+        this.VideoComprehensionResultList = VideoComprehensionResultList;
+    }
+
     public AiAnalysisTaskVideoComprehensionOutput() {
     }
 
@@ -57,6 +103,15 @@ public class AiAnalysisTaskVideoComprehensionOutput extends AbstractModel {
         if (source.VideoComprehensionAnalysisResult != null) {
             this.VideoComprehensionAnalysisResult = new String(source.VideoComprehensionAnalysisResult);
         }
+        if (source.VideoComprehensionExtInfo != null) {
+            this.VideoComprehensionExtInfo = new String(source.VideoComprehensionExtInfo);
+        }
+        if (source.VideoComprehensionResultList != null) {
+            this.VideoComprehensionResultList = new VideoComprehensionResultItem[source.VideoComprehensionResultList.length];
+            for (int i = 0; i < source.VideoComprehensionResultList.length; i++) {
+                this.VideoComprehensionResultList[i] = new VideoComprehensionResultItem(source.VideoComprehensionResultList[i]);
+            }
+        }
     }
 
 
@@ -65,6 +120,8 @@ public class AiAnalysisTaskVideoComprehensionOutput extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VideoComprehensionAnalysisResult", this.VideoComprehensionAnalysisResult);
+        this.setParamSimple(map, prefix + "VideoComprehensionExtInfo", this.VideoComprehensionExtInfo);
+        this.setParamArrayObj(map, prefix + "VideoComprehensionResultList.", this.VideoComprehensionResultList);
 
     }
 }

@@ -45,6 +45,13 @@ public class ApiDetailSampleHistory extends AbstractModel {
     private String RspLog;
 
     /**
+    * 完整请求样例
+    */
+    @SerializedName("FullReqLog")
+    @Expose
+    private String FullReqLog;
+
+    /**
      * Get 样例名称 
      * @return SampleNme 样例名称
      */
@@ -92,6 +99,22 @@ public class ApiDetailSampleHistory extends AbstractModel {
         this.RspLog = RspLog;
     }
 
+    /**
+     * Get 完整请求样例 
+     * @return FullReqLog 完整请求样例
+     */
+    public String getFullReqLog() {
+        return this.FullReqLog;
+    }
+
+    /**
+     * Set 完整请求样例
+     * @param FullReqLog 完整请求样例
+     */
+    public void setFullReqLog(String FullReqLog) {
+        this.FullReqLog = FullReqLog;
+    }
+
     public ApiDetailSampleHistory() {
     }
 
@@ -109,6 +132,9 @@ public class ApiDetailSampleHistory extends AbstractModel {
         if (source.RspLog != null) {
             this.RspLog = new String(source.RspLog);
         }
+        if (source.FullReqLog != null) {
+            this.FullReqLog = new String(source.FullReqLog);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class ApiDetailSampleHistory extends AbstractModel {
         this.setParamSimple(map, prefix + "SampleNme", this.SampleNme);
         this.setParamSimple(map, prefix + "RepLog", this.RepLog);
         this.setParamSimple(map, prefix + "RspLog", this.RspLog);
+        this.setParamSimple(map, prefix + "FullReqLog", this.FullReqLog);
 
     }
 }

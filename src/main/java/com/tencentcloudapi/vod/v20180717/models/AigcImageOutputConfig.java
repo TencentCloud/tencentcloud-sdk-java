@@ -54,14 +54,25 @@ public class AigcImageOutputConfig extends AbstractModel {
     private String ExpireTime;
 
     /**
-    * 生成图片的分辨率。可选值为 720P、1080P、2K、4K、1024x1024、2048x2048、2304x1728、2496x1664、2560x1440、3024x1296、4096x4096、4694x3520、4992x3328、5404x3040、6198x2656。
+    * 生成图片的分辨率。
+
+* GEM 2.5 可选值：1K、2K、4K；
+* GEM 3.0 可选值：1K、2K、4K；
+* Vidu q2 可选值：1080p、2K、4K，默认1080p；
+* Kling 2.1 可选值：1k、2k；
+* Hunyuan 3.0 可选值：768:768、768:1024、1024:768、1024:1024、720:1280、1280:720、768:1280、1280:768，不传默认使用1024:1024。
     */
     @SerializedName("Resolution")
     @Expose
     private String Resolution;
 
     /**
-    * 指定所生成图片的宽高比。<li>当 ModelName 是 GEM，可选值是 1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9 和 21:9；</li><li>当 ModelName 是 Qwen，则暂不支持。</li>
+    * 指定所生成图片的宽高比。
+<li>当 ModelName 是 GEM，可选值是 1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9 和 21:9；</li>
+<li>当 ModelName 是 Qwen，则暂不支持。</li>
+<li>当 ModelName 是 Hunyuan，则暂不支持。</li>
+<li>当 ModelName 是 Vidu，可选值16:9、9:16、1:1、3:4、4:3、21:9、2:3、3:2。</li>
+<li>当 ModelName 是 Kling，可选值16:9、9:16、1:1、4:3、3:4、3:2、2:3、21:9。</li>
     */
     @SerializedName("AspectRatio")
     @Expose
@@ -161,32 +172,76 @@ public class AigcImageOutputConfig extends AbstractModel {
     }
 
     /**
-     * Get 生成图片的分辨率。可选值为 720P、1080P、2K、4K、1024x1024、2048x2048、2304x1728、2496x1664、2560x1440、3024x1296、4096x4096、4694x3520、4992x3328、5404x3040、6198x2656。 
-     * @return Resolution 生成图片的分辨率。可选值为 720P、1080P、2K、4K、1024x1024、2048x2048、2304x1728、2496x1664、2560x1440、3024x1296、4096x4096、4694x3520、4992x3328、5404x3040、6198x2656。
+     * Get 生成图片的分辨率。
+
+* GEM 2.5 可选值：1K、2K、4K；
+* GEM 3.0 可选值：1K、2K、4K；
+* Vidu q2 可选值：1080p、2K、4K，默认1080p；
+* Kling 2.1 可选值：1k、2k；
+* Hunyuan 3.0 可选值：768:768、768:1024、1024:768、1024:1024、720:1280、1280:720、768:1280、1280:768，不传默认使用1024:1024。 
+     * @return Resolution 生成图片的分辨率。
+
+* GEM 2.5 可选值：1K、2K、4K；
+* GEM 3.0 可选值：1K、2K、4K；
+* Vidu q2 可选值：1080p、2K、4K，默认1080p；
+* Kling 2.1 可选值：1k、2k；
+* Hunyuan 3.0 可选值：768:768、768:1024、1024:768、1024:1024、720:1280、1280:720、768:1280、1280:768，不传默认使用1024:1024。
      */
     public String getResolution() {
         return this.Resolution;
     }
 
     /**
-     * Set 生成图片的分辨率。可选值为 720P、1080P、2K、4K、1024x1024、2048x2048、2304x1728、2496x1664、2560x1440、3024x1296、4096x4096、4694x3520、4992x3328、5404x3040、6198x2656。
-     * @param Resolution 生成图片的分辨率。可选值为 720P、1080P、2K、4K、1024x1024、2048x2048、2304x1728、2496x1664、2560x1440、3024x1296、4096x4096、4694x3520、4992x3328、5404x3040、6198x2656。
+     * Set 生成图片的分辨率。
+
+* GEM 2.5 可选值：1K、2K、4K；
+* GEM 3.0 可选值：1K、2K、4K；
+* Vidu q2 可选值：1080p、2K、4K，默认1080p；
+* Kling 2.1 可选值：1k、2k；
+* Hunyuan 3.0 可选值：768:768、768:1024、1024:768、1024:1024、720:1280、1280:720、768:1280、1280:768，不传默认使用1024:1024。
+     * @param Resolution 生成图片的分辨率。
+
+* GEM 2.5 可选值：1K、2K、4K；
+* GEM 3.0 可选值：1K、2K、4K；
+* Vidu q2 可选值：1080p、2K、4K，默认1080p；
+* Kling 2.1 可选值：1k、2k；
+* Hunyuan 3.0 可选值：768:768、768:1024、1024:768、1024:1024、720:1280、1280:720、768:1280、1280:768，不传默认使用1024:1024。
      */
     public void setResolution(String Resolution) {
         this.Resolution = Resolution;
     }
 
     /**
-     * Get 指定所生成图片的宽高比。<li>当 ModelName 是 GEM，可选值是 1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9 和 21:9；</li><li>当 ModelName 是 Qwen，则暂不支持。</li> 
-     * @return AspectRatio 指定所生成图片的宽高比。<li>当 ModelName 是 GEM，可选值是 1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9 和 21:9；</li><li>当 ModelName 是 Qwen，则暂不支持。</li>
+     * Get 指定所生成图片的宽高比。
+<li>当 ModelName 是 GEM，可选值是 1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9 和 21:9；</li>
+<li>当 ModelName 是 Qwen，则暂不支持。</li>
+<li>当 ModelName 是 Hunyuan，则暂不支持。</li>
+<li>当 ModelName 是 Vidu，可选值16:9、9:16、1:1、3:4、4:3、21:9、2:3、3:2。</li>
+<li>当 ModelName 是 Kling，可选值16:9、9:16、1:1、4:3、3:4、3:2、2:3、21:9。</li> 
+     * @return AspectRatio 指定所生成图片的宽高比。
+<li>当 ModelName 是 GEM，可选值是 1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9 和 21:9；</li>
+<li>当 ModelName 是 Qwen，则暂不支持。</li>
+<li>当 ModelName 是 Hunyuan，则暂不支持。</li>
+<li>当 ModelName 是 Vidu，可选值16:9、9:16、1:1、3:4、4:3、21:9、2:3、3:2。</li>
+<li>当 ModelName 是 Kling，可选值16:9、9:16、1:1、4:3、3:4、3:2、2:3、21:9。</li>
      */
     public String getAspectRatio() {
         return this.AspectRatio;
     }
 
     /**
-     * Set 指定所生成图片的宽高比。<li>当 ModelName 是 GEM，可选值是 1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9 和 21:9；</li><li>当 ModelName 是 Qwen，则暂不支持。</li>
-     * @param AspectRatio 指定所生成图片的宽高比。<li>当 ModelName 是 GEM，可选值是 1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9 和 21:9；</li><li>当 ModelName 是 Qwen，则暂不支持。</li>
+     * Set 指定所生成图片的宽高比。
+<li>当 ModelName 是 GEM，可选值是 1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9 和 21:9；</li>
+<li>当 ModelName 是 Qwen，则暂不支持。</li>
+<li>当 ModelName 是 Hunyuan，则暂不支持。</li>
+<li>当 ModelName 是 Vidu，可选值16:9、9:16、1:1、3:4、4:3、21:9、2:3、3:2。</li>
+<li>当 ModelName 是 Kling，可选值16:9、9:16、1:1、4:3、3:4、3:2、2:3、21:9。</li>
+     * @param AspectRatio 指定所生成图片的宽高比。
+<li>当 ModelName 是 GEM，可选值是 1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9 和 21:9；</li>
+<li>当 ModelName 是 Qwen，则暂不支持。</li>
+<li>当 ModelName 是 Hunyuan，则暂不支持。</li>
+<li>当 ModelName 是 Vidu，可选值16:9、9:16、1:1、3:4、4:3、21:9、2:3、3:2。</li>
+<li>当 ModelName 是 Kling，可选值16:9、9:16、1:1、4:3、3:4、3:2、2:3、21:9。</li>
      */
     public void setAspectRatio(String AspectRatio) {
         this.AspectRatio = AspectRatio;

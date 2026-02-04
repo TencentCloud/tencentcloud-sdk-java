@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class RunOperationTaskResponse extends AbstractModel {
 
     /**
+    * 子任务Id
+    */
+    @SerializedName("SubTaskId")
+    @Expose
+    private String SubTaskId;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 子任务Id 
+     * @return SubTaskId 子任务Id
+     */
+    public String getSubTaskId() {
+        return this.SubTaskId;
+    }
+
+    /**
+     * Set 子任务Id
+     * @param SubTaskId 子任务Id
+     */
+    public void setSubTaskId(String SubTaskId) {
+        this.SubTaskId = SubTaskId;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,9 @@ public class RunOperationTaskResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public RunOperationTaskResponse(RunOperationTaskResponse source) {
+        if (source.SubTaskId != null) {
+            this.SubTaskId = new String(source.SubTaskId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +90,7 @@ public class RunOperationTaskResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "SubTaskId", this.SubTaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

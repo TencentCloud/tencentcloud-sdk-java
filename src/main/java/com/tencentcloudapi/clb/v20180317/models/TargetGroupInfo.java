@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class TargetGroupInfo extends AbstractModel {
 
     /**
-    * 目标组ID
+    * <p>目标组ID</p>
     */
     @SerializedName("TargetGroupId")
     @Expose
     private String TargetGroupId;
 
     /**
-    * 目标组的vpcid
+    * <p>目标组的vpcid</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 目标组的名字
+    * <p>目标组的名字</p>
     */
     @SerializedName("TargetGroupName")
     @Expose
     private String TargetGroupName;
 
     /**
-    * 目标组的默认端口，全监听目标组此字段返回0，表示无效端口。
+    * <p>目标组的默认端口，全监听目标组此字段返回0，表示无效端口。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
@@ -53,21 +53,21 @@ public class TargetGroupInfo extends AbstractModel {
     private Long Port;
 
     /**
-    * 目标组的创建时间
+    * <p>目标组的创建时间</p>
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * 目标组的修改时间
+    * <p>目标组的修改时间</p>
     */
     @SerializedName("UpdatedTime")
     @Expose
     private String UpdatedTime;
 
     /**
-    * 关联到的规则数组。在DescribeTargetGroupList接口调用时无法获取到该参数。
+    * <p>关联到的规则数组。在DescribeTargetGroupList接口调用时无法获取到该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssociatedRule")
@@ -75,7 +75,7 @@ public class TargetGroupInfo extends AbstractModel {
     private AssociationItem [] AssociatedRule;
 
     /**
-    * 目标组后端转发协议, 仅v2新版目标组返回有效值。
+    * <p>目标组后端转发协议, 仅v2新版目标组返回有效值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Protocol")
@@ -83,13 +83,7 @@ public class TargetGroupInfo extends AbstractModel {
     private String Protocol;
 
     /**
-    * 调度算法，仅后端转发协议为(HTTP、HTTPS、GRPC)的目标组返回有效值， 可选值：
-<ur>
-<li>WRR:按权重轮询。</li>
-<li>LEAST_CONN:最小连接数。</li>
-<li>IP_HASH:按IP哈希。</li>
-</ur>
-
+    * <p>调度算法，仅后端转发协议为(HTTP、HTTPS、GRPC)的目标组返回有效值， 可选值：<br><ur></p><li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li></ur>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScheduleAlgorithm")
@@ -97,7 +91,7 @@ public class TargetGroupInfo extends AbstractModel {
     private String ScheduleAlgorithm;
 
     /**
-    * 健康检查详情。
+    * <p>健康检查详情。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HealthCheck")
@@ -105,35 +99,35 @@ public class TargetGroupInfo extends AbstractModel {
     private TargetGroupHealthCheck HealthCheck;
 
     /**
-    * 目标组类型，当前支持v1(旧版目标组), v2(新版目标组)。默认为v1旧版目标组。
+    * <p>目标组类型，当前支持v1(旧版目标组), v2(新版目标组)。默认为v1旧版目标组。</p>
     */
     @SerializedName("TargetGroupType")
     @Expose
     private String TargetGroupType;
 
     /**
-    * 目标组已关联的规则数。
+    * <p>目标组已关联的规则数。</p>
     */
     @SerializedName("AssociatedRuleCount")
     @Expose
     private Long AssociatedRuleCount;
 
     /**
-    * 目标组内的实例数量。
+    * <p>目标组内的实例数量。</p>
     */
     @SerializedName("RegisteredInstancesCount")
     @Expose
     private Long RegisteredInstancesCount;
 
     /**
-    * 标签。
+    * <p>标签。</p>
     */
     @SerializedName("Tag")
     @Expose
     private TagInfo [] Tag;
 
     /**
-    * 默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。
+    * <p>默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Weight")
@@ -141,85 +135,85 @@ public class TargetGroupInfo extends AbstractModel {
     private Long Weight;
 
     /**
-    * 是否全监听目标组。
+    * <p>是否全监听目标组。</p>
     */
     @SerializedName("FullListenSwitch")
     @Expose
     private Boolean FullListenSwitch;
 
     /**
-    * 是否开启长连接,  仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。
+    * <p>是否开启长连接,  仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。</p>
     */
     @SerializedName("KeepaliveEnable")
     @Expose
     private Boolean KeepaliveEnable;
 
     /**
-    * 会话保持时间，仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。
+    * <p>会话保持时间，仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。</p>
     */
     @SerializedName("SessionExpireTime")
     @Expose
     private Long SessionExpireTime;
 
     /**
-    * IP版本。
+    * <p>IP版本。</p>
     */
     @SerializedName("IpVersion")
     @Expose
     private String IpVersion;
 
     /**
-     * Get 目标组ID 
-     * @return TargetGroupId 目标组ID
+     * Get <p>目标组ID</p> 
+     * @return TargetGroupId <p>目标组ID</p>
      */
     public String getTargetGroupId() {
         return this.TargetGroupId;
     }
 
     /**
-     * Set 目标组ID
-     * @param TargetGroupId 目标组ID
+     * Set <p>目标组ID</p>
+     * @param TargetGroupId <p>目标组ID</p>
      */
     public void setTargetGroupId(String TargetGroupId) {
         this.TargetGroupId = TargetGroupId;
     }
 
     /**
-     * Get 目标组的vpcid 
-     * @return VpcId 目标组的vpcid
+     * Get <p>目标组的vpcid</p> 
+     * @return VpcId <p>目标组的vpcid</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 目标组的vpcid
-     * @param VpcId 目标组的vpcid
+     * Set <p>目标组的vpcid</p>
+     * @param VpcId <p>目标组的vpcid</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 目标组的名字 
-     * @return TargetGroupName 目标组的名字
+     * Get <p>目标组的名字</p> 
+     * @return TargetGroupName <p>目标组的名字</p>
      */
     public String getTargetGroupName() {
         return this.TargetGroupName;
     }
 
     /**
-     * Set 目标组的名字
-     * @param TargetGroupName 目标组的名字
+     * Set <p>目标组的名字</p>
+     * @param TargetGroupName <p>目标组的名字</p>
      */
     public void setTargetGroupName(String TargetGroupName) {
         this.TargetGroupName = TargetGroupName;
     }
 
     /**
-     * Get 目标组的默认端口，全监听目标组此字段返回0，表示无效端口。
+     * Get <p>目标组的默认端口，全监听目标组此字段返回0，表示无效端口。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Port 目标组的默认端口，全监听目标组此字段返回0，表示无效端口。
+     * @return Port <p>目标组的默认端口，全监听目标组此字段返回0，表示无效端口。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPort() {
@@ -227,9 +221,9 @@ public class TargetGroupInfo extends AbstractModel {
     }
 
     /**
-     * Set 目标组的默认端口，全监听目标组此字段返回0，表示无效端口。
+     * Set <p>目标组的默认端口，全监听目标组此字段返回0，表示无效端口。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Port 目标组的默认端口，全监听目标组此字段返回0，表示无效端口。
+     * @param Port <p>目标组的默认端口，全监听目标组此字段返回0，表示无效端口。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(Long Port) {
@@ -237,41 +231,41 @@ public class TargetGroupInfo extends AbstractModel {
     }
 
     /**
-     * Get 目标组的创建时间 
-     * @return CreatedTime 目标组的创建时间
+     * Get <p>目标组的创建时间</p> 
+     * @return CreatedTime <p>目标组的创建时间</p>
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 目标组的创建时间
-     * @param CreatedTime 目标组的创建时间
+     * Set <p>目标组的创建时间</p>
+     * @param CreatedTime <p>目标组的创建时间</p>
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 目标组的修改时间 
-     * @return UpdatedTime 目标组的修改时间
+     * Get <p>目标组的修改时间</p> 
+     * @return UpdatedTime <p>目标组的修改时间</p>
      */
     public String getUpdatedTime() {
         return this.UpdatedTime;
     }
 
     /**
-     * Set 目标组的修改时间
-     * @param UpdatedTime 目标组的修改时间
+     * Set <p>目标组的修改时间</p>
+     * @param UpdatedTime <p>目标组的修改时间</p>
      */
     public void setUpdatedTime(String UpdatedTime) {
         this.UpdatedTime = UpdatedTime;
     }
 
     /**
-     * Get 关联到的规则数组。在DescribeTargetGroupList接口调用时无法获取到该参数。
+     * Get <p>关联到的规则数组。在DescribeTargetGroupList接口调用时无法获取到该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AssociatedRule 关联到的规则数组。在DescribeTargetGroupList接口调用时无法获取到该参数。
+     * @return AssociatedRule <p>关联到的规则数组。在DescribeTargetGroupList接口调用时无法获取到该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssociationItem [] getAssociatedRule() {
@@ -279,9 +273,9 @@ public class TargetGroupInfo extends AbstractModel {
     }
 
     /**
-     * Set 关联到的规则数组。在DescribeTargetGroupList接口调用时无法获取到该参数。
+     * Set <p>关联到的规则数组。在DescribeTargetGroupList接口调用时无法获取到该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AssociatedRule 关联到的规则数组。在DescribeTargetGroupList接口调用时无法获取到该参数。
+     * @param AssociatedRule <p>关联到的规则数组。在DescribeTargetGroupList接口调用时无法获取到该参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssociatedRule(AssociationItem [] AssociatedRule) {
@@ -289,9 +283,9 @@ public class TargetGroupInfo extends AbstractModel {
     }
 
     /**
-     * Get 目标组后端转发协议, 仅v2新版目标组返回有效值。
+     * Get <p>目标组后端转发协议, 仅v2新版目标组返回有效值。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Protocol 目标组后端转发协议, 仅v2新版目标组返回有效值。
+     * @return Protocol <p>目标组后端转发协议, 仅v2新版目标组返回有效值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProtocol() {
@@ -299,9 +293,9 @@ public class TargetGroupInfo extends AbstractModel {
     }
 
     /**
-     * Set 目标组后端转发协议, 仅v2新版目标组返回有效值。
+     * Set <p>目标组后端转发协议, 仅v2新版目标组返回有效值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Protocol 目标组后端转发协议, 仅v2新版目标组返回有效值。
+     * @param Protocol <p>目标组后端转发协议, 仅v2新版目标组返回有效值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtocol(String Protocol) {
@@ -309,21 +303,9 @@ public class TargetGroupInfo extends AbstractModel {
     }
 
     /**
-     * Get 调度算法，仅后端转发协议为(HTTP、HTTPS、GRPC)的目标组返回有效值， 可选值：
-<ur>
-<li>WRR:按权重轮询。</li>
-<li>LEAST_CONN:最小连接数。</li>
-<li>IP_HASH:按IP哈希。</li>
-</ur>
-
+     * Get <p>调度算法，仅后端转发协议为(HTTP、HTTPS、GRPC)的目标组返回有效值， 可选值：<br><ur></p><li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li></ur>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScheduleAlgorithm 调度算法，仅后端转发协议为(HTTP、HTTPS、GRPC)的目标组返回有效值， 可选值：
-<ur>
-<li>WRR:按权重轮询。</li>
-<li>LEAST_CONN:最小连接数。</li>
-<li>IP_HASH:按IP哈希。</li>
-</ur>
-
+     * @return ScheduleAlgorithm <p>调度算法，仅后端转发协议为(HTTP、HTTPS、GRPC)的目标组返回有效值， 可选值：<br><ur></p><li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li></ur>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScheduleAlgorithm() {
@@ -331,21 +313,9 @@ public class TargetGroupInfo extends AbstractModel {
     }
 
     /**
-     * Set 调度算法，仅后端转发协议为(HTTP、HTTPS、GRPC)的目标组返回有效值， 可选值：
-<ur>
-<li>WRR:按权重轮询。</li>
-<li>LEAST_CONN:最小连接数。</li>
-<li>IP_HASH:按IP哈希。</li>
-</ur>
-
+     * Set <p>调度算法，仅后端转发协议为(HTTP、HTTPS、GRPC)的目标组返回有效值， 可选值：<br><ur></p><li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li></ur>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScheduleAlgorithm 调度算法，仅后端转发协议为(HTTP、HTTPS、GRPC)的目标组返回有效值， 可选值：
-<ur>
-<li>WRR:按权重轮询。</li>
-<li>LEAST_CONN:最小连接数。</li>
-<li>IP_HASH:按IP哈希。</li>
-</ur>
-
+     * @param ScheduleAlgorithm <p>调度算法，仅后端转发协议为(HTTP、HTTPS、GRPC)的目标组返回有效值， 可选值：<br><ur></p><li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li></ur>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScheduleAlgorithm(String ScheduleAlgorithm) {
@@ -353,9 +323,9 @@ public class TargetGroupInfo extends AbstractModel {
     }
 
     /**
-     * Get 健康检查详情。
+     * Get <p>健康检查详情。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HealthCheck 健康检查详情。
+     * @return HealthCheck <p>健康检查详情。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TargetGroupHealthCheck getHealthCheck() {
@@ -363,9 +333,9 @@ public class TargetGroupInfo extends AbstractModel {
     }
 
     /**
-     * Set 健康检查详情。
+     * Set <p>健康检查详情。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HealthCheck 健康检查详情。
+     * @param HealthCheck <p>健康检查详情。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHealthCheck(TargetGroupHealthCheck HealthCheck) {
@@ -373,73 +343,73 @@ public class TargetGroupInfo extends AbstractModel {
     }
 
     /**
-     * Get 目标组类型，当前支持v1(旧版目标组), v2(新版目标组)。默认为v1旧版目标组。 
-     * @return TargetGroupType 目标组类型，当前支持v1(旧版目标组), v2(新版目标组)。默认为v1旧版目标组。
+     * Get <p>目标组类型，当前支持v1(旧版目标组), v2(新版目标组)。默认为v1旧版目标组。</p> 
+     * @return TargetGroupType <p>目标组类型，当前支持v1(旧版目标组), v2(新版目标组)。默认为v1旧版目标组。</p>
      */
     public String getTargetGroupType() {
         return this.TargetGroupType;
     }
 
     /**
-     * Set 目标组类型，当前支持v1(旧版目标组), v2(新版目标组)。默认为v1旧版目标组。
-     * @param TargetGroupType 目标组类型，当前支持v1(旧版目标组), v2(新版目标组)。默认为v1旧版目标组。
+     * Set <p>目标组类型，当前支持v1(旧版目标组), v2(新版目标组)。默认为v1旧版目标组。</p>
+     * @param TargetGroupType <p>目标组类型，当前支持v1(旧版目标组), v2(新版目标组)。默认为v1旧版目标组。</p>
      */
     public void setTargetGroupType(String TargetGroupType) {
         this.TargetGroupType = TargetGroupType;
     }
 
     /**
-     * Get 目标组已关联的规则数。 
-     * @return AssociatedRuleCount 目标组已关联的规则数。
+     * Get <p>目标组已关联的规则数。</p> 
+     * @return AssociatedRuleCount <p>目标组已关联的规则数。</p>
      */
     public Long getAssociatedRuleCount() {
         return this.AssociatedRuleCount;
     }
 
     /**
-     * Set 目标组已关联的规则数。
-     * @param AssociatedRuleCount 目标组已关联的规则数。
+     * Set <p>目标组已关联的规则数。</p>
+     * @param AssociatedRuleCount <p>目标组已关联的规则数。</p>
      */
     public void setAssociatedRuleCount(Long AssociatedRuleCount) {
         this.AssociatedRuleCount = AssociatedRuleCount;
     }
 
     /**
-     * Get 目标组内的实例数量。 
-     * @return RegisteredInstancesCount 目标组内的实例数量。
+     * Get <p>目标组内的实例数量。</p> 
+     * @return RegisteredInstancesCount <p>目标组内的实例数量。</p>
      */
     public Long getRegisteredInstancesCount() {
         return this.RegisteredInstancesCount;
     }
 
     /**
-     * Set 目标组内的实例数量。
-     * @param RegisteredInstancesCount 目标组内的实例数量。
+     * Set <p>目标组内的实例数量。</p>
+     * @param RegisteredInstancesCount <p>目标组内的实例数量。</p>
      */
     public void setRegisteredInstancesCount(Long RegisteredInstancesCount) {
         this.RegisteredInstancesCount = RegisteredInstancesCount;
     }
 
     /**
-     * Get 标签。 
-     * @return Tag 标签。
+     * Get <p>标签。</p> 
+     * @return Tag <p>标签。</p>
      */
     public TagInfo [] getTag() {
         return this.Tag;
     }
 
     /**
-     * Set 标签。
-     * @param Tag 标签。
+     * Set <p>标签。</p>
+     * @param Tag <p>标签。</p>
      */
     public void setTag(TagInfo [] Tag) {
         this.Tag = Tag;
     }
 
     /**
-     * Get 默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。
+     * Get <p>默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Weight 默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。
+     * @return Weight <p>默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWeight() {
@@ -447,9 +417,9 @@ public class TargetGroupInfo extends AbstractModel {
     }
 
     /**
-     * Set 默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。
+     * Set <p>默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Weight 默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。
+     * @param Weight <p>默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWeight(Long Weight) {
@@ -457,64 +427,64 @@ public class TargetGroupInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否全监听目标组。 
-     * @return FullListenSwitch 是否全监听目标组。
+     * Get <p>是否全监听目标组。</p> 
+     * @return FullListenSwitch <p>是否全监听目标组。</p>
      */
     public Boolean getFullListenSwitch() {
         return this.FullListenSwitch;
     }
 
     /**
-     * Set 是否全监听目标组。
-     * @param FullListenSwitch 是否全监听目标组。
+     * Set <p>是否全监听目标组。</p>
+     * @param FullListenSwitch <p>是否全监听目标组。</p>
      */
     public void setFullListenSwitch(Boolean FullListenSwitch) {
         this.FullListenSwitch = FullListenSwitch;
     }
 
     /**
-     * Get 是否开启长连接,  仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。 
-     * @return KeepaliveEnable 是否开启长连接,  仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。
+     * Get <p>是否开启长连接,  仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。</p> 
+     * @return KeepaliveEnable <p>是否开启长连接,  仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。</p>
      */
     public Boolean getKeepaliveEnable() {
         return this.KeepaliveEnable;
     }
 
     /**
-     * Set 是否开启长连接,  仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。
-     * @param KeepaliveEnable 是否开启长连接,  仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。
+     * Set <p>是否开启长连接,  仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。</p>
+     * @param KeepaliveEnable <p>是否开启长连接,  仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。</p>
      */
     public void setKeepaliveEnable(Boolean KeepaliveEnable) {
         this.KeepaliveEnable = KeepaliveEnable;
     }
 
     /**
-     * Get 会话保持时间，仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。 
-     * @return SessionExpireTime 会话保持时间，仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。
+     * Get <p>会话保持时间，仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。</p> 
+     * @return SessionExpireTime <p>会话保持时间，仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。</p>
      */
     public Long getSessionExpireTime() {
         return this.SessionExpireTime;
     }
 
     /**
-     * Set 会话保持时间，仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。
-     * @param SessionExpireTime 会话保持时间，仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。
+     * Set <p>会话保持时间，仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。</p>
+     * @param SessionExpireTime <p>会话保持时间，仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。</p>
      */
     public void setSessionExpireTime(Long SessionExpireTime) {
         this.SessionExpireTime = SessionExpireTime;
     }
 
     /**
-     * Get IP版本。 
-     * @return IpVersion IP版本。
+     * Get <p>IP版本。</p> 
+     * @return IpVersion <p>IP版本。</p>
      */
     public String getIpVersion() {
         return this.IpVersion;
     }
 
     /**
-     * Set IP版本。
-     * @param IpVersion IP版本。
+     * Set <p>IP版本。</p>
+     * @param IpVersion <p>IP版本。</p>
      */
     public void setIpVersion(String IpVersion) {
         this.IpVersion = IpVersion;

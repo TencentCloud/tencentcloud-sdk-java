@@ -480,6 +480,9 @@ public enum DlcErrorCode {
      /* 找不到参数或参数为空 */
      INVALIDPARAMETER_PARAMETERNOTFOUNDORBENONE("InvalidParameter.ParameterNotFoundOrBeNone"),
      
+     /* 权限类型冲突。 */
+     INVALIDPARAMETER_POLICYTYPECONFLICT("InvalidParameter.PolicyTypeConflict"),
+     
      /* SQL脚本Base64解析失败 */
      INVALIDPARAMETER_SQLBASE64DECODEFAIL("InvalidParameter.SQLBase64DecodeFail"),
      

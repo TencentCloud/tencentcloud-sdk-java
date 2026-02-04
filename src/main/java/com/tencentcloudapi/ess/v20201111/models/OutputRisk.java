@@ -86,6 +86,20 @@ public class OutputRisk extends AbstractModel {
     private PositionInfo [] Positions;
 
     /**
+    * 是否已修订
+    */
+    @SerializedName("IsMark")
+    @Expose
+    private Boolean IsMark;
+
+    /**
+    * 是否已忽略
+    */
+    @SerializedName("IsIgnore")
+    @Expose
+    private Boolean IsIgnore;
+
+    /**
     * 审查依据
     */
     @SerializedName("RiskBasis")
@@ -133,6 +147,13 @@ public class OutputRisk extends AbstractModel {
     @SerializedName("CreatedOn")
     @Expose
     private Long CreatedOn;
+
+    /**
+    * 风险等级别名
+    */
+    @SerializedName("RiskLevelAliasName")
+    @Expose
+    private String RiskLevelAliasName;
 
     /**
      * Get 合同审查风险结果ID 
@@ -287,6 +308,38 @@ public class OutputRisk extends AbstractModel {
     }
 
     /**
+     * Get 是否已修订 
+     * @return IsMark 是否已修订
+     */
+    public Boolean getIsMark() {
+        return this.IsMark;
+    }
+
+    /**
+     * Set 是否已修订
+     * @param IsMark 是否已修订
+     */
+    public void setIsMark(Boolean IsMark) {
+        this.IsMark = IsMark;
+    }
+
+    /**
+     * Get 是否已忽略 
+     * @return IsIgnore 是否已忽略
+     */
+    public Boolean getIsIgnore() {
+        return this.IsIgnore;
+    }
+
+    /**
+     * Set 是否已忽略
+     * @param IsIgnore 是否已忽略
+     */
+    public void setIsIgnore(Boolean IsIgnore) {
+        this.IsIgnore = IsIgnore;
+    }
+
+    /**
      * Get 审查依据 
      * @return RiskBasis 审查依据
      */
@@ -398,6 +451,22 @@ public class OutputRisk extends AbstractModel {
         this.CreatedOn = CreatedOn;
     }
 
+    /**
+     * Get 风险等级别名 
+     * @return RiskLevelAliasName 风险等级别名
+     */
+    public String getRiskLevelAliasName() {
+        return this.RiskLevelAliasName;
+    }
+
+    /**
+     * Set 风险等级别名
+     * @param RiskLevelAliasName 风险等级别名
+     */
+    public void setRiskLevelAliasName(String RiskLevelAliasName) {
+        this.RiskLevelAliasName = RiskLevelAliasName;
+    }
+
     public OutputRisk() {
     }
 
@@ -436,6 +505,12 @@ public class OutputRisk extends AbstractModel {
                 this.Positions[i] = new PositionInfo(source.Positions[i]);
             }
         }
+        if (source.IsMark != null) {
+            this.IsMark = new Boolean(source.IsMark);
+        }
+        if (source.IsIgnore != null) {
+            this.IsIgnore = new Boolean(source.IsIgnore);
+        }
         if (source.RiskBasis != null) {
             this.RiskBasis = new String(source.RiskBasis);
         }
@@ -460,6 +535,9 @@ public class OutputRisk extends AbstractModel {
         if (source.CreatedOn != null) {
             this.CreatedOn = new Long(source.CreatedOn);
         }
+        if (source.RiskLevelAliasName != null) {
+            this.RiskLevelAliasName = new String(source.RiskLevelAliasName);
+        }
     }
 
 
@@ -475,6 +553,8 @@ public class OutputRisk extends AbstractModel {
         this.setParamArraySimple(map, prefix + "RiskPresentation.", this.RiskPresentation);
         this.setParamSimple(map, prefix + "Content", this.Content);
         this.setParamArrayObj(map, prefix + "Positions.", this.Positions);
+        this.setParamSimple(map, prefix + "IsMark", this.IsMark);
+        this.setParamSimple(map, prefix + "IsIgnore", this.IsIgnore);
         this.setParamSimple(map, prefix + "RiskBasis", this.RiskBasis);
         this.setParamSimple(map, prefix + "RiskLevelId", this.RiskLevelId);
         this.setParamArraySimple(map, prefix + "RiskLabels.", this.RiskLabels);
@@ -482,6 +562,7 @@ public class OutputRisk extends AbstractModel {
         this.setParamSimple(map, prefix + "Creator", this.Creator);
         this.setParamSimple(map, prefix + "CreatorId", this.CreatorId);
         this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
+        this.setParamSimple(map, prefix + "RiskLevelAliasName", this.RiskLevelAliasName);
 
     }
 }

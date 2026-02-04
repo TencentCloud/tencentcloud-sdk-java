@@ -101,6 +101,13 @@ public class BotToken extends AbstractModel {
     private TokenValidation TokenValidation;
 
     /**
+    * 1表示开启了禁用嵌套功能
+    */
+    @SerializedName("DisableMultiJson")
+    @Expose
+    private Long DisableMultiJson;
+
+    /**
      * Get 会话名称 
      * @return Name 会话名称
      */
@@ -276,6 +283,22 @@ public class BotToken extends AbstractModel {
         this.TokenValidation = TokenValidation;
     }
 
+    /**
+     * Get 1表示开启了禁用嵌套功能 
+     * @return DisableMultiJson 1表示开启了禁用嵌套功能
+     */
+    public Long getDisableMultiJson() {
+        return this.DisableMultiJson;
+    }
+
+    /**
+     * Set 1表示开启了禁用嵌套功能
+     * @param DisableMultiJson 1表示开启了禁用嵌套功能
+     */
+    public void setDisableMultiJson(Long DisableMultiJson) {
+        this.DisableMultiJson = DisableMultiJson;
+    }
+
     public BotToken() {
     }
 
@@ -320,6 +343,9 @@ public class BotToken extends AbstractModel {
         if (source.TokenValidation != null) {
             this.TokenValidation = new TokenValidation(source.TokenValidation);
         }
+        if (source.DisableMultiJson != null) {
+            this.DisableMultiJson = new Long(source.DisableMultiJson);
+        }
     }
 
 
@@ -338,6 +364,7 @@ public class BotToken extends AbstractModel {
         this.setParamArraySimple(map, prefix + "Scene.", this.Scene);
         this.setParamSimple(map, prefix + "Priority", this.Priority);
         this.setParamObj(map, prefix + "TokenValidation.", this.TokenValidation);
+        this.setParamSimple(map, prefix + "DisableMultiJson", this.DisableMultiJson);
 
     }
 }

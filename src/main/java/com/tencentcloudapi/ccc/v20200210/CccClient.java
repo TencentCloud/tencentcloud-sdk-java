@@ -507,6 +507,17 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *获取闪信记录列表
+     * @param req DescribeFlashSMSListRequest
+     * @return DescribeFlashSMSListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFlashSMSListResponse DescribeFlashSMSList(DescribeFlashSMSListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFlashSMSList", DescribeFlashSMSListResponse.class);
+    }
+
+    /**
      *获取包括全媒体和文本会话两种类型的服务记录。
      * @param req DescribeIMCdrListRequest
      * @return DescribeIMCdrListResponse

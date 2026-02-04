@@ -38,14 +38,14 @@ public class CronJob extends AbstractModel {
     private Long [] WDays;
 
     /**
-    * 开始时间
+    * 开始时间戳
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间
+    * 结束时间戳
     */
     @SerializedName("EndTime")
     @Expose
@@ -84,32 +84,32 @@ public class CronJob extends AbstractModel {
     }
 
     /**
-     * Get 开始时间 
-     * @return StartTime 开始时间
+     * Get 开始时间戳 
+     * @return StartTime 开始时间戳
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间
-     * @param StartTime 开始时间
+     * Set 开始时间戳
+     * @param StartTime 开始时间戳
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
+     * Get 结束时间戳 
+     * @return EndTime 结束时间戳
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTime 结束时间
+     * Set 结束时间戳
+     * @param EndTime 结束时间戳
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

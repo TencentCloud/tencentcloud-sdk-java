@@ -73,6 +73,13 @@ public class ModifyClusterAttributeResponse extends AbstractModel {
     private ClusterProperty ClusterProperty;
 
     /**
+    * 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行
+    */
+    @SerializedName("IsHighAvailability")
+    @Expose
+    private Boolean IsHighAvailability;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -192,6 +199,22 @@ public class ModifyClusterAttributeResponse extends AbstractModel {
     }
 
     /**
+     * Get 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行 
+     * @return IsHighAvailability 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行
+     */
+    public Boolean getIsHighAvailability() {
+        return this.IsHighAvailability;
+    }
+
+    /**
+     * Set 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行
+     * @param IsHighAvailability 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行
+     */
+    public void setIsHighAvailability(Boolean IsHighAvailability) {
+        this.IsHighAvailability = IsHighAvailability;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -236,6 +259,9 @@ public class ModifyClusterAttributeResponse extends AbstractModel {
         if (source.ClusterProperty != null) {
             this.ClusterProperty = new ClusterProperty(source.ClusterProperty);
         }
+        if (source.IsHighAvailability != null) {
+            this.IsHighAvailability = new Boolean(source.IsHighAvailability);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -253,6 +279,7 @@ public class ModifyClusterAttributeResponse extends AbstractModel {
         this.setParamObj(map, prefix + "AutoUpgradeClusterLevel.", this.AutoUpgradeClusterLevel);
         this.setParamSimple(map, prefix + "QGPUShareEnable", this.QGPUShareEnable);
         this.setParamObj(map, prefix + "ClusterProperty.", this.ClusterProperty);
+        this.setParamSimple(map, prefix + "IsHighAvailability", this.IsHighAvailability);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

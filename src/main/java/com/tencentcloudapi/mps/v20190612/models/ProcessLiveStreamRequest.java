@@ -24,13 +24,19 @@ import java.util.HashMap;
 public class ProcessLiveStreamRequest extends AbstractModel {
 
     /**
-    * 直播流 URL（必须是直播文件地址，支持 rtmp，hls 和 flv, trtc 等）。
+    * 直播流 URL（必须是直播流地址，支持 rtmp，hls 和 flv, trtc,webrtc,srt等）。
 trtc地址如下：
  trtc: //trtc.rtc.qq.com/mps/`<roomid>`?sdkappid=`<sdkappid>`&userid=`<userid>`&usersig=<`usersig>`
 `<roomid>` 为trtc的房间号id, 为数字
 `<sdkappid>` 为trtc的sdk app id
 `<userid>` 为服务进入房间的用户id,可以区分谁是机器人
 <`usersig>` 为trtc 用户的签名
+
+webrtc 支持[LEB](https://cloud.tencent.com/product/leb)的直播流，地址获取请[参考](https://cloud.tencent.com/document/product/267/32720)
+
+srt支持地址请[参考](https://ffmpeg.org/ffmpeg-protocols.html#srt)
+
+
     */
     @SerializedName("Url")
     @Expose
@@ -86,6 +92,13 @@ trtc地址如下：
     private AiQualityControlTaskInput AiQualityControlTask;
 
     /**
+    * 智能字幕任务参数。
+    */
+    @SerializedName("SmartSubtitlesTask")
+    @Expose
+    private LiveSmartSubtitlesTaskInput SmartSubtitlesTask;
+
+    /**
     * 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
     */
     @SerializedName("SessionId")
@@ -111,40 +124,64 @@ trtc地址如下：
     private Long ScheduleId;
 
     /**
-     * Get 直播流 URL（必须是直播文件地址，支持 rtmp，hls 和 flv, trtc 等）。
-trtc地址如下：
- trtc: //trtc.rtc.qq.com/mps/`<roomid>`?sdkappid=`<sdkappid>`&userid=`<userid>`&usersig=<`usersig>`
-`<roomid>` 为trtc的房间号id, 为数字
-`<sdkappid>` 为trtc的sdk app id
-`<userid>` 为服务进入房间的用户id,可以区分谁是机器人
-<`usersig>` 为trtc 用户的签名 
-     * @return Url 直播流 URL（必须是直播文件地址，支持 rtmp，hls 和 flv, trtc 等）。
+     * Get 直播流 URL（必须是直播流地址，支持 rtmp，hls 和 flv, trtc,webrtc,srt等）。
 trtc地址如下：
  trtc: //trtc.rtc.qq.com/mps/`<roomid>`?sdkappid=`<sdkappid>`&userid=`<userid>`&usersig=<`usersig>`
 `<roomid>` 为trtc的房间号id, 为数字
 `<sdkappid>` 为trtc的sdk app id
 `<userid>` 为服务进入房间的用户id,可以区分谁是机器人
 <`usersig>` 为trtc 用户的签名
+
+webrtc 支持[LEB](https://cloud.tencent.com/product/leb)的直播流，地址获取请[参考](https://cloud.tencent.com/document/product/267/32720)
+
+srt支持地址请[参考](https://ffmpeg.org/ffmpeg-protocols.html#srt)
+
+ 
+     * @return Url 直播流 URL（必须是直播流地址，支持 rtmp，hls 和 flv, trtc,webrtc,srt等）。
+trtc地址如下：
+ trtc: //trtc.rtc.qq.com/mps/`<roomid>`?sdkappid=`<sdkappid>`&userid=`<userid>`&usersig=<`usersig>`
+`<roomid>` 为trtc的房间号id, 为数字
+`<sdkappid>` 为trtc的sdk app id
+`<userid>` 为服务进入房间的用户id,可以区分谁是机器人
+<`usersig>` 为trtc 用户的签名
+
+webrtc 支持[LEB](https://cloud.tencent.com/product/leb)的直播流，地址获取请[参考](https://cloud.tencent.com/document/product/267/32720)
+
+srt支持地址请[参考](https://ffmpeg.org/ffmpeg-protocols.html#srt)
+
+
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 直播流 URL（必须是直播文件地址，支持 rtmp，hls 和 flv, trtc 等）。
+     * Set 直播流 URL（必须是直播流地址，支持 rtmp，hls 和 flv, trtc,webrtc,srt等）。
 trtc地址如下：
  trtc: //trtc.rtc.qq.com/mps/`<roomid>`?sdkappid=`<sdkappid>`&userid=`<userid>`&usersig=<`usersig>`
 `<roomid>` 为trtc的房间号id, 为数字
 `<sdkappid>` 为trtc的sdk app id
 `<userid>` 为服务进入房间的用户id,可以区分谁是机器人
 <`usersig>` 为trtc 用户的签名
-     * @param Url 直播流 URL（必须是直播文件地址，支持 rtmp，hls 和 flv, trtc 等）。
+
+webrtc 支持[LEB](https://cloud.tencent.com/product/leb)的直播流，地址获取请[参考](https://cloud.tencent.com/document/product/267/32720)
+
+srt支持地址请[参考](https://ffmpeg.org/ffmpeg-protocols.html#srt)
+
+
+     * @param Url 直播流 URL（必须是直播流地址，支持 rtmp，hls 和 flv, trtc,webrtc,srt等）。
 trtc地址如下：
  trtc: //trtc.rtc.qq.com/mps/`<roomid>`?sdkappid=`<sdkappid>`&userid=`<userid>`&usersig=<`usersig>`
 `<roomid>` 为trtc的房间号id, 为数字
 `<sdkappid>` 为trtc的sdk app id
 `<userid>` 为服务进入房间的用户id,可以区分谁是机器人
 <`usersig>` 为trtc 用户的签名
+
+webrtc 支持[LEB](https://cloud.tencent.com/product/leb)的直播流，地址获取请[参考](https://cloud.tencent.com/document/product/267/32720)
+
+srt支持地址请[参考](https://ffmpeg.org/ffmpeg-protocols.html#srt)
+
+
      */
     public void setUrl(String Url) {
         this.Url = Url;
@@ -263,6 +300,22 @@ trtc地址如下：
     }
 
     /**
+     * Get 智能字幕任务参数。 
+     * @return SmartSubtitlesTask 智能字幕任务参数。
+     */
+    public LiveSmartSubtitlesTaskInput getSmartSubtitlesTask() {
+        return this.SmartSubtitlesTask;
+    }
+
+    /**
+     * Set 智能字幕任务参数。
+     * @param SmartSubtitlesTask 智能字幕任务参数。
+     */
+    public void setSmartSubtitlesTask(LiveSmartSubtitlesTaskInput SmartSubtitlesTask) {
+        this.SmartSubtitlesTask = SmartSubtitlesTask;
+    }
+
+    /**
      * Get 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。 
      * @return SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      */
@@ -358,6 +411,9 @@ trtc地址如下：
         if (source.AiQualityControlTask != null) {
             this.AiQualityControlTask = new AiQualityControlTaskInput(source.AiQualityControlTask);
         }
+        if (source.SmartSubtitlesTask != null) {
+            this.SmartSubtitlesTask = new LiveSmartSubtitlesTaskInput(source.SmartSubtitlesTask);
+        }
         if (source.SessionId != null) {
             this.SessionId = new String(source.SessionId);
         }
@@ -382,6 +438,7 @@ trtc地址如下：
         this.setParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
         this.setParamObj(map, prefix + "AiAnalysisTask.", this.AiAnalysisTask);
         this.setParamObj(map, prefix + "AiQualityControlTask.", this.AiQualityControlTask);
+        this.setParamObj(map, prefix + "SmartSubtitlesTask.", this.SmartSubtitlesTask);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "ScheduleId", this.ScheduleId);

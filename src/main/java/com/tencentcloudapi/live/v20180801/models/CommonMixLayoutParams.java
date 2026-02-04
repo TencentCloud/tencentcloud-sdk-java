@@ -24,362 +24,210 @@ import java.util.HashMap;
 public class CommonMixLayoutParams extends AbstractModel {
 
     /**
-    * 输入图层。取值范围[1，16]。
-1)背景流（即大主播画面或画布）的 image_layer 填1。
-2)纯音频混流，该参数也需填。
-注意：不同输入，该值不可重复
+    * <p>输入图层。取值范围[1，16]。<br>1)背景流（即大主播画面或画布）的 image_layer 填1。<br>2)纯音频混流，该参数也需填。<br>注意：不同输入，该值不可重复</p>
     */
     @SerializedName("ImageLayer")
     @Expose
     private Long ImageLayer;
 
     /**
-    * 输入类型。取值范围[0，5]。
-不填默认为0。
-0表示输入流为音视频。
-2表示输入流为图片。
-3表示输入流为画布。 
-4表示输入流为音频。
-5表示输入流为纯视频。
+    * <p>输入类型。取值范围[0，5]。<br>不填默认为0。<br>0表示输入流为音视频。<br>2表示输入流为图片。<br>3表示输入流为画布。<br>4表示输入流为音频。<br>5表示输入流为纯视频。</p>
     */
     @SerializedName("InputType")
     @Expose
     private Long InputType;
 
     /**
-    * 输入画面在输出时的高度。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为输入流的高度。
-使用百分比时，期望输出为（百分比 * 背景高）。
+    * <p>输入画面在输出时的高度。取值范围：<br>像素：[0，2000]<br>百分比：[0.01，0.99]<br>不填默认为输入流的高度。<br>使用百分比时，期望输出为（百分比 * 背景高）。</p>
     */
     @SerializedName("ImageHeight")
     @Expose
     private Float ImageHeight;
 
     /**
-    * 输入画面在输出时的宽度。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为输入流的宽度。
-使用百分比时，期望输出为（百分比 * 背景宽）。
+    * <p>输入画面在输出时的宽度。取值范围：<br>像素：[0，2000]<br>百分比：[0.01，0.99]<br>不填默认为输入流的宽度。<br>使用百分比时，期望输出为（百分比 * 背景宽）。</p>
     */
     @SerializedName("ImageWidth")
     @Expose
     private Float ImageWidth;
 
     /**
-    * 输入在输出画面的X偏移。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为0。
-相对于大主播背景画面左上角的横向偏移。 
-使用百分比时，期望输出为（百分比 * 背景宽）。
+    * <p>输入在输出画面的X偏移。取值范围：<br>像素：[0，2000]<br>百分比：[0.01，0.99]<br>不填默认为0。<br>相对于大主播背景画面左上角的横向偏移。<br>使用百分比时，期望输出为（百分比 * 背景宽）。</p>
     */
     @SerializedName("LocationX")
     @Expose
     private Float LocationX;
 
     /**
-    * 输入在输出画面的Y偏移。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为0。
-相对于大主播背景画面左上角的纵向偏移。 
-使用百分比时，期望输出为（百分比 * 背景宽）
+    * <p>输入在输出画面的Y偏移。取值范围：<br>像素：[0，2000]<br>百分比：[0.01，0.99]<br>不填默认为0。<br>相对于大主播背景画面左上角的纵向偏移。<br>使用百分比时，期望输出为（百分比 * 背景宽）</p>
     */
     @SerializedName("LocationY")
     @Expose
     private Float LocationY;
 
     /**
-    * 当InputType为3(画布)时，该值表示画布的颜色。
-常用的颜色有：
-红色：0xCC0033。
-黄色：0xCC9900。
-绿色：0xCCCC33。
-蓝色：0x99CCFF。
-黑色：0x000000。
-白色：0xFFFFFF。
-灰色：0x999999。
+    * <p>当InputType为3(画布)时，该值表示画布的颜色。<br>常用的颜色有：<br>红色：0xCC0033。<br>黄色：0xCC9900。<br>绿色：0xCCCC33。<br>蓝色：0x99CCFF。<br>黑色：0x000000。<br>白色：0xFFFFFF。<br>灰色：0x999999。</p>
     */
     @SerializedName("Color")
     @Expose
     private String Color;
 
     /**
-    * 当InputType为2(图片)时，该值是水印ID。
+    * <p>当InputType为2(图片)时，该值是水印ID。</p>
     */
     @SerializedName("WatermarkId")
     @Expose
     private Long WatermarkId;
 
     /**
-     * Get 输入图层。取值范围[1，16]。
-1)背景流（即大主播画面或画布）的 image_layer 填1。
-2)纯音频混流，该参数也需填。
-注意：不同输入，该值不可重复 
-     * @return ImageLayer 输入图层。取值范围[1，16]。
-1)背景流（即大主播画面或画布）的 image_layer 填1。
-2)纯音频混流，该参数也需填。
-注意：不同输入，该值不可重复
+    * <p>当InputType为8时，该值是动效贴片的URL</p>
+    */
+    @SerializedName("WebPageUrl")
+    @Expose
+    private String WebPageUrl;
+
+    /**
+     * Get <p>输入图层。取值范围[1，16]。<br>1)背景流（即大主播画面或画布）的 image_layer 填1。<br>2)纯音频混流，该参数也需填。<br>注意：不同输入，该值不可重复</p> 
+     * @return ImageLayer <p>输入图层。取值范围[1，16]。<br>1)背景流（即大主播画面或画布）的 image_layer 填1。<br>2)纯音频混流，该参数也需填。<br>注意：不同输入，该值不可重复</p>
      */
     public Long getImageLayer() {
         return this.ImageLayer;
     }
 
     /**
-     * Set 输入图层。取值范围[1，16]。
-1)背景流（即大主播画面或画布）的 image_layer 填1。
-2)纯音频混流，该参数也需填。
-注意：不同输入，该值不可重复
-     * @param ImageLayer 输入图层。取值范围[1，16]。
-1)背景流（即大主播画面或画布）的 image_layer 填1。
-2)纯音频混流，该参数也需填。
-注意：不同输入，该值不可重复
+     * Set <p>输入图层。取值范围[1，16]。<br>1)背景流（即大主播画面或画布）的 image_layer 填1。<br>2)纯音频混流，该参数也需填。<br>注意：不同输入，该值不可重复</p>
+     * @param ImageLayer <p>输入图层。取值范围[1，16]。<br>1)背景流（即大主播画面或画布）的 image_layer 填1。<br>2)纯音频混流，该参数也需填。<br>注意：不同输入，该值不可重复</p>
      */
     public void setImageLayer(Long ImageLayer) {
         this.ImageLayer = ImageLayer;
     }
 
     /**
-     * Get 输入类型。取值范围[0，5]。
-不填默认为0。
-0表示输入流为音视频。
-2表示输入流为图片。
-3表示输入流为画布。 
-4表示输入流为音频。
-5表示输入流为纯视频。 
-     * @return InputType 输入类型。取值范围[0，5]。
-不填默认为0。
-0表示输入流为音视频。
-2表示输入流为图片。
-3表示输入流为画布。 
-4表示输入流为音频。
-5表示输入流为纯视频。
+     * Get <p>输入类型。取值范围[0，5]。<br>不填默认为0。<br>0表示输入流为音视频。<br>2表示输入流为图片。<br>3表示输入流为画布。<br>4表示输入流为音频。<br>5表示输入流为纯视频。</p> 
+     * @return InputType <p>输入类型。取值范围[0，5]。<br>不填默认为0。<br>0表示输入流为音视频。<br>2表示输入流为图片。<br>3表示输入流为画布。<br>4表示输入流为音频。<br>5表示输入流为纯视频。</p>
      */
     public Long getInputType() {
         return this.InputType;
     }
 
     /**
-     * Set 输入类型。取值范围[0，5]。
-不填默认为0。
-0表示输入流为音视频。
-2表示输入流为图片。
-3表示输入流为画布。 
-4表示输入流为音频。
-5表示输入流为纯视频。
-     * @param InputType 输入类型。取值范围[0，5]。
-不填默认为0。
-0表示输入流为音视频。
-2表示输入流为图片。
-3表示输入流为画布。 
-4表示输入流为音频。
-5表示输入流为纯视频。
+     * Set <p>输入类型。取值范围[0，5]。<br>不填默认为0。<br>0表示输入流为音视频。<br>2表示输入流为图片。<br>3表示输入流为画布。<br>4表示输入流为音频。<br>5表示输入流为纯视频。</p>
+     * @param InputType <p>输入类型。取值范围[0，5]。<br>不填默认为0。<br>0表示输入流为音视频。<br>2表示输入流为图片。<br>3表示输入流为画布。<br>4表示输入流为音频。<br>5表示输入流为纯视频。</p>
      */
     public void setInputType(Long InputType) {
         this.InputType = InputType;
     }
 
     /**
-     * Get 输入画面在输出时的高度。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为输入流的高度。
-使用百分比时，期望输出为（百分比 * 背景高）。 
-     * @return ImageHeight 输入画面在输出时的高度。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为输入流的高度。
-使用百分比时，期望输出为（百分比 * 背景高）。
+     * Get <p>输入画面在输出时的高度。取值范围：<br>像素：[0，2000]<br>百分比：[0.01，0.99]<br>不填默认为输入流的高度。<br>使用百分比时，期望输出为（百分比 * 背景高）。</p> 
+     * @return ImageHeight <p>输入画面在输出时的高度。取值范围：<br>像素：[0，2000]<br>百分比：[0.01，0.99]<br>不填默认为输入流的高度。<br>使用百分比时，期望输出为（百分比 * 背景高）。</p>
      */
     public Float getImageHeight() {
         return this.ImageHeight;
     }
 
     /**
-     * Set 输入画面在输出时的高度。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为输入流的高度。
-使用百分比时，期望输出为（百分比 * 背景高）。
-     * @param ImageHeight 输入画面在输出时的高度。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为输入流的高度。
-使用百分比时，期望输出为（百分比 * 背景高）。
+     * Set <p>输入画面在输出时的高度。取值范围：<br>像素：[0，2000]<br>百分比：[0.01，0.99]<br>不填默认为输入流的高度。<br>使用百分比时，期望输出为（百分比 * 背景高）。</p>
+     * @param ImageHeight <p>输入画面在输出时的高度。取值范围：<br>像素：[0，2000]<br>百分比：[0.01，0.99]<br>不填默认为输入流的高度。<br>使用百分比时，期望输出为（百分比 * 背景高）。</p>
      */
     public void setImageHeight(Float ImageHeight) {
         this.ImageHeight = ImageHeight;
     }
 
     /**
-     * Get 输入画面在输出时的宽度。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为输入流的宽度。
-使用百分比时，期望输出为（百分比 * 背景宽）。 
-     * @return ImageWidth 输入画面在输出时的宽度。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为输入流的宽度。
-使用百分比时，期望输出为（百分比 * 背景宽）。
+     * Get <p>输入画面在输出时的宽度。取值范围：<br>像素：[0，2000]<br>百分比：[0.01，0.99]<br>不填默认为输入流的宽度。<br>使用百分比时，期望输出为（百分比 * 背景宽）。</p> 
+     * @return ImageWidth <p>输入画面在输出时的宽度。取值范围：<br>像素：[0，2000]<br>百分比：[0.01，0.99]<br>不填默认为输入流的宽度。<br>使用百分比时，期望输出为（百分比 * 背景宽）。</p>
      */
     public Float getImageWidth() {
         return this.ImageWidth;
     }
 
     /**
-     * Set 输入画面在输出时的宽度。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为输入流的宽度。
-使用百分比时，期望输出为（百分比 * 背景宽）。
-     * @param ImageWidth 输入画面在输出时的宽度。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为输入流的宽度。
-使用百分比时，期望输出为（百分比 * 背景宽）。
+     * Set <p>输入画面在输出时的宽度。取值范围：<br>像素：[0，2000]<br>百分比：[0.01，0.99]<br>不填默认为输入流的宽度。<br>使用百分比时，期望输出为（百分比 * 背景宽）。</p>
+     * @param ImageWidth <p>输入画面在输出时的宽度。取值范围：<br>像素：[0，2000]<br>百分比：[0.01，0.99]<br>不填默认为输入流的宽度。<br>使用百分比时，期望输出为（百分比 * 背景宽）。</p>
      */
     public void setImageWidth(Float ImageWidth) {
         this.ImageWidth = ImageWidth;
     }
 
     /**
-     * Get 输入在输出画面的X偏移。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为0。
-相对于大主播背景画面左上角的横向偏移。 
-使用百分比时，期望输出为（百分比 * 背景宽）。 
-     * @return LocationX 输入在输出画面的X偏移。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为0。
-相对于大主播背景画面左上角的横向偏移。 
-使用百分比时，期望输出为（百分比 * 背景宽）。
+     * Get <p>输入在输出画面的X偏移。取值范围：<br>像素：[0，2000]<br>百分比：[0.01，0.99]<br>不填默认为0。<br>相对于大主播背景画面左上角的横向偏移。<br>使用百分比时，期望输出为（百分比 * 背景宽）。</p> 
+     * @return LocationX <p>输入在输出画面的X偏移。取值范围：<br>像素：[0，2000]<br>百分比：[0.01，0.99]<br>不填默认为0。<br>相对于大主播背景画面左上角的横向偏移。<br>使用百分比时，期望输出为（百分比 * 背景宽）。</p>
      */
     public Float getLocationX() {
         return this.LocationX;
     }
 
     /**
-     * Set 输入在输出画面的X偏移。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为0。
-相对于大主播背景画面左上角的横向偏移。 
-使用百分比时，期望输出为（百分比 * 背景宽）。
-     * @param LocationX 输入在输出画面的X偏移。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为0。
-相对于大主播背景画面左上角的横向偏移。 
-使用百分比时，期望输出为（百分比 * 背景宽）。
+     * Set <p>输入在输出画面的X偏移。取值范围：<br>像素：[0，2000]<br>百分比：[0.01，0.99]<br>不填默认为0。<br>相对于大主播背景画面左上角的横向偏移。<br>使用百分比时，期望输出为（百分比 * 背景宽）。</p>
+     * @param LocationX <p>输入在输出画面的X偏移。取值范围：<br>像素：[0，2000]<br>百分比：[0.01，0.99]<br>不填默认为0。<br>相对于大主播背景画面左上角的横向偏移。<br>使用百分比时，期望输出为（百分比 * 背景宽）。</p>
      */
     public void setLocationX(Float LocationX) {
         this.LocationX = LocationX;
     }
 
     /**
-     * Get 输入在输出画面的Y偏移。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为0。
-相对于大主播背景画面左上角的纵向偏移。 
-使用百分比时，期望输出为（百分比 * 背景宽） 
-     * @return LocationY 输入在输出画面的Y偏移。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为0。
-相对于大主播背景画面左上角的纵向偏移。 
-使用百分比时，期望输出为（百分比 * 背景宽）
+     * Get <p>输入在输出画面的Y偏移。取值范围：<br>像素：[0，2000]<br>百分比：[0.01，0.99]<br>不填默认为0。<br>相对于大主播背景画面左上角的纵向偏移。<br>使用百分比时，期望输出为（百分比 * 背景宽）</p> 
+     * @return LocationY <p>输入在输出画面的Y偏移。取值范围：<br>像素：[0，2000]<br>百分比：[0.01，0.99]<br>不填默认为0。<br>相对于大主播背景画面左上角的纵向偏移。<br>使用百分比时，期望输出为（百分比 * 背景宽）</p>
      */
     public Float getLocationY() {
         return this.LocationY;
     }
 
     /**
-     * Set 输入在输出画面的Y偏移。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为0。
-相对于大主播背景画面左上角的纵向偏移。 
-使用百分比时，期望输出为（百分比 * 背景宽）
-     * @param LocationY 输入在输出画面的Y偏移。取值范围：
-像素：[0，2000]
-百分比：[0.01，0.99]
-不填默认为0。
-相对于大主播背景画面左上角的纵向偏移。 
-使用百分比时，期望输出为（百分比 * 背景宽）
+     * Set <p>输入在输出画面的Y偏移。取值范围：<br>像素：[0，2000]<br>百分比：[0.01，0.99]<br>不填默认为0。<br>相对于大主播背景画面左上角的纵向偏移。<br>使用百分比时，期望输出为（百分比 * 背景宽）</p>
+     * @param LocationY <p>输入在输出画面的Y偏移。取值范围：<br>像素：[0，2000]<br>百分比：[0.01，0.99]<br>不填默认为0。<br>相对于大主播背景画面左上角的纵向偏移。<br>使用百分比时，期望输出为（百分比 * 背景宽）</p>
      */
     public void setLocationY(Float LocationY) {
         this.LocationY = LocationY;
     }
 
     /**
-     * Get 当InputType为3(画布)时，该值表示画布的颜色。
-常用的颜色有：
-红色：0xCC0033。
-黄色：0xCC9900。
-绿色：0xCCCC33。
-蓝色：0x99CCFF。
-黑色：0x000000。
-白色：0xFFFFFF。
-灰色：0x999999。 
-     * @return Color 当InputType为3(画布)时，该值表示画布的颜色。
-常用的颜色有：
-红色：0xCC0033。
-黄色：0xCC9900。
-绿色：0xCCCC33。
-蓝色：0x99CCFF。
-黑色：0x000000。
-白色：0xFFFFFF。
-灰色：0x999999。
+     * Get <p>当InputType为3(画布)时，该值表示画布的颜色。<br>常用的颜色有：<br>红色：0xCC0033。<br>黄色：0xCC9900。<br>绿色：0xCCCC33。<br>蓝色：0x99CCFF。<br>黑色：0x000000。<br>白色：0xFFFFFF。<br>灰色：0x999999。</p> 
+     * @return Color <p>当InputType为3(画布)时，该值表示画布的颜色。<br>常用的颜色有：<br>红色：0xCC0033。<br>黄色：0xCC9900。<br>绿色：0xCCCC33。<br>蓝色：0x99CCFF。<br>黑色：0x000000。<br>白色：0xFFFFFF。<br>灰色：0x999999。</p>
      */
     public String getColor() {
         return this.Color;
     }
 
     /**
-     * Set 当InputType为3(画布)时，该值表示画布的颜色。
-常用的颜色有：
-红色：0xCC0033。
-黄色：0xCC9900。
-绿色：0xCCCC33。
-蓝色：0x99CCFF。
-黑色：0x000000。
-白色：0xFFFFFF。
-灰色：0x999999。
-     * @param Color 当InputType为3(画布)时，该值表示画布的颜色。
-常用的颜色有：
-红色：0xCC0033。
-黄色：0xCC9900。
-绿色：0xCCCC33。
-蓝色：0x99CCFF。
-黑色：0x000000。
-白色：0xFFFFFF。
-灰色：0x999999。
+     * Set <p>当InputType为3(画布)时，该值表示画布的颜色。<br>常用的颜色有：<br>红色：0xCC0033。<br>黄色：0xCC9900。<br>绿色：0xCCCC33。<br>蓝色：0x99CCFF。<br>黑色：0x000000。<br>白色：0xFFFFFF。<br>灰色：0x999999。</p>
+     * @param Color <p>当InputType为3(画布)时，该值表示画布的颜色。<br>常用的颜色有：<br>红色：0xCC0033。<br>黄色：0xCC9900。<br>绿色：0xCCCC33。<br>蓝色：0x99CCFF。<br>黑色：0x000000。<br>白色：0xFFFFFF。<br>灰色：0x999999。</p>
      */
     public void setColor(String Color) {
         this.Color = Color;
     }
 
     /**
-     * Get 当InputType为2(图片)时，该值是水印ID。 
-     * @return WatermarkId 当InputType为2(图片)时，该值是水印ID。
+     * Get <p>当InputType为2(图片)时，该值是水印ID。</p> 
+     * @return WatermarkId <p>当InputType为2(图片)时，该值是水印ID。</p>
      */
     public Long getWatermarkId() {
         return this.WatermarkId;
     }
 
     /**
-     * Set 当InputType为2(图片)时，该值是水印ID。
-     * @param WatermarkId 当InputType为2(图片)时，该值是水印ID。
+     * Set <p>当InputType为2(图片)时，该值是水印ID。</p>
+     * @param WatermarkId <p>当InputType为2(图片)时，该值是水印ID。</p>
      */
     public void setWatermarkId(Long WatermarkId) {
         this.WatermarkId = WatermarkId;
+    }
+
+    /**
+     * Get <p>当InputType为8时，该值是动效贴片的URL</p> 
+     * @return WebPageUrl <p>当InputType为8时，该值是动效贴片的URL</p>
+     */
+    public String getWebPageUrl() {
+        return this.WebPageUrl;
+    }
+
+    /**
+     * Set <p>当InputType为8时，该值是动效贴片的URL</p>
+     * @param WebPageUrl <p>当InputType为8时，该值是动效贴片的URL</p>
+     */
+    public void setWebPageUrl(String WebPageUrl) {
+        this.WebPageUrl = WebPageUrl;
     }
 
     public CommonMixLayoutParams() {
@@ -414,6 +262,9 @@ public class CommonMixLayoutParams extends AbstractModel {
         if (source.WatermarkId != null) {
             this.WatermarkId = new Long(source.WatermarkId);
         }
+        if (source.WebPageUrl != null) {
+            this.WebPageUrl = new String(source.WebPageUrl);
+        }
     }
 
 
@@ -429,6 +280,7 @@ public class CommonMixLayoutParams extends AbstractModel {
         this.setParamSimple(map, prefix + "LocationY", this.LocationY);
         this.setParamSimple(map, prefix + "Color", this.Color);
         this.setParamSimple(map, prefix + "WatermarkId", this.WatermarkId);
+        this.setParamSimple(map, prefix + "WebPageUrl", this.WebPageUrl);
 
     }
 }

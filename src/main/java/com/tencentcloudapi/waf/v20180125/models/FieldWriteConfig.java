@@ -45,6 +45,14 @@ public class FieldWriteConfig extends AbstractModel {
     private Long EnableBot;
 
     /**
+    * 响应方向body
+1:开启 0:不开启
+    */
+    @SerializedName("EnableResponse")
+    @Expose
+    private Long EnableResponse;
+
+    /**
      * Get 1:开启 0:不开启 
      * @return EnableHeaders 1:开启 0:不开启
      */
@@ -92,6 +100,26 @@ public class FieldWriteConfig extends AbstractModel {
         this.EnableBot = EnableBot;
     }
 
+    /**
+     * Get 响应方向body
+1:开启 0:不开启 
+     * @return EnableResponse 响应方向body
+1:开启 0:不开启
+     */
+    public Long getEnableResponse() {
+        return this.EnableResponse;
+    }
+
+    /**
+     * Set 响应方向body
+1:开启 0:不开启
+     * @param EnableResponse 响应方向body
+1:开启 0:不开启
+     */
+    public void setEnableResponse(Long EnableResponse) {
+        this.EnableResponse = EnableResponse;
+    }
+
     public FieldWriteConfig() {
     }
 
@@ -109,6 +137,9 @@ public class FieldWriteConfig extends AbstractModel {
         if (source.EnableBot != null) {
             this.EnableBot = new Long(source.EnableBot);
         }
+        if (source.EnableResponse != null) {
+            this.EnableResponse = new Long(source.EnableResponse);
+        }
     }
 
 
@@ -119,6 +150,7 @@ public class FieldWriteConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableHeaders", this.EnableHeaders);
         this.setParamSimple(map, prefix + "EnableBody", this.EnableBody);
         this.setParamSimple(map, prefix + "EnableBot", this.EnableBot);
+        this.setParamSimple(map, prefix + "EnableResponse", this.EnableResponse);
 
     }
 }

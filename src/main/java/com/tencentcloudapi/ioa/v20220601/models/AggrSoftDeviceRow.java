@@ -179,6 +179,13 @@ public class AggrSoftDeviceRow extends AbstractModel {
     private Long OsType;
 
     /**
+    * 所有权
+    */
+    @SerializedName("AssetType")
+    @Expose
+    private String AssetType;
+
+    /**
      * Get 终端名
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DeviceName 终端名
@@ -558,6 +565,22 @@ public class AggrSoftDeviceRow extends AbstractModel {
         this.OsType = OsType;
     }
 
+    /**
+     * Get 所有权 
+     * @return AssetType 所有权
+     */
+    public String getAssetType() {
+        return this.AssetType;
+    }
+
+    /**
+     * Set 所有权
+     * @param AssetType 所有权
+     */
+    public void setAssetType(String AssetType) {
+        this.AssetType = AssetType;
+    }
+
     public AggrSoftDeviceRow() {
     }
 
@@ -626,6 +649,9 @@ public class AggrSoftDeviceRow extends AbstractModel {
         if (source.OsType != null) {
             this.OsType = new Long(source.OsType);
         }
+        if (source.AssetType != null) {
+            this.AssetType = new String(source.AssetType);
+        }
     }
 
 
@@ -653,6 +679,7 @@ public class AggrSoftDeviceRow extends AbstractModel {
         this.setParamSimple(map, prefix + "RemarkName", this.RemarkName);
         this.setParamSimple(map, prefix + "SoftwareId", this.SoftwareId);
         this.setParamSimple(map, prefix + "OsType", this.OsType);
+        this.setParamSimple(map, prefix + "AssetType", this.AssetType);
 
     }
 }

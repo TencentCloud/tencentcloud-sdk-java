@@ -59,7 +59,7 @@ public class DescribeBotIdRuleRequest extends AbstractModel {
     private Long [] Level;
 
     /**
-    * 规则类型筛选
+    * 规则类型筛选"cbe-01": "爬虫型BOT", 	"cbe-02": "刷量型BOT", 	"cbe-03": "账号穷举型BOT", 	"cbe-04": "恶意扫描型BOT", 	"cbe-05": "DDoS型BOT", 	"cbe-06": "垃圾邮件发送型BOT", 	"cbe-07": "社交媒体自动化型BOT", 	"cbe-08": "竞争对手数据收集型BOT", 	"cbe-09": "恶意软件传播型BOT"
     */
     @SerializedName("BotIdType")
     @Expose
@@ -160,16 +160,16 @@ public class DescribeBotIdRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 规则类型筛选 
-     * @return BotIdType 规则类型筛选
+     * Get 规则类型筛选"cbe-01": "爬虫型BOT", 	"cbe-02": "刷量型BOT", 	"cbe-03": "账号穷举型BOT", 	"cbe-04": "恶意扫描型BOT", 	"cbe-05": "DDoS型BOT", 	"cbe-06": "垃圾邮件发送型BOT", 	"cbe-07": "社交媒体自动化型BOT", 	"cbe-08": "竞争对手数据收集型BOT", 	"cbe-09": "恶意软件传播型BOT" 
+     * @return BotIdType 规则类型筛选"cbe-01": "爬虫型BOT", 	"cbe-02": "刷量型BOT", 	"cbe-03": "账号穷举型BOT", 	"cbe-04": "恶意扫描型BOT", 	"cbe-05": "DDoS型BOT", 	"cbe-06": "垃圾邮件发送型BOT", 	"cbe-07": "社交媒体自动化型BOT", 	"cbe-08": "竞争对手数据收集型BOT", 	"cbe-09": "恶意软件传播型BOT"
      */
     public String [] getBotIdType() {
         return this.BotIdType;
     }
 
     /**
-     * Set 规则类型筛选
-     * @param BotIdType 规则类型筛选
+     * Set 规则类型筛选"cbe-01": "爬虫型BOT", 	"cbe-02": "刷量型BOT", 	"cbe-03": "账号穷举型BOT", 	"cbe-04": "恶意扫描型BOT", 	"cbe-05": "DDoS型BOT", 	"cbe-06": "垃圾邮件发送型BOT", 	"cbe-07": "社交媒体自动化型BOT", 	"cbe-08": "竞争对手数据收集型BOT", 	"cbe-09": "恶意软件传播型BOT"
+     * @param BotIdType 规则类型筛选"cbe-01": "爬虫型BOT", 	"cbe-02": "刷量型BOT", 	"cbe-03": "账号穷举型BOT", 	"cbe-04": "恶意扫描型BOT", 	"cbe-05": "DDoS型BOT", 	"cbe-06": "垃圾邮件发送型BOT", 	"cbe-07": "社交媒体自动化型BOT", 	"cbe-08": "竞争对手数据收集型BOT", 	"cbe-09": "恶意软件传播型BOT"
      */
     public void setBotIdType(String [] BotIdType) {
         this.BotIdType = BotIdType;

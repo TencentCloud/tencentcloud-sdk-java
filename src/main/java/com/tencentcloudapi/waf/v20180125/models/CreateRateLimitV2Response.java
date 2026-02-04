@@ -31,6 +31,20 @@ public class CreateRateLimitV2Response extends AbstractModel {
     private RateLimitCommonRsp BaseInfo;
 
     /**
+    * 创建规则的ruleID
+    */
+    @SerializedName("LimitRuleID")
+    @Expose
+    private Long LimitRuleID;
+
+    /**
+    * 所属域名
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +65,38 @@ public class CreateRateLimitV2Response extends AbstractModel {
      */
     public void setBaseInfo(RateLimitCommonRsp BaseInfo) {
         this.BaseInfo = BaseInfo;
+    }
+
+    /**
+     * Get 创建规则的ruleID 
+     * @return LimitRuleID 创建规则的ruleID
+     */
+    public Long getLimitRuleID() {
+        return this.LimitRuleID;
+    }
+
+    /**
+     * Set 创建规则的ruleID
+     * @param LimitRuleID 创建规则的ruleID
+     */
+    public void setLimitRuleID(Long LimitRuleID) {
+        this.LimitRuleID = LimitRuleID;
+    }
+
+    /**
+     * Get 所属域名 
+     * @return Domain 所属域名
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set 所属域名
+     * @param Domain 所属域名
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
     }
 
     /**
@@ -80,6 +126,12 @@ public class CreateRateLimitV2Response extends AbstractModel {
         if (source.BaseInfo != null) {
             this.BaseInfo = new RateLimitCommonRsp(source.BaseInfo);
         }
+        if (source.LimitRuleID != null) {
+            this.LimitRuleID = new Long(source.LimitRuleID);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -91,6 +143,8 @@ public class CreateRateLimitV2Response extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "BaseInfo.", this.BaseInfo);
+        this.setParamSimple(map, prefix + "LimitRuleID", this.LimitRuleID);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

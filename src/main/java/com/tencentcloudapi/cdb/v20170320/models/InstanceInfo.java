@@ -385,6 +385,13 @@ public class InstanceInfo extends AbstractModel {
     private String DestroyProtect;
 
     /**
+    * TDSQL引擎参数
+    */
+    @SerializedName("CpuModel")
+    @Expose
+    private String CpuModel;
+
+    /**
      * Get 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网 
      * @return WanStatus 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
      */
@@ -1216,6 +1223,22 @@ public class InstanceInfo extends AbstractModel {
         this.DestroyProtect = DestroyProtect;
     }
 
+    /**
+     * Get TDSQL引擎参数 
+     * @return CpuModel TDSQL引擎参数
+     */
+    public String getCpuModel() {
+        return this.CpuModel;
+    }
+
+    /**
+     * Set TDSQL引擎参数
+     * @param CpuModel TDSQL引擎参数
+     */
+    public void setCpuModel(String CpuModel) {
+        this.CpuModel = CpuModel;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1392,6 +1415,9 @@ public class InstanceInfo extends AbstractModel {
         if (source.DestroyProtect != null) {
             this.DestroyProtect = new String(source.DestroyProtect);
         }
+        if (source.CpuModel != null) {
+            this.CpuModel = new String(source.CpuModel);
+        }
     }
 
 
@@ -1450,6 +1476,7 @@ public class InstanceInfo extends AbstractModel {
         this.setParamArrayObj(map, prefix + "AnalysisNodeInfos.", this.AnalysisNodeInfos);
         this.setParamSimple(map, prefix + "DeviceBandwidth", this.DeviceBandwidth);
         this.setParamSimple(map, prefix + "DestroyProtect", this.DestroyProtect);
+        this.setParamSimple(map, prefix + "CpuModel", this.CpuModel);
 
     }
 }

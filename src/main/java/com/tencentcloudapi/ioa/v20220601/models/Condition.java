@@ -59,6 +59,22 @@ public class Condition extends AbstractModel {
     private Long PageNum;
 
     /**
+    * 复杂查询规则条件查询项（支持任意层级AND/OR组合）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RulePayload")
+    @Expose
+    private RulePayload RulePayload;
+
+    /**
+    * 规则模式：0-使用旧的FilterGroups，1-使用新的RulePayload
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RulePayloadMode")
+    @Expose
+    private Long RulePayloadMode;
+
+    /**
      * Get Filters 条件过滤 
      * @return Filters Filters 条件过滤
      */
@@ -138,6 +154,46 @@ public class Condition extends AbstractModel {
         this.PageNum = PageNum;
     }
 
+    /**
+     * Get 复杂查询规则条件查询项（支持任意层级AND/OR组合）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RulePayload 复杂查询规则条件查询项（支持任意层级AND/OR组合）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RulePayload getRulePayload() {
+        return this.RulePayload;
+    }
+
+    /**
+     * Set 复杂查询规则条件查询项（支持任意层级AND/OR组合）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RulePayload 复杂查询规则条件查询项（支持任意层级AND/OR组合）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRulePayload(RulePayload RulePayload) {
+        this.RulePayload = RulePayload;
+    }
+
+    /**
+     * Get 规则模式：0-使用旧的FilterGroups，1-使用新的RulePayload
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RulePayloadMode 规则模式：0-使用旧的FilterGroups，1-使用新的RulePayload
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRulePayloadMode() {
+        return this.RulePayloadMode;
+    }
+
+    /**
+     * Set 规则模式：0-使用旧的FilterGroups，1-使用新的RulePayload
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RulePayloadMode 规则模式：0-使用旧的FilterGroups，1-使用新的RulePayload
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRulePayloadMode(Long RulePayloadMode) {
+        this.RulePayloadMode = RulePayloadMode;
+    }
+
     public Condition() {
     }
 
@@ -167,6 +223,12 @@ public class Condition extends AbstractModel {
         if (source.PageNum != null) {
             this.PageNum = new Long(source.PageNum);
         }
+        if (source.RulePayload != null) {
+            this.RulePayload = new RulePayload(source.RulePayload);
+        }
+        if (source.RulePayloadMode != null) {
+            this.RulePayloadMode = new Long(source.RulePayloadMode);
+        }
     }
 
 
@@ -179,6 +241,8 @@ public class Condition extends AbstractModel {
         this.setParamObj(map, prefix + "Sort.", this.Sort);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "PageNum", this.PageNum);
+        this.setParamObj(map, prefix + "RulePayload.", this.RulePayload);
+        this.setParamSimple(map, prefix + "RulePayloadMode", this.RulePayloadMode);
 
     }
 }

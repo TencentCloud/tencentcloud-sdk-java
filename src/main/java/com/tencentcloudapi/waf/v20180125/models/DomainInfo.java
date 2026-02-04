@@ -367,6 +367,13 @@ public：公有云域名
     private String [] Labels;
 
     /**
+    * saaswaf独享ip状态，0是关闭，1是开启，2是开启中
+    */
+    @SerializedName("PrivateVipStatus")
+    @Expose
+    private Long PrivateVipStatus;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -1306,6 +1313,22 @@ public：公有云域名
         this.Labels = Labels;
     }
 
+    /**
+     * Get saaswaf独享ip状态，0是关闭，1是开启，2是开启中 
+     * @return PrivateVipStatus saaswaf独享ip状态，0是关闭，1是开启，2是开启中
+     */
+    public Long getPrivateVipStatus() {
+        return this.PrivateVipStatus;
+    }
+
+    /**
+     * Set saaswaf独享ip状态，0是关闭，1是开启，2是开启中
+     * @param PrivateVipStatus saaswaf独享ip状态，0是关闭，1是开启，2是开启中
+     */
+    public void setPrivateVipStatus(Long PrivateVipStatus) {
+        this.PrivateVipStatus = PrivateVipStatus;
+    }
+
     public DomainInfo() {
     }
 
@@ -1443,6 +1466,9 @@ public：公有云域名
                 this.Labels[i] = new String(source.Labels[i]);
             }
         }
+        if (source.PrivateVipStatus != null) {
+            this.PrivateVipStatus = new Long(source.PrivateVipStatus);
+        }
     }
 
 
@@ -1486,6 +1512,7 @@ public：公有云域名
         this.setParamSimple(map, prefix + "SgID", this.SgID);
         this.setParamSimple(map, prefix + "AccessStatus", this.AccessStatus);
         this.setParamArraySimple(map, prefix + "Labels.", this.Labels);
+        this.setParamSimple(map, prefix + "PrivateVipStatus", this.PrivateVipStatus);
 
     }
 }

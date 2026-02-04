@@ -490,6 +490,13 @@ https：使用https协议回源
     private Long State;
 
     /**
+    * saaswaf独享ip状态，0是关闭状态，1是开启状态，2是开启中
+    */
+    @SerializedName("PrivateVipStatus")
+    @Expose
+    private Long PrivateVipStatus;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -1673,6 +1680,22 @@ https：使用https协议回源
         this.State = State;
     }
 
+    /**
+     * Get saaswaf独享ip状态，0是关闭状态，1是开启状态，2是开启中 
+     * @return PrivateVipStatus saaswaf独享ip状态，0是关闭状态，1是开启状态，2是开启中
+     */
+    public Long getPrivateVipStatus() {
+        return this.PrivateVipStatus;
+    }
+
+    /**
+     * Set saaswaf独享ip状态，0是关闭状态，1是开启状态，2是开启中
+     * @param PrivateVipStatus saaswaf独享ip状态，0是关闭状态，1是开启状态，2是开启中
+     */
+    public void setPrivateVipStatus(Long PrivateVipStatus) {
+        this.PrivateVipStatus = PrivateVipStatus;
+    }
+
     public DomainsPartInfo() {
     }
 
@@ -1873,6 +1896,9 @@ https：使用https协议回源
         if (source.State != null) {
             this.State = new Long(source.State);
         }
+        if (source.PrivateVipStatus != null) {
+            this.PrivateVipStatus = new Long(source.PrivateVipStatus);
+        }
     }
 
 
@@ -1937,6 +1963,7 @@ https：使用https协议回源
         this.setParamSimple(map, prefix + "UseCase", this.UseCase);
         this.setParamSimple(map, prefix + "Gzip", this.Gzip);
         this.setParamSimple(map, prefix + "State", this.State);
+        this.setParamSimple(map, prefix + "PrivateVipStatus", this.PrivateVipStatus);
 
     }
 }

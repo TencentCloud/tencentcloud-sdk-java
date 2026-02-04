@@ -52,6 +52,27 @@ public class IpAccessControlParam extends AbstractModel {
     private String Note;
 
     /**
+    * 任务类型（TimedJob/CronJob）
+    */
+    @SerializedName("JobType")
+    @Expose
+    private String JobType;
+
+    /**
+    * 任务时间配置
+    */
+    @SerializedName("JobDateTime")
+    @Expose
+    private JobDateTime JobDateTime;
+
+    /**
+    * 生效状态
+    */
+    @SerializedName("ValidStatus")
+    @Expose
+    private Long ValidStatus;
+
+    /**
      * Get IP列表 
      * @return IpList IP列表
      */
@@ -115,6 +136,54 @@ public class IpAccessControlParam extends AbstractModel {
         this.Note = Note;
     }
 
+    /**
+     * Get 任务类型（TimedJob/CronJob） 
+     * @return JobType 任务类型（TimedJob/CronJob）
+     */
+    public String getJobType() {
+        return this.JobType;
+    }
+
+    /**
+     * Set 任务类型（TimedJob/CronJob）
+     * @param JobType 任务类型（TimedJob/CronJob）
+     */
+    public void setJobType(String JobType) {
+        this.JobType = JobType;
+    }
+
+    /**
+     * Get 任务时间配置 
+     * @return JobDateTime 任务时间配置
+     */
+    public JobDateTime getJobDateTime() {
+        return this.JobDateTime;
+    }
+
+    /**
+     * Set 任务时间配置
+     * @param JobDateTime 任务时间配置
+     */
+    public void setJobDateTime(JobDateTime JobDateTime) {
+        this.JobDateTime = JobDateTime;
+    }
+
+    /**
+     * Get 生效状态 
+     * @return ValidStatus 生效状态
+     */
+    public Long getValidStatus() {
+        return this.ValidStatus;
+    }
+
+    /**
+     * Set 生效状态
+     * @param ValidStatus 生效状态
+     */
+    public void setValidStatus(Long ValidStatus) {
+        this.ValidStatus = ValidStatus;
+    }
+
     public IpAccessControlParam() {
     }
 
@@ -138,6 +207,15 @@ public class IpAccessControlParam extends AbstractModel {
         if (source.Note != null) {
             this.Note = new String(source.Note);
         }
+        if (source.JobType != null) {
+            this.JobType = new String(source.JobType);
+        }
+        if (source.JobDateTime != null) {
+            this.JobDateTime = new JobDateTime(source.JobDateTime);
+        }
+        if (source.ValidStatus != null) {
+            this.ValidStatus = new Long(source.ValidStatus);
+        }
     }
 
 
@@ -149,6 +227,9 @@ public class IpAccessControlParam extends AbstractModel {
         this.setParamSimple(map, prefix + "ValidTs", this.ValidTs);
         this.setParamSimple(map, prefix + "ActionType", this.ActionType);
         this.setParamSimple(map, prefix + "Note", this.Note);
+        this.setParamSimple(map, prefix + "JobType", this.JobType);
+        this.setParamObj(map, prefix + "JobDateTime.", this.JobDateTime);
+        this.setParamSimple(map, prefix + "ValidStatus", this.ValidStatus);
 
     }
 }

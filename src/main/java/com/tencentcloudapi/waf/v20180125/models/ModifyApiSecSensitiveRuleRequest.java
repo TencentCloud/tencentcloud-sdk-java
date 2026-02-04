@@ -115,6 +115,20 @@ public class ModifyApiSecSensitiveRuleRequest extends AbstractModel {
     private ApiSecCustomEventRule ApiSecCustomEventRuleRule;
 
     /**
+    * 无效api排除规则
+    */
+    @SerializedName("CustomApiExcludeRule")
+    @Expose
+    private ApiSecExcludeRule CustomApiExcludeRule;
+
+    /**
+    * 批量操作的时候的无效api排除规则
+    */
+    @SerializedName("ApiExcludeRuleName")
+    @Expose
+    private String [] ApiExcludeRuleName;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -322,6 +336,38 @@ public class ModifyApiSecSensitiveRuleRequest extends AbstractModel {
         this.ApiSecCustomEventRuleRule = ApiSecCustomEventRuleRule;
     }
 
+    /**
+     * Get 无效api排除规则 
+     * @return CustomApiExcludeRule 无效api排除规则
+     */
+    public ApiSecExcludeRule getCustomApiExcludeRule() {
+        return this.CustomApiExcludeRule;
+    }
+
+    /**
+     * Set 无效api排除规则
+     * @param CustomApiExcludeRule 无效api排除规则
+     */
+    public void setCustomApiExcludeRule(ApiSecExcludeRule CustomApiExcludeRule) {
+        this.CustomApiExcludeRule = CustomApiExcludeRule;
+    }
+
+    /**
+     * Get 批量操作的时候的无效api排除规则 
+     * @return ApiExcludeRuleName 批量操作的时候的无效api排除规则
+     */
+    public String [] getApiExcludeRuleName() {
+        return this.ApiExcludeRuleName;
+    }
+
+    /**
+     * Set 批量操作的时候的无效api排除规则
+     * @param ApiExcludeRuleName 批量操作的时候的无效api排除规则
+     */
+    public void setApiExcludeRuleName(String [] ApiExcludeRuleName) {
+        this.ApiExcludeRuleName = ApiExcludeRuleName;
+    }
+
     public ModifyApiSecSensitiveRuleRequest() {
     }
 
@@ -384,6 +430,15 @@ public class ModifyApiSecSensitiveRuleRequest extends AbstractModel {
         if (source.ApiSecCustomEventRuleRule != null) {
             this.ApiSecCustomEventRuleRule = new ApiSecCustomEventRule(source.ApiSecCustomEventRuleRule);
         }
+        if (source.CustomApiExcludeRule != null) {
+            this.CustomApiExcludeRule = new ApiSecExcludeRule(source.CustomApiExcludeRule);
+        }
+        if (source.ApiExcludeRuleName != null) {
+            this.ApiExcludeRuleName = new String[source.ApiExcludeRuleName.length];
+            for (int i = 0; i < source.ApiExcludeRuleName.length; i++) {
+                this.ApiExcludeRuleName[i] = new String(source.ApiExcludeRuleName[i]);
+            }
+        }
     }
 
 
@@ -404,6 +459,8 @@ public class ModifyApiSecSensitiveRuleRequest extends AbstractModel {
         this.setParamObj(map, prefix + "ApiSecSceneRule.", this.ApiSecSceneRule);
         this.setParamArraySimple(map, prefix + "ApiSecCustomEventRuleNameList.", this.ApiSecCustomEventRuleNameList);
         this.setParamObj(map, prefix + "ApiSecCustomEventRuleRule.", this.ApiSecCustomEventRuleRule);
+        this.setParamObj(map, prefix + "CustomApiExcludeRule.", this.CustomApiExcludeRule);
+        this.setParamArraySimple(map, prefix + "ApiExcludeRuleName.", this.ApiExcludeRuleName);
 
     }
 }

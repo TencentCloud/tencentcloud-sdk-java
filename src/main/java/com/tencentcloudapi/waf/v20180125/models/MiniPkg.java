@@ -80,6 +80,13 @@ public class MiniPkg extends AbstractModel {
     private String BillingItem;
 
     /**
+    * 小程序网关类型 1新网关；0老网关
+    */
+    @SerializedName("GatewayType")
+    @Expose
+    private Long GatewayType;
+
+    /**
      * Get 资源id 
      * @return ResourceIds 资源id
      */
@@ -207,6 +214,22 @@ public class MiniPkg extends AbstractModel {
         this.BillingItem = BillingItem;
     }
 
+    /**
+     * Get 小程序网关类型 1新网关；0老网关 
+     * @return GatewayType 小程序网关类型 1新网关；0老网关
+     */
+    public Long getGatewayType() {
+        return this.GatewayType;
+    }
+
+    /**
+     * Set 小程序网关类型 1新网关；0老网关
+     * @param GatewayType 小程序网关类型 1新网关；0老网关
+     */
+    public void setGatewayType(Long GatewayType) {
+        this.GatewayType = GatewayType;
+    }
+
     public MiniPkg() {
     }
 
@@ -239,6 +262,9 @@ public class MiniPkg extends AbstractModel {
         if (source.BillingItem != null) {
             this.BillingItem = new String(source.BillingItem);
         }
+        if (source.GatewayType != null) {
+            this.GatewayType = new Long(source.GatewayType);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class MiniPkg extends AbstractModel {
         this.setParamSimple(map, prefix + "Count", this.Count);
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         this.setParamSimple(map, prefix + "BillingItem", this.BillingItem);
+        this.setParamSimple(map, prefix + "GatewayType", this.GatewayType);
 
     }
 }

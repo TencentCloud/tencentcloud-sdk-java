@@ -199,6 +199,34 @@ public class UpsertCCRuleRequest extends AbstractModel {
     private String Source;
 
     /**
+    * forever
+    */
+    @SerializedName("JobType")
+    @Expose
+    private String JobType;
+
+    /**
+    * 无
+    */
+    @SerializedName("JobDateTime")
+    @Expose
+    private JobDateTime JobDateTime;
+
+    /**
+    * 0
+    */
+    @SerializedName("ExpireTime")
+    @Expose
+    private Long ExpireTime;
+
+    /**
+    * 有效性
+    */
+    @SerializedName("ValidStatus")
+    @Expose
+    private Long ValidStatus;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -598,6 +626,70 @@ public class UpsertCCRuleRequest extends AbstractModel {
         this.Source = Source;
     }
 
+    /**
+     * Get forever 
+     * @return JobType forever
+     */
+    public String getJobType() {
+        return this.JobType;
+    }
+
+    /**
+     * Set forever
+     * @param JobType forever
+     */
+    public void setJobType(String JobType) {
+        this.JobType = JobType;
+    }
+
+    /**
+     * Get 无 
+     * @return JobDateTime 无
+     */
+    public JobDateTime getJobDateTime() {
+        return this.JobDateTime;
+    }
+
+    /**
+     * Set 无
+     * @param JobDateTime 无
+     */
+    public void setJobDateTime(JobDateTime JobDateTime) {
+        this.JobDateTime = JobDateTime;
+    }
+
+    /**
+     * Get 0 
+     * @return ExpireTime 0
+     */
+    public Long getExpireTime() {
+        return this.ExpireTime;
+    }
+
+    /**
+     * Set 0
+     * @param ExpireTime 0
+     */
+    public void setExpireTime(Long ExpireTime) {
+        this.ExpireTime = ExpireTime;
+    }
+
+    /**
+     * Get 有效性 
+     * @return ValidStatus 有效性
+     */
+    public Long getValidStatus() {
+        return this.ValidStatus;
+    }
+
+    /**
+     * Set 有效性
+     * @param ValidStatus 有效性
+     */
+    public void setValidStatus(Long ValidStatus) {
+        this.ValidStatus = ValidStatus;
+    }
+
     public UpsertCCRuleRequest() {
     }
 
@@ -684,6 +776,18 @@ public class UpsertCCRuleRequest extends AbstractModel {
         if (source.Source != null) {
             this.Source = new String(source.Source);
         }
+        if (source.JobType != null) {
+            this.JobType = new String(source.JobType);
+        }
+        if (source.JobDateTime != null) {
+            this.JobDateTime = new JobDateTime(source.JobDateTime);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new Long(source.ExpireTime);
+        }
+        if (source.ValidStatus != null) {
+            this.ValidStatus = new Long(source.ValidStatus);
+        }
     }
 
 
@@ -716,6 +820,10 @@ public class UpsertCCRuleRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PageId", this.PageId);
         this.setParamSimple(map, prefix + "ActionRatio", this.ActionRatio);
         this.setParamSimple(map, prefix + "Source", this.Source);
+        this.setParamSimple(map, prefix + "JobType", this.JobType);
+        this.setParamObj(map, prefix + "JobDateTime.", this.JobDateTime);
+        this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+        this.setParamSimple(map, prefix + "ValidStatus", this.ValidStatus);
 
     }
 }

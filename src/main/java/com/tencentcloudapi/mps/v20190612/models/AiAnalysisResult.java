@@ -147,7 +147,7 @@ public class AiAnalysisResult extends AbstractModel {
     private AiAnalysisTaskVideoComprehensionResult VideoComprehensionTask;
 
     /**
-    * 视频内容分析抠图任务的查询结果，当任务类型为Cutout时有效。
+    * 视频内容分析智能抠图任务的查询结果，当任务类型为Cutout时有效。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CutoutTask")
@@ -155,7 +155,7 @@ public class AiAnalysisResult extends AbstractModel {
     private AiAnalysisTaskCutoutResult CutoutTask;
 
     /**
-    * 视频内容分析成片任务的查询结果，当任务类型为Reel时有效。
+    * 视频内容分析AI解说二创任务的查询结果，当任务类型为Reel时有效。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReelTask")
@@ -487,9 +487,9 @@ public class AiAnalysisResult extends AbstractModel {
     }
 
     /**
-     * Get 视频内容分析抠图任务的查询结果，当任务类型为Cutout时有效。
+     * Get 视频内容分析智能抠图任务的查询结果，当任务类型为Cutout时有效。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CutoutTask 视频内容分析抠图任务的查询结果，当任务类型为Cutout时有效。
+     * @return CutoutTask 视频内容分析智能抠图任务的查询结果，当任务类型为Cutout时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiAnalysisTaskCutoutResult getCutoutTask() {
@@ -497,9 +497,9 @@ public class AiAnalysisResult extends AbstractModel {
     }
 
     /**
-     * Set 视频内容分析抠图任务的查询结果，当任务类型为Cutout时有效。
+     * Set 视频内容分析智能抠图任务的查询结果，当任务类型为Cutout时有效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CutoutTask 视频内容分析抠图任务的查询结果，当任务类型为Cutout时有效。
+     * @param CutoutTask 视频内容分析智能抠图任务的查询结果，当任务类型为Cutout时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCutoutTask(AiAnalysisTaskCutoutResult CutoutTask) {
@@ -507,9 +507,9 @@ public class AiAnalysisResult extends AbstractModel {
     }
 
     /**
-     * Get 视频内容分析成片任务的查询结果，当任务类型为Reel时有效。
+     * Get 视频内容分析AI解说二创任务的查询结果，当任务类型为Reel时有效。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReelTask 视频内容分析成片任务的查询结果，当任务类型为Reel时有效。
+     * @return ReelTask 视频内容分析AI解说二创任务的查询结果，当任务类型为Reel时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiAnalysisTaskReelResult getReelTask() {
@@ -517,9 +517,9 @@ public class AiAnalysisResult extends AbstractModel {
     }
 
     /**
-     * Set 视频内容分析成片任务的查询结果，当任务类型为Reel时有效。
+     * Set 视频内容分析AI解说二创任务的查询结果，当任务类型为Reel时有效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReelTask 视频内容分析成片任务的查询结果，当任务类型为Reel时有效。
+     * @param ReelTask 视频内容分析AI解说二创任务的查询结果，当任务类型为Reel时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReelTask(AiAnalysisTaskReelResult ReelTask) {

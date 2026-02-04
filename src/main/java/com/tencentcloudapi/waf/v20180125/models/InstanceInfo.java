@@ -413,6 +413,20 @@ public class InstanceInfo extends AbstractModel {
     private BotMonitorPkg BotMonitorPkg;
 
     /**
+    * 独享ip资源信息
+    */
+    @SerializedName("DedicatedIPPkg")
+    @Expose
+    private DedicatedIPPkg DedicatedIPPkg;
+
+    /**
+    * 已经配置独享ip的数量
+    */
+    @SerializedName("DedicatedIPCount")
+    @Expose
+    private Long DedicatedIPCount;
+
+    /**
      * Get 实例唯一ID 
      * @return InstanceId 实例唯一ID
      */
@@ -1320,6 +1334,38 @@ public class InstanceInfo extends AbstractModel {
         this.BotMonitorPkg = BotMonitorPkg;
     }
 
+    /**
+     * Get 独享ip资源信息 
+     * @return DedicatedIPPkg 独享ip资源信息
+     */
+    public DedicatedIPPkg getDedicatedIPPkg() {
+        return this.DedicatedIPPkg;
+    }
+
+    /**
+     * Set 独享ip资源信息
+     * @param DedicatedIPPkg 独享ip资源信息
+     */
+    public void setDedicatedIPPkg(DedicatedIPPkg DedicatedIPPkg) {
+        this.DedicatedIPPkg = DedicatedIPPkg;
+    }
+
+    /**
+     * Get 已经配置独享ip的数量 
+     * @return DedicatedIPCount 已经配置独享ip的数量
+     */
+    public Long getDedicatedIPCount() {
+        return this.DedicatedIPCount;
+    }
+
+    /**
+     * Set 已经配置独享ip的数量
+     * @param DedicatedIPCount 已经配置独享ip的数量
+     */
+    public void setDedicatedIPCount(Long DedicatedIPCount) {
+        this.DedicatedIPCount = DedicatedIPCount;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1490,6 +1536,12 @@ public class InstanceInfo extends AbstractModel {
         if (source.BotMonitorPkg != null) {
             this.BotMonitorPkg = new BotMonitorPkg(source.BotMonitorPkg);
         }
+        if (source.DedicatedIPPkg != null) {
+            this.DedicatedIPPkg = new DedicatedIPPkg(source.DedicatedIPPkg);
+        }
+        if (source.DedicatedIPCount != null) {
+            this.DedicatedIPCount = new Long(source.DedicatedIPCount);
+        }
     }
 
 
@@ -1551,6 +1603,8 @@ public class InstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "RegionId", this.RegionId);
         this.setParamObj(map, prefix + "BotSecurityPkg.", this.BotSecurityPkg);
         this.setParamObj(map, prefix + "BotMonitorPkg.", this.BotMonitorPkg);
+        this.setParamObj(map, prefix + "DedicatedIPPkg.", this.DedicatedIPPkg);
+        this.setParamSimple(map, prefix + "DedicatedIPCount", this.DedicatedIPCount);
 
     }
 }

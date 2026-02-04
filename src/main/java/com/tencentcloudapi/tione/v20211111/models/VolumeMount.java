@@ -31,7 +31,7 @@ public class VolumeMount extends AbstractModel {
     private CFSConfig CFSConfig;
 
     /**
-    * 挂载源类型，CFS、COS，默认为CFS
+    * 挂载源类型，CFS、COS、PUBLIC_DATA_SOURCE，默认为CFS
     */
     @SerializedName("VolumeSourceType")
     @Expose
@@ -44,6 +44,13 @@ public class VolumeMount extends AbstractModel {
     @SerializedName("MountPath")
     @Expose
     private String MountPath;
+
+    /**
+    * 挂载数据源时的配置信息
+    */
+    @SerializedName("PublicDataSource")
+    @Expose
+    private PublicDataSourceFS PublicDataSource;
 
     /**
      * Get cfs的配置信息 
@@ -62,16 +69,16 @@ public class VolumeMount extends AbstractModel {
     }
 
     /**
-     * Get 挂载源类型，CFS、COS，默认为CFS 
-     * @return VolumeSourceType 挂载源类型，CFS、COS，默认为CFS
+     * Get 挂载源类型，CFS、COS、PUBLIC_DATA_SOURCE，默认为CFS 
+     * @return VolumeSourceType 挂载源类型，CFS、COS、PUBLIC_DATA_SOURCE，默认为CFS
      */
     public String getVolumeSourceType() {
         return this.VolumeSourceType;
     }
 
     /**
-     * Set 挂载源类型，CFS、COS，默认为CFS
-     * @param VolumeSourceType 挂载源类型，CFS、COS，默认为CFS
+     * Set 挂载源类型，CFS、COS、PUBLIC_DATA_SOURCE，默认为CFS
+     * @param VolumeSourceType 挂载源类型，CFS、COS、PUBLIC_DATA_SOURCE，默认为CFS
      */
     public void setVolumeSourceType(String VolumeSourceType) {
         this.VolumeSourceType = VolumeSourceType;
@@ -97,6 +104,22 @@ public class VolumeMount extends AbstractModel {
         this.MountPath = MountPath;
     }
 
+    /**
+     * Get 挂载数据源时的配置信息 
+     * @return PublicDataSource 挂载数据源时的配置信息
+     */
+    public PublicDataSourceFS getPublicDataSource() {
+        return this.PublicDataSource;
+    }
+
+    /**
+     * Set 挂载数据源时的配置信息
+     * @param PublicDataSource 挂载数据源时的配置信息
+     */
+    public void setPublicDataSource(PublicDataSourceFS PublicDataSource) {
+        this.PublicDataSource = PublicDataSource;
+    }
+
     public VolumeMount() {
     }
 
@@ -114,6 +137,9 @@ public class VolumeMount extends AbstractModel {
         if (source.MountPath != null) {
             this.MountPath = new String(source.MountPath);
         }
+        if (source.PublicDataSource != null) {
+            this.PublicDataSource = new PublicDataSourceFS(source.PublicDataSource);
+        }
     }
 
 
@@ -124,6 +150,7 @@ public class VolumeMount extends AbstractModel {
         this.setParamObj(map, prefix + "CFSConfig.", this.CFSConfig);
         this.setParamSimple(map, prefix + "VolumeSourceType", this.VolumeSourceType);
         this.setParamSimple(map, prefix + "MountPath", this.MountPath);
+        this.setParamObj(map, prefix + "PublicDataSource.", this.PublicDataSource);
 
     }
 }

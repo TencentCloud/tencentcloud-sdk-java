@@ -45,7 +45,7 @@ public class DescribeOwaspRulesRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 排序字段，支持 RuleId, UpdateTime
+    * 排序字段，支持 RuleId, ModifyTime
     */
     @SerializedName("By")
     @Expose
@@ -114,16 +114,16 @@ public class DescribeOwaspRulesRequest extends AbstractModel {
     }
 
     /**
-     * Get 排序字段，支持 RuleId, UpdateTime 
-     * @return By 排序字段，支持 RuleId, UpdateTime
+     * Get 排序字段，支持 RuleId, ModifyTime 
+     * @return By 排序字段，支持 RuleId, ModifyTime
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set 排序字段，支持 RuleId, UpdateTime
-     * @param By 排序字段，支持 RuleId, UpdateTime
+     * Set 排序字段，支持 RuleId, ModifyTime
+     * @param By 排序字段，支持 RuleId, ModifyTime
      */
     public void setBy(String By) {
         this.By = By;

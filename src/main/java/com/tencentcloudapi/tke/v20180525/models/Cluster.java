@@ -200,6 +200,13 @@ public class Cluster extends AbstractModel {
     private String CdcId;
 
     /**
+    * 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行
+    */
+    @SerializedName("IsHighAvailability")
+    @Expose
+    private Boolean IsHighAvailability;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -603,6 +610,22 @@ public class Cluster extends AbstractModel {
         this.CdcId = CdcId;
     }
 
+    /**
+     * Get 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行 
+     * @return IsHighAvailability 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行
+     */
+    public Boolean getIsHighAvailability() {
+        return this.IsHighAvailability;
+    }
+
+    /**
+     * Set 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行
+     * @param IsHighAvailability 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行
+     */
+    public void setIsHighAvailability(Boolean IsHighAvailability) {
+        this.IsHighAvailability = IsHighAvailability;
+    }
+
     public Cluster() {
     }
 
@@ -689,6 +712,9 @@ public class Cluster extends AbstractModel {
         if (source.CdcId != null) {
             this.CdcId = new String(source.CdcId);
         }
+        if (source.IsHighAvailability != null) {
+            this.IsHighAvailability = new Boolean(source.IsHighAvailability);
+        }
     }
 
 
@@ -721,6 +747,7 @@ public class Cluster extends AbstractModel {
         this.setParamSimple(map, prefix + "RuntimeVersion", this.RuntimeVersion);
         this.setParamSimple(map, prefix + "ClusterEtcdNodeNum", this.ClusterEtcdNodeNum);
         this.setParamSimple(map, prefix + "CdcId", this.CdcId);
+        this.setParamSimple(map, prefix + "IsHighAvailability", this.IsHighAvailability);
 
     }
 }
