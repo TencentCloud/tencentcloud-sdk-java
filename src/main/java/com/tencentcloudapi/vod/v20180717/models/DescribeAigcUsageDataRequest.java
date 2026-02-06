@@ -38,7 +38,7 @@ public class DescribeAigcUsageDataRequest extends AbstractModel {
     private String EndTime;
 
     /**
-    * AIGC类型，取值有：<li> Video：视频。</li><li> Image：图片。</li>
+    * AIGC类型，取值有：<li> Video：视频。</li><li> Image：图片。</li><li> Text：文本。</li>
     */
     @SerializedName("AigcType")
     @Expose
@@ -84,16 +84,16 @@ public class DescribeAigcUsageDataRequest extends AbstractModel {
     }
 
     /**
-     * Get AIGC类型，取值有：<li> Video：视频。</li><li> Image：图片。</li> 
-     * @return AigcType AIGC类型，取值有：<li> Video：视频。</li><li> Image：图片。</li>
+     * Get AIGC类型，取值有：<li> Video：视频。</li><li> Image：图片。</li><li> Text：文本。</li> 
+     * @return AigcType AIGC类型，取值有：<li> Video：视频。</li><li> Image：图片。</li><li> Text：文本。</li>
      */
     public String getAigcType() {
         return this.AigcType;
     }
 
     /**
-     * Set AIGC类型，取值有：<li> Video：视频。</li><li> Image：图片。</li>
-     * @param AigcType AIGC类型，取值有：<li> Video：视频。</li><li> Image：图片。</li>
+     * Set AIGC类型，取值有：<li> Video：视频。</li><li> Image：图片。</li><li> Text：文本。</li>
+     * @param AigcType AIGC类型，取值有：<li> Video：视频。</li><li> Image：图片。</li><li> Text：文本。</li>
      */
     public void setAigcType(String AigcType) {
         this.AigcType = AigcType;

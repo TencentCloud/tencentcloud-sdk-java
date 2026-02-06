@@ -88,10 +88,7 @@ public class SetBackupRulesRequest extends AbstractModel {
     private String ActiveWeekdays;
 
     /**
-    * 长期保留周期。支持按周或按月选择特定日期的备份（例如，每月1日、15日的备份数据），将其保留更长周期。
-- 不开启（默认）：不启用长期保留功能。
-- 按周保留： 指定为 weekly。
-- 按月保留： 指定为 monthly。
+    * 长期保留周期。支持按周或按月选择特定日期的备份（例如，每月1日、15日的备份数据），将其保留更长周期。- 不开启（默认）：不启用长期保留功能。- 按周保留： 指定为 weekly。- 按月保留： 指定为 monthly。待废弃，使用LongTermInterval
     */
     @SerializedName("LongTermUnit")
     @Expose
@@ -133,14 +130,25 @@ public class SetBackupRulesRequest extends AbstractModel {
     private Long BackupVersion;
 
     /**
-    * 设置备份数据集存储空间使用率的告警阈值。
-- 单位：%。
--  默认值：100。
-- 取值范围：[50,300]。
+    * 设置备份数据集存储空间使用率的告警阈值。- 单位：%。-  默认值：100。- 取值范围：[50,300]。待废弃,使用AlertThreshold
     */
     @SerializedName("AlarmWaterLevel")
     @Expose
     private Long AlarmWaterLevel;
+
+    /**
+    * 长期保留周期。支持按周或按月选择特定日期的备份（例如，每月1日、15日的备份数据），将其保留更长周期。- 不开启（默认）：不启用长期保留功能。- 按周保留： 指定为 weekly。- 按月保留： 指定为 monthly。
+    */
+    @SerializedName("LongTermInterval")
+    @Expose
+    private String LongTermInterval;
+
+    /**
+    * 设置备份数据集存储空间使用率的告警阈值。- 单位：%。-  默认值：100。- 取值范围：[50,300]。
+    */
+    @SerializedName("AlertThreshold")
+    @Expose
+    private Long AlertThreshold;
 
     /**
      * Get 实例 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。 
@@ -315,28 +323,16 @@ public class SetBackupRulesRequest extends AbstractModel {
     }
 
     /**
-     * Get 长期保留周期。支持按周或按月选择特定日期的备份（例如，每月1日、15日的备份数据），将其保留更长周期。
-- 不开启（默认）：不启用长期保留功能。
-- 按周保留： 指定为 weekly。
-- 按月保留： 指定为 monthly。 
-     * @return LongTermUnit 长期保留周期。支持按周或按月选择特定日期的备份（例如，每月1日、15日的备份数据），将其保留更长周期。
-- 不开启（默认）：不启用长期保留功能。
-- 按周保留： 指定为 weekly。
-- 按月保留： 指定为 monthly。
+     * Get 长期保留周期。支持按周或按月选择特定日期的备份（例如，每月1日、15日的备份数据），将其保留更长周期。- 不开启（默认）：不启用长期保留功能。- 按周保留： 指定为 weekly。- 按月保留： 指定为 monthly。待废弃，使用LongTermInterval 
+     * @return LongTermUnit 长期保留周期。支持按周或按月选择特定日期的备份（例如，每月1日、15日的备份数据），将其保留更长周期。- 不开启（默认）：不启用长期保留功能。- 按周保留： 指定为 weekly。- 按月保留： 指定为 monthly。待废弃，使用LongTermInterval
      */
     public String getLongTermUnit() {
         return this.LongTermUnit;
     }
 
     /**
-     * Set 长期保留周期。支持按周或按月选择特定日期的备份（例如，每月1日、15日的备份数据），将其保留更长周期。
-- 不开启（默认）：不启用长期保留功能。
-- 按周保留： 指定为 weekly。
-- 按月保留： 指定为 monthly。
-     * @param LongTermUnit 长期保留周期。支持按周或按月选择特定日期的备份（例如，每月1日、15日的备份数据），将其保留更长周期。
-- 不开启（默认）：不启用长期保留功能。
-- 按周保留： 指定为 weekly。
-- 按月保留： 指定为 monthly。
+     * Set 长期保留周期。支持按周或按月选择特定日期的备份（例如，每月1日、15日的备份数据），将其保留更长周期。- 不开启（默认）：不启用长期保留功能。- 按周保留： 指定为 weekly。- 按月保留： 指定为 monthly。待废弃，使用LongTermInterval
+     * @param LongTermUnit 长期保留周期。支持按周或按月选择特定日期的备份（例如，每月1日、15日的备份数据），将其保留更长周期。- 不开启（默认）：不启用长期保留功能。- 按周保留： 指定为 weekly。- 按月保留： 指定为 monthly。待废弃，使用LongTermInterval
      */
     public void setLongTermUnit(String LongTermUnit) {
         this.LongTermUnit = LongTermUnit;
@@ -435,31 +431,51 @@ public class SetBackupRulesRequest extends AbstractModel {
     }
 
     /**
-     * Get 设置备份数据集存储空间使用率的告警阈值。
-- 单位：%。
--  默认值：100。
-- 取值范围：[50,300]。 
-     * @return AlarmWaterLevel 设置备份数据集存储空间使用率的告警阈值。
-- 单位：%。
--  默认值：100。
-- 取值范围：[50,300]。
+     * Get 设置备份数据集存储空间使用率的告警阈值。- 单位：%。-  默认值：100。- 取值范围：[50,300]。待废弃,使用AlertThreshold 
+     * @return AlarmWaterLevel 设置备份数据集存储空间使用率的告警阈值。- 单位：%。-  默认值：100。- 取值范围：[50,300]。待废弃,使用AlertThreshold
      */
     public Long getAlarmWaterLevel() {
         return this.AlarmWaterLevel;
     }
 
     /**
-     * Set 设置备份数据集存储空间使用率的告警阈值。
-- 单位：%。
--  默认值：100。
-- 取值范围：[50,300]。
-     * @param AlarmWaterLevel 设置备份数据集存储空间使用率的告警阈值。
-- 单位：%。
--  默认值：100。
-- 取值范围：[50,300]。
+     * Set 设置备份数据集存储空间使用率的告警阈值。- 单位：%。-  默认值：100。- 取值范围：[50,300]。待废弃,使用AlertThreshold
+     * @param AlarmWaterLevel 设置备份数据集存储空间使用率的告警阈值。- 单位：%。-  默认值：100。- 取值范围：[50,300]。待废弃,使用AlertThreshold
      */
     public void setAlarmWaterLevel(Long AlarmWaterLevel) {
         this.AlarmWaterLevel = AlarmWaterLevel;
+    }
+
+    /**
+     * Get 长期保留周期。支持按周或按月选择特定日期的备份（例如，每月1日、15日的备份数据），将其保留更长周期。- 不开启（默认）：不启用长期保留功能。- 按周保留： 指定为 weekly。- 按月保留： 指定为 monthly。 
+     * @return LongTermInterval 长期保留周期。支持按周或按月选择特定日期的备份（例如，每月1日、15日的备份数据），将其保留更长周期。- 不开启（默认）：不启用长期保留功能。- 按周保留： 指定为 weekly。- 按月保留： 指定为 monthly。
+     */
+    public String getLongTermInterval() {
+        return this.LongTermInterval;
+    }
+
+    /**
+     * Set 长期保留周期。支持按周或按月选择特定日期的备份（例如，每月1日、15日的备份数据），将其保留更长周期。- 不开启（默认）：不启用长期保留功能。- 按周保留： 指定为 weekly。- 按月保留： 指定为 monthly。
+     * @param LongTermInterval 长期保留周期。支持按周或按月选择特定日期的备份（例如，每月1日、15日的备份数据），将其保留更长周期。- 不开启（默认）：不启用长期保留功能。- 按周保留： 指定为 weekly。- 按月保留： 指定为 monthly。
+     */
+    public void setLongTermInterval(String LongTermInterval) {
+        this.LongTermInterval = LongTermInterval;
+    }
+
+    /**
+     * Get 设置备份数据集存储空间使用率的告警阈值。- 单位：%。-  默认值：100。- 取值范围：[50,300]。 
+     * @return AlertThreshold 设置备份数据集存储空间使用率的告警阈值。- 单位：%。-  默认值：100。- 取值范围：[50,300]。
+     */
+    public Long getAlertThreshold() {
+        return this.AlertThreshold;
+    }
+
+    /**
+     * Set 设置备份数据集存储空间使用率的告警阈值。- 单位：%。-  默认值：100。- 取值范围：[50,300]。
+     * @param AlertThreshold 设置备份数据集存储空间使用率的告警阈值。- 单位：%。-  默认值：100。- 取值范围：[50,300]。
+     */
+    public void setAlertThreshold(Long AlertThreshold) {
+        this.AlertThreshold = AlertThreshold;
     }
 
     public SetBackupRulesRequest() {
@@ -509,6 +525,12 @@ public class SetBackupRulesRequest extends AbstractModel {
         if (source.AlarmWaterLevel != null) {
             this.AlarmWaterLevel = new Long(source.AlarmWaterLevel);
         }
+        if (source.LongTermInterval != null) {
+            this.LongTermInterval = new String(source.LongTermInterval);
+        }
+        if (source.AlertThreshold != null) {
+            this.AlertThreshold = new Long(source.AlertThreshold);
+        }
     }
 
 
@@ -529,6 +551,8 @@ public class SetBackupRulesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "OplogExpiredDays", this.OplogExpiredDays);
         this.setParamSimple(map, prefix + "BackupVersion", this.BackupVersion);
         this.setParamSimple(map, prefix + "AlarmWaterLevel", this.AlarmWaterLevel);
+        this.setParamSimple(map, prefix + "LongTermInterval", this.LongTermInterval);
+        this.setParamSimple(map, prefix + "AlertThreshold", this.AlertThreshold);
 
     }
 }

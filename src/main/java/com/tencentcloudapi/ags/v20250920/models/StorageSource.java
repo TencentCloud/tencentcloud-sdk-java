@@ -38,6 +38,13 @@ public class StorageSource extends AbstractModel {
     private ImageStorageSource Image;
 
     /**
+    * 文件存储配置
+    */
+    @SerializedName("Cfs")
+    @Expose
+    private CfsStorageSource Cfs;
+
+    /**
      * Get 对象存储桶配置 
      * @return Cos 对象存储桶配置
      */
@@ -69,6 +76,22 @@ public class StorageSource extends AbstractModel {
         this.Image = Image;
     }
 
+    /**
+     * Get 文件存储配置 
+     * @return Cfs 文件存储配置
+     */
+    public CfsStorageSource getCfs() {
+        return this.Cfs;
+    }
+
+    /**
+     * Set 文件存储配置
+     * @param Cfs 文件存储配置
+     */
+    public void setCfs(CfsStorageSource Cfs) {
+        this.Cfs = Cfs;
+    }
+
     public StorageSource() {
     }
 
@@ -83,6 +106,9 @@ public class StorageSource extends AbstractModel {
         if (source.Image != null) {
             this.Image = new ImageStorageSource(source.Image);
         }
+        if (source.Cfs != null) {
+            this.Cfs = new CfsStorageSource(source.Cfs);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class StorageSource extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Cos.", this.Cos);
         this.setParamObj(map, prefix + "Image.", this.Image);
+        this.setParamObj(map, prefix + "Cfs.", this.Cfs);
 
     }
 }

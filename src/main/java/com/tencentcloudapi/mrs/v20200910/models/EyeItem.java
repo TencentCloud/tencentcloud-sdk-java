@@ -24,72 +24,118 @@ import java.util.HashMap;
 public class EyeItem extends AbstractModel {
 
     /**
-    * 左眼
+    * <p>左眼</p>
     */
     @SerializedName("Left")
     @Expose
     private EyeChildItem Left;
 
     /**
-    * 右眼
+    * <p>右眼</p>
     */
     @SerializedName("Right")
     @Expose
     private EyeChildItem Right;
 
     /**
-    * 瞳距
+    * <p>瞳距</p>
     */
     @SerializedName("Pd")
     @Expose
     private BaseItem2 Pd;
 
     /**
-     * Get 左眼 
-     * @return Left 左眼
+    * <p>右眼平均后结果</p>
+    */
+    @SerializedName("RightFinal")
+    @Expose
+    private EyeFinalItem RightFinal;
+
+    /**
+    * <p>左眼平均后结果</p>
+    */
+    @SerializedName("LeftFinal")
+    @Expose
+    private EyeFinalItem LeftFinal;
+
+    /**
+     * Get <p>左眼</p> 
+     * @return Left <p>左眼</p>
      */
     public EyeChildItem getLeft() {
         return this.Left;
     }
 
     /**
-     * Set 左眼
-     * @param Left 左眼
+     * Set <p>左眼</p>
+     * @param Left <p>左眼</p>
      */
     public void setLeft(EyeChildItem Left) {
         this.Left = Left;
     }
 
     /**
-     * Get 右眼 
-     * @return Right 右眼
+     * Get <p>右眼</p> 
+     * @return Right <p>右眼</p>
      */
     public EyeChildItem getRight() {
         return this.Right;
     }
 
     /**
-     * Set 右眼
-     * @param Right 右眼
+     * Set <p>右眼</p>
+     * @param Right <p>右眼</p>
      */
     public void setRight(EyeChildItem Right) {
         this.Right = Right;
     }
 
     /**
-     * Get 瞳距 
-     * @return Pd 瞳距
+     * Get <p>瞳距</p> 
+     * @return Pd <p>瞳距</p>
      */
     public BaseItem2 getPd() {
         return this.Pd;
     }
 
     /**
-     * Set 瞳距
-     * @param Pd 瞳距
+     * Set <p>瞳距</p>
+     * @param Pd <p>瞳距</p>
      */
     public void setPd(BaseItem2 Pd) {
         this.Pd = Pd;
+    }
+
+    /**
+     * Get <p>右眼平均后结果</p> 
+     * @return RightFinal <p>右眼平均后结果</p>
+     */
+    public EyeFinalItem getRightFinal() {
+        return this.RightFinal;
+    }
+
+    /**
+     * Set <p>右眼平均后结果</p>
+     * @param RightFinal <p>右眼平均后结果</p>
+     */
+    public void setRightFinal(EyeFinalItem RightFinal) {
+        this.RightFinal = RightFinal;
+    }
+
+    /**
+     * Get <p>左眼平均后结果</p> 
+     * @return LeftFinal <p>左眼平均后结果</p>
+     */
+    public EyeFinalItem getLeftFinal() {
+        return this.LeftFinal;
+    }
+
+    /**
+     * Set <p>左眼平均后结果</p>
+     * @param LeftFinal <p>左眼平均后结果</p>
+     */
+    public void setLeftFinal(EyeFinalItem LeftFinal) {
+        this.LeftFinal = LeftFinal;
     }
 
     public EyeItem() {
@@ -109,6 +155,12 @@ public class EyeItem extends AbstractModel {
         if (source.Pd != null) {
             this.Pd = new BaseItem2(source.Pd);
         }
+        if (source.RightFinal != null) {
+            this.RightFinal = new EyeFinalItem(source.RightFinal);
+        }
+        if (source.LeftFinal != null) {
+            this.LeftFinal = new EyeFinalItem(source.LeftFinal);
+        }
     }
 
 
@@ -119,6 +171,8 @@ public class EyeItem extends AbstractModel {
         this.setParamObj(map, prefix + "Left.", this.Left);
         this.setParamObj(map, prefix + "Right.", this.Right);
         this.setParamObj(map, prefix + "Pd.", this.Pd);
+        this.setParamObj(map, prefix + "RightFinal.", this.RightFinal);
+        this.setParamObj(map, prefix + "LeftFinal.", this.LeftFinal);
 
     }
 }

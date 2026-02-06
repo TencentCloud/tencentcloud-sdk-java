@@ -180,6 +180,19 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
+     *用于试题批改Agent查询任务。主要面向K12的试题批改产品，支持整卷/单题端到端（试卷切题+题目批改+手写坐标回显）处理，主要聚焦的场景包括试题批改（含手写答案）、试题解析（不含手写答案），其中低年级算式批改效果比线上[数学作业批改](https://cloud.tencent.com/document/product/1004)效果更好。精准输出题目、正误判定、答案对比、错误及知识点等结构化评估结果。
+
+默认接口请求并发限制：10题/分钟。
+     * @param req DescribeQuestionMarkAgentJobRequest
+     * @return DescribeQuestionMarkAgentJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeQuestionMarkAgentJobResponse DescribeQuestionMarkAgentJob(DescribeQuestionMarkAgentJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeQuestionMarkAgentJob", DescribeQuestionMarkAgentJobResponse.class);
+    }
+
+    /**
      *本接口支持驾驶证主页和副页所有字段的自动定位与识别，重点字段的识别准确度达到99%以上。
 
 驾驶证主页：包括证号、姓名、性别、国籍、住址、出生日期、初次领证日期、准驾车型、有效期限、发证单位
@@ -1478,6 +1491,19 @@ public class OcrClient extends AbstractClient{
     public SubmitExtractDocAgentJobResponse SubmitExtractDocAgentJob(SubmitExtractDocAgentJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SubmitExtractDocAgentJob", SubmitExtractDocAgentJobResponse.class);
+    }
+
+    /**
+     *用于试题批改Agent提交任务。主要面向K12的试题批改产品，支持整卷/单题端到端（试卷切题+题目批改+手写坐标回显）处理，主要聚焦的场景包括试题批改（含手写答案）、试题解析（不含手写答案），其中低年级算式批改效果比线上[数学作业批改](https://cloud.tencent.com/document/product/1004)效果更好。精准输出题目、正误判定、答案对比、错误及知识点等结构化评估结果。
+
+默认接口请求并发限制：10题/分钟。
+     * @param req SubmitQuestionMarkAgentJobRequest
+     * @return SubmitQuestionMarkAgentJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitQuestionMarkAgentJobResponse SubmitQuestionMarkAgentJob(SubmitQuestionMarkAgentJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitQuestionMarkAgentJob", SubmitQuestionMarkAgentJobResponse.class);
     }
 
     /**

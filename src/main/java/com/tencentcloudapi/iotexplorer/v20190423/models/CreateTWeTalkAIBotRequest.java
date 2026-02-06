@@ -80,6 +80,13 @@ public class CreateTWeTalkAIBotRequest extends AbstractModel {
     private String InstanceId;
 
     /**
+    * 自定义工具配置，最多可创建10个
+    */
+    @SerializedName("CustomTools")
+    @Expose
+    private String CustomTools;
+
+    /**
      * Get 产品ID 
      * @return Name 产品ID
      */
@@ -207,6 +214,22 @@ public class CreateTWeTalkAIBotRequest extends AbstractModel {
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get 自定义工具配置，最多可创建10个 
+     * @return CustomTools 自定义工具配置，最多可创建10个
+     */
+    public String getCustomTools() {
+        return this.CustomTools;
+    }
+
+    /**
+     * Set 自定义工具配置，最多可创建10个
+     * @param CustomTools 自定义工具配置，最多可创建10个
+     */
+    public void setCustomTools(String CustomTools) {
+        this.CustomTools = CustomTools;
+    }
+
     public CreateTWeTalkAIBotRequest() {
     }
 
@@ -239,6 +262,9 @@ public class CreateTWeTalkAIBotRequest extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.CustomTools != null) {
+            this.CustomTools = new String(source.CustomTools);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class CreateTWeTalkAIBotRequest extends AbstractModel {
         this.setParamObj(map, prefix + "TTSConfig.", this.TTSConfig);
         this.setParamObj(map, prefix + "AgentConfig.", this.AgentConfig);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "CustomTools", this.CustomTools);
 
     }
 }

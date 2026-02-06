@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.trtc.v20190722.models;
+package com.tencentcloudapi.tdmysql.v20211122.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,15 +21,22 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTRTCMarketQualityMetricDataResponse extends AbstractModel {
+public class DescribeDBSCloneInstancesResponse extends AbstractModel {
 
     /**
-    * TRTC监控数据出参
+    * <p>克隆列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Data")
+    @SerializedName("Items")
     @Expose
-    private TRTCDataResp Data;
+    private CloneInstanceModel [] Items;
+
+    /**
+    * <p>总数</p>
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -39,23 +46,39 @@ public class DescribeTRTCMarketQualityMetricDataResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get TRTC监控数据出参
+     * Get <p>克隆列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data TRTC监控数据出参
+     * @return Items <p>克隆列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public TRTCDataResp getData() {
-        return this.Data;
+    public CloneInstanceModel [] getItems() {
+        return this.Items;
     }
 
     /**
-     * Set TRTC监控数据出参
+     * Set <p>克隆列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data TRTC监控数据出参
+     * @param Items <p>克隆列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setData(TRTCDataResp Data) {
-        this.Data = Data;
+    public void setItems(CloneInstanceModel [] Items) {
+        this.Items = Items;
+    }
+
+    /**
+     * Get <p>总数</p> 
+     * @return TotalCount <p>总数</p>
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set <p>总数</p>
+     * @param TotalCount <p>总数</p>
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -74,16 +97,22 @@ public class DescribeTRTCMarketQualityMetricDataResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeTRTCMarketQualityMetricDataResponse() {
+    public DescribeDBSCloneInstancesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeTRTCMarketQualityMetricDataResponse(DescribeTRTCMarketQualityMetricDataResponse source) {
-        if (source.Data != null) {
-            this.Data = new TRTCDataResp(source.Data);
+    public DescribeDBSCloneInstancesResponse(DescribeDBSCloneInstancesResponse source) {
+        if (source.Items != null) {
+            this.Items = new CloneInstanceModel[source.Items.length];
+            for (int i = 0; i < source.Items.length; i++) {
+                this.Items[i] = new CloneInstanceModel(source.Items[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -95,7 +124,8 @@ public class DescribeTRTCMarketQualityMetricDataResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Data.", this.Data);
+        this.setParamArrayObj(map, prefix + "Items.", this.Items);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

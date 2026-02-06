@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.trtc.v20190722.models;
+package com.tencentcloudapi.tdmysql.v20211122.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,15 +21,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTRTCRealTimeQualityMetricDataResponse extends AbstractModel {
+public class CancelIsolateDBInstancesResponse extends AbstractModel {
 
     /**
-    * TRTC监控数据出参
-注意：此字段可能返回 null，表示取不到有效值。
+    * 解除隔离成功实例Id列表
     */
-    @SerializedName("Data")
+    @SerializedName("SuccessInstanceIds")
     @Expose
-    private TRTCDataResp Data;
+    private String [] SuccessInstanceIds;
+
+    /**
+    * 解除隔离失败实例Id列表
+    */
+    @SerializedName("FailedInstanceIds")
+    @Expose
+    private String [] FailedInstanceIds;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -39,23 +45,35 @@ public class DescribeTRTCRealTimeQualityMetricDataResponse extends AbstractModel
     private String RequestId;
 
     /**
-     * Get TRTC监控数据出参
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data TRTC监控数据出参
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 解除隔离成功实例Id列表 
+     * @return SuccessInstanceIds 解除隔离成功实例Id列表
      */
-    public TRTCDataResp getData() {
-        return this.Data;
+    public String [] getSuccessInstanceIds() {
+        return this.SuccessInstanceIds;
     }
 
     /**
-     * Set TRTC监控数据出参
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data TRTC监控数据出参
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 解除隔离成功实例Id列表
+     * @param SuccessInstanceIds 解除隔离成功实例Id列表
      */
-    public void setData(TRTCDataResp Data) {
-        this.Data = Data;
+    public void setSuccessInstanceIds(String [] SuccessInstanceIds) {
+        this.SuccessInstanceIds = SuccessInstanceIds;
+    }
+
+    /**
+     * Get 解除隔离失败实例Id列表 
+     * @return FailedInstanceIds 解除隔离失败实例Id列表
+     */
+    public String [] getFailedInstanceIds() {
+        return this.FailedInstanceIds;
+    }
+
+    /**
+     * Set 解除隔离失败实例Id列表
+     * @param FailedInstanceIds 解除隔离失败实例Id列表
+     */
+    public void setFailedInstanceIds(String [] FailedInstanceIds) {
+        this.FailedInstanceIds = FailedInstanceIds;
     }
 
     /**
@@ -74,16 +92,25 @@ public class DescribeTRTCRealTimeQualityMetricDataResponse extends AbstractModel
         this.RequestId = RequestId;
     }
 
-    public DescribeTRTCRealTimeQualityMetricDataResponse() {
+    public CancelIsolateDBInstancesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeTRTCRealTimeQualityMetricDataResponse(DescribeTRTCRealTimeQualityMetricDataResponse source) {
-        if (source.Data != null) {
-            this.Data = new TRTCDataResp(source.Data);
+    public CancelIsolateDBInstancesResponse(CancelIsolateDBInstancesResponse source) {
+        if (source.SuccessInstanceIds != null) {
+            this.SuccessInstanceIds = new String[source.SuccessInstanceIds.length];
+            for (int i = 0; i < source.SuccessInstanceIds.length; i++) {
+                this.SuccessInstanceIds[i] = new String(source.SuccessInstanceIds[i]);
+            }
+        }
+        if (source.FailedInstanceIds != null) {
+            this.FailedInstanceIds = new String[source.FailedInstanceIds.length];
+            for (int i = 0; i < source.FailedInstanceIds.length; i++) {
+                this.FailedInstanceIds[i] = new String(source.FailedInstanceIds[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -95,7 +122,8 @@ public class DescribeTRTCRealTimeQualityMetricDataResponse extends AbstractModel
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Data.", this.Data);
+        this.setParamArraySimple(map, prefix + "SuccessInstanceIds.", this.SuccessInstanceIds);
+        this.setParamArraySimple(map, prefix + "FailedInstanceIds.", this.FailedInstanceIds);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

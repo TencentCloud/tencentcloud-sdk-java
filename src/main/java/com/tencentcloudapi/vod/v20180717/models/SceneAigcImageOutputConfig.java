@@ -55,8 +55,12 @@ public class SceneAigcImageOutputConfig extends AbstractModel {
 
     /**
     * 指定所生成图片的宽高比。输入格式为 W:H。
-
-仅生商品图场景有效，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9
+本字段在以下场景有效：
+* 生商品图场景，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9
+* AI扩图场景。可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9、21:9，可以配合 ImageWidth 和 ImageHeight 使用，规则如下： 
+    1. 仅指定 AspectRatio 时，根据原图输入进行自适应调整。
+    2. 指定 AspectRatio 和 ImageWidth 时，ImageHeight  由两者计算得出，反亦是如此。
+    3. 当AspectRatio、ImageWidth、ImageHeight 同时指定的时候，优先使用ImageWidth、ImageHeight。
     */
     @SerializedName("AspectRatio")
     @Expose
@@ -68,6 +72,20 @@ public class SceneAigcImageOutputConfig extends AbstractModel {
     @SerializedName("EncodeConfig")
     @Expose
     private ImageSceneAigcEncodeConfig EncodeConfig;
+
+    /**
+    * 输出图像宽度，**仅AI扩图场景有效**。
+    */
+    @SerializedName("ImageWidth")
+    @Expose
+    private Long ImageWidth;
+
+    /**
+    * 输出图像高度，**仅AI扩图场景有效**。
+    */
+    @SerializedName("ImageHeight")
+    @Expose
+    private Long ImageHeight;
 
     /**
      * Get 存储模式。取值有： <li>Permanent：永久存储，生成的图片文件将存储到云点播，可在事件通知中获取到 FileId；</li> <li>Temporary：临时存储，生成的图片文件不会存储到云点播，可在事件通知中获取到临时访问的 URL；</li>
@@ -143,11 +161,19 @@ public class SceneAigcImageOutputConfig extends AbstractModel {
 
     /**
      * Get 指定所生成图片的宽高比。输入格式为 W:H。
-
-仅生商品图场景有效，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9 
+本字段在以下场景有效：
+* 生商品图场景，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9
+* AI扩图场景。可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9、21:9，可以配合 ImageWidth 和 ImageHeight 使用，规则如下： 
+    1. 仅指定 AspectRatio 时，根据原图输入进行自适应调整。
+    2. 指定 AspectRatio 和 ImageWidth 时，ImageHeight  由两者计算得出，反亦是如此。
+    3. 当AspectRatio、ImageWidth、ImageHeight 同时指定的时候，优先使用ImageWidth、ImageHeight。 
      * @return AspectRatio 指定所生成图片的宽高比。输入格式为 W:H。
-
-仅生商品图场景有效，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9
+本字段在以下场景有效：
+* 生商品图场景，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9
+* AI扩图场景。可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9、21:9，可以配合 ImageWidth 和 ImageHeight 使用，规则如下： 
+    1. 仅指定 AspectRatio 时，根据原图输入进行自适应调整。
+    2. 指定 AspectRatio 和 ImageWidth 时，ImageHeight  由两者计算得出，反亦是如此。
+    3. 当AspectRatio、ImageWidth、ImageHeight 同时指定的时候，优先使用ImageWidth、ImageHeight。
      */
     public String getAspectRatio() {
         return this.AspectRatio;
@@ -155,11 +181,19 @@ public class SceneAigcImageOutputConfig extends AbstractModel {
 
     /**
      * Set 指定所生成图片的宽高比。输入格式为 W:H。
-
-仅生商品图场景有效，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9
+本字段在以下场景有效：
+* 生商品图场景，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9
+* AI扩图场景。可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9、21:9，可以配合 ImageWidth 和 ImageHeight 使用，规则如下： 
+    1. 仅指定 AspectRatio 时，根据原图输入进行自适应调整。
+    2. 指定 AspectRatio 和 ImageWidth 时，ImageHeight  由两者计算得出，反亦是如此。
+    3. 当AspectRatio、ImageWidth、ImageHeight 同时指定的时候，优先使用ImageWidth、ImageHeight。
      * @param AspectRatio 指定所生成图片的宽高比。输入格式为 W:H。
-
-仅生商品图场景有效，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9
+本字段在以下场景有效：
+* 生商品图场景，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9
+* AI扩图场景。可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9、21:9，可以配合 ImageWidth 和 ImageHeight 使用，规则如下： 
+    1. 仅指定 AspectRatio 时，根据原图输入进行自适应调整。
+    2. 指定 AspectRatio 和 ImageWidth 时，ImageHeight  由两者计算得出，反亦是如此。
+    3. 当AspectRatio、ImageWidth、ImageHeight 同时指定的时候，优先使用ImageWidth、ImageHeight。
      */
     public void setAspectRatio(String AspectRatio) {
         this.AspectRatio = AspectRatio;
@@ -179,6 +213,38 @@ public class SceneAigcImageOutputConfig extends AbstractModel {
      */
     public void setEncodeConfig(ImageSceneAigcEncodeConfig EncodeConfig) {
         this.EncodeConfig = EncodeConfig;
+    }
+
+    /**
+     * Get 输出图像宽度，**仅AI扩图场景有效**。 
+     * @return ImageWidth 输出图像宽度，**仅AI扩图场景有效**。
+     */
+    public Long getImageWidth() {
+        return this.ImageWidth;
+    }
+
+    /**
+     * Set 输出图像宽度，**仅AI扩图场景有效**。
+     * @param ImageWidth 输出图像宽度，**仅AI扩图场景有效**。
+     */
+    public void setImageWidth(Long ImageWidth) {
+        this.ImageWidth = ImageWidth;
+    }
+
+    /**
+     * Get 输出图像高度，**仅AI扩图场景有效**。 
+     * @return ImageHeight 输出图像高度，**仅AI扩图场景有效**。
+     */
+    public Long getImageHeight() {
+        return this.ImageHeight;
+    }
+
+    /**
+     * Set 输出图像高度，**仅AI扩图场景有效**。
+     * @param ImageHeight 输出图像高度，**仅AI扩图场景有效**。
+     */
+    public void setImageHeight(Long ImageHeight) {
+        this.ImageHeight = ImageHeight;
     }
 
     public SceneAigcImageOutputConfig() {
@@ -207,6 +273,12 @@ public class SceneAigcImageOutputConfig extends AbstractModel {
         if (source.EncodeConfig != null) {
             this.EncodeConfig = new ImageSceneAigcEncodeConfig(source.EncodeConfig);
         }
+        if (source.ImageWidth != null) {
+            this.ImageWidth = new Long(source.ImageWidth);
+        }
+        if (source.ImageHeight != null) {
+            this.ImageHeight = new Long(source.ImageHeight);
+        }
     }
 
 
@@ -220,6 +292,8 @@ public class SceneAigcImageOutputConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         this.setParamSimple(map, prefix + "AspectRatio", this.AspectRatio);
         this.setParamObj(map, prefix + "EncodeConfig.", this.EncodeConfig);
+        this.setParamSimple(map, prefix + "ImageWidth", this.ImageWidth);
+        this.setParamSimple(map, prefix + "ImageHeight", this.ImageHeight);
 
     }
 }

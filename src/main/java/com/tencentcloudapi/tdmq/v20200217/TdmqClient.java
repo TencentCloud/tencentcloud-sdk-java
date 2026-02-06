@@ -229,6 +229,18 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *创建 RocketMQ 消费组。
+当前 API 适用集群：4.x 虚拟集群，4.x 专享集群 和 4.x 通用集群。创建 5.x 集群消费组的接口文档见 [CreateConsumerGroup](https://cloud.tencent.com/document/api/1493/97943)。
+     * @param req CreateRocketMQGroupV2Request
+     * @return CreateRocketMQGroupV2Response
+     * @throws TencentCloudSDKException
+     */
+    public CreateRocketMQGroupV2Response CreateRocketMQGroupV2(CreateRocketMQGroupV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateRocketMQGroupV2", CreateRocketMQGroupV2Response.class);
+    }
+
+    /**
      *创建 RocketMQ 命名空间。
 当前 API 适用集群：4.x 虚拟集群和 4.x 专享集群，其他集群类型均不支持该功能。
      * @param req CreateRocketMQNamespaceRequest

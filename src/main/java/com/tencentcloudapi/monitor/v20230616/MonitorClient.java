@@ -39,6 +39,17 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *创建自定义通知内容模板
+     * @param req CreateNoticeContentTmplRequest
+     * @return CreateNoticeContentTmplResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateNoticeContentTmplResponse CreateNoticeContentTmpl(CreateNoticeContentTmplRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateNoticeContentTmpl", CreateNoticeContentTmplResponse.class);
+    }
+
+    /**
      *按需查询告警的通知历史
      * @param req DescribeAlarmNotifyHistoriesRequest
      * @return DescribeAlarmNotifyHistoriesResponse

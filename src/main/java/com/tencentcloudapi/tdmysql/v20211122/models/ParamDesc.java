@@ -1,0 +1,275 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.tdmysql.v20211122.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class ParamDesc extends AbstractModel {
+
+    /**
+    * 参数名字
+    */
+    @SerializedName("Param")
+    @Expose
+    private String Param;
+
+    /**
+    * 当前参数值
+    */
+    @SerializedName("Value")
+    @Expose
+    private String Value;
+
+    /**
+    * 设置过的值，参数生效后，该值和value一样。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SetValue")
+    @Expose
+    private String SetValue;
+
+    /**
+    * 系统默认值
+    */
+    @SerializedName("Default")
+    @Expose
+    private String Default;
+
+    /**
+    * 参数限制
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Constraint")
+    @Expose
+    private ParamConstraint Constraint;
+
+    /**
+    * 是否有设置过值，false:没有设置过值，true:有设置过值。
+    */
+    @SerializedName("HaveSetValue")
+    @Expose
+    private Boolean HaveSetValue;
+
+    /**
+    * true:需要重启
+    */
+    @SerializedName("NeedRestart")
+    @Expose
+    private Boolean NeedRestart;
+
+    /**
+    * 参数描述
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
+     * Get 参数名字 
+     * @return Param 参数名字
+     */
+    public String getParam() {
+        return this.Param;
+    }
+
+    /**
+     * Set 参数名字
+     * @param Param 参数名字
+     */
+    public void setParam(String Param) {
+        this.Param = Param;
+    }
+
+    /**
+     * Get 当前参数值 
+     * @return Value 当前参数值
+     */
+    public String getValue() {
+        return this.Value;
+    }
+
+    /**
+     * Set 当前参数值
+     * @param Value 当前参数值
+     */
+    public void setValue(String Value) {
+        this.Value = Value;
+    }
+
+    /**
+     * Get 设置过的值，参数生效后，该值和value一样。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SetValue 设置过的值，参数生效后，该值和value一样。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSetValue() {
+        return this.SetValue;
+    }
+
+    /**
+     * Set 设置过的值，参数生效后，该值和value一样。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SetValue 设置过的值，参数生效后，该值和value一样。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSetValue(String SetValue) {
+        this.SetValue = SetValue;
+    }
+
+    /**
+     * Get 系统默认值 
+     * @return Default 系统默认值
+     */
+    public String getDefault() {
+        return this.Default;
+    }
+
+    /**
+     * Set 系统默认值
+     * @param Default 系统默认值
+     */
+    public void setDefault(String Default) {
+        this.Default = Default;
+    }
+
+    /**
+     * Get 参数限制
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Constraint 参数限制
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ParamConstraint getConstraint() {
+        return this.Constraint;
+    }
+
+    /**
+     * Set 参数限制
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Constraint 参数限制
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConstraint(ParamConstraint Constraint) {
+        this.Constraint = Constraint;
+    }
+
+    /**
+     * Get 是否有设置过值，false:没有设置过值，true:有设置过值。 
+     * @return HaveSetValue 是否有设置过值，false:没有设置过值，true:有设置过值。
+     */
+    public Boolean getHaveSetValue() {
+        return this.HaveSetValue;
+    }
+
+    /**
+     * Set 是否有设置过值，false:没有设置过值，true:有设置过值。
+     * @param HaveSetValue 是否有设置过值，false:没有设置过值，true:有设置过值。
+     */
+    public void setHaveSetValue(Boolean HaveSetValue) {
+        this.HaveSetValue = HaveSetValue;
+    }
+
+    /**
+     * Get true:需要重启 
+     * @return NeedRestart true:需要重启
+     */
+    public Boolean getNeedRestart() {
+        return this.NeedRestart;
+    }
+
+    /**
+     * Set true:需要重启
+     * @param NeedRestart true:需要重启
+     */
+    public void setNeedRestart(Boolean NeedRestart) {
+        this.NeedRestart = NeedRestart;
+    }
+
+    /**
+     * Get 参数描述
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Description 参数描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 参数描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Description 参数描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
+    public ParamDesc() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ParamDesc(ParamDesc source) {
+        if (source.Param != null) {
+            this.Param = new String(source.Param);
+        }
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
+        }
+        if (source.SetValue != null) {
+            this.SetValue = new String(source.SetValue);
+        }
+        if (source.Default != null) {
+            this.Default = new String(source.Default);
+        }
+        if (source.Constraint != null) {
+            this.Constraint = new ParamConstraint(source.Constraint);
+        }
+        if (source.HaveSetValue != null) {
+            this.HaveSetValue = new Boolean(source.HaveSetValue);
+        }
+        if (source.NeedRestart != null) {
+            this.NeedRestart = new Boolean(source.NeedRestart);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Param", this.Param);
+        this.setParamSimple(map, prefix + "Value", this.Value);
+        this.setParamSimple(map, prefix + "SetValue", this.SetValue);
+        this.setParamSimple(map, prefix + "Default", this.Default);
+        this.setParamObj(map, prefix + "Constraint.", this.Constraint);
+        this.setParamSimple(map, prefix + "HaveSetValue", this.HaveSetValue);
+        this.setParamSimple(map, prefix + "NeedRestart", this.NeedRestart);
+        this.setParamSimple(map, prefix + "Description", this.Description);
+
+    }
+}
+

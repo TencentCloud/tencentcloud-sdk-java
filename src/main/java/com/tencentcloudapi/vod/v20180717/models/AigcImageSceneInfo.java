@@ -27,6 +27,7 @@ public class AigcImageSceneInfo extends AbstractModel {
     * AI生图场景类型，可选值：
 - change_clothes：AI换衣。
 - product_image：AI生商品图。
+- outpainting: AI扩图。
     */
     @SerializedName("Type")
     @Expose
@@ -49,10 +50,12 @@ public class AigcImageSceneInfo extends AbstractModel {
     /**
      * Get AI生图场景类型，可选值：
 - change_clothes：AI换衣。
-- product_image：AI生商品图。 
+- product_image：AI生商品图。
+- outpainting: AI扩图。 
      * @return Type AI生图场景类型，可选值：
 - change_clothes：AI换衣。
 - product_image：AI生商品图。
+- outpainting: AI扩图。
      */
     public String getType() {
         return this.Type;
@@ -62,9 +65,11 @@ public class AigcImageSceneInfo extends AbstractModel {
      * Set AI生图场景类型，可选值：
 - change_clothes：AI换衣。
 - product_image：AI生商品图。
+- outpainting: AI扩图。
      * @param Type AI生图场景类型，可选值：
 - change_clothes：AI换衣。
 - product_image：AI生商品图。
+- outpainting: AI扩图。
      */
     public void setType(String Type) {
         this.Type = Type;

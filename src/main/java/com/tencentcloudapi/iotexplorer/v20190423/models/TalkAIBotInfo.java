@@ -129,6 +129,13 @@ public class TalkAIBotInfo extends AbstractModel {
     private TalkProductInfo [] BoundProducts;
 
     /**
+    * 自定义工具列表，最多可创建10个
+    */
+    @SerializedName("CustomTools")
+    @Expose
+    private String CustomTools;
+
+    /**
      * Get UIN 
      * @return Uin UIN
      */
@@ -372,6 +379,22 @@ public class TalkAIBotInfo extends AbstractModel {
         this.BoundProducts = BoundProducts;
     }
 
+    /**
+     * Get 自定义工具列表，最多可创建10个 
+     * @return CustomTools 自定义工具列表，最多可创建10个
+     */
+    public String getCustomTools() {
+        return this.CustomTools;
+    }
+
+    /**
+     * Set 自定义工具列表，最多可创建10个
+     * @param CustomTools 自定义工具列表，最多可创建10个
+     */
+    public void setCustomTools(String CustomTools) {
+        this.CustomTools = CustomTools;
+    }
+
     public TalkAIBotInfo() {
     }
 
@@ -428,6 +451,9 @@ public class TalkAIBotInfo extends AbstractModel {
                 this.BoundProducts[i] = new TalkProductInfo(source.BoundProducts[i]);
             }
         }
+        if (source.CustomTools != null) {
+            this.CustomTools = new String(source.CustomTools);
+        }
     }
 
 
@@ -450,6 +476,7 @@ public class TalkAIBotInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamArrayObj(map, prefix + "BoundProducts.", this.BoundProducts);
+        this.setParamSimple(map, prefix + "CustomTools", this.CustomTools);
 
     }
 }

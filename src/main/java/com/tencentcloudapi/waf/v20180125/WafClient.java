@@ -556,6 +556,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *获取Api安全模块的访问日志聚合topN
+     * @param req DescribeApiAggregateTopNRequest
+     * @return DescribeApiAggregateTopNResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApiAggregateTopNResponse DescribeApiAggregateTopN(DescribeApiAggregateTopNRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeApiAggregateTopN", DescribeApiAggregateTopNResponse.class);
+    }
+
+    /**
      *获取Api请求详情信息
      * @param req DescribeApiDetailRequest
      * @return DescribeApiDetailResponse
