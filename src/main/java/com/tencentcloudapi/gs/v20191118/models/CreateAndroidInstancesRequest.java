@@ -77,6 +77,13 @@ A6：六开
     private AndroidInstanceLabel [] Labels;
 
     /**
+    * 安卓实例型号。YS1：默认值，基础型云手机GC0、GC1、GC2：三种性能型云手机
+    */
+    @SerializedName("Model")
+    @Expose
+    private String Model;
+
+    /**
      * Get 安卓实例可用区。
 ap-guangzhou-3：广州三区
 ap-shenzhen-1：深圳一区
@@ -216,6 +223,22 @@ A6：六开
         this.Labels = Labels;
     }
 
+    /**
+     * Get 安卓实例型号。YS1：默认值，基础型云手机GC0、GC1、GC2：三种性能型云手机 
+     * @return Model 安卓实例型号。YS1：默认值，基础型云手机GC0、GC1、GC2：三种性能型云手机
+     */
+    public String getModel() {
+        return this.Model;
+    }
+
+    /**
+     * Set 安卓实例型号。YS1：默认值，基础型云手机GC0、GC1、GC2：三种性能型云手机
+     * @param Model 安卓实例型号。YS1：默认值，基础型云手机GC0、GC1、GC2：三种性能型云手机
+     */
+    public void setModel(String Model) {
+        this.Model = Model;
+    }
+
     public CreateAndroidInstancesRequest() {
     }
 
@@ -248,6 +271,9 @@ A6：六开
                 this.Labels[i] = new AndroidInstanceLabel(source.Labels[i]);
             }
         }
+        if (source.Model != null) {
+            this.Model = new String(source.Model);
+        }
     }
 
 
@@ -261,6 +287,7 @@ A6：六开
         this.setParamArraySimple(map, prefix + "HostSerialNumbers.", this.HostSerialNumbers);
         this.setParamSimple(map, prefix + "ImageId", this.ImageId);
         this.setParamArrayObj(map, prefix + "Labels.", this.Labels);
+        this.setParamSimple(map, prefix + "Model", this.Model);
 
     }
 }

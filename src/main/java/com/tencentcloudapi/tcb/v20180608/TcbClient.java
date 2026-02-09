@@ -171,6 +171,17 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *开通Mysql
+     * @param req CreateMySQLRequest
+     * @return CreateMySQLResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMySQLResponse CreateMySQL(CreateMySQLRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateMySQL", CreateMySQLResponse.class);
+    }
+
+    /**
      *开通后付费资源
      * @param req CreatePostpayPackageRequest
      * @return CreatePostpayPackageResponse
@@ -479,6 +490,17 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *查询开通Mysql结果
+     * @param req DescribeCreateMySQLResultRequest
+     * @return DescribeCreateMySQLResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCreateMySQLResultResponse DescribeCreateMySQLResult(DescribeCreateMySQLResultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCreateMySQLResult", DescribeCreateMySQLResultResponse.class);
+    }
+
+    /**
      *根据用户传入的指标, 拉取一段时间内的监控数据。
      * @param req DescribeCurveDataRequest
      * @return DescribeCurveDataResponse
@@ -645,6 +667,28 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *销毁Mysql
+     * @param req DescribeMySQLClusterDetailRequest
+     * @return DescribeMySQLClusterDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMySQLClusterDetailResponse DescribeMySQLClusterDetail(DescribeMySQLClusterDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMySQLClusterDetail", DescribeMySQLClusterDetailResponse.class);
+    }
+
+    /**
+     *查询Mysql任务状态
+     * @param req DescribeMySQLTaskStatusRequest
+     * @return DescribeMySQLTaskStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMySQLTaskStatusResponse DescribeMySQLTaskStatus(DescribeMySQLTaskStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMySQLTaskStatus", DescribeMySQLTaskStatusResponse.class);
+    }
+
+    /**
      *查询后付费资源免费量
      * @param req DescribePostpayFreeQuotasRequest
      * @return DescribePostpayFreeQuotasResponse
@@ -799,6 +843,17 @@ public class TcbClient extends AbstractClient{
     public DestroyEnvResponse DestroyEnv(DestroyEnvRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DestroyEnv", DestroyEnvResponse.class);
+    }
+
+    /**
+     *销毁Mysql
+     * @param req DestroyMySQLRequest
+     * @return DestroyMySQLResponse
+     * @throws TencentCloudSDKException
+     */
+    public DestroyMySQLResponse DestroyMySQL(DestroyMySQLRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DestroyMySQL", DestroyMySQLResponse.class);
     }
 
     /**

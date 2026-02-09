@@ -31,6 +31,13 @@ public class DeleteDataAgentSessionResponse extends AbstractModel {
     private String SessionId;
 
     /**
+    * 删除的会话ID列表
+    */
+    @SerializedName("SessionIds")
+    @Expose
+    private String [] SessionIds;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +58,22 @@ public class DeleteDataAgentSessionResponse extends AbstractModel {
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
+    }
+
+    /**
+     * Get 删除的会话ID列表 
+     * @return SessionIds 删除的会话ID列表
+     */
+    public String [] getSessionIds() {
+        return this.SessionIds;
+    }
+
+    /**
+     * Set 删除的会话ID列表
+     * @param SessionIds 删除的会话ID列表
+     */
+    public void setSessionIds(String [] SessionIds) {
+        this.SessionIds = SessionIds;
     }
 
     /**
@@ -80,6 +103,12 @@ public class DeleteDataAgentSessionResponse extends AbstractModel {
         if (source.SessionId != null) {
             this.SessionId = new String(source.SessionId);
         }
+        if (source.SessionIds != null) {
+            this.SessionIds = new String[source.SessionIds.length];
+            for (int i = 0; i < source.SessionIds.length; i++) {
+                this.SessionIds[i] = new String(source.SessionIds[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -91,6 +120,7 @@ public class DeleteDataAgentSessionResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamArraySimple(map, prefix + "SessionIds.", this.SessionIds);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

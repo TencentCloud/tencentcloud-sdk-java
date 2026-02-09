@@ -73,6 +73,15 @@ public class AndroidInstanceImage extends AbstractModel {
     private String CreateTime;
 
     /**
+    * 镜像型号。
+YS1：基础型云手机
+GC0、GC1、GC2：三种性能型云手机
+    */
+    @SerializedName("AndroidInstanceImageModel")
+    @Expose
+    private String AndroidInstanceImageModel;
+
+    /**
      * Get 镜像 ID 
      * @return AndroidInstanceImageId 镜像 ID
      */
@@ -184,6 +193,30 @@ public class AndroidInstanceImage extends AbstractModel {
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get 镜像型号。
+YS1：基础型云手机
+GC0、GC1、GC2：三种性能型云手机 
+     * @return AndroidInstanceImageModel 镜像型号。
+YS1：基础型云手机
+GC0、GC1、GC2：三种性能型云手机
+     */
+    public String getAndroidInstanceImageModel() {
+        return this.AndroidInstanceImageModel;
+    }
+
+    /**
+     * Set 镜像型号。
+YS1：基础型云手机
+GC0、GC1、GC2：三种性能型云手机
+     * @param AndroidInstanceImageModel 镜像型号。
+YS1：基础型云手机
+GC0、GC1、GC2：三种性能型云手机
+     */
+    public void setAndroidInstanceImageModel(String AndroidInstanceImageModel) {
+        this.AndroidInstanceImageModel = AndroidInstanceImageModel;
+    }
+
     public AndroidInstanceImage() {
     }
 
@@ -213,6 +246,9 @@ public class AndroidInstanceImage extends AbstractModel {
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.AndroidInstanceImageModel != null) {
+            this.AndroidInstanceImageModel = new String(source.AndroidInstanceImageModel);
+        }
     }
 
 
@@ -227,6 +263,7 @@ public class AndroidInstanceImage extends AbstractModel {
         this.setParamSimple(map, prefix + "AndroidInstanceImageDescription", this.AndroidInstanceImageDescription);
         this.setParamSimple(map, prefix + "AndroidVersion", this.AndroidVersion);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "AndroidInstanceImageModel", this.AndroidInstanceImageModel);
 
     }
 }

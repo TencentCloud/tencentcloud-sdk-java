@@ -52,7 +52,7 @@ public class SearchSubtaskResultByIdRequest extends AbstractModel {
     private String Id;
 
     /**
-    * 运维父任务执行状态
+    * 运维父任务执行状态。1 - 执行中，2 - 成功，3 - 失败，4 - 超时
     */
     @SerializedName("Status")
     @Expose
@@ -123,16 +123,16 @@ public class SearchSubtaskResultByIdRequest extends AbstractModel {
     }
 
     /**
-     * Get 运维父任务执行状态 
-     * @return Status 运维父任务执行状态
+     * Get 运维父任务执行状态。1 - 执行中，2 - 成功，3 - 失败，4 - 超时 
+     * @return Status 运维父任务执行状态。1 - 执行中，2 - 成功，3 - 失败，4 - 超时
      */
     public Long [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 运维父任务执行状态
-     * @param Status 运维父任务执行状态
+     * Set 运维父任务执行状态。1 - 执行中，2 - 成功，3 - 失败，4 - 超时
+     * @param Status 运维父任务执行状态。1 - 执行中，2 - 成功，3 - 失败，4 - 超时
      */
     public void setStatus(Long [] Status) {
         this.Status = Status;

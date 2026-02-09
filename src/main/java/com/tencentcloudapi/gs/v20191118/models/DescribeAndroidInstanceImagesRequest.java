@@ -53,6 +53,7 @@ public class DescribeAndroidInstanceImagesRequest extends AbstractModel {
 
     /**
     * 字段过滤器。Filter 的 Name 有以下值：
+ImageModel：镜像型号
 ImageName：镜像名称
 ImageState：镜像状态
 AndroidVersion：安卓版本
@@ -127,10 +128,12 @@ AndroidVersion：安卓版本
 
     /**
      * Get 字段过滤器。Filter 的 Name 有以下值：
+ImageModel：镜像型号
 ImageName：镜像名称
 ImageState：镜像状态
 AndroidVersion：安卓版本 
      * @return Filters 字段过滤器。Filter 的 Name 有以下值：
+ImageModel：镜像型号
 ImageName：镜像名称
 ImageState：镜像状态
 AndroidVersion：安卓版本
@@ -141,10 +144,12 @@ AndroidVersion：安卓版本
 
     /**
      * Set 字段过滤器。Filter 的 Name 有以下值：
+ImageModel：镜像型号
 ImageName：镜像名称
 ImageState：镜像状态
 AndroidVersion：安卓版本
      * @param Filters 字段过滤器。Filter 的 Name 有以下值：
+ImageModel：镜像型号
 ImageName：镜像名称
 ImageState：镜像状态
 AndroidVersion：安卓版本

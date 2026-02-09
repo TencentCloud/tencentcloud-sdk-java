@@ -38,6 +38,13 @@ public class DeleteDataAgentSessionRequest extends AbstractModel {
     private String SessionId;
 
     /**
+    * 批量删除 会话id 列表
+    */
+    @SerializedName("SessionIds")
+    @Expose
+    private String [] SessionIds;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -69,6 +76,22 @@ public class DeleteDataAgentSessionRequest extends AbstractModel {
         this.SessionId = SessionId;
     }
 
+    /**
+     * Get 批量删除 会话id 列表 
+     * @return SessionIds 批量删除 会话id 列表
+     */
+    public String [] getSessionIds() {
+        return this.SessionIds;
+    }
+
+    /**
+     * Set 批量删除 会话id 列表
+     * @param SessionIds 批量删除 会话id 列表
+     */
+    public void setSessionIds(String [] SessionIds) {
+        this.SessionIds = SessionIds;
+    }
+
     public DeleteDataAgentSessionRequest() {
     }
 
@@ -83,6 +106,12 @@ public class DeleteDataAgentSessionRequest extends AbstractModel {
         if (source.SessionId != null) {
             this.SessionId = new String(source.SessionId);
         }
+        if (source.SessionIds != null) {
+            this.SessionIds = new String[source.SessionIds.length];
+            for (int i = 0; i < source.SessionIds.length; i++) {
+                this.SessionIds[i] = new String(source.SessionIds[i]);
+            }
+        }
     }
 
 
@@ -92,6 +121,7 @@ public class DeleteDataAgentSessionRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamArraySimple(map, prefix + "SessionIds.", this.SessionIds);
 
     }
 }

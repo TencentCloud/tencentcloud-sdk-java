@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.trtc.v20190722.models;
+package com.tencentcloudapi.tcb.v20180608.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,15 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTRTCRealTimeScaleMetricDataResponse extends AbstractModel {
+public class CreateMySQLResponse extends AbstractModel {
 
     /**
-    * TRTC监控数据出参
-注意：此字段可能返回 null，表示取不到有效值。
+    * 开通结果
     */
     @SerializedName("Data")
     @Expose
-    private TRTCDataResp Data;
+    private CreateMySQLResult Data;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -39,22 +38,18 @@ public class DescribeTRTCRealTimeScaleMetricDataResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get TRTC监控数据出参
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data TRTC监控数据出参
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 开通结果 
+     * @return Data 开通结果
      */
-    public TRTCDataResp getData() {
+    public CreateMySQLResult getData() {
         return this.Data;
     }
 
     /**
-     * Set TRTC监控数据出参
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data TRTC监控数据出参
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 开通结果
+     * @param Data 开通结果
      */
-    public void setData(TRTCDataResp Data) {
+    public void setData(CreateMySQLResult Data) {
         this.Data = Data;
     }
 
@@ -74,16 +69,16 @@ public class DescribeTRTCRealTimeScaleMetricDataResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeTRTCRealTimeScaleMetricDataResponse() {
+    public CreateMySQLResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeTRTCRealTimeScaleMetricDataResponse(DescribeTRTCRealTimeScaleMetricDataResponse source) {
+    public CreateMySQLResponse(CreateMySQLResponse source) {
         if (source.Data != null) {
-            this.Data = new TRTCDataResp(source.Data);
+            this.Data = new CreateMySQLResult(source.Data);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);

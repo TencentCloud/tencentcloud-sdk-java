@@ -145,6 +145,15 @@ ESTABLISHED：连接中
     private String ServiceStatus;
 
     /**
+    * 安卓实例型号。
+YS1：默认值，基础型云手机
+GC0、GC1、GC2：三种性能型云手机
+    */
+    @SerializedName("AndroidInstanceModel")
+    @Expose
+    private String AndroidInstanceModel;
+
+    /**
      * Get 实例 ID 
      * @return AndroidInstanceId 实例 ID
      */
@@ -424,6 +433,30 @@ ESTABLISHED：连接中
         this.ServiceStatus = ServiceStatus;
     }
 
+    /**
+     * Get 安卓实例型号。
+YS1：默认值，基础型云手机
+GC0、GC1、GC2：三种性能型云手机 
+     * @return AndroidInstanceModel 安卓实例型号。
+YS1：默认值，基础型云手机
+GC0、GC1、GC2：三种性能型云手机
+     */
+    public String getAndroidInstanceModel() {
+        return this.AndroidInstanceModel;
+    }
+
+    /**
+     * Set 安卓实例型号。
+YS1：默认值，基础型云手机
+GC0、GC1、GC2：三种性能型云手机
+     * @param AndroidInstanceModel 安卓实例型号。
+YS1：默认值，基础型云手机
+GC0、GC1、GC2：三种性能型云手机
+     */
+    public void setAndroidInstanceModel(String AndroidInstanceModel) {
+        this.AndroidInstanceModel = AndroidInstanceModel;
+    }
+
     public AndroidInstance() {
     }
 
@@ -486,6 +519,9 @@ ESTABLISHED：连接中
         if (source.ServiceStatus != null) {
             this.ServiceStatus = new String(source.ServiceStatus);
         }
+        if (source.AndroidInstanceModel != null) {
+            this.AndroidInstanceModel = new String(source.AndroidInstanceModel);
+        }
     }
 
 
@@ -510,6 +546,7 @@ ESTABLISHED：连接中
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "HostServerSerialNumber", this.HostServerSerialNumber);
         this.setParamSimple(map, prefix + "ServiceStatus", this.ServiceStatus);
+        this.setParamSimple(map, prefix + "AndroidInstanceModel", this.AndroidInstanceModel);
 
     }
 }
