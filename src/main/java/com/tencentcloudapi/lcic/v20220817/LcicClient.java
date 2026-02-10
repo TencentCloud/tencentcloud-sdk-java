@@ -116,6 +116,17 @@ public class LcicClient extends AbstractClient{
     }
 
     /**
+     *批量获取信令录制回放token，用于回放指定课堂时鉴权
+     * @param req BatchGetPlaybackTokenRequest
+     * @return BatchGetPlaybackTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchGetPlaybackTokenResponse BatchGetPlaybackToken(BatchGetPlaybackTokenRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BatchGetPlaybackToken", BatchGetPlaybackTokenResponse.class);
+    }
+
+    /**
      *如果批量注册的用户已存在，则会被覆盖。一次最多注册1000个用户。默认请求频率限制：10次/秒
      * @param req BatchRegisterRequest
      * @return BatchRegisterResponse
@@ -265,6 +276,17 @@ public class LcicClient extends AbstractClient{
     public DeleteGroupMemberResponse DeleteGroupMember(DeleteGroupMemberRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteGroupMember", DeleteGroupMemberResponse.class);
+    }
+
+    /**
+     *删除该堂课的录制记录
+     * @param req DeletePlaybackItemRequest
+     * @return DeletePlaybackItemResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePlaybackItemResponse DeletePlaybackItem(DeletePlaybackItemRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeletePlaybackItem", DeletePlaybackItemResponse.class);
     }
 
     /**
@@ -458,6 +480,28 @@ public class LcicClient extends AbstractClient{
     }
 
     /**
+     *信令录制视频观看记录查询接口，用于查询指定课堂在指定时间段内的用户播放记录。
+     * @param req DescribePlayRecordsRequest
+     * @return DescribePlayRecordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePlayRecordsResponse DescribePlayRecords(DescribePlayRecordsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePlayRecords", DescribePlayRecordsResponse.class);
+    }
+
+    /**
+     *查询录制信息
+     * @param req DescribePlaybackListRequest
+     * @return DescribePlaybackListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePlaybackListResponse DescribePlaybackList(DescribePlaybackListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePlaybackList", DescribePlaybackListResponse.class);
+    }
+
+    /**
      *获取房间提问列表
      * @param req DescribeQuestionListRequest
      * @return DescribeQuestionListResponse
@@ -624,6 +668,17 @@ public class LcicClient extends AbstractClient{
     public ForbidSendMsgResponse ForbidSendMsg(ForbidSendMsgRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ForbidSendMsg", ForbidSendMsgResponse.class);
+    }
+
+    /**
+     *获取信令录制回放token，用于回放指定课堂时鉴权
+     * @param req GetPlaybackTokenRequest
+     * @return GetPlaybackTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetPlaybackTokenResponse GetPlaybackToken(GetPlaybackTokenRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetPlaybackToken", GetPlaybackTokenResponse.class);
     }
 
     /**

@@ -31,6 +31,13 @@ public class ProcessImageAsyncTaskInput extends AbstractModel {
     private Long Definition;
 
     /**
+    * 图片异步处理扩展参数。
+    */
+    @SerializedName("ExtendedParameter")
+    @Expose
+    private ProcessImageAsyncInputExtendedParameter ExtendedParameter;
+
+    /**
      * Get 图片异步处理模板ID。 
      * @return Definition 图片异步处理模板ID。
      */
@@ -46,6 +53,22 @@ public class ProcessImageAsyncTaskInput extends AbstractModel {
         this.Definition = Definition;
     }
 
+    /**
+     * Get 图片异步处理扩展参数。 
+     * @return ExtendedParameter 图片异步处理扩展参数。
+     */
+    public ProcessImageAsyncInputExtendedParameter getExtendedParameter() {
+        return this.ExtendedParameter;
+    }
+
+    /**
+     * Set 图片异步处理扩展参数。
+     * @param ExtendedParameter 图片异步处理扩展参数。
+     */
+    public void setExtendedParameter(ProcessImageAsyncInputExtendedParameter ExtendedParameter) {
+        this.ExtendedParameter = ExtendedParameter;
+    }
+
     public ProcessImageAsyncTaskInput() {
     }
 
@@ -57,6 +80,9 @@ public class ProcessImageAsyncTaskInput extends AbstractModel {
         if (source.Definition != null) {
             this.Definition = new Long(source.Definition);
         }
+        if (source.ExtendedParameter != null) {
+            this.ExtendedParameter = new ProcessImageAsyncInputExtendedParameter(source.ExtendedParameter);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class ProcessImageAsyncTaskInput extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);
+        this.setParamObj(map, prefix + "ExtendedParameter.", this.ExtendedParameter);
 
     }
 }

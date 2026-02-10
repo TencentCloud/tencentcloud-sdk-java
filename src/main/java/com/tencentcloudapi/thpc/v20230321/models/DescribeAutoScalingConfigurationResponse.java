@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DescribeAutoScalingConfigurationResponse extends AbstractModel {
 
     /**
-    * 集群ID。
+    * <p>集群ID。</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 任务连续等待时间，队列的任务处于连续等待的时间。单位秒。
+    * <p>任务连续等待时间，队列的任务处于连续等待的时间。单位秒。</p>
     */
     @SerializedName("ExpansionBusyTime")
     @Expose
     private Long ExpansionBusyTime;
 
     /**
-    * 节点连续空闲（未运行作业）时间，一个节点连续处于空闲状态时间。
+    * <p>节点连续空闲（未运行作业）时间，一个节点连续处于空闲状态时间。</p>
     */
     @SerializedName("ShrinkIdleTime")
     @Expose
     private Long ShrinkIdleTime;
 
     /**
-    * 扩容队列配置概览列表。
+    * <p>扩容队列配置概览列表。</p>
     */
     @SerializedName("QueueConfigs")
     @Expose
@@ -59,64 +59,64 @@ public class DescribeAutoScalingConfigurationResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 集群ID。 
-     * @return ClusterId 集群ID。
+     * Get <p>集群ID。</p> 
+     * @return ClusterId <p>集群ID。</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID。
-     * @param ClusterId 集群ID。
+     * Set <p>集群ID。</p>
+     * @param ClusterId <p>集群ID。</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 任务连续等待时间，队列的任务处于连续等待的时间。单位秒。 
-     * @return ExpansionBusyTime 任务连续等待时间，队列的任务处于连续等待的时间。单位秒。
+     * Get <p>任务连续等待时间，队列的任务处于连续等待的时间。单位秒。</p> 
+     * @return ExpansionBusyTime <p>任务连续等待时间，队列的任务处于连续等待的时间。单位秒。</p>
      */
     public Long getExpansionBusyTime() {
         return this.ExpansionBusyTime;
     }
 
     /**
-     * Set 任务连续等待时间，队列的任务处于连续等待的时间。单位秒。
-     * @param ExpansionBusyTime 任务连续等待时间，队列的任务处于连续等待的时间。单位秒。
+     * Set <p>任务连续等待时间，队列的任务处于连续等待的时间。单位秒。</p>
+     * @param ExpansionBusyTime <p>任务连续等待时间，队列的任务处于连续等待的时间。单位秒。</p>
      */
     public void setExpansionBusyTime(Long ExpansionBusyTime) {
         this.ExpansionBusyTime = ExpansionBusyTime;
     }
 
     /**
-     * Get 节点连续空闲（未运行作业）时间，一个节点连续处于空闲状态时间。 
-     * @return ShrinkIdleTime 节点连续空闲（未运行作业）时间，一个节点连续处于空闲状态时间。
+     * Get <p>节点连续空闲（未运行作业）时间，一个节点连续处于空闲状态时间。</p> 
+     * @return ShrinkIdleTime <p>节点连续空闲（未运行作业）时间，一个节点连续处于空闲状态时间。</p>
      */
     public Long getShrinkIdleTime() {
         return this.ShrinkIdleTime;
     }
 
     /**
-     * Set 节点连续空闲（未运行作业）时间，一个节点连续处于空闲状态时间。
-     * @param ShrinkIdleTime 节点连续空闲（未运行作业）时间，一个节点连续处于空闲状态时间。
+     * Set <p>节点连续空闲（未运行作业）时间，一个节点连续处于空闲状态时间。</p>
+     * @param ShrinkIdleTime <p>节点连续空闲（未运行作业）时间，一个节点连续处于空闲状态时间。</p>
      */
     public void setShrinkIdleTime(Long ShrinkIdleTime) {
         this.ShrinkIdleTime = ShrinkIdleTime;
     }
 
     /**
-     * Get 扩容队列配置概览列表。 
-     * @return QueueConfigs 扩容队列配置概览列表。
+     * Get <p>扩容队列配置概览列表。</p> 
+     * @return QueueConfigs <p>扩容队列配置概览列表。</p>
      */
     public QueueConfigOverview [] getQueueConfigs() {
         return this.QueueConfigs;
     }
 
     /**
-     * Set 扩容队列配置概览列表。
-     * @param QueueConfigs 扩容队列配置概览列表。
+     * Set <p>扩容队列配置概览列表。</p>
+     * @param QueueConfigs <p>扩容队列配置概览列表。</p>
      */
     public void setQueueConfigs(QueueConfigOverview [] QueueConfigs) {
         this.QueueConfigs = QueueConfigs;

@@ -75,6 +75,22 @@ public class AdvancedSuperResolutionConfig extends AbstractModel {
     private Long Height;
 
     /**
+    * 目标图片长边长度，不能超过4096。
+注意：当Mode等于aspect或fixed，且未配置Width和Height字段时使用此配置。
+    */
+    @SerializedName("LongSide")
+    @Expose
+    private Long LongSide;
+
+    /**
+    * 目标图片短边长度，不能超过4096。
+注意：当Mode等于aspect或fixed，且未配置Width和Height字段时使用此配置。
+    */
+    @SerializedName("ShortSide")
+    @Expose
+    private Long ShortSide;
+
+    /**
      * Get 能力配置开关，可选值：
 <li>ON：开启；</li>
 <li>OFF：关闭。</li>
@@ -206,6 +222,46 @@ public class AdvancedSuperResolutionConfig extends AbstractModel {
         this.Height = Height;
     }
 
+    /**
+     * Get 目标图片长边长度，不能超过4096。
+注意：当Mode等于aspect或fixed，且未配置Width和Height字段时使用此配置。 
+     * @return LongSide 目标图片长边长度，不能超过4096。
+注意：当Mode等于aspect或fixed，且未配置Width和Height字段时使用此配置。
+     */
+    public Long getLongSide() {
+        return this.LongSide;
+    }
+
+    /**
+     * Set 目标图片长边长度，不能超过4096。
+注意：当Mode等于aspect或fixed，且未配置Width和Height字段时使用此配置。
+     * @param LongSide 目标图片长边长度，不能超过4096。
+注意：当Mode等于aspect或fixed，且未配置Width和Height字段时使用此配置。
+     */
+    public void setLongSide(Long LongSide) {
+        this.LongSide = LongSide;
+    }
+
+    /**
+     * Get 目标图片短边长度，不能超过4096。
+注意：当Mode等于aspect或fixed，且未配置Width和Height字段时使用此配置。 
+     * @return ShortSide 目标图片短边长度，不能超过4096。
+注意：当Mode等于aspect或fixed，且未配置Width和Height字段时使用此配置。
+     */
+    public Long getShortSide() {
+        return this.ShortSide;
+    }
+
+    /**
+     * Set 目标图片短边长度，不能超过4096。
+注意：当Mode等于aspect或fixed，且未配置Width和Height字段时使用此配置。
+     * @param ShortSide 目标图片短边长度，不能超过4096。
+注意：当Mode等于aspect或fixed，且未配置Width和Height字段时使用此配置。
+     */
+    public void setShortSide(Long ShortSide) {
+        this.ShortSide = ShortSide;
+    }
+
     public AdvancedSuperResolutionConfig() {
     }
 
@@ -232,6 +288,12 @@ public class AdvancedSuperResolutionConfig extends AbstractModel {
         if (source.Height != null) {
             this.Height = new Long(source.Height);
         }
+        if (source.LongSide != null) {
+            this.LongSide = new Long(source.LongSide);
+        }
+        if (source.ShortSide != null) {
+            this.ShortSide = new Long(source.ShortSide);
+        }
     }
 
 
@@ -245,6 +307,8 @@ public class AdvancedSuperResolutionConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "Percent", this.Percent);
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Height", this.Height);
+        this.setParamSimple(map, prefix + "LongSide", this.LongSide);
+        this.setParamSimple(map, prefix + "ShortSide", this.ShortSide);
 
     }
 }

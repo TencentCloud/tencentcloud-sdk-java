@@ -346,6 +346,17 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *创建大模型解析模板
+     * @param req CreateLLMComprehendTemplateRequest
+     * @return CreateLLMComprehendTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLLMComprehendTemplateResponse CreateLLMComprehendTemplate(CreateLLMComprehendTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateLLMComprehendTemplate", CreateLLMComprehendTemplateResponse.class);
+    }
+
+    /**
      *该接口用于创建自定义模板，模板用于 ProcessMediaByMPS 接口的部分功能。
 创建模板时，需要将 MPS 相关参数以 JSON 格式填入 MPSCreateTemplateParams 参数中。关于具体的任务参数配置方法，请参考 MPS 任务模板相关文档说明。
 当前支持创建自定义模板的 MPS 功能：
@@ -726,6 +737,19 @@ public class VodClient extends AbstractClient{
     public DeleteJustInTimeTranscodeTemplateResponse DeleteJustInTimeTranscodeTemplate(DeleteJustInTimeTranscodeTemplateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteJustInTimeTranscodeTemplate", DeleteJustInTimeTranscodeTemplateResponse.class);
+    }
+
+    /**
+     *删除用户自定义图像异步处理模板。
+
+注意：模板 ID 为 10000 以下的为系统预置模板，不允许删除。
+     * @param req DeleteLLMComprehendTemplateRequest
+     * @return DeleteLLMComprehendTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLLMComprehendTemplateResponse DeleteLLMComprehendTemplate(DeleteLLMComprehendTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteLLMComprehendTemplate", DeleteLLMComprehendTemplateResponse.class);
     }
 
     /**
@@ -1324,6 +1348,17 @@ public class VodClient extends AbstractClient{
     public DescribeJustInTimeTranscodeTemplatesResponse DescribeJustInTimeTranscodeTemplates(DescribeJustInTimeTranscodeTemplatesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeJustInTimeTranscodeTemplates", DescribeJustInTimeTranscodeTemplatesResponse.class);
+    }
+
+    /**
+     *根据大模型解析模板唯一标识，获取大模型解析模板详情列表。返回结果包含符合条件的所有用户自定义大模型解析模板。
+     * @param req DescribeLLMComprehendTemplatesRequest
+     * @return DescribeLLMComprehendTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLLMComprehendTemplatesResponse DescribeLLMComprehendTemplates(DescribeLLMComprehendTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLLMComprehendTemplates", DescribeLLMComprehendTemplatesResponse.class);
     }
 
     /**
@@ -2039,6 +2074,17 @@ public class VodClient extends AbstractClient{
     public ModifyJustInTimeTranscodeTemplateResponse ModifyJustInTimeTranscodeTemplate(ModifyJustInTimeTranscodeTemplateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyJustInTimeTranscodeTemplate", ModifyJustInTimeTranscodeTemplateResponse.class);
+    }
+
+    /**
+     *修改大模型解析模板
+     * @param req ModifyLLMComprehendTemplateRequest
+     * @return ModifyLLMComprehendTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLLMComprehendTemplateResponse ModifyLLMComprehendTemplate(ModifyLLMComprehendTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLLMComprehendTemplate", ModifyLLMComprehendTemplateResponse.class);
     }
 
     /**

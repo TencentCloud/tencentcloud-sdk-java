@@ -37,7 +37,9 @@ public class DescribeBillingResourceGroupRequest extends AbstractModel {
     InstanceId (资源组节点id)
     InstanceStatus (资源组节点状态)
 2. Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询
-3. 每次请求的Filters的上限为10，Filter.Values的上限为100
+3. Filter.Negative: 是否取反，默认为false
+4. Filter.Fuzzy: 是否模糊查询，默认为false
+5. 每次请求的Filters的上限为10，Filter.Values的上限为100
     */
     @SerializedName("Filters")
     @Expose
@@ -94,14 +96,18 @@ public class DescribeBillingResourceGroupRequest extends AbstractModel {
     InstanceId (资源组节点id)
     InstanceStatus (资源组节点状态)
 2. Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询
-3. 每次请求的Filters的上限为10，Filter.Values的上限为100 
+3. Filter.Negative: 是否取反，默认为false
+4. Filter.Fuzzy: 是否模糊查询，默认为false
+5. 每次请求的Filters的上限为10，Filter.Values的上限为100 
      * @return Filters 过滤条件
 注意: 
 1. Filter.Name 只支持以下枚举值:
     InstanceId (资源组节点id)
     InstanceStatus (资源组节点状态)
 2. Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询
-3. 每次请求的Filters的上限为10，Filter.Values的上限为100
+3. Filter.Negative: 是否取反，默认为false
+4. Filter.Fuzzy: 是否模糊查询，默认为false
+5. 每次请求的Filters的上限为10，Filter.Values的上限为100
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -114,14 +120,18 @@ public class DescribeBillingResourceGroupRequest extends AbstractModel {
     InstanceId (资源组节点id)
     InstanceStatus (资源组节点状态)
 2. Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询
-3. 每次请求的Filters的上限为10，Filter.Values的上限为100
+3. Filter.Negative: 是否取反，默认为false
+4. Filter.Fuzzy: 是否模糊查询，默认为false
+5. 每次请求的Filters的上限为10，Filter.Values的上限为100
      * @param Filters 过滤条件
 注意: 
 1. Filter.Name 只支持以下枚举值:
     InstanceId (资源组节点id)
     InstanceStatus (资源组节点状态)
 2. Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询
-3. 每次请求的Filters的上限为10，Filter.Values的上限为100
+3. Filter.Negative: 是否取反，默认为false
+4. Filter.Fuzzy: 是否模糊查询，默认为false
+5. 每次请求的Filters的上限为10，Filter.Values的上限为100
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

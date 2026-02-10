@@ -94,6 +94,17 @@ public class GoosefsClient extends AbstractClient{
     }
 
     /**
+     *取消单个预热任务，仅任务在 waiting、running 状态时可以调用此接口。注意，该接口需要 GooseFS 集群版本 ≥ 1.5.1。
+     * @param req CancelLoadTaskRequest
+     * @return CancelLoadTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CancelLoadTaskResponse CancelLoadTask(CancelLoadTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CancelLoadTask", CancelLoadTaskResponse.class);
+    }
+
+    /**
      *创建数据流通任务,包括从将文件系统的数据上传到存储桶下, 以及从存储桶下载到文件系统里。
      * @param req CreateDataRepositoryTaskRequest
      * @return CreateDataRepositoryTaskResponse
@@ -124,6 +135,17 @@ public class GoosefsClient extends AbstractClient{
     public CreateFilesetResponse CreateFileset(CreateFilesetRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateFileset", CreateFilesetResponse.class);
+    }
+
+    /**
+     *GooseFS 预热相关接口，用于下发，列出，查询，修改预热任务。用于元数据预热、数据预热场景。 注意，该接口需要 GooseFS 集群版本 ≥ 1.5.1。
+     * @param req CreateLoadTaskRequest
+     * @return CreateLoadTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLoadTaskResponse CreateLoadTask(CreateLoadTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateLoadTask", CreateLoadTaskResponse.class);
     }
 
     /**
@@ -193,19 +215,6 @@ public class GoosefsClient extends AbstractClient{
     }
 
     /**
-     *接口废弃
-
-查询GooseFS集群角色
-     * @param req DescribeClusterRolesRequest
-     * @return DescribeClusterRolesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeClusterRolesResponse DescribeClusterRoles(DescribeClusterRolesRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeClusterRoles", DescribeClusterRolesResponse.class);
-    }
-
-    /**
      *获取数据流通任务实时状态，用作客户端控制
      * @param req DescribeDataRepositoryTaskStatusRequest
      * @return DescribeDataRepositoryTaskStatusResponse
@@ -261,6 +270,17 @@ public class GoosefsClient extends AbstractClient{
     }
 
     /**
+     *查询单个预热任务执行情况。注意，该接口需要 GooseFS 集群版本 ≥ 1.5.1。
+     * @param req DescribeLoadTaskRequest
+     * @return DescribeLoadTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLoadTaskResponse DescribeLoadTask(DescribeLoadTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLoadTask", DescribeLoadTaskResponse.class);
+    }
+
+    /**
      *解绑文件系统与Bucket的映射
      * @param req DetachFileSystemBucketRequest
      * @return DetachFileSystemBucketResponse
@@ -280,6 +300,17 @@ public class GoosefsClient extends AbstractClient{
     public ExpandCapacityResponse ExpandCapacity(ExpandCapacityRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ExpandCapacity", ExpandCapacityResponse.class);
+    }
+
+    /**
+     *列出该集群下所有预热任务。注意，该接口需要 GooseFS 集群版本 ≥ 1.5.1。
+     * @param req ListLoadTasksRequest
+     * @return ListLoadTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListLoadTasksResponse ListLoadTasks(ListLoadTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListLoadTasks", ListLoadTasksResponse.class);
     }
 
     /**
@@ -335,6 +366,17 @@ public class GoosefsClient extends AbstractClient{
     public UpdateFilesetGeneralConfigResponse UpdateFilesetGeneralConfig(UpdateFilesetGeneralConfigRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateFilesetGeneralConfig", UpdateFilesetGeneralConfigResponse.class);
+    }
+
+    /**
+     *变更已有 GooseFS 预热任务配置，仅任务状态为 waiting 时可调用该接口。注意，该接口需要 GooseFS 集群版本 ≥ 1.5.1。
+     * @param req UpdateLoadTaskPriorityRequest
+     * @return UpdateLoadTaskPriorityResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateLoadTaskPriorityResponse UpdateLoadTaskPriority(UpdateLoadTaskPriorityRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateLoadTaskPriority", UpdateLoadTaskPriorityResponse.class);
     }
 
 }

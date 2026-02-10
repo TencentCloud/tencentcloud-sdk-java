@@ -460,6 +460,22 @@ HoaiMy
     private Long MaxRingTimeoutSecond;
 
     /**
+    * 环境音场景，没有的话不填。
+coffee_shops：咖啡店氛围，背景中有人聊天
+busy_office：客服中心
+    */
+    @SerializedName("AmbientSoundType")
+    @Expose
+    private String AmbientSoundType;
+
+    /**
+    * 环境音音量。如果AmbientSoundType 为空，该字段不填。取值的范围是 [0,2]。值越低，环境音越小；值越高，环境音越响亮。如果未设置，则使用默认值 1。
+    */
+    @SerializedName("AmbientSoundVolume")
+    @Expose
+    private Float AmbientSoundVolume;
+
+    /**
      * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
      * @return SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
@@ -1751,6 +1767,46 @@ HoaiMy
         this.MaxRingTimeoutSecond = MaxRingTimeoutSecond;
     }
 
+    /**
+     * Get 环境音场景，没有的话不填。
+coffee_shops：咖啡店氛围，背景中有人聊天
+busy_office：客服中心 
+     * @return AmbientSoundType 环境音场景，没有的话不填。
+coffee_shops：咖啡店氛围，背景中有人聊天
+busy_office：客服中心
+     */
+    public String getAmbientSoundType() {
+        return this.AmbientSoundType;
+    }
+
+    /**
+     * Set 环境音场景，没有的话不填。
+coffee_shops：咖啡店氛围，背景中有人聊天
+busy_office：客服中心
+     * @param AmbientSoundType 环境音场景，没有的话不填。
+coffee_shops：咖啡店氛围，背景中有人聊天
+busy_office：客服中心
+     */
+    public void setAmbientSoundType(String AmbientSoundType) {
+        this.AmbientSoundType = AmbientSoundType;
+    }
+
+    /**
+     * Get 环境音音量。如果AmbientSoundType 为空，该字段不填。取值的范围是 [0,2]。值越低，环境音越小；值越高，环境音越响亮。如果未设置，则使用默认值 1。 
+     * @return AmbientSoundVolume 环境音音量。如果AmbientSoundType 为空，该字段不填。取值的范围是 [0,2]。值越低，环境音越小；值越高，环境音越响亮。如果未设置，则使用默认值 1。
+     */
+    public Float getAmbientSoundVolume() {
+        return this.AmbientSoundVolume;
+    }
+
+    /**
+     * Set 环境音音量。如果AmbientSoundType 为空，该字段不填。取值的范围是 [0,2]。值越低，环境音越小；值越高，环境音越响亮。如果未设置，则使用默认值 1。
+     * @param AmbientSoundVolume 环境音音量。如果AmbientSoundType 为空，该字段不填。取值的范围是 [0,2]。值越低，环境音越小；值越高，环境音越响亮。如果未设置，则使用默认值 1。
+     */
+    public void setAmbientSoundVolume(Float AmbientSoundVolume) {
+        this.AmbientSoundVolume = AmbientSoundVolume;
+    }
+
     public CreateAICallRequest() {
     }
 
@@ -1891,6 +1947,12 @@ HoaiMy
         if (source.MaxRingTimeoutSecond != null) {
             this.MaxRingTimeoutSecond = new Long(source.MaxRingTimeoutSecond);
         }
+        if (source.AmbientSoundType != null) {
+            this.AmbientSoundType = new String(source.AmbientSoundType);
+        }
+        if (source.AmbientSoundVolume != null) {
+            this.AmbientSoundVolume = new Float(source.AmbientSoundVolume);
+        }
     }
 
 
@@ -1936,6 +1998,8 @@ HoaiMy
         this.setParamSimple(map, prefix + "LLMExtraBody", this.LLMExtraBody);
         this.setParamSimple(map, prefix + "MaxCallDurationMs", this.MaxCallDurationMs);
         this.setParamSimple(map, prefix + "MaxRingTimeoutSecond", this.MaxRingTimeoutSecond);
+        this.setParamSimple(map, prefix + "AmbientSoundType", this.AmbientSoundType);
+        this.setParamSimple(map, prefix + "AmbientSoundVolume", this.AmbientSoundVolume);
 
     }
 }

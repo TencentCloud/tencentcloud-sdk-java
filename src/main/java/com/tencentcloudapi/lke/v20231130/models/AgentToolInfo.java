@@ -181,6 +181,13 @@ public class AgentToolInfo extends AbstractModel {
     private Long AuthType;
 
     /**
+    * 工具授权配置状态；0：不需要授权，1：需要授权-未配置，2：需要授权-已配置
+    */
+    @SerializedName("AuthConfigStatus")
+    @Expose
+    private Long AuthConfigStatus;
+
+    /**
      * Get 插件id 
      * @return PluginId 插件id
      */
@@ -544,6 +551,22 @@ public class AgentToolInfo extends AbstractModel {
         this.AuthType = AuthType;
     }
 
+    /**
+     * Get 工具授权配置状态；0：不需要授权，1：需要授权-未配置，2：需要授权-已配置 
+     * @return AuthConfigStatus 工具授权配置状态；0：不需要授权，1：需要授权-未配置，2：需要授权-已配置
+     */
+    public Long getAuthConfigStatus() {
+        return this.AuthConfigStatus;
+    }
+
+    /**
+     * Set 工具授权配置状态；0：不需要授权，1：需要授权-未配置，2：需要授权-已配置
+     * @param AuthConfigStatus 工具授权配置状态；0：不需要授权，1：需要授权-未配置，2：需要授权-已配置
+     */
+    public void setAuthConfigStatus(Long AuthConfigStatus) {
+        this.AuthConfigStatus = AuthConfigStatus;
+    }
+
     public AgentToolInfo() {
     }
 
@@ -630,6 +653,9 @@ public class AgentToolInfo extends AbstractModel {
         if (source.AuthType != null) {
             this.AuthType = new Long(source.AuthType);
         }
+        if (source.AuthConfigStatus != null) {
+            this.AuthConfigStatus = new Long(source.AuthConfigStatus);
+        }
     }
 
 
@@ -659,6 +685,7 @@ public class AgentToolInfo extends AbstractModel {
         this.setParamObj(map, prefix + "ToolAdvanceConfig.", this.ToolAdvanceConfig);
         this.setParamSimple(map, prefix + "AuthMode", this.AuthMode);
         this.setParamSimple(map, prefix + "AuthType", this.AuthType);
+        this.setParamSimple(map, prefix + "AuthConfigStatus", this.AuthConfigStatus);
 
     }
 }

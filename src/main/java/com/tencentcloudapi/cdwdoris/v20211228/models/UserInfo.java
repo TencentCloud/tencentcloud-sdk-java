@@ -38,14 +38,14 @@ public class UserInfo extends AbstractModel {
     private String UserName;
 
     /**
-    * 密码
+    * base64加密后的密码
     */
     @SerializedName("PassWord")
     @Expose
     private String PassWord;
 
     /**
-    * 用户链接来自的 IP
+    * 用户链接来自的 IP地址
     */
     @SerializedName("WhiteHost")
     @Expose
@@ -126,32 +126,32 @@ public class UserInfo extends AbstractModel {
     }
 
     /**
-     * Get 密码 
-     * @return PassWord 密码
+     * Get base64加密后的密码 
+     * @return PassWord base64加密后的密码
      */
     public String getPassWord() {
         return this.PassWord;
     }
 
     /**
-     * Set 密码
-     * @param PassWord 密码
+     * Set base64加密后的密码
+     * @param PassWord base64加密后的密码
      */
     public void setPassWord(String PassWord) {
         this.PassWord = PassWord;
     }
 
     /**
-     * Get 用户链接来自的 IP 
-     * @return WhiteHost 用户链接来自的 IP
+     * Get 用户链接来自的 IP地址 
+     * @return WhiteHost 用户链接来自的 IP地址
      */
     public String getWhiteHost() {
         return this.WhiteHost;
     }
 
     /**
-     * Set 用户链接来自的 IP
-     * @param WhiteHost 用户链接来自的 IP
+     * Set 用户链接来自的 IP地址
+     * @param WhiteHost 用户链接来自的 IP地址
      */
     public void setWhiteHost(String WhiteHost) {
         this.WhiteHost = WhiteHost;

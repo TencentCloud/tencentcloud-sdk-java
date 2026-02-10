@@ -61,29 +61,38 @@ public class AigcVideoTaskInputFileInfo extends AbstractModel {
     /**
     * 参考类型，GV模型适用。
 注意：
-
-当使用GV模型时，可作为参考方式,可选asset(素材)、style(风格)。
+当使用 GV 模型时，可作为参考方式，可选值：asset 表示素材、style 表示风格；
+当使用 Kling 模型以及 Category 为 Video 时，可区分参考视频类型，feature 表示特征参考视频，base 表示待编辑视频。
     */
     @SerializedName("ReferenceType")
     @Expose
     private String ReferenceType;
 
     /**
-    * 主体id.
+    * 主体 Id。
 适用模型：Vidu-q2.
-当需要对图片标识主体时，需要每个图片都带主体id，后续生成时可以通过@主体id的方式使用。
+当需要对图片标识主体时，需要每个图片都带主体 Id，后续生成时可以通过@主体 Id 的方式使用。当 Category 为 Image 时有效。
     */
     @SerializedName("ObjectId")
     @Expose
     private String ObjectId;
 
     /**
-    * 适用于Vidu-q2模型。
-当全部图片携带主体id时，可针对主体设置音色id。 音色列表：https://shengshu.feishu.cn/sheets/EgFvs6DShhiEBStmjzccr5gonOg
+    * 适用于 Vidu-q2 模型。
+当全部图片携带主体 Id 时，可针对主体设置音色 Id。 当 Category 为 Image 时有效。音色列表：https://shengshu.feishu.cn/sheets/EgFvs6DShhiEBStmjzccr5gonOg
     */
     @SerializedName("VoiceId")
     @Expose
     private String VoiceId;
+
+    /**
+    * 是否保留视频原声。当 Category 为 Video 时有效。取值如下：
+<li>Enabled：保留</li>
+<li>Disabled：不保留</li>
+    */
+    @SerializedName("KeepOriginalSound")
+    @Expose
+    private String KeepOriginalSound;
 
     /**
      * Get 输入的视频文件类型。取值有： <li>File：点播媒体文件；</li> <li>Url：可访问的 Url；</li>  
@@ -180,12 +189,12 @@ public class AigcVideoTaskInputFileInfo extends AbstractModel {
     /**
      * Get 参考类型，GV模型适用。
 注意：
-
-当使用GV模型时，可作为参考方式,可选asset(素材)、style(风格)。 
+当使用 GV 模型时，可作为参考方式，可选值：asset 表示素材、style 表示风格；
+当使用 Kling 模型以及 Category 为 Video 时，可区分参考视频类型，feature 表示特征参考视频，base 表示待编辑视频。 
      * @return ReferenceType 参考类型，GV模型适用。
 注意：
-
-当使用GV模型时，可作为参考方式,可选asset(素材)、style(风格)。
+当使用 GV 模型时，可作为参考方式，可选值：asset 表示素材、style 表示风格；
+当使用 Kling 模型以及 Category 为 Video 时，可区分参考视频类型，feature 表示特征参考视频，base 表示待编辑视频。
      */
     public String getReferenceType() {
         return this.ReferenceType;
@@ -194,59 +203,83 @@ public class AigcVideoTaskInputFileInfo extends AbstractModel {
     /**
      * Set 参考类型，GV模型适用。
 注意：
-
-当使用GV模型时，可作为参考方式,可选asset(素材)、style(风格)。
+当使用 GV 模型时，可作为参考方式，可选值：asset 表示素材、style 表示风格；
+当使用 Kling 模型以及 Category 为 Video 时，可区分参考视频类型，feature 表示特征参考视频，base 表示待编辑视频。
      * @param ReferenceType 参考类型，GV模型适用。
 注意：
-
-当使用GV模型时，可作为参考方式,可选asset(素材)、style(风格)。
+当使用 GV 模型时，可作为参考方式，可选值：asset 表示素材、style 表示风格；
+当使用 Kling 模型以及 Category 为 Video 时，可区分参考视频类型，feature 表示特征参考视频，base 表示待编辑视频。
      */
     public void setReferenceType(String ReferenceType) {
         this.ReferenceType = ReferenceType;
     }
 
     /**
-     * Get 主体id.
+     * Get 主体 Id。
 适用模型：Vidu-q2.
-当需要对图片标识主体时，需要每个图片都带主体id，后续生成时可以通过@主体id的方式使用。 
-     * @return ObjectId 主体id.
+当需要对图片标识主体时，需要每个图片都带主体 Id，后续生成时可以通过@主体 Id 的方式使用。当 Category 为 Image 时有效。 
+     * @return ObjectId 主体 Id。
 适用模型：Vidu-q2.
-当需要对图片标识主体时，需要每个图片都带主体id，后续生成时可以通过@主体id的方式使用。
+当需要对图片标识主体时，需要每个图片都带主体 Id，后续生成时可以通过@主体 Id 的方式使用。当 Category 为 Image 时有效。
      */
     public String getObjectId() {
         return this.ObjectId;
     }
 
     /**
-     * Set 主体id.
+     * Set 主体 Id。
 适用模型：Vidu-q2.
-当需要对图片标识主体时，需要每个图片都带主体id，后续生成时可以通过@主体id的方式使用。
-     * @param ObjectId 主体id.
+当需要对图片标识主体时，需要每个图片都带主体 Id，后续生成时可以通过@主体 Id 的方式使用。当 Category 为 Image 时有效。
+     * @param ObjectId 主体 Id。
 适用模型：Vidu-q2.
-当需要对图片标识主体时，需要每个图片都带主体id，后续生成时可以通过@主体id的方式使用。
+当需要对图片标识主体时，需要每个图片都带主体 Id，后续生成时可以通过@主体 Id 的方式使用。当 Category 为 Image 时有效。
      */
     public void setObjectId(String ObjectId) {
         this.ObjectId = ObjectId;
     }
 
     /**
-     * Get 适用于Vidu-q2模型。
-当全部图片携带主体id时，可针对主体设置音色id。 音色列表：https://shengshu.feishu.cn/sheets/EgFvs6DShhiEBStmjzccr5gonOg 
-     * @return VoiceId 适用于Vidu-q2模型。
-当全部图片携带主体id时，可针对主体设置音色id。 音色列表：https://shengshu.feishu.cn/sheets/EgFvs6DShhiEBStmjzccr5gonOg
+     * Get 适用于 Vidu-q2 模型。
+当全部图片携带主体 Id 时，可针对主体设置音色 Id。 当 Category 为 Image 时有效。音色列表：https://shengshu.feishu.cn/sheets/EgFvs6DShhiEBStmjzccr5gonOg 
+     * @return VoiceId 适用于 Vidu-q2 模型。
+当全部图片携带主体 Id 时，可针对主体设置音色 Id。 当 Category 为 Image 时有效。音色列表：https://shengshu.feishu.cn/sheets/EgFvs6DShhiEBStmjzccr5gonOg
      */
     public String getVoiceId() {
         return this.VoiceId;
     }
 
     /**
-     * Set 适用于Vidu-q2模型。
-当全部图片携带主体id时，可针对主体设置音色id。 音色列表：https://shengshu.feishu.cn/sheets/EgFvs6DShhiEBStmjzccr5gonOg
-     * @param VoiceId 适用于Vidu-q2模型。
-当全部图片携带主体id时，可针对主体设置音色id。 音色列表：https://shengshu.feishu.cn/sheets/EgFvs6DShhiEBStmjzccr5gonOg
+     * Set 适用于 Vidu-q2 模型。
+当全部图片携带主体 Id 时，可针对主体设置音色 Id。 当 Category 为 Image 时有效。音色列表：https://shengshu.feishu.cn/sheets/EgFvs6DShhiEBStmjzccr5gonOg
+     * @param VoiceId 适用于 Vidu-q2 模型。
+当全部图片携带主体 Id 时，可针对主体设置音色 Id。 当 Category 为 Image 时有效。音色列表：https://shengshu.feishu.cn/sheets/EgFvs6DShhiEBStmjzccr5gonOg
      */
     public void setVoiceId(String VoiceId) {
         this.VoiceId = VoiceId;
+    }
+
+    /**
+     * Get 是否保留视频原声。当 Category 为 Video 时有效。取值如下：
+<li>Enabled：保留</li>
+<li>Disabled：不保留</li> 
+     * @return KeepOriginalSound 是否保留视频原声。当 Category 为 Video 时有效。取值如下：
+<li>Enabled：保留</li>
+<li>Disabled：不保留</li>
+     */
+    public String getKeepOriginalSound() {
+        return this.KeepOriginalSound;
+    }
+
+    /**
+     * Set 是否保留视频原声。当 Category 为 Video 时有效。取值如下：
+<li>Enabled：保留</li>
+<li>Disabled：不保留</li>
+     * @param KeepOriginalSound 是否保留视频原声。当 Category 为 Video 时有效。取值如下：
+<li>Enabled：保留</li>
+<li>Disabled：不保留</li>
+     */
+    public void setKeepOriginalSound(String KeepOriginalSound) {
+        this.KeepOriginalSound = KeepOriginalSound;
     }
 
     public AigcVideoTaskInputFileInfo() {
@@ -278,6 +311,9 @@ public class AigcVideoTaskInputFileInfo extends AbstractModel {
         if (source.VoiceId != null) {
             this.VoiceId = new String(source.VoiceId);
         }
+        if (source.KeepOriginalSound != null) {
+            this.KeepOriginalSound = new String(source.KeepOriginalSound);
+        }
     }
 
 
@@ -292,6 +328,7 @@ public class AigcVideoTaskInputFileInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ReferenceType", this.ReferenceType);
         this.setParamSimple(map, prefix + "ObjectId", this.ObjectId);
         this.setParamSimple(map, prefix + "VoiceId", this.VoiceId);
+        this.setParamSimple(map, prefix + "KeepOriginalSound", this.KeepOriginalSound);
 
     }
 }

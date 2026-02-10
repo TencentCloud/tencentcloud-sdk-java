@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class CreateFileSystemResponse extends AbstractModel {
 
     /**
+    * 创建成功返回的文件系统ID：
+    */
+    @SerializedName("FileSystemId")
+    @Expose
+    private String FileSystemId;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 创建成功返回的文件系统ID： 
+     * @return FileSystemId 创建成功返回的文件系统ID：
+     */
+    public String getFileSystemId() {
+        return this.FileSystemId;
+    }
+
+    /**
+     * Set 创建成功返回的文件系统ID：
+     * @param FileSystemId 创建成功返回的文件系统ID：
+     */
+    public void setFileSystemId(String FileSystemId) {
+        this.FileSystemId = FileSystemId;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,9 @@ public class CreateFileSystemResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateFileSystemResponse(CreateFileSystemResponse source) {
+        if (source.FileSystemId != null) {
+            this.FileSystemId = new String(source.FileSystemId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +90,7 @@ public class CreateFileSystemResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

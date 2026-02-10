@@ -95,6 +95,13 @@ public class ChatTranslationsRequest extends AbstractModel {
     private Reference [] References;
 
     /**
+    * 关联的术语库 ID 列表，用于术语翻译，最大支持5个术语库
+    */
+    @SerializedName("GlossaryIDs")
+    @Expose
+    private String [] GlossaryIDs;
+
+    /**
      * Get 模型名称，可选值包括 hunyuan-translation、hunyuan-translation-lite。
 各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。
 
@@ -294,6 +301,22 @@ public class ChatTranslationsRequest extends AbstractModel {
         this.References = References;
     }
 
+    /**
+     * Get 关联的术语库 ID 列表，用于术语翻译，最大支持5个术语库 
+     * @return GlossaryIDs 关联的术语库 ID 列表，用于术语翻译，最大支持5个术语库
+     */
+    public String [] getGlossaryIDs() {
+        return this.GlossaryIDs;
+    }
+
+    /**
+     * Set 关联的术语库 ID 列表，用于术语翻译，最大支持5个术语库
+     * @param GlossaryIDs 关联的术语库 ID 列表，用于术语翻译，最大支持5个术语库
+     */
+    public void setGlossaryIDs(String [] GlossaryIDs) {
+        this.GlossaryIDs = GlossaryIDs;
+    }
+
     public ChatTranslationsRequest() {
     }
 
@@ -326,6 +349,12 @@ public class ChatTranslationsRequest extends AbstractModel {
                 this.References[i] = new Reference(source.References[i]);
             }
         }
+        if (source.GlossaryIDs != null) {
+            this.GlossaryIDs = new String[source.GlossaryIDs.length];
+            for (int i = 0; i < source.GlossaryIDs.length; i++) {
+                this.GlossaryIDs[i] = new String(source.GlossaryIDs[i]);
+            }
+        }
     }
 
 
@@ -340,6 +369,7 @@ public class ChatTranslationsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Target", this.Target);
         this.setParamSimple(map, prefix + "Field", this.Field);
         this.setParamArrayObj(map, prefix + "References.", this.References);
+        this.setParamArraySimple(map, prefix + "GlossaryIDs.", this.GlossaryIDs);
 
     }
 }

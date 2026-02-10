@@ -336,6 +336,17 @@ public class CdwchClient extends AbstractClient{
     }
 
     /**
+     *重启实例，可以按节点类型和节点进行重启，可选滚动重启
+     * @param req RestartInstanceRequest
+     * @return RestartInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public RestartInstanceResponse RestartInstance(RestartInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RestartInstance", RestartInstanceResponse.class);
+    }
+
+    /**
      *open-api接口提供弹性伸缩云原生集群能力
      * @param req ScaleCNOutUpInstanceRequest
      * @return ScaleCNOutUpInstanceResponse

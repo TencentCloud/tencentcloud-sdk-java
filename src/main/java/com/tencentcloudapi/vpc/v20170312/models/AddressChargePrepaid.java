@@ -31,7 +31,7 @@ public class AddressChargePrepaid extends AbstractModel {
     private Long Period;
 
     /**
-    * 自动续费标志。0表示手动续费，1表示自动续费，2表示到期不续费。默认缺省为0即手动续费
+    * 自动续费标志。0表示手动续费，1表示自动续费，2表示到期不续费。默认缺省为1即自动续费。
     */
     @SerializedName("AutoRenewFlag")
     @Expose
@@ -54,16 +54,16 @@ public class AddressChargePrepaid extends AbstractModel {
     }
 
     /**
-     * Get 自动续费标志。0表示手动续费，1表示自动续费，2表示到期不续费。默认缺省为0即手动续费 
-     * @return AutoRenewFlag 自动续费标志。0表示手动续费，1表示自动续费，2表示到期不续费。默认缺省为0即手动续费
+     * Get 自动续费标志。0表示手动续费，1表示自动续费，2表示到期不续费。默认缺省为1即自动续费。 
+     * @return AutoRenewFlag 自动续费标志。0表示手动续费，1表示自动续费，2表示到期不续费。默认缺省为1即自动续费。
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set 自动续费标志。0表示手动续费，1表示自动续费，2表示到期不续费。默认缺省为0即手动续费
-     * @param AutoRenewFlag 自动续费标志。0表示手动续费，1表示自动续费，2表示到期不续费。默认缺省为0即手动续费
+     * Set 自动续费标志。0表示手动续费，1表示自动续费，2表示到期不续费。默认缺省为1即自动续费。
+     * @param AutoRenewFlag 自动续费标志。0表示手动续费，1表示自动续费，2表示到期不续费。默认缺省为1即自动续费。
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;

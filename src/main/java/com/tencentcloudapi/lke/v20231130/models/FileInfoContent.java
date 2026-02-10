@@ -25,6 +25,7 @@ public class FileInfoContent extends AbstractModel {
 
     /**
     * 实时文档解析接口返回的 DocBizId
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DocBizId")
     @Expose
@@ -63,17 +64,41 @@ public class FileInfoContent extends AbstractModel {
     private String FileUrl;
 
     /**
-     * Get 实时文档解析接口返回的 DocBizId 
+    * 实时文档解析接口返回的 doc_id。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DocId")
+    @Expose
+    private Long DocId;
+
+    /**
+    * 文件创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private Long CreateTime;
+
+    /**
+     * Get 实时文档解析接口返回的 DocBizId
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DocBizId 实时文档解析接口返回的 DocBizId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public Long getDocBizId() {
         return this.DocBizId;
     }
 
     /**
      * Set 实时文档解析接口返回的 DocBizId
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DocBizId 实时文档解析接口返回的 DocBizId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setDocBizId(Long DocBizId) {
         this.DocBizId = DocBizId;
     }
@@ -158,6 +183,46 @@ public class FileInfoContent extends AbstractModel {
         this.FileUrl = FileUrl;
     }
 
+    /**
+     * Get 实时文档解析接口返回的 doc_id。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DocId 实时文档解析接口返回的 doc_id。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDocId() {
+        return this.DocId;
+    }
+
+    /**
+     * Set 实时文档解析接口返回的 doc_id。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DocId 实时文档解析接口返回的 doc_id。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDocId(Long DocId) {
+        this.DocId = DocId;
+    }
+
+    /**
+     * Get 文件创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateTime 文件创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 文件创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateTime 文件创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateTime(Long CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
     public FileInfoContent() {
     }
 
@@ -181,6 +246,12 @@ public class FileInfoContent extends AbstractModel {
         if (source.FileUrl != null) {
             this.FileUrl = new String(source.FileUrl);
         }
+        if (source.DocId != null) {
+            this.DocId = new Long(source.DocId);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
     }
 
 
@@ -193,6 +264,8 @@ public class FileInfoContent extends AbstractModel {
         this.setParamSimple(map, prefix + "FileType", this.FileType);
         this.setParamSimple(map, prefix + "FileSize", this.FileSize);
         this.setParamSimple(map, prefix + "FileUrl", this.FileUrl);
+        this.setParamSimple(map, prefix + "DocId", this.DocId);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }

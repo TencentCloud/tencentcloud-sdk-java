@@ -122,6 +122,13 @@ public class Agent extends AbstractModel {
     private AgentAdvancedConfig AdvancedConfig;
 
     /**
+    * 工具数量上限
+    */
+    @SerializedName("MaxToolCount")
+    @Expose
+    private Long MaxToolCount;
+
+    /**
      * Get AgentID 
      * @return AgentId AgentID
      */
@@ -345,6 +352,22 @@ public class Agent extends AbstractModel {
         this.AdvancedConfig = AdvancedConfig;
     }
 
+    /**
+     * Get 工具数量上限 
+     * @return MaxToolCount 工具数量上限
+     */
+    public Long getMaxToolCount() {
+        return this.MaxToolCount;
+    }
+
+    /**
+     * Set 工具数量上限
+     * @param MaxToolCount 工具数量上限
+     */
+    public void setMaxToolCount(Long MaxToolCount) {
+        this.MaxToolCount = MaxToolCount;
+    }
+
     public Agent() {
     }
 
@@ -404,6 +427,9 @@ public class Agent extends AbstractModel {
         if (source.AdvancedConfig != null) {
             this.AdvancedConfig = new AgentAdvancedConfig(source.AdvancedConfig);
         }
+        if (source.MaxToolCount != null) {
+            this.MaxToolCount = new Long(source.MaxToolCount);
+        }
     }
 
 
@@ -425,6 +451,7 @@ public class Agent extends AbstractModel {
         this.setParamSimple(map, prefix + "AgentType", this.AgentType);
         this.setParamSimple(map, prefix + "AgentMode", this.AgentMode);
         this.setParamObj(map, prefix + "AdvancedConfig.", this.AdvancedConfig);
+        this.setParamSimple(map, prefix + "MaxToolCount", this.MaxToolCount);
 
     }
 }

@@ -251,7 +251,7 @@ https://cloud.tencent.com/document/product/1278/85305
     }
 
     /**
-     *查询资源组详情
+     *查询资源组列表
      * @param req DescribeBillingResourceGroupsRequest
      * @return DescribeBillingResourceGroupsResponse
      * @throws TencentCloudSDKException

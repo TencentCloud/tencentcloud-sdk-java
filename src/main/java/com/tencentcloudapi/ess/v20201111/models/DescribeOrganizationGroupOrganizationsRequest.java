@@ -32,14 +32,14 @@ public class DescribeOrganizationGroupOrganizationsRequest extends AbstractModel
     private UserInfo Operator;
 
     /**
-    * 指定分页每页返回的数据条数，单页最大1000
+    * 指定分页每页返回的数据条数，单页最大支持 200。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0
+    * 偏移量，默认为0，最大20000。关于<code>Offset</code>的更进一步介绍请参考 API <a href="https://cloud.tencent.com/document/api/213/15688" target="_blank">简介</a>中的相关小节。
     */
     @SerializedName("Offset")
     @Expose
@@ -69,6 +69,9 @@ public class DescribeOrganizationGroupOrganizationsRequest extends AbstractModel
     * 是否导出当前成员企业数据
 <ul><li> **false**：不导出（默认值）</li>
 <li> **true**：导出</li></ul>
+
+p.s.
+若传入此参数， LImit参数将无效，导出的为全量数据。
     */
     @SerializedName("Export")
     @Expose
@@ -102,32 +105,32 @@ public class DescribeOrganizationGroupOrganizationsRequest extends AbstractModel
     }
 
     /**
-     * Get 指定分页每页返回的数据条数，单页最大1000 
-     * @return Limit 指定分页每页返回的数据条数，单页最大1000
+     * Get 指定分页每页返回的数据条数，单页最大支持 200。 
+     * @return Limit 指定分页每页返回的数据条数，单页最大支持 200。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 指定分页每页返回的数据条数，单页最大1000
-     * @param Limit 指定分页每页返回的数据条数，单页最大1000
+     * Set 指定分页每页返回的数据条数，单页最大支持 200。
+     * @param Limit 指定分页每页返回的数据条数，单页最大支持 200。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0 
-     * @return Offset 指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0
+     * Get 偏移量，默认为0，最大20000。关于<code>Offset</code>的更进一步介绍请参考 API <a href="https://cloud.tencent.com/document/api/213/15688" target="_blank">简介</a>中的相关小节。 
+     * @return Offset 偏移量，默认为0，最大20000。关于<code>Offset</code>的更进一步介绍请参考 API <a href="https://cloud.tencent.com/document/api/213/15688" target="_blank">简介</a>中的相关小节。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0
-     * @param Offset 指定分页返回第几页的数据，如果不传默认返回第一页，页码从 0 开始，即首页为 0
+     * Set 偏移量，默认为0，最大20000。关于<code>Offset</code>的更进一步介绍请参考 API <a href="https://cloud.tencent.com/document/api/213/15688" target="_blank">简介</a>中的相关小节。
+     * @param Offset 偏移量，默认为0，最大20000。关于<code>Offset</code>的更进一步介绍请参考 API <a href="https://cloud.tencent.com/document/api/213/15688" target="_blank">简介</a>中的相关小节。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
@@ -196,10 +199,16 @@ public class DescribeOrganizationGroupOrganizationsRequest extends AbstractModel
     /**
      * Get 是否导出当前成员企业数据
 <ul><li> **false**：不导出（默认值）</li>
-<li> **true**：导出</li></ul> 
+<li> **true**：导出</li></ul>
+
+p.s.
+若传入此参数， LImit参数将无效，导出的为全量数据。 
      * @return Export 是否导出当前成员企业数据
 <ul><li> **false**：不导出（默认值）</li>
 <li> **true**：导出</li></ul>
+
+p.s.
+若传入此参数， LImit参数将无效，导出的为全量数据。
      */
     public Boolean getExport() {
         return this.Export;
@@ -209,9 +218,15 @@ public class DescribeOrganizationGroupOrganizationsRequest extends AbstractModel
      * Set 是否导出当前成员企业数据
 <ul><li> **false**：不导出（默认值）</li>
 <li> **true**：导出</li></ul>
+
+p.s.
+若传入此参数， LImit参数将无效，导出的为全量数据。
      * @param Export 是否导出当前成员企业数据
 <ul><li> **false**：不导出（默认值）</li>
 <li> **true**：导出</li></ul>
+
+p.s.
+若传入此参数， LImit参数将无效，导出的为全量数据。
      */
     public void setExport(Boolean Export) {
         this.Export = Export;

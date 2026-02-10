@@ -39,6 +39,7 @@ public class AgentPluginInfo extends AbstractModel {
 
     /**
     * 插件调用LLM时使用的模型配置，一般用于指定知识库问答插件的生成模型
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Model")
     @Expose
@@ -53,6 +54,7 @@ public class AgentPluginInfo extends AbstractModel {
 
     /**
     * 知识库问答插件配置
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KnowledgeQa")
     @Expose
@@ -113,8 +115,10 @@ public class AgentPluginInfo extends AbstractModel {
     }
 
     /**
-     * Get 插件调用LLM时使用的模型配置，一般用于指定知识库问答插件的生成模型 
+     * Get 插件调用LLM时使用的模型配置，一般用于指定知识库问答插件的生成模型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Model 插件调用LLM时使用的模型配置，一般用于指定知识库问答插件的生成模型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public AgentModelInfo getModel() {
         return this.Model;
@@ -122,7 +126,9 @@ public class AgentPluginInfo extends AbstractModel {
 
     /**
      * Set 插件调用LLM时使用的模型配置，一般用于指定知识库问答插件的生成模型
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Model 插件调用LLM时使用的模型配置，一般用于指定知识库问答插件的生成模型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModel(AgentModelInfo Model) {
         this.Model = Model;
@@ -145,8 +151,10 @@ public class AgentPluginInfo extends AbstractModel {
     }
 
     /**
-     * Get 知识库问答插件配置 
+     * Get 知识库问答插件配置
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return KnowledgeQa 知识库问答插件配置
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public AgentKnowledgeQAPlugin getKnowledgeQa() {
         return this.KnowledgeQa;
@@ -154,7 +162,9 @@ public class AgentPluginInfo extends AbstractModel {
 
     /**
      * Set 知识库问答插件配置
+注意：此字段可能返回 null，表示取不到有效值。
      * @param KnowledgeQa 知识库问答插件配置
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKnowledgeQa(AgentKnowledgeQAPlugin KnowledgeQa) {
         this.KnowledgeQa = KnowledgeQa;

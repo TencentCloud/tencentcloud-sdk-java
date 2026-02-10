@@ -73,7 +73,7 @@ public class DescribeStorageCredentialResponse extends AbstractModel {
     private String Type;
 
     /**
-    * 主号
+    * 企业主账号
     */
     @SerializedName("CorpUin")
     @Expose
@@ -92,6 +92,20 @@ public class DescribeStorageCredentialResponse extends AbstractModel {
     @SerializedName("UploadPath")
     @Expose
     private String UploadPath;
+
+    /**
+    * 文件上传地址，使用put请求上传文件到该地址
+    */
+    @SerializedName("UploadUrl")
+    @Expose
+    private String UploadUrl;
+
+    /**
+    * 文件的预签名地址，支持下载
+    */
+    @SerializedName("FileUrl")
+    @Expose
+    private String FileUrl;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -213,16 +227,16 @@ public class DescribeStorageCredentialResponse extends AbstractModel {
     }
 
     /**
-     * Get 主号 
-     * @return CorpUin 主号
+     * Get 企业主账号 
+     * @return CorpUin 企业主账号
      */
     public String getCorpUin() {
         return this.CorpUin;
     }
 
     /**
-     * Set 主号
-     * @param CorpUin 主号
+     * Set 企业主账号
+     * @param CorpUin 企业主账号
      */
     public void setCorpUin(String CorpUin) {
         this.CorpUin = CorpUin;
@@ -258,6 +272,38 @@ public class DescribeStorageCredentialResponse extends AbstractModel {
      */
     public void setUploadPath(String UploadPath) {
         this.UploadPath = UploadPath;
+    }
+
+    /**
+     * Get 文件上传地址，使用put请求上传文件到该地址 
+     * @return UploadUrl 文件上传地址，使用put请求上传文件到该地址
+     */
+    public String getUploadUrl() {
+        return this.UploadUrl;
+    }
+
+    /**
+     * Set 文件上传地址，使用put请求上传文件到该地址
+     * @param UploadUrl 文件上传地址，使用put请求上传文件到该地址
+     */
+    public void setUploadUrl(String UploadUrl) {
+        this.UploadUrl = UploadUrl;
+    }
+
+    /**
+     * Get 文件的预签名地址，支持下载 
+     * @return FileUrl 文件的预签名地址，支持下载
+     */
+    public String getFileUrl() {
+        return this.FileUrl;
+    }
+
+    /**
+     * Set 文件的预签名地址，支持下载
+     * @param FileUrl 文件的预签名地址，支持下载
+     */
+    public void setFileUrl(String FileUrl) {
+        this.FileUrl = FileUrl;
     }
 
     /**
@@ -314,6 +360,12 @@ public class DescribeStorageCredentialResponse extends AbstractModel {
         if (source.UploadPath != null) {
             this.UploadPath = new String(source.UploadPath);
         }
+        if (source.UploadUrl != null) {
+            this.UploadUrl = new String(source.UploadUrl);
+        }
+        if (source.FileUrl != null) {
+            this.FileUrl = new String(source.FileUrl);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -334,6 +386,8 @@ public class DescribeStorageCredentialResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "CorpUin", this.CorpUin);
         this.setParamSimple(map, prefix + "ImagePath", this.ImagePath);
         this.setParamSimple(map, prefix + "UploadPath", this.UploadPath);
+        this.setParamSimple(map, prefix + "UploadUrl", this.UploadUrl);
+        this.setParamSimple(map, prefix + "FileUrl", this.FileUrl);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

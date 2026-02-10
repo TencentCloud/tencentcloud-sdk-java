@@ -24,16 +24,7 @@ import java.util.HashMap;
 public class DescribeBillingResourceGroupsRequest extends AbstractModel {
 
     /**
-    * 资源组类型;
-枚举值:
-空: 通用, TRAIN: 训练, INFERENCE: 推理
-    */
-    @SerializedName("Type")
-    @Expose
-    private String Type;
-
-    /**
-    * Filter.Name: 枚举值: ResourceGroupId (资源组id列表)                    ResourceGroupName (资源组名称列表)                    AvailableNodeCount（资源组中可用节点数量）Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询每次请求的Filters的上限为5，Filter.Values的上限为100
+    * Filter.Name: 枚举值: ResourceGroupId (资源组id列表)                    ResourceGroupName (资源组名称列表)                    AvailableNodeCount（资源组中可用节点数量） Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询每次请求的Filters的上限为5，Filter.Values的上限为100
     */
     @SerializedName("Filters")
     @Expose
@@ -77,40 +68,16 @@ true: 不展示，false 展示；
     private Boolean DontShowInstanceSet;
 
     /**
-     * Get 资源组类型;
-枚举值:
-空: 通用, TRAIN: 训练, INFERENCE: 推理 
-     * @return Type 资源组类型;
-枚举值:
-空: 通用, TRAIN: 训练, INFERENCE: 推理
-     */
-    public String getType() {
-        return this.Type;
-    }
-
-    /**
-     * Set 资源组类型;
-枚举值:
-空: 通用, TRAIN: 训练, INFERENCE: 推理
-     * @param Type 资源组类型;
-枚举值:
-空: 通用, TRAIN: 训练, INFERENCE: 推理
-     */
-    public void setType(String Type) {
-        this.Type = Type;
-    }
-
-    /**
-     * Get Filter.Name: 枚举值: ResourceGroupId (资源组id列表)                    ResourceGroupName (资源组名称列表)                    AvailableNodeCount（资源组中可用节点数量）Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询每次请求的Filters的上限为5，Filter.Values的上限为100 
-     * @return Filters Filter.Name: 枚举值: ResourceGroupId (资源组id列表)                    ResourceGroupName (资源组名称列表)                    AvailableNodeCount（资源组中可用节点数量）Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询每次请求的Filters的上限为5，Filter.Values的上限为100
+     * Get Filter.Name: 枚举值: ResourceGroupId (资源组id列表)                    ResourceGroupName (资源组名称列表)                    AvailableNodeCount（资源组中可用节点数量） Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询每次请求的Filters的上限为5，Filter.Values的上限为100 
+     * @return Filters Filter.Name: 枚举值: ResourceGroupId (资源组id列表)                    ResourceGroupName (资源组名称列表)                    AvailableNodeCount（资源组中可用节点数量） Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询每次请求的Filters的上限为5，Filter.Values的上限为100
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter.Name: 枚举值: ResourceGroupId (资源组id列表)                    ResourceGroupName (资源组名称列表)                    AvailableNodeCount（资源组中可用节点数量）Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询每次请求的Filters的上限为5，Filter.Values的上限为100
-     * @param Filters Filter.Name: 枚举值: ResourceGroupId (资源组id列表)                    ResourceGroupName (资源组名称列表)                    AvailableNodeCount（资源组中可用节点数量）Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询每次请求的Filters的上限为5，Filter.Values的上限为100
+     * Set Filter.Name: 枚举值: ResourceGroupId (资源组id列表)                    ResourceGroupName (资源组名称列表)                    AvailableNodeCount（资源组中可用节点数量） Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询每次请求的Filters的上限为5，Filter.Values的上限为100
+     * @param Filters Filter.Name: 枚举值: ResourceGroupId (资源组id列表)                    ResourceGroupName (资源组名称列表)                    AvailableNodeCount（资源组中可用节点数量） Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询每次请求的Filters的上限为5，Filter.Values的上限为100
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
@@ -212,9 +179,6 @@ true: 不展示，false 展示；
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeBillingResourceGroupsRequest(DescribeBillingResourceGroupsRequest source) {
-        if (source.Type != null) {
-            this.Type = new String(source.Type);
-        }
         if (source.Filters != null) {
             this.Filters = new Filter[source.Filters.length];
             for (int i = 0; i < source.Filters.length; i++) {
@@ -246,7 +210,6 @@ true: 不展示，false 展示；
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);

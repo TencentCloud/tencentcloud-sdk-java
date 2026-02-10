@@ -386,6 +386,20 @@ NotExists
     private String AIAgentName;
 
     /**
+    * 接通后系统挂断原因，枚举类似
+    */
+    @SerializedName("SysHangupReason")
+    @Expose
+    private Long SysHangupReason;
+
+    /**
+    * 接通后系统挂断原因，文字描述信息
+    */
+    @SerializedName("SysHangupReasonString")
+    @Expose
+    private String SysHangupReasonString;
+
+    /**
      * Get 主叫号码 
      * @return Caller 主叫号码
      */
@@ -1357,6 +1371,38 @@ NotExists
         this.AIAgentName = AIAgentName;
     }
 
+    /**
+     * Get 接通后系统挂断原因，枚举类似 
+     * @return SysHangupReason 接通后系统挂断原因，枚举类似
+     */
+    public Long getSysHangupReason() {
+        return this.SysHangupReason;
+    }
+
+    /**
+     * Set 接通后系统挂断原因，枚举类似
+     * @param SysHangupReason 接通后系统挂断原因，枚举类似
+     */
+    public void setSysHangupReason(Long SysHangupReason) {
+        this.SysHangupReason = SysHangupReason;
+    }
+
+    /**
+     * Get 接通后系统挂断原因，文字描述信息 
+     * @return SysHangupReasonString 接通后系统挂断原因，文字描述信息
+     */
+    public String getSysHangupReasonString() {
+        return this.SysHangupReasonString;
+    }
+
+    /**
+     * Set 接通后系统挂断原因，文字描述信息
+     * @param SysHangupReasonString 接通后系统挂断原因，文字描述信息
+     */
+    public void setSysHangupReasonString(String SysHangupReasonString) {
+        this.SysHangupReasonString = SysHangupReasonString;
+    }
+
     public TelCdrInfo() {
     }
 
@@ -1503,6 +1549,12 @@ NotExists
         if (source.AIAgentName != null) {
             this.AIAgentName = new String(source.AIAgentName);
         }
+        if (source.SysHangupReason != null) {
+            this.SysHangupReason = new Long(source.SysHangupReason);
+        }
+        if (source.SysHangupReasonString != null) {
+            this.SysHangupReasonString = new String(source.SysHangupReasonString);
+        }
     }
 
 
@@ -1550,6 +1602,8 @@ NotExists
         this.setParamArraySimple(map, prefix + "VoicemailAsrURL.", this.VoicemailAsrURL);
         this.setParamSimple(map, prefix + "AIAgentId", this.AIAgentId);
         this.setParamSimple(map, prefix + "AIAgentName", this.AIAgentName);
+        this.setParamSimple(map, prefix + "SysHangupReason", this.SysHangupReason);
+        this.setParamSimple(map, prefix + "SysHangupReasonString", this.SysHangupReasonString);
 
     }
 }

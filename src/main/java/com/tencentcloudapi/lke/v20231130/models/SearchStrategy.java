@@ -72,6 +72,13 @@ public class SearchStrategy extends AbstractModel {
     private NL2SQLModelConfig NatureLanguageToSqlModelConfig;
 
     /**
+    * 是否开启图谱检索
+    */
+    @SerializedName("GraphRetrieval")
+    @Expose
+    private Boolean GraphRetrieval;
+
+    /**
      * Get 检索策略类型 0:混合检索，1：语义检索
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return StrategyType 检索策略类型 0:混合检索，1：语义检索
@@ -191,6 +198,22 @@ public class SearchStrategy extends AbstractModel {
         this.NatureLanguageToSqlModelConfig = NatureLanguageToSqlModelConfig;
     }
 
+    /**
+     * Get 是否开启图谱检索 
+     * @return GraphRetrieval 是否开启图谱检索
+     */
+    public Boolean getGraphRetrieval() {
+        return this.GraphRetrieval;
+    }
+
+    /**
+     * Set 是否开启图谱检索
+     * @param GraphRetrieval 是否开启图谱检索
+     */
+    public void setGraphRetrieval(Boolean GraphRetrieval) {
+        this.GraphRetrieval = GraphRetrieval;
+    }
+
     public SearchStrategy() {
     }
 
@@ -217,6 +240,9 @@ public class SearchStrategy extends AbstractModel {
         if (source.NatureLanguageToSqlModelConfig != null) {
             this.NatureLanguageToSqlModelConfig = new NL2SQLModelConfig(source.NatureLanguageToSqlModelConfig);
         }
+        if (source.GraphRetrieval != null) {
+            this.GraphRetrieval = new Boolean(source.GraphRetrieval);
+        }
     }
 
 
@@ -230,6 +256,7 @@ public class SearchStrategy extends AbstractModel {
         this.setParamSimple(map, prefix + "RerankModelSwitch", this.RerankModelSwitch);
         this.setParamSimple(map, prefix + "RerankModel", this.RerankModel);
         this.setParamObj(map, prefix + "NatureLanguageToSqlModelConfig.", this.NatureLanguageToSqlModelConfig);
+        this.setParamSimple(map, prefix + "GraphRetrieval", this.GraphRetrieval);
 
     }
 }

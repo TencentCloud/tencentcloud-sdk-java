@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class CreateFileSystemRequest extends AbstractModel {
 
     /**
-    * 文件系统类型, 可填goosefs和goosefsx
-    */
-    @SerializedName("Type")
-    @Expose
-    private String Type;
-
-    /**
     * 文件系统名
     */
     @SerializedName("Name")
@@ -66,6 +59,13 @@ public class CreateFileSystemRequest extends AbstractModel {
     private String Zone;
 
     /**
+    * 文件系统类型, 可填goosefs和goosefsx
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
     * 文件系统关联的tag
     */
     @SerializedName("Tag")
@@ -92,22 +92,6 @@ public class CreateFileSystemRequest extends AbstractModel {
     @SerializedName("ClusterPort")
     @Expose
     private Long ClusterPort;
-
-    /**
-     * Get 文件系统类型, 可填goosefs和goosefsx 
-     * @return Type 文件系统类型, 可填goosefs和goosefsx
-     */
-    public String getType() {
-        return this.Type;
-    }
-
-    /**
-     * Set 文件系统类型, 可填goosefs和goosefsx
-     * @param Type 文件系统类型, 可填goosefs和goosefsx
-     */
-    public void setType(String Type) {
-        this.Type = Type;
-    }
 
     /**
      * Get 文件系统名 
@@ -190,6 +174,26 @@ public class CreateFileSystemRequest extends AbstractModel {
     }
 
     /**
+     * Get 文件系统类型, 可填goosefs和goosefsx 
+     * @return Type 文件系统类型, 可填goosefs和goosefsx
+     * @deprecated
+     */
+    @Deprecated
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 文件系统类型, 可填goosefs和goosefsx
+     * @param Type 文件系统类型, 可填goosefs和goosefsx
+     * @deprecated
+     */
+    @Deprecated
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
      * Get 文件系统关联的tag 
      * @return Tag 文件系统关联的tag
      */
@@ -261,9 +265,6 @@ public class CreateFileSystemRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateFileSystemRequest(CreateFileSystemRequest source) {
-        if (source.Type != null) {
-            this.Type = new String(source.Type);
-        }
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
@@ -278,6 +279,9 @@ public class CreateFileSystemRequest extends AbstractModel {
         }
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
         }
         if (source.Tag != null) {
             this.Tag = new Tag[source.Tag.length];
@@ -301,12 +305,12 @@ public class CreateFileSystemRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamArrayObj(map, prefix + "Tag.", this.Tag);
         this.setParamObj(map, prefix + "GooseFSxBuildElements.", this.GooseFSxBuildElements);
         this.setParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);

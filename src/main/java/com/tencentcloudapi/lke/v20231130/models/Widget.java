@@ -39,6 +39,14 @@ public class Widget extends AbstractModel {
     private String WidgetRunId;
 
     /**
+    * Widget显示数据
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("View")
+    @Expose
+    private String View;
+
+    /**
     * Widget状态数据
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -104,6 +112,26 @@ public class Widget extends AbstractModel {
      */
     public void setWidgetRunId(String WidgetRunId) {
         this.WidgetRunId = WidgetRunId;
+    }
+
+    /**
+     * Get Widget显示数据
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return View Widget显示数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getView() {
+        return this.View;
+    }
+
+    /**
+     * Set Widget显示数据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param View Widget显示数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setView(String View) {
+        this.View = View;
     }
 
     /**
@@ -200,6 +228,9 @@ public class Widget extends AbstractModel {
         if (source.WidgetRunId != null) {
             this.WidgetRunId = new String(source.WidgetRunId);
         }
+        if (source.View != null) {
+            this.View = new String(source.View);
+        }
         if (source.State != null) {
             this.State = new String(source.State);
         }
@@ -221,6 +252,7 @@ public class Widget extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "WidgetId", this.WidgetId);
         this.setParamSimple(map, prefix + "WidgetRunId", this.WidgetRunId);
+        this.setParamSimple(map, prefix + "View", this.View);
         this.setParamSimple(map, prefix + "State", this.State);
         this.setParamSimple(map, prefix + "Position", this.Position);
         this.setParamSimple(map, prefix + "EncodedWidget", this.EncodedWidget);

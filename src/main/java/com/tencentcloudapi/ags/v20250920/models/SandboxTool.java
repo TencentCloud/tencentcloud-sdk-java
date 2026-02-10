@@ -115,6 +115,13 @@ public class SandboxTool extends AbstractModel {
     private CustomConfigurationDetail CustomConfiguration;
 
     /**
+    * 沙箱工具日志推送相关配置
+    */
+    @SerializedName("LogConfiguration")
+    @Expose
+    private LogConfiguration LogConfiguration;
+
+    /**
      * Get 沙箱工具唯一标识符 
      * @return ToolId 沙箱工具唯一标识符
      */
@@ -322,6 +329,22 @@ public class SandboxTool extends AbstractModel {
         this.CustomConfiguration = CustomConfiguration;
     }
 
+    /**
+     * Get 沙箱工具日志推送相关配置 
+     * @return LogConfiguration 沙箱工具日志推送相关配置
+     */
+    public LogConfiguration getLogConfiguration() {
+        return this.LogConfiguration;
+    }
+
+    /**
+     * Set 沙箱工具日志推送相关配置
+     * @param LogConfiguration 沙箱工具日志推送相关配置
+     */
+    public void setLogConfiguration(LogConfiguration LogConfiguration) {
+        this.LogConfiguration = LogConfiguration;
+    }
+
     public SandboxTool() {
     }
 
@@ -375,6 +398,9 @@ public class SandboxTool extends AbstractModel {
         if (source.CustomConfiguration != null) {
             this.CustomConfiguration = new CustomConfigurationDetail(source.CustomConfiguration);
         }
+        if (source.LogConfiguration != null) {
+            this.LogConfiguration = new LogConfiguration(source.LogConfiguration);
+        }
     }
 
 
@@ -395,6 +421,7 @@ public class SandboxTool extends AbstractModel {
         this.setParamSimple(map, prefix + "RoleArn", this.RoleArn);
         this.setParamArrayObj(map, prefix + "StorageMounts.", this.StorageMounts);
         this.setParamObj(map, prefix + "CustomConfiguration.", this.CustomConfiguration);
+        this.setParamObj(map, prefix + "LogConfiguration.", this.LogConfiguration);
 
     }
 }

@@ -134,6 +134,14 @@ public class MediaInfo extends AbstractModel {
     private MPSAiMediaInfo MPSAiMediaInfo;
 
     /**
+    * 图片理解信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ImageUnderstandingInfo")
+    @Expose
+    private ImageUnderstandingInfo ImageUnderstandingInfo;
+
+    /**
      * Get 基础信息。包括视频名称、分类、播放地址、封面图片等。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return BasicInfo 基础信息。包括视频名称、分类、播放地址、封面图片等。
@@ -405,6 +413,26 @@ public class MediaInfo extends AbstractModel {
         this.MPSAiMediaInfo = MPSAiMediaInfo;
     }
 
+    /**
+     * Get 图片理解信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ImageUnderstandingInfo 图片理解信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ImageUnderstandingInfo getImageUnderstandingInfo() {
+        return this.ImageUnderstandingInfo;
+    }
+
+    /**
+     * Set 图片理解信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageUnderstandingInfo 图片理解信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setImageUnderstandingInfo(ImageUnderstandingInfo ImageUnderstandingInfo) {
+        this.ImageUnderstandingInfo = ImageUnderstandingInfo;
+    }
+
     public MediaInfo() {
     }
 
@@ -455,6 +483,9 @@ public class MediaInfo extends AbstractModel {
         if (source.MPSAiMediaInfo != null) {
             this.MPSAiMediaInfo = new MPSAiMediaInfo(source.MPSAiMediaInfo);
         }
+        if (source.ImageUnderstandingInfo != null) {
+            this.ImageUnderstandingInfo = new ImageUnderstandingInfo(source.ImageUnderstandingInfo);
+        }
     }
 
 
@@ -476,6 +507,7 @@ public class MediaInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamObj(map, prefix + "ReviewInfo.", this.ReviewInfo);
         this.setParamObj(map, prefix + "MPSAiMediaInfo.", this.MPSAiMediaInfo);
+        this.setParamObj(map, prefix + "ImageUnderstandingInfo.", this.ImageUnderstandingInfo);
 
     }
 }

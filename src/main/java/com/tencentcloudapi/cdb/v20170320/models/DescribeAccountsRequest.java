@@ -66,6 +66,13 @@ public class DescribeAccountsRequest extends AbstractModel {
     private String OrderBy;
 
     /**
+    * 匹配账号主机地址（Host）的正则表达式，规则同 MySQL 官网
+    */
+    @SerializedName("HostRegexp")
+    @Expose
+    private String HostRegexp;
+
+    /**
      * Get 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。 
      * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
@@ -161,6 +168,22 @@ public class DescribeAccountsRequest extends AbstractModel {
         this.OrderBy = OrderBy;
     }
 
+    /**
+     * Get 匹配账号主机地址（Host）的正则表达式，规则同 MySQL 官网 
+     * @return HostRegexp 匹配账号主机地址（Host）的正则表达式，规则同 MySQL 官网
+     */
+    public String getHostRegexp() {
+        return this.HostRegexp;
+    }
+
+    /**
+     * Set 匹配账号主机地址（Host）的正则表达式，规则同 MySQL 官网
+     * @param HostRegexp 匹配账号主机地址（Host）的正则表达式，规则同 MySQL 官网
+     */
+    public void setHostRegexp(String HostRegexp) {
+        this.HostRegexp = HostRegexp;
+    }
+
     public DescribeAccountsRequest() {
     }
 
@@ -187,6 +210,9 @@ public class DescribeAccountsRequest extends AbstractModel {
         if (source.OrderBy != null) {
             this.OrderBy = new String(source.OrderBy);
         }
+        if (source.HostRegexp != null) {
+            this.HostRegexp = new String(source.HostRegexp);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class DescribeAccountsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AccountRegexp", this.AccountRegexp);
         this.setParamSimple(map, prefix + "SortBy", this.SortBy);
         this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
+        this.setParamSimple(map, prefix + "HostRegexp", this.HostRegexp);
 
     }
 }

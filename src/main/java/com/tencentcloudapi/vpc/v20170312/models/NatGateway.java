@@ -215,14 +215,14 @@ public class NatGateway extends AbstractModel {
     private Boolean AutoScaling;
 
     /**
-    * 是否代答公网发给NAT网关上弹性公网IP的ICMP echo请求报文，当前适用于标准型NAT网关
+    * 是否代答公网发给NAT网关上弹性公网IP的ICMP echo请求报文，默认为true，应答请求报文；false代表不应答。
     */
     @SerializedName("ICMPProxy")
     @Expose
     private Boolean ICMPProxy;
 
     /**
-    * true代表同一个私网IP访问同一个公网目的IP时，固定使用同一个NAT网关上的弹性公网IP；false代表这种情况下使用的弹性公网IP不固定。默认为true。
+    * 同一个内网地址通过NAT网关访问同一个目的IP时，是否使用固定的弹性公网IP。默认为true，使用固定IP；false代表使用随机IP。
     */
     @SerializedName("PublicAddressAffinity")
     @Expose
@@ -669,32 +669,32 @@ public class NatGateway extends AbstractModel {
     }
 
     /**
-     * Get 是否代答公网发给NAT网关上弹性公网IP的ICMP echo请求报文，当前适用于标准型NAT网关 
-     * @return ICMPProxy 是否代答公网发给NAT网关上弹性公网IP的ICMP echo请求报文，当前适用于标准型NAT网关
+     * Get 是否代答公网发给NAT网关上弹性公网IP的ICMP echo请求报文，默认为true，应答请求报文；false代表不应答。 
+     * @return ICMPProxy 是否代答公网发给NAT网关上弹性公网IP的ICMP echo请求报文，默认为true，应答请求报文；false代表不应答。
      */
     public Boolean getICMPProxy() {
         return this.ICMPProxy;
     }
 
     /**
-     * Set 是否代答公网发给NAT网关上弹性公网IP的ICMP echo请求报文，当前适用于标准型NAT网关
-     * @param ICMPProxy 是否代答公网发给NAT网关上弹性公网IP的ICMP echo请求报文，当前适用于标准型NAT网关
+     * Set 是否代答公网发给NAT网关上弹性公网IP的ICMP echo请求报文，默认为true，应答请求报文；false代表不应答。
+     * @param ICMPProxy 是否代答公网发给NAT网关上弹性公网IP的ICMP echo请求报文，默认为true，应答请求报文；false代表不应答。
      */
     public void setICMPProxy(Boolean ICMPProxy) {
         this.ICMPProxy = ICMPProxy;
     }
 
     /**
-     * Get true代表同一个私网IP访问同一个公网目的IP时，固定使用同一个NAT网关上的弹性公网IP；false代表这种情况下使用的弹性公网IP不固定。默认为true。 
-     * @return PublicAddressAffinity true代表同一个私网IP访问同一个公网目的IP时，固定使用同一个NAT网关上的弹性公网IP；false代表这种情况下使用的弹性公网IP不固定。默认为true。
+     * Get 同一个内网地址通过NAT网关访问同一个目的IP时，是否使用固定的弹性公网IP。默认为true，使用固定IP；false代表使用随机IP。 
+     * @return PublicAddressAffinity 同一个内网地址通过NAT网关访问同一个目的IP时，是否使用固定的弹性公网IP。默认为true，使用固定IP；false代表使用随机IP。
      */
     public Boolean getPublicAddressAffinity() {
         return this.PublicAddressAffinity;
     }
 
     /**
-     * Set true代表同一个私网IP访问同一个公网目的IP时，固定使用同一个NAT网关上的弹性公网IP；false代表这种情况下使用的弹性公网IP不固定。默认为true。
-     * @param PublicAddressAffinity true代表同一个私网IP访问同一个公网目的IP时，固定使用同一个NAT网关上的弹性公网IP；false代表这种情况下使用的弹性公网IP不固定。默认为true。
+     * Set 同一个内网地址通过NAT网关访问同一个目的IP时，是否使用固定的弹性公网IP。默认为true，使用固定IP；false代表使用随机IP。
+     * @param PublicAddressAffinity 同一个内网地址通过NAT网关访问同一个目的IP时，是否使用固定的弹性公网IP。默认为true，使用固定IP；false代表使用随机IP。
      */
     public void setPublicAddressAffinity(Boolean PublicAddressAffinity) {
         this.PublicAddressAffinity = PublicAddressAffinity;

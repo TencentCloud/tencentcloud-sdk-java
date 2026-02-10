@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class SubmitTextToImageJobRequest extends AbstractModel {
 
     /**
-    * <p>文本描述。<br>算法将根据输入的文本智能生成与之相关的图像。<br>不能为空，推荐使用中文。最多可传1024个 utf-8 字符。</p>
+    * <p>文本描述。<br>算法将根据输入的文本智能生成与之相关的图像。<br>不能为空，推荐使用中文。最多可传8192个 utf-8 字符。</p>
     */
     @SerializedName("Prompt")
     @Expose
     private String Prompt;
 
     /**
-    * <p>垫图url列表，大小不超过10MB，支持 jpg jpeg png webp格式，最多3张图</p>
+    * <p>垫图url列表，base64后大小不超过10MB，支持 jpg jpeg png webp格式，最多3张图</p>
     */
     @SerializedName("Images")
     @Expose
@@ -73,32 +73,32 @@ public class SubmitTextToImageJobRequest extends AbstractModel {
     private Long Revise;
 
     /**
-     * Get <p>文本描述。<br>算法将根据输入的文本智能生成与之相关的图像。<br>不能为空，推荐使用中文。最多可传1024个 utf-8 字符。</p> 
-     * @return Prompt <p>文本描述。<br>算法将根据输入的文本智能生成与之相关的图像。<br>不能为空，推荐使用中文。最多可传1024个 utf-8 字符。</p>
+     * Get <p>文本描述。<br>算法将根据输入的文本智能生成与之相关的图像。<br>不能为空，推荐使用中文。最多可传8192个 utf-8 字符。</p> 
+     * @return Prompt <p>文本描述。<br>算法将根据输入的文本智能生成与之相关的图像。<br>不能为空，推荐使用中文。最多可传8192个 utf-8 字符。</p>
      */
     public String getPrompt() {
         return this.Prompt;
     }
 
     /**
-     * Set <p>文本描述。<br>算法将根据输入的文本智能生成与之相关的图像。<br>不能为空，推荐使用中文。最多可传1024个 utf-8 字符。</p>
-     * @param Prompt <p>文本描述。<br>算法将根据输入的文本智能生成与之相关的图像。<br>不能为空，推荐使用中文。最多可传1024个 utf-8 字符。</p>
+     * Set <p>文本描述。<br>算法将根据输入的文本智能生成与之相关的图像。<br>不能为空，推荐使用中文。最多可传8192个 utf-8 字符。</p>
+     * @param Prompt <p>文本描述。<br>算法将根据输入的文本智能生成与之相关的图像。<br>不能为空，推荐使用中文。最多可传8192个 utf-8 字符。</p>
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
     }
 
     /**
-     * Get <p>垫图url列表，大小不超过10MB，支持 jpg jpeg png webp格式，最多3张图</p> 
-     * @return Images <p>垫图url列表，大小不超过10MB，支持 jpg jpeg png webp格式，最多3张图</p>
+     * Get <p>垫图url列表，base64后大小不超过10MB，支持 jpg jpeg png webp格式，最多3张图</p> 
+     * @return Images <p>垫图url列表，base64后大小不超过10MB，支持 jpg jpeg png webp格式，最多3张图</p>
      */
     public String [] getImages() {
         return this.Images;
     }
 
     /**
-     * Set <p>垫图url列表，大小不超过10MB，支持 jpg jpeg png webp格式，最多3张图</p>
-     * @param Images <p>垫图url列表，大小不超过10MB，支持 jpg jpeg png webp格式，最多3张图</p>
+     * Set <p>垫图url列表，base64后大小不超过10MB，支持 jpg jpeg png webp格式，最多3张图</p>
+     * @param Images <p>垫图url列表，base64后大小不超过10MB，支持 jpg jpeg png webp格式，最多3张图</p>
      */
     public void setImages(String [] Images) {
         this.Images = Images;

@@ -47,7 +47,7 @@ public class MainlandPermitOCRRequest extends AbstractModel {
     /**
     * 图片正反面
 FRONT：正面
-BACK：反面
+BACK：反面 （仅支持来往内地通行证反面识别，不支持港澳台通行证反面识别）
 默认为FRONT
     */
     @SerializedName("CardSide")
@@ -105,11 +105,11 @@ BACK：反面
     /**
      * Get 图片正反面
 FRONT：正面
-BACK：反面
+BACK：反面 （仅支持来往内地通行证反面识别，不支持港澳台通行证反面识别）
 默认为FRONT 
      * @return CardSide 图片正反面
 FRONT：正面
-BACK：反面
+BACK：反面 （仅支持来往内地通行证反面识别，不支持港澳台通行证反面识别）
 默认为FRONT
      */
     public String getCardSide() {
@@ -119,11 +119,11 @@ BACK：反面
     /**
      * Set 图片正反面
 FRONT：正面
-BACK：反面
+BACK：反面 （仅支持来往内地通行证反面识别，不支持港澳台通行证反面识别）
 默认为FRONT
      * @param CardSide 图片正反面
 FRONT：正面
-BACK：反面
+BACK：反面 （仅支持来往内地通行证反面识别，不支持港澳台通行证反面识别）
 默认为FRONT
      */
     public void setCardSide(String CardSide) {

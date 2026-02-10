@@ -21,67 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeClusterRolesRequest extends AbstractModel {
+public class CancelLoadTaskRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * 集群 ID
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 角色名
+    * 预热任务 ID
     */
-    @SerializedName("RoleName")
+    @SerializedName("TaskId")
     @Expose
-    private String RoleName;
+    private String TaskId;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get 集群 ID 
+     * @return ClusterId 集群 ID
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set 集群 ID
+     * @param ClusterId 集群 ID
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 角色名 
-     * @return RoleName 角色名
+     * Get 预热任务 ID 
+     * @return TaskId 预热任务 ID
      */
-    public String getRoleName() {
-        return this.RoleName;
+    public String getTaskId() {
+        return this.TaskId;
     }
 
     /**
-     * Set 角色名
-     * @param RoleName 角色名
+     * Set 预热任务 ID
+     * @param TaskId 预热任务 ID
      */
-    public void setRoleName(String RoleName) {
-        this.RoleName = RoleName;
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
     }
 
-    public DescribeClusterRolesRequest() {
+    public CancelLoadTaskRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeClusterRolesRequest(DescribeClusterRolesRequest source) {
+    public CancelLoadTaskRequest(CancelLoadTaskRequest source) {
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
         }
-        if (source.RoleName != null) {
-            this.RoleName = new String(source.RoleName);
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
         }
     }
 
@@ -91,7 +91,7 @@ public class DescribeClusterRolesRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
-        this.setParamSimple(map, prefix + "RoleName", this.RoleName);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
 
     }
 }

@@ -31,7 +31,8 @@ public class DescribeStorageCredentialRequest extends AbstractModel {
     private String BotBizId;
 
     /**
-    * 文件类型,正常的文件名类型后缀，例如 xlsx、pdf、 docx、png 等
+    * 文件类型,正常的文件名类型后缀，支持 docx、doc、pdf、txt、md、wps、pages、html、mhtml、epub、xml、json、log、xlsx、xls、csv、tsv、numbers、pptx、ppt、ppsx、ppsm、key、png、jpg、jpeg、gif、bmp、tiff、webp、heif、heic、jp2、eps、icns、im、pcx、ppm、xbm、xmind
+
     */
     @SerializedName("FileType")
     @Expose
@@ -69,16 +70,20 @@ public class DescribeStorageCredentialRequest extends AbstractModel {
     }
 
     /**
-     * Get 文件类型,正常的文件名类型后缀，例如 xlsx、pdf、 docx、png 等 
-     * @return FileType 文件类型,正常的文件名类型后缀，例如 xlsx、pdf、 docx、png 等
+     * Get 文件类型,正常的文件名类型后缀，支持 docx、doc、pdf、txt、md、wps、pages、html、mhtml、epub、xml、json、log、xlsx、xls、csv、tsv、numbers、pptx、ppt、ppsx、ppsm、key、png、jpg、jpeg、gif、bmp、tiff、webp、heif、heic、jp2、eps、icns、im、pcx、ppm、xbm、xmind
+ 
+     * @return FileType 文件类型,正常的文件名类型后缀，支持 docx、doc、pdf、txt、md、wps、pages、html、mhtml、epub、xml、json、log、xlsx、xls、csv、tsv、numbers、pptx、ppt、ppsx、ppsm、key、png、jpg、jpeg、gif、bmp、tiff、webp、heif、heic、jp2、eps、icns、im、pcx、ppm、xbm、xmind
+
      */
     public String getFileType() {
         return this.FileType;
     }
 
     /**
-     * Set 文件类型,正常的文件名类型后缀，例如 xlsx、pdf、 docx、png 等
-     * @param FileType 文件类型,正常的文件名类型后缀，例如 xlsx、pdf、 docx、png 等
+     * Set 文件类型,正常的文件名类型后缀，支持 docx、doc、pdf、txt、md、wps、pages、html、mhtml、epub、xml、json、log、xlsx、xls、csv、tsv、numbers、pptx、ppt、ppsx、ppsm、key、png、jpg、jpeg、gif、bmp、tiff、webp、heif、heic、jp2、eps、icns、im、pcx、ppm、xbm、xmind
+
+     * @param FileType 文件类型,正常的文件名类型后缀，支持 docx、doc、pdf、txt、md、wps、pages、html、mhtml、epub、xml、json、log、xlsx、xls、csv、tsv、numbers、pptx、ppt、ppsx、ppsm、key、png、jpg、jpeg、gif、bmp、tiff、webp、heif、heic、jp2、eps、icns、im、pcx、ppm、xbm、xmind
+
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;

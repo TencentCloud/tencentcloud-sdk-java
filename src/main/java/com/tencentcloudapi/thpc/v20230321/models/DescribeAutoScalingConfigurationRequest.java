@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class DescribeAutoScalingConfigurationRequest extends AbstractModel {
 
     /**
-    * 集群ID。	
+    * <p>集群ID。</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-     * Get 集群ID。	 
-     * @return ClusterId 集群ID。	
+    * <p>队列名称</p>
+    */
+    @SerializedName("QueueName")
+    @Expose
+    private String QueueName;
+
+    /**
+     * Get <p>集群ID。</p> 
+     * @return ClusterId <p>集群ID。</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID。	
-     * @param ClusterId 集群ID。	
+     * Set <p>集群ID。</p>
+     * @param ClusterId <p>集群ID。</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
+    }
+
+    /**
+     * Get <p>队列名称</p> 
+     * @return QueueName <p>队列名称</p>
+     */
+    public String getQueueName() {
+        return this.QueueName;
+    }
+
+    /**
+     * Set <p>队列名称</p>
+     * @param QueueName <p>队列名称</p>
+     */
+    public void setQueueName(String QueueName) {
+        this.QueueName = QueueName;
     }
 
     public DescribeAutoScalingConfigurationRequest() {
@@ -57,6 +80,9 @@ public class DescribeAutoScalingConfigurationRequest extends AbstractModel {
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
         }
+        if (source.QueueName != null) {
+            this.QueueName = new String(source.QueueName);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DescribeAutoScalingConfigurationRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "QueueName", this.QueueName);
 
     }
 }

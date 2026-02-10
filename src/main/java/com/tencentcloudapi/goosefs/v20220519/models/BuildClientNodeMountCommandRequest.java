@@ -38,6 +38,13 @@ public class BuildClientNodeMountCommandRequest extends AbstractModel {
     private String CustomMountDir;
 
     /**
+    * 客户端集群ID
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
      * Get 文件系统ID 
      * @return FileSystemId 文件系统ID
      */
@@ -69,6 +76,22 @@ public class BuildClientNodeMountCommandRequest extends AbstractModel {
         this.CustomMountDir = CustomMountDir;
     }
 
+    /**
+     * Get 客户端集群ID 
+     * @return ClusterId 客户端集群ID
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set 客户端集群ID
+     * @param ClusterId 客户端集群ID
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
     public BuildClientNodeMountCommandRequest() {
     }
 
@@ -83,6 +106,9 @@ public class BuildClientNodeMountCommandRequest extends AbstractModel {
         if (source.CustomMountDir != null) {
             this.CustomMountDir = new String(source.CustomMountDir);
         }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class BuildClientNodeMountCommandRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
         this.setParamSimple(map, prefix + "CustomMountDir", this.CustomMountDir);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
 
     }
 }

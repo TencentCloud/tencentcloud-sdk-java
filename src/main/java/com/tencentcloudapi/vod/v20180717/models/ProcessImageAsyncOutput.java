@@ -31,6 +31,13 @@ public class ProcessImageAsyncOutput extends AbstractModel {
     private ProcessImageAsyncOutputFileInfo FileInfo;
 
     /**
+    * 图片理解结果。
+    */
+    @SerializedName("OutputText")
+    @Expose
+    private String OutputText;
+
+    /**
      * Get 图片异步处理任务的输出文件信息。 
      * @return FileInfo 图片异步处理任务的输出文件信息。
      */
@@ -46,6 +53,22 @@ public class ProcessImageAsyncOutput extends AbstractModel {
         this.FileInfo = FileInfo;
     }
 
+    /**
+     * Get 图片理解结果。 
+     * @return OutputText 图片理解结果。
+     */
+    public String getOutputText() {
+        return this.OutputText;
+    }
+
+    /**
+     * Set 图片理解结果。
+     * @param OutputText 图片理解结果。
+     */
+    public void setOutputText(String OutputText) {
+        this.OutputText = OutputText;
+    }
+
     public ProcessImageAsyncOutput() {
     }
 
@@ -57,6 +80,9 @@ public class ProcessImageAsyncOutput extends AbstractModel {
         if (source.FileInfo != null) {
             this.FileInfo = new ProcessImageAsyncOutputFileInfo(source.FileInfo);
         }
+        if (source.OutputText != null) {
+            this.OutputText = new String(source.OutputText);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class ProcessImageAsyncOutput extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "FileInfo.", this.FileInfo);
+        this.setParamSimple(map, prefix + "OutputText", this.OutputText);
 
     }
 }

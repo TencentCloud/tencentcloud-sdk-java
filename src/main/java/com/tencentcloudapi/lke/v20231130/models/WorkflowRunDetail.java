@@ -143,6 +143,14 @@ public class WorkflowRunDetail extends AbstractModel {
     private String WorkflowGraph;
 
     /**
+    * 当前的回复消息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LatestMessage")
+    @Expose
+    private AsyncWorkflowMessage LatestMessage;
+
+    /**
      * Get 运行环境。0: 测试环境； 1: 正式环境 
      * @return RunEnv 运行环境。0: 测试环境； 1: 正式环境
      */
@@ -418,6 +426,26 @@ public class WorkflowRunDetail extends AbstractModel {
         this.WorkflowGraph = WorkflowGraph;
     }
 
+    /**
+     * Get 当前的回复消息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LatestMessage 当前的回复消息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AsyncWorkflowMessage getLatestMessage() {
+        return this.LatestMessage;
+    }
+
+    /**
+     * Set 当前的回复消息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LatestMessage 当前的回复消息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLatestMessage(AsyncWorkflowMessage LatestMessage) {
+        this.LatestMessage = LatestMessage;
+    }
+
     public WorkflowRunDetail() {
     }
 
@@ -480,6 +508,9 @@ public class WorkflowRunDetail extends AbstractModel {
         if (source.WorkflowGraph != null) {
             this.WorkflowGraph = new String(source.WorkflowGraph);
         }
+        if (source.LatestMessage != null) {
+            this.LatestMessage = new AsyncWorkflowMessage(source.LatestMessage);
+        }
     }
 
 
@@ -504,6 +535,7 @@ public class WorkflowRunDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "MainModelName", this.MainModelName);
         this.setParamArrayObj(map, prefix + "CustomVariables.", this.CustomVariables);
         this.setParamSimple(map, prefix + "WorkflowGraph", this.WorkflowGraph);
+        this.setParamObj(map, prefix + "LatestMessage.", this.LatestMessage);
 
     }
 }

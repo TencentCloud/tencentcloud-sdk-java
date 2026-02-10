@@ -50,6 +50,17 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *本接口（CloseAuditService）用于关闭审计服务
+     * @param req CloseAuditServiceRequest
+     * @return CloseAuditServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloseAuditServiceResponse CloseAuditService(CloseAuditServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CloseAuditService", CloseAuditServiceResponse.class);
+    }
+
+    /**
      *本接口（CreateAccountUser）用于自定义实例访问账号。
      * @param req CreateAccountUserRequest
      * @return CreateAccountUserResponse
@@ -194,6 +205,17 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeAuditConfig)用于查询云数据库审计策略的服务配置，包括审计日志保存时长等。
+     * @param req DescribeAuditConfigRequest
+     * @return DescribeAuditConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuditConfigResponse DescribeAuditConfig(DescribeAuditConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAuditConfig", DescribeAuditConfigResponse.class);
+    }
+
+    /**
      *本接口（DescribeAuditInstanceList）用于查询开通或未开通数据库审计的实例列表。
      * @param req DescribeAuditInstanceListRequest
      * @return DescribeAuditInstanceListResponse
@@ -202,6 +224,28 @@ public class MongodbClient extends AbstractClient{
     public DescribeAuditInstanceListResponse DescribeAuditInstanceList(DescribeAuditInstanceListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAuditInstanceList", DescribeAuditInstanceListResponse.class);
+    }
+
+    /**
+     *本接口(DescribeAuditLogFiles)用于查询云数据库实例的审计日志文件。
+     * @param req DescribeAuditLogFilesRequest
+     * @return DescribeAuditLogFilesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuditLogFilesResponse DescribeAuditLogFiles(DescribeAuditLogFilesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAuditLogFiles", DescribeAuditLogFilesResponse.class);
+    }
+
+    /**
+     *本接口(DescribeAuditLogs)用于查询数据库审计日志。
+     * @param req DescribeAuditLogsRequest
+     * @return DescribeAuditLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuditLogsResponse DescribeAuditLogs(DescribeAuditLogsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAuditLogs", DescribeAuditLogsResponse.class);
     }
 
     /**

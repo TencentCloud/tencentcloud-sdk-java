@@ -73,6 +73,20 @@ public class CreateDataRepositoryTaskRequest extends AbstractModel {
     private String TextLocation;
 
     /**
+    * 是否开启自定义路径(暂时仅供预热使用)
+    */
+    @SerializedName("EnableDataFlowSubPath")
+    @Expose
+    private Boolean EnableDataFlowSubPath;
+
+    /**
+    * 自定义路径(暂时仅供预热使用)
+    */
+    @SerializedName("DataFlowSubPath")
+    @Expose
+    private String DataFlowSubPath;
+
+    /**
      * Get 数据流通任务类型, FS_TO_COS(文件系统到COS Bucket),或者COS_TO_FS(COS Bucket到文件系统) 
      * @return TaskType 数据流通任务类型, FS_TO_COS(文件系统到COS Bucket),或者COS_TO_FS(COS Bucket到文件系统)
      */
@@ -184,6 +198,38 @@ public class CreateDataRepositoryTaskRequest extends AbstractModel {
         this.TextLocation = TextLocation;
     }
 
+    /**
+     * Get 是否开启自定义路径(暂时仅供预热使用) 
+     * @return EnableDataFlowSubPath 是否开启自定义路径(暂时仅供预热使用)
+     */
+    public Boolean getEnableDataFlowSubPath() {
+        return this.EnableDataFlowSubPath;
+    }
+
+    /**
+     * Set 是否开启自定义路径(暂时仅供预热使用)
+     * @param EnableDataFlowSubPath 是否开启自定义路径(暂时仅供预热使用)
+     */
+    public void setEnableDataFlowSubPath(Boolean EnableDataFlowSubPath) {
+        this.EnableDataFlowSubPath = EnableDataFlowSubPath;
+    }
+
+    /**
+     * Get 自定义路径(暂时仅供预热使用) 
+     * @return DataFlowSubPath 自定义路径(暂时仅供预热使用)
+     */
+    public String getDataFlowSubPath() {
+        return this.DataFlowSubPath;
+    }
+
+    /**
+     * Set 自定义路径(暂时仅供预热使用)
+     * @param DataFlowSubPath 自定义路径(暂时仅供预热使用)
+     */
+    public void setDataFlowSubPath(String DataFlowSubPath) {
+        this.DataFlowSubPath = DataFlowSubPath;
+    }
+
     public CreateDataRepositoryTaskRequest() {
     }
 
@@ -213,6 +259,12 @@ public class CreateDataRepositoryTaskRequest extends AbstractModel {
         if (source.TextLocation != null) {
             this.TextLocation = new String(source.TextLocation);
         }
+        if (source.EnableDataFlowSubPath != null) {
+            this.EnableDataFlowSubPath = new Boolean(source.EnableDataFlowSubPath);
+        }
+        if (source.DataFlowSubPath != null) {
+            this.DataFlowSubPath = new String(source.DataFlowSubPath);
+        }
     }
 
 
@@ -227,6 +279,8 @@ public class CreateDataRepositoryTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskName", this.TaskName);
         this.setParamSimple(map, prefix + "RepositoryType", this.RepositoryType);
         this.setParamSimple(map, prefix + "TextLocation", this.TextLocation);
+        this.setParamSimple(map, prefix + "EnableDataFlowSubPath", this.EnableDataFlowSubPath);
+        this.setParamSimple(map, prefix + "DataFlowSubPath", this.DataFlowSubPath);
 
     }
 }

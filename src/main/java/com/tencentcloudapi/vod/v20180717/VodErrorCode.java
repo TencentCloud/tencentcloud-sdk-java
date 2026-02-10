@@ -264,6 +264,9 @@ public enum VodErrorCode {
      /* ExpiredTime 错误。 */
      INVALIDPARAMETERVALUE_EXPIREDTIME("InvalidParameterValue.ExpiredTime"),
      
+     /* 参数值错误：ExtendedParameter 参数取值非法。 */
+     INVALIDPARAMETERVALUE_EXTENDEDPARAMETER("InvalidParameterValue.ExtendedParameter"),
+     
      /* 参数值错误：人脸重复。 */
      INVALIDPARAMETERVALUE_FACEDUPLICATE("InvalidParameterValue.FaceDuplicate"),
      

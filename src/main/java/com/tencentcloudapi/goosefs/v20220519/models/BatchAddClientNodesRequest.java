@@ -45,6 +45,13 @@ public class BatchAddClientNodesRequest extends AbstractModel {
     private Boolean SingleClusterFlag;
 
     /**
+    * 客户端集群id
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
      * Get 文件系统ID 
      * @return FileSystemId 文件系统ID
      */
@@ -92,6 +99,22 @@ public class BatchAddClientNodesRequest extends AbstractModel {
         this.SingleClusterFlag = SingleClusterFlag;
     }
 
+    /**
+     * Get 客户端集群id 
+     * @return ClusterId 客户端集群id
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set 客户端集群id
+     * @param ClusterId 客户端集群id
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
     public BatchAddClientNodesRequest() {
     }
 
@@ -112,6 +135,9 @@ public class BatchAddClientNodesRequest extends AbstractModel {
         if (source.SingleClusterFlag != null) {
             this.SingleClusterFlag = new Boolean(source.SingleClusterFlag);
         }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
     }
 
 
@@ -122,6 +148,7 @@ public class BatchAddClientNodesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
         this.setParamArrayObj(map, prefix + "ClientNodes.", this.ClientNodes);
         this.setParamSimple(map, prefix + "SingleClusterFlag", this.SingleClusterFlag);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
 
     }
 }

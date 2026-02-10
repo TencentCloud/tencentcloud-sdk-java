@@ -93,6 +93,13 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
     private AigcImageOutputConfig OutputConfig;
 
     /**
+    * 输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。
+    */
+    @SerializedName("InputRegion")
+    @Expose
+    private String InputRegion;
+
+    /**
     * 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
     */
     @SerializedName("SessionId")
@@ -301,6 +308,22 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
     }
 
     /**
+     * Get 输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。 
+     * @return InputRegion 输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。
+     */
+    public String getInputRegion() {
+        return this.InputRegion;
+    }
+
+    /**
+     * Set 输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。
+     * @param InputRegion 输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。
+     */
+    public void setInputRegion(String InputRegion) {
+        this.InputRegion = InputRegion;
+    }
+
+    /**
      * Get 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。 
      * @return SessionId 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      */
@@ -399,6 +422,9 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
         if (source.OutputConfig != null) {
             this.OutputConfig = new AigcImageOutputConfig(source.OutputConfig);
         }
+        if (source.InputRegion != null) {
+            this.InputRegion = new String(source.InputRegion);
+        }
         if (source.SessionId != null) {
             this.SessionId = new String(source.SessionId);
         }
@@ -426,6 +452,7 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "NegativePrompt", this.NegativePrompt);
         this.setParamSimple(map, prefix + "EnhancePrompt", this.EnhancePrompt);
         this.setParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
+        this.setParamSimple(map, prefix + "InputRegion", this.InputRegion);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "TasksPriority", this.TasksPriority);

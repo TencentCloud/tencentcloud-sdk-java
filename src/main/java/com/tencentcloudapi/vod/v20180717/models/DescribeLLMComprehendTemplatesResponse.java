@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.goosefs.v20220519.models;
+package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeClusterRolesResponse extends AbstractModel {
+public class DescribeLLMComprehendTemplatesResponse extends AbstractModel {
 
     /**
-    * 集群角色
+    * 符合过滤条件的记录总数。
     */
-    @SerializedName("ClusterRoles")
+    @SerializedName("TotalCount")
     @Expose
-    private ClusterRole [] ClusterRoles;
+    private Long TotalCount;
+
+    /**
+    * 图片异步处理模板详情列表。
+    */
+    @SerializedName("LLMComprehendTemplateSet")
+    @Expose
+    private LLMComprehendTemplateItem [] LLMComprehendTemplateSet;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +45,35 @@ public class DescribeClusterRolesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 集群角色 
-     * @return ClusterRoles 集群角色
+     * Get 符合过滤条件的记录总数。 
+     * @return TotalCount 符合过滤条件的记录总数。
      */
-    public ClusterRole [] getClusterRoles() {
-        return this.ClusterRoles;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 集群角色
-     * @param ClusterRoles 集群角色
+     * Set 符合过滤条件的记录总数。
+     * @param TotalCount 符合过滤条件的记录总数。
      */
-    public void setClusterRoles(ClusterRole [] ClusterRoles) {
-        this.ClusterRoles = ClusterRoles;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 图片异步处理模板详情列表。 
+     * @return LLMComprehendTemplateSet 图片异步处理模板详情列表。
+     */
+    public LLMComprehendTemplateItem [] getLLMComprehendTemplateSet() {
+        return this.LLMComprehendTemplateSet;
+    }
+
+    /**
+     * Set 图片异步处理模板详情列表。
+     * @param LLMComprehendTemplateSet 图片异步处理模板详情列表。
+     */
+    public void setLLMComprehendTemplateSet(LLMComprehendTemplateItem [] LLMComprehendTemplateSet) {
+        this.LLMComprehendTemplateSet = LLMComprehendTemplateSet;
     }
 
     /**
@@ -69,18 +92,21 @@ public class DescribeClusterRolesResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeClusterRolesResponse() {
+    public DescribeLLMComprehendTemplatesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeClusterRolesResponse(DescribeClusterRolesResponse source) {
-        if (source.ClusterRoles != null) {
-            this.ClusterRoles = new ClusterRole[source.ClusterRoles.length];
-            for (int i = 0; i < source.ClusterRoles.length; i++) {
-                this.ClusterRoles[i] = new ClusterRole(source.ClusterRoles[i]);
+    public DescribeLLMComprehendTemplatesResponse(DescribeLLMComprehendTemplatesResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.LLMComprehendTemplateSet != null) {
+            this.LLMComprehendTemplateSet = new LLMComprehendTemplateItem[source.LLMComprehendTemplateSet.length];
+            for (int i = 0; i < source.LLMComprehendTemplateSet.length; i++) {
+                this.LLMComprehendTemplateSet[i] = new LLMComprehendTemplateItem(source.LLMComprehendTemplateSet[i]);
             }
         }
         if (source.RequestId != null) {
@@ -93,7 +119,8 @@ public class DescribeClusterRolesResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "ClusterRoles.", this.ClusterRoles);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "LLMComprehendTemplateSet.", this.LLMComprehendTemplateSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

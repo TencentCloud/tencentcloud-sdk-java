@@ -38,6 +38,27 @@ public class SubnetInfo extends AbstractModel {
     private String SubnetId;
 
     /**
+    * 应用的集群；可以是集群id,也可以是All
+    */
+    @SerializedName("UsedCluster")
+    @Expose
+    private String UsedCluster;
+
+    /**
+    * cidr，只有当IsDirectConnect为true时才生效
+    */
+    @SerializedName("CIDR")
+    @Expose
+    private String CIDR;
+
+    /**
+    * 是否为专线接入场景
+    */
+    @SerializedName("IsDirectConnect")
+    @Expose
+    private Boolean IsDirectConnect;
+
+    /**
      * Get vpc id 
      * @return VpcId vpc id
      */
@@ -69,6 +90,54 @@ public class SubnetInfo extends AbstractModel {
         this.SubnetId = SubnetId;
     }
 
+    /**
+     * Get 应用的集群；可以是集群id,也可以是All 
+     * @return UsedCluster 应用的集群；可以是集群id,也可以是All
+     */
+    public String getUsedCluster() {
+        return this.UsedCluster;
+    }
+
+    /**
+     * Set 应用的集群；可以是集群id,也可以是All
+     * @param UsedCluster 应用的集群；可以是集群id,也可以是All
+     */
+    public void setUsedCluster(String UsedCluster) {
+        this.UsedCluster = UsedCluster;
+    }
+
+    /**
+     * Get cidr，只有当IsDirectConnect为true时才生效 
+     * @return CIDR cidr，只有当IsDirectConnect为true时才生效
+     */
+    public String getCIDR() {
+        return this.CIDR;
+    }
+
+    /**
+     * Set cidr，只有当IsDirectConnect为true时才生效
+     * @param CIDR cidr，只有当IsDirectConnect为true时才生效
+     */
+    public void setCIDR(String CIDR) {
+        this.CIDR = CIDR;
+    }
+
+    /**
+     * Get 是否为专线接入场景 
+     * @return IsDirectConnect 是否为专线接入场景
+     */
+    public Boolean getIsDirectConnect() {
+        return this.IsDirectConnect;
+    }
+
+    /**
+     * Set 是否为专线接入场景
+     * @param IsDirectConnect 是否为专线接入场景
+     */
+    public void setIsDirectConnect(Boolean IsDirectConnect) {
+        this.IsDirectConnect = IsDirectConnect;
+    }
+
     public SubnetInfo() {
     }
 
@@ -83,6 +152,15 @@ public class SubnetInfo extends AbstractModel {
         if (source.SubnetId != null) {
             this.SubnetId = new String(source.SubnetId);
         }
+        if (source.UsedCluster != null) {
+            this.UsedCluster = new String(source.UsedCluster);
+        }
+        if (source.CIDR != null) {
+            this.CIDR = new String(source.CIDR);
+        }
+        if (source.IsDirectConnect != null) {
+            this.IsDirectConnect = new Boolean(source.IsDirectConnect);
+        }
     }
 
 
@@ -92,6 +170,9 @@ public class SubnetInfo extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "UsedCluster", this.UsedCluster);
+        this.setParamSimple(map, prefix + "CIDR", this.CIDR);
+        this.setParamSimple(map, prefix + "IsDirectConnect", this.IsDirectConnect);
 
     }
 }

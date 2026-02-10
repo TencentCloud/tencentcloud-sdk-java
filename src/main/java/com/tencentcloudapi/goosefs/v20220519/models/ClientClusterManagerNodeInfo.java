@@ -45,6 +45,13 @@ public class ClientClusterManagerNodeInfo extends AbstractModel {
     private String InitialPassword;
 
     /**
+    * 所属集群id
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
      * Get 客户端节点IP 
      * @return NodeIp 客户端节点IP
      */
@@ -92,6 +99,22 @@ public class ClientClusterManagerNodeInfo extends AbstractModel {
         this.InitialPassword = InitialPassword;
     }
 
+    /**
+     * Get 所属集群id 
+     * @return ClusterId 所属集群id
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set 所属集群id
+     * @param ClusterId 所属集群id
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
     public ClientClusterManagerNodeInfo() {
     }
 
@@ -109,6 +132,9 @@ public class ClientClusterManagerNodeInfo extends AbstractModel {
         if (source.InitialPassword != null) {
             this.InitialPassword = new String(source.InitialPassword);
         }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class ClientClusterManagerNodeInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "NodeIp", this.NodeIp);
         this.setParamSimple(map, prefix + "NodeInstanceId", this.NodeInstanceId);
         this.setParamSimple(map, prefix + "InitialPassword", this.InitialPassword);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
 
     }
 }

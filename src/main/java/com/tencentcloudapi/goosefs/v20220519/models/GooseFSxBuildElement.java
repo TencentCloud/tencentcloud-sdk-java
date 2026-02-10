@@ -79,7 +79,9 @@ public class GooseFSxBuildElement extends AbstractModel {
     /**
      * Get 要关联映射的bucket列表 
      * @return MappedBucketList 要关联映射的bucket列表
+     * @deprecated
      */
+    @Deprecated
     public MappedBucket [] getMappedBucketList() {
         return this.MappedBucketList;
     }
@@ -87,7 +89,9 @@ public class GooseFSxBuildElement extends AbstractModel {
     /**
      * Set 要关联映射的bucket列表
      * @param MappedBucketList 要关联映射的bucket列表
+     * @deprecated
      */
+    @Deprecated
     public void setMappedBucketList(MappedBucket [] MappedBucketList) {
         this.MappedBucketList = MappedBucketList;
     }
