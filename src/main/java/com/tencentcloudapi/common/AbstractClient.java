@@ -861,7 +861,7 @@ public abstract class AbstractClient {
         String apigwEndpoint = this.profile.getHttpProfile().getApigwEndpoint();
         if (null != apigwEndpoint) {
             url = protocol + apigwEndpoint;
-            hb.set("Host", apigwEndpoint);
+            hb.set("Host", apigwEndpoint.contains("/") ? apigwEndpoint.substring(0, apigwEndpoint.indexOf('/')) : apigwEndpoint);
         }
         Headers headers = hb.build();
         if (httpRequestMethod.equals(HttpProfile.REQ_GET)) {
