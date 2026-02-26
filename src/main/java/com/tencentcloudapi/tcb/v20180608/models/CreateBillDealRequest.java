@@ -38,70 +38,86 @@ public class CreateBillDealRequest extends AbstractModel {
     private String ProductType;
 
     /**
-    * 目标下单产品/套餐Id
+    * 目标下单产品/套餐Id。
+对于云开发环境套餐，可通过 DescribeBaasPackageList 接口获取，对应其出参的PackageName
     */
     @SerializedName("PackageId")
     @Expose
     private String PackageId;
 
     /**
-    * 默认只下单不支付，为ture则下单并支付
+    * 默认只下单不支付，为ture则下单并支付。
+如果需要下单并支付，请确保账户下有足够的余额，否则会导致下单失败。
     */
     @SerializedName("CreateAndPay")
     @Expose
     private Boolean CreateAndPay;
 
     /**
-    * 购买时长
+    * 购买时长，与TimeUnit字段搭配使用。
     */
     @SerializedName("TimeSpan")
     @Expose
     private Long TimeSpan;
 
     /**
-    * 购买时长单位,按各产品规则可选d(天),m(月),y(年),p(一次性)
+    * 购买时长单位,按各产品规则可选d(天),m(月),y(年),p(一次性)。
+对于 云开发环境的 新购和续费，目前仅支持 按月购买（即 TimeUnit=m）。
     */
     @SerializedName("TimeUnit")
     @Expose
     private String TimeUnit;
 
     /**
-    * 资源唯一标识
+    * 资源唯一标识。
+在云开发环境 续费和变配 场景下必传，取值为环境ID。
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 来源可选[qcloud,miniapp]，默认qcloud
+    * 来源可选[qcloud,miniapp]，默认qcloud。
+miniapp表示微信云开发，主要适用于[小程序云开发](https://developers.weixin.qq.com/miniprogram/dev/wxcloudservice/wxcloud/billing/price.html)。
+
     */
     @SerializedName("Source")
     @Expose
     private String Source;
 
     /**
-    * 资源别名
+    * 环境别名，用于新购云开发环境时，给云开发环境起别名。
+仅当 新购云开发环境（DealType=purchase 并且 ProductType=tcb-baas ）时有效。
+
+### 格式要求
+- 可选字符： 小写字母(a~z)、数字、减号(-)
+- 不能以 减号(-) 开头或结尾
+- 不能有连个连续的 减号(-)
+- 长度不超过20位
     */
     @SerializedName("Alias")
     @Expose
     private String Alias;
 
     /**
-    * 环境id
+    * 环境id，当购买资源包和大促包时（ProductType取值为tcb-promotion 或 tcb-package）必传，表示资源包在哪个环境下生效。
     */
     @SerializedName("EnvId")
     @Expose
     private String EnvId;
 
     /**
-    * 开启超限按量
+    * 开启超限按量。
+开启后，当 套餐内的资源点 和 资源包 都用尽后，会自动按量计费。
+详见 [计费说明](https://cloud.tencent.com/document/product/876/127357)。
     */
     @SerializedName("EnableExcess")
     @Expose
     private Boolean EnableExcess;
 
     /**
-    * 变配目标产品/套餐id
+    * 变配目标套餐id，对于云开发环境变配场景下必传。
+对于云开发环境套餐，可通过 DescribeBaasPackageList 接口获取，对应其出参的PackageName
     */
     @SerializedName("ModifyPackageId")
     @Expose
@@ -115,7 +131,7 @@ public class CreateBillDealRequest extends AbstractModel {
     private String Extension;
 
     /**
-    * 是否自动选择代金券支付
+    * 是否自动选择代金券支付。
     */
     @SerializedName("AutoVoucher")
     @Expose
@@ -173,160 +189,224 @@ public class CreateBillDealRequest extends AbstractModel {
     }
 
     /**
-     * Get 目标下单产品/套餐Id 
-     * @return PackageId 目标下单产品/套餐Id
+     * Get 目标下单产品/套餐Id。
+对于云开发环境套餐，可通过 DescribeBaasPackageList 接口获取，对应其出参的PackageName 
+     * @return PackageId 目标下单产品/套餐Id。
+对于云开发环境套餐，可通过 DescribeBaasPackageList 接口获取，对应其出参的PackageName
      */
     public String getPackageId() {
         return this.PackageId;
     }
 
     /**
-     * Set 目标下单产品/套餐Id
-     * @param PackageId 目标下单产品/套餐Id
+     * Set 目标下单产品/套餐Id。
+对于云开发环境套餐，可通过 DescribeBaasPackageList 接口获取，对应其出参的PackageName
+     * @param PackageId 目标下单产品/套餐Id。
+对于云开发环境套餐，可通过 DescribeBaasPackageList 接口获取，对应其出参的PackageName
      */
     public void setPackageId(String PackageId) {
         this.PackageId = PackageId;
     }
 
     /**
-     * Get 默认只下单不支付，为ture则下单并支付 
-     * @return CreateAndPay 默认只下单不支付，为ture则下单并支付
+     * Get 默认只下单不支付，为ture则下单并支付。
+如果需要下单并支付，请确保账户下有足够的余额，否则会导致下单失败。 
+     * @return CreateAndPay 默认只下单不支付，为ture则下单并支付。
+如果需要下单并支付，请确保账户下有足够的余额，否则会导致下单失败。
      */
     public Boolean getCreateAndPay() {
         return this.CreateAndPay;
     }
 
     /**
-     * Set 默认只下单不支付，为ture则下单并支付
-     * @param CreateAndPay 默认只下单不支付，为ture则下单并支付
+     * Set 默认只下单不支付，为ture则下单并支付。
+如果需要下单并支付，请确保账户下有足够的余额，否则会导致下单失败。
+     * @param CreateAndPay 默认只下单不支付，为ture则下单并支付。
+如果需要下单并支付，请确保账户下有足够的余额，否则会导致下单失败。
      */
     public void setCreateAndPay(Boolean CreateAndPay) {
         this.CreateAndPay = CreateAndPay;
     }
 
     /**
-     * Get 购买时长 
-     * @return TimeSpan 购买时长
+     * Get 购买时长，与TimeUnit字段搭配使用。 
+     * @return TimeSpan 购买时长，与TimeUnit字段搭配使用。
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set 购买时长
-     * @param TimeSpan 购买时长
+     * Set 购买时长，与TimeUnit字段搭配使用。
+     * @param TimeSpan 购买时长，与TimeUnit字段搭配使用。
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get 购买时长单位,按各产品规则可选d(天),m(月),y(年),p(一次性) 
-     * @return TimeUnit 购买时长单位,按各产品规则可选d(天),m(月),y(年),p(一次性)
+     * Get 购买时长单位,按各产品规则可选d(天),m(月),y(年),p(一次性)。
+对于 云开发环境的 新购和续费，目前仅支持 按月购买（即 TimeUnit=m）。 
+     * @return TimeUnit 购买时长单位,按各产品规则可选d(天),m(月),y(年),p(一次性)。
+对于 云开发环境的 新购和续费，目前仅支持 按月购买（即 TimeUnit=m）。
      */
     public String getTimeUnit() {
         return this.TimeUnit;
     }
 
     /**
-     * Set 购买时长单位,按各产品规则可选d(天),m(月),y(年),p(一次性)
-     * @param TimeUnit 购买时长单位,按各产品规则可选d(天),m(月),y(年),p(一次性)
+     * Set 购买时长单位,按各产品规则可选d(天),m(月),y(年),p(一次性)。
+对于 云开发环境的 新购和续费，目前仅支持 按月购买（即 TimeUnit=m）。
+     * @param TimeUnit 购买时长单位,按各产品规则可选d(天),m(月),y(年),p(一次性)。
+对于 云开发环境的 新购和续费，目前仅支持 按月购买（即 TimeUnit=m）。
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
     }
 
     /**
-     * Get 资源唯一标识 
-     * @return ResourceId 资源唯一标识
+     * Get 资源唯一标识。
+在云开发环境 续费和变配 场景下必传，取值为环境ID。 
+     * @return ResourceId 资源唯一标识。
+在云开发环境 续费和变配 场景下必传，取值为环境ID。
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源唯一标识
-     * @param ResourceId 资源唯一标识
+     * Set 资源唯一标识。
+在云开发环境 续费和变配 场景下必传，取值为环境ID。
+     * @param ResourceId 资源唯一标识。
+在云开发环境 续费和变配 场景下必传，取值为环境ID。
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 来源可选[qcloud,miniapp]，默认qcloud 
-     * @return Source 来源可选[qcloud,miniapp]，默认qcloud
+     * Get 来源可选[qcloud,miniapp]，默认qcloud。
+miniapp表示微信云开发，主要适用于[小程序云开发](https://developers.weixin.qq.com/miniprogram/dev/wxcloudservice/wxcloud/billing/price.html)。
+ 
+     * @return Source 来源可选[qcloud,miniapp]，默认qcloud。
+miniapp表示微信云开发，主要适用于[小程序云开发](https://developers.weixin.qq.com/miniprogram/dev/wxcloudservice/wxcloud/billing/price.html)。
+
      */
     public String getSource() {
         return this.Source;
     }
 
     /**
-     * Set 来源可选[qcloud,miniapp]，默认qcloud
-     * @param Source 来源可选[qcloud,miniapp]，默认qcloud
+     * Set 来源可选[qcloud,miniapp]，默认qcloud。
+miniapp表示微信云开发，主要适用于[小程序云开发](https://developers.weixin.qq.com/miniprogram/dev/wxcloudservice/wxcloud/billing/price.html)。
+
+     * @param Source 来源可选[qcloud,miniapp]，默认qcloud。
+miniapp表示微信云开发，主要适用于[小程序云开发](https://developers.weixin.qq.com/miniprogram/dev/wxcloudservice/wxcloud/billing/price.html)。
+
      */
     public void setSource(String Source) {
         this.Source = Source;
     }
 
     /**
-     * Get 资源别名 
-     * @return Alias 资源别名
+     * Get 环境别名，用于新购云开发环境时，给云开发环境起别名。
+仅当 新购云开发环境（DealType=purchase 并且 ProductType=tcb-baas ）时有效。
+
+### 格式要求
+- 可选字符： 小写字母(a~z)、数字、减号(-)
+- 不能以 减号(-) 开头或结尾
+- 不能有连个连续的 减号(-)
+- 长度不超过20位 
+     * @return Alias 环境别名，用于新购云开发环境时，给云开发环境起别名。
+仅当 新购云开发环境（DealType=purchase 并且 ProductType=tcb-baas ）时有效。
+
+### 格式要求
+- 可选字符： 小写字母(a~z)、数字、减号(-)
+- 不能以 减号(-) 开头或结尾
+- 不能有连个连续的 减号(-)
+- 长度不超过20位
      */
     public String getAlias() {
         return this.Alias;
     }
 
     /**
-     * Set 资源别名
-     * @param Alias 资源别名
+     * Set 环境别名，用于新购云开发环境时，给云开发环境起别名。
+仅当 新购云开发环境（DealType=purchase 并且 ProductType=tcb-baas ）时有效。
+
+### 格式要求
+- 可选字符： 小写字母(a~z)、数字、减号(-)
+- 不能以 减号(-) 开头或结尾
+- 不能有连个连续的 减号(-)
+- 长度不超过20位
+     * @param Alias 环境别名，用于新购云开发环境时，给云开发环境起别名。
+仅当 新购云开发环境（DealType=purchase 并且 ProductType=tcb-baas ）时有效。
+
+### 格式要求
+- 可选字符： 小写字母(a~z)、数字、减号(-)
+- 不能以 减号(-) 开头或结尾
+- 不能有连个连续的 减号(-)
+- 长度不超过20位
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;
     }
 
     /**
-     * Get 环境id 
-     * @return EnvId 环境id
+     * Get 环境id，当购买资源包和大促包时（ProductType取值为tcb-promotion 或 tcb-package）必传，表示资源包在哪个环境下生效。 
+     * @return EnvId 环境id，当购买资源包和大促包时（ProductType取值为tcb-promotion 或 tcb-package）必传，表示资源包在哪个环境下生效。
      */
     public String getEnvId() {
         return this.EnvId;
     }
 
     /**
-     * Set 环境id
-     * @param EnvId 环境id
+     * Set 环境id，当购买资源包和大促包时（ProductType取值为tcb-promotion 或 tcb-package）必传，表示资源包在哪个环境下生效。
+     * @param EnvId 环境id，当购买资源包和大促包时（ProductType取值为tcb-promotion 或 tcb-package）必传，表示资源包在哪个环境下生效。
      */
     public void setEnvId(String EnvId) {
         this.EnvId = EnvId;
     }
 
     /**
-     * Get 开启超限按量 
-     * @return EnableExcess 开启超限按量
+     * Get 开启超限按量。
+开启后，当 套餐内的资源点 和 资源包 都用尽后，会自动按量计费。
+详见 [计费说明](https://cloud.tencent.com/document/product/876/127357)。 
+     * @return EnableExcess 开启超限按量。
+开启后，当 套餐内的资源点 和 资源包 都用尽后，会自动按量计费。
+详见 [计费说明](https://cloud.tencent.com/document/product/876/127357)。
      */
     public Boolean getEnableExcess() {
         return this.EnableExcess;
     }
 
     /**
-     * Set 开启超限按量
-     * @param EnableExcess 开启超限按量
+     * Set 开启超限按量。
+开启后，当 套餐内的资源点 和 资源包 都用尽后，会自动按量计费。
+详见 [计费说明](https://cloud.tencent.com/document/product/876/127357)。
+     * @param EnableExcess 开启超限按量。
+开启后，当 套餐内的资源点 和 资源包 都用尽后，会自动按量计费。
+详见 [计费说明](https://cloud.tencent.com/document/product/876/127357)。
      */
     public void setEnableExcess(Boolean EnableExcess) {
         this.EnableExcess = EnableExcess;
     }
 
     /**
-     * Get 变配目标产品/套餐id 
-     * @return ModifyPackageId 变配目标产品/套餐id
+     * Get 变配目标套餐id，对于云开发环境变配场景下必传。
+对于云开发环境套餐，可通过 DescribeBaasPackageList 接口获取，对应其出参的PackageName 
+     * @return ModifyPackageId 变配目标套餐id，对于云开发环境变配场景下必传。
+对于云开发环境套餐，可通过 DescribeBaasPackageList 接口获取，对应其出参的PackageName
      */
     public String getModifyPackageId() {
         return this.ModifyPackageId;
     }
 
     /**
-     * Set 变配目标产品/套餐id
-     * @param ModifyPackageId 变配目标产品/套餐id
+     * Set 变配目标套餐id，对于云开发环境变配场景下必传。
+对于云开发环境套餐，可通过 DescribeBaasPackageList 接口获取，对应其出参的PackageName
+     * @param ModifyPackageId 变配目标套餐id，对于云开发环境变配场景下必传。
+对于云开发环境套餐，可通过 DescribeBaasPackageList 接口获取，对应其出参的PackageName
      */
     public void setModifyPackageId(String ModifyPackageId) {
         this.ModifyPackageId = ModifyPackageId;
@@ -349,16 +429,16 @@ public class CreateBillDealRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否自动选择代金券支付 
-     * @return AutoVoucher 是否自动选择代金券支付
+     * Get 是否自动选择代金券支付。 
+     * @return AutoVoucher 是否自动选择代金券支付。
      */
     public Boolean getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * Set 是否自动选择代金券支付
-     * @param AutoVoucher 是否自动选择代金券支付
+     * Set 是否自动选择代金券支付。
+     * @param AutoVoucher 是否自动选择代金券支付。
      */
     public void setAutoVoucher(Boolean AutoVoucher) {
         this.AutoVoucher = AutoVoucher;

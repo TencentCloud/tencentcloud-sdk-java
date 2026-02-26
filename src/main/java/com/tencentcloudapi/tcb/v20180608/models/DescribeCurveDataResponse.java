@@ -73,6 +73,13 @@ public class DescribeCurveDataResponse extends AbstractModel {
     private Float [] NewValues;
 
     /**
+    * 聚合方式
+    */
+    @SerializedName("Statistics")
+    @Expose
+    private String Statistics;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -192,6 +199,22 @@ public class DescribeCurveDataResponse extends AbstractModel {
     }
 
     /**
+     * Get 聚合方式 
+     * @return Statistics 聚合方式
+     */
+    public String getStatistics() {
+        return this.Statistics;
+    }
+
+    /**
+     * Set 聚合方式
+     * @param Statistics 聚合方式
+     */
+    public void setStatistics(String Statistics) {
+        this.Statistics = Statistics;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -245,6 +268,9 @@ public class DescribeCurveDataResponse extends AbstractModel {
                 this.NewValues[i] = new Float(source.NewValues[i]);
             }
         }
+        if (source.Statistics != null) {
+            this.Statistics = new String(source.Statistics);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -262,6 +288,7 @@ public class DescribeCurveDataResponse extends AbstractModel {
         this.setParamArraySimple(map, prefix + "Values.", this.Values);
         this.setParamArraySimple(map, prefix + "Time.", this.Time);
         this.setParamArraySimple(map, prefix + "NewValues.", this.NewValues);
+        this.setParamSimple(map, prefix + "Statistics", this.Statistics);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

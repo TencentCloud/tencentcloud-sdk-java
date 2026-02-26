@@ -216,6 +216,17 @@ public class SesClient extends AbstractClient{
     }
 
     /**
+     *获取垃圾投诉数据
+     * @param req GetAbuseReportRequest
+     * @return GetAbuseReportResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetAbuseReportResponse GetAbuseReport(GetAbuseReportRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetAbuseReport", GetAbuseReportResponse.class);
+    }
+
+    /**
      *获取某个发信域名的配置详情
      * @param req GetEmailIdentityRequest
      * @return GetEmailIdentityResponse

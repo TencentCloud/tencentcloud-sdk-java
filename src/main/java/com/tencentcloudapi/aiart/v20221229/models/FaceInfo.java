@@ -31,7 +31,7 @@ public class FaceInfo extends AbstractModel {
     private String [] ImageUrls;
 
     /**
-    * 模版图人脸坐标。
+    * 模板图人脸坐标。
     */
     @SerializedName("TemplateFaceRect")
     @Expose
@@ -54,16 +54,16 @@ public class FaceInfo extends AbstractModel {
     }
 
     /**
-     * Get 模版图人脸坐标。 
-     * @return TemplateFaceRect 模版图人脸坐标。
+     * Get 模板图人脸坐标。 
+     * @return TemplateFaceRect 模板图人脸坐标。
      */
     public Rect getTemplateFaceRect() {
         return this.TemplateFaceRect;
     }
 
     /**
-     * Set 模版图人脸坐标。
-     * @param TemplateFaceRect 模版图人脸坐标。
+     * Set 模板图人脸坐标。
+     * @param TemplateFaceRect 模板图人脸坐标。
      */
     public void setTemplateFaceRect(Rect TemplateFaceRect) {
         this.TemplateFaceRect = TemplateFaceRect;

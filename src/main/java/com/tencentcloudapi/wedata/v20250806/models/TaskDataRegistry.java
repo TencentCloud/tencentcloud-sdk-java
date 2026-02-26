@@ -92,6 +92,30 @@ public class TaskDataRegistry extends AbstractModel {
     private String TableGuid;
 
     /**
+    * Catalog名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CatalogName")
+    @Expose
+    private String CatalogName;
+
+    /**
+    * 数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DatasourceName")
+    @Expose
+    private String DatasourceName;
+
+    /**
+    * Catalog(如有).数据库(如有).表名名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("QualifiedName")
+    @Expose
+    private String QualifiedName;
+
+    /**
      * Get 数据源ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DatasourceId 数据源ID
@@ -267,6 +291,66 @@ public class TaskDataRegistry extends AbstractModel {
         this.TableGuid = TableGuid;
     }
 
+    /**
+     * Get Catalog名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CatalogName Catalog名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCatalogName() {
+        return this.CatalogName;
+    }
+
+    /**
+     * Set Catalog名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CatalogName Catalog名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCatalogName(String CatalogName) {
+        this.CatalogName = CatalogName;
+    }
+
+    /**
+     * Get 数据源名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DatasourceName 数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDatasourceName() {
+        return this.DatasourceName;
+    }
+
+    /**
+     * Set 数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DatasourceName 数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDatasourceName(String DatasourceName) {
+        this.DatasourceName = DatasourceName;
+    }
+
+    /**
+     * Get Catalog(如有).数据库(如有).表名名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return QualifiedName Catalog(如有).数据库(如有).表名名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getQualifiedName() {
+        return this.QualifiedName;
+    }
+
+    /**
+     * Set Catalog(如有).数据库(如有).表名名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param QualifiedName Catalog(如有).数据库(如有).表名名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setQualifiedName(String QualifiedName) {
+        this.QualifiedName = QualifiedName;
+    }
+
     public TaskDataRegistry() {
     }
 
@@ -299,6 +383,15 @@ public class TaskDataRegistry extends AbstractModel {
         if (source.TableGuid != null) {
             this.TableGuid = new String(source.TableGuid);
         }
+        if (source.CatalogName != null) {
+            this.CatalogName = new String(source.CatalogName);
+        }
+        if (source.DatasourceName != null) {
+            this.DatasourceName = new String(source.DatasourceName);
+        }
+        if (source.QualifiedName != null) {
+            this.QualifiedName = new String(source.QualifiedName);
+        }
     }
 
 
@@ -314,6 +407,9 @@ public class TaskDataRegistry extends AbstractModel {
         this.setParamSimple(map, prefix + "TablePhysicalId", this.TablePhysicalId);
         this.setParamSimple(map, prefix + "DbGuid", this.DbGuid);
         this.setParamSimple(map, prefix + "TableGuid", this.TableGuid);
+        this.setParamSimple(map, prefix + "CatalogName", this.CatalogName);
+        this.setParamSimple(map, prefix + "DatasourceName", this.DatasourceName);
+        this.setParamSimple(map, prefix + "QualifiedName", this.QualifiedName);
 
     }
 }

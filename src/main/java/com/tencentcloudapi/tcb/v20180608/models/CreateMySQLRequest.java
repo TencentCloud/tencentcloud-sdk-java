@@ -31,7 +31,7 @@ public class CreateMySQLRequest extends AbstractModel {
     private String EnvId;
 
     /**
-    * Db类型 1. FLEXDB 2.MYSQL
+    * Db类型: MYSQL
     */
     @SerializedName("DbInstanceType")
     @Expose
@@ -82,16 +82,16 @@ public class CreateMySQLRequest extends AbstractModel {
     }
 
     /**
-     * Get Db类型 1. FLEXDB 2.MYSQL 
-     * @return DbInstanceType Db类型 1. FLEXDB 2.MYSQL
+     * Get Db类型: MYSQL 
+     * @return DbInstanceType Db类型: MYSQL
      */
     public String getDbInstanceType() {
         return this.DbInstanceType;
     }
 
     /**
-     * Set Db类型 1. FLEXDB 2.MYSQL
-     * @param DbInstanceType Db类型 1. FLEXDB 2.MYSQL
+     * Set Db类型: MYSQL
+     * @param DbInstanceType Db类型: MYSQL
      */
     public void setDbInstanceType(String DbInstanceType) {
         this.DbInstanceType = DbInstanceType;

@@ -136,6 +136,14 @@ public class TriggerTaskBrief extends AbstractModel {
     private String ExecutionStartTime;
 
     /**
+    * 依赖策略
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DependencyTriggerPolicy")
+    @Expose
+    private String DependencyTriggerPolicy;
+
+    /**
      * Get 项目id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProjectId 项目id
@@ -415,6 +423,26 @@ public class TriggerTaskBrief extends AbstractModel {
         this.ExecutionStartTime = ExecutionStartTime;
     }
 
+    /**
+     * Get 依赖策略
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DependencyTriggerPolicy 依赖策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDependencyTriggerPolicy() {
+        return this.DependencyTriggerPolicy;
+    }
+
+    /**
+     * Set 依赖策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DependencyTriggerPolicy 依赖策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDependencyTriggerPolicy(String DependencyTriggerPolicy) {
+        this.DependencyTriggerPolicy = DependencyTriggerPolicy;
+    }
+
     public TriggerTaskBrief() {
     }
 
@@ -465,6 +493,9 @@ public class TriggerTaskBrief extends AbstractModel {
         if (source.ExecutionStartTime != null) {
             this.ExecutionStartTime = new String(source.ExecutionStartTime);
         }
+        if (source.DependencyTriggerPolicy != null) {
+            this.DependencyTriggerPolicy = new String(source.DependencyTriggerPolicy);
+        }
     }
 
 
@@ -486,6 +517,7 @@ public class TriggerTaskBrief extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskTypeId", this.TaskTypeId);
         this.setParamSimple(map, prefix + "ExecutionState", this.ExecutionState);
         this.setParamSimple(map, prefix + "ExecutionStartTime", this.ExecutionStartTime);
+        this.setParamSimple(map, prefix + "DependencyTriggerPolicy", this.DependencyTriggerPolicy);
 
     }
 }

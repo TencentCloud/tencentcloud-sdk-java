@@ -24,168 +24,138 @@ import java.util.HashMap;
 public class ImageRecognitionV2Request extends AbstractModel {
 
     /**
-    * 身份证号。
+    * <p>身份证号。</p>
     */
     @SerializedName("IdCard")
     @Expose
     private String IdCard;
 
     /**
-    * 姓名。
-- 中文请使用UTF-8编码。
+    * <p>姓名。</p><ul><li>中文请使用UTF-8编码。</li></ul>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 用于人脸比对的照片，图片的Base64值；
-Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
-请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
+    * <p>用于人脸比对的照片，图片的Base64值；<br>Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。<br>请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。</p>
     */
     @SerializedName("ImageBase64")
     @Expose
     private String ImageBase64;
 
     /**
-    * 本接口不需要传递此参数。
+    * <p>本接口不需要传递此参数。</p>
     */
     @SerializedName("Optional")
     @Expose
     private String Optional;
 
     /**
-    * 敏感数据加密信息。
-- 对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+    * <p>敏感数据加密信息。</p><ul><li>对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。</li></ul>
     */
     @SerializedName("Encryption")
     @Expose
     private Encryption Encryption;
 
     /**
-    * 自定义描述字段。
-- 用于描述调用业务信息，出参中将返回此描述字段。 
-- 每个自定义描述字段支持[1,10]个字符。
+    * <p>自定义描述字段。</p><ul><li>用于描述调用业务信息，出参中将返回此描述字段。 </li><li>每个自定义描述字段支持[1,10]个字符。</li></ul>
     */
     @SerializedName("Extra")
     @Expose
     private String Extra;
 
     /**
-     * Get 身份证号。 
-     * @return IdCard 身份证号。
+     * Get <p>身份证号。</p> 
+     * @return IdCard <p>身份证号。</p>
      */
     public String getIdCard() {
         return this.IdCard;
     }
 
     /**
-     * Set 身份证号。
-     * @param IdCard 身份证号。
+     * Set <p>身份证号。</p>
+     * @param IdCard <p>身份证号。</p>
      */
     public void setIdCard(String IdCard) {
         this.IdCard = IdCard;
     }
 
     /**
-     * Get 姓名。
-- 中文请使用UTF-8编码。 
-     * @return Name 姓名。
-- 中文请使用UTF-8编码。
+     * Get <p>姓名。</p><ul><li>中文请使用UTF-8编码。</li></ul> 
+     * @return Name <p>姓名。</p><ul><li>中文请使用UTF-8编码。</li></ul>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 姓名。
-- 中文请使用UTF-8编码。
-     * @param Name 姓名。
-- 中文请使用UTF-8编码。
+     * Set <p>姓名。</p><ul><li>中文请使用UTF-8编码。</li></ul>
+     * @param Name <p>姓名。</p><ul><li>中文请使用UTF-8编码。</li></ul>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 用于人脸比对的照片，图片的Base64值；
-Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
-请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。 
-     * @return ImageBase64 用于人脸比对的照片，图片的Base64值；
-Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
-请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
+     * Get <p>用于人脸比对的照片，图片的Base64值；<br>Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。<br>请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。</p> 
+     * @return ImageBase64 <p>用于人脸比对的照片，图片的Base64值；<br>Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。<br>请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。</p>
      */
     public String getImageBase64() {
         return this.ImageBase64;
     }
 
     /**
-     * Set 用于人脸比对的照片，图片的Base64值；
-Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
-请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
-     * @param ImageBase64 用于人脸比对的照片，图片的Base64值；
-Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
-请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
+     * Set <p>用于人脸比对的照片，图片的Base64值；<br>Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。<br>请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。</p>
+     * @param ImageBase64 <p>用于人脸比对的照片，图片的Base64值；<br>Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。<br>请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。</p>
      */
     public void setImageBase64(String ImageBase64) {
         this.ImageBase64 = ImageBase64;
     }
 
     /**
-     * Get 本接口不需要传递此参数。 
-     * @return Optional 本接口不需要传递此参数。
+     * Get <p>本接口不需要传递此参数。</p> 
+     * @return Optional <p>本接口不需要传递此参数。</p>
      */
     public String getOptional() {
         return this.Optional;
     }
 
     /**
-     * Set 本接口不需要传递此参数。
-     * @param Optional 本接口不需要传递此参数。
+     * Set <p>本接口不需要传递此参数。</p>
+     * @param Optional <p>本接口不需要传递此参数。</p>
      */
     public void setOptional(String Optional) {
         this.Optional = Optional;
     }
 
     /**
-     * Get 敏感数据加密信息。
-- 对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。 
-     * @return Encryption 敏感数据加密信息。
-- 对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * Get <p>敏感数据加密信息。</p><ul><li>对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。</li></ul> 
+     * @return Encryption <p>敏感数据加密信息。</p><ul><li>对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。</li></ul>
      */
     public Encryption getEncryption() {
         return this.Encryption;
     }
 
     /**
-     * Set 敏感数据加密信息。
-- 对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
-     * @param Encryption 敏感数据加密信息。
-- 对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * Set <p>敏感数据加密信息。</p><ul><li>对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。</li></ul>
+     * @param Encryption <p>敏感数据加密信息。</p><ul><li>对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。</li></ul>
      */
     public void setEncryption(Encryption Encryption) {
         this.Encryption = Encryption;
     }
 
     /**
-     * Get 自定义描述字段。
-- 用于描述调用业务信息，出参中将返回此描述字段。 
-- 每个自定义描述字段支持[1,10]个字符。 
-     * @return Extra 自定义描述字段。
-- 用于描述调用业务信息，出参中将返回此描述字段。 
-- 每个自定义描述字段支持[1,10]个字符。
+     * Get <p>自定义描述字段。</p><ul><li>用于描述调用业务信息，出参中将返回此描述字段。 </li><li>每个自定义描述字段支持[1,10]个字符。</li></ul> 
+     * @return Extra <p>自定义描述字段。</p><ul><li>用于描述调用业务信息，出参中将返回此描述字段。 </li><li>每个自定义描述字段支持[1,10]个字符。</li></ul>
      */
     public String getExtra() {
         return this.Extra;
     }
 
     /**
-     * Set 自定义描述字段。
-- 用于描述调用业务信息，出参中将返回此描述字段。 
-- 每个自定义描述字段支持[1,10]个字符。
-     * @param Extra 自定义描述字段。
-- 用于描述调用业务信息，出参中将返回此描述字段。 
-- 每个自定义描述字段支持[1,10]个字符。
+     * Set <p>自定义描述字段。</p><ul><li>用于描述调用业务信息，出参中将返回此描述字段。 </li><li>每个自定义描述字段支持[1,10]个字符。</li></ul>
+     * @param Extra <p>自定义描述字段。</p><ul><li>用于描述调用业务信息，出参中将返回此描述字段。 </li><li>每个自定义描述字段支持[1,10]个字符。</li></ul>
      */
     public void setExtra(String Extra) {
         this.Extra = Extra;

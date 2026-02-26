@@ -24,567 +24,345 @@ import java.util.HashMap;
 public class CreateAigcVideoTaskRequest extends AbstractModel {
 
     /**
-    * 模型名称。
-当前支持的模型列表:
-Hunyuan,
-Hailuo，
-Kling，
-Vidu，
-OS，
-GV。
+    * <p>模型名称。<br>当前支持的模型列表:<br>Hunyuan,<br>Hailuo，<br>Kling，<br>Vidu，<br>OS，<br>GV。</p>
     */
     @SerializedName("ModelName")
     @Expose
     private String ModelName;
 
     /**
-    * 指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。
-1. Hailuo， 可选[02、2.3]。
-2. Kling，可选[2.0、2.1、2.5、O1、2.6]。
-3. Vidu,可选[q2、q2-pro、q2-turbo]。
-4. GV, 可选[3.1]。
-5. OS，可选[2.0]。
+    * <p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。</p><ol><li>Hailuo， 可选[02、2.3]。</li><li>Kling，可选[2.0、2.1、2.5、O1、2.6、3.0、3.0-Omni]。</li><li>Vidu,可选[q2、q2-pro、q2-turbo、q3-pro、q3-turbo]。</li><li>GV, 可选[3.1]。</li><li>OS，可选[2.0]。</li></ol>
     */
     @SerializedName("ModelVersion")
     @Expose
     private String ModelVersion;
 
     /**
-    * 指定场景生视频。
-注意：仅部分模型支持指定场景。
-1. Kling支持动作控制，motion_control。
-2. Mingmou支持横转竖，land2port。
-3. Vidu支持特效模板，template_effect。
+    * <p>指定场景生视频。<br>注意：仅部分模型支持指定场景。</p><ol><li>Kling支持动作控制，motion_control。</li><li>Mingmou支持横转竖，land2port。</li><li>Vidu支持特效模板，template_effect。</li></ol>
     */
     @SerializedName("SceneType")
     @Expose
     private String SceneType;
 
     /**
-    * 生成视频的描述。(注：最大支持2000字符)。当未传入图片时，此参数必填。
+    * <p>生成视频的描述。(注：最大支持2000字符)。当未传入图片时，此参数必填。</p>
     */
     @SerializedName("Prompt")
     @Expose
     private String Prompt;
 
     /**
-    * 用于描述您想要阻止模型生成的内容。
-注意：部分模型支持。
-例如：
-顶部照明、明亮的色彩
-人物、动物
-多辆汽车、风。
+    * <p>用于描述您想要阻止模型生成的内容。<br>注意：部分模型支持。<br>例如：<br>顶部照明、明亮的色彩<br>人物、动物<br>多辆汽车、风。</p>
     */
     @SerializedName("NegativePrompt")
     @Expose
     private String NegativePrompt;
 
     /**
-    * 默认取值为False，模型会严格地遵循指令。如果需要更精细的prompt获得最佳效果，可将此参数设置为True，将自动优化传入的prompt，以提升生成质量。
+    * <p>默认取值为False，模型会严格地遵循指令。如果需要更精细的prompt获得最佳效果，可将此参数设置为True，将自动优化传入的prompt，以提升生成质量。</p>
     */
     @SerializedName("EnhancePrompt")
     @Expose
     private Boolean EnhancePrompt;
 
     /**
-    * 用于指导视频生成的图片 URL。该URL需外网可访问。
-注意：
-1. 推荐图片大小不超过10M，不同模型大小限制不相同。
-2. 支持的图片格式：jpeg、png。
-3. 使用OS模型时，需输入图片尺寸为: 1280x720、720x1280。
+    * <p>用于指导视频生成的图片 URL。该URL需外网可访问。<br>注意：</p><ol><li>推荐图片大小不超过10M，不同模型大小限制不相同。</li><li>支持的图片格式：jpeg、png。</li><li>使用OS模型时，需输入图片尺寸为: 1280x720、720x1280。</li></ol>
     */
     @SerializedName("ImageUrl")
     @Expose
     private String ImageUrl;
 
     /**
-    * 模型将以此参数传入的图片作为尾帧画面来生成视频。
-支持此参数的模型：
-1. GV，传入尾帧图片时，必须同时传入ImageUrl作为首帧。
-2. Kling， 在Resolution:1080P的情况下 2.1版本支持首尾帧。
-3. Vidu, q2-pro, q2-turbo 支持首尾帧。
-
-注意：
-1. 推荐图片大小不超过10M，各模型限制不同。
-2. 支持的图片格式：jpeg、png。
+    * <p>模型将以此参数传入的图片作为尾帧画面来生成视频。<br>支持此参数的模型：</p><ol><li>GV，传入尾帧图片时，必须同时传入ImageUrl作为首帧。</li><li>Kling， 在Resolution:1080P的情况下 2.1版本支持首尾帧。</li><li>Vidu, q2-pro, q2-turbo 支持首尾帧。</li></ol><p>注意：</p><ol><li>推荐图片大小不超过10M，各模型限制不同。</li><li>支持的图片格式：jpeg、png。</li></ol>
     */
     @SerializedName("LastImageUrl")
     @Expose
     private String LastImageUrl;
 
     /**
-    * 最多包含三张素材资源图片的列表，用于描述模型在生成视频时要使用的资源图片。
-
-支持多图输入的模型：
-1. GV，使用多图输入时，不可使用ImageUrl和LastImageUrl。
-2. Vidu，支持多图参考生视频。q2模型1-7张图片，可通过ImageInfos里面的ReferenceType作为主体id来传入。
-
-注意：
-1. 图片大小不超过10M。
-2. 支持的图片格式：jpeg、png。
+    * <p>最多包含三张素材资源图片的列表，用于描述模型在生成视频时要使用的资源图片。</p><p>支持多图输入的模型：</p><ol><li>GV，使用多图输入时，不可使用ImageUrl和LastImageUrl。</li><li>Vidu，支持多图参考生视频。q2模型1-7张图片，可通过ImageInfos里面的ReferenceType作为主体id来传入。</li></ol><p>注意：</p><ol><li>图片大小不超过10M。</li><li>支持的图片格式：jpeg、png。</li></ol>
     */
     @SerializedName("ImageInfos")
     @Expose
     private AigcVideoReferenceImageInfo [] ImageInfos;
 
     /**
-    * 生成视频的时长。
-注意：
-1. Kling支持 5、10秒。默认: 5秒。
-2. Hailuo的std模式可支持6、10秒，其他仅6秒。默认：6秒。
-3. Vidu支持1-10秒。
-4. GV支持 8秒。 默认：8秒。
-5. OS支持4、8、12秒。 默认：8秒。
+    * <p>目前仅Kling O1版本支持参考视频信息传入。<br>可作为特征参考视频，也可作为待编辑视频，默认为待编辑视频；可选择性保留视频原声。</p>
+    */
+    @SerializedName("VideoInfos")
+    @Expose
+    private AigcVideoReferenceVideoInfo [] VideoInfos;
+
+    /**
+    * <p>生成视频的时长。<br>注意：</p><ol><li>Kling支持 5、10秒。默认: 5秒。</li><li>Hailuo的std模式可支持6、10秒，其他仅6秒。默认：6秒。</li><li>Vidu支持1-10秒。</li><li>GV支持 8秒。 默认：8秒。</li><li>OS支持4、8、12秒。 默认：8秒。</li></ol>
     */
     @SerializedName("Duration")
     @Expose
     private Long Duration;
 
     /**
-    * 用于传入要求的额外参数。
+    * <p>用于传入要求的额外参数。</p>
     */
     @SerializedName("ExtraParameters")
     @Expose
     private AigcVideoExtraParam ExtraParameters;
 
     /**
-    * 文件结果指定存储Cos桶信息。 注意：需开通Cos，创建并授权MPS_QcsRole角色。
+    * <p>文件结果指定存储Cos桶信息。 注意：需开通Cos，创建并授权MPS_QcsRole角色。</p>
     */
     @SerializedName("StoreCosParam")
     @Expose
     private AigcStoreCosParam StoreCosParam;
 
     /**
-    * 用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。
-示例：
-{\"camera_control\":{\"type\":\"simple\"}}
+    * <p>用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。<br>示例：<br>{"camera_control":{"type":"simple"}}</p>
     */
     @SerializedName("AdditionalParameters")
     @Expose
     private String AdditionalParameters;
 
     /**
-    * 接口操作者名称。
+    * <p>接口操作者名称。</p>
     */
     @SerializedName("Operator")
     @Expose
     private String Operator;
 
     /**
-     * Get 模型名称。
-当前支持的模型列表:
-Hunyuan,
-Hailuo，
-Kling，
-Vidu，
-OS，
-GV。 
-     * @return ModelName 模型名称。
-当前支持的模型列表:
-Hunyuan,
-Hailuo，
-Kling，
-Vidu，
-OS，
-GV。
+     * Get <p>模型名称。<br>当前支持的模型列表:<br>Hunyuan,<br>Hailuo，<br>Kling，<br>Vidu，<br>OS，<br>GV。</p> 
+     * @return ModelName <p>模型名称。<br>当前支持的模型列表:<br>Hunyuan,<br>Hailuo，<br>Kling，<br>Vidu，<br>OS，<br>GV。</p>
      */
     public String getModelName() {
         return this.ModelName;
     }
 
     /**
-     * Set 模型名称。
-当前支持的模型列表:
-Hunyuan,
-Hailuo，
-Kling，
-Vidu，
-OS，
-GV。
-     * @param ModelName 模型名称。
-当前支持的模型列表:
-Hunyuan,
-Hailuo，
-Kling，
-Vidu，
-OS，
-GV。
+     * Set <p>模型名称。<br>当前支持的模型列表:<br>Hunyuan,<br>Hailuo，<br>Kling，<br>Vidu，<br>OS，<br>GV。</p>
+     * @param ModelName <p>模型名称。<br>当前支持的模型列表:<br>Hunyuan,<br>Hailuo，<br>Kling，<br>Vidu，<br>OS，<br>GV。</p>
      */
     public void setModelName(String ModelName) {
         this.ModelName = ModelName;
     }
 
     /**
-     * Get 指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。
-1. Hailuo， 可选[02、2.3]。
-2. Kling，可选[2.0、2.1、2.5、O1、2.6]。
-3. Vidu,可选[q2、q2-pro、q2-turbo]。
-4. GV, 可选[3.1]。
-5. OS，可选[2.0]。 
-     * @return ModelVersion 指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。
-1. Hailuo， 可选[02、2.3]。
-2. Kling，可选[2.0、2.1、2.5、O1、2.6]。
-3. Vidu,可选[q2、q2-pro、q2-turbo]。
-4. GV, 可选[3.1]。
-5. OS，可选[2.0]。
+     * Get <p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。</p><ol><li>Hailuo， 可选[02、2.3]。</li><li>Kling，可选[2.0、2.1、2.5、O1、2.6、3.0、3.0-Omni]。</li><li>Vidu,可选[q2、q2-pro、q2-turbo、q3-pro、q3-turbo]。</li><li>GV, 可选[3.1]。</li><li>OS，可选[2.0]。</li></ol> 
+     * @return ModelVersion <p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。</p><ol><li>Hailuo， 可选[02、2.3]。</li><li>Kling，可选[2.0、2.1、2.5、O1、2.6、3.0、3.0-Omni]。</li><li>Vidu,可选[q2、q2-pro、q2-turbo、q3-pro、q3-turbo]。</li><li>GV, 可选[3.1]。</li><li>OS，可选[2.0]。</li></ol>
      */
     public String getModelVersion() {
         return this.ModelVersion;
     }
 
     /**
-     * Set 指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。
-1. Hailuo， 可选[02、2.3]。
-2. Kling，可选[2.0、2.1、2.5、O1、2.6]。
-3. Vidu,可选[q2、q2-pro、q2-turbo]。
-4. GV, 可选[3.1]。
-5. OS，可选[2.0]。
-     * @param ModelVersion 指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。
-1. Hailuo， 可选[02、2.3]。
-2. Kling，可选[2.0、2.1、2.5、O1、2.6]。
-3. Vidu,可选[q2、q2-pro、q2-turbo]。
-4. GV, 可选[3.1]。
-5. OS，可选[2.0]。
+     * Set <p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。</p><ol><li>Hailuo， 可选[02、2.3]。</li><li>Kling，可选[2.0、2.1、2.5、O1、2.6、3.0、3.0-Omni]。</li><li>Vidu,可选[q2、q2-pro、q2-turbo、q3-pro、q3-turbo]。</li><li>GV, 可选[3.1]。</li><li>OS，可选[2.0]。</li></ol>
+     * @param ModelVersion <p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。</p><ol><li>Hailuo， 可选[02、2.3]。</li><li>Kling，可选[2.0、2.1、2.5、O1、2.6、3.0、3.0-Omni]。</li><li>Vidu,可选[q2、q2-pro、q2-turbo、q3-pro、q3-turbo]。</li><li>GV, 可选[3.1]。</li><li>OS，可选[2.0]。</li></ol>
      */
     public void setModelVersion(String ModelVersion) {
         this.ModelVersion = ModelVersion;
     }
 
     /**
-     * Get 指定场景生视频。
-注意：仅部分模型支持指定场景。
-1. Kling支持动作控制，motion_control。
-2. Mingmou支持横转竖，land2port。
-3. Vidu支持特效模板，template_effect。 
-     * @return SceneType 指定场景生视频。
-注意：仅部分模型支持指定场景。
-1. Kling支持动作控制，motion_control。
-2. Mingmou支持横转竖，land2port。
-3. Vidu支持特效模板，template_effect。
+     * Get <p>指定场景生视频。<br>注意：仅部分模型支持指定场景。</p><ol><li>Kling支持动作控制，motion_control。</li><li>Mingmou支持横转竖，land2port。</li><li>Vidu支持特效模板，template_effect。</li></ol> 
+     * @return SceneType <p>指定场景生视频。<br>注意：仅部分模型支持指定场景。</p><ol><li>Kling支持动作控制，motion_control。</li><li>Mingmou支持横转竖，land2port。</li><li>Vidu支持特效模板，template_effect。</li></ol>
      */
     public String getSceneType() {
         return this.SceneType;
     }
 
     /**
-     * Set 指定场景生视频。
-注意：仅部分模型支持指定场景。
-1. Kling支持动作控制，motion_control。
-2. Mingmou支持横转竖，land2port。
-3. Vidu支持特效模板，template_effect。
-     * @param SceneType 指定场景生视频。
-注意：仅部分模型支持指定场景。
-1. Kling支持动作控制，motion_control。
-2. Mingmou支持横转竖，land2port。
-3. Vidu支持特效模板，template_effect。
+     * Set <p>指定场景生视频。<br>注意：仅部分模型支持指定场景。</p><ol><li>Kling支持动作控制，motion_control。</li><li>Mingmou支持横转竖，land2port。</li><li>Vidu支持特效模板，template_effect。</li></ol>
+     * @param SceneType <p>指定场景生视频。<br>注意：仅部分模型支持指定场景。</p><ol><li>Kling支持动作控制，motion_control。</li><li>Mingmou支持横转竖，land2port。</li><li>Vidu支持特效模板，template_effect。</li></ol>
      */
     public void setSceneType(String SceneType) {
         this.SceneType = SceneType;
     }
 
     /**
-     * Get 生成视频的描述。(注：最大支持2000字符)。当未传入图片时，此参数必填。 
-     * @return Prompt 生成视频的描述。(注：最大支持2000字符)。当未传入图片时，此参数必填。
+     * Get <p>生成视频的描述。(注：最大支持2000字符)。当未传入图片时，此参数必填。</p> 
+     * @return Prompt <p>生成视频的描述。(注：最大支持2000字符)。当未传入图片时，此参数必填。</p>
      */
     public String getPrompt() {
         return this.Prompt;
     }
 
     /**
-     * Set 生成视频的描述。(注：最大支持2000字符)。当未传入图片时，此参数必填。
-     * @param Prompt 生成视频的描述。(注：最大支持2000字符)。当未传入图片时，此参数必填。
+     * Set <p>生成视频的描述。(注：最大支持2000字符)。当未传入图片时，此参数必填。</p>
+     * @param Prompt <p>生成视频的描述。(注：最大支持2000字符)。当未传入图片时，此参数必填。</p>
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
     }
 
     /**
-     * Get 用于描述您想要阻止模型生成的内容。
-注意：部分模型支持。
-例如：
-顶部照明、明亮的色彩
-人物、动物
-多辆汽车、风。 
-     * @return NegativePrompt 用于描述您想要阻止模型生成的内容。
-注意：部分模型支持。
-例如：
-顶部照明、明亮的色彩
-人物、动物
-多辆汽车、风。
+     * Get <p>用于描述您想要阻止模型生成的内容。<br>注意：部分模型支持。<br>例如：<br>顶部照明、明亮的色彩<br>人物、动物<br>多辆汽车、风。</p> 
+     * @return NegativePrompt <p>用于描述您想要阻止模型生成的内容。<br>注意：部分模型支持。<br>例如：<br>顶部照明、明亮的色彩<br>人物、动物<br>多辆汽车、风。</p>
      */
     public String getNegativePrompt() {
         return this.NegativePrompt;
     }
 
     /**
-     * Set 用于描述您想要阻止模型生成的内容。
-注意：部分模型支持。
-例如：
-顶部照明、明亮的色彩
-人物、动物
-多辆汽车、风。
-     * @param NegativePrompt 用于描述您想要阻止模型生成的内容。
-注意：部分模型支持。
-例如：
-顶部照明、明亮的色彩
-人物、动物
-多辆汽车、风。
+     * Set <p>用于描述您想要阻止模型生成的内容。<br>注意：部分模型支持。<br>例如：<br>顶部照明、明亮的色彩<br>人物、动物<br>多辆汽车、风。</p>
+     * @param NegativePrompt <p>用于描述您想要阻止模型生成的内容。<br>注意：部分模型支持。<br>例如：<br>顶部照明、明亮的色彩<br>人物、动物<br>多辆汽车、风。</p>
      */
     public void setNegativePrompt(String NegativePrompt) {
         this.NegativePrompt = NegativePrompt;
     }
 
     /**
-     * Get 默认取值为False，模型会严格地遵循指令。如果需要更精细的prompt获得最佳效果，可将此参数设置为True，将自动优化传入的prompt，以提升生成质量。 
-     * @return EnhancePrompt 默认取值为False，模型会严格地遵循指令。如果需要更精细的prompt获得最佳效果，可将此参数设置为True，将自动优化传入的prompt，以提升生成质量。
+     * Get <p>默认取值为False，模型会严格地遵循指令。如果需要更精细的prompt获得最佳效果，可将此参数设置为True，将自动优化传入的prompt，以提升生成质量。</p> 
+     * @return EnhancePrompt <p>默认取值为False，模型会严格地遵循指令。如果需要更精细的prompt获得最佳效果，可将此参数设置为True，将自动优化传入的prompt，以提升生成质量。</p>
      */
     public Boolean getEnhancePrompt() {
         return this.EnhancePrompt;
     }
 
     /**
-     * Set 默认取值为False，模型会严格地遵循指令。如果需要更精细的prompt获得最佳效果，可将此参数设置为True，将自动优化传入的prompt，以提升生成质量。
-     * @param EnhancePrompt 默认取值为False，模型会严格地遵循指令。如果需要更精细的prompt获得最佳效果，可将此参数设置为True，将自动优化传入的prompt，以提升生成质量。
+     * Set <p>默认取值为False，模型会严格地遵循指令。如果需要更精细的prompt获得最佳效果，可将此参数设置为True，将自动优化传入的prompt，以提升生成质量。</p>
+     * @param EnhancePrompt <p>默认取值为False，模型会严格地遵循指令。如果需要更精细的prompt获得最佳效果，可将此参数设置为True，将自动优化传入的prompt，以提升生成质量。</p>
      */
     public void setEnhancePrompt(Boolean EnhancePrompt) {
         this.EnhancePrompt = EnhancePrompt;
     }
 
     /**
-     * Get 用于指导视频生成的图片 URL。该URL需外网可访问。
-注意：
-1. 推荐图片大小不超过10M，不同模型大小限制不相同。
-2. 支持的图片格式：jpeg、png。
-3. 使用OS模型时，需输入图片尺寸为: 1280x720、720x1280。 
-     * @return ImageUrl 用于指导视频生成的图片 URL。该URL需外网可访问。
-注意：
-1. 推荐图片大小不超过10M，不同模型大小限制不相同。
-2. 支持的图片格式：jpeg、png。
-3. 使用OS模型时，需输入图片尺寸为: 1280x720、720x1280。
+     * Get <p>用于指导视频生成的图片 URL。该URL需外网可访问。<br>注意：</p><ol><li>推荐图片大小不超过10M，不同模型大小限制不相同。</li><li>支持的图片格式：jpeg、png。</li><li>使用OS模型时，需输入图片尺寸为: 1280x720、720x1280。</li></ol> 
+     * @return ImageUrl <p>用于指导视频生成的图片 URL。该URL需外网可访问。<br>注意：</p><ol><li>推荐图片大小不超过10M，不同模型大小限制不相同。</li><li>支持的图片格式：jpeg、png。</li><li>使用OS模型时，需输入图片尺寸为: 1280x720、720x1280。</li></ol>
      */
     public String getImageUrl() {
         return this.ImageUrl;
     }
 
     /**
-     * Set 用于指导视频生成的图片 URL。该URL需外网可访问。
-注意：
-1. 推荐图片大小不超过10M，不同模型大小限制不相同。
-2. 支持的图片格式：jpeg、png。
-3. 使用OS模型时，需输入图片尺寸为: 1280x720、720x1280。
-     * @param ImageUrl 用于指导视频生成的图片 URL。该URL需外网可访问。
-注意：
-1. 推荐图片大小不超过10M，不同模型大小限制不相同。
-2. 支持的图片格式：jpeg、png。
-3. 使用OS模型时，需输入图片尺寸为: 1280x720、720x1280。
+     * Set <p>用于指导视频生成的图片 URL。该URL需外网可访问。<br>注意：</p><ol><li>推荐图片大小不超过10M，不同模型大小限制不相同。</li><li>支持的图片格式：jpeg、png。</li><li>使用OS模型时，需输入图片尺寸为: 1280x720、720x1280。</li></ol>
+     * @param ImageUrl <p>用于指导视频生成的图片 URL。该URL需外网可访问。<br>注意：</p><ol><li>推荐图片大小不超过10M，不同模型大小限制不相同。</li><li>支持的图片格式：jpeg、png。</li><li>使用OS模型时，需输入图片尺寸为: 1280x720、720x1280。</li></ol>
      */
     public void setImageUrl(String ImageUrl) {
         this.ImageUrl = ImageUrl;
     }
 
     /**
-     * Get 模型将以此参数传入的图片作为尾帧画面来生成视频。
-支持此参数的模型：
-1. GV，传入尾帧图片时，必须同时传入ImageUrl作为首帧。
-2. Kling， 在Resolution:1080P的情况下 2.1版本支持首尾帧。
-3. Vidu, q2-pro, q2-turbo 支持首尾帧。
-
-注意：
-1. 推荐图片大小不超过10M，各模型限制不同。
-2. 支持的图片格式：jpeg、png。 
-     * @return LastImageUrl 模型将以此参数传入的图片作为尾帧画面来生成视频。
-支持此参数的模型：
-1. GV，传入尾帧图片时，必须同时传入ImageUrl作为首帧。
-2. Kling， 在Resolution:1080P的情况下 2.1版本支持首尾帧。
-3. Vidu, q2-pro, q2-turbo 支持首尾帧。
-
-注意：
-1. 推荐图片大小不超过10M，各模型限制不同。
-2. 支持的图片格式：jpeg、png。
+     * Get <p>模型将以此参数传入的图片作为尾帧画面来生成视频。<br>支持此参数的模型：</p><ol><li>GV，传入尾帧图片时，必须同时传入ImageUrl作为首帧。</li><li>Kling， 在Resolution:1080P的情况下 2.1版本支持首尾帧。</li><li>Vidu, q2-pro, q2-turbo 支持首尾帧。</li></ol><p>注意：</p><ol><li>推荐图片大小不超过10M，各模型限制不同。</li><li>支持的图片格式：jpeg、png。</li></ol> 
+     * @return LastImageUrl <p>模型将以此参数传入的图片作为尾帧画面来生成视频。<br>支持此参数的模型：</p><ol><li>GV，传入尾帧图片时，必须同时传入ImageUrl作为首帧。</li><li>Kling， 在Resolution:1080P的情况下 2.1版本支持首尾帧。</li><li>Vidu, q2-pro, q2-turbo 支持首尾帧。</li></ol><p>注意：</p><ol><li>推荐图片大小不超过10M，各模型限制不同。</li><li>支持的图片格式：jpeg、png。</li></ol>
      */
     public String getLastImageUrl() {
         return this.LastImageUrl;
     }
 
     /**
-     * Set 模型将以此参数传入的图片作为尾帧画面来生成视频。
-支持此参数的模型：
-1. GV，传入尾帧图片时，必须同时传入ImageUrl作为首帧。
-2. Kling， 在Resolution:1080P的情况下 2.1版本支持首尾帧。
-3. Vidu, q2-pro, q2-turbo 支持首尾帧。
-
-注意：
-1. 推荐图片大小不超过10M，各模型限制不同。
-2. 支持的图片格式：jpeg、png。
-     * @param LastImageUrl 模型将以此参数传入的图片作为尾帧画面来生成视频。
-支持此参数的模型：
-1. GV，传入尾帧图片时，必须同时传入ImageUrl作为首帧。
-2. Kling， 在Resolution:1080P的情况下 2.1版本支持首尾帧。
-3. Vidu, q2-pro, q2-turbo 支持首尾帧。
-
-注意：
-1. 推荐图片大小不超过10M，各模型限制不同。
-2. 支持的图片格式：jpeg、png。
+     * Set <p>模型将以此参数传入的图片作为尾帧画面来生成视频。<br>支持此参数的模型：</p><ol><li>GV，传入尾帧图片时，必须同时传入ImageUrl作为首帧。</li><li>Kling， 在Resolution:1080P的情况下 2.1版本支持首尾帧。</li><li>Vidu, q2-pro, q2-turbo 支持首尾帧。</li></ol><p>注意：</p><ol><li>推荐图片大小不超过10M，各模型限制不同。</li><li>支持的图片格式：jpeg、png。</li></ol>
+     * @param LastImageUrl <p>模型将以此参数传入的图片作为尾帧画面来生成视频。<br>支持此参数的模型：</p><ol><li>GV，传入尾帧图片时，必须同时传入ImageUrl作为首帧。</li><li>Kling， 在Resolution:1080P的情况下 2.1版本支持首尾帧。</li><li>Vidu, q2-pro, q2-turbo 支持首尾帧。</li></ol><p>注意：</p><ol><li>推荐图片大小不超过10M，各模型限制不同。</li><li>支持的图片格式：jpeg、png。</li></ol>
      */
     public void setLastImageUrl(String LastImageUrl) {
         this.LastImageUrl = LastImageUrl;
     }
 
     /**
-     * Get 最多包含三张素材资源图片的列表，用于描述模型在生成视频时要使用的资源图片。
-
-支持多图输入的模型：
-1. GV，使用多图输入时，不可使用ImageUrl和LastImageUrl。
-2. Vidu，支持多图参考生视频。q2模型1-7张图片，可通过ImageInfos里面的ReferenceType作为主体id来传入。
-
-注意：
-1. 图片大小不超过10M。
-2. 支持的图片格式：jpeg、png。 
-     * @return ImageInfos 最多包含三张素材资源图片的列表，用于描述模型在生成视频时要使用的资源图片。
-
-支持多图输入的模型：
-1. GV，使用多图输入时，不可使用ImageUrl和LastImageUrl。
-2. Vidu，支持多图参考生视频。q2模型1-7张图片，可通过ImageInfos里面的ReferenceType作为主体id来传入。
-
-注意：
-1. 图片大小不超过10M。
-2. 支持的图片格式：jpeg、png。
+     * Get <p>最多包含三张素材资源图片的列表，用于描述模型在生成视频时要使用的资源图片。</p><p>支持多图输入的模型：</p><ol><li>GV，使用多图输入时，不可使用ImageUrl和LastImageUrl。</li><li>Vidu，支持多图参考生视频。q2模型1-7张图片，可通过ImageInfos里面的ReferenceType作为主体id来传入。</li></ol><p>注意：</p><ol><li>图片大小不超过10M。</li><li>支持的图片格式：jpeg、png。</li></ol> 
+     * @return ImageInfos <p>最多包含三张素材资源图片的列表，用于描述模型在生成视频时要使用的资源图片。</p><p>支持多图输入的模型：</p><ol><li>GV，使用多图输入时，不可使用ImageUrl和LastImageUrl。</li><li>Vidu，支持多图参考生视频。q2模型1-7张图片，可通过ImageInfos里面的ReferenceType作为主体id来传入。</li></ol><p>注意：</p><ol><li>图片大小不超过10M。</li><li>支持的图片格式：jpeg、png。</li></ol>
      */
     public AigcVideoReferenceImageInfo [] getImageInfos() {
         return this.ImageInfos;
     }
 
     /**
-     * Set 最多包含三张素材资源图片的列表，用于描述模型在生成视频时要使用的资源图片。
-
-支持多图输入的模型：
-1. GV，使用多图输入时，不可使用ImageUrl和LastImageUrl。
-2. Vidu，支持多图参考生视频。q2模型1-7张图片，可通过ImageInfos里面的ReferenceType作为主体id来传入。
-
-注意：
-1. 图片大小不超过10M。
-2. 支持的图片格式：jpeg、png。
-     * @param ImageInfos 最多包含三张素材资源图片的列表，用于描述模型在生成视频时要使用的资源图片。
-
-支持多图输入的模型：
-1. GV，使用多图输入时，不可使用ImageUrl和LastImageUrl。
-2. Vidu，支持多图参考生视频。q2模型1-7张图片，可通过ImageInfos里面的ReferenceType作为主体id来传入。
-
-注意：
-1. 图片大小不超过10M。
-2. 支持的图片格式：jpeg、png。
+     * Set <p>最多包含三张素材资源图片的列表，用于描述模型在生成视频时要使用的资源图片。</p><p>支持多图输入的模型：</p><ol><li>GV，使用多图输入时，不可使用ImageUrl和LastImageUrl。</li><li>Vidu，支持多图参考生视频。q2模型1-7张图片，可通过ImageInfos里面的ReferenceType作为主体id来传入。</li></ol><p>注意：</p><ol><li>图片大小不超过10M。</li><li>支持的图片格式：jpeg、png。</li></ol>
+     * @param ImageInfos <p>最多包含三张素材资源图片的列表，用于描述模型在生成视频时要使用的资源图片。</p><p>支持多图输入的模型：</p><ol><li>GV，使用多图输入时，不可使用ImageUrl和LastImageUrl。</li><li>Vidu，支持多图参考生视频。q2模型1-7张图片，可通过ImageInfos里面的ReferenceType作为主体id来传入。</li></ol><p>注意：</p><ol><li>图片大小不超过10M。</li><li>支持的图片格式：jpeg、png。</li></ol>
      */
     public void setImageInfos(AigcVideoReferenceImageInfo [] ImageInfos) {
         this.ImageInfos = ImageInfos;
     }
 
     /**
-     * Get 生成视频的时长。
-注意：
-1. Kling支持 5、10秒。默认: 5秒。
-2. Hailuo的std模式可支持6、10秒，其他仅6秒。默认：6秒。
-3. Vidu支持1-10秒。
-4. GV支持 8秒。 默认：8秒。
-5. OS支持4、8、12秒。 默认：8秒。 
-     * @return Duration 生成视频的时长。
-注意：
-1. Kling支持 5、10秒。默认: 5秒。
-2. Hailuo的std模式可支持6、10秒，其他仅6秒。默认：6秒。
-3. Vidu支持1-10秒。
-4. GV支持 8秒。 默认：8秒。
-5. OS支持4、8、12秒。 默认：8秒。
+     * Get <p>目前仅Kling O1版本支持参考视频信息传入。<br>可作为特征参考视频，也可作为待编辑视频，默认为待编辑视频；可选择性保留视频原声。</p> 
+     * @return VideoInfos <p>目前仅Kling O1版本支持参考视频信息传入。<br>可作为特征参考视频，也可作为待编辑视频，默认为待编辑视频；可选择性保留视频原声。</p>
+     */
+    public AigcVideoReferenceVideoInfo [] getVideoInfos() {
+        return this.VideoInfos;
+    }
+
+    /**
+     * Set <p>目前仅Kling O1版本支持参考视频信息传入。<br>可作为特征参考视频，也可作为待编辑视频，默认为待编辑视频；可选择性保留视频原声。</p>
+     * @param VideoInfos <p>目前仅Kling O1版本支持参考视频信息传入。<br>可作为特征参考视频，也可作为待编辑视频，默认为待编辑视频；可选择性保留视频原声。</p>
+     */
+    public void setVideoInfos(AigcVideoReferenceVideoInfo [] VideoInfos) {
+        this.VideoInfos = VideoInfos;
+    }
+
+    /**
+     * Get <p>生成视频的时长。<br>注意：</p><ol><li>Kling支持 5、10秒。默认: 5秒。</li><li>Hailuo的std模式可支持6、10秒，其他仅6秒。默认：6秒。</li><li>Vidu支持1-10秒。</li><li>GV支持 8秒。 默认：8秒。</li><li>OS支持4、8、12秒。 默认：8秒。</li></ol> 
+     * @return Duration <p>生成视频的时长。<br>注意：</p><ol><li>Kling支持 5、10秒。默认: 5秒。</li><li>Hailuo的std模式可支持6、10秒，其他仅6秒。默认：6秒。</li><li>Vidu支持1-10秒。</li><li>GV支持 8秒。 默认：8秒。</li><li>OS支持4、8、12秒。 默认：8秒。</li></ol>
      */
     public Long getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set 生成视频的时长。
-注意：
-1. Kling支持 5、10秒。默认: 5秒。
-2. Hailuo的std模式可支持6、10秒，其他仅6秒。默认：6秒。
-3. Vidu支持1-10秒。
-4. GV支持 8秒。 默认：8秒。
-5. OS支持4、8、12秒。 默认：8秒。
-     * @param Duration 生成视频的时长。
-注意：
-1. Kling支持 5、10秒。默认: 5秒。
-2. Hailuo的std模式可支持6、10秒，其他仅6秒。默认：6秒。
-3. Vidu支持1-10秒。
-4. GV支持 8秒。 默认：8秒。
-5. OS支持4、8、12秒。 默认：8秒。
+     * Set <p>生成视频的时长。<br>注意：</p><ol><li>Kling支持 5、10秒。默认: 5秒。</li><li>Hailuo的std模式可支持6、10秒，其他仅6秒。默认：6秒。</li><li>Vidu支持1-10秒。</li><li>GV支持 8秒。 默认：8秒。</li><li>OS支持4、8、12秒。 默认：8秒。</li></ol>
+     * @param Duration <p>生成视频的时长。<br>注意：</p><ol><li>Kling支持 5、10秒。默认: 5秒。</li><li>Hailuo的std模式可支持6、10秒，其他仅6秒。默认：6秒。</li><li>Vidu支持1-10秒。</li><li>GV支持 8秒。 默认：8秒。</li><li>OS支持4、8、12秒。 默认：8秒。</li></ol>
      */
     public void setDuration(Long Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get 用于传入要求的额外参数。 
-     * @return ExtraParameters 用于传入要求的额外参数。
+     * Get <p>用于传入要求的额外参数。</p> 
+     * @return ExtraParameters <p>用于传入要求的额外参数。</p>
      */
     public AigcVideoExtraParam getExtraParameters() {
         return this.ExtraParameters;
     }
 
     /**
-     * Set 用于传入要求的额外参数。
-     * @param ExtraParameters 用于传入要求的额外参数。
+     * Set <p>用于传入要求的额外参数。</p>
+     * @param ExtraParameters <p>用于传入要求的额外参数。</p>
      */
     public void setExtraParameters(AigcVideoExtraParam ExtraParameters) {
         this.ExtraParameters = ExtraParameters;
     }
 
     /**
-     * Get 文件结果指定存储Cos桶信息。 注意：需开通Cos，创建并授权MPS_QcsRole角色。 
-     * @return StoreCosParam 文件结果指定存储Cos桶信息。 注意：需开通Cos，创建并授权MPS_QcsRole角色。
+     * Get <p>文件结果指定存储Cos桶信息。 注意：需开通Cos，创建并授权MPS_QcsRole角色。</p> 
+     * @return StoreCosParam <p>文件结果指定存储Cos桶信息。 注意：需开通Cos，创建并授权MPS_QcsRole角色。</p>
      */
     public AigcStoreCosParam getStoreCosParam() {
         return this.StoreCosParam;
     }
 
     /**
-     * Set 文件结果指定存储Cos桶信息。 注意：需开通Cos，创建并授权MPS_QcsRole角色。
-     * @param StoreCosParam 文件结果指定存储Cos桶信息。 注意：需开通Cos，创建并授权MPS_QcsRole角色。
+     * Set <p>文件结果指定存储Cos桶信息。 注意：需开通Cos，创建并授权MPS_QcsRole角色。</p>
+     * @param StoreCosParam <p>文件结果指定存储Cos桶信息。 注意：需开通Cos，创建并授权MPS_QcsRole角色。</p>
      */
     public void setStoreCosParam(AigcStoreCosParam StoreCosParam) {
         this.StoreCosParam = StoreCosParam;
     }
 
     /**
-     * Get 用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。
-示例：
-{\"camera_control\":{\"type\":\"simple\"}} 
-     * @return AdditionalParameters 用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。
-示例：
-{\"camera_control\":{\"type\":\"simple\"}}
+     * Get <p>用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。<br>示例：<br>{"camera_control":{"type":"simple"}}</p> 
+     * @return AdditionalParameters <p>用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。<br>示例：<br>{"camera_control":{"type":"simple"}}</p>
      */
     public String getAdditionalParameters() {
         return this.AdditionalParameters;
     }
 
     /**
-     * Set 用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。
-示例：
-{\"camera_control\":{\"type\":\"simple\"}}
-     * @param AdditionalParameters 用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。
-示例：
-{\"camera_control\":{\"type\":\"simple\"}}
+     * Set <p>用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。<br>示例：<br>{"camera_control":{"type":"simple"}}</p>
+     * @param AdditionalParameters <p>用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。<br>示例：<br>{"camera_control":{"type":"simple"}}</p>
      */
     public void setAdditionalParameters(String AdditionalParameters) {
         this.AdditionalParameters = AdditionalParameters;
     }
 
     /**
-     * Get 接口操作者名称。 
-     * @return Operator 接口操作者名称。
+     * Get <p>接口操作者名称。</p> 
+     * @return Operator <p>接口操作者名称。</p>
      */
     public String getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 接口操作者名称。
-     * @param Operator 接口操作者名称。
+     * Set <p>接口操作者名称。</p>
+     * @param Operator <p>接口操作者名称。</p>
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;
@@ -628,6 +406,12 @@ GV。
                 this.ImageInfos[i] = new AigcVideoReferenceImageInfo(source.ImageInfos[i]);
             }
         }
+        if (source.VideoInfos != null) {
+            this.VideoInfos = new AigcVideoReferenceVideoInfo[source.VideoInfos.length];
+            for (int i = 0; i < source.VideoInfos.length; i++) {
+                this.VideoInfos[i] = new AigcVideoReferenceVideoInfo(source.VideoInfos[i]);
+            }
+        }
         if (source.Duration != null) {
             this.Duration = new Long(source.Duration);
         }
@@ -659,6 +443,7 @@ GV。
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
         this.setParamSimple(map, prefix + "LastImageUrl", this.LastImageUrl);
         this.setParamArrayObj(map, prefix + "ImageInfos.", this.ImageInfos);
+        this.setParamArrayObj(map, prefix + "VideoInfos.", this.VideoInfos);
         this.setParamSimple(map, prefix + "Duration", this.Duration);
         this.setParamObj(map, prefix + "ExtraParameters.", this.ExtraParameters);
         this.setParamObj(map, prefix + "StoreCosParam.", this.StoreCosParam);

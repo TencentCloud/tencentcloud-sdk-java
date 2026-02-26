@@ -84,6 +84,28 @@ public class HunyuanClient extends AbstractClient{
     }
 
     /**
+     *创建自定义术语库，在翻译时自动将源语言术语替换为指定的目标语言译文，确保专业术语翻译的一致性和准确性。
+     * @param req CreateGlossaryRequest
+     * @return CreateGlossaryResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateGlossaryResponse CreateGlossary(CreateGlossaryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateGlossary", CreateGlossaryResponse.class);
+    }
+
+    /**
+     *添加术语条目。
+     * @param req CreateGlossaryEntryRequest
+     * @return CreateGlossaryEntryResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateGlossaryEntryResponse CreateGlossaryEntry(CreateGlossaryEntryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateGlossaryEntry", CreateGlossaryEntryResponse.class);
+    }
+
+    /**
      *腾讯混元大模型是由腾讯研发的大语言模型，具备强大的中文创作能力，复杂语境下的逻辑推理能力，以及可靠的任务执行能力。本接口支持流式或非流式调用，当使用流式调用时为 SSE 协议。
 
  1. 本接口暂不支持返回图片内容。
@@ -97,6 +119,28 @@ public class HunyuanClient extends AbstractClient{
     public CreateThreadResponse CreateThread(CreateThreadRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateThread", CreateThreadResponse.class);
+    }
+
+    /**
+     *删除术语库。
+     * @param req DeleteGlossaryRequest
+     * @return DeleteGlossaryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteGlossaryResponse DeleteGlossary(DeleteGlossaryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteGlossary", DeleteGlossaryResponse.class);
+    }
+
+    /**
+     *删除术语条目。
+     * @param req DeleteGlossaryEntryRequest
+     * @return DeleteGlossaryEntryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteGlossaryEntryResponse DeleteGlossaryEntry(DeleteGlossaryEntryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteGlossaryEntry", DeleteGlossaryEntryResponse.class);
     }
 
     /**
@@ -240,6 +284,28 @@ public class HunyuanClient extends AbstractClient{
     }
 
     /**
+     *查询术语库。
+     * @param req ListGlossaryRequest
+     * @return ListGlossaryResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListGlossaryResponse ListGlossary(ListGlossaryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListGlossary", ListGlossaryResponse.class);
+    }
+
+    /**
+     *查询术语条目。
+     * @param req ListGlossaryEntryRequest
+     * @return ListGlossaryEntryResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListGlossaryEntryResponse ListGlossaryEntry(ListGlossaryEntryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListGlossaryEntry", ListGlossaryEntryResponse.class);
+    }
+
+    /**
      *混元生图（多轮对话）接口基于混元大模型，将根据输入的文本描述生成图像，支持通过多轮对话的方式不断调整图像内容。分为提交任务和查询任务2个接口。
 提交任务：输入文本和前置对话 ID 等，提交一个混元生图多轮对话异步任务，获得任务 ID。
 查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得在上一轮对话基础上继续生成的图像结果。
@@ -332,6 +398,17 @@ public class HunyuanClient extends AbstractClient{
     public TextToImageLiteResponse TextToImageLite(TextToImageLiteRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "TextToImageLite", TextToImageLiteResponse.class);
+    }
+
+    /**
+     *更新术语条目。
+     * @param req UpdateGlossaryEntryRequest
+     * @return UpdateGlossaryEntryResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateGlossaryEntryResponse UpdateGlossaryEntry(UpdateGlossaryEntryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateGlossaryEntry", UpdateGlossaryEntryResponse.class);
     }
 
 }

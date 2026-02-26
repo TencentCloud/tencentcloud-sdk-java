@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class LifecyclePolicy extends AbstractModel {
 
     /**
-    * 生命周期管理策略创建的时间
+    * <p>生命周期管理策略创建的时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 生命周期管理策略ID
+    * <p>生命周期管理策略ID</p>
     */
     @SerializedName("LifecyclePolicyID")
     @Expose
     private String LifecyclePolicyID;
 
     /**
-    * 生命周期管理策略名称
+    * <p>生命周期管理策略名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LifecyclePolicyName")
@@ -46,7 +46,7 @@ public class LifecyclePolicy extends AbstractModel {
     private String LifecyclePolicyName;
 
     /**
-    * 生命周期管理策略关联的管理规则列表
+    * <p>生命周期管理策略关联的管理规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LifecycleRules")
@@ -54,7 +54,7 @@ public class LifecyclePolicy extends AbstractModel {
     private LifecycleRule [] LifecycleRules;
 
     /**
-    * 生命周期管理策略关联目录的绝对路径列表
+    * <p>生命周期管理策略关联目录的绝对路径列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Paths")
@@ -62,41 +62,41 @@ public class LifecyclePolicy extends AbstractModel {
     private PathInfo [] Paths;
 
     /**
-     * Get 生命周期管理策略创建的时间 
-     * @return CreateTime 生命周期管理策略创建的时间
+     * Get <p>生命周期管理策略创建的时间</p> 
+     * @return CreateTime <p>生命周期管理策略创建的时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 生命周期管理策略创建的时间
-     * @param CreateTime 生命周期管理策略创建的时间
+     * Set <p>生命周期管理策略创建的时间</p>
+     * @param CreateTime <p>生命周期管理策略创建的时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 生命周期管理策略ID 
-     * @return LifecyclePolicyID 生命周期管理策略ID
+     * Get <p>生命周期管理策略ID</p> 
+     * @return LifecyclePolicyID <p>生命周期管理策略ID</p>
      */
     public String getLifecyclePolicyID() {
         return this.LifecyclePolicyID;
     }
 
     /**
-     * Set 生命周期管理策略ID
-     * @param LifecyclePolicyID 生命周期管理策略ID
+     * Set <p>生命周期管理策略ID</p>
+     * @param LifecyclePolicyID <p>生命周期管理策略ID</p>
      */
     public void setLifecyclePolicyID(String LifecyclePolicyID) {
         this.LifecyclePolicyID = LifecyclePolicyID;
     }
 
     /**
-     * Get 生命周期管理策略名称
+     * Get <p>生命周期管理策略名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LifecyclePolicyName 生命周期管理策略名称
+     * @return LifecyclePolicyName <p>生命周期管理策略名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLifecyclePolicyName() {
@@ -104,9 +104,9 @@ public class LifecyclePolicy extends AbstractModel {
     }
 
     /**
-     * Set 生命周期管理策略名称
+     * Set <p>生命周期管理策略名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LifecyclePolicyName 生命周期管理策略名称
+     * @param LifecyclePolicyName <p>生命周期管理策略名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLifecyclePolicyName(String LifecyclePolicyName) {
@@ -114,9 +114,9 @@ public class LifecyclePolicy extends AbstractModel {
     }
 
     /**
-     * Get 生命周期管理策略关联的管理规则列表
+     * Get <p>生命周期管理策略关联的管理规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LifecycleRules 生命周期管理策略关联的管理规则列表
+     * @return LifecycleRules <p>生命周期管理策略关联的管理规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public LifecycleRule [] getLifecycleRules() {
@@ -124,9 +124,9 @@ public class LifecyclePolicy extends AbstractModel {
     }
 
     /**
-     * Set 生命周期管理策略关联的管理规则列表
+     * Set <p>生命周期管理策略关联的管理规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LifecycleRules 生命周期管理策略关联的管理规则列表
+     * @param LifecycleRules <p>生命周期管理策略关联的管理规则列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLifecycleRules(LifecycleRule [] LifecycleRules) {
@@ -134,9 +134,9 @@ public class LifecyclePolicy extends AbstractModel {
     }
 
     /**
-     * Get 生命周期管理策略关联目录的绝对路径列表
+     * Get <p>生命周期管理策略关联目录的绝对路径列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Paths 生命周期管理策略关联目录的绝对路径列表
+     * @return Paths <p>生命周期管理策略关联目录的绝对路径列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PathInfo [] getPaths() {
@@ -144,9 +144,9 @@ public class LifecyclePolicy extends AbstractModel {
     }
 
     /**
-     * Set 生命周期管理策略关联目录的绝对路径列表
+     * Set <p>生命周期管理策略关联目录的绝对路径列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Paths 生命周期管理策略关联目录的绝对路径列表
+     * @param Paths <p>生命周期管理策略关联目录的绝对路径列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPaths(PathInfo [] Paths) {

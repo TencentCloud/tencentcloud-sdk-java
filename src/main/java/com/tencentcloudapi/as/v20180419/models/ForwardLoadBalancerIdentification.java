@@ -24,72 +24,95 @@ import java.util.HashMap;
 public class ForwardLoadBalancerIdentification extends AbstractModel {
 
     /**
-    * 负载均衡器ID
+    * <p>负载均衡器ID</p>
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * 应用型负载均衡监听器 ID
+    * <p>应用型负载均衡监听器 ID</p>
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * 转发规则ID，注意：针对七层监听器此参数必填
+    * <p>转发规则ID，注意：针对七层监听器此参数必填</p>
     */
     @SerializedName("LocationId")
     @Expose
     private String LocationId;
 
     /**
-     * Get 负载均衡器ID 
-     * @return LoadBalancerId 负载均衡器ID
+    * <p>监听器或转发路径需解绑的端口号列表。</p><p>取值范围：[1, 65535]</p><p>不传递该参数时，默认解绑指定监听器或转发路径关联的所有端口。</p>
+    */
+    @SerializedName("PortList")
+    @Expose
+    private Long [] PortList;
+
+    /**
+     * Get <p>负载均衡器ID</p> 
+     * @return LoadBalancerId <p>负载均衡器ID</p>
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set 负载均衡器ID
-     * @param LoadBalancerId 负载均衡器ID
+     * Set <p>负载均衡器ID</p>
+     * @param LoadBalancerId <p>负载均衡器ID</p>
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get 应用型负载均衡监听器 ID 
-     * @return ListenerId 应用型负载均衡监听器 ID
+     * Get <p>应用型负载均衡监听器 ID</p> 
+     * @return ListenerId <p>应用型负载均衡监听器 ID</p>
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set 应用型负载均衡监听器 ID
-     * @param ListenerId 应用型负载均衡监听器 ID
+     * Set <p>应用型负载均衡监听器 ID</p>
+     * @param ListenerId <p>应用型负载均衡监听器 ID</p>
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get 转发规则ID，注意：针对七层监听器此参数必填 
-     * @return LocationId 转发规则ID，注意：针对七层监听器此参数必填
+     * Get <p>转发规则ID，注意：针对七层监听器此参数必填</p> 
+     * @return LocationId <p>转发规则ID，注意：针对七层监听器此参数必填</p>
      */
     public String getLocationId() {
         return this.LocationId;
     }
 
     /**
-     * Set 转发规则ID，注意：针对七层监听器此参数必填
-     * @param LocationId 转发规则ID，注意：针对七层监听器此参数必填
+     * Set <p>转发规则ID，注意：针对七层监听器此参数必填</p>
+     * @param LocationId <p>转发规则ID，注意：针对七层监听器此参数必填</p>
      */
     public void setLocationId(String LocationId) {
         this.LocationId = LocationId;
+    }
+
+    /**
+     * Get <p>监听器或转发路径需解绑的端口号列表。</p><p>取值范围：[1, 65535]</p><p>不传递该参数时，默认解绑指定监听器或转发路径关联的所有端口。</p> 
+     * @return PortList <p>监听器或转发路径需解绑的端口号列表。</p><p>取值范围：[1, 65535]</p><p>不传递该参数时，默认解绑指定监听器或转发路径关联的所有端口。</p>
+     */
+    public Long [] getPortList() {
+        return this.PortList;
+    }
+
+    /**
+     * Set <p>监听器或转发路径需解绑的端口号列表。</p><p>取值范围：[1, 65535]</p><p>不传递该参数时，默认解绑指定监听器或转发路径关联的所有端口。</p>
+     * @param PortList <p>监听器或转发路径需解绑的端口号列表。</p><p>取值范围：[1, 65535]</p><p>不传递该参数时，默认解绑指定监听器或转发路径关联的所有端口。</p>
+     */
+    public void setPortList(Long [] PortList) {
+        this.PortList = PortList;
     }
 
     public ForwardLoadBalancerIdentification() {
@@ -109,6 +132,12 @@ public class ForwardLoadBalancerIdentification extends AbstractModel {
         if (source.LocationId != null) {
             this.LocationId = new String(source.LocationId);
         }
+        if (source.PortList != null) {
+            this.PortList = new Long[source.PortList.length];
+            for (int i = 0; i < source.PortList.length; i++) {
+                this.PortList[i] = new Long(source.PortList[i]);
+            }
+        }
     }
 
 
@@ -119,6 +148,7 @@ public class ForwardLoadBalancerIdentification extends AbstractModel {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);
         this.setParamSimple(map, prefix + "LocationId", this.LocationId);
+        this.setParamArraySimple(map, prefix + "PortList.", this.PortList);
 
     }
 }

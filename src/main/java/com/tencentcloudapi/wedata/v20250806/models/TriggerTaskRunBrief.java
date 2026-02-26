@@ -152,6 +152,14 @@ public class TriggerTaskRunBrief extends AbstractModel {
     private String CreateTime;
 
     /**
+    * 计划调度时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScheduleTime")
+    @Expose
+    private String ScheduleTime;
+
+    /**
     * 更新时间戳
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -462,6 +470,14 @@ public class TriggerTaskRunBrief extends AbstractModel {
     @SerializedName("ExecutionResult")
     @Expose
     private String ExecutionResult;
+
+    /**
+    * 依赖策略
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DependencyTriggerPolicy")
+    @Expose
+    private String DependencyTriggerPolicy;
 
     /**
      * Get 任务运行ID
@@ -781,6 +797,26 @@ public class TriggerTaskRunBrief extends AbstractModel {
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get 计划调度时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScheduleTime 计划调度时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getScheduleTime() {
+        return this.ScheduleTime;
+    }
+
+    /**
+     * Set 计划调度时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScheduleTime 计划调度时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScheduleTime(String ScheduleTime) {
+        this.ScheduleTime = ScheduleTime;
     }
 
     /**
@@ -1563,6 +1599,26 @@ public class TriggerTaskRunBrief extends AbstractModel {
         this.ExecutionResult = ExecutionResult;
     }
 
+    /**
+     * Get 依赖策略
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DependencyTriggerPolicy 依赖策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDependencyTriggerPolicy() {
+        return this.DependencyTriggerPolicy;
+    }
+
+    /**
+     * Set 依赖策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DependencyTriggerPolicy 依赖策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDependencyTriggerPolicy(String DependencyTriggerPolicy) {
+        this.DependencyTriggerPolicy = DependencyTriggerPolicy;
+    }
+
     public TriggerTaskRunBrief() {
     }
 
@@ -1618,6 +1674,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
         }
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.ScheduleTime != null) {
+            this.ScheduleTime = new String(source.ScheduleTime);
         }
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
@@ -1739,6 +1798,9 @@ public class TriggerTaskRunBrief extends AbstractModel {
         if (source.ExecutionResult != null) {
             this.ExecutionResult = new String(source.ExecutionResult);
         }
+        if (source.DependencyTriggerPolicy != null) {
+            this.DependencyTriggerPolicy = new String(source.DependencyTriggerPolicy);
+        }
     }
 
 
@@ -1762,6 +1824,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
         this.setParamSimple(map, prefix + "CreaterUin", this.CreaterUin);
         this.setParamSimple(map, prefix + "JobId", this.JobId);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "ScheduleTime", this.ScheduleTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "DependenceFinishedTime", this.DependenceFinishedTime);
         this.setParamSimple(map, prefix + "QueueStartTime", this.QueueStartTime);
@@ -1801,6 +1864,7 @@ public class TriggerTaskRunBrief extends AbstractModel {
         this.setParamSimple(map, prefix + "SupportRerun", this.SupportRerun);
         this.setParamSimple(map, prefix + "WorkflowExecutionState", this.WorkflowExecutionState);
         this.setParamSimple(map, prefix + "ExecutionResult", this.ExecutionResult);
+        this.setParamSimple(map, prefix + "DependencyTriggerPolicy", this.DependencyTriggerPolicy);
 
     }
 }

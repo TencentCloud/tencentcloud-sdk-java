@@ -50,6 +50,17 @@ public class VclmClient extends AbstractClient{
     }
 
     /**
+     *查询生视频任务
+     * @param req DescribeAigcVideoJobRequest
+     * @return DescribeAigcVideoJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAigcVideoJobResponse DescribeAigcVideoJob(DescribeAigcVideoJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAigcVideoJob", DescribeAigcVideoJobResponse.class);
+    }
+
+    /**
      *通过JobId提交请求，获取人像驱动任务的结果信息。
      * @param req DescribeHumanActorJobRequest
      * @return DescribeHumanActorJobResponse
@@ -158,6 +169,17 @@ public class VclmClient extends AbstractClient{
     public DescribeVideoVoiceJobResponse DescribeVideoVoiceJob(DescribeVideoVoiceJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeVideoVoiceJob", DescribeVideoVoiceJobResponse.class);
+    }
+
+    /**
+     *提交生视频任务
+     * @param req SubmitAigcVideoJobRequest
+     * @return SubmitAigcVideoJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitAigcVideoJobResponse SubmitAigcVideoJob(SubmitAigcVideoJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitAigcVideoJob", SubmitAigcVideoJobResponse.class);
     }
 
     /**

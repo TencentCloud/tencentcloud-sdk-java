@@ -39,7 +39,7 @@ public class DescribeCreateMySQLResult extends AbstractModel {
     private String FailReason;
 
     /**
-    * 是否冻结
+    * 是否已被冻结（只在 Status=success时有效）
     */
     @SerializedName("FreezeStatus")
     @Expose
@@ -82,16 +82,16 @@ public class DescribeCreateMySQLResult extends AbstractModel {
     }
 
     /**
-     * Get 是否冻结 
-     * @return FreezeStatus 是否冻结
+     * Get 是否已被冻结（只在 Status=success时有效） 
+     * @return FreezeStatus 是否已被冻结（只在 Status=success时有效）
      */
     public Boolean getFreezeStatus() {
         return this.FreezeStatus;
     }
 
     /**
-     * Set 是否冻结
-     * @param FreezeStatus 是否冻结
+     * Set 是否已被冻结（只在 Status=success时有效）
+     * @param FreezeStatus 是否已被冻结（只在 Status=success时有效）
      */
     public void setFreezeStatus(Boolean FreezeStatus) {
         this.FreezeStatus = FreezeStatus;

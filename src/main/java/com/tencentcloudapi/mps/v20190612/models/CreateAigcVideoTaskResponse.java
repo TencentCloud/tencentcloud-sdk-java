@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class CreateAigcVideoTaskResponse extends AbstractModel {
 
     /**
-    * 任务创建成功后，返回的任务ID。
-调用查询接口，轮询获取任务进度及生成结果。
+    * <p>任务创建成功后，返回的任务ID。<br>调用查询接口，轮询获取任务进度及生成结果。</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -39,20 +38,16 @@ public class CreateAigcVideoTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务创建成功后，返回的任务ID。
-调用查询接口，轮询获取任务进度及生成结果。 
-     * @return TaskId 任务创建成功后，返回的任务ID。
-调用查询接口，轮询获取任务进度及生成结果。
+     * Get <p>任务创建成功后，返回的任务ID。<br>调用查询接口，轮询获取任务进度及生成结果。</p> 
+     * @return TaskId <p>任务创建成功后，返回的任务ID。<br>调用查询接口，轮询获取任务进度及生成结果。</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务创建成功后，返回的任务ID。
-调用查询接口，轮询获取任务进度及生成结果。
-     * @param TaskId 任务创建成功后，返回的任务ID。
-调用查询接口，轮询获取任务进度及生成结果。
+     * Set <p>任务创建成功后，返回的任务ID。<br>调用查询接口，轮询获取任务进度及生成结果。</p>
+     * @param TaskId <p>任务创建成功后，返回的任务ID。<br>调用查询接口，轮询获取任务进度及生成结果。</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

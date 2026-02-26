@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class LivenessCompareResponse extends AbstractModel {
 
     /**
-    * 验证通过后的视频最佳截图照片。
-- 照片为BASE64编码后的值，jpg格式。
+    * <p>验证通过后的视频最佳截图照片。</p><ul><li>照片为BASE64编码后的值，jpg格式。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BestFrameBase64")
@@ -33,33 +32,28 @@ public class LivenessCompareResponse extends AbstractModel {
     private String BestFrameBase64;
 
     /**
-    * 相似度。
-- 取值范围 [0.00, 100.00]。
-- 推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）。
+    * <p>相似度。- 取值范围 [0.00, 100.00]。- 推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为万分之一）。</p>
     */
     @SerializedName("Sim")
     @Expose
     private Float Sim;
 
     /**
-    * 业务错误码。
-- 成功情况返回Success。
-- 错误情况请参考下方错误码，列表中FailedOperation部分。
+    * <p>业务错误码。</p><ul><li>成功情况返回Success。</li><li>错误情况请参考下方错误码，列表中FailedOperation部分。</li></ul>
     */
     @SerializedName("Result")
     @Expose
     private String Result;
 
     /**
-    * 业务结果描述。
+    * <p>业务结果描述。</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 最佳截图列表。
-- 仅在配置了返回多张最佳截图时返回。
+    * <p>最佳截图列表。</p><ul><li>仅在配置了返回多张最佳截图时返回。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BestFrameList")
@@ -74,11 +68,9 @@ public class LivenessCompareResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 验证通过后的视频最佳截图照片。
-- 照片为BASE64编码后的值，jpg格式。
+     * Get <p>验证通过后的视频最佳截图照片。</p><ul><li>照片为BASE64编码后的值，jpg格式。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BestFrameBase64 验证通过后的视频最佳截图照片。
-- 照片为BASE64编码后的值，jpg格式。
+     * @return BestFrameBase64 <p>验证通过后的视频最佳截图照片。</p><ul><li>照片为BASE64编码后的值，jpg格式。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBestFrameBase64() {
@@ -86,11 +78,9 @@ public class LivenessCompareResponse extends AbstractModel {
     }
 
     /**
-     * Set 验证通过后的视频最佳截图照片。
-- 照片为BASE64编码后的值，jpg格式。
+     * Set <p>验证通过后的视频最佳截图照片。</p><ul><li>照片为BASE64编码后的值，jpg格式。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BestFrameBase64 验证通过后的视频最佳截图照片。
-- 照片为BASE64编码后的值，jpg格式。
+     * @param BestFrameBase64 <p>验证通过后的视频最佳截图照片。</p><ul><li>照片为BASE64编码后的值，jpg格式。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBestFrameBase64(String BestFrameBase64) {
@@ -98,75 +88,57 @@ public class LivenessCompareResponse extends AbstractModel {
     }
 
     /**
-     * Get 相似度。
-- 取值范围 [0.00, 100.00]。
-- 推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）。 
-     * @return Sim 相似度。
-- 取值范围 [0.00, 100.00]。
-- 推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）。
+     * Get <p>相似度。- 取值范围 [0.00, 100.00]。- 推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为万分之一）。</p> 
+     * @return Sim <p>相似度。- 取值范围 [0.00, 100.00]。- 推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为万分之一）。</p>
      */
     public Float getSim() {
         return this.Sim;
     }
 
     /**
-     * Set 相似度。
-- 取值范围 [0.00, 100.00]。
-- 推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）。
-     * @param Sim 相似度。
-- 取值范围 [0.00, 100.00]。
-- 推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）。
+     * Set <p>相似度。- 取值范围 [0.00, 100.00]。- 推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为万分之一）。</p>
+     * @param Sim <p>相似度。- 取值范围 [0.00, 100.00]。- 推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为万分之一）。</p>
      */
     public void setSim(Float Sim) {
         this.Sim = Sim;
     }
 
     /**
-     * Get 业务错误码。
-- 成功情况返回Success。
-- 错误情况请参考下方错误码，列表中FailedOperation部分。 
-     * @return Result 业务错误码。
-- 成功情况返回Success。
-- 错误情况请参考下方错误码，列表中FailedOperation部分。
+     * Get <p>业务错误码。</p><ul><li>成功情况返回Success。</li><li>错误情况请参考下方错误码，列表中FailedOperation部分。</li></ul> 
+     * @return Result <p>业务错误码。</p><ul><li>成功情况返回Success。</li><li>错误情况请参考下方错误码，列表中FailedOperation部分。</li></ul>
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set 业务错误码。
-- 成功情况返回Success。
-- 错误情况请参考下方错误码，列表中FailedOperation部分。
-     * @param Result 业务错误码。
-- 成功情况返回Success。
-- 错误情况请参考下方错误码，列表中FailedOperation部分。
+     * Set <p>业务错误码。</p><ul><li>成功情况返回Success。</li><li>错误情况请参考下方错误码，列表中FailedOperation部分。</li></ul>
+     * @param Result <p>业务错误码。</p><ul><li>成功情况返回Success。</li><li>错误情况请参考下方错误码，列表中FailedOperation部分。</li></ul>
      */
     public void setResult(String Result) {
         this.Result = Result;
     }
 
     /**
-     * Get 业务结果描述。 
-     * @return Description 业务结果描述。
+     * Get <p>业务结果描述。</p> 
+     * @return Description <p>业务结果描述。</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 业务结果描述。
-     * @param Description 业务结果描述。
+     * Set <p>业务结果描述。</p>
+     * @param Description <p>业务结果描述。</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 最佳截图列表。
-- 仅在配置了返回多张最佳截图时返回。
+     * Get <p>最佳截图列表。</p><ul><li>仅在配置了返回多张最佳截图时返回。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BestFrameList 最佳截图列表。
-- 仅在配置了返回多张最佳截图时返回。
+     * @return BestFrameList <p>最佳截图列表。</p><ul><li>仅在配置了返回多张最佳截图时返回。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getBestFrameList() {
@@ -174,11 +146,9 @@ public class LivenessCompareResponse extends AbstractModel {
     }
 
     /**
-     * Set 最佳截图列表。
-- 仅在配置了返回多张最佳截图时返回。
+     * Set <p>最佳截图列表。</p><ul><li>仅在配置了返回多张最佳截图时返回。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BestFrameList 最佳截图列表。
-- 仅在配置了返回多张最佳截图时返回。
+     * @param BestFrameList <p>最佳截图列表。</p><ul><li>仅在配置了返回多张最佳截图时返回。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBestFrameList(String [] BestFrameList) {

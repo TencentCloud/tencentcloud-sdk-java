@@ -543,6 +543,28 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *创建云联网策略路由下一跳
+     * @param req CreateCcnPolicyBasedRoutingNextHopRequest
+     * @return CreateCcnPolicyBasedRoutingNextHopResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCcnPolicyBasedRoutingNextHopResponse CreateCcnPolicyBasedRoutingNextHop(CreateCcnPolicyBasedRoutingNextHopRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCcnPolicyBasedRoutingNextHop", CreateCcnPolicyBasedRoutingNextHopResponse.class);
+    }
+
+    /**
+     *创建云联网策略路由匹配规则
+     * @param req CreateCcnPolicyBasedRoutingRulesRequest
+     * @return CreateCcnPolicyBasedRoutingRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCcnPolicyBasedRoutingRulesResponse CreateCcnPolicyBasedRoutingRules(CreateCcnPolicyBasedRoutingRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCcnPolicyBasedRoutingRules", CreateCcnPolicyBasedRoutingRulesResponse.class);
+    }
+
+    /**
      *本接口（CreateCcnRouteTables）用于给指定的云联网实例新建路由表。
      * @param req CreateCcnRouteTablesRequest
      * @return CreateCcnRouteTablesResponse
@@ -1267,6 +1289,28 @@ public class VpcClient extends AbstractClient{
     public DeleteCcnResponse DeleteCcn(DeleteCcnRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteCcn", DeleteCcnResponse.class);
+    }
+
+    /**
+     *删除云联网策略路由下一跳
+     * @param req DeleteCcnPolicyBasedRoutingNextHopRequest
+     * @return DeleteCcnPolicyBasedRoutingNextHopResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCcnPolicyBasedRoutingNextHopResponse DeleteCcnPolicyBasedRoutingNextHop(DeleteCcnPolicyBasedRoutingNextHopRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCcnPolicyBasedRoutingNextHop", DeleteCcnPolicyBasedRoutingNextHopResponse.class);
+    }
+
+    /**
+     *删除云联网策略路由匹配规则
+     * @param req DeleteCcnPolicyBasedRoutingRuleRequest
+     * @return DeleteCcnPolicyBasedRoutingRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCcnPolicyBasedRoutingRuleResponse DeleteCcnPolicyBasedRoutingRule(DeleteCcnPolicyBasedRoutingRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCcnPolicyBasedRoutingRule", DeleteCcnPolicyBasedRoutingRuleResponse.class);
     }
 
     /**
@@ -2022,6 +2066,28 @@ public class VpcClient extends AbstractClient{
     public DescribeCcnAttachedInstancesResponse DescribeCcnAttachedInstances(DescribeCcnAttachedInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCcnAttachedInstances", DescribeCcnAttachedInstancesResponse.class);
+    }
+
+    /**
+     *查询云联网策略路由下一跳
+     * @param req DescribeCcnPolicyBasedRoutingNextHopRequest
+     * @return DescribeCcnPolicyBasedRoutingNextHopResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCcnPolicyBasedRoutingNextHopResponse DescribeCcnPolicyBasedRoutingNextHop(DescribeCcnPolicyBasedRoutingNextHopRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCcnPolicyBasedRoutingNextHop", DescribeCcnPolicyBasedRoutingNextHopResponse.class);
+    }
+
+    /**
+     *查询云联网策略路由匹配规则
+     * @param req DescribeCcnPolicyBasedRoutingRuleRequest
+     * @return DescribeCcnPolicyBasedRoutingRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCcnPolicyBasedRoutingRuleResponse DescribeCcnPolicyBasedRoutingRule(DescribeCcnPolicyBasedRoutingRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCcnPolicyBasedRoutingRule", DescribeCcnPolicyBasedRoutingRuleResponse.class);
     }
 
     /**
@@ -3865,6 +3931,28 @@ LimitTypes取值范围：
     public ModifyCcnAttributeResponse ModifyCcnAttribute(ModifyCcnAttributeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyCcnAttribute", ModifyCcnAttributeResponse.class);
+    }
+
+    /**
+     *更新云联网策略路由下一跳参数
+     * @param req ModifyCcnPolicyBasedRoutingNextHopAttributeRequest
+     * @return ModifyCcnPolicyBasedRoutingNextHopAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCcnPolicyBasedRoutingNextHopAttributeResponse ModifyCcnPolicyBasedRoutingNextHopAttribute(ModifyCcnPolicyBasedRoutingNextHopAttributeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCcnPolicyBasedRoutingNextHopAttribute", ModifyCcnPolicyBasedRoutingNextHopAttributeResponse.class);
+    }
+
+    /**
+     *更新云联网策略路由匹配规则参数
+     * @param req ModifyCcnPolicyBasedRoutingRuleAttributeRequest
+     * @return ModifyCcnPolicyBasedRoutingRuleAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCcnPolicyBasedRoutingRuleAttributeResponse ModifyCcnPolicyBasedRoutingRuleAttribute(ModifyCcnPolicyBasedRoutingRuleAttributeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCcnPolicyBasedRoutingRuleAttribute", ModifyCcnPolicyBasedRoutingRuleAttributeResponse.class);
     }
 
     /**

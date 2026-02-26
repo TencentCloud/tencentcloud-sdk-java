@@ -88,6 +88,14 @@ public class TriggerWorkflowRunBrief extends AbstractModel {
     private String CreateTime;
 
     /**
+    * 计划调度时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScheduleTime")
+    @Expose
+    private String ScheduleTime;
+
+    /**
     * 执行开始时间戳
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -429,6 +437,26 @@ public class TriggerWorkflowRunBrief extends AbstractModel {
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get 计划调度时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScheduleTime 计划调度时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getScheduleTime() {
+        return this.ScheduleTime;
+    }
+
+    /**
+     * Set 计划调度时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScheduleTime 计划调度时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScheduleTime(String ScheduleTime) {
+        this.ScheduleTime = ScheduleTime;
     }
 
     /**
@@ -923,6 +951,9 @@ public class TriggerWorkflowRunBrief extends AbstractModel {
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.ScheduleTime != null) {
+            this.ScheduleTime = new String(source.ScheduleTime);
+        }
         if (source.ExecutionStartTime != null) {
             this.ExecutionStartTime = new String(source.ExecutionStartTime);
         }
@@ -1010,6 +1041,7 @@ public class TriggerWorkflowRunBrief extends AbstractModel {
         this.setParamSimple(map, prefix + "TriggerId", this.TriggerId);
         this.setParamSimple(map, prefix + "TriggerType", this.TriggerType);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "ScheduleTime", this.ScheduleTime);
         this.setParamSimple(map, prefix + "ExecutionStartTime", this.ExecutionStartTime);
         this.setParamSimple(map, prefix + "ExecutionEndTime", this.ExecutionEndTime);
         this.setParamSimple(map, prefix + "ExecutionCostTime", this.ExecutionCostTime);

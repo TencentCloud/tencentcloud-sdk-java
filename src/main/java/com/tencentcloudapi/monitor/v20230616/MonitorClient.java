@@ -50,6 +50,17 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *删除通知内容模板
+     * @param req DeleteNoticeContentTmplsRequest
+     * @return DeleteNoticeContentTmplsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteNoticeContentTmplsResponse DeleteNoticeContentTmpls(DeleteNoticeContentTmplsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteNoticeContentTmpls", DeleteNoticeContentTmplsResponse.class);
+    }
+
+    /**
      *按需查询告警的通知历史
      * @param req DescribeAlarmNotifyHistoriesRequest
      * @return DescribeAlarmNotifyHistoriesResponse
@@ -58,6 +69,28 @@ public class MonitorClient extends AbstractClient{
     public DescribeAlarmNotifyHistoriesResponse DescribeAlarmNotifyHistories(DescribeAlarmNotifyHistoriesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAlarmNotifyHistories", DescribeAlarmNotifyHistoriesResponse.class);
+    }
+
+    /**
+     *根据查询条件获取自定义通知内容模板，若所有查询条件空，则获取账号下所有模板
+     * @param req DescribeNoticeContentTmplRequest
+     * @return DescribeNoticeContentTmplResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNoticeContentTmplResponse DescribeNoticeContentTmpl(DescribeNoticeContentTmplRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeNoticeContentTmpl", DescribeNoticeContentTmplResponse.class);
+    }
+
+    /**
+     *修改通知内容模板
+     * @param req ModifyNoticeContentTmplRequest
+     * @return ModifyNoticeContentTmplResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNoticeContentTmplResponse ModifyNoticeContentTmpl(ModifyNoticeContentTmplRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyNoticeContentTmpl", ModifyNoticeContentTmplResponse.class);
     }
 
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateAigcImageTaskResponse extends AbstractModel {
 
     /**
-    * 任务 ID。
+    * <p>任务 ID。</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateAigcImageTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务 ID。 
-     * @return TaskId 任务 ID。
+     * Get <p>任务 ID。</p> 
+     * @return TaskId <p>任务 ID。</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务 ID。
-     * @param TaskId 任务 ID。
+     * Set <p>任务 ID。</p>
+     * @param TaskId <p>任务 ID。</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

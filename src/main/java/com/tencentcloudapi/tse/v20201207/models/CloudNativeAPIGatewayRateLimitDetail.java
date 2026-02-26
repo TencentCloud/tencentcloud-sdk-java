@@ -67,6 +67,13 @@ ip service consumer credential path header
     private ExternalRedis ExternalRedis;
 
     /**
+    * 全局配置中的redis配置
+    */
+    @SerializedName("GlobalConfigId")
+    @Expose
+    private String GlobalConfigId;
+
+    /**
     * 计数器策略 
 local 单机
 redis  默认redis
@@ -238,6 +245,22 @@ ip service consumer credential path header
      */
     public void setExternalRedis(ExternalRedis ExternalRedis) {
         this.ExternalRedis = ExternalRedis;
+    }
+
+    /**
+     * Get 全局配置中的redis配置 
+     * @return GlobalConfigId 全局配置中的redis配置
+     */
+    public String getGlobalConfigId() {
+        return this.GlobalConfigId;
+    }
+
+    /**
+     * Set 全局配置中的redis配置
+     * @param GlobalConfigId 全局配置中的redis配置
+     */
+    public void setGlobalConfigId(String GlobalConfigId) {
+        this.GlobalConfigId = GlobalConfigId;
     }
 
     /**
@@ -457,6 +480,9 @@ default 直接返回
         if (source.ExternalRedis != null) {
             this.ExternalRedis = new ExternalRedis(source.ExternalRedis);
         }
+        if (source.GlobalConfigId != null) {
+            this.GlobalConfigId = new String(source.GlobalConfigId);
+        }
         if (source.Policy != null) {
             this.Policy = new String(source.Policy);
         }
@@ -503,6 +529,7 @@ default 直接返回
         this.setParamSimple(map, prefix + "Header", this.Header);
         this.setParamSimple(map, prefix + "LimitBy", this.LimitBy);
         this.setParamObj(map, prefix + "ExternalRedis.", this.ExternalRedis);
+        this.setParamSimple(map, prefix + "GlobalConfigId", this.GlobalConfigId);
         this.setParamSimple(map, prefix + "Policy", this.Policy);
         this.setParamObj(map, prefix + "RateLimitResponse.", this.RateLimitResponse);
         this.setParamSimple(map, prefix + "RateLimitResponseUrl", this.RateLimitResponseUrl);

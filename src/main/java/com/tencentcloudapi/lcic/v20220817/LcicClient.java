@@ -748,6 +748,17 @@ public class LcicClient extends AbstractClient{
     }
 
     /**
+     *使用源账号登录课堂，源账号为注册时填入的originId
+     * @param req LoginOriginIdWithRoomRequest
+     * @return LoginOriginIdWithRoomResponse
+     * @throws TencentCloudSDKException
+     */
+    public LoginOriginIdWithRoomResponse LoginOriginIdWithRoom(LoginOriginIdWithRoomRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "LoginOriginIdWithRoom", LoginOriginIdWithRoomResponse.class);
+    }
+
+    /**
      *登录
      * @param req LoginUserRequest
      * @return LoginUserResponse
@@ -756,6 +767,17 @@ public class LcicClient extends AbstractClient{
     public LoginUserResponse LoginUser(LoginUserRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "LoginUser", LoginUserResponse.class);
+    }
+
+    /**
+     *登录课堂
+     * @param req LoginUserWithRoomRequest
+     * @return LoginUserWithRoomResponse
+     * @throws TencentCloudSDKException
+     */
+    public LoginUserWithRoomResponse LoginUserWithRoom(LoginUserWithRoomRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "LoginUserWithRoom", LoginUserWithRoomResponse.class);
     }
 
     /**

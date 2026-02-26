@@ -24,248 +24,141 @@ import java.util.HashMap;
 public class AigcVideoExtraParam extends AbstractModel {
 
     /**
-    * 生成视频的分辨率，分辨率与选择模型及设置的视频时长相关。 
-
-不同模型支持的分辨率选项:
-1. Kling 720P(默认), 1080P。
-2. Hailuo 768P(默认), 1080P。
-3. Vidu 720P(默认)，1080P。
-4. GV 720P(默认),1080P。
-5. OS 720P, 图片仅支持1280x720、720x1280，暂不支持指定。
-
-注意：除模型可支持的分辨率外，还可以生成 2K、4K分辨率。
+    * <p>生成视频的分辨率，分辨率与选择模型及设置的视频时长相关。 </p><p>不同模型支持的分辨率选项:</p><ol><li>Kling 720P(默认), 1080P。</li><li>Hailuo 768P(默认), 1080P。</li><li>Vidu 720P(默认)，1080P。</li><li>GV 720P(默认),1080P。</li><li>OS 720P, 图片仅支持1280x720、720x1280，暂不支持指定。</li></ol><p>注意：除模型可支持的分辨率外，还可以生成 2K、4K分辨率。</p>
     */
     @SerializedName("Resolution")
     @Expose
     private String Resolution;
 
     /**
-    * 指定所生成视频的宽高比。 
-
-不同模型对于此参数的支持：
-1. Kling 仅文生视频支持, 16:9(默认值)、9:16、 1:1。
-2. Hailuo 暂不支持。
-3. Vidu 仅文生和参考图生视频 支持[16:9、9:16、4:3、3:4、1:1]，其中仅q2支持4:3、3:4。
-4. GV 16:9(默认值)、9:16。
-5. OS 仅文生视频支持, 16:9(默认), 9:16。
-
-注：关于具体模型支持的宽高比例，可查看具体模型官网介绍获取更完整描述。
+    * <p>指定所生成视频的宽高比。 </p><p>不同模型对于此参数的支持：</p><ol><li>Kling 仅文生视频支持, 16:9(默认值)、9:16、 1:1。</li><li>Hailuo 暂不支持。</li><li>Vidu 仅文生和参考图生视频 支持[16:9、9:16、4:3、3:4、1:1]，其中仅q2支持4:3、3:4。</li><li>GV 16:9(默认值)、9:16。</li><li>OS 仅文生视频支持, 16:9(默认), 9:16。</li></ol><p>注：关于具体模型支持的宽高比例，可查看具体模型官网介绍获取更完整描述。</p>
     */
     @SerializedName("AspectRatio")
     @Expose
     private String AspectRatio;
 
     /**
-    * 是否添加图标水印。
-1. Hailuo 支持此参数。
-2. Kling 支持此参数。
-3. Vidu 支持此参数。
+    * <p>是否添加图标水印。</p><ol><li>Hailuo 支持此参数。</li><li>Kling 支持此参数。</li><li>Vidu 支持此参数。</li></ol>
     */
     @SerializedName("LogoAdd")
     @Expose
     private Long LogoAdd;
 
     /**
-    * 为视频生成音频。接受的值包括 true 或 false。 
-
-支持此参数的模型：
-1. GV，默认true。
-2. OS，默认true。
+    * <p>为视频生成音频。接受的值包括 true 或 false。 </p><p>支持此参数的模型：</p><ol><li>GV，默认true。</li><li>OS，默认true。</li></ol>
     */
     @SerializedName("EnableAudio")
     @Expose
     private Boolean EnableAudio;
 
     /**
-    * 错峰模型，目前仅支持Vidu模型。
-错峰模式下提交的任务，会在48小时内生成，未能完成的任务会被自动取消。
+    * <p>错峰模型，目前仅支持Vidu模型。<br>错峰模式下提交的任务，会在48小时内生成，未能完成的任务会被自动取消。</p>
     */
     @SerializedName("OffPeak")
     @Expose
     private Boolean OffPeak;
 
     /**
-     * Get 生成视频的分辨率，分辨率与选择模型及设置的视频时长相关。 
+    * <p>是否为生成的视频添加背景音乐。默认：false，可选值 true 、false。<br>注意：部分模型的版本支持。</p>
+    */
+    @SerializedName("EnableBgm")
+    @Expose
+    private Boolean EnableBgm;
 
-不同模型支持的分辨率选项:
-1. Kling 720P(默认), 1080P。
-2. Hailuo 768P(默认), 1080P。
-3. Vidu 720P(默认)，1080P。
-4. GV 720P(默认),1080P。
-5. OS 720P, 图片仅支持1280x720、720x1280，暂不支持指定。
-
-注意：除模型可支持的分辨率外，还可以生成 2K、4K分辨率。 
-     * @return Resolution 生成视频的分辨率，分辨率与选择模型及设置的视频时长相关。 
-
-不同模型支持的分辨率选项:
-1. Kling 720P(默认), 1080P。
-2. Hailuo 768P(默认), 1080P。
-3. Vidu 720P(默认)，1080P。
-4. GV 720P(默认),1080P。
-5. OS 720P, 图片仅支持1280x720、720x1280，暂不支持指定。
-
-注意：除模型可支持的分辨率外，还可以生成 2K、4K分辨率。
+    /**
+     * Get <p>生成视频的分辨率，分辨率与选择模型及设置的视频时长相关。 </p><p>不同模型支持的分辨率选项:</p><ol><li>Kling 720P(默认), 1080P。</li><li>Hailuo 768P(默认), 1080P。</li><li>Vidu 720P(默认)，1080P。</li><li>GV 720P(默认),1080P。</li><li>OS 720P, 图片仅支持1280x720、720x1280，暂不支持指定。</li></ol><p>注意：除模型可支持的分辨率外，还可以生成 2K、4K分辨率。</p> 
+     * @return Resolution <p>生成视频的分辨率，分辨率与选择模型及设置的视频时长相关。 </p><p>不同模型支持的分辨率选项:</p><ol><li>Kling 720P(默认), 1080P。</li><li>Hailuo 768P(默认), 1080P。</li><li>Vidu 720P(默认)，1080P。</li><li>GV 720P(默认),1080P。</li><li>OS 720P, 图片仅支持1280x720、720x1280，暂不支持指定。</li></ol><p>注意：除模型可支持的分辨率外，还可以生成 2K、4K分辨率。</p>
      */
     public String getResolution() {
         return this.Resolution;
     }
 
     /**
-     * Set 生成视频的分辨率，分辨率与选择模型及设置的视频时长相关。 
-
-不同模型支持的分辨率选项:
-1. Kling 720P(默认), 1080P。
-2. Hailuo 768P(默认), 1080P。
-3. Vidu 720P(默认)，1080P。
-4. GV 720P(默认),1080P。
-5. OS 720P, 图片仅支持1280x720、720x1280，暂不支持指定。
-
-注意：除模型可支持的分辨率外，还可以生成 2K、4K分辨率。
-     * @param Resolution 生成视频的分辨率，分辨率与选择模型及设置的视频时长相关。 
-
-不同模型支持的分辨率选项:
-1. Kling 720P(默认), 1080P。
-2. Hailuo 768P(默认), 1080P。
-3. Vidu 720P(默认)，1080P。
-4. GV 720P(默认),1080P。
-5. OS 720P, 图片仅支持1280x720、720x1280，暂不支持指定。
-
-注意：除模型可支持的分辨率外，还可以生成 2K、4K分辨率。
+     * Set <p>生成视频的分辨率，分辨率与选择模型及设置的视频时长相关。 </p><p>不同模型支持的分辨率选项:</p><ol><li>Kling 720P(默认), 1080P。</li><li>Hailuo 768P(默认), 1080P。</li><li>Vidu 720P(默认)，1080P。</li><li>GV 720P(默认),1080P。</li><li>OS 720P, 图片仅支持1280x720、720x1280，暂不支持指定。</li></ol><p>注意：除模型可支持的分辨率外，还可以生成 2K、4K分辨率。</p>
+     * @param Resolution <p>生成视频的分辨率，分辨率与选择模型及设置的视频时长相关。 </p><p>不同模型支持的分辨率选项:</p><ol><li>Kling 720P(默认), 1080P。</li><li>Hailuo 768P(默认), 1080P。</li><li>Vidu 720P(默认)，1080P。</li><li>GV 720P(默认),1080P。</li><li>OS 720P, 图片仅支持1280x720、720x1280，暂不支持指定。</li></ol><p>注意：除模型可支持的分辨率外，还可以生成 2K、4K分辨率。</p>
      */
     public void setResolution(String Resolution) {
         this.Resolution = Resolution;
     }
 
     /**
-     * Get 指定所生成视频的宽高比。 
-
-不同模型对于此参数的支持：
-1. Kling 仅文生视频支持, 16:9(默认值)、9:16、 1:1。
-2. Hailuo 暂不支持。
-3. Vidu 仅文生和参考图生视频 支持[16:9、9:16、4:3、3:4、1:1]，其中仅q2支持4:3、3:4。
-4. GV 16:9(默认值)、9:16。
-5. OS 仅文生视频支持, 16:9(默认), 9:16。
-
-注：关于具体模型支持的宽高比例，可查看具体模型官网介绍获取更完整描述。 
-     * @return AspectRatio 指定所生成视频的宽高比。 
-
-不同模型对于此参数的支持：
-1. Kling 仅文生视频支持, 16:9(默认值)、9:16、 1:1。
-2. Hailuo 暂不支持。
-3. Vidu 仅文生和参考图生视频 支持[16:9、9:16、4:3、3:4、1:1]，其中仅q2支持4:3、3:4。
-4. GV 16:9(默认值)、9:16。
-5. OS 仅文生视频支持, 16:9(默认), 9:16。
-
-注：关于具体模型支持的宽高比例，可查看具体模型官网介绍获取更完整描述。
+     * Get <p>指定所生成视频的宽高比。 </p><p>不同模型对于此参数的支持：</p><ol><li>Kling 仅文生视频支持, 16:9(默认值)、9:16、 1:1。</li><li>Hailuo 暂不支持。</li><li>Vidu 仅文生和参考图生视频 支持[16:9、9:16、4:3、3:4、1:1]，其中仅q2支持4:3、3:4。</li><li>GV 16:9(默认值)、9:16。</li><li>OS 仅文生视频支持, 16:9(默认), 9:16。</li></ol><p>注：关于具体模型支持的宽高比例，可查看具体模型官网介绍获取更完整描述。</p> 
+     * @return AspectRatio <p>指定所生成视频的宽高比。 </p><p>不同模型对于此参数的支持：</p><ol><li>Kling 仅文生视频支持, 16:9(默认值)、9:16、 1:1。</li><li>Hailuo 暂不支持。</li><li>Vidu 仅文生和参考图生视频 支持[16:9、9:16、4:3、3:4、1:1]，其中仅q2支持4:3、3:4。</li><li>GV 16:9(默认值)、9:16。</li><li>OS 仅文生视频支持, 16:9(默认), 9:16。</li></ol><p>注：关于具体模型支持的宽高比例，可查看具体模型官网介绍获取更完整描述。</p>
      */
     public String getAspectRatio() {
         return this.AspectRatio;
     }
 
     /**
-     * Set 指定所生成视频的宽高比。 
-
-不同模型对于此参数的支持：
-1. Kling 仅文生视频支持, 16:9(默认值)、9:16、 1:1。
-2. Hailuo 暂不支持。
-3. Vidu 仅文生和参考图生视频 支持[16:9、9:16、4:3、3:4、1:1]，其中仅q2支持4:3、3:4。
-4. GV 16:9(默认值)、9:16。
-5. OS 仅文生视频支持, 16:9(默认), 9:16。
-
-注：关于具体模型支持的宽高比例，可查看具体模型官网介绍获取更完整描述。
-     * @param AspectRatio 指定所生成视频的宽高比。 
-
-不同模型对于此参数的支持：
-1. Kling 仅文生视频支持, 16:9(默认值)、9:16、 1:1。
-2. Hailuo 暂不支持。
-3. Vidu 仅文生和参考图生视频 支持[16:9、9:16、4:3、3:4、1:1]，其中仅q2支持4:3、3:4。
-4. GV 16:9(默认值)、9:16。
-5. OS 仅文生视频支持, 16:9(默认), 9:16。
-
-注：关于具体模型支持的宽高比例，可查看具体模型官网介绍获取更完整描述。
+     * Set <p>指定所生成视频的宽高比。 </p><p>不同模型对于此参数的支持：</p><ol><li>Kling 仅文生视频支持, 16:9(默认值)、9:16、 1:1。</li><li>Hailuo 暂不支持。</li><li>Vidu 仅文生和参考图生视频 支持[16:9、9:16、4:3、3:4、1:1]，其中仅q2支持4:3、3:4。</li><li>GV 16:9(默认值)、9:16。</li><li>OS 仅文生视频支持, 16:9(默认), 9:16。</li></ol><p>注：关于具体模型支持的宽高比例，可查看具体模型官网介绍获取更完整描述。</p>
+     * @param AspectRatio <p>指定所生成视频的宽高比。 </p><p>不同模型对于此参数的支持：</p><ol><li>Kling 仅文生视频支持, 16:9(默认值)、9:16、 1:1。</li><li>Hailuo 暂不支持。</li><li>Vidu 仅文生和参考图生视频 支持[16:9、9:16、4:3、3:4、1:1]，其中仅q2支持4:3、3:4。</li><li>GV 16:9(默认值)、9:16。</li><li>OS 仅文生视频支持, 16:9(默认), 9:16。</li></ol><p>注：关于具体模型支持的宽高比例，可查看具体模型官网介绍获取更完整描述。</p>
      */
     public void setAspectRatio(String AspectRatio) {
         this.AspectRatio = AspectRatio;
     }
 
     /**
-     * Get 是否添加图标水印。
-1. Hailuo 支持此参数。
-2. Kling 支持此参数。
-3. Vidu 支持此参数。 
-     * @return LogoAdd 是否添加图标水印。
-1. Hailuo 支持此参数。
-2. Kling 支持此参数。
-3. Vidu 支持此参数。
+     * Get <p>是否添加图标水印。</p><ol><li>Hailuo 支持此参数。</li><li>Kling 支持此参数。</li><li>Vidu 支持此参数。</li></ol> 
+     * @return LogoAdd <p>是否添加图标水印。</p><ol><li>Hailuo 支持此参数。</li><li>Kling 支持此参数。</li><li>Vidu 支持此参数。</li></ol>
      */
     public Long getLogoAdd() {
         return this.LogoAdd;
     }
 
     /**
-     * Set 是否添加图标水印。
-1. Hailuo 支持此参数。
-2. Kling 支持此参数。
-3. Vidu 支持此参数。
-     * @param LogoAdd 是否添加图标水印。
-1. Hailuo 支持此参数。
-2. Kling 支持此参数。
-3. Vidu 支持此参数。
+     * Set <p>是否添加图标水印。</p><ol><li>Hailuo 支持此参数。</li><li>Kling 支持此参数。</li><li>Vidu 支持此参数。</li></ol>
+     * @param LogoAdd <p>是否添加图标水印。</p><ol><li>Hailuo 支持此参数。</li><li>Kling 支持此参数。</li><li>Vidu 支持此参数。</li></ol>
      */
     public void setLogoAdd(Long LogoAdd) {
         this.LogoAdd = LogoAdd;
     }
 
     /**
-     * Get 为视频生成音频。接受的值包括 true 或 false。 
-
-支持此参数的模型：
-1. GV，默认true。
-2. OS，默认true。 
-     * @return EnableAudio 为视频生成音频。接受的值包括 true 或 false。 
-
-支持此参数的模型：
-1. GV，默认true。
-2. OS，默认true。
+     * Get <p>为视频生成音频。接受的值包括 true 或 false。 </p><p>支持此参数的模型：</p><ol><li>GV，默认true。</li><li>OS，默认true。</li></ol> 
+     * @return EnableAudio <p>为视频生成音频。接受的值包括 true 或 false。 </p><p>支持此参数的模型：</p><ol><li>GV，默认true。</li><li>OS，默认true。</li></ol>
      */
     public Boolean getEnableAudio() {
         return this.EnableAudio;
     }
 
     /**
-     * Set 为视频生成音频。接受的值包括 true 或 false。 
-
-支持此参数的模型：
-1. GV，默认true。
-2. OS，默认true。
-     * @param EnableAudio 为视频生成音频。接受的值包括 true 或 false。 
-
-支持此参数的模型：
-1. GV，默认true。
-2. OS，默认true。
+     * Set <p>为视频生成音频。接受的值包括 true 或 false。 </p><p>支持此参数的模型：</p><ol><li>GV，默认true。</li><li>OS，默认true。</li></ol>
+     * @param EnableAudio <p>为视频生成音频。接受的值包括 true 或 false。 </p><p>支持此参数的模型：</p><ol><li>GV，默认true。</li><li>OS，默认true。</li></ol>
      */
     public void setEnableAudio(Boolean EnableAudio) {
         this.EnableAudio = EnableAudio;
     }
 
     /**
-     * Get 错峰模型，目前仅支持Vidu模型。
-错峰模式下提交的任务，会在48小时内生成，未能完成的任务会被自动取消。 
-     * @return OffPeak 错峰模型，目前仅支持Vidu模型。
-错峰模式下提交的任务，会在48小时内生成，未能完成的任务会被自动取消。
+     * Get <p>错峰模型，目前仅支持Vidu模型。<br>错峰模式下提交的任务，会在48小时内生成，未能完成的任务会被自动取消。</p> 
+     * @return OffPeak <p>错峰模型，目前仅支持Vidu模型。<br>错峰模式下提交的任务，会在48小时内生成，未能完成的任务会被自动取消。</p>
      */
     public Boolean getOffPeak() {
         return this.OffPeak;
     }
 
     /**
-     * Set 错峰模型，目前仅支持Vidu模型。
-错峰模式下提交的任务，会在48小时内生成，未能完成的任务会被自动取消。
-     * @param OffPeak 错峰模型，目前仅支持Vidu模型。
-错峰模式下提交的任务，会在48小时内生成，未能完成的任务会被自动取消。
+     * Set <p>错峰模型，目前仅支持Vidu模型。<br>错峰模式下提交的任务，会在48小时内生成，未能完成的任务会被自动取消。</p>
+     * @param OffPeak <p>错峰模型，目前仅支持Vidu模型。<br>错峰模式下提交的任务，会在48小时内生成，未能完成的任务会被自动取消。</p>
      */
     public void setOffPeak(Boolean OffPeak) {
         this.OffPeak = OffPeak;
+    }
+
+    /**
+     * Get <p>是否为生成的视频添加背景音乐。默认：false，可选值 true 、false。<br>注意：部分模型的版本支持。</p> 
+     * @return EnableBgm <p>是否为生成的视频添加背景音乐。默认：false，可选值 true 、false。<br>注意：部分模型的版本支持。</p>
+     */
+    public Boolean getEnableBgm() {
+        return this.EnableBgm;
+    }
+
+    /**
+     * Set <p>是否为生成的视频添加背景音乐。默认：false，可选值 true 、false。<br>注意：部分模型的版本支持。</p>
+     * @param EnableBgm <p>是否为生成的视频添加背景音乐。默认：false，可选值 true 、false。<br>注意：部分模型的版本支持。</p>
+     */
+    public void setEnableBgm(Boolean EnableBgm) {
+        this.EnableBgm = EnableBgm;
     }
 
     public AigcVideoExtraParam() {
@@ -291,6 +184,9 @@ public class AigcVideoExtraParam extends AbstractModel {
         if (source.OffPeak != null) {
             this.OffPeak = new Boolean(source.OffPeak);
         }
+        if (source.EnableBgm != null) {
+            this.EnableBgm = new Boolean(source.EnableBgm);
+        }
     }
 
 
@@ -303,6 +199,7 @@ public class AigcVideoExtraParam extends AbstractModel {
         this.setParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
         this.setParamSimple(map, prefix + "EnableAudio", this.EnableAudio);
         this.setParamSimple(map, prefix + "OffPeak", this.OffPeak);
+        this.setParamSimple(map, prefix + "EnableBgm", this.EnableBgm);
 
     }
 }
