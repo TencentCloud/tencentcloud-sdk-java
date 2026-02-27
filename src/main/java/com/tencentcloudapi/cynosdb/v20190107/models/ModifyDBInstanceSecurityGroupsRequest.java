@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel {
 
     /**
-    * 网络组id(cynosdbmysql-grp-前缀开头)或集群id
+    * 网络组id(cynosdbmysql-grp-前缀开头)或集群id（例如 cynosdbmysql-xxxxxxxx前缀）,当通过实例IP地址三元组（UniqVpcId、Vip、Vport）配置安全组时，该字段必须设置为集群ID（例如 cynosdbmysql-xxxxxxxx前缀）。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -46,16 +46,37 @@ public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel {
     private String Zone;
 
     /**
-     * Get 网络组id(cynosdbmysql-grp-前缀开头)或集群id 
-     * @return InstanceId 网络组id(cynosdbmysql-grp-前缀开头)或集群id
+    * 实例所属VPC网络ID,（UniqVpcId、Vip 和 Vport 三个参数需同时指定，用于唯一标识网络实例）
+    */
+    @SerializedName("UniqVpcId")
+    @Expose
+    private String UniqVpcId;
+
+    /**
+    * 实例IP地址,实例IP地址三元组UniqVpcId、Vip 和 Vport) 三个参数需同时指定，用于唯一标识网络实实例
+    */
+    @SerializedName("Vip")
+    @Expose
+    private String Vip;
+
+    /**
+    * 实例端口,实例IP地址三元组UniqVpcId、Vip 和 Vport) 三个参数需同时指定，用于唯一标识网络实实例
+    */
+    @SerializedName("Vport")
+    @Expose
+    private Long Vport;
+
+    /**
+     * Get 网络组id(cynosdbmysql-grp-前缀开头)或集群id（例如 cynosdbmysql-xxxxxxxx前缀）,当通过实例IP地址三元组（UniqVpcId、Vip、Vport）配置安全组时，该字段必须设置为集群ID（例如 cynosdbmysql-xxxxxxxx前缀）。 
+     * @return InstanceId 网络组id(cynosdbmysql-grp-前缀开头)或集群id（例如 cynosdbmysql-xxxxxxxx前缀）,当通过实例IP地址三元组（UniqVpcId、Vip、Vport）配置安全组时，该字段必须设置为集群ID（例如 cynosdbmysql-xxxxxxxx前缀）。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 网络组id(cynosdbmysql-grp-前缀开头)或集群id
-     * @param InstanceId 网络组id(cynosdbmysql-grp-前缀开头)或集群id
+     * Set 网络组id(cynosdbmysql-grp-前缀开头)或集群id（例如 cynosdbmysql-xxxxxxxx前缀）,当通过实例IP地址三元组（UniqVpcId、Vip、Vport）配置安全组时，该字段必须设置为集群ID（例如 cynosdbmysql-xxxxxxxx前缀）。
+     * @param InstanceId 网络组id(cynosdbmysql-grp-前缀开头)或集群id（例如 cynosdbmysql-xxxxxxxx前缀）,当通过实例IP地址三元组（UniqVpcId、Vip、Vport）配置安全组时，该字段必须设置为集群ID（例如 cynosdbmysql-xxxxxxxx前缀）。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -97,6 +118,54 @@ public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel {
         this.Zone = Zone;
     }
 
+    /**
+     * Get 实例所属VPC网络ID,（UniqVpcId、Vip 和 Vport 三个参数需同时指定，用于唯一标识网络实例） 
+     * @return UniqVpcId 实例所属VPC网络ID,（UniqVpcId、Vip 和 Vport 三个参数需同时指定，用于唯一标识网络实例）
+     */
+    public String getUniqVpcId() {
+        return this.UniqVpcId;
+    }
+
+    /**
+     * Set 实例所属VPC网络ID,（UniqVpcId、Vip 和 Vport 三个参数需同时指定，用于唯一标识网络实例）
+     * @param UniqVpcId 实例所属VPC网络ID,（UniqVpcId、Vip 和 Vport 三个参数需同时指定，用于唯一标识网络实例）
+     */
+    public void setUniqVpcId(String UniqVpcId) {
+        this.UniqVpcId = UniqVpcId;
+    }
+
+    /**
+     * Get 实例IP地址,实例IP地址三元组UniqVpcId、Vip 和 Vport) 三个参数需同时指定，用于唯一标识网络实实例 
+     * @return Vip 实例IP地址,实例IP地址三元组UniqVpcId、Vip 和 Vport) 三个参数需同时指定，用于唯一标识网络实实例
+     */
+    public String getVip() {
+        return this.Vip;
+    }
+
+    /**
+     * Set 实例IP地址,实例IP地址三元组UniqVpcId、Vip 和 Vport) 三个参数需同时指定，用于唯一标识网络实实例
+     * @param Vip 实例IP地址,实例IP地址三元组UniqVpcId、Vip 和 Vport) 三个参数需同时指定，用于唯一标识网络实实例
+     */
+    public void setVip(String Vip) {
+        this.Vip = Vip;
+    }
+
+    /**
+     * Get 实例端口,实例IP地址三元组UniqVpcId、Vip 和 Vport) 三个参数需同时指定，用于唯一标识网络实实例 
+     * @return Vport 实例端口,实例IP地址三元组UniqVpcId、Vip 和 Vport) 三个参数需同时指定，用于唯一标识网络实实例
+     */
+    public Long getVport() {
+        return this.Vport;
+    }
+
+    /**
+     * Set 实例端口,实例IP地址三元组UniqVpcId、Vip 和 Vport) 三个参数需同时指定，用于唯一标识网络实实例
+     * @param Vport 实例端口,实例IP地址三元组UniqVpcId、Vip 和 Vport) 三个参数需同时指定，用于唯一标识网络实实例
+     */
+    public void setVport(Long Vport) {
+        this.Vport = Vport;
+    }
+
     public ModifyDBInstanceSecurityGroupsRequest() {
     }
 
@@ -117,6 +186,15 @@ public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel {
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
         }
+        if (source.UniqVpcId != null) {
+            this.UniqVpcId = new String(source.UniqVpcId);
+        }
+        if (source.Vip != null) {
+            this.Vip = new String(source.Vip);
+        }
+        if (source.Vport != null) {
+            this.Vport = new Long(source.Vport);
+        }
     }
 
 
@@ -127,6 +205,9 @@ public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
+        this.setParamSimple(map, prefix + "Vip", this.Vip);
+        this.setParamSimple(map, prefix + "Vport", this.Vport);
 
     }
 }

@@ -24,249 +24,238 @@ import java.util.HashMap;
 public class DBInstance extends AbstractModel {
 
     /**
-    * 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段。
+    * <p>实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段。</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 实例所属可用区， 如：ap-guangzhou-3，对应ZoneSet的Zone字段。
+    * <p>实例所属可用区， 如：ap-guangzhou-3，对应ZoneSet的Zone字段。</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 私有网络ID，形如vpc-e6w23k31。有效的VpcId可通过登录控制台查询；也可以调用接口 [DescribeVpcs](https://cloud.tencent.com/document/api/215/15778) ，从接口返回中的unVpcId字段获取。
+    * <p>私有网络ID，形如vpc-e6w23k31。有效的VpcId可通过登录控制台查询；也可以调用接口 <a href="https://cloud.tencent.com/document/api/215/15778">DescribeVpcs</a> ，从接口返回中的unVpcId字段获取。</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 私有网络子网ID，形如subnet-51lcif9y。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 [DescribeSubnets ](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的unSubnetId字段获取。
+    * <p>私有网络子网ID，形如subnet-51lcif9y。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 <a href="https://cloud.tencent.com/document/api/215/15784">DescribeSubnets </a>，从接口返回中的unSubnetId字段获取。</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 实例ID。
+    * <p>实例ID。</p>
     */
     @SerializedName("DBInstanceId")
     @Expose
     private String DBInstanceId;
 
     /**
-    * 实例名称。
+    * <p>实例名称。</p>
     */
     @SerializedName("DBInstanceName")
     @Expose
     private String DBInstanceName;
 
     /**
-    * 实例状态，分别为：applying（申请中）、init(待初始化)、initing(初始化中)、running(运行中)、limited run（受限运行）、isolating（隔离中）、isolated（已隔离）、disisolating（解隔离中）、recycling（回收中）、recycled（已回收）、job running（任务执行中）、offline（下线）、migrating（迁移中）、expanding（扩容中）、waitSwitch（等待切换）、switching（切换中）、readonly（只读）、restarting（重启中）、network changing（网络变更中）、upgrading（内核版本升级中）、audit-switching（审计状态变更中）、primary-switching（主备切换中）、offlining(下线中)、deployment changing（可用区变更中）、cloning（恢复数据中）、parameter modifying（参数修改中）、log-switching（日志状态变更中）、restoring（恢复中）、expanding（变配中）
+    * <p>实例状态，分别为：applying（申请中）、init(待初始化)、initing(初始化中)、running(运行中)、limited run（受限运行）、isolating（隔离中）、isolated（已隔离）、disisolating（解隔离中）、recycling（回收中）、recycled（已回收）、job running（任务执行中）、offline（下线）、migrating（迁移中）、expanding（扩容中）、waitSwitch（等待切换）、switching（切换中）、readonly（只读）、restarting（重启中）、network changing（网络变更中）、upgrading（内核版本升级中）、audit-switching（审计状态变更中）、primary-switching（主备切换中）、offlining(下线中)、deployment changing（可用区变更中）、cloning（恢复数据中）、parameter modifying（参数修改中）、log-switching（日志状态变更中）、restoring（恢复中）、expanding（变配中）</p>
     */
     @SerializedName("DBInstanceStatus")
     @Expose
     private String DBInstanceStatus;
 
     /**
-    * 实例分配的内存大小，单位：GB
+    * <p>实例分配的内存大小，单位：GB</p>
     */
     @SerializedName("DBInstanceMemory")
     @Expose
     private Long DBInstanceMemory;
 
     /**
-    * 实例分配的存储空间大小，单位：GB
+    * <p>实例分配的存储空间大小，单位：GB</p>
     */
     @SerializedName("DBInstanceStorage")
     @Expose
     private Long DBInstanceStorage;
 
     /**
-    * 实例分配的CPU数量，单位：个
+    * <p>实例分配的CPU数量，单位：个</p>
     */
     @SerializedName("DBInstanceCpu")
     @Expose
     private Long DBInstanceCpu;
 
     /**
-    * 售卖规格ID
+    * <p>售卖规格ID</p>
     */
     @SerializedName("DBInstanceClass")
     @Expose
     private String DBInstanceClass;
 
     /**
-    * PostgreSQL大版本号，版本信息可从[DescribeDBVersions](https://cloud.tencent.com/document/api/409/89018)获取，目前支持10，11，12，13，14，15这几个大版本。
+    * <p>PostgreSQL大版本号，版本信息可从<a href="https://cloud.tencent.com/document/api/409/89018">DescribeDBVersions</a>获取，目前支持10，11，12，13，14，15这几个大版本。</p>
     */
     @SerializedName("DBMajorVersion")
     @Expose
     private String DBMajorVersion;
 
     /**
-    * PostgreSQL社区大版本+小版本号，如12.4，版本信息可从[DescribeDBVersions](https://cloud.tencent.com/document/api/409/89018)获取。
+    * <p>PostgreSQL社区大版本+小版本号，如12.4，版本信息可从<a href="https://cloud.tencent.com/document/api/409/89018">DescribeDBVersions</a>获取。</p>
     */
     @SerializedName("DBVersion")
     @Expose
     private String DBVersion;
 
     /**
-    * PostgreSQL内核版本号，如v12.7_r1.8，版本信息可从[DescribeDBVersions](https://cloud.tencent.com/document/api/409/89018)获取。
+    * <p>PostgreSQL内核版本号，如v12.7_r1.8，版本信息可从<a href="https://cloud.tencent.com/document/api/409/89018">DescribeDBVersions</a>获取。</p>
     */
     @SerializedName("DBKernelVersion")
     @Expose
     private String DBKernelVersion;
 
     /**
-    * 实例类型，类型有：
-<li>primary：主实例</li>
-<li>readonly：只读实例</li>
-<li>guard：灾备实例</li>
-<li>temp：临时实例</li>
+    * <p>实例类型，类型有：</p><li>primary：主实例</li><li>readonly：只读实例</li><li>guard：灾备实例</li><li>temp：临时实例</li>
     */
     @SerializedName("DBInstanceType")
     @Expose
     private String DBInstanceType;
 
     /**
-    * 实例版本，目前只支持standard（双机高可用版, 一主一从）。
+    * <p>实例版本，目前只支持standard（双机高可用版, 一主一从）。</p>
     */
     @SerializedName("DBInstanceVersion")
     @Expose
     private String DBInstanceVersion;
 
     /**
-    * 实例字符集，目前只支持：
-<li> UTF8</li>
-<li> LATIN1</li>
+    * <p>实例字符集，目前只支持：</p><li> UTF8</li><li> LATIN1</li>
     */
     @SerializedName("DBCharset")
     @Expose
     private String DBCharset;
 
     /**
-    * 实例创建时间。
+    * <p>实例创建时间。</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 实例执行最后一次更新的时间。
+    * <p>实例执行最后一次更新的时间。</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 实例到期时间。
+    * <p>实例到期时间。</p>
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * 实例隔离时间。
+    * <p>实例隔离时间。</p>
     */
     @SerializedName("IsolatedTime")
     @Expose
     private String IsolatedTime;
 
     /**
-    * 计费模式：
-<li>prepaid：包年包月,预付费</li>
-<li>postpaid：按量计费，后付费</li>
+    * <p>计费模式：</p><li>prepaid：包年包月,预付费</li><li>postpaid：按量计费，后付费</li>
     */
     @SerializedName("PayType")
     @Expose
     private String PayType;
 
     /**
-    * 是否自动续费：
-<li>0：手动续费</li>
-<li>1：自动续费</li>
-默认值：0
+    * <p>是否自动续费：</p><li>0：手动续费</li><li>1：自动续费</li>默认值：0
     */
     @SerializedName("AutoRenew")
     @Expose
     private Long AutoRenew;
 
     /**
-    * 实例网络连接信息。
+    * <p>实例网络连接信息。</p>
     */
     @SerializedName("DBInstanceNetInfo")
     @Expose
     private DBInstanceNetInfo [] DBInstanceNetInfo;
 
     /**
-    * 机器类型。
+    * <p>机器类型。</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 用户的AppId。
+    * <p>用户的AppId。</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * 实例的Uid。
+    * <p>实例的Uid。</p>
     */
     @SerializedName("Uid")
     @Expose
     private Long Uid;
 
     /**
-    * 项目ID。
+    * <p>项目ID。</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 实例绑定的标签信息。
+    * <p>实例绑定的标签信息。</p>
     */
     @SerializedName("TagList")
     @Expose
     private Tag [] TagList;
 
     /**
-    * 主实例信息，仅在实例为只读实例时返回。
+    * <p>主实例信息，仅在实例为只读实例时返回。</p>
     */
     @SerializedName("MasterDBInstanceId")
     @Expose
     private String MasterDBInstanceId;
 
     /**
-    * 只读实例数量。
+    * <p>只读实例数量。</p>
     */
     @SerializedName("ReadOnlyInstanceNum")
     @Expose
     private Long ReadOnlyInstanceNum;
 
     /**
-    * 只读实例在只读组中的状态。
+    * <p>只读实例在只读组中的状态。</p>
     */
     @SerializedName("StatusInReadonlyGroup")
     @Expose
     private String StatusInReadonlyGroup;
 
     /**
-    * 下线时间。
+    * <p>下线时间。</p>
     */
     @SerializedName("OfflineTime")
     @Expose
     private String OfflineTime;
 
     /**
-    * 实例的节点信息。
+    * <p>实例的节点信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DBNodeSet")
@@ -274,42 +263,28 @@ public class DBInstance extends AbstractModel {
     private DBNode [] DBNodeSet;
 
     /**
-    * 实例是否支持TDE数据加密：
-<li>0：不支持</li>
-<li>1：支持</li>
-默认值：0
-TDE数据加密可参考[数据透明加密概述](https://cloud.tencent.com/document/product/409/71748)
+    * <p>实例是否支持TDE数据加密：</p><li>0：不支持</li><li>1：支持</li>默认值：0TDE数据加密可参考[数据透明加密概述](https://cloud.tencent.com/document/product/409/71748)
     */
     @SerializedName("IsSupportTDE")
     @Expose
     private Long IsSupportTDE;
 
     /**
-    * 数据库引擎，支持：
-<li>postgresql：云数据库PostgreSQL</li>
-<li>mssql_compatible：MSSQL兼容-云数据库PostgreSQL</li>
-默认值：postgresql
+    * <p>数据库引擎，支持：</p><li>postgresql：云数据库PostgreSQL</li><li>mssql_compatible：MSSQL兼容-云数据库PostgreSQL</li>默认值：postgresql
     */
     @SerializedName("DBEngine")
     @Expose
     private String DBEngine;
 
     /**
-    * 数据库引擎的配置信息，配置格式如下：
-{"$key1":"$value1", "$key2":"$value2"}
-各引擎支持如下：
-mssql_compatible引擎：
-<li>migrationMode：数据库模式，可选参数，可取值：single-db（单数据库模式），multi-db（多数据库模式）。默认为single-db。</li>
-<li>defaultLocale：排序区域规则，可选参数，在初始化后不可修改，默认为en_US，可选值如下：
-"af_ZA", "sq_AL", "ar_DZ", "ar_BH", "ar_EG", "ar_IQ", "ar_JO", "ar_KW", "ar_LB", "ar_LY", "ar_MA", "ar_OM", "ar_QA", "ar_SA", "ar_SY", "ar_TN", "ar_AE", "ar_YE", "hy_AM", "az_Cyrl_AZ", "az_Latn_AZ", "eu_ES", "be_BY", "bg_BG", "ca_ES", "zh_HK", "zh_MO", "zh_CN", "zh_SG", "zh_TW", "hr_HR", "cs_CZ", "da_DK", "nl_BE", "nl_NL", "en_AU", "en_BZ", "en_CA", "en_IE", "en_JM", "en_NZ", "en_PH", "en_ZA", "en_TT", "en_GB", "en_US", "en_ZW", "et_EE", "fo_FO", "fa_IR", "fi_FI", "fr_BE", "fr_CA", "fr_FR", "fr_LU", "fr_MC", "fr_CH", "mk_MK", "ka_GE", "de_AT", "de_DE", "de_LI", "de_LU", "de_CH", "el_GR", "gu_IN", "he_IL", "hi_IN", "hu_HU", "is_IS", "id_ID", "it_IT", "it_CH", "ja_JP", "kn_IN", "kok_IN", "ko_KR", "ky_KG", "lv_LV", "lt_LT", "ms_BN", "ms_MY", "mr_IN", "mn_MN", "nb_NO", "nn_NO", "pl_PL", "pt_BR", "pt_PT", "pa_IN", "ro_RO", "ru_RU", "sa_IN", "sr_Cyrl_RS", "sr_Latn_RS", "sk_SK", "sl_SI", "es_AR", "es_BO", "es_CL", "es_CO", "es_CR", "es_DO", "es_EC", "es_SV", "es_GT", "es_HN", "es_MX", "es_NI", "es_PA", "es_PY","es_PE", "es_PR", "es_ES", "es_TRADITIONAL", "es_UY", "es_VE", "sw_KE", "sv_FI", "sv_SE", "tt_RU", "te_IN", "th_TH", "tr_TR", "uk_UA", "ur_IN", "ur_PK", "uz_Cyrl_UZ", "uz_Latn_UZ", "vi_VN"。</li>
-<li>serverCollationName：排序规则名称，可选参数，在初始化后不可修改，默认为sql_latin1_general_cp1_ci_as，可选值如下："bbf_unicode_general_ci_as", "bbf_unicode_cp1_ci_as", "bbf_unicode_CP1250_ci_as", "bbf_unicode_CP1251_ci_as", "bbf_unicode_cp1253_ci_as", "bbf_unicode_cp1254_ci_as", "bbf_unicode_cp1255_ci_as", "bbf_unicode_cp1256_ci_as", "bbf_unicode_cp1257_ci_as", "bbf_unicode_cp1258_ci_as", "bbf_unicode_cp874_ci_as", "sql_latin1_general_cp1250_ci_as", "sql_latin1_general_cp1251_ci_as", "sql_latin1_general_cp1_ci_as", "sql_latin1_general_cp1253_ci_as", "sql_latin1_general_cp1254_ci_as", "sql_latin1_general_cp1255_ci_as","sql_latin1_general_cp1256_ci_as", "sql_latin1_general_cp1257_ci_as", "sql_latin1_general_cp1258_ci_as", "chinese_prc_ci_as", "cyrillic_general_ci_as", "finnish_swedish_ci_as", "french_ci_as", "japanese_ci_as", "korean_wansung_ci_as", "latin1_general_ci_as", "modern_spanish_ci_as", "polish_ci_as", "thai_ci_as", "traditional_spanish_ci_as", "turkish_ci_as", "ukrainian_ci_as", "vietnamese_ci_as"。</li>
+    * <p>数据库引擎的配置信息，配置格式如下：<br>{&quot;$key1&quot;:&quot;$value1&quot;, &quot;$key2&quot;:&quot;$value2&quot;}<br>各引擎支持如下：<br>mssql_compatible引擎：</p><li>migrationMode：数据库模式，可选参数，可取值：single-db（单数据库模式），multi-db（多数据库模式）。默认为single-db。</li><li>defaultLocale：排序区域规则，可选参数，在初始化后不可修改，默认为en_US，可选值如下："af_ZA", "sq_AL", "ar_DZ", "ar_BH", "ar_EG", "ar_IQ", "ar_JO", "ar_KW", "ar_LB", "ar_LY", "ar_MA", "ar_OM", "ar_QA", "ar_SA", "ar_SY", "ar_TN", "ar_AE", "ar_YE", "hy_AM", "az_Cyrl_AZ", "az_Latn_AZ", "eu_ES", "be_BY", "bg_BG", "ca_ES", "zh_HK", "zh_MO", "zh_CN", "zh_SG", "zh_TW", "hr_HR", "cs_CZ", "da_DK", "nl_BE", "nl_NL", "en_AU", "en_BZ", "en_CA", "en_IE", "en_JM", "en_NZ", "en_PH", "en_ZA", "en_TT", "en_GB", "en_US", "en_ZW", "et_EE", "fo_FO", "fa_IR", "fi_FI", "fr_BE", "fr_CA", "fr_FR", "fr_LU", "fr_MC", "fr_CH", "mk_MK", "ka_GE", "de_AT", "de_DE", "de_LI", "de_LU", "de_CH", "el_GR", "gu_IN", "he_IL", "hi_IN", "hu_HU", "is_IS", "id_ID", "it_IT", "it_CH", "ja_JP", "kn_IN", "kok_IN", "ko_KR", "ky_KG", "lv_LV", "lt_LT", "ms_BN", "ms_MY", "mr_IN", "mn_MN", "nb_NO", "nn_NO", "pl_PL", "pt_BR", "pt_PT", "pa_IN", "ro_RO", "ru_RU", "sa_IN", "sr_Cyrl_RS", "sr_Latn_RS", "sk_SK", "sl_SI", "es_AR", "es_BO", "es_CL", "es_CO", "es_CR", "es_DO", "es_EC", "es_SV", "es_GT", "es_HN", "es_MX", "es_NI", "es_PA", "es_PY","es_PE", "es_PR", "es_ES", "es_TRADITIONAL", "es_UY", "es_VE", "sw_KE", "sv_FI", "sv_SE", "tt_RU", "te_IN", "th_TH", "tr_TR", "uk_UA", "ur_IN", "ur_PK", "uz_Cyrl_UZ", "uz_Latn_UZ", "vi_VN"。</li><li>serverCollationName：排序规则名称，可选参数，在初始化后不可修改，默认为sql_latin1_general_cp1_ci_as，可选值如下："bbf_unicode_general_ci_as", "bbf_unicode_cp1_ci_as", "bbf_unicode_CP1250_ci_as", "bbf_unicode_CP1251_ci_as", "bbf_unicode_cp1253_ci_as", "bbf_unicode_cp1254_ci_as", "bbf_unicode_cp1255_ci_as", "bbf_unicode_cp1256_ci_as", "bbf_unicode_cp1257_ci_as", "bbf_unicode_cp1258_ci_as", "bbf_unicode_cp874_ci_as", "sql_latin1_general_cp1250_ci_as", "sql_latin1_general_cp1251_ci_as", "sql_latin1_general_cp1_ci_as", "sql_latin1_general_cp1253_ci_as", "sql_latin1_general_cp1254_ci_as", "sql_latin1_general_cp1255_ci_as","sql_latin1_general_cp1256_ci_as", "sql_latin1_general_cp1257_ci_as", "sql_latin1_general_cp1258_ci_as", "chinese_prc_ci_as", "cyrillic_general_ci_as", "finnish_swedish_ci_as", "french_ci_as", "japanese_ci_as", "korean_wansung_ci_as", "latin1_general_ci_as", "modern_spanish_ci_as", "polish_ci_as", "thai_ci_as", "traditional_spanish_ci_as", "turkish_ci_as", "ukrainian_ci_as", "vietnamese_ci_as"。</li>
     */
     @SerializedName("DBEngineConfig")
     @Expose
     private String DBEngineConfig;
 
     /**
-    * 实例网络信息列表（此字段已废弃）
+    * <p>实例网络信息列表（此字段已废弃）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetworkAccessList")
@@ -317,607 +292,558 @@ mssql_compatible引擎：
     private NetworkAccess [] NetworkAccessList;
 
     /**
-    * 实例是否支持Ipv6：
-<li>0：否</li>
-<li>1：是</li>
-默认值：0
+    * <p>实例是否支持Ipv6：</p><li>0：否</li><li>1：是</li>默认值：0
     */
     @SerializedName("SupportIpv6")
     @Expose
     private Long SupportIpv6;
 
     /**
-    * 实例已经弹性扩容的cpu核数
+    * <p>实例已经弹性扩容的cpu核数</p>
     */
     @SerializedName("ExpandedCpu")
     @Expose
     private Long ExpandedCpu;
 
     /**
-    * 实例是否开启删除保护，取值如下：
-- true：开启删除保护
-- false：关闭删除保护
+    * <p>实例是否开启删除保护，取值如下：</p><ul><li>true：开启删除保护</li><li>false：关闭删除保护</li></ul>
     */
     @SerializedName("DeletionProtection")
     @Expose
     private Boolean DeletionProtection;
 
     /**
-     * Get 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段。 
-     * @return Region 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段。
+     * Get <p>实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段。</p> 
+     * @return Region <p>实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段。</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段。
-     * @param Region 实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段。
+     * Set <p>实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段。</p>
+     * @param Region <p>实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段。</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 实例所属可用区， 如：ap-guangzhou-3，对应ZoneSet的Zone字段。 
-     * @return Zone 实例所属可用区， 如：ap-guangzhou-3，对应ZoneSet的Zone字段。
+     * Get <p>实例所属可用区， 如：ap-guangzhou-3，对应ZoneSet的Zone字段。</p> 
+     * @return Zone <p>实例所属可用区， 如：ap-guangzhou-3，对应ZoneSet的Zone字段。</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 实例所属可用区， 如：ap-guangzhou-3，对应ZoneSet的Zone字段。
-     * @param Zone 实例所属可用区， 如：ap-guangzhou-3，对应ZoneSet的Zone字段。
+     * Set <p>实例所属可用区， 如：ap-guangzhou-3，对应ZoneSet的Zone字段。</p>
+     * @param Zone <p>实例所属可用区， 如：ap-guangzhou-3，对应ZoneSet的Zone字段。</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 私有网络ID，形如vpc-e6w23k31。有效的VpcId可通过登录控制台查询；也可以调用接口 [DescribeVpcs](https://cloud.tencent.com/document/api/215/15778) ，从接口返回中的unVpcId字段获取。 
-     * @return VpcId 私有网络ID，形如vpc-e6w23k31。有效的VpcId可通过登录控制台查询；也可以调用接口 [DescribeVpcs](https://cloud.tencent.com/document/api/215/15778) ，从接口返回中的unVpcId字段获取。
+     * Get <p>私有网络ID，形如vpc-e6w23k31。有效的VpcId可通过登录控制台查询；也可以调用接口 <a href="https://cloud.tencent.com/document/api/215/15778">DescribeVpcs</a> ，从接口返回中的unVpcId字段获取。</p> 
+     * @return VpcId <p>私有网络ID，形如vpc-e6w23k31。有效的VpcId可通过登录控制台查询；也可以调用接口 <a href="https://cloud.tencent.com/document/api/215/15778">DescribeVpcs</a> ，从接口返回中的unVpcId字段获取。</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私有网络ID，形如vpc-e6w23k31。有效的VpcId可通过登录控制台查询；也可以调用接口 [DescribeVpcs](https://cloud.tencent.com/document/api/215/15778) ，从接口返回中的unVpcId字段获取。
-     * @param VpcId 私有网络ID，形如vpc-e6w23k31。有效的VpcId可通过登录控制台查询；也可以调用接口 [DescribeVpcs](https://cloud.tencent.com/document/api/215/15778) ，从接口返回中的unVpcId字段获取。
+     * Set <p>私有网络ID，形如vpc-e6w23k31。有效的VpcId可通过登录控制台查询；也可以调用接口 <a href="https://cloud.tencent.com/document/api/215/15778">DescribeVpcs</a> ，从接口返回中的unVpcId字段获取。</p>
+     * @param VpcId <p>私有网络ID，形如vpc-e6w23k31。有效的VpcId可通过登录控制台查询；也可以调用接口 <a href="https://cloud.tencent.com/document/api/215/15778">DescribeVpcs</a> ，从接口返回中的unVpcId字段获取。</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 私有网络子网ID，形如subnet-51lcif9y。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 [DescribeSubnets ](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的unSubnetId字段获取。 
-     * @return SubnetId 私有网络子网ID，形如subnet-51lcif9y。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 [DescribeSubnets ](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的unSubnetId字段获取。
+     * Get <p>私有网络子网ID，形如subnet-51lcif9y。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 <a href="https://cloud.tencent.com/document/api/215/15784">DescribeSubnets </a>，从接口返回中的unSubnetId字段获取。</p> 
+     * @return SubnetId <p>私有网络子网ID，形如subnet-51lcif9y。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 <a href="https://cloud.tencent.com/document/api/215/15784">DescribeSubnets </a>，从接口返回中的unSubnetId字段获取。</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 私有网络子网ID，形如subnet-51lcif9y。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 [DescribeSubnets ](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的unSubnetId字段获取。
-     * @param SubnetId 私有网络子网ID，形如subnet-51lcif9y。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 [DescribeSubnets ](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的unSubnetId字段获取。
+     * Set <p>私有网络子网ID，形如subnet-51lcif9y。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 <a href="https://cloud.tencent.com/document/api/215/15784">DescribeSubnets </a>，从接口返回中的unSubnetId字段获取。</p>
+     * @param SubnetId <p>私有网络子网ID，形如subnet-51lcif9y。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 <a href="https://cloud.tencent.com/document/api/215/15784">DescribeSubnets </a>，从接口返回中的unSubnetId字段获取。</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 实例ID。 
-     * @return DBInstanceId 实例ID。
+     * Get <p>实例ID。</p> 
+     * @return DBInstanceId <p>实例ID。</p>
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set 实例ID。
-     * @param DBInstanceId 实例ID。
+     * Set <p>实例ID。</p>
+     * @param DBInstanceId <p>实例ID。</p>
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
     }
 
     /**
-     * Get 实例名称。 
-     * @return DBInstanceName 实例名称。
+     * Get <p>实例名称。</p> 
+     * @return DBInstanceName <p>实例名称。</p>
      */
     public String getDBInstanceName() {
         return this.DBInstanceName;
     }
 
     /**
-     * Set 实例名称。
-     * @param DBInstanceName 实例名称。
+     * Set <p>实例名称。</p>
+     * @param DBInstanceName <p>实例名称。</p>
      */
     public void setDBInstanceName(String DBInstanceName) {
         this.DBInstanceName = DBInstanceName;
     }
 
     /**
-     * Get 实例状态，分别为：applying（申请中）、init(待初始化)、initing(初始化中)、running(运行中)、limited run（受限运行）、isolating（隔离中）、isolated（已隔离）、disisolating（解隔离中）、recycling（回收中）、recycled（已回收）、job running（任务执行中）、offline（下线）、migrating（迁移中）、expanding（扩容中）、waitSwitch（等待切换）、switching（切换中）、readonly（只读）、restarting（重启中）、network changing（网络变更中）、upgrading（内核版本升级中）、audit-switching（审计状态变更中）、primary-switching（主备切换中）、offlining(下线中)、deployment changing（可用区变更中）、cloning（恢复数据中）、parameter modifying（参数修改中）、log-switching（日志状态变更中）、restoring（恢复中）、expanding（变配中） 
-     * @return DBInstanceStatus 实例状态，分别为：applying（申请中）、init(待初始化)、initing(初始化中)、running(运行中)、limited run（受限运行）、isolating（隔离中）、isolated（已隔离）、disisolating（解隔离中）、recycling（回收中）、recycled（已回收）、job running（任务执行中）、offline（下线）、migrating（迁移中）、expanding（扩容中）、waitSwitch（等待切换）、switching（切换中）、readonly（只读）、restarting（重启中）、network changing（网络变更中）、upgrading（内核版本升级中）、audit-switching（审计状态变更中）、primary-switching（主备切换中）、offlining(下线中)、deployment changing（可用区变更中）、cloning（恢复数据中）、parameter modifying（参数修改中）、log-switching（日志状态变更中）、restoring（恢复中）、expanding（变配中）
+     * Get <p>实例状态，分别为：applying（申请中）、init(待初始化)、initing(初始化中)、running(运行中)、limited run（受限运行）、isolating（隔离中）、isolated（已隔离）、disisolating（解隔离中）、recycling（回收中）、recycled（已回收）、job running（任务执行中）、offline（下线）、migrating（迁移中）、expanding（扩容中）、waitSwitch（等待切换）、switching（切换中）、readonly（只读）、restarting（重启中）、network changing（网络变更中）、upgrading（内核版本升级中）、audit-switching（审计状态变更中）、primary-switching（主备切换中）、offlining(下线中)、deployment changing（可用区变更中）、cloning（恢复数据中）、parameter modifying（参数修改中）、log-switching（日志状态变更中）、restoring（恢复中）、expanding（变配中）</p> 
+     * @return DBInstanceStatus <p>实例状态，分别为：applying（申请中）、init(待初始化)、initing(初始化中)、running(运行中)、limited run（受限运行）、isolating（隔离中）、isolated（已隔离）、disisolating（解隔离中）、recycling（回收中）、recycled（已回收）、job running（任务执行中）、offline（下线）、migrating（迁移中）、expanding（扩容中）、waitSwitch（等待切换）、switching（切换中）、readonly（只读）、restarting（重启中）、network changing（网络变更中）、upgrading（内核版本升级中）、audit-switching（审计状态变更中）、primary-switching（主备切换中）、offlining(下线中)、deployment changing（可用区变更中）、cloning（恢复数据中）、parameter modifying（参数修改中）、log-switching（日志状态变更中）、restoring（恢复中）、expanding（变配中）</p>
      */
     public String getDBInstanceStatus() {
         return this.DBInstanceStatus;
     }
 
     /**
-     * Set 实例状态，分别为：applying（申请中）、init(待初始化)、initing(初始化中)、running(运行中)、limited run（受限运行）、isolating（隔离中）、isolated（已隔离）、disisolating（解隔离中）、recycling（回收中）、recycled（已回收）、job running（任务执行中）、offline（下线）、migrating（迁移中）、expanding（扩容中）、waitSwitch（等待切换）、switching（切换中）、readonly（只读）、restarting（重启中）、network changing（网络变更中）、upgrading（内核版本升级中）、audit-switching（审计状态变更中）、primary-switching（主备切换中）、offlining(下线中)、deployment changing（可用区变更中）、cloning（恢复数据中）、parameter modifying（参数修改中）、log-switching（日志状态变更中）、restoring（恢复中）、expanding（变配中）
-     * @param DBInstanceStatus 实例状态，分别为：applying（申请中）、init(待初始化)、initing(初始化中)、running(运行中)、limited run（受限运行）、isolating（隔离中）、isolated（已隔离）、disisolating（解隔离中）、recycling（回收中）、recycled（已回收）、job running（任务执行中）、offline（下线）、migrating（迁移中）、expanding（扩容中）、waitSwitch（等待切换）、switching（切换中）、readonly（只读）、restarting（重启中）、network changing（网络变更中）、upgrading（内核版本升级中）、audit-switching（审计状态变更中）、primary-switching（主备切换中）、offlining(下线中)、deployment changing（可用区变更中）、cloning（恢复数据中）、parameter modifying（参数修改中）、log-switching（日志状态变更中）、restoring（恢复中）、expanding（变配中）
+     * Set <p>实例状态，分别为：applying（申请中）、init(待初始化)、initing(初始化中)、running(运行中)、limited run（受限运行）、isolating（隔离中）、isolated（已隔离）、disisolating（解隔离中）、recycling（回收中）、recycled（已回收）、job running（任务执行中）、offline（下线）、migrating（迁移中）、expanding（扩容中）、waitSwitch（等待切换）、switching（切换中）、readonly（只读）、restarting（重启中）、network changing（网络变更中）、upgrading（内核版本升级中）、audit-switching（审计状态变更中）、primary-switching（主备切换中）、offlining(下线中)、deployment changing（可用区变更中）、cloning（恢复数据中）、parameter modifying（参数修改中）、log-switching（日志状态变更中）、restoring（恢复中）、expanding（变配中）</p>
+     * @param DBInstanceStatus <p>实例状态，分别为：applying（申请中）、init(待初始化)、initing(初始化中)、running(运行中)、limited run（受限运行）、isolating（隔离中）、isolated（已隔离）、disisolating（解隔离中）、recycling（回收中）、recycled（已回收）、job running（任务执行中）、offline（下线）、migrating（迁移中）、expanding（扩容中）、waitSwitch（等待切换）、switching（切换中）、readonly（只读）、restarting（重启中）、network changing（网络变更中）、upgrading（内核版本升级中）、audit-switching（审计状态变更中）、primary-switching（主备切换中）、offlining(下线中)、deployment changing（可用区变更中）、cloning（恢复数据中）、parameter modifying（参数修改中）、log-switching（日志状态变更中）、restoring（恢复中）、expanding（变配中）</p>
      */
     public void setDBInstanceStatus(String DBInstanceStatus) {
         this.DBInstanceStatus = DBInstanceStatus;
     }
 
     /**
-     * Get 实例分配的内存大小，单位：GB 
-     * @return DBInstanceMemory 实例分配的内存大小，单位：GB
+     * Get <p>实例分配的内存大小，单位：GB</p> 
+     * @return DBInstanceMemory <p>实例分配的内存大小，单位：GB</p>
      */
     public Long getDBInstanceMemory() {
         return this.DBInstanceMemory;
     }
 
     /**
-     * Set 实例分配的内存大小，单位：GB
-     * @param DBInstanceMemory 实例分配的内存大小，单位：GB
+     * Set <p>实例分配的内存大小，单位：GB</p>
+     * @param DBInstanceMemory <p>实例分配的内存大小，单位：GB</p>
      */
     public void setDBInstanceMemory(Long DBInstanceMemory) {
         this.DBInstanceMemory = DBInstanceMemory;
     }
 
     /**
-     * Get 实例分配的存储空间大小，单位：GB 
-     * @return DBInstanceStorage 实例分配的存储空间大小，单位：GB
+     * Get <p>实例分配的存储空间大小，单位：GB</p> 
+     * @return DBInstanceStorage <p>实例分配的存储空间大小，单位：GB</p>
      */
     public Long getDBInstanceStorage() {
         return this.DBInstanceStorage;
     }
 
     /**
-     * Set 实例分配的存储空间大小，单位：GB
-     * @param DBInstanceStorage 实例分配的存储空间大小，单位：GB
+     * Set <p>实例分配的存储空间大小，单位：GB</p>
+     * @param DBInstanceStorage <p>实例分配的存储空间大小，单位：GB</p>
      */
     public void setDBInstanceStorage(Long DBInstanceStorage) {
         this.DBInstanceStorage = DBInstanceStorage;
     }
 
     /**
-     * Get 实例分配的CPU数量，单位：个 
-     * @return DBInstanceCpu 实例分配的CPU数量，单位：个
+     * Get <p>实例分配的CPU数量，单位：个</p> 
+     * @return DBInstanceCpu <p>实例分配的CPU数量，单位：个</p>
      */
     public Long getDBInstanceCpu() {
         return this.DBInstanceCpu;
     }
 
     /**
-     * Set 实例分配的CPU数量，单位：个
-     * @param DBInstanceCpu 实例分配的CPU数量，单位：个
+     * Set <p>实例分配的CPU数量，单位：个</p>
+     * @param DBInstanceCpu <p>实例分配的CPU数量，单位：个</p>
      */
     public void setDBInstanceCpu(Long DBInstanceCpu) {
         this.DBInstanceCpu = DBInstanceCpu;
     }
 
     /**
-     * Get 售卖规格ID 
-     * @return DBInstanceClass 售卖规格ID
+     * Get <p>售卖规格ID</p> 
+     * @return DBInstanceClass <p>售卖规格ID</p>
      */
     public String getDBInstanceClass() {
         return this.DBInstanceClass;
     }
 
     /**
-     * Set 售卖规格ID
-     * @param DBInstanceClass 售卖规格ID
+     * Set <p>售卖规格ID</p>
+     * @param DBInstanceClass <p>售卖规格ID</p>
      */
     public void setDBInstanceClass(String DBInstanceClass) {
         this.DBInstanceClass = DBInstanceClass;
     }
 
     /**
-     * Get PostgreSQL大版本号，版本信息可从[DescribeDBVersions](https://cloud.tencent.com/document/api/409/89018)获取，目前支持10，11，12，13，14，15这几个大版本。 
-     * @return DBMajorVersion PostgreSQL大版本号，版本信息可从[DescribeDBVersions](https://cloud.tencent.com/document/api/409/89018)获取，目前支持10，11，12，13，14，15这几个大版本。
+     * Get <p>PostgreSQL大版本号，版本信息可从<a href="https://cloud.tencent.com/document/api/409/89018">DescribeDBVersions</a>获取，目前支持10，11，12，13，14，15这几个大版本。</p> 
+     * @return DBMajorVersion <p>PostgreSQL大版本号，版本信息可从<a href="https://cloud.tencent.com/document/api/409/89018">DescribeDBVersions</a>获取，目前支持10，11，12，13，14，15这几个大版本。</p>
      */
     public String getDBMajorVersion() {
         return this.DBMajorVersion;
     }
 
     /**
-     * Set PostgreSQL大版本号，版本信息可从[DescribeDBVersions](https://cloud.tencent.com/document/api/409/89018)获取，目前支持10，11，12，13，14，15这几个大版本。
-     * @param DBMajorVersion PostgreSQL大版本号，版本信息可从[DescribeDBVersions](https://cloud.tencent.com/document/api/409/89018)获取，目前支持10，11，12，13，14，15这几个大版本。
+     * Set <p>PostgreSQL大版本号，版本信息可从<a href="https://cloud.tencent.com/document/api/409/89018">DescribeDBVersions</a>获取，目前支持10，11，12，13，14，15这几个大版本。</p>
+     * @param DBMajorVersion <p>PostgreSQL大版本号，版本信息可从<a href="https://cloud.tencent.com/document/api/409/89018">DescribeDBVersions</a>获取，目前支持10，11，12，13，14，15这几个大版本。</p>
      */
     public void setDBMajorVersion(String DBMajorVersion) {
         this.DBMajorVersion = DBMajorVersion;
     }
 
     /**
-     * Get PostgreSQL社区大版本+小版本号，如12.4，版本信息可从[DescribeDBVersions](https://cloud.tencent.com/document/api/409/89018)获取。 
-     * @return DBVersion PostgreSQL社区大版本+小版本号，如12.4，版本信息可从[DescribeDBVersions](https://cloud.tencent.com/document/api/409/89018)获取。
+     * Get <p>PostgreSQL社区大版本+小版本号，如12.4，版本信息可从<a href="https://cloud.tencent.com/document/api/409/89018">DescribeDBVersions</a>获取。</p> 
+     * @return DBVersion <p>PostgreSQL社区大版本+小版本号，如12.4，版本信息可从<a href="https://cloud.tencent.com/document/api/409/89018">DescribeDBVersions</a>获取。</p>
      */
     public String getDBVersion() {
         return this.DBVersion;
     }
 
     /**
-     * Set PostgreSQL社区大版本+小版本号，如12.4，版本信息可从[DescribeDBVersions](https://cloud.tencent.com/document/api/409/89018)获取。
-     * @param DBVersion PostgreSQL社区大版本+小版本号，如12.4，版本信息可从[DescribeDBVersions](https://cloud.tencent.com/document/api/409/89018)获取。
+     * Set <p>PostgreSQL社区大版本+小版本号，如12.4，版本信息可从<a href="https://cloud.tencent.com/document/api/409/89018">DescribeDBVersions</a>获取。</p>
+     * @param DBVersion <p>PostgreSQL社区大版本+小版本号，如12.4，版本信息可从<a href="https://cloud.tencent.com/document/api/409/89018">DescribeDBVersions</a>获取。</p>
      */
     public void setDBVersion(String DBVersion) {
         this.DBVersion = DBVersion;
     }
 
     /**
-     * Get PostgreSQL内核版本号，如v12.7_r1.8，版本信息可从[DescribeDBVersions](https://cloud.tencent.com/document/api/409/89018)获取。 
-     * @return DBKernelVersion PostgreSQL内核版本号，如v12.7_r1.8，版本信息可从[DescribeDBVersions](https://cloud.tencent.com/document/api/409/89018)获取。
+     * Get <p>PostgreSQL内核版本号，如v12.7_r1.8，版本信息可从<a href="https://cloud.tencent.com/document/api/409/89018">DescribeDBVersions</a>获取。</p> 
+     * @return DBKernelVersion <p>PostgreSQL内核版本号，如v12.7_r1.8，版本信息可从<a href="https://cloud.tencent.com/document/api/409/89018">DescribeDBVersions</a>获取。</p>
      */
     public String getDBKernelVersion() {
         return this.DBKernelVersion;
     }
 
     /**
-     * Set PostgreSQL内核版本号，如v12.7_r1.8，版本信息可从[DescribeDBVersions](https://cloud.tencent.com/document/api/409/89018)获取。
-     * @param DBKernelVersion PostgreSQL内核版本号，如v12.7_r1.8，版本信息可从[DescribeDBVersions](https://cloud.tencent.com/document/api/409/89018)获取。
+     * Set <p>PostgreSQL内核版本号，如v12.7_r1.8，版本信息可从<a href="https://cloud.tencent.com/document/api/409/89018">DescribeDBVersions</a>获取。</p>
+     * @param DBKernelVersion <p>PostgreSQL内核版本号，如v12.7_r1.8，版本信息可从<a href="https://cloud.tencent.com/document/api/409/89018">DescribeDBVersions</a>获取。</p>
      */
     public void setDBKernelVersion(String DBKernelVersion) {
         this.DBKernelVersion = DBKernelVersion;
     }
 
     /**
-     * Get 实例类型，类型有：
-<li>primary：主实例</li>
-<li>readonly：只读实例</li>
-<li>guard：灾备实例</li>
-<li>temp：临时实例</li> 
-     * @return DBInstanceType 实例类型，类型有：
-<li>primary：主实例</li>
-<li>readonly：只读实例</li>
-<li>guard：灾备实例</li>
-<li>temp：临时实例</li>
+     * Get <p>实例类型，类型有：</p><li>primary：主实例</li><li>readonly：只读实例</li><li>guard：灾备实例</li><li>temp：临时实例</li> 
+     * @return DBInstanceType <p>实例类型，类型有：</p><li>primary：主实例</li><li>readonly：只读实例</li><li>guard：灾备实例</li><li>temp：临时实例</li>
      */
     public String getDBInstanceType() {
         return this.DBInstanceType;
     }
 
     /**
-     * Set 实例类型，类型有：
-<li>primary：主实例</li>
-<li>readonly：只读实例</li>
-<li>guard：灾备实例</li>
-<li>temp：临时实例</li>
-     * @param DBInstanceType 实例类型，类型有：
-<li>primary：主实例</li>
-<li>readonly：只读实例</li>
-<li>guard：灾备实例</li>
-<li>temp：临时实例</li>
+     * Set <p>实例类型，类型有：</p><li>primary：主实例</li><li>readonly：只读实例</li><li>guard：灾备实例</li><li>temp：临时实例</li>
+     * @param DBInstanceType <p>实例类型，类型有：</p><li>primary：主实例</li><li>readonly：只读实例</li><li>guard：灾备实例</li><li>temp：临时实例</li>
      */
     public void setDBInstanceType(String DBInstanceType) {
         this.DBInstanceType = DBInstanceType;
     }
 
     /**
-     * Get 实例版本，目前只支持standard（双机高可用版, 一主一从）。 
-     * @return DBInstanceVersion 实例版本，目前只支持standard（双机高可用版, 一主一从）。
+     * Get <p>实例版本，目前只支持standard（双机高可用版, 一主一从）。</p> 
+     * @return DBInstanceVersion <p>实例版本，目前只支持standard（双机高可用版, 一主一从）。</p>
      */
     public String getDBInstanceVersion() {
         return this.DBInstanceVersion;
     }
 
     /**
-     * Set 实例版本，目前只支持standard（双机高可用版, 一主一从）。
-     * @param DBInstanceVersion 实例版本，目前只支持standard（双机高可用版, 一主一从）。
+     * Set <p>实例版本，目前只支持standard（双机高可用版, 一主一从）。</p>
+     * @param DBInstanceVersion <p>实例版本，目前只支持standard（双机高可用版, 一主一从）。</p>
      */
     public void setDBInstanceVersion(String DBInstanceVersion) {
         this.DBInstanceVersion = DBInstanceVersion;
     }
 
     /**
-     * Get 实例字符集，目前只支持：
-<li> UTF8</li>
-<li> LATIN1</li> 
-     * @return DBCharset 实例字符集，目前只支持：
-<li> UTF8</li>
-<li> LATIN1</li>
+     * Get <p>实例字符集，目前只支持：</p><li> UTF8</li><li> LATIN1</li> 
+     * @return DBCharset <p>实例字符集，目前只支持：</p><li> UTF8</li><li> LATIN1</li>
      */
     public String getDBCharset() {
         return this.DBCharset;
     }
 
     /**
-     * Set 实例字符集，目前只支持：
-<li> UTF8</li>
-<li> LATIN1</li>
-     * @param DBCharset 实例字符集，目前只支持：
-<li> UTF8</li>
-<li> LATIN1</li>
+     * Set <p>实例字符集，目前只支持：</p><li> UTF8</li><li> LATIN1</li>
+     * @param DBCharset <p>实例字符集，目前只支持：</p><li> UTF8</li><li> LATIN1</li>
      */
     public void setDBCharset(String DBCharset) {
         this.DBCharset = DBCharset;
     }
 
     /**
-     * Get 实例创建时间。 
-     * @return CreateTime 实例创建时间。
+     * Get <p>实例创建时间。</p> 
+     * @return CreateTime <p>实例创建时间。</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 实例创建时间。
-     * @param CreateTime 实例创建时间。
+     * Set <p>实例创建时间。</p>
+     * @param CreateTime <p>实例创建时间。</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 实例执行最后一次更新的时间。 
-     * @return UpdateTime 实例执行最后一次更新的时间。
+     * Get <p>实例执行最后一次更新的时间。</p> 
+     * @return UpdateTime <p>实例执行最后一次更新的时间。</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 实例执行最后一次更新的时间。
-     * @param UpdateTime 实例执行最后一次更新的时间。
+     * Set <p>实例执行最后一次更新的时间。</p>
+     * @param UpdateTime <p>实例执行最后一次更新的时间。</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 实例到期时间。 
-     * @return ExpireTime 实例到期时间。
+     * Get <p>实例到期时间。</p> 
+     * @return ExpireTime <p>实例到期时间。</p>
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 实例到期时间。
-     * @param ExpireTime 实例到期时间。
+     * Set <p>实例到期时间。</p>
+     * @param ExpireTime <p>实例到期时间。</p>
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 实例隔离时间。 
-     * @return IsolatedTime 实例隔离时间。
+     * Get <p>实例隔离时间。</p> 
+     * @return IsolatedTime <p>实例隔离时间。</p>
      */
     public String getIsolatedTime() {
         return this.IsolatedTime;
     }
 
     /**
-     * Set 实例隔离时间。
-     * @param IsolatedTime 实例隔离时间。
+     * Set <p>实例隔离时间。</p>
+     * @param IsolatedTime <p>实例隔离时间。</p>
      */
     public void setIsolatedTime(String IsolatedTime) {
         this.IsolatedTime = IsolatedTime;
     }
 
     /**
-     * Get 计费模式：
-<li>prepaid：包年包月,预付费</li>
-<li>postpaid：按量计费，后付费</li> 
-     * @return PayType 计费模式：
-<li>prepaid：包年包月,预付费</li>
-<li>postpaid：按量计费，后付费</li>
+     * Get <p>计费模式：</p><li>prepaid：包年包月,预付费</li><li>postpaid：按量计费，后付费</li> 
+     * @return PayType <p>计费模式：</p><li>prepaid：包年包月,预付费</li><li>postpaid：按量计费，后付费</li>
      */
     public String getPayType() {
         return this.PayType;
     }
 
     /**
-     * Set 计费模式：
-<li>prepaid：包年包月,预付费</li>
-<li>postpaid：按量计费，后付费</li>
-     * @param PayType 计费模式：
-<li>prepaid：包年包月,预付费</li>
-<li>postpaid：按量计费，后付费</li>
+     * Set <p>计费模式：</p><li>prepaid：包年包月,预付费</li><li>postpaid：按量计费，后付费</li>
+     * @param PayType <p>计费模式：</p><li>prepaid：包年包月,预付费</li><li>postpaid：按量计费，后付费</li>
      */
     public void setPayType(String PayType) {
         this.PayType = PayType;
     }
 
     /**
-     * Get 是否自动续费：
-<li>0：手动续费</li>
-<li>1：自动续费</li>
-默认值：0 
-     * @return AutoRenew 是否自动续费：
-<li>0：手动续费</li>
-<li>1：自动续费</li>
-默认值：0
+     * Get <p>是否自动续费：</p><li>0：手动续费</li><li>1：自动续费</li>默认值：0 
+     * @return AutoRenew <p>是否自动续费：</p><li>0：手动续费</li><li>1：自动续费</li>默认值：0
      */
     public Long getAutoRenew() {
         return this.AutoRenew;
     }
 
     /**
-     * Set 是否自动续费：
-<li>0：手动续费</li>
-<li>1：自动续费</li>
-默认值：0
-     * @param AutoRenew 是否自动续费：
-<li>0：手动续费</li>
-<li>1：自动续费</li>
-默认值：0
+     * Set <p>是否自动续费：</p><li>0：手动续费</li><li>1：自动续费</li>默认值：0
+     * @param AutoRenew <p>是否自动续费：</p><li>0：手动续费</li><li>1：自动续费</li>默认值：0
      */
     public void setAutoRenew(Long AutoRenew) {
         this.AutoRenew = AutoRenew;
     }
 
     /**
-     * Get 实例网络连接信息。 
-     * @return DBInstanceNetInfo 实例网络连接信息。
+     * Get <p>实例网络连接信息。</p> 
+     * @return DBInstanceNetInfo <p>实例网络连接信息。</p>
      */
     public DBInstanceNetInfo [] getDBInstanceNetInfo() {
         return this.DBInstanceNetInfo;
     }
 
     /**
-     * Set 实例网络连接信息。
-     * @param DBInstanceNetInfo 实例网络连接信息。
+     * Set <p>实例网络连接信息。</p>
+     * @param DBInstanceNetInfo <p>实例网络连接信息。</p>
      */
     public void setDBInstanceNetInfo(DBInstanceNetInfo [] DBInstanceNetInfo) {
         this.DBInstanceNetInfo = DBInstanceNetInfo;
     }
 
     /**
-     * Get 机器类型。 
-     * @return Type 机器类型。
+     * Get <p>机器类型。</p> 
+     * @return Type <p>机器类型。</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 机器类型。
-     * @param Type 机器类型。
+     * Set <p>机器类型。</p>
+     * @param Type <p>机器类型。</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 用户的AppId。 
-     * @return AppId 用户的AppId。
+     * Get <p>用户的AppId。</p> 
+     * @return AppId <p>用户的AppId。</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 用户的AppId。
-     * @param AppId 用户的AppId。
+     * Set <p>用户的AppId。</p>
+     * @param AppId <p>用户的AppId。</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 实例的Uid。 
-     * @return Uid 实例的Uid。
+     * Get <p>实例的Uid。</p> 
+     * @return Uid <p>实例的Uid。</p>
      */
     public Long getUid() {
         return this.Uid;
     }
 
     /**
-     * Set 实例的Uid。
-     * @param Uid 实例的Uid。
+     * Set <p>实例的Uid。</p>
+     * @param Uid <p>实例的Uid。</p>
      */
     public void setUid(Long Uid) {
         this.Uid = Uid;
     }
 
     /**
-     * Get 项目ID。 
-     * @return ProjectId 项目ID。
+     * Get <p>项目ID。</p> 
+     * @return ProjectId <p>项目ID。</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID。
-     * @param ProjectId 项目ID。
+     * Set <p>项目ID。</p>
+     * @param ProjectId <p>项目ID。</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 实例绑定的标签信息。 
-     * @return TagList 实例绑定的标签信息。
+     * Get <p>实例绑定的标签信息。</p> 
+     * @return TagList <p>实例绑定的标签信息。</p>
      */
     public Tag [] getTagList() {
         return this.TagList;
     }
 
     /**
-     * Set 实例绑定的标签信息。
-     * @param TagList 实例绑定的标签信息。
+     * Set <p>实例绑定的标签信息。</p>
+     * @param TagList <p>实例绑定的标签信息。</p>
      */
     public void setTagList(Tag [] TagList) {
         this.TagList = TagList;
     }
 
     /**
-     * Get 主实例信息，仅在实例为只读实例时返回。 
-     * @return MasterDBInstanceId 主实例信息，仅在实例为只读实例时返回。
+     * Get <p>主实例信息，仅在实例为只读实例时返回。</p> 
+     * @return MasterDBInstanceId <p>主实例信息，仅在实例为只读实例时返回。</p>
      */
     public String getMasterDBInstanceId() {
         return this.MasterDBInstanceId;
     }
 
     /**
-     * Set 主实例信息，仅在实例为只读实例时返回。
-     * @param MasterDBInstanceId 主实例信息，仅在实例为只读实例时返回。
+     * Set <p>主实例信息，仅在实例为只读实例时返回。</p>
+     * @param MasterDBInstanceId <p>主实例信息，仅在实例为只读实例时返回。</p>
      */
     public void setMasterDBInstanceId(String MasterDBInstanceId) {
         this.MasterDBInstanceId = MasterDBInstanceId;
     }
 
     /**
-     * Get 只读实例数量。 
-     * @return ReadOnlyInstanceNum 只读实例数量。
+     * Get <p>只读实例数量。</p> 
+     * @return ReadOnlyInstanceNum <p>只读实例数量。</p>
      */
     public Long getReadOnlyInstanceNum() {
         return this.ReadOnlyInstanceNum;
     }
 
     /**
-     * Set 只读实例数量。
-     * @param ReadOnlyInstanceNum 只读实例数量。
+     * Set <p>只读实例数量。</p>
+     * @param ReadOnlyInstanceNum <p>只读实例数量。</p>
      */
     public void setReadOnlyInstanceNum(Long ReadOnlyInstanceNum) {
         this.ReadOnlyInstanceNum = ReadOnlyInstanceNum;
     }
 
     /**
-     * Get 只读实例在只读组中的状态。 
-     * @return StatusInReadonlyGroup 只读实例在只读组中的状态。
+     * Get <p>只读实例在只读组中的状态。</p> 
+     * @return StatusInReadonlyGroup <p>只读实例在只读组中的状态。</p>
      */
     public String getStatusInReadonlyGroup() {
         return this.StatusInReadonlyGroup;
     }
 
     /**
-     * Set 只读实例在只读组中的状态。
-     * @param StatusInReadonlyGroup 只读实例在只读组中的状态。
+     * Set <p>只读实例在只读组中的状态。</p>
+     * @param StatusInReadonlyGroup <p>只读实例在只读组中的状态。</p>
      */
     public void setStatusInReadonlyGroup(String StatusInReadonlyGroup) {
         this.StatusInReadonlyGroup = StatusInReadonlyGroup;
     }
 
     /**
-     * Get 下线时间。 
-     * @return OfflineTime 下线时间。
+     * Get <p>下线时间。</p> 
+     * @return OfflineTime <p>下线时间。</p>
      */
     public String getOfflineTime() {
         return this.OfflineTime;
     }
 
     /**
-     * Set 下线时间。
-     * @param OfflineTime 下线时间。
+     * Set <p>下线时间。</p>
+     * @param OfflineTime <p>下线时间。</p>
      */
     public void setOfflineTime(String OfflineTime) {
         this.OfflineTime = OfflineTime;
     }
 
     /**
-     * Get 实例的节点信息。
+     * Get <p>实例的节点信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DBNodeSet 实例的节点信息。
+     * @return DBNodeSet <p>实例的节点信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DBNode [] getDBNodeSet() {
@@ -925,9 +851,9 @@ mssql_compatible引擎：
     }
 
     /**
-     * Set 实例的节点信息。
+     * Set <p>实例的节点信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DBNodeSet 实例的节点信息。
+     * @param DBNodeSet <p>实例的节点信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDBNodeSet(DBNode [] DBNodeSet) {
@@ -935,113 +861,57 @@ mssql_compatible引擎：
     }
 
     /**
-     * Get 实例是否支持TDE数据加密：
-<li>0：不支持</li>
-<li>1：支持</li>
-默认值：0
-TDE数据加密可参考[数据透明加密概述](https://cloud.tencent.com/document/product/409/71748) 
-     * @return IsSupportTDE 实例是否支持TDE数据加密：
-<li>0：不支持</li>
-<li>1：支持</li>
-默认值：0
-TDE数据加密可参考[数据透明加密概述](https://cloud.tencent.com/document/product/409/71748)
+     * Get <p>实例是否支持TDE数据加密：</p><li>0：不支持</li><li>1：支持</li>默认值：0TDE数据加密可参考[数据透明加密概述](https://cloud.tencent.com/document/product/409/71748) 
+     * @return IsSupportTDE <p>实例是否支持TDE数据加密：</p><li>0：不支持</li><li>1：支持</li>默认值：0TDE数据加密可参考[数据透明加密概述](https://cloud.tencent.com/document/product/409/71748)
      */
     public Long getIsSupportTDE() {
         return this.IsSupportTDE;
     }
 
     /**
-     * Set 实例是否支持TDE数据加密：
-<li>0：不支持</li>
-<li>1：支持</li>
-默认值：0
-TDE数据加密可参考[数据透明加密概述](https://cloud.tencent.com/document/product/409/71748)
-     * @param IsSupportTDE 实例是否支持TDE数据加密：
-<li>0：不支持</li>
-<li>1：支持</li>
-默认值：0
-TDE数据加密可参考[数据透明加密概述](https://cloud.tencent.com/document/product/409/71748)
+     * Set <p>实例是否支持TDE数据加密：</p><li>0：不支持</li><li>1：支持</li>默认值：0TDE数据加密可参考[数据透明加密概述](https://cloud.tencent.com/document/product/409/71748)
+     * @param IsSupportTDE <p>实例是否支持TDE数据加密：</p><li>0：不支持</li><li>1：支持</li>默认值：0TDE数据加密可参考[数据透明加密概述](https://cloud.tencent.com/document/product/409/71748)
      */
     public void setIsSupportTDE(Long IsSupportTDE) {
         this.IsSupportTDE = IsSupportTDE;
     }
 
     /**
-     * Get 数据库引擎，支持：
-<li>postgresql：云数据库PostgreSQL</li>
-<li>mssql_compatible：MSSQL兼容-云数据库PostgreSQL</li>
-默认值：postgresql 
-     * @return DBEngine 数据库引擎，支持：
-<li>postgresql：云数据库PostgreSQL</li>
-<li>mssql_compatible：MSSQL兼容-云数据库PostgreSQL</li>
-默认值：postgresql
+     * Get <p>数据库引擎，支持：</p><li>postgresql：云数据库PostgreSQL</li><li>mssql_compatible：MSSQL兼容-云数据库PostgreSQL</li>默认值：postgresql 
+     * @return DBEngine <p>数据库引擎，支持：</p><li>postgresql：云数据库PostgreSQL</li><li>mssql_compatible：MSSQL兼容-云数据库PostgreSQL</li>默认值：postgresql
      */
     public String getDBEngine() {
         return this.DBEngine;
     }
 
     /**
-     * Set 数据库引擎，支持：
-<li>postgresql：云数据库PostgreSQL</li>
-<li>mssql_compatible：MSSQL兼容-云数据库PostgreSQL</li>
-默认值：postgresql
-     * @param DBEngine 数据库引擎，支持：
-<li>postgresql：云数据库PostgreSQL</li>
-<li>mssql_compatible：MSSQL兼容-云数据库PostgreSQL</li>
-默认值：postgresql
+     * Set <p>数据库引擎，支持：</p><li>postgresql：云数据库PostgreSQL</li><li>mssql_compatible：MSSQL兼容-云数据库PostgreSQL</li>默认值：postgresql
+     * @param DBEngine <p>数据库引擎，支持：</p><li>postgresql：云数据库PostgreSQL</li><li>mssql_compatible：MSSQL兼容-云数据库PostgreSQL</li>默认值：postgresql
      */
     public void setDBEngine(String DBEngine) {
         this.DBEngine = DBEngine;
     }
 
     /**
-     * Get 数据库引擎的配置信息，配置格式如下：
-{"$key1":"$value1", "$key2":"$value2"}
-各引擎支持如下：
-mssql_compatible引擎：
-<li>migrationMode：数据库模式，可选参数，可取值：single-db（单数据库模式），multi-db（多数据库模式）。默认为single-db。</li>
-<li>defaultLocale：排序区域规则，可选参数，在初始化后不可修改，默认为en_US，可选值如下：
-"af_ZA", "sq_AL", "ar_DZ", "ar_BH", "ar_EG", "ar_IQ", "ar_JO", "ar_KW", "ar_LB", "ar_LY", "ar_MA", "ar_OM", "ar_QA", "ar_SA", "ar_SY", "ar_TN", "ar_AE", "ar_YE", "hy_AM", "az_Cyrl_AZ", "az_Latn_AZ", "eu_ES", "be_BY", "bg_BG", "ca_ES", "zh_HK", "zh_MO", "zh_CN", "zh_SG", "zh_TW", "hr_HR", "cs_CZ", "da_DK", "nl_BE", "nl_NL", "en_AU", "en_BZ", "en_CA", "en_IE", "en_JM", "en_NZ", "en_PH", "en_ZA", "en_TT", "en_GB", "en_US", "en_ZW", "et_EE", "fo_FO", "fa_IR", "fi_FI", "fr_BE", "fr_CA", "fr_FR", "fr_LU", "fr_MC", "fr_CH", "mk_MK", "ka_GE", "de_AT", "de_DE", "de_LI", "de_LU", "de_CH", "el_GR", "gu_IN", "he_IL", "hi_IN", "hu_HU", "is_IS", "id_ID", "it_IT", "it_CH", "ja_JP", "kn_IN", "kok_IN", "ko_KR", "ky_KG", "lv_LV", "lt_LT", "ms_BN", "ms_MY", "mr_IN", "mn_MN", "nb_NO", "nn_NO", "pl_PL", "pt_BR", "pt_PT", "pa_IN", "ro_RO", "ru_RU", "sa_IN", "sr_Cyrl_RS", "sr_Latn_RS", "sk_SK", "sl_SI", "es_AR", "es_BO", "es_CL", "es_CO", "es_CR", "es_DO", "es_EC", "es_SV", "es_GT", "es_HN", "es_MX", "es_NI", "es_PA", "es_PY","es_PE", "es_PR", "es_ES", "es_TRADITIONAL", "es_UY", "es_VE", "sw_KE", "sv_FI", "sv_SE", "tt_RU", "te_IN", "th_TH", "tr_TR", "uk_UA", "ur_IN", "ur_PK", "uz_Cyrl_UZ", "uz_Latn_UZ", "vi_VN"。</li>
-<li>serverCollationName：排序规则名称，可选参数，在初始化后不可修改，默认为sql_latin1_general_cp1_ci_as，可选值如下："bbf_unicode_general_ci_as", "bbf_unicode_cp1_ci_as", "bbf_unicode_CP1250_ci_as", "bbf_unicode_CP1251_ci_as", "bbf_unicode_cp1253_ci_as", "bbf_unicode_cp1254_ci_as", "bbf_unicode_cp1255_ci_as", "bbf_unicode_cp1256_ci_as", "bbf_unicode_cp1257_ci_as", "bbf_unicode_cp1258_ci_as", "bbf_unicode_cp874_ci_as", "sql_latin1_general_cp1250_ci_as", "sql_latin1_general_cp1251_ci_as", "sql_latin1_general_cp1_ci_as", "sql_latin1_general_cp1253_ci_as", "sql_latin1_general_cp1254_ci_as", "sql_latin1_general_cp1255_ci_as","sql_latin1_general_cp1256_ci_as", "sql_latin1_general_cp1257_ci_as", "sql_latin1_general_cp1258_ci_as", "chinese_prc_ci_as", "cyrillic_general_ci_as", "finnish_swedish_ci_as", "french_ci_as", "japanese_ci_as", "korean_wansung_ci_as", "latin1_general_ci_as", "modern_spanish_ci_as", "polish_ci_as", "thai_ci_as", "traditional_spanish_ci_as", "turkish_ci_as", "ukrainian_ci_as", "vietnamese_ci_as"。</li> 
-     * @return DBEngineConfig 数据库引擎的配置信息，配置格式如下：
-{"$key1":"$value1", "$key2":"$value2"}
-各引擎支持如下：
-mssql_compatible引擎：
-<li>migrationMode：数据库模式，可选参数，可取值：single-db（单数据库模式），multi-db（多数据库模式）。默认为single-db。</li>
-<li>defaultLocale：排序区域规则，可选参数，在初始化后不可修改，默认为en_US，可选值如下：
-"af_ZA", "sq_AL", "ar_DZ", "ar_BH", "ar_EG", "ar_IQ", "ar_JO", "ar_KW", "ar_LB", "ar_LY", "ar_MA", "ar_OM", "ar_QA", "ar_SA", "ar_SY", "ar_TN", "ar_AE", "ar_YE", "hy_AM", "az_Cyrl_AZ", "az_Latn_AZ", "eu_ES", "be_BY", "bg_BG", "ca_ES", "zh_HK", "zh_MO", "zh_CN", "zh_SG", "zh_TW", "hr_HR", "cs_CZ", "da_DK", "nl_BE", "nl_NL", "en_AU", "en_BZ", "en_CA", "en_IE", "en_JM", "en_NZ", "en_PH", "en_ZA", "en_TT", "en_GB", "en_US", "en_ZW", "et_EE", "fo_FO", "fa_IR", "fi_FI", "fr_BE", "fr_CA", "fr_FR", "fr_LU", "fr_MC", "fr_CH", "mk_MK", "ka_GE", "de_AT", "de_DE", "de_LI", "de_LU", "de_CH", "el_GR", "gu_IN", "he_IL", "hi_IN", "hu_HU", "is_IS", "id_ID", "it_IT", "it_CH", "ja_JP", "kn_IN", "kok_IN", "ko_KR", "ky_KG", "lv_LV", "lt_LT", "ms_BN", "ms_MY", "mr_IN", "mn_MN", "nb_NO", "nn_NO", "pl_PL", "pt_BR", "pt_PT", "pa_IN", "ro_RO", "ru_RU", "sa_IN", "sr_Cyrl_RS", "sr_Latn_RS", "sk_SK", "sl_SI", "es_AR", "es_BO", "es_CL", "es_CO", "es_CR", "es_DO", "es_EC", "es_SV", "es_GT", "es_HN", "es_MX", "es_NI", "es_PA", "es_PY","es_PE", "es_PR", "es_ES", "es_TRADITIONAL", "es_UY", "es_VE", "sw_KE", "sv_FI", "sv_SE", "tt_RU", "te_IN", "th_TH", "tr_TR", "uk_UA", "ur_IN", "ur_PK", "uz_Cyrl_UZ", "uz_Latn_UZ", "vi_VN"。</li>
-<li>serverCollationName：排序规则名称，可选参数，在初始化后不可修改，默认为sql_latin1_general_cp1_ci_as，可选值如下："bbf_unicode_general_ci_as", "bbf_unicode_cp1_ci_as", "bbf_unicode_CP1250_ci_as", "bbf_unicode_CP1251_ci_as", "bbf_unicode_cp1253_ci_as", "bbf_unicode_cp1254_ci_as", "bbf_unicode_cp1255_ci_as", "bbf_unicode_cp1256_ci_as", "bbf_unicode_cp1257_ci_as", "bbf_unicode_cp1258_ci_as", "bbf_unicode_cp874_ci_as", "sql_latin1_general_cp1250_ci_as", "sql_latin1_general_cp1251_ci_as", "sql_latin1_general_cp1_ci_as", "sql_latin1_general_cp1253_ci_as", "sql_latin1_general_cp1254_ci_as", "sql_latin1_general_cp1255_ci_as","sql_latin1_general_cp1256_ci_as", "sql_latin1_general_cp1257_ci_as", "sql_latin1_general_cp1258_ci_as", "chinese_prc_ci_as", "cyrillic_general_ci_as", "finnish_swedish_ci_as", "french_ci_as", "japanese_ci_as", "korean_wansung_ci_as", "latin1_general_ci_as", "modern_spanish_ci_as", "polish_ci_as", "thai_ci_as", "traditional_spanish_ci_as", "turkish_ci_as", "ukrainian_ci_as", "vietnamese_ci_as"。</li>
+     * Get <p>数据库引擎的配置信息，配置格式如下：<br>{&quot;$key1&quot;:&quot;$value1&quot;, &quot;$key2&quot;:&quot;$value2&quot;}<br>各引擎支持如下：<br>mssql_compatible引擎：</p><li>migrationMode：数据库模式，可选参数，可取值：single-db（单数据库模式），multi-db（多数据库模式）。默认为single-db。</li><li>defaultLocale：排序区域规则，可选参数，在初始化后不可修改，默认为en_US，可选值如下："af_ZA", "sq_AL", "ar_DZ", "ar_BH", "ar_EG", "ar_IQ", "ar_JO", "ar_KW", "ar_LB", "ar_LY", "ar_MA", "ar_OM", "ar_QA", "ar_SA", "ar_SY", "ar_TN", "ar_AE", "ar_YE", "hy_AM", "az_Cyrl_AZ", "az_Latn_AZ", "eu_ES", "be_BY", "bg_BG", "ca_ES", "zh_HK", "zh_MO", "zh_CN", "zh_SG", "zh_TW", "hr_HR", "cs_CZ", "da_DK", "nl_BE", "nl_NL", "en_AU", "en_BZ", "en_CA", "en_IE", "en_JM", "en_NZ", "en_PH", "en_ZA", "en_TT", "en_GB", "en_US", "en_ZW", "et_EE", "fo_FO", "fa_IR", "fi_FI", "fr_BE", "fr_CA", "fr_FR", "fr_LU", "fr_MC", "fr_CH", "mk_MK", "ka_GE", "de_AT", "de_DE", "de_LI", "de_LU", "de_CH", "el_GR", "gu_IN", "he_IL", "hi_IN", "hu_HU", "is_IS", "id_ID", "it_IT", "it_CH", "ja_JP", "kn_IN", "kok_IN", "ko_KR", "ky_KG", "lv_LV", "lt_LT", "ms_BN", "ms_MY", "mr_IN", "mn_MN", "nb_NO", "nn_NO", "pl_PL", "pt_BR", "pt_PT", "pa_IN", "ro_RO", "ru_RU", "sa_IN", "sr_Cyrl_RS", "sr_Latn_RS", "sk_SK", "sl_SI", "es_AR", "es_BO", "es_CL", "es_CO", "es_CR", "es_DO", "es_EC", "es_SV", "es_GT", "es_HN", "es_MX", "es_NI", "es_PA", "es_PY","es_PE", "es_PR", "es_ES", "es_TRADITIONAL", "es_UY", "es_VE", "sw_KE", "sv_FI", "sv_SE", "tt_RU", "te_IN", "th_TH", "tr_TR", "uk_UA", "ur_IN", "ur_PK", "uz_Cyrl_UZ", "uz_Latn_UZ", "vi_VN"。</li><li>serverCollationName：排序规则名称，可选参数，在初始化后不可修改，默认为sql_latin1_general_cp1_ci_as，可选值如下："bbf_unicode_general_ci_as", "bbf_unicode_cp1_ci_as", "bbf_unicode_CP1250_ci_as", "bbf_unicode_CP1251_ci_as", "bbf_unicode_cp1253_ci_as", "bbf_unicode_cp1254_ci_as", "bbf_unicode_cp1255_ci_as", "bbf_unicode_cp1256_ci_as", "bbf_unicode_cp1257_ci_as", "bbf_unicode_cp1258_ci_as", "bbf_unicode_cp874_ci_as", "sql_latin1_general_cp1250_ci_as", "sql_latin1_general_cp1251_ci_as", "sql_latin1_general_cp1_ci_as", "sql_latin1_general_cp1253_ci_as", "sql_latin1_general_cp1254_ci_as", "sql_latin1_general_cp1255_ci_as","sql_latin1_general_cp1256_ci_as", "sql_latin1_general_cp1257_ci_as", "sql_latin1_general_cp1258_ci_as", "chinese_prc_ci_as", "cyrillic_general_ci_as", "finnish_swedish_ci_as", "french_ci_as", "japanese_ci_as", "korean_wansung_ci_as", "latin1_general_ci_as", "modern_spanish_ci_as", "polish_ci_as", "thai_ci_as", "traditional_spanish_ci_as", "turkish_ci_as", "ukrainian_ci_as", "vietnamese_ci_as"。</li> 
+     * @return DBEngineConfig <p>数据库引擎的配置信息，配置格式如下：<br>{&quot;$key1&quot;:&quot;$value1&quot;, &quot;$key2&quot;:&quot;$value2&quot;}<br>各引擎支持如下：<br>mssql_compatible引擎：</p><li>migrationMode：数据库模式，可选参数，可取值：single-db（单数据库模式），multi-db（多数据库模式）。默认为single-db。</li><li>defaultLocale：排序区域规则，可选参数，在初始化后不可修改，默认为en_US，可选值如下："af_ZA", "sq_AL", "ar_DZ", "ar_BH", "ar_EG", "ar_IQ", "ar_JO", "ar_KW", "ar_LB", "ar_LY", "ar_MA", "ar_OM", "ar_QA", "ar_SA", "ar_SY", "ar_TN", "ar_AE", "ar_YE", "hy_AM", "az_Cyrl_AZ", "az_Latn_AZ", "eu_ES", "be_BY", "bg_BG", "ca_ES", "zh_HK", "zh_MO", "zh_CN", "zh_SG", "zh_TW", "hr_HR", "cs_CZ", "da_DK", "nl_BE", "nl_NL", "en_AU", "en_BZ", "en_CA", "en_IE", "en_JM", "en_NZ", "en_PH", "en_ZA", "en_TT", "en_GB", "en_US", "en_ZW", "et_EE", "fo_FO", "fa_IR", "fi_FI", "fr_BE", "fr_CA", "fr_FR", "fr_LU", "fr_MC", "fr_CH", "mk_MK", "ka_GE", "de_AT", "de_DE", "de_LI", "de_LU", "de_CH", "el_GR", "gu_IN", "he_IL", "hi_IN", "hu_HU", "is_IS", "id_ID", "it_IT", "it_CH", "ja_JP", "kn_IN", "kok_IN", "ko_KR", "ky_KG", "lv_LV", "lt_LT", "ms_BN", "ms_MY", "mr_IN", "mn_MN", "nb_NO", "nn_NO", "pl_PL", "pt_BR", "pt_PT", "pa_IN", "ro_RO", "ru_RU", "sa_IN", "sr_Cyrl_RS", "sr_Latn_RS", "sk_SK", "sl_SI", "es_AR", "es_BO", "es_CL", "es_CO", "es_CR", "es_DO", "es_EC", "es_SV", "es_GT", "es_HN", "es_MX", "es_NI", "es_PA", "es_PY","es_PE", "es_PR", "es_ES", "es_TRADITIONAL", "es_UY", "es_VE", "sw_KE", "sv_FI", "sv_SE", "tt_RU", "te_IN", "th_TH", "tr_TR", "uk_UA", "ur_IN", "ur_PK", "uz_Cyrl_UZ", "uz_Latn_UZ", "vi_VN"。</li><li>serverCollationName：排序规则名称，可选参数，在初始化后不可修改，默认为sql_latin1_general_cp1_ci_as，可选值如下："bbf_unicode_general_ci_as", "bbf_unicode_cp1_ci_as", "bbf_unicode_CP1250_ci_as", "bbf_unicode_CP1251_ci_as", "bbf_unicode_cp1253_ci_as", "bbf_unicode_cp1254_ci_as", "bbf_unicode_cp1255_ci_as", "bbf_unicode_cp1256_ci_as", "bbf_unicode_cp1257_ci_as", "bbf_unicode_cp1258_ci_as", "bbf_unicode_cp874_ci_as", "sql_latin1_general_cp1250_ci_as", "sql_latin1_general_cp1251_ci_as", "sql_latin1_general_cp1_ci_as", "sql_latin1_general_cp1253_ci_as", "sql_latin1_general_cp1254_ci_as", "sql_latin1_general_cp1255_ci_as","sql_latin1_general_cp1256_ci_as", "sql_latin1_general_cp1257_ci_as", "sql_latin1_general_cp1258_ci_as", "chinese_prc_ci_as", "cyrillic_general_ci_as", "finnish_swedish_ci_as", "french_ci_as", "japanese_ci_as", "korean_wansung_ci_as", "latin1_general_ci_as", "modern_spanish_ci_as", "polish_ci_as", "thai_ci_as", "traditional_spanish_ci_as", "turkish_ci_as", "ukrainian_ci_as", "vietnamese_ci_as"。</li>
      */
     public String getDBEngineConfig() {
         return this.DBEngineConfig;
     }
 
     /**
-     * Set 数据库引擎的配置信息，配置格式如下：
-{"$key1":"$value1", "$key2":"$value2"}
-各引擎支持如下：
-mssql_compatible引擎：
-<li>migrationMode：数据库模式，可选参数，可取值：single-db（单数据库模式），multi-db（多数据库模式）。默认为single-db。</li>
-<li>defaultLocale：排序区域规则，可选参数，在初始化后不可修改，默认为en_US，可选值如下：
-"af_ZA", "sq_AL", "ar_DZ", "ar_BH", "ar_EG", "ar_IQ", "ar_JO", "ar_KW", "ar_LB", "ar_LY", "ar_MA", "ar_OM", "ar_QA", "ar_SA", "ar_SY", "ar_TN", "ar_AE", "ar_YE", "hy_AM", "az_Cyrl_AZ", "az_Latn_AZ", "eu_ES", "be_BY", "bg_BG", "ca_ES", "zh_HK", "zh_MO", "zh_CN", "zh_SG", "zh_TW", "hr_HR", "cs_CZ", "da_DK", "nl_BE", "nl_NL", "en_AU", "en_BZ", "en_CA", "en_IE", "en_JM", "en_NZ", "en_PH", "en_ZA", "en_TT", "en_GB", "en_US", "en_ZW", "et_EE", "fo_FO", "fa_IR", "fi_FI", "fr_BE", "fr_CA", "fr_FR", "fr_LU", "fr_MC", "fr_CH", "mk_MK", "ka_GE", "de_AT", "de_DE", "de_LI", "de_LU", "de_CH", "el_GR", "gu_IN", "he_IL", "hi_IN", "hu_HU", "is_IS", "id_ID", "it_IT", "it_CH", "ja_JP", "kn_IN", "kok_IN", "ko_KR", "ky_KG", "lv_LV", "lt_LT", "ms_BN", "ms_MY", "mr_IN", "mn_MN", "nb_NO", "nn_NO", "pl_PL", "pt_BR", "pt_PT", "pa_IN", "ro_RO", "ru_RU", "sa_IN", "sr_Cyrl_RS", "sr_Latn_RS", "sk_SK", "sl_SI", "es_AR", "es_BO", "es_CL", "es_CO", "es_CR", "es_DO", "es_EC", "es_SV", "es_GT", "es_HN", "es_MX", "es_NI", "es_PA", "es_PY","es_PE", "es_PR", "es_ES", "es_TRADITIONAL", "es_UY", "es_VE", "sw_KE", "sv_FI", "sv_SE", "tt_RU", "te_IN", "th_TH", "tr_TR", "uk_UA", "ur_IN", "ur_PK", "uz_Cyrl_UZ", "uz_Latn_UZ", "vi_VN"。</li>
-<li>serverCollationName：排序规则名称，可选参数，在初始化后不可修改，默认为sql_latin1_general_cp1_ci_as，可选值如下："bbf_unicode_general_ci_as", "bbf_unicode_cp1_ci_as", "bbf_unicode_CP1250_ci_as", "bbf_unicode_CP1251_ci_as", "bbf_unicode_cp1253_ci_as", "bbf_unicode_cp1254_ci_as", "bbf_unicode_cp1255_ci_as", "bbf_unicode_cp1256_ci_as", "bbf_unicode_cp1257_ci_as", "bbf_unicode_cp1258_ci_as", "bbf_unicode_cp874_ci_as", "sql_latin1_general_cp1250_ci_as", "sql_latin1_general_cp1251_ci_as", "sql_latin1_general_cp1_ci_as", "sql_latin1_general_cp1253_ci_as", "sql_latin1_general_cp1254_ci_as", "sql_latin1_general_cp1255_ci_as","sql_latin1_general_cp1256_ci_as", "sql_latin1_general_cp1257_ci_as", "sql_latin1_general_cp1258_ci_as", "chinese_prc_ci_as", "cyrillic_general_ci_as", "finnish_swedish_ci_as", "french_ci_as", "japanese_ci_as", "korean_wansung_ci_as", "latin1_general_ci_as", "modern_spanish_ci_as", "polish_ci_as", "thai_ci_as", "traditional_spanish_ci_as", "turkish_ci_as", "ukrainian_ci_as", "vietnamese_ci_as"。</li>
-     * @param DBEngineConfig 数据库引擎的配置信息，配置格式如下：
-{"$key1":"$value1", "$key2":"$value2"}
-各引擎支持如下：
-mssql_compatible引擎：
-<li>migrationMode：数据库模式，可选参数，可取值：single-db（单数据库模式），multi-db（多数据库模式）。默认为single-db。</li>
-<li>defaultLocale：排序区域规则，可选参数，在初始化后不可修改，默认为en_US，可选值如下：
-"af_ZA", "sq_AL", "ar_DZ", "ar_BH", "ar_EG", "ar_IQ", "ar_JO", "ar_KW", "ar_LB", "ar_LY", "ar_MA", "ar_OM", "ar_QA", "ar_SA", "ar_SY", "ar_TN", "ar_AE", "ar_YE", "hy_AM", "az_Cyrl_AZ", "az_Latn_AZ", "eu_ES", "be_BY", "bg_BG", "ca_ES", "zh_HK", "zh_MO", "zh_CN", "zh_SG", "zh_TW", "hr_HR", "cs_CZ", "da_DK", "nl_BE", "nl_NL", "en_AU", "en_BZ", "en_CA", "en_IE", "en_JM", "en_NZ", "en_PH", "en_ZA", "en_TT", "en_GB", "en_US", "en_ZW", "et_EE", "fo_FO", "fa_IR", "fi_FI", "fr_BE", "fr_CA", "fr_FR", "fr_LU", "fr_MC", "fr_CH", "mk_MK", "ka_GE", "de_AT", "de_DE", "de_LI", "de_LU", "de_CH", "el_GR", "gu_IN", "he_IL", "hi_IN", "hu_HU", "is_IS", "id_ID", "it_IT", "it_CH", "ja_JP", "kn_IN", "kok_IN", "ko_KR", "ky_KG", "lv_LV", "lt_LT", "ms_BN", "ms_MY", "mr_IN", "mn_MN", "nb_NO", "nn_NO", "pl_PL", "pt_BR", "pt_PT", "pa_IN", "ro_RO", "ru_RU", "sa_IN", "sr_Cyrl_RS", "sr_Latn_RS", "sk_SK", "sl_SI", "es_AR", "es_BO", "es_CL", "es_CO", "es_CR", "es_DO", "es_EC", "es_SV", "es_GT", "es_HN", "es_MX", "es_NI", "es_PA", "es_PY","es_PE", "es_PR", "es_ES", "es_TRADITIONAL", "es_UY", "es_VE", "sw_KE", "sv_FI", "sv_SE", "tt_RU", "te_IN", "th_TH", "tr_TR", "uk_UA", "ur_IN", "ur_PK", "uz_Cyrl_UZ", "uz_Latn_UZ", "vi_VN"。</li>
-<li>serverCollationName：排序规则名称，可选参数，在初始化后不可修改，默认为sql_latin1_general_cp1_ci_as，可选值如下："bbf_unicode_general_ci_as", "bbf_unicode_cp1_ci_as", "bbf_unicode_CP1250_ci_as", "bbf_unicode_CP1251_ci_as", "bbf_unicode_cp1253_ci_as", "bbf_unicode_cp1254_ci_as", "bbf_unicode_cp1255_ci_as", "bbf_unicode_cp1256_ci_as", "bbf_unicode_cp1257_ci_as", "bbf_unicode_cp1258_ci_as", "bbf_unicode_cp874_ci_as", "sql_latin1_general_cp1250_ci_as", "sql_latin1_general_cp1251_ci_as", "sql_latin1_general_cp1_ci_as", "sql_latin1_general_cp1253_ci_as", "sql_latin1_general_cp1254_ci_as", "sql_latin1_general_cp1255_ci_as","sql_latin1_general_cp1256_ci_as", "sql_latin1_general_cp1257_ci_as", "sql_latin1_general_cp1258_ci_as", "chinese_prc_ci_as", "cyrillic_general_ci_as", "finnish_swedish_ci_as", "french_ci_as", "japanese_ci_as", "korean_wansung_ci_as", "latin1_general_ci_as", "modern_spanish_ci_as", "polish_ci_as", "thai_ci_as", "traditional_spanish_ci_as", "turkish_ci_as", "ukrainian_ci_as", "vietnamese_ci_as"。</li>
+     * Set <p>数据库引擎的配置信息，配置格式如下：<br>{&quot;$key1&quot;:&quot;$value1&quot;, &quot;$key2&quot;:&quot;$value2&quot;}<br>各引擎支持如下：<br>mssql_compatible引擎：</p><li>migrationMode：数据库模式，可选参数，可取值：single-db（单数据库模式），multi-db（多数据库模式）。默认为single-db。</li><li>defaultLocale：排序区域规则，可选参数，在初始化后不可修改，默认为en_US，可选值如下："af_ZA", "sq_AL", "ar_DZ", "ar_BH", "ar_EG", "ar_IQ", "ar_JO", "ar_KW", "ar_LB", "ar_LY", "ar_MA", "ar_OM", "ar_QA", "ar_SA", "ar_SY", "ar_TN", "ar_AE", "ar_YE", "hy_AM", "az_Cyrl_AZ", "az_Latn_AZ", "eu_ES", "be_BY", "bg_BG", "ca_ES", "zh_HK", "zh_MO", "zh_CN", "zh_SG", "zh_TW", "hr_HR", "cs_CZ", "da_DK", "nl_BE", "nl_NL", "en_AU", "en_BZ", "en_CA", "en_IE", "en_JM", "en_NZ", "en_PH", "en_ZA", "en_TT", "en_GB", "en_US", "en_ZW", "et_EE", "fo_FO", "fa_IR", "fi_FI", "fr_BE", "fr_CA", "fr_FR", "fr_LU", "fr_MC", "fr_CH", "mk_MK", "ka_GE", "de_AT", "de_DE", "de_LI", "de_LU", "de_CH", "el_GR", "gu_IN", "he_IL", "hi_IN", "hu_HU", "is_IS", "id_ID", "it_IT", "it_CH", "ja_JP", "kn_IN", "kok_IN", "ko_KR", "ky_KG", "lv_LV", "lt_LT", "ms_BN", "ms_MY", "mr_IN", "mn_MN", "nb_NO", "nn_NO", "pl_PL", "pt_BR", "pt_PT", "pa_IN", "ro_RO", "ru_RU", "sa_IN", "sr_Cyrl_RS", "sr_Latn_RS", "sk_SK", "sl_SI", "es_AR", "es_BO", "es_CL", "es_CO", "es_CR", "es_DO", "es_EC", "es_SV", "es_GT", "es_HN", "es_MX", "es_NI", "es_PA", "es_PY","es_PE", "es_PR", "es_ES", "es_TRADITIONAL", "es_UY", "es_VE", "sw_KE", "sv_FI", "sv_SE", "tt_RU", "te_IN", "th_TH", "tr_TR", "uk_UA", "ur_IN", "ur_PK", "uz_Cyrl_UZ", "uz_Latn_UZ", "vi_VN"。</li><li>serverCollationName：排序规则名称，可选参数，在初始化后不可修改，默认为sql_latin1_general_cp1_ci_as，可选值如下："bbf_unicode_general_ci_as", "bbf_unicode_cp1_ci_as", "bbf_unicode_CP1250_ci_as", "bbf_unicode_CP1251_ci_as", "bbf_unicode_cp1253_ci_as", "bbf_unicode_cp1254_ci_as", "bbf_unicode_cp1255_ci_as", "bbf_unicode_cp1256_ci_as", "bbf_unicode_cp1257_ci_as", "bbf_unicode_cp1258_ci_as", "bbf_unicode_cp874_ci_as", "sql_latin1_general_cp1250_ci_as", "sql_latin1_general_cp1251_ci_as", "sql_latin1_general_cp1_ci_as", "sql_latin1_general_cp1253_ci_as", "sql_latin1_general_cp1254_ci_as", "sql_latin1_general_cp1255_ci_as","sql_latin1_general_cp1256_ci_as", "sql_latin1_general_cp1257_ci_as", "sql_latin1_general_cp1258_ci_as", "chinese_prc_ci_as", "cyrillic_general_ci_as", "finnish_swedish_ci_as", "french_ci_as", "japanese_ci_as", "korean_wansung_ci_as", "latin1_general_ci_as", "modern_spanish_ci_as", "polish_ci_as", "thai_ci_as", "traditional_spanish_ci_as", "turkish_ci_as", "ukrainian_ci_as", "vietnamese_ci_as"。</li>
+     * @param DBEngineConfig <p>数据库引擎的配置信息，配置格式如下：<br>{&quot;$key1&quot;:&quot;$value1&quot;, &quot;$key2&quot;:&quot;$value2&quot;}<br>各引擎支持如下：<br>mssql_compatible引擎：</p><li>migrationMode：数据库模式，可选参数，可取值：single-db（单数据库模式），multi-db（多数据库模式）。默认为single-db。</li><li>defaultLocale：排序区域规则，可选参数，在初始化后不可修改，默认为en_US，可选值如下："af_ZA", "sq_AL", "ar_DZ", "ar_BH", "ar_EG", "ar_IQ", "ar_JO", "ar_KW", "ar_LB", "ar_LY", "ar_MA", "ar_OM", "ar_QA", "ar_SA", "ar_SY", "ar_TN", "ar_AE", "ar_YE", "hy_AM", "az_Cyrl_AZ", "az_Latn_AZ", "eu_ES", "be_BY", "bg_BG", "ca_ES", "zh_HK", "zh_MO", "zh_CN", "zh_SG", "zh_TW", "hr_HR", "cs_CZ", "da_DK", "nl_BE", "nl_NL", "en_AU", "en_BZ", "en_CA", "en_IE", "en_JM", "en_NZ", "en_PH", "en_ZA", "en_TT", "en_GB", "en_US", "en_ZW", "et_EE", "fo_FO", "fa_IR", "fi_FI", "fr_BE", "fr_CA", "fr_FR", "fr_LU", "fr_MC", "fr_CH", "mk_MK", "ka_GE", "de_AT", "de_DE", "de_LI", "de_LU", "de_CH", "el_GR", "gu_IN", "he_IL", "hi_IN", "hu_HU", "is_IS", "id_ID", "it_IT", "it_CH", "ja_JP", "kn_IN", "kok_IN", "ko_KR", "ky_KG", "lv_LV", "lt_LT", "ms_BN", "ms_MY", "mr_IN", "mn_MN", "nb_NO", "nn_NO", "pl_PL", "pt_BR", "pt_PT", "pa_IN", "ro_RO", "ru_RU", "sa_IN", "sr_Cyrl_RS", "sr_Latn_RS", "sk_SK", "sl_SI", "es_AR", "es_BO", "es_CL", "es_CO", "es_CR", "es_DO", "es_EC", "es_SV", "es_GT", "es_HN", "es_MX", "es_NI", "es_PA", "es_PY","es_PE", "es_PR", "es_ES", "es_TRADITIONAL", "es_UY", "es_VE", "sw_KE", "sv_FI", "sv_SE", "tt_RU", "te_IN", "th_TH", "tr_TR", "uk_UA", "ur_IN", "ur_PK", "uz_Cyrl_UZ", "uz_Latn_UZ", "vi_VN"。</li><li>serverCollationName：排序规则名称，可选参数，在初始化后不可修改，默认为sql_latin1_general_cp1_ci_as，可选值如下："bbf_unicode_general_ci_as", "bbf_unicode_cp1_ci_as", "bbf_unicode_CP1250_ci_as", "bbf_unicode_CP1251_ci_as", "bbf_unicode_cp1253_ci_as", "bbf_unicode_cp1254_ci_as", "bbf_unicode_cp1255_ci_as", "bbf_unicode_cp1256_ci_as", "bbf_unicode_cp1257_ci_as", "bbf_unicode_cp1258_ci_as", "bbf_unicode_cp874_ci_as", "sql_latin1_general_cp1250_ci_as", "sql_latin1_general_cp1251_ci_as", "sql_latin1_general_cp1_ci_as", "sql_latin1_general_cp1253_ci_as", "sql_latin1_general_cp1254_ci_as", "sql_latin1_general_cp1255_ci_as","sql_latin1_general_cp1256_ci_as", "sql_latin1_general_cp1257_ci_as", "sql_latin1_general_cp1258_ci_as", "chinese_prc_ci_as", "cyrillic_general_ci_as", "finnish_swedish_ci_as", "french_ci_as", "japanese_ci_as", "korean_wansung_ci_as", "latin1_general_ci_as", "modern_spanish_ci_as", "polish_ci_as", "thai_ci_as", "traditional_spanish_ci_as", "turkish_ci_as", "ukrainian_ci_as", "vietnamese_ci_as"。</li>
      */
     public void setDBEngineConfig(String DBEngineConfig) {
         this.DBEngineConfig = DBEngineConfig;
     }
 
     /**
-     * Get 实例网络信息列表（此字段已废弃）
+     * Get <p>实例网络信息列表（此字段已废弃）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NetworkAccessList 实例网络信息列表（此字段已废弃）
+     * @return NetworkAccessList <p>实例网络信息列表（此字段已废弃）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public NetworkAccess [] getNetworkAccessList() {
@@ -1049,9 +919,9 @@ mssql_compatible引擎：
     }
 
     /**
-     * Set 实例网络信息列表（此字段已废弃）
+     * Set <p>实例网络信息列表（此字段已废弃）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NetworkAccessList 实例网络信息列表（此字段已废弃）
+     * @param NetworkAccessList <p>实例网络信息列表（此字段已废弃）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetworkAccessList(NetworkAccess [] NetworkAccessList) {
@@ -1059,68 +929,48 @@ mssql_compatible引擎：
     }
 
     /**
-     * Get 实例是否支持Ipv6：
-<li>0：否</li>
-<li>1：是</li>
-默认值：0 
-     * @return SupportIpv6 实例是否支持Ipv6：
-<li>0：否</li>
-<li>1：是</li>
-默认值：0
+     * Get <p>实例是否支持Ipv6：</p><li>0：否</li><li>1：是</li>默认值：0 
+     * @return SupportIpv6 <p>实例是否支持Ipv6：</p><li>0：否</li><li>1：是</li>默认值：0
      */
     public Long getSupportIpv6() {
         return this.SupportIpv6;
     }
 
     /**
-     * Set 实例是否支持Ipv6：
-<li>0：否</li>
-<li>1：是</li>
-默认值：0
-     * @param SupportIpv6 实例是否支持Ipv6：
-<li>0：否</li>
-<li>1：是</li>
-默认值：0
+     * Set <p>实例是否支持Ipv6：</p><li>0：否</li><li>1：是</li>默认值：0
+     * @param SupportIpv6 <p>实例是否支持Ipv6：</p><li>0：否</li><li>1：是</li>默认值：0
      */
     public void setSupportIpv6(Long SupportIpv6) {
         this.SupportIpv6 = SupportIpv6;
     }
 
     /**
-     * Get 实例已经弹性扩容的cpu核数 
-     * @return ExpandedCpu 实例已经弹性扩容的cpu核数
+     * Get <p>实例已经弹性扩容的cpu核数</p> 
+     * @return ExpandedCpu <p>实例已经弹性扩容的cpu核数</p>
      */
     public Long getExpandedCpu() {
         return this.ExpandedCpu;
     }
 
     /**
-     * Set 实例已经弹性扩容的cpu核数
-     * @param ExpandedCpu 实例已经弹性扩容的cpu核数
+     * Set <p>实例已经弹性扩容的cpu核数</p>
+     * @param ExpandedCpu <p>实例已经弹性扩容的cpu核数</p>
      */
     public void setExpandedCpu(Long ExpandedCpu) {
         this.ExpandedCpu = ExpandedCpu;
     }
 
     /**
-     * Get 实例是否开启删除保护，取值如下：
-- true：开启删除保护
-- false：关闭删除保护 
-     * @return DeletionProtection 实例是否开启删除保护，取值如下：
-- true：开启删除保护
-- false：关闭删除保护
+     * Get <p>实例是否开启删除保护，取值如下：</p><ul><li>true：开启删除保护</li><li>false：关闭删除保护</li></ul> 
+     * @return DeletionProtection <p>实例是否开启删除保护，取值如下：</p><ul><li>true：开启删除保护</li><li>false：关闭删除保护</li></ul>
      */
     public Boolean getDeletionProtection() {
         return this.DeletionProtection;
     }
 
     /**
-     * Set 实例是否开启删除保护，取值如下：
-- true：开启删除保护
-- false：关闭删除保护
-     * @param DeletionProtection 实例是否开启删除保护，取值如下：
-- true：开启删除保护
-- false：关闭删除保护
+     * Set <p>实例是否开启删除保护，取值如下：</p><ul><li>true：开启删除保护</li><li>false：关闭删除保护</li></ul>
+     * @param DeletionProtection <p>实例是否开启删除保护，取值如下：</p><ul><li>true：开启删除保护</li><li>false：关闭删除保护</li></ul>
      */
     public void setDeletionProtection(Boolean DeletionProtection) {
         this.DeletionProtection = DeletionProtection;

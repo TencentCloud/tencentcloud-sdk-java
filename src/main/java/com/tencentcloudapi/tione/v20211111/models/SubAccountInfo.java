@@ -59,6 +59,13 @@ public class SubAccountInfo extends AbstractModel {
     private Long LinuxGid;
 
     /**
+    * 子账号在Linux下的用户名
+    */
+    @SerializedName("LinuxUserName")
+    @Expose
+    private String LinuxUserName;
+
+    /**
      * Get 腾讯云主账号UIN 
      * @return Uin 腾讯云主账号UIN
      */
@@ -138,6 +145,22 @@ public class SubAccountInfo extends AbstractModel {
         this.LinuxGid = LinuxGid;
     }
 
+    /**
+     * Get 子账号在Linux下的用户名 
+     * @return LinuxUserName 子账号在Linux下的用户名
+     */
+    public String getLinuxUserName() {
+        return this.LinuxUserName;
+    }
+
+    /**
+     * Set 子账号在Linux下的用户名
+     * @param LinuxUserName 子账号在Linux下的用户名
+     */
+    public void setLinuxUserName(String LinuxUserName) {
+        this.LinuxUserName = LinuxUserName;
+    }
+
     public SubAccountInfo() {
     }
 
@@ -161,6 +184,9 @@ public class SubAccountInfo extends AbstractModel {
         if (source.LinuxGid != null) {
             this.LinuxGid = new Long(source.LinuxGid);
         }
+        if (source.LinuxUserName != null) {
+            this.LinuxUserName = new String(source.LinuxUserName);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class SubAccountInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "SubUinName", this.SubUinName);
         this.setParamSimple(map, prefix + "LinuxUid", this.LinuxUid);
         this.setParamSimple(map, prefix + "LinuxGid", this.LinuxGid);
+        this.setParamSimple(map, prefix + "LinuxUserName", this.LinuxUserName);
 
     }
 }

@@ -88,6 +88,13 @@ public class DescribeClusterEndpointsResponse extends AbstractModel {
     private String ClusterIntranetSubnetId;
 
     /**
+    * 内网安全组
+    */
+    @SerializedName("IntranetSecurityGroup")
+    @Expose
+    private String IntranetSecurityGroup;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -243,6 +250,22 @@ public class DescribeClusterEndpointsResponse extends AbstractModel {
     }
 
     /**
+     * Get 内网安全组 
+     * @return IntranetSecurityGroup 内网安全组
+     */
+    public String getIntranetSecurityGroup() {
+        return this.IntranetSecurityGroup;
+    }
+
+    /**
+     * Set 内网安全组
+     * @param IntranetSecurityGroup 内网安全组
+     */
+    public void setIntranetSecurityGroup(String IntranetSecurityGroup) {
+        this.IntranetSecurityGroup = IntranetSecurityGroup;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -296,6 +319,9 @@ public class DescribeClusterEndpointsResponse extends AbstractModel {
         if (source.ClusterIntranetSubnetId != null) {
             this.ClusterIntranetSubnetId = new String(source.ClusterIntranetSubnetId);
         }
+        if (source.IntranetSecurityGroup != null) {
+            this.IntranetSecurityGroup = new String(source.IntranetSecurityGroup);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -315,6 +341,7 @@ public class DescribeClusterEndpointsResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterIntranetDomain", this.ClusterIntranetDomain);
         this.setParamSimple(map, prefix + "SecurityGroup", this.SecurityGroup);
         this.setParamSimple(map, prefix + "ClusterIntranetSubnetId", this.ClusterIntranetSubnetId);
+        this.setParamSimple(map, prefix + "IntranetSecurityGroup", this.IntranetSecurityGroup);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

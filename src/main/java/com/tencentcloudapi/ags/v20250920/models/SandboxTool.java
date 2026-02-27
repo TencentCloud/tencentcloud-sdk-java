@@ -24,325 +24,348 @@ import java.util.HashMap;
 public class SandboxTool extends AbstractModel {
 
     /**
-    * 沙箱工具唯一标识符
+    * <p>沙箱工具唯一标识符</p>
     */
     @SerializedName("ToolId")
     @Expose
     private String ToolId;
 
     /**
-    * 沙箱工具名称，长度 1-50 字符，支持中英文、数字、下划线。同一 AppId 下沙箱工具名称必须唯一
+    * <p>沙箱工具名称，长度 1-50 字符，支持中英文、数字、下划线。同一 AppId 下沙箱工具名称必须唯一</p>
     */
     @SerializedName("ToolName")
     @Expose
     private String ToolName;
 
     /**
-    * 沙箱工具类型，取值：browser（浏览器工具）、code-interpreter（代码解释器工具）、computer（计算机控制工具）、mobile（移动设备工具）
+    * <p>沙箱工具类型，取值：browser（浏览器工具）、code-interpreter（代码解释器工具）、computer（计算机控制工具）、mobile（移动设备工具）</p>
     */
     @SerializedName("ToolType")
     @Expose
     private String ToolType;
 
     /**
-    * 沙箱工具状态，取值：CREATING（创建中）、ACTIVE（可用）、DELETING（删除中）、FAILED（失败）
+    * <p>沙箱工具状态，取值：CREATING（创建中）、ACTIVE（可用）、DELETING（删除中）、FAILED（失败）</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 沙箱工具描述信息，最大长度 200 字符
+    * <p>沙箱工具描述信息，最大长度 200 字符</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 默认超时时间，支持格式：5m、300s、1h 等，不指定则使用系统默认值（5 分钟）。最大 24 小时
+    * <p>默认超时时间，支持格式：5m、300s、1h 等，不指定则使用系统默认值（5 分钟）。最大 24 小时</p>
     */
     @SerializedName("DefaultTimeoutSeconds")
     @Expose
     private Long DefaultTimeoutSeconds;
 
     /**
-    * 网络配置
+    * <p>网络配置</p>
     */
     @SerializedName("NetworkConfiguration")
     @Expose
     private NetworkConfiguration NetworkConfiguration;
 
     /**
-    * 标签规格，包含资源标签绑定关系。用于为沙箱工具绑定标签，支持多种资源类型的标签绑定
+    * <p>标签规格，包含资源标签绑定关系。用于为沙箱工具绑定标签，支持多种资源类型的标签绑定</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 沙箱工具创建时间，格式：ISO8601
+    * <p>沙箱工具创建时间，格式：ISO8601</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 沙箱工具更新时间，格式：ISO8601
+    * <p>沙箱工具更新时间，格式：ISO8601</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 沙箱工具绑定角色ARN
+    * <p>沙箱工具绑定角色ARN</p>
     */
     @SerializedName("RoleArn")
     @Expose
     private String RoleArn;
 
     /**
-    * 沙箱工具中实例存储挂载配置
+    * <p>沙箱工具中实例存储挂载配置</p>
     */
     @SerializedName("StorageMounts")
     @Expose
     private StorageMount [] StorageMounts;
 
     /**
-    * 沙箱工具自定义配置
+    * <p>沙箱工具自定义配置</p>
     */
     @SerializedName("CustomConfiguration")
     @Expose
     private CustomConfigurationDetail CustomConfiguration;
 
     /**
-    * 沙箱工具日志推送相关配置
+    * <p>沙箱工具日志推送相关配置</p>
     */
     @SerializedName("LogConfiguration")
     @Expose
     private LogConfiguration LogConfiguration;
 
     /**
-     * Get 沙箱工具唯一标识符 
-     * @return ToolId 沙箱工具唯一标识符
+    * <p>用于说明沙箱工具处于该状态的原因</p>
+    */
+    @SerializedName("StatusReason")
+    @Expose
+    private String StatusReason;
+
+    /**
+     * Get <p>沙箱工具唯一标识符</p> 
+     * @return ToolId <p>沙箱工具唯一标识符</p>
      */
     public String getToolId() {
         return this.ToolId;
     }
 
     /**
-     * Set 沙箱工具唯一标识符
-     * @param ToolId 沙箱工具唯一标识符
+     * Set <p>沙箱工具唯一标识符</p>
+     * @param ToolId <p>沙箱工具唯一标识符</p>
      */
     public void setToolId(String ToolId) {
         this.ToolId = ToolId;
     }
 
     /**
-     * Get 沙箱工具名称，长度 1-50 字符，支持中英文、数字、下划线。同一 AppId 下沙箱工具名称必须唯一 
-     * @return ToolName 沙箱工具名称，长度 1-50 字符，支持中英文、数字、下划线。同一 AppId 下沙箱工具名称必须唯一
+     * Get <p>沙箱工具名称，长度 1-50 字符，支持中英文、数字、下划线。同一 AppId 下沙箱工具名称必须唯一</p> 
+     * @return ToolName <p>沙箱工具名称，长度 1-50 字符，支持中英文、数字、下划线。同一 AppId 下沙箱工具名称必须唯一</p>
      */
     public String getToolName() {
         return this.ToolName;
     }
 
     /**
-     * Set 沙箱工具名称，长度 1-50 字符，支持中英文、数字、下划线。同一 AppId 下沙箱工具名称必须唯一
-     * @param ToolName 沙箱工具名称，长度 1-50 字符，支持中英文、数字、下划线。同一 AppId 下沙箱工具名称必须唯一
+     * Set <p>沙箱工具名称，长度 1-50 字符，支持中英文、数字、下划线。同一 AppId 下沙箱工具名称必须唯一</p>
+     * @param ToolName <p>沙箱工具名称，长度 1-50 字符，支持中英文、数字、下划线。同一 AppId 下沙箱工具名称必须唯一</p>
      */
     public void setToolName(String ToolName) {
         this.ToolName = ToolName;
     }
 
     /**
-     * Get 沙箱工具类型，取值：browser（浏览器工具）、code-interpreter（代码解释器工具）、computer（计算机控制工具）、mobile（移动设备工具） 
-     * @return ToolType 沙箱工具类型，取值：browser（浏览器工具）、code-interpreter（代码解释器工具）、computer（计算机控制工具）、mobile（移动设备工具）
+     * Get <p>沙箱工具类型，取值：browser（浏览器工具）、code-interpreter（代码解释器工具）、computer（计算机控制工具）、mobile（移动设备工具）</p> 
+     * @return ToolType <p>沙箱工具类型，取值：browser（浏览器工具）、code-interpreter（代码解释器工具）、computer（计算机控制工具）、mobile（移动设备工具）</p>
      */
     public String getToolType() {
         return this.ToolType;
     }
 
     /**
-     * Set 沙箱工具类型，取值：browser（浏览器工具）、code-interpreter（代码解释器工具）、computer（计算机控制工具）、mobile（移动设备工具）
-     * @param ToolType 沙箱工具类型，取值：browser（浏览器工具）、code-interpreter（代码解释器工具）、computer（计算机控制工具）、mobile（移动设备工具）
+     * Set <p>沙箱工具类型，取值：browser（浏览器工具）、code-interpreter（代码解释器工具）、computer（计算机控制工具）、mobile（移动设备工具）</p>
+     * @param ToolType <p>沙箱工具类型，取值：browser（浏览器工具）、code-interpreter（代码解释器工具）、computer（计算机控制工具）、mobile（移动设备工具）</p>
      */
     public void setToolType(String ToolType) {
         this.ToolType = ToolType;
     }
 
     /**
-     * Get 沙箱工具状态，取值：CREATING（创建中）、ACTIVE（可用）、DELETING（删除中）、FAILED（失败） 
-     * @return Status 沙箱工具状态，取值：CREATING（创建中）、ACTIVE（可用）、DELETING（删除中）、FAILED（失败）
+     * Get <p>沙箱工具状态，取值：CREATING（创建中）、ACTIVE（可用）、DELETING（删除中）、FAILED（失败）</p> 
+     * @return Status <p>沙箱工具状态，取值：CREATING（创建中）、ACTIVE（可用）、DELETING（删除中）、FAILED（失败）</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 沙箱工具状态，取值：CREATING（创建中）、ACTIVE（可用）、DELETING（删除中）、FAILED（失败）
-     * @param Status 沙箱工具状态，取值：CREATING（创建中）、ACTIVE（可用）、DELETING（删除中）、FAILED（失败）
+     * Set <p>沙箱工具状态，取值：CREATING（创建中）、ACTIVE（可用）、DELETING（删除中）、FAILED（失败）</p>
+     * @param Status <p>沙箱工具状态，取值：CREATING（创建中）、ACTIVE（可用）、DELETING（删除中）、FAILED（失败）</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 沙箱工具描述信息，最大长度 200 字符 
-     * @return Description 沙箱工具描述信息，最大长度 200 字符
+     * Get <p>沙箱工具描述信息，最大长度 200 字符</p> 
+     * @return Description <p>沙箱工具描述信息，最大长度 200 字符</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 沙箱工具描述信息，最大长度 200 字符
-     * @param Description 沙箱工具描述信息，最大长度 200 字符
+     * Set <p>沙箱工具描述信息，最大长度 200 字符</p>
+     * @param Description <p>沙箱工具描述信息，最大长度 200 字符</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 默认超时时间，支持格式：5m、300s、1h 等，不指定则使用系统默认值（5 分钟）。最大 24 小时 
-     * @return DefaultTimeoutSeconds 默认超时时间，支持格式：5m、300s、1h 等，不指定则使用系统默认值（5 分钟）。最大 24 小时
+     * Get <p>默认超时时间，支持格式：5m、300s、1h 等，不指定则使用系统默认值（5 分钟）。最大 24 小时</p> 
+     * @return DefaultTimeoutSeconds <p>默认超时时间，支持格式：5m、300s、1h 等，不指定则使用系统默认值（5 分钟）。最大 24 小时</p>
      */
     public Long getDefaultTimeoutSeconds() {
         return this.DefaultTimeoutSeconds;
     }
 
     /**
-     * Set 默认超时时间，支持格式：5m、300s、1h 等，不指定则使用系统默认值（5 分钟）。最大 24 小时
-     * @param DefaultTimeoutSeconds 默认超时时间，支持格式：5m、300s、1h 等，不指定则使用系统默认值（5 分钟）。最大 24 小时
+     * Set <p>默认超时时间，支持格式：5m、300s、1h 等，不指定则使用系统默认值（5 分钟）。最大 24 小时</p>
+     * @param DefaultTimeoutSeconds <p>默认超时时间，支持格式：5m、300s、1h 等，不指定则使用系统默认值（5 分钟）。最大 24 小时</p>
      */
     public void setDefaultTimeoutSeconds(Long DefaultTimeoutSeconds) {
         this.DefaultTimeoutSeconds = DefaultTimeoutSeconds;
     }
 
     /**
-     * Get 网络配置 
-     * @return NetworkConfiguration 网络配置
+     * Get <p>网络配置</p> 
+     * @return NetworkConfiguration <p>网络配置</p>
      */
     public NetworkConfiguration getNetworkConfiguration() {
         return this.NetworkConfiguration;
     }
 
     /**
-     * Set 网络配置
-     * @param NetworkConfiguration 网络配置
+     * Set <p>网络配置</p>
+     * @param NetworkConfiguration <p>网络配置</p>
      */
     public void setNetworkConfiguration(NetworkConfiguration NetworkConfiguration) {
         this.NetworkConfiguration = NetworkConfiguration;
     }
 
     /**
-     * Get 标签规格，包含资源标签绑定关系。用于为沙箱工具绑定标签，支持多种资源类型的标签绑定 
-     * @return Tags 标签规格，包含资源标签绑定关系。用于为沙箱工具绑定标签，支持多种资源类型的标签绑定
+     * Get <p>标签规格，包含资源标签绑定关系。用于为沙箱工具绑定标签，支持多种资源类型的标签绑定</p> 
+     * @return Tags <p>标签规格，包含资源标签绑定关系。用于为沙箱工具绑定标签，支持多种资源类型的标签绑定</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签规格，包含资源标签绑定关系。用于为沙箱工具绑定标签，支持多种资源类型的标签绑定
-     * @param Tags 标签规格，包含资源标签绑定关系。用于为沙箱工具绑定标签，支持多种资源类型的标签绑定
+     * Set <p>标签规格，包含资源标签绑定关系。用于为沙箱工具绑定标签，支持多种资源类型的标签绑定</p>
+     * @param Tags <p>标签规格，包含资源标签绑定关系。用于为沙箱工具绑定标签，支持多种资源类型的标签绑定</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 沙箱工具创建时间，格式：ISO8601 
-     * @return CreateTime 沙箱工具创建时间，格式：ISO8601
+     * Get <p>沙箱工具创建时间，格式：ISO8601</p> 
+     * @return CreateTime <p>沙箱工具创建时间，格式：ISO8601</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 沙箱工具创建时间，格式：ISO8601
-     * @param CreateTime 沙箱工具创建时间，格式：ISO8601
+     * Set <p>沙箱工具创建时间，格式：ISO8601</p>
+     * @param CreateTime <p>沙箱工具创建时间，格式：ISO8601</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 沙箱工具更新时间，格式：ISO8601 
-     * @return UpdateTime 沙箱工具更新时间，格式：ISO8601
+     * Get <p>沙箱工具更新时间，格式：ISO8601</p> 
+     * @return UpdateTime <p>沙箱工具更新时间，格式：ISO8601</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 沙箱工具更新时间，格式：ISO8601
-     * @param UpdateTime 沙箱工具更新时间，格式：ISO8601
+     * Set <p>沙箱工具更新时间，格式：ISO8601</p>
+     * @param UpdateTime <p>沙箱工具更新时间，格式：ISO8601</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 沙箱工具绑定角色ARN 
-     * @return RoleArn 沙箱工具绑定角色ARN
+     * Get <p>沙箱工具绑定角色ARN</p> 
+     * @return RoleArn <p>沙箱工具绑定角色ARN</p>
      */
     public String getRoleArn() {
         return this.RoleArn;
     }
 
     /**
-     * Set 沙箱工具绑定角色ARN
-     * @param RoleArn 沙箱工具绑定角色ARN
+     * Set <p>沙箱工具绑定角色ARN</p>
+     * @param RoleArn <p>沙箱工具绑定角色ARN</p>
      */
     public void setRoleArn(String RoleArn) {
         this.RoleArn = RoleArn;
     }
 
     /**
-     * Get 沙箱工具中实例存储挂载配置 
-     * @return StorageMounts 沙箱工具中实例存储挂载配置
+     * Get <p>沙箱工具中实例存储挂载配置</p> 
+     * @return StorageMounts <p>沙箱工具中实例存储挂载配置</p>
      */
     public StorageMount [] getStorageMounts() {
         return this.StorageMounts;
     }
 
     /**
-     * Set 沙箱工具中实例存储挂载配置
-     * @param StorageMounts 沙箱工具中实例存储挂载配置
+     * Set <p>沙箱工具中实例存储挂载配置</p>
+     * @param StorageMounts <p>沙箱工具中实例存储挂载配置</p>
      */
     public void setStorageMounts(StorageMount [] StorageMounts) {
         this.StorageMounts = StorageMounts;
     }
 
     /**
-     * Get 沙箱工具自定义配置 
-     * @return CustomConfiguration 沙箱工具自定义配置
+     * Get <p>沙箱工具自定义配置</p> 
+     * @return CustomConfiguration <p>沙箱工具自定义配置</p>
      */
     public CustomConfigurationDetail getCustomConfiguration() {
         return this.CustomConfiguration;
     }
 
     /**
-     * Set 沙箱工具自定义配置
-     * @param CustomConfiguration 沙箱工具自定义配置
+     * Set <p>沙箱工具自定义配置</p>
+     * @param CustomConfiguration <p>沙箱工具自定义配置</p>
      */
     public void setCustomConfiguration(CustomConfigurationDetail CustomConfiguration) {
         this.CustomConfiguration = CustomConfiguration;
     }
 
     /**
-     * Get 沙箱工具日志推送相关配置 
-     * @return LogConfiguration 沙箱工具日志推送相关配置
+     * Get <p>沙箱工具日志推送相关配置</p> 
+     * @return LogConfiguration <p>沙箱工具日志推送相关配置</p>
      */
     public LogConfiguration getLogConfiguration() {
         return this.LogConfiguration;
     }
 
     /**
-     * Set 沙箱工具日志推送相关配置
-     * @param LogConfiguration 沙箱工具日志推送相关配置
+     * Set <p>沙箱工具日志推送相关配置</p>
+     * @param LogConfiguration <p>沙箱工具日志推送相关配置</p>
      */
     public void setLogConfiguration(LogConfiguration LogConfiguration) {
         this.LogConfiguration = LogConfiguration;
+    }
+
+    /**
+     * Get <p>用于说明沙箱工具处于该状态的原因</p> 
+     * @return StatusReason <p>用于说明沙箱工具处于该状态的原因</p>
+     */
+    public String getStatusReason() {
+        return this.StatusReason;
+    }
+
+    /**
+     * Set <p>用于说明沙箱工具处于该状态的原因</p>
+     * @param StatusReason <p>用于说明沙箱工具处于该状态的原因</p>
+     */
+    public void setStatusReason(String StatusReason) {
+        this.StatusReason = StatusReason;
     }
 
     public SandboxTool() {
@@ -401,6 +424,9 @@ public class SandboxTool extends AbstractModel {
         if (source.LogConfiguration != null) {
             this.LogConfiguration = new LogConfiguration(source.LogConfiguration);
         }
+        if (source.StatusReason != null) {
+            this.StatusReason = new String(source.StatusReason);
+        }
     }
 
 
@@ -422,6 +448,7 @@ public class SandboxTool extends AbstractModel {
         this.setParamArrayObj(map, prefix + "StorageMounts.", this.StorageMounts);
         this.setParamObj(map, prefix + "CustomConfiguration.", this.CustomConfiguration);
         this.setParamObj(map, prefix + "LogConfiguration.", this.LogConfiguration);
+        this.setParamSimple(map, prefix + "StatusReason", this.StatusReason);
 
     }
 }

@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class ClassInfo extends AbstractModel {
 
     /**
-    * 规格ID
+    * <p>规格ID</p>
     */
     @SerializedName("SpecCode")
     @Expose
     private String SpecCode;
 
     /**
-    * CPU核数
+    * <p>CPU核数</p>
     */
     @SerializedName("CPU")
     @Expose
     private Long CPU;
 
     /**
-    * 内存大小，单位：MB
+    * <p>内存大小，单位：MB</p>
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * 该规格所支持最大存储容量，单位：GB
+    * <p>该规格所支持最大存储容量，单位：GB</p>
     */
     @SerializedName("MaxStorage")
     @Expose
     private Long MaxStorage;
 
     /**
-    * 该规格所支持最小存储容量，单位：GB
+    * <p>该规格所支持最小存储容量，单位：GB</p>
     */
     @SerializedName("MinStorage")
     @Expose
     private Long MinStorage;
 
     /**
-    * 该规格的预估QPS
+    * <p>该规格的预估QPS</p>
     */
     @SerializedName("QPS")
     @Expose
     private Long QPS;
 
     /**
-     * Get 规格ID 
-     * @return SpecCode 规格ID
+     * Get <p>规格ID</p> 
+     * @return SpecCode <p>规格ID</p>
      */
     public String getSpecCode() {
         return this.SpecCode;
     }
 
     /**
-     * Set 规格ID
-     * @param SpecCode 规格ID
+     * Set <p>规格ID</p>
+     * @param SpecCode <p>规格ID</p>
      */
     public void setSpecCode(String SpecCode) {
         this.SpecCode = SpecCode;
     }
 
     /**
-     * Get CPU核数 
-     * @return CPU CPU核数
+     * Get <p>CPU核数</p> 
+     * @return CPU <p>CPU核数</p>
      */
     public Long getCPU() {
         return this.CPU;
     }
 
     /**
-     * Set CPU核数
-     * @param CPU CPU核数
+     * Set <p>CPU核数</p>
+     * @param CPU <p>CPU核数</p>
      */
     public void setCPU(Long CPU) {
         this.CPU = CPU;
     }
 
     /**
-     * Get 内存大小，单位：MB 
-     * @return Memory 内存大小，单位：MB
+     * Get <p>内存大小，单位：MB</p> 
+     * @return Memory <p>内存大小，单位：MB</p>
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 内存大小，单位：MB
-     * @param Memory 内存大小，单位：MB
+     * Set <p>内存大小，单位：MB</p>
+     * @param Memory <p>内存大小，单位：MB</p>
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get 该规格所支持最大存储容量，单位：GB 
-     * @return MaxStorage 该规格所支持最大存储容量，单位：GB
+     * Get <p>该规格所支持最大存储容量，单位：GB</p> 
+     * @return MaxStorage <p>该规格所支持最大存储容量，单位：GB</p>
      */
     public Long getMaxStorage() {
         return this.MaxStorage;
     }
 
     /**
-     * Set 该规格所支持最大存储容量，单位：GB
-     * @param MaxStorage 该规格所支持最大存储容量，单位：GB
+     * Set <p>该规格所支持最大存储容量，单位：GB</p>
+     * @param MaxStorage <p>该规格所支持最大存储容量，单位：GB</p>
      */
     public void setMaxStorage(Long MaxStorage) {
         this.MaxStorage = MaxStorage;
     }
 
     /**
-     * Get 该规格所支持最小存储容量，单位：GB 
-     * @return MinStorage 该规格所支持最小存储容量，单位：GB
+     * Get <p>该规格所支持最小存储容量，单位：GB</p> 
+     * @return MinStorage <p>该规格所支持最小存储容量，单位：GB</p>
      */
     public Long getMinStorage() {
         return this.MinStorage;
     }
 
     /**
-     * Set 该规格所支持最小存储容量，单位：GB
-     * @param MinStorage 该规格所支持最小存储容量，单位：GB
+     * Set <p>该规格所支持最小存储容量，单位：GB</p>
+     * @param MinStorage <p>该规格所支持最小存储容量，单位：GB</p>
      */
     public void setMinStorage(Long MinStorage) {
         this.MinStorage = MinStorage;
     }
 
     /**
-     * Get 该规格的预估QPS 
-     * @return QPS 该规格的预估QPS
+     * Get <p>该规格的预估QPS</p> 
+     * @return QPS <p>该规格的预估QPS</p>
      */
     public Long getQPS() {
         return this.QPS;
     }
 
     /**
-     * Set 该规格的预估QPS
-     * @param QPS 该规格的预估QPS
+     * Set <p>该规格的预估QPS</p>
+     * @param QPS <p>该规格的预估QPS</p>
      */
     public void setQPS(Long QPS) {
         this.QPS = QPS;

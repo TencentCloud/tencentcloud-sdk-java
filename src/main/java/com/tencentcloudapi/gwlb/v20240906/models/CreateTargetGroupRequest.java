@@ -94,20 +94,6 @@ public class CreateTargetGroupRequest extends AbstractModel {
     private String ForwardingMode;
 
     /**
-    * <p>TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。</p>
-    */
-    @SerializedName("TcpIdleConnectTimeout")
-    @Expose
-    private Long TcpIdleConnectTimeout;
-
-    /**
-    * <p>其他协议连接空闲超时时间，可配置5s-180s，默认120s</p>
-    */
-    @SerializedName("OthersIdleConnectTimeout")
-    @Expose
-    private Long OthersIdleConnectTimeout;
-
-    /**
     * <p>重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。</p>
     */
     @SerializedName("RescheduleUnbindRs")
@@ -296,38 +282,6 @@ public class CreateTargetGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。</p> 
-     * @return TcpIdleConnectTimeout <p>TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。</p>
-     */
-    public Long getTcpIdleConnectTimeout() {
-        return this.TcpIdleConnectTimeout;
-    }
-
-    /**
-     * Set <p>TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。</p>
-     * @param TcpIdleConnectTimeout <p>TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。</p>
-     */
-    public void setTcpIdleConnectTimeout(Long TcpIdleConnectTimeout) {
-        this.TcpIdleConnectTimeout = TcpIdleConnectTimeout;
-    }
-
-    /**
-     * Get <p>其他协议连接空闲超时时间，可配置5s-180s，默认120s</p> 
-     * @return OthersIdleConnectTimeout <p>其他协议连接空闲超时时间，可配置5s-180s，默认120s</p>
-     */
-    public Long getOthersIdleConnectTimeout() {
-        return this.OthersIdleConnectTimeout;
-    }
-
-    /**
-     * Set <p>其他协议连接空闲超时时间，可配置5s-180s，默认120s</p>
-     * @param OthersIdleConnectTimeout <p>其他协议连接空闲超时时间，可配置5s-180s，默认120s</p>
-     */
-    public void setOthersIdleConnectTimeout(Long OthersIdleConnectTimeout) {
-        this.OthersIdleConnectTimeout = OthersIdleConnectTimeout;
-    }
-
-    /**
      * Get <p>重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。</p> 
      * @return RescheduleUnbindRs <p>重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。</p>
      */
@@ -435,12 +389,6 @@ public class CreateTargetGroupRequest extends AbstractModel {
         if (source.ForwardingMode != null) {
             this.ForwardingMode = new String(source.ForwardingMode);
         }
-        if (source.TcpIdleConnectTimeout != null) {
-            this.TcpIdleConnectTimeout = new Long(source.TcpIdleConnectTimeout);
-        }
-        if (source.OthersIdleConnectTimeout != null) {
-            this.OthersIdleConnectTimeout = new Long(source.OthersIdleConnectTimeout);
-        }
         if (source.RescheduleUnbindRs != null) {
             this.RescheduleUnbindRs = new Boolean(source.RescheduleUnbindRs);
         }
@@ -470,8 +418,6 @@ public class CreateTargetGroupRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AllDeadToAlive", this.AllDeadToAlive);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "ForwardingMode", this.ForwardingMode);
-        this.setParamSimple(map, prefix + "TcpIdleConnectTimeout", this.TcpIdleConnectTimeout);
-        this.setParamSimple(map, prefix + "OthersIdleConnectTimeout", this.OthersIdleConnectTimeout);
         this.setParamSimple(map, prefix + "RescheduleUnbindRs", this.RescheduleUnbindRs);
         this.setParamSimple(map, prefix + "RescheduleUnbindRsStartTime", this.RescheduleUnbindRsStartTime);
         this.setParamSimple(map, prefix + "RescheduleUnhealthy", this.RescheduleUnhealthy);

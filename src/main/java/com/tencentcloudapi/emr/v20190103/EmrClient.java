@@ -284,6 +284,17 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *查询EMR事件监控数据
+     * @param req DescribeEMREventListRequest
+     * @return DescribeEMREventListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEMREventListResponse DescribeEMREventList(DescribeEMREventListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEMREventList", DescribeEMREventListResponse.class);
+    }
+
+    /**
      *yarn application 统计接口查询
      * @param req DescribeEmrApplicationStaticsRequest
      * @return DescribeEmrApplicationStaticsResponse

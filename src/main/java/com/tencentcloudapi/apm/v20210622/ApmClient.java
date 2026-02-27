@@ -160,6 +160,17 @@ public class ApmClient extends AbstractClient{
     }
 
     /**
+     *查询SQL注入详情信息
+     * @param req DescribeApmSQLInjectionDetailRequest
+     * @return DescribeApmSQLInjectionDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApmSQLInjectionDetailResponse DescribeApmSQLInjectionDetail(DescribeApmSQLInjectionDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeApmSQLInjectionDetail", DescribeApmSQLInjectionDetailResponse.class);
+    }
+
+    /**
      *查询采样配置接口
      * @param req DescribeApmSampleConfigRequest
      * @return DescribeApmSampleConfigResponse

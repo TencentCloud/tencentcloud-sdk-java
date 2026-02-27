@@ -24,299 +24,299 @@ import java.util.HashMap;
 public class SpecItemInfo extends AbstractModel {
 
     /**
-    * 规格ID
+    * <p>规格ID</p>
     */
     @SerializedName("SpecCode")
     @Expose
     private String SpecCode;
 
     /**
-    * PostgreSQL的版本编号
+    * <p>PostgreSQL的版本编号</p>
     */
     @SerializedName("Version")
     @Expose
     private String Version;
 
     /**
-    * 内核编号对应的完整版本名称
+    * <p>内核编号对应的完整版本名称</p>
     */
     @SerializedName("VersionName")
     @Expose
     private String VersionName;
 
     /**
-    * CPU核数
+    * <p>CPU核数</p>
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * 内存大小，单位：MB
+    * <p>内存大小，单位：MB</p>
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * 该规格所支持最大存储容量，单位：GB
+    * <p>该规格所支持最大存储容量，单位：GB</p>
     */
     @SerializedName("MaxStorage")
     @Expose
     private Long MaxStorage;
 
     /**
-    * 该规格所支持最小存储容量，单位：GB
+    * <p>该规格所支持最小存储容量，单位：GB</p>
     */
     @SerializedName("MinStorage")
     @Expose
     private Long MinStorage;
 
     /**
-    * 该规格的预估QPS
+    * <p>该规格的预估QPS</p>
     */
     @SerializedName("Qps")
     @Expose
     private Long Qps;
 
     /**
-    * 【该字段废弃】
+    * <p>【该字段废弃】</p>
     */
     @SerializedName("Pid")
     @Expose
     private Long Pid;
 
     /**
-    * 机器类型
+    * <p>机器类型</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * PostgreSQL的主要版本编号
+    * <p>PostgreSQL的主要版本编号</p>
     */
     @SerializedName("MajorVersion")
     @Expose
     private String MajorVersion;
 
     /**
-    * PostgreSQL的内核版本编号
+    * <p>PostgreSQL的内核版本编号</p>
     */
     @SerializedName("KernelVersion")
     @Expose
     private String KernelVersion;
 
     /**
-    * 是否支持TDE数据加密功能，0-不支持，1-支持
+    * <p>是否支持TDE数据加密功能，0-不支持，1-支持</p>
     */
     @SerializedName("IsSupportTDE")
     @Expose
     private Long IsSupportTDE;
 
     /**
-     * Get 规格ID 
-     * @return SpecCode 规格ID
+     * Get <p>规格ID</p> 
+     * @return SpecCode <p>规格ID</p>
      */
     public String getSpecCode() {
         return this.SpecCode;
     }
 
     /**
-     * Set 规格ID
-     * @param SpecCode 规格ID
+     * Set <p>规格ID</p>
+     * @param SpecCode <p>规格ID</p>
      */
     public void setSpecCode(String SpecCode) {
         this.SpecCode = SpecCode;
     }
 
     /**
-     * Get PostgreSQL的版本编号 
-     * @return Version PostgreSQL的版本编号
+     * Get <p>PostgreSQL的版本编号</p> 
+     * @return Version <p>PostgreSQL的版本编号</p>
      */
     public String getVersion() {
         return this.Version;
     }
 
     /**
-     * Set PostgreSQL的版本编号
-     * @param Version PostgreSQL的版本编号
+     * Set <p>PostgreSQL的版本编号</p>
+     * @param Version <p>PostgreSQL的版本编号</p>
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get 内核编号对应的完整版本名称 
-     * @return VersionName 内核编号对应的完整版本名称
+     * Get <p>内核编号对应的完整版本名称</p> 
+     * @return VersionName <p>内核编号对应的完整版本名称</p>
      */
     public String getVersionName() {
         return this.VersionName;
     }
 
     /**
-     * Set 内核编号对应的完整版本名称
-     * @param VersionName 内核编号对应的完整版本名称
+     * Set <p>内核编号对应的完整版本名称</p>
+     * @param VersionName <p>内核编号对应的完整版本名称</p>
      */
     public void setVersionName(String VersionName) {
         this.VersionName = VersionName;
     }
 
     /**
-     * Get CPU核数 
-     * @return Cpu CPU核数
+     * Get <p>CPU核数</p> 
+     * @return Cpu <p>CPU核数</p>
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set CPU核数
-     * @param Cpu CPU核数
+     * Set <p>CPU核数</p>
+     * @param Cpu <p>CPU核数</p>
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get 内存大小，单位：MB 
-     * @return Memory 内存大小，单位：MB
+     * Get <p>内存大小，单位：MB</p> 
+     * @return Memory <p>内存大小，单位：MB</p>
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 内存大小，单位：MB
-     * @param Memory 内存大小，单位：MB
+     * Set <p>内存大小，单位：MB</p>
+     * @param Memory <p>内存大小，单位：MB</p>
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get 该规格所支持最大存储容量，单位：GB 
-     * @return MaxStorage 该规格所支持最大存储容量，单位：GB
+     * Get <p>该规格所支持最大存储容量，单位：GB</p> 
+     * @return MaxStorage <p>该规格所支持最大存储容量，单位：GB</p>
      */
     public Long getMaxStorage() {
         return this.MaxStorage;
     }
 
     /**
-     * Set 该规格所支持最大存储容量，单位：GB
-     * @param MaxStorage 该规格所支持最大存储容量，单位：GB
+     * Set <p>该规格所支持最大存储容量，单位：GB</p>
+     * @param MaxStorage <p>该规格所支持最大存储容量，单位：GB</p>
      */
     public void setMaxStorage(Long MaxStorage) {
         this.MaxStorage = MaxStorage;
     }
 
     /**
-     * Get 该规格所支持最小存储容量，单位：GB 
-     * @return MinStorage 该规格所支持最小存储容量，单位：GB
+     * Get <p>该规格所支持最小存储容量，单位：GB</p> 
+     * @return MinStorage <p>该规格所支持最小存储容量，单位：GB</p>
      */
     public Long getMinStorage() {
         return this.MinStorage;
     }
 
     /**
-     * Set 该规格所支持最小存储容量，单位：GB
-     * @param MinStorage 该规格所支持最小存储容量，单位：GB
+     * Set <p>该规格所支持最小存储容量，单位：GB</p>
+     * @param MinStorage <p>该规格所支持最小存储容量，单位：GB</p>
      */
     public void setMinStorage(Long MinStorage) {
         this.MinStorage = MinStorage;
     }
 
     /**
-     * Get 该规格的预估QPS 
-     * @return Qps 该规格的预估QPS
+     * Get <p>该规格的预估QPS</p> 
+     * @return Qps <p>该规格的预估QPS</p>
      */
     public Long getQps() {
         return this.Qps;
     }
 
     /**
-     * Set 该规格的预估QPS
-     * @param Qps 该规格的预估QPS
+     * Set <p>该规格的预估QPS</p>
+     * @param Qps <p>该规格的预估QPS</p>
      */
     public void setQps(Long Qps) {
         this.Qps = Qps;
     }
 
     /**
-     * Get 【该字段废弃】 
-     * @return Pid 【该字段废弃】
+     * Get <p>【该字段废弃】</p> 
+     * @return Pid <p>【该字段废弃】</p>
      */
     public Long getPid() {
         return this.Pid;
     }
 
     /**
-     * Set 【该字段废弃】
-     * @param Pid 【该字段废弃】
+     * Set <p>【该字段废弃】</p>
+     * @param Pid <p>【该字段废弃】</p>
      */
     public void setPid(Long Pid) {
         this.Pid = Pid;
     }
 
     /**
-     * Get 机器类型 
-     * @return Type 机器类型
+     * Get <p>机器类型</p> 
+     * @return Type <p>机器类型</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 机器类型
-     * @param Type 机器类型
+     * Set <p>机器类型</p>
+     * @param Type <p>机器类型</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get PostgreSQL的主要版本编号 
-     * @return MajorVersion PostgreSQL的主要版本编号
+     * Get <p>PostgreSQL的主要版本编号</p> 
+     * @return MajorVersion <p>PostgreSQL的主要版本编号</p>
      */
     public String getMajorVersion() {
         return this.MajorVersion;
     }
 
     /**
-     * Set PostgreSQL的主要版本编号
-     * @param MajorVersion PostgreSQL的主要版本编号
+     * Set <p>PostgreSQL的主要版本编号</p>
+     * @param MajorVersion <p>PostgreSQL的主要版本编号</p>
      */
     public void setMajorVersion(String MajorVersion) {
         this.MajorVersion = MajorVersion;
     }
 
     /**
-     * Get PostgreSQL的内核版本编号 
-     * @return KernelVersion PostgreSQL的内核版本编号
+     * Get <p>PostgreSQL的内核版本编号</p> 
+     * @return KernelVersion <p>PostgreSQL的内核版本编号</p>
      */
     public String getKernelVersion() {
         return this.KernelVersion;
     }
 
     /**
-     * Set PostgreSQL的内核版本编号
-     * @param KernelVersion PostgreSQL的内核版本编号
+     * Set <p>PostgreSQL的内核版本编号</p>
+     * @param KernelVersion <p>PostgreSQL的内核版本编号</p>
      */
     public void setKernelVersion(String KernelVersion) {
         this.KernelVersion = KernelVersion;
     }
 
     /**
-     * Get 是否支持TDE数据加密功能，0-不支持，1-支持 
-     * @return IsSupportTDE 是否支持TDE数据加密功能，0-不支持，1-支持
+     * Get <p>是否支持TDE数据加密功能，0-不支持，1-支持</p> 
+     * @return IsSupportTDE <p>是否支持TDE数据加密功能，0-不支持，1-支持</p>
      */
     public Long getIsSupportTDE() {
         return this.IsSupportTDE;
     }
 
     /**
-     * Set 是否支持TDE数据加密功能，0-不支持，1-支持
-     * @param IsSupportTDE 是否支持TDE数据加密功能，0-不支持，1-支持
+     * Set <p>是否支持TDE数据加密功能，0-不支持，1-支持</p>
+     * @param IsSupportTDE <p>是否支持TDE数据加密功能，0-不支持，1-支持</p>
      */
     public void setIsSupportTDE(Long IsSupportTDE) {
         this.IsSupportTDE = IsSupportTDE;
