@@ -66,6 +66,13 @@ public class DescribeAgentsRequest extends AbstractModel {
     private String AgentStatus;
 
     /**
+    * 架构，共享版-intranet，企业版-userVpc
+    */
+    @SerializedName("DeployPlace")
+    @Expose
+    private String DeployPlace;
+
+    /**
      * Get 查询开始位置 
      * @return Offset 查询开始位置
      */
@@ -161,6 +168,22 @@ public class DescribeAgentsRequest extends AbstractModel {
         this.AgentStatus = AgentStatus;
     }
 
+    /**
+     * Get 架构，共享版-intranet，企业版-userVpc 
+     * @return DeployPlace 架构，共享版-intranet，企业版-userVpc
+     */
+    public String getDeployPlace() {
+        return this.DeployPlace;
+    }
+
+    /**
+     * Set 架构，共享版-intranet，企业版-userVpc
+     * @param DeployPlace 架构，共享版-intranet，企业版-userVpc
+     */
+    public void setDeployPlace(String DeployPlace) {
+        this.DeployPlace = DeployPlace;
+    }
+
     public DescribeAgentsRequest() {
     }
 
@@ -187,6 +210,9 @@ public class DescribeAgentsRequest extends AbstractModel {
         if (source.AgentStatus != null) {
             this.AgentStatus = new String(source.AgentStatus);
         }
+        if (source.DeployPlace != null) {
+            this.DeployPlace = new String(source.DeployPlace);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class DescribeAgentsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AgentName", this.AgentName);
         this.setParamSimple(map, prefix + "AgentInternalName", this.AgentInternalName);
         this.setParamSimple(map, prefix + "AgentStatus", this.AgentStatus);
+        this.setParamSimple(map, prefix + "DeployPlace", this.DeployPlace);
 
     }
 }

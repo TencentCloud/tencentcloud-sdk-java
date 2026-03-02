@@ -24,232 +24,207 @@ import java.util.HashMap;
 public class InquiryPriceCreateDBInstancesRequest extends AbstractModel {
 
     /**
-    * 可用区名称。该参数可以通过调用[ DescribeZones](https://cloud.tencent.com/document/product/409/16769) 接口的返回值中的Zone字段来获取。
+    * <p>可用区名称。该参数可以通过调用<a href="https://cloud.tencent.com/document/product/409/16769"> DescribeZones</a> 接口的返回值中的Zone字段来获取。</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 规格ID。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/product/409/89019)接口的返回值中的SpecCode字段来获取。
+    * <p>规格ID。该参数可以通过调用<a href="https://cloud.tencent.com/document/product/409/89019">DescribeClasses</a>接口的返回值中的SpecCode字段来获取。</p>
     */
     @SerializedName("SpecCode")
     @Expose
     private String SpecCode;
 
     /**
-    * 存储容量大小，单位：GB。该参数的设置步长为10。
+    * <p>存储容量大小，单位：GB。该参数的设置步长为10。</p>
     */
     @SerializedName("Storage")
     @Expose
     private Long Storage;
 
     /**
-    * 实例数量。目前最大数量不超过100，如需一次性创建更多实例，请联系客服支持。
+    * <p>实例数量。目前最大数量不超过100，如需一次性创建更多实例，请联系客服支持。</p>
     */
     @SerializedName("InstanceCount")
     @Expose
     private Long InstanceCount;
 
     /**
-    * 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值。
+    * <p>购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值。</p>
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * 【弃字段，不再生效】，计费ID。该参数可以通过调用DescribeProductConfig接口的返回值中的Pid字段来获取。
+    * <p>【弃字段，不再生效】，计费ID。该参数可以通过调用DescribeProductConfig接口的返回值中的Pid字段来获取。</p>
     */
     @SerializedName("Pid")
     @Expose
     private Long Pid;
 
     /**
-    * 实例计费类型。目前支持：PREPAID（预付费，即包年包月）和 POSTPAID（按量计费）。
-默认值：PREPAID
+    * <p>实例计费类型。目前支持：PREPAID（预付费，即包年包月）和 POSTPAID（按量计费）。<br>默认值：PREPAID</p>
     */
     @SerializedName("InstanceChargeType")
     @Expose
     private String InstanceChargeType;
 
     /**
-    * 实例类型，默认primary，支持如下：
-primary（双机高可用（一主一从））
-readonly（只读实例）
+    * <p>实例类型，默认primary，支持如下：<br>primary（双机高可用（一主一从））<br>readonly（只读实例）</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * DB引擎，默认postgresql，支持如下：
-postgresql（云数据库PostgreSQL）
-mssql_compatible（MSSQL兼容-云数据库PostgreSQL）
+    * <p>DB引擎，默认postgresql，支持如下：<br>postgresql（云数据库PostgreSQL）<br>mssql_compatible（MSSQL兼容-云数据库PostgreSQL）</p>
     */
     @SerializedName("DBEngine")
     @Expose
     private String DBEngine;
 
     /**
-     * Get 可用区名称。该参数可以通过调用[ DescribeZones](https://cloud.tencent.com/document/product/409/16769) 接口的返回值中的Zone字段来获取。 
-     * @return Zone 可用区名称。该参数可以通过调用[ DescribeZones](https://cloud.tencent.com/document/product/409/16769) 接口的返回值中的Zone字段来获取。
+     * Get <p>可用区名称。该参数可以通过调用<a href="https://cloud.tencent.com/document/product/409/16769"> DescribeZones</a> 接口的返回值中的Zone字段来获取。</p> 
+     * @return Zone <p>可用区名称。该参数可以通过调用<a href="https://cloud.tencent.com/document/product/409/16769"> DescribeZones</a> 接口的返回值中的Zone字段来获取。</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区名称。该参数可以通过调用[ DescribeZones](https://cloud.tencent.com/document/product/409/16769) 接口的返回值中的Zone字段来获取。
-     * @param Zone 可用区名称。该参数可以通过调用[ DescribeZones](https://cloud.tencent.com/document/product/409/16769) 接口的返回值中的Zone字段来获取。
+     * Set <p>可用区名称。该参数可以通过调用<a href="https://cloud.tencent.com/document/product/409/16769"> DescribeZones</a> 接口的返回值中的Zone字段来获取。</p>
+     * @param Zone <p>可用区名称。该参数可以通过调用<a href="https://cloud.tencent.com/document/product/409/16769"> DescribeZones</a> 接口的返回值中的Zone字段来获取。</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 规格ID。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/product/409/89019)接口的返回值中的SpecCode字段来获取。 
-     * @return SpecCode 规格ID。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/product/409/89019)接口的返回值中的SpecCode字段来获取。
+     * Get <p>规格ID。该参数可以通过调用<a href="https://cloud.tencent.com/document/product/409/89019">DescribeClasses</a>接口的返回值中的SpecCode字段来获取。</p> 
+     * @return SpecCode <p>规格ID。该参数可以通过调用<a href="https://cloud.tencent.com/document/product/409/89019">DescribeClasses</a>接口的返回值中的SpecCode字段来获取。</p>
      */
     public String getSpecCode() {
         return this.SpecCode;
     }
 
     /**
-     * Set 规格ID。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/product/409/89019)接口的返回值中的SpecCode字段来获取。
-     * @param SpecCode 规格ID。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/product/409/89019)接口的返回值中的SpecCode字段来获取。
+     * Set <p>规格ID。该参数可以通过调用<a href="https://cloud.tencent.com/document/product/409/89019">DescribeClasses</a>接口的返回值中的SpecCode字段来获取。</p>
+     * @param SpecCode <p>规格ID。该参数可以通过调用<a href="https://cloud.tencent.com/document/product/409/89019">DescribeClasses</a>接口的返回值中的SpecCode字段来获取。</p>
      */
     public void setSpecCode(String SpecCode) {
         this.SpecCode = SpecCode;
     }
 
     /**
-     * Get 存储容量大小，单位：GB。该参数的设置步长为10。 
-     * @return Storage 存储容量大小，单位：GB。该参数的设置步长为10。
+     * Get <p>存储容量大小，单位：GB。该参数的设置步长为10。</p> 
+     * @return Storage <p>存储容量大小，单位：GB。该参数的设置步长为10。</p>
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set 存储容量大小，单位：GB。该参数的设置步长为10。
-     * @param Storage 存储容量大小，单位：GB。该参数的设置步长为10。
+     * Set <p>存储容量大小，单位：GB。该参数的设置步长为10。</p>
+     * @param Storage <p>存储容量大小，单位：GB。该参数的设置步长为10。</p>
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
     }
 
     /**
-     * Get 实例数量。目前最大数量不超过100，如需一次性创建更多实例，请联系客服支持。 
-     * @return InstanceCount 实例数量。目前最大数量不超过100，如需一次性创建更多实例，请联系客服支持。
+     * Get <p>实例数量。目前最大数量不超过100，如需一次性创建更多实例，请联系客服支持。</p> 
+     * @return InstanceCount <p>实例数量。目前最大数量不超过100，如需一次性创建更多实例，请联系客服支持。</p>
      */
     public Long getInstanceCount() {
         return this.InstanceCount;
     }
 
     /**
-     * Set 实例数量。目前最大数量不超过100，如需一次性创建更多实例，请联系客服支持。
-     * @param InstanceCount 实例数量。目前最大数量不超过100，如需一次性创建更多实例，请联系客服支持。
+     * Set <p>实例数量。目前最大数量不超过100，如需一次性创建更多实例，请联系客服支持。</p>
+     * @param InstanceCount <p>实例数量。目前最大数量不超过100，如需一次性创建更多实例，请联系客服支持。</p>
      */
     public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;
     }
 
     /**
-     * Get 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值。 
-     * @return Period 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值。
+     * Get <p>购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值。</p> 
+     * @return Period <p>购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值。</p>
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值。
-     * @param Period 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值。
+     * Set <p>购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值。</p>
+     * @param Period <p>购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值。</p>
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 【弃字段，不再生效】，计费ID。该参数可以通过调用DescribeProductConfig接口的返回值中的Pid字段来获取。 
-     * @return Pid 【弃字段，不再生效】，计费ID。该参数可以通过调用DescribeProductConfig接口的返回值中的Pid字段来获取。
+     * Get <p>【弃字段，不再生效】，计费ID。该参数可以通过调用DescribeProductConfig接口的返回值中的Pid字段来获取。</p> 
+     * @return Pid <p>【弃字段，不再生效】，计费ID。该参数可以通过调用DescribeProductConfig接口的返回值中的Pid字段来获取。</p>
      */
     public Long getPid() {
         return this.Pid;
     }
 
     /**
-     * Set 【弃字段，不再生效】，计费ID。该参数可以通过调用DescribeProductConfig接口的返回值中的Pid字段来获取。
-     * @param Pid 【弃字段，不再生效】，计费ID。该参数可以通过调用DescribeProductConfig接口的返回值中的Pid字段来获取。
+     * Set <p>【弃字段，不再生效】，计费ID。该参数可以通过调用DescribeProductConfig接口的返回值中的Pid字段来获取。</p>
+     * @param Pid <p>【弃字段，不再生效】，计费ID。该参数可以通过调用DescribeProductConfig接口的返回值中的Pid字段来获取。</p>
      */
     public void setPid(Long Pid) {
         this.Pid = Pid;
     }
 
     /**
-     * Get 实例计费类型。目前支持：PREPAID（预付费，即包年包月）和 POSTPAID（按量计费）。
-默认值：PREPAID 
-     * @return InstanceChargeType 实例计费类型。目前支持：PREPAID（预付费，即包年包月）和 POSTPAID（按量计费）。
-默认值：PREPAID
+     * Get <p>实例计费类型。目前支持：PREPAID（预付费，即包年包月）和 POSTPAID（按量计费）。<br>默认值：PREPAID</p> 
+     * @return InstanceChargeType <p>实例计费类型。目前支持：PREPAID（预付费，即包年包月）和 POSTPAID（按量计费）。<br>默认值：PREPAID</p>
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set 实例计费类型。目前支持：PREPAID（预付费，即包年包月）和 POSTPAID（按量计费）。
-默认值：PREPAID
-     * @param InstanceChargeType 实例计费类型。目前支持：PREPAID（预付费，即包年包月）和 POSTPAID（按量计费）。
-默认值：PREPAID
+     * Set <p>实例计费类型。目前支持：PREPAID（预付费，即包年包月）和 POSTPAID（按量计费）。<br>默认值：PREPAID</p>
+     * @param InstanceChargeType <p>实例计费类型。目前支持：PREPAID（预付费，即包年包月）和 POSTPAID（按量计费）。<br>默认值：PREPAID</p>
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
     }
 
     /**
-     * Get 实例类型，默认primary，支持如下：
-primary（双机高可用（一主一从））
-readonly（只读实例） 
-     * @return InstanceType 实例类型，默认primary，支持如下：
-primary（双机高可用（一主一从））
-readonly（只读实例）
+     * Get <p>实例类型，默认primary，支持如下：<br>primary（双机高可用（一主一从））<br>readonly（只读实例）</p> 
+     * @return InstanceType <p>实例类型，默认primary，支持如下：<br>primary（双机高可用（一主一从））<br>readonly（只读实例）</p>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 实例类型，默认primary，支持如下：
-primary（双机高可用（一主一从））
-readonly（只读实例）
-     * @param InstanceType 实例类型，默认primary，支持如下：
-primary（双机高可用（一主一从））
-readonly（只读实例）
+     * Set <p>实例类型，默认primary，支持如下：<br>primary（双机高可用（一主一从））<br>readonly（只读实例）</p>
+     * @param InstanceType <p>实例类型，默认primary，支持如下：<br>primary（双机高可用（一主一从））<br>readonly（只读实例）</p>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get DB引擎，默认postgresql，支持如下：
-postgresql（云数据库PostgreSQL）
-mssql_compatible（MSSQL兼容-云数据库PostgreSQL） 
-     * @return DBEngine DB引擎，默认postgresql，支持如下：
-postgresql（云数据库PostgreSQL）
-mssql_compatible（MSSQL兼容-云数据库PostgreSQL）
+     * Get <p>DB引擎，默认postgresql，支持如下：<br>postgresql（云数据库PostgreSQL）<br>mssql_compatible（MSSQL兼容-云数据库PostgreSQL）</p> 
+     * @return DBEngine <p>DB引擎，默认postgresql，支持如下：<br>postgresql（云数据库PostgreSQL）<br>mssql_compatible（MSSQL兼容-云数据库PostgreSQL）</p>
      */
     public String getDBEngine() {
         return this.DBEngine;
     }
 
     /**
-     * Set DB引擎，默认postgresql，支持如下：
-postgresql（云数据库PostgreSQL）
-mssql_compatible（MSSQL兼容-云数据库PostgreSQL）
-     * @param DBEngine DB引擎，默认postgresql，支持如下：
-postgresql（云数据库PostgreSQL）
-mssql_compatible（MSSQL兼容-云数据库PostgreSQL）
+     * Set <p>DB引擎，默认postgresql，支持如下：<br>postgresql（云数据库PostgreSQL）<br>mssql_compatible（MSSQL兼容-云数据库PostgreSQL）</p>
+     * @param DBEngine <p>DB引擎，默认postgresql，支持如下：<br>postgresql（云数据库PostgreSQL）<br>mssql_compatible（MSSQL兼容-云数据库PostgreSQL）</p>
      */
     public void setDBEngine(String DBEngine) {
         this.DBEngine = DBEngine;

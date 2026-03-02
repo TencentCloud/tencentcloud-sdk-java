@@ -3,6 +3,9 @@ public enum TmtErrorCode {
      /* 操作失败。 */
      FAILEDOPERATION("FailedOperation"),
      
+     /* 图片解码失败 */
+     FAILEDOPERATION_DECODEERR("FailedOperation.DecodeErr"),
+     
      /* 图片下载出错 */
      FAILEDOPERATION_DOWNLOADERR("FailedOperation.DownloadErr"),
      

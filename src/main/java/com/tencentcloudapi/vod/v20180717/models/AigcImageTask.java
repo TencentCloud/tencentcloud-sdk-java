@@ -24,207 +24,230 @@ import java.util.HashMap;
 public class AigcImageTask extends AbstractModel {
 
     /**
-    * 任务 ID。
+    * <p>任务 ID。</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 任务状态，取值：<li>PROCESSING：处理中；</li><li>FINISH：已完成。</li>
+    * <p>任务状态，取值：<li>PROCESSING：处理中；</li><li>FINISH：已完成。</li></p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 错误码。源异常时返回非0错误码，返回0时请使用各个具体任务的 ErrCode。
+    * <p>错误码。源异常时返回非0错误码，返回0时请使用各个具体任务的 ErrCode。</p>
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * 错误信息。
+    * <p>扩展错误码。空字符串表示成功，其它值表示失败。</p><p>枚举值：</p><ul><li>RequestLimitExceeded： 模型调用超出并发限制。</li><li>InvalidParameter.VoilationContent： 输入 prompt 违反内容安全策略。</li><li>InvalidParameterValue： 参数错误。</li><li>FailedOperation： 模型任务堆积。</li><li>InternalError： 内部错误。</li></ul>
+    */
+    @SerializedName("ErrCodeExt")
+    @Expose
+    private String ErrCodeExt;
+
+    /**
+    * <p>错误信息。</p>
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * 任务进度，取值范围 [0-100] 。
+    * <p>任务进度，取值范围 [0-100] 。</p>
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-    * AIGC 生图任务的输入信息。
+    * <p>AIGC 生图任务的输入信息。</p>
     */
     @SerializedName("Input")
     @Expose
     private AigcImageTaskInput Input;
 
     /**
-    * AIGC 生图任务的输出信息。
+    * <p>AIGC 生图任务的输出信息。</p>
     */
     @SerializedName("Output")
     @Expose
     private AigcImageTaskOutput Output;
 
     /**
-    * 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+    * <p>用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+    * <p>来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。</p>
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-     * Get 任务 ID。 
-     * @return TaskId 任务 ID。
+     * Get <p>任务 ID。</p> 
+     * @return TaskId <p>任务 ID。</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务 ID。
-     * @param TaskId 任务 ID。
+     * Set <p>任务 ID。</p>
+     * @param TaskId <p>任务 ID。</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 任务状态，取值：<li>PROCESSING：处理中；</li><li>FINISH：已完成。</li> 
-     * @return Status 任务状态，取值：<li>PROCESSING：处理中；</li><li>FINISH：已完成。</li>
+     * Get <p>任务状态，取值：<li>PROCESSING：处理中；</li><li>FINISH：已完成。</li></p> 
+     * @return Status <p>任务状态，取值：<li>PROCESSING：处理中；</li><li>FINISH：已完成。</li></p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 任务状态，取值：<li>PROCESSING：处理中；</li><li>FINISH：已完成。</li>
-     * @param Status 任务状态，取值：<li>PROCESSING：处理中；</li><li>FINISH：已完成。</li>
+     * Set <p>任务状态，取值：<li>PROCESSING：处理中；</li><li>FINISH：已完成。</li></p>
+     * @param Status <p>任务状态，取值：<li>PROCESSING：处理中；</li><li>FINISH：已完成。</li></p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 错误码。源异常时返回非0错误码，返回0时请使用各个具体任务的 ErrCode。 
-     * @return ErrCode 错误码。源异常时返回非0错误码，返回0时请使用各个具体任务的 ErrCode。
+     * Get <p>错误码。源异常时返回非0错误码，返回0时请使用各个具体任务的 ErrCode。</p> 
+     * @return ErrCode <p>错误码。源异常时返回非0错误码，返回0时请使用各个具体任务的 ErrCode。</p>
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set 错误码。源异常时返回非0错误码，返回0时请使用各个具体任务的 ErrCode。
-     * @param ErrCode 错误码。源异常时返回非0错误码，返回0时请使用各个具体任务的 ErrCode。
+     * Set <p>错误码。源异常时返回非0错误码，返回0时请使用各个具体任务的 ErrCode。</p>
+     * @param ErrCode <p>错误码。源异常时返回非0错误码，返回0时请使用各个具体任务的 ErrCode。</p>
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get 错误信息。 
-     * @return Message 错误信息。
+     * Get <p>扩展错误码。空字符串表示成功，其它值表示失败。</p><p>枚举值：</p><ul><li>RequestLimitExceeded： 模型调用超出并发限制。</li><li>InvalidParameter.VoilationContent： 输入 prompt 违反内容安全策略。</li><li>InvalidParameterValue： 参数错误。</li><li>FailedOperation： 模型任务堆积。</li><li>InternalError： 内部错误。</li></ul> 
+     * @return ErrCodeExt <p>扩展错误码。空字符串表示成功，其它值表示失败。</p><p>枚举值：</p><ul><li>RequestLimitExceeded： 模型调用超出并发限制。</li><li>InvalidParameter.VoilationContent： 输入 prompt 违反内容安全策略。</li><li>InvalidParameterValue： 参数错误。</li><li>FailedOperation： 模型任务堆积。</li><li>InternalError： 内部错误。</li></ul>
+     */
+    public String getErrCodeExt() {
+        return this.ErrCodeExt;
+    }
+
+    /**
+     * Set <p>扩展错误码。空字符串表示成功，其它值表示失败。</p><p>枚举值：</p><ul><li>RequestLimitExceeded： 模型调用超出并发限制。</li><li>InvalidParameter.VoilationContent： 输入 prompt 违反内容安全策略。</li><li>InvalidParameterValue： 参数错误。</li><li>FailedOperation： 模型任务堆积。</li><li>InternalError： 内部错误。</li></ul>
+     * @param ErrCodeExt <p>扩展错误码。空字符串表示成功，其它值表示失败。</p><p>枚举值：</p><ul><li>RequestLimitExceeded： 模型调用超出并发限制。</li><li>InvalidParameter.VoilationContent： 输入 prompt 违反内容安全策略。</li><li>InvalidParameterValue： 参数错误。</li><li>FailedOperation： 模型任务堆积。</li><li>InternalError： 内部错误。</li></ul>
+     */
+    public void setErrCodeExt(String ErrCodeExt) {
+        this.ErrCodeExt = ErrCodeExt;
+    }
+
+    /**
+     * Get <p>错误信息。</p> 
+     * @return Message <p>错误信息。</p>
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set 错误信息。
-     * @param Message 错误信息。
+     * Set <p>错误信息。</p>
+     * @param Message <p>错误信息。</p>
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get 任务进度，取值范围 [0-100] 。 
-     * @return Progress 任务进度，取值范围 [0-100] 。
+     * Get <p>任务进度，取值范围 [0-100] 。</p> 
+     * @return Progress <p>任务进度，取值范围 [0-100] 。</p>
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set 任务进度，取值范围 [0-100] 。
-     * @param Progress 任务进度，取值范围 [0-100] 。
+     * Set <p>任务进度，取值范围 [0-100] 。</p>
+     * @param Progress <p>任务进度，取值范围 [0-100] 。</p>
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get AIGC 生图任务的输入信息。 
-     * @return Input AIGC 生图任务的输入信息。
+     * Get <p>AIGC 生图任务的输入信息。</p> 
+     * @return Input <p>AIGC 生图任务的输入信息。</p>
      */
     public AigcImageTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set AIGC 生图任务的输入信息。
-     * @param Input AIGC 生图任务的输入信息。
+     * Set <p>AIGC 生图任务的输入信息。</p>
+     * @param Input <p>AIGC 生图任务的输入信息。</p>
      */
     public void setInput(AigcImageTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get AIGC 生图任务的输出信息。 
-     * @return Output AIGC 生图任务的输出信息。
+     * Get <p>AIGC 生图任务的输出信息。</p> 
+     * @return Output <p>AIGC 生图任务的输出信息。</p>
      */
     public AigcImageTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set AIGC 生图任务的输出信息。
-     * @param Output AIGC 生图任务的输出信息。
+     * Set <p>AIGC 生图任务的输出信息。</p>
+     * @param Output <p>AIGC 生图任务的输出信息。</p>
      */
     public void setOutput(AigcImageTaskOutput Output) {
         this.Output = Output;
     }
 
     /**
-     * Get 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。 
-     * @return SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+     * Get <p>用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p> 
+     * @return SessionId <p>用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
-     * @param SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+     * Set <p>用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
+     * @param SessionId <p>用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。 
-     * @return SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+     * Get <p>来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。</p> 
+     * @return SessionContext <p>来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。</p>
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
-     * @param SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+     * Set <p>来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。</p>
+     * @param SessionContext <p>来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。</p>
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
@@ -246,6 +269,9 @@ public class AigcImageTask extends AbstractModel {
         }
         if (source.ErrCode != null) {
             this.ErrCode = new Long(source.ErrCode);
+        }
+        if (source.ErrCodeExt != null) {
+            this.ErrCodeExt = new String(source.ErrCodeExt);
         }
         if (source.Message != null) {
             this.Message = new String(source.Message);
@@ -275,6 +301,7 @@ public class AigcImageTask extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "ErrCode", this.ErrCode);
+        this.setParamSimple(map, prefix + "ErrCodeExt", this.ErrCodeExt);
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamSimple(map, prefix + "Progress", this.Progress);
         this.setParamObj(map, prefix + "Input.", this.Input);

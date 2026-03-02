@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateAgentInstanceResponse extends AbstractModel {
 
     /**
-    * 智能体实例ID
+    * <p>智能体实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 智能体实例名称
+    * <p>智能体实例名称</p>
     */
     @SerializedName("InstanceName")
     @Expose
@@ -45,32 +45,32 @@ public class CreateAgentInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 智能体实例ID 
-     * @return InstanceId 智能体实例ID
+     * Get <p>智能体实例ID</p> 
+     * @return InstanceId <p>智能体实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 智能体实例ID
-     * @param InstanceId 智能体实例ID
+     * Set <p>智能体实例ID</p>
+     * @param InstanceId <p>智能体实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 智能体实例名称 
-     * @return InstanceName 智能体实例名称
+     * Get <p>智能体实例名称</p> 
+     * @return InstanceName <p>智能体实例名称</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 智能体实例名称
-     * @param InstanceName 智能体实例名称
+     * Set <p>智能体实例名称</p>
+     * @param InstanceName <p>智能体实例名称</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;

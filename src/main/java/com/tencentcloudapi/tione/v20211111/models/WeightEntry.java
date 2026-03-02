@@ -31,7 +31,7 @@ public class WeightEntry extends AbstractModel {
     private String ServiceId;
 
     /**
-    * 流量权重值，同 ServiceGroup 下 总和应为 100
+    * 流量权重值，ServiceGroup 下，不同服务版本根据权重比例分配流量
     */
     @SerializedName("Weight")
     @Expose
@@ -54,16 +54,16 @@ public class WeightEntry extends AbstractModel {
     }
 
     /**
-     * Get 流量权重值，同 ServiceGroup 下 总和应为 100 
-     * @return Weight 流量权重值，同 ServiceGroup 下 总和应为 100
+     * Get 流量权重值，ServiceGroup 下，不同服务版本根据权重比例分配流量 
+     * @return Weight 流量权重值，ServiceGroup 下，不同服务版本根据权重比例分配流量
      */
     public Long getWeight() {
         return this.Weight;
     }
 
     /**
-     * Set 流量权重值，同 ServiceGroup 下 总和应为 100
-     * @param Weight 流量权重值，同 ServiceGroup 下 总和应为 100
+     * Set 流量权重值，ServiceGroup 下，不同服务版本根据权重比例分配流量
+     * @param Weight 流量权重值，ServiceGroup 下，不同服务版本根据权重比例分配流量
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;

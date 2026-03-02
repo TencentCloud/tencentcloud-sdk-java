@@ -97,6 +97,7 @@ public class CreateDataSourceRequest extends AbstractModel {
 - TDENGINE
 - TDSQLC
 - FileSystem
+- TCLake
 
     */
     @SerializedName("Type")
@@ -350,6 +351,7 @@ cos:
 - TDENGINE
 - TDSQLC
 - FileSystem
+- TCLake
  
      * @return Type 数据源类型:枚举值
 
@@ -410,6 +412,7 @@ cos:
 - TDENGINE
 - TDSQLC
 - FileSystem
+- TCLake
 
      */
     public String getType() {
@@ -476,6 +479,7 @@ cos:
 - TDENGINE
 - TDSQLC
 - FileSystem
+- TCLake
 
      * @param Type 数据源类型:枚举值
 
@@ -536,6 +540,7 @@ cos:
 - TDENGINE
 - TDSQLC
 - FileSystem
+- TCLake
 
      */
     public void setType(String Type) {

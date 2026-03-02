@@ -24,50 +24,49 @@ import java.util.HashMap;
 public class ImageTranslateLLMResponse extends AbstractModel {
 
     /**
-    * 图片数据的Base64字符串，输出格式为JPG。
-
+    * <p>图片数据的Base64字符串，输出格式为JPG。</p>
     */
     @SerializedName("Data")
     @Expose
     private String Data;
 
     /**
-    * 原文本主要源语言。
+    * <p>原文本主要源语言。</p>
     */
     @SerializedName("Source")
     @Expose
     private String Source;
 
     /**
-    * 目标翻译语言。
+    * <p>目标翻译语言。</p>
     */
     @SerializedName("Target")
     @Expose
     private String Target;
 
     /**
-    * 图片中的全部原文本。
+    * <p>图片中的全部原文本。</p>
     */
     @SerializedName("SourceText")
     @Expose
     private String SourceText;
 
     /**
-    * 图片中全部译文。
+    * <p>图片中全部译文。</p>
     */
     @SerializedName("TargetText")
     @Expose
     private String TargetText;
 
     /**
-    * 逆时针图片角度，取值范围为0-359
+    * <p>逆时针图片角度，取值范围为0-359</p>
     */
     @SerializedName("Angle")
     @Expose
     private Float Angle;
 
     /**
-    * 翻译详情信息
+    * <p>翻译详情信息</p>
     */
     @SerializedName("TransDetails")
     @Expose
@@ -81,116 +80,112 @@ public class ImageTranslateLLMResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 图片数据的Base64字符串，输出格式为JPG。
- 
-     * @return Data 图片数据的Base64字符串，输出格式为JPG。
-
+     * Get <p>图片数据的Base64字符串，输出格式为JPG。</p> 
+     * @return Data <p>图片数据的Base64字符串，输出格式为JPG。</p>
      */
     public String getData() {
         return this.Data;
     }
 
     /**
-     * Set 图片数据的Base64字符串，输出格式为JPG。
-
-     * @param Data 图片数据的Base64字符串，输出格式为JPG。
-
+     * Set <p>图片数据的Base64字符串，输出格式为JPG。</p>
+     * @param Data <p>图片数据的Base64字符串，输出格式为JPG。</p>
      */
     public void setData(String Data) {
         this.Data = Data;
     }
 
     /**
-     * Get 原文本主要源语言。 
-     * @return Source 原文本主要源语言。
+     * Get <p>原文本主要源语言。</p> 
+     * @return Source <p>原文本主要源语言。</p>
      */
     public String getSource() {
         return this.Source;
     }
 
     /**
-     * Set 原文本主要源语言。
-     * @param Source 原文本主要源语言。
+     * Set <p>原文本主要源语言。</p>
+     * @param Source <p>原文本主要源语言。</p>
      */
     public void setSource(String Source) {
         this.Source = Source;
     }
 
     /**
-     * Get 目标翻译语言。 
-     * @return Target 目标翻译语言。
+     * Get <p>目标翻译语言。</p> 
+     * @return Target <p>目标翻译语言。</p>
      */
     public String getTarget() {
         return this.Target;
     }
 
     /**
-     * Set 目标翻译语言。
-     * @param Target 目标翻译语言。
+     * Set <p>目标翻译语言。</p>
+     * @param Target <p>目标翻译语言。</p>
      */
     public void setTarget(String Target) {
         this.Target = Target;
     }
 
     /**
-     * Get 图片中的全部原文本。 
-     * @return SourceText 图片中的全部原文本。
+     * Get <p>图片中的全部原文本。</p> 
+     * @return SourceText <p>图片中的全部原文本。</p>
      */
     public String getSourceText() {
         return this.SourceText;
     }
 
     /**
-     * Set 图片中的全部原文本。
-     * @param SourceText 图片中的全部原文本。
+     * Set <p>图片中的全部原文本。</p>
+     * @param SourceText <p>图片中的全部原文本。</p>
      */
     public void setSourceText(String SourceText) {
         this.SourceText = SourceText;
     }
 
     /**
-     * Get 图片中全部译文。 
-     * @return TargetText 图片中全部译文。
+     * Get <p>图片中全部译文。</p> 
+     * @return TargetText <p>图片中全部译文。</p>
      */
     public String getTargetText() {
         return this.TargetText;
     }
 
     /**
-     * Set 图片中全部译文。
-     * @param TargetText 图片中全部译文。
+     * Set <p>图片中全部译文。</p>
+     * @param TargetText <p>图片中全部译文。</p>
      */
     public void setTargetText(String TargetText) {
         this.TargetText = TargetText;
     }
 
     /**
-     * Get 逆时针图片角度，取值范围为0-359 
-     * @return Angle 逆时针图片角度，取值范围为0-359
+     * Get <p>逆时针图片角度，取值范围为0-359</p> 
+     * @return Angle <p>逆时针图片角度，取值范围为0-359</p>
      */
     public Float getAngle() {
         return this.Angle;
     }
 
     /**
-     * Set 逆时针图片角度，取值范围为0-359
-     * @param Angle 逆时针图片角度，取值范围为0-359
+     * Set <p>逆时针图片角度，取值范围为0-359</p>
+     * @param Angle <p>逆时针图片角度，取值范围为0-359</p>
      */
     public void setAngle(Float Angle) {
         this.Angle = Angle;
     }
 
     /**
-     * Get 翻译详情信息 
-     * @return TransDetails 翻译详情信息
+     * Get <p>翻译详情信息</p> 
+     * @return TransDetails <p>翻译详情信息</p>
      */
     public TransDetail [] getTransDetails() {
         return this.TransDetails;
     }
 
     /**
-     * Set 翻译详情信息
-     * @param TransDetails 翻译详情信息
+     * Set <p>翻译详情信息</p>
+     * @param TransDetails <p>翻译详情信息</p>
      */
     public void setTransDetails(TransDetail [] TransDetails) {
         this.TransDetails = TransDetails;

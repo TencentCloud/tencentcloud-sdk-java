@@ -31,6 +31,13 @@ public class DescribePlaybackListRequest extends AbstractModel {
     private Long SdkAppId;
 
     /**
+    * <p>房间ID</p>
+    */
+    @SerializedName("RoomId")
+    @Expose
+    private Long RoomId;
+
+    /**
     * <p>分页查询当前页数，从1开始递增</p>
     */
     @SerializedName("Page")
@@ -58,6 +65,22 @@ public class DescribePlaybackListRequest extends AbstractModel {
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
+    }
+
+    /**
+     * Get <p>房间ID</p> 
+     * @return RoomId <p>房间ID</p>
+     */
+    public Long getRoomId() {
+        return this.RoomId;
+    }
+
+    /**
+     * Set <p>房间ID</p>
+     * @param RoomId <p>房间ID</p>
+     */
+    public void setRoomId(Long RoomId) {
+        this.RoomId = RoomId;
     }
 
     /**
@@ -103,6 +126,9 @@ public class DescribePlaybackListRequest extends AbstractModel {
         if (source.SdkAppId != null) {
             this.SdkAppId = new Long(source.SdkAppId);
         }
+        if (source.RoomId != null) {
+            this.RoomId = new Long(source.RoomId);
+        }
         if (source.Page != null) {
             this.Page = new Long(source.Page);
         }
@@ -117,6 +143,7 @@ public class DescribePlaybackListRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+        this.setParamSimple(map, prefix + "RoomId", this.RoomId);
         this.setParamSimple(map, prefix + "Page", this.Page);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
 

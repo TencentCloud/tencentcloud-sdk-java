@@ -45,6 +45,13 @@ public class Agent extends AbstractModel {
     private String AgentInternalName;
 
     /**
+    * 架构：共享版-intranet，企业版-userVpc
+    */
+    @SerializedName("DeployPlace")
+    @Expose
+    private String DeployPlace;
+
+    /**
     * 智能体状态
     */
     @SerializedName("AgentStatus")
@@ -146,6 +153,22 @@ public class Agent extends AbstractModel {
      */
     public void setAgentInternalName(String AgentInternalName) {
         this.AgentInternalName = AgentInternalName;
+    }
+
+    /**
+     * Get 架构：共享版-intranet，企业版-userVpc 
+     * @return DeployPlace 架构：共享版-intranet，企业版-userVpc
+     */
+    public String getDeployPlace() {
+        return this.DeployPlace;
+    }
+
+    /**
+     * Set 架构：共享版-intranet，企业版-userVpc
+     * @param DeployPlace 架构：共享版-intranet，企业版-userVpc
+     */
+    public void setDeployPlace(String DeployPlace) {
+        this.DeployPlace = DeployPlace;
     }
 
     /**
@@ -293,6 +316,9 @@ public class Agent extends AbstractModel {
         if (source.AgentInternalName != null) {
             this.AgentInternalName = new String(source.AgentInternalName);
         }
+        if (source.DeployPlace != null) {
+            this.DeployPlace = new String(source.DeployPlace);
+        }
         if (source.AgentStatus != null) {
             this.AgentStatus = new String(source.AgentStatus);
         }
@@ -327,6 +353,7 @@ public class Agent extends AbstractModel {
         this.setParamSimple(map, prefix + "AgentId", this.AgentId);
         this.setParamSimple(map, prefix + "AgentName", this.AgentName);
         this.setParamSimple(map, prefix + "AgentInternalName", this.AgentInternalName);
+        this.setParamSimple(map, prefix + "DeployPlace", this.DeployPlace);
         this.setParamSimple(map, prefix + "AgentStatus", this.AgentStatus);
         this.setParamSimple(map, prefix + "DefaultVersion", this.DefaultVersion);
         this.setParamSimple(map, prefix + "AgentType", this.AgentType);

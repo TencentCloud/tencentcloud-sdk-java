@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeSlowLogUserHostStatsRequest extends AbstractModel {
 
     /**
-    * 实例ID。
+    * 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 查询范围的开始时间，时间格式如：2019-09-10 12:13:14。
+    * 查询范围的开始时间，格式: "yyyy-MM-dd'T'HH:mm:ssXXX"。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 查询范围的结束时间，时间格式如：2019-09-10 12:13:14。
+    * 查询范围的结束时间，格式: "yyyy-MM-dd'T'HH:mm:ssXXX"。
     */
     @SerializedName("EndTime")
     @Expose
@@ -59,48 +59,62 @@ public class DescribeSlowLogUserHostStatsRequest extends AbstractModel {
     private String Md5;
 
     /**
-     * Get 实例ID。 
-     * @return InstanceId 实例ID。
+    * 仅Redis产品使用；实例Proxy ID。
+    */
+    @SerializedName("InstanceProxyId")
+    @Expose
+    private String InstanceProxyId;
+
+    /**
+    * 仅Redis产品使用；命令。
+    */
+    @SerializedName("Cmd")
+    @Expose
+    private String Cmd;
+
+    /**
+     * Get 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。 
+     * @return InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID。
-     * @param InstanceId 实例ID。
+     * Set 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+     * @param InstanceId 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 查询范围的开始时间，时间格式如：2019-09-10 12:13:14。 
-     * @return StartTime 查询范围的开始时间，时间格式如：2019-09-10 12:13:14。
+     * Get 查询范围的开始时间，格式: "yyyy-MM-dd'T'HH:mm:ssXXX"。 
+     * @return StartTime 查询范围的开始时间，格式: "yyyy-MM-dd'T'HH:mm:ssXXX"。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 查询范围的开始时间，时间格式如：2019-09-10 12:13:14。
-     * @param StartTime 查询范围的开始时间，时间格式如：2019-09-10 12:13:14。
+     * Set 查询范围的开始时间，格式: "yyyy-MM-dd'T'HH:mm:ssXXX"。
+     * @param StartTime 查询范围的开始时间，格式: "yyyy-MM-dd'T'HH:mm:ssXXX"。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 查询范围的结束时间，时间格式如：2019-09-10 12:13:14。 
-     * @return EndTime 查询范围的结束时间，时间格式如：2019-09-10 12:13:14。
+     * Get 查询范围的结束时间，格式: "yyyy-MM-dd'T'HH:mm:ssXXX"。 
+     * @return EndTime 查询范围的结束时间，格式: "yyyy-MM-dd'T'HH:mm:ssXXX"。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 查询范围的结束时间，时间格式如：2019-09-10 12:13:14。
-     * @param EndTime 查询范围的结束时间，时间格式如：2019-09-10 12:13:14。
+     * Set 查询范围的结束时间，格式: "yyyy-MM-dd'T'HH:mm:ssXXX"。
+     * @param EndTime 查询范围的结束时间，格式: "yyyy-MM-dd'T'HH:mm:ssXXX"。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -138,6 +152,38 @@ public class DescribeSlowLogUserHostStatsRequest extends AbstractModel {
         this.Md5 = Md5;
     }
 
+    /**
+     * Get 仅Redis产品使用；实例Proxy ID。 
+     * @return InstanceProxyId 仅Redis产品使用；实例Proxy ID。
+     */
+    public String getInstanceProxyId() {
+        return this.InstanceProxyId;
+    }
+
+    /**
+     * Set 仅Redis产品使用；实例Proxy ID。
+     * @param InstanceProxyId 仅Redis产品使用；实例Proxy ID。
+     */
+    public void setInstanceProxyId(String InstanceProxyId) {
+        this.InstanceProxyId = InstanceProxyId;
+    }
+
+    /**
+     * Get 仅Redis产品使用；命令。 
+     * @return Cmd 仅Redis产品使用；命令。
+     */
+    public String getCmd() {
+        return this.Cmd;
+    }
+
+    /**
+     * Set 仅Redis产品使用；命令。
+     * @param Cmd 仅Redis产品使用；命令。
+     */
+    public void setCmd(String Cmd) {
+        this.Cmd = Cmd;
+    }
+
     public DescribeSlowLogUserHostStatsRequest() {
     }
 
@@ -161,6 +207,12 @@ public class DescribeSlowLogUserHostStatsRequest extends AbstractModel {
         if (source.Md5 != null) {
             this.Md5 = new String(source.Md5);
         }
+        if (source.InstanceProxyId != null) {
+            this.InstanceProxyId = new String(source.InstanceProxyId);
+        }
+        if (source.Cmd != null) {
+            this.Cmd = new String(source.Cmd);
+        }
     }
 
 
@@ -173,6 +225,8 @@ public class DescribeSlowLogUserHostStatsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "Product", this.Product);
         this.setParamSimple(map, prefix + "Md5", this.Md5);
+        this.setParamSimple(map, prefix + "InstanceProxyId", this.InstanceProxyId);
+        this.setParamSimple(map, prefix + "Cmd", this.Cmd);
 
     }
 }

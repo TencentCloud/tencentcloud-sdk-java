@@ -108,7 +108,7 @@ public class DescribeSessionDetailResponse extends AbstractModel {
     private String QueuedSkillGroupName;
 
     /**
-    * 录音链接，带鉴权和有效期，获取之后请在短时间内拉取，不要持久化此链接
+    * 录音链接，带鉴权和有效期，获取之后请在24 小时内拉取，不要持久化此链接。如此链接已过期，请重新调用此接口获取新的链接
     */
     @SerializedName("RecordURL")
     @Expose
@@ -122,7 +122,7 @@ public class DescribeSessionDetailResponse extends AbstractModel {
     private String CustomRecordURL;
 
     /**
-    * 录音文本信息链接，带鉴权和有效期，获取之后请在短时间内拉取，不要持久化此链接
+    * 录音文本信息链接，带鉴权和有效期，获取之后请在24 小时拉取，不要持久化此链接。如此链接已过期，请重新调用此接口获取新的链接
     */
     @SerializedName("AsrURL")
     @Expose
@@ -384,16 +384,16 @@ public class DescribeSessionDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 录音链接，带鉴权和有效期，获取之后请在短时间内拉取，不要持久化此链接 
-     * @return RecordURL 录音链接，带鉴权和有效期，获取之后请在短时间内拉取，不要持久化此链接
+     * Get 录音链接，带鉴权和有效期，获取之后请在24 小时内拉取，不要持久化此链接。如此链接已过期，请重新调用此接口获取新的链接 
+     * @return RecordURL 录音链接，带鉴权和有效期，获取之后请在24 小时内拉取，不要持久化此链接。如此链接已过期，请重新调用此接口获取新的链接
      */
     public String getRecordURL() {
         return this.RecordURL;
     }
 
     /**
-     * Set 录音链接，带鉴权和有效期，获取之后请在短时间内拉取，不要持久化此链接
-     * @param RecordURL 录音链接，带鉴权和有效期，获取之后请在短时间内拉取，不要持久化此链接
+     * Set 录音链接，带鉴权和有效期，获取之后请在24 小时内拉取，不要持久化此链接。如此链接已过期，请重新调用此接口获取新的链接
+     * @param RecordURL 录音链接，带鉴权和有效期，获取之后请在24 小时内拉取，不要持久化此链接。如此链接已过期，请重新调用此接口获取新的链接
      */
     public void setRecordURL(String RecordURL) {
         this.RecordURL = RecordURL;
@@ -416,16 +416,16 @@ public class DescribeSessionDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 录音文本信息链接，带鉴权和有效期，获取之后请在短时间内拉取，不要持久化此链接 
-     * @return AsrURL 录音文本信息链接，带鉴权和有效期，获取之后请在短时间内拉取，不要持久化此链接
+     * Get 录音文本信息链接，带鉴权和有效期，获取之后请在24 小时拉取，不要持久化此链接。如此链接已过期，请重新调用此接口获取新的链接 
+     * @return AsrURL 录音文本信息链接，带鉴权和有效期，获取之后请在24 小时拉取，不要持久化此链接。如此链接已过期，请重新调用此接口获取新的链接
      */
     public String getAsrURL() {
         return this.AsrURL;
     }
 
     /**
-     * Set 录音文本信息链接，带鉴权和有效期，获取之后请在短时间内拉取，不要持久化此链接
-     * @param AsrURL 录音文本信息链接，带鉴权和有效期，获取之后请在短时间内拉取，不要持久化此链接
+     * Set 录音文本信息链接，带鉴权和有效期，获取之后请在24 小时拉取，不要持久化此链接。如此链接已过期，请重新调用此接口获取新的链接
+     * @param AsrURL 录音文本信息链接，带鉴权和有效期，获取之后请在24 小时拉取，不要持久化此链接。如此链接已过期，请重新调用此接口获取新的链接
      */
     public void setAsrURL(String AsrURL) {
         this.AsrURL = AsrURL;

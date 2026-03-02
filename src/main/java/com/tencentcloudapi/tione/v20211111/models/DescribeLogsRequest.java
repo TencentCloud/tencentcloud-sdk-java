@@ -50,7 +50,7 @@ public class DescribeLogsRequest extends AbstractModel {
     private String EndTime;
 
     /**
-    * 日志查询条数，默认值100，最大值100
+    * 日志查询条数，默认值100，最大值1000
     */
     @SerializedName("Limit")
     @Expose
@@ -118,6 +118,13 @@ public class DescribeLogsRequest extends AbstractModel {
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
+
+    /**
+    * 使用OFFSET分页查询时，指定返回的数据偏移量，默认为0
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
 
     /**
      * Get 服务类型，TRAIN为任务式建模, NOTEBOOK为Notebook, INFER为在线服务, BATCH为批量预测
@@ -188,16 +195,16 @@ public class DescribeLogsRequest extends AbstractModel {
     }
 
     /**
-     * Get 日志查询条数，默认值100，最大值100 
-     * @return Limit 日志查询条数，默认值100，最大值100
+     * Get 日志查询条数，默认值100，最大值1000 
+     * @return Limit 日志查询条数，默认值100，最大值1000
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 日志查询条数，默认值100，最大值100
-     * @param Limit 日志查询条数，默认值100，最大值100
+     * Set 日志查询条数，默认值100，最大值1000
+     * @param Limit 日志查询条数，默认值100，最大值1000
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -383,6 +390,22 @@ public class DescribeLogsRequest extends AbstractModel {
         this.Filters = Filters;
     }
 
+    /**
+     * Get 使用OFFSET分页查询时，指定返回的数据偏移量，默认为0 
+     * @return Offset 使用OFFSET分页查询时，指定返回的数据偏移量，默认为0
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 使用OFFSET分页查询时，指定返回的数据偏移量，默认为0
+     * @param Offset 使用OFFSET分页查询时，指定返回的数据偏移量，默认为0
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
     public DescribeLogsRequest() {
     }
 
@@ -424,6 +447,9 @@ public class DescribeLogsRequest extends AbstractModel {
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
         }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
     }
 
 
@@ -441,6 +467,7 @@ public class DescribeLogsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "OrderField", this.OrderField);
         this.setParamSimple(map, prefix + "Context", this.Context);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
 
     }
 }

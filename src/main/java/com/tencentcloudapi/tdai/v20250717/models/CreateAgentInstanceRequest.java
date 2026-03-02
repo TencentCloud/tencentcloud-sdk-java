@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class CreateAgentInstanceRequest extends AbstractModel {
 
     /**
-    * 智能体ID
+    * <p>智能体ID</p>
     */
     @SerializedName("AgentId")
     @Expose
     private String AgentId;
 
     /**
-    * 智能体版本
+    * <p>智能体版本</p>
     */
     @SerializedName("AgentVersion")
     @Expose
     private String AgentVersion;
 
     /**
-    * 实例名
+    * <p>实例名</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 智能体实例的参数列表
+    * <p>智能体实例的参数列表</p>
     */
     @SerializedName("Parameters")
     @Expose
     private Parameter [] Parameters;
 
     /**
-    * 资源的标签信息
+    * <p>资源的标签信息</p>
     */
     @SerializedName("Tags")
     @Expose
     private TagItem [] Tags;
 
     /**
-     * Get 智能体ID 
-     * @return AgentId 智能体ID
+     * Get <p>智能体ID</p> 
+     * @return AgentId <p>智能体ID</p>
      */
     public String getAgentId() {
         return this.AgentId;
     }
 
     /**
-     * Set 智能体ID
-     * @param AgentId 智能体ID
+     * Set <p>智能体ID</p>
+     * @param AgentId <p>智能体ID</p>
      */
     public void setAgentId(String AgentId) {
         this.AgentId = AgentId;
     }
 
     /**
-     * Get 智能体版本 
-     * @return AgentVersion 智能体版本
+     * Get <p>智能体版本</p> 
+     * @return AgentVersion <p>智能体版本</p>
      */
     public String getAgentVersion() {
         return this.AgentVersion;
     }
 
     /**
-     * Set 智能体版本
-     * @param AgentVersion 智能体版本
+     * Set <p>智能体版本</p>
+     * @param AgentVersion <p>智能体版本</p>
      */
     public void setAgentVersion(String AgentVersion) {
         this.AgentVersion = AgentVersion;
     }
 
     /**
-     * Get 实例名 
-     * @return InstanceName 实例名
+     * Get <p>实例名</p> 
+     * @return InstanceName <p>实例名</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名
-     * @param InstanceName 实例名
+     * Set <p>实例名</p>
+     * @param InstanceName <p>实例名</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 智能体实例的参数列表 
-     * @return Parameters 智能体实例的参数列表
+     * Get <p>智能体实例的参数列表</p> 
+     * @return Parameters <p>智能体实例的参数列表</p>
      */
     public Parameter [] getParameters() {
         return this.Parameters;
     }
 
     /**
-     * Set 智能体实例的参数列表
-     * @param Parameters 智能体实例的参数列表
+     * Set <p>智能体实例的参数列表</p>
+     * @param Parameters <p>智能体实例的参数列表</p>
      */
     public void setParameters(Parameter [] Parameters) {
         this.Parameters = Parameters;
     }
 
     /**
-     * Get 资源的标签信息 
-     * @return Tags 资源的标签信息
+     * Get <p>资源的标签信息</p> 
+     * @return Tags <p>资源的标签信息</p>
      */
     public TagItem [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 资源的标签信息
-     * @param Tags 资源的标签信息
+     * Set <p>资源的标签信息</p>
+     * @param Tags <p>资源的标签信息</p>
      */
     public void setTags(TagItem [] Tags) {
         this.Tags = Tags;

@@ -38,6 +38,20 @@ public class SubmitTextToImageJobRequest extends AbstractModel {
     private String [] Images;
 
     /**
+    * <p>选择适配的生图能力类型。</p><p>枚举值：</p><ul><li>default： 通用生图</li><li>cover： 文章封面</li><li>ppt： 幻灯片PPT</li><li>poster： 创意海报</li></ul><p>默认值：default</p>
+    */
+    @SerializedName("SkillType")
+    @Expose
+    private String SkillType;
+
+    /**
+    * <p>生成的结果图片数量<br>取值范围： </p><ul><li>default：通用生图任务（1）</li><li>cover:：封面（1）</li><li>ppt：幻灯片页数（1～20）</li><li>poster：生成图片张数（1）</li></ul><p>默认值：1</p>
+    */
+    @SerializedName("GeneratedImageCount")
+    @Expose
+    private Long GeneratedImageCount;
+
+    /**
     * <p>生成图分辨率，默认1024:1024：</p><ul><li>宽高维度均在 [512, 2048] 像素范围内;</li><li>宽高乘积（即图像面积）不超过 1024×1024 像素;</li></ul>
     */
     @SerializedName("Resolution")
@@ -102,6 +116,38 @@ public class SubmitTextToImageJobRequest extends AbstractModel {
      */
     public void setImages(String [] Images) {
         this.Images = Images;
+    }
+
+    /**
+     * Get <p>选择适配的生图能力类型。</p><p>枚举值：</p><ul><li>default： 通用生图</li><li>cover： 文章封面</li><li>ppt： 幻灯片PPT</li><li>poster： 创意海报</li></ul><p>默认值：default</p> 
+     * @return SkillType <p>选择适配的生图能力类型。</p><p>枚举值：</p><ul><li>default： 通用生图</li><li>cover： 文章封面</li><li>ppt： 幻灯片PPT</li><li>poster： 创意海报</li></ul><p>默认值：default</p>
+     */
+    public String getSkillType() {
+        return this.SkillType;
+    }
+
+    /**
+     * Set <p>选择适配的生图能力类型。</p><p>枚举值：</p><ul><li>default： 通用生图</li><li>cover： 文章封面</li><li>ppt： 幻灯片PPT</li><li>poster： 创意海报</li></ul><p>默认值：default</p>
+     * @param SkillType <p>选择适配的生图能力类型。</p><p>枚举值：</p><ul><li>default： 通用生图</li><li>cover： 文章封面</li><li>ppt： 幻灯片PPT</li><li>poster： 创意海报</li></ul><p>默认值：default</p>
+     */
+    public void setSkillType(String SkillType) {
+        this.SkillType = SkillType;
+    }
+
+    /**
+     * Get <p>生成的结果图片数量<br>取值范围： </p><ul><li>default：通用生图任务（1）</li><li>cover:：封面（1）</li><li>ppt：幻灯片页数（1～20）</li><li>poster：生成图片张数（1）</li></ul><p>默认值：1</p> 
+     * @return GeneratedImageCount <p>生成的结果图片数量<br>取值范围： </p><ul><li>default：通用生图任务（1）</li><li>cover:：封面（1）</li><li>ppt：幻灯片页数（1～20）</li><li>poster：生成图片张数（1）</li></ul><p>默认值：1</p>
+     */
+    public Long getGeneratedImageCount() {
+        return this.GeneratedImageCount;
+    }
+
+    /**
+     * Set <p>生成的结果图片数量<br>取值范围： </p><ul><li>default：通用生图任务（1）</li><li>cover:：封面（1）</li><li>ppt：幻灯片页数（1～20）</li><li>poster：生成图片张数（1）</li></ul><p>默认值：1</p>
+     * @param GeneratedImageCount <p>生成的结果图片数量<br>取值范围： </p><ul><li>default：通用生图任务（1）</li><li>cover:：封面（1）</li><li>ppt：幻灯片页数（1～20）</li><li>poster：生成图片张数（1）</li></ul><p>默认值：1</p>
+     */
+    public void setGeneratedImageCount(Long GeneratedImageCount) {
+        this.GeneratedImageCount = GeneratedImageCount;
     }
 
     /**
@@ -201,6 +247,12 @@ public class SubmitTextToImageJobRequest extends AbstractModel {
                 this.Images[i] = new String(source.Images[i]);
             }
         }
+        if (source.SkillType != null) {
+            this.SkillType = new String(source.SkillType);
+        }
+        if (source.GeneratedImageCount != null) {
+            this.GeneratedImageCount = new Long(source.GeneratedImageCount);
+        }
         if (source.Resolution != null) {
             this.Resolution = new String(source.Resolution);
         }
@@ -225,6 +277,8 @@ public class SubmitTextToImageJobRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Prompt", this.Prompt);
         this.setParamArraySimple(map, prefix + "Images.", this.Images);
+        this.setParamSimple(map, prefix + "SkillType", this.SkillType);
+        this.setParamSimple(map, prefix + "GeneratedImageCount", this.GeneratedImageCount);
         this.setParamSimple(map, prefix + "Resolution", this.Resolution);
         this.setParamSimple(map, prefix + "Seed", this.Seed);
         this.setParamSimple(map, prefix + "LogoAdd", this.LogoAdd);

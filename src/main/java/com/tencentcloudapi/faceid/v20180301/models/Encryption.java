@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Encryption extends AbstractModel {
 
     /**
-    * 在使用加密服务时，填入要被加密的字段。本接口中可填入加密后的一个或多个字段
+    * <p>在使用加密服务时，填入要被加密的字段。本接口中可填入加密后的一个或多个字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EncryptList")
@@ -32,7 +32,7 @@ public class Encryption extends AbstractModel {
     private String [] EncryptList;
 
     /**
-    * 加密后的对称密钥，关于密钥的生成和使用请查阅<a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。
+    * <p>加密后的对称密钥，关于密钥的生成和使用请查阅<a href="https://www.tencentcloud.com/document/product/1061/77849">数据加密</a> 文档。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CiphertextBlob")
@@ -40,7 +40,7 @@ public class Encryption extends AbstractModel {
     private String CiphertextBlob;
 
     /**
-    * 有加密需求的用户，传入CBC加密的初始向量（客户自定义字符串，长度16字符）。
+    * <p>有加密需求的用户，传入CBC加密的初始向量（客户自定义字符串，长度16字符）。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Iv")
@@ -48,7 +48,7 @@ public class Encryption extends AbstractModel {
     private String Iv;
 
     /**
-    * 加密使用的算法（支持'AES-256-CBC'、'SM4-GCM'），不传默认为'AES-256-CBC'
+    * <p>加密使用的算法（支持&#39;AES-256-CBC&#39;、&#39;SM4-GCM&#39;），不传默认为&#39;AES-256-CBC&#39;</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Algorithm")
@@ -56,7 +56,7 @@ public class Encryption extends AbstractModel {
     private String Algorithm;
 
     /**
-    * SM4-GCM算法生成的消息摘要（校验消息完整性时使用）
+    * <p>SM4-GCM算法生成的消息摘要（校验消息完整性时使用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagList")
@@ -64,9 +64,9 @@ public class Encryption extends AbstractModel {
     private String [] TagList;
 
     /**
-     * Get 在使用加密服务时，填入要被加密的字段。本接口中可填入加密后的一个或多个字段
+     * Get <p>在使用加密服务时，填入要被加密的字段。本接口中可填入加密后的一个或多个字段</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EncryptList 在使用加密服务时，填入要被加密的字段。本接口中可填入加密后的一个或多个字段
+     * @return EncryptList <p>在使用加密服务时，填入要被加密的字段。本接口中可填入加密后的一个或多个字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getEncryptList() {
@@ -74,9 +74,9 @@ public class Encryption extends AbstractModel {
     }
 
     /**
-     * Set 在使用加密服务时，填入要被加密的字段。本接口中可填入加密后的一个或多个字段
+     * Set <p>在使用加密服务时，填入要被加密的字段。本接口中可填入加密后的一个或多个字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EncryptList 在使用加密服务时，填入要被加密的字段。本接口中可填入加密后的一个或多个字段
+     * @param EncryptList <p>在使用加密服务时，填入要被加密的字段。本接口中可填入加密后的一个或多个字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEncryptList(String [] EncryptList) {
@@ -84,9 +84,9 @@ public class Encryption extends AbstractModel {
     }
 
     /**
-     * Get 加密后的对称密钥，关于密钥的生成和使用请查阅<a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。
+     * Get <p>加密后的对称密钥，关于密钥的生成和使用请查阅<a href="https://www.tencentcloud.com/document/product/1061/77849">数据加密</a> 文档。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CiphertextBlob 加密后的对称密钥，关于密钥的生成和使用请查阅<a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。
+     * @return CiphertextBlob <p>加密后的对称密钥，关于密钥的生成和使用请查阅<a href="https://www.tencentcloud.com/document/product/1061/77849">数据加密</a> 文档。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCiphertextBlob() {
@@ -94,9 +94,9 @@ public class Encryption extends AbstractModel {
     }
 
     /**
-     * Set 加密后的对称密钥，关于密钥的生成和使用请查阅<a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。
+     * Set <p>加密后的对称密钥，关于密钥的生成和使用请查阅<a href="https://www.tencentcloud.com/document/product/1061/77849">数据加密</a> 文档。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CiphertextBlob 加密后的对称密钥，关于密钥的生成和使用请查阅<a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。
+     * @param CiphertextBlob <p>加密后的对称密钥，关于密钥的生成和使用请查阅<a href="https://www.tencentcloud.com/document/product/1061/77849">数据加密</a> 文档。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCiphertextBlob(String CiphertextBlob) {
@@ -104,9 +104,9 @@ public class Encryption extends AbstractModel {
     }
 
     /**
-     * Get 有加密需求的用户，传入CBC加密的初始向量（客户自定义字符串，长度16字符）。
+     * Get <p>有加密需求的用户，传入CBC加密的初始向量（客户自定义字符串，长度16字符）。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Iv 有加密需求的用户，传入CBC加密的初始向量（客户自定义字符串，长度16字符）。
+     * @return Iv <p>有加密需求的用户，传入CBC加密的初始向量（客户自定义字符串，长度16字符）。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIv() {
@@ -114,9 +114,9 @@ public class Encryption extends AbstractModel {
     }
 
     /**
-     * Set 有加密需求的用户，传入CBC加密的初始向量（客户自定义字符串，长度16字符）。
+     * Set <p>有加密需求的用户，传入CBC加密的初始向量（客户自定义字符串，长度16字符）。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Iv 有加密需求的用户，传入CBC加密的初始向量（客户自定义字符串，长度16字符）。
+     * @param Iv <p>有加密需求的用户，传入CBC加密的初始向量（客户自定义字符串，长度16字符）。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIv(String Iv) {
@@ -124,9 +124,9 @@ public class Encryption extends AbstractModel {
     }
 
     /**
-     * Get 加密使用的算法（支持'AES-256-CBC'、'SM4-GCM'），不传默认为'AES-256-CBC'
+     * Get <p>加密使用的算法（支持&#39;AES-256-CBC&#39;、&#39;SM4-GCM&#39;），不传默认为&#39;AES-256-CBC&#39;</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Algorithm 加密使用的算法（支持'AES-256-CBC'、'SM4-GCM'），不传默认为'AES-256-CBC'
+     * @return Algorithm <p>加密使用的算法（支持&#39;AES-256-CBC&#39;、&#39;SM4-GCM&#39;），不传默认为&#39;AES-256-CBC&#39;</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAlgorithm() {
@@ -134,9 +134,9 @@ public class Encryption extends AbstractModel {
     }
 
     /**
-     * Set 加密使用的算法（支持'AES-256-CBC'、'SM4-GCM'），不传默认为'AES-256-CBC'
+     * Set <p>加密使用的算法（支持&#39;AES-256-CBC&#39;、&#39;SM4-GCM&#39;），不传默认为&#39;AES-256-CBC&#39;</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Algorithm 加密使用的算法（支持'AES-256-CBC'、'SM4-GCM'），不传默认为'AES-256-CBC'
+     * @param Algorithm <p>加密使用的算法（支持&#39;AES-256-CBC&#39;、&#39;SM4-GCM&#39;），不传默认为&#39;AES-256-CBC&#39;</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlgorithm(String Algorithm) {
@@ -144,9 +144,9 @@ public class Encryption extends AbstractModel {
     }
 
     /**
-     * Get SM4-GCM算法生成的消息摘要（校验消息完整性时使用）
+     * Get <p>SM4-GCM算法生成的消息摘要（校验消息完整性时使用）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TagList SM4-GCM算法生成的消息摘要（校验消息完整性时使用）
+     * @return TagList <p>SM4-GCM算法生成的消息摘要（校验消息完整性时使用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getTagList() {
@@ -154,9 +154,9 @@ public class Encryption extends AbstractModel {
     }
 
     /**
-     * Set SM4-GCM算法生成的消息摘要（校验消息完整性时使用）
+     * Set <p>SM4-GCM算法生成的消息摘要（校验消息完整性时使用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TagList SM4-GCM算法生成的消息摘要（校验消息完整性时使用）
+     * @param TagList <p>SM4-GCM算法生成的消息摘要（校验消息完整性时使用）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagList(String [] TagList) {

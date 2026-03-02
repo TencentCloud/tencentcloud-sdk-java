@@ -24,184 +24,207 @@ import java.util.HashMap;
 public class ProcessImageAsyncRequest extends AbstractModel {
 
     /**
-    * <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+    * <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 需要进行图片处理的FileId。
+    * <p>需要进行图片处理的FileId。不能与Url同时输入。</p>
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 图片处理参数。
+    * <p>需要进行图片处理的Url。不能与FileId同时输入。</p>
+    */
+    @SerializedName("Url")
+    @Expose
+    private String Url;
+
+    /**
+    * <p>图片处理参数。</p>
     */
     @SerializedName("ImageTaskInput")
     @Expose
     private ProcessImageAsyncTaskInput ImageTaskInput;
 
     /**
-    * 图片处理任务的输出媒体文件配置。
+    * <p>图片处理任务的输出媒体文件配置。</p>
     */
     @SerializedName("OutputConfig")
     @Expose
     private ProcessImageAsyncOutputConfig OutputConfig;
 
     /**
-    * 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+    * <p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * 来源上下文，用于透传用户请求信息，音画质重生完成回调将返回该字段值，最长 1000 个字符。
+    * <p>来源上下文，用于透传用户请求信息，音画质重生完成回调将返回该字段值，最长 1000 个字符。</p>
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-    * 任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
+    * <p>任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。</p>
     */
     @SerializedName("TasksPriority")
     @Expose
     private Long TasksPriority;
 
     /**
-    * 保留字段，特殊用途时使用。
+    * <p>保留字段，特殊用途时使用。</p>
     */
     @SerializedName("ExtInfo")
     @Expose
     private String ExtInfo;
 
     /**
-     * Get <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b> 
-     * @return SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+     * Get <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p> 
+     * @return SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
-     * @param SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+     * Set <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+     * @param SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get 需要进行图片处理的FileId。 
-     * @return FileId 需要进行图片处理的FileId。
+     * Get <p>需要进行图片处理的FileId。不能与Url同时输入。</p> 
+     * @return FileId <p>需要进行图片处理的FileId。不能与Url同时输入。</p>
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 需要进行图片处理的FileId。
-     * @param FileId 需要进行图片处理的FileId。
+     * Set <p>需要进行图片处理的FileId。不能与Url同时输入。</p>
+     * @param FileId <p>需要进行图片处理的FileId。不能与Url同时输入。</p>
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get 图片处理参数。 
-     * @return ImageTaskInput 图片处理参数。
+     * Get <p>需要进行图片处理的Url。不能与FileId同时输入。</p> 
+     * @return Url <p>需要进行图片处理的Url。不能与FileId同时输入。</p>
+     */
+    public String getUrl() {
+        return this.Url;
+    }
+
+    /**
+     * Set <p>需要进行图片处理的Url。不能与FileId同时输入。</p>
+     * @param Url <p>需要进行图片处理的Url。不能与FileId同时输入。</p>
+     */
+    public void setUrl(String Url) {
+        this.Url = Url;
+    }
+
+    /**
+     * Get <p>图片处理参数。</p> 
+     * @return ImageTaskInput <p>图片处理参数。</p>
      */
     public ProcessImageAsyncTaskInput getImageTaskInput() {
         return this.ImageTaskInput;
     }
 
     /**
-     * Set 图片处理参数。
-     * @param ImageTaskInput 图片处理参数。
+     * Set <p>图片处理参数。</p>
+     * @param ImageTaskInput <p>图片处理参数。</p>
      */
     public void setImageTaskInput(ProcessImageAsyncTaskInput ImageTaskInput) {
         this.ImageTaskInput = ImageTaskInput;
     }
 
     /**
-     * Get 图片处理任务的输出媒体文件配置。 
-     * @return OutputConfig 图片处理任务的输出媒体文件配置。
+     * Get <p>图片处理任务的输出媒体文件配置。</p> 
+     * @return OutputConfig <p>图片处理任务的输出媒体文件配置。</p>
      */
     public ProcessImageAsyncOutputConfig getOutputConfig() {
         return this.OutputConfig;
     }
 
     /**
-     * Set 图片处理任务的输出媒体文件配置。
-     * @param OutputConfig 图片处理任务的输出媒体文件配置。
+     * Set <p>图片处理任务的输出媒体文件配置。</p>
+     * @param OutputConfig <p>图片处理任务的输出媒体文件配置。</p>
      */
     public void setOutputConfig(ProcessImageAsyncOutputConfig OutputConfig) {
         this.OutputConfig = OutputConfig;
     }
 
     /**
-     * Get 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。 
-     * @return SessionId 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+     * Get <p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p> 
+     * @return SessionId <p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
-     * @param SessionId 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+     * Set <p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
+     * @param SessionId <p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get 来源上下文，用于透传用户请求信息，音画质重生完成回调将返回该字段值，最长 1000 个字符。 
-     * @return SessionContext 来源上下文，用于透传用户请求信息，音画质重生完成回调将返回该字段值，最长 1000 个字符。
+     * Get <p>来源上下文，用于透传用户请求信息，音画质重生完成回调将返回该字段值，最长 1000 个字符。</p> 
+     * @return SessionContext <p>来源上下文，用于透传用户请求信息，音画质重生完成回调将返回该字段值，最长 1000 个字符。</p>
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set 来源上下文，用于透传用户请求信息，音画质重生完成回调将返回该字段值，最长 1000 个字符。
-     * @param SessionContext 来源上下文，用于透传用户请求信息，音画质重生完成回调将返回该字段值，最长 1000 个字符。
+     * Set <p>来源上下文，用于透传用户请求信息，音画质重生完成回调将返回该字段值，最长 1000 个字符。</p>
+     * @param SessionContext <p>来源上下文，用于透传用户请求信息，音画质重生完成回调将返回该字段值，最长 1000 个字符。</p>
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
     }
 
     /**
-     * Get 任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。 
-     * @return TasksPriority 任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
+     * Get <p>任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。</p> 
+     * @return TasksPriority <p>任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。</p>
      */
     public Long getTasksPriority() {
         return this.TasksPriority;
     }
 
     /**
-     * Set 任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
-     * @param TasksPriority 任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。
+     * Set <p>任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。</p>
+     * @param TasksPriority <p>任务的优先级，数值越大优先级越高，取值范围是 -10 到 10，不填代表 0。</p>
      */
     public void setTasksPriority(Long TasksPriority) {
         this.TasksPriority = TasksPriority;
     }
 
     /**
-     * Get 保留字段，特殊用途时使用。 
-     * @return ExtInfo 保留字段，特殊用途时使用。
+     * Get <p>保留字段，特殊用途时使用。</p> 
+     * @return ExtInfo <p>保留字段，特殊用途时使用。</p>
      */
     public String getExtInfo() {
         return this.ExtInfo;
     }
 
     /**
-     * Set 保留字段，特殊用途时使用。
-     * @param ExtInfo 保留字段，特殊用途时使用。
+     * Set <p>保留字段，特殊用途时使用。</p>
+     * @param ExtInfo <p>保留字段，特殊用途时使用。</p>
      */
     public void setExtInfo(String ExtInfo) {
         this.ExtInfo = ExtInfo;
@@ -220,6 +243,9 @@ public class ProcessImageAsyncRequest extends AbstractModel {
         }
         if (source.FileId != null) {
             this.FileId = new String(source.FileId);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
         }
         if (source.ImageTaskInput != null) {
             this.ImageTaskInput = new ProcessImageAsyncTaskInput(source.ImageTaskInput);
@@ -248,6 +274,7 @@ public class ProcessImageAsyncRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "FileId", this.FileId);
+        this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamObj(map, prefix + "ImageTaskInput.", this.ImageTaskInput);
         this.setParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);

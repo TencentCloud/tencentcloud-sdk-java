@@ -24,546 +24,466 @@ import java.util.HashMap;
 public class CreateReadOnlyDBInstanceRequest extends AbstractModel {
 
     /**
-    * 实例所属主可用区， 如：ap-guangzhou-3；
-可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
+    * <p>实例所属主可用区， 如：ap-guangzhou-3；<br>可用区信息可以通过调用 <a href="https://cloud.tencent.com/document/api/409/16769">DescribeZones</a> 接口的返回值中的Zone字段来获取。</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 只读实例的主实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+    * <p>只读实例的主实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
     */
     @SerializedName("MasterDBInstanceId")
     @Expose
     private String MasterDBInstanceId;
 
     /**
-    * 售卖规格码。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/api/409/89019)的返回值中的SpecCode字段来获取。
+    * <p>售卖规格码。该参数可以通过调用<a href="https://cloud.tencent.com/document/api/409/89019">DescribeClasses</a>的返回值中的SpecCode字段来获取。</p>
     */
     @SerializedName("SpecCode")
     @Expose
     private String SpecCode;
 
     /**
-    * 实例硬盘容量大小，单位：GB。该参数的设置步长为10。
+    * <p>实例硬盘容量大小，单位：GB。该参数的设置步长为10。</p>
     */
     @SerializedName("Storage")
     @Expose
     private Long Storage;
 
     /**
-    * 购买实例数量，取值范围：[1-6]。购买支持最大数量6个。
+    * <p>购买实例数量，取值范围：[1-6]。购买支持最大数量6个。</p>
     */
     @SerializedName("InstanceCount")
     @Expose
     private Long InstanceCount;
 
     /**
-    * 购买时长，单位：月。
-<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
-<li>后付费：只支持1</li>
+    * <p>购买时长，单位：月。</p><li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li><li>后付费：只支持1</li>
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * 私有网络ID，形如vpc-xxxxxxxx（该参数当前必传）。有效的VpcId可通过登录控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372) ，从接口返回中的unVpcId字段获取。
+    * <p>私有网络ID，形如vpc-xxxxxxxx（该参数当前必传）。有效的VpcId可通过登录控制台查询；也可以调用接口 <a href="https://cloud.tencent.com/document/api/215/1372">DescribeVpcEx</a> ，从接口返回中的unVpcId字段获取。</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 私有网络子网ID，形如subnet-xxxxxxxx（该参数当前必传）。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 [DescribeSubnets ](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的unSubnetId字段获取。
+    * <p>私有网络子网ID，形如subnet-xxxxxxxx（该参数当前必传）。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 <a href="https://cloud.tencent.com/document/api/215/15784">DescribeSubnets </a>，从接口返回中的unSubnetId字段获取。</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 实例计费类型，目前支持：
-<li>PREPAID：预付费，即包年包月。</li>
-<li>POSTPAID_BY_HOUR：后付费，即按量计费。</li>
-默认值：PREPAID。如果主实例为后付费，只读实例必须也为后付费。
+    * <p>实例计费类型，目前支持：</p><li>PREPAID：预付费，即包年包月。</li><li>POSTPAID_BY_HOUR：后付费，即按量计费。</li>默认值：PREPAID。如果主实例为后付费，只读实例必须也为后付费。
     */
     @SerializedName("InstanceChargeType")
     @Expose
     private String InstanceChargeType;
 
     /**
-    * 是否自动使用代金券：
-<li>0：否</li>
-<li>1：是</li>
-默认值：0
+    * <p>是否自动使用代金券：</p><li>0：否</li><li>1：是</li>默认值：0
     */
     @SerializedName("AutoVoucher")
     @Expose
     private Long AutoVoucher;
 
     /**
-    * 代金券ID列表，目前仅支持指定一张代金券。
+    * <p>代金券ID列表，目前仅支持指定一张代金券。</p>
     */
     @SerializedName("VoucherIds")
     @Expose
     private String [] VoucherIds;
 
     /**
-    * 续费标记：
-<li>0：手动续费</li>
-<li>1：自动续费</li>
-默认值：0
+    * <p>续费标记：</p><li>0：手动续费</li><li>1：自动续费</li>默认值：0
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-    * 项目ID。默认值为0，表示归属默认项目。
+    * <p>项目ID。默认值为0，表示归属默认项目。</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 优惠活动ID
+    * <p>优惠活动ID</p>
     */
     @SerializedName("ActivityId")
     @Expose
     private Long ActivityId;
 
     /**
-    * 只读组ID。
+    * <p>只读组ID。</p>
     */
     @SerializedName("ReadOnlyGroupId")
     @Expose
     private String ReadOnlyGroupId;
 
     /**
-    * 实例需要绑定的Tag信息，默认为空；可以通过调用 [DescribeTags](https://cloud.tencent.com/document/api/651/35316) 返回值中的 Tags 字段来获取。
+    * <p>实例需要绑定的Tag信息，默认为空；可以通过调用 <a href="https://cloud.tencent.com/document/api/651/35316">DescribeTags</a> 返回值中的 Tags 字段来获取。</p>
     */
     @SerializedName("TagList")
     @Expose
     private Tag TagList;
 
     /**
-    * 实例所属安全组，该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
-
+    * <p>实例所属安全组，该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。</p>
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-    * 是否需要支持Ipv6：
-<li>0：否</li>
-<li>1：是</li>
-默认值：0
+    * <p>是否需要支持Ipv6：</p><li>0：否</li><li>1：是</li>默认值：0
     */
     @SerializedName("NeedSupportIpv6")
     @Expose
     private Long NeedSupportIpv6;
 
     /**
-    * 实例名。仅支持长度小于60的中文/英文/数字/"_"/"-"
+    * <p>实例名。仅支持长度小于60的中文/英文/数字/&quot;_&quot;/&quot;-&quot;</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 不再需要指定，内核版本号与主实例保持一致
+    * <p>不再需要指定，内核版本号与主实例保持一致</p>
     */
     @SerializedName("DBVersion")
     @Expose
     private String DBVersion;
 
     /**
-    * 专属集群ID
+    * <p>专属集群ID</p>
     */
     @SerializedName("DedicatedClusterId")
     @Expose
     private String DedicatedClusterId;
 
     /**
-    * 实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。
+    * <p>实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。</p>
     */
     @SerializedName("DeletionProtection")
     @Expose
     private Boolean DeletionProtection;
 
     /**
-     * Get 实例所属主可用区， 如：ap-guangzhou-3；
-可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。 
-     * @return Zone 实例所属主可用区， 如：ap-guangzhou-3；
-可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
+     * Get <p>实例所属主可用区， 如：ap-guangzhou-3；<br>可用区信息可以通过调用 <a href="https://cloud.tencent.com/document/api/409/16769">DescribeZones</a> 接口的返回值中的Zone字段来获取。</p> 
+     * @return Zone <p>实例所属主可用区， 如：ap-guangzhou-3；<br>可用区信息可以通过调用 <a href="https://cloud.tencent.com/document/api/409/16769">DescribeZones</a> 接口的返回值中的Zone字段来获取。</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 实例所属主可用区， 如：ap-guangzhou-3；
-可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
-     * @param Zone 实例所属主可用区， 如：ap-guangzhou-3；
-可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
+     * Set <p>实例所属主可用区， 如：ap-guangzhou-3；<br>可用区信息可以通过调用 <a href="https://cloud.tencent.com/document/api/409/16769">DescribeZones</a> 接口的返回值中的Zone字段来获取。</p>
+     * @param Zone <p>实例所属主可用区， 如：ap-guangzhou-3；<br>可用区信息可以通过调用 <a href="https://cloud.tencent.com/document/api/409/16769">DescribeZones</a> 接口的返回值中的Zone字段来获取。</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 只读实例的主实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取 
-     * @return MasterDBInstanceId 只读实例的主实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * Get <p>只读实例的主实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p> 
+     * @return MasterDBInstanceId <p>只读实例的主实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
      */
     public String getMasterDBInstanceId() {
         return this.MasterDBInstanceId;
     }
 
     /**
-     * Set 只读实例的主实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
-     * @param MasterDBInstanceId 只读实例的主实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * Set <p>只读实例的主实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
+     * @param MasterDBInstanceId <p>只读实例的主实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
      */
     public void setMasterDBInstanceId(String MasterDBInstanceId) {
         this.MasterDBInstanceId = MasterDBInstanceId;
     }
 
     /**
-     * Get 售卖规格码。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/api/409/89019)的返回值中的SpecCode字段来获取。 
-     * @return SpecCode 售卖规格码。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/api/409/89019)的返回值中的SpecCode字段来获取。
+     * Get <p>售卖规格码。该参数可以通过调用<a href="https://cloud.tencent.com/document/api/409/89019">DescribeClasses</a>的返回值中的SpecCode字段来获取。</p> 
+     * @return SpecCode <p>售卖规格码。该参数可以通过调用<a href="https://cloud.tencent.com/document/api/409/89019">DescribeClasses</a>的返回值中的SpecCode字段来获取。</p>
      */
     public String getSpecCode() {
         return this.SpecCode;
     }
 
     /**
-     * Set 售卖规格码。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/api/409/89019)的返回值中的SpecCode字段来获取。
-     * @param SpecCode 售卖规格码。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/api/409/89019)的返回值中的SpecCode字段来获取。
+     * Set <p>售卖规格码。该参数可以通过调用<a href="https://cloud.tencent.com/document/api/409/89019">DescribeClasses</a>的返回值中的SpecCode字段来获取。</p>
+     * @param SpecCode <p>售卖规格码。该参数可以通过调用<a href="https://cloud.tencent.com/document/api/409/89019">DescribeClasses</a>的返回值中的SpecCode字段来获取。</p>
      */
     public void setSpecCode(String SpecCode) {
         this.SpecCode = SpecCode;
     }
 
     /**
-     * Get 实例硬盘容量大小，单位：GB。该参数的设置步长为10。 
-     * @return Storage 实例硬盘容量大小，单位：GB。该参数的设置步长为10。
+     * Get <p>实例硬盘容量大小，单位：GB。该参数的设置步长为10。</p> 
+     * @return Storage <p>实例硬盘容量大小，单位：GB。该参数的设置步长为10。</p>
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set 实例硬盘容量大小，单位：GB。该参数的设置步长为10。
-     * @param Storage 实例硬盘容量大小，单位：GB。该参数的设置步长为10。
+     * Set <p>实例硬盘容量大小，单位：GB。该参数的设置步长为10。</p>
+     * @param Storage <p>实例硬盘容量大小，单位：GB。该参数的设置步长为10。</p>
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
     }
 
     /**
-     * Get 购买实例数量，取值范围：[1-6]。购买支持最大数量6个。 
-     * @return InstanceCount 购买实例数量，取值范围：[1-6]。购买支持最大数量6个。
+     * Get <p>购买实例数量，取值范围：[1-6]。购买支持最大数量6个。</p> 
+     * @return InstanceCount <p>购买实例数量，取值范围：[1-6]。购买支持最大数量6个。</p>
      */
     public Long getInstanceCount() {
         return this.InstanceCount;
     }
 
     /**
-     * Set 购买实例数量，取值范围：[1-6]。购买支持最大数量6个。
-     * @param InstanceCount 购买实例数量，取值范围：[1-6]。购买支持最大数量6个。
+     * Set <p>购买实例数量，取值范围：[1-6]。购买支持最大数量6个。</p>
+     * @param InstanceCount <p>购买实例数量，取值范围：[1-6]。购买支持最大数量6个。</p>
      */
     public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;
     }
 
     /**
-     * Get 购买时长，单位：月。
-<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
-<li>后付费：只支持1</li> 
-     * @return Period 购买时长，单位：月。
-<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
-<li>后付费：只支持1</li>
+     * Get <p>购买时长，单位：月。</p><li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li><li>后付费：只支持1</li> 
+     * @return Period <p>购买时长，单位：月。</p><li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li><li>后付费：只支持1</li>
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 购买时长，单位：月。
-<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
-<li>后付费：只支持1</li>
-     * @param Period 购买时长，单位：月。
-<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
-<li>后付费：只支持1</li>
+     * Set <p>购买时长，单位：月。</p><li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li><li>后付费：只支持1</li>
+     * @param Period <p>购买时长，单位：月。</p><li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li><li>后付费：只支持1</li>
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 私有网络ID，形如vpc-xxxxxxxx（该参数当前必传）。有效的VpcId可通过登录控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372) ，从接口返回中的unVpcId字段获取。 
-     * @return VpcId 私有网络ID，形如vpc-xxxxxxxx（该参数当前必传）。有效的VpcId可通过登录控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372) ，从接口返回中的unVpcId字段获取。
+     * Get <p>私有网络ID，形如vpc-xxxxxxxx（该参数当前必传）。有效的VpcId可通过登录控制台查询；也可以调用接口 <a href="https://cloud.tencent.com/document/api/215/1372">DescribeVpcEx</a> ，从接口返回中的unVpcId字段获取。</p> 
+     * @return VpcId <p>私有网络ID，形如vpc-xxxxxxxx（该参数当前必传）。有效的VpcId可通过登录控制台查询；也可以调用接口 <a href="https://cloud.tencent.com/document/api/215/1372">DescribeVpcEx</a> ，从接口返回中的unVpcId字段获取。</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私有网络ID，形如vpc-xxxxxxxx（该参数当前必传）。有效的VpcId可通过登录控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372) ，从接口返回中的unVpcId字段获取。
-     * @param VpcId 私有网络ID，形如vpc-xxxxxxxx（该参数当前必传）。有效的VpcId可通过登录控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372) ，从接口返回中的unVpcId字段获取。
+     * Set <p>私有网络ID，形如vpc-xxxxxxxx（该参数当前必传）。有效的VpcId可通过登录控制台查询；也可以调用接口 <a href="https://cloud.tencent.com/document/api/215/1372">DescribeVpcEx</a> ，从接口返回中的unVpcId字段获取。</p>
+     * @param VpcId <p>私有网络ID，形如vpc-xxxxxxxx（该参数当前必传）。有效的VpcId可通过登录控制台查询；也可以调用接口 <a href="https://cloud.tencent.com/document/api/215/1372">DescribeVpcEx</a> ，从接口返回中的unVpcId字段获取。</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 私有网络子网ID，形如subnet-xxxxxxxx（该参数当前必传）。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 [DescribeSubnets ](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的unSubnetId字段获取。 
-     * @return SubnetId 私有网络子网ID，形如subnet-xxxxxxxx（该参数当前必传）。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 [DescribeSubnets ](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的unSubnetId字段获取。
+     * Get <p>私有网络子网ID，形如subnet-xxxxxxxx（该参数当前必传）。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 <a href="https://cloud.tencent.com/document/api/215/15784">DescribeSubnets </a>，从接口返回中的unSubnetId字段获取。</p> 
+     * @return SubnetId <p>私有网络子网ID，形如subnet-xxxxxxxx（该参数当前必传）。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 <a href="https://cloud.tencent.com/document/api/215/15784">DescribeSubnets </a>，从接口返回中的unSubnetId字段获取。</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 私有网络子网ID，形如subnet-xxxxxxxx（该参数当前必传）。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 [DescribeSubnets ](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的unSubnetId字段获取。
-     * @param SubnetId 私有网络子网ID，形如subnet-xxxxxxxx（该参数当前必传）。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 [DescribeSubnets ](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的unSubnetId字段获取。
+     * Set <p>私有网络子网ID，形如subnet-xxxxxxxx（该参数当前必传）。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 <a href="https://cloud.tencent.com/document/api/215/15784">DescribeSubnets </a>，从接口返回中的unSubnetId字段获取。</p>
+     * @param SubnetId <p>私有网络子网ID，形如subnet-xxxxxxxx（该参数当前必传）。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 <a href="https://cloud.tencent.com/document/api/215/15784">DescribeSubnets </a>，从接口返回中的unSubnetId字段获取。</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 实例计费类型，目前支持：
-<li>PREPAID：预付费，即包年包月。</li>
-<li>POSTPAID_BY_HOUR：后付费，即按量计费。</li>
-默认值：PREPAID。如果主实例为后付费，只读实例必须也为后付费。 
-     * @return InstanceChargeType 实例计费类型，目前支持：
-<li>PREPAID：预付费，即包年包月。</li>
-<li>POSTPAID_BY_HOUR：后付费，即按量计费。</li>
-默认值：PREPAID。如果主实例为后付费，只读实例必须也为后付费。
+     * Get <p>实例计费类型，目前支持：</p><li>PREPAID：预付费，即包年包月。</li><li>POSTPAID_BY_HOUR：后付费，即按量计费。</li>默认值：PREPAID。如果主实例为后付费，只读实例必须也为后付费。 
+     * @return InstanceChargeType <p>实例计费类型，目前支持：</p><li>PREPAID：预付费，即包年包月。</li><li>POSTPAID_BY_HOUR：后付费，即按量计费。</li>默认值：PREPAID。如果主实例为后付费，只读实例必须也为后付费。
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set 实例计费类型，目前支持：
-<li>PREPAID：预付费，即包年包月。</li>
-<li>POSTPAID_BY_HOUR：后付费，即按量计费。</li>
-默认值：PREPAID。如果主实例为后付费，只读实例必须也为后付费。
-     * @param InstanceChargeType 实例计费类型，目前支持：
-<li>PREPAID：预付费，即包年包月。</li>
-<li>POSTPAID_BY_HOUR：后付费，即按量计费。</li>
-默认值：PREPAID。如果主实例为后付费，只读实例必须也为后付费。
+     * Set <p>实例计费类型，目前支持：</p><li>PREPAID：预付费，即包年包月。</li><li>POSTPAID_BY_HOUR：后付费，即按量计费。</li>默认值：PREPAID。如果主实例为后付费，只读实例必须也为后付费。
+     * @param InstanceChargeType <p>实例计费类型，目前支持：</p><li>PREPAID：预付费，即包年包月。</li><li>POSTPAID_BY_HOUR：后付费，即按量计费。</li>默认值：PREPAID。如果主实例为后付费，只读实例必须也为后付费。
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
     }
 
     /**
-     * Get 是否自动使用代金券：
-<li>0：否</li>
-<li>1：是</li>
-默认值：0 
-     * @return AutoVoucher 是否自动使用代金券：
-<li>0：否</li>
-<li>1：是</li>
-默认值：0
+     * Get <p>是否自动使用代金券：</p><li>0：否</li><li>1：是</li>默认值：0 
+     * @return AutoVoucher <p>是否自动使用代金券：</p><li>0：否</li><li>1：是</li>默认值：0
      */
     public Long getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * Set 是否自动使用代金券：
-<li>0：否</li>
-<li>1：是</li>
-默认值：0
-     * @param AutoVoucher 是否自动使用代金券：
-<li>0：否</li>
-<li>1：是</li>
-默认值：0
+     * Set <p>是否自动使用代金券：</p><li>0：否</li><li>1：是</li>默认值：0
+     * @param AutoVoucher <p>是否自动使用代金券：</p><li>0：否</li><li>1：是</li>默认值：0
      */
     public void setAutoVoucher(Long AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
     }
 
     /**
-     * Get 代金券ID列表，目前仅支持指定一张代金券。 
-     * @return VoucherIds 代金券ID列表，目前仅支持指定一张代金券。
+     * Get <p>代金券ID列表，目前仅支持指定一张代金券。</p> 
+     * @return VoucherIds <p>代金券ID列表，目前仅支持指定一张代金券。</p>
      */
     public String [] getVoucherIds() {
         return this.VoucherIds;
     }
 
     /**
-     * Set 代金券ID列表，目前仅支持指定一张代金券。
-     * @param VoucherIds 代金券ID列表，目前仅支持指定一张代金券。
+     * Set <p>代金券ID列表，目前仅支持指定一张代金券。</p>
+     * @param VoucherIds <p>代金券ID列表，目前仅支持指定一张代金券。</p>
      */
     public void setVoucherIds(String [] VoucherIds) {
         this.VoucherIds = VoucherIds;
     }
 
     /**
-     * Get 续费标记：
-<li>0：手动续费</li>
-<li>1：自动续费</li>
-默认值：0 
-     * @return AutoRenewFlag 续费标记：
-<li>0：手动续费</li>
-<li>1：自动续费</li>
-默认值：0
+     * Get <p>续费标记：</p><li>0：手动续费</li><li>1：自动续费</li>默认值：0 
+     * @return AutoRenewFlag <p>续费标记：</p><li>0：手动续费</li><li>1：自动续费</li>默认值：0
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set 续费标记：
-<li>0：手动续费</li>
-<li>1：自动续费</li>
-默认值：0
-     * @param AutoRenewFlag 续费标记：
-<li>0：手动续费</li>
-<li>1：自动续费</li>
-默认值：0
+     * Set <p>续费标记：</p><li>0：手动续费</li><li>1：自动续费</li>默认值：0
+     * @param AutoRenewFlag <p>续费标记：</p><li>0：手动续费</li><li>1：自动续费</li>默认值：0
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get 项目ID。默认值为0，表示归属默认项目。 
-     * @return ProjectId 项目ID。默认值为0，表示归属默认项目。
+     * Get <p>项目ID。默认值为0，表示归属默认项目。</p> 
+     * @return ProjectId <p>项目ID。默认值为0，表示归属默认项目。</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID。默认值为0，表示归属默认项目。
-     * @param ProjectId 项目ID。默认值为0，表示归属默认项目。
+     * Set <p>项目ID。默认值为0，表示归属默认项目。</p>
+     * @param ProjectId <p>项目ID。默认值为0，表示归属默认项目。</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 优惠活动ID 
-     * @return ActivityId 优惠活动ID
+     * Get <p>优惠活动ID</p> 
+     * @return ActivityId <p>优惠活动ID</p>
      */
     public Long getActivityId() {
         return this.ActivityId;
     }
 
     /**
-     * Set 优惠活动ID
-     * @param ActivityId 优惠活动ID
+     * Set <p>优惠活动ID</p>
+     * @param ActivityId <p>优惠活动ID</p>
      */
     public void setActivityId(Long ActivityId) {
         this.ActivityId = ActivityId;
     }
 
     /**
-     * Get 只读组ID。 
-     * @return ReadOnlyGroupId 只读组ID。
+     * Get <p>只读组ID。</p> 
+     * @return ReadOnlyGroupId <p>只读组ID。</p>
      */
     public String getReadOnlyGroupId() {
         return this.ReadOnlyGroupId;
     }
 
     /**
-     * Set 只读组ID。
-     * @param ReadOnlyGroupId 只读组ID。
+     * Set <p>只读组ID。</p>
+     * @param ReadOnlyGroupId <p>只读组ID。</p>
      */
     public void setReadOnlyGroupId(String ReadOnlyGroupId) {
         this.ReadOnlyGroupId = ReadOnlyGroupId;
     }
 
     /**
-     * Get 实例需要绑定的Tag信息，默认为空；可以通过调用 [DescribeTags](https://cloud.tencent.com/document/api/651/35316) 返回值中的 Tags 字段来获取。 
-     * @return TagList 实例需要绑定的Tag信息，默认为空；可以通过调用 [DescribeTags](https://cloud.tencent.com/document/api/651/35316) 返回值中的 Tags 字段来获取。
+     * Get <p>实例需要绑定的Tag信息，默认为空；可以通过调用 <a href="https://cloud.tencent.com/document/api/651/35316">DescribeTags</a> 返回值中的 Tags 字段来获取。</p> 
+     * @return TagList <p>实例需要绑定的Tag信息，默认为空；可以通过调用 <a href="https://cloud.tencent.com/document/api/651/35316">DescribeTags</a> 返回值中的 Tags 字段来获取。</p>
      */
     public Tag getTagList() {
         return this.TagList;
     }
 
     /**
-     * Set 实例需要绑定的Tag信息，默认为空；可以通过调用 [DescribeTags](https://cloud.tencent.com/document/api/651/35316) 返回值中的 Tags 字段来获取。
-     * @param TagList 实例需要绑定的Tag信息，默认为空；可以通过调用 [DescribeTags](https://cloud.tencent.com/document/api/651/35316) 返回值中的 Tags 字段来获取。
+     * Set <p>实例需要绑定的Tag信息，默认为空；可以通过调用 <a href="https://cloud.tencent.com/document/api/651/35316">DescribeTags</a> 返回值中的 Tags 字段来获取。</p>
+     * @param TagList <p>实例需要绑定的Tag信息，默认为空；可以通过调用 <a href="https://cloud.tencent.com/document/api/651/35316">DescribeTags</a> 返回值中的 Tags 字段来获取。</p>
      */
     public void setTagList(Tag TagList) {
         this.TagList = TagList;
     }
 
     /**
-     * Get 实例所属安全组，该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
- 
-     * @return SecurityGroupIds 实例所属安全组，该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
-
+     * Get <p>实例所属安全组，该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。</p> 
+     * @return SecurityGroupIds <p>实例所属安全组，该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。</p>
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set 实例所属安全组，该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
-
-     * @param SecurityGroupIds 实例所属安全组，该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
-
+     * Set <p>实例所属安全组，该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。</p>
+     * @param SecurityGroupIds <p>实例所属安全组，该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。</p>
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
-     * Get 是否需要支持Ipv6：
-<li>0：否</li>
-<li>1：是</li>
-默认值：0 
-     * @return NeedSupportIpv6 是否需要支持Ipv6：
-<li>0：否</li>
-<li>1：是</li>
-默认值：0
+     * Get <p>是否需要支持Ipv6：</p><li>0：否</li><li>1：是</li>默认值：0 
+     * @return NeedSupportIpv6 <p>是否需要支持Ipv6：</p><li>0：否</li><li>1：是</li>默认值：0
      */
     public Long getNeedSupportIpv6() {
         return this.NeedSupportIpv6;
     }
 
     /**
-     * Set 是否需要支持Ipv6：
-<li>0：否</li>
-<li>1：是</li>
-默认值：0
-     * @param NeedSupportIpv6 是否需要支持Ipv6：
-<li>0：否</li>
-<li>1：是</li>
-默认值：0
+     * Set <p>是否需要支持Ipv6：</p><li>0：否</li><li>1：是</li>默认值：0
+     * @param NeedSupportIpv6 <p>是否需要支持Ipv6：</p><li>0：否</li><li>1：是</li>默认值：0
      */
     public void setNeedSupportIpv6(Long NeedSupportIpv6) {
         this.NeedSupportIpv6 = NeedSupportIpv6;
     }
 
     /**
-     * Get 实例名。仅支持长度小于60的中文/英文/数字/"_"/"-" 
-     * @return Name 实例名。仅支持长度小于60的中文/英文/数字/"_"/"-"
+     * Get <p>实例名。仅支持长度小于60的中文/英文/数字/&quot;_&quot;/&quot;-&quot;</p> 
+     * @return Name <p>实例名。仅支持长度小于60的中文/英文/数字/&quot;_&quot;/&quot;-&quot;</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 实例名。仅支持长度小于60的中文/英文/数字/"_"/"-"
-     * @param Name 实例名。仅支持长度小于60的中文/英文/数字/"_"/"-"
+     * Set <p>实例名。仅支持长度小于60的中文/英文/数字/&quot;_&quot;/&quot;-&quot;</p>
+     * @param Name <p>实例名。仅支持长度小于60的中文/英文/数字/&quot;_&quot;/&quot;-&quot;</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 不再需要指定，内核版本号与主实例保持一致 
-     * @return DBVersion 不再需要指定，内核版本号与主实例保持一致
+     * Get <p>不再需要指定，内核版本号与主实例保持一致</p> 
+     * @return DBVersion <p>不再需要指定，内核版本号与主实例保持一致</p>
      * @deprecated
      */
     @Deprecated
@@ -572,8 +492,8 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Set 不再需要指定，内核版本号与主实例保持一致
-     * @param DBVersion 不再需要指定，内核版本号与主实例保持一致
+     * Set <p>不再需要指定，内核版本号与主实例保持一致</p>
+     * @param DBVersion <p>不再需要指定，内核版本号与主实例保持一致</p>
      * @deprecated
      */
     @Deprecated
@@ -582,32 +502,32 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 专属集群ID 
-     * @return DedicatedClusterId 专属集群ID
+     * Get <p>专属集群ID</p> 
+     * @return DedicatedClusterId <p>专属集群ID</p>
      */
     public String getDedicatedClusterId() {
         return this.DedicatedClusterId;
     }
 
     /**
-     * Set 专属集群ID
-     * @param DedicatedClusterId 专属集群ID
+     * Set <p>专属集群ID</p>
+     * @param DedicatedClusterId <p>专属集群ID</p>
      */
     public void setDedicatedClusterId(String DedicatedClusterId) {
         this.DedicatedClusterId = DedicatedClusterId;
     }
 
     /**
-     * Get 实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。 
-     * @return DeletionProtection 实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。
+     * Get <p>实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。</p> 
+     * @return DeletionProtection <p>实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。</p>
      */
     public Boolean getDeletionProtection() {
         return this.DeletionProtection;
     }
 
     /**
-     * Set 实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。
-     * @param DeletionProtection 实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。
+     * Set <p>实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。</p>
+     * @param DeletionProtection <p>实例是否开启删除保护: true-开启删除保护；false-关闭删除保护。</p>
      */
     public void setDeletionProtection(Boolean DeletionProtection) {
         this.DeletionProtection = DeletionProtection;

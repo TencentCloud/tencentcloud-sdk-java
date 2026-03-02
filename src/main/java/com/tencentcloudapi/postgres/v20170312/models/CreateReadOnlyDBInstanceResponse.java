@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class CreateReadOnlyDBInstanceResponse extends AbstractModel {
 
     /**
-    * 订单号列表。每个实例对应一个订单号
+    * <p>订单号列表。每个实例对应一个订单号</p>
     */
     @SerializedName("DealNames")
     @Expose
     private String [] DealNames;
 
     /**
-    * 冻结流水号
+    * <p>冻结流水号</p>
     */
     @SerializedName("BillId")
     @Expose
     private String BillId;
 
     /**
-    * 创建成功的实例ID集合，只在后付费情景下有返回值
+    * <p>创建成功的实例ID集合，只在后付费情景下有返回值</p>
     */
     @SerializedName("DBInstanceIdSet")
     @Expose
     private String [] DBInstanceIdSet;
 
     /**
-    * 入参有BillingParameters值时，出参才有值，值为商品下单的参数。
+    * <p>入参有BillingParameters值时，出参才有值，值为商品下单的参数。</p>
     */
     @SerializedName("BillingParameters")
     @Expose
@@ -59,64 +59,64 @@ public class CreateReadOnlyDBInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 订单号列表。每个实例对应一个订单号 
-     * @return DealNames 订单号列表。每个实例对应一个订单号
+     * Get <p>订单号列表。每个实例对应一个订单号</p> 
+     * @return DealNames <p>订单号列表。每个实例对应一个订单号</p>
      */
     public String [] getDealNames() {
         return this.DealNames;
     }
 
     /**
-     * Set 订单号列表。每个实例对应一个订单号
-     * @param DealNames 订单号列表。每个实例对应一个订单号
+     * Set <p>订单号列表。每个实例对应一个订单号</p>
+     * @param DealNames <p>订单号列表。每个实例对应一个订单号</p>
      */
     public void setDealNames(String [] DealNames) {
         this.DealNames = DealNames;
     }
 
     /**
-     * Get 冻结流水号 
-     * @return BillId 冻结流水号
+     * Get <p>冻结流水号</p> 
+     * @return BillId <p>冻结流水号</p>
      */
     public String getBillId() {
         return this.BillId;
     }
 
     /**
-     * Set 冻结流水号
-     * @param BillId 冻结流水号
+     * Set <p>冻结流水号</p>
+     * @param BillId <p>冻结流水号</p>
      */
     public void setBillId(String BillId) {
         this.BillId = BillId;
     }
 
     /**
-     * Get 创建成功的实例ID集合，只在后付费情景下有返回值 
-     * @return DBInstanceIdSet 创建成功的实例ID集合，只在后付费情景下有返回值
+     * Get <p>创建成功的实例ID集合，只在后付费情景下有返回值</p> 
+     * @return DBInstanceIdSet <p>创建成功的实例ID集合，只在后付费情景下有返回值</p>
      */
     public String [] getDBInstanceIdSet() {
         return this.DBInstanceIdSet;
     }
 
     /**
-     * Set 创建成功的实例ID集合，只在后付费情景下有返回值
-     * @param DBInstanceIdSet 创建成功的实例ID集合，只在后付费情景下有返回值
+     * Set <p>创建成功的实例ID集合，只在后付费情景下有返回值</p>
+     * @param DBInstanceIdSet <p>创建成功的实例ID集合，只在后付费情景下有返回值</p>
      */
     public void setDBInstanceIdSet(String [] DBInstanceIdSet) {
         this.DBInstanceIdSet = DBInstanceIdSet;
     }
 
     /**
-     * Get 入参有BillingParameters值时，出参才有值，值为商品下单的参数。 
-     * @return BillingParameters 入参有BillingParameters值时，出参才有值，值为商品下单的参数。
+     * Get <p>入参有BillingParameters值时，出参才有值，值为商品下单的参数。</p> 
+     * @return BillingParameters <p>入参有BillingParameters值时，出参才有值，值为商品下单的参数。</p>
      */
     public String getBillingParameters() {
         return this.BillingParameters;
     }
 
     /**
-     * Set 入参有BillingParameters值时，出参才有值，值为商品下单的参数。
-     * @param BillingParameters 入参有BillingParameters值时，出参才有值，值为商品下单的参数。
+     * Set <p>入参有BillingParameters值时，出参才有值，值为商品下单的参数。</p>
+     * @param BillingParameters <p>入参有BillingParameters值时，出参才有值，值为商品下单的参数。</p>
      */
     public void setBillingParameters(String BillingParameters) {
         this.BillingParameters = BillingParameters;
