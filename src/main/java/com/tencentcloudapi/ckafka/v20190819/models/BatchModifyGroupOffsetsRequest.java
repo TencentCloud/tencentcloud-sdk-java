@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class BatchModifyGroupOffsetsRequest extends AbstractModel {
 
     /**
-    * 消费分组名称
+    * <p>消费分组名称</p>
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-    * ckafka集群实例Id
+    * <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * partition信息
+    * <p>partition信息</p>
     */
     @SerializedName("Partitions")
     @Expose
     private Partitions [] Partitions;
 
     /**
-    * 指定topic，默认所有topic
+    * <p>指定topic，默认所有topic</p>
     */
     @SerializedName("TopicName")
     @Expose
     private String [] TopicName;
 
     /**
-     * Get 消费分组名称 
-     * @return GroupName 消费分组名称
+     * Get <p>消费分组名称</p> 
+     * @return GroupName <p>消费分组名称</p>
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set 消费分组名称
-     * @param GroupName 消费分组名称
+     * Set <p>消费分组名称</p>
+     * @param GroupName <p>消费分组名称</p>
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get ckafka集群实例Id 
-     * @return InstanceId ckafka集群实例Id
+     * Get <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p> 
+     * @return InstanceId <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ckafka集群实例Id
-     * @param InstanceId ckafka集群实例Id
+     * Set <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
+     * @param InstanceId <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get partition信息 
-     * @return Partitions partition信息
+     * Get <p>partition信息</p> 
+     * @return Partitions <p>partition信息</p>
      */
     public Partitions [] getPartitions() {
         return this.Partitions;
     }
 
     /**
-     * Set partition信息
-     * @param Partitions partition信息
+     * Set <p>partition信息</p>
+     * @param Partitions <p>partition信息</p>
      */
     public void setPartitions(Partitions [] Partitions) {
         this.Partitions = Partitions;
     }
 
     /**
-     * Get 指定topic，默认所有topic 
-     * @return TopicName 指定topic，默认所有topic
+     * Get <p>指定topic，默认所有topic</p> 
+     * @return TopicName <p>指定topic，默认所有topic</p>
      */
     public String [] getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set 指定topic，默认所有topic
-     * @param TopicName 指定topic，默认所有topic
+     * Set <p>指定topic，默认所有topic</p>
+     * @param TopicName <p>指定topic，默认所有topic</p>
      */
     public void setTopicName(String [] TopicName) {
         this.TopicName = TopicName;

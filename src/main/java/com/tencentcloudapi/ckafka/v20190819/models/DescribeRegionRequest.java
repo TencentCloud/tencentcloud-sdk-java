@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribeRegionRequest extends AbstractModel {
 
     /**
-    * 偏移量
+    * <p>偏移量</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回最大结果数
+    * <p>返回最大结果数</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 业务字段，可忽略
+    * <p>业务字段，可忽略</p><p>枚举值：</p><ul><li>ckafka： ckafka业务</li><li>cmq： cmq业务</li></ul><p>默认值：ckafka</p>
     */
     @SerializedName("Business")
     @Expose
     private String Business;
 
     /**
-    * cdc专有集群业务字段，可忽略
+    * <p>cdc专有集群业务字段，可忽略</p>
     */
     @SerializedName("CdcId")
     @Expose
     private String CdcId;
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get <p>偏移量</p> 
+     * @return Offset <p>偏移量</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set <p>偏移量</p>
+     * @param Offset <p>偏移量</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回最大结果数 
-     * @return Limit 返回最大结果数
+     * Get <p>返回最大结果数</p> 
+     * @return Limit <p>返回最大结果数</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回最大结果数
-     * @param Limit 返回最大结果数
+     * Set <p>返回最大结果数</p>
+     * @param Limit <p>返回最大结果数</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 业务字段，可忽略 
-     * @return Business 业务字段，可忽略
+     * Get <p>业务字段，可忽略</p><p>枚举值：</p><ul><li>ckafka： ckafka业务</li><li>cmq： cmq业务</li></ul><p>默认值：ckafka</p> 
+     * @return Business <p>业务字段，可忽略</p><p>枚举值：</p><ul><li>ckafka： ckafka业务</li><li>cmq： cmq业务</li></ul><p>默认值：ckafka</p>
      */
     public String getBusiness() {
         return this.Business;
     }
 
     /**
-     * Set 业务字段，可忽略
-     * @param Business 业务字段，可忽略
+     * Set <p>业务字段，可忽略</p><p>枚举值：</p><ul><li>ckafka： ckafka业务</li><li>cmq： cmq业务</li></ul><p>默认值：ckafka</p>
+     * @param Business <p>业务字段，可忽略</p><p>枚举值：</p><ul><li>ckafka： ckafka业务</li><li>cmq： cmq业务</li></ul><p>默认值：ckafka</p>
      */
     public void setBusiness(String Business) {
         this.Business = Business;
     }
 
     /**
-     * Get cdc专有集群业务字段，可忽略 
-     * @return CdcId cdc专有集群业务字段，可忽略
+     * Get <p>cdc专有集群业务字段，可忽略</p> 
+     * @return CdcId <p>cdc专有集群业务字段，可忽略</p>
      */
     public String getCdcId() {
         return this.CdcId;
     }
 
     /**
-     * Set cdc专有集群业务字段，可忽略
-     * @param CdcId cdc专有集群业务字段，可忽略
+     * Set <p>cdc专有集群业务字段，可忽略</p>
+     * @param CdcId <p>cdc专有集群业务字段，可忽略</p>
      */
     public void setCdcId(String CdcId) {
         this.CdcId = CdcId;

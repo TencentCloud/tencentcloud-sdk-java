@@ -24,212 +24,207 @@ import java.util.HashMap;
 public class ModifyMigrationJobRequest extends AbstractModel {
 
     /**
-    * 任务id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
-
+    * <p>任务id，可通过<a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a>接口获取。</p>
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-    * 运行模式，取值如：immediate(表示立即运行)、timed(表示定时运行)
+    * <p>运行模式，取值如：immediate(表示立即运行)、timed(表示定时运行)</p>
     */
     @SerializedName("RunMode")
     @Expose
     private String RunMode;
 
     /**
-    * 迁移任务配置选项，描述任务如何执行迁移等一系列配置信息；字段下的RateLimitOption不可配置、如果需要修改任务的限速信息、请在任务运行后通过ModifyMigrateRateLimit接口修改
+    * <p>迁移任务配置选项，描述任务如何执行迁移等一系列配置信息；字段下的RateLimitOption不可配置、如果需要修改任务的限速信息、请在任务运行后通过ModifyMigrateRateLimit接口修改</p>
     */
     @SerializedName("MigrateOption")
     @Expose
     private MigrateOption MigrateOption;
 
     /**
-    * 源实例信息
+    * <p>源实例信息</p>
     */
     @SerializedName("SrcInfo")
     @Expose
     private DBEndpointInfo SrcInfo;
 
     /**
-    * 目标实例信息
+    * <p>目标实例信息</p>
     */
     @SerializedName("DstInfo")
     @Expose
     private DBEndpointInfo DstInfo;
 
     /**
-    * 迁移任务名称，最大长度128
+    * <p>迁移任务名称，最大长度128</p>
     */
     @SerializedName("JobName")
     @Expose
     private String JobName;
 
     /**
-    * 期待启动时间，当RunMode取值为timed时，此值必填，形如："2006-01-02 15:04:05"
+    * <p>期待启动时间，当RunMode取值为timed时，此值必填，形如：&quot;2006-01-02 15:04:05&quot;</p>
     */
     @SerializedName("ExpectRunTime")
     @Expose
     private String ExpectRunTime;
 
     /**
-    * 标签信息
+    * <p>标签信息</p>
     */
     @SerializedName("Tags")
     @Expose
     private TagItem [] Tags;
 
     /**
-    * 自动重试的时间段、可设置5至720分钟、0表示不重试
+    * <p>自动重试的时间段、可设置5至720分钟、0表示不重试</p>
     */
     @SerializedName("AutoRetryTimeRangeMinutes")
     @Expose
     private Long AutoRetryTimeRangeMinutes;
 
     /**
-     * Get 任务id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
- 
-     * @return JobId 任务id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
-
+     * Get <p>任务id，可通过<a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a>接口获取。</p> 
+     * @return JobId <p>任务id，可通过<a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a>接口获取。</p>
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 任务id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
-
-     * @param JobId 任务id，可通过[DescribeMigrationJobs](https://cloud.tencent.com/document/product/571/82084)接口获取。
-
+     * Set <p>任务id，可通过<a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a>接口获取。</p>
+     * @param JobId <p>任务id，可通过<a href="https://cloud.tencent.com/document/product/571/82084">DescribeMigrationJobs</a>接口获取。</p>
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get 运行模式，取值如：immediate(表示立即运行)、timed(表示定时运行) 
-     * @return RunMode 运行模式，取值如：immediate(表示立即运行)、timed(表示定时运行)
+     * Get <p>运行模式，取值如：immediate(表示立即运行)、timed(表示定时运行)</p> 
+     * @return RunMode <p>运行模式，取值如：immediate(表示立即运行)、timed(表示定时运行)</p>
      */
     public String getRunMode() {
         return this.RunMode;
     }
 
     /**
-     * Set 运行模式，取值如：immediate(表示立即运行)、timed(表示定时运行)
-     * @param RunMode 运行模式，取值如：immediate(表示立即运行)、timed(表示定时运行)
+     * Set <p>运行模式，取值如：immediate(表示立即运行)、timed(表示定时运行)</p>
+     * @param RunMode <p>运行模式，取值如：immediate(表示立即运行)、timed(表示定时运行)</p>
      */
     public void setRunMode(String RunMode) {
         this.RunMode = RunMode;
     }
 
     /**
-     * Get 迁移任务配置选项，描述任务如何执行迁移等一系列配置信息；字段下的RateLimitOption不可配置、如果需要修改任务的限速信息、请在任务运行后通过ModifyMigrateRateLimit接口修改 
-     * @return MigrateOption 迁移任务配置选项，描述任务如何执行迁移等一系列配置信息；字段下的RateLimitOption不可配置、如果需要修改任务的限速信息、请在任务运行后通过ModifyMigrateRateLimit接口修改
+     * Get <p>迁移任务配置选项，描述任务如何执行迁移等一系列配置信息；字段下的RateLimitOption不可配置、如果需要修改任务的限速信息、请在任务运行后通过ModifyMigrateRateLimit接口修改</p> 
+     * @return MigrateOption <p>迁移任务配置选项，描述任务如何执行迁移等一系列配置信息；字段下的RateLimitOption不可配置、如果需要修改任务的限速信息、请在任务运行后通过ModifyMigrateRateLimit接口修改</p>
      */
     public MigrateOption getMigrateOption() {
         return this.MigrateOption;
     }
 
     /**
-     * Set 迁移任务配置选项，描述任务如何执行迁移等一系列配置信息；字段下的RateLimitOption不可配置、如果需要修改任务的限速信息、请在任务运行后通过ModifyMigrateRateLimit接口修改
-     * @param MigrateOption 迁移任务配置选项，描述任务如何执行迁移等一系列配置信息；字段下的RateLimitOption不可配置、如果需要修改任务的限速信息、请在任务运行后通过ModifyMigrateRateLimit接口修改
+     * Set <p>迁移任务配置选项，描述任务如何执行迁移等一系列配置信息；字段下的RateLimitOption不可配置、如果需要修改任务的限速信息、请在任务运行后通过ModifyMigrateRateLimit接口修改</p>
+     * @param MigrateOption <p>迁移任务配置选项，描述任务如何执行迁移等一系列配置信息；字段下的RateLimitOption不可配置、如果需要修改任务的限速信息、请在任务运行后通过ModifyMigrateRateLimit接口修改</p>
      */
     public void setMigrateOption(MigrateOption MigrateOption) {
         this.MigrateOption = MigrateOption;
     }
 
     /**
-     * Get 源实例信息 
-     * @return SrcInfo 源实例信息
+     * Get <p>源实例信息</p> 
+     * @return SrcInfo <p>源实例信息</p>
      */
     public DBEndpointInfo getSrcInfo() {
         return this.SrcInfo;
     }
 
     /**
-     * Set 源实例信息
-     * @param SrcInfo 源实例信息
+     * Set <p>源实例信息</p>
+     * @param SrcInfo <p>源实例信息</p>
      */
     public void setSrcInfo(DBEndpointInfo SrcInfo) {
         this.SrcInfo = SrcInfo;
     }
 
     /**
-     * Get 目标实例信息 
-     * @return DstInfo 目标实例信息
+     * Get <p>目标实例信息</p> 
+     * @return DstInfo <p>目标实例信息</p>
      */
     public DBEndpointInfo getDstInfo() {
         return this.DstInfo;
     }
 
     /**
-     * Set 目标实例信息
-     * @param DstInfo 目标实例信息
+     * Set <p>目标实例信息</p>
+     * @param DstInfo <p>目标实例信息</p>
      */
     public void setDstInfo(DBEndpointInfo DstInfo) {
         this.DstInfo = DstInfo;
     }
 
     /**
-     * Get 迁移任务名称，最大长度128 
-     * @return JobName 迁移任务名称，最大长度128
+     * Get <p>迁移任务名称，最大长度128</p> 
+     * @return JobName <p>迁移任务名称，最大长度128</p>
      */
     public String getJobName() {
         return this.JobName;
     }
 
     /**
-     * Set 迁移任务名称，最大长度128
-     * @param JobName 迁移任务名称，最大长度128
+     * Set <p>迁移任务名称，最大长度128</p>
+     * @param JobName <p>迁移任务名称，最大长度128</p>
      */
     public void setJobName(String JobName) {
         this.JobName = JobName;
     }
 
     /**
-     * Get 期待启动时间，当RunMode取值为timed时，此值必填，形如："2006-01-02 15:04:05" 
-     * @return ExpectRunTime 期待启动时间，当RunMode取值为timed时，此值必填，形如："2006-01-02 15:04:05"
+     * Get <p>期待启动时间，当RunMode取值为timed时，此值必填，形如：&quot;2006-01-02 15:04:05&quot;</p> 
+     * @return ExpectRunTime <p>期待启动时间，当RunMode取值为timed时，此值必填，形如：&quot;2006-01-02 15:04:05&quot;</p>
      */
     public String getExpectRunTime() {
         return this.ExpectRunTime;
     }
 
     /**
-     * Set 期待启动时间，当RunMode取值为timed时，此值必填，形如："2006-01-02 15:04:05"
-     * @param ExpectRunTime 期待启动时间，当RunMode取值为timed时，此值必填，形如："2006-01-02 15:04:05"
+     * Set <p>期待启动时间，当RunMode取值为timed时，此值必填，形如：&quot;2006-01-02 15:04:05&quot;</p>
+     * @param ExpectRunTime <p>期待启动时间，当RunMode取值为timed时，此值必填，形如：&quot;2006-01-02 15:04:05&quot;</p>
      */
     public void setExpectRunTime(String ExpectRunTime) {
         this.ExpectRunTime = ExpectRunTime;
     }
 
     /**
-     * Get 标签信息 
-     * @return Tags 标签信息
+     * Get <p>标签信息</p> 
+     * @return Tags <p>标签信息</p>
      */
     public TagItem [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签信息
-     * @param Tags 标签信息
+     * Set <p>标签信息</p>
+     * @param Tags <p>标签信息</p>
      */
     public void setTags(TagItem [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 自动重试的时间段、可设置5至720分钟、0表示不重试 
-     * @return AutoRetryTimeRangeMinutes 自动重试的时间段、可设置5至720分钟、0表示不重试
+     * Get <p>自动重试的时间段、可设置5至720分钟、0表示不重试</p> 
+     * @return AutoRetryTimeRangeMinutes <p>自动重试的时间段、可设置5至720分钟、0表示不重试</p>
      */
     public Long getAutoRetryTimeRangeMinutes() {
         return this.AutoRetryTimeRangeMinutes;
     }
 
     /**
-     * Set 自动重试的时间段、可设置5至720分钟、0表示不重试
-     * @param AutoRetryTimeRangeMinutes 自动重试的时间段、可设置5至720分钟、0表示不重试
+     * Set <p>自动重试的时间段、可设置5至720分钟、0表示不重试</p>
+     * @param AutoRetryTimeRangeMinutes <p>自动重试的时间段、可设置5至720分钟、0表示不重试</p>
      */
     public void setAutoRetryTimeRangeMinutes(Long AutoRetryTimeRangeMinutes) {
         this.AutoRetryTimeRangeMinutes = AutoRetryTimeRangeMinutes;

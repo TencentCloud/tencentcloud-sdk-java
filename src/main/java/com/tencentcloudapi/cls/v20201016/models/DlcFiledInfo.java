@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DlcFiledInfo extends AbstractModel {
 
     /**
-    * cls日志中的字段名
+    * <p>cls日志中的字段名</p>
     */
     @SerializedName("ClsField")
     @Expose
     private String ClsField;
 
     /**
-    * 数据湖计算服务表的列名
+    * <p>数据湖计算服务表的列名</p>
     */
     @SerializedName("DlcField")
     @Expose
     private String DlcField;
 
     /**
-    * 数据湖计算服务字段类型
+    * <p>数据湖计算服务字段类型</p><p>枚举值：</p><ul><li>int|string|struct等： 参考 <a href="https://cloud.tencent.com/document/product/1342/53778#Column">DLC  cloumn中的Type 定义 </a></li></ul>
     */
     @SerializedName("DlcFieldType")
     @Expose
     private String DlcFieldType;
 
     /**
-    * 解析失败填充字段
+    * <p>解析失败填充字段</p>
     */
     @SerializedName("FillField")
     @Expose
     private String FillField;
 
     /**
-    * 是否禁用
+    * <p>是否禁用</p>
     */
     @SerializedName("Disable")
     @Expose
     private Boolean Disable;
 
     /**
-     * Get cls日志中的字段名 
-     * @return ClsField cls日志中的字段名
+     * Get <p>cls日志中的字段名</p> 
+     * @return ClsField <p>cls日志中的字段名</p>
      */
     public String getClsField() {
         return this.ClsField;
     }
 
     /**
-     * Set cls日志中的字段名
-     * @param ClsField cls日志中的字段名
+     * Set <p>cls日志中的字段名</p>
+     * @param ClsField <p>cls日志中的字段名</p>
      */
     public void setClsField(String ClsField) {
         this.ClsField = ClsField;
     }
 
     /**
-     * Get 数据湖计算服务表的列名 
-     * @return DlcField 数据湖计算服务表的列名
+     * Get <p>数据湖计算服务表的列名</p> 
+     * @return DlcField <p>数据湖计算服务表的列名</p>
      */
     public String getDlcField() {
         return this.DlcField;
     }
 
     /**
-     * Set 数据湖计算服务表的列名
-     * @param DlcField 数据湖计算服务表的列名
+     * Set <p>数据湖计算服务表的列名</p>
+     * @param DlcField <p>数据湖计算服务表的列名</p>
      */
     public void setDlcField(String DlcField) {
         this.DlcField = DlcField;
     }
 
     /**
-     * Get 数据湖计算服务字段类型 
-     * @return DlcFieldType 数据湖计算服务字段类型
+     * Get <p>数据湖计算服务字段类型</p><p>枚举值：</p><ul><li>int|string|struct等： 参考 <a href="https://cloud.tencent.com/document/product/1342/53778#Column">DLC  cloumn中的Type 定义 </a></li></ul> 
+     * @return DlcFieldType <p>数据湖计算服务字段类型</p><p>枚举值：</p><ul><li>int|string|struct等： 参考 <a href="https://cloud.tencent.com/document/product/1342/53778#Column">DLC  cloumn中的Type 定义 </a></li></ul>
      */
     public String getDlcFieldType() {
         return this.DlcFieldType;
     }
 
     /**
-     * Set 数据湖计算服务字段类型
-     * @param DlcFieldType 数据湖计算服务字段类型
+     * Set <p>数据湖计算服务字段类型</p><p>枚举值：</p><ul><li>int|string|struct等： 参考 <a href="https://cloud.tencent.com/document/product/1342/53778#Column">DLC  cloumn中的Type 定义 </a></li></ul>
+     * @param DlcFieldType <p>数据湖计算服务字段类型</p><p>枚举值：</p><ul><li>int|string|struct等： 参考 <a href="https://cloud.tencent.com/document/product/1342/53778#Column">DLC  cloumn中的Type 定义 </a></li></ul>
      */
     public void setDlcFieldType(String DlcFieldType) {
         this.DlcFieldType = DlcFieldType;
     }
 
     /**
-     * Get 解析失败填充字段 
-     * @return FillField 解析失败填充字段
+     * Get <p>解析失败填充字段</p> 
+     * @return FillField <p>解析失败填充字段</p>
      */
     public String getFillField() {
         return this.FillField;
     }
 
     /**
-     * Set 解析失败填充字段
-     * @param FillField 解析失败填充字段
+     * Set <p>解析失败填充字段</p>
+     * @param FillField <p>解析失败填充字段</p>
      */
     public void setFillField(String FillField) {
         this.FillField = FillField;
     }
 
     /**
-     * Get 是否禁用 
-     * @return Disable 是否禁用
+     * Get <p>是否禁用</p> 
+     * @return Disable <p>是否禁用</p>
      */
     public Boolean getDisable() {
         return this.Disable;
     }
 
     /**
-     * Set 是否禁用
-     * @param Disable 是否禁用
+     * Set <p>是否禁用</p>
+     * @param Disable <p>是否禁用</p>
      */
     public void setDisable(Boolean Disable) {
         this.Disable = Disable;

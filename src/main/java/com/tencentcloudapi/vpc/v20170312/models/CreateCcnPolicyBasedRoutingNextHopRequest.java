@@ -73,7 +73,7 @@ public class CreateCcnPolicyBasedRoutingNextHopRequest extends AbstractModel {
     private String Description;
 
     /**
-    * 下一跳资源类型[HAVIP, GWLB_ENDPOINT]]
+    * 下一跳资源类型[HAVIP, GWLB_ENDPOINT]
     */
     @SerializedName("NextHopResourceType")
     @Expose
@@ -199,16 +199,16 @@ public class CreateCcnPolicyBasedRoutingNextHopRequest extends AbstractModel {
     }
 
     /**
-     * Get 下一跳资源类型[HAVIP, GWLB_ENDPOINT]] 
-     * @return NextHopResourceType 下一跳资源类型[HAVIP, GWLB_ENDPOINT]]
+     * Get 下一跳资源类型[HAVIP, GWLB_ENDPOINT] 
+     * @return NextHopResourceType 下一跳资源类型[HAVIP, GWLB_ENDPOINT]
      */
     public String getNextHopResourceType() {
         return this.NextHopResourceType;
     }
 
     /**
-     * Set 下一跳资源类型[HAVIP, GWLB_ENDPOINT]]
-     * @param NextHopResourceType 下一跳资源类型[HAVIP, GWLB_ENDPOINT]]
+     * Set 下一跳资源类型[HAVIP, GWLB_ENDPOINT]
+     * @param NextHopResourceType 下一跳资源类型[HAVIP, GWLB_ENDPOINT]
      */
     public void setNextHopResourceType(String NextHopResourceType) {
         this.NextHopResourceType = NextHopResourceType;

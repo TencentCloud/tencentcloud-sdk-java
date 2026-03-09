@@ -115,6 +115,13 @@ public class CreateVpnGatewaySslServerRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
+    * DNS Server 地址
+    */
+    @SerializedName("DnsServers")
+    @Expose
+    private DnsServers DnsServers;
+
+    /**
      * Get VPN网关实例ID。 
      * @return VpnGatewayId VPN网关实例ID。
      */
@@ -322,6 +329,22 @@ public class CreateVpnGatewaySslServerRequest extends AbstractModel {
         this.Tags = Tags;
     }
 
+    /**
+     * Get DNS Server 地址 
+     * @return DnsServers DNS Server 地址
+     */
+    public DnsServers getDnsServers() {
+        return this.DnsServers;
+    }
+
+    /**
+     * Set DNS Server 地址
+     * @param DnsServers DNS Server 地址
+     */
+    public void setDnsServers(DnsServers DnsServers) {
+        this.DnsServers = DnsServers;
+    }
+
     public CreateVpnGatewaySslServerRequest() {
     }
 
@@ -375,6 +398,9 @@ public class CreateVpnGatewaySslServerRequest extends AbstractModel {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.DnsServers != null) {
+            this.DnsServers = new DnsServers(source.DnsServers);
+        }
     }
 
 
@@ -395,6 +421,7 @@ public class CreateVpnGatewaySslServerRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AccessPolicyEnabled", this.AccessPolicyEnabled);
         this.setParamSimple(map, prefix + "SamlData", this.SamlData);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamObj(map, prefix + "DnsServers.", this.DnsServers);
 
     }
 }

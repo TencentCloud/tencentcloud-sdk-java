@@ -50,7 +50,9 @@ public class WavClient extends AbstractClient{
     }
 
     /**
-     *该接口用户设置标签库, 每个企业最多可配置3000个企业标签。
+     *产品已EOL
+
+该接口用户设置标签库, 每个企业最多可配置3000个企业标签。
      * @param req CreateCorpTagRequest
      * @return CreateCorpTagResponse
      * @throws TencentCloudSDKException

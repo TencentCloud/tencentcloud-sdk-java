@@ -24,189 +24,184 @@ import java.util.HashMap;
 public class ClusterOption extends AbstractModel {
 
     /**
-    * 计算集群可用区。
+    * <p>计算集群可用区。</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 计算集群类型，取值范围：
-- KUBERNETES
+    * <p>计算集群类型，取值范围：</p><ul><li>KUBERNETES</li></ul>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 计算集群Service CIDR，不能与VPC网段重合。
+    * <p>计算集群Service CIDR，不能与VPC网段重合。</p>
     */
     @SerializedName("ServiceCidr")
     @Expose
     private String ServiceCidr;
 
     /**
-    * 资源配额。
+    * <p>资源配额。</p>
     */
     @SerializedName("ResourceQuota")
     @Expose
     private ResourceQuota ResourceQuota;
 
     /**
-    * 限制范围。
+    * <p>限制范围。</p>
     */
     @SerializedName("LimitRange")
     @Expose
     private LimitRange LimitRange;
 
     /**
-    * 系统节点池实例规格。
+    * <p>系统节点池实例规格。详情参见<a href="https://cloud.tencent.com/document/product/213/11518">实例规格</a>描述</p>
     */
     @SerializedName("SystemNodeInstanceType")
     @Expose
     private String SystemNodeInstanceType;
 
     /**
-    * 系统节点池实例数量。
+    * <p>系统节点池实例数量。</p>
     */
     @SerializedName("SystemNodeCount")
     @Expose
     private Long SystemNodeCount;
 
     /**
-    * 纳管环境自动升配
+    * <p>纳管环境自动升配</p>
     */
     @SerializedName("AutoUpgradeClusterLevel")
     @Expose
     private Boolean AutoUpgradeClusterLevel;
 
     /**
-     * Get 计算集群可用区。 
-     * @return Zone 计算集群可用区。
+     * Get <p>计算集群可用区。</p> 
+     * @return Zone <p>计算集群可用区。</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 计算集群可用区。
-     * @param Zone 计算集群可用区。
+     * Set <p>计算集群可用区。</p>
+     * @param Zone <p>计算集群可用区。</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 计算集群类型，取值范围：
-- KUBERNETES 
-     * @return Type 计算集群类型，取值范围：
-- KUBERNETES
+     * Get <p>计算集群类型，取值范围：</p><ul><li>KUBERNETES</li></ul> 
+     * @return Type <p>计算集群类型，取值范围：</p><ul><li>KUBERNETES</li></ul>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 计算集群类型，取值范围：
-- KUBERNETES
-     * @param Type 计算集群类型，取值范围：
-- KUBERNETES
+     * Set <p>计算集群类型，取值范围：</p><ul><li>KUBERNETES</li></ul>
+     * @param Type <p>计算集群类型，取值范围：</p><ul><li>KUBERNETES</li></ul>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 计算集群Service CIDR，不能与VPC网段重合。 
-     * @return ServiceCidr 计算集群Service CIDR，不能与VPC网段重合。
+     * Get <p>计算集群Service CIDR，不能与VPC网段重合。</p> 
+     * @return ServiceCidr <p>计算集群Service CIDR，不能与VPC网段重合。</p>
      */
     public String getServiceCidr() {
         return this.ServiceCidr;
     }
 
     /**
-     * Set 计算集群Service CIDR，不能与VPC网段重合。
-     * @param ServiceCidr 计算集群Service CIDR，不能与VPC网段重合。
+     * Set <p>计算集群Service CIDR，不能与VPC网段重合。</p>
+     * @param ServiceCidr <p>计算集群Service CIDR，不能与VPC网段重合。</p>
      */
     public void setServiceCidr(String ServiceCidr) {
         this.ServiceCidr = ServiceCidr;
     }
 
     /**
-     * Get 资源配额。 
-     * @return ResourceQuota 资源配额。
+     * Get <p>资源配额。</p> 
+     * @return ResourceQuota <p>资源配额。</p>
      */
     public ResourceQuota getResourceQuota() {
         return this.ResourceQuota;
     }
 
     /**
-     * Set 资源配额。
-     * @param ResourceQuota 资源配额。
+     * Set <p>资源配额。</p>
+     * @param ResourceQuota <p>资源配额。</p>
      */
     public void setResourceQuota(ResourceQuota ResourceQuota) {
         this.ResourceQuota = ResourceQuota;
     }
 
     /**
-     * Get 限制范围。 
-     * @return LimitRange 限制范围。
+     * Get <p>限制范围。</p> 
+     * @return LimitRange <p>限制范围。</p>
      */
     public LimitRange getLimitRange() {
         return this.LimitRange;
     }
 
     /**
-     * Set 限制范围。
-     * @param LimitRange 限制范围。
+     * Set <p>限制范围。</p>
+     * @param LimitRange <p>限制范围。</p>
      */
     public void setLimitRange(LimitRange LimitRange) {
         this.LimitRange = LimitRange;
     }
 
     /**
-     * Get 系统节点池实例规格。 
-     * @return SystemNodeInstanceType 系统节点池实例规格。
+     * Get <p>系统节点池实例规格。详情参见<a href="https://cloud.tencent.com/document/product/213/11518">实例规格</a>描述</p> 
+     * @return SystemNodeInstanceType <p>系统节点池实例规格。详情参见<a href="https://cloud.tencent.com/document/product/213/11518">实例规格</a>描述</p>
      */
     public String getSystemNodeInstanceType() {
         return this.SystemNodeInstanceType;
     }
 
     /**
-     * Set 系统节点池实例规格。
-     * @param SystemNodeInstanceType 系统节点池实例规格。
+     * Set <p>系统节点池实例规格。详情参见<a href="https://cloud.tencent.com/document/product/213/11518">实例规格</a>描述</p>
+     * @param SystemNodeInstanceType <p>系统节点池实例规格。详情参见<a href="https://cloud.tencent.com/document/product/213/11518">实例规格</a>描述</p>
      */
     public void setSystemNodeInstanceType(String SystemNodeInstanceType) {
         this.SystemNodeInstanceType = SystemNodeInstanceType;
     }
 
     /**
-     * Get 系统节点池实例数量。 
-     * @return SystemNodeCount 系统节点池实例数量。
+     * Get <p>系统节点池实例数量。</p> 
+     * @return SystemNodeCount <p>系统节点池实例数量。</p>
      */
     public Long getSystemNodeCount() {
         return this.SystemNodeCount;
     }
 
     /**
-     * Set 系统节点池实例数量。
-     * @param SystemNodeCount 系统节点池实例数量。
+     * Set <p>系统节点池实例数量。</p>
+     * @param SystemNodeCount <p>系统节点池实例数量。</p>
      */
     public void setSystemNodeCount(Long SystemNodeCount) {
         this.SystemNodeCount = SystemNodeCount;
     }
 
     /**
-     * Get 纳管环境自动升配 
-     * @return AutoUpgradeClusterLevel 纳管环境自动升配
+     * Get <p>纳管环境自动升配</p> 
+     * @return AutoUpgradeClusterLevel <p>纳管环境自动升配</p>
      */
     public Boolean getAutoUpgradeClusterLevel() {
         return this.AutoUpgradeClusterLevel;
     }
 
     /**
-     * Set 纳管环境自动升配
-     * @param AutoUpgradeClusterLevel 纳管环境自动升配
+     * Set <p>纳管环境自动升配</p>
+     * @param AutoUpgradeClusterLevel <p>纳管环境自动升配</p>
      */
     public void setAutoUpgradeClusterLevel(Boolean AutoUpgradeClusterLevel) {
         this.AutoUpgradeClusterLevel = AutoUpgradeClusterLevel;

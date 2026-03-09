@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class GetTotalRequestStatisticsResponse extends AbstractModel {
 
     /**
-    * 查询后数据块
+    * <p>查询后数据块</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
@@ -32,14 +32,14 @@ public class GetTotalRequestStatisticsResponse extends AbstractModel {
     private CaptchaStatisticObj Data;
 
     /**
-    * 验证码返回码
+    * <p>验证码返回码</p>
     */
     @SerializedName("CaptchaCode")
     @Expose
     private Long CaptchaCode;
 
     /**
-    * 验证码返回信息
+    * <p>验证码返回信息</p>
     */
     @SerializedName("CaptchaMsg")
     @Expose
@@ -53,9 +53,9 @@ public class GetTotalRequestStatisticsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 查询后数据块
+     * Get <p>查询后数据块</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 查询后数据块
+     * @return Data <p>查询后数据块</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CaptchaStatisticObj getData() {
@@ -63,9 +63,9 @@ public class GetTotalRequestStatisticsResponse extends AbstractModel {
     }
 
     /**
-     * Set 查询后数据块
+     * Set <p>查询后数据块</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 查询后数据块
+     * @param Data <p>查询后数据块</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(CaptchaStatisticObj Data) {
@@ -73,32 +73,32 @@ public class GetTotalRequestStatisticsResponse extends AbstractModel {
     }
 
     /**
-     * Get 验证码返回码 
-     * @return CaptchaCode 验证码返回码
+     * Get <p>验证码返回码</p> 
+     * @return CaptchaCode <p>验证码返回码</p>
      */
     public Long getCaptchaCode() {
         return this.CaptchaCode;
     }
 
     /**
-     * Set 验证码返回码
-     * @param CaptchaCode 验证码返回码
+     * Set <p>验证码返回码</p>
+     * @param CaptchaCode <p>验证码返回码</p>
      */
     public void setCaptchaCode(Long CaptchaCode) {
         this.CaptchaCode = CaptchaCode;
     }
 
     /**
-     * Get 验证码返回信息 
-     * @return CaptchaMsg 验证码返回信息
+     * Get <p>验证码返回信息</p> 
+     * @return CaptchaMsg <p>验证码返回信息</p>
      */
     public String getCaptchaMsg() {
         return this.CaptchaMsg;
     }
 
     /**
-     * Set 验证码返回信息
-     * @param CaptchaMsg 验证码返回信息
+     * Set <p>验证码返回信息</p>
+     * @param CaptchaMsg <p>验证码返回信息</p>
      */
     public void setCaptchaMsg(String CaptchaMsg) {
         this.CaptchaMsg = CaptchaMsg;

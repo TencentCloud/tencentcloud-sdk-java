@@ -1,0 +1,187 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.tcb.v20180608.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class ModifySafeRuleRequest extends AbstractModel {
+
+    /**
+    * 环境ID
+    */
+    @SerializedName("EnvId")
+    @Expose
+    private String EnvId;
+
+    /**
+    * 集合名称
+    */
+    @SerializedName("CollectionName")
+    @Expose
+    private String CollectionName;
+
+    /**
+    * 权限标签。包含以下取值：
+<li> READONLY：所有用户可读，仅创建者和管理员可写</li>
+<li> PRIVATE：仅创建者及管理员可读写</li>
+<li> ADMINWRITE：所有用户可读，仅管理员可写</li>
+<li> ADMINONLY：仅管理员可读写</li>
+<li> CUSTOM：自定义安全规则</li>
+    */
+    @SerializedName("AclTag")
+    @Expose
+    private String AclTag;
+
+    /**
+    * 安全规则内容。
+当 AclTag=CUSTOM 时，此参数必填。
+详情参考：[文档型数据库安全规则](https://docs.cloudbase.net/database/security-rules)
+    */
+    @SerializedName("Rule")
+    @Expose
+    private String Rule;
+
+    /**
+     * Get 环境ID 
+     * @return EnvId 环境ID
+     */
+    public String getEnvId() {
+        return this.EnvId;
+    }
+
+    /**
+     * Set 环境ID
+     * @param EnvId 环境ID
+     */
+    public void setEnvId(String EnvId) {
+        this.EnvId = EnvId;
+    }
+
+    /**
+     * Get 集合名称 
+     * @return CollectionName 集合名称
+     */
+    public String getCollectionName() {
+        return this.CollectionName;
+    }
+
+    /**
+     * Set 集合名称
+     * @param CollectionName 集合名称
+     */
+    public void setCollectionName(String CollectionName) {
+        this.CollectionName = CollectionName;
+    }
+
+    /**
+     * Get 权限标签。包含以下取值：
+<li> READONLY：所有用户可读，仅创建者和管理员可写</li>
+<li> PRIVATE：仅创建者及管理员可读写</li>
+<li> ADMINWRITE：所有用户可读，仅管理员可写</li>
+<li> ADMINONLY：仅管理员可读写</li>
+<li> CUSTOM：自定义安全规则</li> 
+     * @return AclTag 权限标签。包含以下取值：
+<li> READONLY：所有用户可读，仅创建者和管理员可写</li>
+<li> PRIVATE：仅创建者及管理员可读写</li>
+<li> ADMINWRITE：所有用户可读，仅管理员可写</li>
+<li> ADMINONLY：仅管理员可读写</li>
+<li> CUSTOM：自定义安全规则</li>
+     */
+    public String getAclTag() {
+        return this.AclTag;
+    }
+
+    /**
+     * Set 权限标签。包含以下取值：
+<li> READONLY：所有用户可读，仅创建者和管理员可写</li>
+<li> PRIVATE：仅创建者及管理员可读写</li>
+<li> ADMINWRITE：所有用户可读，仅管理员可写</li>
+<li> ADMINONLY：仅管理员可读写</li>
+<li> CUSTOM：自定义安全规则</li>
+     * @param AclTag 权限标签。包含以下取值：
+<li> READONLY：所有用户可读，仅创建者和管理员可写</li>
+<li> PRIVATE：仅创建者及管理员可读写</li>
+<li> ADMINWRITE：所有用户可读，仅管理员可写</li>
+<li> ADMINONLY：仅管理员可读写</li>
+<li> CUSTOM：自定义安全规则</li>
+     */
+    public void setAclTag(String AclTag) {
+        this.AclTag = AclTag;
+    }
+
+    /**
+     * Get 安全规则内容。
+当 AclTag=CUSTOM 时，此参数必填。
+详情参考：[文档型数据库安全规则](https://docs.cloudbase.net/database/security-rules) 
+     * @return Rule 安全规则内容。
+当 AclTag=CUSTOM 时，此参数必填。
+详情参考：[文档型数据库安全规则](https://docs.cloudbase.net/database/security-rules)
+     */
+    public String getRule() {
+        return this.Rule;
+    }
+
+    /**
+     * Set 安全规则内容。
+当 AclTag=CUSTOM 时，此参数必填。
+详情参考：[文档型数据库安全规则](https://docs.cloudbase.net/database/security-rules)
+     * @param Rule 安全规则内容。
+当 AclTag=CUSTOM 时，此参数必填。
+详情参考：[文档型数据库安全规则](https://docs.cloudbase.net/database/security-rules)
+     */
+    public void setRule(String Rule) {
+        this.Rule = Rule;
+    }
+
+    public ModifySafeRuleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifySafeRuleRequest(ModifySafeRuleRequest source) {
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
+        if (source.CollectionName != null) {
+            this.CollectionName = new String(source.CollectionName);
+        }
+        if (source.AclTag != null) {
+            this.AclTag = new String(source.AclTag);
+        }
+        if (source.Rule != null) {
+            this.Rule = new String(source.Rule);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "EnvId", this.EnvId);
+        this.setParamSimple(map, prefix + "CollectionName", this.CollectionName);
+        this.setParamSimple(map, prefix + "AclTag", this.AclTag);
+        this.setParamSimple(map, prefix + "Rule", this.Rule);
+
+    }
+}
+

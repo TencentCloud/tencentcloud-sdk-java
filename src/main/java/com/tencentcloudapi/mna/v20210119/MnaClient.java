@@ -50,6 +50,17 @@ public class MnaClient extends AbstractClient{
     }
 
     /**
+     *新建应用
+     * @param req AddApplicationRequest
+     * @return AddApplicationResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddApplicationResponse AddApplication(AddApplicationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddApplication", AddApplicationResponse.class);
+    }
+
+    /**
      *新建设备记录
      * @param req AddDeviceRequest
      * @return AddDeviceResponse
@@ -105,6 +116,17 @@ public class MnaClient extends AbstractClient{
     }
 
     /**
+     *删除应用
+     * @param req DeleteApplicationRequest
+     * @return DeleteApplicationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteApplicationResponse DeleteApplication(DeleteApplicationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteApplication", DeleteApplicationResponse.class);
+    }
+
+    /**
      *删除设备信息
      * @param req DeleteDeviceRequest
      * @return DeleteDeviceResponse
@@ -157,6 +179,17 @@ public class MnaClient extends AbstractClient{
     public GetActiveDeviceCountResponse GetActiveDeviceCount(GetActiveDeviceCountRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetActiveDeviceCount", GetActiveDeviceCountResponse.class);
+    }
+
+    /**
+     *应用查询
+     * @param req GetApplicationRequest
+     * @return GetApplicationResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetApplicationResponse GetApplication(GetApplicationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetApplication", GetApplicationResponse.class);
     }
 
     /**
@@ -476,6 +509,28 @@ public class MnaClient extends AbstractClient{
     public SetNotifyUrlResponse SetNotifyUrl(SetNotifyUrlRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SetNotifyUrl", SetNotifyUrlResponse.class);
+    }
+
+    /**
+     *更新应用信息
+     * @param req UpdateApplicationInfoRequest
+     * @return UpdateApplicationInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateApplicationInfoResponse UpdateApplicationInfo(UpdateApplicationInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateApplicationInfo", UpdateApplicationInfoResponse.class);
+    }
+
+    /**
+     *更新应用密钥
+     * @param req UpdateApplicationKeyRequest
+     * @return UpdateApplicationKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateApplicationKeyResponse UpdateApplicationKey(UpdateApplicationKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateApplicationKey", UpdateApplicationKeyResponse.class);
     }
 
     /**

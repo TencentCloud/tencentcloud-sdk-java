@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class TieringDetailInfo extends AbstractModel {
 
     /**
-    * 低频存储容量
+    * <p>低频存储容量</p><p>单位：Byte, B, 字节</p>
     */
     @SerializedName("TieringSizeInBytes")
     @Expose
     private Long TieringSizeInBytes;
 
     /**
-    * 冷存储容量
+    * <p>冷存储容量</p><p>单位：Byte, B, 字节</p>
     */
     @SerializedName("SecondaryTieringSizeInBytes")
     @Expose
     private Long SecondaryTieringSizeInBytes;
 
     /**
-     * Get 低频存储容量 
-     * @return TieringSizeInBytes 低频存储容量
+     * Get <p>低频存储容量</p><p>单位：Byte, B, 字节</p> 
+     * @return TieringSizeInBytes <p>低频存储容量</p><p>单位：Byte, B, 字节</p>
      */
     public Long getTieringSizeInBytes() {
         return this.TieringSizeInBytes;
     }
 
     /**
-     * Set 低频存储容量
-     * @param TieringSizeInBytes 低频存储容量
+     * Set <p>低频存储容量</p><p>单位：Byte, B, 字节</p>
+     * @param TieringSizeInBytes <p>低频存储容量</p><p>单位：Byte, B, 字节</p>
      */
     public void setTieringSizeInBytes(Long TieringSizeInBytes) {
         this.TieringSizeInBytes = TieringSizeInBytes;
     }
 
     /**
-     * Get 冷存储容量 
-     * @return SecondaryTieringSizeInBytes 冷存储容量
+     * Get <p>冷存储容量</p><p>单位：Byte, B, 字节</p> 
+     * @return SecondaryTieringSizeInBytes <p>冷存储容量</p><p>单位：Byte, B, 字节</p>
      */
     public Long getSecondaryTieringSizeInBytes() {
         return this.SecondaryTieringSizeInBytes;
     }
 
     /**
-     * Set 冷存储容量
-     * @param SecondaryTieringSizeInBytes 冷存储容量
+     * Set <p>冷存储容量</p><p>单位：Byte, B, 字节</p>
+     * @param SecondaryTieringSizeInBytes <p>冷存储容量</p><p>单位：Byte, B, 字节</p>
      */
     public void setSecondaryTieringSizeInBytes(Long SecondaryTieringSizeInBytes) {
         this.SecondaryTieringSizeInBytes = SecondaryTieringSizeInBytes;

@@ -78,6 +78,13 @@ region：地域(ap-gaungzhou)
     private Long Sequence;
 
     /**
+    * 规则生效范围，SG安全组，LH轻量服务器
+    */
+    @SerializedName("Scope")
+    @Expose
+    private String Scope;
+
+    /**
      * Get 访问源示例：
 net：IP/CIDR(192.168.0.2)
 template：参数模板(ipm-dyodhpby)
@@ -221,6 +228,22 @@ region：地域(ap-gaungzhou)
         this.Sequence = Sequence;
     }
 
+    /**
+     * Get 规则生效范围，SG安全组，LH轻量服务器 
+     * @return Scope 规则生效范围，SG安全组，LH轻量服务器
+     */
+    public String getScope() {
+        return this.Scope;
+    }
+
+    /**
+     * Set 规则生效范围，SG安全组，LH轻量服务器
+     * @param Scope 规则生效范围，SG安全组，LH轻量服务器
+     */
+    public void setScope(String Scope) {
+        this.Scope = Scope;
+    }
+
     public SecurityGroupSimplifyRule() {
     }
 
@@ -247,6 +270,9 @@ region：地域(ap-gaungzhou)
         if (source.Sequence != null) {
             this.Sequence = new Long(source.Sequence);
         }
+        if (source.Scope != null) {
+            this.Scope = new String(source.Scope);
+        }
     }
 
 
@@ -260,6 +286,7 @@ region：地域(ap-gaungzhou)
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "RuleUuid", this.RuleUuid);
         this.setParamSimple(map, prefix + "Sequence", this.Sequence);
+        this.setParamSimple(map, prefix + "Scope", this.Scope);
 
     }
 }

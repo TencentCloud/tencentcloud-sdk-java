@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribeSessionDetailRequest extends AbstractModel {
 
     /**
-    * 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+    * <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-    * 通话的 session id
+    * <p>通话的 session id</p>
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * 起始时间戳，Unix 秒级时间戳，最大支持近180天。
+    * <p>起始时间戳，Unix 秒级时间戳，最大支持近180天。</p>
     */
     @SerializedName("StartTimestamp")
     @Expose
     private Long StartTimestamp;
 
     /**
-    * 结束时间戳，Unix 秒级时间戳，结束时间与开始时间的区间范围小于90天。
+    * <p>结束时间戳，Unix 秒级时间戳，结束时间与开始时间的区间范围小于90天。</p>
     */
     @SerializedName("EndTimestamp")
     @Expose
     private Long EndTimestamp;
 
     /**
-     * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
-     * @return SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+     * Get <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p> 
+     * @return SdkAppId <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
-     * @param SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+     * Set <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
+     * @param SdkAppId <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get 通话的 session id 
-     * @return SessionId 通话的 session id
+     * Get <p>通话的 session id</p> 
+     * @return SessionId <p>通话的 session id</p>
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 通话的 session id
-     * @param SessionId 通话的 session id
+     * Set <p>通话的 session id</p>
+     * @param SessionId <p>通话的 session id</p>
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get 起始时间戳，Unix 秒级时间戳，最大支持近180天。 
-     * @return StartTimestamp 起始时间戳，Unix 秒级时间戳，最大支持近180天。
+     * Get <p>起始时间戳，Unix 秒级时间戳，最大支持近180天。</p> 
+     * @return StartTimestamp <p>起始时间戳，Unix 秒级时间戳，最大支持近180天。</p>
      */
     public Long getStartTimestamp() {
         return this.StartTimestamp;
     }
 
     /**
-     * Set 起始时间戳，Unix 秒级时间戳，最大支持近180天。
-     * @param StartTimestamp 起始时间戳，Unix 秒级时间戳，最大支持近180天。
+     * Set <p>起始时间戳，Unix 秒级时间戳，最大支持近180天。</p>
+     * @param StartTimestamp <p>起始时间戳，Unix 秒级时间戳，最大支持近180天。</p>
      */
     public void setStartTimestamp(Long StartTimestamp) {
         this.StartTimestamp = StartTimestamp;
     }
 
     /**
-     * Get 结束时间戳，Unix 秒级时间戳，结束时间与开始时间的区间范围小于90天。 
-     * @return EndTimestamp 结束时间戳，Unix 秒级时间戳，结束时间与开始时间的区间范围小于90天。
+     * Get <p>结束时间戳，Unix 秒级时间戳，结束时间与开始时间的区间范围小于90天。</p> 
+     * @return EndTimestamp <p>结束时间戳，Unix 秒级时间戳，结束时间与开始时间的区间范围小于90天。</p>
      */
     public Long getEndTimestamp() {
         return this.EndTimestamp;
     }
 
     /**
-     * Set 结束时间戳，Unix 秒级时间戳，结束时间与开始时间的区间范围小于90天。
-     * @param EndTimestamp 结束时间戳，Unix 秒级时间戳，结束时间与开始时间的区间范围小于90天。
+     * Set <p>结束时间戳，Unix 秒级时间戳，结束时间与开始时间的区间范围小于90天。</p>
+     * @param EndTimestamp <p>结束时间戳，Unix 秒级时间戳，结束时间与开始时间的区间范围小于90天。</p>
      */
     public void setEndTimestamp(Long EndTimestamp) {
         this.EndTimestamp = EndTimestamp;

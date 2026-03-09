@@ -25,6 +25,12 @@ public class ExtendScene extends AbstractModel {
 
     /**
     * 印章来源类型
+印章来源类型包括下面几种：
+<ul>
+<li>CREATE-客户上传图片创建</li>
+<li>GENERATE-系统模版印章生成</li>
+<li>SIST_SEAL-深圳电子印章</li>
+</ul>
     */
     @SerializedName("GenerateType")
     @Expose
@@ -32,6 +38,7 @@ public class ExtendScene extends AbstractModel {
 
     /**
     * 印章来源类型描述
+
     */
     @SerializedName("GenerateTypeDesc")
     @Expose
@@ -45,8 +52,20 @@ public class ExtendScene extends AbstractModel {
     private String GenerateTypeLogo;
 
     /**
-     * Get 印章来源类型 
+     * Get 印章来源类型
+印章来源类型包括下面几种：
+<ul>
+<li>CREATE-客户上传图片创建</li>
+<li>GENERATE-系统模版印章生成</li>
+<li>SIST_SEAL-深圳电子印章</li>
+</ul> 
      * @return GenerateType 印章来源类型
+印章来源类型包括下面几种：
+<ul>
+<li>CREATE-客户上传图片创建</li>
+<li>GENERATE-系统模版印章生成</li>
+<li>SIST_SEAL-深圳电子印章</li>
+</ul>
      */
     public String getGenerateType() {
         return this.GenerateType;
@@ -54,15 +73,29 @@ public class ExtendScene extends AbstractModel {
 
     /**
      * Set 印章来源类型
+印章来源类型包括下面几种：
+<ul>
+<li>CREATE-客户上传图片创建</li>
+<li>GENERATE-系统模版印章生成</li>
+<li>SIST_SEAL-深圳电子印章</li>
+</ul>
      * @param GenerateType 印章来源类型
+印章来源类型包括下面几种：
+<ul>
+<li>CREATE-客户上传图片创建</li>
+<li>GENERATE-系统模版印章生成</li>
+<li>SIST_SEAL-深圳电子印章</li>
+</ul>
      */
     public void setGenerateType(String GenerateType) {
         this.GenerateType = GenerateType;
     }
 
     /**
-     * Get 印章来源类型描述 
+     * Get 印章来源类型描述
+ 
      * @return GenerateTypeDesc 印章来源类型描述
+
      */
     public String getGenerateTypeDesc() {
         return this.GenerateTypeDesc;
@@ -70,7 +103,9 @@ public class ExtendScene extends AbstractModel {
 
     /**
      * Set 印章来源类型描述
+
      * @param GenerateTypeDesc 印章来源类型描述
+
      */
     public void setGenerateTypeDesc(String GenerateTypeDesc) {
         this.GenerateTypeDesc = GenerateTypeDesc;

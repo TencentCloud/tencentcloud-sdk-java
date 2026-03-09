@@ -45,84 +45,84 @@ public class ModifyCasterRequest extends AbstractModel {
     private String Description;
 
     /**
-    * <p>录制模板id。默认为0。当使用直播录制功能时，可将使用的录制模版填入。该接口仅保存字段，不涉及任何录制功能。</p>
+    * <p>录制模板id。默认为0。当使用直播录制功能时，可将使用的录制模板填入。该接口仅保存字段，不涉及任何录制功能。</p>
     */
     @SerializedName("RecordTemplateId")
     @Expose
     private Long RecordTemplateId;
 
     /**
-    * <p>录制状态，当调用录制接口后，可通过该字段保存录制状态。0：未录制 1：录制中该接口仅保存字段，不涉及任何录制处理。</p>
+    * <p>录制状态，当调用录制接口后，可通过该字段保存录制状态。<br>0：未录制<br>1：录制中<br>该接口仅保存字段，不涉及任何录制处理。</p>
     */
     @SerializedName("RecordStatus")
     @Expose
     private Long RecordStatus;
 
     /**
-    * <p>导播台的过期时间戳。值为-1或unix时间戳。默认值为-1。 当值为-1时，表示该导播台永不过期。 当值为正常unix时间戳时，导播台将在该时间过期。导播台过期后，预监与主监画面将自动停止，转推自动停止。 点播、直播url将停止转拉，推流url需自行停止推流。</p>
+    * <p>导播台的过期时间戳。值为-1或unix时间戳。<br>默认值为-1。<br>当值为-1时，表示该导播台永不过期。<br>当值为正常unix时间戳时，导播台将在该时间过期。<br>导播台过期后，预监与主监画面将自动停止，转推自动停止。<br>点播、直播url将停止转拉，推流url需自行停止推流。</p>
     */
     @SerializedName("ExpireTime")
     @Expose
     private Long ExpireTime;
 
     /**
-    * <p>导播台延时播放时间，单位为秒。 默认为0，最大支持300秒</p>
+    * <p>导播台延时播放时间，单位为秒。<br>默认为0，最大支持300秒</p>
     */
     @SerializedName("DelayTime")
     @Expose
     private Long DelayTime;
 
     /**
-    * <p>导播台转场类型。 默认为空。 允许使用通过DescribeCasterTransitionTypes接口中查询到的转场类型。</p>
+    * <p>导播台转场类型。<br>默认为空。<br>允许使用通过DescribeCasterTransitionTypes接口中查询到的转场类型。</p>
     */
     @SerializedName("TransitionType")
     @Expose
     private String TransitionType;
 
     /**
-    * <p>导播台主监输出的宽度，单位为像素。 默认为1280，最大允许4096。</p>
+    * <p>导播台主监输出的宽度，单位为像素。<br>默认为1280，最大允许4096。</p>
     */
     @SerializedName("PgmWidth")
     @Expose
     private Long PgmWidth;
 
     /**
-    * <p>导播台主监输出的高度，单位为像素。 默认为720，最大允许2160。</p>
+    * <p>导播台主监输出的高度，单位为像素。<br>默认为720，最大允许2160。</p>
     */
     @SerializedName("PgmHeight")
     @Expose
     private Long PgmHeight;
 
     /**
-    * <p>导播台主监输出的帧率。 默认为0，表示随源输出。 最大支持60。</p>
+    * <p>导播台主监输出的帧率。<br>默认为0，表示随源输出。 最大支持60。</p>
     */
     @SerializedName("PgmFps")
     @Expose
     private Long PgmFps;
 
     /**
-    * <p>导播台主监输出的码率，单位为kbps。 默认为0，表示随源的码率输出。 最大允许10000kbps。</p>
+    * <p>导播台主监输出的码率，单位为kbps。<br>默认为0，表示随源的码率输出。<br>最大允许10000kbps。</p>
     */
     @SerializedName("PgmBitRate")
     @Expose
     private Long PgmBitRate;
 
     /**
-    * <p>导播台的计费类型。 0 通用型 1 播单型。 注： 本参数暂无作用。</p>
+    * <p>导播台的计费类型。<br>0 通用型<br>1 播单型。<br>注： 本参数暂无作用。</p>
     */
     @SerializedName("FeeType")
     @Expose
     private Long FeeType;
 
     /**
-    * <p>录制接口返回的taskid注：该接口只做字段保存，不涉及录制操作。</p>
+    * <p>录制接口返回的taskid<br>注：该接口只做字段保存，不涉及录制操作。</p>
     */
     @SerializedName("RecordTaskId")
     @Expose
     private String RecordTaskId;
 
     /**
-    * <p>导播台主监输出的音频码率，单位为kbps。 可选项：[0, 128, 192, 256] 默认值为0，表示随源的音频码率输出。</p>
+    * <p>导播台主监输出的音频码率，单位为kbps。<br>可选项：[0, 128, 192, 256]<br>默认值为0，表示随源的音频码率输出。</p>
     */
     @SerializedName("PgmAudioBitRate")
     @Expose
@@ -177,192 +177,192 @@ public class ModifyCasterRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>录制模板id。默认为0。当使用直播录制功能时，可将使用的录制模版填入。该接口仅保存字段，不涉及任何录制功能。</p> 
-     * @return RecordTemplateId <p>录制模板id。默认为0。当使用直播录制功能时，可将使用的录制模版填入。该接口仅保存字段，不涉及任何录制功能。</p>
+     * Get <p>录制模板id。默认为0。当使用直播录制功能时，可将使用的录制模板填入。该接口仅保存字段，不涉及任何录制功能。</p> 
+     * @return RecordTemplateId <p>录制模板id。默认为0。当使用直播录制功能时，可将使用的录制模板填入。该接口仅保存字段，不涉及任何录制功能。</p>
      */
     public Long getRecordTemplateId() {
         return this.RecordTemplateId;
     }
 
     /**
-     * Set <p>录制模板id。默认为0。当使用直播录制功能时，可将使用的录制模版填入。该接口仅保存字段，不涉及任何录制功能。</p>
-     * @param RecordTemplateId <p>录制模板id。默认为0。当使用直播录制功能时，可将使用的录制模版填入。该接口仅保存字段，不涉及任何录制功能。</p>
+     * Set <p>录制模板id。默认为0。当使用直播录制功能时，可将使用的录制模板填入。该接口仅保存字段，不涉及任何录制功能。</p>
+     * @param RecordTemplateId <p>录制模板id。默认为0。当使用直播录制功能时，可将使用的录制模板填入。该接口仅保存字段，不涉及任何录制功能。</p>
      */
     public void setRecordTemplateId(Long RecordTemplateId) {
         this.RecordTemplateId = RecordTemplateId;
     }
 
     /**
-     * Get <p>录制状态，当调用录制接口后，可通过该字段保存录制状态。0：未录制 1：录制中该接口仅保存字段，不涉及任何录制处理。</p> 
-     * @return RecordStatus <p>录制状态，当调用录制接口后，可通过该字段保存录制状态。0：未录制 1：录制中该接口仅保存字段，不涉及任何录制处理。</p>
+     * Get <p>录制状态，当调用录制接口后，可通过该字段保存录制状态。<br>0：未录制<br>1：录制中<br>该接口仅保存字段，不涉及任何录制处理。</p> 
+     * @return RecordStatus <p>录制状态，当调用录制接口后，可通过该字段保存录制状态。<br>0：未录制<br>1：录制中<br>该接口仅保存字段，不涉及任何录制处理。</p>
      */
     public Long getRecordStatus() {
         return this.RecordStatus;
     }
 
     /**
-     * Set <p>录制状态，当调用录制接口后，可通过该字段保存录制状态。0：未录制 1：录制中该接口仅保存字段，不涉及任何录制处理。</p>
-     * @param RecordStatus <p>录制状态，当调用录制接口后，可通过该字段保存录制状态。0：未录制 1：录制中该接口仅保存字段，不涉及任何录制处理。</p>
+     * Set <p>录制状态，当调用录制接口后，可通过该字段保存录制状态。<br>0：未录制<br>1：录制中<br>该接口仅保存字段，不涉及任何录制处理。</p>
+     * @param RecordStatus <p>录制状态，当调用录制接口后，可通过该字段保存录制状态。<br>0：未录制<br>1：录制中<br>该接口仅保存字段，不涉及任何录制处理。</p>
      */
     public void setRecordStatus(Long RecordStatus) {
         this.RecordStatus = RecordStatus;
     }
 
     /**
-     * Get <p>导播台的过期时间戳。值为-1或unix时间戳。默认值为-1。 当值为-1时，表示该导播台永不过期。 当值为正常unix时间戳时，导播台将在该时间过期。导播台过期后，预监与主监画面将自动停止，转推自动停止。 点播、直播url将停止转拉，推流url需自行停止推流。</p> 
-     * @return ExpireTime <p>导播台的过期时间戳。值为-1或unix时间戳。默认值为-1。 当值为-1时，表示该导播台永不过期。 当值为正常unix时间戳时，导播台将在该时间过期。导播台过期后，预监与主监画面将自动停止，转推自动停止。 点播、直播url将停止转拉，推流url需自行停止推流。</p>
+     * Get <p>导播台的过期时间戳。值为-1或unix时间戳。<br>默认值为-1。<br>当值为-1时，表示该导播台永不过期。<br>当值为正常unix时间戳时，导播台将在该时间过期。<br>导播台过期后，预监与主监画面将自动停止，转推自动停止。<br>点播、直播url将停止转拉，推流url需自行停止推流。</p> 
+     * @return ExpireTime <p>导播台的过期时间戳。值为-1或unix时间戳。<br>默认值为-1。<br>当值为-1时，表示该导播台永不过期。<br>当值为正常unix时间戳时，导播台将在该时间过期。<br>导播台过期后，预监与主监画面将自动停止，转推自动停止。<br>点播、直播url将停止转拉，推流url需自行停止推流。</p>
      */
     public Long getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set <p>导播台的过期时间戳。值为-1或unix时间戳。默认值为-1。 当值为-1时，表示该导播台永不过期。 当值为正常unix时间戳时，导播台将在该时间过期。导播台过期后，预监与主监画面将自动停止，转推自动停止。 点播、直播url将停止转拉，推流url需自行停止推流。</p>
-     * @param ExpireTime <p>导播台的过期时间戳。值为-1或unix时间戳。默认值为-1。 当值为-1时，表示该导播台永不过期。 当值为正常unix时间戳时，导播台将在该时间过期。导播台过期后，预监与主监画面将自动停止，转推自动停止。 点播、直播url将停止转拉，推流url需自行停止推流。</p>
+     * Set <p>导播台的过期时间戳。值为-1或unix时间戳。<br>默认值为-1。<br>当值为-1时，表示该导播台永不过期。<br>当值为正常unix时间戳时，导播台将在该时间过期。<br>导播台过期后，预监与主监画面将自动停止，转推自动停止。<br>点播、直播url将停止转拉，推流url需自行停止推流。</p>
+     * @param ExpireTime <p>导播台的过期时间戳。值为-1或unix时间戳。<br>默认值为-1。<br>当值为-1时，表示该导播台永不过期。<br>当值为正常unix时间戳时，导播台将在该时间过期。<br>导播台过期后，预监与主监画面将自动停止，转推自动停止。<br>点播、直播url将停止转拉，推流url需自行停止推流。</p>
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get <p>导播台延时播放时间，单位为秒。 默认为0，最大支持300秒</p> 
-     * @return DelayTime <p>导播台延时播放时间，单位为秒。 默认为0，最大支持300秒</p>
+     * Get <p>导播台延时播放时间，单位为秒。<br>默认为0，最大支持300秒</p> 
+     * @return DelayTime <p>导播台延时播放时间，单位为秒。<br>默认为0，最大支持300秒</p>
      */
     public Long getDelayTime() {
         return this.DelayTime;
     }
 
     /**
-     * Set <p>导播台延时播放时间，单位为秒。 默认为0，最大支持300秒</p>
-     * @param DelayTime <p>导播台延时播放时间，单位为秒。 默认为0，最大支持300秒</p>
+     * Set <p>导播台延时播放时间，单位为秒。<br>默认为0，最大支持300秒</p>
+     * @param DelayTime <p>导播台延时播放时间，单位为秒。<br>默认为0，最大支持300秒</p>
      */
     public void setDelayTime(Long DelayTime) {
         this.DelayTime = DelayTime;
     }
 
     /**
-     * Get <p>导播台转场类型。 默认为空。 允许使用通过DescribeCasterTransitionTypes接口中查询到的转场类型。</p> 
-     * @return TransitionType <p>导播台转场类型。 默认为空。 允许使用通过DescribeCasterTransitionTypes接口中查询到的转场类型。</p>
+     * Get <p>导播台转场类型。<br>默认为空。<br>允许使用通过DescribeCasterTransitionTypes接口中查询到的转场类型。</p> 
+     * @return TransitionType <p>导播台转场类型。<br>默认为空。<br>允许使用通过DescribeCasterTransitionTypes接口中查询到的转场类型。</p>
      */
     public String getTransitionType() {
         return this.TransitionType;
     }
 
     /**
-     * Set <p>导播台转场类型。 默认为空。 允许使用通过DescribeCasterTransitionTypes接口中查询到的转场类型。</p>
-     * @param TransitionType <p>导播台转场类型。 默认为空。 允许使用通过DescribeCasterTransitionTypes接口中查询到的转场类型。</p>
+     * Set <p>导播台转场类型。<br>默认为空。<br>允许使用通过DescribeCasterTransitionTypes接口中查询到的转场类型。</p>
+     * @param TransitionType <p>导播台转场类型。<br>默认为空。<br>允许使用通过DescribeCasterTransitionTypes接口中查询到的转场类型。</p>
      */
     public void setTransitionType(String TransitionType) {
         this.TransitionType = TransitionType;
     }
 
     /**
-     * Get <p>导播台主监输出的宽度，单位为像素。 默认为1280，最大允许4096。</p> 
-     * @return PgmWidth <p>导播台主监输出的宽度，单位为像素。 默认为1280，最大允许4096。</p>
+     * Get <p>导播台主监输出的宽度，单位为像素。<br>默认为1280，最大允许4096。</p> 
+     * @return PgmWidth <p>导播台主监输出的宽度，单位为像素。<br>默认为1280，最大允许4096。</p>
      */
     public Long getPgmWidth() {
         return this.PgmWidth;
     }
 
     /**
-     * Set <p>导播台主监输出的宽度，单位为像素。 默认为1280，最大允许4096。</p>
-     * @param PgmWidth <p>导播台主监输出的宽度，单位为像素。 默认为1280，最大允许4096。</p>
+     * Set <p>导播台主监输出的宽度，单位为像素。<br>默认为1280，最大允许4096。</p>
+     * @param PgmWidth <p>导播台主监输出的宽度，单位为像素。<br>默认为1280，最大允许4096。</p>
      */
     public void setPgmWidth(Long PgmWidth) {
         this.PgmWidth = PgmWidth;
     }
 
     /**
-     * Get <p>导播台主监输出的高度，单位为像素。 默认为720，最大允许2160。</p> 
-     * @return PgmHeight <p>导播台主监输出的高度，单位为像素。 默认为720，最大允许2160。</p>
+     * Get <p>导播台主监输出的高度，单位为像素。<br>默认为720，最大允许2160。</p> 
+     * @return PgmHeight <p>导播台主监输出的高度，单位为像素。<br>默认为720，最大允许2160。</p>
      */
     public Long getPgmHeight() {
         return this.PgmHeight;
     }
 
     /**
-     * Set <p>导播台主监输出的高度，单位为像素。 默认为720，最大允许2160。</p>
-     * @param PgmHeight <p>导播台主监输出的高度，单位为像素。 默认为720，最大允许2160。</p>
+     * Set <p>导播台主监输出的高度，单位为像素。<br>默认为720，最大允许2160。</p>
+     * @param PgmHeight <p>导播台主监输出的高度，单位为像素。<br>默认为720，最大允许2160。</p>
      */
     public void setPgmHeight(Long PgmHeight) {
         this.PgmHeight = PgmHeight;
     }
 
     /**
-     * Get <p>导播台主监输出的帧率。 默认为0，表示随源输出。 最大支持60。</p> 
-     * @return PgmFps <p>导播台主监输出的帧率。 默认为0，表示随源输出。 最大支持60。</p>
+     * Get <p>导播台主监输出的帧率。<br>默认为0，表示随源输出。 最大支持60。</p> 
+     * @return PgmFps <p>导播台主监输出的帧率。<br>默认为0，表示随源输出。 最大支持60。</p>
      */
     public Long getPgmFps() {
         return this.PgmFps;
     }
 
     /**
-     * Set <p>导播台主监输出的帧率。 默认为0，表示随源输出。 最大支持60。</p>
-     * @param PgmFps <p>导播台主监输出的帧率。 默认为0，表示随源输出。 最大支持60。</p>
+     * Set <p>导播台主监输出的帧率。<br>默认为0，表示随源输出。 最大支持60。</p>
+     * @param PgmFps <p>导播台主监输出的帧率。<br>默认为0，表示随源输出。 最大支持60。</p>
      */
     public void setPgmFps(Long PgmFps) {
         this.PgmFps = PgmFps;
     }
 
     /**
-     * Get <p>导播台主监输出的码率，单位为kbps。 默认为0，表示随源的码率输出。 最大允许10000kbps。</p> 
-     * @return PgmBitRate <p>导播台主监输出的码率，单位为kbps。 默认为0，表示随源的码率输出。 最大允许10000kbps。</p>
+     * Get <p>导播台主监输出的码率，单位为kbps。<br>默认为0，表示随源的码率输出。<br>最大允许10000kbps。</p> 
+     * @return PgmBitRate <p>导播台主监输出的码率，单位为kbps。<br>默认为0，表示随源的码率输出。<br>最大允许10000kbps。</p>
      */
     public Long getPgmBitRate() {
         return this.PgmBitRate;
     }
 
     /**
-     * Set <p>导播台主监输出的码率，单位为kbps。 默认为0，表示随源的码率输出。 最大允许10000kbps。</p>
-     * @param PgmBitRate <p>导播台主监输出的码率，单位为kbps。 默认为0，表示随源的码率输出。 最大允许10000kbps。</p>
+     * Set <p>导播台主监输出的码率，单位为kbps。<br>默认为0，表示随源的码率输出。<br>最大允许10000kbps。</p>
+     * @param PgmBitRate <p>导播台主监输出的码率，单位为kbps。<br>默认为0，表示随源的码率输出。<br>最大允许10000kbps。</p>
      */
     public void setPgmBitRate(Long PgmBitRate) {
         this.PgmBitRate = PgmBitRate;
     }
 
     /**
-     * Get <p>导播台的计费类型。 0 通用型 1 播单型。 注： 本参数暂无作用。</p> 
-     * @return FeeType <p>导播台的计费类型。 0 通用型 1 播单型。 注： 本参数暂无作用。</p>
+     * Get <p>导播台的计费类型。<br>0 通用型<br>1 播单型。<br>注： 本参数暂无作用。</p> 
+     * @return FeeType <p>导播台的计费类型。<br>0 通用型<br>1 播单型。<br>注： 本参数暂无作用。</p>
      */
     public Long getFeeType() {
         return this.FeeType;
     }
 
     /**
-     * Set <p>导播台的计费类型。 0 通用型 1 播单型。 注： 本参数暂无作用。</p>
-     * @param FeeType <p>导播台的计费类型。 0 通用型 1 播单型。 注： 本参数暂无作用。</p>
+     * Set <p>导播台的计费类型。<br>0 通用型<br>1 播单型。<br>注： 本参数暂无作用。</p>
+     * @param FeeType <p>导播台的计费类型。<br>0 通用型<br>1 播单型。<br>注： 本参数暂无作用。</p>
      */
     public void setFeeType(Long FeeType) {
         this.FeeType = FeeType;
     }
 
     /**
-     * Get <p>录制接口返回的taskid注：该接口只做字段保存，不涉及录制操作。</p> 
-     * @return RecordTaskId <p>录制接口返回的taskid注：该接口只做字段保存，不涉及录制操作。</p>
+     * Get <p>录制接口返回的taskid<br>注：该接口只做字段保存，不涉及录制操作。</p> 
+     * @return RecordTaskId <p>录制接口返回的taskid<br>注：该接口只做字段保存，不涉及录制操作。</p>
      */
     public String getRecordTaskId() {
         return this.RecordTaskId;
     }
 
     /**
-     * Set <p>录制接口返回的taskid注：该接口只做字段保存，不涉及录制操作。</p>
-     * @param RecordTaskId <p>录制接口返回的taskid注：该接口只做字段保存，不涉及录制操作。</p>
+     * Set <p>录制接口返回的taskid<br>注：该接口只做字段保存，不涉及录制操作。</p>
+     * @param RecordTaskId <p>录制接口返回的taskid<br>注：该接口只做字段保存，不涉及录制操作。</p>
      */
     public void setRecordTaskId(String RecordTaskId) {
         this.RecordTaskId = RecordTaskId;
     }
 
     /**
-     * Get <p>导播台主监输出的音频码率，单位为kbps。 可选项：[0, 128, 192, 256] 默认值为0，表示随源的音频码率输出。</p> 
-     * @return PgmAudioBitRate <p>导播台主监输出的音频码率，单位为kbps。 可选项：[0, 128, 192, 256] 默认值为0，表示随源的音频码率输出。</p>
+     * Get <p>导播台主监输出的音频码率，单位为kbps。<br>可选项：[0, 128, 192, 256]<br>默认值为0，表示随源的音频码率输出。</p> 
+     * @return PgmAudioBitRate <p>导播台主监输出的音频码率，单位为kbps。<br>可选项：[0, 128, 192, 256]<br>默认值为0，表示随源的音频码率输出。</p>
      */
     public Long getPgmAudioBitRate() {
         return this.PgmAudioBitRate;
     }
 
     /**
-     * Set <p>导播台主监输出的音频码率，单位为kbps。 可选项：[0, 128, 192, 256] 默认值为0，表示随源的音频码率输出。</p>
-     * @param PgmAudioBitRate <p>导播台主监输出的音频码率，单位为kbps。 可选项：[0, 128, 192, 256] 默认值为0，表示随源的音频码率输出。</p>
+     * Set <p>导播台主监输出的音频码率，单位为kbps。<br>可选项：[0, 128, 192, 256]<br>默认值为0，表示随源的音频码率输出。</p>
+     * @param PgmAudioBitRate <p>导播台主监输出的音频码率，单位为kbps。<br>可选项：[0, 128, 192, 256]<br>默认值为0，表示随源的音频码率输出。</p>
      */
     public void setPgmAudioBitRate(Long PgmAudioBitRate) {
         this.PgmAudioBitRate = PgmAudioBitRate;

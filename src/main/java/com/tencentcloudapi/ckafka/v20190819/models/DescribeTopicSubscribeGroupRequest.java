@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribeTopicSubscribeGroupRequest extends AbstractModel {
 
     /**
-    * ckafka集群实例Id
+    * <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 主题名
+    * <p>主题名</p>
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-    * 分页时的起始位置
+    * <p>分页时的起始位置</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 分页时的个数
+    * <p>分页时的个数</p><p>默认值：20</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get ckafka集群实例Id 
-     * @return InstanceId ckafka集群实例Id
+     * Get <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p> 
+     * @return InstanceId <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ckafka集群实例Id
-     * @param InstanceId ckafka集群实例Id
+     * Set <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
+     * @param InstanceId <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 主题名 
-     * @return TopicName 主题名
+     * Get <p>主题名</p> 
+     * @return TopicName <p>主题名</p>
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set 主题名
-     * @param TopicName 主题名
+     * Set <p>主题名</p>
+     * @param TopicName <p>主题名</p>
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get 分页时的起始位置 
-     * @return Offset 分页时的起始位置
+     * Get <p>分页时的起始位置</p> 
+     * @return Offset <p>分页时的起始位置</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页时的起始位置
-     * @param Offset 分页时的起始位置
+     * Set <p>分页时的起始位置</p>
+     * @param Offset <p>分页时的起始位置</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 分页时的个数 
-     * @return Limit 分页时的个数
+     * Get <p>分页时的个数</p><p>默认值：20</p> 
+     * @return Limit <p>分页时的个数</p><p>默认值：20</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页时的个数
-     * @param Limit 分页时的个数
+     * Set <p>分页时的个数</p><p>默认值：20</p>
+     * @param Limit <p>分页时的个数</p><p>默认值：20</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

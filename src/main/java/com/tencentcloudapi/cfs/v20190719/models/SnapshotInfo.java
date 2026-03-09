@@ -24,98 +24,98 @@ import java.util.HashMap;
 public class SnapshotInfo extends AbstractModel {
 
     /**
-    * 创建快照时间
+    * <p>创建快照时间</p>
     */
     @SerializedName("CreationTime")
     @Expose
     private String CreationTime;
 
     /**
-    * 快照名称
+    * <p>快照名称</p>
     */
     @SerializedName("SnapshotName")
     @Expose
     private String SnapshotName;
 
     /**
-    * 快照ID
+    * <p>快照ID</p>
     */
     @SerializedName("SnapshotId")
     @Expose
     private String SnapshotId;
 
     /**
-    * 快照状态，creating-创建中；available-运行中；deleting-删除中；rollbacking-new 创建新文件系统中；create-failed 创建失败
+    * <p>快照状态，creating-创建中；available-运行中；deleting-删除中；rollbacking-new 创建新文件系统中；create-failed 创建失败</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 地域名称
+    * <p>地域名称</p>
     */
     @SerializedName("RegionName")
     @Expose
     private String RegionName;
 
     /**
-    * 文件系统ID
+    * <p>文件系统ID</p>
     */
     @SerializedName("FileSystemId")
     @Expose
     private String FileSystemId;
 
     /**
-    * 快照大小
+    * <p>快照大小</p><p>单位：MiB</p>
     */
     @SerializedName("Size")
     @Expose
     private Long Size;
 
     /**
-    * 保留时长天
+    * <p>保留时长天</p>
     */
     @SerializedName("AliveDay")
     @Expose
     private Long AliveDay;
 
     /**
-    * 快照进度百分比，1表示1% 范围1-100
+    * <p>快照进度百分比，1表示1% 范围1-100</p>
     */
     @SerializedName("Percent")
     @Expose
     private Long Percent;
 
     /**
-    * 账号ID
+    * <p>账号ID</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * 快照删除时间
+    * <p>快照删除时间</p>
     */
     @SerializedName("DeleteTime")
     @Expose
     private String DeleteTime;
 
     /**
-    * 文件系统名称
+    * <p>文件系统名称</p>
     */
     @SerializedName("FsName")
     @Expose
     private String FsName;
 
     /**
-    * 快照标签
+    * <p>快照标签</p>
     */
     @SerializedName("Tags")
     @Expose
     private TagInfo [] Tags;
 
     /**
-    * 快照类型，general为通用系列快照，turbo为Turbo系列快照
+    * <p>快照类型，general为通用系列快照，turbo为Turbo系列快照</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SnapshotType")
@@ -123,7 +123,7 @@ public class SnapshotInfo extends AbstractModel {
     private String SnapshotType;
 
     /**
-    * 实际快照时间，反映快照对应文件系统某个时刻的数据。
+    * <p>实际快照时间，反映快照对应文件系统某个时刻的数据。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SnapshotTime")
@@ -131,217 +131,217 @@ public class SnapshotInfo extends AbstractModel {
     private String SnapshotTime;
 
     /**
-     * Get 创建快照时间 
-     * @return CreationTime 创建快照时间
+     * Get <p>创建快照时间</p> 
+     * @return CreationTime <p>创建快照时间</p>
      */
     public String getCreationTime() {
         return this.CreationTime;
     }
 
     /**
-     * Set 创建快照时间
-     * @param CreationTime 创建快照时间
+     * Set <p>创建快照时间</p>
+     * @param CreationTime <p>创建快照时间</p>
      */
     public void setCreationTime(String CreationTime) {
         this.CreationTime = CreationTime;
     }
 
     /**
-     * Get 快照名称 
-     * @return SnapshotName 快照名称
+     * Get <p>快照名称</p> 
+     * @return SnapshotName <p>快照名称</p>
      */
     public String getSnapshotName() {
         return this.SnapshotName;
     }
 
     /**
-     * Set 快照名称
-     * @param SnapshotName 快照名称
+     * Set <p>快照名称</p>
+     * @param SnapshotName <p>快照名称</p>
      */
     public void setSnapshotName(String SnapshotName) {
         this.SnapshotName = SnapshotName;
     }
 
     /**
-     * Get 快照ID 
-     * @return SnapshotId 快照ID
+     * Get <p>快照ID</p> 
+     * @return SnapshotId <p>快照ID</p>
      */
     public String getSnapshotId() {
         return this.SnapshotId;
     }
 
     /**
-     * Set 快照ID
-     * @param SnapshotId 快照ID
+     * Set <p>快照ID</p>
+     * @param SnapshotId <p>快照ID</p>
      */
     public void setSnapshotId(String SnapshotId) {
         this.SnapshotId = SnapshotId;
     }
 
     /**
-     * Get 快照状态，creating-创建中；available-运行中；deleting-删除中；rollbacking-new 创建新文件系统中；create-failed 创建失败 
-     * @return Status 快照状态，creating-创建中；available-运行中；deleting-删除中；rollbacking-new 创建新文件系统中；create-failed 创建失败
+     * Get <p>快照状态，creating-创建中；available-运行中；deleting-删除中；rollbacking-new 创建新文件系统中；create-failed 创建失败</p> 
+     * @return Status <p>快照状态，creating-创建中；available-运行中；deleting-删除中；rollbacking-new 创建新文件系统中；create-failed 创建失败</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 快照状态，creating-创建中；available-运行中；deleting-删除中；rollbacking-new 创建新文件系统中；create-failed 创建失败
-     * @param Status 快照状态，creating-创建中；available-运行中；deleting-删除中；rollbacking-new 创建新文件系统中；create-failed 创建失败
+     * Set <p>快照状态，creating-创建中；available-运行中；deleting-删除中；rollbacking-new 创建新文件系统中；create-failed 创建失败</p>
+     * @param Status <p>快照状态，creating-创建中；available-运行中；deleting-删除中；rollbacking-new 创建新文件系统中；create-failed 创建失败</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 地域名称 
-     * @return RegionName 地域名称
+     * Get <p>地域名称</p> 
+     * @return RegionName <p>地域名称</p>
      */
     public String getRegionName() {
         return this.RegionName;
     }
 
     /**
-     * Set 地域名称
-     * @param RegionName 地域名称
+     * Set <p>地域名称</p>
+     * @param RegionName <p>地域名称</p>
      */
     public void setRegionName(String RegionName) {
         this.RegionName = RegionName;
     }
 
     /**
-     * Get 文件系统ID 
-     * @return FileSystemId 文件系统ID
+     * Get <p>文件系统ID</p> 
+     * @return FileSystemId <p>文件系统ID</p>
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set 文件系统ID
-     * @param FileSystemId 文件系统ID
+     * Set <p>文件系统ID</p>
+     * @param FileSystemId <p>文件系统ID</p>
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;
     }
 
     /**
-     * Get 快照大小 
-     * @return Size 快照大小
+     * Get <p>快照大小</p><p>单位：MiB</p> 
+     * @return Size <p>快照大小</p><p>单位：MiB</p>
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set 快照大小
-     * @param Size 快照大小
+     * Set <p>快照大小</p><p>单位：MiB</p>
+     * @param Size <p>快照大小</p><p>单位：MiB</p>
      */
     public void setSize(Long Size) {
         this.Size = Size;
     }
 
     /**
-     * Get 保留时长天 
-     * @return AliveDay 保留时长天
+     * Get <p>保留时长天</p> 
+     * @return AliveDay <p>保留时长天</p>
      */
     public Long getAliveDay() {
         return this.AliveDay;
     }
 
     /**
-     * Set 保留时长天
-     * @param AliveDay 保留时长天
+     * Set <p>保留时长天</p>
+     * @param AliveDay <p>保留时长天</p>
      */
     public void setAliveDay(Long AliveDay) {
         this.AliveDay = AliveDay;
     }
 
     /**
-     * Get 快照进度百分比，1表示1% 范围1-100 
-     * @return Percent 快照进度百分比，1表示1% 范围1-100
+     * Get <p>快照进度百分比，1表示1% 范围1-100</p> 
+     * @return Percent <p>快照进度百分比，1表示1% 范围1-100</p>
      */
     public Long getPercent() {
         return this.Percent;
     }
 
     /**
-     * Set 快照进度百分比，1表示1% 范围1-100
-     * @param Percent 快照进度百分比，1表示1% 范围1-100
+     * Set <p>快照进度百分比，1表示1% 范围1-100</p>
+     * @param Percent <p>快照进度百分比，1表示1% 范围1-100</p>
      */
     public void setPercent(Long Percent) {
         this.Percent = Percent;
     }
 
     /**
-     * Get 账号ID 
-     * @return AppId 账号ID
+     * Get <p>账号ID</p> 
+     * @return AppId <p>账号ID</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 账号ID
-     * @param AppId 账号ID
+     * Set <p>账号ID</p>
+     * @param AppId <p>账号ID</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 快照删除时间 
-     * @return DeleteTime 快照删除时间
+     * Get <p>快照删除时间</p> 
+     * @return DeleteTime <p>快照删除时间</p>
      */
     public String getDeleteTime() {
         return this.DeleteTime;
     }
 
     /**
-     * Set 快照删除时间
-     * @param DeleteTime 快照删除时间
+     * Set <p>快照删除时间</p>
+     * @param DeleteTime <p>快照删除时间</p>
      */
     public void setDeleteTime(String DeleteTime) {
         this.DeleteTime = DeleteTime;
     }
 
     /**
-     * Get 文件系统名称 
-     * @return FsName 文件系统名称
+     * Get <p>文件系统名称</p> 
+     * @return FsName <p>文件系统名称</p>
      */
     public String getFsName() {
         return this.FsName;
     }
 
     /**
-     * Set 文件系统名称
-     * @param FsName 文件系统名称
+     * Set <p>文件系统名称</p>
+     * @param FsName <p>文件系统名称</p>
      */
     public void setFsName(String FsName) {
         this.FsName = FsName;
     }
 
     /**
-     * Get 快照标签 
-     * @return Tags 快照标签
+     * Get <p>快照标签</p> 
+     * @return Tags <p>快照标签</p>
      */
     public TagInfo [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 快照标签
-     * @param Tags 快照标签
+     * Set <p>快照标签</p>
+     * @param Tags <p>快照标签</p>
      */
     public void setTags(TagInfo [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 快照类型，general为通用系列快照，turbo为Turbo系列快照
+     * Get <p>快照类型，general为通用系列快照，turbo为Turbo系列快照</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SnapshotType 快照类型，general为通用系列快照，turbo为Turbo系列快照
+     * @return SnapshotType <p>快照类型，general为通用系列快照，turbo为Turbo系列快照</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSnapshotType() {
@@ -349,9 +349,9 @@ public class SnapshotInfo extends AbstractModel {
     }
 
     /**
-     * Set 快照类型，general为通用系列快照，turbo为Turbo系列快照
+     * Set <p>快照类型，general为通用系列快照，turbo为Turbo系列快照</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SnapshotType 快照类型，general为通用系列快照，turbo为Turbo系列快照
+     * @param SnapshotType <p>快照类型，general为通用系列快照，turbo为Turbo系列快照</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSnapshotType(String SnapshotType) {
@@ -359,9 +359,9 @@ public class SnapshotInfo extends AbstractModel {
     }
 
     /**
-     * Get 实际快照时间，反映快照对应文件系统某个时刻的数据。
+     * Get <p>实际快照时间，反映快照对应文件系统某个时刻的数据。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SnapshotTime 实际快照时间，反映快照对应文件系统某个时刻的数据。
+     * @return SnapshotTime <p>实际快照时间，反映快照对应文件系统某个时刻的数据。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSnapshotTime() {
@@ -369,9 +369,9 @@ public class SnapshotInfo extends AbstractModel {
     }
 
     /**
-     * Set 实际快照时间，反映快照对应文件系统某个时刻的数据。
+     * Set <p>实际快照时间，反映快照对应文件系统某个时刻的数据。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SnapshotTime 实际快照时间，反映快照对应文件系统某个时刻的数据。
+     * @param SnapshotTime <p>实际快照时间，反映快照对应文件系统某个时刻的数据。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSnapshotTime(String SnapshotTime) {

@@ -23,6 +23,98 @@ import java.util.HashMap;
 
 public class CreateAuditKeywordLibRequest extends AbstractModel {
 
+    /**
+    * <p>自定义词库名称。</p>
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+    * <p>自定义词库名称描述。</p>
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
+    * <p>处理建议。<br>可取值：Review 疑似，Block 违规。</p>
+    */
+    @SerializedName("Suggestion")
+    @Expose
+    private String Suggestion;
+
+    /**
+    * <p>匹配模式。<br>可取值：ExactMatch 精确匹配， FuzzyMatch 模糊匹配。</p>
+    */
+    @SerializedName("MatchType")
+    @Expose
+    private String MatchType;
+
+    /**
+     * Get <p>自定义词库名称。</p> 
+     * @return Name <p>自定义词库名称。</p>
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set <p>自定义词库名称。</p>
+     * @param Name <p>自定义词库名称。</p>
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get <p>自定义词库名称描述。</p> 
+     * @return Description <p>自定义词库名称描述。</p>
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set <p>自定义词库名称描述。</p>
+     * @param Description <p>自定义词库名称描述。</p>
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
+    /**
+     * Get <p>处理建议。<br>可取值：Review 疑似，Block 违规。</p> 
+     * @return Suggestion <p>处理建议。<br>可取值：Review 疑似，Block 违规。</p>
+     */
+    public String getSuggestion() {
+        return this.Suggestion;
+    }
+
+    /**
+     * Set <p>处理建议。<br>可取值：Review 疑似，Block 违规。</p>
+     * @param Suggestion <p>处理建议。<br>可取值：Review 疑似，Block 违规。</p>
+     */
+    public void setSuggestion(String Suggestion) {
+        this.Suggestion = Suggestion;
+    }
+
+    /**
+     * Get <p>匹配模式。<br>可取值：ExactMatch 精确匹配， FuzzyMatch 模糊匹配。</p> 
+     * @return MatchType <p>匹配模式。<br>可取值：ExactMatch 精确匹配， FuzzyMatch 模糊匹配。</p>
+     */
+    public String getMatchType() {
+        return this.MatchType;
+    }
+
+    /**
+     * Set <p>匹配模式。<br>可取值：ExactMatch 精确匹配， FuzzyMatch 模糊匹配。</p>
+     * @param MatchType <p>匹配模式。<br>可取值：ExactMatch 精确匹配， FuzzyMatch 模糊匹配。</p>
+     */
+    public void setMatchType(String MatchType) {
+        this.MatchType = MatchType;
+    }
+
     public CreateAuditKeywordLibRequest() {
     }
 
@@ -31,6 +123,18 @@ public class CreateAuditKeywordLibRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateAuditKeywordLibRequest(CreateAuditKeywordLibRequest source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.Suggestion != null) {
+            this.Suggestion = new String(source.Suggestion);
+        }
+        if (source.MatchType != null) {
+            this.MatchType = new String(source.MatchType);
+        }
     }
 
 
@@ -38,6 +142,10 @@ public class CreateAuditKeywordLibRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "Suggestion", this.Suggestion);
+        this.setParamSimple(map, prefix + "MatchType", this.MatchType);
 
     }
 }

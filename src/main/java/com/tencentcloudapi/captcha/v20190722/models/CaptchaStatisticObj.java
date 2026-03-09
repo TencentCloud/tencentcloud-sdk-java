@@ -24,56 +24,56 @@ import java.util.HashMap;
 public class CaptchaStatisticObj extends AbstractModel {
 
     /**
-    * 请求总量
+    * <p>请求总量</p>
     */
     @SerializedName("ActionTotal")
     @Expose
     private Long ActionTotal;
 
     /**
-    * 验证总量
+    * <p>验证总量</p>
     */
     @SerializedName("VerifyTotal")
     @Expose
     private Long VerifyTotal;
 
     /**
-    * 验证通过总量
+    * <p>验证通过总量</p>
     */
     @SerializedName("VerifyThroughTotal")
     @Expose
     private Long VerifyThroughTotal;
 
     /**
-    * 验证拦截总量
+    * <p>验证拦截总量</p>
     */
     @SerializedName("VerifyInterceptTotal")
     @Expose
     private Long VerifyInterceptTotal;
 
     /**
-    * 票据校验总量
+    * <p>票据校验总量</p>
     */
     @SerializedName("TicketTotal")
     @Expose
     private Long TicketTotal;
 
     /**
-    * 票据通过总量
+    * <p>票据通过总量</p>
     */
     @SerializedName("TicketThroughTotal")
     @Expose
     private Long TicketThroughTotal;
 
     /**
-    * 票据拦截总量
+    * <p>票据拦截总量</p>
     */
     @SerializedName("TicketInterceptTotal")
     @Expose
     private Long TicketInterceptTotal;
 
     /**
-    * 请求趋势图
+    * <p>请求趋势图</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RequestTrend")
@@ -81,7 +81,7 @@ public class CaptchaStatisticObj extends AbstractModel {
     private RequestTrendObj [] RequestTrend;
 
     /**
-    * 拦截率趋势图
+    * <p>拦截率趋势图</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InterceptPerTrend")
@@ -89,7 +89,7 @@ public class CaptchaStatisticObj extends AbstractModel {
     private InterceptPerTrendObj [] InterceptPerTrend;
 
     /**
-    * 票据校验趋势图
+    * <p>票据校验趋势图</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TicketCheckTrend")
@@ -97,121 +97,121 @@ public class CaptchaStatisticObj extends AbstractModel {
     private TicketCheckTrendObj [] TicketCheckTrend;
 
     /**
-     * Get 请求总量 
-     * @return ActionTotal 请求总量
+     * Get <p>请求总量</p> 
+     * @return ActionTotal <p>请求总量</p>
      */
     public Long getActionTotal() {
         return this.ActionTotal;
     }
 
     /**
-     * Set 请求总量
-     * @param ActionTotal 请求总量
+     * Set <p>请求总量</p>
+     * @param ActionTotal <p>请求总量</p>
      */
     public void setActionTotal(Long ActionTotal) {
         this.ActionTotal = ActionTotal;
     }
 
     /**
-     * Get 验证总量 
-     * @return VerifyTotal 验证总量
+     * Get <p>验证总量</p> 
+     * @return VerifyTotal <p>验证总量</p>
      */
     public Long getVerifyTotal() {
         return this.VerifyTotal;
     }
 
     /**
-     * Set 验证总量
-     * @param VerifyTotal 验证总量
+     * Set <p>验证总量</p>
+     * @param VerifyTotal <p>验证总量</p>
      */
     public void setVerifyTotal(Long VerifyTotal) {
         this.VerifyTotal = VerifyTotal;
     }
 
     /**
-     * Get 验证通过总量 
-     * @return VerifyThroughTotal 验证通过总量
+     * Get <p>验证通过总量</p> 
+     * @return VerifyThroughTotal <p>验证通过总量</p>
      */
     public Long getVerifyThroughTotal() {
         return this.VerifyThroughTotal;
     }
 
     /**
-     * Set 验证通过总量
-     * @param VerifyThroughTotal 验证通过总量
+     * Set <p>验证通过总量</p>
+     * @param VerifyThroughTotal <p>验证通过总量</p>
      */
     public void setVerifyThroughTotal(Long VerifyThroughTotal) {
         this.VerifyThroughTotal = VerifyThroughTotal;
     }
 
     /**
-     * Get 验证拦截总量 
-     * @return VerifyInterceptTotal 验证拦截总量
+     * Get <p>验证拦截总量</p> 
+     * @return VerifyInterceptTotal <p>验证拦截总量</p>
      */
     public Long getVerifyInterceptTotal() {
         return this.VerifyInterceptTotal;
     }
 
     /**
-     * Set 验证拦截总量
-     * @param VerifyInterceptTotal 验证拦截总量
+     * Set <p>验证拦截总量</p>
+     * @param VerifyInterceptTotal <p>验证拦截总量</p>
      */
     public void setVerifyInterceptTotal(Long VerifyInterceptTotal) {
         this.VerifyInterceptTotal = VerifyInterceptTotal;
     }
 
     /**
-     * Get 票据校验总量 
-     * @return TicketTotal 票据校验总量
+     * Get <p>票据校验总量</p> 
+     * @return TicketTotal <p>票据校验总量</p>
      */
     public Long getTicketTotal() {
         return this.TicketTotal;
     }
 
     /**
-     * Set 票据校验总量
-     * @param TicketTotal 票据校验总量
+     * Set <p>票据校验总量</p>
+     * @param TicketTotal <p>票据校验总量</p>
      */
     public void setTicketTotal(Long TicketTotal) {
         this.TicketTotal = TicketTotal;
     }
 
     /**
-     * Get 票据通过总量 
-     * @return TicketThroughTotal 票据通过总量
+     * Get <p>票据通过总量</p> 
+     * @return TicketThroughTotal <p>票据通过总量</p>
      */
     public Long getTicketThroughTotal() {
         return this.TicketThroughTotal;
     }
 
     /**
-     * Set 票据通过总量
-     * @param TicketThroughTotal 票据通过总量
+     * Set <p>票据通过总量</p>
+     * @param TicketThroughTotal <p>票据通过总量</p>
      */
     public void setTicketThroughTotal(Long TicketThroughTotal) {
         this.TicketThroughTotal = TicketThroughTotal;
     }
 
     /**
-     * Get 票据拦截总量 
-     * @return TicketInterceptTotal 票据拦截总量
+     * Get <p>票据拦截总量</p> 
+     * @return TicketInterceptTotal <p>票据拦截总量</p>
      */
     public Long getTicketInterceptTotal() {
         return this.TicketInterceptTotal;
     }
 
     /**
-     * Set 票据拦截总量
-     * @param TicketInterceptTotal 票据拦截总量
+     * Set <p>票据拦截总量</p>
+     * @param TicketInterceptTotal <p>票据拦截总量</p>
      */
     public void setTicketInterceptTotal(Long TicketInterceptTotal) {
         this.TicketInterceptTotal = TicketInterceptTotal;
     }
 
     /**
-     * Get 请求趋势图
+     * Get <p>请求趋势图</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RequestTrend 请求趋势图
+     * @return RequestTrend <p>请求趋势图</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RequestTrendObj [] getRequestTrend() {
@@ -219,9 +219,9 @@ public class CaptchaStatisticObj extends AbstractModel {
     }
 
     /**
-     * Set 请求趋势图
+     * Set <p>请求趋势图</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RequestTrend 请求趋势图
+     * @param RequestTrend <p>请求趋势图</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRequestTrend(RequestTrendObj [] RequestTrend) {
@@ -229,9 +229,9 @@ public class CaptchaStatisticObj extends AbstractModel {
     }
 
     /**
-     * Get 拦截率趋势图
+     * Get <p>拦截率趋势图</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InterceptPerTrend 拦截率趋势图
+     * @return InterceptPerTrend <p>拦截率趋势图</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public InterceptPerTrendObj [] getInterceptPerTrend() {
@@ -239,9 +239,9 @@ public class CaptchaStatisticObj extends AbstractModel {
     }
 
     /**
-     * Set 拦截率趋势图
+     * Set <p>拦截率趋势图</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InterceptPerTrend 拦截率趋势图
+     * @param InterceptPerTrend <p>拦截率趋势图</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInterceptPerTrend(InterceptPerTrendObj [] InterceptPerTrend) {
@@ -249,9 +249,9 @@ public class CaptchaStatisticObj extends AbstractModel {
     }
 
     /**
-     * Get 票据校验趋势图
+     * Get <p>票据校验趋势图</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TicketCheckTrend 票据校验趋势图
+     * @return TicketCheckTrend <p>票据校验趋势图</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TicketCheckTrendObj [] getTicketCheckTrend() {
@@ -259,9 +259,9 @@ public class CaptchaStatisticObj extends AbstractModel {
     }
 
     /**
-     * Set 票据校验趋势图
+     * Set <p>票据校验趋势图</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TicketCheckTrend 票据校验趋势图
+     * @param TicketCheckTrend <p>票据校验趋势图</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTicketCheckTrend(TicketCheckTrendObj [] TicketCheckTrend) {

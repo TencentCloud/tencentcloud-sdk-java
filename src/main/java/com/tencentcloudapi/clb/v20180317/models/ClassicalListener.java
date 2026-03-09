@@ -24,414 +24,414 @@ import java.util.HashMap;
 public class ClassicalListener extends AbstractModel {
 
     /**
-    * 负载均衡监听器ID
+    * <p>负载均衡监听器ID</p>
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * 负载均衡监听器端口
+    * <p>负载均衡监听器端口</p>
     */
     @SerializedName("ListenerPort")
     @Expose
     private Long ListenerPort;
 
     /**
-    * 监听器后端转发端口
+    * <p>监听器后端转发端口</p>
     */
     @SerializedName("InstancePort")
     @Expose
     private Long InstancePort;
 
     /**
-    * 监听器名称
+    * <p>监听器名称</p>
     */
     @SerializedName("ListenerName")
     @Expose
     private String ListenerName;
 
     /**
-    * 监听器协议类型
+    * <p>监听器协议类型</p>
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * 会话保持时间
+    * <p>会话保持时间</p>
     */
     @SerializedName("SessionExpire")
     @Expose
     private Long SessionExpire;
 
     /**
-    * 是否开启了健康检查：1（开启）、0（关闭）
+    * <p>是否开启了健康检查：1（开启）、0（关闭）</p>
     */
     @SerializedName("HealthSwitch")
     @Expose
     private Long HealthSwitch;
 
     /**
-    * 响应超时时间
+    * <p>响应超时时间</p><p>单位：秒</p>
     */
     @SerializedName("TimeOut")
     @Expose
     private Long TimeOut;
 
     /**
-    * 检查间隔
+    * <p>检查间隔</p><p>单位：秒</p>
     */
     @SerializedName("IntervalTime")
     @Expose
     private Long IntervalTime;
 
     /**
-    * 健康阈值
+    * <p>健康阈值</p>
     */
     @SerializedName("HealthNum")
     @Expose
     private Long HealthNum;
 
     /**
-    * 不健康阈值
+    * <p>不健康阈值</p>
     */
     @SerializedName("UnhealthNum")
     @Expose
     private Long UnhealthNum;
 
     /**
-    * 传统型公网负载均衡 监听器的请求均衡方法。空字符串或wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发，least_conn表示按最小连接数。
+    * <p>传统型公网负载均衡 监听器的请求均衡方法。空字符串或wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发，least_conn表示按最小连接数。</p>
     */
     @SerializedName("HttpHash")
     @Expose
     private String HttpHash;
 
     /**
-    * 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释
+    * <p>传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释</p>
     */
     @SerializedName("HttpCode")
     @Expose
     private Long HttpCode;
 
     /**
-    * 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查路径
+    * <p>传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查路径</p>
     */
     @SerializedName("HttpCheckPath")
     @Expose
     private String HttpCheckPath;
 
     /**
-    * 传统型公网负载均衡的 HTTPS 监听器的认证方式
+    * <p>传统型公网负载均衡的 HTTPS 监听器的认证方式</p>
     */
     @SerializedName("SSLMode")
     @Expose
     private String SSLMode;
 
     /**
-    * 传统型公网负载均衡的 HTTPS 监听器的服务端证书 ID
+    * <p>传统型公网负载均衡的 HTTPS 监听器的服务端证书 ID</p>
     */
     @SerializedName("CertId")
     @Expose
     private String CertId;
 
     /**
-    * 传统型公网负载均衡的 HTTPS 监听器的客户端证书 ID
+    * <p>传统型公网负载均衡的 HTTPS 监听器的客户端证书 ID</p>
     */
     @SerializedName("CertCaId")
     @Expose
     private String CertCaId;
 
     /**
-    * 监听器的状态，0 表示创建中，1 表示运行中
+    * <p>监听器的状态，0 表示创建中，1 表示运行中</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get 负载均衡监听器ID 
-     * @return ListenerId 负载均衡监听器ID
+     * Get <p>负载均衡监听器ID</p> 
+     * @return ListenerId <p>负载均衡监听器ID</p>
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set 负载均衡监听器ID
-     * @param ListenerId 负载均衡监听器ID
+     * Set <p>负载均衡监听器ID</p>
+     * @param ListenerId <p>负载均衡监听器ID</p>
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get 负载均衡监听器端口 
-     * @return ListenerPort 负载均衡监听器端口
+     * Get <p>负载均衡监听器端口</p> 
+     * @return ListenerPort <p>负载均衡监听器端口</p>
      */
     public Long getListenerPort() {
         return this.ListenerPort;
     }
 
     /**
-     * Set 负载均衡监听器端口
-     * @param ListenerPort 负载均衡监听器端口
+     * Set <p>负载均衡监听器端口</p>
+     * @param ListenerPort <p>负载均衡监听器端口</p>
      */
     public void setListenerPort(Long ListenerPort) {
         this.ListenerPort = ListenerPort;
     }
 
     /**
-     * Get 监听器后端转发端口 
-     * @return InstancePort 监听器后端转发端口
+     * Get <p>监听器后端转发端口</p> 
+     * @return InstancePort <p>监听器后端转发端口</p>
      */
     public Long getInstancePort() {
         return this.InstancePort;
     }
 
     /**
-     * Set 监听器后端转发端口
-     * @param InstancePort 监听器后端转发端口
+     * Set <p>监听器后端转发端口</p>
+     * @param InstancePort <p>监听器后端转发端口</p>
      */
     public void setInstancePort(Long InstancePort) {
         this.InstancePort = InstancePort;
     }
 
     /**
-     * Get 监听器名称 
-     * @return ListenerName 监听器名称
+     * Get <p>监听器名称</p> 
+     * @return ListenerName <p>监听器名称</p>
      */
     public String getListenerName() {
         return this.ListenerName;
     }
 
     /**
-     * Set 监听器名称
-     * @param ListenerName 监听器名称
+     * Set <p>监听器名称</p>
+     * @param ListenerName <p>监听器名称</p>
      */
     public void setListenerName(String ListenerName) {
         this.ListenerName = ListenerName;
     }
 
     /**
-     * Get 监听器协议类型 
-     * @return Protocol 监听器协议类型
+     * Get <p>监听器协议类型</p> 
+     * @return Protocol <p>监听器协议类型</p>
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 监听器协议类型
-     * @param Protocol 监听器协议类型
+     * Set <p>监听器协议类型</p>
+     * @param Protocol <p>监听器协议类型</p>
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 会话保持时间 
-     * @return SessionExpire 会话保持时间
+     * Get <p>会话保持时间</p> 
+     * @return SessionExpire <p>会话保持时间</p>
      */
     public Long getSessionExpire() {
         return this.SessionExpire;
     }
 
     /**
-     * Set 会话保持时间
-     * @param SessionExpire 会话保持时间
+     * Set <p>会话保持时间</p>
+     * @param SessionExpire <p>会话保持时间</p>
      */
     public void setSessionExpire(Long SessionExpire) {
         this.SessionExpire = SessionExpire;
     }
 
     /**
-     * Get 是否开启了健康检查：1（开启）、0（关闭） 
-     * @return HealthSwitch 是否开启了健康检查：1（开启）、0（关闭）
+     * Get <p>是否开启了健康检查：1（开启）、0（关闭）</p> 
+     * @return HealthSwitch <p>是否开启了健康检查：1（开启）、0（关闭）</p>
      */
     public Long getHealthSwitch() {
         return this.HealthSwitch;
     }
 
     /**
-     * Set 是否开启了健康检查：1（开启）、0（关闭）
-     * @param HealthSwitch 是否开启了健康检查：1（开启）、0（关闭）
+     * Set <p>是否开启了健康检查：1（开启）、0（关闭）</p>
+     * @param HealthSwitch <p>是否开启了健康检查：1（开启）、0（关闭）</p>
      */
     public void setHealthSwitch(Long HealthSwitch) {
         this.HealthSwitch = HealthSwitch;
     }
 
     /**
-     * Get 响应超时时间 
-     * @return TimeOut 响应超时时间
+     * Get <p>响应超时时间</p><p>单位：秒</p> 
+     * @return TimeOut <p>响应超时时间</p><p>单位：秒</p>
      */
     public Long getTimeOut() {
         return this.TimeOut;
     }
 
     /**
-     * Set 响应超时时间
-     * @param TimeOut 响应超时时间
+     * Set <p>响应超时时间</p><p>单位：秒</p>
+     * @param TimeOut <p>响应超时时间</p><p>单位：秒</p>
      */
     public void setTimeOut(Long TimeOut) {
         this.TimeOut = TimeOut;
     }
 
     /**
-     * Get 检查间隔 
-     * @return IntervalTime 检查间隔
+     * Get <p>检查间隔</p><p>单位：秒</p> 
+     * @return IntervalTime <p>检查间隔</p><p>单位：秒</p>
      */
     public Long getIntervalTime() {
         return this.IntervalTime;
     }
 
     /**
-     * Set 检查间隔
-     * @param IntervalTime 检查间隔
+     * Set <p>检查间隔</p><p>单位：秒</p>
+     * @param IntervalTime <p>检查间隔</p><p>单位：秒</p>
      */
     public void setIntervalTime(Long IntervalTime) {
         this.IntervalTime = IntervalTime;
     }
 
     /**
-     * Get 健康阈值 
-     * @return HealthNum 健康阈值
+     * Get <p>健康阈值</p> 
+     * @return HealthNum <p>健康阈值</p>
      */
     public Long getHealthNum() {
         return this.HealthNum;
     }
 
     /**
-     * Set 健康阈值
-     * @param HealthNum 健康阈值
+     * Set <p>健康阈值</p>
+     * @param HealthNum <p>健康阈值</p>
      */
     public void setHealthNum(Long HealthNum) {
         this.HealthNum = HealthNum;
     }
 
     /**
-     * Get 不健康阈值 
-     * @return UnhealthNum 不健康阈值
+     * Get <p>不健康阈值</p> 
+     * @return UnhealthNum <p>不健康阈值</p>
      */
     public Long getUnhealthNum() {
         return this.UnhealthNum;
     }
 
     /**
-     * Set 不健康阈值
-     * @param UnhealthNum 不健康阈值
+     * Set <p>不健康阈值</p>
+     * @param UnhealthNum <p>不健康阈值</p>
      */
     public void setUnhealthNum(Long UnhealthNum) {
         this.UnhealthNum = UnhealthNum;
     }
 
     /**
-     * Get 传统型公网负载均衡 监听器的请求均衡方法。空字符串或wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发，least_conn表示按最小连接数。 
-     * @return HttpHash 传统型公网负载均衡 监听器的请求均衡方法。空字符串或wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发，least_conn表示按最小连接数。
+     * Get <p>传统型公网负载均衡 监听器的请求均衡方法。空字符串或wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发，least_conn表示按最小连接数。</p> 
+     * @return HttpHash <p>传统型公网负载均衡 监听器的请求均衡方法。空字符串或wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发，least_conn表示按最小连接数。</p>
      */
     public String getHttpHash() {
         return this.HttpHash;
     }
 
     /**
-     * Set 传统型公网负载均衡 监听器的请求均衡方法。空字符串或wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发，least_conn表示按最小连接数。
-     * @param HttpHash 传统型公网负载均衡 监听器的请求均衡方法。空字符串或wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发，least_conn表示按最小连接数。
+     * Set <p>传统型公网负载均衡 监听器的请求均衡方法。空字符串或wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发，least_conn表示按最小连接数。</p>
+     * @param HttpHash <p>传统型公网负载均衡 监听器的请求均衡方法。空字符串或wrr 表示按权重轮询，ip_hash 表示根据访问的源 IP 进行一致性哈希方式来分发，least_conn表示按最小连接数。</p>
      */
     public void setHttpHash(String HttpHash) {
         this.HttpHash = HttpHash;
     }
 
     /**
-     * Get 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释 
-     * @return HttpCode 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释
+     * Get <p>传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释</p> 
+     * @return HttpCode <p>传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释</p>
      */
     public Long getHttpCode() {
         return this.HttpCode;
     }
 
     /**
-     * Set 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释
-     * @param HttpCode 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释
+     * Set <p>传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释</p>
+     * @param HttpCode <p>传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查返回码。具体可参考创建监听器中对该字段的解释</p>
      */
     public void setHttpCode(Long HttpCode) {
         this.HttpCode = HttpCode;
     }
 
     /**
-     * Get 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查路径 
-     * @return HttpCheckPath 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查路径
+     * Get <p>传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查路径</p> 
+     * @return HttpCheckPath <p>传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查路径</p>
      */
     public String getHttpCheckPath() {
         return this.HttpCheckPath;
     }
 
     /**
-     * Set 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查路径
-     * @param HttpCheckPath 传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查路径
+     * Set <p>传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查路径</p>
+     * @param HttpCheckPath <p>传统型公网负载均衡的 HTTP、HTTPS 监听器的健康检查路径</p>
      */
     public void setHttpCheckPath(String HttpCheckPath) {
         this.HttpCheckPath = HttpCheckPath;
     }
 
     /**
-     * Get 传统型公网负载均衡的 HTTPS 监听器的认证方式 
-     * @return SSLMode 传统型公网负载均衡的 HTTPS 监听器的认证方式
+     * Get <p>传统型公网负载均衡的 HTTPS 监听器的认证方式</p> 
+     * @return SSLMode <p>传统型公网负载均衡的 HTTPS 监听器的认证方式</p>
      */
     public String getSSLMode() {
         return this.SSLMode;
     }
 
     /**
-     * Set 传统型公网负载均衡的 HTTPS 监听器的认证方式
-     * @param SSLMode 传统型公网负载均衡的 HTTPS 监听器的认证方式
+     * Set <p>传统型公网负载均衡的 HTTPS 监听器的认证方式</p>
+     * @param SSLMode <p>传统型公网负载均衡的 HTTPS 监听器的认证方式</p>
      */
     public void setSSLMode(String SSLMode) {
         this.SSLMode = SSLMode;
     }
 
     /**
-     * Get 传统型公网负载均衡的 HTTPS 监听器的服务端证书 ID 
-     * @return CertId 传统型公网负载均衡的 HTTPS 监听器的服务端证书 ID
+     * Get <p>传统型公网负载均衡的 HTTPS 监听器的服务端证书 ID</p> 
+     * @return CertId <p>传统型公网负载均衡的 HTTPS 监听器的服务端证书 ID</p>
      */
     public String getCertId() {
         return this.CertId;
     }
 
     /**
-     * Set 传统型公网负载均衡的 HTTPS 监听器的服务端证书 ID
-     * @param CertId 传统型公网负载均衡的 HTTPS 监听器的服务端证书 ID
+     * Set <p>传统型公网负载均衡的 HTTPS 监听器的服务端证书 ID</p>
+     * @param CertId <p>传统型公网负载均衡的 HTTPS 监听器的服务端证书 ID</p>
      */
     public void setCertId(String CertId) {
         this.CertId = CertId;
     }
 
     /**
-     * Get 传统型公网负载均衡的 HTTPS 监听器的客户端证书 ID 
-     * @return CertCaId 传统型公网负载均衡的 HTTPS 监听器的客户端证书 ID
+     * Get <p>传统型公网负载均衡的 HTTPS 监听器的客户端证书 ID</p> 
+     * @return CertCaId <p>传统型公网负载均衡的 HTTPS 监听器的客户端证书 ID</p>
      */
     public String getCertCaId() {
         return this.CertCaId;
     }
 
     /**
-     * Set 传统型公网负载均衡的 HTTPS 监听器的客户端证书 ID
-     * @param CertCaId 传统型公网负载均衡的 HTTPS 监听器的客户端证书 ID
+     * Set <p>传统型公网负载均衡的 HTTPS 监听器的客户端证书 ID</p>
+     * @param CertCaId <p>传统型公网负载均衡的 HTTPS 监听器的客户端证书 ID</p>
      */
     public void setCertCaId(String CertCaId) {
         this.CertCaId = CertCaId;
     }
 
     /**
-     * Get 监听器的状态，0 表示创建中，1 表示运行中 
-     * @return Status 监听器的状态，0 表示创建中，1 表示运行中
+     * Get <p>监听器的状态，0 表示创建中，1 表示运行中</p> 
+     * @return Status <p>监听器的状态，0 表示创建中，1 表示运行中</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 监听器的状态，0 表示创建中，1 表示运行中
-     * @param Status 监听器的状态，0 表示创建中，1 表示运行中
+     * Set <p>监听器的状态，0 表示创建中，1 表示运行中</p>
+     * @param Status <p>监听器的状态，0 表示创建中，1 表示运行中</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;

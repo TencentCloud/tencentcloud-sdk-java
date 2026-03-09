@@ -31,7 +31,7 @@ public class Disk extends AbstractModel {
     private String DiskType;
 
     /**
-    * 云盘大小(G）
+    * 云盘大小 (G）
     */
     @SerializedName("DiskSize")
     @Expose
@@ -67,6 +67,22 @@ public class Disk extends AbstractModel {
     private String DiskId;
 
     /**
+    * 加密系统盘
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Encrypt")
+    @Expose
+    private String Encrypt;
+
+    /**
+    * 自定义 KMS ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KmsKeyId")
+    @Expose
+    private String KmsKeyId;
+
+    /**
      * Get 云盘类型 
      * @return DiskType 云盘类型
      */
@@ -83,16 +99,16 @@ public class Disk extends AbstractModel {
     }
 
     /**
-     * Get 云盘大小(G） 
-     * @return DiskSize 云盘大小(G）
+     * Get 云盘大小 (G） 
+     * @return DiskSize 云盘大小 (G）
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set 云盘大小(G）
-     * @param DiskSize 云盘大小(G）
+     * Set 云盘大小 (G）
+     * @param DiskSize 云盘大小 (G）
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
@@ -166,6 +182,46 @@ public class Disk extends AbstractModel {
         this.DiskId = DiskId;
     }
 
+    /**
+     * Get 加密系统盘
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Encrypt 加密系统盘
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEncrypt() {
+        return this.Encrypt;
+    }
+
+    /**
+     * Set 加密系统盘
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Encrypt 加密系统盘
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEncrypt(String Encrypt) {
+        this.Encrypt = Encrypt;
+    }
+
+    /**
+     * Get 自定义 KMS ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KmsKeyId 自定义 KMS ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getKmsKeyId() {
+        return this.KmsKeyId;
+    }
+
+    /**
+     * Set 自定义 KMS ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KmsKeyId 自定义 KMS ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKmsKeyId(String KmsKeyId) {
+        this.KmsKeyId = KmsKeyId;
+    }
+
     public Disk() {
     }
 
@@ -192,6 +248,12 @@ public class Disk extends AbstractModel {
         if (source.DiskId != null) {
             this.DiskId = new String(source.DiskId);
         }
+        if (source.Encrypt != null) {
+            this.Encrypt = new String(source.Encrypt);
+        }
+        if (source.KmsKeyId != null) {
+            this.KmsKeyId = new String(source.KmsKeyId);
+        }
     }
 
 
@@ -205,6 +267,8 @@ public class Disk extends AbstractModel {
         this.setParamSimple(map, prefix + "FileSystem", this.FileSystem);
         this.setParamSimple(map, prefix + "MountTarget", this.MountTarget);
         this.setParamSimple(map, prefix + "DiskId", this.DiskId);
+        this.setParamSimple(map, prefix + "Encrypt", this.Encrypt);
+        this.setParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
 
     }
 }

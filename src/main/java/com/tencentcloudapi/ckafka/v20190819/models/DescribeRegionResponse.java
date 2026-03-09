@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeRegionResponse extends AbstractModel {
 
     /**
-    * 返回地域枚举结果列表
+    * <p>返回地域枚举结果列表</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeRegionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回地域枚举结果列表 
-     * @return Result 返回地域枚举结果列表
+     * Get <p>返回地域枚举结果列表</p> 
+     * @return Result <p>返回地域枚举结果列表</p>
      */
     public Region [] getResult() {
         return this.Result;
     }
 
     /**
-     * Set 返回地域枚举结果列表
-     * @param Result 返回地域枚举结果列表
+     * Set <p>返回地域枚举结果列表</p>
+     * @param Result <p>返回地域枚举结果列表</p>
      */
     public void setResult(Region [] Result) {
         this.Result = Result;

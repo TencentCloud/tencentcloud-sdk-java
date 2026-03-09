@@ -24,18 +24,25 @@ import java.util.HashMap;
 public class DescribeJobRecordDetailsResponse extends AbstractModel {
 
     /**
-    * 总数
+    * <p>总数</p>
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * 数组
+    * <p>数组</p>
     */
     @SerializedName("List")
     @Expose
     private DisplayJobRecordDetail [] List;
+
+    /**
+    * <p>持股路径</p>
+    */
+    @SerializedName("EnterpriseEquityPath")
+    @Expose
+    private Equity [] EnterpriseEquityPath;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +52,51 @@ public class DescribeJobRecordDetailsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总数 
-     * @return Total 总数
+     * Get <p>总数</p> 
+     * @return Total <p>总数</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 总数
-     * @param Total 总数
+     * Set <p>总数</p>
+     * @param Total <p>总数</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 数组 
-     * @return List 数组
+     * Get <p>数组</p> 
+     * @return List <p>数组</p>
      */
     public DisplayJobRecordDetail [] getList() {
         return this.List;
     }
 
     /**
-     * Set 数组
-     * @param List 数组
+     * Set <p>数组</p>
+     * @param List <p>数组</p>
      */
     public void setList(DisplayJobRecordDetail [] List) {
         this.List = List;
+    }
+
+    /**
+     * Get <p>持股路径</p> 
+     * @return EnterpriseEquityPath <p>持股路径</p>
+     */
+    public Equity [] getEnterpriseEquityPath() {
+        return this.EnterpriseEquityPath;
+    }
+
+    /**
+     * Set <p>持股路径</p>
+     * @param EnterpriseEquityPath <p>持股路径</p>
+     */
+    public void setEnterpriseEquityPath(Equity [] EnterpriseEquityPath) {
+        this.EnterpriseEquityPath = EnterpriseEquityPath;
     }
 
     /**
@@ -109,6 +132,12 @@ public class DescribeJobRecordDetailsResponse extends AbstractModel {
                 this.List[i] = new DisplayJobRecordDetail(source.List[i]);
             }
         }
+        if (source.EnterpriseEquityPath != null) {
+            this.EnterpriseEquityPath = new Equity[source.EnterpriseEquityPath.length];
+            for (int i = 0; i < source.EnterpriseEquityPath.length; i++) {
+                this.EnterpriseEquityPath[i] = new Equity(source.EnterpriseEquityPath[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -121,6 +150,7 @@ public class DescribeJobRecordDetailsResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamArrayObj(map, prefix + "List.", this.List);
+        this.setParamArrayObj(map, prefix + "EnterpriseEquityPath.", this.EnterpriseEquityPath);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

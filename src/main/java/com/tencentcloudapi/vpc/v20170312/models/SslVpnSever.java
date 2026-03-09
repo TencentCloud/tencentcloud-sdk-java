@@ -172,6 +172,13 @@ public class SslVpnSever extends AbstractModel {
     private String SpName;
 
     /**
+    * DNS Server地址
+    */
+    @SerializedName("DnsServers")
+    @Expose
+    private DnsServers DnsServers;
+
+    /**
      * Get VPC实例ID. 
      * @return VpcId VPC实例ID.
      */
@@ -523,6 +530,22 @@ public class SslVpnSever extends AbstractModel {
         this.SpName = SpName;
     }
 
+    /**
+     * Get DNS Server地址 
+     * @return DnsServers DNS Server地址
+     */
+    public DnsServers getDnsServers() {
+        return this.DnsServers;
+    }
+
+    /**
+     * Set DNS Server地址
+     * @param DnsServers DNS Server地址
+     */
+    public void setDnsServers(DnsServers DnsServers) {
+        this.DnsServers = DnsServers;
+    }
+
     public SslVpnSever() {
     }
 
@@ -597,6 +620,9 @@ public class SslVpnSever extends AbstractModel {
         if (source.SpName != null) {
             this.SpName = new String(source.SpName);
         }
+        if (source.DnsServers != null) {
+            this.DnsServers = new DnsServers(source.DnsServers);
+        }
     }
 
 
@@ -624,6 +650,7 @@ public class SslVpnSever extends AbstractModel {
         this.setParamSimple(map, prefix + "AccessPolicyEnabled", this.AccessPolicyEnabled);
         this.setParamArrayObj(map, prefix + "AccessPolicy.", this.AccessPolicy);
         this.setParamSimple(map, prefix + "SpName", this.SpName);
+        this.setParamObj(map, prefix + "DnsServers.", this.DnsServers);
 
     }
 }

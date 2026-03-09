@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class MediaAiAnalysisFrameTagSegmentItem extends AbstractModel {
 
     /**
-    * 按帧标签起始的偏移时间。
+    * <p>按帧标签起始的偏移时间。</p><p>单位：秒</p>
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * 按帧标签结束的偏移时间。
+    * <p>按帧标签结束的偏移时间。</p><p>单位：秒</p>
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-    * 时间片段内的标签列表。
+    * <p>时间片段内的标签列表。</p>
     */
     @SerializedName("TagSet")
     @Expose
     private MediaAiAnalysisFrameTagItem [] TagSet;
 
     /**
-     * Get 按帧标签起始的偏移时间。 
-     * @return StartTimeOffset 按帧标签起始的偏移时间。
+     * Get <p>按帧标签起始的偏移时间。</p><p>单位：秒</p> 
+     * @return StartTimeOffset <p>按帧标签起始的偏移时间。</p><p>单位：秒</p>
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set 按帧标签起始的偏移时间。
-     * @param StartTimeOffset 按帧标签起始的偏移时间。
+     * Set <p>按帧标签起始的偏移时间。</p><p>单位：秒</p>
+     * @param StartTimeOffset <p>按帧标签起始的偏移时间。</p><p>单位：秒</p>
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get 按帧标签结束的偏移时间。 
-     * @return EndTimeOffset 按帧标签结束的偏移时间。
+     * Get <p>按帧标签结束的偏移时间。</p><p>单位：秒</p> 
+     * @return EndTimeOffset <p>按帧标签结束的偏移时间。</p><p>单位：秒</p>
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set 按帧标签结束的偏移时间。
-     * @param EndTimeOffset 按帧标签结束的偏移时间。
+     * Set <p>按帧标签结束的偏移时间。</p><p>单位：秒</p>
+     * @param EndTimeOffset <p>按帧标签结束的偏移时间。</p><p>单位：秒</p>
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
     }
 
     /**
-     * Get 时间片段内的标签列表。 
-     * @return TagSet 时间片段内的标签列表。
+     * Get <p>时间片段内的标签列表。</p> 
+     * @return TagSet <p>时间片段内的标签列表。</p>
      */
     public MediaAiAnalysisFrameTagItem [] getTagSet() {
         return this.TagSet;
     }
 
     /**
-     * Set 时间片段内的标签列表。
-     * @param TagSet 时间片段内的标签列表。
+     * Set <p>时间片段内的标签列表。</p>
+     * @param TagSet <p>时间片段内的标签列表。</p>
      */
     public void setTagSet(MediaAiAnalysisFrameTagItem [] TagSet) {
         this.TagSet = TagSet;

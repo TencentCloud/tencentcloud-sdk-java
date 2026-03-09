@@ -160,6 +160,17 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *创建中断会话的任务。
+     * @param req CreateMongoDBKillTaskRequest
+     * @return CreateMongoDBKillTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMongoDBKillTaskResponse CreateMongoDBKillTask(CreateMongoDBKillTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateMongoDBKillTask", CreateMongoDBKillTaskResponse.class);
+    }
+
+    /**
      *创建中止所有代理节点连接会话的异步任务。当前仅支持 Redis。得到的返回值为异步任务 id，可以作为参数传入接口 DescribeProxySessionKillTasks 查询kill会话任务执行状态。
      * @param req CreateProxySessionKillTaskRequest
      * @return CreateProxySessionKillTaskResponse

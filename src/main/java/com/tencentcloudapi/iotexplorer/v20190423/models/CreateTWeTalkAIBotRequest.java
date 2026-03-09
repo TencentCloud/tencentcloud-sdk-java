@@ -87,6 +87,27 @@ public class CreateTWeTalkAIBotRequest extends AbstractModel {
     private String CustomTools;
 
     /**
+    * WebHook工具配置(JSON字符串格式)
+    */
+    @SerializedName("WebhookTools")
+    @Expose
+    private String WebhookTools;
+
+    /**
+    * 智能体模板类型
+    */
+    @SerializedName("BotType")
+    @Expose
+    private String BotType;
+
+    /**
+    * 知识库相关配置(JSON字符串格式)
+    */
+    @SerializedName("RAGConfig")
+    @Expose
+    private String RAGConfig;
+
+    /**
      * Get 产品ID 
      * @return Name 产品ID
      */
@@ -230,6 +251,54 @@ public class CreateTWeTalkAIBotRequest extends AbstractModel {
         this.CustomTools = CustomTools;
     }
 
+    /**
+     * Get WebHook工具配置(JSON字符串格式) 
+     * @return WebhookTools WebHook工具配置(JSON字符串格式)
+     */
+    public String getWebhookTools() {
+        return this.WebhookTools;
+    }
+
+    /**
+     * Set WebHook工具配置(JSON字符串格式)
+     * @param WebhookTools WebHook工具配置(JSON字符串格式)
+     */
+    public void setWebhookTools(String WebhookTools) {
+        this.WebhookTools = WebhookTools;
+    }
+
+    /**
+     * Get 智能体模板类型 
+     * @return BotType 智能体模板类型
+     */
+    public String getBotType() {
+        return this.BotType;
+    }
+
+    /**
+     * Set 智能体模板类型
+     * @param BotType 智能体模板类型
+     */
+    public void setBotType(String BotType) {
+        this.BotType = BotType;
+    }
+
+    /**
+     * Get 知识库相关配置(JSON字符串格式) 
+     * @return RAGConfig 知识库相关配置(JSON字符串格式)
+     */
+    public String getRAGConfig() {
+        return this.RAGConfig;
+    }
+
+    /**
+     * Set 知识库相关配置(JSON字符串格式)
+     * @param RAGConfig 知识库相关配置(JSON字符串格式)
+     */
+    public void setRAGConfig(String RAGConfig) {
+        this.RAGConfig = RAGConfig;
+    }
+
     public CreateTWeTalkAIBotRequest() {
     }
 
@@ -265,6 +334,15 @@ public class CreateTWeTalkAIBotRequest extends AbstractModel {
         if (source.CustomTools != null) {
             this.CustomTools = new String(source.CustomTools);
         }
+        if (source.WebhookTools != null) {
+            this.WebhookTools = new String(source.WebhookTools);
+        }
+        if (source.BotType != null) {
+            this.BotType = new String(source.BotType);
+        }
+        if (source.RAGConfig != null) {
+            this.RAGConfig = new String(source.RAGConfig);
+        }
     }
 
 
@@ -281,6 +359,9 @@ public class CreateTWeTalkAIBotRequest extends AbstractModel {
         this.setParamObj(map, prefix + "AgentConfig.", this.AgentConfig);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "CustomTools", this.CustomTools);
+        this.setParamSimple(map, prefix + "WebhookTools", this.WebhookTools);
+        this.setParamSimple(map, prefix + "BotType", this.BotType);
+        this.setParamSimple(map, prefix + "RAGConfig", this.RAGConfig);
 
     }
 }

@@ -24,437 +24,437 @@ import java.util.HashMap;
 public class ModifyTopicAttributesRequest extends AbstractModel {
 
     /**
-    * ckafka集群实例Id
+    * <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 主题名
+    * <p>主题名</p>
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-    * 主题备注，是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线-。
+    * <p>主题备注</p><p>入参限制：不超过64个字符</p><p>默认值：&quot;&quot;</p>
     */
     @SerializedName("Note")
     @Expose
     private String Note;
 
     /**
-    * IP 白名单开关，1：打开；0：关闭。
+    * <p>IP 白名单开关，1：打开；0：关闭。</p>
     */
     @SerializedName("EnableWhiteList")
     @Expose
     private Long EnableWhiteList;
 
     /**
-    * 默认为1。
+    * <p>最小同步副本数</p><p>默认值：1</p><p>最小值为1</p>
     */
     @SerializedName("MinInsyncReplicas")
     @Expose
     private Long MinInsyncReplicas;
 
     /**
-    * 默认为 0，0：false；1：true。
+    * <p>是否允许未同步的副本选为leader</p><p>枚举值：</p><ul><li>0： 不允许</li><li>1： 允许</li></ul><p>默认值：0</p>
     */
     @SerializedName("UncleanLeaderElectionEnable")
     @Expose
     private Long UncleanLeaderElectionEnable;
 
     /**
-    * 消息保留时间，单位：ms，当前最小值为60000ms。
+    * <p>Segment分片滚动的时长</p><p>单位：毫秒</p><p>默认值：86400000</p><p>最小值为86400000ms（1天）</p>
     */
     @SerializedName("RetentionMs")
     @Expose
     private Long RetentionMs;
 
     /**
-    * 主题消息最大值，单位为 Byte，最大值为12582912Byte（即12MB）。
+    * <p>主题消息最大值</p><p>取值范围：[1024, 12582912]</p><p>单位：Bytes</p>
     */
     @SerializedName("MaxMessageBytes")
     @Expose
     private Long MaxMessageBytes;
 
     /**
-    * Segment 分片滚动的时长，单位：ms，当前最小值86400000ms。
+    * <p>Segment 分片滚动的时长</p><p>单位：毫秒</p><p>最小值为86400000ms（1天）</p>
     */
     @SerializedName("SegmentMs")
     @Expose
     private Long SegmentMs;
 
     /**
-    * 消息删除策略，可以选择delete 或者compact
+    * <p>消息删除策略，可以选择delete 或者compact</p>
     */
     @SerializedName("CleanUpPolicy")
     @Expose
     private String CleanUpPolicy;
 
     /**
-    * Ip白名单列表，配额限制，enableWhileList=1时必选
+    * <p>Ip白名单列表，配额限制，enableWhileList=1时必选</p>
     */
     @SerializedName("IpWhiteList")
     @Expose
     private String [] IpWhiteList;
 
     /**
-    * 预设ACL规则, 1:打开  0:关闭，默认不打开
+    * <p>预设ACL规则, 1:打开  0:关闭，默认不打开</p>
     */
     @SerializedName("EnableAclRule")
     @Expose
     private Long EnableAclRule;
 
     /**
-    * ACL规则名
+    * <p>ACL规则名</p>
     */
     @SerializedName("AclRuleName")
     @Expose
     private String AclRuleName;
 
     /**
-    * 可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B
+    * <p>可选, 保留文件大小</p><p>取值范围：[1073741824, 1099511627776]</p><p>单位：Bytes</p><p>默认值：-1</p><p>特殊值：-1表示无限制</p>
     */
     @SerializedName("RetentionBytes")
     @Expose
     private Long RetentionBytes;
 
     /**
-    * 标签列表
+    * <p>标签列表</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 生产限流，单位 MB/s；设置为-1，则生产不限流
+    * <p>生产限流，单位 MB/s；设置为-1，则生产不限流</p>
     */
     @SerializedName("QuotaProducerByteRate")
     @Expose
     private Long QuotaProducerByteRate;
 
     /**
-    * 消费限流，单位 MB/s；设置为-1，则消费不限流
+    * <p>消费限流，单位 MB/s；设置为-1，则消费不限流</p>
     */
     @SerializedName("QuotaConsumerByteRate")
     @Expose
     private Long QuotaConsumerByteRate;
 
     /**
-    * topic副本数  最小值 1,最大值 3
+    * <p>topic副本数  最小值 1,最大值 3</p>
     */
     @SerializedName("ReplicaNum")
     @Expose
     private Long ReplicaNum;
 
     /**
-    * 消息保存的时间类型：CreateTime/LogAppendTime
+    * <p>消息保存的时间类型：CreateTime/LogAppendTime</p>
     */
     @SerializedName("LogMsgTimestampType")
     @Expose
     private String LogMsgTimestampType;
 
     /**
-     * Get ckafka集群实例Id 
-     * @return InstanceId ckafka集群实例Id
+     * Get <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p> 
+     * @return InstanceId <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ckafka集群实例Id
-     * @param InstanceId ckafka集群实例Id
+     * Set <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
+     * @param InstanceId <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 主题名 
-     * @return TopicName 主题名
+     * Get <p>主题名</p> 
+     * @return TopicName <p>主题名</p>
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set 主题名
-     * @param TopicName 主题名
+     * Set <p>主题名</p>
+     * @param TopicName <p>主题名</p>
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get 主题备注，是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线-。 
-     * @return Note 主题备注，是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线-。
+     * Get <p>主题备注</p><p>入参限制：不超过64个字符</p><p>默认值：&quot;&quot;</p> 
+     * @return Note <p>主题备注</p><p>入参限制：不超过64个字符</p><p>默认值：&quot;&quot;</p>
      */
     public String getNote() {
         return this.Note;
     }
 
     /**
-     * Set 主题备注，是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线-。
-     * @param Note 主题备注，是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线-。
+     * Set <p>主题备注</p><p>入参限制：不超过64个字符</p><p>默认值：&quot;&quot;</p>
+     * @param Note <p>主题备注</p><p>入参限制：不超过64个字符</p><p>默认值：&quot;&quot;</p>
      */
     public void setNote(String Note) {
         this.Note = Note;
     }
 
     /**
-     * Get IP 白名单开关，1：打开；0：关闭。 
-     * @return EnableWhiteList IP 白名单开关，1：打开；0：关闭。
+     * Get <p>IP 白名单开关，1：打开；0：关闭。</p> 
+     * @return EnableWhiteList <p>IP 白名单开关，1：打开；0：关闭。</p>
      */
     public Long getEnableWhiteList() {
         return this.EnableWhiteList;
     }
 
     /**
-     * Set IP 白名单开关，1：打开；0：关闭。
-     * @param EnableWhiteList IP 白名单开关，1：打开；0：关闭。
+     * Set <p>IP 白名单开关，1：打开；0：关闭。</p>
+     * @param EnableWhiteList <p>IP 白名单开关，1：打开；0：关闭。</p>
      */
     public void setEnableWhiteList(Long EnableWhiteList) {
         this.EnableWhiteList = EnableWhiteList;
     }
 
     /**
-     * Get 默认为1。 
-     * @return MinInsyncReplicas 默认为1。
+     * Get <p>最小同步副本数</p><p>默认值：1</p><p>最小值为1</p> 
+     * @return MinInsyncReplicas <p>最小同步副本数</p><p>默认值：1</p><p>最小值为1</p>
      */
     public Long getMinInsyncReplicas() {
         return this.MinInsyncReplicas;
     }
 
     /**
-     * Set 默认为1。
-     * @param MinInsyncReplicas 默认为1。
+     * Set <p>最小同步副本数</p><p>默认值：1</p><p>最小值为1</p>
+     * @param MinInsyncReplicas <p>最小同步副本数</p><p>默认值：1</p><p>最小值为1</p>
      */
     public void setMinInsyncReplicas(Long MinInsyncReplicas) {
         this.MinInsyncReplicas = MinInsyncReplicas;
     }
 
     /**
-     * Get 默认为 0，0：false；1：true。 
-     * @return UncleanLeaderElectionEnable 默认为 0，0：false；1：true。
+     * Get <p>是否允许未同步的副本选为leader</p><p>枚举值：</p><ul><li>0： 不允许</li><li>1： 允许</li></ul><p>默认值：0</p> 
+     * @return UncleanLeaderElectionEnable <p>是否允许未同步的副本选为leader</p><p>枚举值：</p><ul><li>0： 不允许</li><li>1： 允许</li></ul><p>默认值：0</p>
      */
     public Long getUncleanLeaderElectionEnable() {
         return this.UncleanLeaderElectionEnable;
     }
 
     /**
-     * Set 默认为 0，0：false；1：true。
-     * @param UncleanLeaderElectionEnable 默认为 0，0：false；1：true。
+     * Set <p>是否允许未同步的副本选为leader</p><p>枚举值：</p><ul><li>0： 不允许</li><li>1： 允许</li></ul><p>默认值：0</p>
+     * @param UncleanLeaderElectionEnable <p>是否允许未同步的副本选为leader</p><p>枚举值：</p><ul><li>0： 不允许</li><li>1： 允许</li></ul><p>默认值：0</p>
      */
     public void setUncleanLeaderElectionEnable(Long UncleanLeaderElectionEnable) {
         this.UncleanLeaderElectionEnable = UncleanLeaderElectionEnable;
     }
 
     /**
-     * Get 消息保留时间，单位：ms，当前最小值为60000ms。 
-     * @return RetentionMs 消息保留时间，单位：ms，当前最小值为60000ms。
+     * Get <p>Segment分片滚动的时长</p><p>单位：毫秒</p><p>默认值：86400000</p><p>最小值为86400000ms（1天）</p> 
+     * @return RetentionMs <p>Segment分片滚动的时长</p><p>单位：毫秒</p><p>默认值：86400000</p><p>最小值为86400000ms（1天）</p>
      */
     public Long getRetentionMs() {
         return this.RetentionMs;
     }
 
     /**
-     * Set 消息保留时间，单位：ms，当前最小值为60000ms。
-     * @param RetentionMs 消息保留时间，单位：ms，当前最小值为60000ms。
+     * Set <p>Segment分片滚动的时长</p><p>单位：毫秒</p><p>默认值：86400000</p><p>最小值为86400000ms（1天）</p>
+     * @param RetentionMs <p>Segment分片滚动的时长</p><p>单位：毫秒</p><p>默认值：86400000</p><p>最小值为86400000ms（1天）</p>
      */
     public void setRetentionMs(Long RetentionMs) {
         this.RetentionMs = RetentionMs;
     }
 
     /**
-     * Get 主题消息最大值，单位为 Byte，最大值为12582912Byte（即12MB）。 
-     * @return MaxMessageBytes 主题消息最大值，单位为 Byte，最大值为12582912Byte（即12MB）。
+     * Get <p>主题消息最大值</p><p>取值范围：[1024, 12582912]</p><p>单位：Bytes</p> 
+     * @return MaxMessageBytes <p>主题消息最大值</p><p>取值范围：[1024, 12582912]</p><p>单位：Bytes</p>
      */
     public Long getMaxMessageBytes() {
         return this.MaxMessageBytes;
     }
 
     /**
-     * Set 主题消息最大值，单位为 Byte，最大值为12582912Byte（即12MB）。
-     * @param MaxMessageBytes 主题消息最大值，单位为 Byte，最大值为12582912Byte（即12MB）。
+     * Set <p>主题消息最大值</p><p>取值范围：[1024, 12582912]</p><p>单位：Bytes</p>
+     * @param MaxMessageBytes <p>主题消息最大值</p><p>取值范围：[1024, 12582912]</p><p>单位：Bytes</p>
      */
     public void setMaxMessageBytes(Long MaxMessageBytes) {
         this.MaxMessageBytes = MaxMessageBytes;
     }
 
     /**
-     * Get Segment 分片滚动的时长，单位：ms，当前最小值86400000ms。 
-     * @return SegmentMs Segment 分片滚动的时长，单位：ms，当前最小值86400000ms。
+     * Get <p>Segment 分片滚动的时长</p><p>单位：毫秒</p><p>最小值为86400000ms（1天）</p> 
+     * @return SegmentMs <p>Segment 分片滚动的时长</p><p>单位：毫秒</p><p>最小值为86400000ms（1天）</p>
      */
     public Long getSegmentMs() {
         return this.SegmentMs;
     }
 
     /**
-     * Set Segment 分片滚动的时长，单位：ms，当前最小值86400000ms。
-     * @param SegmentMs Segment 分片滚动的时长，单位：ms，当前最小值86400000ms。
+     * Set <p>Segment 分片滚动的时长</p><p>单位：毫秒</p><p>最小值为86400000ms（1天）</p>
+     * @param SegmentMs <p>Segment 分片滚动的时长</p><p>单位：毫秒</p><p>最小值为86400000ms（1天）</p>
      */
     public void setSegmentMs(Long SegmentMs) {
         this.SegmentMs = SegmentMs;
     }
 
     /**
-     * Get 消息删除策略，可以选择delete 或者compact 
-     * @return CleanUpPolicy 消息删除策略，可以选择delete 或者compact
+     * Get <p>消息删除策略，可以选择delete 或者compact</p> 
+     * @return CleanUpPolicy <p>消息删除策略，可以选择delete 或者compact</p>
      */
     public String getCleanUpPolicy() {
         return this.CleanUpPolicy;
     }
 
     /**
-     * Set 消息删除策略，可以选择delete 或者compact
-     * @param CleanUpPolicy 消息删除策略，可以选择delete 或者compact
+     * Set <p>消息删除策略，可以选择delete 或者compact</p>
+     * @param CleanUpPolicy <p>消息删除策略，可以选择delete 或者compact</p>
      */
     public void setCleanUpPolicy(String CleanUpPolicy) {
         this.CleanUpPolicy = CleanUpPolicy;
     }
 
     /**
-     * Get Ip白名单列表，配额限制，enableWhileList=1时必选 
-     * @return IpWhiteList Ip白名单列表，配额限制，enableWhileList=1时必选
+     * Get <p>Ip白名单列表，配额限制，enableWhileList=1时必选</p> 
+     * @return IpWhiteList <p>Ip白名单列表，配额限制，enableWhileList=1时必选</p>
      */
     public String [] getIpWhiteList() {
         return this.IpWhiteList;
     }
 
     /**
-     * Set Ip白名单列表，配额限制，enableWhileList=1时必选
-     * @param IpWhiteList Ip白名单列表，配额限制，enableWhileList=1时必选
+     * Set <p>Ip白名单列表，配额限制，enableWhileList=1时必选</p>
+     * @param IpWhiteList <p>Ip白名单列表，配额限制，enableWhileList=1时必选</p>
      */
     public void setIpWhiteList(String [] IpWhiteList) {
         this.IpWhiteList = IpWhiteList;
     }
 
     /**
-     * Get 预设ACL规则, 1:打开  0:关闭，默认不打开 
-     * @return EnableAclRule 预设ACL规则, 1:打开  0:关闭，默认不打开
+     * Get <p>预设ACL规则, 1:打开  0:关闭，默认不打开</p> 
+     * @return EnableAclRule <p>预设ACL规则, 1:打开  0:关闭，默认不打开</p>
      */
     public Long getEnableAclRule() {
         return this.EnableAclRule;
     }
 
     /**
-     * Set 预设ACL规则, 1:打开  0:关闭，默认不打开
-     * @param EnableAclRule 预设ACL规则, 1:打开  0:关闭，默认不打开
+     * Set <p>预设ACL规则, 1:打开  0:关闭，默认不打开</p>
+     * @param EnableAclRule <p>预设ACL规则, 1:打开  0:关闭，默认不打开</p>
      */
     public void setEnableAclRule(Long EnableAclRule) {
         this.EnableAclRule = EnableAclRule;
     }
 
     /**
-     * Get ACL规则名 
-     * @return AclRuleName ACL规则名
+     * Get <p>ACL规则名</p> 
+     * @return AclRuleName <p>ACL规则名</p>
      */
     public String getAclRuleName() {
         return this.AclRuleName;
     }
 
     /**
-     * Set ACL规则名
-     * @param AclRuleName ACL规则名
+     * Set <p>ACL规则名</p>
+     * @param AclRuleName <p>ACL规则名</p>
      */
     public void setAclRuleName(String AclRuleName) {
         this.AclRuleName = AclRuleName;
     }
 
     /**
-     * Get 可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B 
-     * @return RetentionBytes 可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B
+     * Get <p>可选, 保留文件大小</p><p>取值范围：[1073741824, 1099511627776]</p><p>单位：Bytes</p><p>默认值：-1</p><p>特殊值：-1表示无限制</p> 
+     * @return RetentionBytes <p>可选, 保留文件大小</p><p>取值范围：[1073741824, 1099511627776]</p><p>单位：Bytes</p><p>默认值：-1</p><p>特殊值：-1表示无限制</p>
      */
     public Long getRetentionBytes() {
         return this.RetentionBytes;
     }
 
     /**
-     * Set 可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B
-     * @param RetentionBytes 可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B
+     * Set <p>可选, 保留文件大小</p><p>取值范围：[1073741824, 1099511627776]</p><p>单位：Bytes</p><p>默认值：-1</p><p>特殊值：-1表示无限制</p>
+     * @param RetentionBytes <p>可选, 保留文件大小</p><p>取值范围：[1073741824, 1099511627776]</p><p>单位：Bytes</p><p>默认值：-1</p><p>特殊值：-1表示无限制</p>
      */
     public void setRetentionBytes(Long RetentionBytes) {
         this.RetentionBytes = RetentionBytes;
     }
 
     /**
-     * Get 标签列表 
-     * @return Tags 标签列表
+     * Get <p>标签列表</p> 
+     * @return Tags <p>标签列表</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签列表
-     * @param Tags 标签列表
+     * Set <p>标签列表</p>
+     * @param Tags <p>标签列表</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 生产限流，单位 MB/s；设置为-1，则生产不限流 
-     * @return QuotaProducerByteRate 生产限流，单位 MB/s；设置为-1，则生产不限流
+     * Get <p>生产限流，单位 MB/s；设置为-1，则生产不限流</p> 
+     * @return QuotaProducerByteRate <p>生产限流，单位 MB/s；设置为-1，则生产不限流</p>
      */
     public Long getQuotaProducerByteRate() {
         return this.QuotaProducerByteRate;
     }
 
     /**
-     * Set 生产限流，单位 MB/s；设置为-1，则生产不限流
-     * @param QuotaProducerByteRate 生产限流，单位 MB/s；设置为-1，则生产不限流
+     * Set <p>生产限流，单位 MB/s；设置为-1，则生产不限流</p>
+     * @param QuotaProducerByteRate <p>生产限流，单位 MB/s；设置为-1，则生产不限流</p>
      */
     public void setQuotaProducerByteRate(Long QuotaProducerByteRate) {
         this.QuotaProducerByteRate = QuotaProducerByteRate;
     }
 
     /**
-     * Get 消费限流，单位 MB/s；设置为-1，则消费不限流 
-     * @return QuotaConsumerByteRate 消费限流，单位 MB/s；设置为-1，则消费不限流
+     * Get <p>消费限流，单位 MB/s；设置为-1，则消费不限流</p> 
+     * @return QuotaConsumerByteRate <p>消费限流，单位 MB/s；设置为-1，则消费不限流</p>
      */
     public Long getQuotaConsumerByteRate() {
         return this.QuotaConsumerByteRate;
     }
 
     /**
-     * Set 消费限流，单位 MB/s；设置为-1，则消费不限流
-     * @param QuotaConsumerByteRate 消费限流，单位 MB/s；设置为-1，则消费不限流
+     * Set <p>消费限流，单位 MB/s；设置为-1，则消费不限流</p>
+     * @param QuotaConsumerByteRate <p>消费限流，单位 MB/s；设置为-1，则消费不限流</p>
      */
     public void setQuotaConsumerByteRate(Long QuotaConsumerByteRate) {
         this.QuotaConsumerByteRate = QuotaConsumerByteRate;
     }
 
     /**
-     * Get topic副本数  最小值 1,最大值 3 
-     * @return ReplicaNum topic副本数  最小值 1,最大值 3
+     * Get <p>topic副本数  最小值 1,最大值 3</p> 
+     * @return ReplicaNum <p>topic副本数  最小值 1,最大值 3</p>
      */
     public Long getReplicaNum() {
         return this.ReplicaNum;
     }
 
     /**
-     * Set topic副本数  最小值 1,最大值 3
-     * @param ReplicaNum topic副本数  最小值 1,最大值 3
+     * Set <p>topic副本数  最小值 1,最大值 3</p>
+     * @param ReplicaNum <p>topic副本数  最小值 1,最大值 3</p>
      */
     public void setReplicaNum(Long ReplicaNum) {
         this.ReplicaNum = ReplicaNum;
     }
 
     /**
-     * Get 消息保存的时间类型：CreateTime/LogAppendTime 
-     * @return LogMsgTimestampType 消息保存的时间类型：CreateTime/LogAppendTime
+     * Get <p>消息保存的时间类型：CreateTime/LogAppendTime</p> 
+     * @return LogMsgTimestampType <p>消息保存的时间类型：CreateTime/LogAppendTime</p>
      */
     public String getLogMsgTimestampType() {
         return this.LogMsgTimestampType;
     }
 
     /**
-     * Set 消息保存的时间类型：CreateTime/LogAppendTime
-     * @param LogMsgTimestampType 消息保存的时间类型：CreateTime/LogAppendTime
+     * Set <p>消息保存的时间类型：CreateTime/LogAppendTime</p>
+     * @param LogMsgTimestampType <p>消息保存的时间类型：CreateTime/LogAppendTime</p>
      */
     public void setLogMsgTimestampType(String LogMsgTimestampType) {
         this.LogMsgTimestampType = LogMsgTimestampType;

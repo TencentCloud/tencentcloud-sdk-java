@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class FetchMessageListByOffsetRequest extends AbstractModel {
 
     /**
-    * ckafka集群实例Id
+    * <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 主题名
+    * <p>主题名</p>
     */
     @SerializedName("Topic")
     @Expose
     private String Topic;
 
     /**
-    * 分区id
+    * <p>分区id</p>
     */
     @SerializedName("Partition")
     @Expose
     private Long Partition;
 
     /**
-    * 位点信息
+    * <p>位点信息</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 最大查询条数，默认20，最大20
+    * <p>最大查询条数，默认20，最大20</p>
     */
     @SerializedName("SinglePartitionRecordNumber")
     @Expose
     private Long SinglePartitionRecordNumber;
 
     /**
-     * Get ckafka集群实例Id 
-     * @return InstanceId ckafka集群实例Id
+     * Get <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p> 
+     * @return InstanceId <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ckafka集群实例Id
-     * @param InstanceId ckafka集群实例Id
+     * Set <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
+     * @param InstanceId <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 主题名 
-     * @return Topic 主题名
+     * Get <p>主题名</p> 
+     * @return Topic <p>主题名</p>
      */
     public String getTopic() {
         return this.Topic;
     }
 
     /**
-     * Set 主题名
-     * @param Topic 主题名
+     * Set <p>主题名</p>
+     * @param Topic <p>主题名</p>
      */
     public void setTopic(String Topic) {
         this.Topic = Topic;
     }
 
     /**
-     * Get 分区id 
-     * @return Partition 分区id
+     * Get <p>分区id</p> 
+     * @return Partition <p>分区id</p>
      */
     public Long getPartition() {
         return this.Partition;
     }
 
     /**
-     * Set 分区id
-     * @param Partition 分区id
+     * Set <p>分区id</p>
+     * @param Partition <p>分区id</p>
      */
     public void setPartition(Long Partition) {
         this.Partition = Partition;
     }
 
     /**
-     * Get 位点信息 
-     * @return Offset 位点信息
+     * Get <p>位点信息</p> 
+     * @return Offset <p>位点信息</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 位点信息
-     * @param Offset 位点信息
+     * Set <p>位点信息</p>
+     * @param Offset <p>位点信息</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 最大查询条数，默认20，最大20 
-     * @return SinglePartitionRecordNumber 最大查询条数，默认20，最大20
+     * Get <p>最大查询条数，默认20，最大20</p> 
+     * @return SinglePartitionRecordNumber <p>最大查询条数，默认20，最大20</p>
      */
     public Long getSinglePartitionRecordNumber() {
         return this.SinglePartitionRecordNumber;
     }
 
     /**
-     * Set 最大查询条数，默认20，最大20
-     * @param SinglePartitionRecordNumber 最大查询条数，默认20，最大20
+     * Set <p>最大查询条数，默认20，最大20</p>
+     * @param SinglePartitionRecordNumber <p>最大查询条数，默认20，最大20</p>
      */
     public void setSinglePartitionRecordNumber(Long SinglePartitionRecordNumber) {
         this.SinglePartitionRecordNumber = SinglePartitionRecordNumber;

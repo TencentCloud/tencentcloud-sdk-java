@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeInstancesDetailResponse extends AbstractModel {
 
     /**
-    * 返回的实例详情结果对象
+    * <p>返回的实例详情结果对象</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeInstancesDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回的实例详情结果对象 
-     * @return Result 返回的实例详情结果对象
+     * Get <p>返回的实例详情结果对象</p> 
+     * @return Result <p>返回的实例详情结果对象</p>
      */
     public InstanceDetailResponse getResult() {
         return this.Result;
     }
 
     /**
-     * Set 返回的实例详情结果对象
-     * @param Result 返回的实例详情结果对象
+     * Set <p>返回的实例详情结果对象</p>
+     * @param Result <p>返回的实例详情结果对象</p>
      */
     public void setResult(InstanceDetailResponse Result) {
         this.Result = Result;

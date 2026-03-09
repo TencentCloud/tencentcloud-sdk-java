@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class MediaImageSpriteInfo extends AbstractModel {
 
     /**
-    * 雪碧图小图的高度。
+    * <p>雪碧图小图的高度。</p>
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * 雪碧图小图的宽度。
+    * <p>雪碧图小图的宽度。</p>
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * 雪碧图小图的总数量。
+    * <p>雪碧图小图的总数量。</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 截取雪碧图输出的地址。
+    * <p>截取雪碧图输出的地址。</p>
     */
     @SerializedName("ImageUrlSet")
     @Expose
     private String [] ImageUrlSet;
 
     /**
-    * 雪碧图子图位置与时间关系的 WebVtt 文件地址。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在雪碧大图里的坐标位置，一般被播放器用于实现预览。
+    * <p>雪碧图子图位置与时间关系的 WebVtt 文件地址。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在雪碧大图里的坐标位置，一般被播放器用于实现预览。</p>
     */
     @SerializedName("WebVttUrl")
     @Expose
     private String WebVttUrl;
 
     /**
-     * Get 雪碧图小图的高度。 
-     * @return Height 雪碧图小图的高度。
+     * Get <p>雪碧图小图的高度。</p> 
+     * @return Height <p>雪碧图小图的高度。</p>
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 雪碧图小图的高度。
-     * @param Height 雪碧图小图的高度。
+     * Set <p>雪碧图小图的高度。</p>
+     * @param Height <p>雪碧图小图的高度。</p>
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get 雪碧图小图的宽度。 
-     * @return Width 雪碧图小图的宽度。
+     * Get <p>雪碧图小图的宽度。</p> 
+     * @return Width <p>雪碧图小图的宽度。</p>
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 雪碧图小图的宽度。
-     * @param Width 雪碧图小图的宽度。
+     * Set <p>雪碧图小图的宽度。</p>
+     * @param Width <p>雪碧图小图的宽度。</p>
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 雪碧图小图的总数量。 
-     * @return TotalCount 雪碧图小图的总数量。
+     * Get <p>雪碧图小图的总数量。</p> 
+     * @return TotalCount <p>雪碧图小图的总数量。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 雪碧图小图的总数量。
-     * @param TotalCount 雪碧图小图的总数量。
+     * Set <p>雪碧图小图的总数量。</p>
+     * @param TotalCount <p>雪碧图小图的总数量。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 截取雪碧图输出的地址。 
-     * @return ImageUrlSet 截取雪碧图输出的地址。
+     * Get <p>截取雪碧图输出的地址。</p> 
+     * @return ImageUrlSet <p>截取雪碧图输出的地址。</p>
      */
     public String [] getImageUrlSet() {
         return this.ImageUrlSet;
     }
 
     /**
-     * Set 截取雪碧图输出的地址。
-     * @param ImageUrlSet 截取雪碧图输出的地址。
+     * Set <p>截取雪碧图输出的地址。</p>
+     * @param ImageUrlSet <p>截取雪碧图输出的地址。</p>
      */
     public void setImageUrlSet(String [] ImageUrlSet) {
         this.ImageUrlSet = ImageUrlSet;
     }
 
     /**
-     * Get 雪碧图子图位置与时间关系的 WebVtt 文件地址。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在雪碧大图里的坐标位置，一般被播放器用于实现预览。 
-     * @return WebVttUrl 雪碧图子图位置与时间关系的 WebVtt 文件地址。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在雪碧大图里的坐标位置，一般被播放器用于实现预览。
+     * Get <p>雪碧图子图位置与时间关系的 WebVtt 文件地址。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在雪碧大图里的坐标位置，一般被播放器用于实现预览。</p> 
+     * @return WebVttUrl <p>雪碧图子图位置与时间关系的 WebVtt 文件地址。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在雪碧大图里的坐标位置，一般被播放器用于实现预览。</p>
      */
     public String getWebVttUrl() {
         return this.WebVttUrl;
     }
 
     /**
-     * Set 雪碧图子图位置与时间关系的 WebVtt 文件地址。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在雪碧大图里的坐标位置，一般被播放器用于实现预览。
-     * @param WebVttUrl 雪碧图子图位置与时间关系的 WebVtt 文件地址。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在雪碧大图里的坐标位置，一般被播放器用于实现预览。
+     * Set <p>雪碧图子图位置与时间关系的 WebVtt 文件地址。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在雪碧大图里的坐标位置，一般被播放器用于实现预览。</p>
+     * @param WebVttUrl <p>雪碧图子图位置与时间关系的 WebVtt 文件地址。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在雪碧大图里的坐标位置，一般被播放器用于实现预览。</p>
      */
     public void setWebVttUrl(String WebVttUrl) {
         this.WebVttUrl = WebVttUrl;

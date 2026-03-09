@@ -24,339 +24,299 @@ import java.util.HashMap;
 public class OrganizationCommonInfo extends AbstractModel {
 
     /**
-    * 组织机构名称。
-请确认该名称与企业营业执照中注册的名称一致。
-如果名称中包含英文括号()，请使用中文括号（）代替。
+    * <p>组织机构名称。<br>请确认该名称与企业营业执照中注册的名称一致。<br>如果名称中包含英文括号()，请使用中文括号（）代替。</p>
     */
     @SerializedName("OrganizationName")
     @Expose
     private String OrganizationName;
 
     /**
-    * 组织机构企业统一社会信用代码。
-请确认该企业统一社会信用代码与企业营业执照中注册的统一社会信用代码一致。
+    * <p>组织机构企业统一社会信用代码。<br>请确认该企业统一社会信用代码与企业营业执照中注册的统一社会信用代码一致。</p>
     */
     @SerializedName("UniformSocialCreditCode")
     @Expose
     private String UniformSocialCreditCode;
 
     /**
-    * 组织机构法人的姓名。
-请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。
+    * <p>组织机构法人的姓名。<br>请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。</p>
     */
     @SerializedName("LegalName")
     @Expose
     private String LegalName;
 
     /**
-    * 组织机构法人的证件类型
+    * <p>组织机构法人的证件类型</p><p>枚举值：</p><ul><li>居民身份证： 中国大陆居民身份证</li></ul>
     */
     @SerializedName("LegalIdCardType")
     @Expose
     private String LegalIdCardType;
 
     /**
-    * 组织机构法人的证件号码
+    * <p>组织机构法人的证件号码</p>
     */
     @SerializedName("LegalIdCardNumber")
     @Expose
     private String LegalIdCardNumber;
 
     /**
-    * 组织机构超管姓名。
-
+    * <p>组织机构超管姓名。</p>
     */
     @SerializedName("AdminName")
     @Expose
     private String AdminName;
 
     /**
-    * 组织机构超管手机号。
-
+    * <p>组织机构超管手机号。</p>
     */
     @SerializedName("AdminMobile")
     @Expose
     private String AdminMobile;
 
     /**
-    * 组织机构超管证件类型
-
+    * <p>组织机构超管证件类型</p><p>枚举值：</p><ul><li>居民身份证： 中国大陆居民身份证</li></ul>
     */
     @SerializedName("AdminIdCardType")
     @Expose
     private String AdminIdCardType;
 
     /**
-    * 组织机构超管证件号码
-
+    * <p>组织机构超管证件号码</p>
     */
     @SerializedName("AdminIdCardNumber")
     @Expose
     private String AdminIdCardNumber;
 
     /**
-    * 原超管姓名
+    * <p>原超管姓名</p>
     */
     @SerializedName("OldAdminName")
     @Expose
     private String OldAdminName;
 
     /**
-    * 原超管手机号
+    * <p>原超管手机号</p>
     */
     @SerializedName("OldAdminMobile")
     @Expose
     private String OldAdminMobile;
 
     /**
-    * 原超管证件类型
+    * <p>原超管证件类型</p><p>枚举值：</p><ul><li>居民身份证： 中国大陆居民身份证</li></ul>
     */
     @SerializedName("OldAdminIdCardType")
     @Expose
     private String OldAdminIdCardType;
 
     /**
-    * 原超管证件号码
+    * <p>原超管证件号码</p>
     */
     @SerializedName("OldAdminIdCardNumber")
     @Expose
     private String OldAdminIdCardNumber;
 
     /**
-     * Get 组织机构名称。
-请确认该名称与企业营业执照中注册的名称一致。
-如果名称中包含英文括号()，请使用中文括号（）代替。 
-     * @return OrganizationName 组织机构名称。
-请确认该名称与企业营业执照中注册的名称一致。
-如果名称中包含英文括号()，请使用中文括号（）代替。
+     * Get <p>组织机构名称。<br>请确认该名称与企业营业执照中注册的名称一致。<br>如果名称中包含英文括号()，请使用中文括号（）代替。</p> 
+     * @return OrganizationName <p>组织机构名称。<br>请确认该名称与企业营业执照中注册的名称一致。<br>如果名称中包含英文括号()，请使用中文括号（）代替。</p>
      */
     public String getOrganizationName() {
         return this.OrganizationName;
     }
 
     /**
-     * Set 组织机构名称。
-请确认该名称与企业营业执照中注册的名称一致。
-如果名称中包含英文括号()，请使用中文括号（）代替。
-     * @param OrganizationName 组织机构名称。
-请确认该名称与企业营业执照中注册的名称一致。
-如果名称中包含英文括号()，请使用中文括号（）代替。
+     * Set <p>组织机构名称。<br>请确认该名称与企业营业执照中注册的名称一致。<br>如果名称中包含英文括号()，请使用中文括号（）代替。</p>
+     * @param OrganizationName <p>组织机构名称。<br>请确认该名称与企业营业执照中注册的名称一致。<br>如果名称中包含英文括号()，请使用中文括号（）代替。</p>
      */
     public void setOrganizationName(String OrganizationName) {
         this.OrganizationName = OrganizationName;
     }
 
     /**
-     * Get 组织机构企业统一社会信用代码。
-请确认该企业统一社会信用代码与企业营业执照中注册的统一社会信用代码一致。 
-     * @return UniformSocialCreditCode 组织机构企业统一社会信用代码。
-请确认该企业统一社会信用代码与企业营业执照中注册的统一社会信用代码一致。
+     * Get <p>组织机构企业统一社会信用代码。<br>请确认该企业统一社会信用代码与企业营业执照中注册的统一社会信用代码一致。</p> 
+     * @return UniformSocialCreditCode <p>组织机构企业统一社会信用代码。<br>请确认该企业统一社会信用代码与企业营业执照中注册的统一社会信用代码一致。</p>
      */
     public String getUniformSocialCreditCode() {
         return this.UniformSocialCreditCode;
     }
 
     /**
-     * Set 组织机构企业统一社会信用代码。
-请确认该企业统一社会信用代码与企业营业执照中注册的统一社会信用代码一致。
-     * @param UniformSocialCreditCode 组织机构企业统一社会信用代码。
-请确认该企业统一社会信用代码与企业营业执照中注册的统一社会信用代码一致。
+     * Set <p>组织机构企业统一社会信用代码。<br>请确认该企业统一社会信用代码与企业营业执照中注册的统一社会信用代码一致。</p>
+     * @param UniformSocialCreditCode <p>组织机构企业统一社会信用代码。<br>请确认该企业统一社会信用代码与企业营业执照中注册的统一社会信用代码一致。</p>
      */
     public void setUniformSocialCreditCode(String UniformSocialCreditCode) {
         this.UniformSocialCreditCode = UniformSocialCreditCode;
     }
 
     /**
-     * Get 组织机构法人的姓名。
-请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。 
-     * @return LegalName 组织机构法人的姓名。
-请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。
+     * Get <p>组织机构法人的姓名。<br>请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。</p> 
+     * @return LegalName <p>组织机构法人的姓名。<br>请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。</p>
      */
     public String getLegalName() {
         return this.LegalName;
     }
 
     /**
-     * Set 组织机构法人的姓名。
-请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。
-     * @param LegalName 组织机构法人的姓名。
-请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。
+     * Set <p>组织机构法人的姓名。<br>请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。</p>
+     * @param LegalName <p>组织机构法人的姓名。<br>请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。</p>
      */
     public void setLegalName(String LegalName) {
         this.LegalName = LegalName;
     }
 
     /**
-     * Get 组织机构法人的证件类型 
-     * @return LegalIdCardType 组织机构法人的证件类型
+     * Get <p>组织机构法人的证件类型</p><p>枚举值：</p><ul><li>居民身份证： 中国大陆居民身份证</li></ul> 
+     * @return LegalIdCardType <p>组织机构法人的证件类型</p><p>枚举值：</p><ul><li>居民身份证： 中国大陆居民身份证</li></ul>
      */
     public String getLegalIdCardType() {
         return this.LegalIdCardType;
     }
 
     /**
-     * Set 组织机构法人的证件类型
-     * @param LegalIdCardType 组织机构法人的证件类型
+     * Set <p>组织机构法人的证件类型</p><p>枚举值：</p><ul><li>居民身份证： 中国大陆居民身份证</li></ul>
+     * @param LegalIdCardType <p>组织机构法人的证件类型</p><p>枚举值：</p><ul><li>居民身份证： 中国大陆居民身份证</li></ul>
      */
     public void setLegalIdCardType(String LegalIdCardType) {
         this.LegalIdCardType = LegalIdCardType;
     }
 
     /**
-     * Get 组织机构法人的证件号码 
-     * @return LegalIdCardNumber 组织机构法人的证件号码
+     * Get <p>组织机构法人的证件号码</p> 
+     * @return LegalIdCardNumber <p>组织机构法人的证件号码</p>
      */
     public String getLegalIdCardNumber() {
         return this.LegalIdCardNumber;
     }
 
     /**
-     * Set 组织机构法人的证件号码
-     * @param LegalIdCardNumber 组织机构法人的证件号码
+     * Set <p>组织机构法人的证件号码</p>
+     * @param LegalIdCardNumber <p>组织机构法人的证件号码</p>
      */
     public void setLegalIdCardNumber(String LegalIdCardNumber) {
         this.LegalIdCardNumber = LegalIdCardNumber;
     }
 
     /**
-     * Get 组织机构超管姓名。
- 
-     * @return AdminName 组织机构超管姓名。
-
+     * Get <p>组织机构超管姓名。</p> 
+     * @return AdminName <p>组织机构超管姓名。</p>
      */
     public String getAdminName() {
         return this.AdminName;
     }
 
     /**
-     * Set 组织机构超管姓名。
-
-     * @param AdminName 组织机构超管姓名。
-
+     * Set <p>组织机构超管姓名。</p>
+     * @param AdminName <p>组织机构超管姓名。</p>
      */
     public void setAdminName(String AdminName) {
         this.AdminName = AdminName;
     }
 
     /**
-     * Get 组织机构超管手机号。
- 
-     * @return AdminMobile 组织机构超管手机号。
-
+     * Get <p>组织机构超管手机号。</p> 
+     * @return AdminMobile <p>组织机构超管手机号。</p>
      */
     public String getAdminMobile() {
         return this.AdminMobile;
     }
 
     /**
-     * Set 组织机构超管手机号。
-
-     * @param AdminMobile 组织机构超管手机号。
-
+     * Set <p>组织机构超管手机号。</p>
+     * @param AdminMobile <p>组织机构超管手机号。</p>
      */
     public void setAdminMobile(String AdminMobile) {
         this.AdminMobile = AdminMobile;
     }
 
     /**
-     * Get 组织机构超管证件类型
- 
-     * @return AdminIdCardType 组织机构超管证件类型
-
+     * Get <p>组织机构超管证件类型</p><p>枚举值：</p><ul><li>居民身份证： 中国大陆居民身份证</li></ul> 
+     * @return AdminIdCardType <p>组织机构超管证件类型</p><p>枚举值：</p><ul><li>居民身份证： 中国大陆居民身份证</li></ul>
      */
     public String getAdminIdCardType() {
         return this.AdminIdCardType;
     }
 
     /**
-     * Set 组织机构超管证件类型
-
-     * @param AdminIdCardType 组织机构超管证件类型
-
+     * Set <p>组织机构超管证件类型</p><p>枚举值：</p><ul><li>居民身份证： 中国大陆居民身份证</li></ul>
+     * @param AdminIdCardType <p>组织机构超管证件类型</p><p>枚举值：</p><ul><li>居民身份证： 中国大陆居民身份证</li></ul>
      */
     public void setAdminIdCardType(String AdminIdCardType) {
         this.AdminIdCardType = AdminIdCardType;
     }
 
     /**
-     * Get 组织机构超管证件号码
- 
-     * @return AdminIdCardNumber 组织机构超管证件号码
-
+     * Get <p>组织机构超管证件号码</p> 
+     * @return AdminIdCardNumber <p>组织机构超管证件号码</p>
      */
     public String getAdminIdCardNumber() {
         return this.AdminIdCardNumber;
     }
 
     /**
-     * Set 组织机构超管证件号码
-
-     * @param AdminIdCardNumber 组织机构超管证件号码
-
+     * Set <p>组织机构超管证件号码</p>
+     * @param AdminIdCardNumber <p>组织机构超管证件号码</p>
      */
     public void setAdminIdCardNumber(String AdminIdCardNumber) {
         this.AdminIdCardNumber = AdminIdCardNumber;
     }
 
     /**
-     * Get 原超管姓名 
-     * @return OldAdminName 原超管姓名
+     * Get <p>原超管姓名</p> 
+     * @return OldAdminName <p>原超管姓名</p>
      */
     public String getOldAdminName() {
         return this.OldAdminName;
     }
 
     /**
-     * Set 原超管姓名
-     * @param OldAdminName 原超管姓名
+     * Set <p>原超管姓名</p>
+     * @param OldAdminName <p>原超管姓名</p>
      */
     public void setOldAdminName(String OldAdminName) {
         this.OldAdminName = OldAdminName;
     }
 
     /**
-     * Get 原超管手机号 
-     * @return OldAdminMobile 原超管手机号
+     * Get <p>原超管手机号</p> 
+     * @return OldAdminMobile <p>原超管手机号</p>
      */
     public String getOldAdminMobile() {
         return this.OldAdminMobile;
     }
 
     /**
-     * Set 原超管手机号
-     * @param OldAdminMobile 原超管手机号
+     * Set <p>原超管手机号</p>
+     * @param OldAdminMobile <p>原超管手机号</p>
      */
     public void setOldAdminMobile(String OldAdminMobile) {
         this.OldAdminMobile = OldAdminMobile;
     }
 
     /**
-     * Get 原超管证件类型 
-     * @return OldAdminIdCardType 原超管证件类型
+     * Get <p>原超管证件类型</p><p>枚举值：</p><ul><li>居民身份证： 中国大陆居民身份证</li></ul> 
+     * @return OldAdminIdCardType <p>原超管证件类型</p><p>枚举值：</p><ul><li>居民身份证： 中国大陆居民身份证</li></ul>
      */
     public String getOldAdminIdCardType() {
         return this.OldAdminIdCardType;
     }
 
     /**
-     * Set 原超管证件类型
-     * @param OldAdminIdCardType 原超管证件类型
+     * Set <p>原超管证件类型</p><p>枚举值：</p><ul><li>居民身份证： 中国大陆居民身份证</li></ul>
+     * @param OldAdminIdCardType <p>原超管证件类型</p><p>枚举值：</p><ul><li>居民身份证： 中国大陆居民身份证</li></ul>
      */
     public void setOldAdminIdCardType(String OldAdminIdCardType) {
         this.OldAdminIdCardType = OldAdminIdCardType;
     }
 
     /**
-     * Get 原超管证件号码 
-     * @return OldAdminIdCardNumber 原超管证件号码
+     * Get <p>原超管证件号码</p> 
+     * @return OldAdminIdCardNumber <p>原超管证件号码</p>
      */
     public String getOldAdminIdCardNumber() {
         return this.OldAdminIdCardNumber;
     }
 
     /**
-     * Set 原超管证件号码
-     * @param OldAdminIdCardNumber 原超管证件号码
+     * Set <p>原超管证件号码</p>
+     * @param OldAdminIdCardNumber <p>原超管证件号码</p>
      */
     public void setOldAdminIdCardNumber(String OldAdminIdCardNumber) {
         this.OldAdminIdCardNumber = OldAdminIdCardNumber;

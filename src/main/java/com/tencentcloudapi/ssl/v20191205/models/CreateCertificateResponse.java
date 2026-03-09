@@ -24,18 +24,25 @@ import java.util.HashMap;
 public class CreateCertificateResponse extends AbstractModel {
 
     /**
-    * 证书ID列表
+    * <p>证书ID列表</p>
     */
     @SerializedName("CertificateIds")
     @Expose
     private String [] CertificateIds;
 
     /**
-    * 订单号列表
+    * <p>订单号列表</p>
     */
     @SerializedName("DealIds")
     @Expose
     private String [] DealIds;
+
+    /**
+    * <p>资源ID列表</p>
+    */
+    @SerializedName("ResourceIds")
+    @Expose
+    private String [] ResourceIds;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +52,51 @@ public class CreateCertificateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 证书ID列表 
-     * @return CertificateIds 证书ID列表
+     * Get <p>证书ID列表</p> 
+     * @return CertificateIds <p>证书ID列表</p>
      */
     public String [] getCertificateIds() {
         return this.CertificateIds;
     }
 
     /**
-     * Set 证书ID列表
-     * @param CertificateIds 证书ID列表
+     * Set <p>证书ID列表</p>
+     * @param CertificateIds <p>证书ID列表</p>
      */
     public void setCertificateIds(String [] CertificateIds) {
         this.CertificateIds = CertificateIds;
     }
 
     /**
-     * Get 订单号列表 
-     * @return DealIds 订单号列表
+     * Get <p>订单号列表</p> 
+     * @return DealIds <p>订单号列表</p>
      */
     public String [] getDealIds() {
         return this.DealIds;
     }
 
     /**
-     * Set 订单号列表
-     * @param DealIds 订单号列表
+     * Set <p>订单号列表</p>
+     * @param DealIds <p>订单号列表</p>
      */
     public void setDealIds(String [] DealIds) {
         this.DealIds = DealIds;
+    }
+
+    /**
+     * Get <p>资源ID列表</p> 
+     * @return ResourceIds <p>资源ID列表</p>
+     */
+    public String [] getResourceIds() {
+        return this.ResourceIds;
+    }
+
+    /**
+     * Set <p>资源ID列表</p>
+     * @param ResourceIds <p>资源ID列表</p>
+     */
+    public void setResourceIds(String [] ResourceIds) {
+        this.ResourceIds = ResourceIds;
     }
 
     /**
@@ -112,6 +135,12 @@ public class CreateCertificateResponse extends AbstractModel {
                 this.DealIds[i] = new String(source.DealIds[i]);
             }
         }
+        if (source.ResourceIds != null) {
+            this.ResourceIds = new String[source.ResourceIds.length];
+            for (int i = 0; i < source.ResourceIds.length; i++) {
+                this.ResourceIds[i] = new String(source.ResourceIds[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -124,6 +153,7 @@ public class CreateCertificateResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "CertificateIds.", this.CertificateIds);
         this.setParamArraySimple(map, prefix + "DealIds.", this.DealIds);
+        this.setParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class EditMediaResponse extends AbstractModel {
 
     /**
-    * 编辑视频的任务 ID，可以通过该 ID 查询编辑任务的状态。
+    * <p>编辑视频的任务 ID，可以通过该 ID 查询编辑任务的状态。</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class EditMediaResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 编辑视频的任务 ID，可以通过该 ID 查询编辑任务的状态。 
-     * @return TaskId 编辑视频的任务 ID，可以通过该 ID 查询编辑任务的状态。
+     * Get <p>编辑视频的任务 ID，可以通过该 ID 查询编辑任务的状态。</p> 
+     * @return TaskId <p>编辑视频的任务 ID，可以通过该 ID 查询编辑任务的状态。</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 编辑视频的任务 ID，可以通过该 ID 查询编辑任务的状态。
-     * @param TaskId 编辑视频的任务 ID，可以通过该 ID 查询编辑任务的状态。
+     * Set <p>编辑视频的任务 ID，可以通过该 ID 查询编辑任务的状态。</p>
+     * @param TaskId <p>编辑视频的任务 ID，可以通过该 ID 查询编辑任务的状态。</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

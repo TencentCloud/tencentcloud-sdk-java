@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DlcPartitionInfo extends AbstractModel {
 
     /**
-    * cls日志中的字段名
+    * <p>cls日志中的字段名</p>
     */
     @SerializedName("ClsField")
     @Expose
     private String ClsField;
 
     /**
-    * dlc表的列名
+    * <p>dlc表的列名</p>
     */
     @SerializedName("DlcField")
     @Expose
     private String DlcField;
 
     /**
-    * dlc字段类型
+    * <p>请参考 <a href="https://cloud.tencent.com/document/product/1342/53778#Column">DLC  cloumn中的Type 定义 </a></p><p>枚举值：</p><ul><li>int|string|array等： 请参考 <a href="https://cloud.tencent.com/document/product/1342/53778#Column">DLC  cloumn中的Type 定义 </a></li></ul>
     */
     @SerializedName("DlcFieldType")
     @Expose
     private String DlcFieldType;
 
     /**
-     * Get cls日志中的字段名 
-     * @return ClsField cls日志中的字段名
+     * Get <p>cls日志中的字段名</p> 
+     * @return ClsField <p>cls日志中的字段名</p>
      */
     public String getClsField() {
         return this.ClsField;
     }
 
     /**
-     * Set cls日志中的字段名
-     * @param ClsField cls日志中的字段名
+     * Set <p>cls日志中的字段名</p>
+     * @param ClsField <p>cls日志中的字段名</p>
      */
     public void setClsField(String ClsField) {
         this.ClsField = ClsField;
     }
 
     /**
-     * Get dlc表的列名 
-     * @return DlcField dlc表的列名
+     * Get <p>dlc表的列名</p> 
+     * @return DlcField <p>dlc表的列名</p>
      */
     public String getDlcField() {
         return this.DlcField;
     }
 
     /**
-     * Set dlc表的列名
-     * @param DlcField dlc表的列名
+     * Set <p>dlc表的列名</p>
+     * @param DlcField <p>dlc表的列名</p>
      */
     public void setDlcField(String DlcField) {
         this.DlcField = DlcField;
     }
 
     /**
-     * Get dlc字段类型 
-     * @return DlcFieldType dlc字段类型
+     * Get <p>请参考 <a href="https://cloud.tencent.com/document/product/1342/53778#Column">DLC  cloumn中的Type 定义 </a></p><p>枚举值：</p><ul><li>int|string|array等： 请参考 <a href="https://cloud.tencent.com/document/product/1342/53778#Column">DLC  cloumn中的Type 定义 </a></li></ul> 
+     * @return DlcFieldType <p>请参考 <a href="https://cloud.tencent.com/document/product/1342/53778#Column">DLC  cloumn中的Type 定义 </a></p><p>枚举值：</p><ul><li>int|string|array等： 请参考 <a href="https://cloud.tencent.com/document/product/1342/53778#Column">DLC  cloumn中的Type 定义 </a></li></ul>
      */
     public String getDlcFieldType() {
         return this.DlcFieldType;
     }
 
     /**
-     * Set dlc字段类型
-     * @param DlcFieldType dlc字段类型
+     * Set <p>请参考 <a href="https://cloud.tencent.com/document/product/1342/53778#Column">DLC  cloumn中的Type 定义 </a></p><p>枚举值：</p><ul><li>int|string|array等： 请参考 <a href="https://cloud.tencent.com/document/product/1342/53778#Column">DLC  cloumn中的Type 定义 </a></li></ul>
+     * @param DlcFieldType <p>请参考 <a href="https://cloud.tencent.com/document/product/1342/53778#Column">DLC  cloumn中的Type 定义 </a></p><p>枚举值：</p><ul><li>int|string|array等： 请参考 <a href="https://cloud.tencent.com/document/product/1342/53778#Column">DLC  cloumn中的Type 定义 </a></li></ul>
      */
     public void setDlcFieldType(String DlcFieldType) {
         this.DlcFieldType = DlcFieldType;

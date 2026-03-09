@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InternetAccessible extends AbstractModel {
 
     /**
-    * 带宽
+    * 带宽，单位为Mbps
     */
     @SerializedName("MaxBandwidthOut")
     @Expose
@@ -45,16 +45,16 @@ public class InternetAccessible extends AbstractModel {
     private String BandwidthPackageId;
 
     /**
-     * Get 带宽 
-     * @return MaxBandwidthOut 带宽
+     * Get 带宽，单位为Mbps 
+     * @return MaxBandwidthOut 带宽，单位为Mbps
      */
     public Long getMaxBandwidthOut() {
         return this.MaxBandwidthOut;
     }
 
     /**
-     * Set 带宽
-     * @param MaxBandwidthOut 带宽
+     * Set 带宽，单位为Mbps
+     * @param MaxBandwidthOut 带宽，单位为Mbps
      */
     public void setMaxBandwidthOut(Long MaxBandwidthOut) {
         this.MaxBandwidthOut = MaxBandwidthOut;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class GetMetricLabelValuesResponse extends AbstractModel {
 
     /**
-    * 时序metric label values
+    * <p>时序metric label values</p>
     */
     @SerializedName("Values")
     @Expose
@@ -38,16 +38,16 @@ public class GetMetricLabelValuesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 时序metric label values 
-     * @return Values 时序metric label values
+     * Get <p>时序metric label values</p> 
+     * @return Values <p>时序metric label values</p>
      */
     public String [] getValues() {
         return this.Values;
     }
 
     /**
-     * Set 时序metric label values
-     * @param Values 时序metric label values
+     * Set <p>时序metric label values</p>
+     * @param Values <p>时序metric label values</p>
      */
     public void setValues(String [] Values) {
         this.Values = Values;

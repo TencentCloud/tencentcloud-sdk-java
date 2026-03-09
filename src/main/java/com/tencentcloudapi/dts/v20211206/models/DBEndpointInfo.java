@@ -61,7 +61,7 @@ public class DBEndpointInfo extends AbstractModel {
     private DBInfo [] Info;
 
     /**
-    * 实例服务提供商，如:"aliyun","others"
+    * 实例服务提供商，如:"others","aliyun","aws"
     */
     @SerializedName("Supplier")
     @Expose
@@ -192,16 +192,16 @@ MongoDB可定义如下的参数：
     }
 
     /**
-     * Get 实例服务提供商，如:"aliyun","others" 
-     * @return Supplier 实例服务提供商，如:"aliyun","others"
+     * Get 实例服务提供商，如:"others","aliyun","aws" 
+     * @return Supplier 实例服务提供商，如:"others","aliyun","aws"
      */
     public String getSupplier() {
         return this.Supplier;
     }
 
     /**
-     * Set 实例服务提供商，如:"aliyun","others"
-     * @param Supplier 实例服务提供商，如:"aliyun","others"
+     * Set 实例服务提供商，如:"others","aliyun","aws"
+     * @param Supplier 实例服务提供商，如:"others","aliyun","aws"
      */
     public void setSupplier(String Supplier) {
         this.Supplier = Supplier;

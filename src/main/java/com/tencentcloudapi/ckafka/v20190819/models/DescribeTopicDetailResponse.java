@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTopicDetailResponse extends AbstractModel {
 
     /**
-    * 返回的主题详情实体
+    * <p>返回的主题详情实体</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeTopicDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回的主题详情实体 
-     * @return Result 返回的主题详情实体
+     * Get <p>返回的主题详情实体</p> 
+     * @return Result <p>返回的主题详情实体</p>
      */
     public TopicDetailResponse getResult() {
         return this.Result;
     }
 
     /**
-     * Set 返回的主题详情实体
-     * @param Result 返回的主题详情实体
+     * Set <p>返回的主题详情实体</p>
+     * @param Result <p>返回的主题详情实体</p>
      */
     public void setResult(TopicDetailResponse Result) {
         this.Result = Result;

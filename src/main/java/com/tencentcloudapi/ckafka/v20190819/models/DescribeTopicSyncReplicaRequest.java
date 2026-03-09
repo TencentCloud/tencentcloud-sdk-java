@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeTopicSyncReplicaRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * <p>实例ID</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 主题名称
+    * <p>主题名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40847">DescribeTopic</a></p>
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-    * 偏移量，不填默认为0
+    * <p>偏移量，不填默认为0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数量，默认值为20，必须大于0。
+    * <p>返回数量，默认值为20，必须大于0。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 仅筛选未同步副本
+    * <p>仅筛选未同步副本</p>
     */
     @SerializedName("OutOfSyncReplicaOnly")
     @Expose
     private Boolean OutOfSyncReplicaOnly;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get <p>实例ID</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p> 
+     * @return InstanceId <p>实例ID</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set <p>实例ID</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
+     * @param InstanceId <p>实例ID</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 主题名称 
-     * @return TopicName 主题名称
+     * Get <p>主题名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40847">DescribeTopic</a></p> 
+     * @return TopicName <p>主题名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40847">DescribeTopic</a></p>
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set 主题名称
-     * @param TopicName 主题名称
+     * Set <p>主题名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40847">DescribeTopic</a></p>
+     * @param TopicName <p>主题名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40847">DescribeTopic</a></p>
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get 偏移量，不填默认为0 
-     * @return Offset 偏移量，不填默认为0
+     * Get <p>偏移量，不填默认为0</p> 
+     * @return Offset <p>偏移量，不填默认为0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，不填默认为0
-     * @param Offset 偏移量，不填默认为0
+     * Set <p>偏移量，不填默认为0</p>
+     * @param Offset <p>偏移量，不填默认为0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量，默认值为20，必须大于0。 
-     * @return Limit 返回数量，默认值为20，必须大于0。
+     * Get <p>返回数量，默认值为20，必须大于0。</p> 
+     * @return Limit <p>返回数量，默认值为20，必须大于0。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认值为20，必须大于0。
-     * @param Limit 返回数量，默认值为20，必须大于0。
+     * Set <p>返回数量，默认值为20，必须大于0。</p>
+     * @param Limit <p>返回数量，默认值为20，必须大于0。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 仅筛选未同步副本 
-     * @return OutOfSyncReplicaOnly 仅筛选未同步副本
+     * Get <p>仅筛选未同步副本</p> 
+     * @return OutOfSyncReplicaOnly <p>仅筛选未同步副本</p>
      */
     public Boolean getOutOfSyncReplicaOnly() {
         return this.OutOfSyncReplicaOnly;
     }
 
     /**
-     * Set 仅筛选未同步副本
-     * @param OutOfSyncReplicaOnly 仅筛选未同步副本
+     * Set <p>仅筛选未同步副本</p>
+     * @param OutOfSyncReplicaOnly <p>仅筛选未同步副本</p>
      */
     public void setOutOfSyncReplicaOnly(Boolean OutOfSyncReplicaOnly) {
         this.OutOfSyncReplicaOnly = OutOfSyncReplicaOnly;

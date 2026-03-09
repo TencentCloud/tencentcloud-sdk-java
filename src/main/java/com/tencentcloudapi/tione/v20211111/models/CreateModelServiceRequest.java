@@ -348,6 +348,13 @@ HYBRID_PAID:
     private String SchedulingStrategy;
 
     /**
+    * 网关日志投递相关配置
+    */
+    @SerializedName("GatewayLogConfig")
+    @Expose
+    private LogConfig GatewayLogConfig;
+
+    /**
      * Get 新增版本时需要填写 
      * @return ServiceGroupId 新增版本时需要填写
      */
@@ -1127,6 +1134,22 @@ HYBRID_PAID:
         this.SchedulingStrategy = SchedulingStrategy;
     }
 
+    /**
+     * Get 网关日志投递相关配置 
+     * @return GatewayLogConfig 网关日志投递相关配置
+     */
+    public LogConfig getGatewayLogConfig() {
+        return this.GatewayLogConfig;
+    }
+
+    /**
+     * Set 网关日志投递相关配置
+     * @param GatewayLogConfig 网关日志投递相关配置
+     */
+    public void setGatewayLogConfig(LogConfig GatewayLogConfig) {
+        this.GatewayLogConfig = GatewayLogConfig;
+    }
+
     public CreateModelServiceRequest() {
     }
 
@@ -1279,6 +1302,9 @@ HYBRID_PAID:
         if (source.SchedulingStrategy != null) {
             this.SchedulingStrategy = new String(source.SchedulingStrategy);
         }
+        if (source.GatewayLogConfig != null) {
+            this.GatewayLogConfig = new LogConfig(source.GatewayLogConfig);
+        }
     }
 
 
@@ -1329,6 +1355,7 @@ HYBRID_PAID:
         this.setParamObj(map, prefix + "Sidecar.", this.Sidecar);
         this.setParamArrayObj(map, prefix + "VolumeMounts.", this.VolumeMounts);
         this.setParamSimple(map, prefix + "SchedulingStrategy", this.SchedulingStrategy);
+        this.setParamObj(map, prefix + "GatewayLogConfig.", this.GatewayLogConfig);
 
     }
 }

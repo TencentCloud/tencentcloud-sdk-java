@@ -24,437 +24,437 @@ import java.util.HashMap;
 public class Command extends AbstractModel {
 
     /**
-    * 命令ID。
+    * <p>命令ID。</p>
     */
     @SerializedName("CommandId")
     @Expose
     private String CommandId;
 
     /**
-    * 命令名称。
+    * <p>命令名称。</p>
     */
     @SerializedName("CommandName")
     @Expose
     private String CommandName;
 
     /**
-    * 命令描述。
+    * <p>命令描述。</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Base64编码后的命令内容。
+    * <p>Base64编码后的命令内容。</p>
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-    * 命令类型。取值为 SHELL、POWERSHELL、BAT 之一。
+    * <p>命令类型。取值为 SHELL、POWERSHELL、BAT 之一。</p>
     */
     @SerializedName("CommandType")
     @Expose
     private String CommandType;
 
     /**
-    * 命令执行路径。
+    * <p>命令执行路径。</p>
     */
     @SerializedName("WorkingDirectory")
     @Expose
     private String WorkingDirectory;
 
     /**
-    * 命令超时时间。
+    * <p>命令超时时间。</p><p>单位：秒</p><p>指定 OutputCOSBucketUrl 参数时，超时时间将包含命令输出上传 COS 的耗时</p>
     */
     @SerializedName("Timeout")
     @Expose
     private Long Timeout;
 
     /**
-    * 命令创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
+    * <p>命令创建时间。格式为：YYYY-MM-DDThh:mm:ssZ</p>
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * 命令更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
+    * <p>命令更新时间。格式为：YYYY-MM-DDThh:mm:ssZ</p>
     */
     @SerializedName("UpdatedTime")
     @Expose
     private String UpdatedTime;
 
     /**
-    * 是否启用自定义参数功能。
+    * <p>是否启用自定义参数功能。</p>
     */
     @SerializedName("EnableParameter")
     @Expose
     private Boolean EnableParameter;
 
     /**
-    * 自定义参数的默认取值。
+    * <p>自定义参数的默认取值。</p>
     */
     @SerializedName("DefaultParameters")
     @Expose
     private String DefaultParameters;
 
     /**
-    * 自定义参数的默认取值。
+    * <p>自定义参数的默认取值。</p>
     */
     @SerializedName("DefaultParameterConfs")
     @Expose
     private DefaultParameterConf [] DefaultParameterConfs;
 
     /**
-    * 命令关联的场景
+    * <p>命令关联的场景</p>
     */
     @SerializedName("Scenes")
     @Expose
     private String [] Scenes;
 
     /**
-    * 命令的结构化描述。公共命令有值，用户命令为空字符串。
+    * <p>命令的结构化描述。公共命令有值，用户命令为空字符串。</p>
     */
     @SerializedName("FormattedDescription")
     @Expose
     private String FormattedDescription;
 
     /**
-    * 命令创建者。TAT 代表公共命令，USER 代表个人命令。
+    * <p>命令创建者。</p><p>枚举值：</p><ul><li>TAT： 公共命令</li><li>USER： 个人创建的命令</li></ul>
     */
     @SerializedName("CreatedBy")
     @Expose
     private String CreatedBy;
 
     /**
-    * 命令关联的标签列表。
+    * <p>命令关联的标签列表。</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 在实例上执行命令的用户名。
+    * <p>在实例上执行命令的用户名。</p>
     */
     @SerializedName("Username")
     @Expose
     private String Username;
 
     /**
-    * 日志上传的cos bucket 地址。
+    * <p>日志上传的cos bucket 地址。</p>
     */
     @SerializedName("OutputCOSBucketUrl")
     @Expose
     private String OutputCOSBucketUrl;
 
     /**
-    * 日志在cos bucket中的目录。
+    * <p>日志在cos bucket中的目录。</p>
     */
     @SerializedName("OutputCOSKeyPrefix")
     @Expose
     private String OutputCOSKeyPrefix;
 
     /**
-     * Get 命令ID。 
-     * @return CommandId 命令ID。
+     * Get <p>命令ID。</p> 
+     * @return CommandId <p>命令ID。</p>
      */
     public String getCommandId() {
         return this.CommandId;
     }
 
     /**
-     * Set 命令ID。
-     * @param CommandId 命令ID。
+     * Set <p>命令ID。</p>
+     * @param CommandId <p>命令ID。</p>
      */
     public void setCommandId(String CommandId) {
         this.CommandId = CommandId;
     }
 
     /**
-     * Get 命令名称。 
-     * @return CommandName 命令名称。
+     * Get <p>命令名称。</p> 
+     * @return CommandName <p>命令名称。</p>
      */
     public String getCommandName() {
         return this.CommandName;
     }
 
     /**
-     * Set 命令名称。
-     * @param CommandName 命令名称。
+     * Set <p>命令名称。</p>
+     * @param CommandName <p>命令名称。</p>
      */
     public void setCommandName(String CommandName) {
         this.CommandName = CommandName;
     }
 
     /**
-     * Get 命令描述。 
-     * @return Description 命令描述。
+     * Get <p>命令描述。</p> 
+     * @return Description <p>命令描述。</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 命令描述。
-     * @param Description 命令描述。
+     * Set <p>命令描述。</p>
+     * @param Description <p>命令描述。</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Base64编码后的命令内容。 
-     * @return Content Base64编码后的命令内容。
+     * Get <p>Base64编码后的命令内容。</p> 
+     * @return Content <p>Base64编码后的命令内容。</p>
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set Base64编码后的命令内容。
-     * @param Content Base64编码后的命令内容。
+     * Set <p>Base64编码后的命令内容。</p>
+     * @param Content <p>Base64编码后的命令内容。</p>
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get 命令类型。取值为 SHELL、POWERSHELL、BAT 之一。 
-     * @return CommandType 命令类型。取值为 SHELL、POWERSHELL、BAT 之一。
+     * Get <p>命令类型。取值为 SHELL、POWERSHELL、BAT 之一。</p> 
+     * @return CommandType <p>命令类型。取值为 SHELL、POWERSHELL、BAT 之一。</p>
      */
     public String getCommandType() {
         return this.CommandType;
     }
 
     /**
-     * Set 命令类型。取值为 SHELL、POWERSHELL、BAT 之一。
-     * @param CommandType 命令类型。取值为 SHELL、POWERSHELL、BAT 之一。
+     * Set <p>命令类型。取值为 SHELL、POWERSHELL、BAT 之一。</p>
+     * @param CommandType <p>命令类型。取值为 SHELL、POWERSHELL、BAT 之一。</p>
      */
     public void setCommandType(String CommandType) {
         this.CommandType = CommandType;
     }
 
     /**
-     * Get 命令执行路径。 
-     * @return WorkingDirectory 命令执行路径。
+     * Get <p>命令执行路径。</p> 
+     * @return WorkingDirectory <p>命令执行路径。</p>
      */
     public String getWorkingDirectory() {
         return this.WorkingDirectory;
     }
 
     /**
-     * Set 命令执行路径。
-     * @param WorkingDirectory 命令执行路径。
+     * Set <p>命令执行路径。</p>
+     * @param WorkingDirectory <p>命令执行路径。</p>
      */
     public void setWorkingDirectory(String WorkingDirectory) {
         this.WorkingDirectory = WorkingDirectory;
     }
 
     /**
-     * Get 命令超时时间。 
-     * @return Timeout 命令超时时间。
+     * Get <p>命令超时时间。</p><p>单位：秒</p><p>指定 OutputCOSBucketUrl 参数时，超时时间将包含命令输出上传 COS 的耗时</p> 
+     * @return Timeout <p>命令超时时间。</p><p>单位：秒</p><p>指定 OutputCOSBucketUrl 参数时，超时时间将包含命令输出上传 COS 的耗时</p>
      */
     public Long getTimeout() {
         return this.Timeout;
     }
 
     /**
-     * Set 命令超时时间。
-     * @param Timeout 命令超时时间。
+     * Set <p>命令超时时间。</p><p>单位：秒</p><p>指定 OutputCOSBucketUrl 参数时，超时时间将包含命令输出上传 COS 的耗时</p>
+     * @param Timeout <p>命令超时时间。</p><p>单位：秒</p><p>指定 OutputCOSBucketUrl 参数时，超时时间将包含命令输出上传 COS 的耗时</p>
      */
     public void setTimeout(Long Timeout) {
         this.Timeout = Timeout;
     }
 
     /**
-     * Get 命令创建时间。格式为：YYYY-MM-DDThh:mm:ssZ 
-     * @return CreatedTime 命令创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
+     * Get <p>命令创建时间。格式为：YYYY-MM-DDThh:mm:ssZ</p> 
+     * @return CreatedTime <p>命令创建时间。格式为：YYYY-MM-DDThh:mm:ssZ</p>
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 命令创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
-     * @param CreatedTime 命令创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
+     * Set <p>命令创建时间。格式为：YYYY-MM-DDThh:mm:ssZ</p>
+     * @param CreatedTime <p>命令创建时间。格式为：YYYY-MM-DDThh:mm:ssZ</p>
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 命令更新时间。格式为：YYYY-MM-DDThh:mm:ssZ 
-     * @return UpdatedTime 命令更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
+     * Get <p>命令更新时间。格式为：YYYY-MM-DDThh:mm:ssZ</p> 
+     * @return UpdatedTime <p>命令更新时间。格式为：YYYY-MM-DDThh:mm:ssZ</p>
      */
     public String getUpdatedTime() {
         return this.UpdatedTime;
     }
 
     /**
-     * Set 命令更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
-     * @param UpdatedTime 命令更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
+     * Set <p>命令更新时间。格式为：YYYY-MM-DDThh:mm:ssZ</p>
+     * @param UpdatedTime <p>命令更新时间。格式为：YYYY-MM-DDThh:mm:ssZ</p>
      */
     public void setUpdatedTime(String UpdatedTime) {
         this.UpdatedTime = UpdatedTime;
     }
 
     /**
-     * Get 是否启用自定义参数功能。 
-     * @return EnableParameter 是否启用自定义参数功能。
+     * Get <p>是否启用自定义参数功能。</p> 
+     * @return EnableParameter <p>是否启用自定义参数功能。</p>
      */
     public Boolean getEnableParameter() {
         return this.EnableParameter;
     }
 
     /**
-     * Set 是否启用自定义参数功能。
-     * @param EnableParameter 是否启用自定义参数功能。
+     * Set <p>是否启用自定义参数功能。</p>
+     * @param EnableParameter <p>是否启用自定义参数功能。</p>
      */
     public void setEnableParameter(Boolean EnableParameter) {
         this.EnableParameter = EnableParameter;
     }
 
     /**
-     * Get 自定义参数的默认取值。 
-     * @return DefaultParameters 自定义参数的默认取值。
+     * Get <p>自定义参数的默认取值。</p> 
+     * @return DefaultParameters <p>自定义参数的默认取值。</p>
      */
     public String getDefaultParameters() {
         return this.DefaultParameters;
     }
 
     /**
-     * Set 自定义参数的默认取值。
-     * @param DefaultParameters 自定义参数的默认取值。
+     * Set <p>自定义参数的默认取值。</p>
+     * @param DefaultParameters <p>自定义参数的默认取值。</p>
      */
     public void setDefaultParameters(String DefaultParameters) {
         this.DefaultParameters = DefaultParameters;
     }
 
     /**
-     * Get 自定义参数的默认取值。 
-     * @return DefaultParameterConfs 自定义参数的默认取值。
+     * Get <p>自定义参数的默认取值。</p> 
+     * @return DefaultParameterConfs <p>自定义参数的默认取值。</p>
      */
     public DefaultParameterConf [] getDefaultParameterConfs() {
         return this.DefaultParameterConfs;
     }
 
     /**
-     * Set 自定义参数的默认取值。
-     * @param DefaultParameterConfs 自定义参数的默认取值。
+     * Set <p>自定义参数的默认取值。</p>
+     * @param DefaultParameterConfs <p>自定义参数的默认取值。</p>
      */
     public void setDefaultParameterConfs(DefaultParameterConf [] DefaultParameterConfs) {
         this.DefaultParameterConfs = DefaultParameterConfs;
     }
 
     /**
-     * Get 命令关联的场景 
-     * @return Scenes 命令关联的场景
+     * Get <p>命令关联的场景</p> 
+     * @return Scenes <p>命令关联的场景</p>
      */
     public String [] getScenes() {
         return this.Scenes;
     }
 
     /**
-     * Set 命令关联的场景
-     * @param Scenes 命令关联的场景
+     * Set <p>命令关联的场景</p>
+     * @param Scenes <p>命令关联的场景</p>
      */
     public void setScenes(String [] Scenes) {
         this.Scenes = Scenes;
     }
 
     /**
-     * Get 命令的结构化描述。公共命令有值，用户命令为空字符串。 
-     * @return FormattedDescription 命令的结构化描述。公共命令有值，用户命令为空字符串。
+     * Get <p>命令的结构化描述。公共命令有值，用户命令为空字符串。</p> 
+     * @return FormattedDescription <p>命令的结构化描述。公共命令有值，用户命令为空字符串。</p>
      */
     public String getFormattedDescription() {
         return this.FormattedDescription;
     }
 
     /**
-     * Set 命令的结构化描述。公共命令有值，用户命令为空字符串。
-     * @param FormattedDescription 命令的结构化描述。公共命令有值，用户命令为空字符串。
+     * Set <p>命令的结构化描述。公共命令有值，用户命令为空字符串。</p>
+     * @param FormattedDescription <p>命令的结构化描述。公共命令有值，用户命令为空字符串。</p>
      */
     public void setFormattedDescription(String FormattedDescription) {
         this.FormattedDescription = FormattedDescription;
     }
 
     /**
-     * Get 命令创建者。TAT 代表公共命令，USER 代表个人命令。 
-     * @return CreatedBy 命令创建者。TAT 代表公共命令，USER 代表个人命令。
+     * Get <p>命令创建者。</p><p>枚举值：</p><ul><li>TAT： 公共命令</li><li>USER： 个人创建的命令</li></ul> 
+     * @return CreatedBy <p>命令创建者。</p><p>枚举值：</p><ul><li>TAT： 公共命令</li><li>USER： 个人创建的命令</li></ul>
      */
     public String getCreatedBy() {
         return this.CreatedBy;
     }
 
     /**
-     * Set 命令创建者。TAT 代表公共命令，USER 代表个人命令。
-     * @param CreatedBy 命令创建者。TAT 代表公共命令，USER 代表个人命令。
+     * Set <p>命令创建者。</p><p>枚举值：</p><ul><li>TAT： 公共命令</li><li>USER： 个人创建的命令</li></ul>
+     * @param CreatedBy <p>命令创建者。</p><p>枚举值：</p><ul><li>TAT： 公共命令</li><li>USER： 个人创建的命令</li></ul>
      */
     public void setCreatedBy(String CreatedBy) {
         this.CreatedBy = CreatedBy;
     }
 
     /**
-     * Get 命令关联的标签列表。 
-     * @return Tags 命令关联的标签列表。
+     * Get <p>命令关联的标签列表。</p> 
+     * @return Tags <p>命令关联的标签列表。</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 命令关联的标签列表。
-     * @param Tags 命令关联的标签列表。
+     * Set <p>命令关联的标签列表。</p>
+     * @param Tags <p>命令关联的标签列表。</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 在实例上执行命令的用户名。 
-     * @return Username 在实例上执行命令的用户名。
+     * Get <p>在实例上执行命令的用户名。</p> 
+     * @return Username <p>在实例上执行命令的用户名。</p>
      */
     public String getUsername() {
         return this.Username;
     }
 
     /**
-     * Set 在实例上执行命令的用户名。
-     * @param Username 在实例上执行命令的用户名。
+     * Set <p>在实例上执行命令的用户名。</p>
+     * @param Username <p>在实例上执行命令的用户名。</p>
      */
     public void setUsername(String Username) {
         this.Username = Username;
     }
 
     /**
-     * Get 日志上传的cos bucket 地址。 
-     * @return OutputCOSBucketUrl 日志上传的cos bucket 地址。
+     * Get <p>日志上传的cos bucket 地址。</p> 
+     * @return OutputCOSBucketUrl <p>日志上传的cos bucket 地址。</p>
      */
     public String getOutputCOSBucketUrl() {
         return this.OutputCOSBucketUrl;
     }
 
     /**
-     * Set 日志上传的cos bucket 地址。
-     * @param OutputCOSBucketUrl 日志上传的cos bucket 地址。
+     * Set <p>日志上传的cos bucket 地址。</p>
+     * @param OutputCOSBucketUrl <p>日志上传的cos bucket 地址。</p>
      */
     public void setOutputCOSBucketUrl(String OutputCOSBucketUrl) {
         this.OutputCOSBucketUrl = OutputCOSBucketUrl;
     }
 
     /**
-     * Get 日志在cos bucket中的目录。 
-     * @return OutputCOSKeyPrefix 日志在cos bucket中的目录。
+     * Get <p>日志在cos bucket中的目录。</p> 
+     * @return OutputCOSKeyPrefix <p>日志在cos bucket中的目录。</p>
      */
     public String getOutputCOSKeyPrefix() {
         return this.OutputCOSKeyPrefix;
     }
 
     /**
-     * Set 日志在cos bucket中的目录。
-     * @param OutputCOSKeyPrefix 日志在cos bucket中的目录。
+     * Set <p>日志在cos bucket中的目录。</p>
+     * @param OutputCOSKeyPrefix <p>日志在cos bucket中的目录。</p>
      */
     public void setOutputCOSKeyPrefix(String OutputCOSKeyPrefix) {
         this.OutputCOSKeyPrefix = OutputCOSKeyPrefix;

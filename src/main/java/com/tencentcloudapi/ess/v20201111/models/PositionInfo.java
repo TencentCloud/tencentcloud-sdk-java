@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class PositionInfo extends AbstractModel {
 
     /**
-    * PDF文件页X坐标位置,以PDF单页左上角为坐标原点
+    * PDF文件页X坐标位置,以PDF单页左上角为坐标原点，单位是 “点”（Point，简称 pt）
     */
     @SerializedName("X")
     @Expose
     private Float X;
 
     /**
-    * PDF文件页Y坐标位置,以PDF单页左上角为坐标原点
+    * PDF文件页Y坐标位置,以PDF单页左上角为坐标原点，单位是 “点”（Point，简称 pt）
     */
     @SerializedName("Y")
     @Expose
     private Float Y;
 
     /**
-    * 距离X坐标的宽度，用于在PDF文件进行画框。
+    * 距离X坐标的宽度，用于在PDF文件进行画框，单位是 “点”（Point，简称 pt）
     */
     @SerializedName("Width")
     @Expose
     private Float Width;
 
     /**
-    * 距离Y坐标的高度，用于在PDF文件进行画框。
+    * 距离Y坐标的高度，用于在PDF文件进行画框，单位是 “点”（Point，简称 pt）
     */
     @SerializedName("Height")
     @Expose
@@ -87,64 +87,64 @@ public class PositionInfo extends AbstractModel {
     private Long DocType;
 
     /**
-     * Get PDF文件页X坐标位置,以PDF单页左上角为坐标原点 
-     * @return X PDF文件页X坐标位置,以PDF单页左上角为坐标原点
+     * Get PDF文件页X坐标位置,以PDF单页左上角为坐标原点，单位是 “点”（Point，简称 pt） 
+     * @return X PDF文件页X坐标位置,以PDF单页左上角为坐标原点，单位是 “点”（Point，简称 pt）
      */
     public Float getX() {
         return this.X;
     }
 
     /**
-     * Set PDF文件页X坐标位置,以PDF单页左上角为坐标原点
-     * @param X PDF文件页X坐标位置,以PDF单页左上角为坐标原点
+     * Set PDF文件页X坐标位置,以PDF单页左上角为坐标原点，单位是 “点”（Point，简称 pt）
+     * @param X PDF文件页X坐标位置,以PDF单页左上角为坐标原点，单位是 “点”（Point，简称 pt）
      */
     public void setX(Float X) {
         this.X = X;
     }
 
     /**
-     * Get PDF文件页Y坐标位置,以PDF单页左上角为坐标原点 
-     * @return Y PDF文件页Y坐标位置,以PDF单页左上角为坐标原点
+     * Get PDF文件页Y坐标位置,以PDF单页左上角为坐标原点，单位是 “点”（Point，简称 pt） 
+     * @return Y PDF文件页Y坐标位置,以PDF单页左上角为坐标原点，单位是 “点”（Point，简称 pt）
      */
     public Float getY() {
         return this.Y;
     }
 
     /**
-     * Set PDF文件页Y坐标位置,以PDF单页左上角为坐标原点
-     * @param Y PDF文件页Y坐标位置,以PDF单页左上角为坐标原点
+     * Set PDF文件页Y坐标位置,以PDF单页左上角为坐标原点，单位是 “点”（Point，简称 pt）
+     * @param Y PDF文件页Y坐标位置,以PDF单页左上角为坐标原点，单位是 “点”（Point，简称 pt）
      */
     public void setY(Float Y) {
         this.Y = Y;
     }
 
     /**
-     * Get 距离X坐标的宽度，用于在PDF文件进行画框。 
-     * @return Width 距离X坐标的宽度，用于在PDF文件进行画框。
+     * Get 距离X坐标的宽度，用于在PDF文件进行画框，单位是 “点”（Point，简称 pt） 
+     * @return Width 距离X坐标的宽度，用于在PDF文件进行画框，单位是 “点”（Point，简称 pt）
      */
     public Float getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 距离X坐标的宽度，用于在PDF文件进行画框。
-     * @param Width 距离X坐标的宽度，用于在PDF文件进行画框。
+     * Set 距离X坐标的宽度，用于在PDF文件进行画框，单位是 “点”（Point，简称 pt）
+     * @param Width 距离X坐标的宽度，用于在PDF文件进行画框，单位是 “点”（Point，简称 pt）
      */
     public void setWidth(Float Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 距离Y坐标的高度，用于在PDF文件进行画框。 
-     * @return Height 距离Y坐标的高度，用于在PDF文件进行画框。
+     * Get 距离Y坐标的高度，用于在PDF文件进行画框，单位是 “点”（Point，简称 pt） 
+     * @return Height 距离Y坐标的高度，用于在PDF文件进行画框，单位是 “点”（Point，简称 pt）
      */
     public Float getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 距离Y坐标的高度，用于在PDF文件进行画框。
-     * @param Height 距离Y坐标的高度，用于在PDF文件进行画框。
+     * Set 距离Y坐标的高度，用于在PDF文件进行画框，单位是 “点”（Point，简称 pt）
+     * @param Height 距离Y坐标的高度，用于在PDF文件进行画框，单位是 “点”（Point，简称 pt）
      */
     public void setHeight(Float Height) {
         this.Height = Height;

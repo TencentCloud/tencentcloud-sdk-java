@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ModifyMountPointRequest extends AbstractModel {
 
     /**
-    * 挂载点ID
+    * <p>挂载点ID</p>
     */
     @SerializedName("MountPointId")
     @Expose
     private String MountPointId;
 
     /**
-    * 挂载点名称
+    * <p>挂载点名称</p>
     */
     @SerializedName("MountPointName")
     @Expose
     private String MountPointName;
 
     /**
-    * 挂载点状态
+    * <p>挂载点状态</p><p>枚举值：</p><ul><li>1： 打开</li><li>2： 关闭</li></ul>
     */
     @SerializedName("MountPointStatus")
     @Expose
     private Long MountPointStatus;
 
     /**
-     * Get 挂载点ID 
-     * @return MountPointId 挂载点ID
+     * Get <p>挂载点ID</p> 
+     * @return MountPointId <p>挂载点ID</p>
      */
     public String getMountPointId() {
         return this.MountPointId;
     }
 
     /**
-     * Set 挂载点ID
-     * @param MountPointId 挂载点ID
+     * Set <p>挂载点ID</p>
+     * @param MountPointId <p>挂载点ID</p>
      */
     public void setMountPointId(String MountPointId) {
         this.MountPointId = MountPointId;
     }
 
     /**
-     * Get 挂载点名称 
-     * @return MountPointName 挂载点名称
+     * Get <p>挂载点名称</p> 
+     * @return MountPointName <p>挂载点名称</p>
      */
     public String getMountPointName() {
         return this.MountPointName;
     }
 
     /**
-     * Set 挂载点名称
-     * @param MountPointName 挂载点名称
+     * Set <p>挂载点名称</p>
+     * @param MountPointName <p>挂载点名称</p>
      */
     public void setMountPointName(String MountPointName) {
         this.MountPointName = MountPointName;
     }
 
     /**
-     * Get 挂载点状态 
-     * @return MountPointStatus 挂载点状态
+     * Get <p>挂载点状态</p><p>枚举值：</p><ul><li>1： 打开</li><li>2： 关闭</li></ul> 
+     * @return MountPointStatus <p>挂载点状态</p><p>枚举值：</p><ul><li>1： 打开</li><li>2： 关闭</li></ul>
      */
     public Long getMountPointStatus() {
         return this.MountPointStatus;
     }
 
     /**
-     * Set 挂载点状态
-     * @param MountPointStatus 挂载点状态
+     * Set <p>挂载点状态</p><p>枚举值：</p><ul><li>1： 打开</li><li>2： 关闭</li></ul>
+     * @param MountPointStatus <p>挂载点状态</p><p>枚举值：</p><ul><li>1： 打开</li><li>2： 关闭</li></ul>
      */
     public void setMountPointStatus(Long MountPointStatus) {
         this.MountPointStatus = MountPointStatus;

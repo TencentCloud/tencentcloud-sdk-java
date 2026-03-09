@@ -1044,6 +1044,9 @@ public enum TsfErrorCode {
      /* 文件配置项已经发布，不允许删除。 */
      INVALIDPARAMETERVALUE_RELEASEDFILECONFIGCANNOTBEDELETED("InvalidParameterValue.ReleasedFileConfigCanNotBeDeleted"),
      
+     /* 资源ID不存在 */
+     INVALIDPARAMETERVALUE_RESOURCENOTEXISTS("InvalidParameterValue.ResourceNotExists"),
+     
      /* 无权限操作资源[资源ID]。 */
      INVALIDPARAMETERVALUE_RESOURCEPERMISSIONDENIED("InvalidParameterValue.ResourcePermissionDenied"),
      

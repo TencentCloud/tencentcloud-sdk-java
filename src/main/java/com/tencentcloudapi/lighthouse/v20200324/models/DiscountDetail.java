@@ -24,153 +24,138 @@ import java.util.HashMap;
 public class DiscountDetail extends AbstractModel {
 
     /**
-    * 计费时长。
+    * <p>计费时长。</p>
     */
     @SerializedName("TimeSpan")
     @Expose
     private Long TimeSpan;
 
     /**
-    * 时间单位。
-取值为：
-- m - 月
-- d - 日
+    * <p>时间单位。<br>取值为：</p><ul><li>m - 月</li><li>d - 日</li></ul>
     */
     @SerializedName("TimeUnit")
     @Expose
     private String TimeUnit;
 
     /**
-    * 总价。
+    * <p>总价。</p><p>单位：元</p>
     */
     @SerializedName("TotalCost")
     @Expose
     private Float TotalCost;
 
     /**
-    * 折后总价。
+    * <p>折后总价。</p><p>单位：元</p>
     */
     @SerializedName("RealTotalCost")
     @Expose
     private Float RealTotalCost;
 
     /**
-    * 折扣。
+    * <p>折扣。</p>
     */
     @SerializedName("Discount")
     @Expose
     private Float Discount;
 
     /**
-    * 具体折扣详情。
+    * <p>具体折扣详情。</p>
     */
     @SerializedName("PolicyDetail")
     @Expose
     private PolicyDetail PolicyDetail;
 
     /**
-     * Get 计费时长。 
-     * @return TimeSpan 计费时长。
+     * Get <p>计费时长。</p> 
+     * @return TimeSpan <p>计费时长。</p>
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set 计费时长。
-     * @param TimeSpan 计费时长。
+     * Set <p>计费时长。</p>
+     * @param TimeSpan <p>计费时长。</p>
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get 时间单位。
-取值为：
-- m - 月
-- d - 日 
-     * @return TimeUnit 时间单位。
-取值为：
-- m - 月
-- d - 日
+     * Get <p>时间单位。<br>取值为：</p><ul><li>m - 月</li><li>d - 日</li></ul> 
+     * @return TimeUnit <p>时间单位。<br>取值为：</p><ul><li>m - 月</li><li>d - 日</li></ul>
      */
     public String getTimeUnit() {
         return this.TimeUnit;
     }
 
     /**
-     * Set 时间单位。
-取值为：
-- m - 月
-- d - 日
-     * @param TimeUnit 时间单位。
-取值为：
-- m - 月
-- d - 日
+     * Set <p>时间单位。<br>取值为：</p><ul><li>m - 月</li><li>d - 日</li></ul>
+     * @param TimeUnit <p>时间单位。<br>取值为：</p><ul><li>m - 月</li><li>d - 日</li></ul>
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
     }
 
     /**
-     * Get 总价。 
-     * @return TotalCost 总价。
+     * Get <p>总价。</p><p>单位：元</p> 
+     * @return TotalCost <p>总价。</p><p>单位：元</p>
      */
     public Float getTotalCost() {
         return this.TotalCost;
     }
 
     /**
-     * Set 总价。
-     * @param TotalCost 总价。
+     * Set <p>总价。</p><p>单位：元</p>
+     * @param TotalCost <p>总价。</p><p>单位：元</p>
      */
     public void setTotalCost(Float TotalCost) {
         this.TotalCost = TotalCost;
     }
 
     /**
-     * Get 折后总价。 
-     * @return RealTotalCost 折后总价。
+     * Get <p>折后总价。</p><p>单位：元</p> 
+     * @return RealTotalCost <p>折后总价。</p><p>单位：元</p>
      */
     public Float getRealTotalCost() {
         return this.RealTotalCost;
     }
 
     /**
-     * Set 折后总价。
-     * @param RealTotalCost 折后总价。
+     * Set <p>折后总价。</p><p>单位：元</p>
+     * @param RealTotalCost <p>折后总价。</p><p>单位：元</p>
      */
     public void setRealTotalCost(Float RealTotalCost) {
         this.RealTotalCost = RealTotalCost;
     }
 
     /**
-     * Get 折扣。 
-     * @return Discount 折扣。
+     * Get <p>折扣。</p> 
+     * @return Discount <p>折扣。</p>
      */
     public Float getDiscount() {
         return this.Discount;
     }
 
     /**
-     * Set 折扣。
-     * @param Discount 折扣。
+     * Set <p>折扣。</p>
+     * @param Discount <p>折扣。</p>
      */
     public void setDiscount(Float Discount) {
         this.Discount = Discount;
     }
 
     /**
-     * Get 具体折扣详情。 
-     * @return PolicyDetail 具体折扣详情。
+     * Get <p>具体折扣详情。</p> 
+     * @return PolicyDetail <p>具体折扣详情。</p>
      */
     public PolicyDetail getPolicyDetail() {
         return this.PolicyDetail;
     }
 
     /**
-     * Set 具体折扣详情。
-     * @param PolicyDetail 具体折扣详情。
+     * Set <p>具体折扣详情。</p>
+     * @param PolicyDetail <p>具体折扣详情。</p>
      */
     public void setPolicyDetail(PolicyDetail PolicyDetail) {
         this.PolicyDetail = PolicyDetail;

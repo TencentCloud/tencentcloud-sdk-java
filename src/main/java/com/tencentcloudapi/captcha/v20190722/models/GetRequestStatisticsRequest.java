@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class GetRequestStatisticsRequest extends AbstractModel {
 
     /**
-    * 验证码AppId
+    * <p>验证码AppId</p>
     */
     @SerializedName("CaptchaAppId")
     @Expose
     private String CaptchaAppId;
 
     /**
-    * 开始时间字符串
+    * <p>开始时间字符串</p>
     */
     @SerializedName("StartTimeStr")
     @Expose
     private String StartTimeStr;
 
     /**
-    * 结束时间字符串
+    * <p>结束时间字符串</p>
     */
     @SerializedName("EndTimeStr")
     @Expose
     private String EndTimeStr;
 
     /**
-    * 查询粒度
+    * <p>查询粒度</p>
     */
     @SerializedName("Dimension")
     @Expose
     private String Dimension;
 
     /**
-     * Get 验证码AppId 
-     * @return CaptchaAppId 验证码AppId
+     * Get <p>验证码AppId</p> 
+     * @return CaptchaAppId <p>验证码AppId</p>
      */
     public String getCaptchaAppId() {
         return this.CaptchaAppId;
     }
 
     /**
-     * Set 验证码AppId
-     * @param CaptchaAppId 验证码AppId
+     * Set <p>验证码AppId</p>
+     * @param CaptchaAppId <p>验证码AppId</p>
      */
     public void setCaptchaAppId(String CaptchaAppId) {
         this.CaptchaAppId = CaptchaAppId;
     }
 
     /**
-     * Get 开始时间字符串 
-     * @return StartTimeStr 开始时间字符串
+     * Get <p>开始时间字符串</p> 
+     * @return StartTimeStr <p>开始时间字符串</p>
      */
     public String getStartTimeStr() {
         return this.StartTimeStr;
     }
 
     /**
-     * Set 开始时间字符串
-     * @param StartTimeStr 开始时间字符串
+     * Set <p>开始时间字符串</p>
+     * @param StartTimeStr <p>开始时间字符串</p>
      */
     public void setStartTimeStr(String StartTimeStr) {
         this.StartTimeStr = StartTimeStr;
     }
 
     /**
-     * Get 结束时间字符串 
-     * @return EndTimeStr 结束时间字符串
+     * Get <p>结束时间字符串</p> 
+     * @return EndTimeStr <p>结束时间字符串</p>
      */
     public String getEndTimeStr() {
         return this.EndTimeStr;
     }
 
     /**
-     * Set 结束时间字符串
-     * @param EndTimeStr 结束时间字符串
+     * Set <p>结束时间字符串</p>
+     * @param EndTimeStr <p>结束时间字符串</p>
      */
     public void setEndTimeStr(String EndTimeStr) {
         this.EndTimeStr = EndTimeStr;
     }
 
     /**
-     * Get 查询粒度 
-     * @return Dimension 查询粒度
+     * Get <p>查询粒度</p> 
+     * @return Dimension <p>查询粒度</p>
      */
     public String getDimension() {
         return this.Dimension;
     }
 
     /**
-     * Set 查询粒度
-     * @param Dimension 查询粒度
+     * Set <p>查询粒度</p>
+     * @param Dimension <p>查询粒度</p>
      */
     public void setDimension(String Dimension) {
         this.Dimension = Dimension;

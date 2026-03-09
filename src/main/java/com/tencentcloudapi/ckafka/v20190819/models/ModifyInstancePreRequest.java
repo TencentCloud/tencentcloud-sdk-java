@@ -24,117 +24,92 @@ import java.util.HashMap;
 public class ModifyInstancePreRequest extends AbstractModel {
 
     /**
-    * ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+    * <p>ckafka集群实例Id,可通过<a href="https://cloud.tencent.com/document/product/597/40835">DescribeInstances</a>接口获取</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 磁盘大小 单位 GB     最大值为500000,步长100
-可以通过以下链接查看规格限制：https://cloud.tencent.com/document/product/597/122562
-
+    * <p>磁盘大小 单位 GB     最大值为500000,步长100可以通过以下链接查看规格限制：https://cloud.tencent.com/document/product/597/122562</p>
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-    * 峰值带宽 单位 MB/s
-可以通过以下链接查看规格限制及对应步长: https://cloud.tencent.com/document/product/597/11745
-
+    * <p>峰值带宽 单位 MB/s可以通过以下链接查看规格限制及对应步长: https://cloud.tencent.com/document/product/597/11745</p>
     */
     @SerializedName("BandWidth")
     @Expose
     private Long BandWidth;
 
     /**
-    * 分区上限 最大值: 40000, 步长: 100
-可以通过以下链接查看规格限制: https://cloud.tencent.com/document/product/597/122563
+    * <p>分区上限 最大值: 40000, 步长: 100可以通过以下链接查看规格限制: https://cloud.tencent.com/document/product/597/122563</p>
     */
     @SerializedName("Partition")
     @Expose
     private Long Partition;
 
     /**
-     * Get ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取 
-     * @return InstanceId ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+     * Get <p>ckafka集群实例Id,可通过<a href="https://cloud.tencent.com/document/product/597/40835">DescribeInstances</a>接口获取</p> 
+     * @return InstanceId <p>ckafka集群实例Id,可通过<a href="https://cloud.tencent.com/document/product/597/40835">DescribeInstances</a>接口获取</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
-     * @param InstanceId ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+     * Set <p>ckafka集群实例Id,可通过<a href="https://cloud.tencent.com/document/product/597/40835">DescribeInstances</a>接口获取</p>
+     * @param InstanceId <p>ckafka集群实例Id,可通过<a href="https://cloud.tencent.com/document/product/597/40835">DescribeInstances</a>接口获取</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 磁盘大小 单位 GB     最大值为500000,步长100
-可以通过以下链接查看规格限制：https://cloud.tencent.com/document/product/597/122562
- 
-     * @return DiskSize 磁盘大小 单位 GB     最大值为500000,步长100
-可以通过以下链接查看规格限制：https://cloud.tencent.com/document/product/597/122562
-
+     * Get <p>磁盘大小 单位 GB     最大值为500000,步长100可以通过以下链接查看规格限制：https://cloud.tencent.com/document/product/597/122562</p> 
+     * @return DiskSize <p>磁盘大小 单位 GB     最大值为500000,步长100可以通过以下链接查看规格限制：https://cloud.tencent.com/document/product/597/122562</p>
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set 磁盘大小 单位 GB     最大值为500000,步长100
-可以通过以下链接查看规格限制：https://cloud.tencent.com/document/product/597/122562
-
-     * @param DiskSize 磁盘大小 单位 GB     最大值为500000,步长100
-可以通过以下链接查看规格限制：https://cloud.tencent.com/document/product/597/122562
-
+     * Set <p>磁盘大小 单位 GB     最大值为500000,步长100可以通过以下链接查看规格限制：https://cloud.tencent.com/document/product/597/122562</p>
+     * @param DiskSize <p>磁盘大小 单位 GB     最大值为500000,步长100可以通过以下链接查看规格限制：https://cloud.tencent.com/document/product/597/122562</p>
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get 峰值带宽 单位 MB/s
-可以通过以下链接查看规格限制及对应步长: https://cloud.tencent.com/document/product/597/11745
- 
-     * @return BandWidth 峰值带宽 单位 MB/s
-可以通过以下链接查看规格限制及对应步长: https://cloud.tencent.com/document/product/597/11745
-
+     * Get <p>峰值带宽 单位 MB/s可以通过以下链接查看规格限制及对应步长: https://cloud.tencent.com/document/product/597/11745</p> 
+     * @return BandWidth <p>峰值带宽 单位 MB/s可以通过以下链接查看规格限制及对应步长: https://cloud.tencent.com/document/product/597/11745</p>
      */
     public Long getBandWidth() {
         return this.BandWidth;
     }
 
     /**
-     * Set 峰值带宽 单位 MB/s
-可以通过以下链接查看规格限制及对应步长: https://cloud.tencent.com/document/product/597/11745
-
-     * @param BandWidth 峰值带宽 单位 MB/s
-可以通过以下链接查看规格限制及对应步长: https://cloud.tencent.com/document/product/597/11745
-
+     * Set <p>峰值带宽 单位 MB/s可以通过以下链接查看规格限制及对应步长: https://cloud.tencent.com/document/product/597/11745</p>
+     * @param BandWidth <p>峰值带宽 单位 MB/s可以通过以下链接查看规格限制及对应步长: https://cloud.tencent.com/document/product/597/11745</p>
      */
     public void setBandWidth(Long BandWidth) {
         this.BandWidth = BandWidth;
     }
 
     /**
-     * Get 分区上限 最大值: 40000, 步长: 100
-可以通过以下链接查看规格限制: https://cloud.tencent.com/document/product/597/122563 
-     * @return Partition 分区上限 最大值: 40000, 步长: 100
-可以通过以下链接查看规格限制: https://cloud.tencent.com/document/product/597/122563
+     * Get <p>分区上限 最大值: 40000, 步长: 100可以通过以下链接查看规格限制: https://cloud.tencent.com/document/product/597/122563</p> 
+     * @return Partition <p>分区上限 最大值: 40000, 步长: 100可以通过以下链接查看规格限制: https://cloud.tencent.com/document/product/597/122563</p>
      */
     public Long getPartition() {
         return this.Partition;
     }
 
     /**
-     * Set 分区上限 最大值: 40000, 步长: 100
-可以通过以下链接查看规格限制: https://cloud.tencent.com/document/product/597/122563
-     * @param Partition 分区上限 最大值: 40000, 步长: 100
-可以通过以下链接查看规格限制: https://cloud.tencent.com/document/product/597/122563
+     * Set <p>分区上限 最大值: 40000, 步长: 100可以通过以下链接查看规格限制: https://cloud.tencent.com/document/product/597/122563</p>
+     * @param Partition <p>分区上限 最大值: 40000, 步长: 100可以通过以下链接查看规格限制: https://cloud.tencent.com/document/product/597/122563</p>
      */
     public void setPartition(Long Partition) {
         this.Partition = Partition;

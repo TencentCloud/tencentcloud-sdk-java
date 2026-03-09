@@ -24,84 +24,69 @@ import java.util.HashMap;
 public class GetTotalTicketStatisticsRequest extends AbstractModel {
 
     /**
-    * 开始时间
+    * <p>开始时间</p>
     */
     @SerializedName("StartTimeStr")
     @Expose
     private String StartTimeStr;
 
     /**
-    * 结束时间
+    * <p>结束时间</p>
     */
     @SerializedName("EndTimeStr")
     @Expose
     private String EndTimeStr;
 
     /**
-    * 查询粒度
-分钟：“1”
-小时：“2”
-天：“3”
+    * <p>查询粒度<br>分钟：“1”<br>小时：“2”<br>天：“3”</p>
     */
     @SerializedName("Dimension")
     @Expose
     private String Dimension;
 
     /**
-     * Get 开始时间 
-     * @return StartTimeStr 开始时间
+     * Get <p>开始时间</p> 
+     * @return StartTimeStr <p>开始时间</p>
      */
     public String getStartTimeStr() {
         return this.StartTimeStr;
     }
 
     /**
-     * Set 开始时间
-     * @param StartTimeStr 开始时间
+     * Set <p>开始时间</p>
+     * @param StartTimeStr <p>开始时间</p>
      */
     public void setStartTimeStr(String StartTimeStr) {
         this.StartTimeStr = StartTimeStr;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTimeStr 结束时间
+     * Get <p>结束时间</p> 
+     * @return EndTimeStr <p>结束时间</p>
      */
     public String getEndTimeStr() {
         return this.EndTimeStr;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTimeStr 结束时间
+     * Set <p>结束时间</p>
+     * @param EndTimeStr <p>结束时间</p>
      */
     public void setEndTimeStr(String EndTimeStr) {
         this.EndTimeStr = EndTimeStr;
     }
 
     /**
-     * Get 查询粒度
-分钟：“1”
-小时：“2”
-天：“3” 
-     * @return Dimension 查询粒度
-分钟：“1”
-小时：“2”
-天：“3”
+     * Get <p>查询粒度<br>分钟：“1”<br>小时：“2”<br>天：“3”</p> 
+     * @return Dimension <p>查询粒度<br>分钟：“1”<br>小时：“2”<br>天：“3”</p>
      */
     public String getDimension() {
         return this.Dimension;
     }
 
     /**
-     * Set 查询粒度
-分钟：“1”
-小时：“2”
-天：“3”
-     * @param Dimension 查询粒度
-分钟：“1”
-小时：“2”
-天：“3”
+     * Set <p>查询粒度<br>分钟：“1”<br>小时：“2”<br>天：“3”</p>
+     * @param Dimension <p>查询粒度<br>分钟：“1”<br>小时：“2”<br>天：“3”</p>
      */
     public void setDimension(String Dimension) {
         this.Dimension = Dimension;

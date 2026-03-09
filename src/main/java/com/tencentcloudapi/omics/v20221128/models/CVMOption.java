@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CVMOption extends AbstractModel {
 
     /**
-    * 云服务器可用区。
+    * <p>云服务器可用区。</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 云服务器实例规格。
+    * <p>云服务器实例规格。详情参见<a href="https://cloud.tencent.com/document/product/213/11518">实例规格</a>描述</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-     * Get 云服务器可用区。 
-     * @return Zone 云服务器可用区。
+     * Get <p>云服务器可用区。</p> 
+     * @return Zone <p>云服务器可用区。</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 云服务器可用区。
-     * @param Zone 云服务器可用区。
+     * Set <p>云服务器可用区。</p>
+     * @param Zone <p>云服务器可用区。</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 云服务器实例规格。 
-     * @return InstanceType 云服务器实例规格。
+     * Get <p>云服务器实例规格。详情参见<a href="https://cloud.tencent.com/document/product/213/11518">实例规格</a>描述</p> 
+     * @return InstanceType <p>云服务器实例规格。详情参见<a href="https://cloud.tencent.com/document/product/213/11518">实例规格</a>描述</p>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 云服务器实例规格。
-     * @param InstanceType 云服务器实例规格。
+     * Set <p>云服务器实例规格。详情参见<a href="https://cloud.tencent.com/document/product/213/11518">实例规格</a>描述</p>
+     * @param InstanceType <p>云服务器实例规格。详情参见<a href="https://cloud.tencent.com/document/product/213/11518">实例规格</a>描述</p>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;

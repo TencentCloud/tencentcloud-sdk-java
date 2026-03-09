@@ -47,6 +47,27 @@ public class DescribeContractComparisonTaskRequest extends AbstractModel {
     private Boolean ShowDetail;
 
     /**
+    * 搜索条件，具体参考Filter结构体。本接口取值：
+
+1. **format-type：**
+按照【 合同文本格式类型 】进行过滤；
+类型：String；
+是否必填项：否；
+类型如下：
+<ul><li> **0**：段落（正文）</li>
+<li> **1**：标点符号</li>
+<li> **2**：页眉页脚</li>
+<li> **3**：目录</li>
+<li> **4**：印章</li>
+<li> **5**：序号</li>
+<li> **7**：下划线内容（填写区）</li>
+</ul>
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
      * Get 执行合同审查任务的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
      * @return Operator 执行合同审查任务的员工信息。
@@ -102,6 +123,78 @@ public class DescribeContractComparisonTaskRequest extends AbstractModel {
         this.ShowDetail = ShowDetail;
     }
 
+    /**
+     * Get 搜索条件，具体参考Filter结构体。本接口取值：
+
+1. **format-type：**
+按照【 合同文本格式类型 】进行过滤；
+类型：String；
+是否必填项：否；
+类型如下：
+<ul><li> **0**：段落（正文）</li>
+<li> **1**：标点符号</li>
+<li> **2**：页眉页脚</li>
+<li> **3**：目录</li>
+<li> **4**：印章</li>
+<li> **5**：序号</li>
+<li> **7**：下划线内容（填写区）</li>
+</ul> 
+     * @return Filters 搜索条件，具体参考Filter结构体。本接口取值：
+
+1. **format-type：**
+按照【 合同文本格式类型 】进行过滤；
+类型：String；
+是否必填项：否；
+类型如下：
+<ul><li> **0**：段落（正文）</li>
+<li> **1**：标点符号</li>
+<li> **2**：页眉页脚</li>
+<li> **3**：目录</li>
+<li> **4**：印章</li>
+<li> **5**：序号</li>
+<li> **7**：下划线内容（填写区）</li>
+</ul>
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 搜索条件，具体参考Filter结构体。本接口取值：
+
+1. **format-type：**
+按照【 合同文本格式类型 】进行过滤；
+类型：String；
+是否必填项：否；
+类型如下：
+<ul><li> **0**：段落（正文）</li>
+<li> **1**：标点符号</li>
+<li> **2**：页眉页脚</li>
+<li> **3**：目录</li>
+<li> **4**：印章</li>
+<li> **5**：序号</li>
+<li> **7**：下划线内容（填写区）</li>
+</ul>
+     * @param Filters 搜索条件，具体参考Filter结构体。本接口取值：
+
+1. **format-type：**
+按照【 合同文本格式类型 】进行过滤；
+类型：String；
+是否必填项：否；
+类型如下：
+<ul><li> **0**：段落（正文）</li>
+<li> **1**：标点符号</li>
+<li> **2**：页眉页脚</li>
+<li> **3**：目录</li>
+<li> **4**：印章</li>
+<li> **5**：序号</li>
+<li> **7**：下划线内容（填写区）</li>
+</ul>
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
     public DescribeContractComparisonTaskRequest() {
     }
 
@@ -119,6 +212,12 @@ public class DescribeContractComparisonTaskRequest extends AbstractModel {
         if (source.ShowDetail != null) {
             this.ShowDetail = new Boolean(source.ShowDetail);
         }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -129,6 +228,7 @@ public class DescribeContractComparisonTaskRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "ShowDetail", this.ShowDetail);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

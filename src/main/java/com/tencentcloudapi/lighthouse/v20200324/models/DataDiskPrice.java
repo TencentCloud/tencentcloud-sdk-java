@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class DataDiskPrice extends AbstractModel {
 
     /**
-    * 云硬盘ID。
+    * <p>云硬盘ID。</p>
     */
     @SerializedName("DiskId")
     @Expose
     private String DiskId;
 
     /**
-    * 云硬盘单价。
+    * <p>云硬盘单价。</p><p>单位：元</p>
     */
     @SerializedName("OriginalDiskPrice")
     @Expose
     private Float OriginalDiskPrice;
 
     /**
-    * 云硬盘总价。
+    * <p>云硬盘总价。</p><p>单位：元</p>
     */
     @SerializedName("OriginalPrice")
     @Expose
     private Float OriginalPrice;
 
     /**
-    * 折扣。
+    * <p>折扣。</p>
     */
     @SerializedName("Discount")
     @Expose
     private Float Discount;
 
     /**
-    * 折后总价。
+    * <p>折后总价。</p><p>单位：元</p>
     */
     @SerializedName("DiscountPrice")
     @Expose
     private Float DiscountPrice;
 
     /**
-    * 数据盘挂载的实例ID。
+    * <p>数据盘挂载的实例ID。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get 云硬盘ID。 
-     * @return DiskId 云硬盘ID。
+     * Get <p>云硬盘ID。</p> 
+     * @return DiskId <p>云硬盘ID。</p>
      */
     public String getDiskId() {
         return this.DiskId;
     }
 
     /**
-     * Set 云硬盘ID。
-     * @param DiskId 云硬盘ID。
+     * Set <p>云硬盘ID。</p>
+     * @param DiskId <p>云硬盘ID。</p>
      */
     public void setDiskId(String DiskId) {
         this.DiskId = DiskId;
     }
 
     /**
-     * Get 云硬盘单价。 
-     * @return OriginalDiskPrice 云硬盘单价。
+     * Get <p>云硬盘单价。</p><p>单位：元</p> 
+     * @return OriginalDiskPrice <p>云硬盘单价。</p><p>单位：元</p>
      */
     public Float getOriginalDiskPrice() {
         return this.OriginalDiskPrice;
     }
 
     /**
-     * Set 云硬盘单价。
-     * @param OriginalDiskPrice 云硬盘单价。
+     * Set <p>云硬盘单价。</p><p>单位：元</p>
+     * @param OriginalDiskPrice <p>云硬盘单价。</p><p>单位：元</p>
      */
     public void setOriginalDiskPrice(Float OriginalDiskPrice) {
         this.OriginalDiskPrice = OriginalDiskPrice;
     }
 
     /**
-     * Get 云硬盘总价。 
-     * @return OriginalPrice 云硬盘总价。
+     * Get <p>云硬盘总价。</p><p>单位：元</p> 
+     * @return OriginalPrice <p>云硬盘总价。</p><p>单位：元</p>
      */
     public Float getOriginalPrice() {
         return this.OriginalPrice;
     }
 
     /**
-     * Set 云硬盘总价。
-     * @param OriginalPrice 云硬盘总价。
+     * Set <p>云硬盘总价。</p><p>单位：元</p>
+     * @param OriginalPrice <p>云硬盘总价。</p><p>单位：元</p>
      */
     public void setOriginalPrice(Float OriginalPrice) {
         this.OriginalPrice = OriginalPrice;
     }
 
     /**
-     * Get 折扣。 
-     * @return Discount 折扣。
+     * Get <p>折扣。</p> 
+     * @return Discount <p>折扣。</p>
      */
     public Float getDiscount() {
         return this.Discount;
     }
 
     /**
-     * Set 折扣。
-     * @param Discount 折扣。
+     * Set <p>折扣。</p>
+     * @param Discount <p>折扣。</p>
      */
     public void setDiscount(Float Discount) {
         this.Discount = Discount;
     }
 
     /**
-     * Get 折后总价。 
-     * @return DiscountPrice 折后总价。
+     * Get <p>折后总价。</p><p>单位：元</p> 
+     * @return DiscountPrice <p>折后总价。</p><p>单位：元</p>
      */
     public Float getDiscountPrice() {
         return this.DiscountPrice;
     }
 
     /**
-     * Set 折后总价。
-     * @param DiscountPrice 折后总价。
+     * Set <p>折后总价。</p><p>单位：元</p>
+     * @param DiscountPrice <p>折后总价。</p><p>单位：元</p>
      */
     public void setDiscountPrice(Float DiscountPrice) {
         this.DiscountPrice = DiscountPrice;
     }
 
     /**
-     * Get 数据盘挂载的实例ID。 
-     * @return InstanceId 数据盘挂载的实例ID。
+     * Get <p>数据盘挂载的实例ID。</p> 
+     * @return InstanceId <p>数据盘挂载的实例ID。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 数据盘挂载的实例ID。
-     * @param InstanceId 数据盘挂载的实例ID。
+     * Set <p>数据盘挂载的实例ID。</p>
+     * @param InstanceId <p>数据盘挂载的实例ID。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

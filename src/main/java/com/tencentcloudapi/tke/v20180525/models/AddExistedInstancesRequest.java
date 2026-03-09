@@ -101,6 +101,13 @@ public class AddExistedInstancesRequest extends AbstractModel {
     private String ImageId;
 
     /**
+    * 直接添加为原生节点
+    */
+    @SerializedName("NodeType")
+    @Expose
+    private String NodeType;
+
+    /**
      * Get 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ） 
      * @return ClusterId 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
      */
@@ -276,6 +283,22 @@ public class AddExistedInstancesRequest extends AbstractModel {
         this.ImageId = ImageId;
     }
 
+    /**
+     * Get 直接添加为原生节点 
+     * @return NodeType 直接添加为原生节点
+     */
+    public String getNodeType() {
+        return this.NodeType;
+    }
+
+    /**
+     * Set 直接添加为原生节点
+     * @param NodeType 直接添加为原生节点
+     */
+    public void setNodeType(String NodeType) {
+        this.NodeType = NodeType;
+    }
+
     public AddExistedInstancesRequest() {
     }
 
@@ -329,6 +352,9 @@ public class AddExistedInstancesRequest extends AbstractModel {
         if (source.ImageId != null) {
             this.ImageId = new String(source.ImageId);
         }
+        if (source.NodeType != null) {
+            this.NodeType = new String(source.NodeType);
+        }
     }
 
 
@@ -347,6 +373,7 @@ public class AddExistedInstancesRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "SkipValidateOptions.", this.SkipValidateOptions);
         this.setParamArrayObj(map, prefix + "InstanceAdvancedSettingsOverrides.", this.InstanceAdvancedSettingsOverrides);
         this.setParamSimple(map, prefix + "ImageId", this.ImageId);
+        this.setParamSimple(map, prefix + "NodeType", this.NodeType);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyInstancePreResponse extends AbstractModel {
 
     /**
-    * 变更预付费实例配置返回结构
+    * <p>变更预付费实例配置返回结构</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyInstancePreResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 变更预付费实例配置返回结构 
-     * @return Result 变更预付费实例配置返回结构
+     * Get <p>变更预付费实例配置返回结构</p> 
+     * @return Result <p>变更预付费实例配置返回结构</p>
      */
     public CreateInstancePreResp getResult() {
         return this.Result;
     }
 
     /**
-     * Set 变更预付费实例配置返回结构
-     * @param Result 变更预付费实例配置返回结构
+     * Set <p>变更预付费实例配置返回结构</p>
+     * @param Result <p>变更预付费实例配置返回结构</p>
      */
     public void setResult(CreateInstancePreResp Result) {
         this.Result = Result;

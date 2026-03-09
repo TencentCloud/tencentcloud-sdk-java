@@ -24,85 +24,70 @@ import java.util.HashMap;
 public class IDCardOCRResponse extends AbstractModel {
 
     /**
-    * 姓名（人像面）
+    * <p>姓名（人像面）</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 性别（人像面）
+    * <p>性别（人像面）</p>
     */
     @SerializedName("Sex")
     @Expose
     private String Sex;
 
     /**
-    * 民族（人像面）
+    * <p>民族（人像面）</p>
     */
     @SerializedName("Nation")
     @Expose
     private String Nation;
 
     /**
-    * 出生日期（人像面）
+    * <p>出生日期（人像面）</p>
     */
     @SerializedName("Birth")
     @Expose
     private String Birth;
 
     /**
-    * 地址（人像面）
+    * <p>地址（人像面）</p>
     */
     @SerializedName("Address")
     @Expose
     private String Address;
 
     /**
-    * 身份证号（人像面）
+    * <p>身份证号（人像面）</p>
     */
     @SerializedName("IdNum")
     @Expose
     private String IdNum;
 
     /**
-    * 发证机关（国徽面）
+    * <p>发证机关（国徽面）</p>
     */
     @SerializedName("Authority")
     @Expose
     private String Authority;
 
     /**
-    * 证件有效期（国徽面）
+    * <p>证件有效期（国徽面）</p>
     */
     @SerializedName("ValidDate")
     @Expose
     private String ValidDate;
 
     /**
-    * 扩展信息，不请求则不返回，具体输入参考示例3和示例4。
-IdCard，裁剪后身份证照片的base64编码，请求 Config.CropIdCard 时返回；
-Portrait，身份证头像照片的base64编码，请求 Config.CropPortrait 时返回；
-Quality，图片质量分数，请求 Config.Quality 时返回（取值范围：0 ~ 100，分数越低越模糊，建议阈值≥50）;
-BorderCodeValue，身份证边框不完整告警阈值分数，请求 Config.BorderCheckWarn时返回（取值范围：0 ~ 100，分数越低边框遮挡可能性越低，建议阈值≤50）;
-WarnInfos，告警信息，Code 告警码列表和释义：
--9100 身份证有效日期不合法告警，
--9101 身份证边框不完整告警，
--9102 身份证复印件告警（黑白及彩色复印件）,
--9108 身份证复印件告警（仅黑白复印件），
--9103 身份证翻拍告警，
--9105 身份证框内遮挡告警，
--9104 临时身份证告警，
--9106 身份证疑似存在PS痕迹告警，
--9107 身份证反光告警，
--9110 电子身份证告警
+    * <p>扩展信息，不请求则不返回，具体输入参考示例3和示例4。<br>IdCard，裁剪后身份证照片的base64编码，请求 Config.CropIdCard 时返回；<br>Portrait，身份证头像照片的base64编码，请求 Config.CropPortrait 时返回；<br>Quality，图片质量分数，请求 Config.Quality 时返回（取值范围：0 ~ 100，分数越低越模糊，建议阈值≥50）;<br>BorderCodeValue，身份证边框不完整告警阈值分数，请求 Config.BorderCheckWarn时返回（取值范围：0 ~ 100，分数越低边框遮挡可能性越低，建议阈值≤50）;<br>WarnInfos，告警信息，Code 告警码列表和释义：<br>-9100 身份证有效日期不合法告警，<br>-9101 身份证边框不完整告警，<br>-9102 身份证复印件告警（黑白及彩色复印件）,<br>-9108 身份证复印件告警（仅黑白复印件），<br>-9103 身份证翻拍告警，<br>-9105 身份证框内遮挡告警，<br>-9104 临时身份证告警，<br>-9106 身份证疑似存在PS痕迹告警，<br>-9107 身份证反光告警，<br>-9110 电子身份证告警，<br>-9111 水印告警（仅CardWarnType参数为Advanced时）</p>
     */
     @SerializedName("AdvancedInfo")
     @Expose
     private String AdvancedInfo;
 
     /**
-    * 反光点覆盖区域详情结果，具体内容请点击左侧链接
+    * <p>反光点覆盖区域详情结果，具体内容请点击左侧链接</p>
     */
     @SerializedName("ReflectDetailInfos")
     @Expose
@@ -116,220 +101,160 @@ WarnInfos，告警信息，Code 告警码列表和释义：
     private String RequestId;
 
     /**
-     * Get 姓名（人像面） 
-     * @return Name 姓名（人像面）
+     * Get <p>姓名（人像面）</p> 
+     * @return Name <p>姓名（人像面）</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 姓名（人像面）
-     * @param Name 姓名（人像面）
+     * Set <p>姓名（人像面）</p>
+     * @param Name <p>姓名（人像面）</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 性别（人像面） 
-     * @return Sex 性别（人像面）
+     * Get <p>性别（人像面）</p> 
+     * @return Sex <p>性别（人像面）</p>
      */
     public String getSex() {
         return this.Sex;
     }
 
     /**
-     * Set 性别（人像面）
-     * @param Sex 性别（人像面）
+     * Set <p>性别（人像面）</p>
+     * @param Sex <p>性别（人像面）</p>
      */
     public void setSex(String Sex) {
         this.Sex = Sex;
     }
 
     /**
-     * Get 民族（人像面） 
-     * @return Nation 民族（人像面）
+     * Get <p>民族（人像面）</p> 
+     * @return Nation <p>民族（人像面）</p>
      */
     public String getNation() {
         return this.Nation;
     }
 
     /**
-     * Set 民族（人像面）
-     * @param Nation 民族（人像面）
+     * Set <p>民族（人像面）</p>
+     * @param Nation <p>民族（人像面）</p>
      */
     public void setNation(String Nation) {
         this.Nation = Nation;
     }
 
     /**
-     * Get 出生日期（人像面） 
-     * @return Birth 出生日期（人像面）
+     * Get <p>出生日期（人像面）</p> 
+     * @return Birth <p>出生日期（人像面）</p>
      */
     public String getBirth() {
         return this.Birth;
     }
 
     /**
-     * Set 出生日期（人像面）
-     * @param Birth 出生日期（人像面）
+     * Set <p>出生日期（人像面）</p>
+     * @param Birth <p>出生日期（人像面）</p>
      */
     public void setBirth(String Birth) {
         this.Birth = Birth;
     }
 
     /**
-     * Get 地址（人像面） 
-     * @return Address 地址（人像面）
+     * Get <p>地址（人像面）</p> 
+     * @return Address <p>地址（人像面）</p>
      */
     public String getAddress() {
         return this.Address;
     }
 
     /**
-     * Set 地址（人像面）
-     * @param Address 地址（人像面）
+     * Set <p>地址（人像面）</p>
+     * @param Address <p>地址（人像面）</p>
      */
     public void setAddress(String Address) {
         this.Address = Address;
     }
 
     /**
-     * Get 身份证号（人像面） 
-     * @return IdNum 身份证号（人像面）
+     * Get <p>身份证号（人像面）</p> 
+     * @return IdNum <p>身份证号（人像面）</p>
      */
     public String getIdNum() {
         return this.IdNum;
     }
 
     /**
-     * Set 身份证号（人像面）
-     * @param IdNum 身份证号（人像面）
+     * Set <p>身份证号（人像面）</p>
+     * @param IdNum <p>身份证号（人像面）</p>
      */
     public void setIdNum(String IdNum) {
         this.IdNum = IdNum;
     }
 
     /**
-     * Get 发证机关（国徽面） 
-     * @return Authority 发证机关（国徽面）
+     * Get <p>发证机关（国徽面）</p> 
+     * @return Authority <p>发证机关（国徽面）</p>
      */
     public String getAuthority() {
         return this.Authority;
     }
 
     /**
-     * Set 发证机关（国徽面）
-     * @param Authority 发证机关（国徽面）
+     * Set <p>发证机关（国徽面）</p>
+     * @param Authority <p>发证机关（国徽面）</p>
      */
     public void setAuthority(String Authority) {
         this.Authority = Authority;
     }
 
     /**
-     * Get 证件有效期（国徽面） 
-     * @return ValidDate 证件有效期（国徽面）
+     * Get <p>证件有效期（国徽面）</p> 
+     * @return ValidDate <p>证件有效期（国徽面）</p>
      */
     public String getValidDate() {
         return this.ValidDate;
     }
 
     /**
-     * Set 证件有效期（国徽面）
-     * @param ValidDate 证件有效期（国徽面）
+     * Set <p>证件有效期（国徽面）</p>
+     * @param ValidDate <p>证件有效期（国徽面）</p>
      */
     public void setValidDate(String ValidDate) {
         this.ValidDate = ValidDate;
     }
 
     /**
-     * Get 扩展信息，不请求则不返回，具体输入参考示例3和示例4。
-IdCard，裁剪后身份证照片的base64编码，请求 Config.CropIdCard 时返回；
-Portrait，身份证头像照片的base64编码，请求 Config.CropPortrait 时返回；
-Quality，图片质量分数，请求 Config.Quality 时返回（取值范围：0 ~ 100，分数越低越模糊，建议阈值≥50）;
-BorderCodeValue，身份证边框不完整告警阈值分数，请求 Config.BorderCheckWarn时返回（取值范围：0 ~ 100，分数越低边框遮挡可能性越低，建议阈值≤50）;
-WarnInfos，告警信息，Code 告警码列表和释义：
--9100 身份证有效日期不合法告警，
--9101 身份证边框不完整告警，
--9102 身份证复印件告警（黑白及彩色复印件）,
--9108 身份证复印件告警（仅黑白复印件），
--9103 身份证翻拍告警，
--9105 身份证框内遮挡告警，
--9104 临时身份证告警，
--9106 身份证疑似存在PS痕迹告警，
--9107 身份证反光告警，
--9110 电子身份证告警 
-     * @return AdvancedInfo 扩展信息，不请求则不返回，具体输入参考示例3和示例4。
-IdCard，裁剪后身份证照片的base64编码，请求 Config.CropIdCard 时返回；
-Portrait，身份证头像照片的base64编码，请求 Config.CropPortrait 时返回；
-Quality，图片质量分数，请求 Config.Quality 时返回（取值范围：0 ~ 100，分数越低越模糊，建议阈值≥50）;
-BorderCodeValue，身份证边框不完整告警阈值分数，请求 Config.BorderCheckWarn时返回（取值范围：0 ~ 100，分数越低边框遮挡可能性越低，建议阈值≤50）;
-WarnInfos，告警信息，Code 告警码列表和释义：
--9100 身份证有效日期不合法告警，
--9101 身份证边框不完整告警，
--9102 身份证复印件告警（黑白及彩色复印件）,
--9108 身份证复印件告警（仅黑白复印件），
--9103 身份证翻拍告警，
--9105 身份证框内遮挡告警，
--9104 临时身份证告警，
--9106 身份证疑似存在PS痕迹告警，
--9107 身份证反光告警，
--9110 电子身份证告警
+     * Get <p>扩展信息，不请求则不返回，具体输入参考示例3和示例4。<br>IdCard，裁剪后身份证照片的base64编码，请求 Config.CropIdCard 时返回；<br>Portrait，身份证头像照片的base64编码，请求 Config.CropPortrait 时返回；<br>Quality，图片质量分数，请求 Config.Quality 时返回（取值范围：0 ~ 100，分数越低越模糊，建议阈值≥50）;<br>BorderCodeValue，身份证边框不完整告警阈值分数，请求 Config.BorderCheckWarn时返回（取值范围：0 ~ 100，分数越低边框遮挡可能性越低，建议阈值≤50）;<br>WarnInfos，告警信息，Code 告警码列表和释义：<br>-9100 身份证有效日期不合法告警，<br>-9101 身份证边框不完整告警，<br>-9102 身份证复印件告警（黑白及彩色复印件）,<br>-9108 身份证复印件告警（仅黑白复印件），<br>-9103 身份证翻拍告警，<br>-9105 身份证框内遮挡告警，<br>-9104 临时身份证告警，<br>-9106 身份证疑似存在PS痕迹告警，<br>-9107 身份证反光告警，<br>-9110 电子身份证告警，<br>-9111 水印告警（仅CardWarnType参数为Advanced时）</p> 
+     * @return AdvancedInfo <p>扩展信息，不请求则不返回，具体输入参考示例3和示例4。<br>IdCard，裁剪后身份证照片的base64编码，请求 Config.CropIdCard 时返回；<br>Portrait，身份证头像照片的base64编码，请求 Config.CropPortrait 时返回；<br>Quality，图片质量分数，请求 Config.Quality 时返回（取值范围：0 ~ 100，分数越低越模糊，建议阈值≥50）;<br>BorderCodeValue，身份证边框不完整告警阈值分数，请求 Config.BorderCheckWarn时返回（取值范围：0 ~ 100，分数越低边框遮挡可能性越低，建议阈值≤50）;<br>WarnInfos，告警信息，Code 告警码列表和释义：<br>-9100 身份证有效日期不合法告警，<br>-9101 身份证边框不完整告警，<br>-9102 身份证复印件告警（黑白及彩色复印件）,<br>-9108 身份证复印件告警（仅黑白复印件），<br>-9103 身份证翻拍告警，<br>-9105 身份证框内遮挡告警，<br>-9104 临时身份证告警，<br>-9106 身份证疑似存在PS痕迹告警，<br>-9107 身份证反光告警，<br>-9110 电子身份证告警，<br>-9111 水印告警（仅CardWarnType参数为Advanced时）</p>
      */
     public String getAdvancedInfo() {
         return this.AdvancedInfo;
     }
 
     /**
-     * Set 扩展信息，不请求则不返回，具体输入参考示例3和示例4。
-IdCard，裁剪后身份证照片的base64编码，请求 Config.CropIdCard 时返回；
-Portrait，身份证头像照片的base64编码，请求 Config.CropPortrait 时返回；
-Quality，图片质量分数，请求 Config.Quality 时返回（取值范围：0 ~ 100，分数越低越模糊，建议阈值≥50）;
-BorderCodeValue，身份证边框不完整告警阈值分数，请求 Config.BorderCheckWarn时返回（取值范围：0 ~ 100，分数越低边框遮挡可能性越低，建议阈值≤50）;
-WarnInfos，告警信息，Code 告警码列表和释义：
--9100 身份证有效日期不合法告警，
--9101 身份证边框不完整告警，
--9102 身份证复印件告警（黑白及彩色复印件）,
--9108 身份证复印件告警（仅黑白复印件），
--9103 身份证翻拍告警，
--9105 身份证框内遮挡告警，
--9104 临时身份证告警，
--9106 身份证疑似存在PS痕迹告警，
--9107 身份证反光告警，
--9110 电子身份证告警
-     * @param AdvancedInfo 扩展信息，不请求则不返回，具体输入参考示例3和示例4。
-IdCard，裁剪后身份证照片的base64编码，请求 Config.CropIdCard 时返回；
-Portrait，身份证头像照片的base64编码，请求 Config.CropPortrait 时返回；
-Quality，图片质量分数，请求 Config.Quality 时返回（取值范围：0 ~ 100，分数越低越模糊，建议阈值≥50）;
-BorderCodeValue，身份证边框不完整告警阈值分数，请求 Config.BorderCheckWarn时返回（取值范围：0 ~ 100，分数越低边框遮挡可能性越低，建议阈值≤50）;
-WarnInfos，告警信息，Code 告警码列表和释义：
--9100 身份证有效日期不合法告警，
--9101 身份证边框不完整告警，
--9102 身份证复印件告警（黑白及彩色复印件）,
--9108 身份证复印件告警（仅黑白复印件），
--9103 身份证翻拍告警，
--9105 身份证框内遮挡告警，
--9104 临时身份证告警，
--9106 身份证疑似存在PS痕迹告警，
--9107 身份证反光告警，
--9110 电子身份证告警
+     * Set <p>扩展信息，不请求则不返回，具体输入参考示例3和示例4。<br>IdCard，裁剪后身份证照片的base64编码，请求 Config.CropIdCard 时返回；<br>Portrait，身份证头像照片的base64编码，请求 Config.CropPortrait 时返回；<br>Quality，图片质量分数，请求 Config.Quality 时返回（取值范围：0 ~ 100，分数越低越模糊，建议阈值≥50）;<br>BorderCodeValue，身份证边框不完整告警阈值分数，请求 Config.BorderCheckWarn时返回（取值范围：0 ~ 100，分数越低边框遮挡可能性越低，建议阈值≤50）;<br>WarnInfos，告警信息，Code 告警码列表和释义：<br>-9100 身份证有效日期不合法告警，<br>-9101 身份证边框不完整告警，<br>-9102 身份证复印件告警（黑白及彩色复印件）,<br>-9108 身份证复印件告警（仅黑白复印件），<br>-9103 身份证翻拍告警，<br>-9105 身份证框内遮挡告警，<br>-9104 临时身份证告警，<br>-9106 身份证疑似存在PS痕迹告警，<br>-9107 身份证反光告警，<br>-9110 电子身份证告警，<br>-9111 水印告警（仅CardWarnType参数为Advanced时）</p>
+     * @param AdvancedInfo <p>扩展信息，不请求则不返回，具体输入参考示例3和示例4。<br>IdCard，裁剪后身份证照片的base64编码，请求 Config.CropIdCard 时返回；<br>Portrait，身份证头像照片的base64编码，请求 Config.CropPortrait 时返回；<br>Quality，图片质量分数，请求 Config.Quality 时返回（取值范围：0 ~ 100，分数越低越模糊，建议阈值≥50）;<br>BorderCodeValue，身份证边框不完整告警阈值分数，请求 Config.BorderCheckWarn时返回（取值范围：0 ~ 100，分数越低边框遮挡可能性越低，建议阈值≤50）;<br>WarnInfos，告警信息，Code 告警码列表和释义：<br>-9100 身份证有效日期不合法告警，<br>-9101 身份证边框不完整告警，<br>-9102 身份证复印件告警（黑白及彩色复印件）,<br>-9108 身份证复印件告警（仅黑白复印件），<br>-9103 身份证翻拍告警，<br>-9105 身份证框内遮挡告警，<br>-9104 临时身份证告警，<br>-9106 身份证疑似存在PS痕迹告警，<br>-9107 身份证反光告警，<br>-9110 电子身份证告警，<br>-9111 水印告警（仅CardWarnType参数为Advanced时）</p>
      */
     public void setAdvancedInfo(String AdvancedInfo) {
         this.AdvancedInfo = AdvancedInfo;
     }
 
     /**
-     * Get 反光点覆盖区域详情结果，具体内容请点击左侧链接 
-     * @return ReflectDetailInfos 反光点覆盖区域详情结果，具体内容请点击左侧链接
+     * Get <p>反光点覆盖区域详情结果，具体内容请点击左侧链接</p> 
+     * @return ReflectDetailInfos <p>反光点覆盖区域详情结果，具体内容请点击左侧链接</p>
      */
     public ReflectDetailInfo [] getReflectDetailInfos() {
         return this.ReflectDetailInfos;
     }
 
     /**
-     * Set 反光点覆盖区域详情结果，具体内容请点击左侧链接
-     * @param ReflectDetailInfos 反光点覆盖区域详情结果，具体内容请点击左侧链接
+     * Set <p>反光点覆盖区域详情结果，具体内容请点击左侧链接</p>
+     * @param ReflectDetailInfos <p>反光点覆盖区域详情结果，具体内容请点击左侧链接</p>
      */
     public void setReflectDetailInfos(ReflectDetailInfo [] ReflectDetailInfos) {
         this.ReflectDetailInfos = ReflectDetailInfos;

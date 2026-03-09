@@ -24,158 +24,138 @@ import java.util.HashMap;
 public class DiskConfig extends AbstractModel {
 
     /**
-    * 可用区。
+    * <p>可用区。</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 云硬盘类型。枚举值如下：
-
-<li>CLOUD_BASIC：普通云硬盘</li>
-<li>CLOUD_PREMIUM：高性能云硬盘</li>
-<li>CLOUD_SSD：SSD云硬盘</li>
+    * <p>云硬盘类型。枚举值如下：</p><li>CLOUD_BASIC：普通云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li><li>CLOUD_SSD：SSD云硬盘</li>
     */
     @SerializedName("DiskType")
     @Expose
     private String DiskType;
 
     /**
-    * 云硬盘可售卖状态。
+    * <p>云硬盘可售卖状态。</p>
     */
     @SerializedName("DiskSalesState")
     @Expose
     private String DiskSalesState;
 
     /**
-    * 最大云硬盘大小。
+    * <p>最大云硬盘大小。</p><p>单位：GB</p>
     */
     @SerializedName("MaxDiskSize")
     @Expose
     private Long MaxDiskSize;
 
     /**
-    * 最小云硬盘大小。
+    * <p>最小云硬盘大小。</p><p>单位：GB</p>
     */
     @SerializedName("MinDiskSize")
     @Expose
     private Long MinDiskSize;
 
     /**
-    * 云硬盘步长。
+    * <p>云硬盘步长。</p><p>单位：GB</p>
     */
     @SerializedName("DiskStepSize")
     @Expose
     private Long DiskStepSize;
 
     /**
-     * Get 可用区。 
-     * @return Zone 可用区。
+     * Get <p>可用区。</p> 
+     * @return Zone <p>可用区。</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区。
-     * @param Zone 可用区。
+     * Set <p>可用区。</p>
+     * @param Zone <p>可用区。</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 云硬盘类型。枚举值如下：
-
-<li>CLOUD_BASIC：普通云硬盘</li>
-<li>CLOUD_PREMIUM：高性能云硬盘</li>
-<li>CLOUD_SSD：SSD云硬盘</li> 
-     * @return DiskType 云硬盘类型。枚举值如下：
-
-<li>CLOUD_BASIC：普通云硬盘</li>
-<li>CLOUD_PREMIUM：高性能云硬盘</li>
-<li>CLOUD_SSD：SSD云硬盘</li>
+     * Get <p>云硬盘类型。枚举值如下：</p><li>CLOUD_BASIC：普通云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li><li>CLOUD_SSD：SSD云硬盘</li> 
+     * @return DiskType <p>云硬盘类型。枚举值如下：</p><li>CLOUD_BASIC：普通云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li><li>CLOUD_SSD：SSD云硬盘</li>
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set 云硬盘类型。枚举值如下：
-
-<li>CLOUD_BASIC：普通云硬盘</li>
-<li>CLOUD_PREMIUM：高性能云硬盘</li>
-<li>CLOUD_SSD：SSD云硬盘</li>
-     * @param DiskType 云硬盘类型。枚举值如下：
-
-<li>CLOUD_BASIC：普通云硬盘</li>
-<li>CLOUD_PREMIUM：高性能云硬盘</li>
-<li>CLOUD_SSD：SSD云硬盘</li>
+     * Set <p>云硬盘类型。枚举值如下：</p><li>CLOUD_BASIC：普通云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li><li>CLOUD_SSD：SSD云硬盘</li>
+     * @param DiskType <p>云硬盘类型。枚举值如下：</p><li>CLOUD_BASIC：普通云硬盘</li><li>CLOUD_PREMIUM：高性能云硬盘</li><li>CLOUD_SSD：SSD云硬盘</li>
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get 云硬盘可售卖状态。 
-     * @return DiskSalesState 云硬盘可售卖状态。
+     * Get <p>云硬盘可售卖状态。</p> 
+     * @return DiskSalesState <p>云硬盘可售卖状态。</p>
      */
     public String getDiskSalesState() {
         return this.DiskSalesState;
     }
 
     /**
-     * Set 云硬盘可售卖状态。
-     * @param DiskSalesState 云硬盘可售卖状态。
+     * Set <p>云硬盘可售卖状态。</p>
+     * @param DiskSalesState <p>云硬盘可售卖状态。</p>
      */
     public void setDiskSalesState(String DiskSalesState) {
         this.DiskSalesState = DiskSalesState;
     }
 
     /**
-     * Get 最大云硬盘大小。 
-     * @return MaxDiskSize 最大云硬盘大小。
+     * Get <p>最大云硬盘大小。</p><p>单位：GB</p> 
+     * @return MaxDiskSize <p>最大云硬盘大小。</p><p>单位：GB</p>
      */
     public Long getMaxDiskSize() {
         return this.MaxDiskSize;
     }
 
     /**
-     * Set 最大云硬盘大小。
-     * @param MaxDiskSize 最大云硬盘大小。
+     * Set <p>最大云硬盘大小。</p><p>单位：GB</p>
+     * @param MaxDiskSize <p>最大云硬盘大小。</p><p>单位：GB</p>
      */
     public void setMaxDiskSize(Long MaxDiskSize) {
         this.MaxDiskSize = MaxDiskSize;
     }
 
     /**
-     * Get 最小云硬盘大小。 
-     * @return MinDiskSize 最小云硬盘大小。
+     * Get <p>最小云硬盘大小。</p><p>单位：GB</p> 
+     * @return MinDiskSize <p>最小云硬盘大小。</p><p>单位：GB</p>
      */
     public Long getMinDiskSize() {
         return this.MinDiskSize;
     }
 
     /**
-     * Set 最小云硬盘大小。
-     * @param MinDiskSize 最小云硬盘大小。
+     * Set <p>最小云硬盘大小。</p><p>单位：GB</p>
+     * @param MinDiskSize <p>最小云硬盘大小。</p><p>单位：GB</p>
      */
     public void setMinDiskSize(Long MinDiskSize) {
         this.MinDiskSize = MinDiskSize;
     }
 
     /**
-     * Get 云硬盘步长。 
-     * @return DiskStepSize 云硬盘步长。
+     * Get <p>云硬盘步长。</p><p>单位：GB</p> 
+     * @return DiskStepSize <p>云硬盘步长。</p><p>单位：GB</p>
      */
     public Long getDiskStepSize() {
         return this.DiskStepSize;
     }
 
     /**
-     * Set 云硬盘步长。
-     * @param DiskStepSize 云硬盘步长。
+     * Set <p>云硬盘步长。</p><p>单位：GB</p>
+     * @param DiskStepSize <p>云硬盘步长。</p><p>单位：GB</p>
      */
     public void setDiskStepSize(Long DiskStepSize) {
         this.DiskStepSize = DiskStepSize;

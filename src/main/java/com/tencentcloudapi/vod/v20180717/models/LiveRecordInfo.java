@@ -24,69 +24,115 @@ import java.util.HashMap;
 public class LiveRecordInfo extends AbstractModel {
 
     /**
-    * 直播录制流 ID。
+    * <p>直播录制域名</p>
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
+
+    /**
+    * <p>直播录制Path</p>
+    */
+    @SerializedName("Path")
+    @Expose
+    private String Path;
+
+    /**
+    * <p>直播录制流 ID。</p>
     */
     @SerializedName("StreamId")
     @Expose
     private String StreamId;
 
     /**
-    * 录制起始时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+    * <p>录制起始时间，使用  <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
     */
     @SerializedName("RecordStartTime")
     @Expose
     private String RecordStartTime;
 
     /**
-    * 录制结束时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+    * <p>录制结束时间，使用  <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
     */
     @SerializedName("RecordEndTime")
     @Expose
     private String RecordEndTime;
 
     /**
-     * Get 直播录制流 ID。 
-     * @return StreamId 直播录制流 ID。
+     * Get <p>直播录制域名</p> 
+     * @return Domain <p>直播录制域名</p>
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set <p>直播录制域名</p>
+     * @param Domain <p>直播录制域名</p>
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
+    }
+
+    /**
+     * Get <p>直播录制Path</p> 
+     * @return Path <p>直播录制Path</p>
+     */
+    public String getPath() {
+        return this.Path;
+    }
+
+    /**
+     * Set <p>直播录制Path</p>
+     * @param Path <p>直播录制Path</p>
+     */
+    public void setPath(String Path) {
+        this.Path = Path;
+    }
+
+    /**
+     * Get <p>直播录制流 ID。</p> 
+     * @return StreamId <p>直播录制流 ID。</p>
      */
     public String getStreamId() {
         return this.StreamId;
     }
 
     /**
-     * Set 直播录制流 ID。
-     * @param StreamId 直播录制流 ID。
+     * Set <p>直播录制流 ID。</p>
+     * @param StreamId <p>直播录制流 ID。</p>
      */
     public void setStreamId(String StreamId) {
         this.StreamId = StreamId;
     }
 
     /**
-     * Get 录制起始时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。 
-     * @return RecordStartTime 录制起始时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Get <p>录制起始时间，使用  <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p> 
+     * @return RecordStartTime <p>录制起始时间，使用  <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public String getRecordStartTime() {
         return this.RecordStartTime;
     }
 
     /**
-     * Set 录制起始时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
-     * @param RecordStartTime 录制起始时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Set <p>录制起始时间，使用  <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+     * @param RecordStartTime <p>录制起始时间，使用  <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public void setRecordStartTime(String RecordStartTime) {
         this.RecordStartTime = RecordStartTime;
     }
 
     /**
-     * Get 录制结束时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。 
-     * @return RecordEndTime 录制结束时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Get <p>录制结束时间，使用  <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p> 
+     * @return RecordEndTime <p>录制结束时间，使用  <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public String getRecordEndTime() {
         return this.RecordEndTime;
     }
 
     /**
-     * Set 录制结束时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
-     * @param RecordEndTime 录制结束时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Set <p>录制结束时间，使用  <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+     * @param RecordEndTime <p>录制结束时间，使用  <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public void setRecordEndTime(String RecordEndTime) {
         this.RecordEndTime = RecordEndTime;
@@ -100,6 +146,12 @@ public class LiveRecordInfo extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public LiveRecordInfo(LiveRecordInfo source) {
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
+        }
         if (source.StreamId != null) {
             this.StreamId = new String(source.StreamId);
         }
@@ -116,6 +168,8 @@ public class LiveRecordInfo extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamSimple(map, prefix + "Path", this.Path);
         this.setParamSimple(map, prefix + "StreamId", this.StreamId);
         this.setParamSimple(map, prefix + "RecordStartTime", this.RecordStartTime);
         this.setParamSimple(map, prefix + "RecordEndTime", this.RecordEndTime);

@@ -132,6 +132,13 @@ drop：拒绝
     private String Uid;
 
     /**
+    * 规则生效范围，SG安全组，LH轻量服务器
+    */
+    @SerializedName("Scope")
+    @Expose
+    private String Scope;
+
+    /**
      * Get 访问源示例：
 net：IP/CIDR(192.168.0.2)
 template：参数模板id(ipm-dyodhpby)
@@ -407,6 +414,22 @@ drop：拒绝
         this.Uid = Uid;
     }
 
+    /**
+     * Get 规则生效范围，SG安全组，LH轻量服务器 
+     * @return Scope 规则生效范围，SG安全组，LH轻量服务器
+     */
+    public String getScope() {
+        return this.Scope;
+    }
+
+    /**
+     * Set 规则生效范围，SG安全组，LH轻量服务器
+     * @param Scope 规则生效范围，SG安全组，LH轻量服务器
+     */
+    public void setScope(String Scope) {
+        this.Scope = Scope;
+    }
+
     public SecurityGroupRule() {
     }
 
@@ -454,6 +477,9 @@ drop：拒绝
         if (source.Uid != null) {
             this.Uid = new String(source.Uid);
         }
+        if (source.Scope != null) {
+            this.Scope = new String(source.Scope);
+        }
     }
 
 
@@ -474,6 +500,7 @@ drop：拒绝
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "Enable", this.Enable);
         this.setParamSimple(map, prefix + "Uid", this.Uid);
+        this.setParamSimple(map, prefix + "Scope", this.Scope);
 
     }
 }

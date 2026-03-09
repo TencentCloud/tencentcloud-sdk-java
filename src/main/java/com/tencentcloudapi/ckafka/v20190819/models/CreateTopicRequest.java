@@ -24,414 +24,414 @@ import java.util.HashMap;
 public class CreateTopicRequest extends AbstractModel {
 
     /**
-    * 实例Id，可通过DescribeInstances接口获取。
+    * <p>实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 只能包含字母、数字、下划线、“-”、“.”
+    * <p>只能包含字母、数字、下划线、“-”、“.”</p>
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-    * Partition个数，大于0
+    * <p>Partition个数，大于0</p>
     */
     @SerializedName("PartitionNum")
     @Expose
     private Long PartitionNum;
 
     /**
-    * 副本个数，不能多于 broker 数，最大为3
+    * <p>副本个数，不能多于 broker 数，最大为3</p>
     */
     @SerializedName("ReplicaNum")
     @Expose
     private Long ReplicaNum;
 
     /**
-    * ip白名单开关, 1:打开  0:关闭，默认不打开
+    * <p>ip白名单开关, 1:打开  0:关闭，默认不打开</p>
     */
     @SerializedName("EnableWhiteList")
     @Expose
     private Long EnableWhiteList;
 
     /**
-    * Ip白名单列表，配额限制，enableWhileList=1时必选
+    * <p>Ip白名单列表，配额限制，enableWhileList=1时必选</p>
     */
     @SerializedName("IpWhiteList")
     @Expose
     private String [] IpWhiteList;
 
     /**
-    * 清理日志策略，日志清理模式，默认为"delete"。"delete"：日志按保存时间删除，"compact"：日志按 key 压缩，"compact, delete"：日志按 key 压缩且会按保存时间删除。
+    * <p>清理日志策略，日志清理模式，默认为&quot;delete&quot;。&quot;delete&quot;：日志按保存时间删除，&quot;compact&quot;：日志按 key 压缩，&quot;compact, delete&quot;：日志按 key 压缩且会按保存时间删除。</p>
     */
     @SerializedName("CleanUpPolicy")
     @Expose
     private String CleanUpPolicy;
 
     /**
-    * 主题备注，是一个不超过 64 个字符的字符串，可以用字母和数字为首字符，剩余部分可以包含字母、数字和横划线(-)
+    * <p>主题备注</p><p>入参限制：不超过 64 个字符</p>
     */
     @SerializedName("Note")
     @Expose
     private String Note;
 
     /**
-    * 最小同步副本数，默认为1
+    * <p>最小同步副本数</p><p>默认值：1</p><p>最小值为1</p>
     */
     @SerializedName("MinInsyncReplicas")
     @Expose
     private Long MinInsyncReplicas;
 
     /**
-    * 是否允许未同步的副本选为leader，0:不允许，1:允许，默认不允许
+    * <p>是否允许未同步的副本选为leader，0:不允许，1:允许，默认不允许</p>
     */
     @SerializedName("UncleanLeaderElectionEnable")
     @Expose
     private Long UncleanLeaderElectionEnable;
 
     /**
-    * 可选参数。消息保留时间，单位ms，当前最小值为60000。默认值为7200000ms（2小时），最大值为7776000000 ms（90天）。
+    * <p>可选参数，消息保留时间</p><p>取值范围：[60000, 7776000000]</p><p>单位：毫秒</p><p>默认值：7200000</p>
     */
     @SerializedName("RetentionMs")
     @Expose
     private Long RetentionMs;
 
     /**
-    * Segment分片滚动的时长，单位ms，最小值为86400000ms（1天）。
+    * <p>Segment分片滚动的时长</p><p>单位：毫秒</p><p>默认值：86400000</p><p>最小值为86400000ms（1天）</p>
     */
     @SerializedName("SegmentMs")
     @Expose
     private Long SegmentMs;
 
     /**
-    * 主题消息最大值，单位为 Byte，最小值1024Bytes(即1KB)，最大值为12582912Bytes（即12MB）
+    * <p>主题消息最大值，单位为 Byte，最小值1024Bytes(即1KB)，最大值为12582912Bytes（即12MB）</p>
     */
     @SerializedName("MaxMessageBytes")
     @Expose
     private Long MaxMessageBytes;
 
     /**
-    * 预设ACL规则, 1:打开  0:关闭，默认不打开
+    * <p>预设ACL规则, 1:打开  0:关闭，默认不打开</p>
     */
     @SerializedName("EnableAclRule")
     @Expose
     private Long EnableAclRule;
 
     /**
-    * 预设ACL规则的名称
+    * <p>预设ACL规则的名称</p>
     */
     @SerializedName("AclRuleName")
     @Expose
     private String AclRuleName;
 
     /**
-    * 可选, 保留文件大小. 默认为-1,单位Byte, 当前最小值为1073741824。
+    * <p>可选, 保留文件大小. 默认为-1,单位Byte, 当前最小值为1073741824。</p><p>取值范围：[1073741824, 1099511627776]</p><p>单位：字节</p><p>特殊值：-1表示无限制</p>
     */
     @SerializedName("RetentionBytes")
     @Expose
     private Long RetentionBytes;
 
     /**
-    * 标签列表
+    * <p>标签列表</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 消息保存的时间类型:CreateTime/LogAppendTime
+    * <p>消息保存的时间类型:CreateTime/LogAppendTime</p>
     */
     @SerializedName("LogMsgTimestampType")
     @Expose
     private String LogMsgTimestampType;
 
     /**
-     * Get 实例Id，可通过DescribeInstances接口获取。 
-     * @return InstanceId 实例Id，可通过DescribeInstances接口获取。
+     * Get <p>实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p> 
+     * @return InstanceId <p>实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例Id，可通过DescribeInstances接口获取。
-     * @param InstanceId 实例Id，可通过DescribeInstances接口获取。
+     * Set <p>实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
+     * @param InstanceId <p>实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 只能包含字母、数字、下划线、“-”、“.” 
-     * @return TopicName 只能包含字母、数字、下划线、“-”、“.”
+     * Get <p>只能包含字母、数字、下划线、“-”、“.”</p> 
+     * @return TopicName <p>只能包含字母、数字、下划线、“-”、“.”</p>
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set 只能包含字母、数字、下划线、“-”、“.”
-     * @param TopicName 只能包含字母、数字、下划线、“-”、“.”
+     * Set <p>只能包含字母、数字、下划线、“-”、“.”</p>
+     * @param TopicName <p>只能包含字母、数字、下划线、“-”、“.”</p>
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get Partition个数，大于0 
-     * @return PartitionNum Partition个数，大于0
+     * Get <p>Partition个数，大于0</p> 
+     * @return PartitionNum <p>Partition个数，大于0</p>
      */
     public Long getPartitionNum() {
         return this.PartitionNum;
     }
 
     /**
-     * Set Partition个数，大于0
-     * @param PartitionNum Partition个数，大于0
+     * Set <p>Partition个数，大于0</p>
+     * @param PartitionNum <p>Partition个数，大于0</p>
      */
     public void setPartitionNum(Long PartitionNum) {
         this.PartitionNum = PartitionNum;
     }
 
     /**
-     * Get 副本个数，不能多于 broker 数，最大为3 
-     * @return ReplicaNum 副本个数，不能多于 broker 数，最大为3
+     * Get <p>副本个数，不能多于 broker 数，最大为3</p> 
+     * @return ReplicaNum <p>副本个数，不能多于 broker 数，最大为3</p>
      */
     public Long getReplicaNum() {
         return this.ReplicaNum;
     }
 
     /**
-     * Set 副本个数，不能多于 broker 数，最大为3
-     * @param ReplicaNum 副本个数，不能多于 broker 数，最大为3
+     * Set <p>副本个数，不能多于 broker 数，最大为3</p>
+     * @param ReplicaNum <p>副本个数，不能多于 broker 数，最大为3</p>
      */
     public void setReplicaNum(Long ReplicaNum) {
         this.ReplicaNum = ReplicaNum;
     }
 
     /**
-     * Get ip白名单开关, 1:打开  0:关闭，默认不打开 
-     * @return EnableWhiteList ip白名单开关, 1:打开  0:关闭，默认不打开
+     * Get <p>ip白名单开关, 1:打开  0:关闭，默认不打开</p> 
+     * @return EnableWhiteList <p>ip白名单开关, 1:打开  0:关闭，默认不打开</p>
      */
     public Long getEnableWhiteList() {
         return this.EnableWhiteList;
     }
 
     /**
-     * Set ip白名单开关, 1:打开  0:关闭，默认不打开
-     * @param EnableWhiteList ip白名单开关, 1:打开  0:关闭，默认不打开
+     * Set <p>ip白名单开关, 1:打开  0:关闭，默认不打开</p>
+     * @param EnableWhiteList <p>ip白名单开关, 1:打开  0:关闭，默认不打开</p>
      */
     public void setEnableWhiteList(Long EnableWhiteList) {
         this.EnableWhiteList = EnableWhiteList;
     }
 
     /**
-     * Get Ip白名单列表，配额限制，enableWhileList=1时必选 
-     * @return IpWhiteList Ip白名单列表，配额限制，enableWhileList=1时必选
+     * Get <p>Ip白名单列表，配额限制，enableWhileList=1时必选</p> 
+     * @return IpWhiteList <p>Ip白名单列表，配额限制，enableWhileList=1时必选</p>
      */
     public String [] getIpWhiteList() {
         return this.IpWhiteList;
     }
 
     /**
-     * Set Ip白名单列表，配额限制，enableWhileList=1时必选
-     * @param IpWhiteList Ip白名单列表，配额限制，enableWhileList=1时必选
+     * Set <p>Ip白名单列表，配额限制，enableWhileList=1时必选</p>
+     * @param IpWhiteList <p>Ip白名单列表，配额限制，enableWhileList=1时必选</p>
      */
     public void setIpWhiteList(String [] IpWhiteList) {
         this.IpWhiteList = IpWhiteList;
     }
 
     /**
-     * Get 清理日志策略，日志清理模式，默认为"delete"。"delete"：日志按保存时间删除，"compact"：日志按 key 压缩，"compact, delete"：日志按 key 压缩且会按保存时间删除。 
-     * @return CleanUpPolicy 清理日志策略，日志清理模式，默认为"delete"。"delete"：日志按保存时间删除，"compact"：日志按 key 压缩，"compact, delete"：日志按 key 压缩且会按保存时间删除。
+     * Get <p>清理日志策略，日志清理模式，默认为&quot;delete&quot;。&quot;delete&quot;：日志按保存时间删除，&quot;compact&quot;：日志按 key 压缩，&quot;compact, delete&quot;：日志按 key 压缩且会按保存时间删除。</p> 
+     * @return CleanUpPolicy <p>清理日志策略，日志清理模式，默认为&quot;delete&quot;。&quot;delete&quot;：日志按保存时间删除，&quot;compact&quot;：日志按 key 压缩，&quot;compact, delete&quot;：日志按 key 压缩且会按保存时间删除。</p>
      */
     public String getCleanUpPolicy() {
         return this.CleanUpPolicy;
     }
 
     /**
-     * Set 清理日志策略，日志清理模式，默认为"delete"。"delete"：日志按保存时间删除，"compact"：日志按 key 压缩，"compact, delete"：日志按 key 压缩且会按保存时间删除。
-     * @param CleanUpPolicy 清理日志策略，日志清理模式，默认为"delete"。"delete"：日志按保存时间删除，"compact"：日志按 key 压缩，"compact, delete"：日志按 key 压缩且会按保存时间删除。
+     * Set <p>清理日志策略，日志清理模式，默认为&quot;delete&quot;。&quot;delete&quot;：日志按保存时间删除，&quot;compact&quot;：日志按 key 压缩，&quot;compact, delete&quot;：日志按 key 压缩且会按保存时间删除。</p>
+     * @param CleanUpPolicy <p>清理日志策略，日志清理模式，默认为&quot;delete&quot;。&quot;delete&quot;：日志按保存时间删除，&quot;compact&quot;：日志按 key 压缩，&quot;compact, delete&quot;：日志按 key 压缩且会按保存时间删除。</p>
      */
     public void setCleanUpPolicy(String CleanUpPolicy) {
         this.CleanUpPolicy = CleanUpPolicy;
     }
 
     /**
-     * Get 主题备注，是一个不超过 64 个字符的字符串，可以用字母和数字为首字符，剩余部分可以包含字母、数字和横划线(-) 
-     * @return Note 主题备注，是一个不超过 64 个字符的字符串，可以用字母和数字为首字符，剩余部分可以包含字母、数字和横划线(-)
+     * Get <p>主题备注</p><p>入参限制：不超过 64 个字符</p> 
+     * @return Note <p>主题备注</p><p>入参限制：不超过 64 个字符</p>
      */
     public String getNote() {
         return this.Note;
     }
 
     /**
-     * Set 主题备注，是一个不超过 64 个字符的字符串，可以用字母和数字为首字符，剩余部分可以包含字母、数字和横划线(-)
-     * @param Note 主题备注，是一个不超过 64 个字符的字符串，可以用字母和数字为首字符，剩余部分可以包含字母、数字和横划线(-)
+     * Set <p>主题备注</p><p>入参限制：不超过 64 个字符</p>
+     * @param Note <p>主题备注</p><p>入参限制：不超过 64 个字符</p>
      */
     public void setNote(String Note) {
         this.Note = Note;
     }
 
     /**
-     * Get 最小同步副本数，默认为1 
-     * @return MinInsyncReplicas 最小同步副本数，默认为1
+     * Get <p>最小同步副本数</p><p>默认值：1</p><p>最小值为1</p> 
+     * @return MinInsyncReplicas <p>最小同步副本数</p><p>默认值：1</p><p>最小值为1</p>
      */
     public Long getMinInsyncReplicas() {
         return this.MinInsyncReplicas;
     }
 
     /**
-     * Set 最小同步副本数，默认为1
-     * @param MinInsyncReplicas 最小同步副本数，默认为1
+     * Set <p>最小同步副本数</p><p>默认值：1</p><p>最小值为1</p>
+     * @param MinInsyncReplicas <p>最小同步副本数</p><p>默认值：1</p><p>最小值为1</p>
      */
     public void setMinInsyncReplicas(Long MinInsyncReplicas) {
         this.MinInsyncReplicas = MinInsyncReplicas;
     }
 
     /**
-     * Get 是否允许未同步的副本选为leader，0:不允许，1:允许，默认不允许 
-     * @return UncleanLeaderElectionEnable 是否允许未同步的副本选为leader，0:不允许，1:允许，默认不允许
+     * Get <p>是否允许未同步的副本选为leader，0:不允许，1:允许，默认不允许</p> 
+     * @return UncleanLeaderElectionEnable <p>是否允许未同步的副本选为leader，0:不允许，1:允许，默认不允许</p>
      */
     public Long getUncleanLeaderElectionEnable() {
         return this.UncleanLeaderElectionEnable;
     }
 
     /**
-     * Set 是否允许未同步的副本选为leader，0:不允许，1:允许，默认不允许
-     * @param UncleanLeaderElectionEnable 是否允许未同步的副本选为leader，0:不允许，1:允许，默认不允许
+     * Set <p>是否允许未同步的副本选为leader，0:不允许，1:允许，默认不允许</p>
+     * @param UncleanLeaderElectionEnable <p>是否允许未同步的副本选为leader，0:不允许，1:允许，默认不允许</p>
      */
     public void setUncleanLeaderElectionEnable(Long UncleanLeaderElectionEnable) {
         this.UncleanLeaderElectionEnable = UncleanLeaderElectionEnable;
     }
 
     /**
-     * Get 可选参数。消息保留时间，单位ms，当前最小值为60000。默认值为7200000ms（2小时），最大值为7776000000 ms（90天）。 
-     * @return RetentionMs 可选参数。消息保留时间，单位ms，当前最小值为60000。默认值为7200000ms（2小时），最大值为7776000000 ms（90天）。
+     * Get <p>可选参数，消息保留时间</p><p>取值范围：[60000, 7776000000]</p><p>单位：毫秒</p><p>默认值：7200000</p> 
+     * @return RetentionMs <p>可选参数，消息保留时间</p><p>取值范围：[60000, 7776000000]</p><p>单位：毫秒</p><p>默认值：7200000</p>
      */
     public Long getRetentionMs() {
         return this.RetentionMs;
     }
 
     /**
-     * Set 可选参数。消息保留时间，单位ms，当前最小值为60000。默认值为7200000ms（2小时），最大值为7776000000 ms（90天）。
-     * @param RetentionMs 可选参数。消息保留时间，单位ms，当前最小值为60000。默认值为7200000ms（2小时），最大值为7776000000 ms（90天）。
+     * Set <p>可选参数，消息保留时间</p><p>取值范围：[60000, 7776000000]</p><p>单位：毫秒</p><p>默认值：7200000</p>
+     * @param RetentionMs <p>可选参数，消息保留时间</p><p>取值范围：[60000, 7776000000]</p><p>单位：毫秒</p><p>默认值：7200000</p>
      */
     public void setRetentionMs(Long RetentionMs) {
         this.RetentionMs = RetentionMs;
     }
 
     /**
-     * Get Segment分片滚动的时长，单位ms，最小值为86400000ms（1天）。 
-     * @return SegmentMs Segment分片滚动的时长，单位ms，最小值为86400000ms（1天）。
+     * Get <p>Segment分片滚动的时长</p><p>单位：毫秒</p><p>默认值：86400000</p><p>最小值为86400000ms（1天）</p> 
+     * @return SegmentMs <p>Segment分片滚动的时长</p><p>单位：毫秒</p><p>默认值：86400000</p><p>最小值为86400000ms（1天）</p>
      */
     public Long getSegmentMs() {
         return this.SegmentMs;
     }
 
     /**
-     * Set Segment分片滚动的时长，单位ms，最小值为86400000ms（1天）。
-     * @param SegmentMs Segment分片滚动的时长，单位ms，最小值为86400000ms（1天）。
+     * Set <p>Segment分片滚动的时长</p><p>单位：毫秒</p><p>默认值：86400000</p><p>最小值为86400000ms（1天）</p>
+     * @param SegmentMs <p>Segment分片滚动的时长</p><p>单位：毫秒</p><p>默认值：86400000</p><p>最小值为86400000ms（1天）</p>
      */
     public void setSegmentMs(Long SegmentMs) {
         this.SegmentMs = SegmentMs;
     }
 
     /**
-     * Get 主题消息最大值，单位为 Byte，最小值1024Bytes(即1KB)，最大值为12582912Bytes（即12MB） 
-     * @return MaxMessageBytes 主题消息最大值，单位为 Byte，最小值1024Bytes(即1KB)，最大值为12582912Bytes（即12MB）
+     * Get <p>主题消息最大值，单位为 Byte，最小值1024Bytes(即1KB)，最大值为12582912Bytes（即12MB）</p> 
+     * @return MaxMessageBytes <p>主题消息最大值，单位为 Byte，最小值1024Bytes(即1KB)，最大值为12582912Bytes（即12MB）</p>
      */
     public Long getMaxMessageBytes() {
         return this.MaxMessageBytes;
     }
 
     /**
-     * Set 主题消息最大值，单位为 Byte，最小值1024Bytes(即1KB)，最大值为12582912Bytes（即12MB）
-     * @param MaxMessageBytes 主题消息最大值，单位为 Byte，最小值1024Bytes(即1KB)，最大值为12582912Bytes（即12MB）
+     * Set <p>主题消息最大值，单位为 Byte，最小值1024Bytes(即1KB)，最大值为12582912Bytes（即12MB）</p>
+     * @param MaxMessageBytes <p>主题消息最大值，单位为 Byte，最小值1024Bytes(即1KB)，最大值为12582912Bytes（即12MB）</p>
      */
     public void setMaxMessageBytes(Long MaxMessageBytes) {
         this.MaxMessageBytes = MaxMessageBytes;
     }
 
     /**
-     * Get 预设ACL规则, 1:打开  0:关闭，默认不打开 
-     * @return EnableAclRule 预设ACL规则, 1:打开  0:关闭，默认不打开
+     * Get <p>预设ACL规则, 1:打开  0:关闭，默认不打开</p> 
+     * @return EnableAclRule <p>预设ACL规则, 1:打开  0:关闭，默认不打开</p>
      */
     public Long getEnableAclRule() {
         return this.EnableAclRule;
     }
 
     /**
-     * Set 预设ACL规则, 1:打开  0:关闭，默认不打开
-     * @param EnableAclRule 预设ACL规则, 1:打开  0:关闭，默认不打开
+     * Set <p>预设ACL规则, 1:打开  0:关闭，默认不打开</p>
+     * @param EnableAclRule <p>预设ACL规则, 1:打开  0:关闭，默认不打开</p>
      */
     public void setEnableAclRule(Long EnableAclRule) {
         this.EnableAclRule = EnableAclRule;
     }
 
     /**
-     * Get 预设ACL规则的名称 
-     * @return AclRuleName 预设ACL规则的名称
+     * Get <p>预设ACL规则的名称</p> 
+     * @return AclRuleName <p>预设ACL规则的名称</p>
      */
     public String getAclRuleName() {
         return this.AclRuleName;
     }
 
     /**
-     * Set 预设ACL规则的名称
-     * @param AclRuleName 预设ACL规则的名称
+     * Set <p>预设ACL规则的名称</p>
+     * @param AclRuleName <p>预设ACL规则的名称</p>
      */
     public void setAclRuleName(String AclRuleName) {
         this.AclRuleName = AclRuleName;
     }
 
     /**
-     * Get 可选, 保留文件大小. 默认为-1,单位Byte, 当前最小值为1073741824。 
-     * @return RetentionBytes 可选, 保留文件大小. 默认为-1,单位Byte, 当前最小值为1073741824。
+     * Get <p>可选, 保留文件大小. 默认为-1,单位Byte, 当前最小值为1073741824。</p><p>取值范围：[1073741824, 1099511627776]</p><p>单位：字节</p><p>特殊值：-1表示无限制</p> 
+     * @return RetentionBytes <p>可选, 保留文件大小. 默认为-1,单位Byte, 当前最小值为1073741824。</p><p>取值范围：[1073741824, 1099511627776]</p><p>单位：字节</p><p>特殊值：-1表示无限制</p>
      */
     public Long getRetentionBytes() {
         return this.RetentionBytes;
     }
 
     /**
-     * Set 可选, 保留文件大小. 默认为-1,单位Byte, 当前最小值为1073741824。
-     * @param RetentionBytes 可选, 保留文件大小. 默认为-1,单位Byte, 当前最小值为1073741824。
+     * Set <p>可选, 保留文件大小. 默认为-1,单位Byte, 当前最小值为1073741824。</p><p>取值范围：[1073741824, 1099511627776]</p><p>单位：字节</p><p>特殊值：-1表示无限制</p>
+     * @param RetentionBytes <p>可选, 保留文件大小. 默认为-1,单位Byte, 当前最小值为1073741824。</p><p>取值范围：[1073741824, 1099511627776]</p><p>单位：字节</p><p>特殊值：-1表示无限制</p>
      */
     public void setRetentionBytes(Long RetentionBytes) {
         this.RetentionBytes = RetentionBytes;
     }
 
     /**
-     * Get 标签列表 
-     * @return Tags 标签列表
+     * Get <p>标签列表</p> 
+     * @return Tags <p>标签列表</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签列表
-     * @param Tags 标签列表
+     * Set <p>标签列表</p>
+     * @param Tags <p>标签列表</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 消息保存的时间类型:CreateTime/LogAppendTime 
-     * @return LogMsgTimestampType 消息保存的时间类型:CreateTime/LogAppendTime
+     * Get <p>消息保存的时间类型:CreateTime/LogAppendTime</p> 
+     * @return LogMsgTimestampType <p>消息保存的时间类型:CreateTime/LogAppendTime</p>
      */
     public String getLogMsgTimestampType() {
         return this.LogMsgTimestampType;
     }
 
     /**
-     * Set 消息保存的时间类型:CreateTime/LogAppendTime
-     * @param LogMsgTimestampType 消息保存的时间类型:CreateTime/LogAppendTime
+     * Set <p>消息保存的时间类型:CreateTime/LogAppendTime</p>
+     * @param LogMsgTimestampType <p>消息保存的时间类型:CreateTime/LogAppendTime</p>
      */
     public void setLogMsgTimestampType(String LogMsgTimestampType) {
         this.LogMsgTimestampType = LogMsgTimestampType;

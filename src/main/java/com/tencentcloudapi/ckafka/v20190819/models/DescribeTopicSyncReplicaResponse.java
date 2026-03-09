@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTopicSyncReplicaResponse extends AbstractModel {
 
     /**
-    * 返回topic 副本详情
+    * <p>返回topic 副本详情</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeTopicSyncReplicaResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回topic 副本详情 
-     * @return Result 返回topic 副本详情
+     * Get <p>返回topic 副本详情</p> 
+     * @return Result <p>返回topic 副本详情</p>
      */
     public TopicInSyncReplicaResult getResult() {
         return this.Result;
     }
 
     /**
-     * Set 返回topic 副本详情
-     * @param Result 返回topic 副本详情
+     * Set <p>返回topic 副本详情</p>
+     * @param Result <p>返回topic 副本详情</p>
      */
     public void setResult(TopicInSyncReplicaResult Result) {
         this.Result = Result;

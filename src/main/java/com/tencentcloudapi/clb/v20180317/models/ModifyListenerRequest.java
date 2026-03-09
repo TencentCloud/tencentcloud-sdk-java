@@ -150,7 +150,7 @@ public class ModifyListenerRequest extends AbstractModel {
     private Boolean SnatEnable;
 
     /**
-    * <p>数据压缩模式</p>
+    * <p>数据压缩模式</p><p>枚举值：</p><ul><li>transparent： 透明模式（默认值）</li><li>compatibility： 兼容模式（开启 gzip 兼容压缩配置）</li></ul>
     */
     @SerializedName("DataCompressMode")
     @Expose
@@ -480,16 +480,16 @@ public class ModifyListenerRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>数据压缩模式</p> 
-     * @return DataCompressMode <p>数据压缩模式</p>
+     * Get <p>数据压缩模式</p><p>枚举值：</p><ul><li>transparent： 透明模式（默认值）</li><li>compatibility： 兼容模式（开启 gzip 兼容压缩配置）</li></ul> 
+     * @return DataCompressMode <p>数据压缩模式</p><p>枚举值：</p><ul><li>transparent： 透明模式（默认值）</li><li>compatibility： 兼容模式（开启 gzip 兼容压缩配置）</li></ul>
      */
     public String getDataCompressMode() {
         return this.DataCompressMode;
     }
 
     /**
-     * Set <p>数据压缩模式</p>
-     * @param DataCompressMode <p>数据压缩模式</p>
+     * Set <p>数据压缩模式</p><p>枚举值：</p><ul><li>transparent： 透明模式（默认值）</li><li>compatibility： 兼容模式（开启 gzip 兼容压缩配置）</li></ul>
+     * @param DataCompressMode <p>数据压缩模式</p><p>枚举值：</p><ul><li>transparent： 透明模式（默认值）</li><li>compatibility： 兼容模式（开启 gzip 兼容压缩配置）</li></ul>
      */
     public void setDataCompressMode(String DataCompressMode) {
         this.DataCompressMode = DataCompressMode;

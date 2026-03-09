@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateTopicResponse extends AbstractModel {
 
     /**
-    * 返回创建结果
+    * <p>返回创建结果</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class CreateTopicResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回创建结果 
-     * @return Result 返回创建结果
+     * Get <p>返回创建结果</p> 
+     * @return Result <p>返回创建结果</p>
      */
     public CreateTopicResp getResult() {
         return this.Result;
     }
 
     /**
-     * Set 返回创建结果
-     * @param Result 返回创建结果
+     * Set <p>返回创建结果</p>
+     * @param Result <p>返回创建结果</p>
      */
     public void setResult(CreateTopicResp Result) {
         this.Result = Result;

@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class InstancePrice extends AbstractModel {
 
     /**
-    * 套餐单价原价。
+    * <p>套餐单价原价。</p><p>单位：元</p>
     */
     @SerializedName("OriginalBundlePrice")
     @Expose
     private Float OriginalBundlePrice;
 
     /**
-    * 原价。
+    * <p>原价。</p><p>单位：元</p>
     */
     @SerializedName("OriginalPrice")
     @Expose
     private Float OriginalPrice;
 
     /**
-    * 折扣。
+    * <p>折扣。</p>
     */
     @SerializedName("Discount")
     @Expose
     private Float Discount;
 
     /**
-    * 折后价。
+    * <p>折后价。</p><p>单位：元</p>
     */
     @SerializedName("DiscountPrice")
     @Expose
     private Float DiscountPrice;
 
     /**
-    * 价格货币单位。取值范围CNY:人民币。USD:美元。
+    * <p>价格货币单位。取值范围CNY:人民币。USD:美元。</p>
     */
     @SerializedName("Currency")
     @Expose
     private String Currency;
 
     /**
-    * 计费项目明细。
+    * <p>计费项目明细。</p>
     */
     @SerializedName("DetailPrices")
     @Expose
     private DetailPrice [] DetailPrices;
 
     /**
-     * Get 套餐单价原价。 
-     * @return OriginalBundlePrice 套餐单价原价。
+     * Get <p>套餐单价原价。</p><p>单位：元</p> 
+     * @return OriginalBundlePrice <p>套餐单价原价。</p><p>单位：元</p>
      */
     public Float getOriginalBundlePrice() {
         return this.OriginalBundlePrice;
     }
 
     /**
-     * Set 套餐单价原价。
-     * @param OriginalBundlePrice 套餐单价原价。
+     * Set <p>套餐单价原价。</p><p>单位：元</p>
+     * @param OriginalBundlePrice <p>套餐单价原价。</p><p>单位：元</p>
      */
     public void setOriginalBundlePrice(Float OriginalBundlePrice) {
         this.OriginalBundlePrice = OriginalBundlePrice;
     }
 
     /**
-     * Get 原价。 
-     * @return OriginalPrice 原价。
+     * Get <p>原价。</p><p>单位：元</p> 
+     * @return OriginalPrice <p>原价。</p><p>单位：元</p>
      */
     public Float getOriginalPrice() {
         return this.OriginalPrice;
     }
 
     /**
-     * Set 原价。
-     * @param OriginalPrice 原价。
+     * Set <p>原价。</p><p>单位：元</p>
+     * @param OriginalPrice <p>原价。</p><p>单位：元</p>
      */
     public void setOriginalPrice(Float OriginalPrice) {
         this.OriginalPrice = OriginalPrice;
     }
 
     /**
-     * Get 折扣。 
-     * @return Discount 折扣。
+     * Get <p>折扣。</p> 
+     * @return Discount <p>折扣。</p>
      */
     public Float getDiscount() {
         return this.Discount;
     }
 
     /**
-     * Set 折扣。
-     * @param Discount 折扣。
+     * Set <p>折扣。</p>
+     * @param Discount <p>折扣。</p>
      */
     public void setDiscount(Float Discount) {
         this.Discount = Discount;
     }
 
     /**
-     * Get 折后价。 
-     * @return DiscountPrice 折后价。
+     * Get <p>折后价。</p><p>单位：元</p> 
+     * @return DiscountPrice <p>折后价。</p><p>单位：元</p>
      */
     public Float getDiscountPrice() {
         return this.DiscountPrice;
     }
 
     /**
-     * Set 折后价。
-     * @param DiscountPrice 折后价。
+     * Set <p>折后价。</p><p>单位：元</p>
+     * @param DiscountPrice <p>折后价。</p><p>单位：元</p>
      */
     public void setDiscountPrice(Float DiscountPrice) {
         this.DiscountPrice = DiscountPrice;
     }
 
     /**
-     * Get 价格货币单位。取值范围CNY:人民币。USD:美元。 
-     * @return Currency 价格货币单位。取值范围CNY:人民币。USD:美元。
+     * Get <p>价格货币单位。取值范围CNY:人民币。USD:美元。</p> 
+     * @return Currency <p>价格货币单位。取值范围CNY:人民币。USD:美元。</p>
      */
     public String getCurrency() {
         return this.Currency;
     }
 
     /**
-     * Set 价格货币单位。取值范围CNY:人民币。USD:美元。
-     * @param Currency 价格货币单位。取值范围CNY:人民币。USD:美元。
+     * Set <p>价格货币单位。取值范围CNY:人民币。USD:美元。</p>
+     * @param Currency <p>价格货币单位。取值范围CNY:人民币。USD:美元。</p>
      */
     public void setCurrency(String Currency) {
         this.Currency = Currency;
     }
 
     /**
-     * Get 计费项目明细。 
-     * @return DetailPrices 计费项目明细。
+     * Get <p>计费项目明细。</p> 
+     * @return DetailPrices <p>计费项目明细。</p>
      */
     public DetailPrice [] getDetailPrices() {
         return this.DetailPrices;
     }
 
     /**
-     * Set 计费项目明细。
-     * @param DetailPrices 计费项目明细。
+     * Set <p>计费项目明细。</p>
+     * @param DetailPrices <p>计费项目明细。</p>
      */
     public void setDetailPrices(DetailPrice [] DetailPrices) {
         this.DetailPrices = DetailPrices;

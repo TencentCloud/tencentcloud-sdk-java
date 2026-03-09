@@ -122,6 +122,27 @@ public class TalkAgentConfigInfo extends AbstractModel {
     private String FastVoiceType;
 
     /**
+    * 实时字幕回调地址，支持HTTP/HTTPS
+    */
+    @SerializedName("SubtitleCallbackUrl")
+    @Expose
+    private String SubtitleCallbackUrl;
+
+    /**
+    * 回调签名密钥，最大32字符，用于HMAC SHA256签名
+    */
+    @SerializedName("SubtitleCallbackSignKey")
+    @Expose
+    private String SubtitleCallbackSignKey;
+
+    /**
+    * 字幕推送超时时间（秒），参考TRTC规范
+    */
+    @SerializedName("SubtitleCallbackTimeout")
+    @Expose
+    private Long SubtitleCallbackTimeout;
+
+    /**
      * Get 会话超时（秒），指连接会话的时间，例如30秒是指会话在30秒后断开 
      * @return SessionTimeout 会话超时（秒），指连接会话的时间，例如30秒是指会话在30秒后断开
      */
@@ -345,6 +366,54 @@ public class TalkAgentConfigInfo extends AbstractModel {
         this.FastVoiceType = FastVoiceType;
     }
 
+    /**
+     * Get 实时字幕回调地址，支持HTTP/HTTPS 
+     * @return SubtitleCallbackUrl 实时字幕回调地址，支持HTTP/HTTPS
+     */
+    public String getSubtitleCallbackUrl() {
+        return this.SubtitleCallbackUrl;
+    }
+
+    /**
+     * Set 实时字幕回调地址，支持HTTP/HTTPS
+     * @param SubtitleCallbackUrl 实时字幕回调地址，支持HTTP/HTTPS
+     */
+    public void setSubtitleCallbackUrl(String SubtitleCallbackUrl) {
+        this.SubtitleCallbackUrl = SubtitleCallbackUrl;
+    }
+
+    /**
+     * Get 回调签名密钥，最大32字符，用于HMAC SHA256签名 
+     * @return SubtitleCallbackSignKey 回调签名密钥，最大32字符，用于HMAC SHA256签名
+     */
+    public String getSubtitleCallbackSignKey() {
+        return this.SubtitleCallbackSignKey;
+    }
+
+    /**
+     * Set 回调签名密钥，最大32字符，用于HMAC SHA256签名
+     * @param SubtitleCallbackSignKey 回调签名密钥，最大32字符，用于HMAC SHA256签名
+     */
+    public void setSubtitleCallbackSignKey(String SubtitleCallbackSignKey) {
+        this.SubtitleCallbackSignKey = SubtitleCallbackSignKey;
+    }
+
+    /**
+     * Get 字幕推送超时时间（秒），参考TRTC规范 
+     * @return SubtitleCallbackTimeout 字幕推送超时时间（秒），参考TRTC规范
+     */
+    public Long getSubtitleCallbackTimeout() {
+        return this.SubtitleCallbackTimeout;
+    }
+
+    /**
+     * Set 字幕推送超时时间（秒），参考TRTC规范
+     * @param SubtitleCallbackTimeout 字幕推送超时时间（秒），参考TRTC规范
+     */
+    public void setSubtitleCallbackTimeout(Long SubtitleCallbackTimeout) {
+        this.SubtitleCallbackTimeout = SubtitleCallbackTimeout;
+    }
+
     public TalkAgentConfigInfo() {
     }
 
@@ -395,6 +464,15 @@ public class TalkAgentConfigInfo extends AbstractModel {
         if (source.FastVoiceType != null) {
             this.FastVoiceType = new String(source.FastVoiceType);
         }
+        if (source.SubtitleCallbackUrl != null) {
+            this.SubtitleCallbackUrl = new String(source.SubtitleCallbackUrl);
+        }
+        if (source.SubtitleCallbackSignKey != null) {
+            this.SubtitleCallbackSignKey = new String(source.SubtitleCallbackSignKey);
+        }
+        if (source.SubtitleCallbackTimeout != null) {
+            this.SubtitleCallbackTimeout = new Long(source.SubtitleCallbackTimeout);
+        }
     }
 
 
@@ -416,6 +494,9 @@ public class TalkAgentConfigInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "GreetingMessage", this.GreetingMessage);
         this.setParamSimple(map, prefix + "DefaultVoiceType", this.DefaultVoiceType);
         this.setParamSimple(map, prefix + "FastVoiceType", this.FastVoiceType);
+        this.setParamSimple(map, prefix + "SubtitleCallbackUrl", this.SubtitleCallbackUrl);
+        this.setParamSimple(map, prefix + "SubtitleCallbackSignKey", this.SubtitleCallbackSignKey);
+        this.setParamSimple(map, prefix + "SubtitleCallbackTimeout", this.SubtitleCallbackTimeout);
 
     }
 }

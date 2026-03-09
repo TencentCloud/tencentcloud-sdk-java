@@ -101,6 +101,13 @@ public class ModifyVpnGatewaySslServerRequest extends AbstractModel {
     private String SamlData;
 
     /**
+    * DNS Server地址
+    */
+    @SerializedName("DnsServers")
+    @Expose
+    private DnsServers DnsServers;
+
+    /**
      * Get SSL-VPN SERVER 实例ID 
      * @return SslVpnServerId SSL-VPN SERVER 实例ID
      */
@@ -276,6 +283,22 @@ public class ModifyVpnGatewaySslServerRequest extends AbstractModel {
         this.SamlData = SamlData;
     }
 
+    /**
+     * Get DNS Server地址 
+     * @return DnsServers DNS Server地址
+     */
+    public DnsServers getDnsServers() {
+        return this.DnsServers;
+    }
+
+    /**
+     * Set DNS Server地址
+     * @param DnsServers DNS Server地址
+     */
+    public void setDnsServers(DnsServers DnsServers) {
+        this.DnsServers = DnsServers;
+    }
+
     public ModifyVpnGatewaySslServerRequest() {
     }
 
@@ -320,6 +343,9 @@ public class ModifyVpnGatewaySslServerRequest extends AbstractModel {
         if (source.SamlData != null) {
             this.SamlData = new String(source.SamlData);
         }
+        if (source.DnsServers != null) {
+            this.DnsServers = new DnsServers(source.DnsServers);
+        }
     }
 
 
@@ -338,6 +364,7 @@ public class ModifyVpnGatewaySslServerRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Compress", this.Compress);
         this.setParamSimple(map, prefix + "SsoEnabled", this.SsoEnabled);
         this.setParamSimple(map, prefix + "SamlData", this.SamlData);
+        this.setParamObj(map, prefix + "DnsServers.", this.DnsServers);
 
     }
 }

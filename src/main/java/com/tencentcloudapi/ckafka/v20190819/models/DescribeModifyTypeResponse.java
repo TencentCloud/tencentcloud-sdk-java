@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeModifyTypeResponse extends AbstractModel {
 
     /**
-    * 返回的变配类型结构
+    * <p>返回的变配类型结构</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeModifyTypeResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回的变配类型结构 
-     * @return Result 返回的变配类型结构
+     * Get <p>返回的变配类型结构</p> 
+     * @return Result <p>返回的变配类型结构</p>
      */
     public DescModifyType getResult() {
         return this.Result;
     }
 
     /**
-     * Set 返回的变配类型结构
-     * @param Result 返回的变配类型结构
+     * Set <p>返回的变配类型结构</p>
+     * @param Result <p>返回的变配类型结构</p>
      */
     public void setResult(DescModifyType Result) {
         this.Result = Result;

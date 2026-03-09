@@ -24,235 +24,233 @@ import java.util.HashMap;
 public class EditMediaRequest extends AbstractModel {
 
     /**
-    * 输入的视频文件信息。
+    * <p>输入的视频文件信息。</p>
     */
     @SerializedName("FileInfos")
     @Expose
     private EditMediaFileInfo [] FileInfos;
 
     /**
-    * 媒体处理输出文件的目标存储。
+    * <p>媒体处理输出文件的目标存储。</p>
     */
     @SerializedName("OutputStorage")
     @Expose
     private TaskOutputStorage OutputStorage;
 
     /**
-    * 媒体处理输出文件的目标路径。
-
-注意：对于复杂合成任务，路径中的文件名只可为数字、字母、-、_ 的组合，最长 64 个字符。
-
+    * <p>媒体处理输出文件的目标路径。</p><p>注意：对于复杂合成任务，路径中的文件名只可为数字、字母、-、_ 的组合，最长 64 个字符。</p>
     */
     @SerializedName("OutputObjectPath")
     @Expose
     private String OutputObjectPath;
 
     /**
-    * 【剪辑】任务生成的文件配置。
+    * <p>【剪辑】任务生成的文件配置。</p>
     */
     @SerializedName("OutputConfig")
     @Expose
     private EditMediaOutputConfig OutputConfig;
 
     /**
-    * 【合成】任务配置。
-
-注意：当其不为空时，认为是合成任务，否则按剪辑任务处理。
+    * <p>【合成】任务配置。</p><p>注意：当其不为空时，认为是合成任务，否则按剪辑任务处理。</p>
     */
     @SerializedName("ComposeConfig")
     @Expose
     private ComposeMediaConfig ComposeConfig;
 
     /**
-    * 任务的事件通知信息，不填代表不获取事件通知。
+    * <p>任务的事件通知信息，不填代表不获取事件通知。</p>
     */
     @SerializedName("TaskNotifyConfig")
     @Expose
     private TaskNotifyConfig TaskNotifyConfig;
 
     /**
-    * 任务优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。
+    * <p>任务优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。</p>
     */
     @SerializedName("TasksPriority")
     @Expose
     private Long TasksPriority;
 
     /**
-    * 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+    * <p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+    * <p>来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。</p>
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-     * Get 输入的视频文件信息。 
-     * @return FileInfos 输入的视频文件信息。
+    * <p>资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。</p>
+    */
+    @SerializedName("ResourceId")
+    @Expose
+    private String ResourceId;
+
+    /**
+     * Get <p>输入的视频文件信息。</p> 
+     * @return FileInfos <p>输入的视频文件信息。</p>
      */
     public EditMediaFileInfo [] getFileInfos() {
         return this.FileInfos;
     }
 
     /**
-     * Set 输入的视频文件信息。
-     * @param FileInfos 输入的视频文件信息。
+     * Set <p>输入的视频文件信息。</p>
+     * @param FileInfos <p>输入的视频文件信息。</p>
      */
     public void setFileInfos(EditMediaFileInfo [] FileInfos) {
         this.FileInfos = FileInfos;
     }
 
     /**
-     * Get 媒体处理输出文件的目标存储。 
-     * @return OutputStorage 媒体处理输出文件的目标存储。
+     * Get <p>媒体处理输出文件的目标存储。</p> 
+     * @return OutputStorage <p>媒体处理输出文件的目标存储。</p>
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set 媒体处理输出文件的目标存储。
-     * @param OutputStorage 媒体处理输出文件的目标存储。
+     * Set <p>媒体处理输出文件的目标存储。</p>
+     * @param OutputStorage <p>媒体处理输出文件的目标存储。</p>
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
     }
 
     /**
-     * Get 媒体处理输出文件的目标路径。
-
-注意：对于复杂合成任务，路径中的文件名只可为数字、字母、-、_ 的组合，最长 64 个字符。
- 
-     * @return OutputObjectPath 媒体处理输出文件的目标路径。
-
-注意：对于复杂合成任务，路径中的文件名只可为数字、字母、-、_ 的组合，最长 64 个字符。
-
+     * Get <p>媒体处理输出文件的目标路径。</p><p>注意：对于复杂合成任务，路径中的文件名只可为数字、字母、-、_ 的组合，最长 64 个字符。</p> 
+     * @return OutputObjectPath <p>媒体处理输出文件的目标路径。</p><p>注意：对于复杂合成任务，路径中的文件名只可为数字、字母、-、_ 的组合，最长 64 个字符。</p>
      */
     public String getOutputObjectPath() {
         return this.OutputObjectPath;
     }
 
     /**
-     * Set 媒体处理输出文件的目标路径。
-
-注意：对于复杂合成任务，路径中的文件名只可为数字、字母、-、_ 的组合，最长 64 个字符。
-
-     * @param OutputObjectPath 媒体处理输出文件的目标路径。
-
-注意：对于复杂合成任务，路径中的文件名只可为数字、字母、-、_ 的组合，最长 64 个字符。
-
+     * Set <p>媒体处理输出文件的目标路径。</p><p>注意：对于复杂合成任务，路径中的文件名只可为数字、字母、-、_ 的组合，最长 64 个字符。</p>
+     * @param OutputObjectPath <p>媒体处理输出文件的目标路径。</p><p>注意：对于复杂合成任务，路径中的文件名只可为数字、字母、-、_ 的组合，最长 64 个字符。</p>
      */
     public void setOutputObjectPath(String OutputObjectPath) {
         this.OutputObjectPath = OutputObjectPath;
     }
 
     /**
-     * Get 【剪辑】任务生成的文件配置。 
-     * @return OutputConfig 【剪辑】任务生成的文件配置。
+     * Get <p>【剪辑】任务生成的文件配置。</p> 
+     * @return OutputConfig <p>【剪辑】任务生成的文件配置。</p>
      */
     public EditMediaOutputConfig getOutputConfig() {
         return this.OutputConfig;
     }
 
     /**
-     * Set 【剪辑】任务生成的文件配置。
-     * @param OutputConfig 【剪辑】任务生成的文件配置。
+     * Set <p>【剪辑】任务生成的文件配置。</p>
+     * @param OutputConfig <p>【剪辑】任务生成的文件配置。</p>
      */
     public void setOutputConfig(EditMediaOutputConfig OutputConfig) {
         this.OutputConfig = OutputConfig;
     }
 
     /**
-     * Get 【合成】任务配置。
-
-注意：当其不为空时，认为是合成任务，否则按剪辑任务处理。 
-     * @return ComposeConfig 【合成】任务配置。
-
-注意：当其不为空时，认为是合成任务，否则按剪辑任务处理。
+     * Get <p>【合成】任务配置。</p><p>注意：当其不为空时，认为是合成任务，否则按剪辑任务处理。</p> 
+     * @return ComposeConfig <p>【合成】任务配置。</p><p>注意：当其不为空时，认为是合成任务，否则按剪辑任务处理。</p>
      */
     public ComposeMediaConfig getComposeConfig() {
         return this.ComposeConfig;
     }
 
     /**
-     * Set 【合成】任务配置。
-
-注意：当其不为空时，认为是合成任务，否则按剪辑任务处理。
-     * @param ComposeConfig 【合成】任务配置。
-
-注意：当其不为空时，认为是合成任务，否则按剪辑任务处理。
+     * Set <p>【合成】任务配置。</p><p>注意：当其不为空时，认为是合成任务，否则按剪辑任务处理。</p>
+     * @param ComposeConfig <p>【合成】任务配置。</p><p>注意：当其不为空时，认为是合成任务，否则按剪辑任务处理。</p>
      */
     public void setComposeConfig(ComposeMediaConfig ComposeConfig) {
         this.ComposeConfig = ComposeConfig;
     }
 
     /**
-     * Get 任务的事件通知信息，不填代表不获取事件通知。 
-     * @return TaskNotifyConfig 任务的事件通知信息，不填代表不获取事件通知。
+     * Get <p>任务的事件通知信息，不填代表不获取事件通知。</p> 
+     * @return TaskNotifyConfig <p>任务的事件通知信息，不填代表不获取事件通知。</p>
      */
     public TaskNotifyConfig getTaskNotifyConfig() {
         return this.TaskNotifyConfig;
     }
 
     /**
-     * Set 任务的事件通知信息，不填代表不获取事件通知。
-     * @param TaskNotifyConfig 任务的事件通知信息，不填代表不获取事件通知。
+     * Set <p>任务的事件通知信息，不填代表不获取事件通知。</p>
+     * @param TaskNotifyConfig <p>任务的事件通知信息，不填代表不获取事件通知。</p>
      */
     public void setTaskNotifyConfig(TaskNotifyConfig TaskNotifyConfig) {
         this.TaskNotifyConfig = TaskNotifyConfig;
     }
 
     /**
-     * Get 任务优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。 
-     * @return TasksPriority 任务优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。
+     * Get <p>任务优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。</p> 
+     * @return TasksPriority <p>任务优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。</p>
      */
     public Long getTasksPriority() {
         return this.TasksPriority;
     }
 
     /**
-     * Set 任务优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。
-     * @param TasksPriority 任务优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。
+     * Set <p>任务优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。</p>
+     * @param TasksPriority <p>任务优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。</p>
      */
     public void setTasksPriority(Long TasksPriority) {
         this.TasksPriority = TasksPriority;
     }
 
     /**
-     * Get 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。 
-     * @return SessionId 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+     * Get <p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p> 
+     * @return SessionId <p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
-     * @param SessionId 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+     * Set <p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
+     * @param SessionId <p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。 
-     * @return SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+     * Get <p>来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。</p> 
+     * @return SessionContext <p>来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。</p>
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
-     * @param SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+     * Set <p>来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。</p>
+     * @param SessionContext <p>来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。</p>
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
+    }
+
+    /**
+     * Get <p>资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。</p> 
+     * @return ResourceId <p>资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。</p>
+     */
+    public String getResourceId() {
+        return this.ResourceId;
+    }
+
+    /**
+     * Set <p>资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。</p>
+     * @param ResourceId <p>资源ID，需要保证对应资源是开启状态。默认为帐号主资源ID。</p>
+     */
+    public void setResourceId(String ResourceId) {
+        this.ResourceId = ResourceId;
     }
 
     public EditMediaRequest() {
@@ -293,6 +291,9 @@ public class EditMediaRequest extends AbstractModel {
         if (source.SessionContext != null) {
             this.SessionContext = new String(source.SessionContext);
         }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
     }
 
 
@@ -309,6 +310,7 @@ public class EditMediaRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
+        this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
 
     }
 }

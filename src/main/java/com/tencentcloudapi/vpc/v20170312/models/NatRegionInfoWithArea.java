@@ -23,6 +23,29 @@ import java.util.HashMap;
 
 public class NatRegionInfoWithArea extends AbstractModel {
 
+    /**
+    * 地域ID，如：ap-guangzhou。
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
+     * Get 地域ID，如：ap-guangzhou。 
+     * @return Region 地域ID，如：ap-guangzhou。
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set 地域ID，如：ap-guangzhou。
+     * @param Region 地域ID，如：ap-guangzhou。
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
+    }
+
     public NatRegionInfoWithArea() {
     }
 
@@ -31,6 +54,9 @@ public class NatRegionInfoWithArea extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public NatRegionInfoWithArea(NatRegionInfoWithArea source) {
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
     }
 
 
@@ -38,6 +64,7 @@ public class NatRegionInfoWithArea extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Region", this.Region);
 
     }
 }

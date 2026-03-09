@@ -2682,6 +2682,28 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *查询补丁影响的主机信息列表
+     * @param req DescribePatchEffectHostListRequest
+     * @return DescribePatchEffectHostListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePatchEffectHostListResponse DescribePatchEffectHostList(DescribePatchEffectHostListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePatchEffectHostList", DescribePatchEffectHostListResponse.class);
+    }
+
+    /**
+     *补丁详情
+     * @param req DescribePatchInfoRequest
+     * @return DescribePatchInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePatchInfoResponse DescribePatchInfo(DescribePatchInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePatchInfo", DescribePatchInfoResponse.class);
+    }
+
+    /**
      *本地提权信息详情
      * @param req DescribePrivilegeEventInfoRequest
      * @return DescribePrivilegeEventInfoResponse
@@ -3870,6 +3892,17 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *获取补丁信息列表
+     * @param req DescribeWindowsPatchListRequest
+     * @return DescribeWindowsPatchListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWindowsPatchListResponse DescribeWindowsPatchList(DescribeWindowsPatchListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeWindowsPatchList", DescribeWindowsPatchListResponse.class);
+    }
+
+    /**
      *DestroyOrder  该接口可以对资源销毁.
      * @param req DestroyOrderRequest
      * @return DestroyOrderResponse
@@ -4376,6 +4409,17 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *导出补丁影响主机列表
+     * @param req ExportPatchEffectHostListRequest
+     * @return ExportPatchEffectHostListResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExportPatchEffectHostListResponse ExportPatchEffectHostList(ExportPatchEffectHostListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ExportPatchEffectHostList", ExportPatchEffectHostListResponse.class);
+    }
+
+    /**
      *导出本地提权事件
      * @param req ExportPrivilegeEventsRequest
      * @return ExportPrivilegeEventsResponse
@@ -4626,6 +4670,17 @@ public class CwpClient extends AbstractClient{
     public ExportWebPageEventListResponse ExportWebPageEventList(ExportWebPageEventListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ExportWebPageEventList", ExportWebPageEventListResponse.class);
+    }
+
+    /**
+     *导出Windows补丁列表
+     * @param req ExportWindowsPatchListRequest
+     * @return ExportWindowsPatchListResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExportWindowsPatchListResponse ExportWindowsPatchList(ExportWindowsPatchListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ExportWindowsPatchList", ExportWindowsPatchListResponse.class);
     }
 
     /**

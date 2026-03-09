@@ -24,187 +24,210 @@ import java.util.HashMap;
 public class DescribeModifyTypeRequest extends AbstractModel {
 
     /**
-    * ckafka集群实例Id
+    * <p>ckafka集群实例Id</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 升配后的带宽，单位mb
+    * <p>升配后的带宽，单位mb</p>
     */
     @SerializedName("BandWidth")
     @Expose
     private Long BandWidth;
 
     /**
-    * 升配后的磁盘，单位G
+    * <p>升配后的磁盘，单位G</p>
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-    * 磁盘类型，例如 CLOUD_PREMIUM
+    * <p>磁盘类型，例如 CLOUD_PREMIUM</p>
     */
     @SerializedName("DiskType")
     @Expose
     private String DiskType;
 
     /**
-    * 分区数量
+    * <p>分区数量</p>
     */
     @SerializedName("Partition")
     @Expose
     private Long Partition;
 
     /**
-    * topic数量
+    * <p>topic数量</p>
     */
     @SerializedName("Topic")
     @Expose
     private Long Topic;
 
     /**
-    * 实例类型例如 sp_ckafka_profession
+    * <p>实例类型例如 sp_ckafka_profession</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 变配入口
+    * <p>变配入口</p>
     */
     @SerializedName("ModifyEntry")
     @Expose
     private String ModifyEntry;
 
     /**
-     * Get ckafka集群实例Id 
-     * @return InstanceId ckafka集群实例Id
+    * <p>是否可用区变更  false: 非可用区变更  true: 可用区变更  默认false</p>
+    */
+    @SerializedName("ModifyZone")
+    @Expose
+    private Boolean ModifyZone;
+
+    /**
+     * Get <p>ckafka集群实例Id</p> 
+     * @return InstanceId <p>ckafka集群实例Id</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ckafka集群实例Id
-     * @param InstanceId ckafka集群实例Id
+     * Set <p>ckafka集群实例Id</p>
+     * @param InstanceId <p>ckafka集群实例Id</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 升配后的带宽，单位mb 
-     * @return BandWidth 升配后的带宽，单位mb
+     * Get <p>升配后的带宽，单位mb</p> 
+     * @return BandWidth <p>升配后的带宽，单位mb</p>
      */
     public Long getBandWidth() {
         return this.BandWidth;
     }
 
     /**
-     * Set 升配后的带宽，单位mb
-     * @param BandWidth 升配后的带宽，单位mb
+     * Set <p>升配后的带宽，单位mb</p>
+     * @param BandWidth <p>升配后的带宽，单位mb</p>
      */
     public void setBandWidth(Long BandWidth) {
         this.BandWidth = BandWidth;
     }
 
     /**
-     * Get 升配后的磁盘，单位G 
-     * @return DiskSize 升配后的磁盘，单位G
+     * Get <p>升配后的磁盘，单位G</p> 
+     * @return DiskSize <p>升配后的磁盘，单位G</p>
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set 升配后的磁盘，单位G
-     * @param DiskSize 升配后的磁盘，单位G
+     * Set <p>升配后的磁盘，单位G</p>
+     * @param DiskSize <p>升配后的磁盘，单位G</p>
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get 磁盘类型，例如 CLOUD_PREMIUM 
-     * @return DiskType 磁盘类型，例如 CLOUD_PREMIUM
+     * Get <p>磁盘类型，例如 CLOUD_PREMIUM</p> 
+     * @return DiskType <p>磁盘类型，例如 CLOUD_PREMIUM</p>
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set 磁盘类型，例如 CLOUD_PREMIUM
-     * @param DiskType 磁盘类型，例如 CLOUD_PREMIUM
+     * Set <p>磁盘类型，例如 CLOUD_PREMIUM</p>
+     * @param DiskType <p>磁盘类型，例如 CLOUD_PREMIUM</p>
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get 分区数量 
-     * @return Partition 分区数量
+     * Get <p>分区数量</p> 
+     * @return Partition <p>分区数量</p>
      */
     public Long getPartition() {
         return this.Partition;
     }
 
     /**
-     * Set 分区数量
-     * @param Partition 分区数量
+     * Set <p>分区数量</p>
+     * @param Partition <p>分区数量</p>
      */
     public void setPartition(Long Partition) {
         this.Partition = Partition;
     }
 
     /**
-     * Get topic数量 
-     * @return Topic topic数量
+     * Get <p>topic数量</p> 
+     * @return Topic <p>topic数量</p>
      */
     public Long getTopic() {
         return this.Topic;
     }
 
     /**
-     * Set topic数量
-     * @param Topic topic数量
+     * Set <p>topic数量</p>
+     * @param Topic <p>topic数量</p>
      */
     public void setTopic(Long Topic) {
         this.Topic = Topic;
     }
 
     /**
-     * Get 实例类型例如 sp_ckafka_profession 
-     * @return Type 实例类型例如 sp_ckafka_profession
+     * Get <p>实例类型例如 sp_ckafka_profession</p> 
+     * @return Type <p>实例类型例如 sp_ckafka_profession</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 实例类型例如 sp_ckafka_profession
-     * @param Type 实例类型例如 sp_ckafka_profession
+     * Set <p>实例类型例如 sp_ckafka_profession</p>
+     * @param Type <p>实例类型例如 sp_ckafka_profession</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 变配入口 
-     * @return ModifyEntry 变配入口
+     * Get <p>变配入口</p> 
+     * @return ModifyEntry <p>变配入口</p>
      */
     public String getModifyEntry() {
         return this.ModifyEntry;
     }
 
     /**
-     * Set 变配入口
-     * @param ModifyEntry 变配入口
+     * Set <p>变配入口</p>
+     * @param ModifyEntry <p>变配入口</p>
      */
     public void setModifyEntry(String ModifyEntry) {
         this.ModifyEntry = ModifyEntry;
+    }
+
+    /**
+     * Get <p>是否可用区变更  false: 非可用区变更  true: 可用区变更  默认false</p> 
+     * @return ModifyZone <p>是否可用区变更  false: 非可用区变更  true: 可用区变更  默认false</p>
+     */
+    public Boolean getModifyZone() {
+        return this.ModifyZone;
+    }
+
+    /**
+     * Set <p>是否可用区变更  false: 非可用区变更  true: 可用区变更  默认false</p>
+     * @param ModifyZone <p>是否可用区变更  false: 非可用区变更  true: 可用区变更  默认false</p>
+     */
+    public void setModifyZone(Boolean ModifyZone) {
+        this.ModifyZone = ModifyZone;
     }
 
     public DescribeModifyTypeRequest() {
@@ -239,6 +262,9 @@ public class DescribeModifyTypeRequest extends AbstractModel {
         if (source.ModifyEntry != null) {
             this.ModifyEntry = new String(source.ModifyEntry);
         }
+        if (source.ModifyZone != null) {
+            this.ModifyZone = new Boolean(source.ModifyZone);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class DescribeModifyTypeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Topic", this.Topic);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "ModifyEntry", this.ModifyEntry);
+        this.setParamSimple(map, prefix + "ModifyZone", this.ModifyZone);
 
     }
 }

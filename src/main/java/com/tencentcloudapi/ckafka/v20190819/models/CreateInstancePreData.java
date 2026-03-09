@@ -24,95 +24,118 @@ import java.util.HashMap;
 public class CreateInstancePreData extends AbstractModel {
 
     /**
-    * CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。
+    * <p>CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。</p>
     */
     @SerializedName("FlowId")
     @Expose
     private Long FlowId;
 
     /**
-    * 订单号列表
+    * <p>订单号列表</p>
     */
     @SerializedName("DealNames")
     @Expose
     private String [] DealNames;
 
     /**
-    * ckafka集群实例Id，当购买多个实例时，默认返回购买的第一个实例 id
+    * <p>ckafka集群实例Id，当购买多个实例时，默认返回购买的第一个实例 id</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 订单和购买实例对应映射列表
+    * <p>订单和购买实例对应映射列表</p>
     */
     @SerializedName("DealNameInstanceIdMapping")
     @Expose
     private DealInstanceDTO [] DealNameInstanceIdMapping;
 
     /**
-     * Get CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。 
-     * @return FlowId CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。
+    * <p>CAM鉴权返回的eventId</p>
+    */
+    @SerializedName("EventId")
+    @Expose
+    private String EventId;
+
+    /**
+     * Get <p>CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。</p> 
+     * @return FlowId <p>CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。</p>
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。
-     * @param FlowId CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。
+     * Set <p>CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。</p>
+     * @param FlowId <p>CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。</p>
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get 订单号列表 
-     * @return DealNames 订单号列表
+     * Get <p>订单号列表</p> 
+     * @return DealNames <p>订单号列表</p>
      */
     public String [] getDealNames() {
         return this.DealNames;
     }
 
     /**
-     * Set 订单号列表
-     * @param DealNames 订单号列表
+     * Set <p>订单号列表</p>
+     * @param DealNames <p>订单号列表</p>
      */
     public void setDealNames(String [] DealNames) {
         this.DealNames = DealNames;
     }
 
     /**
-     * Get ckafka集群实例Id，当购买多个实例时，默认返回购买的第一个实例 id 
-     * @return InstanceId ckafka集群实例Id，当购买多个实例时，默认返回购买的第一个实例 id
+     * Get <p>ckafka集群实例Id，当购买多个实例时，默认返回购买的第一个实例 id</p> 
+     * @return InstanceId <p>ckafka集群实例Id，当购买多个实例时，默认返回购买的第一个实例 id</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ckafka集群实例Id，当购买多个实例时，默认返回购买的第一个实例 id
-     * @param InstanceId ckafka集群实例Id，当购买多个实例时，默认返回购买的第一个实例 id
+     * Set <p>ckafka集群实例Id，当购买多个实例时，默认返回购买的第一个实例 id</p>
+     * @param InstanceId <p>ckafka集群实例Id，当购买多个实例时，默认返回购买的第一个实例 id</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 订单和购买实例对应映射列表 
-     * @return DealNameInstanceIdMapping 订单和购买实例对应映射列表
+     * Get <p>订单和购买实例对应映射列表</p> 
+     * @return DealNameInstanceIdMapping <p>订单和购买实例对应映射列表</p>
      */
     public DealInstanceDTO [] getDealNameInstanceIdMapping() {
         return this.DealNameInstanceIdMapping;
     }
 
     /**
-     * Set 订单和购买实例对应映射列表
-     * @param DealNameInstanceIdMapping 订单和购买实例对应映射列表
+     * Set <p>订单和购买实例对应映射列表</p>
+     * @param DealNameInstanceIdMapping <p>订单和购买实例对应映射列表</p>
      */
     public void setDealNameInstanceIdMapping(DealInstanceDTO [] DealNameInstanceIdMapping) {
         this.DealNameInstanceIdMapping = DealNameInstanceIdMapping;
+    }
+
+    /**
+     * Get <p>CAM鉴权返回的eventId</p> 
+     * @return EventId <p>CAM鉴权返回的eventId</p>
+     */
+    public String getEventId() {
+        return this.EventId;
+    }
+
+    /**
+     * Set <p>CAM鉴权返回的eventId</p>
+     * @param EventId <p>CAM鉴权返回的eventId</p>
+     */
+    public void setEventId(String EventId) {
+        this.EventId = EventId;
     }
 
     public CreateInstancePreData() {
@@ -141,6 +164,9 @@ public class CreateInstancePreData extends AbstractModel {
                 this.DealNameInstanceIdMapping[i] = new DealInstanceDTO(source.DealNameInstanceIdMapping[i]);
             }
         }
+        if (source.EventId != null) {
+            this.EventId = new String(source.EventId);
+        }
     }
 
 
@@ -152,6 +178,7 @@ public class CreateInstancePreData extends AbstractModel {
         this.setParamArraySimple(map, prefix + "DealNames.", this.DealNames);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamArrayObj(map, prefix + "DealNameInstanceIdMapping.", this.DealNameInstanceIdMapping);
+        this.setParamSimple(map, prefix + "EventId", this.EventId);
 
     }
 }

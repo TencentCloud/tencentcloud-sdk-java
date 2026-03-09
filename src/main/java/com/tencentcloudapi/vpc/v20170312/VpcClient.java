@@ -2259,6 +2259,17 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *用于查询用户创建带宽包时可指定的可用区信息
+     * @param req DescribeDesignatedZonesRequest
+     * @return DescribeDesignatedZonesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDesignatedZonesResponse DescribeDesignatedZones(DescribeDesignatedZonesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDesignatedZones", DescribeDesignatedZonesResponse.class);
+    }
+
+    /**
      *本接口（DescribeDhcpIps）用于查询DhcpIp列表
      * @param req DescribeDhcpIpsRequest
      * @return DescribeDhcpIpsResponse

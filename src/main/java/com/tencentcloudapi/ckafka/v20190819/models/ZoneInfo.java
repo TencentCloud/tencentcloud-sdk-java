@@ -24,174 +24,174 @@ import java.util.HashMap;
 public class ZoneInfo extends AbstractModel {
 
     /**
-    * 可用区
+    * <p>可用区</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * 是否内部APP
+    * <p>是否内部APP</p><p>枚举值：</p><ul><li>0： 外部</li><li>1： 内部</li></ul><p>默认值：0</p>
     */
     @SerializedName("IsInternalApp")
     @Expose
     private Long IsInternalApp;
 
     /**
-    * 应用标识
+    * <p>应用标识</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * 可用区是否售罄标识，true表示已售罄，false表示未售罄。
+    * <p>可用区是否售罄标识，true表示已售罄，false表示未售罄。</p>
     */
     @SerializedName("Flag")
     @Expose
     private Boolean Flag;
 
     /**
-    * 可用区名称
+    * <p>可用区名称</p>
     */
     @SerializedName("ZoneName")
     @Expose
     private String ZoneName;
 
     /**
-    * 可用区状态  枚举示例:  3: 开启，4: 关闭;  可用区状态以SoldOut为准
+    * <p>可用区状态</p><p>枚举值：</p><ul><li>3： 开启</li><li>4： 关闭</li></ul><p>可用区状态以SoldOut为准</p>
     */
     @SerializedName("ZoneStatus")
     @Expose
     private Long ZoneStatus;
 
     /**
-    * 额外标识
+    * <p>额外标识</p>
     */
     @SerializedName("Exflag")
     @Expose
     private String Exflag;
 
     /**
-    * true为售罄，false为未售罄
+    * <p>true为售罄，false为未售罄</p>
     */
     @SerializedName("SoldOut")
     @Expose
     private String SoldOut;
 
     /**
-    * 标准版售罄信息
+    * <p>标准版售罄信息</p>
     */
     @SerializedName("SalesInfo")
     @Expose
     private SaleInfo [] SalesInfo;
 
     /**
-    * 额外标识
+    * <p>额外标识</p>
     */
     @SerializedName("ExtraFlag")
     @Expose
     private String ExtraFlag;
 
     /**
-     * Get 可用区 
-     * @return ZoneId 可用区
+     * Get <p>可用区</p> 
+     * @return ZoneId <p>可用区</p>
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 可用区
-     * @param ZoneId 可用区
+     * Set <p>可用区</p>
+     * @param ZoneId <p>可用区</p>
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 是否内部APP 
-     * @return IsInternalApp 是否内部APP
+     * Get <p>是否内部APP</p><p>枚举值：</p><ul><li>0： 外部</li><li>1： 内部</li></ul><p>默认值：0</p> 
+     * @return IsInternalApp <p>是否内部APP</p><p>枚举值：</p><ul><li>0： 外部</li><li>1： 内部</li></ul><p>默认值：0</p>
      */
     public Long getIsInternalApp() {
         return this.IsInternalApp;
     }
 
     /**
-     * Set 是否内部APP
-     * @param IsInternalApp 是否内部APP
+     * Set <p>是否内部APP</p><p>枚举值：</p><ul><li>0： 外部</li><li>1： 内部</li></ul><p>默认值：0</p>
+     * @param IsInternalApp <p>是否内部APP</p><p>枚举值：</p><ul><li>0： 外部</li><li>1： 内部</li></ul><p>默认值：0</p>
      */
     public void setIsInternalApp(Long IsInternalApp) {
         this.IsInternalApp = IsInternalApp;
     }
 
     /**
-     * Get 应用标识 
-     * @return AppId 应用标识
+     * Get <p>应用标识</p> 
+     * @return AppId <p>应用标识</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 应用标识
-     * @param AppId 应用标识
+     * Set <p>应用标识</p>
+     * @param AppId <p>应用标识</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 可用区是否售罄标识，true表示已售罄，false表示未售罄。 
-     * @return Flag 可用区是否售罄标识，true表示已售罄，false表示未售罄。
+     * Get <p>可用区是否售罄标识，true表示已售罄，false表示未售罄。</p> 
+     * @return Flag <p>可用区是否售罄标识，true表示已售罄，false表示未售罄。</p>
      */
     public Boolean getFlag() {
         return this.Flag;
     }
 
     /**
-     * Set 可用区是否售罄标识，true表示已售罄，false表示未售罄。
-     * @param Flag 可用区是否售罄标识，true表示已售罄，false表示未售罄。
+     * Set <p>可用区是否售罄标识，true表示已售罄，false表示未售罄。</p>
+     * @param Flag <p>可用区是否售罄标识，true表示已售罄，false表示未售罄。</p>
      */
     public void setFlag(Boolean Flag) {
         this.Flag = Flag;
     }
 
     /**
-     * Get 可用区名称 
-     * @return ZoneName 可用区名称
+     * Get <p>可用区名称</p> 
+     * @return ZoneName <p>可用区名称</p>
      */
     public String getZoneName() {
         return this.ZoneName;
     }
 
     /**
-     * Set 可用区名称
-     * @param ZoneName 可用区名称
+     * Set <p>可用区名称</p>
+     * @param ZoneName <p>可用区名称</p>
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;
     }
 
     /**
-     * Get 可用区状态  枚举示例:  3: 开启，4: 关闭;  可用区状态以SoldOut为准 
-     * @return ZoneStatus 可用区状态  枚举示例:  3: 开启，4: 关闭;  可用区状态以SoldOut为准
+     * Get <p>可用区状态</p><p>枚举值：</p><ul><li>3： 开启</li><li>4： 关闭</li></ul><p>可用区状态以SoldOut为准</p> 
+     * @return ZoneStatus <p>可用区状态</p><p>枚举值：</p><ul><li>3： 开启</li><li>4： 关闭</li></ul><p>可用区状态以SoldOut为准</p>
      */
     public Long getZoneStatus() {
         return this.ZoneStatus;
     }
 
     /**
-     * Set 可用区状态  枚举示例:  3: 开启，4: 关闭;  可用区状态以SoldOut为准
-     * @param ZoneStatus 可用区状态  枚举示例:  3: 开启，4: 关闭;  可用区状态以SoldOut为准
+     * Set <p>可用区状态</p><p>枚举值：</p><ul><li>3： 开启</li><li>4： 关闭</li></ul><p>可用区状态以SoldOut为准</p>
+     * @param ZoneStatus <p>可用区状态</p><p>枚举值：</p><ul><li>3： 开启</li><li>4： 关闭</li></ul><p>可用区状态以SoldOut为准</p>
      */
     public void setZoneStatus(Long ZoneStatus) {
         this.ZoneStatus = ZoneStatus;
     }
 
     /**
-     * Get 额外标识 
-     * @return Exflag 额外标识
+     * Get <p>额外标识</p> 
+     * @return Exflag <p>额外标识</p>
      * @deprecated
      */
     @Deprecated
@@ -200,8 +200,8 @@ public class ZoneInfo extends AbstractModel {
     }
 
     /**
-     * Set 额外标识
-     * @param Exflag 额外标识
+     * Set <p>额外标识</p>
+     * @param Exflag <p>额外标识</p>
      * @deprecated
      */
     @Deprecated
@@ -210,48 +210,48 @@ public class ZoneInfo extends AbstractModel {
     }
 
     /**
-     * Get true为售罄，false为未售罄 
-     * @return SoldOut true为售罄，false为未售罄
+     * Get <p>true为售罄，false为未售罄</p> 
+     * @return SoldOut <p>true为售罄，false为未售罄</p>
      */
     public String getSoldOut() {
         return this.SoldOut;
     }
 
     /**
-     * Set true为售罄，false为未售罄
-     * @param SoldOut true为售罄，false为未售罄
+     * Set <p>true为售罄，false为未售罄</p>
+     * @param SoldOut <p>true为售罄，false为未售罄</p>
      */
     public void setSoldOut(String SoldOut) {
         this.SoldOut = SoldOut;
     }
 
     /**
-     * Get 标准版售罄信息 
-     * @return SalesInfo 标准版售罄信息
+     * Get <p>标准版售罄信息</p> 
+     * @return SalesInfo <p>标准版售罄信息</p>
      */
     public SaleInfo [] getSalesInfo() {
         return this.SalesInfo;
     }
 
     /**
-     * Set 标准版售罄信息
-     * @param SalesInfo 标准版售罄信息
+     * Set <p>标准版售罄信息</p>
+     * @param SalesInfo <p>标准版售罄信息</p>
      */
     public void setSalesInfo(SaleInfo [] SalesInfo) {
         this.SalesInfo = SalesInfo;
     }
 
     /**
-     * Get 额外标识 
-     * @return ExtraFlag 额外标识
+     * Get <p>额外标识</p> 
+     * @return ExtraFlag <p>额外标识</p>
      */
     public String getExtraFlag() {
         return this.ExtraFlag;
     }
 
     /**
-     * Set 额外标识
-     * @param ExtraFlag 额外标识
+     * Set <p>额外标识</p>
+     * @param ExtraFlag <p>额外标识</p>
      */
     public void setExtraFlag(String ExtraFlag) {
         this.ExtraFlag = ExtraFlag;

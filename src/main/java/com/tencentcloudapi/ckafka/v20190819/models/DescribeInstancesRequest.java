@@ -24,137 +24,137 @@ import java.util.HashMap;
 public class DescribeInstancesRequest extends AbstractModel {
 
     /**
-    * （查询条件）按照ckafka集群实例Id过滤
+    * <p>（查询条件）按照ckafka集群实例Id过滤</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 搜索词   ex:（查询条件）按照实例名称过滤，支持模糊查询
+    * <p>搜索词   ex:（查询条件）按照实例名称过滤，支持模糊查询</p>
     */
     @SerializedName("SearchWord")
     @Expose
     private String SearchWord;
 
     /**
-    * （查询条件）实例的状态  0：创建中，1：运行中，2：删除中，5: 隔离中,  7:升级中 不填默认返回全部
+    * <p>（查询条件）实例的状态 不填默认返回全部</p><p>枚举值：</p><ul><li>-1： 创建失败</li><li>0： 创建中</li><li>1： 运行中</li><li>2： 删除中</li><li>3： 已删除</li><li>4： 删除失败</li><li>5： 隔离中</li><li>7： 升级中</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private Long [] Status;
 
     /**
-    * 偏移量，不填默认为0
+    * <p>偏移量，不填默认为0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数量，不填则默认10，最大值100
+    * <p>返回数量，不填则默认10，最大值100</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 已废弃。匹配标签key值。
+    * <p>已废弃。匹配标签key值。</p>
     */
     @SerializedName("TagKey")
     @Expose
     private String TagKey;
 
     /**
-    * （查询条件）私有网络Id
+    * <p>（查询条件）私有网络Id</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-     * Get （查询条件）按照ckafka集群实例Id过滤 
-     * @return InstanceId （查询条件）按照ckafka集群实例Id过滤
+     * Get <p>（查询条件）按照ckafka集群实例Id过滤</p> 
+     * @return InstanceId <p>（查询条件）按照ckafka集群实例Id过滤</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set （查询条件）按照ckafka集群实例Id过滤
-     * @param InstanceId （查询条件）按照ckafka集群实例Id过滤
+     * Set <p>（查询条件）按照ckafka集群实例Id过滤</p>
+     * @param InstanceId <p>（查询条件）按照ckafka集群实例Id过滤</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 搜索词   ex:（查询条件）按照实例名称过滤，支持模糊查询 
-     * @return SearchWord 搜索词   ex:（查询条件）按照实例名称过滤，支持模糊查询
+     * Get <p>搜索词   ex:（查询条件）按照实例名称过滤，支持模糊查询</p> 
+     * @return SearchWord <p>搜索词   ex:（查询条件）按照实例名称过滤，支持模糊查询</p>
      */
     public String getSearchWord() {
         return this.SearchWord;
     }
 
     /**
-     * Set 搜索词   ex:（查询条件）按照实例名称过滤，支持模糊查询
-     * @param SearchWord 搜索词   ex:（查询条件）按照实例名称过滤，支持模糊查询
+     * Set <p>搜索词   ex:（查询条件）按照实例名称过滤，支持模糊查询</p>
+     * @param SearchWord <p>搜索词   ex:（查询条件）按照实例名称过滤，支持模糊查询</p>
      */
     public void setSearchWord(String SearchWord) {
         this.SearchWord = SearchWord;
     }
 
     /**
-     * Get （查询条件）实例的状态  0：创建中，1：运行中，2：删除中，5: 隔离中,  7:升级中 不填默认返回全部 
-     * @return Status （查询条件）实例的状态  0：创建中，1：运行中，2：删除中，5: 隔离中,  7:升级中 不填默认返回全部
+     * Get <p>（查询条件）实例的状态 不填默认返回全部</p><p>枚举值：</p><ul><li>-1： 创建失败</li><li>0： 创建中</li><li>1： 运行中</li><li>2： 删除中</li><li>3： 已删除</li><li>4： 删除失败</li><li>5： 隔离中</li><li>7： 升级中</li></ul> 
+     * @return Status <p>（查询条件）实例的状态 不填默认返回全部</p><p>枚举值：</p><ul><li>-1： 创建失败</li><li>0： 创建中</li><li>1： 运行中</li><li>2： 删除中</li><li>3： 已删除</li><li>4： 删除失败</li><li>5： 隔离中</li><li>7： 升级中</li></ul>
      */
     public Long [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set （查询条件）实例的状态  0：创建中，1：运行中，2：删除中，5: 隔离中,  7:升级中 不填默认返回全部
-     * @param Status （查询条件）实例的状态  0：创建中，1：运行中，2：删除中，5: 隔离中,  7:升级中 不填默认返回全部
+     * Set <p>（查询条件）实例的状态 不填默认返回全部</p><p>枚举值：</p><ul><li>-1： 创建失败</li><li>0： 创建中</li><li>1： 运行中</li><li>2： 删除中</li><li>3： 已删除</li><li>4： 删除失败</li><li>5： 隔离中</li><li>7： 升级中</li></ul>
+     * @param Status <p>（查询条件）实例的状态 不填默认返回全部</p><p>枚举值：</p><ul><li>-1： 创建失败</li><li>0： 创建中</li><li>1： 运行中</li><li>2： 删除中</li><li>3： 已删除</li><li>4： 删除失败</li><li>5： 隔离中</li><li>7： 升级中</li></ul>
      */
     public void setStatus(Long [] Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 偏移量，不填默认为0 
-     * @return Offset 偏移量，不填默认为0
+     * Get <p>偏移量，不填默认为0</p> 
+     * @return Offset <p>偏移量，不填默认为0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，不填默认为0
-     * @param Offset 偏移量，不填默认为0
+     * Set <p>偏移量，不填默认为0</p>
+     * @param Offset <p>偏移量，不填默认为0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量，不填则默认10，最大值100 
-     * @return Limit 返回数量，不填则默认10，最大值100
+     * Get <p>返回数量，不填则默认10，最大值100</p> 
+     * @return Limit <p>返回数量，不填则默认10，最大值100</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，不填则默认10，最大值100
-     * @param Limit 返回数量，不填则默认10，最大值100
+     * Set <p>返回数量，不填则默认10，最大值100</p>
+     * @param Limit <p>返回数量，不填则默认10，最大值100</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 已废弃。匹配标签key值。 
-     * @return TagKey 已废弃。匹配标签key值。
+     * Get <p>已废弃。匹配标签key值。</p> 
+     * @return TagKey <p>已废弃。匹配标签key值。</p>
      * @deprecated
      */
     @Deprecated
@@ -163,8 +163,8 @@ public class DescribeInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Set 已废弃。匹配标签key值。
-     * @param TagKey 已废弃。匹配标签key值。
+     * Set <p>已废弃。匹配标签key值。</p>
+     * @param TagKey <p>已废弃。匹配标签key值。</p>
      * @deprecated
      */
     @Deprecated
@@ -173,16 +173,16 @@ public class DescribeInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get （查询条件）私有网络Id 
-     * @return VpcId （查询条件）私有网络Id
+     * Get <p>（查询条件）私有网络Id</p> 
+     * @return VpcId <p>（查询条件）私有网络Id</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set （查询条件）私有网络Id
-     * @param VpcId （查询条件）私有网络Id
+     * Set <p>（查询条件）私有网络Id</p>
+     * @param VpcId <p>（查询条件）私有网络Id</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;

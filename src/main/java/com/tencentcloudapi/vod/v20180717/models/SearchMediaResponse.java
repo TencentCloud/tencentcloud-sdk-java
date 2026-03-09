@@ -24,15 +24,14 @@ import java.util.HashMap;
 public class SearchMediaResponse extends AbstractModel {
 
     /**
-    * 符合搜索条件的记录总数。
-<li>最大值：5000。当命中记录数超过5000时，该字段将返回 5000，而非实际命中总数。</li>
+    * <p>符合搜索条件的记录总数。</p><li>最大值：5000。当命中记录数超过5000时，该字段将返回 5000，而非实际命中总数。</li>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 媒体文件信息列表。
+    * <p>媒体文件信息列表。</p>
     */
     @SerializedName("MediaInfoSet")
     @Expose
@@ -46,36 +45,32 @@ public class SearchMediaResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 符合搜索条件的记录总数。
-<li>最大值：5000。当命中记录数超过5000时，该字段将返回 5000，而非实际命中总数。</li> 
-     * @return TotalCount 符合搜索条件的记录总数。
-<li>最大值：5000。当命中记录数超过5000时，该字段将返回 5000，而非实际命中总数。</li>
+     * Get <p>符合搜索条件的记录总数。</p><li>最大值：5000。当命中记录数超过5000时，该字段将返回 5000，而非实际命中总数。</li> 
+     * @return TotalCount <p>符合搜索条件的记录总数。</p><li>最大值：5000。当命中记录数超过5000时，该字段将返回 5000，而非实际命中总数。</li>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合搜索条件的记录总数。
-<li>最大值：5000。当命中记录数超过5000时，该字段将返回 5000，而非实际命中总数。</li>
-     * @param TotalCount 符合搜索条件的记录总数。
-<li>最大值：5000。当命中记录数超过5000时，该字段将返回 5000，而非实际命中总数。</li>
+     * Set <p>符合搜索条件的记录总数。</p><li>最大值：5000。当命中记录数超过5000时，该字段将返回 5000，而非实际命中总数。</li>
+     * @param TotalCount <p>符合搜索条件的记录总数。</p><li>最大值：5000。当命中记录数超过5000时，该字段将返回 5000，而非实际命中总数。</li>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 媒体文件信息列表。 
-     * @return MediaInfoSet 媒体文件信息列表。
+     * Get <p>媒体文件信息列表。</p> 
+     * @return MediaInfoSet <p>媒体文件信息列表。</p>
      */
     public MediaInfo [] getMediaInfoSet() {
         return this.MediaInfoSet;
     }
 
     /**
-     * Set 媒体文件信息列表。
-     * @param MediaInfoSet 媒体文件信息列表。
+     * Set <p>媒体文件信息列表。</p>
+     * @param MediaInfoSet <p>媒体文件信息列表。</p>
      */
     public void setMediaInfoSet(MediaInfo [] MediaInfoSet) {
         this.MediaInfoSet = MediaInfoSet;

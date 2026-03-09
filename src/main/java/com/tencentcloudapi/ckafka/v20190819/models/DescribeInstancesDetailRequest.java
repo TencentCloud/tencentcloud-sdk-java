@@ -24,190 +24,190 @@ import java.util.HashMap;
 public class DescribeInstancesDetailRequest extends AbstractModel {
 
     /**
-    * （过滤条件）按照实例ID过滤
+    * <p>（过滤条件）按照实例ID过滤</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * （过滤条件）按照实例名,实例Id,可用区,私有网络id,子网id 过滤，支持模糊查询
+    * <p>（过滤条件）按照实例名,实例Id,可用区,私有网络id,子网id 过滤，支持模糊查询</p>
     */
     @SerializedName("SearchWord")
     @Expose
     private String SearchWord;
 
     /**
-    * （过滤条件）实例的状态。0：创建中，1：运行中，2：删除中，不填默认返回全部
+    * <p>（过滤条件）实例的状态，不填默认返回全部</p><p>枚举值：</p><ul><li>-1： 创建失败</li><li>0： 创建中</li><li>1： 运行中</li><li>2： 删除中</li><li>3： 已删除</li><li>4： 删除失败</li><li>5： 隔离中</li><li>7： 升级中</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private Long [] Status;
 
     /**
-    * 偏移量，不填默认为0。
+    * <p>偏移量，不填默认为0。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数量，不填则默认10，最大值20。
+    * <p>返回数量，不填则默认10，最大值20。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 匹配标签key值。
+    * <p>匹配标签key值。</p>
     */
     @SerializedName("TagKey")
     @Expose
     private String TagKey;
 
     /**
-    * 过滤器。filter.Name 支持('Ip', 'VpcId', 'SubNetId', 'InstanceType','InstanceId') ,filter.Values最多传递10个值.
+    * <p>过滤器。filter.Name 支持(&#39;Ip&#39;, &#39;VpcId&#39;, &#39;SubNetId&#39;, &#39;InstanceType&#39;,&#39;InstanceId&#39;) ,filter.Values最多传递10个值.</p>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 已经废弃， 使用InstanceIdList
+    * <p>已经废弃， 使用InstanceIdList</p>
     */
     @SerializedName("InstanceIds")
     @Expose
     private String InstanceIds;
 
     /**
-    * 按照实例ID过滤
+    * <p>按照实例ID过滤</p>
     */
     @SerializedName("InstanceIdList")
     @Expose
     private String [] InstanceIdList;
 
     /**
-    * 根据标签列表过滤实例（取交集）
+    * <p>根据标签列表过滤实例（取交集）</p>
     */
     @SerializedName("TagList")
     @Expose
     private Tag [] TagList;
 
     /**
-     * Get （过滤条件）按照实例ID过滤 
-     * @return InstanceId （过滤条件）按照实例ID过滤
+     * Get <p>（过滤条件）按照实例ID过滤</p> 
+     * @return InstanceId <p>（过滤条件）按照实例ID过滤</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set （过滤条件）按照实例ID过滤
-     * @param InstanceId （过滤条件）按照实例ID过滤
+     * Set <p>（过滤条件）按照实例ID过滤</p>
+     * @param InstanceId <p>（过滤条件）按照实例ID过滤</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get （过滤条件）按照实例名,实例Id,可用区,私有网络id,子网id 过滤，支持模糊查询 
-     * @return SearchWord （过滤条件）按照实例名,实例Id,可用区,私有网络id,子网id 过滤，支持模糊查询
+     * Get <p>（过滤条件）按照实例名,实例Id,可用区,私有网络id,子网id 过滤，支持模糊查询</p> 
+     * @return SearchWord <p>（过滤条件）按照实例名,实例Id,可用区,私有网络id,子网id 过滤，支持模糊查询</p>
      */
     public String getSearchWord() {
         return this.SearchWord;
     }
 
     /**
-     * Set （过滤条件）按照实例名,实例Id,可用区,私有网络id,子网id 过滤，支持模糊查询
-     * @param SearchWord （过滤条件）按照实例名,实例Id,可用区,私有网络id,子网id 过滤，支持模糊查询
+     * Set <p>（过滤条件）按照实例名,实例Id,可用区,私有网络id,子网id 过滤，支持模糊查询</p>
+     * @param SearchWord <p>（过滤条件）按照实例名,实例Id,可用区,私有网络id,子网id 过滤，支持模糊查询</p>
      */
     public void setSearchWord(String SearchWord) {
         this.SearchWord = SearchWord;
     }
 
     /**
-     * Get （过滤条件）实例的状态。0：创建中，1：运行中，2：删除中，不填默认返回全部 
-     * @return Status （过滤条件）实例的状态。0：创建中，1：运行中，2：删除中，不填默认返回全部
+     * Get <p>（过滤条件）实例的状态，不填默认返回全部</p><p>枚举值：</p><ul><li>-1： 创建失败</li><li>0： 创建中</li><li>1： 运行中</li><li>2： 删除中</li><li>3： 已删除</li><li>4： 删除失败</li><li>5： 隔离中</li><li>7： 升级中</li></ul> 
+     * @return Status <p>（过滤条件）实例的状态，不填默认返回全部</p><p>枚举值：</p><ul><li>-1： 创建失败</li><li>0： 创建中</li><li>1： 运行中</li><li>2： 删除中</li><li>3： 已删除</li><li>4： 删除失败</li><li>5： 隔离中</li><li>7： 升级中</li></ul>
      */
     public Long [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set （过滤条件）实例的状态。0：创建中，1：运行中，2：删除中，不填默认返回全部
-     * @param Status （过滤条件）实例的状态。0：创建中，1：运行中，2：删除中，不填默认返回全部
+     * Set <p>（过滤条件）实例的状态，不填默认返回全部</p><p>枚举值：</p><ul><li>-1： 创建失败</li><li>0： 创建中</li><li>1： 运行中</li><li>2： 删除中</li><li>3： 已删除</li><li>4： 删除失败</li><li>5： 隔离中</li><li>7： 升级中</li></ul>
+     * @param Status <p>（过滤条件）实例的状态，不填默认返回全部</p><p>枚举值：</p><ul><li>-1： 创建失败</li><li>0： 创建中</li><li>1： 运行中</li><li>2： 删除中</li><li>3： 已删除</li><li>4： 删除失败</li><li>5： 隔离中</li><li>7： 升级中</li></ul>
      */
     public void setStatus(Long [] Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 偏移量，不填默认为0。 
-     * @return Offset 偏移量，不填默认为0。
+     * Get <p>偏移量，不填默认为0。</p> 
+     * @return Offset <p>偏移量，不填默认为0。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，不填默认为0。
-     * @param Offset 偏移量，不填默认为0。
+     * Set <p>偏移量，不填默认为0。</p>
+     * @param Offset <p>偏移量，不填默认为0。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量，不填则默认10，最大值20。 
-     * @return Limit 返回数量，不填则默认10，最大值20。
+     * Get <p>返回数量，不填则默认10，最大值20。</p> 
+     * @return Limit <p>返回数量，不填则默认10，最大值20。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，不填则默认10，最大值20。
-     * @param Limit 返回数量，不填则默认10，最大值20。
+     * Set <p>返回数量，不填则默认10，最大值20。</p>
+     * @param Limit <p>返回数量，不填则默认10，最大值20。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 匹配标签key值。 
-     * @return TagKey 匹配标签key值。
+     * Get <p>匹配标签key值。</p> 
+     * @return TagKey <p>匹配标签key值。</p>
      */
     public String getTagKey() {
         return this.TagKey;
     }
 
     /**
-     * Set 匹配标签key值。
-     * @param TagKey 匹配标签key值。
+     * Set <p>匹配标签key值。</p>
+     * @param TagKey <p>匹配标签key值。</p>
      */
     public void setTagKey(String TagKey) {
         this.TagKey = TagKey;
     }
 
     /**
-     * Get 过滤器。filter.Name 支持('Ip', 'VpcId', 'SubNetId', 'InstanceType','InstanceId') ,filter.Values最多传递10个值. 
-     * @return Filters 过滤器。filter.Name 支持('Ip', 'VpcId', 'SubNetId', 'InstanceType','InstanceId') ,filter.Values最多传递10个值.
+     * Get <p>过滤器。filter.Name 支持(&#39;Ip&#39;, &#39;VpcId&#39;, &#39;SubNetId&#39;, &#39;InstanceType&#39;,&#39;InstanceId&#39;) ,filter.Values最多传递10个值.</p> 
+     * @return Filters <p>过滤器。filter.Name 支持(&#39;Ip&#39;, &#39;VpcId&#39;, &#39;SubNetId&#39;, &#39;InstanceType&#39;,&#39;InstanceId&#39;) ,filter.Values最多传递10个值.</p>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤器。filter.Name 支持('Ip', 'VpcId', 'SubNetId', 'InstanceType','InstanceId') ,filter.Values最多传递10个值.
-     * @param Filters 过滤器。filter.Name 支持('Ip', 'VpcId', 'SubNetId', 'InstanceType','InstanceId') ,filter.Values最多传递10个值.
+     * Set <p>过滤器。filter.Name 支持(&#39;Ip&#39;, &#39;VpcId&#39;, &#39;SubNetId&#39;, &#39;InstanceType&#39;,&#39;InstanceId&#39;) ,filter.Values最多传递10个值.</p>
+     * @param Filters <p>过滤器。filter.Name 支持(&#39;Ip&#39;, &#39;VpcId&#39;, &#39;SubNetId&#39;, &#39;InstanceType&#39;,&#39;InstanceId&#39;) ,filter.Values最多传递10个值.</p>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 已经废弃， 使用InstanceIdList 
-     * @return InstanceIds 已经废弃， 使用InstanceIdList
+     * Get <p>已经废弃， 使用InstanceIdList</p> 
+     * @return InstanceIds <p>已经废弃， 使用InstanceIdList</p>
      * @deprecated
      */
     @Deprecated
@@ -216,8 +216,8 @@ public class DescribeInstancesDetailRequest extends AbstractModel {
     }
 
     /**
-     * Set 已经废弃， 使用InstanceIdList
-     * @param InstanceIds 已经废弃， 使用InstanceIdList
+     * Set <p>已经废弃， 使用InstanceIdList</p>
+     * @param InstanceIds <p>已经废弃， 使用InstanceIdList</p>
      * @deprecated
      */
     @Deprecated
@@ -226,32 +226,32 @@ public class DescribeInstancesDetailRequest extends AbstractModel {
     }
 
     /**
-     * Get 按照实例ID过滤 
-     * @return InstanceIdList 按照实例ID过滤
+     * Get <p>按照实例ID过滤</p> 
+     * @return InstanceIdList <p>按照实例ID过滤</p>
      */
     public String [] getInstanceIdList() {
         return this.InstanceIdList;
     }
 
     /**
-     * Set 按照实例ID过滤
-     * @param InstanceIdList 按照实例ID过滤
+     * Set <p>按照实例ID过滤</p>
+     * @param InstanceIdList <p>按照实例ID过滤</p>
      */
     public void setInstanceIdList(String [] InstanceIdList) {
         this.InstanceIdList = InstanceIdList;
     }
 
     /**
-     * Get 根据标签列表过滤实例（取交集） 
-     * @return TagList 根据标签列表过滤实例（取交集）
+     * Get <p>根据标签列表过滤实例（取交集）</p> 
+     * @return TagList <p>根据标签列表过滤实例（取交集）</p>
      */
     public Tag [] getTagList() {
         return this.TagList;
     }
 
     /**
-     * Set 根据标签列表过滤实例（取交集）
-     * @param TagList 根据标签列表过滤实例（取交集）
+     * Set <p>根据标签列表过滤实例（取交集）</p>
+     * @param TagList <p>根据标签列表过滤实例（取交集）</p>
      */
     public void setTagList(Tag [] TagList) {
         this.TagList = TagList;

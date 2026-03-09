@@ -24,141 +24,164 @@ import java.util.HashMap;
 public class InstanceVersion extends AbstractModel {
 
     /**
-    * ckafka集群实例版本
+    * <p>ckafka集群实例版本</p>
     */
     @SerializedName("KafkaVersion")
     @Expose
     private String KafkaVersion;
 
     /**
-    * broker版本信息
+    * <p>broker版本信息</p>
     */
     @SerializedName("CurBrokerVersion")
     @Expose
     private String CurBrokerVersion;
 
     /**
-    * 最新版本信息
+    * <p>最新版本信息</p>
     */
     @SerializedName("LatestBrokerVersion")
     @Expose
     private LatestBrokerVersion [] LatestBrokerVersion;
 
     /**
-    * 允许跨大版本内核升级
+    * <p>允许跨大版本内核升级</p>
     */
     @SerializedName("AllowUpgradeHighVersion")
     @Expose
     private Boolean AllowUpgradeHighVersion;
 
     /**
-    * 允许升级的大版本
+    * <p>允许升级的大版本</p>
     */
     @SerializedName("HighVersionSet")
     @Expose
     private String [] HighVersionSet;
 
     /**
-    * 允许小版本号配置自动删除消费者组
+    * <p>允许小版本号配置自动删除消费者组</p>
     */
     @SerializedName("AllowAutoDeleteTimestamp")
     @Expose
     private Boolean AllowAutoDeleteTimestamp;
 
     /**
-     * Get ckafka集群实例版本 
-     * @return KafkaVersion ckafka集群实例版本
+    * <p>允许修改事务ID过期时间配置</p>
+    */
+    @SerializedName("AllowModifyTxnIdExpiration")
+    @Expose
+    private Boolean AllowModifyTxnIdExpiration;
+
+    /**
+     * Get <p>ckafka集群实例版本</p> 
+     * @return KafkaVersion <p>ckafka集群实例版本</p>
      */
     public String getKafkaVersion() {
         return this.KafkaVersion;
     }
 
     /**
-     * Set ckafka集群实例版本
-     * @param KafkaVersion ckafka集群实例版本
+     * Set <p>ckafka集群实例版本</p>
+     * @param KafkaVersion <p>ckafka集群实例版本</p>
      */
     public void setKafkaVersion(String KafkaVersion) {
         this.KafkaVersion = KafkaVersion;
     }
 
     /**
-     * Get broker版本信息 
-     * @return CurBrokerVersion broker版本信息
+     * Get <p>broker版本信息</p> 
+     * @return CurBrokerVersion <p>broker版本信息</p>
      */
     public String getCurBrokerVersion() {
         return this.CurBrokerVersion;
     }
 
     /**
-     * Set broker版本信息
-     * @param CurBrokerVersion broker版本信息
+     * Set <p>broker版本信息</p>
+     * @param CurBrokerVersion <p>broker版本信息</p>
      */
     public void setCurBrokerVersion(String CurBrokerVersion) {
         this.CurBrokerVersion = CurBrokerVersion;
     }
 
     /**
-     * Get 最新版本信息 
-     * @return LatestBrokerVersion 最新版本信息
+     * Get <p>最新版本信息</p> 
+     * @return LatestBrokerVersion <p>最新版本信息</p>
      */
     public LatestBrokerVersion [] getLatestBrokerVersion() {
         return this.LatestBrokerVersion;
     }
 
     /**
-     * Set 最新版本信息
-     * @param LatestBrokerVersion 最新版本信息
+     * Set <p>最新版本信息</p>
+     * @param LatestBrokerVersion <p>最新版本信息</p>
      */
     public void setLatestBrokerVersion(LatestBrokerVersion [] LatestBrokerVersion) {
         this.LatestBrokerVersion = LatestBrokerVersion;
     }
 
     /**
-     * Get 允许跨大版本内核升级 
-     * @return AllowUpgradeHighVersion 允许跨大版本内核升级
+     * Get <p>允许跨大版本内核升级</p> 
+     * @return AllowUpgradeHighVersion <p>允许跨大版本内核升级</p>
      */
     public Boolean getAllowUpgradeHighVersion() {
         return this.AllowUpgradeHighVersion;
     }
 
     /**
-     * Set 允许跨大版本内核升级
-     * @param AllowUpgradeHighVersion 允许跨大版本内核升级
+     * Set <p>允许跨大版本内核升级</p>
+     * @param AllowUpgradeHighVersion <p>允许跨大版本内核升级</p>
      */
     public void setAllowUpgradeHighVersion(Boolean AllowUpgradeHighVersion) {
         this.AllowUpgradeHighVersion = AllowUpgradeHighVersion;
     }
 
     /**
-     * Get 允许升级的大版本 
-     * @return HighVersionSet 允许升级的大版本
+     * Get <p>允许升级的大版本</p> 
+     * @return HighVersionSet <p>允许升级的大版本</p>
      */
     public String [] getHighVersionSet() {
         return this.HighVersionSet;
     }
 
     /**
-     * Set 允许升级的大版本
-     * @param HighVersionSet 允许升级的大版本
+     * Set <p>允许升级的大版本</p>
+     * @param HighVersionSet <p>允许升级的大版本</p>
      */
     public void setHighVersionSet(String [] HighVersionSet) {
         this.HighVersionSet = HighVersionSet;
     }
 
     /**
-     * Get 允许小版本号配置自动删除消费者组 
-     * @return AllowAutoDeleteTimestamp 允许小版本号配置自动删除消费者组
+     * Get <p>允许小版本号配置自动删除消费者组</p> 
+     * @return AllowAutoDeleteTimestamp <p>允许小版本号配置自动删除消费者组</p>
      */
     public Boolean getAllowAutoDeleteTimestamp() {
         return this.AllowAutoDeleteTimestamp;
     }
 
     /**
-     * Set 允许小版本号配置自动删除消费者组
-     * @param AllowAutoDeleteTimestamp 允许小版本号配置自动删除消费者组
+     * Set <p>允许小版本号配置自动删除消费者组</p>
+     * @param AllowAutoDeleteTimestamp <p>允许小版本号配置自动删除消费者组</p>
      */
     public void setAllowAutoDeleteTimestamp(Boolean AllowAutoDeleteTimestamp) {
         this.AllowAutoDeleteTimestamp = AllowAutoDeleteTimestamp;
+    }
+
+    /**
+     * Get <p>允许修改事务ID过期时间配置</p> 
+     * @return AllowModifyTxnIdExpiration <p>允许修改事务ID过期时间配置</p>
+     */
+    public Boolean getAllowModifyTxnIdExpiration() {
+        return this.AllowModifyTxnIdExpiration;
+    }
+
+    /**
+     * Set <p>允许修改事务ID过期时间配置</p>
+     * @param AllowModifyTxnIdExpiration <p>允许修改事务ID过期时间配置</p>
+     */
+    public void setAllowModifyTxnIdExpiration(Boolean AllowModifyTxnIdExpiration) {
+        this.AllowModifyTxnIdExpiration = AllowModifyTxnIdExpiration;
     }
 
     public InstanceVersion() {
@@ -193,6 +216,9 @@ public class InstanceVersion extends AbstractModel {
         if (source.AllowAutoDeleteTimestamp != null) {
             this.AllowAutoDeleteTimestamp = new Boolean(source.AllowAutoDeleteTimestamp);
         }
+        if (source.AllowModifyTxnIdExpiration != null) {
+            this.AllowModifyTxnIdExpiration = new Boolean(source.AllowModifyTxnIdExpiration);
+        }
     }
 
 
@@ -206,6 +232,7 @@ public class InstanceVersion extends AbstractModel {
         this.setParamSimple(map, prefix + "AllowUpgradeHighVersion", this.AllowUpgradeHighVersion);
         this.setParamArraySimple(map, prefix + "HighVersionSet.", this.HighVersionSet);
         this.setParamSimple(map, prefix + "AllowAutoDeleteTimestamp", this.AllowAutoDeleteTimestamp);
+        this.setParamSimple(map, prefix + "AllowModifyTxnIdExpiration", this.AllowModifyTxnIdExpiration);
 
     }
 }

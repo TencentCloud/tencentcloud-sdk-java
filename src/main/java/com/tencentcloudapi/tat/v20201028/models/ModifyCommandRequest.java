@@ -24,341 +24,276 @@ import java.util.HashMap;
 public class ModifyCommandRequest extends AbstractModel {
 
     /**
-    * 命令ID。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
+    * <p>命令ID。可通过 <a href="https://cloud.tencent.com/document/api/1340/52681">DescribeCommands(查询命令详情)</a> 接口获取。</p>
     */
     @SerializedName("CommandId")
     @Expose
     private String CommandId;
 
     /**
-    * 命令名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。
+    * <p>命令名称。名称仅支持中文、英文、数字、下划线、分隔符&quot;-&quot;、小数点，最大长度不能超60个字节。</p>
     */
     @SerializedName("CommandName")
     @Expose
     private String CommandName;
 
     /**
-    * 命令描述。不超过120字符。
+    * <p>命令描述。不超过120字符。</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Base64编码后的命令内容，长度不可超过64KB。
+    * <p>Base64编码后的命令内容，长度不可超过64KB。</p>
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-    * 命令类型，目前支持取值：SHELL、POWERSHELL、BAT。
+    * <p>命令类型，目前支持取值：SHELL、POWERSHELL、BAT。</p>
     */
     @SerializedName("CommandType")
     @Expose
     private String CommandType;
 
     /**
-    * 命令执行路径。
+    * <p>命令执行路径。</p>
     */
     @SerializedName("WorkingDirectory")
     @Expose
     private String WorkingDirectory;
 
     /**
-    * 命令超时时间。取值范围[1, 86400]。
+    * <p>命令超时时间。</p><p>取值范围：[1, 86400]</p><p>单位：秒</p><p>默认值：60</p><p>指定 OutputCOSBucketUrl 参数时，超时时间将包含命令输出上传 COS 的耗时</p>
     */
     @SerializedName("Timeout")
     @Expose
     private Long Timeout;
 
     /**
-    * 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{"varA": "222"}。
-参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
-采取整体全覆盖式修改，即修改时必须提供所有新默认值。
-仅在命令的 EnableParameter 为 true 时，才允许修改此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
-key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
-自定义参数最多20个。
-自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
+    * <p>启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{&quot;varA&quot;: &quot;222&quot;}。<br>参数不支持同时指定 <code>DefaultParameters</code> 和 <code>DefaultParameterConfs</code> 。<br>采取整体全覆盖式修改，即修改时必须提供所有新默认值。<br>仅在命令的 EnableParameter 为 true 时，才允许修改此参数。可通过 <a href="https://cloud.tencent.com/document/api/1340/52681">DescribeCommands(查询命令详情)</a> 接口获取命令的 EnableParameter 设置。<br>key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。<br>自定义参数最多20个。<br>自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。</p>
     */
     @SerializedName("DefaultParameters")
     @Expose
     private String DefaultParameters;
 
     /**
-    * 自定义参数数组。如果 InvokeCommand 时未提供参数取值，将使用这里的默认值进行替换。
-参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
-仅在命令的 EnableParameter 为 true 时，才允许修改此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
-自定义参数最多20个。
+    * <p>自定义参数数组。如果 InvokeCommand 时未提供参数取值，将使用这里的默认值进行替换。<br>参数不支持同时指定 <code>DefaultParameters</code> 和 <code>DefaultParameterConfs</code> 。<br>仅在命令的 EnableParameter 为 true 时，才允许修改此参数。可通过 <a href="https://cloud.tencent.com/document/api/1340/52681">DescribeCommands(查询命令详情)</a> 接口获取命令的 EnableParameter 设置。<br>自定义参数最多20个。</p>
     */
     @SerializedName("DefaultParameterConfs")
     @Expose
     private DefaultParameterConf [] DefaultParameterConfs;
 
     /**
-    * 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
-使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。
+    * <p>在 CVM 或 Lighthouse 实例中执行命令的用户名称。<br>使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。</p>
     */
     @SerializedName("Username")
     @Expose
     private String Username;
 
     /**
-    * 指定日志上传的cos bucket 地址，必须以https开头，如 https://BucketName-123454321.cos.ap-beijing.myqcloud.com。
+    * <p>指定日志上传的cos bucket 地址，必须以https开头，如 https://BucketName-123454321.cos.ap-beijing.myqcloud.com。</p>
     */
     @SerializedName("OutputCOSBucketUrl")
     @Expose
     private String OutputCOSBucketUrl;
 
     /**
-    * 指定日志在cos bucket中的目录，目录命名有如下规则：
-1. 可用数字、中英文和可见字符的组合，长度最多为60。
-2. 用 / 分割路径，可快速创建子目录。
-3. 不允许连续 / ；不允许以 / 开头；不允许以..作为文件夹名称。
+    * <p>指定日志在cos bucket中的目录，目录命名有如下规则：</p><ol><li>可用数字、中英文和可见字符的组合，长度最多为60。</li><li>用 / 分割路径，可快速创建子目录。</li><li>不允许连续 / ；不允许以 / 开头；不允许以..作为文件夹名称。</li></ol>
     */
     @SerializedName("OutputCOSKeyPrefix")
     @Expose
     private String OutputCOSKeyPrefix;
 
     /**
-     * Get 命令ID。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。 
-     * @return CommandId 命令ID。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
+     * Get <p>命令ID。可通过 <a href="https://cloud.tencent.com/document/api/1340/52681">DescribeCommands(查询命令详情)</a> 接口获取。</p> 
+     * @return CommandId <p>命令ID。可通过 <a href="https://cloud.tencent.com/document/api/1340/52681">DescribeCommands(查询命令详情)</a> 接口获取。</p>
      */
     public String getCommandId() {
         return this.CommandId;
     }
 
     /**
-     * Set 命令ID。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
-     * @param CommandId 命令ID。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
+     * Set <p>命令ID。可通过 <a href="https://cloud.tencent.com/document/api/1340/52681">DescribeCommands(查询命令详情)</a> 接口获取。</p>
+     * @param CommandId <p>命令ID。可通过 <a href="https://cloud.tencent.com/document/api/1340/52681">DescribeCommands(查询命令详情)</a> 接口获取。</p>
      */
     public void setCommandId(String CommandId) {
         this.CommandId = CommandId;
     }
 
     /**
-     * Get 命令名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。 
-     * @return CommandName 命令名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。
+     * Get <p>命令名称。名称仅支持中文、英文、数字、下划线、分隔符&quot;-&quot;、小数点，最大长度不能超60个字节。</p> 
+     * @return CommandName <p>命令名称。名称仅支持中文、英文、数字、下划线、分隔符&quot;-&quot;、小数点，最大长度不能超60个字节。</p>
      */
     public String getCommandName() {
         return this.CommandName;
     }
 
     /**
-     * Set 命令名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。
-     * @param CommandName 命令名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。
+     * Set <p>命令名称。名称仅支持中文、英文、数字、下划线、分隔符&quot;-&quot;、小数点，最大长度不能超60个字节。</p>
+     * @param CommandName <p>命令名称。名称仅支持中文、英文、数字、下划线、分隔符&quot;-&quot;、小数点，最大长度不能超60个字节。</p>
      */
     public void setCommandName(String CommandName) {
         this.CommandName = CommandName;
     }
 
     /**
-     * Get 命令描述。不超过120字符。 
-     * @return Description 命令描述。不超过120字符。
+     * Get <p>命令描述。不超过120字符。</p> 
+     * @return Description <p>命令描述。不超过120字符。</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 命令描述。不超过120字符。
-     * @param Description 命令描述。不超过120字符。
+     * Set <p>命令描述。不超过120字符。</p>
+     * @param Description <p>命令描述。不超过120字符。</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Base64编码后的命令内容，长度不可超过64KB。 
-     * @return Content Base64编码后的命令内容，长度不可超过64KB。
+     * Get <p>Base64编码后的命令内容，长度不可超过64KB。</p> 
+     * @return Content <p>Base64编码后的命令内容，长度不可超过64KB。</p>
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set Base64编码后的命令内容，长度不可超过64KB。
-     * @param Content Base64编码后的命令内容，长度不可超过64KB。
+     * Set <p>Base64编码后的命令内容，长度不可超过64KB。</p>
+     * @param Content <p>Base64编码后的命令内容，长度不可超过64KB。</p>
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get 命令类型，目前支持取值：SHELL、POWERSHELL、BAT。 
-     * @return CommandType 命令类型，目前支持取值：SHELL、POWERSHELL、BAT。
+     * Get <p>命令类型，目前支持取值：SHELL、POWERSHELL、BAT。</p> 
+     * @return CommandType <p>命令类型，目前支持取值：SHELL、POWERSHELL、BAT。</p>
      */
     public String getCommandType() {
         return this.CommandType;
     }
 
     /**
-     * Set 命令类型，目前支持取值：SHELL、POWERSHELL、BAT。
-     * @param CommandType 命令类型，目前支持取值：SHELL、POWERSHELL、BAT。
+     * Set <p>命令类型，目前支持取值：SHELL、POWERSHELL、BAT。</p>
+     * @param CommandType <p>命令类型，目前支持取值：SHELL、POWERSHELL、BAT。</p>
      */
     public void setCommandType(String CommandType) {
         this.CommandType = CommandType;
     }
 
     /**
-     * Get 命令执行路径。 
-     * @return WorkingDirectory 命令执行路径。
+     * Get <p>命令执行路径。</p> 
+     * @return WorkingDirectory <p>命令执行路径。</p>
      */
     public String getWorkingDirectory() {
         return this.WorkingDirectory;
     }
 
     /**
-     * Set 命令执行路径。
-     * @param WorkingDirectory 命令执行路径。
+     * Set <p>命令执行路径。</p>
+     * @param WorkingDirectory <p>命令执行路径。</p>
      */
     public void setWorkingDirectory(String WorkingDirectory) {
         this.WorkingDirectory = WorkingDirectory;
     }
 
     /**
-     * Get 命令超时时间。取值范围[1, 86400]。 
-     * @return Timeout 命令超时时间。取值范围[1, 86400]。
+     * Get <p>命令超时时间。</p><p>取值范围：[1, 86400]</p><p>单位：秒</p><p>默认值：60</p><p>指定 OutputCOSBucketUrl 参数时，超时时间将包含命令输出上传 COS 的耗时</p> 
+     * @return Timeout <p>命令超时时间。</p><p>取值范围：[1, 86400]</p><p>单位：秒</p><p>默认值：60</p><p>指定 OutputCOSBucketUrl 参数时，超时时间将包含命令输出上传 COS 的耗时</p>
      */
     public Long getTimeout() {
         return this.Timeout;
     }
 
     /**
-     * Set 命令超时时间。取值范围[1, 86400]。
-     * @param Timeout 命令超时时间。取值范围[1, 86400]。
+     * Set <p>命令超时时间。</p><p>取值范围：[1, 86400]</p><p>单位：秒</p><p>默认值：60</p><p>指定 OutputCOSBucketUrl 参数时，超时时间将包含命令输出上传 COS 的耗时</p>
+     * @param Timeout <p>命令超时时间。</p><p>取值范围：[1, 86400]</p><p>单位：秒</p><p>默认值：60</p><p>指定 OutputCOSBucketUrl 参数时，超时时间将包含命令输出上传 COS 的耗时</p>
      */
     public void setTimeout(Long Timeout) {
         this.Timeout = Timeout;
     }
 
     /**
-     * Get 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{"varA": "222"}。
-参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
-采取整体全覆盖式修改，即修改时必须提供所有新默认值。
-仅在命令的 EnableParameter 为 true 时，才允许修改此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
-key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
-自定义参数最多20个。
-自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。 
-     * @return DefaultParameters 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{"varA": "222"}。
-参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
-采取整体全覆盖式修改，即修改时必须提供所有新默认值。
-仅在命令的 EnableParameter 为 true 时，才允许修改此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
-key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
-自定义参数最多20个。
-自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
+     * Get <p>启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{&quot;varA&quot;: &quot;222&quot;}。<br>参数不支持同时指定 <code>DefaultParameters</code> 和 <code>DefaultParameterConfs</code> 。<br>采取整体全覆盖式修改，即修改时必须提供所有新默认值。<br>仅在命令的 EnableParameter 为 true 时，才允许修改此参数。可通过 <a href="https://cloud.tencent.com/document/api/1340/52681">DescribeCommands(查询命令详情)</a> 接口获取命令的 EnableParameter 设置。<br>key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。<br>自定义参数最多20个。<br>自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。</p> 
+     * @return DefaultParameters <p>启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{&quot;varA&quot;: &quot;222&quot;}。<br>参数不支持同时指定 <code>DefaultParameters</code> 和 <code>DefaultParameterConfs</code> 。<br>采取整体全覆盖式修改，即修改时必须提供所有新默认值。<br>仅在命令的 EnableParameter 为 true 时，才允许修改此参数。可通过 <a href="https://cloud.tencent.com/document/api/1340/52681">DescribeCommands(查询命令详情)</a> 接口获取命令的 EnableParameter 设置。<br>key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。<br>自定义参数最多20个。<br>自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。</p>
      */
     public String getDefaultParameters() {
         return this.DefaultParameters;
     }
 
     /**
-     * Set 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{"varA": "222"}。
-参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
-采取整体全覆盖式修改，即修改时必须提供所有新默认值。
-仅在命令的 EnableParameter 为 true 时，才允许修改此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
-key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
-自定义参数最多20个。
-自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
-     * @param DefaultParameters 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{"varA": "222"}。
-参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
-采取整体全覆盖式修改，即修改时必须提供所有新默认值。
-仅在命令的 EnableParameter 为 true 时，才允许修改此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
-key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
-自定义参数最多20个。
-自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
+     * Set <p>启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{&quot;varA&quot;: &quot;222&quot;}。<br>参数不支持同时指定 <code>DefaultParameters</code> 和 <code>DefaultParameterConfs</code> 。<br>采取整体全覆盖式修改，即修改时必须提供所有新默认值。<br>仅在命令的 EnableParameter 为 true 时，才允许修改此参数。可通过 <a href="https://cloud.tencent.com/document/api/1340/52681">DescribeCommands(查询命令详情)</a> 接口获取命令的 EnableParameter 设置。<br>key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。<br>自定义参数最多20个。<br>自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。</p>
+     * @param DefaultParameters <p>启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{&quot;varA&quot;: &quot;222&quot;}。<br>参数不支持同时指定 <code>DefaultParameters</code> 和 <code>DefaultParameterConfs</code> 。<br>采取整体全覆盖式修改，即修改时必须提供所有新默认值。<br>仅在命令的 EnableParameter 为 true 时，才允许修改此参数。可通过 <a href="https://cloud.tencent.com/document/api/1340/52681">DescribeCommands(查询命令详情)</a> 接口获取命令的 EnableParameter 设置。<br>key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。<br>自定义参数最多20个。<br>自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。</p>
      */
     public void setDefaultParameters(String DefaultParameters) {
         this.DefaultParameters = DefaultParameters;
     }
 
     /**
-     * Get 自定义参数数组。如果 InvokeCommand 时未提供参数取值，将使用这里的默认值进行替换。
-参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
-仅在命令的 EnableParameter 为 true 时，才允许修改此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
-自定义参数最多20个。 
-     * @return DefaultParameterConfs 自定义参数数组。如果 InvokeCommand 时未提供参数取值，将使用这里的默认值进行替换。
-参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
-仅在命令的 EnableParameter 为 true 时，才允许修改此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
-自定义参数最多20个。
+     * Get <p>自定义参数数组。如果 InvokeCommand 时未提供参数取值，将使用这里的默认值进行替换。<br>参数不支持同时指定 <code>DefaultParameters</code> 和 <code>DefaultParameterConfs</code> 。<br>仅在命令的 EnableParameter 为 true 时，才允许修改此参数。可通过 <a href="https://cloud.tencent.com/document/api/1340/52681">DescribeCommands(查询命令详情)</a> 接口获取命令的 EnableParameter 设置。<br>自定义参数最多20个。</p> 
+     * @return DefaultParameterConfs <p>自定义参数数组。如果 InvokeCommand 时未提供参数取值，将使用这里的默认值进行替换。<br>参数不支持同时指定 <code>DefaultParameters</code> 和 <code>DefaultParameterConfs</code> 。<br>仅在命令的 EnableParameter 为 true 时，才允许修改此参数。可通过 <a href="https://cloud.tencent.com/document/api/1340/52681">DescribeCommands(查询命令详情)</a> 接口获取命令的 EnableParameter 设置。<br>自定义参数最多20个。</p>
      */
     public DefaultParameterConf [] getDefaultParameterConfs() {
         return this.DefaultParameterConfs;
     }
 
     /**
-     * Set 自定义参数数组。如果 InvokeCommand 时未提供参数取值，将使用这里的默认值进行替换。
-参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
-仅在命令的 EnableParameter 为 true 时，才允许修改此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
-自定义参数最多20个。
-     * @param DefaultParameterConfs 自定义参数数组。如果 InvokeCommand 时未提供参数取值，将使用这里的默认值进行替换。
-参数不支持同时指定 `DefaultParameters` 和 `DefaultParameterConfs` 。
-仅在命令的 EnableParameter 为 true 时，才允许修改此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
-自定义参数最多20个。
+     * Set <p>自定义参数数组。如果 InvokeCommand 时未提供参数取值，将使用这里的默认值进行替换。<br>参数不支持同时指定 <code>DefaultParameters</code> 和 <code>DefaultParameterConfs</code> 。<br>仅在命令的 EnableParameter 为 true 时，才允许修改此参数。可通过 <a href="https://cloud.tencent.com/document/api/1340/52681">DescribeCommands(查询命令详情)</a> 接口获取命令的 EnableParameter 设置。<br>自定义参数最多20个。</p>
+     * @param DefaultParameterConfs <p>自定义参数数组。如果 InvokeCommand 时未提供参数取值，将使用这里的默认值进行替换。<br>参数不支持同时指定 <code>DefaultParameters</code> 和 <code>DefaultParameterConfs</code> 。<br>仅在命令的 EnableParameter 为 true 时，才允许修改此参数。可通过 <a href="https://cloud.tencent.com/document/api/1340/52681">DescribeCommands(查询命令详情)</a> 接口获取命令的 EnableParameter 设置。<br>自定义参数最多20个。</p>
      */
     public void setDefaultParameterConfs(DefaultParameterConf [] DefaultParameterConfs) {
         this.DefaultParameterConfs = DefaultParameterConfs;
     }
 
     /**
-     * Get 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
-使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。 
-     * @return Username 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
-使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。
+     * Get <p>在 CVM 或 Lighthouse 实例中执行命令的用户名称。<br>使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。</p> 
+     * @return Username <p>在 CVM 或 Lighthouse 实例中执行命令的用户名称。<br>使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。</p>
      */
     public String getUsername() {
         return this.Username;
     }
 
     /**
-     * Set 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
-使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。
-     * @param Username 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
-使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。
+     * Set <p>在 CVM 或 Lighthouse 实例中执行命令的用户名称。<br>使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。</p>
+     * @param Username <p>在 CVM 或 Lighthouse 实例中执行命令的用户名称。<br>使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。</p>
      */
     public void setUsername(String Username) {
         this.Username = Username;
     }
 
     /**
-     * Get 指定日志上传的cos bucket 地址，必须以https开头，如 https://BucketName-123454321.cos.ap-beijing.myqcloud.com。 
-     * @return OutputCOSBucketUrl 指定日志上传的cos bucket 地址，必须以https开头，如 https://BucketName-123454321.cos.ap-beijing.myqcloud.com。
+     * Get <p>指定日志上传的cos bucket 地址，必须以https开头，如 https://BucketName-123454321.cos.ap-beijing.myqcloud.com。</p> 
+     * @return OutputCOSBucketUrl <p>指定日志上传的cos bucket 地址，必须以https开头，如 https://BucketName-123454321.cos.ap-beijing.myqcloud.com。</p>
      */
     public String getOutputCOSBucketUrl() {
         return this.OutputCOSBucketUrl;
     }
 
     /**
-     * Set 指定日志上传的cos bucket 地址，必须以https开头，如 https://BucketName-123454321.cos.ap-beijing.myqcloud.com。
-     * @param OutputCOSBucketUrl 指定日志上传的cos bucket 地址，必须以https开头，如 https://BucketName-123454321.cos.ap-beijing.myqcloud.com。
+     * Set <p>指定日志上传的cos bucket 地址，必须以https开头，如 https://BucketName-123454321.cos.ap-beijing.myqcloud.com。</p>
+     * @param OutputCOSBucketUrl <p>指定日志上传的cos bucket 地址，必须以https开头，如 https://BucketName-123454321.cos.ap-beijing.myqcloud.com。</p>
      */
     public void setOutputCOSBucketUrl(String OutputCOSBucketUrl) {
         this.OutputCOSBucketUrl = OutputCOSBucketUrl;
     }
 
     /**
-     * Get 指定日志在cos bucket中的目录，目录命名有如下规则：
-1. 可用数字、中英文和可见字符的组合，长度最多为60。
-2. 用 / 分割路径，可快速创建子目录。
-3. 不允许连续 / ；不允许以 / 开头；不允许以..作为文件夹名称。 
-     * @return OutputCOSKeyPrefix 指定日志在cos bucket中的目录，目录命名有如下规则：
-1. 可用数字、中英文和可见字符的组合，长度最多为60。
-2. 用 / 分割路径，可快速创建子目录。
-3. 不允许连续 / ；不允许以 / 开头；不允许以..作为文件夹名称。
+     * Get <p>指定日志在cos bucket中的目录，目录命名有如下规则：</p><ol><li>可用数字、中英文和可见字符的组合，长度最多为60。</li><li>用 / 分割路径，可快速创建子目录。</li><li>不允许连续 / ；不允许以 / 开头；不允许以..作为文件夹名称。</li></ol> 
+     * @return OutputCOSKeyPrefix <p>指定日志在cos bucket中的目录，目录命名有如下规则：</p><ol><li>可用数字、中英文和可见字符的组合，长度最多为60。</li><li>用 / 分割路径，可快速创建子目录。</li><li>不允许连续 / ；不允许以 / 开头；不允许以..作为文件夹名称。</li></ol>
      */
     public String getOutputCOSKeyPrefix() {
         return this.OutputCOSKeyPrefix;
     }
 
     /**
-     * Set 指定日志在cos bucket中的目录，目录命名有如下规则：
-1. 可用数字、中英文和可见字符的组合，长度最多为60。
-2. 用 / 分割路径，可快速创建子目录。
-3. 不允许连续 / ；不允许以 / 开头；不允许以..作为文件夹名称。
-     * @param OutputCOSKeyPrefix 指定日志在cos bucket中的目录，目录命名有如下规则：
-1. 可用数字、中英文和可见字符的组合，长度最多为60。
-2. 用 / 分割路径，可快速创建子目录。
-3. 不允许连续 / ；不允许以 / 开头；不允许以..作为文件夹名称。
+     * Set <p>指定日志在cos bucket中的目录，目录命名有如下规则：</p><ol><li>可用数字、中英文和可见字符的组合，长度最多为60。</li><li>用 / 分割路径，可快速创建子目录。</li><li>不允许连续 / ；不允许以 / 开头；不允许以..作为文件夹名称。</li></ol>
+     * @param OutputCOSKeyPrefix <p>指定日志在cos bucket中的目录，目录命名有如下规则：</p><ol><li>可用数字、中英文和可见字符的组合，长度最多为60。</li><li>用 / 分割路径，可快速创建子目录。</li><li>不允许连续 / ；不允许以 / 开头；不允许以..作为文件夹名称。</li></ol>
      */
     public void setOutputCOSKeyPrefix(String OutputCOSKeyPrefix) {
         this.OutputCOSKeyPrefix = OutputCOSKeyPrefix;

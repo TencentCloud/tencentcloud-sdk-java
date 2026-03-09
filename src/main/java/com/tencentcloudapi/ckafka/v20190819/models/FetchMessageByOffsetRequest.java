@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class FetchMessageByOffsetRequest extends AbstractModel {
 
     /**
-    * ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+    * <p>ckafka集群实例Id，可通过<a href="https://cloud.tencent.com/document/product/597/40835">DescribeInstances</a>接口获取</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 主题名，可通过[DescribeTopic](https://cloud.tencent.com/document/product/597/40847)接口获取
+    * <p>主题名，可通过<a href="https://cloud.tencent.com/document/product/597/40847">DescribeTopic</a>接口获取</p>
     */
     @SerializedName("Topic")
     @Expose
     private String Topic;
 
     /**
-    * 分区id
+    * <p>分区id</p>
     */
     @SerializedName("Partition")
     @Expose
     private Long Partition;
 
     /**
-    * 位点信息
+    * <p>位点信息</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取 
-     * @return InstanceId ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+     * Get <p>ckafka集群实例Id，可通过<a href="https://cloud.tencent.com/document/product/597/40835">DescribeInstances</a>接口获取</p> 
+     * @return InstanceId <p>ckafka集群实例Id，可通过<a href="https://cloud.tencent.com/document/product/597/40835">DescribeInstances</a>接口获取</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
-     * @param InstanceId ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+     * Set <p>ckafka集群实例Id，可通过<a href="https://cloud.tencent.com/document/product/597/40835">DescribeInstances</a>接口获取</p>
+     * @param InstanceId <p>ckafka集群实例Id，可通过<a href="https://cloud.tencent.com/document/product/597/40835">DescribeInstances</a>接口获取</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 主题名，可通过[DescribeTopic](https://cloud.tencent.com/document/product/597/40847)接口获取 
-     * @return Topic 主题名，可通过[DescribeTopic](https://cloud.tencent.com/document/product/597/40847)接口获取
+     * Get <p>主题名，可通过<a href="https://cloud.tencent.com/document/product/597/40847">DescribeTopic</a>接口获取</p> 
+     * @return Topic <p>主题名，可通过<a href="https://cloud.tencent.com/document/product/597/40847">DescribeTopic</a>接口获取</p>
      */
     public String getTopic() {
         return this.Topic;
     }
 
     /**
-     * Set 主题名，可通过[DescribeTopic](https://cloud.tencent.com/document/product/597/40847)接口获取
-     * @param Topic 主题名，可通过[DescribeTopic](https://cloud.tencent.com/document/product/597/40847)接口获取
+     * Set <p>主题名，可通过<a href="https://cloud.tencent.com/document/product/597/40847">DescribeTopic</a>接口获取</p>
+     * @param Topic <p>主题名，可通过<a href="https://cloud.tencent.com/document/product/597/40847">DescribeTopic</a>接口获取</p>
      */
     public void setTopic(String Topic) {
         this.Topic = Topic;
     }
 
     /**
-     * Get 分区id 
-     * @return Partition 分区id
+     * Get <p>分区id</p> 
+     * @return Partition <p>分区id</p>
      */
     public Long getPartition() {
         return this.Partition;
     }
 
     /**
-     * Set 分区id
-     * @param Partition 分区id
+     * Set <p>分区id</p>
+     * @param Partition <p>分区id</p>
      */
     public void setPartition(Long Partition) {
         this.Partition = Partition;
     }
 
     /**
-     * Get 位点信息 
-     * @return Offset 位点信息
+     * Get <p>位点信息</p> 
+     * @return Offset <p>位点信息</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 位点信息
-     * @param Offset 位点信息
+     * Set <p>位点信息</p>
+     * @param Offset <p>位点信息</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

@@ -24,46 +24,42 @@ import java.util.HashMap;
 public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
-    * 任务类型，取值：<li>Procedure：视频处理任务；</li><li>EditMedia：视频编辑任务；</li><li>SplitMedia：视频拆条任务；</li><li>ComposeMedia：制作媒体文件任务；</li><li>WechatPublish：微信发布任务；</li><li>WechatMiniProgramPublish：微信小程序视频发布任务；</li><li>PullUpload：拉取上传媒体文件任务；</li><li>FastClipMedia：快速剪辑任务；</li><li>RemoveWatermarkTask：智能去除水印任务；</li><li>DescribeFileAttributesTask：获取文件属性任务；</li><li>RebuildMedia：音画质重生任务（不推荐使用）；</li><li>ReviewAudioVideo：音视频审核任务；</li><li>ExtractTraceWatermark：提取溯源水印任务；</li><li>ExtractCopyRightWatermark：提取版权水印任务；</li><li>QualityInspect：音画质检测任务；</li><li>QualityEnhance：音画质重生任务；</li><li>ComplexAdaptiveDynamicStreaming：复杂自适应码流任务；</li><li>ProcessMediaByMPS：MPS 视频处理任务；</li><li>AigcImageTask：AIGC 生图任务；</li><li>SceneAigcImageTask：场景化 AIGC 生图任务；</li><li>AigcVideoTask：AIGC 生视频任务；</li><li>ImportMediaKnowledge：导入媒体知识任务。</li><li>SceneAigcVideoTask：场景化 AIGC 生视频任务；</li><li> ExtractBlindWatermark：提取数字水印任务。</li>
+    * <p>任务类型，取值：<li>Procedure：视频处理任务；</li><li>EditMedia：视频编辑任务；</li><li>SplitMedia：视频拆条任务；</li><li>ComposeMedia：制作媒体文件任务；</li><li>WechatPublish：微信发布任务；</li><li>WechatMiniProgramPublish：微信小程序视频发布任务；</li><li>PullUpload：拉取上传媒体文件任务；</li><li>FastClipMedia：快速剪辑任务；</li><li>RemoveWatermarkTask：智能去除水印任务；</li><li>DescribeFileAttributesTask：获取文件属性任务；</li><li>RebuildMedia：音画质重生任务（不推荐使用）；</li><li>ReviewAudioVideo：音视频审核任务；</li><li>ExtractTraceWatermark：提取溯源水印任务；</li><li>ExtractCopyRightWatermark：提取版权水印任务；</li><li>QualityInspect：音画质检测任务；</li><li>QualityEnhance：音画质重生任务；</li><li>ComplexAdaptiveDynamicStreaming：复杂自适应码流任务；</li><li>ProcessMediaByMPS：MPS 视频处理任务；</li><li>AigcImageTask：AIGC 生图任务；</li><li>SceneAigcImageTask：场景化 AIGC 生图任务；</li><li>AigcVideoTask：AIGC 生视频任务；</li><li>ImportMediaKnowledge：导入媒体知识任务。</li><li>SceneAigcVideoTask：场景化 AIGC 生视频任务；</li><li> ExtractBlindWatermark：提取数字水印任务。</li></p>
     */
     @SerializedName("TaskType")
     @Expose
     private String TaskType;
 
     /**
-    * 任务状态，取值：
-<li>WAITING：等待中；</li>
-<li>PROCESSING：处理中；</li>
-<li>FINISH：已完成；</li>
-<li>ABORTED：已终止。</li>
+    * <p>任务状态，取值：</p><li>WAITING：等待中；</li><li>PROCESSING：处理中；</li><li>FINISH：已完成；</li><li>ABORTED：已终止。</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 任务的创建时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+    * <p>任务的创建时间，采用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+    * <p>任务开始执行的时间，采用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
     */
     @SerializedName("BeginProcessTime")
     @Expose
     private String BeginProcessTime;
 
     /**
-    * 任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+    * <p>任务执行完毕的时间，采用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
     */
     @SerializedName("FinishTime")
     @Expose
     private String FinishTime;
 
     /**
-    * 视频处理任务信息，仅当 TaskType 为 Procedure，该字段有值。
+    * <p>视频处理任务信息，仅当 TaskType 为 Procedure，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProcedureTask")
@@ -71,7 +67,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     private ProcedureTask ProcedureTask;
 
     /**
-    * 视频编辑任务信息，仅当 TaskType 为 EditMedia，该字段有值。
+    * <p>视频编辑任务信息，仅当 TaskType 为 EditMedia，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EditMediaTask")
@@ -79,7 +75,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     private EditMediaTask EditMediaTask;
 
     /**
-    * 微信发布任务信息，仅当 TaskType 为 WechatPublish，该字段有值。
+    * <p>微信发布任务信息，仅当 TaskType 为 WechatPublish，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WechatPublishTask")
@@ -87,7 +83,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     private WechatPublishTask WechatPublishTask;
 
     /**
-    * 制作媒体文件任务信息，仅当 TaskType 为 ComposeMedia，该字段有值。
+    * <p>制作媒体文件任务信息，仅当 TaskType 为 ComposeMedia，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComposeMediaTask")
@@ -95,7 +91,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     private ComposeMediaTask ComposeMediaTask;
 
     /**
-    * 视频拆条任务信息，仅当 TaskType 为 SplitMedia，该字段有值。
+    * <p>视频拆条任务信息，仅当 TaskType 为 SplitMedia，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SplitMediaTask")
@@ -103,7 +99,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     private SplitMediaTask SplitMediaTask;
 
     /**
-    * 微信小程序发布任务信息，仅当 TaskType 为 WechatMiniProgramPublish，该字段有值。
+    * <p>微信小程序发布任务信息，仅当 TaskType 为 WechatMiniProgramPublish，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WechatMiniProgramPublishTask")
@@ -111,7 +107,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     private WechatMiniProgramPublishTask WechatMiniProgramPublishTask;
 
     /**
-    * 拉取上传媒体文件任务信息，仅当 TaskType 为 PullUpload，该字段有值。
+    * <p>拉取上传媒体文件任务信息，仅当 TaskType 为 PullUpload，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PullUploadTask")
@@ -119,7 +115,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     private PullUploadTask PullUploadTask;
 
     /**
-    * 视频转码任务信息，仅当 TaskType 为 Transcode，该字段有值。
+    * <p>视频转码任务信息，仅当 TaskType 为 Transcode，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TranscodeTask")
@@ -127,7 +123,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     private TranscodeTask2017 TranscodeTask;
 
     /**
-    * 视频拼接任务信息，仅当 TaskType 为 Concat，该字段有值。
+    * <p>视频拼接任务信息，仅当 TaskType 为 Concat，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConcatTask")
@@ -135,7 +131,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     private ConcatTask2017 ConcatTask;
 
     /**
-    * 视频剪辑任务信息，仅当 TaskType 为 Clip，该字段有值。
+    * <p>视频剪辑任务信息，仅当 TaskType 为 Clip，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClipTask")
@@ -143,7 +139,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     private ClipTask2017 ClipTask;
 
     /**
-    * 截取雪碧图任务信息，仅当 TaskType 为 ImageSprite，该字段有值。
+    * <p>截取雪碧图任务信息，仅当 TaskType 为 ImageSprite，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateImageSpriteTask")
@@ -151,7 +147,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     private CreateImageSpriteTask2017 CreateImageSpriteTask;
 
     /**
-    * 视频指定时间点截图任务信息，仅当 TaskType 为 SnapshotByTimeOffset，该字段有值。
+    * <p>视频指定时间点截图任务信息，仅当 TaskType 为 SnapshotByTimeOffset，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SnapshotByTimeOffsetTask")
@@ -159,7 +155,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     private SnapshotByTimeOffsetTask2017 SnapshotByTimeOffsetTask;
 
     /**
-    * 智能去除水印任务信息，仅当 TaskType 为 RemoveWatermark，该字段有值。
+    * <p>智能去除水印任务信息，仅当 TaskType 为 RemoveWatermark，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RemoveWatermarkTask")
@@ -167,7 +163,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     private RemoveWatermarkTask RemoveWatermarkTask;
 
     /**
-    * 音画质重生任务信息，仅当 TaskType 为 RebuildMedia，该字段有值。
+    * <p>音画质重生任务信息，仅当 TaskType 为 RebuildMedia，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RebuildMediaTask")
@@ -175,7 +171,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     private RebuildMediaTask RebuildMediaTask;
 
     /**
-    * 提取溯源水印任务信息，仅当 TaskType 为 ExtractTraceWatermark，该字段有值。
+    * <p>提取溯源水印任务信息，仅当 TaskType 为 ExtractTraceWatermark，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExtractTraceWatermarkTask")
@@ -183,7 +179,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     private ExtractTraceWatermarkTask ExtractTraceWatermarkTask;
 
     /**
-    * 提取版权水印任务信息，仅当 TaskType 为 ExtractCopyRightWatermark，该字段有值。
+    * <p>提取版权水印任务信息，仅当 TaskType 为 ExtractCopyRightWatermark，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExtractCopyRightWatermarkTask")
@@ -191,7 +187,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     private ExtractCopyRightWatermarkTask ExtractCopyRightWatermarkTask;
 
     /**
-    * 音视频审核任务信息，仅当 TaskType 为 ReviewAudioVideo，该字段有值。
+    * <p>音视频审核任务信息，仅当 TaskType 为 ReviewAudioVideo，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReviewAudioVideoTask")
@@ -199,7 +195,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     private ReviewAudioVideoTask ReviewAudioVideoTask;
 
     /**
-    * 该字段已无效。
+    * <p>该字段已无效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReduceMediaBitrateTask")
@@ -207,7 +203,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     private ReduceMediaBitrateTask ReduceMediaBitrateTask;
 
     /**
-    * 获取文件属性任务信息，仅当 TaskType 为 DescribeFileAttributes，该字段有值。
+    * <p>获取文件属性任务信息，仅当 TaskType 为 DescribeFileAttributes，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DescribeFileAttributesTask")
@@ -215,7 +211,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     private DescribeFileAttributesTask DescribeFileAttributesTask;
 
     /**
-    * 音画质检测任务信息，仅当 TaskType 为 QualityInspect 时该字段有值。
+    * <p>音画质检测任务信息，仅当 TaskType 为 QualityInspect 时该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QualityInspectTask")
@@ -223,7 +219,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     private QualityInspectTask QualityInspectTask;
 
     /**
-    * 音画质重生任务信息，仅当 TaskType 为 QualityEnhance，该字段有值。
+    * <p>音画质重生任务信息，仅当 TaskType 为 QualityEnhance，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QualityEnhanceTask")
@@ -231,7 +227,7 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     private QualityEnhanceTask QualityEnhanceTask;
 
     /**
-    * 复杂自适应码流任务信息，仅当 TaskType 为 ComplexAdaptiveDynamicStreaming，该字段有值。
+    * <p>复杂自适应码流任务信息，仅当 TaskType 为 ComplexAdaptiveDynamicStreaming，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComplexAdaptiveDynamicStreamingTask")
@@ -239,60 +235,74 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     private ComplexAdaptiveDynamicStreamingTask ComplexAdaptiveDynamicStreamingTask;
 
     /**
-    * MPS 视频处理任务信息，仅当 TaskType 为 ProcessMediaByMPS，该字段有值。
+    * <p>MPS 视频处理任务信息，仅当 TaskType 为 ProcessMediaByMPS，该字段有值。</p>
     */
     @SerializedName("ProcessMediaByMPSTask")
     @Expose
     private ProcessMediaByMPS ProcessMediaByMPSTask;
 
     /**
-    * AIGC 生图任务信息，仅当 TaskType 为 AigcImageTask，该字段有值。
+    * <p>AIGC 生图任务信息，仅当 TaskType 为 AigcImageTask，该字段有值。</p>
     */
     @SerializedName("AigcImageTask")
     @Expose
     private AigcImageTask AigcImageTask;
 
     /**
-    * AIGC 生视频任务信息，仅当 TaskType 为 AigcVideoTask，该字段有值。
+    * <p>AIGC 生视频任务信息，仅当 TaskType 为 AigcVideoTask，该字段有值。</p>
     */
     @SerializedName("AigcVideoTask")
     @Expose
     private AigcVideoTask AigcVideoTask;
 
     /**
-    * 媒体导入知识库任务信息，仅当 TaskType 为 ImportMediaKnowledge，该字段有值。
+    * <p>媒体导入知识库任务信息，仅当 TaskType 为 ImportMediaKnowledge，该字段有值。</p>
     */
     @SerializedName("ImportMediaKnowledge")
     @Expose
     private ImportMediaKnowledgeTask ImportMediaKnowledge;
 
     /**
-    * 场景化 AIGC 生图任务信息，仅当 TaskType 为 SceneAigcImageTask，该字段有值。
+    * <p>场景化 AIGC 生图任务信息，仅当 TaskType 为 SceneAigcImageTask，该字段有值。</p>
     */
     @SerializedName("SceneAigcImageTask")
     @Expose
     private SceneAigcImageTask SceneAigcImageTask;
 
     /**
-    * 场景化 AIGC 生视频任务信息，仅当 TaskType 为 SceneAigcVideoTask，该字段有值。
+    * <p>场景化 AIGC 生视频任务信息，仅当 TaskType 为 SceneAigcVideoTask，该字段有值。</p>
     */
     @SerializedName("SceneAigcVideoTask")
     @Expose
     private SceneAigcVideoTask SceneAigcVideoTask;
 
     /**
-    * 图像异步处理任务信息，仅当 TaskType 为 ProcessImageAsync，该字段有值。
+    * <p>图像异步处理任务信息，仅当 TaskType 为 ProcessImageAsync，该字段有值。</p>
     */
     @SerializedName("ProcessImageAsyncTask")
     @Expose
     private ProcessImageAsync ProcessImageAsyncTask;
 
     /**
-    * 提取数字水印任务信息，仅当 TaskType 为 ExtractBlindWatermark，该字段有值。
+    * <p>提取数字水印任务信息，仅当 TaskType 为 ExtractBlindWatermark，该字段有值。</p>
     */
     @SerializedName("ExtractBlindWatermarkTask")
     @Expose
     private ExtractBlindWatermarkTask ExtractBlindWatermarkTask;
+
+    /**
+    * <p>创建自定义主体信息，仅当 TaskType 为 CreateAigcAdvancedCustomElement，该字段有值。</p>
+    */
+    @SerializedName("CreateAigcAdvancedCustomElementTask")
+    @Expose
+    private CreateAigcAdvancedCustomElementTask CreateAigcAdvancedCustomElementTask;
+
+    /**
+    * <p>创建自定义音色信息，仅当 TaskType 为 CreateAigcCustomVoice，该字段有值。</p>
+    */
+    @SerializedName("CreateAigcCustomVoiceTask")
+    @Expose
+    private CreateAigcCustomVoiceTask CreateAigcCustomVoiceTask;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -302,105 +312,89 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务类型，取值：<li>Procedure：视频处理任务；</li><li>EditMedia：视频编辑任务；</li><li>SplitMedia：视频拆条任务；</li><li>ComposeMedia：制作媒体文件任务；</li><li>WechatPublish：微信发布任务；</li><li>WechatMiniProgramPublish：微信小程序视频发布任务；</li><li>PullUpload：拉取上传媒体文件任务；</li><li>FastClipMedia：快速剪辑任务；</li><li>RemoveWatermarkTask：智能去除水印任务；</li><li>DescribeFileAttributesTask：获取文件属性任务；</li><li>RebuildMedia：音画质重生任务（不推荐使用）；</li><li>ReviewAudioVideo：音视频审核任务；</li><li>ExtractTraceWatermark：提取溯源水印任务；</li><li>ExtractCopyRightWatermark：提取版权水印任务；</li><li>QualityInspect：音画质检测任务；</li><li>QualityEnhance：音画质重生任务；</li><li>ComplexAdaptiveDynamicStreaming：复杂自适应码流任务；</li><li>ProcessMediaByMPS：MPS 视频处理任务；</li><li>AigcImageTask：AIGC 生图任务；</li><li>SceneAigcImageTask：场景化 AIGC 生图任务；</li><li>AigcVideoTask：AIGC 生视频任务；</li><li>ImportMediaKnowledge：导入媒体知识任务。</li><li>SceneAigcVideoTask：场景化 AIGC 生视频任务；</li><li> ExtractBlindWatermark：提取数字水印任务。</li> 
-     * @return TaskType 任务类型，取值：<li>Procedure：视频处理任务；</li><li>EditMedia：视频编辑任务；</li><li>SplitMedia：视频拆条任务；</li><li>ComposeMedia：制作媒体文件任务；</li><li>WechatPublish：微信发布任务；</li><li>WechatMiniProgramPublish：微信小程序视频发布任务；</li><li>PullUpload：拉取上传媒体文件任务；</li><li>FastClipMedia：快速剪辑任务；</li><li>RemoveWatermarkTask：智能去除水印任务；</li><li>DescribeFileAttributesTask：获取文件属性任务；</li><li>RebuildMedia：音画质重生任务（不推荐使用）；</li><li>ReviewAudioVideo：音视频审核任务；</li><li>ExtractTraceWatermark：提取溯源水印任务；</li><li>ExtractCopyRightWatermark：提取版权水印任务；</li><li>QualityInspect：音画质检测任务；</li><li>QualityEnhance：音画质重生任务；</li><li>ComplexAdaptiveDynamicStreaming：复杂自适应码流任务；</li><li>ProcessMediaByMPS：MPS 视频处理任务；</li><li>AigcImageTask：AIGC 生图任务；</li><li>SceneAigcImageTask：场景化 AIGC 生图任务；</li><li>AigcVideoTask：AIGC 生视频任务；</li><li>ImportMediaKnowledge：导入媒体知识任务。</li><li>SceneAigcVideoTask：场景化 AIGC 生视频任务；</li><li> ExtractBlindWatermark：提取数字水印任务。</li>
+     * Get <p>任务类型，取值：<li>Procedure：视频处理任务；</li><li>EditMedia：视频编辑任务；</li><li>SplitMedia：视频拆条任务；</li><li>ComposeMedia：制作媒体文件任务；</li><li>WechatPublish：微信发布任务；</li><li>WechatMiniProgramPublish：微信小程序视频发布任务；</li><li>PullUpload：拉取上传媒体文件任务；</li><li>FastClipMedia：快速剪辑任务；</li><li>RemoveWatermarkTask：智能去除水印任务；</li><li>DescribeFileAttributesTask：获取文件属性任务；</li><li>RebuildMedia：音画质重生任务（不推荐使用）；</li><li>ReviewAudioVideo：音视频审核任务；</li><li>ExtractTraceWatermark：提取溯源水印任务；</li><li>ExtractCopyRightWatermark：提取版权水印任务；</li><li>QualityInspect：音画质检测任务；</li><li>QualityEnhance：音画质重生任务；</li><li>ComplexAdaptiveDynamicStreaming：复杂自适应码流任务；</li><li>ProcessMediaByMPS：MPS 视频处理任务；</li><li>AigcImageTask：AIGC 生图任务；</li><li>SceneAigcImageTask：场景化 AIGC 生图任务；</li><li>AigcVideoTask：AIGC 生视频任务；</li><li>ImportMediaKnowledge：导入媒体知识任务。</li><li>SceneAigcVideoTask：场景化 AIGC 生视频任务；</li><li> ExtractBlindWatermark：提取数字水印任务。</li></p> 
+     * @return TaskType <p>任务类型，取值：<li>Procedure：视频处理任务；</li><li>EditMedia：视频编辑任务；</li><li>SplitMedia：视频拆条任务；</li><li>ComposeMedia：制作媒体文件任务；</li><li>WechatPublish：微信发布任务；</li><li>WechatMiniProgramPublish：微信小程序视频发布任务；</li><li>PullUpload：拉取上传媒体文件任务；</li><li>FastClipMedia：快速剪辑任务；</li><li>RemoveWatermarkTask：智能去除水印任务；</li><li>DescribeFileAttributesTask：获取文件属性任务；</li><li>RebuildMedia：音画质重生任务（不推荐使用）；</li><li>ReviewAudioVideo：音视频审核任务；</li><li>ExtractTraceWatermark：提取溯源水印任务；</li><li>ExtractCopyRightWatermark：提取版权水印任务；</li><li>QualityInspect：音画质检测任务；</li><li>QualityEnhance：音画质重生任务；</li><li>ComplexAdaptiveDynamicStreaming：复杂自适应码流任务；</li><li>ProcessMediaByMPS：MPS 视频处理任务；</li><li>AigcImageTask：AIGC 生图任务；</li><li>SceneAigcImageTask：场景化 AIGC 生图任务；</li><li>AigcVideoTask：AIGC 生视频任务；</li><li>ImportMediaKnowledge：导入媒体知识任务。</li><li>SceneAigcVideoTask：场景化 AIGC 生视频任务；</li><li> ExtractBlindWatermark：提取数字水印任务。</li></p>
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 任务类型，取值：<li>Procedure：视频处理任务；</li><li>EditMedia：视频编辑任务；</li><li>SplitMedia：视频拆条任务；</li><li>ComposeMedia：制作媒体文件任务；</li><li>WechatPublish：微信发布任务；</li><li>WechatMiniProgramPublish：微信小程序视频发布任务；</li><li>PullUpload：拉取上传媒体文件任务；</li><li>FastClipMedia：快速剪辑任务；</li><li>RemoveWatermarkTask：智能去除水印任务；</li><li>DescribeFileAttributesTask：获取文件属性任务；</li><li>RebuildMedia：音画质重生任务（不推荐使用）；</li><li>ReviewAudioVideo：音视频审核任务；</li><li>ExtractTraceWatermark：提取溯源水印任务；</li><li>ExtractCopyRightWatermark：提取版权水印任务；</li><li>QualityInspect：音画质检测任务；</li><li>QualityEnhance：音画质重生任务；</li><li>ComplexAdaptiveDynamicStreaming：复杂自适应码流任务；</li><li>ProcessMediaByMPS：MPS 视频处理任务；</li><li>AigcImageTask：AIGC 生图任务；</li><li>SceneAigcImageTask：场景化 AIGC 生图任务；</li><li>AigcVideoTask：AIGC 生视频任务；</li><li>ImportMediaKnowledge：导入媒体知识任务。</li><li>SceneAigcVideoTask：场景化 AIGC 生视频任务；</li><li> ExtractBlindWatermark：提取数字水印任务。</li>
-     * @param TaskType 任务类型，取值：<li>Procedure：视频处理任务；</li><li>EditMedia：视频编辑任务；</li><li>SplitMedia：视频拆条任务；</li><li>ComposeMedia：制作媒体文件任务；</li><li>WechatPublish：微信发布任务；</li><li>WechatMiniProgramPublish：微信小程序视频发布任务；</li><li>PullUpload：拉取上传媒体文件任务；</li><li>FastClipMedia：快速剪辑任务；</li><li>RemoveWatermarkTask：智能去除水印任务；</li><li>DescribeFileAttributesTask：获取文件属性任务；</li><li>RebuildMedia：音画质重生任务（不推荐使用）；</li><li>ReviewAudioVideo：音视频审核任务；</li><li>ExtractTraceWatermark：提取溯源水印任务；</li><li>ExtractCopyRightWatermark：提取版权水印任务；</li><li>QualityInspect：音画质检测任务；</li><li>QualityEnhance：音画质重生任务；</li><li>ComplexAdaptiveDynamicStreaming：复杂自适应码流任务；</li><li>ProcessMediaByMPS：MPS 视频处理任务；</li><li>AigcImageTask：AIGC 生图任务；</li><li>SceneAigcImageTask：场景化 AIGC 生图任务；</li><li>AigcVideoTask：AIGC 生视频任务；</li><li>ImportMediaKnowledge：导入媒体知识任务。</li><li>SceneAigcVideoTask：场景化 AIGC 生视频任务；</li><li> ExtractBlindWatermark：提取数字水印任务。</li>
+     * Set <p>任务类型，取值：<li>Procedure：视频处理任务；</li><li>EditMedia：视频编辑任务；</li><li>SplitMedia：视频拆条任务；</li><li>ComposeMedia：制作媒体文件任务；</li><li>WechatPublish：微信发布任务；</li><li>WechatMiniProgramPublish：微信小程序视频发布任务；</li><li>PullUpload：拉取上传媒体文件任务；</li><li>FastClipMedia：快速剪辑任务；</li><li>RemoveWatermarkTask：智能去除水印任务；</li><li>DescribeFileAttributesTask：获取文件属性任务；</li><li>RebuildMedia：音画质重生任务（不推荐使用）；</li><li>ReviewAudioVideo：音视频审核任务；</li><li>ExtractTraceWatermark：提取溯源水印任务；</li><li>ExtractCopyRightWatermark：提取版权水印任务；</li><li>QualityInspect：音画质检测任务；</li><li>QualityEnhance：音画质重生任务；</li><li>ComplexAdaptiveDynamicStreaming：复杂自适应码流任务；</li><li>ProcessMediaByMPS：MPS 视频处理任务；</li><li>AigcImageTask：AIGC 生图任务；</li><li>SceneAigcImageTask：场景化 AIGC 生图任务；</li><li>AigcVideoTask：AIGC 生视频任务；</li><li>ImportMediaKnowledge：导入媒体知识任务。</li><li>SceneAigcVideoTask：场景化 AIGC 生视频任务；</li><li> ExtractBlindWatermark：提取数字水印任务。</li></p>
+     * @param TaskType <p>任务类型，取值：<li>Procedure：视频处理任务；</li><li>EditMedia：视频编辑任务；</li><li>SplitMedia：视频拆条任务；</li><li>ComposeMedia：制作媒体文件任务；</li><li>WechatPublish：微信发布任务；</li><li>WechatMiniProgramPublish：微信小程序视频发布任务；</li><li>PullUpload：拉取上传媒体文件任务；</li><li>FastClipMedia：快速剪辑任务；</li><li>RemoveWatermarkTask：智能去除水印任务；</li><li>DescribeFileAttributesTask：获取文件属性任务；</li><li>RebuildMedia：音画质重生任务（不推荐使用）；</li><li>ReviewAudioVideo：音视频审核任务；</li><li>ExtractTraceWatermark：提取溯源水印任务；</li><li>ExtractCopyRightWatermark：提取版权水印任务；</li><li>QualityInspect：音画质检测任务；</li><li>QualityEnhance：音画质重生任务；</li><li>ComplexAdaptiveDynamicStreaming：复杂自适应码流任务；</li><li>ProcessMediaByMPS：MPS 视频处理任务；</li><li>AigcImageTask：AIGC 生图任务；</li><li>SceneAigcImageTask：场景化 AIGC 生图任务；</li><li>AigcVideoTask：AIGC 生视频任务；</li><li>ImportMediaKnowledge：导入媒体知识任务。</li><li>SceneAigcVideoTask：场景化 AIGC 生视频任务；</li><li> ExtractBlindWatermark：提取数字水印任务。</li></p>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get 任务状态，取值：
-<li>WAITING：等待中；</li>
-<li>PROCESSING：处理中；</li>
-<li>FINISH：已完成；</li>
-<li>ABORTED：已终止。</li> 
-     * @return Status 任务状态，取值：
-<li>WAITING：等待中；</li>
-<li>PROCESSING：处理中；</li>
-<li>FINISH：已完成；</li>
-<li>ABORTED：已终止。</li>
+     * Get <p>任务状态，取值：</p><li>WAITING：等待中；</li><li>PROCESSING：处理中；</li><li>FINISH：已完成；</li><li>ABORTED：已终止。</li> 
+     * @return Status <p>任务状态，取值：</p><li>WAITING：等待中；</li><li>PROCESSING：处理中；</li><li>FINISH：已完成；</li><li>ABORTED：已终止。</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 任务状态，取值：
-<li>WAITING：等待中；</li>
-<li>PROCESSING：处理中；</li>
-<li>FINISH：已完成；</li>
-<li>ABORTED：已终止。</li>
-     * @param Status 任务状态，取值：
-<li>WAITING：等待中；</li>
-<li>PROCESSING：处理中；</li>
-<li>FINISH：已完成；</li>
-<li>ABORTED：已终止。</li>
+     * Set <p>任务状态，取值：</p><li>WAITING：等待中；</li><li>PROCESSING：处理中；</li><li>FINISH：已完成；</li><li>ABORTED：已终止。</li>
+     * @param Status <p>任务状态，取值：</p><li>WAITING：等待中；</li><li>PROCESSING：处理中；</li><li>FINISH：已完成；</li><li>ABORTED：已终止。</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 任务的创建时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。 
-     * @return CreateTime 任务的创建时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Get <p>任务的创建时间，采用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p> 
+     * @return CreateTime <p>任务的创建时间，采用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 任务的创建时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
-     * @param CreateTime 任务的创建时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Set <p>任务的创建时间，采用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+     * @param CreateTime <p>任务的创建时间，采用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。 
-     * @return BeginProcessTime 任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Get <p>任务开始执行的时间，采用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p> 
+     * @return BeginProcessTime <p>任务开始执行的时间，采用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public String getBeginProcessTime() {
         return this.BeginProcessTime;
     }
 
     /**
-     * Set 任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
-     * @param BeginProcessTime 任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Set <p>任务开始执行的时间，采用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+     * @param BeginProcessTime <p>任务开始执行的时间，采用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public void setBeginProcessTime(String BeginProcessTime) {
         this.BeginProcessTime = BeginProcessTime;
     }
 
     /**
-     * Get 任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。 
-     * @return FinishTime 任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Get <p>任务执行完毕的时间，采用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p> 
+     * @return FinishTime <p>任务执行完毕的时间，采用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public String getFinishTime() {
         return this.FinishTime;
     }
 
     /**
-     * Set 任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
-     * @param FinishTime 任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Set <p>任务执行完毕的时间，采用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+     * @param FinishTime <p>任务执行完毕的时间，采用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;
     }
 
     /**
-     * Get 视频处理任务信息，仅当 TaskType 为 Procedure，该字段有值。
+     * Get <p>视频处理任务信息，仅当 TaskType 为 Procedure，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProcedureTask 视频处理任务信息，仅当 TaskType 为 Procedure，该字段有值。
+     * @return ProcedureTask <p>视频处理任务信息，仅当 TaskType 为 Procedure，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ProcedureTask getProcedureTask() {
@@ -408,9 +402,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 视频处理任务信息，仅当 TaskType 为 Procedure，该字段有值。
+     * Set <p>视频处理任务信息，仅当 TaskType 为 Procedure，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProcedureTask 视频处理任务信息，仅当 TaskType 为 Procedure，该字段有值。
+     * @param ProcedureTask <p>视频处理任务信息，仅当 TaskType 为 Procedure，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcedureTask(ProcedureTask ProcedureTask) {
@@ -418,9 +412,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 视频编辑任务信息，仅当 TaskType 为 EditMedia，该字段有值。
+     * Get <p>视频编辑任务信息，仅当 TaskType 为 EditMedia，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EditMediaTask 视频编辑任务信息，仅当 TaskType 为 EditMedia，该字段有值。
+     * @return EditMediaTask <p>视频编辑任务信息，仅当 TaskType 为 EditMedia，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public EditMediaTask getEditMediaTask() {
@@ -428,9 +422,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 视频编辑任务信息，仅当 TaskType 为 EditMedia，该字段有值。
+     * Set <p>视频编辑任务信息，仅当 TaskType 为 EditMedia，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EditMediaTask 视频编辑任务信息，仅当 TaskType 为 EditMedia，该字段有值。
+     * @param EditMediaTask <p>视频编辑任务信息，仅当 TaskType 为 EditMedia，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEditMediaTask(EditMediaTask EditMediaTask) {
@@ -438,9 +432,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 微信发布任务信息，仅当 TaskType 为 WechatPublish，该字段有值。
+     * Get <p>微信发布任务信息，仅当 TaskType 为 WechatPublish，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WechatPublishTask 微信发布任务信息，仅当 TaskType 为 WechatPublish，该字段有值。
+     * @return WechatPublishTask <p>微信发布任务信息，仅当 TaskType 为 WechatPublish，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public WechatPublishTask getWechatPublishTask() {
@@ -448,9 +442,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 微信发布任务信息，仅当 TaskType 为 WechatPublish，该字段有值。
+     * Set <p>微信发布任务信息，仅当 TaskType 为 WechatPublish，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WechatPublishTask 微信发布任务信息，仅当 TaskType 为 WechatPublish，该字段有值。
+     * @param WechatPublishTask <p>微信发布任务信息，仅当 TaskType 为 WechatPublish，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWechatPublishTask(WechatPublishTask WechatPublishTask) {
@@ -458,9 +452,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 制作媒体文件任务信息，仅当 TaskType 为 ComposeMedia，该字段有值。
+     * Get <p>制作媒体文件任务信息，仅当 TaskType 为 ComposeMedia，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ComposeMediaTask 制作媒体文件任务信息，仅当 TaskType 为 ComposeMedia，该字段有值。
+     * @return ComposeMediaTask <p>制作媒体文件任务信息，仅当 TaskType 为 ComposeMedia，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ComposeMediaTask getComposeMediaTask() {
@@ -468,9 +462,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 制作媒体文件任务信息，仅当 TaskType 为 ComposeMedia，该字段有值。
+     * Set <p>制作媒体文件任务信息，仅当 TaskType 为 ComposeMedia，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ComposeMediaTask 制作媒体文件任务信息，仅当 TaskType 为 ComposeMedia，该字段有值。
+     * @param ComposeMediaTask <p>制作媒体文件任务信息，仅当 TaskType 为 ComposeMedia，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComposeMediaTask(ComposeMediaTask ComposeMediaTask) {
@@ -478,9 +472,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 视频拆条任务信息，仅当 TaskType 为 SplitMedia，该字段有值。
+     * Get <p>视频拆条任务信息，仅当 TaskType 为 SplitMedia，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SplitMediaTask 视频拆条任务信息，仅当 TaskType 为 SplitMedia，该字段有值。
+     * @return SplitMediaTask <p>视频拆条任务信息，仅当 TaskType 为 SplitMedia，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SplitMediaTask getSplitMediaTask() {
@@ -488,9 +482,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 视频拆条任务信息，仅当 TaskType 为 SplitMedia，该字段有值。
+     * Set <p>视频拆条任务信息，仅当 TaskType 为 SplitMedia，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SplitMediaTask 视频拆条任务信息，仅当 TaskType 为 SplitMedia，该字段有值。
+     * @param SplitMediaTask <p>视频拆条任务信息，仅当 TaskType 为 SplitMedia，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSplitMediaTask(SplitMediaTask SplitMediaTask) {
@@ -498,9 +492,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 微信小程序发布任务信息，仅当 TaskType 为 WechatMiniProgramPublish，该字段有值。
+     * Get <p>微信小程序发布任务信息，仅当 TaskType 为 WechatMiniProgramPublish，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WechatMiniProgramPublishTask 微信小程序发布任务信息，仅当 TaskType 为 WechatMiniProgramPublish，该字段有值。
+     * @return WechatMiniProgramPublishTask <p>微信小程序发布任务信息，仅当 TaskType 为 WechatMiniProgramPublish，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public WechatMiniProgramPublishTask getWechatMiniProgramPublishTask() {
@@ -508,9 +502,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 微信小程序发布任务信息，仅当 TaskType 为 WechatMiniProgramPublish，该字段有值。
+     * Set <p>微信小程序发布任务信息，仅当 TaskType 为 WechatMiniProgramPublish，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WechatMiniProgramPublishTask 微信小程序发布任务信息，仅当 TaskType 为 WechatMiniProgramPublish，该字段有值。
+     * @param WechatMiniProgramPublishTask <p>微信小程序发布任务信息，仅当 TaskType 为 WechatMiniProgramPublish，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWechatMiniProgramPublishTask(WechatMiniProgramPublishTask WechatMiniProgramPublishTask) {
@@ -518,9 +512,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 拉取上传媒体文件任务信息，仅当 TaskType 为 PullUpload，该字段有值。
+     * Get <p>拉取上传媒体文件任务信息，仅当 TaskType 为 PullUpload，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PullUploadTask 拉取上传媒体文件任务信息，仅当 TaskType 为 PullUpload，该字段有值。
+     * @return PullUploadTask <p>拉取上传媒体文件任务信息，仅当 TaskType 为 PullUpload，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PullUploadTask getPullUploadTask() {
@@ -528,9 +522,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 拉取上传媒体文件任务信息，仅当 TaskType 为 PullUpload，该字段有值。
+     * Set <p>拉取上传媒体文件任务信息，仅当 TaskType 为 PullUpload，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PullUploadTask 拉取上传媒体文件任务信息，仅当 TaskType 为 PullUpload，该字段有值。
+     * @param PullUploadTask <p>拉取上传媒体文件任务信息，仅当 TaskType 为 PullUpload，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPullUploadTask(PullUploadTask PullUploadTask) {
@@ -538,9 +532,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 视频转码任务信息，仅当 TaskType 为 Transcode，该字段有值。
+     * Get <p>视频转码任务信息，仅当 TaskType 为 Transcode，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TranscodeTask 视频转码任务信息，仅当 TaskType 为 Transcode，该字段有值。
+     * @return TranscodeTask <p>视频转码任务信息，仅当 TaskType 为 Transcode，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TranscodeTask2017 getTranscodeTask() {
@@ -548,9 +542,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 视频转码任务信息，仅当 TaskType 为 Transcode，该字段有值。
+     * Set <p>视频转码任务信息，仅当 TaskType 为 Transcode，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TranscodeTask 视频转码任务信息，仅当 TaskType 为 Transcode，该字段有值。
+     * @param TranscodeTask <p>视频转码任务信息，仅当 TaskType 为 Transcode，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTranscodeTask(TranscodeTask2017 TranscodeTask) {
@@ -558,9 +552,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 视频拼接任务信息，仅当 TaskType 为 Concat，该字段有值。
+     * Get <p>视频拼接任务信息，仅当 TaskType 为 Concat，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ConcatTask 视频拼接任务信息，仅当 TaskType 为 Concat，该字段有值。
+     * @return ConcatTask <p>视频拼接任务信息，仅当 TaskType 为 Concat，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ConcatTask2017 getConcatTask() {
@@ -568,9 +562,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 视频拼接任务信息，仅当 TaskType 为 Concat，该字段有值。
+     * Set <p>视频拼接任务信息，仅当 TaskType 为 Concat，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ConcatTask 视频拼接任务信息，仅当 TaskType 为 Concat，该字段有值。
+     * @param ConcatTask <p>视频拼接任务信息，仅当 TaskType 为 Concat，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConcatTask(ConcatTask2017 ConcatTask) {
@@ -578,9 +572,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 视频剪辑任务信息，仅当 TaskType 为 Clip，该字段有值。
+     * Get <p>视频剪辑任务信息，仅当 TaskType 为 Clip，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClipTask 视频剪辑任务信息，仅当 TaskType 为 Clip，该字段有值。
+     * @return ClipTask <p>视频剪辑任务信息，仅当 TaskType 为 Clip，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ClipTask2017 getClipTask() {
@@ -588,9 +582,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 视频剪辑任务信息，仅当 TaskType 为 Clip，该字段有值。
+     * Set <p>视频剪辑任务信息，仅当 TaskType 为 Clip，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClipTask 视频剪辑任务信息，仅当 TaskType 为 Clip，该字段有值。
+     * @param ClipTask <p>视频剪辑任务信息，仅当 TaskType 为 Clip，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClipTask(ClipTask2017 ClipTask) {
@@ -598,9 +592,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 截取雪碧图任务信息，仅当 TaskType 为 ImageSprite，该字段有值。
+     * Get <p>截取雪碧图任务信息，仅当 TaskType 为 ImageSprite，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateImageSpriteTask 截取雪碧图任务信息，仅当 TaskType 为 ImageSprite，该字段有值。
+     * @return CreateImageSpriteTask <p>截取雪碧图任务信息，仅当 TaskType 为 ImageSprite，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CreateImageSpriteTask2017 getCreateImageSpriteTask() {
@@ -608,9 +602,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 截取雪碧图任务信息，仅当 TaskType 为 ImageSprite，该字段有值。
+     * Set <p>截取雪碧图任务信息，仅当 TaskType 为 ImageSprite，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateImageSpriteTask 截取雪碧图任务信息，仅当 TaskType 为 ImageSprite，该字段有值。
+     * @param CreateImageSpriteTask <p>截取雪碧图任务信息，仅当 TaskType 为 ImageSprite，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateImageSpriteTask(CreateImageSpriteTask2017 CreateImageSpriteTask) {
@@ -618,9 +612,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 视频指定时间点截图任务信息，仅当 TaskType 为 SnapshotByTimeOffset，该字段有值。
+     * Get <p>视频指定时间点截图任务信息，仅当 TaskType 为 SnapshotByTimeOffset，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SnapshotByTimeOffsetTask 视频指定时间点截图任务信息，仅当 TaskType 为 SnapshotByTimeOffset，该字段有值。
+     * @return SnapshotByTimeOffsetTask <p>视频指定时间点截图任务信息，仅当 TaskType 为 SnapshotByTimeOffset，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SnapshotByTimeOffsetTask2017 getSnapshotByTimeOffsetTask() {
@@ -628,9 +622,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 视频指定时间点截图任务信息，仅当 TaskType 为 SnapshotByTimeOffset，该字段有值。
+     * Set <p>视频指定时间点截图任务信息，仅当 TaskType 为 SnapshotByTimeOffset，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SnapshotByTimeOffsetTask 视频指定时间点截图任务信息，仅当 TaskType 为 SnapshotByTimeOffset，该字段有值。
+     * @param SnapshotByTimeOffsetTask <p>视频指定时间点截图任务信息，仅当 TaskType 为 SnapshotByTimeOffset，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSnapshotByTimeOffsetTask(SnapshotByTimeOffsetTask2017 SnapshotByTimeOffsetTask) {
@@ -638,9 +632,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 智能去除水印任务信息，仅当 TaskType 为 RemoveWatermark，该字段有值。
+     * Get <p>智能去除水印任务信息，仅当 TaskType 为 RemoveWatermark，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RemoveWatermarkTask 智能去除水印任务信息，仅当 TaskType 为 RemoveWatermark，该字段有值。
+     * @return RemoveWatermarkTask <p>智能去除水印任务信息，仅当 TaskType 为 RemoveWatermark，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RemoveWatermarkTask getRemoveWatermarkTask() {
@@ -648,9 +642,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 智能去除水印任务信息，仅当 TaskType 为 RemoveWatermark，该字段有值。
+     * Set <p>智能去除水印任务信息，仅当 TaskType 为 RemoveWatermark，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RemoveWatermarkTask 智能去除水印任务信息，仅当 TaskType 为 RemoveWatermark，该字段有值。
+     * @param RemoveWatermarkTask <p>智能去除水印任务信息，仅当 TaskType 为 RemoveWatermark，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemoveWatermarkTask(RemoveWatermarkTask RemoveWatermarkTask) {
@@ -658,9 +652,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 音画质重生任务信息，仅当 TaskType 为 RebuildMedia，该字段有值。
+     * Get <p>音画质重生任务信息，仅当 TaskType 为 RebuildMedia，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RebuildMediaTask 音画质重生任务信息，仅当 TaskType 为 RebuildMedia，该字段有值。
+     * @return RebuildMediaTask <p>音画质重生任务信息，仅当 TaskType 为 RebuildMedia，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RebuildMediaTask getRebuildMediaTask() {
@@ -668,9 +662,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 音画质重生任务信息，仅当 TaskType 为 RebuildMedia，该字段有值。
+     * Set <p>音画质重生任务信息，仅当 TaskType 为 RebuildMedia，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RebuildMediaTask 音画质重生任务信息，仅当 TaskType 为 RebuildMedia，该字段有值。
+     * @param RebuildMediaTask <p>音画质重生任务信息，仅当 TaskType 为 RebuildMedia，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRebuildMediaTask(RebuildMediaTask RebuildMediaTask) {
@@ -678,9 +672,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 提取溯源水印任务信息，仅当 TaskType 为 ExtractTraceWatermark，该字段有值。
+     * Get <p>提取溯源水印任务信息，仅当 TaskType 为 ExtractTraceWatermark，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExtractTraceWatermarkTask 提取溯源水印任务信息，仅当 TaskType 为 ExtractTraceWatermark，该字段有值。
+     * @return ExtractTraceWatermarkTask <p>提取溯源水印任务信息，仅当 TaskType 为 ExtractTraceWatermark，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ExtractTraceWatermarkTask getExtractTraceWatermarkTask() {
@@ -688,9 +682,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 提取溯源水印任务信息，仅当 TaskType 为 ExtractTraceWatermark，该字段有值。
+     * Set <p>提取溯源水印任务信息，仅当 TaskType 为 ExtractTraceWatermark，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExtractTraceWatermarkTask 提取溯源水印任务信息，仅当 TaskType 为 ExtractTraceWatermark，该字段有值。
+     * @param ExtractTraceWatermarkTask <p>提取溯源水印任务信息，仅当 TaskType 为 ExtractTraceWatermark，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtractTraceWatermarkTask(ExtractTraceWatermarkTask ExtractTraceWatermarkTask) {
@@ -698,9 +692,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 提取版权水印任务信息，仅当 TaskType 为 ExtractCopyRightWatermark，该字段有值。
+     * Get <p>提取版权水印任务信息，仅当 TaskType 为 ExtractCopyRightWatermark，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExtractCopyRightWatermarkTask 提取版权水印任务信息，仅当 TaskType 为 ExtractCopyRightWatermark，该字段有值。
+     * @return ExtractCopyRightWatermarkTask <p>提取版权水印任务信息，仅当 TaskType 为 ExtractCopyRightWatermark，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ExtractCopyRightWatermarkTask getExtractCopyRightWatermarkTask() {
@@ -708,9 +702,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 提取版权水印任务信息，仅当 TaskType 为 ExtractCopyRightWatermark，该字段有值。
+     * Set <p>提取版权水印任务信息，仅当 TaskType 为 ExtractCopyRightWatermark，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExtractCopyRightWatermarkTask 提取版权水印任务信息，仅当 TaskType 为 ExtractCopyRightWatermark，该字段有值。
+     * @param ExtractCopyRightWatermarkTask <p>提取版权水印任务信息，仅当 TaskType 为 ExtractCopyRightWatermark，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtractCopyRightWatermarkTask(ExtractCopyRightWatermarkTask ExtractCopyRightWatermarkTask) {
@@ -718,9 +712,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 音视频审核任务信息，仅当 TaskType 为 ReviewAudioVideo，该字段有值。
+     * Get <p>音视频审核任务信息，仅当 TaskType 为 ReviewAudioVideo，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReviewAudioVideoTask 音视频审核任务信息，仅当 TaskType 为 ReviewAudioVideo，该字段有值。
+     * @return ReviewAudioVideoTask <p>音视频审核任务信息，仅当 TaskType 为 ReviewAudioVideo，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ReviewAudioVideoTask getReviewAudioVideoTask() {
@@ -728,9 +722,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 音视频审核任务信息，仅当 TaskType 为 ReviewAudioVideo，该字段有值。
+     * Set <p>音视频审核任务信息，仅当 TaskType 为 ReviewAudioVideo，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReviewAudioVideoTask 音视频审核任务信息，仅当 TaskType 为 ReviewAudioVideo，该字段有值。
+     * @param ReviewAudioVideoTask <p>音视频审核任务信息，仅当 TaskType 为 ReviewAudioVideo，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReviewAudioVideoTask(ReviewAudioVideoTask ReviewAudioVideoTask) {
@@ -738,9 +732,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 该字段已无效。
+     * Get <p>该字段已无效。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReduceMediaBitrateTask 该字段已无效。
+     * @return ReduceMediaBitrateTask <p>该字段已无效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ReduceMediaBitrateTask getReduceMediaBitrateTask() {
@@ -748,9 +742,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 该字段已无效。
+     * Set <p>该字段已无效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReduceMediaBitrateTask 该字段已无效。
+     * @param ReduceMediaBitrateTask <p>该字段已无效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReduceMediaBitrateTask(ReduceMediaBitrateTask ReduceMediaBitrateTask) {
@@ -758,9 +752,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 获取文件属性任务信息，仅当 TaskType 为 DescribeFileAttributes，该字段有值。
+     * Get <p>获取文件属性任务信息，仅当 TaskType 为 DescribeFileAttributes，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DescribeFileAttributesTask 获取文件属性任务信息，仅当 TaskType 为 DescribeFileAttributes，该字段有值。
+     * @return DescribeFileAttributesTask <p>获取文件属性任务信息，仅当 TaskType 为 DescribeFileAttributes，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribeFileAttributesTask getDescribeFileAttributesTask() {
@@ -768,9 +762,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 获取文件属性任务信息，仅当 TaskType 为 DescribeFileAttributes，该字段有值。
+     * Set <p>获取文件属性任务信息，仅当 TaskType 为 DescribeFileAttributes，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DescribeFileAttributesTask 获取文件属性任务信息，仅当 TaskType 为 DescribeFileAttributes，该字段有值。
+     * @param DescribeFileAttributesTask <p>获取文件属性任务信息，仅当 TaskType 为 DescribeFileAttributes，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescribeFileAttributesTask(DescribeFileAttributesTask DescribeFileAttributesTask) {
@@ -778,9 +772,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 音画质检测任务信息，仅当 TaskType 为 QualityInspect 时该字段有值。
+     * Get <p>音画质检测任务信息，仅当 TaskType 为 QualityInspect 时该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return QualityInspectTask 音画质检测任务信息，仅当 TaskType 为 QualityInspect 时该字段有值。
+     * @return QualityInspectTask <p>音画质检测任务信息，仅当 TaskType 为 QualityInspect 时该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public QualityInspectTask getQualityInspectTask() {
@@ -788,9 +782,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 音画质检测任务信息，仅当 TaskType 为 QualityInspect 时该字段有值。
+     * Set <p>音画质检测任务信息，仅当 TaskType 为 QualityInspect 时该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param QualityInspectTask 音画质检测任务信息，仅当 TaskType 为 QualityInspect 时该字段有值。
+     * @param QualityInspectTask <p>音画质检测任务信息，仅当 TaskType 为 QualityInspect 时该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQualityInspectTask(QualityInspectTask QualityInspectTask) {
@@ -798,9 +792,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 音画质重生任务信息，仅当 TaskType 为 QualityEnhance，该字段有值。
+     * Get <p>音画质重生任务信息，仅当 TaskType 为 QualityEnhance，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return QualityEnhanceTask 音画质重生任务信息，仅当 TaskType 为 QualityEnhance，该字段有值。
+     * @return QualityEnhanceTask <p>音画质重生任务信息，仅当 TaskType 为 QualityEnhance，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public QualityEnhanceTask getQualityEnhanceTask() {
@@ -808,9 +802,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 音画质重生任务信息，仅当 TaskType 为 QualityEnhance，该字段有值。
+     * Set <p>音画质重生任务信息，仅当 TaskType 为 QualityEnhance，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param QualityEnhanceTask 音画质重生任务信息，仅当 TaskType 为 QualityEnhance，该字段有值。
+     * @param QualityEnhanceTask <p>音画质重生任务信息，仅当 TaskType 为 QualityEnhance，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQualityEnhanceTask(QualityEnhanceTask QualityEnhanceTask) {
@@ -818,9 +812,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 复杂自适应码流任务信息，仅当 TaskType 为 ComplexAdaptiveDynamicStreaming，该字段有值。
+     * Get <p>复杂自适应码流任务信息，仅当 TaskType 为 ComplexAdaptiveDynamicStreaming，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ComplexAdaptiveDynamicStreamingTask 复杂自适应码流任务信息，仅当 TaskType 为 ComplexAdaptiveDynamicStreaming，该字段有值。
+     * @return ComplexAdaptiveDynamicStreamingTask <p>复杂自适应码流任务信息，仅当 TaskType 为 ComplexAdaptiveDynamicStreaming，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ComplexAdaptiveDynamicStreamingTask getComplexAdaptiveDynamicStreamingTask() {
@@ -828,9 +822,9 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 复杂自适应码流任务信息，仅当 TaskType 为 ComplexAdaptiveDynamicStreaming，该字段有值。
+     * Set <p>复杂自适应码流任务信息，仅当 TaskType 为 ComplexAdaptiveDynamicStreaming，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ComplexAdaptiveDynamicStreamingTask 复杂自适应码流任务信息，仅当 TaskType 为 ComplexAdaptiveDynamicStreaming，该字段有值。
+     * @param ComplexAdaptiveDynamicStreamingTask <p>复杂自适应码流任务信息，仅当 TaskType 为 ComplexAdaptiveDynamicStreaming，该字段有值。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComplexAdaptiveDynamicStreamingTask(ComplexAdaptiveDynamicStreamingTask ComplexAdaptiveDynamicStreamingTask) {
@@ -838,131 +832,163 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get MPS 视频处理任务信息，仅当 TaskType 为 ProcessMediaByMPS，该字段有值。 
-     * @return ProcessMediaByMPSTask MPS 视频处理任务信息，仅当 TaskType 为 ProcessMediaByMPS，该字段有值。
+     * Get <p>MPS 视频处理任务信息，仅当 TaskType 为 ProcessMediaByMPS，该字段有值。</p> 
+     * @return ProcessMediaByMPSTask <p>MPS 视频处理任务信息，仅当 TaskType 为 ProcessMediaByMPS，该字段有值。</p>
      */
     public ProcessMediaByMPS getProcessMediaByMPSTask() {
         return this.ProcessMediaByMPSTask;
     }
 
     /**
-     * Set MPS 视频处理任务信息，仅当 TaskType 为 ProcessMediaByMPS，该字段有值。
-     * @param ProcessMediaByMPSTask MPS 视频处理任务信息，仅当 TaskType 为 ProcessMediaByMPS，该字段有值。
+     * Set <p>MPS 视频处理任务信息，仅当 TaskType 为 ProcessMediaByMPS，该字段有值。</p>
+     * @param ProcessMediaByMPSTask <p>MPS 视频处理任务信息，仅当 TaskType 为 ProcessMediaByMPS，该字段有值。</p>
      */
     public void setProcessMediaByMPSTask(ProcessMediaByMPS ProcessMediaByMPSTask) {
         this.ProcessMediaByMPSTask = ProcessMediaByMPSTask;
     }
 
     /**
-     * Get AIGC 生图任务信息，仅当 TaskType 为 AigcImageTask，该字段有值。 
-     * @return AigcImageTask AIGC 生图任务信息，仅当 TaskType 为 AigcImageTask，该字段有值。
+     * Get <p>AIGC 生图任务信息，仅当 TaskType 为 AigcImageTask，该字段有值。</p> 
+     * @return AigcImageTask <p>AIGC 生图任务信息，仅当 TaskType 为 AigcImageTask，该字段有值。</p>
      */
     public AigcImageTask getAigcImageTask() {
         return this.AigcImageTask;
     }
 
     /**
-     * Set AIGC 生图任务信息，仅当 TaskType 为 AigcImageTask，该字段有值。
-     * @param AigcImageTask AIGC 生图任务信息，仅当 TaskType 为 AigcImageTask，该字段有值。
+     * Set <p>AIGC 生图任务信息，仅当 TaskType 为 AigcImageTask，该字段有值。</p>
+     * @param AigcImageTask <p>AIGC 生图任务信息，仅当 TaskType 为 AigcImageTask，该字段有值。</p>
      */
     public void setAigcImageTask(AigcImageTask AigcImageTask) {
         this.AigcImageTask = AigcImageTask;
     }
 
     /**
-     * Get AIGC 生视频任务信息，仅当 TaskType 为 AigcVideoTask，该字段有值。 
-     * @return AigcVideoTask AIGC 生视频任务信息，仅当 TaskType 为 AigcVideoTask，该字段有值。
+     * Get <p>AIGC 生视频任务信息，仅当 TaskType 为 AigcVideoTask，该字段有值。</p> 
+     * @return AigcVideoTask <p>AIGC 生视频任务信息，仅当 TaskType 为 AigcVideoTask，该字段有值。</p>
      */
     public AigcVideoTask getAigcVideoTask() {
         return this.AigcVideoTask;
     }
 
     /**
-     * Set AIGC 生视频任务信息，仅当 TaskType 为 AigcVideoTask，该字段有值。
-     * @param AigcVideoTask AIGC 生视频任务信息，仅当 TaskType 为 AigcVideoTask，该字段有值。
+     * Set <p>AIGC 生视频任务信息，仅当 TaskType 为 AigcVideoTask，该字段有值。</p>
+     * @param AigcVideoTask <p>AIGC 生视频任务信息，仅当 TaskType 为 AigcVideoTask，该字段有值。</p>
      */
     public void setAigcVideoTask(AigcVideoTask AigcVideoTask) {
         this.AigcVideoTask = AigcVideoTask;
     }
 
     /**
-     * Get 媒体导入知识库任务信息，仅当 TaskType 为 ImportMediaKnowledge，该字段有值。 
-     * @return ImportMediaKnowledge 媒体导入知识库任务信息，仅当 TaskType 为 ImportMediaKnowledge，该字段有值。
+     * Get <p>媒体导入知识库任务信息，仅当 TaskType 为 ImportMediaKnowledge，该字段有值。</p> 
+     * @return ImportMediaKnowledge <p>媒体导入知识库任务信息，仅当 TaskType 为 ImportMediaKnowledge，该字段有值。</p>
      */
     public ImportMediaKnowledgeTask getImportMediaKnowledge() {
         return this.ImportMediaKnowledge;
     }
 
     /**
-     * Set 媒体导入知识库任务信息，仅当 TaskType 为 ImportMediaKnowledge，该字段有值。
-     * @param ImportMediaKnowledge 媒体导入知识库任务信息，仅当 TaskType 为 ImportMediaKnowledge，该字段有值。
+     * Set <p>媒体导入知识库任务信息，仅当 TaskType 为 ImportMediaKnowledge，该字段有值。</p>
+     * @param ImportMediaKnowledge <p>媒体导入知识库任务信息，仅当 TaskType 为 ImportMediaKnowledge，该字段有值。</p>
      */
     public void setImportMediaKnowledge(ImportMediaKnowledgeTask ImportMediaKnowledge) {
         this.ImportMediaKnowledge = ImportMediaKnowledge;
     }
 
     /**
-     * Get 场景化 AIGC 生图任务信息，仅当 TaskType 为 SceneAigcImageTask，该字段有值。 
-     * @return SceneAigcImageTask 场景化 AIGC 生图任务信息，仅当 TaskType 为 SceneAigcImageTask，该字段有值。
+     * Get <p>场景化 AIGC 生图任务信息，仅当 TaskType 为 SceneAigcImageTask，该字段有值。</p> 
+     * @return SceneAigcImageTask <p>场景化 AIGC 生图任务信息，仅当 TaskType 为 SceneAigcImageTask，该字段有值。</p>
      */
     public SceneAigcImageTask getSceneAigcImageTask() {
         return this.SceneAigcImageTask;
     }
 
     /**
-     * Set 场景化 AIGC 生图任务信息，仅当 TaskType 为 SceneAigcImageTask，该字段有值。
-     * @param SceneAigcImageTask 场景化 AIGC 生图任务信息，仅当 TaskType 为 SceneAigcImageTask，该字段有值。
+     * Set <p>场景化 AIGC 生图任务信息，仅当 TaskType 为 SceneAigcImageTask，该字段有值。</p>
+     * @param SceneAigcImageTask <p>场景化 AIGC 生图任务信息，仅当 TaskType 为 SceneAigcImageTask，该字段有值。</p>
      */
     public void setSceneAigcImageTask(SceneAigcImageTask SceneAigcImageTask) {
         this.SceneAigcImageTask = SceneAigcImageTask;
     }
 
     /**
-     * Get 场景化 AIGC 生视频任务信息，仅当 TaskType 为 SceneAigcVideoTask，该字段有值。 
-     * @return SceneAigcVideoTask 场景化 AIGC 生视频任务信息，仅当 TaskType 为 SceneAigcVideoTask，该字段有值。
+     * Get <p>场景化 AIGC 生视频任务信息，仅当 TaskType 为 SceneAigcVideoTask，该字段有值。</p> 
+     * @return SceneAigcVideoTask <p>场景化 AIGC 生视频任务信息，仅当 TaskType 为 SceneAigcVideoTask，该字段有值。</p>
      */
     public SceneAigcVideoTask getSceneAigcVideoTask() {
         return this.SceneAigcVideoTask;
     }
 
     /**
-     * Set 场景化 AIGC 生视频任务信息，仅当 TaskType 为 SceneAigcVideoTask，该字段有值。
-     * @param SceneAigcVideoTask 场景化 AIGC 生视频任务信息，仅当 TaskType 为 SceneAigcVideoTask，该字段有值。
+     * Set <p>场景化 AIGC 生视频任务信息，仅当 TaskType 为 SceneAigcVideoTask，该字段有值。</p>
+     * @param SceneAigcVideoTask <p>场景化 AIGC 生视频任务信息，仅当 TaskType 为 SceneAigcVideoTask，该字段有值。</p>
      */
     public void setSceneAigcVideoTask(SceneAigcVideoTask SceneAigcVideoTask) {
         this.SceneAigcVideoTask = SceneAigcVideoTask;
     }
 
     /**
-     * Get 图像异步处理任务信息，仅当 TaskType 为 ProcessImageAsync，该字段有值。 
-     * @return ProcessImageAsyncTask 图像异步处理任务信息，仅当 TaskType 为 ProcessImageAsync，该字段有值。
+     * Get <p>图像异步处理任务信息，仅当 TaskType 为 ProcessImageAsync，该字段有值。</p> 
+     * @return ProcessImageAsyncTask <p>图像异步处理任务信息，仅当 TaskType 为 ProcessImageAsync，该字段有值。</p>
      */
     public ProcessImageAsync getProcessImageAsyncTask() {
         return this.ProcessImageAsyncTask;
     }
 
     /**
-     * Set 图像异步处理任务信息，仅当 TaskType 为 ProcessImageAsync，该字段有值。
-     * @param ProcessImageAsyncTask 图像异步处理任务信息，仅当 TaskType 为 ProcessImageAsync，该字段有值。
+     * Set <p>图像异步处理任务信息，仅当 TaskType 为 ProcessImageAsync，该字段有值。</p>
+     * @param ProcessImageAsyncTask <p>图像异步处理任务信息，仅当 TaskType 为 ProcessImageAsync，该字段有值。</p>
      */
     public void setProcessImageAsyncTask(ProcessImageAsync ProcessImageAsyncTask) {
         this.ProcessImageAsyncTask = ProcessImageAsyncTask;
     }
 
     /**
-     * Get 提取数字水印任务信息，仅当 TaskType 为 ExtractBlindWatermark，该字段有值。 
-     * @return ExtractBlindWatermarkTask 提取数字水印任务信息，仅当 TaskType 为 ExtractBlindWatermark，该字段有值。
+     * Get <p>提取数字水印任务信息，仅当 TaskType 为 ExtractBlindWatermark，该字段有值。</p> 
+     * @return ExtractBlindWatermarkTask <p>提取数字水印任务信息，仅当 TaskType 为 ExtractBlindWatermark，该字段有值。</p>
      */
     public ExtractBlindWatermarkTask getExtractBlindWatermarkTask() {
         return this.ExtractBlindWatermarkTask;
     }
 
     /**
-     * Set 提取数字水印任务信息，仅当 TaskType 为 ExtractBlindWatermark，该字段有值。
-     * @param ExtractBlindWatermarkTask 提取数字水印任务信息，仅当 TaskType 为 ExtractBlindWatermark，该字段有值。
+     * Set <p>提取数字水印任务信息，仅当 TaskType 为 ExtractBlindWatermark，该字段有值。</p>
+     * @param ExtractBlindWatermarkTask <p>提取数字水印任务信息，仅当 TaskType 为 ExtractBlindWatermark，该字段有值。</p>
      */
     public void setExtractBlindWatermarkTask(ExtractBlindWatermarkTask ExtractBlindWatermarkTask) {
         this.ExtractBlindWatermarkTask = ExtractBlindWatermarkTask;
+    }
+
+    /**
+     * Get <p>创建自定义主体信息，仅当 TaskType 为 CreateAigcAdvancedCustomElement，该字段有值。</p> 
+     * @return CreateAigcAdvancedCustomElementTask <p>创建自定义主体信息，仅当 TaskType 为 CreateAigcAdvancedCustomElement，该字段有值。</p>
+     */
+    public CreateAigcAdvancedCustomElementTask getCreateAigcAdvancedCustomElementTask() {
+        return this.CreateAigcAdvancedCustomElementTask;
+    }
+
+    /**
+     * Set <p>创建自定义主体信息，仅当 TaskType 为 CreateAigcAdvancedCustomElement，该字段有值。</p>
+     * @param CreateAigcAdvancedCustomElementTask <p>创建自定义主体信息，仅当 TaskType 为 CreateAigcAdvancedCustomElement，该字段有值。</p>
+     */
+    public void setCreateAigcAdvancedCustomElementTask(CreateAigcAdvancedCustomElementTask CreateAigcAdvancedCustomElementTask) {
+        this.CreateAigcAdvancedCustomElementTask = CreateAigcAdvancedCustomElementTask;
+    }
+
+    /**
+     * Get <p>创建自定义音色信息，仅当 TaskType 为 CreateAigcCustomVoice，该字段有值。</p> 
+     * @return CreateAigcCustomVoiceTask <p>创建自定义音色信息，仅当 TaskType 为 CreateAigcCustomVoice，该字段有值。</p>
+     */
+    public CreateAigcCustomVoiceTask getCreateAigcCustomVoiceTask() {
+        return this.CreateAigcCustomVoiceTask;
+    }
+
+    /**
+     * Set <p>创建自定义音色信息，仅当 TaskType 为 CreateAigcCustomVoice，该字段有值。</p>
+     * @param CreateAigcCustomVoiceTask <p>创建自定义音色信息，仅当 TaskType 为 CreateAigcCustomVoice，该字段有值。</p>
+     */
+    public void setCreateAigcCustomVoiceTask(CreateAigcCustomVoiceTask CreateAigcCustomVoiceTask) {
+        this.CreateAigcCustomVoiceTask = CreateAigcCustomVoiceTask;
     }
 
     /**
@@ -1094,6 +1120,12 @@ public class DescribeTaskDetailResponse extends AbstractModel {
         if (source.ExtractBlindWatermarkTask != null) {
             this.ExtractBlindWatermarkTask = new ExtractBlindWatermarkTask(source.ExtractBlindWatermarkTask);
         }
+        if (source.CreateAigcAdvancedCustomElementTask != null) {
+            this.CreateAigcAdvancedCustomElementTask = new CreateAigcAdvancedCustomElementTask(source.CreateAigcAdvancedCustomElementTask);
+        }
+        if (source.CreateAigcCustomVoiceTask != null) {
+            this.CreateAigcCustomVoiceTask = new CreateAigcCustomVoiceTask(source.CreateAigcCustomVoiceTask);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1139,6 +1171,8 @@ public class DescribeTaskDetailResponse extends AbstractModel {
         this.setParamObj(map, prefix + "SceneAigcVideoTask.", this.SceneAigcVideoTask);
         this.setParamObj(map, prefix + "ProcessImageAsyncTask.", this.ProcessImageAsyncTask);
         this.setParamObj(map, prefix + "ExtractBlindWatermarkTask.", this.ExtractBlindWatermarkTask);
+        this.setParamObj(map, prefix + "CreateAigcAdvancedCustomElementTask.", this.CreateAigcAdvancedCustomElementTask);
+        this.setParamObj(map, prefix + "CreateAigcCustomVoiceTask.", this.CreateAigcCustomVoiceTask);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

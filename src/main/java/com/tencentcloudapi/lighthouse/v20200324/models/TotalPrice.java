@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class TotalPrice extends AbstractModel {
 
     /**
-    * 原始总计价格。
+    * <p>原始总计价格。</p><p>单位：元</p>
     */
     @SerializedName("OriginalPrice")
     @Expose
     private Float OriginalPrice;
 
     /**
-    * 折扣总计价格。
+    * <p>折扣总计价格。</p><p>单位：元</p>
     */
     @SerializedName("DiscountPrice")
     @Expose
     private Float DiscountPrice;
 
     /**
-     * Get 原始总计价格。 
-     * @return OriginalPrice 原始总计价格。
+     * Get <p>原始总计价格。</p><p>单位：元</p> 
+     * @return OriginalPrice <p>原始总计价格。</p><p>单位：元</p>
      */
     public Float getOriginalPrice() {
         return this.OriginalPrice;
     }
 
     /**
-     * Set 原始总计价格。
-     * @param OriginalPrice 原始总计价格。
+     * Set <p>原始总计价格。</p><p>单位：元</p>
+     * @param OriginalPrice <p>原始总计价格。</p><p>单位：元</p>
      */
     public void setOriginalPrice(Float OriginalPrice) {
         this.OriginalPrice = OriginalPrice;
     }
 
     /**
-     * Get 折扣总计价格。 
-     * @return DiscountPrice 折扣总计价格。
+     * Get <p>折扣总计价格。</p><p>单位：元</p> 
+     * @return DiscountPrice <p>折扣总计价格。</p><p>单位：元</p>
      */
     public Float getDiscountPrice() {
         return this.DiscountPrice;
     }
 
     /**
-     * Set 折扣总计价格。
-     * @param DiscountPrice 折扣总计价格。
+     * Set <p>折扣总计价格。</p><p>单位：元</p>
+     * @param DiscountPrice <p>折扣总计价格。</p><p>单位：元</p>
      */
     public void setDiscountPrice(Float DiscountPrice) {
         this.DiscountPrice = DiscountPrice;

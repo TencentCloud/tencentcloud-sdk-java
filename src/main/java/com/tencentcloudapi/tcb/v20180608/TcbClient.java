@@ -61,17 +61,6 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
-     *绑定另外一个环境下的网关，callContainer请求可以访问到该网关
-     * @param req BindEnvGatewayRequest
-     * @return BindEnvGatewayResponse
-     * @throws TencentCloudSDKException
-     */
-    public BindEnvGatewayResponse BindEnvGateway(BindEnvGatewayRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "BindEnvGateway", BindEnvGatewayResponse.class);
-    }
-
-    /**
      *检查是否开通Tcb服务
      * @param req CheckTcbServiceRequest
      * @return CheckTcbServiceResponse
@@ -80,28 +69,6 @@ public class TcbClient extends AbstractClient{
     public CheckTcbServiceResponse CheckTcbService(CheckTcbServiceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CheckTcbService", CheckTcbServiceResponse.class);
-    }
-
-    /**
-     *TCB云API统一入口
-     * @param req CommonServiceAPIRequest
-     * @return CommonServiceAPIResponse
-     * @throws TencentCloudSDKException
-     */
-    public CommonServiceAPIResponse CommonServiceAPI(CommonServiceAPIRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CommonServiceAPI", CommonServiceAPIResponse.class);
-    }
-
-    /**
-     *创建云开发项目
-     * @param req CreateAndDeployCloudBaseProjectRequest
-     * @return CreateAndDeployCloudBaseProjectResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateAndDeployCloudBaseProjectResponse CreateAndDeployCloudBaseProject(CreateAndDeployCloudBaseProjectRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateAndDeployCloudBaseProject", CreateAndDeployCloudBaseProjectResponse.class);
     }
 
     /**
@@ -151,28 +118,6 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
-     *开通容器托管的资源，包括集群创建，VPC配置，异步任务创建，镜像托管，Coding等，查看创建结果需要根据DescribeCloudBaseRunResource接口来查看
-     * @param req CreateCloudBaseRunResourceRequest
-     * @return CreateCloudBaseRunResourceResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateCloudBaseRunResourceResponse CreateCloudBaseRunResource(CreateCloudBaseRunResourceRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateCloudBaseRunResource", CreateCloudBaseRunResourceResponse.class);
-    }
-
-    /**
-     *创建服务版本
-     * @param req CreateCloudBaseRunServerVersionRequest
-     * @return CreateCloudBaseRunServerVersionResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateCloudBaseRunServerVersionResponse CreateCloudBaseRunServerVersion(CreateCloudBaseRunServerVersionRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateCloudBaseRunServerVersion", CreateCloudBaseRunServerVersionResponse.class);
-    }
-
-    /**
      *本接口用于购买云开发环境。
 该接口会自动下单并支付，会在腾讯云账户中扣除余额（余额不足会下单失败）。
 该接口支持自动扣除代金券（AutoVoucher=true时），符合条件的代金券会被自动扣除。
@@ -200,6 +145,8 @@ public class TcbClient extends AbstractClient{
 
     /**
      *开通Mysql
+
+开通后，可通过 [DescribeCreateMySQLResult ](https://cloud.tencent.com/document/api/876/128185) 查询开通结果
      * @param req CreateMySQLRequest
      * @return CreateMySQLResponse
      * @throws TencentCloudSDKException
@@ -207,17 +154,6 @@ public class TcbClient extends AbstractClient{
     public CreateMySQLResponse CreateMySQL(CreateMySQLRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateMySQL", CreateMySQLResponse.class);
-    }
-
-    /**
-     *开通后付费资源
-     * @param req CreatePostpayPackageRequest
-     * @return CreatePostpayPackageResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreatePostpayPackageResponse CreatePostpayPackage(CreatePostpayPackageRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreatePostpayPackage", CreatePostpayPackageResponse.class);
     }
 
     /**
@@ -254,6 +190,22 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *删除合法域名。
+云开发会校验网页应用请求的来源域名，您需要将来源域名加入到WEB安全域名列表中。
+可以通过接口 [DescribeAuthDomains](https://cloud.tencent.com/document/product/876/42151) 获取当前已绑定生效的安全域名。
+
+注意⚠️
+安全域名被删除之后，可能会引起跨域问题，请谨慎操作。
+     * @param req DeleteAuthDomainRequest
+     * @return DeleteAuthDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAuthDomainResponse DeleteAuthDomain(DeleteAuthDomainRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAuthDomain", DeleteAuthDomainResponse.class);
+    }
+
+    /**
      *删除网关API
      * @param req DeleteCloudBaseGWAPIRequest
      * @return DeleteCloudBaseGWAPIResponse
@@ -273,39 +225,6 @@ public class TcbClient extends AbstractClient{
     public DeleteCloudBaseGWDomainResponse DeleteCloudBaseGWDomain(DeleteCloudBaseGWDomainRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteCloudBaseGWDomain", DeleteCloudBaseGWDomainResponse.class);
-    }
-
-    /**
-     *删除云项目
-     * @param req DeleteCloudBaseProjectLatestVersionRequest
-     * @return DeleteCloudBaseProjectLatestVersionResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteCloudBaseProjectLatestVersionResponse DeleteCloudBaseProjectLatestVersion(DeleteCloudBaseProjectLatestVersionRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteCloudBaseProjectLatestVersion", DeleteCloudBaseProjectLatestVersionResponse.class);
-    }
-
-    /**
-     *删除服务版本
-     * @param req DeleteCloudBaseRunServerVersionRequest
-     * @return DeleteCloudBaseRunServerVersionResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteCloudBaseRunServerVersionResponse DeleteCloudBaseRunServerVersion(DeleteCloudBaseRunServerVersionRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteCloudBaseRunServerVersion", DeleteCloudBaseRunServerVersionResponse.class);
-    }
-
-    /**
-     *删除网关某版本
-     * @param req DeleteGatewayVersionRequest
-     * @return DeleteGatewayVersionResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteGatewayVersionResponse DeleteGatewayVersion(DeleteGatewayVersionRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteGatewayVersion", DeleteGatewayVersionResponse.class);
     }
 
     /**
@@ -331,28 +250,6 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
-     *删除安全网关路由
-     * @param req DeleteWxGatewayRouteRequest
-     * @return DeleteWxGatewayRouteResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteWxGatewayRouteResponse DeleteWxGatewayRoute(DeleteWxGatewayRouteRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteWxGatewayRoute", DeleteWxGatewayRouteResponse.class);
-    }
-
-    /**
-     *查询活动记录信息
-     * @param req DescribeActivityRecordRequest
-     * @return DescribeActivityRecordResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeActivityRecordResponse DescribeActivityRecord(DescribeActivityRecordRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeActivityRecord", DescribeActivityRecordResponse.class);
-    }
-
-    /**
      *本接口用于获取当前环境的安全域名列表。
 云开发会校验网页应用请求的来源域名，您需要将来源域名加入到WEB安全域名列表中。
 可以通过接口 [CreateAuthDomain](https://cloud.tencent.com/document/product/876/42764) 增加安全域名。
@@ -374,28 +271,6 @@ public class TcbClient extends AbstractClient{
     public DescribeBaasPackageListResponse DescribeBaasPackageList(DescribeBaasPackageListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeBaasPackageList", DescribeBaasPackageListResponse.class);
-    }
-
-    /**
-     *获取计费相关信息
-     * @param req DescribeBillingInfoRequest
-     * @return DescribeBillingInfoResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeBillingInfoResponse DescribeBillingInfo(DescribeBillingInfoRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeBillingInfo", DescribeBillingInfoResponse.class);
-    }
-
-    /**
-     *查询服务版本的详情
-     * @param req DescribeCbrServerVersionRequest
-     * @return DescribeCbrServerVersionResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeCbrServerVersionResponse DescribeCbrServerVersion(DescribeCbrServerVersionRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeCbrServerVersion", DescribeCbrServerVersionResponse.class);
     }
 
     /**
@@ -432,95 +307,8 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
-     *获取云开发项目列表
-     * @param req DescribeCloudBaseProjectLatestVersionListRequest
-     * @return DescribeCloudBaseProjectLatestVersionListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeCloudBaseProjectLatestVersionListResponse DescribeCloudBaseProjectLatestVersionList(DescribeCloudBaseProjectLatestVersionListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeCloudBaseProjectLatestVersionList", DescribeCloudBaseProjectLatestVersionListResponse.class);
-    }
-
-    /**
-     *云项目部署列表
-     * @param req DescribeCloudBaseProjectVersionListRequest
-     * @return DescribeCloudBaseProjectVersionListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeCloudBaseProjectVersionListResponse DescribeCloudBaseProjectVersionList(DescribeCloudBaseProjectVersionListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeCloudBaseProjectVersionList", DescribeCloudBaseProjectVersionListResponse.class);
-    }
-
-    /**
-     *查看容器托管的集群状态
-     * @param req DescribeCloudBaseRunResourceRequest
-     * @return DescribeCloudBaseRunResourceResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeCloudBaseRunResourceResponse DescribeCloudBaseRunResource(DescribeCloudBaseRunResourceRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeCloudBaseRunResource", DescribeCloudBaseRunResourceResponse.class);
-    }
-
-    /**
-     *查看容器托管的集群状态扩展使用
-     * @param req DescribeCloudBaseRunResourceForExtendRequest
-     * @return DescribeCloudBaseRunResourceForExtendResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeCloudBaseRunResourceForExtendResponse DescribeCloudBaseRunResourceForExtend(DescribeCloudBaseRunResourceForExtendRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeCloudBaseRunResourceForExtend", DescribeCloudBaseRunResourceForExtendResponse.class);
-    }
-
-    /**
-     *查询单个服务的详情，版本以及详情
-     * @param req DescribeCloudBaseRunServerRequest
-     * @return DescribeCloudBaseRunServerResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeCloudBaseRunServerResponse DescribeCloudBaseRunServer(DescribeCloudBaseRunServerRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeCloudBaseRunServer", DescribeCloudBaseRunServerResponse.class);
-    }
-
-    /**
-     *查询服务版本的详情，CPU和MEM  请使用CPUSize和MemSize
-     * @param req DescribeCloudBaseRunServerVersionRequest
-     * @return DescribeCloudBaseRunServerVersionResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeCloudBaseRunServerVersionResponse DescribeCloudBaseRunServerVersion(DescribeCloudBaseRunServerVersionRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeCloudBaseRunServerVersion", DescribeCloudBaseRunServerVersionResponse.class);
-    }
-
-    /**
-     *查询服务版本详情(新)
-     * @param req DescribeCloudBaseRunVersionRequest
-     * @return DescribeCloudBaseRunVersionResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeCloudBaseRunVersionResponse DescribeCloudBaseRunVersion(DescribeCloudBaseRunVersionRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeCloudBaseRunVersion", DescribeCloudBaseRunVersionResponse.class);
-    }
-
-    /**
-     *查询版本历史
-     * @param req DescribeCloudBaseRunVersionSnapshotRequest
-     * @return DescribeCloudBaseRunVersionSnapshotResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeCloudBaseRunVersionSnapshotResponse DescribeCloudBaseRunVersionSnapshot(DescribeCloudBaseRunVersionSnapshotRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeCloudBaseRunVersionSnapshot", DescribeCloudBaseRunVersionSnapshotResponse.class);
-    }
-
-    /**
-     *查询开通Mysql结果，Mysql开通成功后，可通过接口设置数据库账号相关功能包括但不限于【创建账号、删除账号、查询可授权权限列表、查询账号已有权限、修改主机、修改配置、修改账号库表权限】、集群操作相关【查询集群参数、修改集群参数】，连接设置相关【关闭外网、开通外网、查询集群信息】，备份回档相关【创建手动回档、删除手动回档、修改自动备份配置信息、查询备份文件列表、集群回档、查询任务列表、获取table列表、获取集群数据库列表、查询备份下载地址】，相关功能接口文档：[TDSQL-C MySQL API文档](https://cloud.tencent.com/document/product/1003/48106)
+     *查询开通Mysql结果，`Response.Data.Status = "notexist"` 表示未开通，如果未开通，可以调用 [CreateMySQL](https://cloud.tencent.com/document/api/876/128186) 来开通
+ `Response.Data. Status = "success"` 表示开通成功，Mysql开通成功后，可通过接口设置数据库账号相关功能包括但不限于【创建账号、删除账号、查询可授权权限列表、查询账号已有权限、修改主机、修改配置、修改账号库表权限】、集群操作相关【查询集群参数、修改集群参数】，连接设置相关【关闭外网、开通外网、查询集群信息】，备份回档相关【创建手动回档、删除手动回档、修改自动备份配置信息、查询备份文件列表、集群回档、查询任务列表、获取table列表、获取集群数据库列表、查询备份下载地址】，相关功能接口文档：[TDSQL-C MySQL API文档](https://cloud.tencent.com/document/product/1003/48106)
      * @param req DescribeCreateMySQLResultRequest
      * @return DescribeCreateMySQLResultResponse
      * @throws TencentCloudSDKException
@@ -528,17 +316,6 @@ public class TcbClient extends AbstractClient{
     public DescribeCreateMySQLResultResponse DescribeCreateMySQLResult(DescribeCreateMySQLResultRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCreateMySQLResult", DescribeCreateMySQLResultResponse.class);
-    }
-
-    /**
-     *根据用户传入的指标, 拉取一段时间内的监控数据。
-     * @param req DescribeCurveDataRequest
-     * @return DescribeCurveDataResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeCurveDataResponse DescribeCurveData(DescribeCurveDataRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeCurveData", DescribeCurveDataResponse.class);
     }
 
     /**
@@ -550,17 +327,6 @@ public class TcbClient extends AbstractClient{
     public DescribeDatabaseACLResponse DescribeDatabaseACL(DescribeDatabaseACLRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDatabaseACL", DescribeDatabaseACLResponse.class);
-    }
-
-    /**
-     *获取下载文件信息
-     * @param req DescribeDownloadFileRequest
-     * @return DescribeDownloadFileResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDownloadFileResponse DescribeDownloadFile(DescribeDownloadFileRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeDownloadFile", DescribeDownloadFileResponse.class);
     }
 
     /**
@@ -584,28 +350,6 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
-     *获取环境下单地域
-     * @param req DescribeEnvDealRegionRequest
-     * @return DescribeEnvDealRegionResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeEnvDealRegionResponse DescribeEnvDealRegion(DescribeEnvDealRegionRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeEnvDealRegion", DescribeEnvDealRegionResponse.class);
-    }
-
-    /**
-     *查询后付费免费配额信息
-     * @param req DescribeEnvFreeQuotaRequest
-     * @return DescribeEnvFreeQuotaResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeEnvFreeQuotaResponse DescribeEnvFreeQuota(DescribeEnvFreeQuotaRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeEnvFreeQuota", DescribeEnvFreeQuotaResponse.class);
-    }
-
-    /**
      *查询环境个数上限
      * @param req DescribeEnvLimitRequest
      * @return DescribeEnvLimitResponse
@@ -614,17 +358,6 @@ public class TcbClient extends AbstractClient{
     public DescribeEnvLimitResponse DescribeEnvLimit(DescribeEnvLimitRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeEnvLimit", DescribeEnvLimitResponse.class);
-    }
-
-    /**
-     *查询环境后付费计费详情
-     * @param req DescribeEnvPostpaidDeductRequest
-     * @return DescribeEnvPostpaidDeductResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeEnvPostpaidDeductResponse DescribeEnvPostpaidDeduct(DescribeEnvPostpaidDeductRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeEnvPostpaidDeduct", DescribeEnvPostpaidDeductResponse.class);
     }
 
     /**
@@ -639,62 +372,6 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
-     *描述扩展上传文件信息
-     * @param req DescribeExtensionUploadInfoRequest
-     * @return DescribeExtensionUploadInfoResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeExtensionUploadInfoResponse DescribeExtensionUploadInfo(DescribeExtensionUploadInfoRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeExtensionUploadInfo", DescribeExtensionUploadInfoResponse.class);
-    }
-
-    /**
-     *获取增值包计费相关信息
-     * @param req DescribeExtraPkgBillingInfoRequest
-     * @return DescribeExtraPkgBillingInfoResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeExtraPkgBillingInfoResponse DescribeExtraPkgBillingInfo(DescribeExtraPkgBillingInfoRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeExtraPkgBillingInfo", DescribeExtraPkgBillingInfoResponse.class);
-    }
-
-    /**
-     *查询网关监控数据
-     * @param req DescribeGatewayCurveDataRequest
-     * @return DescribeGatewayCurveDataResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeGatewayCurveDataResponse DescribeGatewayCurveData(DescribeGatewayCurveDataRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeGatewayCurveData", DescribeGatewayCurveDataResponse.class);
-    }
-
-    /**
-     *查询网关版本信息
-暂不鉴权
-     * @param req DescribeGatewayVersionsRequest
-     * @return DescribeGatewayVersionsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeGatewayVersionsResponse DescribeGatewayVersions(DescribeGatewayVersionsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeGatewayVersions", DescribeGatewayVersionsResponse.class);
-    }
-
-    /**
-     *根据用户传入的指标, 拉取一段时间内的监控数据。
-     * @param req DescribeGraphDataRequest
-     * @return DescribeGraphDataResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeGraphDataResponse DescribeGraphData(DescribeGraphDataRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeGraphData", DescribeGraphDataResponse.class);
-    }
-
-    /**
      *查询静态托管域名任务状态
      * @param req DescribeHostingDomainTaskRequest
      * @return DescribeHostingDomainTaskResponse
@@ -706,7 +383,9 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
-     *销毁Mysql
+     *查询Mysql集群信息
+
+调用该接口前需要先查询Mysql是否开通，可通过 [DescribeCreateMySQLResult ](https://cloud.tencent.com/document/api/876/128185) 查询，只有已开通的才能查到集群信息
      * @param req DescribeMySQLClusterDetailRequest
      * @return DescribeMySQLClusterDetailResponse
      * @throws TencentCloudSDKException
@@ -725,28 +404,6 @@ public class TcbClient extends AbstractClient{
     public DescribeMySQLTaskStatusResponse DescribeMySQLTaskStatus(DescribeMySQLTaskStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeMySQLTaskStatus", DescribeMySQLTaskStatusResponse.class);
-    }
-
-    /**
-     *查询后付费资源免费量
-     * @param req DescribePostpayFreeQuotasRequest
-     * @return DescribePostpayFreeQuotasResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribePostpayFreeQuotasResponse DescribePostpayFreeQuotas(DescribePostpayFreeQuotasRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribePostpayFreeQuotas", DescribePostpayFreeQuotasResponse.class);
-    }
-
-    /**
-     *获取后付费免费额度
-     * @param req DescribePostpayPackageFreeQuotasRequest
-     * @return DescribePostpayPackageFreeQuotasResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribePostpayPackageFreeQuotasResponse DescribePostpayPackageFreeQuotas(DescribePostpayPackageFreeQuotasRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribePostpayPackageFreeQuotas", DescribePostpayPackageFreeQuotasResponse.class);
     }
 
     /**
@@ -770,31 +427,6 @@ public class TcbClient extends AbstractClient{
     public DescribeSafeRuleResponse DescribeSafeRule(DescribeSafeRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSafeRule", DescribeSafeRuleResponse.class);
-    }
-
-    /**
-     *查询后付费短信资源量
-1 有免费包的返回SmsFreeQuota结构所有字段
-2 没有免费包，有付费包，付费返回复用SmsFreeQuota结构，其中只有 TodayUsedQuota 字段有效
-3 都没有返回为空数组
-     * @param req DescribeSmsQuotasRequest
-     * @return DescribeSmsQuotasResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeSmsQuotasResponse DescribeSmsQuotas(DescribeSmsQuotasRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeSmsQuotas", DescribeSmsQuotasResponse.class);
-    }
-
-    /**
-     *查询环境1分钱抵扣信息
-     * @param req DescribeSpecialCostItemsRequest
-     * @return DescribeSpecialCostItemsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeSpecialCostItemsResponse DescribeSpecialCostItems(DescribeSpecialCostItemsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeSpecialCostItems", DescribeSpecialCostItemsResponse.class);
     }
 
     /**
@@ -831,17 +463,6 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
-     *查询用户活动信息
-     * @param req DescribeUserActivityInfoRequest
-     * @return DescribeUserActivityInfoResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeUserActivityInfoResponse DescribeUserActivityInfo(DescribeUserActivityInfoRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeUserActivityInfo", DescribeUserActivityInfoResponse.class);
-    }
-
-    /**
      *查询tcb用户列表
      * @param req DescribeUserListRequest
      * @return DescribeUserListResponse
@@ -850,28 +471,6 @@ public class TcbClient extends AbstractClient{
     public DescribeUserListResponse DescribeUserList(DescribeUserListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeUserList", DescribeUserListResponse.class);
-    }
-
-    /**
-     *查看安全网关路由
-     * @param req DescribeWxGatewayRoutesRequest
-     * @return DescribeWxGatewayRoutesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeWxGatewayRoutesResponse DescribeWxGatewayRoutes(DescribeWxGatewayRoutesRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeWxGatewayRoutes", DescribeWxGatewayRoutesResponse.class);
-    }
-
-    /**
-     *查看安全网关
-     * @param req DescribeWxGatewaysRequest
-     * @return DescribeWxGatewaysResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeWxGatewaysResponse DescribeWxGateways(DescribeWxGatewaysRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeWxGateways", DescribeWxGatewaysResponse.class);
     }
 
     /**
@@ -896,6 +495,8 @@ public class TcbClient extends AbstractClient{
 
     /**
      *销毁Mysql
+
+销毁后可以通过 [DescribeMySQLTaskStatus](https://cloud.tencent.com/document/api/876/128183) 接口查询销毁结果，如果 `Response.Data. Status = FAILED ` 表示销毁失败，可以重新调用销毁接口重试
      * @param req DestroyMySQLRequest
      * @return DestroyMySQLResponse
      * @throws TencentCloudSDKException
@@ -928,39 +529,6 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
-     *创建云应用服务
-     * @param req EstablishCloudBaseRunServerRequest
-     * @return EstablishCloudBaseRunServerResponse
-     * @throws TencentCloudSDKException
-     */
-    public EstablishCloudBaseRunServerResponse EstablishCloudBaseRunServer(EstablishCloudBaseRunServerRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "EstablishCloudBaseRunServer", EstablishCloudBaseRunServerResponse.class);
-    }
-
-    /**
-     *创建或修改安全网关路由
-     * @param req EstablishWxGatewayRouteRequest
-     * @return EstablishWxGatewayRouteResponse
-     * @throws TencentCloudSDKException
-     */
-    public EstablishWxGatewayRouteResponse EstablishWxGatewayRoute(EstablishWxGatewayRouteRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "EstablishWxGatewayRoute", EstablishWxGatewayRouteResponse.class);
-    }
-
-    /**
-     *批量冻结
-     * @param req FreezeCloudBaseRunServersRequest
-     * @return FreezeCloudBaseRunServersResponse
-     * @throws TencentCloudSDKException
-     */
-    public FreezeCloudBaseRunServersResponse FreezeCloudBaseRunServers(FreezeCloudBaseRunServersRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "FreezeCloudBaseRunServers", FreezeCloudBaseRunServersResponse.class);
-    }
-
-    /**
      *本接口(ListTables)用于查询所有表信息，包括表名、表中数据条数、表中数据量、索引个数及索引的大小等
      * @param req ListTablesRequest
      * @return ListTablesResponse
@@ -980,28 +548,6 @@ public class TcbClient extends AbstractClient{
     public ModifyCloudBaseGWAPIResponse ModifyCloudBaseGWAPI(ModifyCloudBaseGWAPIRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyCloudBaseGWAPI", ModifyCloudBaseGWAPIResponse.class);
-    }
-
-    /**
-     *修改容器内的版本流量配置
-     * @param req ModifyCloudBaseRunServerFlowConfRequest
-     * @return ModifyCloudBaseRunServerFlowConfResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyCloudBaseRunServerFlowConfResponse ModifyCloudBaseRunServerFlowConf(ModifyCloudBaseRunServerFlowConfRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyCloudBaseRunServerFlowConf", ModifyCloudBaseRunServerFlowConfResponse.class);
-    }
-
-    /**
-     *修改服务版本的副本数，环境变量
-     * @param req ModifyCloudBaseRunServerVersionRequest
-     * @return ModifyCloudBaseRunServerVersionResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyCloudBaseRunServerVersionResponse ModifyCloudBaseRunServerVersion(ModifyCloudBaseRunServerVersionRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyCloudBaseRunServerVersion", ModifyCloudBaseRunServerVersionResponse.class);
     }
 
     /**
@@ -1051,14 +597,15 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
-     *设置网关版本的流量比例
-     * @param req ModifyGatewayVersionTrafficRequest
-     * @return ModifyGatewayVersionTrafficResponse
+     *设置数据库安全规则。
+安全规则，用于控制C端用户的访问权限。详见 [安全规则介绍 ](https://cloud.tencent.com/document/product/876/123478)。
+     * @param req ModifySafeRuleRequest
+     * @return ModifySafeRuleResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyGatewayVersionTrafficResponse ModifyGatewayVersionTraffic(ModifyGatewayVersionTrafficRequest req) throws TencentCloudSDKException{
+    public ModifySafeRuleResponse ModifySafeRule(ModifySafeRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyGatewayVersionTraffic", ModifyGatewayVersionTrafficResponse.class);
+        return this.internalRequest(req, "ModifySafeRule", ModifySafeRuleResponse.class);
     }
 
     /**
@@ -1097,18 +644,20 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
-     *更新活动详情
-     * @param req ReplaceActivityRecordRequest
-     * @return ReplaceActivityRecordResponse
+     *本接口用于执行数据库命令
+     * @param req RunCommandsRequest
+     * @return RunCommandsResponse
      * @throws TencentCloudSDKException
      */
-    public ReplaceActivityRecordResponse ReplaceActivityRecord(ReplaceActivityRecordRequest req) throws TencentCloudSDKException{
+    public RunCommandsResponse RunCommands(RunCommandsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
-        return this.internalRequest(req, "ReplaceActivityRecord", ReplaceActivityRecordResponse.class);
+        return this.internalRequest(req, "RunCommands", RunCommandsResponse.class);
     }
 
     /**
      *执行SQL语句
+
+调用该接口前需要先查询Mysql是否开通，可通过 [DescribeCreateMySQLResult ](https://cloud.tencent.com/document/api/876/128185) 查询，只有开通成功才能操作
      * @param req RunSqlRequest
      * @return RunSqlResponse
      * @throws TencentCloudSDKException
@@ -1127,17 +676,6 @@ public class TcbClient extends AbstractClient{
     public SearchClsLogResponse SearchClsLog(SearchClsLogRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SearchClsLog", SearchClsLogResponse.class);
-    }
-
-    /**
-     *批量解冻服务
-     * @param req UnfreezeCloudBaseRunServersRequest
-     * @return UnfreezeCloudBaseRunServersResponse
-     * @throws TencentCloudSDKException
-     */
-    public UnfreezeCloudBaseRunServersResponse UnfreezeCloudBaseRunServers(UnfreezeCloudBaseRunServersRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "UnfreezeCloudBaseRunServers", UnfreezeCloudBaseRunServersResponse.class);
     }
 
     /**

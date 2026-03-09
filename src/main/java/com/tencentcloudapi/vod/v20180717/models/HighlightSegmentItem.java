@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class HighlightSegmentItem extends AbstractModel {
 
     /**
-    * 置信度。
+    * <p>置信度。</p>
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * 片段起始时间偏移。
+    * <p>片段起始时间偏移。</p><p>单位：秒</p>
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * 片段结束时间偏移。
+    * <p>片段结束时间偏移。</p><p>单位：秒</p>
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-     * Get 置信度。 
-     * @return Confidence 置信度。
+     * Get <p>置信度。</p> 
+     * @return Confidence <p>置信度。</p>
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set 置信度。
-     * @param Confidence 置信度。
+     * Set <p>置信度。</p>
+     * @param Confidence <p>置信度。</p>
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get 片段起始时间偏移。 
-     * @return StartTimeOffset 片段起始时间偏移。
+     * Get <p>片段起始时间偏移。</p><p>单位：秒</p> 
+     * @return StartTimeOffset <p>片段起始时间偏移。</p><p>单位：秒</p>
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set 片段起始时间偏移。
-     * @param StartTimeOffset 片段起始时间偏移。
+     * Set <p>片段起始时间偏移。</p><p>单位：秒</p>
+     * @param StartTimeOffset <p>片段起始时间偏移。</p><p>单位：秒</p>
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get 片段结束时间偏移。 
-     * @return EndTimeOffset 片段结束时间偏移。
+     * Get <p>片段结束时间偏移。</p><p>单位：秒</p> 
+     * @return EndTimeOffset <p>片段结束时间偏移。</p><p>单位：秒</p>
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set 片段结束时间偏移。
-     * @param EndTimeOffset 片段结束时间偏移。
+     * Set <p>片段结束时间偏移。</p><p>单位：秒</p>
+     * @param EndTimeOffset <p>片段结束时间偏移。</p><p>单位：秒</p>
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;

@@ -67,6 +67,23 @@ public class ComparisonDetail extends AbstractModel {
     private String DiffText;
 
     /**
+    * 合同文本的格式类型。
+类型如下：
+<ul><li> **0**：段落（正文）</li>
+<li> **1**：标点符号</li>
+<li> **2**：页眉页脚</li>
+<li> **3**：目录</li>
+<li> **4**：印章</li>
+<li> **5**：序号</li>
+<li> **6**：水印</li>
+<li> **7**：下划线内容（填写区）</li>
+</ul>
+    */
+    @SerializedName("FormatType")
+    @Expose
+    private Long FormatType;
+
+    /**
      * Get 合同对比差异点唯一ID。 
      * @return ComparisonPointId 合同对比差异点唯一ID。
      */
@@ -178,6 +195,62 @@ public class ComparisonDetail extends AbstractModel {
         this.DiffText = DiffText;
     }
 
+    /**
+     * Get 合同文本的格式类型。
+类型如下：
+<ul><li> **0**：段落（正文）</li>
+<li> **1**：标点符号</li>
+<li> **2**：页眉页脚</li>
+<li> **3**：目录</li>
+<li> **4**：印章</li>
+<li> **5**：序号</li>
+<li> **6**：水印</li>
+<li> **7**：下划线内容（填写区）</li>
+</ul> 
+     * @return FormatType 合同文本的格式类型。
+类型如下：
+<ul><li> **0**：段落（正文）</li>
+<li> **1**：标点符号</li>
+<li> **2**：页眉页脚</li>
+<li> **3**：目录</li>
+<li> **4**：印章</li>
+<li> **5**：序号</li>
+<li> **6**：水印</li>
+<li> **7**：下划线内容（填写区）</li>
+</ul>
+     */
+    public Long getFormatType() {
+        return this.FormatType;
+    }
+
+    /**
+     * Set 合同文本的格式类型。
+类型如下：
+<ul><li> **0**：段落（正文）</li>
+<li> **1**：标点符号</li>
+<li> **2**：页眉页脚</li>
+<li> **3**：目录</li>
+<li> **4**：印章</li>
+<li> **5**：序号</li>
+<li> **6**：水印</li>
+<li> **7**：下划线内容（填写区）</li>
+</ul>
+     * @param FormatType 合同文本的格式类型。
+类型如下：
+<ul><li> **0**：段落（正文）</li>
+<li> **1**：标点符号</li>
+<li> **2**：页眉页脚</li>
+<li> **3**：目录</li>
+<li> **4**：印章</li>
+<li> **5**：序号</li>
+<li> **6**：水印</li>
+<li> **7**：下划线内容（填写区）</li>
+</ul>
+     */
+    public void setFormatType(Long FormatType) {
+        this.FormatType = FormatType;
+    }
+
     public ComparisonDetail() {
     }
 
@@ -201,6 +274,9 @@ public class ComparisonDetail extends AbstractModel {
         if (source.DiffText != null) {
             this.DiffText = new String(source.DiffText);
         }
+        if (source.FormatType != null) {
+            this.FormatType = new Long(source.FormatType);
+        }
     }
 
 
@@ -213,6 +289,7 @@ public class ComparisonDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "ContentType", this.ContentType);
         this.setParamSimple(map, prefix + "OriginText", this.OriginText);
         this.setParamSimple(map, prefix + "DiffText", this.DiffText);
+        this.setParamSimple(map, prefix + "FormatType", this.FormatType);
 
     }
 }

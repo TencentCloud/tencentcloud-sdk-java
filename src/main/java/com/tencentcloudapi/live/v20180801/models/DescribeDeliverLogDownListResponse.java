@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeDeliverLogDownListResponse extends AbstractModel {
 
     /**
-    * 日志信息列表。
+    * <p>日志信息列表。</p>
     */
     @SerializedName("LogInfoList")
     @Expose
     private PushLogInfo [] LogInfoList;
 
     /**
-    * 总条数。
+    * <p>总条数。</p>
     */
     @SerializedName("TotalNum")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeDeliverLogDownListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 日志信息列表。 
-     * @return LogInfoList 日志信息列表。
+     * Get <p>日志信息列表。</p> 
+     * @return LogInfoList <p>日志信息列表。</p>
      */
     public PushLogInfo [] getLogInfoList() {
         return this.LogInfoList;
     }
 
     /**
-     * Set 日志信息列表。
-     * @param LogInfoList 日志信息列表。
+     * Set <p>日志信息列表。</p>
+     * @param LogInfoList <p>日志信息列表。</p>
      */
     public void setLogInfoList(PushLogInfo [] LogInfoList) {
         this.LogInfoList = LogInfoList;
     }
 
     /**
-     * Get 总条数。 
-     * @return TotalNum 总条数。
+     * Get <p>总条数。</p> 
+     * @return TotalNum <p>总条数。</p>
      */
     public Long getTotalNum() {
         return this.TotalNum;
     }
 
     /**
-     * Set 总条数。
-     * @param TotalNum 总条数。
+     * Set <p>总条数。</p>
+     * @param TotalNum <p>总条数。</p>
      */
     public void setTotalNum(Long TotalNum) {
         this.TotalNum = TotalNum;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class FetchMessageListByOffsetResponse extends AbstractModel {
 
     /**
-    * 返回结果。注意，列表中不返回具体的消息内容（key、value），如果需要查询具体消息内容，请使用FetchMessageByOffset接口
+    * <p>返回结果。注意，列表中不返回具体的消息内容（key、value），如果需要查询具体消息内容，请使用FetchMessageByOffset接口</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class FetchMessageListByOffsetResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回结果。注意，列表中不返回具体的消息内容（key、value），如果需要查询具体消息内容，请使用FetchMessageByOffset接口 
-     * @return Result 返回结果。注意，列表中不返回具体的消息内容（key、value），如果需要查询具体消息内容，请使用FetchMessageByOffset接口
+     * Get <p>返回结果。注意，列表中不返回具体的消息内容（key、value），如果需要查询具体消息内容，请使用FetchMessageByOffset接口</p> 
+     * @return Result <p>返回结果。注意，列表中不返回具体的消息内容（key、value），如果需要查询具体消息内容，请使用FetchMessageByOffset接口</p>
      */
     public ConsumerRecord [] getResult() {
         return this.Result;
     }
 
     /**
-     * Set 返回结果。注意，列表中不返回具体的消息内容（key、value），如果需要查询具体消息内容，请使用FetchMessageByOffset接口
-     * @param Result 返回结果。注意，列表中不返回具体的消息内容（key、value），如果需要查询具体消息内容，请使用FetchMessageByOffset接口
+     * Set <p>返回结果。注意，列表中不返回具体的消息内容（key、value），如果需要查询具体消息内容，请使用FetchMessageByOffset接口</p>
+     * @param Result <p>返回结果。注意，列表中不返回具体的消息内容（key、value），如果需要查询具体消息内容，请使用FetchMessageByOffset接口</p>
      */
     public void setResult(ConsumerRecord [] Result) {
         this.Result = Result;

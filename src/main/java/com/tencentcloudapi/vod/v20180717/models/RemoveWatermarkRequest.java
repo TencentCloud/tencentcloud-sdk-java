@@ -148,7 +148,9 @@ public class RemoveWatermarkRequest extends AbstractModel {
     /**
      * Get 该字段已无效。 
      * @return TasksNotifyMode 该字段已无效。
+     * @deprecated
      */
+    @Deprecated
     public String getTasksNotifyMode() {
         return this.TasksNotifyMode;
     }
@@ -156,7 +158,9 @@ public class RemoveWatermarkRequest extends AbstractModel {
     /**
      * Set 该字段已无效。
      * @param TasksNotifyMode 该字段已无效。
+     * @deprecated
      */
+    @Deprecated
     public void setTasksNotifyMode(String TasksNotifyMode) {
         this.TasksNotifyMode = TasksNotifyMode;
     }

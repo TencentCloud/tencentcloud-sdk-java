@@ -24,207 +24,207 @@ import java.util.HashMap;
 public class MediaMetaData extends AbstractModel {
 
     /**
-    * 大小。
+    * <p>大小。</p>
     */
     @SerializedName("Size")
     @Expose
     private Long Size;
 
     /**
-    * 容器类型。
+    * <p>容器类型。</p>
     */
     @SerializedName("Container")
     @Expose
     private String Container;
 
     /**
-    * 视频流码率平均值与音频流码率平均值之和，单位：bps。
+    * <p>视频流码率平均值与音频流码率平均值之和，单位：bps。</p>
     */
     @SerializedName("Bitrate")
     @Expose
     private Long Bitrate;
 
     /**
-    * 视频流高度的最大值，单位：px。
+    * <p>视频流高度的最大值，单位：px。</p>
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * 视频流宽度的最大值，单位：px。
+    * <p>视频流宽度的最大值，单位：px。</p>
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * 时长，单位：秒。
+    * <p>时长，单位：秒。</p>
     */
     @SerializedName("Duration")
     @Expose
     private Float Duration;
 
     /**
-    * 视频拍摄时的选择角度，单位：度
+    * <p>视频拍摄时的选择角度，单位：度</p>
     */
     @SerializedName("Rotate")
     @Expose
     private Long Rotate;
 
     /**
-    * 视频流信息。
+    * <p>视频流信息。</p>
     */
     @SerializedName("VideoStreamInfoSet")
     @Expose
     private VideoStreamInfo [] VideoStreamInfoSet;
 
     /**
-    * 音频流信息。
+    * <p>音频流信息。</p>
     */
     @SerializedName("AudioStreamInfoSet")
     @Expose
     private AudioStreamInfo [] AudioStreamInfoSet;
 
     /**
-     * Get 大小。 
-     * @return Size 大小。
+     * Get <p>大小。</p> 
+     * @return Size <p>大小。</p>
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set 大小。
-     * @param Size 大小。
+     * Set <p>大小。</p>
+     * @param Size <p>大小。</p>
      */
     public void setSize(Long Size) {
         this.Size = Size;
     }
 
     /**
-     * Get 容器类型。 
-     * @return Container 容器类型。
+     * Get <p>容器类型。</p> 
+     * @return Container <p>容器类型。</p>
      */
     public String getContainer() {
         return this.Container;
     }
 
     /**
-     * Set 容器类型。
-     * @param Container 容器类型。
+     * Set <p>容器类型。</p>
+     * @param Container <p>容器类型。</p>
      */
     public void setContainer(String Container) {
         this.Container = Container;
     }
 
     /**
-     * Get 视频流码率平均值与音频流码率平均值之和，单位：bps。 
-     * @return Bitrate 视频流码率平均值与音频流码率平均值之和，单位：bps。
+     * Get <p>视频流码率平均值与音频流码率平均值之和，单位：bps。</p> 
+     * @return Bitrate <p>视频流码率平均值与音频流码率平均值之和，单位：bps。</p>
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set 视频流码率平均值与音频流码率平均值之和，单位：bps。
-     * @param Bitrate 视频流码率平均值与音频流码率平均值之和，单位：bps。
+     * Set <p>视频流码率平均值与音频流码率平均值之和，单位：bps。</p>
+     * @param Bitrate <p>视频流码率平均值与音频流码率平均值之和，单位：bps。</p>
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
     }
 
     /**
-     * Get 视频流高度的最大值，单位：px。 
-     * @return Height 视频流高度的最大值，单位：px。
+     * Get <p>视频流高度的最大值，单位：px。</p> 
+     * @return Height <p>视频流高度的最大值，单位：px。</p>
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 视频流高度的最大值，单位：px。
-     * @param Height 视频流高度的最大值，单位：px。
+     * Set <p>视频流高度的最大值，单位：px。</p>
+     * @param Height <p>视频流高度的最大值，单位：px。</p>
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get 视频流宽度的最大值，单位：px。 
-     * @return Width 视频流宽度的最大值，单位：px。
+     * Get <p>视频流宽度的最大值，单位：px。</p> 
+     * @return Width <p>视频流宽度的最大值，单位：px。</p>
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 视频流宽度的最大值，单位：px。
-     * @param Width 视频流宽度的最大值，单位：px。
+     * Set <p>视频流宽度的最大值，单位：px。</p>
+     * @param Width <p>视频流宽度的最大值，单位：px。</p>
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 时长，单位：秒。 
-     * @return Duration 时长，单位：秒。
+     * Get <p>时长，单位：秒。</p> 
+     * @return Duration <p>时长，单位：秒。</p>
      */
     public Float getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set 时长，单位：秒。
-     * @param Duration 时长，单位：秒。
+     * Set <p>时长，单位：秒。</p>
+     * @param Duration <p>时长，单位：秒。</p>
      */
     public void setDuration(Float Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get 视频拍摄时的选择角度，单位：度 
-     * @return Rotate 视频拍摄时的选择角度，单位：度
+     * Get <p>视频拍摄时的选择角度，单位：度</p> 
+     * @return Rotate <p>视频拍摄时的选择角度，单位：度</p>
      */
     public Long getRotate() {
         return this.Rotate;
     }
 
     /**
-     * Set 视频拍摄时的选择角度，单位：度
-     * @param Rotate 视频拍摄时的选择角度，单位：度
+     * Set <p>视频拍摄时的选择角度，单位：度</p>
+     * @param Rotate <p>视频拍摄时的选择角度，单位：度</p>
      */
     public void setRotate(Long Rotate) {
         this.Rotate = Rotate;
     }
 
     /**
-     * Get 视频流信息。 
-     * @return VideoStreamInfoSet 视频流信息。
+     * Get <p>视频流信息。</p> 
+     * @return VideoStreamInfoSet <p>视频流信息。</p>
      */
     public VideoStreamInfo [] getVideoStreamInfoSet() {
         return this.VideoStreamInfoSet;
     }
 
     /**
-     * Set 视频流信息。
-     * @param VideoStreamInfoSet 视频流信息。
+     * Set <p>视频流信息。</p>
+     * @param VideoStreamInfoSet <p>视频流信息。</p>
      */
     public void setVideoStreamInfoSet(VideoStreamInfo [] VideoStreamInfoSet) {
         this.VideoStreamInfoSet = VideoStreamInfoSet;
     }
 
     /**
-     * Get 音频流信息。 
-     * @return AudioStreamInfoSet 音频流信息。
+     * Get <p>音频流信息。</p> 
+     * @return AudioStreamInfoSet <p>音频流信息。</p>
      */
     public AudioStreamInfo [] getAudioStreamInfoSet() {
         return this.AudioStreamInfoSet;
     }
 
     /**
-     * Set 音频流信息。
-     * @param AudioStreamInfoSet 音频流信息。
+     * Set <p>音频流信息。</p>
+     * @param AudioStreamInfoSet <p>音频流信息。</p>
      */
     public void setAudioStreamInfoSet(AudioStreamInfo [] AudioStreamInfoSet) {
         this.AudioStreamInfoSet = AudioStreamInfoSet;

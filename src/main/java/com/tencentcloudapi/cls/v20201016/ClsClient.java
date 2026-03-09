@@ -387,6 +387,17 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *创建网络应用
+     * @param req CreateNetworkApplicationRequest
+     * @return CreateNetworkApplicationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateNetworkApplicationResponse CreateNetworkApplication(CreateNetworkApplicationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateNetworkApplication", CreateNetworkApplicationResponse.class);
+    }
+
+    /**
      *该接口用于创建通知内容。
      * @param req CreateNoticeContentRequest
      * @return CreateNoticeContentResponse
@@ -742,6 +753,17 @@ public class ClsClient extends AbstractClient{
     public DeleteMetricSubscribeResponse DeleteMetricSubscribe(DeleteMetricSubscribeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteMetricSubscribe", DeleteMetricSubscribeResponse.class);
+    }
+
+    /**
+     *删除网络应用
+     * @param req DeleteNetworkApplicationRequest
+     * @return DeleteNetworkApplicationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteNetworkApplicationResponse DeleteNetworkApplication(DeleteNetworkApplicationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteNetworkApplication", DeleteNetworkApplicationResponse.class);
     }
 
     /**
@@ -1263,6 +1285,28 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
     }
 
     /**
+     *获取网络应用详情
+     * @param req DescribeNetworkApplicationDetailRequest
+     * @return DescribeNetworkApplicationDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNetworkApplicationDetailResponse DescribeNetworkApplicationDetail(DescribeNetworkApplicationDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeNetworkApplicationDetail", DescribeNetworkApplicationDetailResponse.class);
+    }
+
+    /**
+     *获取网络应用列表
+     * @param req DescribeNetworkApplicationsRequest
+     * @return DescribeNetworkApplicationsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNetworkApplicationsResponse DescribeNetworkApplications(DescribeNetworkApplicationsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeNetworkApplications", DescribeNetworkApplicationsResponse.class);
+    }
+
+    /**
      *获取通知内容列表
      * @param req DescribeNoticeContentsRequest
      * @return DescribeNoticeContentsResponse
@@ -1701,6 +1745,17 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
     public ModifyMetricSubscribeResponse ModifyMetricSubscribe(ModifyMetricSubscribeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyMetricSubscribe", ModifyMetricSubscribeResponse.class);
+    }
+
+    /**
+     *修改网络应用
+     * @param req ModifyNetworkApplicationRequest
+     * @return ModifyNetworkApplicationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNetworkApplicationResponse ModifyNetworkApplication(ModifyNetworkApplicationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyNetworkApplication", ModifyNetworkApplicationResponse.class);
     }
 
     /**

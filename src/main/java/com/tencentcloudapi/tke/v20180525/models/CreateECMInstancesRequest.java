@@ -52,7 +52,7 @@ public class CreateECMInstancesRequest extends AbstractModel {
     private String Password;
 
     /**
-    * 公网带宽
+    * 公网带宽，单位为Mbps
     */
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
@@ -172,16 +172,16 @@ public class CreateECMInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 公网带宽 
-     * @return InternetMaxBandwidthOut 公网带宽
+     * Get 公网带宽，单位为Mbps 
+     * @return InternetMaxBandwidthOut 公网带宽，单位为Mbps
      */
     public Long getInternetMaxBandwidthOut() {
         return this.InternetMaxBandwidthOut;
     }
 
     /**
-     * Set 公网带宽
-     * @param InternetMaxBandwidthOut 公网带宽
+     * Set 公网带宽，单位为Mbps
+     * @param InternetMaxBandwidthOut 公网带宽，单位为Mbps
      */
     public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;

@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class MediaImageSpriteItem extends AbstractModel {
 
     /**
-    * 雪碧图规格，参见[雪碧图参数模板](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+    * <p>雪碧图规格，参见<a href="https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">雪碧图参数模板</a>。</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 雪碧图小图的高度。
+    * <p>雪碧图小图的高度。</p>
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * 雪碧图小图的宽度。
+    * <p>雪碧图小图的宽度。</p>
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * 每一张雪碧图大图里小图的数量。
+    * <p>每一张雪碧图大图里小图的数量。</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 每一张雪碧图大图的地址。
+    * <p>每一张雪碧图大图的地址。</p>
     */
     @SerializedName("ImageUrlSet")
     @Expose
     private String [] ImageUrlSet;
 
     /**
-    * 雪碧图子图位置与时间关系的 WebVtt 文件地址。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在雪碧大图里的坐标位置，一般被播放器用于实现预览。
+    * <p>雪碧图子图位置与时间关系的 WebVtt 文件地址。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在雪碧大图里的坐标位置，一般被播放器用于实现预览。</p>
     */
     @SerializedName("WebVttUrl")
     @Expose
     private String WebVttUrl;
 
     /**
-     * Get 雪碧图规格，参见[雪碧图参数模板](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。 
-     * @return Definition 雪碧图规格，参见[雪碧图参数模板](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+     * Get <p>雪碧图规格，参见<a href="https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">雪碧图参数模板</a>。</p> 
+     * @return Definition <p>雪碧图规格，参见<a href="https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">雪碧图参数模板</a>。</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 雪碧图规格，参见[雪碧图参数模板](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
-     * @param Definition 雪碧图规格，参见[雪碧图参数模板](https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+     * Set <p>雪碧图规格，参见<a href="https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">雪碧图参数模板</a>。</p>
+     * @param Definition <p>雪碧图规格，参见<a href="https://cloud.tencent.com/document/product/266/33480#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">雪碧图参数模板</a>。</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get 雪碧图小图的高度。 
-     * @return Height 雪碧图小图的高度。
+     * Get <p>雪碧图小图的高度。</p> 
+     * @return Height <p>雪碧图小图的高度。</p>
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 雪碧图小图的高度。
-     * @param Height 雪碧图小图的高度。
+     * Set <p>雪碧图小图的高度。</p>
+     * @param Height <p>雪碧图小图的高度。</p>
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get 雪碧图小图的宽度。 
-     * @return Width 雪碧图小图的宽度。
+     * Get <p>雪碧图小图的宽度。</p> 
+     * @return Width <p>雪碧图小图的宽度。</p>
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 雪碧图小图的宽度。
-     * @param Width 雪碧图小图的宽度。
+     * Set <p>雪碧图小图的宽度。</p>
+     * @param Width <p>雪碧图小图的宽度。</p>
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 每一张雪碧图大图里小图的数量。 
-     * @return TotalCount 每一张雪碧图大图里小图的数量。
+     * Get <p>每一张雪碧图大图里小图的数量。</p> 
+     * @return TotalCount <p>每一张雪碧图大图里小图的数量。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 每一张雪碧图大图里小图的数量。
-     * @param TotalCount 每一张雪碧图大图里小图的数量。
+     * Set <p>每一张雪碧图大图里小图的数量。</p>
+     * @param TotalCount <p>每一张雪碧图大图里小图的数量。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 每一张雪碧图大图的地址。 
-     * @return ImageUrlSet 每一张雪碧图大图的地址。
+     * Get <p>每一张雪碧图大图的地址。</p> 
+     * @return ImageUrlSet <p>每一张雪碧图大图的地址。</p>
      */
     public String [] getImageUrlSet() {
         return this.ImageUrlSet;
     }
 
     /**
-     * Set 每一张雪碧图大图的地址。
-     * @param ImageUrlSet 每一张雪碧图大图的地址。
+     * Set <p>每一张雪碧图大图的地址。</p>
+     * @param ImageUrlSet <p>每一张雪碧图大图的地址。</p>
      */
     public void setImageUrlSet(String [] ImageUrlSet) {
         this.ImageUrlSet = ImageUrlSet;
     }
 
     /**
-     * Get 雪碧图子图位置与时间关系的 WebVtt 文件地址。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在雪碧大图里的坐标位置，一般被播放器用于实现预览。 
-     * @return WebVttUrl 雪碧图子图位置与时间关系的 WebVtt 文件地址。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在雪碧大图里的坐标位置，一般被播放器用于实现预览。
+     * Get <p>雪碧图子图位置与时间关系的 WebVtt 文件地址。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在雪碧大图里的坐标位置，一般被播放器用于实现预览。</p> 
+     * @return WebVttUrl <p>雪碧图子图位置与时间关系的 WebVtt 文件地址。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在雪碧大图里的坐标位置，一般被播放器用于实现预览。</p>
      */
     public String getWebVttUrl() {
         return this.WebVttUrl;
     }
 
     /**
-     * Set 雪碧图子图位置与时间关系的 WebVtt 文件地址。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在雪碧大图里的坐标位置，一般被播放器用于实现预览。
-     * @param WebVttUrl 雪碧图子图位置与时间关系的 WebVtt 文件地址。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在雪碧大图里的坐标位置，一般被播放器用于实现预览。
+     * Set <p>雪碧图子图位置与时间关系的 WebVtt 文件地址。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在雪碧大图里的坐标位置，一般被播放器用于实现预览。</p>
+     * @param WebVttUrl <p>雪碧图子图位置与时间关系的 WebVtt 文件地址。WebVtt 文件表明了各个雪碧图小图对应的时间点，以及在雪碧大图里的坐标位置，一般被播放器用于实现预览。</p>
      */
     public void setWebVttUrl(String WebVttUrl) {
         this.WebVttUrl = WebVttUrl;

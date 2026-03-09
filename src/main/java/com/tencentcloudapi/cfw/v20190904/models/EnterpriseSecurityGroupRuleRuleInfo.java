@@ -293,6 +293,20 @@ ANY:表示所有
     private String UpdateTime;
 
     /**
+    * 规则分区，1最前分区，2中间分区，3最后分区
+    */
+    @SerializedName("RulePartition")
+    @Expose
+    private Long RulePartition;
+
+    /**
+    * 规则生效范围，SG安全组，LH轻量服务器
+    */
+    @SerializedName("Scope")
+    @Expose
+    private String Scope;
+
+    /**
      * Get 排序 
      * @return OrderIndex 排序
      */
@@ -972,6 +986,38 @@ ANY:表示所有
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get 规则分区，1最前分区，2中间分区，3最后分区 
+     * @return RulePartition 规则分区，1最前分区，2中间分区，3最后分区
+     */
+    public Long getRulePartition() {
+        return this.RulePartition;
+    }
+
+    /**
+     * Set 规则分区，1最前分区，2中间分区，3最后分区
+     * @param RulePartition 规则分区，1最前分区，2中间分区，3最后分区
+     */
+    public void setRulePartition(Long RulePartition) {
+        this.RulePartition = RulePartition;
+    }
+
+    /**
+     * Get 规则生效范围，SG安全组，LH轻量服务器 
+     * @return Scope 规则生效范围，SG安全组，LH轻量服务器
+     */
+    public String getScope() {
+        return this.Scope;
+    }
+
+    /**
+     * Set 规则生效范围，SG安全组，LH轻量服务器
+     * @param Scope 规则生效范围，SG安全组，LH轻量服务器
+     */
+    public void setScope(String Scope) {
+        this.Scope = Scope;
+    }
+
     public EnterpriseSecurityGroupRuleRuleInfo() {
     }
 
@@ -1082,6 +1128,12 @@ ANY:表示所有
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.RulePartition != null) {
+            this.RulePartition = new Long(source.RulePartition);
+        }
+        if (source.Scope != null) {
+            this.Scope = new String(source.Scope);
+        }
     }
 
 
@@ -1122,6 +1174,8 @@ ANY:表示所有
         this.setParamObj(map, prefix + "DnsParseCount.", this.DnsParseCount);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "RulePartition", this.RulePartition);
+        this.setParamSimple(map, prefix + "Scope", this.Scope);
 
     }
 }

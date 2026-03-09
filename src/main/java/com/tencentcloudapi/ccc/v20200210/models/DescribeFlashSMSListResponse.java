@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeFlashSMSListResponse extends AbstractModel {
 
     /**
-    * 记录总数
+    * <p>记录总数</p>
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * 闪信记录列表
+    * <p>闪信记录列表</p>
     */
     @SerializedName("FlashSMSList")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeFlashSMSListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 记录总数 
-     * @return Total 记录总数
+     * Get <p>记录总数</p> 
+     * @return Total <p>记录总数</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 记录总数
-     * @param Total 记录总数
+     * Set <p>记录总数</p>
+     * @param Total <p>记录总数</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 闪信记录列表 
-     * @return FlashSMSList 闪信记录列表
+     * Get <p>闪信记录列表</p> 
+     * @return FlashSMSList <p>闪信记录列表</p>
      */
     public FlashSMSRecord [] getFlashSMSList() {
         return this.FlashSMSList;
     }
 
     /**
-     * Set 闪信记录列表
-     * @param FlashSMSList 闪信记录列表
+     * Set <p>闪信记录列表</p>
+     * @param FlashSMSList <p>闪信记录列表</p>
      */
     public void setFlashSMSList(FlashSMSRecord [] FlashSMSList) {
         this.FlashSMSList = FlashSMSList;

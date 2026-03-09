@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateImageModerationAsyncTaskResponse extends AbstractModel {
 
     /**
-    * 该字段用于返回检测对象对应请求参数中的DataId。
+    * <p>该字段用于返回检测对象对应请求参数中的DataId。</p>
     */
     @SerializedName("DataId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateImageModerationAsyncTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 该字段用于返回检测对象对应请求参数中的DataId。 
-     * @return DataId 该字段用于返回检测对象对应请求参数中的DataId。
+     * Get <p>该字段用于返回检测对象对应请求参数中的DataId。</p> 
+     * @return DataId <p>该字段用于返回检测对象对应请求参数中的DataId。</p>
      */
     public String getDataId() {
         return this.DataId;
     }
 
     /**
-     * Set 该字段用于返回检测对象对应请求参数中的DataId。
-     * @param DataId 该字段用于返回检测对象对应请求参数中的DataId。
+     * Set <p>该字段用于返回检测对象对应请求参数中的DataId。</p>
+     * @param DataId <p>该字段用于返回检测对象对应请求参数中的DataId。</p>
      */
     public void setDataId(String DataId) {
         this.DataId = DataId;

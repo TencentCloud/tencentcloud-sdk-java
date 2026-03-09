@@ -38,7 +38,7 @@ public class ModifyNodePoolDesiredCapacityAboutAsgRequest extends AbstractModel 
     private String NodePoolId;
 
     /**
-    * 节点池所关联的伸缩组的期望实例数
+    * 节点池所关联的伸缩组的期望实例数，单位个
     */
     @SerializedName("DesiredCapacity")
     @Expose
@@ -77,16 +77,16 @@ public class ModifyNodePoolDesiredCapacityAboutAsgRequest extends AbstractModel 
     }
 
     /**
-     * Get 节点池所关联的伸缩组的期望实例数 
-     * @return DesiredCapacity 节点池所关联的伸缩组的期望实例数
+     * Get 节点池所关联的伸缩组的期望实例数，单位个 
+     * @return DesiredCapacity 节点池所关联的伸缩组的期望实例数，单位个
      */
     public Long getDesiredCapacity() {
         return this.DesiredCapacity;
     }
 
     /**
-     * Set 节点池所关联的伸缩组的期望实例数
-     * @param DesiredCapacity 节点池所关联的伸缩组的期望实例数
+     * Set 节点池所关联的伸缩组的期望实例数，单位个
+     * @param DesiredCapacity 节点池所关联的伸缩组的期望实例数，单位个
      */
     public void setDesiredCapacity(Long DesiredCapacity) {
         this.DesiredCapacity = DesiredCapacity;

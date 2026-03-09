@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class MediaAiAnalysisHighlightItem extends AbstractModel {
 
     /**
-    * 智能精彩集锦地址。
+    * <p>智能精彩集锦地址。</p>
     */
     @SerializedName("HighlightUrl")
     @Expose
     private String HighlightUrl;
 
     /**
-    * 智能精彩集锦封面地址。
+    * <p>智能精彩集锦封面地址。</p>
     */
     @SerializedName("CovImgUrl")
     @Expose
     private String CovImgUrl;
 
     /**
-    * 智能精彩集锦的可信度，取值范围是 0 到 100。
+    * <p>智能精彩集锦的可信度，取值范围是 0 到 100。</p>
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * 智能精彩集锦持续时间。
+    * <p>智能精彩集锦持续时间。</p><p>单位：秒</p>
     */
     @SerializedName("Duration")
     @Expose
     private Float Duration;
 
     /**
-    * 智能精彩集锦子片段列表，精彩集锦片段由这些子片段拼接生成。
+    * <p>智能精彩集锦子片段列表，精彩集锦片段由这些子片段拼接生成。</p>
     */
     @SerializedName("SegmentSet")
     @Expose
     private HighlightSegmentItem [] SegmentSet;
 
     /**
-     * Get 智能精彩集锦地址。 
-     * @return HighlightUrl 智能精彩集锦地址。
+     * Get <p>智能精彩集锦地址。</p> 
+     * @return HighlightUrl <p>智能精彩集锦地址。</p>
      */
     public String getHighlightUrl() {
         return this.HighlightUrl;
     }
 
     /**
-     * Set 智能精彩集锦地址。
-     * @param HighlightUrl 智能精彩集锦地址。
+     * Set <p>智能精彩集锦地址。</p>
+     * @param HighlightUrl <p>智能精彩集锦地址。</p>
      */
     public void setHighlightUrl(String HighlightUrl) {
         this.HighlightUrl = HighlightUrl;
     }
 
     /**
-     * Get 智能精彩集锦封面地址。 
-     * @return CovImgUrl 智能精彩集锦封面地址。
+     * Get <p>智能精彩集锦封面地址。</p> 
+     * @return CovImgUrl <p>智能精彩集锦封面地址。</p>
      */
     public String getCovImgUrl() {
         return this.CovImgUrl;
     }
 
     /**
-     * Set 智能精彩集锦封面地址。
-     * @param CovImgUrl 智能精彩集锦封面地址。
+     * Set <p>智能精彩集锦封面地址。</p>
+     * @param CovImgUrl <p>智能精彩集锦封面地址。</p>
      */
     public void setCovImgUrl(String CovImgUrl) {
         this.CovImgUrl = CovImgUrl;
     }
 
     /**
-     * Get 智能精彩集锦的可信度，取值范围是 0 到 100。 
-     * @return Confidence 智能精彩集锦的可信度，取值范围是 0 到 100。
+     * Get <p>智能精彩集锦的可信度，取值范围是 0 到 100。</p> 
+     * @return Confidence <p>智能精彩集锦的可信度，取值范围是 0 到 100。</p>
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set 智能精彩集锦的可信度，取值范围是 0 到 100。
-     * @param Confidence 智能精彩集锦的可信度，取值范围是 0 到 100。
+     * Set <p>智能精彩集锦的可信度，取值范围是 0 到 100。</p>
+     * @param Confidence <p>智能精彩集锦的可信度，取值范围是 0 到 100。</p>
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get 智能精彩集锦持续时间。 
-     * @return Duration 智能精彩集锦持续时间。
+     * Get <p>智能精彩集锦持续时间。</p><p>单位：秒</p> 
+     * @return Duration <p>智能精彩集锦持续时间。</p><p>单位：秒</p>
      */
     public Float getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set 智能精彩集锦持续时间。
-     * @param Duration 智能精彩集锦持续时间。
+     * Set <p>智能精彩集锦持续时间。</p><p>单位：秒</p>
+     * @param Duration <p>智能精彩集锦持续时间。</p><p>单位：秒</p>
      */
     public void setDuration(Float Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get 智能精彩集锦子片段列表，精彩集锦片段由这些子片段拼接生成。 
-     * @return SegmentSet 智能精彩集锦子片段列表，精彩集锦片段由这些子片段拼接生成。
+     * Get <p>智能精彩集锦子片段列表，精彩集锦片段由这些子片段拼接生成。</p> 
+     * @return SegmentSet <p>智能精彩集锦子片段列表，精彩集锦片段由这些子片段拼接生成。</p>
      */
     public HighlightSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set 智能精彩集锦子片段列表，精彩集锦片段由这些子片段拼接生成。
-     * @param SegmentSet 智能精彩集锦子片段列表，精彩集锦片段由这些子片段拼接生成。
+     * Set <p>智能精彩集锦子片段列表，精彩集锦片段由这些子片段拼接生成。</p>
+     * @param SegmentSet <p>智能精彩集锦子片段列表，精彩集锦片段由这些子片段拼接生成。</p>
      */
     public void setSegmentSet(HighlightSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;

@@ -24,376 +24,276 @@ import java.util.HashMap;
 public class Recipient extends AbstractModel {
 
     /**
-    * 合同参与方的角色ID
+    * <p>合同参与方的角色ID</p>
     */
     @SerializedName("RecipientId")
     @Expose
     private String RecipientId;
 
     /**
-    * 参与者类型, 可以选择的类型如下:
-<ul><li> **ENTERPRISE** :此角色为企业参与方</li>
-<li> **INDIVIDUAL** :此角色为个人参与方</li>
-<li> **PROMOTER** :此角色是发起方</li></ul>
+    * <p>参与者类型, 可以选择的类型如下:</p><ul><li> **ENTERPRISE** :此角色为企业参与方</li><li> **INDIVIDUAL** :此角色为个人参与方</li><li> **PROMOTER** :此角色是发起方</li></ul>
     */
     @SerializedName("RecipientType")
     @Expose
     private String RecipientType;
 
     /**
-    * 合同参与方的角色描述，长度不能超过100，只能由中文、字母、数字和下划线组成。
+    * <p>合同参与方的角色描述，长度不能超过100，只能由中文、字母、数字和下划线组成。</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 合同参与方的角色名字，长度不能超过20，只能由中文、字母、数字和下划线组成。
+    * <p>合同参与方的角色名字，长度不能超过20，只能由中文、字母、数字和下划线组成。</p>
     */
     @SerializedName("RoleName")
     @Expose
     private String RoleName;
 
     /**
-    * 是否需要校验，
-true-是，
-false-否
+    * <p>是否需要校验，<br>true-是，<br>false-否</p>
     */
     @SerializedName("RequireValidation")
     @Expose
     private Boolean RequireValidation;
 
     /**
-    * 是否必须填写，
-true-是，
-false-否
+    * <p>是否必须填写，<br>true-是，<br>false-否</p>
     */
     @SerializedName("RequireSign")
     @Expose
     private Boolean RequireSign;
 
     /**
-    * 内部字段，签署类型
+    * <p>内部字段，签署类型</p><p>枚举值：</p><ul><li>0： 人脸</li></ul>
     */
     @SerializedName("SignType")
     @Expose
     private Long SignType;
 
     /**
-    * 签署顺序：数字越小优先级越高
+    * <p>签署顺序：数字越小优先级越高</p>
     */
     @SerializedName("RoutingOrder")
     @Expose
     private Long RoutingOrder;
 
     /**
-    * 是否是发起方，
-true-是 
-false-否
+    * <p>是否是发起方，<br>true-是<br>false-否</p>
     */
     @SerializedName("IsPromoter")
     @Expose
     private Boolean IsPromoter;
 
     /**
-    * 签署人查看合同校验方式, 支持的类型如下:
-<ul><li> 1 :实名认证查看</li>
-<li> 2 :手机号校验查看</li></ul>
+    * <p>签署人查看合同校验方式, 支持的类型如下:</p><ul><li> 1 :实名认证查看</li><li> 2 :手机号校验查看</li></ul>
     */
     @SerializedName("ApproverVerifyTypes")
     @Expose
     private Long [] ApproverVerifyTypes;
 
     /**
-    * 签署人进行合同签署时的认证方式，支持的类型如下:
-<ul><li> 1 :人脸认证</li>
-<li> 2 :签署密码</li>
-<li> 3 :运营商三要素认证</li>
-<li> 4 :UKey认证</li>
-<li> 5 :设备指纹识别</li>
-<li> 6 :设备面容识别</li></ul>
+    * <p>签署人进行合同签署时的认证方式，支持的类型如下:</p><ul><li> 1 :人脸认证</li><li> 2 :签署密码</li><li> 3 :运营商三要素认证</li><li> 4 :UKey认证</li><li> 5 :设备指纹识别</li><li> 6 :设备面容识别</li></ul>
     */
     @SerializedName("ApproverSignTypes")
     @Expose
     private Long [] ApproverSignTypes;
 
     /**
-    * 签署方是否可以转他人处理
-
-<ul><li> **false** : ( 默认)可以转他人处理</li>
-<li> **true** :不可以转他人处理</li></ul>
+    * <p>签署方是否可以转他人处理</p><ul><li> **false** : ( 默认)可以转他人处理</li><li> **true** :不可以转他人处理</li></ul>
     */
     @SerializedName("NoTransfer")
     @Expose
     private Boolean NoTransfer;
 
     /**
-     * Get 合同参与方的角色ID 
-     * @return RecipientId 合同参与方的角色ID
+     * Get <p>合同参与方的角色ID</p> 
+     * @return RecipientId <p>合同参与方的角色ID</p>
      */
     public String getRecipientId() {
         return this.RecipientId;
     }
 
     /**
-     * Set 合同参与方的角色ID
-     * @param RecipientId 合同参与方的角色ID
+     * Set <p>合同参与方的角色ID</p>
+     * @param RecipientId <p>合同参与方的角色ID</p>
      */
     public void setRecipientId(String RecipientId) {
         this.RecipientId = RecipientId;
     }
 
     /**
-     * Get 参与者类型, 可以选择的类型如下:
-<ul><li> **ENTERPRISE** :此角色为企业参与方</li>
-<li> **INDIVIDUAL** :此角色为个人参与方</li>
-<li> **PROMOTER** :此角色是发起方</li></ul> 
-     * @return RecipientType 参与者类型, 可以选择的类型如下:
-<ul><li> **ENTERPRISE** :此角色为企业参与方</li>
-<li> **INDIVIDUAL** :此角色为个人参与方</li>
-<li> **PROMOTER** :此角色是发起方</li></ul>
+     * Get <p>参与者类型, 可以选择的类型如下:</p><ul><li> **ENTERPRISE** :此角色为企业参与方</li><li> **INDIVIDUAL** :此角色为个人参与方</li><li> **PROMOTER** :此角色是发起方</li></ul> 
+     * @return RecipientType <p>参与者类型, 可以选择的类型如下:</p><ul><li> **ENTERPRISE** :此角色为企业参与方</li><li> **INDIVIDUAL** :此角色为个人参与方</li><li> **PROMOTER** :此角色是发起方</li></ul>
      */
     public String getRecipientType() {
         return this.RecipientType;
     }
 
     /**
-     * Set 参与者类型, 可以选择的类型如下:
-<ul><li> **ENTERPRISE** :此角色为企业参与方</li>
-<li> **INDIVIDUAL** :此角色为个人参与方</li>
-<li> **PROMOTER** :此角色是发起方</li></ul>
-     * @param RecipientType 参与者类型, 可以选择的类型如下:
-<ul><li> **ENTERPRISE** :此角色为企业参与方</li>
-<li> **INDIVIDUAL** :此角色为个人参与方</li>
-<li> **PROMOTER** :此角色是发起方</li></ul>
+     * Set <p>参与者类型, 可以选择的类型如下:</p><ul><li> **ENTERPRISE** :此角色为企业参与方</li><li> **INDIVIDUAL** :此角色为个人参与方</li><li> **PROMOTER** :此角色是发起方</li></ul>
+     * @param RecipientType <p>参与者类型, 可以选择的类型如下:</p><ul><li> **ENTERPRISE** :此角色为企业参与方</li><li> **INDIVIDUAL** :此角色为个人参与方</li><li> **PROMOTER** :此角色是发起方</li></ul>
      */
     public void setRecipientType(String RecipientType) {
         this.RecipientType = RecipientType;
     }
 
     /**
-     * Get 合同参与方的角色描述，长度不能超过100，只能由中文、字母、数字和下划线组成。 
-     * @return Description 合同参与方的角色描述，长度不能超过100，只能由中文、字母、数字和下划线组成。
+     * Get <p>合同参与方的角色描述，长度不能超过100，只能由中文、字母、数字和下划线组成。</p> 
+     * @return Description <p>合同参与方的角色描述，长度不能超过100，只能由中文、字母、数字和下划线组成。</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 合同参与方的角色描述，长度不能超过100，只能由中文、字母、数字和下划线组成。
-     * @param Description 合同参与方的角色描述，长度不能超过100，只能由中文、字母、数字和下划线组成。
+     * Set <p>合同参与方的角色描述，长度不能超过100，只能由中文、字母、数字和下划线组成。</p>
+     * @param Description <p>合同参与方的角色描述，长度不能超过100，只能由中文、字母、数字和下划线组成。</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 合同参与方的角色名字，长度不能超过20，只能由中文、字母、数字和下划线组成。 
-     * @return RoleName 合同参与方的角色名字，长度不能超过20，只能由中文、字母、数字和下划线组成。
+     * Get <p>合同参与方的角色名字，长度不能超过20，只能由中文、字母、数字和下划线组成。</p> 
+     * @return RoleName <p>合同参与方的角色名字，长度不能超过20，只能由中文、字母、数字和下划线组成。</p>
      */
     public String getRoleName() {
         return this.RoleName;
     }
 
     /**
-     * Set 合同参与方的角色名字，长度不能超过20，只能由中文、字母、数字和下划线组成。
-     * @param RoleName 合同参与方的角色名字，长度不能超过20，只能由中文、字母、数字和下划线组成。
+     * Set <p>合同参与方的角色名字，长度不能超过20，只能由中文、字母、数字和下划线组成。</p>
+     * @param RoleName <p>合同参与方的角色名字，长度不能超过20，只能由中文、字母、数字和下划线组成。</p>
      */
     public void setRoleName(String RoleName) {
         this.RoleName = RoleName;
     }
 
     /**
-     * Get 是否需要校验，
-true-是，
-false-否 
-     * @return RequireValidation 是否需要校验，
-true-是，
-false-否
+     * Get <p>是否需要校验，<br>true-是，<br>false-否</p> 
+     * @return RequireValidation <p>是否需要校验，<br>true-是，<br>false-否</p>
      */
     public Boolean getRequireValidation() {
         return this.RequireValidation;
     }
 
     /**
-     * Set 是否需要校验，
-true-是，
-false-否
-     * @param RequireValidation 是否需要校验，
-true-是，
-false-否
+     * Set <p>是否需要校验，<br>true-是，<br>false-否</p>
+     * @param RequireValidation <p>是否需要校验，<br>true-是，<br>false-否</p>
      */
     public void setRequireValidation(Boolean RequireValidation) {
         this.RequireValidation = RequireValidation;
     }
 
     /**
-     * Get 是否必须填写，
-true-是，
-false-否 
-     * @return RequireSign 是否必须填写，
-true-是，
-false-否
+     * Get <p>是否必须填写，<br>true-是，<br>false-否</p> 
+     * @return RequireSign <p>是否必须填写，<br>true-是，<br>false-否</p>
      */
     public Boolean getRequireSign() {
         return this.RequireSign;
     }
 
     /**
-     * Set 是否必须填写，
-true-是，
-false-否
-     * @param RequireSign 是否必须填写，
-true-是，
-false-否
+     * Set <p>是否必须填写，<br>true-是，<br>false-否</p>
+     * @param RequireSign <p>是否必须填写，<br>true-是，<br>false-否</p>
      */
     public void setRequireSign(Boolean RequireSign) {
         this.RequireSign = RequireSign;
     }
 
     /**
-     * Get 内部字段，签署类型 
-     * @return SignType 内部字段，签署类型
+     * Get <p>内部字段，签署类型</p><p>枚举值：</p><ul><li>0： 人脸</li></ul> 
+     * @return SignType <p>内部字段，签署类型</p><p>枚举值：</p><ul><li>0： 人脸</li></ul>
      */
     public Long getSignType() {
         return this.SignType;
     }
 
     /**
-     * Set 内部字段，签署类型
-     * @param SignType 内部字段，签署类型
+     * Set <p>内部字段，签署类型</p><p>枚举值：</p><ul><li>0： 人脸</li></ul>
+     * @param SignType <p>内部字段，签署类型</p><p>枚举值：</p><ul><li>0： 人脸</li></ul>
      */
     public void setSignType(Long SignType) {
         this.SignType = SignType;
     }
 
     /**
-     * Get 签署顺序：数字越小优先级越高 
-     * @return RoutingOrder 签署顺序：数字越小优先级越高
+     * Get <p>签署顺序：数字越小优先级越高</p> 
+     * @return RoutingOrder <p>签署顺序：数字越小优先级越高</p>
      */
     public Long getRoutingOrder() {
         return this.RoutingOrder;
     }
 
     /**
-     * Set 签署顺序：数字越小优先级越高
-     * @param RoutingOrder 签署顺序：数字越小优先级越高
+     * Set <p>签署顺序：数字越小优先级越高</p>
+     * @param RoutingOrder <p>签署顺序：数字越小优先级越高</p>
      */
     public void setRoutingOrder(Long RoutingOrder) {
         this.RoutingOrder = RoutingOrder;
     }
 
     /**
-     * Get 是否是发起方，
-true-是 
-false-否 
-     * @return IsPromoter 是否是发起方，
-true-是 
-false-否
+     * Get <p>是否是发起方，<br>true-是<br>false-否</p> 
+     * @return IsPromoter <p>是否是发起方，<br>true-是<br>false-否</p>
      */
     public Boolean getIsPromoter() {
         return this.IsPromoter;
     }
 
     /**
-     * Set 是否是发起方，
-true-是 
-false-否
-     * @param IsPromoter 是否是发起方，
-true-是 
-false-否
+     * Set <p>是否是发起方，<br>true-是<br>false-否</p>
+     * @param IsPromoter <p>是否是发起方，<br>true-是<br>false-否</p>
      */
     public void setIsPromoter(Boolean IsPromoter) {
         this.IsPromoter = IsPromoter;
     }
 
     /**
-     * Get 签署人查看合同校验方式, 支持的类型如下:
-<ul><li> 1 :实名认证查看</li>
-<li> 2 :手机号校验查看</li></ul> 
-     * @return ApproverVerifyTypes 签署人查看合同校验方式, 支持的类型如下:
-<ul><li> 1 :实名认证查看</li>
-<li> 2 :手机号校验查看</li></ul>
+     * Get <p>签署人查看合同校验方式, 支持的类型如下:</p><ul><li> 1 :实名认证查看</li><li> 2 :手机号校验查看</li></ul> 
+     * @return ApproverVerifyTypes <p>签署人查看合同校验方式, 支持的类型如下:</p><ul><li> 1 :实名认证查看</li><li> 2 :手机号校验查看</li></ul>
      */
     public Long [] getApproverVerifyTypes() {
         return this.ApproverVerifyTypes;
     }
 
     /**
-     * Set 签署人查看合同校验方式, 支持的类型如下:
-<ul><li> 1 :实名认证查看</li>
-<li> 2 :手机号校验查看</li></ul>
-     * @param ApproverVerifyTypes 签署人查看合同校验方式, 支持的类型如下:
-<ul><li> 1 :实名认证查看</li>
-<li> 2 :手机号校验查看</li></ul>
+     * Set <p>签署人查看合同校验方式, 支持的类型如下:</p><ul><li> 1 :实名认证查看</li><li> 2 :手机号校验查看</li></ul>
+     * @param ApproverVerifyTypes <p>签署人查看合同校验方式, 支持的类型如下:</p><ul><li> 1 :实名认证查看</li><li> 2 :手机号校验查看</li></ul>
      */
     public void setApproverVerifyTypes(Long [] ApproverVerifyTypes) {
         this.ApproverVerifyTypes = ApproverVerifyTypes;
     }
 
     /**
-     * Get 签署人进行合同签署时的认证方式，支持的类型如下:
-<ul><li> 1 :人脸认证</li>
-<li> 2 :签署密码</li>
-<li> 3 :运营商三要素认证</li>
-<li> 4 :UKey认证</li>
-<li> 5 :设备指纹识别</li>
-<li> 6 :设备面容识别</li></ul> 
-     * @return ApproverSignTypes 签署人进行合同签署时的认证方式，支持的类型如下:
-<ul><li> 1 :人脸认证</li>
-<li> 2 :签署密码</li>
-<li> 3 :运营商三要素认证</li>
-<li> 4 :UKey认证</li>
-<li> 5 :设备指纹识别</li>
-<li> 6 :设备面容识别</li></ul>
+     * Get <p>签署人进行合同签署时的认证方式，支持的类型如下:</p><ul><li> 1 :人脸认证</li><li> 2 :签署密码</li><li> 3 :运营商三要素认证</li><li> 4 :UKey认证</li><li> 5 :设备指纹识别</li><li> 6 :设备面容识别</li></ul> 
+     * @return ApproverSignTypes <p>签署人进行合同签署时的认证方式，支持的类型如下:</p><ul><li> 1 :人脸认证</li><li> 2 :签署密码</li><li> 3 :运营商三要素认证</li><li> 4 :UKey认证</li><li> 5 :设备指纹识别</li><li> 6 :设备面容识别</li></ul>
      */
     public Long [] getApproverSignTypes() {
         return this.ApproverSignTypes;
     }
 
     /**
-     * Set 签署人进行合同签署时的认证方式，支持的类型如下:
-<ul><li> 1 :人脸认证</li>
-<li> 2 :签署密码</li>
-<li> 3 :运营商三要素认证</li>
-<li> 4 :UKey认证</li>
-<li> 5 :设备指纹识别</li>
-<li> 6 :设备面容识别</li></ul>
-     * @param ApproverSignTypes 签署人进行合同签署时的认证方式，支持的类型如下:
-<ul><li> 1 :人脸认证</li>
-<li> 2 :签署密码</li>
-<li> 3 :运营商三要素认证</li>
-<li> 4 :UKey认证</li>
-<li> 5 :设备指纹识别</li>
-<li> 6 :设备面容识别</li></ul>
+     * Set <p>签署人进行合同签署时的认证方式，支持的类型如下:</p><ul><li> 1 :人脸认证</li><li> 2 :签署密码</li><li> 3 :运营商三要素认证</li><li> 4 :UKey认证</li><li> 5 :设备指纹识别</li><li> 6 :设备面容识别</li></ul>
+     * @param ApproverSignTypes <p>签署人进行合同签署时的认证方式，支持的类型如下:</p><ul><li> 1 :人脸认证</li><li> 2 :签署密码</li><li> 3 :运营商三要素认证</li><li> 4 :UKey认证</li><li> 5 :设备指纹识别</li><li> 6 :设备面容识别</li></ul>
      */
     public void setApproverSignTypes(Long [] ApproverSignTypes) {
         this.ApproverSignTypes = ApproverSignTypes;
     }
 
     /**
-     * Get 签署方是否可以转他人处理
-
-<ul><li> **false** : ( 默认)可以转他人处理</li>
-<li> **true** :不可以转他人处理</li></ul> 
-     * @return NoTransfer 签署方是否可以转他人处理
-
-<ul><li> **false** : ( 默认)可以转他人处理</li>
-<li> **true** :不可以转他人处理</li></ul>
+     * Get <p>签署方是否可以转他人处理</p><ul><li> **false** : ( 默认)可以转他人处理</li><li> **true** :不可以转他人处理</li></ul> 
+     * @return NoTransfer <p>签署方是否可以转他人处理</p><ul><li> **false** : ( 默认)可以转他人处理</li><li> **true** :不可以转他人处理</li></ul>
      */
     public Boolean getNoTransfer() {
         return this.NoTransfer;
     }
 
     /**
-     * Set 签署方是否可以转他人处理
-
-<ul><li> **false** : ( 默认)可以转他人处理</li>
-<li> **true** :不可以转他人处理</li></ul>
-     * @param NoTransfer 签署方是否可以转他人处理
-
-<ul><li> **false** : ( 默认)可以转他人处理</li>
-<li> **true** :不可以转他人处理</li></ul>
+     * Set <p>签署方是否可以转他人处理</p><ul><li> **false** : ( 默认)可以转他人处理</li><li> **true** :不可以转他人处理</li></ul>
+     * @param NoTransfer <p>签署方是否可以转他人处理</p><ul><li> **false** : ( 默认)可以转他人处理</li><li> **true** :不可以转他人处理</li></ul>
      */
     public void setNoTransfer(Boolean NoTransfer) {
         this.NoTransfer = NoTransfer;

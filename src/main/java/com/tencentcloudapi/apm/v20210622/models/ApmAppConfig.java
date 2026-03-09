@@ -24,140 +24,140 @@ import java.util.HashMap;
 public class ApmAppConfig extends AbstractModel {
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceKey")
     @Expose
     private String InstanceKey;
 
     /**
-    * 服务名
+    * <p>服务名</p>
     */
     @SerializedName("ServiceName")
     @Expose
     private String ServiceName;
 
     /**
-    * URL收敛开关
+    * <p>URL收敛开关</p>
     */
     @SerializedName("UrlConvergenceSwitch")
     @Expose
     private Long UrlConvergenceSwitch;
 
     /**
-    * URL收敛阈值
+    * <p>URL收敛阈值</p>
     */
     @SerializedName("UrlConvergenceThreshold")
     @Expose
     private Long UrlConvergenceThreshold;
 
     /**
-    * URL收敛正则
+    * <p>URL收敛正则</p>
     */
     @SerializedName("UrlConvergence")
     @Expose
     private String UrlConvergence;
 
     /**
-    * 异常过滤正则
+    * <p>异常过滤正则</p>
     */
     @SerializedName("ExceptionFilter")
     @Expose
     private String ExceptionFilter;
 
     /**
-    * 错误码过滤
+    * <p>错误码过滤</p>
     */
     @SerializedName("ErrorCodeFilter")
     @Expose
     private String ErrorCodeFilter;
 
     /**
-    * 服务组件类型
+    * <p>服务组件类型</p>
     */
     @SerializedName("Components")
     @Expose
     private String Components;
 
     /**
-    * URL排除正则
+    * <p>URL排除正则</p>
     */
     @SerializedName("UrlExclude")
     @Expose
     private String UrlExclude;
 
     /**
-    * 日志来源
+    * <p>日志来源</p>
     */
     @SerializedName("LogSource")
     @Expose
     private String LogSource;
 
     /**
-    * 日志所在地域
+    * <p>日志所在地域</p>
     */
     @SerializedName("LogRegion")
     @Expose
     private String LogRegion;
 
     /**
-    * 是否开启日志 0 关 1 开
+    * <p>是否开启日志 0 关 1 开</p>
     */
     @SerializedName("IsRelatedLog")
     @Expose
     private Long IsRelatedLog;
 
     /**
-    * 日志主题ID
+    * <p>日志主题ID</p>
     */
     @SerializedName("LogTopicID")
     @Expose
     private String LogTopicID;
 
     /**
-    * 需过滤的接口名
+    * <p>需过滤的接口名</p>
     */
     @SerializedName("IgnoreOperationName")
     @Expose
     private String IgnoreOperationName;
 
     /**
-    * CLS日志集 | ES集群ID
+    * <p>CLS日志集 | ES集群ID</p>
     */
     @SerializedName("LogSet")
     @Expose
     private String LogSet;
 
     /**
-    * 探针每秒上报trace数
+    * <p>探针每秒上报trace数</p>
     */
     @SerializedName("TraceRateLimit")
     @Expose
     private Long TraceRateLimit;
 
     /**
-    * 是否开启线程剖析
+    * <p>是否开启线程剖析</p>
     */
     @SerializedName("EnableSnapshot")
     @Expose
     private Boolean EnableSnapshot;
 
     /**
-    * 线程剖析超时阈值
+    * <p>线程剖析超时阈值</p>
     */
     @SerializedName("SnapshotTimeout")
     @Expose
     private Long SnapshotTimeout;
 
     /**
-    * 是否开启agent
+    * <p>是否开启agent</p>
     */
     @SerializedName("AgentEnable")
     @Expose
     private Boolean AgentEnable;
 
     /**
-    * 组件列表
+    * <p>组件列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstrumentList")
@@ -165,21 +165,21 @@ public class ApmAppConfig extends AbstractModel {
     private Instrument [] InstrumentList;
 
     /**
-    * 是否开启链路压缩
+    * <p>是否开启链路压缩</p>
     */
     @SerializedName("TraceSquash")
     @Expose
     private Boolean TraceSquash;
 
     /**
-    * 是否开启应用诊断开关
+    * <p>是否开启应用诊断开关</p>
     */
     @SerializedName("EventEnable")
     @Expose
     private Boolean EventEnable;
 
     /**
-    * 探针接口相关配置
+    * <p>探针接口相关配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AgentOperationConfigView")
@@ -187,14 +187,14 @@ public class ApmAppConfig extends AbstractModel {
     private AgentOperationConfigView AgentOperationConfigView;
 
     /**
-    * 是否开启应用日志配置
+    * <p>是否开启应用日志配置</p>
     */
     @SerializedName("EnableLogConfig")
     @Expose
     private Boolean EnableLogConfig;
 
     /**
-    * 应用ID
+    * <p>应用ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceID")
@@ -202,7 +202,7 @@ public class ApmAppConfig extends AbstractModel {
     private String ServiceID;
 
     /**
-    * 应用是否开启dashboard配置： false 关（与业务系统保持一致）/true 开（应用级配置）
+    * <p>应用是否开启dashboard配置： false 关（与业务系统保持一致）/true 开（应用级配置）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableDashboardConfig")
@@ -210,7 +210,7 @@ public class ApmAppConfig extends AbstractModel {
     private Boolean EnableDashboardConfig;
 
     /**
-    * 是否关联dashboard： 0 关 1 开
+    * <p>是否关联dashboard： 0 关 1 开</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsRelatedDashboard")
@@ -218,7 +218,7 @@ public class ApmAppConfig extends AbstractModel {
     private Long IsRelatedDashboard;
 
     /**
-    * dashboard ID
+    * <p>dashboard ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DashboardTopicID")
@@ -226,7 +226,7 @@ public class ApmAppConfig extends AbstractModel {
     private String DashboardTopicID;
 
     /**
-    * 是否开启应用级别配置
+    * <p>是否开启应用级别配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableSecurityConfig")
@@ -234,7 +234,7 @@ public class ApmAppConfig extends AbstractModel {
     private Boolean EnableSecurityConfig;
 
     /**
-    * 是否开启组件漏洞检测
+    * <p>是否开启组件漏洞检测</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsInstrumentationVulnerabilityScan")
@@ -242,7 +242,7 @@ public class ApmAppConfig extends AbstractModel {
     private Long IsInstrumentationVulnerabilityScan;
 
     /**
-    * 是否开启SQL注入分析
+    * <p>是否开启SQL注入分析</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsSqlInjectionAnalysis")
@@ -250,7 +250,7 @@ public class ApmAppConfig extends AbstractModel {
     private Long IsSqlInjectionAnalysis;
 
     /**
-    * 是否开启远程命令执行分析
+    * <p>是否开启远程命令执行分析</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsRemoteCommandExecutionAnalysis")
@@ -258,7 +258,7 @@ public class ApmAppConfig extends AbstractModel {
     private Long IsRemoteCommandExecutionAnalysis;
 
     /**
-    * 是否开启内存马检测分析
+    * <p>是否开启内存马检测分析</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsMemoryHijackingAnalysis")
@@ -266,21 +266,21 @@ public class ApmAppConfig extends AbstractModel {
     private Long IsMemoryHijackingAnalysis;
 
     /**
-    * CLS索引类型(0=全文索引，1=键值索引)
+    * <p>CLS索引类型(0=全文索引，1=键值索引)</p>
     */
     @SerializedName("LogIndexType")
     @Expose
     private Long LogIndexType;
 
     /**
-    * traceId的索引key: 当CLS索引类型为键值索引时生效
+    * <p>traceId的索引key: 当CLS索引类型为键值索引时生效</p>
     */
     @SerializedName("LogTraceIdKey")
     @Expose
     private String LogTraceIdKey;
 
     /**
-    * 是否开启删除任意文件检测（0-关闭，1-开启）
+    * <p>是否开启删除任意文件检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsDeleteAnyFileAnalysis")
@@ -288,7 +288,7 @@ public class ApmAppConfig extends AbstractModel {
     private Long IsDeleteAnyFileAnalysis;
 
     /**
-    * 是否开启读取任意文件检测（0-关闭，1-开启）
+    * <p>是否开启读取任意文件检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsReadAnyFileAnalysis")
@@ -296,7 +296,7 @@ public class ApmAppConfig extends AbstractModel {
     private Long IsReadAnyFileAnalysis;
 
     /**
-    * 是否开启上传任意文件检测（0-关闭，1-开启）
+    * <p>是否开启上传任意文件检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsUploadAnyFileAnalysis")
@@ -304,7 +304,7 @@ public class ApmAppConfig extends AbstractModel {
     private Long IsUploadAnyFileAnalysis;
 
     /**
-    * 是否开启包含任意文件检测（0-关闭，1-开启）
+    * <p>是否开启包含任意文件检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsIncludeAnyFileAnalysis")
@@ -312,7 +312,7 @@ public class ApmAppConfig extends AbstractModel {
     private Long IsIncludeAnyFileAnalysis;
 
     /**
-    * 是否开启目录遍历检测（0-关闭，1-开启）
+    * <p>是否开启目录遍历检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsDirectoryTraversalAnalysis")
@@ -320,7 +320,7 @@ public class ApmAppConfig extends AbstractModel {
     private Long IsDirectoryTraversalAnalysis;
 
     /**
-    * 是否开启模板引擎注入检测（0-关闭，1-开启）
+    * <p>是否开启模板引擎注入检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsTemplateEngineInjectionAnalysis")
@@ -328,7 +328,7 @@ public class ApmAppConfig extends AbstractModel {
     private Long IsTemplateEngineInjectionAnalysis;
 
     /**
-    * 是否开启脚本引擎注入检测（0-关闭，1-开启）
+    * <p>是否开启脚本引擎注入检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsScriptEngineInjectionAnalysis")
@@ -336,7 +336,7 @@ public class ApmAppConfig extends AbstractModel {
     private Long IsScriptEngineInjectionAnalysis;
 
     /**
-    * 是否开启表达式注入检测（0-关闭，1-开启）
+    * <p>是否开启表达式注入检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsExpressionInjectionAnalysis")
@@ -344,7 +344,7 @@ public class ApmAppConfig extends AbstractModel {
     private Long IsExpressionInjectionAnalysis;
 
     /**
-    * 是否开启JNDI注入检测（0-关闭，1-开启）
+    * <p>是否开启JNDI注入检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsJNDIInjectionAnalysis")
@@ -352,7 +352,7 @@ public class ApmAppConfig extends AbstractModel {
     private Long IsJNDIInjectionAnalysis;
 
     /**
-    * 是否开启JNI注入检测（0-关闭，1-开启）
+    * <p>是否开启JNI注入检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsJNIInjectionAnalysis")
@@ -360,7 +360,7 @@ public class ApmAppConfig extends AbstractModel {
     private Long IsJNIInjectionAnalysis;
 
     /**
-    * 是否开启Webshell后门检测（0-关闭，1-开启）
+    * <p>是否开启Webshell后门检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsWebshellBackdoorAnalysis")
@@ -368,7 +368,7 @@ public class ApmAppConfig extends AbstractModel {
     private Long IsWebshellBackdoorAnalysis;
 
     /**
-    * 是否开启反序列化检测（0-关闭，1-开启）
+    * <p>是否开启反序列化检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsDeserializationAnalysis")
@@ -376,390 +376,411 @@ public class ApmAppConfig extends AbstractModel {
     private Long IsDeserializationAnalysis;
 
     /**
-    * 接口名称自动收敛开关（0-关闭，1-开启）
+    * <p>接口名称自动收敛开关（0-关闭，1-开启）</p>
     */
     @SerializedName("UrlAutoConvergenceEnable")
     @Expose
     private Boolean UrlAutoConvergenceEnable;
 
     /**
-    * URL长分段收敛阈值
+    * <p>URL长分段收敛阈值</p>
     */
     @SerializedName("UrlLongSegmentThreshold")
     @Expose
     private Long UrlLongSegmentThreshold;
 
     /**
-    * URL数字分段收敛阈值
+    * <p>URL数字分段收敛阈值</p>
     */
     @SerializedName("UrlNumberSegmentThreshold")
     @Expose
     private Long UrlNumberSegmentThreshold;
 
     /**
-    * 探针熔断内存阈值
+    * <p>探针熔断内存阈值</p>
     */
     @SerializedName("DisableMemoryUsed")
     @Expose
     private Long DisableMemoryUsed;
 
     /**
-    * 探针熔断CPU阈值
+    * <p>探针熔断CPU阈值</p>
     */
     @SerializedName("DisableCpuUsed")
     @Expose
     private Long DisableCpuUsed;
 
     /**
-    * 是否开启SQL参数获取
+    * <p>是否开启SQL参数获取</p>
     */
     @SerializedName("DbStatementParametersEnabled")
     @Expose
     private Boolean DbStatementParametersEnabled;
 
     /**
-    * 慢SQL阈值
+    * <p>慢SQL阈值</p>
     */
     @SerializedName("SlowSQLThresholds")
     @Expose
     private ApmTag [] SlowSQLThresholds;
 
     /**
-    * 是否开启脱敏规则
+    * <p>是否开启脱敏规则</p>
     */
     @SerializedName("EnableDesensitizationRule")
     @Expose
     private Long EnableDesensitizationRule;
 
     /**
-    * 脱敏规则
+    * <p>脱敏规则</p>
     */
     @SerializedName("DesensitizationRule")
     @Expose
     private String DesensitizationRule;
 
     /**
-    * spanId的索引key: 当CLS索引类型为键值索引时生效
+    * <p>spanId的索引key: 当CLS索引类型为键值索引时生效</p>
     */
     @SerializedName("LogSpanIdKey")
     @Expose
     private String LogSpanIdKey;
 
     /**
-    * 自动性能剖析配置
+    * <p>自动性能剖析配置</p>
     */
     @SerializedName("AutoProfilingConfig")
     @Expose
     private AutoProfilingConfig AutoProfilingConfig;
 
     /**
-     * Get 实例ID 
-     * @return InstanceKey 实例ID
+    * <p>阈值配置开关。true 表示使用应用级阈值；false 表示使用业务系统级阈值</p>
+    */
+    @SerializedName("EnableThresholdConfig")
+    @Expose
+    private Boolean EnableThresholdConfig;
+
+    /**
+    * <p>错误率阈值（%），用于判断应用健康状态为&quot;红色&quot;</p>
+    */
+    @SerializedName("ErrRateThreshold")
+    @Expose
+    private Long ErrRateThreshold;
+
+    /**
+    * <p>响应时间预警阈值（ms），用于判断应用健康状态为&quot;黄色&quot;</p>
+    */
+    @SerializedName("ResponseDurationWarningThreshold")
+    @Expose
+    private Long ResponseDurationWarningThreshold;
+
+    /**
+     * Get <p>实例ID</p> 
+     * @return InstanceKey <p>实例ID</p>
      */
     public String getInstanceKey() {
         return this.InstanceKey;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceKey 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceKey <p>实例ID</p>
      */
     public void setInstanceKey(String InstanceKey) {
         this.InstanceKey = InstanceKey;
     }
 
     /**
-     * Get 服务名 
-     * @return ServiceName 服务名
+     * Get <p>服务名</p> 
+     * @return ServiceName <p>服务名</p>
      */
     public String getServiceName() {
         return this.ServiceName;
     }
 
     /**
-     * Set 服务名
-     * @param ServiceName 服务名
+     * Set <p>服务名</p>
+     * @param ServiceName <p>服务名</p>
      */
     public void setServiceName(String ServiceName) {
         this.ServiceName = ServiceName;
     }
 
     /**
-     * Get URL收敛开关 
-     * @return UrlConvergenceSwitch URL收敛开关
+     * Get <p>URL收敛开关</p> 
+     * @return UrlConvergenceSwitch <p>URL收敛开关</p>
      */
     public Long getUrlConvergenceSwitch() {
         return this.UrlConvergenceSwitch;
     }
 
     /**
-     * Set URL收敛开关
-     * @param UrlConvergenceSwitch URL收敛开关
+     * Set <p>URL收敛开关</p>
+     * @param UrlConvergenceSwitch <p>URL收敛开关</p>
      */
     public void setUrlConvergenceSwitch(Long UrlConvergenceSwitch) {
         this.UrlConvergenceSwitch = UrlConvergenceSwitch;
     }
 
     /**
-     * Get URL收敛阈值 
-     * @return UrlConvergenceThreshold URL收敛阈值
+     * Get <p>URL收敛阈值</p> 
+     * @return UrlConvergenceThreshold <p>URL收敛阈值</p>
      */
     public Long getUrlConvergenceThreshold() {
         return this.UrlConvergenceThreshold;
     }
 
     /**
-     * Set URL收敛阈值
-     * @param UrlConvergenceThreshold URL收敛阈值
+     * Set <p>URL收敛阈值</p>
+     * @param UrlConvergenceThreshold <p>URL收敛阈值</p>
      */
     public void setUrlConvergenceThreshold(Long UrlConvergenceThreshold) {
         this.UrlConvergenceThreshold = UrlConvergenceThreshold;
     }
 
     /**
-     * Get URL收敛正则 
-     * @return UrlConvergence URL收敛正则
+     * Get <p>URL收敛正则</p> 
+     * @return UrlConvergence <p>URL收敛正则</p>
      */
     public String getUrlConvergence() {
         return this.UrlConvergence;
     }
 
     /**
-     * Set URL收敛正则
-     * @param UrlConvergence URL收敛正则
+     * Set <p>URL收敛正则</p>
+     * @param UrlConvergence <p>URL收敛正则</p>
      */
     public void setUrlConvergence(String UrlConvergence) {
         this.UrlConvergence = UrlConvergence;
     }
 
     /**
-     * Get 异常过滤正则 
-     * @return ExceptionFilter 异常过滤正则
+     * Get <p>异常过滤正则</p> 
+     * @return ExceptionFilter <p>异常过滤正则</p>
      */
     public String getExceptionFilter() {
         return this.ExceptionFilter;
     }
 
     /**
-     * Set 异常过滤正则
-     * @param ExceptionFilter 异常过滤正则
+     * Set <p>异常过滤正则</p>
+     * @param ExceptionFilter <p>异常过滤正则</p>
      */
     public void setExceptionFilter(String ExceptionFilter) {
         this.ExceptionFilter = ExceptionFilter;
     }
 
     /**
-     * Get 错误码过滤 
-     * @return ErrorCodeFilter 错误码过滤
+     * Get <p>错误码过滤</p> 
+     * @return ErrorCodeFilter <p>错误码过滤</p>
      */
     public String getErrorCodeFilter() {
         return this.ErrorCodeFilter;
     }
 
     /**
-     * Set 错误码过滤
-     * @param ErrorCodeFilter 错误码过滤
+     * Set <p>错误码过滤</p>
+     * @param ErrorCodeFilter <p>错误码过滤</p>
      */
     public void setErrorCodeFilter(String ErrorCodeFilter) {
         this.ErrorCodeFilter = ErrorCodeFilter;
     }
 
     /**
-     * Get 服务组件类型 
-     * @return Components 服务组件类型
+     * Get <p>服务组件类型</p> 
+     * @return Components <p>服务组件类型</p>
      */
     public String getComponents() {
         return this.Components;
     }
 
     /**
-     * Set 服务组件类型
-     * @param Components 服务组件类型
+     * Set <p>服务组件类型</p>
+     * @param Components <p>服务组件类型</p>
      */
     public void setComponents(String Components) {
         this.Components = Components;
     }
 
     /**
-     * Get URL排除正则 
-     * @return UrlExclude URL排除正则
+     * Get <p>URL排除正则</p> 
+     * @return UrlExclude <p>URL排除正则</p>
      */
     public String getUrlExclude() {
         return this.UrlExclude;
     }
 
     /**
-     * Set URL排除正则
-     * @param UrlExclude URL排除正则
+     * Set <p>URL排除正则</p>
+     * @param UrlExclude <p>URL排除正则</p>
      */
     public void setUrlExclude(String UrlExclude) {
         this.UrlExclude = UrlExclude;
     }
 
     /**
-     * Get 日志来源 
-     * @return LogSource 日志来源
+     * Get <p>日志来源</p> 
+     * @return LogSource <p>日志来源</p>
      */
     public String getLogSource() {
         return this.LogSource;
     }
 
     /**
-     * Set 日志来源
-     * @param LogSource 日志来源
+     * Set <p>日志来源</p>
+     * @param LogSource <p>日志来源</p>
      */
     public void setLogSource(String LogSource) {
         this.LogSource = LogSource;
     }
 
     /**
-     * Get 日志所在地域 
-     * @return LogRegion 日志所在地域
+     * Get <p>日志所在地域</p> 
+     * @return LogRegion <p>日志所在地域</p>
      */
     public String getLogRegion() {
         return this.LogRegion;
     }
 
     /**
-     * Set 日志所在地域
-     * @param LogRegion 日志所在地域
+     * Set <p>日志所在地域</p>
+     * @param LogRegion <p>日志所在地域</p>
      */
     public void setLogRegion(String LogRegion) {
         this.LogRegion = LogRegion;
     }
 
     /**
-     * Get 是否开启日志 0 关 1 开 
-     * @return IsRelatedLog 是否开启日志 0 关 1 开
+     * Get <p>是否开启日志 0 关 1 开</p> 
+     * @return IsRelatedLog <p>是否开启日志 0 关 1 开</p>
      */
     public Long getIsRelatedLog() {
         return this.IsRelatedLog;
     }
 
     /**
-     * Set 是否开启日志 0 关 1 开
-     * @param IsRelatedLog 是否开启日志 0 关 1 开
+     * Set <p>是否开启日志 0 关 1 开</p>
+     * @param IsRelatedLog <p>是否开启日志 0 关 1 开</p>
      */
     public void setIsRelatedLog(Long IsRelatedLog) {
         this.IsRelatedLog = IsRelatedLog;
     }
 
     /**
-     * Get 日志主题ID 
-     * @return LogTopicID 日志主题ID
+     * Get <p>日志主题ID</p> 
+     * @return LogTopicID <p>日志主题ID</p>
      */
     public String getLogTopicID() {
         return this.LogTopicID;
     }
 
     /**
-     * Set 日志主题ID
-     * @param LogTopicID 日志主题ID
+     * Set <p>日志主题ID</p>
+     * @param LogTopicID <p>日志主题ID</p>
      */
     public void setLogTopicID(String LogTopicID) {
         this.LogTopicID = LogTopicID;
     }
 
     /**
-     * Get 需过滤的接口名 
-     * @return IgnoreOperationName 需过滤的接口名
+     * Get <p>需过滤的接口名</p> 
+     * @return IgnoreOperationName <p>需过滤的接口名</p>
      */
     public String getIgnoreOperationName() {
         return this.IgnoreOperationName;
     }
 
     /**
-     * Set 需过滤的接口名
-     * @param IgnoreOperationName 需过滤的接口名
+     * Set <p>需过滤的接口名</p>
+     * @param IgnoreOperationName <p>需过滤的接口名</p>
      */
     public void setIgnoreOperationName(String IgnoreOperationName) {
         this.IgnoreOperationName = IgnoreOperationName;
     }
 
     /**
-     * Get CLS日志集 | ES集群ID 
-     * @return LogSet CLS日志集 | ES集群ID
+     * Get <p>CLS日志集 | ES集群ID</p> 
+     * @return LogSet <p>CLS日志集 | ES集群ID</p>
      */
     public String getLogSet() {
         return this.LogSet;
     }
 
     /**
-     * Set CLS日志集 | ES集群ID
-     * @param LogSet CLS日志集 | ES集群ID
+     * Set <p>CLS日志集 | ES集群ID</p>
+     * @param LogSet <p>CLS日志集 | ES集群ID</p>
      */
     public void setLogSet(String LogSet) {
         this.LogSet = LogSet;
     }
 
     /**
-     * Get 探针每秒上报trace数 
-     * @return TraceRateLimit 探针每秒上报trace数
+     * Get <p>探针每秒上报trace数</p> 
+     * @return TraceRateLimit <p>探针每秒上报trace数</p>
      */
     public Long getTraceRateLimit() {
         return this.TraceRateLimit;
     }
 
     /**
-     * Set 探针每秒上报trace数
-     * @param TraceRateLimit 探针每秒上报trace数
+     * Set <p>探针每秒上报trace数</p>
+     * @param TraceRateLimit <p>探针每秒上报trace数</p>
      */
     public void setTraceRateLimit(Long TraceRateLimit) {
         this.TraceRateLimit = TraceRateLimit;
     }
 
     /**
-     * Get 是否开启线程剖析 
-     * @return EnableSnapshot 是否开启线程剖析
+     * Get <p>是否开启线程剖析</p> 
+     * @return EnableSnapshot <p>是否开启线程剖析</p>
      */
     public Boolean getEnableSnapshot() {
         return this.EnableSnapshot;
     }
 
     /**
-     * Set 是否开启线程剖析
-     * @param EnableSnapshot 是否开启线程剖析
+     * Set <p>是否开启线程剖析</p>
+     * @param EnableSnapshot <p>是否开启线程剖析</p>
      */
     public void setEnableSnapshot(Boolean EnableSnapshot) {
         this.EnableSnapshot = EnableSnapshot;
     }
 
     /**
-     * Get 线程剖析超时阈值 
-     * @return SnapshotTimeout 线程剖析超时阈值
+     * Get <p>线程剖析超时阈值</p> 
+     * @return SnapshotTimeout <p>线程剖析超时阈值</p>
      */
     public Long getSnapshotTimeout() {
         return this.SnapshotTimeout;
     }
 
     /**
-     * Set 线程剖析超时阈值
-     * @param SnapshotTimeout 线程剖析超时阈值
+     * Set <p>线程剖析超时阈值</p>
+     * @param SnapshotTimeout <p>线程剖析超时阈值</p>
      */
     public void setSnapshotTimeout(Long SnapshotTimeout) {
         this.SnapshotTimeout = SnapshotTimeout;
     }
 
     /**
-     * Get 是否开启agent 
-     * @return AgentEnable 是否开启agent
+     * Get <p>是否开启agent</p> 
+     * @return AgentEnable <p>是否开启agent</p>
      */
     public Boolean getAgentEnable() {
         return this.AgentEnable;
     }
 
     /**
-     * Set 是否开启agent
-     * @param AgentEnable 是否开启agent
+     * Set <p>是否开启agent</p>
+     * @param AgentEnable <p>是否开启agent</p>
      */
     public void setAgentEnable(Boolean AgentEnable) {
         this.AgentEnable = AgentEnable;
     }
 
     /**
-     * Get 组件列表
+     * Get <p>组件列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstrumentList 组件列表
+     * @return InstrumentList <p>组件列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Instrument [] getInstrumentList() {
@@ -767,9 +788,9 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Set 组件列表
+     * Set <p>组件列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstrumentList 组件列表
+     * @param InstrumentList <p>组件列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstrumentList(Instrument [] InstrumentList) {
@@ -777,41 +798,41 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Get 是否开启链路压缩 
-     * @return TraceSquash 是否开启链路压缩
+     * Get <p>是否开启链路压缩</p> 
+     * @return TraceSquash <p>是否开启链路压缩</p>
      */
     public Boolean getTraceSquash() {
         return this.TraceSquash;
     }
 
     /**
-     * Set 是否开启链路压缩
-     * @param TraceSquash 是否开启链路压缩
+     * Set <p>是否开启链路压缩</p>
+     * @param TraceSquash <p>是否开启链路压缩</p>
      */
     public void setTraceSquash(Boolean TraceSquash) {
         this.TraceSquash = TraceSquash;
     }
 
     /**
-     * Get 是否开启应用诊断开关 
-     * @return EventEnable 是否开启应用诊断开关
+     * Get <p>是否开启应用诊断开关</p> 
+     * @return EventEnable <p>是否开启应用诊断开关</p>
      */
     public Boolean getEventEnable() {
         return this.EventEnable;
     }
 
     /**
-     * Set 是否开启应用诊断开关
-     * @param EventEnable 是否开启应用诊断开关
+     * Set <p>是否开启应用诊断开关</p>
+     * @param EventEnable <p>是否开启应用诊断开关</p>
      */
     public void setEventEnable(Boolean EventEnable) {
         this.EventEnable = EventEnable;
     }
 
     /**
-     * Get 探针接口相关配置
+     * Get <p>探针接口相关配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AgentOperationConfigView 探针接口相关配置
+     * @return AgentOperationConfigView <p>探针接口相关配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AgentOperationConfigView getAgentOperationConfigView() {
@@ -819,9 +840,9 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Set 探针接口相关配置
+     * Set <p>探针接口相关配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AgentOperationConfigView 探针接口相关配置
+     * @param AgentOperationConfigView <p>探针接口相关配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAgentOperationConfigView(AgentOperationConfigView AgentOperationConfigView) {
@@ -829,25 +850,25 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Get 是否开启应用日志配置 
-     * @return EnableLogConfig 是否开启应用日志配置
+     * Get <p>是否开启应用日志配置</p> 
+     * @return EnableLogConfig <p>是否开启应用日志配置</p>
      */
     public Boolean getEnableLogConfig() {
         return this.EnableLogConfig;
     }
 
     /**
-     * Set 是否开启应用日志配置
-     * @param EnableLogConfig 是否开启应用日志配置
+     * Set <p>是否开启应用日志配置</p>
+     * @param EnableLogConfig <p>是否开启应用日志配置</p>
      */
     public void setEnableLogConfig(Boolean EnableLogConfig) {
         this.EnableLogConfig = EnableLogConfig;
     }
 
     /**
-     * Get 应用ID
+     * Get <p>应用ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ServiceID 应用ID
+     * @return ServiceID <p>应用ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServiceID() {
@@ -855,9 +876,9 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Set 应用ID
+     * Set <p>应用ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ServiceID 应用ID
+     * @param ServiceID <p>应用ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceID(String ServiceID) {
@@ -865,9 +886,9 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Get 应用是否开启dashboard配置： false 关（与业务系统保持一致）/true 开（应用级配置）
+     * Get <p>应用是否开启dashboard配置： false 关（与业务系统保持一致）/true 开（应用级配置）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EnableDashboardConfig 应用是否开启dashboard配置： false 关（与业务系统保持一致）/true 开（应用级配置）
+     * @return EnableDashboardConfig <p>应用是否开启dashboard配置： false 关（与业务系统保持一致）/true 开（应用级配置）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableDashboardConfig() {
@@ -875,9 +896,9 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Set 应用是否开启dashboard配置： false 关（与业务系统保持一致）/true 开（应用级配置）
+     * Set <p>应用是否开启dashboard配置： false 关（与业务系统保持一致）/true 开（应用级配置）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EnableDashboardConfig 应用是否开启dashboard配置： false 关（与业务系统保持一致）/true 开（应用级配置）
+     * @param EnableDashboardConfig <p>应用是否开启dashboard配置： false 关（与业务系统保持一致）/true 开（应用级配置）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableDashboardConfig(Boolean EnableDashboardConfig) {
@@ -885,9 +906,9 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Get 是否关联dashboard： 0 关 1 开
+     * Get <p>是否关联dashboard： 0 关 1 开</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsRelatedDashboard 是否关联dashboard： 0 关 1 开
+     * @return IsRelatedDashboard <p>是否关联dashboard： 0 关 1 开</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsRelatedDashboard() {
@@ -895,9 +916,9 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Set 是否关联dashboard： 0 关 1 开
+     * Set <p>是否关联dashboard： 0 关 1 开</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsRelatedDashboard 是否关联dashboard： 0 关 1 开
+     * @param IsRelatedDashboard <p>是否关联dashboard： 0 关 1 开</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsRelatedDashboard(Long IsRelatedDashboard) {
@@ -905,9 +926,9 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Get dashboard ID
+     * Get <p>dashboard ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DashboardTopicID dashboard ID
+     * @return DashboardTopicID <p>dashboard ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDashboardTopicID() {
@@ -915,9 +936,9 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Set dashboard ID
+     * Set <p>dashboard ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DashboardTopicID dashboard ID
+     * @param DashboardTopicID <p>dashboard ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDashboardTopicID(String DashboardTopicID) {
@@ -925,9 +946,9 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Get 是否开启应用级别配置
+     * Get <p>是否开启应用级别配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EnableSecurityConfig 是否开启应用级别配置
+     * @return EnableSecurityConfig <p>是否开启应用级别配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableSecurityConfig() {
@@ -935,9 +956,9 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Set 是否开启应用级别配置
+     * Set <p>是否开启应用级别配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EnableSecurityConfig 是否开启应用级别配置
+     * @param EnableSecurityConfig <p>是否开启应用级别配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableSecurityConfig(Boolean EnableSecurityConfig) {
@@ -945,9 +966,9 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Get 是否开启组件漏洞检测
+     * Get <p>是否开启组件漏洞检测</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsInstrumentationVulnerabilityScan 是否开启组件漏洞检测
+     * @return IsInstrumentationVulnerabilityScan <p>是否开启组件漏洞检测</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsInstrumentationVulnerabilityScan() {
@@ -955,9 +976,9 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Set 是否开启组件漏洞检测
+     * Set <p>是否开启组件漏洞检测</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsInstrumentationVulnerabilityScan 是否开启组件漏洞检测
+     * @param IsInstrumentationVulnerabilityScan <p>是否开启组件漏洞检测</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsInstrumentationVulnerabilityScan(Long IsInstrumentationVulnerabilityScan) {
@@ -965,9 +986,9 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Get 是否开启SQL注入分析
+     * Get <p>是否开启SQL注入分析</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsSqlInjectionAnalysis 是否开启SQL注入分析
+     * @return IsSqlInjectionAnalysis <p>是否开启SQL注入分析</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsSqlInjectionAnalysis() {
@@ -975,9 +996,9 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Set 是否开启SQL注入分析
+     * Set <p>是否开启SQL注入分析</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsSqlInjectionAnalysis 是否开启SQL注入分析
+     * @param IsSqlInjectionAnalysis <p>是否开启SQL注入分析</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsSqlInjectionAnalysis(Long IsSqlInjectionAnalysis) {
@@ -985,9 +1006,9 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Get 是否开启远程命令执行分析
+     * Get <p>是否开启远程命令执行分析</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsRemoteCommandExecutionAnalysis 是否开启远程命令执行分析
+     * @return IsRemoteCommandExecutionAnalysis <p>是否开启远程命令执行分析</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsRemoteCommandExecutionAnalysis() {
@@ -995,9 +1016,9 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Set 是否开启远程命令执行分析
+     * Set <p>是否开启远程命令执行分析</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsRemoteCommandExecutionAnalysis 是否开启远程命令执行分析
+     * @param IsRemoteCommandExecutionAnalysis <p>是否开启远程命令执行分析</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsRemoteCommandExecutionAnalysis(Long IsRemoteCommandExecutionAnalysis) {
@@ -1005,9 +1026,9 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Get 是否开启内存马检测分析
+     * Get <p>是否开启内存马检测分析</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsMemoryHijackingAnalysis 是否开启内存马检测分析
+     * @return IsMemoryHijackingAnalysis <p>是否开启内存马检测分析</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsMemoryHijackingAnalysis() {
@@ -1015,9 +1036,9 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Set 是否开启内存马检测分析
+     * Set <p>是否开启内存马检测分析</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsMemoryHijackingAnalysis 是否开启内存马检测分析
+     * @param IsMemoryHijackingAnalysis <p>是否开启内存马检测分析</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsMemoryHijackingAnalysis(Long IsMemoryHijackingAnalysis) {
@@ -1025,41 +1046,41 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Get CLS索引类型(0=全文索引，1=键值索引) 
-     * @return LogIndexType CLS索引类型(0=全文索引，1=键值索引)
+     * Get <p>CLS索引类型(0=全文索引，1=键值索引)</p> 
+     * @return LogIndexType <p>CLS索引类型(0=全文索引，1=键值索引)</p>
      */
     public Long getLogIndexType() {
         return this.LogIndexType;
     }
 
     /**
-     * Set CLS索引类型(0=全文索引，1=键值索引)
-     * @param LogIndexType CLS索引类型(0=全文索引，1=键值索引)
+     * Set <p>CLS索引类型(0=全文索引，1=键值索引)</p>
+     * @param LogIndexType <p>CLS索引类型(0=全文索引，1=键值索引)</p>
      */
     public void setLogIndexType(Long LogIndexType) {
         this.LogIndexType = LogIndexType;
     }
 
     /**
-     * Get traceId的索引key: 当CLS索引类型为键值索引时生效 
-     * @return LogTraceIdKey traceId的索引key: 当CLS索引类型为键值索引时生效
+     * Get <p>traceId的索引key: 当CLS索引类型为键值索引时生效</p> 
+     * @return LogTraceIdKey <p>traceId的索引key: 当CLS索引类型为键值索引时生效</p>
      */
     public String getLogTraceIdKey() {
         return this.LogTraceIdKey;
     }
 
     /**
-     * Set traceId的索引key: 当CLS索引类型为键值索引时生效
-     * @param LogTraceIdKey traceId的索引key: 当CLS索引类型为键值索引时生效
+     * Set <p>traceId的索引key: 当CLS索引类型为键值索引时生效</p>
+     * @param LogTraceIdKey <p>traceId的索引key: 当CLS索引类型为键值索引时生效</p>
      */
     public void setLogTraceIdKey(String LogTraceIdKey) {
         this.LogTraceIdKey = LogTraceIdKey;
     }
 
     /**
-     * Get 是否开启删除任意文件检测（0-关闭，1-开启）
+     * Get <p>是否开启删除任意文件检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsDeleteAnyFileAnalysis 是否开启删除任意文件检测（0-关闭，1-开启）
+     * @return IsDeleteAnyFileAnalysis <p>是否开启删除任意文件检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsDeleteAnyFileAnalysis() {
@@ -1067,9 +1088,9 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Set 是否开启删除任意文件检测（0-关闭，1-开启）
+     * Set <p>是否开启删除任意文件检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsDeleteAnyFileAnalysis 是否开启删除任意文件检测（0-关闭，1-开启）
+     * @param IsDeleteAnyFileAnalysis <p>是否开启删除任意文件检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsDeleteAnyFileAnalysis(Long IsDeleteAnyFileAnalysis) {
@@ -1077,9 +1098,9 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Get 是否开启读取任意文件检测（0-关闭，1-开启）
+     * Get <p>是否开启读取任意文件检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsReadAnyFileAnalysis 是否开启读取任意文件检测（0-关闭，1-开启）
+     * @return IsReadAnyFileAnalysis <p>是否开启读取任意文件检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsReadAnyFileAnalysis() {
@@ -1087,9 +1108,9 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Set 是否开启读取任意文件检测（0-关闭，1-开启）
+     * Set <p>是否开启读取任意文件检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsReadAnyFileAnalysis 是否开启读取任意文件检测（0-关闭，1-开启）
+     * @param IsReadAnyFileAnalysis <p>是否开启读取任意文件检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsReadAnyFileAnalysis(Long IsReadAnyFileAnalysis) {
@@ -1097,9 +1118,9 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Get 是否开启上传任意文件检测（0-关闭，1-开启）
+     * Get <p>是否开启上传任意文件检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsUploadAnyFileAnalysis 是否开启上传任意文件检测（0-关闭，1-开启）
+     * @return IsUploadAnyFileAnalysis <p>是否开启上传任意文件检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsUploadAnyFileAnalysis() {
@@ -1107,9 +1128,9 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Set 是否开启上传任意文件检测（0-关闭，1-开启）
+     * Set <p>是否开启上传任意文件检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsUploadAnyFileAnalysis 是否开启上传任意文件检测（0-关闭，1-开启）
+     * @param IsUploadAnyFileAnalysis <p>是否开启上传任意文件检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsUploadAnyFileAnalysis(Long IsUploadAnyFileAnalysis) {
@@ -1117,9 +1138,9 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Get 是否开启包含任意文件检测（0-关闭，1-开启）
+     * Get <p>是否开启包含任意文件检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsIncludeAnyFileAnalysis 是否开启包含任意文件检测（0-关闭，1-开启）
+     * @return IsIncludeAnyFileAnalysis <p>是否开启包含任意文件检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsIncludeAnyFileAnalysis() {
@@ -1127,9 +1148,9 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Set 是否开启包含任意文件检测（0-关闭，1-开启）
+     * Set <p>是否开启包含任意文件检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsIncludeAnyFileAnalysis 是否开启包含任意文件检测（0-关闭，1-开启）
+     * @param IsIncludeAnyFileAnalysis <p>是否开启包含任意文件检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsIncludeAnyFileAnalysis(Long IsIncludeAnyFileAnalysis) {
@@ -1137,9 +1158,9 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Get 是否开启目录遍历检测（0-关闭，1-开启）
+     * Get <p>是否开启目录遍历检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsDirectoryTraversalAnalysis 是否开启目录遍历检测（0-关闭，1-开启）
+     * @return IsDirectoryTraversalAnalysis <p>是否开启目录遍历检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsDirectoryTraversalAnalysis() {
@@ -1147,9 +1168,9 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Set 是否开启目录遍历检测（0-关闭，1-开启）
+     * Set <p>是否开启目录遍历检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsDirectoryTraversalAnalysis 是否开启目录遍历检测（0-关闭，1-开启）
+     * @param IsDirectoryTraversalAnalysis <p>是否开启目录遍历检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsDirectoryTraversalAnalysis(Long IsDirectoryTraversalAnalysis) {
@@ -1157,9 +1178,9 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Get 是否开启模板引擎注入检测（0-关闭，1-开启）
+     * Get <p>是否开启模板引擎注入检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsTemplateEngineInjectionAnalysis 是否开启模板引擎注入检测（0-关闭，1-开启）
+     * @return IsTemplateEngineInjectionAnalysis <p>是否开启模板引擎注入检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsTemplateEngineInjectionAnalysis() {
@@ -1167,9 +1188,9 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Set 是否开启模板引擎注入检测（0-关闭，1-开启）
+     * Set <p>是否开启模板引擎注入检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsTemplateEngineInjectionAnalysis 是否开启模板引擎注入检测（0-关闭，1-开启）
+     * @param IsTemplateEngineInjectionAnalysis <p>是否开启模板引擎注入检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsTemplateEngineInjectionAnalysis(Long IsTemplateEngineInjectionAnalysis) {
@@ -1177,9 +1198,9 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Get 是否开启脚本引擎注入检测（0-关闭，1-开启）
+     * Get <p>是否开启脚本引擎注入检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsScriptEngineInjectionAnalysis 是否开启脚本引擎注入检测（0-关闭，1-开启）
+     * @return IsScriptEngineInjectionAnalysis <p>是否开启脚本引擎注入检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsScriptEngineInjectionAnalysis() {
@@ -1187,9 +1208,9 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Set 是否开启脚本引擎注入检测（0-关闭，1-开启）
+     * Set <p>是否开启脚本引擎注入检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsScriptEngineInjectionAnalysis 是否开启脚本引擎注入检测（0-关闭，1-开启）
+     * @param IsScriptEngineInjectionAnalysis <p>是否开启脚本引擎注入检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsScriptEngineInjectionAnalysis(Long IsScriptEngineInjectionAnalysis) {
@@ -1197,9 +1218,9 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Get 是否开启表达式注入检测（0-关闭，1-开启）
+     * Get <p>是否开启表达式注入检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsExpressionInjectionAnalysis 是否开启表达式注入检测（0-关闭，1-开启）
+     * @return IsExpressionInjectionAnalysis <p>是否开启表达式注入检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsExpressionInjectionAnalysis() {
@@ -1207,9 +1228,9 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Set 是否开启表达式注入检测（0-关闭，1-开启）
+     * Set <p>是否开启表达式注入检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsExpressionInjectionAnalysis 是否开启表达式注入检测（0-关闭，1-开启）
+     * @param IsExpressionInjectionAnalysis <p>是否开启表达式注入检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsExpressionInjectionAnalysis(Long IsExpressionInjectionAnalysis) {
@@ -1217,9 +1238,9 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Get 是否开启JNDI注入检测（0-关闭，1-开启）
+     * Get <p>是否开启JNDI注入检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsJNDIInjectionAnalysis 是否开启JNDI注入检测（0-关闭，1-开启）
+     * @return IsJNDIInjectionAnalysis <p>是否开启JNDI注入检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsJNDIInjectionAnalysis() {
@@ -1227,9 +1248,9 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Set 是否开启JNDI注入检测（0-关闭，1-开启）
+     * Set <p>是否开启JNDI注入检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsJNDIInjectionAnalysis 是否开启JNDI注入检测（0-关闭，1-开启）
+     * @param IsJNDIInjectionAnalysis <p>是否开启JNDI注入检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsJNDIInjectionAnalysis(Long IsJNDIInjectionAnalysis) {
@@ -1237,9 +1258,9 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Get 是否开启JNI注入检测（0-关闭，1-开启）
+     * Get <p>是否开启JNI注入检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsJNIInjectionAnalysis 是否开启JNI注入检测（0-关闭，1-开启）
+     * @return IsJNIInjectionAnalysis <p>是否开启JNI注入检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsJNIInjectionAnalysis() {
@@ -1247,9 +1268,9 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Set 是否开启JNI注入检测（0-关闭，1-开启）
+     * Set <p>是否开启JNI注入检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsJNIInjectionAnalysis 是否开启JNI注入检测（0-关闭，1-开启）
+     * @param IsJNIInjectionAnalysis <p>是否开启JNI注入检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsJNIInjectionAnalysis(Long IsJNIInjectionAnalysis) {
@@ -1257,9 +1278,9 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Get 是否开启Webshell后门检测（0-关闭，1-开启）
+     * Get <p>是否开启Webshell后门检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsWebshellBackdoorAnalysis 是否开启Webshell后门检测（0-关闭，1-开启）
+     * @return IsWebshellBackdoorAnalysis <p>是否开启Webshell后门检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsWebshellBackdoorAnalysis() {
@@ -1267,9 +1288,9 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Set 是否开启Webshell后门检测（0-关闭，1-开启）
+     * Set <p>是否开启Webshell后门检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsWebshellBackdoorAnalysis 是否开启Webshell后门检测（0-关闭，1-开启）
+     * @param IsWebshellBackdoorAnalysis <p>是否开启Webshell后门检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsWebshellBackdoorAnalysis(Long IsWebshellBackdoorAnalysis) {
@@ -1277,9 +1298,9 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Get 是否开启反序列化检测（0-关闭，1-开启）
+     * Get <p>是否开启反序列化检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsDeserializationAnalysis 是否开启反序列化检测（0-关闭，1-开启）
+     * @return IsDeserializationAnalysis <p>是否开启反序列化检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsDeserializationAnalysis() {
@@ -1287,9 +1308,9 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Set 是否开启反序列化检测（0-关闭，1-开启）
+     * Set <p>是否开启反序列化检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsDeserializationAnalysis 是否开启反序列化检测（0-关闭，1-开启）
+     * @param IsDeserializationAnalysis <p>是否开启反序列化检测（0-关闭，1-开启）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsDeserializationAnalysis(Long IsDeserializationAnalysis) {
@@ -1297,179 +1318,227 @@ public class ApmAppConfig extends AbstractModel {
     }
 
     /**
-     * Get 接口名称自动收敛开关（0-关闭，1-开启） 
-     * @return UrlAutoConvergenceEnable 接口名称自动收敛开关（0-关闭，1-开启）
+     * Get <p>接口名称自动收敛开关（0-关闭，1-开启）</p> 
+     * @return UrlAutoConvergenceEnable <p>接口名称自动收敛开关（0-关闭，1-开启）</p>
      */
     public Boolean getUrlAutoConvergenceEnable() {
         return this.UrlAutoConvergenceEnable;
     }
 
     /**
-     * Set 接口名称自动收敛开关（0-关闭，1-开启）
-     * @param UrlAutoConvergenceEnable 接口名称自动收敛开关（0-关闭，1-开启）
+     * Set <p>接口名称自动收敛开关（0-关闭，1-开启）</p>
+     * @param UrlAutoConvergenceEnable <p>接口名称自动收敛开关（0-关闭，1-开启）</p>
      */
     public void setUrlAutoConvergenceEnable(Boolean UrlAutoConvergenceEnable) {
         this.UrlAutoConvergenceEnable = UrlAutoConvergenceEnable;
     }
 
     /**
-     * Get URL长分段收敛阈值 
-     * @return UrlLongSegmentThreshold URL长分段收敛阈值
+     * Get <p>URL长分段收敛阈值</p> 
+     * @return UrlLongSegmentThreshold <p>URL长分段收敛阈值</p>
      */
     public Long getUrlLongSegmentThreshold() {
         return this.UrlLongSegmentThreshold;
     }
 
     /**
-     * Set URL长分段收敛阈值
-     * @param UrlLongSegmentThreshold URL长分段收敛阈值
+     * Set <p>URL长分段收敛阈值</p>
+     * @param UrlLongSegmentThreshold <p>URL长分段收敛阈值</p>
      */
     public void setUrlLongSegmentThreshold(Long UrlLongSegmentThreshold) {
         this.UrlLongSegmentThreshold = UrlLongSegmentThreshold;
     }
 
     /**
-     * Get URL数字分段收敛阈值 
-     * @return UrlNumberSegmentThreshold URL数字分段收敛阈值
+     * Get <p>URL数字分段收敛阈值</p> 
+     * @return UrlNumberSegmentThreshold <p>URL数字分段收敛阈值</p>
      */
     public Long getUrlNumberSegmentThreshold() {
         return this.UrlNumberSegmentThreshold;
     }
 
     /**
-     * Set URL数字分段收敛阈值
-     * @param UrlNumberSegmentThreshold URL数字分段收敛阈值
+     * Set <p>URL数字分段收敛阈值</p>
+     * @param UrlNumberSegmentThreshold <p>URL数字分段收敛阈值</p>
      */
     public void setUrlNumberSegmentThreshold(Long UrlNumberSegmentThreshold) {
         this.UrlNumberSegmentThreshold = UrlNumberSegmentThreshold;
     }
 
     /**
-     * Get 探针熔断内存阈值 
-     * @return DisableMemoryUsed 探针熔断内存阈值
+     * Get <p>探针熔断内存阈值</p> 
+     * @return DisableMemoryUsed <p>探针熔断内存阈值</p>
      */
     public Long getDisableMemoryUsed() {
         return this.DisableMemoryUsed;
     }
 
     /**
-     * Set 探针熔断内存阈值
-     * @param DisableMemoryUsed 探针熔断内存阈值
+     * Set <p>探针熔断内存阈值</p>
+     * @param DisableMemoryUsed <p>探针熔断内存阈值</p>
      */
     public void setDisableMemoryUsed(Long DisableMemoryUsed) {
         this.DisableMemoryUsed = DisableMemoryUsed;
     }
 
     /**
-     * Get 探针熔断CPU阈值 
-     * @return DisableCpuUsed 探针熔断CPU阈值
+     * Get <p>探针熔断CPU阈值</p> 
+     * @return DisableCpuUsed <p>探针熔断CPU阈值</p>
      */
     public Long getDisableCpuUsed() {
         return this.DisableCpuUsed;
     }
 
     /**
-     * Set 探针熔断CPU阈值
-     * @param DisableCpuUsed 探针熔断CPU阈值
+     * Set <p>探针熔断CPU阈值</p>
+     * @param DisableCpuUsed <p>探针熔断CPU阈值</p>
      */
     public void setDisableCpuUsed(Long DisableCpuUsed) {
         this.DisableCpuUsed = DisableCpuUsed;
     }
 
     /**
-     * Get 是否开启SQL参数获取 
-     * @return DbStatementParametersEnabled 是否开启SQL参数获取
+     * Get <p>是否开启SQL参数获取</p> 
+     * @return DbStatementParametersEnabled <p>是否开启SQL参数获取</p>
      */
     public Boolean getDbStatementParametersEnabled() {
         return this.DbStatementParametersEnabled;
     }
 
     /**
-     * Set 是否开启SQL参数获取
-     * @param DbStatementParametersEnabled 是否开启SQL参数获取
+     * Set <p>是否开启SQL参数获取</p>
+     * @param DbStatementParametersEnabled <p>是否开启SQL参数获取</p>
      */
     public void setDbStatementParametersEnabled(Boolean DbStatementParametersEnabled) {
         this.DbStatementParametersEnabled = DbStatementParametersEnabled;
     }
 
     /**
-     * Get 慢SQL阈值 
-     * @return SlowSQLThresholds 慢SQL阈值
+     * Get <p>慢SQL阈值</p> 
+     * @return SlowSQLThresholds <p>慢SQL阈值</p>
      */
     public ApmTag [] getSlowSQLThresholds() {
         return this.SlowSQLThresholds;
     }
 
     /**
-     * Set 慢SQL阈值
-     * @param SlowSQLThresholds 慢SQL阈值
+     * Set <p>慢SQL阈值</p>
+     * @param SlowSQLThresholds <p>慢SQL阈值</p>
      */
     public void setSlowSQLThresholds(ApmTag [] SlowSQLThresholds) {
         this.SlowSQLThresholds = SlowSQLThresholds;
     }
 
     /**
-     * Get 是否开启脱敏规则 
-     * @return EnableDesensitizationRule 是否开启脱敏规则
+     * Get <p>是否开启脱敏规则</p> 
+     * @return EnableDesensitizationRule <p>是否开启脱敏规则</p>
      */
     public Long getEnableDesensitizationRule() {
         return this.EnableDesensitizationRule;
     }
 
     /**
-     * Set 是否开启脱敏规则
-     * @param EnableDesensitizationRule 是否开启脱敏规则
+     * Set <p>是否开启脱敏规则</p>
+     * @param EnableDesensitizationRule <p>是否开启脱敏规则</p>
      */
     public void setEnableDesensitizationRule(Long EnableDesensitizationRule) {
         this.EnableDesensitizationRule = EnableDesensitizationRule;
     }
 
     /**
-     * Get 脱敏规则 
-     * @return DesensitizationRule 脱敏规则
+     * Get <p>脱敏规则</p> 
+     * @return DesensitizationRule <p>脱敏规则</p>
      */
     public String getDesensitizationRule() {
         return this.DesensitizationRule;
     }
 
     /**
-     * Set 脱敏规则
-     * @param DesensitizationRule 脱敏规则
+     * Set <p>脱敏规则</p>
+     * @param DesensitizationRule <p>脱敏规则</p>
      */
     public void setDesensitizationRule(String DesensitizationRule) {
         this.DesensitizationRule = DesensitizationRule;
     }
 
     /**
-     * Get spanId的索引key: 当CLS索引类型为键值索引时生效 
-     * @return LogSpanIdKey spanId的索引key: 当CLS索引类型为键值索引时生效
+     * Get <p>spanId的索引key: 当CLS索引类型为键值索引时生效</p> 
+     * @return LogSpanIdKey <p>spanId的索引key: 当CLS索引类型为键值索引时生效</p>
      */
     public String getLogSpanIdKey() {
         return this.LogSpanIdKey;
     }
 
     /**
-     * Set spanId的索引key: 当CLS索引类型为键值索引时生效
-     * @param LogSpanIdKey spanId的索引key: 当CLS索引类型为键值索引时生效
+     * Set <p>spanId的索引key: 当CLS索引类型为键值索引时生效</p>
+     * @param LogSpanIdKey <p>spanId的索引key: 当CLS索引类型为键值索引时生效</p>
      */
     public void setLogSpanIdKey(String LogSpanIdKey) {
         this.LogSpanIdKey = LogSpanIdKey;
     }
 
     /**
-     * Get 自动性能剖析配置 
-     * @return AutoProfilingConfig 自动性能剖析配置
+     * Get <p>自动性能剖析配置</p> 
+     * @return AutoProfilingConfig <p>自动性能剖析配置</p>
      */
     public AutoProfilingConfig getAutoProfilingConfig() {
         return this.AutoProfilingConfig;
     }
 
     /**
-     * Set 自动性能剖析配置
-     * @param AutoProfilingConfig 自动性能剖析配置
+     * Set <p>自动性能剖析配置</p>
+     * @param AutoProfilingConfig <p>自动性能剖析配置</p>
      */
     public void setAutoProfilingConfig(AutoProfilingConfig AutoProfilingConfig) {
         this.AutoProfilingConfig = AutoProfilingConfig;
+    }
+
+    /**
+     * Get <p>阈值配置开关。true 表示使用应用级阈值；false 表示使用业务系统级阈值</p> 
+     * @return EnableThresholdConfig <p>阈值配置开关。true 表示使用应用级阈值；false 表示使用业务系统级阈值</p>
+     */
+    public Boolean getEnableThresholdConfig() {
+        return this.EnableThresholdConfig;
+    }
+
+    /**
+     * Set <p>阈值配置开关。true 表示使用应用级阈值；false 表示使用业务系统级阈值</p>
+     * @param EnableThresholdConfig <p>阈值配置开关。true 表示使用应用级阈值；false 表示使用业务系统级阈值</p>
+     */
+    public void setEnableThresholdConfig(Boolean EnableThresholdConfig) {
+        this.EnableThresholdConfig = EnableThresholdConfig;
+    }
+
+    /**
+     * Get <p>错误率阈值（%），用于判断应用健康状态为&quot;红色&quot;</p> 
+     * @return ErrRateThreshold <p>错误率阈值（%），用于判断应用健康状态为&quot;红色&quot;</p>
+     */
+    public Long getErrRateThreshold() {
+        return this.ErrRateThreshold;
+    }
+
+    /**
+     * Set <p>错误率阈值（%），用于判断应用健康状态为&quot;红色&quot;</p>
+     * @param ErrRateThreshold <p>错误率阈值（%），用于判断应用健康状态为&quot;红色&quot;</p>
+     */
+    public void setErrRateThreshold(Long ErrRateThreshold) {
+        this.ErrRateThreshold = ErrRateThreshold;
+    }
+
+    /**
+     * Get <p>响应时间预警阈值（ms），用于判断应用健康状态为&quot;黄色&quot;</p> 
+     * @return ResponseDurationWarningThreshold <p>响应时间预警阈值（ms），用于判断应用健康状态为&quot;黄色&quot;</p>
+     */
+    public Long getResponseDurationWarningThreshold() {
+        return this.ResponseDurationWarningThreshold;
+    }
+
+    /**
+     * Set <p>响应时间预警阈值（ms），用于判断应用健康状态为&quot;黄色&quot;</p>
+     * @param ResponseDurationWarningThreshold <p>响应时间预警阈值（ms），用于判断应用健康状态为&quot;黄色&quot;</p>
+     */
+    public void setResponseDurationWarningThreshold(Long ResponseDurationWarningThreshold) {
+        this.ResponseDurationWarningThreshold = ResponseDurationWarningThreshold;
     }
 
     public ApmAppConfig() {
@@ -1660,6 +1729,15 @@ public class ApmAppConfig extends AbstractModel {
         if (source.AutoProfilingConfig != null) {
             this.AutoProfilingConfig = new AutoProfilingConfig(source.AutoProfilingConfig);
         }
+        if (source.EnableThresholdConfig != null) {
+            this.EnableThresholdConfig = new Boolean(source.EnableThresholdConfig);
+        }
+        if (source.ErrRateThreshold != null) {
+            this.ErrRateThreshold = new Long(source.ErrRateThreshold);
+        }
+        if (source.ResponseDurationWarningThreshold != null) {
+            this.ResponseDurationWarningThreshold = new Long(source.ResponseDurationWarningThreshold);
+        }
     }
 
 
@@ -1725,6 +1803,9 @@ public class ApmAppConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "DesensitizationRule", this.DesensitizationRule);
         this.setParamSimple(map, prefix + "LogSpanIdKey", this.LogSpanIdKey);
         this.setParamObj(map, prefix + "AutoProfilingConfig.", this.AutoProfilingConfig);
+        this.setParamSimple(map, prefix + "EnableThresholdConfig", this.EnableThresholdConfig);
+        this.setParamSimple(map, prefix + "ErrRateThreshold", this.ErrRateThreshold);
+        this.setParamSimple(map, prefix + "ResponseDurationWarningThreshold", this.ResponseDurationWarningThreshold);
 
     }
 }

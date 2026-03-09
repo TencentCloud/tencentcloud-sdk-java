@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeRouteResponse extends AbstractModel {
 
     /**
-    * 返回的路由信息结果集
+    * <p>返回的路由信息结果集</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeRouteResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回的路由信息结果集 
-     * @return Result 返回的路由信息结果集
+     * Get <p>返回的路由信息结果集</p> 
+     * @return Result <p>返回的路由信息结果集</p>
      */
     public RouteResponse getResult() {
         return this.Result;
     }
 
     /**
-     * Set 返回的路由信息结果集
-     * @param Result 返回的路由信息结果集
+     * Set <p>返回的路由信息结果集</p>
+     * @param Result <p>返回的路由信息结果集</p>
      */
     public void setResult(RouteResponse Result) {
         this.Result = Result;

@@ -221,6 +221,13 @@ UPDATING 更新中
     private String SubUinName;
 
     /**
+    * 网关日志投递相关配置
+    */
+    @SerializedName("GatewayLogConfig")
+    @Expose
+    private LogConfig GatewayLogConfig;
+
+    /**
      * Get 服务组id 
      * @return ServiceGroupId 服务组id
      */
@@ -720,6 +727,22 @@ UPDATING 更新中
         this.SubUinName = SubUinName;
     }
 
+    /**
+     * Get 网关日志投递相关配置 
+     * @return GatewayLogConfig 网关日志投递相关配置
+     */
+    public LogConfig getGatewayLogConfig() {
+        return this.GatewayLogConfig;
+    }
+
+    /**
+     * Set 网关日志投递相关配置
+     * @param GatewayLogConfig 网关日志投递相关配置
+     */
+    public void setGatewayLogConfig(LogConfig GatewayLogConfig) {
+        this.GatewayLogConfig = GatewayLogConfig;
+    }
+
     public ServiceGroup() {
     }
 
@@ -809,6 +832,9 @@ UPDATING 更新中
         if (source.SubUinName != null) {
             this.SubUinName = new String(source.SubUinName);
         }
+        if (source.GatewayLogConfig != null) {
+            this.GatewayLogConfig = new LogConfig(source.GatewayLogConfig);
+        }
     }
 
 
@@ -840,6 +866,7 @@ UPDATING 更新中
         this.setParamArrayObj(map, prefix + "AuthTokens.", this.AuthTokens);
         this.setParamSimple(map, prefix + "MonitorSource", this.MonitorSource);
         this.setParamSimple(map, prefix + "SubUinName", this.SubUinName);
+        this.setParamObj(map, prefix + "GatewayLogConfig.", this.GatewayLogConfig);
 
     }
 }

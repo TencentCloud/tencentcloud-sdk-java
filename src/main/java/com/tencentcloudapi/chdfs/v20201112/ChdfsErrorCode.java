@@ -9,6 +9,9 @@ public enum ChdfsErrorCode {
      /* 账户余额不足。 */
      FAILEDOPERATION_ACCOUNTINSUFFICIENTBALANCE("FailedOperation.AccountInsufficientBalance"),
      
+     /* 账号被暂时封禁 */
+     FAILEDOPERATION_ACCOUNTSUSPENDED("FailedOperation.AccountSuspended"),
+     
      /* 账户未实名认证。 */
      FAILEDOPERATION_ACCOUNTUNAUTHENTICATED("FailedOperation.AccountUnauthenticated"),
      

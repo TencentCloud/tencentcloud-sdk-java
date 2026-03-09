@@ -346,6 +346,20 @@ public class InstanceAttributesResponse extends AbstractModel {
     private Long DeleteProtectionEnable;
 
     /**
+    * <p>实例级别消息保留大小</p>单位：bytes<br>默认值：-1
+    */
+    @SerializedName("RetentionBytes")
+    @Expose
+    private Long RetentionBytes;
+
+    /**
+    * <p>事务ID最大空闲时间，超时未提交的事务将被标记为过期</p>单位：ms
+    */
+    @SerializedName("TransactionalIdExpirationMs")
+    @Expose
+    private Long TransactionalIdExpirationMs;
+
+    /**
      * Get <p>ckafka集群实例Id</p> 
      * @return InstanceId <p>ckafka集群实例Id</p>
      */
@@ -1081,6 +1095,38 @@ public class InstanceAttributesResponse extends AbstractModel {
         this.DeleteProtectionEnable = DeleteProtectionEnable;
     }
 
+    /**
+     * Get <p>实例级别消息保留大小</p>单位：bytes<br>默认值：-1 
+     * @return RetentionBytes <p>实例级别消息保留大小</p>单位：bytes<br>默认值：-1
+     */
+    public Long getRetentionBytes() {
+        return this.RetentionBytes;
+    }
+
+    /**
+     * Set <p>实例级别消息保留大小</p>单位：bytes<br>默认值：-1
+     * @param RetentionBytes <p>实例级别消息保留大小</p>单位：bytes<br>默认值：-1
+     */
+    public void setRetentionBytes(Long RetentionBytes) {
+        this.RetentionBytes = RetentionBytes;
+    }
+
+    /**
+     * Get <p>事务ID最大空闲时间，超时未提交的事务将被标记为过期</p>单位：ms 
+     * @return TransactionalIdExpirationMs <p>事务ID最大空闲时间，超时未提交的事务将被标记为过期</p>单位：ms
+     */
+    public Long getTransactionalIdExpirationMs() {
+        return this.TransactionalIdExpirationMs;
+    }
+
+    /**
+     * Set <p>事务ID最大空闲时间，超时未提交的事务将被标记为过期</p>单位：ms
+     * @param TransactionalIdExpirationMs <p>事务ID最大空闲时间，超时未提交的事务将被标记为过期</p>单位：ms
+     */
+    public void setTransactionalIdExpirationMs(Long TransactionalIdExpirationMs) {
+        this.TransactionalIdExpirationMs = TransactionalIdExpirationMs;
+    }
+
     public InstanceAttributesResponse() {
     }
 
@@ -1239,6 +1285,12 @@ public class InstanceAttributesResponse extends AbstractModel {
         if (source.DeleteProtectionEnable != null) {
             this.DeleteProtectionEnable = new Long(source.DeleteProtectionEnable);
         }
+        if (source.RetentionBytes != null) {
+            this.RetentionBytes = new Long(source.RetentionBytes);
+        }
+        if (source.TransactionalIdExpirationMs != null) {
+            this.TransactionalIdExpirationMs = new Long(source.TransactionalIdExpirationMs);
+        }
     }
 
 
@@ -1292,6 +1344,8 @@ public class InstanceAttributesResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "CustomCertId", this.CustomCertId);
         this.setParamSimple(map, prefix + "UncleanLeaderElectionEnable", this.UncleanLeaderElectionEnable);
         this.setParamSimple(map, prefix + "DeleteProtectionEnable", this.DeleteProtectionEnable);
+        this.setParamSimple(map, prefix + "RetentionBytes", this.RetentionBytes);
+        this.setParamSimple(map, prefix + "TransactionalIdExpirationMs", this.TransactionalIdExpirationMs);
 
     }
 }

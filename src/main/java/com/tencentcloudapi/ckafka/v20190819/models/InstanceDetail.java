@@ -248,6 +248,13 @@ public class InstanceDetail extends AbstractModel {
     private String [] Features;
 
     /**
+    * <p>实例级别消息保留大小</p>单位：byte<br>默认值：-1<br><p>实例级别消息保留大小</p>
+    */
+    @SerializedName("RetentionBytes")
+    @Expose
+    private Long RetentionBytes;
+
+    /**
      * Get <p>ckafka集群实例Id</p> 
      * @return InstanceId <p>ckafka集群实例Id</p>
      */
@@ -759,6 +766,22 @@ public class InstanceDetail extends AbstractModel {
         this.Features = Features;
     }
 
+    /**
+     * Get <p>实例级别消息保留大小</p>单位：byte<br>默认值：-1<br><p>实例级别消息保留大小</p> 
+     * @return RetentionBytes <p>实例级别消息保留大小</p>单位：byte<br>默认值：-1<br><p>实例级别消息保留大小</p>
+     */
+    public Long getRetentionBytes() {
+        return this.RetentionBytes;
+    }
+
+    /**
+     * Set <p>实例级别消息保留大小</p>单位：byte<br>默认值：-1<br><p>实例级别消息保留大小</p>
+     * @param RetentionBytes <p>实例级别消息保留大小</p>单位：byte<br>默认值：-1<br><p>实例级别消息保留大小</p>
+     */
+    public void setRetentionBytes(Long RetentionBytes) {
+        this.RetentionBytes = RetentionBytes;
+    }
+
     public InstanceDetail() {
     }
 
@@ -875,6 +898,9 @@ public class InstanceDetail extends AbstractModel {
                 this.Features[i] = new String(source.Features[i]);
             }
         }
+        if (source.RetentionBytes != null) {
+            this.RetentionBytes = new Long(source.RetentionBytes);
+        }
     }
 
 
@@ -914,6 +940,7 @@ public class InstanceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "PublicNetwork", this.PublicNetwork);
         this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
         this.setParamArraySimple(map, prefix + "Features.", this.Features);
+        this.setParamSimple(map, prefix + "RetentionBytes", this.RetentionBytes);
 
     }
 }

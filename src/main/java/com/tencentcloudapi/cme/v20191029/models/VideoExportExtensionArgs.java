@@ -24,259 +24,184 @@ import java.util.HashMap;
 public class VideoExportExtensionArgs extends AbstractModel {
 
     /**
-    * 封装格式，可选值：
-<li>mp4 </li>
-<li>mov </li>
-不填则使用视频导出编码配置。
+    * <p>封装格式，可选值：</p><li>mp4 </li><li>mov </li>不填则使用视频导出编码配置。
     */
     @SerializedName("Container")
     @Expose
     private String Container;
 
     /**
-    * 视频短边尺寸，取值范围： [128, 4096]，单位：px。
-视频最后的分辨率，根据短边尺寸和宽高比进行计算。
-例如：项目的宽高比是 16：9 ：
-<li>短边尺寸为 1080，则导出视频的分辨率为 1920 * 1080。</li>
-<li>短边尺寸为 720，则导出视频的分辨率为 1280 * 720</li>
-不填则使用视频导出编码配置。
+    * <p>视频短边尺寸，取值范围： [128, 4096]，单位：px。<br>视频最后的分辨率，根据短边尺寸和宽高比进行计算。<br>例如：项目的宽高比是 16：9 ：</p><li>短边尺寸为 1080，则导出视频的分辨率为 1920 * 1080。</li><li>短边尺寸为 720，则导出视频的分辨率为 1280 * 720</li>不填则使用视频导出编码配置。
     */
     @SerializedName("ShortEdge")
     @Expose
     private Long ShortEdge;
 
     /**
-    * 指定码率，单位 bps。当该参数为 0 时则不强制限定码率。
-不填则使用视频导出编码配置。
+    * <p>指定码率，单位 bps。当该参数为 0 时则不强制限定码率。<br>不填则使用视频导出编码配置。</p>
     */
     @SerializedName("VideoBitrate")
     @Expose
     private Long VideoBitrate;
 
     /**
-    * 帧率。取值范围：[15, 60]，不填默认值为 25。
+    * <p>帧率。取值范围：[15, 60]，不填默认值为 25。</p><p>单位：帧</p>
     */
     @SerializedName("FrameRate")
     @Expose
     private Float FrameRate;
 
     /**
-    * 是否去除视频数据，可选值：
-<li>0：保留；</li>
-<li>1：去除。</li>
-不填则使用视频导出编码配置。
+    * <p>是否去除视频数据，可选值：</p><li>0：保留；</li><li>1：去除。</li>不填则使用视频导出编码配置。
     */
     @SerializedName("RemoveVideo")
     @Expose
     private Long RemoveVideo;
 
     /**
-    * 是否去除音频数据，可选值：
-<li>0：保留；</li>
-<li>1：去除。</li>
-不填则使用视频导出编码配置。
+    * <p>是否去除音频数据，可选值：</p><li>0：保留；</li><li>1：去除。</li>不填则使用视频导出编码配置。
     */
     @SerializedName("RemoveAudio")
     @Expose
     private Long RemoveAudio;
 
     /**
-    * 片段起始时间，单位：毫秒。
+    * <p>片段起始时间，单位：毫秒。</p>
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 片段结束时间，单位：毫秒。
+    * <p>片段结束时间，单位：毫秒。</p>
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-     * Get 封装格式，可选值：
-<li>mp4 </li>
-<li>mov </li>
-不填则使用视频导出编码配置。 
-     * @return Container 封装格式，可选值：
-<li>mp4 </li>
-<li>mov </li>
-不填则使用视频导出编码配置。
+     * Get <p>封装格式，可选值：</p><li>mp4 </li><li>mov </li>不填则使用视频导出编码配置。 
+     * @return Container <p>封装格式，可选值：</p><li>mp4 </li><li>mov </li>不填则使用视频导出编码配置。
      */
     public String getContainer() {
         return this.Container;
     }
 
     /**
-     * Set 封装格式，可选值：
-<li>mp4 </li>
-<li>mov </li>
-不填则使用视频导出编码配置。
-     * @param Container 封装格式，可选值：
-<li>mp4 </li>
-<li>mov </li>
-不填则使用视频导出编码配置。
+     * Set <p>封装格式，可选值：</p><li>mp4 </li><li>mov </li>不填则使用视频导出编码配置。
+     * @param Container <p>封装格式，可选值：</p><li>mp4 </li><li>mov </li>不填则使用视频导出编码配置。
      */
     public void setContainer(String Container) {
         this.Container = Container;
     }
 
     /**
-     * Get 视频短边尺寸，取值范围： [128, 4096]，单位：px。
-视频最后的分辨率，根据短边尺寸和宽高比进行计算。
-例如：项目的宽高比是 16：9 ：
-<li>短边尺寸为 1080，则导出视频的分辨率为 1920 * 1080。</li>
-<li>短边尺寸为 720，则导出视频的分辨率为 1280 * 720</li>
-不填则使用视频导出编码配置。 
-     * @return ShortEdge 视频短边尺寸，取值范围： [128, 4096]，单位：px。
-视频最后的分辨率，根据短边尺寸和宽高比进行计算。
-例如：项目的宽高比是 16：9 ：
-<li>短边尺寸为 1080，则导出视频的分辨率为 1920 * 1080。</li>
-<li>短边尺寸为 720，则导出视频的分辨率为 1280 * 720</li>
-不填则使用视频导出编码配置。
+     * Get <p>视频短边尺寸，取值范围： [128, 4096]，单位：px。<br>视频最后的分辨率，根据短边尺寸和宽高比进行计算。<br>例如：项目的宽高比是 16：9 ：</p><li>短边尺寸为 1080，则导出视频的分辨率为 1920 * 1080。</li><li>短边尺寸为 720，则导出视频的分辨率为 1280 * 720</li>不填则使用视频导出编码配置。 
+     * @return ShortEdge <p>视频短边尺寸，取值范围： [128, 4096]，单位：px。<br>视频最后的分辨率，根据短边尺寸和宽高比进行计算。<br>例如：项目的宽高比是 16：9 ：</p><li>短边尺寸为 1080，则导出视频的分辨率为 1920 * 1080。</li><li>短边尺寸为 720，则导出视频的分辨率为 1280 * 720</li>不填则使用视频导出编码配置。
      */
     public Long getShortEdge() {
         return this.ShortEdge;
     }
 
     /**
-     * Set 视频短边尺寸，取值范围： [128, 4096]，单位：px。
-视频最后的分辨率，根据短边尺寸和宽高比进行计算。
-例如：项目的宽高比是 16：9 ：
-<li>短边尺寸为 1080，则导出视频的分辨率为 1920 * 1080。</li>
-<li>短边尺寸为 720，则导出视频的分辨率为 1280 * 720</li>
-不填则使用视频导出编码配置。
-     * @param ShortEdge 视频短边尺寸，取值范围： [128, 4096]，单位：px。
-视频最后的分辨率，根据短边尺寸和宽高比进行计算。
-例如：项目的宽高比是 16：9 ：
-<li>短边尺寸为 1080，则导出视频的分辨率为 1920 * 1080。</li>
-<li>短边尺寸为 720，则导出视频的分辨率为 1280 * 720</li>
-不填则使用视频导出编码配置。
+     * Set <p>视频短边尺寸，取值范围： [128, 4096]，单位：px。<br>视频最后的分辨率，根据短边尺寸和宽高比进行计算。<br>例如：项目的宽高比是 16：9 ：</p><li>短边尺寸为 1080，则导出视频的分辨率为 1920 * 1080。</li><li>短边尺寸为 720，则导出视频的分辨率为 1280 * 720</li>不填则使用视频导出编码配置。
+     * @param ShortEdge <p>视频短边尺寸，取值范围： [128, 4096]，单位：px。<br>视频最后的分辨率，根据短边尺寸和宽高比进行计算。<br>例如：项目的宽高比是 16：9 ：</p><li>短边尺寸为 1080，则导出视频的分辨率为 1920 * 1080。</li><li>短边尺寸为 720，则导出视频的分辨率为 1280 * 720</li>不填则使用视频导出编码配置。
      */
     public void setShortEdge(Long ShortEdge) {
         this.ShortEdge = ShortEdge;
     }
 
     /**
-     * Get 指定码率，单位 bps。当该参数为 0 时则不强制限定码率。
-不填则使用视频导出编码配置。 
-     * @return VideoBitrate 指定码率，单位 bps。当该参数为 0 时则不强制限定码率。
-不填则使用视频导出编码配置。
+     * Get <p>指定码率，单位 bps。当该参数为 0 时则不强制限定码率。<br>不填则使用视频导出编码配置。</p> 
+     * @return VideoBitrate <p>指定码率，单位 bps。当该参数为 0 时则不强制限定码率。<br>不填则使用视频导出编码配置。</p>
      */
     public Long getVideoBitrate() {
         return this.VideoBitrate;
     }
 
     /**
-     * Set 指定码率，单位 bps。当该参数为 0 时则不强制限定码率。
-不填则使用视频导出编码配置。
-     * @param VideoBitrate 指定码率，单位 bps。当该参数为 0 时则不强制限定码率。
-不填则使用视频导出编码配置。
+     * Set <p>指定码率，单位 bps。当该参数为 0 时则不强制限定码率。<br>不填则使用视频导出编码配置。</p>
+     * @param VideoBitrate <p>指定码率，单位 bps。当该参数为 0 时则不强制限定码率。<br>不填则使用视频导出编码配置。</p>
      */
     public void setVideoBitrate(Long VideoBitrate) {
         this.VideoBitrate = VideoBitrate;
     }
 
     /**
-     * Get 帧率。取值范围：[15, 60]，不填默认值为 25。 
-     * @return FrameRate 帧率。取值范围：[15, 60]，不填默认值为 25。
+     * Get <p>帧率。取值范围：[15, 60]，不填默认值为 25。</p><p>单位：帧</p> 
+     * @return FrameRate <p>帧率。取值范围：[15, 60]，不填默认值为 25。</p><p>单位：帧</p>
      */
     public Float getFrameRate() {
         return this.FrameRate;
     }
 
     /**
-     * Set 帧率。取值范围：[15, 60]，不填默认值为 25。
-     * @param FrameRate 帧率。取值范围：[15, 60]，不填默认值为 25。
+     * Set <p>帧率。取值范围：[15, 60]，不填默认值为 25。</p><p>单位：帧</p>
+     * @param FrameRate <p>帧率。取值范围：[15, 60]，不填默认值为 25。</p><p>单位：帧</p>
      */
     public void setFrameRate(Float FrameRate) {
         this.FrameRate = FrameRate;
     }
 
     /**
-     * Get 是否去除视频数据，可选值：
-<li>0：保留；</li>
-<li>1：去除。</li>
-不填则使用视频导出编码配置。 
-     * @return RemoveVideo 是否去除视频数据，可选值：
-<li>0：保留；</li>
-<li>1：去除。</li>
-不填则使用视频导出编码配置。
+     * Get <p>是否去除视频数据，可选值：</p><li>0：保留；</li><li>1：去除。</li>不填则使用视频导出编码配置。 
+     * @return RemoveVideo <p>是否去除视频数据，可选值：</p><li>0：保留；</li><li>1：去除。</li>不填则使用视频导出编码配置。
      */
     public Long getRemoveVideo() {
         return this.RemoveVideo;
     }
 
     /**
-     * Set 是否去除视频数据，可选值：
-<li>0：保留；</li>
-<li>1：去除。</li>
-不填则使用视频导出编码配置。
-     * @param RemoveVideo 是否去除视频数据，可选值：
-<li>0：保留；</li>
-<li>1：去除。</li>
-不填则使用视频导出编码配置。
+     * Set <p>是否去除视频数据，可选值：</p><li>0：保留；</li><li>1：去除。</li>不填则使用视频导出编码配置。
+     * @param RemoveVideo <p>是否去除视频数据，可选值：</p><li>0：保留；</li><li>1：去除。</li>不填则使用视频导出编码配置。
      */
     public void setRemoveVideo(Long RemoveVideo) {
         this.RemoveVideo = RemoveVideo;
     }
 
     /**
-     * Get 是否去除音频数据，可选值：
-<li>0：保留；</li>
-<li>1：去除。</li>
-不填则使用视频导出编码配置。 
-     * @return RemoveAudio 是否去除音频数据，可选值：
-<li>0：保留；</li>
-<li>1：去除。</li>
-不填则使用视频导出编码配置。
+     * Get <p>是否去除音频数据，可选值：</p><li>0：保留；</li><li>1：去除。</li>不填则使用视频导出编码配置。 
+     * @return RemoveAudio <p>是否去除音频数据，可选值：</p><li>0：保留；</li><li>1：去除。</li>不填则使用视频导出编码配置。
      */
     public Long getRemoveAudio() {
         return this.RemoveAudio;
     }
 
     /**
-     * Set 是否去除音频数据，可选值：
-<li>0：保留；</li>
-<li>1：去除。</li>
-不填则使用视频导出编码配置。
-     * @param RemoveAudio 是否去除音频数据，可选值：
-<li>0：保留；</li>
-<li>1：去除。</li>
-不填则使用视频导出编码配置。
+     * Set <p>是否去除音频数据，可选值：</p><li>0：保留；</li><li>1：去除。</li>不填则使用视频导出编码配置。
+     * @param RemoveAudio <p>是否去除音频数据，可选值：</p><li>0：保留；</li><li>1：去除。</li>不填则使用视频导出编码配置。
      */
     public void setRemoveAudio(Long RemoveAudio) {
         this.RemoveAudio = RemoveAudio;
     }
 
     /**
-     * Get 片段起始时间，单位：毫秒。 
-     * @return StartTime 片段起始时间，单位：毫秒。
+     * Get <p>片段起始时间，单位：毫秒。</p> 
+     * @return StartTime <p>片段起始时间，单位：毫秒。</p>
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 片段起始时间，单位：毫秒。
-     * @param StartTime 片段起始时间，单位：毫秒。
+     * Set <p>片段起始时间，单位：毫秒。</p>
+     * @param StartTime <p>片段起始时间，单位：毫秒。</p>
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 片段结束时间，单位：毫秒。 
-     * @return EndTime 片段结束时间，单位：毫秒。
+     * Get <p>片段结束时间，单位：毫秒。</p> 
+     * @return EndTime <p>片段结束时间，单位：毫秒。</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 片段结束时间，单位：毫秒。
-     * @param EndTime 片段结束时间，单位：毫秒。
+     * Set <p>片段结束时间，单位：毫秒。</p>
+     * @param EndTime <p>片段结束时间，单位：毫秒。</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

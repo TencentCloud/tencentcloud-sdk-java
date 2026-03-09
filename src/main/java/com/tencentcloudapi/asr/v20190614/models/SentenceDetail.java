@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SentenceDetail extends AbstractModel {
 
     /**
-    * 单句最终识别结果
+    * <p>单句最终识别结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FinalSentence")
@@ -32,7 +32,7 @@ public class SentenceDetail extends AbstractModel {
     private String FinalSentence;
 
     /**
-    * 单句中间识别结果，使用空格拆分为多个词
+    * <p>单句中间识别结果，使用空格拆分为多个词</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SliceSentence")
@@ -40,7 +40,7 @@ public class SentenceDetail extends AbstractModel {
     private String SliceSentence;
 
     /**
-    * 口语转书面语结果，开启改功能才有值
+    * <p>口语转书面语结果，开启该功能才有值</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WrittenText")
@@ -48,7 +48,7 @@ public class SentenceDetail extends AbstractModel {
     private String WrittenText;
 
     /**
-    * 单句开始时间（毫秒）
+    * <p>单句开始时间（毫秒）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartMs")
@@ -56,7 +56,7 @@ public class SentenceDetail extends AbstractModel {
     private Long StartMs;
 
     /**
-    * 单句结束时间（毫秒）
+    * <p>单句结束时间（毫秒）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndMs")
@@ -64,7 +64,7 @@ public class SentenceDetail extends AbstractModel {
     private Long EndMs;
 
     /**
-    * 单句中词个数
+    * <p>单句中词个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WordsNum")
@@ -72,7 +72,7 @@ public class SentenceDetail extends AbstractModel {
     private Long WordsNum;
 
     /**
-    * 单句中词详情
+    * <p>单句中词详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Words")
@@ -80,7 +80,7 @@ public class SentenceDetail extends AbstractModel {
     private SentenceWords [] Words;
 
     /**
-    * 单句语速，单位：字数/秒
+    * <p>单句语速，单位：字数/秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpeechSpeed")
@@ -88,8 +88,7 @@ public class SentenceDetail extends AbstractModel {
     private Float SpeechSpeed;
 
     /**
-    * 声道或说话人 Id（请求中如果设置了 speaker_diarization或者ChannelNum为双声道，可区分说话人或声道）
-单声道话者分离时不同的值代表不同的说话人； 8k双声道话者分离时speakerId的值为0代表左声道，值为1代表右声道。
+    * <p>声道或说话人 Id（请求中如果设置了 speaker_diarization或者ChannelNum为双声道，可区分说话人或声道）<br>单声道话者分离时不同的值代表不同的说话人； 8k双声道话者分离时speakerId的值为0代表左声道，值为1代表右声道。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpeakerId")
@@ -97,7 +96,7 @@ public class SentenceDetail extends AbstractModel {
     private Long SpeakerId;
 
     /**
-    * 情绪能量值，取值为音量分贝值/10。取值范围：[1,10]。值越高情绪越强烈。
+    * <p>情绪能量值，取值为音量分贝值/10。取值范围：[1,10]。值越高情绪越强烈。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EmotionalEnergy")
@@ -105,7 +104,7 @@ public class SentenceDetail extends AbstractModel {
     private Float EmotionalEnergy;
 
     /**
-    * 本句与上一句之间的静音时长
+    * <p>本句与上一句之间的静音时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SilenceTime")
@@ -113,7 +112,7 @@ public class SentenceDetail extends AbstractModel {
     private Long SilenceTime;
 
     /**
-    * 情绪类型（可能为空，有2种情况 1、没有对应资源包；2、情绪跟语音效果相关，如果情绪不够强烈时可能无法识别）
+    * <p>情绪类型（可能为空，有2种情况 1、没有对应资源包；2、情绪跟语音效果相关，如果情绪不够强烈时可能无法识别）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EmotionType")
@@ -121,7 +120,7 @@ public class SentenceDetail extends AbstractModel {
     private String [] EmotionType;
 
     /**
-    * 关键词识别结果列表
+    * <p>关键词识别结果列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KeyWordResults")
@@ -129,9 +128,23 @@ public class SentenceDetail extends AbstractModel {
     private KeyWordResult [] KeyWordResults;
 
     /**
-     * Get 单句最终识别结果
+    * <p>多语言识别类型</p><ul><li>中文    chinese</li><li>英语    english</li><li>日语    japanese</li><li>韩语    korean</li><li>阿拉伯语    arabic</li><li>菲律宾语    filipino</li><li>法语    french</li><li>印地语    hindi</li><li>印尼语    indonesian</li><li>马来语    malay</li><li>葡萄牙语    portugal</li><li>西班牙语    spanish</li><li>泰语    thai</li><li>土耳其语    turkish</li><li>越南语    vietnam</li><li>德语    german</li></ul>
+    */
+    @SerializedName("LangType")
+    @Expose
+    private String LangType;
+
+    /**
+    * <p>说话人角色名称</p>
+    */
+    @SerializedName("SpeakerRoleName")
+    @Expose
+    private String SpeakerRoleName;
+
+    /**
+     * Get <p>单句最终识别结果</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FinalSentence 单句最终识别结果
+     * @return FinalSentence <p>单句最终识别结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFinalSentence() {
@@ -139,9 +152,9 @@ public class SentenceDetail extends AbstractModel {
     }
 
     /**
-     * Set 单句最终识别结果
+     * Set <p>单句最终识别结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FinalSentence 单句最终识别结果
+     * @param FinalSentence <p>单句最终识别结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFinalSentence(String FinalSentence) {
@@ -149,9 +162,9 @@ public class SentenceDetail extends AbstractModel {
     }
 
     /**
-     * Get 单句中间识别结果，使用空格拆分为多个词
+     * Get <p>单句中间识别结果，使用空格拆分为多个词</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SliceSentence 单句中间识别结果，使用空格拆分为多个词
+     * @return SliceSentence <p>单句中间识别结果，使用空格拆分为多个词</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSliceSentence() {
@@ -159,9 +172,9 @@ public class SentenceDetail extends AbstractModel {
     }
 
     /**
-     * Set 单句中间识别结果，使用空格拆分为多个词
+     * Set <p>单句中间识别结果，使用空格拆分为多个词</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SliceSentence 单句中间识别结果，使用空格拆分为多个词
+     * @param SliceSentence <p>单句中间识别结果，使用空格拆分为多个词</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSliceSentence(String SliceSentence) {
@@ -169,9 +182,9 @@ public class SentenceDetail extends AbstractModel {
     }
 
     /**
-     * Get 口语转书面语结果，开启改功能才有值
+     * Get <p>口语转书面语结果，开启该功能才有值</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WrittenText 口语转书面语结果，开启改功能才有值
+     * @return WrittenText <p>口语转书面语结果，开启该功能才有值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWrittenText() {
@@ -179,9 +192,9 @@ public class SentenceDetail extends AbstractModel {
     }
 
     /**
-     * Set 口语转书面语结果，开启改功能才有值
+     * Set <p>口语转书面语结果，开启该功能才有值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WrittenText 口语转书面语结果，开启改功能才有值
+     * @param WrittenText <p>口语转书面语结果，开启该功能才有值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWrittenText(String WrittenText) {
@@ -189,9 +202,9 @@ public class SentenceDetail extends AbstractModel {
     }
 
     /**
-     * Get 单句开始时间（毫秒）
+     * Get <p>单句开始时间（毫秒）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StartMs 单句开始时间（毫秒）
+     * @return StartMs <p>单句开始时间（毫秒）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStartMs() {
@@ -199,9 +212,9 @@ public class SentenceDetail extends AbstractModel {
     }
 
     /**
-     * Set 单句开始时间（毫秒）
+     * Set <p>单句开始时间（毫秒）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StartMs 单句开始时间（毫秒）
+     * @param StartMs <p>单句开始时间（毫秒）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartMs(Long StartMs) {
@@ -209,9 +222,9 @@ public class SentenceDetail extends AbstractModel {
     }
 
     /**
-     * Get 单句结束时间（毫秒）
+     * Get <p>单句结束时间（毫秒）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EndMs 单句结束时间（毫秒）
+     * @return EndMs <p>单句结束时间（毫秒）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEndMs() {
@@ -219,9 +232,9 @@ public class SentenceDetail extends AbstractModel {
     }
 
     /**
-     * Set 单句结束时间（毫秒）
+     * Set <p>单句结束时间（毫秒）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EndMs 单句结束时间（毫秒）
+     * @param EndMs <p>单句结束时间（毫秒）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndMs(Long EndMs) {
@@ -229,9 +242,9 @@ public class SentenceDetail extends AbstractModel {
     }
 
     /**
-     * Get 单句中词个数
+     * Get <p>单句中词个数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WordsNum 单句中词个数
+     * @return WordsNum <p>单句中词个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWordsNum() {
@@ -239,9 +252,9 @@ public class SentenceDetail extends AbstractModel {
     }
 
     /**
-     * Set 单句中词个数
+     * Set <p>单句中词个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WordsNum 单句中词个数
+     * @param WordsNum <p>单句中词个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWordsNum(Long WordsNum) {
@@ -249,9 +262,9 @@ public class SentenceDetail extends AbstractModel {
     }
 
     /**
-     * Get 单句中词详情
+     * Get <p>单句中词详情</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Words 单句中词详情
+     * @return Words <p>单句中词详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SentenceWords [] getWords() {
@@ -259,9 +272,9 @@ public class SentenceDetail extends AbstractModel {
     }
 
     /**
-     * Set 单句中词详情
+     * Set <p>单句中词详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Words 单句中词详情
+     * @param Words <p>单句中词详情</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWords(SentenceWords [] Words) {
@@ -269,9 +282,9 @@ public class SentenceDetail extends AbstractModel {
     }
 
     /**
-     * Get 单句语速，单位：字数/秒
+     * Get <p>单句语速，单位：字数/秒</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SpeechSpeed 单句语速，单位：字数/秒
+     * @return SpeechSpeed <p>单句语速，单位：字数/秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getSpeechSpeed() {
@@ -279,9 +292,9 @@ public class SentenceDetail extends AbstractModel {
     }
 
     /**
-     * Set 单句语速，单位：字数/秒
+     * Set <p>单句语速，单位：字数/秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SpeechSpeed 单句语速，单位：字数/秒
+     * @param SpeechSpeed <p>单句语速，单位：字数/秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpeechSpeed(Float SpeechSpeed) {
@@ -289,11 +302,9 @@ public class SentenceDetail extends AbstractModel {
     }
 
     /**
-     * Get 声道或说话人 Id（请求中如果设置了 speaker_diarization或者ChannelNum为双声道，可区分说话人或声道）
-单声道话者分离时不同的值代表不同的说话人； 8k双声道话者分离时speakerId的值为0代表左声道，值为1代表右声道。
+     * Get <p>声道或说话人 Id（请求中如果设置了 speaker_diarization或者ChannelNum为双声道，可区分说话人或声道）<br>单声道话者分离时不同的值代表不同的说话人； 8k双声道话者分离时speakerId的值为0代表左声道，值为1代表右声道。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SpeakerId 声道或说话人 Id（请求中如果设置了 speaker_diarization或者ChannelNum为双声道，可区分说话人或声道）
-单声道话者分离时不同的值代表不同的说话人； 8k双声道话者分离时speakerId的值为0代表左声道，值为1代表右声道。
+     * @return SpeakerId <p>声道或说话人 Id（请求中如果设置了 speaker_diarization或者ChannelNum为双声道，可区分说话人或声道）<br>单声道话者分离时不同的值代表不同的说话人； 8k双声道话者分离时speakerId的值为0代表左声道，值为1代表右声道。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSpeakerId() {
@@ -301,11 +312,9 @@ public class SentenceDetail extends AbstractModel {
     }
 
     /**
-     * Set 声道或说话人 Id（请求中如果设置了 speaker_diarization或者ChannelNum为双声道，可区分说话人或声道）
-单声道话者分离时不同的值代表不同的说话人； 8k双声道话者分离时speakerId的值为0代表左声道，值为1代表右声道。
+     * Set <p>声道或说话人 Id（请求中如果设置了 speaker_diarization或者ChannelNum为双声道，可区分说话人或声道）<br>单声道话者分离时不同的值代表不同的说话人； 8k双声道话者分离时speakerId的值为0代表左声道，值为1代表右声道。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SpeakerId 声道或说话人 Id（请求中如果设置了 speaker_diarization或者ChannelNum为双声道，可区分说话人或声道）
-单声道话者分离时不同的值代表不同的说话人； 8k双声道话者分离时speakerId的值为0代表左声道，值为1代表右声道。
+     * @param SpeakerId <p>声道或说话人 Id（请求中如果设置了 speaker_diarization或者ChannelNum为双声道，可区分说话人或声道）<br>单声道话者分离时不同的值代表不同的说话人； 8k双声道话者分离时speakerId的值为0代表左声道，值为1代表右声道。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpeakerId(Long SpeakerId) {
@@ -313,9 +322,9 @@ public class SentenceDetail extends AbstractModel {
     }
 
     /**
-     * Get 情绪能量值，取值为音量分贝值/10。取值范围：[1,10]。值越高情绪越强烈。
+     * Get <p>情绪能量值，取值为音量分贝值/10。取值范围：[1,10]。值越高情绪越强烈。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EmotionalEnergy 情绪能量值，取值为音量分贝值/10。取值范围：[1,10]。值越高情绪越强烈。
+     * @return EmotionalEnergy <p>情绪能量值，取值为音量分贝值/10。取值范围：[1,10]。值越高情绪越强烈。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getEmotionalEnergy() {
@@ -323,9 +332,9 @@ public class SentenceDetail extends AbstractModel {
     }
 
     /**
-     * Set 情绪能量值，取值为音量分贝值/10。取值范围：[1,10]。值越高情绪越强烈。
+     * Set <p>情绪能量值，取值为音量分贝值/10。取值范围：[1,10]。值越高情绪越强烈。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EmotionalEnergy 情绪能量值，取值为音量分贝值/10。取值范围：[1,10]。值越高情绪越强烈。
+     * @param EmotionalEnergy <p>情绪能量值，取值为音量分贝值/10。取值范围：[1,10]。值越高情绪越强烈。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEmotionalEnergy(Float EmotionalEnergy) {
@@ -333,9 +342,9 @@ public class SentenceDetail extends AbstractModel {
     }
 
     /**
-     * Get 本句与上一句之间的静音时长
+     * Get <p>本句与上一句之间的静音时长</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SilenceTime 本句与上一句之间的静音时长
+     * @return SilenceTime <p>本句与上一句之间的静音时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSilenceTime() {
@@ -343,9 +352,9 @@ public class SentenceDetail extends AbstractModel {
     }
 
     /**
-     * Set 本句与上一句之间的静音时长
+     * Set <p>本句与上一句之间的静音时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SilenceTime 本句与上一句之间的静音时长
+     * @param SilenceTime <p>本句与上一句之间的静音时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSilenceTime(Long SilenceTime) {
@@ -353,9 +362,9 @@ public class SentenceDetail extends AbstractModel {
     }
 
     /**
-     * Get 情绪类型（可能为空，有2种情况 1、没有对应资源包；2、情绪跟语音效果相关，如果情绪不够强烈时可能无法识别）
+     * Get <p>情绪类型（可能为空，有2种情况 1、没有对应资源包；2、情绪跟语音效果相关，如果情绪不够强烈时可能无法识别）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EmotionType 情绪类型（可能为空，有2种情况 1、没有对应资源包；2、情绪跟语音效果相关，如果情绪不够强烈时可能无法识别）
+     * @return EmotionType <p>情绪类型（可能为空，有2种情况 1、没有对应资源包；2、情绪跟语音效果相关，如果情绪不够强烈时可能无法识别）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getEmotionType() {
@@ -363,9 +372,9 @@ public class SentenceDetail extends AbstractModel {
     }
 
     /**
-     * Set 情绪类型（可能为空，有2种情况 1、没有对应资源包；2、情绪跟语音效果相关，如果情绪不够强烈时可能无法识别）
+     * Set <p>情绪类型（可能为空，有2种情况 1、没有对应资源包；2、情绪跟语音效果相关，如果情绪不够强烈时可能无法识别）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EmotionType 情绪类型（可能为空，有2种情况 1、没有对应资源包；2、情绪跟语音效果相关，如果情绪不够强烈时可能无法识别）
+     * @param EmotionType <p>情绪类型（可能为空，有2种情况 1、没有对应资源包；2、情绪跟语音效果相关，如果情绪不够强烈时可能无法识别）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEmotionType(String [] EmotionType) {
@@ -373,9 +382,9 @@ public class SentenceDetail extends AbstractModel {
     }
 
     /**
-     * Get 关键词识别结果列表
+     * Get <p>关键词识别结果列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KeyWordResults 关键词识别结果列表
+     * @return KeyWordResults <p>关键词识别结果列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyWordResult [] getKeyWordResults() {
@@ -383,13 +392,45 @@ public class SentenceDetail extends AbstractModel {
     }
 
     /**
-     * Set 关键词识别结果列表
+     * Set <p>关键词识别结果列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param KeyWordResults 关键词识别结果列表
+     * @param KeyWordResults <p>关键词识别结果列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeyWordResults(KeyWordResult [] KeyWordResults) {
         this.KeyWordResults = KeyWordResults;
+    }
+
+    /**
+     * Get <p>多语言识别类型</p><ul><li>中文    chinese</li><li>英语    english</li><li>日语    japanese</li><li>韩语    korean</li><li>阿拉伯语    arabic</li><li>菲律宾语    filipino</li><li>法语    french</li><li>印地语    hindi</li><li>印尼语    indonesian</li><li>马来语    malay</li><li>葡萄牙语    portugal</li><li>西班牙语    spanish</li><li>泰语    thai</li><li>土耳其语    turkish</li><li>越南语    vietnam</li><li>德语    german</li></ul> 
+     * @return LangType <p>多语言识别类型</p><ul><li>中文    chinese</li><li>英语    english</li><li>日语    japanese</li><li>韩语    korean</li><li>阿拉伯语    arabic</li><li>菲律宾语    filipino</li><li>法语    french</li><li>印地语    hindi</li><li>印尼语    indonesian</li><li>马来语    malay</li><li>葡萄牙语    portugal</li><li>西班牙语    spanish</li><li>泰语    thai</li><li>土耳其语    turkish</li><li>越南语    vietnam</li><li>德语    german</li></ul>
+     */
+    public String getLangType() {
+        return this.LangType;
+    }
+
+    /**
+     * Set <p>多语言识别类型</p><ul><li>中文    chinese</li><li>英语    english</li><li>日语    japanese</li><li>韩语    korean</li><li>阿拉伯语    arabic</li><li>菲律宾语    filipino</li><li>法语    french</li><li>印地语    hindi</li><li>印尼语    indonesian</li><li>马来语    malay</li><li>葡萄牙语    portugal</li><li>西班牙语    spanish</li><li>泰语    thai</li><li>土耳其语    turkish</li><li>越南语    vietnam</li><li>德语    german</li></ul>
+     * @param LangType <p>多语言识别类型</p><ul><li>中文    chinese</li><li>英语    english</li><li>日语    japanese</li><li>韩语    korean</li><li>阿拉伯语    arabic</li><li>菲律宾语    filipino</li><li>法语    french</li><li>印地语    hindi</li><li>印尼语    indonesian</li><li>马来语    malay</li><li>葡萄牙语    portugal</li><li>西班牙语    spanish</li><li>泰语    thai</li><li>土耳其语    turkish</li><li>越南语    vietnam</li><li>德语    german</li></ul>
+     */
+    public void setLangType(String LangType) {
+        this.LangType = LangType;
+    }
+
+    /**
+     * Get <p>说话人角色名称</p> 
+     * @return SpeakerRoleName <p>说话人角色名称</p>
+     */
+    public String getSpeakerRoleName() {
+        return this.SpeakerRoleName;
+    }
+
+    /**
+     * Set <p>说话人角色名称</p>
+     * @param SpeakerRoleName <p>说话人角色名称</p>
+     */
+    public void setSpeakerRoleName(String SpeakerRoleName) {
+        this.SpeakerRoleName = SpeakerRoleName;
     }
 
     public SentenceDetail() {
@@ -448,6 +489,12 @@ public class SentenceDetail extends AbstractModel {
                 this.KeyWordResults[i] = new KeyWordResult(source.KeyWordResults[i]);
             }
         }
+        if (source.LangType != null) {
+            this.LangType = new String(source.LangType);
+        }
+        if (source.SpeakerRoleName != null) {
+            this.SpeakerRoleName = new String(source.SpeakerRoleName);
+        }
     }
 
 
@@ -468,6 +515,8 @@ public class SentenceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "SilenceTime", this.SilenceTime);
         this.setParamArraySimple(map, prefix + "EmotionType.", this.EmotionType);
         this.setParamArrayObj(map, prefix + "KeyWordResults.", this.KeyWordResults);
+        this.setParamSimple(map, prefix + "LangType", this.LangType);
+        this.setParamSimple(map, prefix + "SpeakerRoleName", this.SpeakerRoleName);
 
     }
 }

@@ -52,7 +52,7 @@ public class CreateCcnRequest extends AbstractModel {
     private String InstanceChargeType;
 
     /**
-    * 计量模式
+    * 计量模式,`BANDWIDTH`：表示带宽,即带宽计量模式，`TRAFFIC`：表示流量,即流量计量模式。
     */
     @SerializedName("InstanceMeteringType")
     @Expose
@@ -137,16 +137,16 @@ public class CreateCcnRequest extends AbstractModel {
     }
 
     /**
-     * Get 计量模式 
-     * @return InstanceMeteringType 计量模式
+     * Get 计量模式,`BANDWIDTH`：表示带宽,即带宽计量模式，`TRAFFIC`：表示流量,即流量计量模式。 
+     * @return InstanceMeteringType 计量模式,`BANDWIDTH`：表示带宽,即带宽计量模式，`TRAFFIC`：表示流量,即流量计量模式。
      */
     public String getInstanceMeteringType() {
         return this.InstanceMeteringType;
     }
 
     /**
-     * Set 计量模式
-     * @param InstanceMeteringType 计量模式
+     * Set 计量模式,`BANDWIDTH`：表示带宽,即带宽计量模式，`TRAFFIC`：表示流量,即流量计量模式。
+     * @param InstanceMeteringType 计量模式,`BANDWIDTH`：表示带宽,即带宽计量模式，`TRAFFIC`：表示流量,即流量计量模式。
      */
     public void setInstanceMeteringType(String InstanceMeteringType) {
         this.InstanceMeteringType = InstanceMeteringType;

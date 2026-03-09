@@ -215,6 +215,17 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *创建泳道组
+     * @param req CreateGovernanceLaneGroupsRequest
+     * @return CreateGovernanceLaneGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateGovernanceLaneGroupsResponse CreateGovernanceLaneGroups(CreateGovernanceLaneGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateGovernanceLaneGroups", CreateGovernanceLaneGroupsResponse.class);
+    }
+
+    /**
      *创建治理中心命名空间
      * @param req CreateGovernanceNamespacesRequest
      * @return CreateGovernanceNamespacesResponse
@@ -476,6 +487,17 @@ public class TseClient extends AbstractClient{
     public DeleteGovernanceInstancesByHostResponse DeleteGovernanceInstancesByHost(DeleteGovernanceInstancesByHostRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteGovernanceInstancesByHost", DeleteGovernanceInstancesByHostResponse.class);
+    }
+
+    /**
+     *删除泳道组
+     * @param req DeleteGovernanceLaneGroupsRequest
+     * @return DeleteGovernanceLaneGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteGovernanceLaneGroupsResponse DeleteGovernanceLaneGroups(DeleteGovernanceLaneGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteGovernanceLaneGroups", DeleteGovernanceLaneGroupsResponse.class);
     }
 
     /**
@@ -853,6 +875,17 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *查询泳道组列表
+     * @param req DescribeGovernanceLaneGroupsRequest
+     * @return DescribeGovernanceLaneGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGovernanceLaneGroupsResponse DescribeGovernanceLaneGroups(DescribeGovernanceLaneGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeGovernanceLaneGroups", DescribeGovernanceLaneGroupsResponse.class);
+    }
+
+    /**
      *查询服务治理中心命名空间列表
      * @param req DescribeGovernanceNamespacesRequest
      * @return DescribeGovernanceNamespacesResponse
@@ -1202,6 +1235,17 @@ public class TseClient extends AbstractClient{
     public ModifyGovernanceInstancesResponse ModifyGovernanceInstances(ModifyGovernanceInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyGovernanceInstances", ModifyGovernanceInstancesResponse.class);
+    }
+
+    /**
+     *创建泳道组
+     * @param req ModifyGovernanceLaneGroupsRequest
+     * @return ModifyGovernanceLaneGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyGovernanceLaneGroupsResponse ModifyGovernanceLaneGroups(ModifyGovernanceLaneGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyGovernanceLaneGroups", ModifyGovernanceLaneGroupsResponse.class);
     }
 
     /**

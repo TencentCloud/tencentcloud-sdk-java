@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyAclRuleResponse extends AbstractModel {
 
     /**
-    * 规则的唯一表示Key
+    * <p>规则的唯一表示Key</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyAclRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 规则的唯一表示Key 
-     * @return Result 规则的唯一表示Key
+     * Get <p>规则的唯一表示Key</p> 
+     * @return Result <p>规则的唯一表示Key</p>
      */
     public Long getResult() {
         return this.Result;
     }
 
     /**
-     * Set 规则的唯一表示Key
-     * @param Result 规则的唯一表示Key
+     * Set <p>规则的唯一表示Key</p>
+     * @param Result <p>规则的唯一表示Key</p>
      */
     public void setResult(Long Result) {
         this.Result = Result;

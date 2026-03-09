@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class DescribeGroupOffsetsRequest extends AbstractModel {
 
     /**
-    * ckafka集群实例Id
+    * <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Kafka 消费分组
+    * <p>Kafka 消费分组</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40840">DescribeGroup</a></p>
     */
     @SerializedName("Group")
     @Expose
     private String Group;
 
     /**
-    * group 订阅的主题名称数组，如果没有该数组，则表示指定的 group 下所有 topic 信息
+    * <p>group 订阅的主题名称数组，如果没有该数组，则表示指定的 group 下所有 topic 信息</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40847">DescribeTopic</a></p>
     */
     @SerializedName("Topics")
     @Expose
     private String [] Topics;
 
     /**
-    * 模糊匹配 topicName
+    * <p>模糊匹配 topicName</p>
     */
     @SerializedName("SearchWord")
     @Expose
     private String SearchWord;
 
     /**
-    * 本次查询的偏移位置，默认为0
+    * <p>本次查询的偏移位置，默认为0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 本次返回结果的最大个数，默认为50，最大值为50
+    * <p>本次返回结果的最大个数，默认为50，最大值为50</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get ckafka集群实例Id 
-     * @return InstanceId ckafka集群实例Id
+     * Get <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p> 
+     * @return InstanceId <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ckafka集群实例Id
-     * @param InstanceId ckafka集群实例Id
+     * Set <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
+     * @param InstanceId <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Kafka 消费分组 
-     * @return Group Kafka 消费分组
+     * Get <p>Kafka 消费分组</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40840">DescribeGroup</a></p> 
+     * @return Group <p>Kafka 消费分组</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40840">DescribeGroup</a></p>
      */
     public String getGroup() {
         return this.Group;
     }
 
     /**
-     * Set Kafka 消费分组
-     * @param Group Kafka 消费分组
+     * Set <p>Kafka 消费分组</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40840">DescribeGroup</a></p>
+     * @param Group <p>Kafka 消费分组</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40840">DescribeGroup</a></p>
      */
     public void setGroup(String Group) {
         this.Group = Group;
     }
 
     /**
-     * Get group 订阅的主题名称数组，如果没有该数组，则表示指定的 group 下所有 topic 信息 
-     * @return Topics group 订阅的主题名称数组，如果没有该数组，则表示指定的 group 下所有 topic 信息
+     * Get <p>group 订阅的主题名称数组，如果没有该数组，则表示指定的 group 下所有 topic 信息</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40847">DescribeTopic</a></p> 
+     * @return Topics <p>group 订阅的主题名称数组，如果没有该数组，则表示指定的 group 下所有 topic 信息</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40847">DescribeTopic</a></p>
      */
     public String [] getTopics() {
         return this.Topics;
     }
 
     /**
-     * Set group 订阅的主题名称数组，如果没有该数组，则表示指定的 group 下所有 topic 信息
-     * @param Topics group 订阅的主题名称数组，如果没有该数组，则表示指定的 group 下所有 topic 信息
+     * Set <p>group 订阅的主题名称数组，如果没有该数组，则表示指定的 group 下所有 topic 信息</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40847">DescribeTopic</a></p>
+     * @param Topics <p>group 订阅的主题名称数组，如果没有该数组，则表示指定的 group 下所有 topic 信息</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40847">DescribeTopic</a></p>
      */
     public void setTopics(String [] Topics) {
         this.Topics = Topics;
     }
 
     /**
-     * Get 模糊匹配 topicName 
-     * @return SearchWord 模糊匹配 topicName
+     * Get <p>模糊匹配 topicName</p> 
+     * @return SearchWord <p>模糊匹配 topicName</p>
      */
     public String getSearchWord() {
         return this.SearchWord;
     }
 
     /**
-     * Set 模糊匹配 topicName
-     * @param SearchWord 模糊匹配 topicName
+     * Set <p>模糊匹配 topicName</p>
+     * @param SearchWord <p>模糊匹配 topicName</p>
      */
     public void setSearchWord(String SearchWord) {
         this.SearchWord = SearchWord;
     }
 
     /**
-     * Get 本次查询的偏移位置，默认为0 
-     * @return Offset 本次查询的偏移位置，默认为0
+     * Get <p>本次查询的偏移位置，默认为0</p> 
+     * @return Offset <p>本次查询的偏移位置，默认为0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 本次查询的偏移位置，默认为0
-     * @param Offset 本次查询的偏移位置，默认为0
+     * Set <p>本次查询的偏移位置，默认为0</p>
+     * @param Offset <p>本次查询的偏移位置，默认为0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 本次返回结果的最大个数，默认为50，最大值为50 
-     * @return Limit 本次返回结果的最大个数，默认为50，最大值为50
+     * Get <p>本次返回结果的最大个数，默认为50，最大值为50</p> 
+     * @return Limit <p>本次返回结果的最大个数，默认为50，最大值为50</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 本次返回结果的最大个数，默认为50，最大值为50
-     * @param Limit 本次返回结果的最大个数，默认为50，最大值为50
+     * Set <p>本次返回结果的最大个数，默认为50，最大值为50</p>
+     * @param Limit <p>本次返回结果的最大个数，默认为50，最大值为50</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

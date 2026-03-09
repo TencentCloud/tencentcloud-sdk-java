@@ -24,355 +24,345 @@ import java.util.HashMap;
 public class ExportInfo extends AbstractModel {
 
     /**
-    * 日志主题ID
+    * <p>日志主题ID</p>
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * 日志导出任务ID
+    * <p>日志导出任务ID</p>
     */
     @SerializedName("ExportId")
     @Expose
     private String ExportId;
 
     /**
-    * 日志导出查询语句
+    * <p>日志导出查询语句</p>
     */
     @SerializedName("Query")
     @Expose
     private String Query;
 
     /**
-    * 日志导出文件名
+    * <p>日志导出文件名</p>
     */
     @SerializedName("FileName")
     @Expose
     private String FileName;
 
     /**
-    * 日志文件大小
+    * <p>日志文件大小</p><p>单位：Byte</p>
     */
     @SerializedName("FileSize")
     @Expose
     private Long FileSize;
 
     /**
-    * 日志导出时间排序
+    * <p>日志导出时间排序</p>
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * 日志导出格式
+    * <p>日志导出格式</p>
     */
     @SerializedName("Format")
     @Expose
     private String Format;
 
     /**
-    * 日志导出数量
+    * <p>日志导出数量</p>
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
 
     /**
-    * 日志下载状态。Processing:导出正在进行中，Completed:导出完成，Failed:导出失败，Expired:日志导出已过期(三天有效期), Queuing 排队中
+    * <p>日志下载状态。Processing:导出正在进行中，Completed:导出完成，Failed:导出失败，Expired:日志导出已过期(三天有效期), Queuing 排队中</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 日志导出起始时间，毫秒时间戳
+    * <p>日志导出起始时间，毫秒时间戳</p>
     */
     @SerializedName("From")
     @Expose
     private Long From;
 
     /**
-    * 日志导出结束时间，毫秒时间戳
+    * <p>日志导出结束时间，毫秒时间戳</p>
     */
     @SerializedName("To")
     @Expose
     private Long To;
 
     /**
-    * 日志导出路径,有效期一个小时，请尽快使用该路径下载。
+    * <p>日志导出路径,有效期一个小时，请尽快使用该路径下载。</p>
     */
     @SerializedName("CosPath")
     @Expose
     private String CosPath;
 
     /**
-    * 日志导出创建时间
-时间格式：yyyy-MM-dd HH:mm:ss
+    * <p>日志导出创建时间<br>时间格式：yyyy-MM-dd HH:mm:ss</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 语法规则。 默认值为0。
-0：Lucene语法，1：CQL语法。
+    * <p>语法规则。 默认值为0。<br>0：Lucene语法，1：CQL语法。</p>
     */
     @SerializedName("SyntaxRule")
     @Expose
     private Long SyntaxRule;
 
     /**
-    * 导出字段
+    * <p>导出字段</p>
     */
     @SerializedName("DerivedFields")
     @Expose
     private String [] DerivedFields;
 
     /**
-     * Get 日志主题ID 
-     * @return TopicId 日志主题ID
+     * Get <p>日志主题ID</p> 
+     * @return TopicId <p>日志主题ID</p>
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 日志主题ID
-     * @param TopicId 日志主题ID
+     * Set <p>日志主题ID</p>
+     * @param TopicId <p>日志主题ID</p>
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 日志导出任务ID 
-     * @return ExportId 日志导出任务ID
+     * Get <p>日志导出任务ID</p> 
+     * @return ExportId <p>日志导出任务ID</p>
      */
     public String getExportId() {
         return this.ExportId;
     }
 
     /**
-     * Set 日志导出任务ID
-     * @param ExportId 日志导出任务ID
+     * Set <p>日志导出任务ID</p>
+     * @param ExportId <p>日志导出任务ID</p>
      */
     public void setExportId(String ExportId) {
         this.ExportId = ExportId;
     }
 
     /**
-     * Get 日志导出查询语句 
-     * @return Query 日志导出查询语句
+     * Get <p>日志导出查询语句</p> 
+     * @return Query <p>日志导出查询语句</p>
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set 日志导出查询语句
-     * @param Query 日志导出查询语句
+     * Set <p>日志导出查询语句</p>
+     * @param Query <p>日志导出查询语句</p>
      */
     public void setQuery(String Query) {
         this.Query = Query;
     }
 
     /**
-     * Get 日志导出文件名 
-     * @return FileName 日志导出文件名
+     * Get <p>日志导出文件名</p> 
+     * @return FileName <p>日志导出文件名</p>
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set 日志导出文件名
-     * @param FileName 日志导出文件名
+     * Set <p>日志导出文件名</p>
+     * @param FileName <p>日志导出文件名</p>
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get 日志文件大小 
-     * @return FileSize 日志文件大小
+     * Get <p>日志文件大小</p><p>单位：Byte</p> 
+     * @return FileSize <p>日志文件大小</p><p>单位：Byte</p>
      */
     public Long getFileSize() {
         return this.FileSize;
     }
 
     /**
-     * Set 日志文件大小
-     * @param FileSize 日志文件大小
+     * Set <p>日志文件大小</p><p>单位：Byte</p>
+     * @param FileSize <p>日志文件大小</p><p>单位：Byte</p>
      */
     public void setFileSize(Long FileSize) {
         this.FileSize = FileSize;
     }
 
     /**
-     * Get 日志导出时间排序 
-     * @return Order 日志导出时间排序
+     * Get <p>日志导出时间排序</p> 
+     * @return Order <p>日志导出时间排序</p>
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set 日志导出时间排序
-     * @param Order 日志导出时间排序
+     * Set <p>日志导出时间排序</p>
+     * @param Order <p>日志导出时间排序</p>
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get 日志导出格式 
-     * @return Format 日志导出格式
+     * Get <p>日志导出格式</p> 
+     * @return Format <p>日志导出格式</p>
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set 日志导出格式
-     * @param Format 日志导出格式
+     * Set <p>日志导出格式</p>
+     * @param Format <p>日志导出格式</p>
      */
     public void setFormat(String Format) {
         this.Format = Format;
     }
 
     /**
-     * Get 日志导出数量 
-     * @return Count 日志导出数量
+     * Get <p>日志导出数量</p> 
+     * @return Count <p>日志导出数量</p>
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set 日志导出数量
-     * @param Count 日志导出数量
+     * Set <p>日志导出数量</p>
+     * @param Count <p>日志导出数量</p>
      */
     public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * Get 日志下载状态。Processing:导出正在进行中，Completed:导出完成，Failed:导出失败，Expired:日志导出已过期(三天有效期), Queuing 排队中 
-     * @return Status 日志下载状态。Processing:导出正在进行中，Completed:导出完成，Failed:导出失败，Expired:日志导出已过期(三天有效期), Queuing 排队中
+     * Get <p>日志下载状态。Processing:导出正在进行中，Completed:导出完成，Failed:导出失败，Expired:日志导出已过期(三天有效期), Queuing 排队中</p> 
+     * @return Status <p>日志下载状态。Processing:导出正在进行中，Completed:导出完成，Failed:导出失败，Expired:日志导出已过期(三天有效期), Queuing 排队中</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 日志下载状态。Processing:导出正在进行中，Completed:导出完成，Failed:导出失败，Expired:日志导出已过期(三天有效期), Queuing 排队中
-     * @param Status 日志下载状态。Processing:导出正在进行中，Completed:导出完成，Failed:导出失败，Expired:日志导出已过期(三天有效期), Queuing 排队中
+     * Set <p>日志下载状态。Processing:导出正在进行中，Completed:导出完成，Failed:导出失败，Expired:日志导出已过期(三天有效期), Queuing 排队中</p>
+     * @param Status <p>日志下载状态。Processing:导出正在进行中，Completed:导出完成，Failed:导出失败，Expired:日志导出已过期(三天有效期), Queuing 排队中</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 日志导出起始时间，毫秒时间戳 
-     * @return From 日志导出起始时间，毫秒时间戳
+     * Get <p>日志导出起始时间，毫秒时间戳</p> 
+     * @return From <p>日志导出起始时间，毫秒时间戳</p>
      */
     public Long getFrom() {
         return this.From;
     }
 
     /**
-     * Set 日志导出起始时间，毫秒时间戳
-     * @param From 日志导出起始时间，毫秒时间戳
+     * Set <p>日志导出起始时间，毫秒时间戳</p>
+     * @param From <p>日志导出起始时间，毫秒时间戳</p>
      */
     public void setFrom(Long From) {
         this.From = From;
     }
 
     /**
-     * Get 日志导出结束时间，毫秒时间戳 
-     * @return To 日志导出结束时间，毫秒时间戳
+     * Get <p>日志导出结束时间，毫秒时间戳</p> 
+     * @return To <p>日志导出结束时间，毫秒时间戳</p>
      */
     public Long getTo() {
         return this.To;
     }
 
     /**
-     * Set 日志导出结束时间，毫秒时间戳
-     * @param To 日志导出结束时间，毫秒时间戳
+     * Set <p>日志导出结束时间，毫秒时间戳</p>
+     * @param To <p>日志导出结束时间，毫秒时间戳</p>
      */
     public void setTo(Long To) {
         this.To = To;
     }
 
     /**
-     * Get 日志导出路径,有效期一个小时，请尽快使用该路径下载。 
-     * @return CosPath 日志导出路径,有效期一个小时，请尽快使用该路径下载。
+     * Get <p>日志导出路径,有效期一个小时，请尽快使用该路径下载。</p> 
+     * @return CosPath <p>日志导出路径,有效期一个小时，请尽快使用该路径下载。</p>
      */
     public String getCosPath() {
         return this.CosPath;
     }
 
     /**
-     * Set 日志导出路径,有效期一个小时，请尽快使用该路径下载。
-     * @param CosPath 日志导出路径,有效期一个小时，请尽快使用该路径下载。
+     * Set <p>日志导出路径,有效期一个小时，请尽快使用该路径下载。</p>
+     * @param CosPath <p>日志导出路径,有效期一个小时，请尽快使用该路径下载。</p>
      */
     public void setCosPath(String CosPath) {
         this.CosPath = CosPath;
     }
 
     /**
-     * Get 日志导出创建时间
-时间格式：yyyy-MM-dd HH:mm:ss 
-     * @return CreateTime 日志导出创建时间
-时间格式：yyyy-MM-dd HH:mm:ss
+     * Get <p>日志导出创建时间<br>时间格式：yyyy-MM-dd HH:mm:ss</p> 
+     * @return CreateTime <p>日志导出创建时间<br>时间格式：yyyy-MM-dd HH:mm:ss</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 日志导出创建时间
-时间格式：yyyy-MM-dd HH:mm:ss
-     * @param CreateTime 日志导出创建时间
-时间格式：yyyy-MM-dd HH:mm:ss
+     * Set <p>日志导出创建时间<br>时间格式：yyyy-MM-dd HH:mm:ss</p>
+     * @param CreateTime <p>日志导出创建时间<br>时间格式：yyyy-MM-dd HH:mm:ss</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 语法规则。 默认值为0。
-0：Lucene语法，1：CQL语法。 
-     * @return SyntaxRule 语法规则。 默认值为0。
-0：Lucene语法，1：CQL语法。
+     * Get <p>语法规则。 默认值为0。<br>0：Lucene语法，1：CQL语法。</p> 
+     * @return SyntaxRule <p>语法规则。 默认值为0。<br>0：Lucene语法，1：CQL语法。</p>
      */
     public Long getSyntaxRule() {
         return this.SyntaxRule;
     }
 
     /**
-     * Set 语法规则。 默认值为0。
-0：Lucene语法，1：CQL语法。
-     * @param SyntaxRule 语法规则。 默认值为0。
-0：Lucene语法，1：CQL语法。
+     * Set <p>语法规则。 默认值为0。<br>0：Lucene语法，1：CQL语法。</p>
+     * @param SyntaxRule <p>语法规则。 默认值为0。<br>0：Lucene语法，1：CQL语法。</p>
      */
     public void setSyntaxRule(Long SyntaxRule) {
         this.SyntaxRule = SyntaxRule;
     }
 
     /**
-     * Get 导出字段 
-     * @return DerivedFields 导出字段
+     * Get <p>导出字段</p> 
+     * @return DerivedFields <p>导出字段</p>
      */
     public String [] getDerivedFields() {
         return this.DerivedFields;
     }
 
     /**
-     * Set 导出字段
-     * @param DerivedFields 导出字段
+     * Set <p>导出字段</p>
+     * @param DerivedFields <p>导出字段</p>
      */
     public void setDerivedFields(String [] DerivedFields) {
         this.DerivedFields = DerivedFields;

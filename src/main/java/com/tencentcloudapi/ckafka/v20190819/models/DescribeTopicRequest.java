@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeTopicRequest extends AbstractModel {
 
     /**
-    * ckafka集群实例Id
+    * <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 过滤条件，按照 topicName 过滤，支持模糊查询
+    * <p>过滤条件，按照 topicName 过滤，支持模糊查询</p>
     */
     @SerializedName("SearchWord")
     @Expose
     private String SearchWord;
 
     /**
-    * 偏移量，不填默认为0
+    * <p>偏移量，不填默认为0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数量，不填则默认为20，最大值为50
+    * <p>返回数量，不填则默认为20，最大值为50</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Acl预设策略名称
+    * <p>Acl预设策略名称</p>
     */
     @SerializedName("AclRuleName")
     @Expose
     private String AclRuleName;
 
     /**
-     * Get ckafka集群实例Id 
-     * @return InstanceId ckafka集群实例Id
+     * Get <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p> 
+     * @return InstanceId <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ckafka集群实例Id
-     * @param InstanceId ckafka集群实例Id
+     * Set <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
+     * @param InstanceId <p>ckafka集群实例Id</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/40835">DescribeInstances</a></p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 过滤条件，按照 topicName 过滤，支持模糊查询 
-     * @return SearchWord 过滤条件，按照 topicName 过滤，支持模糊查询
+     * Get <p>过滤条件，按照 topicName 过滤，支持模糊查询</p> 
+     * @return SearchWord <p>过滤条件，按照 topicName 过滤，支持模糊查询</p>
      */
     public String getSearchWord() {
         return this.SearchWord;
     }
 
     /**
-     * Set 过滤条件，按照 topicName 过滤，支持模糊查询
-     * @param SearchWord 过滤条件，按照 topicName 过滤，支持模糊查询
+     * Set <p>过滤条件，按照 topicName 过滤，支持模糊查询</p>
+     * @param SearchWord <p>过滤条件，按照 topicName 过滤，支持模糊查询</p>
      */
     public void setSearchWord(String SearchWord) {
         this.SearchWord = SearchWord;
     }
 
     /**
-     * Get 偏移量，不填默认为0 
-     * @return Offset 偏移量，不填默认为0
+     * Get <p>偏移量，不填默认为0</p> 
+     * @return Offset <p>偏移量，不填默认为0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，不填默认为0
-     * @param Offset 偏移量，不填默认为0
+     * Set <p>偏移量，不填默认为0</p>
+     * @param Offset <p>偏移量，不填默认为0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量，不填则默认为20，最大值为50 
-     * @return Limit 返回数量，不填则默认为20，最大值为50
+     * Get <p>返回数量，不填则默认为20，最大值为50</p> 
+     * @return Limit <p>返回数量，不填则默认为20，最大值为50</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，不填则默认为20，最大值为50
-     * @param Limit 返回数量，不填则默认为20，最大值为50
+     * Set <p>返回数量，不填则默认为20，最大值为50</p>
+     * @param Limit <p>返回数量，不填则默认为20，最大值为50</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Acl预设策略名称 
-     * @return AclRuleName Acl预设策略名称
+     * Get <p>Acl预设策略名称</p> 
+     * @return AclRuleName <p>Acl预设策略名称</p>
      */
     public String getAclRuleName() {
         return this.AclRuleName;
     }
 
     /**
-     * Set Acl预设策略名称
-     * @param AclRuleName Acl预设策略名称
+     * Set <p>Acl预设策略名称</p>
+     * @param AclRuleName <p>Acl预设策略名称</p>
      */
     public void setAclRuleName(String AclRuleName) {
         this.AclRuleName = AclRuleName;
