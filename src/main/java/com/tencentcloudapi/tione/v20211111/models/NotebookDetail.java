@@ -364,6 +364,14 @@ public class NotebookDetail extends AbstractModel {
     private String AppId;
 
     /**
+    * 描述
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
      * Get notebook  ID 
      * @return Id notebook  ID
      */
@@ -1195,6 +1203,26 @@ public class NotebookDetail extends AbstractModel {
         this.AppId = AppId;
     }
 
+    /**
+     * Get 描述
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Description 描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Description 描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
     public NotebookDetail() {
     }
 
@@ -1347,6 +1375,9 @@ public class NotebookDetail extends AbstractModel {
         if (source.AppId != null) {
             this.AppId = new String(source.AppId);
         }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
     }
 
 
@@ -1398,6 +1429,7 @@ public class NotebookDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "SubUinName", this.SubUinName);
         this.setParamSimple(map, prefix + "JobCreateTime", this.JobCreateTime);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

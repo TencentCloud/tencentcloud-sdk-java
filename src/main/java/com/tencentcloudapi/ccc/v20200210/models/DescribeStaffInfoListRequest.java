@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class DescribeStaffInfoListRequest extends AbstractModel {
 
     /**
-    * 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+    * <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-    * 分页尺寸，上限 9999
+    * <p>分页尺寸，上限 9999</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 分页页码，从 0 开始
+    * <p>分页页码，从 0 开始</p>
     */
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
 
     /**
-    * 坐席账号，查询单个坐席时使用
+    * <p>坐席账号，查询单个坐席时使用</p>
     */
     @SerializedName("StaffMail")
     @Expose
     private String StaffMail;
 
     /**
-    * 查询修改时间大于等于ModifiedTime的坐席时使用
+    * <p>查询修改时间大于等于ModifiedTime的坐席时使用</p>
     */
     @SerializedName("ModifiedTime")
     @Expose
     private Long ModifiedTime;
 
     /**
-    * 技能组ID
+    * <p>技能组ID</p>
     */
     @SerializedName("SkillGroupId")
     @Expose
     private Long SkillGroupId;
 
     /**
-     * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
-     * @return SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+     * Get <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p> 
+     * @return SdkAppId <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
-     * @param SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+     * Set <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
+     * @param SdkAppId <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get 分页尺寸，上限 9999 
-     * @return PageSize 分页尺寸，上限 9999
+     * Get <p>分页尺寸，上限 9999</p> 
+     * @return PageSize <p>分页尺寸，上限 9999</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 分页尺寸，上限 9999
-     * @param PageSize 分页尺寸，上限 9999
+     * Set <p>分页尺寸，上限 9999</p>
+     * @param PageSize <p>分页尺寸，上限 9999</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 分页页码，从 0 开始 
-     * @return PageNumber 分页页码，从 0 开始
+     * Get <p>分页页码，从 0 开始</p> 
+     * @return PageNumber <p>分页页码，从 0 开始</p>
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set 分页页码，从 0 开始
-     * @param PageNumber 分页页码，从 0 开始
+     * Set <p>分页页码，从 0 开始</p>
+     * @param PageNumber <p>分页页码，从 0 开始</p>
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 坐席账号，查询单个坐席时使用 
-     * @return StaffMail 坐席账号，查询单个坐席时使用
+     * Get <p>坐席账号，查询单个坐席时使用</p> 
+     * @return StaffMail <p>坐席账号，查询单个坐席时使用</p>
      */
     public String getStaffMail() {
         return this.StaffMail;
     }
 
     /**
-     * Set 坐席账号，查询单个坐席时使用
-     * @param StaffMail 坐席账号，查询单个坐席时使用
+     * Set <p>坐席账号，查询单个坐席时使用</p>
+     * @param StaffMail <p>坐席账号，查询单个坐席时使用</p>
      */
     public void setStaffMail(String StaffMail) {
         this.StaffMail = StaffMail;
     }
 
     /**
-     * Get 查询修改时间大于等于ModifiedTime的坐席时使用 
-     * @return ModifiedTime 查询修改时间大于等于ModifiedTime的坐席时使用
+     * Get <p>查询修改时间大于等于ModifiedTime的坐席时使用</p> 
+     * @return ModifiedTime <p>查询修改时间大于等于ModifiedTime的坐席时使用</p>
      */
     public Long getModifiedTime() {
         return this.ModifiedTime;
     }
 
     /**
-     * Set 查询修改时间大于等于ModifiedTime的坐席时使用
-     * @param ModifiedTime 查询修改时间大于等于ModifiedTime的坐席时使用
+     * Set <p>查询修改时间大于等于ModifiedTime的坐席时使用</p>
+     * @param ModifiedTime <p>查询修改时间大于等于ModifiedTime的坐席时使用</p>
      */
     public void setModifiedTime(Long ModifiedTime) {
         this.ModifiedTime = ModifiedTime;
     }
 
     /**
-     * Get 技能组ID 
-     * @return SkillGroupId 技能组ID
+     * Get <p>技能组ID</p> 
+     * @return SkillGroupId <p>技能组ID</p>
      */
     public Long getSkillGroupId() {
         return this.SkillGroupId;
     }
 
     /**
-     * Set 技能组ID
-     * @param SkillGroupId 技能组ID
+     * Set <p>技能组ID</p>
+     * @param SkillGroupId <p>技能组ID</p>
      */
     public void setSkillGroupId(Long SkillGroupId) {
         this.SkillGroupId = SkillGroupId;

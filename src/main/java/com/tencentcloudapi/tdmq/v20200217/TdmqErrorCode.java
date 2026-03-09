@@ -291,9 +291,6 @@ public enum TdmqErrorCode {
      /* 资源被占用。 */
      RESOURCEINUSE("ResourceInUse"),
      
-     /* 集群已存在。 */
-     RESOURCEINUSE_CLUSTER("ResourceInUse.Cluster"),
-     
      /* 环境角色已存在。 */
      RESOURCEINUSE_ENVIRONMENTROLE("ResourceInUse.EnvironmentRole"),
      

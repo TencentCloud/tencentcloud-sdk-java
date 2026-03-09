@@ -24,999 +24,877 @@ import java.util.HashMap;
 public class AbnormalProcessEventInfo extends AbstractModel {
 
     /**
-    * 进程目录
+    * <p>进程目录</p>
     */
     @SerializedName("ProcessPath")
     @Expose
     private String ProcessPath;
 
     /**
-    * 事件类型，MALICE_PROCESS_START:恶意进程启动
+    * <p>事件类型，MALICE_PROCESS_START:恶意进程启动</p>
     */
     @SerializedName("EventType")
     @Expose
     private String EventType;
 
     /**
-    * 命中规则名称，PROXY_TOOL：代理软件，TRANSFER_CONTROL：横向渗透，ATTACK_CMD：恶意命令，REVERSE_SHELL：反弹shell，FILELESS：无文件程序执行，RISK_CMD：高危命令，ABNORMAL_CHILD_PROC：敏感服务异常子进程启动，USER_DEFINED_RULE：用户自定义规则
+    * <p>命中规则名称，PROXY_TOOL：代理软件，TRANSFER_CONTROL：横向渗透，ATTACK_CMD：恶意命令，REVERSE_SHELL：反弹shell，FILELESS：无文件程序执行，RISK_CMD：高危命令，ABNORMAL_CHILD_PROC：敏感服务异常子进程启动，USER_DEFINED_RULE：用户自定义规则</p>
     */
     @SerializedName("MatchRuleName")
     @Expose
     private String MatchRuleName;
 
     /**
-    * 生成时间
+    * <p>生成时间</p>
     */
     @SerializedName("FoundTime")
     @Expose
     private String FoundTime;
 
     /**
-    * 容器名
+    * <p>容器名</p>
     */
     @SerializedName("ContainerName")
     @Expose
     private String ContainerName;
 
     /**
-    * 镜像名
+    * <p>镜像名</p>
     */
     @SerializedName("ImageName")
     @Expose
     private String ImageName;
 
     /**
-    * 动作执行结果，    BEHAVIOR_NONE: 无
-    BEHAVIOR_ALERT: 告警
-    BEHAVIOR_RELEASE：放行
-    BEHAVIOR_HOLDUP_FAILED:拦截失败
-    BEHAVIOR_HOLDUP_SUCCESSED：拦截失败
+    * <p>动作执行结果，    BEHAVIOR_NONE: 无<br>    BEHAVIOR_ALERT: 告警<br>    BEHAVIOR_RELEASE：放行<br>    BEHAVIOR_HOLDUP_FAILED:拦截失败<br>    BEHAVIOR_HOLDUP_SUCCESSED：拦截失败</p>
     */
     @SerializedName("Behavior")
     @Expose
     private String Behavior;
 
     /**
-    * 状态，EVENT_UNDEAL:事件未处理
-    EVENT_DEALED:事件已经处理
-    EVENT_INGNORE：事件已经忽略
+    * <p>状态，EVENT_UNDEAL:事件未处理<br>    EVENT_DEALED:事件已经处理<br>    EVENT_INGNORE：事件已经忽略</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 事件记录的唯一id
+    * <p>事件记录的唯一id</p>
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 镜像id，用于跳转
+    * <p>镜像id，用于跳转</p>
     */
     @SerializedName("ImageId")
     @Expose
     private String ImageId;
 
     /**
-    * 容器id，用于跳转
+    * <p>容器id，用于跳转</p>
     */
     @SerializedName("ContainerId")
     @Expose
     private String ContainerId;
 
     /**
-    * 事件解决方案
+    * <p>事件解决方案</p>
     */
     @SerializedName("Solution")
     @Expose
     private String Solution;
 
     /**
-    * 事件详细描述
+    * <p>事件详细描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 命中策略id
+    * <p>命中策略id</p>
     */
     @SerializedName("MatchRuleId")
     @Expose
     private String MatchRuleId;
 
     /**
-    * 命中规则行为：
-RULE_MODE_RELEASE 放行
-RULE_MODE_ALERT  告警
-RULE_MODE_HOLDUP 拦截
+    * <p>命中规则行为：<br>RULE_MODE_RELEASE 放行<br>RULE_MODE_ALERT  告警<br>RULE_MODE_HOLDUP 拦截</p>
     */
     @SerializedName("MatchAction")
     @Expose
     private String MatchAction;
 
     /**
-    * 命中规则进程信息
+    * <p>命中规则进程信息</p>
     */
     @SerializedName("MatchProcessPath")
     @Expose
     private String MatchProcessPath;
 
     /**
-    * 规则是否存在
+    * <p>规则是否存在</p>
     */
     @SerializedName("RuleExist")
     @Expose
     private Boolean RuleExist;
 
     /**
-    * 事件数量
+    * <p>事件数量</p>
     */
     @SerializedName("EventCount")
     @Expose
     private Long EventCount;
 
     /**
-    * 最近生成时间
+    * <p>最近生成时间</p>
     */
     @SerializedName("LatestFoundTime")
     @Expose
     private String LatestFoundTime;
 
     /**
-    * 规则组Id
+    * <p>规则组Id</p>
     */
     @SerializedName("RuleId")
     @Expose
     private String RuleId;
 
     /**
-    * 命中策略名称：SYSTEM_DEFINED_RULE （系统策略）或  用户自定义的策略名字
+    * <p>命中策略名称：SYSTEM_DEFINED_RULE （系统策略）或  用户自定义的策略名字</p>
     */
     @SerializedName("MatchGroupName")
     @Expose
     private String MatchGroupName;
 
     /**
-    * 命中规则等级，HIGH：高危，MIDDLE：中危，LOW：低危。
+    * <p>命中规则等级，HIGH：高危，MIDDLE：中危，LOW：低危。</p>
     */
     @SerializedName("MatchRuleLevel")
     @Expose
     private String MatchRuleLevel;
 
     /**
-    * 网络状态
-未隔离  	NORMAL
-已隔离		ISOLATED
-隔离中		ISOLATING
-隔离失败	ISOLATE_FAILED
-解除隔离中  RESTORING
-解除隔离失败 RESTORE_FAILED
+    * <p>网络状态<br>未隔离      NORMAL<br>已隔离        ISOLATED<br>隔离中        ISOLATING<br>隔离失败    ISOLATE_FAILED<br>解除隔离中  RESTORING<br>解除隔离失败 RESTORE_FAILED</p>
     */
     @SerializedName("ContainerNetStatus")
     @Expose
     private String ContainerNetStatus;
 
     /**
-    * 容器子状态
-"AGENT_OFFLINE"       //Agent离线
-"NODE_DESTROYED"      //节点已销毁
-"CONTAINER_EXITED"    //容器已退出
-"CONTAINER_DESTROYED" //容器已销毁
-"SHARED_HOST"         // 容器与主机共享网络
-"RESOURCE_LIMIT"      //隔离操作资源超限
-"UNKNOW"              // 原因未知
+    * <p>容器子状态<br>&quot;AGENT_OFFLINE&quot;       //Agent离线<br>&quot;NODE_DESTROYED&quot;      //节点已销毁<br>&quot;CONTAINER_EXITED&quot;    //容器已退出<br>&quot;CONTAINER_DESTROYED&quot; //容器已销毁<br>&quot;SHARED_HOST&quot;         // 容器与主机共享网络<br>&quot;RESOURCE_LIMIT&quot;      //隔离操作资源超限<br>&quot;UNKNOW&quot;              // 原因未知</p>
     */
     @SerializedName("ContainerNetSubStatus")
     @Expose
     private String ContainerNetSubStatus;
 
     /**
-    * 容器隔离操作来源
+    * <p>容器隔离操作来源</p>
     */
     @SerializedName("ContainerIsolateOperationSrc")
     @Expose
     private String ContainerIsolateOperationSrc;
 
     /**
-    * 容器状态
-正在运行: RUNNING
-暂停: PAUSED
-停止: STOPPED
-已经创建: CREATED
-已经销毁: DESTROYED
-正在重启中: RESTARTING
-迁移中: REMOVING
+    * <p>容器状态<br>正在运行: RUNNING<br>暂停: PAUSED<br>停止: STOPPED<br>已经创建: CREATED<br>已经销毁: DESTROYED<br>正在重启中: RESTARTING<br>迁移中: REMOVING</p>
     */
     @SerializedName("ContainerStatus")
     @Expose
     private String ContainerStatus;
 
     /**
-    * 集群ID
+    * <p>集群ID</p>
     */
     @SerializedName("ClusterID")
     @Expose
     private String ClusterID;
 
     /**
-    * 节点类型：NORMAL普通节点、SUPER超级节点
+    * <p>节点类型：NORMAL普通节点、SUPER超级节点</p>
     */
     @SerializedName("NodeType")
     @Expose
     private String NodeType;
 
     /**
-    * pod 名称
+    * <p>pod 名称</p>
     */
     @SerializedName("PodName")
     @Expose
     private String PodName;
 
     /**
-    * pod ip
+    * <p>pod ip</p>
     */
     @SerializedName("PodIP")
     @Expose
     private String PodIP;
 
     /**
-    * 集群id
+    * <p>集群id</p>
     */
     @SerializedName("NodeUniqueID")
     @Expose
     private String NodeUniqueID;
 
     /**
-    * 节点公网ip
+    * <p>节点公网ip</p>
     */
     @SerializedName("PublicIP")
     @Expose
     private String PublicIP;
 
     /**
-    * 节点名称
+    * <p>节点名称</p>
     */
     @SerializedName("NodeName")
     @Expose
     private String NodeName;
 
     /**
-    * 节点id
+    * <p>节点id</p>
     */
     @SerializedName("NodeID")
     @Expose
     private String NodeID;
 
     /**
-    * uuid
+    * <p>uuid</p>
     */
     @SerializedName("HostID")
     @Expose
     private String HostID;
 
     /**
-    * 节点内网ip
+    * <p>节点内网ip</p>
     */
     @SerializedName("HostIP")
     @Expose
     private String HostIP;
 
     /**
-    * 集群名称
+    * <p>集群名称</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-     * Get 进程目录 
-     * @return ProcessPath 进程目录
+    * <p>命令行参数</p>
+    */
+    @SerializedName("CmdLine")
+    @Expose
+    private String CmdLine;
+
+    /**
+     * Get <p>进程目录</p> 
+     * @return ProcessPath <p>进程目录</p>
      */
     public String getProcessPath() {
         return this.ProcessPath;
     }
 
     /**
-     * Set 进程目录
-     * @param ProcessPath 进程目录
+     * Set <p>进程目录</p>
+     * @param ProcessPath <p>进程目录</p>
      */
     public void setProcessPath(String ProcessPath) {
         this.ProcessPath = ProcessPath;
     }
 
     /**
-     * Get 事件类型，MALICE_PROCESS_START:恶意进程启动 
-     * @return EventType 事件类型，MALICE_PROCESS_START:恶意进程启动
+     * Get <p>事件类型，MALICE_PROCESS_START:恶意进程启动</p> 
+     * @return EventType <p>事件类型，MALICE_PROCESS_START:恶意进程启动</p>
      */
     public String getEventType() {
         return this.EventType;
     }
 
     /**
-     * Set 事件类型，MALICE_PROCESS_START:恶意进程启动
-     * @param EventType 事件类型，MALICE_PROCESS_START:恶意进程启动
+     * Set <p>事件类型，MALICE_PROCESS_START:恶意进程启动</p>
+     * @param EventType <p>事件类型，MALICE_PROCESS_START:恶意进程启动</p>
      */
     public void setEventType(String EventType) {
         this.EventType = EventType;
     }
 
     /**
-     * Get 命中规则名称，PROXY_TOOL：代理软件，TRANSFER_CONTROL：横向渗透，ATTACK_CMD：恶意命令，REVERSE_SHELL：反弹shell，FILELESS：无文件程序执行，RISK_CMD：高危命令，ABNORMAL_CHILD_PROC：敏感服务异常子进程启动，USER_DEFINED_RULE：用户自定义规则 
-     * @return MatchRuleName 命中规则名称，PROXY_TOOL：代理软件，TRANSFER_CONTROL：横向渗透，ATTACK_CMD：恶意命令，REVERSE_SHELL：反弹shell，FILELESS：无文件程序执行，RISK_CMD：高危命令，ABNORMAL_CHILD_PROC：敏感服务异常子进程启动，USER_DEFINED_RULE：用户自定义规则
+     * Get <p>命中规则名称，PROXY_TOOL：代理软件，TRANSFER_CONTROL：横向渗透，ATTACK_CMD：恶意命令，REVERSE_SHELL：反弹shell，FILELESS：无文件程序执行，RISK_CMD：高危命令，ABNORMAL_CHILD_PROC：敏感服务异常子进程启动，USER_DEFINED_RULE：用户自定义规则</p> 
+     * @return MatchRuleName <p>命中规则名称，PROXY_TOOL：代理软件，TRANSFER_CONTROL：横向渗透，ATTACK_CMD：恶意命令，REVERSE_SHELL：反弹shell，FILELESS：无文件程序执行，RISK_CMD：高危命令，ABNORMAL_CHILD_PROC：敏感服务异常子进程启动，USER_DEFINED_RULE：用户自定义规则</p>
      */
     public String getMatchRuleName() {
         return this.MatchRuleName;
     }
 
     /**
-     * Set 命中规则名称，PROXY_TOOL：代理软件，TRANSFER_CONTROL：横向渗透，ATTACK_CMD：恶意命令，REVERSE_SHELL：反弹shell，FILELESS：无文件程序执行，RISK_CMD：高危命令，ABNORMAL_CHILD_PROC：敏感服务异常子进程启动，USER_DEFINED_RULE：用户自定义规则
-     * @param MatchRuleName 命中规则名称，PROXY_TOOL：代理软件，TRANSFER_CONTROL：横向渗透，ATTACK_CMD：恶意命令，REVERSE_SHELL：反弹shell，FILELESS：无文件程序执行，RISK_CMD：高危命令，ABNORMAL_CHILD_PROC：敏感服务异常子进程启动，USER_DEFINED_RULE：用户自定义规则
+     * Set <p>命中规则名称，PROXY_TOOL：代理软件，TRANSFER_CONTROL：横向渗透，ATTACK_CMD：恶意命令，REVERSE_SHELL：反弹shell，FILELESS：无文件程序执行，RISK_CMD：高危命令，ABNORMAL_CHILD_PROC：敏感服务异常子进程启动，USER_DEFINED_RULE：用户自定义规则</p>
+     * @param MatchRuleName <p>命中规则名称，PROXY_TOOL：代理软件，TRANSFER_CONTROL：横向渗透，ATTACK_CMD：恶意命令，REVERSE_SHELL：反弹shell，FILELESS：无文件程序执行，RISK_CMD：高危命令，ABNORMAL_CHILD_PROC：敏感服务异常子进程启动，USER_DEFINED_RULE：用户自定义规则</p>
      */
     public void setMatchRuleName(String MatchRuleName) {
         this.MatchRuleName = MatchRuleName;
     }
 
     /**
-     * Get 生成时间 
-     * @return FoundTime 生成时间
+     * Get <p>生成时间</p> 
+     * @return FoundTime <p>生成时间</p>
      */
     public String getFoundTime() {
         return this.FoundTime;
     }
 
     /**
-     * Set 生成时间
-     * @param FoundTime 生成时间
+     * Set <p>生成时间</p>
+     * @param FoundTime <p>生成时间</p>
      */
     public void setFoundTime(String FoundTime) {
         this.FoundTime = FoundTime;
     }
 
     /**
-     * Get 容器名 
-     * @return ContainerName 容器名
+     * Get <p>容器名</p> 
+     * @return ContainerName <p>容器名</p>
      */
     public String getContainerName() {
         return this.ContainerName;
     }
 
     /**
-     * Set 容器名
-     * @param ContainerName 容器名
+     * Set <p>容器名</p>
+     * @param ContainerName <p>容器名</p>
      */
     public void setContainerName(String ContainerName) {
         this.ContainerName = ContainerName;
     }
 
     /**
-     * Get 镜像名 
-     * @return ImageName 镜像名
+     * Get <p>镜像名</p> 
+     * @return ImageName <p>镜像名</p>
      */
     public String getImageName() {
         return this.ImageName;
     }
 
     /**
-     * Set 镜像名
-     * @param ImageName 镜像名
+     * Set <p>镜像名</p>
+     * @param ImageName <p>镜像名</p>
      */
     public void setImageName(String ImageName) {
         this.ImageName = ImageName;
     }
 
     /**
-     * Get 动作执行结果，    BEHAVIOR_NONE: 无
-    BEHAVIOR_ALERT: 告警
-    BEHAVIOR_RELEASE：放行
-    BEHAVIOR_HOLDUP_FAILED:拦截失败
-    BEHAVIOR_HOLDUP_SUCCESSED：拦截失败 
-     * @return Behavior 动作执行结果，    BEHAVIOR_NONE: 无
-    BEHAVIOR_ALERT: 告警
-    BEHAVIOR_RELEASE：放行
-    BEHAVIOR_HOLDUP_FAILED:拦截失败
-    BEHAVIOR_HOLDUP_SUCCESSED：拦截失败
+     * Get <p>动作执行结果，    BEHAVIOR_NONE: 无<br>    BEHAVIOR_ALERT: 告警<br>    BEHAVIOR_RELEASE：放行<br>    BEHAVIOR_HOLDUP_FAILED:拦截失败<br>    BEHAVIOR_HOLDUP_SUCCESSED：拦截失败</p> 
+     * @return Behavior <p>动作执行结果，    BEHAVIOR_NONE: 无<br>    BEHAVIOR_ALERT: 告警<br>    BEHAVIOR_RELEASE：放行<br>    BEHAVIOR_HOLDUP_FAILED:拦截失败<br>    BEHAVIOR_HOLDUP_SUCCESSED：拦截失败</p>
      */
     public String getBehavior() {
         return this.Behavior;
     }
 
     /**
-     * Set 动作执行结果，    BEHAVIOR_NONE: 无
-    BEHAVIOR_ALERT: 告警
-    BEHAVIOR_RELEASE：放行
-    BEHAVIOR_HOLDUP_FAILED:拦截失败
-    BEHAVIOR_HOLDUP_SUCCESSED：拦截失败
-     * @param Behavior 动作执行结果，    BEHAVIOR_NONE: 无
-    BEHAVIOR_ALERT: 告警
-    BEHAVIOR_RELEASE：放行
-    BEHAVIOR_HOLDUP_FAILED:拦截失败
-    BEHAVIOR_HOLDUP_SUCCESSED：拦截失败
+     * Set <p>动作执行结果，    BEHAVIOR_NONE: 无<br>    BEHAVIOR_ALERT: 告警<br>    BEHAVIOR_RELEASE：放行<br>    BEHAVIOR_HOLDUP_FAILED:拦截失败<br>    BEHAVIOR_HOLDUP_SUCCESSED：拦截失败</p>
+     * @param Behavior <p>动作执行结果，    BEHAVIOR_NONE: 无<br>    BEHAVIOR_ALERT: 告警<br>    BEHAVIOR_RELEASE：放行<br>    BEHAVIOR_HOLDUP_FAILED:拦截失败<br>    BEHAVIOR_HOLDUP_SUCCESSED：拦截失败</p>
      */
     public void setBehavior(String Behavior) {
         this.Behavior = Behavior;
     }
 
     /**
-     * Get 状态，EVENT_UNDEAL:事件未处理
-    EVENT_DEALED:事件已经处理
-    EVENT_INGNORE：事件已经忽略 
-     * @return Status 状态，EVENT_UNDEAL:事件未处理
-    EVENT_DEALED:事件已经处理
-    EVENT_INGNORE：事件已经忽略
+     * Get <p>状态，EVENT_UNDEAL:事件未处理<br>    EVENT_DEALED:事件已经处理<br>    EVENT_INGNORE：事件已经忽略</p> 
+     * @return Status <p>状态，EVENT_UNDEAL:事件未处理<br>    EVENT_DEALED:事件已经处理<br>    EVENT_INGNORE：事件已经忽略</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态，EVENT_UNDEAL:事件未处理
-    EVENT_DEALED:事件已经处理
-    EVENT_INGNORE：事件已经忽略
-     * @param Status 状态，EVENT_UNDEAL:事件未处理
-    EVENT_DEALED:事件已经处理
-    EVENT_INGNORE：事件已经忽略
+     * Set <p>状态，EVENT_UNDEAL:事件未处理<br>    EVENT_DEALED:事件已经处理<br>    EVENT_INGNORE：事件已经忽略</p>
+     * @param Status <p>状态，EVENT_UNDEAL:事件未处理<br>    EVENT_DEALED:事件已经处理<br>    EVENT_INGNORE：事件已经忽略</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 事件记录的唯一id 
-     * @return Id 事件记录的唯一id
+     * Get <p>事件记录的唯一id</p> 
+     * @return Id <p>事件记录的唯一id</p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 事件记录的唯一id
-     * @param Id 事件记录的唯一id
+     * Set <p>事件记录的唯一id</p>
+     * @param Id <p>事件记录的唯一id</p>
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 镜像id，用于跳转 
-     * @return ImageId 镜像id，用于跳转
+     * Get <p>镜像id，用于跳转</p> 
+     * @return ImageId <p>镜像id，用于跳转</p>
      */
     public String getImageId() {
         return this.ImageId;
     }
 
     /**
-     * Set 镜像id，用于跳转
-     * @param ImageId 镜像id，用于跳转
+     * Set <p>镜像id，用于跳转</p>
+     * @param ImageId <p>镜像id，用于跳转</p>
      */
     public void setImageId(String ImageId) {
         this.ImageId = ImageId;
     }
 
     /**
-     * Get 容器id，用于跳转 
-     * @return ContainerId 容器id，用于跳转
+     * Get <p>容器id，用于跳转</p> 
+     * @return ContainerId <p>容器id，用于跳转</p>
      */
     public String getContainerId() {
         return this.ContainerId;
     }
 
     /**
-     * Set 容器id，用于跳转
-     * @param ContainerId 容器id，用于跳转
+     * Set <p>容器id，用于跳转</p>
+     * @param ContainerId <p>容器id，用于跳转</p>
      */
     public void setContainerId(String ContainerId) {
         this.ContainerId = ContainerId;
     }
 
     /**
-     * Get 事件解决方案 
-     * @return Solution 事件解决方案
+     * Get <p>事件解决方案</p> 
+     * @return Solution <p>事件解决方案</p>
      */
     public String getSolution() {
         return this.Solution;
     }
 
     /**
-     * Set 事件解决方案
-     * @param Solution 事件解决方案
+     * Set <p>事件解决方案</p>
+     * @param Solution <p>事件解决方案</p>
      */
     public void setSolution(String Solution) {
         this.Solution = Solution;
     }
 
     /**
-     * Get 事件详细描述 
-     * @return Description 事件详细描述
+     * Get <p>事件详细描述</p> 
+     * @return Description <p>事件详细描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 事件详细描述
-     * @param Description 事件详细描述
+     * Set <p>事件详细描述</p>
+     * @param Description <p>事件详细描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 命中策略id 
-     * @return MatchRuleId 命中策略id
+     * Get <p>命中策略id</p> 
+     * @return MatchRuleId <p>命中策略id</p>
      */
     public String getMatchRuleId() {
         return this.MatchRuleId;
     }
 
     /**
-     * Set 命中策略id
-     * @param MatchRuleId 命中策略id
+     * Set <p>命中策略id</p>
+     * @param MatchRuleId <p>命中策略id</p>
      */
     public void setMatchRuleId(String MatchRuleId) {
         this.MatchRuleId = MatchRuleId;
     }
 
     /**
-     * Get 命中规则行为：
-RULE_MODE_RELEASE 放行
-RULE_MODE_ALERT  告警
-RULE_MODE_HOLDUP 拦截 
-     * @return MatchAction 命中规则行为：
-RULE_MODE_RELEASE 放行
-RULE_MODE_ALERT  告警
-RULE_MODE_HOLDUP 拦截
+     * Get <p>命中规则行为：<br>RULE_MODE_RELEASE 放行<br>RULE_MODE_ALERT  告警<br>RULE_MODE_HOLDUP 拦截</p> 
+     * @return MatchAction <p>命中规则行为：<br>RULE_MODE_RELEASE 放行<br>RULE_MODE_ALERT  告警<br>RULE_MODE_HOLDUP 拦截</p>
      */
     public String getMatchAction() {
         return this.MatchAction;
     }
 
     /**
-     * Set 命中规则行为：
-RULE_MODE_RELEASE 放行
-RULE_MODE_ALERT  告警
-RULE_MODE_HOLDUP 拦截
-     * @param MatchAction 命中规则行为：
-RULE_MODE_RELEASE 放行
-RULE_MODE_ALERT  告警
-RULE_MODE_HOLDUP 拦截
+     * Set <p>命中规则行为：<br>RULE_MODE_RELEASE 放行<br>RULE_MODE_ALERT  告警<br>RULE_MODE_HOLDUP 拦截</p>
+     * @param MatchAction <p>命中规则行为：<br>RULE_MODE_RELEASE 放行<br>RULE_MODE_ALERT  告警<br>RULE_MODE_HOLDUP 拦截</p>
      */
     public void setMatchAction(String MatchAction) {
         this.MatchAction = MatchAction;
     }
 
     /**
-     * Get 命中规则进程信息 
-     * @return MatchProcessPath 命中规则进程信息
+     * Get <p>命中规则进程信息</p> 
+     * @return MatchProcessPath <p>命中规则进程信息</p>
      */
     public String getMatchProcessPath() {
         return this.MatchProcessPath;
     }
 
     /**
-     * Set 命中规则进程信息
-     * @param MatchProcessPath 命中规则进程信息
+     * Set <p>命中规则进程信息</p>
+     * @param MatchProcessPath <p>命中规则进程信息</p>
      */
     public void setMatchProcessPath(String MatchProcessPath) {
         this.MatchProcessPath = MatchProcessPath;
     }
 
     /**
-     * Get 规则是否存在 
-     * @return RuleExist 规则是否存在
+     * Get <p>规则是否存在</p> 
+     * @return RuleExist <p>规则是否存在</p>
      */
     public Boolean getRuleExist() {
         return this.RuleExist;
     }
 
     /**
-     * Set 规则是否存在
-     * @param RuleExist 规则是否存在
+     * Set <p>规则是否存在</p>
+     * @param RuleExist <p>规则是否存在</p>
      */
     public void setRuleExist(Boolean RuleExist) {
         this.RuleExist = RuleExist;
     }
 
     /**
-     * Get 事件数量 
-     * @return EventCount 事件数量
+     * Get <p>事件数量</p> 
+     * @return EventCount <p>事件数量</p>
      */
     public Long getEventCount() {
         return this.EventCount;
     }
 
     /**
-     * Set 事件数量
-     * @param EventCount 事件数量
+     * Set <p>事件数量</p>
+     * @param EventCount <p>事件数量</p>
      */
     public void setEventCount(Long EventCount) {
         this.EventCount = EventCount;
     }
 
     /**
-     * Get 最近生成时间 
-     * @return LatestFoundTime 最近生成时间
+     * Get <p>最近生成时间</p> 
+     * @return LatestFoundTime <p>最近生成时间</p>
      */
     public String getLatestFoundTime() {
         return this.LatestFoundTime;
     }
 
     /**
-     * Set 最近生成时间
-     * @param LatestFoundTime 最近生成时间
+     * Set <p>最近生成时间</p>
+     * @param LatestFoundTime <p>最近生成时间</p>
      */
     public void setLatestFoundTime(String LatestFoundTime) {
         this.LatestFoundTime = LatestFoundTime;
     }
 
     /**
-     * Get 规则组Id 
-     * @return RuleId 规则组Id
+     * Get <p>规则组Id</p> 
+     * @return RuleId <p>规则组Id</p>
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set 规则组Id
-     * @param RuleId 规则组Id
+     * Set <p>规则组Id</p>
+     * @param RuleId <p>规则组Id</p>
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get 命中策略名称：SYSTEM_DEFINED_RULE （系统策略）或  用户自定义的策略名字 
-     * @return MatchGroupName 命中策略名称：SYSTEM_DEFINED_RULE （系统策略）或  用户自定义的策略名字
+     * Get <p>命中策略名称：SYSTEM_DEFINED_RULE （系统策略）或  用户自定义的策略名字</p> 
+     * @return MatchGroupName <p>命中策略名称：SYSTEM_DEFINED_RULE （系统策略）或  用户自定义的策略名字</p>
      */
     public String getMatchGroupName() {
         return this.MatchGroupName;
     }
 
     /**
-     * Set 命中策略名称：SYSTEM_DEFINED_RULE （系统策略）或  用户自定义的策略名字
-     * @param MatchGroupName 命中策略名称：SYSTEM_DEFINED_RULE （系统策略）或  用户自定义的策略名字
+     * Set <p>命中策略名称：SYSTEM_DEFINED_RULE （系统策略）或  用户自定义的策略名字</p>
+     * @param MatchGroupName <p>命中策略名称：SYSTEM_DEFINED_RULE （系统策略）或  用户自定义的策略名字</p>
      */
     public void setMatchGroupName(String MatchGroupName) {
         this.MatchGroupName = MatchGroupName;
     }
 
     /**
-     * Get 命中规则等级，HIGH：高危，MIDDLE：中危，LOW：低危。 
-     * @return MatchRuleLevel 命中规则等级，HIGH：高危，MIDDLE：中危，LOW：低危。
+     * Get <p>命中规则等级，HIGH：高危，MIDDLE：中危，LOW：低危。</p> 
+     * @return MatchRuleLevel <p>命中规则等级，HIGH：高危，MIDDLE：中危，LOW：低危。</p>
      */
     public String getMatchRuleLevel() {
         return this.MatchRuleLevel;
     }
 
     /**
-     * Set 命中规则等级，HIGH：高危，MIDDLE：中危，LOW：低危。
-     * @param MatchRuleLevel 命中规则等级，HIGH：高危，MIDDLE：中危，LOW：低危。
+     * Set <p>命中规则等级，HIGH：高危，MIDDLE：中危，LOW：低危。</p>
+     * @param MatchRuleLevel <p>命中规则等级，HIGH：高危，MIDDLE：中危，LOW：低危。</p>
      */
     public void setMatchRuleLevel(String MatchRuleLevel) {
         this.MatchRuleLevel = MatchRuleLevel;
     }
 
     /**
-     * Get 网络状态
-未隔离  	NORMAL
-已隔离		ISOLATED
-隔离中		ISOLATING
-隔离失败	ISOLATE_FAILED
-解除隔离中  RESTORING
-解除隔离失败 RESTORE_FAILED 
-     * @return ContainerNetStatus 网络状态
-未隔离  	NORMAL
-已隔离		ISOLATED
-隔离中		ISOLATING
-隔离失败	ISOLATE_FAILED
-解除隔离中  RESTORING
-解除隔离失败 RESTORE_FAILED
+     * Get <p>网络状态<br>未隔离      NORMAL<br>已隔离        ISOLATED<br>隔离中        ISOLATING<br>隔离失败    ISOLATE_FAILED<br>解除隔离中  RESTORING<br>解除隔离失败 RESTORE_FAILED</p> 
+     * @return ContainerNetStatus <p>网络状态<br>未隔离      NORMAL<br>已隔离        ISOLATED<br>隔离中        ISOLATING<br>隔离失败    ISOLATE_FAILED<br>解除隔离中  RESTORING<br>解除隔离失败 RESTORE_FAILED</p>
      */
     public String getContainerNetStatus() {
         return this.ContainerNetStatus;
     }
 
     /**
-     * Set 网络状态
-未隔离  	NORMAL
-已隔离		ISOLATED
-隔离中		ISOLATING
-隔离失败	ISOLATE_FAILED
-解除隔离中  RESTORING
-解除隔离失败 RESTORE_FAILED
-     * @param ContainerNetStatus 网络状态
-未隔离  	NORMAL
-已隔离		ISOLATED
-隔离中		ISOLATING
-隔离失败	ISOLATE_FAILED
-解除隔离中  RESTORING
-解除隔离失败 RESTORE_FAILED
+     * Set <p>网络状态<br>未隔离      NORMAL<br>已隔离        ISOLATED<br>隔离中        ISOLATING<br>隔离失败    ISOLATE_FAILED<br>解除隔离中  RESTORING<br>解除隔离失败 RESTORE_FAILED</p>
+     * @param ContainerNetStatus <p>网络状态<br>未隔离      NORMAL<br>已隔离        ISOLATED<br>隔离中        ISOLATING<br>隔离失败    ISOLATE_FAILED<br>解除隔离中  RESTORING<br>解除隔离失败 RESTORE_FAILED</p>
      */
     public void setContainerNetStatus(String ContainerNetStatus) {
         this.ContainerNetStatus = ContainerNetStatus;
     }
 
     /**
-     * Get 容器子状态
-"AGENT_OFFLINE"       //Agent离线
-"NODE_DESTROYED"      //节点已销毁
-"CONTAINER_EXITED"    //容器已退出
-"CONTAINER_DESTROYED" //容器已销毁
-"SHARED_HOST"         // 容器与主机共享网络
-"RESOURCE_LIMIT"      //隔离操作资源超限
-"UNKNOW"              // 原因未知 
-     * @return ContainerNetSubStatus 容器子状态
-"AGENT_OFFLINE"       //Agent离线
-"NODE_DESTROYED"      //节点已销毁
-"CONTAINER_EXITED"    //容器已退出
-"CONTAINER_DESTROYED" //容器已销毁
-"SHARED_HOST"         // 容器与主机共享网络
-"RESOURCE_LIMIT"      //隔离操作资源超限
-"UNKNOW"              // 原因未知
+     * Get <p>容器子状态<br>&quot;AGENT_OFFLINE&quot;       //Agent离线<br>&quot;NODE_DESTROYED&quot;      //节点已销毁<br>&quot;CONTAINER_EXITED&quot;    //容器已退出<br>&quot;CONTAINER_DESTROYED&quot; //容器已销毁<br>&quot;SHARED_HOST&quot;         // 容器与主机共享网络<br>&quot;RESOURCE_LIMIT&quot;      //隔离操作资源超限<br>&quot;UNKNOW&quot;              // 原因未知</p> 
+     * @return ContainerNetSubStatus <p>容器子状态<br>&quot;AGENT_OFFLINE&quot;       //Agent离线<br>&quot;NODE_DESTROYED&quot;      //节点已销毁<br>&quot;CONTAINER_EXITED&quot;    //容器已退出<br>&quot;CONTAINER_DESTROYED&quot; //容器已销毁<br>&quot;SHARED_HOST&quot;         // 容器与主机共享网络<br>&quot;RESOURCE_LIMIT&quot;      //隔离操作资源超限<br>&quot;UNKNOW&quot;              // 原因未知</p>
      */
     public String getContainerNetSubStatus() {
         return this.ContainerNetSubStatus;
     }
 
     /**
-     * Set 容器子状态
-"AGENT_OFFLINE"       //Agent离线
-"NODE_DESTROYED"      //节点已销毁
-"CONTAINER_EXITED"    //容器已退出
-"CONTAINER_DESTROYED" //容器已销毁
-"SHARED_HOST"         // 容器与主机共享网络
-"RESOURCE_LIMIT"      //隔离操作资源超限
-"UNKNOW"              // 原因未知
-     * @param ContainerNetSubStatus 容器子状态
-"AGENT_OFFLINE"       //Agent离线
-"NODE_DESTROYED"      //节点已销毁
-"CONTAINER_EXITED"    //容器已退出
-"CONTAINER_DESTROYED" //容器已销毁
-"SHARED_HOST"         // 容器与主机共享网络
-"RESOURCE_LIMIT"      //隔离操作资源超限
-"UNKNOW"              // 原因未知
+     * Set <p>容器子状态<br>&quot;AGENT_OFFLINE&quot;       //Agent离线<br>&quot;NODE_DESTROYED&quot;      //节点已销毁<br>&quot;CONTAINER_EXITED&quot;    //容器已退出<br>&quot;CONTAINER_DESTROYED&quot; //容器已销毁<br>&quot;SHARED_HOST&quot;         // 容器与主机共享网络<br>&quot;RESOURCE_LIMIT&quot;      //隔离操作资源超限<br>&quot;UNKNOW&quot;              // 原因未知</p>
+     * @param ContainerNetSubStatus <p>容器子状态<br>&quot;AGENT_OFFLINE&quot;       //Agent离线<br>&quot;NODE_DESTROYED&quot;      //节点已销毁<br>&quot;CONTAINER_EXITED&quot;    //容器已退出<br>&quot;CONTAINER_DESTROYED&quot; //容器已销毁<br>&quot;SHARED_HOST&quot;         // 容器与主机共享网络<br>&quot;RESOURCE_LIMIT&quot;      //隔离操作资源超限<br>&quot;UNKNOW&quot;              // 原因未知</p>
      */
     public void setContainerNetSubStatus(String ContainerNetSubStatus) {
         this.ContainerNetSubStatus = ContainerNetSubStatus;
     }
 
     /**
-     * Get 容器隔离操作来源 
-     * @return ContainerIsolateOperationSrc 容器隔离操作来源
+     * Get <p>容器隔离操作来源</p> 
+     * @return ContainerIsolateOperationSrc <p>容器隔离操作来源</p>
      */
     public String getContainerIsolateOperationSrc() {
         return this.ContainerIsolateOperationSrc;
     }
 
     /**
-     * Set 容器隔离操作来源
-     * @param ContainerIsolateOperationSrc 容器隔离操作来源
+     * Set <p>容器隔离操作来源</p>
+     * @param ContainerIsolateOperationSrc <p>容器隔离操作来源</p>
      */
     public void setContainerIsolateOperationSrc(String ContainerIsolateOperationSrc) {
         this.ContainerIsolateOperationSrc = ContainerIsolateOperationSrc;
     }
 
     /**
-     * Get 容器状态
-正在运行: RUNNING
-暂停: PAUSED
-停止: STOPPED
-已经创建: CREATED
-已经销毁: DESTROYED
-正在重启中: RESTARTING
-迁移中: REMOVING 
-     * @return ContainerStatus 容器状态
-正在运行: RUNNING
-暂停: PAUSED
-停止: STOPPED
-已经创建: CREATED
-已经销毁: DESTROYED
-正在重启中: RESTARTING
-迁移中: REMOVING
+     * Get <p>容器状态<br>正在运行: RUNNING<br>暂停: PAUSED<br>停止: STOPPED<br>已经创建: CREATED<br>已经销毁: DESTROYED<br>正在重启中: RESTARTING<br>迁移中: REMOVING</p> 
+     * @return ContainerStatus <p>容器状态<br>正在运行: RUNNING<br>暂停: PAUSED<br>停止: STOPPED<br>已经创建: CREATED<br>已经销毁: DESTROYED<br>正在重启中: RESTARTING<br>迁移中: REMOVING</p>
      */
     public String getContainerStatus() {
         return this.ContainerStatus;
     }
 
     /**
-     * Set 容器状态
-正在运行: RUNNING
-暂停: PAUSED
-停止: STOPPED
-已经创建: CREATED
-已经销毁: DESTROYED
-正在重启中: RESTARTING
-迁移中: REMOVING
-     * @param ContainerStatus 容器状态
-正在运行: RUNNING
-暂停: PAUSED
-停止: STOPPED
-已经创建: CREATED
-已经销毁: DESTROYED
-正在重启中: RESTARTING
-迁移中: REMOVING
+     * Set <p>容器状态<br>正在运行: RUNNING<br>暂停: PAUSED<br>停止: STOPPED<br>已经创建: CREATED<br>已经销毁: DESTROYED<br>正在重启中: RESTARTING<br>迁移中: REMOVING</p>
+     * @param ContainerStatus <p>容器状态<br>正在运行: RUNNING<br>暂停: PAUSED<br>停止: STOPPED<br>已经创建: CREATED<br>已经销毁: DESTROYED<br>正在重启中: RESTARTING<br>迁移中: REMOVING</p>
      */
     public void setContainerStatus(String ContainerStatus) {
         this.ContainerStatus = ContainerStatus;
     }
 
     /**
-     * Get 集群ID 
-     * @return ClusterID 集群ID
+     * Get <p>集群ID</p> 
+     * @return ClusterID <p>集群ID</p>
      */
     public String getClusterID() {
         return this.ClusterID;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterID 集群ID
+     * Set <p>集群ID</p>
+     * @param ClusterID <p>集群ID</p>
      */
     public void setClusterID(String ClusterID) {
         this.ClusterID = ClusterID;
     }
 
     /**
-     * Get 节点类型：NORMAL普通节点、SUPER超级节点 
-     * @return NodeType 节点类型：NORMAL普通节点、SUPER超级节点
+     * Get <p>节点类型：NORMAL普通节点、SUPER超级节点</p> 
+     * @return NodeType <p>节点类型：NORMAL普通节点、SUPER超级节点</p>
      */
     public String getNodeType() {
         return this.NodeType;
     }
 
     /**
-     * Set 节点类型：NORMAL普通节点、SUPER超级节点
-     * @param NodeType 节点类型：NORMAL普通节点、SUPER超级节点
+     * Set <p>节点类型：NORMAL普通节点、SUPER超级节点</p>
+     * @param NodeType <p>节点类型：NORMAL普通节点、SUPER超级节点</p>
      */
     public void setNodeType(String NodeType) {
         this.NodeType = NodeType;
     }
 
     /**
-     * Get pod 名称 
-     * @return PodName pod 名称
+     * Get <p>pod 名称</p> 
+     * @return PodName <p>pod 名称</p>
      */
     public String getPodName() {
         return this.PodName;
     }
 
     /**
-     * Set pod 名称
-     * @param PodName pod 名称
+     * Set <p>pod 名称</p>
+     * @param PodName <p>pod 名称</p>
      */
     public void setPodName(String PodName) {
         this.PodName = PodName;
     }
 
     /**
-     * Get pod ip 
-     * @return PodIP pod ip
+     * Get <p>pod ip</p> 
+     * @return PodIP <p>pod ip</p>
      */
     public String getPodIP() {
         return this.PodIP;
     }
 
     /**
-     * Set pod ip
-     * @param PodIP pod ip
+     * Set <p>pod ip</p>
+     * @param PodIP <p>pod ip</p>
      */
     public void setPodIP(String PodIP) {
         this.PodIP = PodIP;
     }
 
     /**
-     * Get 集群id 
-     * @return NodeUniqueID 集群id
+     * Get <p>集群id</p> 
+     * @return NodeUniqueID <p>集群id</p>
      */
     public String getNodeUniqueID() {
         return this.NodeUniqueID;
     }
 
     /**
-     * Set 集群id
-     * @param NodeUniqueID 集群id
+     * Set <p>集群id</p>
+     * @param NodeUniqueID <p>集群id</p>
      */
     public void setNodeUniqueID(String NodeUniqueID) {
         this.NodeUniqueID = NodeUniqueID;
     }
 
     /**
-     * Get 节点公网ip 
-     * @return PublicIP 节点公网ip
+     * Get <p>节点公网ip</p> 
+     * @return PublicIP <p>节点公网ip</p>
      */
     public String getPublicIP() {
         return this.PublicIP;
     }
 
     /**
-     * Set 节点公网ip
-     * @param PublicIP 节点公网ip
+     * Set <p>节点公网ip</p>
+     * @param PublicIP <p>节点公网ip</p>
      */
     public void setPublicIP(String PublicIP) {
         this.PublicIP = PublicIP;
     }
 
     /**
-     * Get 节点名称 
-     * @return NodeName 节点名称
+     * Get <p>节点名称</p> 
+     * @return NodeName <p>节点名称</p>
      */
     public String getNodeName() {
         return this.NodeName;
     }
 
     /**
-     * Set 节点名称
-     * @param NodeName 节点名称
+     * Set <p>节点名称</p>
+     * @param NodeName <p>节点名称</p>
      */
     public void setNodeName(String NodeName) {
         this.NodeName = NodeName;
     }
 
     /**
-     * Get 节点id 
-     * @return NodeID 节点id
+     * Get <p>节点id</p> 
+     * @return NodeID <p>节点id</p>
      */
     public String getNodeID() {
         return this.NodeID;
     }
 
     /**
-     * Set 节点id
-     * @param NodeID 节点id
+     * Set <p>节点id</p>
+     * @param NodeID <p>节点id</p>
      */
     public void setNodeID(String NodeID) {
         this.NodeID = NodeID;
     }
 
     /**
-     * Get uuid 
-     * @return HostID uuid
+     * Get <p>uuid</p> 
+     * @return HostID <p>uuid</p>
      */
     public String getHostID() {
         return this.HostID;
     }
 
     /**
-     * Set uuid
-     * @param HostID uuid
+     * Set <p>uuid</p>
+     * @param HostID <p>uuid</p>
      */
     public void setHostID(String HostID) {
         this.HostID = HostID;
     }
 
     /**
-     * Get 节点内网ip 
-     * @return HostIP 节点内网ip
+     * Get <p>节点内网ip</p> 
+     * @return HostIP <p>节点内网ip</p>
      */
     public String getHostIP() {
         return this.HostIP;
     }
 
     /**
-     * Set 节点内网ip
-     * @param HostIP 节点内网ip
+     * Set <p>节点内网ip</p>
+     * @param HostIP <p>节点内网ip</p>
      */
     public void setHostIP(String HostIP) {
         this.HostIP = HostIP;
     }
 
     /**
-     * Get 集群名称 
-     * @return ClusterName 集群名称
+     * Get <p>集群名称</p> 
+     * @return ClusterName <p>集群名称</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set 集群名称
-     * @param ClusterName 集群名称
+     * Set <p>集群名称</p>
+     * @param ClusterName <p>集群名称</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
+    }
+
+    /**
+     * Get <p>命令行参数</p> 
+     * @return CmdLine <p>命令行参数</p>
+     */
+    public String getCmdLine() {
+        return this.CmdLine;
+    }
+
+    /**
+     * Set <p>命令行参数</p>
+     * @param CmdLine <p>命令行参数</p>
+     */
+    public void setCmdLine(String CmdLine) {
+        this.CmdLine = CmdLine;
     }
 
     public AbnormalProcessEventInfo() {
@@ -1138,6 +1016,9 @@ RULE_MODE_HOLDUP 拦截
         if (source.ClusterName != null) {
             this.ClusterName = new String(source.ClusterName);
         }
+        if (source.CmdLine != null) {
+            this.CmdLine = new String(source.CmdLine);
+        }
     }
 
 
@@ -1182,6 +1063,7 @@ RULE_MODE_HOLDUP 拦截
         this.setParamSimple(map, prefix + "HostID", this.HostID);
         this.setParamSimple(map, prefix + "HostIP", this.HostIP);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
+        this.setParamSimple(map, prefix + "CmdLine", this.CmdLine);
 
     }
 }

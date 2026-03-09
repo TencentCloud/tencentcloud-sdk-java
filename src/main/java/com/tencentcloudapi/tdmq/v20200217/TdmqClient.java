@@ -72,17 +72,6 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *创建用户的集群
-     * @param req CreateClusterRequest
-     * @return CreateClusterResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateClusterResponse CreateCluster(CreateClusterRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateCluster", CreateClusterResponse.class);
-    }
-
-    /**
      *创建cmq队列接口
      * @param req CreateCmqQueueRequest
      * @return CreateCmqQueueResponse

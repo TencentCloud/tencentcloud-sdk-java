@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeClassesResponse extends AbstractModel {
 
     /**
-    * 数据库规格列表
+    * <p>数据库规格列表</p>
     */
     @SerializedName("ClassInfoSet")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeClassesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 数据库规格列表 
-     * @return ClassInfoSet 数据库规格列表
+     * Get <p>数据库规格列表</p> 
+     * @return ClassInfoSet <p>数据库规格列表</p>
      */
     public ClassInfo [] getClassInfoSet() {
         return this.ClassInfoSet;
     }
 
     /**
-     * Set 数据库规格列表
-     * @param ClassInfoSet 数据库规格列表
+     * Set <p>数据库规格列表</p>
+     * @param ClassInfoSet <p>数据库规格列表</p>
      */
     public void setClassInfoSet(ClassInfo [] ClassInfoSet) {
         this.ClassInfoSet = ClassInfoSet;

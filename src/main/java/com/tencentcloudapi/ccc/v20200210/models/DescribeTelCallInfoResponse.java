@@ -24,49 +24,49 @@ import java.util.HashMap;
 public class DescribeTelCallInfoResponse extends AbstractModel {
 
     /**
-    * 呼出套餐包消耗分钟数
+    * <p>呼出套餐包消耗分钟数</p>
     */
     @SerializedName("TelCallOutCount")
     @Expose
     private Long TelCallOutCount;
 
     /**
-    * 呼入套餐包消耗分钟数
+    * <p>呼入套餐包消耗分钟数</p>
     */
     @SerializedName("TelCallInCount")
     @Expose
     private Long TelCallInCount;
 
     /**
-    * 坐席使用统计个数
+    * <p>坐席使用统计个数</p>
     */
     @SerializedName("SeatUsedCount")
     @Expose
     private Long SeatUsedCount;
 
     /**
-    * 音频套餐包消耗分钟数
+    * <p>音频套餐包消耗分钟数</p>
     */
     @SerializedName("VoipCallInCount")
     @Expose
     private Long VoipCallInCount;
 
     /**
-    * 音频套餐包消耗分钟数
+    * <p>音频套餐包消耗分钟数</p>
     */
     @SerializedName("VOIPCallInCount")
     @Expose
     private Long VOIPCallInCount;
 
     /**
-    * 离线语音转文字套餐包消耗分钟数
+    * <p>离线语音转文字套餐包消耗分钟数</p>
     */
     @SerializedName("AsrOfflineCount")
     @Expose
     private Long AsrOfflineCount;
 
     /**
-    * 实时语音转文字套餐包消耗分钟数
+    * <p>实时语音转文字套餐包消耗分钟数</p>
     */
     @SerializedName("AsrRealtimeCount")
     @Expose
@@ -80,56 +80,56 @@ public class DescribeTelCallInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 呼出套餐包消耗分钟数 
-     * @return TelCallOutCount 呼出套餐包消耗分钟数
+     * Get <p>呼出套餐包消耗分钟数</p> 
+     * @return TelCallOutCount <p>呼出套餐包消耗分钟数</p>
      */
     public Long getTelCallOutCount() {
         return this.TelCallOutCount;
     }
 
     /**
-     * Set 呼出套餐包消耗分钟数
-     * @param TelCallOutCount 呼出套餐包消耗分钟数
+     * Set <p>呼出套餐包消耗分钟数</p>
+     * @param TelCallOutCount <p>呼出套餐包消耗分钟数</p>
      */
     public void setTelCallOutCount(Long TelCallOutCount) {
         this.TelCallOutCount = TelCallOutCount;
     }
 
     /**
-     * Get 呼入套餐包消耗分钟数 
-     * @return TelCallInCount 呼入套餐包消耗分钟数
+     * Get <p>呼入套餐包消耗分钟数</p> 
+     * @return TelCallInCount <p>呼入套餐包消耗分钟数</p>
      */
     public Long getTelCallInCount() {
         return this.TelCallInCount;
     }
 
     /**
-     * Set 呼入套餐包消耗分钟数
-     * @param TelCallInCount 呼入套餐包消耗分钟数
+     * Set <p>呼入套餐包消耗分钟数</p>
+     * @param TelCallInCount <p>呼入套餐包消耗分钟数</p>
      */
     public void setTelCallInCount(Long TelCallInCount) {
         this.TelCallInCount = TelCallInCount;
     }
 
     /**
-     * Get 坐席使用统计个数 
-     * @return SeatUsedCount 坐席使用统计个数
+     * Get <p>坐席使用统计个数</p> 
+     * @return SeatUsedCount <p>坐席使用统计个数</p>
      */
     public Long getSeatUsedCount() {
         return this.SeatUsedCount;
     }
 
     /**
-     * Set 坐席使用统计个数
-     * @param SeatUsedCount 坐席使用统计个数
+     * Set <p>坐席使用统计个数</p>
+     * @param SeatUsedCount <p>坐席使用统计个数</p>
      */
     public void setSeatUsedCount(Long SeatUsedCount) {
         this.SeatUsedCount = SeatUsedCount;
     }
 
     /**
-     * Get 音频套餐包消耗分钟数 
-     * @return VoipCallInCount 音频套餐包消耗分钟数
+     * Get <p>音频套餐包消耗分钟数</p> 
+     * @return VoipCallInCount <p>音频套餐包消耗分钟数</p>
      * @deprecated
      */
     @Deprecated
@@ -138,8 +138,8 @@ public class DescribeTelCallInfoResponse extends AbstractModel {
     }
 
     /**
-     * Set 音频套餐包消耗分钟数
-     * @param VoipCallInCount 音频套餐包消耗分钟数
+     * Set <p>音频套餐包消耗分钟数</p>
+     * @param VoipCallInCount <p>音频套餐包消耗分钟数</p>
      * @deprecated
      */
     @Deprecated
@@ -148,48 +148,48 @@ public class DescribeTelCallInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get 音频套餐包消耗分钟数 
-     * @return VOIPCallInCount 音频套餐包消耗分钟数
+     * Get <p>音频套餐包消耗分钟数</p> 
+     * @return VOIPCallInCount <p>音频套餐包消耗分钟数</p>
      */
     public Long getVOIPCallInCount() {
         return this.VOIPCallInCount;
     }
 
     /**
-     * Set 音频套餐包消耗分钟数
-     * @param VOIPCallInCount 音频套餐包消耗分钟数
+     * Set <p>音频套餐包消耗分钟数</p>
+     * @param VOIPCallInCount <p>音频套餐包消耗分钟数</p>
      */
     public void setVOIPCallInCount(Long VOIPCallInCount) {
         this.VOIPCallInCount = VOIPCallInCount;
     }
 
     /**
-     * Get 离线语音转文字套餐包消耗分钟数 
-     * @return AsrOfflineCount 离线语音转文字套餐包消耗分钟数
+     * Get <p>离线语音转文字套餐包消耗分钟数</p> 
+     * @return AsrOfflineCount <p>离线语音转文字套餐包消耗分钟数</p>
      */
     public Long getAsrOfflineCount() {
         return this.AsrOfflineCount;
     }
 
     /**
-     * Set 离线语音转文字套餐包消耗分钟数
-     * @param AsrOfflineCount 离线语音转文字套餐包消耗分钟数
+     * Set <p>离线语音转文字套餐包消耗分钟数</p>
+     * @param AsrOfflineCount <p>离线语音转文字套餐包消耗分钟数</p>
      */
     public void setAsrOfflineCount(Long AsrOfflineCount) {
         this.AsrOfflineCount = AsrOfflineCount;
     }
 
     /**
-     * Get 实时语音转文字套餐包消耗分钟数 
-     * @return AsrRealtimeCount 实时语音转文字套餐包消耗分钟数
+     * Get <p>实时语音转文字套餐包消耗分钟数</p> 
+     * @return AsrRealtimeCount <p>实时语音转文字套餐包消耗分钟数</p>
      */
     public Long getAsrRealtimeCount() {
         return this.AsrRealtimeCount;
     }
 
     /**
-     * Set 实时语音转文字套餐包消耗分钟数
-     * @param AsrRealtimeCount 实时语音转文字套餐包消耗分钟数
+     * Set <p>实时语音转文字套餐包消耗分钟数</p>
+     * @param AsrRealtimeCount <p>实时语音转文字套餐包消耗分钟数</p>
      */
     public void setAsrRealtimeCount(Long AsrRealtimeCount) {
         this.AsrRealtimeCount = AsrRealtimeCount;

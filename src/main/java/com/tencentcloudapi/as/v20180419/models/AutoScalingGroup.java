@@ -24,907 +24,782 @@ import java.util.HashMap;
 public class AutoScalingGroup extends AbstractModel {
 
     /**
-    * 伸缩组ID
+    * <p>伸缩组ID</p>
     */
     @SerializedName("AutoScalingGroupId")
     @Expose
     private String AutoScalingGroupId;
 
     /**
-    * 伸缩组名称
+    * <p>伸缩组名称</p>
     */
     @SerializedName("AutoScalingGroupName")
     @Expose
     private String AutoScalingGroupName;
 
     /**
-    * 伸缩组当前状态。取值范围：
-<li>NORMAL：正常</li>
-<li>CVM_ABNORMAL：启动配置异常</li>
-<li>LB_ABNORMAL：负载均衡器异常</li>
-<li>LB_LISTENER_ABNORMAL：负载均衡器监听器异常</li>
-<li>LB_LOCATION_ABNORMAL：负载均衡器监听器转发配置异常</li>
-<li>VPC_ABNORMAL：VPC网络异常</li>
-<li>SUBNET_ABNORMAL：VPC子网异常</li>
-<li>INSUFFICIENT_BALANCE：余额不足</li>
-<li>LB_BACKEND_REGION_NOT_MATCH：CLB实例后端地域与AS服务所在地域不匹配</li>
-<li>LB_BACKEND_VPC_NOT_MATCH：CLB实例VPC与伸缩组VPC不匹配</li>
+    * <p>伸缩组当前状态。取值范围：</p><li>NORMAL：正常</li><li>CVM_ABNORMAL：启动配置异常</li><li>LB_ABNORMAL：负载均衡器异常</li><li>LB_LISTENER_ABNORMAL：负载均衡器监听器异常</li><li>LB_LOCATION_ABNORMAL：负载均衡器监听器转发配置异常</li><li>VPC_ABNORMAL：VPC网络异常</li><li>SUBNET_ABNORMAL：VPC子网异常</li><li>INSUFFICIENT_BALANCE：余额不足</li><li>LB_BACKEND_REGION_NOT_MATCH：CLB实例后端地域与AS服务所在地域不匹配</li><li>LB_BACKEND_VPC_NOT_MATCH：CLB实例VPC与伸缩组VPC不匹配</li>
     */
     @SerializedName("AutoScalingGroupStatus")
     @Expose
     private String AutoScalingGroupStatus;
 
     /**
-    * 创建时间，采用UTC标准计时
+    * <p>创建时间，采用UTC标准计时</p>
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * 默认冷却时间，单位秒
+    * <p>默认冷却时间，单位秒</p>
     */
     @SerializedName("DefaultCooldown")
     @Expose
     private Long DefaultCooldown;
 
     /**
-    * 期望实例数
+    * <p>期望实例数</p>
     */
     @SerializedName("DesiredCapacity")
     @Expose
     private Long DesiredCapacity;
 
     /**
-    * 启用状态，取值包括`ENABLED`和`DISABLED`
+    * <p>启用状态，取值包括<code>ENABLED</code>和<code>DISABLED</code></p>
     */
     @SerializedName("EnabledStatus")
     @Expose
     private String EnabledStatus;
 
     /**
-    * 应用型负载均衡器列表
+    * <p>应用型负载均衡器列表</p>
     */
     @SerializedName("ForwardLoadBalancerSet")
     @Expose
     private ForwardLoadBalancer [] ForwardLoadBalancerSet;
 
     /**
-    * 实例数量
+    * <p>实例数量</p>
     */
     @SerializedName("InstanceCount")
     @Expose
     private Long InstanceCount;
 
     /**
-    * 状态为`IN_SERVICE`实例的数量
+    * <p>状态为<code>IN_SERVICE</code>实例的数量</p>
     */
     @SerializedName("InServiceInstanceCount")
     @Expose
     private Long InServiceInstanceCount;
 
     /**
-    * 启动配置ID
+    * <p>启动配置ID</p>
     */
     @SerializedName("LaunchConfigurationId")
     @Expose
     private String LaunchConfigurationId;
 
     /**
-    * 启动配置名称
+    * <p>启动配置名称</p>
     */
     @SerializedName("LaunchConfigurationName")
     @Expose
     private String LaunchConfigurationName;
 
     /**
-    * 传统型负载均衡器ID列表
+    * <p>传统型负载均衡器ID列表</p>
     */
     @SerializedName("LoadBalancerIdSet")
     @Expose
     private String [] LoadBalancerIdSet;
 
     /**
-    * 最大实例数
+    * <p>最大实例数</p>
     */
     @SerializedName("MaxSize")
     @Expose
     private Long MaxSize;
 
     /**
-    * 最小实例数
+    * <p>最小实例数</p>
     */
     @SerializedName("MinSize")
     @Expose
     private Long MinSize;
 
     /**
-    * 项目ID
+    * <p>项目ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 子网ID列表
+    * <p>子网ID列表</p>
     */
     @SerializedName("SubnetIdSet")
     @Expose
     private String [] SubnetIdSet;
 
     /**
-    * 销毁策略。取值范围如下：
-<li>OLDEST_INSTANCE：优先销毁伸缩组中最旧的实例，默认取值。</li>
-<li>NEWEST_INSTANCE：优先销毁伸缩组中最新的实例。</li>
+    * <p>销毁策略。取值范围如下：</p><li>OLDEST_INSTANCE：优先销毁伸缩组中最旧的实例，默认取值。</li><li>NEWEST_INSTANCE：优先销毁伸缩组中最新的实例。</li>
     */
     @SerializedName("TerminationPolicySet")
     @Expose
     private String [] TerminationPolicySet;
 
     /**
-    * 私有网络ID。
+    * <p>私有网络ID。</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 可用区列表
+    * <p>可用区列表</p>
     */
     @SerializedName("ZoneSet")
     @Expose
     private String [] ZoneSet;
 
     /**
-    * 重试策略，部分成功的伸缩活动判定为一次失败活动。取值范围如下：
-<li>IMMEDIATE_RETRY：默认取值，表示立即重试，在较短时间内快速重试，连续失败超过一定次数（5次）后不再重试。</li>
-<li>INCREMENTAL_INTERVALS：间隔递增重试，随着连续失败次数的增加，重试间隔逐渐增大。前 10 次重试为快速重试，后续重试间隔逐步递增至 10 分钟、30 分钟、60 分钟、一天。</li>
-<li>NO_RETRY，不进行重试，直到再次收到用户调用或者告警信息后才会重试。</li>
+    * <p>重试策略，部分成功的伸缩活动判定为一次失败活动。取值范围如下：</p><li>IMMEDIATE_RETRY：默认取值，表示立即重试，在较短时间内快速重试，连续失败超过一定次数（5次）后不再重试。</li><li>INCREMENTAL_INTERVALS：间隔递增重试，随着连续失败次数的增加，重试间隔逐渐增大。前 10 次重试为快速重试，后续重试间隔逐步递增至 10 分钟、30 分钟、60 分钟、一天。</li><li>NO_RETRY，不进行重试，直到再次收到用户调用或者告警信息后才会重试。</li>
     */
     @SerializedName("RetryPolicy")
     @Expose
     private String RetryPolicy;
 
     /**
-    * 伸缩组是否处于伸缩活动中，`IN_ACTIVITY`表示处于伸缩活动中，`NOT_IN_ACTIVITY`表示不处于伸缩活动中。
+    * <p>伸缩组是否处于伸缩活动中，<code>IN_ACTIVITY</code>表示处于伸缩活动中，<code>NOT_IN_ACTIVITY</code>表示不处于伸缩活动中。</p>
     */
     @SerializedName("InActivityStatus")
     @Expose
     private String InActivityStatus;
 
     /**
-    * 伸缩组标签列表
+    * <p>伸缩组标签列表</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 服务设置
+    * <p>服务设置</p>
     */
     @SerializedName("ServiceSettings")
     @Expose
     private ServiceSettings ServiceSettings;
 
     /**
-    * 实例具有IPv6地址数量的配置，取值包括0、1。默认值为 0，表示实例不分配 IPv6 地址。需使用支持 IPv6 的私有网络，需在子网中开启 IPv6 CIDR，其他使用限制可参考 [IPv6使用限制](https://cloud.tencent.com/document/product/1142/38369)。
+    * <p>实例具有IPv6地址数量的配置，取值包括0、1。默认值为 0，表示实例不分配 IPv6 地址。需使用支持 IPv6 的私有网络，需在子网中开启 IPv6 CIDR，其他使用限制可参考 <a href="https://cloud.tencent.com/document/product/1142/38369">IPv6使用限制</a>。</p>
     */
     @SerializedName("Ipv6AddressCount")
     @Expose
     private Long Ipv6AddressCount;
 
     /**
-    * 多可用区/子网策略。
-<li> PRIORITY，按照可用区/子网列表的顺序，作为优先级来尝试创建实例，如果优先级最高的可用区/子网可以创建成功，则总在该可用区/子网创建。</li>
-<li> EQUALITY：每次选择当前实例数最少的可用区/子网进行扩容，使得每个可用区/子网都有机会发生扩容，多次扩容出的实例会打散到多个可用区/子网。</li>
+    * <p>多可用区/子网策略。</p><li> PRIORITY，按照可用区/子网列表的顺序，作为优先级来尝试创建实例，如果优先级最高的可用区/子网可以创建成功，则总在该可用区/子网创建。</li><li> EQUALITY：每次选择当前实例数最少的可用区/子网进行扩容，使得每个可用区/子网都有机会发生扩容，多次扩容出的实例会打散到多个可用区/子网。</li>
     */
     @SerializedName("MultiZoneSubnetPolicy")
     @Expose
     private String MultiZoneSubnetPolicy;
 
     /**
-    * 伸缩组实例健康检查类型，取值如下：
-<li>CVM：根据实例网络状态判断实例是否处于不健康状态，不健康的网络状态即发生实例 PING 不可达事件，详细判断标准可参考[实例健康检查](https://cloud.tencent.com/document/product/377/8553)</li>
-<li>CLB：根据 CLB 的健康检查状态判断实例是否处于不健康状态，CLB健康检查原理可参考[健康检查](https://cloud.tencent.com/document/product/214/6097)</li>
+    * <p>伸缩组实例健康检查类型，取值如下：</p><li>CVM：根据实例网络状态判断实例是否处于不健康状态，不健康的网络状态即发生实例 PING 不可达事件，详细判断标准可参考[实例健康检查](https://cloud.tencent.com/document/product/377/8553)</li><li>CLB：根据 CLB 的健康检查状态判断实例是否处于不健康状态，CLB健康检查原理可参考[健康检查](https://cloud.tencent.com/document/product/214/6097)</li>
     */
     @SerializedName("HealthCheckType")
     @Expose
     private String HealthCheckType;
 
     /**
-    * CLB健康检查宽限期.当扩容的实例进入IN_SERVICE后，在宽限期时间范围内将不会被标记为不健康CLB_UNHEALTHY。
-默认值：0。取值范围[0, 7200]，单位：秒。
+    * <p>CLB健康检查宽限期.当扩容的实例进入IN_SERVICE后，在宽限期时间范围内将不会被标记为不健康CLB_UNHEALTHY。<br>默认值：0。取值范围[0, 7200]，单位：秒。</p>
     */
     @SerializedName("LoadBalancerHealthCheckGracePeriod")
     @Expose
     private Long LoadBalancerHealthCheckGracePeriod;
 
     /**
-    * 实例分配策略，取值包括 LAUNCH_CONFIGURATION 和 SPOT_MIXED。
-<li> LAUNCH_CONFIGURATION，代表传统的按照启动配置模式。</li>
-<li> SPOT_MIXED，代表竞价混合模式。目前仅支持启动配置为按量计费模式时使用混合模式，混合模式下，伸缩组将根据设定扩容按量或竞价机型。使用混合模式时，关联的启动配置的计费类型不可被修改。</li>
+    * <p>实例分配策略，取值包括 LAUNCH_CONFIGURATION 和 SPOT_MIXED。</p><li> LAUNCH_CONFIGURATION，代表传统的按照启动配置模式。</li><li> SPOT_MIXED，代表竞价混合模式。目前仅支持启动配置为按量计费模式时使用混合模式，混合模式下，伸缩组将根据设定扩容按量或竞价机型。使用混合模式时，关联的启动配置的计费类型不可被修改。</li>
     */
     @SerializedName("InstanceAllocationPolicy")
     @Expose
     private String InstanceAllocationPolicy;
 
     /**
-    * 竞价混合模式下，各计费类型实例的分配策略。
-仅当 InstanceAllocationPolicy 取 SPOT_MIXED 时才会返回有效值。
+    * <p>竞价混合模式下，各计费类型实例的分配策略。<br>仅当 InstanceAllocationPolicy 取 SPOT_MIXED 时才会返回有效值。</p>
     */
     @SerializedName("SpotMixedAllocationPolicy")
     @Expose
     private SpotMixedAllocationPolicy SpotMixedAllocationPolicy;
 
     /**
-    * 容量重平衡功能，仅对伸缩组内的竞价实例有效。取值范围：
-<li> TRUE，开启该功能，当伸缩组内的竞价实例即将被竞价实例服务自动回收前，AS 主动发起竞价实例销毁流程，如果有配置过缩容 hook，则销毁前 hook 会生效。销毁流程启动后，AS 会异步开启一个扩容活动，用于补齐期望实例数。</li>
-<li> FALSE，不开启该功能，则 AS 等待竞价实例被销毁后才会去扩容补齐伸缩组期望实例数。</li>
+    * <p>容量重平衡功能，仅对伸缩组内的竞价实例有效。取值范围：</p><li> TRUE，开启该功能，当伸缩组内的竞价实例即将被竞价实例服务自动回收前，AS 主动发起竞价实例销毁流程，如果有配置过缩容 hook，则销毁前 hook 会生效。销毁流程启动后，AS 会异步开启一个扩容活动，用于补齐期望实例数。</li><li> FALSE，不开启该功能，则 AS 等待竞价实例被销毁后才会去扩容补齐伸缩组期望实例数。</li>
     */
     @SerializedName("CapacityRebalance")
     @Expose
     private Boolean CapacityRebalance;
 
     /**
-    * 实例名称序号相关设置。
+    * <p>实例名称序号相关设置。</p>
     */
     @SerializedName("InstanceNameIndexSettings")
     @Expose
     private InstanceNameIndexSettings InstanceNameIndexSettings;
 
     /**
-    * 实例主机名序号相关设置。
+    * <p>实例主机名序号相关设置。</p>
     */
     @SerializedName("HostNameIndexSettings")
     @Expose
     private HostNameIndexSettings HostNameIndexSettings;
 
     /**
-    * 匹配期望数并发扩容功能，不能在InstanceAllocationPolicy为竞价混合模式时设置，也不能在ScalingMode为扩容优先开机模式时设置。目前仅支持两个匹配期望数扩容活动并发进行，不支持指定数量扩容、缩容等其他类型活动并发。默认值为FALSE，表示不开启。
+    * <p>匹配期望数并发扩容功能，不能在InstanceAllocationPolicy为竞价混合模式时设置，也不能在ScalingMode为扩容优先开机模式时设置。目前仅支持两个匹配期望数扩容活动并发进行，不支持指定数量扩容、缩容等其他类型活动并发。默认值为FALSE，表示不开启。</p>
     */
     @SerializedName("ConcurrentScaleOutForDesiredCapacity")
     @Expose
     private Boolean ConcurrentScaleOutForDesiredCapacity;
 
     /**
-     * Get 伸缩组ID 
-     * @return AutoScalingGroupId 伸缩组ID
+     * Get <p>伸缩组ID</p> 
+     * @return AutoScalingGroupId <p>伸缩组ID</p>
      */
     public String getAutoScalingGroupId() {
         return this.AutoScalingGroupId;
     }
 
     /**
-     * Set 伸缩组ID
-     * @param AutoScalingGroupId 伸缩组ID
+     * Set <p>伸缩组ID</p>
+     * @param AutoScalingGroupId <p>伸缩组ID</p>
      */
     public void setAutoScalingGroupId(String AutoScalingGroupId) {
         this.AutoScalingGroupId = AutoScalingGroupId;
     }
 
     /**
-     * Get 伸缩组名称 
-     * @return AutoScalingGroupName 伸缩组名称
+     * Get <p>伸缩组名称</p> 
+     * @return AutoScalingGroupName <p>伸缩组名称</p>
      */
     public String getAutoScalingGroupName() {
         return this.AutoScalingGroupName;
     }
 
     /**
-     * Set 伸缩组名称
-     * @param AutoScalingGroupName 伸缩组名称
+     * Set <p>伸缩组名称</p>
+     * @param AutoScalingGroupName <p>伸缩组名称</p>
      */
     public void setAutoScalingGroupName(String AutoScalingGroupName) {
         this.AutoScalingGroupName = AutoScalingGroupName;
     }
 
     /**
-     * Get 伸缩组当前状态。取值范围：
-<li>NORMAL：正常</li>
-<li>CVM_ABNORMAL：启动配置异常</li>
-<li>LB_ABNORMAL：负载均衡器异常</li>
-<li>LB_LISTENER_ABNORMAL：负载均衡器监听器异常</li>
-<li>LB_LOCATION_ABNORMAL：负载均衡器监听器转发配置异常</li>
-<li>VPC_ABNORMAL：VPC网络异常</li>
-<li>SUBNET_ABNORMAL：VPC子网异常</li>
-<li>INSUFFICIENT_BALANCE：余额不足</li>
-<li>LB_BACKEND_REGION_NOT_MATCH：CLB实例后端地域与AS服务所在地域不匹配</li>
-<li>LB_BACKEND_VPC_NOT_MATCH：CLB实例VPC与伸缩组VPC不匹配</li> 
-     * @return AutoScalingGroupStatus 伸缩组当前状态。取值范围：
-<li>NORMAL：正常</li>
-<li>CVM_ABNORMAL：启动配置异常</li>
-<li>LB_ABNORMAL：负载均衡器异常</li>
-<li>LB_LISTENER_ABNORMAL：负载均衡器监听器异常</li>
-<li>LB_LOCATION_ABNORMAL：负载均衡器监听器转发配置异常</li>
-<li>VPC_ABNORMAL：VPC网络异常</li>
-<li>SUBNET_ABNORMAL：VPC子网异常</li>
-<li>INSUFFICIENT_BALANCE：余额不足</li>
-<li>LB_BACKEND_REGION_NOT_MATCH：CLB实例后端地域与AS服务所在地域不匹配</li>
-<li>LB_BACKEND_VPC_NOT_MATCH：CLB实例VPC与伸缩组VPC不匹配</li>
+     * Get <p>伸缩组当前状态。取值范围：</p><li>NORMAL：正常</li><li>CVM_ABNORMAL：启动配置异常</li><li>LB_ABNORMAL：负载均衡器异常</li><li>LB_LISTENER_ABNORMAL：负载均衡器监听器异常</li><li>LB_LOCATION_ABNORMAL：负载均衡器监听器转发配置异常</li><li>VPC_ABNORMAL：VPC网络异常</li><li>SUBNET_ABNORMAL：VPC子网异常</li><li>INSUFFICIENT_BALANCE：余额不足</li><li>LB_BACKEND_REGION_NOT_MATCH：CLB实例后端地域与AS服务所在地域不匹配</li><li>LB_BACKEND_VPC_NOT_MATCH：CLB实例VPC与伸缩组VPC不匹配</li> 
+     * @return AutoScalingGroupStatus <p>伸缩组当前状态。取值范围：</p><li>NORMAL：正常</li><li>CVM_ABNORMAL：启动配置异常</li><li>LB_ABNORMAL：负载均衡器异常</li><li>LB_LISTENER_ABNORMAL：负载均衡器监听器异常</li><li>LB_LOCATION_ABNORMAL：负载均衡器监听器转发配置异常</li><li>VPC_ABNORMAL：VPC网络异常</li><li>SUBNET_ABNORMAL：VPC子网异常</li><li>INSUFFICIENT_BALANCE：余额不足</li><li>LB_BACKEND_REGION_NOT_MATCH：CLB实例后端地域与AS服务所在地域不匹配</li><li>LB_BACKEND_VPC_NOT_MATCH：CLB实例VPC与伸缩组VPC不匹配</li>
      */
     public String getAutoScalingGroupStatus() {
         return this.AutoScalingGroupStatus;
     }
 
     /**
-     * Set 伸缩组当前状态。取值范围：
-<li>NORMAL：正常</li>
-<li>CVM_ABNORMAL：启动配置异常</li>
-<li>LB_ABNORMAL：负载均衡器异常</li>
-<li>LB_LISTENER_ABNORMAL：负载均衡器监听器异常</li>
-<li>LB_LOCATION_ABNORMAL：负载均衡器监听器转发配置异常</li>
-<li>VPC_ABNORMAL：VPC网络异常</li>
-<li>SUBNET_ABNORMAL：VPC子网异常</li>
-<li>INSUFFICIENT_BALANCE：余额不足</li>
-<li>LB_BACKEND_REGION_NOT_MATCH：CLB实例后端地域与AS服务所在地域不匹配</li>
-<li>LB_BACKEND_VPC_NOT_MATCH：CLB实例VPC与伸缩组VPC不匹配</li>
-     * @param AutoScalingGroupStatus 伸缩组当前状态。取值范围：
-<li>NORMAL：正常</li>
-<li>CVM_ABNORMAL：启动配置异常</li>
-<li>LB_ABNORMAL：负载均衡器异常</li>
-<li>LB_LISTENER_ABNORMAL：负载均衡器监听器异常</li>
-<li>LB_LOCATION_ABNORMAL：负载均衡器监听器转发配置异常</li>
-<li>VPC_ABNORMAL：VPC网络异常</li>
-<li>SUBNET_ABNORMAL：VPC子网异常</li>
-<li>INSUFFICIENT_BALANCE：余额不足</li>
-<li>LB_BACKEND_REGION_NOT_MATCH：CLB实例后端地域与AS服务所在地域不匹配</li>
-<li>LB_BACKEND_VPC_NOT_MATCH：CLB实例VPC与伸缩组VPC不匹配</li>
+     * Set <p>伸缩组当前状态。取值范围：</p><li>NORMAL：正常</li><li>CVM_ABNORMAL：启动配置异常</li><li>LB_ABNORMAL：负载均衡器异常</li><li>LB_LISTENER_ABNORMAL：负载均衡器监听器异常</li><li>LB_LOCATION_ABNORMAL：负载均衡器监听器转发配置异常</li><li>VPC_ABNORMAL：VPC网络异常</li><li>SUBNET_ABNORMAL：VPC子网异常</li><li>INSUFFICIENT_BALANCE：余额不足</li><li>LB_BACKEND_REGION_NOT_MATCH：CLB实例后端地域与AS服务所在地域不匹配</li><li>LB_BACKEND_VPC_NOT_MATCH：CLB实例VPC与伸缩组VPC不匹配</li>
+     * @param AutoScalingGroupStatus <p>伸缩组当前状态。取值范围：</p><li>NORMAL：正常</li><li>CVM_ABNORMAL：启动配置异常</li><li>LB_ABNORMAL：负载均衡器异常</li><li>LB_LISTENER_ABNORMAL：负载均衡器监听器异常</li><li>LB_LOCATION_ABNORMAL：负载均衡器监听器转发配置异常</li><li>VPC_ABNORMAL：VPC网络异常</li><li>SUBNET_ABNORMAL：VPC子网异常</li><li>INSUFFICIENT_BALANCE：余额不足</li><li>LB_BACKEND_REGION_NOT_MATCH：CLB实例后端地域与AS服务所在地域不匹配</li><li>LB_BACKEND_VPC_NOT_MATCH：CLB实例VPC与伸缩组VPC不匹配</li>
      */
     public void setAutoScalingGroupStatus(String AutoScalingGroupStatus) {
         this.AutoScalingGroupStatus = AutoScalingGroupStatus;
     }
 
     /**
-     * Get 创建时间，采用UTC标准计时 
-     * @return CreatedTime 创建时间，采用UTC标准计时
+     * Get <p>创建时间，采用UTC标准计时</p> 
+     * @return CreatedTime <p>创建时间，采用UTC标准计时</p>
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间，采用UTC标准计时
-     * @param CreatedTime 创建时间，采用UTC标准计时
+     * Set <p>创建时间，采用UTC标准计时</p>
+     * @param CreatedTime <p>创建时间，采用UTC标准计时</p>
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 默认冷却时间，单位秒 
-     * @return DefaultCooldown 默认冷却时间，单位秒
+     * Get <p>默认冷却时间，单位秒</p> 
+     * @return DefaultCooldown <p>默认冷却时间，单位秒</p>
      */
     public Long getDefaultCooldown() {
         return this.DefaultCooldown;
     }
 
     /**
-     * Set 默认冷却时间，单位秒
-     * @param DefaultCooldown 默认冷却时间，单位秒
+     * Set <p>默认冷却时间，单位秒</p>
+     * @param DefaultCooldown <p>默认冷却时间，单位秒</p>
      */
     public void setDefaultCooldown(Long DefaultCooldown) {
         this.DefaultCooldown = DefaultCooldown;
     }
 
     /**
-     * Get 期望实例数 
-     * @return DesiredCapacity 期望实例数
+     * Get <p>期望实例数</p> 
+     * @return DesiredCapacity <p>期望实例数</p>
      */
     public Long getDesiredCapacity() {
         return this.DesiredCapacity;
     }
 
     /**
-     * Set 期望实例数
-     * @param DesiredCapacity 期望实例数
+     * Set <p>期望实例数</p>
+     * @param DesiredCapacity <p>期望实例数</p>
      */
     public void setDesiredCapacity(Long DesiredCapacity) {
         this.DesiredCapacity = DesiredCapacity;
     }
 
     /**
-     * Get 启用状态，取值包括`ENABLED`和`DISABLED` 
-     * @return EnabledStatus 启用状态，取值包括`ENABLED`和`DISABLED`
+     * Get <p>启用状态，取值包括<code>ENABLED</code>和<code>DISABLED</code></p> 
+     * @return EnabledStatus <p>启用状态，取值包括<code>ENABLED</code>和<code>DISABLED</code></p>
      */
     public String getEnabledStatus() {
         return this.EnabledStatus;
     }
 
     /**
-     * Set 启用状态，取值包括`ENABLED`和`DISABLED`
-     * @param EnabledStatus 启用状态，取值包括`ENABLED`和`DISABLED`
+     * Set <p>启用状态，取值包括<code>ENABLED</code>和<code>DISABLED</code></p>
+     * @param EnabledStatus <p>启用状态，取值包括<code>ENABLED</code>和<code>DISABLED</code></p>
      */
     public void setEnabledStatus(String EnabledStatus) {
         this.EnabledStatus = EnabledStatus;
     }
 
     /**
-     * Get 应用型负载均衡器列表 
-     * @return ForwardLoadBalancerSet 应用型负载均衡器列表
+     * Get <p>应用型负载均衡器列表</p> 
+     * @return ForwardLoadBalancerSet <p>应用型负载均衡器列表</p>
      */
     public ForwardLoadBalancer [] getForwardLoadBalancerSet() {
         return this.ForwardLoadBalancerSet;
     }
 
     /**
-     * Set 应用型负载均衡器列表
-     * @param ForwardLoadBalancerSet 应用型负载均衡器列表
+     * Set <p>应用型负载均衡器列表</p>
+     * @param ForwardLoadBalancerSet <p>应用型负载均衡器列表</p>
      */
     public void setForwardLoadBalancerSet(ForwardLoadBalancer [] ForwardLoadBalancerSet) {
         this.ForwardLoadBalancerSet = ForwardLoadBalancerSet;
     }
 
     /**
-     * Get 实例数量 
-     * @return InstanceCount 实例数量
+     * Get <p>实例数量</p> 
+     * @return InstanceCount <p>实例数量</p>
      */
     public Long getInstanceCount() {
         return this.InstanceCount;
     }
 
     /**
-     * Set 实例数量
-     * @param InstanceCount 实例数量
+     * Set <p>实例数量</p>
+     * @param InstanceCount <p>实例数量</p>
      */
     public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;
     }
 
     /**
-     * Get 状态为`IN_SERVICE`实例的数量 
-     * @return InServiceInstanceCount 状态为`IN_SERVICE`实例的数量
+     * Get <p>状态为<code>IN_SERVICE</code>实例的数量</p> 
+     * @return InServiceInstanceCount <p>状态为<code>IN_SERVICE</code>实例的数量</p>
      */
     public Long getInServiceInstanceCount() {
         return this.InServiceInstanceCount;
     }
 
     /**
-     * Set 状态为`IN_SERVICE`实例的数量
-     * @param InServiceInstanceCount 状态为`IN_SERVICE`实例的数量
+     * Set <p>状态为<code>IN_SERVICE</code>实例的数量</p>
+     * @param InServiceInstanceCount <p>状态为<code>IN_SERVICE</code>实例的数量</p>
      */
     public void setInServiceInstanceCount(Long InServiceInstanceCount) {
         this.InServiceInstanceCount = InServiceInstanceCount;
     }
 
     /**
-     * Get 启动配置ID 
-     * @return LaunchConfigurationId 启动配置ID
+     * Get <p>启动配置ID</p> 
+     * @return LaunchConfigurationId <p>启动配置ID</p>
      */
     public String getLaunchConfigurationId() {
         return this.LaunchConfigurationId;
     }
 
     /**
-     * Set 启动配置ID
-     * @param LaunchConfigurationId 启动配置ID
+     * Set <p>启动配置ID</p>
+     * @param LaunchConfigurationId <p>启动配置ID</p>
      */
     public void setLaunchConfigurationId(String LaunchConfigurationId) {
         this.LaunchConfigurationId = LaunchConfigurationId;
     }
 
     /**
-     * Get 启动配置名称 
-     * @return LaunchConfigurationName 启动配置名称
+     * Get <p>启动配置名称</p> 
+     * @return LaunchConfigurationName <p>启动配置名称</p>
      */
     public String getLaunchConfigurationName() {
         return this.LaunchConfigurationName;
     }
 
     /**
-     * Set 启动配置名称
-     * @param LaunchConfigurationName 启动配置名称
+     * Set <p>启动配置名称</p>
+     * @param LaunchConfigurationName <p>启动配置名称</p>
      */
     public void setLaunchConfigurationName(String LaunchConfigurationName) {
         this.LaunchConfigurationName = LaunchConfigurationName;
     }
 
     /**
-     * Get 传统型负载均衡器ID列表 
-     * @return LoadBalancerIdSet 传统型负载均衡器ID列表
+     * Get <p>传统型负载均衡器ID列表</p> 
+     * @return LoadBalancerIdSet <p>传统型负载均衡器ID列表</p>
      */
     public String [] getLoadBalancerIdSet() {
         return this.LoadBalancerIdSet;
     }
 
     /**
-     * Set 传统型负载均衡器ID列表
-     * @param LoadBalancerIdSet 传统型负载均衡器ID列表
+     * Set <p>传统型负载均衡器ID列表</p>
+     * @param LoadBalancerIdSet <p>传统型负载均衡器ID列表</p>
      */
     public void setLoadBalancerIdSet(String [] LoadBalancerIdSet) {
         this.LoadBalancerIdSet = LoadBalancerIdSet;
     }
 
     /**
-     * Get 最大实例数 
-     * @return MaxSize 最大实例数
+     * Get <p>最大实例数</p> 
+     * @return MaxSize <p>最大实例数</p>
      */
     public Long getMaxSize() {
         return this.MaxSize;
     }
 
     /**
-     * Set 最大实例数
-     * @param MaxSize 最大实例数
+     * Set <p>最大实例数</p>
+     * @param MaxSize <p>最大实例数</p>
      */
     public void setMaxSize(Long MaxSize) {
         this.MaxSize = MaxSize;
     }
 
     /**
-     * Get 最小实例数 
-     * @return MinSize 最小实例数
+     * Get <p>最小实例数</p> 
+     * @return MinSize <p>最小实例数</p>
      */
     public Long getMinSize() {
         return this.MinSize;
     }
 
     /**
-     * Set 最小实例数
-     * @param MinSize 最小实例数
+     * Set <p>最小实例数</p>
+     * @param MinSize <p>最小实例数</p>
      */
     public void setMinSize(Long MinSize) {
         this.MinSize = MinSize;
     }
 
     /**
-     * Get 项目ID 
-     * @return ProjectId 项目ID
+     * Get <p>项目ID</p> 
+     * @return ProjectId <p>项目ID</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID
-     * @param ProjectId 项目ID
+     * Set <p>项目ID</p>
+     * @param ProjectId <p>项目ID</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 子网ID列表 
-     * @return SubnetIdSet 子网ID列表
+     * Get <p>子网ID列表</p> 
+     * @return SubnetIdSet <p>子网ID列表</p>
      */
     public String [] getSubnetIdSet() {
         return this.SubnetIdSet;
     }
 
     /**
-     * Set 子网ID列表
-     * @param SubnetIdSet 子网ID列表
+     * Set <p>子网ID列表</p>
+     * @param SubnetIdSet <p>子网ID列表</p>
      */
     public void setSubnetIdSet(String [] SubnetIdSet) {
         this.SubnetIdSet = SubnetIdSet;
     }
 
     /**
-     * Get 销毁策略。取值范围如下：
-<li>OLDEST_INSTANCE：优先销毁伸缩组中最旧的实例，默认取值。</li>
-<li>NEWEST_INSTANCE：优先销毁伸缩组中最新的实例。</li> 
-     * @return TerminationPolicySet 销毁策略。取值范围如下：
-<li>OLDEST_INSTANCE：优先销毁伸缩组中最旧的实例，默认取值。</li>
-<li>NEWEST_INSTANCE：优先销毁伸缩组中最新的实例。</li>
+     * Get <p>销毁策略。取值范围如下：</p><li>OLDEST_INSTANCE：优先销毁伸缩组中最旧的实例，默认取值。</li><li>NEWEST_INSTANCE：优先销毁伸缩组中最新的实例。</li> 
+     * @return TerminationPolicySet <p>销毁策略。取值范围如下：</p><li>OLDEST_INSTANCE：优先销毁伸缩组中最旧的实例，默认取值。</li><li>NEWEST_INSTANCE：优先销毁伸缩组中最新的实例。</li>
      */
     public String [] getTerminationPolicySet() {
         return this.TerminationPolicySet;
     }
 
     /**
-     * Set 销毁策略。取值范围如下：
-<li>OLDEST_INSTANCE：优先销毁伸缩组中最旧的实例，默认取值。</li>
-<li>NEWEST_INSTANCE：优先销毁伸缩组中最新的实例。</li>
-     * @param TerminationPolicySet 销毁策略。取值范围如下：
-<li>OLDEST_INSTANCE：优先销毁伸缩组中最旧的实例，默认取值。</li>
-<li>NEWEST_INSTANCE：优先销毁伸缩组中最新的实例。</li>
+     * Set <p>销毁策略。取值范围如下：</p><li>OLDEST_INSTANCE：优先销毁伸缩组中最旧的实例，默认取值。</li><li>NEWEST_INSTANCE：优先销毁伸缩组中最新的实例。</li>
+     * @param TerminationPolicySet <p>销毁策略。取值范围如下：</p><li>OLDEST_INSTANCE：优先销毁伸缩组中最旧的实例，默认取值。</li><li>NEWEST_INSTANCE：优先销毁伸缩组中最新的实例。</li>
      */
     public void setTerminationPolicySet(String [] TerminationPolicySet) {
         this.TerminationPolicySet = TerminationPolicySet;
     }
 
     /**
-     * Get 私有网络ID。 
-     * @return VpcId 私有网络ID。
+     * Get <p>私有网络ID。</p> 
+     * @return VpcId <p>私有网络ID。</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私有网络ID。
-     * @param VpcId 私有网络ID。
+     * Set <p>私有网络ID。</p>
+     * @param VpcId <p>私有网络ID。</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 可用区列表 
-     * @return ZoneSet 可用区列表
+     * Get <p>可用区列表</p> 
+     * @return ZoneSet <p>可用区列表</p>
      */
     public String [] getZoneSet() {
         return this.ZoneSet;
     }
 
     /**
-     * Set 可用区列表
-     * @param ZoneSet 可用区列表
+     * Set <p>可用区列表</p>
+     * @param ZoneSet <p>可用区列表</p>
      */
     public void setZoneSet(String [] ZoneSet) {
         this.ZoneSet = ZoneSet;
     }
 
     /**
-     * Get 重试策略，部分成功的伸缩活动判定为一次失败活动。取值范围如下：
-<li>IMMEDIATE_RETRY：默认取值，表示立即重试，在较短时间内快速重试，连续失败超过一定次数（5次）后不再重试。</li>
-<li>INCREMENTAL_INTERVALS：间隔递增重试，随着连续失败次数的增加，重试间隔逐渐增大。前 10 次重试为快速重试，后续重试间隔逐步递增至 10 分钟、30 分钟、60 分钟、一天。</li>
-<li>NO_RETRY，不进行重试，直到再次收到用户调用或者告警信息后才会重试。</li> 
-     * @return RetryPolicy 重试策略，部分成功的伸缩活动判定为一次失败活动。取值范围如下：
-<li>IMMEDIATE_RETRY：默认取值，表示立即重试，在较短时间内快速重试，连续失败超过一定次数（5次）后不再重试。</li>
-<li>INCREMENTAL_INTERVALS：间隔递增重试，随着连续失败次数的增加，重试间隔逐渐增大。前 10 次重试为快速重试，后续重试间隔逐步递增至 10 分钟、30 分钟、60 分钟、一天。</li>
-<li>NO_RETRY，不进行重试，直到再次收到用户调用或者告警信息后才会重试。</li>
+     * Get <p>重试策略，部分成功的伸缩活动判定为一次失败活动。取值范围如下：</p><li>IMMEDIATE_RETRY：默认取值，表示立即重试，在较短时间内快速重试，连续失败超过一定次数（5次）后不再重试。</li><li>INCREMENTAL_INTERVALS：间隔递增重试，随着连续失败次数的增加，重试间隔逐渐增大。前 10 次重试为快速重试，后续重试间隔逐步递增至 10 分钟、30 分钟、60 分钟、一天。</li><li>NO_RETRY，不进行重试，直到再次收到用户调用或者告警信息后才会重试。</li> 
+     * @return RetryPolicy <p>重试策略，部分成功的伸缩活动判定为一次失败活动。取值范围如下：</p><li>IMMEDIATE_RETRY：默认取值，表示立即重试，在较短时间内快速重试，连续失败超过一定次数（5次）后不再重试。</li><li>INCREMENTAL_INTERVALS：间隔递增重试，随着连续失败次数的增加，重试间隔逐渐增大。前 10 次重试为快速重试，后续重试间隔逐步递增至 10 分钟、30 分钟、60 分钟、一天。</li><li>NO_RETRY，不进行重试，直到再次收到用户调用或者告警信息后才会重试。</li>
      */
     public String getRetryPolicy() {
         return this.RetryPolicy;
     }
 
     /**
-     * Set 重试策略，部分成功的伸缩活动判定为一次失败活动。取值范围如下：
-<li>IMMEDIATE_RETRY：默认取值，表示立即重试，在较短时间内快速重试，连续失败超过一定次数（5次）后不再重试。</li>
-<li>INCREMENTAL_INTERVALS：间隔递增重试，随着连续失败次数的增加，重试间隔逐渐增大。前 10 次重试为快速重试，后续重试间隔逐步递增至 10 分钟、30 分钟、60 分钟、一天。</li>
-<li>NO_RETRY，不进行重试，直到再次收到用户调用或者告警信息后才会重试。</li>
-     * @param RetryPolicy 重试策略，部分成功的伸缩活动判定为一次失败活动。取值范围如下：
-<li>IMMEDIATE_RETRY：默认取值，表示立即重试，在较短时间内快速重试，连续失败超过一定次数（5次）后不再重试。</li>
-<li>INCREMENTAL_INTERVALS：间隔递增重试，随着连续失败次数的增加，重试间隔逐渐增大。前 10 次重试为快速重试，后续重试间隔逐步递增至 10 分钟、30 分钟、60 分钟、一天。</li>
-<li>NO_RETRY，不进行重试，直到再次收到用户调用或者告警信息后才会重试。</li>
+     * Set <p>重试策略，部分成功的伸缩活动判定为一次失败活动。取值范围如下：</p><li>IMMEDIATE_RETRY：默认取值，表示立即重试，在较短时间内快速重试，连续失败超过一定次数（5次）后不再重试。</li><li>INCREMENTAL_INTERVALS：间隔递增重试，随着连续失败次数的增加，重试间隔逐渐增大。前 10 次重试为快速重试，后续重试间隔逐步递增至 10 分钟、30 分钟、60 分钟、一天。</li><li>NO_RETRY，不进行重试，直到再次收到用户调用或者告警信息后才会重试。</li>
+     * @param RetryPolicy <p>重试策略，部分成功的伸缩活动判定为一次失败活动。取值范围如下：</p><li>IMMEDIATE_RETRY：默认取值，表示立即重试，在较短时间内快速重试，连续失败超过一定次数（5次）后不再重试。</li><li>INCREMENTAL_INTERVALS：间隔递增重试，随着连续失败次数的增加，重试间隔逐渐增大。前 10 次重试为快速重试，后续重试间隔逐步递增至 10 分钟、30 分钟、60 分钟、一天。</li><li>NO_RETRY，不进行重试，直到再次收到用户调用或者告警信息后才会重试。</li>
      */
     public void setRetryPolicy(String RetryPolicy) {
         this.RetryPolicy = RetryPolicy;
     }
 
     /**
-     * Get 伸缩组是否处于伸缩活动中，`IN_ACTIVITY`表示处于伸缩活动中，`NOT_IN_ACTIVITY`表示不处于伸缩活动中。 
-     * @return InActivityStatus 伸缩组是否处于伸缩活动中，`IN_ACTIVITY`表示处于伸缩活动中，`NOT_IN_ACTIVITY`表示不处于伸缩活动中。
+     * Get <p>伸缩组是否处于伸缩活动中，<code>IN_ACTIVITY</code>表示处于伸缩活动中，<code>NOT_IN_ACTIVITY</code>表示不处于伸缩活动中。</p> 
+     * @return InActivityStatus <p>伸缩组是否处于伸缩活动中，<code>IN_ACTIVITY</code>表示处于伸缩活动中，<code>NOT_IN_ACTIVITY</code>表示不处于伸缩活动中。</p>
      */
     public String getInActivityStatus() {
         return this.InActivityStatus;
     }
 
     /**
-     * Set 伸缩组是否处于伸缩活动中，`IN_ACTIVITY`表示处于伸缩活动中，`NOT_IN_ACTIVITY`表示不处于伸缩活动中。
-     * @param InActivityStatus 伸缩组是否处于伸缩活动中，`IN_ACTIVITY`表示处于伸缩活动中，`NOT_IN_ACTIVITY`表示不处于伸缩活动中。
+     * Set <p>伸缩组是否处于伸缩活动中，<code>IN_ACTIVITY</code>表示处于伸缩活动中，<code>NOT_IN_ACTIVITY</code>表示不处于伸缩活动中。</p>
+     * @param InActivityStatus <p>伸缩组是否处于伸缩活动中，<code>IN_ACTIVITY</code>表示处于伸缩活动中，<code>NOT_IN_ACTIVITY</code>表示不处于伸缩活动中。</p>
      */
     public void setInActivityStatus(String InActivityStatus) {
         this.InActivityStatus = InActivityStatus;
     }
 
     /**
-     * Get 伸缩组标签列表 
-     * @return Tags 伸缩组标签列表
+     * Get <p>伸缩组标签列表</p> 
+     * @return Tags <p>伸缩组标签列表</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 伸缩组标签列表
-     * @param Tags 伸缩组标签列表
+     * Set <p>伸缩组标签列表</p>
+     * @param Tags <p>伸缩组标签列表</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 服务设置 
-     * @return ServiceSettings 服务设置
+     * Get <p>服务设置</p> 
+     * @return ServiceSettings <p>服务设置</p>
      */
     public ServiceSettings getServiceSettings() {
         return this.ServiceSettings;
     }
 
     /**
-     * Set 服务设置
-     * @param ServiceSettings 服务设置
+     * Set <p>服务设置</p>
+     * @param ServiceSettings <p>服务设置</p>
      */
     public void setServiceSettings(ServiceSettings ServiceSettings) {
         this.ServiceSettings = ServiceSettings;
     }
 
     /**
-     * Get 实例具有IPv6地址数量的配置，取值包括0、1。默认值为 0，表示实例不分配 IPv6 地址。需使用支持 IPv6 的私有网络，需在子网中开启 IPv6 CIDR，其他使用限制可参考 [IPv6使用限制](https://cloud.tencent.com/document/product/1142/38369)。 
-     * @return Ipv6AddressCount 实例具有IPv6地址数量的配置，取值包括0、1。默认值为 0，表示实例不分配 IPv6 地址。需使用支持 IPv6 的私有网络，需在子网中开启 IPv6 CIDR，其他使用限制可参考 [IPv6使用限制](https://cloud.tencent.com/document/product/1142/38369)。
+     * Get <p>实例具有IPv6地址数量的配置，取值包括0、1。默认值为 0，表示实例不分配 IPv6 地址。需使用支持 IPv6 的私有网络，需在子网中开启 IPv6 CIDR，其他使用限制可参考 <a href="https://cloud.tencent.com/document/product/1142/38369">IPv6使用限制</a>。</p> 
+     * @return Ipv6AddressCount <p>实例具有IPv6地址数量的配置，取值包括0、1。默认值为 0，表示实例不分配 IPv6 地址。需使用支持 IPv6 的私有网络，需在子网中开启 IPv6 CIDR，其他使用限制可参考 <a href="https://cloud.tencent.com/document/product/1142/38369">IPv6使用限制</a>。</p>
      */
     public Long getIpv6AddressCount() {
         return this.Ipv6AddressCount;
     }
 
     /**
-     * Set 实例具有IPv6地址数量的配置，取值包括0、1。默认值为 0，表示实例不分配 IPv6 地址。需使用支持 IPv6 的私有网络，需在子网中开启 IPv6 CIDR，其他使用限制可参考 [IPv6使用限制](https://cloud.tencent.com/document/product/1142/38369)。
-     * @param Ipv6AddressCount 实例具有IPv6地址数量的配置，取值包括0、1。默认值为 0，表示实例不分配 IPv6 地址。需使用支持 IPv6 的私有网络，需在子网中开启 IPv6 CIDR，其他使用限制可参考 [IPv6使用限制](https://cloud.tencent.com/document/product/1142/38369)。
+     * Set <p>实例具有IPv6地址数量的配置，取值包括0、1。默认值为 0，表示实例不分配 IPv6 地址。需使用支持 IPv6 的私有网络，需在子网中开启 IPv6 CIDR，其他使用限制可参考 <a href="https://cloud.tencent.com/document/product/1142/38369">IPv6使用限制</a>。</p>
+     * @param Ipv6AddressCount <p>实例具有IPv6地址数量的配置，取值包括0、1。默认值为 0，表示实例不分配 IPv6 地址。需使用支持 IPv6 的私有网络，需在子网中开启 IPv6 CIDR，其他使用限制可参考 <a href="https://cloud.tencent.com/document/product/1142/38369">IPv6使用限制</a>。</p>
      */
     public void setIpv6AddressCount(Long Ipv6AddressCount) {
         this.Ipv6AddressCount = Ipv6AddressCount;
     }
 
     /**
-     * Get 多可用区/子网策略。
-<li> PRIORITY，按照可用区/子网列表的顺序，作为优先级来尝试创建实例，如果优先级最高的可用区/子网可以创建成功，则总在该可用区/子网创建。</li>
-<li> EQUALITY：每次选择当前实例数最少的可用区/子网进行扩容，使得每个可用区/子网都有机会发生扩容，多次扩容出的实例会打散到多个可用区/子网。</li> 
-     * @return MultiZoneSubnetPolicy 多可用区/子网策略。
-<li> PRIORITY，按照可用区/子网列表的顺序，作为优先级来尝试创建实例，如果优先级最高的可用区/子网可以创建成功，则总在该可用区/子网创建。</li>
-<li> EQUALITY：每次选择当前实例数最少的可用区/子网进行扩容，使得每个可用区/子网都有机会发生扩容，多次扩容出的实例会打散到多个可用区/子网。</li>
+     * Get <p>多可用区/子网策略。</p><li> PRIORITY，按照可用区/子网列表的顺序，作为优先级来尝试创建实例，如果优先级最高的可用区/子网可以创建成功，则总在该可用区/子网创建。</li><li> EQUALITY：每次选择当前实例数最少的可用区/子网进行扩容，使得每个可用区/子网都有机会发生扩容，多次扩容出的实例会打散到多个可用区/子网。</li> 
+     * @return MultiZoneSubnetPolicy <p>多可用区/子网策略。</p><li> PRIORITY，按照可用区/子网列表的顺序，作为优先级来尝试创建实例，如果优先级最高的可用区/子网可以创建成功，则总在该可用区/子网创建。</li><li> EQUALITY：每次选择当前实例数最少的可用区/子网进行扩容，使得每个可用区/子网都有机会发生扩容，多次扩容出的实例会打散到多个可用区/子网。</li>
      */
     public String getMultiZoneSubnetPolicy() {
         return this.MultiZoneSubnetPolicy;
     }
 
     /**
-     * Set 多可用区/子网策略。
-<li> PRIORITY，按照可用区/子网列表的顺序，作为优先级来尝试创建实例，如果优先级最高的可用区/子网可以创建成功，则总在该可用区/子网创建。</li>
-<li> EQUALITY：每次选择当前实例数最少的可用区/子网进行扩容，使得每个可用区/子网都有机会发生扩容，多次扩容出的实例会打散到多个可用区/子网。</li>
-     * @param MultiZoneSubnetPolicy 多可用区/子网策略。
-<li> PRIORITY，按照可用区/子网列表的顺序，作为优先级来尝试创建实例，如果优先级最高的可用区/子网可以创建成功，则总在该可用区/子网创建。</li>
-<li> EQUALITY：每次选择当前实例数最少的可用区/子网进行扩容，使得每个可用区/子网都有机会发生扩容，多次扩容出的实例会打散到多个可用区/子网。</li>
+     * Set <p>多可用区/子网策略。</p><li> PRIORITY，按照可用区/子网列表的顺序，作为优先级来尝试创建实例，如果优先级最高的可用区/子网可以创建成功，则总在该可用区/子网创建。</li><li> EQUALITY：每次选择当前实例数最少的可用区/子网进行扩容，使得每个可用区/子网都有机会发生扩容，多次扩容出的实例会打散到多个可用区/子网。</li>
+     * @param MultiZoneSubnetPolicy <p>多可用区/子网策略。</p><li> PRIORITY，按照可用区/子网列表的顺序，作为优先级来尝试创建实例，如果优先级最高的可用区/子网可以创建成功，则总在该可用区/子网创建。</li><li> EQUALITY：每次选择当前实例数最少的可用区/子网进行扩容，使得每个可用区/子网都有机会发生扩容，多次扩容出的实例会打散到多个可用区/子网。</li>
      */
     public void setMultiZoneSubnetPolicy(String MultiZoneSubnetPolicy) {
         this.MultiZoneSubnetPolicy = MultiZoneSubnetPolicy;
     }
 
     /**
-     * Get 伸缩组实例健康检查类型，取值如下：
-<li>CVM：根据实例网络状态判断实例是否处于不健康状态，不健康的网络状态即发生实例 PING 不可达事件，详细判断标准可参考[实例健康检查](https://cloud.tencent.com/document/product/377/8553)</li>
-<li>CLB：根据 CLB 的健康检查状态判断实例是否处于不健康状态，CLB健康检查原理可参考[健康检查](https://cloud.tencent.com/document/product/214/6097)</li> 
-     * @return HealthCheckType 伸缩组实例健康检查类型，取值如下：
-<li>CVM：根据实例网络状态判断实例是否处于不健康状态，不健康的网络状态即发生实例 PING 不可达事件，详细判断标准可参考[实例健康检查](https://cloud.tencent.com/document/product/377/8553)</li>
-<li>CLB：根据 CLB 的健康检查状态判断实例是否处于不健康状态，CLB健康检查原理可参考[健康检查](https://cloud.tencent.com/document/product/214/6097)</li>
+     * Get <p>伸缩组实例健康检查类型，取值如下：</p><li>CVM：根据实例网络状态判断实例是否处于不健康状态，不健康的网络状态即发生实例 PING 不可达事件，详细判断标准可参考[实例健康检查](https://cloud.tencent.com/document/product/377/8553)</li><li>CLB：根据 CLB 的健康检查状态判断实例是否处于不健康状态，CLB健康检查原理可参考[健康检查](https://cloud.tencent.com/document/product/214/6097)</li> 
+     * @return HealthCheckType <p>伸缩组实例健康检查类型，取值如下：</p><li>CVM：根据实例网络状态判断实例是否处于不健康状态，不健康的网络状态即发生实例 PING 不可达事件，详细判断标准可参考[实例健康检查](https://cloud.tencent.com/document/product/377/8553)</li><li>CLB：根据 CLB 的健康检查状态判断实例是否处于不健康状态，CLB健康检查原理可参考[健康检查](https://cloud.tencent.com/document/product/214/6097)</li>
      */
     public String getHealthCheckType() {
         return this.HealthCheckType;
     }
 
     /**
-     * Set 伸缩组实例健康检查类型，取值如下：
-<li>CVM：根据实例网络状态判断实例是否处于不健康状态，不健康的网络状态即发生实例 PING 不可达事件，详细判断标准可参考[实例健康检查](https://cloud.tencent.com/document/product/377/8553)</li>
-<li>CLB：根据 CLB 的健康检查状态判断实例是否处于不健康状态，CLB健康检查原理可参考[健康检查](https://cloud.tencent.com/document/product/214/6097)</li>
-     * @param HealthCheckType 伸缩组实例健康检查类型，取值如下：
-<li>CVM：根据实例网络状态判断实例是否处于不健康状态，不健康的网络状态即发生实例 PING 不可达事件，详细判断标准可参考[实例健康检查](https://cloud.tencent.com/document/product/377/8553)</li>
-<li>CLB：根据 CLB 的健康检查状态判断实例是否处于不健康状态，CLB健康检查原理可参考[健康检查](https://cloud.tencent.com/document/product/214/6097)</li>
+     * Set <p>伸缩组实例健康检查类型，取值如下：</p><li>CVM：根据实例网络状态判断实例是否处于不健康状态，不健康的网络状态即发生实例 PING 不可达事件，详细判断标准可参考[实例健康检查](https://cloud.tencent.com/document/product/377/8553)</li><li>CLB：根据 CLB 的健康检查状态判断实例是否处于不健康状态，CLB健康检查原理可参考[健康检查](https://cloud.tencent.com/document/product/214/6097)</li>
+     * @param HealthCheckType <p>伸缩组实例健康检查类型，取值如下：</p><li>CVM：根据实例网络状态判断实例是否处于不健康状态，不健康的网络状态即发生实例 PING 不可达事件，详细判断标准可参考[实例健康检查](https://cloud.tencent.com/document/product/377/8553)</li><li>CLB：根据 CLB 的健康检查状态判断实例是否处于不健康状态，CLB健康检查原理可参考[健康检查](https://cloud.tencent.com/document/product/214/6097)</li>
      */
     public void setHealthCheckType(String HealthCheckType) {
         this.HealthCheckType = HealthCheckType;
     }
 
     /**
-     * Get CLB健康检查宽限期.当扩容的实例进入IN_SERVICE后，在宽限期时间范围内将不会被标记为不健康CLB_UNHEALTHY。
-默认值：0。取值范围[0, 7200]，单位：秒。 
-     * @return LoadBalancerHealthCheckGracePeriod CLB健康检查宽限期.当扩容的实例进入IN_SERVICE后，在宽限期时间范围内将不会被标记为不健康CLB_UNHEALTHY。
-默认值：0。取值范围[0, 7200]，单位：秒。
+     * Get <p>CLB健康检查宽限期.当扩容的实例进入IN_SERVICE后，在宽限期时间范围内将不会被标记为不健康CLB_UNHEALTHY。<br>默认值：0。取值范围[0, 7200]，单位：秒。</p> 
+     * @return LoadBalancerHealthCheckGracePeriod <p>CLB健康检查宽限期.当扩容的实例进入IN_SERVICE后，在宽限期时间范围内将不会被标记为不健康CLB_UNHEALTHY。<br>默认值：0。取值范围[0, 7200]，单位：秒。</p>
      */
     public Long getLoadBalancerHealthCheckGracePeriod() {
         return this.LoadBalancerHealthCheckGracePeriod;
     }
 
     /**
-     * Set CLB健康检查宽限期.当扩容的实例进入IN_SERVICE后，在宽限期时间范围内将不会被标记为不健康CLB_UNHEALTHY。
-默认值：0。取值范围[0, 7200]，单位：秒。
-     * @param LoadBalancerHealthCheckGracePeriod CLB健康检查宽限期.当扩容的实例进入IN_SERVICE后，在宽限期时间范围内将不会被标记为不健康CLB_UNHEALTHY。
-默认值：0。取值范围[0, 7200]，单位：秒。
+     * Set <p>CLB健康检查宽限期.当扩容的实例进入IN_SERVICE后，在宽限期时间范围内将不会被标记为不健康CLB_UNHEALTHY。<br>默认值：0。取值范围[0, 7200]，单位：秒。</p>
+     * @param LoadBalancerHealthCheckGracePeriod <p>CLB健康检查宽限期.当扩容的实例进入IN_SERVICE后，在宽限期时间范围内将不会被标记为不健康CLB_UNHEALTHY。<br>默认值：0。取值范围[0, 7200]，单位：秒。</p>
      */
     public void setLoadBalancerHealthCheckGracePeriod(Long LoadBalancerHealthCheckGracePeriod) {
         this.LoadBalancerHealthCheckGracePeriod = LoadBalancerHealthCheckGracePeriod;
     }
 
     /**
-     * Get 实例分配策略，取值包括 LAUNCH_CONFIGURATION 和 SPOT_MIXED。
-<li> LAUNCH_CONFIGURATION，代表传统的按照启动配置模式。</li>
-<li> SPOT_MIXED，代表竞价混合模式。目前仅支持启动配置为按量计费模式时使用混合模式，混合模式下，伸缩组将根据设定扩容按量或竞价机型。使用混合模式时，关联的启动配置的计费类型不可被修改。</li> 
-     * @return InstanceAllocationPolicy 实例分配策略，取值包括 LAUNCH_CONFIGURATION 和 SPOT_MIXED。
-<li> LAUNCH_CONFIGURATION，代表传统的按照启动配置模式。</li>
-<li> SPOT_MIXED，代表竞价混合模式。目前仅支持启动配置为按量计费模式时使用混合模式，混合模式下，伸缩组将根据设定扩容按量或竞价机型。使用混合模式时，关联的启动配置的计费类型不可被修改。</li>
+     * Get <p>实例分配策略，取值包括 LAUNCH_CONFIGURATION 和 SPOT_MIXED。</p><li> LAUNCH_CONFIGURATION，代表传统的按照启动配置模式。</li><li> SPOT_MIXED，代表竞价混合模式。目前仅支持启动配置为按量计费模式时使用混合模式，混合模式下，伸缩组将根据设定扩容按量或竞价机型。使用混合模式时，关联的启动配置的计费类型不可被修改。</li> 
+     * @return InstanceAllocationPolicy <p>实例分配策略，取值包括 LAUNCH_CONFIGURATION 和 SPOT_MIXED。</p><li> LAUNCH_CONFIGURATION，代表传统的按照启动配置模式。</li><li> SPOT_MIXED，代表竞价混合模式。目前仅支持启动配置为按量计费模式时使用混合模式，混合模式下，伸缩组将根据设定扩容按量或竞价机型。使用混合模式时，关联的启动配置的计费类型不可被修改。</li>
      */
     public String getInstanceAllocationPolicy() {
         return this.InstanceAllocationPolicy;
     }
 
     /**
-     * Set 实例分配策略，取值包括 LAUNCH_CONFIGURATION 和 SPOT_MIXED。
-<li> LAUNCH_CONFIGURATION，代表传统的按照启动配置模式。</li>
-<li> SPOT_MIXED，代表竞价混合模式。目前仅支持启动配置为按量计费模式时使用混合模式，混合模式下，伸缩组将根据设定扩容按量或竞价机型。使用混合模式时，关联的启动配置的计费类型不可被修改。</li>
-     * @param InstanceAllocationPolicy 实例分配策略，取值包括 LAUNCH_CONFIGURATION 和 SPOT_MIXED。
-<li> LAUNCH_CONFIGURATION，代表传统的按照启动配置模式。</li>
-<li> SPOT_MIXED，代表竞价混合模式。目前仅支持启动配置为按量计费模式时使用混合模式，混合模式下，伸缩组将根据设定扩容按量或竞价机型。使用混合模式时，关联的启动配置的计费类型不可被修改。</li>
+     * Set <p>实例分配策略，取值包括 LAUNCH_CONFIGURATION 和 SPOT_MIXED。</p><li> LAUNCH_CONFIGURATION，代表传统的按照启动配置模式。</li><li> SPOT_MIXED，代表竞价混合模式。目前仅支持启动配置为按量计费模式时使用混合模式，混合模式下，伸缩组将根据设定扩容按量或竞价机型。使用混合模式时，关联的启动配置的计费类型不可被修改。</li>
+     * @param InstanceAllocationPolicy <p>实例分配策略，取值包括 LAUNCH_CONFIGURATION 和 SPOT_MIXED。</p><li> LAUNCH_CONFIGURATION，代表传统的按照启动配置模式。</li><li> SPOT_MIXED，代表竞价混合模式。目前仅支持启动配置为按量计费模式时使用混合模式，混合模式下，伸缩组将根据设定扩容按量或竞价机型。使用混合模式时，关联的启动配置的计费类型不可被修改。</li>
      */
     public void setInstanceAllocationPolicy(String InstanceAllocationPolicy) {
         this.InstanceAllocationPolicy = InstanceAllocationPolicy;
     }
 
     /**
-     * Get 竞价混合模式下，各计费类型实例的分配策略。
-仅当 InstanceAllocationPolicy 取 SPOT_MIXED 时才会返回有效值。 
-     * @return SpotMixedAllocationPolicy 竞价混合模式下，各计费类型实例的分配策略。
-仅当 InstanceAllocationPolicy 取 SPOT_MIXED 时才会返回有效值。
+     * Get <p>竞价混合模式下，各计费类型实例的分配策略。<br>仅当 InstanceAllocationPolicy 取 SPOT_MIXED 时才会返回有效值。</p> 
+     * @return SpotMixedAllocationPolicy <p>竞价混合模式下，各计费类型实例的分配策略。<br>仅当 InstanceAllocationPolicy 取 SPOT_MIXED 时才会返回有效值。</p>
      */
     public SpotMixedAllocationPolicy getSpotMixedAllocationPolicy() {
         return this.SpotMixedAllocationPolicy;
     }
 
     /**
-     * Set 竞价混合模式下，各计费类型实例的分配策略。
-仅当 InstanceAllocationPolicy 取 SPOT_MIXED 时才会返回有效值。
-     * @param SpotMixedAllocationPolicy 竞价混合模式下，各计费类型实例的分配策略。
-仅当 InstanceAllocationPolicy 取 SPOT_MIXED 时才会返回有效值。
+     * Set <p>竞价混合模式下，各计费类型实例的分配策略。<br>仅当 InstanceAllocationPolicy 取 SPOT_MIXED 时才会返回有效值。</p>
+     * @param SpotMixedAllocationPolicy <p>竞价混合模式下，各计费类型实例的分配策略。<br>仅当 InstanceAllocationPolicy 取 SPOT_MIXED 时才会返回有效值。</p>
      */
     public void setSpotMixedAllocationPolicy(SpotMixedAllocationPolicy SpotMixedAllocationPolicy) {
         this.SpotMixedAllocationPolicy = SpotMixedAllocationPolicy;
     }
 
     /**
-     * Get 容量重平衡功能，仅对伸缩组内的竞价实例有效。取值范围：
-<li> TRUE，开启该功能，当伸缩组内的竞价实例即将被竞价实例服务自动回收前，AS 主动发起竞价实例销毁流程，如果有配置过缩容 hook，则销毁前 hook 会生效。销毁流程启动后，AS 会异步开启一个扩容活动，用于补齐期望实例数。</li>
-<li> FALSE，不开启该功能，则 AS 等待竞价实例被销毁后才会去扩容补齐伸缩组期望实例数。</li> 
-     * @return CapacityRebalance 容量重平衡功能，仅对伸缩组内的竞价实例有效。取值范围：
-<li> TRUE，开启该功能，当伸缩组内的竞价实例即将被竞价实例服务自动回收前，AS 主动发起竞价实例销毁流程，如果有配置过缩容 hook，则销毁前 hook 会生效。销毁流程启动后，AS 会异步开启一个扩容活动，用于补齐期望实例数。</li>
-<li> FALSE，不开启该功能，则 AS 等待竞价实例被销毁后才会去扩容补齐伸缩组期望实例数。</li>
+     * Get <p>容量重平衡功能，仅对伸缩组内的竞价实例有效。取值范围：</p><li> TRUE，开启该功能，当伸缩组内的竞价实例即将被竞价实例服务自动回收前，AS 主动发起竞价实例销毁流程，如果有配置过缩容 hook，则销毁前 hook 会生效。销毁流程启动后，AS 会异步开启一个扩容活动，用于补齐期望实例数。</li><li> FALSE，不开启该功能，则 AS 等待竞价实例被销毁后才会去扩容补齐伸缩组期望实例数。</li> 
+     * @return CapacityRebalance <p>容量重平衡功能，仅对伸缩组内的竞价实例有效。取值范围：</p><li> TRUE，开启该功能，当伸缩组内的竞价实例即将被竞价实例服务自动回收前，AS 主动发起竞价实例销毁流程，如果有配置过缩容 hook，则销毁前 hook 会生效。销毁流程启动后，AS 会异步开启一个扩容活动，用于补齐期望实例数。</li><li> FALSE，不开启该功能，则 AS 等待竞价实例被销毁后才会去扩容补齐伸缩组期望实例数。</li>
      */
     public Boolean getCapacityRebalance() {
         return this.CapacityRebalance;
     }
 
     /**
-     * Set 容量重平衡功能，仅对伸缩组内的竞价实例有效。取值范围：
-<li> TRUE，开启该功能，当伸缩组内的竞价实例即将被竞价实例服务自动回收前，AS 主动发起竞价实例销毁流程，如果有配置过缩容 hook，则销毁前 hook 会生效。销毁流程启动后，AS 会异步开启一个扩容活动，用于补齐期望实例数。</li>
-<li> FALSE，不开启该功能，则 AS 等待竞价实例被销毁后才会去扩容补齐伸缩组期望实例数。</li>
-     * @param CapacityRebalance 容量重平衡功能，仅对伸缩组内的竞价实例有效。取值范围：
-<li> TRUE，开启该功能，当伸缩组内的竞价实例即将被竞价实例服务自动回收前，AS 主动发起竞价实例销毁流程，如果有配置过缩容 hook，则销毁前 hook 会生效。销毁流程启动后，AS 会异步开启一个扩容活动，用于补齐期望实例数。</li>
-<li> FALSE，不开启该功能，则 AS 等待竞价实例被销毁后才会去扩容补齐伸缩组期望实例数。</li>
+     * Set <p>容量重平衡功能，仅对伸缩组内的竞价实例有效。取值范围：</p><li> TRUE，开启该功能，当伸缩组内的竞价实例即将被竞价实例服务自动回收前，AS 主动发起竞价实例销毁流程，如果有配置过缩容 hook，则销毁前 hook 会生效。销毁流程启动后，AS 会异步开启一个扩容活动，用于补齐期望实例数。</li><li> FALSE，不开启该功能，则 AS 等待竞价实例被销毁后才会去扩容补齐伸缩组期望实例数。</li>
+     * @param CapacityRebalance <p>容量重平衡功能，仅对伸缩组内的竞价实例有效。取值范围：</p><li> TRUE，开启该功能，当伸缩组内的竞价实例即将被竞价实例服务自动回收前，AS 主动发起竞价实例销毁流程，如果有配置过缩容 hook，则销毁前 hook 会生效。销毁流程启动后，AS 会异步开启一个扩容活动，用于补齐期望实例数。</li><li> FALSE，不开启该功能，则 AS 等待竞价实例被销毁后才会去扩容补齐伸缩组期望实例数。</li>
      */
     public void setCapacityRebalance(Boolean CapacityRebalance) {
         this.CapacityRebalance = CapacityRebalance;
     }
 
     /**
-     * Get 实例名称序号相关设置。 
-     * @return InstanceNameIndexSettings 实例名称序号相关设置。
+     * Get <p>实例名称序号相关设置。</p> 
+     * @return InstanceNameIndexSettings <p>实例名称序号相关设置。</p>
      */
     public InstanceNameIndexSettings getInstanceNameIndexSettings() {
         return this.InstanceNameIndexSettings;
     }
 
     /**
-     * Set 实例名称序号相关设置。
-     * @param InstanceNameIndexSettings 实例名称序号相关设置。
+     * Set <p>实例名称序号相关设置。</p>
+     * @param InstanceNameIndexSettings <p>实例名称序号相关设置。</p>
      */
     public void setInstanceNameIndexSettings(InstanceNameIndexSettings InstanceNameIndexSettings) {
         this.InstanceNameIndexSettings = InstanceNameIndexSettings;
     }
 
     /**
-     * Get 实例主机名序号相关设置。 
-     * @return HostNameIndexSettings 实例主机名序号相关设置。
+     * Get <p>实例主机名序号相关设置。</p> 
+     * @return HostNameIndexSettings <p>实例主机名序号相关设置。</p>
      */
     public HostNameIndexSettings getHostNameIndexSettings() {
         return this.HostNameIndexSettings;
     }
 
     /**
-     * Set 实例主机名序号相关设置。
-     * @param HostNameIndexSettings 实例主机名序号相关设置。
+     * Set <p>实例主机名序号相关设置。</p>
+     * @param HostNameIndexSettings <p>实例主机名序号相关设置。</p>
      */
     public void setHostNameIndexSettings(HostNameIndexSettings HostNameIndexSettings) {
         this.HostNameIndexSettings = HostNameIndexSettings;
     }
 
     /**
-     * Get 匹配期望数并发扩容功能，不能在InstanceAllocationPolicy为竞价混合模式时设置，也不能在ScalingMode为扩容优先开机模式时设置。目前仅支持两个匹配期望数扩容活动并发进行，不支持指定数量扩容、缩容等其他类型活动并发。默认值为FALSE，表示不开启。 
-     * @return ConcurrentScaleOutForDesiredCapacity 匹配期望数并发扩容功能，不能在InstanceAllocationPolicy为竞价混合模式时设置，也不能在ScalingMode为扩容优先开机模式时设置。目前仅支持两个匹配期望数扩容活动并发进行，不支持指定数量扩容、缩容等其他类型活动并发。默认值为FALSE，表示不开启。
+     * Get <p>匹配期望数并发扩容功能，不能在InstanceAllocationPolicy为竞价混合模式时设置，也不能在ScalingMode为扩容优先开机模式时设置。目前仅支持两个匹配期望数扩容活动并发进行，不支持指定数量扩容、缩容等其他类型活动并发。默认值为FALSE，表示不开启。</p> 
+     * @return ConcurrentScaleOutForDesiredCapacity <p>匹配期望数并发扩容功能，不能在InstanceAllocationPolicy为竞价混合模式时设置，也不能在ScalingMode为扩容优先开机模式时设置。目前仅支持两个匹配期望数扩容活动并发进行，不支持指定数量扩容、缩容等其他类型活动并发。默认值为FALSE，表示不开启。</p>
      */
     public Boolean getConcurrentScaleOutForDesiredCapacity() {
         return this.ConcurrentScaleOutForDesiredCapacity;
     }
 
     /**
-     * Set 匹配期望数并发扩容功能，不能在InstanceAllocationPolicy为竞价混合模式时设置，也不能在ScalingMode为扩容优先开机模式时设置。目前仅支持两个匹配期望数扩容活动并发进行，不支持指定数量扩容、缩容等其他类型活动并发。默认值为FALSE，表示不开启。
-     * @param ConcurrentScaleOutForDesiredCapacity 匹配期望数并发扩容功能，不能在InstanceAllocationPolicy为竞价混合模式时设置，也不能在ScalingMode为扩容优先开机模式时设置。目前仅支持两个匹配期望数扩容活动并发进行，不支持指定数量扩容、缩容等其他类型活动并发。默认值为FALSE，表示不开启。
+     * Set <p>匹配期望数并发扩容功能，不能在InstanceAllocationPolicy为竞价混合模式时设置，也不能在ScalingMode为扩容优先开机模式时设置。目前仅支持两个匹配期望数扩容活动并发进行，不支持指定数量扩容、缩容等其他类型活动并发。默认值为FALSE，表示不开启。</p>
+     * @param ConcurrentScaleOutForDesiredCapacity <p>匹配期望数并发扩容功能，不能在InstanceAllocationPolicy为竞价混合模式时设置，也不能在ScalingMode为扩容优先开机模式时设置。目前仅支持两个匹配期望数扩容活动并发进行，不支持指定数量扩容、缩容等其他类型活动并发。默认值为FALSE，表示不开启。</p>
      */
     public void setConcurrentScaleOutForDesiredCapacity(Boolean ConcurrentScaleOutForDesiredCapacity) {
         this.ConcurrentScaleOutForDesiredCapacity = ConcurrentScaleOutForDesiredCapacity;

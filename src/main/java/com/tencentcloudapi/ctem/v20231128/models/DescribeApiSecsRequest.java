@@ -115,11 +115,18 @@ public class DescribeApiSecsRequest extends AbstractModel {
     private Filter [] Filters;
 
     /**
-    * 企业ID
+    * <p>企业ID</p>
     */
     @SerializedName("CustomerId")
     @Expose
     private Long CustomerId;
+
+    /**
+    * <p>排序方式</p>
+    */
+    @SerializedName("OrderBy")
+    @Expose
+    private String OrderBy;
 
     /**
      * Get 是否聚合数据 
@@ -330,19 +337,35 @@ public class DescribeApiSecsRequest extends AbstractModel {
     }
 
     /**
-     * Get 企业ID 
-     * @return CustomerId 企业ID
+     * Get <p>企业ID</p> 
+     * @return CustomerId <p>企业ID</p>
      */
     public Long getCustomerId() {
         return this.CustomerId;
     }
 
     /**
-     * Set 企业ID
-     * @param CustomerId 企业ID
+     * Set <p>企业ID</p>
+     * @param CustomerId <p>企业ID</p>
      */
     public void setCustomerId(Long CustomerId) {
         this.CustomerId = CustomerId;
+    }
+
+    /**
+     * Get <p>排序方式</p> 
+     * @return OrderBy <p>排序方式</p>
+     */
+    public String getOrderBy() {
+        return this.OrderBy;
+    }
+
+    /**
+     * Set <p>排序方式</p>
+     * @param OrderBy <p>排序方式</p>
+     */
+    public void setOrderBy(String OrderBy) {
+        this.OrderBy = OrderBy;
     }
 
     public DescribeApiSecsRequest() {
@@ -404,6 +427,9 @@ public class DescribeApiSecsRequest extends AbstractModel {
         if (source.CustomerId != null) {
             this.CustomerId = new Long(source.CustomerId);
         }
+        if (source.OrderBy != null) {
+            this.OrderBy = new String(source.OrderBy);
+        }
     }
 
 
@@ -425,6 +451,7 @@ public class DescribeApiSecsRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "EnterpriseUidList.", this.EnterpriseUidList);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "CustomerId", this.CustomerId);
+        this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
 
     }
 }

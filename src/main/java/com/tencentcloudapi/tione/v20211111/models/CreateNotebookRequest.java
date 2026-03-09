@@ -200,6 +200,13 @@ GooseFSx：GooseFSx存储
     private GooseFS VolumeSourceGooseFS;
 
     /**
+    * 描述
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
      * Get 名称。不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头 
      * @return Name 名称。不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
      */
@@ -615,6 +622,22 @@ GooseFSx：GooseFSx存储
         this.VolumeSourceGooseFS = VolumeSourceGooseFS;
     }
 
+    /**
+     * Get 描述 
+     * @return Description 描述
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 描述
+     * @param Description 描述
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
     public CreateNotebookRequest() {
     }
 
@@ -704,6 +727,9 @@ GooseFSx：GooseFSx存储
         if (source.VolumeSourceGooseFS != null) {
             this.VolumeSourceGooseFS = new GooseFS(source.VolumeSourceGooseFS);
         }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
     }
 
 
@@ -735,6 +761,7 @@ GooseFSx：GooseFSx存储
         this.setParamSimple(map, prefix + "ImageType", this.ImageType);
         this.setParamObj(map, prefix + "SSHConfig.", this.SSHConfig);
         this.setParamObj(map, prefix + "VolumeSourceGooseFS.", this.VolumeSourceGooseFS);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

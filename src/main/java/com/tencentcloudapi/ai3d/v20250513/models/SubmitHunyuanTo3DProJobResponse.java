@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SubmitHunyuanTo3DProJobResponse extends AbstractModel {
 
     /**
-    * 任务ID（有效期24小时）
+    * <p>任务ID（有效期24小时）</p>
     */
     @SerializedName("JobId")
     @Expose
@@ -38,16 +38,16 @@ public class SubmitHunyuanTo3DProJobResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务ID（有效期24小时） 
-     * @return JobId 任务ID（有效期24小时）
+     * Get <p>任务ID（有效期24小时）</p> 
+     * @return JobId <p>任务ID（有效期24小时）</p>
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 任务ID（有效期24小时）
-     * @param JobId 任务ID（有效期24小时）
+     * Set <p>任务ID（有效期24小时）</p>
+     * @param JobId <p>任务ID（有效期24小时）</p>
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;

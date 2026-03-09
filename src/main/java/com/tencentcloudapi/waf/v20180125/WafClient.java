@@ -589,6 +589,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *获取api安全敏感规则列表
+     * @param req DescribeApiSecSensitiveRuleListRequest
+     * @return DescribeApiSecSensitiveRuleListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApiSecSensitiveRuleListResponse DescribeApiSecSensitiveRuleList(DescribeApiSecSensitiveRuleListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeApiSecSensitiveRuleList", DescribeApiSecSensitiveRuleListResponse.class);
+    }
+
+    /**
      *获取地域封禁配置包括地域封禁开关，设置封禁的地区信息
      * @param req DescribeAreaBanAreasRequest
      * @return DescribeAreaBanAreasResponse

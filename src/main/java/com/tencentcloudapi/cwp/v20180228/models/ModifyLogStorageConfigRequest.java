@@ -52,6 +52,13 @@ public class ModifyLogStorageConfigRequest extends AbstractModel {
     private String Granularity;
 
     /**
+    * 语言类型
+    */
+    @SerializedName("MsgLanguage")
+    @Expose
+    private String MsgLanguage;
+
+    /**
      * Get 是否修改有效期（已废弃） 
      * @return IsModifyPeriod 是否修改有效期（已废弃）
      */
@@ -115,6 +122,22 @@ public class ModifyLogStorageConfigRequest extends AbstractModel {
         this.Granularity = Granularity;
     }
 
+    /**
+     * Get 语言类型 
+     * @return MsgLanguage 语言类型
+     */
+    public String getMsgLanguage() {
+        return this.MsgLanguage;
+    }
+
+    /**
+     * Set 语言类型
+     * @param MsgLanguage 语言类型
+     */
+    public void setMsgLanguage(String MsgLanguage) {
+        this.MsgLanguage = MsgLanguage;
+    }
+
     public ModifyLogStorageConfigRequest() {
     }
 
@@ -138,6 +161,9 @@ public class ModifyLogStorageConfigRequest extends AbstractModel {
         if (source.Granularity != null) {
             this.Granularity = new String(source.Granularity);
         }
+        if (source.MsgLanguage != null) {
+            this.MsgLanguage = new String(source.MsgLanguage);
+        }
     }
 
 
@@ -149,6 +175,7 @@ public class ModifyLogStorageConfigRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "Type.", this.Type);
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "Granularity", this.Granularity);
+        this.setParamSimple(map, prefix + "MsgLanguage", this.MsgLanguage);
 
     }
 }

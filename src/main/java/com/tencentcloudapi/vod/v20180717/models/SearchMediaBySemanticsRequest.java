@@ -24,148 +24,161 @@ import java.util.HashMap;
 public class SearchMediaBySemanticsRequest extends AbstractModel {
 
     /**
-    * <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+    * <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 需要进行搜索的内容
+    * <p>需要进行搜索的内容</p>
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-    * 返回的记录条数，默认值：20。
+    * <p>返回的记录条数，默认值：20。</p><p>取值范围：[1, 100]</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 文件类型。匹配集合中的任意元素： <li>Video: 视频文件</li> <li>Audio: 音频文件</li> <li>Image: 图片文件</li>
+    * <p>文件类型。匹配集合中的任意元素： <li>Video: 视频文件</li> <li>Audio: 音频文件</li> <li>Image: 图片文件</li></p>
     */
     @SerializedName("Categories")
     @Expose
     private String [] Categories;
 
     /**
-    * 标签集合，匹配集合中任意元素。 <li>单个标签长度限制：32个字符。</li> <li>数组长度限制：16。</li>
+    * <p>标签集合，匹配集合中任意元素。</p><p>入参限制：单个标签长度限制：32个字符。数组长度限制：16。</p>
     */
     @SerializedName("Tags")
     @Expose
     private String [] Tags;
 
     /**
-    * 搜索的任务类型，可选值有： 
-- AiAnalysis.DescriptionTask 
-- SmartSubtitle.AsrFullTextTask
+    * <p>人物集合，匹配出现了所有传入人物的片段</p><p>入参限制：数组长度限制：16</p>
+    */
+    @SerializedName("Persons")
+    @Expose
+    private String [] Persons;
+
+    /**
+    * <p>搜索的任务类型，可选值有： </p><ul><li>AiAnalysis.DescriptionTask </li><li>SmartSubtitle.AsrFullTextTask</li></ul>
     */
     @SerializedName("TaskTypes")
     @Expose
     private String [] TaskTypes;
 
     /**
-     * Get <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b> 
-     * @return SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+     * Get <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p> 
+     * @return SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
-     * @param SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+     * Set <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+     * @param SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get 需要进行搜索的内容 
-     * @return Text 需要进行搜索的内容
+     * Get <p>需要进行搜索的内容</p> 
+     * @return Text <p>需要进行搜索的内容</p>
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set 需要进行搜索的内容
-     * @param Text 需要进行搜索的内容
+     * Set <p>需要进行搜索的内容</p>
+     * @param Text <p>需要进行搜索的内容</p>
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get 返回的记录条数，默认值：20。 
-     * @return Limit 返回的记录条数，默认值：20。
+     * Get <p>返回的记录条数，默认值：20。</p><p>取值范围：[1, 100]</p> 
+     * @return Limit <p>返回的记录条数，默认值：20。</p><p>取值范围：[1, 100]</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回的记录条数，默认值：20。
-     * @param Limit 返回的记录条数，默认值：20。
+     * Set <p>返回的记录条数，默认值：20。</p><p>取值范围：[1, 100]</p>
+     * @param Limit <p>返回的记录条数，默认值：20。</p><p>取值范围：[1, 100]</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 文件类型。匹配集合中的任意元素： <li>Video: 视频文件</li> <li>Audio: 音频文件</li> <li>Image: 图片文件</li> 
-     * @return Categories 文件类型。匹配集合中的任意元素： <li>Video: 视频文件</li> <li>Audio: 音频文件</li> <li>Image: 图片文件</li>
+     * Get <p>文件类型。匹配集合中的任意元素： <li>Video: 视频文件</li> <li>Audio: 音频文件</li> <li>Image: 图片文件</li></p> 
+     * @return Categories <p>文件类型。匹配集合中的任意元素： <li>Video: 视频文件</li> <li>Audio: 音频文件</li> <li>Image: 图片文件</li></p>
      */
     public String [] getCategories() {
         return this.Categories;
     }
 
     /**
-     * Set 文件类型。匹配集合中的任意元素： <li>Video: 视频文件</li> <li>Audio: 音频文件</li> <li>Image: 图片文件</li>
-     * @param Categories 文件类型。匹配集合中的任意元素： <li>Video: 视频文件</li> <li>Audio: 音频文件</li> <li>Image: 图片文件</li>
+     * Set <p>文件类型。匹配集合中的任意元素： <li>Video: 视频文件</li> <li>Audio: 音频文件</li> <li>Image: 图片文件</li></p>
+     * @param Categories <p>文件类型。匹配集合中的任意元素： <li>Video: 视频文件</li> <li>Audio: 音频文件</li> <li>Image: 图片文件</li></p>
      */
     public void setCategories(String [] Categories) {
         this.Categories = Categories;
     }
 
     /**
-     * Get 标签集合，匹配集合中任意元素。 <li>单个标签长度限制：32个字符。</li> <li>数组长度限制：16。</li> 
-     * @return Tags 标签集合，匹配集合中任意元素。 <li>单个标签长度限制：32个字符。</li> <li>数组长度限制：16。</li>
+     * Get <p>标签集合，匹配集合中任意元素。</p><p>入参限制：单个标签长度限制：32个字符。数组长度限制：16。</p> 
+     * @return Tags <p>标签集合，匹配集合中任意元素。</p><p>入参限制：单个标签长度限制：32个字符。数组长度限制：16。</p>
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签集合，匹配集合中任意元素。 <li>单个标签长度限制：32个字符。</li> <li>数组长度限制：16。</li>
-     * @param Tags 标签集合，匹配集合中任意元素。 <li>单个标签长度限制：32个字符。</li> <li>数组长度限制：16。</li>
+     * Set <p>标签集合，匹配集合中任意元素。</p><p>入参限制：单个标签长度限制：32个字符。数组长度限制：16。</p>
+     * @param Tags <p>标签集合，匹配集合中任意元素。</p><p>入参限制：单个标签长度限制：32个字符。数组长度限制：16。</p>
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 搜索的任务类型，可选值有： 
-- AiAnalysis.DescriptionTask 
-- SmartSubtitle.AsrFullTextTask 
-     * @return TaskTypes 搜索的任务类型，可选值有： 
-- AiAnalysis.DescriptionTask 
-- SmartSubtitle.AsrFullTextTask
+     * Get <p>人物集合，匹配出现了所有传入人物的片段</p><p>入参限制：数组长度限制：16</p> 
+     * @return Persons <p>人物集合，匹配出现了所有传入人物的片段</p><p>入参限制：数组长度限制：16</p>
+     */
+    public String [] getPersons() {
+        return this.Persons;
+    }
+
+    /**
+     * Set <p>人物集合，匹配出现了所有传入人物的片段</p><p>入参限制：数组长度限制：16</p>
+     * @param Persons <p>人物集合，匹配出现了所有传入人物的片段</p><p>入参限制：数组长度限制：16</p>
+     */
+    public void setPersons(String [] Persons) {
+        this.Persons = Persons;
+    }
+
+    /**
+     * Get <p>搜索的任务类型，可选值有： </p><ul><li>AiAnalysis.DescriptionTask </li><li>SmartSubtitle.AsrFullTextTask</li></ul> 
+     * @return TaskTypes <p>搜索的任务类型，可选值有： </p><ul><li>AiAnalysis.DescriptionTask </li><li>SmartSubtitle.AsrFullTextTask</li></ul>
      */
     public String [] getTaskTypes() {
         return this.TaskTypes;
     }
 
     /**
-     * Set 搜索的任务类型，可选值有： 
-- AiAnalysis.DescriptionTask 
-- SmartSubtitle.AsrFullTextTask
-     * @param TaskTypes 搜索的任务类型，可选值有： 
-- AiAnalysis.DescriptionTask 
-- SmartSubtitle.AsrFullTextTask
+     * Set <p>搜索的任务类型，可选值有： </p><ul><li>AiAnalysis.DescriptionTask </li><li>SmartSubtitle.AsrFullTextTask</li></ul>
+     * @param TaskTypes <p>搜索的任务类型，可选值有： </p><ul><li>AiAnalysis.DescriptionTask </li><li>SmartSubtitle.AsrFullTextTask</li></ul>
      */
     public void setTaskTypes(String [] TaskTypes) {
         this.TaskTypes = TaskTypes;
@@ -200,6 +213,12 @@ public class SearchMediaBySemanticsRequest extends AbstractModel {
                 this.Tags[i] = new String(source.Tags[i]);
             }
         }
+        if (source.Persons != null) {
+            this.Persons = new String[source.Persons.length];
+            for (int i = 0; i < source.Persons.length; i++) {
+                this.Persons[i] = new String(source.Persons[i]);
+            }
+        }
         if (source.TaskTypes != null) {
             this.TaskTypes = new String[source.TaskTypes.length];
             for (int i = 0; i < source.TaskTypes.length; i++) {
@@ -218,6 +237,7 @@ public class SearchMediaBySemanticsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArraySimple(map, prefix + "Categories.", this.Categories);
         this.setParamArraySimple(map, prefix + "Tags.", this.Tags);
+        this.setParamArraySimple(map, prefix + "Persons.", this.Persons);
         this.setParamArraySimple(map, prefix + "TaskTypes.", this.TaskTypes);
 
     }

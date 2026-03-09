@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class PlaybackPolicy extends AbstractModel {
 
     /**
-    * 播放许可证的有效期
+    * <p>播放许可证的有效期</p><p>单位：秒</p>
     */
     @SerializedName("LicenseDurationSeconds")
     @Expose
     private Long LicenseDurationSeconds;
 
     /**
-    * 开始播放后，允许最长播放时间
+    * <p>开始播放后，允许最长播放时间</p><p>单位：秒</p>
     */
     @SerializedName("PlaybackDurationSeconds")
     @Expose
     private Long PlaybackDurationSeconds;
 
     /**
-     * Get 播放许可证的有效期 
-     * @return LicenseDurationSeconds 播放许可证的有效期
+     * Get <p>播放许可证的有效期</p><p>单位：秒</p> 
+     * @return LicenseDurationSeconds <p>播放许可证的有效期</p><p>单位：秒</p>
      */
     public Long getLicenseDurationSeconds() {
         return this.LicenseDurationSeconds;
     }
 
     /**
-     * Set 播放许可证的有效期
-     * @param LicenseDurationSeconds 播放许可证的有效期
+     * Set <p>播放许可证的有效期</p><p>单位：秒</p>
+     * @param LicenseDurationSeconds <p>播放许可证的有效期</p><p>单位：秒</p>
      */
     public void setLicenseDurationSeconds(Long LicenseDurationSeconds) {
         this.LicenseDurationSeconds = LicenseDurationSeconds;
     }
 
     /**
-     * Get 开始播放后，允许最长播放时间 
-     * @return PlaybackDurationSeconds 开始播放后，允许最长播放时间
+     * Get <p>开始播放后，允许最长播放时间</p><p>单位：秒</p> 
+     * @return PlaybackDurationSeconds <p>开始播放后，允许最长播放时间</p><p>单位：秒</p>
      */
     public Long getPlaybackDurationSeconds() {
         return this.PlaybackDurationSeconds;
     }
 
     /**
-     * Set 开始播放后，允许最长播放时间
-     * @param PlaybackDurationSeconds 开始播放后，允许最长播放时间
+     * Set <p>开始播放后，允许最长播放时间</p><p>单位：秒</p>
+     * @param PlaybackDurationSeconds <p>开始播放后，允许最长播放时间</p><p>单位：秒</p>
      */
     public void setPlaybackDurationSeconds(Long PlaybackDurationSeconds) {
         this.PlaybackDurationSeconds = PlaybackDurationSeconds;

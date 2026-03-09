@@ -146,7 +146,7 @@ public class UpdateNativeNodePoolParam extends AbstractModel {
     private Long Replicas;
 
     /**
-    * 是否更新存量节点
+    * 是否更新存量节点MetaData(包括： metadata、annotation、label)
     */
     @SerializedName("UpdateExistedNode")
     @Expose
@@ -158,6 +158,15 @@ public class UpdateNativeNodePoolParam extends AbstractModel {
     @SerializedName("DataDisks")
     @Expose
     private DataDisk [] DataDisks;
+
+    /**
+    * 节点management参数存量更新开关，有enable（打开）、disable（关闭）两个状态可选
+
+management包括：nameserver、host、kubelet、kernel参数
+    */
+    @SerializedName("UpdateMachineManagement")
+    @Expose
+    private String UpdateMachineManagement;
 
     /**
     * ssh公钥id数组
@@ -479,16 +488,16 @@ public class UpdateNativeNodePoolParam extends AbstractModel {
     }
 
     /**
-     * Get 是否更新存量节点 
-     * @return UpdateExistedNode 是否更新存量节点
+     * Get 是否更新存量节点MetaData(包括： metadata、annotation、label) 
+     * @return UpdateExistedNode 是否更新存量节点MetaData(包括： metadata、annotation、label)
      */
     public Boolean getUpdateExistedNode() {
         return this.UpdateExistedNode;
     }
 
     /**
-     * Set 是否更新存量节点
-     * @param UpdateExistedNode 是否更新存量节点
+     * Set 是否更新存量节点MetaData(包括： metadata、annotation、label)
+     * @param UpdateExistedNode 是否更新存量节点MetaData(包括： metadata、annotation、label)
      */
     public void setUpdateExistedNode(Boolean UpdateExistedNode) {
         this.UpdateExistedNode = UpdateExistedNode;
@@ -508,6 +517,30 @@ public class UpdateNativeNodePoolParam extends AbstractModel {
      */
     public void setDataDisks(DataDisk [] DataDisks) {
         this.DataDisks = DataDisks;
+    }
+
+    /**
+     * Get 节点management参数存量更新开关，有enable（打开）、disable（关闭）两个状态可选
+
+management包括：nameserver、host、kubelet、kernel参数 
+     * @return UpdateMachineManagement 节点management参数存量更新开关，有enable（打开）、disable（关闭）两个状态可选
+
+management包括：nameserver、host、kubelet、kernel参数
+     */
+    public String getUpdateMachineManagement() {
+        return this.UpdateMachineManagement;
+    }
+
+    /**
+     * Set 节点management参数存量更新开关，有enable（打开）、disable（关闭）两个状态可选
+
+management包括：nameserver、host、kubelet、kernel参数
+     * @param UpdateMachineManagement 节点management参数存量更新开关，有enable（打开）、disable（关闭）两个状态可选
+
+management包括：nameserver、host、kubelet、kernel参数
+     */
+    public void setUpdateMachineManagement(String UpdateMachineManagement) {
+        this.UpdateMachineManagement = UpdateMachineManagement;
     }
 
     /**
@@ -670,6 +703,9 @@ public class UpdateNativeNodePoolParam extends AbstractModel {
                 this.DataDisks[i] = new DataDisk(source.DataDisks[i]);
             }
         }
+        if (source.UpdateMachineManagement != null) {
+            this.UpdateMachineManagement = new String(source.UpdateMachineManagement);
+        }
         if (source.KeyIds != null) {
             this.KeyIds = new String[source.KeyIds.length];
             for (int i = 0; i < source.KeyIds.length; i++) {
@@ -717,6 +753,7 @@ public class UpdateNativeNodePoolParam extends AbstractModel {
         this.setParamSimple(map, prefix + "Replicas", this.Replicas);
         this.setParamSimple(map, prefix + "UpdateExistedNode", this.UpdateExistedNode);
         this.setParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
+        this.setParamSimple(map, prefix + "UpdateMachineManagement", this.UpdateMachineManagement);
         this.setParamArraySimple(map, prefix + "KeyIds.", this.KeyIds);
         this.setParamSimple(map, prefix + "DeletePolicy", this.DeletePolicy);
         this.setParamArrayObj(map, prefix + "GPUConfigs.", this.GPUConfigs);

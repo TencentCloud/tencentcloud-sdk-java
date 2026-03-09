@@ -59,6 +59,13 @@ public class AuthTokenBase extends AbstractModel {
     private String Status;
 
     /**
+    * token的唯一id，与value一一对应，重置后id也会一并变化
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
+
+    /**
      * Get token 值 
      * @return Value token 值
      */
@@ -138,6 +145,22 @@ public class AuthTokenBase extends AbstractModel {
         this.Status = Status;
     }
 
+    /**
+     * Get token的唯一id，与value一一对应，重置后id也会一并变化 
+     * @return Id token的唯一id，与value一一对应，重置后id也会一并变化
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set token的唯一id，与value一一对应，重置后id也会一并变化
+     * @param Id token的唯一id，与value一一对应，重置后id也会一并变化
+     */
+    public void setId(String Id) {
+        this.Id = Id;
+    }
+
     public AuthTokenBase() {
     }
 
@@ -161,6 +184,9 @@ public class AuthTokenBase extends AbstractModel {
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class AuthTokenBase extends AbstractModel {
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Id", this.Id);
 
     }
 }

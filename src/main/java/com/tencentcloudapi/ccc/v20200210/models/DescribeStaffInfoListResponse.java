@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeStaffInfoListResponse extends AbstractModel {
 
     /**
-    * 坐席用户总数
+    * <p>坐席用户总数</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 坐席用户信息列表
+    * <p>坐席用户信息列表</p>
     */
     @SerializedName("StaffList")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeStaffInfoListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 坐席用户总数 
-     * @return TotalCount 坐席用户总数
+     * Get <p>坐席用户总数</p> 
+     * @return TotalCount <p>坐席用户总数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 坐席用户总数
-     * @param TotalCount 坐席用户总数
+     * Set <p>坐席用户总数</p>
+     * @param TotalCount <p>坐席用户总数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 坐席用户信息列表 
-     * @return StaffList 坐席用户信息列表
+     * Get <p>坐席用户信息列表</p> 
+     * @return StaffList <p>坐席用户信息列表</p>
      */
     public StaffInfo [] getStaffList() {
         return this.StaffList;
     }
 
     /**
-     * Set 坐席用户信息列表
-     * @param StaffList 坐席用户信息列表
+     * Set <p>坐席用户信息列表</p>
+     * @param StaffList <p>坐席用户信息列表</p>
      */
     public void setStaffList(StaffInfo [] StaffList) {
         this.StaffList = StaffList;

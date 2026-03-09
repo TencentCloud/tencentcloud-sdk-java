@@ -52,6 +52,13 @@ public class ModifyClusterMachineRequest extends AbstractModel {
     private Disk SystemDisk;
 
     /**
+    * 安全组列表
+    */
+    @SerializedName("SecurityGroupIDs")
+    @Expose
+    private String [] SecurityGroupIDs;
+
+    /**
     * 节点预付费信息
     */
     @SerializedName("InstanceChargePrepaid")
@@ -123,6 +130,22 @@ public class ModifyClusterMachineRequest extends AbstractModel {
     }
 
     /**
+     * Get 安全组列表 
+     * @return SecurityGroupIDs 安全组列表
+     */
+    public String [] getSecurityGroupIDs() {
+        return this.SecurityGroupIDs;
+    }
+
+    /**
+     * Set 安全组列表
+     * @param SecurityGroupIDs 安全组列表
+     */
+    public void setSecurityGroupIDs(String [] SecurityGroupIDs) {
+        this.SecurityGroupIDs = SecurityGroupIDs;
+    }
+
+    /**
      * Get 节点预付费信息 
      * @return InstanceChargePrepaid 节点预付费信息
      */
@@ -161,6 +184,12 @@ public class ModifyClusterMachineRequest extends AbstractModel {
         if (source.SystemDisk != null) {
             this.SystemDisk = new Disk(source.SystemDisk);
         }
+        if (source.SecurityGroupIDs != null) {
+            this.SecurityGroupIDs = new String[source.SecurityGroupIDs.length];
+            for (int i = 0; i < source.SecurityGroupIDs.length; i++) {
+                this.SecurityGroupIDs[i] = new String(source.SecurityGroupIDs[i]);
+            }
+        }
         if (source.InstanceChargePrepaid != null) {
             this.InstanceChargePrepaid = new InstanceChargePrepaid(source.InstanceChargePrepaid);
         }
@@ -175,6 +204,7 @@ public class ModifyClusterMachineRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "MachineNames.", this.MachineNames);
         this.setParamSimple(map, prefix + "DisplayName", this.DisplayName);
         this.setParamObj(map, prefix + "SystemDisk.", this.SystemDisk);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIDs.", this.SecurityGroupIDs);
         this.setParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
 
     }

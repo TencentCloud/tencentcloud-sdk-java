@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ModifySwitchTimePeriodRequest extends AbstractModel {
 
     /**
-    * 处于等待切换状态中的实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+    * <p>处于等待切换状态中的实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
     */
     @SerializedName("DBInstanceId")
     @Expose
     private String DBInstanceId;
 
     /**
-    * 入参取值为 0 ，代表立即切换。
+    * <p>入参取值为 0 ，代表立即切换。</p>
     */
     @SerializedName("SwitchTag")
     @Expose
     private Long SwitchTag;
 
     /**
-     * Get 处于等待切换状态中的实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取 
-     * @return DBInstanceId 处于等待切换状态中的实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * Get <p>处于等待切换状态中的实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p> 
+     * @return DBInstanceId <p>处于等待切换状态中的实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set 处于等待切换状态中的实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
-     * @param DBInstanceId 处于等待切换状态中的实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * Set <p>处于等待切换状态中的实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
+     * @param DBInstanceId <p>处于等待切换状态中的实例ID。可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
     }
 
     /**
-     * Get 入参取值为 0 ，代表立即切换。 
-     * @return SwitchTag 入参取值为 0 ，代表立即切换。
+     * Get <p>入参取值为 0 ，代表立即切换。</p> 
+     * @return SwitchTag <p>入参取值为 0 ，代表立即切换。</p>
      */
     public Long getSwitchTag() {
         return this.SwitchTag;
     }
 
     /**
-     * Set 入参取值为 0 ，代表立即切换。
-     * @param SwitchTag 入参取值为 0 ，代表立即切换。
+     * Set <p>入参取值为 0 ，代表立即切换。</p>
+     * @param SwitchTag <p>入参取值为 0 ，代表立即切换。</p>
      */
     public void setSwitchTag(Long SwitchTag) {
         this.SwitchTag = SwitchTag;

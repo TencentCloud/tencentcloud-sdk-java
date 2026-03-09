@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SubmitHunyuan3DPartJobResponse extends AbstractModel {
 
     /**
-    * 任务ID。
+    * <p>任务ID。</p>
     */
     @SerializedName("JobId")
     @Expose
@@ -38,16 +38,16 @@ public class SubmitHunyuan3DPartJobResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务ID。 
-     * @return JobId 任务ID。
+     * Get <p>任务ID。</p> 
+     * @return JobId <p>任务ID。</p>
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 任务ID。
-     * @param JobId 任务ID。
+     * Set <p>任务ID。</p>
+     * @param JobId <p>任务ID。</p>
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;

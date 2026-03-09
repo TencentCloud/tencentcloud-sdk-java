@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeApiSecsResponse extends AbstractModel {
 
     /**
-    * 总数
+    * <p>总数</p>
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * API安全数组
+    * <p>API安全数组</p>
     */
     @SerializedName("List")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeApiSecsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总数 
-     * @return Total 总数
+     * Get <p>总数</p> 
+     * @return Total <p>总数</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 总数
-     * @param Total 总数
+     * Set <p>总数</p>
+     * @param Total <p>总数</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get API安全数组 
-     * @return List API安全数组
+     * Get <p>API安全数组</p> 
+     * @return List <p>API安全数组</p>
      */
     public DisplayApiSec [] getList() {
         return this.List;
     }
 
     /**
-     * Set API安全数组
-     * @param List API安全数组
+     * Set <p>API安全数组</p>
+     * @param List <p>API安全数组</p>
      */
     public void setList(DisplayApiSec [] List) {
         this.List = List;

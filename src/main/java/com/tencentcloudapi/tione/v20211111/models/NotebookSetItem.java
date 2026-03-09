@@ -266,6 +266,14 @@ public class NotebookSetItem extends AbstractModel {
     private ExposePortConfig ExposePortConfig;
 
     /**
+    * 描述
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
      * Get notebook ID 
      * @return Id notebook ID
      */
@@ -861,6 +869,26 @@ public class NotebookSetItem extends AbstractModel {
         this.ExposePortConfig = ExposePortConfig;
     }
 
+    /**
+     * Get 描述
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Description 描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Description 描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
     public NotebookSetItem() {
     }
 
@@ -971,6 +999,9 @@ public class NotebookSetItem extends AbstractModel {
         if (source.ExposePortConfig != null) {
             this.ExposePortConfig = new ExposePortConfig(source.ExposePortConfig);
         }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
     }
 
 
@@ -1009,6 +1040,7 @@ public class NotebookSetItem extends AbstractModel {
         this.setParamSimple(map, prefix + "SubUinName", this.SubUinName);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamObj(map, prefix + "ExposePortConfig.", this.ExposePortConfig);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

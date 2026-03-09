@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateLLMComprehendTemplateResponse extends AbstractModel {
 
     /**
-    * 大模型理解模板的唯一标识
+    * <p>大模型理解模板的唯一标识</p>
     */
     @SerializedName("Definition")
     @Expose
@@ -38,16 +38,16 @@ public class CreateLLMComprehendTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 大模型理解模板的唯一标识 
-     * @return Definition 大模型理解模板的唯一标识
+     * Get <p>大模型理解模板的唯一标识</p> 
+     * @return Definition <p>大模型理解模板的唯一标识</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 大模型理解模板的唯一标识
-     * @param Definition 大模型理解模板的唯一标识
+     * Set <p>大模型理解模板的唯一标识</p>
+     * @param Definition <p>大模型理解模板的唯一标识</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

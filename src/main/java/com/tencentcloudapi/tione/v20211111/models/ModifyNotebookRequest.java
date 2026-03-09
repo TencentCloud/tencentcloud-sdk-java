@@ -205,6 +205,13 @@ POSTPAID_BY_HOUR：按小时后付费
     private EnvVar [] Envs;
 
     /**
+    * 描述
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
      * Get notebook id 
      * @return Id notebook id
      */
@@ -628,6 +635,22 @@ POSTPAID_BY_HOUR：按小时后付费
         this.Envs = Envs;
     }
 
+    /**
+     * Get 描述 
+     * @return Description 描述
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 描述
+     * @param Description 描述
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
     public ModifyNotebookRequest() {
     }
 
@@ -723,6 +746,9 @@ POSTPAID_BY_HOUR：按小时后付费
                 this.Envs[i] = new EnvVar(source.Envs[i]);
             }
         }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
     }
 
 
@@ -755,6 +781,7 @@ POSTPAID_BY_HOUR：按小时后付费
         this.setParamSimple(map, prefix + "ImageType", this.ImageType);
         this.setParamObj(map, prefix + "SSHConfig.", this.SSHConfig);
         this.setParamArrayObj(map, prefix + "Envs.", this.Envs);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

@@ -24,105 +24,118 @@ import java.util.HashMap;
 public class AccessControlChildRuleInfo extends AbstractModel {
 
     /**
-    * 策略模式,  RULE_MODE_RELEASE: 放行
-   RULE_MODE_ALERT: 告警
-   RULE_MODE_HOLDUP:拦截
+    * <p>策略模式,  RULE_MODE_RELEASE: 放行<br>   RULE_MODE_ALERT: 告警<br>   RULE_MODE_HOLDUP:拦截</p>
     */
     @SerializedName("RuleMode")
     @Expose
     private String RuleMode;
 
     /**
-    * 进程路径
+    * <p>进程路径</p>
     */
     @SerializedName("ProcessPath")
     @Expose
     private String ProcessPath;
 
     /**
-    * 被访问文件路径，仅仅在访问控制生效
+    * <p>被访问文件路径，仅仅在访问控制生效</p>
     */
     @SerializedName("TargetFilePath")
     @Expose
     private String TargetFilePath;
 
     /**
-    * 子策略id
+    * <p>子策略id</p>
     */
     @SerializedName("RuleId")
     @Expose
     private String RuleId;
 
     /**
-     * Get 策略模式,  RULE_MODE_RELEASE: 放行
-   RULE_MODE_ALERT: 告警
-   RULE_MODE_HOLDUP:拦截 
-     * @return RuleMode 策略模式,  RULE_MODE_RELEASE: 放行
-   RULE_MODE_ALERT: 告警
-   RULE_MODE_HOLDUP:拦截
+    * <p>命令行参数</p>
+    */
+    @SerializedName("CmdLine")
+    @Expose
+    private String CmdLine;
+
+    /**
+     * Get <p>策略模式,  RULE_MODE_RELEASE: 放行<br>   RULE_MODE_ALERT: 告警<br>   RULE_MODE_HOLDUP:拦截</p> 
+     * @return RuleMode <p>策略模式,  RULE_MODE_RELEASE: 放行<br>   RULE_MODE_ALERT: 告警<br>   RULE_MODE_HOLDUP:拦截</p>
      */
     public String getRuleMode() {
         return this.RuleMode;
     }
 
     /**
-     * Set 策略模式,  RULE_MODE_RELEASE: 放行
-   RULE_MODE_ALERT: 告警
-   RULE_MODE_HOLDUP:拦截
-     * @param RuleMode 策略模式,  RULE_MODE_RELEASE: 放行
-   RULE_MODE_ALERT: 告警
-   RULE_MODE_HOLDUP:拦截
+     * Set <p>策略模式,  RULE_MODE_RELEASE: 放行<br>   RULE_MODE_ALERT: 告警<br>   RULE_MODE_HOLDUP:拦截</p>
+     * @param RuleMode <p>策略模式,  RULE_MODE_RELEASE: 放行<br>   RULE_MODE_ALERT: 告警<br>   RULE_MODE_HOLDUP:拦截</p>
      */
     public void setRuleMode(String RuleMode) {
         this.RuleMode = RuleMode;
     }
 
     /**
-     * Get 进程路径 
-     * @return ProcessPath 进程路径
+     * Get <p>进程路径</p> 
+     * @return ProcessPath <p>进程路径</p>
      */
     public String getProcessPath() {
         return this.ProcessPath;
     }
 
     /**
-     * Set 进程路径
-     * @param ProcessPath 进程路径
+     * Set <p>进程路径</p>
+     * @param ProcessPath <p>进程路径</p>
      */
     public void setProcessPath(String ProcessPath) {
         this.ProcessPath = ProcessPath;
     }
 
     /**
-     * Get 被访问文件路径，仅仅在访问控制生效 
-     * @return TargetFilePath 被访问文件路径，仅仅在访问控制生效
+     * Get <p>被访问文件路径，仅仅在访问控制生效</p> 
+     * @return TargetFilePath <p>被访问文件路径，仅仅在访问控制生效</p>
      */
     public String getTargetFilePath() {
         return this.TargetFilePath;
     }
 
     /**
-     * Set 被访问文件路径，仅仅在访问控制生效
-     * @param TargetFilePath 被访问文件路径，仅仅在访问控制生效
+     * Set <p>被访问文件路径，仅仅在访问控制生效</p>
+     * @param TargetFilePath <p>被访问文件路径，仅仅在访问控制生效</p>
      */
     public void setTargetFilePath(String TargetFilePath) {
         this.TargetFilePath = TargetFilePath;
     }
 
     /**
-     * Get 子策略id 
-     * @return RuleId 子策略id
+     * Get <p>子策略id</p> 
+     * @return RuleId <p>子策略id</p>
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set 子策略id
-     * @param RuleId 子策略id
+     * Set <p>子策略id</p>
+     * @param RuleId <p>子策略id</p>
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;
+    }
+
+    /**
+     * Get <p>命令行参数</p> 
+     * @return CmdLine <p>命令行参数</p>
+     */
+    public String getCmdLine() {
+        return this.CmdLine;
+    }
+
+    /**
+     * Set <p>命令行参数</p>
+     * @param CmdLine <p>命令行参数</p>
+     */
+    public void setCmdLine(String CmdLine) {
+        this.CmdLine = CmdLine;
     }
 
     public AccessControlChildRuleInfo() {
@@ -145,6 +158,9 @@ public class AccessControlChildRuleInfo extends AbstractModel {
         if (source.RuleId != null) {
             this.RuleId = new String(source.RuleId);
         }
+        if (source.CmdLine != null) {
+            this.CmdLine = new String(source.CmdLine);
+        }
     }
 
 
@@ -156,6 +172,7 @@ public class AccessControlChildRuleInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ProcessPath", this.ProcessPath);
         this.setParamSimple(map, prefix + "TargetFilePath", this.TargetFilePath);
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
+        this.setParamSimple(map, prefix + "CmdLine", this.CmdLine);
 
     }
 }

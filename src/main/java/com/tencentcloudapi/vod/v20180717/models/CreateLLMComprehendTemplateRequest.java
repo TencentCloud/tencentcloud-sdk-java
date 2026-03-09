@@ -24,151 +24,164 @@ import java.util.HashMap;
 public class CreateLLMComprehendTemplateRequest extends AbstractModel {
 
     /**
-    * 解析级别，可选值为：
-- Audio: 音频级解析
-- Video: 视频级解析
+    * <p>解析级别，可选值为：</p><ul><li>Audio: 音频级解析</li><li>Video: 视频级解析</li></ul>
     */
     @SerializedName("Level")
     @Expose
     private String Level;
 
     /**
-    * <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+    * <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 大模型解析模板名称，长度限制：64 个字符。
+    * <p>大模型解析模板名称，长度限制：64 个字符。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 大模型解析模板描述信息，长度限制：256 个字符。
+    * <p>大模型解析模板描述信息，长度限制：256 个字符。</p>
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * 分段摘要解析配置
+    * <p>分段摘要解析配置</p>
     */
     @SerializedName("Summary")
     @Expose
     private LLMComprehendSummary Summary;
 
     /**
-    * 文本转录解析配置
+    * <p>文本转录解析配置</p>
     */
     @SerializedName("Asr")
     @Expose
     private LLMComprehendAsr Asr;
 
     /**
-     * Get 解析级别，可选值为：
-- Audio: 音频级解析
-- Video: 视频级解析 
-     * @return Level 解析级别，可选值为：
-- Audio: 音频级解析
-- Video: 视频级解析
+    * <p>人脸识别配置</p>
+    */
+    @SerializedName("FaceRecognition")
+    @Expose
+    private LLMComprehendFaceRecognition FaceRecognition;
+
+    /**
+     * Get <p>解析级别，可选值为：</p><ul><li>Audio: 音频级解析</li><li>Video: 视频级解析</li></ul> 
+     * @return Level <p>解析级别，可选值为：</p><ul><li>Audio: 音频级解析</li><li>Video: 视频级解析</li></ul>
      */
     public String getLevel() {
         return this.Level;
     }
 
     /**
-     * Set 解析级别，可选值为：
-- Audio: 音频级解析
-- Video: 视频级解析
-     * @param Level 解析级别，可选值为：
-- Audio: 音频级解析
-- Video: 视频级解析
+     * Set <p>解析级别，可选值为：</p><ul><li>Audio: 音频级解析</li><li>Video: 视频级解析</li></ul>
+     * @param Level <p>解析级别，可选值为：</p><ul><li>Audio: 音频级解析</li><li>Video: 视频级解析</li></ul>
      */
     public void setLevel(String Level) {
         this.Level = Level;
     }
 
     /**
-     * Get <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b> 
-     * @return SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+     * Get <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p> 
+     * @return SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
-     * @param SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+     * Set <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+     * @param SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get 大模型解析模板名称，长度限制：64 个字符。 
-     * @return Name 大模型解析模板名称，长度限制：64 个字符。
+     * Get <p>大模型解析模板名称，长度限制：64 个字符。</p> 
+     * @return Name <p>大模型解析模板名称，长度限制：64 个字符。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 大模型解析模板名称，长度限制：64 个字符。
-     * @param Name 大模型解析模板名称，长度限制：64 个字符。
+     * Set <p>大模型解析模板名称，长度限制：64 个字符。</p>
+     * @param Name <p>大模型解析模板名称，长度限制：64 个字符。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 大模型解析模板描述信息，长度限制：256 个字符。 
-     * @return Comment 大模型解析模板描述信息，长度限制：256 个字符。
+     * Get <p>大模型解析模板描述信息，长度限制：256 个字符。</p> 
+     * @return Comment <p>大模型解析模板描述信息，长度限制：256 个字符。</p>
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 大模型解析模板描述信息，长度限制：256 个字符。
-     * @param Comment 大模型解析模板描述信息，长度限制：256 个字符。
+     * Set <p>大模型解析模板描述信息，长度限制：256 个字符。</p>
+     * @param Comment <p>大模型解析模板描述信息，长度限制：256 个字符。</p>
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get 分段摘要解析配置 
-     * @return Summary 分段摘要解析配置
+     * Get <p>分段摘要解析配置</p> 
+     * @return Summary <p>分段摘要解析配置</p>
      */
     public LLMComprehendSummary getSummary() {
         return this.Summary;
     }
 
     /**
-     * Set 分段摘要解析配置
-     * @param Summary 分段摘要解析配置
+     * Set <p>分段摘要解析配置</p>
+     * @param Summary <p>分段摘要解析配置</p>
      */
     public void setSummary(LLMComprehendSummary Summary) {
         this.Summary = Summary;
     }
 
     /**
-     * Get 文本转录解析配置 
-     * @return Asr 文本转录解析配置
+     * Get <p>文本转录解析配置</p> 
+     * @return Asr <p>文本转录解析配置</p>
      */
     public LLMComprehendAsr getAsr() {
         return this.Asr;
     }
 
     /**
-     * Set 文本转录解析配置
-     * @param Asr 文本转录解析配置
+     * Set <p>文本转录解析配置</p>
+     * @param Asr <p>文本转录解析配置</p>
      */
     public void setAsr(LLMComprehendAsr Asr) {
         this.Asr = Asr;
+    }
+
+    /**
+     * Get <p>人脸识别配置</p> 
+     * @return FaceRecognition <p>人脸识别配置</p>
+     */
+    public LLMComprehendFaceRecognition getFaceRecognition() {
+        return this.FaceRecognition;
+    }
+
+    /**
+     * Set <p>人脸识别配置</p>
+     * @param FaceRecognition <p>人脸识别配置</p>
+     */
+    public void setFaceRecognition(LLMComprehendFaceRecognition FaceRecognition) {
+        this.FaceRecognition = FaceRecognition;
     }
 
     public CreateLLMComprehendTemplateRequest() {
@@ -197,6 +210,9 @@ public class CreateLLMComprehendTemplateRequest extends AbstractModel {
         if (source.Asr != null) {
             this.Asr = new LLMComprehendAsr(source.Asr);
         }
+        if (source.FaceRecognition != null) {
+            this.FaceRecognition = new LLMComprehendFaceRecognition(source.FaceRecognition);
+        }
     }
 
 
@@ -210,6 +226,7 @@ public class CreateLLMComprehendTemplateRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamObj(map, prefix + "Summary.", this.Summary);
         this.setParamObj(map, prefix + "Asr.", this.Asr);
+        this.setParamObj(map, prefix + "FaceRecognition.", this.FaceRecognition);
 
     }
 }

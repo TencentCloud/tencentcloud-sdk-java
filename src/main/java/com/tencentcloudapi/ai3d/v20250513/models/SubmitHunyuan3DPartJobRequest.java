@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class SubmitHunyuan3DPartJobRequest extends AbstractModel {
 
     /**
-    * 需进行组件生成的3D模型文件，仅支持FBX格式。
+    * <p>需进行组件生成的3D模型文件，仅支持FBX格式。</p>
     */
     @SerializedName("File")
     @Expose
     private InputFile3D File;
 
     /**
-    * 组件生成模型版本，默认为1.0，可选项：1.0，1.5；
+    * <p>组件生成模型版本，默认为1.5</p><p>枚举值：</p><ul><li>1.5： 1.5模型</li></ul><p>默认值：1.5</p>
     */
     @SerializedName("Model")
     @Expose
     private String Model;
 
     /**
-     * Get 需进行组件生成的3D模型文件，仅支持FBX格式。 
-     * @return File 需进行组件生成的3D模型文件，仅支持FBX格式。
+     * Get <p>需进行组件生成的3D模型文件，仅支持FBX格式。</p> 
+     * @return File <p>需进行组件生成的3D模型文件，仅支持FBX格式。</p>
      */
     public InputFile3D getFile() {
         return this.File;
     }
 
     /**
-     * Set 需进行组件生成的3D模型文件，仅支持FBX格式。
-     * @param File 需进行组件生成的3D模型文件，仅支持FBX格式。
+     * Set <p>需进行组件生成的3D模型文件，仅支持FBX格式。</p>
+     * @param File <p>需进行组件生成的3D模型文件，仅支持FBX格式。</p>
      */
     public void setFile(InputFile3D File) {
         this.File = File;
     }
 
     /**
-     * Get 组件生成模型版本，默认为1.0，可选项：1.0，1.5； 
-     * @return Model 组件生成模型版本，默认为1.0，可选项：1.0，1.5；
+     * Get <p>组件生成模型版本，默认为1.5</p><p>枚举值：</p><ul><li>1.5： 1.5模型</li></ul><p>默认值：1.5</p> 
+     * @return Model <p>组件生成模型版本，默认为1.5</p><p>枚举值：</p><ul><li>1.5： 1.5模型</li></ul><p>默认值：1.5</p>
      */
     public String getModel() {
         return this.Model;
     }
 
     /**
-     * Set 组件生成模型版本，默认为1.0，可选项：1.0，1.5；
-     * @param Model 组件生成模型版本，默认为1.0，可选项：1.0，1.5；
+     * Set <p>组件生成模型版本，默认为1.5</p><p>枚举值：</p><ul><li>1.5： 1.5模型</li></ul><p>默认值：1.5</p>
+     * @param Model <p>组件生成模型版本，默认为1.5</p><p>枚举值：</p><ul><li>1.5： 1.5模型</li></ul><p>默认值：1.5</p>
      */
     public void setModel(String Model) {
         this.Model = Model;

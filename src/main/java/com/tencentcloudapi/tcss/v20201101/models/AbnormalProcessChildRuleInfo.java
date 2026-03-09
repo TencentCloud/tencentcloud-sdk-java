@@ -24,105 +24,118 @@ import java.util.HashMap;
 public class AbnormalProcessChildRuleInfo extends AbstractModel {
 
     /**
-    * 策略模式，   RULE_MODE_RELEASE: 放行
-   RULE_MODE_ALERT: 告警
-   RULE_MODE_HOLDUP:拦截
+    * <p>策略模式，   RULE_MODE_RELEASE: 放行<br>   RULE_MODE_ALERT: 告警<br>   RULE_MODE_HOLDUP:拦截</p>
     */
     @SerializedName("RuleMode")
     @Expose
     private String RuleMode;
 
     /**
-    * 进程路径
+    * <p>进程路径</p>
     */
     @SerializedName("ProcessPath")
     @Expose
     private String ProcessPath;
 
     /**
-    * 子策略id
+    * <p>子策略id</p>
     */
     @SerializedName("RuleId")
     @Expose
     private String RuleId;
 
     /**
-    * 威胁等级，HIGH:高，MIDDLE:中，LOW:低
+    * <p>威胁等级，HIGH:高，MIDDLE:中，LOW:低</p>
     */
     @SerializedName("RuleLevel")
     @Expose
     private String RuleLevel;
 
     /**
-     * Get 策略模式，   RULE_MODE_RELEASE: 放行
-   RULE_MODE_ALERT: 告警
-   RULE_MODE_HOLDUP:拦截 
-     * @return RuleMode 策略模式，   RULE_MODE_RELEASE: 放行
-   RULE_MODE_ALERT: 告警
-   RULE_MODE_HOLDUP:拦截
+    * <p>命令行参数</p>
+    */
+    @SerializedName("CmdLine")
+    @Expose
+    private String CmdLine;
+
+    /**
+     * Get <p>策略模式，   RULE_MODE_RELEASE: 放行<br>   RULE_MODE_ALERT: 告警<br>   RULE_MODE_HOLDUP:拦截</p> 
+     * @return RuleMode <p>策略模式，   RULE_MODE_RELEASE: 放行<br>   RULE_MODE_ALERT: 告警<br>   RULE_MODE_HOLDUP:拦截</p>
      */
     public String getRuleMode() {
         return this.RuleMode;
     }
 
     /**
-     * Set 策略模式，   RULE_MODE_RELEASE: 放行
-   RULE_MODE_ALERT: 告警
-   RULE_MODE_HOLDUP:拦截
-     * @param RuleMode 策略模式，   RULE_MODE_RELEASE: 放行
-   RULE_MODE_ALERT: 告警
-   RULE_MODE_HOLDUP:拦截
+     * Set <p>策略模式，   RULE_MODE_RELEASE: 放行<br>   RULE_MODE_ALERT: 告警<br>   RULE_MODE_HOLDUP:拦截</p>
+     * @param RuleMode <p>策略模式，   RULE_MODE_RELEASE: 放行<br>   RULE_MODE_ALERT: 告警<br>   RULE_MODE_HOLDUP:拦截</p>
      */
     public void setRuleMode(String RuleMode) {
         this.RuleMode = RuleMode;
     }
 
     /**
-     * Get 进程路径 
-     * @return ProcessPath 进程路径
+     * Get <p>进程路径</p> 
+     * @return ProcessPath <p>进程路径</p>
      */
     public String getProcessPath() {
         return this.ProcessPath;
     }
 
     /**
-     * Set 进程路径
-     * @param ProcessPath 进程路径
+     * Set <p>进程路径</p>
+     * @param ProcessPath <p>进程路径</p>
      */
     public void setProcessPath(String ProcessPath) {
         this.ProcessPath = ProcessPath;
     }
 
     /**
-     * Get 子策略id 
-     * @return RuleId 子策略id
+     * Get <p>子策略id</p> 
+     * @return RuleId <p>子策略id</p>
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set 子策略id
-     * @param RuleId 子策略id
+     * Set <p>子策略id</p>
+     * @param RuleId <p>子策略id</p>
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get 威胁等级，HIGH:高，MIDDLE:中，LOW:低 
-     * @return RuleLevel 威胁等级，HIGH:高，MIDDLE:中，LOW:低
+     * Get <p>威胁等级，HIGH:高，MIDDLE:中，LOW:低</p> 
+     * @return RuleLevel <p>威胁等级，HIGH:高，MIDDLE:中，LOW:低</p>
      */
     public String getRuleLevel() {
         return this.RuleLevel;
     }
 
     /**
-     * Set 威胁等级，HIGH:高，MIDDLE:中，LOW:低
-     * @param RuleLevel 威胁等级，HIGH:高，MIDDLE:中，LOW:低
+     * Set <p>威胁等级，HIGH:高，MIDDLE:中，LOW:低</p>
+     * @param RuleLevel <p>威胁等级，HIGH:高，MIDDLE:中，LOW:低</p>
      */
     public void setRuleLevel(String RuleLevel) {
         this.RuleLevel = RuleLevel;
+    }
+
+    /**
+     * Get <p>命令行参数</p> 
+     * @return CmdLine <p>命令行参数</p>
+     */
+    public String getCmdLine() {
+        return this.CmdLine;
+    }
+
+    /**
+     * Set <p>命令行参数</p>
+     * @param CmdLine <p>命令行参数</p>
+     */
+    public void setCmdLine(String CmdLine) {
+        this.CmdLine = CmdLine;
     }
 
     public AbnormalProcessChildRuleInfo() {
@@ -145,6 +158,9 @@ public class AbnormalProcessChildRuleInfo extends AbstractModel {
         if (source.RuleLevel != null) {
             this.RuleLevel = new String(source.RuleLevel);
         }
+        if (source.CmdLine != null) {
+            this.CmdLine = new String(source.CmdLine);
+        }
     }
 
 
@@ -156,6 +172,7 @@ public class AbnormalProcessChildRuleInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ProcessPath", this.ProcessPath);
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamSimple(map, prefix + "RuleLevel", this.RuleLevel);
+        this.setParamSimple(map, prefix + "CmdLine", this.CmdLine);
 
     }
 }

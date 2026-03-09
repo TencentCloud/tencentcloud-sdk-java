@@ -31,6 +31,13 @@ public class DescribeSecLogJoinTypeListResponse extends AbstractModel {
     private SecLogJoinInfo [] List;
 
     /**
+    * 语言类型
+    */
+    @SerializedName("MsgLanguage")
+    @Expose
+    private String MsgLanguage;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +58,22 @@ public class DescribeSecLogJoinTypeListResponse extends AbstractModel {
      */
     public void setList(SecLogJoinInfo [] List) {
         this.List = List;
+    }
+
+    /**
+     * Get 语言类型 
+     * @return MsgLanguage 语言类型
+     */
+    public String getMsgLanguage() {
+        return this.MsgLanguage;
+    }
+
+    /**
+     * Set 语言类型
+     * @param MsgLanguage 语言类型
+     */
+    public void setMsgLanguage(String MsgLanguage) {
+        this.MsgLanguage = MsgLanguage;
     }
 
     /**
@@ -83,6 +106,9 @@ public class DescribeSecLogJoinTypeListResponse extends AbstractModel {
                 this.List[i] = new SecLogJoinInfo(source.List[i]);
             }
         }
+        if (source.MsgLanguage != null) {
+            this.MsgLanguage = new String(source.MsgLanguage);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -94,6 +120,7 @@ public class DescribeSecLogJoinTypeListResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "List.", this.List);
+        this.setParamSimple(map, prefix + "MsgLanguage", this.MsgLanguage);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

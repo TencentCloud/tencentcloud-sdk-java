@@ -31,6 +31,13 @@ public class DescribeTrainingTaskRequest extends AbstractModel {
     private String Id;
 
     /**
+    * 训练任务实例ID
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
      * Get 训练任务ID 
      * @return Id 训练任务ID
      */
@@ -46,6 +53,22 @@ public class DescribeTrainingTaskRequest extends AbstractModel {
         this.Id = Id;
     }
 
+    /**
+     * Get 训练任务实例ID 
+     * @return InstanceId 训练任务实例ID
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 训练任务实例ID
+     * @param InstanceId 训练任务实例ID
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
     public DescribeTrainingTaskRequest() {
     }
 
@@ -57,6 +80,9 @@ public class DescribeTrainingTaskRequest extends AbstractModel {
         if (source.Id != null) {
             this.Id = new String(source.Id);
         }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DescribeTrainingTaskRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }
