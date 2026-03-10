@@ -87,7 +87,7 @@ public class CreateTawInstanceRequest extends AbstractModel {
     private String BuyingChannel;
 
     /**
-    * 预付费资源包类型(仅预付费需要)
+    * 资源包类型：1=5百万/30天，2=10百万/30天，3=50百万/180天，4=100百万/180天，5=300百万/180天，6=500百万/180天，7=1000百万/180天，8=2500百万/180天，9=10000百万/360天（单位：上报量=百万条，周期=天）
     */
     @SerializedName("ResourcePackageType")
     @Expose
@@ -108,7 +108,7 @@ public class CreateTawInstanceRequest extends AbstractModel {
     private Long InstanceType;
 
     /**
-    * 自动续费类型
+    * 自动续费类型：0=不自动续费，1=开启自动续费；开启时需填写 AutoRenewalThreshold（1~50%）；同一实例最多允许存在 1 个自动续费资源包。
     */
     @SerializedName("AutoRenewalType")
     @Expose
@@ -266,16 +266,16 @@ public class CreateTawInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 预付费资源包类型(仅预付费需要) 
-     * @return ResourcePackageType 预付费资源包类型(仅预付费需要)
+     * Get 资源包类型：1=5百万/30天，2=10百万/30天，3=50百万/180天，4=100百万/180天，5=300百万/180天，6=500百万/180天，7=1000百万/180天，8=2500百万/180天，9=10000百万/360天（单位：上报量=百万条，周期=天） 
+     * @return ResourcePackageType 资源包类型：1=5百万/30天，2=10百万/30天，3=50百万/180天，4=100百万/180天，5=300百万/180天，6=500百万/180天，7=1000百万/180天，8=2500百万/180天，9=10000百万/360天（单位：上报量=百万条，周期=天）
      */
     public Long getResourcePackageType() {
         return this.ResourcePackageType;
     }
 
     /**
-     * Set 预付费资源包类型(仅预付费需要)
-     * @param ResourcePackageType 预付费资源包类型(仅预付费需要)
+     * Set 资源包类型：1=5百万/30天，2=10百万/30天，3=50百万/180天，4=100百万/180天，5=300百万/180天，6=500百万/180天，7=1000百万/180天，8=2500百万/180天，9=10000百万/360天（单位：上报量=百万条，周期=天）
+     * @param ResourcePackageType 资源包类型：1=5百万/30天，2=10百万/30天，3=50百万/180天，4=100百万/180天，5=300百万/180天，6=500百万/180天，7=1000百万/180天，8=2500百万/180天，9=10000百万/360天（单位：上报量=百万条，周期=天）
      */
     public void setResourcePackageType(Long ResourcePackageType) {
         this.ResourcePackageType = ResourcePackageType;
@@ -314,16 +314,16 @@ public class CreateTawInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 自动续费类型 
-     * @return AutoRenewalType 自动续费类型
+     * Get 自动续费类型：0=不自动续费，1=开启自动续费；开启时需填写 AutoRenewalThreshold（1~50%）；同一实例最多允许存在 1 个自动续费资源包。 
+     * @return AutoRenewalType 自动续费类型：0=不自动续费，1=开启自动续费；开启时需填写 AutoRenewalThreshold（1~50%）；同一实例最多允许存在 1 个自动续费资源包。
      */
     public Long getAutoRenewalType() {
         return this.AutoRenewalType;
     }
 
     /**
-     * Set 自动续费类型
-     * @param AutoRenewalType 自动续费类型
+     * Set 自动续费类型：0=不自动续费，1=开启自动续费；开启时需填写 AutoRenewalThreshold（1~50%）；同一实例最多允许存在 1 个自动续费资源包。
+     * @param AutoRenewalType 自动续费类型：0=不自动续费，1=开启自动续费；开启时需填写 AutoRenewalThreshold（1~50%）；同一实例最多允许存在 1 个自动续费资源包。
      */
     public void setAutoRenewalType(Long AutoRenewalType) {
         this.AutoRenewalType = AutoRenewalType;

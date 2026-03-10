@@ -24,87 +24,95 @@ import java.util.HashMap;
 public class DescribeBillAdjustInfoRequest extends AbstractModel {
 
     /**
-    * 格式：yyyy-MM
-账单月份，month和timeFrom&timeTo必传一个，如果有传timeFrom&timeTo则month字段无效
+    * <p>格式：yyyy-MM<br>账单月份，month和timeFrom&amp;timeTo必传一个，如果有传timeFrom&amp;timeTo则month字段无效</p>
     */
     @SerializedName("Month")
     @Expose
     private String Month;
 
     /**
-    * 格式：yyyy-MM-dd
-开始时间，month和timeFrom&timeTo必传一个，如果有该字段则month字段无效。timeFrom和timeTo必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据
+    * <p>格式：yyyy-MM-dd<br>开始时间，month和timeFrom&amp;timeTo必传一个，如果有该字段则month字段无效。timeFrom和timeTo必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据</p>
     */
     @SerializedName("TimeFrom")
     @Expose
     private String TimeFrom;
 
     /**
-    * 格式：yyyy-MM-dd
-截止时间，month和timeFrom&timeTo必传一个，如果有该字段则month字段无效。timeFrom和timeTo必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据
+    * <p>格式：yyyy-MM-dd<br>截止时间，month和timeFrom&amp;timeTo必传一个，如果有该字段则month字段无效。timeFrom和timeTo必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据</p>
     */
     @SerializedName("TimeTo")
     @Expose
     private String TimeTo;
 
     /**
-     * Get 格式：yyyy-MM
-账单月份，month和timeFrom&timeTo必传一个，如果有传timeFrom&timeTo则month字段无效 
-     * @return Month 格式：yyyy-MM
-账单月份，month和timeFrom&timeTo必传一个，如果有传timeFrom&timeTo则month字段无效
+    * <p>支付者的账号 ID（账号 ID 是用户在腾讯云的唯一账号标识），默认查询本账号账单，如集团管理账号需查询成员账号自付的账单，该字段需入参成员账号UIN</p>
+    */
+    @SerializedName("PayerUin")
+    @Expose
+    private String PayerUin;
+
+    /**
+     * Get <p>格式：yyyy-MM<br>账单月份，month和timeFrom&amp;timeTo必传一个，如果有传timeFrom&amp;timeTo则month字段无效</p> 
+     * @return Month <p>格式：yyyy-MM<br>账单月份，month和timeFrom&amp;timeTo必传一个，如果有传timeFrom&amp;timeTo则month字段无效</p>
      */
     public String getMonth() {
         return this.Month;
     }
 
     /**
-     * Set 格式：yyyy-MM
-账单月份，month和timeFrom&timeTo必传一个，如果有传timeFrom&timeTo则month字段无效
-     * @param Month 格式：yyyy-MM
-账单月份，month和timeFrom&timeTo必传一个，如果有传timeFrom&timeTo则month字段无效
+     * Set <p>格式：yyyy-MM<br>账单月份，month和timeFrom&amp;timeTo必传一个，如果有传timeFrom&amp;timeTo则month字段无效</p>
+     * @param Month <p>格式：yyyy-MM<br>账单月份，month和timeFrom&amp;timeTo必传一个，如果有传timeFrom&amp;timeTo则month字段无效</p>
      */
     public void setMonth(String Month) {
         this.Month = Month;
     }
 
     /**
-     * Get 格式：yyyy-MM-dd
-开始时间，month和timeFrom&timeTo必传一个，如果有该字段则month字段无效。timeFrom和timeTo必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据 
-     * @return TimeFrom 格式：yyyy-MM-dd
-开始时间，month和timeFrom&timeTo必传一个，如果有该字段则month字段无效。timeFrom和timeTo必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据
+     * Get <p>格式：yyyy-MM-dd<br>开始时间，month和timeFrom&amp;timeTo必传一个，如果有该字段则month字段无效。timeFrom和timeTo必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据</p> 
+     * @return TimeFrom <p>格式：yyyy-MM-dd<br>开始时间，month和timeFrom&amp;timeTo必传一个，如果有该字段则month字段无效。timeFrom和timeTo必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据</p>
      */
     public String getTimeFrom() {
         return this.TimeFrom;
     }
 
     /**
-     * Set 格式：yyyy-MM-dd
-开始时间，month和timeFrom&timeTo必传一个，如果有该字段则month字段无效。timeFrom和timeTo必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据
-     * @param TimeFrom 格式：yyyy-MM-dd
-开始时间，month和timeFrom&timeTo必传一个，如果有该字段则month字段无效。timeFrom和timeTo必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据
+     * Set <p>格式：yyyy-MM-dd<br>开始时间，month和timeFrom&amp;timeTo必传一个，如果有该字段则month字段无效。timeFrom和timeTo必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据</p>
+     * @param TimeFrom <p>格式：yyyy-MM-dd<br>开始时间，month和timeFrom&amp;timeTo必传一个，如果有该字段则month字段无效。timeFrom和timeTo必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据</p>
      */
     public void setTimeFrom(String TimeFrom) {
         this.TimeFrom = TimeFrom;
     }
 
     /**
-     * Get 格式：yyyy-MM-dd
-截止时间，month和timeFrom&timeTo必传一个，如果有该字段则month字段无效。timeFrom和timeTo必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据 
-     * @return TimeTo 格式：yyyy-MM-dd
-截止时间，month和timeFrom&timeTo必传一个，如果有该字段则month字段无效。timeFrom和timeTo必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据
+     * Get <p>格式：yyyy-MM-dd<br>截止时间，month和timeFrom&amp;timeTo必传一个，如果有该字段则month字段无效。timeFrom和timeTo必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据</p> 
+     * @return TimeTo <p>格式：yyyy-MM-dd<br>截止时间，month和timeFrom&amp;timeTo必传一个，如果有该字段则month字段无效。timeFrom和timeTo必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据</p>
      */
     public String getTimeTo() {
         return this.TimeTo;
     }
 
     /**
-     * Set 格式：yyyy-MM-dd
-截止时间，month和timeFrom&timeTo必传一个，如果有该字段则month字段无效。timeFrom和timeTo必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据
-     * @param TimeTo 格式：yyyy-MM-dd
-截止时间，month和timeFrom&timeTo必传一个，如果有该字段则month字段无效。timeFrom和timeTo必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据
+     * Set <p>格式：yyyy-MM-dd<br>截止时间，month和timeFrom&amp;timeTo必传一个，如果有该字段则month字段无效。timeFrom和timeTo必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据</p>
+     * @param TimeTo <p>格式：yyyy-MM-dd<br>截止时间，month和timeFrom&amp;timeTo必传一个，如果有该字段则month字段无效。timeFrom和timeTo必须一起传，且为相同月份，不支持跨月查询，查询结果是整月数据</p>
      */
     public void setTimeTo(String TimeTo) {
         this.TimeTo = TimeTo;
+    }
+
+    /**
+     * Get <p>支付者的账号 ID（账号 ID 是用户在腾讯云的唯一账号标识），默认查询本账号账单，如集团管理账号需查询成员账号自付的账单，该字段需入参成员账号UIN</p> 
+     * @return PayerUin <p>支付者的账号 ID（账号 ID 是用户在腾讯云的唯一账号标识），默认查询本账号账单，如集团管理账号需查询成员账号自付的账单，该字段需入参成员账号UIN</p>
+     */
+    public String getPayerUin() {
+        return this.PayerUin;
+    }
+
+    /**
+     * Set <p>支付者的账号 ID（账号 ID 是用户在腾讯云的唯一账号标识），默认查询本账号账单，如集团管理账号需查询成员账号自付的账单，该字段需入参成员账号UIN</p>
+     * @param PayerUin <p>支付者的账号 ID（账号 ID 是用户在腾讯云的唯一账号标识），默认查询本账号账单，如集团管理账号需查询成员账号自付的账单，该字段需入参成员账号UIN</p>
+     */
+    public void setPayerUin(String PayerUin) {
+        this.PayerUin = PayerUin;
     }
 
     public DescribeBillAdjustInfoRequest() {
@@ -124,6 +132,9 @@ public class DescribeBillAdjustInfoRequest extends AbstractModel {
         if (source.TimeTo != null) {
             this.TimeTo = new String(source.TimeTo);
         }
+        if (source.PayerUin != null) {
+            this.PayerUin = new String(source.PayerUin);
+        }
     }
 
 
@@ -134,6 +145,7 @@ public class DescribeBillAdjustInfoRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Month", this.Month);
         this.setParamSimple(map, prefix + "TimeFrom", this.TimeFrom);
         this.setParamSimple(map, prefix + "TimeTo", this.TimeTo);
+        this.setParamSimple(map, prefix + "PayerUin", this.PayerUin);
 
     }
 }

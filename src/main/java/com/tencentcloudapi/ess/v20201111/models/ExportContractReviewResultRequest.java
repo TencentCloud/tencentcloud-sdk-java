@@ -39,7 +39,7 @@ public class ExportContractReviewResultRequest extends AbstractModel {
     private String TaskId;
 
     /**
-    * 导出文件类型。1  = 带风险批注文件; 2 = 审查结果＆摘要（.xIsx）
+    * 导出文件类型。1  = 带风险批注文件; 2 = 审查结果＆摘要（.xIsx）; 3 = 不带批注文件
     */
     @SerializedName("FileType")
     @Expose
@@ -90,16 +90,16 @@ public class ExportContractReviewResultRequest extends AbstractModel {
     }
 
     /**
-     * Get 导出文件类型。1  = 带风险批注文件; 2 = 审查结果＆摘要（.xIsx） 
-     * @return FileType 导出文件类型。1  = 带风险批注文件; 2 = 审查结果＆摘要（.xIsx）
+     * Get 导出文件类型。1  = 带风险批注文件; 2 = 审查结果＆摘要（.xIsx）; 3 = 不带批注文件 
+     * @return FileType 导出文件类型。1  = 带风险批注文件; 2 = 审查结果＆摘要（.xIsx）; 3 = 不带批注文件
      */
     public Long getFileType() {
         return this.FileType;
     }
 
     /**
-     * Set 导出文件类型。1  = 带风险批注文件; 2 = 审查结果＆摘要（.xIsx）
-     * @param FileType 导出文件类型。1  = 带风险批注文件; 2 = 审查结果＆摘要（.xIsx）
+     * Set 导出文件类型。1  = 带风险批注文件; 2 = 审查结果＆摘要（.xIsx）; 3 = 不带批注文件
+     * @param FileType 导出文件类型。1  = 带风险批注文件; 2 = 审查结果＆摘要（.xIsx）; 3 = 不带批注文件
      */
     public void setFileType(Long FileType) {
         this.FileType = FileType;

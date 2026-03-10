@@ -31,7 +31,14 @@ public class DescribePermissionStatusInfoRequest extends AbstractModel {
     private Long TableId;
 
     /**
-    * 类型
+    * 类型。
+取值范围：
+
+- ROW：行权限
+- COLUMN：列权限
+
+默认值：ROW
+示例值：ROW
     */
     @SerializedName("Type")
     @Expose
@@ -61,16 +68,44 @@ public class DescribePermissionStatusInfoRequest extends AbstractModel {
     }
 
     /**
-     * Get 类型 
-     * @return Type 类型
+     * Get 类型。
+取值范围：
+
+- ROW：行权限
+- COLUMN：列权限
+
+默认值：ROW
+示例值：ROW 
+     * @return Type 类型。
+取值范围：
+
+- ROW：行权限
+- COLUMN：列权限
+
+默认值：ROW
+示例值：ROW
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 类型
-     * @param Type 类型
+     * Set 类型。
+取值范围：
+
+- ROW：行权限
+- COLUMN：列权限
+
+默认值：ROW
+示例值：ROW
+     * @param Type 类型。
+取值范围：
+
+- ROW：行权限
+- COLUMN：列权限
+
+默认值：ROW
+示例值：ROW
      */
     public void setType(String Type) {
         this.Type = Type;

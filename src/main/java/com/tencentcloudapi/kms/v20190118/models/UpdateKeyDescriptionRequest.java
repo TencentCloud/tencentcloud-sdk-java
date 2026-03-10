@@ -38,6 +38,13 @@ public class UpdateKeyDescriptionRequest extends AbstractModel {
     private String KeyId;
 
     /**
+    * 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
+    */
+    @SerializedName("MemberAccount")
+    @Expose
+    private MemberAccount MemberAccount;
+
+    /**
      * Get 新的描述信息，最大支持1024字节 
      * @return Description 新的描述信息，最大支持1024字节
      */
@@ -69,6 +76,22 @@ public class UpdateKeyDescriptionRequest extends AbstractModel {
         this.KeyId = KeyId;
     }
 
+    /**
+     * Get 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。 
+     * @return MemberAccount 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
+     */
+    public MemberAccount getMemberAccount() {
+        return this.MemberAccount;
+    }
+
+    /**
+     * Set 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
+     * @param MemberAccount 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
+     */
+    public void setMemberAccount(MemberAccount MemberAccount) {
+        this.MemberAccount = MemberAccount;
+    }
+
     public UpdateKeyDescriptionRequest() {
     }
 
@@ -83,6 +106,9 @@ public class UpdateKeyDescriptionRequest extends AbstractModel {
         if (source.KeyId != null) {
             this.KeyId = new String(source.KeyId);
         }
+        if (source.MemberAccount != null) {
+            this.MemberAccount = new MemberAccount(source.MemberAccount);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class UpdateKeyDescriptionRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "KeyId", this.KeyId);
+        this.setParamObj(map, prefix + "MemberAccount.", this.MemberAccount);
 
     }
 }

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeWorkspacesRequest extends AbstractModel {
 
     /**
-    * 工作空间名称过滤条件
+    * <p>工作空间名称过滤条件</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get 工作空间名称过滤条件 
-     * @return Name 工作空间名称过滤条件
+     * Get <p>工作空间名称过滤条件</p> 
+     * @return Name <p>工作空间名称过滤条件</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 工作空间名称过滤条件
-     * @param Name 工作空间名称过滤条件
+     * Set <p>工作空间名称过滤条件</p>
+     * @param Name <p>工作空间名称过滤条件</p>
      */
     public void setName(String Name) {
         this.Name = Name;

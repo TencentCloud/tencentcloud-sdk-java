@@ -129,7 +129,7 @@ public class DescribeDataLogUrlStatisticsRequest extends AbstractModel {
     private String ExtFirst;
 
     /**
-    * 网络类型
+    * 网络类型(tag 值):用于过滤/聚合字段 netType；枚举值：1(WiFi)、2(2G)、3(3G)、4(4G)、5(5G)、6(6G)、100(未知网络)。
     */
     @SerializedName("NetType")
     @Expose
@@ -418,16 +418,16 @@ public class DescribeDataLogUrlStatisticsRequest extends AbstractModel {
     }
 
     /**
-     * Get 网络类型 
-     * @return NetType 网络类型
+     * Get 网络类型(tag 值):用于过滤/聚合字段 netType；枚举值：1(WiFi)、2(2G)、3(3G)、4(4G)、5(5G)、6(6G)、100(未知网络)。 
+     * @return NetType 网络类型(tag 值):用于过滤/聚合字段 netType；枚举值：1(WiFi)、2(2G)、3(3G)、4(4G)、5(5G)、6(6G)、100(未知网络)。
      */
     public String getNetType() {
         return this.NetType;
     }
 
     /**
-     * Set 网络类型
-     * @param NetType 网络类型
+     * Set 网络类型(tag 值):用于过滤/聚合字段 netType；枚举值：1(WiFi)、2(2G)、3(3G)、4(4G)、5(5G)、6(6G)、100(未知网络)。
+     * @param NetType 网络类型(tag 值):用于过滤/聚合字段 netType；枚举值：1(WiFi)、2(2G)、3(3G)、4(4G)、5(5G)、6(6G)、100(未知网络)。
      */
     public void setNetType(String NetType) {
         this.NetType = NetType;

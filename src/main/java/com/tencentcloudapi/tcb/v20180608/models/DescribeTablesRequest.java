@@ -59,6 +59,13 @@ public class DescribeTablesRequest extends AbstractModel {
     private MongoConnector MongoConnector;
 
     /**
+    * 指定表名过滤，为空时返回所有表
+    */
+    @SerializedName("TableNames")
+    @Expose
+    private String [] TableNames;
+
+    /**
      * Get 分页条件 
      * @return MgoLimit 分页条件
      */
@@ -138,6 +145,22 @@ public class DescribeTablesRequest extends AbstractModel {
         this.MongoConnector = MongoConnector;
     }
 
+    /**
+     * Get 指定表名过滤，为空时返回所有表 
+     * @return TableNames 指定表名过滤，为空时返回所有表
+     */
+    public String [] getTableNames() {
+        return this.TableNames;
+    }
+
+    /**
+     * Set 指定表名过滤，为空时返回所有表
+     * @param TableNames 指定表名过滤，为空时返回所有表
+     */
+    public void setTableNames(String [] TableNames) {
+        this.TableNames = TableNames;
+    }
+
     public DescribeTablesRequest() {
     }
 
@@ -161,6 +184,12 @@ public class DescribeTablesRequest extends AbstractModel {
         if (source.MongoConnector != null) {
             this.MongoConnector = new MongoConnector(source.MongoConnector);
         }
+        if (source.TableNames != null) {
+            this.TableNames = new String[source.TableNames.length];
+            for (int i = 0; i < source.TableNames.length; i++) {
+                this.TableNames[i] = new String(source.TableNames[i]);
+            }
+        }
     }
 
 
@@ -173,6 +202,7 @@ public class DescribeTablesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "MgoOffset", this.MgoOffset);
         this.setParamSimple(map, prefix + "EnvId", this.EnvId);
         this.setParamObj(map, prefix + "MongoConnector.", this.MongoConnector);
+        this.setParamArraySimple(map, prefix + "TableNames.", this.TableNames);
 
     }
 }

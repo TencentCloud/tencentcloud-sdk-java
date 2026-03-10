@@ -31,6 +31,13 @@ public class DescribeDataKeysRequest extends AbstractModel {
     private String [] DataKeyIds;
 
     /**
+    * 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
+    */
+    @SerializedName("MemberAccount")
+    @Expose
+    private MemberAccount MemberAccount;
+
+    /**
      * Get 查询DataKey的ID列表，批量查询一次最多支持100个DataKeyId 
      * @return DataKeyIds 查询DataKey的ID列表，批量查询一次最多支持100个DataKeyId
      */
@@ -44,6 +51,22 @@ public class DescribeDataKeysRequest extends AbstractModel {
      */
     public void setDataKeyIds(String [] DataKeyIds) {
         this.DataKeyIds = DataKeyIds;
+    }
+
+    /**
+     * Get 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。 
+     * @return MemberAccount 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
+     */
+    public MemberAccount getMemberAccount() {
+        return this.MemberAccount;
+    }
+
+    /**
+     * Set 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
+     * @param MemberAccount 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
+     */
+    public void setMemberAccount(MemberAccount MemberAccount) {
+        this.MemberAccount = MemberAccount;
     }
 
     public DescribeDataKeysRequest() {
@@ -60,6 +83,9 @@ public class DescribeDataKeysRequest extends AbstractModel {
                 this.DataKeyIds[i] = new String(source.DataKeyIds[i]);
             }
         }
+        if (source.MemberAccount != null) {
+            this.MemberAccount = new MemberAccount(source.MemberAccount);
+        }
     }
 
 
@@ -68,6 +94,7 @@ public class DescribeDataKeysRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "DataKeyIds.", this.DataKeyIds);
+        this.setParamObj(map, prefix + "MemberAccount.", this.MemberAccount);
 
     }
 }

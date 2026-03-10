@@ -38,6 +38,13 @@ public class EnableKeyRotationRequest extends AbstractModel {
     private Long RotateDays;
 
     /**
+    * 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
+    */
+    @SerializedName("MemberAccount")
+    @Expose
+    private MemberAccount MemberAccount;
+
+    /**
      * Get CMK唯一标识符 
      * @return KeyId CMK唯一标识符
      */
@@ -69,6 +76,22 @@ public class EnableKeyRotationRequest extends AbstractModel {
         this.RotateDays = RotateDays;
     }
 
+    /**
+     * Get 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。 
+     * @return MemberAccount 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
+     */
+    public MemberAccount getMemberAccount() {
+        return this.MemberAccount;
+    }
+
+    /**
+     * Set 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
+     * @param MemberAccount 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
+     */
+    public void setMemberAccount(MemberAccount MemberAccount) {
+        this.MemberAccount = MemberAccount;
+    }
+
     public EnableKeyRotationRequest() {
     }
 
@@ -83,6 +106,9 @@ public class EnableKeyRotationRequest extends AbstractModel {
         if (source.RotateDays != null) {
             this.RotateDays = new Long(source.RotateDays);
         }
+        if (source.MemberAccount != null) {
+            this.MemberAccount = new MemberAccount(source.MemberAccount);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class EnableKeyRotationRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "KeyId", this.KeyId);
         this.setParamSimple(map, prefix + "RotateDays", this.RotateDays);
+        this.setParamObj(map, prefix + "MemberAccount.", this.MemberAccount);
 
     }
 }

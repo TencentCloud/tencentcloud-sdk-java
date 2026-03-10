@@ -129,7 +129,7 @@ public class DescribeDataPvUrlStatisticsV2Request extends AbstractModel {
     private String ExtFirst;
 
     /**
-    * 网络类型
+    * 网络类型（1,2,3,4,5,100），1表示WIFI, 2表示2G, 3表示3G, 4表示4G, 5表示5G, 6表示6G, 100表示未知
     */
     @SerializedName("NetType")
     @Expose
@@ -483,16 +483,16 @@ public class DescribeDataPvUrlStatisticsV2Request extends AbstractModel {
     }
 
     /**
-     * Get 网络类型 
-     * @return NetType 网络类型
+     * Get 网络类型（1,2,3,4,5,100），1表示WIFI, 2表示2G, 3表示3G, 4表示4G, 5表示5G, 6表示6G, 100表示未知 
+     * @return NetType 网络类型（1,2,3,4,5,100），1表示WIFI, 2表示2G, 3表示3G, 4表示4G, 5表示5G, 6表示6G, 100表示未知
      */
     public String getNetType() {
         return this.NetType;
     }
 
     /**
-     * Set 网络类型
-     * @param NetType 网络类型
+     * Set 网络类型（1,2,3,4,5,100），1表示WIFI, 2表示2G, 3表示3G, 4表示4G, 5表示5G, 6表示6G, 100表示未知
+     * @param NetType 网络类型（1,2,3,4,5,100），1表示WIFI, 2表示2G, 3表示3G, 4表示4G, 5表示5G, 6表示6G, 100表示未知
      */
     public void setNetType(String NetType) {
         this.NetType = NetType;

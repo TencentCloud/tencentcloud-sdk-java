@@ -32,7 +32,16 @@ public class PermissionComponent extends AbstractModel {
     private String ModuleId;
 
     /**
-    * 可见/可用
+    * 可用性。
+取值范围：
+
+- usable：可用
+- visible：可见
+- disabled：不可用
+- hidden：隐藏
+
+默认值：disabled
+示例值：disabled
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IncludeType")
@@ -84,9 +93,27 @@ public class PermissionComponent extends AbstractModel {
     }
 
     /**
-     * Get 可见/可用
+     * Get 可用性。
+取值范围：
+
+- usable：可用
+- visible：可见
+- disabled：不可用
+- hidden：隐藏
+
+默认值：disabled
+示例值：disabled
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IncludeType 可见/可用
+     * @return IncludeType 可用性。
+取值范围：
+
+- usable：可用
+- visible：可见
+- disabled：不可用
+- hidden：隐藏
+
+默认值：disabled
+示例值：disabled
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIncludeType() {
@@ -94,9 +121,27 @@ public class PermissionComponent extends AbstractModel {
     }
 
     /**
-     * Set 可见/可用
+     * Set 可用性。
+取值范围：
+
+- usable：可用
+- visible：可见
+- disabled：不可用
+- hidden：隐藏
+
+默认值：disabled
+示例值：disabled
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IncludeType 可见/可用
+     * @param IncludeType 可用性。
+取值范围：
+
+- usable：可用
+- visible：可见
+- disabled：不可用
+- hidden：隐藏
+
+默认值：disabled
+示例值：disabled
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIncludeType(String IncludeType) {

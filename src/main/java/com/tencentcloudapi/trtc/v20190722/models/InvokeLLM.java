@@ -38,6 +38,13 @@ public class InvokeLLM extends AbstractModel {
     private Boolean Interrupt;
 
     /**
+    * 实验性参数,联系后台使用
+    */
+    @SerializedName("ExperimentalParams")
+    @Expose
+    private String ExperimentalParams;
+
+    /**
      * Get 请求LLM的内容 
      * @return Content 请求LLM的内容
      */
@@ -69,6 +76,22 @@ public class InvokeLLM extends AbstractModel {
         this.Interrupt = Interrupt;
     }
 
+    /**
+     * Get 实验性参数,联系后台使用 
+     * @return ExperimentalParams 实验性参数,联系后台使用
+     */
+    public String getExperimentalParams() {
+        return this.ExperimentalParams;
+    }
+
+    /**
+     * Set 实验性参数,联系后台使用
+     * @param ExperimentalParams 实验性参数,联系后台使用
+     */
+    public void setExperimentalParams(String ExperimentalParams) {
+        this.ExperimentalParams = ExperimentalParams;
+    }
+
     public InvokeLLM() {
     }
 
@@ -83,6 +106,9 @@ public class InvokeLLM extends AbstractModel {
         if (source.Interrupt != null) {
             this.Interrupt = new Boolean(source.Interrupt);
         }
+        if (source.ExperimentalParams != null) {
+            this.ExperimentalParams = new String(source.ExperimentalParams);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class InvokeLLM extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Content", this.Content);
         this.setParamSimple(map, prefix + "Interrupt", this.Interrupt);
+        this.setParamSimple(map, prefix + "ExperimentalParams", this.ExperimentalParams);
 
     }
 }

@@ -32,6 +32,9 @@ public class DescribeProjectInfoRequest extends AbstractModel {
 
     /**
     * 默认看板
+取值范围：
+1：项目看板 
+2：我的看板
     */
     @SerializedName("DefaultPanelType")
     @Expose
@@ -54,8 +57,14 @@ public class DescribeProjectInfoRequest extends AbstractModel {
     }
 
     /**
-     * Get 默认看板 
+     * Get 默认看板
+取值范围：
+1：项目看板 
+2：我的看板 
      * @return DefaultPanelType 默认看板
+取值范围：
+1：项目看板 
+2：我的看板
      */
     public Long getDefaultPanelType() {
         return this.DefaultPanelType;
@@ -63,7 +72,13 @@ public class DescribeProjectInfoRequest extends AbstractModel {
 
     /**
      * Set 默认看板
+取值范围：
+1：项目看板 
+2：我的看板
      * @param DefaultPanelType 默认看板
+取值范围：
+1：项目看板 
+2：我的看板
      */
     public void setDefaultPanelType(Long DefaultPanelType) {
         this.DefaultPanelType = DefaultPanelType;

@@ -164,7 +164,7 @@ public class DescribeDataCustomUrlRequest extends AbstractModel {
     private String Browser;
 
     /**
-    * 耗时计算方式
+    * 耗时口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（使用 percentile2 计算分位数）；"avg" 表示均值（使用 avg 计算）。
     */
     @SerializedName("CostType")
     @Expose
@@ -505,16 +505,16 @@ public class DescribeDataCustomUrlRequest extends AbstractModel {
     }
 
     /**
-     * Get 耗时计算方式 
-     * @return CostType 耗时计算方式
+     * Get 耗时口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（使用 percentile2 计算分位数）；"avg" 表示均值（使用 avg 计算）。 
+     * @return CostType 耗时口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（使用 percentile2 计算分位数）；"avg" 表示均值（使用 avg 计算）。
      */
     public String getCostType() {
         return this.CostType;
     }
 
     /**
-     * Set 耗时计算方式
-     * @param CostType 耗时计算方式
+     * Set 耗时口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（使用 percentile2 计算分位数）；"avg" 表示均值（使用 avg 计算）。
+     * @param CostType 耗时口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（使用 percentile2 计算分位数）；"avg" 表示均值（使用 avg 计算）。
      */
     public void setCostType(String CostType) {
         this.CostType = CostType;

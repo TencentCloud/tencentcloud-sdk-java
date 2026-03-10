@@ -117,6 +117,18 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
+     *接口说明：
+启动云端转录功能。
+     * @param req CreateCloudTranscriptionRequest
+     * @return CreateCloudTranscriptionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCloudTranscriptionResponse CreateCloudTranscription(CreateCloudTranscriptionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCloudTranscription", CreateCloudTranscriptionResponse.class);
+    }
+
+    /**
      *如果您需要在 [云端混流转码](https://cloud.tencent.com/document/product/647/16827) 时频繁新增自定义背景图或水印，可通过此接口上传新的图片素材。无需频繁新增图片的场景，建议直接在 [控制台 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769) 中操作。
      * @param req CreatePictureRequest
      * @return CreatePictureResponse
@@ -169,6 +181,17 @@ public class TrtcClient extends AbstractClient{
     public DeleteCloudSliceTaskResponse DeleteCloudSliceTask(DeleteCloudSliceTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteCloudSliceTask", DeleteCloudSliceTaskResponse.class);
+    }
+
+    /**
+     *成功开启转录后，可以使用此接口来停止转录任务。
+     * @param req DeleteCloudTranscriptionRequest
+     * @return DeleteCloudTranscriptionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCloudTranscriptionResponse DeleteCloudTranscription(DeleteCloudTranscriptionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCloudTranscription", DeleteCloudTranscriptionResponse.class);
     }
 
     /**
@@ -263,6 +286,17 @@ public class TrtcClient extends AbstractClient{
     public DescribeCloudSliceTaskResponse DescribeCloudSliceTask(DescribeCloudSliceTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCloudSliceTask", DescribeCloudSliceTaskResponse.class);
+    }
+
+    /**
+     *成功开启转录后，可以使用此接口来查询录制状态。仅在转录任务进行时有效，转录退出后查询将会返回错误。
+     * @param req DescribeCloudTranscriptionRequest
+     * @return DescribeCloudTranscriptionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudTranscriptionResponse DescribeCloudTranscription(DescribeCloudTranscriptionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudTranscription", DescribeCloudTranscriptionResponse.class);
     }
 
     /**

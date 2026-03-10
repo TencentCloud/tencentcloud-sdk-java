@@ -32,6 +32,12 @@ public class ModifyDatasourceCloudRequest extends AbstractModel {
 
     /**
     * 驱动
+取值范围：
+MYSQL：MySQL数据库
+PRESTO：PRESTO数据库
+POSTGRE：PostgreSQL数据库
+DLC：DLC数据库
+MSSQL：微软SQL Server数据库
     */
     @SerializedName("DbType")
     @Expose
@@ -201,8 +207,20 @@ public class ModifyDatasourceCloudRequest extends AbstractModel {
     }
 
     /**
-     * Get 驱动 
+     * Get 驱动
+取值范围：
+MYSQL：MySQL数据库
+PRESTO：PRESTO数据库
+POSTGRE：PostgreSQL数据库
+DLC：DLC数据库
+MSSQL：微软SQL Server数据库 
      * @return DbType 驱动
+取值范围：
+MYSQL：MySQL数据库
+PRESTO：PRESTO数据库
+POSTGRE：PostgreSQL数据库
+DLC：DLC数据库
+MSSQL：微软SQL Server数据库
      */
     public String getDbType() {
         return this.DbType;
@@ -210,7 +228,19 @@ public class ModifyDatasourceCloudRequest extends AbstractModel {
 
     /**
      * Set 驱动
+取值范围：
+MYSQL：MySQL数据库
+PRESTO：PRESTO数据库
+POSTGRE：PostgreSQL数据库
+DLC：DLC数据库
+MSSQL：微软SQL Server数据库
      * @param DbType 驱动
+取值范围：
+MYSQL：MySQL数据库
+PRESTO：PRESTO数据库
+POSTGRE：PostgreSQL数据库
+DLC：DLC数据库
+MSSQL：微软SQL Server数据库
      */
     public void setDbType(String DbType) {
         this.DbType = DbType;

@@ -62,7 +62,14 @@ public class UserIdAndUserName extends AbstractModel {
     private String LastLogin;
 
     /**
-    * 停启用状态
+    * 用户状态。
+取值范围：
+
+- 1：启用
+- 0：停用
+
+默认值：1
+示例值：1
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -298,9 +305,23 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Get 停启用状态
+     * Get 用户状态。
+取值范围：
+
+- 1：启用
+- 0：停用
+
+默认值：1
+示例值：1
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 停启用状态
+     * @return Status 用户状态。
+取值范围：
+
+- 1：启用
+- 0：停用
+
+默认值：1
+示例值：1
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -308,9 +329,23 @@ public class UserIdAndUserName extends AbstractModel {
     }
 
     /**
-     * Set 停启用状态
+     * Set 用户状态。
+取值范围：
+
+- 1：启用
+- 0：停用
+
+默认值：1
+示例值：1
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 停启用状态
+     * @param Status 用户状态。
+取值范围：
+
+- 1：启用
+- 0：停用
+
+默认值：1
+示例值：1
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {

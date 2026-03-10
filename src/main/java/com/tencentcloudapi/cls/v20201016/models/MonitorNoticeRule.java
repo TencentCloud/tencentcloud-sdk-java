@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class MonitorNoticeRule extends AbstractModel {
 
     /**
-    * 腾讯云可观测平台通知模板 ID
+    * <p>腾讯云可观测平台通知模板 ID</p>
     */
     @SerializedName("NoticeId")
     @Expose
     private String NoticeId;
 
     /**
-    * 腾讯云可观测平台内容模板ID，不传默认内容模板
+    * <p>腾讯云可观测平台内容模板ID，为空时使用默认内容模板</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContentTmplId")
@@ -39,32 +39,32 @@ public class MonitorNoticeRule extends AbstractModel {
     private String ContentTmplId;
 
     /**
-    * 告警级别,0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)
+    * <p>告警级别,0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)</p>
     */
     @SerializedName("AlarmLevels")
     @Expose
     private Long [] AlarmLevels;
 
     /**
-     * Get 腾讯云可观测平台通知模板 ID 
-     * @return NoticeId 腾讯云可观测平台通知模板 ID
+     * Get <p>腾讯云可观测平台通知模板 ID</p> 
+     * @return NoticeId <p>腾讯云可观测平台通知模板 ID</p>
      */
     public String getNoticeId() {
         return this.NoticeId;
     }
 
     /**
-     * Set 腾讯云可观测平台通知模板 ID
-     * @param NoticeId 腾讯云可观测平台通知模板 ID
+     * Set <p>腾讯云可观测平台通知模板 ID</p>
+     * @param NoticeId <p>腾讯云可观测平台通知模板 ID</p>
      */
     public void setNoticeId(String NoticeId) {
         this.NoticeId = NoticeId;
     }
 
     /**
-     * Get 腾讯云可观测平台内容模板ID，不传默认内容模板
+     * Get <p>腾讯云可观测平台内容模板ID，为空时使用默认内容模板</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ContentTmplId 腾讯云可观测平台内容模板ID，不传默认内容模板
+     * @return ContentTmplId <p>腾讯云可观测平台内容模板ID，为空时使用默认内容模板</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContentTmplId() {
@@ -72,9 +72,9 @@ public class MonitorNoticeRule extends AbstractModel {
     }
 
     /**
-     * Set 腾讯云可观测平台内容模板ID，不传默认内容模板
+     * Set <p>腾讯云可观测平台内容模板ID，为空时使用默认内容模板</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ContentTmplId 腾讯云可观测平台内容模板ID，不传默认内容模板
+     * @param ContentTmplId <p>腾讯云可观测平台内容模板ID，为空时使用默认内容模板</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContentTmplId(String ContentTmplId) {
@@ -82,16 +82,16 @@ public class MonitorNoticeRule extends AbstractModel {
     }
 
     /**
-     * Get 告警级别,0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical) 
-     * @return AlarmLevels 告警级别,0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)
+     * Get <p>告警级别,0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)</p> 
+     * @return AlarmLevels <p>告警级别,0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)</p>
      */
     public Long [] getAlarmLevels() {
         return this.AlarmLevels;
     }
 
     /**
-     * Set 告警级别,0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)
-     * @param AlarmLevels 告警级别,0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)
+     * Set <p>告警级别,0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)</p>
+     * @param AlarmLevels <p>告警级别,0:警告(Warn); 1:提醒(Info); 2:紧急 (Critical)</p>
      */
     public void setAlarmLevels(Long [] AlarmLevels) {
         this.AlarmLevels = AlarmLevels;

@@ -31,6 +31,13 @@ public class CancelDataKeyDeletionRequest extends AbstractModel {
     private String DataKeyId;
 
     /**
+    * 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
+    */
+    @SerializedName("MemberAccount")
+    @Expose
+    private MemberAccount MemberAccount;
+
+    /**
      * Get 数据密钥的唯一标志符 
      * @return DataKeyId 数据密钥的唯一标志符
      */
@@ -46,6 +53,22 @@ public class CancelDataKeyDeletionRequest extends AbstractModel {
         this.DataKeyId = DataKeyId;
     }
 
+    /**
+     * Get 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。 
+     * @return MemberAccount 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
+     */
+    public MemberAccount getMemberAccount() {
+        return this.MemberAccount;
+    }
+
+    /**
+     * Set 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
+     * @param MemberAccount 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
+     */
+    public void setMemberAccount(MemberAccount MemberAccount) {
+        this.MemberAccount = MemberAccount;
+    }
+
     public CancelDataKeyDeletionRequest() {
     }
 
@@ -57,6 +80,9 @@ public class CancelDataKeyDeletionRequest extends AbstractModel {
         if (source.DataKeyId != null) {
             this.DataKeyId = new String(source.DataKeyId);
         }
+        if (source.MemberAccount != null) {
+            this.MemberAccount = new MemberAccount(source.MemberAccount);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class CancelDataKeyDeletionRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DataKeyId", this.DataKeyId);
+        this.setParamObj(map, prefix + "MemberAccount.", this.MemberAccount);
 
     }
 }

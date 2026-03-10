@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class DescribeTagsRequest extends AbstractModel {
 
     /**
-    * 标签键,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签
+    * <p>标签键,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签</p>
     */
     @SerializedName("TagKey")
     @Expose
     private String TagKey;
 
     /**
-    * 标签值,与标签键同时存在或同时不存在，不存在时表示查询该用户所有标签
+    * <p>标签值,与标签键同时存在或同时不存在，不存在时表示查询该用户所有标签</p>
     */
     @SerializedName("TagValue")
     @Expose
     private String TagValue;
 
     /**
-    * 数据偏移量，默认为 0, 必须为Limit参数的整数倍
+    * <p>数据偏移量，默认为 0, 必须为Limit参数的整数倍</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 每页大小，默认为 15
+    * <p>每页大小，默认为 15，最大1000</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 创建者用户 Uin，不传或为空只将 Uin 作为条件查询
+    * <p>创建者用户 Uin，不传或为空只将 Uin 作为条件查询</p>
     */
     @SerializedName("CreateUin")
     @Expose
     private Long CreateUin;
 
     /**
-    * 标签键数组,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签,当与TagKey同时传递时只取本值
+    * <p>标签键数组,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签,当与TagKey同时传递时只取本值</p>
     */
     @SerializedName("TagKeys")
     @Expose
     private String [] TagKeys;
 
     /**
-    * 是否展现项目标签。1:展示  0:不展示
+    * <p>是否展现项目标签。1:展示  0:不展示</p>
     */
     @SerializedName("ShowProject")
     @Expose
     private Long ShowProject;
 
     /**
-     * Get 标签键,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签 
-     * @return TagKey 标签键,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签
+     * Get <p>标签键,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签</p> 
+     * @return TagKey <p>标签键,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签</p>
      */
     public String getTagKey() {
         return this.TagKey;
     }
 
     /**
-     * Set 标签键,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签
-     * @param TagKey 标签键,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签
+     * Set <p>标签键,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签</p>
+     * @param TagKey <p>标签键,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签</p>
      */
     public void setTagKey(String TagKey) {
         this.TagKey = TagKey;
     }
 
     /**
-     * Get 标签值,与标签键同时存在或同时不存在，不存在时表示查询该用户所有标签 
-     * @return TagValue 标签值,与标签键同时存在或同时不存在，不存在时表示查询该用户所有标签
+     * Get <p>标签值,与标签键同时存在或同时不存在，不存在时表示查询该用户所有标签</p> 
+     * @return TagValue <p>标签值,与标签键同时存在或同时不存在，不存在时表示查询该用户所有标签</p>
      */
     public String getTagValue() {
         return this.TagValue;
     }
 
     /**
-     * Set 标签值,与标签键同时存在或同时不存在，不存在时表示查询该用户所有标签
-     * @param TagValue 标签值,与标签键同时存在或同时不存在，不存在时表示查询该用户所有标签
+     * Set <p>标签值,与标签键同时存在或同时不存在，不存在时表示查询该用户所有标签</p>
+     * @param TagValue <p>标签值,与标签键同时存在或同时不存在，不存在时表示查询该用户所有标签</p>
      */
     public void setTagValue(String TagValue) {
         this.TagValue = TagValue;
     }
 
     /**
-     * Get 数据偏移量，默认为 0, 必须为Limit参数的整数倍 
-     * @return Offset 数据偏移量，默认为 0, 必须为Limit参数的整数倍
+     * Get <p>数据偏移量，默认为 0, 必须为Limit参数的整数倍</p> 
+     * @return Offset <p>数据偏移量，默认为 0, 必须为Limit参数的整数倍</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 数据偏移量，默认为 0, 必须为Limit参数的整数倍
-     * @param Offset 数据偏移量，默认为 0, 必须为Limit参数的整数倍
+     * Set <p>数据偏移量，默认为 0, 必须为Limit参数的整数倍</p>
+     * @param Offset <p>数据偏移量，默认为 0, 必须为Limit参数的整数倍</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 每页大小，默认为 15 
-     * @return Limit 每页大小，默认为 15
+     * Get <p>每页大小，默认为 15，最大1000</p> 
+     * @return Limit <p>每页大小，默认为 15，最大1000</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页大小，默认为 15
-     * @param Limit 每页大小，默认为 15
+     * Set <p>每页大小，默认为 15，最大1000</p>
+     * @param Limit <p>每页大小，默认为 15，最大1000</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 创建者用户 Uin，不传或为空只将 Uin 作为条件查询 
-     * @return CreateUin 创建者用户 Uin，不传或为空只将 Uin 作为条件查询
+     * Get <p>创建者用户 Uin，不传或为空只将 Uin 作为条件查询</p> 
+     * @return CreateUin <p>创建者用户 Uin，不传或为空只将 Uin 作为条件查询</p>
      */
     public Long getCreateUin() {
         return this.CreateUin;
     }
 
     /**
-     * Set 创建者用户 Uin，不传或为空只将 Uin 作为条件查询
-     * @param CreateUin 创建者用户 Uin，不传或为空只将 Uin 作为条件查询
+     * Set <p>创建者用户 Uin，不传或为空只将 Uin 作为条件查询</p>
+     * @param CreateUin <p>创建者用户 Uin，不传或为空只将 Uin 作为条件查询</p>
      */
     public void setCreateUin(Long CreateUin) {
         this.CreateUin = CreateUin;
     }
 
     /**
-     * Get 标签键数组,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签,当与TagKey同时传递时只取本值 
-     * @return TagKeys 标签键数组,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签,当与TagKey同时传递时只取本值
+     * Get <p>标签键数组,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签,当与TagKey同时传递时只取本值</p> 
+     * @return TagKeys <p>标签键数组,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签,当与TagKey同时传递时只取本值</p>
      */
     public String [] getTagKeys() {
         return this.TagKeys;
     }
 
     /**
-     * Set 标签键数组,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签,当与TagKey同时传递时只取本值
-     * @param TagKeys 标签键数组,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签,当与TagKey同时传递时只取本值
+     * Set <p>标签键数组,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签,当与TagKey同时传递时只取本值</p>
+     * @param TagKeys <p>标签键数组,与标签值同时存在或同时不存在，不存在时表示查询该用户所有标签,当与TagKey同时传递时只取本值</p>
      */
     public void setTagKeys(String [] TagKeys) {
         this.TagKeys = TagKeys;
     }
 
     /**
-     * Get 是否展现项目标签。1:展示  0:不展示 
-     * @return ShowProject 是否展现项目标签。1:展示  0:不展示
+     * Get <p>是否展现项目标签。1:展示  0:不展示</p> 
+     * @return ShowProject <p>是否展现项目标签。1:展示  0:不展示</p>
      */
     public Long getShowProject() {
         return this.ShowProject;
     }
 
     /**
-     * Set 是否展现项目标签。1:展示  0:不展示
-     * @param ShowProject 是否展现项目标签。1:展示  0:不展示
+     * Set <p>是否展现项目标签。1:展示  0:不展示</p>
+     * @param ShowProject <p>是否展现项目标签。1:展示  0:不展示</p>
      */
     public void setShowProject(Long ShowProject) {
         this.ShowProject = ShowProject;

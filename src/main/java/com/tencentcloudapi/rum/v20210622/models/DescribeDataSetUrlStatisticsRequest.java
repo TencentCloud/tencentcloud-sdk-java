@@ -129,7 +129,7 @@ public class DescribeDataSetUrlStatisticsRequest extends AbstractModel {
     private String ExtFirst;
 
     /**
-    * 网络类型
+    * 网络类型(tag 值):用于过滤/聚合字段 netType；枚举值：1(WiFi)、2(2G)、3(3G)、4(4G)、5(5G)、6(6G)、100(未知网络)。
     */
     @SerializedName("NetType")
     @Expose
@@ -164,7 +164,7 @@ public class DescribeDataSetUrlStatisticsRequest extends AbstractModel {
     private String Browser;
 
     /**
-    * 耗时计算
+    * 耗时/数据量口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。
     */
     @SerializedName("CostType")
     @Expose
@@ -178,7 +178,7 @@ public class DescribeDataSetUrlStatisticsRequest extends AbstractModel {
     private String Env;
 
     /**
-    * 获取package
+    * 小程序包类型（tag 值）：用于过滤字段 type（请求参数名为 PackageType）；取值由上报数据决定，可通过 Type=condition（show tag values）获取可选值集合。
     */
     @SerializedName("PackageType")
     @Expose
@@ -425,16 +425,16 @@ public class DescribeDataSetUrlStatisticsRequest extends AbstractModel {
     }
 
     /**
-     * Get 网络类型 
-     * @return NetType 网络类型
+     * Get 网络类型(tag 值):用于过滤/聚合字段 netType；枚举值：1(WiFi)、2(2G)、3(3G)、4(4G)、5(5G)、6(6G)、100(未知网络)。 
+     * @return NetType 网络类型(tag 值):用于过滤/聚合字段 netType；枚举值：1(WiFi)、2(2G)、3(3G)、4(4G)、5(5G)、6(6G)、100(未知网络)。
      */
     public String getNetType() {
         return this.NetType;
     }
 
     /**
-     * Set 网络类型
-     * @param NetType 网络类型
+     * Set 网络类型(tag 值):用于过滤/聚合字段 netType；枚举值：1(WiFi)、2(2G)、3(3G)、4(4G)、5(5G)、6(6G)、100(未知网络)。
+     * @param NetType 网络类型(tag 值):用于过滤/聚合字段 netType；枚举值：1(WiFi)、2(2G)、3(3G)、4(4G)、5(5G)、6(6G)、100(未知网络)。
      */
     public void setNetType(String NetType) {
         this.NetType = NetType;
@@ -505,16 +505,16 @@ public class DescribeDataSetUrlStatisticsRequest extends AbstractModel {
     }
 
     /**
-     * Get 耗时计算 
-     * @return CostType 耗时计算
+     * Get 耗时/数据量口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。 
+     * @return CostType 耗时/数据量口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。
      */
     public String getCostType() {
         return this.CostType;
     }
 
     /**
-     * Set 耗时计算
-     * @param CostType 耗时计算
+     * Set 耗时/数据量口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。
+     * @param CostType 耗时/数据量口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。
      */
     public void setCostType(String CostType) {
         this.CostType = CostType;
@@ -537,16 +537,16 @@ public class DescribeDataSetUrlStatisticsRequest extends AbstractModel {
     }
 
     /**
-     * Get 获取package 
-     * @return PackageType 获取package
+     * Get 小程序包类型（tag 值）：用于过滤字段 type（请求参数名为 PackageType）；取值由上报数据决定，可通过 Type=condition（show tag values）获取可选值集合。 
+     * @return PackageType 小程序包类型（tag 值）：用于过滤字段 type（请求参数名为 PackageType）；取值由上报数据决定，可通过 Type=condition（show tag values）获取可选值集合。
      */
     public String getPackageType() {
         return this.PackageType;
     }
 
     /**
-     * Set 获取package
-     * @param PackageType 获取package
+     * Set 小程序包类型（tag 值）：用于过滤字段 type（请求参数名为 PackageType）；取值由上报数据决定，可通过 Type=condition（show tag values）获取可选值集合。
+     * @param PackageType 小程序包类型（tag 值）：用于过滤字段 type（请求参数名为 PackageType）；取值由上报数据决定，可通过 Type=condition（show tag values）获取可选值集合。
      */
     public void setPackageType(String PackageType) {
         this.PackageType = PackageType;

@@ -66,7 +66,7 @@ public class DescribeDataWebVitalsPageRequest extends AbstractModel {
     private String Isp;
 
     /**
-    * 来源页面
+    * 查询维度：from=按页面来源(from)聚合输出；其他值/空值=输出整体汇总。
     */
     @SerializedName("From")
     @Expose
@@ -129,7 +129,7 @@ public class DescribeDataWebVitalsPageRequest extends AbstractModel {
     private String ExtFirst;
 
     /**
-    * 网络类型
+    * 网络类型(tag 值):用于过滤/聚合字段 netType；枚举值：1(WiFi)、2(2G)、3(3G)、4(4G)、5(5G)、6(6G)、100(未知网络)。 
     */
     @SerializedName("NetType")
     @Expose
@@ -164,7 +164,7 @@ public class DescribeDataWebVitalsPageRequest extends AbstractModel {
     private String Browser;
 
     /**
-    * 耗时计算
+    * Web Vitals 口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。 
     */
     @SerializedName("CostType")
     @Expose
@@ -274,16 +274,16 @@ public class DescribeDataWebVitalsPageRequest extends AbstractModel {
     }
 
     /**
-     * Get 来源页面 
-     * @return From 来源页面
+     * Get 查询维度：from=按页面来源(from)聚合输出；其他值/空值=输出整体汇总。 
+     * @return From 查询维度：from=按页面来源(from)聚合输出；其他值/空值=输出整体汇总。
      */
     public String getFrom() {
         return this.From;
     }
 
     /**
-     * Set 来源页面
-     * @param From 来源页面
+     * Set 查询维度：from=按页面来源(from)聚合输出；其他值/空值=输出整体汇总。
+     * @param From 查询维度：from=按页面来源(from)聚合输出；其他值/空值=输出整体汇总。
      */
     public void setFrom(String From) {
         this.From = From;
@@ -418,16 +418,16 @@ public class DescribeDataWebVitalsPageRequest extends AbstractModel {
     }
 
     /**
-     * Get 网络类型 
-     * @return NetType 网络类型
+     * Get 网络类型(tag 值):用于过滤/聚合字段 netType；枚举值：1(WiFi)、2(2G)、3(3G)、4(4G)、5(5G)、6(6G)、100(未知网络)。  
+     * @return NetType 网络类型(tag 值):用于过滤/聚合字段 netType；枚举值：1(WiFi)、2(2G)、3(3G)、4(4G)、5(5G)、6(6G)、100(未知网络)。 
      */
     public String getNetType() {
         return this.NetType;
     }
 
     /**
-     * Set 网络类型
-     * @param NetType 网络类型
+     * Set 网络类型(tag 值):用于过滤/聚合字段 netType；枚举值：1(WiFi)、2(2G)、3(3G)、4(4G)、5(5G)、6(6G)、100(未知网络)。 
+     * @param NetType 网络类型(tag 值):用于过滤/聚合字段 netType；枚举值：1(WiFi)、2(2G)、3(3G)、4(4G)、5(5G)、6(6G)、100(未知网络)。 
      */
     public void setNetType(String NetType) {
         this.NetType = NetType;
@@ -498,16 +498,16 @@ public class DescribeDataWebVitalsPageRequest extends AbstractModel {
     }
 
     /**
-     * Get 耗时计算 
-     * @return CostType 耗时计算
+     * Get Web Vitals 口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。  
+     * @return CostType Web Vitals 口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。 
      */
     public String getCostType() {
         return this.CostType;
     }
 
     /**
-     * Set 耗时计算
-     * @param CostType 耗时计算
+     * Set Web Vitals 口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。 
+     * @param CostType Web Vitals 口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。 
      */
     public void setCostType(String CostType) {
         this.CostType = CostType;

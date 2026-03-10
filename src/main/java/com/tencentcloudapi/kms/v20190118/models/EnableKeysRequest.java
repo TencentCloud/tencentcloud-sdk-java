@@ -31,6 +31,13 @@ public class EnableKeysRequest extends AbstractModel {
     private String [] KeyIds;
 
     /**
+    * 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
+    */
+    @SerializedName("MemberAccount")
+    @Expose
+    private MemberAccount MemberAccount;
+
+    /**
      * Get 需要批量启用的CMK Id 列表， CMK数量最大支持100 
      * @return KeyIds 需要批量启用的CMK Id 列表， CMK数量最大支持100
      */
@@ -44,6 +51,22 @@ public class EnableKeysRequest extends AbstractModel {
      */
     public void setKeyIds(String [] KeyIds) {
         this.KeyIds = KeyIds;
+    }
+
+    /**
+     * Get 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。 
+     * @return MemberAccount 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
+     */
+    public MemberAccount getMemberAccount() {
+        return this.MemberAccount;
+    }
+
+    /**
+     * Set 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
+     * @param MemberAccount 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
+     */
+    public void setMemberAccount(MemberAccount MemberAccount) {
+        this.MemberAccount = MemberAccount;
     }
 
     public EnableKeysRequest() {
@@ -60,6 +83,9 @@ public class EnableKeysRequest extends AbstractModel {
                 this.KeyIds[i] = new String(source.KeyIds[i]);
             }
         }
+        if (source.MemberAccount != null) {
+            this.MemberAccount = new MemberAccount(source.MemberAccount);
+        }
     }
 
 
@@ -68,6 +94,7 @@ public class EnableKeysRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "KeyIds.", this.KeyIds);
+        this.setParamObj(map, prefix + "MemberAccount.", this.MemberAccount);
 
     }
 }

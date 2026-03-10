@@ -57,6 +57,10 @@ public class IdDTO extends AbstractModel {
 
     /**
     * 事务状态
+取值范围：
+1: 处理中
+2: 处理成功
+3: 处理失败
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TranStatus")
@@ -145,8 +149,16 @@ public class IdDTO extends AbstractModel {
 
     /**
      * Get 事务状态
+取值范围：
+1: 处理中
+2: 处理成功
+3: 处理失败
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TranStatus 事务状态
+取值范围：
+1: 处理中
+2: 处理成功
+3: 处理失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTranStatus() {
@@ -155,8 +167,16 @@ public class IdDTO extends AbstractModel {
 
     /**
      * Set 事务状态
+取值范围：
+1: 处理中
+2: 处理成功
+3: 处理失败
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TranStatus 事务状态
+取值范围：
+1: 处理中
+2: 处理成功
+3: 处理失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTranStatus(Long TranStatus) {

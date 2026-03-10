@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeWorkspacesResponse extends AbstractModel {
 
     /**
-    * 工作空间列表
+    * <p>工作空间列表</p>
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeWorkspacesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 工作空间列表 
-     * @return Data 工作空间列表
+     * Get <p>工作空间列表</p> 
+     * @return Data <p>工作空间列表</p>
      */
     public WorkspaceStatusInfo [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 工作空间列表
-     * @param Data 工作空间列表
+     * Set <p>工作空间列表</p>
+     * @param Data <p>工作空间列表</p>
      */
     public void setData(WorkspaceStatusInfo [] Data) {
         this.Data = Data;

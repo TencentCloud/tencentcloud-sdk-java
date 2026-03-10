@@ -24,59 +24,164 @@ import java.util.HashMap;
 public class DataTransformResouceInfo extends AbstractModel {
 
     /**
-    * 日志主题ID
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+    * <p>日志主题ID</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * 别名
-限制：不能包含字符 |。
+    * <p>别名<br>限制：不能包含字符 |。</p>
     */
     @SerializedName("Alias")
     @Expose
     private String Alias;
 
     /**
-     * Get 日志主题ID
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。 
-     * @return TopicId 日志主题ID
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+    * <p>是否是跨账号主题，false不是跨账号主题，true是跨账号主题</p><p>默认值：false</p>
+    */
+    @SerializedName("IsCrossAccount")
+    @Expose
+    private Boolean IsCrossAccount;
+
+    /**
+    * <p>跨账号场景下，被投递账号给投递账号创建的角色ARN值，在被投递账号的角色里查找</p>
+    */
+    @SerializedName("RoleARN")
+    @Expose
+    private String RoleARN;
+
+    /**
+    * <p>外部ID值，可以在被投递账号的角色-载体里找到该值</p>
+    */
+    @SerializedName("ExternalId")
+    @Expose
+    private String ExternalId;
+
+    /**
+    * <p>topic名称</p>
+    */
+    @SerializedName("TopicName")
+    @Expose
+    private String TopicName;
+
+    /**
+    * <p>日志集的名称</p>
+    */
+    @SerializedName("LogsetName")
+    @Expose
+    private String LogsetName;
+
+    /**
+     * Get <p>日志主题ID</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul> 
+     * @return TopicId <p>日志主题ID</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 日志主题ID
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
-     * @param TopicId 日志主题ID
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * Set <p>日志主题ID</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
+     * @param TopicId <p>日志主题ID</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 别名
-限制：不能包含字符 |。 
-     * @return Alias 别名
-限制：不能包含字符 |。
+     * Get <p>别名<br>限制：不能包含字符 |。</p> 
+     * @return Alias <p>别名<br>限制：不能包含字符 |。</p>
      */
     public String getAlias() {
         return this.Alias;
     }
 
     /**
-     * Set 别名
-限制：不能包含字符 |。
-     * @param Alias 别名
-限制：不能包含字符 |。
+     * Set <p>别名<br>限制：不能包含字符 |。</p>
+     * @param Alias <p>别名<br>限制：不能包含字符 |。</p>
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;
+    }
+
+    /**
+     * Get <p>是否是跨账号主题，false不是跨账号主题，true是跨账号主题</p><p>默认值：false</p> 
+     * @return IsCrossAccount <p>是否是跨账号主题，false不是跨账号主题，true是跨账号主题</p><p>默认值：false</p>
+     */
+    public Boolean getIsCrossAccount() {
+        return this.IsCrossAccount;
+    }
+
+    /**
+     * Set <p>是否是跨账号主题，false不是跨账号主题，true是跨账号主题</p><p>默认值：false</p>
+     * @param IsCrossAccount <p>是否是跨账号主题，false不是跨账号主题，true是跨账号主题</p><p>默认值：false</p>
+     */
+    public void setIsCrossAccount(Boolean IsCrossAccount) {
+        this.IsCrossAccount = IsCrossAccount;
+    }
+
+    /**
+     * Get <p>跨账号场景下，被投递账号给投递账号创建的角色ARN值，在被投递账号的角色里查找</p> 
+     * @return RoleARN <p>跨账号场景下，被投递账号给投递账号创建的角色ARN值，在被投递账号的角色里查找</p>
+     */
+    public String getRoleARN() {
+        return this.RoleARN;
+    }
+
+    /**
+     * Set <p>跨账号场景下，被投递账号给投递账号创建的角色ARN值，在被投递账号的角色里查找</p>
+     * @param RoleARN <p>跨账号场景下，被投递账号给投递账号创建的角色ARN值，在被投递账号的角色里查找</p>
+     */
+    public void setRoleARN(String RoleARN) {
+        this.RoleARN = RoleARN;
+    }
+
+    /**
+     * Get <p>外部ID值，可以在被投递账号的角色-载体里找到该值</p> 
+     * @return ExternalId <p>外部ID值，可以在被投递账号的角色-载体里找到该值</p>
+     */
+    public String getExternalId() {
+        return this.ExternalId;
+    }
+
+    /**
+     * Set <p>外部ID值，可以在被投递账号的角色-载体里找到该值</p>
+     * @param ExternalId <p>外部ID值，可以在被投递账号的角色-载体里找到该值</p>
+     */
+    public void setExternalId(String ExternalId) {
+        this.ExternalId = ExternalId;
+    }
+
+    /**
+     * Get <p>topic名称</p> 
+     * @return TopicName <p>topic名称</p>
+     */
+    public String getTopicName() {
+        return this.TopicName;
+    }
+
+    /**
+     * Set <p>topic名称</p>
+     * @param TopicName <p>topic名称</p>
+     */
+    public void setTopicName(String TopicName) {
+        this.TopicName = TopicName;
+    }
+
+    /**
+     * Get <p>日志集的名称</p> 
+     * @return LogsetName <p>日志集的名称</p>
+     */
+    public String getLogsetName() {
+        return this.LogsetName;
+    }
+
+    /**
+     * Set <p>日志集的名称</p>
+     * @param LogsetName <p>日志集的名称</p>
+     */
+    public void setLogsetName(String LogsetName) {
+        this.LogsetName = LogsetName;
     }
 
     public DataTransformResouceInfo() {
@@ -93,6 +198,21 @@ public class DataTransformResouceInfo extends AbstractModel {
         if (source.Alias != null) {
             this.Alias = new String(source.Alias);
         }
+        if (source.IsCrossAccount != null) {
+            this.IsCrossAccount = new Boolean(source.IsCrossAccount);
+        }
+        if (source.RoleARN != null) {
+            this.RoleARN = new String(source.RoleARN);
+        }
+        if (source.ExternalId != null) {
+            this.ExternalId = new String(source.ExternalId);
+        }
+        if (source.TopicName != null) {
+            this.TopicName = new String(source.TopicName);
+        }
+        if (source.LogsetName != null) {
+            this.LogsetName = new String(source.LogsetName);
+        }
     }
 
 
@@ -102,6 +222,11 @@ public class DataTransformResouceInfo extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TopicId", this.TopicId);
         this.setParamSimple(map, prefix + "Alias", this.Alias);
+        this.setParamSimple(map, prefix + "IsCrossAccount", this.IsCrossAccount);
+        this.setParamSimple(map, prefix + "RoleARN", this.RoleARN);
+        this.setParamSimple(map, prefix + "ExternalId", this.ExternalId);
+        this.setParamSimple(map, prefix + "TopicName", this.TopicName);
+        this.setParamSimple(map, prefix + "LogsetName", this.LogsetName);
 
     }
 }

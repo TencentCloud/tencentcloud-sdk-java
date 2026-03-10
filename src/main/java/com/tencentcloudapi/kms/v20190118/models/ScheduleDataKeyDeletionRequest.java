@@ -38,6 +38,13 @@ public class ScheduleDataKeyDeletionRequest extends AbstractModel {
     private Long PendingWindowInDays;
 
     /**
+    * 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
+    */
+    @SerializedName("MemberAccount")
+    @Expose
+    private MemberAccount MemberAccount;
+
+    /**
      * Get 数据密钥的唯一标志符 
      * @return DataKeyId 数据密钥的唯一标志符
      */
@@ -69,6 +76,22 @@ public class ScheduleDataKeyDeletionRequest extends AbstractModel {
         this.PendingWindowInDays = PendingWindowInDays;
     }
 
+    /**
+     * Get 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。 
+     * @return MemberAccount 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
+     */
+    public MemberAccount getMemberAccount() {
+        return this.MemberAccount;
+    }
+
+    /**
+     * Set 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
+     * @param MemberAccount 可信服务成员账号信息,当前账号时管理员或者委派管理员时有效。
+     */
+    public void setMemberAccount(MemberAccount MemberAccount) {
+        this.MemberAccount = MemberAccount;
+    }
+
     public ScheduleDataKeyDeletionRequest() {
     }
 
@@ -83,6 +106,9 @@ public class ScheduleDataKeyDeletionRequest extends AbstractModel {
         if (source.PendingWindowInDays != null) {
             this.PendingWindowInDays = new Long(source.PendingWindowInDays);
         }
+        if (source.MemberAccount != null) {
+            this.MemberAccount = new MemberAccount(source.MemberAccount);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class ScheduleDataKeyDeletionRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DataKeyId", this.DataKeyId);
         this.setParamSimple(map, prefix + "PendingWindowInDays", this.PendingWindowInDays);
+        this.setParamObj(map, prefix + "MemberAccount.", this.MemberAccount);
 
     }
 }

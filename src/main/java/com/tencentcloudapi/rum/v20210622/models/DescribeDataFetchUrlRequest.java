@@ -129,7 +129,7 @@ public class DescribeDataFetchUrlRequest extends AbstractModel {
     private String ExtFirst;
 
     /**
-    * 网络类型
+    * 网络类型(tag 值):用于过滤/聚合字段 netType；枚举值：1(WiFi)、2(2G)、3(3G)、4(4G)、5(5G)、6(6G)、100(未知网络)。
     */
     @SerializedName("NetType")
     @Expose
@@ -164,7 +164,7 @@ public class DescribeDataFetchUrlRequest extends AbstractModel {
     private String Browser;
 
     /**
-    * 耗时计算方式
+    * 耗时口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。
     */
     @SerializedName("CostType")
     @Expose
@@ -185,7 +185,7 @@ public class DescribeDataFetchUrlRequest extends AbstractModel {
     private String Env;
 
     /**
-    * httpcode响应码
+    * HTTP 状态码（tag 值）：用于过滤字段 status；支持 4xx（status =~ /4[0-9]{2}/）和 5xx（status =~ /5[0-9]{2}/）等错误码统计。
     */
     @SerializedName("Status")
     @Expose
@@ -446,16 +446,16 @@ public class DescribeDataFetchUrlRequest extends AbstractModel {
     }
 
     /**
-     * Get 网络类型 
-     * @return NetType 网络类型
+     * Get 网络类型(tag 值):用于过滤/聚合字段 netType；枚举值：1(WiFi)、2(2G)、3(3G)、4(4G)、5(5G)、6(6G)、100(未知网络)。 
+     * @return NetType 网络类型(tag 值):用于过滤/聚合字段 netType；枚举值：1(WiFi)、2(2G)、3(3G)、4(4G)、5(5G)、6(6G)、100(未知网络)。
      */
     public String getNetType() {
         return this.NetType;
     }
 
     /**
-     * Set 网络类型
-     * @param NetType 网络类型
+     * Set 网络类型(tag 值):用于过滤/聚合字段 netType；枚举值：1(WiFi)、2(2G)、3(3G)、4(4G)、5(5G)、6(6G)、100(未知网络)。
+     * @param NetType 网络类型(tag 值):用于过滤/聚合字段 netType；枚举值：1(WiFi)、2(2G)、3(3G)、4(4G)、5(5G)、6(6G)、100(未知网络)。
      */
     public void setNetType(String NetType) {
         this.NetType = NetType;
@@ -526,16 +526,16 @@ public class DescribeDataFetchUrlRequest extends AbstractModel {
     }
 
     /**
-     * Get 耗时计算方式 
-     * @return CostType 耗时计算方式
+     * Get 耗时口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。 
+     * @return CostType 耗时口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。
      */
     public String getCostType() {
         return this.CostType;
     }
 
     /**
-     * Set 耗时计算方式
-     * @param CostType 耗时计算方式
+     * Set 耗时口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。
+     * @param CostType 耗时口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。
      */
     public void setCostType(String CostType) {
         this.CostType = CostType;
@@ -574,16 +574,16 @@ public class DescribeDataFetchUrlRequest extends AbstractModel {
     }
 
     /**
-     * Get httpcode响应码 
-     * @return Status httpcode响应码
+     * Get HTTP 状态码（tag 值）：用于过滤字段 status；支持 4xx（status =~ /4[0-9]{2}/）和 5xx（status =~ /5[0-9]{2}/）等错误码统计。 
+     * @return Status HTTP 状态码（tag 值）：用于过滤字段 status；支持 4xx（status =~ /4[0-9]{2}/）和 5xx（status =~ /5[0-9]{2}/）等错误码统计。
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set httpcode响应码
-     * @param Status httpcode响应码
+     * Set HTTP 状态码（tag 值）：用于过滤字段 status；支持 4xx（status =~ /4[0-9]{2}/）和 5xx（status =~ /5[0-9]{2}/）等错误码统计。
+     * @param Status HTTP 状态码（tag 值）：用于过滤字段 status；支持 4xx（status =~ /4[0-9]{2}/）和 5xx（status =~ /5[0-9]{2}/）等错误码统计。
      */
     public void setStatus(String Status) {
         this.Status = Status;

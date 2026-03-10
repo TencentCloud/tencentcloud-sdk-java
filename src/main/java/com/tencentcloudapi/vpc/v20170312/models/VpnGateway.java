@@ -80,7 +80,7 @@ public class VpnGateway extends AbstractModel {
     private String InstanceChargeType;
 
     /**
-    * 网关出带宽。
+    * 网关出带宽，单位：Mbps。
     */
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
@@ -299,16 +299,16 @@ public class VpnGateway extends AbstractModel {
     }
 
     /**
-     * Get 网关出带宽。 
-     * @return InternetMaxBandwidthOut 网关出带宽。
+     * Get 网关出带宽，单位：Mbps。 
+     * @return InternetMaxBandwidthOut 网关出带宽，单位：Mbps。
      */
     public Long getInternetMaxBandwidthOut() {
         return this.InternetMaxBandwidthOut;
     }
 
     /**
-     * Set 网关出带宽。
-     * @param InternetMaxBandwidthOut 网关出带宽。
+     * Set 网关出带宽，单位：Mbps。
+     * @param InternetMaxBandwidthOut 网关出带宽，单位：Mbps。
      */
     public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;

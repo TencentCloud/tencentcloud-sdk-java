@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeBillAdjustInfoResponse extends AbstractModel {
 
     /**
-    * 数据总量
+    * <p>数据总量</p>
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * 明细数据
+    * <p>明细数据</p>
     */
     @SerializedName("Data")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeBillAdjustInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 数据总量 
-     * @return Total 数据总量
+     * Get <p>数据总量</p> 
+     * @return Total <p>数据总量</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 数据总量
-     * @param Total 数据总量
+     * Set <p>数据总量</p>
+     * @param Total <p>数据总量</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 明细数据 
-     * @return Data 明细数据
+     * Get <p>明细数据</p> 
+     * @return Data <p>明细数据</p>
      */
     public AdjustInfoDetail [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 明细数据
-     * @param Data 明细数据
+     * Set <p>明细数据</p>
+     * @param Data <p>明细数据</p>
      */
     public void setData(AdjustInfoDetail [] Data) {
         this.Data = Data;

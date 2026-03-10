@@ -24,95 +24,118 @@ import java.util.HashMap;
 public class DescribeBillSummaryRequest extends AbstractModel {
 
     /**
-    * 账单月份，格式为2023-04
+    * <p>账单月份，格式为2023-04</p>
     */
     @SerializedName("Month")
     @Expose
     private String Month;
 
     /**
-    * 账单维度类型，枚举值如下：business、project、region、payMode、tag
+    * <p>账单维度类型，枚举值如下：business、project、region、payMode、tag</p>
     */
     @SerializedName("GroupType")
     @Expose
     private String GroupType;
 
     /**
-    * 标签键，GroupType=tag获取标签维度账单时传
+    * <p>标签键，GroupType=tag获取标签维度账单时传</p>
     */
     @SerializedName("TagKey")
     @Expose
     private String [] TagKey;
 
     /**
-    * 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
+    * <p>操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）</p>
     */
     @SerializedName("OperateUin")
     @Expose
     private String OperateUin;
 
     /**
-     * Get 账单月份，格式为2023-04 
-     * @return Month 账单月份，格式为2023-04
+    * <p>支付者的账号 ID（账号 ID 是用户在腾讯云的唯一账号标识），默认查询本账号账单，如集团管理账号需查询成员账号自付的账单，该字段需入参成员账号UIN</p>
+    */
+    @SerializedName("PayerUin")
+    @Expose
+    private String PayerUin;
+
+    /**
+     * Get <p>账单月份，格式为2023-04</p> 
+     * @return Month <p>账单月份，格式为2023-04</p>
      */
     public String getMonth() {
         return this.Month;
     }
 
     /**
-     * Set 账单月份，格式为2023-04
-     * @param Month 账单月份，格式为2023-04
+     * Set <p>账单月份，格式为2023-04</p>
+     * @param Month <p>账单月份，格式为2023-04</p>
      */
     public void setMonth(String Month) {
         this.Month = Month;
     }
 
     /**
-     * Get 账单维度类型，枚举值如下：business、project、region、payMode、tag 
-     * @return GroupType 账单维度类型，枚举值如下：business、project、region、payMode、tag
+     * Get <p>账单维度类型，枚举值如下：business、project、region、payMode、tag</p> 
+     * @return GroupType <p>账单维度类型，枚举值如下：business、project、region、payMode、tag</p>
      */
     public String getGroupType() {
         return this.GroupType;
     }
 
     /**
-     * Set 账单维度类型，枚举值如下：business、project、region、payMode、tag
-     * @param GroupType 账单维度类型，枚举值如下：business、project、region、payMode、tag
+     * Set <p>账单维度类型，枚举值如下：business、project、region、payMode、tag</p>
+     * @param GroupType <p>账单维度类型，枚举值如下：business、project、region、payMode、tag</p>
      */
     public void setGroupType(String GroupType) {
         this.GroupType = GroupType;
     }
 
     /**
-     * Get 标签键，GroupType=tag获取标签维度账单时传 
-     * @return TagKey 标签键，GroupType=tag获取标签维度账单时传
+     * Get <p>标签键，GroupType=tag获取标签维度账单时传</p> 
+     * @return TagKey <p>标签键，GroupType=tag获取标签维度账单时传</p>
      */
     public String [] getTagKey() {
         return this.TagKey;
     }
 
     /**
-     * Set 标签键，GroupType=tag获取标签维度账单时传
-     * @param TagKey 标签键，GroupType=tag获取标签维度账单时传
+     * Set <p>标签键，GroupType=tag获取标签维度账单时传</p>
+     * @param TagKey <p>标签键，GroupType=tag获取标签维度账单时传</p>
      */
     public void setTagKey(String [] TagKey) {
         this.TagKey = TagKey;
     }
 
     /**
-     * Get 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ） 
-     * @return OperateUin 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
+     * Get <p>操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）</p> 
+     * @return OperateUin <p>操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）</p>
      */
     public String getOperateUin() {
         return this.OperateUin;
     }
 
     /**
-     * Set 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
-     * @param OperateUin 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
+     * Set <p>操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）</p>
+     * @param OperateUin <p>操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）</p>
      */
     public void setOperateUin(String OperateUin) {
         this.OperateUin = OperateUin;
+    }
+
+    /**
+     * Get <p>支付者的账号 ID（账号 ID 是用户在腾讯云的唯一账号标识），默认查询本账号账单，如集团管理账号需查询成员账号自付的账单，该字段需入参成员账号UIN</p> 
+     * @return PayerUin <p>支付者的账号 ID（账号 ID 是用户在腾讯云的唯一账号标识），默认查询本账号账单，如集团管理账号需查询成员账号自付的账单，该字段需入参成员账号UIN</p>
+     */
+    public String getPayerUin() {
+        return this.PayerUin;
+    }
+
+    /**
+     * Set <p>支付者的账号 ID（账号 ID 是用户在腾讯云的唯一账号标识），默认查询本账号账单，如集团管理账号需查询成员账号自付的账单，该字段需入参成员账号UIN</p>
+     * @param PayerUin <p>支付者的账号 ID（账号 ID 是用户在腾讯云的唯一账号标识），默认查询本账号账单，如集团管理账号需查询成员账号自付的账单，该字段需入参成员账号UIN</p>
+     */
+    public void setPayerUin(String PayerUin) {
+        this.PayerUin = PayerUin;
     }
 
     public DescribeBillSummaryRequest() {
@@ -138,6 +161,9 @@ public class DescribeBillSummaryRequest extends AbstractModel {
         if (source.OperateUin != null) {
             this.OperateUin = new String(source.OperateUin);
         }
+        if (source.PayerUin != null) {
+            this.PayerUin = new String(source.PayerUin);
+        }
     }
 
 
@@ -149,6 +175,7 @@ public class DescribeBillSummaryRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "GroupType", this.GroupType);
         this.setParamArraySimple(map, prefix + "TagKey.", this.TagKey);
         this.setParamSimple(map, prefix + "OperateUin", this.OperateUin);
+        this.setParamSimple(map, prefix + "PayerUin", this.PayerUin);
 
     }
 }

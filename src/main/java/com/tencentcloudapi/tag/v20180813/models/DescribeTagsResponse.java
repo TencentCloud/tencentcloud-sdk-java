@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DescribeTagsResponse extends AbstractModel {
 
     /**
-    * 结果总数
+    * <p>结果总数</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 数据位移偏量
+    * <p>数据位移偏量</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 每页大小
+    * <p>每页大小</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 标签列表
+    * <p>标签列表</p>
     */
     @SerializedName("Tags")
     @Expose
@@ -59,64 +59,64 @@ public class DescribeTagsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 结果总数 
-     * @return TotalCount 结果总数
+     * Get <p>结果总数</p> 
+     * @return TotalCount <p>结果总数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 结果总数
-     * @param TotalCount 结果总数
+     * Set <p>结果总数</p>
+     * @param TotalCount <p>结果总数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 数据位移偏量 
-     * @return Offset 数据位移偏量
+     * Get <p>数据位移偏量</p> 
+     * @return Offset <p>数据位移偏量</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 数据位移偏量
-     * @param Offset 数据位移偏量
+     * Set <p>数据位移偏量</p>
+     * @param Offset <p>数据位移偏量</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 每页大小 
-     * @return Limit 每页大小
+     * Get <p>每页大小</p> 
+     * @return Limit <p>每页大小</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页大小
-     * @param Limit 每页大小
+     * Set <p>每页大小</p>
+     * @param Limit <p>每页大小</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 标签列表 
-     * @return Tags 标签列表
+     * Get <p>标签列表</p> 
+     * @return Tags <p>标签列表</p>
      */
     public TagWithDelete [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签列表
-     * @param Tags 标签列表
+     * Set <p>标签列表</p>
+     * @param Tags <p>标签列表</p>
      */
     public void setTags(TagWithDelete [] Tags) {
         this.Tags = Tags;

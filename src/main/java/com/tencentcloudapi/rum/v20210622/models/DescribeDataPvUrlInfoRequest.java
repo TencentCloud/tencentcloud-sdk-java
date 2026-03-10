@@ -31,7 +31,7 @@ public class DescribeDataPvUrlInfoRequest extends AbstractModel {
     private Long StartTime;
 
     /**
-    * 类型
+    * 查询类型（string）：当前后端实现固定按 from 聚合统计，未使用该字段（保留字段，传值不会影响结果）。
     */
     @SerializedName("Type")
     @Expose
@@ -129,7 +129,7 @@ public class DescribeDataPvUrlInfoRequest extends AbstractModel {
     private String ExtFirst;
 
     /**
-    * 网络类型
+    * 网络类型(tag 值):用于过滤/聚合字段 netType；枚举值：1(WiFi)、2(2G)、3(3G)、4(4G)、5(5G)、6(6G)、100(未知网络)。
     */
     @SerializedName("NetType")
     @Expose
@@ -187,16 +187,16 @@ public class DescribeDataPvUrlInfoRequest extends AbstractModel {
     }
 
     /**
-     * Get 类型 
-     * @return Type 类型
+     * Get 查询类型（string）：当前后端实现固定按 from 聚合统计，未使用该字段（保留字段，传值不会影响结果）。 
+     * @return Type 查询类型（string）：当前后端实现固定按 from 聚合统计，未使用该字段（保留字段，传值不会影响结果）。
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 类型
-     * @param Type 类型
+     * Set 查询类型（string）：当前后端实现固定按 from 聚合统计，未使用该字段（保留字段，传值不会影响结果）。
+     * @param Type 查询类型（string）：当前后端实现固定按 from 聚合统计，未使用该字段（保留字段，传值不会影响结果）。
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -411,16 +411,16 @@ public class DescribeDataPvUrlInfoRequest extends AbstractModel {
     }
 
     /**
-     * Get 网络类型 
-     * @return NetType 网络类型
+     * Get 网络类型(tag 值):用于过滤/聚合字段 netType；枚举值：1(WiFi)、2(2G)、3(3G)、4(4G)、5(5G)、6(6G)、100(未知网络)。 
+     * @return NetType 网络类型(tag 值):用于过滤/聚合字段 netType；枚举值：1(WiFi)、2(2G)、3(3G)、4(4G)、5(5G)、6(6G)、100(未知网络)。
      */
     public String getNetType() {
         return this.NetType;
     }
 
     /**
-     * Set 网络类型
-     * @param NetType 网络类型
+     * Set 网络类型(tag 值):用于过滤/聚合字段 netType；枚举值：1(WiFi)、2(2G)、3(3G)、4(4G)、5(5G)、6(6G)、100(未知网络)。
+     * @param NetType 网络类型(tag 值):用于过滤/聚合字段 netType；枚举值：1(WiFi)、2(2G)、3(3G)、4(4G)、5(5G)、6(6G)、100(未知网络)。
      */
     public void setNetType(String NetType) {
         this.NetType = NetType;

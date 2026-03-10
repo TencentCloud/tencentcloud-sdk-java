@@ -164,7 +164,7 @@ public class DescribeDataFetchProjectRequest extends AbstractModel {
     private String Browser;
 
     /**
-    * 耗时计算方式
+    * 耗时口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。
     */
     @SerializedName("CostType")
     @Expose
@@ -185,7 +185,7 @@ public class DescribeDataFetchProjectRequest extends AbstractModel {
     private String Env;
 
     /**
-    * httpcode响应码
+    * HTTP 状态码（tag 值）：用于过滤字段 status；取值一般为 200/301/404/500 等，也可配合 4xx/5xx 统计逻辑使用
     */
     @SerializedName("Status")
     @Expose
@@ -519,16 +519,16 @@ public class DescribeDataFetchProjectRequest extends AbstractModel {
     }
 
     /**
-     * Get 耗时计算方式 
-     * @return CostType 耗时计算方式
+     * Get 耗时口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。 
+     * @return CostType 耗时口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。
      */
     public String getCostType() {
         return this.CostType;
     }
 
     /**
-     * Set 耗时计算方式
-     * @param CostType 耗时计算方式
+     * Set 耗时口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。
+     * @param CostType 耗时口径："50"/"75"/"90"/"95"/"99"/"99.5" 分别表示 TP50/TP75/TP90/TP95/TP99/TP99.5（percentile2）；"avg" 表示均值（avg）。
      */
     public void setCostType(String CostType) {
         this.CostType = CostType;
@@ -567,16 +567,16 @@ public class DescribeDataFetchProjectRequest extends AbstractModel {
     }
 
     /**
-     * Get httpcode响应码 
-     * @return Status httpcode响应码
+     * Get HTTP 状态码（tag 值）：用于过滤字段 status；取值一般为 200/301/404/500 等，也可配合 4xx/5xx 统计逻辑使用 
+     * @return Status HTTP 状态码（tag 值）：用于过滤字段 status；取值一般为 200/301/404/500 等，也可配合 4xx/5xx 统计逻辑使用
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set httpcode响应码
-     * @param Status httpcode响应码
+     * Set HTTP 状态码（tag 值）：用于过滤字段 status；取值一般为 200/301/404/500 等，也可配合 4xx/5xx 统计逻辑使用
+     * @param Status HTTP 状态码（tag 值）：用于过滤字段 status；取值一般为 200/301/404/500 等，也可配合 4xx/5xx 统计逻辑使用
      */
     public void setStatus(String Status) {
         this.Status = Status;

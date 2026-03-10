@@ -171,6 +171,27 @@ public class DataKeyMetadata extends AbstractModel {
     private String SourceHsmClusterId;
 
     /**
+    * 成员账号appId
+    */
+    @SerializedName("AccountAppId")
+    @Expose
+    private Long AccountAppId;
+
+    /**
+    * 成员账号uin
+    */
+    @SerializedName("AccountUin")
+    @Expose
+    private Long AccountUin;
+
+    /**
+    * 成员账号名称
+    */
+    @SerializedName("AccountName")
+    @Expose
+    private String AccountName;
+
+    /**
      * Get DataKey的全局唯一标识 
      * @return DataKeyId DataKey的全局唯一标识
      */
@@ -506,6 +527,54 @@ public class DataKeyMetadata extends AbstractModel {
         this.SourceHsmClusterId = SourceHsmClusterId;
     }
 
+    /**
+     * Get 成员账号appId 
+     * @return AccountAppId 成员账号appId
+     */
+    public Long getAccountAppId() {
+        return this.AccountAppId;
+    }
+
+    /**
+     * Set 成员账号appId
+     * @param AccountAppId 成员账号appId
+     */
+    public void setAccountAppId(Long AccountAppId) {
+        this.AccountAppId = AccountAppId;
+    }
+
+    /**
+     * Get 成员账号uin 
+     * @return AccountUin 成员账号uin
+     */
+    public Long getAccountUin() {
+        return this.AccountUin;
+    }
+
+    /**
+     * Set 成员账号uin
+     * @param AccountUin 成员账号uin
+     */
+    public void setAccountUin(Long AccountUin) {
+        this.AccountUin = AccountUin;
+    }
+
+    /**
+     * Get 成员账号名称 
+     * @return AccountName 成员账号名称
+     */
+    public String getAccountName() {
+        return this.AccountName;
+    }
+
+    /**
+     * Set 成员账号名称
+     * @param AccountName 成员账号名称
+     */
+    public void setAccountName(String AccountName) {
+        this.AccountName = AccountName;
+    }
+
     public DataKeyMetadata() {
     }
 
@@ -577,6 +646,15 @@ public class DataKeyMetadata extends AbstractModel {
         if (source.SourceHsmClusterId != null) {
             this.SourceHsmClusterId = new String(source.SourceHsmClusterId);
         }
+        if (source.AccountAppId != null) {
+            this.AccountAppId = new Long(source.AccountAppId);
+        }
+        if (source.AccountUin != null) {
+            this.AccountUin = new Long(source.AccountUin);
+        }
+        if (source.AccountName != null) {
+            this.AccountName = new String(source.AccountName);
+        }
     }
 
 
@@ -605,6 +683,9 @@ public class DataKeyMetadata extends AbstractModel {
         this.setParamSimple(map, prefix + "SyncStartTime", this.SyncStartTime);
         this.setParamSimple(map, prefix + "SyncEndTime", this.SyncEndTime);
         this.setParamSimple(map, prefix + "SourceHsmClusterId", this.SourceHsmClusterId);
+        this.setParamSimple(map, prefix + "AccountAppId", this.AccountAppId);
+        this.setParamSimple(map, prefix + "AccountUin", this.AccountUin);
+        this.setParamSimple(map, prefix + "AccountName", this.AccountName);
 
     }
 }

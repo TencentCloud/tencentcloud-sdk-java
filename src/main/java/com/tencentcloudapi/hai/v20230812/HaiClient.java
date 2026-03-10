@@ -138,6 +138,17 @@ public class HaiClient extends AbstractClient{
     }
 
     /**
+     *本接口 (DescribeServices) 用于查询一个或多个服务
+     * @param req DescribeServicesRequest
+     * @return DescribeServicesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeServicesResponse DescribeServices(DescribeServicesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeServices", DescribeServicesResponse.class);
+    }
+
+    /**
      *本接口 (InquirePriceRunInstances) 用于实例询价。
      * @param req InquirePriceRunInstancesRequest
      * @return InquirePriceRunInstancesResponse

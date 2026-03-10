@@ -129,6 +129,9 @@ public enum ClsErrorCode {
      /* 无效的Content。 */
      INVALIDPARAMETER_CONTENT("InvalidParameter.Content"),
      
+     /* 跨账号标识错误 */
+     INVALIDPARAMETER_CROSSACCOUNTCONFLICT("InvalidParameter.CrossAccountConflict"),
+     
      /* 仪表盘命名冲突。 */
      INVALIDPARAMETER_DASHBOARDNAMECONFLICT("InvalidParameter.DashboardNameConflict"),
      

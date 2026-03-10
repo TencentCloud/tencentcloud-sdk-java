@@ -43,7 +43,7 @@ public class CreateDataTransformRequest extends AbstractModel {
 名称限制
 - 不能为空字符串
 - 不能包含字符'|'
-- 最长 255 个字符
+- 最长128 个字符
     */
     @SerializedName("Name")
     @Expose
@@ -213,12 +213,12 @@ true：丢弃日志数据。
 名称限制
 - 不能为空字符串
 - 不能包含字符'|'
-- 最长 255 个字符 
+- 最长128 个字符 
      * @return Name 加工任务名称
 名称限制
 - 不能为空字符串
 - 不能包含字符'|'
-- 最长 255 个字符
+- 最长128 个字符
      */
     public String getName() {
         return this.Name;
@@ -229,12 +229,12 @@ true：丢弃日志数据。
 名称限制
 - 不能为空字符串
 - 不能包含字符'|'
-- 最长 255 个字符
+- 最长128 个字符
      * @param Name 加工任务名称
 名称限制
 - 不能为空字符串
 - 不能包含字符'|'
-- 最长 255 个字符
+- 最长128 个字符
      */
     public void setName(String Name) {
         this.Name = Name;

@@ -31,14 +31,29 @@ public class DescribePermissionRanksInfoRequest extends AbstractModel {
     private Long TableId;
 
     /**
-    * 条数
+    * 模式。
+取值范围：
+
+- ALL：全部
+- Specify：指定
+- TAG：标签
+
+默认值：ALL
+示例值：ALL
     */
     @SerializedName("Mode")
     @Expose
     private String Mode;
 
     /**
-    * 角色类型
+    * 角色类型。
+取值范围：
+
+- ROLES：按角色
+- Others：其它
+
+默认值：Others
+示例值：Others
     */
     @SerializedName("RoleType")
     @Expose
@@ -52,7 +67,14 @@ public class DescribePermissionRanksInfoRequest extends AbstractModel {
     private Long RoleId;
 
     /**
-    * 类型
+    * 类型。
+取值范围：
+
+- ROW：行权限
+- COLUMN：列权限
+
+默认值：ROW
+示例值：ROW
     */
     @SerializedName("Type")
     @Expose
@@ -82,32 +104,92 @@ public class DescribePermissionRanksInfoRequest extends AbstractModel {
     }
 
     /**
-     * Get 条数 
-     * @return Mode 条数
+     * Get 模式。
+取值范围：
+
+- ALL：全部
+- Specify：指定
+- TAG：标签
+
+默认值：ALL
+示例值：ALL 
+     * @return Mode 模式。
+取值范围：
+
+- ALL：全部
+- Specify：指定
+- TAG：标签
+
+默认值：ALL
+示例值：ALL
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set 条数
-     * @param Mode 条数
+     * Set 模式。
+取值范围：
+
+- ALL：全部
+- Specify：指定
+- TAG：标签
+
+默认值：ALL
+示例值：ALL
+     * @param Mode 模式。
+取值范围：
+
+- ALL：全部
+- Specify：指定
+- TAG：标签
+
+默认值：ALL
+示例值：ALL
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get 角色类型 
-     * @return RoleType 角色类型
+     * Get 角色类型。
+取值范围：
+
+- ROLES：按角色
+- Others：其它
+
+默认值：Others
+示例值：Others 
+     * @return RoleType 角色类型。
+取值范围：
+
+- ROLES：按角色
+- Others：其它
+
+默认值：Others
+示例值：Others
      */
     public String getRoleType() {
         return this.RoleType;
     }
 
     /**
-     * Set 角色类型
-     * @param RoleType 角色类型
+     * Set 角色类型。
+取值范围：
+
+- ROLES：按角色
+- Others：其它
+
+默认值：Others
+示例值：Others
+     * @param RoleType 角色类型。
+取值范围：
+
+- ROLES：按角色
+- Others：其它
+
+默认值：Others
+示例值：Others
      */
     public void setRoleType(String RoleType) {
         this.RoleType = RoleType;
@@ -130,16 +212,44 @@ public class DescribePermissionRanksInfoRequest extends AbstractModel {
     }
 
     /**
-     * Get 类型 
-     * @return Type 类型
+     * Get 类型。
+取值范围：
+
+- ROW：行权限
+- COLUMN：列权限
+
+默认值：ROW
+示例值：ROW 
+     * @return Type 类型。
+取值范围：
+
+- ROW：行权限
+- COLUMN：列权限
+
+默认值：ROW
+示例值：ROW
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 类型
-     * @param Type 类型
+     * Set 类型。
+取值范围：
+
+- ROW：行权限
+- COLUMN：列权限
+
+默认值：ROW
+示例值：ROW
+     * @param Type 类型。
+取值范围：
+
+- ROW：行权限
+- COLUMN：列权限
+
+默认值：ROW
+示例值：ROW
      */
     public void setType(String Type) {
         this.Type = Type;

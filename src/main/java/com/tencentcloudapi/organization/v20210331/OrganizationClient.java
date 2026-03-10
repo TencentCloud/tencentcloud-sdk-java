@@ -116,6 +116,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *添加共享单元部门
+     * @param req AddShareUnitNodeRequest
+     * @return AddShareUnitNodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddShareUnitNodeResponse AddShareUnitNode(AddShareUnitNodeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddShareUnitNode", AddShareUnitNodeResponse.class);
+    }
+
+    /**
      *添加共享单元资源
      * @param req AddShareUnitResourcesRequest
      * @return AddShareUnitResourcesResponse
@@ -534,6 +545,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *删除共享单元部门
+     * @param req DeleteShareUnitNodeRequest
+     * @return DeleteShareUnitNodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteShareUnitNodeResponse DeleteShareUnitNode(DeleteShareUnitNodeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteShareUnitNode", DeleteShareUnitNodeResponse.class);
+    }
+
+    /**
      *删除共享单元资源
      * @param req DeleteShareUnitResourcesRequest
      * @return DeleteShareUnitResourcesResponse
@@ -773,6 +795,17 @@ public class OrganizationClient extends AbstractClient{
     public DescribeShareUnitMembersResponse DescribeShareUnitMembers(DescribeShareUnitMembersRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeShareUnitMembers", DescribeShareUnitMembersResponse.class);
+    }
+
+    /**
+     *获取共享单元部门列表。
+     * @param req DescribeShareUnitNodesRequest
+     * @return DescribeShareUnitNodesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeShareUnitNodesResponse DescribeShareUnitNodes(DescribeShareUnitNodesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeShareUnitNodes", DescribeShareUnitNodesResponse.class);
     }
 
     /**

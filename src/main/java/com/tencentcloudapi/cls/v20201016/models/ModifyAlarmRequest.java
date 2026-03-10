@@ -24,384 +24,315 @@ import java.util.HashMap;
 public class ModifyAlarmRequest extends AbstractModel {
 
     /**
-    * 告警策略ID。-通过[获取告警策略列表](https://cloud.tencent.com/document/product/614/56461)获取告警策略ID
+    * <p>告警策略ID。-通过<a href="https://cloud.tencent.com/document/product/614/56461">获取告警策略列表</a>获取告警策略ID</p>
     */
     @SerializedName("AlarmId")
     @Expose
     private String AlarmId;
 
     /**
-    * 告警策略名称。最大支持255个字节，不支持 '|'。
+    * <p>告警策略名称。最大支持255个字节，不支持 &#39;|&#39;。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 监控任务运行时间点。
+    * <p>监控任务运行时间点。</p>
     */
     @SerializedName("MonitorTime")
     @Expose
     private MonitorTime MonitorTime;
 
     /**
-    * 告警信息发送的触发条件。
-
-注意:  
-- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
+    * <p>告警信息发送的触发条件。</p><p>注意:  </p><ul><li>Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。</li></ul>
     */
     @SerializedName("Condition")
     @Expose
     private String Condition;
 
     /**
-    * 告警级别。
-
-0:警告(Warn);1:提醒(Info);2:紧急 (Critical)
-
-注意:  
-- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
+    * <p>告警级别。</p><p>0:警告(Warn);1:提醒(Info);2:紧急 (Critical)</p><p>注意:  </p><ul><li>Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。</li></ul>
     */
     @SerializedName("AlarmLevel")
     @Expose
     private Long AlarmLevel;
 
     /**
-    * 多触发条件。 
-
-注意:  
-- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
+    * <p>多触发条件。 </p><p>注意:  </p><ul><li>Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。</li></ul>
     */
     @SerializedName("MultiConditions")
     @Expose
     private MultiCondition [] MultiConditions;
 
     /**
-    * 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为2000。
+    * <p>持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为2000。</p>
     */
     @SerializedName("TriggerCount")
     @Expose
     private Long TriggerCount;
 
     /**
-    * 告警重复的周期。单位是分钟。取值范围是0~1440。
+    * <p>告警重复的周期。单位是分钟。取值范围是0~1440。</p>
     */
     @SerializedName("AlarmPeriod")
     @Expose
     private Long AlarmPeriod;
 
     /**
-    * 关联的告警通知渠道组列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取关联的告警通知渠道组列表，和MonitorNotice互斥
-    */
-    @SerializedName("AlarmNoticeIds")
-    @Expose
-    private String [] AlarmNoticeIds;
-
-    /**
-    * 监控对象列表。
+    * <p>监控对象列表。</p>
     */
     @SerializedName("AlarmTargets")
     @Expose
     private AlarmTarget [] AlarmTargets;
 
     /**
-    * 是否开启告警策略。
+    * <p>是否开启告警策略。</p>
     */
     @SerializedName("Status")
     @Expose
     private Boolean Status;
 
     /**
-    * 该参数已废弃，请使用Status参数控制是否开启告警策略。
+    * <p>该参数已废弃，请使用Status参数控制是否开启告警策略。</p>
     */
     @SerializedName("Enable")
     @Expose
     private Boolean Enable;
 
     /**
-    * 用户自定义告警内容
+    * <p>用户自定义告警内容</p>
     */
     @SerializedName("MessageTemplate")
     @Expose
     private String MessageTemplate;
 
     /**
-    * 用户自定义回调
+    * <p>用户自定义回调</p>
     */
     @SerializedName("CallBack")
     @Expose
     private CallBackInfo CallBack;
 
     /**
-    * 多维分析
+    * <p>多维分析</p>
     */
     @SerializedName("Analysis")
     @Expose
     private AnalysisDimensional [] Analysis;
 
     /**
-    * 分组触发状态。true：开启，false：关闭（默认）
+    * <p>分组触发状态。true：开启，false：关闭（默认）</p>
     */
     @SerializedName("GroupTriggerStatus")
     @Expose
     private Boolean GroupTriggerStatus;
 
     /**
-    * 分组触发条件。
+    * <p>分组触发条件。</p>
     */
     @SerializedName("GroupTriggerCondition")
     @Expose
     private String [] GroupTriggerCondition;
 
     /**
-    * 标签描述列表，通过指定该参数可以同时绑定标签到相应的告警策略。最大支持10个标签键值对，并且不能有重复的键值对。
+    * <p>标签描述列表，通过指定该参数可以同时绑定标签到相应的告警策略。最大支持10个标签键值对，并且不能有重复的键值对。</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 监控对象类型。0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
-当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。
-
+    * <p>监控对象类型。0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。<br>当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。</p>
     */
     @SerializedName("MonitorObjectType")
     @Expose
     private Long MonitorObjectType;
 
     /**
-    * 告警附加分类信息列表。
-Classifications元素个数不能超过20个。
-Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，符合正则 `^[a-z]([a-z0-9_]{0,49})$`。
-Classifications元素的Value长度不能超过200个字符。
+    * <p>告警附加分类信息列表。<br>Classifications元素个数不能超过20个。<br>Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，符合正则 <code>^[a-z]([a-z0-9_]{0,49})$</code>。<br>Classifications元素的Value长度不能超过200个字符。</p>
     */
     @SerializedName("Classifications")
     @Expose
     private AlarmClassification [] Classifications;
 
     /**
-     * Get 告警策略ID。-通过[获取告警策略列表](https://cloud.tencent.com/document/product/614/56461)获取告警策略ID 
-     * @return AlarmId 告警策略ID。-通过[获取告警策略列表](https://cloud.tencent.com/document/product/614/56461)获取告警策略ID
+    * <p>关联的日志服务告警通知渠道组列表。-通过<a href="https://cloud.tencent.com/document/product/614/56462">获取通知渠道组列表</a>获取关联的告警通知渠道组列表，和MonitorNotice互斥</p>
+    */
+    @SerializedName("AlarmNoticeIds")
+    @Expose
+    private String [] AlarmNoticeIds;
+
+    /**
+    * <p>关联的可观测平台通知模板，与 AlarmNoticeIds 参数互斥，不能同时使用</p>
+    */
+    @SerializedName("MonitorNotice")
+    @Expose
+    private MonitorNotice MonitorNotice;
+
+    /**
+     * Get <p>告警策略ID。-通过<a href="https://cloud.tencent.com/document/product/614/56461">获取告警策略列表</a>获取告警策略ID</p> 
+     * @return AlarmId <p>告警策略ID。-通过<a href="https://cloud.tencent.com/document/product/614/56461">获取告警策略列表</a>获取告警策略ID</p>
      */
     public String getAlarmId() {
         return this.AlarmId;
     }
 
     /**
-     * Set 告警策略ID。-通过[获取告警策略列表](https://cloud.tencent.com/document/product/614/56461)获取告警策略ID
-     * @param AlarmId 告警策略ID。-通过[获取告警策略列表](https://cloud.tencent.com/document/product/614/56461)获取告警策略ID
+     * Set <p>告警策略ID。-通过<a href="https://cloud.tencent.com/document/product/614/56461">获取告警策略列表</a>获取告警策略ID</p>
+     * @param AlarmId <p>告警策略ID。-通过<a href="https://cloud.tencent.com/document/product/614/56461">获取告警策略列表</a>获取告警策略ID</p>
      */
     public void setAlarmId(String AlarmId) {
         this.AlarmId = AlarmId;
     }
 
     /**
-     * Get 告警策略名称。最大支持255个字节，不支持 '|'。 
-     * @return Name 告警策略名称。最大支持255个字节，不支持 '|'。
+     * Get <p>告警策略名称。最大支持255个字节，不支持 &#39;|&#39;。</p> 
+     * @return Name <p>告警策略名称。最大支持255个字节，不支持 &#39;|&#39;。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 告警策略名称。最大支持255个字节，不支持 '|'。
-     * @param Name 告警策略名称。最大支持255个字节，不支持 '|'。
+     * Set <p>告警策略名称。最大支持255个字节，不支持 &#39;|&#39;。</p>
+     * @param Name <p>告警策略名称。最大支持255个字节，不支持 &#39;|&#39;。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 监控任务运行时间点。 
-     * @return MonitorTime 监控任务运行时间点。
+     * Get <p>监控任务运行时间点。</p> 
+     * @return MonitorTime <p>监控任务运行时间点。</p>
      */
     public MonitorTime getMonitorTime() {
         return this.MonitorTime;
     }
 
     /**
-     * Set 监控任务运行时间点。
-     * @param MonitorTime 监控任务运行时间点。
+     * Set <p>监控任务运行时间点。</p>
+     * @param MonitorTime <p>监控任务运行时间点。</p>
      */
     public void setMonitorTime(MonitorTime MonitorTime) {
         this.MonitorTime = MonitorTime;
     }
 
     /**
-     * Get 告警信息发送的触发条件。
-
-注意:  
-- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。 
-     * @return Condition 告警信息发送的触发条件。
-
-注意:  
-- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
+     * Get <p>告警信息发送的触发条件。</p><p>注意:  </p><ul><li>Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。</li></ul> 
+     * @return Condition <p>告警信息发送的触发条件。</p><p>注意:  </p><ul><li>Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。</li></ul>
      */
     public String getCondition() {
         return this.Condition;
     }
 
     /**
-     * Set 告警信息发送的触发条件。
-
-注意:  
-- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
-     * @param Condition 告警信息发送的触发条件。
-
-注意:  
-- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
+     * Set <p>告警信息发送的触发条件。</p><p>注意:  </p><ul><li>Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。</li></ul>
+     * @param Condition <p>告警信息发送的触发条件。</p><p>注意:  </p><ul><li>Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。</li></ul>
      */
     public void setCondition(String Condition) {
         this.Condition = Condition;
     }
 
     /**
-     * Get 告警级别。
-
-0:警告(Warn);1:提醒(Info);2:紧急 (Critical)
-
-注意:  
-- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。 
-     * @return AlarmLevel 告警级别。
-
-0:警告(Warn);1:提醒(Info);2:紧急 (Critical)
-
-注意:  
-- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
+     * Get <p>告警级别。</p><p>0:警告(Warn);1:提醒(Info);2:紧急 (Critical)</p><p>注意:  </p><ul><li>Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。</li></ul> 
+     * @return AlarmLevel <p>告警级别。</p><p>0:警告(Warn);1:提醒(Info);2:紧急 (Critical)</p><p>注意:  </p><ul><li>Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。</li></ul>
      */
     public Long getAlarmLevel() {
         return this.AlarmLevel;
     }
 
     /**
-     * Set 告警级别。
-
-0:警告(Warn);1:提醒(Info);2:紧急 (Critical)
-
-注意:  
-- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
-     * @param AlarmLevel 告警级别。
-
-0:警告(Warn);1:提醒(Info);2:紧急 (Critical)
-
-注意:  
-- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
+     * Set <p>告警级别。</p><p>0:警告(Warn);1:提醒(Info);2:紧急 (Critical)</p><p>注意:  </p><ul><li>Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。</li></ul>
+     * @param AlarmLevel <p>告警级别。</p><p>0:警告(Warn);1:提醒(Info);2:紧急 (Critical)</p><p>注意:  </p><ul><li>Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。</li></ul>
      */
     public void setAlarmLevel(Long AlarmLevel) {
         this.AlarmLevel = AlarmLevel;
     }
 
     /**
-     * Get 多触发条件。 
-
-注意:  
-- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。 
-     * @return MultiConditions 多触发条件。 
-
-注意:  
-- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
+     * Get <p>多触发条件。 </p><p>注意:  </p><ul><li>Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。</li></ul> 
+     * @return MultiConditions <p>多触发条件。 </p><p>注意:  </p><ul><li>Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。</li></ul>
      */
     public MultiCondition [] getMultiConditions() {
         return this.MultiConditions;
     }
 
     /**
-     * Set 多触发条件。 
-
-注意:  
-- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
-     * @param MultiConditions 多触发条件。 
-
-注意:  
-- Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
+     * Set <p>多触发条件。 </p><p>注意:  </p><ul><li>Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。</li></ul>
+     * @param MultiConditions <p>多触发条件。 </p><p>注意:  </p><ul><li>Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。</li></ul>
      */
     public void setMultiConditions(MultiCondition [] MultiConditions) {
         this.MultiConditions = MultiConditions;
     }
 
     /**
-     * Get 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为2000。 
-     * @return TriggerCount 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为2000。
+     * Get <p>持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为2000。</p> 
+     * @return TriggerCount <p>持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为2000。</p>
      */
     public Long getTriggerCount() {
         return this.TriggerCount;
     }
 
     /**
-     * Set 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为2000。
-     * @param TriggerCount 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为2000。
+     * Set <p>持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为2000。</p>
+     * @param TriggerCount <p>持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为2000。</p>
      */
     public void setTriggerCount(Long TriggerCount) {
         this.TriggerCount = TriggerCount;
     }
 
     /**
-     * Get 告警重复的周期。单位是分钟。取值范围是0~1440。 
-     * @return AlarmPeriod 告警重复的周期。单位是分钟。取值范围是0~1440。
+     * Get <p>告警重复的周期。单位是分钟。取值范围是0~1440。</p> 
+     * @return AlarmPeriod <p>告警重复的周期。单位是分钟。取值范围是0~1440。</p>
      */
     public Long getAlarmPeriod() {
         return this.AlarmPeriod;
     }
 
     /**
-     * Set 告警重复的周期。单位是分钟。取值范围是0~1440。
-     * @param AlarmPeriod 告警重复的周期。单位是分钟。取值范围是0~1440。
+     * Set <p>告警重复的周期。单位是分钟。取值范围是0~1440。</p>
+     * @param AlarmPeriod <p>告警重复的周期。单位是分钟。取值范围是0~1440。</p>
      */
     public void setAlarmPeriod(Long AlarmPeriod) {
         this.AlarmPeriod = AlarmPeriod;
     }
 
     /**
-     * Get 关联的告警通知渠道组列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取关联的告警通知渠道组列表，和MonitorNotice互斥 
-     * @return AlarmNoticeIds 关联的告警通知渠道组列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取关联的告警通知渠道组列表，和MonitorNotice互斥
-     */
-    public String [] getAlarmNoticeIds() {
-        return this.AlarmNoticeIds;
-    }
-
-    /**
-     * Set 关联的告警通知渠道组列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取关联的告警通知渠道组列表，和MonitorNotice互斥
-     * @param AlarmNoticeIds 关联的告警通知渠道组列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取关联的告警通知渠道组列表，和MonitorNotice互斥
-     */
-    public void setAlarmNoticeIds(String [] AlarmNoticeIds) {
-        this.AlarmNoticeIds = AlarmNoticeIds;
-    }
-
-    /**
-     * Get 监控对象列表。 
-     * @return AlarmTargets 监控对象列表。
+     * Get <p>监控对象列表。</p> 
+     * @return AlarmTargets <p>监控对象列表。</p>
      */
     public AlarmTarget [] getAlarmTargets() {
         return this.AlarmTargets;
     }
 
     /**
-     * Set 监控对象列表。
-     * @param AlarmTargets 监控对象列表。
+     * Set <p>监控对象列表。</p>
+     * @param AlarmTargets <p>监控对象列表。</p>
      */
     public void setAlarmTargets(AlarmTarget [] AlarmTargets) {
         this.AlarmTargets = AlarmTargets;
     }
 
     /**
-     * Get 是否开启告警策略。 
-     * @return Status 是否开启告警策略。
+     * Get <p>是否开启告警策略。</p> 
+     * @return Status <p>是否开启告警策略。</p>
      */
     public Boolean getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 是否开启告警策略。
-     * @param Status 是否开启告警策略。
+     * Set <p>是否开启告警策略。</p>
+     * @param Status <p>是否开启告警策略。</p>
      */
     public void setStatus(Boolean Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 该参数已废弃，请使用Status参数控制是否开启告警策略。 
-     * @return Enable 该参数已废弃，请使用Status参数控制是否开启告警策略。
+     * Get <p>该参数已废弃，请使用Status参数控制是否开启告警策略。</p> 
+     * @return Enable <p>该参数已废弃，请使用Status参数控制是否开启告警策略。</p>
      * @deprecated
      */
     @Deprecated
@@ -410,8 +341,8 @@ Classifications元素的Value长度不能超过200个字符。
     }
 
     /**
-     * Set 该参数已废弃，请使用Status参数控制是否开启告警策略。
-     * @param Enable 该参数已废弃，请使用Status参数控制是否开启告警策略。
+     * Set <p>该参数已废弃，请使用Status参数控制是否开启告警策略。</p>
+     * @param Enable <p>该参数已废弃，请使用Status参数控制是否开启告警策略。</p>
      * @deprecated
      */
     @Deprecated
@@ -420,151 +351,163 @@ Classifications元素的Value长度不能超过200个字符。
     }
 
     /**
-     * Get 用户自定义告警内容 
-     * @return MessageTemplate 用户自定义告警内容
+     * Get <p>用户自定义告警内容</p> 
+     * @return MessageTemplate <p>用户自定义告警内容</p>
      */
     public String getMessageTemplate() {
         return this.MessageTemplate;
     }
 
     /**
-     * Set 用户自定义告警内容
-     * @param MessageTemplate 用户自定义告警内容
+     * Set <p>用户自定义告警内容</p>
+     * @param MessageTemplate <p>用户自定义告警内容</p>
      */
     public void setMessageTemplate(String MessageTemplate) {
         this.MessageTemplate = MessageTemplate;
     }
 
     /**
-     * Get 用户自定义回调 
-     * @return CallBack 用户自定义回调
+     * Get <p>用户自定义回调</p> 
+     * @return CallBack <p>用户自定义回调</p>
      */
     public CallBackInfo getCallBack() {
         return this.CallBack;
     }
 
     /**
-     * Set 用户自定义回调
-     * @param CallBack 用户自定义回调
+     * Set <p>用户自定义回调</p>
+     * @param CallBack <p>用户自定义回调</p>
      */
     public void setCallBack(CallBackInfo CallBack) {
         this.CallBack = CallBack;
     }
 
     /**
-     * Get 多维分析 
-     * @return Analysis 多维分析
+     * Get <p>多维分析</p> 
+     * @return Analysis <p>多维分析</p>
      */
     public AnalysisDimensional [] getAnalysis() {
         return this.Analysis;
     }
 
     /**
-     * Set 多维分析
-     * @param Analysis 多维分析
+     * Set <p>多维分析</p>
+     * @param Analysis <p>多维分析</p>
      */
     public void setAnalysis(AnalysisDimensional [] Analysis) {
         this.Analysis = Analysis;
     }
 
     /**
-     * Get 分组触发状态。true：开启，false：关闭（默认） 
-     * @return GroupTriggerStatus 分组触发状态。true：开启，false：关闭（默认）
+     * Get <p>分组触发状态。true：开启，false：关闭（默认）</p> 
+     * @return GroupTriggerStatus <p>分组触发状态。true：开启，false：关闭（默认）</p>
      */
     public Boolean getGroupTriggerStatus() {
         return this.GroupTriggerStatus;
     }
 
     /**
-     * Set 分组触发状态。true：开启，false：关闭（默认）
-     * @param GroupTriggerStatus 分组触发状态。true：开启，false：关闭（默认）
+     * Set <p>分组触发状态。true：开启，false：关闭（默认）</p>
+     * @param GroupTriggerStatus <p>分组触发状态。true：开启，false：关闭（默认）</p>
      */
     public void setGroupTriggerStatus(Boolean GroupTriggerStatus) {
         this.GroupTriggerStatus = GroupTriggerStatus;
     }
 
     /**
-     * Get 分组触发条件。 
-     * @return GroupTriggerCondition 分组触发条件。
+     * Get <p>分组触发条件。</p> 
+     * @return GroupTriggerCondition <p>分组触发条件。</p>
      */
     public String [] getGroupTriggerCondition() {
         return this.GroupTriggerCondition;
     }
 
     /**
-     * Set 分组触发条件。
-     * @param GroupTriggerCondition 分组触发条件。
+     * Set <p>分组触发条件。</p>
+     * @param GroupTriggerCondition <p>分组触发条件。</p>
      */
     public void setGroupTriggerCondition(String [] GroupTriggerCondition) {
         this.GroupTriggerCondition = GroupTriggerCondition;
     }
 
     /**
-     * Get 标签描述列表，通过指定该参数可以同时绑定标签到相应的告警策略。最大支持10个标签键值对，并且不能有重复的键值对。 
-     * @return Tags 标签描述列表，通过指定该参数可以同时绑定标签到相应的告警策略。最大支持10个标签键值对，并且不能有重复的键值对。
+     * Get <p>标签描述列表，通过指定该参数可以同时绑定标签到相应的告警策略。最大支持10个标签键值对，并且不能有重复的键值对。</p> 
+     * @return Tags <p>标签描述列表，通过指定该参数可以同时绑定标签到相应的告警策略。最大支持10个标签键值对，并且不能有重复的键值对。</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签描述列表，通过指定该参数可以同时绑定标签到相应的告警策略。最大支持10个标签键值对，并且不能有重复的键值对。
-     * @param Tags 标签描述列表，通过指定该参数可以同时绑定标签到相应的告警策略。最大支持10个标签键值对，并且不能有重复的键值对。
+     * Set <p>标签描述列表，通过指定该参数可以同时绑定标签到相应的告警策略。最大支持10个标签键值对，并且不能有重复的键值对。</p>
+     * @param Tags <p>标签描述列表，通过指定该参数可以同时绑定标签到相应的告警策略。最大支持10个标签键值对，并且不能有重复的键值对。</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 监控对象类型。0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
-当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。
- 
-     * @return MonitorObjectType 监控对象类型。0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
-当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。
-
+     * Get <p>监控对象类型。0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。<br>当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。</p> 
+     * @return MonitorObjectType <p>监控对象类型。0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。<br>当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。</p>
      */
     public Long getMonitorObjectType() {
         return this.MonitorObjectType;
     }
 
     /**
-     * Set 监控对象类型。0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
-当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。
-
-     * @param MonitorObjectType 监控对象类型。0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。 
-当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。
-
+     * Set <p>监控对象类型。0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。<br>当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。</p>
+     * @param MonitorObjectType <p>监控对象类型。0:执行语句共用监控对象; 1:每个执行语句单独选择监控对象。<br>当值为1时，AlarmTargets元素个数不能超过10个，AlarmTargets中的Number必须是从1开始的连续正整数，不能重复。</p>
      */
     public void setMonitorObjectType(Long MonitorObjectType) {
         this.MonitorObjectType = MonitorObjectType;
     }
 
     /**
-     * Get 告警附加分类信息列表。
-Classifications元素个数不能超过20个。
-Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，符合正则 `^[a-z]([a-z0-9_]{0,49})$`。
-Classifications元素的Value长度不能超过200个字符。 
-     * @return Classifications 告警附加分类信息列表。
-Classifications元素个数不能超过20个。
-Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，符合正则 `^[a-z]([a-z0-9_]{0,49})$`。
-Classifications元素的Value长度不能超过200个字符。
+     * Get <p>告警附加分类信息列表。<br>Classifications元素个数不能超过20个。<br>Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，符合正则 <code>^[a-z]([a-z0-9_]{0,49})$</code>。<br>Classifications元素的Value长度不能超过200个字符。</p> 
+     * @return Classifications <p>告警附加分类信息列表。<br>Classifications元素个数不能超过20个。<br>Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，符合正则 <code>^[a-z]([a-z0-9_]{0,49})$</code>。<br>Classifications元素的Value长度不能超过200个字符。</p>
      */
     public AlarmClassification [] getClassifications() {
         return this.Classifications;
     }
 
     /**
-     * Set 告警附加分类信息列表。
-Classifications元素个数不能超过20个。
-Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，符合正则 `^[a-z]([a-z0-9_]{0,49})$`。
-Classifications元素的Value长度不能超过200个字符。
-     * @param Classifications 告警附加分类信息列表。
-Classifications元素个数不能超过20个。
-Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，符合正则 `^[a-z]([a-z0-9_]{0,49})$`。
-Classifications元素的Value长度不能超过200个字符。
+     * Set <p>告警附加分类信息列表。<br>Classifications元素个数不能超过20个。<br>Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，符合正则 <code>^[a-z]([a-z0-9_]{0,49})$</code>。<br>Classifications元素的Value长度不能超过200个字符。</p>
+     * @param Classifications <p>告警附加分类信息列表。<br>Classifications元素个数不能超过20个。<br>Classifications元素的Key不能为空，不能重复，长度不能超过50个字符，符合正则 <code>^[a-z]([a-z0-9_]{0,49})$</code>。<br>Classifications元素的Value长度不能超过200个字符。</p>
      */
     public void setClassifications(AlarmClassification [] Classifications) {
         this.Classifications = Classifications;
+    }
+
+    /**
+     * Get <p>关联的日志服务告警通知渠道组列表。-通过<a href="https://cloud.tencent.com/document/product/614/56462">获取通知渠道组列表</a>获取关联的告警通知渠道组列表，和MonitorNotice互斥</p> 
+     * @return AlarmNoticeIds <p>关联的日志服务告警通知渠道组列表。-通过<a href="https://cloud.tencent.com/document/product/614/56462">获取通知渠道组列表</a>获取关联的告警通知渠道组列表，和MonitorNotice互斥</p>
+     */
+    public String [] getAlarmNoticeIds() {
+        return this.AlarmNoticeIds;
+    }
+
+    /**
+     * Set <p>关联的日志服务告警通知渠道组列表。-通过<a href="https://cloud.tencent.com/document/product/614/56462">获取通知渠道组列表</a>获取关联的告警通知渠道组列表，和MonitorNotice互斥</p>
+     * @param AlarmNoticeIds <p>关联的日志服务告警通知渠道组列表。-通过<a href="https://cloud.tencent.com/document/product/614/56462">获取通知渠道组列表</a>获取关联的告警通知渠道组列表，和MonitorNotice互斥</p>
+     */
+    public void setAlarmNoticeIds(String [] AlarmNoticeIds) {
+        this.AlarmNoticeIds = AlarmNoticeIds;
+    }
+
+    /**
+     * Get <p>关联的可观测平台通知模板，与 AlarmNoticeIds 参数互斥，不能同时使用</p> 
+     * @return MonitorNotice <p>关联的可观测平台通知模板，与 AlarmNoticeIds 参数互斥，不能同时使用</p>
+     */
+    public MonitorNotice getMonitorNotice() {
+        return this.MonitorNotice;
+    }
+
+    /**
+     * Set <p>关联的可观测平台通知模板，与 AlarmNoticeIds 参数互斥，不能同时使用</p>
+     * @param MonitorNotice <p>关联的可观测平台通知模板，与 AlarmNoticeIds 参数互斥，不能同时使用</p>
+     */
+    public void setMonitorNotice(MonitorNotice MonitorNotice) {
+        this.MonitorNotice = MonitorNotice;
     }
 
     public ModifyAlarmRequest() {
@@ -601,12 +544,6 @@ Classifications元素的Value长度不能超过200个字符。
         }
         if (source.AlarmPeriod != null) {
             this.AlarmPeriod = new Long(source.AlarmPeriod);
-        }
-        if (source.AlarmNoticeIds != null) {
-            this.AlarmNoticeIds = new String[source.AlarmNoticeIds.length];
-            for (int i = 0; i < source.AlarmNoticeIds.length; i++) {
-                this.AlarmNoticeIds[i] = new String(source.AlarmNoticeIds[i]);
-            }
         }
         if (source.AlarmTargets != null) {
             this.AlarmTargets = new AlarmTarget[source.AlarmTargets.length];
@@ -656,6 +593,15 @@ Classifications元素的Value长度不能超过200个字符。
                 this.Classifications[i] = new AlarmClassification(source.Classifications[i]);
             }
         }
+        if (source.AlarmNoticeIds != null) {
+            this.AlarmNoticeIds = new String[source.AlarmNoticeIds.length];
+            for (int i = 0; i < source.AlarmNoticeIds.length; i++) {
+                this.AlarmNoticeIds[i] = new String(source.AlarmNoticeIds[i]);
+            }
+        }
+        if (source.MonitorNotice != null) {
+            this.MonitorNotice = new MonitorNotice(source.MonitorNotice);
+        }
     }
 
 
@@ -671,7 +617,6 @@ Classifications元素的Value长度不能超过200个字符。
         this.setParamArrayObj(map, prefix + "MultiConditions.", this.MultiConditions);
         this.setParamSimple(map, prefix + "TriggerCount", this.TriggerCount);
         this.setParamSimple(map, prefix + "AlarmPeriod", this.AlarmPeriod);
-        this.setParamArraySimple(map, prefix + "AlarmNoticeIds.", this.AlarmNoticeIds);
         this.setParamArrayObj(map, prefix + "AlarmTargets.", this.AlarmTargets);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Enable", this.Enable);
@@ -683,6 +628,8 @@ Classifications元素的Value长度不能超过200个字符。
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "MonitorObjectType", this.MonitorObjectType);
         this.setParamArrayObj(map, prefix + "Classifications.", this.Classifications);
+        this.setParamArraySimple(map, prefix + "AlarmNoticeIds.", this.AlarmNoticeIds);
+        this.setParamObj(map, prefix + "MonitorNotice.", this.MonitorNotice);
 
     }
 }

@@ -94,6 +94,13 @@ public class ListKeyDetailRequest extends AbstractModel {
     private String HsmClusterId;
 
     /**
+    * 可信服务成员账号信息数组
+    */
+    @SerializedName("MemberAccounts")
+    @Expose
+    private MemberAccount [] MemberAccounts;
+
+    /**
      * Get 含义跟 SQL 查询的 Offset 一致，表示本次获取从按一定顺序排列数组的第 Offset 个元素开始，缺省为0 
      * @return Offset 含义跟 SQL 查询的 Offset 一致，表示本次获取从按一定顺序排列数组的第 Offset 个元素开始，缺省为0
      */
@@ -253,6 +260,22 @@ public class ListKeyDetailRequest extends AbstractModel {
         this.HsmClusterId = HsmClusterId;
     }
 
+    /**
+     * Get 可信服务成员账号信息数组 
+     * @return MemberAccounts 可信服务成员账号信息数组
+     */
+    public MemberAccount [] getMemberAccounts() {
+        return this.MemberAccounts;
+    }
+
+    /**
+     * Set 可信服务成员账号信息数组
+     * @param MemberAccounts 可信服务成员账号信息数组
+     */
+    public void setMemberAccounts(MemberAccount [] MemberAccounts) {
+        this.MemberAccounts = MemberAccounts;
+    }
+
     public ListKeyDetailRequest() {
     }
 
@@ -294,6 +317,12 @@ public class ListKeyDetailRequest extends AbstractModel {
         if (source.HsmClusterId != null) {
             this.HsmClusterId = new String(source.HsmClusterId);
         }
+        if (source.MemberAccounts != null) {
+            this.MemberAccounts = new MemberAccount[source.MemberAccounts.length];
+            for (int i = 0; i < source.MemberAccounts.length; i++) {
+                this.MemberAccounts[i] = new MemberAccount(source.MemberAccounts[i]);
+            }
+        }
     }
 
 
@@ -311,6 +340,7 @@ public class ListKeyDetailRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "KeyUsage", this.KeyUsage);
         this.setParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
         this.setParamSimple(map, prefix + "HsmClusterId", this.HsmClusterId);
+        this.setParamArrayObj(map, prefix + "MemberAccounts.", this.MemberAccounts);
 
     }
 }

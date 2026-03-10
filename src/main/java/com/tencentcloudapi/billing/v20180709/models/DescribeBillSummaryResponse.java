@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeBillSummaryResponse extends AbstractModel {
 
     /**
-    * 数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）
+    * <p>数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）</p>
     */
     @SerializedName("Ready")
     @Expose
     private Long Ready;
 
     /**
-    * 账单多维度汇总消费详情
+    * <p>账单多维度汇总消费详情</p>
     */
     @SerializedName("SummaryDetail")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeBillSummaryResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可） 
-     * @return Ready 数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）
+     * Get <p>数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）</p> 
+     * @return Ready <p>数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）</p>
      */
     public Long getReady() {
         return this.Ready;
     }
 
     /**
-     * Set 数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）
-     * @param Ready 数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）
+     * Set <p>数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）</p>
+     * @param Ready <p>数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）</p>
      */
     public void setReady(Long Ready) {
         this.Ready = Ready;
     }
 
     /**
-     * Get 账单多维度汇总消费详情 
-     * @return SummaryDetail 账单多维度汇总消费详情
+     * Get <p>账单多维度汇总消费详情</p> 
+     * @return SummaryDetail <p>账单多维度汇总消费详情</p>
      */
     public SummaryDetail [] getSummaryDetail() {
         return this.SummaryDetail;
     }
 
     /**
-     * Set 账单多维度汇总消费详情
-     * @param SummaryDetail 账单多维度汇总消费详情
+     * Set <p>账单多维度汇总消费详情</p>
+     * @param SummaryDetail <p>账单多维度汇总消费详情</p>
      */
     public void setSummaryDetail(SummaryDetail [] SummaryDetail) {
         this.SummaryDetail = SummaryDetail;

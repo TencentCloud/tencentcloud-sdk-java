@@ -204,6 +204,17 @@ public class RumClient extends AbstractClient{
     }
 
     /**
+     *获取DescribeDataBridgeUrl信息
+     * @param req DescribeDataBridgeUrlV2Request
+     * @return DescribeDataBridgeUrlV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataBridgeUrlV2Response DescribeDataBridgeUrlV2(DescribeDataBridgeUrlV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataBridgeUrlV2", DescribeDataBridgeUrlV2Response.class);
+    }
+
+    /**
      *获取DescribeDataCustomUrl信息
      * @param req DescribeDataCustomUrlRequest
      * @return DescribeDataCustomUrlResponse
@@ -215,6 +226,17 @@ public class RumClient extends AbstractClient{
     }
 
     /**
+     *获取DescribeDataCustomUrl信息
+     * @param req DescribeDataCustomUrlV2Request
+     * @return DescribeDataCustomUrlV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataCustomUrlV2Response DescribeDataCustomUrlV2(DescribeDataCustomUrlV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataCustomUrlV2", DescribeDataCustomUrlV2Response.class);
+    }
+
+    /**
      *获取DescribeDataEventUrl信息
      * @param req DescribeDataEventUrlRequest
      * @return DescribeDataEventUrlResponse
@@ -223,6 +245,17 @@ public class RumClient extends AbstractClient{
     public DescribeDataEventUrlResponse DescribeDataEventUrl(DescribeDataEventUrlRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDataEventUrl", DescribeDataEventUrlResponse.class);
+    }
+
+    /**
+     *获取DescribeDataEventUrl信息
+     * @param req DescribeDataEventUrlV2Request
+     * @return DescribeDataEventUrlV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataEventUrlV2Response DescribeDataEventUrlV2(DescribeDataEventUrlV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataEventUrlV2", DescribeDataEventUrlV2Response.class);
     }
 
     /**
@@ -259,6 +292,17 @@ public class RumClient extends AbstractClient{
     }
 
     /**
+     *获取DescribeDataFetchUrl信息
+     * @param req DescribeDataFetchUrlV2Request
+     * @return DescribeDataFetchUrlV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataFetchUrlV2Response DescribeDataFetchUrlV2(DescribeDataFetchUrlV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataFetchUrlV2", DescribeDataFetchUrlV2Response.class);
+    }
+
+    /**
      *获取loginfo信息
      * @param req DescribeDataLogUrlInfoRequest
      * @return DescribeDataLogUrlInfoResponse
@@ -281,6 +325,17 @@ public class RumClient extends AbstractClient{
     }
 
     /**
+     *获取LogUrlStatistics信息
+     * @param req DescribeDataLogUrlStatisticsV2Request
+     * @return DescribeDataLogUrlStatisticsV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataLogUrlStatisticsV2Response DescribeDataLogUrlStatisticsV2(DescribeDataLogUrlStatisticsV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataLogUrlStatisticsV2", DescribeDataLogUrlStatisticsV2Response.class);
+    }
+
+    /**
      *获取PerformancePage信息
      * @param req DescribeDataPerformancePageRequest
      * @return DescribeDataPerformancePageResponse
@@ -289,6 +344,17 @@ public class RumClient extends AbstractClient{
     public DescribeDataPerformancePageResponse DescribeDataPerformancePage(DescribeDataPerformancePageRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDataPerformancePage", DescribeDataPerformancePageResponse.class);
+    }
+
+    /**
+     *获取PerformancePage信息
+     * @param req DescribeDataPerformancePageV2Request
+     * @return DescribeDataPerformancePageV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataPerformancePageV2Response DescribeDataPerformancePageV2(DescribeDataPerformancePageV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataPerformancePageV2", DescribeDataPerformancePageV2Response.class);
     }
 
     /**
@@ -358,6 +424,17 @@ public class RumClient extends AbstractClient{
     }
 
     /**
+     *获取DescribeDataSetUrlStatistics信息
+     * @param req DescribeDataSetUrlStatisticsV2Request
+     * @return DescribeDataSetUrlStatisticsV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataSetUrlStatisticsV2Response DescribeDataSetUrlStatisticsV2(DescribeDataSetUrlStatisticsV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataSetUrlStatisticsV2", DescribeDataSetUrlStatisticsV2Response.class);
+    }
+
+    /**
      *获取DescribeDataStaticProject信息
      * @param req DescribeDataStaticProjectRequest
      * @return DescribeDataStaticProjectResponse
@@ -366,6 +443,17 @@ public class RumClient extends AbstractClient{
     public DescribeDataStaticProjectResponse DescribeDataStaticProject(DescribeDataStaticProjectRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDataStaticProject", DescribeDataStaticProjectResponse.class);
+    }
+
+    /**
+     *获取DescribeDataStaticProject信息
+     * @param req DescribeDataStaticProjectV2Request
+     * @return DescribeDataStaticProjectV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataStaticProjectV2Response DescribeDataStaticProjectV2(DescribeDataStaticProjectV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataStaticProjectV2", DescribeDataStaticProjectV2Response.class);
     }
 
     /**
@@ -380,6 +468,17 @@ public class RumClient extends AbstractClient{
     }
 
     /**
+     *获取DescribeDataStaticResource信息
+     * @param req DescribeDataStaticResourceV2Request
+     * @return DescribeDataStaticResourceV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataStaticResourceV2Response DescribeDataStaticResourceV2(DescribeDataStaticResourceV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataStaticResourceV2", DescribeDataStaticResourceV2Response.class);
+    }
+
+    /**
      *获取DescribeDataStaticUrl信息
      * @param req DescribeDataStaticUrlRequest
      * @return DescribeDataStaticUrlResponse
@@ -388,6 +487,17 @@ public class RumClient extends AbstractClient{
     public DescribeDataStaticUrlResponse DescribeDataStaticUrl(DescribeDataStaticUrlRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDataStaticUrl", DescribeDataStaticUrlResponse.class);
+    }
+
+    /**
+     *获取DescribeDataStaticUrl信息
+     * @param req DescribeDataStaticUrlV2Request
+     * @return DescribeDataStaticUrlV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataStaticUrlV2Response DescribeDataStaticUrlV2(DescribeDataStaticUrlV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataStaticUrlV2", DescribeDataStaticUrlV2Response.class);
     }
 
     /**
@@ -400,6 +510,18 @@ public class RumClient extends AbstractClient{
     public DescribeDataWebVitalsPageResponse DescribeDataWebVitalsPage(DescribeDataWebVitalsPageRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDataWebVitalsPage", DescribeDataWebVitalsPageResponse.class);
+    }
+
+    /**
+     *获取DescribeDataWebVitalsPage信息，用户核心活动信息
+页面加载性能之Web Vitals。性能关键点
+     * @param req DescribeDataWebVitalsPageV2Request
+     * @return DescribeDataWebVitalsPageV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataWebVitalsPageV2Response DescribeDataWebVitalsPageV2(DescribeDataWebVitalsPageV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataWebVitalsPageV2", DescribeDataWebVitalsPageV2Response.class);
     }
 
     /**
@@ -532,6 +654,17 @@ public class RumClient extends AbstractClient{
     public DescribeScoresResponse DescribeScores(DescribeScoresRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeScores", DescribeScoresResponse.class);
+    }
+
+    /**
+     *获取首页分数列表
+     * @param req DescribeScoresV2Request
+     * @return DescribeScoresV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DescribeScoresV2Response DescribeScoresV2(DescribeScoresV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeScoresV2", DescribeScoresV2Response.class);
     }
 
     /**

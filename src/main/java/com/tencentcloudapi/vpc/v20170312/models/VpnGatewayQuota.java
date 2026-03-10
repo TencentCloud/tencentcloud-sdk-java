@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class VpnGatewayQuota extends AbstractModel {
 
     /**
-    * 带宽配额
+    * 带宽配额，单位：Mbps。
     */
     @SerializedName("Bandwidth")
     @Expose
@@ -45,16 +45,16 @@ public class VpnGatewayQuota extends AbstractModel {
     private String Name;
 
     /**
-     * Get 带宽配额 
-     * @return Bandwidth 带宽配额
+     * Get 带宽配额，单位：Mbps。 
+     * @return Bandwidth 带宽配额，单位：Mbps。
      */
     public Long getBandwidth() {
         return this.Bandwidth;
     }
 
     /**
-     * Set 带宽配额
-     * @param Bandwidth 带宽配额
+     * Set 带宽配额，单位：Mbps。
+     * @param Bandwidth 带宽配额，单位：Mbps。
      */
     public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;
