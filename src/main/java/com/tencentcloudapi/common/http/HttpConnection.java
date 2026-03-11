@@ -73,33 +73,10 @@ public class HttpConnection {
         return this.client.newCall(request).execute();
     }
 
-    public Response getRequest(String url) throws TencentCloudSDKException, IOException {
-        Request request = null;
-        try {
-            request = new Request.Builder().url(url).get().build();
-        } catch (IllegalArgumentException e) {
-            throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
-        }
-
-        return this.doRequest(request);
-    }
-
     public Response getRequest(String url, Headers headers) throws TencentCloudSDKException, IOException {
         Request request = null;
         try {
             request = new Request.Builder().url(url).headers(headers).get().build();
-        } catch (IllegalArgumentException e) {
-            throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
-        }
-
-        return this.doRequest(request);
-    }
-
-    public Response postRequest(String url, String body) throws TencentCloudSDKException, IOException {
-        MediaType contentType = MediaType.parse("application/x-www-form-urlencoded");
-        Request request = null;
-        try {
-            request = new Request.Builder().url(url).post(RequestBody.create(contentType, body)).build();
         } catch (IllegalArgumentException e) {
             throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
         }
