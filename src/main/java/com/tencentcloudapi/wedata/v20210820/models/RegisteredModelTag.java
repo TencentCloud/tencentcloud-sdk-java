@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.sms.v20190711.models;
+package com.tencentcloudapi.wedata.v20210820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteSmsSignRequest extends AbstractModel {
+public class RegisteredModelTag extends AbstractModel {
 
     /**
-    * <p>待删除的签名 ID。</p>
+    * tag key
     */
-    @SerializedName("SignId")
+    @SerializedName("Key")
     @Expose
-    private Long SignId;
+    private String Key;
 
     /**
-     * Get <p>待删除的签名 ID。</p> 
-     * @return SignId <p>待删除的签名 ID。</p>
+    * tag value
+    */
+    @SerializedName("Value")
+    @Expose
+    private String Value;
+
+    /**
+     * Get tag key 
+     * @return Key tag key
      */
-    public Long getSignId() {
-        return this.SignId;
+    public String getKey() {
+        return this.Key;
     }
 
     /**
-     * Set <p>待删除的签名 ID。</p>
-     * @param SignId <p>待删除的签名 ID。</p>
+     * Set tag key
+     * @param Key tag key
      */
-    public void setSignId(Long SignId) {
-        this.SignId = SignId;
+    public void setKey(String Key) {
+        this.Key = Key;
     }
 
-    public DeleteSmsSignRequest() {
+    /**
+     * Get tag value 
+     * @return Value tag value
+     */
+    public String getValue() {
+        return this.Value;
+    }
+
+    /**
+     * Set tag value
+     * @param Value tag value
+     */
+    public void setValue(String Value) {
+        this.Value = Value;
+    }
+
+    public RegisteredModelTag() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteSmsSignRequest(DeleteSmsSignRequest source) {
-        if (source.SignId != null) {
-            this.SignId = new Long(source.SignId);
+    public RegisteredModelTag(RegisteredModelTag source) {
+        if (source.Key != null) {
+            this.Key = new String(source.Key);
+        }
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
         }
     }
 
@@ -64,7 +90,8 @@ public class DeleteSmsSignRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "SignId", this.SignId);
+        this.setParamSimple(map, prefix + "Key", this.Key);
+        this.setParamSimple(map, prefix + "Value", this.Value);
 
     }
 }

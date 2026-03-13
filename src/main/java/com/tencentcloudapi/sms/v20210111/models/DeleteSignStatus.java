@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteSignStatus extends AbstractModel {
 
     /**
-    * 删除状态信息。
+    * <p>删除状态信息。</p>
     */
     @SerializedName("DeleteStatus")
     @Expose
     private String DeleteStatus;
 
     /**
-    * 删除时间，UNIX 时间戳（单位：秒）。
+    * <p>删除时间，UNIX 时间戳（单位：秒）。</p>
     */
     @SerializedName("DeleteTime")
     @Expose
     private Long DeleteTime;
 
     /**
-     * Get 删除状态信息。 
-     * @return DeleteStatus 删除状态信息。
+     * Get <p>删除状态信息。</p> 
+     * @return DeleteStatus <p>删除状态信息。</p>
      */
     public String getDeleteStatus() {
         return this.DeleteStatus;
     }
 
     /**
-     * Set 删除状态信息。
-     * @param DeleteStatus 删除状态信息。
+     * Set <p>删除状态信息。</p>
+     * @param DeleteStatus <p>删除状态信息。</p>
      */
     public void setDeleteStatus(String DeleteStatus) {
         this.DeleteStatus = DeleteStatus;
     }
 
     /**
-     * Get 删除时间，UNIX 时间戳（单位：秒）。 
-     * @return DeleteTime 删除时间，UNIX 时间戳（单位：秒）。
+     * Get <p>删除时间，UNIX 时间戳（单位：秒）。</p> 
+     * @return DeleteTime <p>删除时间，UNIX 时间戳（单位：秒）。</p>
      */
     public Long getDeleteTime() {
         return this.DeleteTime;
     }
 
     /**
-     * Set 删除时间，UNIX 时间戳（单位：秒）。
-     * @param DeleteTime 删除时间，UNIX 时间戳（单位：秒）。
+     * Set <p>删除时间，UNIX 时间戳（单位：秒）。</p>
+     * @param DeleteTime <p>删除时间，UNIX 时间戳（单位：秒）。</p>
      */
     public void setDeleteTime(Long DeleteTime) {
         this.DeleteTime = DeleteTime;

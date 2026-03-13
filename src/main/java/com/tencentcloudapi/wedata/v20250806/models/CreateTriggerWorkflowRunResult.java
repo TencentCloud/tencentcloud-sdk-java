@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.sms.v20190711.models;
+package com.tencentcloudapi.wedata.v20250806.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,46 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteSmsSignRequest extends AbstractModel {
+public class CreateTriggerWorkflowRunResult extends AbstractModel {
 
     /**
-    * <p>待删除的签名 ID。</p>
+    * 工作流执行id
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("SignId")
+    @SerializedName("WorkflowExecutionId")
     @Expose
-    private Long SignId;
+    private String WorkflowExecutionId;
 
     /**
-     * Get <p>待删除的签名 ID。</p> 
-     * @return SignId <p>待删除的签名 ID。</p>
+     * Get 工作流执行id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WorkflowExecutionId 工作流执行id
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getSignId() {
-        return this.SignId;
+    public String getWorkflowExecutionId() {
+        return this.WorkflowExecutionId;
     }
 
     /**
-     * Set <p>待删除的签名 ID。</p>
-     * @param SignId <p>待删除的签名 ID。</p>
+     * Set 工作流执行id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WorkflowExecutionId 工作流执行id
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setSignId(Long SignId) {
-        this.SignId = SignId;
+    public void setWorkflowExecutionId(String WorkflowExecutionId) {
+        this.WorkflowExecutionId = WorkflowExecutionId;
     }
 
-    public DeleteSmsSignRequest() {
+    public CreateTriggerWorkflowRunResult() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteSmsSignRequest(DeleteSmsSignRequest source) {
-        if (source.SignId != null) {
-            this.SignId = new Long(source.SignId);
+    public CreateTriggerWorkflowRunResult(CreateTriggerWorkflowRunResult source) {
+        if (source.WorkflowExecutionId != null) {
+            this.WorkflowExecutionId = new String(source.WorkflowExecutionId);
         }
     }
 
@@ -64,7 +69,7 @@ public class DeleteSmsSignRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "SignId", this.SignId);
+        this.setParamSimple(map, prefix + "WorkflowExecutionId", this.WorkflowExecutionId);
 
     }
 }

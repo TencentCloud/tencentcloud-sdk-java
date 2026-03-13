@@ -45,7 +45,7 @@ public class DescribeTableMetaResponse extends AbstractModel {
     */
     @SerializedName("TagVoteSumList")
     @Expose
-    private TagVoteSum TagVoteSumList;
+    private TagVoteSum [] TagVoteSumList;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -100,7 +100,7 @@ public class DescribeTableMetaResponse extends AbstractModel {
      * @return TagVoteSumList 标签
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public TagVoteSum getTagVoteSumList() {
+    public TagVoteSum [] getTagVoteSumList() {
         return this.TagVoteSumList;
     }
 
@@ -110,7 +110,7 @@ public class DescribeTableMetaResponse extends AbstractModel {
      * @param TagVoteSumList 标签
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTagVoteSumList(TagVoteSum TagVoteSumList) {
+    public void setTagVoteSumList(TagVoteSum [] TagVoteSumList) {
         this.TagVoteSumList = TagVoteSumList;
     }
 
@@ -145,7 +145,10 @@ public class DescribeTableMetaResponse extends AbstractModel {
             this.LifecycleInfo = new LifecycleInfo(source.LifecycleInfo);
         }
         if (source.TagVoteSumList != null) {
-            this.TagVoteSumList = new TagVoteSum(source.TagVoteSumList);
+            this.TagVoteSumList = new TagVoteSum[source.TagVoteSumList.length];
+            for (int i = 0; i < source.TagVoteSumList.length; i++) {
+                this.TagVoteSumList[i] = new TagVoteSum(source.TagVoteSumList[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -159,7 +162,7 @@ public class DescribeTableMetaResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "TableMeta.", this.TableMeta);
         this.setParamObj(map, prefix + "LifecycleInfo.", this.LifecycleInfo);
-        this.setParamObj(map, prefix + "TagVoteSumList.", this.TagVoteSumList);
+        this.setParamArrayObj(map, prefix + "TagVoteSumList.", this.TagVoteSumList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

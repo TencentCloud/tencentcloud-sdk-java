@@ -96,6 +96,14 @@ public class DataServiceRequestParam extends AbstractModel {
     private String Description;
 
     /**
+    * 关联标准编码
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StdCode")
+    @Expose
+    private String StdCode;
+
+    /**
      * Get 参数名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ParamName 参数名称
@@ -275,6 +283,26 @@ public class DataServiceRequestParam extends AbstractModel {
         this.Description = Description;
     }
 
+    /**
+     * Get 关联标准编码
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StdCode 关联标准编码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStdCode() {
+        return this.StdCode;
+    }
+
+    /**
+     * Set 关联标准编码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StdCode 关联标准编码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStdCode(String StdCode) {
+        this.StdCode = StdCode;
+    }
+
     public DataServiceRequestParam() {
     }
 
@@ -310,6 +338,9 @@ public class DataServiceRequestParam extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.StdCode != null) {
+            this.StdCode = new String(source.StdCode);
+        }
     }
 
 
@@ -326,6 +357,7 @@ public class DataServiceRequestParam extends AbstractModel {
         this.setParamSimple(map, prefix + "DefaultValue", this.DefaultValue);
         this.setParamSimple(map, prefix + "ExampleValue", this.ExampleValue);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "StdCode", this.StdCode);
 
     }
 }

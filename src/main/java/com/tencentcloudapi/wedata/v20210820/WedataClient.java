@@ -919,6 +919,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *查询数据资产列表
+     * @param req DescribeDataAssetsRequest
+     * @return DescribeDataAssetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataAssetsResponse DescribeDataAssets(DescribeDataAssetsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataAssets", DescribeDataAssetsResponse.class);
+    }
+
+    /**
      *数据质量的概览页面数据监测情况接口
      * @param req DescribeDataCheckStatRequest
      * @return DescribeDataCheckStatResponse

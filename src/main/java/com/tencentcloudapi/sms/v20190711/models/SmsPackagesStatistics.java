@@ -24,230 +24,230 @@ import java.util.HashMap;
 public class SmsPackagesStatistics extends AbstractModel {
 
     /**
-    * 套餐包创建时间，标准时间，例如：2019-10-08 17:18:37。
+    * <p>套餐包创建时间，标准时间，例如：2019-10-08 17:18:37。</p>
     */
     @SerializedName("PackageCreateTime")
     @Expose
     private String PackageCreateTime;
 
     /**
-    * 套餐包创建时间，UNIX 时间戳（单位：秒）。
+    * <p>套餐包创建时间，UNIX 时间戳。</p><p>单位：秒</p>
     */
     @SerializedName("PackageCreateUnixTime")
     @Expose
     private Long PackageCreateUnixTime;
 
     /**
-    * 套餐包生效时间，标准时间，例如：2019-10-08 17:18:37。
+    * <p>套餐包生效时间，标准时间，例如：2019-10-08 17:18:37。</p>
     */
     @SerializedName("PackageEffectiveTime")
     @Expose
     private String PackageEffectiveTime;
 
     /**
-    * 套餐包生效时间，UNIX 时间戳（单位：秒）。
+    * <p>套餐包生效时间，UNIX 时间戳。</p><p>单位：秒</p>
     */
     @SerializedName("PackageEffectiveUnixTime")
     @Expose
     private Long PackageEffectiveUnixTime;
 
     /**
-    * 套餐包过期时间，标准时间，例如：2019-10-08 17:18:37。
+    * <p>套餐包过期时间，标准时间，例如：2019-10-08 17:18:37。</p>
     */
     @SerializedName("PackageExpiredTime")
     @Expose
     private String PackageExpiredTime;
 
     /**
-    * 套餐包过期时间，UNIX 时间戳（单位：秒）。
+    * <p>套餐包过期时间，UNIX 时间戳。</p><p>单位：秒</p>
     */
     @SerializedName("PackageExpiredUnixTime")
     @Expose
     private Long PackageExpiredUnixTime;
 
     /**
-    * 套餐包条数。
+    * <p>套餐包条数。</p><p>单位：条</p>
     */
     @SerializedName("AmountOfPackage")
     @Expose
     private Long AmountOfPackage;
 
     /**
-    * 0表示赠送套餐包，1表示购买套餐包。
+    * <p>套餐包类别。</p><p>枚举值：</p><ul><li>0： 赠送套餐包</li><li>1： 购买套餐包</li></ul>
     */
     @SerializedName("TypeOfPackage")
     @Expose
     private Long TypeOfPackage;
 
     /**
-    * 套餐包 ID。
+    * <p>套餐包 ID。</p>
     */
     @SerializedName("PackageId")
     @Expose
     private Long PackageId;
 
     /**
-    * 当前使用量。
+    * <p>当前使用量。</p><p>单位：条</p>
     */
     @SerializedName("CurrentUsage")
     @Expose
     private Long CurrentUsage;
 
     /**
-     * Get 套餐包创建时间，标准时间，例如：2019-10-08 17:18:37。 
-     * @return PackageCreateTime 套餐包创建时间，标准时间，例如：2019-10-08 17:18:37。
+     * Get <p>套餐包创建时间，标准时间，例如：2019-10-08 17:18:37。</p> 
+     * @return PackageCreateTime <p>套餐包创建时间，标准时间，例如：2019-10-08 17:18:37。</p>
      */
     public String getPackageCreateTime() {
         return this.PackageCreateTime;
     }
 
     /**
-     * Set 套餐包创建时间，标准时间，例如：2019-10-08 17:18:37。
-     * @param PackageCreateTime 套餐包创建时间，标准时间，例如：2019-10-08 17:18:37。
+     * Set <p>套餐包创建时间，标准时间，例如：2019-10-08 17:18:37。</p>
+     * @param PackageCreateTime <p>套餐包创建时间，标准时间，例如：2019-10-08 17:18:37。</p>
      */
     public void setPackageCreateTime(String PackageCreateTime) {
         this.PackageCreateTime = PackageCreateTime;
     }
 
     /**
-     * Get 套餐包创建时间，UNIX 时间戳（单位：秒）。 
-     * @return PackageCreateUnixTime 套餐包创建时间，UNIX 时间戳（单位：秒）。
+     * Get <p>套餐包创建时间，UNIX 时间戳。</p><p>单位：秒</p> 
+     * @return PackageCreateUnixTime <p>套餐包创建时间，UNIX 时间戳。</p><p>单位：秒</p>
      */
     public Long getPackageCreateUnixTime() {
         return this.PackageCreateUnixTime;
     }
 
     /**
-     * Set 套餐包创建时间，UNIX 时间戳（单位：秒）。
-     * @param PackageCreateUnixTime 套餐包创建时间，UNIX 时间戳（单位：秒）。
+     * Set <p>套餐包创建时间，UNIX 时间戳。</p><p>单位：秒</p>
+     * @param PackageCreateUnixTime <p>套餐包创建时间，UNIX 时间戳。</p><p>单位：秒</p>
      */
     public void setPackageCreateUnixTime(Long PackageCreateUnixTime) {
         this.PackageCreateUnixTime = PackageCreateUnixTime;
     }
 
     /**
-     * Get 套餐包生效时间，标准时间，例如：2019-10-08 17:18:37。 
-     * @return PackageEffectiveTime 套餐包生效时间，标准时间，例如：2019-10-08 17:18:37。
+     * Get <p>套餐包生效时间，标准时间，例如：2019-10-08 17:18:37。</p> 
+     * @return PackageEffectiveTime <p>套餐包生效时间，标准时间，例如：2019-10-08 17:18:37。</p>
      */
     public String getPackageEffectiveTime() {
         return this.PackageEffectiveTime;
     }
 
     /**
-     * Set 套餐包生效时间，标准时间，例如：2019-10-08 17:18:37。
-     * @param PackageEffectiveTime 套餐包生效时间，标准时间，例如：2019-10-08 17:18:37。
+     * Set <p>套餐包生效时间，标准时间，例如：2019-10-08 17:18:37。</p>
+     * @param PackageEffectiveTime <p>套餐包生效时间，标准时间，例如：2019-10-08 17:18:37。</p>
      */
     public void setPackageEffectiveTime(String PackageEffectiveTime) {
         this.PackageEffectiveTime = PackageEffectiveTime;
     }
 
     /**
-     * Get 套餐包生效时间，UNIX 时间戳（单位：秒）。 
-     * @return PackageEffectiveUnixTime 套餐包生效时间，UNIX 时间戳（单位：秒）。
+     * Get <p>套餐包生效时间，UNIX 时间戳。</p><p>单位：秒</p> 
+     * @return PackageEffectiveUnixTime <p>套餐包生效时间，UNIX 时间戳。</p><p>单位：秒</p>
      */
     public Long getPackageEffectiveUnixTime() {
         return this.PackageEffectiveUnixTime;
     }
 
     /**
-     * Set 套餐包生效时间，UNIX 时间戳（单位：秒）。
-     * @param PackageEffectiveUnixTime 套餐包生效时间，UNIX 时间戳（单位：秒）。
+     * Set <p>套餐包生效时间，UNIX 时间戳。</p><p>单位：秒</p>
+     * @param PackageEffectiveUnixTime <p>套餐包生效时间，UNIX 时间戳。</p><p>单位：秒</p>
      */
     public void setPackageEffectiveUnixTime(Long PackageEffectiveUnixTime) {
         this.PackageEffectiveUnixTime = PackageEffectiveUnixTime;
     }
 
     /**
-     * Get 套餐包过期时间，标准时间，例如：2019-10-08 17:18:37。 
-     * @return PackageExpiredTime 套餐包过期时间，标准时间，例如：2019-10-08 17:18:37。
+     * Get <p>套餐包过期时间，标准时间，例如：2019-10-08 17:18:37。</p> 
+     * @return PackageExpiredTime <p>套餐包过期时间，标准时间，例如：2019-10-08 17:18:37。</p>
      */
     public String getPackageExpiredTime() {
         return this.PackageExpiredTime;
     }
 
     /**
-     * Set 套餐包过期时间，标准时间，例如：2019-10-08 17:18:37。
-     * @param PackageExpiredTime 套餐包过期时间，标准时间，例如：2019-10-08 17:18:37。
+     * Set <p>套餐包过期时间，标准时间，例如：2019-10-08 17:18:37。</p>
+     * @param PackageExpiredTime <p>套餐包过期时间，标准时间，例如：2019-10-08 17:18:37。</p>
      */
     public void setPackageExpiredTime(String PackageExpiredTime) {
         this.PackageExpiredTime = PackageExpiredTime;
     }
 
     /**
-     * Get 套餐包过期时间，UNIX 时间戳（单位：秒）。 
-     * @return PackageExpiredUnixTime 套餐包过期时间，UNIX 时间戳（单位：秒）。
+     * Get <p>套餐包过期时间，UNIX 时间戳。</p><p>单位：秒</p> 
+     * @return PackageExpiredUnixTime <p>套餐包过期时间，UNIX 时间戳。</p><p>单位：秒</p>
      */
     public Long getPackageExpiredUnixTime() {
         return this.PackageExpiredUnixTime;
     }
 
     /**
-     * Set 套餐包过期时间，UNIX 时间戳（单位：秒）。
-     * @param PackageExpiredUnixTime 套餐包过期时间，UNIX 时间戳（单位：秒）。
+     * Set <p>套餐包过期时间，UNIX 时间戳。</p><p>单位：秒</p>
+     * @param PackageExpiredUnixTime <p>套餐包过期时间，UNIX 时间戳。</p><p>单位：秒</p>
      */
     public void setPackageExpiredUnixTime(Long PackageExpiredUnixTime) {
         this.PackageExpiredUnixTime = PackageExpiredUnixTime;
     }
 
     /**
-     * Get 套餐包条数。 
-     * @return AmountOfPackage 套餐包条数。
+     * Get <p>套餐包条数。</p><p>单位：条</p> 
+     * @return AmountOfPackage <p>套餐包条数。</p><p>单位：条</p>
      */
     public Long getAmountOfPackage() {
         return this.AmountOfPackage;
     }
 
     /**
-     * Set 套餐包条数。
-     * @param AmountOfPackage 套餐包条数。
+     * Set <p>套餐包条数。</p><p>单位：条</p>
+     * @param AmountOfPackage <p>套餐包条数。</p><p>单位：条</p>
      */
     public void setAmountOfPackage(Long AmountOfPackage) {
         this.AmountOfPackage = AmountOfPackage;
     }
 
     /**
-     * Get 0表示赠送套餐包，1表示购买套餐包。 
-     * @return TypeOfPackage 0表示赠送套餐包，1表示购买套餐包。
+     * Get <p>套餐包类别。</p><p>枚举值：</p><ul><li>0： 赠送套餐包</li><li>1： 购买套餐包</li></ul> 
+     * @return TypeOfPackage <p>套餐包类别。</p><p>枚举值：</p><ul><li>0： 赠送套餐包</li><li>1： 购买套餐包</li></ul>
      */
     public Long getTypeOfPackage() {
         return this.TypeOfPackage;
     }
 
     /**
-     * Set 0表示赠送套餐包，1表示购买套餐包。
-     * @param TypeOfPackage 0表示赠送套餐包，1表示购买套餐包。
+     * Set <p>套餐包类别。</p><p>枚举值：</p><ul><li>0： 赠送套餐包</li><li>1： 购买套餐包</li></ul>
+     * @param TypeOfPackage <p>套餐包类别。</p><p>枚举值：</p><ul><li>0： 赠送套餐包</li><li>1： 购买套餐包</li></ul>
      */
     public void setTypeOfPackage(Long TypeOfPackage) {
         this.TypeOfPackage = TypeOfPackage;
     }
 
     /**
-     * Get 套餐包 ID。 
-     * @return PackageId 套餐包 ID。
+     * Get <p>套餐包 ID。</p> 
+     * @return PackageId <p>套餐包 ID。</p>
      */
     public Long getPackageId() {
         return this.PackageId;
     }
 
     /**
-     * Set 套餐包 ID。
-     * @param PackageId 套餐包 ID。
+     * Set <p>套餐包 ID。</p>
+     * @param PackageId <p>套餐包 ID。</p>
      */
     public void setPackageId(Long PackageId) {
         this.PackageId = PackageId;
     }
 
     /**
-     * Get 当前使用量。 
-     * @return CurrentUsage 当前使用量。
+     * Get <p>当前使用量。</p><p>单位：条</p> 
+     * @return CurrentUsage <p>当前使用量。</p><p>单位：条</p>
      */
     public Long getCurrentUsage() {
         return this.CurrentUsage;
     }
 
     /**
-     * Set 当前使用量。
-     * @param CurrentUsage 当前使用量。
+     * Set <p>当前使用量。</p><p>单位：条</p>
+     * @param CurrentUsage <p>当前使用量。</p><p>单位：条</p>
      */
     public void setCurrentUsage(Long CurrentUsage) {
         this.CurrentUsage = CurrentUsage;

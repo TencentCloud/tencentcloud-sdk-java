@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.sms.v20190711.models;
+package com.tencentcloudapi.wedata.v20250806.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,15 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteSmsSignResponse extends AbstractModel {
+public class CreateTriggerWorkflowRunResponse extends AbstractModel {
 
     /**
-    * <p>删除签名响应</p>
+    * 操作结果信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("DeleteSignStatus")
+    @SerializedName("Data")
     @Expose
-    private DeleteSignStatus DeleteSignStatus;
+    private CreateTriggerWorkflowRunResult Data;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +39,23 @@ public class DeleteSmsSignResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>删除签名响应</p> 
-     * @return DeleteSignStatus <p>删除签名响应</p>
+     * Get 操作结果信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Data 操作结果信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public DeleteSignStatus getDeleteSignStatus() {
-        return this.DeleteSignStatus;
+    public CreateTriggerWorkflowRunResult getData() {
+        return this.Data;
     }
 
     /**
-     * Set <p>删除签名响应</p>
-     * @param DeleteSignStatus <p>删除签名响应</p>
+     * Set 操作结果信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Data 操作结果信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setDeleteSignStatus(DeleteSignStatus DeleteSignStatus) {
-        this.DeleteSignStatus = DeleteSignStatus;
+    public void setData(CreateTriggerWorkflowRunResult Data) {
+        this.Data = Data;
     }
 
     /**
@@ -69,16 +74,16 @@ public class DeleteSmsSignResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DeleteSmsSignResponse() {
+    public CreateTriggerWorkflowRunResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteSmsSignResponse(DeleteSmsSignResponse source) {
-        if (source.DeleteSignStatus != null) {
-            this.DeleteSignStatus = new DeleteSignStatus(source.DeleteSignStatus);
+    public CreateTriggerWorkflowRunResponse(CreateTriggerWorkflowRunResponse source) {
+        if (source.Data != null) {
+            this.Data = new CreateTriggerWorkflowRunResult(source.Data);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +95,7 @@ public class DeleteSmsSignResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "DeleteSignStatus.", this.DeleteSignStatus);
+        this.setParamObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

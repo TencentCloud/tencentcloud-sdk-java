@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteSmsTemplateRequest extends AbstractModel {
 
     /**
-    * 待删除的模板 ID。
+    * <p>待删除的模板 ID。</p>
     */
     @SerializedName("TemplateId")
     @Expose
     private Long TemplateId;
 
     /**
-     * Get 待删除的模板 ID。 
-     * @return TemplateId 待删除的模板 ID。
+     * Get <p>待删除的模板 ID。</p> 
+     * @return TemplateId <p>待删除的模板 ID。</p>
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 待删除的模板 ID。
-     * @param TemplateId 待删除的模板 ID。
+     * Set <p>待删除的模板 ID。</p>
+     * @param TemplateId <p>待删除的模板 ID。</p>
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;

@@ -80,6 +80,14 @@ public class TaskImportInfo extends AbstractModel {
     private Long TaskNameExistMode;
 
     /**
+    * 工作流所属目录路径
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WorkFlowFolderPath")
+    @Expose
+    private String WorkFlowFolderPath;
+
+    /**
      * Get 是否导入编排空间
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return IsImport 是否导入编排空间
@@ -219,6 +227,26 @@ public class TaskImportInfo extends AbstractModel {
         this.TaskNameExistMode = TaskNameExistMode;
     }
 
+    /**
+     * Get 工作流所属目录路径
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WorkFlowFolderPath 工作流所属目录路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getWorkFlowFolderPath() {
+        return this.WorkFlowFolderPath;
+    }
+
+    /**
+     * Set 工作流所属目录路径
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WorkFlowFolderPath 工作流所属目录路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWorkFlowFolderPath(String WorkFlowFolderPath) {
+        this.WorkFlowFolderPath = WorkFlowFolderPath;
+    }
+
     public TaskImportInfo() {
     }
 
@@ -248,6 +276,9 @@ public class TaskImportInfo extends AbstractModel {
         if (source.TaskNameExistMode != null) {
             this.TaskNameExistMode = new Long(source.TaskNameExistMode);
         }
+        if (source.WorkFlowFolderPath != null) {
+            this.WorkFlowFolderPath = new String(source.WorkFlowFolderPath);
+        }
     }
 
 
@@ -262,6 +293,7 @@ public class TaskImportInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "WorkFlowId", this.WorkFlowId);
         this.setParamSimple(map, prefix + "WorkFlowName", this.WorkFlowName);
         this.setParamSimple(map, prefix + "TaskNameExistMode", this.TaskNameExistMode);
+        this.setParamSimple(map, prefix + "WorkFlowFolderPath", this.WorkFlowFolderPath);
 
     }
 }

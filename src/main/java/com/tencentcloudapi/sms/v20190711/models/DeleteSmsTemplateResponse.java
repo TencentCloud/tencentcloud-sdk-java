@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteSmsTemplateResponse extends AbstractModel {
 
     /**
-    * 删除模板响应
+    * <p>删除模板响应</p>
     */
     @SerializedName("DeleteTemplateStatus")
     @Expose
@@ -38,16 +38,16 @@ public class DeleteSmsTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 删除模板响应 
-     * @return DeleteTemplateStatus 删除模板响应
+     * Get <p>删除模板响应</p> 
+     * @return DeleteTemplateStatus <p>删除模板响应</p>
      */
     public DeleteTemplateStatus getDeleteTemplateStatus() {
         return this.DeleteTemplateStatus;
     }
 
     /**
-     * Set 删除模板响应
-     * @param DeleteTemplateStatus 删除模板响应
+     * Set <p>删除模板响应</p>
+     * @param DeleteTemplateStatus <p>删除模板响应</p>
      */
     public void setDeleteTemplateStatus(DeleteTemplateStatus DeleteTemplateStatus) {
         this.DeleteTemplateStatus = DeleteTemplateStatus;

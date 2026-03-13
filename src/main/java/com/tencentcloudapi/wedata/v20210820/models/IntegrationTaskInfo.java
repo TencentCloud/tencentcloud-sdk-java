@@ -453,6 +453,38 @@ public class IntegrationTaskInfo extends AbstractModel {
     private String ErrorMessage;
 
     /**
+    * 任务子状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskSubType")
+    @Expose
+    private Long TaskSubType;
+
+    /**
+    * 是否存在SavePoint, 0-存在, 1-不存在, null 为未知
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NotExistsCheckPoint")
+    @Expose
+    private Long NotExistsCheckPoint;
+
+    /**
+    * savepiontPath
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SavePointId")
+    @Expose
+    private String SavePointId;
+
+    /**
+    * savepiontId
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SavePointPath")
+    @Expose
+    private String SavePointPath;
+
+    /**
      * Get 任务名称 
      * @return TaskName 任务名称
      */
@@ -1520,6 +1552,86 @@ public class IntegrationTaskInfo extends AbstractModel {
         this.ErrorMessage = ErrorMessage;
     }
 
+    /**
+     * Get 任务子状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskSubType 任务子状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTaskSubType() {
+        return this.TaskSubType;
+    }
+
+    /**
+     * Set 任务子状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskSubType 任务子状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskSubType(Long TaskSubType) {
+        this.TaskSubType = TaskSubType;
+    }
+
+    /**
+     * Get 是否存在SavePoint, 0-存在, 1-不存在, null 为未知
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NotExistsCheckPoint 是否存在SavePoint, 0-存在, 1-不存在, null 为未知
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getNotExistsCheckPoint() {
+        return this.NotExistsCheckPoint;
+    }
+
+    /**
+     * Set 是否存在SavePoint, 0-存在, 1-不存在, null 为未知
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NotExistsCheckPoint 是否存在SavePoint, 0-存在, 1-不存在, null 为未知
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNotExistsCheckPoint(Long NotExistsCheckPoint) {
+        this.NotExistsCheckPoint = NotExistsCheckPoint;
+    }
+
+    /**
+     * Get savepiontPath
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SavePointId savepiontPath
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSavePointId() {
+        return this.SavePointId;
+    }
+
+    /**
+     * Set savepiontPath
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SavePointId savepiontPath
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSavePointId(String SavePointId) {
+        this.SavePointId = SavePointId;
+    }
+
+    /**
+     * Get savepiontId
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SavePointPath savepiontId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSavePointPath() {
+        return this.SavePointPath;
+    }
+
+    /**
+     * Set savepiontId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SavePointPath savepiontId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSavePointPath(String SavePointPath) {
+        this.SavePointPath = SavePointPath;
+    }
+
     public IntegrationTaskInfo() {
     }
 
@@ -1714,6 +1826,18 @@ public class IntegrationTaskInfo extends AbstractModel {
         if (source.ErrorMessage != null) {
             this.ErrorMessage = new String(source.ErrorMessage);
         }
+        if (source.TaskSubType != null) {
+            this.TaskSubType = new Long(source.TaskSubType);
+        }
+        if (source.NotExistsCheckPoint != null) {
+            this.NotExistsCheckPoint = new Long(source.NotExistsCheckPoint);
+        }
+        if (source.SavePointId != null) {
+            this.SavePointId = new String(source.SavePointId);
+        }
+        if (source.SavePointPath != null) {
+            this.SavePointPath = new String(source.SavePointPath);
+        }
     }
 
 
@@ -1775,6 +1899,10 @@ public class IntegrationTaskInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "CurrentSyncPosition", this.CurrentSyncPosition);
         this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
         this.setParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
+        this.setParamSimple(map, prefix + "TaskSubType", this.TaskSubType);
+        this.setParamSimple(map, prefix + "NotExistsCheckPoint", this.NotExistsCheckPoint);
+        this.setParamSimple(map, prefix + "SavePointId", this.SavePointId);
+        this.setParamSimple(map, prefix + "SavePointPath", this.SavePointPath);
 
     }
 }
