@@ -34,6 +34,13 @@ public class StartFlowResponse extends AbstractModel {
     private String Status;
 
     /**
+    * 发起审批流id，仅在CreateFlow时指定了WorkFlow=true时返回
+    */
+    @SerializedName("WorkflowInstanceId")
+    @Expose
+    private String WorkflowInstanceId;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -69,6 +76,22 @@ public class StartFlowResponse extends AbstractModel {
     }
 
     /**
+     * Get 发起审批流id，仅在CreateFlow时指定了WorkFlow=true时返回 
+     * @return WorkflowInstanceId 发起审批流id，仅在CreateFlow时指定了WorkFlow=true时返回
+     */
+    public String getWorkflowInstanceId() {
+        return this.WorkflowInstanceId;
+    }
+
+    /**
+     * Set 发起审批流id，仅在CreateFlow时指定了WorkFlow=true时返回
+     * @param WorkflowInstanceId 发起审批流id，仅在CreateFlow时指定了WorkFlow=true时返回
+     */
+    public void setWorkflowInstanceId(String WorkflowInstanceId) {
+        this.WorkflowInstanceId = WorkflowInstanceId;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -95,6 +118,9 @@ public class StartFlowResponse extends AbstractModel {
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.WorkflowInstanceId != null) {
+            this.WorkflowInstanceId = new String(source.WorkflowInstanceId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -106,6 +132,7 @@ public class StartFlowResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "WorkflowInstanceId", this.WorkflowInstanceId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

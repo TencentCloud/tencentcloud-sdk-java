@@ -119,6 +119,14 @@ public class DataConfig extends AbstractModel {
     private HostPath HostPathSource;
 
     /**
+    * 公有云数据源
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PublicDataSource")
+    @Expose
+    private PublicDataSourceFS PublicDataSource;
+
+    /**
      * Get 映射路径 
      * @return MappingPath 映射路径
      */
@@ -354,6 +362,26 @@ public class DataConfig extends AbstractModel {
         this.HostPathSource = HostPathSource;
     }
 
+    /**
+     * Get 公有云数据源
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PublicDataSource 公有云数据源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public PublicDataSourceFS getPublicDataSource() {
+        return this.PublicDataSource;
+    }
+
+    /**
+     * Set 公有云数据源
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PublicDataSource 公有云数据源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPublicDataSource(PublicDataSourceFS PublicDataSource) {
+        this.PublicDataSource = PublicDataSource;
+    }
+
     public DataConfig() {
     }
 
@@ -398,6 +426,9 @@ public class DataConfig extends AbstractModel {
         if (source.HostPathSource != null) {
             this.HostPathSource = new HostPath(source.HostPathSource);
         }
+        if (source.PublicDataSource != null) {
+            this.PublicDataSource = new PublicDataSourceFS(source.PublicDataSource);
+        }
     }
 
 
@@ -417,6 +448,7 @@ public class DataConfig extends AbstractModel {
         this.setParamObj(map, prefix + "LocalDiskSource.", this.LocalDiskSource);
         this.setParamObj(map, prefix + "CBSSource.", this.CBSSource);
         this.setParamObj(map, prefix + "HostPathSource.", this.HostPathSource);
+        this.setParamObj(map, prefix + "PublicDataSource.", this.PublicDataSource);
 
     }
 }

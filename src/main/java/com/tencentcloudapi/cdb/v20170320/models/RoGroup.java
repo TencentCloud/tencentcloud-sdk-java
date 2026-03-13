@@ -24,373 +24,368 @@ import java.util.HashMap;
 public class RoGroup extends AbstractModel {
 
     /**
-    * 只读组模式，可选值为：alone-系统自动分配只读组；allinone-新建只读组；join-使用现有只读组。
+    * <p>只读组模式，可选值为：alone-系统自动分配只读组；allinone-新建只读组；join-使用现有只读组。</p>
     */
     @SerializedName("RoGroupMode")
     @Expose
     private String RoGroupMode;
 
     /**
-    * 只读组 ID。
-说明：若此数据结构在购买实例操作中被使用，则当只读组模式选择 join 时，此项为必填。
+    * <p>只读组 ID。<br>说明：若此数据结构在购买实例操作中被使用，则当只读组模式选择 join 时，此项为必填。</p>
     */
     @SerializedName("RoGroupId")
     @Expose
     private String RoGroupId;
 
     /**
-    * 只读组名称。
+    * <p>只读组名称。</p>
     */
     @SerializedName("RoGroupName")
     @Expose
     private String RoGroupName;
 
     /**
-    * 是否启用延迟超限剔除功能，启用该功能后，只读实例与主实例的延迟超过延迟阈值，只读实例将被隔离。可选值：1-启用；0-不启用。
+    * <p>是否启用延迟超限剔除功能，启用该功能后，只读实例与主实例的延迟超过延迟阈值，只读实例将被隔离。可选值：1-启用；0-不启用。</p>
     */
     @SerializedName("RoOfflineDelay")
     @Expose
     private Long RoOfflineDelay;
 
     /**
-    * 延迟阈值。单位：秒。值范围：1-10000，整数。
+    * <p>延迟阈值。单位：秒。值范围：1-10000，整数。</p>
     */
     @SerializedName("RoMaxDelayTime")
     @Expose
     private Long RoMaxDelayTime;
 
     /**
-    * 最少实例保留个数，若购买只读实例数量小于设置数量将不做剔除。
+    * <p>最少实例保留个数，若购买只读实例数量小于设置数量将不做剔除。</p>
     */
     @SerializedName("MinRoInGroup")
     @Expose
     private Long MinRoInGroup;
 
     /**
-    * 读写权重分配模式，可选值：system-系统自动分配；custom-自定义。
+    * <p>读写权重分配模式，可选值：system-系统自动分配；custom-自定义。</p>
     */
     @SerializedName("WeightMode")
     @Expose
     private String WeightMode;
 
     /**
-    * 该字段已经废弃，无意义。查看只读实例的权重，请查看 RoInstances 字段里的 Weight 值。
+    * <p>该字段已经废弃，无意义。查看只读实例的权重，请查看 RoInstances 字段里的 Weight 值。</p>
     */
     @SerializedName("Weight")
     @Expose
     private Long Weight;
 
     /**
-    * 只读组中的只读实例详情。
+    * <p>只读组中的只读实例详情。</p>
     */
     @SerializedName("RoInstances")
     @Expose
     private RoInstanceInfo [] RoInstances;
 
     /**
-    * 只读组的内网 IP。
+    * <p>只读组的内网 IP。</p>
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * 只读组的内网端口号。
+    * <p>只读组的内网端口号。</p>
     */
     @SerializedName("Vport")
     @Expose
     private Long Vport;
 
     /**
-    * 私有网络 ID。
+    * <p>私有网络 ID。</p>
     */
     @SerializedName("UniqVpcId")
     @Expose
     private String UniqVpcId;
 
     /**
-    * 子网 ID。
+    * <p>子网 ID。</p>
     */
     @SerializedName("UniqSubnetId")
     @Expose
     private String UniqSubnetId;
 
     /**
-    * 只读组所在的地域。
+    * <p>只读组所在的地域。</p>
     */
     @SerializedName("RoGroupRegion")
     @Expose
     private String RoGroupRegion;
 
     /**
-    * 只读组所在的可用区。
+    * <p>只读组所在的可用区。</p>
     */
     @SerializedName("RoGroupZone")
     @Expose
     private String RoGroupZone;
 
     /**
-    * 延迟复制时间。单位：秒。值范围：1-259200，整数。
+    * <p>延迟复制时间。单位：秒。值范围：1-259200，整数。</p>
     */
     @SerializedName("DelayReplicationTime")
     @Expose
     private Long DelayReplicationTime;
 
     /**
-     * Get 只读组模式，可选值为：alone-系统自动分配只读组；allinone-新建只读组；join-使用现有只读组。 
-     * @return RoGroupMode 只读组模式，可选值为：alone-系统自动分配只读组；allinone-新建只读组；join-使用现有只读组。
+     * Get <p>只读组模式，可选值为：alone-系统自动分配只读组；allinone-新建只读组；join-使用现有只读组。</p> 
+     * @return RoGroupMode <p>只读组模式，可选值为：alone-系统自动分配只读组；allinone-新建只读组；join-使用现有只读组。</p>
      */
     public String getRoGroupMode() {
         return this.RoGroupMode;
     }
 
     /**
-     * Set 只读组模式，可选值为：alone-系统自动分配只读组；allinone-新建只读组；join-使用现有只读组。
-     * @param RoGroupMode 只读组模式，可选值为：alone-系统自动分配只读组；allinone-新建只读组；join-使用现有只读组。
+     * Set <p>只读组模式，可选值为：alone-系统自动分配只读组；allinone-新建只读组；join-使用现有只读组。</p>
+     * @param RoGroupMode <p>只读组模式，可选值为：alone-系统自动分配只读组；allinone-新建只读组；join-使用现有只读组。</p>
      */
     public void setRoGroupMode(String RoGroupMode) {
         this.RoGroupMode = RoGroupMode;
     }
 
     /**
-     * Get 只读组 ID。
-说明：若此数据结构在购买实例操作中被使用，则当只读组模式选择 join 时，此项为必填。 
-     * @return RoGroupId 只读组 ID。
-说明：若此数据结构在购买实例操作中被使用，则当只读组模式选择 join 时，此项为必填。
+     * Get <p>只读组 ID。<br>说明：若此数据结构在购买实例操作中被使用，则当只读组模式选择 join 时，此项为必填。</p> 
+     * @return RoGroupId <p>只读组 ID。<br>说明：若此数据结构在购买实例操作中被使用，则当只读组模式选择 join 时，此项为必填。</p>
      */
     public String getRoGroupId() {
         return this.RoGroupId;
     }
 
     /**
-     * Set 只读组 ID。
-说明：若此数据结构在购买实例操作中被使用，则当只读组模式选择 join 时，此项为必填。
-     * @param RoGroupId 只读组 ID。
-说明：若此数据结构在购买实例操作中被使用，则当只读组模式选择 join 时，此项为必填。
+     * Set <p>只读组 ID。<br>说明：若此数据结构在购买实例操作中被使用，则当只读组模式选择 join 时，此项为必填。</p>
+     * @param RoGroupId <p>只读组 ID。<br>说明：若此数据结构在购买实例操作中被使用，则当只读组模式选择 join 时，此项为必填。</p>
      */
     public void setRoGroupId(String RoGroupId) {
         this.RoGroupId = RoGroupId;
     }
 
     /**
-     * Get 只读组名称。 
-     * @return RoGroupName 只读组名称。
+     * Get <p>只读组名称。</p> 
+     * @return RoGroupName <p>只读组名称。</p>
      */
     public String getRoGroupName() {
         return this.RoGroupName;
     }
 
     /**
-     * Set 只读组名称。
-     * @param RoGroupName 只读组名称。
+     * Set <p>只读组名称。</p>
+     * @param RoGroupName <p>只读组名称。</p>
      */
     public void setRoGroupName(String RoGroupName) {
         this.RoGroupName = RoGroupName;
     }
 
     /**
-     * Get 是否启用延迟超限剔除功能，启用该功能后，只读实例与主实例的延迟超过延迟阈值，只读实例将被隔离。可选值：1-启用；0-不启用。 
-     * @return RoOfflineDelay 是否启用延迟超限剔除功能，启用该功能后，只读实例与主实例的延迟超过延迟阈值，只读实例将被隔离。可选值：1-启用；0-不启用。
+     * Get <p>是否启用延迟超限剔除功能，启用该功能后，只读实例与主实例的延迟超过延迟阈值，只读实例将被隔离。可选值：1-启用；0-不启用。</p> 
+     * @return RoOfflineDelay <p>是否启用延迟超限剔除功能，启用该功能后，只读实例与主实例的延迟超过延迟阈值，只读实例将被隔离。可选值：1-启用；0-不启用。</p>
      */
     public Long getRoOfflineDelay() {
         return this.RoOfflineDelay;
     }
 
     /**
-     * Set 是否启用延迟超限剔除功能，启用该功能后，只读实例与主实例的延迟超过延迟阈值，只读实例将被隔离。可选值：1-启用；0-不启用。
-     * @param RoOfflineDelay 是否启用延迟超限剔除功能，启用该功能后，只读实例与主实例的延迟超过延迟阈值，只读实例将被隔离。可选值：1-启用；0-不启用。
+     * Set <p>是否启用延迟超限剔除功能，启用该功能后，只读实例与主实例的延迟超过延迟阈值，只读实例将被隔离。可选值：1-启用；0-不启用。</p>
+     * @param RoOfflineDelay <p>是否启用延迟超限剔除功能，启用该功能后，只读实例与主实例的延迟超过延迟阈值，只读实例将被隔离。可选值：1-启用；0-不启用。</p>
      */
     public void setRoOfflineDelay(Long RoOfflineDelay) {
         this.RoOfflineDelay = RoOfflineDelay;
     }
 
     /**
-     * Get 延迟阈值。单位：秒。值范围：1-10000，整数。 
-     * @return RoMaxDelayTime 延迟阈值。单位：秒。值范围：1-10000，整数。
+     * Get <p>延迟阈值。单位：秒。值范围：1-10000，整数。</p> 
+     * @return RoMaxDelayTime <p>延迟阈值。单位：秒。值范围：1-10000，整数。</p>
      */
     public Long getRoMaxDelayTime() {
         return this.RoMaxDelayTime;
     }
 
     /**
-     * Set 延迟阈值。单位：秒。值范围：1-10000，整数。
-     * @param RoMaxDelayTime 延迟阈值。单位：秒。值范围：1-10000，整数。
+     * Set <p>延迟阈值。单位：秒。值范围：1-10000，整数。</p>
+     * @param RoMaxDelayTime <p>延迟阈值。单位：秒。值范围：1-10000，整数。</p>
      */
     public void setRoMaxDelayTime(Long RoMaxDelayTime) {
         this.RoMaxDelayTime = RoMaxDelayTime;
     }
 
     /**
-     * Get 最少实例保留个数，若购买只读实例数量小于设置数量将不做剔除。 
-     * @return MinRoInGroup 最少实例保留个数，若购买只读实例数量小于设置数量将不做剔除。
+     * Get <p>最少实例保留个数，若购买只读实例数量小于设置数量将不做剔除。</p> 
+     * @return MinRoInGroup <p>最少实例保留个数，若购买只读实例数量小于设置数量将不做剔除。</p>
      */
     public Long getMinRoInGroup() {
         return this.MinRoInGroup;
     }
 
     /**
-     * Set 最少实例保留个数，若购买只读实例数量小于设置数量将不做剔除。
-     * @param MinRoInGroup 最少实例保留个数，若购买只读实例数量小于设置数量将不做剔除。
+     * Set <p>最少实例保留个数，若购买只读实例数量小于设置数量将不做剔除。</p>
+     * @param MinRoInGroup <p>最少实例保留个数，若购买只读实例数量小于设置数量将不做剔除。</p>
      */
     public void setMinRoInGroup(Long MinRoInGroup) {
         this.MinRoInGroup = MinRoInGroup;
     }
 
     /**
-     * Get 读写权重分配模式，可选值：system-系统自动分配；custom-自定义。 
-     * @return WeightMode 读写权重分配模式，可选值：system-系统自动分配；custom-自定义。
+     * Get <p>读写权重分配模式，可选值：system-系统自动分配；custom-自定义。</p> 
+     * @return WeightMode <p>读写权重分配模式，可选值：system-系统自动分配；custom-自定义。</p>
      */
     public String getWeightMode() {
         return this.WeightMode;
     }
 
     /**
-     * Set 读写权重分配模式，可选值：system-系统自动分配；custom-自定义。
-     * @param WeightMode 读写权重分配模式，可选值：system-系统自动分配；custom-自定义。
+     * Set <p>读写权重分配模式，可选值：system-系统自动分配；custom-自定义。</p>
+     * @param WeightMode <p>读写权重分配模式，可选值：system-系统自动分配；custom-自定义。</p>
      */
     public void setWeightMode(String WeightMode) {
         this.WeightMode = WeightMode;
     }
 
     /**
-     * Get 该字段已经废弃，无意义。查看只读实例的权重，请查看 RoInstances 字段里的 Weight 值。 
-     * @return Weight 该字段已经废弃，无意义。查看只读实例的权重，请查看 RoInstances 字段里的 Weight 值。
+     * Get <p>该字段已经废弃，无意义。查看只读实例的权重，请查看 RoInstances 字段里的 Weight 值。</p> 
+     * @return Weight <p>该字段已经废弃，无意义。查看只读实例的权重，请查看 RoInstances 字段里的 Weight 值。</p>
      */
     public Long getWeight() {
         return this.Weight;
     }
 
     /**
-     * Set 该字段已经废弃，无意义。查看只读实例的权重，请查看 RoInstances 字段里的 Weight 值。
-     * @param Weight 该字段已经废弃，无意义。查看只读实例的权重，请查看 RoInstances 字段里的 Weight 值。
+     * Set <p>该字段已经废弃，无意义。查看只读实例的权重，请查看 RoInstances 字段里的 Weight 值。</p>
+     * @param Weight <p>该字段已经废弃，无意义。查看只读实例的权重，请查看 RoInstances 字段里的 Weight 值。</p>
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;
     }
 
     /**
-     * Get 只读组中的只读实例详情。 
-     * @return RoInstances 只读组中的只读实例详情。
+     * Get <p>只读组中的只读实例详情。</p> 
+     * @return RoInstances <p>只读组中的只读实例详情。</p>
      */
     public RoInstanceInfo [] getRoInstances() {
         return this.RoInstances;
     }
 
     /**
-     * Set 只读组中的只读实例详情。
-     * @param RoInstances 只读组中的只读实例详情。
+     * Set <p>只读组中的只读实例详情。</p>
+     * @param RoInstances <p>只读组中的只读实例详情。</p>
      */
     public void setRoInstances(RoInstanceInfo [] RoInstances) {
         this.RoInstances = RoInstances;
     }
 
     /**
-     * Get 只读组的内网 IP。 
-     * @return Vip 只读组的内网 IP。
+     * Get <p>只读组的内网 IP。</p> 
+     * @return Vip <p>只读组的内网 IP。</p>
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set 只读组的内网 IP。
-     * @param Vip 只读组的内网 IP。
+     * Set <p>只读组的内网 IP。</p>
+     * @param Vip <p>只读组的内网 IP。</p>
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get 只读组的内网端口号。 
-     * @return Vport 只读组的内网端口号。
+     * Get <p>只读组的内网端口号。</p> 
+     * @return Vport <p>只读组的内网端口号。</p>
      */
     public Long getVport() {
         return this.Vport;
     }
 
     /**
-     * Set 只读组的内网端口号。
-     * @param Vport 只读组的内网端口号。
+     * Set <p>只读组的内网端口号。</p>
+     * @param Vport <p>只读组的内网端口号。</p>
      */
     public void setVport(Long Vport) {
         this.Vport = Vport;
     }
 
     /**
-     * Get 私有网络 ID。 
-     * @return UniqVpcId 私有网络 ID。
+     * Get <p>私有网络 ID。</p> 
+     * @return UniqVpcId <p>私有网络 ID。</p>
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set 私有网络 ID。
-     * @param UniqVpcId 私有网络 ID。
+     * Set <p>私有网络 ID。</p>
+     * @param UniqVpcId <p>私有网络 ID。</p>
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get 子网 ID。 
-     * @return UniqSubnetId 子网 ID。
+     * Get <p>子网 ID。</p> 
+     * @return UniqSubnetId <p>子网 ID。</p>
      */
     public String getUniqSubnetId() {
         return this.UniqSubnetId;
     }
 
     /**
-     * Set 子网 ID。
-     * @param UniqSubnetId 子网 ID。
+     * Set <p>子网 ID。</p>
+     * @param UniqSubnetId <p>子网 ID。</p>
      */
     public void setUniqSubnetId(String UniqSubnetId) {
         this.UniqSubnetId = UniqSubnetId;
     }
 
     /**
-     * Get 只读组所在的地域。 
-     * @return RoGroupRegion 只读组所在的地域。
+     * Get <p>只读组所在的地域。</p> 
+     * @return RoGroupRegion <p>只读组所在的地域。</p>
      */
     public String getRoGroupRegion() {
         return this.RoGroupRegion;
     }
 
     /**
-     * Set 只读组所在的地域。
-     * @param RoGroupRegion 只读组所在的地域。
+     * Set <p>只读组所在的地域。</p>
+     * @param RoGroupRegion <p>只读组所在的地域。</p>
      */
     public void setRoGroupRegion(String RoGroupRegion) {
         this.RoGroupRegion = RoGroupRegion;
     }
 
     /**
-     * Get 只读组所在的可用区。 
-     * @return RoGroupZone 只读组所在的可用区。
+     * Get <p>只读组所在的可用区。</p> 
+     * @return RoGroupZone <p>只读组所在的可用区。</p>
      */
     public String getRoGroupZone() {
         return this.RoGroupZone;
     }
 
     /**
-     * Set 只读组所在的可用区。
-     * @param RoGroupZone 只读组所在的可用区。
+     * Set <p>只读组所在的可用区。</p>
+     * @param RoGroupZone <p>只读组所在的可用区。</p>
      */
     public void setRoGroupZone(String RoGroupZone) {
         this.RoGroupZone = RoGroupZone;
     }
 
     /**
-     * Get 延迟复制时间。单位：秒。值范围：1-259200，整数。 
-     * @return DelayReplicationTime 延迟复制时间。单位：秒。值范围：1-259200，整数。
+     * Get <p>延迟复制时间。单位：秒。值范围：1-259200，整数。</p> 
+     * @return DelayReplicationTime <p>延迟复制时间。单位：秒。值范围：1-259200，整数。</p>
      */
     public Long getDelayReplicationTime() {
         return this.DelayReplicationTime;
     }
 
     /**
-     * Set 延迟复制时间。单位：秒。值范围：1-259200，整数。
-     * @param DelayReplicationTime 延迟复制时间。单位：秒。值范围：1-259200，整数。
+     * Set <p>延迟复制时间。单位：秒。值范围：1-259200，整数。</p>
+     * @param DelayReplicationTime <p>延迟复制时间。单位：秒。值范围：1-259200，整数。</p>
      */
     public void setDelayReplicationTime(Long DelayReplicationTime) {
         this.DelayReplicationTime = DelayReplicationTime;

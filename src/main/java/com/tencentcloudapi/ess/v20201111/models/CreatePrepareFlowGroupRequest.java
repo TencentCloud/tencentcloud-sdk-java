@@ -61,6 +61,13 @@ public class CreatePrepareFlowGroupRequest extends AbstractModel {
     private Agent Agent;
 
     /**
+    * 合同组发起控制参数，当前仅支持FlowGroupNeedWorkflow，表示开启嵌入式合同组发起审批
+    */
+    @SerializedName("FlowGroupOptions")
+    @Expose
+    private FlowGroupOptions FlowGroupOptions;
+
+    /**
      * Get 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
      * @return Operator 执行本接口操作的员工信息。
@@ -148,6 +155,22 @@ public class CreatePrepareFlowGroupRequest extends AbstractModel {
         this.Agent = Agent;
     }
 
+    /**
+     * Get 合同组发起控制参数，当前仅支持FlowGroupNeedWorkflow，表示开启嵌入式合同组发起审批 
+     * @return FlowGroupOptions 合同组发起控制参数，当前仅支持FlowGroupNeedWorkflow，表示开启嵌入式合同组发起审批
+     */
+    public FlowGroupOptions getFlowGroupOptions() {
+        return this.FlowGroupOptions;
+    }
+
+    /**
+     * Set 合同组发起控制参数，当前仅支持FlowGroupNeedWorkflow，表示开启嵌入式合同组发起审批
+     * @param FlowGroupOptions 合同组发起控制参数，当前仅支持FlowGroupNeedWorkflow，表示开启嵌入式合同组发起审批
+     */
+    public void setFlowGroupOptions(FlowGroupOptions FlowGroupOptions) {
+        this.FlowGroupOptions = FlowGroupOptions;
+    }
+
     public CreatePrepareFlowGroupRequest() {
     }
 
@@ -174,6 +197,9 @@ public class CreatePrepareFlowGroupRequest extends AbstractModel {
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
         }
+        if (source.FlowGroupOptions != null) {
+            this.FlowGroupOptions = new FlowGroupOptions(source.FlowGroupOptions);
+        }
     }
 
 
@@ -186,6 +212,7 @@ public class CreatePrepareFlowGroupRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "FlowGroupInfos.", this.FlowGroupInfos);
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
+        this.setParamObj(map, prefix + "FlowGroupOptions.", this.FlowGroupOptions);
 
     }
 }

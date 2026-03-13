@@ -28,7 +28,7 @@ public class ExtendScene extends AbstractModel {
 印章来源类型包括下面几种：
 <ul>
 <li>CREATE-客户上传图片创建</li>
-<li>GENERATE-系统模版印章生成</li>
+<li>GENERATE-系统模板印章生成</li>
 <li>SIST_SEAL-深圳电子印章</li>
 </ul>
     */
@@ -56,14 +56,14 @@ public class ExtendScene extends AbstractModel {
 印章来源类型包括下面几种：
 <ul>
 <li>CREATE-客户上传图片创建</li>
-<li>GENERATE-系统模版印章生成</li>
+<li>GENERATE-系统模板印章生成</li>
 <li>SIST_SEAL-深圳电子印章</li>
 </ul> 
      * @return GenerateType 印章来源类型
 印章来源类型包括下面几种：
 <ul>
 <li>CREATE-客户上传图片创建</li>
-<li>GENERATE-系统模版印章生成</li>
+<li>GENERATE-系统模板印章生成</li>
 <li>SIST_SEAL-深圳电子印章</li>
 </ul>
      */
@@ -76,14 +76,14 @@ public class ExtendScene extends AbstractModel {
 印章来源类型包括下面几种：
 <ul>
 <li>CREATE-客户上传图片创建</li>
-<li>GENERATE-系统模版印章生成</li>
+<li>GENERATE-系统模板印章生成</li>
 <li>SIST_SEAL-深圳电子印章</li>
 </ul>
      * @param GenerateType 印章来源类型
 印章来源类型包括下面几种：
 <ul>
 <li>CREATE-客户上传图片创建</li>
-<li>GENERATE-系统模版印章生成</li>
+<li>GENERATE-系统模板印章生成</li>
 <li>SIST_SEAL-深圳电子印章</li>
 </ul>
      */

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.rum.v20210622.models;
+package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,21 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateTawInstanceResponse extends AbstractModel {
+public class CreateAigcCustomVoiceResponse extends AbstractModel {
 
     /**
-    * 实例Id
+    * <p>任务 ID。</p>
     */
-    @SerializedName("InstanceId")
+    @SerializedName("TaskId")
     @Expose
-    private String InstanceId;
-
-    /**
-    * 预付费订单 ，预付费不为null，后付费为null
-    */
-    @SerializedName("DealName")
-    @Expose
-    private String DealName;
+    private String TaskId;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +38,19 @@ public class CreateTawInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实例Id 
-     * @return InstanceId 实例Id
+     * Get <p>任务 ID。</p> 
+     * @return TaskId <p>任务 ID。</p>
      */
-    public String getInstanceId() {
-        return this.InstanceId;
+    public String getTaskId() {
+        return this.TaskId;
     }
 
     /**
-     * Set 实例Id
-     * @param InstanceId 实例Id
+     * Set <p>任务 ID。</p>
+     * @param TaskId <p>任务 ID。</p>
      */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
-    }
-
-    /**
-     * Get 预付费订单 ，预付费不为null，后付费为null 
-     * @return DealName 预付费订单 ，预付费不为null，后付费为null
-     */
-    public String getDealName() {
-        return this.DealName;
-    }
-
-    /**
-     * Set 预付费订单 ，预付费不为null，后付费为null
-     * @param DealName 预付费订单 ，预付费不为null，后付费为null
-     */
-    public void setDealName(String DealName) {
-        this.DealName = DealName;
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
     }
 
     /**
@@ -92,19 +69,16 @@ public class CreateTawInstanceResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreateTawInstanceResponse() {
+    public CreateAigcCustomVoiceResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateTawInstanceResponse(CreateTawInstanceResponse source) {
-        if (source.InstanceId != null) {
-            this.InstanceId = new String(source.InstanceId);
-        }
-        if (source.DealName != null) {
-            this.DealName = new String(source.DealName);
+    public CreateAigcCustomVoiceResponse(CreateAigcCustomVoiceResponse source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -116,8 +90,7 @@ public class CreateTawInstanceResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamSimple(map, prefix + "DealName", this.DealName);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

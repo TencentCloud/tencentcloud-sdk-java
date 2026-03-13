@@ -52,6 +52,13 @@ public class CreateFlowByFilesResponse extends AbstractModel {
     private ApproverItem [] Approvers;
 
     /**
+    * 发起审批流id，仅在CreateFlowByFiles时指定了WorkFlow=true时返回
+    */
+    @SerializedName("WorkflowInstanceId")
+    @Expose
+    private String WorkflowInstanceId;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -135,6 +142,22 @@ public class CreateFlowByFilesResponse extends AbstractModel {
     }
 
     /**
+     * Get 发起审批流id，仅在CreateFlowByFiles时指定了WorkFlow=true时返回 
+     * @return WorkflowInstanceId 发起审批流id，仅在CreateFlowByFiles时指定了WorkFlow=true时返回
+     */
+    public String getWorkflowInstanceId() {
+        return this.WorkflowInstanceId;
+    }
+
+    /**
+     * Set 发起审批流id，仅在CreateFlowByFiles时指定了WorkFlow=true时返回
+     * @param WorkflowInstanceId 发起审批流id，仅在CreateFlowByFiles时指定了WorkFlow=true时返回
+     */
+    public void setWorkflowInstanceId(String WorkflowInstanceId) {
+        this.WorkflowInstanceId = WorkflowInstanceId;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -170,6 +193,9 @@ public class CreateFlowByFilesResponse extends AbstractModel {
                 this.Approvers[i] = new ApproverItem(source.Approvers[i]);
             }
         }
+        if (source.WorkflowInstanceId != null) {
+            this.WorkflowInstanceId = new String(source.WorkflowInstanceId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -183,6 +209,7 @@ public class CreateFlowByFilesResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamSimple(map, prefix + "PreviewUrl", this.PreviewUrl);
         this.setParamArrayObj(map, prefix + "Approvers.", this.Approvers);
+        this.setParamSimple(map, prefix + "WorkflowInstanceId", this.WorkflowInstanceId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

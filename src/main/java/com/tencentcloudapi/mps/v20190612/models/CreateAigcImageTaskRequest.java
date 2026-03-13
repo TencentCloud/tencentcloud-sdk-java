@@ -24,272 +24,230 @@ import java.util.HashMap;
 public class CreateAigcImageTaskRequest extends AbstractModel {
 
     /**
-    * 模型名称。
-当前支持的模型列表：
-Hunyuan,
-GEM，
-Qwen。
+    * <p>模型名称。<br>当前支持的模型列表：<br>Hunyuan,<br>GEM，<br>Qwen。</p>
     */
     @SerializedName("ModelName")
     @Expose
     private String ModelName;
 
     /**
-    * 指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。
-
-1. GEM， 可选[2.5,3.0]。
+    * <p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。</p><ol><li>GEM， 可选[2.5,3.0]。</li></ol>
     */
     @SerializedName("ModelVersion")
     @Expose
     private String ModelVersion;
 
     /**
-    * 生成图片的描述。(注：最大支持1000字符)。当未传入参考图片时，此参数必填。
+    * <p>生成图片的描述。(注：最大支持1000字符)。当未传入参考图片时，此参数必填。</p>
     */
     @SerializedName("Prompt")
     @Expose
     private String Prompt;
 
     /**
-    * 用于描述您想要阻止模型生成的内容。 注意：部分模型支持。 例如： 顶部照明、明亮的色彩 人物、动物 多辆汽车、风。
+    * <p>用于描述您想要阻止模型生成的内容。 注意：部分模型支持。 例如： 顶部照明、明亮的色彩 人物、动物 多辆汽车、风。</p>
     */
     @SerializedName("NegativePrompt")
     @Expose
     private String NegativePrompt;
 
     /**
-    * 默认取值为False，模型会严格地遵循指令。如果需要更精细的prompt获得最佳效果，可将此参数设置为True，将自动优化传入的prompt，以提升生成质量。
+    * <p>默认取值为False，模型会严格地遵循指令。如果需要更精细的prompt获得最佳效果，可将此参数设置为True，将自动优化传入的prompt，以提升生成质量。</p>
     */
     @SerializedName("EnhancePrompt")
     @Expose
     private Boolean EnhancePrompt;
 
     /**
-    * 用于传入参考的资源图片信息，默认支持传入一张图片。
-
-支持多图输入的模型：
-1. GEM，可支持最多3张图片输入作为资源图。
-
-注意：
-1. 推荐图片小于7M，各模型限制不同。
-2. 图片格式支持：jpeg, png, webp。
+    * <p>用于传入参考的资源图片信息，默认支持传入一张图片。</p><p>支持多图输入的模型：</p><ol><li>GEM，可支持最多3张图片输入作为资源图。</li></ol><p>注意：</p><ol><li>推荐图片小于7M，各模型限制不同。</li><li>图片格式支持：jpeg, png, webp。</li></ol>
     */
     @SerializedName("ImageInfos")
     @Expose
     private AigcImageInfo [] ImageInfos;
 
     /**
-    * 用于传入模型要求的额外参数。
+    * <p>用于传入模型要求的额外参数。</p>
     */
     @SerializedName("ExtraParameters")
     @Expose
     private AigcImageExtraParam ExtraParameters;
 
     /**
-    * 文件结果指定存储Cos桶信息。 注意：需开通Cos，创建并授权MPS_QcsRole角色。
+    * <p>用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。 示例： {"size":"2048x2048"}</p>
+    */
+    @SerializedName("AdditionalParameters")
+    @Expose
+    private String AdditionalParameters;
+
+    /**
+    * <p>文件结果指定存储Cos桶信息。 注意：需开通Cos，创建并授权MPS_QcsRole角色。</p>
     */
     @SerializedName("StoreCosParam")
     @Expose
     private AigcStoreCosParam StoreCosParam;
 
     /**
-    * 接口操作者名称。
+    * <p>接口操作者名称。</p>
     */
     @SerializedName("Operator")
     @Expose
     private String Operator;
 
     /**
-     * Get 模型名称。
-当前支持的模型列表：
-Hunyuan,
-GEM，
-Qwen。 
-     * @return ModelName 模型名称。
-当前支持的模型列表：
-Hunyuan,
-GEM，
-Qwen。
+     * Get <p>模型名称。<br>当前支持的模型列表：<br>Hunyuan,<br>GEM，<br>Qwen。</p> 
+     * @return ModelName <p>模型名称。<br>当前支持的模型列表：<br>Hunyuan,<br>GEM，<br>Qwen。</p>
      */
     public String getModelName() {
         return this.ModelName;
     }
 
     /**
-     * Set 模型名称。
-当前支持的模型列表：
-Hunyuan,
-GEM，
-Qwen。
-     * @param ModelName 模型名称。
-当前支持的模型列表：
-Hunyuan,
-GEM，
-Qwen。
+     * Set <p>模型名称。<br>当前支持的模型列表：<br>Hunyuan,<br>GEM，<br>Qwen。</p>
+     * @param ModelName <p>模型名称。<br>当前支持的模型列表：<br>Hunyuan,<br>GEM，<br>Qwen。</p>
      */
     public void setModelName(String ModelName) {
         this.ModelName = ModelName;
     }
 
     /**
-     * Get 指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。
-
-1. GEM， 可选[2.5,3.0]。 
-     * @return ModelVersion 指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。
-
-1. GEM， 可选[2.5,3.0]。
+     * Get <p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。</p><ol><li>GEM， 可选[2.5,3.0]。</li></ol> 
+     * @return ModelVersion <p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。</p><ol><li>GEM， 可选[2.5,3.0]。</li></ol>
      */
     public String getModelVersion() {
         return this.ModelVersion;
     }
 
     /**
-     * Set 指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。
-
-1. GEM， 可选[2.5,3.0]。
-     * @param ModelVersion 指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。
-
-1. GEM， 可选[2.5,3.0]。
+     * Set <p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。</p><ol><li>GEM， 可选[2.5,3.0]。</li></ol>
+     * @param ModelVersion <p>指定模型特定版本号。默认使用系统当前所支持的模型稳定版本。</p><ol><li>GEM， 可选[2.5,3.0]。</li></ol>
      */
     public void setModelVersion(String ModelVersion) {
         this.ModelVersion = ModelVersion;
     }
 
     /**
-     * Get 生成图片的描述。(注：最大支持1000字符)。当未传入参考图片时，此参数必填。 
-     * @return Prompt 生成图片的描述。(注：最大支持1000字符)。当未传入参考图片时，此参数必填。
+     * Get <p>生成图片的描述。(注：最大支持1000字符)。当未传入参考图片时，此参数必填。</p> 
+     * @return Prompt <p>生成图片的描述。(注：最大支持1000字符)。当未传入参考图片时，此参数必填。</p>
      */
     public String getPrompt() {
         return this.Prompt;
     }
 
     /**
-     * Set 生成图片的描述。(注：最大支持1000字符)。当未传入参考图片时，此参数必填。
-     * @param Prompt 生成图片的描述。(注：最大支持1000字符)。当未传入参考图片时，此参数必填。
+     * Set <p>生成图片的描述。(注：最大支持1000字符)。当未传入参考图片时，此参数必填。</p>
+     * @param Prompt <p>生成图片的描述。(注：最大支持1000字符)。当未传入参考图片时，此参数必填。</p>
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
     }
 
     /**
-     * Get 用于描述您想要阻止模型生成的内容。 注意：部分模型支持。 例如： 顶部照明、明亮的色彩 人物、动物 多辆汽车、风。 
-     * @return NegativePrompt 用于描述您想要阻止模型生成的内容。 注意：部分模型支持。 例如： 顶部照明、明亮的色彩 人物、动物 多辆汽车、风。
+     * Get <p>用于描述您想要阻止模型生成的内容。 注意：部分模型支持。 例如： 顶部照明、明亮的色彩 人物、动物 多辆汽车、风。</p> 
+     * @return NegativePrompt <p>用于描述您想要阻止模型生成的内容。 注意：部分模型支持。 例如： 顶部照明、明亮的色彩 人物、动物 多辆汽车、风。</p>
      */
     public String getNegativePrompt() {
         return this.NegativePrompt;
     }
 
     /**
-     * Set 用于描述您想要阻止模型生成的内容。 注意：部分模型支持。 例如： 顶部照明、明亮的色彩 人物、动物 多辆汽车、风。
-     * @param NegativePrompt 用于描述您想要阻止模型生成的内容。 注意：部分模型支持。 例如： 顶部照明、明亮的色彩 人物、动物 多辆汽车、风。
+     * Set <p>用于描述您想要阻止模型生成的内容。 注意：部分模型支持。 例如： 顶部照明、明亮的色彩 人物、动物 多辆汽车、风。</p>
+     * @param NegativePrompt <p>用于描述您想要阻止模型生成的内容。 注意：部分模型支持。 例如： 顶部照明、明亮的色彩 人物、动物 多辆汽车、风。</p>
      */
     public void setNegativePrompt(String NegativePrompt) {
         this.NegativePrompt = NegativePrompt;
     }
 
     /**
-     * Get 默认取值为False，模型会严格地遵循指令。如果需要更精细的prompt获得最佳效果，可将此参数设置为True，将自动优化传入的prompt，以提升生成质量。 
-     * @return EnhancePrompt 默认取值为False，模型会严格地遵循指令。如果需要更精细的prompt获得最佳效果，可将此参数设置为True，将自动优化传入的prompt，以提升生成质量。
+     * Get <p>默认取值为False，模型会严格地遵循指令。如果需要更精细的prompt获得最佳效果，可将此参数设置为True，将自动优化传入的prompt，以提升生成质量。</p> 
+     * @return EnhancePrompt <p>默认取值为False，模型会严格地遵循指令。如果需要更精细的prompt获得最佳效果，可将此参数设置为True，将自动优化传入的prompt，以提升生成质量。</p>
      */
     public Boolean getEnhancePrompt() {
         return this.EnhancePrompt;
     }
 
     /**
-     * Set 默认取值为False，模型会严格地遵循指令。如果需要更精细的prompt获得最佳效果，可将此参数设置为True，将自动优化传入的prompt，以提升生成质量。
-     * @param EnhancePrompt 默认取值为False，模型会严格地遵循指令。如果需要更精细的prompt获得最佳效果，可将此参数设置为True，将自动优化传入的prompt，以提升生成质量。
+     * Set <p>默认取值为False，模型会严格地遵循指令。如果需要更精细的prompt获得最佳效果，可将此参数设置为True，将自动优化传入的prompt，以提升生成质量。</p>
+     * @param EnhancePrompt <p>默认取值为False，模型会严格地遵循指令。如果需要更精细的prompt获得最佳效果，可将此参数设置为True，将自动优化传入的prompt，以提升生成质量。</p>
      */
     public void setEnhancePrompt(Boolean EnhancePrompt) {
         this.EnhancePrompt = EnhancePrompt;
     }
 
     /**
-     * Get 用于传入参考的资源图片信息，默认支持传入一张图片。
-
-支持多图输入的模型：
-1. GEM，可支持最多3张图片输入作为资源图。
-
-注意：
-1. 推荐图片小于7M，各模型限制不同。
-2. 图片格式支持：jpeg, png, webp。 
-     * @return ImageInfos 用于传入参考的资源图片信息，默认支持传入一张图片。
-
-支持多图输入的模型：
-1. GEM，可支持最多3张图片输入作为资源图。
-
-注意：
-1. 推荐图片小于7M，各模型限制不同。
-2. 图片格式支持：jpeg, png, webp。
+     * Get <p>用于传入参考的资源图片信息，默认支持传入一张图片。</p><p>支持多图输入的模型：</p><ol><li>GEM，可支持最多3张图片输入作为资源图。</li></ol><p>注意：</p><ol><li>推荐图片小于7M，各模型限制不同。</li><li>图片格式支持：jpeg, png, webp。</li></ol> 
+     * @return ImageInfos <p>用于传入参考的资源图片信息，默认支持传入一张图片。</p><p>支持多图输入的模型：</p><ol><li>GEM，可支持最多3张图片输入作为资源图。</li></ol><p>注意：</p><ol><li>推荐图片小于7M，各模型限制不同。</li><li>图片格式支持：jpeg, png, webp。</li></ol>
      */
     public AigcImageInfo [] getImageInfos() {
         return this.ImageInfos;
     }
 
     /**
-     * Set 用于传入参考的资源图片信息，默认支持传入一张图片。
-
-支持多图输入的模型：
-1. GEM，可支持最多3张图片输入作为资源图。
-
-注意：
-1. 推荐图片小于7M，各模型限制不同。
-2. 图片格式支持：jpeg, png, webp。
-     * @param ImageInfos 用于传入参考的资源图片信息，默认支持传入一张图片。
-
-支持多图输入的模型：
-1. GEM，可支持最多3张图片输入作为资源图。
-
-注意：
-1. 推荐图片小于7M，各模型限制不同。
-2. 图片格式支持：jpeg, png, webp。
+     * Set <p>用于传入参考的资源图片信息，默认支持传入一张图片。</p><p>支持多图输入的模型：</p><ol><li>GEM，可支持最多3张图片输入作为资源图。</li></ol><p>注意：</p><ol><li>推荐图片小于7M，各模型限制不同。</li><li>图片格式支持：jpeg, png, webp。</li></ol>
+     * @param ImageInfos <p>用于传入参考的资源图片信息，默认支持传入一张图片。</p><p>支持多图输入的模型：</p><ol><li>GEM，可支持最多3张图片输入作为资源图。</li></ol><p>注意：</p><ol><li>推荐图片小于7M，各模型限制不同。</li><li>图片格式支持：jpeg, png, webp。</li></ol>
      */
     public void setImageInfos(AigcImageInfo [] ImageInfos) {
         this.ImageInfos = ImageInfos;
     }
 
     /**
-     * Get 用于传入模型要求的额外参数。 
-     * @return ExtraParameters 用于传入模型要求的额外参数。
+     * Get <p>用于传入模型要求的额外参数。</p> 
+     * @return ExtraParameters <p>用于传入模型要求的额外参数。</p>
      */
     public AigcImageExtraParam getExtraParameters() {
         return this.ExtraParameters;
     }
 
     /**
-     * Set 用于传入模型要求的额外参数。
-     * @param ExtraParameters 用于传入模型要求的额外参数。
+     * Set <p>用于传入模型要求的额外参数。</p>
+     * @param ExtraParameters <p>用于传入模型要求的额外参数。</p>
      */
     public void setExtraParameters(AigcImageExtraParam ExtraParameters) {
         this.ExtraParameters = ExtraParameters;
     }
 
     /**
-     * Get 文件结果指定存储Cos桶信息。 注意：需开通Cos，创建并授权MPS_QcsRole角色。 
-     * @return StoreCosParam 文件结果指定存储Cos桶信息。 注意：需开通Cos，创建并授权MPS_QcsRole角色。
+     * Get <p>用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。 示例： {"size":"2048x2048"}</p> 
+     * @return AdditionalParameters <p>用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。 示例： {"size":"2048x2048"}</p>
+     */
+    public String getAdditionalParameters() {
+        return this.AdditionalParameters;
+    }
+
+    /**
+     * Set <p>用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。 示例： {"size":"2048x2048"}</p>
+     * @param AdditionalParameters <p>用于传入一些模型需要的特殊场景参数，Json格式序列化成字符串。 示例： {"size":"2048x2048"}</p>
+     */
+    public void setAdditionalParameters(String AdditionalParameters) {
+        this.AdditionalParameters = AdditionalParameters;
+    }
+
+    /**
+     * Get <p>文件结果指定存储Cos桶信息。 注意：需开通Cos，创建并授权MPS_QcsRole角色。</p> 
+     * @return StoreCosParam <p>文件结果指定存储Cos桶信息。 注意：需开通Cos，创建并授权MPS_QcsRole角色。</p>
      */
     public AigcStoreCosParam getStoreCosParam() {
         return this.StoreCosParam;
     }
 
     /**
-     * Set 文件结果指定存储Cos桶信息。 注意：需开通Cos，创建并授权MPS_QcsRole角色。
-     * @param StoreCosParam 文件结果指定存储Cos桶信息。 注意：需开通Cos，创建并授权MPS_QcsRole角色。
+     * Set <p>文件结果指定存储Cos桶信息。 注意：需开通Cos，创建并授权MPS_QcsRole角色。</p>
+     * @param StoreCosParam <p>文件结果指定存储Cos桶信息。 注意：需开通Cos，创建并授权MPS_QcsRole角色。</p>
      */
     public void setStoreCosParam(AigcStoreCosParam StoreCosParam) {
         this.StoreCosParam = StoreCosParam;
     }
 
     /**
-     * Get 接口操作者名称。 
-     * @return Operator 接口操作者名称。
+     * Get <p>接口操作者名称。</p> 
+     * @return Operator <p>接口操作者名称。</p>
      */
     public String getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 接口操作者名称。
-     * @param Operator 接口操作者名称。
+     * Set <p>接口操作者名称。</p>
+     * @param Operator <p>接口操作者名称。</p>
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;
@@ -327,6 +285,9 @@ Qwen。
         if (source.ExtraParameters != null) {
             this.ExtraParameters = new AigcImageExtraParam(source.ExtraParameters);
         }
+        if (source.AdditionalParameters != null) {
+            this.AdditionalParameters = new String(source.AdditionalParameters);
+        }
         if (source.StoreCosParam != null) {
             this.StoreCosParam = new AigcStoreCosParam(source.StoreCosParam);
         }
@@ -347,6 +308,7 @@ Qwen。
         this.setParamSimple(map, prefix + "EnhancePrompt", this.EnhancePrompt);
         this.setParamArrayObj(map, prefix + "ImageInfos.", this.ImageInfos);
         this.setParamObj(map, prefix + "ExtraParameters.", this.ExtraParameters);
+        this.setParamSimple(map, prefix + "AdditionalParameters", this.AdditionalParameters);
         this.setParamObj(map, prefix + "StoreCosParam.", this.StoreCosParam);
         this.setParamSimple(map, prefix + "Operator", this.Operator);
 

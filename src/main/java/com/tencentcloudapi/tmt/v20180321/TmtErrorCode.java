@@ -1,8 +1,5 @@
 package com.tencentcloudapi.tmt.v20180321;
 public enum TmtErrorCode {
-     /* 操作失败。 */
-     FAILEDOPERATION("FailedOperation"),
-     
      /* 图片解码失败 */
      FAILEDOPERATION_DECODEERR("FailedOperation.DecodeErr"),
      
@@ -11,9 +8,6 @@ public enum TmtErrorCode {
      
      /* 用户区域与请求服务区域不一致。 */
      FAILEDOPERATION_ERRORUSERAREA("FailedOperation.ErrorUserArea"),
-     
-     /* 数据插入错误。 */
-     FAILEDOPERATION_INSERTERR("FailedOperation.InsertErr"),
      
      /* 暂时无法识别该语种。 */
      FAILEDOPERATION_LANGUAGERECOGNITIONERR("FailedOperation.LanguageRecognitionErr"),
@@ -29,15 +23,6 @@ public enum TmtErrorCode {
      
      /* 账号已停服。 */
      FAILEDOPERATION_STOPUSING("FailedOperation.StopUsing"),
-     
-     /* 当日提交任务数达到上限 */
-     FAILEDOPERATION_SUBMISSIONLIMITREACHED("FailedOperation.SubmissionLimitReached"),
-     
-     /* 过多未完成任务 */
-     FAILEDOPERATION_TOOMANYWAITPROCESS("FailedOperation.TooManyWaitProcess"),
-     
-     /* 本月免费额度已用完，如需继续使用您可以在机器翻译控制台购买资源包或开通后付费使用。 */
-     FAILEDOPERATION_USERHASNOFREEAMOUNT("FailedOperation.UserHasNoFreeAmount"),
      
      /* 服务未开通，请在腾讯云官网机器翻译控制台开通服务。 */
      FAILEDOPERATION_USERNOTREGISTERED("FailedOperation.UserNotRegistered"),
@@ -60,14 +45,8 @@ public enum TmtErrorCode {
      /* 参数错误。 */
      INVALIDPARAMETER("InvalidParameter"),
      
-     /* 重复的SessionUuid和Seq组合。 */
-     INVALIDPARAMETER_DUPLICATEDSESSIONIDANDSEQ("InvalidParameter.DuplicatedSessionIdAndSeq"),
-     
      /* 参数错误。 */
      INVALIDPARAMETER_MISSINGPARAMETER("InvalidParameter.MissingParameter"),
-     
-     /* Seq之间的间隙请不要大于2000。 */
-     INVALIDPARAMETER_SEQINTERVALTOOLARGE("InvalidParameter.SeqIntervalTooLarge"),
      
      /* 参数取值错误。 */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
@@ -89,9 +68,6 @@ public enum TmtErrorCode {
      
      /* 操作不支持。 */
      UNSUPPORTEDOPERATION("UnsupportedOperation"),
-     
-     /* 音频分片长度超过限制，请保证分片长度小于8s。 */
-     UNSUPPORTEDOPERATION_AUDIODURATIONEXCEED("UnsupportedOperation.AudioDurationExceed"),
      
      /* 单次请求text超过长度限制。 */
      UNSUPPORTEDOPERATION_TEXTTOOLONG("UnsupportedOperation.TextTooLong"),

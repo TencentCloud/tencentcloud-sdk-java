@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RecognizeTableAccurateOCRResponse extends AbstractModel {
 
     /**
-    * 检测到的文本信息，具体内容请点击左侧链接。
+    * <p>检测到的文本信息，具体内容请点击左侧链接。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableDetections")
@@ -32,14 +32,14 @@ public class RecognizeTableAccurateOCRResponse extends AbstractModel {
     private TableInfo [] TableDetections;
 
     /**
-    * Base64 编码后的 Excel 数据。
+    * <p>Base64 编码后的 Excel 数据。</p>
     */
     @SerializedName("Data")
     @Expose
     private String Data;
 
     /**
-    * 图片为PDF时，返回PDF的总页数，默认为0
+    * <p>图片为PDF时，返回PDF的总页数，默认为0</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PdfPageSize")
@@ -47,7 +47,7 @@ public class RecognizeTableAccurateOCRResponse extends AbstractModel {
     private Long PdfPageSize;
 
     /**
-    * 图片旋转角度（角度制），文本的水平方向为0°。
+    * <p>图片旋转角度（角度制），文本的水平方向为0°。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Angle")
@@ -62,9 +62,9 @@ public class RecognizeTableAccurateOCRResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 检测到的文本信息，具体内容请点击左侧链接。
+     * Get <p>检测到的文本信息，具体内容请点击左侧链接。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TableDetections 检测到的文本信息，具体内容请点击左侧链接。
+     * @return TableDetections <p>检测到的文本信息，具体内容请点击左侧链接。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TableInfo [] getTableDetections() {
@@ -72,9 +72,9 @@ public class RecognizeTableAccurateOCRResponse extends AbstractModel {
     }
 
     /**
-     * Set 检测到的文本信息，具体内容请点击左侧链接。
+     * Set <p>检测到的文本信息，具体内容请点击左侧链接。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TableDetections 检测到的文本信息，具体内容请点击左侧链接。
+     * @param TableDetections <p>检测到的文本信息，具体内容请点击左侧链接。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableDetections(TableInfo [] TableDetections) {
@@ -82,25 +82,25 @@ public class RecognizeTableAccurateOCRResponse extends AbstractModel {
     }
 
     /**
-     * Get Base64 编码后的 Excel 数据。 
-     * @return Data Base64 编码后的 Excel 数据。
+     * Get <p>Base64 编码后的 Excel 数据。</p> 
+     * @return Data <p>Base64 编码后的 Excel 数据。</p>
      */
     public String getData() {
         return this.Data;
     }
 
     /**
-     * Set Base64 编码后的 Excel 数据。
-     * @param Data Base64 编码后的 Excel 数据。
+     * Set <p>Base64 编码后的 Excel 数据。</p>
+     * @param Data <p>Base64 编码后的 Excel 数据。</p>
      */
     public void setData(String Data) {
         this.Data = Data;
     }
 
     /**
-     * Get 图片为PDF时，返回PDF的总页数，默认为0
+     * Get <p>图片为PDF时，返回PDF的总页数，默认为0</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PdfPageSize 图片为PDF时，返回PDF的总页数，默认为0
+     * @return PdfPageSize <p>图片为PDF时，返回PDF的总页数，默认为0</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPdfPageSize() {
@@ -108,9 +108,9 @@ public class RecognizeTableAccurateOCRResponse extends AbstractModel {
     }
 
     /**
-     * Set 图片为PDF时，返回PDF的总页数，默认为0
+     * Set <p>图片为PDF时，返回PDF的总页数，默认为0</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PdfPageSize 图片为PDF时，返回PDF的总页数，默认为0
+     * @param PdfPageSize <p>图片为PDF时，返回PDF的总页数，默认为0</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPdfPageSize(Long PdfPageSize) {
@@ -118,9 +118,9 @@ public class RecognizeTableAccurateOCRResponse extends AbstractModel {
     }
 
     /**
-     * Get 图片旋转角度（角度制），文本的水平方向为0°。
+     * Get <p>图片旋转角度（角度制），文本的水平方向为0°。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Angle 图片旋转角度（角度制），文本的水平方向为0°。
+     * @return Angle <p>图片旋转角度（角度制），文本的水平方向为0°。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getAngle() {
@@ -128,9 +128,9 @@ public class RecognizeTableAccurateOCRResponse extends AbstractModel {
     }
 
     /**
-     * Set 图片旋转角度（角度制），文本的水平方向为0°。
+     * Set <p>图片旋转角度（角度制），文本的水平方向为0°。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Angle 图片旋转角度（角度制），文本的水平方向为0°。
+     * @param Angle <p>图片旋转角度（角度制），文本的水平方向为0°。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAngle(Float Angle) {

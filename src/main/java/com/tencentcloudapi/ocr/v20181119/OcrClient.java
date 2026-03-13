@@ -195,7 +195,7 @@ public class OcrClient extends AbstractClient{
     /**
      *用于试题批改Agent查询任务。主要面向K12的试题批改产品，支持整卷/单题端到端（试卷切题+题目批改+手写坐标回显）处理，主要聚焦的场景包括试题批改（含手写答案）、试题解析（不含手写答案），其中低年级算式批改效果比线上[数学作业批改](https://cloud.tencent.com/document/product/1004)效果更好。精准输出题目、正误判定、答案对比、错误及知识点等结构化评估结果。
 
-默认接口请求并发限制：10题/分钟。
+默认接口请求并发限制：10张/分钟。
      * @param req DescribeQuestionMarkAgentJobRequest
      * @return DescribeQuestionMarkAgentJobResponse
      * @throws TencentCloudSDKException
@@ -1519,7 +1519,7 @@ public class OcrClient extends AbstractClient{
     /**
      *用于试题批改Agent提交任务。主要面向K12的试题批改产品，支持整卷/单题端到端（试卷切题+题目批改+手写坐标回显）处理，主要聚焦的场景包括试题批改（含手写答案）、试题解析（不含手写答案），其中低年级算式批改效果比线上[数学作业批改](https://cloud.tencent.com/document/product/1004)效果更好。精准输出题目、正误判定、答案对比、错误及知识点等结构化评估结果。
 
-默认接口请求并发限制：10题/分钟。
+默认接口请求并发限制：10张/分钟。
      * @param req SubmitQuestionMarkAgentJobRequest
      * @return SubmitQuestionMarkAgentJobResponse
      * @throws TencentCloudSDKException
@@ -1667,6 +1667,20 @@ public class OcrClient extends AbstractClient{
     public VehicleRegCertOCRResponse VehicleRegCertOCR(VehicleRegCertOCRRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "VehicleRegCertOCR", VehicleRegCertOCRResponse.class);
+    }
+
+    /**
+     *提供比对校验企业名称、统一社会信用代码、法人姓名、注册登记证件号码一致性的服务，助力快速核验企业资质。
+注意：
+存在个别特殊情况下核验结果不准确，请选用前知悉；
+按周更新企业信息变更情况，如遇到未及时更新的情况，可联系在线客服转产品团队进行人工处理。
+     * @param req VerifyBizLicenseEnterprise4Request
+     * @return VerifyBizLicenseEnterprise4Response
+     * @throws TencentCloudSDKException
+     */
+    public VerifyBizLicenseEnterprise4Response VerifyBizLicenseEnterprise4(VerifyBizLicenseEnterprise4Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "VerifyBizLicenseEnterprise4", VerifyBizLicenseEnterprise4Response.class);
     }
 
     /**

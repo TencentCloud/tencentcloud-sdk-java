@@ -224,6 +224,13 @@ public class CreatePrepareFlowRequest extends AbstractModel {
     private SignComponentConfig SignComponentConfig;
 
     /**
+    * 是否开启嵌入式合同发起时，提交发起审批流，默认：false（不开启），开启后，嵌入式合同发起后，会提交电子签内置审批流
+    */
+    @SerializedName("Workflow")
+    @Expose
+    private Boolean Workflow;
+
+    /**
      * Get 执行本接口操作的员工信息。使用此接口时，必须填写userId。
 支持填入集团子公司经办人 userId 代发合同。
 
@@ -775,6 +782,22 @@ public class CreatePrepareFlowRequest extends AbstractModel {
         this.SignComponentConfig = SignComponentConfig;
     }
 
+    /**
+     * Get 是否开启嵌入式合同发起时，提交发起审批流，默认：false（不开启），开启后，嵌入式合同发起后，会提交电子签内置审批流 
+     * @return Workflow 是否开启嵌入式合同发起时，提交发起审批流，默认：false（不开启），开启后，嵌入式合同发起后，会提交电子签内置审批流
+     */
+    public Boolean getWorkflow() {
+        return this.Workflow;
+    }
+
+    /**
+     * Set 是否开启嵌入式合同发起时，提交发起审批流，默认：false（不开启），开启后，嵌入式合同发起后，会提交电子签内置审批流
+     * @param Workflow 是否开启嵌入式合同发起时，提交发起审批流，默认：false（不开启），开启后，嵌入式合同发起后，会提交电子签内置审批流
+     */
+    public void setWorkflow(Boolean Workflow) {
+        this.Workflow = Workflow;
+    }
+
     public CreatePrepareFlowRequest() {
     }
 
@@ -855,6 +878,9 @@ public class CreatePrepareFlowRequest extends AbstractModel {
         if (source.SignComponentConfig != null) {
             this.SignComponentConfig = new SignComponentConfig(source.SignComponentConfig);
         }
+        if (source.Workflow != null) {
+            this.Workflow = new Boolean(source.Workflow);
+        }
     }
 
 
@@ -883,6 +909,7 @@ public class CreatePrepareFlowRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "InitiatorComponents.", this.InitiatorComponents);
         this.setParamSimple(map, prefix + "FlowDisplayType", this.FlowDisplayType);
         this.setParamObj(map, prefix + "SignComponentConfig.", this.SignComponentConfig);
+        this.setParamSimple(map, prefix + "Workflow", this.Workflow);
 
     }
 }

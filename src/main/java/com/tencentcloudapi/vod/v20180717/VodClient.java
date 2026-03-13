@@ -142,6 +142,17 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *该接口用于创建 AIGC 高级自定义主体。
+     * @param req CreateAigcAdvancedCustomElementRequest
+     * @return CreateAigcAdvancedCustomElementResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAigcAdvancedCustomElementResponse CreateAigcAdvancedCustomElement(CreateAigcAdvancedCustomElementRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAigcAdvancedCustomElement", CreateAigcAdvancedCustomElementResponse.class);
+    }
+
+    /**
      *创建AIGC调用API的Token。创建后数据同步有延时，约30秒后可查询或删除。
      * @param req CreateAigcApiTokenRequest
      * @return CreateAigcApiTokenResponse
@@ -161,6 +172,17 @@ public class VodClient extends AbstractClient{
     public CreateAigcCustomElementResponse CreateAigcCustomElement(CreateAigcCustomElementRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateAigcCustomElement", CreateAigcCustomElementResponse.class);
+    }
+
+    /**
+     *该接口用于创建 AIGC 自定义音色。
+     * @param req CreateAigcCustomVoiceRequest
+     * @return CreateAigcCustomVoiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAigcCustomVoiceResponse CreateAigcCustomVoice(CreateAigcCustomVoiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAigcCustomVoice", CreateAigcCustomVoiceResponse.class);
     }
 
     /**

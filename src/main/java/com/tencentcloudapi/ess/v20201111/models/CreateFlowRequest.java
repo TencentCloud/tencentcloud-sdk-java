@@ -202,6 +202,13 @@ public class CreateFlowRequest extends AbstractModel {
     private Long FlowDisplayType;
 
     /**
+    * 是否开启发起合同审批，默认：false（不开启），开启后，发起合同（StartFlow），会提交电子签内置的审批流
+    */
+    @SerializedName("Workflow")
+    @Expose
+    private Boolean Workflow;
+
+    /**
      * Get 本合同的发起人，<a href="https://qcloudimg.tencent-cloud.cn/raw/f850cfbe163a1cb38439a9f551c2505c.png" target="_blank">点击查看合同发起人展示的位置</a>
 
 注： 支持填入集团子公司经办人 userId 代发合同。 
@@ -705,6 +712,22 @@ public class CreateFlowRequest extends AbstractModel {
         this.FlowDisplayType = FlowDisplayType;
     }
 
+    /**
+     * Get 是否开启发起合同审批，默认：false（不开启），开启后，发起合同（StartFlow），会提交电子签内置的审批流 
+     * @return Workflow 是否开启发起合同审批，默认：false（不开启），开启后，发起合同（StartFlow），会提交电子签内置的审批流
+     */
+    public Boolean getWorkflow() {
+        return this.Workflow;
+    }
+
+    /**
+     * Set 是否开启发起合同审批，默认：false（不开启），开启后，发起合同（StartFlow），会提交电子签内置的审批流
+     * @param Workflow 是否开启发起合同审批，默认：false（不开启），开启后，发起合同（StartFlow），会提交电子签内置的审批流
+     */
+    public void setWorkflow(Boolean Workflow) {
+        this.Workflow = Workflow;
+    }
+
     public CreateFlowRequest() {
     }
 
@@ -773,6 +796,9 @@ public class CreateFlowRequest extends AbstractModel {
         if (source.FlowDisplayType != null) {
             this.FlowDisplayType = new Long(source.FlowDisplayType);
         }
+        if (source.Workflow != null) {
+            this.Workflow = new Boolean(source.Workflow);
+        }
     }
 
 
@@ -798,6 +824,7 @@ public class CreateFlowRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RelatedFlowId", this.RelatedFlowId);
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
         this.setParamSimple(map, prefix + "FlowDisplayType", this.FlowDisplayType);
+        this.setParamSimple(map, prefix + "Workflow", this.Workflow);
 
     }
 }

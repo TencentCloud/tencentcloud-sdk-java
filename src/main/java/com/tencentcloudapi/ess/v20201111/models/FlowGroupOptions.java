@@ -52,6 +52,13 @@ public class FlowGroupOptions extends AbstractModel {
     private String OtherApproverNotifyType;
 
     /**
+    * 是否开启发起合同组的发起审批，默认：false(不开启)，开启后，发起合同组会提交电子签内置审批流
+    */
+    @SerializedName("FlowGroupNeedWorkflow")
+    @Expose
+    private Boolean FlowGroupNeedWorkflow;
+
+    /**
      * Get 签署人校验方式,支持以下类型
 <ul><li>VerifyCheck : 人脸识别 (默认值)</li>
 <li>MobileCheck : 手机号验证</li></ul>
@@ -127,6 +134,22 @@ public class FlowGroupOptions extends AbstractModel {
         this.OtherApproverNotifyType = OtherApproverNotifyType;
     }
 
+    /**
+     * Get 是否开启发起合同组的发起审批，默认：false(不开启)，开启后，发起合同组会提交电子签内置审批流 
+     * @return FlowGroupNeedWorkflow 是否开启发起合同组的发起审批，默认：false(不开启)，开启后，发起合同组会提交电子签内置审批流
+     */
+    public Boolean getFlowGroupNeedWorkflow() {
+        return this.FlowGroupNeedWorkflow;
+    }
+
+    /**
+     * Set 是否开启发起合同组的发起审批，默认：false(不开启)，开启后，发起合同组会提交电子签内置审批流
+     * @param FlowGroupNeedWorkflow 是否开启发起合同组的发起审批，默认：false(不开启)，开启后，发起合同组会提交电子签内置审批流
+     */
+    public void setFlowGroupNeedWorkflow(Boolean FlowGroupNeedWorkflow) {
+        this.FlowGroupNeedWorkflow = FlowGroupNeedWorkflow;
+    }
+
     public FlowGroupOptions() {
     }
 
@@ -144,6 +167,9 @@ public class FlowGroupOptions extends AbstractModel {
         if (source.OtherApproverNotifyType != null) {
             this.OtherApproverNotifyType = new String(source.OtherApproverNotifyType);
         }
+        if (source.FlowGroupNeedWorkflow != null) {
+            this.FlowGroupNeedWorkflow = new Boolean(source.FlowGroupNeedWorkflow);
+        }
     }
 
 
@@ -154,6 +180,7 @@ public class FlowGroupOptions extends AbstractModel {
         this.setParamSimple(map, prefix + "ApproverVerifyType", this.ApproverVerifyType);
         this.setParamSimple(map, prefix + "SelfOrganizationApproverNotifyType", this.SelfOrganizationApproverNotifyType);
         this.setParamSimple(map, prefix + "OtherApproverNotifyType", this.OtherApproverNotifyType);
+        this.setParamSimple(map, prefix + "FlowGroupNeedWorkflow", this.FlowGroupNeedWorkflow);
 
     }
 }

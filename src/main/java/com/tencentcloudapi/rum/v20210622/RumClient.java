@@ -39,17 +39,6 @@ public class RumClient extends AbstractClient{
     }
 
     /**
-     *创建 RUM 应用（归属于某个团队）
-     * @param req CreateProjectRequest
-     * @return CreateProjectResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateProjectResponse CreateProject(CreateProjectRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateProject", CreateProjectResponse.class);
-    }
-
-    /**
      *创建对应项目的文件记录
      * @param req CreateReleaseFileRequest
      * @return CreateReleaseFileResponse
@@ -69,17 +58,6 @@ public class RumClient extends AbstractClient{
     public CreateStarProjectResponse CreateStarProject(CreateStarProjectRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateStarProject", CreateStarProjectResponse.class);
-    }
-
-    /**
-     *创建 RUM 业务系统
-     * @param req CreateTawInstanceRequest
-     * @return CreateTawInstanceResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateTawInstanceResponse CreateTawInstance(CreateTawInstanceRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateTawInstance", CreateTawInstanceResponse.class);
     }
 
     /**
