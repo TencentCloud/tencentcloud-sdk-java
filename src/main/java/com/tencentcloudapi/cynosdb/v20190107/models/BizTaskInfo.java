@@ -295,6 +295,20 @@ public class BizTaskInfo extends AbstractModel {
     private GdnTaskInfo GdnTaskInfo;
 
     /**
+    * 保险箱id
+    */
+    @SerializedName("VaultId")
+    @Expose
+    private String VaultId;
+
+    /**
+    * 保险箱名称
+    */
+    @SerializedName("VaultName")
+    @Expose
+    private String VaultName;
+
+    /**
      * Get 任务id 
      * @return ID 任务id
      */
@@ -930,6 +944,38 @@ public class BizTaskInfo extends AbstractModel {
         this.GdnTaskInfo = GdnTaskInfo;
     }
 
+    /**
+     * Get 保险箱id 
+     * @return VaultId 保险箱id
+     */
+    public String getVaultId() {
+        return this.VaultId;
+    }
+
+    /**
+     * Set 保险箱id
+     * @param VaultId 保险箱id
+     */
+    public void setVaultId(String VaultId) {
+        this.VaultId = VaultId;
+    }
+
+    /**
+     * Get 保险箱名称 
+     * @return VaultName 保险箱名称
+     */
+    public String getVaultName() {
+        return this.VaultName;
+    }
+
+    /**
+     * Set 保险箱名称
+     * @param VaultName 保险箱名称
+     */
+    public void setVaultName(String VaultName) {
+        this.VaultName = VaultName;
+    }
+
     public BizTaskInfo() {
     }
 
@@ -1058,6 +1104,12 @@ public class BizTaskInfo extends AbstractModel {
         if (source.GdnTaskInfo != null) {
             this.GdnTaskInfo = new GdnTaskInfo(source.GdnTaskInfo);
         }
+        if (source.VaultId != null) {
+            this.VaultId = new String(source.VaultId);
+        }
+        if (source.VaultName != null) {
+            this.VaultName = new String(source.VaultName);
+        }
     }
 
 
@@ -1103,6 +1155,8 @@ public class BizTaskInfo extends AbstractModel {
         this.setParamArrayObj(map, prefix + "InstanceCLSDeliveryInfos.", this.InstanceCLSDeliveryInfos);
         this.setParamObj(map, prefix + "TaskProgressInfo.", this.TaskProgressInfo);
         this.setParamObj(map, prefix + "GdnTaskInfo.", this.GdnTaskInfo);
+        this.setParamSimple(map, prefix + "VaultId", this.VaultId);
+        this.setParamSimple(map, prefix + "VaultName", this.VaultName);
 
     }
 }

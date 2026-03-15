@@ -46,6 +46,13 @@ public class BinlogConfigInfo extends AbstractModel {
     private String [] BinlogCrossRegions;
 
     /**
+    * 保险箱信息
+    */
+    @SerializedName("AutoCopyVaults")
+    @Expose
+    private CreateBackupVaultItem [] AutoCopyVaults;
+
+    /**
      * Get binlog保留时间 
      * @return BinlogSaveDays binlog保留时间
      */
@@ -97,6 +104,22 @@ public class BinlogConfigInfo extends AbstractModel {
         this.BinlogCrossRegions = BinlogCrossRegions;
     }
 
+    /**
+     * Get 保险箱信息 
+     * @return AutoCopyVaults 保险箱信息
+     */
+    public CreateBackupVaultItem [] getAutoCopyVaults() {
+        return this.AutoCopyVaults;
+    }
+
+    /**
+     * Set 保险箱信息
+     * @param AutoCopyVaults 保险箱信息
+     */
+    public void setAutoCopyVaults(CreateBackupVaultItem [] AutoCopyVaults) {
+        this.AutoCopyVaults = AutoCopyVaults;
+    }
+
     public BinlogConfigInfo() {
     }
 
@@ -117,6 +140,12 @@ public class BinlogConfigInfo extends AbstractModel {
                 this.BinlogCrossRegions[i] = new String(source.BinlogCrossRegions[i]);
             }
         }
+        if (source.AutoCopyVaults != null) {
+            this.AutoCopyVaults = new CreateBackupVaultItem[source.AutoCopyVaults.length];
+            for (int i = 0; i < source.AutoCopyVaults.length; i++) {
+                this.AutoCopyVaults[i] = new CreateBackupVaultItem(source.AutoCopyVaults[i]);
+            }
+        }
     }
 
 
@@ -127,6 +156,7 @@ public class BinlogConfigInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "BinlogSaveDays", this.BinlogSaveDays);
         this.setParamSimple(map, prefix + "BinlogCrossRegionsEnable", this.BinlogCrossRegionsEnable);
         this.setParamArraySimple(map, prefix + "BinlogCrossRegions.", this.BinlogCrossRegions);
+        this.setParamArrayObj(map, prefix + "AutoCopyVaults.", this.AutoCopyVaults);
 
     }
 }

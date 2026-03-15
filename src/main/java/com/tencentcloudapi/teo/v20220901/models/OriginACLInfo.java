@@ -64,6 +64,13 @@ public class OriginACLInfo extends AbstractModel {
     private String Status;
 
     /**
+    * 源站防护回源ACL控制域。
+    */
+    @SerializedName("OriginACLFamily")
+    @Expose
+    private String OriginACLFamily;
+
+    /**
      * Get 启用了特定回源 IP 网段回源的七层加速域名列表。源站防护未开启时为空。 
      * @return L7Hosts 启用了特定回源 IP 网段回源的七层加速域名列表。源站防护未开启时为空。
      */
@@ -163,6 +170,22 @@ public class OriginACLInfo extends AbstractModel {
         this.Status = Status;
     }
 
+    /**
+     * Get 源站防护回源ACL控制域。 
+     * @return OriginACLFamily 源站防护回源ACL控制域。
+     */
+    public String getOriginACLFamily() {
+        return this.OriginACLFamily;
+    }
+
+    /**
+     * Set 源站防护回源ACL控制域。
+     * @param OriginACLFamily 源站防护回源ACL控制域。
+     */
+    public void setOriginACLFamily(String OriginACLFamily) {
+        this.OriginACLFamily = OriginACLFamily;
+    }
+
     public OriginACLInfo() {
     }
 
@@ -192,6 +215,9 @@ public class OriginACLInfo extends AbstractModel {
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.OriginACLFamily != null) {
+            this.OriginACLFamily = new String(source.OriginACLFamily);
+        }
     }
 
 
@@ -204,6 +230,7 @@ public class OriginACLInfo extends AbstractModel {
         this.setParamObj(map, prefix + "CurrentOriginACL.", this.CurrentOriginACL);
         this.setParamObj(map, prefix + "NextOriginACL.", this.NextOriginACL);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "OriginACLFamily", this.OriginACLFamily);
 
     }
 }

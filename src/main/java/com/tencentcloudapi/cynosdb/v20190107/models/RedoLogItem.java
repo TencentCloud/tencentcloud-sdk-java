@@ -80,6 +80,34 @@ public class RedoLogItem extends AbstractModel {
     private String FinishTime;
 
     /**
+    * 保险箱信息
+    */
+    @SerializedName("VaultInfos")
+    @Expose
+    private VaultInfo [] VaultInfos;
+
+    /**
+    * 备份投递状态
+    */
+    @SerializedName("CopyStatus")
+    @Expose
+    private String CopyStatus;
+
+    /**
+    * 加密秘钥key
+    */
+    @SerializedName("EncryptKeyId")
+    @Expose
+    private String EncryptKeyId;
+
+    /**
+    * 加密秘钥地域
+    */
+    @SerializedName("EncryptRegion")
+    @Expose
+    private String EncryptRegion;
+
+    /**
      * Get 文件名 
      * @return FileName 文件名
      */
@@ -207,6 +235,70 @@ public class RedoLogItem extends AbstractModel {
         this.FinishTime = FinishTime;
     }
 
+    /**
+     * Get 保险箱信息 
+     * @return VaultInfos 保险箱信息
+     */
+    public VaultInfo [] getVaultInfos() {
+        return this.VaultInfos;
+    }
+
+    /**
+     * Set 保险箱信息
+     * @param VaultInfos 保险箱信息
+     */
+    public void setVaultInfos(VaultInfo [] VaultInfos) {
+        this.VaultInfos = VaultInfos;
+    }
+
+    /**
+     * Get 备份投递状态 
+     * @return CopyStatus 备份投递状态
+     */
+    public String getCopyStatus() {
+        return this.CopyStatus;
+    }
+
+    /**
+     * Set 备份投递状态
+     * @param CopyStatus 备份投递状态
+     */
+    public void setCopyStatus(String CopyStatus) {
+        this.CopyStatus = CopyStatus;
+    }
+
+    /**
+     * Get 加密秘钥key 
+     * @return EncryptKeyId 加密秘钥key
+     */
+    public String getEncryptKeyId() {
+        return this.EncryptKeyId;
+    }
+
+    /**
+     * Set 加密秘钥key
+     * @param EncryptKeyId 加密秘钥key
+     */
+    public void setEncryptKeyId(String EncryptKeyId) {
+        this.EncryptKeyId = EncryptKeyId;
+    }
+
+    /**
+     * Get 加密秘钥地域 
+     * @return EncryptRegion 加密秘钥地域
+     */
+    public String getEncryptRegion() {
+        return this.EncryptRegion;
+    }
+
+    /**
+     * Set 加密秘钥地域
+     * @param EncryptRegion 加密秘钥地域
+     */
+    public void setEncryptRegion(String EncryptRegion) {
+        this.EncryptRegion = EncryptRegion;
+    }
+
     public RedoLogItem() {
     }
 
@@ -242,6 +334,21 @@ public class RedoLogItem extends AbstractModel {
         if (source.FinishTime != null) {
             this.FinishTime = new String(source.FinishTime);
         }
+        if (source.VaultInfos != null) {
+            this.VaultInfos = new VaultInfo[source.VaultInfos.length];
+            for (int i = 0; i < source.VaultInfos.length; i++) {
+                this.VaultInfos[i] = new VaultInfo(source.VaultInfos[i]);
+            }
+        }
+        if (source.CopyStatus != null) {
+            this.CopyStatus = new String(source.CopyStatus);
+        }
+        if (source.EncryptKeyId != null) {
+            this.EncryptKeyId = new String(source.EncryptKeyId);
+        }
+        if (source.EncryptRegion != null) {
+            this.EncryptRegion = new String(source.EncryptRegion);
+        }
     }
 
 
@@ -257,6 +364,10 @@ public class RedoLogItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "FinishTime", this.FinishTime);
+        this.setParamArrayObj(map, prefix + "VaultInfos.", this.VaultInfos);
+        this.setParamSimple(map, prefix + "CopyStatus", this.CopyStatus);
+        this.setParamSimple(map, prefix + "EncryptKeyId", this.EncryptKeyId);
+        this.setParamSimple(map, prefix + "EncryptRegion", this.EncryptRegion);
 
     }
 }

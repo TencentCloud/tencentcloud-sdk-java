@@ -666,7 +666,7 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
-     *枚举地域,只支持广州地域
+     *枚举地域信息
      * @param req DescribeRegionRequest
      * @return DescribeRegionResponse
      * @throws TencentCloudSDKException

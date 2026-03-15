@@ -73,6 +73,13 @@ public class SnapshotBackupConfig extends AbstractModel {
     private String BackupTriggerStrategy;
 
     /**
+    * 保险箱信息
+    */
+    @SerializedName("AutoCopyVaults")
+    @Expose
+    private CreateBackupVaultItem [] AutoCopyVaults;
+
+    /**
      * Get 系统自动时间 
      * @return BackupCustomAutoTime 系统自动时间
      */
@@ -184,6 +191,22 @@ public class SnapshotBackupConfig extends AbstractModel {
         this.BackupTriggerStrategy = BackupTriggerStrategy;
     }
 
+    /**
+     * Get 保险箱信息 
+     * @return AutoCopyVaults 保险箱信息
+     */
+    public CreateBackupVaultItem [] getAutoCopyVaults() {
+        return this.AutoCopyVaults;
+    }
+
+    /**
+     * Set 保险箱信息
+     * @param AutoCopyVaults 保险箱信息
+     */
+    public void setAutoCopyVaults(CreateBackupVaultItem [] AutoCopyVaults) {
+        this.AutoCopyVaults = AutoCopyVaults;
+    }
+
     public SnapshotBackupConfig() {
     }
 
@@ -216,6 +239,12 @@ public class SnapshotBackupConfig extends AbstractModel {
         if (source.BackupTriggerStrategy != null) {
             this.BackupTriggerStrategy = new String(source.BackupTriggerStrategy);
         }
+        if (source.AutoCopyVaults != null) {
+            this.AutoCopyVaults = new CreateBackupVaultItem[source.AutoCopyVaults.length];
+            for (int i = 0; i < source.AutoCopyVaults.length; i++) {
+                this.AutoCopyVaults[i] = new CreateBackupVaultItem(source.AutoCopyVaults[i]);
+            }
+        }
     }
 
 
@@ -230,6 +259,7 @@ public class SnapshotBackupConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "BackupIntervalTime", this.BackupIntervalTime);
         this.setParamSimple(map, prefix + "ReserveDuration", this.ReserveDuration);
         this.setParamSimple(map, prefix + "BackupTriggerStrategy", this.BackupTriggerStrategy);
+        this.setParamArrayObj(map, prefix + "AutoCopyVaults.", this.AutoCopyVaults);
 
     }
 }

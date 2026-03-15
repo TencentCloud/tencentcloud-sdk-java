@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ModifyAutoRenewFlagRequest extends AbstractModel {
 
     /**
-    * 需要修改的实例列表
+    * <p>需要修改的实例列表</p>
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * 1表示开启自动续费，0为关闭自动续费
+    * <p>1表示开启自动续费，0为关闭自动续费</p>
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-     * Get 需要修改的实例列表 
-     * @return InstanceIds 需要修改的实例列表
+     * Get <p>需要修改的实例列表</p> 
+     * @return InstanceIds <p>需要修改的实例列表</p>
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 需要修改的实例列表
-     * @param InstanceIds 需要修改的实例列表
+     * Set <p>需要修改的实例列表</p>
+     * @param InstanceIds <p>需要修改的实例列表</p>
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get 1表示开启自动续费，0为关闭自动续费 
-     * @return AutoRenewFlag 1表示开启自动续费，0为关闭自动续费
+     * Get <p>1表示开启自动续费，0为关闭自动续费</p> 
+     * @return AutoRenewFlag <p>1表示开启自动续费，0为关闭自动续费</p>
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set 1表示开启自动续费，0为关闭自动续费
-     * @param AutoRenewFlag 1表示开启自动续费，0为关闭自动续费
+     * Set <p>1表示开启自动续费，0为关闭自动续费</p>
+     * @param AutoRenewFlag <p>1表示开启自动续费，0为关闭自动续费</p>
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;

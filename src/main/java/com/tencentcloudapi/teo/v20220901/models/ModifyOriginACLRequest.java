@@ -38,6 +38,20 @@ public class ModifyOriginACLRequest extends AbstractModel {
     private OriginACLEntity [] OriginACLEntities;
 
     /**
+    * 源站防护回源ACL控制域，不填则默认不变；控制域信息可以通过DescribeAvailableOriginACLFamily接口查询获得。
+具体取值说明如下：
+<li>gaz：标准全球可用区控制域；</li>
+<li>mlc：标准中国大陆可用区控制域；</li>
+<li>emc：标准全球(不含中国大陆)可用区控制域；</li>
+<li>plat-gaz：精简全球可用区控制域；</li>
+<li>plat-mlc：精简中国大陆可用区控制域；</li>
+<li>plat-emc：精简全球(不含中国大陆)可用区控制域；</li>
+    */
+    @SerializedName("OriginACLFamily")
+    @Expose
+    private String OriginACLFamily;
+
+    /**
      * Get 站点 ID。 
      * @return ZoneId 站点 ID。
      */
@@ -69,6 +83,50 @@ public class ModifyOriginACLRequest extends AbstractModel {
         this.OriginACLEntities = OriginACLEntities;
     }
 
+    /**
+     * Get 源站防护回源ACL控制域，不填则默认不变；控制域信息可以通过DescribeAvailableOriginACLFamily接口查询获得。
+具体取值说明如下：
+<li>gaz：标准全球可用区控制域；</li>
+<li>mlc：标准中国大陆可用区控制域；</li>
+<li>emc：标准全球(不含中国大陆)可用区控制域；</li>
+<li>plat-gaz：精简全球可用区控制域；</li>
+<li>plat-mlc：精简中国大陆可用区控制域；</li>
+<li>plat-emc：精简全球(不含中国大陆)可用区控制域；</li> 
+     * @return OriginACLFamily 源站防护回源ACL控制域，不填则默认不变；控制域信息可以通过DescribeAvailableOriginACLFamily接口查询获得。
+具体取值说明如下：
+<li>gaz：标准全球可用区控制域；</li>
+<li>mlc：标准中国大陆可用区控制域；</li>
+<li>emc：标准全球(不含中国大陆)可用区控制域；</li>
+<li>plat-gaz：精简全球可用区控制域；</li>
+<li>plat-mlc：精简中国大陆可用区控制域；</li>
+<li>plat-emc：精简全球(不含中国大陆)可用区控制域；</li>
+     */
+    public String getOriginACLFamily() {
+        return this.OriginACLFamily;
+    }
+
+    /**
+     * Set 源站防护回源ACL控制域，不填则默认不变；控制域信息可以通过DescribeAvailableOriginACLFamily接口查询获得。
+具体取值说明如下：
+<li>gaz：标准全球可用区控制域；</li>
+<li>mlc：标准中国大陆可用区控制域；</li>
+<li>emc：标准全球(不含中国大陆)可用区控制域；</li>
+<li>plat-gaz：精简全球可用区控制域；</li>
+<li>plat-mlc：精简中国大陆可用区控制域；</li>
+<li>plat-emc：精简全球(不含中国大陆)可用区控制域；</li>
+     * @param OriginACLFamily 源站防护回源ACL控制域，不填则默认不变；控制域信息可以通过DescribeAvailableOriginACLFamily接口查询获得。
+具体取值说明如下：
+<li>gaz：标准全球可用区控制域；</li>
+<li>mlc：标准中国大陆可用区控制域；</li>
+<li>emc：标准全球(不含中国大陆)可用区控制域；</li>
+<li>plat-gaz：精简全球可用区控制域；</li>
+<li>plat-mlc：精简中国大陆可用区控制域；</li>
+<li>plat-emc：精简全球(不含中国大陆)可用区控制域；</li>
+     */
+    public void setOriginACLFamily(String OriginACLFamily) {
+        this.OriginACLFamily = OriginACLFamily;
+    }
+
     public ModifyOriginACLRequest() {
     }
 
@@ -86,6 +144,9 @@ public class ModifyOriginACLRequest extends AbstractModel {
                 this.OriginACLEntities[i] = new OriginACLEntity(source.OriginACLEntities[i]);
             }
         }
+        if (source.OriginACLFamily != null) {
+            this.OriginACLFamily = new String(source.OriginACLFamily);
+        }
     }
 
 
@@ -95,6 +156,7 @@ public class ModifyOriginACLRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamArrayObj(map, prefix + "OriginACLEntities.", this.OriginACLEntities);
+        this.setParamSimple(map, prefix + "OriginACLFamily", this.OriginACLFamily);
 
     }
 }

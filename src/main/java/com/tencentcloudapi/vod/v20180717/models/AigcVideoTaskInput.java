@@ -24,291 +24,299 @@ import java.util.HashMap;
 public class AigcVideoTaskInput extends AbstractModel {
 
     /**
-    * 模型名称。
+    * <p>模型名称。</p>
     */
     @SerializedName("ModelName")
     @Expose
     private String ModelName;
 
     /**
-    * 模型版本。
+    * <p>模型版本。</p>
     */
     @SerializedName("ModelVersion")
     @Expose
     private String ModelVersion;
 
     /**
-    * AIGC生图任务输入文件信息。
+    * <p>AIGC 生视频任务输入文件信息。</p>
     */
     @SerializedName("FileInfos")
     @Expose
     private AigcVideoTaskInputFileInfo [] FileInfos;
 
     /**
-    * 用于作为尾帧画面来生成视频的媒体文件 ID。该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。
+    * <p>AIGC 任务固定主体输入信息。</p>
+    */
+    @SerializedName("SubjectInfos")
+    @Expose
+    private AigcVideoTaskInputSubjectInfo [] SubjectInfos;
+
+    /**
+    * <p>用于作为尾帧画面来生成视频的媒体文件 ID。该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 <a href="/document/product/266/7830">视频上传完成事件通知</a> 或 <a href="https://console.cloud.tencent.com/vod/media">云点播控制台</a> 获取该字段。</p>
     */
     @SerializedName("LastFrameFileId")
     @Expose
     private String LastFrameFileId;
 
     /**
-    * 用于作为尾帧画面来生成视频的媒体文件 URL。说明：
-1. 只支持模型 GV 、Kling、Vidu，其他模型暂不支持。当 ModelName 为 GV 时，如果指定该参数，则需同时指定 FileInfos 作为待生成视频的首帧。当 ModelName 为 Kling 、ModelVersion 为 2.1 并且指定输出分辨率 Resolution 为 1080P 时，才能指定该参数。当 ModelName 为 Vidu、ModelVersion 为 q2-pro、q2-turbo 时，才能指定该参数。
-2. 图片大小需小于5M。
-3. 3. 图片格式的取值为：jpeg，jpg, png, webp。
+    * <p>用于作为尾帧画面来生成视频的媒体文件 URL。说明：</p><ol><li>只支持模型 GV 、Kling、Vidu，其他模型暂不支持。当 ModelName 为 GV 时，如果指定该参数，则需同时指定 FileInfos 作为待生成视频的首帧。当 ModelName 为 Kling 、ModelVersion 为 2.1 并且指定输出分辨率 Resolution 为 1080P 时，才能指定该参数。当 ModelName 为 Vidu、ModelVersion 为 q2-pro、q2-turbo 时，才能指定该参数。</li><li>图片大小需小于5M。</li><li><ol start="3"><li>图片格式的取值为：jpeg，jpg, png, webp。</li></ol></li></ol>
     */
     @SerializedName("LastFrameUrl")
     @Expose
     private String LastFrameUrl;
 
     /**
-    * 生成视频的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。
+    * <p>生成视频的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。</p>
     */
     @SerializedName("Prompt")
     @Expose
     private String Prompt;
 
     /**
-    * 要阻止模型生成视频的提示词。最大支持1000字符。
+    * <p>要阻止模型生成视频的提示词。最大支持1000字符。</p>
     */
     @SerializedName("NegativePrompt")
     @Expose
     private String NegativePrompt;
 
     /**
-    * 是否自动优化提示词。开启时将自动优化传入的Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 
+    * <p>是否自动优化提示词。开启时将自动优化传入的Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
     */
     @SerializedName("EnhancePrompt")
     @Expose
     private String EnhancePrompt;
 
     /**
-    * 生成模式。取值有： <li>Standard：标准模式；</li> <li>Professional：高品质模式；</li> 
+    * <p>生成模式。取值有： <li>Standard：标准模式；</li> <li>Professional：高品质模式；</li></p>
     */
     @SerializedName("GenerationMode")
     @Expose
     private String GenerationMode;
 
     /**
-    * AIGC 生图输出结果文件输出。
+    * <p>AIGC 生图输出结果文件输出。</p>
     */
     @SerializedName("OutputConfig")
     @Expose
     private AigcVideoOutputConfig OutputConfig;
 
     /**
-    * 输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。
+    * <p>输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。</p>
     */
     @SerializedName("InputRegion")
     @Expose
     private String InputRegion;
 
     /**
-    * 场景类型。取值如下：<li>当 ModelName 为 Kling 时，取值 motion_control 表示动作控制；</li><li>其他 ModelName 暂不支持。</li>
+    * <p>场景类型。取值如下：<li>当 ModelName 为 Kling 时，取值 motion_control 表示动作控制；</li><li>其他 ModelName 暂不支持。</li></p>
     */
     @SerializedName("SceneType")
     @Expose
     private String SceneType;
 
     /**
-     * Get 模型名称。 
-     * @return ModelName 模型名称。
+     * Get <p>模型名称。</p> 
+     * @return ModelName <p>模型名称。</p>
      */
     public String getModelName() {
         return this.ModelName;
     }
 
     /**
-     * Set 模型名称。
-     * @param ModelName 模型名称。
+     * Set <p>模型名称。</p>
+     * @param ModelName <p>模型名称。</p>
      */
     public void setModelName(String ModelName) {
         this.ModelName = ModelName;
     }
 
     /**
-     * Get 模型版本。 
-     * @return ModelVersion 模型版本。
+     * Get <p>模型版本。</p> 
+     * @return ModelVersion <p>模型版本。</p>
      */
     public String getModelVersion() {
         return this.ModelVersion;
     }
 
     /**
-     * Set 模型版本。
-     * @param ModelVersion 模型版本。
+     * Set <p>模型版本。</p>
+     * @param ModelVersion <p>模型版本。</p>
      */
     public void setModelVersion(String ModelVersion) {
         this.ModelVersion = ModelVersion;
     }
 
     /**
-     * Get AIGC生图任务输入文件信息。 
-     * @return FileInfos AIGC生图任务输入文件信息。
+     * Get <p>AIGC 生视频任务输入文件信息。</p> 
+     * @return FileInfos <p>AIGC 生视频任务输入文件信息。</p>
      */
     public AigcVideoTaskInputFileInfo [] getFileInfos() {
         return this.FileInfos;
     }
 
     /**
-     * Set AIGC生图任务输入文件信息。
-     * @param FileInfos AIGC生图任务输入文件信息。
+     * Set <p>AIGC 生视频任务输入文件信息。</p>
+     * @param FileInfos <p>AIGC 生视频任务输入文件信息。</p>
      */
     public void setFileInfos(AigcVideoTaskInputFileInfo [] FileInfos) {
         this.FileInfos = FileInfos;
     }
 
     /**
-     * Get 用于作为尾帧画面来生成视频的媒体文件 ID。该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。 
-     * @return LastFrameFileId 用于作为尾帧画面来生成视频的媒体文件 ID。该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。
+     * Get <p>AIGC 任务固定主体输入信息。</p> 
+     * @return SubjectInfos <p>AIGC 任务固定主体输入信息。</p>
+     */
+    public AigcVideoTaskInputSubjectInfo [] getSubjectInfos() {
+        return this.SubjectInfos;
+    }
+
+    /**
+     * Set <p>AIGC 任务固定主体输入信息。</p>
+     * @param SubjectInfos <p>AIGC 任务固定主体输入信息。</p>
+     */
+    public void setSubjectInfos(AigcVideoTaskInputSubjectInfo [] SubjectInfos) {
+        this.SubjectInfos = SubjectInfos;
+    }
+
+    /**
+     * Get <p>用于作为尾帧画面来生成视频的媒体文件 ID。该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 <a href="/document/product/266/7830">视频上传完成事件通知</a> 或 <a href="https://console.cloud.tencent.com/vod/media">云点播控制台</a> 获取该字段。</p> 
+     * @return LastFrameFileId <p>用于作为尾帧画面来生成视频的媒体文件 ID。该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 <a href="/document/product/266/7830">视频上传完成事件通知</a> 或 <a href="https://console.cloud.tencent.com/vod/media">云点播控制台</a> 获取该字段。</p>
      */
     public String getLastFrameFileId() {
         return this.LastFrameFileId;
     }
 
     /**
-     * Set 用于作为尾帧画面来生成视频的媒体文件 ID。该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。
-     * @param LastFrameFileId 用于作为尾帧画面来生成视频的媒体文件 ID。该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 [视频上传完成事件通知](/document/product/266/7830) 或 [云点播控制台](https://console.cloud.tencent.com/vod/media) 获取该字段。
+     * Set <p>用于作为尾帧画面来生成视频的媒体文件 ID。该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 <a href="/document/product/266/7830">视频上传完成事件通知</a> 或 <a href="https://console.cloud.tencent.com/vod/media">云点播控制台</a> 获取该字段。</p>
+     * @param LastFrameFileId <p>用于作为尾帧画面来生成视频的媒体文件 ID。该文件在云点播上的全局唯一标识符，在上传成功后由云点播后台分配。可以在 <a href="/document/product/266/7830">视频上传完成事件通知</a> 或 <a href="https://console.cloud.tencent.com/vod/media">云点播控制台</a> 获取该字段。</p>
      */
     public void setLastFrameFileId(String LastFrameFileId) {
         this.LastFrameFileId = LastFrameFileId;
     }
 
     /**
-     * Get 用于作为尾帧画面来生成视频的媒体文件 URL。说明：
-1. 只支持模型 GV 、Kling、Vidu，其他模型暂不支持。当 ModelName 为 GV 时，如果指定该参数，则需同时指定 FileInfos 作为待生成视频的首帧。当 ModelName 为 Kling 、ModelVersion 为 2.1 并且指定输出分辨率 Resolution 为 1080P 时，才能指定该参数。当 ModelName 为 Vidu、ModelVersion 为 q2-pro、q2-turbo 时，才能指定该参数。
-2. 图片大小需小于5M。
-3. 3. 图片格式的取值为：jpeg，jpg, png, webp。 
-     * @return LastFrameUrl 用于作为尾帧画面来生成视频的媒体文件 URL。说明：
-1. 只支持模型 GV 、Kling、Vidu，其他模型暂不支持。当 ModelName 为 GV 时，如果指定该参数，则需同时指定 FileInfos 作为待生成视频的首帧。当 ModelName 为 Kling 、ModelVersion 为 2.1 并且指定输出分辨率 Resolution 为 1080P 时，才能指定该参数。当 ModelName 为 Vidu、ModelVersion 为 q2-pro、q2-turbo 时，才能指定该参数。
-2. 图片大小需小于5M。
-3. 3. 图片格式的取值为：jpeg，jpg, png, webp。
+     * Get <p>用于作为尾帧画面来生成视频的媒体文件 URL。说明：</p><ol><li>只支持模型 GV 、Kling、Vidu，其他模型暂不支持。当 ModelName 为 GV 时，如果指定该参数，则需同时指定 FileInfos 作为待生成视频的首帧。当 ModelName 为 Kling 、ModelVersion 为 2.1 并且指定输出分辨率 Resolution 为 1080P 时，才能指定该参数。当 ModelName 为 Vidu、ModelVersion 为 q2-pro、q2-turbo 时，才能指定该参数。</li><li>图片大小需小于5M。</li><li><ol start="3"><li>图片格式的取值为：jpeg，jpg, png, webp。</li></ol></li></ol> 
+     * @return LastFrameUrl <p>用于作为尾帧画面来生成视频的媒体文件 URL。说明：</p><ol><li>只支持模型 GV 、Kling、Vidu，其他模型暂不支持。当 ModelName 为 GV 时，如果指定该参数，则需同时指定 FileInfos 作为待生成视频的首帧。当 ModelName 为 Kling 、ModelVersion 为 2.1 并且指定输出分辨率 Resolution 为 1080P 时，才能指定该参数。当 ModelName 为 Vidu、ModelVersion 为 q2-pro、q2-turbo 时，才能指定该参数。</li><li>图片大小需小于5M。</li><li><ol start="3"><li>图片格式的取值为：jpeg，jpg, png, webp。</li></ol></li></ol>
      */
     public String getLastFrameUrl() {
         return this.LastFrameUrl;
     }
 
     /**
-     * Set 用于作为尾帧画面来生成视频的媒体文件 URL。说明：
-1. 只支持模型 GV 、Kling、Vidu，其他模型暂不支持。当 ModelName 为 GV 时，如果指定该参数，则需同时指定 FileInfos 作为待生成视频的首帧。当 ModelName 为 Kling 、ModelVersion 为 2.1 并且指定输出分辨率 Resolution 为 1080P 时，才能指定该参数。当 ModelName 为 Vidu、ModelVersion 为 q2-pro、q2-turbo 时，才能指定该参数。
-2. 图片大小需小于5M。
-3. 3. 图片格式的取值为：jpeg，jpg, png, webp。
-     * @param LastFrameUrl 用于作为尾帧画面来生成视频的媒体文件 URL。说明：
-1. 只支持模型 GV 、Kling、Vidu，其他模型暂不支持。当 ModelName 为 GV 时，如果指定该参数，则需同时指定 FileInfos 作为待生成视频的首帧。当 ModelName 为 Kling 、ModelVersion 为 2.1 并且指定输出分辨率 Resolution 为 1080P 时，才能指定该参数。当 ModelName 为 Vidu、ModelVersion 为 q2-pro、q2-turbo 时，才能指定该参数。
-2. 图片大小需小于5M。
-3. 3. 图片格式的取值为：jpeg，jpg, png, webp。
+     * Set <p>用于作为尾帧画面来生成视频的媒体文件 URL。说明：</p><ol><li>只支持模型 GV 、Kling、Vidu，其他模型暂不支持。当 ModelName 为 GV 时，如果指定该参数，则需同时指定 FileInfos 作为待生成视频的首帧。当 ModelName 为 Kling 、ModelVersion 为 2.1 并且指定输出分辨率 Resolution 为 1080P 时，才能指定该参数。当 ModelName 为 Vidu、ModelVersion 为 q2-pro、q2-turbo 时，才能指定该参数。</li><li>图片大小需小于5M。</li><li><ol start="3"><li>图片格式的取值为：jpeg，jpg, png, webp。</li></ol></li></ol>
+     * @param LastFrameUrl <p>用于作为尾帧画面来生成视频的媒体文件 URL。说明：</p><ol><li>只支持模型 GV 、Kling、Vidu，其他模型暂不支持。当 ModelName 为 GV 时，如果指定该参数，则需同时指定 FileInfos 作为待生成视频的首帧。当 ModelName 为 Kling 、ModelVersion 为 2.1 并且指定输出分辨率 Resolution 为 1080P 时，才能指定该参数。当 ModelName 为 Vidu、ModelVersion 为 q2-pro、q2-turbo 时，才能指定该参数。</li><li>图片大小需小于5M。</li><li><ol start="3"><li>图片格式的取值为：jpeg，jpg, png, webp。</li></ol></li></ol>
      */
     public void setLastFrameUrl(String LastFrameUrl) {
         this.LastFrameUrl = LastFrameUrl;
     }
 
     /**
-     * Get 生成视频的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。 
-     * @return Prompt 生成视频的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。
+     * Get <p>生成视频的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。</p> 
+     * @return Prompt <p>生成视频的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。</p>
      */
     public String getPrompt() {
         return this.Prompt;
     }
 
     /**
-     * Set 生成视频的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。
-     * @param Prompt 生成视频的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。
+     * Set <p>生成视频的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。</p>
+     * @param Prompt <p>生成视频的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。</p>
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
     }
 
     /**
-     * Get 要阻止模型生成视频的提示词。最大支持1000字符。 
-     * @return NegativePrompt 要阻止模型生成视频的提示词。最大支持1000字符。
+     * Get <p>要阻止模型生成视频的提示词。最大支持1000字符。</p> 
+     * @return NegativePrompt <p>要阻止模型生成视频的提示词。最大支持1000字符。</p>
      */
     public String getNegativePrompt() {
         return this.NegativePrompt;
     }
 
     /**
-     * Set 要阻止模型生成视频的提示词。最大支持1000字符。
-     * @param NegativePrompt 要阻止模型生成视频的提示词。最大支持1000字符。
+     * Set <p>要阻止模型生成视频的提示词。最大支持1000字符。</p>
+     * @param NegativePrompt <p>要阻止模型生成视频的提示词。最大支持1000字符。</p>
      */
     public void setNegativePrompt(String NegativePrompt) {
         this.NegativePrompt = NegativePrompt;
     }
 
     /**
-     * Get 是否自动优化提示词。开启时将自动优化传入的Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li>  
-     * @return EnhancePrompt 是否自动优化提示词。开启时将自动优化传入的Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 
+     * Get <p>是否自动优化提示词。开启时将自动优化传入的Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p> 
+     * @return EnhancePrompt <p>是否自动优化提示词。开启时将自动优化传入的Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
      */
     public String getEnhancePrompt() {
         return this.EnhancePrompt;
     }
 
     /**
-     * Set 是否自动优化提示词。开启时将自动优化传入的Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 
-     * @param EnhancePrompt 是否自动优化提示词。开启时将自动优化传入的Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 
+     * Set <p>是否自动优化提示词。开启时将自动优化传入的Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
+     * @param EnhancePrompt <p>是否自动优化提示词。开启时将自动优化传入的Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
      */
     public void setEnhancePrompt(String EnhancePrompt) {
         this.EnhancePrompt = EnhancePrompt;
     }
 
     /**
-     * Get 生成模式。取值有： <li>Standard：标准模式；</li> <li>Professional：高品质模式；</li>  
-     * @return GenerationMode 生成模式。取值有： <li>Standard：标准模式；</li> <li>Professional：高品质模式；</li> 
+     * Get <p>生成模式。取值有： <li>Standard：标准模式；</li> <li>Professional：高品质模式；</li></p> 
+     * @return GenerationMode <p>生成模式。取值有： <li>Standard：标准模式；</li> <li>Professional：高品质模式；</li></p>
      */
     public String getGenerationMode() {
         return this.GenerationMode;
     }
 
     /**
-     * Set 生成模式。取值有： <li>Standard：标准模式；</li> <li>Professional：高品质模式；</li> 
-     * @param GenerationMode 生成模式。取值有： <li>Standard：标准模式；</li> <li>Professional：高品质模式；</li> 
+     * Set <p>生成模式。取值有： <li>Standard：标准模式；</li> <li>Professional：高品质模式；</li></p>
+     * @param GenerationMode <p>生成模式。取值有： <li>Standard：标准模式；</li> <li>Professional：高品质模式；</li></p>
      */
     public void setGenerationMode(String GenerationMode) {
         this.GenerationMode = GenerationMode;
     }
 
     /**
-     * Get AIGC 生图输出结果文件输出。 
-     * @return OutputConfig AIGC 生图输出结果文件输出。
+     * Get <p>AIGC 生图输出结果文件输出。</p> 
+     * @return OutputConfig <p>AIGC 生图输出结果文件输出。</p>
      */
     public AigcVideoOutputConfig getOutputConfig() {
         return this.OutputConfig;
     }
 
     /**
-     * Set AIGC 生图输出结果文件输出。
-     * @param OutputConfig AIGC 生图输出结果文件输出。
+     * Set <p>AIGC 生图输出结果文件输出。</p>
+     * @param OutputConfig <p>AIGC 生图输出结果文件输出。</p>
      */
     public void setOutputConfig(AigcVideoOutputConfig OutputConfig) {
         this.OutputConfig = OutputConfig;
     }
 
     /**
-     * Get 输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。 
-     * @return InputRegion 输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。
+     * Get <p>输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。</p> 
+     * @return InputRegion <p>输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。</p>
      */
     public String getInputRegion() {
         return this.InputRegion;
     }
 
     /**
-     * Set 输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。
-     * @param InputRegion 输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。
+     * Set <p>输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。</p>
+     * @param InputRegion <p>输入文件的区域信息。当文件url是国外地址时候，可选Oversea。默认Mainland。</p>
      */
     public void setInputRegion(String InputRegion) {
         this.InputRegion = InputRegion;
     }
 
     /**
-     * Get 场景类型。取值如下：<li>当 ModelName 为 Kling 时，取值 motion_control 表示动作控制；</li><li>其他 ModelName 暂不支持。</li> 
-     * @return SceneType 场景类型。取值如下：<li>当 ModelName 为 Kling 时，取值 motion_control 表示动作控制；</li><li>其他 ModelName 暂不支持。</li>
+     * Get <p>场景类型。取值如下：<li>当 ModelName 为 Kling 时，取值 motion_control 表示动作控制；</li><li>其他 ModelName 暂不支持。</li></p> 
+     * @return SceneType <p>场景类型。取值如下：<li>当 ModelName 为 Kling 时，取值 motion_control 表示动作控制；</li><li>其他 ModelName 暂不支持。</li></p>
      */
     public String getSceneType() {
         return this.SceneType;
     }
 
     /**
-     * Set 场景类型。取值如下：<li>当 ModelName 为 Kling 时，取值 motion_control 表示动作控制；</li><li>其他 ModelName 暂不支持。</li>
-     * @param SceneType 场景类型。取值如下：<li>当 ModelName 为 Kling 时，取值 motion_control 表示动作控制；</li><li>其他 ModelName 暂不支持。</li>
+     * Set <p>场景类型。取值如下：<li>当 ModelName 为 Kling 时，取值 motion_control 表示动作控制；</li><li>其他 ModelName 暂不支持。</li></p>
+     * @param SceneType <p>场景类型。取值如下：<li>当 ModelName 为 Kling 时，取值 motion_control 表示动作控制；</li><li>其他 ModelName 暂不支持。</li></p>
      */
     public void setSceneType(String SceneType) {
         this.SceneType = SceneType;
@@ -332,6 +340,12 @@ public class AigcVideoTaskInput extends AbstractModel {
             this.FileInfos = new AigcVideoTaskInputFileInfo[source.FileInfos.length];
             for (int i = 0; i < source.FileInfos.length; i++) {
                 this.FileInfos[i] = new AigcVideoTaskInputFileInfo(source.FileInfos[i]);
+            }
+        }
+        if (source.SubjectInfos != null) {
+            this.SubjectInfos = new AigcVideoTaskInputSubjectInfo[source.SubjectInfos.length];
+            for (int i = 0; i < source.SubjectInfos.length; i++) {
+                this.SubjectInfos[i] = new AigcVideoTaskInputSubjectInfo(source.SubjectInfos[i]);
             }
         }
         if (source.LastFrameFileId != null) {
@@ -371,6 +385,7 @@ public class AigcVideoTaskInput extends AbstractModel {
         this.setParamSimple(map, prefix + "ModelName", this.ModelName);
         this.setParamSimple(map, prefix + "ModelVersion", this.ModelVersion);
         this.setParamArrayObj(map, prefix + "FileInfos.", this.FileInfos);
+        this.setParamArrayObj(map, prefix + "SubjectInfos.", this.SubjectInfos);
         this.setParamSimple(map, prefix + "LastFrameFileId", this.LastFrameFileId);
         this.setParamSimple(map, prefix + "LastFrameUrl", this.LastFrameUrl);
         this.setParamSimple(map, prefix + "Prompt", this.Prompt);

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tdmysql.v20211122.models;
+package com.tencentcloudapi.goosefs.v20220519.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,16 +21,42 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBillingEnableRequest extends AbstractModel {
+public class DescribeCustomerClusterRequest extends AbstractModel {
 
-    public DescribeBillingEnableRequest() {
+    /**
+    * 文件系统id
+    */
+    @SerializedName("FileSystemId")
+    @Expose
+    private String FileSystemId;
+
+    /**
+     * Get 文件系统id 
+     * @return FileSystemId 文件系统id
+     */
+    public String getFileSystemId() {
+        return this.FileSystemId;
+    }
+
+    /**
+     * Set 文件系统id
+     * @param FileSystemId 文件系统id
+     */
+    public void setFileSystemId(String FileSystemId) {
+        this.FileSystemId = FileSystemId;
+    }
+
+    public DescribeCustomerClusterRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeBillingEnableRequest(DescribeBillingEnableRequest source) {
+    public DescribeCustomerClusterRequest(DescribeCustomerClusterRequest source) {
+        if (source.FileSystemId != null) {
+            this.FileSystemId = new String(source.FileSystemId);
+        }
     }
 
 
@@ -38,6 +64,7 @@ public class DescribeBillingEnableRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
 
     }
 }

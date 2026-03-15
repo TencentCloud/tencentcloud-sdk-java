@@ -21,10 +21,10 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAigcVideoTaskResponse extends AbstractModel {
+public class CreateAigcSubjectResponse extends AbstractModel {
 
     /**
-    * <p>任务 ID。</p>
+    * <p>任务ID。</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateAigcVideoTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>任务 ID。</p> 
-     * @return TaskId <p>任务 ID。</p>
+     * Get <p>任务ID。</p> 
+     * @return TaskId <p>任务ID。</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set <p>任务 ID。</p>
-     * @param TaskId <p>任务 ID。</p>
+     * Set <p>任务ID。</p>
+     * @param TaskId <p>任务ID。</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
@@ -69,14 +69,14 @@ public class CreateAigcVideoTaskResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreateAigcVideoTaskResponse() {
+    public CreateAigcSubjectResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateAigcVideoTaskResponse(CreateAigcVideoTaskResponse source) {
+    public CreateAigcSubjectResponse(CreateAigcSubjectResponse source) {
         if (source.TaskId != null) {
             this.TaskId = new String(source.TaskId);
         }

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tdmysql.v20211122.models;
+package com.tencentcloudapi.goosefs.v20220519.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyBinlogStatusResponse extends AbstractModel {
+public class BuildCustomerClusterResponse extends AbstractModel {
 
     /**
-    * flow的流程id
+    * 客户端集群Id
     */
-    @SerializedName("FlowId")
+    @SerializedName("ClusterId")
     @Expose
-    private Long FlowId;
+    private String ClusterId;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +38,19 @@ public class ModifyBinlogStatusResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get flow的流程id 
-     * @return FlowId flow的流程id
+     * Get 客户端集群Id 
+     * @return ClusterId 客户端集群Id
      */
-    public Long getFlowId() {
-        return this.FlowId;
+    public String getClusterId() {
+        return this.ClusterId;
     }
 
     /**
-     * Set flow的流程id
-     * @param FlowId flow的流程id
+     * Set 客户端集群Id
+     * @param ClusterId 客户端集群Id
      */
-    public void setFlowId(Long FlowId) {
-        this.FlowId = FlowId;
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
     }
 
     /**
@@ -69,16 +69,16 @@ public class ModifyBinlogStatusResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public ModifyBinlogStatusResponse() {
+    public BuildCustomerClusterResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyBinlogStatusResponse(ModifyBinlogStatusResponse source) {
-        if (source.FlowId != null) {
-            this.FlowId = new Long(source.FlowId);
+    public BuildCustomerClusterResponse(BuildCustomerClusterResponse source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +90,7 @@ public class ModifyBinlogStatusResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

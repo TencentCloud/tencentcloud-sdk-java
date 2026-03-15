@@ -108,6 +108,34 @@ public class BackupFileInfo extends AbstractModel {
     private String BackupName;
 
     /**
+    * 投递状态
+    */
+    @SerializedName("CopyStatus")
+    @Expose
+    private String CopyStatus;
+
+    /**
+    * 秘钥id
+    */
+    @SerializedName("EncryptKeyId")
+    @Expose
+    private String EncryptKeyId;
+
+    /**
+    * 秘钥地域
+    */
+    @SerializedName("EncryptRegion")
+    @Expose
+    private String EncryptRegion;
+
+    /**
+    * 保险箱信息
+    */
+    @SerializedName("VaultInfos")
+    @Expose
+    private VaultInfo [] VaultInfos;
+
+    /**
      * Get 快照文件ID，已废弃，请使用BackupId 
      * @return SnapshotId 快照文件ID，已废弃，请使用BackupId
      */
@@ -299,6 +327,70 @@ public class BackupFileInfo extends AbstractModel {
         this.BackupName = BackupName;
     }
 
+    /**
+     * Get 投递状态 
+     * @return CopyStatus 投递状态
+     */
+    public String getCopyStatus() {
+        return this.CopyStatus;
+    }
+
+    /**
+     * Set 投递状态
+     * @param CopyStatus 投递状态
+     */
+    public void setCopyStatus(String CopyStatus) {
+        this.CopyStatus = CopyStatus;
+    }
+
+    /**
+     * Get 秘钥id 
+     * @return EncryptKeyId 秘钥id
+     */
+    public String getEncryptKeyId() {
+        return this.EncryptKeyId;
+    }
+
+    /**
+     * Set 秘钥id
+     * @param EncryptKeyId 秘钥id
+     */
+    public void setEncryptKeyId(String EncryptKeyId) {
+        this.EncryptKeyId = EncryptKeyId;
+    }
+
+    /**
+     * Get 秘钥地域 
+     * @return EncryptRegion 秘钥地域
+     */
+    public String getEncryptRegion() {
+        return this.EncryptRegion;
+    }
+
+    /**
+     * Set 秘钥地域
+     * @param EncryptRegion 秘钥地域
+     */
+    public void setEncryptRegion(String EncryptRegion) {
+        this.EncryptRegion = EncryptRegion;
+    }
+
+    /**
+     * Get 保险箱信息 
+     * @return VaultInfos 保险箱信息
+     */
+    public VaultInfo [] getVaultInfos() {
+        return this.VaultInfos;
+    }
+
+    /**
+     * Set 保险箱信息
+     * @param VaultInfos 保险箱信息
+     */
+    public void setVaultInfos(VaultInfo [] VaultInfos) {
+        this.VaultInfos = VaultInfos;
+    }
+
     public BackupFileInfo() {
     }
 
@@ -343,6 +435,21 @@ public class BackupFileInfo extends AbstractModel {
         if (source.BackupName != null) {
             this.BackupName = new String(source.BackupName);
         }
+        if (source.CopyStatus != null) {
+            this.CopyStatus = new String(source.CopyStatus);
+        }
+        if (source.EncryptKeyId != null) {
+            this.EncryptKeyId = new String(source.EncryptKeyId);
+        }
+        if (source.EncryptRegion != null) {
+            this.EncryptRegion = new String(source.EncryptRegion);
+        }
+        if (source.VaultInfos != null) {
+            this.VaultInfos = new VaultInfo[source.VaultInfos.length];
+            for (int i = 0; i < source.VaultInfos.length; i++) {
+                this.VaultInfos[i] = new VaultInfo(source.VaultInfos[i]);
+            }
+        }
     }
 
 
@@ -362,6 +469,10 @@ public class BackupFileInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "BackupId", this.BackupId);
         this.setParamSimple(map, prefix + "SnapShotType", this.SnapShotType);
         this.setParamSimple(map, prefix + "BackupName", this.BackupName);
+        this.setParamSimple(map, prefix + "CopyStatus", this.CopyStatus);
+        this.setParamSimple(map, prefix + "EncryptKeyId", this.EncryptKeyId);
+        this.setParamSimple(map, prefix + "EncryptRegion", this.EncryptRegion);
+        this.setParamArrayObj(map, prefix + "VaultInfos.", this.VaultInfos);
 
     }
 }

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tdmysql.v20211122.models;
+package com.tencentcloudapi.goosefs.v20220519.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,7 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBillingEnableResponse extends AbstractModel {
+public class DeleteCustomerClusterResponse extends AbstractModel {
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -46,14 +46,14 @@ public class DescribeBillingEnableResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeBillingEnableResponse() {
+    public DeleteCustomerClusterResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeBillingEnableResponse(DescribeBillingEnableResponse source) {
+    public DeleteCustomerClusterResponse(DeleteCustomerClusterResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }

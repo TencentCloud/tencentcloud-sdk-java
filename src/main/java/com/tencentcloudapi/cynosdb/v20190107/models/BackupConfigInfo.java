@@ -84,11 +84,18 @@ no-关闭
     private String [] CrossRegions;
 
     /**
-    * 动数据备份触发策略，periodically:自动周期备份,frequent:高频备份
+    * 自动数据备份触发策略，periodically:自动周期备份,frequent:高频备份
     */
     @SerializedName("BackupTriggerStrategy")
     @Expose
     private String BackupTriggerStrategy;
+
+    /**
+    * 备份投递关系
+    */
+    @SerializedName("AutoCopyVaults")
+    @Expose
+    private CreateBackupVaultItem [] AutoCopyVaults;
 
     /**
      * Get 系统自动时间 
@@ -235,19 +242,35 @@ no-关闭
     }
 
     /**
-     * Get 动数据备份触发策略，periodically:自动周期备份,frequent:高频备份 
-     * @return BackupTriggerStrategy 动数据备份触发策略，periodically:自动周期备份,frequent:高频备份
+     * Get 自动数据备份触发策略，periodically:自动周期备份,frequent:高频备份 
+     * @return BackupTriggerStrategy 自动数据备份触发策略，periodically:自动周期备份,frequent:高频备份
      */
     public String getBackupTriggerStrategy() {
         return this.BackupTriggerStrategy;
     }
 
     /**
-     * Set 动数据备份触发策略，periodically:自动周期备份,frequent:高频备份
-     * @param BackupTriggerStrategy 动数据备份触发策略，periodically:自动周期备份,frequent:高频备份
+     * Set 自动数据备份触发策略，periodically:自动周期备份,frequent:高频备份
+     * @param BackupTriggerStrategy 自动数据备份触发策略，periodically:自动周期备份,frequent:高频备份
      */
     public void setBackupTriggerStrategy(String BackupTriggerStrategy) {
         this.BackupTriggerStrategy = BackupTriggerStrategy;
+    }
+
+    /**
+     * Get 备份投递关系 
+     * @return AutoCopyVaults 备份投递关系
+     */
+    public CreateBackupVaultItem [] getAutoCopyVaults() {
+        return this.AutoCopyVaults;
+    }
+
+    /**
+     * Set 备份投递关系
+     * @param AutoCopyVaults 备份投递关系
+     */
+    public void setAutoCopyVaults(CreateBackupVaultItem [] AutoCopyVaults) {
+        this.AutoCopyVaults = AutoCopyVaults;
     }
 
     public BackupConfigInfo() {
@@ -291,6 +314,12 @@ no-关闭
         if (source.BackupTriggerStrategy != null) {
             this.BackupTriggerStrategy = new String(source.BackupTriggerStrategy);
         }
+        if (source.AutoCopyVaults != null) {
+            this.AutoCopyVaults = new CreateBackupVaultItem[source.AutoCopyVaults.length];
+            for (int i = 0; i < source.AutoCopyVaults.length; i++) {
+                this.AutoCopyVaults[i] = new CreateBackupVaultItem(source.AutoCopyVaults[i]);
+            }
+        }
     }
 
 
@@ -307,6 +336,7 @@ no-关闭
         this.setParamSimple(map, prefix + "CrossRegionsEnable", this.CrossRegionsEnable);
         this.setParamArraySimple(map, prefix + "CrossRegions.", this.CrossRegions);
         this.setParamSimple(map, prefix + "BackupTriggerStrategy", this.BackupTriggerStrategy);
+        this.setParamArrayObj(map, prefix + "AutoCopyVaults.", this.AutoCopyVaults);
 
     }
 }

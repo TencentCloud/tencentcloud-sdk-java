@@ -94,6 +94,17 @@ public class GoosefsClient extends AbstractClient{
     }
 
     /**
+     *构建客户端集群
+     * @param req BuildCustomerClusterRequest
+     * @return BuildCustomerClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public BuildCustomerClusterResponse BuildCustomerCluster(BuildCustomerClusterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BuildCustomerCluster", BuildCustomerClusterResponse.class);
+    }
+
+    /**
      *取消单个预热任务，仅任务在 waiting、running 状态时可以调用此接口。注意，该接口需要 GooseFS 集群版本 ≥ 1.5.1。
      * @param req CancelLoadTaskRequest
      * @return CancelLoadTaskResponse
@@ -160,6 +171,17 @@ public class GoosefsClient extends AbstractClient{
     }
 
     /**
+     *删除客户端集群
+     * @param req DeleteCustomerClusterRequest
+     * @return DeleteCustomerClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCustomerClusterResponse DeleteCustomerCluster(DeleteCustomerClusterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCustomerCluster", DeleteCustomerClusterResponse.class);
+    }
+
+    /**
      *删除文件系统
      * @param req DeleteFileSystemRequest
      * @return DeleteFileSystemResponse
@@ -212,6 +234,17 @@ public class GoosefsClient extends AbstractClient{
     public DescribeClusterRoleTokenResponse DescribeClusterRoleToken(DescribeClusterRoleTokenRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeClusterRoleToken", DescribeClusterRoleTokenResponse.class);
+    }
+
+    /**
+     *查询客户端集群
+     * @param req DescribeCustomerClusterRequest
+     * @return DescribeCustomerClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCustomerClusterResponse DescribeCustomerCluster(DescribeCustomerClusterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCustomerCluster", DescribeCustomerClusterResponse.class);
     }
 
     /**
@@ -322,6 +355,28 @@ public class GoosefsClient extends AbstractClient{
     public ModifyDataRepositoryBandwidthResponse ModifyDataRepositoryBandwidth(ModifyDataRepositoryBandwidthRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyDataRepositoryBandwidth", ModifyDataRepositoryBandwidthResponse.class);
+    }
+
+    /**
+     *客户端集群挂载存储集群
+     * @param req MountMultipleStorageFileSystemRequest
+     * @return MountMultipleStorageFileSystemResponse
+     * @throws TencentCloudSDKException
+     */
+    public MountMultipleStorageFileSystemResponse MountMultipleStorageFileSystem(MountMultipleStorageFileSystemRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "MountMultipleStorageFileSystem", MountMultipleStorageFileSystemResponse.class);
+    }
+
+    /**
+     *生成客户端的挂载命令
+     * @param req QueryClientNodeMountCommandRequest
+     * @return QueryClientNodeMountCommandResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryClientNodeMountCommandResponse QueryClientNodeMountCommand(QueryClientNodeMountCommandRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryClientNodeMountCommand", QueryClientNodeMountCommandResponse.class);
     }
 
     /**

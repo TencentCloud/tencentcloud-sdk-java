@@ -24,311 +24,161 @@ import java.util.HashMap;
 public class ModifyPullStreamConfigRequest extends AbstractModel {
 
     /**
-    * 配置 ID。
-获取来源：
-1. 创建拉流配置接口CreatePullStreamConfig返回的配置 ID。
-2. 通过查询接口DescribePullStreamConfigs获取配置 ID。
+    * <p>配置 ID。<br>获取来源：</p><ol><li>创建拉流配置接口CreatePullStreamConfig返回的配置 ID。</li><li>通过查询接口DescribePullStreamConfigs获取配置 ID。</li></ol>
     */
     @SerializedName("ConfigId")
     @Expose
     private String ConfigId;
 
     /**
-    * 源 URL，用于拉流的地址。目前可支持直播流及点播文件。
-注意：
-1. 多个点播 URL 之间使用空格拼接。
-2. 目前上限支持10个 URL。
-3. 支持拉流文件格式：FLV，RTMP，HLS，MP4。
-4. 使用标准三层样式，如：http://test.com/live/stream.flv。
+    * <p>源 URL，用于拉流的地址。目前可支持直播流及点播文件。<br>注意：</p><ol><li>多个点播 URL 之间使用空格拼接。</li><li>目前上限支持10个 URL。</li><li>支持拉流文件格式：FLV，RTMP，HLS，MP4。</li><li>使用标准三层样式，如：http://test.com/live/stream.flv。</li></ol>
     */
     @SerializedName("FromUrl")
     @Expose
     private String FromUrl;
 
     /**
-    * 目的 URL，用于推流的地址，目前限制该目标地址为腾讯域名。
-1. 仅支持 RTMP 协议。
-2. 使用标准三层样式，如：http://test.com/live/stream.flv。
+    * <p>目的 URL，用于推流的地址，目前限制该目标地址为腾讯域名。</p><ol><li>仅支持 RTMP 协议。</li><li>使用标准三层样式，如：http://test.com/live/stream.flv。</li></ol>
     */
     @SerializedName("ToUrl")
     @Expose
     private String ToUrl;
 
     /**
-    * 区域 ID：
-1-深圳。
-2-上海。
-3-天津。
-4-中国香港。
-如有改动，需同时传入IspId。
+    * <p>区域 ID：<br>1-深圳。<br>2-上海。<br>3-天津。<br>4-中国香港。<br>如有改动，需同时传入IspId。</p>
     */
     @SerializedName("AreaId")
     @Expose
     private Long AreaId;
 
     /**
-    * 运营商 ID，
-1：电信。
-2：移动。
-3：联通。
-4：其他。
-AreaId为4的时候，IspId只能为其他。如有改动，需同时传入AreaId。
+    * <p>运营商 ID，<br>1：电信。<br>2：移动。<br>3：联通。<br>4：其他。<br>AreaId为4的时候，IspId只能为其他。如有改动，需同时传入AreaId。</p>
     */
     @SerializedName("IspId")
     @Expose
     private Long IspId;
 
     /**
-    * 开始时间。
-使用UTC格式时间，
-例如：2019-01-08T10:00:00Z。
-注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+    * <p>开始时间。<br>使用UTC格式时间，<br>例如：2019-01-08T10:00:00Z。<br>注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间，注意：
-1. 结束时间必须大于开始时间；
-2. 结束时间和开始时间必须大于当前时间；
-3. 结束时间 和 开始时间 间隔必须小于七天。
-
-使用UTC格式时间，
-例如：2019-01-08T10:00:00Z。
-注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+    * <p>结束时间，注意：</p><ol><li>结束时间必须大于开始时间；</li><li>结束时间和开始时间必须大于当前时间；</li><li>结束时间 和 开始时间 间隔必须小于七天。</li></ol><p>使用UTC格式时间，<br>例如：2019-01-08T10:00:00Z。<br>注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-     * Get 配置 ID。
-获取来源：
-1. 创建拉流配置接口CreatePullStreamConfig返回的配置 ID。
-2. 通过查询接口DescribePullStreamConfigs获取配置 ID。 
-     * @return ConfigId 配置 ID。
-获取来源：
-1. 创建拉流配置接口CreatePullStreamConfig返回的配置 ID。
-2. 通过查询接口DescribePullStreamConfigs获取配置 ID。
+     * Get <p>配置 ID。<br>获取来源：</p><ol><li>创建拉流配置接口CreatePullStreamConfig返回的配置 ID。</li><li>通过查询接口DescribePullStreamConfigs获取配置 ID。</li></ol> 
+     * @return ConfigId <p>配置 ID。<br>获取来源：</p><ol><li>创建拉流配置接口CreatePullStreamConfig返回的配置 ID。</li><li>通过查询接口DescribePullStreamConfigs获取配置 ID。</li></ol>
      */
     public String getConfigId() {
         return this.ConfigId;
     }
 
     /**
-     * Set 配置 ID。
-获取来源：
-1. 创建拉流配置接口CreatePullStreamConfig返回的配置 ID。
-2. 通过查询接口DescribePullStreamConfigs获取配置 ID。
-     * @param ConfigId 配置 ID。
-获取来源：
-1. 创建拉流配置接口CreatePullStreamConfig返回的配置 ID。
-2. 通过查询接口DescribePullStreamConfigs获取配置 ID。
+     * Set <p>配置 ID。<br>获取来源：</p><ol><li>创建拉流配置接口CreatePullStreamConfig返回的配置 ID。</li><li>通过查询接口DescribePullStreamConfigs获取配置 ID。</li></ol>
+     * @param ConfigId <p>配置 ID。<br>获取来源：</p><ol><li>创建拉流配置接口CreatePullStreamConfig返回的配置 ID。</li><li>通过查询接口DescribePullStreamConfigs获取配置 ID。</li></ol>
      */
     public void setConfigId(String ConfigId) {
         this.ConfigId = ConfigId;
     }
 
     /**
-     * Get 源 URL，用于拉流的地址。目前可支持直播流及点播文件。
-注意：
-1. 多个点播 URL 之间使用空格拼接。
-2. 目前上限支持10个 URL。
-3. 支持拉流文件格式：FLV，RTMP，HLS，MP4。
-4. 使用标准三层样式，如：http://test.com/live/stream.flv。 
-     * @return FromUrl 源 URL，用于拉流的地址。目前可支持直播流及点播文件。
-注意：
-1. 多个点播 URL 之间使用空格拼接。
-2. 目前上限支持10个 URL。
-3. 支持拉流文件格式：FLV，RTMP，HLS，MP4。
-4. 使用标准三层样式，如：http://test.com/live/stream.flv。
+     * Get <p>源 URL，用于拉流的地址。目前可支持直播流及点播文件。<br>注意：</p><ol><li>多个点播 URL 之间使用空格拼接。</li><li>目前上限支持10个 URL。</li><li>支持拉流文件格式：FLV，RTMP，HLS，MP4。</li><li>使用标准三层样式，如：http://test.com/live/stream.flv。</li></ol> 
+     * @return FromUrl <p>源 URL，用于拉流的地址。目前可支持直播流及点播文件。<br>注意：</p><ol><li>多个点播 URL 之间使用空格拼接。</li><li>目前上限支持10个 URL。</li><li>支持拉流文件格式：FLV，RTMP，HLS，MP4。</li><li>使用标准三层样式，如：http://test.com/live/stream.flv。</li></ol>
      */
     public String getFromUrl() {
         return this.FromUrl;
     }
 
     /**
-     * Set 源 URL，用于拉流的地址。目前可支持直播流及点播文件。
-注意：
-1. 多个点播 URL 之间使用空格拼接。
-2. 目前上限支持10个 URL。
-3. 支持拉流文件格式：FLV，RTMP，HLS，MP4。
-4. 使用标准三层样式，如：http://test.com/live/stream.flv。
-     * @param FromUrl 源 URL，用于拉流的地址。目前可支持直播流及点播文件。
-注意：
-1. 多个点播 URL 之间使用空格拼接。
-2. 目前上限支持10个 URL。
-3. 支持拉流文件格式：FLV，RTMP，HLS，MP4。
-4. 使用标准三层样式，如：http://test.com/live/stream.flv。
+     * Set <p>源 URL，用于拉流的地址。目前可支持直播流及点播文件。<br>注意：</p><ol><li>多个点播 URL 之间使用空格拼接。</li><li>目前上限支持10个 URL。</li><li>支持拉流文件格式：FLV，RTMP，HLS，MP4。</li><li>使用标准三层样式，如：http://test.com/live/stream.flv。</li></ol>
+     * @param FromUrl <p>源 URL，用于拉流的地址。目前可支持直播流及点播文件。<br>注意：</p><ol><li>多个点播 URL 之间使用空格拼接。</li><li>目前上限支持10个 URL。</li><li>支持拉流文件格式：FLV，RTMP，HLS，MP4。</li><li>使用标准三层样式，如：http://test.com/live/stream.flv。</li></ol>
      */
     public void setFromUrl(String FromUrl) {
         this.FromUrl = FromUrl;
     }
 
     /**
-     * Get 目的 URL，用于推流的地址，目前限制该目标地址为腾讯域名。
-1. 仅支持 RTMP 协议。
-2. 使用标准三层样式，如：http://test.com/live/stream.flv。 
-     * @return ToUrl 目的 URL，用于推流的地址，目前限制该目标地址为腾讯域名。
-1. 仅支持 RTMP 协议。
-2. 使用标准三层样式，如：http://test.com/live/stream.flv。
+     * Get <p>目的 URL，用于推流的地址，目前限制该目标地址为腾讯域名。</p><ol><li>仅支持 RTMP 协议。</li><li>使用标准三层样式，如：http://test.com/live/stream.flv。</li></ol> 
+     * @return ToUrl <p>目的 URL，用于推流的地址，目前限制该目标地址为腾讯域名。</p><ol><li>仅支持 RTMP 协议。</li><li>使用标准三层样式，如：http://test.com/live/stream.flv。</li></ol>
      */
     public String getToUrl() {
         return this.ToUrl;
     }
 
     /**
-     * Set 目的 URL，用于推流的地址，目前限制该目标地址为腾讯域名。
-1. 仅支持 RTMP 协议。
-2. 使用标准三层样式，如：http://test.com/live/stream.flv。
-     * @param ToUrl 目的 URL，用于推流的地址，目前限制该目标地址为腾讯域名。
-1. 仅支持 RTMP 协议。
-2. 使用标准三层样式，如：http://test.com/live/stream.flv。
+     * Set <p>目的 URL，用于推流的地址，目前限制该目标地址为腾讯域名。</p><ol><li>仅支持 RTMP 协议。</li><li>使用标准三层样式，如：http://test.com/live/stream.flv。</li></ol>
+     * @param ToUrl <p>目的 URL，用于推流的地址，目前限制该目标地址为腾讯域名。</p><ol><li>仅支持 RTMP 协议。</li><li>使用标准三层样式，如：http://test.com/live/stream.flv。</li></ol>
      */
     public void setToUrl(String ToUrl) {
         this.ToUrl = ToUrl;
     }
 
     /**
-     * Get 区域 ID：
-1-深圳。
-2-上海。
-3-天津。
-4-中国香港。
-如有改动，需同时传入IspId。 
-     * @return AreaId 区域 ID：
-1-深圳。
-2-上海。
-3-天津。
-4-中国香港。
-如有改动，需同时传入IspId。
+     * Get <p>区域 ID：<br>1-深圳。<br>2-上海。<br>3-天津。<br>4-中国香港。<br>如有改动，需同时传入IspId。</p> 
+     * @return AreaId <p>区域 ID：<br>1-深圳。<br>2-上海。<br>3-天津。<br>4-中国香港。<br>如有改动，需同时传入IspId。</p>
      */
     public Long getAreaId() {
         return this.AreaId;
     }
 
     /**
-     * Set 区域 ID：
-1-深圳。
-2-上海。
-3-天津。
-4-中国香港。
-如有改动，需同时传入IspId。
-     * @param AreaId 区域 ID：
-1-深圳。
-2-上海。
-3-天津。
-4-中国香港。
-如有改动，需同时传入IspId。
+     * Set <p>区域 ID：<br>1-深圳。<br>2-上海。<br>3-天津。<br>4-中国香港。<br>如有改动，需同时传入IspId。</p>
+     * @param AreaId <p>区域 ID：<br>1-深圳。<br>2-上海。<br>3-天津。<br>4-中国香港。<br>如有改动，需同时传入IspId。</p>
      */
     public void setAreaId(Long AreaId) {
         this.AreaId = AreaId;
     }
 
     /**
-     * Get 运营商 ID，
-1：电信。
-2：移动。
-3：联通。
-4：其他。
-AreaId为4的时候，IspId只能为其他。如有改动，需同时传入AreaId。 
-     * @return IspId 运营商 ID，
-1：电信。
-2：移动。
-3：联通。
-4：其他。
-AreaId为4的时候，IspId只能为其他。如有改动，需同时传入AreaId。
+     * Get <p>运营商 ID，<br>1：电信。<br>2：移动。<br>3：联通。<br>4：其他。<br>AreaId为4的时候，IspId只能为其他。如有改动，需同时传入AreaId。</p> 
+     * @return IspId <p>运营商 ID，<br>1：电信。<br>2：移动。<br>3：联通。<br>4：其他。<br>AreaId为4的时候，IspId只能为其他。如有改动，需同时传入AreaId。</p>
      */
     public Long getIspId() {
         return this.IspId;
     }
 
     /**
-     * Set 运营商 ID，
-1：电信。
-2：移动。
-3：联通。
-4：其他。
-AreaId为4的时候，IspId只能为其他。如有改动，需同时传入AreaId。
-     * @param IspId 运营商 ID，
-1：电信。
-2：移动。
-3：联通。
-4：其他。
-AreaId为4的时候，IspId只能为其他。如有改动，需同时传入AreaId。
+     * Set <p>运营商 ID，<br>1：电信。<br>2：移动。<br>3：联通。<br>4：其他。<br>AreaId为4的时候，IspId只能为其他。如有改动，需同时传入AreaId。</p>
+     * @param IspId <p>运营商 ID，<br>1：电信。<br>2：移动。<br>3：联通。<br>4：其他。<br>AreaId为4的时候，IspId只能为其他。如有改动，需同时传入AreaId。</p>
      */
     public void setIspId(Long IspId) {
         this.IspId = IspId;
     }
 
     /**
-     * Get 开始时间。
-使用UTC格式时间，
-例如：2019-01-08T10:00:00Z。
-注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。 
-     * @return StartTime 开始时间。
-使用UTC格式时间，
-例如：2019-01-08T10:00:00Z。
-注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Get <p>开始时间。<br>使用UTC格式时间，<br>例如：2019-01-08T10:00:00Z。<br>注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p> 
+     * @return StartTime <p>开始时间。<br>使用UTC格式时间，<br>例如：2019-01-08T10:00:00Z。<br>注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间。
-使用UTC格式时间，
-例如：2019-01-08T10:00:00Z。
-注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
-     * @param StartTime 开始时间。
-使用UTC格式时间，
-例如：2019-01-08T10:00:00Z。
-注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Set <p>开始时间。<br>使用UTC格式时间，<br>例如：2019-01-08T10:00:00Z。<br>注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p>
+     * @param StartTime <p>开始时间。<br>使用UTC格式时间，<br>例如：2019-01-08T10:00:00Z。<br>注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间，注意：
-1. 结束时间必须大于开始时间；
-2. 结束时间和开始时间必须大于当前时间；
-3. 结束时间 和 开始时间 间隔必须小于七天。
-
-使用UTC格式时间，
-例如：2019-01-08T10:00:00Z。
-注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。 
-     * @return EndTime 结束时间，注意：
-1. 结束时间必须大于开始时间；
-2. 结束时间和开始时间必须大于当前时间；
-3. 结束时间 和 开始时间 间隔必须小于七天。
-
-使用UTC格式时间，
-例如：2019-01-08T10:00:00Z。
-注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Get <p>结束时间，注意：</p><ol><li>结束时间必须大于开始时间；</li><li>结束时间和开始时间必须大于当前时间；</li><li>结束时间 和 开始时间 间隔必须小于七天。</li></ol><p>使用UTC格式时间，<br>例如：2019-01-08T10:00:00Z。<br>注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p> 
+     * @return EndTime <p>结束时间，注意：</p><ol><li>结束时间必须大于开始时间；</li><li>结束时间和开始时间必须大于当前时间；</li><li>结束时间 和 开始时间 间隔必须小于七天。</li></ol><p>使用UTC格式时间，<br>例如：2019-01-08T10:00:00Z。<br>注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间，注意：
-1. 结束时间必须大于开始时间；
-2. 结束时间和开始时间必须大于当前时间；
-3. 结束时间 和 开始时间 间隔必须小于七天。
-
-使用UTC格式时间，
-例如：2019-01-08T10:00:00Z。
-注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
-     * @param EndTime 结束时间，注意：
-1. 结束时间必须大于开始时间；
-2. 结束时间和开始时间必须大于当前时间；
-3. 结束时间 和 开始时间 间隔必须小于七天。
-
-使用UTC格式时间，
-例如：2019-01-08T10:00:00Z。
-注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Set <p>结束时间，注意：</p><ol><li>结束时间必须大于开始时间；</li><li>结束时间和开始时间必须大于当前时间；</li><li>结束时间 和 开始时间 间隔必须小于七天。</li></ol><p>使用UTC格式时间，<br>例如：2019-01-08T10:00:00Z。<br>注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p>
+     * @param EndTime <p>结束时间，注意：</p><ol><li>结束时间必须大于开始时间；</li><li>结束时间和开始时间必须大于当前时间；</li><li>结束时间 和 开始时间 间隔必须小于七天。</li></ol><p>使用UTC格式时间，<br>例如：2019-01-08T10:00:00Z。<br>注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

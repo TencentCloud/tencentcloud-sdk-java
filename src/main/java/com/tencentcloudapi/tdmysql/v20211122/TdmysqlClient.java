@@ -72,19 +72,6 @@ public class TdmysqlClient extends AbstractClient{
     }
 
     /**
-     *已无地方调用
-
-本接口（DescribeBillingEnable）用于查询计费是否开启
-     * @param req DescribeBillingEnableRequest
-     * @return DescribeBillingEnableResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeBillingEnableResponse DescribeBillingEnable(DescribeBillingEnableRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeBillingEnable", DescribeBillingEnableResponse.class);
-    }
-
-    /**
      *本接口（DescribeDBParameters）用于获取实例的当前参数设置。
      * @param req DescribeDBParametersRequest
      * @return DescribeDBParametersResponse
@@ -140,19 +127,6 @@ public class TdmysqlClient extends AbstractClient{
     }
 
     /**
-     *冗余接口，无人调用
-
-本接口（DescribeDatabaseTable）用于查询云数据库实例的表信息。
-     * @param req DescribeDatabaseTableRequest
-     * @return DescribeDatabaseTableResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDatabaseTableResponse DescribeDatabaseTable(DescribeDatabaseTableRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeDatabaseTable", DescribeDatabaseTableResponse.class);
-    }
-
-    /**
      *本接口（DescribeFlow）用于查询异步任务流程状态
      * @param req DescribeFlowRequest
      * @return DescribeFlowResponse
@@ -194,19 +168,6 @@ public class TdmysqlClient extends AbstractClient{
     public ModifyAutoRenewFlagResponse ModifyAutoRenewFlag(ModifyAutoRenewFlagRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyAutoRenewFlag", ModifyAutoRenewFlagResponse.class);
-    }
-
-    /**
-     *接口功能已被 ModifyInstanceCdc 完全覆盖
-
-修改binlog状态
-     * @param req ModifyBinlogStatusRequest
-     * @return ModifyBinlogStatusResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyBinlogStatusResponse ModifyBinlogStatus(ModifyBinlogStatusRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyBinlogStatus", ModifyBinlogStatusResponse.class);
     }
 
     /**

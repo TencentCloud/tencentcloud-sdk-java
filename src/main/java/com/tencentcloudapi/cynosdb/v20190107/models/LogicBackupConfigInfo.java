@@ -69,6 +69,13 @@ public class LogicBackupConfigInfo extends AbstractModel {
     private String [] LogicCrossRegions;
 
     /**
+    * 备份投递关系
+    */
+    @SerializedName("AutoCopyVaults")
+    @Expose
+    private CreateBackupVaultItem [] AutoCopyVaults;
+
+    /**
      * Get 是否开启自动逻辑备份 
      * @return LogicBackupEnable 是否开启自动逻辑备份
      */
@@ -176,6 +183,22 @@ public class LogicBackupConfigInfo extends AbstractModel {
         this.LogicCrossRegions = LogicCrossRegions;
     }
 
+    /**
+     * Get 备份投递关系 
+     * @return AutoCopyVaults 备份投递关系
+     */
+    public CreateBackupVaultItem [] getAutoCopyVaults() {
+        return this.AutoCopyVaults;
+    }
+
+    /**
+     * Set 备份投递关系
+     * @param AutoCopyVaults 备份投递关系
+     */
+    public void setAutoCopyVaults(CreateBackupVaultItem [] AutoCopyVaults) {
+        this.AutoCopyVaults = AutoCopyVaults;
+    }
+
     public LogicBackupConfigInfo() {
     }
 
@@ -205,6 +228,12 @@ public class LogicBackupConfigInfo extends AbstractModel {
                 this.LogicCrossRegions[i] = new String(source.LogicCrossRegions[i]);
             }
         }
+        if (source.AutoCopyVaults != null) {
+            this.AutoCopyVaults = new CreateBackupVaultItem[source.AutoCopyVaults.length];
+            for (int i = 0; i < source.AutoCopyVaults.length; i++) {
+                this.AutoCopyVaults[i] = new CreateBackupVaultItem(source.AutoCopyVaults[i]);
+            }
+        }
     }
 
 
@@ -218,6 +247,7 @@ public class LogicBackupConfigInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "LogicReserveDuration", this.LogicReserveDuration);
         this.setParamSimple(map, prefix + "LogicCrossRegionsEnable", this.LogicCrossRegionsEnable);
         this.setParamArraySimple(map, prefix + "LogicCrossRegions.", this.LogicCrossRegions);
+        this.setParamArrayObj(map, prefix + "AutoCopyVaults.", this.AutoCopyVaults);
 
     }
 }

@@ -45,6 +45,13 @@ public class ProcessImageAsyncRequest extends AbstractModel {
     private String Url;
 
     /**
+    * <p>需要进行图片处理的Base64，要求图片文件小于4MB。使用 Base64 时，请不要添加任何前缀如 <code>data:image/png;base64,</code>，只需提供 Base64 编码字符串本身。</p>
+    */
+    @SerializedName("Base64")
+    @Expose
+    private String Base64;
+
+    /**
     * <p>图片处理参数。</p>
     */
     @SerializedName("ImageTaskInput")
@@ -132,6 +139,22 @@ public class ProcessImageAsyncRequest extends AbstractModel {
      */
     public void setUrl(String Url) {
         this.Url = Url;
+    }
+
+    /**
+     * Get <p>需要进行图片处理的Base64，要求图片文件小于4MB。使用 Base64 时，请不要添加任何前缀如 <code>data:image/png;base64,</code>，只需提供 Base64 编码字符串本身。</p> 
+     * @return Base64 <p>需要进行图片处理的Base64，要求图片文件小于4MB。使用 Base64 时，请不要添加任何前缀如 <code>data:image/png;base64,</code>，只需提供 Base64 编码字符串本身。</p>
+     */
+    public String getBase64() {
+        return this.Base64;
+    }
+
+    /**
+     * Set <p>需要进行图片处理的Base64，要求图片文件小于4MB。使用 Base64 时，请不要添加任何前缀如 <code>data:image/png;base64,</code>，只需提供 Base64 编码字符串本身。</p>
+     * @param Base64 <p>需要进行图片处理的Base64，要求图片文件小于4MB。使用 Base64 时，请不要添加任何前缀如 <code>data:image/png;base64,</code>，只需提供 Base64 编码字符串本身。</p>
+     */
+    public void setBase64(String Base64) {
+        this.Base64 = Base64;
     }
 
     /**
@@ -247,6 +270,9 @@ public class ProcessImageAsyncRequest extends AbstractModel {
         if (source.Url != null) {
             this.Url = new String(source.Url);
         }
+        if (source.Base64 != null) {
+            this.Base64 = new String(source.Base64);
+        }
         if (source.ImageTaskInput != null) {
             this.ImageTaskInput = new ProcessImageAsyncTaskInput(source.ImageTaskInput);
         }
@@ -275,6 +301,7 @@ public class ProcessImageAsyncRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "Base64", this.Base64);
         this.setParamObj(map, prefix + "ImageTaskInput.", this.ImageTaskInput);
         this.setParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);

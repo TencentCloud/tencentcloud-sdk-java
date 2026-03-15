@@ -24,207 +24,207 @@ import java.util.HashMap;
 public class CallbackStatusStatistics extends AbstractModel {
 
     /**
-    * <p>短信回执量统计。</p><p>单位：数</p>
+    * <p>短信回执量统计。</p><p>单位：个</p>
     */
     @SerializedName("CallbackCount")
     @Expose
     private Long CallbackCount;
 
     /**
-    * <p>短信提交成功量统计。</p><p>单位：数</p>
+    * <p>短信提交成功量统计。</p><p>单位：个</p>
     */
     @SerializedName("RequestSuccessCount")
     @Expose
     private Long RequestSuccessCount;
 
     /**
-    * <p>短信回执失败量统计。</p><p>单位：数</p>
+    * <p>短信回执失败量统计。</p><p>单位：个</p>
     */
     @SerializedName("CallbackFailCount")
     @Expose
     private Long CallbackFailCount;
 
     /**
-    * <p>短信回执成功量统计。</p><p>单位：数</p>
+    * <p>短信回执成功量统计。</p><p>单位：个</p>
     */
     @SerializedName("CallbackSuccessCount")
     @Expose
     private Long CallbackSuccessCount;
 
     /**
-    * <p>运营商内部错误统计。</p><p>单位：数</p>
+    * <p>运营商内部错误统计。</p><p>单位：个</p>
     */
     @SerializedName("InternalErrorCount")
     @Expose
     private Long InternalErrorCount;
 
     /**
-    * <p>号码无效或空号统计。</p><p>单位：数</p>
+    * <p>号码无效或空号统计。</p><p>单位：个</p>
     */
     @SerializedName("InvalidNumberCount")
     @Expose
     private Long InvalidNumberCount;
 
     /**
-    * <p>停机、关机等错误统计。</p><p>单位：数</p>
+    * <p>停机、关机等错误统计。</p><p>单位：个</p>
     */
     @SerializedName("ShutdownErrorCount")
     @Expose
     private Long ShutdownErrorCount;
 
     /**
-    * <p>号码拉入免打扰名单统计。</p><p>单位：数</p>
+    * <p>号码拉入免打扰名单统计。</p><p>单位：个</p>
     */
     @SerializedName("BlackListCount")
     @Expose
     private Long BlackListCount;
 
     /**
-    * <p>运营商频率限制统计。</p><p>单位：数</p>
+    * <p>运营商频率限制统计。</p><p>单位：个</p>
     */
     @SerializedName("FrequencyLimitCount")
     @Expose
     private Long FrequencyLimitCount;
 
     /**
-     * Get <p>短信回执量统计。</p><p>单位：数</p> 
-     * @return CallbackCount <p>短信回执量统计。</p><p>单位：数</p>
+     * Get <p>短信回执量统计。</p><p>单位：个</p> 
+     * @return CallbackCount <p>短信回执量统计。</p><p>单位：个</p>
      */
     public Long getCallbackCount() {
         return this.CallbackCount;
     }
 
     /**
-     * Set <p>短信回执量统计。</p><p>单位：数</p>
-     * @param CallbackCount <p>短信回执量统计。</p><p>单位：数</p>
+     * Set <p>短信回执量统计。</p><p>单位：个</p>
+     * @param CallbackCount <p>短信回执量统计。</p><p>单位：个</p>
      */
     public void setCallbackCount(Long CallbackCount) {
         this.CallbackCount = CallbackCount;
     }
 
     /**
-     * Get <p>短信提交成功量统计。</p><p>单位：数</p> 
-     * @return RequestSuccessCount <p>短信提交成功量统计。</p><p>单位：数</p>
+     * Get <p>短信提交成功量统计。</p><p>单位：个</p> 
+     * @return RequestSuccessCount <p>短信提交成功量统计。</p><p>单位：个</p>
      */
     public Long getRequestSuccessCount() {
         return this.RequestSuccessCount;
     }
 
     /**
-     * Set <p>短信提交成功量统计。</p><p>单位：数</p>
-     * @param RequestSuccessCount <p>短信提交成功量统计。</p><p>单位：数</p>
+     * Set <p>短信提交成功量统计。</p><p>单位：个</p>
+     * @param RequestSuccessCount <p>短信提交成功量统计。</p><p>单位：个</p>
      */
     public void setRequestSuccessCount(Long RequestSuccessCount) {
         this.RequestSuccessCount = RequestSuccessCount;
     }
 
     /**
-     * Get <p>短信回执失败量统计。</p><p>单位：数</p> 
-     * @return CallbackFailCount <p>短信回执失败量统计。</p><p>单位：数</p>
+     * Get <p>短信回执失败量统计。</p><p>单位：个</p> 
+     * @return CallbackFailCount <p>短信回执失败量统计。</p><p>单位：个</p>
      */
     public Long getCallbackFailCount() {
         return this.CallbackFailCount;
     }
 
     /**
-     * Set <p>短信回执失败量统计。</p><p>单位：数</p>
-     * @param CallbackFailCount <p>短信回执失败量统计。</p><p>单位：数</p>
+     * Set <p>短信回执失败量统计。</p><p>单位：个</p>
+     * @param CallbackFailCount <p>短信回执失败量统计。</p><p>单位：个</p>
      */
     public void setCallbackFailCount(Long CallbackFailCount) {
         this.CallbackFailCount = CallbackFailCount;
     }
 
     /**
-     * Get <p>短信回执成功量统计。</p><p>单位：数</p> 
-     * @return CallbackSuccessCount <p>短信回执成功量统计。</p><p>单位：数</p>
+     * Get <p>短信回执成功量统计。</p><p>单位：个</p> 
+     * @return CallbackSuccessCount <p>短信回执成功量统计。</p><p>单位：个</p>
      */
     public Long getCallbackSuccessCount() {
         return this.CallbackSuccessCount;
     }
 
     /**
-     * Set <p>短信回执成功量统计。</p><p>单位：数</p>
-     * @param CallbackSuccessCount <p>短信回执成功量统计。</p><p>单位：数</p>
+     * Set <p>短信回执成功量统计。</p><p>单位：个</p>
+     * @param CallbackSuccessCount <p>短信回执成功量统计。</p><p>单位：个</p>
      */
     public void setCallbackSuccessCount(Long CallbackSuccessCount) {
         this.CallbackSuccessCount = CallbackSuccessCount;
     }
 
     /**
-     * Get <p>运营商内部错误统计。</p><p>单位：数</p> 
-     * @return InternalErrorCount <p>运营商内部错误统计。</p><p>单位：数</p>
+     * Get <p>运营商内部错误统计。</p><p>单位：个</p> 
+     * @return InternalErrorCount <p>运营商内部错误统计。</p><p>单位：个</p>
      */
     public Long getInternalErrorCount() {
         return this.InternalErrorCount;
     }
 
     /**
-     * Set <p>运营商内部错误统计。</p><p>单位：数</p>
-     * @param InternalErrorCount <p>运营商内部错误统计。</p><p>单位：数</p>
+     * Set <p>运营商内部错误统计。</p><p>单位：个</p>
+     * @param InternalErrorCount <p>运营商内部错误统计。</p><p>单位：个</p>
      */
     public void setInternalErrorCount(Long InternalErrorCount) {
         this.InternalErrorCount = InternalErrorCount;
     }
 
     /**
-     * Get <p>号码无效或空号统计。</p><p>单位：数</p> 
-     * @return InvalidNumberCount <p>号码无效或空号统计。</p><p>单位：数</p>
+     * Get <p>号码无效或空号统计。</p><p>单位：个</p> 
+     * @return InvalidNumberCount <p>号码无效或空号统计。</p><p>单位：个</p>
      */
     public Long getInvalidNumberCount() {
         return this.InvalidNumberCount;
     }
 
     /**
-     * Set <p>号码无效或空号统计。</p><p>单位：数</p>
-     * @param InvalidNumberCount <p>号码无效或空号统计。</p><p>单位：数</p>
+     * Set <p>号码无效或空号统计。</p><p>单位：个</p>
+     * @param InvalidNumberCount <p>号码无效或空号统计。</p><p>单位：个</p>
      */
     public void setInvalidNumberCount(Long InvalidNumberCount) {
         this.InvalidNumberCount = InvalidNumberCount;
     }
 
     /**
-     * Get <p>停机、关机等错误统计。</p><p>单位：数</p> 
-     * @return ShutdownErrorCount <p>停机、关机等错误统计。</p><p>单位：数</p>
+     * Get <p>停机、关机等错误统计。</p><p>单位：个</p> 
+     * @return ShutdownErrorCount <p>停机、关机等错误统计。</p><p>单位：个</p>
      */
     public Long getShutdownErrorCount() {
         return this.ShutdownErrorCount;
     }
 
     /**
-     * Set <p>停机、关机等错误统计。</p><p>单位：数</p>
-     * @param ShutdownErrorCount <p>停机、关机等错误统计。</p><p>单位：数</p>
+     * Set <p>停机、关机等错误统计。</p><p>单位：个</p>
+     * @param ShutdownErrorCount <p>停机、关机等错误统计。</p><p>单位：个</p>
      */
     public void setShutdownErrorCount(Long ShutdownErrorCount) {
         this.ShutdownErrorCount = ShutdownErrorCount;
     }
 
     /**
-     * Get <p>号码拉入免打扰名单统计。</p><p>单位：数</p> 
-     * @return BlackListCount <p>号码拉入免打扰名单统计。</p><p>单位：数</p>
+     * Get <p>号码拉入免打扰名单统计。</p><p>单位：个</p> 
+     * @return BlackListCount <p>号码拉入免打扰名单统计。</p><p>单位：个</p>
      */
     public Long getBlackListCount() {
         return this.BlackListCount;
     }
 
     /**
-     * Set <p>号码拉入免打扰名单统计。</p><p>单位：数</p>
-     * @param BlackListCount <p>号码拉入免打扰名单统计。</p><p>单位：数</p>
+     * Set <p>号码拉入免打扰名单统计。</p><p>单位：个</p>
+     * @param BlackListCount <p>号码拉入免打扰名单统计。</p><p>单位：个</p>
      */
     public void setBlackListCount(Long BlackListCount) {
         this.BlackListCount = BlackListCount;
     }
 
     /**
-     * Get <p>运营商频率限制统计。</p><p>单位：数</p> 
-     * @return FrequencyLimitCount <p>运营商频率限制统计。</p><p>单位：数</p>
+     * Get <p>运营商频率限制统计。</p><p>单位：个</p> 
+     * @return FrequencyLimitCount <p>运营商频率限制统计。</p><p>单位：个</p>
      */
     public Long getFrequencyLimitCount() {
         return this.FrequencyLimitCount;
     }
 
     /**
-     * Set <p>运营商频率限制统计。</p><p>单位：数</p>
-     * @param FrequencyLimitCount <p>运营商频率限制统计。</p><p>单位：数</p>
+     * Set <p>运营商频率限制统计。</p><p>单位：个</p>
+     * @param FrequencyLimitCount <p>运营商频率限制统计。</p><p>单位：个</p>
      */
     public void setFrequencyLimitCount(Long FrequencyLimitCount) {
         this.FrequencyLimitCount = FrequencyLimitCount;

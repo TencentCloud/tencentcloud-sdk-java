@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tdmysql.v20211122.models;
+package com.tencentcloudapi.goosefs.v20220519.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,67 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TableColumn extends AbstractModel {
+public class DeleteCustomerClusterRequest extends AbstractModel {
 
     /**
-    * 列名称
+    * 文件系统id
     */
-    @SerializedName("Col")
+    @SerializedName("FileSystemId")
     @Expose
-    private String Col;
+    private String FileSystemId;
 
     /**
-    * 列类型
+    * 客户端集群ID
     */
-    @SerializedName("Type")
+    @SerializedName("ClusterId")
     @Expose
-    private String Type;
+    private String ClusterId;
 
     /**
-     * Get 列名称 
-     * @return Col 列名称
+     * Get 文件系统id 
+     * @return FileSystemId 文件系统id
      */
-    public String getCol() {
-        return this.Col;
+    public String getFileSystemId() {
+        return this.FileSystemId;
     }
 
     /**
-     * Set 列名称
-     * @param Col 列名称
+     * Set 文件系统id
+     * @param FileSystemId 文件系统id
      */
-    public void setCol(String Col) {
-        this.Col = Col;
+    public void setFileSystemId(String FileSystemId) {
+        this.FileSystemId = FileSystemId;
     }
 
     /**
-     * Get 列类型 
-     * @return Type 列类型
+     * Get 客户端集群ID 
+     * @return ClusterId 客户端集群ID
      */
-    public String getType() {
-        return this.Type;
+    public String getClusterId() {
+        return this.ClusterId;
     }
 
     /**
-     * Set 列类型
-     * @param Type 列类型
+     * Set 客户端集群ID
+     * @param ClusterId 客户端集群ID
      */
-    public void setType(String Type) {
-        this.Type = Type;
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
     }
 
-    public TableColumn() {
+    public DeleteCustomerClusterRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public TableColumn(TableColumn source) {
-        if (source.Col != null) {
-            this.Col = new String(source.Col);
+    public DeleteCustomerClusterRequest(DeleteCustomerClusterRequest source) {
+        if (source.FileSystemId != null) {
+            this.FileSystemId = new String(source.FileSystemId);
         }
-        if (source.Type != null) {
-            this.Type = new String(source.Type);
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
         }
     }
 
@@ -90,8 +90,8 @@ public class TableColumn extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Col", this.Col);
-        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
 
     }
 }

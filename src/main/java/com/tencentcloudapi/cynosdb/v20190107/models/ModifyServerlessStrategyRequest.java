@@ -117,6 +117,13 @@ public class ModifyServerlessStrategyRequest extends AbstractModel {
     private String UpgradeType;
 
     /**
+    * 新增的只读实例需要绑定的安全组列表。仅仅针对于在这次调整策略过程中新产生的只读实例绑定安全组，存量的实例不绑定。
+    */
+    @SerializedName("SecurityGroupIdsForNewRo")
+    @Expose
+    private String [] SecurityGroupIdsForNewRo;
+
+    /**
      * Get serverless集群id 
      * @return ClusterId serverless集群id
      */
@@ -332,6 +339,22 @@ public class ModifyServerlessStrategyRequest extends AbstractModel {
         this.UpgradeType = UpgradeType;
     }
 
+    /**
+     * Get 新增的只读实例需要绑定的安全组列表。仅仅针对于在这次调整策略过程中新产生的只读实例绑定安全组，存量的实例不绑定。 
+     * @return SecurityGroupIdsForNewRo 新增的只读实例需要绑定的安全组列表。仅仅针对于在这次调整策略过程中新产生的只读实例绑定安全组，存量的实例不绑定。
+     */
+    public String [] getSecurityGroupIdsForNewRo() {
+        return this.SecurityGroupIdsForNewRo;
+    }
+
+    /**
+     * Set 新增的只读实例需要绑定的安全组列表。仅仅针对于在这次调整策略过程中新产生的只读实例绑定安全组，存量的实例不绑定。
+     * @param SecurityGroupIdsForNewRo 新增的只读实例需要绑定的安全组列表。仅仅针对于在这次调整策略过程中新产生的只读实例绑定安全组，存量的实例不绑定。
+     */
+    public void setSecurityGroupIdsForNewRo(String [] SecurityGroupIdsForNewRo) {
+        this.SecurityGroupIdsForNewRo = SecurityGroupIdsForNewRo;
+    }
+
     public ModifyServerlessStrategyRequest() {
     }
 
@@ -379,6 +402,12 @@ public class ModifyServerlessStrategyRequest extends AbstractModel {
         if (source.UpgradeType != null) {
             this.UpgradeType = new String(source.UpgradeType);
         }
+        if (source.SecurityGroupIdsForNewRo != null) {
+            this.SecurityGroupIdsForNewRo = new String[source.SecurityGroupIdsForNewRo.length];
+            for (int i = 0; i < source.SecurityGroupIdsForNewRo.length; i++) {
+                this.SecurityGroupIdsForNewRo[i] = new String(source.SecurityGroupIdsForNewRo[i]);
+            }
+        }
     }
 
 
@@ -399,6 +428,7 @@ public class ModifyServerlessStrategyRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxRoCount", this.MaxRoCount);
         this.setParamSimple(map, prefix + "AutoArchive", this.AutoArchive);
         this.setParamSimple(map, prefix + "UpgradeType", this.UpgradeType);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIdsForNewRo.", this.SecurityGroupIdsForNewRo);
 
     }
 }

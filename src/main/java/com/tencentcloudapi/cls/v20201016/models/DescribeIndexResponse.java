@@ -24,22 +24,21 @@ import java.util.HashMap;
 public class DescribeIndexResponse extends AbstractModel {
 
     /**
-    * 日志主题Id
+    * <p>日志主题Id</p>
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * 索引状态。true：开启状态，false：关闭状态
-开启后可对日志进行检索分析，将产生索引流量、索引存储及相应费用。[费用详情](https://cloud.tencent.com/document/product/614/45802#.E8.AE.A1.E8.B4.B9.E9.A1.B9)
+    * <p>索引状态。true：开启状态，false：关闭状态<br>开启后可对日志进行检索分析，将产生索引流量、索引存储及相应费用。<a href="https://cloud.tencent.com/document/product/614/45802#.E8.AE.A1.E8.B4.B9.E9.A1.B9">费用详情</a></p>
     */
     @SerializedName("Status")
     @Expose
     private Boolean Status;
 
     /**
-    * 索引配置信息
+    * <p>索引配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Rule")
@@ -47,33 +46,28 @@ public class DescribeIndexResponse extends AbstractModel {
     private RuleInfo Rule;
 
     /**
-    * 索引修改时间，初始值为索引创建时间。格式 `YYYY-MM-DD HH:MM:SS`
+    * <p>索引修改时间，初始值为索引创建时间。格式 <code>YYYY-MM-DD HH:MM:SS</code></p>
     */
     @SerializedName("ModifyTime")
     @Expose
     private String ModifyTime;
 
     /**
-    * 内置保留字段（`__FILENAME__`，`__HOSTNAME__`及`__SOURCE__`）是否包含至全文索引
-* false:不包含
-* true:包含
+    * <p>内置保留字段（<code>__FILENAME__</code>，<code>__HOSTNAME__</code>及<code>__SOURCE__</code>）是否包含至全文索引</p><ul><li>false:不包含</li><li>true:包含</li></ul>
     */
     @SerializedName("IncludeInternalFields")
     @Expose
     private Boolean IncludeInternalFields;
 
     /**
-    * 元数据字段（前缀为`__TAG__`的字段）是否包含至全文索引
-* 0:仅包含开启键值索引的元数据字段
-* 1:包含所有元数据字段
-* 2:不包含任何元数据字段
+    * <p>元数据字段（前缀为<code>__TAG__</code>的字段）是否包含至全文索引</p><ul><li>0:仅包含开启键值索引的元数据字段</li><li>1:包含所有元数据字段</li><li>2:不包含任何元数据字段</li></ul>
     */
     @SerializedName("MetadataFlag")
     @Expose
     private Long MetadataFlag;
 
     /**
-    * 自定义日志解析异常存储字段。
+    * <p>自定义日志解析异常存储字段。</p>
     */
     @SerializedName("CoverageField")
     @Expose
@@ -87,45 +81,41 @@ public class DescribeIndexResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 日志主题Id 
-     * @return TopicId 日志主题Id
+     * Get <p>日志主题Id</p> 
+     * @return TopicId <p>日志主题Id</p>
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 日志主题Id
-     * @param TopicId 日志主题Id
+     * Set <p>日志主题Id</p>
+     * @param TopicId <p>日志主题Id</p>
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 索引状态。true：开启状态，false：关闭状态
-开启后可对日志进行检索分析，将产生索引流量、索引存储及相应费用。[费用详情](https://cloud.tencent.com/document/product/614/45802#.E8.AE.A1.E8.B4.B9.E9.A1.B9) 
-     * @return Status 索引状态。true：开启状态，false：关闭状态
-开启后可对日志进行检索分析，将产生索引流量、索引存储及相应费用。[费用详情](https://cloud.tencent.com/document/product/614/45802#.E8.AE.A1.E8.B4.B9.E9.A1.B9)
+     * Get <p>索引状态。true：开启状态，false：关闭状态<br>开启后可对日志进行检索分析，将产生索引流量、索引存储及相应费用。<a href="https://cloud.tencent.com/document/product/614/45802#.E8.AE.A1.E8.B4.B9.E9.A1.B9">费用详情</a></p> 
+     * @return Status <p>索引状态。true：开启状态，false：关闭状态<br>开启后可对日志进行检索分析，将产生索引流量、索引存储及相应费用。<a href="https://cloud.tencent.com/document/product/614/45802#.E8.AE.A1.E8.B4.B9.E9.A1.B9">费用详情</a></p>
      */
     public Boolean getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 索引状态。true：开启状态，false：关闭状态
-开启后可对日志进行检索分析，将产生索引流量、索引存储及相应费用。[费用详情](https://cloud.tencent.com/document/product/614/45802#.E8.AE.A1.E8.B4.B9.E9.A1.B9)
-     * @param Status 索引状态。true：开启状态，false：关闭状态
-开启后可对日志进行检索分析，将产生索引流量、索引存储及相应费用。[费用详情](https://cloud.tencent.com/document/product/614/45802#.E8.AE.A1.E8.B4.B9.E9.A1.B9)
+     * Set <p>索引状态。true：开启状态，false：关闭状态<br>开启后可对日志进行检索分析，将产生索引流量、索引存储及相应费用。<a href="https://cloud.tencent.com/document/product/614/45802#.E8.AE.A1.E8.B4.B9.E9.A1.B9">费用详情</a></p>
+     * @param Status <p>索引状态。true：开启状态，false：关闭状态<br>开启后可对日志进行检索分析，将产生索引流量、索引存储及相应费用。<a href="https://cloud.tencent.com/document/product/614/45802#.E8.AE.A1.E8.B4.B9.E9.A1.B9">费用详情</a></p>
      */
     public void setStatus(Boolean Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 索引配置信息
+     * Get <p>索引配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Rule 索引配置信息
+     * @return Rule <p>索引配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RuleInfo getRule() {
@@ -133,9 +123,9 @@ public class DescribeIndexResponse extends AbstractModel {
     }
 
     /**
-     * Set 索引配置信息
+     * Set <p>索引配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Rule 索引配置信息
+     * @param Rule <p>索引配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRule(RuleInfo Rule) {
@@ -143,84 +133,64 @@ public class DescribeIndexResponse extends AbstractModel {
     }
 
     /**
-     * Get 索引修改时间，初始值为索引创建时间。格式 `YYYY-MM-DD HH:MM:SS` 
-     * @return ModifyTime 索引修改时间，初始值为索引创建时间。格式 `YYYY-MM-DD HH:MM:SS`
+     * Get <p>索引修改时间，初始值为索引创建时间。格式 <code>YYYY-MM-DD HH:MM:SS</code></p> 
+     * @return ModifyTime <p>索引修改时间，初始值为索引创建时间。格式 <code>YYYY-MM-DD HH:MM:SS</code></p>
      */
     public String getModifyTime() {
         return this.ModifyTime;
     }
 
     /**
-     * Set 索引修改时间，初始值为索引创建时间。格式 `YYYY-MM-DD HH:MM:SS`
-     * @param ModifyTime 索引修改时间，初始值为索引创建时间。格式 `YYYY-MM-DD HH:MM:SS`
+     * Set <p>索引修改时间，初始值为索引创建时间。格式 <code>YYYY-MM-DD HH:MM:SS</code></p>
+     * @param ModifyTime <p>索引修改时间，初始值为索引创建时间。格式 <code>YYYY-MM-DD HH:MM:SS</code></p>
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 内置保留字段（`__FILENAME__`，`__HOSTNAME__`及`__SOURCE__`）是否包含至全文索引
-* false:不包含
-* true:包含 
-     * @return IncludeInternalFields 内置保留字段（`__FILENAME__`，`__HOSTNAME__`及`__SOURCE__`）是否包含至全文索引
-* false:不包含
-* true:包含
+     * Get <p>内置保留字段（<code>__FILENAME__</code>，<code>__HOSTNAME__</code>及<code>__SOURCE__</code>）是否包含至全文索引</p><ul><li>false:不包含</li><li>true:包含</li></ul> 
+     * @return IncludeInternalFields <p>内置保留字段（<code>__FILENAME__</code>，<code>__HOSTNAME__</code>及<code>__SOURCE__</code>）是否包含至全文索引</p><ul><li>false:不包含</li><li>true:包含</li></ul>
      */
     public Boolean getIncludeInternalFields() {
         return this.IncludeInternalFields;
     }
 
     /**
-     * Set 内置保留字段（`__FILENAME__`，`__HOSTNAME__`及`__SOURCE__`）是否包含至全文索引
-* false:不包含
-* true:包含
-     * @param IncludeInternalFields 内置保留字段（`__FILENAME__`，`__HOSTNAME__`及`__SOURCE__`）是否包含至全文索引
-* false:不包含
-* true:包含
+     * Set <p>内置保留字段（<code>__FILENAME__</code>，<code>__HOSTNAME__</code>及<code>__SOURCE__</code>）是否包含至全文索引</p><ul><li>false:不包含</li><li>true:包含</li></ul>
+     * @param IncludeInternalFields <p>内置保留字段（<code>__FILENAME__</code>，<code>__HOSTNAME__</code>及<code>__SOURCE__</code>）是否包含至全文索引</p><ul><li>false:不包含</li><li>true:包含</li></ul>
      */
     public void setIncludeInternalFields(Boolean IncludeInternalFields) {
         this.IncludeInternalFields = IncludeInternalFields;
     }
 
     /**
-     * Get 元数据字段（前缀为`__TAG__`的字段）是否包含至全文索引
-* 0:仅包含开启键值索引的元数据字段
-* 1:包含所有元数据字段
-* 2:不包含任何元数据字段 
-     * @return MetadataFlag 元数据字段（前缀为`__TAG__`的字段）是否包含至全文索引
-* 0:仅包含开启键值索引的元数据字段
-* 1:包含所有元数据字段
-* 2:不包含任何元数据字段
+     * Get <p>元数据字段（前缀为<code>__TAG__</code>的字段）是否包含至全文索引</p><ul><li>0:仅包含开启键值索引的元数据字段</li><li>1:包含所有元数据字段</li><li>2:不包含任何元数据字段</li></ul> 
+     * @return MetadataFlag <p>元数据字段（前缀为<code>__TAG__</code>的字段）是否包含至全文索引</p><ul><li>0:仅包含开启键值索引的元数据字段</li><li>1:包含所有元数据字段</li><li>2:不包含任何元数据字段</li></ul>
      */
     public Long getMetadataFlag() {
         return this.MetadataFlag;
     }
 
     /**
-     * Set 元数据字段（前缀为`__TAG__`的字段）是否包含至全文索引
-* 0:仅包含开启键值索引的元数据字段
-* 1:包含所有元数据字段
-* 2:不包含任何元数据字段
-     * @param MetadataFlag 元数据字段（前缀为`__TAG__`的字段）是否包含至全文索引
-* 0:仅包含开启键值索引的元数据字段
-* 1:包含所有元数据字段
-* 2:不包含任何元数据字段
+     * Set <p>元数据字段（前缀为<code>__TAG__</code>的字段）是否包含至全文索引</p><ul><li>0:仅包含开启键值索引的元数据字段</li><li>1:包含所有元数据字段</li><li>2:不包含任何元数据字段</li></ul>
+     * @param MetadataFlag <p>元数据字段（前缀为<code>__TAG__</code>的字段）是否包含至全文索引</p><ul><li>0:仅包含开启键值索引的元数据字段</li><li>1:包含所有元数据字段</li><li>2:不包含任何元数据字段</li></ul>
      */
     public void setMetadataFlag(Long MetadataFlag) {
         this.MetadataFlag = MetadataFlag;
     }
 
     /**
-     * Get 自定义日志解析异常存储字段。 
-     * @return CoverageField 自定义日志解析异常存储字段。
+     * Get <p>自定义日志解析异常存储字段。</p> 
+     * @return CoverageField <p>自定义日志解析异常存储字段。</p>
      */
     public String getCoverageField() {
         return this.CoverageField;
     }
 
     /**
-     * Set 自定义日志解析异常存储字段。
-     * @param CoverageField 自定义日志解析异常存储字段。
+     * Set <p>自定义日志解析异常存储字段。</p>
+     * @param CoverageField <p>自定义日志解析异常存储字段。</p>
      */
     public void setCoverageField(String CoverageField) {
         this.CoverageField = CoverageField;
