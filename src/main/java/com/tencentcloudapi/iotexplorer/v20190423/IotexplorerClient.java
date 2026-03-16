@@ -50,6 +50,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *TWeTalk设备激活接口。
+     * @param req ActivateTWeTalkRequest
+     * @return ActivateTWeTalkResponse
+     * @throws TencentCloudSDKException
+     */
+    public ActivateTWeTalkResponse ActivateTWeTalk(ActivateTWeTalkRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ActivateTWeTalk", ActivateTWeTalkResponse.class);
+    }
+
+    /**
      *批量同步执行 TWeSee 语义理解任务
      * @param req BatchCreateTWeSeeRecognitionTaskRequest
      * @return BatchCreateTWeSeeRecognitionTaskResponse
@@ -1565,6 +1576,28 @@ public class IotexplorerClient extends AbstractClient{
     public GetTWeTalkAIBotListResponse GetTWeTalkAIBotList(GetTWeTalkAIBotListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetTWeTalkAIBotList", GetTWeTalkAIBotListResponse.class);
+    }
+
+    /**
+     *TWeTalk消耗账单明细。
+     * @param req GetTWeTalkActiveRecordListRequest
+     * @return GetTWeTalkActiveRecordListResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetTWeTalkActiveRecordListResponse GetTWeTalkActiveRecordList(GetTWeTalkActiveRecordListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetTWeTalkActiveRecordList", GetTWeTalkActiveRecordListResponse.class);
+    }
+
+    /**
+     *查询TWeTalk设备激活状态。
+     * @param req GetTWeTalkActiveStatusRequest
+     * @return GetTWeTalkActiveStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetTWeTalkActiveStatusResponse GetTWeTalkActiveStatus(GetTWeTalkActiveStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetTWeTalkActiveStatus", GetTWeTalkActiveStatusResponse.class);
     }
 
     /**

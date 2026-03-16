@@ -53,6 +53,17 @@ https://cloud.tencent.com/document/product/1278/85305
     }
 
     /**
+     *创建数据源
+     * @param req CreateDataSourceRequest
+     * @return CreateDataSourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDataSourceResponse CreateDataSource(CreateDataSourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDataSource", CreateDataSourceResponse.class);
+    }
+
+    /**
      *创建数据集
      * @param req CreateDatasetRequest
      * @return CreateDatasetResponse
@@ -97,6 +108,17 @@ https://cloud.tencent.com/document/product/1278/85305
     }
 
     /**
+     *创建挂载限制
+     * @param req CreateMountLimitRequest
+     * @return CreateMountLimitResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMountLimitResponse CreateMountLimit(CreateMountLimitRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateMountLimit", CreateMountLimitResponse.class);
+    }
+
+    /**
      *创建Notebook
      * @param req CreateNotebookRequest
      * @return CreateNotebookResponse
@@ -138,6 +160,17 @@ https://cloud.tencent.com/document/product/1278/85305
     public CreateTrainingTaskResponse CreateTrainingTask(CreateTrainingTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateTrainingTask", CreateTrainingTaskResponse.class);
+    }
+
+    /**
+     *删除数据源
+     * @param req DeleteDataSourceRequest
+     * @return DeleteDataSourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDataSourceResponse DeleteDataSource(DeleteDataSourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDataSource", DeleteDataSourceResponse.class);
     }
 
     /**
@@ -193,6 +226,17 @@ https://cloud.tencent.com/document/product/1278/85305
     public DeleteModelServiceGroupResponse DeleteModelServiceGroup(DeleteModelServiceGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteModelServiceGroup", DeleteModelServiceGroupResponse.class);
+    }
+
+    /**
+     *删除挂载限制。注意：删除挂载限制后，该存储对应的所有数据源也会被删除
+     * @param req DeleteMountLimitRequest
+     * @return DeleteMountLimitResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteMountLimitResponse DeleteMountLimit(DeleteMountLimitRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteMountLimit", DeleteMountLimitResponse.class);
     }
 
     /**
@@ -303,6 +347,28 @@ https://cloud.tencent.com/document/product/1278/85305
     public DescribeBuildInImagesResponse DescribeBuildInImages(DescribeBuildInImagesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeBuildInImages", DescribeBuildInImagesResponse.class);
+    }
+
+    /**
+     *获取数据源详情
+     * @param req DescribeDataSourceRequest
+     * @return DescribeDataSourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataSourceResponse DescribeDataSource(DescribeDataSourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataSource", DescribeDataSourceResponse.class);
+    }
+
+    /**
+     *获取数据源列表
+     * @param req DescribeDataSourcesRequest
+     * @return DescribeDataSourcesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataSourcesResponse DescribeDataSources(DescribeDataSourcesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataSources", DescribeDataSourcesResponse.class);
     }
 
     /**
@@ -437,6 +503,39 @@ https://cloud.tencent.com/document/product/1278/85305
     public DescribeModelServiceHotUpdatedResponse DescribeModelServiceHotUpdated(DescribeModelServiceHotUpdatedRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeModelServiceHotUpdated", DescribeModelServiceHotUpdatedResponse.class);
+    }
+
+    /**
+     *DescribeMountInstance
+     * @param req DescribeMountInstanceRequest
+     * @return DescribeMountInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMountInstanceResponse DescribeMountInstance(DescribeMountInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMountInstance", DescribeMountInstanceResponse.class);
+    }
+
+    /**
+     *非数据源挂载时获取实例列表
+     * @param req DescribeMountInstancesRequest
+     * @return DescribeMountInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMountInstancesResponse DescribeMountInstances(DescribeMountInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMountInstances", DescribeMountInstancesResponse.class);
+    }
+
+    /**
+     *获取挂载限制列表
+     * @param req DescribeMountLimitsRequest
+     * @return DescribeMountLimitsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMountLimitsResponse DescribeMountLimits(DescribeMountLimitsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMountLimits", DescribeMountLimitsResponse.class);
     }
 
     /**
@@ -668,6 +767,28 @@ https://cloud.tencent.com/document/product/1278/85305
     public StopTrainingTaskResponse StopTrainingTask(StopTrainingTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StopTrainingTask", StopTrainingTaskResponse.class);
+    }
+
+    /**
+     *更新数据源
+     * @param req UpdateDataSourceRequest
+     * @return UpdateDataSourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateDataSourceResponse UpdateDataSource(UpdateDataSourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateDataSource", UpdateDataSourceResponse.class);
+    }
+
+    /**
+     *创建挂载限制
+     * @param req UpdateMountLimitRequest
+     * @return UpdateMountLimitResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateMountLimitResponse UpdateMountLimit(UpdateMountLimitRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateMountLimit", UpdateMountLimitResponse.class);
     }
 
     /**

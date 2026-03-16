@@ -31,6 +31,13 @@ public class CreateAndroidInstanceADBRequest extends AbstractModel {
     private String AndroidInstanceId;
 
     /**
+    * 过期时间。默认 1 小时，最长 30 天。格式为 2025-07-02T10:15:36Z
+    */
+    @SerializedName("ExpiredTime")
+    @Expose
+    private String ExpiredTime;
+
+    /**
      * Get 安卓实例 ID 
      * @return AndroidInstanceId 安卓实例 ID
      */
@@ -46,6 +53,22 @@ public class CreateAndroidInstanceADBRequest extends AbstractModel {
         this.AndroidInstanceId = AndroidInstanceId;
     }
 
+    /**
+     * Get 过期时间。默认 1 小时，最长 30 天。格式为 2025-07-02T10:15:36Z 
+     * @return ExpiredTime 过期时间。默认 1 小时，最长 30 天。格式为 2025-07-02T10:15:36Z
+     */
+    public String getExpiredTime() {
+        return this.ExpiredTime;
+    }
+
+    /**
+     * Set 过期时间。默认 1 小时，最长 30 天。格式为 2025-07-02T10:15:36Z
+     * @param ExpiredTime 过期时间。默认 1 小时，最长 30 天。格式为 2025-07-02T10:15:36Z
+     */
+    public void setExpiredTime(String ExpiredTime) {
+        this.ExpiredTime = ExpiredTime;
+    }
+
     public CreateAndroidInstanceADBRequest() {
     }
 
@@ -57,6 +80,9 @@ public class CreateAndroidInstanceADBRequest extends AbstractModel {
         if (source.AndroidInstanceId != null) {
             this.AndroidInstanceId = new String(source.AndroidInstanceId);
         }
+        if (source.ExpiredTime != null) {
+            this.ExpiredTime = new String(source.ExpiredTime);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class CreateAndroidInstanceADBRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AndroidInstanceId", this.AndroidInstanceId);
+        this.setParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
 
     }
 }

@@ -52,6 +52,13 @@ public class ModifyRabbitMQServerlessExchangeRequest extends AbstractModel {
     private String Remark;
 
     /**
+    * 备用交换机
+    */
+    @SerializedName("AlternateExchange")
+    @Expose
+    private String AlternateExchange;
+
+    /**
      * Get 实例 id 
      * @return InstanceId 实例 id
      */
@@ -115,6 +122,22 @@ public class ModifyRabbitMQServerlessExchangeRequest extends AbstractModel {
         this.Remark = Remark;
     }
 
+    /**
+     * Get 备用交换机 
+     * @return AlternateExchange 备用交换机
+     */
+    public String getAlternateExchange() {
+        return this.AlternateExchange;
+    }
+
+    /**
+     * Set 备用交换机
+     * @param AlternateExchange 备用交换机
+     */
+    public void setAlternateExchange(String AlternateExchange) {
+        this.AlternateExchange = AlternateExchange;
+    }
+
     public ModifyRabbitMQServerlessExchangeRequest() {
     }
 
@@ -135,6 +158,9 @@ public class ModifyRabbitMQServerlessExchangeRequest extends AbstractModel {
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.AlternateExchange != null) {
+            this.AlternateExchange = new String(source.AlternateExchange);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class ModifyRabbitMQServerlessExchangeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "VirtualHost", this.VirtualHost);
         this.setParamSimple(map, prefix + "ExchangeName", this.ExchangeName);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "AlternateExchange", this.AlternateExchange);
 
     }
 }

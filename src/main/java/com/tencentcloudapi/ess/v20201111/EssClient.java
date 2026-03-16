@@ -1311,6 +1311,27 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *获取他方企业第三方应用的创建及授权及企业用户初始化链接
+此链接在 7 天内有效，若失效请重新生成。
+若第一次初始化，打开此链接，会进行应用号的创建，子客的创建，打开此链接的人，必须是合作方企业的超管或者法人，否则无法认证成功。
+若传递了应用号Id，若之前的初始化还未创建子客成功，则可以继续创建子客企业。
+
+注: 
+1. BusinessId “集成方业务标记”唯一，不可变更， 此标记由电子签产品经理提供，请调用方保存。
+2. 若“第三方应用id”不为空，需要其“集成方业务标记”与接口一致。
+3. 不支持客户自己创建“已有第三方应用id”进行授权。（即“已有第三方应用id”的集成方业务标记为空，不能进行授权）。
+4. 创建的子客企业与合作企业一致，其中包括超管姓名，企业名称。
+5. 创建好的第三方应用号，不支持在页面进行修改编辑，只能通过接口的方式进行管理。
+     * @param req CreatePartnerAuthorizationLinkRequest
+     * @return CreatePartnerAuthorizationLinkResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePartnerAuthorizationLinkResponse CreatePartnerAuthorizationLink(CreatePartnerAuthorizationLinkRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreatePartnerAuthorizationLink", CreatePartnerAuthorizationLinkResponse.class);
+    }
+
+    /**
      *创建一个用于他方自动签授权的链接（可选择他方授权或我方授权）。通过这个链接，合作方企业可以直接进入小程序，进行自动签授权操作。
 
 如果授权企业尚未开通企业自动签功能，该链接还将引导他们首先开通本企业的自动签服务
@@ -2445,6 +2466,22 @@ public class EssClient extends AbstractClient{
     public ModifyIntegrationRoleResponse ModifyIntegrationRole(ModifyIntegrationRoleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyIntegrationRole", ModifyIntegrationRoleResponse.class);
+    }
+
+    /**
+     *管理他方企业授权的第三方应用
+
+注: 
+1. BusinessId “集成方业务标记”需要与“第三方应用id”一致
+2. 不支持客户自己创建“已有第三方应用id”进行变更。（即“已有第三方应用id”的集成方业务标记为空，不能进行变更）。
+3. 当前仅支持修改回调地址和加密key。
+     * @param req ModifyPartnerAuthorizationRequest
+     * @return ModifyPartnerAuthorizationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPartnerAuthorizationResponse ModifyPartnerAuthorization(ModifyPartnerAuthorizationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyPartnerAuthorization", ModifyPartnerAuthorizationResponse.class);
     }
 
     /**

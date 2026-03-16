@@ -31,14 +31,14 @@ public class ModifySplunkDeliverRequest extends AbstractModel {
     private String TaskId;
 
     /**
-    * <p>日志主题id- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
+    * <p>日志主题id</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * <p>投递任务名称name有以下限制：- 不能为空- 长度不大于64- 只能包含aA-zZ、下划线、-、0-9</p>
+    * <p>投递任务名称<br>name有以下限制：</p><ul><li>不能为空</li><li>长度不大于64</li><li>只能包含aA-zZ、下划线、-、0-9</li></ul>
     */
     @SerializedName("Name")
     @Expose
@@ -73,7 +73,7 @@ public class ModifySplunkDeliverRequest extends AbstractModel {
     private Long HasServiceLog;
 
     /**
-    * <p>高级配置-是否启用索引器;1-不开启；2-开启；默认为：1</p>
+    * <p>高级配置-是否启用索引器;<br>1-不开启；2-开启；默认为：1</p>
     */
     @SerializedName("IndexAck")
     @Expose
@@ -101,7 +101,7 @@ public class ModifySplunkDeliverRequest extends AbstractModel {
     private String Index;
 
     /**
-    * <p>高级配置-通道。需满足限制：如果启用索引器，该值不能为空</p>
+    * <p>高级配置-通道。<br>需满足限制：如果启用索引器，该值不能为空</p>
     */
     @SerializedName("Channel")
     @Expose
@@ -113,6 +113,13 @@ public class ModifySplunkDeliverRequest extends AbstractModel {
     @SerializedName("DSLFilter")
     @Expose
     private String DSLFilter;
+
+    /**
+    * <p>高级配置-跨账户投递用户角色授权信息</p><p>取值参考：<a href="https://console.cloud.tencent.com/cam/role/create?payloadType=account">新建自定义角色</a></p>
+    */
+    @SerializedName("ExternalRole")
+    @Expose
+    private ExternalRole ExternalRole;
 
     /**
      * Get <p>任务id</p> 
@@ -131,32 +138,32 @@ public class ModifySplunkDeliverRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>日志主题id- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p> 
-     * @return TopicId <p>日志主题id- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
+     * Get <p>日志主题id</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul> 
+     * @return TopicId <p>日志主题id</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set <p>日志主题id- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
-     * @param TopicId <p>日志主题id- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
+     * Set <p>日志主题id</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
+     * @param TopicId <p>日志主题id</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get <p>投递任务名称name有以下限制：- 不能为空- 长度不大于64- 只能包含aA-zZ、下划线、-、0-9</p> 
-     * @return Name <p>投递任务名称name有以下限制：- 不能为空- 长度不大于64- 只能包含aA-zZ、下划线、-、0-9</p>
+     * Get <p>投递任务名称<br>name有以下限制：</p><ul><li>不能为空</li><li>长度不大于64</li><li>只能包含aA-zZ、下划线、-、0-9</li></ul> 
+     * @return Name <p>投递任务名称<br>name有以下限制：</p><ul><li>不能为空</li><li>长度不大于64</li><li>只能包含aA-zZ、下划线、-、0-9</li></ul>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set <p>投递任务名称name有以下限制：- 不能为空- 长度不大于64- 只能包含aA-zZ、下划线、-、0-9</p>
-     * @param Name <p>投递任务名称name有以下限制：- 不能为空- 长度不大于64- 只能包含aA-zZ、下划线、-、0-9</p>
+     * Set <p>投递任务名称<br>name有以下限制：</p><ul><li>不能为空</li><li>长度不大于64</li><li>只能包含aA-zZ、下划线、-、0-9</li></ul>
+     * @param Name <p>投递任务名称<br>name有以下限制：</p><ul><li>不能为空</li><li>长度不大于64</li><li>只能包含aA-zZ、下划线、-、0-9</li></ul>
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -227,16 +234,16 @@ public class ModifySplunkDeliverRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>高级配置-是否启用索引器;1-不开启；2-开启；默认为：1</p> 
-     * @return IndexAck <p>高级配置-是否启用索引器;1-不开启；2-开启；默认为：1</p>
+     * Get <p>高级配置-是否启用索引器;<br>1-不开启；2-开启；默认为：1</p> 
+     * @return IndexAck <p>高级配置-是否启用索引器;<br>1-不开启；2-开启；默认为：1</p>
      */
     public Long getIndexAck() {
         return this.IndexAck;
     }
 
     /**
-     * Set <p>高级配置-是否启用索引器;1-不开启；2-开启；默认为：1</p>
-     * @param IndexAck <p>高级配置-是否启用索引器;1-不开启；2-开启；默认为：1</p>
+     * Set <p>高级配置-是否启用索引器;<br>1-不开启；2-开启；默认为：1</p>
+     * @param IndexAck <p>高级配置-是否启用索引器;<br>1-不开启；2-开启；默认为：1</p>
      */
     public void setIndexAck(Long IndexAck) {
         this.IndexAck = IndexAck;
@@ -291,16 +298,16 @@ public class ModifySplunkDeliverRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>高级配置-通道。需满足限制：如果启用索引器，该值不能为空</p> 
-     * @return Channel <p>高级配置-通道。需满足限制：如果启用索引器，该值不能为空</p>
+     * Get <p>高级配置-通道。<br>需满足限制：如果启用索引器，该值不能为空</p> 
+     * @return Channel <p>高级配置-通道。<br>需满足限制：如果启用索引器，该值不能为空</p>
      */
     public String getChannel() {
         return this.Channel;
     }
 
     /**
-     * Set <p>高级配置-通道。需满足限制：如果启用索引器，该值不能为空</p>
-     * @param Channel <p>高级配置-通道。需满足限制：如果启用索引器，该值不能为空</p>
+     * Set <p>高级配置-通道。<br>需满足限制：如果启用索引器，该值不能为空</p>
+     * @param Channel <p>高级配置-通道。<br>需满足限制：如果启用索引器，该值不能为空</p>
      */
     public void setChannel(String Channel) {
         this.Channel = Channel;
@@ -320,6 +327,22 @@ public class ModifySplunkDeliverRequest extends AbstractModel {
      */
     public void setDSLFilter(String DSLFilter) {
         this.DSLFilter = DSLFilter;
+    }
+
+    /**
+     * Get <p>高级配置-跨账户投递用户角色授权信息</p><p>取值参考：<a href="https://console.cloud.tencent.com/cam/role/create?payloadType=account">新建自定义角色</a></p> 
+     * @return ExternalRole <p>高级配置-跨账户投递用户角色授权信息</p><p>取值参考：<a href="https://console.cloud.tencent.com/cam/role/create?payloadType=account">新建自定义角色</a></p>
+     */
+    public ExternalRole getExternalRole() {
+        return this.ExternalRole;
+    }
+
+    /**
+     * Set <p>高级配置-跨账户投递用户角色授权信息</p><p>取值参考：<a href="https://console.cloud.tencent.com/cam/role/create?payloadType=account">新建自定义角色</a></p>
+     * @param ExternalRole <p>高级配置-跨账户投递用户角色授权信息</p><p>取值参考：<a href="https://console.cloud.tencent.com/cam/role/create?payloadType=account">新建自定义角色</a></p>
+     */
+    public void setExternalRole(ExternalRole ExternalRole) {
+        this.ExternalRole = ExternalRole;
     }
 
     public ModifySplunkDeliverRequest() {
@@ -369,6 +392,9 @@ public class ModifySplunkDeliverRequest extends AbstractModel {
         if (source.DSLFilter != null) {
             this.DSLFilter = new String(source.DSLFilter);
         }
+        if (source.ExternalRole != null) {
+            this.ExternalRole = new ExternalRole(source.ExternalRole);
+        }
     }
 
 
@@ -389,6 +415,7 @@ public class ModifySplunkDeliverRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Index", this.Index);
         this.setParamSimple(map, prefix + "Channel", this.Channel);
         this.setParamSimple(map, prefix + "DSLFilter", this.DSLFilter);
+        this.setParamObj(map, prefix + "ExternalRole.", this.ExternalRole);
 
     }
 }

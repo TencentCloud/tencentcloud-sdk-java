@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteCloudProductLogCollectionResponse extends AbstractModel {
 
     /**
-    * 枚举值，0创建中 1创建完成 2删除中 3删除完成
+    * <p>枚举值，0创建中 1创建完成 2删除中 3删除完成</p>
     */
     @SerializedName("Status")
     @Expose
@@ -38,16 +38,16 @@ public class DeleteCloudProductLogCollectionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 枚举值，0创建中 1创建完成 2删除中 3删除完成 
-     * @return Status 枚举值，0创建中 1创建完成 2删除中 3删除完成
+     * Get <p>枚举值，0创建中 1创建完成 2删除中 3删除完成</p> 
+     * @return Status <p>枚举值，0创建中 1创建完成 2删除中 3删除完成</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 枚举值，0创建中 1创建完成 2删除中 3删除完成
-     * @param Status 枚举值，0创建中 1创建完成 2删除中 3删除完成
+     * Set <p>枚举值，0创建中 1创建完成 2删除中 3删除完成</p>
+     * @param Status <p>枚举值，0创建中 1创建完成 2删除中 3删除完成</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;

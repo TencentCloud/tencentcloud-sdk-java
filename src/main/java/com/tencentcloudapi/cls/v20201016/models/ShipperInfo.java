@@ -24,619 +24,529 @@ import java.util.HashMap;
 public class ShipperInfo extends AbstractModel {
 
     /**
-    * 投递规则ID
+    * <p>投递规则ID</p>
     */
     @SerializedName("ShipperId")
     @Expose
     private String ShipperId;
 
     /**
-    * 日志主题ID
+    * <p>日志主题ID</p>
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * 投递的bucket地址
+    * <p>投递的bucket地址</p>
     */
     @SerializedName("Bucket")
     @Expose
     private String Bucket;
 
     /**
-    * 投递的前缀目录
+    * <p>投递的前缀目录</p>
     */
     @SerializedName("Prefix")
     @Expose
     private String Prefix;
 
     /**
-    * 投递规则的名字
+    * <p>投递规则的名字</p>
     */
     @SerializedName("ShipperName")
     @Expose
     private String ShipperName;
 
     /**
-    * 投递的时间间隔，单位 秒
+    * <p>投递的时间间隔，单位 秒</p>
     */
     @SerializedName("Interval")
     @Expose
     private Long Interval;
 
     /**
-    * 投递的文件的最大值，单位 MB
+    * <p>投递的文件的最大值，单位 MB</p>
     */
     @SerializedName("MaxSize")
     @Expose
     private Long MaxSize;
 
     /**
-    * 是否生效
+    * <p>是否生效</p>
     */
     @SerializedName("Status")
     @Expose
     private Boolean Status;
 
     /**
-    * 投递日志的过滤规则
+    * <p>投递日志的过滤规则</p>
     */
     @SerializedName("FilterRules")
     @Expose
     private FilterRuleInfo [] FilterRules;
 
     /**
-    * 投递日志的分区规则，支持strftime的时间格式表示
+    * <p>投递日志的分区规则，支持strftime的时间格式表示</p>
     */
     @SerializedName("Partition")
     @Expose
     private String Partition;
 
     /**
-    * 投递日志的压缩配置
+    * <p>投递日志的压缩配置</p>
     */
     @SerializedName("Compress")
     @Expose
     private CompressInfo Compress;
 
     /**
-    * 投递日志的内容格式配置
+    * <p>投递日志的内容格式配置</p>
     */
     @SerializedName("Content")
     @Expose
     private ContentInfo Content;
 
     /**
-    * 投递日志的创建时间。格式：YYYY-MM-DD HH:MM:SS
+    * <p>投递日志的创建时间。格式：YYYY-MM-DD HH:MM:SS</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
+    * <p>投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）</p>
     */
     @SerializedName("FilenameMode")
     @Expose
     private Long FilenameMode;
 
     /**
-    * 投递数据范围的开始时间点
+    * <p>投递数据范围的开始时间点</p>
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 投递数据范围的结束时间点
+    * <p>投递数据范围的结束时间点</p>
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * 历史数据投递的进度（仅当用户选择的数据内中历史数据时才有效）
+    * <p>历史数据投递的进度（仅当用户选择的数据内中历史数据时才有效）</p>
     */
     @SerializedName("Progress")
     @Expose
     private Float Progress;
 
     /**
-    * 历史数据全部投递完成剩余的时间（仅当用户选择的数据中有历史数据时才有效）
+    * <p>历史数据全部投递完成剩余的时间（仅当用户选择的数据中有历史数据时才有效）</p><p>单位：秒</p>
     */
     @SerializedName("RemainTime")
     @Expose
     private Long RemainTime;
 
     /**
-    * 历史任务状态：
-0：实时任务
-1：任务准备中
-2：任务运行中
-3：任务运行异常
-4：任务运行结束
+    * <p>历史任务状态：<br>0：实时任务<br>1：任务准备中<br>2：任务运行中<br>3：任务运行异常<br>4：任务运行结束</p>
     */
     @SerializedName("HistoryStatus")
     @Expose
     private Long HistoryStatus;
 
     /**
-    * 对象存储类型，默认值为 STANDARD。枚举值请参见[ 存储类型概述](https://cloud.tencent.com/document/product/436/33417) 文档。
-参考值有：
-STANDARD：标准存储
-STANDARD_IA：低频存储
-ARCHIVE：归档存储
-DEEP_ARCHIVE：深度归档存储
-MAZ_STANDARD：标准存储（多 AZ）
-MAZ_STANDARD_IA：低频存储（多 AZ）
-INTELLIGENT_TIERING：智能分层存储
-MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）
+    * <p>对象存储类型，默认值为 STANDARD。枚举值请参见<a href="https://cloud.tencent.com/document/product/436/33417"> 存储类型概述</a> 文档。<br>参考值有：<br>STANDARD：标准存储<br>STANDARD_IA：低频存储<br>ARCHIVE：归档存储<br>DEEP_ARCHIVE：深度归档存储<br>MAZ_STANDARD：标准存储（多 AZ）<br>MAZ_STANDARD_IA：低频存储（多 AZ）<br>INTELLIGENT_TIERING：智能分层存储<br>MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）</p>
     */
     @SerializedName("StorageType")
     @Expose
     private String StorageType;
 
     /**
-    * 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+    * <p>角色访问描述名 <a href="https://cloud.tencent.com/document/product/598/19381">创建角色</a></p>
     */
     @SerializedName("RoleArn")
     @Expose
     private String RoleArn;
 
     /**
-    * 外部ID
+    * <p>外部ID</p>
     */
     @SerializedName("ExternalId")
     @Expose
     private String ExternalId;
 
     /**
-    * 任务运行状态。支持`0`,`1`,`2`
-
-- `0`: 停止
-- `1`: 运行中
-- `2`: 异常
+    * <p>任务运行状态。支持<code>0</code>,<code>1</code>,<code>2</code></p><ul><li><code>0</code>: 停止</li><li><code>1</code>: 运行中</li><li><code>2</code>: 异常</li></ul>
     */
     @SerializedName("TaskStatus")
     @Expose
     private Long TaskStatus;
 
     /**
-     * Get 投递规则ID 
-     * @return ShipperId 投递规则ID
+     * Get <p>投递规则ID</p> 
+     * @return ShipperId <p>投递规则ID</p>
      */
     public String getShipperId() {
         return this.ShipperId;
     }
 
     /**
-     * Set 投递规则ID
-     * @param ShipperId 投递规则ID
+     * Set <p>投递规则ID</p>
+     * @param ShipperId <p>投递规则ID</p>
      */
     public void setShipperId(String ShipperId) {
         this.ShipperId = ShipperId;
     }
 
     /**
-     * Get 日志主题ID 
-     * @return TopicId 日志主题ID
+     * Get <p>日志主题ID</p> 
+     * @return TopicId <p>日志主题ID</p>
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 日志主题ID
-     * @param TopicId 日志主题ID
+     * Set <p>日志主题ID</p>
+     * @param TopicId <p>日志主题ID</p>
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 投递的bucket地址 
-     * @return Bucket 投递的bucket地址
+     * Get <p>投递的bucket地址</p> 
+     * @return Bucket <p>投递的bucket地址</p>
      */
     public String getBucket() {
         return this.Bucket;
     }
 
     /**
-     * Set 投递的bucket地址
-     * @param Bucket 投递的bucket地址
+     * Set <p>投递的bucket地址</p>
+     * @param Bucket <p>投递的bucket地址</p>
      */
     public void setBucket(String Bucket) {
         this.Bucket = Bucket;
     }
 
     /**
-     * Get 投递的前缀目录 
-     * @return Prefix 投递的前缀目录
+     * Get <p>投递的前缀目录</p> 
+     * @return Prefix <p>投递的前缀目录</p>
      */
     public String getPrefix() {
         return this.Prefix;
     }
 
     /**
-     * Set 投递的前缀目录
-     * @param Prefix 投递的前缀目录
+     * Set <p>投递的前缀目录</p>
+     * @param Prefix <p>投递的前缀目录</p>
      */
     public void setPrefix(String Prefix) {
         this.Prefix = Prefix;
     }
 
     /**
-     * Get 投递规则的名字 
-     * @return ShipperName 投递规则的名字
+     * Get <p>投递规则的名字</p> 
+     * @return ShipperName <p>投递规则的名字</p>
      */
     public String getShipperName() {
         return this.ShipperName;
     }
 
     /**
-     * Set 投递规则的名字
-     * @param ShipperName 投递规则的名字
+     * Set <p>投递规则的名字</p>
+     * @param ShipperName <p>投递规则的名字</p>
      */
     public void setShipperName(String ShipperName) {
         this.ShipperName = ShipperName;
     }
 
     /**
-     * Get 投递的时间间隔，单位 秒 
-     * @return Interval 投递的时间间隔，单位 秒
+     * Get <p>投递的时间间隔，单位 秒</p> 
+     * @return Interval <p>投递的时间间隔，单位 秒</p>
      */
     public Long getInterval() {
         return this.Interval;
     }
 
     /**
-     * Set 投递的时间间隔，单位 秒
-     * @param Interval 投递的时间间隔，单位 秒
+     * Set <p>投递的时间间隔，单位 秒</p>
+     * @param Interval <p>投递的时间间隔，单位 秒</p>
      */
     public void setInterval(Long Interval) {
         this.Interval = Interval;
     }
 
     /**
-     * Get 投递的文件的最大值，单位 MB 
-     * @return MaxSize 投递的文件的最大值，单位 MB
+     * Get <p>投递的文件的最大值，单位 MB</p> 
+     * @return MaxSize <p>投递的文件的最大值，单位 MB</p>
      */
     public Long getMaxSize() {
         return this.MaxSize;
     }
 
     /**
-     * Set 投递的文件的最大值，单位 MB
-     * @param MaxSize 投递的文件的最大值，单位 MB
+     * Set <p>投递的文件的最大值，单位 MB</p>
+     * @param MaxSize <p>投递的文件的最大值，单位 MB</p>
      */
     public void setMaxSize(Long MaxSize) {
         this.MaxSize = MaxSize;
     }
 
     /**
-     * Get 是否生效 
-     * @return Status 是否生效
+     * Get <p>是否生效</p> 
+     * @return Status <p>是否生效</p>
      */
     public Boolean getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 是否生效
-     * @param Status 是否生效
+     * Set <p>是否生效</p>
+     * @param Status <p>是否生效</p>
      */
     public void setStatus(Boolean Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 投递日志的过滤规则 
-     * @return FilterRules 投递日志的过滤规则
+     * Get <p>投递日志的过滤规则</p> 
+     * @return FilterRules <p>投递日志的过滤规则</p>
      */
     public FilterRuleInfo [] getFilterRules() {
         return this.FilterRules;
     }
 
     /**
-     * Set 投递日志的过滤规则
-     * @param FilterRules 投递日志的过滤规则
+     * Set <p>投递日志的过滤规则</p>
+     * @param FilterRules <p>投递日志的过滤规则</p>
      */
     public void setFilterRules(FilterRuleInfo [] FilterRules) {
         this.FilterRules = FilterRules;
     }
 
     /**
-     * Get 投递日志的分区规则，支持strftime的时间格式表示 
-     * @return Partition 投递日志的分区规则，支持strftime的时间格式表示
+     * Get <p>投递日志的分区规则，支持strftime的时间格式表示</p> 
+     * @return Partition <p>投递日志的分区规则，支持strftime的时间格式表示</p>
      */
     public String getPartition() {
         return this.Partition;
     }
 
     /**
-     * Set 投递日志的分区规则，支持strftime的时间格式表示
-     * @param Partition 投递日志的分区规则，支持strftime的时间格式表示
+     * Set <p>投递日志的分区规则，支持strftime的时间格式表示</p>
+     * @param Partition <p>投递日志的分区规则，支持strftime的时间格式表示</p>
      */
     public void setPartition(String Partition) {
         this.Partition = Partition;
     }
 
     /**
-     * Get 投递日志的压缩配置 
-     * @return Compress 投递日志的压缩配置
+     * Get <p>投递日志的压缩配置</p> 
+     * @return Compress <p>投递日志的压缩配置</p>
      */
     public CompressInfo getCompress() {
         return this.Compress;
     }
 
     /**
-     * Set 投递日志的压缩配置
-     * @param Compress 投递日志的压缩配置
+     * Set <p>投递日志的压缩配置</p>
+     * @param Compress <p>投递日志的压缩配置</p>
      */
     public void setCompress(CompressInfo Compress) {
         this.Compress = Compress;
     }
 
     /**
-     * Get 投递日志的内容格式配置 
-     * @return Content 投递日志的内容格式配置
+     * Get <p>投递日志的内容格式配置</p> 
+     * @return Content <p>投递日志的内容格式配置</p>
      */
     public ContentInfo getContent() {
         return this.Content;
     }
 
     /**
-     * Set 投递日志的内容格式配置
-     * @param Content 投递日志的内容格式配置
+     * Set <p>投递日志的内容格式配置</p>
+     * @param Content <p>投递日志的内容格式配置</p>
      */
     public void setContent(ContentInfo Content) {
         this.Content = Content;
     }
 
     /**
-     * Get 投递日志的创建时间。格式：YYYY-MM-DD HH:MM:SS 
-     * @return CreateTime 投递日志的创建时间。格式：YYYY-MM-DD HH:MM:SS
+     * Get <p>投递日志的创建时间。格式：YYYY-MM-DD HH:MM:SS</p> 
+     * @return CreateTime <p>投递日志的创建时间。格式：YYYY-MM-DD HH:MM:SS</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 投递日志的创建时间。格式：YYYY-MM-DD HH:MM:SS
-     * @param CreateTime 投递日志的创建时间。格式：YYYY-MM-DD HH:MM:SS
+     * Set <p>投递日志的创建时间。格式：YYYY-MM-DD HH:MM:SS</p>
+     * @param CreateTime <p>投递日志的创建时间。格式：YYYY-MM-DD HH:MM:SS</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名） 
-     * @return FilenameMode 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
+     * Get <p>投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）</p> 
+     * @return FilenameMode <p>投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）</p>
      */
     public Long getFilenameMode() {
         return this.FilenameMode;
     }
 
     /**
-     * Set 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
-     * @param FilenameMode 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
+     * Set <p>投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）</p>
+     * @param FilenameMode <p>投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）</p>
      */
     public void setFilenameMode(Long FilenameMode) {
         this.FilenameMode = FilenameMode;
     }
 
     /**
-     * Get 投递数据范围的开始时间点 
-     * @return StartTime 投递数据范围的开始时间点
+     * Get <p>投递数据范围的开始时间点</p> 
+     * @return StartTime <p>投递数据范围的开始时间点</p>
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 投递数据范围的开始时间点
-     * @param StartTime 投递数据范围的开始时间点
+     * Set <p>投递数据范围的开始时间点</p>
+     * @param StartTime <p>投递数据范围的开始时间点</p>
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 投递数据范围的结束时间点 
-     * @return EndTime 投递数据范围的结束时间点
+     * Get <p>投递数据范围的结束时间点</p> 
+     * @return EndTime <p>投递数据范围的结束时间点</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 投递数据范围的结束时间点
-     * @param EndTime 投递数据范围的结束时间点
+     * Set <p>投递数据范围的结束时间点</p>
+     * @param EndTime <p>投递数据范围的结束时间点</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 历史数据投递的进度（仅当用户选择的数据内中历史数据时才有效） 
-     * @return Progress 历史数据投递的进度（仅当用户选择的数据内中历史数据时才有效）
+     * Get <p>历史数据投递的进度（仅当用户选择的数据内中历史数据时才有效）</p> 
+     * @return Progress <p>历史数据投递的进度（仅当用户选择的数据内中历史数据时才有效）</p>
      */
     public Float getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set 历史数据投递的进度（仅当用户选择的数据内中历史数据时才有效）
-     * @param Progress 历史数据投递的进度（仅当用户选择的数据内中历史数据时才有效）
+     * Set <p>历史数据投递的进度（仅当用户选择的数据内中历史数据时才有效）</p>
+     * @param Progress <p>历史数据投递的进度（仅当用户选择的数据内中历史数据时才有效）</p>
      */
     public void setProgress(Float Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get 历史数据全部投递完成剩余的时间（仅当用户选择的数据中有历史数据时才有效） 
-     * @return RemainTime 历史数据全部投递完成剩余的时间（仅当用户选择的数据中有历史数据时才有效）
+     * Get <p>历史数据全部投递完成剩余的时间（仅当用户选择的数据中有历史数据时才有效）</p><p>单位：秒</p> 
+     * @return RemainTime <p>历史数据全部投递完成剩余的时间（仅当用户选择的数据中有历史数据时才有效）</p><p>单位：秒</p>
      */
     public Long getRemainTime() {
         return this.RemainTime;
     }
 
     /**
-     * Set 历史数据全部投递完成剩余的时间（仅当用户选择的数据中有历史数据时才有效）
-     * @param RemainTime 历史数据全部投递完成剩余的时间（仅当用户选择的数据中有历史数据时才有效）
+     * Set <p>历史数据全部投递完成剩余的时间（仅当用户选择的数据中有历史数据时才有效）</p><p>单位：秒</p>
+     * @param RemainTime <p>历史数据全部投递完成剩余的时间（仅当用户选择的数据中有历史数据时才有效）</p><p>单位：秒</p>
      */
     public void setRemainTime(Long RemainTime) {
         this.RemainTime = RemainTime;
     }
 
     /**
-     * Get 历史任务状态：
-0：实时任务
-1：任务准备中
-2：任务运行中
-3：任务运行异常
-4：任务运行结束 
-     * @return HistoryStatus 历史任务状态：
-0：实时任务
-1：任务准备中
-2：任务运行中
-3：任务运行异常
-4：任务运行结束
+     * Get <p>历史任务状态：<br>0：实时任务<br>1：任务准备中<br>2：任务运行中<br>3：任务运行异常<br>4：任务运行结束</p> 
+     * @return HistoryStatus <p>历史任务状态：<br>0：实时任务<br>1：任务准备中<br>2：任务运行中<br>3：任务运行异常<br>4：任务运行结束</p>
      */
     public Long getHistoryStatus() {
         return this.HistoryStatus;
     }
 
     /**
-     * Set 历史任务状态：
-0：实时任务
-1：任务准备中
-2：任务运行中
-3：任务运行异常
-4：任务运行结束
-     * @param HistoryStatus 历史任务状态：
-0：实时任务
-1：任务准备中
-2：任务运行中
-3：任务运行异常
-4：任务运行结束
+     * Set <p>历史任务状态：<br>0：实时任务<br>1：任务准备中<br>2：任务运行中<br>3：任务运行异常<br>4：任务运行结束</p>
+     * @param HistoryStatus <p>历史任务状态：<br>0：实时任务<br>1：任务准备中<br>2：任务运行中<br>3：任务运行异常<br>4：任务运行结束</p>
      */
     public void setHistoryStatus(Long HistoryStatus) {
         this.HistoryStatus = HistoryStatus;
     }
 
     /**
-     * Get 对象存储类型，默认值为 STANDARD。枚举值请参见[ 存储类型概述](https://cloud.tencent.com/document/product/436/33417) 文档。
-参考值有：
-STANDARD：标准存储
-STANDARD_IA：低频存储
-ARCHIVE：归档存储
-DEEP_ARCHIVE：深度归档存储
-MAZ_STANDARD：标准存储（多 AZ）
-MAZ_STANDARD_IA：低频存储（多 AZ）
-INTELLIGENT_TIERING：智能分层存储
-MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ） 
-     * @return StorageType 对象存储类型，默认值为 STANDARD。枚举值请参见[ 存储类型概述](https://cloud.tencent.com/document/product/436/33417) 文档。
-参考值有：
-STANDARD：标准存储
-STANDARD_IA：低频存储
-ARCHIVE：归档存储
-DEEP_ARCHIVE：深度归档存储
-MAZ_STANDARD：标准存储（多 AZ）
-MAZ_STANDARD_IA：低频存储（多 AZ）
-INTELLIGENT_TIERING：智能分层存储
-MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）
+     * Get <p>对象存储类型，默认值为 STANDARD。枚举值请参见<a href="https://cloud.tencent.com/document/product/436/33417"> 存储类型概述</a> 文档。<br>参考值有：<br>STANDARD：标准存储<br>STANDARD_IA：低频存储<br>ARCHIVE：归档存储<br>DEEP_ARCHIVE：深度归档存储<br>MAZ_STANDARD：标准存储（多 AZ）<br>MAZ_STANDARD_IA：低频存储（多 AZ）<br>INTELLIGENT_TIERING：智能分层存储<br>MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）</p> 
+     * @return StorageType <p>对象存储类型，默认值为 STANDARD。枚举值请参见<a href="https://cloud.tencent.com/document/product/436/33417"> 存储类型概述</a> 文档。<br>参考值有：<br>STANDARD：标准存储<br>STANDARD_IA：低频存储<br>ARCHIVE：归档存储<br>DEEP_ARCHIVE：深度归档存储<br>MAZ_STANDARD：标准存储（多 AZ）<br>MAZ_STANDARD_IA：低频存储（多 AZ）<br>INTELLIGENT_TIERING：智能分层存储<br>MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）</p>
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set 对象存储类型，默认值为 STANDARD。枚举值请参见[ 存储类型概述](https://cloud.tencent.com/document/product/436/33417) 文档。
-参考值有：
-STANDARD：标准存储
-STANDARD_IA：低频存储
-ARCHIVE：归档存储
-DEEP_ARCHIVE：深度归档存储
-MAZ_STANDARD：标准存储（多 AZ）
-MAZ_STANDARD_IA：低频存储（多 AZ）
-INTELLIGENT_TIERING：智能分层存储
-MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）
-     * @param StorageType 对象存储类型，默认值为 STANDARD。枚举值请参见[ 存储类型概述](https://cloud.tencent.com/document/product/436/33417) 文档。
-参考值有：
-STANDARD：标准存储
-STANDARD_IA：低频存储
-ARCHIVE：归档存储
-DEEP_ARCHIVE：深度归档存储
-MAZ_STANDARD：标准存储（多 AZ）
-MAZ_STANDARD_IA：低频存储（多 AZ）
-INTELLIGENT_TIERING：智能分层存储
-MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）
+     * Set <p>对象存储类型，默认值为 STANDARD。枚举值请参见<a href="https://cloud.tencent.com/document/product/436/33417"> 存储类型概述</a> 文档。<br>参考值有：<br>STANDARD：标准存储<br>STANDARD_IA：低频存储<br>ARCHIVE：归档存储<br>DEEP_ARCHIVE：深度归档存储<br>MAZ_STANDARD：标准存储（多 AZ）<br>MAZ_STANDARD_IA：低频存储（多 AZ）<br>INTELLIGENT_TIERING：智能分层存储<br>MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）</p>
+     * @param StorageType <p>对象存储类型，默认值为 STANDARD。枚举值请参见<a href="https://cloud.tencent.com/document/product/436/33417"> 存储类型概述</a> 文档。<br>参考值有：<br>STANDARD：标准存储<br>STANDARD_IA：低频存储<br>ARCHIVE：归档存储<br>DEEP_ARCHIVE：深度归档存储<br>MAZ_STANDARD：标准存储（多 AZ）<br>MAZ_STANDARD_IA：低频存储（多 AZ）<br>INTELLIGENT_TIERING：智能分层存储<br>MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）</p>
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;
     }
 
     /**
-     * Get 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381) 
-     * @return RoleArn 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+     * Get <p>角色访问描述名 <a href="https://cloud.tencent.com/document/product/598/19381">创建角色</a></p> 
+     * @return RoleArn <p>角色访问描述名 <a href="https://cloud.tencent.com/document/product/598/19381">创建角色</a></p>
      */
     public String getRoleArn() {
         return this.RoleArn;
     }
 
     /**
-     * Set 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
-     * @param RoleArn 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+     * Set <p>角色访问描述名 <a href="https://cloud.tencent.com/document/product/598/19381">创建角色</a></p>
+     * @param RoleArn <p>角色访问描述名 <a href="https://cloud.tencent.com/document/product/598/19381">创建角色</a></p>
      */
     public void setRoleArn(String RoleArn) {
         this.RoleArn = RoleArn;
     }
 
     /**
-     * Get 外部ID 
-     * @return ExternalId 外部ID
+     * Get <p>外部ID</p> 
+     * @return ExternalId <p>外部ID</p>
      */
     public String getExternalId() {
         return this.ExternalId;
     }
 
     /**
-     * Set 外部ID
-     * @param ExternalId 外部ID
+     * Set <p>外部ID</p>
+     * @param ExternalId <p>外部ID</p>
      */
     public void setExternalId(String ExternalId) {
         this.ExternalId = ExternalId;
     }
 
     /**
-     * Get 任务运行状态。支持`0`,`1`,`2`
-
-- `0`: 停止
-- `1`: 运行中
-- `2`: 异常 
-     * @return TaskStatus 任务运行状态。支持`0`,`1`,`2`
-
-- `0`: 停止
-- `1`: 运行中
-- `2`: 异常
+     * Get <p>任务运行状态。支持<code>0</code>,<code>1</code>,<code>2</code></p><ul><li><code>0</code>: 停止</li><li><code>1</code>: 运行中</li><li><code>2</code>: 异常</li></ul> 
+     * @return TaskStatus <p>任务运行状态。支持<code>0</code>,<code>1</code>,<code>2</code></p><ul><li><code>0</code>: 停止</li><li><code>1</code>: 运行中</li><li><code>2</code>: 异常</li></ul>
      */
     public Long getTaskStatus() {
         return this.TaskStatus;
     }
 
     /**
-     * Set 任务运行状态。支持`0`,`1`,`2`
-
-- `0`: 停止
-- `1`: 运行中
-- `2`: 异常
-     * @param TaskStatus 任务运行状态。支持`0`,`1`,`2`
-
-- `0`: 停止
-- `1`: 运行中
-- `2`: 异常
+     * Set <p>任务运行状态。支持<code>0</code>,<code>1</code>,<code>2</code></p><ul><li><code>0</code>: 停止</li><li><code>1</code>: 运行中</li><li><code>2</code>: 异常</li></ul>
+     * @param TaskStatus <p>任务运行状态。支持<code>0</code>,<code>1</code>,<code>2</code></p><ul><li><code>0</code>: 停止</li><li><code>1</code>: 运行中</li><li><code>2</code>: 异常</li></ul>
      */
     public void setTaskStatus(Long TaskStatus) {
         this.TaskStatus = TaskStatus;

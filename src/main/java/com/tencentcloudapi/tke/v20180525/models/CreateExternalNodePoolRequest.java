@@ -1,0 +1,293 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.tke.v20180525.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class CreateExternalNodePoolRequest extends AbstractModel {
+
+    /**
+    * 集群Id
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
+    * 节点池名称
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+    * 运行时
+    */
+    @SerializedName("ContainerRuntime")
+    @Expose
+    private String ContainerRuntime;
+
+    /**
+    * 运行时版本
+    */
+    @SerializedName("RuntimeVersion")
+    @Expose
+    private String RuntimeVersion;
+
+    /**
+    * 第三方节点label
+    */
+    @SerializedName("Labels")
+    @Expose
+    private Label [] Labels;
+
+    /**
+    * 第三方节点taint
+    */
+    @SerializedName("Taints")
+    @Expose
+    private Taint [] Taints;
+
+    /**
+    * 第三方节点高级设置
+    */
+    @SerializedName("InstanceAdvancedSettings")
+    @Expose
+    private InstanceAdvancedSettings InstanceAdvancedSettings;
+
+    /**
+    * 删除保护开关
+    */
+    @SerializedName("DeletionProtection")
+    @Expose
+    private Boolean DeletionProtection;
+
+    /**
+    * 节点类型
+    */
+    @SerializedName("NodeType")
+    @Expose
+    private String NodeType;
+
+    /**
+     * Get 集群Id 
+     * @return ClusterId 集群Id
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set 集群Id
+     * @param ClusterId 集群Id
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
+    /**
+     * Get 节点池名称 
+     * @return Name 节点池名称
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 节点池名称
+     * @param Name 节点池名称
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get 运行时 
+     * @return ContainerRuntime 运行时
+     */
+    public String getContainerRuntime() {
+        return this.ContainerRuntime;
+    }
+
+    /**
+     * Set 运行时
+     * @param ContainerRuntime 运行时
+     */
+    public void setContainerRuntime(String ContainerRuntime) {
+        this.ContainerRuntime = ContainerRuntime;
+    }
+
+    /**
+     * Get 运行时版本 
+     * @return RuntimeVersion 运行时版本
+     */
+    public String getRuntimeVersion() {
+        return this.RuntimeVersion;
+    }
+
+    /**
+     * Set 运行时版本
+     * @param RuntimeVersion 运行时版本
+     */
+    public void setRuntimeVersion(String RuntimeVersion) {
+        this.RuntimeVersion = RuntimeVersion;
+    }
+
+    /**
+     * Get 第三方节点label 
+     * @return Labels 第三方节点label
+     */
+    public Label [] getLabels() {
+        return this.Labels;
+    }
+
+    /**
+     * Set 第三方节点label
+     * @param Labels 第三方节点label
+     */
+    public void setLabels(Label [] Labels) {
+        this.Labels = Labels;
+    }
+
+    /**
+     * Get 第三方节点taint 
+     * @return Taints 第三方节点taint
+     */
+    public Taint [] getTaints() {
+        return this.Taints;
+    }
+
+    /**
+     * Set 第三方节点taint
+     * @param Taints 第三方节点taint
+     */
+    public void setTaints(Taint [] Taints) {
+        this.Taints = Taints;
+    }
+
+    /**
+     * Get 第三方节点高级设置 
+     * @return InstanceAdvancedSettings 第三方节点高级设置
+     */
+    public InstanceAdvancedSettings getInstanceAdvancedSettings() {
+        return this.InstanceAdvancedSettings;
+    }
+
+    /**
+     * Set 第三方节点高级设置
+     * @param InstanceAdvancedSettings 第三方节点高级设置
+     */
+    public void setInstanceAdvancedSettings(InstanceAdvancedSettings InstanceAdvancedSettings) {
+        this.InstanceAdvancedSettings = InstanceAdvancedSettings;
+    }
+
+    /**
+     * Get 删除保护开关 
+     * @return DeletionProtection 删除保护开关
+     */
+    public Boolean getDeletionProtection() {
+        return this.DeletionProtection;
+    }
+
+    /**
+     * Set 删除保护开关
+     * @param DeletionProtection 删除保护开关
+     */
+    public void setDeletionProtection(Boolean DeletionProtection) {
+        this.DeletionProtection = DeletionProtection;
+    }
+
+    /**
+     * Get 节点类型 
+     * @return NodeType 节点类型
+     */
+    public String getNodeType() {
+        return this.NodeType;
+    }
+
+    /**
+     * Set 节点类型
+     * @param NodeType 节点类型
+     */
+    public void setNodeType(String NodeType) {
+        this.NodeType = NodeType;
+    }
+
+    public CreateExternalNodePoolRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateExternalNodePoolRequest(CreateExternalNodePoolRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.ContainerRuntime != null) {
+            this.ContainerRuntime = new String(source.ContainerRuntime);
+        }
+        if (source.RuntimeVersion != null) {
+            this.RuntimeVersion = new String(source.RuntimeVersion);
+        }
+        if (source.Labels != null) {
+            this.Labels = new Label[source.Labels.length];
+            for (int i = 0; i < source.Labels.length; i++) {
+                this.Labels[i] = new Label(source.Labels[i]);
+            }
+        }
+        if (source.Taints != null) {
+            this.Taints = new Taint[source.Taints.length];
+            for (int i = 0; i < source.Taints.length; i++) {
+                this.Taints[i] = new Taint(source.Taints[i]);
+            }
+        }
+        if (source.InstanceAdvancedSettings != null) {
+            this.InstanceAdvancedSettings = new InstanceAdvancedSettings(source.InstanceAdvancedSettings);
+        }
+        if (source.DeletionProtection != null) {
+            this.DeletionProtection = new Boolean(source.DeletionProtection);
+        }
+        if (source.NodeType != null) {
+            this.NodeType = new String(source.NodeType);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "ContainerRuntime", this.ContainerRuntime);
+        this.setParamSimple(map, prefix + "RuntimeVersion", this.RuntimeVersion);
+        this.setParamArrayObj(map, prefix + "Labels.", this.Labels);
+        this.setParamArrayObj(map, prefix + "Taints.", this.Taints);
+        this.setParamObj(map, prefix + "InstanceAdvancedSettings.", this.InstanceAdvancedSettings);
+        this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
+        this.setParamSimple(map, prefix + "NodeType", this.NodeType);
+
+    }
+}
+

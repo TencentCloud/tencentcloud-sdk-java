@@ -199,7 +199,7 @@ public class DescribeDataFetchUrlRequest extends AbstractModel {
     private String Ret;
 
     /**
-    * 网络状态
+    * 网络状态(tag 值):用于过滤/聚合字段 netStatus；枚举值：0(正常)、1(弱网)、2(断网)、3(其他)。
     */
     @SerializedName("NetStatus")
     @Expose
@@ -606,16 +606,16 @@ public class DescribeDataFetchUrlRequest extends AbstractModel {
     }
 
     /**
-     * Get 网络状态 
-     * @return NetStatus 网络状态
+     * Get 网络状态(tag 值):用于过滤/聚合字段 netStatus；枚举值：0(正常)、1(弱网)、2(断网)、3(其他)。 
+     * @return NetStatus 网络状态(tag 值):用于过滤/聚合字段 netStatus；枚举值：0(正常)、1(弱网)、2(断网)、3(其他)。
      */
     public String getNetStatus() {
         return this.NetStatus;
     }
 
     /**
-     * Set 网络状态
-     * @param NetStatus 网络状态
+     * Set 网络状态(tag 值):用于过滤/聚合字段 netStatus；枚举值：0(正常)、1(弱网)、2(断网)、3(其他)。
+     * @param NetStatus 网络状态(tag 值):用于过滤/聚合字段 netStatus；枚举值：0(正常)、1(弱网)、2(断网)、3(其他)。
      */
     public void setNetStatus(String NetStatus) {
         this.NetStatus = NetStatus;

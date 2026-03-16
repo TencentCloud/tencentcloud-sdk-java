@@ -228,6 +228,13 @@ UPDATING 更新中
     private LogConfig GatewayLogConfig;
 
     /**
+    * 网关路由相关配置
+    */
+    @SerializedName("GatewayConfig")
+    @Expose
+    private GatewayConfig GatewayConfig;
+
+    /**
      * Get 服务组id 
      * @return ServiceGroupId 服务组id
      */
@@ -743,6 +750,22 @@ UPDATING 更新中
         this.GatewayLogConfig = GatewayLogConfig;
     }
 
+    /**
+     * Get 网关路由相关配置 
+     * @return GatewayConfig 网关路由相关配置
+     */
+    public GatewayConfig getGatewayConfig() {
+        return this.GatewayConfig;
+    }
+
+    /**
+     * Set 网关路由相关配置
+     * @param GatewayConfig 网关路由相关配置
+     */
+    public void setGatewayConfig(GatewayConfig GatewayConfig) {
+        this.GatewayConfig = GatewayConfig;
+    }
+
     public ServiceGroup() {
     }
 
@@ -835,6 +858,9 @@ UPDATING 更新中
         if (source.GatewayLogConfig != null) {
             this.GatewayLogConfig = new LogConfig(source.GatewayLogConfig);
         }
+        if (source.GatewayConfig != null) {
+            this.GatewayConfig = new GatewayConfig(source.GatewayConfig);
+        }
     }
 
 
@@ -867,6 +893,7 @@ UPDATING 更新中
         this.setParamSimple(map, prefix + "MonitorSource", this.MonitorSource);
         this.setParamSimple(map, prefix + "SubUinName", this.SubUinName);
         this.setParamObj(map, prefix + "GatewayLogConfig.", this.GatewayLogConfig);
+        this.setParamObj(map, prefix + "GatewayConfig.", this.GatewayConfig);
 
     }
 }

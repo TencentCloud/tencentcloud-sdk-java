@@ -24,32 +24,46 @@ import java.util.HashMap;
 public class QueryHunyuanTo3DProJobResponse extends AbstractModel {
 
     /**
-    * 任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功
+    * <p>任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 错误码
+    * <p>错误码</p>
     */
     @SerializedName("ErrorCode")
     @Expose
     private String ErrorCode;
 
     /**
-    * 错误信息
+    * <p>错误信息</p>
     */
     @SerializedName("ErrorMessage")
     @Expose
     private String ErrorMessage;
 
     /**
-    * 生成的3D文件数组。
+    * <p>生成的3D文件数组。</p>
     */
     @SerializedName("ResultFile3Ds")
     @Expose
     private File3D [] ResultFile3Ds;
+
+    /**
+    * <p>接口任务功能参数及积分详情，返回形式为字符串。Generate参数返回对应模式及消耗积分，如：Generate-Normal：20<br>附加参数返回参数名称及消耗积分，如：MultiViewImages：10</p>
+    */
+    @SerializedName("ResultCreditDetails")
+    @Expose
+    private String ResultCreditDetails;
+
+    /**
+    * <p>任务总消耗积分。</p>
+    */
+    @SerializedName("ResultCreditConsumed")
+    @Expose
+    private Float ResultCreditConsumed;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -59,67 +73,99 @@ public class QueryHunyuanTo3DProJobResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功 
-     * @return Status 任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功
+     * Get <p>任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功</p> 
+     * @return Status <p>任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功
-     * @param Status 任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功
+     * Set <p>任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功</p>
+     * @param Status <p>任务状态。WAIT：等待中，RUN：执行中，FAIL：任务失败，DONE：任务成功</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 错误码 
-     * @return ErrorCode 错误码
+     * Get <p>错误码</p> 
+     * @return ErrorCode <p>错误码</p>
      */
     public String getErrorCode() {
         return this.ErrorCode;
     }
 
     /**
-     * Set 错误码
-     * @param ErrorCode 错误码
+     * Set <p>错误码</p>
+     * @param ErrorCode <p>错误码</p>
      */
     public void setErrorCode(String ErrorCode) {
         this.ErrorCode = ErrorCode;
     }
 
     /**
-     * Get 错误信息 
-     * @return ErrorMessage 错误信息
+     * Get <p>错误信息</p> 
+     * @return ErrorMessage <p>错误信息</p>
      */
     public String getErrorMessage() {
         return this.ErrorMessage;
     }
 
     /**
-     * Set 错误信息
-     * @param ErrorMessage 错误信息
+     * Set <p>错误信息</p>
+     * @param ErrorMessage <p>错误信息</p>
      */
     public void setErrorMessage(String ErrorMessage) {
         this.ErrorMessage = ErrorMessage;
     }
 
     /**
-     * Get 生成的3D文件数组。 
-     * @return ResultFile3Ds 生成的3D文件数组。
+     * Get <p>生成的3D文件数组。</p> 
+     * @return ResultFile3Ds <p>生成的3D文件数组。</p>
      */
     public File3D [] getResultFile3Ds() {
         return this.ResultFile3Ds;
     }
 
     /**
-     * Set 生成的3D文件数组。
-     * @param ResultFile3Ds 生成的3D文件数组。
+     * Set <p>生成的3D文件数组。</p>
+     * @param ResultFile3Ds <p>生成的3D文件数组。</p>
      */
     public void setResultFile3Ds(File3D [] ResultFile3Ds) {
         this.ResultFile3Ds = ResultFile3Ds;
+    }
+
+    /**
+     * Get <p>接口任务功能参数及积分详情，返回形式为字符串。Generate参数返回对应模式及消耗积分，如：Generate-Normal：20<br>附加参数返回参数名称及消耗积分，如：MultiViewImages：10</p> 
+     * @return ResultCreditDetails <p>接口任务功能参数及积分详情，返回形式为字符串。Generate参数返回对应模式及消耗积分，如：Generate-Normal：20<br>附加参数返回参数名称及消耗积分，如：MultiViewImages：10</p>
+     */
+    public String getResultCreditDetails() {
+        return this.ResultCreditDetails;
+    }
+
+    /**
+     * Set <p>接口任务功能参数及积分详情，返回形式为字符串。Generate参数返回对应模式及消耗积分，如：Generate-Normal：20<br>附加参数返回参数名称及消耗积分，如：MultiViewImages：10</p>
+     * @param ResultCreditDetails <p>接口任务功能参数及积分详情，返回形式为字符串。Generate参数返回对应模式及消耗积分，如：Generate-Normal：20<br>附加参数返回参数名称及消耗积分，如：MultiViewImages：10</p>
+     */
+    public void setResultCreditDetails(String ResultCreditDetails) {
+        this.ResultCreditDetails = ResultCreditDetails;
+    }
+
+    /**
+     * Get <p>任务总消耗积分。</p> 
+     * @return ResultCreditConsumed <p>任务总消耗积分。</p>
+     */
+    public Float getResultCreditConsumed() {
+        return this.ResultCreditConsumed;
+    }
+
+    /**
+     * Set <p>任务总消耗积分。</p>
+     * @param ResultCreditConsumed <p>任务总消耗积分。</p>
+     */
+    public void setResultCreditConsumed(Float ResultCreditConsumed) {
+        this.ResultCreditConsumed = ResultCreditConsumed;
     }
 
     /**
@@ -161,6 +207,12 @@ public class QueryHunyuanTo3DProJobResponse extends AbstractModel {
                 this.ResultFile3Ds[i] = new File3D(source.ResultFile3Ds[i]);
             }
         }
+        if (source.ResultCreditDetails != null) {
+            this.ResultCreditDetails = new String(source.ResultCreditDetails);
+        }
+        if (source.ResultCreditConsumed != null) {
+            this.ResultCreditConsumed = new Float(source.ResultCreditConsumed);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -175,6 +227,8 @@ public class QueryHunyuanTo3DProJobResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ErrorCode", this.ErrorCode);
         this.setParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
         this.setParamArrayObj(map, prefix + "ResultFile3Ds.", this.ResultFile3Ds);
+        this.setParamSimple(map, prefix + "ResultCreditDetails", this.ResultCreditDetails);
+        this.setParamSimple(map, prefix + "ResultCreditConsumed", this.ResultCreditConsumed);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

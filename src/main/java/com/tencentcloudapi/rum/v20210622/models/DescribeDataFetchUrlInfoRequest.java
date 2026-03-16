@@ -31,7 +31,8 @@ public class DescribeDataFetchUrlInfoRequest extends AbstractModel {
     private Long StartTime;
 
     /**
-    * 类型
+    * Type	是	String	无枚举值。此接口不使用 Type 做分支判断，SQL 固定 group by "url"，Type 字段传任何值不影响查询。
+
     */
     @SerializedName("Type")
     @Expose
@@ -201,16 +202,20 @@ public class DescribeDataFetchUrlInfoRequest extends AbstractModel {
     }
 
     /**
-     * Get 类型 
-     * @return Type 类型
+     * Get Type	是	String	无枚举值。此接口不使用 Type 做分支判断，SQL 固定 group by "url"，Type 字段传任何值不影响查询。
+ 
+     * @return Type Type	是	String	无枚举值。此接口不使用 Type 做分支判断，SQL 固定 group by "url"，Type 字段传任何值不影响查询。
+
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 类型
-     * @param Type 类型
+     * Set Type	是	String	无枚举值。此接口不使用 Type 做分支判断，SQL 固定 group by "url"，Type 字段传任何值不影响查询。
+
+     * @param Type Type	是	String	无枚举值。此接口不使用 Type 做分支判断，SQL 固定 group by "url"，Type 字段传任何值不影响查询。
+
      */
     public void setType(String Type) {
         this.Type = Type;

@@ -673,6 +673,14 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
     private String EngineCreator;
 
     /**
+    * 项目状态：0：禁用，1：启用，-3:禁用中，2：启用中
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProjectStatus")
+    @Expose
+    private Long ProjectStatus;
+
+    /**
      * Get 表的全局唯一ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TableId 表的全局唯一ID
@@ -2296,6 +2304,26 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
         this.EngineCreator = EngineCreator;
     }
 
+    /**
+     * Get 项目状态：0：禁用，1：启用，-3:禁用中，2：启用中
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProjectStatus 项目状态：0：禁用，1：启用，-3:禁用中，2：启用中
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getProjectStatus() {
+        return this.ProjectStatus;
+    }
+
+    /**
+     * Set 项目状态：0：禁用，1：启用，-3:禁用中，2：启用中
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProjectStatus 项目状态：0：禁用，1：启用，-3:禁用中，2：启用中
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProjectStatus(Long ProjectStatus) {
+        this.ProjectStatus = ProjectStatus;
+    }
+
     public TableMeta() {
     }
 
@@ -2571,6 +2599,9 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
         if (source.EngineCreator != null) {
             this.EngineCreator = new String(source.EngineCreator);
         }
+        if (source.ProjectStatus != null) {
+            this.ProjectStatus = new Long(source.ProjectStatus);
+        }
     }
 
 
@@ -2659,6 +2690,7 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
         this.setParamSimple(map, prefix + "MetaFrom", this.MetaFrom);
         this.setParamSimple(map, prefix + "EngineCreator", this.EngineCreator);
+        this.setParamSimple(map, prefix + "ProjectStatus", this.ProjectStatus);
 
     }
 }

@@ -3017,7 +3017,7 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *上报table元数据
+     *上报table元数据,当前列数量限制在300
      * @param req ReportTableRequest
      * @return ReportTableResponse
      * @throws TencentCloudSDKException

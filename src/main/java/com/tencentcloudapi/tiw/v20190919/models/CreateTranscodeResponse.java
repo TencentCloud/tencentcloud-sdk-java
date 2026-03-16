@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateTranscodeResponse extends AbstractModel {
 
     /**
-    * 文档转码任务的唯一标识Id，用于查询该任务的进度以及转码结果
+    * <p>文档转码任务的唯一标识Id，用于查询该任务的进度以及转码结果</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateTranscodeResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 文档转码任务的唯一标识Id，用于查询该任务的进度以及转码结果 
-     * @return TaskId 文档转码任务的唯一标识Id，用于查询该任务的进度以及转码结果
+     * Get <p>文档转码任务的唯一标识Id，用于查询该任务的进度以及转码结果</p> 
+     * @return TaskId <p>文档转码任务的唯一标识Id，用于查询该任务的进度以及转码结果</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 文档转码任务的唯一标识Id，用于查询该任务的进度以及转码结果
-     * @param TaskId 文档转码任务的唯一标识Id，用于查询该任务的进度以及转码结果
+     * Set <p>文档转码任务的唯一标识Id，用于查询该任务的进度以及转码结果</p>
+     * @param TaskId <p>文档转码任务的唯一标识Id，用于查询该任务的进度以及转码结果</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

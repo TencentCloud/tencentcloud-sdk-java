@@ -355,6 +355,13 @@ HYBRID_PAID:
     private LogConfig GatewayLogConfig;
 
     /**
+    * 网关相关配置
+    */
+    @SerializedName("GatewayConfig")
+    @Expose
+    private GatewayConfig GatewayConfig;
+
+    /**
      * Get 新增版本时需要填写 
      * @return ServiceGroupId 新增版本时需要填写
      */
@@ -1150,6 +1157,22 @@ HYBRID_PAID:
         this.GatewayLogConfig = GatewayLogConfig;
     }
 
+    /**
+     * Get 网关相关配置 
+     * @return GatewayConfig 网关相关配置
+     */
+    public GatewayConfig getGatewayConfig() {
+        return this.GatewayConfig;
+    }
+
+    /**
+     * Set 网关相关配置
+     * @param GatewayConfig 网关相关配置
+     */
+    public void setGatewayConfig(GatewayConfig GatewayConfig) {
+        this.GatewayConfig = GatewayConfig;
+    }
+
     public CreateModelServiceRequest() {
     }
 
@@ -1305,6 +1328,9 @@ HYBRID_PAID:
         if (source.GatewayLogConfig != null) {
             this.GatewayLogConfig = new LogConfig(source.GatewayLogConfig);
         }
+        if (source.GatewayConfig != null) {
+            this.GatewayConfig = new GatewayConfig(source.GatewayConfig);
+        }
     }
 
 
@@ -1356,6 +1382,7 @@ HYBRID_PAID:
         this.setParamArrayObj(map, prefix + "VolumeMounts.", this.VolumeMounts);
         this.setParamSimple(map, prefix + "SchedulingStrategy", this.SchedulingStrategy);
         this.setParamObj(map, prefix + "GatewayLogConfig.", this.GatewayLogConfig);
+        this.setParamObj(map, prefix + "GatewayConfig.", this.GatewayConfig);
 
     }
 }

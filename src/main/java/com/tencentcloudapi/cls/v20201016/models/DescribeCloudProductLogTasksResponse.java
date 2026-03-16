@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeCloudProductLogTasksResponse extends AbstractModel {
 
     /**
-    * 日志配置详情列表
+    * <p>日志配置详情列表</p>
     */
     @SerializedName("Tasks")
     @Expose
     private CloudProductLogTaskInfo [] Tasks;
 
     /**
-    * 日志配置总数
+    * <p>日志配置总数</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeCloudProductLogTasksResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 日志配置详情列表 
-     * @return Tasks 日志配置详情列表
+     * Get <p>日志配置详情列表</p> 
+     * @return Tasks <p>日志配置详情列表</p>
      */
     public CloudProductLogTaskInfo [] getTasks() {
         return this.Tasks;
     }
 
     /**
-     * Set 日志配置详情列表
-     * @param Tasks 日志配置详情列表
+     * Set <p>日志配置详情列表</p>
+     * @param Tasks <p>日志配置详情列表</p>
      */
     public void setTasks(CloudProductLogTaskInfo [] Tasks) {
         this.Tasks = Tasks;
     }
 
     /**
-     * Get 日志配置总数 
-     * @return TotalCount 日志配置总数
+     * Get <p>日志配置总数</p> 
+     * @return TotalCount <p>日志配置总数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 日志配置总数
-     * @param TotalCount 日志配置总数
+     * Set <p>日志配置总数</p>
+     * @param TotalCount <p>日志配置总数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

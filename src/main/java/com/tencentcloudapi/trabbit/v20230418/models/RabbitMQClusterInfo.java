@@ -24,647 +24,739 @@ import java.util.HashMap;
 public class RabbitMQClusterInfo extends AbstractModel {
 
     /**
-    * 集群ID
+    * <p>集群ID</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 集群名称
+    * <p>集群名称</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * 地域信息
+    * <p>地域信息</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 创建时间，毫秒为单位
+    * <p>创建时间，毫秒为单位</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
 
     /**
-    * 集群说明信息
+    * <p>集群说明信息</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * VPC及网络信息
+    * <p>VPC及网络信息</p>
     */
     @SerializedName("Vpcs")
     @Expose
     private VpcEndpointInfo [] Vpcs;
 
     /**
-    * 可用区信息
+    * <p>可用区信息</p>
     */
     @SerializedName("ZoneIds")
     @Expose
     private Long [] ZoneIds;
 
     /**
-    * 虚拟主机数量
+    * <p>虚拟主机数量</p>
     */
     @SerializedName("VirtualHostNumber")
     @Expose
     private Long VirtualHostNumber;
 
     /**
-    * 队列数量
+    * <p>队列数量</p>
     */
     @SerializedName("QueueNumber")
     @Expose
     private Long QueueNumber;
 
     /**
-    * 每秒生产消息数 单位：条/秒
+    * <p>每秒生产消息数 单位：条/秒</p>
     */
     @SerializedName("MessagePublishRate")
     @Expose
     private Float MessagePublishRate;
 
     /**
-    * 堆积消息数 单位：条
+    * <p>堆积消息数 单位：条</p>
     */
     @SerializedName("MessageStackNumber")
     @Expose
     private Long MessageStackNumber;
 
     /**
-    * 过期时间
+    * <p>过期时间</p>
     */
     @SerializedName("ExpireTime")
     @Expose
     private Long ExpireTime;
 
     /**
-    * Channel数量
+    * <p>Channel数量</p>
     */
     @SerializedName("ChannelNumber")
     @Expose
     private Long ChannelNumber;
 
     /**
-    * Connection数量
+    * <p>Connection数量</p>
     */
     @SerializedName("ConnectionNumber")
     @Expose
     private Long ConnectionNumber;
 
     /**
-    * Consumer数量
+    * <p>Consumer数量</p>
     */
     @SerializedName("ConsumerNumber")
     @Expose
     private Long ConsumerNumber;
 
     /**
-    * Exchang数量
+    * <p>Exchang数量</p>
     */
     @SerializedName("ExchangeNumber")
     @Expose
     private Long ExchangeNumber;
 
     /**
-    * 集群异常信息
+    * <p>集群异常信息</p>
     */
     @SerializedName("ExceptionInformation")
     @Expose
     private String ExceptionInformation;
 
     /**
-    * 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
+    * <p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败</p>
     */
     @SerializedName("ClusterStatus")
     @Expose
     private Long ClusterStatus;
 
     /**
-    * 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
+    * <p>自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-    * 是否开启镜像队列策略。1表示开启，0表示没开启。
+    * <p>是否开启镜像队列策略。1表示开启，0表示没开启。</p>
     */
     @SerializedName("MirrorQueuePolicyFlag")
     @Expose
     private Long MirrorQueuePolicyFlag;
 
     /**
-    * 每秒消费消息数 单位：条/秒
+    * <p>每秒消费消息数 单位：条/秒</p>
     */
     @SerializedName("MessageConsumeRate")
     @Expose
     private Float MessageConsumeRate;
 
     /**
-    * 集群版本信息
+    * <p>集群版本信息</p>
     */
     @SerializedName("ClusterVersion")
     @Expose
     private String ClusterVersion;
 
     /**
-    * 计费模式，0-后付费，1-预付费
+    * <p>计费模式，0-后付费，1-预付费</p>
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * 集群类型
+    * <p>集群类型</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private Long InstanceType;
 
     /**
-    * 消息保留时间，单位小时
+    * <p>消息保留时间，单位小时</p>
     */
     @SerializedName("MessageRetainTime")
     @Expose
     private Long MessageRetainTime;
 
     /**
-    * 发送消息流量比例
+    * <p>发送消息流量比例</p>
     */
     @SerializedName("SendReceiveRatio")
     @Expose
     private Float SendReceiveRatio;
 
     /**
-    * 消息轨迹保留时间，单位小时
+    * <p>消息轨迹保留时间，单位小时</p>
     */
     @SerializedName("TraceTime")
     @Expose
     private Long TraceTime;
 
     /**
-    * 实例标签列表
+    * <p>实例标签列表</p>
     */
     @SerializedName("Tags")
     @Expose
     private RabbitMQServerlessTag [] Tags;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+    * <p>是否开启弹性tps</p>
+    */
+    @SerializedName("ElasticTpsFlag")
+    @Expose
+    private Boolean ElasticTpsFlag;
+
+    /**
+    * <p>弹性tps倍数，默认弹1倍</p>
+    */
+    @SerializedName("ElasticTpsRatio")
+    @Expose
+    private Float ElasticTpsRatio;
+
+    /**
+    * <p>最大重投次数</p>
+    */
+    @SerializedName("MaxRedeliverCount")
+    @Expose
+    private Long MaxRedeliverCount;
+
+    /**
+    * <p>消费超时时间，单位min</p>
+    */
+    @SerializedName("ConsumerTimeout")
+    @Expose
+    private Long ConsumerTimeout;
+
+    /**
+     * Get <p>集群ID</p> 
+     * @return ClusterId <p>集群ID</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set <p>集群ID</p>
+     * @param ClusterId <p>集群ID</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 集群名称 
-     * @return ClusterName 集群名称
+     * Get <p>集群名称</p> 
+     * @return ClusterName <p>集群名称</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set 集群名称
-     * @param ClusterName 集群名称
+     * Set <p>集群名称</p>
+     * @param ClusterName <p>集群名称</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 地域信息 
-     * @return Region 地域信息
+     * Get <p>地域信息</p> 
+     * @return Region <p>地域信息</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 地域信息
-     * @param Region 地域信息
+     * Set <p>地域信息</p>
+     * @param Region <p>地域信息</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 创建时间，毫秒为单位 
-     * @return CreateTime 创建时间，毫秒为单位
+     * Get <p>创建时间，毫秒为单位</p> 
+     * @return CreateTime <p>创建时间，毫秒为单位</p>
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间，毫秒为单位
-     * @param CreateTime 创建时间，毫秒为单位
+     * Set <p>创建时间，毫秒为单位</p>
+     * @param CreateTime <p>创建时间，毫秒为单位</p>
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 集群说明信息 
-     * @return Remark 集群说明信息
+     * Get <p>集群说明信息</p> 
+     * @return Remark <p>集群说明信息</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 集群说明信息
-     * @param Remark 集群说明信息
+     * Set <p>集群说明信息</p>
+     * @param Remark <p>集群说明信息</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get VPC及网络信息 
-     * @return Vpcs VPC及网络信息
+     * Get <p>VPC及网络信息</p> 
+     * @return Vpcs <p>VPC及网络信息</p>
      */
     public VpcEndpointInfo [] getVpcs() {
         return this.Vpcs;
     }
 
     /**
-     * Set VPC及网络信息
-     * @param Vpcs VPC及网络信息
+     * Set <p>VPC及网络信息</p>
+     * @param Vpcs <p>VPC及网络信息</p>
      */
     public void setVpcs(VpcEndpointInfo [] Vpcs) {
         this.Vpcs = Vpcs;
     }
 
     /**
-     * Get 可用区信息 
-     * @return ZoneIds 可用区信息
+     * Get <p>可用区信息</p> 
+     * @return ZoneIds <p>可用区信息</p>
      */
     public Long [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set 可用区信息
-     * @param ZoneIds 可用区信息
+     * Set <p>可用区信息</p>
+     * @param ZoneIds <p>可用区信息</p>
      */
     public void setZoneIds(Long [] ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
     /**
-     * Get 虚拟主机数量 
-     * @return VirtualHostNumber 虚拟主机数量
+     * Get <p>虚拟主机数量</p> 
+     * @return VirtualHostNumber <p>虚拟主机数量</p>
      */
     public Long getVirtualHostNumber() {
         return this.VirtualHostNumber;
     }
 
     /**
-     * Set 虚拟主机数量
-     * @param VirtualHostNumber 虚拟主机数量
+     * Set <p>虚拟主机数量</p>
+     * @param VirtualHostNumber <p>虚拟主机数量</p>
      */
     public void setVirtualHostNumber(Long VirtualHostNumber) {
         this.VirtualHostNumber = VirtualHostNumber;
     }
 
     /**
-     * Get 队列数量 
-     * @return QueueNumber 队列数量
+     * Get <p>队列数量</p> 
+     * @return QueueNumber <p>队列数量</p>
      */
     public Long getQueueNumber() {
         return this.QueueNumber;
     }
 
     /**
-     * Set 队列数量
-     * @param QueueNumber 队列数量
+     * Set <p>队列数量</p>
+     * @param QueueNumber <p>队列数量</p>
      */
     public void setQueueNumber(Long QueueNumber) {
         this.QueueNumber = QueueNumber;
     }
 
     /**
-     * Get 每秒生产消息数 单位：条/秒 
-     * @return MessagePublishRate 每秒生产消息数 单位：条/秒
+     * Get <p>每秒生产消息数 单位：条/秒</p> 
+     * @return MessagePublishRate <p>每秒生产消息数 单位：条/秒</p>
      */
     public Float getMessagePublishRate() {
         return this.MessagePublishRate;
     }
 
     /**
-     * Set 每秒生产消息数 单位：条/秒
-     * @param MessagePublishRate 每秒生产消息数 单位：条/秒
+     * Set <p>每秒生产消息数 单位：条/秒</p>
+     * @param MessagePublishRate <p>每秒生产消息数 单位：条/秒</p>
      */
     public void setMessagePublishRate(Float MessagePublishRate) {
         this.MessagePublishRate = MessagePublishRate;
     }
 
     /**
-     * Get 堆积消息数 单位：条 
-     * @return MessageStackNumber 堆积消息数 单位：条
+     * Get <p>堆积消息数 单位：条</p> 
+     * @return MessageStackNumber <p>堆积消息数 单位：条</p>
      */
     public Long getMessageStackNumber() {
         return this.MessageStackNumber;
     }
 
     /**
-     * Set 堆积消息数 单位：条
-     * @param MessageStackNumber 堆积消息数 单位：条
+     * Set <p>堆积消息数 单位：条</p>
+     * @param MessageStackNumber <p>堆积消息数 单位：条</p>
      */
     public void setMessageStackNumber(Long MessageStackNumber) {
         this.MessageStackNumber = MessageStackNumber;
     }
 
     /**
-     * Get 过期时间 
-     * @return ExpireTime 过期时间
+     * Get <p>过期时间</p> 
+     * @return ExpireTime <p>过期时间</p>
      */
     public Long getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 过期时间
-     * @param ExpireTime 过期时间
+     * Set <p>过期时间</p>
+     * @param ExpireTime <p>过期时间</p>
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get Channel数量 
-     * @return ChannelNumber Channel数量
+     * Get <p>Channel数量</p> 
+     * @return ChannelNumber <p>Channel数量</p>
      */
     public Long getChannelNumber() {
         return this.ChannelNumber;
     }
 
     /**
-     * Set Channel数量
-     * @param ChannelNumber Channel数量
+     * Set <p>Channel数量</p>
+     * @param ChannelNumber <p>Channel数量</p>
      */
     public void setChannelNumber(Long ChannelNumber) {
         this.ChannelNumber = ChannelNumber;
     }
 
     /**
-     * Get Connection数量 
-     * @return ConnectionNumber Connection数量
+     * Get <p>Connection数量</p> 
+     * @return ConnectionNumber <p>Connection数量</p>
      */
     public Long getConnectionNumber() {
         return this.ConnectionNumber;
     }
 
     /**
-     * Set Connection数量
-     * @param ConnectionNumber Connection数量
+     * Set <p>Connection数量</p>
+     * @param ConnectionNumber <p>Connection数量</p>
      */
     public void setConnectionNumber(Long ConnectionNumber) {
         this.ConnectionNumber = ConnectionNumber;
     }
 
     /**
-     * Get Consumer数量 
-     * @return ConsumerNumber Consumer数量
+     * Get <p>Consumer数量</p> 
+     * @return ConsumerNumber <p>Consumer数量</p>
      */
     public Long getConsumerNumber() {
         return this.ConsumerNumber;
     }
 
     /**
-     * Set Consumer数量
-     * @param ConsumerNumber Consumer数量
+     * Set <p>Consumer数量</p>
+     * @param ConsumerNumber <p>Consumer数量</p>
      */
     public void setConsumerNumber(Long ConsumerNumber) {
         this.ConsumerNumber = ConsumerNumber;
     }
 
     /**
-     * Get Exchang数量 
-     * @return ExchangeNumber Exchang数量
+     * Get <p>Exchang数量</p> 
+     * @return ExchangeNumber <p>Exchang数量</p>
      */
     public Long getExchangeNumber() {
         return this.ExchangeNumber;
     }
 
     /**
-     * Set Exchang数量
-     * @param ExchangeNumber Exchang数量
+     * Set <p>Exchang数量</p>
+     * @param ExchangeNumber <p>Exchang数量</p>
      */
     public void setExchangeNumber(Long ExchangeNumber) {
         this.ExchangeNumber = ExchangeNumber;
     }
 
     /**
-     * Get 集群异常信息 
-     * @return ExceptionInformation 集群异常信息
+     * Get <p>集群异常信息</p> 
+     * @return ExceptionInformation <p>集群异常信息</p>
      */
     public String getExceptionInformation() {
         return this.ExceptionInformation;
     }
 
     /**
-     * Set 集群异常信息
-     * @param ExceptionInformation 集群异常信息
+     * Set <p>集群异常信息</p>
+     * @param ExceptionInformation <p>集群异常信息</p>
      */
     public void setExceptionInformation(String ExceptionInformation) {
         this.ExceptionInformation = ExceptionInformation;
     }
 
     /**
-     * Get 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败 
-     * @return ClusterStatus 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
+     * Get <p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败</p> 
+     * @return ClusterStatus <p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败</p>
      */
     public Long getClusterStatus() {
         return this.ClusterStatus;
     }
 
     /**
-     * Set 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
-     * @param ClusterStatus 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
+     * Set <p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败</p>
+     * @param ClusterStatus <p>实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败</p>
      */
     public void setClusterStatus(Long ClusterStatus) {
         this.ClusterStatus = ClusterStatus;
     }
 
     /**
-     * Get 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置) 
-     * @return AutoRenewFlag 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
+     * Get <p>自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)</p> 
+     * @return AutoRenewFlag <p>自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
-     * @param AutoRenewFlag 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
+     * Set <p>自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
+     * @param AutoRenewFlag <p>自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)</p>
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get 是否开启镜像队列策略。1表示开启，0表示没开启。 
-     * @return MirrorQueuePolicyFlag 是否开启镜像队列策略。1表示开启，0表示没开启。
+     * Get <p>是否开启镜像队列策略。1表示开启，0表示没开启。</p> 
+     * @return MirrorQueuePolicyFlag <p>是否开启镜像队列策略。1表示开启，0表示没开启。</p>
      */
     public Long getMirrorQueuePolicyFlag() {
         return this.MirrorQueuePolicyFlag;
     }
 
     /**
-     * Set 是否开启镜像队列策略。1表示开启，0表示没开启。
-     * @param MirrorQueuePolicyFlag 是否开启镜像队列策略。1表示开启，0表示没开启。
+     * Set <p>是否开启镜像队列策略。1表示开启，0表示没开启。</p>
+     * @param MirrorQueuePolicyFlag <p>是否开启镜像队列策略。1表示开启，0表示没开启。</p>
      */
     public void setMirrorQueuePolicyFlag(Long MirrorQueuePolicyFlag) {
         this.MirrorQueuePolicyFlag = MirrorQueuePolicyFlag;
     }
 
     /**
-     * Get 每秒消费消息数 单位：条/秒 
-     * @return MessageConsumeRate 每秒消费消息数 单位：条/秒
+     * Get <p>每秒消费消息数 单位：条/秒</p> 
+     * @return MessageConsumeRate <p>每秒消费消息数 单位：条/秒</p>
      */
     public Float getMessageConsumeRate() {
         return this.MessageConsumeRate;
     }
 
     /**
-     * Set 每秒消费消息数 单位：条/秒
-     * @param MessageConsumeRate 每秒消费消息数 单位：条/秒
+     * Set <p>每秒消费消息数 单位：条/秒</p>
+     * @param MessageConsumeRate <p>每秒消费消息数 单位：条/秒</p>
      */
     public void setMessageConsumeRate(Float MessageConsumeRate) {
         this.MessageConsumeRate = MessageConsumeRate;
     }
 
     /**
-     * Get 集群版本信息 
-     * @return ClusterVersion 集群版本信息
+     * Get <p>集群版本信息</p> 
+     * @return ClusterVersion <p>集群版本信息</p>
      */
     public String getClusterVersion() {
         return this.ClusterVersion;
     }
 
     /**
-     * Set 集群版本信息
-     * @param ClusterVersion 集群版本信息
+     * Set <p>集群版本信息</p>
+     * @param ClusterVersion <p>集群版本信息</p>
      */
     public void setClusterVersion(String ClusterVersion) {
         this.ClusterVersion = ClusterVersion;
     }
 
     /**
-     * Get 计费模式，0-后付费，1-预付费 
-     * @return PayMode 计费模式，0-后付费，1-预付费
+     * Get <p>计费模式，0-后付费，1-预付费</p> 
+     * @return PayMode <p>计费模式，0-后付费，1-预付费</p>
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 计费模式，0-后付费，1-预付费
-     * @param PayMode 计费模式，0-后付费，1-预付费
+     * Set <p>计费模式，0-后付费，1-预付费</p>
+     * @param PayMode <p>计费模式，0-后付费，1-预付费</p>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 集群类型 
-     * @return InstanceType 集群类型
+     * Get <p>集群类型</p> 
+     * @return InstanceType <p>集群类型</p>
      */
     public Long getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 集群类型
-     * @param InstanceType 集群类型
+     * Set <p>集群类型</p>
+     * @param InstanceType <p>集群类型</p>
      */
     public void setInstanceType(Long InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 消息保留时间，单位小时 
-     * @return MessageRetainTime 消息保留时间，单位小时
+     * Get <p>消息保留时间，单位小时</p> 
+     * @return MessageRetainTime <p>消息保留时间，单位小时</p>
      */
     public Long getMessageRetainTime() {
         return this.MessageRetainTime;
     }
 
     /**
-     * Set 消息保留时间，单位小时
-     * @param MessageRetainTime 消息保留时间，单位小时
+     * Set <p>消息保留时间，单位小时</p>
+     * @param MessageRetainTime <p>消息保留时间，单位小时</p>
      */
     public void setMessageRetainTime(Long MessageRetainTime) {
         this.MessageRetainTime = MessageRetainTime;
     }
 
     /**
-     * Get 发送消息流量比例 
-     * @return SendReceiveRatio 发送消息流量比例
+     * Get <p>发送消息流量比例</p> 
+     * @return SendReceiveRatio <p>发送消息流量比例</p>
      */
     public Float getSendReceiveRatio() {
         return this.SendReceiveRatio;
     }
 
     /**
-     * Set 发送消息流量比例
-     * @param SendReceiveRatio 发送消息流量比例
+     * Set <p>发送消息流量比例</p>
+     * @param SendReceiveRatio <p>发送消息流量比例</p>
      */
     public void setSendReceiveRatio(Float SendReceiveRatio) {
         this.SendReceiveRatio = SendReceiveRatio;
     }
 
     /**
-     * Get 消息轨迹保留时间，单位小时 
-     * @return TraceTime 消息轨迹保留时间，单位小时
+     * Get <p>消息轨迹保留时间，单位小时</p> 
+     * @return TraceTime <p>消息轨迹保留时间，单位小时</p>
      */
     public Long getTraceTime() {
         return this.TraceTime;
     }
 
     /**
-     * Set 消息轨迹保留时间，单位小时
-     * @param TraceTime 消息轨迹保留时间，单位小时
+     * Set <p>消息轨迹保留时间，单位小时</p>
+     * @param TraceTime <p>消息轨迹保留时间，单位小时</p>
      */
     public void setTraceTime(Long TraceTime) {
         this.TraceTime = TraceTime;
     }
 
     /**
-     * Get 实例标签列表 
-     * @return Tags 实例标签列表
+     * Get <p>实例标签列表</p> 
+     * @return Tags <p>实例标签列表</p>
      */
     public RabbitMQServerlessTag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 实例标签列表
-     * @param Tags 实例标签列表
+     * Set <p>实例标签列表</p>
+     * @param Tags <p>实例标签列表</p>
      */
     public void setTags(RabbitMQServerlessTag [] Tags) {
         this.Tags = Tags;
+    }
+
+    /**
+     * Get <p>是否开启弹性tps</p> 
+     * @return ElasticTpsFlag <p>是否开启弹性tps</p>
+     */
+    public Boolean getElasticTpsFlag() {
+        return this.ElasticTpsFlag;
+    }
+
+    /**
+     * Set <p>是否开启弹性tps</p>
+     * @param ElasticTpsFlag <p>是否开启弹性tps</p>
+     */
+    public void setElasticTpsFlag(Boolean ElasticTpsFlag) {
+        this.ElasticTpsFlag = ElasticTpsFlag;
+    }
+
+    /**
+     * Get <p>弹性tps倍数，默认弹1倍</p> 
+     * @return ElasticTpsRatio <p>弹性tps倍数，默认弹1倍</p>
+     */
+    public Float getElasticTpsRatio() {
+        return this.ElasticTpsRatio;
+    }
+
+    /**
+     * Set <p>弹性tps倍数，默认弹1倍</p>
+     * @param ElasticTpsRatio <p>弹性tps倍数，默认弹1倍</p>
+     */
+    public void setElasticTpsRatio(Float ElasticTpsRatio) {
+        this.ElasticTpsRatio = ElasticTpsRatio;
+    }
+
+    /**
+     * Get <p>最大重投次数</p> 
+     * @return MaxRedeliverCount <p>最大重投次数</p>
+     */
+    public Long getMaxRedeliverCount() {
+        return this.MaxRedeliverCount;
+    }
+
+    /**
+     * Set <p>最大重投次数</p>
+     * @param MaxRedeliverCount <p>最大重投次数</p>
+     */
+    public void setMaxRedeliverCount(Long MaxRedeliverCount) {
+        this.MaxRedeliverCount = MaxRedeliverCount;
+    }
+
+    /**
+     * Get <p>消费超时时间，单位min</p> 
+     * @return ConsumerTimeout <p>消费超时时间，单位min</p>
+     */
+    public Long getConsumerTimeout() {
+        return this.ConsumerTimeout;
+    }
+
+    /**
+     * Set <p>消费超时时间，单位min</p>
+     * @param ConsumerTimeout <p>消费超时时间，单位min</p>
+     */
+    public void setConsumerTimeout(Long ConsumerTimeout) {
+        this.ConsumerTimeout = ConsumerTimeout;
     }
 
     public RabbitMQClusterInfo() {
@@ -768,6 +860,18 @@ public class RabbitMQClusterInfo extends AbstractModel {
                 this.Tags[i] = new RabbitMQServerlessTag(source.Tags[i]);
             }
         }
+        if (source.ElasticTpsFlag != null) {
+            this.ElasticTpsFlag = new Boolean(source.ElasticTpsFlag);
+        }
+        if (source.ElasticTpsRatio != null) {
+            this.ElasticTpsRatio = new Float(source.ElasticTpsRatio);
+        }
+        if (source.MaxRedeliverCount != null) {
+            this.MaxRedeliverCount = new Long(source.MaxRedeliverCount);
+        }
+        if (source.ConsumerTimeout != null) {
+            this.ConsumerTimeout = new Long(source.ConsumerTimeout);
+        }
     }
 
 
@@ -803,6 +907,10 @@ public class RabbitMQClusterInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "SendReceiveRatio", this.SendReceiveRatio);
         this.setParamSimple(map, prefix + "TraceTime", this.TraceTime);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "ElasticTpsFlag", this.ElasticTpsFlag);
+        this.setParamSimple(map, prefix + "ElasticTpsRatio", this.ElasticTpsRatio);
+        this.setParamSimple(map, prefix + "MaxRedeliverCount", this.MaxRedeliverCount);
+        this.setParamSimple(map, prefix + "ConsumerTimeout", this.ConsumerTimeout);
 
     }
 }

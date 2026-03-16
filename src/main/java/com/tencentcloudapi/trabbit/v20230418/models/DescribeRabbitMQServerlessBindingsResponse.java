@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeRabbitMQServerlessBindingsResponse extends AbstractModel {
 
     /**
-    * 路由关系列表
+    * <p>路由关系列表</p>
     */
     @SerializedName("BindingInfoList")
     @Expose
     private RabbitMQBindingListInfo [] BindingInfoList;
 
     /**
-    * 数量
+    * <p>数量</p>
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeRabbitMQServerlessBindingsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 路由关系列表 
-     * @return BindingInfoList 路由关系列表
+     * Get <p>路由关系列表</p> 
+     * @return BindingInfoList <p>路由关系列表</p>
      */
     public RabbitMQBindingListInfo [] getBindingInfoList() {
         return this.BindingInfoList;
     }
 
     /**
-     * Set 路由关系列表
-     * @param BindingInfoList 路由关系列表
+     * Set <p>路由关系列表</p>
+     * @param BindingInfoList <p>路由关系列表</p>
      */
     public void setBindingInfoList(RabbitMQBindingListInfo [] BindingInfoList) {
         this.BindingInfoList = BindingInfoList;
     }
 
     /**
-     * Get 数量 
-     * @return TotalCount 数量
+     * Get <p>数量</p> 
+     * @return TotalCount <p>数量</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 数量
-     * @param TotalCount 数量
+     * Set <p>数量</p>
+     * @param TotalCount <p>数量</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

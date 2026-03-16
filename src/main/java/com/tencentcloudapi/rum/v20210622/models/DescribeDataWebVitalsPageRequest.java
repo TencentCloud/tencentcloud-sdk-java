@@ -80,7 +80,7 @@ public class DescribeDataWebVitalsPageRequest extends AbstractModel {
     private String Level;
 
     /**
-    * 类型暂无
+    * 按页面来源分组（group by from），返回每个页面的 LCP/FID/CLS/FCP
     */
     @SerializedName("Type")
     @Expose
@@ -306,16 +306,16 @@ public class DescribeDataWebVitalsPageRequest extends AbstractModel {
     }
 
     /**
-     * Get 类型暂无 
-     * @return Type 类型暂无
+     * Get 按页面来源分组（group by from），返回每个页面的 LCP/FID/CLS/FCP 
+     * @return Type 按页面来源分组（group by from），返回每个页面的 LCP/FID/CLS/FCP
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 类型暂无
-     * @param Type 类型暂无
+     * Set 按页面来源分组（group by from），返回每个页面的 LCP/FID/CLS/FCP
+     * @param Type 按页面来源分组（group by from），返回每个页面的 LCP/FID/CLS/FCP
      */
     public void setType(String Type) {
         this.Type = Type;

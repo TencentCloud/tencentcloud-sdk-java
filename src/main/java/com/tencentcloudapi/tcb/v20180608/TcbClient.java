@@ -144,9 +144,9 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
-     *开通Mysql型数据库
+     *本接口（CreateMySQL）用于开通Mysql型数据库。
 
-开通后，可通过 [DescribeCreateMySQLResult ](https://cloud.tencent.com/document/api/876/128185) 查询开通结果，Mysql开通成功后，可通过接口设置数据库账号相关功能包括但不限于【创建账号、删除账号、查询可授权权限列表、查询账号已有权限、修改主机、修改配置、修改账号库表权限】、集群操作相关【查询集群参数、修改集群参数】，连接设置相关【关闭外网、开通外网、查询集群信息】，备份回档相关【创建手动回档、删除手动回档、修改自动备份配置信息、查询备份文件列表、集群回档、查询任务列表、获取table列表、获取集群数据库列表、查询备份下载地址】，相关功能接口文档：[TDSQL-C MySQL API文档](https://cloud.tencent.com/document/product/1003/48106)，可以通过 [RunSql](https://cloud.tencent.com/document/api/876/127880) 接口来执行 sql 命令，比如创建表格、插入数据、删除表格等 sql 命令
+开通后，可通过 [DescribeCreateMySQLResult ](https://cloud.tencent.com/document/api/876/128185) 查询开通结果，Mysql开通成功后，可通过接口设置数据库账号相关功能包括但不限于【创建账号、删除账号、查询可授权权限列表、查询账号已有权限、修改主机、修改配置、修改账号库表权限】、集群操作相关【查询集群参数、修改集群参数】，连接设置相关【关闭外网、开通外网、查询集群信息】，备份回档相关【创建手动回档、删除手动回档、修改自动备份配置信息、查询备份文件列表、集群回档、查询任务列表、获取table列表、获取集群数据库列表、查询备份下载地址】，相关功能接口文档：[TDSQL-C MySQL API文档](https://cloud.tencent.com/document/product/1003/48106)，可以通过 [RunSql](https://cloud.tencent.com/document/api/876/127880) 接口来执行 sql 命令，比如创建表格、插入数据、删除表格等 sql 命令。
      * @param req CreateMySQLRequest
      * @return CreateMySQLResponse
      * @throws TencentCloudSDKException
@@ -168,7 +168,7 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
-     *本接口(CreateTable)用于创建文档型数据库表，支持创建capped类型集合，暂时不支持分片表
+     *本接口(CreateTable)用于创建文档型数据库表，支持创建capped类型集合，暂时不支持分片表。
      * @param req CreateTableRequest
      * @return CreateTableResponse
      * @throws TencentCloudSDKException
@@ -228,9 +228,9 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
-     *本接口(DeleteTable)用于删除文档型数据库表，删除表后表中数据将会被删除且无法恢复，请谨慎操作
+     *本接口(DeleteTable)用于删除文档型数据库表，删除表后表中数据将会被删除且无法恢复，请谨慎操作。
 
-接口入参中的 Tag 为文档型数据库的实例 Id，可以通过 [DescribeEnvs](https://cloud.tencent.com/document/api/876/34820) 接口返回的 EnvList[0].Databases[0].InstanceId 获取
+接口入参中的 Tag 为文档型数据库的实例 Id，可以通过 [DescribeEnvs](https://cloud.tencent.com/document/api/876/34820) 接口返回的 EnvList[0].Databases[0].InstanceId 获取。
      * @param req DeleteTableRequest
      * @return DeleteTableResponse
      * @throws TencentCloudSDKException
@@ -276,6 +276,17 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *获取计费相关信息
+     * @param req DescribeBillingInfoRequest
+     * @return DescribeBillingInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBillingInfoResponse DescribeBillingInfo(DescribeBillingInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBillingInfo", DescribeBillingInfoResponse.class);
+    }
+
+    /**
      *获取云托管代码上传url
      * @param req DescribeCloudBaseBuildServiceRequest
      * @return DescribeCloudBaseBuildServiceResponse
@@ -309,8 +320,21 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
-     *查询开通Mysql结果，`Response.Data.Status = "notexist"` 表示未开通，如果未开通，可以调用 [CreateMySQL](https://cloud.tencent.com/document/api/876/128186) 来开通
- `Response.Data. Status = "success"` 表示开通成功，Mysql开通成功后，可通过接口设置数据库账号相关功能包括但不限于【创建账号、删除账号、查询可授权权限列表、查询账号已有权限、修改主机、修改配置、修改账号库表权限】、集群操作相关【查询集群参数、修改集群参数】，连接设置相关【关闭外网、开通外网、查询集群信息】，备份回档相关【创建手动回档、删除手动回档、修改自动备份配置信息、查询备份文件列表、集群回档、查询任务列表、获取table列表、获取集群数据库列表、查询备份下载地址】，相关功能接口文档：[TDSQL-C MySQL API文档](https://cloud.tencent.com/document/product/1003/48106)，可以通过 [RunSql](https://cloud.tencent.com/document/api/876/127880) 接口来执行 sql 命令，比如创建表格、插入数据、删除表格等 sql 命令
+     *查询服务版本的详情，CPU和MEM  请使用CPUSize和MemSize
+     * @param req DescribeCloudBaseRunServerVersionRequest
+     * @return DescribeCloudBaseRunServerVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudBaseRunServerVersionResponse DescribeCloudBaseRunServerVersion(DescribeCloudBaseRunServerVersionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudBaseRunServerVersion", DescribeCloudBaseRunServerVersionResponse.class);
+    }
+
+    /**
+     *本接口（DescribeCreateMySQLResult）用于查询开通Mysql结果。
+
+`Response.Data.Status = "notexist"` 表示未开通，如果未开通，可以调用 [CreateMySQL](https://cloud.tencent.com/document/api/876/128186) 来开通
+ `Response.Data. Status = "success"` 表示开通成功，Mysql开通成功后，可通过接口设置数据库账号相关功能包括但不限于【创建账号、删除账号、查询可授权权限列表、查询账号已有权限、修改主机、修改配置、修改账号库表权限】、集群操作相关【查询集群参数、修改集群参数】，连接设置相关【关闭外网、开通外网、查询集群信息】，备份回档相关【创建手动回档、删除手动回档、修改自动备份配置信息、查询备份文件列表、集群回档、查询任务列表、获取table列表、获取集群数据库列表、查询备份下载地址】，相关功能接口文档：[TDSQL-C MySQL API文档](https://cloud.tencent.com/document/product/1003/48106)，可以通过 [RunSql](https://cloud.tencent.com/document/api/876/127880) 接口来执行 sql 命令，比如创建表格、插入数据、删除表格等 MySql 命令。
      * @param req DescribeCreateMySQLResultRequest
      * @return DescribeCreateMySQLResultResponse
      * @throws TencentCloudSDKException
@@ -321,7 +345,7 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
-     *获取文档型数据库权限
+     *本接口（DescribeDatabaseACL）获取文档型数据库权限。
      * @param req DescribeDatabaseACLRequest
      * @return DescribeDatabaseACLResponse
      * @throws TencentCloudSDKException
@@ -385,9 +409,9 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
-     *查询Mysql集群信息
+     *本接口（DescribeMySQLClusterDetail）查询Mysql集群信息。
 
-调用该接口前需要先查询Mysql是否开通，可通过 [DescribeCreateMySQLResult ](https://cloud.tencent.com/document/api/876/128185) 查询，只有已开通的才能查到集群信息，Mysql开通成功后，可通过接口设置数据库账号相关功能包括但不限于【创建账号、删除账号、查询可授权权限列表、查询账号已有权限、修改主机、修改配置、修改账号库表权限】、集群操作相关【查询集群参数、修改集群参数】，连接设置相关【关闭外网、开通外网、查询集群信息】，备份回档相关【创建手动回档、删除手动回档、修改自动备份配置信息、查询备份文件列表、集群回档、查询任务列表、获取table列表、获取集群数据库列表、查询备份下载地址】，相关功能接口文档：[TDSQL-C MySQL API文档](https://cloud.tencent.com/document/product/1003/48106)，可以通过 [RunSql](https://cloud.tencent.com/document/api/876/127880) 接口来执行 sql 命令，比如创建表格、插入数据、删除表格等 sql 命令
+调用该接口前需要先查询Mysql是否开通，可通过 [DescribeCreateMySQLResult ](https://cloud.tencent.com/document/api/876/128185) 查询，只有已开通的才能查到集群信息，Mysql开通成功后，可通过接口设置数据库账号相关功能包括但不限于【创建账号、删除账号、查询可授权权限列表、查询账号已有权限、修改主机、修改配置、修改账号库表权限】、集群操作相关【查询集群参数、修改集群参数】，连接设置相关【关闭外网、开通外网、查询集群信息】，备份回档相关【创建手动回档、删除手动回档、修改自动备份配置信息、查询备份文件列表、集群回档、查询任务列表、获取table列表、获取集群数据库列表、查询备份下载地址】，相关功能接口文档：[TDSQL-C MySQL API文档](https://cloud.tencent.com/document/product/1003/48106)，可以通过 [RunSql](https://cloud.tencent.com/document/api/876/127880) 接口来执行 MySql 命令，比如创建表格、插入数据、删除表格等 MySql 命令。
      * @param req DescribeMySQLClusterDetailRequest
      * @return DescribeMySQLClusterDetailResponse
      * @throws TencentCloudSDKException
@@ -398,7 +422,7 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
-     *查询Mysql任务状态
+     *本接口（DescribeMySQLTaskStatus）用于查询Mysql任务状态。
      * @param req DescribeMySQLTaskStatusRequest
      * @return DescribeMySQLTaskStatusResponse
      * @throws TencentCloudSDKException
@@ -443,9 +467,9 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
-     *查询文档型数据库表的相关信息，包括索引等信息
+     *本接口（DescribeTable）用于查询文档型数据库表的相关信息，包括索引等信息。
 
-接口入参中的 Tag 为文档型数据库的实例 Id，可以通过 [DescribeEnvs](https://cloud.tencent.com/document/api/876/34820) 接口返回的 EnvList[0].Databases[0].InstanceId 获取
+接口入参中的 Tag 为文档型数据库的实例 Id，可以通过 [DescribeEnvs](https://cloud.tencent.com/document/api/876/34820) 接口返回的 EnvList[0].Databases[0].InstanceId 获取。
      * @param req DescribeTableRequest
      * @return DescribeTableResponse
      * @throws TencentCloudSDKException
@@ -456,7 +480,7 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
-     *本接口(DescribeTables)用于查询文档型数据库所有表信息，包括表名、表中数据条数、表中数据量、索引个数及索引的大小等
+     *本接口(DescribeTables)用于查询文档型数据库所有表信息，包括表名、表中数据条数、表中数据量、索引个数及索引的大小等。
      * @param req DescribeTablesRequest
      * @return DescribeTablesResponse
      * @throws TencentCloudSDKException
@@ -498,9 +522,9 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
-     *销毁Mysql
+     *本接口（DestroyMySQL）用于销毁Mysql。
 
-销毁后可以通过 [DescribeMySQLTaskStatus](https://cloud.tencent.com/document/api/876/128183) 接口查询销毁结果，如果 `Response.Data. Status = FAILED ` 表示销毁失败，可以重新调用销毁接口重试
+销毁后可以通过 [DescribeMySQLTaskStatus](https://cloud.tencent.com/document/api/876/128183) 接口查询销毁结果，如果 `Response.Data. Status = FAILED ` 表示销毁失败，可以重新调用销毁接口重试。
      * @param req DestroyMySQLRequest
      * @return DestroyMySQLResponse
      * @throws TencentCloudSDKException
@@ -533,9 +557,9 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
-     *本接口(ListTables)用于查询文档型数据库所有表信息，包括表名、表中数据条数、表中数据量、索引个数及索引的大小等
+     *本接口(ListTables)用于查询文档型数据库所有表信息，包括表名、表中数据条数、表中数据量、索引个数及索引的大小等。
 
-该接口跟 [DescribeTables](https://cloud.tencent.com/document/api/876/127962) 接口功能一致，后续该接口可能会下线，请使用 [DescribeTable](https://cloud.tencent.com/document/api/876/127962)接口
+该接口跟 [DescribeTables](https://cloud.tencent.com/document/api/876/127962) 接口功能一致，后续该接口可能会下线，请使用 [DescribeTable](https://cloud.tencent.com/document/api/876/127962)接口。
      * @param req ListTablesRequest
      * @return ListTablesResponse
      * @throws TencentCloudSDKException
@@ -568,7 +592,7 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
-     *修改文档型数据库权限
+     *本接口（ModifyDatabaseACL）用于修改文档型数据库权限。
      * @param req ModifyDatabaseACLRequest
      * @return ModifyDatabaseACLResponse
      * @throws TencentCloudSDKException
@@ -650,7 +674,7 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
-     *本接口用于执行文档型数据库命令
+     *本接口（RunCommands）用于执行文档型数据库命令。
      * @param req RunCommandsRequest
      * @return RunCommandsResponse
      * @throws TencentCloudSDKException
@@ -661,11 +685,11 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
-     *执行MySQL语句
+     *本接口（RunSql）用于执行MySQL语句。
 
-该接口用来执行 MySql 语句，比如创建表格、插入数据、修改数据、删除字段、添加索引等可以通过sql 语句实现的都可以使用该接口
+该接口用来执行 MySql 语句，比如创建表格、插入数据、修改数据、删除字段、添加索引等可以通过sql 语句实现的都可以使用该接口。
 
-调用该接口前需要先查询Mysql是否开通，可通过 [DescribeCreateMySQLResult ](https://cloud.tencent.com/document/api/876/128185) 查询，只有开通成功才能操作
+调用该接口前需要先查询Mysql是否开通，可通过 [DescribeCreateMySQLResult ](https://cloud.tencent.com/document/api/876/128185) 查询，只有开通成功才能操作。
      * @param req RunSqlRequest
      * @return RunSqlResponse
      * @throws TencentCloudSDKException
@@ -687,7 +711,7 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
-     *本接口(UpdateTable)用于修改文档型数据库表信息，当前可以支持创建和删除索引
+     *本接口(UpdateTable)用于修改文档型数据库表信息，当前可以支持创建和删除索引。
      * @param req UpdateTableRequest
      * @return UpdateTableResponse
      * @throws TencentCloudSDKException

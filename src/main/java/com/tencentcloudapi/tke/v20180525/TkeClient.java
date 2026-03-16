@@ -347,6 +347,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *创建第三方节点池
+     * @param req CreateExternalNodePoolRequest
+     * @return CreateExternalNodePoolResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateExternalNodePoolResponse CreateExternalNodePool(CreateExternalNodePoolRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateExternalNodePool", CreateExternalNodePoolResponse.class);
+    }
+
+    /**
      *创建全局维护时间窗口和排除项
      * @param req CreateGlobalMaintenanceWindowAndExclusionsRequest
      * @return CreateGlobalMaintenanceWindowAndExclusionsResponse
@@ -696,6 +707,28 @@ public class TkeClient extends AbstractClient{
     public DeleteEdgeClusterInstancesResponse DeleteEdgeClusterInstances(DeleteEdgeClusterInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteEdgeClusterInstances", DeleteEdgeClusterInstancesResponse.class);
+    }
+
+    /**
+     *删除第三方节点
+     * @param req DeleteExternalNodeRequest
+     * @return DeleteExternalNodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteExternalNodeResponse DeleteExternalNode(DeleteExternalNodeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteExternalNode", DeleteExternalNodeResponse.class);
+    }
+
+    /**
+     *删除第三方节点池
+     * @param req DeleteExternalNodePoolRequest
+     * @return DeleteExternalNodePoolResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteExternalNodePoolResponse DeleteExternalNodePool(DeleteExternalNodePoolRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteExternalNodePool", DeleteExternalNodePoolResponse.class);
     }
 
     /**
@@ -1458,6 +1491,39 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *查看第三方节点列表
+     * @param req DescribeExternalNodeRequest
+     * @return DescribeExternalNodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExternalNodeResponse DescribeExternalNode(DescribeExternalNodeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeExternalNode", DescribeExternalNodeResponse.class);
+    }
+
+    /**
+     *查看第三方节点池列表
+     * @param req DescribeExternalNodePoolsRequest
+     * @return DescribeExternalNodePoolsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExternalNodePoolsResponse DescribeExternalNodePools(DescribeExternalNodePoolsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeExternalNodePools", DescribeExternalNodePoolsResponse.class);
+    }
+
+    /**
+     *获取第三方节点添加脚本
+     * @param req DescribeExternalNodeScriptRequest
+     * @return DescribeExternalNodeScriptResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExternalNodeScriptResponse DescribeExternalNodeScript(DescribeExternalNodeScriptRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeExternalNodeScript", DescribeExternalNodeScriptResponse.class);
+    }
+
+    /**
      *查看开启第三方节点池配置信息
      * @param req DescribeExternalNodeSupportConfigRequest
      * @return DescribeExternalNodeSupportConfigResponse
@@ -2107,6 +2173,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *驱逐第三方节点
+     * @param req DrainExternalNodeRequest
+     * @return DrainExternalNodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DrainExternalNodeResponse DrainExternalNode(DrainExternalNodeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DrainExternalNode", DrainExternalNodeResponse.class);
+    }
+
+    /**
      *开启集群审计
      * @param req EnableClusterAuditRequest
      * @return EnableClusterAuditResponse
@@ -2170,6 +2247,17 @@ public class TkeClient extends AbstractClient{
     public EnableEventPersistenceResponse EnableEventPersistence(EnableEventPersistenceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "EnableEventPersistence", EnableEventPersistenceResponse.class);
+    }
+
+    /**
+     *开启第三方节点池支持
+     * @param req EnableExternalNodeSupportRequest
+     * @return EnableExternalNodeSupportResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableExternalNodeSupportResponse EnableExternalNodeSupport(EnableExternalNodeSupportRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EnableExternalNodeSupport", EnableExternalNodeSupportResponse.class);
     }
 
     /**
@@ -2456,6 +2544,17 @@ public class TkeClient extends AbstractClient{
     public ModifyClusterVirtualNodePoolResponse ModifyClusterVirtualNodePool(ModifyClusterVirtualNodePoolRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyClusterVirtualNodePool", ModifyClusterVirtualNodePoolResponse.class);
+    }
+
+    /**
+     *修改第三方节点池
+     * @param req ModifyExternalNodePoolRequest
+     * @return ModifyExternalNodePoolResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyExternalNodePoolResponse ModifyExternalNodePool(ModifyExternalNodePoolRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyExternalNodePool", ModifyExternalNodePoolResponse.class);
     }
 
     /**

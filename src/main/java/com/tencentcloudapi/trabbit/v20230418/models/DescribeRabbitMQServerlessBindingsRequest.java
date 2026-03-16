@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class DescribeRabbitMQServerlessBindingsRequest extends AbstractModel {
 
     /**
-    * 实例Id
+    * <p>实例Id</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Vhost参数
+    * <p>Vhost参数</p>
     */
     @SerializedName("VirtualHost")
     @Expose
     private String VirtualHost;
 
     /**
-    * 分页offset
+    * <p>分页offset</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 分页limit
+    * <p>分页limit</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 搜索关键词，根据源exchange名称/目标资源名称/绑定key进行模糊搜索
+    * <p>搜索关键词，根据源exchange名称/目标资源名称进行模糊搜索</p>
     */
     @SerializedName("SearchWord")
     @Expose
     private String SearchWord;
 
     /**
-    * 根据源Exchange精准搜索过滤
+    * <p>根据源Exchange精准搜索过滤</p>
     */
     @SerializedName("SourceExchange")
     @Expose
     private String SourceExchange;
 
     /**
-    * 根据目标QueueName精准搜索过滤，和DestinationExchange过滤不可同时设置
+    * <p>根据目标QueueName精准搜索过滤，和DestinationExchange过滤不可同时设置</p>
     */
     @SerializedName("QueueName")
     @Expose
     private String QueueName;
 
     /**
-    * 根据目标Exchange精准搜索过滤，和QueueName过滤不可同时设置
+    * <p>根据目标Exchange精准搜索过滤，和QueueName过滤不可同时设置</p>
     */
     @SerializedName("DestinationExchange")
     @Expose
     private String DestinationExchange;
 
     /**
-     * Get 实例Id 
-     * @return InstanceId 实例Id
+     * Get <p>实例Id</p> 
+     * @return InstanceId <p>实例Id</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例Id
-     * @param InstanceId 实例Id
+     * Set <p>实例Id</p>
+     * @param InstanceId <p>实例Id</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Vhost参数 
-     * @return VirtualHost Vhost参数
+     * Get <p>Vhost参数</p> 
+     * @return VirtualHost <p>Vhost参数</p>
      */
     public String getVirtualHost() {
         return this.VirtualHost;
     }
 
     /**
-     * Set Vhost参数
-     * @param VirtualHost Vhost参数
+     * Set <p>Vhost参数</p>
+     * @param VirtualHost <p>Vhost参数</p>
      */
     public void setVirtualHost(String VirtualHost) {
         this.VirtualHost = VirtualHost;
     }
 
     /**
-     * Get 分页offset 
-     * @return Offset 分页offset
+     * Get <p>分页offset</p> 
+     * @return Offset <p>分页offset</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页offset
-     * @param Offset 分页offset
+     * Set <p>分页offset</p>
+     * @param Offset <p>分页offset</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 分页limit 
-     * @return Limit 分页limit
+     * Get <p>分页limit</p> 
+     * @return Limit <p>分页limit</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页limit
-     * @param Limit 分页limit
+     * Set <p>分页limit</p>
+     * @param Limit <p>分页limit</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 搜索关键词，根据源exchange名称/目标资源名称/绑定key进行模糊搜索 
-     * @return SearchWord 搜索关键词，根据源exchange名称/目标资源名称/绑定key进行模糊搜索
+     * Get <p>搜索关键词，根据源exchange名称/目标资源名称进行模糊搜索</p> 
+     * @return SearchWord <p>搜索关键词，根据源exchange名称/目标资源名称进行模糊搜索</p>
      */
     public String getSearchWord() {
         return this.SearchWord;
     }
 
     /**
-     * Set 搜索关键词，根据源exchange名称/目标资源名称/绑定key进行模糊搜索
-     * @param SearchWord 搜索关键词，根据源exchange名称/目标资源名称/绑定key进行模糊搜索
+     * Set <p>搜索关键词，根据源exchange名称/目标资源名称进行模糊搜索</p>
+     * @param SearchWord <p>搜索关键词，根据源exchange名称/目标资源名称进行模糊搜索</p>
      */
     public void setSearchWord(String SearchWord) {
         this.SearchWord = SearchWord;
     }
 
     /**
-     * Get 根据源Exchange精准搜索过滤 
-     * @return SourceExchange 根据源Exchange精准搜索过滤
+     * Get <p>根据源Exchange精准搜索过滤</p> 
+     * @return SourceExchange <p>根据源Exchange精准搜索过滤</p>
      */
     public String getSourceExchange() {
         return this.SourceExchange;
     }
 
     /**
-     * Set 根据源Exchange精准搜索过滤
-     * @param SourceExchange 根据源Exchange精准搜索过滤
+     * Set <p>根据源Exchange精准搜索过滤</p>
+     * @param SourceExchange <p>根据源Exchange精准搜索过滤</p>
      */
     public void setSourceExchange(String SourceExchange) {
         this.SourceExchange = SourceExchange;
     }
 
     /**
-     * Get 根据目标QueueName精准搜索过滤，和DestinationExchange过滤不可同时设置 
-     * @return QueueName 根据目标QueueName精准搜索过滤，和DestinationExchange过滤不可同时设置
+     * Get <p>根据目标QueueName精准搜索过滤，和DestinationExchange过滤不可同时设置</p> 
+     * @return QueueName <p>根据目标QueueName精准搜索过滤，和DestinationExchange过滤不可同时设置</p>
      */
     public String getQueueName() {
         return this.QueueName;
     }
 
     /**
-     * Set 根据目标QueueName精准搜索过滤，和DestinationExchange过滤不可同时设置
-     * @param QueueName 根据目标QueueName精准搜索过滤，和DestinationExchange过滤不可同时设置
+     * Set <p>根据目标QueueName精准搜索过滤，和DestinationExchange过滤不可同时设置</p>
+     * @param QueueName <p>根据目标QueueName精准搜索过滤，和DestinationExchange过滤不可同时设置</p>
      */
     public void setQueueName(String QueueName) {
         this.QueueName = QueueName;
     }
 
     /**
-     * Get 根据目标Exchange精准搜索过滤，和QueueName过滤不可同时设置 
-     * @return DestinationExchange 根据目标Exchange精准搜索过滤，和QueueName过滤不可同时设置
+     * Get <p>根据目标Exchange精准搜索过滤，和QueueName过滤不可同时设置</p> 
+     * @return DestinationExchange <p>根据目标Exchange精准搜索过滤，和QueueName过滤不可同时设置</p>
      */
     public String getDestinationExchange() {
         return this.DestinationExchange;
     }
 
     /**
-     * Set 根据目标Exchange精准搜索过滤，和QueueName过滤不可同时设置
-     * @param DestinationExchange 根据目标Exchange精准搜索过滤，和QueueName过滤不可同时设置
+     * Set <p>根据目标Exchange精准搜索过滤，和QueueName过滤不可同时设置</p>
+     * @param DestinationExchange <p>根据目标Exchange精准搜索过滤，和QueueName过滤不可同时设置</p>
      */
     public void setDestinationExchange(String DestinationExchange) {
         this.DestinationExchange = DestinationExchange;

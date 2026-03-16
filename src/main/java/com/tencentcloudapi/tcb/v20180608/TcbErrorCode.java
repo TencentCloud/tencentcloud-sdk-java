@@ -132,6 +132,12 @@ public enum TcbErrorCode {
      /* 并发请求超过配额限制。 */
      LIMITEXCEEDED_CONCURRENT("LimitExceeded.Concurrent"),
      
+     /* 命名空间超过配额。 */
+     LIMITEXCEEDED_ERRNAMESPACEMAXLIMIT("LimitExceeded.ErrNamespaceMaxLimit"),
+     
+     /* 镜像容器超过配额。 */
+     LIMITEXCEEDED_ERRREPOMAXLIMIT("LimitExceeded.ErrRepoMaxLimit"),
+     
      /* LimitExceeded.NoValidConnection */
      LIMITEXCEEDED_NOVALIDCONNECTION("LimitExceeded.NoValidConnection"),
      
@@ -182,6 +188,9 @@ public enum TcbErrorCode {
      
      /* 数据库实例不存在。 */
      RESOURCENOTFOUND_INSTANCENOTFOUND("ResourceNotFound.InstanceNotFound"),
+     
+     /* 请求的云托管服务未找到 */
+     RESOURCENOTFOUND_SERVERNOTFOUND("ResourceNotFound.ServerNotFound"),
      
      /* 表未找到,请创建表或检查表名参数是否正确 */
      RESOURCENOTFOUND_TABLE("ResourceNotFound.Table"),

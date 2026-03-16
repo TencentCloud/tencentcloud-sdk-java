@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateSplunkDeliverRequest extends AbstractModel {
 
     /**
-    * <p>日志主题id- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
+    * <p>日志主题id</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * <p>splunk投递任务名称；name有如下限制：- 不能为空- 长度不大于64- 只能包含aA-zZ、下划线、-、0-9</p>
+    * <p>splunk投递任务名称；<br>name有如下限制：</p><ul><li>不能为空</li><li>长度不大于64</li><li>只能包含aA-zZ、下划线、-、0-9</li></ul>
     */
     @SerializedName("Name")
     @Expose
@@ -59,7 +59,7 @@ public class CreateSplunkDeliverRequest extends AbstractModel {
     private Long HasServiceLog;
 
     /**
-    * <p>高级配置-是否启用索引器；1-不启用；2-启用；默认：1</p>
+    * <p>高级配置-是否启用索引器；1-不启用；2-启用；<br>默认：1</p>
     */
     @SerializedName("IndexAck")
     @Expose
@@ -87,7 +87,7 @@ public class CreateSplunkDeliverRequest extends AbstractModel {
     private String Index;
 
     /**
-    * <p>高级配置-通道需满足限制：如果启用索引器，那么Channel必填</p>
+    * <p>高级配置-通道<br>需满足限制：如果启用索引器，那么Channel必填</p>
     */
     @SerializedName("Channel")
     @Expose
@@ -101,32 +101,39 @@ public class CreateSplunkDeliverRequest extends AbstractModel {
     private String DSLFilter;
 
     /**
-     * Get <p>日志主题id- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p> 
-     * @return TopicId <p>日志主题id- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
+    * <p>高级配置-跨账户投递用户角色授权信息</p><p>取值参考：<a href="https://console.cloud.tencent.com/cam/role/create?payloadType=account">新建自定义角色</a></p>
+    */
+    @SerializedName("ExternalRole")
+    @Expose
+    private ExternalRole ExternalRole;
+
+    /**
+     * Get <p>日志主题id</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul> 
+     * @return TopicId <p>日志主题id</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set <p>日志主题id- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
-     * @param TopicId <p>日志主题id- 通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</p>
+     * Set <p>日志主题id</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
+     * @param TopicId <p>日志主题id</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get <p>splunk投递任务名称；name有如下限制：- 不能为空- 长度不大于64- 只能包含aA-zZ、下划线、-、0-9</p> 
-     * @return Name <p>splunk投递任务名称；name有如下限制：- 不能为空- 长度不大于64- 只能包含aA-zZ、下划线、-、0-9</p>
+     * Get <p>splunk投递任务名称；<br>name有如下限制：</p><ul><li>不能为空</li><li>长度不大于64</li><li>只能包含aA-zZ、下划线、-、0-9</li></ul> 
+     * @return Name <p>splunk投递任务名称；<br>name有如下限制：</p><ul><li>不能为空</li><li>长度不大于64</li><li>只能包含aA-zZ、下划线、-、0-9</li></ul>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set <p>splunk投递任务名称；name有如下限制：- 不能为空- 长度不大于64- 只能包含aA-zZ、下划线、-、0-9</p>
-     * @param Name <p>splunk投递任务名称；name有如下限制：- 不能为空- 长度不大于64- 只能包含aA-zZ、下划线、-、0-9</p>
+     * Set <p>splunk投递任务名称；<br>name有如下限制：</p><ul><li>不能为空</li><li>长度不大于64</li><li>只能包含aA-zZ、下划线、-、0-9</li></ul>
+     * @param Name <p>splunk投递任务名称；<br>name有如下限制：</p><ul><li>不能为空</li><li>长度不大于64</li><li>只能包含aA-zZ、下划线、-、0-9</li></ul>
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -181,16 +188,16 @@ public class CreateSplunkDeliverRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>高级配置-是否启用索引器；1-不启用；2-启用；默认：1</p> 
-     * @return IndexAck <p>高级配置-是否启用索引器；1-不启用；2-启用；默认：1</p>
+     * Get <p>高级配置-是否启用索引器；1-不启用；2-启用；<br>默认：1</p> 
+     * @return IndexAck <p>高级配置-是否启用索引器；1-不启用；2-启用；<br>默认：1</p>
      */
     public Long getIndexAck() {
         return this.IndexAck;
     }
 
     /**
-     * Set <p>高级配置-是否启用索引器；1-不启用；2-启用；默认：1</p>
-     * @param IndexAck <p>高级配置-是否启用索引器；1-不启用；2-启用；默认：1</p>
+     * Set <p>高级配置-是否启用索引器；1-不启用；2-启用；<br>默认：1</p>
+     * @param IndexAck <p>高级配置-是否启用索引器；1-不启用；2-启用；<br>默认：1</p>
      */
     public void setIndexAck(Long IndexAck) {
         this.IndexAck = IndexAck;
@@ -245,16 +252,16 @@ public class CreateSplunkDeliverRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>高级配置-通道需满足限制：如果启用索引器，那么Channel必填</p> 
-     * @return Channel <p>高级配置-通道需满足限制：如果启用索引器，那么Channel必填</p>
+     * Get <p>高级配置-通道<br>需满足限制：如果启用索引器，那么Channel必填</p> 
+     * @return Channel <p>高级配置-通道<br>需满足限制：如果启用索引器，那么Channel必填</p>
      */
     public String getChannel() {
         return this.Channel;
     }
 
     /**
-     * Set <p>高级配置-通道需满足限制：如果启用索引器，那么Channel必填</p>
-     * @param Channel <p>高级配置-通道需满足限制：如果启用索引器，那么Channel必填</p>
+     * Set <p>高级配置-通道<br>需满足限制：如果启用索引器，那么Channel必填</p>
+     * @param Channel <p>高级配置-通道<br>需满足限制：如果启用索引器，那么Channel必填</p>
      */
     public void setChannel(String Channel) {
         this.Channel = Channel;
@@ -274,6 +281,22 @@ public class CreateSplunkDeliverRequest extends AbstractModel {
      */
     public void setDSLFilter(String DSLFilter) {
         this.DSLFilter = DSLFilter;
+    }
+
+    /**
+     * Get <p>高级配置-跨账户投递用户角色授权信息</p><p>取值参考：<a href="https://console.cloud.tencent.com/cam/role/create?payloadType=account">新建自定义角色</a></p> 
+     * @return ExternalRole <p>高级配置-跨账户投递用户角色授权信息</p><p>取值参考：<a href="https://console.cloud.tencent.com/cam/role/create?payloadType=account">新建自定义角色</a></p>
+     */
+    public ExternalRole getExternalRole() {
+        return this.ExternalRole;
+    }
+
+    /**
+     * Set <p>高级配置-跨账户投递用户角色授权信息</p><p>取值参考：<a href="https://console.cloud.tencent.com/cam/role/create?payloadType=account">新建自定义角色</a></p>
+     * @param ExternalRole <p>高级配置-跨账户投递用户角色授权信息</p><p>取值参考：<a href="https://console.cloud.tencent.com/cam/role/create?payloadType=account">新建自定义角色</a></p>
+     */
+    public void setExternalRole(ExternalRole ExternalRole) {
+        this.ExternalRole = ExternalRole;
     }
 
     public CreateSplunkDeliverRequest() {
@@ -317,6 +340,9 @@ public class CreateSplunkDeliverRequest extends AbstractModel {
         if (source.DSLFilter != null) {
             this.DSLFilter = new String(source.DSLFilter);
         }
+        if (source.ExternalRole != null) {
+            this.ExternalRole = new ExternalRole(source.ExternalRole);
+        }
     }
 
 
@@ -335,6 +361,7 @@ public class CreateSplunkDeliverRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Index", this.Index);
         this.setParamSimple(map, prefix + "Channel", this.Channel);
         this.setParamSimple(map, prefix + "DSLFilter", this.DSLFilter);
+        this.setParamObj(map, prefix + "ExternalRole.", this.ExternalRole);
 
     }
 }

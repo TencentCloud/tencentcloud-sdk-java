@@ -143,6 +143,13 @@ public class SplunkDeliverInfo extends AbstractModel {
     private String DSLFilter;
 
     /**
+    * <p>高级配置-跨账户投递参数</p>
+    */
+    @SerializedName("ExternalRole")
+    @Expose
+    private ExternalRole ExternalRole;
+
+    /**
      * Get <p>任务id</p> 
      * @return TaskId <p>任务id</p>
      */
@@ -414,6 +421,22 @@ public class SplunkDeliverInfo extends AbstractModel {
         this.DSLFilter = DSLFilter;
     }
 
+    /**
+     * Get <p>高级配置-跨账户投递参数</p> 
+     * @return ExternalRole <p>高级配置-跨账户投递参数</p>
+     */
+    public ExternalRole getExternalRole() {
+        return this.ExternalRole;
+    }
+
+    /**
+     * Set <p>高级配置-跨账户投递参数</p>
+     * @param ExternalRole <p>高级配置-跨账户投递参数</p>
+     */
+    public void setExternalRole(ExternalRole ExternalRole) {
+        this.ExternalRole = ExternalRole;
+    }
+
     public SplunkDeliverInfo() {
     }
 
@@ -473,6 +496,9 @@ public class SplunkDeliverInfo extends AbstractModel {
         if (source.DSLFilter != null) {
             this.DSLFilter = new String(source.DSLFilter);
         }
+        if (source.ExternalRole != null) {
+            this.ExternalRole = new ExternalRole(source.ExternalRole);
+        }
     }
 
 
@@ -497,6 +523,7 @@ public class SplunkDeliverInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "IndexAck", this.IndexAck);
         this.setParamSimple(map, prefix + "Channel", this.Channel);
         this.setParamSimple(map, prefix + "DSLFilter", this.DSLFilter);
+        this.setParamObj(map, prefix + "ExternalRole.", this.ExternalRole);
 
     }
 }

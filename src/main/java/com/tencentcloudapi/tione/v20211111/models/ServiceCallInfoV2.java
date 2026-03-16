@@ -77,6 +77,13 @@ public class ServiceCallInfoV2 extends AbstractModel {
     private String GrpcHost;
 
     /**
+    * 网关相关配置
+    */
+    @SerializedName("GatewayConfig")
+    @Expose
+    private GatewayConfig GatewayConfig;
+
+    /**
      * Get 服务组id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ServiceGroupId 服务组id
@@ -204,6 +211,22 @@ public class ServiceCallInfoV2 extends AbstractModel {
         this.GrpcHost = GrpcHost;
     }
 
+    /**
+     * Get 网关相关配置 
+     * @return GatewayConfig 网关相关配置
+     */
+    public GatewayConfig getGatewayConfig() {
+        return this.GatewayConfig;
+    }
+
+    /**
+     * Set 网关相关配置
+     * @param GatewayConfig 网关相关配置
+     */
+    public void setGatewayConfig(GatewayConfig GatewayConfig) {
+        this.GatewayConfig = GatewayConfig;
+    }
+
     public ServiceCallInfoV2() {
     }
 
@@ -236,6 +259,9 @@ public class ServiceCallInfoV2 extends AbstractModel {
         if (source.GrpcHost != null) {
             this.GrpcHost = new String(source.GrpcHost);
         }
+        if (source.GatewayConfig != null) {
+            this.GatewayConfig = new GatewayConfig(source.GatewayConfig);
+        }
     }
 
 
@@ -250,6 +276,7 @@ public class ServiceCallInfoV2 extends AbstractModel {
         this.setParamArrayObj(map, prefix + "AuthTokens.", this.AuthTokens);
         this.setParamSimple(map, prefix + "EnableLimit", this.EnableLimit);
         this.setParamSimple(map, prefix + "GrpcHost", this.GrpcHost);
+        this.setParamObj(map, prefix + "GatewayConfig.", this.GatewayConfig);
 
     }
 }

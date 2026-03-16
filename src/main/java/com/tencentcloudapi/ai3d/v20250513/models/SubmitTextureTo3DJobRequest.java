@@ -24,117 +24,92 @@ import java.util.HashMap;
 public class SubmitTextureTo3DJobRequest extends AbstractModel {
 
     /**
-    * 源3D模型文件。
-Type可选值：OBJ，GLB
+    * <p>源3D模型文件。<br>Type可选值：OBJ，GLB</p>
     */
     @SerializedName("File3D")
     @Expose
     private File3D File3D;
 
     /**
-    * 文生3D，3D内容的描述，中文正向提示词。
-最多支持200个 utf-8 字符。
-文生3D, image、image_url和 prompt必填其一，且prompt和image/image_url不能同时存在。
+    * <p>文生3D，3D内容的描述，中文正向提示词。<br>最多支持200个 utf-8 字符。<br>文生3D, image、image_url和 prompt必填其一，且prompt和image/image_url不能同时存在。</p>
     */
     @SerializedName("Prompt")
     @Expose
     private String Prompt;
 
     /**
-    * 3D模型纹理参考图 Base64 数据和参考图图 Url。
-- Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
-- 图片限制：单边分辨率小于4096且大于128，转成 Base64 字符串后小于 10MB，格式支持 jpg、jpeg、png。
+    * <p>3D模型纹理参考图 Base64 数据和参考图 Url。</p><ul><li>Base64 和 Url 必须提供一个，如果都提供以 Url 为准。</li><li>图片限制：单边分辨率小于4096且大于128，转成 Base64 字符串后小于 10MB，格式支持 jpg、jpeg、png。</li></ul>
     */
     @SerializedName("Image")
     @Expose
     private Image Image;
 
     /**
-    * 是否开启 PBR材质生成，默认 false。
+    * <p>是否开启 PBR材质生成，默认 false。</p>
     */
     @SerializedName("EnablePBR")
     @Expose
     private Boolean EnablePBR;
 
     /**
-     * Get 源3D模型文件。
-Type可选值：OBJ，GLB 
-     * @return File3D 源3D模型文件。
-Type可选值：OBJ，GLB
+     * Get <p>源3D模型文件。<br>Type可选值：OBJ，GLB</p> 
+     * @return File3D <p>源3D模型文件。<br>Type可选值：OBJ，GLB</p>
      */
     public File3D getFile3D() {
         return this.File3D;
     }
 
     /**
-     * Set 源3D模型文件。
-Type可选值：OBJ，GLB
-     * @param File3D 源3D模型文件。
-Type可选值：OBJ，GLB
+     * Set <p>源3D模型文件。<br>Type可选值：OBJ，GLB</p>
+     * @param File3D <p>源3D模型文件。<br>Type可选值：OBJ，GLB</p>
      */
     public void setFile3D(File3D File3D) {
         this.File3D = File3D;
     }
 
     /**
-     * Get 文生3D，3D内容的描述，中文正向提示词。
-最多支持200个 utf-8 字符。
-文生3D, image、image_url和 prompt必填其一，且prompt和image/image_url不能同时存在。 
-     * @return Prompt 文生3D，3D内容的描述，中文正向提示词。
-最多支持200个 utf-8 字符。
-文生3D, image、image_url和 prompt必填其一，且prompt和image/image_url不能同时存在。
+     * Get <p>文生3D，3D内容的描述，中文正向提示词。<br>最多支持200个 utf-8 字符。<br>文生3D, image、image_url和 prompt必填其一，且prompt和image/image_url不能同时存在。</p> 
+     * @return Prompt <p>文生3D，3D内容的描述，中文正向提示词。<br>最多支持200个 utf-8 字符。<br>文生3D, image、image_url和 prompt必填其一，且prompt和image/image_url不能同时存在。</p>
      */
     public String getPrompt() {
         return this.Prompt;
     }
 
     /**
-     * Set 文生3D，3D内容的描述，中文正向提示词。
-最多支持200个 utf-8 字符。
-文生3D, image、image_url和 prompt必填其一，且prompt和image/image_url不能同时存在。
-     * @param Prompt 文生3D，3D内容的描述，中文正向提示词。
-最多支持200个 utf-8 字符。
-文生3D, image、image_url和 prompt必填其一，且prompt和image/image_url不能同时存在。
+     * Set <p>文生3D，3D内容的描述，中文正向提示词。<br>最多支持200个 utf-8 字符。<br>文生3D, image、image_url和 prompt必填其一，且prompt和image/image_url不能同时存在。</p>
+     * @param Prompt <p>文生3D，3D内容的描述，中文正向提示词。<br>最多支持200个 utf-8 字符。<br>文生3D, image、image_url和 prompt必填其一，且prompt和image/image_url不能同时存在。</p>
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
     }
 
     /**
-     * Get 3D模型纹理参考图 Base64 数据和参考图图 Url。
-- Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
-- 图片限制：单边分辨率小于4096且大于128，转成 Base64 字符串后小于 10MB，格式支持 jpg、jpeg、png。 
-     * @return Image 3D模型纹理参考图 Base64 数据和参考图图 Url。
-- Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
-- 图片限制：单边分辨率小于4096且大于128，转成 Base64 字符串后小于 10MB，格式支持 jpg、jpeg、png。
+     * Get <p>3D模型纹理参考图 Base64 数据和参考图 Url。</p><ul><li>Base64 和 Url 必须提供一个，如果都提供以 Url 为准。</li><li>图片限制：单边分辨率小于4096且大于128，转成 Base64 字符串后小于 10MB，格式支持 jpg、jpeg、png。</li></ul> 
+     * @return Image <p>3D模型纹理参考图 Base64 数据和参考图 Url。</p><ul><li>Base64 和 Url 必须提供一个，如果都提供以 Url 为准。</li><li>图片限制：单边分辨率小于4096且大于128，转成 Base64 字符串后小于 10MB，格式支持 jpg、jpeg、png。</li></ul>
      */
     public Image getImage() {
         return this.Image;
     }
 
     /**
-     * Set 3D模型纹理参考图 Base64 数据和参考图图 Url。
-- Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
-- 图片限制：单边分辨率小于4096且大于128，转成 Base64 字符串后小于 10MB，格式支持 jpg、jpeg、png。
-     * @param Image 3D模型纹理参考图 Base64 数据和参考图图 Url。
-- Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
-- 图片限制：单边分辨率小于4096且大于128，转成 Base64 字符串后小于 10MB，格式支持 jpg、jpeg、png。
+     * Set <p>3D模型纹理参考图 Base64 数据和参考图 Url。</p><ul><li>Base64 和 Url 必须提供一个，如果都提供以 Url 为准。</li><li>图片限制：单边分辨率小于4096且大于128，转成 Base64 字符串后小于 10MB，格式支持 jpg、jpeg、png。</li></ul>
+     * @param Image <p>3D模型纹理参考图 Base64 数据和参考图 Url。</p><ul><li>Base64 和 Url 必须提供一个，如果都提供以 Url 为准。</li><li>图片限制：单边分辨率小于4096且大于128，转成 Base64 字符串后小于 10MB，格式支持 jpg、jpeg、png。</li></ul>
      */
     public void setImage(Image Image) {
         this.Image = Image;
     }
 
     /**
-     * Get 是否开启 PBR材质生成，默认 false。 
-     * @return EnablePBR 是否开启 PBR材质生成，默认 false。
+     * Get <p>是否开启 PBR材质生成，默认 false。</p> 
+     * @return EnablePBR <p>是否开启 PBR材质生成，默认 false。</p>
      */
     public Boolean getEnablePBR() {
         return this.EnablePBR;
     }
 
     /**
-     * Set 是否开启 PBR材质生成，默认 false。
-     * @param EnablePBR 是否开启 PBR材质生成，默认 false。
+     * Set <p>是否开启 PBR材质生成，默认 false。</p>
+     * @param EnablePBR <p>是否开启 PBR材质生成，默认 false。</p>
      */
     public void setEnablePBR(Boolean EnablePBR) {
         this.EnablePBR = EnablePBR;

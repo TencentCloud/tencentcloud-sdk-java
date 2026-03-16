@@ -24,227 +24,210 @@ import java.util.HashMap;
 public class SceneAigcImageOutputConfig extends AbstractModel {
 
     /**
-    * 存储模式。取值有： <li>Permanent：永久存储，生成的图片文件将存储到云点播，可在事件通知中获取到 FileId；</li> <li>Temporary：临时存储，生成的图片文件不会存储到云点播，可在事件通知中获取到临时访问的 URL；</li>
-默认值：Temporary
+    * <p>存储模式。取值有： <li>Permanent：永久存储，生成的图片文件将存储到云点播，可在事件通知中获取到 FileId；</li> <li>Temporary：临时存储，生成的图片文件不会存储到云点播，可在事件通知中获取到临时访问的 URL；</li><br>默认值：Temporary</p>
     */
     @SerializedName("StorageMode")
     @Expose
     private String StorageMode;
 
     /**
-    * 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。
+    * <p>输出文件名，最长 64 个字符。缺省由系统指定生成文件名。</p>
     */
     @SerializedName("MediaName")
     @Expose
     private String MediaName;
 
     /**
-    * 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
-<li>默认值：0，表示其他分类。</li>
+    * <p>分类ID，用于对媒体进行分类管理，可通过 <a href="/document/product/266/7812">创建分类</a> 接口，创建分类，获得分类 ID。</p><li>默认值：0，表示其他分类。</li>
     */
     @SerializedName("ClassId")
     @Expose
     private Long ClassId;
 
     /**
-    * 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+    * <p>输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p>
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * 指定所生成图片的宽高比。输入格式为 W:H。
-本字段在以下场景有效：
-* 生商品图场景，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9
-* AI扩图场景。可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9、21:9，可以配合 ImageWidth 和 ImageHeight 使用，规则如下： 
-    1. 仅指定 AspectRatio 时，根据原图输入进行自适应调整。
-    2. 指定 AspectRatio 和 ImageWidth 时，ImageHeight  由两者计算得出，反亦是如此。
-    3. 当AspectRatio、ImageWidth、ImageHeight 同时指定的时候，优先使用ImageWidth、ImageHeight。
+    * <p>指定所生成图片的宽高比。输入格式为 W:H。<br>本字段在以下场景有效：</p><ul><li>生商品图场景，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9</li><li>AI扩图场景。可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9、21:9，可以配合 ImageWidth 和 ImageHeight 使用，规则如下： <ol><li>仅指定 AspectRatio 时，根据原图输入进行自适应调整。</li><li>指定 AspectRatio 和 ImageWidth 时，ImageHeight  由两者计算得出，反亦是如此。</li><li>当AspectRatio、ImageWidth、ImageHeight 同时指定的时候，优先使用ImageWidth、ImageHeight。</li></ol></li></ul>
     */
     @SerializedName("AspectRatio")
     @Expose
     private String AspectRatio;
 
     /**
-    * 输出图片编码格式参数。**仅AI换衣场景有效。**
+    * <p>输出图片编码格式参数。<strong>仅AI换衣场景有效。</strong></p>
     */
     @SerializedName("EncodeConfig")
     @Expose
     private ImageSceneAigcEncodeConfig EncodeConfig;
 
     /**
-    * 输出图像宽度，**仅AI扩图场景有效**。
+    * <p>输出图像宽度，<strong>仅AI扩图场景有效</strong>。</p>
     */
     @SerializedName("ImageWidth")
     @Expose
     private Long ImageWidth;
 
     /**
-    * 输出图像高度，**仅AI扩图场景有效**。
+    * <p>输出图像高度，<strong>仅AI扩图场景有效</strong>。</p>
     */
     @SerializedName("ImageHeight")
     @Expose
     private Long ImageHeight;
 
     /**
-     * Get 存储模式。取值有： <li>Permanent：永久存储，生成的图片文件将存储到云点播，可在事件通知中获取到 FileId；</li> <li>Temporary：临时存储，生成的图片文件不会存储到云点播，可在事件通知中获取到临时访问的 URL；</li>
-默认值：Temporary 
-     * @return StorageMode 存储模式。取值有： <li>Permanent：永久存储，生成的图片文件将存储到云点播，可在事件通知中获取到 FileId；</li> <li>Temporary：临时存储，生成的图片文件不会存储到云点播，可在事件通知中获取到临时访问的 URL；</li>
-默认值：Temporary
+    * <p>输出分辨率。仅change_clothes、change_clothes_under场景有效。可选值：1K、2K、4K。</p>
+    */
+    @SerializedName("Resolution")
+    @Expose
+    private String Resolution;
+
+    /**
+     * Get <p>存储模式。取值有： <li>Permanent：永久存储，生成的图片文件将存储到云点播，可在事件通知中获取到 FileId；</li> <li>Temporary：临时存储，生成的图片文件不会存储到云点播，可在事件通知中获取到临时访问的 URL；</li><br>默认值：Temporary</p> 
+     * @return StorageMode <p>存储模式。取值有： <li>Permanent：永久存储，生成的图片文件将存储到云点播，可在事件通知中获取到 FileId；</li> <li>Temporary：临时存储，生成的图片文件不会存储到云点播，可在事件通知中获取到临时访问的 URL；</li><br>默认值：Temporary</p>
      */
     public String getStorageMode() {
         return this.StorageMode;
     }
 
     /**
-     * Set 存储模式。取值有： <li>Permanent：永久存储，生成的图片文件将存储到云点播，可在事件通知中获取到 FileId；</li> <li>Temporary：临时存储，生成的图片文件不会存储到云点播，可在事件通知中获取到临时访问的 URL；</li>
-默认值：Temporary
-     * @param StorageMode 存储模式。取值有： <li>Permanent：永久存储，生成的图片文件将存储到云点播，可在事件通知中获取到 FileId；</li> <li>Temporary：临时存储，生成的图片文件不会存储到云点播，可在事件通知中获取到临时访问的 URL；</li>
-默认值：Temporary
+     * Set <p>存储模式。取值有： <li>Permanent：永久存储，生成的图片文件将存储到云点播，可在事件通知中获取到 FileId；</li> <li>Temporary：临时存储，生成的图片文件不会存储到云点播，可在事件通知中获取到临时访问的 URL；</li><br>默认值：Temporary</p>
+     * @param StorageMode <p>存储模式。取值有： <li>Permanent：永久存储，生成的图片文件将存储到云点播，可在事件通知中获取到 FileId；</li> <li>Temporary：临时存储，生成的图片文件不会存储到云点播，可在事件通知中获取到临时访问的 URL；</li><br>默认值：Temporary</p>
      */
     public void setStorageMode(String StorageMode) {
         this.StorageMode = StorageMode;
     }
 
     /**
-     * Get 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。 
-     * @return MediaName 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。
+     * Get <p>输出文件名，最长 64 个字符。缺省由系统指定生成文件名。</p> 
+     * @return MediaName <p>输出文件名，最长 64 个字符。缺省由系统指定生成文件名。</p>
      */
     public String getMediaName() {
         return this.MediaName;
     }
 
     /**
-     * Set 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。
-     * @param MediaName 输出文件名，最长 64 个字符。缺省由系统指定生成文件名。
+     * Set <p>输出文件名，最长 64 个字符。缺省由系统指定生成文件名。</p>
+     * @param MediaName <p>输出文件名，最长 64 个字符。缺省由系统指定生成文件名。</p>
      */
     public void setMediaName(String MediaName) {
         this.MediaName = MediaName;
     }
 
     /**
-     * Get 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
-<li>默认值：0，表示其他分类。</li> 
-     * @return ClassId 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
-<li>默认值：0，表示其他分类。</li>
+     * Get <p>分类ID，用于对媒体进行分类管理，可通过 <a href="/document/product/266/7812">创建分类</a> 接口，创建分类，获得分类 ID。</p><li>默认值：0，表示其他分类。</li> 
+     * @return ClassId <p>分类ID，用于对媒体进行分类管理，可通过 <a href="/document/product/266/7812">创建分类</a> 接口，创建分类，获得分类 ID。</p><li>默认值：0，表示其他分类。</li>
      */
     public Long getClassId() {
         return this.ClassId;
     }
 
     /**
-     * Set 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
-<li>默认值：0，表示其他分类。</li>
-     * @param ClassId 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
-<li>默认值：0，表示其他分类。</li>
+     * Set <p>分类ID，用于对媒体进行分类管理，可通过 <a href="/document/product/266/7812">创建分类</a> 接口，创建分类，获得分类 ID。</p><li>默认值：0，表示其他分类。</li>
+     * @param ClassId <p>分类ID，用于对媒体进行分类管理，可通过 <a href="/document/product/266/7812">创建分类</a> 接口，创建分类，获得分类 ID。</p><li>默认值：0，表示其他分类。</li>
      */
     public void setClassId(Long ClassId) {
         this.ClassId = ClassId;
     }
 
     /**
-     * Get 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。 
-     * @return ExpireTime 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Get <p>输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p> 
+     * @return ExpireTime <p>输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p>
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
-     * @param ExpireTime 输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Set <p>输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p>
+     * @param ExpireTime <p>输出文件的过期时间，超过该时间文件将被删除，默认为永久不过期，格式按照 ISO 8601标准表示，详见 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式说明</a>。</p>
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 指定所生成图片的宽高比。输入格式为 W:H。
-本字段在以下场景有效：
-* 生商品图场景，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9
-* AI扩图场景。可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9、21:9，可以配合 ImageWidth 和 ImageHeight 使用，规则如下： 
-    1. 仅指定 AspectRatio 时，根据原图输入进行自适应调整。
-    2. 指定 AspectRatio 和 ImageWidth 时，ImageHeight  由两者计算得出，反亦是如此。
-    3. 当AspectRatio、ImageWidth、ImageHeight 同时指定的时候，优先使用ImageWidth、ImageHeight。 
-     * @return AspectRatio 指定所生成图片的宽高比。输入格式为 W:H。
-本字段在以下场景有效：
-* 生商品图场景，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9
-* AI扩图场景。可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9、21:9，可以配合 ImageWidth 和 ImageHeight 使用，规则如下： 
-    1. 仅指定 AspectRatio 时，根据原图输入进行自适应调整。
-    2. 指定 AspectRatio 和 ImageWidth 时，ImageHeight  由两者计算得出，反亦是如此。
-    3. 当AspectRatio、ImageWidth、ImageHeight 同时指定的时候，优先使用ImageWidth、ImageHeight。
+     * Get <p>指定所生成图片的宽高比。输入格式为 W:H。<br>本字段在以下场景有效：</p><ul><li>生商品图场景，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9</li><li>AI扩图场景。可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9、21:9，可以配合 ImageWidth 和 ImageHeight 使用，规则如下： <ol><li>仅指定 AspectRatio 时，根据原图输入进行自适应调整。</li><li>指定 AspectRatio 和 ImageWidth 时，ImageHeight  由两者计算得出，反亦是如此。</li><li>当AspectRatio、ImageWidth、ImageHeight 同时指定的时候，优先使用ImageWidth、ImageHeight。</li></ol></li></ul> 
+     * @return AspectRatio <p>指定所生成图片的宽高比。输入格式为 W:H。<br>本字段在以下场景有效：</p><ul><li>生商品图场景，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9</li><li>AI扩图场景。可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9、21:9，可以配合 ImageWidth 和 ImageHeight 使用，规则如下： <ol><li>仅指定 AspectRatio 时，根据原图输入进行自适应调整。</li><li>指定 AspectRatio 和 ImageWidth 时，ImageHeight  由两者计算得出，反亦是如此。</li><li>当AspectRatio、ImageWidth、ImageHeight 同时指定的时候，优先使用ImageWidth、ImageHeight。</li></ol></li></ul>
      */
     public String getAspectRatio() {
         return this.AspectRatio;
     }
 
     /**
-     * Set 指定所生成图片的宽高比。输入格式为 W:H。
-本字段在以下场景有效：
-* 生商品图场景，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9
-* AI扩图场景。可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9、21:9，可以配合 ImageWidth 和 ImageHeight 使用，规则如下： 
-    1. 仅指定 AspectRatio 时，根据原图输入进行自适应调整。
-    2. 指定 AspectRatio 和 ImageWidth 时，ImageHeight  由两者计算得出，反亦是如此。
-    3. 当AspectRatio、ImageWidth、ImageHeight 同时指定的时候，优先使用ImageWidth、ImageHeight。
-     * @param AspectRatio 指定所生成图片的宽高比。输入格式为 W:H。
-本字段在以下场景有效：
-* 生商品图场景，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9
-* AI扩图场景。可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9、21:9，可以配合 ImageWidth 和 ImageHeight 使用，规则如下： 
-    1. 仅指定 AspectRatio 时，根据原图输入进行自适应调整。
-    2. 指定 AspectRatio 和 ImageWidth 时，ImageHeight  由两者计算得出，反亦是如此。
-    3. 当AspectRatio、ImageWidth、ImageHeight 同时指定的时候，优先使用ImageWidth、ImageHeight。
+     * Set <p>指定所生成图片的宽高比。输入格式为 W:H。<br>本字段在以下场景有效：</p><ul><li>生商品图场景，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9</li><li>AI扩图场景。可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9、21:9，可以配合 ImageWidth 和 ImageHeight 使用，规则如下： <ol><li>仅指定 AspectRatio 时，根据原图输入进行自适应调整。</li><li>指定 AspectRatio 和 ImageWidth 时，ImageHeight  由两者计算得出，反亦是如此。</li><li>当AspectRatio、ImageWidth、ImageHeight 同时指定的时候，优先使用ImageWidth、ImageHeight。</li></ol></li></ul>
+     * @param AspectRatio <p>指定所生成图片的宽高比。输入格式为 W:H。<br>本字段在以下场景有效：</p><ul><li>生商品图场景，可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、16:9、9:16、21:9</li><li>AI扩图场景。可选值为：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9、21:9，可以配合 ImageWidth 和 ImageHeight 使用，规则如下： <ol><li>仅指定 AspectRatio 时，根据原图输入进行自适应调整。</li><li>指定 AspectRatio 和 ImageWidth 时，ImageHeight  由两者计算得出，反亦是如此。</li><li>当AspectRatio、ImageWidth、ImageHeight 同时指定的时候，优先使用ImageWidth、ImageHeight。</li></ol></li></ul>
      */
     public void setAspectRatio(String AspectRatio) {
         this.AspectRatio = AspectRatio;
     }
 
     /**
-     * Get 输出图片编码格式参数。**仅AI换衣场景有效。** 
-     * @return EncodeConfig 输出图片编码格式参数。**仅AI换衣场景有效。**
+     * Get <p>输出图片编码格式参数。<strong>仅AI换衣场景有效。</strong></p> 
+     * @return EncodeConfig <p>输出图片编码格式参数。<strong>仅AI换衣场景有效。</strong></p>
      */
     public ImageSceneAigcEncodeConfig getEncodeConfig() {
         return this.EncodeConfig;
     }
 
     /**
-     * Set 输出图片编码格式参数。**仅AI换衣场景有效。**
-     * @param EncodeConfig 输出图片编码格式参数。**仅AI换衣场景有效。**
+     * Set <p>输出图片编码格式参数。<strong>仅AI换衣场景有效。</strong></p>
+     * @param EncodeConfig <p>输出图片编码格式参数。<strong>仅AI换衣场景有效。</strong></p>
      */
     public void setEncodeConfig(ImageSceneAigcEncodeConfig EncodeConfig) {
         this.EncodeConfig = EncodeConfig;
     }
 
     /**
-     * Get 输出图像宽度，**仅AI扩图场景有效**。 
-     * @return ImageWidth 输出图像宽度，**仅AI扩图场景有效**。
+     * Get <p>输出图像宽度，<strong>仅AI扩图场景有效</strong>。</p> 
+     * @return ImageWidth <p>输出图像宽度，<strong>仅AI扩图场景有效</strong>。</p>
      */
     public Long getImageWidth() {
         return this.ImageWidth;
     }
 
     /**
-     * Set 输出图像宽度，**仅AI扩图场景有效**。
-     * @param ImageWidth 输出图像宽度，**仅AI扩图场景有效**。
+     * Set <p>输出图像宽度，<strong>仅AI扩图场景有效</strong>。</p>
+     * @param ImageWidth <p>输出图像宽度，<strong>仅AI扩图场景有效</strong>。</p>
      */
     public void setImageWidth(Long ImageWidth) {
         this.ImageWidth = ImageWidth;
     }
 
     /**
-     * Get 输出图像高度，**仅AI扩图场景有效**。 
-     * @return ImageHeight 输出图像高度，**仅AI扩图场景有效**。
+     * Get <p>输出图像高度，<strong>仅AI扩图场景有效</strong>。</p> 
+     * @return ImageHeight <p>输出图像高度，<strong>仅AI扩图场景有效</strong>。</p>
      */
     public Long getImageHeight() {
         return this.ImageHeight;
     }
 
     /**
-     * Set 输出图像高度，**仅AI扩图场景有效**。
-     * @param ImageHeight 输出图像高度，**仅AI扩图场景有效**。
+     * Set <p>输出图像高度，<strong>仅AI扩图场景有效</strong>。</p>
+     * @param ImageHeight <p>输出图像高度，<strong>仅AI扩图场景有效</strong>。</p>
      */
     public void setImageHeight(Long ImageHeight) {
         this.ImageHeight = ImageHeight;
+    }
+
+    /**
+     * Get <p>输出分辨率。仅change_clothes、change_clothes_under场景有效。可选值：1K、2K、4K。</p> 
+     * @return Resolution <p>输出分辨率。仅change_clothes、change_clothes_under场景有效。可选值：1K、2K、4K。</p>
+     */
+    public String getResolution() {
+        return this.Resolution;
+    }
+
+    /**
+     * Set <p>输出分辨率。仅change_clothes、change_clothes_under场景有效。可选值：1K、2K、4K。</p>
+     * @param Resolution <p>输出分辨率。仅change_clothes、change_clothes_under场景有效。可选值：1K、2K、4K。</p>
+     */
+    public void setResolution(String Resolution) {
+        this.Resolution = Resolution;
     }
 
     public SceneAigcImageOutputConfig() {
@@ -279,6 +262,9 @@ public class SceneAigcImageOutputConfig extends AbstractModel {
         if (source.ImageHeight != null) {
             this.ImageHeight = new Long(source.ImageHeight);
         }
+        if (source.Resolution != null) {
+            this.Resolution = new String(source.Resolution);
+        }
     }
 
 
@@ -294,6 +280,7 @@ public class SceneAigcImageOutputConfig extends AbstractModel {
         this.setParamObj(map, prefix + "EncodeConfig.", this.EncodeConfig);
         this.setParamSimple(map, prefix + "ImageWidth", this.ImageWidth);
         this.setParamSimple(map, prefix + "ImageHeight", this.ImageHeight);
+        this.setParamSimple(map, prefix + "Resolution", this.Resolution);
 
     }
 }

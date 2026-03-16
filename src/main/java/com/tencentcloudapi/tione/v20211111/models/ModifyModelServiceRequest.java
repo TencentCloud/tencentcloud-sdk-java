@@ -292,6 +292,13 @@ HYBRID_PAID:
     private String SchedulingStrategy;
 
     /**
+    * 目标工作空间，不为0则进行迁移，源服务只允许在默认空间
+    */
+    @SerializedName("TargetProjectId")
+    @Expose
+    private Long TargetProjectId;
+
+    /**
      * Get 服务id 
      * @return ServiceId 服务id
      */
@@ -943,6 +950,22 @@ HYBRID_PAID:
         this.SchedulingStrategy = SchedulingStrategy;
     }
 
+    /**
+     * Get 目标工作空间，不为0则进行迁移，源服务只允许在默认空间 
+     * @return TargetProjectId 目标工作空间，不为0则进行迁移，源服务只允许在默认空间
+     */
+    public Long getTargetProjectId() {
+        return this.TargetProjectId;
+    }
+
+    /**
+     * Set 目标工作空间，不为0则进行迁移，源服务只允许在默认空间
+     * @param TargetProjectId 目标工作空间，不为0则进行迁移，源服务只允许在默认空间
+     */
+    public void setTargetProjectId(Long TargetProjectId) {
+        this.TargetProjectId = TargetProjectId;
+    }
+
     public ModifyModelServiceRequest() {
     }
 
@@ -1068,6 +1091,9 @@ HYBRID_PAID:
         if (source.SchedulingStrategy != null) {
             this.SchedulingStrategy = new String(source.SchedulingStrategy);
         }
+        if (source.TargetProjectId != null) {
+            this.TargetProjectId = new Long(source.TargetProjectId);
+        }
     }
 
 
@@ -1110,6 +1136,7 @@ HYBRID_PAID:
         this.setParamSimple(map, prefix + "ResourceGroupId", this.ResourceGroupId);
         this.setParamArrayObj(map, prefix + "VolumeMounts.", this.VolumeMounts);
         this.setParamSimple(map, prefix + "SchedulingStrategy", this.SchedulingStrategy);
+        this.setParamSimple(map, prefix + "TargetProjectId", this.TargetProjectId);
 
     }
 }

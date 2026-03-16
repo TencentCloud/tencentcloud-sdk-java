@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class CreateCloudProductLogCollectionResponse extends AbstractModel {
 
     /**
-    * 日志主题ID
+    * <p>日志主题ID</p>
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * 日志主题名称
+    * <p>日志主题名称</p>
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-    * 日志集ID
+    * <p>日志集ID</p>
     */
     @SerializedName("LogsetId")
     @Expose
     private String LogsetId;
 
     /**
-    * 日志集名称
+    * <p>日志集名称</p>
     */
     @SerializedName("LogsetName")
     @Expose
     private String LogsetName;
 
     /**
-    * -1 创建中，1创建完成 
+    * <p>-1 创建中，1创建完成</p>
     */
     @SerializedName("Status")
     @Expose
@@ -66,80 +66,80 @@ public class CreateCloudProductLogCollectionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 日志主题ID 
-     * @return TopicId 日志主题ID
+     * Get <p>日志主题ID</p> 
+     * @return TopicId <p>日志主题ID</p>
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 日志主题ID
-     * @param TopicId 日志主题ID
+     * Set <p>日志主题ID</p>
+     * @param TopicId <p>日志主题ID</p>
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 日志主题名称 
-     * @return TopicName 日志主题名称
+     * Get <p>日志主题名称</p> 
+     * @return TopicName <p>日志主题名称</p>
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set 日志主题名称
-     * @param TopicName 日志主题名称
+     * Set <p>日志主题名称</p>
+     * @param TopicName <p>日志主题名称</p>
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get 日志集ID 
-     * @return LogsetId 日志集ID
+     * Get <p>日志集ID</p> 
+     * @return LogsetId <p>日志集ID</p>
      */
     public String getLogsetId() {
         return this.LogsetId;
     }
 
     /**
-     * Set 日志集ID
-     * @param LogsetId 日志集ID
+     * Set <p>日志集ID</p>
+     * @param LogsetId <p>日志集ID</p>
      */
     public void setLogsetId(String LogsetId) {
         this.LogsetId = LogsetId;
     }
 
     /**
-     * Get 日志集名称 
-     * @return LogsetName 日志集名称
+     * Get <p>日志集名称</p> 
+     * @return LogsetName <p>日志集名称</p>
      */
     public String getLogsetName() {
         return this.LogsetName;
     }
 
     /**
-     * Set 日志集名称
-     * @param LogsetName 日志集名称
+     * Set <p>日志集名称</p>
+     * @param LogsetName <p>日志集名称</p>
      */
     public void setLogsetName(String LogsetName) {
         this.LogsetName = LogsetName;
     }
 
     /**
-     * Get -1 创建中，1创建完成  
-     * @return Status -1 创建中，1创建完成 
+     * Get <p>-1 创建中，1创建完成</p> 
+     * @return Status <p>-1 创建中，1创建完成</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set -1 创建中，1创建完成 
-     * @param Status -1 创建中，1创建完成 
+     * Set <p>-1 创建中，1创建完成</p>
+     * @param Status <p>-1 创建中，1创建完成</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
