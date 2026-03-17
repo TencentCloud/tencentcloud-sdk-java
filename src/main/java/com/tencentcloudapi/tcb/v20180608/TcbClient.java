@@ -345,6 +345,17 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *根据指定指标名称，查询某环境在指定时间范围内的监控数据，返回按统计粒度聚合后的时序数据。
+     * @param req DescribeCurveDataRequest
+     * @return DescribeCurveDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCurveDataResponse DescribeCurveData(DescribeCurveDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCurveData", DescribeCurveDataResponse.class);
+    }
+
+    /**
      *本接口（DescribeDatabaseACL）获取文档型数据库权限。
      * @param req DescribeDatabaseACLRequest
      * @return DescribeDatabaseACLResponse

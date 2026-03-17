@@ -31,6 +31,20 @@ public class DescribeRollbackTimeRangeRequest extends AbstractModel {
     private String ClusterId;
 
     /**
+    * 保险箱id
+    */
+    @SerializedName("VaultId")
+    @Expose
+    private String VaultId;
+
+    /**
+    * 保险箱地域
+    */
+    @SerializedName("VaultRegion")
+    @Expose
+    private String VaultRegion;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -46,6 +60,38 @@ public class DescribeRollbackTimeRangeRequest extends AbstractModel {
         this.ClusterId = ClusterId;
     }
 
+    /**
+     * Get 保险箱id 
+     * @return VaultId 保险箱id
+     */
+    public String getVaultId() {
+        return this.VaultId;
+    }
+
+    /**
+     * Set 保险箱id
+     * @param VaultId 保险箱id
+     */
+    public void setVaultId(String VaultId) {
+        this.VaultId = VaultId;
+    }
+
+    /**
+     * Get 保险箱地域 
+     * @return VaultRegion 保险箱地域
+     */
+    public String getVaultRegion() {
+        return this.VaultRegion;
+    }
+
+    /**
+     * Set 保险箱地域
+     * @param VaultRegion 保险箱地域
+     */
+    public void setVaultRegion(String VaultRegion) {
+        this.VaultRegion = VaultRegion;
+    }
+
     public DescribeRollbackTimeRangeRequest() {
     }
 
@@ -57,6 +103,12 @@ public class DescribeRollbackTimeRangeRequest extends AbstractModel {
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
         }
+        if (source.VaultId != null) {
+            this.VaultId = new String(source.VaultId);
+        }
+        if (source.VaultRegion != null) {
+            this.VaultRegion = new String(source.VaultRegion);
+        }
     }
 
 
@@ -65,6 +117,8 @@ public class DescribeRollbackTimeRangeRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "VaultId", this.VaultId);
+        this.setParamSimple(map, prefix + "VaultRegion", this.VaultRegion);
 
     }
 }

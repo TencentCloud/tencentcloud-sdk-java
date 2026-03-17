@@ -985,6 +985,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *根据数据库名称和数据源id获取数据库信息
+     * @param req DescribeDatabaseByNameRequest
+     * @return DescribeDatabaseByNameResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDatabaseByNameResponse DescribeDatabaseByName(DescribeDatabaseByNameRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDatabaseByName", DescribeDatabaseByNameResponse.class);
+    }
+
+    /**
      *获取数据库信息
      * @param req DescribeDatabaseInfoListRequest
      * @return DescribeDatabaseInfoListResponse
@@ -993,6 +1004,17 @@ public class WedataClient extends AbstractClient{
     public DescribeDatabaseInfoListResponse DescribeDatabaseInfoList(DescribeDatabaseInfoListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDatabaseInfoList", DescribeDatabaseInfoListResponse.class);
+    }
+
+    /**
+     *根据数据库Id查询数据库元数据，带有数据源和项目信息
+     * @param req DescribeDatabaseMetaRequest
+     * @return DescribeDatabaseMetaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDatabaseMetaResponse DescribeDatabaseMeta(DescribeDatabaseMetaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDatabaseMeta", DescribeDatabaseMetaResponse.class);
     }
 
     /**
@@ -1414,6 +1436,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *列出血缘中心字段信息
+     * @param req DescribeLineageColumnsRequest
+     * @return DescribeLineageColumnsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLineageColumnsResponse DescribeLineageColumns(DescribeLineageColumnsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLineageColumns", DescribeLineageColumnsResponse.class);
+    }
+
+    /**
      *通用血缘查询接口
      * @param req DescribeLineageInfoRequest
      * @return DescribeLineageInfoResponse
@@ -1620,6 +1653,17 @@ public class WedataClient extends AbstractClient{
     public DescribeRealTimeTaskSpeedResponse DescribeRealTimeTaskSpeed(DescribeRealTimeTaskSpeedRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRealTimeTaskSpeed", DescribeRealTimeTaskSpeedResponse.class);
+    }
+
+    /**
+     *离线通过表名称获取表信息
+     * @param req DescribeRealViewDatabasePageRequest
+     * @return DescribeRealViewDatabasePageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRealViewDatabasePageResponse DescribeRealViewDatabasePage(DescribeRealViewDatabasePageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRealViewDatabasePage", DescribeRealViewDatabasePageResponse.class);
     }
 
     /**
@@ -1978,6 +2022,28 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *查询表的数据预览
+     * @param req DescribeTableContentPreviewRequest
+     * @return DescribeTableContentPreviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTableContentPreviewResponse DescribeTableContentPreview(DescribeTableContentPreviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTableContentPreview", DescribeTableContentPreviewResponse.class);
+    }
+
+    /**
+     *查询表的DDL
+     * @param req DescribeTableDdlRequest
+     * @return DescribeTableDdlResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTableDdlResponse DescribeTableDdl(DescribeTableDdlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTableDdl", DescribeTableDdlResponse.class);
+    }
+
+    /**
      *获取数据表信息
      * @param req DescribeTableInfoListRequest
      * @return DescribeTableInfoListResponse
@@ -2074,6 +2140,17 @@ public class WedataClient extends AbstractClient{
     public DescribeTableScoreTrendResponse DescribeTableScoreTrend(DescribeTableScoreTrendRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeTableScoreTrend", DescribeTableScoreTrendResponse.class);
+    }
+
+    /**
+     *查询表的select语句
+     * @param req DescribeTableSelectRequest
+     * @return DescribeTableSelectResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTableSelectResponse DescribeTableSelect(DescribeTableSelectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTableSelect", DescribeTableSelectResponse.class);
     }
 
     /**

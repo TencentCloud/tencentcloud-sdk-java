@@ -24,11 +24,18 @@ import java.util.HashMap;
 public class DescribeContractReviewTaskResponse extends AbstractModel {
 
     /**
-    * 用于审查任务的审查清单ID。注意：如果用户没有配置清单时此值可能为空，需要等大模型根据合同内容推荐出可以使用的审查清单。
+    * 用于审查任务的审查清单ID（Depricated）。注意：如果用户没有配置清单时此值可能为空，需要等大模型根据合同内容推荐出可以使用的审查清单。
     */
     @SerializedName("ChecklistId")
     @Expose
     private String ChecklistId;
+
+    /**
+    * 用于审查任务的审查清单ID。注意：如果用户没有配置清单时此值可能为空，需要等大模型根据合同内容推荐出可以使用的审查清单。
+    */
+    @SerializedName("ChecklistIds")
+    @Expose
+    private String [] ChecklistIds;
 
     /**
     * 合同审查任务创建时间。
@@ -59,7 +66,7 @@ public class DescribeContractReviewTaskResponse extends AbstractModel {
     private Long PolicyType;
 
     /**
-    * 合同审查的PDF文件资源ID。
+    * 合同审查的PDF、WORD文件资源ID。
     */
     @SerializedName("ResourceId")
     @Expose
@@ -75,12 +82,19 @@ public class DescribeContractReviewTaskResponse extends AbstractModel {
     private OutputRisk [] Risks;
 
     /**
-    * 合同审查中的角色信息。注意： `如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。`
+    * 合同审查中的角色信息（Depricated）。注意： `如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。`
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Role")
     @Expose
     private RiskIdentificationRoleInfo Role;
+
+    /**
+    * 合同审查中的角色信息。注意： `如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。`
+    */
+    @SerializedName("Roles")
+    @Expose
+    private RiskIdentificationRoleInfo [] Roles;
 
     /**
     * 合同审查任务状态。
@@ -157,19 +171,35 @@ public class DescribeContractReviewTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 用于审查任务的审查清单ID。注意：如果用户没有配置清单时此值可能为空，需要等大模型根据合同内容推荐出可以使用的审查清单。 
-     * @return ChecklistId 用于审查任务的审查清单ID。注意：如果用户没有配置清单时此值可能为空，需要等大模型根据合同内容推荐出可以使用的审查清单。
+     * Get 用于审查任务的审查清单ID（Depricated）。注意：如果用户没有配置清单时此值可能为空，需要等大模型根据合同内容推荐出可以使用的审查清单。 
+     * @return ChecklistId 用于审查任务的审查清单ID（Depricated）。注意：如果用户没有配置清单时此值可能为空，需要等大模型根据合同内容推荐出可以使用的审查清单。
      */
     public String getChecklistId() {
         return this.ChecklistId;
     }
 
     /**
-     * Set 用于审查任务的审查清单ID。注意：如果用户没有配置清单时此值可能为空，需要等大模型根据合同内容推荐出可以使用的审查清单。
-     * @param ChecklistId 用于审查任务的审查清单ID。注意：如果用户没有配置清单时此值可能为空，需要等大模型根据合同内容推荐出可以使用的审查清单。
+     * Set 用于审查任务的审查清单ID（Depricated）。注意：如果用户没有配置清单时此值可能为空，需要等大模型根据合同内容推荐出可以使用的审查清单。
+     * @param ChecklistId 用于审查任务的审查清单ID（Depricated）。注意：如果用户没有配置清单时此值可能为空，需要等大模型根据合同内容推荐出可以使用的审查清单。
      */
     public void setChecklistId(String ChecklistId) {
         this.ChecklistId = ChecklistId;
+    }
+
+    /**
+     * Get 用于审查任务的审查清单ID。注意：如果用户没有配置清单时此值可能为空，需要等大模型根据合同内容推荐出可以使用的审查清单。 
+     * @return ChecklistIds 用于审查任务的审查清单ID。注意：如果用户没有配置清单时此值可能为空，需要等大模型根据合同内容推荐出可以使用的审查清单。
+     */
+    public String [] getChecklistIds() {
+        return this.ChecklistIds;
+    }
+
+    /**
+     * Set 用于审查任务的审查清单ID。注意：如果用户没有配置清单时此值可能为空，需要等大模型根据合同内容推荐出可以使用的审查清单。
+     * @param ChecklistIds 用于审查任务的审查清单ID。注意：如果用户没有配置清单时此值可能为空，需要等大模型根据合同内容推荐出可以使用的审查清单。
+     */
+    public void setChecklistIds(String [] ChecklistIds) {
+        this.ChecklistIds = ChecklistIds;
     }
 
     /**
@@ -249,16 +279,16 @@ public class DescribeContractReviewTaskResponse extends AbstractModel {
     }
 
     /**
-     * Get 合同审查的PDF文件资源ID。 
-     * @return ResourceId 合同审查的PDF文件资源ID。
+     * Get 合同审查的PDF、WORD文件资源ID。 
+     * @return ResourceId 合同审查的PDF、WORD文件资源ID。
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 合同审查的PDF文件资源ID。
-     * @param ResourceId 合同审查的PDF文件资源ID。
+     * Set 合同审查的PDF、WORD文件资源ID。
+     * @param ResourceId 合同审查的PDF、WORD文件资源ID。
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
@@ -289,9 +319,9 @@ public class DescribeContractReviewTaskResponse extends AbstractModel {
     }
 
     /**
-     * Get 合同审查中的角色信息。注意： `如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。`
+     * Get 合同审查中的角色信息（Depricated）。注意： `如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。`
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Role 合同审查中的角色信息。注意： `如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。`
+     * @return Role 合同审查中的角色信息（Depricated）。注意： `如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。`
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RiskIdentificationRoleInfo getRole() {
@@ -299,13 +329,29 @@ public class DescribeContractReviewTaskResponse extends AbstractModel {
     }
 
     /**
-     * Set 合同审查中的角色信息。注意： `如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。`
+     * Set 合同审查中的角色信息（Depricated）。注意： `如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。`
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Role 合同审查中的角色信息。注意： `如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。`
+     * @param Role 合同审查中的角色信息（Depricated）。注意： `如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。`
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRole(RiskIdentificationRoleInfo Role) {
         this.Role = Role;
+    }
+
+    /**
+     * Get 合同审查中的角色信息。注意： `如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。` 
+     * @return Roles 合同审查中的角色信息。注意： `如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。`
+     */
+    public RiskIdentificationRoleInfo [] getRoles() {
+        return this.Roles;
+    }
+
+    /**
+     * Set 合同审查中的角色信息。注意： `如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。`
+     * @param Roles 合同审查中的角色信息。注意： `如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。`
+     */
+    public void setRoles(RiskIdentificationRoleInfo [] Roles) {
+        this.Roles = Roles;
     }
 
     /**
@@ -507,6 +553,12 @@ public class DescribeContractReviewTaskResponse extends AbstractModel {
         if (source.ChecklistId != null) {
             this.ChecklistId = new String(source.ChecklistId);
         }
+        if (source.ChecklistIds != null) {
+            this.ChecklistIds = new String[source.ChecklistIds.length];
+            for (int i = 0; i < source.ChecklistIds.length; i++) {
+                this.ChecklistIds[i] = new String(source.ChecklistIds[i]);
+            }
+        }
         if (source.CreatedOn != null) {
             this.CreatedOn = new Long(source.CreatedOn);
         }
@@ -527,6 +579,12 @@ public class DescribeContractReviewTaskResponse extends AbstractModel {
         }
         if (source.Role != null) {
             this.Role = new RiskIdentificationRoleInfo(source.Role);
+        }
+        if (source.Roles != null) {
+            this.Roles = new RiskIdentificationRoleInfo[source.Roles.length];
+            for (int i = 0; i < source.Roles.length; i++) {
+                this.Roles[i] = new RiskIdentificationRoleInfo(source.Roles[i]);
+            }
         }
         if (source.Status != null) {
             this.Status = new Long(source.Status);
@@ -569,12 +627,14 @@ public class DescribeContractReviewTaskResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ChecklistId", this.ChecklistId);
+        this.setParamArraySimple(map, prefix + "ChecklistIds.", this.ChecklistIds);
         this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
         this.setParamSimple(map, prefix + "FinishedOn", this.FinishedOn);
         this.setParamSimple(map, prefix + "PolicyType", this.PolicyType);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamArrayObj(map, prefix + "Risks.", this.Risks);
         this.setParamObj(map, prefix + "Role.", this.Role);
+        this.setParamArrayObj(map, prefix + "Roles.", this.Roles);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "Comment", this.Comment);

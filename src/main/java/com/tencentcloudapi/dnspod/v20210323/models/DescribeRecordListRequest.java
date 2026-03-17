@@ -24,279 +24,302 @@ import java.util.HashMap;
 public class DescribeRecordListRequest extends AbstractModel {
 
     /**
-    * 域名
+    * <p>域名</p>
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+    * <p>域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId</p>
     */
     @SerializedName("DomainId")
     @Expose
     private Long DomainId;
 
     /**
-    * 解析记录的主机头，如果传了此参数，则只会返回此主机头对应的解析记录
+    * <p>解析记录的主机头，如果传了此参数，则只会返回此主机头对应的解析记录</p>
     */
     @SerializedName("Subdomain")
     @Expose
     private String Subdomain;
 
     /**
-    * 获取某种类型的解析记录，如 A，CNAME，NS，AAAA，显性URL，隐性URL，CAA，SPF等
+    * <p>获取某种类型的解析记录，如 A，CNAME，NS，AAAA，显性URL，隐性URL，CAA，SPF等</p>
     */
     @SerializedName("RecordType")
     @Expose
     private String RecordType;
 
     /**
-    * 获取某条线路名称的解析记录。可以通过接口DescribeRecordLineList查看当前域名允许的线路信息
+    * <p>获取某条线路名称的解析记录。可以通过接口DescribeRecordLineList查看当前域名允许的线路信息</p>
     */
     @SerializedName("RecordLine")
     @Expose
     private String RecordLine;
 
     /**
-    * 获取某个线路Id对应的解析记录，如果传RecordLineId，系统会忽略RecordLine参数。可以通过接口DescribeRecordLineList查看当前域名允许的线路信息
+    * <p>获取某个线路Id对应的解析记录，如果传RecordLineId，系统会忽略RecordLine参数。可以通过接口DescribeRecordLineList查看当前域名允许的线路信息</p>
     */
     @SerializedName("RecordLineId")
     @Expose
     private String RecordLineId;
 
     /**
-    * 获取某个分组下的解析记录时，传这个分组Id。可通过DescribeRecordGroupList接口获取所有分组
+    * <p>获取某个分组下的解析记录时，传这个分组Id。可通过DescribeRecordGroupList接口获取所有分组</p>
     */
     @SerializedName("GroupId")
     @Expose
     private Long GroupId;
 
     /**
-    * 通过关键字搜索解析记录，当前支持搜索主机头和记录值
+    * <p>通过关键字搜索解析记录，当前支持搜索主机头和记录值</p>
     */
     @SerializedName("Keyword")
     @Expose
     private String Keyword;
 
     /**
-    * 排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段。
+    * <p>排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段。</p>
     */
     @SerializedName("SortField")
     @Expose
     private String SortField;
 
     /**
-    * 排序方式，正序：ASC，逆序：DESC。默认值为ASC。
+    * <p>排序方式，正序：ASC，逆序：DESC。默认值为ASC。</p>
     */
     @SerializedName("SortType")
     @Expose
     private String SortType;
 
     /**
-    * 偏移量，默认值为0。
+    * <p>偏移量，默认值为0。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 限制数量，当前Limit最大支持3000。默认值为100。
+    * <p>限制数量，当前Limit最大支持3000。默认值为100。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 域名 
-     * @return Domain 域名
+    * <p>查询不到数据时是否报错</p>枚举值：<ul><li> yes： 报错</li><li> no： 不报错，返回空列表</li></ul>默认值：yes
+    */
+    @SerializedName("ErrorOnEmpty")
+    @Expose
+    private String ErrorOnEmpty;
+
+    /**
+     * Get <p>域名</p> 
+     * @return Domain <p>域名</p>
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 域名
-     * @param Domain 域名
+     * Set <p>域名</p>
+     * @param Domain <p>域名</p>
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId 
-     * @return DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+     * Get <p>域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId</p> 
+     * @return DomainId <p>域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId</p>
      */
     public Long getDomainId() {
         return this.DomainId;
     }
 
     /**
-     * Set 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
-     * @param DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+     * Set <p>域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId</p>
+     * @param DomainId <p>域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId</p>
      */
     public void setDomainId(Long DomainId) {
         this.DomainId = DomainId;
     }
 
     /**
-     * Get 解析记录的主机头，如果传了此参数，则只会返回此主机头对应的解析记录 
-     * @return Subdomain 解析记录的主机头，如果传了此参数，则只会返回此主机头对应的解析记录
+     * Get <p>解析记录的主机头，如果传了此参数，则只会返回此主机头对应的解析记录</p> 
+     * @return Subdomain <p>解析记录的主机头，如果传了此参数，则只会返回此主机头对应的解析记录</p>
      */
     public String getSubdomain() {
         return this.Subdomain;
     }
 
     /**
-     * Set 解析记录的主机头，如果传了此参数，则只会返回此主机头对应的解析记录
-     * @param Subdomain 解析记录的主机头，如果传了此参数，则只会返回此主机头对应的解析记录
+     * Set <p>解析记录的主机头，如果传了此参数，则只会返回此主机头对应的解析记录</p>
+     * @param Subdomain <p>解析记录的主机头，如果传了此参数，则只会返回此主机头对应的解析记录</p>
      */
     public void setSubdomain(String Subdomain) {
         this.Subdomain = Subdomain;
     }
 
     /**
-     * Get 获取某种类型的解析记录，如 A，CNAME，NS，AAAA，显性URL，隐性URL，CAA，SPF等 
-     * @return RecordType 获取某种类型的解析记录，如 A，CNAME，NS，AAAA，显性URL，隐性URL，CAA，SPF等
+     * Get <p>获取某种类型的解析记录，如 A，CNAME，NS，AAAA，显性URL，隐性URL，CAA，SPF等</p> 
+     * @return RecordType <p>获取某种类型的解析记录，如 A，CNAME，NS，AAAA，显性URL，隐性URL，CAA，SPF等</p>
      */
     public String getRecordType() {
         return this.RecordType;
     }
 
     /**
-     * Set 获取某种类型的解析记录，如 A，CNAME，NS，AAAA，显性URL，隐性URL，CAA，SPF等
-     * @param RecordType 获取某种类型的解析记录，如 A，CNAME，NS，AAAA，显性URL，隐性URL，CAA，SPF等
+     * Set <p>获取某种类型的解析记录，如 A，CNAME，NS，AAAA，显性URL，隐性URL，CAA，SPF等</p>
+     * @param RecordType <p>获取某种类型的解析记录，如 A，CNAME，NS，AAAA，显性URL，隐性URL，CAA，SPF等</p>
      */
     public void setRecordType(String RecordType) {
         this.RecordType = RecordType;
     }
 
     /**
-     * Get 获取某条线路名称的解析记录。可以通过接口DescribeRecordLineList查看当前域名允许的线路信息 
-     * @return RecordLine 获取某条线路名称的解析记录。可以通过接口DescribeRecordLineList查看当前域名允许的线路信息
+     * Get <p>获取某条线路名称的解析记录。可以通过接口DescribeRecordLineList查看当前域名允许的线路信息</p> 
+     * @return RecordLine <p>获取某条线路名称的解析记录。可以通过接口DescribeRecordLineList查看当前域名允许的线路信息</p>
      */
     public String getRecordLine() {
         return this.RecordLine;
     }
 
     /**
-     * Set 获取某条线路名称的解析记录。可以通过接口DescribeRecordLineList查看当前域名允许的线路信息
-     * @param RecordLine 获取某条线路名称的解析记录。可以通过接口DescribeRecordLineList查看当前域名允许的线路信息
+     * Set <p>获取某条线路名称的解析记录。可以通过接口DescribeRecordLineList查看当前域名允许的线路信息</p>
+     * @param RecordLine <p>获取某条线路名称的解析记录。可以通过接口DescribeRecordLineList查看当前域名允许的线路信息</p>
      */
     public void setRecordLine(String RecordLine) {
         this.RecordLine = RecordLine;
     }
 
     /**
-     * Get 获取某个线路Id对应的解析记录，如果传RecordLineId，系统会忽略RecordLine参数。可以通过接口DescribeRecordLineList查看当前域名允许的线路信息 
-     * @return RecordLineId 获取某个线路Id对应的解析记录，如果传RecordLineId，系统会忽略RecordLine参数。可以通过接口DescribeRecordLineList查看当前域名允许的线路信息
+     * Get <p>获取某个线路Id对应的解析记录，如果传RecordLineId，系统会忽略RecordLine参数。可以通过接口DescribeRecordLineList查看当前域名允许的线路信息</p> 
+     * @return RecordLineId <p>获取某个线路Id对应的解析记录，如果传RecordLineId，系统会忽略RecordLine参数。可以通过接口DescribeRecordLineList查看当前域名允许的线路信息</p>
      */
     public String getRecordLineId() {
         return this.RecordLineId;
     }
 
     /**
-     * Set 获取某个线路Id对应的解析记录，如果传RecordLineId，系统会忽略RecordLine参数。可以通过接口DescribeRecordLineList查看当前域名允许的线路信息
-     * @param RecordLineId 获取某个线路Id对应的解析记录，如果传RecordLineId，系统会忽略RecordLine参数。可以通过接口DescribeRecordLineList查看当前域名允许的线路信息
+     * Set <p>获取某个线路Id对应的解析记录，如果传RecordLineId，系统会忽略RecordLine参数。可以通过接口DescribeRecordLineList查看当前域名允许的线路信息</p>
+     * @param RecordLineId <p>获取某个线路Id对应的解析记录，如果传RecordLineId，系统会忽略RecordLine参数。可以通过接口DescribeRecordLineList查看当前域名允许的线路信息</p>
      */
     public void setRecordLineId(String RecordLineId) {
         this.RecordLineId = RecordLineId;
     }
 
     /**
-     * Get 获取某个分组下的解析记录时，传这个分组Id。可通过DescribeRecordGroupList接口获取所有分组 
-     * @return GroupId 获取某个分组下的解析记录时，传这个分组Id。可通过DescribeRecordGroupList接口获取所有分组
+     * Get <p>获取某个分组下的解析记录时，传这个分组Id。可通过DescribeRecordGroupList接口获取所有分组</p> 
+     * @return GroupId <p>获取某个分组下的解析记录时，传这个分组Id。可通过DescribeRecordGroupList接口获取所有分组</p>
      */
     public Long getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 获取某个分组下的解析记录时，传这个分组Id。可通过DescribeRecordGroupList接口获取所有分组
-     * @param GroupId 获取某个分组下的解析记录时，传这个分组Id。可通过DescribeRecordGroupList接口获取所有分组
+     * Set <p>获取某个分组下的解析记录时，传这个分组Id。可通过DescribeRecordGroupList接口获取所有分组</p>
+     * @param GroupId <p>获取某个分组下的解析记录时，传这个分组Id。可通过DescribeRecordGroupList接口获取所有分组</p>
      */
     public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 通过关键字搜索解析记录，当前支持搜索主机头和记录值 
-     * @return Keyword 通过关键字搜索解析记录，当前支持搜索主机头和记录值
+     * Get <p>通过关键字搜索解析记录，当前支持搜索主机头和记录值</p> 
+     * @return Keyword <p>通过关键字搜索解析记录，当前支持搜索主机头和记录值</p>
      */
     public String getKeyword() {
         return this.Keyword;
     }
 
     /**
-     * Set 通过关键字搜索解析记录，当前支持搜索主机头和记录值
-     * @param Keyword 通过关键字搜索解析记录，当前支持搜索主机头和记录值
+     * Set <p>通过关键字搜索解析记录，当前支持搜索主机头和记录值</p>
+     * @param Keyword <p>通过关键字搜索解析记录，当前支持搜索主机头和记录值</p>
      */
     public void setKeyword(String Keyword) {
         this.Keyword = Keyword;
     }
 
     /**
-     * Get 排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段。 
-     * @return SortField 排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段。
+     * Get <p>排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段。</p> 
+     * @return SortField <p>排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段。</p>
      */
     public String getSortField() {
         return this.SortField;
     }
 
     /**
-     * Set 排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段。
-     * @param SortField 排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段。
+     * Set <p>排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段。</p>
+     * @param SortField <p>排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段。</p>
      */
     public void setSortField(String SortField) {
         this.SortField = SortField;
     }
 
     /**
-     * Get 排序方式，正序：ASC，逆序：DESC。默认值为ASC。 
-     * @return SortType 排序方式，正序：ASC，逆序：DESC。默认值为ASC。
+     * Get <p>排序方式，正序：ASC，逆序：DESC。默认值为ASC。</p> 
+     * @return SortType <p>排序方式，正序：ASC，逆序：DESC。默认值为ASC。</p>
      */
     public String getSortType() {
         return this.SortType;
     }
 
     /**
-     * Set 排序方式，正序：ASC，逆序：DESC。默认值为ASC。
-     * @param SortType 排序方式，正序：ASC，逆序：DESC。默认值为ASC。
+     * Set <p>排序方式，正序：ASC，逆序：DESC。默认值为ASC。</p>
+     * @param SortType <p>排序方式，正序：ASC，逆序：DESC。默认值为ASC。</p>
      */
     public void setSortType(String SortType) {
         this.SortType = SortType;
     }
 
     /**
-     * Get 偏移量，默认值为0。 
-     * @return Offset 偏移量，默认值为0。
+     * Get <p>偏移量，默认值为0。</p> 
+     * @return Offset <p>偏移量，默认值为0。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认值为0。
-     * @param Offset 偏移量，默认值为0。
+     * Set <p>偏移量，默认值为0。</p>
+     * @param Offset <p>偏移量，默认值为0。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 限制数量，当前Limit最大支持3000。默认值为100。 
-     * @return Limit 限制数量，当前Limit最大支持3000。默认值为100。
+     * Get <p>限制数量，当前Limit最大支持3000。默认值为100。</p> 
+     * @return Limit <p>限制数量，当前Limit最大支持3000。默认值为100。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 限制数量，当前Limit最大支持3000。默认值为100。
-     * @param Limit 限制数量，当前Limit最大支持3000。默认值为100。
+     * Set <p>限制数量，当前Limit最大支持3000。默认值为100。</p>
+     * @param Limit <p>限制数量，当前Limit最大支持3000。默认值为100。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
+    }
+
+    /**
+     * Get <p>查询不到数据时是否报错</p>枚举值：<ul><li> yes： 报错</li><li> no： 不报错，返回空列表</li></ul>默认值：yes 
+     * @return ErrorOnEmpty <p>查询不到数据时是否报错</p>枚举值：<ul><li> yes： 报错</li><li> no： 不报错，返回空列表</li></ul>默认值：yes
+     */
+    public String getErrorOnEmpty() {
+        return this.ErrorOnEmpty;
+    }
+
+    /**
+     * Set <p>查询不到数据时是否报错</p>枚举值：<ul><li> yes： 报错</li><li> no： 不报错，返回空列表</li></ul>默认值：yes
+     * @param ErrorOnEmpty <p>查询不到数据时是否报错</p>枚举值：<ul><li> yes： 报错</li><li> no： 不报错，返回空列表</li></ul>默认值：yes
+     */
+    public void setErrorOnEmpty(String ErrorOnEmpty) {
+        this.ErrorOnEmpty = ErrorOnEmpty;
     }
 
     public DescribeRecordListRequest() {
@@ -343,6 +366,9 @@ public class DescribeRecordListRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.ErrorOnEmpty != null) {
+            this.ErrorOnEmpty = new String(source.ErrorOnEmpty);
+        }
     }
 
 
@@ -362,6 +388,7 @@ public class DescribeRecordListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SortType", this.SortType);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "ErrorOnEmpty", this.ErrorOnEmpty);
 
     }
 }

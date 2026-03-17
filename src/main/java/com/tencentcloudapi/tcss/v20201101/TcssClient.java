@@ -1947,6 +1947,72 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
+     *查询镜像拦截事件详情
+     * @param req DescribeImageDenyEventDetailRequest
+     * @return DescribeImageDenyEventDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageDenyEventDetailResponse DescribeImageDenyEventDetail(DescribeImageDenyEventDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageDenyEventDetail", DescribeImageDenyEventDetailResponse.class);
+    }
+
+    /**
+     *查询镜像拦截事件列表
+     * @param req DescribeImageDenyEventListRequest
+     * @return DescribeImageDenyEventListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageDenyEventListResponse DescribeImageDenyEventList(DescribeImageDenyEventListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageDenyEventList", DescribeImageDenyEventListResponse.class);
+    }
+
+    /**
+     *查询镜像拦截事件趋势
+     * @param req DescribeImageDenyEventTendencyRequest
+     * @return DescribeImageDenyEventTendencyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageDenyEventTendencyResponse DescribeImageDenyEventTendency(DescribeImageDenyEventTendencyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageDenyEventTendency", DescribeImageDenyEventTendencyResponse.class);
+    }
+
+    /**
+     *查询镜像拦截规则详情
+     * @param req DescribeImageDenyRuleDetailRequest
+     * @return DescribeImageDenyRuleDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageDenyRuleDetailResponse DescribeImageDenyRuleDetail(DescribeImageDenyRuleDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageDenyRuleDetail", DescribeImageDenyRuleDetailResponse.class);
+    }
+
+    /**
+     *查询镜像拦截规则列表
+     * @param req DescribeImageDenyRuleListRequest
+     * @return DescribeImageDenyRuleListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageDenyRuleListResponse DescribeImageDenyRuleList(DescribeImageDenyRuleListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageDenyRuleList", DescribeImageDenyRuleListResponse.class);
+    }
+
+    /**
+     *查询镜像拦截规则统计
+     * @param req DescribeImageDenyRuleSummaryRequest
+     * @return DescribeImageDenyRuleSummaryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageDenyRuleSummaryResponse DescribeImageDenyRuleSummary(DescribeImageDenyRuleSummaryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageDenyRuleSummary", DescribeImageDenyRuleSummaryResponse.class);
+    }
+
+    /**
      *查询用户镜像仓库下的命令空间列表
      * @param req DescribeImageRegistryNamespaceListRequest
      * @return DescribeImageRegistryNamespaceListResponse
@@ -2109,6 +2175,28 @@ public class TcssClient extends AbstractClient{
     public DescribeLogStorageStatisticResponse DescribeLogStorageStatistic(DescribeLogStorageStatisticRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeLogStorageStatistic", DescribeLogStorageStatisticResponse.class);
+    }
+
+    /**
+     *查询恶意外连黑名单
+     * @param req DescribeMaliciousConnectionBlackListRequest
+     * @return DescribeMaliciousConnectionBlackListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMaliciousConnectionBlackListResponse DescribeMaliciousConnectionBlackList(DescribeMaliciousConnectionBlackListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMaliciousConnectionBlackList", DescribeMaliciousConnectionBlackListResponse.class);
+    }
+
+    /**
+     *查询恶意外连白名单
+     * @param req DescribeMaliciousConnectionWhiteListRequest
+     * @return DescribeMaliciousConnectionWhiteListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMaliciousConnectionWhiteListResponse DescribeMaliciousConnectionWhiteList(DescribeMaliciousConnectionWhiteListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMaliciousConnectionWhiteList", DescribeMaliciousConnectionWhiteListResponse.class);
     }
 
     /**
@@ -2384,6 +2472,28 @@ public class TcssClient extends AbstractClient{
     public DescribeReverseShellEventsExportResponse DescribeReverseShellEventsExport(DescribeReverseShellEventsExportRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeReverseShellEventsExport", DescribeReverseShellEventsExportResponse.class);
+    }
+
+    /**
+     *查询反弹shell正则白名单列表
+     * @param req DescribeReverseShellRegexpWhiteListRequest
+     * @return DescribeReverseShellRegexpWhiteListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReverseShellRegexpWhiteListResponse DescribeReverseShellRegexpWhiteList(DescribeReverseShellRegexpWhiteListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeReverseShellRegexpWhiteList", DescribeReverseShellRegexpWhiteListResponse.class);
+    }
+
+    /**
+     *查询反弹shell正则白名单详情
+     * @param req DescribeReverseShellRegexpWhiteListInfoRequest
+     * @return DescribeReverseShellRegexpWhiteListInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReverseShellRegexpWhiteListInfoResponse DescribeReverseShellRegexpWhiteListInfo(DescribeReverseShellRegexpWhiteListInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeReverseShellRegexpWhiteListInfo", DescribeReverseShellRegexpWhiteListInfoResponse.class);
     }
 
     /**

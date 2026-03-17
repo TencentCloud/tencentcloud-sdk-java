@@ -24,222 +24,207 @@ import java.util.HashMap;
 public class ListAggregateConfigRulesRequest extends AbstractModel {
 
     /**
-    * 每页限制
+    * <p>每页限制</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量
+    * <p>偏移量</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 账号组ID
+    * <p>账号组ID</p>
     */
     @SerializedName("AccountGroupId")
     @Expose
     private String AccountGroupId;
 
     /**
-    * 排序类型, 倒序：desc，顺序：asc
+    * <p>排序类型, 倒序：desc，顺序：asc</p>
     */
     @SerializedName("OrderType")
     @Expose
     private String OrderType;
 
     /**
-    * 风险等级
-1：高风险。
-2：中风险。
-3：低风险。
+    * <p>风险等级<br>1：高风险。<br>2：中风险。<br>3：低风险。</p>
     */
     @SerializedName("RiskLevel")
     @Expose
     private Long [] RiskLevel;
 
     /**
-    * 规则状态
+    * <p>规则状态</p>
     */
     @SerializedName("State")
     @Expose
     private String State;
 
     /**
-    * 评估结果
+    * <p>评估结果</p>
     */
     @SerializedName("ComplianceResult")
     @Expose
     private String [] ComplianceResult;
 
     /**
-    * 规则名
+    * <p>规则名</p>
     */
     @SerializedName("RuleName")
     @Expose
     private String RuleName;
 
     /**
-    * 规则所属账号ID
+    * <p>规则所属账号ID</p>
     */
     @SerializedName("RuleOwnerId")
     @Expose
     private Long RuleOwnerId;
 
     /**
-     * Get 每页限制 
-     * @return Limit 每页限制
+     * Get <p>每页限制</p> 
+     * @return Limit <p>每页限制</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页限制
-     * @param Limit 每页限制
+     * Set <p>每页限制</p>
+     * @param Limit <p>每页限制</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get <p>偏移量</p> 
+     * @return Offset <p>偏移量</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set <p>偏移量</p>
+     * @param Offset <p>偏移量</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 账号组ID 
-     * @return AccountGroupId 账号组ID
+     * Get <p>账号组ID</p> 
+     * @return AccountGroupId <p>账号组ID</p>
      */
     public String getAccountGroupId() {
         return this.AccountGroupId;
     }
 
     /**
-     * Set 账号组ID
-     * @param AccountGroupId 账号组ID
+     * Set <p>账号组ID</p>
+     * @param AccountGroupId <p>账号组ID</p>
      */
     public void setAccountGroupId(String AccountGroupId) {
         this.AccountGroupId = AccountGroupId;
     }
 
     /**
-     * Get 排序类型, 倒序：desc，顺序：asc 
-     * @return OrderType 排序类型, 倒序：desc，顺序：asc
+     * Get <p>排序类型, 倒序：desc，顺序：asc</p> 
+     * @return OrderType <p>排序类型, 倒序：desc，顺序：asc</p>
      */
     public String getOrderType() {
         return this.OrderType;
     }
 
     /**
-     * Set 排序类型, 倒序：desc，顺序：asc
-     * @param OrderType 排序类型, 倒序：desc，顺序：asc
+     * Set <p>排序类型, 倒序：desc，顺序：asc</p>
+     * @param OrderType <p>排序类型, 倒序：desc，顺序：asc</p>
      */
     public void setOrderType(String OrderType) {
         this.OrderType = OrderType;
     }
 
     /**
-     * Get 风险等级
-1：高风险。
-2：中风险。
-3：低风险。 
-     * @return RiskLevel 风险等级
-1：高风险。
-2：中风险。
-3：低风险。
+     * Get <p>风险等级<br>1：高风险。<br>2：中风险。<br>3：低风险。</p> 
+     * @return RiskLevel <p>风险等级<br>1：高风险。<br>2：中风险。<br>3：低风险。</p>
      */
     public Long [] getRiskLevel() {
         return this.RiskLevel;
     }
 
     /**
-     * Set 风险等级
-1：高风险。
-2：中风险。
-3：低风险。
-     * @param RiskLevel 风险等级
-1：高风险。
-2：中风险。
-3：低风险。
+     * Set <p>风险等级<br>1：高风险。<br>2：中风险。<br>3：低风险。</p>
+     * @param RiskLevel <p>风险等级<br>1：高风险。<br>2：中风险。<br>3：低风险。</p>
      */
     public void setRiskLevel(Long [] RiskLevel) {
         this.RiskLevel = RiskLevel;
     }
 
     /**
-     * Get 规则状态 
-     * @return State 规则状态
+     * Get <p>规则状态</p> 
+     * @return State <p>规则状态</p>
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set 规则状态
-     * @param State 规则状态
+     * Set <p>规则状态</p>
+     * @param State <p>规则状态</p>
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get 评估结果 
-     * @return ComplianceResult 评估结果
+     * Get <p>评估结果</p> 
+     * @return ComplianceResult <p>评估结果</p>
      */
     public String [] getComplianceResult() {
         return this.ComplianceResult;
     }
 
     /**
-     * Set 评估结果
-     * @param ComplianceResult 评估结果
+     * Set <p>评估结果</p>
+     * @param ComplianceResult <p>评估结果</p>
      */
     public void setComplianceResult(String [] ComplianceResult) {
         this.ComplianceResult = ComplianceResult;
     }
 
     /**
-     * Get 规则名 
-     * @return RuleName 规则名
+     * Get <p>规则名</p> 
+     * @return RuleName <p>规则名</p>
      */
     public String getRuleName() {
         return this.RuleName;
     }
 
     /**
-     * Set 规则名
-     * @param RuleName 规则名
+     * Set <p>规则名</p>
+     * @param RuleName <p>规则名</p>
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get 规则所属账号ID 
-     * @return RuleOwnerId 规则所属账号ID
+     * Get <p>规则所属账号ID</p> 
+     * @return RuleOwnerId <p>规则所属账号ID</p>
      */
     public Long getRuleOwnerId() {
         return this.RuleOwnerId;
     }
 
     /**
-     * Set 规则所属账号ID
-     * @param RuleOwnerId 规则所属账号ID
+     * Set <p>规则所属账号ID</p>
+     * @param RuleOwnerId <p>规则所属账号ID</p>
      */
     public void setRuleOwnerId(Long RuleOwnerId) {
         this.RuleOwnerId = RuleOwnerId;

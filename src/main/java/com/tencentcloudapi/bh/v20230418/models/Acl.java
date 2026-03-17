@@ -271,6 +271,13 @@ public class Acl extends AbstractModel {
     private String TicketName;
 
     /**
+    * 访问串有效期最大时长，秒数，允许使用访问串时需大于0且必须为86400整数倍
+    */
+    @SerializedName("MaxAccessCredentialDuration")
+    @Expose
+    private Long MaxAccessCredentialDuration;
+
+    /**
      * Get 访问权限ID 
      * @return Id 访问权限ID
      */
@@ -838,6 +845,22 @@ public class Acl extends AbstractModel {
         this.TicketName = TicketName;
     }
 
+    /**
+     * Get 访问串有效期最大时长，秒数，允许使用访问串时需大于0且必须为86400整数倍 
+     * @return MaxAccessCredentialDuration 访问串有效期最大时长，秒数，允许使用访问串时需大于0且必须为86400整数倍
+     */
+    public Long getMaxAccessCredentialDuration() {
+        return this.MaxAccessCredentialDuration;
+    }
+
+    /**
+     * Set 访问串有效期最大时长，秒数，允许使用访问串时需大于0且必须为86400整数倍
+     * @param MaxAccessCredentialDuration 访问串有效期最大时长，秒数，允许使用访问串时需大于0且必须为86400整数倍
+     */
+    public void setMaxAccessCredentialDuration(Long MaxAccessCredentialDuration) {
+        this.MaxAccessCredentialDuration = MaxAccessCredentialDuration;
+    }
+
     public Acl() {
     }
 
@@ -978,6 +1001,9 @@ public class Acl extends AbstractModel {
         if (source.TicketName != null) {
             this.TicketName = new String(source.TicketName);
         }
+        if (source.MaxAccessCredentialDuration != null) {
+            this.MaxAccessCredentialDuration = new Long(source.MaxAccessCredentialDuration);
+        }
     }
 
 
@@ -1020,6 +1046,7 @@ public class Acl extends AbstractModel {
         this.setParamSimple(map, prefix + "AclType", this.AclType);
         this.setParamSimple(map, prefix + "TicketId", this.TicketId);
         this.setParamSimple(map, prefix + "TicketName", this.TicketName);
+        this.setParamSimple(map, prefix + "MaxAccessCredentialDuration", this.MaxAccessCredentialDuration);
 
     }
 }

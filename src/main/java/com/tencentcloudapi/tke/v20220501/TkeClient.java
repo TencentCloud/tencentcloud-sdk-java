@@ -127,6 +127,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *请求该接口，会返回所有适配该机型和操作系统组合的gpu驱动版本
+     * @param req DescribeGPUInfoRequest
+     * @return DescribeGPUInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGPUInfoResponse DescribeGPUInfo(DescribeGPUInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeGPUInfo", DescribeGPUInfoResponse.class);
+    }
+
+    /**
      *查询健康检测策略
      * @param req DescribeHealthCheckPoliciesRequest
      * @return DescribeHealthCheckPoliciesResponse
@@ -168,6 +179,17 @@ public class TkeClient extends AbstractClient{
     public DescribeNodePoolsResponse DescribeNodePools(DescribeNodePoolsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeNodePools", DescribeNodePoolsResponse.class);
+    }
+
+    /**
+     *查询原生节点机型配置
+     * @param req DescribeZoneInstanceConfigInfosRequest
+     * @return DescribeZoneInstanceConfigInfosResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeZoneInstanceConfigInfosResponse DescribeZoneInstanceConfigInfos(DescribeZoneInstanceConfigInfosRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeZoneInstanceConfigInfos", DescribeZoneInstanceConfigInfosResponse.class);
     }
 
     /**

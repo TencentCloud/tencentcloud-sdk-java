@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeRecordListResponse extends AbstractModel {
 
     /**
-    * 记录的数量统计信息
+    * <p>记录的数量统计信息</p>
     */
     @SerializedName("RecordCountInfo")
     @Expose
     private RecordCountInfo RecordCountInfo;
 
     /**
-    * 获取的记录列表
+    * <p>获取的记录列表</p>
     */
     @SerializedName("RecordList")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeRecordListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 记录的数量统计信息 
-     * @return RecordCountInfo 记录的数量统计信息
+     * Get <p>记录的数量统计信息</p> 
+     * @return RecordCountInfo <p>记录的数量统计信息</p>
      */
     public RecordCountInfo getRecordCountInfo() {
         return this.RecordCountInfo;
     }
 
     /**
-     * Set 记录的数量统计信息
-     * @param RecordCountInfo 记录的数量统计信息
+     * Set <p>记录的数量统计信息</p>
+     * @param RecordCountInfo <p>记录的数量统计信息</p>
      */
     public void setRecordCountInfo(RecordCountInfo RecordCountInfo) {
         this.RecordCountInfo = RecordCountInfo;
     }
 
     /**
-     * Get 获取的记录列表 
-     * @return RecordList 获取的记录列表
+     * Get <p>获取的记录列表</p> 
+     * @return RecordList <p>获取的记录列表</p>
      */
     public RecordListItem [] getRecordList() {
         return this.RecordList;
     }
 
     /**
-     * Set 获取的记录列表
-     * @param RecordList 获取的记录列表
+     * Set <p>获取的记录列表</p>
+     * @param RecordList <p>获取的记录列表</p>
      */
     public void setRecordList(RecordListItem [] RecordList) {
         this.RecordList = RecordList;

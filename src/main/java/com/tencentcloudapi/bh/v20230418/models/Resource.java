@@ -402,6 +402,34 @@ public class Resource extends AbstractModel {
     private String IOAResourceId;
 
     /**
+    * 资源类型 免费版/标准版/专业版 /国密版 free/standard/pro/gm
+    */
+    @SerializedName("ResourceEdition")
+    @Expose
+    private String ResourceEdition;
+
+    /**
+    * 计费周期 年：y，月：m，日：d，时：h，分：M，秒：s，一次性购买：p
+    */
+    @SerializedName("TimeUnit")
+    @Expose
+    private String TimeUnit;
+
+    /**
+    * 计费时长
+    */
+    @SerializedName("TimeSpan")
+    @Expose
+    private Long TimeSpan;
+
+    /**
+    * 计费模式 0后付费，1预付费
+    */
+    @SerializedName("PayMode")
+    @Expose
+    private Long PayMode;
+
+    /**
      * Get 服务实例ID，如bh-saas-s3ed4r5e 
      * @return ResourceId 服务实例ID，如bh-saas-s3ed4r5e
      */
@@ -1265,6 +1293,70 @@ public class Resource extends AbstractModel {
         this.IOAResourceId = IOAResourceId;
     }
 
+    /**
+     * Get 资源类型 免费版/标准版/专业版 /国密版 free/standard/pro/gm 
+     * @return ResourceEdition 资源类型 免费版/标准版/专业版 /国密版 free/standard/pro/gm
+     */
+    public String getResourceEdition() {
+        return this.ResourceEdition;
+    }
+
+    /**
+     * Set 资源类型 免费版/标准版/专业版 /国密版 free/standard/pro/gm
+     * @param ResourceEdition 资源类型 免费版/标准版/专业版 /国密版 free/standard/pro/gm
+     */
+    public void setResourceEdition(String ResourceEdition) {
+        this.ResourceEdition = ResourceEdition;
+    }
+
+    /**
+     * Get 计费周期 年：y，月：m，日：d，时：h，分：M，秒：s，一次性购买：p 
+     * @return TimeUnit 计费周期 年：y，月：m，日：d，时：h，分：M，秒：s，一次性购买：p
+     */
+    public String getTimeUnit() {
+        return this.TimeUnit;
+    }
+
+    /**
+     * Set 计费周期 年：y，月：m，日：d，时：h，分：M，秒：s，一次性购买：p
+     * @param TimeUnit 计费周期 年：y，月：m，日：d，时：h，分：M，秒：s，一次性购买：p
+     */
+    public void setTimeUnit(String TimeUnit) {
+        this.TimeUnit = TimeUnit;
+    }
+
+    /**
+     * Get 计费时长 
+     * @return TimeSpan 计费时长
+     */
+    public Long getTimeSpan() {
+        return this.TimeSpan;
+    }
+
+    /**
+     * Set 计费时长
+     * @param TimeSpan 计费时长
+     */
+    public void setTimeSpan(Long TimeSpan) {
+        this.TimeSpan = TimeSpan;
+    }
+
+    /**
+     * Get 计费模式 0后付费，1预付费 
+     * @return PayMode 计费模式 0后付费，1预付费
+     */
+    public Long getPayMode() {
+        return this.PayMode;
+    }
+
+    /**
+     * Set 计费模式 0后付费，1预付费
+     * @param PayMode 计费模式 0后付费，1预付费
+     */
+    public void setPayMode(Long PayMode) {
+        this.PayMode = PayMode;
+    }
+
     public Resource() {
     }
 
@@ -1450,6 +1542,18 @@ public class Resource extends AbstractModel {
         if (source.IOAResourceId != null) {
             this.IOAResourceId = new String(source.IOAResourceId);
         }
+        if (source.ResourceEdition != null) {
+            this.ResourceEdition = new String(source.ResourceEdition);
+        }
+        if (source.TimeUnit != null) {
+            this.TimeUnit = new String(source.TimeUnit);
+        }
+        if (source.TimeSpan != null) {
+            this.TimeSpan = new Long(source.TimeSpan);
+        }
+        if (source.PayMode != null) {
+            this.PayMode = new Long(source.PayMode);
+        }
     }
 
 
@@ -1511,6 +1615,10 @@ public class Resource extends AbstractModel {
         this.setParamSimple(map, prefix + "PackageIOAUserCount", this.PackageIOAUserCount);
         this.setParamSimple(map, prefix + "PackageIOABandwidth", this.PackageIOABandwidth);
         this.setParamSimple(map, prefix + "IOAResourceId", this.IOAResourceId);
+        this.setParamSimple(map, prefix + "ResourceEdition", this.ResourceEdition);
+        this.setParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
+        this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
+        this.setParamSimple(map, prefix + "PayMode", this.PayMode);
 
     }
 }

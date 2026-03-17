@@ -209,6 +209,13 @@ public class CreateFlowRequest extends AbstractModel {
     private Boolean Workflow;
 
     /**
+    * 发起合同流程时对合同流程的部分操作加以限制的配置。
+    */
+    @SerializedName("FlowOperateLimit")
+    @Expose
+    private FlowOperateLimit FlowOperateLimit;
+
+    /**
      * Get 本合同的发起人，<a href="https://qcloudimg.tencent-cloud.cn/raw/f850cfbe163a1cb38439a9f551c2505c.png" target="_blank">点击查看合同发起人展示的位置</a>
 
 注： 支持填入集团子公司经办人 userId 代发合同。 
@@ -728,6 +735,22 @@ public class CreateFlowRequest extends AbstractModel {
         this.Workflow = Workflow;
     }
 
+    /**
+     * Get 发起合同流程时对合同流程的部分操作加以限制的配置。 
+     * @return FlowOperateLimit 发起合同流程时对合同流程的部分操作加以限制的配置。
+     */
+    public FlowOperateLimit getFlowOperateLimit() {
+        return this.FlowOperateLimit;
+    }
+
+    /**
+     * Set 发起合同流程时对合同流程的部分操作加以限制的配置。
+     * @param FlowOperateLimit 发起合同流程时对合同流程的部分操作加以限制的配置。
+     */
+    public void setFlowOperateLimit(FlowOperateLimit FlowOperateLimit) {
+        this.FlowOperateLimit = FlowOperateLimit;
+    }
+
     public CreateFlowRequest() {
     }
 
@@ -799,6 +822,9 @@ public class CreateFlowRequest extends AbstractModel {
         if (source.Workflow != null) {
             this.Workflow = new Boolean(source.Workflow);
         }
+        if (source.FlowOperateLimit != null) {
+            this.FlowOperateLimit = new FlowOperateLimit(source.FlowOperateLimit);
+        }
     }
 
 
@@ -825,6 +851,7 @@ public class CreateFlowRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
         this.setParamSimple(map, prefix + "FlowDisplayType", this.FlowDisplayType);
         this.setParamSimple(map, prefix + "Workflow", this.Workflow);
+        this.setParamObj(map, prefix + "FlowOperateLimit.", this.FlowOperateLimit);
 
     }
 }

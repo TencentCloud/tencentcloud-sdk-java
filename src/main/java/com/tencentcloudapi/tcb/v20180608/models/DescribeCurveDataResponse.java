@@ -1,0 +1,296 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.tcb.v20180608.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class DescribeCurveDataResponse extends AbstractModel {
+
+    /**
+    * 开始时间, 会根据数据的统计周期进行取整
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
+    * 结束时间, 会根据数据的统计周期进行取整
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private String EndTime;
+
+    /**
+    * 指标名
+    */
+    @SerializedName("MetricName")
+    @Expose
+    private String MetricName;
+
+    /**
+    * 统计周期(单位秒), 当时间区间为1天内, 统计周期为5分钟; 当时间区间选择为1天以上, 15天以下, 统计周期为1小时; 当时间区间选择为15天以上, 180天以下, 统计周期为1天
+    */
+    @SerializedName("Period")
+    @Expose
+    private Long Period;
+
+    /**
+    * 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到
+    */
+    @SerializedName("Values")
+    @Expose
+    private Long [] Values;
+
+    /**
+    * 各数据点的时间戳数组（Unix 时间戳，秒级），与  ⁠Values⁠  一一对应
+    */
+    @SerializedName("Time")
+    @Expose
+    private Long [] Time;
+
+    /**
+    * 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到
+    */
+    @SerializedName("NewValues")
+    @Expose
+    private Float [] NewValues;
+
+    /**
+    *  聚合方式， ⁠"last"⁠  表示取时间段内最后一个值，“max”表示取时间段内最大值，“avg”表示取时间段内的平均值
+    */
+    @SerializedName("Statistics")
+    @Expose
+    private String Statistics;
+
+    /**
+    * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+    */
+    @SerializedName("RequestId")
+    @Expose
+    private String RequestId;
+
+    /**
+     * Get 开始时间, 会根据数据的统计周期进行取整 
+     * @return StartTime 开始时间, 会根据数据的统计周期进行取整
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set 开始时间, 会根据数据的统计周期进行取整
+     * @param StartTime 开始时间, 会根据数据的统计周期进行取整
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get 结束时间, 会根据数据的统计周期进行取整 
+     * @return EndTime 结束时间, 会根据数据的统计周期进行取整
+     */
+    public String getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set 结束时间, 会根据数据的统计周期进行取整
+     * @param EndTime 结束时间, 会根据数据的统计周期进行取整
+     */
+    public void setEndTime(String EndTime) {
+        this.EndTime = EndTime;
+    }
+
+    /**
+     * Get 指标名 
+     * @return MetricName 指标名
+     */
+    public String getMetricName() {
+        return this.MetricName;
+    }
+
+    /**
+     * Set 指标名
+     * @param MetricName 指标名
+     */
+    public void setMetricName(String MetricName) {
+        this.MetricName = MetricName;
+    }
+
+    /**
+     * Get 统计周期(单位秒), 当时间区间为1天内, 统计周期为5分钟; 当时间区间选择为1天以上, 15天以下, 统计周期为1小时; 当时间区间选择为15天以上, 180天以下, 统计周期为1天 
+     * @return Period 统计周期(单位秒), 当时间区间为1天内, 统计周期为5分钟; 当时间区间选择为1天以上, 15天以下, 统计周期为1小时; 当时间区间选择为15天以上, 180天以下, 统计周期为1天
+     */
+    public Long getPeriod() {
+        return this.Period;
+    }
+
+    /**
+     * Set 统计周期(单位秒), 当时间区间为1天内, 统计周期为5分钟; 当时间区间选择为1天以上, 15天以下, 统计周期为1小时; 当时间区间选择为15天以上, 180天以下, 统计周期为1天
+     * @param Period 统计周期(单位秒), 当时间区间为1天内, 统计周期为5分钟; 当时间区间选择为1天以上, 15天以下, 统计周期为1小时; 当时间区间选择为15天以上, 180天以下, 统计周期为1天
+     */
+    public void setPeriod(Long Period) {
+        this.Period = Period;
+    }
+
+    /**
+     * Get 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到 
+     * @return Values 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到
+     */
+    public Long [] getValues() {
+        return this.Values;
+    }
+
+    /**
+     * Set 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到
+     * @param Values 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到
+     */
+    public void setValues(Long [] Values) {
+        this.Values = Values;
+    }
+
+    /**
+     * Get 各数据点的时间戳数组（Unix 时间戳，秒级），与  ⁠Values⁠  一一对应 
+     * @return Time 各数据点的时间戳数组（Unix 时间戳，秒级），与  ⁠Values⁠  一一对应
+     */
+    public Long [] getTime() {
+        return this.Time;
+    }
+
+    /**
+     * Set 各数据点的时间戳数组（Unix 时间戳，秒级），与  ⁠Values⁠  一一对应
+     * @param Time 各数据点的时间戳数组（Unix 时间戳，秒级），与  ⁠Values⁠  一一对应
+     */
+    public void setTime(Long [] Time) {
+        this.Time = Time;
+    }
+
+    /**
+     * Get 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到 
+     * @return NewValues 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到
+     */
+    public Float [] getNewValues() {
+        return this.NewValues;
+    }
+
+    /**
+     * Set 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到
+     * @param NewValues 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到
+     */
+    public void setNewValues(Float [] NewValues) {
+        this.NewValues = NewValues;
+    }
+
+    /**
+     * Get  聚合方式， ⁠"last"⁠  表示取时间段内最后一个值，“max”表示取时间段内最大值，“avg”表示取时间段内的平均值 
+     * @return Statistics  聚合方式， ⁠"last"⁠  表示取时间段内最后一个值，“max”表示取时间段内最大值，“avg”表示取时间段内的平均值
+     */
+    public String getStatistics() {
+        return this.Statistics;
+    }
+
+    /**
+     * Set  聚合方式， ⁠"last"⁠  表示取时间段内最后一个值，“max”表示取时间段内最大值，“avg”表示取时间段内的平均值
+     * @param Statistics  聚合方式， ⁠"last"⁠  表示取时间段内最后一个值，“max”表示取时间段内最大值，“avg”表示取时间段内的平均值
+     */
+    public void setStatistics(String Statistics) {
+        this.Statistics = Statistics;
+    }
+
+    /**
+     * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+     */
+    public String getRequestId() {
+        return this.RequestId;
+    }
+
+    /**
+     * Set 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+     */
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
+    }
+
+    public DescribeCurveDataResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeCurveDataResponse(DescribeCurveDataResponse source) {
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.MetricName != null) {
+            this.MetricName = new String(source.MetricName);
+        }
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
+        if (source.Values != null) {
+            this.Values = new Long[source.Values.length];
+            for (int i = 0; i < source.Values.length; i++) {
+                this.Values[i] = new Long(source.Values[i]);
+            }
+        }
+        if (source.Time != null) {
+            this.Time = new Long[source.Time.length];
+            for (int i = 0; i < source.Time.length; i++) {
+                this.Time[i] = new Long(source.Time[i]);
+            }
+        }
+        if (source.NewValues != null) {
+            this.NewValues = new Float[source.NewValues.length];
+            for (int i = 0; i < source.NewValues.length; i++) {
+                this.NewValues[i] = new Float(source.NewValues[i]);
+            }
+        }
+        if (source.Statistics != null) {
+            this.Statistics = new String(source.Statistics);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "MetricName", this.MetricName);
+        this.setParamSimple(map, prefix + "Period", this.Period);
+        this.setParamArraySimple(map, prefix + "Values.", this.Values);
+        this.setParamArraySimple(map, prefix + "Time.", this.Time);
+        this.setParamArraySimple(map, prefix + "NewValues.", this.NewValues);
+        this.setParamSimple(map, prefix + "Statistics", this.Statistics);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+
+    }
+}
+

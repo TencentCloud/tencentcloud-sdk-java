@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeCloudRunEnvsResponse extends AbstractModel {
 
     /**
-    * 环境信息列表
+    * <p>环境信息列表</p>
     */
     @SerializedName("EnvList")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeCloudRunEnvsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 环境信息列表 
-     * @return EnvList 环境信息列表
+     * Get <p>环境信息列表</p> 
+     * @return EnvList <p>环境信息列表</p>
      */
     public EnvInfo [] getEnvList() {
         return this.EnvList;
     }
 
     /**
-     * Set 环境信息列表
-     * @param EnvList 环境信息列表
+     * Set <p>环境信息列表</p>
+     * @param EnvList <p>环境信息列表</p>
      */
     public void setEnvList(EnvInfo [] EnvList) {
         this.EnvList = EnvList;

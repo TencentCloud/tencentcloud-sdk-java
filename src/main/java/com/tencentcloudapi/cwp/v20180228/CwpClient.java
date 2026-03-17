@@ -1395,6 +1395,17 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *查询应用防护白名单攻击类型列表
+     * @param req DescribeAttackTypeRequest
+     * @return DescribeAttackTypeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAttackTypeResponse DescribeAttackType(DescribeAttackTypeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAttackType", DescribeAttackTypeResponse.class);
+    }
+
+    /**
      *获取网络攻击威胁类型列表
      * @param req DescribeAttackVulTypeListRequest
      * @return DescribeAttackVulTypeListResponse
@@ -2143,6 +2154,17 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *查询java内存马和rasp的是否注入风险服务配置
+     * @param req DescribeInjectRiskyServiceSwitchRequest
+     * @return DescribeInjectRiskyServiceSwitchResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInjectRiskyServiceSwitchResponse DescribeInjectRiskyServiceSwitch(DescribeInjectRiskyServiceSwitchRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInjectRiskyServiceSwitch", DescribeInjectRiskyServiceSwitchResponse.class);
+    }
+
+    /**
      *查询java内存马事件详细信息
      * @param req DescribeJavaMemShellInfoRequest
      * @return DescribeJavaMemShellInfoResponse
@@ -2349,6 +2371,28 @@ public class CwpClient extends AbstractClient{
     public DescribeLogTypeResponse DescribeLogType(DescribeLogTypeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeLogType", DescribeLogTypeResponse.class);
+    }
+
+    /**
+     *获取防卸载全局配置
+     * @param req DescribeLoginTypeGlobalConfRequest
+     * @return DescribeLoginTypeGlobalConfResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLoginTypeGlobalConfResponse DescribeLoginTypeGlobalConf(DescribeLoginTypeGlobalConfRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLoginTypeGlobalConf", DescribeLoginTypeGlobalConfResponse.class);
+    }
+
+    /**
+     *获取扫码登录主机列表
+     * @param req DescribeLoginTypeHostRequest
+     * @return DescribeLoginTypeHostResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLoginTypeHostResponse DescribeLoginTypeHost(DescribeLoginTypeHostRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLoginTypeHost", DescribeLoginTypeHostResponse.class);
     }
 
     /**
@@ -2638,6 +2682,17 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *获取反弹Shell规则列表
+     * @param req DescribeMemShellRulesRequest
+     * @return DescribeMemShellRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMemShellRulesResponse DescribeMemShellRules(DescribeMemShellRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMemShellRules", DescribeMemShellRulesResponse.class);
+    }
+
+    /**
      *查询网络攻击设置
      * @param req DescribeNetAttackSettingRequest
      * @return DescribeNetAttackSettingResponse
@@ -2924,6 +2979,61 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *应用防护事件列表接口
+     * @param req DescribeRaspEventCWPRequest
+     * @return DescribeRaspEventCWPResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRaspEventCWPResponse DescribeRaspEventCWP(DescribeRaspEventCWPRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRaspEventCWP", DescribeRaspEventCWPResponse.class);
+    }
+
+    /**
+     *应用防御事件详情
+     * @param req DescribeRaspEventDetailCWPRequest
+     * @return DescribeRaspEventDetailCWPResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRaspEventDetailCWPResponse DescribeRaspEventDetailCWP(DescribeRaspEventDetailCWPRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRaspEventDetailCWP", DescribeRaspEventDetailCWPResponse.class);
+    }
+
+    /**
+     *应用防御事件详情
+     * @param req DescribeRaspEventDetailTCSSRequest
+     * @return DescribeRaspEventDetailTCSSResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRaspEventDetailTCSSResponse DescribeRaspEventDetailTCSS(DescribeRaspEventDetailTCSSRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRaspEventDetailTCSS", DescribeRaspEventDetailTCSSResponse.class);
+    }
+
+    /**
+     *应用防护事件列表接口
+     * @param req DescribeRaspEventTCSSRequest
+     * @return DescribeRaspEventTCSSResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRaspEventTCSSResponse DescribeRaspEventTCSS(DescribeRaspEventTCSSRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRaspEventTCSS", DescribeRaspEventTCSSResponse.class);
+    }
+
+    /**
+     *查询应用防护授权列表
+     * @param req DescribeRaspLicenseListRequest
+     * @return DescribeRaspLicenseListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRaspLicenseListResponse DescribeRaspLicenseList(DescribeRaspLicenseListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRaspLicenseList", DescribeRaspLicenseListResponse.class);
+    }
+
+    /**
      *查看漏洞防御最大cpu限制
      * @param req DescribeRaspMaxCpuRequest
      * @return DescribeRaspMaxCpuResponse
@@ -2932,6 +3042,39 @@ public class CwpClient extends AbstractClient{
     public DescribeRaspMaxCpuResponse DescribeRaspMaxCpu(DescribeRaspMaxCpuRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRaspMaxCpu", DescribeRaspMaxCpuResponse.class);
+    }
+
+    /**
+     *获取容器视角应用防护内存马扫描事件详情
+     * @param req DescribeRaspMemShellDetailTCSSRequest
+     * @return DescribeRaspMemShellDetailTCSSResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRaspMemShellDetailTCSSResponse DescribeRaspMemShellDetailTCSS(DescribeRaspMemShellDetailTCSSRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRaspMemShellDetailTCSS", DescribeRaspMemShellDetailTCSSResponse.class);
+    }
+
+    /**
+     *获取容器视角内存马扫描事件列表
+     * @param req DescribeRaspMemShellListTCSSRequest
+     * @return DescribeRaspMemShellListTCSSResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRaspMemShellListTCSSResponse DescribeRaspMemShellListTCSS(DescribeRaspMemShellListTCSSRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRaspMemShellListTCSS", DescribeRaspMemShellListTCSSResponse.class);
+    }
+
+    /**
+     *重保防护授权插件详情列表
+     * @param req DescribeRaspPluginListRequest
+     * @return DescribeRaspPluginListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRaspPluginListResponse DescribeRaspPluginList(DescribeRaspPluginListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRaspPluginList", DescribeRaspPluginListResponse.class);
     }
 
     /**
@@ -2998,6 +3141,28 @@ public class CwpClient extends AbstractClient{
     public DescribeReverseShellRulesResponse DescribeReverseShellRules(DescribeReverseShellRulesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeReverseShellRules", DescribeReverseShellRulesResponse.class);
+    }
+
+    /**
+     *获取反弹Shell规则列表
+     * @param req DescribeReverseShellRulesAggregationRequest
+     * @return DescribeReverseShellRulesAggregationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReverseShellRulesAggregationResponse DescribeReverseShellRulesAggregation(DescribeReverseShellRulesAggregationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeReverseShellRulesAggregation", DescribeReverseShellRulesAggregationResponse.class);
+    }
+
+    /**
+     *查询反弹shell系统策略配置
+     * @param req DescribeReverseShellSystemPolicyConfigRequest
+     * @return DescribeReverseShellSystemPolicyConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReverseShellSystemPolicyConfigResponse DescribeReverseShellSystemPolicyConfig(DescribeReverseShellSystemPolicyConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeReverseShellSystemPolicyConfig", DescribeReverseShellSystemPolicyConfigResponse.class);
     }
 
     /**
@@ -3397,6 +3562,17 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *查询反弹shell策略列表
+     * @param req DescribeShellPolicyListRequest
+     * @return DescribeShellPolicyListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeShellPolicyListResponse DescribeShellPolicyList(DescribeShellPolicyListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeShellPolicyList", DescribeShellPolicyListResponse.class);
+    }
+
+    /**
      *根据策略名查询策略是否存在
      * @param req DescribeStrategyExistRequest
      * @return DescribeStrategyExistResponse
@@ -3573,6 +3749,17 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *获取漏洞防御策略和事件统计
+     * @param req DescribeVulDefenceOverviewCountRequest
+     * @return DescribeVulDefenceOverviewCountResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulDefenceOverviewCountResponse DescribeVulDefenceOverviewCount(DescribeVulDefenceOverviewCountRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVulDefenceOverviewCount", DescribeVulDefenceOverviewCountResponse.class);
+    }
+
+    /**
      *获取单台主机漏洞防御插件信息
      * @param req DescribeVulDefencePluginDetailRequest
      * @return DescribeVulDefencePluginDetailResponse
@@ -3614,6 +3801,17 @@ public class CwpClient extends AbstractClient{
     public DescribeVulDefenceSettingResponse DescribeVulDefenceSetting(DescribeVulDefenceSettingRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeVulDefenceSetting", DescribeVulDefenceSettingResponse.class);
+    }
+
+    /**
+     *查询漏洞防御设置列表
+     * @param req DescribeVulDefenceSettingListRequest
+     * @return DescribeVulDefenceSettingListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulDefenceSettingListResponse DescribeVulDefenceSettingList(DescribeVulDefenceSettingListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVulDefenceSettingList", DescribeVulDefenceSettingListResponse.class);
     }
 
     /**
@@ -3900,6 +4098,17 @@ public class CwpClient extends AbstractClient{
     public DescribeWindowsPatchListResponse DescribeWindowsPatchList(DescribeWindowsPatchListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeWindowsPatchList", DescribeWindowsPatchListResponse.class);
+    }
+
+    /**
+     *查询应用防护白名单规则
+     * @param req DescribeYDRaspBlackWhiteRequest
+     * @return DescribeYDRaspBlackWhiteResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeYDRaspBlackWhiteResponse DescribeYDRaspBlackWhite(DescribeYDRaspBlackWhiteRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeYDRaspBlackWhite", DescribeYDRaspBlackWhiteResponse.class);
     }
 
     /**
@@ -5344,6 +5553,17 @@ public class CwpClient extends AbstractClient{
     public RansomDefenseRollbackResponse RansomDefenseRollback(RansomDefenseRollbackRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RansomDefenseRollback", RansomDefenseRollbackResponse.class);
+    }
+
+    /**
+     *获取漏洞防御概览信息，包括事件趋势及插件开启情况
+     * @param req RaspEventOverviewRequest
+     * @return RaspEventOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public RaspEventOverviewResponse RaspEventOverview(RaspEventOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RaspEventOverview", RaspEventOverviewResponse.class);
     }
 
     /**

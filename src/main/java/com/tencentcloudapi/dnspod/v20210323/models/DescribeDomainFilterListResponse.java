@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeDomainFilterListResponse extends AbstractModel {
 
     /**
-    * 列表页统计信息
+    * <p>列表页统计信息</p>
     */
     @SerializedName("DomainCountInfo")
     @Expose
     private DomainCountInfo DomainCountInfo;
 
     /**
-    * 域名列表
+    * <p>域名列表</p>
     */
     @SerializedName("DomainList")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeDomainFilterListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 列表页统计信息 
-     * @return DomainCountInfo 列表页统计信息
+     * Get <p>列表页统计信息</p> 
+     * @return DomainCountInfo <p>列表页统计信息</p>
      */
     public DomainCountInfo getDomainCountInfo() {
         return this.DomainCountInfo;
     }
 
     /**
-     * Set 列表页统计信息
-     * @param DomainCountInfo 列表页统计信息
+     * Set <p>列表页统计信息</p>
+     * @param DomainCountInfo <p>列表页统计信息</p>
      */
     public void setDomainCountInfo(DomainCountInfo DomainCountInfo) {
         this.DomainCountInfo = DomainCountInfo;
     }
 
     /**
-     * Get 域名列表 
-     * @return DomainList 域名列表
+     * Get <p>域名列表</p> 
+     * @return DomainList <p>域名列表</p>
      */
     public DomainListItem [] getDomainList() {
         return this.DomainList;
     }
 
     /**
-     * Set 域名列表
-     * @param DomainList 域名列表
+     * Set <p>域名列表</p>
+     * @param DomainList <p>域名列表</p>
      */
     public void setDomainList(DomainListItem [] DomainList) {
         this.DomainList = DomainList;

@@ -236,6 +236,13 @@ public class ModifyAclRequest extends AbstractModel {
     private Boolean AllowKeyboardLogger;
 
     /**
+    * 访问串有效期最大时长，秒数，允许使用访问串时需大于0且必须为86400整数倍
+    */
+    @SerializedName("MaxAccessCredentialDuration")
+    @Expose
+    private Long MaxAccessCredentialDuration;
+
+    /**
      * Get 访问权限名称，最大32字符，不能包含空白字符 
      * @return Name 访问权限名称，最大32字符，不能包含空白字符
      */
@@ -723,6 +730,22 @@ public class ModifyAclRequest extends AbstractModel {
         this.AllowKeyboardLogger = AllowKeyboardLogger;
     }
 
+    /**
+     * Get 访问串有效期最大时长，秒数，允许使用访问串时需大于0且必须为86400整数倍 
+     * @return MaxAccessCredentialDuration 访问串有效期最大时长，秒数，允许使用访问串时需大于0且必须为86400整数倍
+     */
+    public Long getMaxAccessCredentialDuration() {
+        return this.MaxAccessCredentialDuration;
+    }
+
+    /**
+     * Set 访问串有效期最大时长，秒数，允许使用访问串时需大于0且必须为86400整数倍
+     * @param MaxAccessCredentialDuration 访问串有效期最大时长，秒数，允许使用访问串时需大于0且必须为86400整数倍
+     */
+    public void setMaxAccessCredentialDuration(Long MaxAccessCredentialDuration) {
+        this.MaxAccessCredentialDuration = MaxAccessCredentialDuration;
+    }
+
     public ModifyAclRequest() {
     }
 
@@ -845,6 +868,9 @@ public class ModifyAclRequest extends AbstractModel {
         if (source.AllowKeyboardLogger != null) {
             this.AllowKeyboardLogger = new Boolean(source.AllowKeyboardLogger);
         }
+        if (source.MaxAccessCredentialDuration != null) {
+            this.MaxAccessCredentialDuration = new Long(source.MaxAccessCredentialDuration);
+        }
     }
 
 
@@ -882,6 +908,7 @@ public class ModifyAclRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
         this.setParamSimple(map, prefix + "AllowAccessCredential", this.AllowAccessCredential);
         this.setParamSimple(map, prefix + "AllowKeyboardLogger", this.AllowKeyboardLogger);
+        this.setParamSimple(map, prefix + "MaxAccessCredentialDuration", this.MaxAccessCredentialDuration);
 
     }
 }

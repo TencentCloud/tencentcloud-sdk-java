@@ -24,49 +24,72 @@ import java.util.HashMap;
 public class DeleteDBRequest extends AbstractModel {
 
     /**
-    * 实例ID，形如mssql-rljoi3bf
+    * <p>实例ID，形如mssql-rljoi3bf</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 数据库名数组
+    * <p>数据库名数组</p>
     */
     @SerializedName("Names")
     @Expose
     private String [] Names;
 
     /**
-     * Get 实例ID，形如mssql-rljoi3bf 
-     * @return InstanceId 实例ID，形如mssql-rljoi3bf
+    * <p>删除数据库前是否创建备份。</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+    */
+    @SerializedName("NoDoBackup")
+    @Expose
+    private Long NoDoBackup;
+
+    /**
+     * Get <p>实例ID，形如mssql-rljoi3bf</p> 
+     * @return InstanceId <p>实例ID，形如mssql-rljoi3bf</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID，形如mssql-rljoi3bf
-     * @param InstanceId 实例ID，形如mssql-rljoi3bf
+     * Set <p>实例ID，形如mssql-rljoi3bf</p>
+     * @param InstanceId <p>实例ID，形如mssql-rljoi3bf</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 数据库名数组 
-     * @return Names 数据库名数组
+     * Get <p>数据库名数组</p> 
+     * @return Names <p>数据库名数组</p>
      */
     public String [] getNames() {
         return this.Names;
     }
 
     /**
-     * Set 数据库名数组
-     * @param Names 数据库名数组
+     * Set <p>数据库名数组</p>
+     * @param Names <p>数据库名数组</p>
      */
     public void setNames(String [] Names) {
         this.Names = Names;
+    }
+
+    /**
+     * Get <p>删除数据库前是否创建备份。</p><p>取值范围：[0, 1]</p><p>默认值：0</p> 
+     * @return NoDoBackup <p>删除数据库前是否创建备份。</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+     */
+    public Long getNoDoBackup() {
+        return this.NoDoBackup;
+    }
+
+    /**
+     * Set <p>删除数据库前是否创建备份。</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+     * @param NoDoBackup <p>删除数据库前是否创建备份。</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+     */
+    public void setNoDoBackup(Long NoDoBackup) {
+        this.NoDoBackup = NoDoBackup;
     }
 
     public DeleteDBRequest() {
@@ -86,6 +109,9 @@ public class DeleteDBRequest extends AbstractModel {
                 this.Names[i] = new String(source.Names[i]);
             }
         }
+        if (source.NoDoBackup != null) {
+            this.NoDoBackup = new Long(source.NoDoBackup);
+        }
     }
 
 
@@ -95,6 +121,7 @@ public class DeleteDBRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamArraySimple(map, prefix + "Names.", this.Names);
+        this.setParamSimple(map, prefix + "NoDoBackup", this.NoDoBackup);
 
     }
 }

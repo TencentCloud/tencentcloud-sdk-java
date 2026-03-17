@@ -94,7 +94,7 @@ public class DescribeLoginEventRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 分页每页记录数，默认20
+    * 分页每页记录数，默认20，最大200
     */
     @SerializedName("Limit")
     @Expose
@@ -261,16 +261,16 @@ public class DescribeLoginEventRequest extends AbstractModel {
     }
 
     /**
-     * Get 分页每页记录数，默认20 
-     * @return Limit 分页每页记录数，默认20
+     * Get 分页每页记录数，默认20，最大200 
+     * @return Limit 分页每页记录数，默认20，最大200
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页每页记录数，默认20
-     * @param Limit 分页每页记录数，默认20
+     * Set 分页每页记录数，默认20，最大200
+     * @param Limit 分页每页记录数，默认20，最大200
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

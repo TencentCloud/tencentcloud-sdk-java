@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ServiceDetail extends AbstractModel {
 
     /**
-    * 应用ID
+    * <p>应用ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceID")
@@ -32,7 +32,7 @@ public class ServiceDetail extends AbstractModel {
     private String ServiceID;
 
     /**
-    * 业务系统ID
+    * <p>业务系统ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceKey")
@@ -40,7 +40,7 @@ public class ServiceDetail extends AbstractModel {
     private String InstanceKey;
 
     /**
-    * 用户appid
+    * <p>用户appid</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppID")
@@ -48,7 +48,7 @@ public class ServiceDetail extends AbstractModel {
     private Long AppID;
 
     /**
-    * 主账号uin
+    * <p>主账号uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateUIN")
@@ -56,7 +56,7 @@ public class ServiceDetail extends AbstractModel {
     private String CreateUIN;
 
     /**
-    * 应用名
+    * <p>应用名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceName")
@@ -64,7 +64,7 @@ public class ServiceDetail extends AbstractModel {
     private String ServiceName;
 
     /**
-    * 应用描述
+    * <p>应用描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceDescription")
@@ -72,7 +72,7 @@ public class ServiceDetail extends AbstractModel {
     private String ServiceDescription;
 
     /**
-    * 地域
+    * <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
@@ -80,7 +80,7 @@ public class ServiceDetail extends AbstractModel {
     private String Region;
 
     /**
-    * 标签
+    * <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
@@ -88,16 +88,40 @@ public class ServiceDetail extends AbstractModel {
     private ApmTag [] Tags;
 
     /**
-    * 业务系统名称
+    * <p>业务系统名称</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-     * Get 应用ID
+    * <p>阈值配置开关。true 表示使用应用级阈值；false 表示使用业务系统级阈值</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableThresholdConfig")
+    @Expose
+    private Boolean EnableThresholdConfig;
+
+    /**
+    * <p>错误率阈值（%），用于判断应用健康状态为&quot;红色&quot;</p><p>单位：%</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ErrRateThreshold")
+    @Expose
+    private Long ErrRateThreshold;
+
+    /**
+    * <p>响应时间预警阈值（ms），用于判断应用健康状态为&quot;黄色&quot;</p><p>单位：ms</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResponseDurationWarningThreshold")
+    @Expose
+    private Long ResponseDurationWarningThreshold;
+
+    /**
+     * Get <p>应用ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ServiceID 应用ID
+     * @return ServiceID <p>应用ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServiceID() {
@@ -105,9 +129,9 @@ public class ServiceDetail extends AbstractModel {
     }
 
     /**
-     * Set 应用ID
+     * Set <p>应用ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ServiceID 应用ID
+     * @param ServiceID <p>应用ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceID(String ServiceID) {
@@ -115,9 +139,9 @@ public class ServiceDetail extends AbstractModel {
     }
 
     /**
-     * Get 业务系统ID
+     * Get <p>业务系统ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceKey 业务系统ID
+     * @return InstanceKey <p>业务系统ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceKey() {
@@ -125,9 +149,9 @@ public class ServiceDetail extends AbstractModel {
     }
 
     /**
-     * Set 业务系统ID
+     * Set <p>业务系统ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceKey 业务系统ID
+     * @param InstanceKey <p>业务系统ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceKey(String InstanceKey) {
@@ -135,9 +159,9 @@ public class ServiceDetail extends AbstractModel {
     }
 
     /**
-     * Get 用户appid
+     * Get <p>用户appid</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AppID 用户appid
+     * @return AppID <p>用户appid</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAppID() {
@@ -145,9 +169,9 @@ public class ServiceDetail extends AbstractModel {
     }
 
     /**
-     * Set 用户appid
+     * Set <p>用户appid</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AppID 用户appid
+     * @param AppID <p>用户appid</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppID(Long AppID) {
@@ -155,9 +179,9 @@ public class ServiceDetail extends AbstractModel {
     }
 
     /**
-     * Get 主账号uin
+     * Get <p>主账号uin</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateUIN 主账号uin
+     * @return CreateUIN <p>主账号uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateUIN() {
@@ -165,9 +189,9 @@ public class ServiceDetail extends AbstractModel {
     }
 
     /**
-     * Set 主账号uin
+     * Set <p>主账号uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateUIN 主账号uin
+     * @param CreateUIN <p>主账号uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateUIN(String CreateUIN) {
@@ -175,9 +199,9 @@ public class ServiceDetail extends AbstractModel {
     }
 
     /**
-     * Get 应用名
+     * Get <p>应用名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ServiceName 应用名
+     * @return ServiceName <p>应用名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServiceName() {
@@ -185,9 +209,9 @@ public class ServiceDetail extends AbstractModel {
     }
 
     /**
-     * Set 应用名
+     * Set <p>应用名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ServiceName 应用名
+     * @param ServiceName <p>应用名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceName(String ServiceName) {
@@ -195,9 +219,9 @@ public class ServiceDetail extends AbstractModel {
     }
 
     /**
-     * Get 应用描述
+     * Get <p>应用描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ServiceDescription 应用描述
+     * @return ServiceDescription <p>应用描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServiceDescription() {
@@ -205,9 +229,9 @@ public class ServiceDetail extends AbstractModel {
     }
 
     /**
-     * Set 应用描述
+     * Set <p>应用描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ServiceDescription 应用描述
+     * @param ServiceDescription <p>应用描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceDescription(String ServiceDescription) {
@@ -215,9 +239,9 @@ public class ServiceDetail extends AbstractModel {
     }
 
     /**
-     * Get 地域
+     * Get <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Region 地域
+     * @return Region <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
@@ -225,9 +249,9 @@ public class ServiceDetail extends AbstractModel {
     }
 
     /**
-     * Set 地域
+     * Set <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Region 地域
+     * @param Region <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
@@ -235,9 +259,9 @@ public class ServiceDetail extends AbstractModel {
     }
 
     /**
-     * Get 标签
+     * Get <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tags 标签
+     * @return Tags <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ApmTag [] getTags() {
@@ -245,9 +269,9 @@ public class ServiceDetail extends AbstractModel {
     }
 
     /**
-     * Set 标签
+     * Set <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tags 标签
+     * @param Tags <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(ApmTag [] Tags) {
@@ -255,19 +279,79 @@ public class ServiceDetail extends AbstractModel {
     }
 
     /**
-     * Get 业务系统名称 
-     * @return InstanceName 业务系统名称
+     * Get <p>业务系统名称</p> 
+     * @return InstanceName <p>业务系统名称</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 业务系统名称
-     * @param InstanceName 业务系统名称
+     * Set <p>业务系统名称</p>
+     * @param InstanceName <p>业务系统名称</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
+    }
+
+    /**
+     * Get <p>阈值配置开关。true 表示使用应用级阈值；false 表示使用业务系统级阈值</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableThresholdConfig <p>阈值配置开关。true 表示使用应用级阈值；false 表示使用业务系统级阈值</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getEnableThresholdConfig() {
+        return this.EnableThresholdConfig;
+    }
+
+    /**
+     * Set <p>阈值配置开关。true 表示使用应用级阈值；false 表示使用业务系统级阈值</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableThresholdConfig <p>阈值配置开关。true 表示使用应用级阈值；false 表示使用业务系统级阈值</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableThresholdConfig(Boolean EnableThresholdConfig) {
+        this.EnableThresholdConfig = EnableThresholdConfig;
+    }
+
+    /**
+     * Get <p>错误率阈值（%），用于判断应用健康状态为&quot;红色&quot;</p><p>单位：%</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ErrRateThreshold <p>错误率阈值（%），用于判断应用健康状态为&quot;红色&quot;</p><p>单位：%</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getErrRateThreshold() {
+        return this.ErrRateThreshold;
+    }
+
+    /**
+     * Set <p>错误率阈值（%），用于判断应用健康状态为&quot;红色&quot;</p><p>单位：%</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ErrRateThreshold <p>错误率阈值（%），用于判断应用健康状态为&quot;红色&quot;</p><p>单位：%</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setErrRateThreshold(Long ErrRateThreshold) {
+        this.ErrRateThreshold = ErrRateThreshold;
+    }
+
+    /**
+     * Get <p>响应时间预警阈值（ms），用于判断应用健康状态为&quot;黄色&quot;</p><p>单位：ms</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResponseDurationWarningThreshold <p>响应时间预警阈值（ms），用于判断应用健康状态为&quot;黄色&quot;</p><p>单位：ms</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getResponseDurationWarningThreshold() {
+        return this.ResponseDurationWarningThreshold;
+    }
+
+    /**
+     * Set <p>响应时间预警阈值（ms），用于判断应用健康状态为&quot;黄色&quot;</p><p>单位：ms</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResponseDurationWarningThreshold <p>响应时间预警阈值（ms），用于判断应用健康状态为&quot;黄色&quot;</p><p>单位：ms</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResponseDurationWarningThreshold(Long ResponseDurationWarningThreshold) {
+        this.ResponseDurationWarningThreshold = ResponseDurationWarningThreshold;
     }
 
     public ServiceDetail() {
@@ -308,6 +392,15 @@ public class ServiceDetail extends AbstractModel {
         if (source.InstanceName != null) {
             this.InstanceName = new String(source.InstanceName);
         }
+        if (source.EnableThresholdConfig != null) {
+            this.EnableThresholdConfig = new Boolean(source.EnableThresholdConfig);
+        }
+        if (source.ErrRateThreshold != null) {
+            this.ErrRateThreshold = new Long(source.ErrRateThreshold);
+        }
+        if (source.ResponseDurationWarningThreshold != null) {
+            this.ResponseDurationWarningThreshold = new Long(source.ResponseDurationWarningThreshold);
+        }
     }
 
 
@@ -324,6 +417,9 @@ public class ServiceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
+        this.setParamSimple(map, prefix + "EnableThresholdConfig", this.EnableThresholdConfig);
+        this.setParamSimple(map, prefix + "ErrRateThreshold", this.ErrRateThreshold);
+        this.setParamSimple(map, prefix + "ResponseDurationWarningThreshold", this.ResponseDurationWarningThreshold);
 
     }
 }

@@ -24,49 +24,72 @@ import java.util.HashMap;
 public class Deals extends AbstractModel {
 
     /**
-    * 子订单ID
+    * <p>子订单ID</p>
     */
     @SerializedName("DealId")
     @Expose
     private String DealId;
 
     /**
-    * 子订单号
+    * <p>子订单号</p>
     */
     @SerializedName("DealName")
     @Expose
     private String DealName;
 
     /**
-     * Get 子订单ID 
-     * @return DealId 子订单ID
+    * <p>资源ID</p>
+    */
+    @SerializedName("ResourceId")
+    @Expose
+    private String ResourceId;
+
+    /**
+     * Get <p>子订单ID</p> 
+     * @return DealId <p>子订单ID</p>
      */
     public String getDealId() {
         return this.DealId;
     }
 
     /**
-     * Set 子订单ID
-     * @param DealId 子订单ID
+     * Set <p>子订单ID</p>
+     * @param DealId <p>子订单ID</p>
      */
     public void setDealId(String DealId) {
         this.DealId = DealId;
     }
 
     /**
-     * Get 子订单号 
-     * @return DealName 子订单号
+     * Get <p>子订单号</p> 
+     * @return DealName <p>子订单号</p>
      */
     public String getDealName() {
         return this.DealName;
     }
 
     /**
-     * Set 子订单号
-     * @param DealName 子订单号
+     * Set <p>子订单号</p>
+     * @param DealName <p>子订单号</p>
      */
     public void setDealName(String DealName) {
         this.DealName = DealName;
+    }
+
+    /**
+     * Get <p>资源ID</p> 
+     * @return ResourceId <p>资源ID</p>
+     */
+    public String getResourceId() {
+        return this.ResourceId;
+    }
+
+    /**
+     * Set <p>资源ID</p>
+     * @param ResourceId <p>资源ID</p>
+     */
+    public void setResourceId(String ResourceId) {
+        this.ResourceId = ResourceId;
     }
 
     public Deals() {
@@ -83,6 +106,9 @@ public class Deals extends AbstractModel {
         if (source.DealName != null) {
             this.DealName = new String(source.DealName);
         }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class Deals extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DealId", this.DealId);
         this.setParamSimple(map, prefix + "DealName", this.DealName);
+        this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
 
     }
 }

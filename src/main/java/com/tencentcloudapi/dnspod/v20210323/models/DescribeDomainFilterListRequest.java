@@ -24,433 +24,368 @@ import java.util.HashMap;
 public class DescribeDomainFilterListRequest extends AbstractModel {
 
     /**
-    * 根据域名分组类型获取域名。可取值为 ALL，MINE，SHARE，RECENT。
-ALL：全部
-MINE：我的域名
-SHARE：共享给我的域名
-RECENT：最近操作过的域名
+    * <p>根据域名分组类型获取域名。可取值为 ALL，MINE，SHARE，RECENT。<br>ALL：全部<br>MINE：我的域名<br>SHARE：共享给我的域名<br>RECENT：最近操作过的域名</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 记录开始的偏移, 第一条记录为 0, 依次类推。默认值为 0。
+    * <p>记录开始的偏移, 第一条记录为 0, 依次类推。默认值为 0。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 要获取的域名数量, 比如获取 20 个, 则为 20。默认值为 5000。如果账户中的域名数量超过了 5000, 将会强制分页并且只返回前 5000 条, 这时需要通过 Offset 和 Limit 参数去获取其它域名。
+    * <p>要获取的域名数量, 比如获取 20 个, 则为 20。默认值为 5000。如果账户中的域名数量超过了 5000, 将会强制分页并且只返回前 5000 条, 这时需要通过 Offset 和 Limit 参数去获取其它域名。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 根据域名分组 id 获取域名
+    * <p>根据域名分组 id 获取域名</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1427/56172">DescribeDomainList</a></p>
     */
     @SerializedName("GroupId")
     @Expose
     private Long [] GroupId;
 
     /**
-    * 根据关键字获取域名。
+    * <p>根据关键字获取域名。</p>
     */
     @SerializedName("Keyword")
     @Expose
     private String Keyword;
 
     /**
-    * 排序字段。可取值为 NAME，STATUS，RECORDS，GRADE，UPDATED_ON。
-NAME：域名名称
-STATUS：域名状态
-RECORDS：记录数量
-GRADE：套餐等级
-UPDATED_ON：更新时间
+    * <p>排序字段。可取值为 NAME，STATUS，RECORDS，GRADE，UPDATED_ON。<br>NAME：域名名称<br>STATUS：域名状态<br>RECORDS：记录数量<br>GRADE：套餐等级<br>UPDATED_ON：更新时间</p>
     */
     @SerializedName("SortField")
     @Expose
     private String SortField;
 
     /**
-    * 排序类型，升序：ASC，降序：DESC。
+    * <p>排序类型，升序：ASC，降序：DESC。</p>
     */
     @SerializedName("SortType")
     @Expose
     private String SortType;
 
     /**
-    * 根据域名状态获取域名。可取值为 ENABLE，LOCK，PAUSE，SPAM。
-ENABLE：正常
-LOCK：锁定
-PAUSE：暂停
-SPAM：封禁
+    * <p>根据域名状态获取域名。可取值为 ENABLE，LOCK，PAUSE，SPAM。<br>ENABLE：正常<br>LOCK：锁定<br>PAUSE：暂停<br>SPAM：封禁</p>
     */
     @SerializedName("Status")
     @Expose
     private String [] Status;
 
     /**
-    * 根据套餐获取域名，可通过 DescribeDomain 或 DescribeDomainList 接口 Grade 字段获取。
+    * <p>根据套餐获取域名，可通过 DescribeDomain 或 DescribeDomainList 接口 Grade 字段获取。</p>
     */
     @SerializedName("Package")
     @Expose
     private String [] Package;
 
     /**
-    * 根据备注信息获取域名。
+    * <p>根据备注信息获取域名。</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 要获取域名的更新时间起始时间点，如 '2021-05-01 03:00:00'。
+    * <p>要获取域名的更新时间起始时间点，如 &#39;2021-05-01 03:00:00&#39;。</p>
     */
     @SerializedName("UpdatedAtBegin")
     @Expose
     private String UpdatedAtBegin;
 
     /**
-    * 要获取域名的更新时间终止时间点，如 '2021-05-10 20:00:00'。
+    * <p>要获取域名的更新时间终止时间点，如 &#39;2021-05-10 20:00:00&#39;。</p>
     */
     @SerializedName("UpdatedAtEnd")
     @Expose
     private String UpdatedAtEnd;
 
     /**
-    * 要获取域名的记录数查询区间起点。
+    * <p>要获取域名的记录数查询区间起点。</p>
     */
     @SerializedName("RecordCountBegin")
     @Expose
     private Long RecordCountBegin;
 
     /**
-    * 要获取域名的记录数查询区间终点。
+    * <p>要获取域名的记录数查询区间终点。</p>
     */
     @SerializedName("RecordCountEnd")
     @Expose
     private Long RecordCountEnd;
 
     /**
-    * 项目ID，"帐号中心-项目管理"拿到项目ID
+    * <p>项目ID，&quot;账号中心-项目管理&quot;拿到项目ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 标签过滤
+    * <p>标签过滤</p>
     */
     @SerializedName("Tags")
     @Expose
     private TagItemFilter [] Tags;
 
     /**
-     * Get 根据域名分组类型获取域名。可取值为 ALL，MINE，SHARE，RECENT。
-ALL：全部
-MINE：我的域名
-SHARE：共享给我的域名
-RECENT：最近操作过的域名 
-     * @return Type 根据域名分组类型获取域名。可取值为 ALL，MINE，SHARE，RECENT。
-ALL：全部
-MINE：我的域名
-SHARE：共享给我的域名
-RECENT：最近操作过的域名
+     * Get <p>根据域名分组类型获取域名。可取值为 ALL，MINE，SHARE，RECENT。<br>ALL：全部<br>MINE：我的域名<br>SHARE：共享给我的域名<br>RECENT：最近操作过的域名</p> 
+     * @return Type <p>根据域名分组类型获取域名。可取值为 ALL，MINE，SHARE，RECENT。<br>ALL：全部<br>MINE：我的域名<br>SHARE：共享给我的域名<br>RECENT：最近操作过的域名</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 根据域名分组类型获取域名。可取值为 ALL，MINE，SHARE，RECENT。
-ALL：全部
-MINE：我的域名
-SHARE：共享给我的域名
-RECENT：最近操作过的域名
-     * @param Type 根据域名分组类型获取域名。可取值为 ALL，MINE，SHARE，RECENT。
-ALL：全部
-MINE：我的域名
-SHARE：共享给我的域名
-RECENT：最近操作过的域名
+     * Set <p>根据域名分组类型获取域名。可取值为 ALL，MINE，SHARE，RECENT。<br>ALL：全部<br>MINE：我的域名<br>SHARE：共享给我的域名<br>RECENT：最近操作过的域名</p>
+     * @param Type <p>根据域名分组类型获取域名。可取值为 ALL，MINE，SHARE，RECENT。<br>ALL：全部<br>MINE：我的域名<br>SHARE：共享给我的域名<br>RECENT：最近操作过的域名</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 记录开始的偏移, 第一条记录为 0, 依次类推。默认值为 0。 
-     * @return Offset 记录开始的偏移, 第一条记录为 0, 依次类推。默认值为 0。
+     * Get <p>记录开始的偏移, 第一条记录为 0, 依次类推。默认值为 0。</p> 
+     * @return Offset <p>记录开始的偏移, 第一条记录为 0, 依次类推。默认值为 0。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 记录开始的偏移, 第一条记录为 0, 依次类推。默认值为 0。
-     * @param Offset 记录开始的偏移, 第一条记录为 0, 依次类推。默认值为 0。
+     * Set <p>记录开始的偏移, 第一条记录为 0, 依次类推。默认值为 0。</p>
+     * @param Offset <p>记录开始的偏移, 第一条记录为 0, 依次类推。默认值为 0。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 要获取的域名数量, 比如获取 20 个, 则为 20。默认值为 5000。如果账户中的域名数量超过了 5000, 将会强制分页并且只返回前 5000 条, 这时需要通过 Offset 和 Limit 参数去获取其它域名。 
-     * @return Limit 要获取的域名数量, 比如获取 20 个, 则为 20。默认值为 5000。如果账户中的域名数量超过了 5000, 将会强制分页并且只返回前 5000 条, 这时需要通过 Offset 和 Limit 参数去获取其它域名。
+     * Get <p>要获取的域名数量, 比如获取 20 个, 则为 20。默认值为 5000。如果账户中的域名数量超过了 5000, 将会强制分页并且只返回前 5000 条, 这时需要通过 Offset 和 Limit 参数去获取其它域名。</p> 
+     * @return Limit <p>要获取的域名数量, 比如获取 20 个, 则为 20。默认值为 5000。如果账户中的域名数量超过了 5000, 将会强制分页并且只返回前 5000 条, 这时需要通过 Offset 和 Limit 参数去获取其它域名。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 要获取的域名数量, 比如获取 20 个, 则为 20。默认值为 5000。如果账户中的域名数量超过了 5000, 将会强制分页并且只返回前 5000 条, 这时需要通过 Offset 和 Limit 参数去获取其它域名。
-     * @param Limit 要获取的域名数量, 比如获取 20 个, 则为 20。默认值为 5000。如果账户中的域名数量超过了 5000, 将会强制分页并且只返回前 5000 条, 这时需要通过 Offset 和 Limit 参数去获取其它域名。
+     * Set <p>要获取的域名数量, 比如获取 20 个, 则为 20。默认值为 5000。如果账户中的域名数量超过了 5000, 将会强制分页并且只返回前 5000 条, 这时需要通过 Offset 和 Limit 参数去获取其它域名。</p>
+     * @param Limit <p>要获取的域名数量, 比如获取 20 个, 则为 20。默认值为 5000。如果账户中的域名数量超过了 5000, 将会强制分页并且只返回前 5000 条, 这时需要通过 Offset 和 Limit 参数去获取其它域名。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 根据域名分组 id 获取域名 
-     * @return GroupId 根据域名分组 id 获取域名
+     * Get <p>根据域名分组 id 获取域名</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1427/56172">DescribeDomainList</a></p> 
+     * @return GroupId <p>根据域名分组 id 获取域名</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1427/56172">DescribeDomainList</a></p>
      */
     public Long [] getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 根据域名分组 id 获取域名
-     * @param GroupId 根据域名分组 id 获取域名
+     * Set <p>根据域名分组 id 获取域名</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1427/56172">DescribeDomainList</a></p>
+     * @param GroupId <p>根据域名分组 id 获取域名</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1427/56172">DescribeDomainList</a></p>
      */
     public void setGroupId(Long [] GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 根据关键字获取域名。 
-     * @return Keyword 根据关键字获取域名。
+     * Get <p>根据关键字获取域名。</p> 
+     * @return Keyword <p>根据关键字获取域名。</p>
      */
     public String getKeyword() {
         return this.Keyword;
     }
 
     /**
-     * Set 根据关键字获取域名。
-     * @param Keyword 根据关键字获取域名。
+     * Set <p>根据关键字获取域名。</p>
+     * @param Keyword <p>根据关键字获取域名。</p>
      */
     public void setKeyword(String Keyword) {
         this.Keyword = Keyword;
     }
 
     /**
-     * Get 排序字段。可取值为 NAME，STATUS，RECORDS，GRADE，UPDATED_ON。
-NAME：域名名称
-STATUS：域名状态
-RECORDS：记录数量
-GRADE：套餐等级
-UPDATED_ON：更新时间 
-     * @return SortField 排序字段。可取值为 NAME，STATUS，RECORDS，GRADE，UPDATED_ON。
-NAME：域名名称
-STATUS：域名状态
-RECORDS：记录数量
-GRADE：套餐等级
-UPDATED_ON：更新时间
+     * Get <p>排序字段。可取值为 NAME，STATUS，RECORDS，GRADE，UPDATED_ON。<br>NAME：域名名称<br>STATUS：域名状态<br>RECORDS：记录数量<br>GRADE：套餐等级<br>UPDATED_ON：更新时间</p> 
+     * @return SortField <p>排序字段。可取值为 NAME，STATUS，RECORDS，GRADE，UPDATED_ON。<br>NAME：域名名称<br>STATUS：域名状态<br>RECORDS：记录数量<br>GRADE：套餐等级<br>UPDATED_ON：更新时间</p>
      */
     public String getSortField() {
         return this.SortField;
     }
 
     /**
-     * Set 排序字段。可取值为 NAME，STATUS，RECORDS，GRADE，UPDATED_ON。
-NAME：域名名称
-STATUS：域名状态
-RECORDS：记录数量
-GRADE：套餐等级
-UPDATED_ON：更新时间
-     * @param SortField 排序字段。可取值为 NAME，STATUS，RECORDS，GRADE，UPDATED_ON。
-NAME：域名名称
-STATUS：域名状态
-RECORDS：记录数量
-GRADE：套餐等级
-UPDATED_ON：更新时间
+     * Set <p>排序字段。可取值为 NAME，STATUS，RECORDS，GRADE，UPDATED_ON。<br>NAME：域名名称<br>STATUS：域名状态<br>RECORDS：记录数量<br>GRADE：套餐等级<br>UPDATED_ON：更新时间</p>
+     * @param SortField <p>排序字段。可取值为 NAME，STATUS，RECORDS，GRADE，UPDATED_ON。<br>NAME：域名名称<br>STATUS：域名状态<br>RECORDS：记录数量<br>GRADE：套餐等级<br>UPDATED_ON：更新时间</p>
      */
     public void setSortField(String SortField) {
         this.SortField = SortField;
     }
 
     /**
-     * Get 排序类型，升序：ASC，降序：DESC。 
-     * @return SortType 排序类型，升序：ASC，降序：DESC。
+     * Get <p>排序类型，升序：ASC，降序：DESC。</p> 
+     * @return SortType <p>排序类型，升序：ASC，降序：DESC。</p>
      */
     public String getSortType() {
         return this.SortType;
     }
 
     /**
-     * Set 排序类型，升序：ASC，降序：DESC。
-     * @param SortType 排序类型，升序：ASC，降序：DESC。
+     * Set <p>排序类型，升序：ASC，降序：DESC。</p>
+     * @param SortType <p>排序类型，升序：ASC，降序：DESC。</p>
      */
     public void setSortType(String SortType) {
         this.SortType = SortType;
     }
 
     /**
-     * Get 根据域名状态获取域名。可取值为 ENABLE，LOCK，PAUSE，SPAM。
-ENABLE：正常
-LOCK：锁定
-PAUSE：暂停
-SPAM：封禁 
-     * @return Status 根据域名状态获取域名。可取值为 ENABLE，LOCK，PAUSE，SPAM。
-ENABLE：正常
-LOCK：锁定
-PAUSE：暂停
-SPAM：封禁
+     * Get <p>根据域名状态获取域名。可取值为 ENABLE，LOCK，PAUSE，SPAM。<br>ENABLE：正常<br>LOCK：锁定<br>PAUSE：暂停<br>SPAM：封禁</p> 
+     * @return Status <p>根据域名状态获取域名。可取值为 ENABLE，LOCK，PAUSE，SPAM。<br>ENABLE：正常<br>LOCK：锁定<br>PAUSE：暂停<br>SPAM：封禁</p>
      */
     public String [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 根据域名状态获取域名。可取值为 ENABLE，LOCK，PAUSE，SPAM。
-ENABLE：正常
-LOCK：锁定
-PAUSE：暂停
-SPAM：封禁
-     * @param Status 根据域名状态获取域名。可取值为 ENABLE，LOCK，PAUSE，SPAM。
-ENABLE：正常
-LOCK：锁定
-PAUSE：暂停
-SPAM：封禁
+     * Set <p>根据域名状态获取域名。可取值为 ENABLE，LOCK，PAUSE，SPAM。<br>ENABLE：正常<br>LOCK：锁定<br>PAUSE：暂停<br>SPAM：封禁</p>
+     * @param Status <p>根据域名状态获取域名。可取值为 ENABLE，LOCK，PAUSE，SPAM。<br>ENABLE：正常<br>LOCK：锁定<br>PAUSE：暂停<br>SPAM：封禁</p>
      */
     public void setStatus(String [] Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 根据套餐获取域名，可通过 DescribeDomain 或 DescribeDomainList 接口 Grade 字段获取。 
-     * @return Package 根据套餐获取域名，可通过 DescribeDomain 或 DescribeDomainList 接口 Grade 字段获取。
+     * Get <p>根据套餐获取域名，可通过 DescribeDomain 或 DescribeDomainList 接口 Grade 字段获取。</p> 
+     * @return Package <p>根据套餐获取域名，可通过 DescribeDomain 或 DescribeDomainList 接口 Grade 字段获取。</p>
      */
     public String [] getPackage() {
         return this.Package;
     }
 
     /**
-     * Set 根据套餐获取域名，可通过 DescribeDomain 或 DescribeDomainList 接口 Grade 字段获取。
-     * @param Package 根据套餐获取域名，可通过 DescribeDomain 或 DescribeDomainList 接口 Grade 字段获取。
+     * Set <p>根据套餐获取域名，可通过 DescribeDomain 或 DescribeDomainList 接口 Grade 字段获取。</p>
+     * @param Package <p>根据套餐获取域名，可通过 DescribeDomain 或 DescribeDomainList 接口 Grade 字段获取。</p>
      */
     public void setPackage(String [] Package) {
         this.Package = Package;
     }
 
     /**
-     * Get 根据备注信息获取域名。 
-     * @return Remark 根据备注信息获取域名。
+     * Get <p>根据备注信息获取域名。</p> 
+     * @return Remark <p>根据备注信息获取域名。</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 根据备注信息获取域名。
-     * @param Remark 根据备注信息获取域名。
+     * Set <p>根据备注信息获取域名。</p>
+     * @param Remark <p>根据备注信息获取域名。</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 要获取域名的更新时间起始时间点，如 '2021-05-01 03:00:00'。 
-     * @return UpdatedAtBegin 要获取域名的更新时间起始时间点，如 '2021-05-01 03:00:00'。
+     * Get <p>要获取域名的更新时间起始时间点，如 &#39;2021-05-01 03:00:00&#39;。</p> 
+     * @return UpdatedAtBegin <p>要获取域名的更新时间起始时间点，如 &#39;2021-05-01 03:00:00&#39;。</p>
      */
     public String getUpdatedAtBegin() {
         return this.UpdatedAtBegin;
     }
 
     /**
-     * Set 要获取域名的更新时间起始时间点，如 '2021-05-01 03:00:00'。
-     * @param UpdatedAtBegin 要获取域名的更新时间起始时间点，如 '2021-05-01 03:00:00'。
+     * Set <p>要获取域名的更新时间起始时间点，如 &#39;2021-05-01 03:00:00&#39;。</p>
+     * @param UpdatedAtBegin <p>要获取域名的更新时间起始时间点，如 &#39;2021-05-01 03:00:00&#39;。</p>
      */
     public void setUpdatedAtBegin(String UpdatedAtBegin) {
         this.UpdatedAtBegin = UpdatedAtBegin;
     }
 
     /**
-     * Get 要获取域名的更新时间终止时间点，如 '2021-05-10 20:00:00'。 
-     * @return UpdatedAtEnd 要获取域名的更新时间终止时间点，如 '2021-05-10 20:00:00'。
+     * Get <p>要获取域名的更新时间终止时间点，如 &#39;2021-05-10 20:00:00&#39;。</p> 
+     * @return UpdatedAtEnd <p>要获取域名的更新时间终止时间点，如 &#39;2021-05-10 20:00:00&#39;。</p>
      */
     public String getUpdatedAtEnd() {
         return this.UpdatedAtEnd;
     }
 
     /**
-     * Set 要获取域名的更新时间终止时间点，如 '2021-05-10 20:00:00'。
-     * @param UpdatedAtEnd 要获取域名的更新时间终止时间点，如 '2021-05-10 20:00:00'。
+     * Set <p>要获取域名的更新时间终止时间点，如 &#39;2021-05-10 20:00:00&#39;。</p>
+     * @param UpdatedAtEnd <p>要获取域名的更新时间终止时间点，如 &#39;2021-05-10 20:00:00&#39;。</p>
      */
     public void setUpdatedAtEnd(String UpdatedAtEnd) {
         this.UpdatedAtEnd = UpdatedAtEnd;
     }
 
     /**
-     * Get 要获取域名的记录数查询区间起点。 
-     * @return RecordCountBegin 要获取域名的记录数查询区间起点。
+     * Get <p>要获取域名的记录数查询区间起点。</p> 
+     * @return RecordCountBegin <p>要获取域名的记录数查询区间起点。</p>
      */
     public Long getRecordCountBegin() {
         return this.RecordCountBegin;
     }
 
     /**
-     * Set 要获取域名的记录数查询区间起点。
-     * @param RecordCountBegin 要获取域名的记录数查询区间起点。
+     * Set <p>要获取域名的记录数查询区间起点。</p>
+     * @param RecordCountBegin <p>要获取域名的记录数查询区间起点。</p>
      */
     public void setRecordCountBegin(Long RecordCountBegin) {
         this.RecordCountBegin = RecordCountBegin;
     }
 
     /**
-     * Get 要获取域名的记录数查询区间终点。 
-     * @return RecordCountEnd 要获取域名的记录数查询区间终点。
+     * Get <p>要获取域名的记录数查询区间终点。</p> 
+     * @return RecordCountEnd <p>要获取域名的记录数查询区间终点。</p>
      */
     public Long getRecordCountEnd() {
         return this.RecordCountEnd;
     }
 
     /**
-     * Set 要获取域名的记录数查询区间终点。
-     * @param RecordCountEnd 要获取域名的记录数查询区间终点。
+     * Set <p>要获取域名的记录数查询区间终点。</p>
+     * @param RecordCountEnd <p>要获取域名的记录数查询区间终点。</p>
      */
     public void setRecordCountEnd(Long RecordCountEnd) {
         this.RecordCountEnd = RecordCountEnd;
     }
 
     /**
-     * Get 项目ID，"帐号中心-项目管理"拿到项目ID 
-     * @return ProjectId 项目ID，"帐号中心-项目管理"拿到项目ID
+     * Get <p>项目ID，&quot;账号中心-项目管理&quot;拿到项目ID</p> 
+     * @return ProjectId <p>项目ID，&quot;账号中心-项目管理&quot;拿到项目ID</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID，"帐号中心-项目管理"拿到项目ID
-     * @param ProjectId 项目ID，"帐号中心-项目管理"拿到项目ID
+     * Set <p>项目ID，&quot;账号中心-项目管理&quot;拿到项目ID</p>
+     * @param ProjectId <p>项目ID，&quot;账号中心-项目管理&quot;拿到项目ID</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 标签过滤 
-     * @return Tags 标签过滤
+     * Get <p>标签过滤</p> 
+     * @return Tags <p>标签过滤</p>
      */
     public TagItemFilter [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签过滤
-     * @param Tags 标签过滤
+     * Set <p>标签过滤</p>
+     * @param Tags <p>标签过滤</p>
      */
     public void setTags(TagItemFilter [] Tags) {
         this.Tags = Tags;

@@ -636,4 +636,15 @@ public class TrpClient extends AbstractClient{
         return this.internalRequest(req, "ReportBatchCallbackStatus", ReportBatchCallbackStatusResponse.class);
     }
 
+    /**
+     *扫码数据上报
+     * @param req ReportScanDetailRequest
+     * @return ReportScanDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReportScanDetailResponse ReportScanDetail(ReportScanDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ReportScanDetail", ReportScanDetailResponse.class);
+    }
+
 }

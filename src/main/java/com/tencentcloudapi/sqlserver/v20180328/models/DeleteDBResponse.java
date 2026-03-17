@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteDBResponse extends AbstractModel {
 
     /**
-    * 任务流ID
+    * <p>任务流ID</p>
     */
     @SerializedName("FlowId")
     @Expose
@@ -38,16 +38,16 @@ public class DeleteDBResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务流ID 
-     * @return FlowId 任务流ID
+     * Get <p>任务流ID</p> 
+     * @return FlowId <p>任务流ID</p>
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 任务流ID
-     * @param FlowId 任务流ID
+     * Set <p>任务流ID</p>
+     * @param FlowId <p>任务流ID</p>
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;

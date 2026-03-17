@@ -192,6 +192,13 @@ public class ChannelCreateFlowByFilesRequest extends AbstractModel {
     private Boolean OpenDynamicSignFlow;
 
     /**
+    * <p>发起合同流程时对合同流程的部分操作加以限制的配置。</p>
+    */
+    @SerializedName("FlowOperateLimit")
+    @Expose
+    private FlowOperateLimit FlowOperateLimit;
+
+    /**
      * Get <p>合同的发起企业和发起人信息，<a href="https://qcloudimg.tencent-cloud.cn/raw/b69f8aad306c40b7b78d096e39b2edbb.png" target="_blank">点击查看合同发起企业和人展示的位置</a></p><p>此接口下面信息必填。</p><ul><li>渠道应用标识:  Agent.AppId</li><li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId（合同的发起企业）</li><li>第三方平台子客企业中的员工标识: Agent.ProxyOperator.OpenId （合同的发起人）</li></ul> 
      * @return Agent <p>合同的发起企业和发起人信息，<a href="https://qcloudimg.tencent-cloud.cn/raw/b69f8aad306c40b7b78d096e39b2edbb.png" target="_blank">点击查看合同发起企业和人展示的位置</a></p><p>此接口下面信息必填。</p><ul><li>渠道应用标识:  Agent.AppId</li><li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId（合同的发起企业）</li><li>第三方平台子客企业中的员工标识: Agent.ProxyOperator.OpenId （合同的发起人）</li></ul>
      */
@@ -587,6 +594,22 @@ public class ChannelCreateFlowByFilesRequest extends AbstractModel {
         this.OpenDynamicSignFlow = OpenDynamicSignFlow;
     }
 
+    /**
+     * Get <p>发起合同流程时对合同流程的部分操作加以限制的配置。</p> 
+     * @return FlowOperateLimit <p>发起合同流程时对合同流程的部分操作加以限制的配置。</p>
+     */
+    public FlowOperateLimit getFlowOperateLimit() {
+        return this.FlowOperateLimit;
+    }
+
+    /**
+     * Set <p>发起合同流程时对合同流程的部分操作加以限制的配置。</p>
+     * @param FlowOperateLimit <p>发起合同流程时对合同流程的部分操作加以限制的配置。</p>
+     */
+    public void setFlowOperateLimit(FlowOperateLimit FlowOperateLimit) {
+        this.FlowOperateLimit = FlowOperateLimit;
+    }
+
     public ChannelCreateFlowByFilesRequest() {
     }
 
@@ -679,6 +702,9 @@ public class ChannelCreateFlowByFilesRequest extends AbstractModel {
         if (source.OpenDynamicSignFlow != null) {
             this.OpenDynamicSignFlow = new Boolean(source.OpenDynamicSignFlow);
         }
+        if (source.FlowOperateLimit != null) {
+            this.FlowOperateLimit = new FlowOperateLimit(source.FlowOperateLimit);
+        }
     }
 
 
@@ -710,6 +736,7 @@ public class ChannelCreateFlowByFilesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PreviewType", this.PreviewType);
         this.setParamSimple(map, prefix + "OpenDynamicFlow", this.OpenDynamicFlow);
         this.setParamSimple(map, prefix + "OpenDynamicSignFlow", this.OpenDynamicSignFlow);
+        this.setParamObj(map, prefix + "FlowOperateLimit.", this.FlowOperateLimit);
 
     }
 }
