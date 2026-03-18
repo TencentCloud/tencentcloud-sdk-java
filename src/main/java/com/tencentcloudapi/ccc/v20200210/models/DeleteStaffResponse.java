@@ -24,11 +24,18 @@ import java.util.HashMap;
 public class DeleteStaffResponse extends AbstractModel {
 
     /**
-    * 无法删除的状态为在线的客服列表
+    * <p>无法删除的状态为在线的客服列表</p>
     */
     @SerializedName("OnlineStaffList")
     @Expose
     private String [] OnlineStaffList;
+
+    /**
+    * <p>坐席删除详情</p>
+    */
+    @SerializedName("DeleteStatusInfo")
+    @Expose
+    private String DeleteStatusInfo;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +45,35 @@ public class DeleteStaffResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 无法删除的状态为在线的客服列表 
-     * @return OnlineStaffList 无法删除的状态为在线的客服列表
+     * Get <p>无法删除的状态为在线的客服列表</p> 
+     * @return OnlineStaffList <p>无法删除的状态为在线的客服列表</p>
      */
     public String [] getOnlineStaffList() {
         return this.OnlineStaffList;
     }
 
     /**
-     * Set 无法删除的状态为在线的客服列表
-     * @param OnlineStaffList 无法删除的状态为在线的客服列表
+     * Set <p>无法删除的状态为在线的客服列表</p>
+     * @param OnlineStaffList <p>无法删除的状态为在线的客服列表</p>
      */
     public void setOnlineStaffList(String [] OnlineStaffList) {
         this.OnlineStaffList = OnlineStaffList;
+    }
+
+    /**
+     * Get <p>坐席删除详情</p> 
+     * @return DeleteStatusInfo <p>坐席删除详情</p>
+     */
+    public String getDeleteStatusInfo() {
+        return this.DeleteStatusInfo;
+    }
+
+    /**
+     * Set <p>坐席删除详情</p>
+     * @param DeleteStatusInfo <p>坐席删除详情</p>
+     */
+    public void setDeleteStatusInfo(String DeleteStatusInfo) {
+        this.DeleteStatusInfo = DeleteStatusInfo;
     }
 
     /**
@@ -83,6 +106,9 @@ public class DeleteStaffResponse extends AbstractModel {
                 this.OnlineStaffList[i] = new String(source.OnlineStaffList[i]);
             }
         }
+        if (source.DeleteStatusInfo != null) {
+            this.DeleteStatusInfo = new String(source.DeleteStatusInfo);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -94,6 +120,7 @@ public class DeleteStaffResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "OnlineStaffList.", this.OnlineStaffList);
+        this.setParamSimple(map, prefix + "DeleteStatusInfo", this.DeleteStatusInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

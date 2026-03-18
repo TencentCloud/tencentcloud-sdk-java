@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteStaffRequest extends AbstractModel {
 
     /**
-    * 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+    * <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-    * 待删除客服邮箱列表，一次最大支持200个。
+    * <p>待删除客服邮箱列表，一次最大支持200个。</p>
     */
     @SerializedName("StaffList")
     @Expose
     private String [] StaffList;
 
     /**
-     * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
-     * @return SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+     * Get <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p> 
+     * @return SdkAppId <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
-     * @param SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+     * Set <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
+     * @param SdkAppId <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get 待删除客服邮箱列表，一次最大支持200个。 
-     * @return StaffList 待删除客服邮箱列表，一次最大支持200个。
+     * Get <p>待删除客服邮箱列表，一次最大支持200个。</p> 
+     * @return StaffList <p>待删除客服邮箱列表，一次最大支持200个。</p>
      */
     public String [] getStaffList() {
         return this.StaffList;
     }
 
     /**
-     * Set 待删除客服邮箱列表，一次最大支持200个。
-     * @param StaffList 待删除客服邮箱列表，一次最大支持200个。
+     * Set <p>待删除客服邮箱列表，一次最大支持200个。</p>
+     * @param StaffList <p>待删除客服邮箱列表，一次最大支持200个。</p>
      */
     public void setStaffList(String [] StaffList) {
         this.StaffList = StaffList;

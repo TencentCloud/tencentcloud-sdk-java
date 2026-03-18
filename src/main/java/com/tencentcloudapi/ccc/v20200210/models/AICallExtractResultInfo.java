@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class AICallExtractResultInfo extends AbstractModel {
 
     /**
-    * 提取的类型是文本
+    * <p>提取的类型是文本</p>
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-    * 提取的内型是选项
+    * <p>提取的类型是选项</p>
     */
     @SerializedName("Chosen")
     @Expose
     private String [] Chosen;
 
     /**
-    * 提取类型是布尔值
+    * <p>提取类型是布尔值</p>
     */
     @SerializedName("Boolean")
     @Expose
     private Boolean Boolean;
 
     /**
-    * 提取类型是数字
+    * <p>提取类型是数字</p>
     */
     @SerializedName("Number")
     @Expose
     private Float Number;
 
     /**
-     * Get 提取的类型是文本 
-     * @return Text 提取的类型是文本
+     * Get <p>提取的类型是文本</p> 
+     * @return Text <p>提取的类型是文本</p>
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set 提取的类型是文本
-     * @param Text 提取的类型是文本
+     * Set <p>提取的类型是文本</p>
+     * @param Text <p>提取的类型是文本</p>
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get 提取的内型是选项 
-     * @return Chosen 提取的内型是选项
+     * Get <p>提取的类型是选项</p> 
+     * @return Chosen <p>提取的类型是选项</p>
      */
     public String [] getChosen() {
         return this.Chosen;
     }
 
     /**
-     * Set 提取的内型是选项
-     * @param Chosen 提取的内型是选项
+     * Set <p>提取的类型是选项</p>
+     * @param Chosen <p>提取的类型是选项</p>
      */
     public void setChosen(String [] Chosen) {
         this.Chosen = Chosen;
     }
 
     /**
-     * Get 提取类型是布尔值 
-     * @return Boolean 提取类型是布尔值
+     * Get <p>提取类型是布尔值</p> 
+     * @return Boolean <p>提取类型是布尔值</p>
      */
     public Boolean getBoolean() {
         return this.Boolean;
     }
 
     /**
-     * Set 提取类型是布尔值
-     * @param Boolean 提取类型是布尔值
+     * Set <p>提取类型是布尔值</p>
+     * @param Boolean <p>提取类型是布尔值</p>
      */
     public void setBoolean(Boolean Boolean) {
         this.Boolean = Boolean;
     }
 
     /**
-     * Get 提取类型是数字 
-     * @return Number 提取类型是数字
+     * Get <p>提取类型是数字</p> 
+     * @return Number <p>提取类型是数字</p>
      */
     public Float getNumber() {
         return this.Number;
     }
 
     /**
-     * Set 提取类型是数字
-     * @param Number 提取类型是数字
+     * Set <p>提取类型是数字</p>
+     * @param Number <p>提取类型是数字</p>
      */
     public void setNumber(Float Number) {
         this.Number = Number;

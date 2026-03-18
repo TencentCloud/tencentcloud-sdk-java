@@ -120,6 +120,14 @@ public class EventCaseAuditLogOptDto extends AbstractModel {
     private String Description;
 
     /**
+    * 消费次数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ConsumeCount")
+    @Expose
+    private Long ConsumeCount;
+
+    /**
      * Get 事件实例ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CaseId 事件实例ID
@@ -359,6 +367,26 @@ public class EventCaseAuditLogOptDto extends AbstractModel {
         this.Description = Description;
     }
 
+    /**
+     * Get 消费次数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ConsumeCount 消费次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getConsumeCount() {
+        return this.ConsumeCount;
+    }
+
+    /**
+     * Set 消费次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConsumeCount 消费次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConsumeCount(Long ConsumeCount) {
+        this.ConsumeCount = ConsumeCount;
+    }
+
     public EventCaseAuditLogOptDto() {
     }
 
@@ -403,6 +431,9 @@ public class EventCaseAuditLogOptDto extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.ConsumeCount != null) {
+            this.ConsumeCount = new Long(source.ConsumeCount);
+        }
     }
 
 
@@ -422,6 +453,7 @@ public class EventCaseAuditLogOptDto extends AbstractModel {
         this.setParamSimple(map, prefix + "EventTriggerTimestamp", this.EventTriggerTimestamp);
         this.setParamSimple(map, prefix + "LogTimestamp", this.LogTimestamp);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "ConsumeCount", this.ConsumeCount);
 
     }
 }

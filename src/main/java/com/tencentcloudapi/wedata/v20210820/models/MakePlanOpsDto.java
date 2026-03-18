@@ -112,6 +112,14 @@ public class MakePlanOpsDto extends AbstractModel {
     private StrToStrMap [] MapParamList;
 
     /**
+    * 补录扩展属性
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MakeExtList")
+    @Expose
+    private StrToStrMap [] MakeExtList;
+
+    /**
     * 创建人ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -538,6 +546,26 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
      */
     public void setMapParamList(StrToStrMap [] MapParamList) {
         this.MapParamList = MapParamList;
+    }
+
+    /**
+     * Get 补录扩展属性
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MakeExtList 补录扩展属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public StrToStrMap [] getMakeExtList() {
+        return this.MakeExtList;
+    }
+
+    /**
+     * Set 补录扩展属性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MakeExtList 补录扩展属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMakeExtList(StrToStrMap [] MakeExtList) {
+        this.MakeExtList = MakeExtList;
     }
 
     /**
@@ -1108,6 +1136,12 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
                 this.MapParamList[i] = new StrToStrMap(source.MapParamList[i]);
             }
         }
+        if (source.MakeExtList != null) {
+            this.MakeExtList = new StrToStrMap[source.MakeExtList.length];
+            for (int i = 0; i < source.MakeExtList.length; i++) {
+                this.MakeExtList[i] = new StrToStrMap(source.MakeExtList[i]);
+            }
+        }
         if (source.CreatorId != null) {
             this.CreatorId = new String(source.CreatorId);
         }
@@ -1210,6 +1244,7 @@ DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
         this.setParamSimple(map, prefix + "TargetTaskCycle", this.TargetTaskCycle);
         this.setParamSimple(map, prefix + "TargetTaskAction", this.TargetTaskAction);
         this.setParamArrayObj(map, prefix + "MapParamList.", this.MapParamList);
+        this.setParamArrayObj(map, prefix + "MakeExtList.", this.MakeExtList);
         this.setParamSimple(map, prefix + "CreatorId", this.CreatorId);
         this.setParamSimple(map, prefix + "Creator", this.Creator);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);

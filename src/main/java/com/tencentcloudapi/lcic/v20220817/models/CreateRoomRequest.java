@@ -262,6 +262,13 @@ public class CreateRoomRequest extends AbstractModel {
     private Long RecordMerge;
 
     /**
+    * <p>转推开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
+    */
+    @SerializedName("EnableLiveRelay")
+    @Expose
+    private Long EnableLiveRelay;
+
+    /**
      * Get <p>课堂名称。<br>字符数不超过256</p> 
      * @return Name <p>课堂名称。<br>字符数不超过256</p>
      */
@@ -813,6 +820,22 @@ public class CreateRoomRequest extends AbstractModel {
         this.RecordMerge = RecordMerge;
     }
 
+    /**
+     * Get <p>转推开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul> 
+     * @return EnableLiveRelay <p>转推开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
+     */
+    public Long getEnableLiveRelay() {
+        return this.EnableLiveRelay;
+    }
+
+    /**
+     * Set <p>转推开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
+     * @param EnableLiveRelay <p>转推开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
+     */
+    public void setEnableLiveRelay(Long EnableLiveRelay) {
+        this.EnableLiveRelay = EnableLiveRelay;
+    }
+
     public CreateRoomRequest() {
     }
 
@@ -929,6 +952,9 @@ public class CreateRoomRequest extends AbstractModel {
         if (source.RecordMerge != null) {
             this.RecordMerge = new Long(source.RecordMerge);
         }
+        if (source.EnableLiveRelay != null) {
+            this.EnableLiveRelay = new Long(source.EnableLiveRelay);
+        }
     }
 
 
@@ -970,6 +996,7 @@ public class CreateRoomRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "WhiteBoardSnapshotMode", this.WhiteBoardSnapshotMode);
         this.setParamSimple(map, prefix + "SubtitlesTranscription", this.SubtitlesTranscription);
         this.setParamSimple(map, prefix + "RecordMerge", this.RecordMerge);
+        this.setParamSimple(map, prefix + "EnableLiveRelay", this.EnableLiveRelay);
 
     }
 }

@@ -106,6 +106,14 @@ public class TaskFormParams extends AbstractModel {
     private String LatestSavedVersionId;
 
     /**
+    * 任务状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
      * Get 任务ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskId 任务ID
@@ -313,6 +321,26 @@ public class TaskFormParams extends AbstractModel {
         this.LatestSavedVersionId = LatestSavedVersionId;
     }
 
+    /**
+     * Get 任务状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Status 任务状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 任务状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Status 任务状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
     public TaskFormParams() {
     }
 
@@ -354,6 +382,9 @@ public class TaskFormParams extends AbstractModel {
         if (source.LatestSavedVersionId != null) {
             this.LatestSavedVersionId = new String(source.LatestSavedVersionId);
         }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
     }
 
 
@@ -371,6 +402,7 @@ public class TaskFormParams extends AbstractModel {
         this.setParamSimple(map, prefix + "ProductName", this.ProductName);
         this.setParamSimple(map, prefix + "LatestSavedVersion", this.LatestSavedVersion);
         this.setParamSimple(map, prefix + "LatestSavedVersionId", this.LatestSavedVersionId);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

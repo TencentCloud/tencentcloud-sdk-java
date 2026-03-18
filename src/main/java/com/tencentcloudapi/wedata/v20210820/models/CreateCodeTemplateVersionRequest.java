@@ -67,6 +67,13 @@ false表示：针对所有状态的任务均仅生成开发态保存版本。
     private Boolean NeedSubmitScheduleForTemplate;
 
     /**
+    * 指定审批人列表
+    */
+    @SerializedName("AssignApprovalList")
+    @Expose
+    private String [] AssignApprovalList;
+
+    /**
      * Get 模版Id 
      * @return CodeTemplateId 模版Id
      */
@@ -166,6 +173,22 @@ false表示：针对所有状态的任务均仅生成开发态保存版本。
         this.NeedSubmitScheduleForTemplate = NeedSubmitScheduleForTemplate;
     }
 
+    /**
+     * Get 指定审批人列表 
+     * @return AssignApprovalList 指定审批人列表
+     */
+    public String [] getAssignApprovalList() {
+        return this.AssignApprovalList;
+    }
+
+    /**
+     * Set 指定审批人列表
+     * @param AssignApprovalList 指定审批人列表
+     */
+    public void setAssignApprovalList(String [] AssignApprovalList) {
+        this.AssignApprovalList = AssignApprovalList;
+    }
+
     public CreateCodeTemplateVersionRequest() {
     }
 
@@ -198,6 +221,12 @@ false表示：针对所有状态的任务均仅生成开发态保存版本。
         if (source.NeedSubmitScheduleForTemplate != null) {
             this.NeedSubmitScheduleForTemplate = new Boolean(source.NeedSubmitScheduleForTemplate);
         }
+        if (source.AssignApprovalList != null) {
+            this.AssignApprovalList = new String[source.AssignApprovalList.length];
+            for (int i = 0; i < source.AssignApprovalList.length; i++) {
+                this.AssignApprovalList[i] = new String(source.AssignApprovalList[i]);
+            }
+        }
     }
 
 
@@ -211,6 +240,7 @@ false表示：针对所有状态的任务均仅生成开发态保存版本。
         this.setParamArraySimple(map, prefix + "OriginalParams.", this.OriginalParams);
         this.setParamSimple(map, prefix + "VersionRemark", this.VersionRemark);
         this.setParamSimple(map, prefix + "NeedSubmitScheduleForTemplate", this.NeedSubmitScheduleForTemplate);
+        this.setParamArraySimple(map, prefix + "AssignApprovalList.", this.AssignApprovalList);
 
     }
 }

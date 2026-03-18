@@ -53,6 +53,20 @@ public class DescribeOrganizationAuthStatusRequest extends AbstractModel {
     private String LegalName;
 
     /**
+    * 认证流 Id 是指在企业认证过程中，当前操作人的认证流程的唯一标识。每个企业在认证过程中只能有一条认证流认证成功。这意味着在同一认证过程内，一个企业只能有一个认证流程处于成功状态，以确保认证的唯一性和有效性。
+
+
+认证流 Id可以通过回调[授权书认证审核结果回调](https://qian.tencent.com/developers/company/callback_types_staffs/#%E5%8D%81%E5%85%AD-%E6%8E%88%E6%9D%83%E4%B9%A6%E8%AE%A4%E8%AF%81%E5%AE%A1%E6%A0%B8%E7%BB%93%E6%9E%9C%E5%9B%9E%E8%B0%83)获取
+
+注意：
+如果传递了认证流Id，则下面的参数 超管二要素不会生效
+示例值：yDCHHUUckpbdaiqbUxJVsHWy99WG6kTY
+    */
+    @SerializedName("AuthorizationInfoId")
+    @Expose
+    private String AuthorizationInfoId;
+
+    /**
      * Get 执行本接口操作的员工信息。使用此接口时，必须填写userId。 支持填入集团子公司经办人 userId 代发合同。  注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
      * @return Operator 执行本接口操作的员工信息。使用此接口时，必须填写userId。 支持填入集团子公司经办人 userId 代发合同。  注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      */
@@ -120,6 +134,50 @@ public class DescribeOrganizationAuthStatusRequest extends AbstractModel {
         this.LegalName = LegalName;
     }
 
+    /**
+     * Get 认证流 Id 是指在企业认证过程中，当前操作人的认证流程的唯一标识。每个企业在认证过程中只能有一条认证流认证成功。这意味着在同一认证过程内，一个企业只能有一个认证流程处于成功状态，以确保认证的唯一性和有效性。
+
+
+认证流 Id可以通过回调[授权书认证审核结果回调](https://qian.tencent.com/developers/company/callback_types_staffs/#%E5%8D%81%E5%85%AD-%E6%8E%88%E6%9D%83%E4%B9%A6%E8%AE%A4%E8%AF%81%E5%AE%A1%E6%A0%B8%E7%BB%93%E6%9E%9C%E5%9B%9E%E8%B0%83)获取
+
+注意：
+如果传递了认证流Id，则下面的参数 超管二要素不会生效
+示例值：yDCHHUUckpbdaiqbUxJVsHWy99WG6kTY 
+     * @return AuthorizationInfoId 认证流 Id 是指在企业认证过程中，当前操作人的认证流程的唯一标识。每个企业在认证过程中只能有一条认证流认证成功。这意味着在同一认证过程内，一个企业只能有一个认证流程处于成功状态，以确保认证的唯一性和有效性。
+
+
+认证流 Id可以通过回调[授权书认证审核结果回调](https://qian.tencent.com/developers/company/callback_types_staffs/#%E5%8D%81%E5%85%AD-%E6%8E%88%E6%9D%83%E4%B9%A6%E8%AE%A4%E8%AF%81%E5%AE%A1%E6%A0%B8%E7%BB%93%E6%9E%9C%E5%9B%9E%E8%B0%83)获取
+
+注意：
+如果传递了认证流Id，则下面的参数 超管二要素不会生效
+示例值：yDCHHUUckpbdaiqbUxJVsHWy99WG6kTY
+     */
+    public String getAuthorizationInfoId() {
+        return this.AuthorizationInfoId;
+    }
+
+    /**
+     * Set 认证流 Id 是指在企业认证过程中，当前操作人的认证流程的唯一标识。每个企业在认证过程中只能有一条认证流认证成功。这意味着在同一认证过程内，一个企业只能有一个认证流程处于成功状态，以确保认证的唯一性和有效性。
+
+
+认证流 Id可以通过回调[授权书认证审核结果回调](https://qian.tencent.com/developers/company/callback_types_staffs/#%E5%8D%81%E5%85%AD-%E6%8E%88%E6%9D%83%E4%B9%A6%E8%AE%A4%E8%AF%81%E5%AE%A1%E6%A0%B8%E7%BB%93%E6%9E%9C%E5%9B%9E%E8%B0%83)获取
+
+注意：
+如果传递了认证流Id，则下面的参数 超管二要素不会生效
+示例值：yDCHHUUckpbdaiqbUxJVsHWy99WG6kTY
+     * @param AuthorizationInfoId 认证流 Id 是指在企业认证过程中，当前操作人的认证流程的唯一标识。每个企业在认证过程中只能有一条认证流认证成功。这意味着在同一认证过程内，一个企业只能有一个认证流程处于成功状态，以确保认证的唯一性和有效性。
+
+
+认证流 Id可以通过回调[授权书认证审核结果回调](https://qian.tencent.com/developers/company/callback_types_staffs/#%E5%8D%81%E5%85%AD-%E6%8E%88%E6%9D%83%E4%B9%A6%E8%AE%A4%E8%AF%81%E5%AE%A1%E6%A0%B8%E7%BB%93%E6%9E%9C%E5%9B%9E%E8%B0%83)获取
+
+注意：
+如果传递了认证流Id，则下面的参数 超管二要素不会生效
+示例值：yDCHHUUckpbdaiqbUxJVsHWy99WG6kTY
+     */
+    public void setAuthorizationInfoId(String AuthorizationInfoId) {
+        this.AuthorizationInfoId = AuthorizationInfoId;
+    }
+
     public DescribeOrganizationAuthStatusRequest() {
     }
 
@@ -140,6 +198,9 @@ public class DescribeOrganizationAuthStatusRequest extends AbstractModel {
         if (source.LegalName != null) {
             this.LegalName = new String(source.LegalName);
         }
+        if (source.AuthorizationInfoId != null) {
+            this.AuthorizationInfoId = new String(source.AuthorizationInfoId);
+        }
     }
 
 
@@ -151,6 +212,7 @@ public class DescribeOrganizationAuthStatusRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
         this.setParamSimple(map, prefix + "UniformSocialCreditCode", this.UniformSocialCreditCode);
         this.setParamSimple(map, prefix + "LegalName", this.LegalName);
+        this.setParamSimple(map, prefix + "AuthorizationInfoId", this.AuthorizationInfoId);
 
     }
 }

@@ -48,6 +48,9 @@ public enum IoaErrorCode {
      /* 终端导出任务同一时间仅允许一个，请稍后再试。 */
      REQUESTLIMITEXCEEDED_DEVICEDOWNLOADTASK("RequestLimitExceeded.DeviceDownloadTask"),
      
+     /* 网关限流 */
+     REQUESTLIMITEXCEEDED_GATEWAY("RequestLimitExceeded.Gateway"),
+     
      /* 上次操作还未完成，请稍后重试。 */
      REQUESTLIMITEXCEEDED_WAITFORTHELASTOPERATIONTOCOMPLETE("RequestLimitExceeded.WaitForTheLastOperationToComplete"),
      

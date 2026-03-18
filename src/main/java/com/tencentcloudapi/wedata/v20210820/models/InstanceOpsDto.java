@@ -596,6 +596,14 @@ public class InstanceOpsDto extends AbstractModel {
     private StrToStrMap Ext;
 
     /**
+    * 事件列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RelatedEventList")
+    @Expose
+    private EventCaseAuditLogOptDto [] RelatedEventList;
+
+    /**
      * Get 任务ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskId 任务ID
@@ -2019,6 +2027,26 @@ public class InstanceOpsDto extends AbstractModel {
         this.Ext = Ext;
     }
 
+    /**
+     * Get 事件列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RelatedEventList 事件列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public EventCaseAuditLogOptDto [] getRelatedEventList() {
+        return this.RelatedEventList;
+    }
+
+    /**
+     * Set 事件列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RelatedEventList 事件列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRelatedEventList(EventCaseAuditLogOptDto [] RelatedEventList) {
+        this.RelatedEventList = RelatedEventList;
+    }
+
     public InstanceOpsDto() {
     }
 
@@ -2255,6 +2283,12 @@ public class InstanceOpsDto extends AbstractModel {
         if (source.Ext != null) {
             this.Ext = new StrToStrMap(source.Ext);
         }
+        if (source.RelatedEventList != null) {
+            this.RelatedEventList = new EventCaseAuditLogOptDto[source.RelatedEventList.length];
+            for (int i = 0; i < source.RelatedEventList.length; i++) {
+                this.RelatedEventList[i] = new EventCaseAuditLogOptDto(source.RelatedEventList[i]);
+            }
+        }
     }
 
 
@@ -2334,6 +2368,7 @@ public class InstanceOpsDto extends AbstractModel {
         this.setParamSimple(map, prefix + "DlcTaskId", this.DlcTaskId);
         this.setParamSimple(map, prefix + "DlcSparkJobId", this.DlcSparkJobId);
         this.setParamObj(map, prefix + "Ext.", this.Ext);
+        this.setParamArrayObj(map, prefix + "RelatedEventList.", this.RelatedEventList);
 
     }
 }

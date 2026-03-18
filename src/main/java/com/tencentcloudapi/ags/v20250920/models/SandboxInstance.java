@@ -24,253 +24,253 @@ import java.util.HashMap;
 public class SandboxInstance extends AbstractModel {
 
     /**
-    * 沙箱实例唯一标识符
+    * <p>沙箱实例唯一标识符</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 所属沙箱工具 ID
+    * <p>所属沙箱工具 ID</p>
     */
     @SerializedName("ToolId")
     @Expose
     private String ToolId;
 
     /**
-    * 所属沙箱工具名称
+    * <p>所属沙箱工具名称</p>
     */
     @SerializedName("ToolName")
     @Expose
     private String ToolName;
 
     /**
-    * 实例状态：STARTING（启动中）、RUNNING（运行中）、STOPPING（停止中）、STOPPED（已停止）、STOP_FAILED（停止失败）、FAILED（失败状态）
+    * <p>实例状态：STARTING（启动中）、RUNNING（运行中）、STOPPING（停止中）、STOPPED（已停止）、STOP_FAILED（停止失败）、FAILED（失败状态）</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 超时时间（秒），null 表示无超时设置
+    * <p>超时时间（秒），null 表示无超时设置</p>
     */
     @SerializedName("TimeoutSeconds")
     @Expose
     private Long TimeoutSeconds;
 
     /**
-    * 过期时间（ISO 8601 格式），null 表示无过期时间
+    * <p>过期时间（ISO 8601 格式），null 表示无过期时间</p>
     */
     @SerializedName("ExpiresAt")
     @Expose
     private String ExpiresAt;
 
     /**
-    * 停止原因：manual（手动）、timeout（超时）、error（错误）、system（系统），仅在状态为 STOPPED、STOP_FAILED 或 FAILED 时有值。当 provider 停止失败时，状态为 STOP_FAILED，原因为 error
+    * <p>停止原因：manual（手动）、timeout（超时）、error（错误）、system（系统），仅在状态为 STOPPED、STOP_FAILED 或 FAILED 时有值。当 provider 停止失败时，状态为 STOP_FAILED，原因为 error</p>
     */
     @SerializedName("StopReason")
     @Expose
     private String StopReason;
 
     /**
-    * 创建时间（ISO 8601 格式）
+    * <p>创建时间（ISO 8601 格式）</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 更新时间（ISO 8601 格式）
+    * <p>更新时间（ISO 8601 格式）</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 存储挂载选项
+    * <p>存储挂载选项</p>
     */
     @SerializedName("MountOptions")
     @Expose
     private MountOption [] MountOptions;
 
     /**
-    * 沙箱实例自定义配置
+    * <p>沙箱实例自定义配置</p>
     */
     @SerializedName("CustomConfiguration")
     @Expose
     private CustomConfigurationDetail CustomConfiguration;
 
     /**
-     * Get 沙箱实例唯一标识符 
-     * @return InstanceId 沙箱实例唯一标识符
+     * Get <p>沙箱实例唯一标识符</p> 
+     * @return InstanceId <p>沙箱实例唯一标识符</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 沙箱实例唯一标识符
-     * @param InstanceId 沙箱实例唯一标识符
+     * Set <p>沙箱实例唯一标识符</p>
+     * @param InstanceId <p>沙箱实例唯一标识符</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 所属沙箱工具 ID 
-     * @return ToolId 所属沙箱工具 ID
+     * Get <p>所属沙箱工具 ID</p> 
+     * @return ToolId <p>所属沙箱工具 ID</p>
      */
     public String getToolId() {
         return this.ToolId;
     }
 
     /**
-     * Set 所属沙箱工具 ID
-     * @param ToolId 所属沙箱工具 ID
+     * Set <p>所属沙箱工具 ID</p>
+     * @param ToolId <p>所属沙箱工具 ID</p>
      */
     public void setToolId(String ToolId) {
         this.ToolId = ToolId;
     }
 
     /**
-     * Get 所属沙箱工具名称 
-     * @return ToolName 所属沙箱工具名称
+     * Get <p>所属沙箱工具名称</p> 
+     * @return ToolName <p>所属沙箱工具名称</p>
      */
     public String getToolName() {
         return this.ToolName;
     }
 
     /**
-     * Set 所属沙箱工具名称
-     * @param ToolName 所属沙箱工具名称
+     * Set <p>所属沙箱工具名称</p>
+     * @param ToolName <p>所属沙箱工具名称</p>
      */
     public void setToolName(String ToolName) {
         this.ToolName = ToolName;
     }
 
     /**
-     * Get 实例状态：STARTING（启动中）、RUNNING（运行中）、STOPPING（停止中）、STOPPED（已停止）、STOP_FAILED（停止失败）、FAILED（失败状态） 
-     * @return Status 实例状态：STARTING（启动中）、RUNNING（运行中）、STOPPING（停止中）、STOPPED（已停止）、STOP_FAILED（停止失败）、FAILED（失败状态）
+     * Get <p>实例状态：STARTING（启动中）、RUNNING（运行中）、STOPPING（停止中）、STOPPED（已停止）、STOP_FAILED（停止失败）、FAILED（失败状态）</p> 
+     * @return Status <p>实例状态：STARTING（启动中）、RUNNING（运行中）、STOPPING（停止中）、STOPPED（已停止）、STOP_FAILED（停止失败）、FAILED（失败状态）</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 实例状态：STARTING（启动中）、RUNNING（运行中）、STOPPING（停止中）、STOPPED（已停止）、STOP_FAILED（停止失败）、FAILED（失败状态）
-     * @param Status 实例状态：STARTING（启动中）、RUNNING（运行中）、STOPPING（停止中）、STOPPED（已停止）、STOP_FAILED（停止失败）、FAILED（失败状态）
+     * Set <p>实例状态：STARTING（启动中）、RUNNING（运行中）、STOPPING（停止中）、STOPPED（已停止）、STOP_FAILED（停止失败）、FAILED（失败状态）</p>
+     * @param Status <p>实例状态：STARTING（启动中）、RUNNING（运行中）、STOPPING（停止中）、STOPPED（已停止）、STOP_FAILED（停止失败）、FAILED（失败状态）</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 超时时间（秒），null 表示无超时设置 
-     * @return TimeoutSeconds 超时时间（秒），null 表示无超时设置
+     * Get <p>超时时间（秒），null 表示无超时设置</p> 
+     * @return TimeoutSeconds <p>超时时间（秒），null 表示无超时设置</p>
      */
     public Long getTimeoutSeconds() {
         return this.TimeoutSeconds;
     }
 
     /**
-     * Set 超时时间（秒），null 表示无超时设置
-     * @param TimeoutSeconds 超时时间（秒），null 表示无超时设置
+     * Set <p>超时时间（秒），null 表示无超时设置</p>
+     * @param TimeoutSeconds <p>超时时间（秒），null 表示无超时设置</p>
      */
     public void setTimeoutSeconds(Long TimeoutSeconds) {
         this.TimeoutSeconds = TimeoutSeconds;
     }
 
     /**
-     * Get 过期时间（ISO 8601 格式），null 表示无过期时间 
-     * @return ExpiresAt 过期时间（ISO 8601 格式），null 表示无过期时间
+     * Get <p>过期时间（ISO 8601 格式），null 表示无过期时间</p> 
+     * @return ExpiresAt <p>过期时间（ISO 8601 格式），null 表示无过期时间</p>
      */
     public String getExpiresAt() {
         return this.ExpiresAt;
     }
 
     /**
-     * Set 过期时间（ISO 8601 格式），null 表示无过期时间
-     * @param ExpiresAt 过期时间（ISO 8601 格式），null 表示无过期时间
+     * Set <p>过期时间（ISO 8601 格式），null 表示无过期时间</p>
+     * @param ExpiresAt <p>过期时间（ISO 8601 格式），null 表示无过期时间</p>
      */
     public void setExpiresAt(String ExpiresAt) {
         this.ExpiresAt = ExpiresAt;
     }
 
     /**
-     * Get 停止原因：manual（手动）、timeout（超时）、error（错误）、system（系统），仅在状态为 STOPPED、STOP_FAILED 或 FAILED 时有值。当 provider 停止失败时，状态为 STOP_FAILED，原因为 error 
-     * @return StopReason 停止原因：manual（手动）、timeout（超时）、error（错误）、system（系统），仅在状态为 STOPPED、STOP_FAILED 或 FAILED 时有值。当 provider 停止失败时，状态为 STOP_FAILED，原因为 error
+     * Get <p>停止原因：manual（手动）、timeout（超时）、error（错误）、system（系统），仅在状态为 STOPPED、STOP_FAILED 或 FAILED 时有值。当 provider 停止失败时，状态为 STOP_FAILED，原因为 error</p> 
+     * @return StopReason <p>停止原因：manual（手动）、timeout（超时）、error（错误）、system（系统），仅在状态为 STOPPED、STOP_FAILED 或 FAILED 时有值。当 provider 停止失败时，状态为 STOP_FAILED，原因为 error</p>
      */
     public String getStopReason() {
         return this.StopReason;
     }
 
     /**
-     * Set 停止原因：manual（手动）、timeout（超时）、error（错误）、system（系统），仅在状态为 STOPPED、STOP_FAILED 或 FAILED 时有值。当 provider 停止失败时，状态为 STOP_FAILED，原因为 error
-     * @param StopReason 停止原因：manual（手动）、timeout（超时）、error（错误）、system（系统），仅在状态为 STOPPED、STOP_FAILED 或 FAILED 时有值。当 provider 停止失败时，状态为 STOP_FAILED，原因为 error
+     * Set <p>停止原因：manual（手动）、timeout（超时）、error（错误）、system（系统），仅在状态为 STOPPED、STOP_FAILED 或 FAILED 时有值。当 provider 停止失败时，状态为 STOP_FAILED，原因为 error</p>
+     * @param StopReason <p>停止原因：manual（手动）、timeout（超时）、error（错误）、system（系统），仅在状态为 STOPPED、STOP_FAILED 或 FAILED 时有值。当 provider 停止失败时，状态为 STOP_FAILED，原因为 error</p>
      */
     public void setStopReason(String StopReason) {
         this.StopReason = StopReason;
     }
 
     /**
-     * Get 创建时间（ISO 8601 格式） 
-     * @return CreateTime 创建时间（ISO 8601 格式）
+     * Get <p>创建时间（ISO 8601 格式）</p> 
+     * @return CreateTime <p>创建时间（ISO 8601 格式）</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间（ISO 8601 格式）
-     * @param CreateTime 创建时间（ISO 8601 格式）
+     * Set <p>创建时间（ISO 8601 格式）</p>
+     * @param CreateTime <p>创建时间（ISO 8601 格式）</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 更新时间（ISO 8601 格式） 
-     * @return UpdateTime 更新时间（ISO 8601 格式）
+     * Get <p>更新时间（ISO 8601 格式）</p> 
+     * @return UpdateTime <p>更新时间（ISO 8601 格式）</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 更新时间（ISO 8601 格式）
-     * @param UpdateTime 更新时间（ISO 8601 格式）
+     * Set <p>更新时间（ISO 8601 格式）</p>
+     * @param UpdateTime <p>更新时间（ISO 8601 格式）</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 存储挂载选项 
-     * @return MountOptions 存储挂载选项
+     * Get <p>存储挂载选项</p> 
+     * @return MountOptions <p>存储挂载选项</p>
      */
     public MountOption [] getMountOptions() {
         return this.MountOptions;
     }
 
     /**
-     * Set 存储挂载选项
-     * @param MountOptions 存储挂载选项
+     * Set <p>存储挂载选项</p>
+     * @param MountOptions <p>存储挂载选项</p>
      */
     public void setMountOptions(MountOption [] MountOptions) {
         this.MountOptions = MountOptions;
     }
 
     /**
-     * Get 沙箱实例自定义配置 
-     * @return CustomConfiguration 沙箱实例自定义配置
+     * Get <p>沙箱实例自定义配置</p> 
+     * @return CustomConfiguration <p>沙箱实例自定义配置</p>
      */
     public CustomConfigurationDetail getCustomConfiguration() {
         return this.CustomConfiguration;
     }
 
     /**
-     * Set 沙箱实例自定义配置
-     * @param CustomConfiguration 沙箱实例自定义配置
+     * Set <p>沙箱实例自定义配置</p>
+     * @param CustomConfiguration <p>沙箱实例自定义配置</p>
      */
     public void setCustomConfiguration(CustomConfigurationDetail CustomConfiguration) {
         this.CustomConfiguration = CustomConfiguration;

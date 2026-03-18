@@ -183,6 +183,13 @@ public class CreateSchemeUrlRequest extends AbstractModel {
     private Boolean PickUpAfterJoined;
 
     /**
+    * 是否允许此链接中签署方批量确认已读文件。 <ul><li>false (默认): 不允许批量确认已读文件。</li> <li>true : 允许批量确认已读文件。</li></ul> 注：`1. 此功能为白名单功能，使用前请联系对应客户经理进行开通。2. 使用此功能时，FlowIds参数必传。3. 对于企业签署方，如果对印章/签名控件有限制要求，需要保证所有印章/签名签署控件限制要求(印章id或印章/签名类型限制)一致，否则无法使用此功能。`
+    */
+    @SerializedName("CanSkipReadFlow")
+    @Expose
+    private Boolean CanSkipReadFlow;
+
+    /**
      * Get 执行本接口操作的员工信息, userId 必填。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
      * @return Operator 执行本接口操作的员工信息, userId 必填。
@@ -614,6 +621,22 @@ public class CreateSchemeUrlRequest extends AbstractModel {
         this.PickUpAfterJoined = PickUpAfterJoined;
     }
 
+    /**
+     * Get 是否允许此链接中签署方批量确认已读文件。 <ul><li>false (默认): 不允许批量确认已读文件。</li> <li>true : 允许批量确认已读文件。</li></ul> 注：`1. 此功能为白名单功能，使用前请联系对应客户经理进行开通。2. 使用此功能时，FlowIds参数必传。3. 对于企业签署方，如果对印章/签名控件有限制要求，需要保证所有印章/签名签署控件限制要求(印章id或印章/签名类型限制)一致，否则无法使用此功能。` 
+     * @return CanSkipReadFlow 是否允许此链接中签署方批量确认已读文件。 <ul><li>false (默认): 不允许批量确认已读文件。</li> <li>true : 允许批量确认已读文件。</li></ul> 注：`1. 此功能为白名单功能，使用前请联系对应客户经理进行开通。2. 使用此功能时，FlowIds参数必传。3. 对于企业签署方，如果对印章/签名控件有限制要求，需要保证所有印章/签名签署控件限制要求(印章id或印章/签名类型限制)一致，否则无法使用此功能。`
+     */
+    public Boolean getCanSkipReadFlow() {
+        return this.CanSkipReadFlow;
+    }
+
+    /**
+     * Set 是否允许此链接中签署方批量确认已读文件。 <ul><li>false (默认): 不允许批量确认已读文件。</li> <li>true : 允许批量确认已读文件。</li></ul> 注：`1. 此功能为白名单功能，使用前请联系对应客户经理进行开通。2. 使用此功能时，FlowIds参数必传。3. 对于企业签署方，如果对印章/签名控件有限制要求，需要保证所有印章/签名签署控件限制要求(印章id或印章/签名类型限制)一致，否则无法使用此功能。`
+     * @param CanSkipReadFlow 是否允许此链接中签署方批量确认已读文件。 <ul><li>false (默认): 不允许批量确认已读文件。</li> <li>true : 允许批量确认已读文件。</li></ul> 注：`1. 此功能为白名单功能，使用前请联系对应客户经理进行开通。2. 使用此功能时，FlowIds参数必传。3. 对于企业签署方，如果对印章/签名控件有限制要求，需要保证所有印章/签名签署控件限制要求(印章id或印章/签名类型限制)一致，否则无法使用此功能。`
+     */
+    public void setCanSkipReadFlow(Boolean CanSkipReadFlow) {
+        this.CanSkipReadFlow = CanSkipReadFlow;
+    }
+
     public CreateSchemeUrlRequest() {
     }
 
@@ -676,6 +699,9 @@ public class CreateSchemeUrlRequest extends AbstractModel {
         if (source.PickUpAfterJoined != null) {
             this.PickUpAfterJoined = new Boolean(source.PickUpAfterJoined);
         }
+        if (source.CanSkipReadFlow != null) {
+            this.CanSkipReadFlow = new Boolean(source.CanSkipReadFlow);
+        }
     }
 
 
@@ -700,6 +726,7 @@ public class CreateSchemeUrlRequest extends AbstractModel {
         this.setParamObj(map, prefix + "FlowGroupUrlInfo.", this.FlowGroupUrlInfo);
         this.setParamSimple(map, prefix + "UrlUseEnv", this.UrlUseEnv);
         this.setParamSimple(map, prefix + "PickUpAfterJoined", this.PickUpAfterJoined);
+        this.setParamSimple(map, prefix + "CanSkipReadFlow", this.CanSkipReadFlow);
 
     }
 }

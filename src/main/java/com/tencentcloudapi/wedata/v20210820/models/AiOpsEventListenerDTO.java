@@ -80,6 +80,46 @@ public class AiOpsEventListenerDTO extends AbstractModel {
     private String EventBroadcastType;
 
     /**
+    * 事件生产者任务Id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProducerTaskId")
+    @Expose
+    private String ProducerTaskId;
+
+    /**
+    * 事件维度
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Dimension")
+    @Expose
+    private String Dimension;
+
+    /**
+    * 事件状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
+    * 事件触发时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EventTriggerTs")
+    @Expose
+    private String EventTriggerTs;
+
+    /**
+    * 事件ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CaseId")
+    @Expose
+    private String CaseId;
+
+    /**
      * Get 事件名
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return EventName 事件名
@@ -219,6 +259,106 @@ public class AiOpsEventListenerDTO extends AbstractModel {
         this.EventBroadcastType = EventBroadcastType;
     }
 
+    /**
+     * Get 事件生产者任务Id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProducerTaskId 事件生产者任务Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProducerTaskId() {
+        return this.ProducerTaskId;
+    }
+
+    /**
+     * Set 事件生产者任务Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProducerTaskId 事件生产者任务Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProducerTaskId(String ProducerTaskId) {
+        this.ProducerTaskId = ProducerTaskId;
+    }
+
+    /**
+     * Get 事件维度
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Dimension 事件维度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDimension() {
+        return this.Dimension;
+    }
+
+    /**
+     * Set 事件维度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Dimension 事件维度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDimension(String Dimension) {
+        this.Dimension = Dimension;
+    }
+
+    /**
+     * Get 事件状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Status 事件状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 事件状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Status 事件状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 事件触发时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EventTriggerTs 事件触发时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEventTriggerTs() {
+        return this.EventTriggerTs;
+    }
+
+    /**
+     * Set 事件触发时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EventTriggerTs 事件触发时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEventTriggerTs(String EventTriggerTs) {
+        this.EventTriggerTs = EventTriggerTs;
+    }
+
+    /**
+     * Get 事件ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CaseId 事件ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCaseId() {
+        return this.CaseId;
+    }
+
+    /**
+     * Set 事件ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CaseId 事件ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCaseId(String CaseId) {
+        this.CaseId = CaseId;
+    }
+
     public AiOpsEventListenerDTO() {
     }
 
@@ -251,6 +391,21 @@ public class AiOpsEventListenerDTO extends AbstractModel {
         if (source.EventBroadcastType != null) {
             this.EventBroadcastType = new String(source.EventBroadcastType);
         }
+        if (source.ProducerTaskId != null) {
+            this.ProducerTaskId = new String(source.ProducerTaskId);
+        }
+        if (source.Dimension != null) {
+            this.Dimension = new String(source.Dimension);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.EventTriggerTs != null) {
+            this.EventTriggerTs = new String(source.EventTriggerTs);
+        }
+        if (source.CaseId != null) {
+            this.CaseId = new String(source.CaseId);
+        }
     }
 
 
@@ -265,6 +420,11 @@ public class AiOpsEventListenerDTO extends AbstractModel {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamArrayObj(map, prefix + "PropertiesList.", this.PropertiesList);
         this.setParamSimple(map, prefix + "EventBroadcastType", this.EventBroadcastType);
+        this.setParamSimple(map, prefix + "ProducerTaskId", this.ProducerTaskId);
+        this.setParamSimple(map, prefix + "Dimension", this.Dimension);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "EventTriggerTs", this.EventTriggerTs);
+        this.setParamSimple(map, prefix + "CaseId", this.CaseId);
 
     }
 }

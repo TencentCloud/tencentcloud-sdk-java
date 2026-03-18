@@ -48,7 +48,7 @@ public class PrometheusInstanceTenantUsage extends AbstractModel {
     private Float Total;
 
     /**
-    * 基础指标用量
+    * 基础指标用量个数
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Basic")
@@ -56,7 +56,7 @@ public class PrometheusInstanceTenantUsage extends AbstractModel {
     private Float Basic;
 
     /**
-    * 付费指标用量
+    * 付费指标用量个数
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Fee")
@@ -124,9 +124,9 @@ public class PrometheusInstanceTenantUsage extends AbstractModel {
     }
 
     /**
-     * Get 基础指标用量
+     * Get 基础指标用量个数
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Basic 基础指标用量
+     * @return Basic 基础指标用量个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getBasic() {
@@ -134,9 +134,9 @@ public class PrometheusInstanceTenantUsage extends AbstractModel {
     }
 
     /**
-     * Set 基础指标用量
+     * Set 基础指标用量个数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Basic 基础指标用量
+     * @param Basic 基础指标用量个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBasic(Float Basic) {
@@ -144,9 +144,9 @@ public class PrometheusInstanceTenantUsage extends AbstractModel {
     }
 
     /**
-     * Get 付费指标用量
+     * Get 付费指标用量个数
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Fee 付费指标用量
+     * @return Fee 付费指标用量个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getFee() {
@@ -154,9 +154,9 @@ public class PrometheusInstanceTenantUsage extends AbstractModel {
     }
 
     /**
-     * Set 付费指标用量
+     * Set 付费指标用量个数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Fee 付费指标用量
+     * @param Fee 付费指标用量个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFee(Float Fee) {

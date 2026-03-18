@@ -80,6 +80,13 @@ public class NoticeContentTmplItem extends AbstractModel {
     private PagerDutyRobotNoticeTmplMatcher [] PagerDutyRobot;
 
     /**
+    * GoogleChat
+    */
+    @SerializedName("GoogleChatRobot")
+    @Expose
+    private GoogleChatRobotNoticeTmplMatcher [] GoogleChatRobot;
+
+    /**
      * Get 官网通知渠道配置
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return QCloudYehe 官网通知渠道配置
@@ -219,6 +226,22 @@ public class NoticeContentTmplItem extends AbstractModel {
         this.PagerDutyRobot = PagerDutyRobot;
     }
 
+    /**
+     * Get GoogleChat 
+     * @return GoogleChatRobot GoogleChat
+     */
+    public GoogleChatRobotNoticeTmplMatcher [] getGoogleChatRobot() {
+        return this.GoogleChatRobot;
+    }
+
+    /**
+     * Set GoogleChat
+     * @param GoogleChatRobot GoogleChat
+     */
+    public void setGoogleChatRobot(GoogleChatRobotNoticeTmplMatcher [] GoogleChatRobot) {
+        this.GoogleChatRobot = GoogleChatRobot;
+    }
+
     public NoticeContentTmplItem() {
     }
 
@@ -269,6 +292,12 @@ public class NoticeContentTmplItem extends AbstractModel {
                 this.PagerDutyRobot[i] = new PagerDutyRobotNoticeTmplMatcher(source.PagerDutyRobot[i]);
             }
         }
+        if (source.GoogleChatRobot != null) {
+            this.GoogleChatRobot = new GoogleChatRobotNoticeTmplMatcher[source.GoogleChatRobot.length];
+            for (int i = 0; i < source.GoogleChatRobot.length; i++) {
+                this.GoogleChatRobot[i] = new GoogleChatRobotNoticeTmplMatcher(source.GoogleChatRobot[i]);
+            }
+        }
     }
 
 
@@ -283,6 +312,7 @@ public class NoticeContentTmplItem extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Webhook.", this.Webhook);
         this.setParamArrayObj(map, prefix + "TeamsRobot.", this.TeamsRobot);
         this.setParamArrayObj(map, prefix + "PagerDutyRobot.", this.PagerDutyRobot);
+        this.setParamArrayObj(map, prefix + "GoogleChatRobot.", this.GoogleChatRobot);
 
     }
 }

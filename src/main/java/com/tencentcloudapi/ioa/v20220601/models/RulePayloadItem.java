@@ -64,6 +64,14 @@ public class RulePayloadItem extends AbstractModel {
     private String RelateOption;
 
     /**
+    * 值类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ValueType")
+    @Expose
+    private String ValueType;
+
+    /**
      * Get 字段Key
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FieldKey 字段Key
@@ -163,6 +171,26 @@ public class RulePayloadItem extends AbstractModel {
         this.RelateOption = RelateOption;
     }
 
+    /**
+     * Get 值类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ValueType 值类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getValueType() {
+        return this.ValueType;
+    }
+
+    /**
+     * Set 值类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ValueType 值类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setValueType(String ValueType) {
+        this.ValueType = ValueType;
+    }
+
     public RulePayloadItem() {
     }
 
@@ -192,6 +220,9 @@ public class RulePayloadItem extends AbstractModel {
         if (source.RelateOption != null) {
             this.RelateOption = new String(source.RelateOption);
         }
+        if (source.ValueType != null) {
+            this.ValueType = new String(source.ValueType);
+        }
     }
 
 
@@ -204,6 +235,7 @@ public class RulePayloadItem extends AbstractModel {
         this.setParamArraySimple(map, prefix + "Value.", this.Value);
         this.setParamArrayObj(map, prefix + "Groups.", this.Groups);
         this.setParamSimple(map, prefix + "RelateOption", this.RelateOption);
+        this.setParamSimple(map, prefix + "ValueType", this.ValueType);
 
     }
 }

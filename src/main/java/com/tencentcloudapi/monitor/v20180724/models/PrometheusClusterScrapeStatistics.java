@@ -31,7 +31,7 @@ public class PrometheusClusterScrapeStatistics extends AbstractModel {
     private String ClusterID;
 
     /**
-    * 被采集的点数
+    * 被采集的点个数
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScrapedRate")
@@ -47,7 +47,7 @@ public class PrometheusClusterScrapeStatistics extends AbstractModel {
     private PrometheusJobScrapeStatistics [] Jobs;
 
     /**
-    * 过滤前的指标采集速率
+    * 每秒过滤前的指标采集速率
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SamplesRate")
@@ -71,9 +71,9 @@ public class PrometheusClusterScrapeStatistics extends AbstractModel {
     }
 
     /**
-     * Get 被采集的点数
+     * Get 被采集的点个数
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScrapedRate 被采集的点数
+     * @return ScrapedRate 被采集的点个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getScrapedRate() {
@@ -81,9 +81,9 @@ public class PrometheusClusterScrapeStatistics extends AbstractModel {
     }
 
     /**
-     * Set 被采集的点数
+     * Set 被采集的点个数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScrapedRate 被采集的点数
+     * @param ScrapedRate 被采集的点个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScrapedRate(Float ScrapedRate) {
@@ -111,9 +111,9 @@ public class PrometheusClusterScrapeStatistics extends AbstractModel {
     }
 
     /**
-     * Get 过滤前的指标采集速率
+     * Get 每秒过滤前的指标采集速率
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SamplesRate 过滤前的指标采集速率
+     * @return SamplesRate 每秒过滤前的指标采集速率
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getSamplesRate() {
@@ -121,9 +121,9 @@ public class PrometheusClusterScrapeStatistics extends AbstractModel {
     }
 
     /**
-     * Set 过滤前的指标采集速率
+     * Set 每秒过滤前的指标采集速率
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SamplesRate 过滤前的指标采集速率
+     * @param SamplesRate 每秒过滤前的指标采集速率
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSamplesRate(Float SamplesRate) {

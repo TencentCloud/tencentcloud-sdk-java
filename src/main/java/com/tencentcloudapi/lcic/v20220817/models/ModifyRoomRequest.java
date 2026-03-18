@@ -101,7 +101,7 @@ public class ModifyRoomRequest extends AbstractModel {
     private String SubType;
 
     /**
-    * <p>禁止录制。可以有以下取值：<br>0 不禁止录制（默认值）<br>1 禁止录制<br>直播开始后不允许修改。</p>
+    * <p>录制方式。</p><p>枚举值：</p><ul><li>0： 开启自动录制</li><li>1： 禁止录制</li><li>2： 开启手动录制。（仅支持页面录制，需通过startRecord、stopRecord接口控制录制的开始和结束。）</li><li>3： 信令录制</li></ul>
     */
     @SerializedName("DisableRecord")
     @Expose
@@ -232,6 +232,13 @@ public class ModifyRoomRequest extends AbstractModel {
     @SerializedName("RecordMerge")
     @Expose
     private Long RecordMerge;
+
+    /**
+    * <p>转推开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
+    */
+    @SerializedName("EnableLiveRelay")
+    @Expose
+    private Long EnableLiveRelay;
 
     /**
      * Get <p>房间ID。</p> 
@@ -410,16 +417,16 @@ public class ModifyRoomRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>禁止录制。可以有以下取值：<br>0 不禁止录制（默认值）<br>1 禁止录制<br>直播开始后不允许修改。</p> 
-     * @return DisableRecord <p>禁止录制。可以有以下取值：<br>0 不禁止录制（默认值）<br>1 禁止录制<br>直播开始后不允许修改。</p>
+     * Get <p>录制方式。</p><p>枚举值：</p><ul><li>0： 开启自动录制</li><li>1： 禁止录制</li><li>2： 开启手动录制。（仅支持页面录制，需通过startRecord、stopRecord接口控制录制的开始和结束。）</li><li>3： 信令录制</li></ul> 
+     * @return DisableRecord <p>录制方式。</p><p>枚举值：</p><ul><li>0： 开启自动录制</li><li>1： 禁止录制</li><li>2： 开启手动录制。（仅支持页面录制，需通过startRecord、stopRecord接口控制录制的开始和结束。）</li><li>3： 信令录制</li></ul>
      */
     public Long getDisableRecord() {
         return this.DisableRecord;
     }
 
     /**
-     * Set <p>禁止录制。可以有以下取值：<br>0 不禁止录制（默认值）<br>1 禁止录制<br>直播开始后不允许修改。</p>
-     * @param DisableRecord <p>禁止录制。可以有以下取值：<br>0 不禁止录制（默认值）<br>1 禁止录制<br>直播开始后不允许修改。</p>
+     * Set <p>录制方式。</p><p>枚举值：</p><ul><li>0： 开启自动录制</li><li>1： 禁止录制</li><li>2： 开启手动录制。（仅支持页面录制，需通过startRecord、stopRecord接口控制录制的开始和结束。）</li><li>3： 信令录制</li></ul>
+     * @param DisableRecord <p>录制方式。</p><p>枚举值：</p><ul><li>0： 开启自动录制</li><li>1： 禁止录制</li><li>2： 开启手动录制。（仅支持页面录制，需通过startRecord、stopRecord接口控制录制的开始和结束。）</li><li>3： 信令录制</li></ul>
      */
     public void setDisableRecord(Long DisableRecord) {
         this.DisableRecord = DisableRecord;
@@ -717,6 +724,22 @@ public class ModifyRoomRequest extends AbstractModel {
         this.RecordMerge = RecordMerge;
     }
 
+    /**
+     * Get <p>转推开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul> 
+     * @return EnableLiveRelay <p>转推开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
+     */
+    public Long getEnableLiveRelay() {
+        return this.EnableLiveRelay;
+    }
+
+    /**
+     * Set <p>转推开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
+     * @param EnableLiveRelay <p>转推开关</p><p>枚举值：</p><ul><li>0： 关闭</li><li>1： 开启</li></ul>
+     */
+    public void setEnableLiveRelay(Long EnableLiveRelay) {
+        this.EnableLiveRelay = EnableLiveRelay;
+    }
+
     public ModifyRoomRequest() {
     }
 
@@ -821,6 +844,9 @@ public class ModifyRoomRequest extends AbstractModel {
         if (source.RecordMerge != null) {
             this.RecordMerge = new Long(source.RecordMerge);
         }
+        if (source.EnableLiveRelay != null) {
+            this.EnableLiveRelay = new Long(source.EnableLiveRelay);
+        }
     }
 
 
@@ -858,6 +884,7 @@ public class ModifyRoomRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SubtitlesTranscription", this.SubtitlesTranscription);
         this.setParamArraySimple(map, prefix + "Guests.", this.Guests);
         this.setParamSimple(map, prefix + "RecordMerge", this.RecordMerge);
+        this.setParamSimple(map, prefix + "EnableLiveRelay", this.EnableLiveRelay);
 
     }
 }

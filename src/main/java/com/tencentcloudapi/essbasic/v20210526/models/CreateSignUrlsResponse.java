@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateSignUrlsResponse extends AbstractModel {
 
     /**
-    * 生成的签署参与者的签署链接信息数组。
+    * <p>生成的签署参与者的签署链接信息数组。</p>
     */
     @SerializedName("SignUrlInfos")
     @Expose
     private SignUrlInfo [] SignUrlInfos;
 
     /**
-    * 生成失败时的错误信息，成功返回”“，顺序和出参SignUrlInfos保持一致
+    * <p>生成失败时的错误信息，成功返回”“，顺序和出参SignUrlInfos保持一致</p>
     */
     @SerializedName("ErrorMessages")
     @Expose
@@ -45,32 +45,32 @@ public class CreateSignUrlsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 生成的签署参与者的签署链接信息数组。 
-     * @return SignUrlInfos 生成的签署参与者的签署链接信息数组。
+     * Get <p>生成的签署参与者的签署链接信息数组。</p> 
+     * @return SignUrlInfos <p>生成的签署参与者的签署链接信息数组。</p>
      */
     public SignUrlInfo [] getSignUrlInfos() {
         return this.SignUrlInfos;
     }
 
     /**
-     * Set 生成的签署参与者的签署链接信息数组。
-     * @param SignUrlInfos 生成的签署参与者的签署链接信息数组。
+     * Set <p>生成的签署参与者的签署链接信息数组。</p>
+     * @param SignUrlInfos <p>生成的签署参与者的签署链接信息数组。</p>
      */
     public void setSignUrlInfos(SignUrlInfo [] SignUrlInfos) {
         this.SignUrlInfos = SignUrlInfos;
     }
 
     /**
-     * Get 生成失败时的错误信息，成功返回”“，顺序和出参SignUrlInfos保持一致 
-     * @return ErrorMessages 生成失败时的错误信息，成功返回”“，顺序和出参SignUrlInfos保持一致
+     * Get <p>生成失败时的错误信息，成功返回”“，顺序和出参SignUrlInfos保持一致</p> 
+     * @return ErrorMessages <p>生成失败时的错误信息，成功返回”“，顺序和出参SignUrlInfos保持一致</p>
      */
     public String [] getErrorMessages() {
         return this.ErrorMessages;
     }
 
     /**
-     * Set 生成失败时的错误信息，成功返回”“，顺序和出参SignUrlInfos保持一致
-     * @param ErrorMessages 生成失败时的错误信息，成功返回”“，顺序和出参SignUrlInfos保持一致
+     * Set <p>生成失败时的错误信息，成功返回”“，顺序和出参SignUrlInfos保持一致</p>
+     * @param ErrorMessages <p>生成失败时的错误信息，成功返回”“，顺序和出参SignUrlInfos保持一致</p>
      */
     public void setErrorMessages(String [] ErrorMessages) {
         this.ErrorMessages = ErrorMessages;

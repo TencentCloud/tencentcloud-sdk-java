@@ -801,6 +801,14 @@ CAN_MANAGE : 有权限管理操作
     private TaskExtOpsDto TaskExtDTO;
 
     /**
+    * 任务时区
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScheduleTimeZone")
+    @Expose
+    private String ScheduleTimeZone;
+
+    /**
      * Get 任务ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskId 任务ID
@@ -2744,6 +2752,26 @@ CAN_MANAGE : 有权限管理操作
         this.TaskExtDTO = TaskExtDTO;
     }
 
+    /**
+     * Get 任务时区
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScheduleTimeZone 任务时区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getScheduleTimeZone() {
+        return this.ScheduleTimeZone;
+    }
+
+    /**
+     * Set 任务时区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScheduleTimeZone 任务时区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScheduleTimeZone(String ScheduleTimeZone) {
+        this.ScheduleTimeZone = ScheduleTimeZone;
+    }
+
     public TaskOpsDto() {
     }
 
@@ -3052,6 +3080,9 @@ CAN_MANAGE : 有权限管理操作
         if (source.TaskExtDTO != null) {
             this.TaskExtDTO = new TaskExtOpsDto(source.TaskExtDTO);
         }
+        if (source.ScheduleTimeZone != null) {
+            this.ScheduleTimeZone = new String(source.ScheduleTimeZone);
+        }
     }
 
 
@@ -3156,6 +3187,7 @@ CAN_MANAGE : 有权限管理操作
         this.setParamSimple(map, prefix + "BundleInfo", this.BundleInfo);
         this.setParamSimple(map, prefix + "WorkflowType", this.WorkflowType);
         this.setParamObj(map, prefix + "TaskExtDTO.", this.TaskExtDTO);
+        this.setParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
 
     }
 }

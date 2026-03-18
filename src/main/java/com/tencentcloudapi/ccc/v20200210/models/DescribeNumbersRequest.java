@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeNumbersRequest extends AbstractModel {
 
     /**
-    * 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+    * <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-    * 页数，从0开始
+    * <p>页数，从0开始</p>
     */
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
 
     /**
-    * 分页大小，默认20
+    * <p>分页大小，默认20</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-     * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
-     * @return SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+     * Get <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p> 
+     * @return SdkAppId <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
-     * @param SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+     * Set <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
+     * @param SdkAppId <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get 页数，从0开始 
-     * @return PageNumber 页数，从0开始
+     * Get <p>页数，从0开始</p> 
+     * @return PageNumber <p>页数，从0开始</p>
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set 页数，从0开始
-     * @param PageNumber 页数，从0开始
+     * Set <p>页数，从0开始</p>
+     * @param PageNumber <p>页数，从0开始</p>
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 分页大小，默认20 
-     * @return PageSize 分页大小，默认20
+     * Get <p>分页大小，默认20</p> 
+     * @return PageSize <p>分页大小，默认20</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 分页大小，默认20
-     * @param PageSize 分页大小，默认20
+     * Set <p>分页大小，默认20</p>
+     * @param PageSize <p>分页大小，默认20</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;

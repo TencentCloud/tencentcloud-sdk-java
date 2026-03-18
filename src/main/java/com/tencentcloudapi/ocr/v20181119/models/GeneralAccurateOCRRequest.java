@@ -24,187 +24,233 @@ import java.util.HashMap;
 public class GeneralAccurateOCRRequest extends AbstractModel {
 
     /**
-    * 图片/PDF的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+    * <p>图片/PDF的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。</p>
     */
     @SerializedName("ImageBase64")
     @Expose
     private String ImageBase64;
 
     /**
-    * 图片/PDF的 Url 地址。要求图片经Base64编码后不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片下载时间不超过 3 秒。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+    * <p>图片/PDF的 Url 地址。要求图片经Base64编码后不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片下载时间不超过 3 秒。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。</p>
     */
     @SerializedName("ImageUrl")
     @Expose
     private String ImageUrl;
 
     /**
-    * 是否返回单字信息，默认值为false，注：仅ConfigID配置为OCR时支持。
+    * <p>是否返回单字信息，默认值为false，注：仅ConfigID配置为OCR时支持。</p>
     */
     @SerializedName("IsWords")
     @Expose
     private Boolean IsWords;
 
     /**
-    * 是否开启原图切图检测功能，开启后可提升“整图面积大，但单字符占比面积小”（例如：试卷）场景下的识别效果，默认关，注：仅ConfigID配置为OCR时支持。
+    * <p>是否开启原图切图检测功能，开启后可提升“整图面积大，但单字符占比面积小”（例如：试卷）场景下的识别效果，默认关，注：仅ConfigID配置为OCR时支持。</p>
     */
     @SerializedName("EnableDetectSplit")
     @Expose
     private Boolean EnableDetectSplit;
 
     /**
-    * 是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。
+    * <p>是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。</p>
     */
     @SerializedName("IsPdf")
     @Expose
     private Boolean IsPdf;
 
     /**
-    * 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
+    * <p>需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。</p>
     */
     @SerializedName("PdfPageNumber")
     @Expose
     private Long PdfPageNumber;
 
     /**
-    * 文本检测开关，默认为true。设置为false可直接进行单行识别，适用于仅包含正向单行文本的图片场景。
+    * <p>文本检测开关，默认为true。设置为false可直接进行单行识别，适用于仅包含正向单行文本的图片场景。</p>
     */
     @SerializedName("EnableDetectText")
     @Expose
     private Boolean EnableDetectText;
 
     /**
-    * 配置ID支持： OCR -- 通用场景 MulOCR--多语种场景，默认值为OCR
+    * <p>配置ID支持： OCR -- 通用场景 MulOCR--多语种场景，默认值为OCR</p>
     */
     @SerializedName("ConfigID")
     @Expose
     private String ConfigID;
 
     /**
-     * Get 图片/PDF的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。 
-     * @return ImageBase64 图片/PDF的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+    * <p>需要识别的文字类型，默认识别全部类型的文字。 0：自动识别全部类型文字 1：仅识别手写体文字 2：仅识别印刷体文字</p>
+    */
+    @SerializedName("WordsType")
+    @Expose
+    private String WordsType;
+
+    /**
+    * <p>支持输出单行文字的语种信息，开启后耗时会略有增加。</p>
+    */
+    @SerializedName("LanguageInfo")
+    @Expose
+    private Boolean LanguageInfo;
+
+    /**
+     * Get <p>图片/PDF的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。</p> 
+     * @return ImageBase64 <p>图片/PDF的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。</p>
      */
     public String getImageBase64() {
         return this.ImageBase64;
     }
 
     /**
-     * Set 图片/PDF的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
-     * @param ImageBase64 图片/PDF的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+     * Set <p>图片/PDF的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。</p>
+     * @param ImageBase64 <p>图片/PDF的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。</p>
      */
     public void setImageBase64(String ImageBase64) {
         this.ImageBase64 = ImageBase64;
     }
 
     /**
-     * Get 图片/PDF的 Url 地址。要求图片经Base64编码后不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片下载时间不超过 3 秒。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。 
-     * @return ImageUrl 图片/PDF的 Url 地址。要求图片经Base64编码后不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片下载时间不超过 3 秒。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+     * Get <p>图片/PDF的 Url 地址。要求图片经Base64编码后不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片下载时间不超过 3 秒。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。</p> 
+     * @return ImageUrl <p>图片/PDF的 Url 地址。要求图片经Base64编码后不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片下载时间不超过 3 秒。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。</p>
      */
     public String getImageUrl() {
         return this.ImageUrl;
     }
 
     /**
-     * Set 图片/PDF的 Url 地址。要求图片经Base64编码后不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片下载时间不超过 3 秒。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
-     * @param ImageUrl 图片/PDF的 Url 地址。要求图片经Base64编码后不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片下载时间不超过 3 秒。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+     * Set <p>图片/PDF的 Url 地址。要求图片经Base64编码后不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片下载时间不超过 3 秒。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。</p>
+     * @param ImageUrl <p>图片/PDF的 Url 地址。要求图片经Base64编码后不超过10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片下载时间不超过 3 秒。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。</p>
      */
     public void setImageUrl(String ImageUrl) {
         this.ImageUrl = ImageUrl;
     }
 
     /**
-     * Get 是否返回单字信息，默认值为false，注：仅ConfigID配置为OCR时支持。 
-     * @return IsWords 是否返回单字信息，默认值为false，注：仅ConfigID配置为OCR时支持。
+     * Get <p>是否返回单字信息，默认值为false，注：仅ConfigID配置为OCR时支持。</p> 
+     * @return IsWords <p>是否返回单字信息，默认值为false，注：仅ConfigID配置为OCR时支持。</p>
      */
     public Boolean getIsWords() {
         return this.IsWords;
     }
 
     /**
-     * Set 是否返回单字信息，默认值为false，注：仅ConfigID配置为OCR时支持。
-     * @param IsWords 是否返回单字信息，默认值为false，注：仅ConfigID配置为OCR时支持。
+     * Set <p>是否返回单字信息，默认值为false，注：仅ConfigID配置为OCR时支持。</p>
+     * @param IsWords <p>是否返回单字信息，默认值为false，注：仅ConfigID配置为OCR时支持。</p>
      */
     public void setIsWords(Boolean IsWords) {
         this.IsWords = IsWords;
     }
 
     /**
-     * Get 是否开启原图切图检测功能，开启后可提升“整图面积大，但单字符占比面积小”（例如：试卷）场景下的识别效果，默认关，注：仅ConfigID配置为OCR时支持。 
-     * @return EnableDetectSplit 是否开启原图切图检测功能，开启后可提升“整图面积大，但单字符占比面积小”（例如：试卷）场景下的识别效果，默认关，注：仅ConfigID配置为OCR时支持。
+     * Get <p>是否开启原图切图检测功能，开启后可提升“整图面积大，但单字符占比面积小”（例如：试卷）场景下的识别效果，默认关，注：仅ConfigID配置为OCR时支持。</p> 
+     * @return EnableDetectSplit <p>是否开启原图切图检测功能，开启后可提升“整图面积大，但单字符占比面积小”（例如：试卷）场景下的识别效果，默认关，注：仅ConfigID配置为OCR时支持。</p>
      */
     public Boolean getEnableDetectSplit() {
         return this.EnableDetectSplit;
     }
 
     /**
-     * Set 是否开启原图切图检测功能，开启后可提升“整图面积大，但单字符占比面积小”（例如：试卷）场景下的识别效果，默认关，注：仅ConfigID配置为OCR时支持。
-     * @param EnableDetectSplit 是否开启原图切图检测功能，开启后可提升“整图面积大，但单字符占比面积小”（例如：试卷）场景下的识别效果，默认关，注：仅ConfigID配置为OCR时支持。
+     * Set <p>是否开启原图切图检测功能，开启后可提升“整图面积大，但单字符占比面积小”（例如：试卷）场景下的识别效果，默认关，注：仅ConfigID配置为OCR时支持。</p>
+     * @param EnableDetectSplit <p>是否开启原图切图检测功能，开启后可提升“整图面积大，但单字符占比面积小”（例如：试卷）场景下的识别效果，默认关，注：仅ConfigID配置为OCR时支持。</p>
      */
     public void setEnableDetectSplit(Boolean EnableDetectSplit) {
         this.EnableDetectSplit = EnableDetectSplit;
     }
 
     /**
-     * Get 是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。 
-     * @return IsPdf 是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。
+     * Get <p>是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。</p> 
+     * @return IsPdf <p>是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。</p>
      */
     public Boolean getIsPdf() {
         return this.IsPdf;
     }
 
     /**
-     * Set 是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。
-     * @param IsPdf 是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。
+     * Set <p>是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。</p>
+     * @param IsPdf <p>是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。</p>
      */
     public void setIsPdf(Boolean IsPdf) {
         this.IsPdf = IsPdf;
     }
 
     /**
-     * Get 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。 
-     * @return PdfPageNumber 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
+     * Get <p>需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。</p> 
+     * @return PdfPageNumber <p>需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。</p>
      */
     public Long getPdfPageNumber() {
         return this.PdfPageNumber;
     }
 
     /**
-     * Set 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
-     * @param PdfPageNumber 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
+     * Set <p>需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。</p>
+     * @param PdfPageNumber <p>需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。</p>
      */
     public void setPdfPageNumber(Long PdfPageNumber) {
         this.PdfPageNumber = PdfPageNumber;
     }
 
     /**
-     * Get 文本检测开关，默认为true。设置为false可直接进行单行识别，适用于仅包含正向单行文本的图片场景。 
-     * @return EnableDetectText 文本检测开关，默认为true。设置为false可直接进行单行识别，适用于仅包含正向单行文本的图片场景。
+     * Get <p>文本检测开关，默认为true。设置为false可直接进行单行识别，适用于仅包含正向单行文本的图片场景。</p> 
+     * @return EnableDetectText <p>文本检测开关，默认为true。设置为false可直接进行单行识别，适用于仅包含正向单行文本的图片场景。</p>
      */
     public Boolean getEnableDetectText() {
         return this.EnableDetectText;
     }
 
     /**
-     * Set 文本检测开关，默认为true。设置为false可直接进行单行识别，适用于仅包含正向单行文本的图片场景。
-     * @param EnableDetectText 文本检测开关，默认为true。设置为false可直接进行单行识别，适用于仅包含正向单行文本的图片场景。
+     * Set <p>文本检测开关，默认为true。设置为false可直接进行单行识别，适用于仅包含正向单行文本的图片场景。</p>
+     * @param EnableDetectText <p>文本检测开关，默认为true。设置为false可直接进行单行识别，适用于仅包含正向单行文本的图片场景。</p>
      */
     public void setEnableDetectText(Boolean EnableDetectText) {
         this.EnableDetectText = EnableDetectText;
     }
 
     /**
-     * Get 配置ID支持： OCR -- 通用场景 MulOCR--多语种场景，默认值为OCR 
-     * @return ConfigID 配置ID支持： OCR -- 通用场景 MulOCR--多语种场景，默认值为OCR
+     * Get <p>配置ID支持： OCR -- 通用场景 MulOCR--多语种场景，默认值为OCR</p> 
+     * @return ConfigID <p>配置ID支持： OCR -- 通用场景 MulOCR--多语种场景，默认值为OCR</p>
      */
     public String getConfigID() {
         return this.ConfigID;
     }
 
     /**
-     * Set 配置ID支持： OCR -- 通用场景 MulOCR--多语种场景，默认值为OCR
-     * @param ConfigID 配置ID支持： OCR -- 通用场景 MulOCR--多语种场景，默认值为OCR
+     * Set <p>配置ID支持： OCR -- 通用场景 MulOCR--多语种场景，默认值为OCR</p>
+     * @param ConfigID <p>配置ID支持： OCR -- 通用场景 MulOCR--多语种场景，默认值为OCR</p>
      */
     public void setConfigID(String ConfigID) {
         this.ConfigID = ConfigID;
+    }
+
+    /**
+     * Get <p>需要识别的文字类型，默认识别全部类型的文字。 0：自动识别全部类型文字 1：仅识别手写体文字 2：仅识别印刷体文字</p> 
+     * @return WordsType <p>需要识别的文字类型，默认识别全部类型的文字。 0：自动识别全部类型文字 1：仅识别手写体文字 2：仅识别印刷体文字</p>
+     */
+    public String getWordsType() {
+        return this.WordsType;
+    }
+
+    /**
+     * Set <p>需要识别的文字类型，默认识别全部类型的文字。 0：自动识别全部类型文字 1：仅识别手写体文字 2：仅识别印刷体文字</p>
+     * @param WordsType <p>需要识别的文字类型，默认识别全部类型的文字。 0：自动识别全部类型文字 1：仅识别手写体文字 2：仅识别印刷体文字</p>
+     */
+    public void setWordsType(String WordsType) {
+        this.WordsType = WordsType;
+    }
+
+    /**
+     * Get <p>支持输出单行文字的语种信息，开启后耗时会略有增加。</p> 
+     * @return LanguageInfo <p>支持输出单行文字的语种信息，开启后耗时会略有增加。</p>
+     */
+    public Boolean getLanguageInfo() {
+        return this.LanguageInfo;
+    }
+
+    /**
+     * Set <p>支持输出单行文字的语种信息，开启后耗时会略有增加。</p>
+     * @param LanguageInfo <p>支持输出单行文字的语种信息，开启后耗时会略有增加。</p>
+     */
+    public void setLanguageInfo(Boolean LanguageInfo) {
+        this.LanguageInfo = LanguageInfo;
     }
 
     public GeneralAccurateOCRRequest() {
@@ -239,6 +285,12 @@ public class GeneralAccurateOCRRequest extends AbstractModel {
         if (source.ConfigID != null) {
             this.ConfigID = new String(source.ConfigID);
         }
+        if (source.WordsType != null) {
+            this.WordsType = new String(source.WordsType);
+        }
+        if (source.LanguageInfo != null) {
+            this.LanguageInfo = new Boolean(source.LanguageInfo);
+        }
     }
 
 
@@ -254,6 +306,8 @@ public class GeneralAccurateOCRRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PdfPageNumber", this.PdfPageNumber);
         this.setParamSimple(map, prefix + "EnableDetectText", this.EnableDetectText);
         this.setParamSimple(map, prefix + "ConfigID", this.ConfigID);
+        this.setParamSimple(map, prefix + "WordsType", this.WordsType);
+        this.setParamSimple(map, prefix + "LanguageInfo", this.LanguageInfo);
 
     }
 }

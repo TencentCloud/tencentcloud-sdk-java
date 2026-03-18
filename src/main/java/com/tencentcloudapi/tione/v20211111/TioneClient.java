@@ -572,6 +572,17 @@ https://cloud.tencent.com/document/product/1278/85305
     }
 
     /**
+     *公共算法版本列表
+     * @param req DescribePublicAlgoVersionListRequest
+     * @return DescribePublicAlgoVersionListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePublicAlgoVersionListResponse DescribePublicAlgoVersionList(DescribePublicAlgoVersionListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePublicAlgoVersionList", DescribePublicAlgoVersionListResponse.class);
+    }
+
+    /**
      *批量查询子账号Linux用户信息
      * @param req DescribeSubAccountLinuxUserInfosRequest
      * @return DescribeSubAccountLinuxUserInfosResponse

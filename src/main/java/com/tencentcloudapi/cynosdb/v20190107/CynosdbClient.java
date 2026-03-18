@@ -116,6 +116,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *计算修改备份保留时长后将会过期删除的备份文件列表
+     * @param req CalculateBackupSaveSecExpiresRequest
+     * @return CalculateBackupSaveSecExpiresResponse
+     * @throws TencentCloudSDKException
+     */
+    public CalculateBackupSaveSecExpiresResponse CalculateBackupSaveSecExpires(CalculateBackupSaveSecExpiresRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CalculateBackupSaveSecExpires", CalculateBackupSaveSecExpiresResponse.class);
+    }
+
+    /**
      *本接口（CheckCreateLibraDBInstance）用于校验集群是否可以添加只读分析引擎实例
      * @param req CheckCreateLibraDBInstanceRequest
      * @return CheckCreateLibraDBInstanceResponse
@@ -124,6 +135,17 @@ public class CynosdbClient extends AbstractClient{
     public CheckCreateLibraDBInstanceResponse CheckCreateLibraDBInstance(CheckCreateLibraDBInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CheckCreateLibraDBInstance", CheckCreateLibraDBInstanceResponse.class);
+    }
+
+    /**
+     *本接口（CheckTransferClusterZone）用于检查是否可以发起跨可用区迁移。
+     * @param req CheckTransferClusterZoneRequest
+     * @return CheckTransferClusterZoneResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckTransferClusterZoneResponse CheckTransferClusterZone(CheckTransferClusterZoneRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckTransferClusterZone", CheckTransferClusterZoneResponse.class);
     }
 
     /**
@@ -190,6 +212,17 @@ public class CynosdbClient extends AbstractClient{
     public CloseWanResponse CloseWan(CloseWanRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CloseWan", CloseWanResponse.class);
+    }
+
+    /**
+     *将备份文件复制到指定的备份保险箱
+     * @param req CopyBackupToVaultRequest
+     * @return CopyBackupToVaultResponse
+     * @throws TencentCloudSDKException
+     */
+    public CopyBackupToVaultResponse CopyBackupToVault(CopyBackupToVaultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CopyBackupToVault", CopyBackupToVaultResponse.class);
     }
 
     /**
@@ -358,6 +391,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *创建备份保险箱
+     * @param req CreateVaultRequest
+     * @return CreateVaultResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVaultResponse CreateVault(CreateVaultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateVault", CreateVaultResponse.class);
+    }
+
+    /**
      *本接口（DeleteAccounts）用于删除用户账号。
      * @param req DeleteAccountsRequest
      * @return DeleteAccountsResponse
@@ -399,6 +443,17 @@ public class CynosdbClient extends AbstractClient{
     public DeleteBackupResponse DeleteBackup(DeleteBackupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteBackup", DeleteBackupResponse.class);
+    }
+
+    /**
+     *从备份保险箱中删除指定的备份文件
+     * @param req DeleteBackupVaultRequest
+     * @return DeleteBackupVaultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteBackupVaultResponse DeleteBackupVault(DeleteBackupVaultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteBackupVault", DeleteBackupVaultResponse.class);
     }
 
     /**
@@ -465,6 +520,17 @@ public class CynosdbClient extends AbstractClient{
     public DeleteParamTemplateResponse DeleteParamTemplate(DeleteParamTemplateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteParamTemplate", DeleteParamTemplateResponse.class);
+    }
+
+    /**
+     *批量删除备份保险箱
+     * @param req DeleteVaultsRequest
+     * @return DeleteVaultsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteVaultsResponse DeleteVaults(DeleteVaultsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteVaults", DeleteVaultsResponse.class);
     }
 
     /**
@@ -611,6 +677,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *根据保险箱ID查询备份文件列表
+     * @param req DescribeBackupListByVaultRequest
+     * @return DescribeBackupListByVaultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupListByVaultResponse DescribeBackupListByVault(DescribeBackupListByVaultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBackupListByVault", DescribeBackupListByVaultResponse.class);
+    }
+
+    /**
      *该接口（DescribeBinlogConfig）用于查询binlog配置
      * @param req DescribeBinlogConfigRequest
      * @return DescribeBinlogConfigResponse
@@ -630,6 +707,17 @@ public class CynosdbClient extends AbstractClient{
     public DescribeBinlogDownloadUrlResponse DescribeBinlogDownloadUrl(DescribeBinlogDownloadUrlRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeBinlogDownloadUrl", DescribeBinlogDownloadUrlResponse.class);
+    }
+
+    /**
+     *查询保险箱内binlog备份
+     * @param req DescribeBinlogListByVaultRequest
+     * @return DescribeBinlogListByVaultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBinlogListByVaultResponse DescribeBinlogListByVault(DescribeBinlogListByVaultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBinlogListByVault", DescribeBinlogListByVaultResponse.class);
     }
 
     /**
@@ -1150,6 +1238,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *查询RedoLog备份
+     * @param req DescribeRedoLogListByVaultRequest
+     * @return DescribeRedoLogListByVaultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRedoLogListByVaultResponse DescribeRedoLogListByVault(DescribeRedoLogListByVaultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRedoLogListByVault", DescribeRedoLogListByVaultResponse.class);
+    }
+
+    /**
      *本接口（DescribeRedoLogs）用于查询redo日志列表。
      * @param req DescribeRedoLogsRequest
      * @return DescribeRedoLogsResponse
@@ -1290,6 +1389,28 @@ public class CynosdbClient extends AbstractClient{
     public DescribeTasksResponse DescribeTasks(DescribeTasksRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeTasks", DescribeTasksResponse.class);
+    }
+
+    /**
+     *查询备份保险箱关联的集群信息列表
+     * @param req DescribeVaultBackupClusterInfoRequest
+     * @return DescribeVaultBackupClusterInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVaultBackupClusterInfoResponse DescribeVaultBackupClusterInfo(DescribeVaultBackupClusterInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVaultBackupClusterInfo", DescribeVaultBackupClusterInfoResponse.class);
+    }
+
+    /**
+     *查询备份保险箱列表，支持分页、筛选和排序
+     * @param req DescribeVaultsRequest
+     * @return DescribeVaultsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVaultsResponse DescribeVaults(DescribeVaultsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVaults", DescribeVaultsResponse.class);
     }
 
     /**
@@ -1587,6 +1708,17 @@ public class CynosdbClient extends AbstractClient{
     public ModifyBinlogSaveDaysResponse ModifyBinlogSaveDays(ModifyBinlogSaveDaysRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyBinlogSaveDays", ModifyBinlogSaveDaysResponse.class);
+    }
+
+    /**
+     *修改集群Binlog和RedoLog自动拷贝到保险箱的配置
+     * @param req ModifyClusterBinlogRedoLogAutoCopyVaultRequest
+     * @return ModifyClusterBinlogRedoLogAutoCopyVaultResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterBinlogRedoLogAutoCopyVaultResponse ModifyClusterBinlogRedoLogAutoCopyVault(ModifyClusterBinlogRedoLogAutoCopyVaultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyClusterBinlogRedoLogAutoCopyVault", ModifyClusterBinlogRedoLogAutoCopyVaultResponse.class);
     }
 
     /**
@@ -1906,6 +2038,17 @@ public class CynosdbClient extends AbstractClient{
     public ModifySnapBackupCrossRegionConfigResponse ModifySnapBackupCrossRegionConfig(ModifySnapBackupCrossRegionConfigRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifySnapBackupCrossRegionConfig", ModifySnapBackupCrossRegionConfigResponse.class);
+    }
+
+    /**
+     *修改备份保险箱配置，包括名称、描述、保留时长、加密密钥、锁定时间等
+     * @param req ModifyVaultRequest
+     * @return ModifyVaultResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyVaultResponse ModifyVault(ModifyVaultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyVault", ModifyVaultResponse.class);
     }
 
     /**
@@ -2302,6 +2445,17 @@ public class CynosdbClient extends AbstractClient{
     public SwitchProxyVpcResponse SwitchProxyVpc(SwitchProxyVpcRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SwitchProxyVpc", SwitchProxyVpcResponse.class);
+    }
+
+    /**
+     *本接口（TransferClusterZone）用于发起跨可用区迁移。
+     * @param req TransferClusterZoneRequest
+     * @return TransferClusterZoneResponse
+     * @throws TencentCloudSDKException
+     */
+    public TransferClusterZoneResponse TransferClusterZone(TransferClusterZoneRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TransferClusterZone", TransferClusterZoneResponse.class);
     }
 
     /**

@@ -73,6 +73,13 @@ public class BatchCreateTaskVersionAsyncRequest extends AbstractModel {
     private Boolean EnableMakeUp;
 
     /**
+    * 指定审批人列表
+    */
+    @SerializedName("AssignApprovalList")
+    @Expose
+    private String [] AssignApprovalList;
+
+    /**
      * Get 任务信息 
      * @return Tasks 任务信息
      */
@@ -184,6 +191,22 @@ public class BatchCreateTaskVersionAsyncRequest extends AbstractModel {
         this.EnableMakeUp = EnableMakeUp;
     }
 
+    /**
+     * Get 指定审批人列表 
+     * @return AssignApprovalList 指定审批人列表
+     */
+    public String [] getAssignApprovalList() {
+        return this.AssignApprovalList;
+    }
+
+    /**
+     * Set 指定审批人列表
+     * @param AssignApprovalList 指定审批人列表
+     */
+    public void setAssignApprovalList(String [] AssignApprovalList) {
+        this.AssignApprovalList = AssignApprovalList;
+    }
+
     public BatchCreateTaskVersionAsyncRequest() {
     }
 
@@ -216,6 +239,12 @@ public class BatchCreateTaskVersionAsyncRequest extends AbstractModel {
         if (source.EnableMakeUp != null) {
             this.EnableMakeUp = new Boolean(source.EnableMakeUp);
         }
+        if (source.AssignApprovalList != null) {
+            this.AssignApprovalList = new String[source.AssignApprovalList.length];
+            for (int i = 0; i < source.AssignApprovalList.length; i++) {
+                this.AssignApprovalList[i] = new String(source.AssignApprovalList[i]);
+            }
+        }
     }
 
 
@@ -230,6 +259,7 @@ public class BatchCreateTaskVersionAsyncRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AlarmRecipientTypes", this.AlarmRecipientTypes);
         this.setParamSimple(map, prefix + "NeedCheckParentSubmitted", this.NeedCheckParentSubmitted);
         this.setParamSimple(map, prefix + "EnableMakeUp", this.EnableMakeUp);
+        this.setParamArraySimple(map, prefix + "AssignApprovalList.", this.AssignApprovalList);
 
     }
 }

@@ -94,6 +94,13 @@ public class CreateSLInstanceRequest extends AbstractModel {
     private String DeploymentMode;
 
     /**
+    * 服务用户名，对不需要用户名的服务不用传，8-16个字符，支持大写字母、小写字母、数字
+    */
+    @SerializedName("UserName")
+    @Expose
+    private String UserName;
+
+    /**
      * Get 实例名称。 
      * @return InstanceName 实例名称。
      */
@@ -253,6 +260,22 @@ public class CreateSLInstanceRequest extends AbstractModel {
         this.DeploymentMode = DeploymentMode;
     }
 
+    /**
+     * Get 服务用户名，对不需要用户名的服务不用传，8-16个字符，支持大写字母、小写字母、数字 
+     * @return UserName 服务用户名，对不需要用户名的服务不用传，8-16个字符，支持大写字母、小写字母、数字
+     */
+    public String getUserName() {
+        return this.UserName;
+    }
+
+    /**
+     * Set 服务用户名，对不需要用户名的服务不用传，8-16个字符，支持大写字母、小写字母、数字
+     * @param UserName 服务用户名，对不需要用户名的服务不用传，8-16个字符，支持大写字母、小写字母、数字
+     */
+    public void setUserName(String UserName) {
+        this.UserName = UserName;
+    }
+
     public CreateSLInstanceRequest() {
     }
 
@@ -297,6 +320,9 @@ public class CreateSLInstanceRequest extends AbstractModel {
         if (source.DeploymentMode != null) {
             this.DeploymentMode = new String(source.DeploymentMode);
         }
+        if (source.UserName != null) {
+            this.UserName = new String(source.UserName);
+        }
     }
 
 
@@ -314,6 +340,7 @@ public class CreateSLInstanceRequest extends AbstractModel {
         this.setParamObj(map, prefix + "PrePaySetting.", this.PrePaySetting);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
         this.setParamSimple(map, prefix + "DeploymentMode", this.DeploymentMode);
+        this.setParamSimple(map, prefix + "UserName", this.UserName);
 
     }
 }

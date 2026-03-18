@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Rectf extends AbstractModel {
 
     /**
-    * 矩形框左上角水平座标
+    * <p>矩形框左上角水平座标</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("X")
@@ -32,7 +32,7 @@ public class Rectf extends AbstractModel {
     private Float X;
 
     /**
-    * 矩形框左上角竖直座标
+    * <p>矩形框左上角竖直座标</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Y")
@@ -40,7 +40,7 @@ public class Rectf extends AbstractModel {
     private Float Y;
 
     /**
-    * 矩形框宽度
+    * <p>矩形框宽度</p><p>单位：像素（px）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Width")
@@ -48,7 +48,7 @@ public class Rectf extends AbstractModel {
     private Float Width;
 
     /**
-    * 矩形框长度
+    * <p>矩形框长度</p><p>单位：像素（px）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Height")
@@ -56,9 +56,9 @@ public class Rectf extends AbstractModel {
     private Float Height;
 
     /**
-     * Get 矩形框左上角水平座标
+     * Get <p>矩形框左上角水平座标</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return X 矩形框左上角水平座标
+     * @return X <p>矩形框左上角水平座标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getX() {
@@ -66,9 +66,9 @@ public class Rectf extends AbstractModel {
     }
 
     /**
-     * Set 矩形框左上角水平座标
+     * Set <p>矩形框左上角水平座标</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param X 矩形框左上角水平座标
+     * @param X <p>矩形框左上角水平座标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setX(Float X) {
@@ -76,9 +76,9 @@ public class Rectf extends AbstractModel {
     }
 
     /**
-     * Get 矩形框左上角竖直座标
+     * Get <p>矩形框左上角竖直座标</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Y 矩形框左上角竖直座标
+     * @return Y <p>矩形框左上角竖直座标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getY() {
@@ -86,9 +86,9 @@ public class Rectf extends AbstractModel {
     }
 
     /**
-     * Set 矩形框左上角竖直座标
+     * Set <p>矩形框左上角竖直座标</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Y 矩形框左上角竖直座标
+     * @param Y <p>矩形框左上角竖直座标</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setY(Float Y) {
@@ -96,9 +96,9 @@ public class Rectf extends AbstractModel {
     }
 
     /**
-     * Get 矩形框宽度
+     * Get <p>矩形框宽度</p><p>单位：像素（px）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Width 矩形框宽度
+     * @return Width <p>矩形框宽度</p><p>单位：像素（px）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getWidth() {
@@ -106,9 +106,9 @@ public class Rectf extends AbstractModel {
     }
 
     /**
-     * Set 矩形框宽度
+     * Set <p>矩形框宽度</p><p>单位：像素（px）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Width 矩形框宽度
+     * @param Width <p>矩形框宽度</p><p>单位：像素（px）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWidth(Float Width) {
@@ -116,9 +116,9 @@ public class Rectf extends AbstractModel {
     }
 
     /**
-     * Get 矩形框长度
+     * Get <p>矩形框长度</p><p>单位：像素（px）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Height 矩形框长度
+     * @return Height <p>矩形框长度</p><p>单位：像素（px）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getHeight() {
@@ -126,9 +126,9 @@ public class Rectf extends AbstractModel {
     }
 
     /**
-     * Set 矩形框长度
+     * Set <p>矩形框长度</p><p>单位：像素（px）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Height 矩形框长度
+     * @param Height <p>矩形框长度</p><p>单位：像素（px）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeight(Float Height) {

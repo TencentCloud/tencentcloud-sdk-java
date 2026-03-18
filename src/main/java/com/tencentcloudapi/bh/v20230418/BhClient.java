@@ -699,6 +699,17 @@ public class BhClient extends AbstractClient{
     }
 
     /**
+     *关闭客户端TCP访问堡垒机
+     * @param req DisableClientTcpAccessRequest
+     * @return DisableClientTcpAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableClientTcpAccessResponse DisableClientTcpAccess(DisableClientTcpAccessRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DisableClientTcpAccess", DisableClientTcpAccessResponse.class);
+    }
+
+    /**
      *关闭公网访问堡垒机
      * @param req DisableExternalAccessRequest
      * @return DisableExternalAccessResponse
@@ -721,6 +732,28 @@ public class BhClient extends AbstractClient{
     }
 
     /**
+     *关闭web访问堡垒机
+     * @param req DisableWebAccessRequest
+     * @return DisableWebAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableWebAccessResponse DisableWebAccess(DisableWebAccessRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DisableWebAccess", DisableWebAccessResponse.class);
+    }
+
+    /**
+     *开启客户端TCP访问堡垒机
+     * @param req EnableClientTcpAccessRequest
+     * @return EnableClientTcpAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableClientTcpAccessResponse EnableClientTcpAccess(EnableClientTcpAccessRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EnableClientTcpAccess", EnableClientTcpAccessResponse.class);
+    }
+
+    /**
      *开启公网访问堡垒机
      * @param req EnableExternalAccessRequest
      * @return EnableExternalAccessResponse
@@ -740,6 +773,17 @@ public class BhClient extends AbstractClient{
     public EnableIntranetAccessResponse EnableIntranetAccess(EnableIntranetAccessRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "EnableIntranetAccess", EnableIntranetAccessResponse.class);
+    }
+
+    /**
+     *开启web访问堡垒机
+     * @param req EnableWebAccessRequest
+     * @return EnableWebAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableWebAccessResponse EnableWebAccess(EnableWebAccessRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EnableWebAccess", EnableWebAccessResponse.class);
     }
 
     /**

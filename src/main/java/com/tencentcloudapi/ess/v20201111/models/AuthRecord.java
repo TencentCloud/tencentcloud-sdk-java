@@ -62,6 +62,14 @@ public class AuthRecord extends AbstractModel {
     private Long AuditStatus;
 
     /**
+    * 审核失败原因，
+当 AuditStatus 返回2时，则会返回具体的原因。
+    */
+    @SerializedName("Reason")
+    @Expose
+    private String Reason;
+
+    /**
      * Get 经办人姓名。 
      * @return OperatorName 经办人姓名。
      */
@@ -165,6 +173,26 @@ public class AuthRecord extends AbstractModel {
         this.AuditStatus = AuditStatus;
     }
 
+    /**
+     * Get 审核失败原因，
+当 AuditStatus 返回2时，则会返回具体的原因。 
+     * @return Reason 审核失败原因，
+当 AuditStatus 返回2时，则会返回具体的原因。
+     */
+    public String getReason() {
+        return this.Reason;
+    }
+
+    /**
+     * Set 审核失败原因，
+当 AuditStatus 返回2时，则会返回具体的原因。
+     * @param Reason 审核失败原因，
+当 AuditStatus 返回2时，则会返回具体的原因。
+     */
+    public void setReason(String Reason) {
+        this.Reason = Reason;
+    }
+
     public AuthRecord() {
     }
 
@@ -185,6 +213,9 @@ public class AuthRecord extends AbstractModel {
         if (source.AuditStatus != null) {
             this.AuditStatus = new Long(source.AuditStatus);
         }
+        if (source.Reason != null) {
+            this.Reason = new String(source.Reason);
+        }
     }
 
 
@@ -196,6 +227,7 @@ public class AuthRecord extends AbstractModel {
         this.setParamSimple(map, prefix + "OperatorMobile", this.OperatorMobile);
         this.setParamSimple(map, prefix + "AuthType", this.AuthType);
         this.setParamSimple(map, prefix + "AuditStatus", this.AuditStatus);
+        this.setParamSimple(map, prefix + "Reason", this.Reason);
 
     }
 }

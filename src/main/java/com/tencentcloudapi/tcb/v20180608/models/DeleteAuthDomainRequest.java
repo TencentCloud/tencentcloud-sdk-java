@@ -31,7 +31,7 @@ public class DeleteAuthDomainRequest extends AbstractModel {
     private String EnvId;
 
     /**
-    * 域名ID列表，支持批量
+    * 域名ID列表，支持批量传递
     */
     @SerializedName("DomainIds")
     @Expose
@@ -54,16 +54,16 @@ public class DeleteAuthDomainRequest extends AbstractModel {
     }
 
     /**
-     * Get 域名ID列表，支持批量 
-     * @return DomainIds 域名ID列表，支持批量
+     * Get 域名ID列表，支持批量传递 
+     * @return DomainIds 域名ID列表，支持批量传递
      */
     public String [] getDomainIds() {
         return this.DomainIds;
     }
 
     /**
-     * Set 域名ID列表，支持批量
-     * @param DomainIds 域名ID列表，支持批量
+     * Set 域名ID列表，支持批量传递
+     * @param DomainIds 域名ID列表，支持批量传递
      */
     public void setDomainIds(String [] DomainIds) {
         this.DomainIds = DomainIds;

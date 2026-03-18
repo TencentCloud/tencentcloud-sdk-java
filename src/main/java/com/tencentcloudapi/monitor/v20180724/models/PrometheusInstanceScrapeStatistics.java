@@ -31,7 +31,7 @@ public class PrometheusInstanceScrapeStatistics extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 被采集的点数
+    * 每秒被采集的点数
     */
     @SerializedName("ScrapedRate")
     @Expose
@@ -53,7 +53,7 @@ public class PrometheusInstanceScrapeStatistics extends AbstractModel {
     private PrometheusClusterScrapeStatistics [] Global;
 
     /**
-    * 过滤前的指标采集速率
+    * 过滤前的每秒指标采集速率
     */
     @SerializedName("SamplesRate")
     @Expose
@@ -76,16 +76,16 @@ public class PrometheusInstanceScrapeStatistics extends AbstractModel {
     }
 
     /**
-     * Get 被采集的点数 
-     * @return ScrapedRate 被采集的点数
+     * Get 每秒被采集的点数 
+     * @return ScrapedRate 每秒被采集的点数
      */
     public Float getScrapedRate() {
         return this.ScrapedRate;
     }
 
     /**
-     * Set 被采集的点数
-     * @param ScrapedRate 被采集的点数
+     * Set 每秒被采集的点数
+     * @param ScrapedRate 每秒被采集的点数
      */
     public void setScrapedRate(Float ScrapedRate) {
         this.ScrapedRate = ScrapedRate;
@@ -128,16 +128,16 @@ public class PrometheusInstanceScrapeStatistics extends AbstractModel {
     }
 
     /**
-     * Get 过滤前的指标采集速率 
-     * @return SamplesRate 过滤前的指标采集速率
+     * Get 过滤前的每秒指标采集速率 
+     * @return SamplesRate 过滤前的每秒指标采集速率
      */
     public Float getSamplesRate() {
         return this.SamplesRate;
     }
 
     /**
-     * Set 过滤前的指标采集速率
-     * @param SamplesRate 过滤前的指标采集速率
+     * Set 过滤前的每秒指标采集速率
+     * @param SamplesRate 过滤前的每秒指标采集速率
      */
     public void setSamplesRate(Float SamplesRate) {
         this.SamplesRate = SamplesRate;

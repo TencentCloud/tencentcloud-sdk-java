@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateSandboxToolResponse extends AbstractModel {
 
     /**
-    * 创建的沙箱工具 ID
+    * <p>创建的沙箱工具 ID</p>
     */
     @SerializedName("ToolId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateSandboxToolResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 创建的沙箱工具 ID 
-     * @return ToolId 创建的沙箱工具 ID
+     * Get <p>创建的沙箱工具 ID</p> 
+     * @return ToolId <p>创建的沙箱工具 ID</p>
      */
     public String getToolId() {
         return this.ToolId;
     }
 
     /**
-     * Set 创建的沙箱工具 ID
-     * @param ToolId 创建的沙箱工具 ID
+     * Set <p>创建的沙箱工具 ID</p>
+     * @param ToolId <p>创建的沙箱工具 ID</p>
      */
     public void setToolId(String ToolId) {
         this.ToolId = ToolId;

@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class BoundingBox extends AbstractModel {
 
     /**
-    * 左上顶点x坐标
+    * <p>左上顶点x坐标</p>
     */
     @SerializedName("X")
     @Expose
     private Long X;
 
     /**
-    * 左上顶点y坐标
+    * <p>左上顶点y坐标</p>
     */
     @SerializedName("Y")
     @Expose
     private Long Y;
 
     /**
-    * 宽
+    * <p>宽</p><p>单位：px</p>
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * 高
+    * <p>高</p><p>单位：px</p>
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-     * Get 左上顶点x坐标 
-     * @return X 左上顶点x坐标
+     * Get <p>左上顶点x坐标</p> 
+     * @return X <p>左上顶点x坐标</p>
      */
     public Long getX() {
         return this.X;
     }
 
     /**
-     * Set 左上顶点x坐标
-     * @param X 左上顶点x坐标
+     * Set <p>左上顶点x坐标</p>
+     * @param X <p>左上顶点x坐标</p>
      */
     public void setX(Long X) {
         this.X = X;
     }
 
     /**
-     * Get 左上顶点y坐标 
-     * @return Y 左上顶点y坐标
+     * Get <p>左上顶点y坐标</p> 
+     * @return Y <p>左上顶点y坐标</p>
      */
     public Long getY() {
         return this.Y;
     }
 
     /**
-     * Set 左上顶点y坐标
-     * @param Y 左上顶点y坐标
+     * Set <p>左上顶点y坐标</p>
+     * @param Y <p>左上顶点y坐标</p>
      */
     public void setY(Long Y) {
         this.Y = Y;
     }
 
     /**
-     * Get 宽 
-     * @return Width 宽
+     * Get <p>宽</p><p>单位：px</p> 
+     * @return Width <p>宽</p><p>单位：px</p>
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 宽
-     * @param Width 宽
+     * Set <p>宽</p><p>单位：px</p>
+     * @param Width <p>宽</p><p>单位：px</p>
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 高 
-     * @return Height 高
+     * Get <p>高</p><p>单位：px</p> 
+     * @return Height <p>高</p><p>单位：px</p>
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 高
-     * @param Height 高
+     * Set <p>高</p><p>单位：px</p>
+     * @param Height <p>高</p><p>单位：px</p>
      */
     public void setHeight(Long Height) {
         this.Height = Height;

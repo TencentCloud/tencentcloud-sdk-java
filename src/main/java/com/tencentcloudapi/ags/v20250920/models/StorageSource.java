@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class StorageSource extends AbstractModel {
 
     /**
-    * 对象存储桶配置
+    * <p>对象存储桶配置</p>
     */
     @SerializedName("Cos")
     @Expose
     private CosStorageSource Cos;
 
     /**
-    * 镜像卷配置
+    * <p>镜像卷配置</p>
     */
     @SerializedName("Image")
     @Expose
     private ImageStorageSource Image;
 
     /**
-    * 文件存储配置
+    * <p>文件存储配置</p>
     */
     @SerializedName("Cfs")
     @Expose
     private CfsStorageSource Cfs;
 
     /**
-     * Get 对象存储桶配置 
-     * @return Cos 对象存储桶配置
+     * Get <p>对象存储桶配置</p> 
+     * @return Cos <p>对象存储桶配置</p>
      */
     public CosStorageSource getCos() {
         return this.Cos;
     }
 
     /**
-     * Set 对象存储桶配置
-     * @param Cos 对象存储桶配置
+     * Set <p>对象存储桶配置</p>
+     * @param Cos <p>对象存储桶配置</p>
      */
     public void setCos(CosStorageSource Cos) {
         this.Cos = Cos;
     }
 
     /**
-     * Get 镜像卷配置 
-     * @return Image 镜像卷配置
+     * Get <p>镜像卷配置</p> 
+     * @return Image <p>镜像卷配置</p>
      */
     public ImageStorageSource getImage() {
         return this.Image;
     }
 
     /**
-     * Set 镜像卷配置
-     * @param Image 镜像卷配置
+     * Set <p>镜像卷配置</p>
+     * @param Image <p>镜像卷配置</p>
      */
     public void setImage(ImageStorageSource Image) {
         this.Image = Image;
     }
 
     /**
-     * Get 文件存储配置 
-     * @return Cfs 文件存储配置
+     * Get <p>文件存储配置</p> 
+     * @return Cfs <p>文件存储配置</p>
      */
     public CfsStorageSource getCfs() {
         return this.Cfs;
     }
 
     /**
-     * Set 文件存储配置
-     * @param Cfs 文件存储配置
+     * Set <p>文件存储配置</p>
+     * @param Cfs <p>文件存储配置</p>
      */
     public void setCfs(CfsStorageSource Cfs) {
         this.Cfs = Cfs;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ImageMetadata extends AbstractModel {
 
     /**
-    * 媒资图片文件大小，单位为Byte
+    * <p>媒资图片文件大小，单位为Byte</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileSize")
@@ -32,7 +32,7 @@ public class ImageMetadata extends AbstractModel {
     private Long FileSize;
 
     /**
-    * 媒资图片文件MD5
+    * <p>媒资图片文件MD5</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MD5")
@@ -40,7 +40,7 @@ public class ImageMetadata extends AbstractModel {
     private String MD5;
 
     /**
-    * 媒资图片文件宽度
+    * <p>媒资图片文件宽度</p><p>单位：像素（px）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Width")
@@ -48,7 +48,7 @@ public class ImageMetadata extends AbstractModel {
     private Long Width;
 
     /**
-    * 媒资图片文件高度
+    * <p>媒资图片文件高度</p><p>单位：像素（px）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Height")
@@ -56,7 +56,7 @@ public class ImageMetadata extends AbstractModel {
     private Long Height;
 
     /**
-    * 媒资图片文件格式
+    * <p>媒资图片文件格式</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Format")
@@ -64,9 +64,9 @@ public class ImageMetadata extends AbstractModel {
     private String Format;
 
     /**
-     * Get 媒资图片文件大小，单位为Byte
+     * Get <p>媒资图片文件大小，单位为Byte</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FileSize 媒资图片文件大小，单位为Byte
+     * @return FileSize <p>媒资图片文件大小，单位为Byte</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFileSize() {
@@ -74,9 +74,9 @@ public class ImageMetadata extends AbstractModel {
     }
 
     /**
-     * Set 媒资图片文件大小，单位为Byte
+     * Set <p>媒资图片文件大小，单位为Byte</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FileSize 媒资图片文件大小，单位为Byte
+     * @param FileSize <p>媒资图片文件大小，单位为Byte</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileSize(Long FileSize) {
@@ -84,9 +84,9 @@ public class ImageMetadata extends AbstractModel {
     }
 
     /**
-     * Get 媒资图片文件MD5
+     * Get <p>媒资图片文件MD5</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MD5 媒资图片文件MD5
+     * @return MD5 <p>媒资图片文件MD5</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMD5() {
@@ -94,9 +94,9 @@ public class ImageMetadata extends AbstractModel {
     }
 
     /**
-     * Set 媒资图片文件MD5
+     * Set <p>媒资图片文件MD5</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MD5 媒资图片文件MD5
+     * @param MD5 <p>媒资图片文件MD5</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMD5(String MD5) {
@@ -104,9 +104,9 @@ public class ImageMetadata extends AbstractModel {
     }
 
     /**
-     * Get 媒资图片文件宽度
+     * Get <p>媒资图片文件宽度</p><p>单位：像素（px）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Width 媒资图片文件宽度
+     * @return Width <p>媒资图片文件宽度</p><p>单位：像素（px）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWidth() {
@@ -114,9 +114,9 @@ public class ImageMetadata extends AbstractModel {
     }
 
     /**
-     * Set 媒资图片文件宽度
+     * Set <p>媒资图片文件宽度</p><p>单位：像素（px）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Width 媒资图片文件宽度
+     * @param Width <p>媒资图片文件宽度</p><p>单位：像素（px）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWidth(Long Width) {
@@ -124,9 +124,9 @@ public class ImageMetadata extends AbstractModel {
     }
 
     /**
-     * Get 媒资图片文件高度
+     * Get <p>媒资图片文件高度</p><p>单位：像素（px）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Height 媒资图片文件高度
+     * @return Height <p>媒资图片文件高度</p><p>单位：像素（px）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHeight() {
@@ -134,9 +134,9 @@ public class ImageMetadata extends AbstractModel {
     }
 
     /**
-     * Set 媒资图片文件高度
+     * Set <p>媒资图片文件高度</p><p>单位：像素（px）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Height 媒资图片文件高度
+     * @param Height <p>媒资图片文件高度</p><p>单位：像素（px）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeight(Long Height) {
@@ -144,9 +144,9 @@ public class ImageMetadata extends AbstractModel {
     }
 
     /**
-     * Get 媒资图片文件格式
+     * Get <p>媒资图片文件格式</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Format 媒资图片文件格式
+     * @return Format <p>媒资图片文件格式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFormat() {
@@ -154,9 +154,9 @@ public class ImageMetadata extends AbstractModel {
     }
 
     /**
-     * Set 媒资图片文件格式
+     * Set <p>媒资图片文件格式</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Format 媒资图片文件格式
+     * @param Format <p>媒资图片文件格式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFormat(String Format) {

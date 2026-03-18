@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TextMetadata extends AbstractModel {
 
     /**
-    * 媒资文本文件大小，单位为字节
+    * <p>媒资文本文件大小，单位为字节</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileSize")
@@ -32,7 +32,7 @@ public class TextMetadata extends AbstractModel {
     private Long FileSize;
 
     /**
-    * 媒资文本文件MD5
+    * <p>媒资文本文件MD5</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MD5")
@@ -40,7 +40,7 @@ public class TextMetadata extends AbstractModel {
     private String MD5;
 
     /**
-    * 媒资文本文件字符数
+    * <p>媒资文本文件字符数</p><p>单位：字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Length")
@@ -48,7 +48,7 @@ public class TextMetadata extends AbstractModel {
     private Long Length;
 
     /**
-    * 媒资文本文件格式
+    * <p>媒资文本文件格式</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Format")
@@ -56,7 +56,7 @@ public class TextMetadata extends AbstractModel {
     private String Format;
 
     /**
-    * 封装格式短后缀
+    * <p>封装格式短后缀</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ShortFormat")
@@ -64,9 +64,9 @@ public class TextMetadata extends AbstractModel {
     private String ShortFormat;
 
     /**
-     * Get 媒资文本文件大小，单位为字节
+     * Get <p>媒资文本文件大小，单位为字节</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FileSize 媒资文本文件大小，单位为字节
+     * @return FileSize <p>媒资文本文件大小，单位为字节</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFileSize() {
@@ -74,9 +74,9 @@ public class TextMetadata extends AbstractModel {
     }
 
     /**
-     * Set 媒资文本文件大小，单位为字节
+     * Set <p>媒资文本文件大小，单位为字节</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FileSize 媒资文本文件大小，单位为字节
+     * @param FileSize <p>媒资文本文件大小，单位为字节</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileSize(Long FileSize) {
@@ -84,9 +84,9 @@ public class TextMetadata extends AbstractModel {
     }
 
     /**
-     * Get 媒资文本文件MD5
+     * Get <p>媒资文本文件MD5</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MD5 媒资文本文件MD5
+     * @return MD5 <p>媒资文本文件MD5</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMD5() {
@@ -94,9 +94,9 @@ public class TextMetadata extends AbstractModel {
     }
 
     /**
-     * Set 媒资文本文件MD5
+     * Set <p>媒资文本文件MD5</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MD5 媒资文本文件MD5
+     * @param MD5 <p>媒资文本文件MD5</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMD5(String MD5) {
@@ -104,9 +104,9 @@ public class TextMetadata extends AbstractModel {
     }
 
     /**
-     * Get 媒资文本文件字符数
+     * Get <p>媒资文本文件字符数</p><p>单位：字符</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Length 媒资文本文件字符数
+     * @return Length <p>媒资文本文件字符数</p><p>单位：字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLength() {
@@ -114,9 +114,9 @@ public class TextMetadata extends AbstractModel {
     }
 
     /**
-     * Set 媒资文本文件字符数
+     * Set <p>媒资文本文件字符数</p><p>单位：字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Length 媒资文本文件字符数
+     * @param Length <p>媒资文本文件字符数</p><p>单位：字符</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLength(Long Length) {
@@ -124,9 +124,9 @@ public class TextMetadata extends AbstractModel {
     }
 
     /**
-     * Get 媒资文本文件格式
+     * Get <p>媒资文本文件格式</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Format 媒资文本文件格式
+     * @return Format <p>媒资文本文件格式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFormat() {
@@ -134,9 +134,9 @@ public class TextMetadata extends AbstractModel {
     }
 
     /**
-     * Set 媒资文本文件格式
+     * Set <p>媒资文本文件格式</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Format 媒资文本文件格式
+     * @param Format <p>媒资文本文件格式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFormat(String Format) {
@@ -144,9 +144,9 @@ public class TextMetadata extends AbstractModel {
     }
 
     /**
-     * Get 封装格式短后缀
+     * Get <p>封装格式短后缀</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ShortFormat 封装格式短后缀
+     * @return ShortFormat <p>封装格式短后缀</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getShortFormat() {
@@ -154,9 +154,9 @@ public class TextMetadata extends AbstractModel {
     }
 
     /**
-     * Set 封装格式短后缀
+     * Set <p>封装格式短后缀</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ShortFormat 封装格式短后缀
+     * @param ShortFormat <p>封装格式短后缀</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setShortFormat(String ShortFormat) {

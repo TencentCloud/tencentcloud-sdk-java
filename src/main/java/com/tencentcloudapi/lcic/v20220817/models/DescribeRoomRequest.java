@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeRoomRequest extends AbstractModel {
 
     /**
-    * 课堂Id。
+    * <p>课堂Id。</p>
     */
     @SerializedName("RoomId")
     @Expose
     private Long RoomId;
 
     /**
-    * 请求RTMP推流链接，0：否，1：是，默认为0。
+    * <p>请求RTMP推流链接，0：否，1：是，默认为0。</p>
     */
     @SerializedName("RTMPStreamingURL")
     @Expose
     private Long RTMPStreamingURL;
 
     /**
-     * Get 课堂Id。 
-     * @return RoomId 课堂Id。
+     * Get <p>课堂Id。</p> 
+     * @return RoomId <p>课堂Id。</p>
      */
     public Long getRoomId() {
         return this.RoomId;
     }
 
     /**
-     * Set 课堂Id。
-     * @param RoomId 课堂Id。
+     * Set <p>课堂Id。</p>
+     * @param RoomId <p>课堂Id。</p>
      */
     public void setRoomId(Long RoomId) {
         this.RoomId = RoomId;
     }
 
     /**
-     * Get 请求RTMP推流链接，0：否，1：是，默认为0。 
-     * @return RTMPStreamingURL 请求RTMP推流链接，0：否，1：是，默认为0。
+     * Get <p>请求RTMP推流链接，0：否，1：是，默认为0。</p> 
+     * @return RTMPStreamingURL <p>请求RTMP推流链接，0：否，1：是，默认为0。</p>
      */
     public Long getRTMPStreamingURL() {
         return this.RTMPStreamingURL;
     }
 
     /**
-     * Set 请求RTMP推流链接，0：否，1：是，默认为0。
-     * @param RTMPStreamingURL 请求RTMP推流链接，0：否，1：是，默认为0。
+     * Set <p>请求RTMP推流链接，0：否，1：是，默认为0。</p>
+     * @param RTMPStreamingURL <p>请求RTMP推流链接，0：否，1：是，默认为0。</p>
      */
     public void setRTMPStreamingURL(Long RTMPStreamingURL) {
         this.RTMPStreamingURL = RTMPStreamingURL;

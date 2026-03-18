@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class TaskInfo extends AbstractModel {
 
     /**
-    * 任务ID
+    * <p>任务ID</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 描述任务名称，指定后可根据名称筛选
+    * <p>描述任务名称，指定后可根据名称筛选</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskName")
@@ -39,21 +39,21 @@ public class TaskInfo extends AbstractModel {
     private String TaskName;
 
     /**
-    * 媒资文件ID
+    * <p>媒资文件ID</p>
     */
     @SerializedName("MediaId")
     @Expose
     private String MediaId;
 
     /**
-    * 任务执行状态
+    * <p>任务执行状态</p>
     */
     @SerializedName("TaskStatus")
     @Expose
     private Long TaskStatus;
 
     /**
-    * 任务进度，范围为[0，100]
+    * <p>任务进度，范围为[0，100]</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskProgress")
@@ -61,7 +61,7 @@ public class TaskInfo extends AbstractModel {
     private Float TaskProgress;
 
     /**
-    * 任务执行时间
+    * <p>任务执行时间</p><p>单位：秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskTimeCost")
@@ -69,14 +69,14 @@ public class TaskInfo extends AbstractModel {
     private Long TaskTimeCost;
 
     /**
-    * 任务创建时间
+    * <p>任务创建时间</p>
     */
     @SerializedName("TaskCreateTime")
     @Expose
     private String TaskCreateTime;
 
     /**
-    * 任务开始执行时间
+    * <p>任务开始执行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskStartTime")
@@ -84,7 +84,7 @@ public class TaskInfo extends AbstractModel {
     private String TaskStartTime;
 
     /**
-    * 任务失败原因
+    * <p>任务失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailedReason")
@@ -92,14 +92,14 @@ public class TaskInfo extends AbstractModel {
     private String FailedReason;
 
     /**
-    * 任务执行时指定的先验知识
+    * <p>任务执行时指定的先验知识</p>
     */
     @SerializedName("MediaPreknownInfo")
     @Expose
     private MediaPreknownInfo MediaPreknownInfo;
 
     /**
-    * 媒资文件名称
+    * <p>媒资文件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MediaName")
@@ -107,7 +107,7 @@ public class TaskInfo extends AbstractModel {
     private String MediaName;
 
     /**
-    * 媒资自定义标签
+    * <p>媒资自定义标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Label")
@@ -115,7 +115,7 @@ public class TaskInfo extends AbstractModel {
     private String Label;
 
     /**
-    * 任务分析完成后的后调地址
+    * <p>任务分析完成后的后调地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CallbackURL")
@@ -123,7 +123,7 @@ public class TaskInfo extends AbstractModel {
     private String CallbackURL;
 
     /**
-    * 任务对应的媒资文件元信息，仅在MediaType为Audio时有效
+    * <p>任务对应的媒资文件元信息，仅在MediaType为Audio时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AudioMetadata")
@@ -131,7 +131,7 @@ public class TaskInfo extends AbstractModel {
     private AudioMetadata AudioMetadata;
 
     /**
-    * 任务对应的媒资文件元信息，仅在MediaType为Audio时有效
+    * <p>任务对应的媒资文件元信息，仅在MediaType为Audio时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageMetadata")
@@ -139,7 +139,7 @@ public class TaskInfo extends AbstractModel {
     private ImageMetadata ImageMetadata;
 
     /**
-    * 任务对应的媒资文件元信息，仅在MediaType为Text时有效
+    * <p>任务对应的媒资文件元信息，仅在MediaType为Text时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TextMetadata")
@@ -147,7 +147,7 @@ public class TaskInfo extends AbstractModel {
     private TextMetadata TextMetadata;
 
     /**
-    * 任务对应的媒资文件元信息，仅在MediaType为Video时有效
+    * <p>任务对应的媒资文件元信息，仅在MediaType为Video时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Metadata")
@@ -155,25 +155,25 @@ public class TaskInfo extends AbstractModel {
     private MediaMetadata Metadata;
 
     /**
-     * Get 任务ID 
-     * @return TaskId 任务ID
+     * Get <p>任务ID</p> 
+     * @return TaskId <p>任务ID</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务ID
-     * @param TaskId 任务ID
+     * Set <p>任务ID</p>
+     * @param TaskId <p>任务ID</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 描述任务名称，指定后可根据名称筛选
+     * Get <p>描述任务名称，指定后可根据名称筛选</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskName 描述任务名称，指定后可根据名称筛选
+     * @return TaskName <p>描述任务名称，指定后可根据名称筛选</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskName() {
@@ -181,9 +181,9 @@ public class TaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 描述任务名称，指定后可根据名称筛选
+     * Set <p>描述任务名称，指定后可根据名称筛选</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskName 描述任务名称，指定后可根据名称筛选
+     * @param TaskName <p>描述任务名称，指定后可根据名称筛选</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskName(String TaskName) {
@@ -191,41 +191,41 @@ public class TaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 媒资文件ID 
-     * @return MediaId 媒资文件ID
+     * Get <p>媒资文件ID</p> 
+     * @return MediaId <p>媒资文件ID</p>
      */
     public String getMediaId() {
         return this.MediaId;
     }
 
     /**
-     * Set 媒资文件ID
-     * @param MediaId 媒资文件ID
+     * Set <p>媒资文件ID</p>
+     * @param MediaId <p>媒资文件ID</p>
      */
     public void setMediaId(String MediaId) {
         this.MediaId = MediaId;
     }
 
     /**
-     * Get 任务执行状态 
-     * @return TaskStatus 任务执行状态
+     * Get <p>任务执行状态</p> 
+     * @return TaskStatus <p>任务执行状态</p>
      */
     public Long getTaskStatus() {
         return this.TaskStatus;
     }
 
     /**
-     * Set 任务执行状态
-     * @param TaskStatus 任务执行状态
+     * Set <p>任务执行状态</p>
+     * @param TaskStatus <p>任务执行状态</p>
      */
     public void setTaskStatus(Long TaskStatus) {
         this.TaskStatus = TaskStatus;
     }
 
     /**
-     * Get 任务进度，范围为[0，100]
+     * Get <p>任务进度，范围为[0，100]</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskProgress 任务进度，范围为[0，100]
+     * @return TaskProgress <p>任务进度，范围为[0，100]</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getTaskProgress() {
@@ -233,9 +233,9 @@ public class TaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务进度，范围为[0，100]
+     * Set <p>任务进度，范围为[0，100]</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskProgress 任务进度，范围为[0，100]
+     * @param TaskProgress <p>任务进度，范围为[0，100]</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskProgress(Float TaskProgress) {
@@ -243,9 +243,9 @@ public class TaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务执行时间
+     * Get <p>任务执行时间</p><p>单位：秒</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskTimeCost 任务执行时间
+     * @return TaskTimeCost <p>任务执行时间</p><p>单位：秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskTimeCost() {
@@ -253,9 +253,9 @@ public class TaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务执行时间
+     * Set <p>任务执行时间</p><p>单位：秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskTimeCost 任务执行时间
+     * @param TaskTimeCost <p>任务执行时间</p><p>单位：秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskTimeCost(Long TaskTimeCost) {
@@ -263,25 +263,25 @@ public class TaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务创建时间 
-     * @return TaskCreateTime 任务创建时间
+     * Get <p>任务创建时间</p> 
+     * @return TaskCreateTime <p>任务创建时间</p>
      */
     public String getTaskCreateTime() {
         return this.TaskCreateTime;
     }
 
     /**
-     * Set 任务创建时间
-     * @param TaskCreateTime 任务创建时间
+     * Set <p>任务创建时间</p>
+     * @param TaskCreateTime <p>任务创建时间</p>
      */
     public void setTaskCreateTime(String TaskCreateTime) {
         this.TaskCreateTime = TaskCreateTime;
     }
 
     /**
-     * Get 任务开始执行时间
+     * Get <p>任务开始执行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskStartTime 任务开始执行时间
+     * @return TaskStartTime <p>任务开始执行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskStartTime() {
@@ -289,9 +289,9 @@ public class TaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务开始执行时间
+     * Set <p>任务开始执行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskStartTime 任务开始执行时间
+     * @param TaskStartTime <p>任务开始执行时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskStartTime(String TaskStartTime) {
@@ -299,9 +299,9 @@ public class TaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务失败原因
+     * Get <p>任务失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FailedReason 任务失败原因
+     * @return FailedReason <p>任务失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFailedReason() {
@@ -309,9 +309,9 @@ public class TaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务失败原因
+     * Set <p>任务失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FailedReason 任务失败原因
+     * @param FailedReason <p>任务失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailedReason(String FailedReason) {
@@ -319,25 +319,25 @@ public class TaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务执行时指定的先验知识 
-     * @return MediaPreknownInfo 任务执行时指定的先验知识
+     * Get <p>任务执行时指定的先验知识</p> 
+     * @return MediaPreknownInfo <p>任务执行时指定的先验知识</p>
      */
     public MediaPreknownInfo getMediaPreknownInfo() {
         return this.MediaPreknownInfo;
     }
 
     /**
-     * Set 任务执行时指定的先验知识
-     * @param MediaPreknownInfo 任务执行时指定的先验知识
+     * Set <p>任务执行时指定的先验知识</p>
+     * @param MediaPreknownInfo <p>任务执行时指定的先验知识</p>
      */
     public void setMediaPreknownInfo(MediaPreknownInfo MediaPreknownInfo) {
         this.MediaPreknownInfo = MediaPreknownInfo;
     }
 
     /**
-     * Get 媒资文件名称
+     * Get <p>媒资文件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MediaName 媒资文件名称
+     * @return MediaName <p>媒资文件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMediaName() {
@@ -345,9 +345,9 @@ public class TaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 媒资文件名称
+     * Set <p>媒资文件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MediaName 媒资文件名称
+     * @param MediaName <p>媒资文件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMediaName(String MediaName) {
@@ -355,9 +355,9 @@ public class TaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 媒资自定义标签
+     * Get <p>媒资自定义标签</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Label 媒资自定义标签
+     * @return Label <p>媒资自定义标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabel() {
@@ -365,9 +365,9 @@ public class TaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 媒资自定义标签
+     * Set <p>媒资自定义标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Label 媒资自定义标签
+     * @param Label <p>媒资自定义标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabel(String Label) {
@@ -375,9 +375,9 @@ public class TaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务分析完成后的后调地址
+     * Get <p>任务分析完成后的后调地址</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CallbackURL 任务分析完成后的后调地址
+     * @return CallbackURL <p>任务分析完成后的后调地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCallbackURL() {
@@ -385,9 +385,9 @@ public class TaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务分析完成后的后调地址
+     * Set <p>任务分析完成后的后调地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CallbackURL 任务分析完成后的后调地址
+     * @param CallbackURL <p>任务分析完成后的后调地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCallbackURL(String CallbackURL) {
@@ -395,9 +395,9 @@ public class TaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务对应的媒资文件元信息，仅在MediaType为Audio时有效
+     * Get <p>任务对应的媒资文件元信息，仅在MediaType为Audio时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AudioMetadata 任务对应的媒资文件元信息，仅在MediaType为Audio时有效
+     * @return AudioMetadata <p>任务对应的媒资文件元信息，仅在MediaType为Audio时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AudioMetadata getAudioMetadata() {
@@ -405,9 +405,9 @@ public class TaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务对应的媒资文件元信息，仅在MediaType为Audio时有效
+     * Set <p>任务对应的媒资文件元信息，仅在MediaType为Audio时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AudioMetadata 任务对应的媒资文件元信息，仅在MediaType为Audio时有效
+     * @param AudioMetadata <p>任务对应的媒资文件元信息，仅在MediaType为Audio时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAudioMetadata(AudioMetadata AudioMetadata) {
@@ -415,9 +415,9 @@ public class TaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务对应的媒资文件元信息，仅在MediaType为Audio时有效
+     * Get <p>任务对应的媒资文件元信息，仅在MediaType为Audio时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ImageMetadata 任务对应的媒资文件元信息，仅在MediaType为Audio时有效
+     * @return ImageMetadata <p>任务对应的媒资文件元信息，仅在MediaType为Audio时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ImageMetadata getImageMetadata() {
@@ -425,9 +425,9 @@ public class TaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务对应的媒资文件元信息，仅在MediaType为Audio时有效
+     * Set <p>任务对应的媒资文件元信息，仅在MediaType为Audio时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImageMetadata 任务对应的媒资文件元信息，仅在MediaType为Audio时有效
+     * @param ImageMetadata <p>任务对应的媒资文件元信息，仅在MediaType为Audio时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageMetadata(ImageMetadata ImageMetadata) {
@@ -435,9 +435,9 @@ public class TaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务对应的媒资文件元信息，仅在MediaType为Text时有效
+     * Get <p>任务对应的媒资文件元信息，仅在MediaType为Text时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TextMetadata 任务对应的媒资文件元信息，仅在MediaType为Text时有效
+     * @return TextMetadata <p>任务对应的媒资文件元信息，仅在MediaType为Text时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TextMetadata getTextMetadata() {
@@ -445,9 +445,9 @@ public class TaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务对应的媒资文件元信息，仅在MediaType为Text时有效
+     * Set <p>任务对应的媒资文件元信息，仅在MediaType为Text时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TextMetadata 任务对应的媒资文件元信息，仅在MediaType为Text时有效
+     * @param TextMetadata <p>任务对应的媒资文件元信息，仅在MediaType为Text时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTextMetadata(TextMetadata TextMetadata) {
@@ -455,9 +455,9 @@ public class TaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务对应的媒资文件元信息，仅在MediaType为Video时有效
+     * Get <p>任务对应的媒资文件元信息，仅在MediaType为Video时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Metadata 任务对应的媒资文件元信息，仅在MediaType为Video时有效
+     * @return Metadata <p>任务对应的媒资文件元信息，仅在MediaType为Video时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaMetadata getMetadata() {
@@ -465,9 +465,9 @@ public class TaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务对应的媒资文件元信息，仅在MediaType为Video时有效
+     * Set <p>任务对应的媒资文件元信息，仅在MediaType为Video时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Metadata 任务对应的媒资文件元信息，仅在MediaType为Video时有效
+     * @param Metadata <p>任务对应的媒资文件元信息，仅在MediaType为Video时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetadata(MediaMetadata Metadata) {

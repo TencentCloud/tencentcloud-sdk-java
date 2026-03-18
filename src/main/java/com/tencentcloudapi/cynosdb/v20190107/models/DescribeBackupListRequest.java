@@ -130,6 +130,13 @@ public class DescribeBackupListRequest extends AbstractModel {
     private String IsCrossRegionsBackup;
 
     /**
+    * 需要查询的状态
+    */
+    @SerializedName("BackupStatus")
+    @Expose
+    private String [] BackupStatus;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -373,6 +380,22 @@ public class DescribeBackupListRequest extends AbstractModel {
         this.IsCrossRegionsBackup = IsCrossRegionsBackup;
     }
 
+    /**
+     * Get 需要查询的状态 
+     * @return BackupStatus 需要查询的状态
+     */
+    public String [] getBackupStatus() {
+        return this.BackupStatus;
+    }
+
+    /**
+     * Set 需要查询的状态
+     * @param BackupStatus 需要查询的状态
+     */
+    public void setBackupStatus(String [] BackupStatus) {
+        this.BackupStatus = BackupStatus;
+    }
+
     public DescribeBackupListRequest() {
     }
 
@@ -438,6 +461,12 @@ public class DescribeBackupListRequest extends AbstractModel {
         if (source.IsCrossRegionsBackup != null) {
             this.IsCrossRegionsBackup = new String(source.IsCrossRegionsBackup);
         }
+        if (source.BackupStatus != null) {
+            this.BackupStatus = new String[source.BackupStatus.length];
+            for (int i = 0; i < source.BackupStatus.length; i++) {
+                this.BackupStatus[i] = new String(source.BackupStatus[i]);
+            }
+        }
     }
 
 
@@ -460,6 +489,7 @@ public class DescribeBackupListRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "SnapshotIdList.", this.SnapshotIdList);
         this.setParamSimple(map, prefix + "BackupRegion", this.BackupRegion);
         this.setParamSimple(map, prefix + "IsCrossRegionsBackup", this.IsCrossRegionsBackup);
+        this.setParamArraySimple(map, prefix + "BackupStatus.", this.BackupStatus);
 
     }
 }

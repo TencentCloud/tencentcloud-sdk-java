@@ -24,253 +24,253 @@ import java.util.HashMap;
 public class CreateSandboxToolRequest extends AbstractModel {
 
     /**
-    * 沙箱工具名称，长度 1-50 字符，支持英文、数字、下划线和连接线。同一 AppId 下沙箱工具名称必须唯一
+    * <p>沙箱工具名称，长度 1-50 字符，支持英文、数字、下划线和连接线。同一 AppId 下沙箱工具名称必须唯一</p>
     */
     @SerializedName("ToolName")
     @Expose
     private String ToolName;
 
     /**
-    * 沙箱工具类型，目前支持：browser、code-interpreter、custom
+    * <p>沙箱工具类型，目前支持：browser、code-interpreter、custom</p>
     */
     @SerializedName("ToolType")
     @Expose
     private String ToolType;
 
     /**
-    * 网络配置
+    * <p>网络配置</p>
     */
     @SerializedName("NetworkConfiguration")
     @Expose
     private NetworkConfiguration NetworkConfiguration;
 
     /**
-    * 沙箱工具描述，最大长度 200 字符
+    * <p>沙箱工具描述，最大长度 200 字符</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 默认超时时间，支持格式：5m、300s、1h 等，不指定则使用系统默认值（5 分钟）。最大 24 小时
+    * <p>默认超时时间，支持格式：5m、300s、1h 等，不指定则使用系统默认值（5 分钟）。最大 24 小时</p>
     */
     @SerializedName("DefaultTimeout")
     @Expose
     private String DefaultTimeout;
 
     /**
-    * 标签规格，为沙箱工具绑定标签，支持多种资源类型的标签绑定
+    * <p>标签规格，为沙箱工具绑定标签，支持多种资源类型的标签绑定</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 幂等性 Token，长度不超过 64 字符
+    * <p>幂等性 Token，长度不超过 64 字符</p>
     */
     @SerializedName("ClientToken")
     @Expose
     private String ClientToken;
 
     /**
-    * 角色ARN
+    * <p>角色ARN</p>
     */
     @SerializedName("RoleArn")
     @Expose
     private String RoleArn;
 
     /**
-    * 沙箱工具存储配置
+    * <p>沙箱工具存储配置</p>
     */
     @SerializedName("StorageMounts")
     @Expose
     private StorageMount [] StorageMounts;
 
     /**
-    * 沙箱工具自定义配置
+    * <p>沙箱工具自定义配置</p>
     */
     @SerializedName("CustomConfiguration")
     @Expose
     private CustomConfiguration CustomConfiguration;
 
     /**
-    * 沙箱工具日志推送相关配置
+    * <p>沙箱工具日志推送相关配置</p>
     */
     @SerializedName("LogConfiguration")
     @Expose
     private LogConfiguration LogConfiguration;
 
     /**
-     * Get 沙箱工具名称，长度 1-50 字符，支持英文、数字、下划线和连接线。同一 AppId 下沙箱工具名称必须唯一 
-     * @return ToolName 沙箱工具名称，长度 1-50 字符，支持英文、数字、下划线和连接线。同一 AppId 下沙箱工具名称必须唯一
+     * Get <p>沙箱工具名称，长度 1-50 字符，支持英文、数字、下划线和连接线。同一 AppId 下沙箱工具名称必须唯一</p> 
+     * @return ToolName <p>沙箱工具名称，长度 1-50 字符，支持英文、数字、下划线和连接线。同一 AppId 下沙箱工具名称必须唯一</p>
      */
     public String getToolName() {
         return this.ToolName;
     }
 
     /**
-     * Set 沙箱工具名称，长度 1-50 字符，支持英文、数字、下划线和连接线。同一 AppId 下沙箱工具名称必须唯一
-     * @param ToolName 沙箱工具名称，长度 1-50 字符，支持英文、数字、下划线和连接线。同一 AppId 下沙箱工具名称必须唯一
+     * Set <p>沙箱工具名称，长度 1-50 字符，支持英文、数字、下划线和连接线。同一 AppId 下沙箱工具名称必须唯一</p>
+     * @param ToolName <p>沙箱工具名称，长度 1-50 字符，支持英文、数字、下划线和连接线。同一 AppId 下沙箱工具名称必须唯一</p>
      */
     public void setToolName(String ToolName) {
         this.ToolName = ToolName;
     }
 
     /**
-     * Get 沙箱工具类型，目前支持：browser、code-interpreter、custom 
-     * @return ToolType 沙箱工具类型，目前支持：browser、code-interpreter、custom
+     * Get <p>沙箱工具类型，目前支持：browser、code-interpreter、custom</p> 
+     * @return ToolType <p>沙箱工具类型，目前支持：browser、code-interpreter、custom</p>
      */
     public String getToolType() {
         return this.ToolType;
     }
 
     /**
-     * Set 沙箱工具类型，目前支持：browser、code-interpreter、custom
-     * @param ToolType 沙箱工具类型，目前支持：browser、code-interpreter、custom
+     * Set <p>沙箱工具类型，目前支持：browser、code-interpreter、custom</p>
+     * @param ToolType <p>沙箱工具类型，目前支持：browser、code-interpreter、custom</p>
      */
     public void setToolType(String ToolType) {
         this.ToolType = ToolType;
     }
 
     /**
-     * Get 网络配置 
-     * @return NetworkConfiguration 网络配置
+     * Get <p>网络配置</p> 
+     * @return NetworkConfiguration <p>网络配置</p>
      */
     public NetworkConfiguration getNetworkConfiguration() {
         return this.NetworkConfiguration;
     }
 
     /**
-     * Set 网络配置
-     * @param NetworkConfiguration 网络配置
+     * Set <p>网络配置</p>
+     * @param NetworkConfiguration <p>网络配置</p>
      */
     public void setNetworkConfiguration(NetworkConfiguration NetworkConfiguration) {
         this.NetworkConfiguration = NetworkConfiguration;
     }
 
     /**
-     * Get 沙箱工具描述，最大长度 200 字符 
-     * @return Description 沙箱工具描述，最大长度 200 字符
+     * Get <p>沙箱工具描述，最大长度 200 字符</p> 
+     * @return Description <p>沙箱工具描述，最大长度 200 字符</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 沙箱工具描述，最大长度 200 字符
-     * @param Description 沙箱工具描述，最大长度 200 字符
+     * Set <p>沙箱工具描述，最大长度 200 字符</p>
+     * @param Description <p>沙箱工具描述，最大长度 200 字符</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 默认超时时间，支持格式：5m、300s、1h 等，不指定则使用系统默认值（5 分钟）。最大 24 小时 
-     * @return DefaultTimeout 默认超时时间，支持格式：5m、300s、1h 等，不指定则使用系统默认值（5 分钟）。最大 24 小时
+     * Get <p>默认超时时间，支持格式：5m、300s、1h 等，不指定则使用系统默认值（5 分钟）。最大 24 小时</p> 
+     * @return DefaultTimeout <p>默认超时时间，支持格式：5m、300s、1h 等，不指定则使用系统默认值（5 分钟）。最大 24 小时</p>
      */
     public String getDefaultTimeout() {
         return this.DefaultTimeout;
     }
 
     /**
-     * Set 默认超时时间，支持格式：5m、300s、1h 等，不指定则使用系统默认值（5 分钟）。最大 24 小时
-     * @param DefaultTimeout 默认超时时间，支持格式：5m、300s、1h 等，不指定则使用系统默认值（5 分钟）。最大 24 小时
+     * Set <p>默认超时时间，支持格式：5m、300s、1h 等，不指定则使用系统默认值（5 分钟）。最大 24 小时</p>
+     * @param DefaultTimeout <p>默认超时时间，支持格式：5m、300s、1h 等，不指定则使用系统默认值（5 分钟）。最大 24 小时</p>
      */
     public void setDefaultTimeout(String DefaultTimeout) {
         this.DefaultTimeout = DefaultTimeout;
     }
 
     /**
-     * Get 标签规格，为沙箱工具绑定标签，支持多种资源类型的标签绑定 
-     * @return Tags 标签规格，为沙箱工具绑定标签，支持多种资源类型的标签绑定
+     * Get <p>标签规格，为沙箱工具绑定标签，支持多种资源类型的标签绑定</p> 
+     * @return Tags <p>标签规格，为沙箱工具绑定标签，支持多种资源类型的标签绑定</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签规格，为沙箱工具绑定标签，支持多种资源类型的标签绑定
-     * @param Tags 标签规格，为沙箱工具绑定标签，支持多种资源类型的标签绑定
+     * Set <p>标签规格，为沙箱工具绑定标签，支持多种资源类型的标签绑定</p>
+     * @param Tags <p>标签规格，为沙箱工具绑定标签，支持多种资源类型的标签绑定</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 幂等性 Token，长度不超过 64 字符 
-     * @return ClientToken 幂等性 Token，长度不超过 64 字符
+     * Get <p>幂等性 Token，长度不超过 64 字符</p> 
+     * @return ClientToken <p>幂等性 Token，长度不超过 64 字符</p>
      */
     public String getClientToken() {
         return this.ClientToken;
     }
 
     /**
-     * Set 幂等性 Token，长度不超过 64 字符
-     * @param ClientToken 幂等性 Token，长度不超过 64 字符
+     * Set <p>幂等性 Token，长度不超过 64 字符</p>
+     * @param ClientToken <p>幂等性 Token，长度不超过 64 字符</p>
      */
     public void setClientToken(String ClientToken) {
         this.ClientToken = ClientToken;
     }
 
     /**
-     * Get 角色ARN 
-     * @return RoleArn 角色ARN
+     * Get <p>角色ARN</p> 
+     * @return RoleArn <p>角色ARN</p>
      */
     public String getRoleArn() {
         return this.RoleArn;
     }
 
     /**
-     * Set 角色ARN
-     * @param RoleArn 角色ARN
+     * Set <p>角色ARN</p>
+     * @param RoleArn <p>角色ARN</p>
      */
     public void setRoleArn(String RoleArn) {
         this.RoleArn = RoleArn;
     }
 
     /**
-     * Get 沙箱工具存储配置 
-     * @return StorageMounts 沙箱工具存储配置
+     * Get <p>沙箱工具存储配置</p> 
+     * @return StorageMounts <p>沙箱工具存储配置</p>
      */
     public StorageMount [] getStorageMounts() {
         return this.StorageMounts;
     }
 
     /**
-     * Set 沙箱工具存储配置
-     * @param StorageMounts 沙箱工具存储配置
+     * Set <p>沙箱工具存储配置</p>
+     * @param StorageMounts <p>沙箱工具存储配置</p>
      */
     public void setStorageMounts(StorageMount [] StorageMounts) {
         this.StorageMounts = StorageMounts;
     }
 
     /**
-     * Get 沙箱工具自定义配置 
-     * @return CustomConfiguration 沙箱工具自定义配置
+     * Get <p>沙箱工具自定义配置</p> 
+     * @return CustomConfiguration <p>沙箱工具自定义配置</p>
      */
     public CustomConfiguration getCustomConfiguration() {
         return this.CustomConfiguration;
     }
 
     /**
-     * Set 沙箱工具自定义配置
-     * @param CustomConfiguration 沙箱工具自定义配置
+     * Set <p>沙箱工具自定义配置</p>
+     * @param CustomConfiguration <p>沙箱工具自定义配置</p>
      */
     public void setCustomConfiguration(CustomConfiguration CustomConfiguration) {
         this.CustomConfiguration = CustomConfiguration;
     }
 
     /**
-     * Get 沙箱工具日志推送相关配置 
-     * @return LogConfiguration 沙箱工具日志推送相关配置
+     * Get <p>沙箱工具日志推送相关配置</p> 
+     * @return LogConfiguration <p>沙箱工具日志推送相关配置</p>
      */
     public LogConfiguration getLogConfiguration() {
         return this.LogConfiguration;
     }
 
     /**
-     * Set 沙箱工具日志推送相关配置
-     * @param LogConfiguration 沙箱工具日志推送相关配置
+     * Set <p>沙箱工具日志推送相关配置</p>
+     * @param LogConfiguration <p>沙箱工具日志推送相关配置</p>
      */
     public void setLogConfiguration(LogConfiguration LogConfiguration) {
         this.LogConfiguration = LogConfiguration;

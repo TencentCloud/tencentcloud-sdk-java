@@ -24,72 +24,95 @@ import java.util.HashMap;
 public class NumberInfo extends AbstractModel {
 
     /**
-    * 号码
+    * <p>号码</p>
     */
     @SerializedName("Number")
     @Expose
     private String Number;
 
     /**
-    * 绑定的外呼技能组
+    * <p>绑定的外呼技能组</p>
     */
     @SerializedName("CallOutSkillGroupIds")
     @Expose
     private Long [] CallOutSkillGroupIds;
 
     /**
-    * 号码状态，1-正常，2-欠费停用，4-管理员停用，5-违规停用
+    * <p>号码状态，1-正常，2-欠费停用，4-管理员停用，5-违规停用</p>
     */
     @SerializedName("State")
     @Expose
     private Long State;
 
     /**
-     * Get 号码 
-     * @return Number 号码
+    * <p>是否自携号码</p><p>枚举值：</p><ul><li>0： 非自携</li><li>1： 自携</li></ul>
+    */
+    @SerializedName("CostType")
+    @Expose
+    private Long CostType;
+
+    /**
+     * Get <p>号码</p> 
+     * @return Number <p>号码</p>
      */
     public String getNumber() {
         return this.Number;
     }
 
     /**
-     * Set 号码
-     * @param Number 号码
+     * Set <p>号码</p>
+     * @param Number <p>号码</p>
      */
     public void setNumber(String Number) {
         this.Number = Number;
     }
 
     /**
-     * Get 绑定的外呼技能组 
-     * @return CallOutSkillGroupIds 绑定的外呼技能组
+     * Get <p>绑定的外呼技能组</p> 
+     * @return CallOutSkillGroupIds <p>绑定的外呼技能组</p>
      */
     public Long [] getCallOutSkillGroupIds() {
         return this.CallOutSkillGroupIds;
     }
 
     /**
-     * Set 绑定的外呼技能组
-     * @param CallOutSkillGroupIds 绑定的外呼技能组
+     * Set <p>绑定的外呼技能组</p>
+     * @param CallOutSkillGroupIds <p>绑定的外呼技能组</p>
      */
     public void setCallOutSkillGroupIds(Long [] CallOutSkillGroupIds) {
         this.CallOutSkillGroupIds = CallOutSkillGroupIds;
     }
 
     /**
-     * Get 号码状态，1-正常，2-欠费停用，4-管理员停用，5-违规停用 
-     * @return State 号码状态，1-正常，2-欠费停用，4-管理员停用，5-违规停用
+     * Get <p>号码状态，1-正常，2-欠费停用，4-管理员停用，5-违规停用</p> 
+     * @return State <p>号码状态，1-正常，2-欠费停用，4-管理员停用，5-违规停用</p>
      */
     public Long getState() {
         return this.State;
     }
 
     /**
-     * Set 号码状态，1-正常，2-欠费停用，4-管理员停用，5-违规停用
-     * @param State 号码状态，1-正常，2-欠费停用，4-管理员停用，5-违规停用
+     * Set <p>号码状态，1-正常，2-欠费停用，4-管理员停用，5-违规停用</p>
+     * @param State <p>号码状态，1-正常，2-欠费停用，4-管理员停用，5-违规停用</p>
      */
     public void setState(Long State) {
         this.State = State;
+    }
+
+    /**
+     * Get <p>是否自携号码</p><p>枚举值：</p><ul><li>0： 非自携</li><li>1： 自携</li></ul> 
+     * @return CostType <p>是否自携号码</p><p>枚举值：</p><ul><li>0： 非自携</li><li>1： 自携</li></ul>
+     */
+    public Long getCostType() {
+        return this.CostType;
+    }
+
+    /**
+     * Set <p>是否自携号码</p><p>枚举值：</p><ul><li>0： 非自携</li><li>1： 自携</li></ul>
+     * @param CostType <p>是否自携号码</p><p>枚举值：</p><ul><li>0： 非自携</li><li>1： 自携</li></ul>
+     */
+    public void setCostType(Long CostType) {
+        this.CostType = CostType;
     }
 
     public NumberInfo() {
@@ -112,6 +135,9 @@ public class NumberInfo extends AbstractModel {
         if (source.State != null) {
             this.State = new Long(source.State);
         }
+        if (source.CostType != null) {
+            this.CostType = new Long(source.CostType);
+        }
     }
 
 
@@ -122,6 +148,7 @@ public class NumberInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Number", this.Number);
         this.setParamArraySimple(map, prefix + "CallOutSkillGroupIds.", this.CallOutSkillGroupIds);
         this.setParamSimple(map, prefix + "State", this.State);
+        this.setParamSimple(map, prefix + "CostType", this.CostType);
 
     }
 }

@@ -24,97 +24,92 @@ import java.util.HashMap;
 public class AiAnalysisTaskDubbingOutput extends AbstractModel {
 
     /**
-    * 译制视频路径。
+    * <p>译制视频路径。</p>
     */
     @SerializedName("VideoPath")
     @Expose
     private String VideoPath;
 
     /**
-    * 标记文件路径
-
+    * <p>标记文件路径</p>
     */
     @SerializedName("SpeakerPath")
     @Expose
     private String SpeakerPath;
 
     /**
-    * 音色id
+    * <p>音色id</p>
     */
     @SerializedName("VoiceId")
     @Expose
     private String VoiceId;
 
     /**
-    * 译制视频存储位置。
+    * <p>译制视频存储位置。</p>
     */
     @SerializedName("OutputStorage")
     @Expose
     private TaskOutputStorage OutputStorage;
 
     /**
-     * Get 译制视频路径。 
-     * @return VideoPath 译制视频路径。
+     * Get <p>译制视频路径。</p> 
+     * @return VideoPath <p>译制视频路径。</p>
      */
     public String getVideoPath() {
         return this.VideoPath;
     }
 
     /**
-     * Set 译制视频路径。
-     * @param VideoPath 译制视频路径。
+     * Set <p>译制视频路径。</p>
+     * @param VideoPath <p>译制视频路径。</p>
      */
     public void setVideoPath(String VideoPath) {
         this.VideoPath = VideoPath;
     }
 
     /**
-     * Get 标记文件路径
- 
-     * @return SpeakerPath 标记文件路径
-
+     * Get <p>标记文件路径</p> 
+     * @return SpeakerPath <p>标记文件路径</p>
      */
     public String getSpeakerPath() {
         return this.SpeakerPath;
     }
 
     /**
-     * Set 标记文件路径
-
-     * @param SpeakerPath 标记文件路径
-
+     * Set <p>标记文件路径</p>
+     * @param SpeakerPath <p>标记文件路径</p>
      */
     public void setSpeakerPath(String SpeakerPath) {
         this.SpeakerPath = SpeakerPath;
     }
 
     /**
-     * Get 音色id 
-     * @return VoiceId 音色id
+     * Get <p>音色id</p> 
+     * @return VoiceId <p>音色id</p>
      */
     public String getVoiceId() {
         return this.VoiceId;
     }
 
     /**
-     * Set 音色id
-     * @param VoiceId 音色id
+     * Set <p>音色id</p>
+     * @param VoiceId <p>音色id</p>
      */
     public void setVoiceId(String VoiceId) {
         this.VoiceId = VoiceId;
     }
 
     /**
-     * Get 译制视频存储位置。 
-     * @return OutputStorage 译制视频存储位置。
+     * Get <p>译制视频存储位置。</p> 
+     * @return OutputStorage <p>译制视频存储位置。</p>
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set 译制视频存储位置。
-     * @param OutputStorage 译制视频存储位置。
+     * Set <p>译制视频存储位置。</p>
+     * @param OutputStorage <p>译制视频存储位置。</p>
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;

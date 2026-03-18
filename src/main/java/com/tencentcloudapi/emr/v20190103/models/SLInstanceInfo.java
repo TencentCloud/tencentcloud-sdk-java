@@ -94,11 +94,25 @@ public class SLInstanceInfo extends AbstractModel {
     private Long VpcId;
 
     /**
+    * 主可用区私有网络名
+    */
+    @SerializedName("VpcName")
+    @Expose
+    private String VpcName;
+
+    /**
     * 主可用区子网ID
     */
     @SerializedName("SubnetId")
     @Expose
     private Long SubnetId;
+
+    /**
+    * 主可用区子网名
+    */
+    @SerializedName("SubnetName")
+    @Expose
+    private String SubnetName;
 
     /**
     * 状态码
@@ -164,6 +178,13 @@ public class SLInstanceInfo extends AbstractModel {
     @SerializedName("DeployRole")
     @Expose
     private String DeployRole;
+
+    /**
+    * webui地址
+    */
+    @SerializedName("WebUIUrl")
+    @Expose
+    private String WebUIUrl;
 
     /**
      * Get 集群实例字符串ID 
@@ -326,6 +347,22 @@ public class SLInstanceInfo extends AbstractModel {
     }
 
     /**
+     * Get 主可用区私有网络名 
+     * @return VpcName 主可用区私有网络名
+     */
+    public String getVpcName() {
+        return this.VpcName;
+    }
+
+    /**
+     * Set 主可用区私有网络名
+     * @param VpcName 主可用区私有网络名
+     */
+    public void setVpcName(String VpcName) {
+        this.VpcName = VpcName;
+    }
+
+    /**
      * Get 主可用区子网ID 
      * @return SubnetId 主可用区子网ID
      */
@@ -339,6 +376,22 @@ public class SLInstanceInfo extends AbstractModel {
      */
     public void setSubnetId(Long SubnetId) {
         this.SubnetId = SubnetId;
+    }
+
+    /**
+     * Get 主可用区子网名 
+     * @return SubnetName 主可用区子网名
+     */
+    public String getSubnetName() {
+        return this.SubnetName;
+    }
+
+    /**
+     * Set 主可用区子网名
+     * @param SubnetName 主可用区子网名
+     */
+    public void setSubnetName(String SubnetName) {
+        this.SubnetName = SubnetName;
     }
 
     /**
@@ -493,6 +546,22 @@ public class SLInstanceInfo extends AbstractModel {
         this.DeployRole = DeployRole;
     }
 
+    /**
+     * Get webui地址 
+     * @return WebUIUrl webui地址
+     */
+    public String getWebUIUrl() {
+        return this.WebUIUrl;
+    }
+
+    /**
+     * Set webui地址
+     * @param WebUIUrl webui地址
+     */
+    public void setWebUIUrl(String WebUIUrl) {
+        this.WebUIUrl = WebUIUrl;
+    }
+
     public SLInstanceInfo() {
     }
 
@@ -531,8 +600,14 @@ public class SLInstanceInfo extends AbstractModel {
         if (source.VpcId != null) {
             this.VpcId = new Long(source.VpcId);
         }
+        if (source.VpcName != null) {
+            this.VpcName = new String(source.VpcName);
+        }
         if (source.SubnetId != null) {
             this.SubnetId = new Long(source.SubnetId);
+        }
+        if (source.SubnetName != null) {
+            this.SubnetName = new String(source.SubnetName);
         }
         if (source.Status != null) {
             this.Status = new Long(source.Status);
@@ -567,6 +642,9 @@ public class SLInstanceInfo extends AbstractModel {
         if (source.DeployRole != null) {
             this.DeployRole = new String(source.DeployRole);
         }
+        if (source.WebUIUrl != null) {
+            this.WebUIUrl = new String(source.WebUIUrl);
+        }
     }
 
 
@@ -584,7 +662,9 @@ public class SLInstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamSimple(map, prefix + "VpcName", this.VpcName);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "SubnetName", this.SubnetName);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "AddTime", this.AddTime);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
@@ -594,6 +674,7 @@ public class SLInstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "IsolateTime", this.IsolateTime);
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         this.setParamSimple(map, prefix + "DeployRole", this.DeployRole);
+        this.setParamSimple(map, prefix + "WebUIUrl", this.WebUIUrl);
 
     }
 }

@@ -119,6 +119,13 @@ public class AggrCategorySoftDetailRow extends AbstractModel {
     private Long UpgradableDeviceNum;
 
     /**
+    * 有新版本可升级的设备数量
+    */
+    @SerializedName("UpgradeDeviceNum")
+    @Expose
+    private Long UpgradeDeviceNum;
+
+    /**
      * Get ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ID ID
@@ -354,6 +361,22 @@ public class AggrCategorySoftDetailRow extends AbstractModel {
         this.UpgradableDeviceNum = UpgradableDeviceNum;
     }
 
+    /**
+     * Get 有新版本可升级的设备数量 
+     * @return UpgradeDeviceNum 有新版本可升级的设备数量
+     */
+    public Long getUpgradeDeviceNum() {
+        return this.UpgradeDeviceNum;
+    }
+
+    /**
+     * Set 有新版本可升级的设备数量
+     * @param UpgradeDeviceNum 有新版本可升级的设备数量
+     */
+    public void setUpgradeDeviceNum(Long UpgradeDeviceNum) {
+        this.UpgradeDeviceNum = UpgradeDeviceNum;
+    }
+
     public AggrCategorySoftDetailRow() {
     }
 
@@ -398,6 +421,9 @@ public class AggrCategorySoftDetailRow extends AbstractModel {
         if (source.UpgradableDeviceNum != null) {
             this.UpgradableDeviceNum = new Long(source.UpgradableDeviceNum);
         }
+        if (source.UpgradeDeviceNum != null) {
+            this.UpgradeDeviceNum = new Long(source.UpgradeDeviceNum);
+        }
     }
 
 
@@ -417,6 +443,7 @@ public class AggrCategorySoftDetailRow extends AbstractModel {
         this.setParamSimple(map, prefix + "AuthNum", this.AuthNum);
         this.setParamSimple(map, prefix + "GenuineRate", this.GenuineRate);
         this.setParamSimple(map, prefix + "UpgradableDeviceNum", this.UpgradableDeviceNum);
+        this.setParamSimple(map, prefix + "UpgradeDeviceNum", this.UpgradeDeviceNum);
 
     }
 }

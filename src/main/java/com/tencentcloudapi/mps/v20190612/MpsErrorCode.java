@@ -111,6 +111,9 @@ public enum MpsErrorCode {
      /* InvalidParameter.Type */
      INVALIDPARAMETER_TYPE("InvalidParameter.Type"),
      
+     /* 输入审核拦截。 */
+     INVALIDPARAMETER_VIOLATIONCONTENT("InvalidParameter.ViolationContent"),
+     
      /* InvalidParameter.Whitelist */
      INVALIDPARAMETER_WHITELIST("InvalidParameter.Whitelist"),
      
