@@ -24,289 +24,302 @@ import java.util.HashMap;
 public class FileInfo extends AbstractModel {
 
     /**
-    * 文件名称
+    * <p>文件名称</p>
     */
     @SerializedName("FileName")
     @Expose
     private String FileName;
 
     /**
-    * 文件大小，字节
+    * <p>文件大小，字节</p>
     */
     @SerializedName("FileSize")
     @Expose
     private Float FileSize;
 
     /**
-    * 文件类型,0=文本,1=表格，默认0
-
+    * <p>文件类型,0=文本,1=表格，默认0</p>
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 文件ID
+    * <p>文件ID</p>
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 状态，0：数据处理中  1：可用 -1：错误
+    * <p>状态，0：数据处理中  1：可用 -1：错误</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 操作者
-
+    * <p>操作者</p>
     */
     @SerializedName("CreateUser")
     @Expose
     private String CreateUser;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 分片策略
+    * <p>分片策略</p>
     */
     @SerializedName("ChunkConfig")
     @Expose
     private KnowledgeTaskConfig ChunkConfig;
 
     /**
-    * 文件来源0=unknow,1=user_cos,2=local
+    * <p>文件来源0=unknow,1=user_cos,2=local</p>
     */
     @SerializedName("Source")
     @Expose
     private Long Source;
 
     /**
-    * 文件url
+    * <p>文件url</p>
     */
     @SerializedName("FileUrl")
     @Expose
     private String FileUrl;
 
     /**
-    * 是否官方示例，0=否，1=是
+    * <p>是否官方示例，0=否，1=是</p>
     */
     @SerializedName("IsShowCase")
     @Expose
     private Long IsShowCase;
 
     /**
-    * 文档摘要
+    * <p>文档摘要</p>
     */
     @SerializedName("DocumentSummary")
     @Expose
     private String DocumentSummary;
 
     /**
-     * Get 文件名称 
-     * @return FileName 文件名称
+    * <p>网页地址</p>
+    */
+    @SerializedName("WebUrl")
+    @Expose
+    private String WebUrl;
+
+    /**
+     * Get <p>文件名称</p> 
+     * @return FileName <p>文件名称</p>
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set 文件名称
-     * @param FileName 文件名称
+     * Set <p>文件名称</p>
+     * @param FileName <p>文件名称</p>
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get 文件大小，字节 
-     * @return FileSize 文件大小，字节
+     * Get <p>文件大小，字节</p> 
+     * @return FileSize <p>文件大小，字节</p>
      */
     public Float getFileSize() {
         return this.FileSize;
     }
 
     /**
-     * Set 文件大小，字节
-     * @param FileSize 文件大小，字节
+     * Set <p>文件大小，字节</p>
+     * @param FileSize <p>文件大小，字节</p>
      */
     public void setFileSize(Float FileSize) {
         this.FileSize = FileSize;
     }
 
     /**
-     * Get 文件类型,0=文本,1=表格，默认0
- 
-     * @return Type 文件类型,0=文本,1=表格，默认0
-
+     * Get <p>文件类型,0=文本,1=表格，默认0</p> 
+     * @return Type <p>文件类型,0=文本,1=表格，默认0</p>
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 文件类型,0=文本,1=表格，默认0
-
-     * @param Type 文件类型,0=文本,1=表格，默认0
-
+     * Set <p>文件类型,0=文本,1=表格，默认0</p>
+     * @param Type <p>文件类型,0=文本,1=表格，默认0</p>
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 文件ID 
-     * @return FileId 文件ID
+     * Get <p>文件ID</p> 
+     * @return FileId <p>文件ID</p>
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 文件ID
-     * @param FileId 文件ID
+     * Set <p>文件ID</p>
+     * @param FileId <p>文件ID</p>
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get 状态，0：数据处理中  1：可用 -1：错误 
-     * @return Status 状态，0：数据处理中  1：可用 -1：错误
+     * Get <p>状态，0：数据处理中  1：可用 -1：错误</p> 
+     * @return Status <p>状态，0：数据处理中  1：可用 -1：错误</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态，0：数据处理中  1：可用 -1：错误
-     * @param Status 状态，0：数据处理中  1：可用 -1：错误
+     * Set <p>状态，0：数据处理中  1：可用 -1：错误</p>
+     * @param Status <p>状态，0：数据处理中  1：可用 -1：错误</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 操作者
- 
-     * @return CreateUser 操作者
-
+     * Get <p>操作者</p> 
+     * @return CreateUser <p>操作者</p>
      */
     public String getCreateUser() {
         return this.CreateUser;
     }
 
     /**
-     * Set 操作者
-
-     * @param CreateUser 操作者
-
+     * Set <p>操作者</p>
+     * @param CreateUser <p>操作者</p>
      */
     public void setCreateUser(String CreateUser) {
         this.CreateUser = CreateUser;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 分片策略 
-     * @return ChunkConfig 分片策略
+     * Get <p>分片策略</p> 
+     * @return ChunkConfig <p>分片策略</p>
      */
     public KnowledgeTaskConfig getChunkConfig() {
         return this.ChunkConfig;
     }
 
     /**
-     * Set 分片策略
-     * @param ChunkConfig 分片策略
+     * Set <p>分片策略</p>
+     * @param ChunkConfig <p>分片策略</p>
      */
     public void setChunkConfig(KnowledgeTaskConfig ChunkConfig) {
         this.ChunkConfig = ChunkConfig;
     }
 
     /**
-     * Get 文件来源0=unknow,1=user_cos,2=local 
-     * @return Source 文件来源0=unknow,1=user_cos,2=local
+     * Get <p>文件来源0=unknow,1=user_cos,2=local</p> 
+     * @return Source <p>文件来源0=unknow,1=user_cos,2=local</p>
      */
     public Long getSource() {
         return this.Source;
     }
 
     /**
-     * Set 文件来源0=unknow,1=user_cos,2=local
-     * @param Source 文件来源0=unknow,1=user_cos,2=local
+     * Set <p>文件来源0=unknow,1=user_cos,2=local</p>
+     * @param Source <p>文件来源0=unknow,1=user_cos,2=local</p>
      */
     public void setSource(Long Source) {
         this.Source = Source;
     }
 
     /**
-     * Get 文件url 
-     * @return FileUrl 文件url
+     * Get <p>文件url</p> 
+     * @return FileUrl <p>文件url</p>
      */
     public String getFileUrl() {
         return this.FileUrl;
     }
 
     /**
-     * Set 文件url
-     * @param FileUrl 文件url
+     * Set <p>文件url</p>
+     * @param FileUrl <p>文件url</p>
      */
     public void setFileUrl(String FileUrl) {
         this.FileUrl = FileUrl;
     }
 
     /**
-     * Get 是否官方示例，0=否，1=是 
-     * @return IsShowCase 是否官方示例，0=否，1=是
+     * Get <p>是否官方示例，0=否，1=是</p> 
+     * @return IsShowCase <p>是否官方示例，0=否，1=是</p>
      */
     public Long getIsShowCase() {
         return this.IsShowCase;
     }
 
     /**
-     * Set 是否官方示例，0=否，1=是
-     * @param IsShowCase 是否官方示例，0=否，1=是
+     * Set <p>是否官方示例，0=否，1=是</p>
+     * @param IsShowCase <p>是否官方示例，0=否，1=是</p>
      */
     public void setIsShowCase(Long IsShowCase) {
         this.IsShowCase = IsShowCase;
     }
 
     /**
-     * Get 文档摘要 
-     * @return DocumentSummary 文档摘要
+     * Get <p>文档摘要</p> 
+     * @return DocumentSummary <p>文档摘要</p>
      */
     public String getDocumentSummary() {
         return this.DocumentSummary;
     }
 
     /**
-     * Set 文档摘要
-     * @param DocumentSummary 文档摘要
+     * Set <p>文档摘要</p>
+     * @param DocumentSummary <p>文档摘要</p>
      */
     public void setDocumentSummary(String DocumentSummary) {
         this.DocumentSummary = DocumentSummary;
+    }
+
+    /**
+     * Get <p>网页地址</p> 
+     * @return WebUrl <p>网页地址</p>
+     */
+    public String getWebUrl() {
+        return this.WebUrl;
+    }
+
+    /**
+     * Set <p>网页地址</p>
+     * @param WebUrl <p>网页地址</p>
+     */
+    public void setWebUrl(String WebUrl) {
+        this.WebUrl = WebUrl;
     }
 
     public FileInfo() {
@@ -353,6 +366,9 @@ public class FileInfo extends AbstractModel {
         if (source.DocumentSummary != null) {
             this.DocumentSummary = new String(source.DocumentSummary);
         }
+        if (source.WebUrl != null) {
+            this.WebUrl = new String(source.WebUrl);
+        }
     }
 
 
@@ -372,6 +388,7 @@ public class FileInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "FileUrl", this.FileUrl);
         this.setParamSimple(map, prefix + "IsShowCase", this.IsShowCase);
         this.setParamSimple(map, prefix + "DocumentSummary", this.DocumentSummary);
+        this.setParamSimple(map, prefix + "WebUrl", this.WebUrl);
 
     }
 }

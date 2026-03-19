@@ -469,6 +469,17 @@ public class LcicClient extends AbstractClient{
     }
 
     /**
+     *获取转推配置
+     * @param req DescribeLiveRelayConfigRequest
+     * @return DescribeLiveRelayConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveRelayConfigResponse DescribeLiveRelayConfig(DescribeLiveRelayConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLiveRelayConfig", DescribeLiveRelayConfigResponse.class);
+    }
+
+    /**
      *查询跑马灯配置
      * @param req DescribeMarqueeRequest
      * @return DescribeMarqueeResponse
@@ -800,6 +811,17 @@ public class LcicClient extends AbstractClient{
     public ModifyGroupResponse ModifyGroup(ModifyGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyGroup", ModifyGroupResponse.class);
+    }
+
+    /**
+     *修改转推配置
+     * @param req ModifyLiveRelayConfigRequest
+     * @return ModifyLiveRelayConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLiveRelayConfigResponse ModifyLiveRelayConfig(ModifyLiveRelayConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLiveRelayConfig", ModifyLiveRelayConfigResponse.class);
     }
 
     /**

@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class AccessControlRule extends AbstractModel {
 
     /**
-    * requestHeader ：对请求头部进行访问控制
-url ： 对访问url进行访问控制
+    * <p>规则类型：<br>requestHeader ：对请求头部进行访问控制<br>url ： 对访问url进行访问控制</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleType")
@@ -33,7 +32,7 @@ url ： 对访问url进行访问控制
     private String RuleType;
 
     /**
-    * 封禁内容
+    * <p>封禁内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleContent")
@@ -41,8 +40,7 @@ url ： 对访问url进行访问控制
     private String RuleContent;
 
     /**
-    * on ：正则匹配
-off ：字面匹配
+    * <p>on ：正则匹配<br>off ：字面匹配</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Regex")
@@ -50,7 +48,7 @@ off ：字面匹配
     private String Regex;
 
     /**
-    * RuleType为requestHeader时必填，否则不需要填
+    * <p>RuleType为requestHeader时必填，否则不需要填</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleHeader")
@@ -58,11 +56,9 @@ off ：字面匹配
     private String RuleHeader;
 
     /**
-     * Get requestHeader ：对请求头部进行访问控制
-url ： 对访问url进行访问控制
+     * Get <p>规则类型：<br>requestHeader ：对请求头部进行访问控制<br>url ： 对访问url进行访问控制</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleType requestHeader ：对请求头部进行访问控制
-url ： 对访问url进行访问控制
+     * @return RuleType <p>规则类型：<br>requestHeader ：对请求头部进行访问控制<br>url ： 对访问url进行访问控制</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleType() {
@@ -70,11 +66,9 @@ url ： 对访问url进行访问控制
     }
 
     /**
-     * Set requestHeader ：对请求头部进行访问控制
-url ： 对访问url进行访问控制
+     * Set <p>规则类型：<br>requestHeader ：对请求头部进行访问控制<br>url ： 对访问url进行访问控制</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleType requestHeader ：对请求头部进行访问控制
-url ： 对访问url进行访问控制
+     * @param RuleType <p>规则类型：<br>requestHeader ：对请求头部进行访问控制<br>url ： 对访问url进行访问控制</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleType(String RuleType) {
@@ -82,9 +76,9 @@ url ： 对访问url进行访问控制
     }
 
     /**
-     * Get 封禁内容
+     * Get <p>封禁内容</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleContent 封禁内容
+     * @return RuleContent <p>封禁内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleContent() {
@@ -92,9 +86,9 @@ url ： 对访问url进行访问控制
     }
 
     /**
-     * Set 封禁内容
+     * Set <p>封禁内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleContent 封禁内容
+     * @param RuleContent <p>封禁内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleContent(String RuleContent) {
@@ -102,11 +96,9 @@ url ： 对访问url进行访问控制
     }
 
     /**
-     * Get on ：正则匹配
-off ：字面匹配
+     * Get <p>on ：正则匹配<br>off ：字面匹配</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Regex on ：正则匹配
-off ：字面匹配
+     * @return Regex <p>on ：正则匹配<br>off ：字面匹配</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegex() {
@@ -114,11 +106,9 @@ off ：字面匹配
     }
 
     /**
-     * Set on ：正则匹配
-off ：字面匹配
+     * Set <p>on ：正则匹配<br>off ：字面匹配</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Regex on ：正则匹配
-off ：字面匹配
+     * @param Regex <p>on ：正则匹配<br>off ：字面匹配</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegex(String Regex) {
@@ -126,9 +116,9 @@ off ：字面匹配
     }
 
     /**
-     * Get RuleType为requestHeader时必填，否则不需要填
+     * Get <p>RuleType为requestHeader时必填，否则不需要填</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleHeader RuleType为requestHeader时必填，否则不需要填
+     * @return RuleHeader <p>RuleType为requestHeader时必填，否则不需要填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleHeader() {
@@ -136,9 +126,9 @@ off ：字面匹配
     }
 
     /**
-     * Set RuleType为requestHeader时必填，否则不需要填
+     * Set <p>RuleType为requestHeader时必填，否则不需要填</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleHeader RuleType为requestHeader时必填，否则不需要填
+     * @param RuleHeader <p>RuleType为requestHeader时必填，否则不需要填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleHeader(String RuleHeader) {

@@ -376,6 +376,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *创建自定义字幕压制模板
+     * @param req CreateSubtitleEmbedTemplateRequest
+     * @return CreateSubtitleEmbedTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSubtitleEmbedTemplateResponse CreateSubtitleEmbedTemplate(CreateSubtitleEmbedTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSubtitleEmbedTemplate", CreateSubtitleEmbedTemplateResponse.class);
+    }
+
+    /**
      *创建用户自定义转码模板，数量上限：1000
      * @param req CreateTranscodeTemplateRequest
      * @return CreateTranscodeTemplateResponse
@@ -684,6 +695,17 @@ public class MpsClient extends AbstractClient{
     public DeleteStreamLinkSecurityGroupResponse DeleteStreamLinkSecurityGroup(DeleteStreamLinkSecurityGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteStreamLinkSecurityGroup", DeleteStreamLinkSecurityGroupResponse.class);
+    }
+
+    /**
+     *删除用户自定义字幕压制模板。
+     * @param req DeleteSubtitleEmbedTemplateRequest
+     * @return DeleteSubtitleEmbedTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSubtitleEmbedTemplateResponse DeleteSubtitleEmbedTemplate(DeleteSubtitleEmbedTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteSubtitleEmbedTemplate", DeleteSubtitleEmbedTemplateResponse.class);
     }
 
     /**
@@ -1135,6 +1157,17 @@ public class MpsClient extends AbstractClient{
     public DescribeStreamLinkSecurityGroupsResponse DescribeStreamLinkSecurityGroups(DescribeStreamLinkSecurityGroupsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeStreamLinkSecurityGroups", DescribeStreamLinkSecurityGroupsResponse.class);
+    }
+
+    /**
+     *根据字幕压制模板唯一标识，获取字幕压制模板详情列表。返回结果包含符合条件的所有用户自定义字幕压制模板及系统预置字幕压制模板
+     * @param req DescribeSubtitleEmbedTemplatesRequest
+     * @return DescribeSubtitleEmbedTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSubtitleEmbedTemplatesResponse DescribeSubtitleEmbedTemplates(DescribeSubtitleEmbedTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSubtitleEmbedTemplates", DescribeSubtitleEmbedTemplatesResponse.class);
     }
 
     /**
@@ -1593,6 +1626,17 @@ public class MpsClient extends AbstractClient{
     public ModifyStreamLinkSecurityGroupResponse ModifyStreamLinkSecurityGroup(ModifyStreamLinkSecurityGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyStreamLinkSecurityGroup", ModifyStreamLinkSecurityGroupResponse.class);
+    }
+
+    /**
+     *修改用户自定义字幕压制模板。
+     * @param req ModifySubtitleEmbedTemplateRequest
+     * @return ModifySubtitleEmbedTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySubtitleEmbedTemplateResponse ModifySubtitleEmbedTemplate(ModifySubtitleEmbedTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySubtitleEmbedTemplate", ModifySubtitleEmbedTemplateResponse.class);
     }
 
     /**

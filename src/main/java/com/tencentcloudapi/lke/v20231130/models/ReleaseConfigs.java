@@ -41,6 +41,10 @@ public class ReleaseConfigs extends AbstractModel {
 
     /**
     * 状态
+2：待发布
+3：发布中
+4：已发布
+5：发布失败
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Action")
@@ -121,8 +125,16 @@ public class ReleaseConfigs extends AbstractModel {
 
     /**
      * Get 状态
+2：待发布
+3：发布中
+4：已发布
+5：发布失败
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Action 状态
+2：待发布
+3：发布中
+4：已发布
+5：发布失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAction() {
@@ -131,8 +143,16 @@ public class ReleaseConfigs extends AbstractModel {
 
     /**
      * Set 状态
+2：待发布
+3：发布中
+4：已发布
+5：发布失败
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Action 状态
+2：待发布
+3：发布中
+4：已发布
+5：发布失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAction(Long Action) {

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class FilterRules extends AbstractModel {
 
     /**
-    * 封禁类型
+    * <p>封禁类型<br>forbidden - 封禁</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FilterType")
@@ -32,7 +32,7 @@ public class FilterRules extends AbstractModel {
     private String FilterType;
 
     /**
-    * 封禁规则类型
+    * <p>封禁规则类型<br>all - 全部请求<br>file - 指定后缀的文件请求</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleType")
@@ -40,7 +40,7 @@ public class FilterRules extends AbstractModel {
     private String RuleType;
 
     /**
-    * 封禁规则路径
+    * <p>封禁规则路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RulePaths")
@@ -48,9 +48,9 @@ public class FilterRules extends AbstractModel {
     private String [] RulePaths;
 
     /**
-     * Get 封禁类型
+     * Get <p>封禁类型<br>forbidden - 封禁</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FilterType 封禁类型
+     * @return FilterType <p>封禁类型<br>forbidden - 封禁</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFilterType() {
@@ -58,9 +58,9 @@ public class FilterRules extends AbstractModel {
     }
 
     /**
-     * Set 封禁类型
+     * Set <p>封禁类型<br>forbidden - 封禁</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FilterType 封禁类型
+     * @param FilterType <p>封禁类型<br>forbidden - 封禁</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFilterType(String FilterType) {
@@ -68,9 +68,9 @@ public class FilterRules extends AbstractModel {
     }
 
     /**
-     * Get 封禁规则类型
+     * Get <p>封禁规则类型<br>all - 全部请求<br>file - 指定后缀的文件请求</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleType 封禁规则类型
+     * @return RuleType <p>封禁规则类型<br>all - 全部请求<br>file - 指定后缀的文件请求</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleType() {
@@ -78,9 +78,9 @@ public class FilterRules extends AbstractModel {
     }
 
     /**
-     * Set 封禁规则类型
+     * Set <p>封禁规则类型<br>all - 全部请求<br>file - 指定后缀的文件请求</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleType 封禁规则类型
+     * @param RuleType <p>封禁规则类型<br>all - 全部请求<br>file - 指定后缀的文件请求</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleType(String RuleType) {
@@ -88,9 +88,9 @@ public class FilterRules extends AbstractModel {
     }
 
     /**
-     * Get 封禁规则路径
+     * Get <p>封禁规则路径</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RulePaths 封禁规则路径
+     * @return RulePaths <p>封禁规则路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getRulePaths() {
@@ -98,9 +98,9 @@ public class FilterRules extends AbstractModel {
     }
 
     /**
-     * Set 封禁规则路径
+     * Set <p>封禁规则路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RulePaths 封禁规则路径
+     * @param RulePaths <p>封禁规则路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRulePaths(String [] RulePaths) {

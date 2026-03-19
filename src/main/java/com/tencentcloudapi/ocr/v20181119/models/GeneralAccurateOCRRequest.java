@@ -80,20 +80,6 @@ public class GeneralAccurateOCRRequest extends AbstractModel {
     private String ConfigID;
 
     /**
-    * <p>需要识别的文字类型，默认识别全部类型的文字。 0：自动识别全部类型文字 1：仅识别手写体文字 2：仅识别印刷体文字</p>
-    */
-    @SerializedName("WordsType")
-    @Expose
-    private String WordsType;
-
-    /**
-    * <p>支持输出单行文字的语种信息，开启后耗时会略有增加。</p>
-    */
-    @SerializedName("LanguageInfo")
-    @Expose
-    private Boolean LanguageInfo;
-
-    /**
      * Get <p>图片/PDF的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。</p> 
      * @return ImageBase64 <p>图片/PDF的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。</p>
      */
@@ -221,38 +207,6 @@ public class GeneralAccurateOCRRequest extends AbstractModel {
         this.ConfigID = ConfigID;
     }
 
-    /**
-     * Get <p>需要识别的文字类型，默认识别全部类型的文字。 0：自动识别全部类型文字 1：仅识别手写体文字 2：仅识别印刷体文字</p> 
-     * @return WordsType <p>需要识别的文字类型，默认识别全部类型的文字。 0：自动识别全部类型文字 1：仅识别手写体文字 2：仅识别印刷体文字</p>
-     */
-    public String getWordsType() {
-        return this.WordsType;
-    }
-
-    /**
-     * Set <p>需要识别的文字类型，默认识别全部类型的文字。 0：自动识别全部类型文字 1：仅识别手写体文字 2：仅识别印刷体文字</p>
-     * @param WordsType <p>需要识别的文字类型，默认识别全部类型的文字。 0：自动识别全部类型文字 1：仅识别手写体文字 2：仅识别印刷体文字</p>
-     */
-    public void setWordsType(String WordsType) {
-        this.WordsType = WordsType;
-    }
-
-    /**
-     * Get <p>支持输出单行文字的语种信息，开启后耗时会略有增加。</p> 
-     * @return LanguageInfo <p>支持输出单行文字的语种信息，开启后耗时会略有增加。</p>
-     */
-    public Boolean getLanguageInfo() {
-        return this.LanguageInfo;
-    }
-
-    /**
-     * Set <p>支持输出单行文字的语种信息，开启后耗时会略有增加。</p>
-     * @param LanguageInfo <p>支持输出单行文字的语种信息，开启后耗时会略有增加。</p>
-     */
-    public void setLanguageInfo(Boolean LanguageInfo) {
-        this.LanguageInfo = LanguageInfo;
-    }
-
     public GeneralAccurateOCRRequest() {
     }
 
@@ -285,12 +239,6 @@ public class GeneralAccurateOCRRequest extends AbstractModel {
         if (source.ConfigID != null) {
             this.ConfigID = new String(source.ConfigID);
         }
-        if (source.WordsType != null) {
-            this.WordsType = new String(source.WordsType);
-        }
-        if (source.LanguageInfo != null) {
-            this.LanguageInfo = new Boolean(source.LanguageInfo);
-        }
     }
 
 
@@ -306,8 +254,6 @@ public class GeneralAccurateOCRRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PdfPageNumber", this.PdfPageNumber);
         this.setParamSimple(map, prefix + "EnableDetectText", this.EnableDetectText);
         this.setParamSimple(map, prefix + "ConfigID", this.ConfigID);
-        this.setParamSimple(map, prefix + "WordsType", this.WordsType);
-        this.setParamSimple(map, prefix + "LanguageInfo", this.LanguageInfo);
 
     }
 }

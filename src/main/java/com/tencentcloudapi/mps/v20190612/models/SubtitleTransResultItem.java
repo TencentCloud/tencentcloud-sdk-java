@@ -24,105 +24,118 @@ import java.util.HashMap;
 public class SubtitleTransResultItem extends AbstractModel {
 
     /**
-    * 翻译标识：
-- Success
-- Error
+    * <p>翻译标识：</p><ul><li>Success</li><li>Error</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 源语言（如"en"）
+    * <p>源语言（如&quot;en&quot;）</p>
     */
     @SerializedName("TransSrc")
     @Expose
     private String TransSrc;
 
     /**
-    * 目标语言（如"zh"）
+    * <p>目标语言（如&quot;zh&quot;）</p>
     */
     @SerializedName("TransDst")
     @Expose
     private String TransDst;
 
     /**
-    * 字幕文件地址
+    * <p>字幕文件地址</p>
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-     * Get 翻译标识：
-- Success
-- Error 
-     * @return Status 翻译标识：
-- Success
-- Error
+    * <p>翻译字幕压制视频路径。</p>
+    */
+    @SerializedName("SubtitleEmbedPath")
+    @Expose
+    private String SubtitleEmbedPath;
+
+    /**
+     * Get <p>翻译标识：</p><ul><li>Success</li><li>Error</li></ul> 
+     * @return Status <p>翻译标识：</p><ul><li>Success</li><li>Error</li></ul>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 翻译标识：
-- Success
-- Error
-     * @param Status 翻译标识：
-- Success
-- Error
+     * Set <p>翻译标识：</p><ul><li>Success</li><li>Error</li></ul>
+     * @param Status <p>翻译标识：</p><ul><li>Success</li><li>Error</li></ul>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 源语言（如"en"） 
-     * @return TransSrc 源语言（如"en"）
+     * Get <p>源语言（如&quot;en&quot;）</p> 
+     * @return TransSrc <p>源语言（如&quot;en&quot;）</p>
      */
     public String getTransSrc() {
         return this.TransSrc;
     }
 
     /**
-     * Set 源语言（如"en"）
-     * @param TransSrc 源语言（如"en"）
+     * Set <p>源语言（如&quot;en&quot;）</p>
+     * @param TransSrc <p>源语言（如&quot;en&quot;）</p>
      */
     public void setTransSrc(String TransSrc) {
         this.TransSrc = TransSrc;
     }
 
     /**
-     * Get 目标语言（如"zh"） 
-     * @return TransDst 目标语言（如"zh"）
+     * Get <p>目标语言（如&quot;zh&quot;）</p> 
+     * @return TransDst <p>目标语言（如&quot;zh&quot;）</p>
      */
     public String getTransDst() {
         return this.TransDst;
     }
 
     /**
-     * Set 目标语言（如"zh"）
-     * @param TransDst 目标语言（如"zh"）
+     * Set <p>目标语言（如&quot;zh&quot;）</p>
+     * @param TransDst <p>目标语言（如&quot;zh&quot;）</p>
      */
     public void setTransDst(String TransDst) {
         this.TransDst = TransDst;
     }
 
     /**
-     * Get 字幕文件地址 
-     * @return Path 字幕文件地址
+     * Get <p>字幕文件地址</p> 
+     * @return Path <p>字幕文件地址</p>
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set 字幕文件地址
-     * @param Path 字幕文件地址
+     * Set <p>字幕文件地址</p>
+     * @param Path <p>字幕文件地址</p>
      */
     public void setPath(String Path) {
         this.Path = Path;
+    }
+
+    /**
+     * Get <p>翻译字幕压制视频路径。</p> 
+     * @return SubtitleEmbedPath <p>翻译字幕压制视频路径。</p>
+     */
+    public String getSubtitleEmbedPath() {
+        return this.SubtitleEmbedPath;
+    }
+
+    /**
+     * Set <p>翻译字幕压制视频路径。</p>
+     * @param SubtitleEmbedPath <p>翻译字幕压制视频路径。</p>
+     */
+    public void setSubtitleEmbedPath(String SubtitleEmbedPath) {
+        this.SubtitleEmbedPath = SubtitleEmbedPath;
     }
 
     public SubtitleTransResultItem() {
@@ -145,6 +158,9 @@ public class SubtitleTransResultItem extends AbstractModel {
         if (source.Path != null) {
             this.Path = new String(source.Path);
         }
+        if (source.SubtitleEmbedPath != null) {
+            this.SubtitleEmbedPath = new String(source.SubtitleEmbedPath);
+        }
     }
 
 
@@ -156,6 +172,7 @@ public class SubtitleTransResultItem extends AbstractModel {
         this.setParamSimple(map, prefix + "TransSrc", this.TransSrc);
         this.setParamSimple(map, prefix + "TransDst", this.TransDst);
         this.setParamSimple(map, prefix + "Path", this.Path);
+        this.setParamSimple(map, prefix + "SubtitleEmbedPath", this.SubtitleEmbedPath);
 
     }
 }

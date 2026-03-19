@@ -24,72 +24,95 @@ import java.util.HashMap;
 public class SubtitleResult extends AbstractModel {
 
     /**
-    * 字幕文件语言
+    * <p>字幕文件语言</p>
     */
     @SerializedName("Language")
     @Expose
     private String Language;
 
     /**
-    * 处理是否成功
+    * <p>处理是否成功</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 字幕文件地址
+    * <p>字幕文件路径。</p>
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-     * Get 字幕文件语言 
-     * @return Language 字幕文件语言
+    * <p>字幕压制视频路径。</p>
+    */
+    @SerializedName("SubtitleEmbedPath")
+    @Expose
+    private String SubtitleEmbedPath;
+
+    /**
+     * Get <p>字幕文件语言</p> 
+     * @return Language <p>字幕文件语言</p>
      */
     public String getLanguage() {
         return this.Language;
     }
 
     /**
-     * Set 字幕文件语言
-     * @param Language 字幕文件语言
+     * Set <p>字幕文件语言</p>
+     * @param Language <p>字幕文件语言</p>
      */
     public void setLanguage(String Language) {
         this.Language = Language;
     }
 
     /**
-     * Get 处理是否成功 
-     * @return Status 处理是否成功
+     * Get <p>处理是否成功</p> 
+     * @return Status <p>处理是否成功</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 处理是否成功
-     * @param Status 处理是否成功
+     * Set <p>处理是否成功</p>
+     * @param Status <p>处理是否成功</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 字幕文件地址 
-     * @return Path 字幕文件地址
+     * Get <p>字幕文件路径。</p> 
+     * @return Path <p>字幕文件路径。</p>
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set 字幕文件地址
-     * @param Path 字幕文件地址
+     * Set <p>字幕文件路径。</p>
+     * @param Path <p>字幕文件路径。</p>
      */
     public void setPath(String Path) {
         this.Path = Path;
+    }
+
+    /**
+     * Get <p>字幕压制视频路径。</p> 
+     * @return SubtitleEmbedPath <p>字幕压制视频路径。</p>
+     */
+    public String getSubtitleEmbedPath() {
+        return this.SubtitleEmbedPath;
+    }
+
+    /**
+     * Set <p>字幕压制视频路径。</p>
+     * @param SubtitleEmbedPath <p>字幕压制视频路径。</p>
+     */
+    public void setSubtitleEmbedPath(String SubtitleEmbedPath) {
+        this.SubtitleEmbedPath = SubtitleEmbedPath;
     }
 
     public SubtitleResult() {
@@ -109,6 +132,9 @@ public class SubtitleResult extends AbstractModel {
         if (source.Path != null) {
             this.Path = new String(source.Path);
         }
+        if (source.SubtitleEmbedPath != null) {
+            this.SubtitleEmbedPath = new String(source.SubtitleEmbedPath);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class SubtitleResult extends AbstractModel {
         this.setParamSimple(map, prefix + "Language", this.Language);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Path", this.Path);
+        this.setParamSimple(map, prefix + "SubtitleEmbedPath", this.SubtitleEmbedPath);
 
     }
 }

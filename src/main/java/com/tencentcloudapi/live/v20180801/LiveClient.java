@@ -162,6 +162,17 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
+     *调用该接口，用于复制数字人直播间。
+     * @param req CopyLiveAvatarRoomRequest
+     * @return CopyLiveAvatarRoomResponse
+     * @throws TencentCloudSDKException
+     */
+    public CopyLiveAvatarRoomResponse CopyLiveAvatarRoom(CopyLiveAvatarRoomRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CopyLiveAvatarRoom", CopyLiveAvatarRoomResponse.class);
+    }
+
+    /**
      *创建关键词库，直播审核功能使用。
      * @param req CreateAuditKeywordLibRequest
      * @return CreateAuditKeywordLibResponse
@@ -250,6 +261,28 @@ public class LiveClient extends AbstractClient{
     public CreateCommonMixStreamResponse CreateCommonMixStream(CreateCommonMixStreamRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateCommonMixStream", CreateCommonMixStreamResponse.class);
+    }
+
+    /**
+     *调用该接口，用于创建数字人直播间。
+     * @param req CreateLiveAvatarRoomRequest
+     * @return CreateLiveAvatarRoomResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLiveAvatarRoomResponse CreateLiveAvatarRoom(CreateLiveAvatarRoomRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateLiveAvatarRoom", CreateLiveAvatarRoomResponse.class);
+    }
+
+    /**
+     *调用该接口，用于创建数字人直播间话术。
+     * @param req CreateLiveAvatarScriptRequest
+     * @return CreateLiveAvatarScriptResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLiveAvatarScriptResponse CreateLiveAvatarScript(CreateLiveAvatarScriptRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateLiveAvatarScript", CreateLiveAvatarScriptResponse.class);
     }
 
     /**
@@ -603,6 +636,28 @@ public class LiveClient extends AbstractClient{
     public DeleteCasterOutputInfoResponse DeleteCasterOutputInfo(DeleteCasterOutputInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteCasterOutputInfo", DeleteCasterOutputInfoResponse.class);
+    }
+
+    /**
+     *调用该接口，用于删除已有的数字人直播间。
+     * @param req DeleteLiveAvatarRoomRequest
+     * @return DeleteLiveAvatarRoomResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLiveAvatarRoomResponse DeleteLiveAvatarRoom(DeleteLiveAvatarRoomRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteLiveAvatarRoom", DeleteLiveAvatarRoomResponse.class);
+    }
+
+    /**
+     *调用该接口，用于删除已有的数字人直播间里面的话术。
+     * @param req DeleteLiveAvatarScriptRequest
+     * @return DeleteLiveAvatarScriptResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLiveAvatarScriptResponse DeleteLiveAvatarScript(DeleteLiveAvatarScriptRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteLiveAvatarScript", DeleteLiveAvatarScriptResponse.class);
     }
 
     /**
@@ -1100,6 +1155,72 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeHttpStatusInfoListResponse DescribeHttpStatusInfoList(DescribeHttpStatusInfoListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeHttpStatusInfoList", DescribeHttpStatusInfoListResponse.class);
+    }
+
+    /**
+     *调用该接口，获取可用的数字人背景列表信息列表。根据入参，可返回官方预设背景，以及用户上传背景。
+     * @param req DescribeLiveAvatarBackgroundListRequest
+     * @return DescribeLiveAvatarBackgroundListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveAvatarBackgroundListResponse DescribeLiveAvatarBackgroundList(DescribeLiveAvatarBackgroundListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLiveAvatarBackgroundList", DescribeLiveAvatarBackgroundListResponse.class);
+    }
+
+    /**
+     *调用该接口，获取可用的数字人形象信息列表。包括官方预制形象，以及个人定制形象。
+     * @param req DescribeLiveAvatarImageListRequest
+     * @return DescribeLiveAvatarImageListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveAvatarImageListResponse DescribeLiveAvatarImageList(DescribeLiveAvatarImageListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLiveAvatarImageList", DescribeLiveAvatarImageListResponse.class);
+    }
+
+    /**
+     *调用该接口，查询数字人直播间信息列表。
+     * @param req DescribeLiveAvatarRoomsRequest
+     * @return DescribeLiveAvatarRoomsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveAvatarRoomsResponse DescribeLiveAvatarRooms(DescribeLiveAvatarRoomsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLiveAvatarRooms", DescribeLiveAvatarRoomsResponse.class);
+    }
+
+    /**
+     *调用该接口，查询数字人直播间话术信息列表。
+     * @param req DescribeLiveAvatarScriptsRequest
+     * @return DescribeLiveAvatarScriptsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveAvatarScriptsResponse DescribeLiveAvatarScripts(DescribeLiveAvatarScriptsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLiveAvatarScripts", DescribeLiveAvatarScriptsResponse.class);
+    }
+
+    /**
+     *调用该接口，用于查询临时驱动数字人播报话术列表。
+     * @param req DescribeLiveAvatarTemporaryScriptListRequest
+     * @return DescribeLiveAvatarTemporaryScriptListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveAvatarTemporaryScriptListResponse DescribeLiveAvatarTemporaryScriptList(DescribeLiveAvatarTemporaryScriptListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLiveAvatarTemporaryScriptList", DescribeLiveAvatarTemporaryScriptListResponse.class);
+    }
+
+    /**
+     *调用该接口，获取可用的数字人声音信息列表。包括官方预制音色，以及个人复刻音色。
+     * @param req DescribeLiveAvatarTimbreListRequest
+     * @return DescribeLiveAvatarTimbreListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveAvatarTimbreListResponse DescribeLiveAvatarTimbreList(DescribeLiveAvatarTimbreListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLiveAvatarTimbreList", DescribeLiveAvatarTimbreListResponse.class);
     }
 
     /**
@@ -1997,6 +2118,17 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
+     *调用该接口，用于触发话术播报生成，并返回音频播报URL。
+     * @param req GenerateLiveAvatarScriptBroadcastRequest
+     * @return GenerateLiveAvatarScriptBroadcastResponse
+     * @throws TencentCloudSDKException
+     */
+    public GenerateLiveAvatarScriptBroadcastResponse GenerateLiveAvatarScriptBroadcast(GenerateLiveAvatarScriptBroadcastRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GenerateLiveAvatarScriptBroadcast", GenerateLiveAvatarScriptBroadcastResponse.class);
+    }
+
+    /**
      *可通过调用该接口，对点播源的直播拉流任务进行插播操作。
 注意：
 1. 仅支持对有效且运行中的点播源任务进行插播操作。
@@ -2077,6 +2209,28 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public ModifyCasterOutputInfoResponse ModifyCasterOutputInfo(ModifyCasterOutputInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyCasterOutputInfo", ModifyCasterOutputInfoResponse.class);
+    }
+
+    /**
+     *调用该接口，用于修改数字人直播间。
+     * @param req ModifyLiveAvatarRoomRequest
+     * @return ModifyLiveAvatarRoomResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLiveAvatarRoomResponse ModifyLiveAvatarRoom(ModifyLiveAvatarRoomRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLiveAvatarRoom", ModifyLiveAvatarRoomResponse.class);
+    }
+
+    /**
+     *调用该接口，用于修改数字人直播间话术。
+     * @param req ModifyLiveAvatarScriptRequest
+     * @return ModifyLiveAvatarScriptResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLiveAvatarScriptResponse ModifyLiveAvatarScript(ModifyLiveAvatarScriptRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLiveAvatarScript", ModifyLiveAvatarScriptResponse.class);
     }
 
     /**
@@ -2308,6 +2462,28 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
+     *调用该接口，用于临时驱动数字人播报。
+     * @param req SendTemporaryScriptToAvatarRoomRequest
+     * @return SendTemporaryScriptToAvatarRoomResponse
+     * @throws TencentCloudSDKException
+     */
+    public SendTemporaryScriptToAvatarRoomResponse SendTemporaryScriptToAvatarRoom(SendTemporaryScriptToAvatarRoomRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SendTemporaryScriptToAvatarRoom", SendTemporaryScriptToAvatarRoomResponse.class);
+    }
+
+    /**
+     *调用该接口，用于启动数字人直播间。
+     * @param req StartLiveAvatarRoomRequest
+     * @return StartLiveAvatarRoomResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartLiveAvatarRoomResponse StartLiveAvatarRoom(StartLiveAvatarRoomRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StartLiveAvatarRoom", StartLiveAvatarRoomResponse.class);
+    }
+
+    /**
      *使用该接口将直播流开始切入垫片。
      * @param req StartLivePadStreamRequest
      * @return StartLivePadStreamResponse
@@ -2350,6 +2526,17 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public StopCasterPvwResponse StopCasterPvw(StopCasterPvwRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StopCasterPvw", StopCasterPvwResponse.class);
+    }
+
+    /**
+     *调用该接口，用于停止数字人直播间。
+     * @param req StopLiveAvatarRoomRequest
+     * @return StopLiveAvatarRoomResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopLiveAvatarRoomResponse StopLiveAvatarRoom(StopLiveAvatarRoomRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopLiveAvatarRoom", StopLiveAvatarRoomResponse.class);
     }
 
     /**

@@ -52,6 +52,13 @@ public class PlaybackItem extends AbstractModel {
     private Long CreateTime;
 
     /**
+    * <p>文件大小。</p><p>单位：MB</p>
+    */
+    @SerializedName("FileSize")
+    @Expose
+    private Float FileSize;
+
+    /**
      * Get <p>房间id</p> 
      * @return RoomId <p>房间id</p>
      */
@@ -115,6 +122,22 @@ public class PlaybackItem extends AbstractModel {
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get <p>文件大小。</p><p>单位：MB</p> 
+     * @return FileSize <p>文件大小。</p><p>单位：MB</p>
+     */
+    public Float getFileSize() {
+        return this.FileSize;
+    }
+
+    /**
+     * Set <p>文件大小。</p><p>单位：MB</p>
+     * @param FileSize <p>文件大小。</p><p>单位：MB</p>
+     */
+    public void setFileSize(Float FileSize) {
+        this.FileSize = FileSize;
+    }
+
     public PlaybackItem() {
     }
 
@@ -135,6 +158,9 @@ public class PlaybackItem extends AbstractModel {
         if (source.CreateTime != null) {
             this.CreateTime = new Long(source.CreateTime);
         }
+        if (source.FileSize != null) {
+            this.FileSize = new Float(source.FileSize);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class PlaybackItem extends AbstractModel {
         this.setParamSimple(map, prefix + "PlaybackUrl", this.PlaybackUrl);
         this.setParamSimple(map, prefix + "Duration", this.Duration);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "FileSize", this.FileSize);
 
     }
 }

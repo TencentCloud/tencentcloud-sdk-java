@@ -45,6 +45,20 @@ public class DescribeTWeSeeConfigResponse extends AbstractModel {
     private String Config;
 
     /**
+    * 摘要配置参数
+    */
+    @SerializedName("SummaryConfig")
+    @Expose
+    private VisionSummaryConfig SummaryConfig;
+
+    /**
+    * 云存事件 ID 过滤规则配置项
+    */
+    @SerializedName("EventIdFilterConfig")
+    @Expose
+    private SeeEventIdFilterConfig EventIdFilterConfig;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -100,6 +114,38 @@ public class DescribeTWeSeeConfigResponse extends AbstractModel {
     }
 
     /**
+     * Get 摘要配置参数 
+     * @return SummaryConfig 摘要配置参数
+     */
+    public VisionSummaryConfig getSummaryConfig() {
+        return this.SummaryConfig;
+    }
+
+    /**
+     * Set 摘要配置参数
+     * @param SummaryConfig 摘要配置参数
+     */
+    public void setSummaryConfig(VisionSummaryConfig SummaryConfig) {
+        this.SummaryConfig = SummaryConfig;
+    }
+
+    /**
+     * Get 云存事件 ID 过滤规则配置项 
+     * @return EventIdFilterConfig 云存事件 ID 过滤规则配置项
+     */
+    public SeeEventIdFilterConfig getEventIdFilterConfig() {
+        return this.EventIdFilterConfig;
+    }
+
+    /**
+     * Set 云存事件 ID 过滤规则配置项
+     * @param EventIdFilterConfig 云存事件 ID 过滤规则配置项
+     */
+    public void setEventIdFilterConfig(SeeEventIdFilterConfig EventIdFilterConfig) {
+        this.EventIdFilterConfig = EventIdFilterConfig;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -132,6 +178,12 @@ public class DescribeTWeSeeConfigResponse extends AbstractModel {
         if (source.Config != null) {
             this.Config = new String(source.Config);
         }
+        if (source.SummaryConfig != null) {
+            this.SummaryConfig = new VisionSummaryConfig(source.SummaryConfig);
+        }
+        if (source.EventIdFilterConfig != null) {
+            this.EventIdFilterConfig = new SeeEventIdFilterConfig(source.EventIdFilterConfig);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -145,6 +197,8 @@ public class DescribeTWeSeeConfigResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableSummary", this.EnableSummary);
         this.setParamSimple(map, prefix + "EnableSearch", this.EnableSearch);
         this.setParamSimple(map, prefix + "Config", this.Config);
+        this.setParamObj(map, prefix + "SummaryConfig.", this.SummaryConfig);
+        this.setParamObj(map, prefix + "EventIdFilterConfig.", this.EventIdFilterConfig);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

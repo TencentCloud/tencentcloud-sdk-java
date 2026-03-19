@@ -154,6 +154,13 @@ public class KongRoutePreview extends AbstractModel {
     private Long RegexPriority;
 
     /**
+    * querystring参数
+    */
+    @SerializedName("QueryStringParameters")
+    @Expose
+    private KVMapping [] QueryStringParameters;
+
+    /**
      * Get 服务ID 
      * @return ID 服务ID
      */
@@ -461,6 +468,22 @@ public class KongRoutePreview extends AbstractModel {
         this.RegexPriority = RegexPriority;
     }
 
+    /**
+     * Get querystring参数 
+     * @return QueryStringParameters querystring参数
+     */
+    public KVMapping [] getQueryStringParameters() {
+        return this.QueryStringParameters;
+    }
+
+    /**
+     * Set querystring参数
+     * @param QueryStringParameters querystring参数
+     */
+    public void setQueryStringParameters(KVMapping [] QueryStringParameters) {
+        this.QueryStringParameters = QueryStringParameters;
+    }
+
     public KongRoutePreview() {
     }
 
@@ -541,6 +564,12 @@ public class KongRoutePreview extends AbstractModel {
         if (source.RegexPriority != null) {
             this.RegexPriority = new Long(source.RegexPriority);
         }
+        if (source.QueryStringParameters != null) {
+            this.QueryStringParameters = new KVMapping[source.QueryStringParameters.length];
+            for (int i = 0; i < source.QueryStringParameters.length; i++) {
+                this.QueryStringParameters[i] = new KVMapping(source.QueryStringParameters[i]);
+            }
+        }
     }
 
 
@@ -566,6 +595,7 @@ public class KongRoutePreview extends AbstractModel {
         this.setParamSimple(map, prefix + "RequestBuffering", this.RequestBuffering);
         this.setParamSimple(map, prefix + "ResponseBuffering", this.ResponseBuffering);
         this.setParamSimple(map, prefix + "RegexPriority", this.RegexPriority);
+        this.setParamArrayObj(map, prefix + "QueryStringParameters.", this.QueryStringParameters);
 
     }
 }

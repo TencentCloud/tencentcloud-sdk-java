@@ -50,6 +50,17 @@ public class HaiClient extends AbstractClient{
     }
 
     /**
+     *本接口(CreateInferServiceByTemplate)用于根据模板创建服务
+     * @param req CreateInferServiceByTemplateRequest
+     * @return CreateInferServiceByTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateInferServiceByTemplateResponse CreateInferServiceByTemplate(CreateInferServiceByTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateInferServiceByTemplate", CreateInferServiceByTemplateResponse.class);
+    }
+
+    /**
      *创建musk prompt 任务
      * @param req CreateMuskPromptRequest
      * @return CreateMuskPromptResponse
@@ -61,6 +72,17 @@ public class HaiClient extends AbstractClient{
     }
 
     /**
+     *本接口(DeployInferService)用于部署推理服务
+     * @param req DeployInferServiceRequest
+     * @return DeployInferServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeployInferServiceResponse DeployInferService(DeployInferServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeployInferService", DeployInferServiceResponse.class);
+    }
+
+    /**
      *本接口（DescribeApplications）用于查询应用
      * @param req DescribeApplicationsRequest
      * @return DescribeApplicationsResponse
@@ -69,6 +91,17 @@ public class HaiClient extends AbstractClient{
     public DescribeApplicationsResponse DescribeApplications(DescribeApplicationsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeApplications", DescribeApplicationsResponse.class);
+    }
+
+    /**
+     *本接口(DescribeDeployTemplates)用于查询模型支持的部署模板
+     * @param req DescribeDeployTemplatesRequest
+     * @return DescribeDeployTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeployTemplatesResponse DescribeDeployTemplates(DescribeDeployTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDeployTemplates", DescribeDeployTemplatesResponse.class);
     }
 
     /**
@@ -91,6 +124,17 @@ public class HaiClient extends AbstractClient{
     public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeInstances", DescribeInstancesResponse.class);
+    }
+
+    /**
+     *本接口(DescribeModels)用于查询模型
+     * @param req DescribeModelsRequest
+     * @return DescribeModelsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeModelsResponse DescribeModels(DescribeModelsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeModels", DescribeModelsResponse.class);
     }
 
     /**

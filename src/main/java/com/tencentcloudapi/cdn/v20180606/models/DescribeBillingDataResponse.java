@@ -24,18 +24,14 @@ import java.util.HashMap;
 public class DescribeBillingDataResponse extends AbstractModel {
 
     /**
-    * 时间粒度，根据查询时传递参数指定：
-min：1 分钟粒度
-5min：5 分钟粒度
-hour：1 小时粒度
-day：天粒度
+    * <p>时间粒度，根据查询时传递参数指定：<br>min：1 分钟粒度<br>5min：5 分钟粒度<br>hour：1 小时粒度<br>day：天粒度</p>
     */
     @SerializedName("Interval")
     @Expose
     private String Interval;
 
     /**
-    * 数据明细
+    * <p>数据明细</p>
     */
     @SerializedName("Data")
     @Expose
@@ -49,48 +45,32 @@ day：天粒度
     private String RequestId;
 
     /**
-     * Get 时间粒度，根据查询时传递参数指定：
-min：1 分钟粒度
-5min：5 分钟粒度
-hour：1 小时粒度
-day：天粒度 
-     * @return Interval 时间粒度，根据查询时传递参数指定：
-min：1 分钟粒度
-5min：5 分钟粒度
-hour：1 小时粒度
-day：天粒度
+     * Get <p>时间粒度，根据查询时传递参数指定：<br>min：1 分钟粒度<br>5min：5 分钟粒度<br>hour：1 小时粒度<br>day：天粒度</p> 
+     * @return Interval <p>时间粒度，根据查询时传递参数指定：<br>min：1 分钟粒度<br>5min：5 分钟粒度<br>hour：1 小时粒度<br>day：天粒度</p>
      */
     public String getInterval() {
         return this.Interval;
     }
 
     /**
-     * Set 时间粒度，根据查询时传递参数指定：
-min：1 分钟粒度
-5min：5 分钟粒度
-hour：1 小时粒度
-day：天粒度
-     * @param Interval 时间粒度，根据查询时传递参数指定：
-min：1 分钟粒度
-5min：5 分钟粒度
-hour：1 小时粒度
-day：天粒度
+     * Set <p>时间粒度，根据查询时传递参数指定：<br>min：1 分钟粒度<br>5min：5 分钟粒度<br>hour：1 小时粒度<br>day：天粒度</p>
+     * @param Interval <p>时间粒度，根据查询时传递参数指定：<br>min：1 分钟粒度<br>5min：5 分钟粒度<br>hour：1 小时粒度<br>day：天粒度</p>
      */
     public void setInterval(String Interval) {
         this.Interval = Interval;
     }
 
     /**
-     * Get 数据明细 
-     * @return Data 数据明细
+     * Get <p>数据明细</p> 
+     * @return Data <p>数据明细</p>
      */
     public ResourceBillingData [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 数据明细
-     * @param Data 数据明细
+     * Set <p>数据明细</p>
+     * @param Data <p>数据明细</p>
      */
     public void setData(ResourceBillingData [] Data) {
         this.Data = Data;

@@ -80,6 +80,13 @@ public class ModifyTWeSeeConfigRequest extends AbstractModel {
     private VisionSummaryConfig SummaryConfig;
 
     /**
+    * 云存事件 ID 过滤规则配置，不传则不修改
+    */
+    @SerializedName("EventIdFilterConfig")
+    @Expose
+    private SeeEventIdFilterConfig EventIdFilterConfig;
+
+    /**
      * Get 产品ID 
      * @return ProductId 产品ID
      */
@@ -207,6 +214,22 @@ public class ModifyTWeSeeConfigRequest extends AbstractModel {
         this.SummaryConfig = SummaryConfig;
     }
 
+    /**
+     * Get 云存事件 ID 过滤规则配置，不传则不修改 
+     * @return EventIdFilterConfig 云存事件 ID 过滤规则配置，不传则不修改
+     */
+    public SeeEventIdFilterConfig getEventIdFilterConfig() {
+        return this.EventIdFilterConfig;
+    }
+
+    /**
+     * Set 云存事件 ID 过滤规则配置，不传则不修改
+     * @param EventIdFilterConfig 云存事件 ID 过滤规则配置，不传则不修改
+     */
+    public void setEventIdFilterConfig(SeeEventIdFilterConfig EventIdFilterConfig) {
+        this.EventIdFilterConfig = EventIdFilterConfig;
+    }
+
     public ModifyTWeSeeConfigRequest() {
     }
 
@@ -239,6 +262,9 @@ public class ModifyTWeSeeConfigRequest extends AbstractModel {
         if (source.SummaryConfig != null) {
             this.SummaryConfig = new VisionSummaryConfig(source.SummaryConfig);
         }
+        if (source.EventIdFilterConfig != null) {
+            this.EventIdFilterConfig = new SeeEventIdFilterConfig(source.EventIdFilterConfig);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class ModifyTWeSeeConfigRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableSearch", this.EnableSearch);
         this.setParamSimple(map, prefix + "Config", this.Config);
         this.setParamObj(map, prefix + "SummaryConfig.", this.SummaryConfig);
+        this.setParamObj(map, prefix + "EventIdFilterConfig.", this.EventIdFilterConfig);
 
     }
 }

@@ -24,153 +24,138 @@ import java.util.HashMap;
 public class CreateSmartEraseTemplateRequest extends AbstractModel {
 
     /**
-    * 智能擦除模板名称长度限制：64 个字符。
+    * <p>智能擦除模板名称长度限制：64 个字符。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 擦除类型
-- subtitle 去字幕
-- watermark 去水印
-- privacy 隐私保护
+    * <p>擦除类型</p><ul><li>subtitle 去字幕</li><li>watermark 去水印</li><li>privacy 隐私保护</li></ul>
     */
     @SerializedName("EraseType")
     @Expose
     private String EraseType;
 
     /**
-    * 智能擦除模板描述信息长度限制：256 个字符。
+    * <p>智能擦除模板描述信息长度限制：256 个字符。</p>
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * 字幕擦除配置，EraseType取subtitle时必填且仅此时生效。
+    * <p>字幕擦除配置，EraseType取subtitle时必填且仅此时生效。</p>
     */
     @SerializedName("EraseSubtitleConfig")
     @Expose
     private SmartEraseSubtitleConfig EraseSubtitleConfig;
 
     /**
-    * 水印擦除配置，EraseType取watermark时必填且仅此时生效。
+    * <p>水印擦除配置，EraseType取watermark时必填且仅此时生效。</p>
     */
     @SerializedName("EraseWatermarkConfig")
     @Expose
     private SmartEraseWatermarkConfig EraseWatermarkConfig;
 
     /**
-    * 隐私保护配置，EraseType取privacy时必填且仅此时生效。
+    * <p>隐私保护配置，EraseType取privacy时必填且仅此时生效。</p>
     */
     @SerializedName("ErasePrivacyConfig")
     @Expose
     private SmartErasePrivacyConfig ErasePrivacyConfig;
 
     /**
-     * Get 智能擦除模板名称长度限制：64 个字符。 
-     * @return Name 智能擦除模板名称长度限制：64 个字符。
+     * Get <p>智能擦除模板名称长度限制：64 个字符。</p> 
+     * @return Name <p>智能擦除模板名称长度限制：64 个字符。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 智能擦除模板名称长度限制：64 个字符。
-     * @param Name 智能擦除模板名称长度限制：64 个字符。
+     * Set <p>智能擦除模板名称长度限制：64 个字符。</p>
+     * @param Name <p>智能擦除模板名称长度限制：64 个字符。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 擦除类型
-- subtitle 去字幕
-- watermark 去水印
-- privacy 隐私保护 
-     * @return EraseType 擦除类型
-- subtitle 去字幕
-- watermark 去水印
-- privacy 隐私保护
+     * Get <p>擦除类型</p><ul><li>subtitle 去字幕</li><li>watermark 去水印</li><li>privacy 隐私保护</li></ul> 
+     * @return EraseType <p>擦除类型</p><ul><li>subtitle 去字幕</li><li>watermark 去水印</li><li>privacy 隐私保护</li></ul>
      */
     public String getEraseType() {
         return this.EraseType;
     }
 
     /**
-     * Set 擦除类型
-- subtitle 去字幕
-- watermark 去水印
-- privacy 隐私保护
-     * @param EraseType 擦除类型
-- subtitle 去字幕
-- watermark 去水印
-- privacy 隐私保护
+     * Set <p>擦除类型</p><ul><li>subtitle 去字幕</li><li>watermark 去水印</li><li>privacy 隐私保护</li></ul>
+     * @param EraseType <p>擦除类型</p><ul><li>subtitle 去字幕</li><li>watermark 去水印</li><li>privacy 隐私保护</li></ul>
      */
     public void setEraseType(String EraseType) {
         this.EraseType = EraseType;
     }
 
     /**
-     * Get 智能擦除模板描述信息长度限制：256 个字符。 
-     * @return Comment 智能擦除模板描述信息长度限制：256 个字符。
+     * Get <p>智能擦除模板描述信息长度限制：256 个字符。</p> 
+     * @return Comment <p>智能擦除模板描述信息长度限制：256 个字符。</p>
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 智能擦除模板描述信息长度限制：256 个字符。
-     * @param Comment 智能擦除模板描述信息长度限制：256 个字符。
+     * Set <p>智能擦除模板描述信息长度限制：256 个字符。</p>
+     * @param Comment <p>智能擦除模板描述信息长度限制：256 个字符。</p>
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get 字幕擦除配置，EraseType取subtitle时必填且仅此时生效。 
-     * @return EraseSubtitleConfig 字幕擦除配置，EraseType取subtitle时必填且仅此时生效。
+     * Get <p>字幕擦除配置，EraseType取subtitle时必填且仅此时生效。</p> 
+     * @return EraseSubtitleConfig <p>字幕擦除配置，EraseType取subtitle时必填且仅此时生效。</p>
      */
     public SmartEraseSubtitleConfig getEraseSubtitleConfig() {
         return this.EraseSubtitleConfig;
     }
 
     /**
-     * Set 字幕擦除配置，EraseType取subtitle时必填且仅此时生效。
-     * @param EraseSubtitleConfig 字幕擦除配置，EraseType取subtitle时必填且仅此时生效。
+     * Set <p>字幕擦除配置，EraseType取subtitle时必填且仅此时生效。</p>
+     * @param EraseSubtitleConfig <p>字幕擦除配置，EraseType取subtitle时必填且仅此时生效。</p>
      */
     public void setEraseSubtitleConfig(SmartEraseSubtitleConfig EraseSubtitleConfig) {
         this.EraseSubtitleConfig = EraseSubtitleConfig;
     }
 
     /**
-     * Get 水印擦除配置，EraseType取watermark时必填且仅此时生效。 
-     * @return EraseWatermarkConfig 水印擦除配置，EraseType取watermark时必填且仅此时生效。
+     * Get <p>水印擦除配置，EraseType取watermark时必填且仅此时生效。</p> 
+     * @return EraseWatermarkConfig <p>水印擦除配置，EraseType取watermark时必填且仅此时生效。</p>
      */
     public SmartEraseWatermarkConfig getEraseWatermarkConfig() {
         return this.EraseWatermarkConfig;
     }
 
     /**
-     * Set 水印擦除配置，EraseType取watermark时必填且仅此时生效。
-     * @param EraseWatermarkConfig 水印擦除配置，EraseType取watermark时必填且仅此时生效。
+     * Set <p>水印擦除配置，EraseType取watermark时必填且仅此时生效。</p>
+     * @param EraseWatermarkConfig <p>水印擦除配置，EraseType取watermark时必填且仅此时生效。</p>
      */
     public void setEraseWatermarkConfig(SmartEraseWatermarkConfig EraseWatermarkConfig) {
         this.EraseWatermarkConfig = EraseWatermarkConfig;
     }
 
     /**
-     * Get 隐私保护配置，EraseType取privacy时必填且仅此时生效。 
-     * @return ErasePrivacyConfig 隐私保护配置，EraseType取privacy时必填且仅此时生效。
+     * Get <p>隐私保护配置，EraseType取privacy时必填且仅此时生效。</p> 
+     * @return ErasePrivacyConfig <p>隐私保护配置，EraseType取privacy时必填且仅此时生效。</p>
      */
     public SmartErasePrivacyConfig getErasePrivacyConfig() {
         return this.ErasePrivacyConfig;
     }
 
     /**
-     * Set 隐私保护配置，EraseType取privacy时必填且仅此时生效。
-     * @param ErasePrivacyConfig 隐私保护配置，EraseType取privacy时必填且仅此时生效。
+     * Set <p>隐私保护配置，EraseType取privacy时必填且仅此时生效。</p>
+     * @param ErasePrivacyConfig <p>隐私保护配置，EraseType取privacy时必填且仅此时生效。</p>
      */
     public void setErasePrivacyConfig(SmartErasePrivacyConfig ErasePrivacyConfig) {
         this.ErasePrivacyConfig = ErasePrivacyConfig;

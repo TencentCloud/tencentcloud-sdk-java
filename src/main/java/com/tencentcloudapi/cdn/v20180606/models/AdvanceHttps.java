@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AdvanceHttps extends AbstractModel {
 
     /**
-    * 自定义Tls数据开关
+    * <p>自定义Tls数据开关<br>on - 开<br>off - 关</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CustomTlsStatus")
@@ -32,7 +32,7 @@ public class AdvanceHttps extends AbstractModel {
     private String CustomTlsStatus;
 
     /**
-    * Tls版本列表，支持设置 TLSv1, TLSV1.1, TLSV1.2, TLSv1.3，修改时必须开启连续的版本
+    * <p>Tls版本列表，支持设置 TLSv1, TLSV1.1, TLSV1.2, TLSv1.3，修改时必须开启连续的版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TlsVersion")
@@ -40,7 +40,7 @@ public class AdvanceHttps extends AbstractModel {
     private String [] TlsVersion;
 
     /**
-    * 自定义加密套件
+    * <p>自定义加密套件</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cipher")
@@ -48,10 +48,7 @@ public class AdvanceHttps extends AbstractModel {
     private String Cipher;
 
     /**
-    * 回源双向校验开启状态
-off - 关闭校验
-oneWay - 校验源站
-twoWay - 双向校验
+    * <p>回源双向校验开启状态<br>off - 关闭校验<br>oneWay - 校验源站<br>twoWay - 双向校验</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VerifyOriginType")
@@ -59,7 +56,7 @@ twoWay - 双向校验
     private String VerifyOriginType;
 
     /**
-    * 回源层证书配置信息
+    * <p>回源层证书配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CertInfo")
@@ -67,7 +64,7 @@ twoWay - 双向校验
     private ServerCert CertInfo;
 
     /**
-    * 源站证书配置信息
+    * <p>源站证书配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginCertInfo")
@@ -75,9 +72,9 @@ twoWay - 双向校验
     private ClientCert OriginCertInfo;
 
     /**
-     * Get 自定义Tls数据开关
+     * Get <p>自定义Tls数据开关<br>on - 开<br>off - 关</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CustomTlsStatus 自定义Tls数据开关
+     * @return CustomTlsStatus <p>自定义Tls数据开关<br>on - 开<br>off - 关</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCustomTlsStatus() {
@@ -85,9 +82,9 @@ twoWay - 双向校验
     }
 
     /**
-     * Set 自定义Tls数据开关
+     * Set <p>自定义Tls数据开关<br>on - 开<br>off - 关</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CustomTlsStatus 自定义Tls数据开关
+     * @param CustomTlsStatus <p>自定义Tls数据开关<br>on - 开<br>off - 关</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCustomTlsStatus(String CustomTlsStatus) {
@@ -95,9 +92,9 @@ twoWay - 双向校验
     }
 
     /**
-     * Get Tls版本列表，支持设置 TLSv1, TLSV1.1, TLSV1.2, TLSv1.3，修改时必须开启连续的版本
+     * Get <p>Tls版本列表，支持设置 TLSv1, TLSV1.1, TLSV1.2, TLSv1.3，修改时必须开启连续的版本</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TlsVersion Tls版本列表，支持设置 TLSv1, TLSV1.1, TLSV1.2, TLSv1.3，修改时必须开启连续的版本
+     * @return TlsVersion <p>Tls版本列表，支持设置 TLSv1, TLSV1.1, TLSV1.2, TLSv1.3，修改时必须开启连续的版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getTlsVersion() {
@@ -105,9 +102,9 @@ twoWay - 双向校验
     }
 
     /**
-     * Set Tls版本列表，支持设置 TLSv1, TLSV1.1, TLSV1.2, TLSv1.3，修改时必须开启连续的版本
+     * Set <p>Tls版本列表，支持设置 TLSv1, TLSV1.1, TLSV1.2, TLSv1.3，修改时必须开启连续的版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TlsVersion Tls版本列表，支持设置 TLSv1, TLSV1.1, TLSV1.2, TLSv1.3，修改时必须开启连续的版本
+     * @param TlsVersion <p>Tls版本列表，支持设置 TLSv1, TLSV1.1, TLSV1.2, TLSv1.3，修改时必须开启连续的版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTlsVersion(String [] TlsVersion) {
@@ -115,9 +112,9 @@ twoWay - 双向校验
     }
 
     /**
-     * Get 自定义加密套件
+     * Get <p>自定义加密套件</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Cipher 自定义加密套件
+     * @return Cipher <p>自定义加密套件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCipher() {
@@ -125,9 +122,9 @@ twoWay - 双向校验
     }
 
     /**
-     * Set 自定义加密套件
+     * Set <p>自定义加密套件</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Cipher 自定义加密套件
+     * @param Cipher <p>自定义加密套件</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCipher(String Cipher) {
@@ -135,15 +132,9 @@ twoWay - 双向校验
     }
 
     /**
-     * Get 回源双向校验开启状态
-off - 关闭校验
-oneWay - 校验源站
-twoWay - 双向校验
+     * Get <p>回源双向校验开启状态<br>off - 关闭校验<br>oneWay - 校验源站<br>twoWay - 双向校验</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VerifyOriginType 回源双向校验开启状态
-off - 关闭校验
-oneWay - 校验源站
-twoWay - 双向校验
+     * @return VerifyOriginType <p>回源双向校验开启状态<br>off - 关闭校验<br>oneWay - 校验源站<br>twoWay - 双向校验</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVerifyOriginType() {
@@ -151,15 +142,9 @@ twoWay - 双向校验
     }
 
     /**
-     * Set 回源双向校验开启状态
-off - 关闭校验
-oneWay - 校验源站
-twoWay - 双向校验
+     * Set <p>回源双向校验开启状态<br>off - 关闭校验<br>oneWay - 校验源站<br>twoWay - 双向校验</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VerifyOriginType 回源双向校验开启状态
-off - 关闭校验
-oneWay - 校验源站
-twoWay - 双向校验
+     * @param VerifyOriginType <p>回源双向校验开启状态<br>off - 关闭校验<br>oneWay - 校验源站<br>twoWay - 双向校验</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVerifyOriginType(String VerifyOriginType) {
@@ -167,9 +152,9 @@ twoWay - 双向校验
     }
 
     /**
-     * Get 回源层证书配置信息
+     * Get <p>回源层证书配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CertInfo 回源层证书配置信息
+     * @return CertInfo <p>回源层证书配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ServerCert getCertInfo() {
@@ -177,9 +162,9 @@ twoWay - 双向校验
     }
 
     /**
-     * Set 回源层证书配置信息
+     * Set <p>回源层证书配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CertInfo 回源层证书配置信息
+     * @param CertInfo <p>回源层证书配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCertInfo(ServerCert CertInfo) {
@@ -187,9 +172,9 @@ twoWay - 双向校验
     }
 
     /**
-     * Get 源站证书配置信息
+     * Get <p>源站证书配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OriginCertInfo 源站证书配置信息
+     * @return OriginCertInfo <p>源站证书配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ClientCert getOriginCertInfo() {
@@ -197,9 +182,9 @@ twoWay - 双向校验
     }
 
     /**
-     * Set 源站证书配置信息
+     * Set <p>源站证书配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OriginCertInfo 源站证书配置信息
+     * @param OriginCertInfo <p>源站证书配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginCertInfo(ClientCert OriginCertInfo) {

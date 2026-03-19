@@ -66,6 +66,13 @@ public class ModifyCcnAttributeRequest extends AbstractModel {
     private Boolean TrafficMarkingPolicyFlag;
 
     /**
+    * 是否切换为混合计费
+    */
+    @SerializedName("MixedBillingFlag")
+    @Expose
+    private Boolean MixedBillingFlag;
+
+    /**
      * Get CCN实例ID。形如：ccn-f49l6u0z。 
      * @return CcnId CCN实例ID。形如：ccn-f49l6u0z。
      */
@@ -161,6 +168,22 @@ public class ModifyCcnAttributeRequest extends AbstractModel {
         this.TrafficMarkingPolicyFlag = TrafficMarkingPolicyFlag;
     }
 
+    /**
+     * Get 是否切换为混合计费 
+     * @return MixedBillingFlag 是否切换为混合计费
+     */
+    public Boolean getMixedBillingFlag() {
+        return this.MixedBillingFlag;
+    }
+
+    /**
+     * Set 是否切换为混合计费
+     * @param MixedBillingFlag 是否切换为混合计费
+     */
+    public void setMixedBillingFlag(Boolean MixedBillingFlag) {
+        this.MixedBillingFlag = MixedBillingFlag;
+    }
+
     public ModifyCcnAttributeRequest() {
     }
 
@@ -187,6 +210,9 @@ public class ModifyCcnAttributeRequest extends AbstractModel {
         if (source.TrafficMarkingPolicyFlag != null) {
             this.TrafficMarkingPolicyFlag = new Boolean(source.TrafficMarkingPolicyFlag);
         }
+        if (source.MixedBillingFlag != null) {
+            this.MixedBillingFlag = new Boolean(source.MixedBillingFlag);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class ModifyCcnAttributeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RouteECMPFlag", this.RouteECMPFlag);
         this.setParamSimple(map, prefix + "RouteOverlapFlag", this.RouteOverlapFlag);
         this.setParamSimple(map, prefix + "TrafficMarkingPolicyFlag", this.TrafficMarkingPolicyFlag);
+        this.setParamSimple(map, prefix + "MixedBillingFlag", this.MixedBillingFlag);
 
     }
 }

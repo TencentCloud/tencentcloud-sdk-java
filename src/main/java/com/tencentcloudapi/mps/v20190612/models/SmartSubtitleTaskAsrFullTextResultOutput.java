@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SmartSubtitleTaskAsrFullTextResultOutput extends AbstractModel {
 
     /**
-    * 语音全文识别片段列表。
+    * <p>语音全文识别片段列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SegmentSet")
@@ -32,30 +32,37 @@ public class SmartSubtitleTaskAsrFullTextResultOutput extends AbstractModel {
     private SmartSubtitleTaskAsrFullTextSegmentItem [] SegmentSet;
 
     /**
-    * 字幕文件路径
+    * <p>字幕文件路径</p>
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-    * 字幕文件地址。
+    * <p>字幕文件地址。</p>
     */
     @SerializedName("SubtitlePath")
     @Expose
     private String SubtitlePath;
 
     /**
-    * 字幕文件存储位置。
+    * <p>识别字幕结果信息。</p>
+    */
+    @SerializedName("SubtitleInfo")
+    @Expose
+    private SubtitleResult SubtitleInfo;
+
+    /**
+    * <p>字幕文件存储位置。</p>
     */
     @SerializedName("OutputStorage")
     @Expose
     private TaskOutputStorage OutputStorage;
 
     /**
-     * Get 语音全文识别片段列表。
+     * Get <p>语音全文识别片段列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SegmentSet 语音全文识别片段列表。
+     * @return SegmentSet <p>语音全文识别片段列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SmartSubtitleTaskAsrFullTextSegmentItem [] getSegmentSet() {
@@ -63,9 +70,9 @@ public class SmartSubtitleTaskAsrFullTextResultOutput extends AbstractModel {
     }
 
     /**
-     * Set 语音全文识别片段列表。
+     * Set <p>语音全文识别片段列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SegmentSet 语音全文识别片段列表。
+     * @param SegmentSet <p>语音全文识别片段列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSegmentSet(SmartSubtitleTaskAsrFullTextSegmentItem [] SegmentSet) {
@@ -73,48 +80,64 @@ public class SmartSubtitleTaskAsrFullTextResultOutput extends AbstractModel {
     }
 
     /**
-     * Get 字幕文件路径 
-     * @return Path 字幕文件路径
+     * Get <p>字幕文件路径</p> 
+     * @return Path <p>字幕文件路径</p>
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set 字幕文件路径
-     * @param Path 字幕文件路径
+     * Set <p>字幕文件路径</p>
+     * @param Path <p>字幕文件路径</p>
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get 字幕文件地址。 
-     * @return SubtitlePath 字幕文件地址。
+     * Get <p>字幕文件地址。</p> 
+     * @return SubtitlePath <p>字幕文件地址。</p>
      */
     public String getSubtitlePath() {
         return this.SubtitlePath;
     }
 
     /**
-     * Set 字幕文件地址。
-     * @param SubtitlePath 字幕文件地址。
+     * Set <p>字幕文件地址。</p>
+     * @param SubtitlePath <p>字幕文件地址。</p>
      */
     public void setSubtitlePath(String SubtitlePath) {
         this.SubtitlePath = SubtitlePath;
     }
 
     /**
-     * Get 字幕文件存储位置。 
-     * @return OutputStorage 字幕文件存储位置。
+     * Get <p>识别字幕结果信息。</p> 
+     * @return SubtitleInfo <p>识别字幕结果信息。</p>
+     */
+    public SubtitleResult getSubtitleInfo() {
+        return this.SubtitleInfo;
+    }
+
+    /**
+     * Set <p>识别字幕结果信息。</p>
+     * @param SubtitleInfo <p>识别字幕结果信息。</p>
+     */
+    public void setSubtitleInfo(SubtitleResult SubtitleInfo) {
+        this.SubtitleInfo = SubtitleInfo;
+    }
+
+    /**
+     * Get <p>字幕文件存储位置。</p> 
+     * @return OutputStorage <p>字幕文件存储位置。</p>
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set 字幕文件存储位置。
-     * @param OutputStorage 字幕文件存储位置。
+     * Set <p>字幕文件存储位置。</p>
+     * @param OutputStorage <p>字幕文件存储位置。</p>
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
@@ -140,6 +163,9 @@ public class SmartSubtitleTaskAsrFullTextResultOutput extends AbstractModel {
         if (source.SubtitlePath != null) {
             this.SubtitlePath = new String(source.SubtitlePath);
         }
+        if (source.SubtitleInfo != null) {
+            this.SubtitleInfo = new SubtitleResult(source.SubtitleInfo);
+        }
         if (source.OutputStorage != null) {
             this.OutputStorage = new TaskOutputStorage(source.OutputStorage);
         }
@@ -153,6 +179,7 @@ public class SmartSubtitleTaskAsrFullTextResultOutput extends AbstractModel {
         this.setParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
         this.setParamSimple(map, prefix + "Path", this.Path);
         this.setParamSimple(map, prefix + "SubtitlePath", this.SubtitlePath);
+        this.setParamObj(map, prefix + "SubtitleInfo.", this.SubtitleInfo);
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
 
     }

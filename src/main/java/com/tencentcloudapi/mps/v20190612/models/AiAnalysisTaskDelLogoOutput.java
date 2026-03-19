@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class AiAnalysisTaskDelLogoOutput extends AbstractModel {
 
     /**
-    * 擦除后文件的路径。
+    * <p>擦除后文件的路径。</p>
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-    * 擦除后文件的存储位置。
+    * <p>擦除后文件的存储位置。</p>
     */
     @SerializedName("OutputStorage")
     @Expose
     private TaskOutputStorage OutputStorage;
 
     /**
-    * 基于画面提取的字幕文件路径。
+    * <p>基于画面提取的字幕文件路径。</p>
     */
     @SerializedName("OriginSubtitlePath")
     @Expose
     private String OriginSubtitlePath;
 
     /**
-    * 基于画面提取的字幕翻译文件路径。
+    * <p>基于画面提取的字幕翻译文件路径。</p>
     */
     @SerializedName("TranslateSubtitlePath")
     @Expose
     private String TranslateSubtitlePath;
 
     /**
-    * 擦除的字幕位置。**注意**：仅对字幕提取且开启返回字幕位置时有效。
+    * <p>擦除的字幕位置。<strong>注意</strong>：仅对字幕提取且开启返回字幕位置时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubtitlePos")
@@ -60,7 +60,7 @@ public class AiAnalysisTaskDelLogoOutput extends AbstractModel {
     private SubtitlePosition SubtitlePos;
 
     /**
-    * 音色克隆后的视频文件地址
+    * <p>音色克隆后的视频文件地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VoiceClonedVideo")
@@ -68,7 +68,7 @@ public class AiAnalysisTaskDelLogoOutput extends AbstractModel {
     private String VoiceClonedVideo;
 
     /**
-    * 音色克隆的标注文件地址
+    * <p>音色克隆的标注文件地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VoiceClonedMarkFile")
@@ -76,73 +76,73 @@ public class AiAnalysisTaskDelLogoOutput extends AbstractModel {
     private String VoiceClonedMarkFile;
 
     /**
-     * Get 擦除后文件的路径。 
-     * @return Path 擦除后文件的路径。
+     * Get <p>擦除后文件的路径。</p> 
+     * @return Path <p>擦除后文件的路径。</p>
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set 擦除后文件的路径。
-     * @param Path 擦除后文件的路径。
+     * Set <p>擦除后文件的路径。</p>
+     * @param Path <p>擦除后文件的路径。</p>
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get 擦除后文件的存储位置。 
-     * @return OutputStorage 擦除后文件的存储位置。
+     * Get <p>擦除后文件的存储位置。</p> 
+     * @return OutputStorage <p>擦除后文件的存储位置。</p>
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set 擦除后文件的存储位置。
-     * @param OutputStorage 擦除后文件的存储位置。
+     * Set <p>擦除后文件的存储位置。</p>
+     * @param OutputStorage <p>擦除后文件的存储位置。</p>
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
     }
 
     /**
-     * Get 基于画面提取的字幕文件路径。 
-     * @return OriginSubtitlePath 基于画面提取的字幕文件路径。
+     * Get <p>基于画面提取的字幕文件路径。</p> 
+     * @return OriginSubtitlePath <p>基于画面提取的字幕文件路径。</p>
      */
     public String getOriginSubtitlePath() {
         return this.OriginSubtitlePath;
     }
 
     /**
-     * Set 基于画面提取的字幕文件路径。
-     * @param OriginSubtitlePath 基于画面提取的字幕文件路径。
+     * Set <p>基于画面提取的字幕文件路径。</p>
+     * @param OriginSubtitlePath <p>基于画面提取的字幕文件路径。</p>
      */
     public void setOriginSubtitlePath(String OriginSubtitlePath) {
         this.OriginSubtitlePath = OriginSubtitlePath;
     }
 
     /**
-     * Get 基于画面提取的字幕翻译文件路径。 
-     * @return TranslateSubtitlePath 基于画面提取的字幕翻译文件路径。
+     * Get <p>基于画面提取的字幕翻译文件路径。</p> 
+     * @return TranslateSubtitlePath <p>基于画面提取的字幕翻译文件路径。</p>
      */
     public String getTranslateSubtitlePath() {
         return this.TranslateSubtitlePath;
     }
 
     /**
-     * Set 基于画面提取的字幕翻译文件路径。
-     * @param TranslateSubtitlePath 基于画面提取的字幕翻译文件路径。
+     * Set <p>基于画面提取的字幕翻译文件路径。</p>
+     * @param TranslateSubtitlePath <p>基于画面提取的字幕翻译文件路径。</p>
      */
     public void setTranslateSubtitlePath(String TranslateSubtitlePath) {
         this.TranslateSubtitlePath = TranslateSubtitlePath;
     }
 
     /**
-     * Get 擦除的字幕位置。**注意**：仅对字幕提取且开启返回字幕位置时有效。
+     * Get <p>擦除的字幕位置。<strong>注意</strong>：仅对字幕提取且开启返回字幕位置时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SubtitlePos 擦除的字幕位置。**注意**：仅对字幕提取且开启返回字幕位置时有效。
+     * @return SubtitlePos <p>擦除的字幕位置。<strong>注意</strong>：仅对字幕提取且开启返回字幕位置时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SubtitlePosition getSubtitlePos() {
@@ -150,9 +150,9 @@ public class AiAnalysisTaskDelLogoOutput extends AbstractModel {
     }
 
     /**
-     * Set 擦除的字幕位置。**注意**：仅对字幕提取且开启返回字幕位置时有效。
+     * Set <p>擦除的字幕位置。<strong>注意</strong>：仅对字幕提取且开启返回字幕位置时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SubtitlePos 擦除的字幕位置。**注意**：仅对字幕提取且开启返回字幕位置时有效。
+     * @param SubtitlePos <p>擦除的字幕位置。<strong>注意</strong>：仅对字幕提取且开启返回字幕位置时有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubtitlePos(SubtitlePosition SubtitlePos) {
@@ -160,9 +160,9 @@ public class AiAnalysisTaskDelLogoOutput extends AbstractModel {
     }
 
     /**
-     * Get 音色克隆后的视频文件地址
+     * Get <p>音色克隆后的视频文件地址</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VoiceClonedVideo 音色克隆后的视频文件地址
+     * @return VoiceClonedVideo <p>音色克隆后的视频文件地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVoiceClonedVideo() {
@@ -170,9 +170,9 @@ public class AiAnalysisTaskDelLogoOutput extends AbstractModel {
     }
 
     /**
-     * Set 音色克隆后的视频文件地址
+     * Set <p>音色克隆后的视频文件地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VoiceClonedVideo 音色克隆后的视频文件地址
+     * @param VoiceClonedVideo <p>音色克隆后的视频文件地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVoiceClonedVideo(String VoiceClonedVideo) {
@@ -180,9 +180,9 @@ public class AiAnalysisTaskDelLogoOutput extends AbstractModel {
     }
 
     /**
-     * Get 音色克隆的标注文件地址
+     * Get <p>音色克隆的标注文件地址</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VoiceClonedMarkFile 音色克隆的标注文件地址
+     * @return VoiceClonedMarkFile <p>音色克隆的标注文件地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVoiceClonedMarkFile() {
@@ -190,9 +190,9 @@ public class AiAnalysisTaskDelLogoOutput extends AbstractModel {
     }
 
     /**
-     * Set 音色克隆的标注文件地址
+     * Set <p>音色克隆的标注文件地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VoiceClonedMarkFile 音色克隆的标注文件地址
+     * @param VoiceClonedMarkFile <p>音色克隆的标注文件地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVoiceClonedMarkFile(String VoiceClonedMarkFile) {

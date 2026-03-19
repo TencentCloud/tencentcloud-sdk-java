@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTopDataResponse extends AbstractModel {
 
     /**
-    * 各个资源的Top 访问数据详情。
+    * <p>各个资源的Top 访问数据详情。</p>
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeTopDataResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 各个资源的Top 访问数据详情。 
-     * @return Data 各个资源的Top 访问数据详情。
+     * Get <p>各个资源的Top 访问数据详情。</p> 
+     * @return Data <p>各个资源的Top 访问数据详情。</p>
      */
     public TopDataMore [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 各个资源的Top 访问数据详情。
-     * @param Data 各个资源的Top 访问数据详情。
+     * Set <p>各个资源的Top 访问数据详情。</p>
+     * @param Data <p>各个资源的Top 访问数据详情。</p>
      */
     public void setData(TopDataMore [] Data) {
         this.Data = Data;

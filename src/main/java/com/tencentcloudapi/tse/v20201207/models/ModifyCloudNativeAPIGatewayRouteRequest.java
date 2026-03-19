@@ -161,6 +161,13 @@ public class ModifyCloudNativeAPIGatewayRouteRequest extends AbstractModel {
     private Long RegexPriority;
 
     /**
+    * querysring参数
+    */
+    @SerializedName("QueryStringParameters")
+    @Expose
+    private KVMapping [] QueryStringParameters;
+
+    /**
      * Get 网关ID 
      * @return GatewayId 网关ID
      */
@@ -508,6 +515,22 @@ public class ModifyCloudNativeAPIGatewayRouteRequest extends AbstractModel {
         this.RegexPriority = RegexPriority;
     }
 
+    /**
+     * Get querysring参数 
+     * @return QueryStringParameters querysring参数
+     */
+    public KVMapping [] getQueryStringParameters() {
+        return this.QueryStringParameters;
+    }
+
+    /**
+     * Set querysring参数
+     * @param QueryStringParameters querysring参数
+     */
+    public void setQueryStringParameters(KVMapping [] QueryStringParameters) {
+        this.QueryStringParameters = QueryStringParameters;
+    }
+
     public ModifyCloudNativeAPIGatewayRouteRequest() {
     }
 
@@ -585,6 +608,12 @@ public class ModifyCloudNativeAPIGatewayRouteRequest extends AbstractModel {
         if (source.RegexPriority != null) {
             this.RegexPriority = new Long(source.RegexPriority);
         }
+        if (source.QueryStringParameters != null) {
+            this.QueryStringParameters = new KVMapping[source.QueryStringParameters.length];
+            for (int i = 0; i < source.QueryStringParameters.length; i++) {
+                this.QueryStringParameters[i] = new KVMapping(source.QueryStringParameters[i]);
+            }
+        }
     }
 
 
@@ -609,6 +638,7 @@ public class ModifyCloudNativeAPIGatewayRouteRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RequestBuffering", this.RequestBuffering);
         this.setParamSimple(map, prefix + "ResponseBuffering", this.ResponseBuffering);
         this.setParamSimple(map, prefix + "RegexPriority", this.RegexPriority);
+        this.setParamArrayObj(map, prefix + "QueryStringParameters.", this.QueryStringParameters);
 
     }
 }

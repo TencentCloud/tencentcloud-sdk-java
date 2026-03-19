@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SmartSubtitleTaskTextResultOutput extends AbstractModel {
 
     /**
-    * 识别字幕结果
+    * <p>识别字幕结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecognizeSubtitleResult")
@@ -32,7 +32,7 @@ public class SmartSubtitleTaskTextResultOutput extends AbstractModel {
     private SubtitleResult [] RecognizeSubtitleResult;
 
     /**
-    * 翻译字幕结果
+    * <p>翻译字幕结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TransSubtitleResult")
@@ -40,7 +40,7 @@ public class SmartSubtitleTaskTextResultOutput extends AbstractModel {
     private SubtitleResult [] TransSubtitleResult;
 
     /**
-    * 字幕文件存储位置
+    * <p>字幕文件存储位置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutputStorage")
@@ -48,9 +48,9 @@ public class SmartSubtitleTaskTextResultOutput extends AbstractModel {
     private TaskOutputStorage OutputStorage;
 
     /**
-     * Get 识别字幕结果
+     * Get <p>识别字幕结果</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RecognizeSubtitleResult 识别字幕结果
+     * @return RecognizeSubtitleResult <p>识别字幕结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SubtitleResult [] getRecognizeSubtitleResult() {
@@ -58,9 +58,9 @@ public class SmartSubtitleTaskTextResultOutput extends AbstractModel {
     }
 
     /**
-     * Set 识别字幕结果
+     * Set <p>识别字幕结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RecognizeSubtitleResult 识别字幕结果
+     * @param RecognizeSubtitleResult <p>识别字幕结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecognizeSubtitleResult(SubtitleResult [] RecognizeSubtitleResult) {
@@ -68,9 +68,9 @@ public class SmartSubtitleTaskTextResultOutput extends AbstractModel {
     }
 
     /**
-     * Get 翻译字幕结果
+     * Get <p>翻译字幕结果</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TransSubtitleResult 翻译字幕结果
+     * @return TransSubtitleResult <p>翻译字幕结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SubtitleResult [] getTransSubtitleResult() {
@@ -78,9 +78,9 @@ public class SmartSubtitleTaskTextResultOutput extends AbstractModel {
     }
 
     /**
-     * Set 翻译字幕结果
+     * Set <p>翻译字幕结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TransSubtitleResult 翻译字幕结果
+     * @param TransSubtitleResult <p>翻译字幕结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTransSubtitleResult(SubtitleResult [] TransSubtitleResult) {
@@ -88,9 +88,9 @@ public class SmartSubtitleTaskTextResultOutput extends AbstractModel {
     }
 
     /**
-     * Get 字幕文件存储位置
+     * Get <p>字幕文件存储位置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OutputStorage 字幕文件存储位置
+     * @return OutputStorage <p>字幕文件存储位置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskOutputStorage getOutputStorage() {
@@ -98,9 +98,9 @@ public class SmartSubtitleTaskTextResultOutput extends AbstractModel {
     }
 
     /**
-     * Set 字幕文件存储位置
+     * Set <p>字幕文件存储位置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OutputStorage 字幕文件存储位置
+     * @param OutputStorage <p>字幕文件存储位置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {

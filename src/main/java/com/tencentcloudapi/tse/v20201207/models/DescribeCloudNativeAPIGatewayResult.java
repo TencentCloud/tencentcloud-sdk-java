@@ -217,6 +217,20 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
     private String [] AvailableVersions;
 
     /**
+    * 网关可以升级的版本号列表
+    */
+    @SerializedName("AvailableUpgradeVersions")
+    @Expose
+    private String [] AvailableUpgradeVersions;
+
+    /**
+    * 是否提示可升级
+    */
+    @SerializedName("AvailableUpgrade")
+    @Expose
+    private Boolean AvailableUpgrade;
+
+    /**
      * Get 云原生API网关ID。 
      * @return GatewayId 云原生API网关ID。
      */
@@ -664,6 +678,38 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
         this.AvailableVersions = AvailableVersions;
     }
 
+    /**
+     * Get 网关可以升级的版本号列表 
+     * @return AvailableUpgradeVersions 网关可以升级的版本号列表
+     */
+    public String [] getAvailableUpgradeVersions() {
+        return this.AvailableUpgradeVersions;
+    }
+
+    /**
+     * Set 网关可以升级的版本号列表
+     * @param AvailableUpgradeVersions 网关可以升级的版本号列表
+     */
+    public void setAvailableUpgradeVersions(String [] AvailableUpgradeVersions) {
+        this.AvailableUpgradeVersions = AvailableUpgradeVersions;
+    }
+
+    /**
+     * Get 是否提示可升级 
+     * @return AvailableUpgrade 是否提示可升级
+     */
+    public Boolean getAvailableUpgrade() {
+        return this.AvailableUpgrade;
+    }
+
+    /**
+     * Set 是否提示可升级
+     * @param AvailableUpgrade 是否提示可升级
+     */
+    public void setAvailableUpgrade(Boolean AvailableUpgrade) {
+        this.AvailableUpgrade = AvailableUpgrade;
+    }
+
     public DescribeCloudNativeAPIGatewayResult() {
     }
 
@@ -762,6 +808,15 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
                 this.AvailableVersions[i] = new String(source.AvailableVersions[i]);
             }
         }
+        if (source.AvailableUpgradeVersions != null) {
+            this.AvailableUpgradeVersions = new String[source.AvailableUpgradeVersions.length];
+            for (int i = 0; i < source.AvailableUpgradeVersions.length; i++) {
+                this.AvailableUpgradeVersions[i] = new String(source.AvailableUpgradeVersions[i]);
+            }
+        }
+        if (source.AvailableUpgrade != null) {
+            this.AvailableUpgrade = new Boolean(source.AvailableUpgrade);
+        }
     }
 
 
@@ -796,6 +851,8 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
         this.setParamArraySimple(map, prefix + "PublicIpAddresses.", this.PublicIpAddresses);
         this.setParamSimple(map, prefix + "DeleteProtect", this.DeleteProtect);
         this.setParamArraySimple(map, prefix + "AvailableVersions.", this.AvailableVersions);
+        this.setParamArraySimple(map, prefix + "AvailableUpgradeVersions.", this.AvailableUpgradeVersions);
+        this.setParamSimple(map, prefix + "AvailableUpgrade", this.AvailableUpgrade);
 
     }
 }

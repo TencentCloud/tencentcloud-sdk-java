@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class AttrLabelRefer extends AbstractModel {
 
     /**
-    * 标签来源，1：标签
+    * 标签来源，1：标签。
+使用标签引用信息时，Source、AttributeBizId和LabelBizIds都需填写。
     */
     @SerializedName("Source")
     @Expose
@@ -45,16 +46,20 @@ public class AttrLabelRefer extends AbstractModel {
     private String [] LabelBizIds;
 
     /**
-     * Get 标签来源，1：标签 
-     * @return Source 标签来源，1：标签
+     * Get 标签来源，1：标签。
+使用标签引用信息时，Source、AttributeBizId和LabelBizIds都需填写。 
+     * @return Source 标签来源，1：标签。
+使用标签引用信息时，Source、AttributeBizId和LabelBizIds都需填写。
      */
     public Long getSource() {
         return this.Source;
     }
 
     /**
-     * Set 标签来源，1：标签
-     * @param Source 标签来源，1：标签
+     * Set 标签来源，1：标签。
+使用标签引用信息时，Source、AttributeBizId和LabelBizIds都需填写。
+     * @param Source 标签来源，1：标签。
+使用标签引用信息时，Source、AttributeBizId和LabelBizIds都需填写。
      */
     public void setSource(Long Source) {
         this.Source = Source;

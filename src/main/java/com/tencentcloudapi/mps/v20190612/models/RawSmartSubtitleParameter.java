@@ -24,208 +24,21 @@ import java.util.HashMap;
 public class RawSmartSubtitleParameter extends AbstractModel {
 
     /**
-    * 智能字幕字幕语言类型
-0: 源语言
-1: 翻译语言
-2: 源语言+翻译语言
-当TranslateSwitch为OFF时仅支持取0
-当TranslateSwitch为ON时仅支持取1或2
+    * <p>智能字幕字幕语言类型<br>0: 源语言<br>1: 翻译语言<br>2: 源语言+翻译语言<br>当TranslateSwitch为OFF时仅支持取0<br>当TranslateSwitch为ON时仅支持取1或2</p>
     */
     @SerializedName("SubtitleType")
     @Expose
     private Long SubtitleType;
 
     /**
-    * 智能字幕视频源语言
-OCR识别仅支持以下语言：
-`zh_en`：中英
-`multi`：其他
-ASR识别和纯字幕翻译当前支持以下语言：
-`auto`：自动识别（仅在纯字幕翻译中支持）
-`zh`：简体中文
-`en`：英语
-`ja`：日语
-`ko`：韩语
-`zh-PY`：中英粤
-`zh_medical`：中文医疗
-`vi`：越南语
-`ms`：马来语
-`id`：印度尼西亚语
-`fil`：菲律宾语
-`th`：泰语
-`pt`：葡萄牙语
-`tr`：土耳其语
-`ar`：阿拉伯语
-`es`：西班牙语
-`hi`：印地语
-`fr`：法语
-`de`：德语
-`it`：意大利语
-`zh_dialect`：中文方言
-`zh_en`：中英
-`yue`：粤语
-`ru`：俄语
-`prime_zh`：中英方言
-`af-ZA`：南非荷兰语（南非）
-`sq-AL`：阿尔巴尼亚语（阿尔巴尼亚）
-`am-ET`：阿姆哈拉语（埃塞俄比亚）
-`ar-DZ`：阿拉伯语（阿尔及利亚）
-`ar-BH`：阿拉伯语（巴林）
-`ar-EG`：阿拉伯语（埃及）
-`ar-IQ`：阿拉伯语（伊拉克）
-`ar-IL`：阿拉伯语（以色列）
-`ar-JO`：阿拉伯语（约旦）
-`ar-KW`：阿拉伯语（科威特）
-`ar-LB`：阿拉伯语（黎巴嫩）
-`ar-MR`：阿拉伯语（毛里塔尼亚）
-`ar-MA`：阿拉伯语（摩洛哥）
-`ar-OM`：阿拉伯语（阿曼）
-`ar-QA`：阿拉伯语（卡塔尔）
-`ar-SA`：阿拉伯语（沙特阿拉伯）
-`ar-PS`：阿拉伯语（巴勒斯坦国）
-`ar-SY`：阿拉伯语（叙利亚）
-`ar-TN`：阿拉伯语（突尼斯）
-`ar-AE`：阿拉伯语（阿拉伯联合酋长国）
-`ar-YE`：阿拉伯语（也门）
-`hy-AM`：亚美尼亚语（亚美尼亚）
-`az-AZ`：阿塞拜疆语（阿塞拜疆）
-`eu-ES`：巴斯克语（西班牙）
-`bn-BD`：孟加拉语（孟加拉）
-`bn-IN`：孟加拉语（印度）
-`bs-BA`：波斯尼亚语（波斯尼亚和黑塞哥维那）
-`bg-BG`：保加利亚语（保加利亚）
-`my-MM`：缅甸语（缅甸）
-`ca-ES`：加泰罗尼亚语（西班牙）
-`hr-HR`：克罗地亚语（克罗地亚）
-`cs-CZ`：捷克语（捷克共和国）
-`da-DK`：丹麦语（丹麦）
-`nl-BE`：荷兰语（比利时）
-`nl-NL`：荷兰语（荷兰）
-`en-AU`：英语（澳大利亚）
-`en-CA`：英语（加拿大）
-`en-GH`：英语（加纳）
-`en-HK`：英语（中国香港）
-`en-IN`：英语（印度）
-`en-IE`：英语（爱尔兰）
-`en-KE`：英语（肯尼亚）
-`en-NZ`：英语（新西兰）
-`en-NG`：英语（尼日利亚）
-`en-PK`：英语（巴基斯坦）
-`en-PH`：英语（菲律宾）
-`en-SG`：英语（新加坡）
-`en-ZA`：英语（南非）
-`en-TZ`：英语（坦桑尼亚）
-`en-GB`：英语（英国）
-`en-US`：英语（美国）
-`et-EE`：爱沙尼亚语（爱沙尼亚）
-`fil-PH`：菲律宾语（菲律宾）
-`fi-FI`：芬兰语（芬兰）
-`fr-BE`：法语（比利时）
-`fr-CA`：法语（加拿大）
-`fr-FR`：法语（法国）
-`fr-CH`：法语（瑞士）
-`gl-ES`：加利西亚语（西班牙）
-`ka-GE`：格鲁吉亚语（格鲁吉亚）
-`el-GR`：希腊语（希腊）
-`gu-IN`：古吉拉特语（印度）
-`iw-IL`：希伯来语（以色列）
-`hi-IN`：印地语（印度）
-`hu-HU`：匈牙利语（匈牙利）
-`is-IS`：冰岛语（冰岛）
-`id-ID`：印度尼西亚语（印度尼西亚）
-`it-IT`：意大利语（意大利）
-`it-CH`：意大利语（瑞士）
-`ja-JP`：日语（日本）
-`jv-ID`：爪哇语（印度尼西亚）
-`kn-IN`：卡纳达语（印度）
-`kk-KZ`：哈萨克语（哈萨克斯坦）
-`km-KH`：高棉语（柬埔寨）
-`rw-RW`：卢旺达语（卢旺达）
-`ko-KR`：韩语（韩国）
-`lo-LA`：老挝语（老挝）
-`lv-LV`：拉脱维亚语（拉脱维亚）
-`lt-LT`：立陶宛语（立陶宛）
-`mk-MK`：马其顿语（北马其顿）
-`ms-MY`：马来语（马来西亚）
-`ml-IN`：马拉雅拉姆语（印度）
-`mr-IN`：马拉地语（印度）
-`mn-MN`：蒙古语（蒙古）
-`ne-NP`：尼泊尔语（尼泊尔）
-`no-NO`：博克马尔挪威语（挪威）
-`fa-IR`：波斯语（伊朗）
-`pl-PL`：波兰语（波兰）
-`pt-BR`：葡萄牙语（巴西）
-`pt-PT`：葡萄牙语（葡萄牙）
-`ro-RO`：罗马尼亚语（罗马尼亚）
-`ru-RU`：俄语（俄罗斯）
-`sr-RS`：塞尔维亚语（塞尔维亚）
-`si-LK`：僧伽罗语（斯里兰卡）
-`sk-SK`：斯洛伐克语（斯洛伐克）
-`sl-SI`：斯洛文尼亚语（斯洛文尼亚）
-`st-ZA`：南索托语（南非）
-`es-AR`：西班牙语（阿根廷）
-`es-BO`：西班牙语（玻利维亚）
-`es-CL`：西班牙语（智利）
-`es-CO`：西班牙语（哥伦比亚）
-`es-CR`：西班牙语（哥斯达黎加）
-`es-DO`：西班牙语（多米尼加共和国）
-`es-EC`：西班牙语（厄瓜多尔）
-`es-SV`：西班牙语（萨尔瓦多）
-`es-GT`：西班牙语（危地马拉）
-`es-HN`：西班牙语（洪都拉斯）
-`es-MX`：西班牙语（墨西哥）
-`es-NI`：西班牙语（尼加拉瓜）
-`es-PA`：西班牙语（巴拿马）
-`es-PY`：西班牙语（巴拉圭）
-`es-PE`：西班牙语（秘鲁）
-`es-PR`：西班牙语（波多黎各）
-`es-ES`：西班牙语（西班牙）
-`es-US`：西班牙语（美国）
-`es-UY`：西班牙语（乌拉圭）
-`es-VE`：西班牙语（委内瑞拉）
-`su-ID`：巽他语（印度尼西亚）
-`sw-KE`：斯瓦希里语（肯尼亚）
-`sw-TZ`：斯瓦希里语（坦桑尼亚）
-`sv-SE`：瑞典语（瑞典）
-`ta-IN`：泰米尔语（印度）
-`ta-MY`：泰米尔语（马来西亚）
-`ta-SG`：泰米尔语（新加坡）
-`ta-LK`：泰米尔语（斯里兰卡）
-`te-IN`：泰卢固语（印度）
-`th-TH`：泰语（泰国）
-`ts-ZA`：聪加语（南非）
-`tr-TR`：土耳其语（土耳其）
-`uk-UA`：乌克兰语（乌克兰）
-`ur-IN`：乌尔都语（印度）
-`ur-PK`：乌尔都语（巴基斯坦）
-`uz-UZ`：乌兹别克语（乌兹别克斯坦）
-`ve-ZA`：文达语（南非）
-`vi-VN`：越南语（越南）
-`xh-ZA`：科萨语（南非）
-`zu-ZA`：祖鲁语（南非）
-
+    * <p>智能字幕视频源语言<br>OCR识别仅支持以下语言：<br><code>zh_en</code>：中英<br><code>multi</code>：其他<br>ASR识别和纯字幕翻译当前支持以下语言：<br><code>auto</code>：自动识别<br><code>zh</code>：简体中文<br><code>en</code>：英语<br><code>ja</code>：日语<br><code>ko</code>：韩语<br><code>zh-PY</code>：中英粤<br><code>zh_medical</code>：中文医疗<br><code>vi</code>：越南语<br><code>ms</code>：马来语<br><code>id</code>：印度尼西亚语<br><code>fil</code>：菲律宾语<br><code>th</code>：泰语<br><code>pt</code>：葡萄牙语<br><code>tr</code>：土耳其语<br><code>ar</code>：阿拉伯语<br><code>es</code>：西班牙语<br><code>hi</code>：印地语<br><code>fr</code>：法语<br><code>de</code>：德语<br><code>it</code>：意大利语<br><code>zh_dialect</code>：中文方言<br><code>zh_en</code>：中英<br><code>yue</code>：粤语<br><code>ru</code>：俄语<br><code>prime_zh</code>：中英方言<br><code>af-ZA</code>：南非荷兰语（南非）<br><code>sq-AL</code>：阿尔巴尼亚语（阿尔巴尼亚）<br><code>am-ET</code>：阿姆哈拉语（埃塞俄比亚）<br><code>ar-DZ</code>：阿拉伯语（阿尔及利亚）<br><code>ar-BH</code>：阿拉伯语（巴林）<br><code>ar-EG</code>：阿拉伯语（埃及）<br><code>ar-IQ</code>：阿拉伯语（伊拉克）<br><code>ar-IL</code>：阿拉伯语（以色列）<br><code>ar-JO</code>：阿拉伯语（约旦）<br><code>ar-KW</code>：阿拉伯语（科威特）<br><code>ar-LB</code>：阿拉伯语（黎巴嫩）<br><code>ar-MR</code>：阿拉伯语（毛里塔尼亚）<br><code>ar-MA</code>：阿拉伯语（摩洛哥）<br><code>ar-OM</code>：阿拉伯语（阿曼）<br><code>ar-QA</code>：阿拉伯语（卡塔尔）<br><code>ar-SA</code>：阿拉伯语（沙特阿拉伯）<br><code>ar-PS</code>：阿拉伯语（巴勒斯坦国）<br><code>ar-SY</code>：阿拉伯语（叙利亚）<br><code>ar-TN</code>：阿拉伯语（突尼斯）<br><code>ar-AE</code>：阿拉伯语（阿拉伯联合酋长国）<br><code>ar-YE</code>：阿拉伯语（也门）<br><code>hy-AM</code>：亚美尼亚语（亚美尼亚）<br><code>az-AZ</code>：阿塞拜疆语（阿塞拜疆）<br><code>eu-ES</code>：巴斯克语（西班牙）<br><code>bn-BD</code>：孟加拉语（孟加拉）<br><code>bn-IN</code>：孟加拉语（印度）<br><code>bs-BA</code>：波斯尼亚语（波斯尼亚和黑塞哥维那）<br><code>bg-BG</code>：保加利亚语（保加利亚）<br><code>my-MM</code>：缅甸语（缅甸）<br><code>ca-ES</code>：加泰罗尼亚语（西班牙）<br><code>hr-HR</code>：克罗地亚语（克罗地亚）<br><code>cs-CZ</code>：捷克语（捷克共和国）<br><code>da-DK</code>：丹麦语（丹麦）<br><code>nl-BE</code>：荷兰语（比利时）<br><code>nl-NL</code>：荷兰语（荷兰）<br><code>en-AU</code>：英语（澳大利亚）<br><code>en-CA</code>：英语（加拿大）<br><code>en-GH</code>：英语（加纳）<br><code>en-HK</code>：英语（中国香港）<br><code>en-IN</code>：英语（印度）<br><code>en-IE</code>：英语（爱尔兰）<br><code>en-KE</code>：英语（肯尼亚）<br><code>en-NZ</code>：英语（新西兰）<br><code>en-NG</code>：英语（尼日利亚）<br><code>en-PK</code>：英语（巴基斯坦）<br><code>en-PH</code>：英语（菲律宾）<br><code>en-SG</code>：英语（新加坡）<br><code>en-ZA</code>：英语（南非）<br><code>en-TZ</code>：英语（坦桑尼亚）<br><code>en-GB</code>：英语（英国）<br><code>en-US</code>：英语（美国）<br><code>et-EE</code>：爱沙尼亚语（爱沙尼亚）<br><code>fil-PH</code>：菲律宾语（菲律宾）<br><code>fi-FI</code>：芬兰语（芬兰）<br><code>fr-BE</code>：法语（比利时）<br><code>fr-CA</code>：法语（加拿大）<br><code>fr-FR</code>：法语（法国）<br><code>fr-CH</code>：法语（瑞士）<br><code>gl-ES</code>：加利西亚语（西班牙）<br><code>ka-GE</code>：格鲁吉亚语（格鲁吉亚）<br><code>el-GR</code>：希腊语（希腊）<br><code>gu-IN</code>：古吉拉特语（印度）<br><code>iw-IL</code>：希伯来语（以色列）<br><code>hi-IN</code>：印地语（印度）<br><code>hu-HU</code>：匈牙利语（匈牙利）<br><code>is-IS</code>：冰岛语（冰岛）<br><code>id-ID</code>：印度尼西亚语（印度尼西亚）<br><code>it-IT</code>：意大利语（意大利）<br><code>it-CH</code>：意大利语（瑞士）<br><code>ja-JP</code>：日语（日本）<br><code>jv-ID</code>：爪哇语（印度尼西亚）<br><code>kn-IN</code>：卡纳达语（印度）<br><code>kk-KZ</code>：哈萨克语（哈萨克斯坦）<br><code>km-KH</code>：高棉语（柬埔寨）<br><code>rw-RW</code>：卢旺达语（卢旺达）<br><code>ko-KR</code>：韩语（韩国）<br><code>lo-LA</code>：老挝语（老挝）<br><code>lv-LV</code>：拉脱维亚语（拉脱维亚）<br><code>lt-LT</code>：立陶宛语（立陶宛）<br><code>mk-MK</code>：马其顿语（北马其顿）<br><code>ms-MY</code>：马来语（马来西亚）<br><code>ml-IN</code>：马拉雅拉姆语（印度）<br><code>mr-IN</code>：马拉地语（印度）<br><code>mn-MN</code>：蒙古语（蒙古）<br><code>ne-NP</code>：尼泊尔语（尼泊尔）<br><code>no-NO</code>：博克马尔挪威语（挪威）<br><code>fa-IR</code>：波斯语（伊朗）<br><code>pl-PL</code>：波兰语（波兰）<br><code>pt-BR</code>：葡萄牙语（巴西）<br><code>pt-PT</code>：葡萄牙语（葡萄牙）<br><code>ro-RO</code>：罗马尼亚语（罗马尼亚）<br><code>ru-RU</code>：俄语（俄罗斯）<br><code>sr-RS</code>：塞尔维亚语（塞尔维亚）<br><code>si-LK</code>：僧伽罗语（斯里兰卡）<br><code>sk-SK</code>：斯洛伐克语（斯洛伐克）<br><code>sl-SI</code>：斯洛文尼亚语（斯洛文尼亚）<br><code>st-ZA</code>：南索托语（南非）<br><code>es-AR</code>：西班牙语（阿根廷）<br><code>es-BO</code>：西班牙语（玻利维亚）<br><code>es-CL</code>：西班牙语（智利）<br><code>es-CO</code>：西班牙语（哥伦比亚）<br><code>es-CR</code>：西班牙语（哥斯达黎加）<br><code>es-DO</code>：西班牙语（多米尼加共和国）<br><code>es-EC</code>：西班牙语（厄瓜多尔）<br><code>es-SV</code>：西班牙语（萨尔瓦多）<br><code>es-GT</code>：西班牙语（危地马拉）<br><code>es-HN</code>：西班牙语（洪都拉斯）<br><code>es-MX</code>：西班牙语（墨西哥）<br><code>es-NI</code>：西班牙语（尼加拉瓜）<br><code>es-PA</code>：西班牙语（巴拿马）<br><code>es-PY</code>：西班牙语（巴拉圭）<br><code>es-PE</code>：西班牙语（秘鲁）<br><code>es-PR</code>：西班牙语（波多黎各）<br><code>es-ES</code>：西班牙语（西班牙）<br><code>es-US</code>：西班牙语（美国）<br><code>es-UY</code>：西班牙语（乌拉圭）<br><code>es-VE</code>：西班牙语（委内瑞拉）<br><code>su-ID</code>：巽他语（印度尼西亚）<br><code>sw-KE</code>：斯瓦希里语（肯尼亚）<br><code>sw-TZ</code>：斯瓦希里语（坦桑尼亚）<br><code>sv-SE</code>：瑞典语（瑞典）<br><code>ta-IN</code>：泰米尔语（印度）<br><code>ta-MY</code>：泰米尔语（马来西亚）<br><code>ta-SG</code>：泰米尔语（新加坡）<br><code>ta-LK</code>：泰米尔语（斯里兰卡）<br><code>te-IN</code>：泰卢固语（印度）<br><code>th-TH</code>：泰语（泰国）<br><code>ts-ZA</code>：聪加语（南非）<br><code>tr-TR</code>：土耳其语（土耳其）<br><code>uk-UA</code>：乌克兰语（乌克兰）<br><code>ur-IN</code>：乌尔都语（印度）<br><code>ur-PK</code>：乌尔都语（巴基斯坦）<br><code>uz-UZ</code>：乌兹别克语（乌兹别克斯坦）<br><code>ve-ZA</code>：文达语（南非）<br><code>vi-VN</code>：越南语（越南）<br><code>xh-ZA</code>：科萨语（南非）<br><code>zu-ZA</code>：祖鲁语（南非）</p>
     */
     @SerializedName("VideoSrcLanguage")
     @Expose
     private String VideoSrcLanguage;
 
     /**
-    * 智能字幕文件格式:
-- ASR识别翻译处理类型下：
-     - vtt: WebVTT 格式字幕
-     - srt: SRT 格式字幕
-     - 不填或填空：不生成字幕文件
-- 纯字幕翻译处理类型下：
-    - original：与源文件一致
-    - vtt: WebVTT 格式字幕
-    - srt: SRT 格式字幕
-- OCR识别翻译处理类型下：
-     - vtt: WebVTT 格式字幕
-     - srt: SRT 格式字幕
-
-**注意**：
-- ASR识别方式下，翻译大于等于2种语言时不允许传空或不传；
-- 纯字幕翻译和OCR识别翻译方式下，不允许传空或不传
+    * <p>智能字幕文件格式:</p><ul><li>ASR识别翻译处理类型下：<ul><li>vtt: WebVTT 格式字幕</li><li>srt: SRT 格式字幕</li><li>不填或填空：不生成字幕文件</li></ul></li><li>纯字幕翻译处理类型下：<ul><li>original：与源文件一致</li><li>vtt: WebVTT 格式字幕</li><li>srt: SRT 格式字幕</li></ul></li><li>OCR识别翻译处理类型下：<ul><li>vtt: WebVTT 格式字幕</li><li>srt: SRT 格式字幕</li></ul></li></ul><p><strong>注意</strong>：</p><ul><li>ASR识别方式下，翻译大于等于2种语言时不允许传空或不传；</li><li>纯字幕翻译和OCR识别翻译方式下，不允许传空或不传</li><li>OCR类型的任务，在开启压制时，允许不传或传空</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubtitleFormat")
@@ -233,11 +46,7 @@ ASR识别和纯字幕翻译当前支持以下语言：
     private String SubtitleFormat;
 
     /**
-    * 字幕翻译开关
-`ON`: 开启翻译
-`OFF`: 关闭翻译
-
-**注意**：纯字幕翻译方式下，不传默认是打开的，不允许传空或`OFF`；
+    * <p>字幕翻译开关<br><code>ON</code>: 开启翻译<br><code>OFF</code>: 关闭翻译</p><p><strong>注意</strong>：纯字幕翻译方式下，不传默认是打开的，不允许传空或<code>OFF</code>；</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TranslateSwitch")
@@ -245,200 +54,7 @@ ASR识别和纯字幕翻译当前支持以下语言：
     private String TranslateSwitch;
 
     /**
-    * 字幕翻译目标语言
-当TranslateSwitch为ON的时候生效，翻译语言列表：
-`ab`：阿布哈兹语
-`ace`：亚齐语
-`ach`：阿乔利语
-`af`：南非荷兰语
-`ak`：契维语（阿坎语）
-`am`：Amharic
-`ar`：阿拉伯语
-`as`：阿萨姆语
-`ay`：艾马拉语
-`az`：阿塞拜疆语
-`ba`：巴什基尔语
-`ban`：巴厘语
-`bbc`：巴塔克托巴语
-`bem`：Bemba
-`bew`：Betawi
-`bg`：保加利亚语
-`bho`：博杰普尔语
-`bik`：Bikol
-`bm`：班巴拉语
-`bn`：孟加拉语
-`br`：布列塔尼语
-`bs`：波斯尼亚语
-`btx`：巴塔克卡罗语
-`bts`：巴塔克西马隆贡语
-`bua`：布里亚特语
-`ca`：加泰罗尼亚语
-`ceb`：宿务语
-`cgg`：Kiga
-`chm`：草原马里语
-`ckb`：库尔德语（索拉尼语）
-`cnh`：哈卡钦语
-`co`：科西嘉语
-`crh`：克里米亚鞑靼语
-`crs`：塞舌尔克里奥尔语
-`cs`：捷克语
-`cv`：楚瓦什语
-`cy`：威尔士语
-`da`：丹麦语
-`de`：德语
-`din`：Dinka
-`doi`：多格来语
-`dov`：敦贝语
-`dv`：第维埃语
-`dz`：宗卡语
-`ee`：Ewe
-`el`：希腊语
-`en`：英语
-`eo`：世界语
-`es`：西班牙语
-`et`：爱沙尼亚语
-`eu`：巴斯克语
-`fa`：波斯语
-`ff`：富拉语
-`fi`：芬兰语
-`fil`：菲律宾语（塔加拉语）
-`fj`：斐济语
-`fr`：法语
-`fr-CA`：法语（加拿大）
-`fr-FR`：法语（法国）
-`fy`：弗里斯兰语
-`ga`：爱尔兰语
-`gaa`：加 (Ga) 语
-`gd`：苏格兰盖尔语
-`gl`：加利西亚语
-`gn`：瓜拉尼语
-`gom`：贡根语
-`gu`：古吉拉特语
-`gv`：马恩岛语
-`ha`：Hausa
-`haw`：夏威夷语
-`he`：希伯来语
-`hi`：印地语
-`hil`：希利盖农语
-`hmn`：苗语
-`hr`：克罗地亚语
-`hrx`：洪斯吕克语
-`ht`：海地克里奥尔语
-`hu`：匈牙利语
-`hy`：亚美尼亚语
-`id`：印度尼西亚语
-`ig`：Igbo
-`ilo`：伊洛果语
-`is`：冰岛语
-`it`：意大利语
-`iw`：希伯来语
-`ja`：日语
-`jv`：爪哇语
-`ka`：格鲁吉亚语
-`kk`：哈萨克语
-`km`：高棉语
-`kn`：卡纳达语
-`ko`：韩语
-`kri`：Krio
-`ku`：库尔德语（库尔曼吉语）
-`ktu`：吉土巴语
-`ky`：吉尔吉斯语
-`la`：拉丁语
-`lb`：卢森堡语
-`lg`：干达语（卢干达语）
-`li`：林堡语
-`lij`：利古里亚语
-`lmo`：伦巴第语
-`ln`：林加拉语
-`lo`：老挝语
-`lt`：立陶宛语
-`ltg`：拉特加莱语
-`luo`：Luo
-`lus`：米佐语
-`lv`：拉脱维亚语
-`mai`：迈蒂利语
-`mak`：马卡萨
-`mg`：马尔加什语
-`mi`：毛利语
-`min`：米南语
-`mk`：马其顿语
-`ml`：马拉雅拉姆语
-`mn`：蒙古语
-`mr`：马拉地语
-`ms`：马来语
-`mt`：马耳他语
-`my`：缅甸语
-`ne`：尼泊尔语
-`new`：尼瓦尔语
-`nl`：荷兰语
-`no`：挪威语
-`nr`：恩德贝莱语（南部）
-`nso`：北索托语（塞佩蒂语）
-`nus`：努尔语
-`ny`：齐切瓦语（尼扬贾语）
-`oc`：奥克斯坦语
-`om`：Oromo
-`or`：奥里亚语
-`pa`：旁遮普语
-`pag`：邦阿西楠语
-`pam`：邦板牙语
-`pap`：Papiamento
-`pl`：波兰语
-`ps`：Pashto
-`pt`：葡萄牙语
-`pt-BR`：葡萄牙语（巴西）
-`pt-PT`：葡萄牙语（葡萄牙）
-`qu`：克丘亚语
-`ro`：罗马尼亚语
-`rom`：罗姆语
-`rn`：Rundi
-`ru`：俄语
-`rw`：卢旺达语
-`sa`：梵语
-`scn`：西西里语
-`sd`：信德语
-`sg`：Sango
-`shn`：掸语
-`si`：僧伽罗语
-`sk`：斯洛伐克语
-`sl`：斯洛文尼亚语
-`sm`：萨摩亚语
-`sn`：修纳语
-`so`：索马里语
-`sq`：阿尔巴尼亚语
-`sr`：塞尔维亚语
-`ss`：斯瓦特语
-`st`：塞索托语
-`su`：巽他语
-`sv`：瑞典语
-`sw`：斯瓦希里语
-`szl`：西里西亚语
-`ta`：泰米尔语
-`te`：泰卢固语
-`tet`：德顿语
-`tg`：塔吉克语
-`th`：泰语
-`ti`：提格里尼亚语
-`tk`：土库曼语
-`tn`：茨瓦纳语
-`tr`：土耳其语
-`ts`：聪加语
-`tt`：鞑靼语
-`ug`：维吾尔语
-`uk`：乌克兰语
-`ur`：乌尔都语
-`uz`：乌兹别克语
-`vi`：越南语
-`xh`：科萨语
-`yi`：意第绪语
-`yo`：约鲁巴语
-`yua`：尤卡坦玛雅语
-`yue`：粤语
-`zh`：简体中文
-`zh-TW`：中文（繁体）
-`zu`：祖鲁语
-
-**注意**：多语言方式，则使用 `/` 分割，如：`en/ja`，表示英语和日语。
+    * <p>字幕翻译目标语言<br>当TranslateSwitch为ON的时候生效，翻译语言列表：<br><code>ab</code>：阿布哈兹语<br><code>ace</code>：亚齐语<br><code>ach</code>：阿乔利语<br><code>af</code>：南非荷兰语<br><code>ak</code>：契维语（阿坎语）<br><code>am</code>：Amharic<br><code>ar</code>：阿拉伯语<br><code>as</code>：阿萨姆语<br><code>ay</code>：艾马拉语<br><code>az</code>：阿塞拜疆语<br><code>ba</code>：巴什基尔语<br><code>ban</code>：巴厘语<br><code>bbc</code>：巴塔克托巴语<br><code>bem</code>：Bemba<br><code>bew</code>：Betawi<br><code>bg</code>：保加利亚语<br><code>bho</code>：博杰普尔语<br><code>bik</code>：Bikol<br><code>bm</code>：班巴拉语<br><code>bn</code>：孟加拉语<br><code>br</code>：布列塔尼语<br><code>bs</code>：波斯尼亚语<br><code>btx</code>：巴塔克卡罗语<br><code>bts</code>：巴塔克西马隆贡语<br><code>bua</code>：布里亚特语<br><code>ca</code>：加泰罗尼亚语<br><code>ceb</code>：宿务语<br><code>cgg</code>：Kiga<br><code>chm</code>：草原马里语<br><code>ckb</code>：库尔德语（索拉尼语）<br><code>cnh</code>：哈卡钦语<br><code>co</code>：科西嘉语<br><code>crh</code>：克里米亚鞑靼语<br><code>crs</code>：塞舌尔克里奥尔语<br><code>cs</code>：捷克语<br><code>cv</code>：楚瓦什语<br><code>cy</code>：威尔士语<br><code>da</code>：丹麦语<br><code>de</code>：德语<br><code>din</code>：Dinka<br><code>doi</code>：多格来语<br><code>dov</code>：敦贝语<br><code>dv</code>：第维埃语<br><code>dz</code>：宗卡语<br><code>ee</code>：Ewe<br><code>el</code>：希腊语<br><code>en</code>：英语<br><code>eo</code>：世界语<br><code>es</code>：西班牙语<br><code>et</code>：爱沙尼亚语<br><code>eu</code>：巴斯克语<br><code>fa</code>：波斯语<br><code>ff</code>：富拉语<br><code>fi</code>：芬兰语<br><code>fil</code>：菲律宾语（塔加拉语）<br><code>fj</code>：斐济语<br><code>fr</code>：法语<br><code>fr-CA</code>：法语（加拿大）<br><code>fr-FR</code>：法语（法国）<br><code>fy</code>：弗里斯兰语<br><code>ga</code>：爱尔兰语<br><code>gaa</code>：加 (Ga) 语<br><code>gd</code>：苏格兰盖尔语<br><code>gl</code>：加利西亚语<br><code>gn</code>：瓜拉尼语<br><code>gom</code>：贡根语<br><code>gu</code>：古吉拉特语<br><code>gv</code>：马恩岛语<br><code>ha</code>：Hausa<br><code>haw</code>：夏威夷语<br><code>he</code>：希伯来语<br><code>hi</code>：印地语<br><code>hil</code>：希利盖农语<br><code>hmn</code>：苗语<br><code>hr</code>：克罗地亚语<br><code>hrx</code>：洪斯吕克语<br><code>ht</code>：海地克里奥尔语<br><code>hu</code>：匈牙利语<br><code>hy</code>：亚美尼亚语<br><code>id</code>：印度尼西亚语<br><code>ig</code>：Igbo<br><code>ilo</code>：伊洛果语<br><code>is</code>：冰岛语<br><code>it</code>：意大利语<br><code>iw</code>：希伯来语<br><code>ja</code>：日语<br><code>jv</code>：爪哇语<br><code>ka</code>：格鲁吉亚语<br><code>kk</code>：哈萨克语<br><code>km</code>：高棉语<br><code>kn</code>：卡纳达语<br><code>ko</code>：韩语<br><code>kri</code>：Krio<br><code>ku</code>：库尔德语（库尔曼吉语）<br><code>ktu</code>：吉土巴语<br><code>ky</code>：吉尔吉斯语<br><code>la</code>：拉丁语<br><code>lb</code>：卢森堡语<br><code>lg</code>：干达语（卢干达语）<br><code>li</code>：林堡语<br><code>lij</code>：利古里亚语<br><code>lmo</code>：伦巴第语<br><code>ln</code>：林加拉语<br><code>lo</code>：老挝语<br><code>lt</code>：立陶宛语<br><code>ltg</code>：拉特加莱语<br><code>luo</code>：Luo<br><code>lus</code>：米佐语<br><code>lv</code>：拉脱维亚语<br><code>mai</code>：迈蒂利语<br><code>mak</code>：马卡萨<br><code>mg</code>：马尔加什语<br><code>mi</code>：毛利语<br><code>min</code>：米南语<br><code>mk</code>：马其顿语<br><code>ml</code>：马拉雅拉姆语<br><code>mn</code>：蒙古语<br><code>mr</code>：马拉地语<br><code>ms</code>：马来语<br><code>mt</code>：马耳他语<br><code>my</code>：缅甸语<br><code>ne</code>：尼泊尔语<br><code>new</code>：尼瓦尔语<br><code>nl</code>：荷兰语<br><code>no</code>：挪威语<br><code>nr</code>：恩德贝莱语（南部）<br><code>nso</code>：北索托语（塞佩蒂语）<br><code>nus</code>：努尔语<br><code>ny</code>：齐切瓦语（尼扬贾语）<br><code>oc</code>：奥克斯坦语<br><code>om</code>：Oromo<br><code>or</code>：奥里亚语<br><code>pa</code>：旁遮普语<br><code>pag</code>：邦阿西楠语<br><code>pam</code>：邦板牙语<br><code>pap</code>：Papiamento<br><code>pl</code>：波兰语<br><code>ps</code>：Pashto<br><code>pt</code>：葡萄牙语<br><code>pt-BR</code>：葡萄牙语（巴西）<br><code>pt-PT</code>：葡萄牙语（葡萄牙）<br><code>qu</code>：克丘亚语<br><code>ro</code>：罗马尼亚语<br><code>rom</code>：罗姆语<br><code>rn</code>：Rundi<br><code>ru</code>：俄语<br><code>rw</code>：卢旺达语<br><code>sa</code>：梵语<br><code>scn</code>：西西里语<br><code>sd</code>：信德语<br><code>sg</code>：Sango<br><code>shn</code>：掸语<br><code>si</code>：僧伽罗语<br><code>sk</code>：斯洛伐克语<br><code>sl</code>：斯洛文尼亚语<br><code>sm</code>：萨摩亚语<br><code>sn</code>：修纳语<br><code>so</code>：索马里语<br><code>sq</code>：阿尔巴尼亚语<br><code>sr</code>：塞尔维亚语<br><code>ss</code>：斯瓦特语<br><code>st</code>：塞索托语<br><code>su</code>：巽他语<br><code>sv</code>：瑞典语<br><code>sw</code>：斯瓦希里语<br><code>szl</code>：西里西亚语<br><code>ta</code>：泰米尔语<br><code>te</code>：泰卢固语<br><code>tet</code>：德顿语<br><code>tg</code>：塔吉克语<br><code>th</code>：泰语<br><code>ti</code>：提格里尼亚语<br><code>tk</code>：土库曼语<br><code>tn</code>：茨瓦纳语<br><code>tr</code>：土耳其语<br><code>ts</code>：聪加语<br><code>tt</code>：鞑靼语<br><code>ug</code>：维吾尔语<br><code>uk</code>：乌克兰语<br><code>ur</code>：乌尔都语<br><code>uz</code>：乌兹别克语<br><code>vi</code>：越南语<br><code>xh</code>：科萨语<br><code>yi</code>：意第绪语<br><code>yo</code>：约鲁巴语<br><code>yua</code>：尤卡坦玛雅语<br><code>yue</code>：粤语<br><code>zh</code>：简体中文<br><code>zh-TW</code>：中文（繁体）<br><code>zu</code>：祖鲁语</p><p><strong>注意</strong>：多语言方式，则使用 <code>/</code> 分割，如：<code>en/ja</code>，表示英语和日语。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TranslateDstLanguage")
@@ -446,7 +62,7 @@ ASR识别和纯字幕翻译当前支持以下语言：
     private String TranslateDstLanguage;
 
     /**
-    * ASR热词库参数
+    * <p>ASR热词库参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsrHotWordsConfigure")
@@ -454,26 +70,21 @@ ASR识别和纯字幕翻译当前支持以下语言：
     private AsrHotWordsConfigure AsrHotWordsConfigure;
 
     /**
-    * 自定义参数
+    * <p>自定义参数</p>
     */
     @SerializedName("ExtInfo")
     @Expose
     private String ExtInfo;
 
     /**
-    * 字幕处理类型：
-- 0：ASR识别字幕
-- 1：纯字幕翻译
-- 2：OCR识别字幕
-
-**注意**：不传的情况下默认类型为 ASR识别字幕
+    * <p>字幕处理类型：</p><ul><li>0：ASR识别字幕</li><li>1：纯字幕翻译</li><li>2：OCR识别字幕</li></ul><p><strong>注意</strong>：不传的情况下默认类型为 ASR识别字幕</p>
     */
     @SerializedName("ProcessType")
     @Expose
     private Long ProcessType;
 
     /**
-    * 字幕OCR提取框选区域配置
+    * <p>字幕OCR提取框选区域配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SelectingSubtitleAreasConfig")
@@ -481,759 +92,48 @@ ASR识别和纯字幕翻译当前支持以下语言：
     private SelectingSubtitleAreasConfig SelectingSubtitleAreasConfig;
 
     /**
-     * Get 智能字幕字幕语言类型
-0: 源语言
-1: 翻译语言
-2: 源语言+翻译语言
-当TranslateSwitch为OFF时仅支持取0
-当TranslateSwitch为ON时仅支持取1或2 
-     * @return SubtitleType 智能字幕字幕语言类型
-0: 源语言
-1: 翻译语言
-2: 源语言+翻译语言
-当TranslateSwitch为OFF时仅支持取0
-当TranslateSwitch为ON时仅支持取1或2
+    * <p>压制模板id，只有ProcessType为0或2（任务类型为ASR或OCR）时才允许填写</p>
+    */
+    @SerializedName("SubtitleEmbedId")
+    @Expose
+    private Long SubtitleEmbedId;
+
+    /**
+     * Get <p>智能字幕字幕语言类型<br>0: 源语言<br>1: 翻译语言<br>2: 源语言+翻译语言<br>当TranslateSwitch为OFF时仅支持取0<br>当TranslateSwitch为ON时仅支持取1或2</p> 
+     * @return SubtitleType <p>智能字幕字幕语言类型<br>0: 源语言<br>1: 翻译语言<br>2: 源语言+翻译语言<br>当TranslateSwitch为OFF时仅支持取0<br>当TranslateSwitch为ON时仅支持取1或2</p>
      */
     public Long getSubtitleType() {
         return this.SubtitleType;
     }
 
     /**
-     * Set 智能字幕字幕语言类型
-0: 源语言
-1: 翻译语言
-2: 源语言+翻译语言
-当TranslateSwitch为OFF时仅支持取0
-当TranslateSwitch为ON时仅支持取1或2
-     * @param SubtitleType 智能字幕字幕语言类型
-0: 源语言
-1: 翻译语言
-2: 源语言+翻译语言
-当TranslateSwitch为OFF时仅支持取0
-当TranslateSwitch为ON时仅支持取1或2
+     * Set <p>智能字幕字幕语言类型<br>0: 源语言<br>1: 翻译语言<br>2: 源语言+翻译语言<br>当TranslateSwitch为OFF时仅支持取0<br>当TranslateSwitch为ON时仅支持取1或2</p>
+     * @param SubtitleType <p>智能字幕字幕语言类型<br>0: 源语言<br>1: 翻译语言<br>2: 源语言+翻译语言<br>当TranslateSwitch为OFF时仅支持取0<br>当TranslateSwitch为ON时仅支持取1或2</p>
      */
     public void setSubtitleType(Long SubtitleType) {
         this.SubtitleType = SubtitleType;
     }
 
     /**
-     * Get 智能字幕视频源语言
-OCR识别仅支持以下语言：
-`zh_en`：中英
-`multi`：其他
-ASR识别和纯字幕翻译当前支持以下语言：
-`auto`：自动识别（仅在纯字幕翻译中支持）
-`zh`：简体中文
-`en`：英语
-`ja`：日语
-`ko`：韩语
-`zh-PY`：中英粤
-`zh_medical`：中文医疗
-`vi`：越南语
-`ms`：马来语
-`id`：印度尼西亚语
-`fil`：菲律宾语
-`th`：泰语
-`pt`：葡萄牙语
-`tr`：土耳其语
-`ar`：阿拉伯语
-`es`：西班牙语
-`hi`：印地语
-`fr`：法语
-`de`：德语
-`it`：意大利语
-`zh_dialect`：中文方言
-`zh_en`：中英
-`yue`：粤语
-`ru`：俄语
-`prime_zh`：中英方言
-`af-ZA`：南非荷兰语（南非）
-`sq-AL`：阿尔巴尼亚语（阿尔巴尼亚）
-`am-ET`：阿姆哈拉语（埃塞俄比亚）
-`ar-DZ`：阿拉伯语（阿尔及利亚）
-`ar-BH`：阿拉伯语（巴林）
-`ar-EG`：阿拉伯语（埃及）
-`ar-IQ`：阿拉伯语（伊拉克）
-`ar-IL`：阿拉伯语（以色列）
-`ar-JO`：阿拉伯语（约旦）
-`ar-KW`：阿拉伯语（科威特）
-`ar-LB`：阿拉伯语（黎巴嫩）
-`ar-MR`：阿拉伯语（毛里塔尼亚）
-`ar-MA`：阿拉伯语（摩洛哥）
-`ar-OM`：阿拉伯语（阿曼）
-`ar-QA`：阿拉伯语（卡塔尔）
-`ar-SA`：阿拉伯语（沙特阿拉伯）
-`ar-PS`：阿拉伯语（巴勒斯坦国）
-`ar-SY`：阿拉伯语（叙利亚）
-`ar-TN`：阿拉伯语（突尼斯）
-`ar-AE`：阿拉伯语（阿拉伯联合酋长国）
-`ar-YE`：阿拉伯语（也门）
-`hy-AM`：亚美尼亚语（亚美尼亚）
-`az-AZ`：阿塞拜疆语（阿塞拜疆）
-`eu-ES`：巴斯克语（西班牙）
-`bn-BD`：孟加拉语（孟加拉）
-`bn-IN`：孟加拉语（印度）
-`bs-BA`：波斯尼亚语（波斯尼亚和黑塞哥维那）
-`bg-BG`：保加利亚语（保加利亚）
-`my-MM`：缅甸语（缅甸）
-`ca-ES`：加泰罗尼亚语（西班牙）
-`hr-HR`：克罗地亚语（克罗地亚）
-`cs-CZ`：捷克语（捷克共和国）
-`da-DK`：丹麦语（丹麦）
-`nl-BE`：荷兰语（比利时）
-`nl-NL`：荷兰语（荷兰）
-`en-AU`：英语（澳大利亚）
-`en-CA`：英语（加拿大）
-`en-GH`：英语（加纳）
-`en-HK`：英语（中国香港）
-`en-IN`：英语（印度）
-`en-IE`：英语（爱尔兰）
-`en-KE`：英语（肯尼亚）
-`en-NZ`：英语（新西兰）
-`en-NG`：英语（尼日利亚）
-`en-PK`：英语（巴基斯坦）
-`en-PH`：英语（菲律宾）
-`en-SG`：英语（新加坡）
-`en-ZA`：英语（南非）
-`en-TZ`：英语（坦桑尼亚）
-`en-GB`：英语（英国）
-`en-US`：英语（美国）
-`et-EE`：爱沙尼亚语（爱沙尼亚）
-`fil-PH`：菲律宾语（菲律宾）
-`fi-FI`：芬兰语（芬兰）
-`fr-BE`：法语（比利时）
-`fr-CA`：法语（加拿大）
-`fr-FR`：法语（法国）
-`fr-CH`：法语（瑞士）
-`gl-ES`：加利西亚语（西班牙）
-`ka-GE`：格鲁吉亚语（格鲁吉亚）
-`el-GR`：希腊语（希腊）
-`gu-IN`：古吉拉特语（印度）
-`iw-IL`：希伯来语（以色列）
-`hi-IN`：印地语（印度）
-`hu-HU`：匈牙利语（匈牙利）
-`is-IS`：冰岛语（冰岛）
-`id-ID`：印度尼西亚语（印度尼西亚）
-`it-IT`：意大利语（意大利）
-`it-CH`：意大利语（瑞士）
-`ja-JP`：日语（日本）
-`jv-ID`：爪哇语（印度尼西亚）
-`kn-IN`：卡纳达语（印度）
-`kk-KZ`：哈萨克语（哈萨克斯坦）
-`km-KH`：高棉语（柬埔寨）
-`rw-RW`：卢旺达语（卢旺达）
-`ko-KR`：韩语（韩国）
-`lo-LA`：老挝语（老挝）
-`lv-LV`：拉脱维亚语（拉脱维亚）
-`lt-LT`：立陶宛语（立陶宛）
-`mk-MK`：马其顿语（北马其顿）
-`ms-MY`：马来语（马来西亚）
-`ml-IN`：马拉雅拉姆语（印度）
-`mr-IN`：马拉地语（印度）
-`mn-MN`：蒙古语（蒙古）
-`ne-NP`：尼泊尔语（尼泊尔）
-`no-NO`：博克马尔挪威语（挪威）
-`fa-IR`：波斯语（伊朗）
-`pl-PL`：波兰语（波兰）
-`pt-BR`：葡萄牙语（巴西）
-`pt-PT`：葡萄牙语（葡萄牙）
-`ro-RO`：罗马尼亚语（罗马尼亚）
-`ru-RU`：俄语（俄罗斯）
-`sr-RS`：塞尔维亚语（塞尔维亚）
-`si-LK`：僧伽罗语（斯里兰卡）
-`sk-SK`：斯洛伐克语（斯洛伐克）
-`sl-SI`：斯洛文尼亚语（斯洛文尼亚）
-`st-ZA`：南索托语（南非）
-`es-AR`：西班牙语（阿根廷）
-`es-BO`：西班牙语（玻利维亚）
-`es-CL`：西班牙语（智利）
-`es-CO`：西班牙语（哥伦比亚）
-`es-CR`：西班牙语（哥斯达黎加）
-`es-DO`：西班牙语（多米尼加共和国）
-`es-EC`：西班牙语（厄瓜多尔）
-`es-SV`：西班牙语（萨尔瓦多）
-`es-GT`：西班牙语（危地马拉）
-`es-HN`：西班牙语（洪都拉斯）
-`es-MX`：西班牙语（墨西哥）
-`es-NI`：西班牙语（尼加拉瓜）
-`es-PA`：西班牙语（巴拿马）
-`es-PY`：西班牙语（巴拉圭）
-`es-PE`：西班牙语（秘鲁）
-`es-PR`：西班牙语（波多黎各）
-`es-ES`：西班牙语（西班牙）
-`es-US`：西班牙语（美国）
-`es-UY`：西班牙语（乌拉圭）
-`es-VE`：西班牙语（委内瑞拉）
-`su-ID`：巽他语（印度尼西亚）
-`sw-KE`：斯瓦希里语（肯尼亚）
-`sw-TZ`：斯瓦希里语（坦桑尼亚）
-`sv-SE`：瑞典语（瑞典）
-`ta-IN`：泰米尔语（印度）
-`ta-MY`：泰米尔语（马来西亚）
-`ta-SG`：泰米尔语（新加坡）
-`ta-LK`：泰米尔语（斯里兰卡）
-`te-IN`：泰卢固语（印度）
-`th-TH`：泰语（泰国）
-`ts-ZA`：聪加语（南非）
-`tr-TR`：土耳其语（土耳其）
-`uk-UA`：乌克兰语（乌克兰）
-`ur-IN`：乌尔都语（印度）
-`ur-PK`：乌尔都语（巴基斯坦）
-`uz-UZ`：乌兹别克语（乌兹别克斯坦）
-`ve-ZA`：文达语（南非）
-`vi-VN`：越南语（越南）
-`xh-ZA`：科萨语（南非）
-`zu-ZA`：祖鲁语（南非）
- 
-     * @return VideoSrcLanguage 智能字幕视频源语言
-OCR识别仅支持以下语言：
-`zh_en`：中英
-`multi`：其他
-ASR识别和纯字幕翻译当前支持以下语言：
-`auto`：自动识别（仅在纯字幕翻译中支持）
-`zh`：简体中文
-`en`：英语
-`ja`：日语
-`ko`：韩语
-`zh-PY`：中英粤
-`zh_medical`：中文医疗
-`vi`：越南语
-`ms`：马来语
-`id`：印度尼西亚语
-`fil`：菲律宾语
-`th`：泰语
-`pt`：葡萄牙语
-`tr`：土耳其语
-`ar`：阿拉伯语
-`es`：西班牙语
-`hi`：印地语
-`fr`：法语
-`de`：德语
-`it`：意大利语
-`zh_dialect`：中文方言
-`zh_en`：中英
-`yue`：粤语
-`ru`：俄语
-`prime_zh`：中英方言
-`af-ZA`：南非荷兰语（南非）
-`sq-AL`：阿尔巴尼亚语（阿尔巴尼亚）
-`am-ET`：阿姆哈拉语（埃塞俄比亚）
-`ar-DZ`：阿拉伯语（阿尔及利亚）
-`ar-BH`：阿拉伯语（巴林）
-`ar-EG`：阿拉伯语（埃及）
-`ar-IQ`：阿拉伯语（伊拉克）
-`ar-IL`：阿拉伯语（以色列）
-`ar-JO`：阿拉伯语（约旦）
-`ar-KW`：阿拉伯语（科威特）
-`ar-LB`：阿拉伯语（黎巴嫩）
-`ar-MR`：阿拉伯语（毛里塔尼亚）
-`ar-MA`：阿拉伯语（摩洛哥）
-`ar-OM`：阿拉伯语（阿曼）
-`ar-QA`：阿拉伯语（卡塔尔）
-`ar-SA`：阿拉伯语（沙特阿拉伯）
-`ar-PS`：阿拉伯语（巴勒斯坦国）
-`ar-SY`：阿拉伯语（叙利亚）
-`ar-TN`：阿拉伯语（突尼斯）
-`ar-AE`：阿拉伯语（阿拉伯联合酋长国）
-`ar-YE`：阿拉伯语（也门）
-`hy-AM`：亚美尼亚语（亚美尼亚）
-`az-AZ`：阿塞拜疆语（阿塞拜疆）
-`eu-ES`：巴斯克语（西班牙）
-`bn-BD`：孟加拉语（孟加拉）
-`bn-IN`：孟加拉语（印度）
-`bs-BA`：波斯尼亚语（波斯尼亚和黑塞哥维那）
-`bg-BG`：保加利亚语（保加利亚）
-`my-MM`：缅甸语（缅甸）
-`ca-ES`：加泰罗尼亚语（西班牙）
-`hr-HR`：克罗地亚语（克罗地亚）
-`cs-CZ`：捷克语（捷克共和国）
-`da-DK`：丹麦语（丹麦）
-`nl-BE`：荷兰语（比利时）
-`nl-NL`：荷兰语（荷兰）
-`en-AU`：英语（澳大利亚）
-`en-CA`：英语（加拿大）
-`en-GH`：英语（加纳）
-`en-HK`：英语（中国香港）
-`en-IN`：英语（印度）
-`en-IE`：英语（爱尔兰）
-`en-KE`：英语（肯尼亚）
-`en-NZ`：英语（新西兰）
-`en-NG`：英语（尼日利亚）
-`en-PK`：英语（巴基斯坦）
-`en-PH`：英语（菲律宾）
-`en-SG`：英语（新加坡）
-`en-ZA`：英语（南非）
-`en-TZ`：英语（坦桑尼亚）
-`en-GB`：英语（英国）
-`en-US`：英语（美国）
-`et-EE`：爱沙尼亚语（爱沙尼亚）
-`fil-PH`：菲律宾语（菲律宾）
-`fi-FI`：芬兰语（芬兰）
-`fr-BE`：法语（比利时）
-`fr-CA`：法语（加拿大）
-`fr-FR`：法语（法国）
-`fr-CH`：法语（瑞士）
-`gl-ES`：加利西亚语（西班牙）
-`ka-GE`：格鲁吉亚语（格鲁吉亚）
-`el-GR`：希腊语（希腊）
-`gu-IN`：古吉拉特语（印度）
-`iw-IL`：希伯来语（以色列）
-`hi-IN`：印地语（印度）
-`hu-HU`：匈牙利语（匈牙利）
-`is-IS`：冰岛语（冰岛）
-`id-ID`：印度尼西亚语（印度尼西亚）
-`it-IT`：意大利语（意大利）
-`it-CH`：意大利语（瑞士）
-`ja-JP`：日语（日本）
-`jv-ID`：爪哇语（印度尼西亚）
-`kn-IN`：卡纳达语（印度）
-`kk-KZ`：哈萨克语（哈萨克斯坦）
-`km-KH`：高棉语（柬埔寨）
-`rw-RW`：卢旺达语（卢旺达）
-`ko-KR`：韩语（韩国）
-`lo-LA`：老挝语（老挝）
-`lv-LV`：拉脱维亚语（拉脱维亚）
-`lt-LT`：立陶宛语（立陶宛）
-`mk-MK`：马其顿语（北马其顿）
-`ms-MY`：马来语（马来西亚）
-`ml-IN`：马拉雅拉姆语（印度）
-`mr-IN`：马拉地语（印度）
-`mn-MN`：蒙古语（蒙古）
-`ne-NP`：尼泊尔语（尼泊尔）
-`no-NO`：博克马尔挪威语（挪威）
-`fa-IR`：波斯语（伊朗）
-`pl-PL`：波兰语（波兰）
-`pt-BR`：葡萄牙语（巴西）
-`pt-PT`：葡萄牙语（葡萄牙）
-`ro-RO`：罗马尼亚语（罗马尼亚）
-`ru-RU`：俄语（俄罗斯）
-`sr-RS`：塞尔维亚语（塞尔维亚）
-`si-LK`：僧伽罗语（斯里兰卡）
-`sk-SK`：斯洛伐克语（斯洛伐克）
-`sl-SI`：斯洛文尼亚语（斯洛文尼亚）
-`st-ZA`：南索托语（南非）
-`es-AR`：西班牙语（阿根廷）
-`es-BO`：西班牙语（玻利维亚）
-`es-CL`：西班牙语（智利）
-`es-CO`：西班牙语（哥伦比亚）
-`es-CR`：西班牙语（哥斯达黎加）
-`es-DO`：西班牙语（多米尼加共和国）
-`es-EC`：西班牙语（厄瓜多尔）
-`es-SV`：西班牙语（萨尔瓦多）
-`es-GT`：西班牙语（危地马拉）
-`es-HN`：西班牙语（洪都拉斯）
-`es-MX`：西班牙语（墨西哥）
-`es-NI`：西班牙语（尼加拉瓜）
-`es-PA`：西班牙语（巴拿马）
-`es-PY`：西班牙语（巴拉圭）
-`es-PE`：西班牙语（秘鲁）
-`es-PR`：西班牙语（波多黎各）
-`es-ES`：西班牙语（西班牙）
-`es-US`：西班牙语（美国）
-`es-UY`：西班牙语（乌拉圭）
-`es-VE`：西班牙语（委内瑞拉）
-`su-ID`：巽他语（印度尼西亚）
-`sw-KE`：斯瓦希里语（肯尼亚）
-`sw-TZ`：斯瓦希里语（坦桑尼亚）
-`sv-SE`：瑞典语（瑞典）
-`ta-IN`：泰米尔语（印度）
-`ta-MY`：泰米尔语（马来西亚）
-`ta-SG`：泰米尔语（新加坡）
-`ta-LK`：泰米尔语（斯里兰卡）
-`te-IN`：泰卢固语（印度）
-`th-TH`：泰语（泰国）
-`ts-ZA`：聪加语（南非）
-`tr-TR`：土耳其语（土耳其）
-`uk-UA`：乌克兰语（乌克兰）
-`ur-IN`：乌尔都语（印度）
-`ur-PK`：乌尔都语（巴基斯坦）
-`uz-UZ`：乌兹别克语（乌兹别克斯坦）
-`ve-ZA`：文达语（南非）
-`vi-VN`：越南语（越南）
-`xh-ZA`：科萨语（南非）
-`zu-ZA`：祖鲁语（南非）
-
+     * Get <p>智能字幕视频源语言<br>OCR识别仅支持以下语言：<br><code>zh_en</code>：中英<br><code>multi</code>：其他<br>ASR识别和纯字幕翻译当前支持以下语言：<br><code>auto</code>：自动识别<br><code>zh</code>：简体中文<br><code>en</code>：英语<br><code>ja</code>：日语<br><code>ko</code>：韩语<br><code>zh-PY</code>：中英粤<br><code>zh_medical</code>：中文医疗<br><code>vi</code>：越南语<br><code>ms</code>：马来语<br><code>id</code>：印度尼西亚语<br><code>fil</code>：菲律宾语<br><code>th</code>：泰语<br><code>pt</code>：葡萄牙语<br><code>tr</code>：土耳其语<br><code>ar</code>：阿拉伯语<br><code>es</code>：西班牙语<br><code>hi</code>：印地语<br><code>fr</code>：法语<br><code>de</code>：德语<br><code>it</code>：意大利语<br><code>zh_dialect</code>：中文方言<br><code>zh_en</code>：中英<br><code>yue</code>：粤语<br><code>ru</code>：俄语<br><code>prime_zh</code>：中英方言<br><code>af-ZA</code>：南非荷兰语（南非）<br><code>sq-AL</code>：阿尔巴尼亚语（阿尔巴尼亚）<br><code>am-ET</code>：阿姆哈拉语（埃塞俄比亚）<br><code>ar-DZ</code>：阿拉伯语（阿尔及利亚）<br><code>ar-BH</code>：阿拉伯语（巴林）<br><code>ar-EG</code>：阿拉伯语（埃及）<br><code>ar-IQ</code>：阿拉伯语（伊拉克）<br><code>ar-IL</code>：阿拉伯语（以色列）<br><code>ar-JO</code>：阿拉伯语（约旦）<br><code>ar-KW</code>：阿拉伯语（科威特）<br><code>ar-LB</code>：阿拉伯语（黎巴嫩）<br><code>ar-MR</code>：阿拉伯语（毛里塔尼亚）<br><code>ar-MA</code>：阿拉伯语（摩洛哥）<br><code>ar-OM</code>：阿拉伯语（阿曼）<br><code>ar-QA</code>：阿拉伯语（卡塔尔）<br><code>ar-SA</code>：阿拉伯语（沙特阿拉伯）<br><code>ar-PS</code>：阿拉伯语（巴勒斯坦国）<br><code>ar-SY</code>：阿拉伯语（叙利亚）<br><code>ar-TN</code>：阿拉伯语（突尼斯）<br><code>ar-AE</code>：阿拉伯语（阿拉伯联合酋长国）<br><code>ar-YE</code>：阿拉伯语（也门）<br><code>hy-AM</code>：亚美尼亚语（亚美尼亚）<br><code>az-AZ</code>：阿塞拜疆语（阿塞拜疆）<br><code>eu-ES</code>：巴斯克语（西班牙）<br><code>bn-BD</code>：孟加拉语（孟加拉）<br><code>bn-IN</code>：孟加拉语（印度）<br><code>bs-BA</code>：波斯尼亚语（波斯尼亚和黑塞哥维那）<br><code>bg-BG</code>：保加利亚语（保加利亚）<br><code>my-MM</code>：缅甸语（缅甸）<br><code>ca-ES</code>：加泰罗尼亚语（西班牙）<br><code>hr-HR</code>：克罗地亚语（克罗地亚）<br><code>cs-CZ</code>：捷克语（捷克共和国）<br><code>da-DK</code>：丹麦语（丹麦）<br><code>nl-BE</code>：荷兰语（比利时）<br><code>nl-NL</code>：荷兰语（荷兰）<br><code>en-AU</code>：英语（澳大利亚）<br><code>en-CA</code>：英语（加拿大）<br><code>en-GH</code>：英语（加纳）<br><code>en-HK</code>：英语（中国香港）<br><code>en-IN</code>：英语（印度）<br><code>en-IE</code>：英语（爱尔兰）<br><code>en-KE</code>：英语（肯尼亚）<br><code>en-NZ</code>：英语（新西兰）<br><code>en-NG</code>：英语（尼日利亚）<br><code>en-PK</code>：英语（巴基斯坦）<br><code>en-PH</code>：英语（菲律宾）<br><code>en-SG</code>：英语（新加坡）<br><code>en-ZA</code>：英语（南非）<br><code>en-TZ</code>：英语（坦桑尼亚）<br><code>en-GB</code>：英语（英国）<br><code>en-US</code>：英语（美国）<br><code>et-EE</code>：爱沙尼亚语（爱沙尼亚）<br><code>fil-PH</code>：菲律宾语（菲律宾）<br><code>fi-FI</code>：芬兰语（芬兰）<br><code>fr-BE</code>：法语（比利时）<br><code>fr-CA</code>：法语（加拿大）<br><code>fr-FR</code>：法语（法国）<br><code>fr-CH</code>：法语（瑞士）<br><code>gl-ES</code>：加利西亚语（西班牙）<br><code>ka-GE</code>：格鲁吉亚语（格鲁吉亚）<br><code>el-GR</code>：希腊语（希腊）<br><code>gu-IN</code>：古吉拉特语（印度）<br><code>iw-IL</code>：希伯来语（以色列）<br><code>hi-IN</code>：印地语（印度）<br><code>hu-HU</code>：匈牙利语（匈牙利）<br><code>is-IS</code>：冰岛语（冰岛）<br><code>id-ID</code>：印度尼西亚语（印度尼西亚）<br><code>it-IT</code>：意大利语（意大利）<br><code>it-CH</code>：意大利语（瑞士）<br><code>ja-JP</code>：日语（日本）<br><code>jv-ID</code>：爪哇语（印度尼西亚）<br><code>kn-IN</code>：卡纳达语（印度）<br><code>kk-KZ</code>：哈萨克语（哈萨克斯坦）<br><code>km-KH</code>：高棉语（柬埔寨）<br><code>rw-RW</code>：卢旺达语（卢旺达）<br><code>ko-KR</code>：韩语（韩国）<br><code>lo-LA</code>：老挝语（老挝）<br><code>lv-LV</code>：拉脱维亚语（拉脱维亚）<br><code>lt-LT</code>：立陶宛语（立陶宛）<br><code>mk-MK</code>：马其顿语（北马其顿）<br><code>ms-MY</code>：马来语（马来西亚）<br><code>ml-IN</code>：马拉雅拉姆语（印度）<br><code>mr-IN</code>：马拉地语（印度）<br><code>mn-MN</code>：蒙古语（蒙古）<br><code>ne-NP</code>：尼泊尔语（尼泊尔）<br><code>no-NO</code>：博克马尔挪威语（挪威）<br><code>fa-IR</code>：波斯语（伊朗）<br><code>pl-PL</code>：波兰语（波兰）<br><code>pt-BR</code>：葡萄牙语（巴西）<br><code>pt-PT</code>：葡萄牙语（葡萄牙）<br><code>ro-RO</code>：罗马尼亚语（罗马尼亚）<br><code>ru-RU</code>：俄语（俄罗斯）<br><code>sr-RS</code>：塞尔维亚语（塞尔维亚）<br><code>si-LK</code>：僧伽罗语（斯里兰卡）<br><code>sk-SK</code>：斯洛伐克语（斯洛伐克）<br><code>sl-SI</code>：斯洛文尼亚语（斯洛文尼亚）<br><code>st-ZA</code>：南索托语（南非）<br><code>es-AR</code>：西班牙语（阿根廷）<br><code>es-BO</code>：西班牙语（玻利维亚）<br><code>es-CL</code>：西班牙语（智利）<br><code>es-CO</code>：西班牙语（哥伦比亚）<br><code>es-CR</code>：西班牙语（哥斯达黎加）<br><code>es-DO</code>：西班牙语（多米尼加共和国）<br><code>es-EC</code>：西班牙语（厄瓜多尔）<br><code>es-SV</code>：西班牙语（萨尔瓦多）<br><code>es-GT</code>：西班牙语（危地马拉）<br><code>es-HN</code>：西班牙语（洪都拉斯）<br><code>es-MX</code>：西班牙语（墨西哥）<br><code>es-NI</code>：西班牙语（尼加拉瓜）<br><code>es-PA</code>：西班牙语（巴拿马）<br><code>es-PY</code>：西班牙语（巴拉圭）<br><code>es-PE</code>：西班牙语（秘鲁）<br><code>es-PR</code>：西班牙语（波多黎各）<br><code>es-ES</code>：西班牙语（西班牙）<br><code>es-US</code>：西班牙语（美国）<br><code>es-UY</code>：西班牙语（乌拉圭）<br><code>es-VE</code>：西班牙语（委内瑞拉）<br><code>su-ID</code>：巽他语（印度尼西亚）<br><code>sw-KE</code>：斯瓦希里语（肯尼亚）<br><code>sw-TZ</code>：斯瓦希里语（坦桑尼亚）<br><code>sv-SE</code>：瑞典语（瑞典）<br><code>ta-IN</code>：泰米尔语（印度）<br><code>ta-MY</code>：泰米尔语（马来西亚）<br><code>ta-SG</code>：泰米尔语（新加坡）<br><code>ta-LK</code>：泰米尔语（斯里兰卡）<br><code>te-IN</code>：泰卢固语（印度）<br><code>th-TH</code>：泰语（泰国）<br><code>ts-ZA</code>：聪加语（南非）<br><code>tr-TR</code>：土耳其语（土耳其）<br><code>uk-UA</code>：乌克兰语（乌克兰）<br><code>ur-IN</code>：乌尔都语（印度）<br><code>ur-PK</code>：乌尔都语（巴基斯坦）<br><code>uz-UZ</code>：乌兹别克语（乌兹别克斯坦）<br><code>ve-ZA</code>：文达语（南非）<br><code>vi-VN</code>：越南语（越南）<br><code>xh-ZA</code>：科萨语（南非）<br><code>zu-ZA</code>：祖鲁语（南非）</p> 
+     * @return VideoSrcLanguage <p>智能字幕视频源语言<br>OCR识别仅支持以下语言：<br><code>zh_en</code>：中英<br><code>multi</code>：其他<br>ASR识别和纯字幕翻译当前支持以下语言：<br><code>auto</code>：自动识别<br><code>zh</code>：简体中文<br><code>en</code>：英语<br><code>ja</code>：日语<br><code>ko</code>：韩语<br><code>zh-PY</code>：中英粤<br><code>zh_medical</code>：中文医疗<br><code>vi</code>：越南语<br><code>ms</code>：马来语<br><code>id</code>：印度尼西亚语<br><code>fil</code>：菲律宾语<br><code>th</code>：泰语<br><code>pt</code>：葡萄牙语<br><code>tr</code>：土耳其语<br><code>ar</code>：阿拉伯语<br><code>es</code>：西班牙语<br><code>hi</code>：印地语<br><code>fr</code>：法语<br><code>de</code>：德语<br><code>it</code>：意大利语<br><code>zh_dialect</code>：中文方言<br><code>zh_en</code>：中英<br><code>yue</code>：粤语<br><code>ru</code>：俄语<br><code>prime_zh</code>：中英方言<br><code>af-ZA</code>：南非荷兰语（南非）<br><code>sq-AL</code>：阿尔巴尼亚语（阿尔巴尼亚）<br><code>am-ET</code>：阿姆哈拉语（埃塞俄比亚）<br><code>ar-DZ</code>：阿拉伯语（阿尔及利亚）<br><code>ar-BH</code>：阿拉伯语（巴林）<br><code>ar-EG</code>：阿拉伯语（埃及）<br><code>ar-IQ</code>：阿拉伯语（伊拉克）<br><code>ar-IL</code>：阿拉伯语（以色列）<br><code>ar-JO</code>：阿拉伯语（约旦）<br><code>ar-KW</code>：阿拉伯语（科威特）<br><code>ar-LB</code>：阿拉伯语（黎巴嫩）<br><code>ar-MR</code>：阿拉伯语（毛里塔尼亚）<br><code>ar-MA</code>：阿拉伯语（摩洛哥）<br><code>ar-OM</code>：阿拉伯语（阿曼）<br><code>ar-QA</code>：阿拉伯语（卡塔尔）<br><code>ar-SA</code>：阿拉伯语（沙特阿拉伯）<br><code>ar-PS</code>：阿拉伯语（巴勒斯坦国）<br><code>ar-SY</code>：阿拉伯语（叙利亚）<br><code>ar-TN</code>：阿拉伯语（突尼斯）<br><code>ar-AE</code>：阿拉伯语（阿拉伯联合酋长国）<br><code>ar-YE</code>：阿拉伯语（也门）<br><code>hy-AM</code>：亚美尼亚语（亚美尼亚）<br><code>az-AZ</code>：阿塞拜疆语（阿塞拜疆）<br><code>eu-ES</code>：巴斯克语（西班牙）<br><code>bn-BD</code>：孟加拉语（孟加拉）<br><code>bn-IN</code>：孟加拉语（印度）<br><code>bs-BA</code>：波斯尼亚语（波斯尼亚和黑塞哥维那）<br><code>bg-BG</code>：保加利亚语（保加利亚）<br><code>my-MM</code>：缅甸语（缅甸）<br><code>ca-ES</code>：加泰罗尼亚语（西班牙）<br><code>hr-HR</code>：克罗地亚语（克罗地亚）<br><code>cs-CZ</code>：捷克语（捷克共和国）<br><code>da-DK</code>：丹麦语（丹麦）<br><code>nl-BE</code>：荷兰语（比利时）<br><code>nl-NL</code>：荷兰语（荷兰）<br><code>en-AU</code>：英语（澳大利亚）<br><code>en-CA</code>：英语（加拿大）<br><code>en-GH</code>：英语（加纳）<br><code>en-HK</code>：英语（中国香港）<br><code>en-IN</code>：英语（印度）<br><code>en-IE</code>：英语（爱尔兰）<br><code>en-KE</code>：英语（肯尼亚）<br><code>en-NZ</code>：英语（新西兰）<br><code>en-NG</code>：英语（尼日利亚）<br><code>en-PK</code>：英语（巴基斯坦）<br><code>en-PH</code>：英语（菲律宾）<br><code>en-SG</code>：英语（新加坡）<br><code>en-ZA</code>：英语（南非）<br><code>en-TZ</code>：英语（坦桑尼亚）<br><code>en-GB</code>：英语（英国）<br><code>en-US</code>：英语（美国）<br><code>et-EE</code>：爱沙尼亚语（爱沙尼亚）<br><code>fil-PH</code>：菲律宾语（菲律宾）<br><code>fi-FI</code>：芬兰语（芬兰）<br><code>fr-BE</code>：法语（比利时）<br><code>fr-CA</code>：法语（加拿大）<br><code>fr-FR</code>：法语（法国）<br><code>fr-CH</code>：法语（瑞士）<br><code>gl-ES</code>：加利西亚语（西班牙）<br><code>ka-GE</code>：格鲁吉亚语（格鲁吉亚）<br><code>el-GR</code>：希腊语（希腊）<br><code>gu-IN</code>：古吉拉特语（印度）<br><code>iw-IL</code>：希伯来语（以色列）<br><code>hi-IN</code>：印地语（印度）<br><code>hu-HU</code>：匈牙利语（匈牙利）<br><code>is-IS</code>：冰岛语（冰岛）<br><code>id-ID</code>：印度尼西亚语（印度尼西亚）<br><code>it-IT</code>：意大利语（意大利）<br><code>it-CH</code>：意大利语（瑞士）<br><code>ja-JP</code>：日语（日本）<br><code>jv-ID</code>：爪哇语（印度尼西亚）<br><code>kn-IN</code>：卡纳达语（印度）<br><code>kk-KZ</code>：哈萨克语（哈萨克斯坦）<br><code>km-KH</code>：高棉语（柬埔寨）<br><code>rw-RW</code>：卢旺达语（卢旺达）<br><code>ko-KR</code>：韩语（韩国）<br><code>lo-LA</code>：老挝语（老挝）<br><code>lv-LV</code>：拉脱维亚语（拉脱维亚）<br><code>lt-LT</code>：立陶宛语（立陶宛）<br><code>mk-MK</code>：马其顿语（北马其顿）<br><code>ms-MY</code>：马来语（马来西亚）<br><code>ml-IN</code>：马拉雅拉姆语（印度）<br><code>mr-IN</code>：马拉地语（印度）<br><code>mn-MN</code>：蒙古语（蒙古）<br><code>ne-NP</code>：尼泊尔语（尼泊尔）<br><code>no-NO</code>：博克马尔挪威语（挪威）<br><code>fa-IR</code>：波斯语（伊朗）<br><code>pl-PL</code>：波兰语（波兰）<br><code>pt-BR</code>：葡萄牙语（巴西）<br><code>pt-PT</code>：葡萄牙语（葡萄牙）<br><code>ro-RO</code>：罗马尼亚语（罗马尼亚）<br><code>ru-RU</code>：俄语（俄罗斯）<br><code>sr-RS</code>：塞尔维亚语（塞尔维亚）<br><code>si-LK</code>：僧伽罗语（斯里兰卡）<br><code>sk-SK</code>：斯洛伐克语（斯洛伐克）<br><code>sl-SI</code>：斯洛文尼亚语（斯洛文尼亚）<br><code>st-ZA</code>：南索托语（南非）<br><code>es-AR</code>：西班牙语（阿根廷）<br><code>es-BO</code>：西班牙语（玻利维亚）<br><code>es-CL</code>：西班牙语（智利）<br><code>es-CO</code>：西班牙语（哥伦比亚）<br><code>es-CR</code>：西班牙语（哥斯达黎加）<br><code>es-DO</code>：西班牙语（多米尼加共和国）<br><code>es-EC</code>：西班牙语（厄瓜多尔）<br><code>es-SV</code>：西班牙语（萨尔瓦多）<br><code>es-GT</code>：西班牙语（危地马拉）<br><code>es-HN</code>：西班牙语（洪都拉斯）<br><code>es-MX</code>：西班牙语（墨西哥）<br><code>es-NI</code>：西班牙语（尼加拉瓜）<br><code>es-PA</code>：西班牙语（巴拿马）<br><code>es-PY</code>：西班牙语（巴拉圭）<br><code>es-PE</code>：西班牙语（秘鲁）<br><code>es-PR</code>：西班牙语（波多黎各）<br><code>es-ES</code>：西班牙语（西班牙）<br><code>es-US</code>：西班牙语（美国）<br><code>es-UY</code>：西班牙语（乌拉圭）<br><code>es-VE</code>：西班牙语（委内瑞拉）<br><code>su-ID</code>：巽他语（印度尼西亚）<br><code>sw-KE</code>：斯瓦希里语（肯尼亚）<br><code>sw-TZ</code>：斯瓦希里语（坦桑尼亚）<br><code>sv-SE</code>：瑞典语（瑞典）<br><code>ta-IN</code>：泰米尔语（印度）<br><code>ta-MY</code>：泰米尔语（马来西亚）<br><code>ta-SG</code>：泰米尔语（新加坡）<br><code>ta-LK</code>：泰米尔语（斯里兰卡）<br><code>te-IN</code>：泰卢固语（印度）<br><code>th-TH</code>：泰语（泰国）<br><code>ts-ZA</code>：聪加语（南非）<br><code>tr-TR</code>：土耳其语（土耳其）<br><code>uk-UA</code>：乌克兰语（乌克兰）<br><code>ur-IN</code>：乌尔都语（印度）<br><code>ur-PK</code>：乌尔都语（巴基斯坦）<br><code>uz-UZ</code>：乌兹别克语（乌兹别克斯坦）<br><code>ve-ZA</code>：文达语（南非）<br><code>vi-VN</code>：越南语（越南）<br><code>xh-ZA</code>：科萨语（南非）<br><code>zu-ZA</code>：祖鲁语（南非）</p>
      */
     public String getVideoSrcLanguage() {
         return this.VideoSrcLanguage;
     }
 
     /**
-     * Set 智能字幕视频源语言
-OCR识别仅支持以下语言：
-`zh_en`：中英
-`multi`：其他
-ASR识别和纯字幕翻译当前支持以下语言：
-`auto`：自动识别（仅在纯字幕翻译中支持）
-`zh`：简体中文
-`en`：英语
-`ja`：日语
-`ko`：韩语
-`zh-PY`：中英粤
-`zh_medical`：中文医疗
-`vi`：越南语
-`ms`：马来语
-`id`：印度尼西亚语
-`fil`：菲律宾语
-`th`：泰语
-`pt`：葡萄牙语
-`tr`：土耳其语
-`ar`：阿拉伯语
-`es`：西班牙语
-`hi`：印地语
-`fr`：法语
-`de`：德语
-`it`：意大利语
-`zh_dialect`：中文方言
-`zh_en`：中英
-`yue`：粤语
-`ru`：俄语
-`prime_zh`：中英方言
-`af-ZA`：南非荷兰语（南非）
-`sq-AL`：阿尔巴尼亚语（阿尔巴尼亚）
-`am-ET`：阿姆哈拉语（埃塞俄比亚）
-`ar-DZ`：阿拉伯语（阿尔及利亚）
-`ar-BH`：阿拉伯语（巴林）
-`ar-EG`：阿拉伯语（埃及）
-`ar-IQ`：阿拉伯语（伊拉克）
-`ar-IL`：阿拉伯语（以色列）
-`ar-JO`：阿拉伯语（约旦）
-`ar-KW`：阿拉伯语（科威特）
-`ar-LB`：阿拉伯语（黎巴嫩）
-`ar-MR`：阿拉伯语（毛里塔尼亚）
-`ar-MA`：阿拉伯语（摩洛哥）
-`ar-OM`：阿拉伯语（阿曼）
-`ar-QA`：阿拉伯语（卡塔尔）
-`ar-SA`：阿拉伯语（沙特阿拉伯）
-`ar-PS`：阿拉伯语（巴勒斯坦国）
-`ar-SY`：阿拉伯语（叙利亚）
-`ar-TN`：阿拉伯语（突尼斯）
-`ar-AE`：阿拉伯语（阿拉伯联合酋长国）
-`ar-YE`：阿拉伯语（也门）
-`hy-AM`：亚美尼亚语（亚美尼亚）
-`az-AZ`：阿塞拜疆语（阿塞拜疆）
-`eu-ES`：巴斯克语（西班牙）
-`bn-BD`：孟加拉语（孟加拉）
-`bn-IN`：孟加拉语（印度）
-`bs-BA`：波斯尼亚语（波斯尼亚和黑塞哥维那）
-`bg-BG`：保加利亚语（保加利亚）
-`my-MM`：缅甸语（缅甸）
-`ca-ES`：加泰罗尼亚语（西班牙）
-`hr-HR`：克罗地亚语（克罗地亚）
-`cs-CZ`：捷克语（捷克共和国）
-`da-DK`：丹麦语（丹麦）
-`nl-BE`：荷兰语（比利时）
-`nl-NL`：荷兰语（荷兰）
-`en-AU`：英语（澳大利亚）
-`en-CA`：英语（加拿大）
-`en-GH`：英语（加纳）
-`en-HK`：英语（中国香港）
-`en-IN`：英语（印度）
-`en-IE`：英语（爱尔兰）
-`en-KE`：英语（肯尼亚）
-`en-NZ`：英语（新西兰）
-`en-NG`：英语（尼日利亚）
-`en-PK`：英语（巴基斯坦）
-`en-PH`：英语（菲律宾）
-`en-SG`：英语（新加坡）
-`en-ZA`：英语（南非）
-`en-TZ`：英语（坦桑尼亚）
-`en-GB`：英语（英国）
-`en-US`：英语（美国）
-`et-EE`：爱沙尼亚语（爱沙尼亚）
-`fil-PH`：菲律宾语（菲律宾）
-`fi-FI`：芬兰语（芬兰）
-`fr-BE`：法语（比利时）
-`fr-CA`：法语（加拿大）
-`fr-FR`：法语（法国）
-`fr-CH`：法语（瑞士）
-`gl-ES`：加利西亚语（西班牙）
-`ka-GE`：格鲁吉亚语（格鲁吉亚）
-`el-GR`：希腊语（希腊）
-`gu-IN`：古吉拉特语（印度）
-`iw-IL`：希伯来语（以色列）
-`hi-IN`：印地语（印度）
-`hu-HU`：匈牙利语（匈牙利）
-`is-IS`：冰岛语（冰岛）
-`id-ID`：印度尼西亚语（印度尼西亚）
-`it-IT`：意大利语（意大利）
-`it-CH`：意大利语（瑞士）
-`ja-JP`：日语（日本）
-`jv-ID`：爪哇语（印度尼西亚）
-`kn-IN`：卡纳达语（印度）
-`kk-KZ`：哈萨克语（哈萨克斯坦）
-`km-KH`：高棉语（柬埔寨）
-`rw-RW`：卢旺达语（卢旺达）
-`ko-KR`：韩语（韩国）
-`lo-LA`：老挝语（老挝）
-`lv-LV`：拉脱维亚语（拉脱维亚）
-`lt-LT`：立陶宛语（立陶宛）
-`mk-MK`：马其顿语（北马其顿）
-`ms-MY`：马来语（马来西亚）
-`ml-IN`：马拉雅拉姆语（印度）
-`mr-IN`：马拉地语（印度）
-`mn-MN`：蒙古语（蒙古）
-`ne-NP`：尼泊尔语（尼泊尔）
-`no-NO`：博克马尔挪威语（挪威）
-`fa-IR`：波斯语（伊朗）
-`pl-PL`：波兰语（波兰）
-`pt-BR`：葡萄牙语（巴西）
-`pt-PT`：葡萄牙语（葡萄牙）
-`ro-RO`：罗马尼亚语（罗马尼亚）
-`ru-RU`：俄语（俄罗斯）
-`sr-RS`：塞尔维亚语（塞尔维亚）
-`si-LK`：僧伽罗语（斯里兰卡）
-`sk-SK`：斯洛伐克语（斯洛伐克）
-`sl-SI`：斯洛文尼亚语（斯洛文尼亚）
-`st-ZA`：南索托语（南非）
-`es-AR`：西班牙语（阿根廷）
-`es-BO`：西班牙语（玻利维亚）
-`es-CL`：西班牙语（智利）
-`es-CO`：西班牙语（哥伦比亚）
-`es-CR`：西班牙语（哥斯达黎加）
-`es-DO`：西班牙语（多米尼加共和国）
-`es-EC`：西班牙语（厄瓜多尔）
-`es-SV`：西班牙语（萨尔瓦多）
-`es-GT`：西班牙语（危地马拉）
-`es-HN`：西班牙语（洪都拉斯）
-`es-MX`：西班牙语（墨西哥）
-`es-NI`：西班牙语（尼加拉瓜）
-`es-PA`：西班牙语（巴拿马）
-`es-PY`：西班牙语（巴拉圭）
-`es-PE`：西班牙语（秘鲁）
-`es-PR`：西班牙语（波多黎各）
-`es-ES`：西班牙语（西班牙）
-`es-US`：西班牙语（美国）
-`es-UY`：西班牙语（乌拉圭）
-`es-VE`：西班牙语（委内瑞拉）
-`su-ID`：巽他语（印度尼西亚）
-`sw-KE`：斯瓦希里语（肯尼亚）
-`sw-TZ`：斯瓦希里语（坦桑尼亚）
-`sv-SE`：瑞典语（瑞典）
-`ta-IN`：泰米尔语（印度）
-`ta-MY`：泰米尔语（马来西亚）
-`ta-SG`：泰米尔语（新加坡）
-`ta-LK`：泰米尔语（斯里兰卡）
-`te-IN`：泰卢固语（印度）
-`th-TH`：泰语（泰国）
-`ts-ZA`：聪加语（南非）
-`tr-TR`：土耳其语（土耳其）
-`uk-UA`：乌克兰语（乌克兰）
-`ur-IN`：乌尔都语（印度）
-`ur-PK`：乌尔都语（巴基斯坦）
-`uz-UZ`：乌兹别克语（乌兹别克斯坦）
-`ve-ZA`：文达语（南非）
-`vi-VN`：越南语（越南）
-`xh-ZA`：科萨语（南非）
-`zu-ZA`：祖鲁语（南非）
-
-     * @param VideoSrcLanguage 智能字幕视频源语言
-OCR识别仅支持以下语言：
-`zh_en`：中英
-`multi`：其他
-ASR识别和纯字幕翻译当前支持以下语言：
-`auto`：自动识别（仅在纯字幕翻译中支持）
-`zh`：简体中文
-`en`：英语
-`ja`：日语
-`ko`：韩语
-`zh-PY`：中英粤
-`zh_medical`：中文医疗
-`vi`：越南语
-`ms`：马来语
-`id`：印度尼西亚语
-`fil`：菲律宾语
-`th`：泰语
-`pt`：葡萄牙语
-`tr`：土耳其语
-`ar`：阿拉伯语
-`es`：西班牙语
-`hi`：印地语
-`fr`：法语
-`de`：德语
-`it`：意大利语
-`zh_dialect`：中文方言
-`zh_en`：中英
-`yue`：粤语
-`ru`：俄语
-`prime_zh`：中英方言
-`af-ZA`：南非荷兰语（南非）
-`sq-AL`：阿尔巴尼亚语（阿尔巴尼亚）
-`am-ET`：阿姆哈拉语（埃塞俄比亚）
-`ar-DZ`：阿拉伯语（阿尔及利亚）
-`ar-BH`：阿拉伯语（巴林）
-`ar-EG`：阿拉伯语（埃及）
-`ar-IQ`：阿拉伯语（伊拉克）
-`ar-IL`：阿拉伯语（以色列）
-`ar-JO`：阿拉伯语（约旦）
-`ar-KW`：阿拉伯语（科威特）
-`ar-LB`：阿拉伯语（黎巴嫩）
-`ar-MR`：阿拉伯语（毛里塔尼亚）
-`ar-MA`：阿拉伯语（摩洛哥）
-`ar-OM`：阿拉伯语（阿曼）
-`ar-QA`：阿拉伯语（卡塔尔）
-`ar-SA`：阿拉伯语（沙特阿拉伯）
-`ar-PS`：阿拉伯语（巴勒斯坦国）
-`ar-SY`：阿拉伯语（叙利亚）
-`ar-TN`：阿拉伯语（突尼斯）
-`ar-AE`：阿拉伯语（阿拉伯联合酋长国）
-`ar-YE`：阿拉伯语（也门）
-`hy-AM`：亚美尼亚语（亚美尼亚）
-`az-AZ`：阿塞拜疆语（阿塞拜疆）
-`eu-ES`：巴斯克语（西班牙）
-`bn-BD`：孟加拉语（孟加拉）
-`bn-IN`：孟加拉语（印度）
-`bs-BA`：波斯尼亚语（波斯尼亚和黑塞哥维那）
-`bg-BG`：保加利亚语（保加利亚）
-`my-MM`：缅甸语（缅甸）
-`ca-ES`：加泰罗尼亚语（西班牙）
-`hr-HR`：克罗地亚语（克罗地亚）
-`cs-CZ`：捷克语（捷克共和国）
-`da-DK`：丹麦语（丹麦）
-`nl-BE`：荷兰语（比利时）
-`nl-NL`：荷兰语（荷兰）
-`en-AU`：英语（澳大利亚）
-`en-CA`：英语（加拿大）
-`en-GH`：英语（加纳）
-`en-HK`：英语（中国香港）
-`en-IN`：英语（印度）
-`en-IE`：英语（爱尔兰）
-`en-KE`：英语（肯尼亚）
-`en-NZ`：英语（新西兰）
-`en-NG`：英语（尼日利亚）
-`en-PK`：英语（巴基斯坦）
-`en-PH`：英语（菲律宾）
-`en-SG`：英语（新加坡）
-`en-ZA`：英语（南非）
-`en-TZ`：英语（坦桑尼亚）
-`en-GB`：英语（英国）
-`en-US`：英语（美国）
-`et-EE`：爱沙尼亚语（爱沙尼亚）
-`fil-PH`：菲律宾语（菲律宾）
-`fi-FI`：芬兰语（芬兰）
-`fr-BE`：法语（比利时）
-`fr-CA`：法语（加拿大）
-`fr-FR`：法语（法国）
-`fr-CH`：法语（瑞士）
-`gl-ES`：加利西亚语（西班牙）
-`ka-GE`：格鲁吉亚语（格鲁吉亚）
-`el-GR`：希腊语（希腊）
-`gu-IN`：古吉拉特语（印度）
-`iw-IL`：希伯来语（以色列）
-`hi-IN`：印地语（印度）
-`hu-HU`：匈牙利语（匈牙利）
-`is-IS`：冰岛语（冰岛）
-`id-ID`：印度尼西亚语（印度尼西亚）
-`it-IT`：意大利语（意大利）
-`it-CH`：意大利语（瑞士）
-`ja-JP`：日语（日本）
-`jv-ID`：爪哇语（印度尼西亚）
-`kn-IN`：卡纳达语（印度）
-`kk-KZ`：哈萨克语（哈萨克斯坦）
-`km-KH`：高棉语（柬埔寨）
-`rw-RW`：卢旺达语（卢旺达）
-`ko-KR`：韩语（韩国）
-`lo-LA`：老挝语（老挝）
-`lv-LV`：拉脱维亚语（拉脱维亚）
-`lt-LT`：立陶宛语（立陶宛）
-`mk-MK`：马其顿语（北马其顿）
-`ms-MY`：马来语（马来西亚）
-`ml-IN`：马拉雅拉姆语（印度）
-`mr-IN`：马拉地语（印度）
-`mn-MN`：蒙古语（蒙古）
-`ne-NP`：尼泊尔语（尼泊尔）
-`no-NO`：博克马尔挪威语（挪威）
-`fa-IR`：波斯语（伊朗）
-`pl-PL`：波兰语（波兰）
-`pt-BR`：葡萄牙语（巴西）
-`pt-PT`：葡萄牙语（葡萄牙）
-`ro-RO`：罗马尼亚语（罗马尼亚）
-`ru-RU`：俄语（俄罗斯）
-`sr-RS`：塞尔维亚语（塞尔维亚）
-`si-LK`：僧伽罗语（斯里兰卡）
-`sk-SK`：斯洛伐克语（斯洛伐克）
-`sl-SI`：斯洛文尼亚语（斯洛文尼亚）
-`st-ZA`：南索托语（南非）
-`es-AR`：西班牙语（阿根廷）
-`es-BO`：西班牙语（玻利维亚）
-`es-CL`：西班牙语（智利）
-`es-CO`：西班牙语（哥伦比亚）
-`es-CR`：西班牙语（哥斯达黎加）
-`es-DO`：西班牙语（多米尼加共和国）
-`es-EC`：西班牙语（厄瓜多尔）
-`es-SV`：西班牙语（萨尔瓦多）
-`es-GT`：西班牙语（危地马拉）
-`es-HN`：西班牙语（洪都拉斯）
-`es-MX`：西班牙语（墨西哥）
-`es-NI`：西班牙语（尼加拉瓜）
-`es-PA`：西班牙语（巴拿马）
-`es-PY`：西班牙语（巴拉圭）
-`es-PE`：西班牙语（秘鲁）
-`es-PR`：西班牙语（波多黎各）
-`es-ES`：西班牙语（西班牙）
-`es-US`：西班牙语（美国）
-`es-UY`：西班牙语（乌拉圭）
-`es-VE`：西班牙语（委内瑞拉）
-`su-ID`：巽他语（印度尼西亚）
-`sw-KE`：斯瓦希里语（肯尼亚）
-`sw-TZ`：斯瓦希里语（坦桑尼亚）
-`sv-SE`：瑞典语（瑞典）
-`ta-IN`：泰米尔语（印度）
-`ta-MY`：泰米尔语（马来西亚）
-`ta-SG`：泰米尔语（新加坡）
-`ta-LK`：泰米尔语（斯里兰卡）
-`te-IN`：泰卢固语（印度）
-`th-TH`：泰语（泰国）
-`ts-ZA`：聪加语（南非）
-`tr-TR`：土耳其语（土耳其）
-`uk-UA`：乌克兰语（乌克兰）
-`ur-IN`：乌尔都语（印度）
-`ur-PK`：乌尔都语（巴基斯坦）
-`uz-UZ`：乌兹别克语（乌兹别克斯坦）
-`ve-ZA`：文达语（南非）
-`vi-VN`：越南语（越南）
-`xh-ZA`：科萨语（南非）
-`zu-ZA`：祖鲁语（南非）
-
+     * Set <p>智能字幕视频源语言<br>OCR识别仅支持以下语言：<br><code>zh_en</code>：中英<br><code>multi</code>：其他<br>ASR识别和纯字幕翻译当前支持以下语言：<br><code>auto</code>：自动识别<br><code>zh</code>：简体中文<br><code>en</code>：英语<br><code>ja</code>：日语<br><code>ko</code>：韩语<br><code>zh-PY</code>：中英粤<br><code>zh_medical</code>：中文医疗<br><code>vi</code>：越南语<br><code>ms</code>：马来语<br><code>id</code>：印度尼西亚语<br><code>fil</code>：菲律宾语<br><code>th</code>：泰语<br><code>pt</code>：葡萄牙语<br><code>tr</code>：土耳其语<br><code>ar</code>：阿拉伯语<br><code>es</code>：西班牙语<br><code>hi</code>：印地语<br><code>fr</code>：法语<br><code>de</code>：德语<br><code>it</code>：意大利语<br><code>zh_dialect</code>：中文方言<br><code>zh_en</code>：中英<br><code>yue</code>：粤语<br><code>ru</code>：俄语<br><code>prime_zh</code>：中英方言<br><code>af-ZA</code>：南非荷兰语（南非）<br><code>sq-AL</code>：阿尔巴尼亚语（阿尔巴尼亚）<br><code>am-ET</code>：阿姆哈拉语（埃塞俄比亚）<br><code>ar-DZ</code>：阿拉伯语（阿尔及利亚）<br><code>ar-BH</code>：阿拉伯语（巴林）<br><code>ar-EG</code>：阿拉伯语（埃及）<br><code>ar-IQ</code>：阿拉伯语（伊拉克）<br><code>ar-IL</code>：阿拉伯语（以色列）<br><code>ar-JO</code>：阿拉伯语（约旦）<br><code>ar-KW</code>：阿拉伯语（科威特）<br><code>ar-LB</code>：阿拉伯语（黎巴嫩）<br><code>ar-MR</code>：阿拉伯语（毛里塔尼亚）<br><code>ar-MA</code>：阿拉伯语（摩洛哥）<br><code>ar-OM</code>：阿拉伯语（阿曼）<br><code>ar-QA</code>：阿拉伯语（卡塔尔）<br><code>ar-SA</code>：阿拉伯语（沙特阿拉伯）<br><code>ar-PS</code>：阿拉伯语（巴勒斯坦国）<br><code>ar-SY</code>：阿拉伯语（叙利亚）<br><code>ar-TN</code>：阿拉伯语（突尼斯）<br><code>ar-AE</code>：阿拉伯语（阿拉伯联合酋长国）<br><code>ar-YE</code>：阿拉伯语（也门）<br><code>hy-AM</code>：亚美尼亚语（亚美尼亚）<br><code>az-AZ</code>：阿塞拜疆语（阿塞拜疆）<br><code>eu-ES</code>：巴斯克语（西班牙）<br><code>bn-BD</code>：孟加拉语（孟加拉）<br><code>bn-IN</code>：孟加拉语（印度）<br><code>bs-BA</code>：波斯尼亚语（波斯尼亚和黑塞哥维那）<br><code>bg-BG</code>：保加利亚语（保加利亚）<br><code>my-MM</code>：缅甸语（缅甸）<br><code>ca-ES</code>：加泰罗尼亚语（西班牙）<br><code>hr-HR</code>：克罗地亚语（克罗地亚）<br><code>cs-CZ</code>：捷克语（捷克共和国）<br><code>da-DK</code>：丹麦语（丹麦）<br><code>nl-BE</code>：荷兰语（比利时）<br><code>nl-NL</code>：荷兰语（荷兰）<br><code>en-AU</code>：英语（澳大利亚）<br><code>en-CA</code>：英语（加拿大）<br><code>en-GH</code>：英语（加纳）<br><code>en-HK</code>：英语（中国香港）<br><code>en-IN</code>：英语（印度）<br><code>en-IE</code>：英语（爱尔兰）<br><code>en-KE</code>：英语（肯尼亚）<br><code>en-NZ</code>：英语（新西兰）<br><code>en-NG</code>：英语（尼日利亚）<br><code>en-PK</code>：英语（巴基斯坦）<br><code>en-PH</code>：英语（菲律宾）<br><code>en-SG</code>：英语（新加坡）<br><code>en-ZA</code>：英语（南非）<br><code>en-TZ</code>：英语（坦桑尼亚）<br><code>en-GB</code>：英语（英国）<br><code>en-US</code>：英语（美国）<br><code>et-EE</code>：爱沙尼亚语（爱沙尼亚）<br><code>fil-PH</code>：菲律宾语（菲律宾）<br><code>fi-FI</code>：芬兰语（芬兰）<br><code>fr-BE</code>：法语（比利时）<br><code>fr-CA</code>：法语（加拿大）<br><code>fr-FR</code>：法语（法国）<br><code>fr-CH</code>：法语（瑞士）<br><code>gl-ES</code>：加利西亚语（西班牙）<br><code>ka-GE</code>：格鲁吉亚语（格鲁吉亚）<br><code>el-GR</code>：希腊语（希腊）<br><code>gu-IN</code>：古吉拉特语（印度）<br><code>iw-IL</code>：希伯来语（以色列）<br><code>hi-IN</code>：印地语（印度）<br><code>hu-HU</code>：匈牙利语（匈牙利）<br><code>is-IS</code>：冰岛语（冰岛）<br><code>id-ID</code>：印度尼西亚语（印度尼西亚）<br><code>it-IT</code>：意大利语（意大利）<br><code>it-CH</code>：意大利语（瑞士）<br><code>ja-JP</code>：日语（日本）<br><code>jv-ID</code>：爪哇语（印度尼西亚）<br><code>kn-IN</code>：卡纳达语（印度）<br><code>kk-KZ</code>：哈萨克语（哈萨克斯坦）<br><code>km-KH</code>：高棉语（柬埔寨）<br><code>rw-RW</code>：卢旺达语（卢旺达）<br><code>ko-KR</code>：韩语（韩国）<br><code>lo-LA</code>：老挝语（老挝）<br><code>lv-LV</code>：拉脱维亚语（拉脱维亚）<br><code>lt-LT</code>：立陶宛语（立陶宛）<br><code>mk-MK</code>：马其顿语（北马其顿）<br><code>ms-MY</code>：马来语（马来西亚）<br><code>ml-IN</code>：马拉雅拉姆语（印度）<br><code>mr-IN</code>：马拉地语（印度）<br><code>mn-MN</code>：蒙古语（蒙古）<br><code>ne-NP</code>：尼泊尔语（尼泊尔）<br><code>no-NO</code>：博克马尔挪威语（挪威）<br><code>fa-IR</code>：波斯语（伊朗）<br><code>pl-PL</code>：波兰语（波兰）<br><code>pt-BR</code>：葡萄牙语（巴西）<br><code>pt-PT</code>：葡萄牙语（葡萄牙）<br><code>ro-RO</code>：罗马尼亚语（罗马尼亚）<br><code>ru-RU</code>：俄语（俄罗斯）<br><code>sr-RS</code>：塞尔维亚语（塞尔维亚）<br><code>si-LK</code>：僧伽罗语（斯里兰卡）<br><code>sk-SK</code>：斯洛伐克语（斯洛伐克）<br><code>sl-SI</code>：斯洛文尼亚语（斯洛文尼亚）<br><code>st-ZA</code>：南索托语（南非）<br><code>es-AR</code>：西班牙语（阿根廷）<br><code>es-BO</code>：西班牙语（玻利维亚）<br><code>es-CL</code>：西班牙语（智利）<br><code>es-CO</code>：西班牙语（哥伦比亚）<br><code>es-CR</code>：西班牙语（哥斯达黎加）<br><code>es-DO</code>：西班牙语（多米尼加共和国）<br><code>es-EC</code>：西班牙语（厄瓜多尔）<br><code>es-SV</code>：西班牙语（萨尔瓦多）<br><code>es-GT</code>：西班牙语（危地马拉）<br><code>es-HN</code>：西班牙语（洪都拉斯）<br><code>es-MX</code>：西班牙语（墨西哥）<br><code>es-NI</code>：西班牙语（尼加拉瓜）<br><code>es-PA</code>：西班牙语（巴拿马）<br><code>es-PY</code>：西班牙语（巴拉圭）<br><code>es-PE</code>：西班牙语（秘鲁）<br><code>es-PR</code>：西班牙语（波多黎各）<br><code>es-ES</code>：西班牙语（西班牙）<br><code>es-US</code>：西班牙语（美国）<br><code>es-UY</code>：西班牙语（乌拉圭）<br><code>es-VE</code>：西班牙语（委内瑞拉）<br><code>su-ID</code>：巽他语（印度尼西亚）<br><code>sw-KE</code>：斯瓦希里语（肯尼亚）<br><code>sw-TZ</code>：斯瓦希里语（坦桑尼亚）<br><code>sv-SE</code>：瑞典语（瑞典）<br><code>ta-IN</code>：泰米尔语（印度）<br><code>ta-MY</code>：泰米尔语（马来西亚）<br><code>ta-SG</code>：泰米尔语（新加坡）<br><code>ta-LK</code>：泰米尔语（斯里兰卡）<br><code>te-IN</code>：泰卢固语（印度）<br><code>th-TH</code>：泰语（泰国）<br><code>ts-ZA</code>：聪加语（南非）<br><code>tr-TR</code>：土耳其语（土耳其）<br><code>uk-UA</code>：乌克兰语（乌克兰）<br><code>ur-IN</code>：乌尔都语（印度）<br><code>ur-PK</code>：乌尔都语（巴基斯坦）<br><code>uz-UZ</code>：乌兹别克语（乌兹别克斯坦）<br><code>ve-ZA</code>：文达语（南非）<br><code>vi-VN</code>：越南语（越南）<br><code>xh-ZA</code>：科萨语（南非）<br><code>zu-ZA</code>：祖鲁语（南非）</p>
+     * @param VideoSrcLanguage <p>智能字幕视频源语言<br>OCR识别仅支持以下语言：<br><code>zh_en</code>：中英<br><code>multi</code>：其他<br>ASR识别和纯字幕翻译当前支持以下语言：<br><code>auto</code>：自动识别<br><code>zh</code>：简体中文<br><code>en</code>：英语<br><code>ja</code>：日语<br><code>ko</code>：韩语<br><code>zh-PY</code>：中英粤<br><code>zh_medical</code>：中文医疗<br><code>vi</code>：越南语<br><code>ms</code>：马来语<br><code>id</code>：印度尼西亚语<br><code>fil</code>：菲律宾语<br><code>th</code>：泰语<br><code>pt</code>：葡萄牙语<br><code>tr</code>：土耳其语<br><code>ar</code>：阿拉伯语<br><code>es</code>：西班牙语<br><code>hi</code>：印地语<br><code>fr</code>：法语<br><code>de</code>：德语<br><code>it</code>：意大利语<br><code>zh_dialect</code>：中文方言<br><code>zh_en</code>：中英<br><code>yue</code>：粤语<br><code>ru</code>：俄语<br><code>prime_zh</code>：中英方言<br><code>af-ZA</code>：南非荷兰语（南非）<br><code>sq-AL</code>：阿尔巴尼亚语（阿尔巴尼亚）<br><code>am-ET</code>：阿姆哈拉语（埃塞俄比亚）<br><code>ar-DZ</code>：阿拉伯语（阿尔及利亚）<br><code>ar-BH</code>：阿拉伯语（巴林）<br><code>ar-EG</code>：阿拉伯语（埃及）<br><code>ar-IQ</code>：阿拉伯语（伊拉克）<br><code>ar-IL</code>：阿拉伯语（以色列）<br><code>ar-JO</code>：阿拉伯语（约旦）<br><code>ar-KW</code>：阿拉伯语（科威特）<br><code>ar-LB</code>：阿拉伯语（黎巴嫩）<br><code>ar-MR</code>：阿拉伯语（毛里塔尼亚）<br><code>ar-MA</code>：阿拉伯语（摩洛哥）<br><code>ar-OM</code>：阿拉伯语（阿曼）<br><code>ar-QA</code>：阿拉伯语（卡塔尔）<br><code>ar-SA</code>：阿拉伯语（沙特阿拉伯）<br><code>ar-PS</code>：阿拉伯语（巴勒斯坦国）<br><code>ar-SY</code>：阿拉伯语（叙利亚）<br><code>ar-TN</code>：阿拉伯语（突尼斯）<br><code>ar-AE</code>：阿拉伯语（阿拉伯联合酋长国）<br><code>ar-YE</code>：阿拉伯语（也门）<br><code>hy-AM</code>：亚美尼亚语（亚美尼亚）<br><code>az-AZ</code>：阿塞拜疆语（阿塞拜疆）<br><code>eu-ES</code>：巴斯克语（西班牙）<br><code>bn-BD</code>：孟加拉语（孟加拉）<br><code>bn-IN</code>：孟加拉语（印度）<br><code>bs-BA</code>：波斯尼亚语（波斯尼亚和黑塞哥维那）<br><code>bg-BG</code>：保加利亚语（保加利亚）<br><code>my-MM</code>：缅甸语（缅甸）<br><code>ca-ES</code>：加泰罗尼亚语（西班牙）<br><code>hr-HR</code>：克罗地亚语（克罗地亚）<br><code>cs-CZ</code>：捷克语（捷克共和国）<br><code>da-DK</code>：丹麦语（丹麦）<br><code>nl-BE</code>：荷兰语（比利时）<br><code>nl-NL</code>：荷兰语（荷兰）<br><code>en-AU</code>：英语（澳大利亚）<br><code>en-CA</code>：英语（加拿大）<br><code>en-GH</code>：英语（加纳）<br><code>en-HK</code>：英语（中国香港）<br><code>en-IN</code>：英语（印度）<br><code>en-IE</code>：英语（爱尔兰）<br><code>en-KE</code>：英语（肯尼亚）<br><code>en-NZ</code>：英语（新西兰）<br><code>en-NG</code>：英语（尼日利亚）<br><code>en-PK</code>：英语（巴基斯坦）<br><code>en-PH</code>：英语（菲律宾）<br><code>en-SG</code>：英语（新加坡）<br><code>en-ZA</code>：英语（南非）<br><code>en-TZ</code>：英语（坦桑尼亚）<br><code>en-GB</code>：英语（英国）<br><code>en-US</code>：英语（美国）<br><code>et-EE</code>：爱沙尼亚语（爱沙尼亚）<br><code>fil-PH</code>：菲律宾语（菲律宾）<br><code>fi-FI</code>：芬兰语（芬兰）<br><code>fr-BE</code>：法语（比利时）<br><code>fr-CA</code>：法语（加拿大）<br><code>fr-FR</code>：法语（法国）<br><code>fr-CH</code>：法语（瑞士）<br><code>gl-ES</code>：加利西亚语（西班牙）<br><code>ka-GE</code>：格鲁吉亚语（格鲁吉亚）<br><code>el-GR</code>：希腊语（希腊）<br><code>gu-IN</code>：古吉拉特语（印度）<br><code>iw-IL</code>：希伯来语（以色列）<br><code>hi-IN</code>：印地语（印度）<br><code>hu-HU</code>：匈牙利语（匈牙利）<br><code>is-IS</code>：冰岛语（冰岛）<br><code>id-ID</code>：印度尼西亚语（印度尼西亚）<br><code>it-IT</code>：意大利语（意大利）<br><code>it-CH</code>：意大利语（瑞士）<br><code>ja-JP</code>：日语（日本）<br><code>jv-ID</code>：爪哇语（印度尼西亚）<br><code>kn-IN</code>：卡纳达语（印度）<br><code>kk-KZ</code>：哈萨克语（哈萨克斯坦）<br><code>km-KH</code>：高棉语（柬埔寨）<br><code>rw-RW</code>：卢旺达语（卢旺达）<br><code>ko-KR</code>：韩语（韩国）<br><code>lo-LA</code>：老挝语（老挝）<br><code>lv-LV</code>：拉脱维亚语（拉脱维亚）<br><code>lt-LT</code>：立陶宛语（立陶宛）<br><code>mk-MK</code>：马其顿语（北马其顿）<br><code>ms-MY</code>：马来语（马来西亚）<br><code>ml-IN</code>：马拉雅拉姆语（印度）<br><code>mr-IN</code>：马拉地语（印度）<br><code>mn-MN</code>：蒙古语（蒙古）<br><code>ne-NP</code>：尼泊尔语（尼泊尔）<br><code>no-NO</code>：博克马尔挪威语（挪威）<br><code>fa-IR</code>：波斯语（伊朗）<br><code>pl-PL</code>：波兰语（波兰）<br><code>pt-BR</code>：葡萄牙语（巴西）<br><code>pt-PT</code>：葡萄牙语（葡萄牙）<br><code>ro-RO</code>：罗马尼亚语（罗马尼亚）<br><code>ru-RU</code>：俄语（俄罗斯）<br><code>sr-RS</code>：塞尔维亚语（塞尔维亚）<br><code>si-LK</code>：僧伽罗语（斯里兰卡）<br><code>sk-SK</code>：斯洛伐克语（斯洛伐克）<br><code>sl-SI</code>：斯洛文尼亚语（斯洛文尼亚）<br><code>st-ZA</code>：南索托语（南非）<br><code>es-AR</code>：西班牙语（阿根廷）<br><code>es-BO</code>：西班牙语（玻利维亚）<br><code>es-CL</code>：西班牙语（智利）<br><code>es-CO</code>：西班牙语（哥伦比亚）<br><code>es-CR</code>：西班牙语（哥斯达黎加）<br><code>es-DO</code>：西班牙语（多米尼加共和国）<br><code>es-EC</code>：西班牙语（厄瓜多尔）<br><code>es-SV</code>：西班牙语（萨尔瓦多）<br><code>es-GT</code>：西班牙语（危地马拉）<br><code>es-HN</code>：西班牙语（洪都拉斯）<br><code>es-MX</code>：西班牙语（墨西哥）<br><code>es-NI</code>：西班牙语（尼加拉瓜）<br><code>es-PA</code>：西班牙语（巴拿马）<br><code>es-PY</code>：西班牙语（巴拉圭）<br><code>es-PE</code>：西班牙语（秘鲁）<br><code>es-PR</code>：西班牙语（波多黎各）<br><code>es-ES</code>：西班牙语（西班牙）<br><code>es-US</code>：西班牙语（美国）<br><code>es-UY</code>：西班牙语（乌拉圭）<br><code>es-VE</code>：西班牙语（委内瑞拉）<br><code>su-ID</code>：巽他语（印度尼西亚）<br><code>sw-KE</code>：斯瓦希里语（肯尼亚）<br><code>sw-TZ</code>：斯瓦希里语（坦桑尼亚）<br><code>sv-SE</code>：瑞典语（瑞典）<br><code>ta-IN</code>：泰米尔语（印度）<br><code>ta-MY</code>：泰米尔语（马来西亚）<br><code>ta-SG</code>：泰米尔语（新加坡）<br><code>ta-LK</code>：泰米尔语（斯里兰卡）<br><code>te-IN</code>：泰卢固语（印度）<br><code>th-TH</code>：泰语（泰国）<br><code>ts-ZA</code>：聪加语（南非）<br><code>tr-TR</code>：土耳其语（土耳其）<br><code>uk-UA</code>：乌克兰语（乌克兰）<br><code>ur-IN</code>：乌尔都语（印度）<br><code>ur-PK</code>：乌尔都语（巴基斯坦）<br><code>uz-UZ</code>：乌兹别克语（乌兹别克斯坦）<br><code>ve-ZA</code>：文达语（南非）<br><code>vi-VN</code>：越南语（越南）<br><code>xh-ZA</code>：科萨语（南非）<br><code>zu-ZA</code>：祖鲁语（南非）</p>
      */
     public void setVideoSrcLanguage(String VideoSrcLanguage) {
         this.VideoSrcLanguage = VideoSrcLanguage;
     }
 
     /**
-     * Get 智能字幕文件格式:
-- ASR识别翻译处理类型下：
-     - vtt: WebVTT 格式字幕
-     - srt: SRT 格式字幕
-     - 不填或填空：不生成字幕文件
-- 纯字幕翻译处理类型下：
-    - original：与源文件一致
-    - vtt: WebVTT 格式字幕
-    - srt: SRT 格式字幕
-- OCR识别翻译处理类型下：
-     - vtt: WebVTT 格式字幕
-     - srt: SRT 格式字幕
-
-**注意**：
-- ASR识别方式下，翻译大于等于2种语言时不允许传空或不传；
-- 纯字幕翻译和OCR识别翻译方式下，不允许传空或不传
+     * Get <p>智能字幕文件格式:</p><ul><li>ASR识别翻译处理类型下：<ul><li>vtt: WebVTT 格式字幕</li><li>srt: SRT 格式字幕</li><li>不填或填空：不生成字幕文件</li></ul></li><li>纯字幕翻译处理类型下：<ul><li>original：与源文件一致</li><li>vtt: WebVTT 格式字幕</li><li>srt: SRT 格式字幕</li></ul></li><li>OCR识别翻译处理类型下：<ul><li>vtt: WebVTT 格式字幕</li><li>srt: SRT 格式字幕</li></ul></li></ul><p><strong>注意</strong>：</p><ul><li>ASR识别方式下，翻译大于等于2种语言时不允许传空或不传；</li><li>纯字幕翻译和OCR识别翻译方式下，不允许传空或不传</li><li>OCR类型的任务，在开启压制时，允许不传或传空</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SubtitleFormat 智能字幕文件格式:
-- ASR识别翻译处理类型下：
-     - vtt: WebVTT 格式字幕
-     - srt: SRT 格式字幕
-     - 不填或填空：不生成字幕文件
-- 纯字幕翻译处理类型下：
-    - original：与源文件一致
-    - vtt: WebVTT 格式字幕
-    - srt: SRT 格式字幕
-- OCR识别翻译处理类型下：
-     - vtt: WebVTT 格式字幕
-     - srt: SRT 格式字幕
-
-**注意**：
-- ASR识别方式下，翻译大于等于2种语言时不允许传空或不传；
-- 纯字幕翻译和OCR识别翻译方式下，不允许传空或不传
+     * @return SubtitleFormat <p>智能字幕文件格式:</p><ul><li>ASR识别翻译处理类型下：<ul><li>vtt: WebVTT 格式字幕</li><li>srt: SRT 格式字幕</li><li>不填或填空：不生成字幕文件</li></ul></li><li>纯字幕翻译处理类型下：<ul><li>original：与源文件一致</li><li>vtt: WebVTT 格式字幕</li><li>srt: SRT 格式字幕</li></ul></li><li>OCR识别翻译处理类型下：<ul><li>vtt: WebVTT 格式字幕</li><li>srt: SRT 格式字幕</li></ul></li></ul><p><strong>注意</strong>：</p><ul><li>ASR识别方式下，翻译大于等于2种语言时不允许传空或不传；</li><li>纯字幕翻译和OCR识别翻译方式下，不允许传空或不传</li><li>OCR类型的任务，在开启压制时，允许不传或传空</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubtitleFormat() {
@@ -1241,39 +141,9 @@ ASR识别和纯字幕翻译当前支持以下语言：
     }
 
     /**
-     * Set 智能字幕文件格式:
-- ASR识别翻译处理类型下：
-     - vtt: WebVTT 格式字幕
-     - srt: SRT 格式字幕
-     - 不填或填空：不生成字幕文件
-- 纯字幕翻译处理类型下：
-    - original：与源文件一致
-    - vtt: WebVTT 格式字幕
-    - srt: SRT 格式字幕
-- OCR识别翻译处理类型下：
-     - vtt: WebVTT 格式字幕
-     - srt: SRT 格式字幕
-
-**注意**：
-- ASR识别方式下，翻译大于等于2种语言时不允许传空或不传；
-- 纯字幕翻译和OCR识别翻译方式下，不允许传空或不传
+     * Set <p>智能字幕文件格式:</p><ul><li>ASR识别翻译处理类型下：<ul><li>vtt: WebVTT 格式字幕</li><li>srt: SRT 格式字幕</li><li>不填或填空：不生成字幕文件</li></ul></li><li>纯字幕翻译处理类型下：<ul><li>original：与源文件一致</li><li>vtt: WebVTT 格式字幕</li><li>srt: SRT 格式字幕</li></ul></li><li>OCR识别翻译处理类型下：<ul><li>vtt: WebVTT 格式字幕</li><li>srt: SRT 格式字幕</li></ul></li></ul><p><strong>注意</strong>：</p><ul><li>ASR识别方式下，翻译大于等于2种语言时不允许传空或不传；</li><li>纯字幕翻译和OCR识别翻译方式下，不允许传空或不传</li><li>OCR类型的任务，在开启压制时，允许不传或传空</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SubtitleFormat 智能字幕文件格式:
-- ASR识别翻译处理类型下：
-     - vtt: WebVTT 格式字幕
-     - srt: SRT 格式字幕
-     - 不填或填空：不生成字幕文件
-- 纯字幕翻译处理类型下：
-    - original：与源文件一致
-    - vtt: WebVTT 格式字幕
-    - srt: SRT 格式字幕
-- OCR识别翻译处理类型下：
-     - vtt: WebVTT 格式字幕
-     - srt: SRT 格式字幕
-
-**注意**：
-- ASR识别方式下，翻译大于等于2种语言时不允许传空或不传；
-- 纯字幕翻译和OCR识别翻译方式下，不允许传空或不传
+     * @param SubtitleFormat <p>智能字幕文件格式:</p><ul><li>ASR识别翻译处理类型下：<ul><li>vtt: WebVTT 格式字幕</li><li>srt: SRT 格式字幕</li><li>不填或填空：不生成字幕文件</li></ul></li><li>纯字幕翻译处理类型下：<ul><li>original：与源文件一致</li><li>vtt: WebVTT 格式字幕</li><li>srt: SRT 格式字幕</li></ul></li><li>OCR识别翻译处理类型下：<ul><li>vtt: WebVTT 格式字幕</li><li>srt: SRT 格式字幕</li></ul></li></ul><p><strong>注意</strong>：</p><ul><li>ASR识别方式下，翻译大于等于2种语言时不允许传空或不传；</li><li>纯字幕翻译和OCR识别翻译方式下，不允许传空或不传</li><li>OCR类型的任务，在开启压制时，允许不传或传空</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubtitleFormat(String SubtitleFormat) {
@@ -1281,17 +151,9 @@ ASR识别和纯字幕翻译当前支持以下语言：
     }
 
     /**
-     * Get 字幕翻译开关
-`ON`: 开启翻译
-`OFF`: 关闭翻译
-
-**注意**：纯字幕翻译方式下，不传默认是打开的，不允许传空或`OFF`；
+     * Get <p>字幕翻译开关<br><code>ON</code>: 开启翻译<br><code>OFF</code>: 关闭翻译</p><p><strong>注意</strong>：纯字幕翻译方式下，不传默认是打开的，不允许传空或<code>OFF</code>；</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TranslateSwitch 字幕翻译开关
-`ON`: 开启翻译
-`OFF`: 关闭翻译
-
-**注意**：纯字幕翻译方式下，不传默认是打开的，不允许传空或`OFF`；
+     * @return TranslateSwitch <p>字幕翻译开关<br><code>ON</code>: 开启翻译<br><code>OFF</code>: 关闭翻译</p><p><strong>注意</strong>：纯字幕翻译方式下，不传默认是打开的，不允许传空或<code>OFF</code>；</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTranslateSwitch() {
@@ -1299,17 +161,9 @@ ASR识别和纯字幕翻译当前支持以下语言：
     }
 
     /**
-     * Set 字幕翻译开关
-`ON`: 开启翻译
-`OFF`: 关闭翻译
-
-**注意**：纯字幕翻译方式下，不传默认是打开的，不允许传空或`OFF`；
+     * Set <p>字幕翻译开关<br><code>ON</code>: 开启翻译<br><code>OFF</code>: 关闭翻译</p><p><strong>注意</strong>：纯字幕翻译方式下，不传默认是打开的，不允许传空或<code>OFF</code>；</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TranslateSwitch 字幕翻译开关
-`ON`: 开启翻译
-`OFF`: 关闭翻译
-
-**注意**：纯字幕翻译方式下，不传默认是打开的，不允许传空或`OFF`；
+     * @param TranslateSwitch <p>字幕翻译开关<br><code>ON</code>: 开启翻译<br><code>OFF</code>: 关闭翻译</p><p><strong>注意</strong>：纯字幕翻译方式下，不传默认是打开的，不允许传空或<code>OFF</code>；</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTranslateSwitch(String TranslateSwitch) {
@@ -1317,395 +171,9 @@ ASR识别和纯字幕翻译当前支持以下语言：
     }
 
     /**
-     * Get 字幕翻译目标语言
-当TranslateSwitch为ON的时候生效，翻译语言列表：
-`ab`：阿布哈兹语
-`ace`：亚齐语
-`ach`：阿乔利语
-`af`：南非荷兰语
-`ak`：契维语（阿坎语）
-`am`：Amharic
-`ar`：阿拉伯语
-`as`：阿萨姆语
-`ay`：艾马拉语
-`az`：阿塞拜疆语
-`ba`：巴什基尔语
-`ban`：巴厘语
-`bbc`：巴塔克托巴语
-`bem`：Bemba
-`bew`：Betawi
-`bg`：保加利亚语
-`bho`：博杰普尔语
-`bik`：Bikol
-`bm`：班巴拉语
-`bn`：孟加拉语
-`br`：布列塔尼语
-`bs`：波斯尼亚语
-`btx`：巴塔克卡罗语
-`bts`：巴塔克西马隆贡语
-`bua`：布里亚特语
-`ca`：加泰罗尼亚语
-`ceb`：宿务语
-`cgg`：Kiga
-`chm`：草原马里语
-`ckb`：库尔德语（索拉尼语）
-`cnh`：哈卡钦语
-`co`：科西嘉语
-`crh`：克里米亚鞑靼语
-`crs`：塞舌尔克里奥尔语
-`cs`：捷克语
-`cv`：楚瓦什语
-`cy`：威尔士语
-`da`：丹麦语
-`de`：德语
-`din`：Dinka
-`doi`：多格来语
-`dov`：敦贝语
-`dv`：第维埃语
-`dz`：宗卡语
-`ee`：Ewe
-`el`：希腊语
-`en`：英语
-`eo`：世界语
-`es`：西班牙语
-`et`：爱沙尼亚语
-`eu`：巴斯克语
-`fa`：波斯语
-`ff`：富拉语
-`fi`：芬兰语
-`fil`：菲律宾语（塔加拉语）
-`fj`：斐济语
-`fr`：法语
-`fr-CA`：法语（加拿大）
-`fr-FR`：法语（法国）
-`fy`：弗里斯兰语
-`ga`：爱尔兰语
-`gaa`：加 (Ga) 语
-`gd`：苏格兰盖尔语
-`gl`：加利西亚语
-`gn`：瓜拉尼语
-`gom`：贡根语
-`gu`：古吉拉特语
-`gv`：马恩岛语
-`ha`：Hausa
-`haw`：夏威夷语
-`he`：希伯来语
-`hi`：印地语
-`hil`：希利盖农语
-`hmn`：苗语
-`hr`：克罗地亚语
-`hrx`：洪斯吕克语
-`ht`：海地克里奥尔语
-`hu`：匈牙利语
-`hy`：亚美尼亚语
-`id`：印度尼西亚语
-`ig`：Igbo
-`ilo`：伊洛果语
-`is`：冰岛语
-`it`：意大利语
-`iw`：希伯来语
-`ja`：日语
-`jv`：爪哇语
-`ka`：格鲁吉亚语
-`kk`：哈萨克语
-`km`：高棉语
-`kn`：卡纳达语
-`ko`：韩语
-`kri`：Krio
-`ku`：库尔德语（库尔曼吉语）
-`ktu`：吉土巴语
-`ky`：吉尔吉斯语
-`la`：拉丁语
-`lb`：卢森堡语
-`lg`：干达语（卢干达语）
-`li`：林堡语
-`lij`：利古里亚语
-`lmo`：伦巴第语
-`ln`：林加拉语
-`lo`：老挝语
-`lt`：立陶宛语
-`ltg`：拉特加莱语
-`luo`：Luo
-`lus`：米佐语
-`lv`：拉脱维亚语
-`mai`：迈蒂利语
-`mak`：马卡萨
-`mg`：马尔加什语
-`mi`：毛利语
-`min`：米南语
-`mk`：马其顿语
-`ml`：马拉雅拉姆语
-`mn`：蒙古语
-`mr`：马拉地语
-`ms`：马来语
-`mt`：马耳他语
-`my`：缅甸语
-`ne`：尼泊尔语
-`new`：尼瓦尔语
-`nl`：荷兰语
-`no`：挪威语
-`nr`：恩德贝莱语（南部）
-`nso`：北索托语（塞佩蒂语）
-`nus`：努尔语
-`ny`：齐切瓦语（尼扬贾语）
-`oc`：奥克斯坦语
-`om`：Oromo
-`or`：奥里亚语
-`pa`：旁遮普语
-`pag`：邦阿西楠语
-`pam`：邦板牙语
-`pap`：Papiamento
-`pl`：波兰语
-`ps`：Pashto
-`pt`：葡萄牙语
-`pt-BR`：葡萄牙语（巴西）
-`pt-PT`：葡萄牙语（葡萄牙）
-`qu`：克丘亚语
-`ro`：罗马尼亚语
-`rom`：罗姆语
-`rn`：Rundi
-`ru`：俄语
-`rw`：卢旺达语
-`sa`：梵语
-`scn`：西西里语
-`sd`：信德语
-`sg`：Sango
-`shn`：掸语
-`si`：僧伽罗语
-`sk`：斯洛伐克语
-`sl`：斯洛文尼亚语
-`sm`：萨摩亚语
-`sn`：修纳语
-`so`：索马里语
-`sq`：阿尔巴尼亚语
-`sr`：塞尔维亚语
-`ss`：斯瓦特语
-`st`：塞索托语
-`su`：巽他语
-`sv`：瑞典语
-`sw`：斯瓦希里语
-`szl`：西里西亚语
-`ta`：泰米尔语
-`te`：泰卢固语
-`tet`：德顿语
-`tg`：塔吉克语
-`th`：泰语
-`ti`：提格里尼亚语
-`tk`：土库曼语
-`tn`：茨瓦纳语
-`tr`：土耳其语
-`ts`：聪加语
-`tt`：鞑靼语
-`ug`：维吾尔语
-`uk`：乌克兰语
-`ur`：乌尔都语
-`uz`：乌兹别克语
-`vi`：越南语
-`xh`：科萨语
-`yi`：意第绪语
-`yo`：约鲁巴语
-`yua`：尤卡坦玛雅语
-`yue`：粤语
-`zh`：简体中文
-`zh-TW`：中文（繁体）
-`zu`：祖鲁语
-
-**注意**：多语言方式，则使用 `/` 分割，如：`en/ja`，表示英语和日语。
+     * Get <p>字幕翻译目标语言<br>当TranslateSwitch为ON的时候生效，翻译语言列表：<br><code>ab</code>：阿布哈兹语<br><code>ace</code>：亚齐语<br><code>ach</code>：阿乔利语<br><code>af</code>：南非荷兰语<br><code>ak</code>：契维语（阿坎语）<br><code>am</code>：Amharic<br><code>ar</code>：阿拉伯语<br><code>as</code>：阿萨姆语<br><code>ay</code>：艾马拉语<br><code>az</code>：阿塞拜疆语<br><code>ba</code>：巴什基尔语<br><code>ban</code>：巴厘语<br><code>bbc</code>：巴塔克托巴语<br><code>bem</code>：Bemba<br><code>bew</code>：Betawi<br><code>bg</code>：保加利亚语<br><code>bho</code>：博杰普尔语<br><code>bik</code>：Bikol<br><code>bm</code>：班巴拉语<br><code>bn</code>：孟加拉语<br><code>br</code>：布列塔尼语<br><code>bs</code>：波斯尼亚语<br><code>btx</code>：巴塔克卡罗语<br><code>bts</code>：巴塔克西马隆贡语<br><code>bua</code>：布里亚特语<br><code>ca</code>：加泰罗尼亚语<br><code>ceb</code>：宿务语<br><code>cgg</code>：Kiga<br><code>chm</code>：草原马里语<br><code>ckb</code>：库尔德语（索拉尼语）<br><code>cnh</code>：哈卡钦语<br><code>co</code>：科西嘉语<br><code>crh</code>：克里米亚鞑靼语<br><code>crs</code>：塞舌尔克里奥尔语<br><code>cs</code>：捷克语<br><code>cv</code>：楚瓦什语<br><code>cy</code>：威尔士语<br><code>da</code>：丹麦语<br><code>de</code>：德语<br><code>din</code>：Dinka<br><code>doi</code>：多格来语<br><code>dov</code>：敦贝语<br><code>dv</code>：第维埃语<br><code>dz</code>：宗卡语<br><code>ee</code>：Ewe<br><code>el</code>：希腊语<br><code>en</code>：英语<br><code>eo</code>：世界语<br><code>es</code>：西班牙语<br><code>et</code>：爱沙尼亚语<br><code>eu</code>：巴斯克语<br><code>fa</code>：波斯语<br><code>ff</code>：富拉语<br><code>fi</code>：芬兰语<br><code>fil</code>：菲律宾语（塔加拉语）<br><code>fj</code>：斐济语<br><code>fr</code>：法语<br><code>fr-CA</code>：法语（加拿大）<br><code>fr-FR</code>：法语（法国）<br><code>fy</code>：弗里斯兰语<br><code>ga</code>：爱尔兰语<br><code>gaa</code>：加 (Ga) 语<br><code>gd</code>：苏格兰盖尔语<br><code>gl</code>：加利西亚语<br><code>gn</code>：瓜拉尼语<br><code>gom</code>：贡根语<br><code>gu</code>：古吉拉特语<br><code>gv</code>：马恩岛语<br><code>ha</code>：Hausa<br><code>haw</code>：夏威夷语<br><code>he</code>：希伯来语<br><code>hi</code>：印地语<br><code>hil</code>：希利盖农语<br><code>hmn</code>：苗语<br><code>hr</code>：克罗地亚语<br><code>hrx</code>：洪斯吕克语<br><code>ht</code>：海地克里奥尔语<br><code>hu</code>：匈牙利语<br><code>hy</code>：亚美尼亚语<br><code>id</code>：印度尼西亚语<br><code>ig</code>：Igbo<br><code>ilo</code>：伊洛果语<br><code>is</code>：冰岛语<br><code>it</code>：意大利语<br><code>iw</code>：希伯来语<br><code>ja</code>：日语<br><code>jv</code>：爪哇语<br><code>ka</code>：格鲁吉亚语<br><code>kk</code>：哈萨克语<br><code>km</code>：高棉语<br><code>kn</code>：卡纳达语<br><code>ko</code>：韩语<br><code>kri</code>：Krio<br><code>ku</code>：库尔德语（库尔曼吉语）<br><code>ktu</code>：吉土巴语<br><code>ky</code>：吉尔吉斯语<br><code>la</code>：拉丁语<br><code>lb</code>：卢森堡语<br><code>lg</code>：干达语（卢干达语）<br><code>li</code>：林堡语<br><code>lij</code>：利古里亚语<br><code>lmo</code>：伦巴第语<br><code>ln</code>：林加拉语<br><code>lo</code>：老挝语<br><code>lt</code>：立陶宛语<br><code>ltg</code>：拉特加莱语<br><code>luo</code>：Luo<br><code>lus</code>：米佐语<br><code>lv</code>：拉脱维亚语<br><code>mai</code>：迈蒂利语<br><code>mak</code>：马卡萨<br><code>mg</code>：马尔加什语<br><code>mi</code>：毛利语<br><code>min</code>：米南语<br><code>mk</code>：马其顿语<br><code>ml</code>：马拉雅拉姆语<br><code>mn</code>：蒙古语<br><code>mr</code>：马拉地语<br><code>ms</code>：马来语<br><code>mt</code>：马耳他语<br><code>my</code>：缅甸语<br><code>ne</code>：尼泊尔语<br><code>new</code>：尼瓦尔语<br><code>nl</code>：荷兰语<br><code>no</code>：挪威语<br><code>nr</code>：恩德贝莱语（南部）<br><code>nso</code>：北索托语（塞佩蒂语）<br><code>nus</code>：努尔语<br><code>ny</code>：齐切瓦语（尼扬贾语）<br><code>oc</code>：奥克斯坦语<br><code>om</code>：Oromo<br><code>or</code>：奥里亚语<br><code>pa</code>：旁遮普语<br><code>pag</code>：邦阿西楠语<br><code>pam</code>：邦板牙语<br><code>pap</code>：Papiamento<br><code>pl</code>：波兰语<br><code>ps</code>：Pashto<br><code>pt</code>：葡萄牙语<br><code>pt-BR</code>：葡萄牙语（巴西）<br><code>pt-PT</code>：葡萄牙语（葡萄牙）<br><code>qu</code>：克丘亚语<br><code>ro</code>：罗马尼亚语<br><code>rom</code>：罗姆语<br><code>rn</code>：Rundi<br><code>ru</code>：俄语<br><code>rw</code>：卢旺达语<br><code>sa</code>：梵语<br><code>scn</code>：西西里语<br><code>sd</code>：信德语<br><code>sg</code>：Sango<br><code>shn</code>：掸语<br><code>si</code>：僧伽罗语<br><code>sk</code>：斯洛伐克语<br><code>sl</code>：斯洛文尼亚语<br><code>sm</code>：萨摩亚语<br><code>sn</code>：修纳语<br><code>so</code>：索马里语<br><code>sq</code>：阿尔巴尼亚语<br><code>sr</code>：塞尔维亚语<br><code>ss</code>：斯瓦特语<br><code>st</code>：塞索托语<br><code>su</code>：巽他语<br><code>sv</code>：瑞典语<br><code>sw</code>：斯瓦希里语<br><code>szl</code>：西里西亚语<br><code>ta</code>：泰米尔语<br><code>te</code>：泰卢固语<br><code>tet</code>：德顿语<br><code>tg</code>：塔吉克语<br><code>th</code>：泰语<br><code>ti</code>：提格里尼亚语<br><code>tk</code>：土库曼语<br><code>tn</code>：茨瓦纳语<br><code>tr</code>：土耳其语<br><code>ts</code>：聪加语<br><code>tt</code>：鞑靼语<br><code>ug</code>：维吾尔语<br><code>uk</code>：乌克兰语<br><code>ur</code>：乌尔都语<br><code>uz</code>：乌兹别克语<br><code>vi</code>：越南语<br><code>xh</code>：科萨语<br><code>yi</code>：意第绪语<br><code>yo</code>：约鲁巴语<br><code>yua</code>：尤卡坦玛雅语<br><code>yue</code>：粤语<br><code>zh</code>：简体中文<br><code>zh-TW</code>：中文（繁体）<br><code>zu</code>：祖鲁语</p><p><strong>注意</strong>：多语言方式，则使用 <code>/</code> 分割，如：<code>en/ja</code>，表示英语和日语。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TranslateDstLanguage 字幕翻译目标语言
-当TranslateSwitch为ON的时候生效，翻译语言列表：
-`ab`：阿布哈兹语
-`ace`：亚齐语
-`ach`：阿乔利语
-`af`：南非荷兰语
-`ak`：契维语（阿坎语）
-`am`：Amharic
-`ar`：阿拉伯语
-`as`：阿萨姆语
-`ay`：艾马拉语
-`az`：阿塞拜疆语
-`ba`：巴什基尔语
-`ban`：巴厘语
-`bbc`：巴塔克托巴语
-`bem`：Bemba
-`bew`：Betawi
-`bg`：保加利亚语
-`bho`：博杰普尔语
-`bik`：Bikol
-`bm`：班巴拉语
-`bn`：孟加拉语
-`br`：布列塔尼语
-`bs`：波斯尼亚语
-`btx`：巴塔克卡罗语
-`bts`：巴塔克西马隆贡语
-`bua`：布里亚特语
-`ca`：加泰罗尼亚语
-`ceb`：宿务语
-`cgg`：Kiga
-`chm`：草原马里语
-`ckb`：库尔德语（索拉尼语）
-`cnh`：哈卡钦语
-`co`：科西嘉语
-`crh`：克里米亚鞑靼语
-`crs`：塞舌尔克里奥尔语
-`cs`：捷克语
-`cv`：楚瓦什语
-`cy`：威尔士语
-`da`：丹麦语
-`de`：德语
-`din`：Dinka
-`doi`：多格来语
-`dov`：敦贝语
-`dv`：第维埃语
-`dz`：宗卡语
-`ee`：Ewe
-`el`：希腊语
-`en`：英语
-`eo`：世界语
-`es`：西班牙语
-`et`：爱沙尼亚语
-`eu`：巴斯克语
-`fa`：波斯语
-`ff`：富拉语
-`fi`：芬兰语
-`fil`：菲律宾语（塔加拉语）
-`fj`：斐济语
-`fr`：法语
-`fr-CA`：法语（加拿大）
-`fr-FR`：法语（法国）
-`fy`：弗里斯兰语
-`ga`：爱尔兰语
-`gaa`：加 (Ga) 语
-`gd`：苏格兰盖尔语
-`gl`：加利西亚语
-`gn`：瓜拉尼语
-`gom`：贡根语
-`gu`：古吉拉特语
-`gv`：马恩岛语
-`ha`：Hausa
-`haw`：夏威夷语
-`he`：希伯来语
-`hi`：印地语
-`hil`：希利盖农语
-`hmn`：苗语
-`hr`：克罗地亚语
-`hrx`：洪斯吕克语
-`ht`：海地克里奥尔语
-`hu`：匈牙利语
-`hy`：亚美尼亚语
-`id`：印度尼西亚语
-`ig`：Igbo
-`ilo`：伊洛果语
-`is`：冰岛语
-`it`：意大利语
-`iw`：希伯来语
-`ja`：日语
-`jv`：爪哇语
-`ka`：格鲁吉亚语
-`kk`：哈萨克语
-`km`：高棉语
-`kn`：卡纳达语
-`ko`：韩语
-`kri`：Krio
-`ku`：库尔德语（库尔曼吉语）
-`ktu`：吉土巴语
-`ky`：吉尔吉斯语
-`la`：拉丁语
-`lb`：卢森堡语
-`lg`：干达语（卢干达语）
-`li`：林堡语
-`lij`：利古里亚语
-`lmo`：伦巴第语
-`ln`：林加拉语
-`lo`：老挝语
-`lt`：立陶宛语
-`ltg`：拉特加莱语
-`luo`：Luo
-`lus`：米佐语
-`lv`：拉脱维亚语
-`mai`：迈蒂利语
-`mak`：马卡萨
-`mg`：马尔加什语
-`mi`：毛利语
-`min`：米南语
-`mk`：马其顿语
-`ml`：马拉雅拉姆语
-`mn`：蒙古语
-`mr`：马拉地语
-`ms`：马来语
-`mt`：马耳他语
-`my`：缅甸语
-`ne`：尼泊尔语
-`new`：尼瓦尔语
-`nl`：荷兰语
-`no`：挪威语
-`nr`：恩德贝莱语（南部）
-`nso`：北索托语（塞佩蒂语）
-`nus`：努尔语
-`ny`：齐切瓦语（尼扬贾语）
-`oc`：奥克斯坦语
-`om`：Oromo
-`or`：奥里亚语
-`pa`：旁遮普语
-`pag`：邦阿西楠语
-`pam`：邦板牙语
-`pap`：Papiamento
-`pl`：波兰语
-`ps`：Pashto
-`pt`：葡萄牙语
-`pt-BR`：葡萄牙语（巴西）
-`pt-PT`：葡萄牙语（葡萄牙）
-`qu`：克丘亚语
-`ro`：罗马尼亚语
-`rom`：罗姆语
-`rn`：Rundi
-`ru`：俄语
-`rw`：卢旺达语
-`sa`：梵语
-`scn`：西西里语
-`sd`：信德语
-`sg`：Sango
-`shn`：掸语
-`si`：僧伽罗语
-`sk`：斯洛伐克语
-`sl`：斯洛文尼亚语
-`sm`：萨摩亚语
-`sn`：修纳语
-`so`：索马里语
-`sq`：阿尔巴尼亚语
-`sr`：塞尔维亚语
-`ss`：斯瓦特语
-`st`：塞索托语
-`su`：巽他语
-`sv`：瑞典语
-`sw`：斯瓦希里语
-`szl`：西里西亚语
-`ta`：泰米尔语
-`te`：泰卢固语
-`tet`：德顿语
-`tg`：塔吉克语
-`th`：泰语
-`ti`：提格里尼亚语
-`tk`：土库曼语
-`tn`：茨瓦纳语
-`tr`：土耳其语
-`ts`：聪加语
-`tt`：鞑靼语
-`ug`：维吾尔语
-`uk`：乌克兰语
-`ur`：乌尔都语
-`uz`：乌兹别克语
-`vi`：越南语
-`xh`：科萨语
-`yi`：意第绪语
-`yo`：约鲁巴语
-`yua`：尤卡坦玛雅语
-`yue`：粤语
-`zh`：简体中文
-`zh-TW`：中文（繁体）
-`zu`：祖鲁语
-
-**注意**：多语言方式，则使用 `/` 分割，如：`en/ja`，表示英语和日语。
+     * @return TranslateDstLanguage <p>字幕翻译目标语言<br>当TranslateSwitch为ON的时候生效，翻译语言列表：<br><code>ab</code>：阿布哈兹语<br><code>ace</code>：亚齐语<br><code>ach</code>：阿乔利语<br><code>af</code>：南非荷兰语<br><code>ak</code>：契维语（阿坎语）<br><code>am</code>：Amharic<br><code>ar</code>：阿拉伯语<br><code>as</code>：阿萨姆语<br><code>ay</code>：艾马拉语<br><code>az</code>：阿塞拜疆语<br><code>ba</code>：巴什基尔语<br><code>ban</code>：巴厘语<br><code>bbc</code>：巴塔克托巴语<br><code>bem</code>：Bemba<br><code>bew</code>：Betawi<br><code>bg</code>：保加利亚语<br><code>bho</code>：博杰普尔语<br><code>bik</code>：Bikol<br><code>bm</code>：班巴拉语<br><code>bn</code>：孟加拉语<br><code>br</code>：布列塔尼语<br><code>bs</code>：波斯尼亚语<br><code>btx</code>：巴塔克卡罗语<br><code>bts</code>：巴塔克西马隆贡语<br><code>bua</code>：布里亚特语<br><code>ca</code>：加泰罗尼亚语<br><code>ceb</code>：宿务语<br><code>cgg</code>：Kiga<br><code>chm</code>：草原马里语<br><code>ckb</code>：库尔德语（索拉尼语）<br><code>cnh</code>：哈卡钦语<br><code>co</code>：科西嘉语<br><code>crh</code>：克里米亚鞑靼语<br><code>crs</code>：塞舌尔克里奥尔语<br><code>cs</code>：捷克语<br><code>cv</code>：楚瓦什语<br><code>cy</code>：威尔士语<br><code>da</code>：丹麦语<br><code>de</code>：德语<br><code>din</code>：Dinka<br><code>doi</code>：多格来语<br><code>dov</code>：敦贝语<br><code>dv</code>：第维埃语<br><code>dz</code>：宗卡语<br><code>ee</code>：Ewe<br><code>el</code>：希腊语<br><code>en</code>：英语<br><code>eo</code>：世界语<br><code>es</code>：西班牙语<br><code>et</code>：爱沙尼亚语<br><code>eu</code>：巴斯克语<br><code>fa</code>：波斯语<br><code>ff</code>：富拉语<br><code>fi</code>：芬兰语<br><code>fil</code>：菲律宾语（塔加拉语）<br><code>fj</code>：斐济语<br><code>fr</code>：法语<br><code>fr-CA</code>：法语（加拿大）<br><code>fr-FR</code>：法语（法国）<br><code>fy</code>：弗里斯兰语<br><code>ga</code>：爱尔兰语<br><code>gaa</code>：加 (Ga) 语<br><code>gd</code>：苏格兰盖尔语<br><code>gl</code>：加利西亚语<br><code>gn</code>：瓜拉尼语<br><code>gom</code>：贡根语<br><code>gu</code>：古吉拉特语<br><code>gv</code>：马恩岛语<br><code>ha</code>：Hausa<br><code>haw</code>：夏威夷语<br><code>he</code>：希伯来语<br><code>hi</code>：印地语<br><code>hil</code>：希利盖农语<br><code>hmn</code>：苗语<br><code>hr</code>：克罗地亚语<br><code>hrx</code>：洪斯吕克语<br><code>ht</code>：海地克里奥尔语<br><code>hu</code>：匈牙利语<br><code>hy</code>：亚美尼亚语<br><code>id</code>：印度尼西亚语<br><code>ig</code>：Igbo<br><code>ilo</code>：伊洛果语<br><code>is</code>：冰岛语<br><code>it</code>：意大利语<br><code>iw</code>：希伯来语<br><code>ja</code>：日语<br><code>jv</code>：爪哇语<br><code>ka</code>：格鲁吉亚语<br><code>kk</code>：哈萨克语<br><code>km</code>：高棉语<br><code>kn</code>：卡纳达语<br><code>ko</code>：韩语<br><code>kri</code>：Krio<br><code>ku</code>：库尔德语（库尔曼吉语）<br><code>ktu</code>：吉土巴语<br><code>ky</code>：吉尔吉斯语<br><code>la</code>：拉丁语<br><code>lb</code>：卢森堡语<br><code>lg</code>：干达语（卢干达语）<br><code>li</code>：林堡语<br><code>lij</code>：利古里亚语<br><code>lmo</code>：伦巴第语<br><code>ln</code>：林加拉语<br><code>lo</code>：老挝语<br><code>lt</code>：立陶宛语<br><code>ltg</code>：拉特加莱语<br><code>luo</code>：Luo<br><code>lus</code>：米佐语<br><code>lv</code>：拉脱维亚语<br><code>mai</code>：迈蒂利语<br><code>mak</code>：马卡萨<br><code>mg</code>：马尔加什语<br><code>mi</code>：毛利语<br><code>min</code>：米南语<br><code>mk</code>：马其顿语<br><code>ml</code>：马拉雅拉姆语<br><code>mn</code>：蒙古语<br><code>mr</code>：马拉地语<br><code>ms</code>：马来语<br><code>mt</code>：马耳他语<br><code>my</code>：缅甸语<br><code>ne</code>：尼泊尔语<br><code>new</code>：尼瓦尔语<br><code>nl</code>：荷兰语<br><code>no</code>：挪威语<br><code>nr</code>：恩德贝莱语（南部）<br><code>nso</code>：北索托语（塞佩蒂语）<br><code>nus</code>：努尔语<br><code>ny</code>：齐切瓦语（尼扬贾语）<br><code>oc</code>：奥克斯坦语<br><code>om</code>：Oromo<br><code>or</code>：奥里亚语<br><code>pa</code>：旁遮普语<br><code>pag</code>：邦阿西楠语<br><code>pam</code>：邦板牙语<br><code>pap</code>：Papiamento<br><code>pl</code>：波兰语<br><code>ps</code>：Pashto<br><code>pt</code>：葡萄牙语<br><code>pt-BR</code>：葡萄牙语（巴西）<br><code>pt-PT</code>：葡萄牙语（葡萄牙）<br><code>qu</code>：克丘亚语<br><code>ro</code>：罗马尼亚语<br><code>rom</code>：罗姆语<br><code>rn</code>：Rundi<br><code>ru</code>：俄语<br><code>rw</code>：卢旺达语<br><code>sa</code>：梵语<br><code>scn</code>：西西里语<br><code>sd</code>：信德语<br><code>sg</code>：Sango<br><code>shn</code>：掸语<br><code>si</code>：僧伽罗语<br><code>sk</code>：斯洛伐克语<br><code>sl</code>：斯洛文尼亚语<br><code>sm</code>：萨摩亚语<br><code>sn</code>：修纳语<br><code>so</code>：索马里语<br><code>sq</code>：阿尔巴尼亚语<br><code>sr</code>：塞尔维亚语<br><code>ss</code>：斯瓦特语<br><code>st</code>：塞索托语<br><code>su</code>：巽他语<br><code>sv</code>：瑞典语<br><code>sw</code>：斯瓦希里语<br><code>szl</code>：西里西亚语<br><code>ta</code>：泰米尔语<br><code>te</code>：泰卢固语<br><code>tet</code>：德顿语<br><code>tg</code>：塔吉克语<br><code>th</code>：泰语<br><code>ti</code>：提格里尼亚语<br><code>tk</code>：土库曼语<br><code>tn</code>：茨瓦纳语<br><code>tr</code>：土耳其语<br><code>ts</code>：聪加语<br><code>tt</code>：鞑靼语<br><code>ug</code>：维吾尔语<br><code>uk</code>：乌克兰语<br><code>ur</code>：乌尔都语<br><code>uz</code>：乌兹别克语<br><code>vi</code>：越南语<br><code>xh</code>：科萨语<br><code>yi</code>：意第绪语<br><code>yo</code>：约鲁巴语<br><code>yua</code>：尤卡坦玛雅语<br><code>yue</code>：粤语<br><code>zh</code>：简体中文<br><code>zh-TW</code>：中文（繁体）<br><code>zu</code>：祖鲁语</p><p><strong>注意</strong>：多语言方式，则使用 <code>/</code> 分割，如：<code>en/ja</code>，表示英语和日语。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTranslateDstLanguage() {
@@ -1713,395 +181,9 @@ ASR识别和纯字幕翻译当前支持以下语言：
     }
 
     /**
-     * Set 字幕翻译目标语言
-当TranslateSwitch为ON的时候生效，翻译语言列表：
-`ab`：阿布哈兹语
-`ace`：亚齐语
-`ach`：阿乔利语
-`af`：南非荷兰语
-`ak`：契维语（阿坎语）
-`am`：Amharic
-`ar`：阿拉伯语
-`as`：阿萨姆语
-`ay`：艾马拉语
-`az`：阿塞拜疆语
-`ba`：巴什基尔语
-`ban`：巴厘语
-`bbc`：巴塔克托巴语
-`bem`：Bemba
-`bew`：Betawi
-`bg`：保加利亚语
-`bho`：博杰普尔语
-`bik`：Bikol
-`bm`：班巴拉语
-`bn`：孟加拉语
-`br`：布列塔尼语
-`bs`：波斯尼亚语
-`btx`：巴塔克卡罗语
-`bts`：巴塔克西马隆贡语
-`bua`：布里亚特语
-`ca`：加泰罗尼亚语
-`ceb`：宿务语
-`cgg`：Kiga
-`chm`：草原马里语
-`ckb`：库尔德语（索拉尼语）
-`cnh`：哈卡钦语
-`co`：科西嘉语
-`crh`：克里米亚鞑靼语
-`crs`：塞舌尔克里奥尔语
-`cs`：捷克语
-`cv`：楚瓦什语
-`cy`：威尔士语
-`da`：丹麦语
-`de`：德语
-`din`：Dinka
-`doi`：多格来语
-`dov`：敦贝语
-`dv`：第维埃语
-`dz`：宗卡语
-`ee`：Ewe
-`el`：希腊语
-`en`：英语
-`eo`：世界语
-`es`：西班牙语
-`et`：爱沙尼亚语
-`eu`：巴斯克语
-`fa`：波斯语
-`ff`：富拉语
-`fi`：芬兰语
-`fil`：菲律宾语（塔加拉语）
-`fj`：斐济语
-`fr`：法语
-`fr-CA`：法语（加拿大）
-`fr-FR`：法语（法国）
-`fy`：弗里斯兰语
-`ga`：爱尔兰语
-`gaa`：加 (Ga) 语
-`gd`：苏格兰盖尔语
-`gl`：加利西亚语
-`gn`：瓜拉尼语
-`gom`：贡根语
-`gu`：古吉拉特语
-`gv`：马恩岛语
-`ha`：Hausa
-`haw`：夏威夷语
-`he`：希伯来语
-`hi`：印地语
-`hil`：希利盖农语
-`hmn`：苗语
-`hr`：克罗地亚语
-`hrx`：洪斯吕克语
-`ht`：海地克里奥尔语
-`hu`：匈牙利语
-`hy`：亚美尼亚语
-`id`：印度尼西亚语
-`ig`：Igbo
-`ilo`：伊洛果语
-`is`：冰岛语
-`it`：意大利语
-`iw`：希伯来语
-`ja`：日语
-`jv`：爪哇语
-`ka`：格鲁吉亚语
-`kk`：哈萨克语
-`km`：高棉语
-`kn`：卡纳达语
-`ko`：韩语
-`kri`：Krio
-`ku`：库尔德语（库尔曼吉语）
-`ktu`：吉土巴语
-`ky`：吉尔吉斯语
-`la`：拉丁语
-`lb`：卢森堡语
-`lg`：干达语（卢干达语）
-`li`：林堡语
-`lij`：利古里亚语
-`lmo`：伦巴第语
-`ln`：林加拉语
-`lo`：老挝语
-`lt`：立陶宛语
-`ltg`：拉特加莱语
-`luo`：Luo
-`lus`：米佐语
-`lv`：拉脱维亚语
-`mai`：迈蒂利语
-`mak`：马卡萨
-`mg`：马尔加什语
-`mi`：毛利语
-`min`：米南语
-`mk`：马其顿语
-`ml`：马拉雅拉姆语
-`mn`：蒙古语
-`mr`：马拉地语
-`ms`：马来语
-`mt`：马耳他语
-`my`：缅甸语
-`ne`：尼泊尔语
-`new`：尼瓦尔语
-`nl`：荷兰语
-`no`：挪威语
-`nr`：恩德贝莱语（南部）
-`nso`：北索托语（塞佩蒂语）
-`nus`：努尔语
-`ny`：齐切瓦语（尼扬贾语）
-`oc`：奥克斯坦语
-`om`：Oromo
-`or`：奥里亚语
-`pa`：旁遮普语
-`pag`：邦阿西楠语
-`pam`：邦板牙语
-`pap`：Papiamento
-`pl`：波兰语
-`ps`：Pashto
-`pt`：葡萄牙语
-`pt-BR`：葡萄牙语（巴西）
-`pt-PT`：葡萄牙语（葡萄牙）
-`qu`：克丘亚语
-`ro`：罗马尼亚语
-`rom`：罗姆语
-`rn`：Rundi
-`ru`：俄语
-`rw`：卢旺达语
-`sa`：梵语
-`scn`：西西里语
-`sd`：信德语
-`sg`：Sango
-`shn`：掸语
-`si`：僧伽罗语
-`sk`：斯洛伐克语
-`sl`：斯洛文尼亚语
-`sm`：萨摩亚语
-`sn`：修纳语
-`so`：索马里语
-`sq`：阿尔巴尼亚语
-`sr`：塞尔维亚语
-`ss`：斯瓦特语
-`st`：塞索托语
-`su`：巽他语
-`sv`：瑞典语
-`sw`：斯瓦希里语
-`szl`：西里西亚语
-`ta`：泰米尔语
-`te`：泰卢固语
-`tet`：德顿语
-`tg`：塔吉克语
-`th`：泰语
-`ti`：提格里尼亚语
-`tk`：土库曼语
-`tn`：茨瓦纳语
-`tr`：土耳其语
-`ts`：聪加语
-`tt`：鞑靼语
-`ug`：维吾尔语
-`uk`：乌克兰语
-`ur`：乌尔都语
-`uz`：乌兹别克语
-`vi`：越南语
-`xh`：科萨语
-`yi`：意第绪语
-`yo`：约鲁巴语
-`yua`：尤卡坦玛雅语
-`yue`：粤语
-`zh`：简体中文
-`zh-TW`：中文（繁体）
-`zu`：祖鲁语
-
-**注意**：多语言方式，则使用 `/` 分割，如：`en/ja`，表示英语和日语。
+     * Set <p>字幕翻译目标语言<br>当TranslateSwitch为ON的时候生效，翻译语言列表：<br><code>ab</code>：阿布哈兹语<br><code>ace</code>：亚齐语<br><code>ach</code>：阿乔利语<br><code>af</code>：南非荷兰语<br><code>ak</code>：契维语（阿坎语）<br><code>am</code>：Amharic<br><code>ar</code>：阿拉伯语<br><code>as</code>：阿萨姆语<br><code>ay</code>：艾马拉语<br><code>az</code>：阿塞拜疆语<br><code>ba</code>：巴什基尔语<br><code>ban</code>：巴厘语<br><code>bbc</code>：巴塔克托巴语<br><code>bem</code>：Bemba<br><code>bew</code>：Betawi<br><code>bg</code>：保加利亚语<br><code>bho</code>：博杰普尔语<br><code>bik</code>：Bikol<br><code>bm</code>：班巴拉语<br><code>bn</code>：孟加拉语<br><code>br</code>：布列塔尼语<br><code>bs</code>：波斯尼亚语<br><code>btx</code>：巴塔克卡罗语<br><code>bts</code>：巴塔克西马隆贡语<br><code>bua</code>：布里亚特语<br><code>ca</code>：加泰罗尼亚语<br><code>ceb</code>：宿务语<br><code>cgg</code>：Kiga<br><code>chm</code>：草原马里语<br><code>ckb</code>：库尔德语（索拉尼语）<br><code>cnh</code>：哈卡钦语<br><code>co</code>：科西嘉语<br><code>crh</code>：克里米亚鞑靼语<br><code>crs</code>：塞舌尔克里奥尔语<br><code>cs</code>：捷克语<br><code>cv</code>：楚瓦什语<br><code>cy</code>：威尔士语<br><code>da</code>：丹麦语<br><code>de</code>：德语<br><code>din</code>：Dinka<br><code>doi</code>：多格来语<br><code>dov</code>：敦贝语<br><code>dv</code>：第维埃语<br><code>dz</code>：宗卡语<br><code>ee</code>：Ewe<br><code>el</code>：希腊语<br><code>en</code>：英语<br><code>eo</code>：世界语<br><code>es</code>：西班牙语<br><code>et</code>：爱沙尼亚语<br><code>eu</code>：巴斯克语<br><code>fa</code>：波斯语<br><code>ff</code>：富拉语<br><code>fi</code>：芬兰语<br><code>fil</code>：菲律宾语（塔加拉语）<br><code>fj</code>：斐济语<br><code>fr</code>：法语<br><code>fr-CA</code>：法语（加拿大）<br><code>fr-FR</code>：法语（法国）<br><code>fy</code>：弗里斯兰语<br><code>ga</code>：爱尔兰语<br><code>gaa</code>：加 (Ga) 语<br><code>gd</code>：苏格兰盖尔语<br><code>gl</code>：加利西亚语<br><code>gn</code>：瓜拉尼语<br><code>gom</code>：贡根语<br><code>gu</code>：古吉拉特语<br><code>gv</code>：马恩岛语<br><code>ha</code>：Hausa<br><code>haw</code>：夏威夷语<br><code>he</code>：希伯来语<br><code>hi</code>：印地语<br><code>hil</code>：希利盖农语<br><code>hmn</code>：苗语<br><code>hr</code>：克罗地亚语<br><code>hrx</code>：洪斯吕克语<br><code>ht</code>：海地克里奥尔语<br><code>hu</code>：匈牙利语<br><code>hy</code>：亚美尼亚语<br><code>id</code>：印度尼西亚语<br><code>ig</code>：Igbo<br><code>ilo</code>：伊洛果语<br><code>is</code>：冰岛语<br><code>it</code>：意大利语<br><code>iw</code>：希伯来语<br><code>ja</code>：日语<br><code>jv</code>：爪哇语<br><code>ka</code>：格鲁吉亚语<br><code>kk</code>：哈萨克语<br><code>km</code>：高棉语<br><code>kn</code>：卡纳达语<br><code>ko</code>：韩语<br><code>kri</code>：Krio<br><code>ku</code>：库尔德语（库尔曼吉语）<br><code>ktu</code>：吉土巴语<br><code>ky</code>：吉尔吉斯语<br><code>la</code>：拉丁语<br><code>lb</code>：卢森堡语<br><code>lg</code>：干达语（卢干达语）<br><code>li</code>：林堡语<br><code>lij</code>：利古里亚语<br><code>lmo</code>：伦巴第语<br><code>ln</code>：林加拉语<br><code>lo</code>：老挝语<br><code>lt</code>：立陶宛语<br><code>ltg</code>：拉特加莱语<br><code>luo</code>：Luo<br><code>lus</code>：米佐语<br><code>lv</code>：拉脱维亚语<br><code>mai</code>：迈蒂利语<br><code>mak</code>：马卡萨<br><code>mg</code>：马尔加什语<br><code>mi</code>：毛利语<br><code>min</code>：米南语<br><code>mk</code>：马其顿语<br><code>ml</code>：马拉雅拉姆语<br><code>mn</code>：蒙古语<br><code>mr</code>：马拉地语<br><code>ms</code>：马来语<br><code>mt</code>：马耳他语<br><code>my</code>：缅甸语<br><code>ne</code>：尼泊尔语<br><code>new</code>：尼瓦尔语<br><code>nl</code>：荷兰语<br><code>no</code>：挪威语<br><code>nr</code>：恩德贝莱语（南部）<br><code>nso</code>：北索托语（塞佩蒂语）<br><code>nus</code>：努尔语<br><code>ny</code>：齐切瓦语（尼扬贾语）<br><code>oc</code>：奥克斯坦语<br><code>om</code>：Oromo<br><code>or</code>：奥里亚语<br><code>pa</code>：旁遮普语<br><code>pag</code>：邦阿西楠语<br><code>pam</code>：邦板牙语<br><code>pap</code>：Papiamento<br><code>pl</code>：波兰语<br><code>ps</code>：Pashto<br><code>pt</code>：葡萄牙语<br><code>pt-BR</code>：葡萄牙语（巴西）<br><code>pt-PT</code>：葡萄牙语（葡萄牙）<br><code>qu</code>：克丘亚语<br><code>ro</code>：罗马尼亚语<br><code>rom</code>：罗姆语<br><code>rn</code>：Rundi<br><code>ru</code>：俄语<br><code>rw</code>：卢旺达语<br><code>sa</code>：梵语<br><code>scn</code>：西西里语<br><code>sd</code>：信德语<br><code>sg</code>：Sango<br><code>shn</code>：掸语<br><code>si</code>：僧伽罗语<br><code>sk</code>：斯洛伐克语<br><code>sl</code>：斯洛文尼亚语<br><code>sm</code>：萨摩亚语<br><code>sn</code>：修纳语<br><code>so</code>：索马里语<br><code>sq</code>：阿尔巴尼亚语<br><code>sr</code>：塞尔维亚语<br><code>ss</code>：斯瓦特语<br><code>st</code>：塞索托语<br><code>su</code>：巽他语<br><code>sv</code>：瑞典语<br><code>sw</code>：斯瓦希里语<br><code>szl</code>：西里西亚语<br><code>ta</code>：泰米尔语<br><code>te</code>：泰卢固语<br><code>tet</code>：德顿语<br><code>tg</code>：塔吉克语<br><code>th</code>：泰语<br><code>ti</code>：提格里尼亚语<br><code>tk</code>：土库曼语<br><code>tn</code>：茨瓦纳语<br><code>tr</code>：土耳其语<br><code>ts</code>：聪加语<br><code>tt</code>：鞑靼语<br><code>ug</code>：维吾尔语<br><code>uk</code>：乌克兰语<br><code>ur</code>：乌尔都语<br><code>uz</code>：乌兹别克语<br><code>vi</code>：越南语<br><code>xh</code>：科萨语<br><code>yi</code>：意第绪语<br><code>yo</code>：约鲁巴语<br><code>yua</code>：尤卡坦玛雅语<br><code>yue</code>：粤语<br><code>zh</code>：简体中文<br><code>zh-TW</code>：中文（繁体）<br><code>zu</code>：祖鲁语</p><p><strong>注意</strong>：多语言方式，则使用 <code>/</code> 分割，如：<code>en/ja</code>，表示英语和日语。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TranslateDstLanguage 字幕翻译目标语言
-当TranslateSwitch为ON的时候生效，翻译语言列表：
-`ab`：阿布哈兹语
-`ace`：亚齐语
-`ach`：阿乔利语
-`af`：南非荷兰语
-`ak`：契维语（阿坎语）
-`am`：Amharic
-`ar`：阿拉伯语
-`as`：阿萨姆语
-`ay`：艾马拉语
-`az`：阿塞拜疆语
-`ba`：巴什基尔语
-`ban`：巴厘语
-`bbc`：巴塔克托巴语
-`bem`：Bemba
-`bew`：Betawi
-`bg`：保加利亚语
-`bho`：博杰普尔语
-`bik`：Bikol
-`bm`：班巴拉语
-`bn`：孟加拉语
-`br`：布列塔尼语
-`bs`：波斯尼亚语
-`btx`：巴塔克卡罗语
-`bts`：巴塔克西马隆贡语
-`bua`：布里亚特语
-`ca`：加泰罗尼亚语
-`ceb`：宿务语
-`cgg`：Kiga
-`chm`：草原马里语
-`ckb`：库尔德语（索拉尼语）
-`cnh`：哈卡钦语
-`co`：科西嘉语
-`crh`：克里米亚鞑靼语
-`crs`：塞舌尔克里奥尔语
-`cs`：捷克语
-`cv`：楚瓦什语
-`cy`：威尔士语
-`da`：丹麦语
-`de`：德语
-`din`：Dinka
-`doi`：多格来语
-`dov`：敦贝语
-`dv`：第维埃语
-`dz`：宗卡语
-`ee`：Ewe
-`el`：希腊语
-`en`：英语
-`eo`：世界语
-`es`：西班牙语
-`et`：爱沙尼亚语
-`eu`：巴斯克语
-`fa`：波斯语
-`ff`：富拉语
-`fi`：芬兰语
-`fil`：菲律宾语（塔加拉语）
-`fj`：斐济语
-`fr`：法语
-`fr-CA`：法语（加拿大）
-`fr-FR`：法语（法国）
-`fy`：弗里斯兰语
-`ga`：爱尔兰语
-`gaa`：加 (Ga) 语
-`gd`：苏格兰盖尔语
-`gl`：加利西亚语
-`gn`：瓜拉尼语
-`gom`：贡根语
-`gu`：古吉拉特语
-`gv`：马恩岛语
-`ha`：Hausa
-`haw`：夏威夷语
-`he`：希伯来语
-`hi`：印地语
-`hil`：希利盖农语
-`hmn`：苗语
-`hr`：克罗地亚语
-`hrx`：洪斯吕克语
-`ht`：海地克里奥尔语
-`hu`：匈牙利语
-`hy`：亚美尼亚语
-`id`：印度尼西亚语
-`ig`：Igbo
-`ilo`：伊洛果语
-`is`：冰岛语
-`it`：意大利语
-`iw`：希伯来语
-`ja`：日语
-`jv`：爪哇语
-`ka`：格鲁吉亚语
-`kk`：哈萨克语
-`km`：高棉语
-`kn`：卡纳达语
-`ko`：韩语
-`kri`：Krio
-`ku`：库尔德语（库尔曼吉语）
-`ktu`：吉土巴语
-`ky`：吉尔吉斯语
-`la`：拉丁语
-`lb`：卢森堡语
-`lg`：干达语（卢干达语）
-`li`：林堡语
-`lij`：利古里亚语
-`lmo`：伦巴第语
-`ln`：林加拉语
-`lo`：老挝语
-`lt`：立陶宛语
-`ltg`：拉特加莱语
-`luo`：Luo
-`lus`：米佐语
-`lv`：拉脱维亚语
-`mai`：迈蒂利语
-`mak`：马卡萨
-`mg`：马尔加什语
-`mi`：毛利语
-`min`：米南语
-`mk`：马其顿语
-`ml`：马拉雅拉姆语
-`mn`：蒙古语
-`mr`：马拉地语
-`ms`：马来语
-`mt`：马耳他语
-`my`：缅甸语
-`ne`：尼泊尔语
-`new`：尼瓦尔语
-`nl`：荷兰语
-`no`：挪威语
-`nr`：恩德贝莱语（南部）
-`nso`：北索托语（塞佩蒂语）
-`nus`：努尔语
-`ny`：齐切瓦语（尼扬贾语）
-`oc`：奥克斯坦语
-`om`：Oromo
-`or`：奥里亚语
-`pa`：旁遮普语
-`pag`：邦阿西楠语
-`pam`：邦板牙语
-`pap`：Papiamento
-`pl`：波兰语
-`ps`：Pashto
-`pt`：葡萄牙语
-`pt-BR`：葡萄牙语（巴西）
-`pt-PT`：葡萄牙语（葡萄牙）
-`qu`：克丘亚语
-`ro`：罗马尼亚语
-`rom`：罗姆语
-`rn`：Rundi
-`ru`：俄语
-`rw`：卢旺达语
-`sa`：梵语
-`scn`：西西里语
-`sd`：信德语
-`sg`：Sango
-`shn`：掸语
-`si`：僧伽罗语
-`sk`：斯洛伐克语
-`sl`：斯洛文尼亚语
-`sm`：萨摩亚语
-`sn`：修纳语
-`so`：索马里语
-`sq`：阿尔巴尼亚语
-`sr`：塞尔维亚语
-`ss`：斯瓦特语
-`st`：塞索托语
-`su`：巽他语
-`sv`：瑞典语
-`sw`：斯瓦希里语
-`szl`：西里西亚语
-`ta`：泰米尔语
-`te`：泰卢固语
-`tet`：德顿语
-`tg`：塔吉克语
-`th`：泰语
-`ti`：提格里尼亚语
-`tk`：土库曼语
-`tn`：茨瓦纳语
-`tr`：土耳其语
-`ts`：聪加语
-`tt`：鞑靼语
-`ug`：维吾尔语
-`uk`：乌克兰语
-`ur`：乌尔都语
-`uz`：乌兹别克语
-`vi`：越南语
-`xh`：科萨语
-`yi`：意第绪语
-`yo`：约鲁巴语
-`yua`：尤卡坦玛雅语
-`yue`：粤语
-`zh`：简体中文
-`zh-TW`：中文（繁体）
-`zu`：祖鲁语
-
-**注意**：多语言方式，则使用 `/` 分割，如：`en/ja`，表示英语和日语。
+     * @param TranslateDstLanguage <p>字幕翻译目标语言<br>当TranslateSwitch为ON的时候生效，翻译语言列表：<br><code>ab</code>：阿布哈兹语<br><code>ace</code>：亚齐语<br><code>ach</code>：阿乔利语<br><code>af</code>：南非荷兰语<br><code>ak</code>：契维语（阿坎语）<br><code>am</code>：Amharic<br><code>ar</code>：阿拉伯语<br><code>as</code>：阿萨姆语<br><code>ay</code>：艾马拉语<br><code>az</code>：阿塞拜疆语<br><code>ba</code>：巴什基尔语<br><code>ban</code>：巴厘语<br><code>bbc</code>：巴塔克托巴语<br><code>bem</code>：Bemba<br><code>bew</code>：Betawi<br><code>bg</code>：保加利亚语<br><code>bho</code>：博杰普尔语<br><code>bik</code>：Bikol<br><code>bm</code>：班巴拉语<br><code>bn</code>：孟加拉语<br><code>br</code>：布列塔尼语<br><code>bs</code>：波斯尼亚语<br><code>btx</code>：巴塔克卡罗语<br><code>bts</code>：巴塔克西马隆贡语<br><code>bua</code>：布里亚特语<br><code>ca</code>：加泰罗尼亚语<br><code>ceb</code>：宿务语<br><code>cgg</code>：Kiga<br><code>chm</code>：草原马里语<br><code>ckb</code>：库尔德语（索拉尼语）<br><code>cnh</code>：哈卡钦语<br><code>co</code>：科西嘉语<br><code>crh</code>：克里米亚鞑靼语<br><code>crs</code>：塞舌尔克里奥尔语<br><code>cs</code>：捷克语<br><code>cv</code>：楚瓦什语<br><code>cy</code>：威尔士语<br><code>da</code>：丹麦语<br><code>de</code>：德语<br><code>din</code>：Dinka<br><code>doi</code>：多格来语<br><code>dov</code>：敦贝语<br><code>dv</code>：第维埃语<br><code>dz</code>：宗卡语<br><code>ee</code>：Ewe<br><code>el</code>：希腊语<br><code>en</code>：英语<br><code>eo</code>：世界语<br><code>es</code>：西班牙语<br><code>et</code>：爱沙尼亚语<br><code>eu</code>：巴斯克语<br><code>fa</code>：波斯语<br><code>ff</code>：富拉语<br><code>fi</code>：芬兰语<br><code>fil</code>：菲律宾语（塔加拉语）<br><code>fj</code>：斐济语<br><code>fr</code>：法语<br><code>fr-CA</code>：法语（加拿大）<br><code>fr-FR</code>：法语（法国）<br><code>fy</code>：弗里斯兰语<br><code>ga</code>：爱尔兰语<br><code>gaa</code>：加 (Ga) 语<br><code>gd</code>：苏格兰盖尔语<br><code>gl</code>：加利西亚语<br><code>gn</code>：瓜拉尼语<br><code>gom</code>：贡根语<br><code>gu</code>：古吉拉特语<br><code>gv</code>：马恩岛语<br><code>ha</code>：Hausa<br><code>haw</code>：夏威夷语<br><code>he</code>：希伯来语<br><code>hi</code>：印地语<br><code>hil</code>：希利盖农语<br><code>hmn</code>：苗语<br><code>hr</code>：克罗地亚语<br><code>hrx</code>：洪斯吕克语<br><code>ht</code>：海地克里奥尔语<br><code>hu</code>：匈牙利语<br><code>hy</code>：亚美尼亚语<br><code>id</code>：印度尼西亚语<br><code>ig</code>：Igbo<br><code>ilo</code>：伊洛果语<br><code>is</code>：冰岛语<br><code>it</code>：意大利语<br><code>iw</code>：希伯来语<br><code>ja</code>：日语<br><code>jv</code>：爪哇语<br><code>ka</code>：格鲁吉亚语<br><code>kk</code>：哈萨克语<br><code>km</code>：高棉语<br><code>kn</code>：卡纳达语<br><code>ko</code>：韩语<br><code>kri</code>：Krio<br><code>ku</code>：库尔德语（库尔曼吉语）<br><code>ktu</code>：吉土巴语<br><code>ky</code>：吉尔吉斯语<br><code>la</code>：拉丁语<br><code>lb</code>：卢森堡语<br><code>lg</code>：干达语（卢干达语）<br><code>li</code>：林堡语<br><code>lij</code>：利古里亚语<br><code>lmo</code>：伦巴第语<br><code>ln</code>：林加拉语<br><code>lo</code>：老挝语<br><code>lt</code>：立陶宛语<br><code>ltg</code>：拉特加莱语<br><code>luo</code>：Luo<br><code>lus</code>：米佐语<br><code>lv</code>：拉脱维亚语<br><code>mai</code>：迈蒂利语<br><code>mak</code>：马卡萨<br><code>mg</code>：马尔加什语<br><code>mi</code>：毛利语<br><code>min</code>：米南语<br><code>mk</code>：马其顿语<br><code>ml</code>：马拉雅拉姆语<br><code>mn</code>：蒙古语<br><code>mr</code>：马拉地语<br><code>ms</code>：马来语<br><code>mt</code>：马耳他语<br><code>my</code>：缅甸语<br><code>ne</code>：尼泊尔语<br><code>new</code>：尼瓦尔语<br><code>nl</code>：荷兰语<br><code>no</code>：挪威语<br><code>nr</code>：恩德贝莱语（南部）<br><code>nso</code>：北索托语（塞佩蒂语）<br><code>nus</code>：努尔语<br><code>ny</code>：齐切瓦语（尼扬贾语）<br><code>oc</code>：奥克斯坦语<br><code>om</code>：Oromo<br><code>or</code>：奥里亚语<br><code>pa</code>：旁遮普语<br><code>pag</code>：邦阿西楠语<br><code>pam</code>：邦板牙语<br><code>pap</code>：Papiamento<br><code>pl</code>：波兰语<br><code>ps</code>：Pashto<br><code>pt</code>：葡萄牙语<br><code>pt-BR</code>：葡萄牙语（巴西）<br><code>pt-PT</code>：葡萄牙语（葡萄牙）<br><code>qu</code>：克丘亚语<br><code>ro</code>：罗马尼亚语<br><code>rom</code>：罗姆语<br><code>rn</code>：Rundi<br><code>ru</code>：俄语<br><code>rw</code>：卢旺达语<br><code>sa</code>：梵语<br><code>scn</code>：西西里语<br><code>sd</code>：信德语<br><code>sg</code>：Sango<br><code>shn</code>：掸语<br><code>si</code>：僧伽罗语<br><code>sk</code>：斯洛伐克语<br><code>sl</code>：斯洛文尼亚语<br><code>sm</code>：萨摩亚语<br><code>sn</code>：修纳语<br><code>so</code>：索马里语<br><code>sq</code>：阿尔巴尼亚语<br><code>sr</code>：塞尔维亚语<br><code>ss</code>：斯瓦特语<br><code>st</code>：塞索托语<br><code>su</code>：巽他语<br><code>sv</code>：瑞典语<br><code>sw</code>：斯瓦希里语<br><code>szl</code>：西里西亚语<br><code>ta</code>：泰米尔语<br><code>te</code>：泰卢固语<br><code>tet</code>：德顿语<br><code>tg</code>：塔吉克语<br><code>th</code>：泰语<br><code>ti</code>：提格里尼亚语<br><code>tk</code>：土库曼语<br><code>tn</code>：茨瓦纳语<br><code>tr</code>：土耳其语<br><code>ts</code>：聪加语<br><code>tt</code>：鞑靼语<br><code>ug</code>：维吾尔语<br><code>uk</code>：乌克兰语<br><code>ur</code>：乌尔都语<br><code>uz</code>：乌兹别克语<br><code>vi</code>：越南语<br><code>xh</code>：科萨语<br><code>yi</code>：意第绪语<br><code>yo</code>：约鲁巴语<br><code>yua</code>：尤卡坦玛雅语<br><code>yue</code>：粤语<br><code>zh</code>：简体中文<br><code>zh-TW</code>：中文（繁体）<br><code>zu</code>：祖鲁语</p><p><strong>注意</strong>：多语言方式，则使用 <code>/</code> 分割，如：<code>en/ja</code>，表示英语和日语。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTranslateDstLanguage(String TranslateDstLanguage) {
@@ -2109,9 +191,9 @@ ASR识别和纯字幕翻译当前支持以下语言：
     }
 
     /**
-     * Get ASR热词库参数
+     * Get <p>ASR热词库参数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AsrHotWordsConfigure ASR热词库参数
+     * @return AsrHotWordsConfigure <p>ASR热词库参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AsrHotWordsConfigure getAsrHotWordsConfigure() {
@@ -2119,9 +201,9 @@ ASR识别和纯字幕翻译当前支持以下语言：
     }
 
     /**
-     * Set ASR热词库参数
+     * Set <p>ASR热词库参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AsrHotWordsConfigure ASR热词库参数
+     * @param AsrHotWordsConfigure <p>ASR热词库参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsrHotWordsConfigure(AsrHotWordsConfigure AsrHotWordsConfigure) {
@@ -2129,61 +211,41 @@ ASR识别和纯字幕翻译当前支持以下语言：
     }
 
     /**
-     * Get 自定义参数 
-     * @return ExtInfo 自定义参数
+     * Get <p>自定义参数</p> 
+     * @return ExtInfo <p>自定义参数</p>
      */
     public String getExtInfo() {
         return this.ExtInfo;
     }
 
     /**
-     * Set 自定义参数
-     * @param ExtInfo 自定义参数
+     * Set <p>自定义参数</p>
+     * @param ExtInfo <p>自定义参数</p>
      */
     public void setExtInfo(String ExtInfo) {
         this.ExtInfo = ExtInfo;
     }
 
     /**
-     * Get 字幕处理类型：
-- 0：ASR识别字幕
-- 1：纯字幕翻译
-- 2：OCR识别字幕
-
-**注意**：不传的情况下默认类型为 ASR识别字幕 
-     * @return ProcessType 字幕处理类型：
-- 0：ASR识别字幕
-- 1：纯字幕翻译
-- 2：OCR识别字幕
-
-**注意**：不传的情况下默认类型为 ASR识别字幕
+     * Get <p>字幕处理类型：</p><ul><li>0：ASR识别字幕</li><li>1：纯字幕翻译</li><li>2：OCR识别字幕</li></ul><p><strong>注意</strong>：不传的情况下默认类型为 ASR识别字幕</p> 
+     * @return ProcessType <p>字幕处理类型：</p><ul><li>0：ASR识别字幕</li><li>1：纯字幕翻译</li><li>2：OCR识别字幕</li></ul><p><strong>注意</strong>：不传的情况下默认类型为 ASR识别字幕</p>
      */
     public Long getProcessType() {
         return this.ProcessType;
     }
 
     /**
-     * Set 字幕处理类型：
-- 0：ASR识别字幕
-- 1：纯字幕翻译
-- 2：OCR识别字幕
-
-**注意**：不传的情况下默认类型为 ASR识别字幕
-     * @param ProcessType 字幕处理类型：
-- 0：ASR识别字幕
-- 1：纯字幕翻译
-- 2：OCR识别字幕
-
-**注意**：不传的情况下默认类型为 ASR识别字幕
+     * Set <p>字幕处理类型：</p><ul><li>0：ASR识别字幕</li><li>1：纯字幕翻译</li><li>2：OCR识别字幕</li></ul><p><strong>注意</strong>：不传的情况下默认类型为 ASR识别字幕</p>
+     * @param ProcessType <p>字幕处理类型：</p><ul><li>0：ASR识别字幕</li><li>1：纯字幕翻译</li><li>2：OCR识别字幕</li></ul><p><strong>注意</strong>：不传的情况下默认类型为 ASR识别字幕</p>
      */
     public void setProcessType(Long ProcessType) {
         this.ProcessType = ProcessType;
     }
 
     /**
-     * Get 字幕OCR提取框选区域配置
+     * Get <p>字幕OCR提取框选区域配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SelectingSubtitleAreasConfig 字幕OCR提取框选区域配置
+     * @return SelectingSubtitleAreasConfig <p>字幕OCR提取框选区域配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SelectingSubtitleAreasConfig getSelectingSubtitleAreasConfig() {
@@ -2191,13 +253,29 @@ ASR识别和纯字幕翻译当前支持以下语言：
     }
 
     /**
-     * Set 字幕OCR提取框选区域配置
+     * Set <p>字幕OCR提取框选区域配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SelectingSubtitleAreasConfig 字幕OCR提取框选区域配置
+     * @param SelectingSubtitleAreasConfig <p>字幕OCR提取框选区域配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSelectingSubtitleAreasConfig(SelectingSubtitleAreasConfig SelectingSubtitleAreasConfig) {
         this.SelectingSubtitleAreasConfig = SelectingSubtitleAreasConfig;
+    }
+
+    /**
+     * Get <p>压制模板id，只有ProcessType为0或2（任务类型为ASR或OCR）时才允许填写</p> 
+     * @return SubtitleEmbedId <p>压制模板id，只有ProcessType为0或2（任务类型为ASR或OCR）时才允许填写</p>
+     */
+    public Long getSubtitleEmbedId() {
+        return this.SubtitleEmbedId;
+    }
+
+    /**
+     * Set <p>压制模板id，只有ProcessType为0或2（任务类型为ASR或OCR）时才允许填写</p>
+     * @param SubtitleEmbedId <p>压制模板id，只有ProcessType为0或2（任务类型为ASR或OCR）时才允许填写</p>
+     */
+    public void setSubtitleEmbedId(Long SubtitleEmbedId) {
+        this.SubtitleEmbedId = SubtitleEmbedId;
     }
 
     public RawSmartSubtitleParameter() {
@@ -2235,6 +313,9 @@ ASR识别和纯字幕翻译当前支持以下语言：
         if (source.SelectingSubtitleAreasConfig != null) {
             this.SelectingSubtitleAreasConfig = new SelectingSubtitleAreasConfig(source.SelectingSubtitleAreasConfig);
         }
+        if (source.SubtitleEmbedId != null) {
+            this.SubtitleEmbedId = new Long(source.SubtitleEmbedId);
+        }
     }
 
 
@@ -2251,6 +332,7 @@ ASR识别和纯字幕翻译当前支持以下语言：
         this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
         this.setParamSimple(map, prefix + "ProcessType", this.ProcessType);
         this.setParamObj(map, prefix + "SelectingSubtitleAreasConfig.", this.SelectingSubtitleAreasConfig);
+        this.setParamSimple(map, prefix + "SubtitleEmbedId", this.SubtitleEmbedId);
 
     }
 }

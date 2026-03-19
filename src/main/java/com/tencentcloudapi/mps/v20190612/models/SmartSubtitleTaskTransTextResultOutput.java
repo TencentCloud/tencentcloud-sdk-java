@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SmartSubtitleTaskTransTextResultOutput extends AbstractModel {
 
     /**
-    * 翻译片段列表。
+    * <p>翻译片段列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SegmentSet")
@@ -32,37 +32,37 @@ public class SmartSubtitleTaskTransTextResultOutput extends AbstractModel {
     private SmartSubtitleTaskTransTextSegmentItem [] SegmentSet;
 
     /**
-    * 字幕文件地址。
+    * <p>字幕文件地址。</p>
     */
     @SerializedName("SubtitlePath")
     @Expose
     private String SubtitlePath;
 
     /**
-    * 字幕文件存储位置。
+    * <p>智能字幕结果存储信息。</p>
     */
     @SerializedName("OutputStorage")
     @Expose
     private TaskOutputStorage OutputStorage;
 
     /**
-    * 字幕文件地址
+    * <p>字幕文件路径。</p>
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-    * 多语言翻译时返回翻译结果。	
+    * <p>多语言翻译时返回翻译结果。</p>
     */
     @SerializedName("SubtitleResults")
     @Expose
     private SubtitleTransResultItem [] SubtitleResults;
 
     /**
-     * Get 翻译片段列表。
+     * Get <p>翻译片段列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SegmentSet 翻译片段列表。
+     * @return SegmentSet <p>翻译片段列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SmartSubtitleTaskTransTextSegmentItem [] getSegmentSet() {
@@ -70,9 +70,9 @@ public class SmartSubtitleTaskTransTextResultOutput extends AbstractModel {
     }
 
     /**
-     * Set 翻译片段列表。
+     * Set <p>翻译片段列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SegmentSet 翻译片段列表。
+     * @param SegmentSet <p>翻译片段列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSegmentSet(SmartSubtitleTaskTransTextSegmentItem [] SegmentSet) {
@@ -80,64 +80,64 @@ public class SmartSubtitleTaskTransTextResultOutput extends AbstractModel {
     }
 
     /**
-     * Get 字幕文件地址。 
-     * @return SubtitlePath 字幕文件地址。
+     * Get <p>字幕文件地址。</p> 
+     * @return SubtitlePath <p>字幕文件地址。</p>
      */
     public String getSubtitlePath() {
         return this.SubtitlePath;
     }
 
     /**
-     * Set 字幕文件地址。
-     * @param SubtitlePath 字幕文件地址。
+     * Set <p>字幕文件地址。</p>
+     * @param SubtitlePath <p>字幕文件地址。</p>
      */
     public void setSubtitlePath(String SubtitlePath) {
         this.SubtitlePath = SubtitlePath;
     }
 
     /**
-     * Get 字幕文件存储位置。 
-     * @return OutputStorage 字幕文件存储位置。
+     * Get <p>智能字幕结果存储信息。</p> 
+     * @return OutputStorage <p>智能字幕结果存储信息。</p>
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set 字幕文件存储位置。
-     * @param OutputStorage 字幕文件存储位置。
+     * Set <p>智能字幕结果存储信息。</p>
+     * @param OutputStorage <p>智能字幕结果存储信息。</p>
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
     }
 
     /**
-     * Get 字幕文件地址 
-     * @return Path 字幕文件地址
+     * Get <p>字幕文件路径。</p> 
+     * @return Path <p>字幕文件路径。</p>
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set 字幕文件地址
-     * @param Path 字幕文件地址
+     * Set <p>字幕文件路径。</p>
+     * @param Path <p>字幕文件路径。</p>
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get 多语言翻译时返回翻译结果。	 
-     * @return SubtitleResults 多语言翻译时返回翻译结果。	
+     * Get <p>多语言翻译时返回翻译结果。</p> 
+     * @return SubtitleResults <p>多语言翻译时返回翻译结果。</p>
      */
     public SubtitleTransResultItem [] getSubtitleResults() {
         return this.SubtitleResults;
     }
 
     /**
-     * Set 多语言翻译时返回翻译结果。	
-     * @param SubtitleResults 多语言翻译时返回翻译结果。	
+     * Set <p>多语言翻译时返回翻译结果。</p>
+     * @param SubtitleResults <p>多语言翻译时返回翻译结果。</p>
      */
     public void setSubtitleResults(SubtitleTransResultItem [] SubtitleResults) {
         this.SubtitleResults = SubtitleResults;

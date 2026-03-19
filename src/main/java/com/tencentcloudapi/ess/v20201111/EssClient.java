@@ -427,6 +427,17 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *创建数据加签请求
+     * @param req CreateDigitalDataSignRequest
+     * @return CreateDigitalDataSignResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDigitalDataSignResponse CreateDigitalDataSign(CreateDigitalDataSignRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDigitalDataSign", CreateDigitalDataSignResponse.class);
+    }
+
+    /**
      *创建签署流程电子文档<br />
 
 ###  调用流程
@@ -2677,6 +2688,17 @@ httpProfile.setEndpoint("file.test.ess.tencent.cn");
     public VerifyDigitFileResponse VerifyDigitFile(VerifyDigitFileRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "VerifyDigitFile", VerifyDigitFileResponse.class);
+    }
+
+    /**
+     *数据加签验签接口
+     * @param req VerifyDigitalDataSignRequest
+     * @return VerifyDigitalDataSignResponse
+     * @throws TencentCloudSDKException
+     */
+    public VerifyDigitalDataSignResponse VerifyDigitalDataSign(VerifyDigitalDataSignRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "VerifyDigitalDataSign", VerifyDigitalDataSignResponse.class);
     }
 
     /**

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeDistrictIspDataResponse extends AbstractModel {
 
     /**
-    * 地区运营商数据明细
+    * <p>地区运营商数据明细</p>
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeDistrictIspDataResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 地区运营商数据明细 
-     * @return Data 地区运营商数据明细
+     * Get <p>地区运营商数据明细</p> 
+     * @return Data <p>地区运营商数据明细</p>
      */
     public DistrictIspInfo [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 地区运营商数据明细
-     * @param Data 地区运营商数据明细
+     * Set <p>地区运营商数据明细</p>
+     * @param Data <p>地区运营商数据明细</p>
      */
     public void setData(DistrictIspInfo [] Data) {
         this.Data = Data;
