@@ -523,6 +523,28 @@ public class BhClient extends AbstractClient{
     }
 
     /**
+     *查询用户导入的主机数
+     * @param req DescribeDeviceCountRequest
+     * @return DescribeDeviceCountResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeviceCountResponse DescribeDeviceCount(DescribeDeviceCountRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDeviceCount", DescribeDeviceCountResponse.class);
+    }
+
+    /**
+     *查询用户导入的主机数
+     * @param req DescribeDeviceCountSummaryRequest
+     * @return DescribeDeviceCountSummaryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeviceCountSummaryResponse DescribeDeviceCountSummary(DescribeDeviceCountSummaryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDeviceCountSummary", DescribeDeviceCountSummaryResponse.class);
+    }
+
+    /**
      *查询资产组成员列表
      * @param req DescribeDeviceGroupMembersRequest
      * @return DescribeDeviceGroupMembersResponse

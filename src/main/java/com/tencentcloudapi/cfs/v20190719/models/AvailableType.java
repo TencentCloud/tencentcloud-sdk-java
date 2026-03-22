@@ -24,72 +24,95 @@ import java.util.HashMap;
 public class AvailableType extends AbstractModel {
 
     /**
-    * 协议与售卖详情
+    * <p>协议与售卖详情</p>
     */
     @SerializedName("Protocols")
     @Expose
     private AvailableProtoStatus [] Protocols;
 
     /**
-    * 存储类型。返回值中 SD 为通用标准型存储， HP为通用性能型存储， TB为Turbo标准型， TP 为Turbo性能型。
+    * <p>存储类型。返回值中 SD 为通用标准型存储， HP为通用性能型存储， TB为Turbo标准型， TP 为Turbo性能型。</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 是否支持预付费。返回值中 true 为支持、false 为不支持
+    * <p>是否支持预付费。返回值中 true 为支持、false 为不支持</p>
     */
     @SerializedName("Prepayment")
     @Expose
     private Boolean Prepayment;
 
     /**
-     * Get 协议与售卖详情 
-     * @return Protocols 协议与售卖详情
+    * <p>文件系统版本</p><p>枚举值：</p><ul><li>v1.5： 通用系列</li><li>v3.1： 通用系列（增强型）</li><li>v4.0： Turbo系列</li></ul>
+    */
+    @SerializedName("Version")
+    @Expose
+    private String Version;
+
+    /**
+     * Get <p>协议与售卖详情</p> 
+     * @return Protocols <p>协议与售卖详情</p>
      */
     public AvailableProtoStatus [] getProtocols() {
         return this.Protocols;
     }
 
     /**
-     * Set 协议与售卖详情
-     * @param Protocols 协议与售卖详情
+     * Set <p>协议与售卖详情</p>
+     * @param Protocols <p>协议与售卖详情</p>
      */
     public void setProtocols(AvailableProtoStatus [] Protocols) {
         this.Protocols = Protocols;
     }
 
     /**
-     * Get 存储类型。返回值中 SD 为通用标准型存储， HP为通用性能型存储， TB为Turbo标准型， TP 为Turbo性能型。 
-     * @return Type 存储类型。返回值中 SD 为通用标准型存储， HP为通用性能型存储， TB为Turbo标准型， TP 为Turbo性能型。
+     * Get <p>存储类型。返回值中 SD 为通用标准型存储， HP为通用性能型存储， TB为Turbo标准型， TP 为Turbo性能型。</p> 
+     * @return Type <p>存储类型。返回值中 SD 为通用标准型存储， HP为通用性能型存储， TB为Turbo标准型， TP 为Turbo性能型。</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 存储类型。返回值中 SD 为通用标准型存储， HP为通用性能型存储， TB为Turbo标准型， TP 为Turbo性能型。
-     * @param Type 存储类型。返回值中 SD 为通用标准型存储， HP为通用性能型存储， TB为Turbo标准型， TP 为Turbo性能型。
+     * Set <p>存储类型。返回值中 SD 为通用标准型存储， HP为通用性能型存储， TB为Turbo标准型， TP 为Turbo性能型。</p>
+     * @param Type <p>存储类型。返回值中 SD 为通用标准型存储， HP为通用性能型存储， TB为Turbo标准型， TP 为Turbo性能型。</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 是否支持预付费。返回值中 true 为支持、false 为不支持 
-     * @return Prepayment 是否支持预付费。返回值中 true 为支持、false 为不支持
+     * Get <p>是否支持预付费。返回值中 true 为支持、false 为不支持</p> 
+     * @return Prepayment <p>是否支持预付费。返回值中 true 为支持、false 为不支持</p>
      */
     public Boolean getPrepayment() {
         return this.Prepayment;
     }
 
     /**
-     * Set 是否支持预付费。返回值中 true 为支持、false 为不支持
-     * @param Prepayment 是否支持预付费。返回值中 true 为支持、false 为不支持
+     * Set <p>是否支持预付费。返回值中 true 为支持、false 为不支持</p>
+     * @param Prepayment <p>是否支持预付费。返回值中 true 为支持、false 为不支持</p>
      */
     public void setPrepayment(Boolean Prepayment) {
         this.Prepayment = Prepayment;
+    }
+
+    /**
+     * Get <p>文件系统版本</p><p>枚举值：</p><ul><li>v1.5： 通用系列</li><li>v3.1： 通用系列（增强型）</li><li>v4.0： Turbo系列</li></ul> 
+     * @return Version <p>文件系统版本</p><p>枚举值：</p><ul><li>v1.5： 通用系列</li><li>v3.1： 通用系列（增强型）</li><li>v4.0： Turbo系列</li></ul>
+     */
+    public String getVersion() {
+        return this.Version;
+    }
+
+    /**
+     * Set <p>文件系统版本</p><p>枚举值：</p><ul><li>v1.5： 通用系列</li><li>v3.1： 通用系列（增强型）</li><li>v4.0： Turbo系列</li></ul>
+     * @param Version <p>文件系统版本</p><p>枚举值：</p><ul><li>v1.5： 通用系列</li><li>v3.1： 通用系列（增强型）</li><li>v4.0： Turbo系列</li></ul>
+     */
+    public void setVersion(String Version) {
+        this.Version = Version;
     }
 
     public AvailableType() {
@@ -112,6 +135,9 @@ public class AvailableType extends AbstractModel {
         if (source.Prepayment != null) {
             this.Prepayment = new Boolean(source.Prepayment);
         }
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
+        }
     }
 
 
@@ -122,6 +148,7 @@ public class AvailableType extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Protocols.", this.Protocols);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Prepayment", this.Prepayment);
+        this.setParamSimple(map, prefix + "Version", this.Version);
 
     }
 }

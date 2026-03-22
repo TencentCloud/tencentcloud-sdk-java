@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class SaveDocRequest extends AbstractModel {
 
     /**
-    * 应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+    * 应用ID。应用ID 获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+导入知识库文档时，该参数填入知识库 ID。
+
     */
     @SerializedName("BotBizId")
     @Expose
@@ -273,16 +275,24 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
     private Long EnableScope;
 
     /**
-     * Get 应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa) 
-     * @return BotBizId 应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+     * Get 应用ID。应用ID 获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+导入知识库文档时，该参数填入知识库 ID。
+ 
+     * @return BotBizId 应用ID。应用ID 获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+导入知识库文档时，该参数填入知识库 ID。
+
      */
     public String getBotBizId() {
         return this.BotBizId;
     }
 
     /**
-     * Set 应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
-     * @param BotBizId 应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+     * Set 应用ID。应用ID 获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+导入知识库文档时，该参数填入知识库 ID。
+
+     * @param BotBizId 应用ID。应用ID 获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+导入知识库文档时，该参数填入知识库 ID。
+
      */
     public void setBotBizId(String BotBizId) {
         this.BotBizId = BotBizId;

@@ -31,7 +31,8 @@ public class DeleteDocRequest extends AbstractModel {
     private String [] DocBizIds;
 
     /**
-    * 应用ID
+    * 应用ID。
+删除知识库文档时，该参数填入知识库ID。
     */
     @SerializedName("BotBizId")
     @Expose
@@ -54,16 +55,20 @@ public class DeleteDocRequest extends AbstractModel {
     }
 
     /**
-     * Get 应用ID 
-     * @return BotBizId 应用ID
+     * Get 应用ID。
+删除知识库文档时，该参数填入知识库ID。 
+     * @return BotBizId 应用ID。
+删除知识库文档时，该参数填入知识库ID。
      */
     public String getBotBizId() {
         return this.BotBizId;
     }
 
     /**
-     * Set 应用ID
-     * @param BotBizId 应用ID
+     * Set 应用ID。
+删除知识库文档时，该参数填入知识库ID。
+     * @param BotBizId 应用ID。
+删除知识库文档时，该参数填入知识库ID。
      */
     public void setBotBizId(String BotBizId) {
         this.BotBizId = BotBizId;

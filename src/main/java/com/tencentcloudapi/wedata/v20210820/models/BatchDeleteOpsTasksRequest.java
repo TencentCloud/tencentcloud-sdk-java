@@ -54,6 +54,13 @@ false:  不通知下游任务责任人
     private String ProjectId;
 
     /**
+    * 删除任务时是否删除脚本文件
+    */
+    @SerializedName("DeleteScript")
+    @Expose
+    private Boolean DeleteScript;
+
+    /**
      * Get 批量删除的任务TaskId 
      * @return TaskIdList 批量删除的任务TaskId
      */
@@ -125,6 +132,22 @@ false:  不通知下游任务责任人
         this.ProjectId = ProjectId;
     }
 
+    /**
+     * Get 删除任务时是否删除脚本文件 
+     * @return DeleteScript 删除任务时是否删除脚本文件
+     */
+    public Boolean getDeleteScript() {
+        return this.DeleteScript;
+    }
+
+    /**
+     * Set 删除任务时是否删除脚本文件
+     * @param DeleteScript 删除任务时是否删除脚本文件
+     */
+    public void setDeleteScript(Boolean DeleteScript) {
+        this.DeleteScript = DeleteScript;
+    }
+
     public BatchDeleteOpsTasksRequest() {
     }
 
@@ -148,6 +171,9 @@ false:  不通知下游任务责任人
         if (source.ProjectId != null) {
             this.ProjectId = new String(source.ProjectId);
         }
+        if (source.DeleteScript != null) {
+            this.DeleteScript = new Boolean(source.DeleteScript);
+        }
     }
 
 
@@ -159,6 +185,7 @@ false:  不通知下游任务责任人
         this.setParamSimple(map, prefix + "DeleteMode", this.DeleteMode);
         this.setParamSimple(map, prefix + "EnableNotify", this.EnableNotify);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "DeleteScript", this.DeleteScript);
 
     }
 }

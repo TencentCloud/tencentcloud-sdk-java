@@ -36,7 +36,7 @@ public class CreatePurgeTaskRequest extends AbstractModel {
 <li>purge_url：URL刷新；</li>
 <li>purge_prefix：目录刷新；</li>
 <li>purge_host：Hostname 刷新；</li>
-<li>purge_all：站点下全部缓存刷新；</li>
+<li>purge_all：站点下全部缓存刷新（取该值时不支持 ZoneId 入参为 *）；</li>
 <li>purge_cache_tag：cache-tag 刷新。</li>缓存清除类型详情请查看[清除缓存](https://cloud.tencent.com/document/product/1552/70759)。
     */
     @SerializedName("Type")
@@ -97,13 +97,13 @@ public class CreatePurgeTaskRequest extends AbstractModel {
 <li>purge_url：URL刷新；</li>
 <li>purge_prefix：目录刷新；</li>
 <li>purge_host：Hostname 刷新；</li>
-<li>purge_all：站点下全部缓存刷新；</li>
+<li>purge_all：站点下全部缓存刷新（取该值时不支持 ZoneId 入参为 *）；</li>
 <li>purge_cache_tag：cache-tag 刷新。</li>缓存清除类型详情请查看[清除缓存](https://cloud.tencent.com/document/product/1552/70759)。 
      * @return Type 节点缓存清除类型，取值有：
 <li>purge_url：URL刷新；</li>
 <li>purge_prefix：目录刷新；</li>
 <li>purge_host：Hostname 刷新；</li>
-<li>purge_all：站点下全部缓存刷新；</li>
+<li>purge_all：站点下全部缓存刷新（取该值时不支持 ZoneId 入参为 *）；</li>
 <li>purge_cache_tag：cache-tag 刷新。</li>缓存清除类型详情请查看[清除缓存](https://cloud.tencent.com/document/product/1552/70759)。
      */
     public String getType() {
@@ -115,13 +115,13 @@ public class CreatePurgeTaskRequest extends AbstractModel {
 <li>purge_url：URL刷新；</li>
 <li>purge_prefix：目录刷新；</li>
 <li>purge_host：Hostname 刷新；</li>
-<li>purge_all：站点下全部缓存刷新；</li>
+<li>purge_all：站点下全部缓存刷新（取该值时不支持 ZoneId 入参为 *）；</li>
 <li>purge_cache_tag：cache-tag 刷新。</li>缓存清除类型详情请查看[清除缓存](https://cloud.tencent.com/document/product/1552/70759)。
      * @param Type 节点缓存清除类型，取值有：
 <li>purge_url：URL刷新；</li>
 <li>purge_prefix：目录刷新；</li>
 <li>purge_host：Hostname 刷新；</li>
-<li>purge_all：站点下全部缓存刷新；</li>
+<li>purge_all：站点下全部缓存刷新（取该值时不支持 ZoneId 入参为 *）；</li>
 <li>purge_cache_tag：cache-tag 刷新。</li>缓存清除类型详情请查看[清除缓存](https://cloud.tencent.com/document/product/1552/70759)。
      */
     public void setType(String Type) {

@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class SyncDubbingResponse extends AbstractModel {
 
     /**
-    * 错误码，成功时返回0
+    * <p>错误码，成功时返回0</p>
     */
     @SerializedName("ErrorCode")
     @Expose
     private Long ErrorCode;
 
     /**
-    * 错误信息，成功时返回success
+    * <p>错误信息，成功时返回success</p>
     */
     @SerializedName("Msg")
     @Expose
     private String Msg;
 
     /**
-    * 合成音频的base64编码，wav格式。
+    * <p>合成音频的base64编码，wav格式。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AudioData")
@@ -46,7 +46,7 @@ public class SyncDubbingResponse extends AbstractModel {
     private String AudioData;
 
     /**
-    * 克隆的音色Id。
+    * <p>克隆的音色Id。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VoiceId")
@@ -61,41 +61,41 @@ public class SyncDubbingResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 错误码，成功时返回0 
-     * @return ErrorCode 错误码，成功时返回0
+     * Get <p>错误码，成功时返回0</p> 
+     * @return ErrorCode <p>错误码，成功时返回0</p>
      */
     public Long getErrorCode() {
         return this.ErrorCode;
     }
 
     /**
-     * Set 错误码，成功时返回0
-     * @param ErrorCode 错误码，成功时返回0
+     * Set <p>错误码，成功时返回0</p>
+     * @param ErrorCode <p>错误码，成功时返回0</p>
      */
     public void setErrorCode(Long ErrorCode) {
         this.ErrorCode = ErrorCode;
     }
 
     /**
-     * Get 错误信息，成功时返回success 
-     * @return Msg 错误信息，成功时返回success
+     * Get <p>错误信息，成功时返回success</p> 
+     * @return Msg <p>错误信息，成功时返回success</p>
      */
     public String getMsg() {
         return this.Msg;
     }
 
     /**
-     * Set 错误信息，成功时返回success
-     * @param Msg 错误信息，成功时返回success
+     * Set <p>错误信息，成功时返回success</p>
+     * @param Msg <p>错误信息，成功时返回success</p>
      */
     public void setMsg(String Msg) {
         this.Msg = Msg;
     }
 
     /**
-     * Get 合成音频的base64编码，wav格式。
+     * Get <p>合成音频的base64编码，wav格式。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AudioData 合成音频的base64编码，wav格式。
+     * @return AudioData <p>合成音频的base64编码，wav格式。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAudioData() {
@@ -103,9 +103,9 @@ public class SyncDubbingResponse extends AbstractModel {
     }
 
     /**
-     * Set 合成音频的base64编码，wav格式。
+     * Set <p>合成音频的base64编码，wav格式。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AudioData 合成音频的base64编码，wav格式。
+     * @param AudioData <p>合成音频的base64编码，wav格式。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAudioData(String AudioData) {
@@ -113,9 +113,9 @@ public class SyncDubbingResponse extends AbstractModel {
     }
 
     /**
-     * Get 克隆的音色Id。
+     * Get <p>克隆的音色Id。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VoiceId 克隆的音色Id。
+     * @return VoiceId <p>克隆的音色Id。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVoiceId() {
@@ -123,9 +123,9 @@ public class SyncDubbingResponse extends AbstractModel {
     }
 
     /**
-     * Set 克隆的音色Id。
+     * Set <p>克隆的音色Id。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VoiceId 克隆的音色Id。
+     * @param VoiceId <p>克隆的音色Id。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVoiceId(String VoiceId) {

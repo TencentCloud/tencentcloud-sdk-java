@@ -24,94 +24,72 @@ import java.util.HashMap;
 public class ExtraParam extends AbstractModel {
 
     /**
-    * 预签名的上传url，支持把视频直接传到客户指定的地址。
+    * <p>预签名的上传url，支持把视频直接传到客户指定的地址。</p>
     */
     @SerializedName("UserDesignatedUrl")
     @Expose
     private String UserDesignatedUrl;
 
     /**
-    * 回调地址
-需要您在创建任务时主动设置 CallbackUrl，请求方法为 POST，当视频生成结束时，我们将向此地址发送生成结果。
-数据格式如下：
-{
-    "JobId": "1397428070633955328",
-    "Status": "DONE",
-    "ErrorCode": "",
-    "ErrorMessage": "",
-    "ResultVideoUrl": "https://vcg.cos.tencentcos.cn/template_to_video/fa80b846-b933-4981-afad-8a39b46ef2ca.mp4"
-}
+    * <p>回调地址<br>需要您在创建任务时主动设置 CallbackUrl，请求方法为 POST，当视频生成结束时，我们将向此地址发送生成结果。<br>数据格式如下：<br>{<br>    &quot;JobId&quot;: &quot;1397428070633955328&quot;,<br>    &quot;Status&quot;: &quot;DONE&quot;,<br>    &quot;ErrorCode&quot;: &quot;&quot;,<br>    &quot;ErrorMessage&quot;: &quot;&quot;,<br>    &quot;ResultVideoUrl&quot;: &quot;https://vcg.cos.tencentcos.cn/template_to_video/fa80b846-b933-4981-afad-8a39b46ef2ca.mp4&quot;<br>}</p>
     */
     @SerializedName("CallbackUrl")
     @Expose
     private String CallbackUrl;
 
     /**
-     * Get 预签名的上传url，支持把视频直接传到客户指定的地址。 
-     * @return UserDesignatedUrl 预签名的上传url，支持把视频直接传到客户指定的地址。
+    * <p>BGM音频文本。</p>
+    */
+    @SerializedName("BGMText")
+    @Expose
+    private String BGMText;
+
+    /**
+     * Get <p>预签名的上传url，支持把视频直接传到客户指定的地址。</p> 
+     * @return UserDesignatedUrl <p>预签名的上传url，支持把视频直接传到客户指定的地址。</p>
      */
     public String getUserDesignatedUrl() {
         return this.UserDesignatedUrl;
     }
 
     /**
-     * Set 预签名的上传url，支持把视频直接传到客户指定的地址。
-     * @param UserDesignatedUrl 预签名的上传url，支持把视频直接传到客户指定的地址。
+     * Set <p>预签名的上传url，支持把视频直接传到客户指定的地址。</p>
+     * @param UserDesignatedUrl <p>预签名的上传url，支持把视频直接传到客户指定的地址。</p>
      */
     public void setUserDesignatedUrl(String UserDesignatedUrl) {
         this.UserDesignatedUrl = UserDesignatedUrl;
     }
 
     /**
-     * Get 回调地址
-需要您在创建任务时主动设置 CallbackUrl，请求方法为 POST，当视频生成结束时，我们将向此地址发送生成结果。
-数据格式如下：
-{
-    "JobId": "1397428070633955328",
-    "Status": "DONE",
-    "ErrorCode": "",
-    "ErrorMessage": "",
-    "ResultVideoUrl": "https://vcg.cos.tencentcos.cn/template_to_video/fa80b846-b933-4981-afad-8a39b46ef2ca.mp4"
-} 
-     * @return CallbackUrl 回调地址
-需要您在创建任务时主动设置 CallbackUrl，请求方法为 POST，当视频生成结束时，我们将向此地址发送生成结果。
-数据格式如下：
-{
-    "JobId": "1397428070633955328",
-    "Status": "DONE",
-    "ErrorCode": "",
-    "ErrorMessage": "",
-    "ResultVideoUrl": "https://vcg.cos.tencentcos.cn/template_to_video/fa80b846-b933-4981-afad-8a39b46ef2ca.mp4"
-}
+     * Get <p>回调地址<br>需要您在创建任务时主动设置 CallbackUrl，请求方法为 POST，当视频生成结束时，我们将向此地址发送生成结果。<br>数据格式如下：<br>{<br>    &quot;JobId&quot;: &quot;1397428070633955328&quot;,<br>    &quot;Status&quot;: &quot;DONE&quot;,<br>    &quot;ErrorCode&quot;: &quot;&quot;,<br>    &quot;ErrorMessage&quot;: &quot;&quot;,<br>    &quot;ResultVideoUrl&quot;: &quot;https://vcg.cos.tencentcos.cn/template_to_video/fa80b846-b933-4981-afad-8a39b46ef2ca.mp4&quot;<br>}</p> 
+     * @return CallbackUrl <p>回调地址<br>需要您在创建任务时主动设置 CallbackUrl，请求方法为 POST，当视频生成结束时，我们将向此地址发送生成结果。<br>数据格式如下：<br>{<br>    &quot;JobId&quot;: &quot;1397428070633955328&quot;,<br>    &quot;Status&quot;: &quot;DONE&quot;,<br>    &quot;ErrorCode&quot;: &quot;&quot;,<br>    &quot;ErrorMessage&quot;: &quot;&quot;,<br>    &quot;ResultVideoUrl&quot;: &quot;https://vcg.cos.tencentcos.cn/template_to_video/fa80b846-b933-4981-afad-8a39b46ef2ca.mp4&quot;<br>}</p>
      */
     public String getCallbackUrl() {
         return this.CallbackUrl;
     }
 
     /**
-     * Set 回调地址
-需要您在创建任务时主动设置 CallbackUrl，请求方法为 POST，当视频生成结束时，我们将向此地址发送生成结果。
-数据格式如下：
-{
-    "JobId": "1397428070633955328",
-    "Status": "DONE",
-    "ErrorCode": "",
-    "ErrorMessage": "",
-    "ResultVideoUrl": "https://vcg.cos.tencentcos.cn/template_to_video/fa80b846-b933-4981-afad-8a39b46ef2ca.mp4"
-}
-     * @param CallbackUrl 回调地址
-需要您在创建任务时主动设置 CallbackUrl，请求方法为 POST，当视频生成结束时，我们将向此地址发送生成结果。
-数据格式如下：
-{
-    "JobId": "1397428070633955328",
-    "Status": "DONE",
-    "ErrorCode": "",
-    "ErrorMessage": "",
-    "ResultVideoUrl": "https://vcg.cos.tencentcos.cn/template_to_video/fa80b846-b933-4981-afad-8a39b46ef2ca.mp4"
-}
+     * Set <p>回调地址<br>需要您在创建任务时主动设置 CallbackUrl，请求方法为 POST，当视频生成结束时，我们将向此地址发送生成结果。<br>数据格式如下：<br>{<br>    &quot;JobId&quot;: &quot;1397428070633955328&quot;,<br>    &quot;Status&quot;: &quot;DONE&quot;,<br>    &quot;ErrorCode&quot;: &quot;&quot;,<br>    &quot;ErrorMessage&quot;: &quot;&quot;,<br>    &quot;ResultVideoUrl&quot;: &quot;https://vcg.cos.tencentcos.cn/template_to_video/fa80b846-b933-4981-afad-8a39b46ef2ca.mp4&quot;<br>}</p>
+     * @param CallbackUrl <p>回调地址<br>需要您在创建任务时主动设置 CallbackUrl，请求方法为 POST，当视频生成结束时，我们将向此地址发送生成结果。<br>数据格式如下：<br>{<br>    &quot;JobId&quot;: &quot;1397428070633955328&quot;,<br>    &quot;Status&quot;: &quot;DONE&quot;,<br>    &quot;ErrorCode&quot;: &quot;&quot;,<br>    &quot;ErrorMessage&quot;: &quot;&quot;,<br>    &quot;ResultVideoUrl&quot;: &quot;https://vcg.cos.tencentcos.cn/template_to_video/fa80b846-b933-4981-afad-8a39b46ef2ca.mp4&quot;<br>}</p>
      */
     public void setCallbackUrl(String CallbackUrl) {
         this.CallbackUrl = CallbackUrl;
+    }
+
+    /**
+     * Get <p>BGM音频文本。</p> 
+     * @return BGMText <p>BGM音频文本。</p>
+     */
+    public String getBGMText() {
+        return this.BGMText;
+    }
+
+    /**
+     * Set <p>BGM音频文本。</p>
+     * @param BGMText <p>BGM音频文本。</p>
+     */
+    public void setBGMText(String BGMText) {
+        this.BGMText = BGMText;
     }
 
     public ExtraParam() {
@@ -128,6 +106,9 @@ public class ExtraParam extends AbstractModel {
         if (source.CallbackUrl != null) {
             this.CallbackUrl = new String(source.CallbackUrl);
         }
+        if (source.BGMText != null) {
+            this.BGMText = new String(source.BGMText);
+        }
     }
 
 
@@ -137,6 +118,7 @@ public class ExtraParam extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "UserDesignatedUrl", this.UserDesignatedUrl);
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
+        this.setParamSimple(map, prefix + "BGMText", this.BGMText);
 
     }
 }

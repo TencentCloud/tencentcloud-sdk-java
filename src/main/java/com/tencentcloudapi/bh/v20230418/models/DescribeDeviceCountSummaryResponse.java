@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ses.v20201002.models;
+package com.tencentcloudapi.bh.v20230418.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SendEmailResponse extends AbstractModel {
+public class DescribeDeviceCountSummaryResponse extends AbstractModel {
 
     /**
-    * <p>接受消息生成的唯一消息标识符。</p>
+    * 各种类型的资产总数
     */
-    @SerializedName("MessageId")
+    @SerializedName("DeviceCountSet")
     @Expose
-    private String MessageId;
+    private DeviceCount [] DeviceCountSet;
+
+    /**
+    * 各种类型应用资产总数
+    */
+    @SerializedName("AppAssetCountSet")
+    @Expose
+    private DeviceCount [] AppAssetCountSet;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +45,35 @@ public class SendEmailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>接受消息生成的唯一消息标识符。</p> 
-     * @return MessageId <p>接受消息生成的唯一消息标识符。</p>
+     * Get 各种类型的资产总数 
+     * @return DeviceCountSet 各种类型的资产总数
      */
-    public String getMessageId() {
-        return this.MessageId;
+    public DeviceCount [] getDeviceCountSet() {
+        return this.DeviceCountSet;
     }
 
     /**
-     * Set <p>接受消息生成的唯一消息标识符。</p>
-     * @param MessageId <p>接受消息生成的唯一消息标识符。</p>
+     * Set 各种类型的资产总数
+     * @param DeviceCountSet 各种类型的资产总数
      */
-    public void setMessageId(String MessageId) {
-        this.MessageId = MessageId;
+    public void setDeviceCountSet(DeviceCount [] DeviceCountSet) {
+        this.DeviceCountSet = DeviceCountSet;
+    }
+
+    /**
+     * Get 各种类型应用资产总数 
+     * @return AppAssetCountSet 各种类型应用资产总数
+     */
+    public DeviceCount [] getAppAssetCountSet() {
+        return this.AppAssetCountSet;
+    }
+
+    /**
+     * Set 各种类型应用资产总数
+     * @param AppAssetCountSet 各种类型应用资产总数
+     */
+    public void setAppAssetCountSet(DeviceCount [] AppAssetCountSet) {
+        this.AppAssetCountSet = AppAssetCountSet;
     }
 
     /**
@@ -69,16 +92,25 @@ public class SendEmailResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public SendEmailResponse() {
+    public DescribeDeviceCountSummaryResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public SendEmailResponse(SendEmailResponse source) {
-        if (source.MessageId != null) {
-            this.MessageId = new String(source.MessageId);
+    public DescribeDeviceCountSummaryResponse(DescribeDeviceCountSummaryResponse source) {
+        if (source.DeviceCountSet != null) {
+            this.DeviceCountSet = new DeviceCount[source.DeviceCountSet.length];
+            for (int i = 0; i < source.DeviceCountSet.length; i++) {
+                this.DeviceCountSet[i] = new DeviceCount(source.DeviceCountSet[i]);
+            }
+        }
+        if (source.AppAssetCountSet != null) {
+            this.AppAssetCountSet = new DeviceCount[source.AppAssetCountSet.length];
+            for (int i = 0; i < source.AppAssetCountSet.length; i++) {
+                this.AppAssetCountSet[i] = new DeviceCount(source.AppAssetCountSet[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +122,8 @@ public class SendEmailResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "MessageId", this.MessageId);
+        this.setParamArrayObj(map, prefix + "DeviceCountSet.", this.DeviceCountSet);
+        this.setParamArrayObj(map, prefix + "AppAssetCountSet.", this.AppAssetCountSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

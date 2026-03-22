@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeAvailableZoneInfoResponse extends AbstractModel {
 
     /**
-    * 各可用区的资源售卖情况以及支持的存储类型、存储协议等信息
+    * <p>各可用区的资源售卖情况以及支持的存储类型、存储协议等信息</p>
     */
     @SerializedName("RegionZones")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeAvailableZoneInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 各可用区的资源售卖情况以及支持的存储类型、存储协议等信息 
-     * @return RegionZones 各可用区的资源售卖情况以及支持的存储类型、存储协议等信息
+     * Get <p>各可用区的资源售卖情况以及支持的存储类型、存储协议等信息</p> 
+     * @return RegionZones <p>各可用区的资源售卖情况以及支持的存储类型、存储协议等信息</p>
      */
     public AvailableRegion [] getRegionZones() {
         return this.RegionZones;
     }
 
     /**
-     * Set 各可用区的资源售卖情况以及支持的存储类型、存储协议等信息
-     * @param RegionZones 各可用区的资源售卖情况以及支持的存储类型、存储协议等信息
+     * Set <p>各可用区的资源售卖情况以及支持的存储类型、存储协议等信息</p>
+     * @param RegionZones <p>各可用区的资源售卖情况以及支持的存储类型、存储协议等信息</p>
      */
     public void setRegionZones(AvailableRegion [] RegionZones) {
         this.RegionZones = RegionZones;

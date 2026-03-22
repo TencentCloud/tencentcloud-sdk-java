@@ -1825,6 +1825,17 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
     }
 
     /**
+     *本接口用于创建OpenClaw依赖的资源与索引
+     * @param req OpenClawServiceRequest
+     * @return OpenClawServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenClawServiceResponse OpenClawService(OpenClawServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "OpenClawService", OpenClawServiceResponse.class);
+    }
+
+    /**
      *打开Kafka协议消费功能
      * @param req OpenKafkaConsumerRequest
      * @return OpenKafkaConsumerResponse

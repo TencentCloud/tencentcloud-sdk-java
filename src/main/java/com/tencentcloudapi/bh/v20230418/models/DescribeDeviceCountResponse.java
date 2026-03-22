@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ses.v20201002.models;
+package com.tencentcloudapi.bh.v20230418.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SendEmailResponse extends AbstractModel {
+public class DescribeDeviceCountResponse extends AbstractModel {
 
     /**
-    * <p>接受消息生成的唯一消息标识符。</p>
+    * 主机总数
     */
-    @SerializedName("MessageId")
+    @SerializedName("TotalCount")
     @Expose
-    private String MessageId;
+    private Long TotalCount;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +38,19 @@ public class SendEmailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>接受消息生成的唯一消息标识符。</p> 
-     * @return MessageId <p>接受消息生成的唯一消息标识符。</p>
+     * Get 主机总数 
+     * @return TotalCount 主机总数
      */
-    public String getMessageId() {
-        return this.MessageId;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set <p>接受消息生成的唯一消息标识符。</p>
-     * @param MessageId <p>接受消息生成的唯一消息标识符。</p>
+     * Set 主机总数
+     * @param TotalCount 主机总数
      */
-    public void setMessageId(String MessageId) {
-        this.MessageId = MessageId;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -69,16 +69,16 @@ public class SendEmailResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public SendEmailResponse() {
+    public DescribeDeviceCountResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public SendEmailResponse(SendEmailResponse source) {
-        if (source.MessageId != null) {
-            this.MessageId = new String(source.MessageId);
+    public DescribeDeviceCountResponse(DescribeDeviceCountResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +90,7 @@ public class SendEmailResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "MessageId", this.MessageId);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -24,135 +24,115 @@ import java.util.HashMap;
 public class DescribeAssetImageListRequest extends AbstractModel {
 
     /**
-    * 需要返回的数量，默认为10，最大值为100
+    * <p>需要返回的数量，默认为10，最大值为100</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量，默认为0。
+    * <p>偏移量，默认为0。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 过滤条件。
-<li>ImageName- String - 是否必填：否 - 镜像名称筛选，</li>
-<li>ScanStatus - String - 是否必填：否 - 镜像扫描状态notScan，scanning，scanned，scanErr</li>
-<li>ImageID- String - 是否必填：否 - 镜像ID筛选，</li>
-<li>SecurityRisk- String - 是否必填：否 - 安全风险，VulCnt 、VirusCnt、RiskCnt、IsTrustImage</li>
+    * <p>过滤条件。</p><li>ImageName- String - 是否必填：否 - 镜像名称筛选，</li><li>ScanStatus - String - 是否必填：否 - 镜像扫描状态notScan，scanning，scanned，scanErr</li><li>ImageID- String - 是否必填：否 - 镜像ID筛选，</li><li>SecurityRisk- String - 是否必填：否 - 安全风险，VirusCnt、RiskCnt、IsTrustImage、CriticalLevelVul、HighLevelVul、MediumLevelVul、LowLevelVul</li>
     */
     @SerializedName("Filters")
     @Expose
     private AssetFilters [] Filters;
 
     /**
-    * 排序字段
+    * <p>排序字段</p>
     */
     @SerializedName("By")
     @Expose
     private String By;
 
     /**
-    * 排序方式 asc,desc
+    * <p>排序方式 asc,desc</p>
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-     * Get 需要返回的数量，默认为10，最大值为100 
-     * @return Limit 需要返回的数量，默认为10，最大值为100
+     * Get <p>需要返回的数量，默认为10，最大值为100</p> 
+     * @return Limit <p>需要返回的数量，默认为10，最大值为100</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 需要返回的数量，默认为10，最大值为100
-     * @param Limit 需要返回的数量，默认为10，最大值为100
+     * Set <p>需要返回的数量，默认为10，最大值为100</p>
+     * @param Limit <p>需要返回的数量，默认为10，最大值为100</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量，默认为0。 
-     * @return Offset 偏移量，默认为0。
+     * Get <p>偏移量，默认为0。</p> 
+     * @return Offset <p>偏移量，默认为0。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为0。
-     * @param Offset 偏移量，默认为0。
+     * Set <p>偏移量，默认为0。</p>
+     * @param Offset <p>偏移量，默认为0。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 过滤条件。
-<li>ImageName- String - 是否必填：否 - 镜像名称筛选，</li>
-<li>ScanStatus - String - 是否必填：否 - 镜像扫描状态notScan，scanning，scanned，scanErr</li>
-<li>ImageID- String - 是否必填：否 - 镜像ID筛选，</li>
-<li>SecurityRisk- String - 是否必填：否 - 安全风险，VulCnt 、VirusCnt、RiskCnt、IsTrustImage</li> 
-     * @return Filters 过滤条件。
-<li>ImageName- String - 是否必填：否 - 镜像名称筛选，</li>
-<li>ScanStatus - String - 是否必填：否 - 镜像扫描状态notScan，scanning，scanned，scanErr</li>
-<li>ImageID- String - 是否必填：否 - 镜像ID筛选，</li>
-<li>SecurityRisk- String - 是否必填：否 - 安全风险，VulCnt 、VirusCnt、RiskCnt、IsTrustImage</li>
+     * Get <p>过滤条件。</p><li>ImageName- String - 是否必填：否 - 镜像名称筛选，</li><li>ScanStatus - String - 是否必填：否 - 镜像扫描状态notScan，scanning，scanned，scanErr</li><li>ImageID- String - 是否必填：否 - 镜像ID筛选，</li><li>SecurityRisk- String - 是否必填：否 - 安全风险，VirusCnt、RiskCnt、IsTrustImage、CriticalLevelVul、HighLevelVul、MediumLevelVul、LowLevelVul</li> 
+     * @return Filters <p>过滤条件。</p><li>ImageName- String - 是否必填：否 - 镜像名称筛选，</li><li>ScanStatus - String - 是否必填：否 - 镜像扫描状态notScan，scanning，scanned，scanErr</li><li>ImageID- String - 是否必填：否 - 镜像ID筛选，</li><li>SecurityRisk- String - 是否必填：否 - 安全风险，VirusCnt、RiskCnt、IsTrustImage、CriticalLevelVul、HighLevelVul、MediumLevelVul、LowLevelVul</li>
      */
     public AssetFilters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件。
-<li>ImageName- String - 是否必填：否 - 镜像名称筛选，</li>
-<li>ScanStatus - String - 是否必填：否 - 镜像扫描状态notScan，scanning，scanned，scanErr</li>
-<li>ImageID- String - 是否必填：否 - 镜像ID筛选，</li>
-<li>SecurityRisk- String - 是否必填：否 - 安全风险，VulCnt 、VirusCnt、RiskCnt、IsTrustImage</li>
-     * @param Filters 过滤条件。
-<li>ImageName- String - 是否必填：否 - 镜像名称筛选，</li>
-<li>ScanStatus - String - 是否必填：否 - 镜像扫描状态notScan，scanning，scanned，scanErr</li>
-<li>ImageID- String - 是否必填：否 - 镜像ID筛选，</li>
-<li>SecurityRisk- String - 是否必填：否 - 安全风险，VulCnt 、VirusCnt、RiskCnt、IsTrustImage</li>
+     * Set <p>过滤条件。</p><li>ImageName- String - 是否必填：否 - 镜像名称筛选，</li><li>ScanStatus - String - 是否必填：否 - 镜像扫描状态notScan，scanning，scanned，scanErr</li><li>ImageID- String - 是否必填：否 - 镜像ID筛选，</li><li>SecurityRisk- String - 是否必填：否 - 安全风险，VirusCnt、RiskCnt、IsTrustImage、CriticalLevelVul、HighLevelVul、MediumLevelVul、LowLevelVul</li>
+     * @param Filters <p>过滤条件。</p><li>ImageName- String - 是否必填：否 - 镜像名称筛选，</li><li>ScanStatus - String - 是否必填：否 - 镜像扫描状态notScan，scanning，scanned，scanErr</li><li>ImageID- String - 是否必填：否 - 镜像ID筛选，</li><li>SecurityRisk- String - 是否必填：否 - 安全风险，VirusCnt、RiskCnt、IsTrustImage、CriticalLevelVul、HighLevelVul、MediumLevelVul、LowLevelVul</li>
      */
     public void setFilters(AssetFilters [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 排序字段 
-     * @return By 排序字段
+     * Get <p>排序字段</p> 
+     * @return By <p>排序字段</p>
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set 排序字段
-     * @param By 排序字段
+     * Set <p>排序字段</p>
+     * @param By <p>排序字段</p>
      */
     public void setBy(String By) {
         this.By = By;
     }
 
     /**
-     * Get 排序方式 asc,desc 
-     * @return Order 排序方式 asc,desc
+     * Get <p>排序方式 asc,desc</p> 
+     * @return Order <p>排序方式 asc,desc</p>
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set 排序方式 asc,desc
-     * @param Order 排序方式 asc,desc
+     * Set <p>排序方式 asc,desc</p>
+     * @param Order <p>排序方式 asc,desc</p>
      */
     public void setOrder(String Order) {
         this.Order = Order;

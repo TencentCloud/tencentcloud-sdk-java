@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class MorphFaceResponse extends AbstractModel {
 
     /**
-    * 人像渐变任务的Job id
+    * <p>人像渐变任务的Job id</p>
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-    * 预估处理时间，粒度为秒
+    * <p>预估处理时间，粒度为秒</p>
     */
     @SerializedName("EstimatedProcessTime")
     @Expose
@@ -45,32 +45,32 @@ public class MorphFaceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 人像渐变任务的Job id 
-     * @return JobId 人像渐变任务的Job id
+     * Get <p>人像渐变任务的Job id</p> 
+     * @return JobId <p>人像渐变任务的Job id</p>
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 人像渐变任务的Job id
-     * @param JobId 人像渐变任务的Job id
+     * Set <p>人像渐变任务的Job id</p>
+     * @param JobId <p>人像渐变任务的Job id</p>
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get 预估处理时间，粒度为秒 
-     * @return EstimatedProcessTime 预估处理时间，粒度为秒
+     * Get <p>预估处理时间，粒度为秒</p> 
+     * @return EstimatedProcessTime <p>预估处理时间，粒度为秒</p>
      */
     public Long getEstimatedProcessTime() {
         return this.EstimatedProcessTime;
     }
 
     /**
-     * Set 预估处理时间，粒度为秒
-     * @param EstimatedProcessTime 预估处理时间，粒度为秒
+     * Set <p>预估处理时间，粒度为秒</p>
+     * @param EstimatedProcessTime <p>预估处理时间，粒度为秒</p>
      */
     public void setEstimatedProcessTime(Long EstimatedProcessTime) {
         this.EstimatedProcessTime = EstimatedProcessTime;

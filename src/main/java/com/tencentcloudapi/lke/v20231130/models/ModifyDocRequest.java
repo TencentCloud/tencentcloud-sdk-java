@@ -25,6 +25,7 @@ public class ModifyDocRequest extends AbstractModel {
 
     /**
     * 应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+修改知识库文档时，该参数填入知识库ID。
     */
     @SerializedName("BotBizId")
     @Expose
@@ -145,8 +146,10 @@ public class ModifyDocRequest extends AbstractModel {
     private Long EnableScope;
 
     /**
-     * Get 应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa) 
+     * Get 应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+修改知识库文档时，该参数填入知识库ID。 
      * @return BotBizId 应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+修改知识库文档时，该参数填入知识库ID。
      */
     public String getBotBizId() {
         return this.BotBizId;
@@ -154,7 +157,9 @@ public class ModifyDocRequest extends AbstractModel {
 
     /**
      * Set 应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+修改知识库文档时，该参数填入知识库ID。
      * @param BotBizId 应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+修改知识库文档时，该参数填入知识库ID。
      */
     public void setBotBizId(String BotBizId) {
         this.BotBizId = BotBizId;
