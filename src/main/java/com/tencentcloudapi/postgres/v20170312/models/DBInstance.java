@@ -313,6 +313,13 @@ public class DBInstance extends AbstractModel {
     private Boolean DeletionProtection;
 
     /**
+    * <p>实例存储类型，可选值：PHYSICAL_LOCAL_SSD：物理机本地ssd硬盘 CLOUD_PREMIUM：高性能云硬盘 CLOUD_SSD：ssd云硬盘 CLOUD_HSSD：增强型ssd云硬盘</p>
+    */
+    @SerializedName("DBInstanceStorageType")
+    @Expose
+    private String DBInstanceStorageType;
+
+    /**
      * Get <p>实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段。</p> 
      * @return Region <p>实例所属地域，如: ap-guangzhou，对应RegionSet的Region字段。</p>
      */
@@ -976,6 +983,22 @@ public class DBInstance extends AbstractModel {
         this.DeletionProtection = DeletionProtection;
     }
 
+    /**
+     * Get <p>实例存储类型，可选值：PHYSICAL_LOCAL_SSD：物理机本地ssd硬盘 CLOUD_PREMIUM：高性能云硬盘 CLOUD_SSD：ssd云硬盘 CLOUD_HSSD：增强型ssd云硬盘</p> 
+     * @return DBInstanceStorageType <p>实例存储类型，可选值：PHYSICAL_LOCAL_SSD：物理机本地ssd硬盘 CLOUD_PREMIUM：高性能云硬盘 CLOUD_SSD：ssd云硬盘 CLOUD_HSSD：增强型ssd云硬盘</p>
+     */
+    public String getDBInstanceStorageType() {
+        return this.DBInstanceStorageType;
+    }
+
+    /**
+     * Set <p>实例存储类型，可选值：PHYSICAL_LOCAL_SSD：物理机本地ssd硬盘 CLOUD_PREMIUM：高性能云硬盘 CLOUD_SSD：ssd云硬盘 CLOUD_HSSD：增强型ssd云硬盘</p>
+     * @param DBInstanceStorageType <p>实例存储类型，可选值：PHYSICAL_LOCAL_SSD：物理机本地ssd硬盘 CLOUD_PREMIUM：高性能云硬盘 CLOUD_SSD：ssd云硬盘 CLOUD_HSSD：增强型ssd云硬盘</p>
+     */
+    public void setDBInstanceStorageType(String DBInstanceStorageType) {
+        this.DBInstanceStorageType = DBInstanceStorageType;
+    }
+
     public DBInstance() {
     }
 
@@ -1119,6 +1142,9 @@ public class DBInstance extends AbstractModel {
         if (source.DeletionProtection != null) {
             this.DeletionProtection = new Boolean(source.DeletionProtection);
         }
+        if (source.DBInstanceStorageType != null) {
+            this.DBInstanceStorageType = new String(source.DBInstanceStorageType);
+        }
     }
 
 
@@ -1167,6 +1193,7 @@ public class DBInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "SupportIpv6", this.SupportIpv6);
         this.setParamSimple(map, prefix + "ExpandedCpu", this.ExpandedCpu);
         this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
+        this.setParamSimple(map, prefix + "DBInstanceStorageType", this.DBInstanceStorageType);
 
     }
 }

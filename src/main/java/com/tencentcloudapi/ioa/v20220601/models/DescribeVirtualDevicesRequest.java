@@ -45,7 +45,7 @@ public class DescribeVirtualDevicesRequest extends AbstractModel {
     private Long DeviceVirtualGroupId;
 
     /**
-    * 系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0）
+    * 系统类型（0: win，1：linux，2: mac，4：android，5：ios，-1：全系统（SaaS一体化版本） ； 不传默认为0）(只支持32位)
     */
     @SerializedName("OsType")
     @Expose
@@ -107,16 +107,16 @@ public class DescribeVirtualDevicesRequest extends AbstractModel {
     }
 
     /**
-     * Get 系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0） 
-     * @return OsType 系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0）
+     * Get 系统类型（0: win，1：linux，2: mac，4：android，5：ios，-1：全系统（SaaS一体化版本） ； 不传默认为0）(只支持32位) 
+     * @return OsType 系统类型（0: win，1：linux，2: mac，4：android，5：ios，-1：全系统（SaaS一体化版本） ； 不传默认为0）(只支持32位)
      */
     public Long getOsType() {
         return this.OsType;
     }
 
     /**
-     * Set 系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0）
-     * @param OsType 系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0）
+     * Set 系统类型（0: win，1：linux，2: mac，4：android，5：ios，-1：全系统（SaaS一体化版本） ； 不传默认为0）(只支持32位)
+     * @param OsType 系统类型（0: win，1：linux，2: mac，4：android，5：ios，-1：全系统（SaaS一体化版本） ； 不传默认为0）(只支持32位)
      */
     public void setOsType(Long OsType) {
         this.OsType = OsType;

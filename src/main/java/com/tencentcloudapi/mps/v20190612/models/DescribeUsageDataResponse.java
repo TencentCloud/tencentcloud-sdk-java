@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeUsageDataResponse extends AbstractModel {
 
     /**
-    * 媒体处理统计数据概览，展示所查询任务的概览以及详细数据。
+    * <p>媒体处理统计数据概览，展示所查询任务的概览以及详细数据。</p>
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeUsageDataResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 媒体处理统计数据概览，展示所查询任务的概览以及详细数据。 
-     * @return Data 媒体处理统计数据概览，展示所查询任务的概览以及详细数据。
+     * Get <p>媒体处理统计数据概览，展示所查询任务的概览以及详细数据。</p> 
+     * @return Data <p>媒体处理统计数据概览，展示所查询任务的概览以及详细数据。</p>
      */
     public TaskStatData [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 媒体处理统计数据概览，展示所查询任务的概览以及详细数据。
-     * @param Data 媒体处理统计数据概览，展示所查询任务的概览以及详细数据。
+     * Set <p>媒体处理统计数据概览，展示所查询任务的概览以及详细数据。</p>
+     * @param Data <p>媒体处理统计数据概览，展示所查询任务的概览以及详细数据。</p>
      */
     public void setData(TaskStatData [] Data) {
         this.Data = Data;

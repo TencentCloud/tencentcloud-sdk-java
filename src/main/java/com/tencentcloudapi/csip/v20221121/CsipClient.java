@@ -116,6 +116,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *获取 AI agent 资产列表
+     * @param req DescribeAIAgentAssetListRequest
+     * @return DescribeAIAgentAssetListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAIAgentAssetListResponse DescribeAIAgentAssetList(DescribeAIAgentAssetListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAIAgentAssetList", DescribeAIAgentAssetListResponse.class);
+    }
+
+    /**
      *获取调用记录列表
      * @param req DescribeAbnormalCallRecordRequest
      * @return DescribeAbnormalCallRecordResponse

@@ -38,7 +38,8 @@ public class RenameDocRequest extends AbstractModel {
     private String LoginSubAccountUin;
 
     /**
-    * 应用ID
+    * 应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。
+重命名知识库文档时，该参数填入知识库ID。
     */
     @SerializedName("BotBizId")
     @Expose
@@ -91,16 +92,20 @@ public class RenameDocRequest extends AbstractModel {
     }
 
     /**
-     * Get 应用ID 
-     * @return BotBizId 应用ID
+     * Get 应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。
+重命名知识库文档时，该参数填入知识库ID。 
+     * @return BotBizId 应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。
+重命名知识库文档时，该参数填入知识库ID。
      */
     public String getBotBizId() {
         return this.BotBizId;
     }
 
     /**
-     * Set 应用ID
-     * @param BotBizId 应用ID
+     * Set 应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。
+重命名知识库文档时，该参数填入知识库ID。
+     * @param BotBizId 应用ID，获取方法参看[如何获取   BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。
+重命名知识库文档时，该参数填入知识库ID。
      */
     public void setBotBizId(String BotBizId) {
         this.BotBizId = BotBizId;

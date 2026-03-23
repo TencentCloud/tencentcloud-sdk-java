@@ -3573,6 +3573,17 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *补丁详情
+     * @param req DescribeSkillInfoRequest
+     * @return DescribeSkillInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSkillInfoResponse DescribeSkillInfo(DescribeSkillInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSkillInfo", DescribeSkillInfoResponse.class);
+    }
+
+    /**
      *根据策略名查询策略是否存在
      * @param req DescribeStrategyExistRequest
      * @return DescribeStrategyExistResponse

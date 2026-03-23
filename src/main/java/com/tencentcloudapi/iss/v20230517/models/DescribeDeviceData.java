@@ -24,721 +24,739 @@ import java.util.HashMap;
 public class DescribeDeviceData extends AbstractModel {
 
     /**
-    * 设备ID
+    * <p>设备ID</p>
     */
     @SerializedName("DeviceId")
     @Expose
     private String DeviceId;
 
     /**
-    * 设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）
+    * <p>设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）</p>
     */
     @SerializedName("Code")
     @Expose
     private String Code;
 
     /**
-    * 设备名称
+    * <p>设备名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 设备接入协议，1:RTMP,2:GB,3:GW 
+    * <p>设备接入协议，1:RTMP,2:GB,3:GW</p>
     */
     @SerializedName("AccessProtocol")
     @Expose
     private Long AccessProtocol;
 
     /**
-    * 设备类型，1:IPC,2:NVR
+    * <p>设备类型，1:IPC,2:NVR</p>
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 设备接入服务节点id
+    * <p>设备接入服务节点id</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 设备接入服务节点名称
-
+    * <p>设备接入服务节点名称</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * 设备流传输协议，1:UDP,2:TCP 
+    * <p>设备流传输协议，1:UDP,2:TCP</p>
     */
     @SerializedName("TransportProtocol")
     @Expose
     private Long TransportProtocol;
 
     /**
-    * 设备密码
+    * <p>设备密码</p>
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * 设备描述
+    * <p>设备描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * sip服务ID
+    * <p>sip服务ID</p>
     */
     @SerializedName("SipId")
     @Expose
     private String SipId;
 
     /**
-    * sip服务域
+    * <p>sip服务域</p>
     */
     @SerializedName("SipDomain")
     @Expose
     private String SipDomain;
 
     /**
-    * sip服务IP地址
+    * <p>sip服务IP地址</p>
     */
     @SerializedName("SipIp")
     @Expose
     private String SipIp;
 
     /**
-    * sip服务端口
+    * <p>sip服务端口</p>
     */
     @SerializedName("SipPort")
     @Expose
     private Long SipPort;
 
     /**
-    * Rtmp设备推流地址(仅rtmp设备有效)
+    * <p>Rtmp设备推流地址(仅rtmp设备有效)</p>
     */
     @SerializedName("PushStreamUrl")
     @Expose
     private String PushStreamUrl;
 
     /**
-    * 设备状态，0:未注册,1:在线,2:离线,3:禁用
+    * <p>设备状态，0:未注册,1:在线,2:离线,3:禁用</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 设备所属组织ID
+    * <p>设备所属组织ID</p>
     */
     @SerializedName("OrganizationId")
     @Expose
     private String OrganizationId;
 
     /**
-    * 设备接入网关ID，从查询网关列表接口中获取（仅网关接入需要）
+    * <p>设备接入网关ID，从查询网关列表接口中获取（仅网关接入需要）</p>
     */
     @SerializedName("GatewayId")
     @Expose
     private String GatewayId;
 
     /**
-    * 设备所属网关名称
+    * <p>设备所属网关名称</p>
     */
     @SerializedName("GatewayName")
     @Expose
     private String GatewayName;
 
     /**
-    * 设备网关协议名称
+    * <p>设备网关协议名称</p>
     */
     @SerializedName("ProtocolTypeName")
     @Expose
     private String ProtocolTypeName;
 
     /**
-    * 网关接入协议类型，1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）
+    * <p>网关接入协议类型，1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）</p>
     */
     @SerializedName("ProtocolType")
     @Expose
     private Long ProtocolType;
 
     /**
-    * 设备接入IP
+    * <p>设备接入IP</p>
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * 设备Port
+    * <p>设备Port</p>
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * 设备用户名
+    * <p>设备用户名</p>
     */
     @SerializedName("Username")
     @Expose
     private String Username;
 
     /**
-    * 设备地域
+    * <p>设备地域</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 设备厂商
+    * <p>设备厂商</p>
     */
     @SerializedName("Manufacturer")
     @Expose
     private String Manufacturer;
 
     /**
-    * 音频关开（0：关闭；1：开启）关闭时丢弃音频	
+    * <p>音频关开（0：关闭；1：开启）关闭时丢弃音频</p>
     */
     @SerializedName("AudioSwitch")
     @Expose
     private Long AudioSwitch;
 
     /**
-    * 订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效	
+    * <p>订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效</p>
     */
     @SerializedName("SubscribeSwitch")
     @Expose
     private Long SubscribeSwitch;
 
     /**
-    * RTMP推流地址自定义appName
+    * <p>RTMP推流地址自定义appName</p>
     */
     @SerializedName("AppName")
     @Expose
     private String AppName;
 
     /**
-    * RTMP推流地址自定义streamName
+    * <p>RTMP推流地址自定义streamName</p>
     */
     @SerializedName("StreamName")
     @Expose
     private String StreamName;
 
     /**
-    * 是否开启静音帧（0：关闭；1 开启）
+    * <p>是否开启静音帧（0：关闭；1 开启）</p>
     */
     @SerializedName("SilentFrameSwitch")
     @Expose
     private Long SilentFrameSwitch;
 
     /**
-     * Get 设备ID 
-     * @return DeviceId 设备ID
+    * <p>Rtmp设备安全认证推流地址(仅rtmp设备有效)</p>
+    */
+    @SerializedName("PushStreamSecureUrl")
+    @Expose
+    private String PushStreamSecureUrl;
+
+    /**
+     * Get <p>设备ID</p> 
+     * @return DeviceId <p>设备ID</p>
      */
     public String getDeviceId() {
         return this.DeviceId;
     }
 
     /**
-     * Set 设备ID
-     * @param DeviceId 设备ID
+     * Set <p>设备ID</p>
+     * @param DeviceId <p>设备ID</p>
      */
     public void setDeviceId(String DeviceId) {
         this.DeviceId = DeviceId;
     }
 
     /**
-     * Get 设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码） 
-     * @return Code 设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）
+     * Get <p>设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）</p> 
+     * @return Code <p>设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）</p>
      */
     public String getCode() {
         return this.Code;
     }
 
     /**
-     * Set 设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）
-     * @param Code 设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）
+     * Set <p>设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）</p>
+     * @param Code <p>设备编码（国标设备即我们为设备生成的20位国标编码，rtmp 设备为10 位设备编码）</p>
      */
     public void setCode(String Code) {
         this.Code = Code;
     }
 
     /**
-     * Get 设备名称 
-     * @return Name 设备名称
+     * Get <p>设备名称</p> 
+     * @return Name <p>设备名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 设备名称
-     * @param Name 设备名称
+     * Set <p>设备名称</p>
+     * @param Name <p>设备名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 设备接入协议，1:RTMP,2:GB,3:GW  
-     * @return AccessProtocol 设备接入协议，1:RTMP,2:GB,3:GW 
+     * Get <p>设备接入协议，1:RTMP,2:GB,3:GW</p> 
+     * @return AccessProtocol <p>设备接入协议，1:RTMP,2:GB,3:GW</p>
      */
     public Long getAccessProtocol() {
         return this.AccessProtocol;
     }
 
     /**
-     * Set 设备接入协议，1:RTMP,2:GB,3:GW 
-     * @param AccessProtocol 设备接入协议，1:RTMP,2:GB,3:GW 
+     * Set <p>设备接入协议，1:RTMP,2:GB,3:GW</p>
+     * @param AccessProtocol <p>设备接入协议，1:RTMP,2:GB,3:GW</p>
      */
     public void setAccessProtocol(Long AccessProtocol) {
         this.AccessProtocol = AccessProtocol;
     }
 
     /**
-     * Get 设备类型，1:IPC,2:NVR 
-     * @return Type 设备类型，1:IPC,2:NVR
+     * Get <p>设备类型，1:IPC,2:NVR</p> 
+     * @return Type <p>设备类型，1:IPC,2:NVR</p>
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 设备类型，1:IPC,2:NVR
-     * @param Type 设备类型，1:IPC,2:NVR
+     * Set <p>设备类型，1:IPC,2:NVR</p>
+     * @param Type <p>设备类型，1:IPC,2:NVR</p>
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 设备接入服务节点id 
-     * @return ClusterId 设备接入服务节点id
+     * Get <p>设备接入服务节点id</p> 
+     * @return ClusterId <p>设备接入服务节点id</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 设备接入服务节点id
-     * @param ClusterId 设备接入服务节点id
+     * Set <p>设备接入服务节点id</p>
+     * @param ClusterId <p>设备接入服务节点id</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 设备接入服务节点名称
- 
-     * @return ClusterName 设备接入服务节点名称
-
+     * Get <p>设备接入服务节点名称</p> 
+     * @return ClusterName <p>设备接入服务节点名称</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set 设备接入服务节点名称
-
-     * @param ClusterName 设备接入服务节点名称
-
+     * Set <p>设备接入服务节点名称</p>
+     * @param ClusterName <p>设备接入服务节点名称</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 设备流传输协议，1:UDP,2:TCP  
-     * @return TransportProtocol 设备流传输协议，1:UDP,2:TCP 
+     * Get <p>设备流传输协议，1:UDP,2:TCP</p> 
+     * @return TransportProtocol <p>设备流传输协议，1:UDP,2:TCP</p>
      */
     public Long getTransportProtocol() {
         return this.TransportProtocol;
     }
 
     /**
-     * Set 设备流传输协议，1:UDP,2:TCP 
-     * @param TransportProtocol 设备流传输协议，1:UDP,2:TCP 
+     * Set <p>设备流传输协议，1:UDP,2:TCP</p>
+     * @param TransportProtocol <p>设备流传输协议，1:UDP,2:TCP</p>
      */
     public void setTransportProtocol(Long TransportProtocol) {
         this.TransportProtocol = TransportProtocol;
     }
 
     /**
-     * Get 设备密码 
-     * @return Password 设备密码
+     * Get <p>设备密码</p> 
+     * @return Password <p>设备密码</p>
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set 设备密码
-     * @param Password 设备密码
+     * Set <p>设备密码</p>
+     * @param Password <p>设备密码</p>
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get 设备描述 
-     * @return Description 设备描述
+     * Get <p>设备描述</p> 
+     * @return Description <p>设备描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 设备描述
-     * @param Description 设备描述
+     * Set <p>设备描述</p>
+     * @param Description <p>设备描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get sip服务ID 
-     * @return SipId sip服务ID
+     * Get <p>sip服务ID</p> 
+     * @return SipId <p>sip服务ID</p>
      */
     public String getSipId() {
         return this.SipId;
     }
 
     /**
-     * Set sip服务ID
-     * @param SipId sip服务ID
+     * Set <p>sip服务ID</p>
+     * @param SipId <p>sip服务ID</p>
      */
     public void setSipId(String SipId) {
         this.SipId = SipId;
     }
 
     /**
-     * Get sip服务域 
-     * @return SipDomain sip服务域
+     * Get <p>sip服务域</p> 
+     * @return SipDomain <p>sip服务域</p>
      */
     public String getSipDomain() {
         return this.SipDomain;
     }
 
     /**
-     * Set sip服务域
-     * @param SipDomain sip服务域
+     * Set <p>sip服务域</p>
+     * @param SipDomain <p>sip服务域</p>
      */
     public void setSipDomain(String SipDomain) {
         this.SipDomain = SipDomain;
     }
 
     /**
-     * Get sip服务IP地址 
-     * @return SipIp sip服务IP地址
+     * Get <p>sip服务IP地址</p> 
+     * @return SipIp <p>sip服务IP地址</p>
      */
     public String getSipIp() {
         return this.SipIp;
     }
 
     /**
-     * Set sip服务IP地址
-     * @param SipIp sip服务IP地址
+     * Set <p>sip服务IP地址</p>
+     * @param SipIp <p>sip服务IP地址</p>
      */
     public void setSipIp(String SipIp) {
         this.SipIp = SipIp;
     }
 
     /**
-     * Get sip服务端口 
-     * @return SipPort sip服务端口
+     * Get <p>sip服务端口</p> 
+     * @return SipPort <p>sip服务端口</p>
      */
     public Long getSipPort() {
         return this.SipPort;
     }
 
     /**
-     * Set sip服务端口
-     * @param SipPort sip服务端口
+     * Set <p>sip服务端口</p>
+     * @param SipPort <p>sip服务端口</p>
      */
     public void setSipPort(Long SipPort) {
         this.SipPort = SipPort;
     }
 
     /**
-     * Get Rtmp设备推流地址(仅rtmp设备有效) 
-     * @return PushStreamUrl Rtmp设备推流地址(仅rtmp设备有效)
+     * Get <p>Rtmp设备推流地址(仅rtmp设备有效)</p> 
+     * @return PushStreamUrl <p>Rtmp设备推流地址(仅rtmp设备有效)</p>
      */
     public String getPushStreamUrl() {
         return this.PushStreamUrl;
     }
 
     /**
-     * Set Rtmp设备推流地址(仅rtmp设备有效)
-     * @param PushStreamUrl Rtmp设备推流地址(仅rtmp设备有效)
+     * Set <p>Rtmp设备推流地址(仅rtmp设备有效)</p>
+     * @param PushStreamUrl <p>Rtmp设备推流地址(仅rtmp设备有效)</p>
      */
     public void setPushStreamUrl(String PushStreamUrl) {
         this.PushStreamUrl = PushStreamUrl;
     }
 
     /**
-     * Get 设备状态，0:未注册,1:在线,2:离线,3:禁用 
-     * @return Status 设备状态，0:未注册,1:在线,2:离线,3:禁用
+     * Get <p>设备状态，0:未注册,1:在线,2:离线,3:禁用</p> 
+     * @return Status <p>设备状态，0:未注册,1:在线,2:离线,3:禁用</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 设备状态，0:未注册,1:在线,2:离线,3:禁用
-     * @param Status 设备状态，0:未注册,1:在线,2:离线,3:禁用
+     * Set <p>设备状态，0:未注册,1:在线,2:离线,3:禁用</p>
+     * @param Status <p>设备状态，0:未注册,1:在线,2:离线,3:禁用</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 设备所属组织ID 
-     * @return OrganizationId 设备所属组织ID
+     * Get <p>设备所属组织ID</p> 
+     * @return OrganizationId <p>设备所属组织ID</p>
      */
     public String getOrganizationId() {
         return this.OrganizationId;
     }
 
     /**
-     * Set 设备所属组织ID
-     * @param OrganizationId 设备所属组织ID
+     * Set <p>设备所属组织ID</p>
+     * @param OrganizationId <p>设备所属组织ID</p>
      */
     public void setOrganizationId(String OrganizationId) {
         this.OrganizationId = OrganizationId;
     }
 
     /**
-     * Get 设备接入网关ID，从查询网关列表接口中获取（仅网关接入需要） 
-     * @return GatewayId 设备接入网关ID，从查询网关列表接口中获取（仅网关接入需要）
+     * Get <p>设备接入网关ID，从查询网关列表接口中获取（仅网关接入需要）</p> 
+     * @return GatewayId <p>设备接入网关ID，从查询网关列表接口中获取（仅网关接入需要）</p>
      */
     public String getGatewayId() {
         return this.GatewayId;
     }
 
     /**
-     * Set 设备接入网关ID，从查询网关列表接口中获取（仅网关接入需要）
-     * @param GatewayId 设备接入网关ID，从查询网关列表接口中获取（仅网关接入需要）
+     * Set <p>设备接入网关ID，从查询网关列表接口中获取（仅网关接入需要）</p>
+     * @param GatewayId <p>设备接入网关ID，从查询网关列表接口中获取（仅网关接入需要）</p>
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;
     }
 
     /**
-     * Get 设备所属网关名称 
-     * @return GatewayName 设备所属网关名称
+     * Get <p>设备所属网关名称</p> 
+     * @return GatewayName <p>设备所属网关名称</p>
      */
     public String getGatewayName() {
         return this.GatewayName;
     }
 
     /**
-     * Set 设备所属网关名称
-     * @param GatewayName 设备所属网关名称
+     * Set <p>设备所属网关名称</p>
+     * @param GatewayName <p>设备所属网关名称</p>
      */
     public void setGatewayName(String GatewayName) {
         this.GatewayName = GatewayName;
     }
 
     /**
-     * Get 设备网关协议名称 
-     * @return ProtocolTypeName 设备网关协议名称
+     * Get <p>设备网关协议名称</p> 
+     * @return ProtocolTypeName <p>设备网关协议名称</p>
      */
     public String getProtocolTypeName() {
         return this.ProtocolTypeName;
     }
 
     /**
-     * Set 设备网关协议名称
-     * @param ProtocolTypeName 设备网关协议名称
+     * Set <p>设备网关协议名称</p>
+     * @param ProtocolTypeName <p>设备网关协议名称</p>
      */
     public void setProtocolTypeName(String ProtocolTypeName) {
         this.ProtocolTypeName = ProtocolTypeName;
     }
 
     /**
-     * Get 网关接入协议类型，1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要） 
-     * @return ProtocolType 网关接入协议类型，1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）
+     * Get <p>网关接入协议类型，1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）</p> 
+     * @return ProtocolType <p>网关接入协议类型，1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）</p>
      */
     public Long getProtocolType() {
         return this.ProtocolType;
     }
 
     /**
-     * Set 网关接入协议类型，1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）
-     * @param ProtocolType 网关接入协议类型，1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）
+     * Set <p>网关接入协议类型，1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）</p>
+     * @param ProtocolType <p>网关接入协议类型，1.海康SDK，2.大华SDK，3.宇视SDK，4.Onvif（仅网关接入需要）</p>
      */
     public void setProtocolType(Long ProtocolType) {
         this.ProtocolType = ProtocolType;
     }
 
     /**
-     * Get 设备接入IP 
-     * @return Ip 设备接入IP
+     * Get <p>设备接入IP</p> 
+     * @return Ip <p>设备接入IP</p>
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set 设备接入IP
-     * @param Ip 设备接入IP
+     * Set <p>设备接入IP</p>
+     * @param Ip <p>设备接入IP</p>
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 设备Port 
-     * @return Port 设备Port
+     * Get <p>设备Port</p> 
+     * @return Port <p>设备Port</p>
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 设备Port
-     * @param Port 设备Port
+     * Set <p>设备Port</p>
+     * @param Port <p>设备Port</p>
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 设备用户名 
-     * @return Username 设备用户名
+     * Get <p>设备用户名</p> 
+     * @return Username <p>设备用户名</p>
      */
     public String getUsername() {
         return this.Username;
     }
 
     /**
-     * Set 设备用户名
-     * @param Username 设备用户名
+     * Set <p>设备用户名</p>
+     * @param Username <p>设备用户名</p>
      */
     public void setUsername(String Username) {
         this.Username = Username;
     }
 
     /**
-     * Get 设备地域 
-     * @return Region 设备地域
+     * Get <p>设备地域</p> 
+     * @return Region <p>设备地域</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 设备地域
-     * @param Region 设备地域
+     * Set <p>设备地域</p>
+     * @param Region <p>设备地域</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 设备厂商 
-     * @return Manufacturer 设备厂商
+     * Get <p>设备厂商</p> 
+     * @return Manufacturer <p>设备厂商</p>
      */
     public String getManufacturer() {
         return this.Manufacturer;
     }
 
     /**
-     * Set 设备厂商
-     * @param Manufacturer 设备厂商
+     * Set <p>设备厂商</p>
+     * @param Manufacturer <p>设备厂商</p>
      */
     public void setManufacturer(String Manufacturer) {
         this.Manufacturer = Manufacturer;
     }
 
     /**
-     * Get 音频关开（0：关闭；1：开启）关闭时丢弃音频	 
-     * @return AudioSwitch 音频关开（0：关闭；1：开启）关闭时丢弃音频	
+     * Get <p>音频关开（0：关闭；1：开启）关闭时丢弃音频</p> 
+     * @return AudioSwitch <p>音频关开（0：关闭；1：开启）关闭时丢弃音频</p>
      */
     public Long getAudioSwitch() {
         return this.AudioSwitch;
     }
 
     /**
-     * Set 音频关开（0：关闭；1：开启）关闭时丢弃音频	
-     * @param AudioSwitch 音频关开（0：关闭；1：开启）关闭时丢弃音频	
+     * Set <p>音频关开（0：关闭；1：开启）关闭时丢弃音频</p>
+     * @param AudioSwitch <p>音频关开（0：关闭；1：开启）关闭时丢弃音频</p>
      */
     public void setAudioSwitch(Long AudioSwitch) {
         this.AudioSwitch = AudioSwitch;
     }
 
     /**
-     * Get 订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效	 
-     * @return SubscribeSwitch 订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效	
+     * Get <p>订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效</p> 
+     * @return SubscribeSwitch <p>订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效</p>
      */
     public Long getSubscribeSwitch() {
         return this.SubscribeSwitch;
     }
 
     /**
-     * Set 订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效	
-     * @param SubscribeSwitch 订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效	
+     * Set <p>订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效</p>
+     * @param SubscribeSwitch <p>订阅开关（0：关闭；1：开启）默认开启，开启状态下会订阅设备通道变化，仅国标NVR设备有效</p>
      */
     public void setSubscribeSwitch(Long SubscribeSwitch) {
         this.SubscribeSwitch = SubscribeSwitch;
     }
 
     /**
-     * Get RTMP推流地址自定义appName 
-     * @return AppName RTMP推流地址自定义appName
+     * Get <p>RTMP推流地址自定义appName</p> 
+     * @return AppName <p>RTMP推流地址自定义appName</p>
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * Set RTMP推流地址自定义appName
-     * @param AppName RTMP推流地址自定义appName
+     * Set <p>RTMP推流地址自定义appName</p>
+     * @param AppName <p>RTMP推流地址自定义appName</p>
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;
     }
 
     /**
-     * Get RTMP推流地址自定义streamName 
-     * @return StreamName RTMP推流地址自定义streamName
+     * Get <p>RTMP推流地址自定义streamName</p> 
+     * @return StreamName <p>RTMP推流地址自定义streamName</p>
      */
     public String getStreamName() {
         return this.StreamName;
     }
 
     /**
-     * Set RTMP推流地址自定义streamName
-     * @param StreamName RTMP推流地址自定义streamName
+     * Set <p>RTMP推流地址自定义streamName</p>
+     * @param StreamName <p>RTMP推流地址自定义streamName</p>
      */
     public void setStreamName(String StreamName) {
         this.StreamName = StreamName;
     }
 
     /**
-     * Get 是否开启静音帧（0：关闭；1 开启） 
-     * @return SilentFrameSwitch 是否开启静音帧（0：关闭；1 开启）
+     * Get <p>是否开启静音帧（0：关闭；1 开启）</p> 
+     * @return SilentFrameSwitch <p>是否开启静音帧（0：关闭；1 开启）</p>
      */
     public Long getSilentFrameSwitch() {
         return this.SilentFrameSwitch;
     }
 
     /**
-     * Set 是否开启静音帧（0：关闭；1 开启）
-     * @param SilentFrameSwitch 是否开启静音帧（0：关闭；1 开启）
+     * Set <p>是否开启静音帧（0：关闭；1 开启）</p>
+     * @param SilentFrameSwitch <p>是否开启静音帧（0：关闭；1 开启）</p>
      */
     public void setSilentFrameSwitch(Long SilentFrameSwitch) {
         this.SilentFrameSwitch = SilentFrameSwitch;
+    }
+
+    /**
+     * Get <p>Rtmp设备安全认证推流地址(仅rtmp设备有效)</p> 
+     * @return PushStreamSecureUrl <p>Rtmp设备安全认证推流地址(仅rtmp设备有效)</p>
+     */
+    public String getPushStreamSecureUrl() {
+        return this.PushStreamSecureUrl;
+    }
+
+    /**
+     * Set <p>Rtmp设备安全认证推流地址(仅rtmp设备有效)</p>
+     * @param PushStreamSecureUrl <p>Rtmp设备安全认证推流地址(仅rtmp设备有效)</p>
+     */
+    public void setPushStreamSecureUrl(String PushStreamSecureUrl) {
+        this.PushStreamSecureUrl = PushStreamSecureUrl;
     }
 
     public DescribeDeviceData() {
@@ -842,6 +860,9 @@ public class DescribeDeviceData extends AbstractModel {
         if (source.SilentFrameSwitch != null) {
             this.SilentFrameSwitch = new Long(source.SilentFrameSwitch);
         }
+        if (source.PushStreamSecureUrl != null) {
+            this.PushStreamSecureUrl = new String(source.PushStreamSecureUrl);
+        }
     }
 
 
@@ -880,6 +901,7 @@ public class DescribeDeviceData extends AbstractModel {
         this.setParamSimple(map, prefix + "AppName", this.AppName);
         this.setParamSimple(map, prefix + "StreamName", this.StreamName);
         this.setParamSimple(map, prefix + "SilentFrameSwitch", this.SilentFrameSwitch);
+        this.setParamSimple(map, prefix + "PushStreamSecureUrl", this.PushStreamSecureUrl);
 
     }
 }

@@ -24,164 +24,187 @@ import java.util.HashMap;
 public class TextWaybill extends AbstractModel {
 
     /**
-    * 收件人姓名
+    * <p>收件人姓名</p>
     */
     @SerializedName("RecName")
     @Expose
     private WaybillObj RecName;
 
     /**
-    * 收件人手机号
+    * <p>收件人手机号</p>
     */
     @SerializedName("RecNum")
     @Expose
     private WaybillObj RecNum;
 
     /**
-    * 收件人地址
+    * <p>收件人地址</p>
     */
     @SerializedName("RecAddr")
     @Expose
     private WaybillObj RecAddr;
 
     /**
-    * 寄件人姓名
+    * <p>寄件人姓名</p>
     */
     @SerializedName("SenderName")
     @Expose
     private WaybillObj SenderName;
 
     /**
-    * 寄件人手机号
+    * <p>寄件人手机号</p>
     */
     @SerializedName("SenderNum")
     @Expose
     private WaybillObj SenderNum;
 
     /**
-    * 寄件人地址
+    * <p>寄件人地址</p>
     */
     @SerializedName("SenderAddr")
     @Expose
     private WaybillObj SenderAddr;
 
     /**
-    * 运单号
+    * <p>运单号, 当同时存在 母 / 子 运单号时， 该字段为子运单号</p>
     */
     @SerializedName("WaybillNum")
     @Expose
     private WaybillObj WaybillNum;
 
     /**
-     * Get 收件人姓名 
-     * @return RecName 收件人姓名
+    * <p>母运单号， 当不存在母运单号时， 该字段为不存在</p>
+    */
+    @SerializedName("MainWaybillNum")
+    @Expose
+    private WaybillObj MainWaybillNum;
+
+    /**
+     * Get <p>收件人姓名</p> 
+     * @return RecName <p>收件人姓名</p>
      */
     public WaybillObj getRecName() {
         return this.RecName;
     }
 
     /**
-     * Set 收件人姓名
-     * @param RecName 收件人姓名
+     * Set <p>收件人姓名</p>
+     * @param RecName <p>收件人姓名</p>
      */
     public void setRecName(WaybillObj RecName) {
         this.RecName = RecName;
     }
 
     /**
-     * Get 收件人手机号 
-     * @return RecNum 收件人手机号
+     * Get <p>收件人手机号</p> 
+     * @return RecNum <p>收件人手机号</p>
      */
     public WaybillObj getRecNum() {
         return this.RecNum;
     }
 
     /**
-     * Set 收件人手机号
-     * @param RecNum 收件人手机号
+     * Set <p>收件人手机号</p>
+     * @param RecNum <p>收件人手机号</p>
      */
     public void setRecNum(WaybillObj RecNum) {
         this.RecNum = RecNum;
     }
 
     /**
-     * Get 收件人地址 
-     * @return RecAddr 收件人地址
+     * Get <p>收件人地址</p> 
+     * @return RecAddr <p>收件人地址</p>
      */
     public WaybillObj getRecAddr() {
         return this.RecAddr;
     }
 
     /**
-     * Set 收件人地址
-     * @param RecAddr 收件人地址
+     * Set <p>收件人地址</p>
+     * @param RecAddr <p>收件人地址</p>
      */
     public void setRecAddr(WaybillObj RecAddr) {
         this.RecAddr = RecAddr;
     }
 
     /**
-     * Get 寄件人姓名 
-     * @return SenderName 寄件人姓名
+     * Get <p>寄件人姓名</p> 
+     * @return SenderName <p>寄件人姓名</p>
      */
     public WaybillObj getSenderName() {
         return this.SenderName;
     }
 
     /**
-     * Set 寄件人姓名
-     * @param SenderName 寄件人姓名
+     * Set <p>寄件人姓名</p>
+     * @param SenderName <p>寄件人姓名</p>
      */
     public void setSenderName(WaybillObj SenderName) {
         this.SenderName = SenderName;
     }
 
     /**
-     * Get 寄件人手机号 
-     * @return SenderNum 寄件人手机号
+     * Get <p>寄件人手机号</p> 
+     * @return SenderNum <p>寄件人手机号</p>
      */
     public WaybillObj getSenderNum() {
         return this.SenderNum;
     }
 
     /**
-     * Set 寄件人手机号
-     * @param SenderNum 寄件人手机号
+     * Set <p>寄件人手机号</p>
+     * @param SenderNum <p>寄件人手机号</p>
      */
     public void setSenderNum(WaybillObj SenderNum) {
         this.SenderNum = SenderNum;
     }
 
     /**
-     * Get 寄件人地址 
-     * @return SenderAddr 寄件人地址
+     * Get <p>寄件人地址</p> 
+     * @return SenderAddr <p>寄件人地址</p>
      */
     public WaybillObj getSenderAddr() {
         return this.SenderAddr;
     }
 
     /**
-     * Set 寄件人地址
-     * @param SenderAddr 寄件人地址
+     * Set <p>寄件人地址</p>
+     * @param SenderAddr <p>寄件人地址</p>
      */
     public void setSenderAddr(WaybillObj SenderAddr) {
         this.SenderAddr = SenderAddr;
     }
 
     /**
-     * Get 运单号 
-     * @return WaybillNum 运单号
+     * Get <p>运单号, 当同时存在 母 / 子 运单号时， 该字段为子运单号</p> 
+     * @return WaybillNum <p>运单号, 当同时存在 母 / 子 运单号时， 该字段为子运单号</p>
      */
     public WaybillObj getWaybillNum() {
         return this.WaybillNum;
     }
 
     /**
-     * Set 运单号
-     * @param WaybillNum 运单号
+     * Set <p>运单号, 当同时存在 母 / 子 运单号时， 该字段为子运单号</p>
+     * @param WaybillNum <p>运单号, 当同时存在 母 / 子 运单号时， 该字段为子运单号</p>
      */
     public void setWaybillNum(WaybillObj WaybillNum) {
         this.WaybillNum = WaybillNum;
+    }
+
+    /**
+     * Get <p>母运单号， 当不存在母运单号时， 该字段为不存在</p> 
+     * @return MainWaybillNum <p>母运单号， 当不存在母运单号时， 该字段为不存在</p>
+     */
+    public WaybillObj getMainWaybillNum() {
+        return this.MainWaybillNum;
+    }
+
+    /**
+     * Set <p>母运单号， 当不存在母运单号时， 该字段为不存在</p>
+     * @param MainWaybillNum <p>母运单号， 当不存在母运单号时， 该字段为不存在</p>
+     */
+    public void setMainWaybillNum(WaybillObj MainWaybillNum) {
+        this.MainWaybillNum = MainWaybillNum;
     }
 
     public TextWaybill() {
@@ -213,6 +236,9 @@ public class TextWaybill extends AbstractModel {
         if (source.WaybillNum != null) {
             this.WaybillNum = new WaybillObj(source.WaybillNum);
         }
+        if (source.MainWaybillNum != null) {
+            this.MainWaybillNum = new WaybillObj(source.MainWaybillNum);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class TextWaybill extends AbstractModel {
         this.setParamObj(map, prefix + "SenderNum.", this.SenderNum);
         this.setParamObj(map, prefix + "SenderAddr.", this.SenderAddr);
         this.setParamObj(map, prefix + "WaybillNum.", this.WaybillNum);
+        this.setParamObj(map, prefix + "MainWaybillNum.", this.MainWaybillNum);
 
     }
 }
