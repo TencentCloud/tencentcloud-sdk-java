@@ -88,6 +88,19 @@ public class ProdSchedulerTask extends AbstractModel {
     private String [] InChargeNameList;
 
     /**
+    * 生产调度任务状态，参考调度任务侧状态信息，“DELETED”状态为质量侧单独加的，查不到任务时认为任务“DELETED”
+'Y': '调度中',
+'F': '已下线',
+'O': '已暂停',
+'INVALID': '已失效',
+'DELETED': '已删除' 
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskStatus")
+    @Expose
+    private String TaskStatus;
+
+    /**
      * Get 生产调度任务工作流ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return WorkflowId 生产调度任务工作流ID
@@ -247,6 +260,46 @@ public class ProdSchedulerTask extends AbstractModel {
         this.InChargeNameList = InChargeNameList;
     }
 
+    /**
+     * Get 生产调度任务状态，参考调度任务侧状态信息，“DELETED”状态为质量侧单独加的，查不到任务时认为任务“DELETED”
+'Y': '调度中',
+'F': '已下线',
+'O': '已暂停',
+'INVALID': '已失效',
+'DELETED': '已删除' 
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskStatus 生产调度任务状态，参考调度任务侧状态信息，“DELETED”状态为质量侧单独加的，查不到任务时认为任务“DELETED”
+'Y': '调度中',
+'F': '已下线',
+'O': '已暂停',
+'INVALID': '已失效',
+'DELETED': '已删除' 
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTaskStatus() {
+        return this.TaskStatus;
+    }
+
+    /**
+     * Set 生产调度任务状态，参考调度任务侧状态信息，“DELETED”状态为质量侧单独加的，查不到任务时认为任务“DELETED”
+'Y': '调度中',
+'F': '已下线',
+'O': '已暂停',
+'INVALID': '已失效',
+'DELETED': '已删除' 
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskStatus 生产调度任务状态，参考调度任务侧状态信息，“DELETED”状态为质量侧单独加的，查不到任务时认为任务“DELETED”
+'Y': '调度中',
+'F': '已下线',
+'O': '已暂停',
+'INVALID': '已失效',
+'DELETED': '已删除' 
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskStatus(String TaskStatus) {
+        this.TaskStatus = TaskStatus;
+    }
+
     public ProdSchedulerTask() {
     }
 
@@ -285,6 +338,9 @@ public class ProdSchedulerTask extends AbstractModel {
                 this.InChargeNameList[i] = new String(source.InChargeNameList[i]);
             }
         }
+        if (source.TaskStatus != null) {
+            this.TaskStatus = new String(source.TaskStatus);
+        }
     }
 
 
@@ -300,6 +356,7 @@ public class ProdSchedulerTask extends AbstractModel {
         this.setParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
         this.setParamArraySimple(map, prefix + "InChargeIdList.", this.InChargeIdList);
         this.setParamArraySimple(map, prefix + "InChargeNameList.", this.InChargeNameList);
+        this.setParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
 
     }
 }

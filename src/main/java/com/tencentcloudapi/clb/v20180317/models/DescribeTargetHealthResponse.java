@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTargetHealthResponse extends AbstractModel {
 
     /**
-    * 负载均衡实例列表。
+    * <p>负载均衡实例列表。</p>
     */
     @SerializedName("LoadBalancers")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeTargetHealthResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 负载均衡实例列表。 
-     * @return LoadBalancers 负载均衡实例列表。
+     * Get <p>负载均衡实例列表。</p> 
+     * @return LoadBalancers <p>负载均衡实例列表。</p>
      */
     public LoadBalancerHealth [] getLoadBalancers() {
         return this.LoadBalancers;
     }
 
     /**
-     * Set 负载均衡实例列表。
-     * @param LoadBalancers 负载均衡实例列表。
+     * Set <p>负载均衡实例列表。</p>
+     * @param LoadBalancers <p>负载均衡实例列表。</p>
      */
     public void setLoadBalancers(LoadBalancerHealth [] LoadBalancers) {
         this.LoadBalancers = LoadBalancers;

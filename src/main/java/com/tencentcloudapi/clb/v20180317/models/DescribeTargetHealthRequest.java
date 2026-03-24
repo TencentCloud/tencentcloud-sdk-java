@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeTargetHealthRequest extends AbstractModel {
 
     /**
-    * 要查询的负载均衡实例ID列表。
+    * <p>要查询的负载均衡实例ID列表。数组大小最大支持30。</p>
     */
     @SerializedName("LoadBalancerIds")
     @Expose
     private String [] LoadBalancerIds;
 
     /**
-    * 要查询的监听器ID列表。
+    * <p>要查询的监听器ID列表。</p>
     */
     @SerializedName("ListenerIds")
     @Expose
     private String [] ListenerIds;
 
     /**
-    * 要查询的转发规则ID列表。
+    * <p>要查询的转发规则ID列表。</p>
     */
     @SerializedName("LocationIds")
     @Expose
     private String [] LocationIds;
 
     /**
-     * Get 要查询的负载均衡实例ID列表。 
-     * @return LoadBalancerIds 要查询的负载均衡实例ID列表。
+     * Get <p>要查询的负载均衡实例ID列表。数组大小最大支持30。</p> 
+     * @return LoadBalancerIds <p>要查询的负载均衡实例ID列表。数组大小最大支持30。</p>
      */
     public String [] getLoadBalancerIds() {
         return this.LoadBalancerIds;
     }
 
     /**
-     * Set 要查询的负载均衡实例ID列表。
-     * @param LoadBalancerIds 要查询的负载均衡实例ID列表。
+     * Set <p>要查询的负载均衡实例ID列表。数组大小最大支持30。</p>
+     * @param LoadBalancerIds <p>要查询的负载均衡实例ID列表。数组大小最大支持30。</p>
      */
     public void setLoadBalancerIds(String [] LoadBalancerIds) {
         this.LoadBalancerIds = LoadBalancerIds;
     }
 
     /**
-     * Get 要查询的监听器ID列表。 
-     * @return ListenerIds 要查询的监听器ID列表。
+     * Get <p>要查询的监听器ID列表。</p> 
+     * @return ListenerIds <p>要查询的监听器ID列表。</p>
      */
     public String [] getListenerIds() {
         return this.ListenerIds;
     }
 
     /**
-     * Set 要查询的监听器ID列表。
-     * @param ListenerIds 要查询的监听器ID列表。
+     * Set <p>要查询的监听器ID列表。</p>
+     * @param ListenerIds <p>要查询的监听器ID列表。</p>
      */
     public void setListenerIds(String [] ListenerIds) {
         this.ListenerIds = ListenerIds;
     }
 
     /**
-     * Get 要查询的转发规则ID列表。 
-     * @return LocationIds 要查询的转发规则ID列表。
+     * Get <p>要查询的转发规则ID列表。</p> 
+     * @return LocationIds <p>要查询的转发规则ID列表。</p>
      */
     public String [] getLocationIds() {
         return this.LocationIds;
     }
 
     /**
-     * Set 要查询的转发规则ID列表。
-     * @param LocationIds 要查询的转发规则ID列表。
+     * Set <p>要查询的转发规则ID列表。</p>
+     * @param LocationIds <p>要查询的转发规则ID列表。</p>
      */
     public void setLocationIds(String [] LocationIds) {
         this.LocationIds = LocationIds;

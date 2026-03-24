@@ -98,6 +98,30 @@ public class DatabaseResponseInfo extends AbstractModel {
     private String DatabaseId;
 
     /**
+    * 所属catalog名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CatalogName")
+    @Expose
+    private String CatalogName;
+
+    /**
+    * 所属catalog 类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CatalogType")
+    @Expose
+    private String CatalogType;
+
+    /**
+    * 是否InformationSchema
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsInformationSchema")
+    @Expose
+    private Boolean IsInformationSchema;
+
+    /**
      * Get 数据库名称。 
      * @return DatabaseName 数据库名称。
      */
@@ -273,6 +297,66 @@ public class DatabaseResponseInfo extends AbstractModel {
         this.DatabaseId = DatabaseId;
     }
 
+    /**
+     * Get 所属catalog名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CatalogName 所属catalog名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCatalogName() {
+        return this.CatalogName;
+    }
+
+    /**
+     * Set 所属catalog名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CatalogName 所属catalog名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCatalogName(String CatalogName) {
+        this.CatalogName = CatalogName;
+    }
+
+    /**
+     * Get 所属catalog 类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CatalogType 所属catalog 类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCatalogType() {
+        return this.CatalogType;
+    }
+
+    /**
+     * Set 所属catalog 类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CatalogType 所属catalog 类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCatalogType(String CatalogType) {
+        this.CatalogType = CatalogType;
+    }
+
+    /**
+     * Get 是否InformationSchema
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsInformationSchema 是否InformationSchema
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsInformationSchema() {
+        return this.IsInformationSchema;
+    }
+
+    /**
+     * Set 是否InformationSchema
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsInformationSchema 是否InformationSchema
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsInformationSchema(Boolean IsInformationSchema) {
+        this.IsInformationSchema = IsInformationSchema;
+    }
+
     public DatabaseResponseInfo() {
     }
 
@@ -314,6 +398,15 @@ public class DatabaseResponseInfo extends AbstractModel {
         if (source.DatabaseId != null) {
             this.DatabaseId = new String(source.DatabaseId);
         }
+        if (source.CatalogName != null) {
+            this.CatalogName = new String(source.CatalogName);
+        }
+        if (source.CatalogType != null) {
+            this.CatalogType = new String(source.CatalogType);
+        }
+        if (source.IsInformationSchema != null) {
+            this.IsInformationSchema = new Boolean(source.IsInformationSchema);
+        }
     }
 
 
@@ -331,6 +424,9 @@ public class DatabaseResponseInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "UserSubUin", this.UserSubUin);
         this.setParamObj(map, prefix + "GovernPolicy.", this.GovernPolicy);
         this.setParamSimple(map, prefix + "DatabaseId", this.DatabaseId);
+        this.setParamSimple(map, prefix + "CatalogName", this.CatalogName);
+        this.setParamSimple(map, prefix + "CatalogType", this.CatalogType);
+        this.setParamSimple(map, prefix + "IsInformationSchema", this.IsInformationSchema);
 
     }
 }

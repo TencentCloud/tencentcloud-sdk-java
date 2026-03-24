@@ -24,164 +24,187 @@ import java.util.HashMap;
 public class ModifyNamespaceRequest extends AbstractModel {
 
     /**
-    * 实例Id
+    * <p>实例Id</p>
     */
     @SerializedName("RegistryId")
     @Expose
     private String RegistryId;
 
     /**
-    * 命名空间名称
+    * <p>命名空间名称</p>
     */
     @SerializedName("NamespaceName")
     @Expose
     private String NamespaceName;
 
     /**
-    * 访问级别，True为公开，False为私有
+    * <p>访问级别，True为公开，False为私有</p>
     */
     @SerializedName("IsPublic")
     @Expose
     private Boolean IsPublic;
 
     /**
-    * 扫描级别，True为自动，False为手动
+    * <p>扫描级别，True为自动，False为手动</p>
     */
     @SerializedName("IsAutoScan")
     @Expose
     private Boolean IsAutoScan;
 
     /**
-    * 阻断开关，True为开放，False为关闭
+    * <p>阻断开关，True为开放，False为关闭</p>
     */
     @SerializedName("IsPreventVUL")
     @Expose
     private Boolean IsPreventVUL;
 
     /**
-    * 阻断漏洞等级，目前仅支持 low、medium、high
+    * <p>阻断漏洞等级，目前仅支持 low、medium、high</p>
     */
     @SerializedName("Severity")
     @Expose
     private String Severity;
 
     /**
-    * 漏洞白名单列表
+    * <p>漏洞白名单列表</p>
     */
     @SerializedName("CVEWhitelistItems")
     @Expose
     private CVEWhitelistItem [] CVEWhitelistItems;
 
     /**
-     * Get 实例Id 
-     * @return RegistryId 实例Id
+    * <p>tag列表</p>
+    */
+    @SerializedName("TagSpecification")
+    @Expose
+    private TagSpecification TagSpecification;
+
+    /**
+     * Get <p>实例Id</p> 
+     * @return RegistryId <p>实例Id</p>
      */
     public String getRegistryId() {
         return this.RegistryId;
     }
 
     /**
-     * Set 实例Id
-     * @param RegistryId 实例Id
+     * Set <p>实例Id</p>
+     * @param RegistryId <p>实例Id</p>
      */
     public void setRegistryId(String RegistryId) {
         this.RegistryId = RegistryId;
     }
 
     /**
-     * Get 命名空间名称 
-     * @return NamespaceName 命名空间名称
+     * Get <p>命名空间名称</p> 
+     * @return NamespaceName <p>命名空间名称</p>
      */
     public String getNamespaceName() {
         return this.NamespaceName;
     }
 
     /**
-     * Set 命名空间名称
-     * @param NamespaceName 命名空间名称
+     * Set <p>命名空间名称</p>
+     * @param NamespaceName <p>命名空间名称</p>
      */
     public void setNamespaceName(String NamespaceName) {
         this.NamespaceName = NamespaceName;
     }
 
     /**
-     * Get 访问级别，True为公开，False为私有 
-     * @return IsPublic 访问级别，True为公开，False为私有
+     * Get <p>访问级别，True为公开，False为私有</p> 
+     * @return IsPublic <p>访问级别，True为公开，False为私有</p>
      */
     public Boolean getIsPublic() {
         return this.IsPublic;
     }
 
     /**
-     * Set 访问级别，True为公开，False为私有
-     * @param IsPublic 访问级别，True为公开，False为私有
+     * Set <p>访问级别，True为公开，False为私有</p>
+     * @param IsPublic <p>访问级别，True为公开，False为私有</p>
      */
     public void setIsPublic(Boolean IsPublic) {
         this.IsPublic = IsPublic;
     }
 
     /**
-     * Get 扫描级别，True为自动，False为手动 
-     * @return IsAutoScan 扫描级别，True为自动，False为手动
+     * Get <p>扫描级别，True为自动，False为手动</p> 
+     * @return IsAutoScan <p>扫描级别，True为自动，False为手动</p>
      */
     public Boolean getIsAutoScan() {
         return this.IsAutoScan;
     }
 
     /**
-     * Set 扫描级别，True为自动，False为手动
-     * @param IsAutoScan 扫描级别，True为自动，False为手动
+     * Set <p>扫描级别，True为自动，False为手动</p>
+     * @param IsAutoScan <p>扫描级别，True为自动，False为手动</p>
      */
     public void setIsAutoScan(Boolean IsAutoScan) {
         this.IsAutoScan = IsAutoScan;
     }
 
     /**
-     * Get 阻断开关，True为开放，False为关闭 
-     * @return IsPreventVUL 阻断开关，True为开放，False为关闭
+     * Get <p>阻断开关，True为开放，False为关闭</p> 
+     * @return IsPreventVUL <p>阻断开关，True为开放，False为关闭</p>
      */
     public Boolean getIsPreventVUL() {
         return this.IsPreventVUL;
     }
 
     /**
-     * Set 阻断开关，True为开放，False为关闭
-     * @param IsPreventVUL 阻断开关，True为开放，False为关闭
+     * Set <p>阻断开关，True为开放，False为关闭</p>
+     * @param IsPreventVUL <p>阻断开关，True为开放，False为关闭</p>
      */
     public void setIsPreventVUL(Boolean IsPreventVUL) {
         this.IsPreventVUL = IsPreventVUL;
     }
 
     /**
-     * Get 阻断漏洞等级，目前仅支持 low、medium、high 
-     * @return Severity 阻断漏洞等级，目前仅支持 low、medium、high
+     * Get <p>阻断漏洞等级，目前仅支持 low、medium、high</p> 
+     * @return Severity <p>阻断漏洞等级，目前仅支持 low、medium、high</p>
      */
     public String getSeverity() {
         return this.Severity;
     }
 
     /**
-     * Set 阻断漏洞等级，目前仅支持 low、medium、high
-     * @param Severity 阻断漏洞等级，目前仅支持 low、medium、high
+     * Set <p>阻断漏洞等级，目前仅支持 low、medium、high</p>
+     * @param Severity <p>阻断漏洞等级，目前仅支持 low、medium、high</p>
      */
     public void setSeverity(String Severity) {
         this.Severity = Severity;
     }
 
     /**
-     * Get 漏洞白名单列表 
-     * @return CVEWhitelistItems 漏洞白名单列表
+     * Get <p>漏洞白名单列表</p> 
+     * @return CVEWhitelistItems <p>漏洞白名单列表</p>
      */
     public CVEWhitelistItem [] getCVEWhitelistItems() {
         return this.CVEWhitelistItems;
     }
 
     /**
-     * Set 漏洞白名单列表
-     * @param CVEWhitelistItems 漏洞白名单列表
+     * Set <p>漏洞白名单列表</p>
+     * @param CVEWhitelistItems <p>漏洞白名单列表</p>
      */
     public void setCVEWhitelistItems(CVEWhitelistItem [] CVEWhitelistItems) {
         this.CVEWhitelistItems = CVEWhitelistItems;
+    }
+
+    /**
+     * Get <p>tag列表</p> 
+     * @return TagSpecification <p>tag列表</p>
+     */
+    public TagSpecification getTagSpecification() {
+        return this.TagSpecification;
+    }
+
+    /**
+     * Set <p>tag列表</p>
+     * @param TagSpecification <p>tag列表</p>
+     */
+    public void setTagSpecification(TagSpecification TagSpecification) {
+        this.TagSpecification = TagSpecification;
     }
 
     public ModifyNamespaceRequest() {
@@ -216,6 +239,9 @@ public class ModifyNamespaceRequest extends AbstractModel {
                 this.CVEWhitelistItems[i] = new CVEWhitelistItem(source.CVEWhitelistItems[i]);
             }
         }
+        if (source.TagSpecification != null) {
+            this.TagSpecification = new TagSpecification(source.TagSpecification);
+        }
     }
 
 
@@ -230,6 +256,7 @@ public class ModifyNamespaceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IsPreventVUL", this.IsPreventVUL);
         this.setParamSimple(map, prefix + "Severity", this.Severity);
         this.setParamArrayObj(map, prefix + "CVEWhitelistItems.", this.CVEWhitelistItems);
+        this.setParamObj(map, prefix + "TagSpecification.", this.TagSpecification);
 
     }
 }

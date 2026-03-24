@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeVoucherInfoResponse extends AbstractModel {
 
     /**
-    * 券总数
+    * <p>券总数</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 总余额（微分）
+    * <p>总余额（微分）</p>
     */
     @SerializedName("TotalBalance")
     @Expose
     private Long TotalBalance;
 
     /**
-    * 代金券相关信息
+    * <p>代金券相关信息</p>
     */
     @SerializedName("VoucherInfos")
     @Expose
@@ -52,48 +52,48 @@ public class DescribeVoucherInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 券总数 
-     * @return TotalCount 券总数
+     * Get <p>券总数</p> 
+     * @return TotalCount <p>券总数</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 券总数
-     * @param TotalCount 券总数
+     * Set <p>券总数</p>
+     * @param TotalCount <p>券总数</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 总余额（微分） 
-     * @return TotalBalance 总余额（微分）
+     * Get <p>总余额（微分）</p> 
+     * @return TotalBalance <p>总余额（微分）</p>
      */
     public Long getTotalBalance() {
         return this.TotalBalance;
     }
 
     /**
-     * Set 总余额（微分）
-     * @param TotalBalance 总余额（微分）
+     * Set <p>总余额（微分）</p>
+     * @param TotalBalance <p>总余额（微分）</p>
      */
     public void setTotalBalance(Long TotalBalance) {
         this.TotalBalance = TotalBalance;
     }
 
     /**
-     * Get 代金券相关信息 
-     * @return VoucherInfos 代金券相关信息
+     * Get <p>代金券相关信息</p> 
+     * @return VoucherInfos <p>代金券相关信息</p>
      */
     public VoucherInfos [] getVoucherInfos() {
         return this.VoucherInfos;
     }
 
     /**
-     * Set 代金券相关信息
-     * @param VoucherInfos 代金券相关信息
+     * Set <p>代金券相关信息</p>
+     * @param VoucherInfos <p>代金券相关信息</p>
      */
     public void setVoucherInfos(VoucherInfos [] VoucherInfos) {
         this.VoucherInfos = VoucherInfos;

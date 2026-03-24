@@ -207,6 +207,9 @@ public enum DnspodErrorCode {
      /* 浏览器字段为空。 */
      INVALIDPARAMETER_BROWSERNULL("InvalidParameter.BrowserNull"),
      
+     /* Client token 参数过长 */
+     INVALIDPARAMETER_CLIENTTOKENTOOLONG("InvalidParameter.ClientTokenTooLong"),
+     
      /* 您操作过于频繁，请稍后重试。 */
      INVALIDPARAMETER_COMMON("InvalidParameter.Common"),
      

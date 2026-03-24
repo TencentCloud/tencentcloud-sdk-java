@@ -95,6 +95,13 @@ public class AIAgentAsset extends AbstractModel {
     private String MetadataRiskURL;
 
     /**
+    * 无
+    */
+    @SerializedName("SkillState")
+    @Expose
+    private SkillState SkillState;
+
+    /**
      * Get ID 标识 
      * @return ID ID 标识
      */
@@ -258,6 +265,22 @@ public class AIAgentAsset extends AbstractModel {
         this.MetadataRiskURL = MetadataRiskURL;
     }
 
+    /**
+     * Get 无 
+     * @return SkillState 无
+     */
+    public SkillState getSkillState() {
+        return this.SkillState;
+    }
+
+    /**
+     * Set 无
+     * @param SkillState 无
+     */
+    public void setSkillState(SkillState SkillState) {
+        this.SkillState = SkillState;
+    }
+
     public AIAgentAsset() {
     }
 
@@ -302,6 +325,9 @@ public class AIAgentAsset extends AbstractModel {
         if (source.MetadataRiskURL != null) {
             this.MetadataRiskURL = new String(source.MetadataRiskURL);
         }
+        if (source.SkillState != null) {
+            this.SkillState = new SkillState(source.SkillState);
+        }
     }
 
 
@@ -319,6 +345,7 @@ public class AIAgentAsset extends AbstractModel {
         this.setParamSimple(map, prefix + "IdentityMethod", this.IdentityMethod);
         this.setParamSimple(map, prefix + "ExposureStatus", this.ExposureStatus);
         this.setParamSimple(map, prefix + "MetadataRiskURL", this.MetadataRiskURL);
+        this.setParamObj(map, prefix + "SkillState.", this.SkillState);
 
     }
 }

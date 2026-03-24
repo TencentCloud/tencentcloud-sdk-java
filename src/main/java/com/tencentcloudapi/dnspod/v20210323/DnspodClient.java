@@ -61,6 +61,17 @@ public class DnspodClient extends AbstractClient{
     }
 
     /**
+     *DNSPod商品下单并支付
+     * @param req CreateAndPayDealRequest
+     * @return CreateAndPayDealResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAndPayDealResponse CreateAndPayDeal(CreateAndPayDealRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAndPayDeal", CreateAndPayDealResponse.class);
+    }
+
+    /**
      *DNSPod商品下单
      * @param req CreateDealRequest
      * @return CreateDealResponse

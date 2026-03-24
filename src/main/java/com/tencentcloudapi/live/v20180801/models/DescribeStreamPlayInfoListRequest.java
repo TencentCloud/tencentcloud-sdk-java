@@ -24,183 +24,138 @@ import java.util.HashMap;
 public class DescribeStreamPlayInfoListRequest extends AbstractModel {
 
     /**
-    * 起始时间点，接口查询支持两种时间格式：
-1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
-2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。
-开始时间和结束时间的格式需要保持一致。
+    * <p>起始时间点，接口查询支持两种时间格式：<br>1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I<br>2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。<br>开始时间和结束时间的格式需要保持一致。</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间点，接口查询支持两种时间格式：
-1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
-2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。
-开始时间和结束时间的格式需要保持一致。结束时间和开始时间跨度不支持超过24小时，支持距当前时间一个月内的数据查询。
+    * <p>结束时间点，接口查询支持两种时间格式：<br>1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I<br>2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。<br>开始时间和结束时间的格式需要保持一致。结束时间和开始时间跨度不支持超过24小时，支持距当前时间一个月内的数据查询。</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 播放域名，
-若不填，则为查询所有播放域名的在线流数据。
+    * <p>播放域名，<br>若不填，则为查询所有播放域名的在线流数据。</p>
     */
     @SerializedName("PlayDomain")
     @Expose
     private String PlayDomain;
 
     /**
-    * 流名称，精确匹配。
-若不填，则为查询总体播放数据。
+    * <p>流名称，精确匹配。<br>若不填，则为查询总体播放数据。</p>
     */
     @SerializedName("StreamName")
     @Expose
     private String StreamName;
 
     /**
-    * 推流路径，与播放地址中的AppName保持一致，会精确匹配，在同时传递了StreamName时生效。
-若不填，则为查询总体播放数据。
+    * <p>该参数暂不可用。</p>
     */
     @SerializedName("AppName")
     @Expose
     private String AppName;
 
     /**
-    * 服务名称，可选值包括LVB(标准直播)，LEB(快直播)，不填则查LVB+LEB总值。
+    * <p>服务名称，可选值包括LVB(标准直播)，LEB(快直播)，不填则查LVB+LEB总值。</p>
     */
     @SerializedName("ServiceName")
     @Expose
     private String ServiceName;
 
     /**
-     * Get 起始时间点，接口查询支持两种时间格式：
-1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
-2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。
-开始时间和结束时间的格式需要保持一致。 
-     * @return StartTime 起始时间点，接口查询支持两种时间格式：
-1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
-2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。
-开始时间和结束时间的格式需要保持一致。
+     * Get <p>起始时间点，接口查询支持两种时间格式：<br>1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I<br>2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。<br>开始时间和结束时间的格式需要保持一致。</p> 
+     * @return StartTime <p>起始时间点，接口查询支持两种时间格式：<br>1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I<br>2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。<br>开始时间和结束时间的格式需要保持一致。</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 起始时间点，接口查询支持两种时间格式：
-1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
-2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。
-开始时间和结束时间的格式需要保持一致。
-     * @param StartTime 起始时间点，接口查询支持两种时间格式：
-1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
-2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。
-开始时间和结束时间的格式需要保持一致。
+     * Set <p>起始时间点，接口查询支持两种时间格式：<br>1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I<br>2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。<br>开始时间和结束时间的格式需要保持一致。</p>
+     * @param StartTime <p>起始时间点，接口查询支持两种时间格式：<br>1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I<br>2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。<br>开始时间和结束时间的格式需要保持一致。</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间点，接口查询支持两种时间格式：
-1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
-2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。
-开始时间和结束时间的格式需要保持一致。结束时间和开始时间跨度不支持超过24小时，支持距当前时间一个月内的数据查询。 
-     * @return EndTime 结束时间点，接口查询支持两种时间格式：
-1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
-2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。
-开始时间和结束时间的格式需要保持一致。结束时间和开始时间跨度不支持超过24小时，支持距当前时间一个月内的数据查询。
+     * Get <p>结束时间点，接口查询支持两种时间格式：<br>1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I<br>2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。<br>开始时间和结束时间的格式需要保持一致。结束时间和开始时间跨度不支持超过24小时，支持距当前时间一个月内的数据查询。</p> 
+     * @return EndTime <p>结束时间点，接口查询支持两种时间格式：<br>1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I<br>2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。<br>开始时间和结束时间的格式需要保持一致。结束时间和开始时间跨度不支持超过24小时，支持距当前时间一个月内的数据查询。</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间点，接口查询支持两种时间格式：
-1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
-2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。
-开始时间和结束时间的格式需要保持一致。结束时间和开始时间跨度不支持超过24小时，支持距当前时间一个月内的数据查询。
-     * @param EndTime 结束时间点，接口查询支持两种时间格式：
-1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
-2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。
-开始时间和结束时间的格式需要保持一致。结束时间和开始时间跨度不支持超过24小时，支持距当前时间一个月内的数据查询。
+     * Set <p>结束时间点，接口查询支持两种时间格式：<br>1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I<br>2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。<br>开始时间和结束时间的格式需要保持一致。结束时间和开始时间跨度不支持超过24小时，支持距当前时间一个月内的数据查询。</p>
+     * @param EndTime <p>结束时间点，接口查询支持两种时间格式：<br>1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I<br>2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。<br>开始时间和结束时间的格式需要保持一致。结束时间和开始时间跨度不支持超过24小时，支持距当前时间一个月内的数据查询。</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 播放域名，
-若不填，则为查询所有播放域名的在线流数据。 
-     * @return PlayDomain 播放域名，
-若不填，则为查询所有播放域名的在线流数据。
+     * Get <p>播放域名，<br>若不填，则为查询所有播放域名的在线流数据。</p> 
+     * @return PlayDomain <p>播放域名，<br>若不填，则为查询所有播放域名的在线流数据。</p>
      */
     public String getPlayDomain() {
         return this.PlayDomain;
     }
 
     /**
-     * Set 播放域名，
-若不填，则为查询所有播放域名的在线流数据。
-     * @param PlayDomain 播放域名，
-若不填，则为查询所有播放域名的在线流数据。
+     * Set <p>播放域名，<br>若不填，则为查询所有播放域名的在线流数据。</p>
+     * @param PlayDomain <p>播放域名，<br>若不填，则为查询所有播放域名的在线流数据。</p>
      */
     public void setPlayDomain(String PlayDomain) {
         this.PlayDomain = PlayDomain;
     }
 
     /**
-     * Get 流名称，精确匹配。
-若不填，则为查询总体播放数据。 
-     * @return StreamName 流名称，精确匹配。
-若不填，则为查询总体播放数据。
+     * Get <p>流名称，精确匹配。<br>若不填，则为查询总体播放数据。</p> 
+     * @return StreamName <p>流名称，精确匹配。<br>若不填，则为查询总体播放数据。</p>
      */
     public String getStreamName() {
         return this.StreamName;
     }
 
     /**
-     * Set 流名称，精确匹配。
-若不填，则为查询总体播放数据。
-     * @param StreamName 流名称，精确匹配。
-若不填，则为查询总体播放数据。
+     * Set <p>流名称，精确匹配。<br>若不填，则为查询总体播放数据。</p>
+     * @param StreamName <p>流名称，精确匹配。<br>若不填，则为查询总体播放数据。</p>
      */
     public void setStreamName(String StreamName) {
         this.StreamName = StreamName;
     }
 
     /**
-     * Get 推流路径，与播放地址中的AppName保持一致，会精确匹配，在同时传递了StreamName时生效。
-若不填，则为查询总体播放数据。 
-     * @return AppName 推流路径，与播放地址中的AppName保持一致，会精确匹配，在同时传递了StreamName时生效。
-若不填，则为查询总体播放数据。
+     * Get <p>该参数暂不可用。</p> 
+     * @return AppName <p>该参数暂不可用。</p>
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * Set 推流路径，与播放地址中的AppName保持一致，会精确匹配，在同时传递了StreamName时生效。
-若不填，则为查询总体播放数据。
-     * @param AppName 推流路径，与播放地址中的AppName保持一致，会精确匹配，在同时传递了StreamName时生效。
-若不填，则为查询总体播放数据。
+     * Set <p>该参数暂不可用。</p>
+     * @param AppName <p>该参数暂不可用。</p>
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;
     }
 
     /**
-     * Get 服务名称，可选值包括LVB(标准直播)，LEB(快直播)，不填则查LVB+LEB总值。 
-     * @return ServiceName 服务名称，可选值包括LVB(标准直播)，LEB(快直播)，不填则查LVB+LEB总值。
+     * Get <p>服务名称，可选值包括LVB(标准直播)，LEB(快直播)，不填则查LVB+LEB总值。</p> 
+     * @return ServiceName <p>服务名称，可选值包括LVB(标准直播)，LEB(快直播)，不填则查LVB+LEB总值。</p>
      */
     public String getServiceName() {
         return this.ServiceName;
     }
 
     /**
-     * Set 服务名称，可选值包括LVB(标准直播)，LEB(快直播)，不填则查LVB+LEB总值。
-     * @param ServiceName 服务名称，可选值包括LVB(标准直播)，LEB(快直播)，不填则查LVB+LEB总值。
+     * Set <p>服务名称，可选值包括LVB(标准直播)，LEB(快直播)，不填则查LVB+LEB总值。</p>
+     * @param ServiceName <p>服务名称，可选值包括LVB(标准直播)，LEB(快直播)，不填则查LVB+LEB总值。</p>
      */
     public void setServiceName(String ServiceName) {
         this.ServiceName = ServiceName;

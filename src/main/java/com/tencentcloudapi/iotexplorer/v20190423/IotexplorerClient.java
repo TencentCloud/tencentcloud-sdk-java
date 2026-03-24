@@ -1205,6 +1205,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *获取产品动态注册详情
+     * @param req DescribeProductDynamicRegisterRequest
+     * @return DescribeProductDynamicRegisterResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProductDynamicRegisterResponse DescribeProductDynamicRegister(DescribeProductDynamicRegisterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeProductDynamicRegister", DescribeProductDynamicRegisterResponse.class);
+    }
+
+    /**
      *查询项目详情
      * @param req DescribeProjectRequest
      * @return DescribeProjectResponse
@@ -1884,6 +1895,17 @@ public class IotexplorerClient extends AbstractClient{
     public ModifyProductCloudStorageAIServiceResponse ModifyProductCloudStorageAIService(ModifyProductCloudStorageAIServiceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyProductCloudStorageAIService", ModifyProductCloudStorageAIServiceResponse.class);
+    }
+
+    /**
+     *修改产品动态注册
+     * @param req ModifyProductDynamicRegisterRequest
+     * @return ModifyProductDynamicRegisterResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyProductDynamicRegisterResponse ModifyProductDynamicRegister(ModifyProductDynamicRegisterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyProductDynamicRegister", ModifyProductDynamicRegisterResponse.class);
     }
 
     /**

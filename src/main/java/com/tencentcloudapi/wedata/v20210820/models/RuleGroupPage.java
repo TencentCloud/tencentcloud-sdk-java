@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RuleGroupPage extends AbstractModel {
 
     /**
-    * 记录数
+    * 查询结果总数量
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
@@ -40,9 +40,17 @@ public class RuleGroupPage extends AbstractModel {
     private RuleGroup [] Items;
 
     /**
-     * Get 记录数
+    * 已开启监控任务数量（在查询结果总量中）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MonitorEnabledCount")
+    @Expose
+    private Long MonitorEnabledCount;
+
+    /**
+     * Get 查询结果总数量
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalCount 记录数
+     * @return TotalCount 查询结果总数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
@@ -50,9 +58,9 @@ public class RuleGroupPage extends AbstractModel {
     }
 
     /**
-     * Set 记录数
+     * Set 查询结果总数量
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalCount 记录数
+     * @param TotalCount 查询结果总数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
@@ -79,6 +87,26 @@ public class RuleGroupPage extends AbstractModel {
         this.Items = Items;
     }
 
+    /**
+     * Get 已开启监控任务数量（在查询结果总量中）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MonitorEnabledCount 已开启监控任务数量（在查询结果总量中）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMonitorEnabledCount() {
+        return this.MonitorEnabledCount;
+    }
+
+    /**
+     * Set 已开启监控任务数量（在查询结果总量中）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MonitorEnabledCount 已开启监控任务数量（在查询结果总量中）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMonitorEnabledCount(Long MonitorEnabledCount) {
+        this.MonitorEnabledCount = MonitorEnabledCount;
+    }
+
     public RuleGroupPage() {
     }
 
@@ -96,6 +124,9 @@ public class RuleGroupPage extends AbstractModel {
                 this.Items[i] = new RuleGroup(source.Items[i]);
             }
         }
+        if (source.MonitorEnabledCount != null) {
+            this.MonitorEnabledCount = new Long(source.MonitorEnabledCount);
+        }
     }
 
 
@@ -105,6 +136,7 @@ public class RuleGroupPage extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "Items.", this.Items);
+        this.setParamSimple(map, prefix + "MonitorEnabledCount", this.MonitorEnabledCount);
 
     }
 }

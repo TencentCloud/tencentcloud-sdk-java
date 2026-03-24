@@ -1841,6 +1841,17 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeContractReviewMarkedRiskExportTask）用于查询由 ExportContractReviewMarkedRisk 接口创建的导出任务状态。
+     * @param req DescribeContractReviewMarkedRiskExportTaskRequest
+     * @return DescribeContractReviewMarkedRiskExportTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeContractReviewMarkedRiskExportTaskResponse DescribeContractReviewMarkedRiskExportTask(DescribeContractReviewMarkedRiskExportTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeContractReviewMarkedRiskExportTask", DescribeContractReviewMarkedRiskExportTaskResponse.class);
+    }
+
+    /**
      *本接口（DescribeContractReviewTask）用于获取合同审查任务详情，包括任务的状态和识别出的风险信息。
      * @param req DescribeContractReviewTaskRequest
      * @return DescribeContractReviewTaskResponse
@@ -2355,6 +2366,17 @@ public class EssClient extends AbstractClient{
     public ExportContractComparisonTaskResponse ExportContractComparisonTask(ExportContractComparisonTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ExportContractComparisonTask", ExportContractComparisonTaskResponse.class);
+    }
+
+    /**
+     *本接口（ExportContractReviewMarkedRisk）用于创建导出任务，可以导出合同审查标注风险项,包括忽略的、标记错误的、人工标注的风险等
+     * @param req ExportContractReviewMarkedRiskRequest
+     * @return ExportContractReviewMarkedRiskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExportContractReviewMarkedRiskResponse ExportContractReviewMarkedRisk(ExportContractReviewMarkedRiskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ExportContractReviewMarkedRisk", ExportContractReviewMarkedRiskResponse.class);
     }
 
     /**

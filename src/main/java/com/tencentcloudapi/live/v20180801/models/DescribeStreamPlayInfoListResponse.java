@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeStreamPlayInfoListResponse extends AbstractModel {
 
     /**
-    * 统计信息列表，时间粒度是1分钟。
+    * <p>统计信息列表，时间粒度是1分钟。</p>
     */
     @SerializedName("DataInfoList")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeStreamPlayInfoListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 统计信息列表，时间粒度是1分钟。 
-     * @return DataInfoList 统计信息列表，时间粒度是1分钟。
+     * Get <p>统计信息列表，时间粒度是1分钟。</p> 
+     * @return DataInfoList <p>统计信息列表，时间粒度是1分钟。</p>
      */
     public DayStreamPlayInfo [] getDataInfoList() {
         return this.DataInfoList;
     }
 
     /**
-     * Set 统计信息列表，时间粒度是1分钟。
-     * @param DataInfoList 统计信息列表，时间粒度是1分钟。
+     * Set <p>统计信息列表，时间粒度是1分钟。</p>
+     * @param DataInfoList <p>统计信息列表，时间粒度是1分钟。</p>
      */
     public void setDataInfoList(DayStreamPlayInfo [] DataInfoList) {
         this.DataInfoList = DataInfoList;

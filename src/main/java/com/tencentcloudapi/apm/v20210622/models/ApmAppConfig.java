@@ -474,6 +474,13 @@ public class ApmAppConfig extends AbstractModel {
     private Long ResponseDurationWarningThreshold;
 
     /**
+    * <p>是否默认使用探针自带熔断阈值</p>
+    */
+    @SerializedName("UseDefaultFuseConfig")
+    @Expose
+    private Boolean UseDefaultFuseConfig;
+
+    /**
      * Get <p>实例ID</p> 
      * @return InstanceKey <p>实例ID</p>
      */
@@ -1541,6 +1548,22 @@ public class ApmAppConfig extends AbstractModel {
         this.ResponseDurationWarningThreshold = ResponseDurationWarningThreshold;
     }
 
+    /**
+     * Get <p>是否默认使用探针自带熔断阈值</p> 
+     * @return UseDefaultFuseConfig <p>是否默认使用探针自带熔断阈值</p>
+     */
+    public Boolean getUseDefaultFuseConfig() {
+        return this.UseDefaultFuseConfig;
+    }
+
+    /**
+     * Set <p>是否默认使用探针自带熔断阈值</p>
+     * @param UseDefaultFuseConfig <p>是否默认使用探针自带熔断阈值</p>
+     */
+    public void setUseDefaultFuseConfig(Boolean UseDefaultFuseConfig) {
+        this.UseDefaultFuseConfig = UseDefaultFuseConfig;
+    }
+
     public ApmAppConfig() {
     }
 
@@ -1738,6 +1761,9 @@ public class ApmAppConfig extends AbstractModel {
         if (source.ResponseDurationWarningThreshold != null) {
             this.ResponseDurationWarningThreshold = new Long(source.ResponseDurationWarningThreshold);
         }
+        if (source.UseDefaultFuseConfig != null) {
+            this.UseDefaultFuseConfig = new Boolean(source.UseDefaultFuseConfig);
+        }
     }
 
 
@@ -1806,6 +1832,7 @@ public class ApmAppConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableThresholdConfig", this.EnableThresholdConfig);
         this.setParamSimple(map, prefix + "ErrRateThreshold", this.ErrRateThreshold);
         this.setParamSimple(map, prefix + "ResponseDurationWarningThreshold", this.ResponseDurationWarningThreshold);
+        this.setParamSimple(map, prefix + "UseDefaultFuseConfig", this.UseDefaultFuseConfig);
 
     }
 }

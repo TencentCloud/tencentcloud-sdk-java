@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class BatchModifyTargetWeightRequest extends AbstractModel {
 
     /**
-    * 负载均衡实例 ID。
+    * <p>负载均衡实例 ID。</p>
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * 要批量修改权重的列表。
+    * <p>要批量修改权重的列表。ModifyList数组最多100个元素，ModifyList[i].Targets最多50个，全部Targets累加不超过500。</p>
     */
     @SerializedName("ModifyList")
     @Expose
     private RsWeightRule [] ModifyList;
 
     /**
-     * Get 负载均衡实例 ID。 
-     * @return LoadBalancerId 负载均衡实例 ID。
+     * Get <p>负载均衡实例 ID。</p> 
+     * @return LoadBalancerId <p>负载均衡实例 ID。</p>
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set 负载均衡实例 ID。
-     * @param LoadBalancerId 负载均衡实例 ID。
+     * Set <p>负载均衡实例 ID。</p>
+     * @param LoadBalancerId <p>负载均衡实例 ID。</p>
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get 要批量修改权重的列表。 
-     * @return ModifyList 要批量修改权重的列表。
+     * Get <p>要批量修改权重的列表。ModifyList数组最多100个元素，ModifyList[i].Targets最多50个，全部Targets累加不超过500。</p> 
+     * @return ModifyList <p>要批量修改权重的列表。ModifyList数组最多100个元素，ModifyList[i].Targets最多50个，全部Targets累加不超过500。</p>
      */
     public RsWeightRule [] getModifyList() {
         return this.ModifyList;
     }
 
     /**
-     * Set 要批量修改权重的列表。
-     * @param ModifyList 要批量修改权重的列表。
+     * Set <p>要批量修改权重的列表。ModifyList数组最多100个元素，ModifyList[i].Targets最多50个，全部Targets累加不超过500。</p>
+     * @param ModifyList <p>要批量修改权重的列表。ModifyList数组最多100个元素，ModifyList[i].Targets最多50个，全部Targets累加不超过500。</p>
      */
     public void setModifyList(RsWeightRule [] ModifyList) {
         this.ModifyList = ModifyList;

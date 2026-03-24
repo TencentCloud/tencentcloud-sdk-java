@@ -560,6 +560,17 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
+     *创建AI转绘任务
+     * @param req CreateVideoRedrawTaskRequest
+     * @return CreateVideoRedrawTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVideoRedrawTaskResponse CreateVideoRedrawTask(CreateVideoRedrawTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateVideoRedrawTask", CreateVideoRedrawTaskResponse.class);
+    }
+
+    /**
      *删除关键词信息。
      * @param req DeleteAuditKeywordsRequest
      * @return DeleteAuditKeywordsResponse

@@ -298,6 +298,17 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *销毁云服务器实例
+     * @param req DeleteVmInstanceRequest
+     * @return DeleteVmInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteVmInstanceResponse DeleteVmInstance(DeleteVmInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteVmInstance", DeleteVmInstanceResponse.class);
+    }
+
+    /**
      *本接口用于获取当前环境的安全域名列表。
 云开发会校验网页应用请求的来源域名，您需要将来源域名加入到WEB安全域名列表中。
 可以通过接口 [CreateAuthDomain](https://cloud.tencent.com/document/product/876/42764) 增加安全域名。
@@ -581,6 +592,17 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *查询环境下的云服务器列表
+     * @param req DescribeVmInstancesRequest
+     * @return DescribeVmInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVmInstancesResponse DescribeVmInstances(DescribeVmInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVmInstances", DescribeVmInstancesResponse.class);
+    }
+
+    /**
      *云服务器规格list
      * @param req DescribeVmSpecRequest
      * @return DescribeVmSpecResponse
@@ -655,6 +677,17 @@ public class TcbClient extends AbstractClient{
     public GetProvidersResponse GetProviders(GetProvidersRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetProviders", GetProvidersResponse.class);
+    }
+
+    /**
+     *查询服务器价格
+     * @param req InquireVmPriceRequest
+     * @return InquireVmPriceResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquireVmPriceResponse InquireVmPrice(InquireVmPriceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InquireVmPrice", InquireVmPriceResponse.class);
     }
 
     /**
