@@ -24,291 +24,276 @@ import java.util.HashMap;
 public class BatchSendEmailRequest extends AbstractModel {
 
     /**
-    * 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照
-发信人 &lt;邮件地址&gt; 的方式填写，例如：
-腾讯云团队 &lt;noreply@mail.qcloud.com&gt;
+    * <p>发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照<br>发信人 &lt;邮件地址&gt; 的方式填写，例如：<br>腾讯云团队 &lt;noreply@mail.qcloud.com&gt;</p>
     */
     @SerializedName("FromEmailAddress")
     @Expose
     private String FromEmailAddress;
 
     /**
-    * 收件人列表ID
+    * <p>收件人列表ID</p>
     */
     @SerializedName("ReceiverId")
     @Expose
     private Long ReceiverId;
 
     /**
-    * 邮件主题
+    * <p>邮件主题</p>
     */
     @SerializedName("Subject")
     @Expose
     private String Subject;
 
     /**
-    * 任务类型 1: 立即发送 2: 定时发送 3: 周期（频率）发送
+    * <p>任务类型 1: 立即发送 2: 定时发送 3: 周期（频率）发送</p>
     */
     @SerializedName("TaskType")
     @Expose
     private Long TaskType;
 
     /**
-    * 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。
+    * <p>邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。</p>
     */
     @SerializedName("ReplyToAddresses")
     @Expose
     private String ReplyToAddresses;
 
     /**
-    * 使用模板发送时，填写的模板相关参数
-<dx-alert infotype="notice" title="注意"> 如您未申请过特殊配置，则该字段为必填 </dx-alert>
+    * <p>使用模板发送时，填写的模板相关参数</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">注意</div>        <div class="rno-document-tip-desc"><p>如您未申请过特殊配置，则该字段为必填</p></div>    </div></blockquote>
     */
     @SerializedName("Template")
     @Expose
     private Template Template;
 
     /**
-    * 已废弃<dx-alert infotype="notice" title="说明"> 仅部分历史上申请了特殊配置的客户需要使用。如您未申请过特殊配置，则不存在该字段。</dx-alert>
+    * <p>已废弃<blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">说明</div>        <div class="rno-document-tip-desc"><p>仅部分历史上申请了特殊配置的客户需要使用。如您未申请过特殊配置，则不存在该字段。</p></div>    </div></blockquote></p>
     */
     @SerializedName("Simple")
     @Expose
     private Simple Simple;
 
     /**
-    * 需要发送附件时，填写附件相关参数（暂未支持）
+    * <p>需要发送附件时，填写附件相关参数（暂未支持）</p>
     */
     @SerializedName("Attachments")
     @Expose
     private Attachment [] Attachments;
 
     /**
-    * 周期发送任务的必要参数
+    * <p>周期发送任务的必要参数</p>
     */
     @SerializedName("CycleParam")
     @Expose
     private CycleEmailParam CycleParam;
 
     /**
-    * 定时发送任务的必要参数
+    * <p>定时发送任务的必要参数</p>
     */
     @SerializedName("TimedParam")
     @Expose
     private TimedEmailParam TimedParam;
 
     /**
-    * 退订链接选项 0: 不加入退订链接 1: 简体中文 2: 英文 3: 繁体中文 4: 西班牙语 5: 法语 6: 德语 7: 日语 8: 韩语 9: 阿拉伯语 10: 泰语
+    * <p>退订链接选项</p><p>枚举值：</p><ul><li>0： 不加入退订链接</li><li>1： 简体中文</li><li>2： 英文</li><li>3： 繁体中文</li><li>4： 西班牙语</li><li>5： 法语</li><li>6： 德语</li><li>7： 日语</li><li>8： 韩语</li><li>9： 阿拉伯语</li><li>10： 泰语</li><li>11： 印尼语</li></ul>
     */
     @SerializedName("Unsubscribe")
     @Expose
     private String Unsubscribe;
 
     /**
-    * 是否添加广告标识 0:不添加 1:添加到subject前面，2:添加到subject后面
+    * <p>是否添加广告标识 0:不添加 1:添加到subject前面，2:添加到subject后面</p>
     */
     @SerializedName("ADLocation")
     @Expose
     private Long ADLocation;
 
     /**
-     * Get 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照
-发信人 &lt;邮件地址&gt; 的方式填写，例如：
-腾讯云团队 &lt;noreply@mail.qcloud.com&gt; 
-     * @return FromEmailAddress 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照
-发信人 &lt;邮件地址&gt; 的方式填写，例如：
-腾讯云团队 &lt;noreply@mail.qcloud.com&gt;
+     * Get <p>发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照<br>发信人 &lt;邮件地址&gt; 的方式填写，例如：<br>腾讯云团队 &lt;noreply@mail.qcloud.com&gt;</p> 
+     * @return FromEmailAddress <p>发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照<br>发信人 &lt;邮件地址&gt; 的方式填写，例如：<br>腾讯云团队 &lt;noreply@mail.qcloud.com&gt;</p>
      */
     public String getFromEmailAddress() {
         return this.FromEmailAddress;
     }
 
     /**
-     * Set 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照
-发信人 &lt;邮件地址&gt; 的方式填写，例如：
-腾讯云团队 &lt;noreply@mail.qcloud.com&gt;
-     * @param FromEmailAddress 发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照
-发信人 &lt;邮件地址&gt; 的方式填写，例如：
-腾讯云团队 &lt;noreply@mail.qcloud.com&gt;
+     * Set <p>发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照<br>发信人 &lt;邮件地址&gt; 的方式填写，例如：<br>腾讯云团队 &lt;noreply@mail.qcloud.com&gt;</p>
+     * @param FromEmailAddress <p>发信邮件地址。请填写发件人邮箱地址，例如：noreply@mail.qcloud.com。如需填写发件人说明，请按照<br>发信人 &lt;邮件地址&gt; 的方式填写，例如：<br>腾讯云团队 &lt;noreply@mail.qcloud.com&gt;</p>
      */
     public void setFromEmailAddress(String FromEmailAddress) {
         this.FromEmailAddress = FromEmailAddress;
     }
 
     /**
-     * Get 收件人列表ID 
-     * @return ReceiverId 收件人列表ID
+     * Get <p>收件人列表ID</p> 
+     * @return ReceiverId <p>收件人列表ID</p>
      */
     public Long getReceiverId() {
         return this.ReceiverId;
     }
 
     /**
-     * Set 收件人列表ID
-     * @param ReceiverId 收件人列表ID
+     * Set <p>收件人列表ID</p>
+     * @param ReceiverId <p>收件人列表ID</p>
      */
     public void setReceiverId(Long ReceiverId) {
         this.ReceiverId = ReceiverId;
     }
 
     /**
-     * Get 邮件主题 
-     * @return Subject 邮件主题
+     * Get <p>邮件主题</p> 
+     * @return Subject <p>邮件主题</p>
      */
     public String getSubject() {
         return this.Subject;
     }
 
     /**
-     * Set 邮件主题
-     * @param Subject 邮件主题
+     * Set <p>邮件主题</p>
+     * @param Subject <p>邮件主题</p>
      */
     public void setSubject(String Subject) {
         this.Subject = Subject;
     }
 
     /**
-     * Get 任务类型 1: 立即发送 2: 定时发送 3: 周期（频率）发送 
-     * @return TaskType 任务类型 1: 立即发送 2: 定时发送 3: 周期（频率）发送
+     * Get <p>任务类型 1: 立即发送 2: 定时发送 3: 周期（频率）发送</p> 
+     * @return TaskType <p>任务类型 1: 立即发送 2: 定时发送 3: 周期（频率）发送</p>
      */
     public Long getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 任务类型 1: 立即发送 2: 定时发送 3: 周期（频率）发送
-     * @param TaskType 任务类型 1: 立即发送 2: 定时发送 3: 周期（频率）发送
+     * Set <p>任务类型 1: 立即发送 2: 定时发送 3: 周期（频率）发送</p>
+     * @param TaskType <p>任务类型 1: 立即发送 2: 定时发送 3: 周期（频率）发送</p>
      */
     public void setTaskType(Long TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。 
-     * @return ReplyToAddresses 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。
+     * Get <p>邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。</p> 
+     * @return ReplyToAddresses <p>邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。</p>
      */
     public String getReplyToAddresses() {
         return this.ReplyToAddresses;
     }
 
     /**
-     * Set 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。
-     * @param ReplyToAddresses 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。
+     * Set <p>邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。</p>
+     * @param ReplyToAddresses <p>邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。</p>
      */
     public void setReplyToAddresses(String ReplyToAddresses) {
         this.ReplyToAddresses = ReplyToAddresses;
     }
 
     /**
-     * Get 使用模板发送时，填写的模板相关参数
-<dx-alert infotype="notice" title="注意"> 如您未申请过特殊配置，则该字段为必填 </dx-alert> 
-     * @return Template 使用模板发送时，填写的模板相关参数
-<dx-alert infotype="notice" title="注意"> 如您未申请过特殊配置，则该字段为必填 </dx-alert>
+     * Get <p>使用模板发送时，填写的模板相关参数</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">注意</div>        <div class="rno-document-tip-desc"><p>如您未申请过特殊配置，则该字段为必填</p></div>    </div></blockquote> 
+     * @return Template <p>使用模板发送时，填写的模板相关参数</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">注意</div>        <div class="rno-document-tip-desc"><p>如您未申请过特殊配置，则该字段为必填</p></div>    </div></blockquote>
      */
     public Template getTemplate() {
         return this.Template;
     }
 
     /**
-     * Set 使用模板发送时，填写的模板相关参数
-<dx-alert infotype="notice" title="注意"> 如您未申请过特殊配置，则该字段为必填 </dx-alert>
-     * @param Template 使用模板发送时，填写的模板相关参数
-<dx-alert infotype="notice" title="注意"> 如您未申请过特殊配置，则该字段为必填 </dx-alert>
+     * Set <p>使用模板发送时，填写的模板相关参数</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">注意</div>        <div class="rno-document-tip-desc"><p>如您未申请过特殊配置，则该字段为必填</p></div>    </div></blockquote>
+     * @param Template <p>使用模板发送时，填写的模板相关参数</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">注意</div>        <div class="rno-document-tip-desc"><p>如您未申请过特殊配置，则该字段为必填</p></div>    </div></blockquote>
      */
     public void setTemplate(Template Template) {
         this.Template = Template;
     }
 
     /**
-     * Get 已废弃<dx-alert infotype="notice" title="说明"> 仅部分历史上申请了特殊配置的客户需要使用。如您未申请过特殊配置，则不存在该字段。</dx-alert> 
-     * @return Simple 已废弃<dx-alert infotype="notice" title="说明"> 仅部分历史上申请了特殊配置的客户需要使用。如您未申请过特殊配置，则不存在该字段。</dx-alert>
+     * Get <p>已废弃<blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">说明</div>        <div class="rno-document-tip-desc"><p>仅部分历史上申请了特殊配置的客户需要使用。如您未申请过特殊配置，则不存在该字段。</p></div>    </div></blockquote></p> 
+     * @return Simple <p>已废弃<blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">说明</div>        <div class="rno-document-tip-desc"><p>仅部分历史上申请了特殊配置的客户需要使用。如您未申请过特殊配置，则不存在该字段。</p></div>    </div></blockquote></p>
      */
     public Simple getSimple() {
         return this.Simple;
     }
 
     /**
-     * Set 已废弃<dx-alert infotype="notice" title="说明"> 仅部分历史上申请了特殊配置的客户需要使用。如您未申请过特殊配置，则不存在该字段。</dx-alert>
-     * @param Simple 已废弃<dx-alert infotype="notice" title="说明"> 仅部分历史上申请了特殊配置的客户需要使用。如您未申请过特殊配置，则不存在该字段。</dx-alert>
+     * Set <p>已废弃<blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">说明</div>        <div class="rno-document-tip-desc"><p>仅部分历史上申请了特殊配置的客户需要使用。如您未申请过特殊配置，则不存在该字段。</p></div>    </div></blockquote></p>
+     * @param Simple <p>已废弃<blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">说明</div>        <div class="rno-document-tip-desc"><p>仅部分历史上申请了特殊配置的客户需要使用。如您未申请过特殊配置，则不存在该字段。</p></div>    </div></blockquote></p>
      */
     public void setSimple(Simple Simple) {
         this.Simple = Simple;
     }
 
     /**
-     * Get 需要发送附件时，填写附件相关参数（暂未支持） 
-     * @return Attachments 需要发送附件时，填写附件相关参数（暂未支持）
+     * Get <p>需要发送附件时，填写附件相关参数（暂未支持）</p> 
+     * @return Attachments <p>需要发送附件时，填写附件相关参数（暂未支持）</p>
      */
     public Attachment [] getAttachments() {
         return this.Attachments;
     }
 
     /**
-     * Set 需要发送附件时，填写附件相关参数（暂未支持）
-     * @param Attachments 需要发送附件时，填写附件相关参数（暂未支持）
+     * Set <p>需要发送附件时，填写附件相关参数（暂未支持）</p>
+     * @param Attachments <p>需要发送附件时，填写附件相关参数（暂未支持）</p>
      */
     public void setAttachments(Attachment [] Attachments) {
         this.Attachments = Attachments;
     }
 
     /**
-     * Get 周期发送任务的必要参数 
-     * @return CycleParam 周期发送任务的必要参数
+     * Get <p>周期发送任务的必要参数</p> 
+     * @return CycleParam <p>周期发送任务的必要参数</p>
      */
     public CycleEmailParam getCycleParam() {
         return this.CycleParam;
     }
 
     /**
-     * Set 周期发送任务的必要参数
-     * @param CycleParam 周期发送任务的必要参数
+     * Set <p>周期发送任务的必要参数</p>
+     * @param CycleParam <p>周期发送任务的必要参数</p>
      */
     public void setCycleParam(CycleEmailParam CycleParam) {
         this.CycleParam = CycleParam;
     }
 
     /**
-     * Get 定时发送任务的必要参数 
-     * @return TimedParam 定时发送任务的必要参数
+     * Get <p>定时发送任务的必要参数</p> 
+     * @return TimedParam <p>定时发送任务的必要参数</p>
      */
     public TimedEmailParam getTimedParam() {
         return this.TimedParam;
     }
 
     /**
-     * Set 定时发送任务的必要参数
-     * @param TimedParam 定时发送任务的必要参数
+     * Set <p>定时发送任务的必要参数</p>
+     * @param TimedParam <p>定时发送任务的必要参数</p>
      */
     public void setTimedParam(TimedEmailParam TimedParam) {
         this.TimedParam = TimedParam;
     }
 
     /**
-     * Get 退订链接选项 0: 不加入退订链接 1: 简体中文 2: 英文 3: 繁体中文 4: 西班牙语 5: 法语 6: 德语 7: 日语 8: 韩语 9: 阿拉伯语 10: 泰语 
-     * @return Unsubscribe 退订链接选项 0: 不加入退订链接 1: 简体中文 2: 英文 3: 繁体中文 4: 西班牙语 5: 法语 6: 德语 7: 日语 8: 韩语 9: 阿拉伯语 10: 泰语
+     * Get <p>退订链接选项</p><p>枚举值：</p><ul><li>0： 不加入退订链接</li><li>1： 简体中文</li><li>2： 英文</li><li>3： 繁体中文</li><li>4： 西班牙语</li><li>5： 法语</li><li>6： 德语</li><li>7： 日语</li><li>8： 韩语</li><li>9： 阿拉伯语</li><li>10： 泰语</li><li>11： 印尼语</li></ul> 
+     * @return Unsubscribe <p>退订链接选项</p><p>枚举值：</p><ul><li>0： 不加入退订链接</li><li>1： 简体中文</li><li>2： 英文</li><li>3： 繁体中文</li><li>4： 西班牙语</li><li>5： 法语</li><li>6： 德语</li><li>7： 日语</li><li>8： 韩语</li><li>9： 阿拉伯语</li><li>10： 泰语</li><li>11： 印尼语</li></ul>
      */
     public String getUnsubscribe() {
         return this.Unsubscribe;
     }
 
     /**
-     * Set 退订链接选项 0: 不加入退订链接 1: 简体中文 2: 英文 3: 繁体中文 4: 西班牙语 5: 法语 6: 德语 7: 日语 8: 韩语 9: 阿拉伯语 10: 泰语
-     * @param Unsubscribe 退订链接选项 0: 不加入退订链接 1: 简体中文 2: 英文 3: 繁体中文 4: 西班牙语 5: 法语 6: 德语 7: 日语 8: 韩语 9: 阿拉伯语 10: 泰语
+     * Set <p>退订链接选项</p><p>枚举值：</p><ul><li>0： 不加入退订链接</li><li>1： 简体中文</li><li>2： 英文</li><li>3： 繁体中文</li><li>4： 西班牙语</li><li>5： 法语</li><li>6： 德语</li><li>7： 日语</li><li>8： 韩语</li><li>9： 阿拉伯语</li><li>10： 泰语</li><li>11： 印尼语</li></ul>
+     * @param Unsubscribe <p>退订链接选项</p><p>枚举值：</p><ul><li>0： 不加入退订链接</li><li>1： 简体中文</li><li>2： 英文</li><li>3： 繁体中文</li><li>4： 西班牙语</li><li>5： 法语</li><li>6： 德语</li><li>7： 日语</li><li>8： 韩语</li><li>9： 阿拉伯语</li><li>10： 泰语</li><li>11： 印尼语</li></ul>
      */
     public void setUnsubscribe(String Unsubscribe) {
         this.Unsubscribe = Unsubscribe;
     }
 
     /**
-     * Get 是否添加广告标识 0:不添加 1:添加到subject前面，2:添加到subject后面 
-     * @return ADLocation 是否添加广告标识 0:不添加 1:添加到subject前面，2:添加到subject后面
+     * Get <p>是否添加广告标识 0:不添加 1:添加到subject前面，2:添加到subject后面</p> 
+     * @return ADLocation <p>是否添加广告标识 0:不添加 1:添加到subject前面，2:添加到subject后面</p>
      */
     public Long getADLocation() {
         return this.ADLocation;
     }
 
     /**
-     * Set 是否添加广告标识 0:不添加 1:添加到subject前面，2:添加到subject后面
-     * @param ADLocation 是否添加广告标识 0:不添加 1:添加到subject前面，2:添加到subject后面
+     * Set <p>是否添加广告标识 0:不添加 1:添加到subject前面，2:添加到subject后面</p>
+     * @param ADLocation <p>是否添加广告标识 0:不添加 1:添加到subject前面，2:添加到subject后面</p>
      */
     public void setADLocation(Long ADLocation) {
         this.ADLocation = ADLocation;

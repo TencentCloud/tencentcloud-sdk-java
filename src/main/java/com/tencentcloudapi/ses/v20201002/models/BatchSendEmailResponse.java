@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class BatchSendEmailResponse extends AbstractModel {
 
     /**
-    * 发送任务ID
+    * <p>发送任务ID</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class BatchSendEmailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 发送任务ID 
-     * @return TaskId 发送任务ID
+     * Get <p>发送任务ID</p> 
+     * @return TaskId <p>发送任务ID</p>
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 发送任务ID
-     * @param TaskId 发送任务ID
+     * Set <p>发送任务ID</p>
+     * @param TaskId <p>发送任务ID</p>
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class CreateRocketMQRoleResponse extends AbstractModel {
 
     /**
-    * 角色名称
+    * <p>角色名称</p>
     */
     @SerializedName("RoleName")
     @Expose
     private String RoleName;
 
     /**
-    * 角色token
+    * <p>角色token</p>
     */
     @SerializedName("Token")
     @Expose
     private String Token;
 
     /**
-    * 备注说明
+    * <p>备注说明</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
@@ -53,41 +53,41 @@ public class CreateRocketMQRoleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 角色名称 
-     * @return RoleName 角色名称
+     * Get <p>角色名称</p> 
+     * @return RoleName <p>角色名称</p>
      */
     public String getRoleName() {
         return this.RoleName;
     }
 
     /**
-     * Set 角色名称
-     * @param RoleName 角色名称
+     * Set <p>角色名称</p>
+     * @param RoleName <p>角色名称</p>
      */
     public void setRoleName(String RoleName) {
         this.RoleName = RoleName;
     }
 
     /**
-     * Get 角色token 
-     * @return Token 角色token
+     * Get <p>角色token</p> 
+     * @return Token <p>角色token</p>
      */
     public String getToken() {
         return this.Token;
     }
 
     /**
-     * Set 角色token
-     * @param Token 角色token
+     * Set <p>角色token</p>
+     * @param Token <p>角色token</p>
      */
     public void setToken(String Token) {
         this.Token = Token;
     }
 
     /**
-     * Get 备注说明
+     * Get <p>备注说明</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Remark 备注说明
+     * @return Remark <p>备注说明</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
@@ -95,9 +95,9 @@ public class CreateRocketMQRoleResponse extends AbstractModel {
     }
 
     /**
-     * Set 备注说明
+     * Set <p>备注说明</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Remark 备注说明
+     * @param Remark <p>备注说明</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {

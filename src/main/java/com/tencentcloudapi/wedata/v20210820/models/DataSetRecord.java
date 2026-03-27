@@ -562,6 +562,14 @@ public class DataSetRecord extends AbstractModel {
     private String MetaFrom;
 
     /**
+    * 引擎侧责任人
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EngineOwner")
+    @Expose
+    private String EngineOwner;
+
+    /**
      * Get 资产 ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AssetId 资产 ID
@@ -1909,6 +1917,26 @@ public class DataSetRecord extends AbstractModel {
         this.MetaFrom = MetaFrom;
     }
 
+    /**
+     * Get 引擎侧责任人
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EngineOwner 引擎侧责任人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEngineOwner() {
+        return this.EngineOwner;
+    }
+
+    /**
+     * Set 引擎侧责任人
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EngineOwner 引擎侧责任人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEngineOwner(String EngineOwner) {
+        this.EngineOwner = EngineOwner;
+    }
+
     public DataSetRecord() {
     }
 
@@ -2145,6 +2173,9 @@ public class DataSetRecord extends AbstractModel {
         if (source.MetaFrom != null) {
             this.MetaFrom = new String(source.MetaFrom);
         }
+        if (source.EngineOwner != null) {
+            this.EngineOwner = new String(source.EngineOwner);
+        }
     }
 
 
@@ -2219,6 +2250,7 @@ public class DataSetRecord extends AbstractModel {
         this.setParamSimple(map, prefix + "FullName", this.FullName);
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
         this.setParamSimple(map, prefix + "MetaFrom", this.MetaFrom);
+        this.setParamSimple(map, prefix + "EngineOwner", this.EngineOwner);
 
     }
 }

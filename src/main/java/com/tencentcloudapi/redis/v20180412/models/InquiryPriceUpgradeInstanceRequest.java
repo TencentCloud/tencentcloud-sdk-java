@@ -24,102 +24,92 @@ import java.util.HashMap;
 public class InquiryPriceUpgradeInstanceRequest extends AbstractModel {
 
     /**
-    * 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+    * <p>实例 ID，请登录<a href="https://console.cloud.tencent.com/redis/instance/list">Redis控制台</a>在实例列表复制实例 ID。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 分片大小，单位：MB。
+    * <p>分片大小，单位：MB。</p>
     */
     @SerializedName("MemSize")
     @Expose
     private Long MemSize;
 
     /**
-    * 分片数量。
-- 实例为标准架构，RedisShardNum 默认为1。
-- Redis 2.8主从版、CKV主从版和 Redis 2.8单机版不需要填写。
+    * <p>分片数量。- 实例为标准架构，RedisShardNum 默认为1。- Redis 2.8主从版、CKV主从版和 Redis 2.8单机版不需要填写。</p>
     */
     @SerializedName("RedisShardNum")
     @Expose
     private Long RedisShardNum;
 
     /**
-    * 副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写。
+    * <p>副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写。</p>
     */
     @SerializedName("RedisReplicasNum")
     @Expose
     private Long RedisReplicasNum;
 
     /**
-     * Get 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。 
-     * @return InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+     * Get <p>实例 ID，请登录<a href="https://console.cloud.tencent.com/redis/instance/list">Redis控制台</a>在实例列表复制实例 ID。</p> 
+     * @return InstanceId <p>实例 ID，请登录<a href="https://console.cloud.tencent.com/redis/instance/list">Redis控制台</a>在实例列表复制实例 ID。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
-     * @param InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+     * Set <p>实例 ID，请登录<a href="https://console.cloud.tencent.com/redis/instance/list">Redis控制台</a>在实例列表复制实例 ID。</p>
+     * @param InstanceId <p>实例 ID，请登录<a href="https://console.cloud.tencent.com/redis/instance/list">Redis控制台</a>在实例列表复制实例 ID。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 分片大小，单位：MB。 
-     * @return MemSize 分片大小，单位：MB。
+     * Get <p>分片大小，单位：MB。</p> 
+     * @return MemSize <p>分片大小，单位：MB。</p>
      */
     public Long getMemSize() {
         return this.MemSize;
     }
 
     /**
-     * Set 分片大小，单位：MB。
-     * @param MemSize 分片大小，单位：MB。
+     * Set <p>分片大小，单位：MB。</p>
+     * @param MemSize <p>分片大小，单位：MB。</p>
      */
     public void setMemSize(Long MemSize) {
         this.MemSize = MemSize;
     }
 
     /**
-     * Get 分片数量。
-- 实例为标准架构，RedisShardNum 默认为1。
-- Redis 2.8主从版、CKV主从版和 Redis 2.8单机版不需要填写。 
-     * @return RedisShardNum 分片数量。
-- 实例为标准架构，RedisShardNum 默认为1。
-- Redis 2.8主从版、CKV主从版和 Redis 2.8单机版不需要填写。
+     * Get <p>分片数量。- 实例为标准架构，RedisShardNum 默认为1。- Redis 2.8主从版、CKV主从版和 Redis 2.8单机版不需要填写。</p> 
+     * @return RedisShardNum <p>分片数量。- 实例为标准架构，RedisShardNum 默认为1。- Redis 2.8主从版、CKV主从版和 Redis 2.8单机版不需要填写。</p>
      */
     public Long getRedisShardNum() {
         return this.RedisShardNum;
     }
 
     /**
-     * Set 分片数量。
-- 实例为标准架构，RedisShardNum 默认为1。
-- Redis 2.8主从版、CKV主从版和 Redis 2.8单机版不需要填写。
-     * @param RedisShardNum 分片数量。
-- 实例为标准架构，RedisShardNum 默认为1。
-- Redis 2.8主从版、CKV主从版和 Redis 2.8单机版不需要填写。
+     * Set <p>分片数量。- 实例为标准架构，RedisShardNum 默认为1。- Redis 2.8主从版、CKV主从版和 Redis 2.8单机版不需要填写。</p>
+     * @param RedisShardNum <p>分片数量。- 实例为标准架构，RedisShardNum 默认为1。- Redis 2.8主从版、CKV主从版和 Redis 2.8单机版不需要填写。</p>
      */
     public void setRedisShardNum(Long RedisShardNum) {
         this.RedisShardNum = RedisShardNum;
     }
 
     /**
-     * Get 副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写。 
-     * @return RedisReplicasNum 副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写。
+     * Get <p>副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写。</p> 
+     * @return RedisReplicasNum <p>副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写。</p>
      */
     public Long getRedisReplicasNum() {
         return this.RedisReplicasNum;
     }
 
     /**
-     * Set 副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写。
-     * @param RedisReplicasNum 副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写。
+     * Set <p>副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写。</p>
+     * @param RedisReplicasNum <p>副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写。</p>
      */
     public void setRedisReplicasNum(Long RedisReplicasNum) {
         this.RedisReplicasNum = RedisReplicasNum;

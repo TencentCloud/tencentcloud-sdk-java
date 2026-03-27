@@ -72,6 +72,17 @@ public class HaiClient extends AbstractClient{
     }
 
     /**
+     *本接口 (DeleteService) 用于删除一个指定配置的实例。
+     * @param req DeleteServiceRequest
+     * @return DeleteServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteServiceResponse DeleteService(DeleteServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteService", DeleteServiceResponse.class);
+    }
+
+    /**
      *本接口(DeployInferService)用于部署推理服务
      * @param req DeployInferServiceRequest
      * @return DeployInferServiceResponse
@@ -190,6 +201,17 @@ public class HaiClient extends AbstractClient{
     public DescribeServicesResponse DescribeServices(DescribeServicesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeServices", DescribeServicesResponse.class);
+    }
+
+    /**
+     *本接口 (DescribeServciesCallInfo) 用于查询服务调用信息。
+     * @param req DescribeServicesCallInfoRequest
+     * @return DescribeServicesCallInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeServicesCallInfoResponse DescribeServicesCallInfo(DescribeServicesCallInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeServicesCallInfo", DescribeServicesCallInfoResponse.class);
     }
 
     /**

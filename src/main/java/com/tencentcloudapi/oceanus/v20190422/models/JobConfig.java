@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class JobConfig extends AbstractModel {
 
     /**
-    * 作业Id
+    * <p>作业Id</p>
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-    * 主类
+    * <p>主类</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EntrypointClass")
@@ -39,7 +39,7 @@ public class JobConfig extends AbstractModel {
     private String EntrypointClass;
 
     /**
-    * 主类入参
+    * <p>主类入参</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProgramArgs")
@@ -47,7 +47,7 @@ public class JobConfig extends AbstractModel {
     private String ProgramArgs;
 
     /**
-    * 备注
+    * <p>备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
@@ -55,21 +55,21 @@ public class JobConfig extends AbstractModel {
     private String Remark;
 
     /**
-    * 作业配置创建时间
+    * <p>作业配置创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 作业配置的版本号
+    * <p>作业配置的版本号</p>
     */
     @SerializedName("Version")
     @Expose
     private Long Version;
 
     /**
-    * 作业默认并行度
+    * <p>作业默认并行度</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefaultParallelism")
@@ -77,7 +77,7 @@ public class JobConfig extends AbstractModel {
     private Long DefaultParallelism;
 
     /**
-    * 系统参数
+    * <p>系统参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Properties")
@@ -85,7 +85,7 @@ public class JobConfig extends AbstractModel {
     private Property [] Properties;
 
     /**
-    * 引用资源
+    * <p>引用资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceRefDetails")
@@ -93,7 +93,7 @@ public class JobConfig extends AbstractModel {
     private ResourceRefDetail [] ResourceRefDetails;
 
     /**
-    * 创建者uin
+    * <p>创建者uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatorUin")
@@ -101,7 +101,7 @@ public class JobConfig extends AbstractModel {
     private String CreatorUin;
 
     /**
-    * 作业配置上次启动时间
+    * <p>作业配置上次启动时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
@@ -109,7 +109,7 @@ public class JobConfig extends AbstractModel {
     private String UpdateTime;
 
     /**
-    * 作业绑定的存储桶
+    * <p>作业绑定的存储桶</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("COSBucket")
@@ -117,7 +117,7 @@ public class JobConfig extends AbstractModel {
     private String COSBucket;
 
     /**
-    * 是否启用日志收集，0-未启用，1-采集到cls，4-采集到cos，5-采集到es
+    * <p>是否启用日志收集，0-未启用，1-采集到cls，4-采集到cos，5-采集到es</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogCollect")
@@ -125,7 +125,7 @@ public class JobConfig extends AbstractModel {
     private Long LogCollect;
 
     /**
-    * 作业的最大并行度
+    * <p>作业的最大并行度</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxParallelism")
@@ -133,7 +133,7 @@ public class JobConfig extends AbstractModel {
     private Long MaxParallelism;
 
     /**
-    * JobManager规格
+    * <p>JobManager规格</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobManagerSpec")
@@ -141,7 +141,7 @@ public class JobConfig extends AbstractModel {
     private Float JobManagerSpec;
 
     /**
-    * TaskManager规格
+    * <p>TaskManager规格</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskManagerSpec")
@@ -149,7 +149,7 @@ public class JobConfig extends AbstractModel {
     private Float TaskManagerSpec;
 
     /**
-    * CLS日志集ID
+    * <p>CLS日志集ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClsLogsetId")
@@ -157,7 +157,7 @@ public class JobConfig extends AbstractModel {
     private String ClsLogsetId;
 
     /**
-    * CLS日志主题ID
+    * <p>CLS日志主题ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClsTopicId")
@@ -165,7 +165,7 @@ public class JobConfig extends AbstractModel {
     private String ClsTopicId;
 
     /**
-    * pyflink作业运行的python版本
+    * <p>pyflink作业运行的python版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PythonVersion")
@@ -173,7 +173,7 @@ public class JobConfig extends AbstractModel {
     private String PythonVersion;
 
     /**
-    * Oceanus 平台恢复作业开关 1:开启 -1: 关闭
+    * <p>Oceanus 平台恢复作业开关 1:开启 -1: 关闭</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoRecover")
@@ -181,7 +181,7 @@ public class JobConfig extends AbstractModel {
     private Long AutoRecover;
 
     /**
-    * 日志级别
+    * <p>日志级别</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogLevel")
@@ -189,7 +189,7 @@ public class JobConfig extends AbstractModel {
     private String LogLevel;
 
     /**
-    * 类日志级别
+    * <p>类日志级别</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClazzLevels")
@@ -197,7 +197,7 @@ public class JobConfig extends AbstractModel {
     private ClazzLevel [] ClazzLevels;
 
     /**
-    * 是否开启专家模式
+    * <p>是否开启专家模式</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpertModeOn")
@@ -205,7 +205,7 @@ public class JobConfig extends AbstractModel {
     private Boolean ExpertModeOn;
 
     /**
-    * 专家模式的配置
+    * <p>专家模式的配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpertModeConfiguration")
@@ -213,7 +213,7 @@ public class JobConfig extends AbstractModel {
     private ExpertModeConfiguration ExpertModeConfiguration;
 
     /**
-    * trace链路
+    * <p>trace链路</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TraceModeOn")
@@ -221,7 +221,7 @@ public class JobConfig extends AbstractModel {
     private Boolean TraceModeOn;
 
     /**
-    * trace链路配置
+    * <p>trace链路配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TraceModeConfiguration")
@@ -229,7 +229,7 @@ public class JobConfig extends AbstractModel {
     private TraceModeConfiguration TraceModeConfiguration;
 
     /**
-    * checkpoint保留个数
+    * <p>checkpoint保留个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckpointRetainedNum")
@@ -237,7 +237,7 @@ public class JobConfig extends AbstractModel {
     private Long CheckpointRetainedNum;
 
     /**
-    * 算子拓扑图
+    * <p>算子拓扑图</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobGraph")
@@ -245,7 +245,7 @@ public class JobConfig extends AbstractModel {
     private JobGraph JobGraph;
 
     /**
-    * es索引
+    * <p>es索引</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EsServerlessIndex")
@@ -253,7 +253,7 @@ public class JobConfig extends AbstractModel {
     private String EsServerlessIndex;
 
     /**
-    * es空间
+    * <p>es空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EsServerlessSpace")
@@ -261,7 +261,7 @@ public class JobConfig extends AbstractModel {
     private String EsServerlessSpace;
 
     /**
-    * es索引中文
+    * <p>es索引中文</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IndexName")
@@ -269,7 +269,7 @@ public class JobConfig extends AbstractModel {
     private String IndexName;
 
     /**
-    * es空间中文
+    * <p>es空间中文</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkspaceName")
@@ -277,7 +277,7 @@ public class JobConfig extends AbstractModel {
     private String WorkspaceName;
 
     /**
-    * flink 版本
+    * <p>flink 版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlinkVersion")
@@ -285,14 +285,14 @@ public class JobConfig extends AbstractModel {
     private String FlinkVersion;
 
     /**
-    * jdk版本
+    * <p>jdk版本</p>
     */
     @SerializedName("JdkVersion")
     @Expose
     private String JdkVersion;
 
     /**
-    * jm使用cpu数目
+    * <p>jm使用cpu数目</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobManagerCpu")
@@ -300,7 +300,7 @@ public class JobConfig extends AbstractModel {
     private Float JobManagerCpu;
 
     /**
-    * jm使用内存数目
+    * <p>jm使用内存数目</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobManagerMem")
@@ -308,7 +308,7 @@ public class JobConfig extends AbstractModel {
     private Float JobManagerMem;
 
     /**
-    * tm使用cpu数
+    * <p>tm使用cpu数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskManagerCpu")
@@ -316,7 +316,7 @@ public class JobConfig extends AbstractModel {
     private Float TaskManagerCpu;
 
     /**
-    * tm使用mem数
+    * <p>tm使用mem数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskManagerMem")
@@ -324,7 +324,7 @@ public class JobConfig extends AbstractModel {
     private Float TaskManagerMem;
 
     /**
-    * 运行中配置
+    * <p>运行中配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobConfigItem")
@@ -332,39 +332,46 @@ public class JobConfig extends AbstractModel {
     private JobConfig JobConfigItem;
 
     /**
-    * checkpoint 超时时间
+    * <p>checkpoint 超时时间</p>
     */
     @SerializedName("CheckpointTimeoutSecond")
     @Expose
     private Long CheckpointTimeoutSecond;
 
     /**
-    * checkpoint 间隔时间
+    * <p>checkpoint 间隔时间</p>
     */
     @SerializedName("CheckpointIntervalSecond")
     @Expose
     private Long CheckpointIntervalSecond;
 
     /**
-     * Get 作业Id 
-     * @return JobId 作业Id
+    * <p>变量替换模式</p><p>枚举值：</p><ul><li>0： 表变量替换</li><li>1： 全局SQL变量替换</li></ul><p>默认值：0</p>
+    */
+    @SerializedName("VariableReplaceMode")
+    @Expose
+    private Long VariableReplaceMode;
+
+    /**
+     * Get <p>作业Id</p> 
+     * @return JobId <p>作业Id</p>
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 作业Id
-     * @param JobId 作业Id
+     * Set <p>作业Id</p>
+     * @param JobId <p>作业Id</p>
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get 主类
+     * Get <p>主类</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EntrypointClass 主类
+     * @return EntrypointClass <p>主类</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEntrypointClass() {
@@ -372,9 +379,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Set 主类
+     * Set <p>主类</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EntrypointClass 主类
+     * @param EntrypointClass <p>主类</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEntrypointClass(String EntrypointClass) {
@@ -382,9 +389,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Get 主类入参
+     * Get <p>主类入参</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProgramArgs 主类入参
+     * @return ProgramArgs <p>主类入参</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProgramArgs() {
@@ -392,9 +399,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Set 主类入参
+     * Set <p>主类入参</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProgramArgs 主类入参
+     * @param ProgramArgs <p>主类入参</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProgramArgs(String ProgramArgs) {
@@ -402,9 +409,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Get 备注
+     * Get <p>备注</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Remark 备注
+     * @return Remark <p>备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
@@ -412,9 +419,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Set 备注
+     * Set <p>备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Remark 备注
+     * @param Remark <p>备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
@@ -422,41 +429,41 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Get 作业配置创建时间 
-     * @return CreateTime 作业配置创建时间
+     * Get <p>作业配置创建时间</p> 
+     * @return CreateTime <p>作业配置创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 作业配置创建时间
-     * @param CreateTime 作业配置创建时间
+     * Set <p>作业配置创建时间</p>
+     * @param CreateTime <p>作业配置创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 作业配置的版本号 
-     * @return Version 作业配置的版本号
+     * Get <p>作业配置的版本号</p> 
+     * @return Version <p>作业配置的版本号</p>
      */
     public Long getVersion() {
         return this.Version;
     }
 
     /**
-     * Set 作业配置的版本号
-     * @param Version 作业配置的版本号
+     * Set <p>作业配置的版本号</p>
+     * @param Version <p>作业配置的版本号</p>
      */
     public void setVersion(Long Version) {
         this.Version = Version;
     }
 
     /**
-     * Get 作业默认并行度
+     * Get <p>作业默认并行度</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DefaultParallelism 作业默认并行度
+     * @return DefaultParallelism <p>作业默认并行度</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDefaultParallelism() {
@@ -464,9 +471,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Set 作业默认并行度
+     * Set <p>作业默认并行度</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DefaultParallelism 作业默认并行度
+     * @param DefaultParallelism <p>作业默认并行度</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefaultParallelism(Long DefaultParallelism) {
@@ -474,9 +481,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Get 系统参数
+     * Get <p>系统参数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Properties 系统参数
+     * @return Properties <p>系统参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Property [] getProperties() {
@@ -484,9 +491,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Set 系统参数
+     * Set <p>系统参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Properties 系统参数
+     * @param Properties <p>系统参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProperties(Property [] Properties) {
@@ -494,9 +501,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Get 引用资源
+     * Get <p>引用资源</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceRefDetails 引用资源
+     * @return ResourceRefDetails <p>引用资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ResourceRefDetail [] getResourceRefDetails() {
@@ -504,9 +511,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Set 引用资源
+     * Set <p>引用资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceRefDetails 引用资源
+     * @param ResourceRefDetails <p>引用资源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceRefDetails(ResourceRefDetail [] ResourceRefDetails) {
@@ -514,9 +521,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Get 创建者uin
+     * Get <p>创建者uin</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreatorUin 创建者uin
+     * @return CreatorUin <p>创建者uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatorUin() {
@@ -524,9 +531,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Set 创建者uin
+     * Set <p>创建者uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreatorUin 创建者uin
+     * @param CreatorUin <p>创建者uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatorUin(String CreatorUin) {
@@ -534,9 +541,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Get 作业配置上次启动时间
+     * Get <p>作业配置上次启动时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateTime 作业配置上次启动时间
+     * @return UpdateTime <p>作业配置上次启动时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
@@ -544,9 +551,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Set 作业配置上次启动时间
+     * Set <p>作业配置上次启动时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateTime 作业配置上次启动时间
+     * @param UpdateTime <p>作业配置上次启动时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
@@ -554,9 +561,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Get 作业绑定的存储桶
+     * Get <p>作业绑定的存储桶</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return COSBucket 作业绑定的存储桶
+     * @return COSBucket <p>作业绑定的存储桶</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCOSBucket() {
@@ -564,9 +571,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Set 作业绑定的存储桶
+     * Set <p>作业绑定的存储桶</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param COSBucket 作业绑定的存储桶
+     * @param COSBucket <p>作业绑定的存储桶</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCOSBucket(String COSBucket) {
@@ -574,9 +581,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Get 是否启用日志收集，0-未启用，1-采集到cls，4-采集到cos，5-采集到es
+     * Get <p>是否启用日志收集，0-未启用，1-采集到cls，4-采集到cos，5-采集到es</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LogCollect 是否启用日志收集，0-未启用，1-采集到cls，4-采集到cos，5-采集到es
+     * @return LogCollect <p>是否启用日志收集，0-未启用，1-采集到cls，4-采集到cos，5-采集到es</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLogCollect() {
@@ -584,9 +591,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Set 是否启用日志收集，0-未启用，1-采集到cls，4-采集到cos，5-采集到es
+     * Set <p>是否启用日志收集，0-未启用，1-采集到cls，4-采集到cos，5-采集到es</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LogCollect 是否启用日志收集，0-未启用，1-采集到cls，4-采集到cos，5-采集到es
+     * @param LogCollect <p>是否启用日志收集，0-未启用，1-采集到cls，4-采集到cos，5-采集到es</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogCollect(Long LogCollect) {
@@ -594,9 +601,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Get 作业的最大并行度
+     * Get <p>作业的最大并行度</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MaxParallelism 作业的最大并行度
+     * @return MaxParallelism <p>作业的最大并行度</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxParallelism() {
@@ -604,9 +611,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Set 作业的最大并行度
+     * Set <p>作业的最大并行度</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaxParallelism 作业的最大并行度
+     * @param MaxParallelism <p>作业的最大并行度</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxParallelism(Long MaxParallelism) {
@@ -614,9 +621,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Get JobManager规格
+     * Get <p>JobManager规格</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return JobManagerSpec JobManager规格
+     * @return JobManagerSpec <p>JobManager规格</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getJobManagerSpec() {
@@ -624,9 +631,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Set JobManager规格
+     * Set <p>JobManager规格</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param JobManagerSpec JobManager规格
+     * @param JobManagerSpec <p>JobManager规格</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobManagerSpec(Float JobManagerSpec) {
@@ -634,9 +641,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Get TaskManager规格
+     * Get <p>TaskManager规格</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskManagerSpec TaskManager规格
+     * @return TaskManagerSpec <p>TaskManager规格</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getTaskManagerSpec() {
@@ -644,9 +651,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Set TaskManager规格
+     * Set <p>TaskManager规格</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskManagerSpec TaskManager规格
+     * @param TaskManagerSpec <p>TaskManager规格</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskManagerSpec(Float TaskManagerSpec) {
@@ -654,9 +661,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Get CLS日志集ID
+     * Get <p>CLS日志集ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClsLogsetId CLS日志集ID
+     * @return ClsLogsetId <p>CLS日志集ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClsLogsetId() {
@@ -664,9 +671,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Set CLS日志集ID
+     * Set <p>CLS日志集ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClsLogsetId CLS日志集ID
+     * @param ClsLogsetId <p>CLS日志集ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClsLogsetId(String ClsLogsetId) {
@@ -674,9 +681,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Get CLS日志主题ID
+     * Get <p>CLS日志主题ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClsTopicId CLS日志主题ID
+     * @return ClsTopicId <p>CLS日志主题ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClsTopicId() {
@@ -684,9 +691,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Set CLS日志主题ID
+     * Set <p>CLS日志主题ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClsTopicId CLS日志主题ID
+     * @param ClsTopicId <p>CLS日志主题ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClsTopicId(String ClsTopicId) {
@@ -694,9 +701,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Get pyflink作业运行的python版本
+     * Get <p>pyflink作业运行的python版本</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PythonVersion pyflink作业运行的python版本
+     * @return PythonVersion <p>pyflink作业运行的python版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPythonVersion() {
@@ -704,9 +711,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Set pyflink作业运行的python版本
+     * Set <p>pyflink作业运行的python版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PythonVersion pyflink作业运行的python版本
+     * @param PythonVersion <p>pyflink作业运行的python版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPythonVersion(String PythonVersion) {
@@ -714,9 +721,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Get Oceanus 平台恢复作业开关 1:开启 -1: 关闭
+     * Get <p>Oceanus 平台恢复作业开关 1:开启 -1: 关闭</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AutoRecover Oceanus 平台恢复作业开关 1:开启 -1: 关闭
+     * @return AutoRecover <p>Oceanus 平台恢复作业开关 1:开启 -1: 关闭</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAutoRecover() {
@@ -724,9 +731,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Set Oceanus 平台恢复作业开关 1:开启 -1: 关闭
+     * Set <p>Oceanus 平台恢复作业开关 1:开启 -1: 关闭</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AutoRecover Oceanus 平台恢复作业开关 1:开启 -1: 关闭
+     * @param AutoRecover <p>Oceanus 平台恢复作业开关 1:开启 -1: 关闭</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoRecover(Long AutoRecover) {
@@ -734,9 +741,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Get 日志级别
+     * Get <p>日志级别</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LogLevel 日志级别
+     * @return LogLevel <p>日志级别</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogLevel() {
@@ -744,9 +751,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Set 日志级别
+     * Set <p>日志级别</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LogLevel 日志级别
+     * @param LogLevel <p>日志级别</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogLevel(String LogLevel) {
@@ -754,9 +761,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Get 类日志级别
+     * Get <p>类日志级别</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClazzLevels 类日志级别
+     * @return ClazzLevels <p>类日志级别</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ClazzLevel [] getClazzLevels() {
@@ -764,9 +771,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Set 类日志级别
+     * Set <p>类日志级别</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClazzLevels 类日志级别
+     * @param ClazzLevels <p>类日志级别</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClazzLevels(ClazzLevel [] ClazzLevels) {
@@ -774,9 +781,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Get 是否开启专家模式
+     * Get <p>是否开启专家模式</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExpertModeOn 是否开启专家模式
+     * @return ExpertModeOn <p>是否开启专家模式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getExpertModeOn() {
@@ -784,9 +791,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Set 是否开启专家模式
+     * Set <p>是否开启专家模式</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExpertModeOn 是否开启专家模式
+     * @param ExpertModeOn <p>是否开启专家模式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpertModeOn(Boolean ExpertModeOn) {
@@ -794,9 +801,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Get 专家模式的配置
+     * Get <p>专家模式的配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExpertModeConfiguration 专家模式的配置
+     * @return ExpertModeConfiguration <p>专家模式的配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ExpertModeConfiguration getExpertModeConfiguration() {
@@ -804,9 +811,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Set 专家模式的配置
+     * Set <p>专家模式的配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExpertModeConfiguration 专家模式的配置
+     * @param ExpertModeConfiguration <p>专家模式的配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpertModeConfiguration(ExpertModeConfiguration ExpertModeConfiguration) {
@@ -814,9 +821,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Get trace链路
+     * Get <p>trace链路</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TraceModeOn trace链路
+     * @return TraceModeOn <p>trace链路</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getTraceModeOn() {
@@ -824,9 +831,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Set trace链路
+     * Set <p>trace链路</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TraceModeOn trace链路
+     * @param TraceModeOn <p>trace链路</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTraceModeOn(Boolean TraceModeOn) {
@@ -834,9 +841,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Get trace链路配置
+     * Get <p>trace链路配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TraceModeConfiguration trace链路配置
+     * @return TraceModeConfiguration <p>trace链路配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TraceModeConfiguration getTraceModeConfiguration() {
@@ -844,9 +851,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Set trace链路配置
+     * Set <p>trace链路配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TraceModeConfiguration trace链路配置
+     * @param TraceModeConfiguration <p>trace链路配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTraceModeConfiguration(TraceModeConfiguration TraceModeConfiguration) {
@@ -854,9 +861,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Get checkpoint保留个数
+     * Get <p>checkpoint保留个数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CheckpointRetainedNum checkpoint保留个数
+     * @return CheckpointRetainedNum <p>checkpoint保留个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCheckpointRetainedNum() {
@@ -864,9 +871,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Set checkpoint保留个数
+     * Set <p>checkpoint保留个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CheckpointRetainedNum checkpoint保留个数
+     * @param CheckpointRetainedNum <p>checkpoint保留个数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckpointRetainedNum(Long CheckpointRetainedNum) {
@@ -874,9 +881,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Get 算子拓扑图
+     * Get <p>算子拓扑图</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return JobGraph 算子拓扑图
+     * @return JobGraph <p>算子拓扑图</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public JobGraph getJobGraph() {
@@ -884,9 +891,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Set 算子拓扑图
+     * Set <p>算子拓扑图</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param JobGraph 算子拓扑图
+     * @param JobGraph <p>算子拓扑图</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobGraph(JobGraph JobGraph) {
@@ -894,9 +901,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Get es索引
+     * Get <p>es索引</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EsServerlessIndex es索引
+     * @return EsServerlessIndex <p>es索引</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEsServerlessIndex() {
@@ -904,9 +911,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Set es索引
+     * Set <p>es索引</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EsServerlessIndex es索引
+     * @param EsServerlessIndex <p>es索引</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEsServerlessIndex(String EsServerlessIndex) {
@@ -914,9 +921,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Get es空间
+     * Get <p>es空间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EsServerlessSpace es空间
+     * @return EsServerlessSpace <p>es空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEsServerlessSpace() {
@@ -924,9 +931,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Set es空间
+     * Set <p>es空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EsServerlessSpace es空间
+     * @param EsServerlessSpace <p>es空间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEsServerlessSpace(String EsServerlessSpace) {
@@ -934,9 +941,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Get es索引中文
+     * Get <p>es索引中文</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IndexName es索引中文
+     * @return IndexName <p>es索引中文</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIndexName() {
@@ -944,9 +951,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Set es索引中文
+     * Set <p>es索引中文</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IndexName es索引中文
+     * @param IndexName <p>es索引中文</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndexName(String IndexName) {
@@ -954,9 +961,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Get es空间中文
+     * Get <p>es空间中文</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkspaceName es空间中文
+     * @return WorkspaceName <p>es空间中文</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkspaceName() {
@@ -964,9 +971,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Set es空间中文
+     * Set <p>es空间中文</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkspaceName es空间中文
+     * @param WorkspaceName <p>es空间中文</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkspaceName(String WorkspaceName) {
@@ -974,9 +981,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Get flink 版本
+     * Get <p>flink 版本</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FlinkVersion flink 版本
+     * @return FlinkVersion <p>flink 版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlinkVersion() {
@@ -984,9 +991,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Set flink 版本
+     * Set <p>flink 版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FlinkVersion flink 版本
+     * @param FlinkVersion <p>flink 版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlinkVersion(String FlinkVersion) {
@@ -994,25 +1001,25 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Get jdk版本 
-     * @return JdkVersion jdk版本
+     * Get <p>jdk版本</p> 
+     * @return JdkVersion <p>jdk版本</p>
      */
     public String getJdkVersion() {
         return this.JdkVersion;
     }
 
     /**
-     * Set jdk版本
-     * @param JdkVersion jdk版本
+     * Set <p>jdk版本</p>
+     * @param JdkVersion <p>jdk版本</p>
      */
     public void setJdkVersion(String JdkVersion) {
         this.JdkVersion = JdkVersion;
     }
 
     /**
-     * Get jm使用cpu数目
+     * Get <p>jm使用cpu数目</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return JobManagerCpu jm使用cpu数目
+     * @return JobManagerCpu <p>jm使用cpu数目</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getJobManagerCpu() {
@@ -1020,9 +1027,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Set jm使用cpu数目
+     * Set <p>jm使用cpu数目</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param JobManagerCpu jm使用cpu数目
+     * @param JobManagerCpu <p>jm使用cpu数目</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobManagerCpu(Float JobManagerCpu) {
@@ -1030,9 +1037,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Get jm使用内存数目
+     * Get <p>jm使用内存数目</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return JobManagerMem jm使用内存数目
+     * @return JobManagerMem <p>jm使用内存数目</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getJobManagerMem() {
@@ -1040,9 +1047,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Set jm使用内存数目
+     * Set <p>jm使用内存数目</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param JobManagerMem jm使用内存数目
+     * @param JobManagerMem <p>jm使用内存数目</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobManagerMem(Float JobManagerMem) {
@@ -1050,9 +1057,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Get tm使用cpu数
+     * Get <p>tm使用cpu数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskManagerCpu tm使用cpu数
+     * @return TaskManagerCpu <p>tm使用cpu数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getTaskManagerCpu() {
@@ -1060,9 +1067,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Set tm使用cpu数
+     * Set <p>tm使用cpu数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskManagerCpu tm使用cpu数
+     * @param TaskManagerCpu <p>tm使用cpu数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskManagerCpu(Float TaskManagerCpu) {
@@ -1070,9 +1077,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Get tm使用mem数
+     * Get <p>tm使用mem数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskManagerMem tm使用mem数
+     * @return TaskManagerMem <p>tm使用mem数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getTaskManagerMem() {
@@ -1080,9 +1087,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Set tm使用mem数
+     * Set <p>tm使用mem数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskManagerMem tm使用mem数
+     * @param TaskManagerMem <p>tm使用mem数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskManagerMem(Float TaskManagerMem) {
@@ -1090,9 +1097,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Get 运行中配置
+     * Get <p>运行中配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return JobConfigItem 运行中配置
+     * @return JobConfigItem <p>运行中配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public JobConfig getJobConfigItem() {
@@ -1100,9 +1107,9 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Set 运行中配置
+     * Set <p>运行中配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param JobConfigItem 运行中配置
+     * @param JobConfigItem <p>运行中配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobConfigItem(JobConfig JobConfigItem) {
@@ -1110,35 +1117,51 @@ public class JobConfig extends AbstractModel {
     }
 
     /**
-     * Get checkpoint 超时时间 
-     * @return CheckpointTimeoutSecond checkpoint 超时时间
+     * Get <p>checkpoint 超时时间</p> 
+     * @return CheckpointTimeoutSecond <p>checkpoint 超时时间</p>
      */
     public Long getCheckpointTimeoutSecond() {
         return this.CheckpointTimeoutSecond;
     }
 
     /**
-     * Set checkpoint 超时时间
-     * @param CheckpointTimeoutSecond checkpoint 超时时间
+     * Set <p>checkpoint 超时时间</p>
+     * @param CheckpointTimeoutSecond <p>checkpoint 超时时间</p>
      */
     public void setCheckpointTimeoutSecond(Long CheckpointTimeoutSecond) {
         this.CheckpointTimeoutSecond = CheckpointTimeoutSecond;
     }
 
     /**
-     * Get checkpoint 间隔时间 
-     * @return CheckpointIntervalSecond checkpoint 间隔时间
+     * Get <p>checkpoint 间隔时间</p> 
+     * @return CheckpointIntervalSecond <p>checkpoint 间隔时间</p>
      */
     public Long getCheckpointIntervalSecond() {
         return this.CheckpointIntervalSecond;
     }
 
     /**
-     * Set checkpoint 间隔时间
-     * @param CheckpointIntervalSecond checkpoint 间隔时间
+     * Set <p>checkpoint 间隔时间</p>
+     * @param CheckpointIntervalSecond <p>checkpoint 间隔时间</p>
      */
     public void setCheckpointIntervalSecond(Long CheckpointIntervalSecond) {
         this.CheckpointIntervalSecond = CheckpointIntervalSecond;
+    }
+
+    /**
+     * Get <p>变量替换模式</p><p>枚举值：</p><ul><li>0： 表变量替换</li><li>1： 全局SQL变量替换</li></ul><p>默认值：0</p> 
+     * @return VariableReplaceMode <p>变量替换模式</p><p>枚举值：</p><ul><li>0： 表变量替换</li><li>1： 全局SQL变量替换</li></ul><p>默认值：0</p>
+     */
+    public Long getVariableReplaceMode() {
+        return this.VariableReplaceMode;
+    }
+
+    /**
+     * Set <p>变量替换模式</p><p>枚举值：</p><ul><li>0： 表变量替换</li><li>1： 全局SQL变量替换</li></ul><p>默认值：0</p>
+     * @param VariableReplaceMode <p>变量替换模式</p><p>枚举值：</p><ul><li>0： 表变量替换</li><li>1： 全局SQL变量替换</li></ul><p>默认值：0</p>
+     */
+    public void setVariableReplaceMode(Long VariableReplaceMode) {
+        this.VariableReplaceMode = VariableReplaceMode;
     }
 
     public JobConfig() {
@@ -1281,6 +1304,9 @@ public class JobConfig extends AbstractModel {
         if (source.CheckpointIntervalSecond != null) {
             this.CheckpointIntervalSecond = new Long(source.CheckpointIntervalSecond);
         }
+        if (source.VariableReplaceMode != null) {
+            this.VariableReplaceMode = new Long(source.VariableReplaceMode);
+        }
     }
 
 
@@ -1329,6 +1355,7 @@ public class JobConfig extends AbstractModel {
         this.setParamObj(map, prefix + "JobConfigItem.", this.JobConfigItem);
         this.setParamSimple(map, prefix + "CheckpointTimeoutSecond", this.CheckpointTimeoutSecond);
         this.setParamSimple(map, prefix + "CheckpointIntervalSecond", this.CheckpointIntervalSecond);
+        this.setParamSimple(map, prefix + "VariableReplaceMode", this.VariableReplaceMode);
 
     }
 }

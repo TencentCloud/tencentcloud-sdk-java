@@ -52,6 +52,13 @@ public class CreateWorkflowRunRequest extends AbstractModel {
     private CustomVariable [] CustomVariables;
 
     /**
+    * 用户ID
+    */
+    @SerializedName("VisitorId")
+    @Expose
+    private String VisitorId;
+
+    /**
      * Get 应用ID, 获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa) 
      * @return AppBizId 应用ID, 获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      */
@@ -115,6 +122,22 @@ public class CreateWorkflowRunRequest extends AbstractModel {
         this.CustomVariables = CustomVariables;
     }
 
+    /**
+     * Get 用户ID 
+     * @return VisitorId 用户ID
+     */
+    public String getVisitorId() {
+        return this.VisitorId;
+    }
+
+    /**
+     * Set 用户ID
+     * @param VisitorId 用户ID
+     */
+    public void setVisitorId(String VisitorId) {
+        this.VisitorId = VisitorId;
+    }
+
     public CreateWorkflowRunRequest() {
     }
 
@@ -138,6 +161,9 @@ public class CreateWorkflowRunRequest extends AbstractModel {
                 this.CustomVariables[i] = new CustomVariable(source.CustomVariables[i]);
             }
         }
+        if (source.VisitorId != null) {
+            this.VisitorId = new String(source.VisitorId);
+        }
     }
 
 
@@ -149,6 +175,7 @@ public class CreateWorkflowRunRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RunEnv", this.RunEnv);
         this.setParamSimple(map, prefix + "Query", this.Query);
         this.setParamArrayObj(map, prefix + "CustomVariables.", this.CustomVariables);
+        this.setParamSimple(map, prefix + "VisitorId", this.VisitorId);
 
     }
 }

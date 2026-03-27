@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class DescribeSessionStatisticsResponse extends AbstractModel {
 
     /**
-    * 会话数量
+    * <p>会话数量</p>
     */
     @SerializedName("SessionNum")
     @Expose
     private Long SessionNum;
 
     /**
-    * 通话时长，单位：分钟
+    * <p>通话时长，单位：分钟</p>
     */
     @SerializedName("TotalDuration")
     @Expose
     private Long TotalDuration;
 
     /**
-    * 活跃现场设备数
+    * <p>活跃现场设备数</p>
     */
     @SerializedName("ActiveFieldDeviceNum")
     @Expose
     private Long ActiveFieldDeviceNum;
 
     /**
-    * 活跃远端设备数
+    * <p>活跃远端设备数</p>
     */
     @SerializedName("ActiveRemoteDeviceNum")
     @Expose
     private Long ActiveRemoteDeviceNum;
 
     /**
-    * 优良会话占比，单位：%
+    * <p>优良会话占比，单位：%</p>
     */
     @SerializedName("NotBadSessionRatio")
     @Expose
@@ -66,80 +66,80 @@ public class DescribeSessionStatisticsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 会话数量 
-     * @return SessionNum 会话数量
+     * Get <p>会话数量</p> 
+     * @return SessionNum <p>会话数量</p>
      */
     public Long getSessionNum() {
         return this.SessionNum;
     }
 
     /**
-     * Set 会话数量
-     * @param SessionNum 会话数量
+     * Set <p>会话数量</p>
+     * @param SessionNum <p>会话数量</p>
      */
     public void setSessionNum(Long SessionNum) {
         this.SessionNum = SessionNum;
     }
 
     /**
-     * Get 通话时长，单位：分钟 
-     * @return TotalDuration 通话时长，单位：分钟
+     * Get <p>通话时长，单位：分钟</p> 
+     * @return TotalDuration <p>通话时长，单位：分钟</p>
      */
     public Long getTotalDuration() {
         return this.TotalDuration;
     }
 
     /**
-     * Set 通话时长，单位：分钟
-     * @param TotalDuration 通话时长，单位：分钟
+     * Set <p>通话时长，单位：分钟</p>
+     * @param TotalDuration <p>通话时长，单位：分钟</p>
      */
     public void setTotalDuration(Long TotalDuration) {
         this.TotalDuration = TotalDuration;
     }
 
     /**
-     * Get 活跃现场设备数 
-     * @return ActiveFieldDeviceNum 活跃现场设备数
+     * Get <p>活跃现场设备数</p> 
+     * @return ActiveFieldDeviceNum <p>活跃现场设备数</p>
      */
     public Long getActiveFieldDeviceNum() {
         return this.ActiveFieldDeviceNum;
     }
 
     /**
-     * Set 活跃现场设备数
-     * @param ActiveFieldDeviceNum 活跃现场设备数
+     * Set <p>活跃现场设备数</p>
+     * @param ActiveFieldDeviceNum <p>活跃现场设备数</p>
      */
     public void setActiveFieldDeviceNum(Long ActiveFieldDeviceNum) {
         this.ActiveFieldDeviceNum = ActiveFieldDeviceNum;
     }
 
     /**
-     * Get 活跃远端设备数 
-     * @return ActiveRemoteDeviceNum 活跃远端设备数
+     * Get <p>活跃远端设备数</p> 
+     * @return ActiveRemoteDeviceNum <p>活跃远端设备数</p>
      */
     public Long getActiveRemoteDeviceNum() {
         return this.ActiveRemoteDeviceNum;
     }
 
     /**
-     * Set 活跃远端设备数
-     * @param ActiveRemoteDeviceNum 活跃远端设备数
+     * Set <p>活跃远端设备数</p>
+     * @param ActiveRemoteDeviceNum <p>活跃远端设备数</p>
      */
     public void setActiveRemoteDeviceNum(Long ActiveRemoteDeviceNum) {
         this.ActiveRemoteDeviceNum = ActiveRemoteDeviceNum;
     }
 
     /**
-     * Get 优良会话占比，单位：% 
-     * @return NotBadSessionRatio 优良会话占比，单位：%
+     * Get <p>优良会话占比，单位：%</p> 
+     * @return NotBadSessionRatio <p>优良会话占比，单位：%</p>
      */
     public Long getNotBadSessionRatio() {
         return this.NotBadSessionRatio;
     }
 
     /**
-     * Set 优良会话占比，单位：%
-     * @param NotBadSessionRatio 优良会话占比，单位：%
+     * Set <p>优良会话占比，单位：%</p>
+     * @param NotBadSessionRatio <p>优良会话占比，单位：%</p>
      */
     public void setNotBadSessionRatio(Long NotBadSessionRatio) {
         this.NotBadSessionRatio = NotBadSessionRatio;

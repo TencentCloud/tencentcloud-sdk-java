@@ -108,6 +108,13 @@ public class ModifyInstanceRequest extends AbstractModel {
     private Boolean EnableDeletionProtection;
 
     /**
+    * 部署可用区列表
+    */
+    @SerializedName("ZoneIds")
+    @Expose
+    private String [] ZoneIds;
+
+    /**
      * Get 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。 
      * @return InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
      */
@@ -311,6 +318,22 @@ public class ModifyInstanceRequest extends AbstractModel {
         this.EnableDeletionProtection = EnableDeletionProtection;
     }
 
+    /**
+     * Get 部署可用区列表 
+     * @return ZoneIds 部署可用区列表
+     */
+    public String [] getZoneIds() {
+        return this.ZoneIds;
+    }
+
+    /**
+     * Set 部署可用区列表
+     * @param ZoneIds 部署可用区列表
+     */
+    public void setZoneIds(String [] ZoneIds) {
+        this.ZoneIds = ZoneIds;
+    }
+
     public ModifyInstanceRequest() {
     }
 
@@ -352,6 +375,12 @@ public class ModifyInstanceRequest extends AbstractModel {
         if (source.EnableDeletionProtection != null) {
             this.EnableDeletionProtection = new Boolean(source.EnableDeletionProtection);
         }
+        if (source.ZoneIds != null) {
+            this.ZoneIds = new String[source.ZoneIds.length];
+            for (int i = 0; i < source.ZoneIds.length; i++) {
+                this.ZoneIds[i] = new String(source.ZoneIds[i]);
+            }
+        }
     }
 
 
@@ -370,6 +399,7 @@ public class ModifyInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxTopicNum", this.MaxTopicNum);
         this.setParamSimple(map, prefix + "ExtraTopicNum", this.ExtraTopicNum);
         this.setParamSimple(map, prefix + "EnableDeletionProtection", this.EnableDeletionProtection);
+        this.setParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
 
     }
 }

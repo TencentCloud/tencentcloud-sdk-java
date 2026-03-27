@@ -73,6 +73,27 @@ public class CreateRoleRequest extends AbstractModel {
     private DetailedRolePerm [] DetailedPerms;
 
     /**
+    * AK、SK的生成方式，AUTO：后端自动生成，MANUAL：用户手动输入
+    */
+    @SerializedName("RoleGenerateMode")
+    @Expose
+    private String RoleGenerateMode;
+
+    /**
+    * 选择MANUAL模式下，需要手动输入AK值
+    */
+    @SerializedName("AccessKey")
+    @Expose
+    private String AccessKey;
+
+    /**
+    * 选择MANUAL模式下，需要手动输入SK值
+    */
+    @SerializedName("SecretKey")
+    @Expose
+    private String SecretKey;
+
+    /**
      * Get 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。 
      * @return InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
      */
@@ -184,6 +205,54 @@ public class CreateRoleRequest extends AbstractModel {
         this.DetailedPerms = DetailedPerms;
     }
 
+    /**
+     * Get AK、SK的生成方式，AUTO：后端自动生成，MANUAL：用户手动输入 
+     * @return RoleGenerateMode AK、SK的生成方式，AUTO：后端自动生成，MANUAL：用户手动输入
+     */
+    public String getRoleGenerateMode() {
+        return this.RoleGenerateMode;
+    }
+
+    /**
+     * Set AK、SK的生成方式，AUTO：后端自动生成，MANUAL：用户手动输入
+     * @param RoleGenerateMode AK、SK的生成方式，AUTO：后端自动生成，MANUAL：用户手动输入
+     */
+    public void setRoleGenerateMode(String RoleGenerateMode) {
+        this.RoleGenerateMode = RoleGenerateMode;
+    }
+
+    /**
+     * Get 选择MANUAL模式下，需要手动输入AK值 
+     * @return AccessKey 选择MANUAL模式下，需要手动输入AK值
+     */
+    public String getAccessKey() {
+        return this.AccessKey;
+    }
+
+    /**
+     * Set 选择MANUAL模式下，需要手动输入AK值
+     * @param AccessKey 选择MANUAL模式下，需要手动输入AK值
+     */
+    public void setAccessKey(String AccessKey) {
+        this.AccessKey = AccessKey;
+    }
+
+    /**
+     * Get 选择MANUAL模式下，需要手动输入SK值 
+     * @return SecretKey 选择MANUAL模式下，需要手动输入SK值
+     */
+    public String getSecretKey() {
+        return this.SecretKey;
+    }
+
+    /**
+     * Set 选择MANUAL模式下，需要手动输入SK值
+     * @param SecretKey 选择MANUAL模式下，需要手动输入SK值
+     */
+    public void setSecretKey(String SecretKey) {
+        this.SecretKey = SecretKey;
+    }
+
     public CreateRoleRequest() {
     }
 
@@ -216,6 +285,15 @@ public class CreateRoleRequest extends AbstractModel {
                 this.DetailedPerms[i] = new DetailedRolePerm(source.DetailedPerms[i]);
             }
         }
+        if (source.RoleGenerateMode != null) {
+            this.RoleGenerateMode = new String(source.RoleGenerateMode);
+        }
+        if (source.AccessKey != null) {
+            this.AccessKey = new String(source.AccessKey);
+        }
+        if (source.SecretKey != null) {
+            this.SecretKey = new String(source.SecretKey);
+        }
     }
 
 
@@ -230,6 +308,9 @@ public class CreateRoleRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "PermType", this.PermType);
         this.setParamArrayObj(map, prefix + "DetailedPerms.", this.DetailedPerms);
+        this.setParamSimple(map, prefix + "RoleGenerateMode", this.RoleGenerateMode);
+        this.setParamSimple(map, prefix + "AccessKey", this.AccessKey);
+        this.setParamSimple(map, prefix + "SecretKey", this.SecretKey);
 
     }
 }

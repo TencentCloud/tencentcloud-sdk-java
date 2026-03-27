@@ -24,95 +24,164 @@ import java.util.HashMap;
 public class CreateRocketMQRoleRequest extends AbstractModel {
 
     /**
-    * 角色名称，不支持中字以及除了短线和下划线外的特殊字符且长度必须大于0且小等于32。
+    * <p>角色名称，不支持中字以及除了短线和下划线外的特殊字符且长度必须大于0且小等于32。</p>
     */
     @SerializedName("RoleName")
     @Expose
     private String RoleName;
 
     /**
-    * 必填字段，集群Id
+    * <p>必填字段，集群Id</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 备注说明，长度必须大等于0且小等于128。
+    * <p>备注说明，长度必须大等于0且小等于128。</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 角色授权类型（集群：Cluster; 主题或消费组：TopicAndGroup）
+    * <p>角色授权类型（集群：Cluster; 主题或消费组：TopicAndGroup）</p>
     */
     @SerializedName("PermType")
     @Expose
     private String PermType;
 
     /**
-     * Get 角色名称，不支持中字以及除了短线和下划线外的特殊字符且长度必须大于0且小等于32。 
-     * @return RoleName 角色名称，不支持中字以及除了短线和下划线外的特殊字符且长度必须大于0且小等于32。
+    * <p>AK、SK的生成方式，AUTO：后端自动生成，MANUAL：用户手动输入</p>
+    */
+    @SerializedName("RoleGenerateMode")
+    @Expose
+    private String RoleGenerateMode;
+
+    /**
+    * <p>选择MANUAL模式下，需要手动输入AK值</p>
+    */
+    @SerializedName("AccessKey")
+    @Expose
+    private String AccessKey;
+
+    /**
+    * <p>选择MANUAL模式下，需要手动输入SK值</p>
+    */
+    @SerializedName("SecretKey")
+    @Expose
+    private String SecretKey;
+
+    /**
+     * Get <p>角色名称，不支持中字以及除了短线和下划线外的特殊字符且长度必须大于0且小等于32。</p> 
+     * @return RoleName <p>角色名称，不支持中字以及除了短线和下划线外的特殊字符且长度必须大于0且小等于32。</p>
      */
     public String getRoleName() {
         return this.RoleName;
     }
 
     /**
-     * Set 角色名称，不支持中字以及除了短线和下划线外的特殊字符且长度必须大于0且小等于32。
-     * @param RoleName 角色名称，不支持中字以及除了短线和下划线外的特殊字符且长度必须大于0且小等于32。
+     * Set <p>角色名称，不支持中字以及除了短线和下划线外的特殊字符且长度必须大于0且小等于32。</p>
+     * @param RoleName <p>角色名称，不支持中字以及除了短线和下划线外的特殊字符且长度必须大于0且小等于32。</p>
      */
     public void setRoleName(String RoleName) {
         this.RoleName = RoleName;
     }
 
     /**
-     * Get 必填字段，集群Id 
-     * @return ClusterId 必填字段，集群Id
+     * Get <p>必填字段，集群Id</p> 
+     * @return ClusterId <p>必填字段，集群Id</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 必填字段，集群Id
-     * @param ClusterId 必填字段，集群Id
+     * Set <p>必填字段，集群Id</p>
+     * @param ClusterId <p>必填字段，集群Id</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 备注说明，长度必须大等于0且小等于128。 
-     * @return Remark 备注说明，长度必须大等于0且小等于128。
+     * Get <p>备注说明，长度必须大等于0且小等于128。</p> 
+     * @return Remark <p>备注说明，长度必须大等于0且小等于128。</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注说明，长度必须大等于0且小等于128。
-     * @param Remark 备注说明，长度必须大等于0且小等于128。
+     * Set <p>备注说明，长度必须大等于0且小等于128。</p>
+     * @param Remark <p>备注说明，长度必须大等于0且小等于128。</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 角色授权类型（集群：Cluster; 主题或消费组：TopicAndGroup） 
-     * @return PermType 角色授权类型（集群：Cluster; 主题或消费组：TopicAndGroup）
+     * Get <p>角色授权类型（集群：Cluster; 主题或消费组：TopicAndGroup）</p> 
+     * @return PermType <p>角色授权类型（集群：Cluster; 主题或消费组：TopicAndGroup）</p>
      */
     public String getPermType() {
         return this.PermType;
     }
 
     /**
-     * Set 角色授权类型（集群：Cluster; 主题或消费组：TopicAndGroup）
-     * @param PermType 角色授权类型（集群：Cluster; 主题或消费组：TopicAndGroup）
+     * Set <p>角色授权类型（集群：Cluster; 主题或消费组：TopicAndGroup）</p>
+     * @param PermType <p>角色授权类型（集群：Cluster; 主题或消费组：TopicAndGroup）</p>
      */
     public void setPermType(String PermType) {
         this.PermType = PermType;
+    }
+
+    /**
+     * Get <p>AK、SK的生成方式，AUTO：后端自动生成，MANUAL：用户手动输入</p> 
+     * @return RoleGenerateMode <p>AK、SK的生成方式，AUTO：后端自动生成，MANUAL：用户手动输入</p>
+     */
+    public String getRoleGenerateMode() {
+        return this.RoleGenerateMode;
+    }
+
+    /**
+     * Set <p>AK、SK的生成方式，AUTO：后端自动生成，MANUAL：用户手动输入</p>
+     * @param RoleGenerateMode <p>AK、SK的生成方式，AUTO：后端自动生成，MANUAL：用户手动输入</p>
+     */
+    public void setRoleGenerateMode(String RoleGenerateMode) {
+        this.RoleGenerateMode = RoleGenerateMode;
+    }
+
+    /**
+     * Get <p>选择MANUAL模式下，需要手动输入AK值</p> 
+     * @return AccessKey <p>选择MANUAL模式下，需要手动输入AK值</p>
+     */
+    public String getAccessKey() {
+        return this.AccessKey;
+    }
+
+    /**
+     * Set <p>选择MANUAL模式下，需要手动输入AK值</p>
+     * @param AccessKey <p>选择MANUAL模式下，需要手动输入AK值</p>
+     */
+    public void setAccessKey(String AccessKey) {
+        this.AccessKey = AccessKey;
+    }
+
+    /**
+     * Get <p>选择MANUAL模式下，需要手动输入SK值</p> 
+     * @return SecretKey <p>选择MANUAL模式下，需要手动输入SK值</p>
+     */
+    public String getSecretKey() {
+        return this.SecretKey;
+    }
+
+    /**
+     * Set <p>选择MANUAL模式下，需要手动输入SK值</p>
+     * @param SecretKey <p>选择MANUAL模式下，需要手动输入SK值</p>
+     */
+    public void setSecretKey(String SecretKey) {
+        this.SecretKey = SecretKey;
     }
 
     public CreateRocketMQRoleRequest() {
@@ -135,6 +204,15 @@ public class CreateRocketMQRoleRequest extends AbstractModel {
         if (source.PermType != null) {
             this.PermType = new String(source.PermType);
         }
+        if (source.RoleGenerateMode != null) {
+            this.RoleGenerateMode = new String(source.RoleGenerateMode);
+        }
+        if (source.AccessKey != null) {
+            this.AccessKey = new String(source.AccessKey);
+        }
+        if (source.SecretKey != null) {
+            this.SecretKey = new String(source.SecretKey);
+        }
     }
 
 
@@ -146,6 +224,9 @@ public class CreateRocketMQRoleRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "PermType", this.PermType);
+        this.setParamSimple(map, prefix + "RoleGenerateMode", this.RoleGenerateMode);
+        this.setParamSimple(map, prefix + "AccessKey", this.AccessKey);
+        this.setParamSimple(map, prefix + "SecretKey", this.SecretKey);
 
     }
 }

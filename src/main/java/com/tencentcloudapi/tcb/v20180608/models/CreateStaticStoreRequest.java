@@ -38,6 +38,13 @@ public class CreateStaticStoreRequest extends AbstractModel {
     private Boolean EnableUnion;
 
     /**
+    * 外部存储源。
+    */
+    @SerializedName("ExternalStorage")
+    @Expose
+    private ExternalStorage ExternalStorage;
+
+    /**
      * Get 环境ID 
      * @return EnvId 环境ID
      */
@@ -69,6 +76,22 @@ public class CreateStaticStoreRequest extends AbstractModel {
         this.EnableUnion = EnableUnion;
     }
 
+    /**
+     * Get 外部存储源。 
+     * @return ExternalStorage 外部存储源。
+     */
+    public ExternalStorage getExternalStorage() {
+        return this.ExternalStorage;
+    }
+
+    /**
+     * Set 外部存储源。
+     * @param ExternalStorage 外部存储源。
+     */
+    public void setExternalStorage(ExternalStorage ExternalStorage) {
+        this.ExternalStorage = ExternalStorage;
+    }
+
     public CreateStaticStoreRequest() {
     }
 
@@ -83,6 +106,9 @@ public class CreateStaticStoreRequest extends AbstractModel {
         if (source.EnableUnion != null) {
             this.EnableUnion = new Boolean(source.EnableUnion);
         }
+        if (source.ExternalStorage != null) {
+            this.ExternalStorage = new ExternalStorage(source.ExternalStorage);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class CreateStaticStoreRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnvId", this.EnvId);
         this.setParamSimple(map, prefix + "EnableUnion", this.EnableUnion);
+        this.setParamObj(map, prefix + "ExternalStorage.", this.ExternalStorage);
 
     }
 }

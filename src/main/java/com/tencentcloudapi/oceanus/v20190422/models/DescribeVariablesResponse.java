@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class DescribeVariablesResponse extends AbstractModel {
 
     /**
+    * ["x","y"]
+    */
+    @SerializedName("VariableSet")
+    @Expose
+    private VariableItem [] VariableSet;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get ["x","y"] 
+     * @return VariableSet ["x","y"]
+     */
+    public VariableItem [] getVariableSet() {
+        return this.VariableSet;
+    }
+
+    /**
+     * Set ["x","y"]
+     * @param VariableSet ["x","y"]
+     */
+    public void setVariableSet(VariableItem [] VariableSet) {
+        this.VariableSet = VariableSet;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,12 @@ public class DescribeVariablesResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeVariablesResponse(DescribeVariablesResponse source) {
+        if (source.VariableSet != null) {
+            this.VariableSet = new VariableItem[source.VariableSet.length];
+            for (int i = 0; i < source.VariableSet.length; i++) {
+                this.VariableSet[i] = new VariableItem(source.VariableSet[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +93,7 @@ public class DescribeVariablesResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "VariableSet.", this.VariableSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

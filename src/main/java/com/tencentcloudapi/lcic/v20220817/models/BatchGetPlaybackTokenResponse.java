@@ -38,6 +38,13 @@ public class BatchGetPlaybackTokenResponse extends AbstractModel {
     private Long Total;
 
     /**
+    * <p>用户ID</p>
+    */
+    @SerializedName("UserId")
+    @Expose
+    private String UserId;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -77,6 +84,22 @@ public class BatchGetPlaybackTokenResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>用户ID</p> 
+     * @return UserId <p>用户ID</p>
+     */
+    public String getUserId() {
+        return this.UserId;
+    }
+
+    /**
+     * Set <p>用户ID</p>
+     * @param UserId <p>用户ID</p>
+     */
+    public void setUserId(String UserId) {
+        this.UserId = UserId;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -109,6 +132,9 @@ public class BatchGetPlaybackTokenResponse extends AbstractModel {
         if (source.Total != null) {
             this.Total = new Long(source.Total);
         }
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -121,6 +147,7 @@ public class BatchGetPlaybackTokenResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Results.", this.Results);
         this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

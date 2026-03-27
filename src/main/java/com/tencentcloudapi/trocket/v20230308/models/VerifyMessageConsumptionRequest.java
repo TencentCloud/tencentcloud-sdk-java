@@ -38,18 +38,18 @@ public class VerifyMessageConsumptionRequest extends AbstractModel {
     private String Topic;
 
     /**
-    * 客户端ID
-    */
-    @SerializedName("ClientId")
-    @Expose
-    private String ClientId;
-
-    /**
     * 消息ID
     */
     @SerializedName("MsgId")
     @Expose
     private String MsgId;
+
+    /**
+    * 客户端 ID，不指定该参数时消息将被发送到对应消费组内任意客户端
+    */
+    @SerializedName("ClientId")
+    @Expose
+    private String ClientId;
 
     /**
     * 消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口返回的 [ConsumeGroupItem](https://cloud.tencent.com/document/api/1493/96031#ConsumeGroupItem) 或控制台获得。
@@ -91,22 +91,6 @@ public class VerifyMessageConsumptionRequest extends AbstractModel {
     }
 
     /**
-     * Get 客户端ID 
-     * @return ClientId 客户端ID
-     */
-    public String getClientId() {
-        return this.ClientId;
-    }
-
-    /**
-     * Set 客户端ID
-     * @param ClientId 客户端ID
-     */
-    public void setClientId(String ClientId) {
-        this.ClientId = ClientId;
-    }
-
-    /**
      * Get 消息ID 
      * @return MsgId 消息ID
      */
@@ -120,6 +104,22 @@ public class VerifyMessageConsumptionRequest extends AbstractModel {
      */
     public void setMsgId(String MsgId) {
         this.MsgId = MsgId;
+    }
+
+    /**
+     * Get 客户端 ID，不指定该参数时消息将被发送到对应消费组内任意客户端 
+     * @return ClientId 客户端 ID，不指定该参数时消息将被发送到对应消费组内任意客户端
+     */
+    public String getClientId() {
+        return this.ClientId;
+    }
+
+    /**
+     * Set 客户端 ID，不指定该参数时消息将被发送到对应消费组内任意客户端
+     * @param ClientId 客户端 ID，不指定该参数时消息将被发送到对应消费组内任意客户端
+     */
+    public void setClientId(String ClientId) {
+        this.ClientId = ClientId;
     }
 
     /**
@@ -152,11 +152,11 @@ public class VerifyMessageConsumptionRequest extends AbstractModel {
         if (source.Topic != null) {
             this.Topic = new String(source.Topic);
         }
-        if (source.ClientId != null) {
-            this.ClientId = new String(source.ClientId);
-        }
         if (source.MsgId != null) {
             this.MsgId = new String(source.MsgId);
+        }
+        if (source.ClientId != null) {
+            this.ClientId = new String(source.ClientId);
         }
         if (source.ConsumerGroup != null) {
             this.ConsumerGroup = new String(source.ConsumerGroup);
@@ -170,8 +170,8 @@ public class VerifyMessageConsumptionRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Topic", this.Topic);
-        this.setParamSimple(map, prefix + "ClientId", this.ClientId);
         this.setParamSimple(map, prefix + "MsgId", this.MsgId);
+        this.setParamSimple(map, prefix + "ClientId", this.ClientId);
         this.setParamSimple(map, prefix + "ConsumerGroup", this.ConsumerGroup);
 
     }

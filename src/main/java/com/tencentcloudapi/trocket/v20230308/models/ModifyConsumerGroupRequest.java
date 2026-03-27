@@ -67,6 +67,13 @@ public class ModifyConsumerGroupRequest extends AbstractModel {
     private String Remark;
 
     /**
+    * 重试策略
+    */
+    @SerializedName("RetryPolicy")
+    @Expose
+    private RetryPolicy RetryPolicy;
+
+    /**
      * Get 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。 
      * @return InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
      */
@@ -166,6 +173,22 @@ public class ModifyConsumerGroupRequest extends AbstractModel {
         this.Remark = Remark;
     }
 
+    /**
+     * Get 重试策略 
+     * @return RetryPolicy 重试策略
+     */
+    public RetryPolicy getRetryPolicy() {
+        return this.RetryPolicy;
+    }
+
+    /**
+     * Set 重试策略
+     * @param RetryPolicy 重试策略
+     */
+    public void setRetryPolicy(RetryPolicy RetryPolicy) {
+        this.RetryPolicy = RetryPolicy;
+    }
+
     public ModifyConsumerGroupRequest() {
     }
 
@@ -192,6 +215,9 @@ public class ModifyConsumerGroupRequest extends AbstractModel {
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.RetryPolicy != null) {
+            this.RetryPolicy = new RetryPolicy(source.RetryPolicy);
+        }
     }
 
 
@@ -205,6 +231,7 @@ public class ModifyConsumerGroupRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ConsumerGroup", this.ConsumerGroup);
         this.setParamSimple(map, prefix + "MaxRetryTimes", this.MaxRetryTimes);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamObj(map, prefix + "RetryPolicy.", this.RetryPolicy);
 
     }
 }

@@ -121,6 +121,13 @@ public class ConsumeGroupItem extends AbstractModel {
     private Tag [] TagList;
 
     /**
+    * 重试策略
+    */
+    @SerializedName("RetryPolicy")
+    @Expose
+    private RetryPolicy RetryPolicy;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -352,6 +359,22 @@ public class ConsumeGroupItem extends AbstractModel {
         this.TagList = TagList;
     }
 
+    /**
+     * Get 重试策略 
+     * @return RetryPolicy 重试策略
+     */
+    public RetryPolicy getRetryPolicy() {
+        return this.RetryPolicy;
+    }
+
+    /**
+     * Set 重试策略
+     * @param RetryPolicy 重试策略
+     */
+    public void setRetryPolicy(RetryPolicy RetryPolicy) {
+        this.RetryPolicy = RetryPolicy;
+    }
+
     public ConsumeGroupItem() {
     }
 
@@ -402,6 +425,9 @@ public class ConsumeGroupItem extends AbstractModel {
                 this.TagList[i] = new Tag(source.TagList[i]);
             }
         }
+        if (source.RetryPolicy != null) {
+            this.RetryPolicy = new RetryPolicy(source.RetryPolicy);
+        }
     }
 
 
@@ -422,6 +448,7 @@ public class ConsumeGroupItem extends AbstractModel {
         this.setParamSimple(map, prefix + "SubscribeTopicNum", this.SubscribeTopicNum);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
+        this.setParamObj(map, prefix + "RetryPolicy.", this.RetryPolicy);
 
     }
 }

@@ -24,877 +24,900 @@ import java.util.HashMap;
 public class CreateJobConfigRequest extends AbstractModel {
 
     /**
-    * 作业Id
+    * <p>作业Id</p>
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-    * 主类
+    * <p>主类</p>
     */
     @SerializedName("EntrypointClass")
     @Expose
     private String EntrypointClass;
 
     /**
-    * 主类入参，需要区分下Sql作业配置，Jar作业配置，Python作业配置，具体参考下面的示例值
+    * <p>主类入参，需要区分下Sql作业配置，Jar作业配置，Python作业配置，具体参考下面的示例值</p>
     */
     @SerializedName("ProgramArgs")
     @Expose
     private String ProgramArgs;
 
     /**
-    * 备注
+    * <p>备注</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 资源引用数组
+    * <p>资源引用数组</p>
     */
     @SerializedName("ResourceRefs")
     @Expose
     private ResourceRef [] ResourceRefs;
 
     /**
-    * 作业默认并行度
+    * <p>作业默认并行度</p>
     */
     @SerializedName("DefaultParallelism")
     @Expose
     private Long DefaultParallelism;
 
     /**
-    * 系统参数
+    * <p>系统参数</p>
     */
     @SerializedName("Properties")
     @Expose
     private Property [] Properties;
 
     /**
-    * 1: 作业配置达到上限之后，自动删除可删除的最早版本
+    * <p>1: 作业配置达到上限之后，自动删除可删除的最早版本</p>
     */
     @SerializedName("AutoDelete")
     @Expose
     private Long AutoDelete;
 
     /**
-    * 作业使用的 COS 存储桶名
+    * <p>作业使用的 COS 存储桶名</p>
     */
     @SerializedName("COSBucket")
     @Expose
     private String COSBucket;
 
     /**
-    * 是否采集作业日志
+    * <p>是否采集作业日志</p>
     */
     @SerializedName("LogCollect")
     @Expose
     private Boolean LogCollect;
 
     /**
-    * JobManager规格
+    * <p>JobManager规格</p>
     */
     @SerializedName("JobManagerSpec")
     @Expose
     private Float JobManagerSpec;
 
     /**
-    * TaskManager规格
+    * <p>TaskManager规格</p>
     */
     @SerializedName("TaskManagerSpec")
     @Expose
     private Float TaskManagerSpec;
 
     /**
-    * CLS日志集ID
+    * <p>CLS日志集ID</p>
     */
     @SerializedName("ClsLogsetId")
     @Expose
     private String ClsLogsetId;
 
     /**
-    * CLS日志主题ID
+    * <p>CLS日志主题ID</p>
     */
     @SerializedName("ClsTopicId")
     @Expose
     private String ClsTopicId;
 
     /**
-    * 日志采集类型 2：CLS；3：COS
+    * <p>日志采集类型 2：CLS；3：COS</p>
     */
     @SerializedName("LogCollectType")
     @Expose
     private Long LogCollectType;
 
     /**
-    * pyflink作业运行时使用的python版本
+    * <p>pyflink作业运行时使用的python版本</p>
     */
     @SerializedName("PythonVersion")
     @Expose
     private String PythonVersion;
 
     /**
-    * 工作空间 SerialId
+    * <p>工作空间 SerialId</p>
     */
     @SerializedName("WorkSpaceId")
     @Expose
     private String WorkSpaceId;
 
     /**
-    * 日志级别
+    * <p>日志级别</p>
     */
     @SerializedName("LogLevel")
     @Expose
     private String LogLevel;
 
     /**
-    * Oceanus 平台恢复作业开关 1:开启 -1: 关闭
+    * <p>Oceanus 平台恢复作业开关 1:开启 -1: 关闭</p>
     */
     @SerializedName("AutoRecover")
     @Expose
     private Long AutoRecover;
 
     /**
-    * 类日志级别
+    * <p>类日志级别</p>
     */
     @SerializedName("ClazzLevels")
     @Expose
     private ClazzLevel [] ClazzLevels;
 
     /**
-    * 是否打开专家模式
+    * <p>是否打开专家模式</p>
     */
     @SerializedName("ExpertModeOn")
     @Expose
     private Boolean ExpertModeOn;
 
     /**
-    * 专家模式的配置
+    * <p>专家模式的配置</p>
     */
     @SerializedName("ExpertModeConfiguration")
     @Expose
     private ExpertModeConfiguration ExpertModeConfiguration;
 
     /**
-    * trace链路
+    * <p>trace链路</p>
     */
     @SerializedName("TraceModeOn")
     @Expose
     private Boolean TraceModeOn;
 
     /**
-    * trace链路配置
+    * <p>trace链路配置</p>
     */
     @SerializedName("TraceModeConfiguration")
     @Expose
     private TraceModeConfiguration TraceModeConfiguration;
 
     /**
-    * checkpoint保留个数
+    * <p>checkpoint保留个数</p>
     */
     @SerializedName("CheckpointRetainedNum")
     @Expose
     private Long CheckpointRetainedNum;
 
     /**
-    * 算子拓扑图
+    * <p>算子拓扑图</p>
     */
     @SerializedName("JobGraph")
     @Expose
     private JobGraph JobGraph;
 
     /**
-    * es索引名称
+    * <p>es索引名称</p>
     */
     @SerializedName("EsServerlessIndex")
     @Expose
     private String EsServerlessIndex;
 
     /**
-    * es索引空间
+    * <p>es索引空间</p>
     */
     @SerializedName("EsServerlessSpace")
     @Expose
     private String EsServerlessSpace;
 
     /**
-    * flink版本
+    * <p>flink版本</p>
     */
     @SerializedName("FlinkVersion")
     @Expose
     private String FlinkVersion;
 
     /**
-    * JobManager cpu
+    * <p>JobManager cpu</p>
     */
     @SerializedName("JobManagerCpu")
     @Expose
     private Float JobManagerCpu;
 
     /**
-    * JobManager 内存
+    * <p>JobManager 内存</p>
     */
     @SerializedName("JobManagerMem")
     @Expose
     private Float JobManagerMem;
 
     /**
-    * jdk版本
+    * <p>jdk版本</p>
     */
     @SerializedName("JdkVersion")
     @Expose
     private String JdkVersion;
 
     /**
-    * TaskManager cpu
+    * <p>TaskManager cpu</p>
     */
     @SerializedName("TaskManagerCpu")
     @Expose
     private Float TaskManagerCpu;
 
     /**
-    * TaskManager 内存
+    * <p>TaskManager 内存</p>
     */
     @SerializedName("TaskManagerMem")
     @Expose
     private Float TaskManagerMem;
 
     /**
-    * 0=默认使用老的 1=使用新的
+    * <p>0=默认使用老的 1=使用新的</p>
     */
     @SerializedName("UseOldSystemConnector")
     @Expose
     private Long UseOldSystemConnector;
 
     /**
-    * 压缩参数
+    * <p>压缩参数</p>
     */
     @SerializedName("ProgramArgsAfterGzip")
     @Expose
     private String ProgramArgsAfterGzip;
 
     /**
-    * checkpoint 超时时间
+    * <p>checkpoint 超时时间</p>
     */
     @SerializedName("CheckpointTimeoutSecond")
     @Expose
     private Long CheckpointTimeoutSecond;
 
     /**
-    * checkpoint 间隔时间
+    * <p>checkpoint 间隔时间</p>
     */
     @SerializedName("CheckpointIntervalSecond")
     @Expose
     private Long CheckpointIntervalSecond;
 
     /**
-     * Get 作业Id 
-     * @return JobId 作业Id
+    * <p>变量替换模式</p><p>枚举值：</p><ul><li>0： 表变量替换</li><li>1： SQL全局变量替换</li></ul><p>默认值：1</p>
+    */
+    @SerializedName("VariableReplaceMode")
+    @Expose
+    private Long VariableReplaceMode;
+
+    /**
+     * Get <p>作业Id</p> 
+     * @return JobId <p>作业Id</p>
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 作业Id
-     * @param JobId 作业Id
+     * Set <p>作业Id</p>
+     * @param JobId <p>作业Id</p>
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get 主类 
-     * @return EntrypointClass 主类
+     * Get <p>主类</p> 
+     * @return EntrypointClass <p>主类</p>
      */
     public String getEntrypointClass() {
         return this.EntrypointClass;
     }
 
     /**
-     * Set 主类
-     * @param EntrypointClass 主类
+     * Set <p>主类</p>
+     * @param EntrypointClass <p>主类</p>
      */
     public void setEntrypointClass(String EntrypointClass) {
         this.EntrypointClass = EntrypointClass;
     }
 
     /**
-     * Get 主类入参，需要区分下Sql作业配置，Jar作业配置，Python作业配置，具体参考下面的示例值 
-     * @return ProgramArgs 主类入参，需要区分下Sql作业配置，Jar作业配置，Python作业配置，具体参考下面的示例值
+     * Get <p>主类入参，需要区分下Sql作业配置，Jar作业配置，Python作业配置，具体参考下面的示例值</p> 
+     * @return ProgramArgs <p>主类入参，需要区分下Sql作业配置，Jar作业配置，Python作业配置，具体参考下面的示例值</p>
      */
     public String getProgramArgs() {
         return this.ProgramArgs;
     }
 
     /**
-     * Set 主类入参，需要区分下Sql作业配置，Jar作业配置，Python作业配置，具体参考下面的示例值
-     * @param ProgramArgs 主类入参，需要区分下Sql作业配置，Jar作业配置，Python作业配置，具体参考下面的示例值
+     * Set <p>主类入参，需要区分下Sql作业配置，Jar作业配置，Python作业配置，具体参考下面的示例值</p>
+     * @param ProgramArgs <p>主类入参，需要区分下Sql作业配置，Jar作业配置，Python作业配置，具体参考下面的示例值</p>
      */
     public void setProgramArgs(String ProgramArgs) {
         this.ProgramArgs = ProgramArgs;
     }
 
     /**
-     * Get 备注 
-     * @return Remark 备注
+     * Get <p>备注</p> 
+     * @return Remark <p>备注</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注
-     * @param Remark 备注
+     * Set <p>备注</p>
+     * @param Remark <p>备注</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 资源引用数组 
-     * @return ResourceRefs 资源引用数组
+     * Get <p>资源引用数组</p> 
+     * @return ResourceRefs <p>资源引用数组</p>
      */
     public ResourceRef [] getResourceRefs() {
         return this.ResourceRefs;
     }
 
     /**
-     * Set 资源引用数组
-     * @param ResourceRefs 资源引用数组
+     * Set <p>资源引用数组</p>
+     * @param ResourceRefs <p>资源引用数组</p>
      */
     public void setResourceRefs(ResourceRef [] ResourceRefs) {
         this.ResourceRefs = ResourceRefs;
     }
 
     /**
-     * Get 作业默认并行度 
-     * @return DefaultParallelism 作业默认并行度
+     * Get <p>作业默认并行度</p> 
+     * @return DefaultParallelism <p>作业默认并行度</p>
      */
     public Long getDefaultParallelism() {
         return this.DefaultParallelism;
     }
 
     /**
-     * Set 作业默认并行度
-     * @param DefaultParallelism 作业默认并行度
+     * Set <p>作业默认并行度</p>
+     * @param DefaultParallelism <p>作业默认并行度</p>
      */
     public void setDefaultParallelism(Long DefaultParallelism) {
         this.DefaultParallelism = DefaultParallelism;
     }
 
     /**
-     * Get 系统参数 
-     * @return Properties 系统参数
+     * Get <p>系统参数</p> 
+     * @return Properties <p>系统参数</p>
      */
     public Property [] getProperties() {
         return this.Properties;
     }
 
     /**
-     * Set 系统参数
-     * @param Properties 系统参数
+     * Set <p>系统参数</p>
+     * @param Properties <p>系统参数</p>
      */
     public void setProperties(Property [] Properties) {
         this.Properties = Properties;
     }
 
     /**
-     * Get 1: 作业配置达到上限之后，自动删除可删除的最早版本 
-     * @return AutoDelete 1: 作业配置达到上限之后，自动删除可删除的最早版本
+     * Get <p>1: 作业配置达到上限之后，自动删除可删除的最早版本</p> 
+     * @return AutoDelete <p>1: 作业配置达到上限之后，自动删除可删除的最早版本</p>
      */
     public Long getAutoDelete() {
         return this.AutoDelete;
     }
 
     /**
-     * Set 1: 作业配置达到上限之后，自动删除可删除的最早版本
-     * @param AutoDelete 1: 作业配置达到上限之后，自动删除可删除的最早版本
+     * Set <p>1: 作业配置达到上限之后，自动删除可删除的最早版本</p>
+     * @param AutoDelete <p>1: 作业配置达到上限之后，自动删除可删除的最早版本</p>
      */
     public void setAutoDelete(Long AutoDelete) {
         this.AutoDelete = AutoDelete;
     }
 
     /**
-     * Get 作业使用的 COS 存储桶名 
-     * @return COSBucket 作业使用的 COS 存储桶名
+     * Get <p>作业使用的 COS 存储桶名</p> 
+     * @return COSBucket <p>作业使用的 COS 存储桶名</p>
      */
     public String getCOSBucket() {
         return this.COSBucket;
     }
 
     /**
-     * Set 作业使用的 COS 存储桶名
-     * @param COSBucket 作业使用的 COS 存储桶名
+     * Set <p>作业使用的 COS 存储桶名</p>
+     * @param COSBucket <p>作业使用的 COS 存储桶名</p>
      */
     public void setCOSBucket(String COSBucket) {
         this.COSBucket = COSBucket;
     }
 
     /**
-     * Get 是否采集作业日志 
-     * @return LogCollect 是否采集作业日志
+     * Get <p>是否采集作业日志</p> 
+     * @return LogCollect <p>是否采集作业日志</p>
      */
     public Boolean getLogCollect() {
         return this.LogCollect;
     }
 
     /**
-     * Set 是否采集作业日志
-     * @param LogCollect 是否采集作业日志
+     * Set <p>是否采集作业日志</p>
+     * @param LogCollect <p>是否采集作业日志</p>
      */
     public void setLogCollect(Boolean LogCollect) {
         this.LogCollect = LogCollect;
     }
 
     /**
-     * Get JobManager规格 
-     * @return JobManagerSpec JobManager规格
+     * Get <p>JobManager规格</p> 
+     * @return JobManagerSpec <p>JobManager规格</p>
      */
     public Float getJobManagerSpec() {
         return this.JobManagerSpec;
     }
 
     /**
-     * Set JobManager规格
-     * @param JobManagerSpec JobManager规格
+     * Set <p>JobManager规格</p>
+     * @param JobManagerSpec <p>JobManager规格</p>
      */
     public void setJobManagerSpec(Float JobManagerSpec) {
         this.JobManagerSpec = JobManagerSpec;
     }
 
     /**
-     * Get TaskManager规格 
-     * @return TaskManagerSpec TaskManager规格
+     * Get <p>TaskManager规格</p> 
+     * @return TaskManagerSpec <p>TaskManager规格</p>
      */
     public Float getTaskManagerSpec() {
         return this.TaskManagerSpec;
     }
 
     /**
-     * Set TaskManager规格
-     * @param TaskManagerSpec TaskManager规格
+     * Set <p>TaskManager规格</p>
+     * @param TaskManagerSpec <p>TaskManager规格</p>
      */
     public void setTaskManagerSpec(Float TaskManagerSpec) {
         this.TaskManagerSpec = TaskManagerSpec;
     }
 
     /**
-     * Get CLS日志集ID 
-     * @return ClsLogsetId CLS日志集ID
+     * Get <p>CLS日志集ID</p> 
+     * @return ClsLogsetId <p>CLS日志集ID</p>
      */
     public String getClsLogsetId() {
         return this.ClsLogsetId;
     }
 
     /**
-     * Set CLS日志集ID
-     * @param ClsLogsetId CLS日志集ID
+     * Set <p>CLS日志集ID</p>
+     * @param ClsLogsetId <p>CLS日志集ID</p>
      */
     public void setClsLogsetId(String ClsLogsetId) {
         this.ClsLogsetId = ClsLogsetId;
     }
 
     /**
-     * Get CLS日志主题ID 
-     * @return ClsTopicId CLS日志主题ID
+     * Get <p>CLS日志主题ID</p> 
+     * @return ClsTopicId <p>CLS日志主题ID</p>
      */
     public String getClsTopicId() {
         return this.ClsTopicId;
     }
 
     /**
-     * Set CLS日志主题ID
-     * @param ClsTopicId CLS日志主题ID
+     * Set <p>CLS日志主题ID</p>
+     * @param ClsTopicId <p>CLS日志主题ID</p>
      */
     public void setClsTopicId(String ClsTopicId) {
         this.ClsTopicId = ClsTopicId;
     }
 
     /**
-     * Get 日志采集类型 2：CLS；3：COS 
-     * @return LogCollectType 日志采集类型 2：CLS；3：COS
+     * Get <p>日志采集类型 2：CLS；3：COS</p> 
+     * @return LogCollectType <p>日志采集类型 2：CLS；3：COS</p>
      */
     public Long getLogCollectType() {
         return this.LogCollectType;
     }
 
     /**
-     * Set 日志采集类型 2：CLS；3：COS
-     * @param LogCollectType 日志采集类型 2：CLS；3：COS
+     * Set <p>日志采集类型 2：CLS；3：COS</p>
+     * @param LogCollectType <p>日志采集类型 2：CLS；3：COS</p>
      */
     public void setLogCollectType(Long LogCollectType) {
         this.LogCollectType = LogCollectType;
     }
 
     /**
-     * Get pyflink作业运行时使用的python版本 
-     * @return PythonVersion pyflink作业运行时使用的python版本
+     * Get <p>pyflink作业运行时使用的python版本</p> 
+     * @return PythonVersion <p>pyflink作业运行时使用的python版本</p>
      */
     public String getPythonVersion() {
         return this.PythonVersion;
     }
 
     /**
-     * Set pyflink作业运行时使用的python版本
-     * @param PythonVersion pyflink作业运行时使用的python版本
+     * Set <p>pyflink作业运行时使用的python版本</p>
+     * @param PythonVersion <p>pyflink作业运行时使用的python版本</p>
      */
     public void setPythonVersion(String PythonVersion) {
         this.PythonVersion = PythonVersion;
     }
 
     /**
-     * Get 工作空间 SerialId 
-     * @return WorkSpaceId 工作空间 SerialId
+     * Get <p>工作空间 SerialId</p> 
+     * @return WorkSpaceId <p>工作空间 SerialId</p>
      */
     public String getWorkSpaceId() {
         return this.WorkSpaceId;
     }
 
     /**
-     * Set 工作空间 SerialId
-     * @param WorkSpaceId 工作空间 SerialId
+     * Set <p>工作空间 SerialId</p>
+     * @param WorkSpaceId <p>工作空间 SerialId</p>
      */
     public void setWorkSpaceId(String WorkSpaceId) {
         this.WorkSpaceId = WorkSpaceId;
     }
 
     /**
-     * Get 日志级别 
-     * @return LogLevel 日志级别
+     * Get <p>日志级别</p> 
+     * @return LogLevel <p>日志级别</p>
      */
     public String getLogLevel() {
         return this.LogLevel;
     }
 
     /**
-     * Set 日志级别
-     * @param LogLevel 日志级别
+     * Set <p>日志级别</p>
+     * @param LogLevel <p>日志级别</p>
      */
     public void setLogLevel(String LogLevel) {
         this.LogLevel = LogLevel;
     }
 
     /**
-     * Get Oceanus 平台恢复作业开关 1:开启 -1: 关闭 
-     * @return AutoRecover Oceanus 平台恢复作业开关 1:开启 -1: 关闭
+     * Get <p>Oceanus 平台恢复作业开关 1:开启 -1: 关闭</p> 
+     * @return AutoRecover <p>Oceanus 平台恢复作业开关 1:开启 -1: 关闭</p>
      */
     public Long getAutoRecover() {
         return this.AutoRecover;
     }
 
     /**
-     * Set Oceanus 平台恢复作业开关 1:开启 -1: 关闭
-     * @param AutoRecover Oceanus 平台恢复作业开关 1:开启 -1: 关闭
+     * Set <p>Oceanus 平台恢复作业开关 1:开启 -1: 关闭</p>
+     * @param AutoRecover <p>Oceanus 平台恢复作业开关 1:开启 -1: 关闭</p>
      */
     public void setAutoRecover(Long AutoRecover) {
         this.AutoRecover = AutoRecover;
     }
 
     /**
-     * Get 类日志级别 
-     * @return ClazzLevels 类日志级别
+     * Get <p>类日志级别</p> 
+     * @return ClazzLevels <p>类日志级别</p>
      */
     public ClazzLevel [] getClazzLevels() {
         return this.ClazzLevels;
     }
 
     /**
-     * Set 类日志级别
-     * @param ClazzLevels 类日志级别
+     * Set <p>类日志级别</p>
+     * @param ClazzLevels <p>类日志级别</p>
      */
     public void setClazzLevels(ClazzLevel [] ClazzLevels) {
         this.ClazzLevels = ClazzLevels;
     }
 
     /**
-     * Get 是否打开专家模式 
-     * @return ExpertModeOn 是否打开专家模式
+     * Get <p>是否打开专家模式</p> 
+     * @return ExpertModeOn <p>是否打开专家模式</p>
      */
     public Boolean getExpertModeOn() {
         return this.ExpertModeOn;
     }
 
     /**
-     * Set 是否打开专家模式
-     * @param ExpertModeOn 是否打开专家模式
+     * Set <p>是否打开专家模式</p>
+     * @param ExpertModeOn <p>是否打开专家模式</p>
      */
     public void setExpertModeOn(Boolean ExpertModeOn) {
         this.ExpertModeOn = ExpertModeOn;
     }
 
     /**
-     * Get 专家模式的配置 
-     * @return ExpertModeConfiguration 专家模式的配置
+     * Get <p>专家模式的配置</p> 
+     * @return ExpertModeConfiguration <p>专家模式的配置</p>
      */
     public ExpertModeConfiguration getExpertModeConfiguration() {
         return this.ExpertModeConfiguration;
     }
 
     /**
-     * Set 专家模式的配置
-     * @param ExpertModeConfiguration 专家模式的配置
+     * Set <p>专家模式的配置</p>
+     * @param ExpertModeConfiguration <p>专家模式的配置</p>
      */
     public void setExpertModeConfiguration(ExpertModeConfiguration ExpertModeConfiguration) {
         this.ExpertModeConfiguration = ExpertModeConfiguration;
     }
 
     /**
-     * Get trace链路 
-     * @return TraceModeOn trace链路
+     * Get <p>trace链路</p> 
+     * @return TraceModeOn <p>trace链路</p>
      */
     public Boolean getTraceModeOn() {
         return this.TraceModeOn;
     }
 
     /**
-     * Set trace链路
-     * @param TraceModeOn trace链路
+     * Set <p>trace链路</p>
+     * @param TraceModeOn <p>trace链路</p>
      */
     public void setTraceModeOn(Boolean TraceModeOn) {
         this.TraceModeOn = TraceModeOn;
     }
 
     /**
-     * Get trace链路配置 
-     * @return TraceModeConfiguration trace链路配置
+     * Get <p>trace链路配置</p> 
+     * @return TraceModeConfiguration <p>trace链路配置</p>
      */
     public TraceModeConfiguration getTraceModeConfiguration() {
         return this.TraceModeConfiguration;
     }
 
     /**
-     * Set trace链路配置
-     * @param TraceModeConfiguration trace链路配置
+     * Set <p>trace链路配置</p>
+     * @param TraceModeConfiguration <p>trace链路配置</p>
      */
     public void setTraceModeConfiguration(TraceModeConfiguration TraceModeConfiguration) {
         this.TraceModeConfiguration = TraceModeConfiguration;
     }
 
     /**
-     * Get checkpoint保留个数 
-     * @return CheckpointRetainedNum checkpoint保留个数
+     * Get <p>checkpoint保留个数</p> 
+     * @return CheckpointRetainedNum <p>checkpoint保留个数</p>
      */
     public Long getCheckpointRetainedNum() {
         return this.CheckpointRetainedNum;
     }
 
     /**
-     * Set checkpoint保留个数
-     * @param CheckpointRetainedNum checkpoint保留个数
+     * Set <p>checkpoint保留个数</p>
+     * @param CheckpointRetainedNum <p>checkpoint保留个数</p>
      */
     public void setCheckpointRetainedNum(Long CheckpointRetainedNum) {
         this.CheckpointRetainedNum = CheckpointRetainedNum;
     }
 
     /**
-     * Get 算子拓扑图 
-     * @return JobGraph 算子拓扑图
+     * Get <p>算子拓扑图</p> 
+     * @return JobGraph <p>算子拓扑图</p>
      */
     public JobGraph getJobGraph() {
         return this.JobGraph;
     }
 
     /**
-     * Set 算子拓扑图
-     * @param JobGraph 算子拓扑图
+     * Set <p>算子拓扑图</p>
+     * @param JobGraph <p>算子拓扑图</p>
      */
     public void setJobGraph(JobGraph JobGraph) {
         this.JobGraph = JobGraph;
     }
 
     /**
-     * Get es索引名称 
-     * @return EsServerlessIndex es索引名称
+     * Get <p>es索引名称</p> 
+     * @return EsServerlessIndex <p>es索引名称</p>
      */
     public String getEsServerlessIndex() {
         return this.EsServerlessIndex;
     }
 
     /**
-     * Set es索引名称
-     * @param EsServerlessIndex es索引名称
+     * Set <p>es索引名称</p>
+     * @param EsServerlessIndex <p>es索引名称</p>
      */
     public void setEsServerlessIndex(String EsServerlessIndex) {
         this.EsServerlessIndex = EsServerlessIndex;
     }
 
     /**
-     * Get es索引空间 
-     * @return EsServerlessSpace es索引空间
+     * Get <p>es索引空间</p> 
+     * @return EsServerlessSpace <p>es索引空间</p>
      */
     public String getEsServerlessSpace() {
         return this.EsServerlessSpace;
     }
 
     /**
-     * Set es索引空间
-     * @param EsServerlessSpace es索引空间
+     * Set <p>es索引空间</p>
+     * @param EsServerlessSpace <p>es索引空间</p>
      */
     public void setEsServerlessSpace(String EsServerlessSpace) {
         this.EsServerlessSpace = EsServerlessSpace;
     }
 
     /**
-     * Get flink版本 
-     * @return FlinkVersion flink版本
+     * Get <p>flink版本</p> 
+     * @return FlinkVersion <p>flink版本</p>
      */
     public String getFlinkVersion() {
         return this.FlinkVersion;
     }
 
     /**
-     * Set flink版本
-     * @param FlinkVersion flink版本
+     * Set <p>flink版本</p>
+     * @param FlinkVersion <p>flink版本</p>
      */
     public void setFlinkVersion(String FlinkVersion) {
         this.FlinkVersion = FlinkVersion;
     }
 
     /**
-     * Get JobManager cpu 
-     * @return JobManagerCpu JobManager cpu
+     * Get <p>JobManager cpu</p> 
+     * @return JobManagerCpu <p>JobManager cpu</p>
      */
     public Float getJobManagerCpu() {
         return this.JobManagerCpu;
     }
 
     /**
-     * Set JobManager cpu
-     * @param JobManagerCpu JobManager cpu
+     * Set <p>JobManager cpu</p>
+     * @param JobManagerCpu <p>JobManager cpu</p>
      */
     public void setJobManagerCpu(Float JobManagerCpu) {
         this.JobManagerCpu = JobManagerCpu;
     }
 
     /**
-     * Get JobManager 内存 
-     * @return JobManagerMem JobManager 内存
+     * Get <p>JobManager 内存</p> 
+     * @return JobManagerMem <p>JobManager 内存</p>
      */
     public Float getJobManagerMem() {
         return this.JobManagerMem;
     }
 
     /**
-     * Set JobManager 内存
-     * @param JobManagerMem JobManager 内存
+     * Set <p>JobManager 内存</p>
+     * @param JobManagerMem <p>JobManager 内存</p>
      */
     public void setJobManagerMem(Float JobManagerMem) {
         this.JobManagerMem = JobManagerMem;
     }
 
     /**
-     * Get jdk版本 
-     * @return JdkVersion jdk版本
+     * Get <p>jdk版本</p> 
+     * @return JdkVersion <p>jdk版本</p>
      */
     public String getJdkVersion() {
         return this.JdkVersion;
     }
 
     /**
-     * Set jdk版本
-     * @param JdkVersion jdk版本
+     * Set <p>jdk版本</p>
+     * @param JdkVersion <p>jdk版本</p>
      */
     public void setJdkVersion(String JdkVersion) {
         this.JdkVersion = JdkVersion;
     }
 
     /**
-     * Get TaskManager cpu 
-     * @return TaskManagerCpu TaskManager cpu
+     * Get <p>TaskManager cpu</p> 
+     * @return TaskManagerCpu <p>TaskManager cpu</p>
      */
     public Float getTaskManagerCpu() {
         return this.TaskManagerCpu;
     }
 
     /**
-     * Set TaskManager cpu
-     * @param TaskManagerCpu TaskManager cpu
+     * Set <p>TaskManager cpu</p>
+     * @param TaskManagerCpu <p>TaskManager cpu</p>
      */
     public void setTaskManagerCpu(Float TaskManagerCpu) {
         this.TaskManagerCpu = TaskManagerCpu;
     }
 
     /**
-     * Get TaskManager 内存 
-     * @return TaskManagerMem TaskManager 内存
+     * Get <p>TaskManager 内存</p> 
+     * @return TaskManagerMem <p>TaskManager 内存</p>
      */
     public Float getTaskManagerMem() {
         return this.TaskManagerMem;
     }
 
     /**
-     * Set TaskManager 内存
-     * @param TaskManagerMem TaskManager 内存
+     * Set <p>TaskManager 内存</p>
+     * @param TaskManagerMem <p>TaskManager 内存</p>
      */
     public void setTaskManagerMem(Float TaskManagerMem) {
         this.TaskManagerMem = TaskManagerMem;
     }
 
     /**
-     * Get 0=默认使用老的 1=使用新的 
-     * @return UseOldSystemConnector 0=默认使用老的 1=使用新的
+     * Get <p>0=默认使用老的 1=使用新的</p> 
+     * @return UseOldSystemConnector <p>0=默认使用老的 1=使用新的</p>
      */
     public Long getUseOldSystemConnector() {
         return this.UseOldSystemConnector;
     }
 
     /**
-     * Set 0=默认使用老的 1=使用新的
-     * @param UseOldSystemConnector 0=默认使用老的 1=使用新的
+     * Set <p>0=默认使用老的 1=使用新的</p>
+     * @param UseOldSystemConnector <p>0=默认使用老的 1=使用新的</p>
      */
     public void setUseOldSystemConnector(Long UseOldSystemConnector) {
         this.UseOldSystemConnector = UseOldSystemConnector;
     }
 
     /**
-     * Get 压缩参数 
-     * @return ProgramArgsAfterGzip 压缩参数
+     * Get <p>压缩参数</p> 
+     * @return ProgramArgsAfterGzip <p>压缩参数</p>
      */
     public String getProgramArgsAfterGzip() {
         return this.ProgramArgsAfterGzip;
     }
 
     /**
-     * Set 压缩参数
-     * @param ProgramArgsAfterGzip 压缩参数
+     * Set <p>压缩参数</p>
+     * @param ProgramArgsAfterGzip <p>压缩参数</p>
      */
     public void setProgramArgsAfterGzip(String ProgramArgsAfterGzip) {
         this.ProgramArgsAfterGzip = ProgramArgsAfterGzip;
     }
 
     /**
-     * Get checkpoint 超时时间 
-     * @return CheckpointTimeoutSecond checkpoint 超时时间
+     * Get <p>checkpoint 超时时间</p> 
+     * @return CheckpointTimeoutSecond <p>checkpoint 超时时间</p>
      */
     public Long getCheckpointTimeoutSecond() {
         return this.CheckpointTimeoutSecond;
     }
 
     /**
-     * Set checkpoint 超时时间
-     * @param CheckpointTimeoutSecond checkpoint 超时时间
+     * Set <p>checkpoint 超时时间</p>
+     * @param CheckpointTimeoutSecond <p>checkpoint 超时时间</p>
      */
     public void setCheckpointTimeoutSecond(Long CheckpointTimeoutSecond) {
         this.CheckpointTimeoutSecond = CheckpointTimeoutSecond;
     }
 
     /**
-     * Get checkpoint 间隔时间 
-     * @return CheckpointIntervalSecond checkpoint 间隔时间
+     * Get <p>checkpoint 间隔时间</p> 
+     * @return CheckpointIntervalSecond <p>checkpoint 间隔时间</p>
      */
     public Long getCheckpointIntervalSecond() {
         return this.CheckpointIntervalSecond;
     }
 
     /**
-     * Set checkpoint 间隔时间
-     * @param CheckpointIntervalSecond checkpoint 间隔时间
+     * Set <p>checkpoint 间隔时间</p>
+     * @param CheckpointIntervalSecond <p>checkpoint 间隔时间</p>
      */
     public void setCheckpointIntervalSecond(Long CheckpointIntervalSecond) {
         this.CheckpointIntervalSecond = CheckpointIntervalSecond;
+    }
+
+    /**
+     * Get <p>变量替换模式</p><p>枚举值：</p><ul><li>0： 表变量替换</li><li>1： SQL全局变量替换</li></ul><p>默认值：1</p> 
+     * @return VariableReplaceMode <p>变量替换模式</p><p>枚举值：</p><ul><li>0： 表变量替换</li><li>1： SQL全局变量替换</li></ul><p>默认值：1</p>
+     */
+    public Long getVariableReplaceMode() {
+        return this.VariableReplaceMode;
+    }
+
+    /**
+     * Set <p>变量替换模式</p><p>枚举值：</p><ul><li>0： 表变量替换</li><li>1： SQL全局变量替换</li></ul><p>默认值：1</p>
+     * @param VariableReplaceMode <p>变量替换模式</p><p>枚举值：</p><ul><li>0： 表变量替换</li><li>1： SQL全局变量替换</li></ul><p>默认值：1</p>
+     */
+    public void setVariableReplaceMode(Long VariableReplaceMode) {
+        this.VariableReplaceMode = VariableReplaceMode;
     }
 
     public CreateJobConfigRequest() {
@@ -1028,6 +1051,9 @@ public class CreateJobConfigRequest extends AbstractModel {
         if (source.CheckpointIntervalSecond != null) {
             this.CheckpointIntervalSecond = new Long(source.CheckpointIntervalSecond);
         }
+        if (source.VariableReplaceMode != null) {
+            this.VariableReplaceMode = new Long(source.VariableReplaceMode);
+        }
     }
 
 
@@ -1073,6 +1099,7 @@ public class CreateJobConfigRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ProgramArgsAfterGzip", this.ProgramArgsAfterGzip);
         this.setParamSimple(map, prefix + "CheckpointTimeoutSecond", this.CheckpointTimeoutSecond);
         this.setParamSimple(map, prefix + "CheckpointIntervalSecond", this.CheckpointIntervalSecond);
+        this.setParamSimple(map, prefix + "VariableReplaceMode", this.VariableReplaceMode);
 
     }
 }

@@ -149,6 +149,17 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *关闭日志
+     * @param req CloseLogRequest
+     * @return CloseLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloseLogResponse CloseLog(CloseLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CloseLog", CloseLogResponse.class);
+    }
+
+    /**
      *本接口（CloseSSL）用于关闭SSL加密认证。
      * @param req CloseSSLRequest
      * @return CloseSSLResponse
@@ -157,6 +168,17 @@ public class RedisClient extends AbstractClient{
     public CloseSSLResponse CloseSSL(CloseSSLRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CloseSSL", CloseSSLResponse.class);
+    }
+
+    /**
+     *创建日志下载任务
+     * @param req CreateExportTaskRequest
+     * @return CreateExportTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateExportTaskResponse CreateExportTask(CreateExportTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateExportTask", CreateExportTaskResponse.class);
     }
 
     /**
@@ -201,6 +223,17 @@ public class RedisClient extends AbstractClient{
     public CreateReplicationGroupResponse CreateReplicationGroup(CreateReplicationGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateReplicationGroup", CreateReplicationGroupResponse.class);
+    }
+
+    /**
+     *删除日志下载任务
+     * @param req DeleteExportTaskRequest
+     * @return DeleteExportTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteExportTaskResponse DeleteExportTask(DeleteExportTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteExportTask", DeleteExportTaskResponse.class);
     }
 
     /**
@@ -311,6 +344,17 @@ public class RedisClient extends AbstractClient{
     public DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(DescribeDBSecurityGroupsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDBSecurityGroups", DescribeDBSecurityGroupsResponse.class);
+    }
+
+    /**
+     *本接口（DescribeExportTasks）用于查询日志文件的下载任务。
+     * @param req DescribeExportTasksRequest
+     * @return DescribeExportTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExportTasksResponse DescribeExportTasks(DescribeExportTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeExportTasks", DescribeExportTasksResponse.class);
     }
 
     /**
@@ -575,6 +619,28 @@ public class RedisClient extends AbstractClient{
     public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeInstances", DescribeInstancesResponse.class);
+    }
+
+    /**
+     *日志实例列表查询
+     * @param req DescribeLogInstanceListRequest
+     * @return DescribeLogInstanceListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLogInstanceListResponse DescribeLogInstanceList(DescribeLogInstanceListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLogInstanceList", DescribeLogInstanceListResponse.class);
+    }
+
+    /**
+     *查询日志
+     * @param req DescribeLogsRequest
+     * @return DescribeLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLogsResponse DescribeLogs(DescribeLogsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLogs", DescribeLogsResponse.class);
     }
 
     /**
@@ -1031,6 +1097,17 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *修改日志
+     * @param req ModifyLogRequest
+     * @return ModifyLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLogResponse ModifyLog(ModifyLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLog", ModifyLogResponse.class);
+    }
+
+    /**
      *本接口（ModifyMaintenanceWindow）用于修改实例维护时间窗时间，需要进行版本升级或者架构升级的实例，会在维护时间窗内进行时间切换。注意：已经发起版本升级或者架构升级的实例，无法修改维护时间窗。
      * @param req ModifyMaintenanceWindowRequest
      * @return ModifyMaintenanceWindowResponse
@@ -1072,6 +1149,17 @@ public class RedisClient extends AbstractClient{
     public ModifyReplicationGroupResponse ModifyReplicationGroup(ModifyReplicationGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyReplicationGroup", ModifyReplicationGroupResponse.class);
+    }
+
+    /**
+     *开启日志
+     * @param req OpenLogRequest
+     * @return OpenLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenLogResponse OpenLog(OpenLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "OpenLog", OpenLogResponse.class);
     }
 
     /**

@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class InquiryPriceRenewInstanceRequest extends AbstractModel {
 
     /**
-    * 包年包月实例的购买时长。
-- 单位：月。
-- 取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
+    * <p>包年包月实例的购买时长。- 单位：月。- 取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。</p>
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * 指定实例 ID。例如：crs-xjhsdj****。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis)在实例列表复制包年包月实例 ID。
+    * <p>指定实例 ID。例如：crs-xjhsdj****。请登录 <a href="https://console.cloud.tencent.com/redis">Redis 控制台</a>在实例列表复制包年包月实例 ID。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get 包年包月实例的购买时长。
-- 单位：月。
-- 取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。 
-     * @return Period 包年包月实例的购买时长。
-- 单位：月。
-- 取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
+     * Get <p>包年包月实例的购买时长。- 单位：月。- 取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。</p> 
+     * @return Period <p>包年包月实例的购买时长。- 单位：月。- 取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。</p>
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 包年包月实例的购买时长。
-- 单位：月。
-- 取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
-     * @param Period 包年包月实例的购买时长。
-- 单位：月。
-- 取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
+     * Set <p>包年包月实例的购买时长。- 单位：月。- 取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。</p>
+     * @param Period <p>包年包月实例的购买时长。- 单位：月。- 取值范围 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。</p>
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 指定实例 ID。例如：crs-xjhsdj****。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis)在实例列表复制包年包月实例 ID。 
-     * @return InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis)在实例列表复制包年包月实例 ID。
+     * Get <p>指定实例 ID。例如：crs-xjhsdj****。请登录 <a href="https://console.cloud.tencent.com/redis">Redis 控制台</a>在实例列表复制包年包月实例 ID。</p> 
+     * @return InstanceId <p>指定实例 ID。例如：crs-xjhsdj****。请登录 <a href="https://console.cloud.tencent.com/redis">Redis 控制台</a>在实例列表复制包年包月实例 ID。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 指定实例 ID。例如：crs-xjhsdj****。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis)在实例列表复制包年包月实例 ID。
-     * @param InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis)在实例列表复制包年包月实例 ID。
+     * Set <p>指定实例 ID。例如：crs-xjhsdj****。请登录 <a href="https://console.cloud.tencent.com/redis">Redis 控制台</a>在实例列表复制包年包月实例 ID。</p>
+     * @param InstanceId <p>指定实例 ID。例如：crs-xjhsdj****。请登录 <a href="https://console.cloud.tencent.com/redis">Redis 控制台</a>在实例列表复制包年包月实例 ID。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

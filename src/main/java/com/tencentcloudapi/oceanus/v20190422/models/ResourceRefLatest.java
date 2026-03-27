@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ResourceRefLatest extends AbstractModel {
 
     /**
-    * 资源id
+    * <p>资源id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceId")
@@ -32,7 +32,7 @@ public class ResourceRefLatest extends AbstractModel {
     private String ResourceId;
 
     /**
-    * 版本号
+    * <p>版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Version")
@@ -40,7 +40,7 @@ public class ResourceRefLatest extends AbstractModel {
     private Long Version;
 
     /**
-    * 资源类型
+    * <p>资源类型</p><p>枚举值：</p><ul><li>1： Main资源</li><li>2： 依赖资源</li><li>3： python文件</li><li>4： 数据文件</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -48,7 +48,7 @@ public class ResourceRefLatest extends AbstractModel {
     private Long Type;
 
     /**
-    * 状态
+    * <p>状态</p><p>枚举值：</p><ul><li>1： 活跃</li><li>-2： 删除</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -56,7 +56,7 @@ public class ResourceRefLatest extends AbstractModel {
     private Long Status;
 
     /**
-    * 空间id
+    * <p>空间id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkspaceId")
@@ -64,7 +64,7 @@ public class ResourceRefLatest extends AbstractModel {
     private String WorkspaceId;
 
     /**
-    * 资源名称
+    * <p>资源名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -72,9 +72,9 @@ public class ResourceRefLatest extends AbstractModel {
     private String Name;
 
     /**
-     * Get 资源id
+     * Get <p>资源id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceId 资源id
+     * @return ResourceId <p>资源id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceId() {
@@ -82,9 +82,9 @@ public class ResourceRefLatest extends AbstractModel {
     }
 
     /**
-     * Set 资源id
+     * Set <p>资源id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceId 资源id
+     * @param ResourceId <p>资源id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceId(String ResourceId) {
@@ -92,9 +92,9 @@ public class ResourceRefLatest extends AbstractModel {
     }
 
     /**
-     * Get 版本号
+     * Get <p>版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Version 版本号
+     * @return Version <p>版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVersion() {
@@ -102,9 +102,9 @@ public class ResourceRefLatest extends AbstractModel {
     }
 
     /**
-     * Set 版本号
+     * Set <p>版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Version 版本号
+     * @param Version <p>版本号</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersion(Long Version) {
@@ -112,9 +112,9 @@ public class ResourceRefLatest extends AbstractModel {
     }
 
     /**
-     * Get 资源类型
+     * Get <p>资源类型</p><p>枚举值：</p><ul><li>1： Main资源</li><li>2： 依赖资源</li><li>3： python文件</li><li>4： 数据文件</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Type 资源类型
+     * @return Type <p>资源类型</p><p>枚举值：</p><ul><li>1： Main资源</li><li>2： 依赖资源</li><li>3： python文件</li><li>4： 数据文件</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getType() {
@@ -122,9 +122,9 @@ public class ResourceRefLatest extends AbstractModel {
     }
 
     /**
-     * Set 资源类型
+     * Set <p>资源类型</p><p>枚举值：</p><ul><li>1： Main资源</li><li>2： 依赖资源</li><li>3： python文件</li><li>4： 数据文件</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Type 资源类型
+     * @param Type <p>资源类型</p><p>枚举值：</p><ul><li>1： Main资源</li><li>2： 依赖资源</li><li>3： python文件</li><li>4： 数据文件</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(Long Type) {
@@ -132,9 +132,9 @@ public class ResourceRefLatest extends AbstractModel {
     }
 
     /**
-     * Get 状态
+     * Get <p>状态</p><p>枚举值：</p><ul><li>1： 活跃</li><li>-2： 删除</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 状态
+     * @return Status <p>状态</p><p>枚举值：</p><ul><li>1： 活跃</li><li>-2： 删除</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -142,9 +142,9 @@ public class ResourceRefLatest extends AbstractModel {
     }
 
     /**
-     * Set 状态
+     * Set <p>状态</p><p>枚举值：</p><ul><li>1： 活跃</li><li>-2： 删除</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 状态
+     * @param Status <p>状态</p><p>枚举值：</p><ul><li>1： 活跃</li><li>-2： 删除</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
@@ -152,9 +152,9 @@ public class ResourceRefLatest extends AbstractModel {
     }
 
     /**
-     * Get 空间id
+     * Get <p>空间id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkspaceId 空间id
+     * @return WorkspaceId <p>空间id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkspaceId() {
@@ -162,9 +162,9 @@ public class ResourceRefLatest extends AbstractModel {
     }
 
     /**
-     * Set 空间id
+     * Set <p>空间id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkspaceId 空间id
+     * @param WorkspaceId <p>空间id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkspaceId(String WorkspaceId) {
@@ -172,9 +172,9 @@ public class ResourceRefLatest extends AbstractModel {
     }
 
     /**
-     * Get 资源名称
+     * Get <p>资源名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 资源名称
+     * @return Name <p>资源名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -182,9 +182,9 @@ public class ResourceRefLatest extends AbstractModel {
     }
 
     /**
-     * Set 资源名称
+     * Set <p>资源名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 资源名称
+     * @param Name <p>资源名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {

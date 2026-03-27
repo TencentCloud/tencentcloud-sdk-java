@@ -31,6 +31,13 @@ public class Account extends AbstractModel {
     private String AccountName;
 
     /**
+    * 主机
+    */
+    @SerializedName("Host")
+    @Expose
+    private String Host;
+
+    /**
     * 数据库账号描述
     */
     @SerializedName("Description")
@@ -52,18 +59,18 @@ public class Account extends AbstractModel {
     private String UpdateTime;
 
     /**
-    * 主机
-    */
-    @SerializedName("Host")
-    @Expose
-    private String Host;
-
-    /**
     * 用户最大连接数
     */
     @SerializedName("MaxUserConnections")
     @Expose
     private Long MaxUserConnections;
+
+    /**
+    * 是否开启密码轮转(0:关闭;1:开启)
+    */
+    @SerializedName("PasswordRotation")
+    @Expose
+    private Long PasswordRotation;
 
     /**
      * Get 数据库账号名 
@@ -79,6 +86,22 @@ public class Account extends AbstractModel {
      */
     public void setAccountName(String AccountName) {
         this.AccountName = AccountName;
+    }
+
+    /**
+     * Get 主机 
+     * @return Host 主机
+     */
+    public String getHost() {
+        return this.Host;
+    }
+
+    /**
+     * Set 主机
+     * @param Host 主机
+     */
+    public void setHost(String Host) {
+        this.Host = Host;
     }
 
     /**
@@ -130,22 +153,6 @@ public class Account extends AbstractModel {
     }
 
     /**
-     * Get 主机 
-     * @return Host 主机
-     */
-    public String getHost() {
-        return this.Host;
-    }
-
-    /**
-     * Set 主机
-     * @param Host 主机
-     */
-    public void setHost(String Host) {
-        this.Host = Host;
-    }
-
-    /**
      * Get 用户最大连接数 
      * @return MaxUserConnections 用户最大连接数
      */
@@ -161,6 +168,22 @@ public class Account extends AbstractModel {
         this.MaxUserConnections = MaxUserConnections;
     }
 
+    /**
+     * Get 是否开启密码轮转(0:关闭;1:开启) 
+     * @return PasswordRotation 是否开启密码轮转(0:关闭;1:开启)
+     */
+    public Long getPasswordRotation() {
+        return this.PasswordRotation;
+    }
+
+    /**
+     * Set 是否开启密码轮转(0:关闭;1:开启)
+     * @param PasswordRotation 是否开启密码轮转(0:关闭;1:开启)
+     */
+    public void setPasswordRotation(Long PasswordRotation) {
+        this.PasswordRotation = PasswordRotation;
+    }
+
     public Account() {
     }
 
@@ -172,6 +195,9 @@ public class Account extends AbstractModel {
         if (source.AccountName != null) {
             this.AccountName = new String(source.AccountName);
         }
+        if (source.Host != null) {
+            this.Host = new String(source.Host);
+        }
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
@@ -181,11 +207,11 @@ public class Account extends AbstractModel {
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
-        if (source.Host != null) {
-            this.Host = new String(source.Host);
-        }
         if (source.MaxUserConnections != null) {
             this.MaxUserConnections = new Long(source.MaxUserConnections);
+        }
+        if (source.PasswordRotation != null) {
+            this.PasswordRotation = new Long(source.PasswordRotation);
         }
     }
 
@@ -195,11 +221,12 @@ public class Account extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AccountName", this.AccountName);
+        this.setParamSimple(map, prefix + "Host", this.Host);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
-        this.setParamSimple(map, prefix + "Host", this.Host);
         this.setParamSimple(map, prefix + "MaxUserConnections", this.MaxUserConnections);
+        this.setParamSimple(map, prefix + "PasswordRotation", this.PasswordRotation);
 
     }
 }

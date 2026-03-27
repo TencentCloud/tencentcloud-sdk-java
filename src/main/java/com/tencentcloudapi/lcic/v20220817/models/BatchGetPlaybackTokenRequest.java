@@ -45,6 +45,13 @@ public class BatchGetPlaybackTokenRequest extends AbstractModel {
     private Long ExpireSeconds;
 
     /**
+    * <p>用户ID</p>
+    */
+    @SerializedName("UserId")
+    @Expose
+    private String UserId;
+
+    /**
      * Get <p>低代码平台的SdkAppId。</p> 
      * @return SdkAppId <p>低代码平台的SdkAppId。</p>
      */
@@ -92,6 +99,22 @@ public class BatchGetPlaybackTokenRequest extends AbstractModel {
         this.ExpireSeconds = ExpireSeconds;
     }
 
+    /**
+     * Get <p>用户ID</p> 
+     * @return UserId <p>用户ID</p>
+     */
+    public String getUserId() {
+        return this.UserId;
+    }
+
+    /**
+     * Set <p>用户ID</p>
+     * @param UserId <p>用户ID</p>
+     */
+    public void setUserId(String UserId) {
+        this.UserId = UserId;
+    }
+
     public BatchGetPlaybackTokenRequest() {
     }
 
@@ -112,6 +135,9 @@ public class BatchGetPlaybackTokenRequest extends AbstractModel {
         if (source.ExpireSeconds != null) {
             this.ExpireSeconds = new Long(source.ExpireSeconds);
         }
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
     }
 
 
@@ -122,6 +148,7 @@ public class BatchGetPlaybackTokenRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
         this.setParamArraySimple(map, prefix + "RoomIds.", this.RoomIds);
         this.setParamSimple(map, prefix + "ExpireSeconds", this.ExpireSeconds);
+        this.setParamSimple(map, prefix + "UserId", this.UserId);
 
     }
 }

@@ -24,115 +24,118 @@ import java.util.HashMap;
 public class ModifyRocketMQInstanceSpecRequest extends AbstractModel {
 
     /**
-    * 专享实例ID
+    * <p>专享实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例规格，
-rocket-vip-basic-1 基础型
-rocket-vip-basic-2 标准型
-rocket-vip-basic-3 高阶Ⅰ型
-rocket-vip-basic-4 高阶Ⅱ型
+    * <p>实例规格，<br>rocket-vip-basic-1 基础型<br>rocket-vip-basic-2 标准型<br>rocket-vip-basic-3 高阶Ⅰ型<br>rocket-vip-basic-4 高阶Ⅱ型</p>
     */
     @SerializedName("Specification")
     @Expose
     private String Specification;
 
     /**
-    * 节点数量
+    * <p>节点数量</p>
     */
     @SerializedName("NodeCount")
     @Expose
     private Long NodeCount;
 
     /**
-    * 存储空间，GB为单位
+    * <p>存储空间，GB为单位</p>
     */
     @SerializedName("StorageSize")
     @Expose
     private Long StorageSize;
 
     /**
-     * Get 专享实例ID 
-     * @return InstanceId 专享实例ID
+    * <p>部署可用区列表</p>
+    */
+    @SerializedName("ZoneIds")
+    @Expose
+    private String [] ZoneIds;
+
+    /**
+     * Get <p>专享实例ID</p> 
+     * @return InstanceId <p>专享实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 专享实例ID
-     * @param InstanceId 专享实例ID
+     * Set <p>专享实例ID</p>
+     * @param InstanceId <p>专享实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例规格，
-rocket-vip-basic-1 基础型
-rocket-vip-basic-2 标准型
-rocket-vip-basic-3 高阶Ⅰ型
-rocket-vip-basic-4 高阶Ⅱ型 
-     * @return Specification 实例规格，
-rocket-vip-basic-1 基础型
-rocket-vip-basic-2 标准型
-rocket-vip-basic-3 高阶Ⅰ型
-rocket-vip-basic-4 高阶Ⅱ型
+     * Get <p>实例规格，<br>rocket-vip-basic-1 基础型<br>rocket-vip-basic-2 标准型<br>rocket-vip-basic-3 高阶Ⅰ型<br>rocket-vip-basic-4 高阶Ⅱ型</p> 
+     * @return Specification <p>实例规格，<br>rocket-vip-basic-1 基础型<br>rocket-vip-basic-2 标准型<br>rocket-vip-basic-3 高阶Ⅰ型<br>rocket-vip-basic-4 高阶Ⅱ型</p>
      */
     public String getSpecification() {
         return this.Specification;
     }
 
     /**
-     * Set 实例规格，
-rocket-vip-basic-1 基础型
-rocket-vip-basic-2 标准型
-rocket-vip-basic-3 高阶Ⅰ型
-rocket-vip-basic-4 高阶Ⅱ型
-     * @param Specification 实例规格，
-rocket-vip-basic-1 基础型
-rocket-vip-basic-2 标准型
-rocket-vip-basic-3 高阶Ⅰ型
-rocket-vip-basic-4 高阶Ⅱ型
+     * Set <p>实例规格，<br>rocket-vip-basic-1 基础型<br>rocket-vip-basic-2 标准型<br>rocket-vip-basic-3 高阶Ⅰ型<br>rocket-vip-basic-4 高阶Ⅱ型</p>
+     * @param Specification <p>实例规格，<br>rocket-vip-basic-1 基础型<br>rocket-vip-basic-2 标准型<br>rocket-vip-basic-3 高阶Ⅰ型<br>rocket-vip-basic-4 高阶Ⅱ型</p>
      */
     public void setSpecification(String Specification) {
         this.Specification = Specification;
     }
 
     /**
-     * Get 节点数量 
-     * @return NodeCount 节点数量
+     * Get <p>节点数量</p> 
+     * @return NodeCount <p>节点数量</p>
      */
     public Long getNodeCount() {
         return this.NodeCount;
     }
 
     /**
-     * Set 节点数量
-     * @param NodeCount 节点数量
+     * Set <p>节点数量</p>
+     * @param NodeCount <p>节点数量</p>
      */
     public void setNodeCount(Long NodeCount) {
         this.NodeCount = NodeCount;
     }
 
     /**
-     * Get 存储空间，GB为单位 
-     * @return StorageSize 存储空间，GB为单位
+     * Get <p>存储空间，GB为单位</p> 
+     * @return StorageSize <p>存储空间，GB为单位</p>
      */
     public Long getStorageSize() {
         return this.StorageSize;
     }
 
     /**
-     * Set 存储空间，GB为单位
-     * @param StorageSize 存储空间，GB为单位
+     * Set <p>存储空间，GB为单位</p>
+     * @param StorageSize <p>存储空间，GB为单位</p>
      */
     public void setStorageSize(Long StorageSize) {
         this.StorageSize = StorageSize;
+    }
+
+    /**
+     * Get <p>部署可用区列表</p> 
+     * @return ZoneIds <p>部署可用区列表</p>
+     */
+    public String [] getZoneIds() {
+        return this.ZoneIds;
+    }
+
+    /**
+     * Set <p>部署可用区列表</p>
+     * @param ZoneIds <p>部署可用区列表</p>
+     */
+    public void setZoneIds(String [] ZoneIds) {
+        this.ZoneIds = ZoneIds;
     }
 
     public ModifyRocketMQInstanceSpecRequest() {
@@ -155,6 +158,12 @@ rocket-vip-basic-4 高阶Ⅱ型
         if (source.StorageSize != null) {
             this.StorageSize = new Long(source.StorageSize);
         }
+        if (source.ZoneIds != null) {
+            this.ZoneIds = new String[source.ZoneIds.length];
+            for (int i = 0; i < source.ZoneIds.length; i++) {
+                this.ZoneIds[i] = new String(source.ZoneIds[i]);
+            }
+        }
     }
 
 
@@ -166,6 +175,7 @@ rocket-vip-basic-4 高阶Ⅱ型
         this.setParamSimple(map, prefix + "Specification", this.Specification);
         this.setParamSimple(map, prefix + "NodeCount", this.NodeCount);
         this.setParamSimple(map, prefix + "StorageSize", this.StorageSize);
+        this.setParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
 
     }
 }

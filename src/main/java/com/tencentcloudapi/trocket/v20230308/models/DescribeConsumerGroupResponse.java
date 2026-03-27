@@ -101,6 +101,13 @@ CLUSTERING 集群模式
     private String MessageModel;
 
     /**
+    * 重试策略
+    */
+    @SerializedName("RetryPolicy")
+    @Expose
+    private RetryPolicy RetryPolicy;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -296,6 +303,22 @@ CLUSTERING 集群模式
     }
 
     /**
+     * Get 重试策略 
+     * @return RetryPolicy 重试策略
+     */
+    public RetryPolicy getRetryPolicy() {
+        return this.RetryPolicy;
+    }
+
+    /**
+     * Set 重试策略
+     * @param RetryPolicy 重试策略
+     */
+    public void setRetryPolicy(RetryPolicy RetryPolicy) {
+        this.RetryPolicy = RetryPolicy;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -349,6 +372,9 @@ CLUSTERING 集群模式
         if (source.MessageModel != null) {
             this.MessageModel = new String(source.MessageModel);
         }
+        if (source.RetryPolicy != null) {
+            this.RetryPolicy = new RetryPolicy(source.RetryPolicy);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -369,6 +395,7 @@ CLUSTERING 集群模式
         this.setParamSimple(map, prefix + "MaxRetryTimes", this.MaxRetryTimes);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "MessageModel", this.MessageModel);
+        this.setParamObj(map, prefix + "RetryPolicy.", this.RetryPolicy);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

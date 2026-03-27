@@ -52,7 +52,7 @@ public class TriggerManualTasksRequest extends AbstractModel {
     private String [] DataTimeList;
 
     /**
-    * 工作流ID
+    * 手动工作流ID
     */
     @SerializedName("WorkflowId")
     @Expose
@@ -66,8 +66,7 @@ public class TriggerManualTasksRequest extends AbstractModel {
     private String Remark;
 
     /**
-    * 需要运行的任务列表
-TriggerScope=ENTIRE_WORKFLOW 时无需传此参数，TriggerScope=SPECIFIED_TASK此参数必传
+    * 需要运行的手动工作流任务列表TriggerScope=ENTIRE_WORKFLOW 时无需传此参数，TriggerScope=SPECIFIED_TASK此参数必传
     */
     @SerializedName("TaskIds")
     @Expose
@@ -187,16 +186,16 @@ TriggerScope=ENTIRE_WORKFLOW 时无需传此参数，TriggerScope=SPECIFIED_TASK
     }
 
     /**
-     * Get 工作流ID 
-     * @return WorkflowId 工作流ID
+     * Get 手动工作流ID 
+     * @return WorkflowId 手动工作流ID
      */
     public String getWorkflowId() {
         return this.WorkflowId;
     }
 
     /**
-     * Set 工作流ID
-     * @param WorkflowId 工作流ID
+     * Set 手动工作流ID
+     * @param WorkflowId 手动工作流ID
      */
     public void setWorkflowId(String WorkflowId) {
         this.WorkflowId = WorkflowId;
@@ -219,20 +218,16 @@ TriggerScope=ENTIRE_WORKFLOW 时无需传此参数，TriggerScope=SPECIFIED_TASK
     }
 
     /**
-     * Get 需要运行的任务列表
-TriggerScope=ENTIRE_WORKFLOW 时无需传此参数，TriggerScope=SPECIFIED_TASK此参数必传 
-     * @return TaskIds 需要运行的任务列表
-TriggerScope=ENTIRE_WORKFLOW 时无需传此参数，TriggerScope=SPECIFIED_TASK此参数必传
+     * Get 需要运行的手动工作流任务列表TriggerScope=ENTIRE_WORKFLOW 时无需传此参数，TriggerScope=SPECIFIED_TASK此参数必传 
+     * @return TaskIds 需要运行的手动工作流任务列表TriggerScope=ENTIRE_WORKFLOW 时无需传此参数，TriggerScope=SPECIFIED_TASK此参数必传
      */
     public String [] getTaskIds() {
         return this.TaskIds;
     }
 
     /**
-     * Set 需要运行的任务列表
-TriggerScope=ENTIRE_WORKFLOW 时无需传此参数，TriggerScope=SPECIFIED_TASK此参数必传
-     * @param TaskIds 需要运行的任务列表
-TriggerScope=ENTIRE_WORKFLOW 时无需传此参数，TriggerScope=SPECIFIED_TASK此参数必传
+     * Set 需要运行的手动工作流任务列表TriggerScope=ENTIRE_WORKFLOW 时无需传此参数，TriggerScope=SPECIFIED_TASK此参数必传
+     * @param TaskIds 需要运行的手动工作流任务列表TriggerScope=ENTIRE_WORKFLOW 时无需传此参数，TriggerScope=SPECIFIED_TASK此参数必传
      */
     public void setTaskIds(String [] TaskIds) {
         this.TaskIds = TaskIds;

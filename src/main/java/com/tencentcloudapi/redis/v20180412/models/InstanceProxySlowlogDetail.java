@@ -24,164 +24,187 @@ import java.util.HashMap;
 public class InstanceProxySlowlogDetail extends AbstractModel {
 
     /**
-    * 慢查询耗时时长。单位：毫秒。
+    * <p>慢查询耗时时长。单位：毫秒。</p>
     */
     @SerializedName("Duration")
     @Expose
     private Long Duration;
 
     /**
-    * 客户端地址。
+    * <p>客户端地址。</p>
     */
     @SerializedName("Client")
     @Expose
     private String Client;
 
     /**
-    * 慢查询的命令。
+    * <p>慢查询的命令。</p>
     */
     @SerializedName("Command")
     @Expose
     private String Command;
 
     /**
-    * 慢查询详细命令行信息。
+    * <p>慢查询详细命令行信息。</p>
     */
     @SerializedName("CommandLine")
     @Expose
     private String CommandLine;
 
     /**
-    * 执行时间。
+    * <p>执行时间。</p>
     */
     @SerializedName("ExecuteTime")
     @Expose
     private String ExecuteTime;
 
     /**
-    * 收客户端请求时长(ms)
+    * <p>收客户端请求时长(ms)</p>
     */
     @SerializedName("RecvClientEnd")
     @Expose
     private Long RecvClientEnd;
 
     /**
-    * 发送客户端请求时长(ms)
+    * <p>发送客户端请求时长(ms)</p>
     */
     @SerializedName("SendClientEnd")
     @Expose
     private Long SendClientEnd;
 
     /**
-     * Get 慢查询耗时时长。单位：毫秒。 
-     * @return Duration 慢查询耗时时长。单位：毫秒。
+    * <p>Proxy节点ID。</p>
+    */
+    @SerializedName("Node")
+    @Expose
+    private String Node;
+
+    /**
+     * Get <p>慢查询耗时时长。单位：毫秒。</p> 
+     * @return Duration <p>慢查询耗时时长。单位：毫秒。</p>
      */
     public Long getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set 慢查询耗时时长。单位：毫秒。
-     * @param Duration 慢查询耗时时长。单位：毫秒。
+     * Set <p>慢查询耗时时长。单位：毫秒。</p>
+     * @param Duration <p>慢查询耗时时长。单位：毫秒。</p>
      */
     public void setDuration(Long Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get 客户端地址。 
-     * @return Client 客户端地址。
+     * Get <p>客户端地址。</p> 
+     * @return Client <p>客户端地址。</p>
      */
     public String getClient() {
         return this.Client;
     }
 
     /**
-     * Set 客户端地址。
-     * @param Client 客户端地址。
+     * Set <p>客户端地址。</p>
+     * @param Client <p>客户端地址。</p>
      */
     public void setClient(String Client) {
         this.Client = Client;
     }
 
     /**
-     * Get 慢查询的命令。 
-     * @return Command 慢查询的命令。
+     * Get <p>慢查询的命令。</p> 
+     * @return Command <p>慢查询的命令。</p>
      */
     public String getCommand() {
         return this.Command;
     }
 
     /**
-     * Set 慢查询的命令。
-     * @param Command 慢查询的命令。
+     * Set <p>慢查询的命令。</p>
+     * @param Command <p>慢查询的命令。</p>
      */
     public void setCommand(String Command) {
         this.Command = Command;
     }
 
     /**
-     * Get 慢查询详细命令行信息。 
-     * @return CommandLine 慢查询详细命令行信息。
+     * Get <p>慢查询详细命令行信息。</p> 
+     * @return CommandLine <p>慢查询详细命令行信息。</p>
      */
     public String getCommandLine() {
         return this.CommandLine;
     }
 
     /**
-     * Set 慢查询详细命令行信息。
-     * @param CommandLine 慢查询详细命令行信息。
+     * Set <p>慢查询详细命令行信息。</p>
+     * @param CommandLine <p>慢查询详细命令行信息。</p>
      */
     public void setCommandLine(String CommandLine) {
         this.CommandLine = CommandLine;
     }
 
     /**
-     * Get 执行时间。 
-     * @return ExecuteTime 执行时间。
+     * Get <p>执行时间。</p> 
+     * @return ExecuteTime <p>执行时间。</p>
      */
     public String getExecuteTime() {
         return this.ExecuteTime;
     }
 
     /**
-     * Set 执行时间。
-     * @param ExecuteTime 执行时间。
+     * Set <p>执行时间。</p>
+     * @param ExecuteTime <p>执行时间。</p>
      */
     public void setExecuteTime(String ExecuteTime) {
         this.ExecuteTime = ExecuteTime;
     }
 
     /**
-     * Get 收客户端请求时长(ms) 
-     * @return RecvClientEnd 收客户端请求时长(ms)
+     * Get <p>收客户端请求时长(ms)</p> 
+     * @return RecvClientEnd <p>收客户端请求时长(ms)</p>
      */
     public Long getRecvClientEnd() {
         return this.RecvClientEnd;
     }
 
     /**
-     * Set 收客户端请求时长(ms)
-     * @param RecvClientEnd 收客户端请求时长(ms)
+     * Set <p>收客户端请求时长(ms)</p>
+     * @param RecvClientEnd <p>收客户端请求时长(ms)</p>
      */
     public void setRecvClientEnd(Long RecvClientEnd) {
         this.RecvClientEnd = RecvClientEnd;
     }
 
     /**
-     * Get 发送客户端请求时长(ms) 
-     * @return SendClientEnd 发送客户端请求时长(ms)
+     * Get <p>发送客户端请求时长(ms)</p> 
+     * @return SendClientEnd <p>发送客户端请求时长(ms)</p>
      */
     public Long getSendClientEnd() {
         return this.SendClientEnd;
     }
 
     /**
-     * Set 发送客户端请求时长(ms)
-     * @param SendClientEnd 发送客户端请求时长(ms)
+     * Set <p>发送客户端请求时长(ms)</p>
+     * @param SendClientEnd <p>发送客户端请求时长(ms)</p>
      */
     public void setSendClientEnd(Long SendClientEnd) {
         this.SendClientEnd = SendClientEnd;
+    }
+
+    /**
+     * Get <p>Proxy节点ID。</p> 
+     * @return Node <p>Proxy节点ID。</p>
+     */
+    public String getNode() {
+        return this.Node;
+    }
+
+    /**
+     * Set <p>Proxy节点ID。</p>
+     * @param Node <p>Proxy节点ID。</p>
+     */
+    public void setNode(String Node) {
+        this.Node = Node;
     }
 
     public InstanceProxySlowlogDetail() {
@@ -213,6 +236,9 @@ public class InstanceProxySlowlogDetail extends AbstractModel {
         if (source.SendClientEnd != null) {
             this.SendClientEnd = new Long(source.SendClientEnd);
         }
+        if (source.Node != null) {
+            this.Node = new String(source.Node);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class InstanceProxySlowlogDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "ExecuteTime", this.ExecuteTime);
         this.setParamSimple(map, prefix + "RecvClientEnd", this.RecvClientEnd);
         this.setParamSimple(map, prefix + "SendClientEnd", this.SendClientEnd);
+        this.setParamSimple(map, prefix + "Node", this.Node);
 
     }
 }

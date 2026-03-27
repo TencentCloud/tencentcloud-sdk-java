@@ -694,6 +694,17 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *本接口(ModifyInstanceAz)用于调整 MongoDB 云数据库的节点可用区分布，可通过指定主可用区和全部可用区分布信息完成云数据库的节点分布调整。
+     * @param req ModifyInstanceAzRequest
+     * @return ModifyInstanceAzResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceAzResponse ModifyInstanceAz(ModifyInstanceAzRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInstanceAz", ModifyInstanceAzResponse.class);
+    }
+
+    /**
      *本接口（ModifyInstanceParams）用于修改mongoDB实例的参数配置。
      * @param req ModifyInstanceParamsRequest
      * @return ModifyInstanceParamsResponse

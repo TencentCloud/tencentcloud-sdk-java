@@ -32,6 +32,10 @@ public class ModifyLicenseUnBindsRequest extends AbstractModel {
 
     /**
     * 授权类型
+- 0 按量付费-专业版
+- 1 包年包月-专业版
+- 2 包年包月-旗舰版
+- 3 包年包月-轻量版
     */
     @SerializedName("LicenseType")
     @Expose
@@ -69,8 +73,16 @@ public class ModifyLicenseUnBindsRequest extends AbstractModel {
     }
 
     /**
-     * Get 授权类型 
+     * Get 授权类型
+- 0 按量付费-专业版
+- 1 包年包月-专业版
+- 2 包年包月-旗舰版
+- 3 包年包月-轻量版 
      * @return LicenseType 授权类型
+- 0 按量付费-专业版
+- 1 包年包月-专业版
+- 2 包年包月-旗舰版
+- 3 包年包月-轻量版
      */
     public Long getLicenseType() {
         return this.LicenseType;
@@ -78,7 +90,15 @@ public class ModifyLicenseUnBindsRequest extends AbstractModel {
 
     /**
      * Set 授权类型
+- 0 按量付费-专业版
+- 1 包年包月-专业版
+- 2 包年包月-旗舰版
+- 3 包年包月-轻量版
      * @param LicenseType 授权类型
+- 0 按量付费-专业版
+- 1 包年包月-专业版
+- 2 包年包月-旗舰版
+- 3 包年包月-轻量版
      */
     public void setLicenseType(Long LicenseType) {
         this.LicenseType = LicenseType;

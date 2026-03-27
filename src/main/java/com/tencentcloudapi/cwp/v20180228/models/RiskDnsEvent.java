@@ -136,7 +136,7 @@ public class RiskDnsEvent extends AbstractModel {
     private String ReferenceLink;
 
     /**
-    * 处理状态；[0:待处理|2:已加白|3:非信任状态|4:已处理|5:已忽略]
+    * 处理状态；[0:待处理|2:已加白|3:非信任状态|4:已处理|5:已忽略|6:已拦截]
     */
     @SerializedName("HandleStatus")
     @Expose
@@ -462,16 +462,16 @@ public class RiskDnsEvent extends AbstractModel {
     }
 
     /**
-     * Get 处理状态；[0:待处理|2:已加白|3:非信任状态|4:已处理|5:已忽略] 
-     * @return HandleStatus 处理状态；[0:待处理|2:已加白|3:非信任状态|4:已处理|5:已忽略]
+     * Get 处理状态；[0:待处理|2:已加白|3:非信任状态|4:已处理|5:已忽略|6:已拦截] 
+     * @return HandleStatus 处理状态；[0:待处理|2:已加白|3:非信任状态|4:已处理|5:已忽略|6:已拦截]
      */
     public Long getHandleStatus() {
         return this.HandleStatus;
     }
 
     /**
-     * Set 处理状态；[0:待处理|2:已加白|3:非信任状态|4:已处理|5:已忽略]
-     * @param HandleStatus 处理状态；[0:待处理|2:已加白|3:非信任状态|4:已处理|5:已忽略]
+     * Set 处理状态；[0:待处理|2:已加白|3:非信任状态|4:已处理|5:已忽略|6:已拦截]
+     * @param HandleStatus 处理状态；[0:待处理|2:已加白|3:非信任状态|4:已处理|5:已忽略|6:已拦截]
      */
     public void setHandleStatus(Long HandleStatus) {
         this.HandleStatus = HandleStatus;

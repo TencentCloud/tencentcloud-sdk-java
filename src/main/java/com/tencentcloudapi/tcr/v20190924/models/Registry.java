@@ -24,426 +24,399 @@ import java.util.HashMap;
 public class Registry extends AbstractModel {
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("RegistryId")
     @Expose
     private String RegistryId;
 
     /**
-    * 实例名称
+    * <p>实例名称</p>
     */
     @SerializedName("RegistryName")
     @Expose
     private String RegistryName;
 
     /**
-    * 实例规格
+    * <p>实例规格</p>
     */
     @SerializedName("RegistryType")
     @Expose
     private String RegistryType;
 
     /**
-    * 实例状态。有以下状态：
-Pending, 初始化中
-Deploying, 创建中
-Running, 运行中
-Unhealthy, 状态异常
-FailedCreated, 创建失败
-FailedUpdated, 更新失败
-Bucket-Error, 存储桶异常
-Isolate, 待回收
-Deleting, 删除中
-DeleteBucketFailed, 实例删除存储桶失败
-DeleteFailed, 实例删除失败
+    * <p>实例状态。有以下状态：<br>Pending, 初始化中<br>Deploying, 创建中<br>Running, 运行中<br>Unhealthy, 状态异常<br>FailedCreated, 创建失败<br>FailedUpdated, 更新失败<br>Bucket-Error, 存储桶异常<br>Isolate, 待回收<br>Deleting, 删除中<br>DeleteBucketFailed, 实例删除存储桶失败<br>DeleteFailed, 实例删除失败</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 实例的公共访问地址
+    * <p>实例的公共访问地址</p>
     */
     @SerializedName("PublicDomain")
     @Expose
     private String PublicDomain;
 
     /**
-    * 实例创建时间
+    * <p>实例创建时间</p>
     */
     @SerializedName("CreatedAt")
     @Expose
     private String CreatedAt;
 
     /**
-    * 地域名称
+    * <p>地域名称</p>
     */
     @SerializedName("RegionName")
     @Expose
     private String RegionName;
 
     /**
-    * 地域Id
+    * <p>地域Id</p>
     */
     @SerializedName("RegionId")
     @Expose
     private Long RegionId;
 
     /**
-    * 是否支持匿名
+    * <p>是否支持匿名</p>
     */
     @SerializedName("EnableAnonymous")
     @Expose
     private Boolean EnableAnonymous;
 
     /**
-    * Token有效时间
+    * <p>Token有效时间</p>
     */
     @SerializedName("TokenValidTime")
     @Expose
     private Long TokenValidTime;
 
     /**
-    * 实例内部访问地址
+    * <p>实例内部访问地址</p>
     */
     @SerializedName("InternalEndpoint")
     @Expose
     private String InternalEndpoint;
 
     /**
-    * 实例云标签
+    * <p>实例云标签</p>
     */
     @SerializedName("TagSpecification")
     @Expose
     private TagSpecification TagSpecification;
 
     /**
-    * 实例过期时间（预付费）
+    * <p>实例过期时间（预付费）</p>
     */
     @SerializedName("ExpiredAt")
     @Expose
     private String ExpiredAt;
 
     /**
-    * 实例付费类型，0表示后付费，1表示预付费
+    * <p>实例付费类型，0表示后付费，1表示预付费</p>
     */
     @SerializedName("PayMod")
     @Expose
     private Long PayMod;
 
     /**
-    * 预付费续费标识，0表示手动续费，1表示自动续费，2不续费并且不通知
+    * <p>预付费续费标识，0表示手动续费，1表示自动续费，2不续费并且不通知</p>
     */
     @SerializedName("RenewFlag")
     @Expose
     private Long RenewFlag;
 
     /**
-    * 是否开启实例删除保护，false表示不开启
+    * <p>是否开启实例删除保护，false表示不开启</p>
     */
     @SerializedName("DeletionProtection")
     @Expose
     private Boolean DeletionProtection;
 
     /**
-     * Get 实例ID 
-     * @return RegistryId 实例ID
+    * <p>是否支持AI特性</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AIFeature")
+    @Expose
+    private Boolean AIFeature;
+
+    /**
+     * Get <p>实例ID</p> 
+     * @return RegistryId <p>实例ID</p>
      */
     public String getRegistryId() {
         return this.RegistryId;
     }
 
     /**
-     * Set 实例ID
-     * @param RegistryId 实例ID
+     * Set <p>实例ID</p>
+     * @param RegistryId <p>实例ID</p>
      */
     public void setRegistryId(String RegistryId) {
         this.RegistryId = RegistryId;
     }
 
     /**
-     * Get 实例名称 
-     * @return RegistryName 实例名称
+     * Get <p>实例名称</p> 
+     * @return RegistryName <p>实例名称</p>
      */
     public String getRegistryName() {
         return this.RegistryName;
     }
 
     /**
-     * Set 实例名称
-     * @param RegistryName 实例名称
+     * Set <p>实例名称</p>
+     * @param RegistryName <p>实例名称</p>
      */
     public void setRegistryName(String RegistryName) {
         this.RegistryName = RegistryName;
     }
 
     /**
-     * Get 实例规格 
-     * @return RegistryType 实例规格
+     * Get <p>实例规格</p> 
+     * @return RegistryType <p>实例规格</p>
      */
     public String getRegistryType() {
         return this.RegistryType;
     }
 
     /**
-     * Set 实例规格
-     * @param RegistryType 实例规格
+     * Set <p>实例规格</p>
+     * @param RegistryType <p>实例规格</p>
      */
     public void setRegistryType(String RegistryType) {
         this.RegistryType = RegistryType;
     }
 
     /**
-     * Get 实例状态。有以下状态：
-Pending, 初始化中
-Deploying, 创建中
-Running, 运行中
-Unhealthy, 状态异常
-FailedCreated, 创建失败
-FailedUpdated, 更新失败
-Bucket-Error, 存储桶异常
-Isolate, 待回收
-Deleting, 删除中
-DeleteBucketFailed, 实例删除存储桶失败
-DeleteFailed, 实例删除失败 
-     * @return Status 实例状态。有以下状态：
-Pending, 初始化中
-Deploying, 创建中
-Running, 运行中
-Unhealthy, 状态异常
-FailedCreated, 创建失败
-FailedUpdated, 更新失败
-Bucket-Error, 存储桶异常
-Isolate, 待回收
-Deleting, 删除中
-DeleteBucketFailed, 实例删除存储桶失败
-DeleteFailed, 实例删除失败
+     * Get <p>实例状态。有以下状态：<br>Pending, 初始化中<br>Deploying, 创建中<br>Running, 运行中<br>Unhealthy, 状态异常<br>FailedCreated, 创建失败<br>FailedUpdated, 更新失败<br>Bucket-Error, 存储桶异常<br>Isolate, 待回收<br>Deleting, 删除中<br>DeleteBucketFailed, 实例删除存储桶失败<br>DeleteFailed, 实例删除失败</p> 
+     * @return Status <p>实例状态。有以下状态：<br>Pending, 初始化中<br>Deploying, 创建中<br>Running, 运行中<br>Unhealthy, 状态异常<br>FailedCreated, 创建失败<br>FailedUpdated, 更新失败<br>Bucket-Error, 存储桶异常<br>Isolate, 待回收<br>Deleting, 删除中<br>DeleteBucketFailed, 实例删除存储桶失败<br>DeleteFailed, 实例删除失败</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 实例状态。有以下状态：
-Pending, 初始化中
-Deploying, 创建中
-Running, 运行中
-Unhealthy, 状态异常
-FailedCreated, 创建失败
-FailedUpdated, 更新失败
-Bucket-Error, 存储桶异常
-Isolate, 待回收
-Deleting, 删除中
-DeleteBucketFailed, 实例删除存储桶失败
-DeleteFailed, 实例删除失败
-     * @param Status 实例状态。有以下状态：
-Pending, 初始化中
-Deploying, 创建中
-Running, 运行中
-Unhealthy, 状态异常
-FailedCreated, 创建失败
-FailedUpdated, 更新失败
-Bucket-Error, 存储桶异常
-Isolate, 待回收
-Deleting, 删除中
-DeleteBucketFailed, 实例删除存储桶失败
-DeleteFailed, 实例删除失败
+     * Set <p>实例状态。有以下状态：<br>Pending, 初始化中<br>Deploying, 创建中<br>Running, 运行中<br>Unhealthy, 状态异常<br>FailedCreated, 创建失败<br>FailedUpdated, 更新失败<br>Bucket-Error, 存储桶异常<br>Isolate, 待回收<br>Deleting, 删除中<br>DeleteBucketFailed, 实例删除存储桶失败<br>DeleteFailed, 实例删除失败</p>
+     * @param Status <p>实例状态。有以下状态：<br>Pending, 初始化中<br>Deploying, 创建中<br>Running, 运行中<br>Unhealthy, 状态异常<br>FailedCreated, 创建失败<br>FailedUpdated, 更新失败<br>Bucket-Error, 存储桶异常<br>Isolate, 待回收<br>Deleting, 删除中<br>DeleteBucketFailed, 实例删除存储桶失败<br>DeleteFailed, 实例删除失败</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 实例的公共访问地址 
-     * @return PublicDomain 实例的公共访问地址
+     * Get <p>实例的公共访问地址</p> 
+     * @return PublicDomain <p>实例的公共访问地址</p>
      */
     public String getPublicDomain() {
         return this.PublicDomain;
     }
 
     /**
-     * Set 实例的公共访问地址
-     * @param PublicDomain 实例的公共访问地址
+     * Set <p>实例的公共访问地址</p>
+     * @param PublicDomain <p>实例的公共访问地址</p>
      */
     public void setPublicDomain(String PublicDomain) {
         this.PublicDomain = PublicDomain;
     }
 
     /**
-     * Get 实例创建时间 
-     * @return CreatedAt 实例创建时间
+     * Get <p>实例创建时间</p> 
+     * @return CreatedAt <p>实例创建时间</p>
      */
     public String getCreatedAt() {
         return this.CreatedAt;
     }
 
     /**
-     * Set 实例创建时间
-     * @param CreatedAt 实例创建时间
+     * Set <p>实例创建时间</p>
+     * @param CreatedAt <p>实例创建时间</p>
      */
     public void setCreatedAt(String CreatedAt) {
         this.CreatedAt = CreatedAt;
     }
 
     /**
-     * Get 地域名称 
-     * @return RegionName 地域名称
+     * Get <p>地域名称</p> 
+     * @return RegionName <p>地域名称</p>
      */
     public String getRegionName() {
         return this.RegionName;
     }
 
     /**
-     * Set 地域名称
-     * @param RegionName 地域名称
+     * Set <p>地域名称</p>
+     * @param RegionName <p>地域名称</p>
      */
     public void setRegionName(String RegionName) {
         this.RegionName = RegionName;
     }
 
     /**
-     * Get 地域Id 
-     * @return RegionId 地域Id
+     * Get <p>地域Id</p> 
+     * @return RegionId <p>地域Id</p>
      */
     public Long getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set 地域Id
-     * @param RegionId 地域Id
+     * Set <p>地域Id</p>
+     * @param RegionId <p>地域Id</p>
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get 是否支持匿名 
-     * @return EnableAnonymous 是否支持匿名
+     * Get <p>是否支持匿名</p> 
+     * @return EnableAnonymous <p>是否支持匿名</p>
      */
     public Boolean getEnableAnonymous() {
         return this.EnableAnonymous;
     }
 
     /**
-     * Set 是否支持匿名
-     * @param EnableAnonymous 是否支持匿名
+     * Set <p>是否支持匿名</p>
+     * @param EnableAnonymous <p>是否支持匿名</p>
      */
     public void setEnableAnonymous(Boolean EnableAnonymous) {
         this.EnableAnonymous = EnableAnonymous;
     }
 
     /**
-     * Get Token有效时间 
-     * @return TokenValidTime Token有效时间
+     * Get <p>Token有效时间</p> 
+     * @return TokenValidTime <p>Token有效时间</p>
      */
     public Long getTokenValidTime() {
         return this.TokenValidTime;
     }
 
     /**
-     * Set Token有效时间
-     * @param TokenValidTime Token有效时间
+     * Set <p>Token有效时间</p>
+     * @param TokenValidTime <p>Token有效时间</p>
      */
     public void setTokenValidTime(Long TokenValidTime) {
         this.TokenValidTime = TokenValidTime;
     }
 
     /**
-     * Get 实例内部访问地址 
-     * @return InternalEndpoint 实例内部访问地址
+     * Get <p>实例内部访问地址</p> 
+     * @return InternalEndpoint <p>实例内部访问地址</p>
      */
     public String getInternalEndpoint() {
         return this.InternalEndpoint;
     }
 
     /**
-     * Set 实例内部访问地址
-     * @param InternalEndpoint 实例内部访问地址
+     * Set <p>实例内部访问地址</p>
+     * @param InternalEndpoint <p>实例内部访问地址</p>
      */
     public void setInternalEndpoint(String InternalEndpoint) {
         this.InternalEndpoint = InternalEndpoint;
     }
 
     /**
-     * Get 实例云标签 
-     * @return TagSpecification 实例云标签
+     * Get <p>实例云标签</p> 
+     * @return TagSpecification <p>实例云标签</p>
      */
     public TagSpecification getTagSpecification() {
         return this.TagSpecification;
     }
 
     /**
-     * Set 实例云标签
-     * @param TagSpecification 实例云标签
+     * Set <p>实例云标签</p>
+     * @param TagSpecification <p>实例云标签</p>
      */
     public void setTagSpecification(TagSpecification TagSpecification) {
         this.TagSpecification = TagSpecification;
     }
 
     /**
-     * Get 实例过期时间（预付费） 
-     * @return ExpiredAt 实例过期时间（预付费）
+     * Get <p>实例过期时间（预付费）</p> 
+     * @return ExpiredAt <p>实例过期时间（预付费）</p>
      */
     public String getExpiredAt() {
         return this.ExpiredAt;
     }
 
     /**
-     * Set 实例过期时间（预付费）
-     * @param ExpiredAt 实例过期时间（预付费）
+     * Set <p>实例过期时间（预付费）</p>
+     * @param ExpiredAt <p>实例过期时间（预付费）</p>
      */
     public void setExpiredAt(String ExpiredAt) {
         this.ExpiredAt = ExpiredAt;
     }
 
     /**
-     * Get 实例付费类型，0表示后付费，1表示预付费 
-     * @return PayMod 实例付费类型，0表示后付费，1表示预付费
+     * Get <p>实例付费类型，0表示后付费，1表示预付费</p> 
+     * @return PayMod <p>实例付费类型，0表示后付费，1表示预付费</p>
      */
     public Long getPayMod() {
         return this.PayMod;
     }
 
     /**
-     * Set 实例付费类型，0表示后付费，1表示预付费
-     * @param PayMod 实例付费类型，0表示后付费，1表示预付费
+     * Set <p>实例付费类型，0表示后付费，1表示预付费</p>
+     * @param PayMod <p>实例付费类型，0表示后付费，1表示预付费</p>
      */
     public void setPayMod(Long PayMod) {
         this.PayMod = PayMod;
     }
 
     /**
-     * Get 预付费续费标识，0表示手动续费，1表示自动续费，2不续费并且不通知 
-     * @return RenewFlag 预付费续费标识，0表示手动续费，1表示自动续费，2不续费并且不通知
+     * Get <p>预付费续费标识，0表示手动续费，1表示自动续费，2不续费并且不通知</p> 
+     * @return RenewFlag <p>预付费续费标识，0表示手动续费，1表示自动续费，2不续费并且不通知</p>
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 预付费续费标识，0表示手动续费，1表示自动续费，2不续费并且不通知
-     * @param RenewFlag 预付费续费标识，0表示手动续费，1表示自动续费，2不续费并且不通知
+     * Set <p>预付费续费标识，0表示手动续费，1表示自动续费，2不续费并且不通知</p>
+     * @param RenewFlag <p>预付费续费标识，0表示手动续费，1表示自动续费，2不续费并且不通知</p>
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get 是否开启实例删除保护，false表示不开启 
-     * @return DeletionProtection 是否开启实例删除保护，false表示不开启
+     * Get <p>是否开启实例删除保护，false表示不开启</p> 
+     * @return DeletionProtection <p>是否开启实例删除保护，false表示不开启</p>
      */
     public Boolean getDeletionProtection() {
         return this.DeletionProtection;
     }
 
     /**
-     * Set 是否开启实例删除保护，false表示不开启
-     * @param DeletionProtection 是否开启实例删除保护，false表示不开启
+     * Set <p>是否开启实例删除保护，false表示不开启</p>
+     * @param DeletionProtection <p>是否开启实例删除保护，false表示不开启</p>
      */
     public void setDeletionProtection(Boolean DeletionProtection) {
         this.DeletionProtection = DeletionProtection;
+    }
+
+    /**
+     * Get <p>是否支持AI特性</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AIFeature <p>是否支持AI特性</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getAIFeature() {
+        return this.AIFeature;
+    }
+
+    /**
+     * Set <p>是否支持AI特性</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AIFeature <p>是否支持AI特性</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAIFeature(Boolean AIFeature) {
+        this.AIFeature = AIFeature;
     }
 
     public Registry() {
@@ -502,6 +475,9 @@ DeleteFailed, 实例删除失败
         if (source.DeletionProtection != null) {
             this.DeletionProtection = new Boolean(source.DeletionProtection);
         }
+        if (source.AIFeature != null) {
+            this.AIFeature = new Boolean(source.AIFeature);
+        }
     }
 
 
@@ -525,6 +501,7 @@ DeleteFailed, 实例删除失败
         this.setParamSimple(map, prefix + "PayMod", this.PayMod);
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
+        this.setParamSimple(map, prefix + "AIFeature", this.AIFeature);
 
     }
 }

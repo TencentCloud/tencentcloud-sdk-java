@@ -52,18 +52,18 @@ public class VerifyRocketMQConsumeRequest extends AbstractModel {
     private String MsgId;
 
     /**
-    * 客户端ID
-    */
-    @SerializedName("ClientId")
-    @Expose
-    private String ClientId;
-
-    /**
     * 主题名称
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
+
+    /**
+    * 客户端 ID，不指定该参数时消息将被发送到对应消费组内任意客户端
+    */
+    @SerializedName("ClientId")
+    @Expose
+    private String ClientId;
 
     /**
      * Get 集群id 
@@ -130,22 +130,6 @@ public class VerifyRocketMQConsumeRequest extends AbstractModel {
     }
 
     /**
-     * Get 客户端ID 
-     * @return ClientId 客户端ID
-     */
-    public String getClientId() {
-        return this.ClientId;
-    }
-
-    /**
-     * Set 客户端ID
-     * @param ClientId 客户端ID
-     */
-    public void setClientId(String ClientId) {
-        this.ClientId = ClientId;
-    }
-
-    /**
      * Get 主题名称 
      * @return TopicName 主题名称
      */
@@ -159,6 +143,22 @@ public class VerifyRocketMQConsumeRequest extends AbstractModel {
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
+    }
+
+    /**
+     * Get 客户端 ID，不指定该参数时消息将被发送到对应消费组内任意客户端 
+     * @return ClientId 客户端 ID，不指定该参数时消息将被发送到对应消费组内任意客户端
+     */
+    public String getClientId() {
+        return this.ClientId;
+    }
+
+    /**
+     * Set 客户端 ID，不指定该参数时消息将被发送到对应消费组内任意客户端
+     * @param ClientId 客户端 ID，不指定该参数时消息将被发送到对应消费组内任意客户端
+     */
+    public void setClientId(String ClientId) {
+        this.ClientId = ClientId;
     }
 
     public VerifyRocketMQConsumeRequest() {
@@ -181,11 +181,11 @@ public class VerifyRocketMQConsumeRequest extends AbstractModel {
         if (source.MsgId != null) {
             this.MsgId = new String(source.MsgId);
         }
-        if (source.ClientId != null) {
-            this.ClientId = new String(source.ClientId);
-        }
         if (source.TopicName != null) {
             this.TopicName = new String(source.TopicName);
+        }
+        if (source.ClientId != null) {
+            this.ClientId = new String(source.ClientId);
         }
     }
 
@@ -198,8 +198,8 @@ public class VerifyRocketMQConsumeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "MsgId", this.MsgId);
-        this.setParamSimple(map, prefix + "ClientId", this.ClientId);
         this.setParamSimple(map, prefix + "TopicName", this.TopicName);
+        this.setParamSimple(map, prefix + "ClientId", this.ClientId);
 
     }
 }

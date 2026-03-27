@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeSessionStatisticsByIntervalResponse extends AbstractModel {
 
     /**
-    * 各时间段的会话统计数据
+    * <p>各时间段的会话统计数据</p>
     */
     @SerializedName("SessionStatistics")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeSessionStatisticsByIntervalResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 各时间段的会话统计数据 
-     * @return SessionStatistics 各时间段的会话统计数据
+     * Get <p>各时间段的会话统计数据</p> 
+     * @return SessionStatistics <p>各时间段的会话统计数据</p>
      */
     public SessionIntervalStatistic [] getSessionStatistics() {
         return this.SessionStatistics;
     }
 
     /**
-     * Set 各时间段的会话统计数据
-     * @param SessionStatistics 各时间段的会话统计数据
+     * Set <p>各时间段的会话统计数据</p>
+     * @param SessionStatistics <p>各时间段的会话统计数据</p>
      */
     public void setSessionStatistics(SessionIntervalStatistic [] SessionStatistics) {
         this.SessionStatistics = SessionStatistics;

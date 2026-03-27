@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateJobConfigResponse extends AbstractModel {
 
     /**
-    * 作业配置版本号
+    * <p>作业配置版本号</p>
     */
     @SerializedName("Version")
     @Expose
@@ -38,16 +38,16 @@ public class CreateJobConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 作业配置版本号 
-     * @return Version 作业配置版本号
+     * Get <p>作业配置版本号</p> 
+     * @return Version <p>作业配置版本号</p>
      */
     public Long getVersion() {
         return this.Version;
     }
 
     /**
-     * Set 作业配置版本号
-     * @param Version 作业配置版本号
+     * Set <p>作业配置版本号</p>
+     * @param Version <p>作业配置版本号</p>
      */
     public void setVersion(Long Version) {
         this.Version = Version;

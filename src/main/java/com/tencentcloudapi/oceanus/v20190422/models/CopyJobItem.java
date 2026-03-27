@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class CopyJobItem extends AbstractModel {
 
     /**
-    * 需要复制的作业serial id
+    * <p>需要复制的作业serial id</p>
     */
     @SerializedName("SourceId")
     @Expose
     private String SourceId;
 
     /**
-    * 目标集群的cluster serial id
+    * <p>目标集群的cluster serial id</p>
     */
     @SerializedName("TargetClusterId")
     @Expose
     private String TargetClusterId;
 
     /**
-    * 需要复制的作业名称
+    * <p>需要复制的作业名称</p>
     */
     @SerializedName("SourceName")
     @Expose
     private String SourceName;
 
     /**
-    * 新作业的名称
+    * <p>新作业的名称</p>
     */
     @SerializedName("TargetName")
     @Expose
     private String TargetName;
 
     /**
-    * 新作业的目录id
+    * <p>新作业的目录id</p>
     */
     @SerializedName("TargetFolderId")
     @Expose
     private String TargetFolderId;
 
     /**
-    * 源作业类型
+    * <p>作业类型</p><p>枚举值：</p><ul><li>1： sql作业</li><li>2： jar作业</li><li>4： python作业</li></ul>
     */
     @SerializedName("JobType")
     @Expose
     private Long JobType;
 
     /**
-     * Get 需要复制的作业serial id 
-     * @return SourceId 需要复制的作业serial id
+     * Get <p>需要复制的作业serial id</p> 
+     * @return SourceId <p>需要复制的作业serial id</p>
      */
     public String getSourceId() {
         return this.SourceId;
     }
 
     /**
-     * Set 需要复制的作业serial id
-     * @param SourceId 需要复制的作业serial id
+     * Set <p>需要复制的作业serial id</p>
+     * @param SourceId <p>需要复制的作业serial id</p>
      */
     public void setSourceId(String SourceId) {
         this.SourceId = SourceId;
     }
 
     /**
-     * Get 目标集群的cluster serial id 
-     * @return TargetClusterId 目标集群的cluster serial id
+     * Get <p>目标集群的cluster serial id</p> 
+     * @return TargetClusterId <p>目标集群的cluster serial id</p>
      */
     public String getTargetClusterId() {
         return this.TargetClusterId;
     }
 
     /**
-     * Set 目标集群的cluster serial id
-     * @param TargetClusterId 目标集群的cluster serial id
+     * Set <p>目标集群的cluster serial id</p>
+     * @param TargetClusterId <p>目标集群的cluster serial id</p>
      */
     public void setTargetClusterId(String TargetClusterId) {
         this.TargetClusterId = TargetClusterId;
     }
 
     /**
-     * Get 需要复制的作业名称 
-     * @return SourceName 需要复制的作业名称
+     * Get <p>需要复制的作业名称</p> 
+     * @return SourceName <p>需要复制的作业名称</p>
      */
     public String getSourceName() {
         return this.SourceName;
     }
 
     /**
-     * Set 需要复制的作业名称
-     * @param SourceName 需要复制的作业名称
+     * Set <p>需要复制的作业名称</p>
+     * @param SourceName <p>需要复制的作业名称</p>
      */
     public void setSourceName(String SourceName) {
         this.SourceName = SourceName;
     }
 
     /**
-     * Get 新作业的名称 
-     * @return TargetName 新作业的名称
+     * Get <p>新作业的名称</p> 
+     * @return TargetName <p>新作业的名称</p>
      */
     public String getTargetName() {
         return this.TargetName;
     }
 
     /**
-     * Set 新作业的名称
-     * @param TargetName 新作业的名称
+     * Set <p>新作业的名称</p>
+     * @param TargetName <p>新作业的名称</p>
      */
     public void setTargetName(String TargetName) {
         this.TargetName = TargetName;
     }
 
     /**
-     * Get 新作业的目录id 
-     * @return TargetFolderId 新作业的目录id
+     * Get <p>新作业的目录id</p> 
+     * @return TargetFolderId <p>新作业的目录id</p>
      */
     public String getTargetFolderId() {
         return this.TargetFolderId;
     }
 
     /**
-     * Set 新作业的目录id
-     * @param TargetFolderId 新作业的目录id
+     * Set <p>新作业的目录id</p>
+     * @param TargetFolderId <p>新作业的目录id</p>
      */
     public void setTargetFolderId(String TargetFolderId) {
         this.TargetFolderId = TargetFolderId;
     }
 
     /**
-     * Get 源作业类型 
-     * @return JobType 源作业类型
+     * Get <p>作业类型</p><p>枚举值：</p><ul><li>1： sql作业</li><li>2： jar作业</li><li>4： python作业</li></ul> 
+     * @return JobType <p>作业类型</p><p>枚举值：</p><ul><li>1： sql作业</li><li>2： jar作业</li><li>4： python作业</li></ul>
      */
     public Long getJobType() {
         return this.JobType;
     }
 
     /**
-     * Set 源作业类型
-     * @param JobType 源作业类型
+     * Set <p>作业类型</p><p>枚举值：</p><ul><li>1： sql作业</li><li>2： jar作业</li><li>4： python作业</li></ul>
+     * @param JobType <p>作业类型</p><p>枚举值：</p><ul><li>1： sql作业</li><li>2： jar作业</li><li>4： python作业</li></ul>
      */
     public void setJobType(Long JobType) {
         this.JobType = JobType;

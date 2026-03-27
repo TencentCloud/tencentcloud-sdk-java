@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Warehouse extends AbstractModel {
 
     /**
-    * <p>状态</p>
+    * <p>状态</p><p>枚举值：</p><ul><li>0： 未开启</li><li>1： 开启中</li><li>2： 已开启</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -40,7 +40,7 @@ public class Warehouse extends AbstractModel {
     private String Location;
 
     /**
-    * <p>catalogtype</p>
+    * <p>catalog类型</p><p>枚举值：</p><ul><li>hadoop： hadoop catalog</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CatalogType")
@@ -103,9 +103,9 @@ public class Warehouse extends AbstractModel {
     private Long HiveCatalogType;
 
     /**
-     * Get <p>状态</p>
+     * Get <p>状态</p><p>枚举值：</p><ul><li>0： 未开启</li><li>1： 开启中</li><li>2： 已开启</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status <p>状态</p>
+     * @return Status <p>状态</p><p>枚举值：</p><ul><li>0： 未开启</li><li>1： 开启中</li><li>2： 已开启</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -113,9 +113,9 @@ public class Warehouse extends AbstractModel {
     }
 
     /**
-     * Set <p>状态</p>
+     * Set <p>状态</p><p>枚举值：</p><ul><li>0： 未开启</li><li>1： 开启中</li><li>2： 已开启</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status <p>状态</p>
+     * @param Status <p>状态</p><p>枚举值：</p><ul><li>0： 未开启</li><li>1： 开启中</li><li>2： 已开启</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
@@ -143,9 +143,9 @@ public class Warehouse extends AbstractModel {
     }
 
     /**
-     * Get <p>catalogtype</p>
+     * Get <p>catalog类型</p><p>枚举值：</p><ul><li>hadoop： hadoop catalog</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CatalogType <p>catalogtype</p>
+     * @return CatalogType <p>catalog类型</p><p>枚举值：</p><ul><li>hadoop： hadoop catalog</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCatalogType() {
@@ -153,9 +153,9 @@ public class Warehouse extends AbstractModel {
     }
 
     /**
-     * Set <p>catalogtype</p>
+     * Set <p>catalog类型</p><p>枚举值：</p><ul><li>hadoop： hadoop catalog</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CatalogType <p>catalogtype</p>
+     * @param CatalogType <p>catalog类型</p><p>枚举值：</p><ul><li>hadoop： hadoop catalog</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCatalogType(String CatalogType) {

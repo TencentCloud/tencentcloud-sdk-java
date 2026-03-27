@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeDeviceSessionListResponse extends AbstractModel {
 
     /**
-    * 总个数
+    * <p>总个数</p>
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * 会话列表
+    * <p>会话列表</p>
     */
     @SerializedName("DeviceSessionList")
     @Expose
     private SessionInfo [] DeviceSessionList;
 
     /**
-    * 本页数量
+    * <p>本页数量</p>
     */
     @SerializedName("Num")
     @Expose
@@ -52,48 +52,48 @@ public class DescribeDeviceSessionListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总个数 
-     * @return Total 总个数
+     * Get <p>总个数</p> 
+     * @return Total <p>总个数</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 总个数
-     * @param Total 总个数
+     * Set <p>总个数</p>
+     * @param Total <p>总个数</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 会话列表 
-     * @return DeviceSessionList 会话列表
+     * Get <p>会话列表</p> 
+     * @return DeviceSessionList <p>会话列表</p>
      */
     public SessionInfo [] getDeviceSessionList() {
         return this.DeviceSessionList;
     }
 
     /**
-     * Set 会话列表
-     * @param DeviceSessionList 会话列表
+     * Set <p>会话列表</p>
+     * @param DeviceSessionList <p>会话列表</p>
      */
     public void setDeviceSessionList(SessionInfo [] DeviceSessionList) {
         this.DeviceSessionList = DeviceSessionList;
     }
 
     /**
-     * Get 本页数量 
-     * @return Num 本页数量
+     * Get <p>本页数量</p> 
+     * @return Num <p>本页数量</p>
      */
     public Long getNum() {
         return this.Num;
     }
 
     /**
-     * Set 本页数量
-     * @param Num 本页数量
+     * Set <p>本页数量</p>
+     * @param Num <p>本页数量</p>
      */
     public void setNum(Long Num) {
         this.Num = Num;

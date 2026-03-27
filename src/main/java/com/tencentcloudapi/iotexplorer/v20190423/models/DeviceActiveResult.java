@@ -46,6 +46,13 @@ public class DeviceActiveResult extends AbstractModel {
     private Long ErrCode;
 
     /**
+    * 错误信息
+    */
+    @SerializedName("ErrMessage")
+    @Expose
+    private String ErrMessage;
+
+    /**
     * 过期时间
     */
     @SerializedName("ExpireTime")
@@ -109,6 +116,22 @@ public class DeviceActiveResult extends AbstractModel {
     }
 
     /**
+     * Get 错误信息 
+     * @return ErrMessage 错误信息
+     */
+    public String getErrMessage() {
+        return this.ErrMessage;
+    }
+
+    /**
+     * Set 错误信息
+     * @param ErrMessage 错误信息
+     */
+    public void setErrMessage(String ErrMessage) {
+        this.ErrMessage = ErrMessage;
+    }
+
+    /**
      * Get 过期时间 
      * @return ExpireTime 过期时间
      */
@@ -141,6 +164,9 @@ public class DeviceActiveResult extends AbstractModel {
         if (source.ErrCode != null) {
             this.ErrCode = new Long(source.ErrCode);
         }
+        if (source.ErrMessage != null) {
+            this.ErrMessage = new String(source.ErrMessage);
+        }
         if (source.ExpireTime != null) {
             this.ExpireTime = new Long(source.ExpireTime);
         }
@@ -154,6 +180,7 @@ public class DeviceActiveResult extends AbstractModel {
         this.setParamSimple(map, prefix + "ModelId", this.ModelId);
         this.setParamSimple(map, prefix + "Sn", this.Sn);
         this.setParamSimple(map, prefix + "ErrCode", this.ErrCode);
+        this.setParamSimple(map, prefix + "ErrMessage", this.ErrMessage);
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
 
     }

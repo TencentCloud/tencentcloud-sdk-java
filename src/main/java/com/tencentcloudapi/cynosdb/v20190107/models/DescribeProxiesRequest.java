@@ -63,7 +63,8 @@ public class DescribeProxiesRequest extends AbstractModel {
     private String OrderByType;
 
     /**
-    * 搜索条件，若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
+    * 搜索条件，若存在多个 Filter 时，Filter 间的关系为逻辑与（AND）关系。
+说明：此参数当前仅支持 Status 和 ProxyGroupId 两种过滤条件。
     */
     @SerializedName("Filters")
     @Expose
@@ -166,16 +167,20 @@ public class DescribeProxiesRequest extends AbstractModel {
     }
 
     /**
-     * Get 搜索条件，若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。 
-     * @return Filters 搜索条件，若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
+     * Get 搜索条件，若存在多个 Filter 时，Filter 间的关系为逻辑与（AND）关系。
+说明：此参数当前仅支持 Status 和 ProxyGroupId 两种过滤条件。 
+     * @return Filters 搜索条件，若存在多个 Filter 时，Filter 间的关系为逻辑与（AND）关系。
+说明：此参数当前仅支持 Status 和 ProxyGroupId 两种过滤条件。
      */
     public QueryParamFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 搜索条件，若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
-     * @param Filters 搜索条件，若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
+     * Set 搜索条件，若存在多个 Filter 时，Filter 间的关系为逻辑与（AND）关系。
+说明：此参数当前仅支持 Status 和 ProxyGroupId 两种过滤条件。
+     * @param Filters 搜索条件，若存在多个 Filter 时，Filter 间的关系为逻辑与（AND）关系。
+说明：此参数当前仅支持 Status 和 ProxyGroupId 两种过滤条件。
      */
     public void setFilters(QueryParamFilter [] Filters) {
         this.Filters = Filters;

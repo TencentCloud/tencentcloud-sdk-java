@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class DescribeRecentSessionListRequest extends AbstractModel {
 
     /**
-    * 项目ID
+    * <p>项目ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * 页码，从1开始
+    * <p>页码，从1开始</p>
     */
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
 
     /**
-    * 每页个数
+    * <p>每页个数</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 设备ID，支持过滤远端设备或现场设备
+    * <p>设备ID，支持过滤远端设备或现场设备</p>
     */
     @SerializedName("DeviceId")
     @Expose
     private String DeviceId;
 
     /**
-    * 时间范围的起始时间。时间范围最大为最近两小时，若不传或超出范围，则起始时间按两小时前计算
+    * <p>时间范围的起始时间。时间范围最大为最近两小时，若不传或超出范围，则起始时间按两小时前计算</p>
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 时间范围的结束时间。时间范围最大为最近两小时，若不传或超出范围，则结束时间按当前时间计算
+    * <p>时间范围的结束时间。时间范围最大为最近两小时，若不传或超出范围，则结束时间按当前时间计算</p>
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-     * Get 项目ID 
-     * @return ProjectId 项目ID
+     * Get <p>项目ID</p> 
+     * @return ProjectId <p>项目ID</p>
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID
-     * @param ProjectId 项目ID
+     * Set <p>项目ID</p>
+     * @param ProjectId <p>项目ID</p>
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 页码，从1开始 
-     * @return PageNumber 页码，从1开始
+     * Get <p>页码，从1开始</p> 
+     * @return PageNumber <p>页码，从1开始</p>
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set 页码，从1开始
-     * @param PageNumber 页码，从1开始
+     * Set <p>页码，从1开始</p>
+     * @param PageNumber <p>页码，从1开始</p>
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 每页个数 
-     * @return PageSize 每页个数
+     * Get <p>每页个数</p> 
+     * @return PageSize <p>每页个数</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 每页个数
-     * @param PageSize 每页个数
+     * Set <p>每页个数</p>
+     * @param PageSize <p>每页个数</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 设备ID，支持过滤远端设备或现场设备 
-     * @return DeviceId 设备ID，支持过滤远端设备或现场设备
+     * Get <p>设备ID，支持过滤远端设备或现场设备</p> 
+     * @return DeviceId <p>设备ID，支持过滤远端设备或现场设备</p>
      */
     public String getDeviceId() {
         return this.DeviceId;
     }
 
     /**
-     * Set 设备ID，支持过滤远端设备或现场设备
-     * @param DeviceId 设备ID，支持过滤远端设备或现场设备
+     * Set <p>设备ID，支持过滤远端设备或现场设备</p>
+     * @param DeviceId <p>设备ID，支持过滤远端设备或现场设备</p>
      */
     public void setDeviceId(String DeviceId) {
         this.DeviceId = DeviceId;
     }
 
     /**
-     * Get 时间范围的起始时间。时间范围最大为最近两小时，若不传或超出范围，则起始时间按两小时前计算 
-     * @return StartTime 时间范围的起始时间。时间范围最大为最近两小时，若不传或超出范围，则起始时间按两小时前计算
+     * Get <p>时间范围的起始时间。时间范围最大为最近两小时，若不传或超出范围，则起始时间按两小时前计算</p> 
+     * @return StartTime <p>时间范围的起始时间。时间范围最大为最近两小时，若不传或超出范围，则起始时间按两小时前计算</p>
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 时间范围的起始时间。时间范围最大为最近两小时，若不传或超出范围，则起始时间按两小时前计算
-     * @param StartTime 时间范围的起始时间。时间范围最大为最近两小时，若不传或超出范围，则起始时间按两小时前计算
+     * Set <p>时间范围的起始时间。时间范围最大为最近两小时，若不传或超出范围，则起始时间按两小时前计算</p>
+     * @param StartTime <p>时间范围的起始时间。时间范围最大为最近两小时，若不传或超出范围，则起始时间按两小时前计算</p>
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 时间范围的结束时间。时间范围最大为最近两小时，若不传或超出范围，则结束时间按当前时间计算 
-     * @return EndTime 时间范围的结束时间。时间范围最大为最近两小时，若不传或超出范围，则结束时间按当前时间计算
+     * Get <p>时间范围的结束时间。时间范围最大为最近两小时，若不传或超出范围，则结束时间按当前时间计算</p> 
+     * @return EndTime <p>时间范围的结束时间。时间范围最大为最近两小时，若不传或超出范围，则结束时间按当前时间计算</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 时间范围的结束时间。时间范围最大为最近两小时，若不传或超出范围，则结束时间按当前时间计算
-     * @param EndTime 时间范围的结束时间。时间范围最大为最近两小时，若不传或超出范围，则结束时间按当前时间计算
+     * Set <p>时间范围的结束时间。时间范围最大为最近两小时，若不传或超出范围，则结束时间按当前时间计算</p>
+     * @param EndTime <p>时间范围的结束时间。时间范围最大为最近两小时，若不传或超出范围，则结束时间按当前时间计算</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

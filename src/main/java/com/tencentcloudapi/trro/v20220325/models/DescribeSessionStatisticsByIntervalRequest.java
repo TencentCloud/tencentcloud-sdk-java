@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeSessionStatisticsByIntervalRequest extends AbstractModel {
 
     /**
-    * 项目ID
+    * <p>项目ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * 统计时间间隔：hour|day|month
+    * <p>统计时间间隔：hour|day|month</p>
     */
     @SerializedName("StatisticInterval")
     @Expose
     private String StatisticInterval;
 
     /**
-    * 设备ID
+    * <p>设备ID</p>
     */
     @SerializedName("DeviceId")
     @Expose
     private String DeviceId;
 
     /**
-    * 起始时间，单位：秒
+    * <p>起始时间，单位：秒</p>
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 结束时间，单位：秒
+    * <p>结束时间，单位：秒</p>
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-     * Get 项目ID 
-     * @return ProjectId 项目ID
+     * Get <p>项目ID</p> 
+     * @return ProjectId <p>项目ID</p>
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID
-     * @param ProjectId 项目ID
+     * Set <p>项目ID</p>
+     * @param ProjectId <p>项目ID</p>
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 统计时间间隔：hour|day|month 
-     * @return StatisticInterval 统计时间间隔：hour|day|month
+     * Get <p>统计时间间隔：hour|day|month</p> 
+     * @return StatisticInterval <p>统计时间间隔：hour|day|month</p>
      */
     public String getStatisticInterval() {
         return this.StatisticInterval;
     }
 
     /**
-     * Set 统计时间间隔：hour|day|month
-     * @param StatisticInterval 统计时间间隔：hour|day|month
+     * Set <p>统计时间间隔：hour|day|month</p>
+     * @param StatisticInterval <p>统计时间间隔：hour|day|month</p>
      */
     public void setStatisticInterval(String StatisticInterval) {
         this.StatisticInterval = StatisticInterval;
     }
 
     /**
-     * Get 设备ID 
-     * @return DeviceId 设备ID
+     * Get <p>设备ID</p> 
+     * @return DeviceId <p>设备ID</p>
      */
     public String getDeviceId() {
         return this.DeviceId;
     }
 
     /**
-     * Set 设备ID
-     * @param DeviceId 设备ID
+     * Set <p>设备ID</p>
+     * @param DeviceId <p>设备ID</p>
      */
     public void setDeviceId(String DeviceId) {
         this.DeviceId = DeviceId;
     }
 
     /**
-     * Get 起始时间，单位：秒 
-     * @return StartTime 起始时间，单位：秒
+     * Get <p>起始时间，单位：秒</p> 
+     * @return StartTime <p>起始时间，单位：秒</p>
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 起始时间，单位：秒
-     * @param StartTime 起始时间，单位：秒
+     * Set <p>起始时间，单位：秒</p>
+     * @param StartTime <p>起始时间，单位：秒</p>
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间，单位：秒 
-     * @return EndTime 结束时间，单位：秒
+     * Get <p>结束时间，单位：秒</p> 
+     * @return EndTime <p>结束时间，单位：秒</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间，单位：秒
-     * @param EndTime 结束时间，单位：秒
+     * Set <p>结束时间，单位：秒</p>
+     * @param EndTime <p>结束时间，单位：秒</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

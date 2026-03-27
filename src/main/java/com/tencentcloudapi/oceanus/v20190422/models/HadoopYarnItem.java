@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class HadoopYarnItem extends AbstractModel {
 
     /**
-    * ClusterGroupSerialId
+    * <p>ClusterGroupSerialId</p>
     */
     @SerializedName("ClusterGroupSerialId")
     @Expose
     private String ClusterGroupSerialId;
 
     /**
-    * 状态
+    * <p>状态</p><p>枚举值：</p><ul><li>1： 停止</li><li>2： 开启中</li><li>3： 启动</li><li>4： 开启失败</li><li>5： 停止中</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -39,7 +39,7 @@ public class HadoopYarnItem extends AbstractModel {
     private Long Status;
 
     /**
-    * cpu
+    * <p>cpu</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cpu")
@@ -47,60 +47,60 @@ public class HadoopYarnItem extends AbstractModel {
     private Float Cpu;
 
     /**
-    * mem
+    * <p>mem</p>
     */
     @SerializedName("Mem")
     @Expose
     private Float Mem;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 配置文件内容
+    * <p>配置文件内容</p>
     */
     @SerializedName("Config")
     @Expose
     private String Config;
 
     /**
-    * CreatorUin
+    * <p>CreatorUin</p>
     */
     @SerializedName("CreatorUin")
     @Expose
     private String CreatorUin;
 
     /**
-     * Get ClusterGroupSerialId 
-     * @return ClusterGroupSerialId ClusterGroupSerialId
+     * Get <p>ClusterGroupSerialId</p> 
+     * @return ClusterGroupSerialId <p>ClusterGroupSerialId</p>
      */
     public String getClusterGroupSerialId() {
         return this.ClusterGroupSerialId;
     }
 
     /**
-     * Set ClusterGroupSerialId
-     * @param ClusterGroupSerialId ClusterGroupSerialId
+     * Set <p>ClusterGroupSerialId</p>
+     * @param ClusterGroupSerialId <p>ClusterGroupSerialId</p>
      */
     public void setClusterGroupSerialId(String ClusterGroupSerialId) {
         this.ClusterGroupSerialId = ClusterGroupSerialId;
     }
 
     /**
-     * Get 状态
+     * Get <p>状态</p><p>枚举值：</p><ul><li>1： 停止</li><li>2： 开启中</li><li>3： 启动</li><li>4： 开启失败</li><li>5： 停止中</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 状态
+     * @return Status <p>状态</p><p>枚举值：</p><ul><li>1： 停止</li><li>2： 开启中</li><li>3： 启动</li><li>4： 开启失败</li><li>5： 停止中</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -108,9 +108,9 @@ public class HadoopYarnItem extends AbstractModel {
     }
 
     /**
-     * Set 状态
+     * Set <p>状态</p><p>枚举值：</p><ul><li>1： 停止</li><li>2： 开启中</li><li>3： 启动</li><li>4： 开启失败</li><li>5： 停止中</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 状态
+     * @param Status <p>状态</p><p>枚举值：</p><ul><li>1： 停止</li><li>2： 开启中</li><li>3： 启动</li><li>4： 开启失败</li><li>5： 停止中</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
@@ -118,9 +118,9 @@ public class HadoopYarnItem extends AbstractModel {
     }
 
     /**
-     * Get cpu
+     * Get <p>cpu</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Cpu cpu
+     * @return Cpu <p>cpu</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getCpu() {
@@ -128,9 +128,9 @@ public class HadoopYarnItem extends AbstractModel {
     }
 
     /**
-     * Set cpu
+     * Set <p>cpu</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Cpu cpu
+     * @param Cpu <p>cpu</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCpu(Float Cpu) {
@@ -138,80 +138,80 @@ public class HadoopYarnItem extends AbstractModel {
     }
 
     /**
-     * Get mem 
-     * @return Mem mem
+     * Get <p>mem</p> 
+     * @return Mem <p>mem</p>
      */
     public Float getMem() {
         return this.Mem;
     }
 
     /**
-     * Set mem
-     * @param Mem mem
+     * Set <p>mem</p>
+     * @param Mem <p>mem</p>
      */
     public void setMem(Float Mem) {
         this.Mem = Mem;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 更新时间 
-     * @return UpdateTime 更新时间
+     * Get <p>更新时间</p> 
+     * @return UpdateTime <p>更新时间</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 更新时间
-     * @param UpdateTime 更新时间
+     * Set <p>更新时间</p>
+     * @param UpdateTime <p>更新时间</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 配置文件内容 
-     * @return Config 配置文件内容
+     * Get <p>配置文件内容</p> 
+     * @return Config <p>配置文件内容</p>
      */
     public String getConfig() {
         return this.Config;
     }
 
     /**
-     * Set 配置文件内容
-     * @param Config 配置文件内容
+     * Set <p>配置文件内容</p>
+     * @param Config <p>配置文件内容</p>
      */
     public void setConfig(String Config) {
         this.Config = Config;
     }
 
     /**
-     * Get CreatorUin 
-     * @return CreatorUin CreatorUin
+     * Get <p>CreatorUin</p> 
+     * @return CreatorUin <p>CreatorUin</p>
      */
     public String getCreatorUin() {
         return this.CreatorUin;
     }
 
     /**
-     * Set CreatorUin
-     * @param CreatorUin CreatorUin
+     * Set <p>CreatorUin</p>
+     * @param CreatorUin <p>CreatorUin</p>
      */
     public void setCreatorUin(String CreatorUin) {
         this.CreatorUin = CreatorUin;

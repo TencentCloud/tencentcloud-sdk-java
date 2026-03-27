@@ -24,31 +24,42 @@ import java.util.HashMap;
 public class InquiryPriceRenewInstanceResponse extends AbstractModel {
 
     /**
-    * 价格
+    * <p>折扣后价格</p>
     */
     @SerializedName("Price")
     @Expose
     private Float Price;
 
     /**
-    * 高精度价格
+    * <p>高精度折扣后价格</p>
     */
     @SerializedName("HighPrecisionPrice")
     @Expose
     private Float HighPrecisionPrice;
 
     /**
-    * 币种
+    * <p>原价</p>
+    */
+    @SerializedName("OriginalPrice")
+    @Expose
+    private Float OriginalPrice;
+
+    /**
+    * <p>高精度原价</p>
+    */
+    @SerializedName("HighPrecisionOriginalPrice")
+    @Expose
+    private Float HighPrecisionOriginalPrice;
+
+    /**
+    * <p>币种</p>
     */
     @SerializedName("Currency")
     @Expose
     private String Currency;
 
     /**
-    * 价格金额单位
-
-- pent: 分
-- microPent: 微分
+    * <p>价格金额单位</p><ul><li>pent: 分</li><li>microPent: 微分</li></ul>
     */
     @SerializedName("AmountUnit")
     @Expose
@@ -62,76 +73,96 @@ public class InquiryPriceRenewInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 价格 
-     * @return Price 价格
+     * Get <p>折扣后价格</p> 
+     * @return Price <p>折扣后价格</p>
      */
     public Float getPrice() {
         return this.Price;
     }
 
     /**
-     * Set 价格
-     * @param Price 价格
+     * Set <p>折扣后价格</p>
+     * @param Price <p>折扣后价格</p>
      */
     public void setPrice(Float Price) {
         this.Price = Price;
     }
 
     /**
-     * Get 高精度价格 
-     * @return HighPrecisionPrice 高精度价格
+     * Get <p>高精度折扣后价格</p> 
+     * @return HighPrecisionPrice <p>高精度折扣后价格</p>
      */
     public Float getHighPrecisionPrice() {
         return this.HighPrecisionPrice;
     }
 
     /**
-     * Set 高精度价格
-     * @param HighPrecisionPrice 高精度价格
+     * Set <p>高精度折扣后价格</p>
+     * @param HighPrecisionPrice <p>高精度折扣后价格</p>
      */
     public void setHighPrecisionPrice(Float HighPrecisionPrice) {
         this.HighPrecisionPrice = HighPrecisionPrice;
     }
 
     /**
-     * Get 币种 
-     * @return Currency 币种
+     * Get <p>原价</p> 
+     * @return OriginalPrice <p>原价</p>
+     */
+    public Float getOriginalPrice() {
+        return this.OriginalPrice;
+    }
+
+    /**
+     * Set <p>原价</p>
+     * @param OriginalPrice <p>原价</p>
+     */
+    public void setOriginalPrice(Float OriginalPrice) {
+        this.OriginalPrice = OriginalPrice;
+    }
+
+    /**
+     * Get <p>高精度原价</p> 
+     * @return HighPrecisionOriginalPrice <p>高精度原价</p>
+     */
+    public Float getHighPrecisionOriginalPrice() {
+        return this.HighPrecisionOriginalPrice;
+    }
+
+    /**
+     * Set <p>高精度原价</p>
+     * @param HighPrecisionOriginalPrice <p>高精度原价</p>
+     */
+    public void setHighPrecisionOriginalPrice(Float HighPrecisionOriginalPrice) {
+        this.HighPrecisionOriginalPrice = HighPrecisionOriginalPrice;
+    }
+
+    /**
+     * Get <p>币种</p> 
+     * @return Currency <p>币种</p>
      */
     public String getCurrency() {
         return this.Currency;
     }
 
     /**
-     * Set 币种
-     * @param Currency 币种
+     * Set <p>币种</p>
+     * @param Currency <p>币种</p>
      */
     public void setCurrency(String Currency) {
         this.Currency = Currency;
     }
 
     /**
-     * Get 价格金额单位
-
-- pent: 分
-- microPent: 微分 
-     * @return AmountUnit 价格金额单位
-
-- pent: 分
-- microPent: 微分
+     * Get <p>价格金额单位</p><ul><li>pent: 分</li><li>microPent: 微分</li></ul> 
+     * @return AmountUnit <p>价格金额单位</p><ul><li>pent: 分</li><li>microPent: 微分</li></ul>
      */
     public String getAmountUnit() {
         return this.AmountUnit;
     }
 
     /**
-     * Set 价格金额单位
-
-- pent: 分
-- microPent: 微分
-     * @param AmountUnit 价格金额单位
-
-- pent: 分
-- microPent: 微分
+     * Set <p>价格金额单位</p><ul><li>pent: 分</li><li>microPent: 微分</li></ul>
+     * @param AmountUnit <p>价格金额单位</p><ul><li>pent: 分</li><li>microPent: 微分</li></ul>
      */
     public void setAmountUnit(String AmountUnit) {
         this.AmountUnit = AmountUnit;
@@ -167,6 +198,12 @@ public class InquiryPriceRenewInstanceResponse extends AbstractModel {
         if (source.HighPrecisionPrice != null) {
             this.HighPrecisionPrice = new Float(source.HighPrecisionPrice);
         }
+        if (source.OriginalPrice != null) {
+            this.OriginalPrice = new Float(source.OriginalPrice);
+        }
+        if (source.HighPrecisionOriginalPrice != null) {
+            this.HighPrecisionOriginalPrice = new Float(source.HighPrecisionOriginalPrice);
+        }
         if (source.Currency != null) {
             this.Currency = new String(source.Currency);
         }
@@ -185,6 +222,8 @@ public class InquiryPriceRenewInstanceResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Price", this.Price);
         this.setParamSimple(map, prefix + "HighPrecisionPrice", this.HighPrecisionPrice);
+        this.setParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
+        this.setParamSimple(map, prefix + "HighPrecisionOriginalPrice", this.HighPrecisionOriginalPrice);
         this.setParamSimple(map, prefix + "Currency", this.Currency);
         this.setParamSimple(map, prefix + "AmountUnit", this.AmountUnit);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
