@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateRecordTaskResponse extends AbstractModel {
 
     /**
-    * 任务ID，全局唯一标识录制任务。返回TaskId字段说明录制任务创建成功。
+    * <p>任务ID，全局唯一标识录制任务。返回TaskId字段说明录制任务创建成功。</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateRecordTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务ID，全局唯一标识录制任务。返回TaskId字段说明录制任务创建成功。 
-     * @return TaskId 任务ID，全局唯一标识录制任务。返回TaskId字段说明录制任务创建成功。
+     * Get <p>任务ID，全局唯一标识录制任务。返回TaskId字段说明录制任务创建成功。</p> 
+     * @return TaskId <p>任务ID，全局唯一标识录制任务。返回TaskId字段说明录制任务创建成功。</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务ID，全局唯一标识录制任务。返回TaskId字段说明录制任务创建成功。
-     * @param TaskId 任务ID，全局唯一标识录制任务。返回TaskId字段说明录制任务创建成功。
+     * Set <p>任务ID，全局唯一标识录制任务。返回TaskId字段说明录制任务创建成功。</p>
+     * @param TaskId <p>任务ID，全局唯一标识录制任务。返回TaskId字段说明录制任务创建成功。</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

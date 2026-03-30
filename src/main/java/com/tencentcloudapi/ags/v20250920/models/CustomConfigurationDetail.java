@@ -24,210 +24,233 @@ import java.util.HashMap;
 public class CustomConfigurationDetail extends AbstractModel {
 
     /**
-    * 镜像地址
+    * <p>镜像地址</p>
     */
     @SerializedName("Image")
     @Expose
     private String Image;
 
     /**
-    * 镜像仓库类型：`TCR`、`CCR`。
+    * <p>镜像仓库类型：<code>TCR</code>、<code>CCR</code>。</p>
     */
     @SerializedName("ImageRegistryType")
     @Expose
     private String ImageRegistryType;
 
     /**
-    * 镜像 Digest
+    * <p>镜像 Digest</p>
     */
     @SerializedName("ImageDigest")
     @Expose
     private String ImageDigest;
 
     /**
-    * 启动命令
+    * <p>启动命令</p>
     */
     @SerializedName("Command")
     @Expose
     private String [] Command;
 
     /**
-    * 启动参数
+    * <p>启动参数</p>
     */
     @SerializedName("Args")
     @Expose
     private String [] Args;
 
     /**
-    * 环境变量
+    * <p>环境变量</p>
     */
     @SerializedName("Env")
     @Expose
     private EnvVar [] Env;
 
     /**
-    * 端口配置
+    * <p>端口配置</p>
     */
     @SerializedName("Ports")
     @Expose
     private PortConfiguration [] Ports;
 
     /**
-    * 资源配置
+    * <p>资源配置</p>
     */
     @SerializedName("Resources")
     @Expose
     private ResourceConfiguration Resources;
 
     /**
-    * 探针配置
+    * <p>探针配置</p>
     */
     @SerializedName("Probe")
     @Expose
     private ProbeConfiguration Probe;
 
     /**
-     * Get 镜像地址 
-     * @return Image 镜像地址
+    * <p>沙箱 DNS 配置</p>
+    */
+    @SerializedName("DNSConfig")
+    @Expose
+    private DNSConfig DNSConfig;
+
+    /**
+     * Get <p>镜像地址</p> 
+     * @return Image <p>镜像地址</p>
      */
     public String getImage() {
         return this.Image;
     }
 
     /**
-     * Set 镜像地址
-     * @param Image 镜像地址
+     * Set <p>镜像地址</p>
+     * @param Image <p>镜像地址</p>
      */
     public void setImage(String Image) {
         this.Image = Image;
     }
 
     /**
-     * Get 镜像仓库类型：`TCR`、`CCR`。 
-     * @return ImageRegistryType 镜像仓库类型：`TCR`、`CCR`。
+     * Get <p>镜像仓库类型：<code>TCR</code>、<code>CCR</code>。</p> 
+     * @return ImageRegistryType <p>镜像仓库类型：<code>TCR</code>、<code>CCR</code>。</p>
      */
     public String getImageRegistryType() {
         return this.ImageRegistryType;
     }
 
     /**
-     * Set 镜像仓库类型：`TCR`、`CCR`。
-     * @param ImageRegistryType 镜像仓库类型：`TCR`、`CCR`。
+     * Set <p>镜像仓库类型：<code>TCR</code>、<code>CCR</code>。</p>
+     * @param ImageRegistryType <p>镜像仓库类型：<code>TCR</code>、<code>CCR</code>。</p>
      */
     public void setImageRegistryType(String ImageRegistryType) {
         this.ImageRegistryType = ImageRegistryType;
     }
 
     /**
-     * Get 镜像 Digest 
-     * @return ImageDigest 镜像 Digest
+     * Get <p>镜像 Digest</p> 
+     * @return ImageDigest <p>镜像 Digest</p>
      */
     public String getImageDigest() {
         return this.ImageDigest;
     }
 
     /**
-     * Set 镜像 Digest
-     * @param ImageDigest 镜像 Digest
+     * Set <p>镜像 Digest</p>
+     * @param ImageDigest <p>镜像 Digest</p>
      */
     public void setImageDigest(String ImageDigest) {
         this.ImageDigest = ImageDigest;
     }
 
     /**
-     * Get 启动命令 
-     * @return Command 启动命令
+     * Get <p>启动命令</p> 
+     * @return Command <p>启动命令</p>
      */
     public String [] getCommand() {
         return this.Command;
     }
 
     /**
-     * Set 启动命令
-     * @param Command 启动命令
+     * Set <p>启动命令</p>
+     * @param Command <p>启动命令</p>
      */
     public void setCommand(String [] Command) {
         this.Command = Command;
     }
 
     /**
-     * Get 启动参数 
-     * @return Args 启动参数
+     * Get <p>启动参数</p> 
+     * @return Args <p>启动参数</p>
      */
     public String [] getArgs() {
         return this.Args;
     }
 
     /**
-     * Set 启动参数
-     * @param Args 启动参数
+     * Set <p>启动参数</p>
+     * @param Args <p>启动参数</p>
      */
     public void setArgs(String [] Args) {
         this.Args = Args;
     }
 
     /**
-     * Get 环境变量 
-     * @return Env 环境变量
+     * Get <p>环境变量</p> 
+     * @return Env <p>环境变量</p>
      */
     public EnvVar [] getEnv() {
         return this.Env;
     }
 
     /**
-     * Set 环境变量
-     * @param Env 环境变量
+     * Set <p>环境变量</p>
+     * @param Env <p>环境变量</p>
      */
     public void setEnv(EnvVar [] Env) {
         this.Env = Env;
     }
 
     /**
-     * Get 端口配置 
-     * @return Ports 端口配置
+     * Get <p>端口配置</p> 
+     * @return Ports <p>端口配置</p>
      */
     public PortConfiguration [] getPorts() {
         return this.Ports;
     }
 
     /**
-     * Set 端口配置
-     * @param Ports 端口配置
+     * Set <p>端口配置</p>
+     * @param Ports <p>端口配置</p>
      */
     public void setPorts(PortConfiguration [] Ports) {
         this.Ports = Ports;
     }
 
     /**
-     * Get 资源配置 
-     * @return Resources 资源配置
+     * Get <p>资源配置</p> 
+     * @return Resources <p>资源配置</p>
      */
     public ResourceConfiguration getResources() {
         return this.Resources;
     }
 
     /**
-     * Set 资源配置
-     * @param Resources 资源配置
+     * Set <p>资源配置</p>
+     * @param Resources <p>资源配置</p>
      */
     public void setResources(ResourceConfiguration Resources) {
         this.Resources = Resources;
     }
 
     /**
-     * Get 探针配置 
-     * @return Probe 探针配置
+     * Get <p>探针配置</p> 
+     * @return Probe <p>探针配置</p>
      */
     public ProbeConfiguration getProbe() {
         return this.Probe;
     }
 
     /**
-     * Set 探针配置
-     * @param Probe 探针配置
+     * Set <p>探针配置</p>
+     * @param Probe <p>探针配置</p>
      */
     public void setProbe(ProbeConfiguration Probe) {
         this.Probe = Probe;
+    }
+
+    /**
+     * Get <p>沙箱 DNS 配置</p> 
+     * @return DNSConfig <p>沙箱 DNS 配置</p>
+     */
+    public DNSConfig getDNSConfig() {
+        return this.DNSConfig;
+    }
+
+    /**
+     * Set <p>沙箱 DNS 配置</p>
+     * @param DNSConfig <p>沙箱 DNS 配置</p>
+     */
+    public void setDNSConfig(DNSConfig DNSConfig) {
+        this.DNSConfig = DNSConfig;
     }
 
     public CustomConfigurationDetail() {
@@ -277,6 +300,9 @@ public class CustomConfigurationDetail extends AbstractModel {
         if (source.Probe != null) {
             this.Probe = new ProbeConfiguration(source.Probe);
         }
+        if (source.DNSConfig != null) {
+            this.DNSConfig = new DNSConfig(source.DNSConfig);
+        }
     }
 
 
@@ -293,6 +319,7 @@ public class CustomConfigurationDetail extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Ports.", this.Ports);
         this.setParamObj(map, prefix + "Resources.", this.Resources);
         this.setParamObj(map, prefix + "Probe.", this.Probe);
+        this.setParamObj(map, prefix + "DNSConfig.", this.DNSConfig);
 
     }
 }

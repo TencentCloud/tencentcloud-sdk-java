@@ -430,6 +430,20 @@ public class Resource extends AbstractModel {
     private Long PayMode;
 
     /**
+    * 计费侧地域
+    */
+    @SerializedName("BillingRegion")
+    @Expose
+    private String BillingRegion;
+
+    /**
+    * 计费侧可用区
+    */
+    @SerializedName("BillingZone")
+    @Expose
+    private String BillingZone;
+
+    /**
      * Get 服务实例ID，如bh-saas-s3ed4r5e 
      * @return ResourceId 服务实例ID，如bh-saas-s3ed4r5e
      */
@@ -1357,6 +1371,38 @@ public class Resource extends AbstractModel {
         this.PayMode = PayMode;
     }
 
+    /**
+     * Get 计费侧地域 
+     * @return BillingRegion 计费侧地域
+     */
+    public String getBillingRegion() {
+        return this.BillingRegion;
+    }
+
+    /**
+     * Set 计费侧地域
+     * @param BillingRegion 计费侧地域
+     */
+    public void setBillingRegion(String BillingRegion) {
+        this.BillingRegion = BillingRegion;
+    }
+
+    /**
+     * Get 计费侧可用区 
+     * @return BillingZone 计费侧可用区
+     */
+    public String getBillingZone() {
+        return this.BillingZone;
+    }
+
+    /**
+     * Set 计费侧可用区
+     * @param BillingZone 计费侧可用区
+     */
+    public void setBillingZone(String BillingZone) {
+        this.BillingZone = BillingZone;
+    }
+
     public Resource() {
     }
 
@@ -1554,6 +1600,12 @@ public class Resource extends AbstractModel {
         if (source.PayMode != null) {
             this.PayMode = new Long(source.PayMode);
         }
+        if (source.BillingRegion != null) {
+            this.BillingRegion = new String(source.BillingRegion);
+        }
+        if (source.BillingZone != null) {
+            this.BillingZone = new String(source.BillingZone);
+        }
     }
 
 
@@ -1619,6 +1671,8 @@ public class Resource extends AbstractModel {
         this.setParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
+        this.setParamSimple(map, prefix + "BillingRegion", this.BillingRegion);
+        this.setParamSimple(map, prefix + "BillingZone", this.BillingZone);
 
     }
 }

@@ -31,6 +31,13 @@ public class DescribeSubAccountLinuxUserInfosResponse extends AbstractModel {
     private SubAccountInfo [] SubAccountList;
 
     /**
+    * 总数（配合分页使用）
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +58,22 @@ public class DescribeSubAccountLinuxUserInfosResponse extends AbstractModel {
      */
     public void setSubAccountList(SubAccountInfo [] SubAccountList) {
         this.SubAccountList = SubAccountList;
+    }
+
+    /**
+     * Get 总数（配合分页使用） 
+     * @return TotalCount 总数（配合分页使用）
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 总数（配合分页使用）
+     * @param TotalCount 总数（配合分页使用）
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -83,6 +106,9 @@ public class DescribeSubAccountLinuxUserInfosResponse extends AbstractModel {
                 this.SubAccountList[i] = new SubAccountInfo(source.SubAccountList[i]);
             }
         }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -94,6 +120,7 @@ public class DescribeSubAccountLinuxUserInfosResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "SubAccountList.", this.SubAccountList);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

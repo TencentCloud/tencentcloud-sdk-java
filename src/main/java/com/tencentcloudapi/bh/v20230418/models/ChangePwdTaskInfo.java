@@ -178,6 +178,13 @@ public class ChangePwdTaskInfo extends AbstractModel {
     private String LastTime;
 
     /**
+    * 改密任务状态，0-待执行，1-执行完成，2-执行失败，3-执行中，4-执行超时
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
      * Get id 
      * @return Id id
      */
@@ -529,6 +536,22 @@ public class ChangePwdTaskInfo extends AbstractModel {
         this.LastTime = LastTime;
     }
 
+    /**
+     * Get 改密任务状态，0-待执行，1-执行完成，2-执行失败，3-执行中，4-执行超时 
+     * @return Status 改密任务状态，0-待执行，1-执行完成，2-执行失败，3-执行中，4-执行超时
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 改密任务状态，0-待执行，1-执行完成，2-执行失败，3-执行中，4-执行超时
+     * @param Status 改密任务状态，0-待执行，1-执行完成，2-执行失败，3-执行中，4-执行超时
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
     public ChangePwdTaskInfo() {
     }
 
@@ -612,6 +635,9 @@ public class ChangePwdTaskInfo extends AbstractModel {
         if (source.LastTime != null) {
             this.LastTime = new String(source.LastTime);
         }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
     }
 
 
@@ -641,6 +667,7 @@ public class ChangePwdTaskInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "FirstTime", this.FirstTime);
         this.setParamSimple(map, prefix + "NextTime", this.NextTime);
         this.setParamSimple(map, prefix + "LastTime", this.LastTime);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

@@ -24,11 +24,57 @@ import java.util.HashMap;
 public class DescribeAlarmNotifyHistoriesResponse extends AbstractModel {
 
     /**
+    * 告警历史
+    */
+    @SerializedName("AlarmNotifyHistoryList")
+    @Expose
+    private AlarmNotifyHistory [] AlarmNotifyHistoryList;
+
+    /**
+    * 分页情况
+    */
+    @SerializedName("PageResult")
+    @Expose
+    private PageByNoResult PageResult;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 告警历史 
+     * @return AlarmNotifyHistoryList 告警历史
+     */
+    public AlarmNotifyHistory [] getAlarmNotifyHistoryList() {
+        return this.AlarmNotifyHistoryList;
+    }
+
+    /**
+     * Set 告警历史
+     * @param AlarmNotifyHistoryList 告警历史
+     */
+    public void setAlarmNotifyHistoryList(AlarmNotifyHistory [] AlarmNotifyHistoryList) {
+        this.AlarmNotifyHistoryList = AlarmNotifyHistoryList;
+    }
+
+    /**
+     * Get 分页情况 
+     * @return PageResult 分页情况
+     */
+    public PageByNoResult getPageResult() {
+        return this.PageResult;
+    }
+
+    /**
+     * Set 分页情况
+     * @param PageResult 分页情况
+     */
+    public void setPageResult(PageByNoResult PageResult) {
+        this.PageResult = PageResult;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +100,15 @@ public class DescribeAlarmNotifyHistoriesResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeAlarmNotifyHistoriesResponse(DescribeAlarmNotifyHistoriesResponse source) {
+        if (source.AlarmNotifyHistoryList != null) {
+            this.AlarmNotifyHistoryList = new AlarmNotifyHistory[source.AlarmNotifyHistoryList.length];
+            for (int i = 0; i < source.AlarmNotifyHistoryList.length; i++) {
+                this.AlarmNotifyHistoryList[i] = new AlarmNotifyHistory(source.AlarmNotifyHistoryList[i]);
+            }
+        }
+        if (source.PageResult != null) {
+            this.PageResult = new PageByNoResult(source.PageResult);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +119,8 @@ public class DescribeAlarmNotifyHistoriesResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "AlarmNotifyHistoryList.", this.AlarmNotifyHistoryList);
+        this.setParamObj(map, prefix + "PageResult.", this.PageResult);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

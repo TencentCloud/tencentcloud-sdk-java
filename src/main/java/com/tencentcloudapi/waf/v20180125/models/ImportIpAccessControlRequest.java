@@ -39,7 +39,7 @@ public class ImportIpAccessControlRequest extends AbstractModel {
     private String Domain;
 
     /**
-    * 是否为批量防护IP黑白名单，当为批量防护IP黑白名单时，取值为batch，否则为空
+    * 用于按数据来源导入黑白名单记录，必填。 custom（自定义），用户在控制台手动添加的黑白名单规则 cc（CC 防护	），由 CC 防护模块自动添加的 IP 黑白名单 bot（Bot 防护），由 Bot 防护模块自动添加的 IP 黑白名单 batch（批量域名防护），批量域名维度添加的黑白名单规则
     */
     @SerializedName("SourceType")
     @Expose
@@ -89,16 +89,16 @@ public class ImportIpAccessControlRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否为批量防护IP黑白名单，当为批量防护IP黑白名单时，取值为batch，否则为空 
-     * @return SourceType 是否为批量防护IP黑白名单，当为批量防护IP黑白名单时，取值为batch，否则为空
+     * Get 用于按数据来源导入黑白名单记录，必填。 custom（自定义），用户在控制台手动添加的黑白名单规则 cc（CC 防护	），由 CC 防护模块自动添加的 IP 黑白名单 bot（Bot 防护），由 Bot 防护模块自动添加的 IP 黑白名单 batch（批量域名防护），批量域名维度添加的黑白名单规则 
+     * @return SourceType 用于按数据来源导入黑白名单记录，必填。 custom（自定义），用户在控制台手动添加的黑白名单规则 cc（CC 防护	），由 CC 防护模块自动添加的 IP 黑白名单 bot（Bot 防护），由 Bot 防护模块自动添加的 IP 黑白名单 batch（批量域名防护），批量域名维度添加的黑白名单规则
      */
     public String getSourceType() {
         return this.SourceType;
     }
 
     /**
-     * Set 是否为批量防护IP黑白名单，当为批量防护IP黑白名单时，取值为batch，否则为空
-     * @param SourceType 是否为批量防护IP黑白名单，当为批量防护IP黑白名单时，取值为batch，否则为空
+     * Set 用于按数据来源导入黑白名单记录，必填。 custom（自定义），用户在控制台手动添加的黑白名单规则 cc（CC 防护	），由 CC 防护模块自动添加的 IP 黑白名单 bot（Bot 防护），由 Bot 防护模块自动添加的 IP 黑白名单 batch（批量域名防护），批量域名维度添加的黑白名单规则
+     * @param SourceType 用于按数据来源导入黑白名单记录，必填。 custom（自定义），用户在控制台手动添加的黑白名单规则 cc（CC 防护	），由 CC 防护模块自动添加的 IP 黑白名单 bot（Bot 防护），由 Bot 防护模块自动添加的 IP 黑白名单 batch（批量域名防护），批量域名维度添加的黑白名单规则
      */
     public void setSourceType(String SourceType) {
         this.SourceType = SourceType;

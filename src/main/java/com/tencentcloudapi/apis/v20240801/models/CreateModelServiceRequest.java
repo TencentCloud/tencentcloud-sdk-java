@@ -143,6 +143,20 @@ public class CreateModelServiceRequest extends AbstractModel {
     private Long Timeout;
 
     /**
+    * 是否开启提示词安全检测
+    */
+    @SerializedName("PromptModerateStatus")
+    @Expose
+    private Boolean PromptModerateStatus;
+
+    /**
+    * 提示词安全检测配置
+    */
+    @SerializedName("PromptModerateConfig")
+    @Expose
+    private PromptModerateConfigDTO PromptModerateConfig;
+
+    /**
      * Get 实例 
      * @return InstanceID 实例
      */
@@ -414,6 +428,38 @@ public class CreateModelServiceRequest extends AbstractModel {
         this.Timeout = Timeout;
     }
 
+    /**
+     * Get 是否开启提示词安全检测 
+     * @return PromptModerateStatus 是否开启提示词安全检测
+     */
+    public Boolean getPromptModerateStatus() {
+        return this.PromptModerateStatus;
+    }
+
+    /**
+     * Set 是否开启提示词安全检测
+     * @param PromptModerateStatus 是否开启提示词安全检测
+     */
+    public void setPromptModerateStatus(Boolean PromptModerateStatus) {
+        this.PromptModerateStatus = PromptModerateStatus;
+    }
+
+    /**
+     * Get 提示词安全检测配置 
+     * @return PromptModerateConfig 提示词安全检测配置
+     */
+    public PromptModerateConfigDTO getPromptModerateConfig() {
+        return this.PromptModerateConfig;
+    }
+
+    /**
+     * Set 提示词安全检测配置
+     * @param PromptModerateConfig 提示词安全检测配置
+     */
+    public void setPromptModerateConfig(PromptModerateConfigDTO PromptModerateConfig) {
+        this.PromptModerateConfig = PromptModerateConfig;
+    }
+
     public CreateModelServiceRequest() {
     }
 
@@ -485,6 +531,12 @@ public class CreateModelServiceRequest extends AbstractModel {
         if (source.Timeout != null) {
             this.Timeout = new Long(source.Timeout);
         }
+        if (source.PromptModerateStatus != null) {
+            this.PromptModerateStatus = new Boolean(source.PromptModerateStatus);
+        }
+        if (source.PromptModerateConfig != null) {
+            this.PromptModerateConfig = new PromptModerateConfigDTO(source.PromptModerateConfig);
+        }
     }
 
 
@@ -509,6 +561,8 @@ public class CreateModelServiceRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "IpBlackList.", this.IpBlackList);
         this.setParamArrayObj(map, prefix + "PluginConfigs.", this.PluginConfigs);
         this.setParamSimple(map, prefix + "Timeout", this.Timeout);
+        this.setParamSimple(map, prefix + "PromptModerateStatus", this.PromptModerateStatus);
+        this.setParamObj(map, prefix + "PromptModerateConfig.", this.PromptModerateConfig);
 
     }
 }

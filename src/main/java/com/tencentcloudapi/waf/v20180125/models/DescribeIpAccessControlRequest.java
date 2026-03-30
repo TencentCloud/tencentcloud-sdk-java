@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeIpAccessControlRequest extends AbstractModel {
 
     /**
-    * 域名
+    * 域名，当操作对象为全局规则时，Domain参数应填写为"global"
     */
     @SerializedName("Domain")
     @Expose
@@ -87,7 +87,7 @@ public class DescribeIpAccessControlRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 来源
+    * 用于按数据来源过滤黑白名单记录，非必填（默认为空字符串，表示不过滤/查询全部）。 "" (空字符串)	，不按来源过滤，返回所有记录（默认值） custom（自定义），用户在控制台手动添加的黑白名单规则 cc（CC 防护	），由 CC 防护模块自动添加的 IP 黑白名单 bot（Bot 防护），由 Bot 防护模块自动添加的 IP 黑白名单 batch（批量域名防护），批量域名维度添加的黑白名单规则 batch-group（防护对象组），防护对象组维度添加的黑白名单规则
     */
     @SerializedName("Source")
     @Expose
@@ -143,16 +143,16 @@ public class DescribeIpAccessControlRequest extends AbstractModel {
     private Long TimerType;
 
     /**
-     * Get 域名 
-     * @return Domain 域名
+     * Get 域名，当操作对象为全局规则时，Domain参数应填写为"global" 
+     * @return Domain 域名，当操作对象为全局规则时，Domain参数应填写为"global"
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 域名
-     * @param Domain 域名
+     * Set 域名，当操作对象为全局规则时，Domain参数应填写为"global"
+     * @param Domain 域名，当操作对象为全局规则时，Domain参数应填写为"global"
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
@@ -295,16 +295,16 @@ public class DescribeIpAccessControlRequest extends AbstractModel {
     }
 
     /**
-     * Get 来源 
-     * @return Source 来源
+     * Get 用于按数据来源过滤黑白名单记录，非必填（默认为空字符串，表示不过滤/查询全部）。 "" (空字符串)	，不按来源过滤，返回所有记录（默认值） custom（自定义），用户在控制台手动添加的黑白名单规则 cc（CC 防护	），由 CC 防护模块自动添加的 IP 黑白名单 bot（Bot 防护），由 Bot 防护模块自动添加的 IP 黑白名单 batch（批量域名防护），批量域名维度添加的黑白名单规则 batch-group（防护对象组），防护对象组维度添加的黑白名单规则 
+     * @return Source 用于按数据来源过滤黑白名单记录，非必填（默认为空字符串，表示不过滤/查询全部）。 "" (空字符串)	，不按来源过滤，返回所有记录（默认值） custom（自定义），用户在控制台手动添加的黑白名单规则 cc（CC 防护	），由 CC 防护模块自动添加的 IP 黑白名单 bot（Bot 防护），由 Bot 防护模块自动添加的 IP 黑白名单 batch（批量域名防护），批量域名维度添加的黑白名单规则 batch-group（防护对象组），防护对象组维度添加的黑白名单规则
      */
     public String getSource() {
         return this.Source;
     }
 
     /**
-     * Set 来源
-     * @param Source 来源
+     * Set 用于按数据来源过滤黑白名单记录，非必填（默认为空字符串，表示不过滤/查询全部）。 "" (空字符串)	，不按来源过滤，返回所有记录（默认值） custom（自定义），用户在控制台手动添加的黑白名单规则 cc（CC 防护	），由 CC 防护模块自动添加的 IP 黑白名单 bot（Bot 防护），由 Bot 防护模块自动添加的 IP 黑白名单 batch（批量域名防护），批量域名维度添加的黑白名单规则 batch-group（防护对象组），防护对象组维度添加的黑白名单规则
+     * @param Source 用于按数据来源过滤黑白名单记录，非必填（默认为空字符串，表示不过滤/查询全部）。 "" (空字符串)	，不按来源过滤，返回所有记录（默认值） custom（自定义），用户在控制台手动添加的黑白名单规则 cc（CC 防护	），由 CC 防护模块自动添加的 IP 黑白名单 bot（Bot 防护），由 Bot 防护模块自动添加的 IP 黑白名单 batch（批量域名防护），批量域名维度添加的黑白名单规则 batch-group（防护对象组），防护对象组维度添加的黑白名单规则
      */
     public void setSource(String Source) {
         this.Source = Source;

@@ -39,6 +39,13 @@ public class StopParams extends AbstractModel {
     private Long ThreadCount;
 
     /**
+    * 安全停止超时时间，单位秒
+    */
+    @SerializedName("GraceDownTime")
+    @Expose
+    private Long GraceDownTime;
+
+    /**
      * Get 安全模式：safe
 默认模式：default 
      * @return StopPolicy 安全模式：safe
@@ -74,6 +81,22 @@ public class StopParams extends AbstractModel {
         this.ThreadCount = ThreadCount;
     }
 
+    /**
+     * Get 安全停止超时时间，单位秒 
+     * @return GraceDownTime 安全停止超时时间，单位秒
+     */
+    public Long getGraceDownTime() {
+        return this.GraceDownTime;
+    }
+
+    /**
+     * Set 安全停止超时时间，单位秒
+     * @param GraceDownTime 安全停止超时时间，单位秒
+     */
+    public void setGraceDownTime(Long GraceDownTime) {
+        this.GraceDownTime = GraceDownTime;
+    }
+
     public StopParams() {
     }
 
@@ -88,6 +111,9 @@ public class StopParams extends AbstractModel {
         if (source.ThreadCount != null) {
             this.ThreadCount = new Long(source.ThreadCount);
         }
+        if (source.GraceDownTime != null) {
+            this.GraceDownTime = new Long(source.GraceDownTime);
+        }
     }
 
 
@@ -97,6 +123,7 @@ public class StopParams extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StopPolicy", this.StopPolicy);
         this.setParamSimple(map, prefix + "ThreadCount", this.ThreadCount);
+        this.setParamSimple(map, prefix + "GraceDownTime", this.GraceDownTime);
 
     }
 }

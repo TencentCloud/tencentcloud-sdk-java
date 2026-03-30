@@ -218,6 +218,22 @@ public class DescribeModelServiceResponseVO extends AbstractModel {
     private String Url;
 
     /**
+    * 是否开启提示词安全检测
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PromptModerateStatus")
+    @Expose
+    private Boolean PromptModerateStatus;
+
+    /**
+    * 提示词安全检测配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PromptModerateConfig")
+    @Expose
+    private PromptModerateConfigDTO PromptModerateConfig;
+
+    /**
      * Get 腾讯云AppID 
      * @return AppID 腾讯云AppID
      */
@@ -669,6 +685,46 @@ public class DescribeModelServiceResponseVO extends AbstractModel {
         this.Url = Url;
     }
 
+    /**
+     * Get 是否开启提示词安全检测
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PromptModerateStatus 是否开启提示词安全检测
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getPromptModerateStatus() {
+        return this.PromptModerateStatus;
+    }
+
+    /**
+     * Set 是否开启提示词安全检测
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PromptModerateStatus 是否开启提示词安全检测
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPromptModerateStatus(Boolean PromptModerateStatus) {
+        this.PromptModerateStatus = PromptModerateStatus;
+    }
+
+    /**
+     * Get 提示词安全检测配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PromptModerateConfig 提示词安全检测配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public PromptModerateConfigDTO getPromptModerateConfig() {
+        return this.PromptModerateConfig;
+    }
+
+    /**
+     * Set 提示词安全检测配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PromptModerateConfig 提示词安全检测配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPromptModerateConfig(PromptModerateConfigDTO PromptModerateConfig) {
+        this.PromptModerateConfig = PromptModerateConfig;
+    }
+
     public DescribeModelServiceResponseVO() {
     }
 
@@ -773,6 +829,12 @@ public class DescribeModelServiceResponseVO extends AbstractModel {
         if (source.Url != null) {
             this.Url = new String(source.Url);
         }
+        if (source.PromptModerateStatus != null) {
+            this.PromptModerateStatus = new Boolean(source.PromptModerateStatus);
+        }
+        if (source.PromptModerateConfig != null) {
+            this.PromptModerateConfig = new PromptModerateConfigDTO(source.PromptModerateConfig);
+        }
     }
 
 
@@ -807,6 +869,8 @@ public class DescribeModelServiceResponseVO extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "RelateAgentAppNum", this.RelateAgentAppNum);
         this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "PromptModerateStatus", this.PromptModerateStatus);
+        this.setParamObj(map, prefix + "PromptModerateConfig.", this.PromptModerateConfig);
 
     }
 }

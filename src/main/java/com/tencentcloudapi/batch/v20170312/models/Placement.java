@@ -52,6 +52,13 @@ public class Placement extends AbstractModel {
     private String HostId;
 
     /**
+    * 实例所属的实例资源池机架ID，仅用于出参。
+    */
+    @SerializedName("RackId")
+    @Expose
+    private String RackId;
+
+    /**
      * Get 实例所属的可用区名称。该参数可以通过调用  [DescribeZones](https://cloud.tencent.com/document/product/213/15707) 的返回值中的Zone字段来获取。 
      * @return Zone 实例所属的可用区名称。该参数可以通过调用  [DescribeZones](https://cloud.tencent.com/document/product/213/15707) 的返回值中的Zone字段来获取。
      */
@@ -115,6 +122,22 @@ public class Placement extends AbstractModel {
         this.HostId = HostId;
     }
 
+    /**
+     * Get 实例所属的实例资源池机架ID，仅用于出参。 
+     * @return RackId 实例所属的实例资源池机架ID，仅用于出参。
+     */
+    public String getRackId() {
+        return this.RackId;
+    }
+
+    /**
+     * Set 实例所属的实例资源池机架ID，仅用于出参。
+     * @param RackId 实例所属的实例资源池机架ID，仅用于出参。
+     */
+    public void setRackId(String RackId) {
+        this.RackId = RackId;
+    }
+
     public Placement() {
     }
 
@@ -138,6 +161,9 @@ public class Placement extends AbstractModel {
         if (source.HostId != null) {
             this.HostId = new String(source.HostId);
         }
+        if (source.RackId != null) {
+            this.RackId = new String(source.RackId);
+        }
     }
 
 
@@ -149,6 +175,7 @@ public class Placement extends AbstractModel {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamArraySimple(map, prefix + "HostIds.", this.HostIds);
         this.setParamSimple(map, prefix + "HostId", this.HostId);
+        this.setParamSimple(map, prefix + "RackId", this.RackId);
 
     }
 }

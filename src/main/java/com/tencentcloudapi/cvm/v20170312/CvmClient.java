@@ -615,6 +615,39 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
     }
 
     /**
+     *本接口(DescribeResourcePoolPackInstances)用于查询指定实例资源池内已创建的实例列表及其物理拓扑信息。
+     * @param req DescribeResourcePoolPackInstancesRequest
+     * @return DescribeResourcePoolPackInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourcePoolPackInstancesResponse DescribeResourcePoolPackInstances(DescribeResourcePoolPackInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeResourcePoolPackInstances", DescribeResourcePoolPackInstancesResponse.class);
+    }
+
+    /**
+     *本接口(DescribeResourcePoolPackTypeConfigs)用于查询当前地域/可用区支持创建实例资源池的整机/半整机规格列表。
+     * @param req DescribeResourcePoolPackTypeConfigsRequest
+     * @return DescribeResourcePoolPackTypeConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourcePoolPackTypeConfigsResponse DescribeResourcePoolPackTypeConfigs(DescribeResourcePoolPackTypeConfigsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeResourcePoolPackTypeConfigs", DescribeResourcePoolPackTypeConfigsResponse.class);
+    }
+
+    /**
+     *本接口(DescribeResourcePoolPacks)用于查询用户已创建的实例资源池列表，包括资源池基本信息、剩余容量、底层物理拓扑信息等。
+     * @param req DescribeResourcePoolPacksRequest
+     * @return DescribeResourcePoolPacksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourcePoolPacksResponse DescribeResourcePoolPacks(DescribeResourcePoolPacksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeResourcePoolPacks", DescribeResourcePoolPacksResponse.class);
+    }
+
+    /**
      *本接口 (DescribeTaskInfo) 用于查询云服务器维修任务列表及详细信息。
 
 - 可以根据实例ID、实例名称或任务状态等信息来查询维修任务列表。过滤信息详情可参考入参说明。
@@ -748,6 +781,17 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
     public ImportKeyPairResponse ImportKeyPair(ImportKeyPairRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ImportKeyPair", ImportKeyPairResponse.class);
+    }
+
+    /**
+     *本接口(InquirePricePurchaseResourcePoolPacks)用于查询创建实例资源池的价格。
+     * @param req InquirePricePurchaseResourcePoolPacksRequest
+     * @return InquirePricePurchaseResourcePoolPacksResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquirePricePurchaseResourcePoolPacksResponse InquirePricePurchaseResourcePoolPacks(InquirePricePurchaseResourcePoolPacksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InquirePricePurchaseResourcePoolPacks", InquirePricePurchaseResourcePoolPacksResponse.class);
     }
 
     /**
@@ -1097,6 +1141,20 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
     }
 
     /**
+     *本接口(PurchaseResourcePoolPacks)用于创建一个或多个实例资源池，每个资源池绑定一个整机或半整机规格的物理资源容量。
+
+* 实例资源池为剩余容量按量付费模式，购买前请确保账户余额充足。
+* 本接口为异步接口，创建请求发送成功后会返回DedicatedResourcePackIds，此时创建任务并未完成。
+     * @param req PurchaseResourcePoolPacksRequest
+     * @return PurchaseResourcePoolPacksResponse
+     * @throws TencentCloudSDKException
+     */
+    public PurchaseResourcePoolPacksResponse PurchaseResourcePoolPacks(PurchaseResourcePoolPacksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "PurchaseResourcePoolPacks", PurchaseResourcePoolPacksResponse.class);
+    }
+
+    /**
      *本接口 (RebootInstances) 用于重启实例。
 
 * 只有状态为`RUNNING`的实例才可以进行此操作。
@@ -1349,6 +1407,22 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
     public TerminateInstancesResponse TerminateInstances(TerminateInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "TerminateInstances", TerminateInstancesResponse.class);
+    }
+
+    /**
+     *本接口(TerminateResourcePoolPacks)用于销毁指定的实例资源池。
+
+* 销毁资源池不会销毁池内已创建的实例。
+* 池内实例会从专属资源池解绑，转移至公共资源池，继续按原生命周期运行。
+* 转移后无法再查询底层物理拓扑信息。
+* 释放底层物理资源并删除资源池记录。
+     * @param req TerminateResourcePoolPacksRequest
+     * @return TerminateResourcePoolPacksResponse
+     * @throws TencentCloudSDKException
+     */
+    public TerminateResourcePoolPacksResponse TerminateResourcePoolPacks(TerminateResourcePoolPacksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TerminateResourcePoolPacks", TerminateResourcePoolPacksResponse.class);
     }
 
 }

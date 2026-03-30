@@ -24,202 +24,92 @@ import java.util.HashMap;
 public class DetectAIFakeFacesRequest extends AbstractModel {
 
     /**
-    * 传入需要检测的人脸图片或人脸视频（当前仅支持单人脸检测），使用base64编码的形式，如您的场景视频和图片都有，我们更建议您使用视频进行检测，为了提供更好的检测效果，请您注意以下输入数据的限制与建议：
-
-- 图片的Base64值：
-建议整体图像480x640的分辨率，脸部大小在 100X100 以上，由手机前置摄像头拍摄。
-Base64编码后的图片数据大小建议不超过3M、最大不可超过10M，仅支持jpg、png格式。
-请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
-
-- 视频的Base64值：
-Base64编码后的大小建议在8M以内、最大不可超过10M，支持mp4、avi、flv格式，由手机前置摄像头拍摄。
-视频建议时长为2～5s，最大不可超过20s。
-视频分辨率建议为480x640（最大支持720p），帧率在25fps~30fps之间。
-请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
-
-若您未使用Encryption进行加密传输，则本字段为必填参数。
+    * <p>传入需要检测的人脸图片或人脸视频（当前仅支持单人脸检测），使用base64编码的形式，如您的场景视频和图片都有，我们更建议您使用视频进行检测，为了提供更好的检测效果，请您注意以下输入数据的限制与建议：</p><ul><li><p>图片的Base64值：<br>建议整体图像480x640的分辨率，脸部大小在 100X100 以上，由手机前置摄像头拍摄。<br>Base64编码后的图片数据大小建议不超过3M、最大不可超过10M，仅支持jpg、png格式。<br>请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。</p></li><li><p>视频的Base64值：<br>Base64编码后的大小建议在8M以内、最大不可超过10M，支持mp4、avi、flv格式，由手机前置摄像头拍摄。<br>视频建议时长为2～5s，最大不可超过20s。<br>视频分辨率建议为480x640（最大支持720p），帧率在25fps~30fps之间。<br>请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。</p></li></ul><p>若您未使用Encryption进行加密传输，则本字段为必填参数。</p>
     */
     @SerializedName("FaceInput")
     @Expose
     private String FaceInput;
 
     /**
-    * 传入的类型。
-- 取值范围：
-1：传入的是图片类型。
-2：传入的是视频类型。
-其他：返回错误码InvalidParameter。
-
-若您未使用Encryption进行加密传输，则本字段为必填参数。
+    * <p>传入的类型。</p><ul><li>取值范围：<br>1：传入的是图片类型。<br>2：传入的是视频类型。<br>其他：返回错误码InvalidParameter。</li></ul><p>若您未使用Encryption进行加密传输，则本字段为必填参数。</p>
     */
     @SerializedName("FaceInputType")
     @Expose
     private Long FaceInputType;
 
     /**
-    * 是否需要对请求信息进行全包体加密。
-- 支持的加密算法:AES-256-CBC、SM4-GCM。
-- 有加密需求的用户可使用此参数，详情请点击左侧链接。
+    * <p>是否需要对请求信息进行全包体加密。</p><ul><li>支持的加密算法:AES-256-CBC、SM4-GCM。</li><li>有加密需求的用户可使用此参数，详情请点击左侧链接。</li></ul>
     */
     @SerializedName("Encryption")
     @Expose
     private Encryption Encryption;
 
     /**
-    * 加密后的密文。
-- 加密前的数据格式如下:{"FaceInput":"AAAAA","FaceInputType":1}。
+    * <p>加密后的密文。</p><ul><li>加密前的数据格式如下:{&quot;FaceInput&quot;:&quot;AAAAA&quot;,&quot;FaceInputType&quot;:1}。</li></ul>
     */
     @SerializedName("EncryptedBody")
     @Expose
     private String EncryptedBody;
 
     /**
-     * Get 传入需要检测的人脸图片或人脸视频（当前仅支持单人脸检测），使用base64编码的形式，如您的场景视频和图片都有，我们更建议您使用视频进行检测，为了提供更好的检测效果，请您注意以下输入数据的限制与建议：
-
-- 图片的Base64值：
-建议整体图像480x640的分辨率，脸部大小在 100X100 以上，由手机前置摄像头拍摄。
-Base64编码后的图片数据大小建议不超过3M、最大不可超过10M，仅支持jpg、png格式。
-请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
-
-- 视频的Base64值：
-Base64编码后的大小建议在8M以内、最大不可超过10M，支持mp4、avi、flv格式，由手机前置摄像头拍摄。
-视频建议时长为2～5s，最大不可超过20s。
-视频分辨率建议为480x640（最大支持720p），帧率在25fps~30fps之间。
-请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
-
-若您未使用Encryption进行加密传输，则本字段为必填参数。 
-     * @return FaceInput 传入需要检测的人脸图片或人脸视频（当前仅支持单人脸检测），使用base64编码的形式，如您的场景视频和图片都有，我们更建议您使用视频进行检测，为了提供更好的检测效果，请您注意以下输入数据的限制与建议：
-
-- 图片的Base64值：
-建议整体图像480x640的分辨率，脸部大小在 100X100 以上，由手机前置摄像头拍摄。
-Base64编码后的图片数据大小建议不超过3M、最大不可超过10M，仅支持jpg、png格式。
-请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
-
-- 视频的Base64值：
-Base64编码后的大小建议在8M以内、最大不可超过10M，支持mp4、avi、flv格式，由手机前置摄像头拍摄。
-视频建议时长为2～5s，最大不可超过20s。
-视频分辨率建议为480x640（最大支持720p），帧率在25fps~30fps之间。
-请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
-
-若您未使用Encryption进行加密传输，则本字段为必填参数。
+     * Get <p>传入需要检测的人脸图片或人脸视频（当前仅支持单人脸检测），使用base64编码的形式，如您的场景视频和图片都有，我们更建议您使用视频进行检测，为了提供更好的检测效果，请您注意以下输入数据的限制与建议：</p><ul><li><p>图片的Base64值：<br>建议整体图像480x640的分辨率，脸部大小在 100X100 以上，由手机前置摄像头拍摄。<br>Base64编码后的图片数据大小建议不超过3M、最大不可超过10M，仅支持jpg、png格式。<br>请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。</p></li><li><p>视频的Base64值：<br>Base64编码后的大小建议在8M以内、最大不可超过10M，支持mp4、avi、flv格式，由手机前置摄像头拍摄。<br>视频建议时长为2～5s，最大不可超过20s。<br>视频分辨率建议为480x640（最大支持720p），帧率在25fps~30fps之间。<br>请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。</p></li></ul><p>若您未使用Encryption进行加密传输，则本字段为必填参数。</p> 
+     * @return FaceInput <p>传入需要检测的人脸图片或人脸视频（当前仅支持单人脸检测），使用base64编码的形式，如您的场景视频和图片都有，我们更建议您使用视频进行检测，为了提供更好的检测效果，请您注意以下输入数据的限制与建议：</p><ul><li><p>图片的Base64值：<br>建议整体图像480x640的分辨率，脸部大小在 100X100 以上，由手机前置摄像头拍摄。<br>Base64编码后的图片数据大小建议不超过3M、最大不可超过10M，仅支持jpg、png格式。<br>请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。</p></li><li><p>视频的Base64值：<br>Base64编码后的大小建议在8M以内、最大不可超过10M，支持mp4、avi、flv格式，由手机前置摄像头拍摄。<br>视频建议时长为2～5s，最大不可超过20s。<br>视频分辨率建议为480x640（最大支持720p），帧率在25fps~30fps之间。<br>请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。</p></li></ul><p>若您未使用Encryption进行加密传输，则本字段为必填参数。</p>
      */
     public String getFaceInput() {
         return this.FaceInput;
     }
 
     /**
-     * Set 传入需要检测的人脸图片或人脸视频（当前仅支持单人脸检测），使用base64编码的形式，如您的场景视频和图片都有，我们更建议您使用视频进行检测，为了提供更好的检测效果，请您注意以下输入数据的限制与建议：
-
-- 图片的Base64值：
-建议整体图像480x640的分辨率，脸部大小在 100X100 以上，由手机前置摄像头拍摄。
-Base64编码后的图片数据大小建议不超过3M、最大不可超过10M，仅支持jpg、png格式。
-请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
-
-- 视频的Base64值：
-Base64编码后的大小建议在8M以内、最大不可超过10M，支持mp4、avi、flv格式，由手机前置摄像头拍摄。
-视频建议时长为2～5s，最大不可超过20s。
-视频分辨率建议为480x640（最大支持720p），帧率在25fps~30fps之间。
-请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
-
-若您未使用Encryption进行加密传输，则本字段为必填参数。
-     * @param FaceInput 传入需要检测的人脸图片或人脸视频（当前仅支持单人脸检测），使用base64编码的形式，如您的场景视频和图片都有，我们更建议您使用视频进行检测，为了提供更好的检测效果，请您注意以下输入数据的限制与建议：
-
-- 图片的Base64值：
-建议整体图像480x640的分辨率，脸部大小在 100X100 以上，由手机前置摄像头拍摄。
-Base64编码后的图片数据大小建议不超过3M、最大不可超过10M，仅支持jpg、png格式。
-请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
-
-- 视频的Base64值：
-Base64编码后的大小建议在8M以内、最大不可超过10M，支持mp4、avi、flv格式，由手机前置摄像头拍摄。
-视频建议时长为2～5s，最大不可超过20s。
-视频分辨率建议为480x640（最大支持720p），帧率在25fps~30fps之间。
-请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
-
-若您未使用Encryption进行加密传输，则本字段为必填参数。
+     * Set <p>传入需要检测的人脸图片或人脸视频（当前仅支持单人脸检测），使用base64编码的形式，如您的场景视频和图片都有，我们更建议您使用视频进行检测，为了提供更好的检测效果，请您注意以下输入数据的限制与建议：</p><ul><li><p>图片的Base64值：<br>建议整体图像480x640的分辨率，脸部大小在 100X100 以上，由手机前置摄像头拍摄。<br>Base64编码后的图片数据大小建议不超过3M、最大不可超过10M，仅支持jpg、png格式。<br>请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。</p></li><li><p>视频的Base64值：<br>Base64编码后的大小建议在8M以内、最大不可超过10M，支持mp4、avi、flv格式，由手机前置摄像头拍摄。<br>视频建议时长为2～5s，最大不可超过20s。<br>视频分辨率建议为480x640（最大支持720p），帧率在25fps~30fps之间。<br>请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。</p></li></ul><p>若您未使用Encryption进行加密传输，则本字段为必填参数。</p>
+     * @param FaceInput <p>传入需要检测的人脸图片或人脸视频（当前仅支持单人脸检测），使用base64编码的形式，如您的场景视频和图片都有，我们更建议您使用视频进行检测，为了提供更好的检测效果，请您注意以下输入数据的限制与建议：</p><ul><li><p>图片的Base64值：<br>建议整体图像480x640的分辨率，脸部大小在 100X100 以上，由手机前置摄像头拍摄。<br>Base64编码后的图片数据大小建议不超过3M、最大不可超过10M，仅支持jpg、png格式。<br>请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。</p></li><li><p>视频的Base64值：<br>Base64编码后的大小建议在8M以内、最大不可超过10M，支持mp4、avi、flv格式，由手机前置摄像头拍摄。<br>视频建议时长为2～5s，最大不可超过20s。<br>视频分辨率建议为480x640（最大支持720p），帧率在25fps~30fps之间。<br>请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。</p></li></ul><p>若您未使用Encryption进行加密传输，则本字段为必填参数。</p>
      */
     public void setFaceInput(String FaceInput) {
         this.FaceInput = FaceInput;
     }
 
     /**
-     * Get 传入的类型。
-- 取值范围：
-1：传入的是图片类型。
-2：传入的是视频类型。
-其他：返回错误码InvalidParameter。
-
-若您未使用Encryption进行加密传输，则本字段为必填参数。 
-     * @return FaceInputType 传入的类型。
-- 取值范围：
-1：传入的是图片类型。
-2：传入的是视频类型。
-其他：返回错误码InvalidParameter。
-
-若您未使用Encryption进行加密传输，则本字段为必填参数。
+     * Get <p>传入的类型。</p><ul><li>取值范围：<br>1：传入的是图片类型。<br>2：传入的是视频类型。<br>其他：返回错误码InvalidParameter。</li></ul><p>若您未使用Encryption进行加密传输，则本字段为必填参数。</p> 
+     * @return FaceInputType <p>传入的类型。</p><ul><li>取值范围：<br>1：传入的是图片类型。<br>2：传入的是视频类型。<br>其他：返回错误码InvalidParameter。</li></ul><p>若您未使用Encryption进行加密传输，则本字段为必填参数。</p>
      */
     public Long getFaceInputType() {
         return this.FaceInputType;
     }
 
     /**
-     * Set 传入的类型。
-- 取值范围：
-1：传入的是图片类型。
-2：传入的是视频类型。
-其他：返回错误码InvalidParameter。
-
-若您未使用Encryption进行加密传输，则本字段为必填参数。
-     * @param FaceInputType 传入的类型。
-- 取值范围：
-1：传入的是图片类型。
-2：传入的是视频类型。
-其他：返回错误码InvalidParameter。
-
-若您未使用Encryption进行加密传输，则本字段为必填参数。
+     * Set <p>传入的类型。</p><ul><li>取值范围：<br>1：传入的是图片类型。<br>2：传入的是视频类型。<br>其他：返回错误码InvalidParameter。</li></ul><p>若您未使用Encryption进行加密传输，则本字段为必填参数。</p>
+     * @param FaceInputType <p>传入的类型。</p><ul><li>取值范围：<br>1：传入的是图片类型。<br>2：传入的是视频类型。<br>其他：返回错误码InvalidParameter。</li></ul><p>若您未使用Encryption进行加密传输，则本字段为必填参数。</p>
      */
     public void setFaceInputType(Long FaceInputType) {
         this.FaceInputType = FaceInputType;
     }
 
     /**
-     * Get 是否需要对请求信息进行全包体加密。
-- 支持的加密算法:AES-256-CBC、SM4-GCM。
-- 有加密需求的用户可使用此参数，详情请点击左侧链接。 
-     * @return Encryption 是否需要对请求信息进行全包体加密。
-- 支持的加密算法:AES-256-CBC、SM4-GCM。
-- 有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * Get <p>是否需要对请求信息进行全包体加密。</p><ul><li>支持的加密算法:AES-256-CBC、SM4-GCM。</li><li>有加密需求的用户可使用此参数，详情请点击左侧链接。</li></ul> 
+     * @return Encryption <p>是否需要对请求信息进行全包体加密。</p><ul><li>支持的加密算法:AES-256-CBC、SM4-GCM。</li><li>有加密需求的用户可使用此参数，详情请点击左侧链接。</li></ul>
      */
     public Encryption getEncryption() {
         return this.Encryption;
     }
 
     /**
-     * Set 是否需要对请求信息进行全包体加密。
-- 支持的加密算法:AES-256-CBC、SM4-GCM。
-- 有加密需求的用户可使用此参数，详情请点击左侧链接。
-     * @param Encryption 是否需要对请求信息进行全包体加密。
-- 支持的加密算法:AES-256-CBC、SM4-GCM。
-- 有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * Set <p>是否需要对请求信息进行全包体加密。</p><ul><li>支持的加密算法:AES-256-CBC、SM4-GCM。</li><li>有加密需求的用户可使用此参数，详情请点击左侧链接。</li></ul>
+     * @param Encryption <p>是否需要对请求信息进行全包体加密。</p><ul><li>支持的加密算法:AES-256-CBC、SM4-GCM。</li><li>有加密需求的用户可使用此参数，详情请点击左侧链接。</li></ul>
      */
     public void setEncryption(Encryption Encryption) {
         this.Encryption = Encryption;
     }
 
     /**
-     * Get 加密后的密文。
-- 加密前的数据格式如下:{"FaceInput":"AAAAA","FaceInputType":1}。 
-     * @return EncryptedBody 加密后的密文。
-- 加密前的数据格式如下:{"FaceInput":"AAAAA","FaceInputType":1}。
+     * Get <p>加密后的密文。</p><ul><li>加密前的数据格式如下:{&quot;FaceInput&quot;:&quot;AAAAA&quot;,&quot;FaceInputType&quot;:1}。</li></ul> 
+     * @return EncryptedBody <p>加密后的密文。</p><ul><li>加密前的数据格式如下:{&quot;FaceInput&quot;:&quot;AAAAA&quot;,&quot;FaceInputType&quot;:1}。</li></ul>
      */
     public String getEncryptedBody() {
         return this.EncryptedBody;
     }
 
     /**
-     * Set 加密后的密文。
-- 加密前的数据格式如下:{"FaceInput":"AAAAA","FaceInputType":1}。
-     * @param EncryptedBody 加密后的密文。
-- 加密前的数据格式如下:{"FaceInput":"AAAAA","FaceInputType":1}。
+     * Set <p>加密后的密文。</p><ul><li>加密前的数据格式如下:{&quot;FaceInput&quot;:&quot;AAAAA&quot;,&quot;FaceInputType&quot;:1}。</li></ul>
+     * @param EncryptedBody <p>加密后的密文。</p><ul><li>加密前的数据格式如下:{&quot;FaceInput&quot;:&quot;AAAAA&quot;,&quot;FaceInputType&quot;:1}。</li></ul>
      */
     public void setEncryptedBody(String EncryptedBody) {
         this.EncryptedBody = EncryptedBody;

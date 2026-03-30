@@ -457,6 +457,28 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *查询凭证详情，返回凭证元数据和打码后的凭据数据。access类型返回Access数组（Key原文、Value打码），sts类型返回STS对象（System原文、SecretID和SecretKey打码）
+     * @param req DescribeKeySandboxCredentialRequest
+     * @return DescribeKeySandboxCredentialResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKeySandboxCredentialResponse DescribeKeySandboxCredential(DescribeKeySandboxCredentialRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeKeySandboxCredential", DescribeKeySandboxCredentialResponse.class);
+    }
+
+    /**
+     *查询凭证列表
+     * @param req DescribeKeySandboxCredentialListRequest
+     * @return DescribeKeySandboxCredentialListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKeySandboxCredentialListResponse DescribeKeySandboxCredentialList(DescribeKeySandboxCredentialListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeKeySandboxCredentialList", DescribeKeySandboxCredentialListResponse.class);
+    }
+
+    /**
      *查询clb监听器列表
      * @param req DescribeListenerListRequest
      * @return DescribeListenerListResponse

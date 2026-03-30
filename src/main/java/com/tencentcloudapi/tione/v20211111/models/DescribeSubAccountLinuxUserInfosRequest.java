@@ -23,6 +23,75 @@ import java.util.HashMap;
 
 public class DescribeSubAccountLinuxUserInfosRequest extends AbstractModel {
 
+    /**
+    * 分页偏移量（0 表示全量）
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * 每页数量（0 表示全量）
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * 过滤条件
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
+     * Get 分页偏移量（0 表示全量） 
+     * @return Offset 分页偏移量（0 表示全量）
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 分页偏移量（0 表示全量）
+     * @param Offset 分页偏移量（0 表示全量）
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get 每页数量（0 表示全量） 
+     * @return Limit 每页数量（0 表示全量）
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 每页数量（0 表示全量）
+     * @param Limit 每页数量（0 表示全量）
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get 过滤条件 
+     * @return Filters 过滤条件
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 过滤条件
+     * @param Filters 过滤条件
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
     public DescribeSubAccountLinuxUserInfosRequest() {
     }
 
@@ -31,6 +100,18 @@ public class DescribeSubAccountLinuxUserInfosRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeSubAccountLinuxUserInfosRequest(DescribeSubAccountLinuxUserInfosRequest source) {
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -38,6 +119,9 @@ public class DescribeSubAccountLinuxUserInfosRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RetrievalLivenessExtraInfo extends AbstractModel {
 
     /**
-    * 命中的模版类型，其中Common-公共库；Auto-自动聚类库；Owner-自建模版库
+    * <p>命中的模版类型，其中Common-公共库；Auto-自动聚类库；Owner-自建模版库</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HitGroup")
@@ -32,7 +32,7 @@ public class RetrievalLivenessExtraInfo extends AbstractModel {
     private String HitGroup;
 
     /**
-    * 命中的相似度
+    * <p>请求图像与命中攻击模板的相似度，相似度取值范围[0,2]，取值越小表示命中攻击模板的概率越高。默认阈值为0.6，当SimilarityScore≥0.6时判断为正常，SimilarityScore&lt;0.6是判断为攻击。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SimilarityScore")
@@ -40,7 +40,7 @@ public class RetrievalLivenessExtraInfo extends AbstractModel {
     private Float SimilarityScore;
 
     /**
-    * 命中的模板id
+    * <p>命中的模板id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HitTemplate")
@@ -48,9 +48,9 @@ public class RetrievalLivenessExtraInfo extends AbstractModel {
     private String HitTemplate;
 
     /**
-     * Get 命中的模版类型，其中Common-公共库；Auto-自动聚类库；Owner-自建模版库
+     * Get <p>命中的模版类型，其中Common-公共库；Auto-自动聚类库；Owner-自建模版库</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HitGroup 命中的模版类型，其中Common-公共库；Auto-自动聚类库；Owner-自建模版库
+     * @return HitGroup <p>命中的模版类型，其中Common-公共库；Auto-自动聚类库；Owner-自建模版库</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHitGroup() {
@@ -58,9 +58,9 @@ public class RetrievalLivenessExtraInfo extends AbstractModel {
     }
 
     /**
-     * Set 命中的模版类型，其中Common-公共库；Auto-自动聚类库；Owner-自建模版库
+     * Set <p>命中的模版类型，其中Common-公共库；Auto-自动聚类库；Owner-自建模版库</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HitGroup 命中的模版类型，其中Common-公共库；Auto-自动聚类库；Owner-自建模版库
+     * @param HitGroup <p>命中的模版类型，其中Common-公共库；Auto-自动聚类库；Owner-自建模版库</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHitGroup(String HitGroup) {
@@ -68,9 +68,9 @@ public class RetrievalLivenessExtraInfo extends AbstractModel {
     }
 
     /**
-     * Get 命中的相似度
+     * Get <p>请求图像与命中攻击模板的相似度，相似度取值范围[0,2]，取值越小表示命中攻击模板的概率越高。默认阈值为0.6，当SimilarityScore≥0.6时判断为正常，SimilarityScore&lt;0.6是判断为攻击。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SimilarityScore 命中的相似度
+     * @return SimilarityScore <p>请求图像与命中攻击模板的相似度，相似度取值范围[0,2]，取值越小表示命中攻击模板的概率越高。默认阈值为0.6，当SimilarityScore≥0.6时判断为正常，SimilarityScore&lt;0.6是判断为攻击。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getSimilarityScore() {
@@ -78,9 +78,9 @@ public class RetrievalLivenessExtraInfo extends AbstractModel {
     }
 
     /**
-     * Set 命中的相似度
+     * Set <p>请求图像与命中攻击模板的相似度，相似度取值范围[0,2]，取值越小表示命中攻击模板的概率越高。默认阈值为0.6，当SimilarityScore≥0.6时判断为正常，SimilarityScore&lt;0.6是判断为攻击。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SimilarityScore 命中的相似度
+     * @param SimilarityScore <p>请求图像与命中攻击模板的相似度，相似度取值范围[0,2]，取值越小表示命中攻击模板的概率越高。默认阈值为0.6，当SimilarityScore≥0.6时判断为正常，SimilarityScore&lt;0.6是判断为攻击。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSimilarityScore(Float SimilarityScore) {
@@ -88,9 +88,9 @@ public class RetrievalLivenessExtraInfo extends AbstractModel {
     }
 
     /**
-     * Get 命中的模板id
+     * Get <p>命中的模板id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HitTemplate 命中的模板id
+     * @return HitTemplate <p>命中的模板id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHitTemplate() {
@@ -98,9 +98,9 @@ public class RetrievalLivenessExtraInfo extends AbstractModel {
     }
 
     /**
-     * Set 命中的模板id
+     * Set <p>命中的模板id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HitTemplate 命中的模板id
+     * @param HitTemplate <p>命中的模板id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHitTemplate(String HitTemplate) {

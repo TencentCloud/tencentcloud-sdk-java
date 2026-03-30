@@ -66,6 +66,20 @@ public class SubAccountInfo extends AbstractModel {
     private String LinuxUserName;
 
     /**
+    * 是否开启 root 登录
+    */
+    @SerializedName("EnableRootLogin")
+    @Expose
+    private Boolean EnableRootLogin;
+
+    /**
+    * 更新时间
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private String UpdateTime;
+
+    /**
      * Get 腾讯云主账号UIN 
      * @return Uin 腾讯云主账号UIN
      */
@@ -161,6 +175,38 @@ public class SubAccountInfo extends AbstractModel {
         this.LinuxUserName = LinuxUserName;
     }
 
+    /**
+     * Get 是否开启 root 登录 
+     * @return EnableRootLogin 是否开启 root 登录
+     */
+    public Boolean getEnableRootLogin() {
+        return this.EnableRootLogin;
+    }
+
+    /**
+     * Set 是否开启 root 登录
+     * @param EnableRootLogin 是否开启 root 登录
+     */
+    public void setEnableRootLogin(Boolean EnableRootLogin) {
+        this.EnableRootLogin = EnableRootLogin;
+    }
+
+    /**
+     * Get 更新时间 
+     * @return UpdateTime 更新时间
+     */
+    public String getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * Set 更新时间
+     * @param UpdateTime 更新时间
+     */
+    public void setUpdateTime(String UpdateTime) {
+        this.UpdateTime = UpdateTime;
+    }
+
     public SubAccountInfo() {
     }
 
@@ -187,6 +233,12 @@ public class SubAccountInfo extends AbstractModel {
         if (source.LinuxUserName != null) {
             this.LinuxUserName = new String(source.LinuxUserName);
         }
+        if (source.EnableRootLogin != null) {
+            this.EnableRootLogin = new Boolean(source.EnableRootLogin);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
     }
 
 
@@ -200,6 +252,8 @@ public class SubAccountInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "LinuxUid", this.LinuxUid);
         this.setParamSimple(map, prefix + "LinuxGid", this.LinuxGid);
         this.setParamSimple(map, prefix + "LinuxUserName", this.LinuxUserName);
+        this.setParamSimple(map, prefix + "EnableRootLogin", this.EnableRootLogin);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 
     }
 }

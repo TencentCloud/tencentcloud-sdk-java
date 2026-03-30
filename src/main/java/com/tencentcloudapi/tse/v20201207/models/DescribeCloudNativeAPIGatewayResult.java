@@ -231,6 +231,13 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
     private Boolean AvailableUpgrade;
 
     /**
+    * 可回退的版本
+    */
+    @SerializedName("AvailableRollbackVersion")
+    @Expose
+    private String AvailableRollbackVersion;
+
+    /**
      * Get 云原生API网关ID。 
      * @return GatewayId 云原生API网关ID。
      */
@@ -710,6 +717,22 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
         this.AvailableUpgrade = AvailableUpgrade;
     }
 
+    /**
+     * Get 可回退的版本 
+     * @return AvailableRollbackVersion 可回退的版本
+     */
+    public String getAvailableRollbackVersion() {
+        return this.AvailableRollbackVersion;
+    }
+
+    /**
+     * Set 可回退的版本
+     * @param AvailableRollbackVersion 可回退的版本
+     */
+    public void setAvailableRollbackVersion(String AvailableRollbackVersion) {
+        this.AvailableRollbackVersion = AvailableRollbackVersion;
+    }
+
     public DescribeCloudNativeAPIGatewayResult() {
     }
 
@@ -817,6 +840,9 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
         if (source.AvailableUpgrade != null) {
             this.AvailableUpgrade = new Boolean(source.AvailableUpgrade);
         }
+        if (source.AvailableRollbackVersion != null) {
+            this.AvailableRollbackVersion = new String(source.AvailableRollbackVersion);
+        }
     }
 
 
@@ -853,6 +879,7 @@ public class DescribeCloudNativeAPIGatewayResult extends AbstractModel {
         this.setParamArraySimple(map, prefix + "AvailableVersions.", this.AvailableVersions);
         this.setParamArraySimple(map, prefix + "AvailableUpgradeVersions.", this.AvailableUpgradeVersions);
         this.setParamSimple(map, prefix + "AvailableUpgrade", this.AvailableUpgrade);
+        this.setParamSimple(map, prefix + "AvailableRollbackVersion", this.AvailableRollbackVersion);
 
     }
 }

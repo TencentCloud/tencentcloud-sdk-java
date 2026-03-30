@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeFraudBaseRequest extends AbstractModel {
 
     /**
-    * 客户端通过SDK获取的设备Token
+    * <p>客户端通过SDK获取的设备Token</p>
     */
     @SerializedName("DeviceToken")
     @Expose
     private String DeviceToken;
 
     /**
-     * Get 客户端通过SDK获取的设备Token 
-     * @return DeviceToken 客户端通过SDK获取的设备Token
+     * Get <p>客户端通过SDK获取的设备Token</p> 
+     * @return DeviceToken <p>客户端通过SDK获取的设备Token</p>
      */
     public String getDeviceToken() {
         return this.DeviceToken;
     }
 
     /**
-     * Set 客户端通过SDK获取的设备Token
-     * @param DeviceToken 客户端通过SDK获取的设备Token
+     * Set <p>客户端通过SDK获取的设备Token</p>
+     * @param DeviceToken <p>客户端通过SDK获取的设备Token</p>
      */
     public void setDeviceToken(String DeviceToken) {
         this.DeviceToken = DeviceToken;

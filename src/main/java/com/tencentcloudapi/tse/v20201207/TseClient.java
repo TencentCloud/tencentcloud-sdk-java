@@ -270,6 +270,17 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *创建或编辑云原生网关跨域配置
+     * @param req CreateOrModifyCloudNativeAPIGatewayCORSRequest
+     * @return CreateOrModifyCloudNativeAPIGatewayCORSResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateOrModifyCloudNativeAPIGatewayCORSResponse CreateOrModifyCloudNativeAPIGatewayCORS(CreateOrModifyCloudNativeAPIGatewayCORSRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateOrModifyCloudNativeAPIGatewayCORS", CreateOrModifyCloudNativeAPIGatewayCORSResponse.class);
+    }
+
+    /**
      *创建或编辑云原生网关访问控制
      * @param req CreateOrModifyCloudNativeAPIGatewayIPRestrictionRequest
      * @return CreateOrModifyCloudNativeAPIGatewayIPRestrictionResponse
@@ -322,6 +333,17 @@ public class TseClient extends AbstractClient{
     public DeleteCloudNativeAPIGatewayResponse DeleteCloudNativeAPIGateway(DeleteCloudNativeAPIGatewayRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteCloudNativeAPIGateway", DeleteCloudNativeAPIGatewayResponse.class);
+    }
+
+    /**
+     *删除云原生网关跨域插件
+     * @param req DeleteCloudNativeAPIGatewayCORSRequest
+     * @return DeleteCloudNativeAPIGatewayCORSResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCloudNativeAPIGatewayCORSResponse DeleteCloudNativeAPIGatewayCORS(DeleteCloudNativeAPIGatewayCORSRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCloudNativeAPIGatewayCORS", DeleteCloudNativeAPIGatewayCORSResponse.class);
     }
 
     /**
@@ -597,6 +619,17 @@ public class TseClient extends AbstractClient{
     public DescribeCloudNativeAPIGatewayResponse DescribeCloudNativeAPIGateway(DescribeCloudNativeAPIGatewayRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCloudNativeAPIGateway", DescribeCloudNativeAPIGatewayResponse.class);
+    }
+
+    /**
+     *查询云原生网关跨域配置
+     * @param req DescribeCloudNativeAPIGatewayCORSRequest
+     * @return DescribeCloudNativeAPIGatewayCORSResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudNativeAPIGatewayCORSResponse DescribeCloudNativeAPIGatewayCORS(DescribeCloudNativeAPIGatewayCORSRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudNativeAPIGatewayCORS", DescribeCloudNativeAPIGatewayCORSResponse.class);
     }
 
     /**

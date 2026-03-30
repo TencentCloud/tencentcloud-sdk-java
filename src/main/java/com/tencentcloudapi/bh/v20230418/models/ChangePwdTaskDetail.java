@@ -38,11 +38,18 @@ public class ChangePwdTaskDetail extends AbstractModel {
     private String Account;
 
     /**
-    * 上次改密结果。0-未改密  1-改密成功 2-改密失败
+    * 上次改密结果。0-未改密  1-改密成功 2-改密失败,3-改密中，4-改密超时
     */
     @SerializedName("LastChangeStatus")
     @Expose
     private Long LastChangeStatus;
+
+    /**
+    * 改密任务状态，0-待执行，1-执行完成，2-执行失败，3-执行中，4-执行超时
+    */
+    @SerializedName("TaskStatus")
+    @Expose
+    private Long TaskStatus;
 
     /**
      * Get 资产信息 
@@ -77,19 +84,35 @@ public class ChangePwdTaskDetail extends AbstractModel {
     }
 
     /**
-     * Get 上次改密结果。0-未改密  1-改密成功 2-改密失败 
-     * @return LastChangeStatus 上次改密结果。0-未改密  1-改密成功 2-改密失败
+     * Get 上次改密结果。0-未改密  1-改密成功 2-改密失败,3-改密中，4-改密超时 
+     * @return LastChangeStatus 上次改密结果。0-未改密  1-改密成功 2-改密失败,3-改密中，4-改密超时
      */
     public Long getLastChangeStatus() {
         return this.LastChangeStatus;
     }
 
     /**
-     * Set 上次改密结果。0-未改密  1-改密成功 2-改密失败
-     * @param LastChangeStatus 上次改密结果。0-未改密  1-改密成功 2-改密失败
+     * Set 上次改密结果。0-未改密  1-改密成功 2-改密失败,3-改密中，4-改密超时
+     * @param LastChangeStatus 上次改密结果。0-未改密  1-改密成功 2-改密失败,3-改密中，4-改密超时
      */
     public void setLastChangeStatus(Long LastChangeStatus) {
         this.LastChangeStatus = LastChangeStatus;
+    }
+
+    /**
+     * Get 改密任务状态，0-待执行，1-执行完成，2-执行失败，3-执行中，4-执行超时 
+     * @return TaskStatus 改密任务状态，0-待执行，1-执行完成，2-执行失败，3-执行中，4-执行超时
+     */
+    public Long getTaskStatus() {
+        return this.TaskStatus;
+    }
+
+    /**
+     * Set 改密任务状态，0-待执行，1-执行完成，2-执行失败，3-执行中，4-执行超时
+     * @param TaskStatus 改密任务状态，0-待执行，1-执行完成，2-执行失败，3-执行中，4-执行超时
+     */
+    public void setTaskStatus(Long TaskStatus) {
+        this.TaskStatus = TaskStatus;
     }
 
     public ChangePwdTaskDetail() {
@@ -109,6 +132,9 @@ public class ChangePwdTaskDetail extends AbstractModel {
         if (source.LastChangeStatus != null) {
             this.LastChangeStatus = new Long(source.LastChangeStatus);
         }
+        if (source.TaskStatus != null) {
+            this.TaskStatus = new Long(source.TaskStatus);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class ChangePwdTaskDetail extends AbstractModel {
         this.setParamObj(map, prefix + "Device.", this.Device);
         this.setParamSimple(map, prefix + "Account", this.Account);
         this.setParamSimple(map, prefix + "LastChangeStatus", this.LastChangeStatus);
+        this.setParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
 
     }
 }

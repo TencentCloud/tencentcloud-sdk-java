@@ -64,6 +64,14 @@ public class BaseUser extends AbstractModel {
     private String Email;
 
     /**
+    * 0: 普通用户 1: entraId用户
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UserTag")
+    @Expose
+    private Long UserTag;
+
+    /**
      * Get 有云的UIN，全局唯一
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return UserId 有云的UIN，全局唯一
@@ -163,6 +171,26 @@ public class BaseUser extends AbstractModel {
         this.Email = Email;
     }
 
+    /**
+     * Get 0: 普通用户 1: entraId用户
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UserTag 0: 普通用户 1: entraId用户
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getUserTag() {
+        return this.UserTag;
+    }
+
+    /**
+     * Set 0: 普通用户 1: entraId用户
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UserTag 0: 普通用户 1: entraId用户
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUserTag(Long UserTag) {
+        this.UserTag = UserTag;
+    }
+
     public BaseUser() {
     }
 
@@ -186,6 +214,9 @@ public class BaseUser extends AbstractModel {
         if (source.Email != null) {
             this.Email = new String(source.Email);
         }
+        if (source.UserTag != null) {
+            this.UserTag = new Long(source.UserTag);
+        }
     }
 
 
@@ -198,6 +229,7 @@ public class BaseUser extends AbstractModel {
         this.setParamSimple(map, prefix + "DisplayName", this.DisplayName);
         this.setParamSimple(map, prefix + "PhoneNum", this.PhoneNum);
         this.setParamSimple(map, prefix + "Email", this.Email);
+        this.setParamSimple(map, prefix + "UserTag", this.UserTag);
 
     }
 }

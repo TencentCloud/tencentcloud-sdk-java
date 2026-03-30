@@ -24,28 +24,21 @@ import java.util.HashMap;
 public class DetectAIFakeFacesResponse extends AbstractModel {
 
     /**
-    * 对于输入图片/视频的检测结果，检测是否存在人脸攻击。
-- Low：低攻击风险。
-- Mid：中度疑似攻击。
-- High：高度疑似攻击。
-
-建议返回值为High时判断为拦截，Mid和Low判断为通过，以更好平衡安全性和通过率。
+    * <p>对于输入图片/视频的检测结果，检测是否存在人脸攻击。</p><ul><li>Low：低攻击风险。</li><li>Mid：中度疑似攻击。</li><li>High：高度疑似攻击。</li></ul><p>建议返回值为High时判断为拦截，Mid和Low判断为通过，以更好平衡安全性和通过率。</p>
     */
     @SerializedName("AttackRiskLevel")
     @Expose
     private String AttackRiskLevel;
 
     /**
-    * 检测到的疑似攻击痕迹列表，仅当AttackRiskLevel为High或Mid时返回。
-- 说明：未检测到攻击痕迹时，返回空数组。
-- 此出参仅作为结果判断的参考，实际应用仍建议使用AttackRiskLevel的结果。
+    * <p>检测到的疑似攻击痕迹列表，仅当AttackRiskLevel为High或Mid时返回。</p><ul><li>说明：未检测到攻击痕迹时，返回空数组。</li><li>此出参仅作为结果判断的参考，实际应用仍建议使用AttackRiskLevel的结果。</li></ul>
     */
     @SerializedName("AttackRiskDetailList")
     @Expose
     private AttackRiskDetail [] AttackRiskDetailList;
 
     /**
-    * 额外信息。
+    * <p>返回额外信息（包括命中模版的详细信息）。</p>
     */
     @SerializedName("ExtraInfo")
     @Expose
@@ -59,76 +52,48 @@ public class DetectAIFakeFacesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 对于输入图片/视频的检测结果，检测是否存在人脸攻击。
-- Low：低攻击风险。
-- Mid：中度疑似攻击。
-- High：高度疑似攻击。
-
-建议返回值为High时判断为拦截，Mid和Low判断为通过，以更好平衡安全性和通过率。 
-     * @return AttackRiskLevel 对于输入图片/视频的检测结果，检测是否存在人脸攻击。
-- Low：低攻击风险。
-- Mid：中度疑似攻击。
-- High：高度疑似攻击。
-
-建议返回值为High时判断为拦截，Mid和Low判断为通过，以更好平衡安全性和通过率。
+     * Get <p>对于输入图片/视频的检测结果，检测是否存在人脸攻击。</p><ul><li>Low：低攻击风险。</li><li>Mid：中度疑似攻击。</li><li>High：高度疑似攻击。</li></ul><p>建议返回值为High时判断为拦截，Mid和Low判断为通过，以更好平衡安全性和通过率。</p> 
+     * @return AttackRiskLevel <p>对于输入图片/视频的检测结果，检测是否存在人脸攻击。</p><ul><li>Low：低攻击风险。</li><li>Mid：中度疑似攻击。</li><li>High：高度疑似攻击。</li></ul><p>建议返回值为High时判断为拦截，Mid和Low判断为通过，以更好平衡安全性和通过率。</p>
      */
     public String getAttackRiskLevel() {
         return this.AttackRiskLevel;
     }
 
     /**
-     * Set 对于输入图片/视频的检测结果，检测是否存在人脸攻击。
-- Low：低攻击风险。
-- Mid：中度疑似攻击。
-- High：高度疑似攻击。
-
-建议返回值为High时判断为拦截，Mid和Low判断为通过，以更好平衡安全性和通过率。
-     * @param AttackRiskLevel 对于输入图片/视频的检测结果，检测是否存在人脸攻击。
-- Low：低攻击风险。
-- Mid：中度疑似攻击。
-- High：高度疑似攻击。
-
-建议返回值为High时判断为拦截，Mid和Low判断为通过，以更好平衡安全性和通过率。
+     * Set <p>对于输入图片/视频的检测结果，检测是否存在人脸攻击。</p><ul><li>Low：低攻击风险。</li><li>Mid：中度疑似攻击。</li><li>High：高度疑似攻击。</li></ul><p>建议返回值为High时判断为拦截，Mid和Low判断为通过，以更好平衡安全性和通过率。</p>
+     * @param AttackRiskLevel <p>对于输入图片/视频的检测结果，检测是否存在人脸攻击。</p><ul><li>Low：低攻击风险。</li><li>Mid：中度疑似攻击。</li><li>High：高度疑似攻击。</li></ul><p>建议返回值为High时判断为拦截，Mid和Low判断为通过，以更好平衡安全性和通过率。</p>
      */
     public void setAttackRiskLevel(String AttackRiskLevel) {
         this.AttackRiskLevel = AttackRiskLevel;
     }
 
     /**
-     * Get 检测到的疑似攻击痕迹列表，仅当AttackRiskLevel为High或Mid时返回。
-- 说明：未检测到攻击痕迹时，返回空数组。
-- 此出参仅作为结果判断的参考，实际应用仍建议使用AttackRiskLevel的结果。 
-     * @return AttackRiskDetailList 检测到的疑似攻击痕迹列表，仅当AttackRiskLevel为High或Mid时返回。
-- 说明：未检测到攻击痕迹时，返回空数组。
-- 此出参仅作为结果判断的参考，实际应用仍建议使用AttackRiskLevel的结果。
+     * Get <p>检测到的疑似攻击痕迹列表，仅当AttackRiskLevel为High或Mid时返回。</p><ul><li>说明：未检测到攻击痕迹时，返回空数组。</li><li>此出参仅作为结果判断的参考，实际应用仍建议使用AttackRiskLevel的结果。</li></ul> 
+     * @return AttackRiskDetailList <p>检测到的疑似攻击痕迹列表，仅当AttackRiskLevel为High或Mid时返回。</p><ul><li>说明：未检测到攻击痕迹时，返回空数组。</li><li>此出参仅作为结果判断的参考，实际应用仍建议使用AttackRiskLevel的结果。</li></ul>
      */
     public AttackRiskDetail [] getAttackRiskDetailList() {
         return this.AttackRiskDetailList;
     }
 
     /**
-     * Set 检测到的疑似攻击痕迹列表，仅当AttackRiskLevel为High或Mid时返回。
-- 说明：未检测到攻击痕迹时，返回空数组。
-- 此出参仅作为结果判断的参考，实际应用仍建议使用AttackRiskLevel的结果。
-     * @param AttackRiskDetailList 检测到的疑似攻击痕迹列表，仅当AttackRiskLevel为High或Mid时返回。
-- 说明：未检测到攻击痕迹时，返回空数组。
-- 此出参仅作为结果判断的参考，实际应用仍建议使用AttackRiskLevel的结果。
+     * Set <p>检测到的疑似攻击痕迹列表，仅当AttackRiskLevel为High或Mid时返回。</p><ul><li>说明：未检测到攻击痕迹时，返回空数组。</li><li>此出参仅作为结果判断的参考，实际应用仍建议使用AttackRiskLevel的结果。</li></ul>
+     * @param AttackRiskDetailList <p>检测到的疑似攻击痕迹列表，仅当AttackRiskLevel为High或Mid时返回。</p><ul><li>说明：未检测到攻击痕迹时，返回空数组。</li><li>此出参仅作为结果判断的参考，实际应用仍建议使用AttackRiskLevel的结果。</li></ul>
      */
     public void setAttackRiskDetailList(AttackRiskDetail [] AttackRiskDetailList) {
         this.AttackRiskDetailList = AttackRiskDetailList;
     }
 
     /**
-     * Get 额外信息。 
-     * @return ExtraInfo 额外信息。
+     * Get <p>返回额外信息（包括命中模版的详细信息）。</p> 
+     * @return ExtraInfo <p>返回额外信息（包括命中模版的详细信息）。</p>
      */
     public ExtraInfo getExtraInfo() {
         return this.ExtraInfo;
     }
 
     /**
-     * Set 额外信息。
-     * @param ExtraInfo 额外信息。
+     * Set <p>返回额外信息（包括命中模版的详细信息）。</p>
+     * @param ExtraInfo <p>返回额外信息（包括命中模版的详细信息）。</p>
      */
     public void setExtraInfo(ExtraInfo ExtraInfo) {
         this.ExtraInfo = ExtraInfo;

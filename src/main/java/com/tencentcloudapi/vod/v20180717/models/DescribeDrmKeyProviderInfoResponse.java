@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeDrmKeyProviderInfoResponse extends AbstractModel {
 
     /**
-    * 华曦达（SDMC）相关的 DRM 密钥提供商信息。
+    * <p>华曦达（SDMC）相关的 DRM 密钥提供商信息。</p><p>华曦达服务后续逐步下线，请使用VOD DRM加密服务。</p>
     */
     @SerializedName("SDMCInfo")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeDrmKeyProviderInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 华曦达（SDMC）相关的 DRM 密钥提供商信息。 
-     * @return SDMCInfo 华曦达（SDMC）相关的 DRM 密钥提供商信息。
+     * Get <p>华曦达（SDMC）相关的 DRM 密钥提供商信息。</p><p>华曦达服务后续逐步下线，请使用VOD DRM加密服务。</p> 
+     * @return SDMCInfo <p>华曦达（SDMC）相关的 DRM 密钥提供商信息。</p><p>华曦达服务后续逐步下线，请使用VOD DRM加密服务。</p>
      */
     public SDMCDrmKeyProviderInfo getSDMCInfo() {
         return this.SDMCInfo;
     }
 
     /**
-     * Set 华曦达（SDMC）相关的 DRM 密钥提供商信息。
-     * @param SDMCInfo 华曦达（SDMC）相关的 DRM 密钥提供商信息。
+     * Set <p>华曦达（SDMC）相关的 DRM 密钥提供商信息。</p><p>华曦达服务后续逐步下线，请使用VOD DRM加密服务。</p>
+     * @param SDMCInfo <p>华曦达（SDMC）相关的 DRM 密钥提供商信息。</p><p>华曦达服务后续逐步下线，请使用VOD DRM加密服务。</p>
      */
     public void setSDMCInfo(SDMCDrmKeyProviderInfo SDMCInfo) {
         this.SDMCInfo = SDMCInfo;

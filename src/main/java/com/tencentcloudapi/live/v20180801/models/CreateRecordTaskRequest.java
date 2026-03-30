@@ -24,194 +24,184 @@ import java.util.HashMap;
 public class CreateRecordTaskRequest extends AbstractModel {
 
     /**
-    * 流名称。
+    * <p>流名称。</p>
     */
     @SerializedName("StreamName")
     @Expose
     private String StreamName;
 
     /**
-    * 推流域名。
+    * <p>推流域名。</p>
     */
     @SerializedName("DomainName")
     @Expose
     private String DomainName;
 
     /**
-    * 推流路径。
+    * <p>推流路径。</p>
     */
     @SerializedName("AppName")
     @Expose
     private String AppName;
 
     /**
-    * 录制任务结束时间，Unix时间戳。设置时间必须大于StartTime及当前时间，且小于当前时间+7天。
+    * <p>录制任务结束时间，Unix时间戳。设置时间必须大于StartTime及当前时间，且小于当前时间+7天。</p>
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * 录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。EndTime - StartTime不能超过24小时。
+    * <p>录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。EndTime - StartTime不能超过24小时。</p>
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 推流类型，默认0。取值：
-0-直播推流。
-1-合成流，即 A+B=C 类型混流。
+    * <p>推流类型，默认0。取值：<br>0-直播推流。<br>1-合成流，即 A+B=C 类型混流。</p>
     */
     @SerializedName("StreamType")
     @Expose
     private Long StreamType;
 
     /**
-    * 录制模板ID，CreateLiveRecordTemplate 返回值。如果不填或者传入错误ID，则默认录制HLS格式、永久存储。
+    * <p>录制模板ID，CreateLiveRecordTemplate 返回值。如果不填或者传入错误ID，则默认录制 HLS 格式、永久存储至 VOD 主应用下。<br>示例值：0。</p>
     */
     @SerializedName("TemplateId")
     @Expose
     private Long TemplateId;
 
     /**
-    * 扩展字段，暂无定义。默认为空。
+    * <p>扩展字段，暂无定义。默认为空。</p>
     */
     @SerializedName("Extension")
     @Expose
     private String Extension;
 
     /**
-     * Get 流名称。 
-     * @return StreamName 流名称。
+     * Get <p>流名称。</p> 
+     * @return StreamName <p>流名称。</p>
      */
     public String getStreamName() {
         return this.StreamName;
     }
 
     /**
-     * Set 流名称。
-     * @param StreamName 流名称。
+     * Set <p>流名称。</p>
+     * @param StreamName <p>流名称。</p>
      */
     public void setStreamName(String StreamName) {
         this.StreamName = StreamName;
     }
 
     /**
-     * Get 推流域名。 
-     * @return DomainName 推流域名。
+     * Get <p>推流域名。</p> 
+     * @return DomainName <p>推流域名。</p>
      */
     public String getDomainName() {
         return this.DomainName;
     }
 
     /**
-     * Set 推流域名。
-     * @param DomainName 推流域名。
+     * Set <p>推流域名。</p>
+     * @param DomainName <p>推流域名。</p>
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;
     }
 
     /**
-     * Get 推流路径。 
-     * @return AppName 推流路径。
+     * Get <p>推流路径。</p> 
+     * @return AppName <p>推流路径。</p>
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * Set 推流路径。
-     * @param AppName 推流路径。
+     * Set <p>推流路径。</p>
+     * @param AppName <p>推流路径。</p>
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;
     }
 
     /**
-     * Get 录制任务结束时间，Unix时间戳。设置时间必须大于StartTime及当前时间，且小于当前时间+7天。 
-     * @return EndTime 录制任务结束时间，Unix时间戳。设置时间必须大于StartTime及当前时间，且小于当前时间+7天。
+     * Get <p>录制任务结束时间，Unix时间戳。设置时间必须大于StartTime及当前时间，且小于当前时间+7天。</p> 
+     * @return EndTime <p>录制任务结束时间，Unix时间戳。设置时间必须大于StartTime及当前时间，且小于当前时间+7天。</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 录制任务结束时间，Unix时间戳。设置时间必须大于StartTime及当前时间，且小于当前时间+7天。
-     * @param EndTime 录制任务结束时间，Unix时间戳。设置时间必须大于StartTime及当前时间，且小于当前时间+7天。
+     * Set <p>录制任务结束时间，Unix时间戳。设置时间必须大于StartTime及当前时间，且小于当前时间+7天。</p>
+     * @param EndTime <p>录制任务结束时间，Unix时间戳。设置时间必须大于StartTime及当前时间，且小于当前时间+7天。</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。EndTime - StartTime不能超过24小时。 
-     * @return StartTime 录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。EndTime - StartTime不能超过24小时。
+     * Get <p>录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。EndTime - StartTime不能超过24小时。</p> 
+     * @return StartTime <p>录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。EndTime - StartTime不能超过24小时。</p>
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。EndTime - StartTime不能超过24小时。
-     * @param StartTime 录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。EndTime - StartTime不能超过24小时。
+     * Set <p>录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。EndTime - StartTime不能超过24小时。</p>
+     * @param StartTime <p>录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。EndTime - StartTime不能超过24小时。</p>
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 推流类型，默认0。取值：
-0-直播推流。
-1-合成流，即 A+B=C 类型混流。 
-     * @return StreamType 推流类型，默认0。取值：
-0-直播推流。
-1-合成流，即 A+B=C 类型混流。
+     * Get <p>推流类型，默认0。取值：<br>0-直播推流。<br>1-合成流，即 A+B=C 类型混流。</p> 
+     * @return StreamType <p>推流类型，默认0。取值：<br>0-直播推流。<br>1-合成流，即 A+B=C 类型混流。</p>
      */
     public Long getStreamType() {
         return this.StreamType;
     }
 
     /**
-     * Set 推流类型，默认0。取值：
-0-直播推流。
-1-合成流，即 A+B=C 类型混流。
-     * @param StreamType 推流类型，默认0。取值：
-0-直播推流。
-1-合成流，即 A+B=C 类型混流。
+     * Set <p>推流类型，默认0。取值：<br>0-直播推流。<br>1-合成流，即 A+B=C 类型混流。</p>
+     * @param StreamType <p>推流类型，默认0。取值：<br>0-直播推流。<br>1-合成流，即 A+B=C 类型混流。</p>
      */
     public void setStreamType(Long StreamType) {
         this.StreamType = StreamType;
     }
 
     /**
-     * Get 录制模板ID，CreateLiveRecordTemplate 返回值。如果不填或者传入错误ID，则默认录制HLS格式、永久存储。 
-     * @return TemplateId 录制模板ID，CreateLiveRecordTemplate 返回值。如果不填或者传入错误ID，则默认录制HLS格式、永久存储。
+     * Get <p>录制模板ID，CreateLiveRecordTemplate 返回值。如果不填或者传入错误ID，则默认录制 HLS 格式、永久存储至 VOD 主应用下。<br>示例值：0。</p> 
+     * @return TemplateId <p>录制模板ID，CreateLiveRecordTemplate 返回值。如果不填或者传入错误ID，则默认录制 HLS 格式、永久存储至 VOD 主应用下。<br>示例值：0。</p>
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 录制模板ID，CreateLiveRecordTemplate 返回值。如果不填或者传入错误ID，则默认录制HLS格式、永久存储。
-     * @param TemplateId 录制模板ID，CreateLiveRecordTemplate 返回值。如果不填或者传入错误ID，则默认录制HLS格式、永久存储。
+     * Set <p>录制模板ID，CreateLiveRecordTemplate 返回值。如果不填或者传入错误ID，则默认录制 HLS 格式、永久存储至 VOD 主应用下。<br>示例值：0。</p>
+     * @param TemplateId <p>录制模板ID，CreateLiveRecordTemplate 返回值。如果不填或者传入错误ID，则默认录制 HLS 格式、永久存储至 VOD 主应用下。<br>示例值：0。</p>
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 扩展字段，暂无定义。默认为空。 
-     * @return Extension 扩展字段，暂无定义。默认为空。
+     * Get <p>扩展字段，暂无定义。默认为空。</p> 
+     * @return Extension <p>扩展字段，暂无定义。默认为空。</p>
      */
     public String getExtension() {
         return this.Extension;
     }
 
     /**
-     * Set 扩展字段，暂无定义。默认为空。
-     * @param Extension 扩展字段，暂无定义。默认为空。
+     * Set <p>扩展字段，暂无定义。默认为空。</p>
+     * @param Extension <p>扩展字段，暂无定义。默认为空。</p>
      */
     public void setExtension(String Extension) {
         this.Extension = Extension;

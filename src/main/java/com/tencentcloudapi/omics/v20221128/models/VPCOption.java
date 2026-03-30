@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class VPCOption extends AbstractModel {
 
     /**
-    * 私有网络ID（VPCId和VPCCIDRBlock必选其一。若使用VPCId，则使用现用私有网络；若使用VPCCIDRBlock，则创建新的私有网络）
+    * <p>私有网络ID（VPCId和VPCCIDRBlock必选其一。若使用VPCId，则使用现用私有网络；若使用VPCCIDRBlock，则创建新的私有网络）</p>
     */
     @SerializedName("VPCId")
     @Expose
     private String VPCId;
 
     /**
-    * 子网ID（SubnetId和SubnetZone&SubnetCIDRBlock必选其一。若使用SubnetId，则使用现用子网；若使用SubnetZone&SubnetCIDRBlock，则创建新的子网）
+    * <p>子网ID（SubnetId和SubnetZone&amp;SubnetCIDRBlock必选其一。若使用SubnetId，则使用现用子网；若使用SubnetZone&amp;SubnetCIDRBlock，则创建新的子网）</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 子网可用区。
+    * <p>子网可用区。</p>
     */
     @SerializedName("SubnetZone")
     @Expose
     private String SubnetZone;
 
     /**
-    * 私有网络CIDR。
+    * <p>私有网络CIDR。</p>
     */
     @SerializedName("VPCCIDRBlock")
     @Expose
     private String VPCCIDRBlock;
 
     /**
-    * 子网CIDR。
+    * <p>子网CIDR。</p>
     */
     @SerializedName("SubnetCIDRBlock")
     @Expose
     private String SubnetCIDRBlock;
 
     /**
-     * Get 私有网络ID（VPCId和VPCCIDRBlock必选其一。若使用VPCId，则使用现用私有网络；若使用VPCCIDRBlock，则创建新的私有网络） 
-     * @return VPCId 私有网络ID（VPCId和VPCCIDRBlock必选其一。若使用VPCId，则使用现用私有网络；若使用VPCCIDRBlock，则创建新的私有网络）
+     * Get <p>私有网络ID（VPCId和VPCCIDRBlock必选其一。若使用VPCId，则使用现用私有网络；若使用VPCCIDRBlock，则创建新的私有网络）</p> 
+     * @return VPCId <p>私有网络ID（VPCId和VPCCIDRBlock必选其一。若使用VPCId，则使用现用私有网络；若使用VPCCIDRBlock，则创建新的私有网络）</p>
      */
     public String getVPCId() {
         return this.VPCId;
     }
 
     /**
-     * Set 私有网络ID（VPCId和VPCCIDRBlock必选其一。若使用VPCId，则使用现用私有网络；若使用VPCCIDRBlock，则创建新的私有网络）
-     * @param VPCId 私有网络ID（VPCId和VPCCIDRBlock必选其一。若使用VPCId，则使用现用私有网络；若使用VPCCIDRBlock，则创建新的私有网络）
+     * Set <p>私有网络ID（VPCId和VPCCIDRBlock必选其一。若使用VPCId，则使用现用私有网络；若使用VPCCIDRBlock，则创建新的私有网络）</p>
+     * @param VPCId <p>私有网络ID（VPCId和VPCCIDRBlock必选其一。若使用VPCId，则使用现用私有网络；若使用VPCCIDRBlock，则创建新的私有网络）</p>
      */
     public void setVPCId(String VPCId) {
         this.VPCId = VPCId;
     }
 
     /**
-     * Get 子网ID（SubnetId和SubnetZone&SubnetCIDRBlock必选其一。若使用SubnetId，则使用现用子网；若使用SubnetZone&SubnetCIDRBlock，则创建新的子网） 
-     * @return SubnetId 子网ID（SubnetId和SubnetZone&SubnetCIDRBlock必选其一。若使用SubnetId，则使用现用子网；若使用SubnetZone&SubnetCIDRBlock，则创建新的子网）
+     * Get <p>子网ID（SubnetId和SubnetZone&amp;SubnetCIDRBlock必选其一。若使用SubnetId，则使用现用子网；若使用SubnetZone&amp;SubnetCIDRBlock，则创建新的子网）</p> 
+     * @return SubnetId <p>子网ID（SubnetId和SubnetZone&amp;SubnetCIDRBlock必选其一。若使用SubnetId，则使用现用子网；若使用SubnetZone&amp;SubnetCIDRBlock，则创建新的子网）</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网ID（SubnetId和SubnetZone&SubnetCIDRBlock必选其一。若使用SubnetId，则使用现用子网；若使用SubnetZone&SubnetCIDRBlock，则创建新的子网）
-     * @param SubnetId 子网ID（SubnetId和SubnetZone&SubnetCIDRBlock必选其一。若使用SubnetId，则使用现用子网；若使用SubnetZone&SubnetCIDRBlock，则创建新的子网）
+     * Set <p>子网ID（SubnetId和SubnetZone&amp;SubnetCIDRBlock必选其一。若使用SubnetId，则使用现用子网；若使用SubnetZone&amp;SubnetCIDRBlock，则创建新的子网）</p>
+     * @param SubnetId <p>子网ID（SubnetId和SubnetZone&amp;SubnetCIDRBlock必选其一。若使用SubnetId，则使用现用子网；若使用SubnetZone&amp;SubnetCIDRBlock，则创建新的子网）</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 子网可用区。 
-     * @return SubnetZone 子网可用区。
+     * Get <p>子网可用区。</p> 
+     * @return SubnetZone <p>子网可用区。</p>
      */
     public String getSubnetZone() {
         return this.SubnetZone;
     }
 
     /**
-     * Set 子网可用区。
-     * @param SubnetZone 子网可用区。
+     * Set <p>子网可用区。</p>
+     * @param SubnetZone <p>子网可用区。</p>
      */
     public void setSubnetZone(String SubnetZone) {
         this.SubnetZone = SubnetZone;
     }
 
     /**
-     * Get 私有网络CIDR。 
-     * @return VPCCIDRBlock 私有网络CIDR。
+     * Get <p>私有网络CIDR。</p> 
+     * @return VPCCIDRBlock <p>私有网络CIDR。</p>
      */
     public String getVPCCIDRBlock() {
         return this.VPCCIDRBlock;
     }
 
     /**
-     * Set 私有网络CIDR。
-     * @param VPCCIDRBlock 私有网络CIDR。
+     * Set <p>私有网络CIDR。</p>
+     * @param VPCCIDRBlock <p>私有网络CIDR。</p>
      */
     public void setVPCCIDRBlock(String VPCCIDRBlock) {
         this.VPCCIDRBlock = VPCCIDRBlock;
     }
 
     /**
-     * Get 子网CIDR。 
-     * @return SubnetCIDRBlock 子网CIDR。
+     * Get <p>子网CIDR。</p> 
+     * @return SubnetCIDRBlock <p>子网CIDR。</p>
      */
     public String getSubnetCIDRBlock() {
         return this.SubnetCIDRBlock;
     }
 
     /**
-     * Set 子网CIDR。
-     * @param SubnetCIDRBlock 子网CIDR。
+     * Set <p>子网CIDR。</p>
+     * @param SubnetCIDRBlock <p>子网CIDR。</p>
      */
     public void setSubnetCIDRBlock(String SubnetCIDRBlock) {
         this.SubnetCIDRBlock = SubnetCIDRBlock;

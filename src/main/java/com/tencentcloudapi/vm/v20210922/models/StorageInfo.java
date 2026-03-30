@@ -24,82 +24,118 @@ import java.util.HashMap;
 public class StorageInfo extends AbstractModel {
 
     /**
-    * 类型 可选：
-URL 资源链接类型
-COS 腾讯云对象存储类型
+    * <p>类型 可选：<br>URL 资源链接类型<br>COS 腾讯云对象存储类型</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 资源链接
+    * <p>资源链接</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 腾讯云存储桶信息
+    * <p>腾讯云存储桶信息</p>
     */
     @SerializedName("BucketInfo")
     @Expose
     private BucketInfo BucketInfo;
 
     /**
-     * Get 类型 可选：
-URL 资源链接类型
-COS 腾讯云对象存储类型 
-     * @return Type 类型 可选：
-URL 资源链接类型
-COS 腾讯云对象存储类型
+    * <p>大模型审核场景下，送审的图片列表</p>
+    */
+    @SerializedName("ImageUrlList")
+    @Expose
+    private String [] ImageUrlList;
+
+    /**
+    * <p>大模型审核场景下，base64编码的审核要求内容</p>
+    */
+    @SerializedName("TextContent")
+    @Expose
+    private String TextContent;
+
+    /**
+     * Get <p>类型 可选：<br>URL 资源链接类型<br>COS 腾讯云对象存储类型</p> 
+     * @return Type <p>类型 可选：<br>URL 资源链接类型<br>COS 腾讯云对象存储类型</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 类型 可选：
-URL 资源链接类型
-COS 腾讯云对象存储类型
-     * @param Type 类型 可选：
-URL 资源链接类型
-COS 腾讯云对象存储类型
+     * Set <p>类型 可选：<br>URL 资源链接类型<br>COS 腾讯云对象存储类型</p>
+     * @param Type <p>类型 可选：<br>URL 资源链接类型<br>COS 腾讯云对象存储类型</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 资源链接 
-     * @return Url 资源链接
+     * Get <p>资源链接</p> 
+     * @return Url <p>资源链接</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 资源链接
-     * @param Url 资源链接
+     * Set <p>资源链接</p>
+     * @param Url <p>资源链接</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get 腾讯云存储桶信息 
-     * @return BucketInfo 腾讯云存储桶信息
+     * Get <p>腾讯云存储桶信息</p> 
+     * @return BucketInfo <p>腾讯云存储桶信息</p>
      */
     public BucketInfo getBucketInfo() {
         return this.BucketInfo;
     }
 
     /**
-     * Set 腾讯云存储桶信息
-     * @param BucketInfo 腾讯云存储桶信息
+     * Set <p>腾讯云存储桶信息</p>
+     * @param BucketInfo <p>腾讯云存储桶信息</p>
      */
     public void setBucketInfo(BucketInfo BucketInfo) {
         this.BucketInfo = BucketInfo;
+    }
+
+    /**
+     * Get <p>大模型审核场景下，送审的图片列表</p> 
+     * @return ImageUrlList <p>大模型审核场景下，送审的图片列表</p>
+     */
+    public String [] getImageUrlList() {
+        return this.ImageUrlList;
+    }
+
+    /**
+     * Set <p>大模型审核场景下，送审的图片列表</p>
+     * @param ImageUrlList <p>大模型审核场景下，送审的图片列表</p>
+     */
+    public void setImageUrlList(String [] ImageUrlList) {
+        this.ImageUrlList = ImageUrlList;
+    }
+
+    /**
+     * Get <p>大模型审核场景下，base64编码的审核要求内容</p> 
+     * @return TextContent <p>大模型审核场景下，base64编码的审核要求内容</p>
+     */
+    public String getTextContent() {
+        return this.TextContent;
+    }
+
+    /**
+     * Set <p>大模型审核场景下，base64编码的审核要求内容</p>
+     * @param TextContent <p>大模型审核场景下，base64编码的审核要求内容</p>
+     */
+    public void setTextContent(String TextContent) {
+        this.TextContent = TextContent;
     }
 
     public StorageInfo() {
@@ -119,6 +155,15 @@ COS 腾讯云对象存储类型
         if (source.BucketInfo != null) {
             this.BucketInfo = new BucketInfo(source.BucketInfo);
         }
+        if (source.ImageUrlList != null) {
+            this.ImageUrlList = new String[source.ImageUrlList.length];
+            for (int i = 0; i < source.ImageUrlList.length; i++) {
+                this.ImageUrlList[i] = new String(source.ImageUrlList[i]);
+            }
+        }
+        if (source.TextContent != null) {
+            this.TextContent = new String(source.TextContent);
+        }
     }
 
 
@@ -129,6 +174,8 @@ COS 腾讯云对象存储类型
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamObj(map, prefix + "BucketInfo.", this.BucketInfo);
+        this.setParamArraySimple(map, prefix + "ImageUrlList.", this.ImageUrlList);
+        this.setParamSimple(map, prefix + "TextContent", this.TextContent);
 
     }
 }

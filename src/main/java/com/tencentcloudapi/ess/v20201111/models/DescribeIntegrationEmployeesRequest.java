@@ -33,6 +33,7 @@ public class DescribeIntegrationEmployeesRequest extends AbstractModel {
 
     /**
     * 指定分页每页返回的数据条数，单页最大支持 20。
+如果没有传递， 则为默认值20。
     */
     @SerializedName("Limit")
     @Expose
@@ -90,8 +91,10 @@ public class DescribeIntegrationEmployeesRequest extends AbstractModel {
     }
 
     /**
-     * Get 指定分页每页返回的数据条数，单页最大支持 20。 
+     * Get 指定分页每页返回的数据条数，单页最大支持 20。
+如果没有传递， 则为默认值20。 
      * @return Limit 指定分页每页返回的数据条数，单页最大支持 20。
+如果没有传递， 则为默认值20。
      */
     public Long getLimit() {
         return this.Limit;
@@ -99,7 +102,9 @@ public class DescribeIntegrationEmployeesRequest extends AbstractModel {
 
     /**
      * Set 指定分页每页返回的数据条数，单页最大支持 20。
+如果没有传递， 则为默认值20。
      * @param Limit 指定分页每页返回的数据条数，单页最大支持 20。
+如果没有传递， 则为默认值20。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

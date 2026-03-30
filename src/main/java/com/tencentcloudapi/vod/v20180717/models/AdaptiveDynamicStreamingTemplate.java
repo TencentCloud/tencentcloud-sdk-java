@@ -24,369 +24,322 @@ import java.util.HashMap;
 public class AdaptiveDynamicStreamingTemplate extends AbstractModel {
 
     /**
-    * 转自适应码流模板唯一标识。
+    * <p>转自适应码流模板唯一标识。</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 模板类型，取值范围：
-<li>Preset：系统预置模板；</li>
-<li>Custom：用户自定义模板。</li>
+    * <p>模板类型，取值范围：</p><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 转自适应码流模板名称。
+    * <p>转自适应码流模板名称。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 转自适应码流模板描述信息。
+    * <p>转自适应码流模板描述信息。</p>
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * 自适应转码格式，取值范围：
-<li>HLS。</li>
+    * <p>自适应转码格式，取值范围：</p><li>HLS。</li>
     */
     @SerializedName("Format")
     @Expose
     private String Format;
 
     /**
-    * DRM 类型，取值范围：
-<li>SimpleAES</li>
-<li>Widevine</li>
-<li>FairPlay</li>
-如果取值为空字符串，代表不对视频做 DRM 保护。
+    * <p>DRM 类型，取值范围：</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>如果取值为空字符串，代表不对视频做 DRM 保护。
     */
     @SerializedName("DrmType")
     @Expose
     private String DrmType;
 
     /**
-    * DRM 的密钥提供商，取值范围：
-<li>SDMC：华曦达；</li>
-<li>VOD：云点播。</li>
-默认值为 VOD 。
+    * <p>DRM 的密钥提供商，取值范围：</p><li>SDMC：华曦达；</li><li>VOD：云点播。</li>默认值为 VOD 。<p>华曦达服务后续逐步下线，请使用VOD DRM加密服务。</p>
     */
     @SerializedName("DrmKeyProvider")
     @Expose
     private String DrmKeyProvider;
 
     /**
-    * 自适应转码输入流参数信息，最多输入10路流。
+    * <p>DRM的加密类型，取值范围：{&quot;cbcs&quot;, &quot;cenc&quot;}</p>
+    */
+    @SerializedName("DrmEncryptType")
+    @Expose
+    private String DrmEncryptType;
+
+    /**
+    * <p>自适应转码输入流参数信息，最多输入10路流。</p>
     */
     @SerializedName("StreamInfos")
     @Expose
     private AdaptiveStreamTemplate [] StreamInfos;
 
     /**
-    * 是否禁止视频低码率转高码率，取值范围：
-<li>0：否，</li>
-<li>1：是。</li>
+    * <p>是否禁止视频低码率转高码率，取值范围：</p><li>0：否，</li><li>1：是。</li>
     */
     @SerializedName("DisableHigherVideoBitrate")
     @Expose
     private Long DisableHigherVideoBitrate;
 
     /**
-    * 是否禁止视频分辨率转高分辨率，取值范围：
-<li>0：否，</li>
-<li>1：是。</li>
+    * <p>是否禁止视频分辨率转高分辨率，取值范围：</p><li>0：否，</li><li>1：是。</li>
     */
     @SerializedName("DisableHigherVideoResolution")
     @Expose
     private Long DisableHigherVideoResolution;
 
     /**
-    * 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+    * <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+    * <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 切片类型，仅当 Format 为 HLS 时有效。
+    * <p>切片类型，仅当 Format 为 HLS 时有效。</p>
     */
     @SerializedName("SegmentType")
     @Expose
     private String SegmentType;
 
     /**
-     * Get 转自适应码流模板唯一标识。 
-     * @return Definition 转自适应码流模板唯一标识。
+     * Get <p>转自适应码流模板唯一标识。</p> 
+     * @return Definition <p>转自适应码流模板唯一标识。</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 转自适应码流模板唯一标识。
-     * @param Definition 转自适应码流模板唯一标识。
+     * Set <p>转自适应码流模板唯一标识。</p>
+     * @param Definition <p>转自适应码流模板唯一标识。</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get 模板类型，取值范围：
-<li>Preset：系统预置模板；</li>
-<li>Custom：用户自定义模板。</li> 
-     * @return Type 模板类型，取值范围：
-<li>Preset：系统预置模板；</li>
-<li>Custom：用户自定义模板。</li>
+     * Get <p>模板类型，取值范围：</p><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li> 
+     * @return Type <p>模板类型，取值范围：</p><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 模板类型，取值范围：
-<li>Preset：系统预置模板；</li>
-<li>Custom：用户自定义模板。</li>
-     * @param Type 模板类型，取值范围：
-<li>Preset：系统预置模板；</li>
-<li>Custom：用户自定义模板。</li>
+     * Set <p>模板类型，取值范围：</p><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>
+     * @param Type <p>模板类型，取值范围：</p><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 转自适应码流模板名称。 
-     * @return Name 转自适应码流模板名称。
+     * Get <p>转自适应码流模板名称。</p> 
+     * @return Name <p>转自适应码流模板名称。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 转自适应码流模板名称。
-     * @param Name 转自适应码流模板名称。
+     * Set <p>转自适应码流模板名称。</p>
+     * @param Name <p>转自适应码流模板名称。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 转自适应码流模板描述信息。 
-     * @return Comment 转自适应码流模板描述信息。
+     * Get <p>转自适应码流模板描述信息。</p> 
+     * @return Comment <p>转自适应码流模板描述信息。</p>
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 转自适应码流模板描述信息。
-     * @param Comment 转自适应码流模板描述信息。
+     * Set <p>转自适应码流模板描述信息。</p>
+     * @param Comment <p>转自适应码流模板描述信息。</p>
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get 自适应转码格式，取值范围：
-<li>HLS。</li> 
-     * @return Format 自适应转码格式，取值范围：
-<li>HLS。</li>
+     * Get <p>自适应转码格式，取值范围：</p><li>HLS。</li> 
+     * @return Format <p>自适应转码格式，取值范围：</p><li>HLS。</li>
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set 自适应转码格式，取值范围：
-<li>HLS。</li>
-     * @param Format 自适应转码格式，取值范围：
-<li>HLS。</li>
+     * Set <p>自适应转码格式，取值范围：</p><li>HLS。</li>
+     * @param Format <p>自适应转码格式，取值范围：</p><li>HLS。</li>
      */
     public void setFormat(String Format) {
         this.Format = Format;
     }
 
     /**
-     * Get DRM 类型，取值范围：
-<li>SimpleAES</li>
-<li>Widevine</li>
-<li>FairPlay</li>
-如果取值为空字符串，代表不对视频做 DRM 保护。 
-     * @return DrmType DRM 类型，取值范围：
-<li>SimpleAES</li>
-<li>Widevine</li>
-<li>FairPlay</li>
-如果取值为空字符串，代表不对视频做 DRM 保护。
+     * Get <p>DRM 类型，取值范围：</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>如果取值为空字符串，代表不对视频做 DRM 保护。 
+     * @return DrmType <p>DRM 类型，取值范围：</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>如果取值为空字符串，代表不对视频做 DRM 保护。
      */
     public String getDrmType() {
         return this.DrmType;
     }
 
     /**
-     * Set DRM 类型，取值范围：
-<li>SimpleAES</li>
-<li>Widevine</li>
-<li>FairPlay</li>
-如果取值为空字符串，代表不对视频做 DRM 保护。
-     * @param DrmType DRM 类型，取值范围：
-<li>SimpleAES</li>
-<li>Widevine</li>
-<li>FairPlay</li>
-如果取值为空字符串，代表不对视频做 DRM 保护。
+     * Set <p>DRM 类型，取值范围：</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>如果取值为空字符串，代表不对视频做 DRM 保护。
+     * @param DrmType <p>DRM 类型，取值范围：</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>如果取值为空字符串，代表不对视频做 DRM 保护。
      */
     public void setDrmType(String DrmType) {
         this.DrmType = DrmType;
     }
 
     /**
-     * Get DRM 的密钥提供商，取值范围：
-<li>SDMC：华曦达；</li>
-<li>VOD：云点播。</li>
-默认值为 VOD 。 
-     * @return DrmKeyProvider DRM 的密钥提供商，取值范围：
-<li>SDMC：华曦达；</li>
-<li>VOD：云点播。</li>
-默认值为 VOD 。
+     * Get <p>DRM 的密钥提供商，取值范围：</p><li>SDMC：华曦达；</li><li>VOD：云点播。</li>默认值为 VOD 。<p>华曦达服务后续逐步下线，请使用VOD DRM加密服务。</p> 
+     * @return DrmKeyProvider <p>DRM 的密钥提供商，取值范围：</p><li>SDMC：华曦达；</li><li>VOD：云点播。</li>默认值为 VOD 。<p>华曦达服务后续逐步下线，请使用VOD DRM加密服务。</p>
      */
     public String getDrmKeyProvider() {
         return this.DrmKeyProvider;
     }
 
     /**
-     * Set DRM 的密钥提供商，取值范围：
-<li>SDMC：华曦达；</li>
-<li>VOD：云点播。</li>
-默认值为 VOD 。
-     * @param DrmKeyProvider DRM 的密钥提供商，取值范围：
-<li>SDMC：华曦达；</li>
-<li>VOD：云点播。</li>
-默认值为 VOD 。
+     * Set <p>DRM 的密钥提供商，取值范围：</p><li>SDMC：华曦达；</li><li>VOD：云点播。</li>默认值为 VOD 。<p>华曦达服务后续逐步下线，请使用VOD DRM加密服务。</p>
+     * @param DrmKeyProvider <p>DRM 的密钥提供商，取值范围：</p><li>SDMC：华曦达；</li><li>VOD：云点播。</li>默认值为 VOD 。<p>华曦达服务后续逐步下线，请使用VOD DRM加密服务。</p>
      */
     public void setDrmKeyProvider(String DrmKeyProvider) {
         this.DrmKeyProvider = DrmKeyProvider;
     }
 
     /**
-     * Get 自适应转码输入流参数信息，最多输入10路流。 
-     * @return StreamInfos 自适应转码输入流参数信息，最多输入10路流。
+     * Get <p>DRM的加密类型，取值范围：{&quot;cbcs&quot;, &quot;cenc&quot;}</p> 
+     * @return DrmEncryptType <p>DRM的加密类型，取值范围：{&quot;cbcs&quot;, &quot;cenc&quot;}</p>
+     */
+    public String getDrmEncryptType() {
+        return this.DrmEncryptType;
+    }
+
+    /**
+     * Set <p>DRM的加密类型，取值范围：{&quot;cbcs&quot;, &quot;cenc&quot;}</p>
+     * @param DrmEncryptType <p>DRM的加密类型，取值范围：{&quot;cbcs&quot;, &quot;cenc&quot;}</p>
+     */
+    public void setDrmEncryptType(String DrmEncryptType) {
+        this.DrmEncryptType = DrmEncryptType;
+    }
+
+    /**
+     * Get <p>自适应转码输入流参数信息，最多输入10路流。</p> 
+     * @return StreamInfos <p>自适应转码输入流参数信息，最多输入10路流。</p>
      */
     public AdaptiveStreamTemplate [] getStreamInfos() {
         return this.StreamInfos;
     }
 
     /**
-     * Set 自适应转码输入流参数信息，最多输入10路流。
-     * @param StreamInfos 自适应转码输入流参数信息，最多输入10路流。
+     * Set <p>自适应转码输入流参数信息，最多输入10路流。</p>
+     * @param StreamInfos <p>自适应转码输入流参数信息，最多输入10路流。</p>
      */
     public void setStreamInfos(AdaptiveStreamTemplate [] StreamInfos) {
         this.StreamInfos = StreamInfos;
     }
 
     /**
-     * Get 是否禁止视频低码率转高码率，取值范围：
-<li>0：否，</li>
-<li>1：是。</li> 
-     * @return DisableHigherVideoBitrate 是否禁止视频低码率转高码率，取值范围：
-<li>0：否，</li>
-<li>1：是。</li>
+     * Get <p>是否禁止视频低码率转高码率，取值范围：</p><li>0：否，</li><li>1：是。</li> 
+     * @return DisableHigherVideoBitrate <p>是否禁止视频低码率转高码率，取值范围：</p><li>0：否，</li><li>1：是。</li>
      */
     public Long getDisableHigherVideoBitrate() {
         return this.DisableHigherVideoBitrate;
     }
 
     /**
-     * Set 是否禁止视频低码率转高码率，取值范围：
-<li>0：否，</li>
-<li>1：是。</li>
-     * @param DisableHigherVideoBitrate 是否禁止视频低码率转高码率，取值范围：
-<li>0：否，</li>
-<li>1：是。</li>
+     * Set <p>是否禁止视频低码率转高码率，取值范围：</p><li>0：否，</li><li>1：是。</li>
+     * @param DisableHigherVideoBitrate <p>是否禁止视频低码率转高码率，取值范围：</p><li>0：否，</li><li>1：是。</li>
      */
     public void setDisableHigherVideoBitrate(Long DisableHigherVideoBitrate) {
         this.DisableHigherVideoBitrate = DisableHigherVideoBitrate;
     }
 
     /**
-     * Get 是否禁止视频分辨率转高分辨率，取值范围：
-<li>0：否，</li>
-<li>1：是。</li> 
-     * @return DisableHigherVideoResolution 是否禁止视频分辨率转高分辨率，取值范围：
-<li>0：否，</li>
-<li>1：是。</li>
+     * Get <p>是否禁止视频分辨率转高分辨率，取值范围：</p><li>0：否，</li><li>1：是。</li> 
+     * @return DisableHigherVideoResolution <p>是否禁止视频分辨率转高分辨率，取值范围：</p><li>0：否，</li><li>1：是。</li>
      */
     public Long getDisableHigherVideoResolution() {
         return this.DisableHigherVideoResolution;
     }
 
     /**
-     * Set 是否禁止视频分辨率转高分辨率，取值范围：
-<li>0：否，</li>
-<li>1：是。</li>
-     * @param DisableHigherVideoResolution 是否禁止视频分辨率转高分辨率，取值范围：
-<li>0：否，</li>
-<li>1：是。</li>
+     * Set <p>是否禁止视频分辨率转高分辨率，取值范围：</p><li>0：否，</li><li>1：是。</li>
+     * @param DisableHigherVideoResolution <p>是否禁止视频分辨率转高分辨率，取值范围：</p><li>0：否，</li><li>1：是。</li>
      */
     public void setDisableHigherVideoResolution(Long DisableHigherVideoResolution) {
         this.DisableHigherVideoResolution = DisableHigherVideoResolution;
     }
 
     /**
-     * Get 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。 
-     * @return CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Get <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p> 
+     * @return CreateTime <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
-     * @param CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Set <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+     * @param CreateTime <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。 
-     * @return UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Get <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p> 
+     * @return UpdateTime <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
-     * @param UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Set <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+     * @param UpdateTime <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 切片类型，仅当 Format 为 HLS 时有效。 
-     * @return SegmentType 切片类型，仅当 Format 为 HLS 时有效。
+     * Get <p>切片类型，仅当 Format 为 HLS 时有效。</p> 
+     * @return SegmentType <p>切片类型，仅当 Format 为 HLS 时有效。</p>
      */
     public String getSegmentType() {
         return this.SegmentType;
     }
 
     /**
-     * Set 切片类型，仅当 Format 为 HLS 时有效。
-     * @param SegmentType 切片类型，仅当 Format 为 HLS 时有效。
+     * Set <p>切片类型，仅当 Format 为 HLS 时有效。</p>
+     * @param SegmentType <p>切片类型，仅当 Format 为 HLS 时有效。</p>
      */
     public void setSegmentType(String SegmentType) {
         this.SegmentType = SegmentType;
@@ -420,6 +373,9 @@ public class AdaptiveDynamicStreamingTemplate extends AbstractModel {
         }
         if (source.DrmKeyProvider != null) {
             this.DrmKeyProvider = new String(source.DrmKeyProvider);
+        }
+        if (source.DrmEncryptType != null) {
+            this.DrmEncryptType = new String(source.DrmEncryptType);
         }
         if (source.StreamInfos != null) {
             this.StreamInfos = new AdaptiveStreamTemplate[source.StreamInfos.length];
@@ -456,6 +412,7 @@ public class AdaptiveDynamicStreamingTemplate extends AbstractModel {
         this.setParamSimple(map, prefix + "Format", this.Format);
         this.setParamSimple(map, prefix + "DrmType", this.DrmType);
         this.setParamSimple(map, prefix + "DrmKeyProvider", this.DrmKeyProvider);
+        this.setParamSimple(map, prefix + "DrmEncryptType", this.DrmEncryptType);
         this.setParamArrayObj(map, prefix + "StreamInfos.", this.StreamInfos);
         this.setParamSimple(map, prefix + "DisableHigherVideoBitrate", this.DisableHigherVideoBitrate);
         this.setParamSimple(map, prefix + "DisableHigherVideoResolution", this.DisableHigherVideoResolution);

@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class InputInfo extends AbstractModel {
 
     /**
-    * 传入的类型可选：URL，COS
+    * <p>传入的类型可选：URL，COS</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Url地址
+    * <p>Url地址</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 桶信息。当输入当时COS时，该字段不为空
+    * <p>桶信息。当输入当时COS时，该字段不为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BucketInfo")
@@ -46,41 +46,55 @@ public class InputInfo extends AbstractModel {
     private String BucketInfo;
 
     /**
-     * Get 传入的类型可选：URL，COS 
-     * @return Type 传入的类型可选：URL，COS
+    * <p>大模型审核可选输入图片列表</p>
+    */
+    @SerializedName("ImageUrlList")
+    @Expose
+    private String [] ImageUrlList;
+
+    /**
+    * <p>大模型审核场景下，base64编码的审核要求内容</p>
+    */
+    @SerializedName("TextContent")
+    @Expose
+    private String TextContent;
+
+    /**
+     * Get <p>传入的类型可选：URL，COS</p> 
+     * @return Type <p>传入的类型可选：URL，COS</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 传入的类型可选：URL，COS
-     * @param Type 传入的类型可选：URL，COS
+     * Set <p>传入的类型可选：URL，COS</p>
+     * @param Type <p>传入的类型可选：URL，COS</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Url地址 
-     * @return Url Url地址
+     * Get <p>Url地址</p> 
+     * @return Url <p>Url地址</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Url地址
-     * @param Url Url地址
+     * Set <p>Url地址</p>
+     * @param Url <p>Url地址</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get 桶信息。当输入当时COS时，该字段不为空
+     * Get <p>桶信息。当输入当时COS时，该字段不为空</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BucketInfo 桶信息。当输入当时COS时，该字段不为空
+     * @return BucketInfo <p>桶信息。当输入当时COS时，该字段不为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBucketInfo() {
@@ -88,13 +102,45 @@ public class InputInfo extends AbstractModel {
     }
 
     /**
-     * Set 桶信息。当输入当时COS时，该字段不为空
+     * Set <p>桶信息。当输入当时COS时，该字段不为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BucketInfo 桶信息。当输入当时COS时，该字段不为空
+     * @param BucketInfo <p>桶信息。当输入当时COS时，该字段不为空</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBucketInfo(String BucketInfo) {
         this.BucketInfo = BucketInfo;
+    }
+
+    /**
+     * Get <p>大模型审核可选输入图片列表</p> 
+     * @return ImageUrlList <p>大模型审核可选输入图片列表</p>
+     */
+    public String [] getImageUrlList() {
+        return this.ImageUrlList;
+    }
+
+    /**
+     * Set <p>大模型审核可选输入图片列表</p>
+     * @param ImageUrlList <p>大模型审核可选输入图片列表</p>
+     */
+    public void setImageUrlList(String [] ImageUrlList) {
+        this.ImageUrlList = ImageUrlList;
+    }
+
+    /**
+     * Get <p>大模型审核场景下，base64编码的审核要求内容</p> 
+     * @return TextContent <p>大模型审核场景下，base64编码的审核要求内容</p>
+     */
+    public String getTextContent() {
+        return this.TextContent;
+    }
+
+    /**
+     * Set <p>大模型审核场景下，base64编码的审核要求内容</p>
+     * @param TextContent <p>大模型审核场景下，base64编码的审核要求内容</p>
+     */
+    public void setTextContent(String TextContent) {
+        this.TextContent = TextContent;
     }
 
     public InputInfo() {
@@ -114,6 +160,15 @@ public class InputInfo extends AbstractModel {
         if (source.BucketInfo != null) {
             this.BucketInfo = new String(source.BucketInfo);
         }
+        if (source.ImageUrlList != null) {
+            this.ImageUrlList = new String[source.ImageUrlList.length];
+            for (int i = 0; i < source.ImageUrlList.length; i++) {
+                this.ImageUrlList[i] = new String(source.ImageUrlList[i]);
+            }
+        }
+        if (source.TextContent != null) {
+            this.TextContent = new String(source.TextContent);
+        }
     }
 
 
@@ -124,6 +179,8 @@ public class InputInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "BucketInfo", this.BucketInfo);
+        this.setParamArraySimple(map, prefix + "ImageUrlList.", this.ImageUrlList);
+        this.setParamSimple(map, prefix + "TextContent", this.TextContent);
 
     }
 }

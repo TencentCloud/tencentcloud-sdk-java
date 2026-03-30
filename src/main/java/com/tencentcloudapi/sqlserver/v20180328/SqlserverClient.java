@@ -83,6 +83,17 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *关闭日志
+     * @param req CloseLogRequest
+     * @return CloseLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloseLogResponse CloseLog(CloseLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CloseLog", CloseLogResponse.class);
+    }
+
+    /**
      *本接口（CompleteExpansion）在实例发起扩容后，实例状态处于“升级待切换”时，可立即完成实例升级切换操作，无需等待可维护时间窗。本接口需要在实例低峰时调用，在完全切换成功前，存在部分库不可访问的风险。
      * @param req CompleteExpansionRequest
      * @return CompleteExpansionResponse
@@ -215,6 +226,17 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *创建日志下载任务
+     * @param req CreateExportTaskRequest
+     * @return CreateExportTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateExportTaskResponse CreateExportTask(CreateExportTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateExportTask", CreateExportTaskResponse.class);
+    }
+
+    /**
      *本接口（CreateIncrementalMigration）用于创建增量备份导入任务。
      * @param req CreateIncrementalMigrationRequest
      * @return CreateIncrementalMigrationResponse
@@ -322,6 +344,17 @@ public class SqlserverClient extends AbstractClient{
     public DeleteDBInstanceResponse DeleteDBInstance(DeleteDBInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteDBInstance", DeleteDBInstanceResponse.class);
+    }
+
+    /**
+     *删除日志下载任务
+     * @param req DeleteExportTaskRequest
+     * @return DeleteExportTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteExportTaskResponse DeleteExportTask(DeleteExportTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteExportTask", DeleteExportTaskResponse.class);
     }
 
     /**
@@ -677,6 +710,17 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *查询日志下载任务
+     * @param req DescribeExportTasksRequest
+     * @return DescribeExportTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExportTasksResponse DescribeExportTasks(DescribeExportTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeExportTasks", DescribeExportTasksResponse.class);
+    }
+
+    /**
      *本接口(DescribeFlowStatus)用于查询流程状态。
      * @param req DescribeFlowStatusRequest
      * @return DescribeFlowStatusResponse
@@ -773,6 +817,28 @@ public class SqlserverClient extends AbstractClient{
     public DescribeInstanceTradeParameterResponse DescribeInstanceTradeParameter(DescribeInstanceTradeParameterRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeInstanceTradeParameter", DescribeInstanceTradeParameterResponse.class);
+    }
+
+    /**
+     *日志实例列表查询
+     * @param req DescribeLogInstanceListRequest
+     * @return DescribeLogInstanceListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLogInstanceListResponse DescribeLogInstanceList(DescribeLogInstanceListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLogInstanceList", DescribeLogInstanceListResponse.class);
+    }
+
+    /**
+     *查询日志
+     * @param req DescribeLogsRequest
+     * @return DescribeLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLogsResponse DescribeLogs(DescribeLogsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLogs", DescribeLogsResponse.class);
     }
 
     /**
@@ -1383,6 +1449,17 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *修改日志
+     * @param req ModifyLogRequest
+     * @return ModifyLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLogResponse ModifyLog(ModifyLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLog", ModifyLogResponse.class);
+    }
+
+    /**
      *本接口（ModifyMaintenanceSpan）用于修改实例的可维护时间窗
      * @param req ModifyMaintenanceSpanRequest
      * @return ModifyMaintenanceSpanResponse
@@ -1457,6 +1534,17 @@ public class SqlserverClient extends AbstractClient{
     public OpenInterCommunicationResponse OpenInterCommunication(OpenInterCommunicationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "OpenInterCommunication", OpenInterCommunicationResponse.class);
+    }
+
+    /**
+     *开启审计日志
+     * @param req OpenLogRequest
+     * @return OpenLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenLogResponse OpenLog(OpenLogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "OpenLog", OpenLogResponse.class);
     }
 
     /**

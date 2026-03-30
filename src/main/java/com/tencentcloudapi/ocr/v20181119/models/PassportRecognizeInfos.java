@@ -24,355 +24,348 @@ import java.util.HashMap;
 public class PassportRecognizeInfos extends AbstractModel {
 
     /**
-    * 证件类型（护照信息页识别结果）
+    * <p>证件类型（护照信息页识别结果）</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 发行国家（护照信息页识别结果）
+    * <p>发行国家（护照信息页识别结果）</p>
     */
     @SerializedName("IssuingCountry")
     @Expose
     private String IssuingCountry;
 
     /**
-    * 护照号码（护照信息页识别结果）
+    * <p>护照号码（护照信息页识别结果）</p>
     */
     @SerializedName("PassportID")
     @Expose
     private String PassportID;
 
     /**
-    * 姓（护照信息页识别结果）
+    * <p>姓（护照信息页识别结果）</p>
     */
     @SerializedName("Surname")
     @Expose
     private String Surname;
 
     /**
-    * 名（护照信息页识别结果）
+    * <p>名（护照信息页识别结果）</p>
     */
     @SerializedName("GivenName")
     @Expose
     private String GivenName;
 
     /**
-    * 姓名（护照信息页识别结果）
+    * <p>姓名（护照信息页识别结果）</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 国籍信息（护照信息页识别结果）
+    * <p>国籍信息（护照信息页识别结果）</p>
     */
     @SerializedName("Nationality")
     @Expose
     private String Nationality;
 
     /**
-    * 出生日期（护照信息页识别结果）
+    * <p>出生日期（护照信息页识别结果）</p>
     */
     @SerializedName("DateOfBirth")
     @Expose
     private String DateOfBirth;
 
     /**
-    * 性别（护照信息页识别结果）
+    * <p>性别（护照信息页识别结果）</p>
     */
     @SerializedName("Sex")
     @Expose
     private String Sex;
 
     /**
-    * 发行日期（护照信息页识别结果）
+    * <p>发行日期（护照信息页识别结果）</p>
     */
     @SerializedName("DateOfIssuance")
     @Expose
     private String DateOfIssuance;
 
     /**
-    * 截止日期（护照信息页识别结果）
+    * <p>截止日期（护照信息页识别结果）</p>
     */
     @SerializedName("DateOfExpiration")
     @Expose
     private String DateOfExpiration;
 
     /**
-    * 持证人签名（护照信息页识别结果）
-
-仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
+    * <p>持证人签名（护照信息页识别结果）</p><p>仅中国大陆护照支持返回此字段，港澳台及境外护照不支持</p>
     */
     @SerializedName("Signature")
     @Expose
     private String Signature;
 
     /**
-    * 签发地点（护照信息页识别结果）
-
-仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
+    * <p>签发地点（护照信息页识别结果）</p><p>仅中国大陆护照支持返回此字段，港澳台及境外护照不支持</p>
     */
     @SerializedName("IssuePlace")
     @Expose
     private String IssuePlace;
 
     /**
-    * 签发机关（护照信息页识别结果）
-
-仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
+    * <p>签发机关（护照信息页识别结果）</p><p>仅中国大陆护照支持返回此字段，港澳台及境外护照不支持</p>
     */
     @SerializedName("IssuingAuthority")
     @Expose
     private String IssuingAuthority;
 
     /**
-     * Get 证件类型（护照信息页识别结果） 
-     * @return Type 证件类型（护照信息页识别结果）
+    * <p>出生地（护照信息页识别结果）</p>
+    */
+    @SerializedName("BirthPlace")
+    @Expose
+    private String BirthPlace;
+
+    /**
+     * Get <p>证件类型（护照信息页识别结果）</p> 
+     * @return Type <p>证件类型（护照信息页识别结果）</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 证件类型（护照信息页识别结果）
-     * @param Type 证件类型（护照信息页识别结果）
+     * Set <p>证件类型（护照信息页识别结果）</p>
+     * @param Type <p>证件类型（护照信息页识别结果）</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 发行国家（护照信息页识别结果） 
-     * @return IssuingCountry 发行国家（护照信息页识别结果）
+     * Get <p>发行国家（护照信息页识别结果）</p> 
+     * @return IssuingCountry <p>发行国家（护照信息页识别结果）</p>
      */
     public String getIssuingCountry() {
         return this.IssuingCountry;
     }
 
     /**
-     * Set 发行国家（护照信息页识别结果）
-     * @param IssuingCountry 发行国家（护照信息页识别结果）
+     * Set <p>发行国家（护照信息页识别结果）</p>
+     * @param IssuingCountry <p>发行国家（护照信息页识别结果）</p>
      */
     public void setIssuingCountry(String IssuingCountry) {
         this.IssuingCountry = IssuingCountry;
     }
 
     /**
-     * Get 护照号码（护照信息页识别结果） 
-     * @return PassportID 护照号码（护照信息页识别结果）
+     * Get <p>护照号码（护照信息页识别结果）</p> 
+     * @return PassportID <p>护照号码（护照信息页识别结果）</p>
      */
     public String getPassportID() {
         return this.PassportID;
     }
 
     /**
-     * Set 护照号码（护照信息页识别结果）
-     * @param PassportID 护照号码（护照信息页识别结果）
+     * Set <p>护照号码（护照信息页识别结果）</p>
+     * @param PassportID <p>护照号码（护照信息页识别结果）</p>
      */
     public void setPassportID(String PassportID) {
         this.PassportID = PassportID;
     }
 
     /**
-     * Get 姓（护照信息页识别结果） 
-     * @return Surname 姓（护照信息页识别结果）
+     * Get <p>姓（护照信息页识别结果）</p> 
+     * @return Surname <p>姓（护照信息页识别结果）</p>
      */
     public String getSurname() {
         return this.Surname;
     }
 
     /**
-     * Set 姓（护照信息页识别结果）
-     * @param Surname 姓（护照信息页识别结果）
+     * Set <p>姓（护照信息页识别结果）</p>
+     * @param Surname <p>姓（护照信息页识别结果）</p>
      */
     public void setSurname(String Surname) {
         this.Surname = Surname;
     }
 
     /**
-     * Get 名（护照信息页识别结果） 
-     * @return GivenName 名（护照信息页识别结果）
+     * Get <p>名（护照信息页识别结果）</p> 
+     * @return GivenName <p>名（护照信息页识别结果）</p>
      */
     public String getGivenName() {
         return this.GivenName;
     }
 
     /**
-     * Set 名（护照信息页识别结果）
-     * @param GivenName 名（护照信息页识别结果）
+     * Set <p>名（护照信息页识别结果）</p>
+     * @param GivenName <p>名（护照信息页识别结果）</p>
      */
     public void setGivenName(String GivenName) {
         this.GivenName = GivenName;
     }
 
     /**
-     * Get 姓名（护照信息页识别结果） 
-     * @return Name 姓名（护照信息页识别结果）
+     * Get <p>姓名（护照信息页识别结果）</p> 
+     * @return Name <p>姓名（护照信息页识别结果）</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 姓名（护照信息页识别结果）
-     * @param Name 姓名（护照信息页识别结果）
+     * Set <p>姓名（护照信息页识别结果）</p>
+     * @param Name <p>姓名（护照信息页识别结果）</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 国籍信息（护照信息页识别结果） 
-     * @return Nationality 国籍信息（护照信息页识别结果）
+     * Get <p>国籍信息（护照信息页识别结果）</p> 
+     * @return Nationality <p>国籍信息（护照信息页识别结果）</p>
      */
     public String getNationality() {
         return this.Nationality;
     }
 
     /**
-     * Set 国籍信息（护照信息页识别结果）
-     * @param Nationality 国籍信息（护照信息页识别结果）
+     * Set <p>国籍信息（护照信息页识别结果）</p>
+     * @param Nationality <p>国籍信息（护照信息页识别结果）</p>
      */
     public void setNationality(String Nationality) {
         this.Nationality = Nationality;
     }
 
     /**
-     * Get 出生日期（护照信息页识别结果） 
-     * @return DateOfBirth 出生日期（护照信息页识别结果）
+     * Get <p>出生日期（护照信息页识别结果）</p> 
+     * @return DateOfBirth <p>出生日期（护照信息页识别结果）</p>
      */
     public String getDateOfBirth() {
         return this.DateOfBirth;
     }
 
     /**
-     * Set 出生日期（护照信息页识别结果）
-     * @param DateOfBirth 出生日期（护照信息页识别结果）
+     * Set <p>出生日期（护照信息页识别结果）</p>
+     * @param DateOfBirth <p>出生日期（护照信息页识别结果）</p>
      */
     public void setDateOfBirth(String DateOfBirth) {
         this.DateOfBirth = DateOfBirth;
     }
 
     /**
-     * Get 性别（护照信息页识别结果） 
-     * @return Sex 性别（护照信息页识别结果）
+     * Get <p>性别（护照信息页识别结果）</p> 
+     * @return Sex <p>性别（护照信息页识别结果）</p>
      */
     public String getSex() {
         return this.Sex;
     }
 
     /**
-     * Set 性别（护照信息页识别结果）
-     * @param Sex 性别（护照信息页识别结果）
+     * Set <p>性别（护照信息页识别结果）</p>
+     * @param Sex <p>性别（护照信息页识别结果）</p>
      */
     public void setSex(String Sex) {
         this.Sex = Sex;
     }
 
     /**
-     * Get 发行日期（护照信息页识别结果） 
-     * @return DateOfIssuance 发行日期（护照信息页识别结果）
+     * Get <p>发行日期（护照信息页识别结果）</p> 
+     * @return DateOfIssuance <p>发行日期（护照信息页识别结果）</p>
      */
     public String getDateOfIssuance() {
         return this.DateOfIssuance;
     }
 
     /**
-     * Set 发行日期（护照信息页识别结果）
-     * @param DateOfIssuance 发行日期（护照信息页识别结果）
+     * Set <p>发行日期（护照信息页识别结果）</p>
+     * @param DateOfIssuance <p>发行日期（护照信息页识别结果）</p>
      */
     public void setDateOfIssuance(String DateOfIssuance) {
         this.DateOfIssuance = DateOfIssuance;
     }
 
     /**
-     * Get 截止日期（护照信息页识别结果） 
-     * @return DateOfExpiration 截止日期（护照信息页识别结果）
+     * Get <p>截止日期（护照信息页识别结果）</p> 
+     * @return DateOfExpiration <p>截止日期（护照信息页识别结果）</p>
      */
     public String getDateOfExpiration() {
         return this.DateOfExpiration;
     }
 
     /**
-     * Set 截止日期（护照信息页识别结果）
-     * @param DateOfExpiration 截止日期（护照信息页识别结果）
+     * Set <p>截止日期（护照信息页识别结果）</p>
+     * @param DateOfExpiration <p>截止日期（护照信息页识别结果）</p>
      */
     public void setDateOfExpiration(String DateOfExpiration) {
         this.DateOfExpiration = DateOfExpiration;
     }
 
     /**
-     * Get 持证人签名（护照信息页识别结果）
-
-仅中国大陆护照支持返回此字段，港澳台及境外护照不支持 
-     * @return Signature 持证人签名（护照信息页识别结果）
-
-仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
+     * Get <p>持证人签名（护照信息页识别结果）</p><p>仅中国大陆护照支持返回此字段，港澳台及境外护照不支持</p> 
+     * @return Signature <p>持证人签名（护照信息页识别结果）</p><p>仅中国大陆护照支持返回此字段，港澳台及境外护照不支持</p>
      */
     public String getSignature() {
         return this.Signature;
     }
 
     /**
-     * Set 持证人签名（护照信息页识别结果）
-
-仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
-     * @param Signature 持证人签名（护照信息页识别结果）
-
-仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
+     * Set <p>持证人签名（护照信息页识别结果）</p><p>仅中国大陆护照支持返回此字段，港澳台及境外护照不支持</p>
+     * @param Signature <p>持证人签名（护照信息页识别结果）</p><p>仅中国大陆护照支持返回此字段，港澳台及境外护照不支持</p>
      */
     public void setSignature(String Signature) {
         this.Signature = Signature;
     }
 
     /**
-     * Get 签发地点（护照信息页识别结果）
-
-仅中国大陆护照支持返回此字段，港澳台及境外护照不支持 
-     * @return IssuePlace 签发地点（护照信息页识别结果）
-
-仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
+     * Get <p>签发地点（护照信息页识别结果）</p><p>仅中国大陆护照支持返回此字段，港澳台及境外护照不支持</p> 
+     * @return IssuePlace <p>签发地点（护照信息页识别结果）</p><p>仅中国大陆护照支持返回此字段，港澳台及境外护照不支持</p>
      */
     public String getIssuePlace() {
         return this.IssuePlace;
     }
 
     /**
-     * Set 签发地点（护照信息页识别结果）
-
-仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
-     * @param IssuePlace 签发地点（护照信息页识别结果）
-
-仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
+     * Set <p>签发地点（护照信息页识别结果）</p><p>仅中国大陆护照支持返回此字段，港澳台及境外护照不支持</p>
+     * @param IssuePlace <p>签发地点（护照信息页识别结果）</p><p>仅中国大陆护照支持返回此字段，港澳台及境外护照不支持</p>
      */
     public void setIssuePlace(String IssuePlace) {
         this.IssuePlace = IssuePlace;
     }
 
     /**
-     * Get 签发机关（护照信息页识别结果）
-
-仅中国大陆护照支持返回此字段，港澳台及境外护照不支持 
-     * @return IssuingAuthority 签发机关（护照信息页识别结果）
-
-仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
+     * Get <p>签发机关（护照信息页识别结果）</p><p>仅中国大陆护照支持返回此字段，港澳台及境外护照不支持</p> 
+     * @return IssuingAuthority <p>签发机关（护照信息页识别结果）</p><p>仅中国大陆护照支持返回此字段，港澳台及境外护照不支持</p>
      */
     public String getIssuingAuthority() {
         return this.IssuingAuthority;
     }
 
     /**
-     * Set 签发机关（护照信息页识别结果）
-
-仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
-     * @param IssuingAuthority 签发机关（护照信息页识别结果）
-
-仅中国大陆护照支持返回此字段，港澳台及境外护照不支持
+     * Set <p>签发机关（护照信息页识别结果）</p><p>仅中国大陆护照支持返回此字段，港澳台及境外护照不支持</p>
+     * @param IssuingAuthority <p>签发机关（护照信息页识别结果）</p><p>仅中国大陆护照支持返回此字段，港澳台及境外护照不支持</p>
      */
     public void setIssuingAuthority(String IssuingAuthority) {
         this.IssuingAuthority = IssuingAuthority;
+    }
+
+    /**
+     * Get <p>出生地（护照信息页识别结果）</p> 
+     * @return BirthPlace <p>出生地（护照信息页识别结果）</p>
+     */
+    public String getBirthPlace() {
+        return this.BirthPlace;
+    }
+
+    /**
+     * Set <p>出生地（护照信息页识别结果）</p>
+     * @param BirthPlace <p>出生地（护照信息页识别结果）</p>
+     */
+    public void setBirthPlace(String BirthPlace) {
+        this.BirthPlace = BirthPlace;
     }
 
     public PassportRecognizeInfos() {
@@ -425,6 +418,9 @@ public class PassportRecognizeInfos extends AbstractModel {
         if (source.IssuingAuthority != null) {
             this.IssuingAuthority = new String(source.IssuingAuthority);
         }
+        if (source.BirthPlace != null) {
+            this.BirthPlace = new String(source.BirthPlace);
+        }
     }
 
 
@@ -446,6 +442,7 @@ public class PassportRecognizeInfos extends AbstractModel {
         this.setParamSimple(map, prefix + "Signature", this.Signature);
         this.setParamSimple(map, prefix + "IssuePlace", this.IssuePlace);
         this.setParamSimple(map, prefix + "IssuingAuthority", this.IssuingAuthority);
+        this.setParamSimple(map, prefix + "BirthPlace", this.BirthPlace);
 
     }
 }

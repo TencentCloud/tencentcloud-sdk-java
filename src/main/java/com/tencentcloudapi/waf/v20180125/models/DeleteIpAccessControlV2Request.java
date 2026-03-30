@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteIpAccessControlV2Request extends AbstractModel {
 
     /**
-    * 域名
+    * 域名，当操作对象为全局规则时，Domain参数应填写为"global"
     */
     @SerializedName("Domain")
     @Expose
@@ -45,7 +45,7 @@ public class DeleteIpAccessControlV2Request extends AbstractModel {
     private Boolean DeleteAll;
 
     /**
-    * batch表示为批量防护的IP黑白名单
+    * 用于按数据来源删除黑白名单记录，非必填，默认为custom。 custom（自定义），用户在控制台手动添加的黑白名单规则 cc（CC 防护	），由 CC 防护模块自动添加的 IP 黑白名单 bot（Bot 防护），由 Bot 防护模块自动添加的 IP 黑白名单 batch（批量域名防护），批量域名维度添加的黑白名单规则
     */
     @SerializedName("SourceType")
     @Expose
@@ -59,16 +59,16 @@ public class DeleteIpAccessControlV2Request extends AbstractModel {
     private Long ActionType;
 
     /**
-     * Get 域名 
-     * @return Domain 域名
+     * Get 域名，当操作对象为全局规则时，Domain参数应填写为"global" 
+     * @return Domain 域名，当操作对象为全局规则时，Domain参数应填写为"global"
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 域名
-     * @param Domain 域名
+     * Set 域名，当操作对象为全局规则时，Domain参数应填写为"global"
+     * @param Domain 域名，当操作对象为全局规则时，Domain参数应填写为"global"
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
@@ -107,16 +107,16 @@ public class DeleteIpAccessControlV2Request extends AbstractModel {
     }
 
     /**
-     * Get batch表示为批量防护的IP黑白名单 
-     * @return SourceType batch表示为批量防护的IP黑白名单
+     * Get 用于按数据来源删除黑白名单记录，非必填，默认为custom。 custom（自定义），用户在控制台手动添加的黑白名单规则 cc（CC 防护	），由 CC 防护模块自动添加的 IP 黑白名单 bot（Bot 防护），由 Bot 防护模块自动添加的 IP 黑白名单 batch（批量域名防护），批量域名维度添加的黑白名单规则 
+     * @return SourceType 用于按数据来源删除黑白名单记录，非必填，默认为custom。 custom（自定义），用户在控制台手动添加的黑白名单规则 cc（CC 防护	），由 CC 防护模块自动添加的 IP 黑白名单 bot（Bot 防护），由 Bot 防护模块自动添加的 IP 黑白名单 batch（批量域名防护），批量域名维度添加的黑白名单规则
      */
     public String getSourceType() {
         return this.SourceType;
     }
 
     /**
-     * Set batch表示为批量防护的IP黑白名单
-     * @param SourceType batch表示为批量防护的IP黑白名单
+     * Set 用于按数据来源删除黑白名单记录，非必填，默认为custom。 custom（自定义），用户在控制台手动添加的黑白名单规则 cc（CC 防护	），由 CC 防护模块自动添加的 IP 黑白名单 bot（Bot 防护），由 Bot 防护模块自动添加的 IP 黑白名单 batch（批量域名防护），批量域名维度添加的黑白名单规则
+     * @param SourceType 用于按数据来源删除黑白名单记录，非必填，默认为custom。 custom（自定义），用户在控制台手动添加的黑白名单规则 cc（CC 防护	），由 CC 防护模块自动添加的 IP 黑白名单 bot（Bot 防护），由 Bot 防护模块自动添加的 IP 黑白名单 batch（批量域名防护），批量域名维度添加的黑白名单规则
      */
     public void setSourceType(String SourceType) {
         this.SourceType = SourceType;

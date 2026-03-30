@@ -24,296 +24,279 @@ import java.util.HashMap;
 public class AdaptiveDynamicStreamingInfoItem extends AbstractModel {
 
     /**
-    * 转自适应码流规格。
+    * <p>转自适应码流规格。</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 打包格式，取值范围：
-<li>HLS；</li>
-<li>DASH。</li>
+    * <p>打包格式，取值范围：</p><li>HLS；</li><li>DASH。</li>
     */
     @SerializedName("Package")
     @Expose
     private String Package;
 
     /**
-    * 加密类型。
+    * <p>加密类型。</p>
     */
     @SerializedName("DrmType")
     @Expose
     private String DrmType;
 
     /**
-    * 播放地址。
+    * <p>播放地址。</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 媒体文件大小，单位：字节。
-<li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和；</li>
-<li>当媒体文件为 DASH 时，大小是 mpd 和分片文件大小的总和；</li>
-<li><font color=red>注意</font>：在 2022-01-10T16:00:00Z 前处理生成的自适应码流文件此字段为0。</li>
+    * <p>媒体文件大小，单位：字节。</p><li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和；</li><li>当媒体文件为 DASH 时，大小是 mpd 和分片文件大小的总和；</li><li><font color="red">注意</font>：在 2022-01-10T16:00:00Z 前处理生成的自适应码流文件此字段为0。</li>
     */
     @SerializedName("Size")
     @Expose
     private Long Size;
 
     /**
-    * 数字水印类型。可选值：
-<li>Trace 表示经过溯源水印处理；</li>
-<li>CopyRight 表示经过版权水印处理；</li>
-<li>None 表示没有经过数字水印处理。</li>
+    * <p>数字水印类型。可选值：</p><li>Trace 表示经过溯源水印处理；</li><li>CopyRight 表示经过版权水印处理；</li><li>None 表示没有经过数字水印处理。</li>
     */
     @SerializedName("DigitalWatermarkType")
     @Expose
     private String DigitalWatermarkType;
 
     /**
-    * 子流信息列表。
+    * <p>子流信息列表。</p>
     */
     @SerializedName("SubStreamSet")
     @Expose
     private MediaSubStreamInfoItem [] SubStreamSet;
 
     /**
-    * 版权信息。
+    * <p>版权信息。</p>
     */
     @SerializedName("CopyRightWatermarkText")
     @Expose
     private String CopyRightWatermarkText;
 
     /**
-    * 数字水印模板id。
+    * <p>数字水印模板id。</p>
     */
     @SerializedName("BlindWatermarkDefinition")
     @Expose
     private Long BlindWatermarkDefinition;
 
     /**
-    * 字幕信息列表。
+    * <p>字幕信息列表。</p>
     */
     @SerializedName("SubtitleSet")
     @Expose
     private MediaSubtitleItem [] SubtitleSet;
 
     /**
-    * 默认字幕的唯一标识。
+    * <p>默认字幕的唯一标识。</p>
     */
     @SerializedName("DefaultSubtitleId")
     @Expose
     private String DefaultSubtitleId;
 
     /**
-     * Get 转自适应码流规格。 
-     * @return Definition 转自适应码流规格。
+    * <p>DRM加密方法。</p>
+    */
+    @SerializedName("DrmEncryptType")
+    @Expose
+    private String DrmEncryptType;
+
+    /**
+     * Get <p>转自适应码流规格。</p> 
+     * @return Definition <p>转自适应码流规格。</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 转自适应码流规格。
-     * @param Definition 转自适应码流规格。
+     * Set <p>转自适应码流规格。</p>
+     * @param Definition <p>转自适应码流规格。</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get 打包格式，取值范围：
-<li>HLS；</li>
-<li>DASH。</li> 
-     * @return Package 打包格式，取值范围：
-<li>HLS；</li>
-<li>DASH。</li>
+     * Get <p>打包格式，取值范围：</p><li>HLS；</li><li>DASH。</li> 
+     * @return Package <p>打包格式，取值范围：</p><li>HLS；</li><li>DASH。</li>
      */
     public String getPackage() {
         return this.Package;
     }
 
     /**
-     * Set 打包格式，取值范围：
-<li>HLS；</li>
-<li>DASH。</li>
-     * @param Package 打包格式，取值范围：
-<li>HLS；</li>
-<li>DASH。</li>
+     * Set <p>打包格式，取值范围：</p><li>HLS；</li><li>DASH。</li>
+     * @param Package <p>打包格式，取值范围：</p><li>HLS；</li><li>DASH。</li>
      */
     public void setPackage(String Package) {
         this.Package = Package;
     }
 
     /**
-     * Get 加密类型。 
-     * @return DrmType 加密类型。
+     * Get <p>加密类型。</p> 
+     * @return DrmType <p>加密类型。</p>
      */
     public String getDrmType() {
         return this.DrmType;
     }
 
     /**
-     * Set 加密类型。
-     * @param DrmType 加密类型。
+     * Set <p>加密类型。</p>
+     * @param DrmType <p>加密类型。</p>
      */
     public void setDrmType(String DrmType) {
         this.DrmType = DrmType;
     }
 
     /**
-     * Get 播放地址。 
-     * @return Url 播放地址。
+     * Get <p>播放地址。</p> 
+     * @return Url <p>播放地址。</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 播放地址。
-     * @param Url 播放地址。
+     * Set <p>播放地址。</p>
+     * @param Url <p>播放地址。</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get 媒体文件大小，单位：字节。
-<li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和；</li>
-<li>当媒体文件为 DASH 时，大小是 mpd 和分片文件大小的总和；</li>
-<li><font color=red>注意</font>：在 2022-01-10T16:00:00Z 前处理生成的自适应码流文件此字段为0。</li> 
-     * @return Size 媒体文件大小，单位：字节。
-<li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和；</li>
-<li>当媒体文件为 DASH 时，大小是 mpd 和分片文件大小的总和；</li>
-<li><font color=red>注意</font>：在 2022-01-10T16:00:00Z 前处理生成的自适应码流文件此字段为0。</li>
+     * Get <p>媒体文件大小，单位：字节。</p><li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和；</li><li>当媒体文件为 DASH 时，大小是 mpd 和分片文件大小的总和；</li><li><font color="red">注意</font>：在 2022-01-10T16:00:00Z 前处理生成的自适应码流文件此字段为0。</li> 
+     * @return Size <p>媒体文件大小，单位：字节。</p><li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和；</li><li>当媒体文件为 DASH 时，大小是 mpd 和分片文件大小的总和；</li><li><font color="red">注意</font>：在 2022-01-10T16:00:00Z 前处理生成的自适应码流文件此字段为0。</li>
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set 媒体文件大小，单位：字节。
-<li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和；</li>
-<li>当媒体文件为 DASH 时，大小是 mpd 和分片文件大小的总和；</li>
-<li><font color=red>注意</font>：在 2022-01-10T16:00:00Z 前处理生成的自适应码流文件此字段为0。</li>
-     * @param Size 媒体文件大小，单位：字节。
-<li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和；</li>
-<li>当媒体文件为 DASH 时，大小是 mpd 和分片文件大小的总和；</li>
-<li><font color=red>注意</font>：在 2022-01-10T16:00:00Z 前处理生成的自适应码流文件此字段为0。</li>
+     * Set <p>媒体文件大小，单位：字节。</p><li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和；</li><li>当媒体文件为 DASH 时，大小是 mpd 和分片文件大小的总和；</li><li><font color="red">注意</font>：在 2022-01-10T16:00:00Z 前处理生成的自适应码流文件此字段为0。</li>
+     * @param Size <p>媒体文件大小，单位：字节。</p><li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和；</li><li>当媒体文件为 DASH 时，大小是 mpd 和分片文件大小的总和；</li><li><font color="red">注意</font>：在 2022-01-10T16:00:00Z 前处理生成的自适应码流文件此字段为0。</li>
      */
     public void setSize(Long Size) {
         this.Size = Size;
     }
 
     /**
-     * Get 数字水印类型。可选值：
-<li>Trace 表示经过溯源水印处理；</li>
-<li>CopyRight 表示经过版权水印处理；</li>
-<li>None 表示没有经过数字水印处理。</li> 
-     * @return DigitalWatermarkType 数字水印类型。可选值：
-<li>Trace 表示经过溯源水印处理；</li>
-<li>CopyRight 表示经过版权水印处理；</li>
-<li>None 表示没有经过数字水印处理。</li>
+     * Get <p>数字水印类型。可选值：</p><li>Trace 表示经过溯源水印处理；</li><li>CopyRight 表示经过版权水印处理；</li><li>None 表示没有经过数字水印处理。</li> 
+     * @return DigitalWatermarkType <p>数字水印类型。可选值：</p><li>Trace 表示经过溯源水印处理；</li><li>CopyRight 表示经过版权水印处理；</li><li>None 表示没有经过数字水印处理。</li>
      */
     public String getDigitalWatermarkType() {
         return this.DigitalWatermarkType;
     }
 
     /**
-     * Set 数字水印类型。可选值：
-<li>Trace 表示经过溯源水印处理；</li>
-<li>CopyRight 表示经过版权水印处理；</li>
-<li>None 表示没有经过数字水印处理。</li>
-     * @param DigitalWatermarkType 数字水印类型。可选值：
-<li>Trace 表示经过溯源水印处理；</li>
-<li>CopyRight 表示经过版权水印处理；</li>
-<li>None 表示没有经过数字水印处理。</li>
+     * Set <p>数字水印类型。可选值：</p><li>Trace 表示经过溯源水印处理；</li><li>CopyRight 表示经过版权水印处理；</li><li>None 表示没有经过数字水印处理。</li>
+     * @param DigitalWatermarkType <p>数字水印类型。可选值：</p><li>Trace 表示经过溯源水印处理；</li><li>CopyRight 表示经过版权水印处理；</li><li>None 表示没有经过数字水印处理。</li>
      */
     public void setDigitalWatermarkType(String DigitalWatermarkType) {
         this.DigitalWatermarkType = DigitalWatermarkType;
     }
 
     /**
-     * Get 子流信息列表。 
-     * @return SubStreamSet 子流信息列表。
+     * Get <p>子流信息列表。</p> 
+     * @return SubStreamSet <p>子流信息列表。</p>
      */
     public MediaSubStreamInfoItem [] getSubStreamSet() {
         return this.SubStreamSet;
     }
 
     /**
-     * Set 子流信息列表。
-     * @param SubStreamSet 子流信息列表。
+     * Set <p>子流信息列表。</p>
+     * @param SubStreamSet <p>子流信息列表。</p>
      */
     public void setSubStreamSet(MediaSubStreamInfoItem [] SubStreamSet) {
         this.SubStreamSet = SubStreamSet;
     }
 
     /**
-     * Get 版权信息。 
-     * @return CopyRightWatermarkText 版权信息。
+     * Get <p>版权信息。</p> 
+     * @return CopyRightWatermarkText <p>版权信息。</p>
      */
     public String getCopyRightWatermarkText() {
         return this.CopyRightWatermarkText;
     }
 
     /**
-     * Set 版权信息。
-     * @param CopyRightWatermarkText 版权信息。
+     * Set <p>版权信息。</p>
+     * @param CopyRightWatermarkText <p>版权信息。</p>
      */
     public void setCopyRightWatermarkText(String CopyRightWatermarkText) {
         this.CopyRightWatermarkText = CopyRightWatermarkText;
     }
 
     /**
-     * Get 数字水印模板id。 
-     * @return BlindWatermarkDefinition 数字水印模板id。
+     * Get <p>数字水印模板id。</p> 
+     * @return BlindWatermarkDefinition <p>数字水印模板id。</p>
      */
     public Long getBlindWatermarkDefinition() {
         return this.BlindWatermarkDefinition;
     }
 
     /**
-     * Set 数字水印模板id。
-     * @param BlindWatermarkDefinition 数字水印模板id。
+     * Set <p>数字水印模板id。</p>
+     * @param BlindWatermarkDefinition <p>数字水印模板id。</p>
      */
     public void setBlindWatermarkDefinition(Long BlindWatermarkDefinition) {
         this.BlindWatermarkDefinition = BlindWatermarkDefinition;
     }
 
     /**
-     * Get 字幕信息列表。 
-     * @return SubtitleSet 字幕信息列表。
+     * Get <p>字幕信息列表。</p> 
+     * @return SubtitleSet <p>字幕信息列表。</p>
      */
     public MediaSubtitleItem [] getSubtitleSet() {
         return this.SubtitleSet;
     }
 
     /**
-     * Set 字幕信息列表。
-     * @param SubtitleSet 字幕信息列表。
+     * Set <p>字幕信息列表。</p>
+     * @param SubtitleSet <p>字幕信息列表。</p>
      */
     public void setSubtitleSet(MediaSubtitleItem [] SubtitleSet) {
         this.SubtitleSet = SubtitleSet;
     }
 
     /**
-     * Get 默认字幕的唯一标识。 
-     * @return DefaultSubtitleId 默认字幕的唯一标识。
+     * Get <p>默认字幕的唯一标识。</p> 
+     * @return DefaultSubtitleId <p>默认字幕的唯一标识。</p>
      */
     public String getDefaultSubtitleId() {
         return this.DefaultSubtitleId;
     }
 
     /**
-     * Set 默认字幕的唯一标识。
-     * @param DefaultSubtitleId 默认字幕的唯一标识。
+     * Set <p>默认字幕的唯一标识。</p>
+     * @param DefaultSubtitleId <p>默认字幕的唯一标识。</p>
      */
     public void setDefaultSubtitleId(String DefaultSubtitleId) {
         this.DefaultSubtitleId = DefaultSubtitleId;
+    }
+
+    /**
+     * Get <p>DRM加密方法。</p> 
+     * @return DrmEncryptType <p>DRM加密方法。</p>
+     */
+    public String getDrmEncryptType() {
+        return this.DrmEncryptType;
+    }
+
+    /**
+     * Set <p>DRM加密方法。</p>
+     * @param DrmEncryptType <p>DRM加密方法。</p>
+     */
+    public void setDrmEncryptType(String DrmEncryptType) {
+        this.DrmEncryptType = DrmEncryptType;
     }
 
     public AdaptiveDynamicStreamingInfoItem() {
@@ -363,6 +346,9 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel {
         if (source.DefaultSubtitleId != null) {
             this.DefaultSubtitleId = new String(source.DefaultSubtitleId);
         }
+        if (source.DrmEncryptType != null) {
+            this.DrmEncryptType = new String(source.DrmEncryptType);
+        }
     }
 
 
@@ -381,6 +367,7 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel {
         this.setParamSimple(map, prefix + "BlindWatermarkDefinition", this.BlindWatermarkDefinition);
         this.setParamArrayObj(map, prefix + "SubtitleSet.", this.SubtitleSet);
         this.setParamSimple(map, prefix + "DefaultSubtitleId", this.DefaultSubtitleId);
+        this.setParamSimple(map, prefix + "DrmEncryptType", this.DrmEncryptType);
 
     }
 }

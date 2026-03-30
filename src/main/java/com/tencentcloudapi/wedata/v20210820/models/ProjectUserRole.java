@@ -136,6 +136,14 @@ public class ProjectUserRole extends AbstractModel {
     private Long Status;
 
     /**
+    * 0: 普通用户 1: entraId用户
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UserTag")
+    @Expose
+    private Long UserTag;
+
+    /**
      * Get 用户角色对象
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Roles 用户角色对象
@@ -415,6 +423,26 @@ public class ProjectUserRole extends AbstractModel {
         this.Status = Status;
     }
 
+    /**
+     * Get 0: 普通用户 1: entraId用户
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UserTag 0: 普通用户 1: entraId用户
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getUserTag() {
+        return this.UserTag;
+    }
+
+    /**
+     * Set 0: 普通用户 1: entraId用户
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UserTag 0: 普通用户 1: entraId用户
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUserTag(Long UserTag) {
+        this.UserTag = UserTag;
+    }
+
     public ProjectUserRole() {
     }
 
@@ -468,6 +496,9 @@ public class ProjectUserRole extends AbstractModel {
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.UserTag != null) {
+            this.UserTag = new Long(source.UserTag);
+        }
     }
 
 
@@ -489,6 +520,7 @@ public class ProjectUserRole extends AbstractModel {
         this.setParamSimple(map, prefix + "IsProjectOwner", this.IsProjectOwner);
         this.setParamSimple(map, prefix + "CreateTimestamp", this.CreateTimestamp);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "UserTag", this.UserTag);
 
     }
 }

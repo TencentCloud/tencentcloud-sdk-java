@@ -24,506 +24,529 @@ import java.util.HashMap;
 public class BackupInfo extends AbstractModel {
 
     /**
-    * 备份文件名
+    * <p>备份文件名</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 备份文件大小，单位：Byte
+    * <p>备份文件大小，单位：Byte</p>
     */
     @SerializedName("Size")
     @Expose
     private Long Size;
 
     /**
-    * 备份快照时间，时间格式：2016-03-17 02:10:37
+    * <p>备份快照时间，时间格式：2016-03-17 02:10:37</p>
     */
     @SerializedName("Date")
     @Expose
     private String Date;
 
     /**
-    * 下载地址
+    * <p>下载地址</p>
     */
     @SerializedName("IntranetUrl")
     @Expose
     private String IntranetUrl;
 
     /**
-    * 下载地址
+    * <p>下载地址</p>
     */
     @SerializedName("InternetUrl")
     @Expose
     private String InternetUrl;
 
     /**
-    * 日志具体类型。可能的值有 "logical": 逻辑冷备， "physical": 物理冷备。
+    * <p>日志具体类型。可能的值有 &quot;logical&quot;: 逻辑冷备， &quot;physical&quot;: 物理冷备。</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 备份子任务的ID，删除备份文件时使用
+    * <p>备份子任务的ID，删除备份文件时使用</p>
     */
     @SerializedName("BackupId")
     @Expose
     private Long BackupId;
 
     /**
-    * 备份任务状态。可能的值有 "SUCCESS": 备份成功， "FAILED": 备份失败， "RUNNING": 备份进行中。
+    * <p>备份任务状态。可能的值有 &quot;SUCCESS&quot;: 备份成功， &quot;FAILED&quot;: 备份失败， &quot;RUNNING&quot;: 备份进行中。</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 备份任务的完成时间
+    * <p>备份任务的完成时间</p>
     */
     @SerializedName("FinishTime")
     @Expose
     private String FinishTime;
 
     /**
-    * （该值将废弃，不建议使用）备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值。
+    * <p>（该值将废弃，不建议使用）备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值。</p>
     */
     @SerializedName("Creator")
     @Expose
     private String Creator;
 
     /**
-    * 备份任务的开始时间
+    * <p>备份任务的开始时间</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 备份方法。可能的值有 "full": 全量备份， "partial": 部分备份。
+    * <p>备份方法。可能的值有 &quot;full&quot;: 全量备份， &quot;partial&quot;: 部分备份。</p>
     */
     @SerializedName("Method")
     @Expose
     private String Method;
 
     /**
-    * 备份方式。可能的值有 "manual": 手动备份， "automatic": 自动备份。
+    * <p>备份方式。可能的值有 &quot;manual&quot;: 手动备份， &quot;automatic&quot;: 自动备份。</p>
     */
     @SerializedName("Way")
     @Expose
     private String Way;
 
     /**
-    * 手动备份别名
+    * <p>手动备份别名</p>
     */
     @SerializedName("ManualBackupName")
     @Expose
     private String ManualBackupName;
 
     /**
-    * 备份保留类型，save_mode_regular - 常规保存备份，save_mode_period - 定期保存备份
+    * <p>备份保留类型，save_mode_regular - 常规保存备份，save_mode_period - 定期保存备份</p>
     */
     @SerializedName("SaveMode")
     @Expose
     private String SaveMode;
 
     /**
-    * 本地备份所在地域
+    * <p>本地备份所在地域</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 异地备份详细信息
+    * <p>异地备份详细信息</p>
     */
     @SerializedName("RemoteInfo")
     @Expose
     private RemoteBackupInfo [] RemoteInfo;
 
     /**
-    * 存储方式，0-常规存储，1-归档存储，2-标准存储，默认为0
+    * <p>存储方式，0-常规存储，1-归档存储，2-标准存储，默认为0</p>
     */
     @SerializedName("CosStorageType")
     @Expose
     private Long CosStorageType;
 
     /**
-    * 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+    * <p>实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 备份文件是否加密， on-加密， off-未加密
+    * <p>备份完成进度</p>
+    */
+    @SerializedName("Progress")
+    @Expose
+    private Long Progress;
+
+    /**
+    * <p>备份文件是否加密， on-加密， off-未加密</p>
     */
     @SerializedName("EncryptionFlag")
     @Expose
     private String EncryptionFlag;
 
     /**
-    * 备份GTID点位
+    * <p>备份GTID点位</p>
     */
     @SerializedName("ExecutedGTIDSet")
     @Expose
     private String ExecutedGTIDSet;
 
     /**
-    * 备份文件MD5值
+    * <p>备份文件MD5值</p>
     */
     @SerializedName("MD5")
     @Expose
     private String MD5;
 
     /**
-     * Get 备份文件名 
-     * @return Name 备份文件名
+     * Get <p>备份文件名</p> 
+     * @return Name <p>备份文件名</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 备份文件名
-     * @param Name 备份文件名
+     * Set <p>备份文件名</p>
+     * @param Name <p>备份文件名</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 备份文件大小，单位：Byte 
-     * @return Size 备份文件大小，单位：Byte
+     * Get <p>备份文件大小，单位：Byte</p> 
+     * @return Size <p>备份文件大小，单位：Byte</p>
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set 备份文件大小，单位：Byte
-     * @param Size 备份文件大小，单位：Byte
+     * Set <p>备份文件大小，单位：Byte</p>
+     * @param Size <p>备份文件大小，单位：Byte</p>
      */
     public void setSize(Long Size) {
         this.Size = Size;
     }
 
     /**
-     * Get 备份快照时间，时间格式：2016-03-17 02:10:37 
-     * @return Date 备份快照时间，时间格式：2016-03-17 02:10:37
+     * Get <p>备份快照时间，时间格式：2016-03-17 02:10:37</p> 
+     * @return Date <p>备份快照时间，时间格式：2016-03-17 02:10:37</p>
      */
     public String getDate() {
         return this.Date;
     }
 
     /**
-     * Set 备份快照时间，时间格式：2016-03-17 02:10:37
-     * @param Date 备份快照时间，时间格式：2016-03-17 02:10:37
+     * Set <p>备份快照时间，时间格式：2016-03-17 02:10:37</p>
+     * @param Date <p>备份快照时间，时间格式：2016-03-17 02:10:37</p>
      */
     public void setDate(String Date) {
         this.Date = Date;
     }
 
     /**
-     * Get 下载地址 
-     * @return IntranetUrl 下载地址
+     * Get <p>下载地址</p> 
+     * @return IntranetUrl <p>下载地址</p>
      */
     public String getIntranetUrl() {
         return this.IntranetUrl;
     }
 
     /**
-     * Set 下载地址
-     * @param IntranetUrl 下载地址
+     * Set <p>下载地址</p>
+     * @param IntranetUrl <p>下载地址</p>
      */
     public void setIntranetUrl(String IntranetUrl) {
         this.IntranetUrl = IntranetUrl;
     }
 
     /**
-     * Get 下载地址 
-     * @return InternetUrl 下载地址
+     * Get <p>下载地址</p> 
+     * @return InternetUrl <p>下载地址</p>
      */
     public String getInternetUrl() {
         return this.InternetUrl;
     }
 
     /**
-     * Set 下载地址
-     * @param InternetUrl 下载地址
+     * Set <p>下载地址</p>
+     * @param InternetUrl <p>下载地址</p>
      */
     public void setInternetUrl(String InternetUrl) {
         this.InternetUrl = InternetUrl;
     }
 
     /**
-     * Get 日志具体类型。可能的值有 "logical": 逻辑冷备， "physical": 物理冷备。 
-     * @return Type 日志具体类型。可能的值有 "logical": 逻辑冷备， "physical": 物理冷备。
+     * Get <p>日志具体类型。可能的值有 &quot;logical&quot;: 逻辑冷备， &quot;physical&quot;: 物理冷备。</p> 
+     * @return Type <p>日志具体类型。可能的值有 &quot;logical&quot;: 逻辑冷备， &quot;physical&quot;: 物理冷备。</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 日志具体类型。可能的值有 "logical": 逻辑冷备， "physical": 物理冷备。
-     * @param Type 日志具体类型。可能的值有 "logical": 逻辑冷备， "physical": 物理冷备。
+     * Set <p>日志具体类型。可能的值有 &quot;logical&quot;: 逻辑冷备， &quot;physical&quot;: 物理冷备。</p>
+     * @param Type <p>日志具体类型。可能的值有 &quot;logical&quot;: 逻辑冷备， &quot;physical&quot;: 物理冷备。</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 备份子任务的ID，删除备份文件时使用 
-     * @return BackupId 备份子任务的ID，删除备份文件时使用
+     * Get <p>备份子任务的ID，删除备份文件时使用</p> 
+     * @return BackupId <p>备份子任务的ID，删除备份文件时使用</p>
      */
     public Long getBackupId() {
         return this.BackupId;
     }
 
     /**
-     * Set 备份子任务的ID，删除备份文件时使用
-     * @param BackupId 备份子任务的ID，删除备份文件时使用
+     * Set <p>备份子任务的ID，删除备份文件时使用</p>
+     * @param BackupId <p>备份子任务的ID，删除备份文件时使用</p>
      */
     public void setBackupId(Long BackupId) {
         this.BackupId = BackupId;
     }
 
     /**
-     * Get 备份任务状态。可能的值有 "SUCCESS": 备份成功， "FAILED": 备份失败， "RUNNING": 备份进行中。 
-     * @return Status 备份任务状态。可能的值有 "SUCCESS": 备份成功， "FAILED": 备份失败， "RUNNING": 备份进行中。
+     * Get <p>备份任务状态。可能的值有 &quot;SUCCESS&quot;: 备份成功， &quot;FAILED&quot;: 备份失败， &quot;RUNNING&quot;: 备份进行中。</p> 
+     * @return Status <p>备份任务状态。可能的值有 &quot;SUCCESS&quot;: 备份成功， &quot;FAILED&quot;: 备份失败， &quot;RUNNING&quot;: 备份进行中。</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 备份任务状态。可能的值有 "SUCCESS": 备份成功， "FAILED": 备份失败， "RUNNING": 备份进行中。
-     * @param Status 备份任务状态。可能的值有 "SUCCESS": 备份成功， "FAILED": 备份失败， "RUNNING": 备份进行中。
+     * Set <p>备份任务状态。可能的值有 &quot;SUCCESS&quot;: 备份成功， &quot;FAILED&quot;: 备份失败， &quot;RUNNING&quot;: 备份进行中。</p>
+     * @param Status <p>备份任务状态。可能的值有 &quot;SUCCESS&quot;: 备份成功， &quot;FAILED&quot;: 备份失败， &quot;RUNNING&quot;: 备份进行中。</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 备份任务的完成时间 
-     * @return FinishTime 备份任务的完成时间
+     * Get <p>备份任务的完成时间</p> 
+     * @return FinishTime <p>备份任务的完成时间</p>
      */
     public String getFinishTime() {
         return this.FinishTime;
     }
 
     /**
-     * Set 备份任务的完成时间
-     * @param FinishTime 备份任务的完成时间
+     * Set <p>备份任务的完成时间</p>
+     * @param FinishTime <p>备份任务的完成时间</p>
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;
     }
 
     /**
-     * Get （该值将废弃，不建议使用）备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值。 
-     * @return Creator （该值将废弃，不建议使用）备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值。
+     * Get <p>（该值将废弃，不建议使用）备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值。</p> 
+     * @return Creator <p>（该值将废弃，不建议使用）备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值。</p>
      */
     public String getCreator() {
         return this.Creator;
     }
 
     /**
-     * Set （该值将废弃，不建议使用）备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值。
-     * @param Creator （该值将废弃，不建议使用）备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值。
+     * Set <p>（该值将废弃，不建议使用）备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值。</p>
+     * @param Creator <p>（该值将废弃，不建议使用）备份的创建者，可能的值：SYSTEM - 系统创建，Uin - 发起者Uin值。</p>
      */
     public void setCreator(String Creator) {
         this.Creator = Creator;
     }
 
     /**
-     * Get 备份任务的开始时间 
-     * @return StartTime 备份任务的开始时间
+     * Get <p>备份任务的开始时间</p> 
+     * @return StartTime <p>备份任务的开始时间</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 备份任务的开始时间
-     * @param StartTime 备份任务的开始时间
+     * Set <p>备份任务的开始时间</p>
+     * @param StartTime <p>备份任务的开始时间</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 备份方法。可能的值有 "full": 全量备份， "partial": 部分备份。 
-     * @return Method 备份方法。可能的值有 "full": 全量备份， "partial": 部分备份。
+     * Get <p>备份方法。可能的值有 &quot;full&quot;: 全量备份， &quot;partial&quot;: 部分备份。</p> 
+     * @return Method <p>备份方法。可能的值有 &quot;full&quot;: 全量备份， &quot;partial&quot;: 部分备份。</p>
      */
     public String getMethod() {
         return this.Method;
     }
 
     /**
-     * Set 备份方法。可能的值有 "full": 全量备份， "partial": 部分备份。
-     * @param Method 备份方法。可能的值有 "full": 全量备份， "partial": 部分备份。
+     * Set <p>备份方法。可能的值有 &quot;full&quot;: 全量备份， &quot;partial&quot;: 部分备份。</p>
+     * @param Method <p>备份方法。可能的值有 &quot;full&quot;: 全量备份， &quot;partial&quot;: 部分备份。</p>
      */
     public void setMethod(String Method) {
         this.Method = Method;
     }
 
     /**
-     * Get 备份方式。可能的值有 "manual": 手动备份， "automatic": 自动备份。 
-     * @return Way 备份方式。可能的值有 "manual": 手动备份， "automatic": 自动备份。
+     * Get <p>备份方式。可能的值有 &quot;manual&quot;: 手动备份， &quot;automatic&quot;: 自动备份。</p> 
+     * @return Way <p>备份方式。可能的值有 &quot;manual&quot;: 手动备份， &quot;automatic&quot;: 自动备份。</p>
      */
     public String getWay() {
         return this.Way;
     }
 
     /**
-     * Set 备份方式。可能的值有 "manual": 手动备份， "automatic": 自动备份。
-     * @param Way 备份方式。可能的值有 "manual": 手动备份， "automatic": 自动备份。
+     * Set <p>备份方式。可能的值有 &quot;manual&quot;: 手动备份， &quot;automatic&quot;: 自动备份。</p>
+     * @param Way <p>备份方式。可能的值有 &quot;manual&quot;: 手动备份， &quot;automatic&quot;: 自动备份。</p>
      */
     public void setWay(String Way) {
         this.Way = Way;
     }
 
     /**
-     * Get 手动备份别名 
-     * @return ManualBackupName 手动备份别名
+     * Get <p>手动备份别名</p> 
+     * @return ManualBackupName <p>手动备份别名</p>
      */
     public String getManualBackupName() {
         return this.ManualBackupName;
     }
 
     /**
-     * Set 手动备份别名
-     * @param ManualBackupName 手动备份别名
+     * Set <p>手动备份别名</p>
+     * @param ManualBackupName <p>手动备份别名</p>
      */
     public void setManualBackupName(String ManualBackupName) {
         this.ManualBackupName = ManualBackupName;
     }
 
     /**
-     * Get 备份保留类型，save_mode_regular - 常规保存备份，save_mode_period - 定期保存备份 
-     * @return SaveMode 备份保留类型，save_mode_regular - 常规保存备份，save_mode_period - 定期保存备份
+     * Get <p>备份保留类型，save_mode_regular - 常规保存备份，save_mode_period - 定期保存备份</p> 
+     * @return SaveMode <p>备份保留类型，save_mode_regular - 常规保存备份，save_mode_period - 定期保存备份</p>
      */
     public String getSaveMode() {
         return this.SaveMode;
     }
 
     /**
-     * Set 备份保留类型，save_mode_regular - 常规保存备份，save_mode_period - 定期保存备份
-     * @param SaveMode 备份保留类型，save_mode_regular - 常规保存备份，save_mode_period - 定期保存备份
+     * Set <p>备份保留类型，save_mode_regular - 常规保存备份，save_mode_period - 定期保存备份</p>
+     * @param SaveMode <p>备份保留类型，save_mode_regular - 常规保存备份，save_mode_period - 定期保存备份</p>
      */
     public void setSaveMode(String SaveMode) {
         this.SaveMode = SaveMode;
     }
 
     /**
-     * Get 本地备份所在地域 
-     * @return Region 本地备份所在地域
+     * Get <p>本地备份所在地域</p> 
+     * @return Region <p>本地备份所在地域</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 本地备份所在地域
-     * @param Region 本地备份所在地域
+     * Set <p>本地备份所在地域</p>
+     * @param Region <p>本地备份所在地域</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 异地备份详细信息 
-     * @return RemoteInfo 异地备份详细信息
+     * Get <p>异地备份详细信息</p> 
+     * @return RemoteInfo <p>异地备份详细信息</p>
      */
     public RemoteBackupInfo [] getRemoteInfo() {
         return this.RemoteInfo;
     }
 
     /**
-     * Set 异地备份详细信息
-     * @param RemoteInfo 异地备份详细信息
+     * Set <p>异地备份详细信息</p>
+     * @param RemoteInfo <p>异地备份详细信息</p>
      */
     public void setRemoteInfo(RemoteBackupInfo [] RemoteInfo) {
         this.RemoteInfo = RemoteInfo;
     }
 
     /**
-     * Get 存储方式，0-常规存储，1-归档存储，2-标准存储，默认为0 
-     * @return CosStorageType 存储方式，0-常规存储，1-归档存储，2-标准存储，默认为0
+     * Get <p>存储方式，0-常规存储，1-归档存储，2-标准存储，默认为0</p> 
+     * @return CosStorageType <p>存储方式，0-常规存储，1-归档存储，2-标准存储，默认为0</p>
      */
     public Long getCosStorageType() {
         return this.CosStorageType;
     }
 
     /**
-     * Set 存储方式，0-常规存储，1-归档存储，2-标准存储，默认为0
-     * @param CosStorageType 存储方式，0-常规存储，1-归档存储，2-标准存储，默认为0
+     * Set <p>存储方式，0-常规存储，1-归档存储，2-标准存储，默认为0</p>
+     * @param CosStorageType <p>存储方式，0-常规存储，1-归档存储，2-标准存储，默认为0</p>
      */
     public void setCosStorageType(Long CosStorageType) {
         this.CosStorageType = CosStorageType;
     }
 
     /**
-     * Get 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。 
-     * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+     * Get <p>实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。</p> 
+     * @return InstanceId <p>实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
-     * @param InstanceId 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+     * Set <p>实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。</p>
+     * @param InstanceId <p>实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 备份文件是否加密， on-加密， off-未加密 
-     * @return EncryptionFlag 备份文件是否加密， on-加密， off-未加密
+     * Get <p>备份完成进度</p> 
+     * @return Progress <p>备份完成进度</p>
+     */
+    public Long getProgress() {
+        return this.Progress;
+    }
+
+    /**
+     * Set <p>备份完成进度</p>
+     * @param Progress <p>备份完成进度</p>
+     */
+    public void setProgress(Long Progress) {
+        this.Progress = Progress;
+    }
+
+    /**
+     * Get <p>备份文件是否加密， on-加密， off-未加密</p> 
+     * @return EncryptionFlag <p>备份文件是否加密， on-加密， off-未加密</p>
      */
     public String getEncryptionFlag() {
         return this.EncryptionFlag;
     }
 
     /**
-     * Set 备份文件是否加密， on-加密， off-未加密
-     * @param EncryptionFlag 备份文件是否加密， on-加密， off-未加密
+     * Set <p>备份文件是否加密， on-加密， off-未加密</p>
+     * @param EncryptionFlag <p>备份文件是否加密， on-加密， off-未加密</p>
      */
     public void setEncryptionFlag(String EncryptionFlag) {
         this.EncryptionFlag = EncryptionFlag;
     }
 
     /**
-     * Get 备份GTID点位 
-     * @return ExecutedGTIDSet 备份GTID点位
+     * Get <p>备份GTID点位</p> 
+     * @return ExecutedGTIDSet <p>备份GTID点位</p>
      */
     public String getExecutedGTIDSet() {
         return this.ExecutedGTIDSet;
     }
 
     /**
-     * Set 备份GTID点位
-     * @param ExecutedGTIDSet 备份GTID点位
+     * Set <p>备份GTID点位</p>
+     * @param ExecutedGTIDSet <p>备份GTID点位</p>
      */
     public void setExecutedGTIDSet(String ExecutedGTIDSet) {
         this.ExecutedGTIDSet = ExecutedGTIDSet;
     }
 
     /**
-     * Get 备份文件MD5值 
-     * @return MD5 备份文件MD5值
+     * Get <p>备份文件MD5值</p> 
+     * @return MD5 <p>备份文件MD5值</p>
      */
     public String getMD5() {
         return this.MD5;
     }
 
     /**
-     * Set 备份文件MD5值
-     * @param MD5 备份文件MD5值
+     * Set <p>备份文件MD5值</p>
+     * @param MD5 <p>备份文件MD5值</p>
      */
     public void setMD5(String MD5) {
         this.MD5 = MD5;
@@ -597,6 +620,9 @@ public class BackupInfo extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.Progress != null) {
+            this.Progress = new Long(source.Progress);
+        }
         if (source.EncryptionFlag != null) {
             this.EncryptionFlag = new String(source.EncryptionFlag);
         }
@@ -632,6 +658,7 @@ public class BackupInfo extends AbstractModel {
         this.setParamArrayObj(map, prefix + "RemoteInfo.", this.RemoteInfo);
         this.setParamSimple(map, prefix + "CosStorageType", this.CosStorageType);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "Progress", this.Progress);
         this.setParamSimple(map, prefix + "EncryptionFlag", this.EncryptionFlag);
         this.setParamSimple(map, prefix + "ExecutedGTIDSet", this.ExecutedGTIDSet);
         this.setParamSimple(map, prefix + "MD5", this.MD5);

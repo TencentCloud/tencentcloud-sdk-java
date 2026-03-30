@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeTaskDetailRequest extends AbstractModel {
 
     /**
-    * 任务ID，创建任务后返回的TaskId字段
+    * <p>任务ID，创建任务后返回的TaskId字段</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 是否展示所有分片，默认只展示命中规则的分片
+    * <p>是否展示所有分片，默认只展示命中规则的分片</p>
     */
     @SerializedName("ShowAllSegments")
     @Expose
     private Boolean ShowAllSegments;
 
     /**
-     * Get 任务ID，创建任务后返回的TaskId字段 
-     * @return TaskId 任务ID，创建任务后返回的TaskId字段
+     * Get <p>任务ID，创建任务后返回的TaskId字段</p> 
+     * @return TaskId <p>任务ID，创建任务后返回的TaskId字段</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务ID，创建任务后返回的TaskId字段
-     * @param TaskId 任务ID，创建任务后返回的TaskId字段
+     * Set <p>任务ID，创建任务后返回的TaskId字段</p>
+     * @param TaskId <p>任务ID，创建任务后返回的TaskId字段</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 是否展示所有分片，默认只展示命中规则的分片 
-     * @return ShowAllSegments 是否展示所有分片，默认只展示命中规则的分片
+     * Get <p>是否展示所有分片，默认只展示命中规则的分片</p> 
+     * @return ShowAllSegments <p>是否展示所有分片，默认只展示命中规则的分片</p>
      */
     public Boolean getShowAllSegments() {
         return this.ShowAllSegments;
     }
 
     /**
-     * Set 是否展示所有分片，默认只展示命中规则的分片
-     * @param ShowAllSegments 是否展示所有分片，默认只展示命中规则的分片
+     * Set <p>是否展示所有分片，默认只展示命中规则的分片</p>
+     * @param ShowAllSegments <p>是否展示所有分片，默认只展示命中规则的分片</p>
      */
     public void setShowAllSegments(Boolean ShowAllSegments) {
         this.ShowAllSegments = ShowAllSegments;

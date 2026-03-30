@@ -806,7 +806,9 @@ https：使用https协议回源
     /**
      * Get HTTPS回源端口,仅UpstreamScheme为http时需要填当前字段 
      * @return HttpsUpstreamPort HTTPS回源端口,仅UpstreamScheme为http时需要填当前字段
+     * @deprecated
      */
+    @Deprecated
     public String getHttpsUpstreamPort() {
         return this.HttpsUpstreamPort;
     }
@@ -814,7 +816,9 @@ https：使用https协议回源
     /**
      * Set HTTPS回源端口,仅UpstreamScheme为http时需要填当前字段
      * @param HttpsUpstreamPort HTTPS回源端口,仅UpstreamScheme为http时需要填当前字段
+     * @deprecated
      */
+    @Deprecated
     public void setHttpsUpstreamPort(String HttpsUpstreamPort) {
         this.HttpsUpstreamPort = HttpsUpstreamPort;
     }

@@ -996,6 +996,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *大模型请求内容和响应内容审核接口
+     * @param req DescribeLLMContentSecCheckRequest
+     * @return DescribeLLMContentSecCheckResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLLMContentSecCheckResponse DescribeLLMContentSecCheck(DescribeLLMContentSecCheckRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLLMContentSecCheck", DescribeLLMContentSecCheckResponse.class);
+    }
+
+    /**
      *本接口用于构建日志数量直方图
      * @param req DescribeLogHistogramRequest
      * @return DescribeLogHistogramResponse
@@ -1136,6 +1147,17 @@ public class WafClient extends AbstractClient{
     public DescribeProtectionModesResponse DescribeProtectionModes(DescribeProtectionModesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeProtectionModes", DescribeProtectionModesResponse.class);
+    }
+
+    /**
+     *大模型请求内容和响应内容审核接口
+     * @param req DescribeQClawContentSecCheckRequest
+     * @return DescribeQClawContentSecCheckResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeQClawContentSecCheckResponse DescribeQClawContentSecCheck(DescribeQClawContentSecCheckRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeQClawContentSecCheck", DescribeQClawContentSecCheckResponse.class);
     }
 
     /**
