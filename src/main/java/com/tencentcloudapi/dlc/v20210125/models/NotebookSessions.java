@@ -129,6 +129,20 @@ public class NotebookSessions extends AbstractModel {
     private String ResourceGroupName;
 
     /**
+    * Kernel id
+    */
+    @SerializedName("KernelId")
+    @Expose
+    private String KernelId;
+
+    /**
+    * spark app名称
+    */
+    @SerializedName("SparkAppName")
+    @Expose
+    private String SparkAppName;
+
+    /**
      * Get 类型，当前支持：spark、pyspark、sparkr、sql 
      * @return Kind 类型，当前支持：spark、pyspark、sparkr、sql
      */
@@ -368,6 +382,38 @@ public class NotebookSessions extends AbstractModel {
         this.ResourceGroupName = ResourceGroupName;
     }
 
+    /**
+     * Get Kernel id 
+     * @return KernelId Kernel id
+     */
+    public String getKernelId() {
+        return this.KernelId;
+    }
+
+    /**
+     * Set Kernel id
+     * @param KernelId Kernel id
+     */
+    public void setKernelId(String KernelId) {
+        this.KernelId = KernelId;
+    }
+
+    /**
+     * Get spark app名称 
+     * @return SparkAppName spark app名称
+     */
+    public String getSparkAppName() {
+        return this.SparkAppName;
+    }
+
+    /**
+     * Set spark app名称
+     * @param SparkAppName spark app名称
+     */
+    public void setSparkAppName(String SparkAppName) {
+        this.SparkAppName = SparkAppName;
+    }
+
     public NotebookSessions() {
     }
 
@@ -421,6 +467,12 @@ public class NotebookSessions extends AbstractModel {
         if (source.ResourceGroupName != null) {
             this.ResourceGroupName = new String(source.ResourceGroupName);
         }
+        if (source.KernelId != null) {
+            this.KernelId = new String(source.KernelId);
+        }
+        if (source.SparkAppName != null) {
+            this.SparkAppName = new String(source.SparkAppName);
+        }
     }
 
 
@@ -443,6 +495,8 @@ public class NotebookSessions extends AbstractModel {
         this.setParamSimple(map, prefix + "DataEngineId", this.DataEngineId);
         this.setParamSimple(map, prefix + "ResourceGroupId", this.ResourceGroupId);
         this.setParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
+        this.setParamSimple(map, prefix + "KernelId", this.KernelId);
+        this.setParamSimple(map, prefix + "SparkAppName", this.SparkAppName);
 
     }
 }

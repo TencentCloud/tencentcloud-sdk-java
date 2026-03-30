@@ -61,6 +61,39 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *查询AI工作台SRE数字分身任务列表
+     * @param req DescribeAIWorkbenchSREDigitalTwinTaskListRequest
+     * @return DescribeAIWorkbenchSREDigitalTwinTaskListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAIWorkbenchSREDigitalTwinTaskListResponse DescribeAIWorkbenchSREDigitalTwinTaskList(DescribeAIWorkbenchSREDigitalTwinTaskListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAIWorkbenchSREDigitalTwinTaskList", DescribeAIWorkbenchSREDigitalTwinTaskListResponse.class);
+    }
+
+    /**
+     *查询AI工作台SRE数字分身工作日志详细信息
+     * @param req DescribeAIWorkbenchSREDigitalTwinWorkLogDetailRequest
+     * @return DescribeAIWorkbenchSREDigitalTwinWorkLogDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAIWorkbenchSREDigitalTwinWorkLogDetailResponse DescribeAIWorkbenchSREDigitalTwinWorkLogDetail(DescribeAIWorkbenchSREDigitalTwinWorkLogDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAIWorkbenchSREDigitalTwinWorkLogDetail", DescribeAIWorkbenchSREDigitalTwinWorkLogDetailResponse.class);
+    }
+
+    /**
+     *查询AI工作台SRE数字分身任务工作日志列表
+     * @param req DescribeAIWorkbenchSREDigitalTwinWorkLogListRequest
+     * @return DescribeAIWorkbenchSREDigitalTwinWorkLogListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAIWorkbenchSREDigitalTwinWorkLogListResponse DescribeAIWorkbenchSREDigitalTwinWorkLogList(DescribeAIWorkbenchSREDigitalTwinWorkLogListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAIWorkbenchSREDigitalTwinWorkLogList", DescribeAIWorkbenchSREDigitalTwinWorkLogListResponse.class);
+    }
+
+    /**
      *按需查询告警的通知历史
      * @param req DescribeAlarmNotifyHistoriesRequest
      * @return DescribeAlarmNotifyHistoriesResponse
@@ -91,6 +124,17 @@ public class MonitorClient extends AbstractClient{
     public ModifyNoticeContentTmplResponse ModifyNoticeContentTmpl(ModifyNoticeContentTmplRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyNoticeContentTmpl", ModifyNoticeContentTmplResponse.class);
+    }
+
+    /**
+     *触发数字分身任务请求
+     * @param req TriggerAIWorkbenchSREDigitalTwinTaskRequest
+     * @return TriggerAIWorkbenchSREDigitalTwinTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public TriggerAIWorkbenchSREDigitalTwinTaskResponse TriggerAIWorkbenchSREDigitalTwinTask(TriggerAIWorkbenchSREDigitalTwinTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TriggerAIWorkbenchSREDigitalTwinTask", TriggerAIWorkbenchSREDigitalTwinTaskResponse.class);
     }
 
 }

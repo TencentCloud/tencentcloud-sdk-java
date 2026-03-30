@@ -490,6 +490,17 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *此接口（CreateDraftContractByPromptsTask）用于创建智能合同起草任务。
+     * @param req CreateDraftContractByPromptsTaskRequest
+     * @return CreateDraftContractByPromptsTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDraftContractByPromptsTaskResponse CreateDraftContractByPromptsTask(CreateDraftContractByPromptsTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDraftContractByPromptsTask", CreateDraftContractByPromptsTaskResponse.class);
+    }
+
+    /**
      *此接口（CreateDynamicFlowApprover）接口主要用于补充动态签署方2.0合同的签署方信息，包括但不限于名字、手机号和签署区域等信息。
 
 
@@ -1890,6 +1901,17 @@ public class EssClient extends AbstractClient{
     public DescribeContractReviewWebUrlResponse DescribeContractReviewWebUrl(DescribeContractReviewWebUrlRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeContractReviewWebUrl", DescribeContractReviewWebUrlResponse.class);
+    }
+
+    /**
+     *此接口（DescribeDraftContractByPromptsTask）用于查询智能合同起草任务状态。
+     * @param req DescribeDraftContractByPromptsTaskRequest
+     * @return DescribeDraftContractByPromptsTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDraftContractByPromptsTaskResponse DescribeDraftContractByPromptsTask(DescribeDraftContractByPromptsTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDraftContractByPromptsTask", DescribeDraftContractByPromptsTaskResponse.class);
     }
 
     /**

@@ -24,309 +24,302 @@ import java.util.HashMap;
 public class ModifyTranscodeTemplateRequest extends AbstractModel {
 
     /**
-    * 转码模板唯一标识。
+    * <p>转码模板唯一标识。</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+    * <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a、wav。其中，mp3、flac、ogg、m4a、wav 为纯音频文件。
+    * <p>封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a、wav。其中，mp3、flac、ogg、m4a、wav 为纯音频文件。</p>
     */
     @SerializedName("Container")
     @Expose
     private String Container;
 
     /**
-    * 转码模板名称，长度限制：64 个字符。
+    * <p>转码模板名称，长度限制：64 个字符。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 模板描述信息，长度限制：256 个字符。
+    * <p>模板描述信息，长度限制：256 个字符。</p>
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * 是否去除视频数据，可选值：
-<li>0：保留</li>
-<li>1：去除</li>
+    * <p>是否去除视频数据，可选值：</p><li>0：保留</li><li>1：去除</li>
     */
     @SerializedName("RemoveVideo")
     @Expose
     private Long RemoveVideo;
 
     /**
-    * 是否去除音频数据，可选值：
-<li>0：保留</li>
-<li>1：去除</li>
+    * <p>是否去除音频数据，可选值：</p><li>0：保留</li><li>1：去除</li>
     */
     @SerializedName("RemoveAudio")
     @Expose
     private Long RemoveAudio;
 
     /**
-    * 视频流配置参数。
+    * <p>视频流配置参数。</p>
     */
     @SerializedName("VideoTemplate")
     @Expose
     private VideoTemplateInfoForUpdate VideoTemplate;
 
     /**
-    * 音频流配置参数。
+    * <p>音频流配置参数。</p>
     */
     @SerializedName("AudioTemplate")
     @Expose
     private AudioTemplateInfoForUpdate AudioTemplate;
 
     /**
-    * 极速高清转码参数。
+    * <p>极速高清转码参数。</p>
     */
     @SerializedName("TEHDConfig")
     @Expose
     private TEHDConfigForUpdate TEHDConfig;
 
     /**
-    * 音视频增强配置。
+    * <p>音视频增强配置。</p>
     */
     @SerializedName("EnhanceConfig")
     @Expose
     private EnhanceConfigForUpdate EnhanceConfig;
 
     /**
-    * 切片类型，当 Container 为 hls 时有效，可选值：
-<li>ts：ts 切片；</li>
-<li>fmp4：fmp4 切片。</li>
+    * <p>切片类型，当 Container 为 hls 时有效，可选值：</p><li>ts：ts 切片；</li><li>fmp4：fmp4 切片。</li>
     */
     @SerializedName("SegmentType")
     @Expose
     private String SegmentType;
 
     /**
-     * Get 转码模板唯一标识。 
-     * @return Definition 转码模板唯一标识。
+    * <p>扩展参数。</p>
+    */
+    @SerializedName("StdExtInfo")
+    @Expose
+    private String StdExtInfo;
+
+    /**
+     * Get <p>转码模板唯一标识。</p> 
+     * @return Definition <p>转码模板唯一标识。</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 转码模板唯一标识。
-     * @param Definition 转码模板唯一标识。
+     * Set <p>转码模板唯一标识。</p>
+     * @param Definition <p>转码模板唯一标识。</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b> 
-     * @return SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+     * Get <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p> 
+     * @return SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
-     * @param SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+     * Set <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+     * @param SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a、wav。其中，mp3、flac、ogg、m4a、wav 为纯音频文件。 
-     * @return Container 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a、wav。其中，mp3、flac、ogg、m4a、wav 为纯音频文件。
+     * Get <p>封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a、wav。其中，mp3、flac、ogg、m4a、wav 为纯音频文件。</p> 
+     * @return Container <p>封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a、wav。其中，mp3、flac、ogg、m4a、wav 为纯音频文件。</p>
      */
     public String getContainer() {
         return this.Container;
     }
 
     /**
-     * Set 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a、wav。其中，mp3、flac、ogg、m4a、wav 为纯音频文件。
-     * @param Container 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a、wav。其中，mp3、flac、ogg、m4a、wav 为纯音频文件。
+     * Set <p>封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a、wav。其中，mp3、flac、ogg、m4a、wav 为纯音频文件。</p>
+     * @param Container <p>封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a、wav。其中，mp3、flac、ogg、m4a、wav 为纯音频文件。</p>
      */
     public void setContainer(String Container) {
         this.Container = Container;
     }
 
     /**
-     * Get 转码模板名称，长度限制：64 个字符。 
-     * @return Name 转码模板名称，长度限制：64 个字符。
+     * Get <p>转码模板名称，长度限制：64 个字符。</p> 
+     * @return Name <p>转码模板名称，长度限制：64 个字符。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 转码模板名称，长度限制：64 个字符。
-     * @param Name 转码模板名称，长度限制：64 个字符。
+     * Set <p>转码模板名称，长度限制：64 个字符。</p>
+     * @param Name <p>转码模板名称，长度限制：64 个字符。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 模板描述信息，长度限制：256 个字符。 
-     * @return Comment 模板描述信息，长度限制：256 个字符。
+     * Get <p>模板描述信息，长度限制：256 个字符。</p> 
+     * @return Comment <p>模板描述信息，长度限制：256 个字符。</p>
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 模板描述信息，长度限制：256 个字符。
-     * @param Comment 模板描述信息，长度限制：256 个字符。
+     * Set <p>模板描述信息，长度限制：256 个字符。</p>
+     * @param Comment <p>模板描述信息，长度限制：256 个字符。</p>
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get 是否去除视频数据，可选值：
-<li>0：保留</li>
-<li>1：去除</li> 
-     * @return RemoveVideo 是否去除视频数据，可选值：
-<li>0：保留</li>
-<li>1：去除</li>
+     * Get <p>是否去除视频数据，可选值：</p><li>0：保留</li><li>1：去除</li> 
+     * @return RemoveVideo <p>是否去除视频数据，可选值：</p><li>0：保留</li><li>1：去除</li>
      */
     public Long getRemoveVideo() {
         return this.RemoveVideo;
     }
 
     /**
-     * Set 是否去除视频数据，可选值：
-<li>0：保留</li>
-<li>1：去除</li>
-     * @param RemoveVideo 是否去除视频数据，可选值：
-<li>0：保留</li>
-<li>1：去除</li>
+     * Set <p>是否去除视频数据，可选值：</p><li>0：保留</li><li>1：去除</li>
+     * @param RemoveVideo <p>是否去除视频数据，可选值：</p><li>0：保留</li><li>1：去除</li>
      */
     public void setRemoveVideo(Long RemoveVideo) {
         this.RemoveVideo = RemoveVideo;
     }
 
     /**
-     * Get 是否去除音频数据，可选值：
-<li>0：保留</li>
-<li>1：去除</li> 
-     * @return RemoveAudio 是否去除音频数据，可选值：
-<li>0：保留</li>
-<li>1：去除</li>
+     * Get <p>是否去除音频数据，可选值：</p><li>0：保留</li><li>1：去除</li> 
+     * @return RemoveAudio <p>是否去除音频数据，可选值：</p><li>0：保留</li><li>1：去除</li>
      */
     public Long getRemoveAudio() {
         return this.RemoveAudio;
     }
 
     /**
-     * Set 是否去除音频数据，可选值：
-<li>0：保留</li>
-<li>1：去除</li>
-     * @param RemoveAudio 是否去除音频数据，可选值：
-<li>0：保留</li>
-<li>1：去除</li>
+     * Set <p>是否去除音频数据，可选值：</p><li>0：保留</li><li>1：去除</li>
+     * @param RemoveAudio <p>是否去除音频数据，可选值：</p><li>0：保留</li><li>1：去除</li>
      */
     public void setRemoveAudio(Long RemoveAudio) {
         this.RemoveAudio = RemoveAudio;
     }
 
     /**
-     * Get 视频流配置参数。 
-     * @return VideoTemplate 视频流配置参数。
+     * Get <p>视频流配置参数。</p> 
+     * @return VideoTemplate <p>视频流配置参数。</p>
      */
     public VideoTemplateInfoForUpdate getVideoTemplate() {
         return this.VideoTemplate;
     }
 
     /**
-     * Set 视频流配置参数。
-     * @param VideoTemplate 视频流配置参数。
+     * Set <p>视频流配置参数。</p>
+     * @param VideoTemplate <p>视频流配置参数。</p>
      */
     public void setVideoTemplate(VideoTemplateInfoForUpdate VideoTemplate) {
         this.VideoTemplate = VideoTemplate;
     }
 
     /**
-     * Get 音频流配置参数。 
-     * @return AudioTemplate 音频流配置参数。
+     * Get <p>音频流配置参数。</p> 
+     * @return AudioTemplate <p>音频流配置参数。</p>
      */
     public AudioTemplateInfoForUpdate getAudioTemplate() {
         return this.AudioTemplate;
     }
 
     /**
-     * Set 音频流配置参数。
-     * @param AudioTemplate 音频流配置参数。
+     * Set <p>音频流配置参数。</p>
+     * @param AudioTemplate <p>音频流配置参数。</p>
      */
     public void setAudioTemplate(AudioTemplateInfoForUpdate AudioTemplate) {
         this.AudioTemplate = AudioTemplate;
     }
 
     /**
-     * Get 极速高清转码参数。 
-     * @return TEHDConfig 极速高清转码参数。
+     * Get <p>极速高清转码参数。</p> 
+     * @return TEHDConfig <p>极速高清转码参数。</p>
      */
     public TEHDConfigForUpdate getTEHDConfig() {
         return this.TEHDConfig;
     }
 
     /**
-     * Set 极速高清转码参数。
-     * @param TEHDConfig 极速高清转码参数。
+     * Set <p>极速高清转码参数。</p>
+     * @param TEHDConfig <p>极速高清转码参数。</p>
      */
     public void setTEHDConfig(TEHDConfigForUpdate TEHDConfig) {
         this.TEHDConfig = TEHDConfig;
     }
 
     /**
-     * Get 音视频增强配置。 
-     * @return EnhanceConfig 音视频增强配置。
+     * Get <p>音视频增强配置。</p> 
+     * @return EnhanceConfig <p>音视频增强配置。</p>
      */
     public EnhanceConfigForUpdate getEnhanceConfig() {
         return this.EnhanceConfig;
     }
 
     /**
-     * Set 音视频增强配置。
-     * @param EnhanceConfig 音视频增强配置。
+     * Set <p>音视频增强配置。</p>
+     * @param EnhanceConfig <p>音视频增强配置。</p>
      */
     public void setEnhanceConfig(EnhanceConfigForUpdate EnhanceConfig) {
         this.EnhanceConfig = EnhanceConfig;
     }
 
     /**
-     * Get 切片类型，当 Container 为 hls 时有效，可选值：
-<li>ts：ts 切片；</li>
-<li>fmp4：fmp4 切片。</li> 
-     * @return SegmentType 切片类型，当 Container 为 hls 时有效，可选值：
-<li>ts：ts 切片；</li>
-<li>fmp4：fmp4 切片。</li>
+     * Get <p>切片类型，当 Container 为 hls 时有效，可选值：</p><li>ts：ts 切片；</li><li>fmp4：fmp4 切片。</li> 
+     * @return SegmentType <p>切片类型，当 Container 为 hls 时有效，可选值：</p><li>ts：ts 切片；</li><li>fmp4：fmp4 切片。</li>
      */
     public String getSegmentType() {
         return this.SegmentType;
     }
 
     /**
-     * Set 切片类型，当 Container 为 hls 时有效，可选值：
-<li>ts：ts 切片；</li>
-<li>fmp4：fmp4 切片。</li>
-     * @param SegmentType 切片类型，当 Container 为 hls 时有效，可选值：
-<li>ts：ts 切片；</li>
-<li>fmp4：fmp4 切片。</li>
+     * Set <p>切片类型，当 Container 为 hls 时有效，可选值：</p><li>ts：ts 切片；</li><li>fmp4：fmp4 切片。</li>
+     * @param SegmentType <p>切片类型，当 Container 为 hls 时有效，可选值：</p><li>ts：ts 切片；</li><li>fmp4：fmp4 切片。</li>
      */
     public void setSegmentType(String SegmentType) {
         this.SegmentType = SegmentType;
+    }
+
+    /**
+     * Get <p>扩展参数。</p> 
+     * @return StdExtInfo <p>扩展参数。</p>
+     */
+    public String getStdExtInfo() {
+        return this.StdExtInfo;
+    }
+
+    /**
+     * Set <p>扩展参数。</p>
+     * @param StdExtInfo <p>扩展参数。</p>
+     */
+    public void setStdExtInfo(String StdExtInfo) {
+        this.StdExtInfo = StdExtInfo;
     }
 
     public ModifyTranscodeTemplateRequest() {
@@ -373,6 +366,9 @@ public class ModifyTranscodeTemplateRequest extends AbstractModel {
         if (source.SegmentType != null) {
             this.SegmentType = new String(source.SegmentType);
         }
+        if (source.StdExtInfo != null) {
+            this.StdExtInfo = new String(source.StdExtInfo);
+        }
     }
 
 
@@ -392,6 +388,7 @@ public class ModifyTranscodeTemplateRequest extends AbstractModel {
         this.setParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
         this.setParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
         this.setParamSimple(map, prefix + "SegmentType", this.SegmentType);
+        this.setParamSimple(map, prefix + "StdExtInfo", this.StdExtInfo);
 
     }
 }

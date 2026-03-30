@@ -24,370 +24,345 @@ import java.util.HashMap;
 public class TextToVoiceRequest extends AbstractModel {
 
     /**
-    * 合成语音的源文本，按UTF-8编码统一计算。
-中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。
+    * <p>合成语音的源文本，按UTF-8编码统一计算。<br>中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。</p>
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-    * 一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复。
+    * <p>一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复。</p>
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * 音量大小，范围[-10，10]，对应音量大小。默认为0，代表正常音量，值越大音量越高。
+    * <p>音量大小，范围[-10，10]，对应音量大小。默认为0，代表正常音量，值越大音量越高。</p>
     */
     @SerializedName("Volume")
     @Expose
     private Float Volume;
 
     /**
-    * 语速，范围：[-2，6]，分别对应不同语速：<li>-2代表0.6倍</li><li>-1代表0.8倍</li><li>0代表1.0倍（默认）</li><li>1代表1.2倍</li><li>2代表1.5倍</li><li>6代表2.5倍</li>如果需要更细化的语速，可以保留小数点后 2 位，例如0.5/1.25/2.81等。<br>参数值与实际语速转换，可参考[代码示例](https://sdk-1300466766.cos.ap-shanghai.myqcloud.com/sample/speed_sample.tar.gz)
+    * <p>语速，范围：[-2，6]，分别对应不同语速：<li>-2代表0.6倍</li><li>-1代表0.8倍</li><li>0代表1.0倍（默认）</li><li>1代表1.2倍</li><li>2代表1.5倍</li><li>6代表2.5倍</li>如果需要更细化的语速，可以保留小数点后 2 位，例如0.5/1.25/2.81等。<br>参数值与实际语速转换，可参考<a href="https://sdk-1300466766.cos.ap-shanghai.myqcloud.com/sample/speed_sample.tar.gz">代码示例</a></p>
     */
     @SerializedName("Speed")
     @Expose
     private Float Speed;
 
     /**
-    * 项目id，用户自定义，默认为0。
+    * <p>项目id，用户自定义，默认为0。</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 模型类型，1-默认模型。
+    * <p>模型类型，1-默认模型。</p>
     */
     @SerializedName("ModelType")
     @Expose
     private Long ModelType;
 
     /**
-    * 音色 ID，包括精品音色、大模型音色与基础版复刻音色。不同音色价格有差异，详情请参见[购买指南](https://cloud.tencent.com/document/product/1073/34112)。完整的音色 ID 列表请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)。<br>若使用一句话版声音复刻，请填入固定值“200000000”。
+    * <p>音色 ID，包括精品音色、大模型音色与基础版复刻音色。不同音色价格有差异，详情请参见<a href="https://cloud.tencent.com/document/product/1073/34112">购买指南</a>。完整的音色 ID 列表请参见<a href="https://cloud.tencent.com/document/product/1073/92668">音色列表</a>。<br>若使用一句话版声音复刻，请填入固定值“200000000”。</p>
     */
     @SerializedName("VoiceType")
     @Expose
     private Long VoiceType;
 
     /**
-    * 一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。
+    * <p>一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。</p>
     */
     @SerializedName("FastVoiceType")
     @Expose
     private String FastVoiceType;
 
     /**
-    * 主语言类型：<li>1-中文（默认）</li><li>2-英文</li>
+    * <p>主语言类型：<li>1-中文（默认）</li><li>2-英文</li></p>
     */
     @SerializedName("PrimaryLanguage")
     @Expose
     private Long PrimaryLanguage;
 
     /**
-    * 音频采样率：
-<li>24000：24k（部分音色支持，请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)）</li>
-<li>16000：16k（默认）</li>
-<li>8000：8k</li>
+    * <p>音频采样率：</p><li>24000：24k（部分音色支持，请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)）</li><li>16000：16k（默认）</li><li>8000：8k</li>
     */
     @SerializedName("SampleRate")
     @Expose
     private Long SampleRate;
 
     /**
-    * 返回音频格式，可取值：wav（默认），mp3，pcm
+    * <p>返回音频格式，可取值：wav（默认），mp3，pcm</p>
     */
     @SerializedName("Codec")
     @Expose
     private String Codec;
 
     /**
-    * 是否开启时间戳功能，默认为false。
+    * <p>是否开启时间戳功能，默认为false。部分超自然音色不支持时间戳</p>
     */
     @SerializedName("EnableSubtitle")
     @Expose
     private Boolean EnableSubtitle;
 
     /**
-    * 断句敏感阈值，默认值为：0，取值范围：[0,1,2]。该值越大越不容易断句，模型会更倾向于仅按照标点符号断句。此参数建议不要随意调整，可能会影响合成效果。
+    * <p>断句敏感阈值，默认值为：0，取值范围：[0,1,2]。该值越大越不容易断句，模型会更倾向于仅按照标点符号断句。此参数建议不要随意调整，可能会影响合成效果。</p>
     */
     @SerializedName("SegmentRate")
     @Expose
     private Long SegmentRate;
 
     /**
-    * 控制合成音频的情感，仅支持多情感音色使用。取值: neutral(中性)、sad(悲伤)、happy(高兴)、angry(生气)、fear(恐惧)、news(新闻)、story(故事)、radio(广播)、poetry(诗歌)、call(客服)、sajiao(撒娇)、disgusted(厌恶)、amaze(震惊)、peaceful(平静)、exciting(兴奋)、aojiao(傲娇)、jieshuo(解说)
-示例值：neutral
+    * <p>控制合成音频的情感，仅支持多情感音色使用。取值: neutral(中性)、sad(悲伤)、happy(高兴)、angry(生气)、fear(恐惧)、news(新闻)、story(故事)、radio(广播)、poetry(诗歌)、call(客服)、sajiao(撒娇)、disgusted(厌恶)、amaze(震惊)、peaceful(平静)、exciting(兴奋)、aojiao(傲娇)、jieshuo(解说)<br>示例值：neutral</p>
     */
     @SerializedName("EmotionCategory")
     @Expose
     private String EmotionCategory;
 
     /**
-    * 控制合成音频情感程度，取值范围为[50,200],默认为100；只有EmotionCategory不为空时生效；
+    * <p>控制合成音频情感程度，取值范围为[50,200],默认为100；只有EmotionCategory不为空时生效；</p>
     */
     @SerializedName("EmotionIntensity")
     @Expose
     private Long EmotionIntensity;
 
     /**
-     * Get 合成语音的源文本，按UTF-8编码统一计算。
-中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。 
-     * @return Text 合成语音的源文本，按UTF-8编码统一计算。
-中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。
+     * Get <p>合成语音的源文本，按UTF-8编码统一计算。<br>中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。</p> 
+     * @return Text <p>合成语音的源文本，按UTF-8编码统一计算。<br>中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。</p>
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set 合成语音的源文本，按UTF-8编码统一计算。
-中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。
-     * @param Text 合成语音的源文本，按UTF-8编码统一计算。
-中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。
+     * Set <p>合成语音的源文本，按UTF-8编码统一计算。<br>中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。</p>
+     * @param Text <p>合成语音的源文本，按UTF-8编码统一计算。<br>中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。</p>
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get 一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复。 
-     * @return SessionId 一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复。
+     * Get <p>一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复。</p> 
+     * @return SessionId <p>一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复。</p>
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复。
-     * @param SessionId 一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复。
+     * Set <p>一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复。</p>
+     * @param SessionId <p>一次请求对应一个SessionId，会原样返回，建议传入类似于uuid的字符串防止重复。</p>
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get 音量大小，范围[-10，10]，对应音量大小。默认为0，代表正常音量，值越大音量越高。 
-     * @return Volume 音量大小，范围[-10，10]，对应音量大小。默认为0，代表正常音量，值越大音量越高。
+     * Get <p>音量大小，范围[-10，10]，对应音量大小。默认为0，代表正常音量，值越大音量越高。</p> 
+     * @return Volume <p>音量大小，范围[-10，10]，对应音量大小。默认为0，代表正常音量，值越大音量越高。</p>
      */
     public Float getVolume() {
         return this.Volume;
     }
 
     /**
-     * Set 音量大小，范围[-10，10]，对应音量大小。默认为0，代表正常音量，值越大音量越高。
-     * @param Volume 音量大小，范围[-10，10]，对应音量大小。默认为0，代表正常音量，值越大音量越高。
+     * Set <p>音量大小，范围[-10，10]，对应音量大小。默认为0，代表正常音量，值越大音量越高。</p>
+     * @param Volume <p>音量大小，范围[-10，10]，对应音量大小。默认为0，代表正常音量，值越大音量越高。</p>
      */
     public void setVolume(Float Volume) {
         this.Volume = Volume;
     }
 
     /**
-     * Get 语速，范围：[-2，6]，分别对应不同语速：<li>-2代表0.6倍</li><li>-1代表0.8倍</li><li>0代表1.0倍（默认）</li><li>1代表1.2倍</li><li>2代表1.5倍</li><li>6代表2.5倍</li>如果需要更细化的语速，可以保留小数点后 2 位，例如0.5/1.25/2.81等。<br>参数值与实际语速转换，可参考[代码示例](https://sdk-1300466766.cos.ap-shanghai.myqcloud.com/sample/speed_sample.tar.gz) 
-     * @return Speed 语速，范围：[-2，6]，分别对应不同语速：<li>-2代表0.6倍</li><li>-1代表0.8倍</li><li>0代表1.0倍（默认）</li><li>1代表1.2倍</li><li>2代表1.5倍</li><li>6代表2.5倍</li>如果需要更细化的语速，可以保留小数点后 2 位，例如0.5/1.25/2.81等。<br>参数值与实际语速转换，可参考[代码示例](https://sdk-1300466766.cos.ap-shanghai.myqcloud.com/sample/speed_sample.tar.gz)
+     * Get <p>语速，范围：[-2，6]，分别对应不同语速：<li>-2代表0.6倍</li><li>-1代表0.8倍</li><li>0代表1.0倍（默认）</li><li>1代表1.2倍</li><li>2代表1.5倍</li><li>6代表2.5倍</li>如果需要更细化的语速，可以保留小数点后 2 位，例如0.5/1.25/2.81等。<br>参数值与实际语速转换，可参考<a href="https://sdk-1300466766.cos.ap-shanghai.myqcloud.com/sample/speed_sample.tar.gz">代码示例</a></p> 
+     * @return Speed <p>语速，范围：[-2，6]，分别对应不同语速：<li>-2代表0.6倍</li><li>-1代表0.8倍</li><li>0代表1.0倍（默认）</li><li>1代表1.2倍</li><li>2代表1.5倍</li><li>6代表2.5倍</li>如果需要更细化的语速，可以保留小数点后 2 位，例如0.5/1.25/2.81等。<br>参数值与实际语速转换，可参考<a href="https://sdk-1300466766.cos.ap-shanghai.myqcloud.com/sample/speed_sample.tar.gz">代码示例</a></p>
      */
     public Float getSpeed() {
         return this.Speed;
     }
 
     /**
-     * Set 语速，范围：[-2，6]，分别对应不同语速：<li>-2代表0.6倍</li><li>-1代表0.8倍</li><li>0代表1.0倍（默认）</li><li>1代表1.2倍</li><li>2代表1.5倍</li><li>6代表2.5倍</li>如果需要更细化的语速，可以保留小数点后 2 位，例如0.5/1.25/2.81等。<br>参数值与实际语速转换，可参考[代码示例](https://sdk-1300466766.cos.ap-shanghai.myqcloud.com/sample/speed_sample.tar.gz)
-     * @param Speed 语速，范围：[-2，6]，分别对应不同语速：<li>-2代表0.6倍</li><li>-1代表0.8倍</li><li>0代表1.0倍（默认）</li><li>1代表1.2倍</li><li>2代表1.5倍</li><li>6代表2.5倍</li>如果需要更细化的语速，可以保留小数点后 2 位，例如0.5/1.25/2.81等。<br>参数值与实际语速转换，可参考[代码示例](https://sdk-1300466766.cos.ap-shanghai.myqcloud.com/sample/speed_sample.tar.gz)
+     * Set <p>语速，范围：[-2，6]，分别对应不同语速：<li>-2代表0.6倍</li><li>-1代表0.8倍</li><li>0代表1.0倍（默认）</li><li>1代表1.2倍</li><li>2代表1.5倍</li><li>6代表2.5倍</li>如果需要更细化的语速，可以保留小数点后 2 位，例如0.5/1.25/2.81等。<br>参数值与实际语速转换，可参考<a href="https://sdk-1300466766.cos.ap-shanghai.myqcloud.com/sample/speed_sample.tar.gz">代码示例</a></p>
+     * @param Speed <p>语速，范围：[-2，6]，分别对应不同语速：<li>-2代表0.6倍</li><li>-1代表0.8倍</li><li>0代表1.0倍（默认）</li><li>1代表1.2倍</li><li>2代表1.5倍</li><li>6代表2.5倍</li>如果需要更细化的语速，可以保留小数点后 2 位，例如0.5/1.25/2.81等。<br>参数值与实际语速转换，可参考<a href="https://sdk-1300466766.cos.ap-shanghai.myqcloud.com/sample/speed_sample.tar.gz">代码示例</a></p>
      */
     public void setSpeed(Float Speed) {
         this.Speed = Speed;
     }
 
     /**
-     * Get 项目id，用户自定义，默认为0。 
-     * @return ProjectId 项目id，用户自定义，默认为0。
+     * Get <p>项目id，用户自定义，默认为0。</p> 
+     * @return ProjectId <p>项目id，用户自定义，默认为0。</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目id，用户自定义，默认为0。
-     * @param ProjectId 项目id，用户自定义，默认为0。
+     * Set <p>项目id，用户自定义，默认为0。</p>
+     * @param ProjectId <p>项目id，用户自定义，默认为0。</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 模型类型，1-默认模型。 
-     * @return ModelType 模型类型，1-默认模型。
+     * Get <p>模型类型，1-默认模型。</p> 
+     * @return ModelType <p>模型类型，1-默认模型。</p>
      */
     public Long getModelType() {
         return this.ModelType;
     }
 
     /**
-     * Set 模型类型，1-默认模型。
-     * @param ModelType 模型类型，1-默认模型。
+     * Set <p>模型类型，1-默认模型。</p>
+     * @param ModelType <p>模型类型，1-默认模型。</p>
      */
     public void setModelType(Long ModelType) {
         this.ModelType = ModelType;
     }
 
     /**
-     * Get 音色 ID，包括精品音色、大模型音色与基础版复刻音色。不同音色价格有差异，详情请参见[购买指南](https://cloud.tencent.com/document/product/1073/34112)。完整的音色 ID 列表请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)。<br>若使用一句话版声音复刻，请填入固定值“200000000”。 
-     * @return VoiceType 音色 ID，包括精品音色、大模型音色与基础版复刻音色。不同音色价格有差异，详情请参见[购买指南](https://cloud.tencent.com/document/product/1073/34112)。完整的音色 ID 列表请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)。<br>若使用一句话版声音复刻，请填入固定值“200000000”。
+     * Get <p>音色 ID，包括精品音色、大模型音色与基础版复刻音色。不同音色价格有差异，详情请参见<a href="https://cloud.tencent.com/document/product/1073/34112">购买指南</a>。完整的音色 ID 列表请参见<a href="https://cloud.tencent.com/document/product/1073/92668">音色列表</a>。<br>若使用一句话版声音复刻，请填入固定值“200000000”。</p> 
+     * @return VoiceType <p>音色 ID，包括精品音色、大模型音色与基础版复刻音色。不同音色价格有差异，详情请参见<a href="https://cloud.tencent.com/document/product/1073/34112">购买指南</a>。完整的音色 ID 列表请参见<a href="https://cloud.tencent.com/document/product/1073/92668">音色列表</a>。<br>若使用一句话版声音复刻，请填入固定值“200000000”。</p>
      */
     public Long getVoiceType() {
         return this.VoiceType;
     }
 
     /**
-     * Set 音色 ID，包括精品音色、大模型音色与基础版复刻音色。不同音色价格有差异，详情请参见[购买指南](https://cloud.tencent.com/document/product/1073/34112)。完整的音色 ID 列表请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)。<br>若使用一句话版声音复刻，请填入固定值“200000000”。
-     * @param VoiceType 音色 ID，包括精品音色、大模型音色与基础版复刻音色。不同音色价格有差异，详情请参见[购买指南](https://cloud.tencent.com/document/product/1073/34112)。完整的音色 ID 列表请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)。<br>若使用一句话版声音复刻，请填入固定值“200000000”。
+     * Set <p>音色 ID，包括精品音色、大模型音色与基础版复刻音色。不同音色价格有差异，详情请参见<a href="https://cloud.tencent.com/document/product/1073/34112">购买指南</a>。完整的音色 ID 列表请参见<a href="https://cloud.tencent.com/document/product/1073/92668">音色列表</a>。<br>若使用一句话版声音复刻，请填入固定值“200000000”。</p>
+     * @param VoiceType <p>音色 ID，包括精品音色、大模型音色与基础版复刻音色。不同音色价格有差异，详情请参见<a href="https://cloud.tencent.com/document/product/1073/34112">购买指南</a>。完整的音色 ID 列表请参见<a href="https://cloud.tencent.com/document/product/1073/92668">音色列表</a>。<br>若使用一句话版声音复刻，请填入固定值“200000000”。</p>
      */
     public void setVoiceType(Long VoiceType) {
         this.VoiceType = VoiceType;
     }
 
     /**
-     * Get 一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。 
-     * @return FastVoiceType 一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。
+     * Get <p>一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。</p> 
+     * @return FastVoiceType <p>一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。</p>
      */
     public String getFastVoiceType() {
         return this.FastVoiceType;
     }
 
     /**
-     * Set 一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。
-     * @param FastVoiceType 一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。
+     * Set <p>一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。</p>
+     * @param FastVoiceType <p>一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。</p>
      */
     public void setFastVoiceType(String FastVoiceType) {
         this.FastVoiceType = FastVoiceType;
     }
 
     /**
-     * Get 主语言类型：<li>1-中文（默认）</li><li>2-英文</li> 
-     * @return PrimaryLanguage 主语言类型：<li>1-中文（默认）</li><li>2-英文</li>
+     * Get <p>主语言类型：<li>1-中文（默认）</li><li>2-英文</li></p> 
+     * @return PrimaryLanguage <p>主语言类型：<li>1-中文（默认）</li><li>2-英文</li></p>
      */
     public Long getPrimaryLanguage() {
         return this.PrimaryLanguage;
     }
 
     /**
-     * Set 主语言类型：<li>1-中文（默认）</li><li>2-英文</li>
-     * @param PrimaryLanguage 主语言类型：<li>1-中文（默认）</li><li>2-英文</li>
+     * Set <p>主语言类型：<li>1-中文（默认）</li><li>2-英文</li></p>
+     * @param PrimaryLanguage <p>主语言类型：<li>1-中文（默认）</li><li>2-英文</li></p>
      */
     public void setPrimaryLanguage(Long PrimaryLanguage) {
         this.PrimaryLanguage = PrimaryLanguage;
     }
 
     /**
-     * Get 音频采样率：
-<li>24000：24k（部分音色支持，请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)）</li>
-<li>16000：16k（默认）</li>
-<li>8000：8k</li> 
-     * @return SampleRate 音频采样率：
-<li>24000：24k（部分音色支持，请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)）</li>
-<li>16000：16k（默认）</li>
-<li>8000：8k</li>
+     * Get <p>音频采样率：</p><li>24000：24k（部分音色支持，请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)）</li><li>16000：16k（默认）</li><li>8000：8k</li> 
+     * @return SampleRate <p>音频采样率：</p><li>24000：24k（部分音色支持，请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)）</li><li>16000：16k（默认）</li><li>8000：8k</li>
      */
     public Long getSampleRate() {
         return this.SampleRate;
     }
 
     /**
-     * Set 音频采样率：
-<li>24000：24k（部分音色支持，请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)）</li>
-<li>16000：16k（默认）</li>
-<li>8000：8k</li>
-     * @param SampleRate 音频采样率：
-<li>24000：24k（部分音色支持，请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)）</li>
-<li>16000：16k（默认）</li>
-<li>8000：8k</li>
+     * Set <p>音频采样率：</p><li>24000：24k（部分音色支持，请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)）</li><li>16000：16k（默认）</li><li>8000：8k</li>
+     * @param SampleRate <p>音频采样率：</p><li>24000：24k（部分音色支持，请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)）</li><li>16000：16k（默认）</li><li>8000：8k</li>
      */
     public void setSampleRate(Long SampleRate) {
         this.SampleRate = SampleRate;
     }
 
     /**
-     * Get 返回音频格式，可取值：wav（默认），mp3，pcm 
-     * @return Codec 返回音频格式，可取值：wav（默认），mp3，pcm
+     * Get <p>返回音频格式，可取值：wav（默认），mp3，pcm</p> 
+     * @return Codec <p>返回音频格式，可取值：wav（默认），mp3，pcm</p>
      */
     public String getCodec() {
         return this.Codec;
     }
 
     /**
-     * Set 返回音频格式，可取值：wav（默认），mp3，pcm
-     * @param Codec 返回音频格式，可取值：wav（默认），mp3，pcm
+     * Set <p>返回音频格式，可取值：wav（默认），mp3，pcm</p>
+     * @param Codec <p>返回音频格式，可取值：wav（默认），mp3，pcm</p>
      */
     public void setCodec(String Codec) {
         this.Codec = Codec;
     }
 
     /**
-     * Get 是否开启时间戳功能，默认为false。 
-     * @return EnableSubtitle 是否开启时间戳功能，默认为false。
+     * Get <p>是否开启时间戳功能，默认为false。部分超自然音色不支持时间戳</p> 
+     * @return EnableSubtitle <p>是否开启时间戳功能，默认为false。部分超自然音色不支持时间戳</p>
      */
     public Boolean getEnableSubtitle() {
         return this.EnableSubtitle;
     }
 
     /**
-     * Set 是否开启时间戳功能，默认为false。
-     * @param EnableSubtitle 是否开启时间戳功能，默认为false。
+     * Set <p>是否开启时间戳功能，默认为false。部分超自然音色不支持时间戳</p>
+     * @param EnableSubtitle <p>是否开启时间戳功能，默认为false。部分超自然音色不支持时间戳</p>
      */
     public void setEnableSubtitle(Boolean EnableSubtitle) {
         this.EnableSubtitle = EnableSubtitle;
     }
 
     /**
-     * Get 断句敏感阈值，默认值为：0，取值范围：[0,1,2]。该值越大越不容易断句，模型会更倾向于仅按照标点符号断句。此参数建议不要随意调整，可能会影响合成效果。 
-     * @return SegmentRate 断句敏感阈值，默认值为：0，取值范围：[0,1,2]。该值越大越不容易断句，模型会更倾向于仅按照标点符号断句。此参数建议不要随意调整，可能会影响合成效果。
+     * Get <p>断句敏感阈值，默认值为：0，取值范围：[0,1,2]。该值越大越不容易断句，模型会更倾向于仅按照标点符号断句。此参数建议不要随意调整，可能会影响合成效果。</p> 
+     * @return SegmentRate <p>断句敏感阈值，默认值为：0，取值范围：[0,1,2]。该值越大越不容易断句，模型会更倾向于仅按照标点符号断句。此参数建议不要随意调整，可能会影响合成效果。</p>
      */
     public Long getSegmentRate() {
         return this.SegmentRate;
     }
 
     /**
-     * Set 断句敏感阈值，默认值为：0，取值范围：[0,1,2]。该值越大越不容易断句，模型会更倾向于仅按照标点符号断句。此参数建议不要随意调整，可能会影响合成效果。
-     * @param SegmentRate 断句敏感阈值，默认值为：0，取值范围：[0,1,2]。该值越大越不容易断句，模型会更倾向于仅按照标点符号断句。此参数建议不要随意调整，可能会影响合成效果。
+     * Set <p>断句敏感阈值，默认值为：0，取值范围：[0,1,2]。该值越大越不容易断句，模型会更倾向于仅按照标点符号断句。此参数建议不要随意调整，可能会影响合成效果。</p>
+     * @param SegmentRate <p>断句敏感阈值，默认值为：0，取值范围：[0,1,2]。该值越大越不容易断句，模型会更倾向于仅按照标点符号断句。此参数建议不要随意调整，可能会影响合成效果。</p>
      */
     public void setSegmentRate(Long SegmentRate) {
         this.SegmentRate = SegmentRate;
     }
 
     /**
-     * Get 控制合成音频的情感，仅支持多情感音色使用。取值: neutral(中性)、sad(悲伤)、happy(高兴)、angry(生气)、fear(恐惧)、news(新闻)、story(故事)、radio(广播)、poetry(诗歌)、call(客服)、sajiao(撒娇)、disgusted(厌恶)、amaze(震惊)、peaceful(平静)、exciting(兴奋)、aojiao(傲娇)、jieshuo(解说)
-示例值：neutral 
-     * @return EmotionCategory 控制合成音频的情感，仅支持多情感音色使用。取值: neutral(中性)、sad(悲伤)、happy(高兴)、angry(生气)、fear(恐惧)、news(新闻)、story(故事)、radio(广播)、poetry(诗歌)、call(客服)、sajiao(撒娇)、disgusted(厌恶)、amaze(震惊)、peaceful(平静)、exciting(兴奋)、aojiao(傲娇)、jieshuo(解说)
-示例值：neutral
+     * Get <p>控制合成音频的情感，仅支持多情感音色使用。取值: neutral(中性)、sad(悲伤)、happy(高兴)、angry(生气)、fear(恐惧)、news(新闻)、story(故事)、radio(广播)、poetry(诗歌)、call(客服)、sajiao(撒娇)、disgusted(厌恶)、amaze(震惊)、peaceful(平静)、exciting(兴奋)、aojiao(傲娇)、jieshuo(解说)<br>示例值：neutral</p> 
+     * @return EmotionCategory <p>控制合成音频的情感，仅支持多情感音色使用。取值: neutral(中性)、sad(悲伤)、happy(高兴)、angry(生气)、fear(恐惧)、news(新闻)、story(故事)、radio(广播)、poetry(诗歌)、call(客服)、sajiao(撒娇)、disgusted(厌恶)、amaze(震惊)、peaceful(平静)、exciting(兴奋)、aojiao(傲娇)、jieshuo(解说)<br>示例值：neutral</p>
      */
     public String getEmotionCategory() {
         return this.EmotionCategory;
     }
 
     /**
-     * Set 控制合成音频的情感，仅支持多情感音色使用。取值: neutral(中性)、sad(悲伤)、happy(高兴)、angry(生气)、fear(恐惧)、news(新闻)、story(故事)、radio(广播)、poetry(诗歌)、call(客服)、sajiao(撒娇)、disgusted(厌恶)、amaze(震惊)、peaceful(平静)、exciting(兴奋)、aojiao(傲娇)、jieshuo(解说)
-示例值：neutral
-     * @param EmotionCategory 控制合成音频的情感，仅支持多情感音色使用。取值: neutral(中性)、sad(悲伤)、happy(高兴)、angry(生气)、fear(恐惧)、news(新闻)、story(故事)、radio(广播)、poetry(诗歌)、call(客服)、sajiao(撒娇)、disgusted(厌恶)、amaze(震惊)、peaceful(平静)、exciting(兴奋)、aojiao(傲娇)、jieshuo(解说)
-示例值：neutral
+     * Set <p>控制合成音频的情感，仅支持多情感音色使用。取值: neutral(中性)、sad(悲伤)、happy(高兴)、angry(生气)、fear(恐惧)、news(新闻)、story(故事)、radio(广播)、poetry(诗歌)、call(客服)、sajiao(撒娇)、disgusted(厌恶)、amaze(震惊)、peaceful(平静)、exciting(兴奋)、aojiao(傲娇)、jieshuo(解说)<br>示例值：neutral</p>
+     * @param EmotionCategory <p>控制合成音频的情感，仅支持多情感音色使用。取值: neutral(中性)、sad(悲伤)、happy(高兴)、angry(生气)、fear(恐惧)、news(新闻)、story(故事)、radio(广播)、poetry(诗歌)、call(客服)、sajiao(撒娇)、disgusted(厌恶)、amaze(震惊)、peaceful(平静)、exciting(兴奋)、aojiao(傲娇)、jieshuo(解说)<br>示例值：neutral</p>
      */
     public void setEmotionCategory(String EmotionCategory) {
         this.EmotionCategory = EmotionCategory;
     }
 
     /**
-     * Get 控制合成音频情感程度，取值范围为[50,200],默认为100；只有EmotionCategory不为空时生效； 
-     * @return EmotionIntensity 控制合成音频情感程度，取值范围为[50,200],默认为100；只有EmotionCategory不为空时生效；
+     * Get <p>控制合成音频情感程度，取值范围为[50,200],默认为100；只有EmotionCategory不为空时生效；</p> 
+     * @return EmotionIntensity <p>控制合成音频情感程度，取值范围为[50,200],默认为100；只有EmotionCategory不为空时生效；</p>
      */
     public Long getEmotionIntensity() {
         return this.EmotionIntensity;
     }
 
     /**
-     * Set 控制合成音频情感程度，取值范围为[50,200],默认为100；只有EmotionCategory不为空时生效；
-     * @param EmotionIntensity 控制合成音频情感程度，取值范围为[50,200],默认为100；只有EmotionCategory不为空时生效；
+     * Set <p>控制合成音频情感程度，取值范围为[50,200],默认为100；只有EmotionCategory不为空时生效；</p>
+     * @param EmotionIntensity <p>控制合成音频情感程度，取值范围为[50,200],默认为100；只有EmotionCategory不为空时生效；</p>
      */
     public void setEmotionIntensity(Long EmotionIntensity) {
         this.EmotionIntensity = EmotionIntensity;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateTranscodeTemplateResponse extends AbstractModel {
 
     /**
-    * 转码模板唯一标识。
+    * <p>转码模板唯一标识。</p>
     */
     @SerializedName("Definition")
     @Expose
@@ -38,16 +38,16 @@ public class CreateTranscodeTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 转码模板唯一标识。 
-     * @return Definition 转码模板唯一标识。
+     * Get <p>转码模板唯一标识。</p> 
+     * @return Definition <p>转码模板唯一标识。</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 转码模板唯一标识。
-     * @param Definition 转码模板唯一标识。
+     * Set <p>转码模板唯一标识。</p>
+     * @param Definition <p>转码模板唯一标识。</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

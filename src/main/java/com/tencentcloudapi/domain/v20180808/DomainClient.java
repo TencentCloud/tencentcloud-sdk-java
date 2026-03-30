@@ -517,6 +517,17 @@ public class DomainClient extends AbstractClient{
     }
 
     /**
+     *本接口 (ModifyDomainOwner) 用于域名过户。
+     * @param req ModifyDomainOwnerRequest
+     * @return ModifyDomainOwnerResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDomainOwnerResponse ModifyDomainOwner(ModifyDomainOwnerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDomainOwner", ModifyDomainOwnerResponse.class);
+    }
+
+    /**
      *本接口 ( ModifyDomainOwnerBatch) 用于域名批量账号间转移 。
      * @param req ModifyDomainOwnerBatchRequest
      * @return ModifyDomainOwnerBatchResponse

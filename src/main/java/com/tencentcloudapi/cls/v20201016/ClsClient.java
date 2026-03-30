@@ -189,6 +189,17 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *本接口用于创建DataSight控制台
+     * @param req CreateConsoleRequest
+     * @return CreateConsoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateConsoleResponse CreateConsole(CreateConsoleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateConsole", CreateConsoleResponse.class);
+    }
+
+    /**
      *创建控制台分享
      * @param req CreateConsoleSharingRequest
      * @return CreateConsoleSharingResponse
@@ -555,6 +566,17 @@ public class ClsClient extends AbstractClient{
     public DeleteConfigFromMachineGroupResponse DeleteConfigFromMachineGroup(DeleteConfigFromMachineGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteConfigFromMachineGroup", DeleteConfigFromMachineGroupResponse.class);
+    }
+
+    /**
+     *本接口用于删除DataSight控制台
+     * @param req DeleteConsoleRequest
+     * @return DeleteConsoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteConsoleResponse DeleteConsole(DeleteConsoleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteConsole", DeleteConsoleResponse.class);
     }
 
     /**
@@ -951,6 +973,17 @@ public class ClsClient extends AbstractClient{
     public DescribeConsoleSharingListResponse DescribeConsoleSharingList(DescribeConsoleSharingListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeConsoleSharingList", DescribeConsoleSharingListResponse.class);
+    }
+
+    /**
+     *查询DataSight控制台实例列表
+     * @param req DescribeConsolesRequest
+     * @return DescribeConsolesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConsolesResponse DescribeConsoles(DescribeConsolesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeConsoles", DescribeConsolesResponse.class);
     }
 
     /**
@@ -1546,6 +1579,17 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
     public ModifyConfigExtraResponse ModifyConfigExtra(ModifyConfigExtraRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyConfigExtra", ModifyConfigExtraResponse.class);
+    }
+
+    /**
+     *本接口用于编辑DataSight控制台
+     * @param req ModifyConsoleRequest
+     * @return ModifyConsoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyConsoleResponse ModifyConsole(ModifyConsoleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyConsole", ModifyConsoleResponse.class);
     }
 
     /**

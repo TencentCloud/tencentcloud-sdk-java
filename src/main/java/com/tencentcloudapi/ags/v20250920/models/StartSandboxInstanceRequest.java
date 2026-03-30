@@ -24,141 +24,187 @@ import java.util.HashMap;
 public class StartSandboxInstanceRequest extends AbstractModel {
 
     /**
-    * 沙箱工具 ID，与 ToolName 至少有一个要填
+    * <p>沙箱工具 ID，与 ToolName 至少有一个要填</p>
     */
     @SerializedName("ToolId")
     @Expose
     private String ToolId;
 
     /**
-    * 沙箱工具名称，与 ToolId 至少有一个要填
+    * <p>沙箱工具名称，与 ToolId 至少有一个要填</p>
     */
     @SerializedName("ToolName")
     @Expose
     private String ToolName;
 
     /**
-    * 超时时间，超过这个时间就自动回收实例。支持格式：5m、300s、1h 等，默认 5m。最小 30s，最大 24h
+    * <p>超时时间，超过这个时间就自动回收实例。支持格式：5m、300s、1h 等，默认 5m。最小 30s，最大 24h</p>
     */
     @SerializedName("Timeout")
     @Expose
     private String Timeout;
 
     /**
-    * 幂等性 Token，长度不超过 64 字符
+    * <p>幂等性 Token，长度不超过 64 字符</p>
     */
     @SerializedName("ClientToken")
     @Expose
     private String ClientToken;
 
     /**
-    * 沙箱实例存储挂载配置
+    * <p>沙箱实例存储挂载配置</p>
     */
     @SerializedName("MountOptions")
     @Expose
     private MountOption [] MountOptions;
 
     /**
-    * 沙箱实例自定义配置
+    * <p>沙箱实例自定义配置</p>
     */
     @SerializedName("CustomConfiguration")
     @Expose
     private CustomConfiguration CustomConfiguration;
 
     /**
-     * Get 沙箱工具 ID，与 ToolName 至少有一个要填 
-     * @return ToolId 沙箱工具 ID，与 ToolName 至少有一个要填
+    * <p>沙箱访问认证模式</p><p>枚举值：</p><ul><li>DEFAULT： 跟随系统策略</li><li>TOKEN： Token认证</li><li>NONE： 免认证 </li></ul><p>默认值：DEFAULT</p>
+    */
+    @SerializedName("AuthMode")
+    @Expose
+    private String AuthMode;
+
+    /**
+    * <p>沙箱元数据</p>
+    */
+    @SerializedName("Metadata")
+    @Expose
+    private MetadataVar [] Metadata;
+
+    /**
+     * Get <p>沙箱工具 ID，与 ToolName 至少有一个要填</p> 
+     * @return ToolId <p>沙箱工具 ID，与 ToolName 至少有一个要填</p>
      */
     public String getToolId() {
         return this.ToolId;
     }
 
     /**
-     * Set 沙箱工具 ID，与 ToolName 至少有一个要填
-     * @param ToolId 沙箱工具 ID，与 ToolName 至少有一个要填
+     * Set <p>沙箱工具 ID，与 ToolName 至少有一个要填</p>
+     * @param ToolId <p>沙箱工具 ID，与 ToolName 至少有一个要填</p>
      */
     public void setToolId(String ToolId) {
         this.ToolId = ToolId;
     }
 
     /**
-     * Get 沙箱工具名称，与 ToolId 至少有一个要填 
-     * @return ToolName 沙箱工具名称，与 ToolId 至少有一个要填
+     * Get <p>沙箱工具名称，与 ToolId 至少有一个要填</p> 
+     * @return ToolName <p>沙箱工具名称，与 ToolId 至少有一个要填</p>
      */
     public String getToolName() {
         return this.ToolName;
     }
 
     /**
-     * Set 沙箱工具名称，与 ToolId 至少有一个要填
-     * @param ToolName 沙箱工具名称，与 ToolId 至少有一个要填
+     * Set <p>沙箱工具名称，与 ToolId 至少有一个要填</p>
+     * @param ToolName <p>沙箱工具名称，与 ToolId 至少有一个要填</p>
      */
     public void setToolName(String ToolName) {
         this.ToolName = ToolName;
     }
 
     /**
-     * Get 超时时间，超过这个时间就自动回收实例。支持格式：5m、300s、1h 等，默认 5m。最小 30s，最大 24h 
-     * @return Timeout 超时时间，超过这个时间就自动回收实例。支持格式：5m、300s、1h 等，默认 5m。最小 30s，最大 24h
+     * Get <p>超时时间，超过这个时间就自动回收实例。支持格式：5m、300s、1h 等，默认 5m。最小 30s，最大 24h</p> 
+     * @return Timeout <p>超时时间，超过这个时间就自动回收实例。支持格式：5m、300s、1h 等，默认 5m。最小 30s，最大 24h</p>
      */
     public String getTimeout() {
         return this.Timeout;
     }
 
     /**
-     * Set 超时时间，超过这个时间就自动回收实例。支持格式：5m、300s、1h 等，默认 5m。最小 30s，最大 24h
-     * @param Timeout 超时时间，超过这个时间就自动回收实例。支持格式：5m、300s、1h 等，默认 5m。最小 30s，最大 24h
+     * Set <p>超时时间，超过这个时间就自动回收实例。支持格式：5m、300s、1h 等，默认 5m。最小 30s，最大 24h</p>
+     * @param Timeout <p>超时时间，超过这个时间就自动回收实例。支持格式：5m、300s、1h 等，默认 5m。最小 30s，最大 24h</p>
      */
     public void setTimeout(String Timeout) {
         this.Timeout = Timeout;
     }
 
     /**
-     * Get 幂等性 Token，长度不超过 64 字符 
-     * @return ClientToken 幂等性 Token，长度不超过 64 字符
+     * Get <p>幂等性 Token，长度不超过 64 字符</p> 
+     * @return ClientToken <p>幂等性 Token，长度不超过 64 字符</p>
      */
     public String getClientToken() {
         return this.ClientToken;
     }
 
     /**
-     * Set 幂等性 Token，长度不超过 64 字符
-     * @param ClientToken 幂等性 Token，长度不超过 64 字符
+     * Set <p>幂等性 Token，长度不超过 64 字符</p>
+     * @param ClientToken <p>幂等性 Token，长度不超过 64 字符</p>
      */
     public void setClientToken(String ClientToken) {
         this.ClientToken = ClientToken;
     }
 
     /**
-     * Get 沙箱实例存储挂载配置 
-     * @return MountOptions 沙箱实例存储挂载配置
+     * Get <p>沙箱实例存储挂载配置</p> 
+     * @return MountOptions <p>沙箱实例存储挂载配置</p>
      */
     public MountOption [] getMountOptions() {
         return this.MountOptions;
     }
 
     /**
-     * Set 沙箱实例存储挂载配置
-     * @param MountOptions 沙箱实例存储挂载配置
+     * Set <p>沙箱实例存储挂载配置</p>
+     * @param MountOptions <p>沙箱实例存储挂载配置</p>
      */
     public void setMountOptions(MountOption [] MountOptions) {
         this.MountOptions = MountOptions;
     }
 
     /**
-     * Get 沙箱实例自定义配置 
-     * @return CustomConfiguration 沙箱实例自定义配置
+     * Get <p>沙箱实例自定义配置</p> 
+     * @return CustomConfiguration <p>沙箱实例自定义配置</p>
      */
     public CustomConfiguration getCustomConfiguration() {
         return this.CustomConfiguration;
     }
 
     /**
-     * Set 沙箱实例自定义配置
-     * @param CustomConfiguration 沙箱实例自定义配置
+     * Set <p>沙箱实例自定义配置</p>
+     * @param CustomConfiguration <p>沙箱实例自定义配置</p>
      */
     public void setCustomConfiguration(CustomConfiguration CustomConfiguration) {
         this.CustomConfiguration = CustomConfiguration;
+    }
+
+    /**
+     * Get <p>沙箱访问认证模式</p><p>枚举值：</p><ul><li>DEFAULT： 跟随系统策略</li><li>TOKEN： Token认证</li><li>NONE： 免认证 </li></ul><p>默认值：DEFAULT</p> 
+     * @return AuthMode <p>沙箱访问认证模式</p><p>枚举值：</p><ul><li>DEFAULT： 跟随系统策略</li><li>TOKEN： Token认证</li><li>NONE： 免认证 </li></ul><p>默认值：DEFAULT</p>
+     */
+    public String getAuthMode() {
+        return this.AuthMode;
+    }
+
+    /**
+     * Set <p>沙箱访问认证模式</p><p>枚举值：</p><ul><li>DEFAULT： 跟随系统策略</li><li>TOKEN： Token认证</li><li>NONE： 免认证 </li></ul><p>默认值：DEFAULT</p>
+     * @param AuthMode <p>沙箱访问认证模式</p><p>枚举值：</p><ul><li>DEFAULT： 跟随系统策略</li><li>TOKEN： Token认证</li><li>NONE： 免认证 </li></ul><p>默认值：DEFAULT</p>
+     */
+    public void setAuthMode(String AuthMode) {
+        this.AuthMode = AuthMode;
+    }
+
+    /**
+     * Get <p>沙箱元数据</p> 
+     * @return Metadata <p>沙箱元数据</p>
+     */
+    public MetadataVar [] getMetadata() {
+        return this.Metadata;
+    }
+
+    /**
+     * Set <p>沙箱元数据</p>
+     * @param Metadata <p>沙箱元数据</p>
+     */
+    public void setMetadata(MetadataVar [] Metadata) {
+        this.Metadata = Metadata;
     }
 
     public StartSandboxInstanceRequest() {
@@ -190,6 +236,15 @@ public class StartSandboxInstanceRequest extends AbstractModel {
         if (source.CustomConfiguration != null) {
             this.CustomConfiguration = new CustomConfiguration(source.CustomConfiguration);
         }
+        if (source.AuthMode != null) {
+            this.AuthMode = new String(source.AuthMode);
+        }
+        if (source.Metadata != null) {
+            this.Metadata = new MetadataVar[source.Metadata.length];
+            for (int i = 0; i < source.Metadata.length; i++) {
+                this.Metadata[i] = new MetadataVar(source.Metadata[i]);
+            }
+        }
     }
 
 
@@ -203,6 +258,8 @@ public class StartSandboxInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
         this.setParamArrayObj(map, prefix + "MountOptions.", this.MountOptions);
         this.setParamObj(map, prefix + "CustomConfiguration.", this.CustomConfiguration);
+        this.setParamSimple(map, prefix + "AuthMode", this.AuthMode);
+        this.setParamArrayObj(map, prefix + "Metadata.", this.Metadata);
 
     }
 }

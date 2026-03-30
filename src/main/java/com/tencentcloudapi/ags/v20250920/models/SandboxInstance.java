@@ -101,6 +101,20 @@ public class SandboxInstance extends AbstractModel {
     private CustomConfigurationDetail CustomConfiguration;
 
     /**
+    * <p>网络模式</p><p>枚举值：</p><ul><li>PUBLIC： 公网访问</li><li>SANDBOX： 无网络</li><li>INTERNAL_SERVICE： 腾讯云内部公共服务</li></ul><p>可以覆盖工具级别的网络配置。但如果一个工具本身就不支持 VPC 网络，那么即便在实例设置里选了 VPC 模式，也是无效的</p>
+    */
+    @SerializedName("NetworkMode")
+    @Expose
+    private String NetworkMode;
+
+    /**
+    * <p>沙箱实例元数据</p>
+    */
+    @SerializedName("Metadata")
+    @Expose
+    private MetadataVar [] Metadata;
+
+    /**
      * Get <p>沙箱实例唯一标识符</p> 
      * @return InstanceId <p>沙箱实例唯一标识符</p>
      */
@@ -276,6 +290,38 @@ public class SandboxInstance extends AbstractModel {
         this.CustomConfiguration = CustomConfiguration;
     }
 
+    /**
+     * Get <p>网络模式</p><p>枚举值：</p><ul><li>PUBLIC： 公网访问</li><li>SANDBOX： 无网络</li><li>INTERNAL_SERVICE： 腾讯云内部公共服务</li></ul><p>可以覆盖工具级别的网络配置。但如果一个工具本身就不支持 VPC 网络，那么即便在实例设置里选了 VPC 模式，也是无效的</p> 
+     * @return NetworkMode <p>网络模式</p><p>枚举值：</p><ul><li>PUBLIC： 公网访问</li><li>SANDBOX： 无网络</li><li>INTERNAL_SERVICE： 腾讯云内部公共服务</li></ul><p>可以覆盖工具级别的网络配置。但如果一个工具本身就不支持 VPC 网络，那么即便在实例设置里选了 VPC 模式，也是无效的</p>
+     */
+    public String getNetworkMode() {
+        return this.NetworkMode;
+    }
+
+    /**
+     * Set <p>网络模式</p><p>枚举值：</p><ul><li>PUBLIC： 公网访问</li><li>SANDBOX： 无网络</li><li>INTERNAL_SERVICE： 腾讯云内部公共服务</li></ul><p>可以覆盖工具级别的网络配置。但如果一个工具本身就不支持 VPC 网络，那么即便在实例设置里选了 VPC 模式，也是无效的</p>
+     * @param NetworkMode <p>网络模式</p><p>枚举值：</p><ul><li>PUBLIC： 公网访问</li><li>SANDBOX： 无网络</li><li>INTERNAL_SERVICE： 腾讯云内部公共服务</li></ul><p>可以覆盖工具级别的网络配置。但如果一个工具本身就不支持 VPC 网络，那么即便在实例设置里选了 VPC 模式，也是无效的</p>
+     */
+    public void setNetworkMode(String NetworkMode) {
+        this.NetworkMode = NetworkMode;
+    }
+
+    /**
+     * Get <p>沙箱实例元数据</p> 
+     * @return Metadata <p>沙箱实例元数据</p>
+     */
+    public MetadataVar [] getMetadata() {
+        return this.Metadata;
+    }
+
+    /**
+     * Set <p>沙箱实例元数据</p>
+     * @param Metadata <p>沙箱实例元数据</p>
+     */
+    public void setMetadata(MetadataVar [] Metadata) {
+        this.Metadata = Metadata;
+    }
+
     public SandboxInstance() {
     }
 
@@ -320,6 +366,15 @@ public class SandboxInstance extends AbstractModel {
         if (source.CustomConfiguration != null) {
             this.CustomConfiguration = new CustomConfigurationDetail(source.CustomConfiguration);
         }
+        if (source.NetworkMode != null) {
+            this.NetworkMode = new String(source.NetworkMode);
+        }
+        if (source.Metadata != null) {
+            this.Metadata = new MetadataVar[source.Metadata.length];
+            for (int i = 0; i < source.Metadata.length; i++) {
+                this.Metadata[i] = new MetadataVar(source.Metadata[i]);
+            }
+        }
     }
 
 
@@ -338,6 +393,8 @@ public class SandboxInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamArrayObj(map, prefix + "MountOptions.", this.MountOptions);
         this.setParamObj(map, prefix + "CustomConfiguration.", this.CustomConfiguration);
+        this.setParamSimple(map, prefix + "NetworkMode", this.NetworkMode);
+        this.setParamArrayObj(map, prefix + "Metadata.", this.Metadata);
 
     }
 }

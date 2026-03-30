@@ -24,76 +24,70 @@ import java.util.HashMap;
 public class TranscodeTemplate extends AbstractModel {
 
     /**
-    * 转码模板唯一标识。
+    * <p>转码模板唯一标识。</p>
     */
     @SerializedName("Definition")
     @Expose
     private String Definition;
 
     /**
-    * 封装格式，取值：mp4、flv、hls、mp3、flac、ogg。
+    * <p>封装格式，取值：mp4、flv、hls、mp3、flac、ogg。</p>
     */
     @SerializedName("Container")
     @Expose
     private String Container;
 
     /**
-    * 转码模板名称。
+    * <p>转码模板名称。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 模板描述信息。
+    * <p>模板描述信息。</p>
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * 模板类型，取值：
-<li>Preset：系统预置模板；</li>
-<li>Custom：用户自定义模板。</li>
+    * <p>模板类型，取值：</p><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 是否去除视频数据，取值：
-<li>0：保留；</li>
-<li>1：去除。</li>
+    * <p>是否去除视频数据，取值：</p><li>0：保留；</li><li>1：去除。</li>
     */
     @SerializedName("RemoveVideo")
     @Expose
     private Long RemoveVideo;
 
     /**
-    * 是否去除音频数据，取值：
-<li>0：保留；</li>
-<li>1：去除。</li>
+    * <p>是否去除音频数据，取值：</p><li>0：保留；</li><li>1：去除。</li>
     */
     @SerializedName("RemoveAudio")
     @Expose
     private Long RemoveAudio;
 
     /**
-    * 视频流配置参数，仅当 RemoveVideo 为 0，该字段有效。
+    * <p>视频流配置参数，仅当 RemoveVideo 为 0，该字段有效。</p>
     */
     @SerializedName("VideoTemplate")
     @Expose
     private VideoTemplateInfo VideoTemplate;
 
     /**
-    * 音频流配置参数，仅当 RemoveAudio 为 0，该字段有效 。
+    * <p>音频流配置参数，仅当 RemoveAudio 为 0，该字段有效 。</p>
     */
     @SerializedName("AudioTemplate")
     @Expose
     private AudioTemplateInfo AudioTemplate;
 
     /**
-    * 极速高清转码参数。
+    * <p>极速高清转码参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TEHDConfig")
@@ -101,7 +95,7 @@ public class TranscodeTemplate extends AbstractModel {
     private TEHDConfig TEHDConfig;
 
     /**
-    * 音视频增强配置。
+    * <p>音视频增强配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnhanceConfig")
@@ -109,207 +103,188 @@ public class TranscodeTemplate extends AbstractModel {
     private EnhanceConfig EnhanceConfig;
 
     /**
-    * 封装格式过滤条件，可选值：
-<li>Video：视频格式，可以同时包含视频流和音频流的封装格式；</li>
-<li>PureAudio：纯音频格式，只能包含音频流的封装格式板。</li>
+    * <p>封装格式过滤条件，可选值：</p><li>Video：视频格式，可以同时包含视频流和音频流的封装格式；</li><li>PureAudio：纯音频格式，只能包含音频流的封装格式板。</li>
     */
     @SerializedName("ContainerType")
     @Expose
     private String ContainerType;
 
     /**
-    * 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+    * <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+    * <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 切片类型，仅当 Container 为 hls 时有效。
+    * <p>切片类型，仅当 Container 为 hls 时有效。</p>
     */
     @SerializedName("SegmentType")
     @Expose
     private String SegmentType;
 
     /**
-     * Get 转码模板唯一标识。 
-     * @return Definition 转码模板唯一标识。
+    * <p>扩展参数。</p>
+    */
+    @SerializedName("StdExtInfo")
+    @Expose
+    private String StdExtInfo;
+
+    /**
+     * Get <p>转码模板唯一标识。</p> 
+     * @return Definition <p>转码模板唯一标识。</p>
      */
     public String getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 转码模板唯一标识。
-     * @param Definition 转码模板唯一标识。
+     * Set <p>转码模板唯一标识。</p>
+     * @param Definition <p>转码模板唯一标识。</p>
      */
     public void setDefinition(String Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get 封装格式，取值：mp4、flv、hls、mp3、flac、ogg。 
-     * @return Container 封装格式，取值：mp4、flv、hls、mp3、flac、ogg。
+     * Get <p>封装格式，取值：mp4、flv、hls、mp3、flac、ogg。</p> 
+     * @return Container <p>封装格式，取值：mp4、flv、hls、mp3、flac、ogg。</p>
      */
     public String getContainer() {
         return this.Container;
     }
 
     /**
-     * Set 封装格式，取值：mp4、flv、hls、mp3、flac、ogg。
-     * @param Container 封装格式，取值：mp4、flv、hls、mp3、flac、ogg。
+     * Set <p>封装格式，取值：mp4、flv、hls、mp3、flac、ogg。</p>
+     * @param Container <p>封装格式，取值：mp4、flv、hls、mp3、flac、ogg。</p>
      */
     public void setContainer(String Container) {
         this.Container = Container;
     }
 
     /**
-     * Get 转码模板名称。 
-     * @return Name 转码模板名称。
+     * Get <p>转码模板名称。</p> 
+     * @return Name <p>转码模板名称。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 转码模板名称。
-     * @param Name 转码模板名称。
+     * Set <p>转码模板名称。</p>
+     * @param Name <p>转码模板名称。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 模板描述信息。 
-     * @return Comment 模板描述信息。
+     * Get <p>模板描述信息。</p> 
+     * @return Comment <p>模板描述信息。</p>
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 模板描述信息。
-     * @param Comment 模板描述信息。
+     * Set <p>模板描述信息。</p>
+     * @param Comment <p>模板描述信息。</p>
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get 模板类型，取值：
-<li>Preset：系统预置模板；</li>
-<li>Custom：用户自定义模板。</li> 
-     * @return Type 模板类型，取值：
-<li>Preset：系统预置模板；</li>
-<li>Custom：用户自定义模板。</li>
+     * Get <p>模板类型，取值：</p><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li> 
+     * @return Type <p>模板类型，取值：</p><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 模板类型，取值：
-<li>Preset：系统预置模板；</li>
-<li>Custom：用户自定义模板。</li>
-     * @param Type 模板类型，取值：
-<li>Preset：系统预置模板；</li>
-<li>Custom：用户自定义模板。</li>
+     * Set <p>模板类型，取值：</p><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>
+     * @param Type <p>模板类型，取值：</p><li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 是否去除视频数据，取值：
-<li>0：保留；</li>
-<li>1：去除。</li> 
-     * @return RemoveVideo 是否去除视频数据，取值：
-<li>0：保留；</li>
-<li>1：去除。</li>
+     * Get <p>是否去除视频数据，取值：</p><li>0：保留；</li><li>1：去除。</li> 
+     * @return RemoveVideo <p>是否去除视频数据，取值：</p><li>0：保留；</li><li>1：去除。</li>
      */
     public Long getRemoveVideo() {
         return this.RemoveVideo;
     }
 
     /**
-     * Set 是否去除视频数据，取值：
-<li>0：保留；</li>
-<li>1：去除。</li>
-     * @param RemoveVideo 是否去除视频数据，取值：
-<li>0：保留；</li>
-<li>1：去除。</li>
+     * Set <p>是否去除视频数据，取值：</p><li>0：保留；</li><li>1：去除。</li>
+     * @param RemoveVideo <p>是否去除视频数据，取值：</p><li>0：保留；</li><li>1：去除。</li>
      */
     public void setRemoveVideo(Long RemoveVideo) {
         this.RemoveVideo = RemoveVideo;
     }
 
     /**
-     * Get 是否去除音频数据，取值：
-<li>0：保留；</li>
-<li>1：去除。</li> 
-     * @return RemoveAudio 是否去除音频数据，取值：
-<li>0：保留；</li>
-<li>1：去除。</li>
+     * Get <p>是否去除音频数据，取值：</p><li>0：保留；</li><li>1：去除。</li> 
+     * @return RemoveAudio <p>是否去除音频数据，取值：</p><li>0：保留；</li><li>1：去除。</li>
      */
     public Long getRemoveAudio() {
         return this.RemoveAudio;
     }
 
     /**
-     * Set 是否去除音频数据，取值：
-<li>0：保留；</li>
-<li>1：去除。</li>
-     * @param RemoveAudio 是否去除音频数据，取值：
-<li>0：保留；</li>
-<li>1：去除。</li>
+     * Set <p>是否去除音频数据，取值：</p><li>0：保留；</li><li>1：去除。</li>
+     * @param RemoveAudio <p>是否去除音频数据，取值：</p><li>0：保留；</li><li>1：去除。</li>
      */
     public void setRemoveAudio(Long RemoveAudio) {
         this.RemoveAudio = RemoveAudio;
     }
 
     /**
-     * Get 视频流配置参数，仅当 RemoveVideo 为 0，该字段有效。 
-     * @return VideoTemplate 视频流配置参数，仅当 RemoveVideo 为 0，该字段有效。
+     * Get <p>视频流配置参数，仅当 RemoveVideo 为 0，该字段有效。</p> 
+     * @return VideoTemplate <p>视频流配置参数，仅当 RemoveVideo 为 0，该字段有效。</p>
      */
     public VideoTemplateInfo getVideoTemplate() {
         return this.VideoTemplate;
     }
 
     /**
-     * Set 视频流配置参数，仅当 RemoveVideo 为 0，该字段有效。
-     * @param VideoTemplate 视频流配置参数，仅当 RemoveVideo 为 0，该字段有效。
+     * Set <p>视频流配置参数，仅当 RemoveVideo 为 0，该字段有效。</p>
+     * @param VideoTemplate <p>视频流配置参数，仅当 RemoveVideo 为 0，该字段有效。</p>
      */
     public void setVideoTemplate(VideoTemplateInfo VideoTemplate) {
         this.VideoTemplate = VideoTemplate;
     }
 
     /**
-     * Get 音频流配置参数，仅当 RemoveAudio 为 0，该字段有效 。 
-     * @return AudioTemplate 音频流配置参数，仅当 RemoveAudio 为 0，该字段有效 。
+     * Get <p>音频流配置参数，仅当 RemoveAudio 为 0，该字段有效 。</p> 
+     * @return AudioTemplate <p>音频流配置参数，仅当 RemoveAudio 为 0，该字段有效 。</p>
      */
     public AudioTemplateInfo getAudioTemplate() {
         return this.AudioTemplate;
     }
 
     /**
-     * Set 音频流配置参数，仅当 RemoveAudio 为 0，该字段有效 。
-     * @param AudioTemplate 音频流配置参数，仅当 RemoveAudio 为 0，该字段有效 。
+     * Set <p>音频流配置参数，仅当 RemoveAudio 为 0，该字段有效 。</p>
+     * @param AudioTemplate <p>音频流配置参数，仅当 RemoveAudio 为 0，该字段有效 。</p>
      */
     public void setAudioTemplate(AudioTemplateInfo AudioTemplate) {
         this.AudioTemplate = AudioTemplate;
     }
 
     /**
-     * Get 极速高清转码参数。
+     * Get <p>极速高清转码参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TEHDConfig 极速高清转码参数。
+     * @return TEHDConfig <p>极速高清转码参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TEHDConfig getTEHDConfig() {
@@ -317,9 +292,9 @@ public class TranscodeTemplate extends AbstractModel {
     }
 
     /**
-     * Set 极速高清转码参数。
+     * Set <p>极速高清转码参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TEHDConfig 极速高清转码参数。
+     * @param TEHDConfig <p>极速高清转码参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTEHDConfig(TEHDConfig TEHDConfig) {
@@ -327,9 +302,9 @@ public class TranscodeTemplate extends AbstractModel {
     }
 
     /**
-     * Get 音视频增强配置。
+     * Get <p>音视频增强配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EnhanceConfig 音视频增强配置。
+     * @return EnhanceConfig <p>音视频增强配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public EnhanceConfig getEnhanceConfig() {
@@ -337,9 +312,9 @@ public class TranscodeTemplate extends AbstractModel {
     }
 
     /**
-     * Set 音视频增强配置。
+     * Set <p>音视频增强配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EnhanceConfig 音视频增强配置。
+     * @param EnhanceConfig <p>音视频增强配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnhanceConfig(EnhanceConfig EnhanceConfig) {
@@ -347,75 +322,83 @@ public class TranscodeTemplate extends AbstractModel {
     }
 
     /**
-     * Get 封装格式过滤条件，可选值：
-<li>Video：视频格式，可以同时包含视频流和音频流的封装格式；</li>
-<li>PureAudio：纯音频格式，只能包含音频流的封装格式板。</li> 
-     * @return ContainerType 封装格式过滤条件，可选值：
-<li>Video：视频格式，可以同时包含视频流和音频流的封装格式；</li>
-<li>PureAudio：纯音频格式，只能包含音频流的封装格式板。</li>
+     * Get <p>封装格式过滤条件，可选值：</p><li>Video：视频格式，可以同时包含视频流和音频流的封装格式；</li><li>PureAudio：纯音频格式，只能包含音频流的封装格式板。</li> 
+     * @return ContainerType <p>封装格式过滤条件，可选值：</p><li>Video：视频格式，可以同时包含视频流和音频流的封装格式；</li><li>PureAudio：纯音频格式，只能包含音频流的封装格式板。</li>
      */
     public String getContainerType() {
         return this.ContainerType;
     }
 
     /**
-     * Set 封装格式过滤条件，可选值：
-<li>Video：视频格式，可以同时包含视频流和音频流的封装格式；</li>
-<li>PureAudio：纯音频格式，只能包含音频流的封装格式板。</li>
-     * @param ContainerType 封装格式过滤条件，可选值：
-<li>Video：视频格式，可以同时包含视频流和音频流的封装格式；</li>
-<li>PureAudio：纯音频格式，只能包含音频流的封装格式板。</li>
+     * Set <p>封装格式过滤条件，可选值：</p><li>Video：视频格式，可以同时包含视频流和音频流的封装格式；</li><li>PureAudio：纯音频格式，只能包含音频流的封装格式板。</li>
+     * @param ContainerType <p>封装格式过滤条件，可选值：</p><li>Video：视频格式，可以同时包含视频流和音频流的封装格式；</li><li>PureAudio：纯音频格式，只能包含音频流的封装格式板。</li>
      */
     public void setContainerType(String ContainerType) {
         this.ContainerType = ContainerType;
     }
 
     /**
-     * Get 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。 
-     * @return CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Get <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p> 
+     * @return CreateTime <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
-     * @param CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Set <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+     * @param CreateTime <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。 
-     * @return UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Get <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p> 
+     * @return UpdateTime <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
-     * @param UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Set <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+     * @param UpdateTime <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 切片类型，仅当 Container 为 hls 时有效。 
-     * @return SegmentType 切片类型，仅当 Container 为 hls 时有效。
+     * Get <p>切片类型，仅当 Container 为 hls 时有效。</p> 
+     * @return SegmentType <p>切片类型，仅当 Container 为 hls 时有效。</p>
      */
     public String getSegmentType() {
         return this.SegmentType;
     }
 
     /**
-     * Set 切片类型，仅当 Container 为 hls 时有效。
-     * @param SegmentType 切片类型，仅当 Container 为 hls 时有效。
+     * Set <p>切片类型，仅当 Container 为 hls 时有效。</p>
+     * @param SegmentType <p>切片类型，仅当 Container 为 hls 时有效。</p>
      */
     public void setSegmentType(String SegmentType) {
         this.SegmentType = SegmentType;
+    }
+
+    /**
+     * Get <p>扩展参数。</p> 
+     * @return StdExtInfo <p>扩展参数。</p>
+     */
+    public String getStdExtInfo() {
+        return this.StdExtInfo;
+    }
+
+    /**
+     * Set <p>扩展参数。</p>
+     * @param StdExtInfo <p>扩展参数。</p>
+     */
+    public void setStdExtInfo(String StdExtInfo) {
+        this.StdExtInfo = StdExtInfo;
     }
 
     public TranscodeTemplate() {
@@ -471,6 +454,9 @@ public class TranscodeTemplate extends AbstractModel {
         if (source.SegmentType != null) {
             this.SegmentType = new String(source.SegmentType);
         }
+        if (source.StdExtInfo != null) {
+            this.StdExtInfo = new String(source.StdExtInfo);
+        }
     }
 
 
@@ -493,6 +479,7 @@ public class TranscodeTemplate extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "SegmentType", this.SegmentType);
+        this.setParamSimple(map, prefix + "StdExtInfo", this.StdExtInfo);
 
     }
 }

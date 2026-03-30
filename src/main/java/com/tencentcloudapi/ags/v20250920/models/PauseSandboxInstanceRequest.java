@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class PauseSandboxInstanceRequest extends AbstractModel {
 
     /**
-    * 沙箱实例ID
+    * <p>沙箱实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get 沙箱实例ID 
-     * @return InstanceId 沙箱实例ID
+     * Get <p>沙箱实例ID</p> 
+     * @return InstanceId <p>沙箱实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 沙箱实例ID
-     * @param InstanceId 沙箱实例ID
+     * Set <p>沙箱实例ID</p>
+     * @param InstanceId <p>沙箱实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

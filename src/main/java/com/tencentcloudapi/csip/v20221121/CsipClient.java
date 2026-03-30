@@ -127,6 +127,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *访问密钥告警记录AI分析结果详情
+     * @param req DescribeAKAnalysisDetailRequest
+     * @return DescribeAKAnalysisDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAKAnalysisDetailResponse DescribeAKAnalysisDetail(DescribeAKAnalysisDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAKAnalysisDetail", DescribeAKAnalysisDetailResponse.class);
+    }
+
+    /**
      *获取调用记录列表
      * @param req DescribeAbnormalCallRecordRequest
      * @return DescribeAbnormalCallRecordResponse

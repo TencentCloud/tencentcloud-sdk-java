@@ -212,6 +212,13 @@ public class NotebookSessionInfo extends AbstractModel {
     private Long PodNumbers;
 
     /**
+    * spark app名称
+    */
+    @SerializedName("SparkAppName")
+    @Expose
+    private String SparkAppName;
+
+    /**
      * Get Session名称 
      * @return Name Session名称
      */
@@ -651,6 +658,22 @@ public class NotebookSessionInfo extends AbstractModel {
         this.PodNumbers = PodNumbers;
     }
 
+    /**
+     * Get spark app名称 
+     * @return SparkAppName spark app名称
+     */
+    public String getSparkAppName() {
+        return this.SparkAppName;
+    }
+
+    /**
+     * Set spark app名称
+     * @param SparkAppName spark app名称
+     */
+    public void setSparkAppName(String SparkAppName) {
+        this.SparkAppName = SparkAppName;
+    }
+
     public NotebookSessionInfo() {
     }
 
@@ -755,6 +778,9 @@ public class NotebookSessionInfo extends AbstractModel {
         if (source.PodNumbers != null) {
             this.PodNumbers = new Long(source.PodNumbers);
         }
+        if (source.SparkAppName != null) {
+            this.SparkAppName = new String(source.SparkAppName);
+        }
     }
 
 
@@ -788,6 +814,7 @@ public class NotebookSessionInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
         this.setParamSimple(map, prefix + "PodSize", this.PodSize);
         this.setParamSimple(map, prefix + "PodNumbers", this.PodNumbers);
+        this.setParamSimple(map, prefix + "SparkAppName", this.SparkAppName);
 
     }
 }

@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class TextToVoiceResponse extends AbstractModel {
 
     /**
-    * base64编码的wav/mp3音频数据
+    * <p>base64编码的wav/mp3音频数据</p>
     */
     @SerializedName("Audio")
     @Expose
     private String Audio;
 
     /**
-    * 一次请求对应一个SessionId
+    * <p>一次请求对应一个SessionId</p>
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * 时间戳信息，若未开启时间戳，则返回空数组。
+    * <p>时间戳信息，若未开启时间戳，则返回空数组。</p>
     */
     @SerializedName("Subtitles")
     @Expose
@@ -52,48 +52,48 @@ public class TextToVoiceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get base64编码的wav/mp3音频数据 
-     * @return Audio base64编码的wav/mp3音频数据
+     * Get <p>base64编码的wav/mp3音频数据</p> 
+     * @return Audio <p>base64编码的wav/mp3音频数据</p>
      */
     public String getAudio() {
         return this.Audio;
     }
 
     /**
-     * Set base64编码的wav/mp3音频数据
-     * @param Audio base64编码的wav/mp3音频数据
+     * Set <p>base64编码的wav/mp3音频数据</p>
+     * @param Audio <p>base64编码的wav/mp3音频数据</p>
      */
     public void setAudio(String Audio) {
         this.Audio = Audio;
     }
 
     /**
-     * Get 一次请求对应一个SessionId 
-     * @return SessionId 一次请求对应一个SessionId
+     * Get <p>一次请求对应一个SessionId</p> 
+     * @return SessionId <p>一次请求对应一个SessionId</p>
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 一次请求对应一个SessionId
-     * @param SessionId 一次请求对应一个SessionId
+     * Set <p>一次请求对应一个SessionId</p>
+     * @param SessionId <p>一次请求对应一个SessionId</p>
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get 时间戳信息，若未开启时间戳，则返回空数组。 
-     * @return Subtitles 时间戳信息，若未开启时间戳，则返回空数组。
+     * Get <p>时间戳信息，若未开启时间戳，则返回空数组。</p> 
+     * @return Subtitles <p>时间戳信息，若未开启时间戳，则返回空数组。</p>
      */
     public Subtitle [] getSubtitles() {
         return this.Subtitles;
     }
 
     /**
-     * Set 时间戳信息，若未开启时间戳，则返回空数组。
-     * @param Subtitles 时间戳信息，若未开启时间戳，则返回空数组。
+     * Set <p>时间戳信息，若未开启时间戳，则返回空数组。</p>
+     * @param Subtitles <p>时间戳信息，若未开启时间戳，则返回空数组。</p>
      */
     public void setSubtitles(Subtitle [] Subtitles) {
         this.Subtitles = Subtitles;

@@ -24,39 +24,35 @@ import java.util.HashMap;
 public class AdaptiveStreamTemplate extends AbstractModel {
 
     /**
-    * 视频参数信息。
+    * <p>视频参数信息。</p>
     */
     @SerializedName("Video")
     @Expose
     private VideoTemplateInfo Video;
 
     /**
-    * 音频参数信息。
+    * <p>音频参数信息。</p>
     */
     @SerializedName("Audio")
     @Expose
     private AudioTemplateInfo Audio;
 
     /**
-    * 是否移除音频流，取值范围：
-<li>0：否，</li>
-<li>1：是。</li>
+    * <p>是否移除音频流，取值范围：</p><li>0：否，</li><li>1：是。</li>
     */
     @SerializedName("RemoveAudio")
     @Expose
     private Long RemoveAudio;
 
     /**
-    * 是否移除视频流，取值范围：
-<li>0：否，</li>
-<li>1：是。</li>
+    * <p>是否移除视频流，取值范围：</p><li>0：否，</li><li>1：是。</li>
     */
     @SerializedName("RemoveVideo")
     @Expose
     private Long RemoveVideo;
 
     /**
-    * 极速高清转码参数。
+    * <p>极速高清转码参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TEHDConfig")
@@ -64,7 +60,7 @@ public class AdaptiveStreamTemplate extends AbstractModel {
     private TEHDConfig TEHDConfig;
 
     /**
-    * 音视频增强配置。
+    * <p>音视频增强配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnhanceConfig")
@@ -72,89 +68,80 @@ public class AdaptiveStreamTemplate extends AbstractModel {
     private EnhanceConfig EnhanceConfig;
 
     /**
-     * Get 视频参数信息。 
-     * @return Video 视频参数信息。
+    * <p>扩展参数。</p>
+    */
+    @SerializedName("StdExtInfo")
+    @Expose
+    private String StdExtInfo;
+
+    /**
+     * Get <p>视频参数信息。</p> 
+     * @return Video <p>视频参数信息。</p>
      */
     public VideoTemplateInfo getVideo() {
         return this.Video;
     }
 
     /**
-     * Set 视频参数信息。
-     * @param Video 视频参数信息。
+     * Set <p>视频参数信息。</p>
+     * @param Video <p>视频参数信息。</p>
      */
     public void setVideo(VideoTemplateInfo Video) {
         this.Video = Video;
     }
 
     /**
-     * Get 音频参数信息。 
-     * @return Audio 音频参数信息。
+     * Get <p>音频参数信息。</p> 
+     * @return Audio <p>音频参数信息。</p>
      */
     public AudioTemplateInfo getAudio() {
         return this.Audio;
     }
 
     /**
-     * Set 音频参数信息。
-     * @param Audio 音频参数信息。
+     * Set <p>音频参数信息。</p>
+     * @param Audio <p>音频参数信息。</p>
      */
     public void setAudio(AudioTemplateInfo Audio) {
         this.Audio = Audio;
     }
 
     /**
-     * Get 是否移除音频流，取值范围：
-<li>0：否，</li>
-<li>1：是。</li> 
-     * @return RemoveAudio 是否移除音频流，取值范围：
-<li>0：否，</li>
-<li>1：是。</li>
+     * Get <p>是否移除音频流，取值范围：</p><li>0：否，</li><li>1：是。</li> 
+     * @return RemoveAudio <p>是否移除音频流，取值范围：</p><li>0：否，</li><li>1：是。</li>
      */
     public Long getRemoveAudio() {
         return this.RemoveAudio;
     }
 
     /**
-     * Set 是否移除音频流，取值范围：
-<li>0：否，</li>
-<li>1：是。</li>
-     * @param RemoveAudio 是否移除音频流，取值范围：
-<li>0：否，</li>
-<li>1：是。</li>
+     * Set <p>是否移除音频流，取值范围：</p><li>0：否，</li><li>1：是。</li>
+     * @param RemoveAudio <p>是否移除音频流，取值范围：</p><li>0：否，</li><li>1：是。</li>
      */
     public void setRemoveAudio(Long RemoveAudio) {
         this.RemoveAudio = RemoveAudio;
     }
 
     /**
-     * Get 是否移除视频流，取值范围：
-<li>0：否，</li>
-<li>1：是。</li> 
-     * @return RemoveVideo 是否移除视频流，取值范围：
-<li>0：否，</li>
-<li>1：是。</li>
+     * Get <p>是否移除视频流，取值范围：</p><li>0：否，</li><li>1：是。</li> 
+     * @return RemoveVideo <p>是否移除视频流，取值范围：</p><li>0：否，</li><li>1：是。</li>
      */
     public Long getRemoveVideo() {
         return this.RemoveVideo;
     }
 
     /**
-     * Set 是否移除视频流，取值范围：
-<li>0：否，</li>
-<li>1：是。</li>
-     * @param RemoveVideo 是否移除视频流，取值范围：
-<li>0：否，</li>
-<li>1：是。</li>
+     * Set <p>是否移除视频流，取值范围：</p><li>0：否，</li><li>1：是。</li>
+     * @param RemoveVideo <p>是否移除视频流，取值范围：</p><li>0：否，</li><li>1：是。</li>
      */
     public void setRemoveVideo(Long RemoveVideo) {
         this.RemoveVideo = RemoveVideo;
     }
 
     /**
-     * Get 极速高清转码参数。
+     * Get <p>极速高清转码参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TEHDConfig 极速高清转码参数。
+     * @return TEHDConfig <p>极速高清转码参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TEHDConfig getTEHDConfig() {
@@ -162,9 +149,9 @@ public class AdaptiveStreamTemplate extends AbstractModel {
     }
 
     /**
-     * Set 极速高清转码参数。
+     * Set <p>极速高清转码参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TEHDConfig 极速高清转码参数。
+     * @param TEHDConfig <p>极速高清转码参数。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTEHDConfig(TEHDConfig TEHDConfig) {
@@ -172,9 +159,9 @@ public class AdaptiveStreamTemplate extends AbstractModel {
     }
 
     /**
-     * Get 音视频增强配置。
+     * Get <p>音视频增强配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EnhanceConfig 音视频增强配置。
+     * @return EnhanceConfig <p>音视频增强配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public EnhanceConfig getEnhanceConfig() {
@@ -182,13 +169,29 @@ public class AdaptiveStreamTemplate extends AbstractModel {
     }
 
     /**
-     * Set 音视频增强配置。
+     * Set <p>音视频增强配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EnhanceConfig 音视频增强配置。
+     * @param EnhanceConfig <p>音视频增强配置。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnhanceConfig(EnhanceConfig EnhanceConfig) {
         this.EnhanceConfig = EnhanceConfig;
+    }
+
+    /**
+     * Get <p>扩展参数。</p> 
+     * @return StdExtInfo <p>扩展参数。</p>
+     */
+    public String getStdExtInfo() {
+        return this.StdExtInfo;
+    }
+
+    /**
+     * Set <p>扩展参数。</p>
+     * @param StdExtInfo <p>扩展参数。</p>
+     */
+    public void setStdExtInfo(String StdExtInfo) {
+        this.StdExtInfo = StdExtInfo;
     }
 
     public AdaptiveStreamTemplate() {
@@ -217,6 +220,9 @@ public class AdaptiveStreamTemplate extends AbstractModel {
         if (source.EnhanceConfig != null) {
             this.EnhanceConfig = new EnhanceConfig(source.EnhanceConfig);
         }
+        if (source.StdExtInfo != null) {
+            this.StdExtInfo = new String(source.StdExtInfo);
+        }
     }
 
 
@@ -230,6 +236,7 @@ public class AdaptiveStreamTemplate extends AbstractModel {
         this.setParamSimple(map, prefix + "RemoveVideo", this.RemoveVideo);
         this.setParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
         this.setParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
+        this.setParamSimple(map, prefix + "StdExtInfo", this.StdExtInfo);
 
     }
 }

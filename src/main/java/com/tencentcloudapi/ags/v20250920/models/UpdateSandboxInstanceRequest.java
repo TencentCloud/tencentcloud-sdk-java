@@ -24,49 +24,72 @@ import java.util.HashMap;
 public class UpdateSandboxInstanceRequest extends AbstractModel {
 
     /**
-    * 沙箱实例ID
+    * <p>沙箱实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 新的超时时间（从设置时开始重新计算超时），支持格式：5m、300s、1h等。最小30s，最大24h。如果不指定则保持原有超时设置
+    * <p>新的超时时间（从设置时开始重新计算超时），支持格式：5m、300s、1h等。最小30s，最大24h。如果不指定则保持原有超时设置</p>
     */
     @SerializedName("Timeout")
     @Expose
     private String Timeout;
 
     /**
-     * Get 沙箱实例ID 
-     * @return InstanceId 沙箱实例ID
+    * <p>沙箱实例元数据</p>
+    */
+    @SerializedName("Metadata")
+    @Expose
+    private MetadataVar [] Metadata;
+
+    /**
+     * Get <p>沙箱实例ID</p> 
+     * @return InstanceId <p>沙箱实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 沙箱实例ID
-     * @param InstanceId 沙箱实例ID
+     * Set <p>沙箱实例ID</p>
+     * @param InstanceId <p>沙箱实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 新的超时时间（从设置时开始重新计算超时），支持格式：5m、300s、1h等。最小30s，最大24h。如果不指定则保持原有超时设置 
-     * @return Timeout 新的超时时间（从设置时开始重新计算超时），支持格式：5m、300s、1h等。最小30s，最大24h。如果不指定则保持原有超时设置
+     * Get <p>新的超时时间（从设置时开始重新计算超时），支持格式：5m、300s、1h等。最小30s，最大24h。如果不指定则保持原有超时设置</p> 
+     * @return Timeout <p>新的超时时间（从设置时开始重新计算超时），支持格式：5m、300s、1h等。最小30s，最大24h。如果不指定则保持原有超时设置</p>
      */
     public String getTimeout() {
         return this.Timeout;
     }
 
     /**
-     * Set 新的超时时间（从设置时开始重新计算超时），支持格式：5m、300s、1h等。最小30s，最大24h。如果不指定则保持原有超时设置
-     * @param Timeout 新的超时时间（从设置时开始重新计算超时），支持格式：5m、300s、1h等。最小30s，最大24h。如果不指定则保持原有超时设置
+     * Set <p>新的超时时间（从设置时开始重新计算超时），支持格式：5m、300s、1h等。最小30s，最大24h。如果不指定则保持原有超时设置</p>
+     * @param Timeout <p>新的超时时间（从设置时开始重新计算超时），支持格式：5m、300s、1h等。最小30s，最大24h。如果不指定则保持原有超时设置</p>
      */
     public void setTimeout(String Timeout) {
         this.Timeout = Timeout;
+    }
+
+    /**
+     * Get <p>沙箱实例元数据</p> 
+     * @return Metadata <p>沙箱实例元数据</p>
+     */
+    public MetadataVar [] getMetadata() {
+        return this.Metadata;
+    }
+
+    /**
+     * Set <p>沙箱实例元数据</p>
+     * @param Metadata <p>沙箱实例元数据</p>
+     */
+    public void setMetadata(MetadataVar [] Metadata) {
+        this.Metadata = Metadata;
     }
 
     public UpdateSandboxInstanceRequest() {
@@ -83,6 +106,12 @@ public class UpdateSandboxInstanceRequest extends AbstractModel {
         if (source.Timeout != null) {
             this.Timeout = new String(source.Timeout);
         }
+        if (source.Metadata != null) {
+            this.Metadata = new MetadataVar[source.Metadata.length];
+            for (int i = 0; i < source.Metadata.length; i++) {
+                this.Metadata[i] = new MetadataVar(source.Metadata[i]);
+            }
+        }
     }
 
 
@@ -92,6 +121,7 @@ public class UpdateSandboxInstanceRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Timeout", this.Timeout);
+        this.setParamArrayObj(map, prefix + "Metadata.", this.Metadata);
 
     }
 }
