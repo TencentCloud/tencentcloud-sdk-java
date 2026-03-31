@@ -24,51 +24,46 @@ import java.util.HashMap;
 public class MobileStatusRequest extends AbstractModel {
 
     /**
-    * 手机号码。
+    * <p>手机号码。</p>
     */
     @SerializedName("Mobile")
     @Expose
     private String Mobile;
 
     /**
-    * 敏感数据加密信息。
-- 对传入信息（手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+    * <p>敏感数据加密信息。</p><ul><li>对传入信息（手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。</li></ul>
     */
     @SerializedName("Encryption")
     @Expose
     private Encryption Encryption;
 
     /**
-     * Get 手机号码。 
-     * @return Mobile 手机号码。
+     * Get <p>手机号码。</p> 
+     * @return Mobile <p>手机号码。</p>
      */
     public String getMobile() {
         return this.Mobile;
     }
 
     /**
-     * Set 手机号码。
-     * @param Mobile 手机号码。
+     * Set <p>手机号码。</p>
+     * @param Mobile <p>手机号码。</p>
      */
     public void setMobile(String Mobile) {
         this.Mobile = Mobile;
     }
 
     /**
-     * Get 敏感数据加密信息。
-- 对传入信息（手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。 
-     * @return Encryption 敏感数据加密信息。
-- 对传入信息（手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * Get <p>敏感数据加密信息。</p><ul><li>对传入信息（手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。</li></ul> 
+     * @return Encryption <p>敏感数据加密信息。</p><ul><li>对传入信息（手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。</li></ul>
      */
     public Encryption getEncryption() {
         return this.Encryption;
     }
 
     /**
-     * Set 敏感数据加密信息。
-- 对传入信息（手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
-     * @param Encryption 敏感数据加密信息。
-- 对传入信息（手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * Set <p>敏感数据加密信息。</p><ul><li>对传入信息（手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。</li></ul>
+     * @param Encryption <p>敏感数据加密信息。</p><ul><li>对传入信息（手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。</li></ul>
      */
     public void setEncryption(Encryption Encryption) {
         this.Encryption = Encryption;

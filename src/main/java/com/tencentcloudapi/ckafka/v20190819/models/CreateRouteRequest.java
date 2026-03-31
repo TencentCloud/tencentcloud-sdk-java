@@ -52,7 +52,7 @@ public class CreateRouteRequest extends AbstractModel {
     private String SubnetId;
 
     /**
-    * <p>访问类型：0-plaintext；1-sasl_plaintext；3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512  默认为0vipType=3,支持 0,1,3,4,5vipType=7,支持0,1,3vipType=1,支持1,3</p>
+    * <p>访问类型：0-plaintext；1-sasl_plaintext；3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512  默认为0<br>vipType=3,支持 0,1,3,4,5<br>vipType=7,支持0,1,3<br>vipType=1,支持1,3</p>
     */
     @SerializedName("AccessType")
     @Expose
@@ -99,6 +99,13 @@ public class CreateRouteRequest extends AbstractModel {
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
+
+    /**
+    * <p>公网路由IP白名单预设配置</p><p>入参限制：vipType=1</p>
+    */
+    @SerializedName("IpWhitelist")
+    @Expose
+    private IpWhitelistDTO [] IpWhitelist;
 
     /**
      * Get <p>ckafka集群实例id,可通过<a href="https://cloud.tencent.com/document/product/597/40835">DescribeInstances</a>接口获取</p> 
@@ -165,16 +172,16 @@ public class CreateRouteRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>访问类型：0-plaintext；1-sasl_plaintext；3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512  默认为0vipType=3,支持 0,1,3,4,5vipType=7,支持0,1,3vipType=1,支持1,3</p> 
-     * @return AccessType <p>访问类型：0-plaintext；1-sasl_plaintext；3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512  默认为0vipType=3,支持 0,1,3,4,5vipType=7,支持0,1,3vipType=1,支持1,3</p>
+     * Get <p>访问类型：0-plaintext；1-sasl_plaintext；3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512  默认为0<br>vipType=3,支持 0,1,3,4,5<br>vipType=7,支持0,1,3<br>vipType=1,支持1,3</p> 
+     * @return AccessType <p>访问类型：0-plaintext；1-sasl_plaintext；3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512  默认为0<br>vipType=3,支持 0,1,3,4,5<br>vipType=7,支持0,1,3<br>vipType=1,支持1,3</p>
      */
     public Long getAccessType() {
         return this.AccessType;
     }
 
     /**
-     * Set <p>访问类型：0-plaintext；1-sasl_plaintext；3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512  默认为0vipType=3,支持 0,1,3,4,5vipType=7,支持0,1,3vipType=1,支持1,3</p>
-     * @param AccessType <p>访问类型：0-plaintext；1-sasl_plaintext；3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512  默认为0vipType=3,支持 0,1,3,4,5vipType=7,支持0,1,3vipType=1,支持1,3</p>
+     * Set <p>访问类型：0-plaintext；1-sasl_plaintext；3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512  默认为0<br>vipType=3,支持 0,1,3,4,5<br>vipType=7,支持0,1,3<br>vipType=1,支持1,3</p>
+     * @param AccessType <p>访问类型：0-plaintext；1-sasl_plaintext；3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512  默认为0<br>vipType=3,支持 0,1,3,4,5<br>vipType=7,支持0,1,3<br>vipType=1,支持1,3</p>
      */
     public void setAccessType(Long AccessType) {
         this.AccessType = AccessType;
@@ -276,6 +283,22 @@ public class CreateRouteRequest extends AbstractModel {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
+    /**
+     * Get <p>公网路由IP白名单预设配置</p><p>入参限制：vipType=1</p> 
+     * @return IpWhitelist <p>公网路由IP白名单预设配置</p><p>入参限制：vipType=1</p>
+     */
+    public IpWhitelistDTO [] getIpWhitelist() {
+        return this.IpWhitelist;
+    }
+
+    /**
+     * Set <p>公网路由IP白名单预设配置</p><p>入参限制：vipType=1</p>
+     * @param IpWhitelist <p>公网路由IP白名单预设配置</p><p>入参限制：vipType=1</p>
+     */
+    public void setIpWhitelist(IpWhitelistDTO [] IpWhitelist) {
+        this.IpWhitelist = IpWhitelist;
+    }
+
     public CreateRouteRequest() {
     }
 
@@ -320,6 +343,12 @@ public class CreateRouteRequest extends AbstractModel {
                 this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
             }
         }
+        if (source.IpWhitelist != null) {
+            this.IpWhitelist = new IpWhitelistDTO[source.IpWhitelist.length];
+            for (int i = 0; i < source.IpWhitelist.length; i++) {
+                this.IpWhitelist[i] = new IpWhitelistDTO(source.IpWhitelist[i]);
+            }
+        }
     }
 
 
@@ -338,6 +367,7 @@ public class CreateRouteRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Ip", this.Ip);
         this.setParamSimple(map, prefix + "Note", this.Note);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamArrayObj(map, prefix + "IpWhitelist.", this.IpWhitelist);
 
     }
 }

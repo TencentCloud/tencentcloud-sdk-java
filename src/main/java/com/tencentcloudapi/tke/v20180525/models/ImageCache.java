@@ -121,6 +121,20 @@ UpdateFailed：更新失败
     private Tag [] Tags;
 
     /**
+    * 镜像缓存类型
+    */
+    @SerializedName("ImageCacheType")
+    @Expose
+    private String ImageCacheType;
+
+    /**
+    * 镜像缓存所属snapshotter类型
+    */
+    @SerializedName("Snapshotter")
+    @Expose
+    private String Snapshotter;
+
+    /**
      * Get 镜像缓存Id 
      * @return ImageCacheId 镜像缓存Id
      */
@@ -352,6 +366,38 @@ UpdateFailed：更新失败
         this.Tags = Tags;
     }
 
+    /**
+     * Get 镜像缓存类型 
+     * @return ImageCacheType 镜像缓存类型
+     */
+    public String getImageCacheType() {
+        return this.ImageCacheType;
+    }
+
+    /**
+     * Set 镜像缓存类型
+     * @param ImageCacheType 镜像缓存类型
+     */
+    public void setImageCacheType(String ImageCacheType) {
+        this.ImageCacheType = ImageCacheType;
+    }
+
+    /**
+     * Get 镜像缓存所属snapshotter类型 
+     * @return Snapshotter 镜像缓存所属snapshotter类型
+     */
+    public String getSnapshotter() {
+        return this.Snapshotter;
+    }
+
+    /**
+     * Set 镜像缓存所属snapshotter类型
+     * @param Snapshotter 镜像缓存所属snapshotter类型
+     */
+    public void setSnapshotter(String Snapshotter) {
+        this.Snapshotter = Snapshotter;
+    }
+
     public ImageCache() {
     }
 
@@ -411,6 +457,12 @@ UpdateFailed：更新失败
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.ImageCacheType != null) {
+            this.ImageCacheType = new String(source.ImageCacheType);
+        }
+        if (source.Snapshotter != null) {
+            this.Snapshotter = new String(source.Snapshotter);
+        }
     }
 
 
@@ -431,6 +483,8 @@ UpdateFailed：更新失败
         this.setParamSimple(map, prefix + "RetentionDays", this.RetentionDays);
         this.setParamArrayObj(map, prefix + "ImageRegistryCredentials.", this.ImageRegistryCredentials);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "ImageCacheType", this.ImageCacheType);
+        this.setParamSimple(map, prefix + "Snapshotter", this.Snapshotter);
 
     }
 }

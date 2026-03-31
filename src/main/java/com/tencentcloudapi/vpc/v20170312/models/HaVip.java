@@ -110,7 +110,7 @@ public class HaVip extends AbstractModel {
     private HaVipAssociation [] HaVipAssociationSet;
 
     /**
-    * 是否开启`HAVIP`的飘移范围校验。
+    * 是否开启`HAVIP`的漂移范围校验。
     */
     @SerializedName("CheckAssociate")
     @Expose
@@ -124,7 +124,7 @@ public class HaVip extends AbstractModel {
     private String CdcId;
 
     /**
-    * HAVIP 刷新时间。该参数只作为出参数。以下场景会触发 FlushTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
+    * HAVIP 刷新时间。该参数只作为出参数。以下场景会触发FlushedTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
     */
     @SerializedName("FlushedTime")
     @Expose
@@ -338,16 +338,16 @@ public class HaVip extends AbstractModel {
     }
 
     /**
-     * Get 是否开启`HAVIP`的飘移范围校验。 
-     * @return CheckAssociate 是否开启`HAVIP`的飘移范围校验。
+     * Get 是否开启`HAVIP`的漂移范围校验。 
+     * @return CheckAssociate 是否开启`HAVIP`的漂移范围校验。
      */
     public Boolean getCheckAssociate() {
         return this.CheckAssociate;
     }
 
     /**
-     * Set 是否开启`HAVIP`的飘移范围校验。
-     * @param CheckAssociate 是否开启`HAVIP`的飘移范围校验。
+     * Set 是否开启`HAVIP`的漂移范围校验。
+     * @param CheckAssociate 是否开启`HAVIP`的漂移范围校验。
      */
     public void setCheckAssociate(Boolean CheckAssociate) {
         this.CheckAssociate = CheckAssociate;
@@ -370,16 +370,16 @@ public class HaVip extends AbstractModel {
     }
 
     /**
-     * Get HAVIP 刷新时间。该参数只作为出参数。以下场景会触发 FlushTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00 
-     * @return FlushedTime HAVIP 刷新时间。该参数只作为出参数。以下场景会触发 FlushTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
+     * Get HAVIP 刷新时间。该参数只作为出参数。以下场景会触发FlushedTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00 
+     * @return FlushedTime HAVIP 刷新时间。该参数只作为出参数。以下场景会触发FlushedTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
      */
     public String getFlushedTime() {
         return this.FlushedTime;
     }
 
     /**
-     * Set HAVIP 刷新时间。该参数只作为出参数。以下场景会触发 FlushTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
-     * @param FlushedTime HAVIP 刷新时间。该参数只作为出参数。以下场景会触发 FlushTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
+     * Set HAVIP 刷新时间。该参数只作为出参数。以下场景会触发FlushedTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
+     * @param FlushedTime HAVIP 刷新时间。该参数只作为出参数。以下场景会触发FlushedTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
      */
     public void setFlushedTime(String FlushedTime) {
         this.FlushedTime = FlushedTime;

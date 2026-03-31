@@ -31,21 +31,21 @@ public class CreateDraftContractByPromptsTaskRequest extends AbstractModel {
     private UserInfo Operator;
 
     /**
-    * 起草要求
+    * 起草要求，范围要求 5-1000 字
     */
     @SerializedName("Requirement")
     @Expose
     private String Requirement;
 
     /**
-    * 参考模板文件资源id（PDF/Word格式）
+    * 参考模板文件资源id（PDF/Word格式），大小不超过1M，通过[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口来获取。
     */
     @SerializedName("ReferenceTemplateId")
     @Expose
     private String ReferenceTemplateId;
 
     /**
-    * 相关规定文件资源id列表（PDF/Word格式）
+    * 相关规定文件资源id列表（PDF/Word格式），最多3个文件，每个大小不超过1M，通过[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口来获取。
     */
     @SerializedName("RequirementFileIds")
     @Expose
@@ -75,48 +75,48 @@ public class CreateDraftContractByPromptsTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 起草要求 
-     * @return Requirement 起草要求
+     * Get 起草要求，范围要求 5-1000 字 
+     * @return Requirement 起草要求，范围要求 5-1000 字
      */
     public String getRequirement() {
         return this.Requirement;
     }
 
     /**
-     * Set 起草要求
-     * @param Requirement 起草要求
+     * Set 起草要求，范围要求 5-1000 字
+     * @param Requirement 起草要求，范围要求 5-1000 字
      */
     public void setRequirement(String Requirement) {
         this.Requirement = Requirement;
     }
 
     /**
-     * Get 参考模板文件资源id（PDF/Word格式） 
-     * @return ReferenceTemplateId 参考模板文件资源id（PDF/Word格式）
+     * Get 参考模板文件资源id（PDF/Word格式），大小不超过1M，通过[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口来获取。 
+     * @return ReferenceTemplateId 参考模板文件资源id（PDF/Word格式），大小不超过1M，通过[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口来获取。
      */
     public String getReferenceTemplateId() {
         return this.ReferenceTemplateId;
     }
 
     /**
-     * Set 参考模板文件资源id（PDF/Word格式）
-     * @param ReferenceTemplateId 参考模板文件资源id（PDF/Word格式）
+     * Set 参考模板文件资源id（PDF/Word格式），大小不超过1M，通过[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口来获取。
+     * @param ReferenceTemplateId 参考模板文件资源id（PDF/Word格式），大小不超过1M，通过[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口来获取。
      */
     public void setReferenceTemplateId(String ReferenceTemplateId) {
         this.ReferenceTemplateId = ReferenceTemplateId;
     }
 
     /**
-     * Get 相关规定文件资源id列表（PDF/Word格式） 
-     * @return RequirementFileIds 相关规定文件资源id列表（PDF/Word格式）
+     * Get 相关规定文件资源id列表（PDF/Word格式），最多3个文件，每个大小不超过1M，通过[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口来获取。 
+     * @return RequirementFileIds 相关规定文件资源id列表（PDF/Word格式），最多3个文件，每个大小不超过1M，通过[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口来获取。
      */
     public String [] getRequirementFileIds() {
         return this.RequirementFileIds;
     }
 
     /**
-     * Set 相关规定文件资源id列表（PDF/Word格式）
-     * @param RequirementFileIds 相关规定文件资源id列表（PDF/Word格式）
+     * Set 相关规定文件资源id列表（PDF/Word格式），最多3个文件，每个大小不超过1M，通过[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口来获取。
+     * @param RequirementFileIds 相关规定文件资源id列表（PDF/Word格式），最多3个文件，每个大小不超过1M，通过[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口来获取。
      */
     public void setRequirementFileIds(String [] RequirementFileIds) {
         this.RequirementFileIds = RequirementFileIds;

@@ -24,56 +24,56 @@ import java.util.HashMap;
 public class CreateCfsFileSystemResponse extends AbstractModel {
 
     /**
-    * 文件系统创建时间
+    * <p>文件系统创建时间</p>
     */
     @SerializedName("CreationTime")
     @Expose
     private String CreationTime;
 
     /**
-    * 用户自定义文件系统名称
+    * <p>用户自定义文件系统名称</p>
     */
     @SerializedName("CreationToken")
     @Expose
     private String CreationToken;
 
     /**
-    * 文件系统 ID
+    * <p>文件系统 ID</p>
     */
     @SerializedName("FileSystemId")
     @Expose
     private String FileSystemId;
 
     /**
-    * 文件系统状态，可能出现状态包括：“creating”  创建中, “create_failed” 创建失败, “available” 可用, “unserviced” 不可用, “upgrading” 升级中， “deleting” 删除中。
+    * <p>文件系统状态，可能出现状态包括：“creating”  创建中, “create_failed” 创建失败, “available” 可用, “unserviced” 不可用, “upgrading” 升级中， “deleting” 删除中。</p>
     */
     @SerializedName("LifeCycleState")
     @Expose
     private String LifeCycleState;
 
     /**
-    * 文件系统已使用容量大小，单位为 Byte
+    * <p>文件系统已使用容量大小，单位为 Byte</p>
     */
     @SerializedName("SizeByte")
     @Expose
     private Long SizeByte;
 
     /**
-    * 可用区 ID
+    * <p>可用区 ID</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * 用户自定义文件系统名称
+    * <p>用户自定义文件系统名称</p>
     */
     @SerializedName("FsName")
     @Expose
     private String FsName;
 
     /**
-    * 文件系统是否加密
+    * <p>文件系统是否加密</p>
     */
     @SerializedName("Encrypted")
     @Expose
@@ -87,128 +87,128 @@ public class CreateCfsFileSystemResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 文件系统创建时间 
-     * @return CreationTime 文件系统创建时间
+     * Get <p>文件系统创建时间</p> 
+     * @return CreationTime <p>文件系统创建时间</p>
      */
     public String getCreationTime() {
         return this.CreationTime;
     }
 
     /**
-     * Set 文件系统创建时间
-     * @param CreationTime 文件系统创建时间
+     * Set <p>文件系统创建时间</p>
+     * @param CreationTime <p>文件系统创建时间</p>
      */
     public void setCreationTime(String CreationTime) {
         this.CreationTime = CreationTime;
     }
 
     /**
-     * Get 用户自定义文件系统名称 
-     * @return CreationToken 用户自定义文件系统名称
+     * Get <p>用户自定义文件系统名称</p> 
+     * @return CreationToken <p>用户自定义文件系统名称</p>
      */
     public String getCreationToken() {
         return this.CreationToken;
     }
 
     /**
-     * Set 用户自定义文件系统名称
-     * @param CreationToken 用户自定义文件系统名称
+     * Set <p>用户自定义文件系统名称</p>
+     * @param CreationToken <p>用户自定义文件系统名称</p>
      */
     public void setCreationToken(String CreationToken) {
         this.CreationToken = CreationToken;
     }
 
     /**
-     * Get 文件系统 ID 
-     * @return FileSystemId 文件系统 ID
+     * Get <p>文件系统 ID</p> 
+     * @return FileSystemId <p>文件系统 ID</p>
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set 文件系统 ID
-     * @param FileSystemId 文件系统 ID
+     * Set <p>文件系统 ID</p>
+     * @param FileSystemId <p>文件系统 ID</p>
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;
     }
 
     /**
-     * Get 文件系统状态，可能出现状态包括：“creating”  创建中, “create_failed” 创建失败, “available” 可用, “unserviced” 不可用, “upgrading” 升级中， “deleting” 删除中。 
-     * @return LifeCycleState 文件系统状态，可能出现状态包括：“creating”  创建中, “create_failed” 创建失败, “available” 可用, “unserviced” 不可用, “upgrading” 升级中， “deleting” 删除中。
+     * Get <p>文件系统状态，可能出现状态包括：“creating”  创建中, “create_failed” 创建失败, “available” 可用, “unserviced” 不可用, “upgrading” 升级中， “deleting” 删除中。</p> 
+     * @return LifeCycleState <p>文件系统状态，可能出现状态包括：“creating”  创建中, “create_failed” 创建失败, “available” 可用, “unserviced” 不可用, “upgrading” 升级中， “deleting” 删除中。</p>
      */
     public String getLifeCycleState() {
         return this.LifeCycleState;
     }
 
     /**
-     * Set 文件系统状态，可能出现状态包括：“creating”  创建中, “create_failed” 创建失败, “available” 可用, “unserviced” 不可用, “upgrading” 升级中， “deleting” 删除中。
-     * @param LifeCycleState 文件系统状态，可能出现状态包括：“creating”  创建中, “create_failed” 创建失败, “available” 可用, “unserviced” 不可用, “upgrading” 升级中， “deleting” 删除中。
+     * Set <p>文件系统状态，可能出现状态包括：“creating”  创建中, “create_failed” 创建失败, “available” 可用, “unserviced” 不可用, “upgrading” 升级中， “deleting” 删除中。</p>
+     * @param LifeCycleState <p>文件系统状态，可能出现状态包括：“creating”  创建中, “create_failed” 创建失败, “available” 可用, “unserviced” 不可用, “upgrading” 升级中， “deleting” 删除中。</p>
      */
     public void setLifeCycleState(String LifeCycleState) {
         this.LifeCycleState = LifeCycleState;
     }
 
     /**
-     * Get 文件系统已使用容量大小，单位为 Byte 
-     * @return SizeByte 文件系统已使用容量大小，单位为 Byte
+     * Get <p>文件系统已使用容量大小，单位为 Byte</p> 
+     * @return SizeByte <p>文件系统已使用容量大小，单位为 Byte</p>
      */
     public Long getSizeByte() {
         return this.SizeByte;
     }
 
     /**
-     * Set 文件系统已使用容量大小，单位为 Byte
-     * @param SizeByte 文件系统已使用容量大小，单位为 Byte
+     * Set <p>文件系统已使用容量大小，单位为 Byte</p>
+     * @param SizeByte <p>文件系统已使用容量大小，单位为 Byte</p>
      */
     public void setSizeByte(Long SizeByte) {
         this.SizeByte = SizeByte;
     }
 
     /**
-     * Get 可用区 ID 
-     * @return ZoneId 可用区 ID
+     * Get <p>可用区 ID</p> 
+     * @return ZoneId <p>可用区 ID</p>
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 可用区 ID
-     * @param ZoneId 可用区 ID
+     * Set <p>可用区 ID</p>
+     * @param ZoneId <p>可用区 ID</p>
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 用户自定义文件系统名称 
-     * @return FsName 用户自定义文件系统名称
+     * Get <p>用户自定义文件系统名称</p> 
+     * @return FsName <p>用户自定义文件系统名称</p>
      */
     public String getFsName() {
         return this.FsName;
     }
 
     /**
-     * Set 用户自定义文件系统名称
-     * @param FsName 用户自定义文件系统名称
+     * Set <p>用户自定义文件系统名称</p>
+     * @param FsName <p>用户自定义文件系统名称</p>
      */
     public void setFsName(String FsName) {
         this.FsName = FsName;
     }
 
     /**
-     * Get 文件系统是否加密 
-     * @return Encrypted 文件系统是否加密
+     * Get <p>文件系统是否加密</p> 
+     * @return Encrypted <p>文件系统是否加密</p>
      */
     public Boolean getEncrypted() {
         return this.Encrypted;
     }
 
     /**
-     * Set 文件系统是否加密
-     * @param Encrypted 文件系统是否加密
+     * Set <p>文件系统是否加密</p>
+     * @param Encrypted <p>文件系统是否加密</p>
      */
     public void setEncrypted(Boolean Encrypted) {
         this.Encrypted = Encrypted;

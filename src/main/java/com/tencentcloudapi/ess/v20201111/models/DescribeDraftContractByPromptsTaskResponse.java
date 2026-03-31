@@ -52,6 +52,13 @@ public class DescribeDraftContractByPromptsTaskResponse extends AbstractModel {
     private String ResourceId;
 
     /**
+    * 生成的合同文件下载链接，有效期2小时
+    */
+    @SerializedName("ContractUrl")
+    @Expose
+    private String ContractUrl;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -123,6 +130,22 @@ public class DescribeDraftContractByPromptsTaskResponse extends AbstractModel {
     }
 
     /**
+     * Get 生成的合同文件下载链接，有效期2小时 
+     * @return ContractUrl 生成的合同文件下载链接，有效期2小时
+     */
+    public String getContractUrl() {
+        return this.ContractUrl;
+    }
+
+    /**
+     * Set 生成的合同文件下载链接，有效期2小时
+     * @param ContractUrl 生成的合同文件下载链接，有效期2小时
+     */
+    public void setContractUrl(String ContractUrl) {
+        this.ContractUrl = ContractUrl;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -158,6 +181,9 @@ public class DescribeDraftContractByPromptsTaskResponse extends AbstractModel {
         if (source.ResourceId != null) {
             this.ResourceId = new String(source.ResourceId);
         }
+        if (source.ContractUrl != null) {
+            this.ContractUrl = new String(source.ContractUrl);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -172,6 +198,7 @@ public class DescribeDraftContractByPromptsTaskResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamSimple(map, prefix + "ContractName", this.ContractName);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
+        this.setParamSimple(map, prefix + "ContractUrl", this.ContractUrl);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

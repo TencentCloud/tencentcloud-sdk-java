@@ -24,456 +24,417 @@ import java.util.HashMap;
 public class CreateShipperRequest extends AbstractModel {
 
     /**
-    * 创建的投递规则所属的日志主题Id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+    * <p>创建的投递规则所属的日志主题Id。</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。	
-
-- 通过[GET Service（List Buckets）](https://cloud.tencent.com/document/product/436/8291)获取COS存储桶。
+    * <p>COS存储桶，详见产品支持的<a href="https://cloud.tencent.com/document/product/436/13312">存储桶命名规范</a>。    </p><ul><li>通过<a href="https://cloud.tencent.com/document/product/436/8291">GET Service（List Buckets）</a>获取COS存储桶。</li></ul>
     */
     @SerializedName("Bucket")
     @Expose
     private String Bucket;
 
     /**
-    * 投递规则投递的新的目录前缀。
-- 仅支持0-9A-Za-z-_/
-- 最大支持256个字符
+    * <p>投递规则投递的新的目录前缀。</p><ul><li>仅支持0-9A-Za-z-_/</li><li>最大支持256个字符</li></ul>
     */
     @SerializedName("Prefix")
     @Expose
     private String Prefix;
 
     /**
-    * 投递规则的名字。最大支持255个字符
+    * <p>投递规则的名字。最大支持255个字符</p>
     */
     @SerializedName("ShipperName")
     @Expose
     private String ShipperName;
 
     /**
-    * 投递的时间间隔，单位 秒，默认300，范围 300-900
+    * <p>投递的时间间隔，单位 秒，默认300，范围 300-900</p>
     */
     @SerializedName("Interval")
     @Expose
     private Long Interval;
 
     /**
-    * 投递的文件的最大值，单位 MB，默认256，范围 5-256
+    * <p>投递的文件的最大值，单位 MB，默认256，范围 5-256</p>
     */
     @SerializedName("MaxSize")
     @Expose
     private Long MaxSize;
 
     /**
-    * 投递日志的过滤规则，匹配的日志进行投递，各rule之间是and关系，最多5个，数组为空则表示不过滤而全部投递
+    * <p>投递日志的过滤规则，匹配的日志进行投递，各rule之间是and关系，最多5个，数组为空则表示不过滤而全部投递</p>
     */
     @SerializedName("FilterRules")
     @Expose
     private FilterRuleInfo [] FilterRules;
 
     /**
-    * 投递日志的分区规则，支持strftime的时间格式表示
+    * <p>投递日志的分区规则，支持strftime的时间格式表示</p>
     */
     @SerializedName("Partition")
     @Expose
     private String Partition;
 
     /**
-    * 投递日志的压缩配置
+    * <p>投递日志的压缩配置</p>
     */
     @SerializedName("Compress")
     @Expose
     private CompressInfo Compress;
 
     /**
-    * 投递日志的内容格式配置
+    * <p>投递日志的内容格式配置</p>
     */
     @SerializedName("Content")
     @Expose
     private ContentInfo Content;
 
     /**
-    * 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
+    * <p>投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）</p>
     */
     @SerializedName("FilenameMode")
     @Expose
     private Long FilenameMode;
 
     /**
-    * 投递数据范围的开始时间点（秒级时间戳），不能超出日志主题的生命周期起点。
-如果用户不填写，默认为用户新建投递任务的时间。
+    * <p>投递数据范围的开始时间点（秒级时间戳），不能超出日志主题的生命周期起点。<br>如果用户不填写，默认为用户新建投递任务的时间。</p>
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 投递数据范围的结束时间点（秒级时间戳），不能填写未来时间。
-如果用户不填写，默认为持续投递，即无限。
+    * <p>投递数据范围的结束时间点（秒级时间戳），不能填写未来时间。<br>如果用户不填写，默认为持续投递，即无限。</p>
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * 对象存储类型，默认值为 STANDARD。枚举值请参见[ 存储类型概述](https://cloud.tencent.com/document/product/436/33417) 文档。
-参考值有：
-
-- STANDARD：标准存储
-- STANDARD_IA：低频存储
-- ARCHIVE：归档存储
-- DEEP_ARCHIVE：深度归档存储
-- MAZ_STANDARD：标准存储（多 AZ）
-- MAZ_STANDARD_IA：低频存储（多 AZ）
-- INTELLIGENT_TIERING：智能分层存储
-- MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）
+    * <p>对象存储类型，默认值为 STANDARD。枚举值请参见<a href="https://cloud.tencent.com/document/product/436/33417"> 存储类型概述</a> 文档。<br>参考值有：</p><ul><li>STANDARD：标准存储</li><li>STANDARD_IA：低频存储</li><li>ARCHIVE：归档存储</li><li>DEEP_ARCHIVE：深度归档存储</li><li>MAZ_STANDARD：标准存储（多 AZ）</li><li>MAZ_STANDARD_IA：低频存储（多 AZ）</li><li>INTELLIGENT_TIERING：智能分层存储</li><li>MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）</li></ul>
     */
     @SerializedName("StorageType")
     @Expose
     private String StorageType;
 
     /**
-    * 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+    * <p>角色访问描述名 <a href="https://cloud.tencent.com/document/product/598/19381">创建角色</a></p>
     */
     @SerializedName("RoleArn")
     @Expose
     private String RoleArn;
 
     /**
-    * 外部ID
+    * <p>外部ID</p>
     */
     @SerializedName("ExternalId")
     @Expose
     private String ExternalId;
 
     /**
-     * Get 创建的投递规则所属的日志主题Id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。 
-     * @return TopicId 创建的投递规则所属的日志主题Id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+    * <p>用于生成投递到COS 的文件路径中的时间变量</p><p>入参限制：支持下面时区列表</p><ul><li>GMT-12:00</li><li>GMT-11:00</li><li>GMT-10:00</li><li>GMT-09:30</li><li>GMT-09:00</li><li>GMT-08:00</li><li>GMT-07:00</li><li>GMT-06:00</li><li>GMT-05:00</li><li>GMT-04:00</li><li>GMT-03:30</li><li>GMT-03:00</li><li>GMT-02:00</li><li>GMT-01:00</li><li>GMT+00:00</li><li>GMT+01:00</li><li>GMT+02:00</li><li>GMT+03:30</li><li>GMT+04:00</li><li>GMT+04:30</li><li>GMT+05:00</li><li>GMT+05:30</li><li>GMT+05:45</li><li>GMT+06:00</li><li>GMT+06:30</li><li>GMT+07:00</li><li>GMT+08:00</li><li>GMT+09:00</li><li>GMT+09:30</li><li>GMT+10:00</li><li>GMT+10:30</li><li>GMT+11:00</li><li>GMT+11:30</li><li>GMT+12:00</li><li>GMT+12:45</li><li>GMT+13:00</li><li>GMT+14:00</li><li>UTC-11:00</li><li>UTC-10:00</li><li>UTC-09:00</li><li>UTC-08:00</li><li>UTC-12:00</li><li>UTC-07:00</li><li>UTC-06:00</li><li>UTC-05:00</li><li>UTC-04:30</li><li>UTC-04:00</li><li>UTC-03:30</li><li>UTC-03:00</li><li>UTC-02:00</li><li>UTC-01:00</li><li>UTC+00:00</li><li>UTC+01:00</li><li>UTC+02:00</li><li>UTC+03:00</li><li>UTC+03:30</li><li>UTC+04:00</li><li>UTC+04:30</li><li>UTC+05:00</li><li>UTC+05:45</li><li>UTC+06:00</li><li>UTC+06:30</li><li>UTC+07:00</li><li>UTC+08:00</li><li>UTC+09:00</li><li>UTC+09:30</li><li>UTC+10:00</li><li>UTC+11:00</li><li>UTC+12:00</li><li>UTC+13:00</li></ul>
+    */
+    @SerializedName("TimeZone")
+    @Expose
+    private String TimeZone;
+
+    /**
+    * <p>预过滤处理-对写入COS原始数据进行预过滤处理</p>
+    */
+    @SerializedName("DSLFilter")
+    @Expose
+    private String DSLFilter;
+
+    /**
+     * Get <p>创建的投递规则所属的日志主题Id。</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul> 
+     * @return TopicId <p>创建的投递规则所属的日志主题Id。</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 创建的投递规则所属的日志主题Id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
-     * @param TopicId 创建的投递规则所属的日志主题Id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * Set <p>创建的投递规则所属的日志主题Id。</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
+     * @param TopicId <p>创建的投递规则所属的日志主题Id。</p><ul><li>通过<a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a>获取日志主题Id。</li></ul>
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。	
-
-- 通过[GET Service（List Buckets）](https://cloud.tencent.com/document/product/436/8291)获取COS存储桶。 
-     * @return Bucket COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。	
-
-- 通过[GET Service（List Buckets）](https://cloud.tencent.com/document/product/436/8291)获取COS存储桶。
+     * Get <p>COS存储桶，详见产品支持的<a href="https://cloud.tencent.com/document/product/436/13312">存储桶命名规范</a>。    </p><ul><li>通过<a href="https://cloud.tencent.com/document/product/436/8291">GET Service（List Buckets）</a>获取COS存储桶。</li></ul> 
+     * @return Bucket <p>COS存储桶，详见产品支持的<a href="https://cloud.tencent.com/document/product/436/13312">存储桶命名规范</a>。    </p><ul><li>通过<a href="https://cloud.tencent.com/document/product/436/8291">GET Service（List Buckets）</a>获取COS存储桶。</li></ul>
      */
     public String getBucket() {
         return this.Bucket;
     }
 
     /**
-     * Set COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。	
-
-- 通过[GET Service（List Buckets）](https://cloud.tencent.com/document/product/436/8291)获取COS存储桶。
-     * @param Bucket COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。	
-
-- 通过[GET Service（List Buckets）](https://cloud.tencent.com/document/product/436/8291)获取COS存储桶。
+     * Set <p>COS存储桶，详见产品支持的<a href="https://cloud.tencent.com/document/product/436/13312">存储桶命名规范</a>。    </p><ul><li>通过<a href="https://cloud.tencent.com/document/product/436/8291">GET Service（List Buckets）</a>获取COS存储桶。</li></ul>
+     * @param Bucket <p>COS存储桶，详见产品支持的<a href="https://cloud.tencent.com/document/product/436/13312">存储桶命名规范</a>。    </p><ul><li>通过<a href="https://cloud.tencent.com/document/product/436/8291">GET Service（List Buckets）</a>获取COS存储桶。</li></ul>
      */
     public void setBucket(String Bucket) {
         this.Bucket = Bucket;
     }
 
     /**
-     * Get 投递规则投递的新的目录前缀。
-- 仅支持0-9A-Za-z-_/
-- 最大支持256个字符 
-     * @return Prefix 投递规则投递的新的目录前缀。
-- 仅支持0-9A-Za-z-_/
-- 最大支持256个字符
+     * Get <p>投递规则投递的新的目录前缀。</p><ul><li>仅支持0-9A-Za-z-_/</li><li>最大支持256个字符</li></ul> 
+     * @return Prefix <p>投递规则投递的新的目录前缀。</p><ul><li>仅支持0-9A-Za-z-_/</li><li>最大支持256个字符</li></ul>
      */
     public String getPrefix() {
         return this.Prefix;
     }
 
     /**
-     * Set 投递规则投递的新的目录前缀。
-- 仅支持0-9A-Za-z-_/
-- 最大支持256个字符
-     * @param Prefix 投递规则投递的新的目录前缀。
-- 仅支持0-9A-Za-z-_/
-- 最大支持256个字符
+     * Set <p>投递规则投递的新的目录前缀。</p><ul><li>仅支持0-9A-Za-z-_/</li><li>最大支持256个字符</li></ul>
+     * @param Prefix <p>投递规则投递的新的目录前缀。</p><ul><li>仅支持0-9A-Za-z-_/</li><li>最大支持256个字符</li></ul>
      */
     public void setPrefix(String Prefix) {
         this.Prefix = Prefix;
     }
 
     /**
-     * Get 投递规则的名字。最大支持255个字符 
-     * @return ShipperName 投递规则的名字。最大支持255个字符
+     * Get <p>投递规则的名字。最大支持255个字符</p> 
+     * @return ShipperName <p>投递规则的名字。最大支持255个字符</p>
      */
     public String getShipperName() {
         return this.ShipperName;
     }
 
     /**
-     * Set 投递规则的名字。最大支持255个字符
-     * @param ShipperName 投递规则的名字。最大支持255个字符
+     * Set <p>投递规则的名字。最大支持255个字符</p>
+     * @param ShipperName <p>投递规则的名字。最大支持255个字符</p>
      */
     public void setShipperName(String ShipperName) {
         this.ShipperName = ShipperName;
     }
 
     /**
-     * Get 投递的时间间隔，单位 秒，默认300，范围 300-900 
-     * @return Interval 投递的时间间隔，单位 秒，默认300，范围 300-900
+     * Get <p>投递的时间间隔，单位 秒，默认300，范围 300-900</p> 
+     * @return Interval <p>投递的时间间隔，单位 秒，默认300，范围 300-900</p>
      */
     public Long getInterval() {
         return this.Interval;
     }
 
     /**
-     * Set 投递的时间间隔，单位 秒，默认300，范围 300-900
-     * @param Interval 投递的时间间隔，单位 秒，默认300，范围 300-900
+     * Set <p>投递的时间间隔，单位 秒，默认300，范围 300-900</p>
+     * @param Interval <p>投递的时间间隔，单位 秒，默认300，范围 300-900</p>
      */
     public void setInterval(Long Interval) {
         this.Interval = Interval;
     }
 
     /**
-     * Get 投递的文件的最大值，单位 MB，默认256，范围 5-256 
-     * @return MaxSize 投递的文件的最大值，单位 MB，默认256，范围 5-256
+     * Get <p>投递的文件的最大值，单位 MB，默认256，范围 5-256</p> 
+     * @return MaxSize <p>投递的文件的最大值，单位 MB，默认256，范围 5-256</p>
      */
     public Long getMaxSize() {
         return this.MaxSize;
     }
 
     /**
-     * Set 投递的文件的最大值，单位 MB，默认256，范围 5-256
-     * @param MaxSize 投递的文件的最大值，单位 MB，默认256，范围 5-256
+     * Set <p>投递的文件的最大值，单位 MB，默认256，范围 5-256</p>
+     * @param MaxSize <p>投递的文件的最大值，单位 MB，默认256，范围 5-256</p>
      */
     public void setMaxSize(Long MaxSize) {
         this.MaxSize = MaxSize;
     }
 
     /**
-     * Get 投递日志的过滤规则，匹配的日志进行投递，各rule之间是and关系，最多5个，数组为空则表示不过滤而全部投递 
-     * @return FilterRules 投递日志的过滤规则，匹配的日志进行投递，各rule之间是and关系，最多5个，数组为空则表示不过滤而全部投递
+     * Get <p>投递日志的过滤规则，匹配的日志进行投递，各rule之间是and关系，最多5个，数组为空则表示不过滤而全部投递</p> 
+     * @return FilterRules <p>投递日志的过滤规则，匹配的日志进行投递，各rule之间是and关系，最多5个，数组为空则表示不过滤而全部投递</p>
      */
     public FilterRuleInfo [] getFilterRules() {
         return this.FilterRules;
     }
 
     /**
-     * Set 投递日志的过滤规则，匹配的日志进行投递，各rule之间是and关系，最多5个，数组为空则表示不过滤而全部投递
-     * @param FilterRules 投递日志的过滤规则，匹配的日志进行投递，各rule之间是and关系，最多5个，数组为空则表示不过滤而全部投递
+     * Set <p>投递日志的过滤规则，匹配的日志进行投递，各rule之间是and关系，最多5个，数组为空则表示不过滤而全部投递</p>
+     * @param FilterRules <p>投递日志的过滤规则，匹配的日志进行投递，各rule之间是and关系，最多5个，数组为空则表示不过滤而全部投递</p>
      */
     public void setFilterRules(FilterRuleInfo [] FilterRules) {
         this.FilterRules = FilterRules;
     }
 
     /**
-     * Get 投递日志的分区规则，支持strftime的时间格式表示 
-     * @return Partition 投递日志的分区规则，支持strftime的时间格式表示
+     * Get <p>投递日志的分区规则，支持strftime的时间格式表示</p> 
+     * @return Partition <p>投递日志的分区规则，支持strftime的时间格式表示</p>
      */
     public String getPartition() {
         return this.Partition;
     }
 
     /**
-     * Set 投递日志的分区规则，支持strftime的时间格式表示
-     * @param Partition 投递日志的分区规则，支持strftime的时间格式表示
+     * Set <p>投递日志的分区规则，支持strftime的时间格式表示</p>
+     * @param Partition <p>投递日志的分区规则，支持strftime的时间格式表示</p>
      */
     public void setPartition(String Partition) {
         this.Partition = Partition;
     }
 
     /**
-     * Get 投递日志的压缩配置 
-     * @return Compress 投递日志的压缩配置
+     * Get <p>投递日志的压缩配置</p> 
+     * @return Compress <p>投递日志的压缩配置</p>
      */
     public CompressInfo getCompress() {
         return this.Compress;
     }
 
     /**
-     * Set 投递日志的压缩配置
-     * @param Compress 投递日志的压缩配置
+     * Set <p>投递日志的压缩配置</p>
+     * @param Compress <p>投递日志的压缩配置</p>
      */
     public void setCompress(CompressInfo Compress) {
         this.Compress = Compress;
     }
 
     /**
-     * Get 投递日志的内容格式配置 
-     * @return Content 投递日志的内容格式配置
+     * Get <p>投递日志的内容格式配置</p> 
+     * @return Content <p>投递日志的内容格式配置</p>
      */
     public ContentInfo getContent() {
         return this.Content;
     }
 
     /**
-     * Set 投递日志的内容格式配置
-     * @param Content 投递日志的内容格式配置
+     * Set <p>投递日志的内容格式配置</p>
+     * @param Content <p>投递日志的内容格式配置</p>
      */
     public void setContent(ContentInfo Content) {
         this.Content = Content;
     }
 
     /**
-     * Get 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名） 
-     * @return FilenameMode 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
+     * Get <p>投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）</p> 
+     * @return FilenameMode <p>投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）</p>
      */
     public Long getFilenameMode() {
         return this.FilenameMode;
     }
 
     /**
-     * Set 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
-     * @param FilenameMode 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
+     * Set <p>投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）</p>
+     * @param FilenameMode <p>投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）</p>
      */
     public void setFilenameMode(Long FilenameMode) {
         this.FilenameMode = FilenameMode;
     }
 
     /**
-     * Get 投递数据范围的开始时间点（秒级时间戳），不能超出日志主题的生命周期起点。
-如果用户不填写，默认为用户新建投递任务的时间。 
-     * @return StartTime 投递数据范围的开始时间点（秒级时间戳），不能超出日志主题的生命周期起点。
-如果用户不填写，默认为用户新建投递任务的时间。
+     * Get <p>投递数据范围的开始时间点（秒级时间戳），不能超出日志主题的生命周期起点。<br>如果用户不填写，默认为用户新建投递任务的时间。</p> 
+     * @return StartTime <p>投递数据范围的开始时间点（秒级时间戳），不能超出日志主题的生命周期起点。<br>如果用户不填写，默认为用户新建投递任务的时间。</p>
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 投递数据范围的开始时间点（秒级时间戳），不能超出日志主题的生命周期起点。
-如果用户不填写，默认为用户新建投递任务的时间。
-     * @param StartTime 投递数据范围的开始时间点（秒级时间戳），不能超出日志主题的生命周期起点。
-如果用户不填写，默认为用户新建投递任务的时间。
+     * Set <p>投递数据范围的开始时间点（秒级时间戳），不能超出日志主题的生命周期起点。<br>如果用户不填写，默认为用户新建投递任务的时间。</p>
+     * @param StartTime <p>投递数据范围的开始时间点（秒级时间戳），不能超出日志主题的生命周期起点。<br>如果用户不填写，默认为用户新建投递任务的时间。</p>
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 投递数据范围的结束时间点（秒级时间戳），不能填写未来时间。
-如果用户不填写，默认为持续投递，即无限。 
-     * @return EndTime 投递数据范围的结束时间点（秒级时间戳），不能填写未来时间。
-如果用户不填写，默认为持续投递，即无限。
+     * Get <p>投递数据范围的结束时间点（秒级时间戳），不能填写未来时间。<br>如果用户不填写，默认为持续投递，即无限。</p> 
+     * @return EndTime <p>投递数据范围的结束时间点（秒级时间戳），不能填写未来时间。<br>如果用户不填写，默认为持续投递，即无限。</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 投递数据范围的结束时间点（秒级时间戳），不能填写未来时间。
-如果用户不填写，默认为持续投递，即无限。
-     * @param EndTime 投递数据范围的结束时间点（秒级时间戳），不能填写未来时间。
-如果用户不填写，默认为持续投递，即无限。
+     * Set <p>投递数据范围的结束时间点（秒级时间戳），不能填写未来时间。<br>如果用户不填写，默认为持续投递，即无限。</p>
+     * @param EndTime <p>投递数据范围的结束时间点（秒级时间戳），不能填写未来时间。<br>如果用户不填写，默认为持续投递，即无限。</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 对象存储类型，默认值为 STANDARD。枚举值请参见[ 存储类型概述](https://cloud.tencent.com/document/product/436/33417) 文档。
-参考值有：
-
-- STANDARD：标准存储
-- STANDARD_IA：低频存储
-- ARCHIVE：归档存储
-- DEEP_ARCHIVE：深度归档存储
-- MAZ_STANDARD：标准存储（多 AZ）
-- MAZ_STANDARD_IA：低频存储（多 AZ）
-- INTELLIGENT_TIERING：智能分层存储
-- MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ） 
-     * @return StorageType 对象存储类型，默认值为 STANDARD。枚举值请参见[ 存储类型概述](https://cloud.tencent.com/document/product/436/33417) 文档。
-参考值有：
-
-- STANDARD：标准存储
-- STANDARD_IA：低频存储
-- ARCHIVE：归档存储
-- DEEP_ARCHIVE：深度归档存储
-- MAZ_STANDARD：标准存储（多 AZ）
-- MAZ_STANDARD_IA：低频存储（多 AZ）
-- INTELLIGENT_TIERING：智能分层存储
-- MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）
+     * Get <p>对象存储类型，默认值为 STANDARD。枚举值请参见<a href="https://cloud.tencent.com/document/product/436/33417"> 存储类型概述</a> 文档。<br>参考值有：</p><ul><li>STANDARD：标准存储</li><li>STANDARD_IA：低频存储</li><li>ARCHIVE：归档存储</li><li>DEEP_ARCHIVE：深度归档存储</li><li>MAZ_STANDARD：标准存储（多 AZ）</li><li>MAZ_STANDARD_IA：低频存储（多 AZ）</li><li>INTELLIGENT_TIERING：智能分层存储</li><li>MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）</li></ul> 
+     * @return StorageType <p>对象存储类型，默认值为 STANDARD。枚举值请参见<a href="https://cloud.tencent.com/document/product/436/33417"> 存储类型概述</a> 文档。<br>参考值有：</p><ul><li>STANDARD：标准存储</li><li>STANDARD_IA：低频存储</li><li>ARCHIVE：归档存储</li><li>DEEP_ARCHIVE：深度归档存储</li><li>MAZ_STANDARD：标准存储（多 AZ）</li><li>MAZ_STANDARD_IA：低频存储（多 AZ）</li><li>INTELLIGENT_TIERING：智能分层存储</li><li>MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）</li></ul>
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set 对象存储类型，默认值为 STANDARD。枚举值请参见[ 存储类型概述](https://cloud.tencent.com/document/product/436/33417) 文档。
-参考值有：
-
-- STANDARD：标准存储
-- STANDARD_IA：低频存储
-- ARCHIVE：归档存储
-- DEEP_ARCHIVE：深度归档存储
-- MAZ_STANDARD：标准存储（多 AZ）
-- MAZ_STANDARD_IA：低频存储（多 AZ）
-- INTELLIGENT_TIERING：智能分层存储
-- MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）
-     * @param StorageType 对象存储类型，默认值为 STANDARD。枚举值请参见[ 存储类型概述](https://cloud.tencent.com/document/product/436/33417) 文档。
-参考值有：
-
-- STANDARD：标准存储
-- STANDARD_IA：低频存储
-- ARCHIVE：归档存储
-- DEEP_ARCHIVE：深度归档存储
-- MAZ_STANDARD：标准存储（多 AZ）
-- MAZ_STANDARD_IA：低频存储（多 AZ）
-- INTELLIGENT_TIERING：智能分层存储
-- MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）
+     * Set <p>对象存储类型，默认值为 STANDARD。枚举值请参见<a href="https://cloud.tencent.com/document/product/436/33417"> 存储类型概述</a> 文档。<br>参考值有：</p><ul><li>STANDARD：标准存储</li><li>STANDARD_IA：低频存储</li><li>ARCHIVE：归档存储</li><li>DEEP_ARCHIVE：深度归档存储</li><li>MAZ_STANDARD：标准存储（多 AZ）</li><li>MAZ_STANDARD_IA：低频存储（多 AZ）</li><li>INTELLIGENT_TIERING：智能分层存储</li><li>MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）</li></ul>
+     * @param StorageType <p>对象存储类型，默认值为 STANDARD。枚举值请参见<a href="https://cloud.tencent.com/document/product/436/33417"> 存储类型概述</a> 文档。<br>参考值有：</p><ul><li>STANDARD：标准存储</li><li>STANDARD_IA：低频存储</li><li>ARCHIVE：归档存储</li><li>DEEP_ARCHIVE：深度归档存储</li><li>MAZ_STANDARD：标准存储（多 AZ）</li><li>MAZ_STANDARD_IA：低频存储（多 AZ）</li><li>INTELLIGENT_TIERING：智能分层存储</li><li>MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）</li></ul>
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;
     }
 
     /**
-     * Get 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381) 
-     * @return RoleArn 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+     * Get <p>角色访问描述名 <a href="https://cloud.tencent.com/document/product/598/19381">创建角色</a></p> 
+     * @return RoleArn <p>角色访问描述名 <a href="https://cloud.tencent.com/document/product/598/19381">创建角色</a></p>
      */
     public String getRoleArn() {
         return this.RoleArn;
     }
 
     /**
-     * Set 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
-     * @param RoleArn 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)
+     * Set <p>角色访问描述名 <a href="https://cloud.tencent.com/document/product/598/19381">创建角色</a></p>
+     * @param RoleArn <p>角色访问描述名 <a href="https://cloud.tencent.com/document/product/598/19381">创建角色</a></p>
      */
     public void setRoleArn(String RoleArn) {
         this.RoleArn = RoleArn;
     }
 
     /**
-     * Get 外部ID 
-     * @return ExternalId 外部ID
+     * Get <p>外部ID</p> 
+     * @return ExternalId <p>外部ID</p>
      */
     public String getExternalId() {
         return this.ExternalId;
     }
 
     /**
-     * Set 外部ID
-     * @param ExternalId 外部ID
+     * Set <p>外部ID</p>
+     * @param ExternalId <p>外部ID</p>
      */
     public void setExternalId(String ExternalId) {
         this.ExternalId = ExternalId;
+    }
+
+    /**
+     * Get <p>用于生成投递到COS 的文件路径中的时间变量</p><p>入参限制：支持下面时区列表</p><ul><li>GMT-12:00</li><li>GMT-11:00</li><li>GMT-10:00</li><li>GMT-09:30</li><li>GMT-09:00</li><li>GMT-08:00</li><li>GMT-07:00</li><li>GMT-06:00</li><li>GMT-05:00</li><li>GMT-04:00</li><li>GMT-03:30</li><li>GMT-03:00</li><li>GMT-02:00</li><li>GMT-01:00</li><li>GMT+00:00</li><li>GMT+01:00</li><li>GMT+02:00</li><li>GMT+03:30</li><li>GMT+04:00</li><li>GMT+04:30</li><li>GMT+05:00</li><li>GMT+05:30</li><li>GMT+05:45</li><li>GMT+06:00</li><li>GMT+06:30</li><li>GMT+07:00</li><li>GMT+08:00</li><li>GMT+09:00</li><li>GMT+09:30</li><li>GMT+10:00</li><li>GMT+10:30</li><li>GMT+11:00</li><li>GMT+11:30</li><li>GMT+12:00</li><li>GMT+12:45</li><li>GMT+13:00</li><li>GMT+14:00</li><li>UTC-11:00</li><li>UTC-10:00</li><li>UTC-09:00</li><li>UTC-08:00</li><li>UTC-12:00</li><li>UTC-07:00</li><li>UTC-06:00</li><li>UTC-05:00</li><li>UTC-04:30</li><li>UTC-04:00</li><li>UTC-03:30</li><li>UTC-03:00</li><li>UTC-02:00</li><li>UTC-01:00</li><li>UTC+00:00</li><li>UTC+01:00</li><li>UTC+02:00</li><li>UTC+03:00</li><li>UTC+03:30</li><li>UTC+04:00</li><li>UTC+04:30</li><li>UTC+05:00</li><li>UTC+05:45</li><li>UTC+06:00</li><li>UTC+06:30</li><li>UTC+07:00</li><li>UTC+08:00</li><li>UTC+09:00</li><li>UTC+09:30</li><li>UTC+10:00</li><li>UTC+11:00</li><li>UTC+12:00</li><li>UTC+13:00</li></ul> 
+     * @return TimeZone <p>用于生成投递到COS 的文件路径中的时间变量</p><p>入参限制：支持下面时区列表</p><ul><li>GMT-12:00</li><li>GMT-11:00</li><li>GMT-10:00</li><li>GMT-09:30</li><li>GMT-09:00</li><li>GMT-08:00</li><li>GMT-07:00</li><li>GMT-06:00</li><li>GMT-05:00</li><li>GMT-04:00</li><li>GMT-03:30</li><li>GMT-03:00</li><li>GMT-02:00</li><li>GMT-01:00</li><li>GMT+00:00</li><li>GMT+01:00</li><li>GMT+02:00</li><li>GMT+03:30</li><li>GMT+04:00</li><li>GMT+04:30</li><li>GMT+05:00</li><li>GMT+05:30</li><li>GMT+05:45</li><li>GMT+06:00</li><li>GMT+06:30</li><li>GMT+07:00</li><li>GMT+08:00</li><li>GMT+09:00</li><li>GMT+09:30</li><li>GMT+10:00</li><li>GMT+10:30</li><li>GMT+11:00</li><li>GMT+11:30</li><li>GMT+12:00</li><li>GMT+12:45</li><li>GMT+13:00</li><li>GMT+14:00</li><li>UTC-11:00</li><li>UTC-10:00</li><li>UTC-09:00</li><li>UTC-08:00</li><li>UTC-12:00</li><li>UTC-07:00</li><li>UTC-06:00</li><li>UTC-05:00</li><li>UTC-04:30</li><li>UTC-04:00</li><li>UTC-03:30</li><li>UTC-03:00</li><li>UTC-02:00</li><li>UTC-01:00</li><li>UTC+00:00</li><li>UTC+01:00</li><li>UTC+02:00</li><li>UTC+03:00</li><li>UTC+03:30</li><li>UTC+04:00</li><li>UTC+04:30</li><li>UTC+05:00</li><li>UTC+05:45</li><li>UTC+06:00</li><li>UTC+06:30</li><li>UTC+07:00</li><li>UTC+08:00</li><li>UTC+09:00</li><li>UTC+09:30</li><li>UTC+10:00</li><li>UTC+11:00</li><li>UTC+12:00</li><li>UTC+13:00</li></ul>
+     */
+    public String getTimeZone() {
+        return this.TimeZone;
+    }
+
+    /**
+     * Set <p>用于生成投递到COS 的文件路径中的时间变量</p><p>入参限制：支持下面时区列表</p><ul><li>GMT-12:00</li><li>GMT-11:00</li><li>GMT-10:00</li><li>GMT-09:30</li><li>GMT-09:00</li><li>GMT-08:00</li><li>GMT-07:00</li><li>GMT-06:00</li><li>GMT-05:00</li><li>GMT-04:00</li><li>GMT-03:30</li><li>GMT-03:00</li><li>GMT-02:00</li><li>GMT-01:00</li><li>GMT+00:00</li><li>GMT+01:00</li><li>GMT+02:00</li><li>GMT+03:30</li><li>GMT+04:00</li><li>GMT+04:30</li><li>GMT+05:00</li><li>GMT+05:30</li><li>GMT+05:45</li><li>GMT+06:00</li><li>GMT+06:30</li><li>GMT+07:00</li><li>GMT+08:00</li><li>GMT+09:00</li><li>GMT+09:30</li><li>GMT+10:00</li><li>GMT+10:30</li><li>GMT+11:00</li><li>GMT+11:30</li><li>GMT+12:00</li><li>GMT+12:45</li><li>GMT+13:00</li><li>GMT+14:00</li><li>UTC-11:00</li><li>UTC-10:00</li><li>UTC-09:00</li><li>UTC-08:00</li><li>UTC-12:00</li><li>UTC-07:00</li><li>UTC-06:00</li><li>UTC-05:00</li><li>UTC-04:30</li><li>UTC-04:00</li><li>UTC-03:30</li><li>UTC-03:00</li><li>UTC-02:00</li><li>UTC-01:00</li><li>UTC+00:00</li><li>UTC+01:00</li><li>UTC+02:00</li><li>UTC+03:00</li><li>UTC+03:30</li><li>UTC+04:00</li><li>UTC+04:30</li><li>UTC+05:00</li><li>UTC+05:45</li><li>UTC+06:00</li><li>UTC+06:30</li><li>UTC+07:00</li><li>UTC+08:00</li><li>UTC+09:00</li><li>UTC+09:30</li><li>UTC+10:00</li><li>UTC+11:00</li><li>UTC+12:00</li><li>UTC+13:00</li></ul>
+     * @param TimeZone <p>用于生成投递到COS 的文件路径中的时间变量</p><p>入参限制：支持下面时区列表</p><ul><li>GMT-12:00</li><li>GMT-11:00</li><li>GMT-10:00</li><li>GMT-09:30</li><li>GMT-09:00</li><li>GMT-08:00</li><li>GMT-07:00</li><li>GMT-06:00</li><li>GMT-05:00</li><li>GMT-04:00</li><li>GMT-03:30</li><li>GMT-03:00</li><li>GMT-02:00</li><li>GMT-01:00</li><li>GMT+00:00</li><li>GMT+01:00</li><li>GMT+02:00</li><li>GMT+03:30</li><li>GMT+04:00</li><li>GMT+04:30</li><li>GMT+05:00</li><li>GMT+05:30</li><li>GMT+05:45</li><li>GMT+06:00</li><li>GMT+06:30</li><li>GMT+07:00</li><li>GMT+08:00</li><li>GMT+09:00</li><li>GMT+09:30</li><li>GMT+10:00</li><li>GMT+10:30</li><li>GMT+11:00</li><li>GMT+11:30</li><li>GMT+12:00</li><li>GMT+12:45</li><li>GMT+13:00</li><li>GMT+14:00</li><li>UTC-11:00</li><li>UTC-10:00</li><li>UTC-09:00</li><li>UTC-08:00</li><li>UTC-12:00</li><li>UTC-07:00</li><li>UTC-06:00</li><li>UTC-05:00</li><li>UTC-04:30</li><li>UTC-04:00</li><li>UTC-03:30</li><li>UTC-03:00</li><li>UTC-02:00</li><li>UTC-01:00</li><li>UTC+00:00</li><li>UTC+01:00</li><li>UTC+02:00</li><li>UTC+03:00</li><li>UTC+03:30</li><li>UTC+04:00</li><li>UTC+04:30</li><li>UTC+05:00</li><li>UTC+05:45</li><li>UTC+06:00</li><li>UTC+06:30</li><li>UTC+07:00</li><li>UTC+08:00</li><li>UTC+09:00</li><li>UTC+09:30</li><li>UTC+10:00</li><li>UTC+11:00</li><li>UTC+12:00</li><li>UTC+13:00</li></ul>
+     */
+    public void setTimeZone(String TimeZone) {
+        this.TimeZone = TimeZone;
+    }
+
+    /**
+     * Get <p>预过滤处理-对写入COS原始数据进行预过滤处理</p> 
+     * @return DSLFilter <p>预过滤处理-对写入COS原始数据进行预过滤处理</p>
+     */
+    public String getDSLFilter() {
+        return this.DSLFilter;
+    }
+
+    /**
+     * Set <p>预过滤处理-对写入COS原始数据进行预过滤处理</p>
+     * @param DSLFilter <p>预过滤处理-对写入COS原始数据进行预过滤处理</p>
+     */
+    public void setDSLFilter(String DSLFilter) {
+        this.DSLFilter = DSLFilter;
     }
 
     public CreateShipperRequest() {
@@ -535,6 +496,12 @@ public class CreateShipperRequest extends AbstractModel {
         if (source.ExternalId != null) {
             this.ExternalId = new String(source.ExternalId);
         }
+        if (source.TimeZone != null) {
+            this.TimeZone = new String(source.TimeZone);
+        }
+        if (source.DSLFilter != null) {
+            this.DSLFilter = new String(source.DSLFilter);
+        }
     }
 
 
@@ -558,6 +525,8 @@ public class CreateShipperRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "StorageType", this.StorageType);
         this.setParamSimple(map, prefix + "RoleArn", this.RoleArn);
         this.setParamSimple(map, prefix + "ExternalId", this.ExternalId);
+        this.setParamSimple(map, prefix + "TimeZone", this.TimeZone);
+        this.setParamSimple(map, prefix + "DSLFilter", this.DSLFilter);
 
     }
 }

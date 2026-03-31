@@ -24,177 +24,105 @@ import java.util.HashMap;
 public class SubmitVideoEditJobRequest extends AbstractModel {
 
     /**
-    * 参考视频URL。默认为待编辑视频。
-- 视频格式：支持MP4
-- 视频时长：输入视频时长≤5秒
-- 视频大小：不超过200M
-- 视频文件：输入的视频帧率及分辨率不做限制（建议输入16：9或9：16的视频；分辨率建议在2160px内，帧率建议在60fps内）；输出视频是帧率会≥16fps，分辨率为720p
+    * <p>参考视频URL。默认为待编辑视频。</p><ul><li>视频格式：支持MP4</li><li>视频时长：输入视频时长≤10秒</li><li>视频大小：不超过200M</li><li>视频文件：输入的视频帧率及分辨率不做限制（建议输入16：9或9：16的视频；分辨率建议在2160px内，帧率建议在60fps内）；输出视频是帧率会≥16fps，分辨率为720p</li></ul>
     */
     @SerializedName("VideoUrl")
     @Expose
     private String VideoUrl;
 
     /**
-    * 视频内容的描述，中文正向提示词。支持视频内容增加、删除、修改等能力
-- 最多支持200个 utf-8 字符（首尾空格不计入字符数）
-- 不传prompt的时候，Images.N参考图列表必须要传图，且传的图片是经过图片编辑之后的结果图
+    * <p>视频内容的描述，中文正向提示词。支持视频内容增加、删除、修改等能力</p><ul><li>最多支持200个 utf-8 字符（首尾空格不计入字符数）</li><li>不传prompt的时候，Images.N参考图列表必须要传图，且传的图片是经过图片编辑之后的结果图</li></ul>
     */
     @SerializedName("Prompt")
     @Expose
     private String Prompt;
 
     /**
-    * 参考图列表。用于对视频内容做风格迁移、内容替换、内容删减、内容增加做参考。
-- 支持传入图片Base64编码或图片URL
-- 图片格式：支持jpg，png，jpeg，webp，bmp，tiff 格式
-- 图片文件：大小不能超过10MB（base64后）。单边分辨率不超过5000px，不小于50px，图片长宽限制1:4 ~ 4:1。
-示例值：[{ "Url": "https://console.cloud.tencent.com/cos/image.png"}]
+    * <p>参考图列表。用于对视频内容做风格迁移、内容替换、内容删减、内容增加做参考。</p><ul><li>支持传入图片Base64编码或图片URL</li><li>图片格式：支持jpg，png，jpeg，webp，bmp，tiff 格式</li><li>图片文件：大小不能超过10MB（base64后）。单边分辨率不超过5000px，不小于50px，图片长宽限制1:4 ~ 4:1。<br>示例值：[{ &quot;Url&quot;: &quot;https://console.cloud.tencent.com/cos/image.png&quot;}]</li></ul>
     */
     @SerializedName("Images")
     @Expose
     private Image [] Images;
 
     /**
-    * 图片base64或者图片url
-
-- Base64 和 Url 必须提供一个，如果都提供以Url为准。
-- 上传图url大小不超过 8M
-- 支持jpg，png，jpeg，webp，bmp，tiff 格式
-- 单边分辨率不超过5000，不小于50，长宽限制1:4 ~ 4:1
+    * <p>图片base64或者图片url</p><ul><li>Base64 和 Url 必须提供一个，如果都提供以Url为准。</li><li>上传图url大小不超过 8M</li><li>支持jpg，png，jpeg，webp，bmp，tiff 格式</li><li>单边分辨率不超过5000，不小于50，长宽限制1:4 ~ 4:1</li></ul>
     */
     @SerializedName("Image")
     @Expose
     private Image Image;
 
     /**
-    * 扩展字段。
+    * <p>扩展字段。</p>
     */
     @SerializedName("VideoEditParam")
     @Expose
     private VideoEditParam VideoEditParam;
 
     /**
-    * 为生成视频添加标识的开关，默认为1。传0 需前往  [控制台](https://console.cloud.tencent.com/vtc/setting)  申请开启显式标识自主完成后方可生效。
-1：添加标识；
-0：不添加标识；
-其他数值：默认按1处理。
-建议您使用显著标识来提示，该视频是 AI 生成的视频。
-
+    * <p>为生成视频添加标识的开关，默认为1。传0 需前往  <a href="https://console.cloud.tencent.com/vtc/setting">控制台</a>  申请开启显式标识自主完成后方可生效。<br>1：添加标识；<br>0：不添加标识；<br>其他数值：默认按1处理。<br>建议您使用显著标识来提示，该视频是 AI 生成的视频。</p>
     */
     @SerializedName("LogoAdd")
     @Expose
     private Long LogoAdd;
 
     /**
-    * 标识内容设置。
-默认在生成视频的右下角添加“ AI 生成”或“视频由 AI 生成”字样，如需替换为其他的标识图片，需前往   [控制台](https://console.cloud.tencent.com/vtc/setting)  申请开启显式标识自主完成。
-
+    * <p>标识内容设置。<br>默认在生成视频的右下角添加“ AI 生成”或“视频由 AI 生成”字样，如需替换为其他的标识图片，需前往   <a href="https://console.cloud.tencent.com/vtc/setting">控制台</a>  申请开启显式标识自主完成。</p>
     */
     @SerializedName("LogoParam")
     @Expose
     private LogoParam LogoParam;
 
     /**
-     * Get 参考视频URL。默认为待编辑视频。
-- 视频格式：支持MP4
-- 视频时长：输入视频时长≤5秒
-- 视频大小：不超过200M
-- 视频文件：输入的视频帧率及分辨率不做限制（建议输入16：9或9：16的视频；分辨率建议在2160px内，帧率建议在60fps内）；输出视频是帧率会≥16fps，分辨率为720p 
-     * @return VideoUrl 参考视频URL。默认为待编辑视频。
-- 视频格式：支持MP4
-- 视频时长：输入视频时长≤5秒
-- 视频大小：不超过200M
-- 视频文件：输入的视频帧率及分辨率不做限制（建议输入16：9或9：16的视频；分辨率建议在2160px内，帧率建议在60fps内）；输出视频是帧率会≥16fps，分辨率为720p
+     * Get <p>参考视频URL。默认为待编辑视频。</p><ul><li>视频格式：支持MP4</li><li>视频时长：输入视频时长≤10秒</li><li>视频大小：不超过200M</li><li>视频文件：输入的视频帧率及分辨率不做限制（建议输入16：9或9：16的视频；分辨率建议在2160px内，帧率建议在60fps内）；输出视频是帧率会≥16fps，分辨率为720p</li></ul> 
+     * @return VideoUrl <p>参考视频URL。默认为待编辑视频。</p><ul><li>视频格式：支持MP4</li><li>视频时长：输入视频时长≤10秒</li><li>视频大小：不超过200M</li><li>视频文件：输入的视频帧率及分辨率不做限制（建议输入16：9或9：16的视频；分辨率建议在2160px内，帧率建议在60fps内）；输出视频是帧率会≥16fps，分辨率为720p</li></ul>
      */
     public String getVideoUrl() {
         return this.VideoUrl;
     }
 
     /**
-     * Set 参考视频URL。默认为待编辑视频。
-- 视频格式：支持MP4
-- 视频时长：输入视频时长≤5秒
-- 视频大小：不超过200M
-- 视频文件：输入的视频帧率及分辨率不做限制（建议输入16：9或9：16的视频；分辨率建议在2160px内，帧率建议在60fps内）；输出视频是帧率会≥16fps，分辨率为720p
-     * @param VideoUrl 参考视频URL。默认为待编辑视频。
-- 视频格式：支持MP4
-- 视频时长：输入视频时长≤5秒
-- 视频大小：不超过200M
-- 视频文件：输入的视频帧率及分辨率不做限制（建议输入16：9或9：16的视频；分辨率建议在2160px内，帧率建议在60fps内）；输出视频是帧率会≥16fps，分辨率为720p
+     * Set <p>参考视频URL。默认为待编辑视频。</p><ul><li>视频格式：支持MP4</li><li>视频时长：输入视频时长≤10秒</li><li>视频大小：不超过200M</li><li>视频文件：输入的视频帧率及分辨率不做限制（建议输入16：9或9：16的视频；分辨率建议在2160px内，帧率建议在60fps内）；输出视频是帧率会≥16fps，分辨率为720p</li></ul>
+     * @param VideoUrl <p>参考视频URL。默认为待编辑视频。</p><ul><li>视频格式：支持MP4</li><li>视频时长：输入视频时长≤10秒</li><li>视频大小：不超过200M</li><li>视频文件：输入的视频帧率及分辨率不做限制（建议输入16：9或9：16的视频；分辨率建议在2160px内，帧率建议在60fps内）；输出视频是帧率会≥16fps，分辨率为720p</li></ul>
      */
     public void setVideoUrl(String VideoUrl) {
         this.VideoUrl = VideoUrl;
     }
 
     /**
-     * Get 视频内容的描述，中文正向提示词。支持视频内容增加、删除、修改等能力
-- 最多支持200个 utf-8 字符（首尾空格不计入字符数）
-- 不传prompt的时候，Images.N参考图列表必须要传图，且传的图片是经过图片编辑之后的结果图 
-     * @return Prompt 视频内容的描述，中文正向提示词。支持视频内容增加、删除、修改等能力
-- 最多支持200个 utf-8 字符（首尾空格不计入字符数）
-- 不传prompt的时候，Images.N参考图列表必须要传图，且传的图片是经过图片编辑之后的结果图
+     * Get <p>视频内容的描述，中文正向提示词。支持视频内容增加、删除、修改等能力</p><ul><li>最多支持200个 utf-8 字符（首尾空格不计入字符数）</li><li>不传prompt的时候，Images.N参考图列表必须要传图，且传的图片是经过图片编辑之后的结果图</li></ul> 
+     * @return Prompt <p>视频内容的描述，中文正向提示词。支持视频内容增加、删除、修改等能力</p><ul><li>最多支持200个 utf-8 字符（首尾空格不计入字符数）</li><li>不传prompt的时候，Images.N参考图列表必须要传图，且传的图片是经过图片编辑之后的结果图</li></ul>
      */
     public String getPrompt() {
         return this.Prompt;
     }
 
     /**
-     * Set 视频内容的描述，中文正向提示词。支持视频内容增加、删除、修改等能力
-- 最多支持200个 utf-8 字符（首尾空格不计入字符数）
-- 不传prompt的时候，Images.N参考图列表必须要传图，且传的图片是经过图片编辑之后的结果图
-     * @param Prompt 视频内容的描述，中文正向提示词。支持视频内容增加、删除、修改等能力
-- 最多支持200个 utf-8 字符（首尾空格不计入字符数）
-- 不传prompt的时候，Images.N参考图列表必须要传图，且传的图片是经过图片编辑之后的结果图
+     * Set <p>视频内容的描述，中文正向提示词。支持视频内容增加、删除、修改等能力</p><ul><li>最多支持200个 utf-8 字符（首尾空格不计入字符数）</li><li>不传prompt的时候，Images.N参考图列表必须要传图，且传的图片是经过图片编辑之后的结果图</li></ul>
+     * @param Prompt <p>视频内容的描述，中文正向提示词。支持视频内容增加、删除、修改等能力</p><ul><li>最多支持200个 utf-8 字符（首尾空格不计入字符数）</li><li>不传prompt的时候，Images.N参考图列表必须要传图，且传的图片是经过图片编辑之后的结果图</li></ul>
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
     }
 
     /**
-     * Get 参考图列表。用于对视频内容做风格迁移、内容替换、内容删减、内容增加做参考。
-- 支持传入图片Base64编码或图片URL
-- 图片格式：支持jpg，png，jpeg，webp，bmp，tiff 格式
-- 图片文件：大小不能超过10MB（base64后）。单边分辨率不超过5000px，不小于50px，图片长宽限制1:4 ~ 4:1。
-示例值：[{ "Url": "https://console.cloud.tencent.com/cos/image.png"}] 
-     * @return Images 参考图列表。用于对视频内容做风格迁移、内容替换、内容删减、内容增加做参考。
-- 支持传入图片Base64编码或图片URL
-- 图片格式：支持jpg，png，jpeg，webp，bmp，tiff 格式
-- 图片文件：大小不能超过10MB（base64后）。单边分辨率不超过5000px，不小于50px，图片长宽限制1:4 ~ 4:1。
-示例值：[{ "Url": "https://console.cloud.tencent.com/cos/image.png"}]
+     * Get <p>参考图列表。用于对视频内容做风格迁移、内容替换、内容删减、内容增加做参考。</p><ul><li>支持传入图片Base64编码或图片URL</li><li>图片格式：支持jpg，png，jpeg，webp，bmp，tiff 格式</li><li>图片文件：大小不能超过10MB（base64后）。单边分辨率不超过5000px，不小于50px，图片长宽限制1:4 ~ 4:1。<br>示例值：[{ &quot;Url&quot;: &quot;https://console.cloud.tencent.com/cos/image.png&quot;}]</li></ul> 
+     * @return Images <p>参考图列表。用于对视频内容做风格迁移、内容替换、内容删减、内容增加做参考。</p><ul><li>支持传入图片Base64编码或图片URL</li><li>图片格式：支持jpg，png，jpeg，webp，bmp，tiff 格式</li><li>图片文件：大小不能超过10MB（base64后）。单边分辨率不超过5000px，不小于50px，图片长宽限制1:4 ~ 4:1。<br>示例值：[{ &quot;Url&quot;: &quot;https://console.cloud.tencent.com/cos/image.png&quot;}]</li></ul>
      */
     public Image [] getImages() {
         return this.Images;
     }
 
     /**
-     * Set 参考图列表。用于对视频内容做风格迁移、内容替换、内容删减、内容增加做参考。
-- 支持传入图片Base64编码或图片URL
-- 图片格式：支持jpg，png，jpeg，webp，bmp，tiff 格式
-- 图片文件：大小不能超过10MB（base64后）。单边分辨率不超过5000px，不小于50px，图片长宽限制1:4 ~ 4:1。
-示例值：[{ "Url": "https://console.cloud.tencent.com/cos/image.png"}]
-     * @param Images 参考图列表。用于对视频内容做风格迁移、内容替换、内容删减、内容增加做参考。
-- 支持传入图片Base64编码或图片URL
-- 图片格式：支持jpg，png，jpeg，webp，bmp，tiff 格式
-- 图片文件：大小不能超过10MB（base64后）。单边分辨率不超过5000px，不小于50px，图片长宽限制1:4 ~ 4:1。
-示例值：[{ "Url": "https://console.cloud.tencent.com/cos/image.png"}]
+     * Set <p>参考图列表。用于对视频内容做风格迁移、内容替换、内容删减、内容增加做参考。</p><ul><li>支持传入图片Base64编码或图片URL</li><li>图片格式：支持jpg，png，jpeg，webp，bmp，tiff 格式</li><li>图片文件：大小不能超过10MB（base64后）。单边分辨率不超过5000px，不小于50px，图片长宽限制1:4 ~ 4:1。<br>示例值：[{ &quot;Url&quot;: &quot;https://console.cloud.tencent.com/cos/image.png&quot;}]</li></ul>
+     * @param Images <p>参考图列表。用于对视频内容做风格迁移、内容替换、内容删减、内容增加做参考。</p><ul><li>支持传入图片Base64编码或图片URL</li><li>图片格式：支持jpg，png，jpeg，webp，bmp，tiff 格式</li><li>图片文件：大小不能超过10MB（base64后）。单边分辨率不超过5000px，不小于50px，图片长宽限制1:4 ~ 4:1。<br>示例值：[{ &quot;Url&quot;: &quot;https://console.cloud.tencent.com/cos/image.png&quot;}]</li></ul>
      */
     public void setImages(Image [] Images) {
         this.Images = Images;
     }
 
     /**
-     * Get 图片base64或者图片url
-
-- Base64 和 Url 必须提供一个，如果都提供以Url为准。
-- 上传图url大小不超过 8M
-- 支持jpg，png，jpeg，webp，bmp，tiff 格式
-- 单边分辨率不超过5000，不小于50，长宽限制1:4 ~ 4:1 
-     * @return Image 图片base64或者图片url
-
-- Base64 和 Url 必须提供一个，如果都提供以Url为准。
-- 上传图url大小不超过 8M
-- 支持jpg，png，jpeg，webp，bmp，tiff 格式
-- 单边分辨率不超过5000，不小于50，长宽限制1:4 ~ 4:1
+     * Get <p>图片base64或者图片url</p><ul><li>Base64 和 Url 必须提供一个，如果都提供以Url为准。</li><li>上传图url大小不超过 8M</li><li>支持jpg，png，jpeg，webp，bmp，tiff 格式</li><li>单边分辨率不超过5000，不小于50，长宽限制1:4 ~ 4:1</li></ul> 
+     * @return Image <p>图片base64或者图片url</p><ul><li>Base64 和 Url 必须提供一个，如果都提供以Url为准。</li><li>上传图url大小不超过 8M</li><li>支持jpg，png，jpeg，webp，bmp，tiff 格式</li><li>单边分辨率不超过5000，不小于50，长宽限制1:4 ~ 4:1</li></ul>
      * @deprecated
      */
     @Deprecated
@@ -203,18 +131,8 @@ public class SubmitVideoEditJobRequest extends AbstractModel {
     }
 
     /**
-     * Set 图片base64或者图片url
-
-- Base64 和 Url 必须提供一个，如果都提供以Url为准。
-- 上传图url大小不超过 8M
-- 支持jpg，png，jpeg，webp，bmp，tiff 格式
-- 单边分辨率不超过5000，不小于50，长宽限制1:4 ~ 4:1
-     * @param Image 图片base64或者图片url
-
-- Base64 和 Url 必须提供一个，如果都提供以Url为准。
-- 上传图url大小不超过 8M
-- 支持jpg，png，jpeg，webp，bmp，tiff 格式
-- 单边分辨率不超过5000，不小于50，长宽限制1:4 ~ 4:1
+     * Set <p>图片base64或者图片url</p><ul><li>Base64 和 Url 必须提供一个，如果都提供以Url为准。</li><li>上传图url大小不超过 8M</li><li>支持jpg，png，jpeg，webp，bmp，tiff 格式</li><li>单边分辨率不超过5000，不小于50，长宽限制1:4 ~ 4:1</li></ul>
+     * @param Image <p>图片base64或者图片url</p><ul><li>Base64 和 Url 必须提供一个，如果都提供以Url为准。</li><li>上传图url大小不超过 8M</li><li>支持jpg，png，jpeg，webp，bmp，tiff 格式</li><li>单边分辨率不超过5000，不小于50，长宽限制1:4 ~ 4:1</li></ul>
      * @deprecated
      */
     @Deprecated
@@ -223,76 +141,48 @@ public class SubmitVideoEditJobRequest extends AbstractModel {
     }
 
     /**
-     * Get 扩展字段。 
-     * @return VideoEditParam 扩展字段。
+     * Get <p>扩展字段。</p> 
+     * @return VideoEditParam <p>扩展字段。</p>
      */
     public VideoEditParam getVideoEditParam() {
         return this.VideoEditParam;
     }
 
     /**
-     * Set 扩展字段。
-     * @param VideoEditParam 扩展字段。
+     * Set <p>扩展字段。</p>
+     * @param VideoEditParam <p>扩展字段。</p>
      */
     public void setVideoEditParam(VideoEditParam VideoEditParam) {
         this.VideoEditParam = VideoEditParam;
     }
 
     /**
-     * Get 为生成视频添加标识的开关，默认为1。传0 需前往  [控制台](https://console.cloud.tencent.com/vtc/setting)  申请开启显式标识自主完成后方可生效。
-1：添加标识；
-0：不添加标识；
-其他数值：默认按1处理。
-建议您使用显著标识来提示，该视频是 AI 生成的视频。
- 
-     * @return LogoAdd 为生成视频添加标识的开关，默认为1。传0 需前往  [控制台](https://console.cloud.tencent.com/vtc/setting)  申请开启显式标识自主完成后方可生效。
-1：添加标识；
-0：不添加标识；
-其他数值：默认按1处理。
-建议您使用显著标识来提示，该视频是 AI 生成的视频。
-
+     * Get <p>为生成视频添加标识的开关，默认为1。传0 需前往  <a href="https://console.cloud.tencent.com/vtc/setting">控制台</a>  申请开启显式标识自主完成后方可生效。<br>1：添加标识；<br>0：不添加标识；<br>其他数值：默认按1处理。<br>建议您使用显著标识来提示，该视频是 AI 生成的视频。</p> 
+     * @return LogoAdd <p>为生成视频添加标识的开关，默认为1。传0 需前往  <a href="https://console.cloud.tencent.com/vtc/setting">控制台</a>  申请开启显式标识自主完成后方可生效。<br>1：添加标识；<br>0：不添加标识；<br>其他数值：默认按1处理。<br>建议您使用显著标识来提示，该视频是 AI 生成的视频。</p>
      */
     public Long getLogoAdd() {
         return this.LogoAdd;
     }
 
     /**
-     * Set 为生成视频添加标识的开关，默认为1。传0 需前往  [控制台](https://console.cloud.tencent.com/vtc/setting)  申请开启显式标识自主完成后方可生效。
-1：添加标识；
-0：不添加标识；
-其他数值：默认按1处理。
-建议您使用显著标识来提示，该视频是 AI 生成的视频。
-
-     * @param LogoAdd 为生成视频添加标识的开关，默认为1。传0 需前往  [控制台](https://console.cloud.tencent.com/vtc/setting)  申请开启显式标识自主完成后方可生效。
-1：添加标识；
-0：不添加标识；
-其他数值：默认按1处理。
-建议您使用显著标识来提示，该视频是 AI 生成的视频。
-
+     * Set <p>为生成视频添加标识的开关，默认为1。传0 需前往  <a href="https://console.cloud.tencent.com/vtc/setting">控制台</a>  申请开启显式标识自主完成后方可生效。<br>1：添加标识；<br>0：不添加标识；<br>其他数值：默认按1处理。<br>建议您使用显著标识来提示，该视频是 AI 生成的视频。</p>
+     * @param LogoAdd <p>为生成视频添加标识的开关，默认为1。传0 需前往  <a href="https://console.cloud.tencent.com/vtc/setting">控制台</a>  申请开启显式标识自主完成后方可生效。<br>1：添加标识；<br>0：不添加标识；<br>其他数值：默认按1处理。<br>建议您使用显著标识来提示，该视频是 AI 生成的视频。</p>
      */
     public void setLogoAdd(Long LogoAdd) {
         this.LogoAdd = LogoAdd;
     }
 
     /**
-     * Get 标识内容设置。
-默认在生成视频的右下角添加“ AI 生成”或“视频由 AI 生成”字样，如需替换为其他的标识图片，需前往   [控制台](https://console.cloud.tencent.com/vtc/setting)  申请开启显式标识自主完成。
- 
-     * @return LogoParam 标识内容设置。
-默认在生成视频的右下角添加“ AI 生成”或“视频由 AI 生成”字样，如需替换为其他的标识图片，需前往   [控制台](https://console.cloud.tencent.com/vtc/setting)  申请开启显式标识自主完成。
-
+     * Get <p>标识内容设置。<br>默认在生成视频的右下角添加“ AI 生成”或“视频由 AI 生成”字样，如需替换为其他的标识图片，需前往   <a href="https://console.cloud.tencent.com/vtc/setting">控制台</a>  申请开启显式标识自主完成。</p> 
+     * @return LogoParam <p>标识内容设置。<br>默认在生成视频的右下角添加“ AI 生成”或“视频由 AI 生成”字样，如需替换为其他的标识图片，需前往   <a href="https://console.cloud.tencent.com/vtc/setting">控制台</a>  申请开启显式标识自主完成。</p>
      */
     public LogoParam getLogoParam() {
         return this.LogoParam;
     }
 
     /**
-     * Set 标识内容设置。
-默认在生成视频的右下角添加“ AI 生成”或“视频由 AI 生成”字样，如需替换为其他的标识图片，需前往   [控制台](https://console.cloud.tencent.com/vtc/setting)  申请开启显式标识自主完成。
-
-     * @param LogoParam 标识内容设置。
-默认在生成视频的右下角添加“ AI 生成”或“视频由 AI 生成”字样，如需替换为其他的标识图片，需前往   [控制台](https://console.cloud.tencent.com/vtc/setting)  申请开启显式标识自主完成。
-
+     * Set <p>标识内容设置。<br>默认在生成视频的右下角添加“ AI 生成”或“视频由 AI 生成”字样，如需替换为其他的标识图片，需前往   <a href="https://console.cloud.tencent.com/vtc/setting">控制台</a>  申请开启显式标识自主完成。</p>
+     * @param LogoParam <p>标识内容设置。<br>默认在生成视频的右下角添加“ AI 生成”或“视频由 AI 生成”字样，如需替换为其他的标识图片，需前往   <a href="https://console.cloud.tencent.com/vtc/setting">控制台</a>  申请开启显式标识自主完成。</p>
      */
     public void setLogoParam(LogoParam LogoParam) {
         this.LogoParam = LogoParam;

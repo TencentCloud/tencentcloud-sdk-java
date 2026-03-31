@@ -24,31 +24,28 @@ import java.util.HashMap;
 public class SearchLogResponse extends AbstractModel {
 
     /**
-    * 透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时。
-注意：
-* 仅适用于单日志主题检索，检索多个日志主题时，请使用Topics中的Context
+    * <p>透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时。<br>注意：</p><ul><li>仅适用于单日志主题检索，检索多个日志主题时，请使用Topics中的Context</li></ul>
     */
     @SerializedName("Context")
     @Expose
     private String Context;
 
     /**
-    * 符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志
-注意：仅当检索分析语句(Query)不包含SQL时有效
+    * <p>符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志<br>注意：仅当检索分析语句(Query)不包含SQL时有效</p>
     */
     @SerializedName("ListOver")
     @Expose
     private Boolean ListOver;
 
     /**
-    * 返回的是否为统计分析（即SQL）结果
+    * <p>返回的是否为统计分析（即SQL）结果</p>
     */
     @SerializedName("Analysis")
     @Expose
     private Boolean Analysis;
 
     /**
-    * 匹配检索条件的原始日志
+    * <p>匹配检索条件的原始日志</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Results")
@@ -56,8 +53,7 @@ public class SearchLogResponse extends AbstractModel {
     private LogInfo [] Results;
 
     /**
-    * 日志统计分析结果的列名
-当UseNewAnalysis为false时生效
+    * <p>日志统计分析结果的列名<br>当UseNewAnalysis为false时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ColNames")
@@ -65,8 +61,7 @@ public class SearchLogResponse extends AbstractModel {
     private String [] ColNames;
 
     /**
-    * 日志统计分析结果
-当UseNewAnalysis为false时生效
+    * <p>日志统计分析结果<br>当UseNewAnalysis为false时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AnalysisResults")
@@ -74,8 +69,7 @@ public class SearchLogResponse extends AbstractModel {
     private LogItems [] AnalysisResults;
 
     /**
-    * 日志统计分析结果
-当UseNewAnalysis为true时生效
+    * <p>日志统计分析结果<br>当UseNewAnalysis为true时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AnalysisRecords")
@@ -83,8 +77,7 @@ public class SearchLogResponse extends AbstractModel {
     private String [] AnalysisRecords;
 
     /**
-    * 日志统计分析结果的列属性
-当UseNewAnalysis为true时生效
+    * <p>日志统计分析结果的列属性<br>当UseNewAnalysis为true时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Columns")
@@ -92,14 +85,14 @@ public class SearchLogResponse extends AbstractModel {
     private Column [] Columns;
 
     /**
-    * 本次统计分析使用的采样率
+    * <p>本次统计分析使用的采样率</p>
     */
     @SerializedName("SamplingRate")
     @Expose
     private Float SamplingRate;
 
     /**
-    * 使用多日志主题检索时，各个日志主题的基本信息，例如报错信息。
+    * <p>使用多日志主题检索时，各个日志主题的基本信息，例如报错信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Topics")
@@ -114,69 +107,57 @@ public class SearchLogResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时。
-注意：
-* 仅适用于单日志主题检索，检索多个日志主题时，请使用Topics中的Context 
-     * @return Context 透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时。
-注意：
-* 仅适用于单日志主题检索，检索多个日志主题时，请使用Topics中的Context
+     * Get <p>透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时。<br>注意：</p><ul><li>仅适用于单日志主题检索，检索多个日志主题时，请使用Topics中的Context</li></ul> 
+     * @return Context <p>透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时。<br>注意：</p><ul><li>仅适用于单日志主题检索，检索多个日志主题时，请使用Topics中的Context</li></ul>
      */
     public String getContext() {
         return this.Context;
     }
 
     /**
-     * Set 透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时。
-注意：
-* 仅适用于单日志主题检索，检索多个日志主题时，请使用Topics中的Context
-     * @param Context 透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时。
-注意：
-* 仅适用于单日志主题检索，检索多个日志主题时，请使用Topics中的Context
+     * Set <p>透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时。<br>注意：</p><ul><li>仅适用于单日志主题检索，检索多个日志主题时，请使用Topics中的Context</li></ul>
+     * @param Context <p>透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时。<br>注意：</p><ul><li>仅适用于单日志主题检索，检索多个日志主题时，请使用Topics中的Context</li></ul>
      */
     public void setContext(String Context) {
         this.Context = Context;
     }
 
     /**
-     * Get 符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志
-注意：仅当检索分析语句(Query)不包含SQL时有效 
-     * @return ListOver 符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志
-注意：仅当检索分析语句(Query)不包含SQL时有效
+     * Get <p>符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志<br>注意：仅当检索分析语句(Query)不包含SQL时有效</p> 
+     * @return ListOver <p>符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志<br>注意：仅当检索分析语句(Query)不包含SQL时有效</p>
      */
     public Boolean getListOver() {
         return this.ListOver;
     }
 
     /**
-     * Set 符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志
-注意：仅当检索分析语句(Query)不包含SQL时有效
-     * @param ListOver 符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志
-注意：仅当检索分析语句(Query)不包含SQL时有效
+     * Set <p>符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志<br>注意：仅当检索分析语句(Query)不包含SQL时有效</p>
+     * @param ListOver <p>符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志<br>注意：仅当检索分析语句(Query)不包含SQL时有效</p>
      */
     public void setListOver(Boolean ListOver) {
         this.ListOver = ListOver;
     }
 
     /**
-     * Get 返回的是否为统计分析（即SQL）结果 
-     * @return Analysis 返回的是否为统计分析（即SQL）结果
+     * Get <p>返回的是否为统计分析（即SQL）结果</p> 
+     * @return Analysis <p>返回的是否为统计分析（即SQL）结果</p>
      */
     public Boolean getAnalysis() {
         return this.Analysis;
     }
 
     /**
-     * Set 返回的是否为统计分析（即SQL）结果
-     * @param Analysis 返回的是否为统计分析（即SQL）结果
+     * Set <p>返回的是否为统计分析（即SQL）结果</p>
+     * @param Analysis <p>返回的是否为统计分析（即SQL）结果</p>
      */
     public void setAnalysis(Boolean Analysis) {
         this.Analysis = Analysis;
     }
 
     /**
-     * Get 匹配检索条件的原始日志
+     * Get <p>匹配检索条件的原始日志</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Results 匹配检索条件的原始日志
+     * @return Results <p>匹配检索条件的原始日志</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public LogInfo [] getResults() {
@@ -184,9 +165,9 @@ public class SearchLogResponse extends AbstractModel {
     }
 
     /**
-     * Set 匹配检索条件的原始日志
+     * Set <p>匹配检索条件的原始日志</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Results 匹配检索条件的原始日志
+     * @param Results <p>匹配检索条件的原始日志</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResults(LogInfo [] Results) {
@@ -194,11 +175,9 @@ public class SearchLogResponse extends AbstractModel {
     }
 
     /**
-     * Get 日志统计分析结果的列名
-当UseNewAnalysis为false时生效
+     * Get <p>日志统计分析结果的列名<br>当UseNewAnalysis为false时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ColNames 日志统计分析结果的列名
-当UseNewAnalysis为false时生效
+     * @return ColNames <p>日志统计分析结果的列名<br>当UseNewAnalysis为false时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getColNames() {
@@ -206,11 +185,9 @@ public class SearchLogResponse extends AbstractModel {
     }
 
     /**
-     * Set 日志统计分析结果的列名
-当UseNewAnalysis为false时生效
+     * Set <p>日志统计分析结果的列名<br>当UseNewAnalysis为false时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ColNames 日志统计分析结果的列名
-当UseNewAnalysis为false时生效
+     * @param ColNames <p>日志统计分析结果的列名<br>当UseNewAnalysis为false时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setColNames(String [] ColNames) {
@@ -218,11 +195,9 @@ public class SearchLogResponse extends AbstractModel {
     }
 
     /**
-     * Get 日志统计分析结果
-当UseNewAnalysis为false时生效
+     * Get <p>日志统计分析结果<br>当UseNewAnalysis为false时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AnalysisResults 日志统计分析结果
-当UseNewAnalysis为false时生效
+     * @return AnalysisResults <p>日志统计分析结果<br>当UseNewAnalysis为false时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public LogItems [] getAnalysisResults() {
@@ -230,11 +205,9 @@ public class SearchLogResponse extends AbstractModel {
     }
 
     /**
-     * Set 日志统计分析结果
-当UseNewAnalysis为false时生效
+     * Set <p>日志统计分析结果<br>当UseNewAnalysis为false时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AnalysisResults 日志统计分析结果
-当UseNewAnalysis为false时生效
+     * @param AnalysisResults <p>日志统计分析结果<br>当UseNewAnalysis为false时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAnalysisResults(LogItems [] AnalysisResults) {
@@ -242,11 +215,9 @@ public class SearchLogResponse extends AbstractModel {
     }
 
     /**
-     * Get 日志统计分析结果
-当UseNewAnalysis为true时生效
+     * Get <p>日志统计分析结果<br>当UseNewAnalysis为true时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AnalysisRecords 日志统计分析结果
-当UseNewAnalysis为true时生效
+     * @return AnalysisRecords <p>日志统计分析结果<br>当UseNewAnalysis为true时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getAnalysisRecords() {
@@ -254,11 +225,9 @@ public class SearchLogResponse extends AbstractModel {
     }
 
     /**
-     * Set 日志统计分析结果
-当UseNewAnalysis为true时生效
+     * Set <p>日志统计分析结果<br>当UseNewAnalysis为true时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AnalysisRecords 日志统计分析结果
-当UseNewAnalysis为true时生效
+     * @param AnalysisRecords <p>日志统计分析结果<br>当UseNewAnalysis为true时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAnalysisRecords(String [] AnalysisRecords) {
@@ -266,11 +235,9 @@ public class SearchLogResponse extends AbstractModel {
     }
 
     /**
-     * Get 日志统计分析结果的列属性
-当UseNewAnalysis为true时生效
+     * Get <p>日志统计分析结果的列属性<br>当UseNewAnalysis为true时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Columns 日志统计分析结果的列属性
-当UseNewAnalysis为true时生效
+     * @return Columns <p>日志统计分析结果的列属性<br>当UseNewAnalysis为true时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Column [] getColumns() {
@@ -278,11 +245,9 @@ public class SearchLogResponse extends AbstractModel {
     }
 
     /**
-     * Set 日志统计分析结果的列属性
-当UseNewAnalysis为true时生效
+     * Set <p>日志统计分析结果的列属性<br>当UseNewAnalysis为true时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Columns 日志统计分析结果的列属性
-当UseNewAnalysis为true时生效
+     * @param Columns <p>日志统计分析结果的列属性<br>当UseNewAnalysis为true时生效</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setColumns(Column [] Columns) {
@@ -290,25 +255,25 @@ public class SearchLogResponse extends AbstractModel {
     }
 
     /**
-     * Get 本次统计分析使用的采样率 
-     * @return SamplingRate 本次统计分析使用的采样率
+     * Get <p>本次统计分析使用的采样率</p> 
+     * @return SamplingRate <p>本次统计分析使用的采样率</p>
      */
     public Float getSamplingRate() {
         return this.SamplingRate;
     }
 
     /**
-     * Set 本次统计分析使用的采样率
-     * @param SamplingRate 本次统计分析使用的采样率
+     * Set <p>本次统计分析使用的采样率</p>
+     * @param SamplingRate <p>本次统计分析使用的采样率</p>
      */
     public void setSamplingRate(Float SamplingRate) {
         this.SamplingRate = SamplingRate;
     }
 
     /**
-     * Get 使用多日志主题检索时，各个日志主题的基本信息，例如报错信息。
+     * Get <p>使用多日志主题检索时，各个日志主题的基本信息，例如报错信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Topics 使用多日志主题检索时，各个日志主题的基本信息，例如报错信息。
+     * @return Topics <p>使用多日志主题检索时，各个日志主题的基本信息，例如报错信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SearchLogTopics getTopics() {
@@ -316,9 +281,9 @@ public class SearchLogResponse extends AbstractModel {
     }
 
     /**
-     * Set 使用多日志主题检索时，各个日志主题的基本信息，例如报错信息。
+     * Set <p>使用多日志主题检索时，各个日志主题的基本信息，例如报错信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Topics 使用多日志主题检索时，各个日志主题的基本信息，例如报错信息。
+     * @param Topics <p>使用多日志主题检索时，各个日志主题的基本信息，例如报错信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopics(SearchLogTopics Topics) {

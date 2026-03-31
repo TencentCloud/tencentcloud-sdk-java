@@ -24,230 +24,230 @@ import java.util.HashMap;
 public class DescribeFinanceFraudUltimateRequest extends AbstractModel {
 
     /**
-    * 客户端通过SDK获取的设备Token
+    * <p>客户端通过SDK获取的设备Token</p>
     */
     @SerializedName("DeviceToken")
     @Expose
     private String DeviceToken;
 
     /**
-    * 使用场景。目前仅支持login-登录场景、register-注册场景
+    * <p>使用场景。目前仅支持login-登录场景、register-注册场景</p>
     */
     @SerializedName("SceneCode")
     @Expose
     private String SceneCode;
 
     /**
-    * 用户唯一标识
+    * <p>用户唯一标识</p>
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * 事件时间戳（毫秒）
+    * <p>事件时间戳（毫秒）</p>
     */
     @SerializedName("EventTime")
     @Expose
     private Long EventTime;
 
     /**
-    * 事件耗时（毫秒），例如进入登录界面到点击登录按钮耗时
+    * <p>事件耗时（毫秒），例如进入登录界面到点击登录按钮耗时</p>
     */
     @SerializedName("ElapsedTime")
     @Expose
     private Long ElapsedTime;
 
     /**
-    * 微信的OpenId
+    * <p>微信的OpenId</p>
     */
     @SerializedName("WeChatOpenId")
     @Expose
     private String WeChatOpenId;
 
     /**
-    * 手机号码（注：不需要带国家代码 例如：13430421011）。可以传入原文或MD5
+    * <p>手机号码（注：不需要带国家代码 例如：13430421011）。可以传入原文或MD5</p>
     */
     @SerializedName("PhoneNumber")
     @Expose
     private String PhoneNumber;
 
     /**
-    * 业务客户端IP
+    * <p>业务客户端IP</p>
     */
     @SerializedName("BizClientIp")
     @Expose
     private String BizClientIp;
 
     /**
-    * QQ的OpenId
+    * <p>QQ的OpenId</p>
     */
     @SerializedName("QQOpenId")
     @Expose
     private String QQOpenId;
 
     /**
-    * 数据授权信息
+    * <p>数据授权信息</p>
     */
     @SerializedName("DataAuthorization")
     @Expose
     private DataAuthorizationInfo DataAuthorization;
 
     /**
-     * Get 客户端通过SDK获取的设备Token 
-     * @return DeviceToken 客户端通过SDK获取的设备Token
+     * Get <p>客户端通过SDK获取的设备Token</p> 
+     * @return DeviceToken <p>客户端通过SDK获取的设备Token</p>
      */
     public String getDeviceToken() {
         return this.DeviceToken;
     }
 
     /**
-     * Set 客户端通过SDK获取的设备Token
-     * @param DeviceToken 客户端通过SDK获取的设备Token
+     * Set <p>客户端通过SDK获取的设备Token</p>
+     * @param DeviceToken <p>客户端通过SDK获取的设备Token</p>
      */
     public void setDeviceToken(String DeviceToken) {
         this.DeviceToken = DeviceToken;
     }
 
     /**
-     * Get 使用场景。目前仅支持login-登录场景、register-注册场景 
-     * @return SceneCode 使用场景。目前仅支持login-登录场景、register-注册场景
+     * Get <p>使用场景。目前仅支持login-登录场景、register-注册场景</p> 
+     * @return SceneCode <p>使用场景。目前仅支持login-登录场景、register-注册场景</p>
      */
     public String getSceneCode() {
         return this.SceneCode;
     }
 
     /**
-     * Set 使用场景。目前仅支持login-登录场景、register-注册场景
-     * @param SceneCode 使用场景。目前仅支持login-登录场景、register-注册场景
+     * Set <p>使用场景。目前仅支持login-登录场景、register-注册场景</p>
+     * @param SceneCode <p>使用场景。目前仅支持login-登录场景、register-注册场景</p>
      */
     public void setSceneCode(String SceneCode) {
         this.SceneCode = SceneCode;
     }
 
     /**
-     * Get 用户唯一标识 
-     * @return UserId 用户唯一标识
+     * Get <p>用户唯一标识</p> 
+     * @return UserId <p>用户唯一标识</p>
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 用户唯一标识
-     * @param UserId 用户唯一标识
+     * Set <p>用户唯一标识</p>
+     * @param UserId <p>用户唯一标识</p>
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get 事件时间戳（毫秒） 
-     * @return EventTime 事件时间戳（毫秒）
+     * Get <p>事件时间戳（毫秒）</p> 
+     * @return EventTime <p>事件时间戳（毫秒）</p>
      */
     public Long getEventTime() {
         return this.EventTime;
     }
 
     /**
-     * Set 事件时间戳（毫秒）
-     * @param EventTime 事件时间戳（毫秒）
+     * Set <p>事件时间戳（毫秒）</p>
+     * @param EventTime <p>事件时间戳（毫秒）</p>
      */
     public void setEventTime(Long EventTime) {
         this.EventTime = EventTime;
     }
 
     /**
-     * Get 事件耗时（毫秒），例如进入登录界面到点击登录按钮耗时 
-     * @return ElapsedTime 事件耗时（毫秒），例如进入登录界面到点击登录按钮耗时
+     * Get <p>事件耗时（毫秒），例如进入登录界面到点击登录按钮耗时</p> 
+     * @return ElapsedTime <p>事件耗时（毫秒），例如进入登录界面到点击登录按钮耗时</p>
      */
     public Long getElapsedTime() {
         return this.ElapsedTime;
     }
 
     /**
-     * Set 事件耗时（毫秒），例如进入登录界面到点击登录按钮耗时
-     * @param ElapsedTime 事件耗时（毫秒），例如进入登录界面到点击登录按钮耗时
+     * Set <p>事件耗时（毫秒），例如进入登录界面到点击登录按钮耗时</p>
+     * @param ElapsedTime <p>事件耗时（毫秒），例如进入登录界面到点击登录按钮耗时</p>
      */
     public void setElapsedTime(Long ElapsedTime) {
         this.ElapsedTime = ElapsedTime;
     }
 
     /**
-     * Get 微信的OpenId 
-     * @return WeChatOpenId 微信的OpenId
+     * Get <p>微信的OpenId</p> 
+     * @return WeChatOpenId <p>微信的OpenId</p>
      */
     public String getWeChatOpenId() {
         return this.WeChatOpenId;
     }
 
     /**
-     * Set 微信的OpenId
-     * @param WeChatOpenId 微信的OpenId
+     * Set <p>微信的OpenId</p>
+     * @param WeChatOpenId <p>微信的OpenId</p>
      */
     public void setWeChatOpenId(String WeChatOpenId) {
         this.WeChatOpenId = WeChatOpenId;
     }
 
     /**
-     * Get 手机号码（注：不需要带国家代码 例如：13430421011）。可以传入原文或MD5 
-     * @return PhoneNumber 手机号码（注：不需要带国家代码 例如：13430421011）。可以传入原文或MD5
+     * Get <p>手机号码（注：不需要带国家代码 例如：13430421011）。可以传入原文或MD5</p> 
+     * @return PhoneNumber <p>手机号码（注：不需要带国家代码 例如：13430421011）。可以传入原文或MD5</p>
      */
     public String getPhoneNumber() {
         return this.PhoneNumber;
     }
 
     /**
-     * Set 手机号码（注：不需要带国家代码 例如：13430421011）。可以传入原文或MD5
-     * @param PhoneNumber 手机号码（注：不需要带国家代码 例如：13430421011）。可以传入原文或MD5
+     * Set <p>手机号码（注：不需要带国家代码 例如：13430421011）。可以传入原文或MD5</p>
+     * @param PhoneNumber <p>手机号码（注：不需要带国家代码 例如：13430421011）。可以传入原文或MD5</p>
      */
     public void setPhoneNumber(String PhoneNumber) {
         this.PhoneNumber = PhoneNumber;
     }
 
     /**
-     * Get 业务客户端IP 
-     * @return BizClientIp 业务客户端IP
+     * Get <p>业务客户端IP</p> 
+     * @return BizClientIp <p>业务客户端IP</p>
      */
     public String getBizClientIp() {
         return this.BizClientIp;
     }
 
     /**
-     * Set 业务客户端IP
-     * @param BizClientIp 业务客户端IP
+     * Set <p>业务客户端IP</p>
+     * @param BizClientIp <p>业务客户端IP</p>
      */
     public void setBizClientIp(String BizClientIp) {
         this.BizClientIp = BizClientIp;
     }
 
     /**
-     * Get QQ的OpenId 
-     * @return QQOpenId QQ的OpenId
+     * Get <p>QQ的OpenId</p> 
+     * @return QQOpenId <p>QQ的OpenId</p>
      */
     public String getQQOpenId() {
         return this.QQOpenId;
     }
 
     /**
-     * Set QQ的OpenId
-     * @param QQOpenId QQ的OpenId
+     * Set <p>QQ的OpenId</p>
+     * @param QQOpenId <p>QQ的OpenId</p>
      */
     public void setQQOpenId(String QQOpenId) {
         this.QQOpenId = QQOpenId;
     }
 
     /**
-     * Get 数据授权信息 
-     * @return DataAuthorization 数据授权信息
+     * Get <p>数据授权信息</p> 
+     * @return DataAuthorization <p>数据授权信息</p>
      */
     public DataAuthorizationInfo getDataAuthorization() {
         return this.DataAuthorization;
     }
 
     /**
-     * Set 数据授权信息
-     * @param DataAuthorization 数据授权信息
+     * Set <p>数据授权信息</p>
+     * @param DataAuthorization <p>数据授权信息</p>
      */
     public void setDataAuthorization(DataAuthorizationInfo DataAuthorization) {
         this.DataAuthorization = DataAuthorization;

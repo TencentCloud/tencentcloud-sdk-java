@@ -185,6 +185,20 @@ public class ShipperInfo extends AbstractModel {
     private Long TaskStatus;
 
     /**
+    * <p>用于生成投递到COS 的文件路径中的时间变量</p>
+    */
+    @SerializedName("TimeZone")
+    @Expose
+    private String TimeZone;
+
+    /**
+    * <p>预过滤处理-对写入COS原始数据进行预过滤处理</p>
+    */
+    @SerializedName("DSLFilter")
+    @Expose
+    private String DSLFilter;
+
+    /**
      * Get <p>投递规则ID</p> 
      * @return ShipperId <p>投递规则ID</p>
      */
@@ -552,6 +566,38 @@ public class ShipperInfo extends AbstractModel {
         this.TaskStatus = TaskStatus;
     }
 
+    /**
+     * Get <p>用于生成投递到COS 的文件路径中的时间变量</p> 
+     * @return TimeZone <p>用于生成投递到COS 的文件路径中的时间变量</p>
+     */
+    public String getTimeZone() {
+        return this.TimeZone;
+    }
+
+    /**
+     * Set <p>用于生成投递到COS 的文件路径中的时间变量</p>
+     * @param TimeZone <p>用于生成投递到COS 的文件路径中的时间变量</p>
+     */
+    public void setTimeZone(String TimeZone) {
+        this.TimeZone = TimeZone;
+    }
+
+    /**
+     * Get <p>预过滤处理-对写入COS原始数据进行预过滤处理</p> 
+     * @return DSLFilter <p>预过滤处理-对写入COS原始数据进行预过滤处理</p>
+     */
+    public String getDSLFilter() {
+        return this.DSLFilter;
+    }
+
+    /**
+     * Set <p>预过滤处理-对写入COS原始数据进行预过滤处理</p>
+     * @param DSLFilter <p>预过滤处理-对写入COS原始数据进行预过滤处理</p>
+     */
+    public void setDSLFilter(String DSLFilter) {
+        this.DSLFilter = DSLFilter;
+    }
+
     public ShipperInfo() {
     }
 
@@ -632,6 +678,12 @@ public class ShipperInfo extends AbstractModel {
         if (source.TaskStatus != null) {
             this.TaskStatus = new Long(source.TaskStatus);
         }
+        if (source.TimeZone != null) {
+            this.TimeZone = new String(source.TimeZone);
+        }
+        if (source.DSLFilter != null) {
+            this.DSLFilter = new String(source.DSLFilter);
+        }
     }
 
 
@@ -662,6 +714,8 @@ public class ShipperInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "RoleArn", this.RoleArn);
         this.setParamSimple(map, prefix + "ExternalId", this.ExternalId);
         this.setParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
+        this.setParamSimple(map, prefix + "TimeZone", this.TimeZone);
+        this.setParamSimple(map, prefix + "DSLFilter", this.DSLFilter);
 
     }
 }

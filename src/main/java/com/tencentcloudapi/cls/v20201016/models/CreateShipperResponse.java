@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateShipperResponse extends AbstractModel {
 
     /**
-    * 投递任务ID
+    * <p>投递任务ID</p>
     */
     @SerializedName("ShipperId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateShipperResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 投递任务ID 
-     * @return ShipperId 投递任务ID
+     * Get <p>投递任务ID</p> 
+     * @return ShipperId <p>投递任务ID</p>
      */
     public String getShipperId() {
         return this.ShipperId;
     }
 
     /**
-     * Set 投递任务ID
-     * @param ShipperId 投递任务ID
+     * Set <p>投递任务ID</p>
+     * @param ShipperId <p>投递任务ID</p>
      */
     public void setShipperId(String ShipperId) {
         this.ShipperId = ShipperId;

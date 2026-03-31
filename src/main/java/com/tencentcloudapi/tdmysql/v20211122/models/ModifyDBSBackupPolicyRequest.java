@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ModifyDBSBackupPolicyRequest extends AbstractModel {
 
     /**
-    * 备份策略
+    * <p>备份策略</p>
     */
     @SerializedName("BackupPolicy")
     @Expose
     private BackupPolicyModelInput BackupPolicy;
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get 备份策略 
-     * @return BackupPolicy 备份策略
+     * Get <p>备份策略</p> 
+     * @return BackupPolicy <p>备份策略</p>
      */
     public BackupPolicyModelInput getBackupPolicy() {
         return this.BackupPolicy;
     }
 
     /**
-     * Set 备份策略
-     * @param BackupPolicy 备份策略
+     * Set <p>备份策略</p>
+     * @param BackupPolicy <p>备份策略</p>
      */
     public void setBackupPolicy(BackupPolicyModelInput BackupPolicy) {
         this.BackupPolicy = BackupPolicy;
     }
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

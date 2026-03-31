@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeDBSAvailableRecoveryTimeRequest extends AbstractModel {
 
     /**
-    * <p>db实例ID</p>
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeDBSAvailableRecoveryTimeRequest extends AbstractModel {
     private Long BackupSetId;
 
     /**
-     * Get <p>db实例ID</p> 
-     * @return InstanceId <p>db实例ID</p>
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set <p>db实例ID</p>
-     * @param InstanceId <p>db实例ID</p>
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

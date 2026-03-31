@@ -24,35 +24,21 @@ import java.util.HashMap;
 public class MobileStatusResponse extends AbstractModel {
 
     /**
-    * 认证结果码，收费情况如下。
-- 收费结果码：
-0：成功。
-
-- 不收费结果码：
--1：未查询到结果。
--2：手机号格式不正确。
--3：验证中心服务繁忙。
--4：认证次数超过当日限制，请次日重试。
+    * <p>认证结果码，收费情况如下。</p><ul><li><p>收费结果码：<br>0：成功。</p></li><li><p>不收费结果码：<br>-1：未查询到结果。<br>-2：手机号格式不正确。<br>-3：验证中心服务繁忙。<br>-4：认证次数超过当日限制，请次日重试。</p></li></ul>
     */
     @SerializedName("Result")
     @Expose
     private String Result;
 
     /**
-    * 业务结果描述。
+    * <p>业务结果描述。</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 状态码。
-- 取值范围：
-0：正常。
-1：停机。
-2：销号。
-4：不在网。
-99：未知状态。
+    * <p>状态码。- 取值范围：0：正常。1：停机。2：销号。4：不在网。5：在网但不可用 。99：未知状态。</p>
     */
     @SerializedName("StatusCode")
     @Expose
@@ -66,104 +52,48 @@ public class MobileStatusResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 认证结果码，收费情况如下。
-- 收费结果码：
-0：成功。
-
-- 不收费结果码：
--1：未查询到结果。
--2：手机号格式不正确。
--3：验证中心服务繁忙。
--4：认证次数超过当日限制，请次日重试。 
-     * @return Result 认证结果码，收费情况如下。
-- 收费结果码：
-0：成功。
-
-- 不收费结果码：
--1：未查询到结果。
--2：手机号格式不正确。
--3：验证中心服务繁忙。
--4：认证次数超过当日限制，请次日重试。
+     * Get <p>认证结果码，收费情况如下。</p><ul><li><p>收费结果码：<br>0：成功。</p></li><li><p>不收费结果码：<br>-1：未查询到结果。<br>-2：手机号格式不正确。<br>-3：验证中心服务繁忙。<br>-4：认证次数超过当日限制，请次日重试。</p></li></ul> 
+     * @return Result <p>认证结果码，收费情况如下。</p><ul><li><p>收费结果码：<br>0：成功。</p></li><li><p>不收费结果码：<br>-1：未查询到结果。<br>-2：手机号格式不正确。<br>-3：验证中心服务繁忙。<br>-4：认证次数超过当日限制，请次日重试。</p></li></ul>
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set 认证结果码，收费情况如下。
-- 收费结果码：
-0：成功。
-
-- 不收费结果码：
--1：未查询到结果。
--2：手机号格式不正确。
--3：验证中心服务繁忙。
--4：认证次数超过当日限制，请次日重试。
-     * @param Result 认证结果码，收费情况如下。
-- 收费结果码：
-0：成功。
-
-- 不收费结果码：
--1：未查询到结果。
--2：手机号格式不正确。
--3：验证中心服务繁忙。
--4：认证次数超过当日限制，请次日重试。
+     * Set <p>认证结果码，收费情况如下。</p><ul><li><p>收费结果码：<br>0：成功。</p></li><li><p>不收费结果码：<br>-1：未查询到结果。<br>-2：手机号格式不正确。<br>-3：验证中心服务繁忙。<br>-4：认证次数超过当日限制，请次日重试。</p></li></ul>
+     * @param Result <p>认证结果码，收费情况如下。</p><ul><li><p>收费结果码：<br>0：成功。</p></li><li><p>不收费结果码：<br>-1：未查询到结果。<br>-2：手机号格式不正确。<br>-3：验证中心服务繁忙。<br>-4：认证次数超过当日限制，请次日重试。</p></li></ul>
      */
     public void setResult(String Result) {
         this.Result = Result;
     }
 
     /**
-     * Get 业务结果描述。 
-     * @return Description 业务结果描述。
+     * Get <p>业务结果描述。</p> 
+     * @return Description <p>业务结果描述。</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 业务结果描述。
-     * @param Description 业务结果描述。
+     * Set <p>业务结果描述。</p>
+     * @param Description <p>业务结果描述。</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 状态码。
-- 取值范围：
-0：正常。
-1：停机。
-2：销号。
-4：不在网。
-99：未知状态。 
-     * @return StatusCode 状态码。
-- 取值范围：
-0：正常。
-1：停机。
-2：销号。
-4：不在网。
-99：未知状态。
+     * Get <p>状态码。- 取值范围：0：正常。1：停机。2：销号。4：不在网。5：在网但不可用 。99：未知状态。</p> 
+     * @return StatusCode <p>状态码。- 取值范围：0：正常。1：停机。2：销号。4：不在网。5：在网但不可用 。99：未知状态。</p>
      */
     public Long getStatusCode() {
         return this.StatusCode;
     }
 
     /**
-     * Set 状态码。
-- 取值范围：
-0：正常。
-1：停机。
-2：销号。
-4：不在网。
-99：未知状态。
-     * @param StatusCode 状态码。
-- 取值范围：
-0：正常。
-1：停机。
-2：销号。
-4：不在网。
-99：未知状态。
+     * Set <p>状态码。- 取值范围：0：正常。1：停机。2：销号。4：不在网。5：在网但不可用 。99：未知状态。</p>
+     * @param StatusCode <p>状态码。- 取值范围：0：正常。1：停机。2：销号。4：不在网。5：在网但不可用 。99：未知状态。</p>
      */
     public void setStatusCode(Long StatusCode) {
         this.StatusCode = StatusCode;

@@ -247,6 +247,14 @@ public class LogstashInstanceInfo extends AbstractModel {
     private ZoneDetail [] MultiZoneInfo;
 
     /**
+    * 客户自定义dns配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UserDnsIp")
+    @Expose
+    private String UserDnsIp;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -766,6 +774,26 @@ public class LogstashInstanceInfo extends AbstractModel {
         this.MultiZoneInfo = MultiZoneInfo;
     }
 
+    /**
+     * Get 客户自定义dns配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UserDnsIp 客户自定义dns配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUserDnsIp() {
+        return this.UserDnsIp;
+    }
+
+    /**
+     * Set 客户自定义dns配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UserDnsIp 客户自定义dns配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUserDnsIp(String UserDnsIp) {
+        this.UserDnsIp = UserDnsIp;
+    }
+
     public LogstashInstanceInfo() {
     }
 
@@ -879,6 +907,9 @@ public class LogstashInstanceInfo extends AbstractModel {
                 this.MultiZoneInfo[i] = new ZoneDetail(source.MultiZoneInfo[i]);
             }
         }
+        if (source.UserDnsIp != null) {
+            this.UserDnsIp = new String(source.UserDnsIp);
+        }
     }
 
 
@@ -917,6 +948,7 @@ public class LogstashInstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "MemSize", this.MemSize);
         this.setParamSimple(map, prefix + "DeployMode", this.DeployMode);
         this.setParamArrayObj(map, prefix + "MultiZoneInfo.", this.MultiZoneInfo);
+        this.setParamSimple(map, prefix + "UserDnsIp", this.UserDnsIp);
 
     }
 }

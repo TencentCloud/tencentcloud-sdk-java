@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class JgwOperateResponse extends AbstractModel {
 
     /**
-    * 返回的code，0为正常，非0为错误
+    * <p>返回的code，0为正常，非0为错误</p>
     */
     @SerializedName("ReturnCode")
     @Expose
     private String ReturnCode;
 
     /**
-    * 成功消息
+    * <p>成功消息</p>
     */
     @SerializedName("ReturnMessage")
     @Expose
     private String ReturnMessage;
 
     /**
-    * 操作型返回的Data数据,可能有flowId等
+    * <p>操作型返回的Data数据,可能有flowId等</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
@@ -46,41 +46,41 @@ public class JgwOperateResponse extends AbstractModel {
     private OperateResponseData Data;
 
     /**
-     * Get 返回的code，0为正常，非0为错误 
-     * @return ReturnCode 返回的code，0为正常，非0为错误
+     * Get <p>返回的code，0为正常，非0为错误</p> 
+     * @return ReturnCode <p>返回的code，0为正常，非0为错误</p>
      */
     public String getReturnCode() {
         return this.ReturnCode;
     }
 
     /**
-     * Set 返回的code，0为正常，非0为错误
-     * @param ReturnCode 返回的code，0为正常，非0为错误
+     * Set <p>返回的code，0为正常，非0为错误</p>
+     * @param ReturnCode <p>返回的code，0为正常，非0为错误</p>
      */
     public void setReturnCode(String ReturnCode) {
         this.ReturnCode = ReturnCode;
     }
 
     /**
-     * Get 成功消息 
-     * @return ReturnMessage 成功消息
+     * Get <p>成功消息</p> 
+     * @return ReturnMessage <p>成功消息</p>
      */
     public String getReturnMessage() {
         return this.ReturnMessage;
     }
 
     /**
-     * Set 成功消息
-     * @param ReturnMessage 成功消息
+     * Set <p>成功消息</p>
+     * @param ReturnMessage <p>成功消息</p>
      */
     public void setReturnMessage(String ReturnMessage) {
         this.ReturnMessage = ReturnMessage;
     }
 
     /**
-     * Get 操作型返回的Data数据,可能有flowId等
+     * Get <p>操作型返回的Data数据,可能有flowId等</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 操作型返回的Data数据,可能有flowId等
+     * @return Data <p>操作型返回的Data数据,可能有flowId等</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public OperateResponseData getData() {
@@ -88,9 +88,9 @@ public class JgwOperateResponse extends AbstractModel {
     }
 
     /**
-     * Set 操作型返回的Data数据,可能有flowId等
+     * Set <p>操作型返回的Data数据,可能有flowId等</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 操作型返回的Data数据,可能有flowId等
+     * @param Data <p>操作型返回的Data数据,可能有flowId等</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(OperateResponseData Data) {

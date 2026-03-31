@@ -59,6 +59,41 @@ public class TrafficMirrorFilter extends AbstractModel {
     private String DstPort;
 
     /**
+    * 流量镜像过滤规则唯一ID。
+    */
+    @SerializedName("TrafficMirrorFilterRuleId")
+    @Expose
+    private String TrafficMirrorFilterRuleId;
+
+    /**
+    * 流量镜像过滤规则优先级。
+    */
+    @SerializedName("Priority")
+    @Expose
+    private Long Priority;
+
+    /**
+    * 流量镜像过滤规则策略，支持类型："ACCEPT", "DROP"。
+    */
+    @SerializedName("Action")
+    @Expose
+    private String Action;
+
+    /**
+    * 流量镜像过滤规则描述。
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
+    * 创建时间。
+    */
+    @SerializedName("CreatedTime")
+    @Expose
+    private String CreatedTime;
+
+    /**
      * Get 过滤规则的源网段 
      * @return SrcNet 过滤规则的源网段
      */
@@ -138,6 +173,86 @@ public class TrafficMirrorFilter extends AbstractModel {
         this.DstPort = DstPort;
     }
 
+    /**
+     * Get 流量镜像过滤规则唯一ID。 
+     * @return TrafficMirrorFilterRuleId 流量镜像过滤规则唯一ID。
+     */
+    public String getTrafficMirrorFilterRuleId() {
+        return this.TrafficMirrorFilterRuleId;
+    }
+
+    /**
+     * Set 流量镜像过滤规则唯一ID。
+     * @param TrafficMirrorFilterRuleId 流量镜像过滤规则唯一ID。
+     */
+    public void setTrafficMirrorFilterRuleId(String TrafficMirrorFilterRuleId) {
+        this.TrafficMirrorFilterRuleId = TrafficMirrorFilterRuleId;
+    }
+
+    /**
+     * Get 流量镜像过滤规则优先级。 
+     * @return Priority 流量镜像过滤规则优先级。
+     */
+    public Long getPriority() {
+        return this.Priority;
+    }
+
+    /**
+     * Set 流量镜像过滤规则优先级。
+     * @param Priority 流量镜像过滤规则优先级。
+     */
+    public void setPriority(Long Priority) {
+        this.Priority = Priority;
+    }
+
+    /**
+     * Get 流量镜像过滤规则策略，支持类型："ACCEPT", "DROP"。 
+     * @return Action 流量镜像过滤规则策略，支持类型："ACCEPT", "DROP"。
+     */
+    public String getAction() {
+        return this.Action;
+    }
+
+    /**
+     * Set 流量镜像过滤规则策略，支持类型："ACCEPT", "DROP"。
+     * @param Action 流量镜像过滤规则策略，支持类型："ACCEPT", "DROP"。
+     */
+    public void setAction(String Action) {
+        this.Action = Action;
+    }
+
+    /**
+     * Get 流量镜像过滤规则描述。 
+     * @return Description 流量镜像过滤规则描述。
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 流量镜像过滤规则描述。
+     * @param Description 流量镜像过滤规则描述。
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
+    /**
+     * Get 创建时间。 
+     * @return CreatedTime 创建时间。
+     */
+    public String getCreatedTime() {
+        return this.CreatedTime;
+    }
+
+    /**
+     * Set 创建时间。
+     * @param CreatedTime 创建时间。
+     */
+    public void setCreatedTime(String CreatedTime) {
+        this.CreatedTime = CreatedTime;
+    }
+
     public TrafficMirrorFilter() {
     }
 
@@ -161,6 +276,21 @@ public class TrafficMirrorFilter extends AbstractModel {
         if (source.DstPort != null) {
             this.DstPort = new String(source.DstPort);
         }
+        if (source.TrafficMirrorFilterRuleId != null) {
+            this.TrafficMirrorFilterRuleId = new String(source.TrafficMirrorFilterRuleId);
+        }
+        if (source.Priority != null) {
+            this.Priority = new Long(source.Priority);
+        }
+        if (source.Action != null) {
+            this.Action = new String(source.Action);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
     }
 
 
@@ -173,6 +303,11 @@ public class TrafficMirrorFilter extends AbstractModel {
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "SrcPort", this.SrcPort);
         this.setParamSimple(map, prefix + "DstPort", this.DstPort);
+        this.setParamSimple(map, prefix + "TrafficMirrorFilterRuleId", this.TrafficMirrorFilterRuleId);
+        this.setParamSimple(map, prefix + "Priority", this.Priority);
+        this.setParamSimple(map, prefix + "Action", this.Action);
+        this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
 
     }
 }

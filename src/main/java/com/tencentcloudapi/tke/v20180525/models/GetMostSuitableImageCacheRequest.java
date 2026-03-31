@@ -31,6 +31,13 @@ public class GetMostSuitableImageCacheRequest extends AbstractModel {
     private String [] Images;
 
     /**
+    * 容器镜像制作snapshotter
+    */
+    @SerializedName("Snapshotter")
+    @Expose
+    private String Snapshotter;
+
+    /**
      * Get 容器镜像列表 
      * @return Images 容器镜像列表
      */
@@ -44,6 +51,22 @@ public class GetMostSuitableImageCacheRequest extends AbstractModel {
      */
     public void setImages(String [] Images) {
         this.Images = Images;
+    }
+
+    /**
+     * Get 容器镜像制作snapshotter 
+     * @return Snapshotter 容器镜像制作snapshotter
+     */
+    public String getSnapshotter() {
+        return this.Snapshotter;
+    }
+
+    /**
+     * Set 容器镜像制作snapshotter
+     * @param Snapshotter 容器镜像制作snapshotter
+     */
+    public void setSnapshotter(String Snapshotter) {
+        this.Snapshotter = Snapshotter;
     }
 
     public GetMostSuitableImageCacheRequest() {
@@ -60,6 +83,9 @@ public class GetMostSuitableImageCacheRequest extends AbstractModel {
                 this.Images[i] = new String(source.Images[i]);
             }
         }
+        if (source.Snapshotter != null) {
+            this.Snapshotter = new String(source.Snapshotter);
+        }
     }
 
 
@@ -68,6 +94,7 @@ public class GetMostSuitableImageCacheRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Images.", this.Images);
+        this.setParamSimple(map, prefix + "Snapshotter", this.Snapshotter);
 
     }
 }

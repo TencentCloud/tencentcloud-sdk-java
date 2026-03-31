@@ -66,21 +66,21 @@ public class CreatePostPaidInstanceRequest extends AbstractModel {
     private Long ClusterId;
 
     /**
-    * <p>实例版本。目前支持当前支持"2.4.1", "2.4.2","2.8.1", "3.2.3"，默认取值"2.4.1"。"2.4.1" 与 "2.4.2" 属于同一个版本，传任意一个均可。</p>
+    * <p>实例版本。目前支持当前支持&quot;2.4.1&quot;, &quot;2.4.2&quot;,&quot;2.8.1&quot;, &quot;3.2.3&quot;，默认取值&quot;2.4.1&quot;。&quot;2.4.1&quot; 与 &quot;2.4.2&quot; 属于同一个版本，传任意一个均可。</p>
     */
     @SerializedName("KafkaVersion")
     @Expose
     private String KafkaVersion;
 
     /**
-    * <p>实例类型。"standard"：标准版，"profession"：专业版。  (标准版仅国际站支持，国内站目前支持专业版)</p>
+    * <p>实例类型。&quot;standard&quot;：标准版，&quot;profession&quot;：专业版。  (标准版仅国际站支持，国内站目前支持专业版)</p>
     */
     @SerializedName("SpecificationsType")
     @Expose
     private String SpecificationsType;
 
     /**
-    * <p>专业版实例磁盘类型，标准版实例不需要填写。"CLOUD_SSD"：SSD云硬盘；"CLOUD_BASIC"：高性能云硬盘。不传默认值为 "CLOUD_BASIC"</p>
+    * <p>专业版实例磁盘类型，标准版实例不需要填写。&quot;CLOUD_SSD&quot;：SSD云硬盘；&quot;CLOUD_BASIC&quot;：高性能云硬盘。不传默认值为 &quot;CLOUD_BASIC&quot;</p>
     */
     @SerializedName("DiskType")
     @Expose
@@ -143,7 +143,7 @@ public class CreatePostPaidInstanceRequest extends AbstractModel {
     private Long InstanceNum;
 
     /**
-    * <p>公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 6Mbps 公网带宽，此处传 3。需要保证传入参数为 3 的整数倍</p>
+    * <p>公网带宽大小，单位 Mbps。</p><p>单位：Mbps</p>
     */
     @SerializedName("PublicNetworkMonthly")
     @Expose
@@ -267,48 +267,48 @@ public class CreatePostPaidInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>实例版本。目前支持当前支持"2.4.1", "2.4.2","2.8.1", "3.2.3"，默认取值"2.4.1"。"2.4.1" 与 "2.4.2" 属于同一个版本，传任意一个均可。</p> 
-     * @return KafkaVersion <p>实例版本。目前支持当前支持"2.4.1", "2.4.2","2.8.1", "3.2.3"，默认取值"2.4.1"。"2.4.1" 与 "2.4.2" 属于同一个版本，传任意一个均可。</p>
+     * Get <p>实例版本。目前支持当前支持&quot;2.4.1&quot;, &quot;2.4.2&quot;,&quot;2.8.1&quot;, &quot;3.2.3&quot;，默认取值&quot;2.4.1&quot;。&quot;2.4.1&quot; 与 &quot;2.4.2&quot; 属于同一个版本，传任意一个均可。</p> 
+     * @return KafkaVersion <p>实例版本。目前支持当前支持&quot;2.4.1&quot;, &quot;2.4.2&quot;,&quot;2.8.1&quot;, &quot;3.2.3&quot;，默认取值&quot;2.4.1&quot;。&quot;2.4.1&quot; 与 &quot;2.4.2&quot; 属于同一个版本，传任意一个均可。</p>
      */
     public String getKafkaVersion() {
         return this.KafkaVersion;
     }
 
     /**
-     * Set <p>实例版本。目前支持当前支持"2.4.1", "2.4.2","2.8.1", "3.2.3"，默认取值"2.4.1"。"2.4.1" 与 "2.4.2" 属于同一个版本，传任意一个均可。</p>
-     * @param KafkaVersion <p>实例版本。目前支持当前支持"2.4.1", "2.4.2","2.8.1", "3.2.3"，默认取值"2.4.1"。"2.4.1" 与 "2.4.2" 属于同一个版本，传任意一个均可。</p>
+     * Set <p>实例版本。目前支持当前支持&quot;2.4.1&quot;, &quot;2.4.2&quot;,&quot;2.8.1&quot;, &quot;3.2.3&quot;，默认取值&quot;2.4.1&quot;。&quot;2.4.1&quot; 与 &quot;2.4.2&quot; 属于同一个版本，传任意一个均可。</p>
+     * @param KafkaVersion <p>实例版本。目前支持当前支持&quot;2.4.1&quot;, &quot;2.4.2&quot;,&quot;2.8.1&quot;, &quot;3.2.3&quot;，默认取值&quot;2.4.1&quot;。&quot;2.4.1&quot; 与 &quot;2.4.2&quot; 属于同一个版本，传任意一个均可。</p>
      */
     public void setKafkaVersion(String KafkaVersion) {
         this.KafkaVersion = KafkaVersion;
     }
 
     /**
-     * Get <p>实例类型。"standard"：标准版，"profession"：专业版。  (标准版仅国际站支持，国内站目前支持专业版)</p> 
-     * @return SpecificationsType <p>实例类型。"standard"：标准版，"profession"：专业版。  (标准版仅国际站支持，国内站目前支持专业版)</p>
+     * Get <p>实例类型。&quot;standard&quot;：标准版，&quot;profession&quot;：专业版。  (标准版仅国际站支持，国内站目前支持专业版)</p> 
+     * @return SpecificationsType <p>实例类型。&quot;standard&quot;：标准版，&quot;profession&quot;：专业版。  (标准版仅国际站支持，国内站目前支持专业版)</p>
      */
     public String getSpecificationsType() {
         return this.SpecificationsType;
     }
 
     /**
-     * Set <p>实例类型。"standard"：标准版，"profession"：专业版。  (标准版仅国际站支持，国内站目前支持专业版)</p>
-     * @param SpecificationsType <p>实例类型。"standard"：标准版，"profession"：专业版。  (标准版仅国际站支持，国内站目前支持专业版)</p>
+     * Set <p>实例类型。&quot;standard&quot;：标准版，&quot;profession&quot;：专业版。  (标准版仅国际站支持，国内站目前支持专业版)</p>
+     * @param SpecificationsType <p>实例类型。&quot;standard&quot;：标准版，&quot;profession&quot;：专业版。  (标准版仅国际站支持，国内站目前支持专业版)</p>
      */
     public void setSpecificationsType(String SpecificationsType) {
         this.SpecificationsType = SpecificationsType;
     }
 
     /**
-     * Get <p>专业版实例磁盘类型，标准版实例不需要填写。"CLOUD_SSD"：SSD云硬盘；"CLOUD_BASIC"：高性能云硬盘。不传默认值为 "CLOUD_BASIC"</p> 
-     * @return DiskType <p>专业版实例磁盘类型，标准版实例不需要填写。"CLOUD_SSD"：SSD云硬盘；"CLOUD_BASIC"：高性能云硬盘。不传默认值为 "CLOUD_BASIC"</p>
+     * Get <p>专业版实例磁盘类型，标准版实例不需要填写。&quot;CLOUD_SSD&quot;：SSD云硬盘；&quot;CLOUD_BASIC&quot;：高性能云硬盘。不传默认值为 &quot;CLOUD_BASIC&quot;</p> 
+     * @return DiskType <p>专业版实例磁盘类型，标准版实例不需要填写。&quot;CLOUD_SSD&quot;：SSD云硬盘；&quot;CLOUD_BASIC&quot;：高性能云硬盘。不传默认值为 &quot;CLOUD_BASIC&quot;</p>
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set <p>专业版实例磁盘类型，标准版实例不需要填写。"CLOUD_SSD"：SSD云硬盘；"CLOUD_BASIC"：高性能云硬盘。不传默认值为 "CLOUD_BASIC"</p>
-     * @param DiskType <p>专业版实例磁盘类型，标准版实例不需要填写。"CLOUD_SSD"：SSD云硬盘；"CLOUD_BASIC"：高性能云硬盘。不传默认值为 "CLOUD_BASIC"</p>
+     * Set <p>专业版实例磁盘类型，标准版实例不需要填写。&quot;CLOUD_SSD&quot;：SSD云硬盘；&quot;CLOUD_BASIC&quot;：高性能云硬盘。不传默认值为 &quot;CLOUD_BASIC&quot;</p>
+     * @param DiskType <p>专业版实例磁盘类型，标准版实例不需要填写。&quot;CLOUD_SSD&quot;：SSD云硬盘；&quot;CLOUD_BASIC&quot;：高性能云硬盘。不传默认值为 &quot;CLOUD_BASIC&quot;</p>
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
@@ -443,16 +443,16 @@ public class CreatePostPaidInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 6Mbps 公网带宽，此处传 3。需要保证传入参数为 3 的整数倍</p> 
-     * @return PublicNetworkMonthly <p>公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 6Mbps 公网带宽，此处传 3。需要保证传入参数为 3 的整数倍</p>
+     * Get <p>公网带宽大小，单位 Mbps。</p><p>单位：Mbps</p> 
+     * @return PublicNetworkMonthly <p>公网带宽大小，单位 Mbps。</p><p>单位：Mbps</p>
      */
     public Long getPublicNetworkMonthly() {
         return this.PublicNetworkMonthly;
     }
 
     /**
-     * Set <p>公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 6Mbps 公网带宽，此处传 3。需要保证传入参数为 3 的整数倍</p>
-     * @param PublicNetworkMonthly <p>公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 6Mbps 公网带宽，此处传 3。需要保证传入参数为 3 的整数倍</p>
+     * Set <p>公网带宽大小，单位 Mbps。</p><p>单位：Mbps</p>
+     * @param PublicNetworkMonthly <p>公网带宽大小，单位 Mbps。</p><p>单位：Mbps</p>
      */
     public void setPublicNetworkMonthly(Long PublicNetworkMonthly) {
         this.PublicNetworkMonthly = PublicNetworkMonthly;

@@ -52,6 +52,20 @@ public class Placement extends AbstractModel {
     private String HostId;
 
     /**
+    * 专有资源预扣策略。取值范围：<li>ResourcePool：使用实例资源池进行资源预扣</li>
+    */
+    @SerializedName("DedicatedResourcePackTenancy")
+    @Expose
+    private String DedicatedResourcePackTenancy;
+
+    /**
+    * 专有预扣资源ID列表。形如：rpp-7eumgm3l。通过指定专有预扣资源创建实例时，必须同时指定匹配的DedicatedResourcePackTenancy。
+    */
+    @SerializedName("DedicatedResourcePackIds")
+    @Expose
+    private String [] DedicatedResourcePackIds;
+
+    /**
     * 实例所属的实例资源池机架ID，仅用于出参。
     */
     @SerializedName("RackId")
@@ -123,6 +137,38 @@ public class Placement extends AbstractModel {
     }
 
     /**
+     * Get 专有资源预扣策略。取值范围：<li>ResourcePool：使用实例资源池进行资源预扣</li> 
+     * @return DedicatedResourcePackTenancy 专有资源预扣策略。取值范围：<li>ResourcePool：使用实例资源池进行资源预扣</li>
+     */
+    public String getDedicatedResourcePackTenancy() {
+        return this.DedicatedResourcePackTenancy;
+    }
+
+    /**
+     * Set 专有资源预扣策略。取值范围：<li>ResourcePool：使用实例资源池进行资源预扣</li>
+     * @param DedicatedResourcePackTenancy 专有资源预扣策略。取值范围：<li>ResourcePool：使用实例资源池进行资源预扣</li>
+     */
+    public void setDedicatedResourcePackTenancy(String DedicatedResourcePackTenancy) {
+        this.DedicatedResourcePackTenancy = DedicatedResourcePackTenancy;
+    }
+
+    /**
+     * Get 专有预扣资源ID列表。形如：rpp-7eumgm3l。通过指定专有预扣资源创建实例时，必须同时指定匹配的DedicatedResourcePackTenancy。 
+     * @return DedicatedResourcePackIds 专有预扣资源ID列表。形如：rpp-7eumgm3l。通过指定专有预扣资源创建实例时，必须同时指定匹配的DedicatedResourcePackTenancy。
+     */
+    public String [] getDedicatedResourcePackIds() {
+        return this.DedicatedResourcePackIds;
+    }
+
+    /**
+     * Set 专有预扣资源ID列表。形如：rpp-7eumgm3l。通过指定专有预扣资源创建实例时，必须同时指定匹配的DedicatedResourcePackTenancy。
+     * @param DedicatedResourcePackIds 专有预扣资源ID列表。形如：rpp-7eumgm3l。通过指定专有预扣资源创建实例时，必须同时指定匹配的DedicatedResourcePackTenancy。
+     */
+    public void setDedicatedResourcePackIds(String [] DedicatedResourcePackIds) {
+        this.DedicatedResourcePackIds = DedicatedResourcePackIds;
+    }
+
+    /**
      * Get 实例所属的实例资源池机架ID，仅用于出参。 
      * @return RackId 实例所属的实例资源池机架ID，仅用于出参。
      */
@@ -161,6 +207,15 @@ public class Placement extends AbstractModel {
         if (source.HostId != null) {
             this.HostId = new String(source.HostId);
         }
+        if (source.DedicatedResourcePackTenancy != null) {
+            this.DedicatedResourcePackTenancy = new String(source.DedicatedResourcePackTenancy);
+        }
+        if (source.DedicatedResourcePackIds != null) {
+            this.DedicatedResourcePackIds = new String[source.DedicatedResourcePackIds.length];
+            for (int i = 0; i < source.DedicatedResourcePackIds.length; i++) {
+                this.DedicatedResourcePackIds[i] = new String(source.DedicatedResourcePackIds[i]);
+            }
+        }
         if (source.RackId != null) {
             this.RackId = new String(source.RackId);
         }
@@ -175,6 +230,8 @@ public class Placement extends AbstractModel {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamArraySimple(map, prefix + "HostIds.", this.HostIds);
         this.setParamSimple(map, prefix + "HostId", this.HostId);
+        this.setParamSimple(map, prefix + "DedicatedResourcePackTenancy", this.DedicatedResourcePackTenancy);
+        this.setParamArraySimple(map, prefix + "DedicatedResourcePackIds.", this.DedicatedResourcePackIds);
         this.setParamSimple(map, prefix + "RackId", this.RackId);
 
     }

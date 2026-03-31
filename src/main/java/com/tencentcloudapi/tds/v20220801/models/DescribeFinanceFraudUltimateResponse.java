@@ -24,109 +24,123 @@ import java.util.HashMap;
 public class DescribeFinanceFraudUltimateResponse extends AbstractModel {
 
     /**
-    * App版本信息
+    * <p>App版本信息</p>
     */
     @SerializedName("AppVersion")
     @Expose
     private String AppVersion;
 
     /**
-    * 品牌
+    * <p>品牌</p>
     */
     @SerializedName("Brand")
     @Expose
     private String Brand;
 
     /**
-    * 客户端IP
+    * <p>客户端IP</p>
     */
     @SerializedName("ClientIp")
     @Expose
     private String ClientIp;
 
     /**
-    * 机型
+    * <p>机型</p>
     */
     @SerializedName("Model")
     @Expose
     private String Model;
 
     /**
-    * 网络类型
+    * <p>网络类型</p>
     */
     @SerializedName("NetworkType")
     @Expose
     private String NetworkType;
 
     /**
-    * 应用包名
+    * <p>应用包名</p>
     */
     @SerializedName("PackageName")
     @Expose
     private String PackageName;
 
     /**
-    * 平台（2-Android，3-iOS，4-H5，5-微信小程序）
+    * <p>平台（2-Android，3-iOS，4-H5，5-微信小程序）</p>
     */
     @SerializedName("Platform")
     @Expose
     private String Platform;
 
     /**
-    * 系统版本
+    * <p>系统版本</p>
     */
     @SerializedName("SystemVersion")
     @Expose
     private String SystemVersion;
 
     /**
-    * SDK版本号
+    * <p>SDK版本号</p>
     */
     @SerializedName("SdkBuildNo")
     @Expose
     private String SdkBuildNo;
 
     /**
-    * 实时风险信息
+    * <p>实时风险信息</p>
     */
     @SerializedName("RiskInfos")
     @Expose
     private RiskInfo [] RiskInfos;
 
     /**
-    * 离线风险信息
+    * <p>离线风险信息</p>
     */
     @SerializedName("HistRiskInfos")
     @Expose
     private RiskInfo [] HistRiskInfos;
 
     /**
-    * 设备匿名标识
+    * <p>设备匿名标识</p>
     */
     @SerializedName("Openid")
     @Expose
     private String Openid;
 
     /**
-    * 场景风险信息
+    * <p>场景风险信息</p>
     */
     @SerializedName("SceneRiskInfos")
     @Expose
     private RiskInfo [] SceneRiskInfos;
 
     /**
-    * 建议等级。1-极差，2-较差，3-中等，4-良好，5-优秀
+    * <p>建议等级。1-极差，2-较差，3-中等，4-良好，5-优秀</p>
     */
     @SerializedName("SuggestionLevel")
     @Expose
     private Long SuggestionLevel;
 
     /**
-    * 图灵盾统一ID
+    * <p>图灵盾统一ID</p>
     */
     @SerializedName("Unionid")
     @Expose
     private String Unionid;
+
+    /**
+    * <p>检测时间戳（毫秒）</p>
+    */
+    @SerializedName("RiskCheckTimestamp")
+    @Expose
+    private String RiskCheckTimestamp;
+
+    /**
+    * <p>额外信息</p>
+    */
+    @SerializedName("ExtraInfos")
+    @Expose
+    private ExtraInfo [] ExtraInfos;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -136,243 +150,275 @@ public class DescribeFinanceFraudUltimateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get App版本信息 
-     * @return AppVersion App版本信息
+     * Get <p>App版本信息</p> 
+     * @return AppVersion <p>App版本信息</p>
      */
     public String getAppVersion() {
         return this.AppVersion;
     }
 
     /**
-     * Set App版本信息
-     * @param AppVersion App版本信息
+     * Set <p>App版本信息</p>
+     * @param AppVersion <p>App版本信息</p>
      */
     public void setAppVersion(String AppVersion) {
         this.AppVersion = AppVersion;
     }
 
     /**
-     * Get 品牌 
-     * @return Brand 品牌
+     * Get <p>品牌</p> 
+     * @return Brand <p>品牌</p>
      */
     public String getBrand() {
         return this.Brand;
     }
 
     /**
-     * Set 品牌
-     * @param Brand 品牌
+     * Set <p>品牌</p>
+     * @param Brand <p>品牌</p>
      */
     public void setBrand(String Brand) {
         this.Brand = Brand;
     }
 
     /**
-     * Get 客户端IP 
-     * @return ClientIp 客户端IP
+     * Get <p>客户端IP</p> 
+     * @return ClientIp <p>客户端IP</p>
      */
     public String getClientIp() {
         return this.ClientIp;
     }
 
     /**
-     * Set 客户端IP
-     * @param ClientIp 客户端IP
+     * Set <p>客户端IP</p>
+     * @param ClientIp <p>客户端IP</p>
      */
     public void setClientIp(String ClientIp) {
         this.ClientIp = ClientIp;
     }
 
     /**
-     * Get 机型 
-     * @return Model 机型
+     * Get <p>机型</p> 
+     * @return Model <p>机型</p>
      */
     public String getModel() {
         return this.Model;
     }
 
     /**
-     * Set 机型
-     * @param Model 机型
+     * Set <p>机型</p>
+     * @param Model <p>机型</p>
      */
     public void setModel(String Model) {
         this.Model = Model;
     }
 
     /**
-     * Get 网络类型 
-     * @return NetworkType 网络类型
+     * Get <p>网络类型</p> 
+     * @return NetworkType <p>网络类型</p>
      */
     public String getNetworkType() {
         return this.NetworkType;
     }
 
     /**
-     * Set 网络类型
-     * @param NetworkType 网络类型
+     * Set <p>网络类型</p>
+     * @param NetworkType <p>网络类型</p>
      */
     public void setNetworkType(String NetworkType) {
         this.NetworkType = NetworkType;
     }
 
     /**
-     * Get 应用包名 
-     * @return PackageName 应用包名
+     * Get <p>应用包名</p> 
+     * @return PackageName <p>应用包名</p>
      */
     public String getPackageName() {
         return this.PackageName;
     }
 
     /**
-     * Set 应用包名
-     * @param PackageName 应用包名
+     * Set <p>应用包名</p>
+     * @param PackageName <p>应用包名</p>
      */
     public void setPackageName(String PackageName) {
         this.PackageName = PackageName;
     }
 
     /**
-     * Get 平台（2-Android，3-iOS，4-H5，5-微信小程序） 
-     * @return Platform 平台（2-Android，3-iOS，4-H5，5-微信小程序）
+     * Get <p>平台（2-Android，3-iOS，4-H5，5-微信小程序）</p> 
+     * @return Platform <p>平台（2-Android，3-iOS，4-H5，5-微信小程序）</p>
      */
     public String getPlatform() {
         return this.Platform;
     }
 
     /**
-     * Set 平台（2-Android，3-iOS，4-H5，5-微信小程序）
-     * @param Platform 平台（2-Android，3-iOS，4-H5，5-微信小程序）
+     * Set <p>平台（2-Android，3-iOS，4-H5，5-微信小程序）</p>
+     * @param Platform <p>平台（2-Android，3-iOS，4-H5，5-微信小程序）</p>
      */
     public void setPlatform(String Platform) {
         this.Platform = Platform;
     }
 
     /**
-     * Get 系统版本 
-     * @return SystemVersion 系统版本
+     * Get <p>系统版本</p> 
+     * @return SystemVersion <p>系统版本</p>
      */
     public String getSystemVersion() {
         return this.SystemVersion;
     }
 
     /**
-     * Set 系统版本
-     * @param SystemVersion 系统版本
+     * Set <p>系统版本</p>
+     * @param SystemVersion <p>系统版本</p>
      */
     public void setSystemVersion(String SystemVersion) {
         this.SystemVersion = SystemVersion;
     }
 
     /**
-     * Get SDK版本号 
-     * @return SdkBuildNo SDK版本号
+     * Get <p>SDK版本号</p> 
+     * @return SdkBuildNo <p>SDK版本号</p>
      */
     public String getSdkBuildNo() {
         return this.SdkBuildNo;
     }
 
     /**
-     * Set SDK版本号
-     * @param SdkBuildNo SDK版本号
+     * Set <p>SDK版本号</p>
+     * @param SdkBuildNo <p>SDK版本号</p>
      */
     public void setSdkBuildNo(String SdkBuildNo) {
         this.SdkBuildNo = SdkBuildNo;
     }
 
     /**
-     * Get 实时风险信息 
-     * @return RiskInfos 实时风险信息
+     * Get <p>实时风险信息</p> 
+     * @return RiskInfos <p>实时风险信息</p>
      */
     public RiskInfo [] getRiskInfos() {
         return this.RiskInfos;
     }
 
     /**
-     * Set 实时风险信息
-     * @param RiskInfos 实时风险信息
+     * Set <p>实时风险信息</p>
+     * @param RiskInfos <p>实时风险信息</p>
      */
     public void setRiskInfos(RiskInfo [] RiskInfos) {
         this.RiskInfos = RiskInfos;
     }
 
     /**
-     * Get 离线风险信息 
-     * @return HistRiskInfos 离线风险信息
+     * Get <p>离线风险信息</p> 
+     * @return HistRiskInfos <p>离线风险信息</p>
      */
     public RiskInfo [] getHistRiskInfos() {
         return this.HistRiskInfos;
     }
 
     /**
-     * Set 离线风险信息
-     * @param HistRiskInfos 离线风险信息
+     * Set <p>离线风险信息</p>
+     * @param HistRiskInfos <p>离线风险信息</p>
      */
     public void setHistRiskInfos(RiskInfo [] HistRiskInfos) {
         this.HistRiskInfos = HistRiskInfos;
     }
 
     /**
-     * Get 设备匿名标识 
-     * @return Openid 设备匿名标识
+     * Get <p>设备匿名标识</p> 
+     * @return Openid <p>设备匿名标识</p>
      */
     public String getOpenid() {
         return this.Openid;
     }
 
     /**
-     * Set 设备匿名标识
-     * @param Openid 设备匿名标识
+     * Set <p>设备匿名标识</p>
+     * @param Openid <p>设备匿名标识</p>
      */
     public void setOpenid(String Openid) {
         this.Openid = Openid;
     }
 
     /**
-     * Get 场景风险信息 
-     * @return SceneRiskInfos 场景风险信息
+     * Get <p>场景风险信息</p> 
+     * @return SceneRiskInfos <p>场景风险信息</p>
      */
     public RiskInfo [] getSceneRiskInfos() {
         return this.SceneRiskInfos;
     }
 
     /**
-     * Set 场景风险信息
-     * @param SceneRiskInfos 场景风险信息
+     * Set <p>场景风险信息</p>
+     * @param SceneRiskInfos <p>场景风险信息</p>
      */
     public void setSceneRiskInfos(RiskInfo [] SceneRiskInfos) {
         this.SceneRiskInfos = SceneRiskInfos;
     }
 
     /**
-     * Get 建议等级。1-极差，2-较差，3-中等，4-良好，5-优秀 
-     * @return SuggestionLevel 建议等级。1-极差，2-较差，3-中等，4-良好，5-优秀
+     * Get <p>建议等级。1-极差，2-较差，3-中等，4-良好，5-优秀</p> 
+     * @return SuggestionLevel <p>建议等级。1-极差，2-较差，3-中等，4-良好，5-优秀</p>
      */
     public Long getSuggestionLevel() {
         return this.SuggestionLevel;
     }
 
     /**
-     * Set 建议等级。1-极差，2-较差，3-中等，4-良好，5-优秀
-     * @param SuggestionLevel 建议等级。1-极差，2-较差，3-中等，4-良好，5-优秀
+     * Set <p>建议等级。1-极差，2-较差，3-中等，4-良好，5-优秀</p>
+     * @param SuggestionLevel <p>建议等级。1-极差，2-较差，3-中等，4-良好，5-优秀</p>
      */
     public void setSuggestionLevel(Long SuggestionLevel) {
         this.SuggestionLevel = SuggestionLevel;
     }
 
     /**
-     * Get 图灵盾统一ID 
-     * @return Unionid 图灵盾统一ID
+     * Get <p>图灵盾统一ID</p> 
+     * @return Unionid <p>图灵盾统一ID</p>
      */
     public String getUnionid() {
         return this.Unionid;
     }
 
     /**
-     * Set 图灵盾统一ID
-     * @param Unionid 图灵盾统一ID
+     * Set <p>图灵盾统一ID</p>
+     * @param Unionid <p>图灵盾统一ID</p>
      */
     public void setUnionid(String Unionid) {
         this.Unionid = Unionid;
+    }
+
+    /**
+     * Get <p>检测时间戳（毫秒）</p> 
+     * @return RiskCheckTimestamp <p>检测时间戳（毫秒）</p>
+     */
+    public String getRiskCheckTimestamp() {
+        return this.RiskCheckTimestamp;
+    }
+
+    /**
+     * Set <p>检测时间戳（毫秒）</p>
+     * @param RiskCheckTimestamp <p>检测时间戳（毫秒）</p>
+     */
+    public void setRiskCheckTimestamp(String RiskCheckTimestamp) {
+        this.RiskCheckTimestamp = RiskCheckTimestamp;
+    }
+
+    /**
+     * Get <p>额外信息</p> 
+     * @return ExtraInfos <p>额外信息</p>
+     */
+    public ExtraInfo [] getExtraInfos() {
+        return this.ExtraInfos;
+    }
+
+    /**
+     * Set <p>额外信息</p>
+     * @param ExtraInfos <p>额外信息</p>
+     */
+    public void setExtraInfos(ExtraInfo [] ExtraInfos) {
+        this.ExtraInfos = ExtraInfos;
     }
 
     /**
@@ -453,6 +499,15 @@ public class DescribeFinanceFraudUltimateResponse extends AbstractModel {
         if (source.Unionid != null) {
             this.Unionid = new String(source.Unionid);
         }
+        if (source.RiskCheckTimestamp != null) {
+            this.RiskCheckTimestamp = new String(source.RiskCheckTimestamp);
+        }
+        if (source.ExtraInfos != null) {
+            this.ExtraInfos = new ExtraInfo[source.ExtraInfos.length];
+            for (int i = 0; i < source.ExtraInfos.length; i++) {
+                this.ExtraInfos[i] = new ExtraInfo(source.ExtraInfos[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -478,6 +533,8 @@ public class DescribeFinanceFraudUltimateResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "SceneRiskInfos.", this.SceneRiskInfos);
         this.setParamSimple(map, prefix + "SuggestionLevel", this.SuggestionLevel);
         this.setParamSimple(map, prefix + "Unionid", this.Unionid);
+        this.setParamSimple(map, prefix + "RiskCheckTimestamp", this.RiskCheckTimestamp);
+        this.setParamArrayObj(map, prefix + "ExtraInfos.", this.ExtraInfos);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

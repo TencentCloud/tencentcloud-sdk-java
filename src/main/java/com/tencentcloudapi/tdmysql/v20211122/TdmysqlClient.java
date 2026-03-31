@@ -50,7 +50,7 @@ public class TdmysqlClient extends AbstractClient{
     }
 
     /**
-     *创建实例备份集
+     *创建实例手工备份  CreateDBSBackup
      * @param req CreateDBSBackupRequest
      * @return CreateDBSBackupResponse
      * @throws TencentCloudSDKException
@@ -61,7 +61,7 @@ public class TdmysqlClient extends AbstractClient{
     }
 
     /**
-     *删除实例备份集
+     *删除实例手工备份 DeleteDBSBackupSets
      * @param req DeleteDBSBackupSetsRequest
      * @return DeleteDBSBackupSetsResponse
      * @throws TencentCloudSDKException
@@ -83,7 +83,7 @@ public class TdmysqlClient extends AbstractClient{
     }
 
     /**
-     *可恢复时间查询
+     *获取可恢复时间 DescribeDBSAvailableRecoveryTime
      * @param req DescribeDBSAvailableRecoveryTimeRequest
      * @return DescribeDBSAvailableRecoveryTimeResponse
      * @throws TencentCloudSDKException
@@ -94,7 +94,7 @@ public class TdmysqlClient extends AbstractClient{
     }
 
     /**
-     *查询实例克隆列表
+     *查询实例克隆列表 DescribeDBSCloneInstances
      * @param req DescribeDBSCloneInstancesRequest
      * @return DescribeDBSCloneInstancesResponse
      * @throws TencentCloudSDKException
@@ -193,7 +193,7 @@ public class TdmysqlClient extends AbstractClient{
     }
 
     /**
-     *修改实例备份策略
+     *修改实例备份策略 ModifyDBSBackupPolicy
      * @param req ModifyDBSBackupPolicyRequest
      * @return ModifyDBSBackupPolicyResponse
      * @throws TencentCloudSDKException
@@ -204,7 +204,7 @@ public class TdmysqlClient extends AbstractClient{
     }
 
     /**
-     *修改备份集备注
+     *修改实例备份备注 ModifyDBSBackupSetComment
      * @param req ModifyDBSBackupSetCommentRequest
      * @return ModifyDBSBackupSetCommentResponse
      * @throws TencentCloudSDKException

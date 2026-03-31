@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateAsrVocabResponse extends AbstractModel {
 
     /**
-    * 词表ID，可用于获取词表信息
+    * <p>词表ID，可用于获取词表信息</p>
     */
     @SerializedName("VocabId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateAsrVocabResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 词表ID，可用于获取词表信息 
-     * @return VocabId 词表ID，可用于获取词表信息
+     * Get <p>词表ID，可用于获取词表信息</p> 
+     * @return VocabId <p>词表ID，可用于获取词表信息</p>
      */
     public String getVocabId() {
         return this.VocabId;
     }
 
     /**
-     * Set 词表ID，可用于获取词表信息
-     * @param VocabId 词表ID，可用于获取词表信息
+     * Set <p>词表ID，可用于获取词表信息</p>
+     * @param VocabId <p>词表ID，可用于获取词表信息</p>
      */
     public void setVocabId(String VocabId) {
         this.VocabId = VocabId;

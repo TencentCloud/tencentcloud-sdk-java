@@ -59,7 +59,7 @@ public class InstanceAttributesResponse extends AbstractModel {
     private String Vport;
 
     /**
-    * <p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 </p>
+    * <p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败</p>
     */
     @SerializedName("Status")
     @Expose
@@ -206,7 +206,7 @@ public class InstanceAttributesResponse extends AbstractModel {
     private Long Cvm;
 
     /**
-    * <p>实例类型  枚举列表: profession  :专业版  <br />standards2  :标准版premium   :高级版serverless  :serverless版</p>
+    * <p>实例类型  枚举列表:<br>profession  :专业版<br>standards2  :标准版<br>premium   :高级版<br>serverless  :serverless版</p>
     */
     @SerializedName("InstanceType")
     @Expose
@@ -290,21 +290,21 @@ public class InstanceAttributesResponse extends AbstractModel {
     private String InstanceChargeType;
 
     /**
-    * <p>是否开启弹性带宽白名单 <br />1:已开启弹性带宽白名单;0:未开启弹性带宽白名单;</p>
+    * <p>是否开启弹性带宽白名单<br>1:已开启弹性带宽白名单;<br>0:未开启弹性带宽白名单;</p>
     */
     @SerializedName("ElasticBandwidthSwitch")
     @Expose
     private Long ElasticBandwidthSwitch;
 
     /**
-    * <p>弹性带宽开通状态1:未开启弹性带宽;16: 开启弹性带宽中;32:开启弹性带宽成功;33:关闭弹性带宽中;34:关闭弹性带宽成功;64:开启弹性带宽失败;65:关闭弹性带宽失败;</p>
+    * <p>弹性带宽开通状态<br>1:未开启弹性带宽;<br>16: 开启弹性带宽中;<br>32:开启弹性带宽成功;<br>33:关闭弹性带宽中;<br>34:关闭弹性带宽成功;<br>64:开启弹性带宽失败;<br>65:关闭弹性带宽失败;</p>
     */
     @SerializedName("ElasticBandwidthOpenStatus")
     @Expose
     private Long ElasticBandwidthOpenStatus;
 
     /**
-    * <p>集群类型<br />CLOUD_IDC IDC集群CLOUD_CVM_SHARE CVM共享集群CLOUD_CVM_YUNTI 云梯CVM集群CLOUD_CVM    CVM集群CLOUD_CDC CDC集群CLOUD_EKS_TSE EKS集群</p>
+    * <p>集群类型<br>CLOUD_IDC IDC集群<br>CLOUD_CVM_SHARE CVM共享集群<br>CLOUD_CVM_YUNTI 云梯CVM集群<br>CLOUD_CVM    CVM集群<br>CLOUD_CDC CDC集群<br>CLOUD_EKS_TSE EKS集群</p>
     */
     @SerializedName("ClusterType")
     @Expose
@@ -346,14 +346,14 @@ public class InstanceAttributesResponse extends AbstractModel {
     private Long DeleteProtectionEnable;
 
     /**
-    * <p>实例级别消息保留大小</p>单位：bytes<br>默认值：-1
+    * <p>实例级别消息保留大小</p><p>单位：bytes</p><p>默认值：-1</p>
     */
     @SerializedName("RetentionBytes")
     @Expose
     private Long RetentionBytes;
 
     /**
-    * <p>事务ID最大空闲时间，超时未提交的事务将被标记为过期</p>单位：ms
+    * <p>事务ID最大空闲时间，超时未提交的事务将被标记为过期</p><p>单位：ms</p>
     */
     @SerializedName("TransactionalIdExpirationMs")
     @Expose
@@ -440,16 +440,16 @@ public class InstanceAttributesResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 </p> 
-     * @return Status <p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 </p>
+     * Get <p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败</p> 
+     * @return Status <p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set <p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 </p>
-     * @param Status <p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 </p>
+     * Set <p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败</p>
+     * @param Status <p>实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -776,16 +776,16 @@ public class InstanceAttributesResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>实例类型  枚举列表: profession  :专业版  <br />standards2  :标准版premium   :高级版serverless  :serverless版</p> 
-     * @return InstanceType <p>实例类型  枚举列表: profession  :专业版  <br />standards2  :标准版premium   :高级版serverless  :serverless版</p>
+     * Get <p>实例类型  枚举列表:<br>profession  :专业版<br>standards2  :标准版<br>premium   :高级版<br>serverless  :serverless版</p> 
+     * @return InstanceType <p>实例类型  枚举列表:<br>profession  :专业版<br>standards2  :标准版<br>premium   :高级版<br>serverless  :serverless版</p>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set <p>实例类型  枚举列表: profession  :专业版  <br />standards2  :标准版premium   :高级版serverless  :serverless版</p>
-     * @param InstanceType <p>实例类型  枚举列表: profession  :专业版  <br />standards2  :标准版premium   :高级版serverless  :serverless版</p>
+     * Set <p>实例类型  枚举列表:<br>profession  :专业版<br>standards2  :标准版<br>premium   :高级版<br>serverless  :serverless版</p>
+     * @param InstanceType <p>实例类型  枚举列表:<br>profession  :专业版<br>standards2  :标准版<br>premium   :高级版<br>serverless  :serverless版</p>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
@@ -968,48 +968,48 @@ public class InstanceAttributesResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>是否开启弹性带宽白名单 <br />1:已开启弹性带宽白名单;0:未开启弹性带宽白名单;</p> 
-     * @return ElasticBandwidthSwitch <p>是否开启弹性带宽白名单 <br />1:已开启弹性带宽白名单;0:未开启弹性带宽白名单;</p>
+     * Get <p>是否开启弹性带宽白名单<br>1:已开启弹性带宽白名单;<br>0:未开启弹性带宽白名单;</p> 
+     * @return ElasticBandwidthSwitch <p>是否开启弹性带宽白名单<br>1:已开启弹性带宽白名单;<br>0:未开启弹性带宽白名单;</p>
      */
     public Long getElasticBandwidthSwitch() {
         return this.ElasticBandwidthSwitch;
     }
 
     /**
-     * Set <p>是否开启弹性带宽白名单 <br />1:已开启弹性带宽白名单;0:未开启弹性带宽白名单;</p>
-     * @param ElasticBandwidthSwitch <p>是否开启弹性带宽白名单 <br />1:已开启弹性带宽白名单;0:未开启弹性带宽白名单;</p>
+     * Set <p>是否开启弹性带宽白名单<br>1:已开启弹性带宽白名单;<br>0:未开启弹性带宽白名单;</p>
+     * @param ElasticBandwidthSwitch <p>是否开启弹性带宽白名单<br>1:已开启弹性带宽白名单;<br>0:未开启弹性带宽白名单;</p>
      */
     public void setElasticBandwidthSwitch(Long ElasticBandwidthSwitch) {
         this.ElasticBandwidthSwitch = ElasticBandwidthSwitch;
     }
 
     /**
-     * Get <p>弹性带宽开通状态1:未开启弹性带宽;16: 开启弹性带宽中;32:开启弹性带宽成功;33:关闭弹性带宽中;34:关闭弹性带宽成功;64:开启弹性带宽失败;65:关闭弹性带宽失败;</p> 
-     * @return ElasticBandwidthOpenStatus <p>弹性带宽开通状态1:未开启弹性带宽;16: 开启弹性带宽中;32:开启弹性带宽成功;33:关闭弹性带宽中;34:关闭弹性带宽成功;64:开启弹性带宽失败;65:关闭弹性带宽失败;</p>
+     * Get <p>弹性带宽开通状态<br>1:未开启弹性带宽;<br>16: 开启弹性带宽中;<br>32:开启弹性带宽成功;<br>33:关闭弹性带宽中;<br>34:关闭弹性带宽成功;<br>64:开启弹性带宽失败;<br>65:关闭弹性带宽失败;</p> 
+     * @return ElasticBandwidthOpenStatus <p>弹性带宽开通状态<br>1:未开启弹性带宽;<br>16: 开启弹性带宽中;<br>32:开启弹性带宽成功;<br>33:关闭弹性带宽中;<br>34:关闭弹性带宽成功;<br>64:开启弹性带宽失败;<br>65:关闭弹性带宽失败;</p>
      */
     public Long getElasticBandwidthOpenStatus() {
         return this.ElasticBandwidthOpenStatus;
     }
 
     /**
-     * Set <p>弹性带宽开通状态1:未开启弹性带宽;16: 开启弹性带宽中;32:开启弹性带宽成功;33:关闭弹性带宽中;34:关闭弹性带宽成功;64:开启弹性带宽失败;65:关闭弹性带宽失败;</p>
-     * @param ElasticBandwidthOpenStatus <p>弹性带宽开通状态1:未开启弹性带宽;16: 开启弹性带宽中;32:开启弹性带宽成功;33:关闭弹性带宽中;34:关闭弹性带宽成功;64:开启弹性带宽失败;65:关闭弹性带宽失败;</p>
+     * Set <p>弹性带宽开通状态<br>1:未开启弹性带宽;<br>16: 开启弹性带宽中;<br>32:开启弹性带宽成功;<br>33:关闭弹性带宽中;<br>34:关闭弹性带宽成功;<br>64:开启弹性带宽失败;<br>65:关闭弹性带宽失败;</p>
+     * @param ElasticBandwidthOpenStatus <p>弹性带宽开通状态<br>1:未开启弹性带宽;<br>16: 开启弹性带宽中;<br>32:开启弹性带宽成功;<br>33:关闭弹性带宽中;<br>34:关闭弹性带宽成功;<br>64:开启弹性带宽失败;<br>65:关闭弹性带宽失败;</p>
      */
     public void setElasticBandwidthOpenStatus(Long ElasticBandwidthOpenStatus) {
         this.ElasticBandwidthOpenStatus = ElasticBandwidthOpenStatus;
     }
 
     /**
-     * Get <p>集群类型<br />CLOUD_IDC IDC集群CLOUD_CVM_SHARE CVM共享集群CLOUD_CVM_YUNTI 云梯CVM集群CLOUD_CVM    CVM集群CLOUD_CDC CDC集群CLOUD_EKS_TSE EKS集群</p> 
-     * @return ClusterType <p>集群类型<br />CLOUD_IDC IDC集群CLOUD_CVM_SHARE CVM共享集群CLOUD_CVM_YUNTI 云梯CVM集群CLOUD_CVM    CVM集群CLOUD_CDC CDC集群CLOUD_EKS_TSE EKS集群</p>
+     * Get <p>集群类型<br>CLOUD_IDC IDC集群<br>CLOUD_CVM_SHARE CVM共享集群<br>CLOUD_CVM_YUNTI 云梯CVM集群<br>CLOUD_CVM    CVM集群<br>CLOUD_CDC CDC集群<br>CLOUD_EKS_TSE EKS集群</p> 
+     * @return ClusterType <p>集群类型<br>CLOUD_IDC IDC集群<br>CLOUD_CVM_SHARE CVM共享集群<br>CLOUD_CVM_YUNTI 云梯CVM集群<br>CLOUD_CVM    CVM集群<br>CLOUD_CDC CDC集群<br>CLOUD_EKS_TSE EKS集群</p>
      */
     public String getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set <p>集群类型<br />CLOUD_IDC IDC集群CLOUD_CVM_SHARE CVM共享集群CLOUD_CVM_YUNTI 云梯CVM集群CLOUD_CVM    CVM集群CLOUD_CDC CDC集群CLOUD_EKS_TSE EKS集群</p>
-     * @param ClusterType <p>集群类型<br />CLOUD_IDC IDC集群CLOUD_CVM_SHARE CVM共享集群CLOUD_CVM_YUNTI 云梯CVM集群CLOUD_CVM    CVM集群CLOUD_CDC CDC集群CLOUD_EKS_TSE EKS集群</p>
+     * Set <p>集群类型<br>CLOUD_IDC IDC集群<br>CLOUD_CVM_SHARE CVM共享集群<br>CLOUD_CVM_YUNTI 云梯CVM集群<br>CLOUD_CVM    CVM集群<br>CLOUD_CDC CDC集群<br>CLOUD_EKS_TSE EKS集群</p>
+     * @param ClusterType <p>集群类型<br>CLOUD_IDC IDC集群<br>CLOUD_CVM_SHARE CVM共享集群<br>CLOUD_CVM_YUNTI 云梯CVM集群<br>CLOUD_CVM    CVM集群<br>CLOUD_CDC CDC集群<br>CLOUD_EKS_TSE EKS集群</p>
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;
@@ -1096,32 +1096,32 @@ public class InstanceAttributesResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>实例级别消息保留大小</p>单位：bytes<br>默认值：-1 
-     * @return RetentionBytes <p>实例级别消息保留大小</p>单位：bytes<br>默认值：-1
+     * Get <p>实例级别消息保留大小</p><p>单位：bytes</p><p>默认值：-1</p> 
+     * @return RetentionBytes <p>实例级别消息保留大小</p><p>单位：bytes</p><p>默认值：-1</p>
      */
     public Long getRetentionBytes() {
         return this.RetentionBytes;
     }
 
     /**
-     * Set <p>实例级别消息保留大小</p>单位：bytes<br>默认值：-1
-     * @param RetentionBytes <p>实例级别消息保留大小</p>单位：bytes<br>默认值：-1
+     * Set <p>实例级别消息保留大小</p><p>单位：bytes</p><p>默认值：-1</p>
+     * @param RetentionBytes <p>实例级别消息保留大小</p><p>单位：bytes</p><p>默认值：-1</p>
      */
     public void setRetentionBytes(Long RetentionBytes) {
         this.RetentionBytes = RetentionBytes;
     }
 
     /**
-     * Get <p>事务ID最大空闲时间，超时未提交的事务将被标记为过期</p>单位：ms 
-     * @return TransactionalIdExpirationMs <p>事务ID最大空闲时间，超时未提交的事务将被标记为过期</p>单位：ms
+     * Get <p>事务ID最大空闲时间，超时未提交的事务将被标记为过期</p><p>单位：ms</p> 
+     * @return TransactionalIdExpirationMs <p>事务ID最大空闲时间，超时未提交的事务将被标记为过期</p><p>单位：ms</p>
      */
     public Long getTransactionalIdExpirationMs() {
         return this.TransactionalIdExpirationMs;
     }
 
     /**
-     * Set <p>事务ID最大空闲时间，超时未提交的事务将被标记为过期</p>单位：ms
-     * @param TransactionalIdExpirationMs <p>事务ID最大空闲时间，超时未提交的事务将被标记为过期</p>单位：ms
+     * Set <p>事务ID最大空闲时间，超时未提交的事务将被标记为过期</p><p>单位：ms</p>
+     * @param TransactionalIdExpirationMs <p>事务ID最大空闲时间，超时未提交的事务将被标记为过期</p><p>单位：ms</p>
      */
     public void setTransactionalIdExpirationMs(Long TransactionalIdExpirationMs) {
         this.TransactionalIdExpirationMs = TransactionalIdExpirationMs;

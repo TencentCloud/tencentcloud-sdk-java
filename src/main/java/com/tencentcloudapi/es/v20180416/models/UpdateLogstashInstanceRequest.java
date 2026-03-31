@@ -45,6 +45,13 @@ public class UpdateLogstashInstanceRequest extends AbstractModel {
     private String YMLConfig;
 
     /**
+    * 客户自定义dns配置
+    */
+    @SerializedName("UserDnsIp")
+    @Expose
+    private String UserDnsIp;
+
+    /**
     * 实例绑定的ES集群信息
     */
     @SerializedName("BindedES")
@@ -139,6 +146,22 @@ public class UpdateLogstashInstanceRequest extends AbstractModel {
      */
     public void setYMLConfig(String YMLConfig) {
         this.YMLConfig = YMLConfig;
+    }
+
+    /**
+     * Get 客户自定义dns配置 
+     * @return UserDnsIp 客户自定义dns配置
+     */
+    public String getUserDnsIp() {
+        return this.UserDnsIp;
+    }
+
+    /**
+     * Set 客户自定义dns配置
+     * @param UserDnsIp 客户自定义dns配置
+     */
+    public void setUserDnsIp(String UserDnsIp) {
+        this.UserDnsIp = UserDnsIp;
     }
 
     /**
@@ -270,6 +293,9 @@ public class UpdateLogstashInstanceRequest extends AbstractModel {
         if (source.YMLConfig != null) {
             this.YMLConfig = new String(source.YMLConfig);
         }
+        if (source.UserDnsIp != null) {
+            this.UserDnsIp = new String(source.UserDnsIp);
+        }
         if (source.BindedES != null) {
             this.BindedES = new LogstashBindedES(source.BindedES);
         }
@@ -307,6 +333,7 @@ public class UpdateLogstashInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "NodeNum", this.NodeNum);
         this.setParamSimple(map, prefix + "YMLConfig", this.YMLConfig);
+        this.setParamSimple(map, prefix + "UserDnsIp", this.UserDnsIp);
         this.setParamObj(map, prefix + "BindedES.", this.BindedES);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamArrayObj(map, prefix + "ExtendedFiles.", this.ExtendedFiles);

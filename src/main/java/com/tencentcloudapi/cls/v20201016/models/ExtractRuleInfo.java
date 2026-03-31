@@ -24,43 +24,42 @@ import java.util.HashMap;
 public class ExtractRuleInfo extends AbstractModel {
 
     /**
-    * 时间字段的key名字，TimeKey和TimeFormat必须成对出现
+    * <p>时间字段的key名字，TimeKey和TimeFormat必须成对出现</p>
     */
     @SerializedName("TimeKey")
     @Expose
     private String TimeKey;
 
     /**
-    * 时间字段的格式，参考c语言的strftime函数对于时间的格式说明输出参数
-- 参考 [配置时间格式](https://cloud.tencent.com/document/product/614/38614) 文档 
+    * <p>时间字段的格式，参考c语言的strftime函数对于时间的格式说明输出参数</p><ul><li>参考 <a href="https://cloud.tencent.com/document/product/614/38614">配置时间格式</a> 文档</li></ul>
     */
     @SerializedName("TimeFormat")
     @Expose
     private String TimeFormat;
 
     /**
-    * 分隔符类型日志的分隔符，只有LogType为delimiter_log时有效
+    * <p>分隔符类型日志的分隔符，只有LogType为delimiter_log时有效</p>
     */
     @SerializedName("Delimiter")
     @Expose
     private String Delimiter;
 
     /**
-    * 整条日志匹配规则，只有LogType为fullregex_log时有效
+    * <p>整条日志匹配规则，只有LogType为fullregex_log时有效</p>
     */
     @SerializedName("LogRegex")
     @Expose
     private String LogRegex;
 
     /**
-    * 行首匹配规则，只有LogType为multiline_log或fullregex_log时有效
+    * <p>行首匹配规则，只有LogType为multiline_log或fullregex_log时有效</p>
     */
     @SerializedName("BeginRegex")
     @Expose
     private String BeginRegex;
 
     /**
-    * 取的每个字段的key名字，为空的key代表丢弃这个字段，只有LogType为delimiter_log时有效，json_log的日志使用json本身的key。限制100个。
+    * <p>取的每个字段的key名字，为空的key代表丢弃这个字段，只有LogType为delimiter_log时有效，json_log的日志使用json本身的key。限制100个。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Keys")
@@ -68,16 +67,14 @@ public class ExtractRuleInfo extends AbstractModel {
     private String [] Keys;
 
     /**
-    * 日志过滤规则列表（旧版），需要过滤日志的key，及其对应的regex。
- 注意：2.9.3及以上版本LogListener ，建议使用AdvanceFilterRules配置日志过滤规则。
-
+    * <p>日志过滤规则列表（旧版），需要过滤日志的key，及其对应的regex。<br> 注意：2.9.3及以上版本LogListener ，建议使用AdvanceFilterRules配置日志过滤规则。</p>
     */
     @SerializedName("FilterKeyRegex")
     @Expose
     private KeyRegexInfo [] FilterKeyRegex;
 
     /**
-    * 解析失败日志是否上传，true表示上传，false表示不上传
+    * <p>解析失败日志是否上传，true表示上传，false表示不上传</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UnMatchUpLoadSwitch")
@@ -85,7 +82,7 @@ public class ExtractRuleInfo extends AbstractModel {
     private Boolean UnMatchUpLoadSwitch;
 
     /**
-    * 失败日志的key，当UnMatchUpLoadSwitch为true时必填
+    * <p>失败日志的key，当UnMatchUpLoadSwitch为true时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UnMatchLogKey")
@@ -93,9 +90,7 @@ public class ExtractRuleInfo extends AbstractModel {
     private String UnMatchLogKey;
 
     /**
-    * 增量采集模式下的回溯数据量，默认：-1（全量采集）；其他非负数表示增量采集（从最新的位置，往前采集${Backtracking}字节（Byte）的日志）最大支持1073741824（1G）。
-注意：
-- COS导入不支持此字段。
+    * <p>增量采集模式下的回溯数据量，默认：-1（全量采集）；其他非负数表示增量采集（从最新的位置，往前采集${Backtracking}字节（Byte）的日志）最大支持1073741824（1G）。<br>注意：</p><ul><li>COS导入不支持此字段。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Backtracking")
@@ -103,18 +98,14 @@ public class ExtractRuleInfo extends AbstractModel {
     private Long Backtracking;
 
     /**
-    * 是否为Gbk编码。 0：否；1：是。
-注意
-- 目前取0值时，表示UTF-8编码
-- COS导入不支持此字段。
+    * <p>是否为Gbk编码。 0：否；1：是。<br>注意</p><ul><li>目前取0值时，表示UTF-8编码</li><li>COS导入不支持此字段。</li></ul>
     */
     @SerializedName("IsGBK")
     @Expose
     private Long IsGBK;
 
     /**
-    * 是否为标准json。  0：否； 1：是。
-- 标准json指采集器使用业界标准开源解析器进行json解析，非标json指采集器使用CLS自研json解析器进行解析，两种解析器没有本质区别，建议客户使用标准json进行解析。
+    * <p>是否为标准json。  0：否； 1：是。</p><ul><li>标准json指采集器使用业界标准开源解析器进行json解析，非标json指采集器使用CLS自研json解析器进行解析，两种解析器没有本质区别，建议客户使用标准json进行解析。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JsonStandard")
@@ -122,85 +113,56 @@ public class ExtractRuleInfo extends AbstractModel {
     private Long JsonStandard;
 
     /**
-    * syslog传输协议，取值为tcp或者udp，只有在LogType为service_syslog时生效，其余类型无需填写。
-注意：
-- 该字段适用于：创建采集规则配置、修改采集规则配置。
-- COS导入不支持此字段。
+    * <p>syslog传输协议，取值为tcp或者udp，只有在LogType为service_syslog时生效，其余类型无需填写。<br>注意：</p><ul><li>该字段适用于：创建采集规则配置、修改采集规则配置。</li><li>COS导入不支持此字段。</li></ul>
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]，只有在LogType为service_syslog时生效，其余类型无需填写。
-注意：
-- 该字段适用于：创建采集规则配置、修改采集规则配置。
-- COS导入不支持此字段。
+    * <p>syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]，只有在LogType为service_syslog时生效，其余类型无需填写。<br>注意：</p><ul><li>该字段适用于：创建采集规则配置、修改采集规则配置。</li><li>COS导入不支持此字段。</li></ul>
     */
     @SerializedName("Address")
     @Expose
     private String Address;
 
     /**
-    * rfc3164：指定系统日志采集使用RFC3164协议解析日志。
-rfc5424：指定系统日志采集使用RFC5424协议解析日志。
-auto：自动匹配rfc3164或者rfc5424其中一种协议。
-只有在LogType为service_syslog时生效，其余类型无需填写。
-注意：
-- 该字段适用于：创建采集规则配置、修改采集规则配置
-- COS导入不支持此字段。
+    * <p>rfc3164：指定系统日志采集使用RFC3164协议解析日志。<br>rfc5424：指定系统日志采集使用RFC5424协议解析日志。<br>auto：自动匹配rfc3164或者rfc5424其中一种协议。<br>只有在LogType为service_syslog时生效，其余类型无需填写。<br>注意：</p><ul><li>该字段适用于：创建采集规则配置、修改采集规则配置</li><li>COS导入不支持此字段。</li></ul>
     */
     @SerializedName("ParseProtocol")
     @Expose
     private String ParseProtocol;
 
     /**
-    * 元数据类型。0: 不使用元数据信息；1:使用机器组元数据；2:使用用户自定义元数据；3:使用采集配置路径。
-注意：
-- COS导入不支持此字段。
+    * <p>元数据类型。0: 不使用元数据信息；1:使用机器组元数据；2:使用用户自定义元数据；3:使用采集配置路径。<br>注意：</p><ul><li>COS导入不支持此字段。</li></ul>
     */
     @SerializedName("MetadataType")
     @Expose
     private Long MetadataType;
 
     /**
-    * 采集配置路径正则表达式。
-
-```
-请用"()"标识路径中目标字段对应的正则表达式，解析时将"()"视为捕获组，并以__TAG__.{i}:{目标字段}的形式与日志一起上报，其中i为捕获组的序号。
-若不希望以序号为键名，可以通过命名捕获组"(?<{键名}>{正则})"自定义键名，并以__TAG__.{键名}:{目标字段}的形式与日志一起上报。最多支持5个捕获组
-```
-
-注意：
-- MetadataType为3时必填。
-- COS导入不支持此字段。
+    * <p>采集配置路径正则表达式。</p><p><pre><code>请用&quot;()&quot;标识路径中目标字段对应的正则表达式，解析时将&quot;()&quot;视为捕获组，并以__TAG__.{i}:{目标字段}的形式与日志一起上报，其中i为捕获组的序号。若不希望以序号为键名，可以通过命名捕获组&quot;(?&lt;{键名}&gt;{正则})&quot;自定义键名，并以__TAG__.{键名}:{目标字段}的形式与日志一起上报。最多支持5个捕获组</code></pre></p><p>注意：</p><ul><li>MetadataType为3时必填。</li><li>COS导入不支持此字段。</li></ul>
     */
     @SerializedName("PathRegex")
     @Expose
     private String PathRegex;
 
     /**
-    * 用户自定义元数据信息。
-注意：
-- MetadataType为2时必填。
-- COS导入不支持此字段。
+    * <p>用户自定义元数据信息。<br>注意：</p><ul><li>MetadataType为2时必填。</li><li>COS导入不支持此字段。</li></ul>
     */
     @SerializedName("MetaTags")
     @Expose
     private MetaTagInfo [] MetaTags;
 
     /**
-    * Windows事件日志采集规则，只有在LogType为windows_event_log时生效，其余类型无需填写。
+    * <p>Windows事件日志采集规则，只有在LogType为windows_event_log时生效，其余类型无需填写。</p>
     */
     @SerializedName("EventLogRules")
     @Expose
     private EventLog [] EventLogRules;
 
     /**
-    * 日志过滤规则列表（新版）。
-注意：
-- 2.9.3以下版本LogListener不支持， 请使用FilterKeyRegex配置日志过滤规则。
-- 自建k8s采集配置（CreateConfigExtra、ModifyConfigExtra）不支持此字段。
+    * <p>日志过滤规则列表（新版）。<br>注意：</p><ul><li>2.9.3以下版本LogListener不支持， 请使用FilterKeyRegex配置日志过滤规则。</li><li>自建k8s采集配置（CreateConfigExtra、ModifyConfigExtra）不支持此字段。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdvanceFilterRules")
@@ -208,93 +170,96 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
     private AdvanceFilterRuleInfo [] AdvanceFilterRules;
 
     /**
-     * Get 时间字段的key名字，TimeKey和TimeFormat必须成对出现 
-     * @return TimeKey 时间字段的key名字，TimeKey和TimeFormat必须成对出现
+    * <p>原始日志的键名称(Key)；所有原始日志， 均以您指定的键名称（Key），原始日志内容作为值（Value）进行上传，为空时表示不开启原始日志上传。</p><ul><li>COS导入不支持此字段。</li></ul>
+    */
+    @SerializedName("RawLogKey")
+    @Expose
+    private String RawLogKey;
+
+    /**
+     * Get <p>时间字段的key名字，TimeKey和TimeFormat必须成对出现</p> 
+     * @return TimeKey <p>时间字段的key名字，TimeKey和TimeFormat必须成对出现</p>
      */
     public String getTimeKey() {
         return this.TimeKey;
     }
 
     /**
-     * Set 时间字段的key名字，TimeKey和TimeFormat必须成对出现
-     * @param TimeKey 时间字段的key名字，TimeKey和TimeFormat必须成对出现
+     * Set <p>时间字段的key名字，TimeKey和TimeFormat必须成对出现</p>
+     * @param TimeKey <p>时间字段的key名字，TimeKey和TimeFormat必须成对出现</p>
      */
     public void setTimeKey(String TimeKey) {
         this.TimeKey = TimeKey;
     }
 
     /**
-     * Get 时间字段的格式，参考c语言的strftime函数对于时间的格式说明输出参数
-- 参考 [配置时间格式](https://cloud.tencent.com/document/product/614/38614) 文档  
-     * @return TimeFormat 时间字段的格式，参考c语言的strftime函数对于时间的格式说明输出参数
-- 参考 [配置时间格式](https://cloud.tencent.com/document/product/614/38614) 文档 
+     * Get <p>时间字段的格式，参考c语言的strftime函数对于时间的格式说明输出参数</p><ul><li>参考 <a href="https://cloud.tencent.com/document/product/614/38614">配置时间格式</a> 文档</li></ul> 
+     * @return TimeFormat <p>时间字段的格式，参考c语言的strftime函数对于时间的格式说明输出参数</p><ul><li>参考 <a href="https://cloud.tencent.com/document/product/614/38614">配置时间格式</a> 文档</li></ul>
      */
     public String getTimeFormat() {
         return this.TimeFormat;
     }
 
     /**
-     * Set 时间字段的格式，参考c语言的strftime函数对于时间的格式说明输出参数
-- 参考 [配置时间格式](https://cloud.tencent.com/document/product/614/38614) 文档 
-     * @param TimeFormat 时间字段的格式，参考c语言的strftime函数对于时间的格式说明输出参数
-- 参考 [配置时间格式](https://cloud.tencent.com/document/product/614/38614) 文档 
+     * Set <p>时间字段的格式，参考c语言的strftime函数对于时间的格式说明输出参数</p><ul><li>参考 <a href="https://cloud.tencent.com/document/product/614/38614">配置时间格式</a> 文档</li></ul>
+     * @param TimeFormat <p>时间字段的格式，参考c语言的strftime函数对于时间的格式说明输出参数</p><ul><li>参考 <a href="https://cloud.tencent.com/document/product/614/38614">配置时间格式</a> 文档</li></ul>
      */
     public void setTimeFormat(String TimeFormat) {
         this.TimeFormat = TimeFormat;
     }
 
     /**
-     * Get 分隔符类型日志的分隔符，只有LogType为delimiter_log时有效 
-     * @return Delimiter 分隔符类型日志的分隔符，只有LogType为delimiter_log时有效
+     * Get <p>分隔符类型日志的分隔符，只有LogType为delimiter_log时有效</p> 
+     * @return Delimiter <p>分隔符类型日志的分隔符，只有LogType为delimiter_log时有效</p>
      */
     public String getDelimiter() {
         return this.Delimiter;
     }
 
     /**
-     * Set 分隔符类型日志的分隔符，只有LogType为delimiter_log时有效
-     * @param Delimiter 分隔符类型日志的分隔符，只有LogType为delimiter_log时有效
+     * Set <p>分隔符类型日志的分隔符，只有LogType为delimiter_log时有效</p>
+     * @param Delimiter <p>分隔符类型日志的分隔符，只有LogType为delimiter_log时有效</p>
      */
     public void setDelimiter(String Delimiter) {
         this.Delimiter = Delimiter;
     }
 
     /**
-     * Get 整条日志匹配规则，只有LogType为fullregex_log时有效 
-     * @return LogRegex 整条日志匹配规则，只有LogType为fullregex_log时有效
+     * Get <p>整条日志匹配规则，只有LogType为fullregex_log时有效</p> 
+     * @return LogRegex <p>整条日志匹配规则，只有LogType为fullregex_log时有效</p>
      */
     public String getLogRegex() {
         return this.LogRegex;
     }
 
     /**
-     * Set 整条日志匹配规则，只有LogType为fullregex_log时有效
-     * @param LogRegex 整条日志匹配规则，只有LogType为fullregex_log时有效
+     * Set <p>整条日志匹配规则，只有LogType为fullregex_log时有效</p>
+     * @param LogRegex <p>整条日志匹配规则，只有LogType为fullregex_log时有效</p>
      */
     public void setLogRegex(String LogRegex) {
         this.LogRegex = LogRegex;
     }
 
     /**
-     * Get 行首匹配规则，只有LogType为multiline_log或fullregex_log时有效 
-     * @return BeginRegex 行首匹配规则，只有LogType为multiline_log或fullregex_log时有效
+     * Get <p>行首匹配规则，只有LogType为multiline_log或fullregex_log时有效</p> 
+     * @return BeginRegex <p>行首匹配规则，只有LogType为multiline_log或fullregex_log时有效</p>
      */
     public String getBeginRegex() {
         return this.BeginRegex;
     }
 
     /**
-     * Set 行首匹配规则，只有LogType为multiline_log或fullregex_log时有效
-     * @param BeginRegex 行首匹配规则，只有LogType为multiline_log或fullregex_log时有效
+     * Set <p>行首匹配规则，只有LogType为multiline_log或fullregex_log时有效</p>
+     * @param BeginRegex <p>行首匹配规则，只有LogType为multiline_log或fullregex_log时有效</p>
      */
     public void setBeginRegex(String BeginRegex) {
         this.BeginRegex = BeginRegex;
     }
 
     /**
-     * Get 取的每个字段的key名字，为空的key代表丢弃这个字段，只有LogType为delimiter_log时有效，json_log的日志使用json本身的key。限制100个。
+     * Get <p>取的每个字段的key名字，为空的key代表丢弃这个字段，只有LogType为delimiter_log时有效，json_log的日志使用json本身的key。限制100个。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Keys 取的每个字段的key名字，为空的key代表丢弃这个字段，只有LogType为delimiter_log时有效，json_log的日志使用json本身的key。限制100个。
+     * @return Keys <p>取的每个字段的key名字，为空的key代表丢弃这个字段，只有LogType为delimiter_log时有效，json_log的日志使用json本身的key。限制100个。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getKeys() {
@@ -302,9 +267,9 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
     }
 
     /**
-     * Set 取的每个字段的key名字，为空的key代表丢弃这个字段，只有LogType为delimiter_log时有效，json_log的日志使用json本身的key。限制100个。
+     * Set <p>取的每个字段的key名字，为空的key代表丢弃这个字段，只有LogType为delimiter_log时有效，json_log的日志使用json本身的key。限制100个。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Keys 取的每个字段的key名字，为空的key代表丢弃这个字段，只有LogType为delimiter_log时有效，json_log的日志使用json本身的key。限制100个。
+     * @param Keys <p>取的每个字段的key名字，为空的key代表丢弃这个字段，只有LogType为delimiter_log时有效，json_log的日志使用json本身的key。限制100个。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeys(String [] Keys) {
@@ -312,33 +277,25 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
     }
 
     /**
-     * Get 日志过滤规则列表（旧版），需要过滤日志的key，及其对应的regex。
- 注意：2.9.3及以上版本LogListener ，建议使用AdvanceFilterRules配置日志过滤规则。
- 
-     * @return FilterKeyRegex 日志过滤规则列表（旧版），需要过滤日志的key，及其对应的regex。
- 注意：2.9.3及以上版本LogListener ，建议使用AdvanceFilterRules配置日志过滤规则。
-
+     * Get <p>日志过滤规则列表（旧版），需要过滤日志的key，及其对应的regex。<br> 注意：2.9.3及以上版本LogListener ，建议使用AdvanceFilterRules配置日志过滤规则。</p> 
+     * @return FilterKeyRegex <p>日志过滤规则列表（旧版），需要过滤日志的key，及其对应的regex。<br> 注意：2.9.3及以上版本LogListener ，建议使用AdvanceFilterRules配置日志过滤规则。</p>
      */
     public KeyRegexInfo [] getFilterKeyRegex() {
         return this.FilterKeyRegex;
     }
 
     /**
-     * Set 日志过滤规则列表（旧版），需要过滤日志的key，及其对应的regex。
- 注意：2.9.3及以上版本LogListener ，建议使用AdvanceFilterRules配置日志过滤规则。
-
-     * @param FilterKeyRegex 日志过滤规则列表（旧版），需要过滤日志的key，及其对应的regex。
- 注意：2.9.3及以上版本LogListener ，建议使用AdvanceFilterRules配置日志过滤规则。
-
+     * Set <p>日志过滤规则列表（旧版），需要过滤日志的key，及其对应的regex。<br> 注意：2.9.3及以上版本LogListener ，建议使用AdvanceFilterRules配置日志过滤规则。</p>
+     * @param FilterKeyRegex <p>日志过滤规则列表（旧版），需要过滤日志的key，及其对应的regex。<br> 注意：2.9.3及以上版本LogListener ，建议使用AdvanceFilterRules配置日志过滤规则。</p>
      */
     public void setFilterKeyRegex(KeyRegexInfo [] FilterKeyRegex) {
         this.FilterKeyRegex = FilterKeyRegex;
     }
 
     /**
-     * Get 解析失败日志是否上传，true表示上传，false表示不上传
+     * Get <p>解析失败日志是否上传，true表示上传，false表示不上传</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UnMatchUpLoadSwitch 解析失败日志是否上传，true表示上传，false表示不上传
+     * @return UnMatchUpLoadSwitch <p>解析失败日志是否上传，true表示上传，false表示不上传</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getUnMatchUpLoadSwitch() {
@@ -346,9 +303,9 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
     }
 
     /**
-     * Set 解析失败日志是否上传，true表示上传，false表示不上传
+     * Set <p>解析失败日志是否上传，true表示上传，false表示不上传</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UnMatchUpLoadSwitch 解析失败日志是否上传，true表示上传，false表示不上传
+     * @param UnMatchUpLoadSwitch <p>解析失败日志是否上传，true表示上传，false表示不上传</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnMatchUpLoadSwitch(Boolean UnMatchUpLoadSwitch) {
@@ -356,9 +313,9 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
     }
 
     /**
-     * Get 失败日志的key，当UnMatchUpLoadSwitch为true时必填
+     * Get <p>失败日志的key，当UnMatchUpLoadSwitch为true时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UnMatchLogKey 失败日志的key，当UnMatchUpLoadSwitch为true时必填
+     * @return UnMatchLogKey <p>失败日志的key，当UnMatchUpLoadSwitch为true时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUnMatchLogKey() {
@@ -366,9 +323,9 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
     }
 
     /**
-     * Set 失败日志的key，当UnMatchUpLoadSwitch为true时必填
+     * Set <p>失败日志的key，当UnMatchUpLoadSwitch为true时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UnMatchLogKey 失败日志的key，当UnMatchUpLoadSwitch为true时必填
+     * @param UnMatchLogKey <p>失败日志的key，当UnMatchUpLoadSwitch为true时必填</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnMatchLogKey(String UnMatchLogKey) {
@@ -376,13 +333,9 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
     }
 
     /**
-     * Get 增量采集模式下的回溯数据量，默认：-1（全量采集）；其他非负数表示增量采集（从最新的位置，往前采集${Backtracking}字节（Byte）的日志）最大支持1073741824（1G）。
-注意：
-- COS导入不支持此字段。
+     * Get <p>增量采集模式下的回溯数据量，默认：-1（全量采集）；其他非负数表示增量采集（从最新的位置，往前采集${Backtracking}字节（Byte）的日志）最大支持1073741824（1G）。<br>注意：</p><ul><li>COS导入不支持此字段。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Backtracking 增量采集模式下的回溯数据量，默认：-1（全量采集）；其他非负数表示增量采集（从最新的位置，往前采集${Backtracking}字节（Byte）的日志）最大支持1073741824（1G）。
-注意：
-- COS导入不支持此字段。
+     * @return Backtracking <p>增量采集模式下的回溯数据量，默认：-1（全量采集）；其他非负数表示增量采集（从最新的位置，往前采集${Backtracking}字节（Byte）的日志）最大支持1073741824（1G）。<br>注意：</p><ul><li>COS导入不支持此字段。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBacktracking() {
@@ -390,13 +343,9 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
     }
 
     /**
-     * Set 增量采集模式下的回溯数据量，默认：-1（全量采集）；其他非负数表示增量采集（从最新的位置，往前采集${Backtracking}字节（Byte）的日志）最大支持1073741824（1G）。
-注意：
-- COS导入不支持此字段。
+     * Set <p>增量采集模式下的回溯数据量，默认：-1（全量采集）；其他非负数表示增量采集（从最新的位置，往前采集${Backtracking}字节（Byte）的日志）最大支持1073741824（1G）。<br>注意：</p><ul><li>COS导入不支持此字段。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Backtracking 增量采集模式下的回溯数据量，默认：-1（全量采集）；其他非负数表示增量采集（从最新的位置，往前采集${Backtracking}字节（Byte）的日志）最大支持1073741824（1G）。
-注意：
-- COS导入不支持此字段。
+     * @param Backtracking <p>增量采集模式下的回溯数据量，默认：-1（全量采集）；其他非负数表示增量采集（从最新的位置，往前采集${Backtracking}字节（Byte）的日志）最大支持1073741824（1G）。<br>注意：</p><ul><li>COS导入不支持此字段。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBacktracking(Long Backtracking) {
@@ -404,39 +353,25 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
     }
 
     /**
-     * Get 是否为Gbk编码。 0：否；1：是。
-注意
-- 目前取0值时，表示UTF-8编码
-- COS导入不支持此字段。 
-     * @return IsGBK 是否为Gbk编码。 0：否；1：是。
-注意
-- 目前取0值时，表示UTF-8编码
-- COS导入不支持此字段。
+     * Get <p>是否为Gbk编码。 0：否；1：是。<br>注意</p><ul><li>目前取0值时，表示UTF-8编码</li><li>COS导入不支持此字段。</li></ul> 
+     * @return IsGBK <p>是否为Gbk编码。 0：否；1：是。<br>注意</p><ul><li>目前取0值时，表示UTF-8编码</li><li>COS导入不支持此字段。</li></ul>
      */
     public Long getIsGBK() {
         return this.IsGBK;
     }
 
     /**
-     * Set 是否为Gbk编码。 0：否；1：是。
-注意
-- 目前取0值时，表示UTF-8编码
-- COS导入不支持此字段。
-     * @param IsGBK 是否为Gbk编码。 0：否；1：是。
-注意
-- 目前取0值时，表示UTF-8编码
-- COS导入不支持此字段。
+     * Set <p>是否为Gbk编码。 0：否；1：是。<br>注意</p><ul><li>目前取0值时，表示UTF-8编码</li><li>COS导入不支持此字段。</li></ul>
+     * @param IsGBK <p>是否为Gbk编码。 0：否；1：是。<br>注意</p><ul><li>目前取0值时，表示UTF-8编码</li><li>COS导入不支持此字段。</li></ul>
      */
     public void setIsGBK(Long IsGBK) {
         this.IsGBK = IsGBK;
     }
 
     /**
-     * Get 是否为标准json。  0：否； 1：是。
-- 标准json指采集器使用业界标准开源解析器进行json解析，非标json指采集器使用CLS自研json解析器进行解析，两种解析器没有本质区别，建议客户使用标准json进行解析。
+     * Get <p>是否为标准json。  0：否； 1：是。</p><ul><li>标准json指采集器使用业界标准开源解析器进行json解析，非标json指采集器使用CLS自研json解析器进行解析，两种解析器没有本质区别，建议客户使用标准json进行解析。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return JsonStandard 是否为标准json。  0：否； 1：是。
-- 标准json指采集器使用业界标准开源解析器进行json解析，非标json指采集器使用CLS自研json解析器进行解析，两种解析器没有本质区别，建议客户使用标准json进行解析。
+     * @return JsonStandard <p>是否为标准json。  0：否； 1：是。</p><ul><li>标准json指采集器使用业界标准开源解析器进行json解析，非标json指采集器使用CLS自研json解析器进行解析，两种解析器没有本质区别，建议客户使用标准json进行解析。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getJsonStandard() {
@@ -444,11 +379,9 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
     }
 
     /**
-     * Set 是否为标准json。  0：否； 1：是。
-- 标准json指采集器使用业界标准开源解析器进行json解析，非标json指采集器使用CLS自研json解析器进行解析，两种解析器没有本质区别，建议客户使用标准json进行解析。
+     * Set <p>是否为标准json。  0：否； 1：是。</p><ul><li>标准json指采集器使用业界标准开源解析器进行json解析，非标json指采集器使用CLS自研json解析器进行解析，两种解析器没有本质区别，建议客户使用标准json进行解析。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param JsonStandard 是否为标准json。  0：否； 1：是。
-- 标准json指采集器使用业界标准开源解析器进行json解析，非标json指采集器使用CLS自研json解析器进行解析，两种解析器没有本质区别，建议客户使用标准json进行解析。
+     * @param JsonStandard <p>是否为标准json。  0：否； 1：是。</p><ul><li>标准json指采集器使用业界标准开源解析器进行json解析，非标json指采集器使用CLS自研json解析器进行解析，两种解析器没有本质区别，建议客户使用标准json进行解析。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJsonStandard(Long JsonStandard) {
@@ -456,231 +389,121 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
     }
 
     /**
-     * Get syslog传输协议，取值为tcp或者udp，只有在LogType为service_syslog时生效，其余类型无需填写。
-注意：
-- 该字段适用于：创建采集规则配置、修改采集规则配置。
-- COS导入不支持此字段。 
-     * @return Protocol syslog传输协议，取值为tcp或者udp，只有在LogType为service_syslog时生效，其余类型无需填写。
-注意：
-- 该字段适用于：创建采集规则配置、修改采集规则配置。
-- COS导入不支持此字段。
+     * Get <p>syslog传输协议，取值为tcp或者udp，只有在LogType为service_syslog时生效，其余类型无需填写。<br>注意：</p><ul><li>该字段适用于：创建采集规则配置、修改采集规则配置。</li><li>COS导入不支持此字段。</li></ul> 
+     * @return Protocol <p>syslog传输协议，取值为tcp或者udp，只有在LogType为service_syslog时生效，其余类型无需填写。<br>注意：</p><ul><li>该字段适用于：创建采集规则配置、修改采集规则配置。</li><li>COS导入不支持此字段。</li></ul>
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set syslog传输协议，取值为tcp或者udp，只有在LogType为service_syslog时生效，其余类型无需填写。
-注意：
-- 该字段适用于：创建采集规则配置、修改采集规则配置。
-- COS导入不支持此字段。
-     * @param Protocol syslog传输协议，取值为tcp或者udp，只有在LogType为service_syslog时生效，其余类型无需填写。
-注意：
-- 该字段适用于：创建采集规则配置、修改采集规则配置。
-- COS导入不支持此字段。
+     * Set <p>syslog传输协议，取值为tcp或者udp，只有在LogType为service_syslog时生效，其余类型无需填写。<br>注意：</p><ul><li>该字段适用于：创建采集规则配置、修改采集规则配置。</li><li>COS导入不支持此字段。</li></ul>
+     * @param Protocol <p>syslog传输协议，取值为tcp或者udp，只有在LogType为service_syslog时生效，其余类型无需填写。<br>注意：</p><ul><li>该字段适用于：创建采集规则配置、修改采集规则配置。</li><li>COS导入不支持此字段。</li></ul>
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]，只有在LogType为service_syslog时生效，其余类型无需填写。
-注意：
-- 该字段适用于：创建采集规则配置、修改采集规则配置。
-- COS导入不支持此字段。 
-     * @return Address syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]，只有在LogType为service_syslog时生效，其余类型无需填写。
-注意：
-- 该字段适用于：创建采集规则配置、修改采集规则配置。
-- COS导入不支持此字段。
+     * Get <p>syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]，只有在LogType为service_syslog时生效，其余类型无需填写。<br>注意：</p><ul><li>该字段适用于：创建采集规则配置、修改采集规则配置。</li><li>COS导入不支持此字段。</li></ul> 
+     * @return Address <p>syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]，只有在LogType为service_syslog时生效，其余类型无需填写。<br>注意：</p><ul><li>该字段适用于：创建采集规则配置、修改采集规则配置。</li><li>COS导入不支持此字段。</li></ul>
      */
     public String getAddress() {
         return this.Address;
     }
 
     /**
-     * Set syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]，只有在LogType为service_syslog时生效，其余类型无需填写。
-注意：
-- 该字段适用于：创建采集规则配置、修改采集规则配置。
-- COS导入不支持此字段。
-     * @param Address syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]，只有在LogType为service_syslog时生效，其余类型无需填写。
-注意：
-- 该字段适用于：创建采集规则配置、修改采集规则配置。
-- COS导入不支持此字段。
+     * Set <p>syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]，只有在LogType为service_syslog时生效，其余类型无需填写。<br>注意：</p><ul><li>该字段适用于：创建采集规则配置、修改采集规则配置。</li><li>COS导入不支持此字段。</li></ul>
+     * @param Address <p>syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]，只有在LogType为service_syslog时生效，其余类型无需填写。<br>注意：</p><ul><li>该字段适用于：创建采集规则配置、修改采集规则配置。</li><li>COS导入不支持此字段。</li></ul>
      */
     public void setAddress(String Address) {
         this.Address = Address;
     }
 
     /**
-     * Get rfc3164：指定系统日志采集使用RFC3164协议解析日志。
-rfc5424：指定系统日志采集使用RFC5424协议解析日志。
-auto：自动匹配rfc3164或者rfc5424其中一种协议。
-只有在LogType为service_syslog时生效，其余类型无需填写。
-注意：
-- 该字段适用于：创建采集规则配置、修改采集规则配置
-- COS导入不支持此字段。 
-     * @return ParseProtocol rfc3164：指定系统日志采集使用RFC3164协议解析日志。
-rfc5424：指定系统日志采集使用RFC5424协议解析日志。
-auto：自动匹配rfc3164或者rfc5424其中一种协议。
-只有在LogType为service_syslog时生效，其余类型无需填写。
-注意：
-- 该字段适用于：创建采集规则配置、修改采集规则配置
-- COS导入不支持此字段。
+     * Get <p>rfc3164：指定系统日志采集使用RFC3164协议解析日志。<br>rfc5424：指定系统日志采集使用RFC5424协议解析日志。<br>auto：自动匹配rfc3164或者rfc5424其中一种协议。<br>只有在LogType为service_syslog时生效，其余类型无需填写。<br>注意：</p><ul><li>该字段适用于：创建采集规则配置、修改采集规则配置</li><li>COS导入不支持此字段。</li></ul> 
+     * @return ParseProtocol <p>rfc3164：指定系统日志采集使用RFC3164协议解析日志。<br>rfc5424：指定系统日志采集使用RFC5424协议解析日志。<br>auto：自动匹配rfc3164或者rfc5424其中一种协议。<br>只有在LogType为service_syslog时生效，其余类型无需填写。<br>注意：</p><ul><li>该字段适用于：创建采集规则配置、修改采集规则配置</li><li>COS导入不支持此字段。</li></ul>
      */
     public String getParseProtocol() {
         return this.ParseProtocol;
     }
 
     /**
-     * Set rfc3164：指定系统日志采集使用RFC3164协议解析日志。
-rfc5424：指定系统日志采集使用RFC5424协议解析日志。
-auto：自动匹配rfc3164或者rfc5424其中一种协议。
-只有在LogType为service_syslog时生效，其余类型无需填写。
-注意：
-- 该字段适用于：创建采集规则配置、修改采集规则配置
-- COS导入不支持此字段。
-     * @param ParseProtocol rfc3164：指定系统日志采集使用RFC3164协议解析日志。
-rfc5424：指定系统日志采集使用RFC5424协议解析日志。
-auto：自动匹配rfc3164或者rfc5424其中一种协议。
-只有在LogType为service_syslog时生效，其余类型无需填写。
-注意：
-- 该字段适用于：创建采集规则配置、修改采集规则配置
-- COS导入不支持此字段。
+     * Set <p>rfc3164：指定系统日志采集使用RFC3164协议解析日志。<br>rfc5424：指定系统日志采集使用RFC5424协议解析日志。<br>auto：自动匹配rfc3164或者rfc5424其中一种协议。<br>只有在LogType为service_syslog时生效，其余类型无需填写。<br>注意：</p><ul><li>该字段适用于：创建采集规则配置、修改采集规则配置</li><li>COS导入不支持此字段。</li></ul>
+     * @param ParseProtocol <p>rfc3164：指定系统日志采集使用RFC3164协议解析日志。<br>rfc5424：指定系统日志采集使用RFC5424协议解析日志。<br>auto：自动匹配rfc3164或者rfc5424其中一种协议。<br>只有在LogType为service_syslog时生效，其余类型无需填写。<br>注意：</p><ul><li>该字段适用于：创建采集规则配置、修改采集规则配置</li><li>COS导入不支持此字段。</li></ul>
      */
     public void setParseProtocol(String ParseProtocol) {
         this.ParseProtocol = ParseProtocol;
     }
 
     /**
-     * Get 元数据类型。0: 不使用元数据信息；1:使用机器组元数据；2:使用用户自定义元数据；3:使用采集配置路径。
-注意：
-- COS导入不支持此字段。 
-     * @return MetadataType 元数据类型。0: 不使用元数据信息；1:使用机器组元数据；2:使用用户自定义元数据；3:使用采集配置路径。
-注意：
-- COS导入不支持此字段。
+     * Get <p>元数据类型。0: 不使用元数据信息；1:使用机器组元数据；2:使用用户自定义元数据；3:使用采集配置路径。<br>注意：</p><ul><li>COS导入不支持此字段。</li></ul> 
+     * @return MetadataType <p>元数据类型。0: 不使用元数据信息；1:使用机器组元数据；2:使用用户自定义元数据；3:使用采集配置路径。<br>注意：</p><ul><li>COS导入不支持此字段。</li></ul>
      */
     public Long getMetadataType() {
         return this.MetadataType;
     }
 
     /**
-     * Set 元数据类型。0: 不使用元数据信息；1:使用机器组元数据；2:使用用户自定义元数据；3:使用采集配置路径。
-注意：
-- COS导入不支持此字段。
-     * @param MetadataType 元数据类型。0: 不使用元数据信息；1:使用机器组元数据；2:使用用户自定义元数据；3:使用采集配置路径。
-注意：
-- COS导入不支持此字段。
+     * Set <p>元数据类型。0: 不使用元数据信息；1:使用机器组元数据；2:使用用户自定义元数据；3:使用采集配置路径。<br>注意：</p><ul><li>COS导入不支持此字段。</li></ul>
+     * @param MetadataType <p>元数据类型。0: 不使用元数据信息；1:使用机器组元数据；2:使用用户自定义元数据；3:使用采集配置路径。<br>注意：</p><ul><li>COS导入不支持此字段。</li></ul>
      */
     public void setMetadataType(Long MetadataType) {
         this.MetadataType = MetadataType;
     }
 
     /**
-     * Get 采集配置路径正则表达式。
-
-```
-请用"()"标识路径中目标字段对应的正则表达式，解析时将"()"视为捕获组，并以__TAG__.{i}:{目标字段}的形式与日志一起上报，其中i为捕获组的序号。
-若不希望以序号为键名，可以通过命名捕获组"(?<{键名}>{正则})"自定义键名，并以__TAG__.{键名}:{目标字段}的形式与日志一起上报。最多支持5个捕获组
-```
-
-注意：
-- MetadataType为3时必填。
-- COS导入不支持此字段。 
-     * @return PathRegex 采集配置路径正则表达式。
-
-```
-请用"()"标识路径中目标字段对应的正则表达式，解析时将"()"视为捕获组，并以__TAG__.{i}:{目标字段}的形式与日志一起上报，其中i为捕获组的序号。
-若不希望以序号为键名，可以通过命名捕获组"(?<{键名}>{正则})"自定义键名，并以__TAG__.{键名}:{目标字段}的形式与日志一起上报。最多支持5个捕获组
-```
-
-注意：
-- MetadataType为3时必填。
-- COS导入不支持此字段。
+     * Get <p>采集配置路径正则表达式。</p><p><pre><code>请用&quot;()&quot;标识路径中目标字段对应的正则表达式，解析时将&quot;()&quot;视为捕获组，并以__TAG__.{i}:{目标字段}的形式与日志一起上报，其中i为捕获组的序号。若不希望以序号为键名，可以通过命名捕获组&quot;(?&lt;{键名}&gt;{正则})&quot;自定义键名，并以__TAG__.{键名}:{目标字段}的形式与日志一起上报。最多支持5个捕获组</code></pre></p><p>注意：</p><ul><li>MetadataType为3时必填。</li><li>COS导入不支持此字段。</li></ul> 
+     * @return PathRegex <p>采集配置路径正则表达式。</p><p><pre><code>请用&quot;()&quot;标识路径中目标字段对应的正则表达式，解析时将&quot;()&quot;视为捕获组，并以__TAG__.{i}:{目标字段}的形式与日志一起上报，其中i为捕获组的序号。若不希望以序号为键名，可以通过命名捕获组&quot;(?&lt;{键名}&gt;{正则})&quot;自定义键名，并以__TAG__.{键名}:{目标字段}的形式与日志一起上报。最多支持5个捕获组</code></pre></p><p>注意：</p><ul><li>MetadataType为3时必填。</li><li>COS导入不支持此字段。</li></ul>
      */
     public String getPathRegex() {
         return this.PathRegex;
     }
 
     /**
-     * Set 采集配置路径正则表达式。
-
-```
-请用"()"标识路径中目标字段对应的正则表达式，解析时将"()"视为捕获组，并以__TAG__.{i}:{目标字段}的形式与日志一起上报，其中i为捕获组的序号。
-若不希望以序号为键名，可以通过命名捕获组"(?<{键名}>{正则})"自定义键名，并以__TAG__.{键名}:{目标字段}的形式与日志一起上报。最多支持5个捕获组
-```
-
-注意：
-- MetadataType为3时必填。
-- COS导入不支持此字段。
-     * @param PathRegex 采集配置路径正则表达式。
-
-```
-请用"()"标识路径中目标字段对应的正则表达式，解析时将"()"视为捕获组，并以__TAG__.{i}:{目标字段}的形式与日志一起上报，其中i为捕获组的序号。
-若不希望以序号为键名，可以通过命名捕获组"(?<{键名}>{正则})"自定义键名，并以__TAG__.{键名}:{目标字段}的形式与日志一起上报。最多支持5个捕获组
-```
-
-注意：
-- MetadataType为3时必填。
-- COS导入不支持此字段。
+     * Set <p>采集配置路径正则表达式。</p><p><pre><code>请用&quot;()&quot;标识路径中目标字段对应的正则表达式，解析时将&quot;()&quot;视为捕获组，并以__TAG__.{i}:{目标字段}的形式与日志一起上报，其中i为捕获组的序号。若不希望以序号为键名，可以通过命名捕获组&quot;(?&lt;{键名}&gt;{正则})&quot;自定义键名，并以__TAG__.{键名}:{目标字段}的形式与日志一起上报。最多支持5个捕获组</code></pre></p><p>注意：</p><ul><li>MetadataType为3时必填。</li><li>COS导入不支持此字段。</li></ul>
+     * @param PathRegex <p>采集配置路径正则表达式。</p><p><pre><code>请用&quot;()&quot;标识路径中目标字段对应的正则表达式，解析时将&quot;()&quot;视为捕获组，并以__TAG__.{i}:{目标字段}的形式与日志一起上报，其中i为捕获组的序号。若不希望以序号为键名，可以通过命名捕获组&quot;(?&lt;{键名}&gt;{正则})&quot;自定义键名，并以__TAG__.{键名}:{目标字段}的形式与日志一起上报。最多支持5个捕获组</code></pre></p><p>注意：</p><ul><li>MetadataType为3时必填。</li><li>COS导入不支持此字段。</li></ul>
      */
     public void setPathRegex(String PathRegex) {
         this.PathRegex = PathRegex;
     }
 
     /**
-     * Get 用户自定义元数据信息。
-注意：
-- MetadataType为2时必填。
-- COS导入不支持此字段。 
-     * @return MetaTags 用户自定义元数据信息。
-注意：
-- MetadataType为2时必填。
-- COS导入不支持此字段。
+     * Get <p>用户自定义元数据信息。<br>注意：</p><ul><li>MetadataType为2时必填。</li><li>COS导入不支持此字段。</li></ul> 
+     * @return MetaTags <p>用户自定义元数据信息。<br>注意：</p><ul><li>MetadataType为2时必填。</li><li>COS导入不支持此字段。</li></ul>
      */
     public MetaTagInfo [] getMetaTags() {
         return this.MetaTags;
     }
 
     /**
-     * Set 用户自定义元数据信息。
-注意：
-- MetadataType为2时必填。
-- COS导入不支持此字段。
-     * @param MetaTags 用户自定义元数据信息。
-注意：
-- MetadataType为2时必填。
-- COS导入不支持此字段。
+     * Set <p>用户自定义元数据信息。<br>注意：</p><ul><li>MetadataType为2时必填。</li><li>COS导入不支持此字段。</li></ul>
+     * @param MetaTags <p>用户自定义元数据信息。<br>注意：</p><ul><li>MetadataType为2时必填。</li><li>COS导入不支持此字段。</li></ul>
      */
     public void setMetaTags(MetaTagInfo [] MetaTags) {
         this.MetaTags = MetaTags;
     }
 
     /**
-     * Get Windows事件日志采集规则，只有在LogType为windows_event_log时生效，其余类型无需填写。 
-     * @return EventLogRules Windows事件日志采集规则，只有在LogType为windows_event_log时生效，其余类型无需填写。
+     * Get <p>Windows事件日志采集规则，只有在LogType为windows_event_log时生效，其余类型无需填写。</p> 
+     * @return EventLogRules <p>Windows事件日志采集规则，只有在LogType为windows_event_log时生效，其余类型无需填写。</p>
      */
     public EventLog [] getEventLogRules() {
         return this.EventLogRules;
     }
 
     /**
-     * Set Windows事件日志采集规则，只有在LogType为windows_event_log时生效，其余类型无需填写。
-     * @param EventLogRules Windows事件日志采集规则，只有在LogType为windows_event_log时生效，其余类型无需填写。
+     * Set <p>Windows事件日志采集规则，只有在LogType为windows_event_log时生效，其余类型无需填写。</p>
+     * @param EventLogRules <p>Windows事件日志采集规则，只有在LogType为windows_event_log时生效，其余类型无需填写。</p>
      */
     public void setEventLogRules(EventLog [] EventLogRules) {
         this.EventLogRules = EventLogRules;
     }
 
     /**
-     * Get 日志过滤规则列表（新版）。
-注意：
-- 2.9.3以下版本LogListener不支持， 请使用FilterKeyRegex配置日志过滤规则。
-- 自建k8s采集配置（CreateConfigExtra、ModifyConfigExtra）不支持此字段。
+     * Get <p>日志过滤规则列表（新版）。<br>注意：</p><ul><li>2.9.3以下版本LogListener不支持， 请使用FilterKeyRegex配置日志过滤规则。</li><li>自建k8s采集配置（CreateConfigExtra、ModifyConfigExtra）不支持此字段。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AdvanceFilterRules 日志过滤规则列表（新版）。
-注意：
-- 2.9.3以下版本LogListener不支持， 请使用FilterKeyRegex配置日志过滤规则。
-- 自建k8s采集配置（CreateConfigExtra、ModifyConfigExtra）不支持此字段。
+     * @return AdvanceFilterRules <p>日志过滤规则列表（新版）。<br>注意：</p><ul><li>2.9.3以下版本LogListener不支持， 请使用FilterKeyRegex配置日志过滤规则。</li><li>自建k8s采集配置（CreateConfigExtra、ModifyConfigExtra）不支持此字段。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AdvanceFilterRuleInfo [] getAdvanceFilterRules() {
@@ -688,19 +511,29 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
     }
 
     /**
-     * Set 日志过滤规则列表（新版）。
-注意：
-- 2.9.3以下版本LogListener不支持， 请使用FilterKeyRegex配置日志过滤规则。
-- 自建k8s采集配置（CreateConfigExtra、ModifyConfigExtra）不支持此字段。
+     * Set <p>日志过滤规则列表（新版）。<br>注意：</p><ul><li>2.9.3以下版本LogListener不支持， 请使用FilterKeyRegex配置日志过滤规则。</li><li>自建k8s采集配置（CreateConfigExtra、ModifyConfigExtra）不支持此字段。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AdvanceFilterRules 日志过滤规则列表（新版）。
-注意：
-- 2.9.3以下版本LogListener不支持， 请使用FilterKeyRegex配置日志过滤规则。
-- 自建k8s采集配置（CreateConfigExtra、ModifyConfigExtra）不支持此字段。
+     * @param AdvanceFilterRules <p>日志过滤规则列表（新版）。<br>注意：</p><ul><li>2.9.3以下版本LogListener不支持， 请使用FilterKeyRegex配置日志过滤规则。</li><li>自建k8s采集配置（CreateConfigExtra、ModifyConfigExtra）不支持此字段。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdvanceFilterRules(AdvanceFilterRuleInfo [] AdvanceFilterRules) {
         this.AdvanceFilterRules = AdvanceFilterRules;
+    }
+
+    /**
+     * Get <p>原始日志的键名称(Key)；所有原始日志， 均以您指定的键名称（Key），原始日志内容作为值（Value）进行上传，为空时表示不开启原始日志上传。</p><ul><li>COS导入不支持此字段。</li></ul> 
+     * @return RawLogKey <p>原始日志的键名称(Key)；所有原始日志， 均以您指定的键名称（Key），原始日志内容作为值（Value）进行上传，为空时表示不开启原始日志上传。</p><ul><li>COS导入不支持此字段。</li></ul>
+     */
+    public String getRawLogKey() {
+        return this.RawLogKey;
+    }
+
+    /**
+     * Set <p>原始日志的键名称(Key)；所有原始日志， 均以您指定的键名称（Key），原始日志内容作为值（Value）进行上传，为空时表示不开启原始日志上传。</p><ul><li>COS导入不支持此字段。</li></ul>
+     * @param RawLogKey <p>原始日志的键名称(Key)；所有原始日志， 均以您指定的键名称（Key），原始日志内容作为值（Value）进行上传，为空时表示不开启原始日志上传。</p><ul><li>COS导入不支持此字段。</li></ul>
+     */
+    public void setRawLogKey(String RawLogKey) {
+        this.RawLogKey = RawLogKey;
     }
 
     public ExtractRuleInfo() {
@@ -786,6 +619,9 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
                 this.AdvanceFilterRules[i] = new AdvanceFilterRuleInfo(source.AdvanceFilterRules[i]);
             }
         }
+        if (source.RawLogKey != null) {
+            this.RawLogKey = new String(source.RawLogKey);
+        }
     }
 
 
@@ -813,6 +649,7 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
         this.setParamArrayObj(map, prefix + "MetaTags.", this.MetaTags);
         this.setParamArrayObj(map, prefix + "EventLogRules.", this.EventLogRules);
         this.setParamArrayObj(map, prefix + "AdvanceFilterRules.", this.AdvanceFilterRules);
+        this.setParamSimple(map, prefix + "RawLogKey", this.RawLogKey);
 
     }
 }

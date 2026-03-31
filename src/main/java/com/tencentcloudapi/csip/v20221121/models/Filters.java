@@ -25,7 +25,6 @@ public class Filters extends AbstractModel {
 
     /**
     * 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class Filters extends AbstractModel {
 
     /**
     * 实例ID内容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Values")
     @Expose
@@ -41,17 +39,14 @@ public class Filters extends AbstractModel {
 
     /**
     * 模糊匹配
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExactMatch")
     @Expose
     private String ExactMatch;
 
     /**
-     * Get 实例ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例ID 
      * @return Name 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -59,19 +54,15 @@ public class Filters extends AbstractModel {
 
     /**
      * Set 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 实例ID内容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例ID内容 
      * @return Values 实例ID内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getValues() {
         return this.Values;
@@ -79,19 +70,15 @@ public class Filters extends AbstractModel {
 
     /**
      * Set 实例ID内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Values 实例ID内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValues(String [] Values) {
         this.Values = Values;
     }
 
     /**
-     * Get 模糊匹配
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 模糊匹配 
      * @return ExactMatch 模糊匹配
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExactMatch() {
         return this.ExactMatch;
@@ -99,9 +86,7 @@ public class Filters extends AbstractModel {
 
     /**
      * Set 模糊匹配
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExactMatch 模糊匹配
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExactMatch(String ExactMatch) {
         this.ExactMatch = ExactMatch;
