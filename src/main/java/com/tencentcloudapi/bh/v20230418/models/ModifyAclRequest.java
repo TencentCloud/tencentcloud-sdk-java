@@ -52,56 +52,56 @@ public class ModifyAclRequest extends AbstractModel {
     private Long Id;
 
     /**
-    * 是否开启剪贴板文件上行
+    * 是否开启剪贴板文件上行，不传时默认为false
     */
     @SerializedName("AllowClipFileUp")
     @Expose
     private Boolean AllowClipFileUp;
 
     /**
-    * 是否开启剪贴板文件下行
+    * 是否开启剪贴板文件下行，不传时默认为false
     */
     @SerializedName("AllowClipFileDown")
     @Expose
     private Boolean AllowClipFileDown;
 
     /**
-    * 是否开启剪贴板文本（含图片）上行
+    * 是否开启剪贴板文本（含图片）上行，不传时默认为false
     */
     @SerializedName("AllowClipTextUp")
     @Expose
     private Boolean AllowClipTextUp;
 
     /**
-    * 是否开启剪贴板文本（含图片）下行
+    * 是否开启剪贴板文本（含图片）下行，不传时默认为false
     */
     @SerializedName("AllowClipTextDown")
     @Expose
     private Boolean AllowClipTextDown;
 
     /**
-    * 是否开启文件传输上传
+    * 是否开启文件传输上传，不传时默认为false
     */
     @SerializedName("AllowFileUp")
     @Expose
     private Boolean AllowFileUp;
 
     /**
-    * 文件传输上传大小限制（预留参数，目前暂未使用）
+    * 文件传输上传大小限制（预留参数，目前暂未使用），不传时默认为0
     */
     @SerializedName("MaxFileUpSize")
     @Expose
     private Long MaxFileUpSize;
 
     /**
-    * 是否开启文件传输下载
+    * 是否开启文件传输下载，不传时默认为false
     */
     @SerializedName("AllowFileDown")
     @Expose
     private Boolean AllowFileDown;
 
     /**
-    * 文件传输下载大小限制（预留参数，目前暂未使用）
+    * 文件传输下载大小限制（预留参数，目前暂未使用），不传时默认为0
     */
     @SerializedName("MaxFileDownSize")
     @Expose
@@ -129,70 +129,70 @@ public class ModifyAclRequest extends AbstractModel {
     private Long [] DeviceIdSet;
 
     /**
-    * 关联的应用资产ID集合
+    * 关联的应用资产ID集合，不传时表示不选择任何应用资产
     */
     @SerializedName("AppAssetIdSet")
     @Expose
     private Long [] AppAssetIdSet;
 
     /**
-    * 关联的资产组ID
+    * 关联的资产组ID，不传时表示不选择任何资产组
     */
     @SerializedName("DeviceGroupIdSet")
     @Expose
     private Long [] DeviceGroupIdSet;
 
     /**
-    * 关联的账号
+    * 关联的资产账号，不传时表示不选择任何资产账号
     */
     @SerializedName("AccountSet")
     @Expose
     private String [] AccountSet;
 
     /**
-    * 关联的高危命令模板ID
+    * 关联的高危命令模板ID，不传时表示不选择任何模板
     */
     @SerializedName("CmdTemplateIdSet")
     @Expose
     private Long [] CmdTemplateIdSet;
 
     /**
-    * 关联高危DB模板ID
+    * 关联高危DB模板ID，不传时表示不选择任何模板
     */
     @SerializedName("ACTemplateIdSet")
     @Expose
     private String [] ACTemplateIdSet;
 
     /**
-    * 是否开启 RDP 磁盘映射文件上传
+    * 是否开启 RDP 磁盘映射文件上传，不传时默认为false
     */
     @SerializedName("AllowDiskFileUp")
     @Expose
     private Boolean AllowDiskFileUp;
 
     /**
-    * 是否开启 RDP 磁盘映射文件下载
+    * 是否开启 RDP 磁盘映射文件下载，不传时默认为false
     */
     @SerializedName("AllowDiskFileDown")
     @Expose
     private Boolean AllowDiskFileDown;
 
     /**
-    * 是否开启rz sz文件上传
+    * 是否开启rz sz文件上传，不传时默认为false
     */
     @SerializedName("AllowShellFileUp")
     @Expose
     private Boolean AllowShellFileUp;
 
     /**
-    * 是否开启rz sz文件下载
+    * 是否开启rz sz文件下载，不传时默认为false
     */
     @SerializedName("AllowShellFileDown")
     @Expose
     private Boolean AllowShellFileDown;
 
     /**
-    * 是否开启 SFTP 文件删除
+    * 是否开启 SFTP 文件删除，不传时默认为false
     */
     @SerializedName("AllowFileDel")
     @Expose
@@ -222,21 +222,21 @@ public class ModifyAclRequest extends AbstractModel {
     private String DepartmentId;
 
     /**
-    * 是否允许使用访问串
+    * 是否允许使用访问串，不传时默认为true
     */
     @SerializedName("AllowAccessCredential")
     @Expose
     private Boolean AllowAccessCredential;
 
     /**
-    * 是否允许键盘记录
+    * 是否允许键盘记录，不传时默认为false
     */
     @SerializedName("AllowKeyboardLogger")
     @Expose
     private Boolean AllowKeyboardLogger;
 
     /**
-    * 访问串有效期最大时长，秒数，允许使用访问串时需大于0且必须为86400整数倍
+    * 访问串有效期最大时长，秒数，允许使用访问串时需大于0且必须为86400整数倍，不传时默认为9999天对应的秒数
     */
     @SerializedName("MaxAccessCredentialDuration")
     @Expose
@@ -307,128 +307,128 @@ public class ModifyAclRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否开启剪贴板文件上行 
-     * @return AllowClipFileUp 是否开启剪贴板文件上行
+     * Get 是否开启剪贴板文件上行，不传时默认为false 
+     * @return AllowClipFileUp 是否开启剪贴板文件上行，不传时默认为false
      */
     public Boolean getAllowClipFileUp() {
         return this.AllowClipFileUp;
     }
 
     /**
-     * Set 是否开启剪贴板文件上行
-     * @param AllowClipFileUp 是否开启剪贴板文件上行
+     * Set 是否开启剪贴板文件上行，不传时默认为false
+     * @param AllowClipFileUp 是否开启剪贴板文件上行，不传时默认为false
      */
     public void setAllowClipFileUp(Boolean AllowClipFileUp) {
         this.AllowClipFileUp = AllowClipFileUp;
     }
 
     /**
-     * Get 是否开启剪贴板文件下行 
-     * @return AllowClipFileDown 是否开启剪贴板文件下行
+     * Get 是否开启剪贴板文件下行，不传时默认为false 
+     * @return AllowClipFileDown 是否开启剪贴板文件下行，不传时默认为false
      */
     public Boolean getAllowClipFileDown() {
         return this.AllowClipFileDown;
     }
 
     /**
-     * Set 是否开启剪贴板文件下行
-     * @param AllowClipFileDown 是否开启剪贴板文件下行
+     * Set 是否开启剪贴板文件下行，不传时默认为false
+     * @param AllowClipFileDown 是否开启剪贴板文件下行，不传时默认为false
      */
     public void setAllowClipFileDown(Boolean AllowClipFileDown) {
         this.AllowClipFileDown = AllowClipFileDown;
     }
 
     /**
-     * Get 是否开启剪贴板文本（含图片）上行 
-     * @return AllowClipTextUp 是否开启剪贴板文本（含图片）上行
+     * Get 是否开启剪贴板文本（含图片）上行，不传时默认为false 
+     * @return AllowClipTextUp 是否开启剪贴板文本（含图片）上行，不传时默认为false
      */
     public Boolean getAllowClipTextUp() {
         return this.AllowClipTextUp;
     }
 
     /**
-     * Set 是否开启剪贴板文本（含图片）上行
-     * @param AllowClipTextUp 是否开启剪贴板文本（含图片）上行
+     * Set 是否开启剪贴板文本（含图片）上行，不传时默认为false
+     * @param AllowClipTextUp 是否开启剪贴板文本（含图片）上行，不传时默认为false
      */
     public void setAllowClipTextUp(Boolean AllowClipTextUp) {
         this.AllowClipTextUp = AllowClipTextUp;
     }
 
     /**
-     * Get 是否开启剪贴板文本（含图片）下行 
-     * @return AllowClipTextDown 是否开启剪贴板文本（含图片）下行
+     * Get 是否开启剪贴板文本（含图片）下行，不传时默认为false 
+     * @return AllowClipTextDown 是否开启剪贴板文本（含图片）下行，不传时默认为false
      */
     public Boolean getAllowClipTextDown() {
         return this.AllowClipTextDown;
     }
 
     /**
-     * Set 是否开启剪贴板文本（含图片）下行
-     * @param AllowClipTextDown 是否开启剪贴板文本（含图片）下行
+     * Set 是否开启剪贴板文本（含图片）下行，不传时默认为false
+     * @param AllowClipTextDown 是否开启剪贴板文本（含图片）下行，不传时默认为false
      */
     public void setAllowClipTextDown(Boolean AllowClipTextDown) {
         this.AllowClipTextDown = AllowClipTextDown;
     }
 
     /**
-     * Get 是否开启文件传输上传 
-     * @return AllowFileUp 是否开启文件传输上传
+     * Get 是否开启文件传输上传，不传时默认为false 
+     * @return AllowFileUp 是否开启文件传输上传，不传时默认为false
      */
     public Boolean getAllowFileUp() {
         return this.AllowFileUp;
     }
 
     /**
-     * Set 是否开启文件传输上传
-     * @param AllowFileUp 是否开启文件传输上传
+     * Set 是否开启文件传输上传，不传时默认为false
+     * @param AllowFileUp 是否开启文件传输上传，不传时默认为false
      */
     public void setAllowFileUp(Boolean AllowFileUp) {
         this.AllowFileUp = AllowFileUp;
     }
 
     /**
-     * Get 文件传输上传大小限制（预留参数，目前暂未使用） 
-     * @return MaxFileUpSize 文件传输上传大小限制（预留参数，目前暂未使用）
+     * Get 文件传输上传大小限制（预留参数，目前暂未使用），不传时默认为0 
+     * @return MaxFileUpSize 文件传输上传大小限制（预留参数，目前暂未使用），不传时默认为0
      */
     public Long getMaxFileUpSize() {
         return this.MaxFileUpSize;
     }
 
     /**
-     * Set 文件传输上传大小限制（预留参数，目前暂未使用）
-     * @param MaxFileUpSize 文件传输上传大小限制（预留参数，目前暂未使用）
+     * Set 文件传输上传大小限制（预留参数，目前暂未使用），不传时默认为0
+     * @param MaxFileUpSize 文件传输上传大小限制（预留参数，目前暂未使用），不传时默认为0
      */
     public void setMaxFileUpSize(Long MaxFileUpSize) {
         this.MaxFileUpSize = MaxFileUpSize;
     }
 
     /**
-     * Get 是否开启文件传输下载 
-     * @return AllowFileDown 是否开启文件传输下载
+     * Get 是否开启文件传输下载，不传时默认为false 
+     * @return AllowFileDown 是否开启文件传输下载，不传时默认为false
      */
     public Boolean getAllowFileDown() {
         return this.AllowFileDown;
     }
 
     /**
-     * Set 是否开启文件传输下载
-     * @param AllowFileDown 是否开启文件传输下载
+     * Set 是否开启文件传输下载，不传时默认为false
+     * @param AllowFileDown 是否开启文件传输下载，不传时默认为false
      */
     public void setAllowFileDown(Boolean AllowFileDown) {
         this.AllowFileDown = AllowFileDown;
     }
 
     /**
-     * Get 文件传输下载大小限制（预留参数，目前暂未使用） 
-     * @return MaxFileDownSize 文件传输下载大小限制（预留参数，目前暂未使用）
+     * Get 文件传输下载大小限制（预留参数，目前暂未使用），不传时默认为0 
+     * @return MaxFileDownSize 文件传输下载大小限制（预留参数，目前暂未使用），不传时默认为0
      */
     public Long getMaxFileDownSize() {
         return this.MaxFileDownSize;
     }
 
     /**
-     * Set 文件传输下载大小限制（预留参数，目前暂未使用）
-     * @param MaxFileDownSize 文件传输下载大小限制（预留参数，目前暂未使用）
+     * Set 文件传输下载大小限制（预留参数，目前暂未使用），不传时默认为0
+     * @param MaxFileDownSize 文件传输下载大小限制（预留参数，目前暂未使用），不传时默认为0
      */
     public void setMaxFileDownSize(Long MaxFileDownSize) {
         this.MaxFileDownSize = MaxFileDownSize;
@@ -483,160 +483,160 @@ public class ModifyAclRequest extends AbstractModel {
     }
 
     /**
-     * Get 关联的应用资产ID集合 
-     * @return AppAssetIdSet 关联的应用资产ID集合
+     * Get 关联的应用资产ID集合，不传时表示不选择任何应用资产 
+     * @return AppAssetIdSet 关联的应用资产ID集合，不传时表示不选择任何应用资产
      */
     public Long [] getAppAssetIdSet() {
         return this.AppAssetIdSet;
     }
 
     /**
-     * Set 关联的应用资产ID集合
-     * @param AppAssetIdSet 关联的应用资产ID集合
+     * Set 关联的应用资产ID集合，不传时表示不选择任何应用资产
+     * @param AppAssetIdSet 关联的应用资产ID集合，不传时表示不选择任何应用资产
      */
     public void setAppAssetIdSet(Long [] AppAssetIdSet) {
         this.AppAssetIdSet = AppAssetIdSet;
     }
 
     /**
-     * Get 关联的资产组ID 
-     * @return DeviceGroupIdSet 关联的资产组ID
+     * Get 关联的资产组ID，不传时表示不选择任何资产组 
+     * @return DeviceGroupIdSet 关联的资产组ID，不传时表示不选择任何资产组
      */
     public Long [] getDeviceGroupIdSet() {
         return this.DeviceGroupIdSet;
     }
 
     /**
-     * Set 关联的资产组ID
-     * @param DeviceGroupIdSet 关联的资产组ID
+     * Set 关联的资产组ID，不传时表示不选择任何资产组
+     * @param DeviceGroupIdSet 关联的资产组ID，不传时表示不选择任何资产组
      */
     public void setDeviceGroupIdSet(Long [] DeviceGroupIdSet) {
         this.DeviceGroupIdSet = DeviceGroupIdSet;
     }
 
     /**
-     * Get 关联的账号 
-     * @return AccountSet 关联的账号
+     * Get 关联的资产账号，不传时表示不选择任何资产账号 
+     * @return AccountSet 关联的资产账号，不传时表示不选择任何资产账号
      */
     public String [] getAccountSet() {
         return this.AccountSet;
     }
 
     /**
-     * Set 关联的账号
-     * @param AccountSet 关联的账号
+     * Set 关联的资产账号，不传时表示不选择任何资产账号
+     * @param AccountSet 关联的资产账号，不传时表示不选择任何资产账号
      */
     public void setAccountSet(String [] AccountSet) {
         this.AccountSet = AccountSet;
     }
 
     /**
-     * Get 关联的高危命令模板ID 
-     * @return CmdTemplateIdSet 关联的高危命令模板ID
+     * Get 关联的高危命令模板ID，不传时表示不选择任何模板 
+     * @return CmdTemplateIdSet 关联的高危命令模板ID，不传时表示不选择任何模板
      */
     public Long [] getCmdTemplateIdSet() {
         return this.CmdTemplateIdSet;
     }
 
     /**
-     * Set 关联的高危命令模板ID
-     * @param CmdTemplateIdSet 关联的高危命令模板ID
+     * Set 关联的高危命令模板ID，不传时表示不选择任何模板
+     * @param CmdTemplateIdSet 关联的高危命令模板ID，不传时表示不选择任何模板
      */
     public void setCmdTemplateIdSet(Long [] CmdTemplateIdSet) {
         this.CmdTemplateIdSet = CmdTemplateIdSet;
     }
 
     /**
-     * Get 关联高危DB模板ID 
-     * @return ACTemplateIdSet 关联高危DB模板ID
+     * Get 关联高危DB模板ID，不传时表示不选择任何模板 
+     * @return ACTemplateIdSet 关联高危DB模板ID，不传时表示不选择任何模板
      */
     public String [] getACTemplateIdSet() {
         return this.ACTemplateIdSet;
     }
 
     /**
-     * Set 关联高危DB模板ID
-     * @param ACTemplateIdSet 关联高危DB模板ID
+     * Set 关联高危DB模板ID，不传时表示不选择任何模板
+     * @param ACTemplateIdSet 关联高危DB模板ID，不传时表示不选择任何模板
      */
     public void setACTemplateIdSet(String [] ACTemplateIdSet) {
         this.ACTemplateIdSet = ACTemplateIdSet;
     }
 
     /**
-     * Get 是否开启 RDP 磁盘映射文件上传 
-     * @return AllowDiskFileUp 是否开启 RDP 磁盘映射文件上传
+     * Get 是否开启 RDP 磁盘映射文件上传，不传时默认为false 
+     * @return AllowDiskFileUp 是否开启 RDP 磁盘映射文件上传，不传时默认为false
      */
     public Boolean getAllowDiskFileUp() {
         return this.AllowDiskFileUp;
     }
 
     /**
-     * Set 是否开启 RDP 磁盘映射文件上传
-     * @param AllowDiskFileUp 是否开启 RDP 磁盘映射文件上传
+     * Set 是否开启 RDP 磁盘映射文件上传，不传时默认为false
+     * @param AllowDiskFileUp 是否开启 RDP 磁盘映射文件上传，不传时默认为false
      */
     public void setAllowDiskFileUp(Boolean AllowDiskFileUp) {
         this.AllowDiskFileUp = AllowDiskFileUp;
     }
 
     /**
-     * Get 是否开启 RDP 磁盘映射文件下载 
-     * @return AllowDiskFileDown 是否开启 RDP 磁盘映射文件下载
+     * Get 是否开启 RDP 磁盘映射文件下载，不传时默认为false 
+     * @return AllowDiskFileDown 是否开启 RDP 磁盘映射文件下载，不传时默认为false
      */
     public Boolean getAllowDiskFileDown() {
         return this.AllowDiskFileDown;
     }
 
     /**
-     * Set 是否开启 RDP 磁盘映射文件下载
-     * @param AllowDiskFileDown 是否开启 RDP 磁盘映射文件下载
+     * Set 是否开启 RDP 磁盘映射文件下载，不传时默认为false
+     * @param AllowDiskFileDown 是否开启 RDP 磁盘映射文件下载，不传时默认为false
      */
     public void setAllowDiskFileDown(Boolean AllowDiskFileDown) {
         this.AllowDiskFileDown = AllowDiskFileDown;
     }
 
     /**
-     * Get 是否开启rz sz文件上传 
-     * @return AllowShellFileUp 是否开启rz sz文件上传
+     * Get 是否开启rz sz文件上传，不传时默认为false 
+     * @return AllowShellFileUp 是否开启rz sz文件上传，不传时默认为false
      */
     public Boolean getAllowShellFileUp() {
         return this.AllowShellFileUp;
     }
 
     /**
-     * Set 是否开启rz sz文件上传
-     * @param AllowShellFileUp 是否开启rz sz文件上传
+     * Set 是否开启rz sz文件上传，不传时默认为false
+     * @param AllowShellFileUp 是否开启rz sz文件上传，不传时默认为false
      */
     public void setAllowShellFileUp(Boolean AllowShellFileUp) {
         this.AllowShellFileUp = AllowShellFileUp;
     }
 
     /**
-     * Get 是否开启rz sz文件下载 
-     * @return AllowShellFileDown 是否开启rz sz文件下载
+     * Get 是否开启rz sz文件下载，不传时默认为false 
+     * @return AllowShellFileDown 是否开启rz sz文件下载，不传时默认为false
      */
     public Boolean getAllowShellFileDown() {
         return this.AllowShellFileDown;
     }
 
     /**
-     * Set 是否开启rz sz文件下载
-     * @param AllowShellFileDown 是否开启rz sz文件下载
+     * Set 是否开启rz sz文件下载，不传时默认为false
+     * @param AllowShellFileDown 是否开启rz sz文件下载，不传时默认为false
      */
     public void setAllowShellFileDown(Boolean AllowShellFileDown) {
         this.AllowShellFileDown = AllowShellFileDown;
     }
 
     /**
-     * Get 是否开启 SFTP 文件删除 
-     * @return AllowFileDel 是否开启 SFTP 文件删除
+     * Get 是否开启 SFTP 文件删除，不传时默认为false 
+     * @return AllowFileDel 是否开启 SFTP 文件删除，不传时默认为false
      */
     public Boolean getAllowFileDel() {
         return this.AllowFileDel;
     }
 
     /**
-     * Set 是否开启 SFTP 文件删除
-     * @param AllowFileDel 是否开启 SFTP 文件删除
+     * Set 是否开启 SFTP 文件删除，不传时默认为false
+     * @param AllowFileDel 是否开启 SFTP 文件删除，不传时默认为false
      */
     public void setAllowFileDel(Boolean AllowFileDel) {
         this.AllowFileDel = AllowFileDel;
@@ -699,48 +699,48 @@ public class ModifyAclRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否允许使用访问串 
-     * @return AllowAccessCredential 是否允许使用访问串
+     * Get 是否允许使用访问串，不传时默认为true 
+     * @return AllowAccessCredential 是否允许使用访问串，不传时默认为true
      */
     public Boolean getAllowAccessCredential() {
         return this.AllowAccessCredential;
     }
 
     /**
-     * Set 是否允许使用访问串
-     * @param AllowAccessCredential 是否允许使用访问串
+     * Set 是否允许使用访问串，不传时默认为true
+     * @param AllowAccessCredential 是否允许使用访问串，不传时默认为true
      */
     public void setAllowAccessCredential(Boolean AllowAccessCredential) {
         this.AllowAccessCredential = AllowAccessCredential;
     }
 
     /**
-     * Get 是否允许键盘记录 
-     * @return AllowKeyboardLogger 是否允许键盘记录
+     * Get 是否允许键盘记录，不传时默认为false 
+     * @return AllowKeyboardLogger 是否允许键盘记录，不传时默认为false
      */
     public Boolean getAllowKeyboardLogger() {
         return this.AllowKeyboardLogger;
     }
 
     /**
-     * Set 是否允许键盘记录
-     * @param AllowKeyboardLogger 是否允许键盘记录
+     * Set 是否允许键盘记录，不传时默认为false
+     * @param AllowKeyboardLogger 是否允许键盘记录，不传时默认为false
      */
     public void setAllowKeyboardLogger(Boolean AllowKeyboardLogger) {
         this.AllowKeyboardLogger = AllowKeyboardLogger;
     }
 
     /**
-     * Get 访问串有效期最大时长，秒数，允许使用访问串时需大于0且必须为86400整数倍 
-     * @return MaxAccessCredentialDuration 访问串有效期最大时长，秒数，允许使用访问串时需大于0且必须为86400整数倍
+     * Get 访问串有效期最大时长，秒数，允许使用访问串时需大于0且必须为86400整数倍，不传时默认为9999天对应的秒数 
+     * @return MaxAccessCredentialDuration 访问串有效期最大时长，秒数，允许使用访问串时需大于0且必须为86400整数倍，不传时默认为9999天对应的秒数
      */
     public Long getMaxAccessCredentialDuration() {
         return this.MaxAccessCredentialDuration;
     }
 
     /**
-     * Set 访问串有效期最大时长，秒数，允许使用访问串时需大于0且必须为86400整数倍
-     * @param MaxAccessCredentialDuration 访问串有效期最大时长，秒数，允许使用访问串时需大于0且必须为86400整数倍
+     * Set 访问串有效期最大时长，秒数，允许使用访问串时需大于0且必须为86400整数倍，不传时默认为9999天对应的秒数
+     * @param MaxAccessCredentialDuration 访问串有效期最大时长，秒数，允许使用访问串时需大于0且必须为86400整数倍，不传时默认为9999天对应的秒数
      */
     public void setMaxAccessCredentialDuration(Long MaxAccessCredentialDuration) {
         this.MaxAccessCredentialDuration = MaxAccessCredentialDuration;

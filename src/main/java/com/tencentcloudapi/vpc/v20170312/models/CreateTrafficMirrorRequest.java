@@ -59,7 +59,7 @@ public class CreateTrafficMirrorRequest extends AbstractModel {
     private String Direction;
 
     /**
-    * 流量镜像的采集对象。
+    * 流量镜像的采集对象 (最多支持20个采集对象)。
     */
     @SerializedName("CollectorSrcs")
     @Expose
@@ -106,6 +106,20 @@ public class CreateTrafficMirrorRequest extends AbstractModel {
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
+
+    /**
+    * 流量镜像入站过滤规则。
+    */
+    @SerializedName("IngressFilterRules")
+    @Expose
+    private TrafficMirrorFilter [] IngressFilterRules;
+
+    /**
+    * 流量镜像出站过滤规则。
+    */
+    @SerializedName("EgressFilterRules")
+    @Expose
+    private TrafficMirrorFilter [] EgressFilterRules;
 
     /**
      * Get VPC实例ID。 
@@ -188,16 +202,16 @@ public class CreateTrafficMirrorRequest extends AbstractModel {
     }
 
     /**
-     * Get 流量镜像的采集对象。 
-     * @return CollectorSrcs 流量镜像的采集对象。
+     * Get 流量镜像的采集对象 (最多支持20个采集对象)。 
+     * @return CollectorSrcs 流量镜像的采集对象 (最多支持20个采集对象)。
      */
     public String [] getCollectorSrcs() {
         return this.CollectorSrcs;
     }
 
     /**
-     * Set 流量镜像的采集对象。
-     * @param CollectorSrcs 流量镜像的采集对象。
+     * Set 流量镜像的采集对象 (最多支持20个采集对象)。
+     * @param CollectorSrcs 流量镜像的采集对象 (最多支持20个采集对象)。
      */
     public void setCollectorSrcs(String [] CollectorSrcs) {
         this.CollectorSrcs = CollectorSrcs;
@@ -299,6 +313,38 @@ public class CreateTrafficMirrorRequest extends AbstractModel {
         this.Tags = Tags;
     }
 
+    /**
+     * Get 流量镜像入站过滤规则。 
+     * @return IngressFilterRules 流量镜像入站过滤规则。
+     */
+    public TrafficMirrorFilter [] getIngressFilterRules() {
+        return this.IngressFilterRules;
+    }
+
+    /**
+     * Set 流量镜像入站过滤规则。
+     * @param IngressFilterRules 流量镜像入站过滤规则。
+     */
+    public void setIngressFilterRules(TrafficMirrorFilter [] IngressFilterRules) {
+        this.IngressFilterRules = IngressFilterRules;
+    }
+
+    /**
+     * Get 流量镜像出站过滤规则。 
+     * @return EgressFilterRules 流量镜像出站过滤规则。
+     */
+    public TrafficMirrorFilter [] getEgressFilterRules() {
+        return this.EgressFilterRules;
+    }
+
+    /**
+     * Set 流量镜像出站过滤规则。
+     * @param EgressFilterRules 流量镜像出站过滤规则。
+     */
+    public void setEgressFilterRules(TrafficMirrorFilter [] EgressFilterRules) {
+        this.EgressFilterRules = EgressFilterRules;
+    }
+
     public CreateTrafficMirrorRequest() {
     }
 
@@ -352,6 +398,18 @@ public class CreateTrafficMirrorRequest extends AbstractModel {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.IngressFilterRules != null) {
+            this.IngressFilterRules = new TrafficMirrorFilter[source.IngressFilterRules.length];
+            for (int i = 0; i < source.IngressFilterRules.length; i++) {
+                this.IngressFilterRules[i] = new TrafficMirrorFilter(source.IngressFilterRules[i]);
+            }
+        }
+        if (source.EgressFilterRules != null) {
+            this.EgressFilterRules = new TrafficMirrorFilter[source.EgressFilterRules.length];
+            for (int i = 0; i < source.EgressFilterRules.length; i++) {
+                this.EgressFilterRules[i] = new TrafficMirrorFilter(source.EgressFilterRules[i]);
+            }
+        }
     }
 
 
@@ -371,6 +429,8 @@ public class CreateTrafficMirrorRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamArrayObj(map, prefix + "IngressFilterRules.", this.IngressFilterRules);
+        this.setParamArrayObj(map, prefix + "EgressFilterRules.", this.EgressFilterRules);
 
     }
 }

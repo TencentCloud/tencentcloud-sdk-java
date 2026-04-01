@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeInstanceResponse extends AbstractModel {
 
     /**
-    * 实例描述信息
+    * <p>实例描述信息</p>
     */
     @SerializedName("InstanceInfo")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实例描述信息 
-     * @return InstanceInfo 实例描述信息
+     * Get <p>实例描述信息</p> 
+     * @return InstanceInfo <p>实例描述信息</p>
      */
     public InstanceInfo getInstanceInfo() {
         return this.InstanceInfo;
     }
 
     /**
-     * Set 实例描述信息
-     * @param InstanceInfo 实例描述信息
+     * Set <p>实例描述信息</p>
+     * @param InstanceInfo <p>实例描述信息</p>
      */
     public void setInstanceInfo(InstanceInfo InstanceInfo) {
         this.InstanceInfo = InstanceInfo;

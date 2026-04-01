@@ -234,6 +234,20 @@ log：观察
     private String UpdateTime;
 
     /**
+    * 目的值的类型，与TargetType或DestType所代表的目的类型含义有所不同，如目的类型是template,但template分ip模板和域名模板，故需通过DestValueType进一步区分
+    */
+    @SerializedName("DestValueType")
+    @Expose
+    private String DestValueType;
+
+    /**
+    * 规则分区，1最前分区，2中间分区，3最后分区，增删改查规则时无需传入此参数
+    */
+    @SerializedName("RulePartition")
+    @Expose
+    private Long RulePartition;
+
+    /**
      * Get 访问源示例：
 net：IP/CIDR(192.168.0.2) 
      * @return SourceContent 访问源示例：
@@ -749,6 +763,38 @@ log：观察
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get 目的值的类型，与TargetType或DestType所代表的目的类型含义有所不同，如目的类型是template,但template分ip模板和域名模板，故需通过DestValueType进一步区分 
+     * @return DestValueType 目的值的类型，与TargetType或DestType所代表的目的类型含义有所不同，如目的类型是template,但template分ip模板和域名模板，故需通过DestValueType进一步区分
+     */
+    public String getDestValueType() {
+        return this.DestValueType;
+    }
+
+    /**
+     * Set 目的值的类型，与TargetType或DestType所代表的目的类型含义有所不同，如目的类型是template,但template分ip模板和域名模板，故需通过DestValueType进一步区分
+     * @param DestValueType 目的值的类型，与TargetType或DestType所代表的目的类型含义有所不同，如目的类型是template,但template分ip模板和域名模板，故需通过DestValueType进一步区分
+     */
+    public void setDestValueType(String DestValueType) {
+        this.DestValueType = DestValueType;
+    }
+
+    /**
+     * Get 规则分区，1最前分区，2中间分区，3最后分区，增删改查规则时无需传入此参数 
+     * @return RulePartition 规则分区，1最前分区，2中间分区，3最后分区，增删改查规则时无需传入此参数
+     */
+    public Long getRulePartition() {
+        return this.RulePartition;
+    }
+
+    /**
+     * Set 规则分区，1最前分区，2中间分区，3最后分区，增删改查规则时无需传入此参数
+     * @param RulePartition 规则分区，1最前分区，2中间分区，3最后分区，增删改查规则时无需传入此参数
+     */
+    public void setRulePartition(Long RulePartition) {
+        this.RulePartition = RulePartition;
+    }
+
     public VpcRuleItem() {
     }
 
@@ -841,6 +887,12 @@ log：观察
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.DestValueType != null) {
+            this.DestValueType = new String(source.DestValueType);
+        }
+        if (source.RulePartition != null) {
+            this.RulePartition = new Long(source.RulePartition);
+        }
     }
 
 
@@ -875,6 +927,8 @@ log：观察
         this.setParamSimple(map, prefix + "Invalid", this.Invalid);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "DestValueType", this.DestValueType);
+        this.setParamSimple(map, prefix + "RulePartition", this.RulePartition);
 
     }
 }

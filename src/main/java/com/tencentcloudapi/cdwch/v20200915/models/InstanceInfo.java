@@ -24,1306 +24,1314 @@ import java.util.HashMap;
 public class InstanceInfo extends AbstractModel {
 
     /**
-    * 集群实例ID, "cdw-xxxx" 字符串类型
+    * <p>集群实例ID, &quot;cdw-xxxx&quot; 字符串类型</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 集群实例名称
+    * <p>集群实例名称</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 状态,
-Init 创建中; Serving 运行中； 
-Deleted已销毁；Deleting 销毁中；
-Modify 集群变更中；
+    * <p>状态,<br>Init 创建中; Serving 运行中；<br>Deleted已销毁；Deleting 销毁中；<br>Modify 集群变更中；</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 版本
+    * <p>版本</p>
     */
     @SerializedName("Version")
     @Expose
     private String Version;
 
     /**
-    * 地域, ap-guangzhou
+    * <p>地域, ap-guangzhou</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 可用区， ap-guangzhou-3
+    * <p>可用区， ap-guangzhou-3</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 私有网络名称
+    * <p>私有网络名称</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 子网名称
+    * <p>子网名称</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 付费类型，"hour", "prepay"
+    * <p>付费类型，&quot;hour&quot;, &quot;prepay&quot;</p>
     */
     @SerializedName("PayMode")
     @Expose
     private String PayMode;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 过期时间
+    * <p>过期时间</p>
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * 数据节点描述信息
+    * <p>数据节点描述信息</p>
     */
     @SerializedName("MasterSummary")
     @Expose
     private NodesSummary MasterSummary;
 
     /**
-    * zookeeper节点描述信息
+    * <p>zookeeper节点描述信息</p>
     */
     @SerializedName("CommonSummary")
     @Expose
     private NodesSummary CommonSummary;
 
     /**
-    * 高可用,"true" "false"
+    * <p>高可用,&quot;true&quot; &quot;false&quot;</p>
     */
     @SerializedName("HA")
     @Expose
     private String HA;
 
     /**
-    * 访问地址，例如 "10.0.0.1:9000"
+    * <p>访问地址，例如 &quot;10.0.0.1:9000&quot;</p>
     */
     @SerializedName("AccessInfo")
     @Expose
     private String AccessInfo;
 
     /**
-    * 记录ID，数值型
+    * <p>记录ID，数值型</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * regionId, 表示地域
+    * <p>regionId, 表示地域</p>
     */
     @SerializedName("RegionId")
     @Expose
     private Long RegionId;
 
     /**
-    * 可用区说明，例如 "广州二区"
+    * <p>可用区说明，例如 &quot;广州二区&quot;</p>
     */
     @SerializedName("ZoneDesc")
     @Expose
     private String ZoneDesc;
 
     /**
-    * 错误流程说明信息
+    * <p>错误流程说明信息</p>
     */
     @SerializedName("FlowMsg")
     @Expose
     private String FlowMsg;
 
     /**
-    * 状态描述，例如“运行中”等
+    * <p>状态描述，例如“运行中”等</p>
     */
     @SerializedName("StatusDesc")
     @Expose
     private String StatusDesc;
 
     /**
-    * 自动续费标记
+    * <p>自动续费标记</p>
     */
     @SerializedName("RenewFlag")
     @Expose
     private Boolean RenewFlag;
 
     /**
-    * 标签列表
+    * <p>标签列表</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 监控信息
+    * <p>监控信息</p>
     */
     @SerializedName("Monitor")
     @Expose
     private String Monitor;
 
     /**
-    * 是否开通日志
+    * <p>是否开通日志</p>
     */
     @SerializedName("HasClsTopic")
     @Expose
     private Boolean HasClsTopic;
 
     /**
-    * 日志主题ID
+    * <p>日志主题ID</p>
     */
     @SerializedName("ClsTopicId")
     @Expose
     private String ClsTopicId;
 
     /**
-    * 日志集ID
+    * <p>日志集ID</p>
     */
     @SerializedName("ClsLogSetId")
     @Expose
     private String ClsLogSetId;
 
     /**
-    * 是否支持xml配置管理
+    * <p>是否支持xml配置管理</p>
     */
     @SerializedName("EnableXMLConfig")
     @Expose
     private Long EnableXMLConfig;
 
     /**
-    * 区域
+    * <p>区域</p>
     */
     @SerializedName("RegionDesc")
     @Expose
     private String RegionDesc;
 
     /**
-    * 弹性网卡地址
+    * <p>弹性网卡地址</p>
     */
     @SerializedName("Eip")
     @Expose
     private String Eip;
 
     /**
-    * 冷热分层系数
+    * <p>冷热分层系数</p>
     */
     @SerializedName("CosMoveFactor")
     @Expose
     private Long CosMoveFactor;
 
     /**
-    * external/local/yunti
+    * <p>external/local/yunti</p>
     */
     @SerializedName("Kind")
     @Expose
     private String Kind;
 
     /**
-    * 是否弹性ck
+    * <p>是否弹性ck</p>
     */
     @SerializedName("IsElastic")
     @Expose
     private Boolean IsElastic;
 
     /**
-    * 集群详细状态
+    * <p>集群详细状态</p>
     */
     @SerializedName("InstanceStateInfo")
     @Expose
     private InstanceStateInfo InstanceStateInfo;
 
     /**
-    * ZK高可用
+    * <p>ZK高可用</p>
     */
     @SerializedName("HAZk")
     @Expose
     private Boolean HAZk;
 
     /**
-    * 挂载盘,默认0:没有类型；1:裸盘;2:lvm
+    * <p>挂载盘,默认0:没有类型；1:裸盘;2:lvm</p>
     */
     @SerializedName("MountDiskType")
     @Expose
     private Long MountDiskType;
 
     /**
-    * chproxy连接ip
+    * <p>chproxy连接ip</p>
     */
     @SerializedName("CHProxyVip")
     @Expose
     private String CHProxyVip;
 
     /**
-    * cos buket的名字
+    * <p>cos buket的名字</p>
     */
     @SerializedName("CosBucketName")
     @Expose
     private String CosBucketName;
 
     /**
-    * 是否可以挂载云盘
+    * <p>是否可以挂载云盘</p>
     */
     @SerializedName("CanAttachCbs")
     @Expose
     private Boolean CanAttachCbs;
 
     /**
-    * 是否可以挂载云盘阵列
+    * <p>是否可以挂载云盘阵列</p>
     */
     @SerializedName("CanAttachCbsLvm")
     @Expose
     private Boolean CanAttachCbsLvm;
 
     /**
-    * 是否可以挂载cos
+    * <p>是否可以挂载cos</p>
     */
     @SerializedName("CanAttachCos")
     @Expose
     private Boolean CanAttachCos;
 
     /**
-    * 服务信息
+    * <p>服务信息</p>
     */
     @SerializedName("Components")
     @Expose
     private ServiceInfo [] Components;
 
     /**
-    * 可升级的内核版本
+    * <p>可升级的内核版本</p>
     */
     @SerializedName("UpgradeVersions")
     @Expose
     private String UpgradeVersions;
 
     /**
-    * ex-index
+    * <p>ex-index</p>
     */
     @SerializedName("EsIndexId")
     @Expose
     private String EsIndexId;
 
     /**
-    * username
+    * <p>username</p>
     */
     @SerializedName("EsIndexUsername")
     @Expose
     private String EsIndexUsername;
 
     /**
-    * password
+    * <p>password</p>
     */
     @SerializedName("EsIndexPassword")
     @Expose
     private String EsIndexPassword;
 
     /**
-    * true
+    * <p>true</p>
     */
     @SerializedName("HasEsIndex")
     @Expose
     private Boolean HasEsIndex;
 
     /**
-    * true
+    * <p>true</p>
     */
     @SerializedName("IsSecondaryZone")
     @Expose
     private Boolean IsSecondaryZone;
 
     /**
-    * desc
+    * <p>desc</p>
     */
     @SerializedName("SecondaryZoneInfo")
     @Expose
     private String SecondaryZoneInfo;
 
     /**
-    * 是否clickhouse-keeper
+    * <p>是否clickhouse-keeper</p>
     */
     @SerializedName("ClickHouseKeeper")
     @Expose
     private Boolean ClickHouseKeeper;
 
     /**
-    * 实例扩展信息
+    * <p>实例扩展信息</p>
     */
     @SerializedName("Details")
     @Expose
     private InstanceDetail Details;
 
     /**
-    * 安全组白名单
+    * <p>安全组白名单</p>
     */
     @SerializedName("IsWhiteSGs")
     @Expose
     private Boolean IsWhiteSGs;
 
     /**
-    * 绑定的安全组
+    * <p>绑定的安全组</p>
     */
     @SerializedName("BindSGs")
     @Expose
     private String [] BindSGs;
 
     /**
-    * 是否开启公网clb
+    * <p>是否开启公网clb</p>
     */
     @SerializedName("HasPublicCloudClb")
     @Expose
     private Boolean HasPublicCloudClb;
 
     /**
-    * 可升级的zk版本
+    * <p>可升级的zk版本</p>
     */
     @SerializedName("UpgradeZkVersions")
     @Expose
     private String UpgradeZkVersions;
 
     /**
-    * 是否显示rip
+    * <p>是否显示rip</p>
     */
     @SerializedName("ShowRip")
     @Expose
     private String ShowRip;
 
     /**
-    * 实例类型：标准型 standard，无keeper节点类型noKeeper；
+    * <p>实例类型：标准型 standard，无keeper节点类型noKeeper；</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-     * Get 集群实例ID, "cdw-xxxx" 字符串类型 
-     * @return InstanceId 集群实例ID, "cdw-xxxx" 字符串类型
+    * <p>keyvalue视图</p>
+    */
+    @SerializedName("EnableConfigKeyValue")
+    @Expose
+    private String EnableConfigKeyValue;
+
+    /**
+     * Get <p>集群实例ID, &quot;cdw-xxxx&quot; 字符串类型</p> 
+     * @return InstanceId <p>集群实例ID, &quot;cdw-xxxx&quot; 字符串类型</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 集群实例ID, "cdw-xxxx" 字符串类型
-     * @param InstanceId 集群实例ID, "cdw-xxxx" 字符串类型
+     * Set <p>集群实例ID, &quot;cdw-xxxx&quot; 字符串类型</p>
+     * @param InstanceId <p>集群实例ID, &quot;cdw-xxxx&quot; 字符串类型</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 集群实例名称 
-     * @return InstanceName 集群实例名称
+     * Get <p>集群实例名称</p> 
+     * @return InstanceName <p>集群实例名称</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 集群实例名称
-     * @param InstanceName 集群实例名称
+     * Set <p>集群实例名称</p>
+     * @param InstanceName <p>集群实例名称</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 状态,
-Init 创建中; Serving 运行中； 
-Deleted已销毁；Deleting 销毁中；
-Modify 集群变更中； 
-     * @return Status 状态,
-Init 创建中; Serving 运行中； 
-Deleted已销毁；Deleting 销毁中；
-Modify 集群变更中；
+     * Get <p>状态,<br>Init 创建中; Serving 运行中；<br>Deleted已销毁；Deleting 销毁中；<br>Modify 集群变更中；</p> 
+     * @return Status <p>状态,<br>Init 创建中; Serving 运行中；<br>Deleted已销毁；Deleting 销毁中；<br>Modify 集群变更中；</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态,
-Init 创建中; Serving 运行中； 
-Deleted已销毁；Deleting 销毁中；
-Modify 集群变更中；
-     * @param Status 状态,
-Init 创建中; Serving 运行中； 
-Deleted已销毁；Deleting 销毁中；
-Modify 集群变更中；
+     * Set <p>状态,<br>Init 创建中; Serving 运行中；<br>Deleted已销毁；Deleting 销毁中；<br>Modify 集群变更中；</p>
+     * @param Status <p>状态,<br>Init 创建中; Serving 运行中；<br>Deleted已销毁；Deleting 销毁中；<br>Modify 集群变更中；</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 版本 
-     * @return Version 版本
+     * Get <p>版本</p> 
+     * @return Version <p>版本</p>
      */
     public String getVersion() {
         return this.Version;
     }
 
     /**
-     * Set 版本
-     * @param Version 版本
+     * Set <p>版本</p>
+     * @param Version <p>版本</p>
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get 地域, ap-guangzhou 
-     * @return Region 地域, ap-guangzhou
+     * Get <p>地域, ap-guangzhou</p> 
+     * @return Region <p>地域, ap-guangzhou</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 地域, ap-guangzhou
-     * @param Region 地域, ap-guangzhou
+     * Set <p>地域, ap-guangzhou</p>
+     * @param Region <p>地域, ap-guangzhou</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 可用区， ap-guangzhou-3 
-     * @return Zone 可用区， ap-guangzhou-3
+     * Get <p>可用区， ap-guangzhou-3</p> 
+     * @return Zone <p>可用区， ap-guangzhou-3</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区， ap-guangzhou-3
-     * @param Zone 可用区， ap-guangzhou-3
+     * Set <p>可用区， ap-guangzhou-3</p>
+     * @param Zone <p>可用区， ap-guangzhou-3</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 私有网络名称 
-     * @return VpcId 私有网络名称
+     * Get <p>私有网络名称</p> 
+     * @return VpcId <p>私有网络名称</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私有网络名称
-     * @param VpcId 私有网络名称
+     * Set <p>私有网络名称</p>
+     * @param VpcId <p>私有网络名称</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网名称 
-     * @return SubnetId 子网名称
+     * Get <p>子网名称</p> 
+     * @return SubnetId <p>子网名称</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网名称
-     * @param SubnetId 子网名称
+     * Set <p>子网名称</p>
+     * @param SubnetId <p>子网名称</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 付费类型，"hour", "prepay" 
-     * @return PayMode 付费类型，"hour", "prepay"
+     * Get <p>付费类型，&quot;hour&quot;, &quot;prepay&quot;</p> 
+     * @return PayMode <p>付费类型，&quot;hour&quot;, &quot;prepay&quot;</p>
      */
     public String getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 付费类型，"hour", "prepay"
-     * @param PayMode 付费类型，"hour", "prepay"
+     * Set <p>付费类型，&quot;hour&quot;, &quot;prepay&quot;</p>
+     * @param PayMode <p>付费类型，&quot;hour&quot;, &quot;prepay&quot;</p>
      */
     public void setPayMode(String PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 过期时间 
-     * @return ExpireTime 过期时间
+     * Get <p>过期时间</p> 
+     * @return ExpireTime <p>过期时间</p>
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 过期时间
-     * @param ExpireTime 过期时间
+     * Set <p>过期时间</p>
+     * @param ExpireTime <p>过期时间</p>
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 数据节点描述信息 
-     * @return MasterSummary 数据节点描述信息
+     * Get <p>数据节点描述信息</p> 
+     * @return MasterSummary <p>数据节点描述信息</p>
      */
     public NodesSummary getMasterSummary() {
         return this.MasterSummary;
     }
 
     /**
-     * Set 数据节点描述信息
-     * @param MasterSummary 数据节点描述信息
+     * Set <p>数据节点描述信息</p>
+     * @param MasterSummary <p>数据节点描述信息</p>
      */
     public void setMasterSummary(NodesSummary MasterSummary) {
         this.MasterSummary = MasterSummary;
     }
 
     /**
-     * Get zookeeper节点描述信息 
-     * @return CommonSummary zookeeper节点描述信息
+     * Get <p>zookeeper节点描述信息</p> 
+     * @return CommonSummary <p>zookeeper节点描述信息</p>
      */
     public NodesSummary getCommonSummary() {
         return this.CommonSummary;
     }
 
     /**
-     * Set zookeeper节点描述信息
-     * @param CommonSummary zookeeper节点描述信息
+     * Set <p>zookeeper节点描述信息</p>
+     * @param CommonSummary <p>zookeeper节点描述信息</p>
      */
     public void setCommonSummary(NodesSummary CommonSummary) {
         this.CommonSummary = CommonSummary;
     }
 
     /**
-     * Get 高可用,"true" "false" 
-     * @return HA 高可用,"true" "false"
+     * Get <p>高可用,&quot;true&quot; &quot;false&quot;</p> 
+     * @return HA <p>高可用,&quot;true&quot; &quot;false&quot;</p>
      */
     public String getHA() {
         return this.HA;
     }
 
     /**
-     * Set 高可用,"true" "false"
-     * @param HA 高可用,"true" "false"
+     * Set <p>高可用,&quot;true&quot; &quot;false&quot;</p>
+     * @param HA <p>高可用,&quot;true&quot; &quot;false&quot;</p>
      */
     public void setHA(String HA) {
         this.HA = HA;
     }
 
     /**
-     * Get 访问地址，例如 "10.0.0.1:9000" 
-     * @return AccessInfo 访问地址，例如 "10.0.0.1:9000"
+     * Get <p>访问地址，例如 &quot;10.0.0.1:9000&quot;</p> 
+     * @return AccessInfo <p>访问地址，例如 &quot;10.0.0.1:9000&quot;</p>
      */
     public String getAccessInfo() {
         return this.AccessInfo;
     }
 
     /**
-     * Set 访问地址，例如 "10.0.0.1:9000"
-     * @param AccessInfo 访问地址，例如 "10.0.0.1:9000"
+     * Set <p>访问地址，例如 &quot;10.0.0.1:9000&quot;</p>
+     * @param AccessInfo <p>访问地址，例如 &quot;10.0.0.1:9000&quot;</p>
      */
     public void setAccessInfo(String AccessInfo) {
         this.AccessInfo = AccessInfo;
     }
 
     /**
-     * Get 记录ID，数值型 
-     * @return Id 记录ID，数值型
+     * Get <p>记录ID，数值型</p> 
+     * @return Id <p>记录ID，数值型</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 记录ID，数值型
-     * @param Id 记录ID，数值型
+     * Set <p>记录ID，数值型</p>
+     * @param Id <p>记录ID，数值型</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get regionId, 表示地域 
-     * @return RegionId regionId, 表示地域
+     * Get <p>regionId, 表示地域</p> 
+     * @return RegionId <p>regionId, 表示地域</p>
      */
     public Long getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set regionId, 表示地域
-     * @param RegionId regionId, 表示地域
+     * Set <p>regionId, 表示地域</p>
+     * @param RegionId <p>regionId, 表示地域</p>
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get 可用区说明，例如 "广州二区" 
-     * @return ZoneDesc 可用区说明，例如 "广州二区"
+     * Get <p>可用区说明，例如 &quot;广州二区&quot;</p> 
+     * @return ZoneDesc <p>可用区说明，例如 &quot;广州二区&quot;</p>
      */
     public String getZoneDesc() {
         return this.ZoneDesc;
     }
 
     /**
-     * Set 可用区说明，例如 "广州二区"
-     * @param ZoneDesc 可用区说明，例如 "广州二区"
+     * Set <p>可用区说明，例如 &quot;广州二区&quot;</p>
+     * @param ZoneDesc <p>可用区说明，例如 &quot;广州二区&quot;</p>
      */
     public void setZoneDesc(String ZoneDesc) {
         this.ZoneDesc = ZoneDesc;
     }
 
     /**
-     * Get 错误流程说明信息 
-     * @return FlowMsg 错误流程说明信息
+     * Get <p>错误流程说明信息</p> 
+     * @return FlowMsg <p>错误流程说明信息</p>
      */
     public String getFlowMsg() {
         return this.FlowMsg;
     }
 
     /**
-     * Set 错误流程说明信息
-     * @param FlowMsg 错误流程说明信息
+     * Set <p>错误流程说明信息</p>
+     * @param FlowMsg <p>错误流程说明信息</p>
      */
     public void setFlowMsg(String FlowMsg) {
         this.FlowMsg = FlowMsg;
     }
 
     /**
-     * Get 状态描述，例如“运行中”等 
-     * @return StatusDesc 状态描述，例如“运行中”等
+     * Get <p>状态描述，例如“运行中”等</p> 
+     * @return StatusDesc <p>状态描述，例如“运行中”等</p>
      */
     public String getStatusDesc() {
         return this.StatusDesc;
     }
 
     /**
-     * Set 状态描述，例如“运行中”等
-     * @param StatusDesc 状态描述，例如“运行中”等
+     * Set <p>状态描述，例如“运行中”等</p>
+     * @param StatusDesc <p>状态描述，例如“运行中”等</p>
      */
     public void setStatusDesc(String StatusDesc) {
         this.StatusDesc = StatusDesc;
     }
 
     /**
-     * Get 自动续费标记 
-     * @return RenewFlag 自动续费标记
+     * Get <p>自动续费标记</p> 
+     * @return RenewFlag <p>自动续费标记</p>
      */
     public Boolean getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 自动续费标记
-     * @param RenewFlag 自动续费标记
+     * Set <p>自动续费标记</p>
+     * @param RenewFlag <p>自动续费标记</p>
      */
     public void setRenewFlag(Boolean RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get 标签列表 
-     * @return Tags 标签列表
+     * Get <p>标签列表</p> 
+     * @return Tags <p>标签列表</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签列表
-     * @param Tags 标签列表
+     * Set <p>标签列表</p>
+     * @param Tags <p>标签列表</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 监控信息 
-     * @return Monitor 监控信息
+     * Get <p>监控信息</p> 
+     * @return Monitor <p>监控信息</p>
      */
     public String getMonitor() {
         return this.Monitor;
     }
 
     /**
-     * Set 监控信息
-     * @param Monitor 监控信息
+     * Set <p>监控信息</p>
+     * @param Monitor <p>监控信息</p>
      */
     public void setMonitor(String Monitor) {
         this.Monitor = Monitor;
     }
 
     /**
-     * Get 是否开通日志 
-     * @return HasClsTopic 是否开通日志
+     * Get <p>是否开通日志</p> 
+     * @return HasClsTopic <p>是否开通日志</p>
      */
     public Boolean getHasClsTopic() {
         return this.HasClsTopic;
     }
 
     /**
-     * Set 是否开通日志
-     * @param HasClsTopic 是否开通日志
+     * Set <p>是否开通日志</p>
+     * @param HasClsTopic <p>是否开通日志</p>
      */
     public void setHasClsTopic(Boolean HasClsTopic) {
         this.HasClsTopic = HasClsTopic;
     }
 
     /**
-     * Get 日志主题ID 
-     * @return ClsTopicId 日志主题ID
+     * Get <p>日志主题ID</p> 
+     * @return ClsTopicId <p>日志主题ID</p>
      */
     public String getClsTopicId() {
         return this.ClsTopicId;
     }
 
     /**
-     * Set 日志主题ID
-     * @param ClsTopicId 日志主题ID
+     * Set <p>日志主题ID</p>
+     * @param ClsTopicId <p>日志主题ID</p>
      */
     public void setClsTopicId(String ClsTopicId) {
         this.ClsTopicId = ClsTopicId;
     }
 
     /**
-     * Get 日志集ID 
-     * @return ClsLogSetId 日志集ID
+     * Get <p>日志集ID</p> 
+     * @return ClsLogSetId <p>日志集ID</p>
      */
     public String getClsLogSetId() {
         return this.ClsLogSetId;
     }
 
     /**
-     * Set 日志集ID
-     * @param ClsLogSetId 日志集ID
+     * Set <p>日志集ID</p>
+     * @param ClsLogSetId <p>日志集ID</p>
      */
     public void setClsLogSetId(String ClsLogSetId) {
         this.ClsLogSetId = ClsLogSetId;
     }
 
     /**
-     * Get 是否支持xml配置管理 
-     * @return EnableXMLConfig 是否支持xml配置管理
+     * Get <p>是否支持xml配置管理</p> 
+     * @return EnableXMLConfig <p>是否支持xml配置管理</p>
      */
     public Long getEnableXMLConfig() {
         return this.EnableXMLConfig;
     }
 
     /**
-     * Set 是否支持xml配置管理
-     * @param EnableXMLConfig 是否支持xml配置管理
+     * Set <p>是否支持xml配置管理</p>
+     * @param EnableXMLConfig <p>是否支持xml配置管理</p>
      */
     public void setEnableXMLConfig(Long EnableXMLConfig) {
         this.EnableXMLConfig = EnableXMLConfig;
     }
 
     /**
-     * Get 区域 
-     * @return RegionDesc 区域
+     * Get <p>区域</p> 
+     * @return RegionDesc <p>区域</p>
      */
     public String getRegionDesc() {
         return this.RegionDesc;
     }
 
     /**
-     * Set 区域
-     * @param RegionDesc 区域
+     * Set <p>区域</p>
+     * @param RegionDesc <p>区域</p>
      */
     public void setRegionDesc(String RegionDesc) {
         this.RegionDesc = RegionDesc;
     }
 
     /**
-     * Get 弹性网卡地址 
-     * @return Eip 弹性网卡地址
+     * Get <p>弹性网卡地址</p> 
+     * @return Eip <p>弹性网卡地址</p>
      */
     public String getEip() {
         return this.Eip;
     }
 
     /**
-     * Set 弹性网卡地址
-     * @param Eip 弹性网卡地址
+     * Set <p>弹性网卡地址</p>
+     * @param Eip <p>弹性网卡地址</p>
      */
     public void setEip(String Eip) {
         this.Eip = Eip;
     }
 
     /**
-     * Get 冷热分层系数 
-     * @return CosMoveFactor 冷热分层系数
+     * Get <p>冷热分层系数</p> 
+     * @return CosMoveFactor <p>冷热分层系数</p>
      */
     public Long getCosMoveFactor() {
         return this.CosMoveFactor;
     }
 
     /**
-     * Set 冷热分层系数
-     * @param CosMoveFactor 冷热分层系数
+     * Set <p>冷热分层系数</p>
+     * @param CosMoveFactor <p>冷热分层系数</p>
      */
     public void setCosMoveFactor(Long CosMoveFactor) {
         this.CosMoveFactor = CosMoveFactor;
     }
 
     /**
-     * Get external/local/yunti 
-     * @return Kind external/local/yunti
+     * Get <p>external/local/yunti</p> 
+     * @return Kind <p>external/local/yunti</p>
      */
     public String getKind() {
         return this.Kind;
     }
 
     /**
-     * Set external/local/yunti
-     * @param Kind external/local/yunti
+     * Set <p>external/local/yunti</p>
+     * @param Kind <p>external/local/yunti</p>
      */
     public void setKind(String Kind) {
         this.Kind = Kind;
     }
 
     /**
-     * Get 是否弹性ck 
-     * @return IsElastic 是否弹性ck
+     * Get <p>是否弹性ck</p> 
+     * @return IsElastic <p>是否弹性ck</p>
      */
     public Boolean getIsElastic() {
         return this.IsElastic;
     }
 
     /**
-     * Set 是否弹性ck
-     * @param IsElastic 是否弹性ck
+     * Set <p>是否弹性ck</p>
+     * @param IsElastic <p>是否弹性ck</p>
      */
     public void setIsElastic(Boolean IsElastic) {
         this.IsElastic = IsElastic;
     }
 
     /**
-     * Get 集群详细状态 
-     * @return InstanceStateInfo 集群详细状态
+     * Get <p>集群详细状态</p> 
+     * @return InstanceStateInfo <p>集群详细状态</p>
      */
     public InstanceStateInfo getInstanceStateInfo() {
         return this.InstanceStateInfo;
     }
 
     /**
-     * Set 集群详细状态
-     * @param InstanceStateInfo 集群详细状态
+     * Set <p>集群详细状态</p>
+     * @param InstanceStateInfo <p>集群详细状态</p>
      */
     public void setInstanceStateInfo(InstanceStateInfo InstanceStateInfo) {
         this.InstanceStateInfo = InstanceStateInfo;
     }
 
     /**
-     * Get ZK高可用 
-     * @return HAZk ZK高可用
+     * Get <p>ZK高可用</p> 
+     * @return HAZk <p>ZK高可用</p>
      */
     public Boolean getHAZk() {
         return this.HAZk;
     }
 
     /**
-     * Set ZK高可用
-     * @param HAZk ZK高可用
+     * Set <p>ZK高可用</p>
+     * @param HAZk <p>ZK高可用</p>
      */
     public void setHAZk(Boolean HAZk) {
         this.HAZk = HAZk;
     }
 
     /**
-     * Get 挂载盘,默认0:没有类型；1:裸盘;2:lvm 
-     * @return MountDiskType 挂载盘,默认0:没有类型；1:裸盘;2:lvm
+     * Get <p>挂载盘,默认0:没有类型；1:裸盘;2:lvm</p> 
+     * @return MountDiskType <p>挂载盘,默认0:没有类型；1:裸盘;2:lvm</p>
      */
     public Long getMountDiskType() {
         return this.MountDiskType;
     }
 
     /**
-     * Set 挂载盘,默认0:没有类型；1:裸盘;2:lvm
-     * @param MountDiskType 挂载盘,默认0:没有类型；1:裸盘;2:lvm
+     * Set <p>挂载盘,默认0:没有类型；1:裸盘;2:lvm</p>
+     * @param MountDiskType <p>挂载盘,默认0:没有类型；1:裸盘;2:lvm</p>
      */
     public void setMountDiskType(Long MountDiskType) {
         this.MountDiskType = MountDiskType;
     }
 
     /**
-     * Get chproxy连接ip 
-     * @return CHProxyVip chproxy连接ip
+     * Get <p>chproxy连接ip</p> 
+     * @return CHProxyVip <p>chproxy连接ip</p>
      */
     public String getCHProxyVip() {
         return this.CHProxyVip;
     }
 
     /**
-     * Set chproxy连接ip
-     * @param CHProxyVip chproxy连接ip
+     * Set <p>chproxy连接ip</p>
+     * @param CHProxyVip <p>chproxy连接ip</p>
      */
     public void setCHProxyVip(String CHProxyVip) {
         this.CHProxyVip = CHProxyVip;
     }
 
     /**
-     * Get cos buket的名字 
-     * @return CosBucketName cos buket的名字
+     * Get <p>cos buket的名字</p> 
+     * @return CosBucketName <p>cos buket的名字</p>
      */
     public String getCosBucketName() {
         return this.CosBucketName;
     }
 
     /**
-     * Set cos buket的名字
-     * @param CosBucketName cos buket的名字
+     * Set <p>cos buket的名字</p>
+     * @param CosBucketName <p>cos buket的名字</p>
      */
     public void setCosBucketName(String CosBucketName) {
         this.CosBucketName = CosBucketName;
     }
 
     /**
-     * Get 是否可以挂载云盘 
-     * @return CanAttachCbs 是否可以挂载云盘
+     * Get <p>是否可以挂载云盘</p> 
+     * @return CanAttachCbs <p>是否可以挂载云盘</p>
      */
     public Boolean getCanAttachCbs() {
         return this.CanAttachCbs;
     }
 
     /**
-     * Set 是否可以挂载云盘
-     * @param CanAttachCbs 是否可以挂载云盘
+     * Set <p>是否可以挂载云盘</p>
+     * @param CanAttachCbs <p>是否可以挂载云盘</p>
      */
     public void setCanAttachCbs(Boolean CanAttachCbs) {
         this.CanAttachCbs = CanAttachCbs;
     }
 
     /**
-     * Get 是否可以挂载云盘阵列 
-     * @return CanAttachCbsLvm 是否可以挂载云盘阵列
+     * Get <p>是否可以挂载云盘阵列</p> 
+     * @return CanAttachCbsLvm <p>是否可以挂载云盘阵列</p>
      */
     public Boolean getCanAttachCbsLvm() {
         return this.CanAttachCbsLvm;
     }
 
     /**
-     * Set 是否可以挂载云盘阵列
-     * @param CanAttachCbsLvm 是否可以挂载云盘阵列
+     * Set <p>是否可以挂载云盘阵列</p>
+     * @param CanAttachCbsLvm <p>是否可以挂载云盘阵列</p>
      */
     public void setCanAttachCbsLvm(Boolean CanAttachCbsLvm) {
         this.CanAttachCbsLvm = CanAttachCbsLvm;
     }
 
     /**
-     * Get 是否可以挂载cos 
-     * @return CanAttachCos 是否可以挂载cos
+     * Get <p>是否可以挂载cos</p> 
+     * @return CanAttachCos <p>是否可以挂载cos</p>
      */
     public Boolean getCanAttachCos() {
         return this.CanAttachCos;
     }
 
     /**
-     * Set 是否可以挂载cos
-     * @param CanAttachCos 是否可以挂载cos
+     * Set <p>是否可以挂载cos</p>
+     * @param CanAttachCos <p>是否可以挂载cos</p>
      */
     public void setCanAttachCos(Boolean CanAttachCos) {
         this.CanAttachCos = CanAttachCos;
     }
 
     /**
-     * Get 服务信息 
-     * @return Components 服务信息
+     * Get <p>服务信息</p> 
+     * @return Components <p>服务信息</p>
      */
     public ServiceInfo [] getComponents() {
         return this.Components;
     }
 
     /**
-     * Set 服务信息
-     * @param Components 服务信息
+     * Set <p>服务信息</p>
+     * @param Components <p>服务信息</p>
      */
     public void setComponents(ServiceInfo [] Components) {
         this.Components = Components;
     }
 
     /**
-     * Get 可升级的内核版本 
-     * @return UpgradeVersions 可升级的内核版本
+     * Get <p>可升级的内核版本</p> 
+     * @return UpgradeVersions <p>可升级的内核版本</p>
      */
     public String getUpgradeVersions() {
         return this.UpgradeVersions;
     }
 
     /**
-     * Set 可升级的内核版本
-     * @param UpgradeVersions 可升级的内核版本
+     * Set <p>可升级的内核版本</p>
+     * @param UpgradeVersions <p>可升级的内核版本</p>
      */
     public void setUpgradeVersions(String UpgradeVersions) {
         this.UpgradeVersions = UpgradeVersions;
     }
 
     /**
-     * Get ex-index 
-     * @return EsIndexId ex-index
+     * Get <p>ex-index</p> 
+     * @return EsIndexId <p>ex-index</p>
      */
     public String getEsIndexId() {
         return this.EsIndexId;
     }
 
     /**
-     * Set ex-index
-     * @param EsIndexId ex-index
+     * Set <p>ex-index</p>
+     * @param EsIndexId <p>ex-index</p>
      */
     public void setEsIndexId(String EsIndexId) {
         this.EsIndexId = EsIndexId;
     }
 
     /**
-     * Get username 
-     * @return EsIndexUsername username
+     * Get <p>username</p> 
+     * @return EsIndexUsername <p>username</p>
      */
     public String getEsIndexUsername() {
         return this.EsIndexUsername;
     }
 
     /**
-     * Set username
-     * @param EsIndexUsername username
+     * Set <p>username</p>
+     * @param EsIndexUsername <p>username</p>
      */
     public void setEsIndexUsername(String EsIndexUsername) {
         this.EsIndexUsername = EsIndexUsername;
     }
 
     /**
-     * Get password 
-     * @return EsIndexPassword password
+     * Get <p>password</p> 
+     * @return EsIndexPassword <p>password</p>
      */
     public String getEsIndexPassword() {
         return this.EsIndexPassword;
     }
 
     /**
-     * Set password
-     * @param EsIndexPassword password
+     * Set <p>password</p>
+     * @param EsIndexPassword <p>password</p>
      */
     public void setEsIndexPassword(String EsIndexPassword) {
         this.EsIndexPassword = EsIndexPassword;
     }
 
     /**
-     * Get true 
-     * @return HasEsIndex true
+     * Get <p>true</p> 
+     * @return HasEsIndex <p>true</p>
      */
     public Boolean getHasEsIndex() {
         return this.HasEsIndex;
     }
 
     /**
-     * Set true
-     * @param HasEsIndex true
+     * Set <p>true</p>
+     * @param HasEsIndex <p>true</p>
      */
     public void setHasEsIndex(Boolean HasEsIndex) {
         this.HasEsIndex = HasEsIndex;
     }
 
     /**
-     * Get true 
-     * @return IsSecondaryZone true
+     * Get <p>true</p> 
+     * @return IsSecondaryZone <p>true</p>
      */
     public Boolean getIsSecondaryZone() {
         return this.IsSecondaryZone;
     }
 
     /**
-     * Set true
-     * @param IsSecondaryZone true
+     * Set <p>true</p>
+     * @param IsSecondaryZone <p>true</p>
      */
     public void setIsSecondaryZone(Boolean IsSecondaryZone) {
         this.IsSecondaryZone = IsSecondaryZone;
     }
 
     /**
-     * Get desc 
-     * @return SecondaryZoneInfo desc
+     * Get <p>desc</p> 
+     * @return SecondaryZoneInfo <p>desc</p>
      */
     public String getSecondaryZoneInfo() {
         return this.SecondaryZoneInfo;
     }
 
     /**
-     * Set desc
-     * @param SecondaryZoneInfo desc
+     * Set <p>desc</p>
+     * @param SecondaryZoneInfo <p>desc</p>
      */
     public void setSecondaryZoneInfo(String SecondaryZoneInfo) {
         this.SecondaryZoneInfo = SecondaryZoneInfo;
     }
 
     /**
-     * Get 是否clickhouse-keeper 
-     * @return ClickHouseKeeper 是否clickhouse-keeper
+     * Get <p>是否clickhouse-keeper</p> 
+     * @return ClickHouseKeeper <p>是否clickhouse-keeper</p>
      */
     public Boolean getClickHouseKeeper() {
         return this.ClickHouseKeeper;
     }
 
     /**
-     * Set 是否clickhouse-keeper
-     * @param ClickHouseKeeper 是否clickhouse-keeper
+     * Set <p>是否clickhouse-keeper</p>
+     * @param ClickHouseKeeper <p>是否clickhouse-keeper</p>
      */
     public void setClickHouseKeeper(Boolean ClickHouseKeeper) {
         this.ClickHouseKeeper = ClickHouseKeeper;
     }
 
     /**
-     * Get 实例扩展信息 
-     * @return Details 实例扩展信息
+     * Get <p>实例扩展信息</p> 
+     * @return Details <p>实例扩展信息</p>
      */
     public InstanceDetail getDetails() {
         return this.Details;
     }
 
     /**
-     * Set 实例扩展信息
-     * @param Details 实例扩展信息
+     * Set <p>实例扩展信息</p>
+     * @param Details <p>实例扩展信息</p>
      */
     public void setDetails(InstanceDetail Details) {
         this.Details = Details;
     }
 
     /**
-     * Get 安全组白名单 
-     * @return IsWhiteSGs 安全组白名单
+     * Get <p>安全组白名单</p> 
+     * @return IsWhiteSGs <p>安全组白名单</p>
      */
     public Boolean getIsWhiteSGs() {
         return this.IsWhiteSGs;
     }
 
     /**
-     * Set 安全组白名单
-     * @param IsWhiteSGs 安全组白名单
+     * Set <p>安全组白名单</p>
+     * @param IsWhiteSGs <p>安全组白名单</p>
      */
     public void setIsWhiteSGs(Boolean IsWhiteSGs) {
         this.IsWhiteSGs = IsWhiteSGs;
     }
 
     /**
-     * Get 绑定的安全组 
-     * @return BindSGs 绑定的安全组
+     * Get <p>绑定的安全组</p> 
+     * @return BindSGs <p>绑定的安全组</p>
      */
     public String [] getBindSGs() {
         return this.BindSGs;
     }
 
     /**
-     * Set 绑定的安全组
-     * @param BindSGs 绑定的安全组
+     * Set <p>绑定的安全组</p>
+     * @param BindSGs <p>绑定的安全组</p>
      */
     public void setBindSGs(String [] BindSGs) {
         this.BindSGs = BindSGs;
     }
 
     /**
-     * Get 是否开启公网clb 
-     * @return HasPublicCloudClb 是否开启公网clb
+     * Get <p>是否开启公网clb</p> 
+     * @return HasPublicCloudClb <p>是否开启公网clb</p>
      */
     public Boolean getHasPublicCloudClb() {
         return this.HasPublicCloudClb;
     }
 
     /**
-     * Set 是否开启公网clb
-     * @param HasPublicCloudClb 是否开启公网clb
+     * Set <p>是否开启公网clb</p>
+     * @param HasPublicCloudClb <p>是否开启公网clb</p>
      */
     public void setHasPublicCloudClb(Boolean HasPublicCloudClb) {
         this.HasPublicCloudClb = HasPublicCloudClb;
     }
 
     /**
-     * Get 可升级的zk版本 
-     * @return UpgradeZkVersions 可升级的zk版本
+     * Get <p>可升级的zk版本</p> 
+     * @return UpgradeZkVersions <p>可升级的zk版本</p>
      */
     public String getUpgradeZkVersions() {
         return this.UpgradeZkVersions;
     }
 
     /**
-     * Set 可升级的zk版本
-     * @param UpgradeZkVersions 可升级的zk版本
+     * Set <p>可升级的zk版本</p>
+     * @param UpgradeZkVersions <p>可升级的zk版本</p>
      */
     public void setUpgradeZkVersions(String UpgradeZkVersions) {
         this.UpgradeZkVersions = UpgradeZkVersions;
     }
 
     /**
-     * Get 是否显示rip 
-     * @return ShowRip 是否显示rip
+     * Get <p>是否显示rip</p> 
+     * @return ShowRip <p>是否显示rip</p>
      */
     public String getShowRip() {
         return this.ShowRip;
     }
 
     /**
-     * Set 是否显示rip
-     * @param ShowRip 是否显示rip
+     * Set <p>是否显示rip</p>
+     * @param ShowRip <p>是否显示rip</p>
      */
     public void setShowRip(String ShowRip) {
         this.ShowRip = ShowRip;
     }
 
     /**
-     * Get 实例类型：标准型 standard，无keeper节点类型noKeeper； 
-     * @return InstanceType 实例类型：标准型 standard，无keeper节点类型noKeeper；
+     * Get <p>实例类型：标准型 standard，无keeper节点类型noKeeper；</p> 
+     * @return InstanceType <p>实例类型：标准型 standard，无keeper节点类型noKeeper；</p>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 实例类型：标准型 standard，无keeper节点类型noKeeper；
-     * @param InstanceType 实例类型：标准型 standard，无keeper节点类型noKeeper；
+     * Set <p>实例类型：标准型 standard，无keeper节点类型noKeeper；</p>
+     * @param InstanceType <p>实例类型：标准型 standard，无keeper节点类型noKeeper；</p>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
+    }
+
+    /**
+     * Get <p>keyvalue视图</p> 
+     * @return EnableConfigKeyValue <p>keyvalue视图</p>
+     */
+    public String getEnableConfigKeyValue() {
+        return this.EnableConfigKeyValue;
+    }
+
+    /**
+     * Set <p>keyvalue视图</p>
+     * @param EnableConfigKeyValue <p>keyvalue视图</p>
+     */
+    public void setEnableConfigKeyValue(String EnableConfigKeyValue) {
+        this.EnableConfigKeyValue = EnableConfigKeyValue;
     }
 
     public InstanceInfo() {
@@ -1511,6 +1519,9 @@ Modify 集群变更中；
         if (source.InstanceType != null) {
             this.InstanceType = new String(source.InstanceType);
         }
+        if (source.EnableConfigKeyValue != null) {
+            this.EnableConfigKeyValue = new String(source.EnableConfigKeyValue);
+        }
     }
 
 
@@ -1574,6 +1585,7 @@ Modify 集群变更中；
         this.setParamSimple(map, prefix + "UpgradeZkVersions", this.UpgradeZkVersions);
         this.setParamSimple(map, prefix + "ShowRip", this.ShowRip);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "EnableConfigKeyValue", this.EnableConfigKeyValue);
 
     }
 }

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeLLMComprehendTemplatesResponse extends AbstractModel {
 
     /**
-    * 符合过滤条件的记录总数。
+    * <p>符合过滤条件的记录总数。</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 图片异步处理模板详情列表。
+    * <p>大模型解析模板详情列表。</p>
     */
     @SerializedName("LLMComprehendTemplateSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeLLMComprehendTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 符合过滤条件的记录总数。 
-     * @return TotalCount 符合过滤条件的记录总数。
+     * Get <p>符合过滤条件的记录总数。</p> 
+     * @return TotalCount <p>符合过滤条件的记录总数。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合过滤条件的记录总数。
-     * @param TotalCount 符合过滤条件的记录总数。
+     * Set <p>符合过滤条件的记录总数。</p>
+     * @param TotalCount <p>符合过滤条件的记录总数。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 图片异步处理模板详情列表。 
-     * @return LLMComprehendTemplateSet 图片异步处理模板详情列表。
+     * Get <p>大模型解析模板详情列表。</p> 
+     * @return LLMComprehendTemplateSet <p>大模型解析模板详情列表。</p>
      */
     public LLMComprehendTemplateItem [] getLLMComprehendTemplateSet() {
         return this.LLMComprehendTemplateSet;
     }
 
     /**
-     * Set 图片异步处理模板详情列表。
-     * @param LLMComprehendTemplateSet 图片异步处理模板详情列表。
+     * Set <p>大模型解析模板详情列表。</p>
+     * @param LLMComprehendTemplateSet <p>大模型解析模板详情列表。</p>
      */
     public void setLLMComprehendTemplateSet(LLMComprehendTemplateItem [] LLMComprehendTemplateSet) {
         this.LLMComprehendTemplateSet = LLMComprehendTemplateSet;

@@ -198,7 +198,7 @@ public enum TiiaErrorCode {
      /* 计费状态未知，请确认是否已在控制台开通服务。 */
      RESOURCEUNAVAILABLE_NOTEXIST("ResourceUnavailable.NotExist"),
      
-     /* 帐号已停服。 */
+     /* 账号已停服。 */
      RESOURCEUNAVAILABLE_STOPUSING("ResourceUnavailable.StopUsing"),
      
      /* 计费状态异常。 */

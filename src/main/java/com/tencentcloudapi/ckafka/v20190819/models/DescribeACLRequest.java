@@ -148,7 +148,9 @@ public class DescribeACLRequest extends AbstractModel {
     /**
      * Get 关键字匹配 
      * @return SearchWord 关键字匹配
+     * @deprecated
      */
+    @Deprecated
     public String getSearchWord() {
         return this.SearchWord;
     }
@@ -156,7 +158,9 @@ public class DescribeACLRequest extends AbstractModel {
     /**
      * Set 关键字匹配
      * @param SearchWord 关键字匹配
+     * @deprecated
      */
+    @Deprecated
     public void setSearchWord(String SearchWord) {
         this.SearchWord = SearchWord;
     }

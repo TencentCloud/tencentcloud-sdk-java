@@ -24,194 +24,207 @@ import java.util.HashMap;
 public class LLMComprehendTemplateItem extends AbstractModel {
 
     /**
-    * 图片异步处理模板唯一标识。
+    * <p>图片异步处理模板唯一标识。</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 图片异步处理模板名称。
+    * <p>图片异步处理模板名称。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 图片异步处理模板描述信息。
+    * <p>图片异步处理模板描述信息。</p>
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * 解析级别，可选值为：
-- Audio: 音频级解析
-- Video: 视频级解析
+    * <p>解析级别，可选值为：</p><ul><li>Audio: 音频级解析</li><li>Video: 视频级解析</li></ul>
     */
     @SerializedName("Level")
     @Expose
     private String Level;
 
     /**
-    * 分段摘要解析配置
+    * <p>分段摘要解析配置</p>
     */
     @SerializedName("Summary")
     @Expose
     private LLMComprehendSummary Summary;
 
     /**
-    * 文本转录解析配置
+    * <p>文本转录解析配置</p>
     */
     @SerializedName("Asr")
     @Expose
     private LLMComprehendAsr Asr;
 
     /**
-    * 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+    * <p>人脸识别解析配置</p>
+    */
+    @SerializedName("FaceRecognition")
+    @Expose
+    private LLMComprehendFaceRecognition FaceRecognition;
+
+    /**
+    * <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+    * <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get 图片异步处理模板唯一标识。 
-     * @return Definition 图片异步处理模板唯一标识。
+     * Get <p>图片异步处理模板唯一标识。</p> 
+     * @return Definition <p>图片异步处理模板唯一标识。</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 图片异步处理模板唯一标识。
-     * @param Definition 图片异步处理模板唯一标识。
+     * Set <p>图片异步处理模板唯一标识。</p>
+     * @param Definition <p>图片异步处理模板唯一标识。</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get 图片异步处理模板名称。 
-     * @return Name 图片异步处理模板名称。
+     * Get <p>图片异步处理模板名称。</p> 
+     * @return Name <p>图片异步处理模板名称。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 图片异步处理模板名称。
-     * @param Name 图片异步处理模板名称。
+     * Set <p>图片异步处理模板名称。</p>
+     * @param Name <p>图片异步处理模板名称。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 图片异步处理模板描述信息。 
-     * @return Comment 图片异步处理模板描述信息。
+     * Get <p>图片异步处理模板描述信息。</p> 
+     * @return Comment <p>图片异步处理模板描述信息。</p>
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 图片异步处理模板描述信息。
-     * @param Comment 图片异步处理模板描述信息。
+     * Set <p>图片异步处理模板描述信息。</p>
+     * @param Comment <p>图片异步处理模板描述信息。</p>
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get 解析级别，可选值为：
-- Audio: 音频级解析
-- Video: 视频级解析 
-     * @return Level 解析级别，可选值为：
-- Audio: 音频级解析
-- Video: 视频级解析
+     * Get <p>解析级别，可选值为：</p><ul><li>Audio: 音频级解析</li><li>Video: 视频级解析</li></ul> 
+     * @return Level <p>解析级别，可选值为：</p><ul><li>Audio: 音频级解析</li><li>Video: 视频级解析</li></ul>
      */
     public String getLevel() {
         return this.Level;
     }
 
     /**
-     * Set 解析级别，可选值为：
-- Audio: 音频级解析
-- Video: 视频级解析
-     * @param Level 解析级别，可选值为：
-- Audio: 音频级解析
-- Video: 视频级解析
+     * Set <p>解析级别，可选值为：</p><ul><li>Audio: 音频级解析</li><li>Video: 视频级解析</li></ul>
+     * @param Level <p>解析级别，可选值为：</p><ul><li>Audio: 音频级解析</li><li>Video: 视频级解析</li></ul>
      */
     public void setLevel(String Level) {
         this.Level = Level;
     }
 
     /**
-     * Get 分段摘要解析配置 
-     * @return Summary 分段摘要解析配置
+     * Get <p>分段摘要解析配置</p> 
+     * @return Summary <p>分段摘要解析配置</p>
      */
     public LLMComprehendSummary getSummary() {
         return this.Summary;
     }
 
     /**
-     * Set 分段摘要解析配置
-     * @param Summary 分段摘要解析配置
+     * Set <p>分段摘要解析配置</p>
+     * @param Summary <p>分段摘要解析配置</p>
      */
     public void setSummary(LLMComprehendSummary Summary) {
         this.Summary = Summary;
     }
 
     /**
-     * Get 文本转录解析配置 
-     * @return Asr 文本转录解析配置
+     * Get <p>文本转录解析配置</p> 
+     * @return Asr <p>文本转录解析配置</p>
      */
     public LLMComprehendAsr getAsr() {
         return this.Asr;
     }
 
     /**
-     * Set 文本转录解析配置
-     * @param Asr 文本转录解析配置
+     * Set <p>文本转录解析配置</p>
+     * @param Asr <p>文本转录解析配置</p>
      */
     public void setAsr(LLMComprehendAsr Asr) {
         this.Asr = Asr;
     }
 
     /**
-     * Get 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。 
-     * @return CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Get <p>人脸识别解析配置</p> 
+     * @return FaceRecognition <p>人脸识别解析配置</p>
+     */
+    public LLMComprehendFaceRecognition getFaceRecognition() {
+        return this.FaceRecognition;
+    }
+
+    /**
+     * Set <p>人脸识别解析配置</p>
+     * @param FaceRecognition <p>人脸识别解析配置</p>
+     */
+    public void setFaceRecognition(LLMComprehendFaceRecognition FaceRecognition) {
+        this.FaceRecognition = FaceRecognition;
+    }
+
+    /**
+     * Get <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p> 
+     * @return CreateTime <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
-     * @param CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Set <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+     * @param CreateTime <p>模板创建时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。 
-     * @return UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Get <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p> 
+     * @return UpdateTime <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
-     * @param UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * Set <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
+     * @param UpdateTime <p>模板最后修改时间，使用 <a href="https://cloud.tencent.com/document/product/266/11732#I">ISO 日期格式</a>。</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
@@ -243,6 +256,9 @@ public class LLMComprehendTemplateItem extends AbstractModel {
         if (source.Asr != null) {
             this.Asr = new LLMComprehendAsr(source.Asr);
         }
+        if (source.FaceRecognition != null) {
+            this.FaceRecognition = new LLMComprehendFaceRecognition(source.FaceRecognition);
+        }
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
@@ -262,6 +278,7 @@ public class LLMComprehendTemplateItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Level", this.Level);
         this.setParamObj(map, prefix + "Summary.", this.Summary);
         this.setParamObj(map, prefix + "Asr.", this.Asr);
+        this.setParamObj(map, prefix + "FaceRecognition.", this.FaceRecognition);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 

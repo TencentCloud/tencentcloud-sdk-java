@@ -24,256 +24,302 @@ import java.util.HashMap;
 public class InstanceConfigInfo extends AbstractModel {
 
     /**
-    * 配置项名称
+    * <p>配置项名称</p>
     */
     @SerializedName("ConfKey")
     @Expose
     private String ConfKey;
 
     /**
-    * 配置项内容
+    * <p>配置项内容</p>
     */
     @SerializedName("ConfValue")
     @Expose
     private String ConfValue;
 
     /**
-    * 默认值
+    * <p>默认值</p>
     */
     @SerializedName("DefaultValue")
     @Expose
     private String DefaultValue;
 
     /**
-    * 是否需要重启
+    * <p>是否需要重启</p>
     */
     @SerializedName("NeedRestart")
     @Expose
     private Boolean NeedRestart;
 
     /**
-    * 是否可编辑
+    * <p>是否可编辑</p>
     */
     @SerializedName("Editable")
     @Expose
     private Boolean Editable;
 
     /**
-    * 配置项解释
+    * <p>配置项解释</p>
     */
     @SerializedName("ConfDesc")
     @Expose
     private String ConfDesc;
 
     /**
-    * 文件名称
+    * <p>文件名称</p>
     */
     @SerializedName("FileName")
     @Expose
     private String FileName;
 
     /**
-    * 规则名称类型
+    * <p>规则名称类型</p>
     */
     @SerializedName("ModifyRuleType")
     @Expose
     private String ModifyRuleType;
 
     /**
-    * 规则名称内容
+    * <p>规则名称内容</p>
     */
     @SerializedName("ModifyRuleValue")
     @Expose
     private String ModifyRuleValue;
 
     /**
-    * 修改人的uin
+    * <p>修改人的uin</p>
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * 修改时间
+    * <p>修改时间</p>
     */
     @SerializedName("ModifyTime")
     @Expose
     private String ModifyTime;
 
     /**
-     * Get 配置项名称 
-     * @return ConfKey 配置项名称
+    * <p>取值范围</p>
+    */
+    @SerializedName("ValueRange")
+    @Expose
+    private String ValueRange;
+
+    /**
+    * <p>标记异常</p>
+    */
+    @SerializedName("AbnormalParam")
+    @Expose
+    private String AbnormalParam;
+
+    /**
+     * Get <p>配置项名称</p> 
+     * @return ConfKey <p>配置项名称</p>
      */
     public String getConfKey() {
         return this.ConfKey;
     }
 
     /**
-     * Set 配置项名称
-     * @param ConfKey 配置项名称
+     * Set <p>配置项名称</p>
+     * @param ConfKey <p>配置项名称</p>
      */
     public void setConfKey(String ConfKey) {
         this.ConfKey = ConfKey;
     }
 
     /**
-     * Get 配置项内容 
-     * @return ConfValue 配置项内容
+     * Get <p>配置项内容</p> 
+     * @return ConfValue <p>配置项内容</p>
      */
     public String getConfValue() {
         return this.ConfValue;
     }
 
     /**
-     * Set 配置项内容
-     * @param ConfValue 配置项内容
+     * Set <p>配置项内容</p>
+     * @param ConfValue <p>配置项内容</p>
      */
     public void setConfValue(String ConfValue) {
         this.ConfValue = ConfValue;
     }
 
     /**
-     * Get 默认值 
-     * @return DefaultValue 默认值
+     * Get <p>默认值</p> 
+     * @return DefaultValue <p>默认值</p>
      */
     public String getDefaultValue() {
         return this.DefaultValue;
     }
 
     /**
-     * Set 默认值
-     * @param DefaultValue 默认值
+     * Set <p>默认值</p>
+     * @param DefaultValue <p>默认值</p>
      */
     public void setDefaultValue(String DefaultValue) {
         this.DefaultValue = DefaultValue;
     }
 
     /**
-     * Get 是否需要重启 
-     * @return NeedRestart 是否需要重启
+     * Get <p>是否需要重启</p> 
+     * @return NeedRestart <p>是否需要重启</p>
      */
     public Boolean getNeedRestart() {
         return this.NeedRestart;
     }
 
     /**
-     * Set 是否需要重启
-     * @param NeedRestart 是否需要重启
+     * Set <p>是否需要重启</p>
+     * @param NeedRestart <p>是否需要重启</p>
      */
     public void setNeedRestart(Boolean NeedRestart) {
         this.NeedRestart = NeedRestart;
     }
 
     /**
-     * Get 是否可编辑 
-     * @return Editable 是否可编辑
+     * Get <p>是否可编辑</p> 
+     * @return Editable <p>是否可编辑</p>
      */
     public Boolean getEditable() {
         return this.Editable;
     }
 
     /**
-     * Set 是否可编辑
-     * @param Editable 是否可编辑
+     * Set <p>是否可编辑</p>
+     * @param Editable <p>是否可编辑</p>
      */
     public void setEditable(Boolean Editable) {
         this.Editable = Editable;
     }
 
     /**
-     * Get 配置项解释 
-     * @return ConfDesc 配置项解释
+     * Get <p>配置项解释</p> 
+     * @return ConfDesc <p>配置项解释</p>
      */
     public String getConfDesc() {
         return this.ConfDesc;
     }
 
     /**
-     * Set 配置项解释
-     * @param ConfDesc 配置项解释
+     * Set <p>配置项解释</p>
+     * @param ConfDesc <p>配置项解释</p>
      */
     public void setConfDesc(String ConfDesc) {
         this.ConfDesc = ConfDesc;
     }
 
     /**
-     * Get 文件名称 
-     * @return FileName 文件名称
+     * Get <p>文件名称</p> 
+     * @return FileName <p>文件名称</p>
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set 文件名称
-     * @param FileName 文件名称
+     * Set <p>文件名称</p>
+     * @param FileName <p>文件名称</p>
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get 规则名称类型 
-     * @return ModifyRuleType 规则名称类型
+     * Get <p>规则名称类型</p> 
+     * @return ModifyRuleType <p>规则名称类型</p>
      */
     public String getModifyRuleType() {
         return this.ModifyRuleType;
     }
 
     /**
-     * Set 规则名称类型
-     * @param ModifyRuleType 规则名称类型
+     * Set <p>规则名称类型</p>
+     * @param ModifyRuleType <p>规则名称类型</p>
      */
     public void setModifyRuleType(String ModifyRuleType) {
         this.ModifyRuleType = ModifyRuleType;
     }
 
     /**
-     * Get 规则名称内容 
-     * @return ModifyRuleValue 规则名称内容
+     * Get <p>规则名称内容</p> 
+     * @return ModifyRuleValue <p>规则名称内容</p>
      */
     public String getModifyRuleValue() {
         return this.ModifyRuleValue;
     }
 
     /**
-     * Set 规则名称内容
-     * @param ModifyRuleValue 规则名称内容
+     * Set <p>规则名称内容</p>
+     * @param ModifyRuleValue <p>规则名称内容</p>
      */
     public void setModifyRuleValue(String ModifyRuleValue) {
         this.ModifyRuleValue = ModifyRuleValue;
     }
 
     /**
-     * Get 修改人的uin 
-     * @return Uin 修改人的uin
+     * Get <p>修改人的uin</p> 
+     * @return Uin <p>修改人的uin</p>
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set 修改人的uin
-     * @param Uin 修改人的uin
+     * Set <p>修改人的uin</p>
+     * @param Uin <p>修改人的uin</p>
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 修改时间 
-     * @return ModifyTime 修改时间
+     * Get <p>修改时间</p> 
+     * @return ModifyTime <p>修改时间</p>
      */
     public String getModifyTime() {
         return this.ModifyTime;
     }
 
     /**
-     * Set 修改时间
-     * @param ModifyTime 修改时间
+     * Set <p>修改时间</p>
+     * @param ModifyTime <p>修改时间</p>
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
+    }
+
+    /**
+     * Get <p>取值范围</p> 
+     * @return ValueRange <p>取值范围</p>
+     */
+    public String getValueRange() {
+        return this.ValueRange;
+    }
+
+    /**
+     * Set <p>取值范围</p>
+     * @param ValueRange <p>取值范围</p>
+     */
+    public void setValueRange(String ValueRange) {
+        this.ValueRange = ValueRange;
+    }
+
+    /**
+     * Get <p>标记异常</p> 
+     * @return AbnormalParam <p>标记异常</p>
+     */
+    public String getAbnormalParam() {
+        return this.AbnormalParam;
+    }
+
+    /**
+     * Set <p>标记异常</p>
+     * @param AbnormalParam <p>标记异常</p>
+     */
+    public void setAbnormalParam(String AbnormalParam) {
+        this.AbnormalParam = AbnormalParam;
     }
 
     public InstanceConfigInfo() {
@@ -317,6 +363,12 @@ public class InstanceConfigInfo extends AbstractModel {
         if (source.ModifyTime != null) {
             this.ModifyTime = new String(source.ModifyTime);
         }
+        if (source.ValueRange != null) {
+            this.ValueRange = new String(source.ValueRange);
+        }
+        if (source.AbnormalParam != null) {
+            this.AbnormalParam = new String(source.AbnormalParam);
+        }
     }
 
 
@@ -335,6 +387,8 @@ public class InstanceConfigInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ModifyRuleValue", this.ModifyRuleValue);
         this.setParamSimple(map, prefix + "Uin", this.Uin);
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+        this.setParamSimple(map, prefix + "ValueRange", this.ValueRange);
+        this.setParamSimple(map, prefix + "AbnormalParam", this.AbnormalParam);
 
     }
 }

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeInstanceRequest extends AbstractModel {
 
     /**
-    * 集群实例ID
+    * <p>集群实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 是否是open api查询
+    * <p>是否是open api查询</p>
     */
     @SerializedName("IsOpenApi")
     @Expose
     private Boolean IsOpenApi;
 
     /**
-     * Get 集群实例ID 
-     * @return InstanceId 集群实例ID
+     * Get <p>集群实例ID</p> 
+     * @return InstanceId <p>集群实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 集群实例ID
-     * @param InstanceId 集群实例ID
+     * Set <p>集群实例ID</p>
+     * @param InstanceId <p>集群实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 是否是open api查询 
-     * @return IsOpenApi 是否是open api查询
+     * Get <p>是否是open api查询</p> 
+     * @return IsOpenApi <p>是否是open api查询</p>
      */
     public Boolean getIsOpenApi() {
         return this.IsOpenApi;
     }
 
     /**
-     * Set 是否是open api查询
-     * @param IsOpenApi 是否是open api查询
+     * Set <p>是否是open api查询</p>
+     * @param IsOpenApi <p>是否是open api查询</p>
      */
     public void setIsOpenApi(Boolean IsOpenApi) {
         this.IsOpenApi = IsOpenApi;

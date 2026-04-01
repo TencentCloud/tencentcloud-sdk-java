@@ -24,49 +24,72 @@ import java.util.HashMap;
 public class ModifyDisasterRecoverGroupAttributeRequest extends AbstractModel {
 
     /**
-    * 分散置放群组ID，可使用[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810)接口获取。
+    * <p>分散置放群组ID，可使用<a href="https://cloud.tencent.com/document/api/213/17810">DescribeDisasterRecoverGroups</a>接口获取。</p>
     */
     @SerializedName("DisasterRecoverGroupId")
     @Expose
     private String DisasterRecoverGroupId;
 
     /**
-    * 分散置放群组名称，长度1-60个字符，支持中、英文。
+    * <p>分散置放群组名称，长度1-60个字符，支持中、英文。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get 分散置放群组ID，可使用[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810)接口获取。 
-     * @return DisasterRecoverGroupId 分散置放群组ID，可使用[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810)接口获取。
+    * <p>分散置放群组的亲和度，在置放群组的实例会按该亲和度分布，亲和度的取值范围是：1-10。</p><p>取值范围：[1, 10]</p><p>调整只能从小调到大，不能从大调到小</p>
+    */
+    @SerializedName("Affinity")
+    @Expose
+    private Long Affinity;
+
+    /**
+     * Get <p>分散置放群组ID，可使用<a href="https://cloud.tencent.com/document/api/213/17810">DescribeDisasterRecoverGroups</a>接口获取。</p> 
+     * @return DisasterRecoverGroupId <p>分散置放群组ID，可使用<a href="https://cloud.tencent.com/document/api/213/17810">DescribeDisasterRecoverGroups</a>接口获取。</p>
      */
     public String getDisasterRecoverGroupId() {
         return this.DisasterRecoverGroupId;
     }
 
     /**
-     * Set 分散置放群组ID，可使用[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810)接口获取。
-     * @param DisasterRecoverGroupId 分散置放群组ID，可使用[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810)接口获取。
+     * Set <p>分散置放群组ID，可使用<a href="https://cloud.tencent.com/document/api/213/17810">DescribeDisasterRecoverGroups</a>接口获取。</p>
+     * @param DisasterRecoverGroupId <p>分散置放群组ID，可使用<a href="https://cloud.tencent.com/document/api/213/17810">DescribeDisasterRecoverGroups</a>接口获取。</p>
      */
     public void setDisasterRecoverGroupId(String DisasterRecoverGroupId) {
         this.DisasterRecoverGroupId = DisasterRecoverGroupId;
     }
 
     /**
-     * Get 分散置放群组名称，长度1-60个字符，支持中、英文。 
-     * @return Name 分散置放群组名称，长度1-60个字符，支持中、英文。
+     * Get <p>分散置放群组名称，长度1-60个字符，支持中、英文。</p> 
+     * @return Name <p>分散置放群组名称，长度1-60个字符，支持中、英文。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 分散置放群组名称，长度1-60个字符，支持中、英文。
-     * @param Name 分散置放群组名称，长度1-60个字符，支持中、英文。
+     * Set <p>分散置放群组名称，长度1-60个字符，支持中、英文。</p>
+     * @param Name <p>分散置放群组名称，长度1-60个字符，支持中、英文。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
+    }
+
+    /**
+     * Get <p>分散置放群组的亲和度，在置放群组的实例会按该亲和度分布，亲和度的取值范围是：1-10。</p><p>取值范围：[1, 10]</p><p>调整只能从小调到大，不能从大调到小</p> 
+     * @return Affinity <p>分散置放群组的亲和度，在置放群组的实例会按该亲和度分布，亲和度的取值范围是：1-10。</p><p>取值范围：[1, 10]</p><p>调整只能从小调到大，不能从大调到小</p>
+     */
+    public Long getAffinity() {
+        return this.Affinity;
+    }
+
+    /**
+     * Set <p>分散置放群组的亲和度，在置放群组的实例会按该亲和度分布，亲和度的取值范围是：1-10。</p><p>取值范围：[1, 10]</p><p>调整只能从小调到大，不能从大调到小</p>
+     * @param Affinity <p>分散置放群组的亲和度，在置放群组的实例会按该亲和度分布，亲和度的取值范围是：1-10。</p><p>取值范围：[1, 10]</p><p>调整只能从小调到大，不能从大调到小</p>
+     */
+    public void setAffinity(Long Affinity) {
+        this.Affinity = Affinity;
     }
 
     public ModifyDisasterRecoverGroupAttributeRequest() {
@@ -83,6 +106,9 @@ public class ModifyDisasterRecoverGroupAttributeRequest extends AbstractModel {
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.Affinity != null) {
+            this.Affinity = new Long(source.Affinity);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class ModifyDisasterRecoverGroupAttributeRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DisasterRecoverGroupId", this.DisasterRecoverGroupId);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Affinity", this.Affinity);
 
     }
 }

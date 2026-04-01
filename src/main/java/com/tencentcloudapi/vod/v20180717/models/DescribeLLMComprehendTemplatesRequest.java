@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribeLLMComprehendTemplatesRequest extends AbstractModel {
 
     /**
-    * <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+    * <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * 大模型解析模板唯一标识过滤条件，数组长度最大值：100。
+    * <p>大模型解析模板唯一标识过滤条件，数组长度最大值：100。</p>
     */
     @SerializedName("Definitions")
     @Expose
     private Long [] Definitions;
 
     /**
-    * 分页偏移量，默认值：0。
+    * <p>分页偏移量，默认值：0。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回记录条数，默认值：10，最大值：100。
+    * <p>返回记录条数，默认值：10，最大值：100。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b> 
-     * @return SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+     * Get <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p> 
+     * @return SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
-     * @param SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
+     * Set <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
+     * @param SubAppId <p><b>点播<a href="/document/product/266/14574">应用</a> ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get 大模型解析模板唯一标识过滤条件，数组长度最大值：100。 
-     * @return Definitions 大模型解析模板唯一标识过滤条件，数组长度最大值：100。
+     * Get <p>大模型解析模板唯一标识过滤条件，数组长度最大值：100。</p> 
+     * @return Definitions <p>大模型解析模板唯一标识过滤条件，数组长度最大值：100。</p>
      */
     public Long [] getDefinitions() {
         return this.Definitions;
     }
 
     /**
-     * Set 大模型解析模板唯一标识过滤条件，数组长度最大值：100。
-     * @param Definitions 大模型解析模板唯一标识过滤条件，数组长度最大值：100。
+     * Set <p>大模型解析模板唯一标识过滤条件，数组长度最大值：100。</p>
+     * @param Definitions <p>大模型解析模板唯一标识过滤条件，数组长度最大值：100。</p>
      */
     public void setDefinitions(Long [] Definitions) {
         this.Definitions = Definitions;
     }
 
     /**
-     * Get 分页偏移量，默认值：0。 
-     * @return Offset 分页偏移量，默认值：0。
+     * Get <p>分页偏移量，默认值：0。</p> 
+     * @return Offset <p>分页偏移量，默认值：0。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页偏移量，默认值：0。
-     * @param Offset 分页偏移量，默认值：0。
+     * Set <p>分页偏移量，默认值：0。</p>
+     * @param Offset <p>分页偏移量，默认值：0。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回记录条数，默认值：10，最大值：100。 
-     * @return Limit 返回记录条数，默认值：10，最大值：100。
+     * Get <p>返回记录条数，默认值：10，最大值：100。</p> 
+     * @return Limit <p>返回记录条数，默认值：10，最大值：100。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回记录条数，默认值：10，最大值：100。
-     * @param Limit 返回记录条数，默认值：10，最大值：100。
+     * Set <p>返回记录条数，默认值：10，最大值：100。</p>
+     * @param Limit <p>返回记录条数，默认值：10，最大值：100。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

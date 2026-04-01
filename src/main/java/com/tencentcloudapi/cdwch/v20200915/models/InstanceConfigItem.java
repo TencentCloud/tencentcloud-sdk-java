@@ -24,49 +24,118 @@ import java.util.HashMap;
 public class InstanceConfigItem extends AbstractModel {
 
     /**
-    * key
+    * <p>key</p>
     */
     @SerializedName("ConfKey")
     @Expose
     private String ConfKey;
 
     /**
-    * value
+    * <p>value</p>
     */
     @SerializedName("ConfValue")
     @Expose
     private String ConfValue;
 
     /**
-     * Get key 
-     * @return ConfKey key
+    * <p>add/delete/update</p>
+    */
+    @SerializedName("ModifyType")
+    @Expose
+    private String ModifyType;
+
+    /**
+    * <p>是否需要重启</p>
+    */
+    @SerializedName("NeedRestart")
+    @Expose
+    private Boolean NeedRestart;
+
+    /**
+    * <p>修改前的值</p>
+    */
+    @SerializedName("OriginalConfValue")
+    @Expose
+    private String OriginalConfValue;
+
+    /**
+     * Get <p>key</p> 
+     * @return ConfKey <p>key</p>
      */
     public String getConfKey() {
         return this.ConfKey;
     }
 
     /**
-     * Set key
-     * @param ConfKey key
+     * Set <p>key</p>
+     * @param ConfKey <p>key</p>
      */
     public void setConfKey(String ConfKey) {
         this.ConfKey = ConfKey;
     }
 
     /**
-     * Get value 
-     * @return ConfValue value
+     * Get <p>value</p> 
+     * @return ConfValue <p>value</p>
      */
     public String getConfValue() {
         return this.ConfValue;
     }
 
     /**
-     * Set value
-     * @param ConfValue value
+     * Set <p>value</p>
+     * @param ConfValue <p>value</p>
      */
     public void setConfValue(String ConfValue) {
         this.ConfValue = ConfValue;
+    }
+
+    /**
+     * Get <p>add/delete/update</p> 
+     * @return ModifyType <p>add/delete/update</p>
+     */
+    public String getModifyType() {
+        return this.ModifyType;
+    }
+
+    /**
+     * Set <p>add/delete/update</p>
+     * @param ModifyType <p>add/delete/update</p>
+     */
+    public void setModifyType(String ModifyType) {
+        this.ModifyType = ModifyType;
+    }
+
+    /**
+     * Get <p>是否需要重启</p> 
+     * @return NeedRestart <p>是否需要重启</p>
+     */
+    public Boolean getNeedRestart() {
+        return this.NeedRestart;
+    }
+
+    /**
+     * Set <p>是否需要重启</p>
+     * @param NeedRestart <p>是否需要重启</p>
+     */
+    public void setNeedRestart(Boolean NeedRestart) {
+        this.NeedRestart = NeedRestart;
+    }
+
+    /**
+     * Get <p>修改前的值</p> 
+     * @return OriginalConfValue <p>修改前的值</p>
+     */
+    public String getOriginalConfValue() {
+        return this.OriginalConfValue;
+    }
+
+    /**
+     * Set <p>修改前的值</p>
+     * @param OriginalConfValue <p>修改前的值</p>
+     */
+    public void setOriginalConfValue(String OriginalConfValue) {
+        this.OriginalConfValue = OriginalConfValue;
     }
 
     public InstanceConfigItem() {
@@ -83,6 +152,15 @@ public class InstanceConfigItem extends AbstractModel {
         if (source.ConfValue != null) {
             this.ConfValue = new String(source.ConfValue);
         }
+        if (source.ModifyType != null) {
+            this.ModifyType = new String(source.ModifyType);
+        }
+        if (source.NeedRestart != null) {
+            this.NeedRestart = new Boolean(source.NeedRestart);
+        }
+        if (source.OriginalConfValue != null) {
+            this.OriginalConfValue = new String(source.OriginalConfValue);
+        }
     }
 
 
@@ -92,6 +170,9 @@ public class InstanceConfigItem extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ConfKey", this.ConfKey);
         this.setParamSimple(map, prefix + "ConfValue", this.ConfValue);
+        this.setParamSimple(map, prefix + "ModifyType", this.ModifyType);
+        this.setParamSimple(map, prefix + "NeedRestart", this.NeedRestart);
+        this.setParamSimple(map, prefix + "OriginalConfValue", this.OriginalConfValue);
 
     }
 }

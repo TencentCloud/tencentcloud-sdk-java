@@ -59,6 +59,20 @@ public class UpdateTrafficMirrorAllFilterRequest extends AbstractModel {
     private TrafficMirrorFilter [] CollectorNormalFilters;
 
     /**
+    * 流量镜像入站过滤规则。
+    */
+    @SerializedName("IngressFilterRules")
+    @Expose
+    private TrafficMirrorFilter [] IngressFilterRules;
+
+    /**
+    * 流量镜像出站过滤规则。
+    */
+    @SerializedName("EgressFilterRules")
+    @Expose
+    private TrafficMirrorFilter [] EgressFilterRules;
+
+    /**
      * Get 流量镜像实例ID 
      * @return TrafficMirrorId 流量镜像实例ID
      */
@@ -138,6 +152,38 @@ public class UpdateTrafficMirrorAllFilterRequest extends AbstractModel {
         this.CollectorNormalFilters = CollectorNormalFilters;
     }
 
+    /**
+     * Get 流量镜像入站过滤规则。 
+     * @return IngressFilterRules 流量镜像入站过滤规则。
+     */
+    public TrafficMirrorFilter [] getIngressFilterRules() {
+        return this.IngressFilterRules;
+    }
+
+    /**
+     * Set 流量镜像入站过滤规则。
+     * @param IngressFilterRules 流量镜像入站过滤规则。
+     */
+    public void setIngressFilterRules(TrafficMirrorFilter [] IngressFilterRules) {
+        this.IngressFilterRules = IngressFilterRules;
+    }
+
+    /**
+     * Get 流量镜像出站过滤规则。 
+     * @return EgressFilterRules 流量镜像出站过滤规则。
+     */
+    public TrafficMirrorFilter [] getEgressFilterRules() {
+        return this.EgressFilterRules;
+    }
+
+    /**
+     * Set 流量镜像出站过滤规则。
+     * @param EgressFilterRules 流量镜像出站过滤规则。
+     */
+    public void setEgressFilterRules(TrafficMirrorFilter [] EgressFilterRules) {
+        this.EgressFilterRules = EgressFilterRules;
+    }
+
     public UpdateTrafficMirrorAllFilterRequest() {
     }
 
@@ -167,6 +213,18 @@ public class UpdateTrafficMirrorAllFilterRequest extends AbstractModel {
                 this.CollectorNormalFilters[i] = new TrafficMirrorFilter(source.CollectorNormalFilters[i]);
             }
         }
+        if (source.IngressFilterRules != null) {
+            this.IngressFilterRules = new TrafficMirrorFilter[source.IngressFilterRules.length];
+            for (int i = 0; i < source.IngressFilterRules.length; i++) {
+                this.IngressFilterRules[i] = new TrafficMirrorFilter(source.IngressFilterRules[i]);
+            }
+        }
+        if (source.EgressFilterRules != null) {
+            this.EgressFilterRules = new TrafficMirrorFilter[source.EgressFilterRules.length];
+            for (int i = 0; i < source.EgressFilterRules.length; i++) {
+                this.EgressFilterRules[i] = new TrafficMirrorFilter(source.EgressFilterRules[i]);
+            }
+        }
     }
 
 
@@ -179,6 +237,8 @@ public class UpdateTrafficMirrorAllFilterRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "CollectorSrcs.", this.CollectorSrcs);
         this.setParamSimple(map, prefix + "NatId", this.NatId);
         this.setParamArrayObj(map, prefix + "CollectorNormalFilters.", this.CollectorNormalFilters);
+        this.setParamArrayObj(map, prefix + "IngressFilterRules.", this.IngressFilterRules);
+        this.setParamArrayObj(map, prefix + "EgressFilterRules.", this.EgressFilterRules);
 
     }
 }

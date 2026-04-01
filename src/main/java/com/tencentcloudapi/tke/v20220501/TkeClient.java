@@ -237,6 +237,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *设置 TKE 节点池期望节点数
+     * @param req ScaleNodePoolRequest
+     * @return ScaleNodePoolResponse
+     * @throws TencentCloudSDKException
+     */
+    public ScaleNodePoolResponse ScaleNodePool(ScaleNodePoolRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ScaleNodePool", ScaleNodePoolResponse.class);
+    }
+
+    /**
      *设置是否开启节点登录
      * @param req SetMachineLoginRequest
      * @return SetMachineLoginResponse

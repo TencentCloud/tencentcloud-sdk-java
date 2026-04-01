@@ -31,7 +31,15 @@ public class UpdateTrafficMirrorDirectionRequest extends AbstractModel {
     private String TrafficMirrorId;
 
     /**
-    * 流量镜像采集方向
+    * 流量镜像采集方向。取值范围：
+
+- EGRESS - 出方向采集
+
+- INGRESS - 入方向采集
+
+- ALL - 出入双向采集
+
+- NO-DIRECTION - 不区分采集方向（新模式）。切换为该模式后将不再支持按方向采集，需通过 CreateTrafficMirrorFilterRules 接口创建带方向的过滤规则，过滤规则支持设置优先级和单独编辑。
     */
     @SerializedName("Direction")
     @Expose
@@ -54,16 +62,48 @@ public class UpdateTrafficMirrorDirectionRequest extends AbstractModel {
     }
 
     /**
-     * Get 流量镜像采集方向 
-     * @return Direction 流量镜像采集方向
+     * Get 流量镜像采集方向。取值范围：
+
+- EGRESS - 出方向采集
+
+- INGRESS - 入方向采集
+
+- ALL - 出入双向采集
+
+- NO-DIRECTION - 不区分采集方向（新模式）。切换为该模式后将不再支持按方向采集，需通过 CreateTrafficMirrorFilterRules 接口创建带方向的过滤规则，过滤规则支持设置优先级和单独编辑。 
+     * @return Direction 流量镜像采集方向。取值范围：
+
+- EGRESS - 出方向采集
+
+- INGRESS - 入方向采集
+
+- ALL - 出入双向采集
+
+- NO-DIRECTION - 不区分采集方向（新模式）。切换为该模式后将不再支持按方向采集，需通过 CreateTrafficMirrorFilterRules 接口创建带方向的过滤规则，过滤规则支持设置优先级和单独编辑。
      */
     public String getDirection() {
         return this.Direction;
     }
 
     /**
-     * Set 流量镜像采集方向
-     * @param Direction 流量镜像采集方向
+     * Set 流量镜像采集方向。取值范围：
+
+- EGRESS - 出方向采集
+
+- INGRESS - 入方向采集
+
+- ALL - 出入双向采集
+
+- NO-DIRECTION - 不区分采集方向（新模式）。切换为该模式后将不再支持按方向采集，需通过 CreateTrafficMirrorFilterRules 接口创建带方向的过滤规则，过滤规则支持设置优先级和单独编辑。
+     * @param Direction 流量镜像采集方向。取值范围：
+
+- EGRESS - 出方向采集
+
+- INGRESS - 入方向采集
+
+- ALL - 出入双向采集
+
+- NO-DIRECTION - 不区分采集方向（新模式）。切换为该模式后将不再支持按方向采集，需通过 CreateTrafficMirrorFilterRules 接口创建带方向的过滤规则，过滤规则支持设置优先级和单独编辑。
      */
     public void setDirection(String Direction) {
         this.Direction = Direction;

@@ -24,230 +24,230 @@ import java.util.HashMap;
 public class ServerBaseInfo extends AbstractModel {
 
     /**
-    * 服务名
+    * <p>服务名</p>
     */
     @SerializedName("ServerName")
     @Expose
     private String ServerName;
 
     /**
-    * 默认服务域名
+    * <p>默认服务域名</p>
     */
     @SerializedName("DefaultDomainName")
     @Expose
     private String DefaultDomainName;
 
     /**
-    * 自定义域名
+    * <p>自定义域名</p>
     */
     @SerializedName("CustomDomainName")
     @Expose
     private String CustomDomainName;
 
     /**
-    * 服务状态：running/deploying/deploy_failed
+    * <p>服务状态：creating/create_failed/freezing/freeze_fail/froze/unfreezing/unfreeze_fail/normal/deleting/delete_failed/abnormal</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>create_failed： 创建失败</li><li>freezing： 冻结中</li><li>freeze_fail： 冻结失败</li><li>froze： 已冻结</li><li>unfreezing： 解冻中</li><li>unfreeze_fail： 解冻失败</li><li>normal： 正常</li><li>deleting： 删除中</li><li>delete_failed： 删除失败</li><li>abnormal： 服务异常</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 公网访问类型
+    * <p>公网访问类型</p>
     */
     @SerializedName("AccessTypes")
     @Expose
     private String [] AccessTypes;
 
     /**
-    * 展示自定义域名
+    * <p>展示自定义域名</p>
     */
     @SerializedName("CustomDomainNames")
     @Expose
     private String [] CustomDomainNames;
 
     /**
-    * 服务类型: function 云函数2.0；container 容器服务
+    * <p>服务类型: function 云函数2.0；container 容器服务</p>
     */
     @SerializedName("ServerType")
     @Expose
     private String ServerType;
 
     /**
-    * 流量类型，目前只有 FLOW
+    * <p>流量类型，目前只有 FLOW</p>
     */
     @SerializedName("TrafficType")
     @Expose
     private String TrafficType;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-     * Get 服务名 
-     * @return ServerName 服务名
+     * Get <p>服务名</p> 
+     * @return ServerName <p>服务名</p>
      */
     public String getServerName() {
         return this.ServerName;
     }
 
     /**
-     * Set 服务名
-     * @param ServerName 服务名
+     * Set <p>服务名</p>
+     * @param ServerName <p>服务名</p>
      */
     public void setServerName(String ServerName) {
         this.ServerName = ServerName;
     }
 
     /**
-     * Get 默认服务域名 
-     * @return DefaultDomainName 默认服务域名
+     * Get <p>默认服务域名</p> 
+     * @return DefaultDomainName <p>默认服务域名</p>
      */
     public String getDefaultDomainName() {
         return this.DefaultDomainName;
     }
 
     /**
-     * Set 默认服务域名
-     * @param DefaultDomainName 默认服务域名
+     * Set <p>默认服务域名</p>
+     * @param DefaultDomainName <p>默认服务域名</p>
      */
     public void setDefaultDomainName(String DefaultDomainName) {
         this.DefaultDomainName = DefaultDomainName;
     }
 
     /**
-     * Get 自定义域名 
-     * @return CustomDomainName 自定义域名
+     * Get <p>自定义域名</p> 
+     * @return CustomDomainName <p>自定义域名</p>
      */
     public String getCustomDomainName() {
         return this.CustomDomainName;
     }
 
     /**
-     * Set 自定义域名
-     * @param CustomDomainName 自定义域名
+     * Set <p>自定义域名</p>
+     * @param CustomDomainName <p>自定义域名</p>
      */
     public void setCustomDomainName(String CustomDomainName) {
         this.CustomDomainName = CustomDomainName;
     }
 
     /**
-     * Get 服务状态：running/deploying/deploy_failed 
-     * @return Status 服务状态：running/deploying/deploy_failed
+     * Get <p>服务状态：creating/create_failed/freezing/freeze_fail/froze/unfreezing/unfreeze_fail/normal/deleting/delete_failed/abnormal</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>create_failed： 创建失败</li><li>freezing： 冻结中</li><li>freeze_fail： 冻结失败</li><li>froze： 已冻结</li><li>unfreezing： 解冻中</li><li>unfreeze_fail： 解冻失败</li><li>normal： 正常</li><li>deleting： 删除中</li><li>delete_failed： 删除失败</li><li>abnormal： 服务异常</li></ul> 
+     * @return Status <p>服务状态：creating/create_failed/freezing/freeze_fail/froze/unfreezing/unfreeze_fail/normal/deleting/delete_failed/abnormal</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>create_failed： 创建失败</li><li>freezing： 冻结中</li><li>freeze_fail： 冻结失败</li><li>froze： 已冻结</li><li>unfreezing： 解冻中</li><li>unfreeze_fail： 解冻失败</li><li>normal： 正常</li><li>deleting： 删除中</li><li>delete_failed： 删除失败</li><li>abnormal： 服务异常</li></ul>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 服务状态：running/deploying/deploy_failed
-     * @param Status 服务状态：running/deploying/deploy_failed
+     * Set <p>服务状态：creating/create_failed/freezing/freeze_fail/froze/unfreezing/unfreeze_fail/normal/deleting/delete_failed/abnormal</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>create_failed： 创建失败</li><li>freezing： 冻结中</li><li>freeze_fail： 冻结失败</li><li>froze： 已冻结</li><li>unfreezing： 解冻中</li><li>unfreeze_fail： 解冻失败</li><li>normal： 正常</li><li>deleting： 删除中</li><li>delete_failed： 删除失败</li><li>abnormal： 服务异常</li></ul>
+     * @param Status <p>服务状态：creating/create_failed/freezing/freeze_fail/froze/unfreezing/unfreeze_fail/normal/deleting/delete_failed/abnormal</p><p>枚举值：</p><ul><li>creating： 创建中</li><li>create_failed： 创建失败</li><li>freezing： 冻结中</li><li>freeze_fail： 冻结失败</li><li>froze： 已冻结</li><li>unfreezing： 解冻中</li><li>unfreeze_fail： 解冻失败</li><li>normal： 正常</li><li>deleting： 删除中</li><li>delete_failed： 删除失败</li><li>abnormal： 服务异常</li></ul>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 更新时间 
-     * @return UpdateTime 更新时间
+     * Get <p>更新时间</p> 
+     * @return UpdateTime <p>更新时间</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 更新时间
-     * @param UpdateTime 更新时间
+     * Set <p>更新时间</p>
+     * @param UpdateTime <p>更新时间</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 公网访问类型 
-     * @return AccessTypes 公网访问类型
+     * Get <p>公网访问类型</p> 
+     * @return AccessTypes <p>公网访问类型</p>
      */
     public String [] getAccessTypes() {
         return this.AccessTypes;
     }
 
     /**
-     * Set 公网访问类型
-     * @param AccessTypes 公网访问类型
+     * Set <p>公网访问类型</p>
+     * @param AccessTypes <p>公网访问类型</p>
      */
     public void setAccessTypes(String [] AccessTypes) {
         this.AccessTypes = AccessTypes;
     }
 
     /**
-     * Get 展示自定义域名 
-     * @return CustomDomainNames 展示自定义域名
+     * Get <p>展示自定义域名</p> 
+     * @return CustomDomainNames <p>展示自定义域名</p>
      */
     public String [] getCustomDomainNames() {
         return this.CustomDomainNames;
     }
 
     /**
-     * Set 展示自定义域名
-     * @param CustomDomainNames 展示自定义域名
+     * Set <p>展示自定义域名</p>
+     * @param CustomDomainNames <p>展示自定义域名</p>
      */
     public void setCustomDomainNames(String [] CustomDomainNames) {
         this.CustomDomainNames = CustomDomainNames;
     }
 
     /**
-     * Get 服务类型: function 云函数2.0；container 容器服务 
-     * @return ServerType 服务类型: function 云函数2.0；container 容器服务
+     * Get <p>服务类型: function 云函数2.0；container 容器服务</p> 
+     * @return ServerType <p>服务类型: function 云函数2.0；container 容器服务</p>
      */
     public String getServerType() {
         return this.ServerType;
     }
 
     /**
-     * Set 服务类型: function 云函数2.0；container 容器服务
-     * @param ServerType 服务类型: function 云函数2.0；container 容器服务
+     * Set <p>服务类型: function 云函数2.0；container 容器服务</p>
+     * @param ServerType <p>服务类型: function 云函数2.0；container 容器服务</p>
      */
     public void setServerType(String ServerType) {
         this.ServerType = ServerType;
     }
 
     /**
-     * Get 流量类型，目前只有 FLOW 
-     * @return TrafficType 流量类型，目前只有 FLOW
+     * Get <p>流量类型，目前只有 FLOW</p> 
+     * @return TrafficType <p>流量类型，目前只有 FLOW</p>
      */
     public String getTrafficType() {
         return this.TrafficType;
     }
 
     /**
-     * Set 流量类型，目前只有 FLOW
-     * @param TrafficType 流量类型，目前只有 FLOW
+     * Set <p>流量类型，目前只有 FLOW</p>
+     * @param TrafficType <p>流量类型，目前只有 FLOW</p>
      */
     public void setTrafficType(String TrafficType) {
         this.TrafficType = TrafficType;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;

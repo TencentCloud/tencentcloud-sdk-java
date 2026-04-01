@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.vpc.v20170312.models;
+package com.tencentcloudapi.tke.v20220501.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,21 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTrafficMirrorsResponse extends AbstractModel {
-
-    /**
-    * 流量镜像实例信息
-    */
-    @SerializedName("TrafficMirrorSet")
-    @Expose
-    private TrafficMirror [] TrafficMirrorSet;
-
-    /**
-    * 符合条件的对象数
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
+public class ScaleNodePoolResponse extends AbstractModel {
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -43,38 +29,6 @@ public class DescribeTrafficMirrorsResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 流量镜像实例信息 
-     * @return TrafficMirrorSet 流量镜像实例信息
-     */
-    public TrafficMirror [] getTrafficMirrorSet() {
-        return this.TrafficMirrorSet;
-    }
-
-    /**
-     * Set 流量镜像实例信息
-     * @param TrafficMirrorSet 流量镜像实例信息
-     */
-    public void setTrafficMirrorSet(TrafficMirror [] TrafficMirrorSet) {
-        this.TrafficMirrorSet = TrafficMirrorSet;
-    }
-
-    /**
-     * Get 符合条件的对象数 
-     * @return TotalCount 符合条件的对象数
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set 符合条件的对象数
-     * @param TotalCount 符合条件的对象数
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -92,23 +46,14 @@ public class DescribeTrafficMirrorsResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeTrafficMirrorsResponse() {
+    public ScaleNodePoolResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeTrafficMirrorsResponse(DescribeTrafficMirrorsResponse source) {
-        if (source.TrafficMirrorSet != null) {
-            this.TrafficMirrorSet = new TrafficMirror[source.TrafficMirrorSet.length];
-            for (int i = 0; i < source.TrafficMirrorSet.length; i++) {
-                this.TrafficMirrorSet[i] = new TrafficMirror(source.TrafficMirrorSet[i]);
-            }
-        }
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
-        }
+    public ScaleNodePoolResponse(ScaleNodePoolResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -119,8 +64,6 @@ public class DescribeTrafficMirrorsResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "TrafficMirrorSet.", this.TrafficMirrorSet);
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
