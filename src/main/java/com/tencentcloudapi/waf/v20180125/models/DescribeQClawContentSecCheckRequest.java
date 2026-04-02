@@ -24,95 +24,141 @@ import java.util.HashMap;
 public class DescribeQClawContentSecCheckRequest extends AbstractModel {
 
     /**
-    *  服务id,使用哪一套防护策略，就需要传哪一套服务id，模型会检测该服务id下的所有规则
+    * <p>服务id,使用哪一套防护策略，就需要传哪一套服务id，模型会检测该服务id下的所有规则</p>
     */
     @SerializedName("ServiceId")
     @Expose
     private String ServiceId;
 
     /**
-    * 要审核的内容
+    * <p>要审核的内容</p>
     */
     @SerializedName("Content")
     @Expose
     private ApiGuardContent Content;
 
     /**
-    * 标识用户的id，限速使用，不填，则限速会不生效
+    * <p>标识用户的id，限速使用，不填，则限速会不生效</p>
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * 会话id
+    * <p>会话id</p>
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-     * Get  服务id,使用哪一套防护策略，就需要传哪一套服务id，模型会检测该服务id下的所有规则 
-     * @return ServiceId  服务id,使用哪一套防护策略，就需要传哪一套服务id，模型会检测该服务id下的所有规则
+    * <p>工具名称</p>
+    */
+    @SerializedName("ToolName")
+    @Expose
+    private String ToolName;
+
+    /**
+    * <p>工具执行的参数</p>
+    */
+    @SerializedName("ToolArgs")
+    @Expose
+    private String ToolArgs;
+
+    /**
+     * Get <p>服务id,使用哪一套防护策略，就需要传哪一套服务id，模型会检测该服务id下的所有规则</p> 
+     * @return ServiceId <p>服务id,使用哪一套防护策略，就需要传哪一套服务id，模型会检测该服务id下的所有规则</p>
      */
     public String getServiceId() {
         return this.ServiceId;
     }
 
     /**
-     * Set  服务id,使用哪一套防护策略，就需要传哪一套服务id，模型会检测该服务id下的所有规则
-     * @param ServiceId  服务id,使用哪一套防护策略，就需要传哪一套服务id，模型会检测该服务id下的所有规则
+     * Set <p>服务id,使用哪一套防护策略，就需要传哪一套服务id，模型会检测该服务id下的所有规则</p>
+     * @param ServiceId <p>服务id,使用哪一套防护策略，就需要传哪一套服务id，模型会检测该服务id下的所有规则</p>
      */
     public void setServiceId(String ServiceId) {
         this.ServiceId = ServiceId;
     }
 
     /**
-     * Get 要审核的内容 
-     * @return Content 要审核的内容
+     * Get <p>要审核的内容</p> 
+     * @return Content <p>要审核的内容</p>
      */
     public ApiGuardContent getContent() {
         return this.Content;
     }
 
     /**
-     * Set 要审核的内容
-     * @param Content 要审核的内容
+     * Set <p>要审核的内容</p>
+     * @param Content <p>要审核的内容</p>
      */
     public void setContent(ApiGuardContent Content) {
         this.Content = Content;
     }
 
     /**
-     * Get 标识用户的id，限速使用，不填，则限速会不生效 
-     * @return UserId 标识用户的id，限速使用，不填，则限速会不生效
+     * Get <p>标识用户的id，限速使用，不填，则限速会不生效</p> 
+     * @return UserId <p>标识用户的id，限速使用，不填，则限速会不生效</p>
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 标识用户的id，限速使用，不填，则限速会不生效
-     * @param UserId 标识用户的id，限速使用，不填，则限速会不生效
+     * Set <p>标识用户的id，限速使用，不填，则限速会不生效</p>
+     * @param UserId <p>标识用户的id，限速使用，不填，则限速会不生效</p>
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get 会话id 
-     * @return SessionId 会话id
+     * Get <p>会话id</p> 
+     * @return SessionId <p>会话id</p>
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 会话id
-     * @param SessionId 会话id
+     * Set <p>会话id</p>
+     * @param SessionId <p>会话id</p>
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
+    }
+
+    /**
+     * Get <p>工具名称</p> 
+     * @return ToolName <p>工具名称</p>
+     */
+    public String getToolName() {
+        return this.ToolName;
+    }
+
+    /**
+     * Set <p>工具名称</p>
+     * @param ToolName <p>工具名称</p>
+     */
+    public void setToolName(String ToolName) {
+        this.ToolName = ToolName;
+    }
+
+    /**
+     * Get <p>工具执行的参数</p> 
+     * @return ToolArgs <p>工具执行的参数</p>
+     */
+    public String getToolArgs() {
+        return this.ToolArgs;
+    }
+
+    /**
+     * Set <p>工具执行的参数</p>
+     * @param ToolArgs <p>工具执行的参数</p>
+     */
+    public void setToolArgs(String ToolArgs) {
+        this.ToolArgs = ToolArgs;
     }
 
     public DescribeQClawContentSecCheckRequest() {
@@ -135,6 +181,12 @@ public class DescribeQClawContentSecCheckRequest extends AbstractModel {
         if (source.SessionId != null) {
             this.SessionId = new String(source.SessionId);
         }
+        if (source.ToolName != null) {
+            this.ToolName = new String(source.ToolName);
+        }
+        if (source.ToolArgs != null) {
+            this.ToolArgs = new String(source.ToolArgs);
+        }
     }
 
 
@@ -146,6 +198,8 @@ public class DescribeQClawContentSecCheckRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Content.", this.Content);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamSimple(map, prefix + "ToolName", this.ToolName);
+        this.setParamSimple(map, prefix + "ToolArgs", this.ToolArgs);
 
     }
 }

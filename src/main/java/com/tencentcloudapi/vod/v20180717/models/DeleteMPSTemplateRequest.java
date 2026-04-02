@@ -33,6 +33,9 @@ public class DeleteMPSTemplateRequest extends AbstractModel {
     /**
     * 需要删除的 MPS 模板的类型。取值：
 <li>Transcode: 删除转码模板。</li>
+<li>AIAnalysis: 创建智能分析模板。</li>
+<li>SmartSubtitle: 创建智能字幕模板。</li>
+<li>SmartErase: 创建智能擦除模板。</li>
     */
     @SerializedName("TemplateType")
     @Expose
@@ -63,9 +66,15 @@ public class DeleteMPSTemplateRequest extends AbstractModel {
 
     /**
      * Get 需要删除的 MPS 模板的类型。取值：
-<li>Transcode: 删除转码模板。</li> 
+<li>Transcode: 删除转码模板。</li>
+<li>AIAnalysis: 创建智能分析模板。</li>
+<li>SmartSubtitle: 创建智能字幕模板。</li>
+<li>SmartErase: 创建智能擦除模板。</li> 
      * @return TemplateType 需要删除的 MPS 模板的类型。取值：
 <li>Transcode: 删除转码模板。</li>
+<li>AIAnalysis: 创建智能分析模板。</li>
+<li>SmartSubtitle: 创建智能字幕模板。</li>
+<li>SmartErase: 创建智能擦除模板。</li>
      */
     public String getTemplateType() {
         return this.TemplateType;
@@ -74,8 +83,14 @@ public class DeleteMPSTemplateRequest extends AbstractModel {
     /**
      * Set 需要删除的 MPS 模板的类型。取值：
 <li>Transcode: 删除转码模板。</li>
+<li>AIAnalysis: 创建智能分析模板。</li>
+<li>SmartSubtitle: 创建智能字幕模板。</li>
+<li>SmartErase: 创建智能擦除模板。</li>
      * @param TemplateType 需要删除的 MPS 模板的类型。取值：
 <li>Transcode: 删除转码模板。</li>
+<li>AIAnalysis: 创建智能分析模板。</li>
+<li>SmartSubtitle: 创建智能字幕模板。</li>
+<li>SmartErase: 创建智能擦除模板。</li>
      */
     public void setTemplateType(String TemplateType) {
         this.TemplateType = TemplateType;

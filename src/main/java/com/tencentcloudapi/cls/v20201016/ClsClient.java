@@ -72,6 +72,19 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *调用接口，发起一次对话请求。
+本接口支持智能生成检索分析语句等日志服务AI功能。
+⚠️注意：通过SSE流式调用此接口时，请务必设置请求域名（Endpoint）为 cls.ai.tencentcloudapi.com。
+     * @param req ChatCompletionsRequest
+     * @return ChatCompletionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChatCompletionsResponse ChatCompletions(ChatCompletionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ChatCompletions", ChatCompletionsResponse.class);
+    }
+
+    /**
      *本接口用于数据加工DSL函数的语法校验。
      * @param req CheckFunctionRequest
      * @return CheckFunctionResponse

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeMediaInfosResponse extends AbstractModel {
 
     /**
-    * 媒体文件信息列表。
+    * <p>媒体文件信息列表。</p>
     */
     @SerializedName("MediaInfoSet")
     @Expose
     private MediaInfo [] MediaInfoSet;
 
     /**
-    * 不存在的文件 ID 列表。
+    * <p>不存在的文件 ID 列表。</p>
     */
     @SerializedName("NotExistFileIdSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeMediaInfosResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 媒体文件信息列表。 
-     * @return MediaInfoSet 媒体文件信息列表。
+     * Get <p>媒体文件信息列表。</p> 
+     * @return MediaInfoSet <p>媒体文件信息列表。</p>
      */
     public MediaInfo [] getMediaInfoSet() {
         return this.MediaInfoSet;
     }
 
     /**
-     * Set 媒体文件信息列表。
-     * @param MediaInfoSet 媒体文件信息列表。
+     * Set <p>媒体文件信息列表。</p>
+     * @param MediaInfoSet <p>媒体文件信息列表。</p>
      */
     public void setMediaInfoSet(MediaInfo [] MediaInfoSet) {
         this.MediaInfoSet = MediaInfoSet;
     }
 
     /**
-     * Get 不存在的文件 ID 列表。 
-     * @return NotExistFileIdSet 不存在的文件 ID 列表。
+     * Get <p>不存在的文件 ID 列表。</p> 
+     * @return NotExistFileIdSet <p>不存在的文件 ID 列表。</p>
      */
     public String [] getNotExistFileIdSet() {
         return this.NotExistFileIdSet;
     }
 
     /**
-     * Set 不存在的文件 ID 列表。
-     * @param NotExistFileIdSet 不存在的文件 ID 列表。
+     * Set <p>不存在的文件 ID 列表。</p>
+     * @param NotExistFileIdSet <p>不存在的文件 ID 列表。</p>
      */
     public void setNotExistFileIdSet(String [] NotExistFileIdSet) {
         this.NotExistFileIdSet = NotExistFileIdSet;

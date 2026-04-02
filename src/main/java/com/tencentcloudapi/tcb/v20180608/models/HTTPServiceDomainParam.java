@@ -24,164 +24,187 @@ import java.util.HashMap;
 public class HTTPServiceDomainParam extends AbstractModel {
 
     /**
-    * 域名。全局唯一。如果域名在其他环境下占用或者腾讯云CDN占用，可能会导致创建失败
+    * <p>域名。全局唯一。如果域名在其他环境下占用或者腾讯云CDN占用，可能会导致创建失败</p>
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 绑定类型。默认DIRECT。DIRECT: 直连到HTTP访问服务， CDN: 接入云开发CDN，CUSTOM: 自定义接入类型（其他CDN或者WAF）
+    * <p>绑定类型。默认DIRECT。DIRECT: 直连到HTTP访问服务， CDN: 接入云开发CDN，CUSTOM: 自定义接入类型（其他CDN或者WAF）</p>
     */
     @SerializedName("AccessType")
     @Expose
     private String AccessType;
 
     /**
-    * 证书ID。当前账户下SSL平台的证书ID
+    * <p>证书ID。当前账户下SSL平台的证书ID</p>
     */
     @SerializedName("CertId")
     @Expose
     private String CertId;
 
     /**
-    * 协议类型。默认HTTP_AND_HTTPS。HTTP_AND_HTTPS: 同时开启http和https，HTTP_TO_HTTPS: http重定向成https，HTTPS_TO_HTTP: https重定向成http。如果未配置证书无法访问https或者进行重定向
+    * <p>协议类型。默认HTTP_AND_HTTPS。HTTP_AND_HTTPS: 同时开启http和https，HTTP_TO_HTTPS: http重定向成https，HTTPS_TO_HTTP: https重定向成http。如果未配置证书无法访问https或者进行重定向</p>
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * 自定义CNAME。对应AccessType: Custom
+    * <p>自定义CNAME。对应AccessType: Custom</p>
     */
     @SerializedName("CustomCname")
     @Expose
     private String CustomCname;
 
     /**
-    * 域名开启状态，不传默认开启
+    * <p>域名开启状态，不传默认开启</p>
     */
     @SerializedName("Enable")
     @Expose
     private Boolean Enable;
 
     /**
-    * 创建/修改的HTTP访问服务路由列表。如果不传，仅创建或修改域名信息。列表最大支持传入20个
+    * <p>创建/修改的HTTP访问服务路由列表。如果不传，仅创建或修改域名信息。列表最大支持传入20个</p>
     */
     @SerializedName("Routes")
     @Expose
     private HTTPServiceRouteParam [] Routes;
 
     /**
-     * Get 域名。全局唯一。如果域名在其他环境下占用或者腾讯云CDN占用，可能会导致创建失败 
-     * @return Domain 域名。全局唯一。如果域名在其他环境下占用或者腾讯云CDN占用，可能会导致创建失败
+    * <p>扩展字段，内部包含headers处理等</p>
+    */
+    @SerializedName("Extension")
+    @Expose
+    private HTTPServiceExtension Extension;
+
+    /**
+     * Get <p>域名。全局唯一。如果域名在其他环境下占用或者腾讯云CDN占用，可能会导致创建失败</p> 
+     * @return Domain <p>域名。全局唯一。如果域名在其他环境下占用或者腾讯云CDN占用，可能会导致创建失败</p>
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 域名。全局唯一。如果域名在其他环境下占用或者腾讯云CDN占用，可能会导致创建失败
-     * @param Domain 域名。全局唯一。如果域名在其他环境下占用或者腾讯云CDN占用，可能会导致创建失败
+     * Set <p>域名。全局唯一。如果域名在其他环境下占用或者腾讯云CDN占用，可能会导致创建失败</p>
+     * @param Domain <p>域名。全局唯一。如果域名在其他环境下占用或者腾讯云CDN占用，可能会导致创建失败</p>
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 绑定类型。默认DIRECT。DIRECT: 直连到HTTP访问服务， CDN: 接入云开发CDN，CUSTOM: 自定义接入类型（其他CDN或者WAF） 
-     * @return AccessType 绑定类型。默认DIRECT。DIRECT: 直连到HTTP访问服务， CDN: 接入云开发CDN，CUSTOM: 自定义接入类型（其他CDN或者WAF）
+     * Get <p>绑定类型。默认DIRECT。DIRECT: 直连到HTTP访问服务， CDN: 接入云开发CDN，CUSTOM: 自定义接入类型（其他CDN或者WAF）</p> 
+     * @return AccessType <p>绑定类型。默认DIRECT。DIRECT: 直连到HTTP访问服务， CDN: 接入云开发CDN，CUSTOM: 自定义接入类型（其他CDN或者WAF）</p>
      */
     public String getAccessType() {
         return this.AccessType;
     }
 
     /**
-     * Set 绑定类型。默认DIRECT。DIRECT: 直连到HTTP访问服务， CDN: 接入云开发CDN，CUSTOM: 自定义接入类型（其他CDN或者WAF）
-     * @param AccessType 绑定类型。默认DIRECT。DIRECT: 直连到HTTP访问服务， CDN: 接入云开发CDN，CUSTOM: 自定义接入类型（其他CDN或者WAF）
+     * Set <p>绑定类型。默认DIRECT。DIRECT: 直连到HTTP访问服务， CDN: 接入云开发CDN，CUSTOM: 自定义接入类型（其他CDN或者WAF）</p>
+     * @param AccessType <p>绑定类型。默认DIRECT。DIRECT: 直连到HTTP访问服务， CDN: 接入云开发CDN，CUSTOM: 自定义接入类型（其他CDN或者WAF）</p>
      */
     public void setAccessType(String AccessType) {
         this.AccessType = AccessType;
     }
 
     /**
-     * Get 证书ID。当前账户下SSL平台的证书ID 
-     * @return CertId 证书ID。当前账户下SSL平台的证书ID
+     * Get <p>证书ID。当前账户下SSL平台的证书ID</p> 
+     * @return CertId <p>证书ID。当前账户下SSL平台的证书ID</p>
      */
     public String getCertId() {
         return this.CertId;
     }
 
     /**
-     * Set 证书ID。当前账户下SSL平台的证书ID
-     * @param CertId 证书ID。当前账户下SSL平台的证书ID
+     * Set <p>证书ID。当前账户下SSL平台的证书ID</p>
+     * @param CertId <p>证书ID。当前账户下SSL平台的证书ID</p>
      */
     public void setCertId(String CertId) {
         this.CertId = CertId;
     }
 
     /**
-     * Get 协议类型。默认HTTP_AND_HTTPS。HTTP_AND_HTTPS: 同时开启http和https，HTTP_TO_HTTPS: http重定向成https，HTTPS_TO_HTTP: https重定向成http。如果未配置证书无法访问https或者进行重定向 
-     * @return Protocol 协议类型。默认HTTP_AND_HTTPS。HTTP_AND_HTTPS: 同时开启http和https，HTTP_TO_HTTPS: http重定向成https，HTTPS_TO_HTTP: https重定向成http。如果未配置证书无法访问https或者进行重定向
+     * Get <p>协议类型。默认HTTP_AND_HTTPS。HTTP_AND_HTTPS: 同时开启http和https，HTTP_TO_HTTPS: http重定向成https，HTTPS_TO_HTTP: https重定向成http。如果未配置证书无法访问https或者进行重定向</p> 
+     * @return Protocol <p>协议类型。默认HTTP_AND_HTTPS。HTTP_AND_HTTPS: 同时开启http和https，HTTP_TO_HTTPS: http重定向成https，HTTPS_TO_HTTP: https重定向成http。如果未配置证书无法访问https或者进行重定向</p>
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 协议类型。默认HTTP_AND_HTTPS。HTTP_AND_HTTPS: 同时开启http和https，HTTP_TO_HTTPS: http重定向成https，HTTPS_TO_HTTP: https重定向成http。如果未配置证书无法访问https或者进行重定向
-     * @param Protocol 协议类型。默认HTTP_AND_HTTPS。HTTP_AND_HTTPS: 同时开启http和https，HTTP_TO_HTTPS: http重定向成https，HTTPS_TO_HTTP: https重定向成http。如果未配置证书无法访问https或者进行重定向
+     * Set <p>协议类型。默认HTTP_AND_HTTPS。HTTP_AND_HTTPS: 同时开启http和https，HTTP_TO_HTTPS: http重定向成https，HTTPS_TO_HTTP: https重定向成http。如果未配置证书无法访问https或者进行重定向</p>
+     * @param Protocol <p>协议类型。默认HTTP_AND_HTTPS。HTTP_AND_HTTPS: 同时开启http和https，HTTP_TO_HTTPS: http重定向成https，HTTPS_TO_HTTP: https重定向成http。如果未配置证书无法访问https或者进行重定向</p>
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 自定义CNAME。对应AccessType: Custom 
-     * @return CustomCname 自定义CNAME。对应AccessType: Custom
+     * Get <p>自定义CNAME。对应AccessType: Custom</p> 
+     * @return CustomCname <p>自定义CNAME。对应AccessType: Custom</p>
      */
     public String getCustomCname() {
         return this.CustomCname;
     }
 
     /**
-     * Set 自定义CNAME。对应AccessType: Custom
-     * @param CustomCname 自定义CNAME。对应AccessType: Custom
+     * Set <p>自定义CNAME。对应AccessType: Custom</p>
+     * @param CustomCname <p>自定义CNAME。对应AccessType: Custom</p>
      */
     public void setCustomCname(String CustomCname) {
         this.CustomCname = CustomCname;
     }
 
     /**
-     * Get 域名开启状态，不传默认开启 
-     * @return Enable 域名开启状态，不传默认开启
+     * Get <p>域名开启状态，不传默认开启</p> 
+     * @return Enable <p>域名开启状态，不传默认开启</p>
      */
     public Boolean getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set 域名开启状态，不传默认开启
-     * @param Enable 域名开启状态，不传默认开启
+     * Set <p>域名开启状态，不传默认开启</p>
+     * @param Enable <p>域名开启状态，不传默认开启</p>
      */
     public void setEnable(Boolean Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get 创建/修改的HTTP访问服务路由列表。如果不传，仅创建或修改域名信息。列表最大支持传入20个 
-     * @return Routes 创建/修改的HTTP访问服务路由列表。如果不传，仅创建或修改域名信息。列表最大支持传入20个
+     * Get <p>创建/修改的HTTP访问服务路由列表。如果不传，仅创建或修改域名信息。列表最大支持传入20个</p> 
+     * @return Routes <p>创建/修改的HTTP访问服务路由列表。如果不传，仅创建或修改域名信息。列表最大支持传入20个</p>
      */
     public HTTPServiceRouteParam [] getRoutes() {
         return this.Routes;
     }
 
     /**
-     * Set 创建/修改的HTTP访问服务路由列表。如果不传，仅创建或修改域名信息。列表最大支持传入20个
-     * @param Routes 创建/修改的HTTP访问服务路由列表。如果不传，仅创建或修改域名信息。列表最大支持传入20个
+     * Set <p>创建/修改的HTTP访问服务路由列表。如果不传，仅创建或修改域名信息。列表最大支持传入20个</p>
+     * @param Routes <p>创建/修改的HTTP访问服务路由列表。如果不传，仅创建或修改域名信息。列表最大支持传入20个</p>
      */
     public void setRoutes(HTTPServiceRouteParam [] Routes) {
         this.Routes = Routes;
+    }
+
+    /**
+     * Get <p>扩展字段，内部包含headers处理等</p> 
+     * @return Extension <p>扩展字段，内部包含headers处理等</p>
+     */
+    public HTTPServiceExtension getExtension() {
+        return this.Extension;
+    }
+
+    /**
+     * Set <p>扩展字段，内部包含headers处理等</p>
+     * @param Extension <p>扩展字段，内部包含headers处理等</p>
+     */
+    public void setExtension(HTTPServiceExtension Extension) {
+        this.Extension = Extension;
     }
 
     public HTTPServiceDomainParam() {
@@ -216,6 +239,9 @@ public class HTTPServiceDomainParam extends AbstractModel {
                 this.Routes[i] = new HTTPServiceRouteParam(source.Routes[i]);
             }
         }
+        if (source.Extension != null) {
+            this.Extension = new HTTPServiceExtension(source.Extension);
+        }
     }
 
 
@@ -230,6 +256,7 @@ public class HTTPServiceDomainParam extends AbstractModel {
         this.setParamSimple(map, prefix + "CustomCname", this.CustomCname);
         this.setParamSimple(map, prefix + "Enable", this.Enable);
         this.setParamArrayObj(map, prefix + "Routes.", this.Routes);
+        this.setParamObj(map, prefix + "Extension.", this.Extension);
 
     }
 }

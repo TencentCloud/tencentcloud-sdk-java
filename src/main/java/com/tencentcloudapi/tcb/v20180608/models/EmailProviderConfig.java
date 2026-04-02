@@ -24,49 +24,77 @@ import java.util.HashMap;
 public class EmailProviderConfig extends AbstractModel {
 
     /**
-    * smtp配置
+    * <p>smtp配置</p>
     */
     @SerializedName("SmtpConfig")
     @Expose
     private EmailSmtpConfig SmtpConfig;
 
     /**
-    * 可选：TRUE，FALSE，如果On为TRUE，则表示采用默认代发。
+    * <p>可选：TRUE，FALSE，如果On为TRUE，则表示采用默认代发。</p>
     */
     @SerializedName("On")
     @Expose
     private String On;
 
     /**
-     * Get smtp配置 
-     * @return SmtpConfig smtp配置
+    * <p>邮件模板配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TemplateConfig")
+    @Expose
+    private EmailTemplateConfig TemplateConfig;
+
+    /**
+     * Get <p>smtp配置</p> 
+     * @return SmtpConfig <p>smtp配置</p>
      */
     public EmailSmtpConfig getSmtpConfig() {
         return this.SmtpConfig;
     }
 
     /**
-     * Set smtp配置
-     * @param SmtpConfig smtp配置
+     * Set <p>smtp配置</p>
+     * @param SmtpConfig <p>smtp配置</p>
      */
     public void setSmtpConfig(EmailSmtpConfig SmtpConfig) {
         this.SmtpConfig = SmtpConfig;
     }
 
     /**
-     * Get 可选：TRUE，FALSE，如果On为TRUE，则表示采用默认代发。 
-     * @return On 可选：TRUE，FALSE，如果On为TRUE，则表示采用默认代发。
+     * Get <p>可选：TRUE，FALSE，如果On为TRUE，则表示采用默认代发。</p> 
+     * @return On <p>可选：TRUE，FALSE，如果On为TRUE，则表示采用默认代发。</p>
      */
     public String getOn() {
         return this.On;
     }
 
     /**
-     * Set 可选：TRUE，FALSE，如果On为TRUE，则表示采用默认代发。
-     * @param On 可选：TRUE，FALSE，如果On为TRUE，则表示采用默认代发。
+     * Set <p>可选：TRUE，FALSE，如果On为TRUE，则表示采用默认代发。</p>
+     * @param On <p>可选：TRUE，FALSE，如果On为TRUE，则表示采用默认代发。</p>
      */
     public void setOn(String On) {
         this.On = On;
+    }
+
+    /**
+     * Get <p>邮件模板配置</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TemplateConfig <p>邮件模板配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public EmailTemplateConfig getTemplateConfig() {
+        return this.TemplateConfig;
+    }
+
+    /**
+     * Set <p>邮件模板配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TemplateConfig <p>邮件模板配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTemplateConfig(EmailTemplateConfig TemplateConfig) {
+        this.TemplateConfig = TemplateConfig;
     }
 
     public EmailProviderConfig() {
@@ -83,6 +111,9 @@ public class EmailProviderConfig extends AbstractModel {
         if (source.On != null) {
             this.On = new String(source.On);
         }
+        if (source.TemplateConfig != null) {
+            this.TemplateConfig = new EmailTemplateConfig(source.TemplateConfig);
+        }
     }
 
 
@@ -92,6 +123,7 @@ public class EmailProviderConfig extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "SmtpConfig.", this.SmtpConfig);
         this.setParamSimple(map, prefix + "On", this.On);
+        this.setParamObj(map, prefix + "TemplateConfig.", this.TemplateConfig);
 
     }
 }

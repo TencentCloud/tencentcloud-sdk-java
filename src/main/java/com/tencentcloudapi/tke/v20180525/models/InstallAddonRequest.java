@@ -45,7 +45,7 @@ public class InstallAddonRequest extends AbstractModel {
     private String AddonVersion;
 
     /**
-    * addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取）
+    * addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取）。不同的addon组件支持的RawValues参数参考文档：https://cloud.tencent.com/document/product/457/39048。
     */
     @SerializedName("RawValues")
     @Expose
@@ -107,16 +107,16 @@ public class InstallAddonRequest extends AbstractModel {
     }
 
     /**
-     * Get addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取） 
-     * @return RawValues addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取）
+     * Get addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取）。不同的addon组件支持的RawValues参数参考文档：https://cloud.tencent.com/document/product/457/39048。 
+     * @return RawValues addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取）。不同的addon组件支持的RawValues参数参考文档：https://cloud.tencent.com/document/product/457/39048。
      */
     public String getRawValues() {
         return this.RawValues;
     }
 
     /**
-     * Set addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取）
-     * @param RawValues addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取）
+     * Set addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取）。不同的addon组件支持的RawValues参数参考文档：https://cloud.tencent.com/document/product/457/39048。
+     * @param RawValues addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取）。不同的addon组件支持的RawValues参数参考文档：https://cloud.tencent.com/document/product/457/39048。
      */
     public void setRawValues(String RawValues) {
         this.RawValues = RawValues;

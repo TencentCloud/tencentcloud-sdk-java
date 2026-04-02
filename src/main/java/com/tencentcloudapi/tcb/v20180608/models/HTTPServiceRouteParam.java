@@ -87,6 +87,13 @@ public class HTTPServiceRouteParam extends AbstractModel {
     private Boolean Enable;
 
     /**
+    * 扩展字段，内部包含headers处理等
+    */
+    @SerializedName("Extension")
+    @Expose
+    private HTTPServiceExtension Extension;
+
+    /**
      * Get 路径 
      * @return Path 路径
      */
@@ -230,6 +237,22 @@ public class HTTPServiceRouteParam extends AbstractModel {
         this.Enable = Enable;
     }
 
+    /**
+     * Get 扩展字段，内部包含headers处理等 
+     * @return Extension 扩展字段，内部包含headers处理等
+     */
+    public HTTPServiceExtension getExtension() {
+        return this.Extension;
+    }
+
+    /**
+     * Set 扩展字段，内部包含headers处理等
+     * @param Extension 扩展字段，内部包含headers处理等
+     */
+    public void setExtension(HTTPServiceExtension Extension) {
+        this.Extension = Extension;
+    }
+
     public HTTPServiceRouteParam() {
     }
 
@@ -265,6 +288,9 @@ public class HTTPServiceRouteParam extends AbstractModel {
         if (source.Enable != null) {
             this.Enable = new Boolean(source.Enable);
         }
+        if (source.Extension != null) {
+            this.Extension = new HTTPServiceExtension(source.Extension);
+        }
     }
 
 
@@ -281,6 +307,7 @@ public class HTTPServiceRouteParam extends AbstractModel {
         this.setParamSimple(map, prefix + "EnablePathTransmission", this.EnablePathTransmission);
         this.setParamObj(map, prefix + "QPSPolicy.", this.QPSPolicy);
         this.setParamSimple(map, prefix + "Enable", this.Enable);
+        this.setParamObj(map, prefix + "Extension.", this.Extension);
 
     }
 }

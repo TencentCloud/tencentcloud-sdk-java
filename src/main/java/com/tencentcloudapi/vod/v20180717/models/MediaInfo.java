@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class MediaInfo extends AbstractModel {
 
     /**
-    * 基础信息。包括视频名称、分类、播放地址、封面图片等。
+    * <p>基础信息。包括视频名称、分类、播放地址、封面图片等。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BasicInfo")
@@ -32,7 +32,7 @@ public class MediaInfo extends AbstractModel {
     private MediaBasicInfo BasicInfo;
 
     /**
-    * 元信息。包括大小、时长、视频流信息、音频流信息等。
+    * <p>元信息。包括大小、时长、视频流信息、音频流信息等。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MetaData")
@@ -40,7 +40,7 @@ public class MediaInfo extends AbstractModel {
     private MediaMetaData MetaData;
 
     /**
-    * 转码结果信息。包括该视频转码生成的各种码率的视频的地址、规格、码率、分辨率等。
+    * <p>转码结果信息。包括该视频转码生成的各种码率的视频的地址、规格、码率、分辨率等。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TranscodeInfo")
@@ -48,7 +48,7 @@ public class MediaInfo extends AbstractModel {
     private MediaTranscodeInfo TranscodeInfo;
 
     /**
-    * 转动图结果信息。对视频转动图（如 gif）后，动图相关信息。
+    * <p>转动图结果信息。对视频转动图（如 gif）后，动图相关信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AnimatedGraphicsInfo")
@@ -56,7 +56,7 @@ public class MediaInfo extends AbstractModel {
     private MediaAnimatedGraphicsInfo AnimatedGraphicsInfo;
 
     /**
-    * 采样截图信息。对视频采样截图后，相关截图信息。
+    * <p>采样截图信息。对视频采样截图后，相关截图信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SampleSnapshotInfo")
@@ -64,7 +64,7 @@ public class MediaInfo extends AbstractModel {
     private MediaSampleSnapshotInfo SampleSnapshotInfo;
 
     /**
-    * 雪碧图信息。对视频截取雪碧图之后，雪碧的相关信息。
+    * <p>雪碧图信息。对视频截取雪碧图之后，雪碧的相关信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageSpriteInfo")
@@ -72,7 +72,7 @@ public class MediaInfo extends AbstractModel {
     private MediaImageSpriteInfo ImageSpriteInfo;
 
     /**
-    * 指定时间点截图信息。对视频依照指定时间点截图后，各个截图的信息。
+    * <p>指定时间点截图信息。对视频依照指定时间点截图后，各个截图的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SnapshotByTimeOffsetInfo")
@@ -80,7 +80,7 @@ public class MediaInfo extends AbstractModel {
     private MediaSnapshotByTimeOffsetInfo SnapshotByTimeOffsetInfo;
 
     /**
-    * 视频打点信息。对视频设置的各个打点信息。
+    * <p>视频打点信息。对视频设置的各个打点信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KeyFrameDescInfo")
@@ -88,7 +88,7 @@ public class MediaInfo extends AbstractModel {
     private MediaKeyFrameDescInfo KeyFrameDescInfo;
 
     /**
-    * 转自适应码流信息。包括规格、加密类型、打包格式等相关信息。
+    * <p>转自适应码流信息。包括规格、加密类型、打包格式等相关信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdaptiveDynamicStreamingInfo")
@@ -96,7 +96,7 @@ public class MediaInfo extends AbstractModel {
     private MediaAdaptiveDynamicStreamingInfo AdaptiveDynamicStreamingInfo;
 
     /**
-    * 小程序审核信息。
+    * <p>小程序审核信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MiniProgramReviewInfo")
@@ -104,7 +104,7 @@ public class MediaInfo extends AbstractModel {
     private MediaMiniProgramReviewInfo MiniProgramReviewInfo;
 
     /**
-    * 字幕信息。
+    * <p>字幕信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubtitleInfo")
@@ -112,14 +112,14 @@ public class MediaInfo extends AbstractModel {
     private MediaSubtitleInfo SubtitleInfo;
 
     /**
-    * 媒体文件唯一标识 ID。
+    * <p>媒体文件唯一标识 ID。</p>
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 审核信息。
+    * <p>审核信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReviewInfo")
@@ -127,14 +127,14 @@ public class MediaInfo extends AbstractModel {
     private FileReviewInfo ReviewInfo;
 
     /**
-    * MPS智能媒资信息
+    * <p>MPS智能媒资信息</p>
     */
     @SerializedName("MPSAiMediaInfo")
     @Expose
     private MPSAiMediaInfo MPSAiMediaInfo;
 
     /**
-    * 图片理解信息。
+    * <p>图片理解信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageUnderstandingInfo")
@@ -142,9 +142,23 @@ public class MediaInfo extends AbstractModel {
     private ImageUnderstandingInfo ImageUnderstandingInfo;
 
     /**
-     * Get 基础信息。包括视频名称、分类、播放地址、封面图片等。
+    * <p>智能知识库信息。</p>
+    */
+    @SerializedName("KnowledgeBasesInfo")
+    @Expose
+    private KnowledgeBasesInfo KnowledgeBasesInfo;
+
+    /**
+    * <p>人脸识别信息。</p>
+    */
+    @SerializedName("FaceRecognitionInfo")
+    @Expose
+    private FaceRecognitionInfo FaceRecognitionInfo;
+
+    /**
+     * Get <p>基础信息。包括视频名称、分类、播放地址、封面图片等。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BasicInfo 基础信息。包括视频名称、分类、播放地址、封面图片等。
+     * @return BasicInfo <p>基础信息。包括视频名称、分类、播放地址、封面图片等。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaBasicInfo getBasicInfo() {
@@ -152,9 +166,9 @@ public class MediaInfo extends AbstractModel {
     }
 
     /**
-     * Set 基础信息。包括视频名称、分类、播放地址、封面图片等。
+     * Set <p>基础信息。包括视频名称、分类、播放地址、封面图片等。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BasicInfo 基础信息。包括视频名称、分类、播放地址、封面图片等。
+     * @param BasicInfo <p>基础信息。包括视频名称、分类、播放地址、封面图片等。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBasicInfo(MediaBasicInfo BasicInfo) {
@@ -162,9 +176,9 @@ public class MediaInfo extends AbstractModel {
     }
 
     /**
-     * Get 元信息。包括大小、时长、视频流信息、音频流信息等。
+     * Get <p>元信息。包括大小、时长、视频流信息、音频流信息等。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MetaData 元信息。包括大小、时长、视频流信息、音频流信息等。
+     * @return MetaData <p>元信息。包括大小、时长、视频流信息、音频流信息等。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaMetaData getMetaData() {
@@ -172,9 +186,9 @@ public class MediaInfo extends AbstractModel {
     }
 
     /**
-     * Set 元信息。包括大小、时长、视频流信息、音频流信息等。
+     * Set <p>元信息。包括大小、时长、视频流信息、音频流信息等。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MetaData 元信息。包括大小、时长、视频流信息、音频流信息等。
+     * @param MetaData <p>元信息。包括大小、时长、视频流信息、音频流信息等。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetaData(MediaMetaData MetaData) {
@@ -182,9 +196,9 @@ public class MediaInfo extends AbstractModel {
     }
 
     /**
-     * Get 转码结果信息。包括该视频转码生成的各种码率的视频的地址、规格、码率、分辨率等。
+     * Get <p>转码结果信息。包括该视频转码生成的各种码率的视频的地址、规格、码率、分辨率等。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TranscodeInfo 转码结果信息。包括该视频转码生成的各种码率的视频的地址、规格、码率、分辨率等。
+     * @return TranscodeInfo <p>转码结果信息。包括该视频转码生成的各种码率的视频的地址、规格、码率、分辨率等。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaTranscodeInfo getTranscodeInfo() {
@@ -192,9 +206,9 @@ public class MediaInfo extends AbstractModel {
     }
 
     /**
-     * Set 转码结果信息。包括该视频转码生成的各种码率的视频的地址、规格、码率、分辨率等。
+     * Set <p>转码结果信息。包括该视频转码生成的各种码率的视频的地址、规格、码率、分辨率等。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TranscodeInfo 转码结果信息。包括该视频转码生成的各种码率的视频的地址、规格、码率、分辨率等。
+     * @param TranscodeInfo <p>转码结果信息。包括该视频转码生成的各种码率的视频的地址、规格、码率、分辨率等。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTranscodeInfo(MediaTranscodeInfo TranscodeInfo) {
@@ -202,9 +216,9 @@ public class MediaInfo extends AbstractModel {
     }
 
     /**
-     * Get 转动图结果信息。对视频转动图（如 gif）后，动图相关信息。
+     * Get <p>转动图结果信息。对视频转动图（如 gif）后，动图相关信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AnimatedGraphicsInfo 转动图结果信息。对视频转动图（如 gif）后，动图相关信息。
+     * @return AnimatedGraphicsInfo <p>转动图结果信息。对视频转动图（如 gif）后，动图相关信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaAnimatedGraphicsInfo getAnimatedGraphicsInfo() {
@@ -212,9 +226,9 @@ public class MediaInfo extends AbstractModel {
     }
 
     /**
-     * Set 转动图结果信息。对视频转动图（如 gif）后，动图相关信息。
+     * Set <p>转动图结果信息。对视频转动图（如 gif）后，动图相关信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AnimatedGraphicsInfo 转动图结果信息。对视频转动图（如 gif）后，动图相关信息。
+     * @param AnimatedGraphicsInfo <p>转动图结果信息。对视频转动图（如 gif）后，动图相关信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAnimatedGraphicsInfo(MediaAnimatedGraphicsInfo AnimatedGraphicsInfo) {
@@ -222,9 +236,9 @@ public class MediaInfo extends AbstractModel {
     }
 
     /**
-     * Get 采样截图信息。对视频采样截图后，相关截图信息。
+     * Get <p>采样截图信息。对视频采样截图后，相关截图信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SampleSnapshotInfo 采样截图信息。对视频采样截图后，相关截图信息。
+     * @return SampleSnapshotInfo <p>采样截图信息。对视频采样截图后，相关截图信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaSampleSnapshotInfo getSampleSnapshotInfo() {
@@ -232,9 +246,9 @@ public class MediaInfo extends AbstractModel {
     }
 
     /**
-     * Set 采样截图信息。对视频采样截图后，相关截图信息。
+     * Set <p>采样截图信息。对视频采样截图后，相关截图信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SampleSnapshotInfo 采样截图信息。对视频采样截图后，相关截图信息。
+     * @param SampleSnapshotInfo <p>采样截图信息。对视频采样截图后，相关截图信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSampleSnapshotInfo(MediaSampleSnapshotInfo SampleSnapshotInfo) {
@@ -242,9 +256,9 @@ public class MediaInfo extends AbstractModel {
     }
 
     /**
-     * Get 雪碧图信息。对视频截取雪碧图之后，雪碧的相关信息。
+     * Get <p>雪碧图信息。对视频截取雪碧图之后，雪碧的相关信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ImageSpriteInfo 雪碧图信息。对视频截取雪碧图之后，雪碧的相关信息。
+     * @return ImageSpriteInfo <p>雪碧图信息。对视频截取雪碧图之后，雪碧的相关信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaImageSpriteInfo getImageSpriteInfo() {
@@ -252,9 +266,9 @@ public class MediaInfo extends AbstractModel {
     }
 
     /**
-     * Set 雪碧图信息。对视频截取雪碧图之后，雪碧的相关信息。
+     * Set <p>雪碧图信息。对视频截取雪碧图之后，雪碧的相关信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImageSpriteInfo 雪碧图信息。对视频截取雪碧图之后，雪碧的相关信息。
+     * @param ImageSpriteInfo <p>雪碧图信息。对视频截取雪碧图之后，雪碧的相关信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageSpriteInfo(MediaImageSpriteInfo ImageSpriteInfo) {
@@ -262,9 +276,9 @@ public class MediaInfo extends AbstractModel {
     }
 
     /**
-     * Get 指定时间点截图信息。对视频依照指定时间点截图后，各个截图的信息。
+     * Get <p>指定时间点截图信息。对视频依照指定时间点截图后，各个截图的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SnapshotByTimeOffsetInfo 指定时间点截图信息。对视频依照指定时间点截图后，各个截图的信息。
+     * @return SnapshotByTimeOffsetInfo <p>指定时间点截图信息。对视频依照指定时间点截图后，各个截图的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaSnapshotByTimeOffsetInfo getSnapshotByTimeOffsetInfo() {
@@ -272,9 +286,9 @@ public class MediaInfo extends AbstractModel {
     }
 
     /**
-     * Set 指定时间点截图信息。对视频依照指定时间点截图后，各个截图的信息。
+     * Set <p>指定时间点截图信息。对视频依照指定时间点截图后，各个截图的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SnapshotByTimeOffsetInfo 指定时间点截图信息。对视频依照指定时间点截图后，各个截图的信息。
+     * @param SnapshotByTimeOffsetInfo <p>指定时间点截图信息。对视频依照指定时间点截图后，各个截图的信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSnapshotByTimeOffsetInfo(MediaSnapshotByTimeOffsetInfo SnapshotByTimeOffsetInfo) {
@@ -282,9 +296,9 @@ public class MediaInfo extends AbstractModel {
     }
 
     /**
-     * Get 视频打点信息。对视频设置的各个打点信息。
+     * Get <p>视频打点信息。对视频设置的各个打点信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KeyFrameDescInfo 视频打点信息。对视频设置的各个打点信息。
+     * @return KeyFrameDescInfo <p>视频打点信息。对视频设置的各个打点信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaKeyFrameDescInfo getKeyFrameDescInfo() {
@@ -292,9 +306,9 @@ public class MediaInfo extends AbstractModel {
     }
 
     /**
-     * Set 视频打点信息。对视频设置的各个打点信息。
+     * Set <p>视频打点信息。对视频设置的各个打点信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param KeyFrameDescInfo 视频打点信息。对视频设置的各个打点信息。
+     * @param KeyFrameDescInfo <p>视频打点信息。对视频设置的各个打点信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeyFrameDescInfo(MediaKeyFrameDescInfo KeyFrameDescInfo) {
@@ -302,9 +316,9 @@ public class MediaInfo extends AbstractModel {
     }
 
     /**
-     * Get 转自适应码流信息。包括规格、加密类型、打包格式等相关信息。
+     * Get <p>转自适应码流信息。包括规格、加密类型、打包格式等相关信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AdaptiveDynamicStreamingInfo 转自适应码流信息。包括规格、加密类型、打包格式等相关信息。
+     * @return AdaptiveDynamicStreamingInfo <p>转自适应码流信息。包括规格、加密类型、打包格式等相关信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaAdaptiveDynamicStreamingInfo getAdaptiveDynamicStreamingInfo() {
@@ -312,9 +326,9 @@ public class MediaInfo extends AbstractModel {
     }
 
     /**
-     * Set 转自适应码流信息。包括规格、加密类型、打包格式等相关信息。
+     * Set <p>转自适应码流信息。包括规格、加密类型、打包格式等相关信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AdaptiveDynamicStreamingInfo 转自适应码流信息。包括规格、加密类型、打包格式等相关信息。
+     * @param AdaptiveDynamicStreamingInfo <p>转自适应码流信息。包括规格、加密类型、打包格式等相关信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdaptiveDynamicStreamingInfo(MediaAdaptiveDynamicStreamingInfo AdaptiveDynamicStreamingInfo) {
@@ -322,9 +336,9 @@ public class MediaInfo extends AbstractModel {
     }
 
     /**
-     * Get 小程序审核信息。
+     * Get <p>小程序审核信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MiniProgramReviewInfo 小程序审核信息。
+     * @return MiniProgramReviewInfo <p>小程序审核信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaMiniProgramReviewInfo getMiniProgramReviewInfo() {
@@ -332,9 +346,9 @@ public class MediaInfo extends AbstractModel {
     }
 
     /**
-     * Set 小程序审核信息。
+     * Set <p>小程序审核信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MiniProgramReviewInfo 小程序审核信息。
+     * @param MiniProgramReviewInfo <p>小程序审核信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMiniProgramReviewInfo(MediaMiniProgramReviewInfo MiniProgramReviewInfo) {
@@ -342,9 +356,9 @@ public class MediaInfo extends AbstractModel {
     }
 
     /**
-     * Get 字幕信息。
+     * Get <p>字幕信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SubtitleInfo 字幕信息。
+     * @return SubtitleInfo <p>字幕信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaSubtitleInfo getSubtitleInfo() {
@@ -352,9 +366,9 @@ public class MediaInfo extends AbstractModel {
     }
 
     /**
-     * Set 字幕信息。
+     * Set <p>字幕信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SubtitleInfo 字幕信息。
+     * @param SubtitleInfo <p>字幕信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubtitleInfo(MediaSubtitleInfo SubtitleInfo) {
@@ -362,25 +376,25 @@ public class MediaInfo extends AbstractModel {
     }
 
     /**
-     * Get 媒体文件唯一标识 ID。 
-     * @return FileId 媒体文件唯一标识 ID。
+     * Get <p>媒体文件唯一标识 ID。</p> 
+     * @return FileId <p>媒体文件唯一标识 ID。</p>
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 媒体文件唯一标识 ID。
-     * @param FileId 媒体文件唯一标识 ID。
+     * Set <p>媒体文件唯一标识 ID。</p>
+     * @param FileId <p>媒体文件唯一标识 ID。</p>
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get 审核信息。
+     * Get <p>审核信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReviewInfo 审核信息。
+     * @return ReviewInfo <p>审核信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public FileReviewInfo getReviewInfo() {
@@ -388,9 +402,9 @@ public class MediaInfo extends AbstractModel {
     }
 
     /**
-     * Set 审核信息。
+     * Set <p>审核信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReviewInfo 审核信息。
+     * @param ReviewInfo <p>审核信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReviewInfo(FileReviewInfo ReviewInfo) {
@@ -398,25 +412,25 @@ public class MediaInfo extends AbstractModel {
     }
 
     /**
-     * Get MPS智能媒资信息 
-     * @return MPSAiMediaInfo MPS智能媒资信息
+     * Get <p>MPS智能媒资信息</p> 
+     * @return MPSAiMediaInfo <p>MPS智能媒资信息</p>
      */
     public MPSAiMediaInfo getMPSAiMediaInfo() {
         return this.MPSAiMediaInfo;
     }
 
     /**
-     * Set MPS智能媒资信息
-     * @param MPSAiMediaInfo MPS智能媒资信息
+     * Set <p>MPS智能媒资信息</p>
+     * @param MPSAiMediaInfo <p>MPS智能媒资信息</p>
      */
     public void setMPSAiMediaInfo(MPSAiMediaInfo MPSAiMediaInfo) {
         this.MPSAiMediaInfo = MPSAiMediaInfo;
     }
 
     /**
-     * Get 图片理解信息。
+     * Get <p>图片理解信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ImageUnderstandingInfo 图片理解信息。
+     * @return ImageUnderstandingInfo <p>图片理解信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ImageUnderstandingInfo getImageUnderstandingInfo() {
@@ -424,13 +438,45 @@ public class MediaInfo extends AbstractModel {
     }
 
     /**
-     * Set 图片理解信息。
+     * Set <p>图片理解信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImageUnderstandingInfo 图片理解信息。
+     * @param ImageUnderstandingInfo <p>图片理解信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageUnderstandingInfo(ImageUnderstandingInfo ImageUnderstandingInfo) {
         this.ImageUnderstandingInfo = ImageUnderstandingInfo;
+    }
+
+    /**
+     * Get <p>智能知识库信息。</p> 
+     * @return KnowledgeBasesInfo <p>智能知识库信息。</p>
+     */
+    public KnowledgeBasesInfo getKnowledgeBasesInfo() {
+        return this.KnowledgeBasesInfo;
+    }
+
+    /**
+     * Set <p>智能知识库信息。</p>
+     * @param KnowledgeBasesInfo <p>智能知识库信息。</p>
+     */
+    public void setKnowledgeBasesInfo(KnowledgeBasesInfo KnowledgeBasesInfo) {
+        this.KnowledgeBasesInfo = KnowledgeBasesInfo;
+    }
+
+    /**
+     * Get <p>人脸识别信息。</p> 
+     * @return FaceRecognitionInfo <p>人脸识别信息。</p>
+     */
+    public FaceRecognitionInfo getFaceRecognitionInfo() {
+        return this.FaceRecognitionInfo;
+    }
+
+    /**
+     * Set <p>人脸识别信息。</p>
+     * @param FaceRecognitionInfo <p>人脸识别信息。</p>
+     */
+    public void setFaceRecognitionInfo(FaceRecognitionInfo FaceRecognitionInfo) {
+        this.FaceRecognitionInfo = FaceRecognitionInfo;
     }
 
     public MediaInfo() {
@@ -486,6 +532,12 @@ public class MediaInfo extends AbstractModel {
         if (source.ImageUnderstandingInfo != null) {
             this.ImageUnderstandingInfo = new ImageUnderstandingInfo(source.ImageUnderstandingInfo);
         }
+        if (source.KnowledgeBasesInfo != null) {
+            this.KnowledgeBasesInfo = new KnowledgeBasesInfo(source.KnowledgeBasesInfo);
+        }
+        if (source.FaceRecognitionInfo != null) {
+            this.FaceRecognitionInfo = new FaceRecognitionInfo(source.FaceRecognitionInfo);
+        }
     }
 
 
@@ -508,6 +560,8 @@ public class MediaInfo extends AbstractModel {
         this.setParamObj(map, prefix + "ReviewInfo.", this.ReviewInfo);
         this.setParamObj(map, prefix + "MPSAiMediaInfo.", this.MPSAiMediaInfo);
         this.setParamObj(map, prefix + "ImageUnderstandingInfo.", this.ImageUnderstandingInfo);
+        this.setParamObj(map, prefix + "KnowledgeBasesInfo.", this.KnowledgeBasesInfo);
+        this.setParamObj(map, prefix + "FaceRecognitionInfo.", this.FaceRecognitionInfo);
 
     }
 }

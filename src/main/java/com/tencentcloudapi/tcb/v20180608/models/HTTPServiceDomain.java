@@ -101,6 +101,13 @@ public class HTTPServiceDomain extends AbstractModel {
     private HTTPServiceRoute [] Routes;
 
     /**
+    * 扩展字段，内部包含headers处理等
+    */
+    @SerializedName("Extension")
+    @Expose
+    private HTTPServiceExtension Extension;
+
+    /**
     * 域名创建时间
     */
     @SerializedName("CreateTime")
@@ -291,6 +298,22 @@ public class HTTPServiceDomain extends AbstractModel {
     }
 
     /**
+     * Get 扩展字段，内部包含headers处理等 
+     * @return Extension 扩展字段，内部包含headers处理等
+     */
+    public HTTPServiceExtension getExtension() {
+        return this.Extension;
+    }
+
+    /**
+     * Set 扩展字段，内部包含headers处理等
+     * @param Extension 扩展字段，内部包含headers处理等
+     */
+    public void setExtension(HTTPServiceExtension Extension) {
+        this.Extension = Extension;
+    }
+
+    /**
      * Get 域名创建时间 
      * @return CreateTime 域名创建时间
      */
@@ -366,6 +389,9 @@ public class HTTPServiceDomain extends AbstractModel {
                 this.Routes[i] = new HTTPServiceRoute(source.Routes[i]);
             }
         }
+        if (source.Extension != null) {
+            this.Extension = new HTTPServiceExtension(source.Extension);
+        }
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
@@ -390,6 +416,7 @@ public class HTTPServiceDomain extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "DNSStatus", this.DNSStatus);
         this.setParamArrayObj(map, prefix + "Routes.", this.Routes);
+        this.setParamObj(map, prefix + "Extension.", this.Extension);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeEventsStateResponse extends AbstractModel {
 
     /**
-    * 待进行拉取的事件通知数，为近似值，约5秒延迟。
+    * <p>待进行拉取的事件通知数，为近似值，约有3分钟延迟。</p><p><strong>注意：不建议使用此字段作为是否拉取事件通知的依据。</strong></p>
     */
     @SerializedName("CountOfEventsToPull")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeEventsStateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 待进行拉取的事件通知数，为近似值，约5秒延迟。 
-     * @return CountOfEventsToPull 待进行拉取的事件通知数，为近似值，约5秒延迟。
+     * Get <p>待进行拉取的事件通知数，为近似值，约有3分钟延迟。</p><p><strong>注意：不建议使用此字段作为是否拉取事件通知的依据。</strong></p> 
+     * @return CountOfEventsToPull <p>待进行拉取的事件通知数，为近似值，约有3分钟延迟。</p><p><strong>注意：不建议使用此字段作为是否拉取事件通知的依据。</strong></p>
      */
     public Long getCountOfEventsToPull() {
         return this.CountOfEventsToPull;
     }
 
     /**
-     * Set 待进行拉取的事件通知数，为近似值，约5秒延迟。
-     * @param CountOfEventsToPull 待进行拉取的事件通知数，为近似值，约5秒延迟。
+     * Set <p>待进行拉取的事件通知数，为近似值，约有3分钟延迟。</p><p><strong>注意：不建议使用此字段作为是否拉取事件通知的依据。</strong></p>
+     * @param CountOfEventsToPull <p>待进行拉取的事件通知数，为近似值，约有3分钟延迟。</p><p><strong>注意：不建议使用此字段作为是否拉取事件通知的依据。</strong></p>
      */
     public void setCountOfEventsToPull(Long CountOfEventsToPull) {
         this.CountOfEventsToPull = CountOfEventsToPull;

@@ -87,6 +87,13 @@ public class HTTPServiceRoute extends AbstractModel {
     private Boolean Enable;
 
     /**
+    * 扩展字段，内部包含headers处理等
+    */
+    @SerializedName("Extension")
+    @Expose
+    private HTTPServiceExtension Extension;
+
+    /**
     * 路由创建时间
     */
     @SerializedName("CreateTime")
@@ -245,6 +252,22 @@ public class HTTPServiceRoute extends AbstractModel {
     }
 
     /**
+     * Get 扩展字段，内部包含headers处理等 
+     * @return Extension 扩展字段，内部包含headers处理等
+     */
+    public HTTPServiceExtension getExtension() {
+        return this.Extension;
+    }
+
+    /**
+     * Set 扩展字段，内部包含headers处理等
+     * @param Extension 扩展字段，内部包含headers处理等
+     */
+    public void setExtension(HTTPServiceExtension Extension) {
+        this.Extension = Extension;
+    }
+
+    /**
      * Get 路由创建时间 
      * @return CreateTime 路由创建时间
      */
@@ -311,6 +334,9 @@ public class HTTPServiceRoute extends AbstractModel {
         if (source.Enable != null) {
             this.Enable = new Boolean(source.Enable);
         }
+        if (source.Extension != null) {
+            this.Extension = new HTTPServiceExtension(source.Extension);
+        }
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
@@ -333,6 +359,7 @@ public class HTTPServiceRoute extends AbstractModel {
         this.setParamSimple(map, prefix + "EnablePathTransmission", this.EnablePathTransmission);
         this.setParamObj(map, prefix + "QPSPolicy.", this.QPSPolicy);
         this.setParamSimple(map, prefix + "Enable", this.Enable);
+        this.setParamObj(map, prefix + "Extension.", this.Extension);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 

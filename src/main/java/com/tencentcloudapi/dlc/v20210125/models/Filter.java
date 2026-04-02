@@ -24,46 +24,69 @@ import java.util.HashMap;
 public class Filter extends AbstractModel {
 
     /**
-    * 属性名称, 若存在多个Filter时，Filter间的关系为逻辑或（OR）关系。
+    * 筛选字段名，对应实体属性名（驼峰命名）
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 属性值, 若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。
+    * 筛选操作符：EQ/NE/GT/GE/LT/LE/LIKE/IN，默认EQ
+    */
+    @SerializedName("Operator")
+    @Expose
+    private String Operator;
+
+    /**
+    * 筛选值列表，EQ/NE/GT/GE/LT/LE/LIKE取第一个值，IN使用完整列表
     */
     @SerializedName("Values")
     @Expose
     private String [] Values;
 
     /**
-     * Get 属性名称, 若存在多个Filter时，Filter间的关系为逻辑或（OR）关系。 
-     * @return Name 属性名称, 若存在多个Filter时，Filter间的关系为逻辑或（OR）关系。
+     * Get 筛选字段名，对应实体属性名（驼峰命名） 
+     * @return Name 筛选字段名，对应实体属性名（驼峰命名）
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 属性名称, 若存在多个Filter时，Filter间的关系为逻辑或（OR）关系。
-     * @param Name 属性名称, 若存在多个Filter时，Filter间的关系为逻辑或（OR）关系。
+     * Set 筛选字段名，对应实体属性名（驼峰命名）
+     * @param Name 筛选字段名，对应实体属性名（驼峰命名）
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 属性值, 若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。 
-     * @return Values 属性值, 若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。
+     * Get 筛选操作符：EQ/NE/GT/GE/LT/LE/LIKE/IN，默认EQ 
+     * @return Operator 筛选操作符：EQ/NE/GT/GE/LT/LE/LIKE/IN，默认EQ
+     */
+    public String getOperator() {
+        return this.Operator;
+    }
+
+    /**
+     * Set 筛选操作符：EQ/NE/GT/GE/LT/LE/LIKE/IN，默认EQ
+     * @param Operator 筛选操作符：EQ/NE/GT/GE/LT/LE/LIKE/IN，默认EQ
+     */
+    public void setOperator(String Operator) {
+        this.Operator = Operator;
+    }
+
+    /**
+     * Get 筛选值列表，EQ/NE/GT/GE/LT/LE/LIKE取第一个值，IN使用完整列表 
+     * @return Values 筛选值列表，EQ/NE/GT/GE/LT/LE/LIKE取第一个值，IN使用完整列表
      */
     public String [] getValues() {
         return this.Values;
     }
 
     /**
-     * Set 属性值, 若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。
-     * @param Values 属性值, 若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。
+     * Set 筛选值列表，EQ/NE/GT/GE/LT/LE/LIKE取第一个值，IN使用完整列表
+     * @param Values 筛选值列表，EQ/NE/GT/GE/LT/LE/LIKE取第一个值，IN使用完整列表
      */
     public void setValues(String [] Values) {
         this.Values = Values;
@@ -80,6 +103,9 @@ public class Filter extends AbstractModel {
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
+        }
         if (source.Values != null) {
             this.Values = new String[source.Values.length];
             for (int i = 0; i < source.Values.length; i++) {
@@ -94,6 +120,7 @@ public class Filter extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Operator", this.Operator);
         this.setParamArraySimple(map, prefix + "Values.", this.Values);
 
     }

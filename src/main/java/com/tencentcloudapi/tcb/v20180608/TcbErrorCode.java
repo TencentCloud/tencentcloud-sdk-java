@@ -60,6 +60,9 @@ public enum TcbErrorCode {
      /* 内部错误。 */
      INTERNALERROR("InternalError"),
      
+     /* 数据库错误。 */
+     INTERNALERROR_DATABASE("InternalError.Database"),
+     
      /* 系统内部异常。 */
      INTERNALERROR_SYS_ERR("InternalError.SYS_ERR"),
      

@@ -39,6 +39,17 @@ public class Ga2Client extends AbstractClient{
     }
 
     /**
+     *创建全球加速实例
+     * @param req CreateGlobalAcceleratorRequest
+     * @return CreateGlobalAcceleratorResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateGlobalAcceleratorResponse CreateGlobalAccelerator(CreateGlobalAcceleratorRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateGlobalAccelerator", CreateGlobalAcceleratorResponse.class);
+    }
+
+    /**
      *查询跨境账单
      * @param req DescribeCrossBorderSettlementRequest
      * @return DescribeCrossBorderSettlementResponse

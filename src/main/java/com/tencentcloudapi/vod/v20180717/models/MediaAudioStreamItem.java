@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class MediaAudioStreamItem extends AbstractModel {
 
     /**
-    * 音频流的码率，单位：bps。
+    * <p>音频流的码率，单位：bps。</p>
     */
     @SerializedName("Bitrate")
     @Expose
     private Long Bitrate;
 
     /**
-    * 音频流的采样率，单位：hz。
+    * <p>音频流的采样率，单位：hz。</p>
     */
     @SerializedName("SamplingRate")
     @Expose
     private Long SamplingRate;
 
     /**
-    * 音频流的编码格式，例如 aac。
+    * <p>音频流的编码格式，例如 aac。</p>
     */
     @SerializedName("Codec")
     @Expose
     private String Codec;
 
     /**
-     * Get 音频流的码率，单位：bps。 
-     * @return Bitrate 音频流的码率，单位：bps。
+     * Get <p>音频流的码率，单位：bps。</p> 
+     * @return Bitrate <p>音频流的码率，单位：bps。</p>
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set 音频流的码率，单位：bps。
-     * @param Bitrate 音频流的码率，单位：bps。
+     * Set <p>音频流的码率，单位：bps。</p>
+     * @param Bitrate <p>音频流的码率，单位：bps。</p>
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
     }
 
     /**
-     * Get 音频流的采样率，单位：hz。 
-     * @return SamplingRate 音频流的采样率，单位：hz。
+     * Get <p>音频流的采样率，单位：hz。</p> 
+     * @return SamplingRate <p>音频流的采样率，单位：hz。</p>
      */
     public Long getSamplingRate() {
         return this.SamplingRate;
     }
 
     /**
-     * Set 音频流的采样率，单位：hz。
-     * @param SamplingRate 音频流的采样率，单位：hz。
+     * Set <p>音频流的采样率，单位：hz。</p>
+     * @param SamplingRate <p>音频流的采样率，单位：hz。</p>
      */
     public void setSamplingRate(Long SamplingRate) {
         this.SamplingRate = SamplingRate;
     }
 
     /**
-     * Get 音频流的编码格式，例如 aac。 
-     * @return Codec 音频流的编码格式，例如 aac。
+     * Get <p>音频流的编码格式，例如 aac。</p> 
+     * @return Codec <p>音频流的编码格式，例如 aac。</p>
      */
     public String getCodec() {
         return this.Codec;
     }
 
     /**
-     * Set 音频流的编码格式，例如 aac。
-     * @param Codec 音频流的编码格式，例如 aac。
+     * Set <p>音频流的编码格式，例如 aac。</p>
+     * @param Codec <p>音频流的编码格式，例如 aac。</p>
      */
     public void setCodec(String Codec) {
         this.Codec = Codec;

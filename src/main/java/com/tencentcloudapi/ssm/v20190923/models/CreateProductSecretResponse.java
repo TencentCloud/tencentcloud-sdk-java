@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class CreateProductSecretResponse extends AbstractModel {
 
     /**
-    * 创建的凭据名称。
+    * <p>创建的凭据名称。</p>
     */
     @SerializedName("SecretName")
     @Expose
     private String SecretName;
 
     /**
-    * 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误。
+    * <p>标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误。</p>
     */
     @SerializedName("TagCode")
     @Expose
     private Long TagCode;
 
     /**
-    * 标签操作的返回信息。
+    * <p>标签操作的返回信息。</p>
     */
     @SerializedName("TagMsg")
     @Expose
     private String TagMsg;
 
     /**
-    * 创建云产品凭据异步任务ID号。
+    * <p>创建云产品凭据异步任务ID号。</p>
     */
     @SerializedName("FlowID")
     @Expose
@@ -59,64 +59,64 @@ public class CreateProductSecretResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 创建的凭据名称。 
-     * @return SecretName 创建的凭据名称。
+     * Get <p>创建的凭据名称。</p> 
+     * @return SecretName <p>创建的凭据名称。</p>
      */
     public String getSecretName() {
         return this.SecretName;
     }
 
     /**
-     * Set 创建的凭据名称。
-     * @param SecretName 创建的凭据名称。
+     * Set <p>创建的凭据名称。</p>
+     * @param SecretName <p>创建的凭据名称。</p>
      */
     public void setSecretName(String SecretName) {
         this.SecretName = SecretName;
     }
 
     /**
-     * Get 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误。 
-     * @return TagCode 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误。
+     * Get <p>标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误。</p> 
+     * @return TagCode <p>标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误。</p>
      */
     public Long getTagCode() {
         return this.TagCode;
     }
 
     /**
-     * Set 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误。
-     * @param TagCode 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误。
+     * Set <p>标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误。</p>
+     * @param TagCode <p>标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误。</p>
      */
     public void setTagCode(Long TagCode) {
         this.TagCode = TagCode;
     }
 
     /**
-     * Get 标签操作的返回信息。 
-     * @return TagMsg 标签操作的返回信息。
+     * Get <p>标签操作的返回信息。</p> 
+     * @return TagMsg <p>标签操作的返回信息。</p>
      */
     public String getTagMsg() {
         return this.TagMsg;
     }
 
     /**
-     * Set 标签操作的返回信息。
-     * @param TagMsg 标签操作的返回信息。
+     * Set <p>标签操作的返回信息。</p>
+     * @param TagMsg <p>标签操作的返回信息。</p>
      */
     public void setTagMsg(String TagMsg) {
         this.TagMsg = TagMsg;
     }
 
     /**
-     * Get 创建云产品凭据异步任务ID号。 
-     * @return FlowID 创建云产品凭据异步任务ID号。
+     * Get <p>创建云产品凭据异步任务ID号。</p> 
+     * @return FlowID <p>创建云产品凭据异步任务ID号。</p>
      */
     public Long getFlowID() {
         return this.FlowID;
     }
 
     /**
-     * Set 创建云产品凭据异步任务ID号。
-     * @param FlowID 创建云产品凭据异步任务ID号。
+     * Set <p>创建云产品凭据异步任务ID号。</p>
+     * @param FlowID <p>创建云产品凭据异步任务ID号。</p>
      */
     public void setFlowID(Long FlowID) {
         this.FlowID = FlowID;

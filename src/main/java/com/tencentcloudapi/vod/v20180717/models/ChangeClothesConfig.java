@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ChangeClothesConfig extends AbstractModel {
 
     /**
-    * 输入需要更换的**衣物**图片列表。目前最大支持4张图片。
+    * <p>输入需要更换的<strong>衣物</strong>图片列表。各类型最大支持衣物数量：</p><ul><li>change_clothes：4 张图片；</li><li>change_clothes_under：1 张图片；</li><li>change_clothes_full_wear：1 张图片；</li><li>change_clothes_top_wear：1 张图片；</li><li>change_clothes_bottom_wear：1 张图片；</li></ul>
     */
     @SerializedName("ClothesFileInfos")
     @Expose
     private SceneAigcImageTaskInputFileInfo [] ClothesFileInfos;
 
     /**
-    * AI换衣的提示词。
+    * <p>AI换衣的提示词。<strong>仅Type为change_clothes有效。</strong></p>
     */
     @SerializedName("Prompt")
     @Expose
     private String Prompt;
 
     /**
-     * Get 输入需要更换的**衣物**图片列表。目前最大支持4张图片。 
-     * @return ClothesFileInfos 输入需要更换的**衣物**图片列表。目前最大支持4张图片。
+     * Get <p>输入需要更换的<strong>衣物</strong>图片列表。各类型最大支持衣物数量：</p><ul><li>change_clothes：4 张图片；</li><li>change_clothes_under：1 张图片；</li><li>change_clothes_full_wear：1 张图片；</li><li>change_clothes_top_wear：1 张图片；</li><li>change_clothes_bottom_wear：1 张图片；</li></ul> 
+     * @return ClothesFileInfos <p>输入需要更换的<strong>衣物</strong>图片列表。各类型最大支持衣物数量：</p><ul><li>change_clothes：4 张图片；</li><li>change_clothes_under：1 张图片；</li><li>change_clothes_full_wear：1 张图片；</li><li>change_clothes_top_wear：1 张图片；</li><li>change_clothes_bottom_wear：1 张图片；</li></ul>
      */
     public SceneAigcImageTaskInputFileInfo [] getClothesFileInfos() {
         return this.ClothesFileInfos;
     }
 
     /**
-     * Set 输入需要更换的**衣物**图片列表。目前最大支持4张图片。
-     * @param ClothesFileInfos 输入需要更换的**衣物**图片列表。目前最大支持4张图片。
+     * Set <p>输入需要更换的<strong>衣物</strong>图片列表。各类型最大支持衣物数量：</p><ul><li>change_clothes：4 张图片；</li><li>change_clothes_under：1 张图片；</li><li>change_clothes_full_wear：1 张图片；</li><li>change_clothes_top_wear：1 张图片；</li><li>change_clothes_bottom_wear：1 张图片；</li></ul>
+     * @param ClothesFileInfos <p>输入需要更换的<strong>衣物</strong>图片列表。各类型最大支持衣物数量：</p><ul><li>change_clothes：4 张图片；</li><li>change_clothes_under：1 张图片；</li><li>change_clothes_full_wear：1 张图片；</li><li>change_clothes_top_wear：1 张图片；</li><li>change_clothes_bottom_wear：1 张图片；</li></ul>
      */
     public void setClothesFileInfos(SceneAigcImageTaskInputFileInfo [] ClothesFileInfos) {
         this.ClothesFileInfos = ClothesFileInfos;
     }
 
     /**
-     * Get AI换衣的提示词。 
-     * @return Prompt AI换衣的提示词。
+     * Get <p>AI换衣的提示词。<strong>仅Type为change_clothes有效。</strong></p> 
+     * @return Prompt <p>AI换衣的提示词。<strong>仅Type为change_clothes有效。</strong></p>
      */
     public String getPrompt() {
         return this.Prompt;
     }
 
     /**
-     * Set AI换衣的提示词。
-     * @param Prompt AI换衣的提示词。
+     * Set <p>AI换衣的提示词。<strong>仅Type为change_clothes有效。</strong></p>
+     * @param Prompt <p>AI换衣的提示词。<strong>仅Type为change_clothes有效。</strong></p>
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;

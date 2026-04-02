@@ -24,385 +24,348 @@ import java.util.HashMap;
 public class CreateProductSecretRequest extends AbstractModel {
 
     /**
-    * 凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。
+    * <p>凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。</p>
     */
     @SerializedName("SecretName")
     @Expose
     private String SecretName;
 
     /**
-    * 用户账号名前缀，由用户自行指定，长度限定在8个字符以内，
-可选字符集包括：
-数字字符：[0, 9]，
-小写字符：[a, z]，
-大写字符：[A, Z]，
-特殊字符(全英文符号)：下划线(_)，
-前缀必须以大写或小写字母开头。
+    * <p>用户账号名前缀，由用户自行指定，长度限定在8个字符以内，<br>可选字符集包括：<br>数字字符：[0, 9]，<br>小写字符：[a, z]，<br>大写字符：[A, Z]，<br>特殊字符(全英文符号)：下划线(_)，<br>前缀必须以大写或小写字母开头。</p>
     */
     @SerializedName("UserNamePrefix")
     @Expose
     private String UserNamePrefix;
 
     /**
-    * 凭据所绑定的云产品名称，如Mysql，可以通过DescribeSupportedProducts接口获取所支持的云产品名称。
+    * <p>凭据所绑定的云产品名称，如Mysql，可以通过DescribeSupportedProducts接口获取所支持的云产品名称。</p>
     */
     @SerializedName("ProductName")
     @Expose
     private String ProductName;
 
     /**
-    * 云产品实例ID。
+    * <p>云产品实例ID。</p>
     */
     @SerializedName("InstanceID")
     @Expose
     private String InstanceID;
 
     /**
-    * 账号的域名，IP形式，支持填入%。
+    * <p>账号的域名，IP形式，支持填入%。</p>
     */
     @SerializedName("Domains")
     @Expose
     private String [] Domains;
 
     /**
-    * 将凭据与云产品实例绑定时，需要授予的权限列表。
+    * <p>将凭据与云产品实例绑定时，需要授予的权限列表。</p>
     */
     @SerializedName("PrivilegesList")
     @Expose
     private ProductPrivilegeUnit [] PrivilegesList;
 
     /**
-    * 描述信息，用于详细描述用途等，最大支持2048字节。
+    * <p>描述信息，用于详细描述用途等，最大支持2048字节。</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 指定对凭据进行加密的KMS CMK。
-如果为空则表示使用Secrets Manager为您默认创建的CMK进行加密。
-您也可以指定在同region 下自行创建的KMS CMK进行加密。
+    * <p>指定对凭据进行加密的KMS CMK。<br>如果为空则表示使用Secrets Manager为您默认创建的CMK进行加密。<br>您也可以指定在同region 下自行创建的KMS CMK进行加密。</p>
     */
     @SerializedName("KmsKeyId")
     @Expose
     private String KmsKeyId;
 
     /**
-    * 标签列表。
+    * <p>标签列表。</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 用户自定义的开始轮转时间，格式：2006-01-02 15:04:05。
-当EnableRotation为True时，此参数必填。
+    * <p>用户自定义的开始轮转时间，格式：2006-01-02 15:04:05。<br>当EnableRotation为True时，此参数必填。</p>
     */
     @SerializedName("RotationBeginTime")
     @Expose
     private String RotationBeginTime;
 
     /**
-    * 是否开启轮转
-True -- 开启
-False -- 不开启
-如果不指定，默认为False。
+    * <p>是否开启轮转<br>True -- 开启<br>False -- 不开启<br>如果不指定，默认为False。</p>
     */
     @SerializedName("EnableRotation")
     @Expose
     private Boolean EnableRotation;
 
     /**
-    * 轮转周期，以天为单位，默认为1天。
+    * <p>轮转周期，以天为单位，默认为1天。</p>
     */
     @SerializedName("RotationFrequency")
     @Expose
     private Long RotationFrequency;
 
     /**
-    * KMS的独享集群的ID。当KmsKeyId为空,并且用户的KMS存在有效的HsmClusterId时有效。
+    * <p>KMS的独享集群的ID。当KmsKeyId为空,并且用户的KMS存在有效的HsmClusterId时有效。</p>
     */
     @SerializedName("KmsHsmClusterId")
     @Expose
     private String KmsHsmClusterId;
 
     /**
-    * 账户备注
+    * <p>账户备注</p>
     */
     @SerializedName("AccountRemark")
     @Expose
     private String AccountRemark;
 
     /**
-     * Get 凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。 
-     * @return SecretName 凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。
+    * <p>数据库账号类型，目前仅在创建sqlserver凭据场景会使用到，仅支持L3</p><p>枚举值：</p><ul><li>L3： 普通权限账号</li></ul>
+    */
+    @SerializedName("AccountType")
+    @Expose
+    private String AccountType;
+
+    /**
+     * Get <p>凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。</p> 
+     * @return SecretName <p>凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。</p>
      */
     public String getSecretName() {
         return this.SecretName;
     }
 
     /**
-     * Set 凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。
-     * @param SecretName 凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。
+     * Set <p>凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。</p>
+     * @param SecretName <p>凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。</p>
      */
     public void setSecretName(String SecretName) {
         this.SecretName = SecretName;
     }
 
     /**
-     * Get 用户账号名前缀，由用户自行指定，长度限定在8个字符以内，
-可选字符集包括：
-数字字符：[0, 9]，
-小写字符：[a, z]，
-大写字符：[A, Z]，
-特殊字符(全英文符号)：下划线(_)，
-前缀必须以大写或小写字母开头。 
-     * @return UserNamePrefix 用户账号名前缀，由用户自行指定，长度限定在8个字符以内，
-可选字符集包括：
-数字字符：[0, 9]，
-小写字符：[a, z]，
-大写字符：[A, Z]，
-特殊字符(全英文符号)：下划线(_)，
-前缀必须以大写或小写字母开头。
+     * Get <p>用户账号名前缀，由用户自行指定，长度限定在8个字符以内，<br>可选字符集包括：<br>数字字符：[0, 9]，<br>小写字符：[a, z]，<br>大写字符：[A, Z]，<br>特殊字符(全英文符号)：下划线(_)，<br>前缀必须以大写或小写字母开头。</p> 
+     * @return UserNamePrefix <p>用户账号名前缀，由用户自行指定，长度限定在8个字符以内，<br>可选字符集包括：<br>数字字符：[0, 9]，<br>小写字符：[a, z]，<br>大写字符：[A, Z]，<br>特殊字符(全英文符号)：下划线(_)，<br>前缀必须以大写或小写字母开头。</p>
      */
     public String getUserNamePrefix() {
         return this.UserNamePrefix;
     }
 
     /**
-     * Set 用户账号名前缀，由用户自行指定，长度限定在8个字符以内，
-可选字符集包括：
-数字字符：[0, 9]，
-小写字符：[a, z]，
-大写字符：[A, Z]，
-特殊字符(全英文符号)：下划线(_)，
-前缀必须以大写或小写字母开头。
-     * @param UserNamePrefix 用户账号名前缀，由用户自行指定，长度限定在8个字符以内，
-可选字符集包括：
-数字字符：[0, 9]，
-小写字符：[a, z]，
-大写字符：[A, Z]，
-特殊字符(全英文符号)：下划线(_)，
-前缀必须以大写或小写字母开头。
+     * Set <p>用户账号名前缀，由用户自行指定，长度限定在8个字符以内，<br>可选字符集包括：<br>数字字符：[0, 9]，<br>小写字符：[a, z]，<br>大写字符：[A, Z]，<br>特殊字符(全英文符号)：下划线(_)，<br>前缀必须以大写或小写字母开头。</p>
+     * @param UserNamePrefix <p>用户账号名前缀，由用户自行指定，长度限定在8个字符以内，<br>可选字符集包括：<br>数字字符：[0, 9]，<br>小写字符：[a, z]，<br>大写字符：[A, Z]，<br>特殊字符(全英文符号)：下划线(_)，<br>前缀必须以大写或小写字母开头。</p>
      */
     public void setUserNamePrefix(String UserNamePrefix) {
         this.UserNamePrefix = UserNamePrefix;
     }
 
     /**
-     * Get 凭据所绑定的云产品名称，如Mysql，可以通过DescribeSupportedProducts接口获取所支持的云产品名称。 
-     * @return ProductName 凭据所绑定的云产品名称，如Mysql，可以通过DescribeSupportedProducts接口获取所支持的云产品名称。
+     * Get <p>凭据所绑定的云产品名称，如Mysql，可以通过DescribeSupportedProducts接口获取所支持的云产品名称。</p> 
+     * @return ProductName <p>凭据所绑定的云产品名称，如Mysql，可以通过DescribeSupportedProducts接口获取所支持的云产品名称。</p>
      */
     public String getProductName() {
         return this.ProductName;
     }
 
     /**
-     * Set 凭据所绑定的云产品名称，如Mysql，可以通过DescribeSupportedProducts接口获取所支持的云产品名称。
-     * @param ProductName 凭据所绑定的云产品名称，如Mysql，可以通过DescribeSupportedProducts接口获取所支持的云产品名称。
+     * Set <p>凭据所绑定的云产品名称，如Mysql，可以通过DescribeSupportedProducts接口获取所支持的云产品名称。</p>
+     * @param ProductName <p>凭据所绑定的云产品名称，如Mysql，可以通过DescribeSupportedProducts接口获取所支持的云产品名称。</p>
      */
     public void setProductName(String ProductName) {
         this.ProductName = ProductName;
     }
 
     /**
-     * Get 云产品实例ID。 
-     * @return InstanceID 云产品实例ID。
+     * Get <p>云产品实例ID。</p> 
+     * @return InstanceID <p>云产品实例ID。</p>
      */
     public String getInstanceID() {
         return this.InstanceID;
     }
 
     /**
-     * Set 云产品实例ID。
-     * @param InstanceID 云产品实例ID。
+     * Set <p>云产品实例ID。</p>
+     * @param InstanceID <p>云产品实例ID。</p>
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;
     }
 
     /**
-     * Get 账号的域名，IP形式，支持填入%。 
-     * @return Domains 账号的域名，IP形式，支持填入%。
+     * Get <p>账号的域名，IP形式，支持填入%。</p> 
+     * @return Domains <p>账号的域名，IP形式，支持填入%。</p>
      */
     public String [] getDomains() {
         return this.Domains;
     }
 
     /**
-     * Set 账号的域名，IP形式，支持填入%。
-     * @param Domains 账号的域名，IP形式，支持填入%。
+     * Set <p>账号的域名，IP形式，支持填入%。</p>
+     * @param Domains <p>账号的域名，IP形式，支持填入%。</p>
      */
     public void setDomains(String [] Domains) {
         this.Domains = Domains;
     }
 
     /**
-     * Get 将凭据与云产品实例绑定时，需要授予的权限列表。 
-     * @return PrivilegesList 将凭据与云产品实例绑定时，需要授予的权限列表。
+     * Get <p>将凭据与云产品实例绑定时，需要授予的权限列表。</p> 
+     * @return PrivilegesList <p>将凭据与云产品实例绑定时，需要授予的权限列表。</p>
      */
     public ProductPrivilegeUnit [] getPrivilegesList() {
         return this.PrivilegesList;
     }
 
     /**
-     * Set 将凭据与云产品实例绑定时，需要授予的权限列表。
-     * @param PrivilegesList 将凭据与云产品实例绑定时，需要授予的权限列表。
+     * Set <p>将凭据与云产品实例绑定时，需要授予的权限列表。</p>
+     * @param PrivilegesList <p>将凭据与云产品实例绑定时，需要授予的权限列表。</p>
      */
     public void setPrivilegesList(ProductPrivilegeUnit [] PrivilegesList) {
         this.PrivilegesList = PrivilegesList;
     }
 
     /**
-     * Get 描述信息，用于详细描述用途等，最大支持2048字节。 
-     * @return Description 描述信息，用于详细描述用途等，最大支持2048字节。
+     * Get <p>描述信息，用于详细描述用途等，最大支持2048字节。</p> 
+     * @return Description <p>描述信息，用于详细描述用途等，最大支持2048字节。</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 描述信息，用于详细描述用途等，最大支持2048字节。
-     * @param Description 描述信息，用于详细描述用途等，最大支持2048字节。
+     * Set <p>描述信息，用于详细描述用途等，最大支持2048字节。</p>
+     * @param Description <p>描述信息，用于详细描述用途等，最大支持2048字节。</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 指定对凭据进行加密的KMS CMK。
-如果为空则表示使用Secrets Manager为您默认创建的CMK进行加密。
-您也可以指定在同region 下自行创建的KMS CMK进行加密。 
-     * @return KmsKeyId 指定对凭据进行加密的KMS CMK。
-如果为空则表示使用Secrets Manager为您默认创建的CMK进行加密。
-您也可以指定在同region 下自行创建的KMS CMK进行加密。
+     * Get <p>指定对凭据进行加密的KMS CMK。<br>如果为空则表示使用Secrets Manager为您默认创建的CMK进行加密。<br>您也可以指定在同region 下自行创建的KMS CMK进行加密。</p> 
+     * @return KmsKeyId <p>指定对凭据进行加密的KMS CMK。<br>如果为空则表示使用Secrets Manager为您默认创建的CMK进行加密。<br>您也可以指定在同region 下自行创建的KMS CMK进行加密。</p>
      */
     public String getKmsKeyId() {
         return this.KmsKeyId;
     }
 
     /**
-     * Set 指定对凭据进行加密的KMS CMK。
-如果为空则表示使用Secrets Manager为您默认创建的CMK进行加密。
-您也可以指定在同region 下自行创建的KMS CMK进行加密。
-     * @param KmsKeyId 指定对凭据进行加密的KMS CMK。
-如果为空则表示使用Secrets Manager为您默认创建的CMK进行加密。
-您也可以指定在同region 下自行创建的KMS CMK进行加密。
+     * Set <p>指定对凭据进行加密的KMS CMK。<br>如果为空则表示使用Secrets Manager为您默认创建的CMK进行加密。<br>您也可以指定在同region 下自行创建的KMS CMK进行加密。</p>
+     * @param KmsKeyId <p>指定对凭据进行加密的KMS CMK。<br>如果为空则表示使用Secrets Manager为您默认创建的CMK进行加密。<br>您也可以指定在同region 下自行创建的KMS CMK进行加密。</p>
      */
     public void setKmsKeyId(String KmsKeyId) {
         this.KmsKeyId = KmsKeyId;
     }
 
     /**
-     * Get 标签列表。 
-     * @return Tags 标签列表。
+     * Get <p>标签列表。</p> 
+     * @return Tags <p>标签列表。</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签列表。
-     * @param Tags 标签列表。
+     * Set <p>标签列表。</p>
+     * @param Tags <p>标签列表。</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 用户自定义的开始轮转时间，格式：2006-01-02 15:04:05。
-当EnableRotation为True时，此参数必填。 
-     * @return RotationBeginTime 用户自定义的开始轮转时间，格式：2006-01-02 15:04:05。
-当EnableRotation为True时，此参数必填。
+     * Get <p>用户自定义的开始轮转时间，格式：2006-01-02 15:04:05。<br>当EnableRotation为True时，此参数必填。</p> 
+     * @return RotationBeginTime <p>用户自定义的开始轮转时间，格式：2006-01-02 15:04:05。<br>当EnableRotation为True时，此参数必填。</p>
      */
     public String getRotationBeginTime() {
         return this.RotationBeginTime;
     }
 
     /**
-     * Set 用户自定义的开始轮转时间，格式：2006-01-02 15:04:05。
-当EnableRotation为True时，此参数必填。
-     * @param RotationBeginTime 用户自定义的开始轮转时间，格式：2006-01-02 15:04:05。
-当EnableRotation为True时，此参数必填。
+     * Set <p>用户自定义的开始轮转时间，格式：2006-01-02 15:04:05。<br>当EnableRotation为True时，此参数必填。</p>
+     * @param RotationBeginTime <p>用户自定义的开始轮转时间，格式：2006-01-02 15:04:05。<br>当EnableRotation为True时，此参数必填。</p>
      */
     public void setRotationBeginTime(String RotationBeginTime) {
         this.RotationBeginTime = RotationBeginTime;
     }
 
     /**
-     * Get 是否开启轮转
-True -- 开启
-False -- 不开启
-如果不指定，默认为False。 
-     * @return EnableRotation 是否开启轮转
-True -- 开启
-False -- 不开启
-如果不指定，默认为False。
+     * Get <p>是否开启轮转<br>True -- 开启<br>False -- 不开启<br>如果不指定，默认为False。</p> 
+     * @return EnableRotation <p>是否开启轮转<br>True -- 开启<br>False -- 不开启<br>如果不指定，默认为False。</p>
      */
     public Boolean getEnableRotation() {
         return this.EnableRotation;
     }
 
     /**
-     * Set 是否开启轮转
-True -- 开启
-False -- 不开启
-如果不指定，默认为False。
-     * @param EnableRotation 是否开启轮转
-True -- 开启
-False -- 不开启
-如果不指定，默认为False。
+     * Set <p>是否开启轮转<br>True -- 开启<br>False -- 不开启<br>如果不指定，默认为False。</p>
+     * @param EnableRotation <p>是否开启轮转<br>True -- 开启<br>False -- 不开启<br>如果不指定，默认为False。</p>
      */
     public void setEnableRotation(Boolean EnableRotation) {
         this.EnableRotation = EnableRotation;
     }
 
     /**
-     * Get 轮转周期，以天为单位，默认为1天。 
-     * @return RotationFrequency 轮转周期，以天为单位，默认为1天。
+     * Get <p>轮转周期，以天为单位，默认为1天。</p> 
+     * @return RotationFrequency <p>轮转周期，以天为单位，默认为1天。</p>
      */
     public Long getRotationFrequency() {
         return this.RotationFrequency;
     }
 
     /**
-     * Set 轮转周期，以天为单位，默认为1天。
-     * @param RotationFrequency 轮转周期，以天为单位，默认为1天。
+     * Set <p>轮转周期，以天为单位，默认为1天。</p>
+     * @param RotationFrequency <p>轮转周期，以天为单位，默认为1天。</p>
      */
     public void setRotationFrequency(Long RotationFrequency) {
         this.RotationFrequency = RotationFrequency;
     }
 
     /**
-     * Get KMS的独享集群的ID。当KmsKeyId为空,并且用户的KMS存在有效的HsmClusterId时有效。 
-     * @return KmsHsmClusterId KMS的独享集群的ID。当KmsKeyId为空,并且用户的KMS存在有效的HsmClusterId时有效。
+     * Get <p>KMS的独享集群的ID。当KmsKeyId为空,并且用户的KMS存在有效的HsmClusterId时有效。</p> 
+     * @return KmsHsmClusterId <p>KMS的独享集群的ID。当KmsKeyId为空,并且用户的KMS存在有效的HsmClusterId时有效。</p>
      */
     public String getKmsHsmClusterId() {
         return this.KmsHsmClusterId;
     }
 
     /**
-     * Set KMS的独享集群的ID。当KmsKeyId为空,并且用户的KMS存在有效的HsmClusterId时有效。
-     * @param KmsHsmClusterId KMS的独享集群的ID。当KmsKeyId为空,并且用户的KMS存在有效的HsmClusterId时有效。
+     * Set <p>KMS的独享集群的ID。当KmsKeyId为空,并且用户的KMS存在有效的HsmClusterId时有效。</p>
+     * @param KmsHsmClusterId <p>KMS的独享集群的ID。当KmsKeyId为空,并且用户的KMS存在有效的HsmClusterId时有效。</p>
      */
     public void setKmsHsmClusterId(String KmsHsmClusterId) {
         this.KmsHsmClusterId = KmsHsmClusterId;
     }
 
     /**
-     * Get 账户备注 
-     * @return AccountRemark 账户备注
+     * Get <p>账户备注</p> 
+     * @return AccountRemark <p>账户备注</p>
      */
     public String getAccountRemark() {
         return this.AccountRemark;
     }
 
     /**
-     * Set 账户备注
-     * @param AccountRemark 账户备注
+     * Set <p>账户备注</p>
+     * @param AccountRemark <p>账户备注</p>
      */
     public void setAccountRemark(String AccountRemark) {
         this.AccountRemark = AccountRemark;
+    }
+
+    /**
+     * Get <p>数据库账号类型，目前仅在创建sqlserver凭据场景会使用到，仅支持L3</p><p>枚举值：</p><ul><li>L3： 普通权限账号</li></ul> 
+     * @return AccountType <p>数据库账号类型，目前仅在创建sqlserver凭据场景会使用到，仅支持L3</p><p>枚举值：</p><ul><li>L3： 普通权限账号</li></ul>
+     */
+    public String getAccountType() {
+        return this.AccountType;
+    }
+
+    /**
+     * Set <p>数据库账号类型，目前仅在创建sqlserver凭据场景会使用到，仅支持L3</p><p>枚举值：</p><ul><li>L3： 普通权限账号</li></ul>
+     * @param AccountType <p>数据库账号类型，目前仅在创建sqlserver凭据场景会使用到，仅支持L3</p><p>枚举值：</p><ul><li>L3： 普通权限账号</li></ul>
+     */
+    public void setAccountType(String AccountType) {
+        this.AccountType = AccountType;
     }
 
     public CreateProductSecretRequest() {
@@ -464,6 +427,9 @@ False -- 不开启
         if (source.AccountRemark != null) {
             this.AccountRemark = new String(source.AccountRemark);
         }
+        if (source.AccountType != null) {
+            this.AccountType = new String(source.AccountType);
+        }
     }
 
 
@@ -485,6 +451,7 @@ False -- 不开启
         this.setParamSimple(map, prefix + "RotationFrequency", this.RotationFrequency);
         this.setParamSimple(map, prefix + "KmsHsmClusterId", this.KmsHsmClusterId);
         this.setParamSimple(map, prefix + "AccountRemark", this.AccountRemark);
+        this.setParamSimple(map, prefix + "AccountType", this.AccountType);
 
     }
 }

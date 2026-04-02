@@ -24,84 +24,69 @@ import java.util.HashMap;
 public class AigcImageSceneInfo extends AbstractModel {
 
     /**
-    * AI生图场景类型，可选值：
-- change_clothes：AI换衣。
-- product_image：AI生商品图。
-- outpainting: AI扩图。
+    * <p>AI生图场景类型，可选值：</p><ul><li>change_clothes：常规场景换衣。</li><li>change_clothes_under：特殊场景换衣。</li><li>change_clothes_top_wear：上半身换衣。</li><li>change_clothes_bottom_wear：下半身换衣。</li><li>change_clothes_full_wear：全身换衣。</li><li>product_image：AI生商品图。</li><li>outpainting: AI扩图。</li></ul>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 当 Type 为 change_clothes 时有效，则该项为必填，表示AI 换衣生图配置参数。
+    * <p>当 Type 下列类型时，则该项为必填，表示AI 换衣生图配置参数：</p><ul><li>change_clothes</li><li>change_clothes_under</li><li>change_clothes_full_wear</li><li>change_clothes_top_wear</li><li>change_clothes_bottom_wear</li></ul>
     */
     @SerializedName("ChangeClothesConfig")
     @Expose
     private ChangeClothesConfig ChangeClothesConfig;
 
     /**
-    * 当 Type 为 product_image 时有效，表示AI 生商品图配置参数。
+    * <p>当 Type 为 product_image 时有效，表示AI 生商品图配置参数。</p>
     */
     @SerializedName("ProductImageConfig")
     @Expose
     private ProductImageConfig ProductImageConfig;
 
     /**
-     * Get AI生图场景类型，可选值：
-- change_clothes：AI换衣。
-- product_image：AI生商品图。
-- outpainting: AI扩图。 
-     * @return Type AI生图场景类型，可选值：
-- change_clothes：AI换衣。
-- product_image：AI生商品图。
-- outpainting: AI扩图。
+     * Get <p>AI生图场景类型，可选值：</p><ul><li>change_clothes：常规场景换衣。</li><li>change_clothes_under：特殊场景换衣。</li><li>change_clothes_top_wear：上半身换衣。</li><li>change_clothes_bottom_wear：下半身换衣。</li><li>change_clothes_full_wear：全身换衣。</li><li>product_image：AI生商品图。</li><li>outpainting: AI扩图。</li></ul> 
+     * @return Type <p>AI生图场景类型，可选值：</p><ul><li>change_clothes：常规场景换衣。</li><li>change_clothes_under：特殊场景换衣。</li><li>change_clothes_top_wear：上半身换衣。</li><li>change_clothes_bottom_wear：下半身换衣。</li><li>change_clothes_full_wear：全身换衣。</li><li>product_image：AI生商品图。</li><li>outpainting: AI扩图。</li></ul>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set AI生图场景类型，可选值：
-- change_clothes：AI换衣。
-- product_image：AI生商品图。
-- outpainting: AI扩图。
-     * @param Type AI生图场景类型，可选值：
-- change_clothes：AI换衣。
-- product_image：AI生商品图。
-- outpainting: AI扩图。
+     * Set <p>AI生图场景类型，可选值：</p><ul><li>change_clothes：常规场景换衣。</li><li>change_clothes_under：特殊场景换衣。</li><li>change_clothes_top_wear：上半身换衣。</li><li>change_clothes_bottom_wear：下半身换衣。</li><li>change_clothes_full_wear：全身换衣。</li><li>product_image：AI生商品图。</li><li>outpainting: AI扩图。</li></ul>
+     * @param Type <p>AI生图场景类型，可选值：</p><ul><li>change_clothes：常规场景换衣。</li><li>change_clothes_under：特殊场景换衣。</li><li>change_clothes_top_wear：上半身换衣。</li><li>change_clothes_bottom_wear：下半身换衣。</li><li>change_clothes_full_wear：全身换衣。</li><li>product_image：AI生商品图。</li><li>outpainting: AI扩图。</li></ul>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 当 Type 为 change_clothes 时有效，则该项为必填，表示AI 换衣生图配置参数。 
-     * @return ChangeClothesConfig 当 Type 为 change_clothes 时有效，则该项为必填，表示AI 换衣生图配置参数。
+     * Get <p>当 Type 下列类型时，则该项为必填，表示AI 换衣生图配置参数：</p><ul><li>change_clothes</li><li>change_clothes_under</li><li>change_clothes_full_wear</li><li>change_clothes_top_wear</li><li>change_clothes_bottom_wear</li></ul> 
+     * @return ChangeClothesConfig <p>当 Type 下列类型时，则该项为必填，表示AI 换衣生图配置参数：</p><ul><li>change_clothes</li><li>change_clothes_under</li><li>change_clothes_full_wear</li><li>change_clothes_top_wear</li><li>change_clothes_bottom_wear</li></ul>
      */
     public ChangeClothesConfig getChangeClothesConfig() {
         return this.ChangeClothesConfig;
     }
 
     /**
-     * Set 当 Type 为 change_clothes 时有效，则该项为必填，表示AI 换衣生图配置参数。
-     * @param ChangeClothesConfig 当 Type 为 change_clothes 时有效，则该项为必填，表示AI 换衣生图配置参数。
+     * Set <p>当 Type 下列类型时，则该项为必填，表示AI 换衣生图配置参数：</p><ul><li>change_clothes</li><li>change_clothes_under</li><li>change_clothes_full_wear</li><li>change_clothes_top_wear</li><li>change_clothes_bottom_wear</li></ul>
+     * @param ChangeClothesConfig <p>当 Type 下列类型时，则该项为必填，表示AI 换衣生图配置参数：</p><ul><li>change_clothes</li><li>change_clothes_under</li><li>change_clothes_full_wear</li><li>change_clothes_top_wear</li><li>change_clothes_bottom_wear</li></ul>
      */
     public void setChangeClothesConfig(ChangeClothesConfig ChangeClothesConfig) {
         this.ChangeClothesConfig = ChangeClothesConfig;
     }
 
     /**
-     * Get 当 Type 为 product_image 时有效，表示AI 生商品图配置参数。 
-     * @return ProductImageConfig 当 Type 为 product_image 时有效，表示AI 生商品图配置参数。
+     * Get <p>当 Type 为 product_image 时有效，表示AI 生商品图配置参数。</p> 
+     * @return ProductImageConfig <p>当 Type 为 product_image 时有效，表示AI 生商品图配置参数。</p>
      */
     public ProductImageConfig getProductImageConfig() {
         return this.ProductImageConfig;
     }
 
     /**
-     * Set 当 Type 为 product_image 时有效，表示AI 生商品图配置参数。
-     * @param ProductImageConfig 当 Type 为 product_image 时有效，表示AI 生商品图配置参数。
+     * Set <p>当 Type 为 product_image 时有效，表示AI 生商品图配置参数。</p>
+     * @param ProductImageConfig <p>当 Type 为 product_image 时有效，表示AI 生商品图配置参数。</p>
      */
     public void setProductImageConfig(ProductImageConfig ProductImageConfig) {
         this.ProductImageConfig = ProductImageConfig;
