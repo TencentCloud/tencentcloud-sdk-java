@@ -243,6 +243,17 @@ public class CvmClient extends AbstractClient{
     }
 
     /**
+     *本接口 (DeleteInstancesDisasterRecoverGroups) 用于将云服务器实例从指定的置放群组中批量移除。
+     * @param req DeleteInstancesDisasterRecoverGroupsRequest
+     * @return DeleteInstancesDisasterRecoverGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteInstancesDisasterRecoverGroupsResponse DeleteInstancesDisasterRecoverGroups(DeleteInstancesDisasterRecoverGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteInstancesDisasterRecoverGroups", DeleteInstancesDisasterRecoverGroupsResponse.class);
+    }
+
+    /**
      *本接口 (DeleteKeyPairs) 用于删除已在腾讯云托管的密钥对。
 
 * 可以同时删除多个密钥对。

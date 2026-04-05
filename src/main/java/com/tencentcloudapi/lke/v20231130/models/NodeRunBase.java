@@ -24,328 +24,261 @@ import java.util.HashMap;
 public class NodeRunBase extends AbstractModel {
 
     /**
-    * 节点运行的ID
+    * <p>节点运行的ID</p>
     */
     @SerializedName("NodeRunId")
     @Expose
     private String NodeRunId;
 
     /**
-    * 节点ID
+    * <p>节点ID</p>
     */
     @SerializedName("NodeId")
     @Expose
     private String NodeId;
 
     /**
-    * 工作流运行实例的ID
+    * <p>工作流运行实例的ID</p>
     */
     @SerializedName("WorkflowRunId")
     @Expose
     private String WorkflowRunId;
 
     /**
-    * 节点名称
+    * <p>节点名称</p>
     */
     @SerializedName("NodeName")
     @Expose
     private String NodeName;
 
     /**
-    * 节点类型。
-1： 开始节点
-2：参数提取节点
-3：大模型节点
-4：知识问答节点
-5：知识检索节点
-6：标签提取节点
-7：代码执行节点
-8：工具节点
-9：逻辑判断节点
-10：回复节点
-11：选项卡节点
-12：循环节点
-13：意图识别节点
-14：工作流节点
-15：插件节点
-16：结束节点
-17: 变量聚合节点数据
-18: 批处理节点
-19: 消息队列节点
+    * <p>节点类型。<br>1： 开始节点<br>2：参数提取节点<br>3：大模型节点<br>4：知识问答节点<br>5：知识检索节点<br>6：标签提取节点<br>7：代码执行节点<br>8：工具节点<br>9：逻辑判断节点<br>10：回复节点<br>11：选项卡节点<br>12：循环节点<br>13：意图识别节点<br>14：工作流节点<br>15：插件节点<br>16：结束节点<br>17: 变量聚合节点数据<br>18: 批处理节点<br>19: 消息队列节点</p>
     */
     @SerializedName("NodeType")
     @Expose
     private Long NodeType;
 
     /**
-    * 运行状态。0: 初始状态；1: 运行中；2: 运行成功； 3: 运行失败； 4: 已取消
+    * <p>运行状态。0: 初始状态；1: 运行中；2: 运行成功； 3: 运行失败； 4: 已取消</p>
     */
     @SerializedName("State")
     @Expose
     private Long State;
 
     /**
-    * 错误码
+    * <p>错误码</p>
     */
     @SerializedName("FailCode")
     @Expose
     private String FailCode;
 
     /**
-    * 错误信息
+    * <p>错误信息</p>
     */
     @SerializedName("FailMessage")
     @Expose
     private String FailMessage;
 
     /**
-    * 消耗时间（毫秒）
+    * <p>消耗时间（毫秒）</p>
     */
     @SerializedName("CostMilliseconds")
     @Expose
     private Long CostMilliseconds;
 
     /**
-    * 消耗的token总数
+    * <p>消耗的token总数</p>
     */
     @SerializedName("TotalTokens")
     @Expose
     private Long TotalTokens;
 
     /**
-     * Get 节点运行的ID 
-     * @return NodeRunId 节点运行的ID
+    * <p>分支下标列表</p><p>单位：无</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BranchIndexList")
+    @Expose
+    private Long [] BranchIndexList;
+
+    /**
+     * Get <p>节点运行的ID</p> 
+     * @return NodeRunId <p>节点运行的ID</p>
      */
     public String getNodeRunId() {
         return this.NodeRunId;
     }
 
     /**
-     * Set 节点运行的ID
-     * @param NodeRunId 节点运行的ID
+     * Set <p>节点运行的ID</p>
+     * @param NodeRunId <p>节点运行的ID</p>
      */
     public void setNodeRunId(String NodeRunId) {
         this.NodeRunId = NodeRunId;
     }
 
     /**
-     * Get 节点ID 
-     * @return NodeId 节点ID
+     * Get <p>节点ID</p> 
+     * @return NodeId <p>节点ID</p>
      */
     public String getNodeId() {
         return this.NodeId;
     }
 
     /**
-     * Set 节点ID
-     * @param NodeId 节点ID
+     * Set <p>节点ID</p>
+     * @param NodeId <p>节点ID</p>
      */
     public void setNodeId(String NodeId) {
         this.NodeId = NodeId;
     }
 
     /**
-     * Get 工作流运行实例的ID 
-     * @return WorkflowRunId 工作流运行实例的ID
+     * Get <p>工作流运行实例的ID</p> 
+     * @return WorkflowRunId <p>工作流运行实例的ID</p>
      */
     public String getWorkflowRunId() {
         return this.WorkflowRunId;
     }
 
     /**
-     * Set 工作流运行实例的ID
-     * @param WorkflowRunId 工作流运行实例的ID
+     * Set <p>工作流运行实例的ID</p>
+     * @param WorkflowRunId <p>工作流运行实例的ID</p>
      */
     public void setWorkflowRunId(String WorkflowRunId) {
         this.WorkflowRunId = WorkflowRunId;
     }
 
     /**
-     * Get 节点名称 
-     * @return NodeName 节点名称
+     * Get <p>节点名称</p> 
+     * @return NodeName <p>节点名称</p>
      */
     public String getNodeName() {
         return this.NodeName;
     }
 
     /**
-     * Set 节点名称
-     * @param NodeName 节点名称
+     * Set <p>节点名称</p>
+     * @param NodeName <p>节点名称</p>
      */
     public void setNodeName(String NodeName) {
         this.NodeName = NodeName;
     }
 
     /**
-     * Get 节点类型。
-1： 开始节点
-2：参数提取节点
-3：大模型节点
-4：知识问答节点
-5：知识检索节点
-6：标签提取节点
-7：代码执行节点
-8：工具节点
-9：逻辑判断节点
-10：回复节点
-11：选项卡节点
-12：循环节点
-13：意图识别节点
-14：工作流节点
-15：插件节点
-16：结束节点
-17: 变量聚合节点数据
-18: 批处理节点
-19: 消息队列节点 
-     * @return NodeType 节点类型。
-1： 开始节点
-2：参数提取节点
-3：大模型节点
-4：知识问答节点
-5：知识检索节点
-6：标签提取节点
-7：代码执行节点
-8：工具节点
-9：逻辑判断节点
-10：回复节点
-11：选项卡节点
-12：循环节点
-13：意图识别节点
-14：工作流节点
-15：插件节点
-16：结束节点
-17: 变量聚合节点数据
-18: 批处理节点
-19: 消息队列节点
+     * Get <p>节点类型。<br>1： 开始节点<br>2：参数提取节点<br>3：大模型节点<br>4：知识问答节点<br>5：知识检索节点<br>6：标签提取节点<br>7：代码执行节点<br>8：工具节点<br>9：逻辑判断节点<br>10：回复节点<br>11：选项卡节点<br>12：循环节点<br>13：意图识别节点<br>14：工作流节点<br>15：插件节点<br>16：结束节点<br>17: 变量聚合节点数据<br>18: 批处理节点<br>19: 消息队列节点</p> 
+     * @return NodeType <p>节点类型。<br>1： 开始节点<br>2：参数提取节点<br>3：大模型节点<br>4：知识问答节点<br>5：知识检索节点<br>6：标签提取节点<br>7：代码执行节点<br>8：工具节点<br>9：逻辑判断节点<br>10：回复节点<br>11：选项卡节点<br>12：循环节点<br>13：意图识别节点<br>14：工作流节点<br>15：插件节点<br>16：结束节点<br>17: 变量聚合节点数据<br>18: 批处理节点<br>19: 消息队列节点</p>
      */
     public Long getNodeType() {
         return this.NodeType;
     }
 
     /**
-     * Set 节点类型。
-1： 开始节点
-2：参数提取节点
-3：大模型节点
-4：知识问答节点
-5：知识检索节点
-6：标签提取节点
-7：代码执行节点
-8：工具节点
-9：逻辑判断节点
-10：回复节点
-11：选项卡节点
-12：循环节点
-13：意图识别节点
-14：工作流节点
-15：插件节点
-16：结束节点
-17: 变量聚合节点数据
-18: 批处理节点
-19: 消息队列节点
-     * @param NodeType 节点类型。
-1： 开始节点
-2：参数提取节点
-3：大模型节点
-4：知识问答节点
-5：知识检索节点
-6：标签提取节点
-7：代码执行节点
-8：工具节点
-9：逻辑判断节点
-10：回复节点
-11：选项卡节点
-12：循环节点
-13：意图识别节点
-14：工作流节点
-15：插件节点
-16：结束节点
-17: 变量聚合节点数据
-18: 批处理节点
-19: 消息队列节点
+     * Set <p>节点类型。<br>1： 开始节点<br>2：参数提取节点<br>3：大模型节点<br>4：知识问答节点<br>5：知识检索节点<br>6：标签提取节点<br>7：代码执行节点<br>8：工具节点<br>9：逻辑判断节点<br>10：回复节点<br>11：选项卡节点<br>12：循环节点<br>13：意图识别节点<br>14：工作流节点<br>15：插件节点<br>16：结束节点<br>17: 变量聚合节点数据<br>18: 批处理节点<br>19: 消息队列节点</p>
+     * @param NodeType <p>节点类型。<br>1： 开始节点<br>2：参数提取节点<br>3：大模型节点<br>4：知识问答节点<br>5：知识检索节点<br>6：标签提取节点<br>7：代码执行节点<br>8：工具节点<br>9：逻辑判断节点<br>10：回复节点<br>11：选项卡节点<br>12：循环节点<br>13：意图识别节点<br>14：工作流节点<br>15：插件节点<br>16：结束节点<br>17: 变量聚合节点数据<br>18: 批处理节点<br>19: 消息队列节点</p>
      */
     public void setNodeType(Long NodeType) {
         this.NodeType = NodeType;
     }
 
     /**
-     * Get 运行状态。0: 初始状态；1: 运行中；2: 运行成功； 3: 运行失败； 4: 已取消 
-     * @return State 运行状态。0: 初始状态；1: 运行中；2: 运行成功； 3: 运行失败； 4: 已取消
+     * Get <p>运行状态。0: 初始状态；1: 运行中；2: 运行成功； 3: 运行失败； 4: 已取消</p> 
+     * @return State <p>运行状态。0: 初始状态；1: 运行中；2: 运行成功； 3: 运行失败； 4: 已取消</p>
      */
     public Long getState() {
         return this.State;
     }
 
     /**
-     * Set 运行状态。0: 初始状态；1: 运行中；2: 运行成功； 3: 运行失败； 4: 已取消
-     * @param State 运行状态。0: 初始状态；1: 运行中；2: 运行成功； 3: 运行失败； 4: 已取消
+     * Set <p>运行状态。0: 初始状态；1: 运行中；2: 运行成功； 3: 运行失败； 4: 已取消</p>
+     * @param State <p>运行状态。0: 初始状态；1: 运行中；2: 运行成功； 3: 运行失败； 4: 已取消</p>
      */
     public void setState(Long State) {
         this.State = State;
     }
 
     /**
-     * Get 错误码 
-     * @return FailCode 错误码
+     * Get <p>错误码</p> 
+     * @return FailCode <p>错误码</p>
      */
     public String getFailCode() {
         return this.FailCode;
     }
 
     /**
-     * Set 错误码
-     * @param FailCode 错误码
+     * Set <p>错误码</p>
+     * @param FailCode <p>错误码</p>
      */
     public void setFailCode(String FailCode) {
         this.FailCode = FailCode;
     }
 
     /**
-     * Get 错误信息 
-     * @return FailMessage 错误信息
+     * Get <p>错误信息</p> 
+     * @return FailMessage <p>错误信息</p>
      */
     public String getFailMessage() {
         return this.FailMessage;
     }
 
     /**
-     * Set 错误信息
-     * @param FailMessage 错误信息
+     * Set <p>错误信息</p>
+     * @param FailMessage <p>错误信息</p>
      */
     public void setFailMessage(String FailMessage) {
         this.FailMessage = FailMessage;
     }
 
     /**
-     * Get 消耗时间（毫秒） 
-     * @return CostMilliseconds 消耗时间（毫秒）
+     * Get <p>消耗时间（毫秒）</p> 
+     * @return CostMilliseconds <p>消耗时间（毫秒）</p>
      */
     public Long getCostMilliseconds() {
         return this.CostMilliseconds;
     }
 
     /**
-     * Set 消耗时间（毫秒）
-     * @param CostMilliseconds 消耗时间（毫秒）
+     * Set <p>消耗时间（毫秒）</p>
+     * @param CostMilliseconds <p>消耗时间（毫秒）</p>
      */
     public void setCostMilliseconds(Long CostMilliseconds) {
         this.CostMilliseconds = CostMilliseconds;
     }
 
     /**
-     * Get 消耗的token总数 
-     * @return TotalTokens 消耗的token总数
+     * Get <p>消耗的token总数</p> 
+     * @return TotalTokens <p>消耗的token总数</p>
      */
     public Long getTotalTokens() {
         return this.TotalTokens;
     }
 
     /**
-     * Set 消耗的token总数
-     * @param TotalTokens 消耗的token总数
+     * Set <p>消耗的token总数</p>
+     * @param TotalTokens <p>消耗的token总数</p>
      */
     public void setTotalTokens(Long TotalTokens) {
         this.TotalTokens = TotalTokens;
+    }
+
+    /**
+     * Get <p>分支下标列表</p><p>单位：无</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BranchIndexList <p>分支下标列表</p><p>单位：无</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long [] getBranchIndexList() {
+        return this.BranchIndexList;
+    }
+
+    /**
+     * Set <p>分支下标列表</p><p>单位：无</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BranchIndexList <p>分支下标列表</p><p>单位：无</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBranchIndexList(Long [] BranchIndexList) {
+        this.BranchIndexList = BranchIndexList;
     }
 
     public NodeRunBase() {
@@ -386,6 +319,12 @@ public class NodeRunBase extends AbstractModel {
         if (source.TotalTokens != null) {
             this.TotalTokens = new Long(source.TotalTokens);
         }
+        if (source.BranchIndexList != null) {
+            this.BranchIndexList = new Long[source.BranchIndexList.length];
+            for (int i = 0; i < source.BranchIndexList.length; i++) {
+                this.BranchIndexList[i] = new Long(source.BranchIndexList[i]);
+            }
+        }
     }
 
 
@@ -403,6 +342,7 @@ public class NodeRunBase extends AbstractModel {
         this.setParamSimple(map, prefix + "FailMessage", this.FailMessage);
         this.setParamSimple(map, prefix + "CostMilliseconds", this.CostMilliseconds);
         this.setParamSimple(map, prefix + "TotalTokens", this.TotalTokens);
+        this.setParamArraySimple(map, prefix + "BranchIndexList.", this.BranchIndexList);
 
     }
 }

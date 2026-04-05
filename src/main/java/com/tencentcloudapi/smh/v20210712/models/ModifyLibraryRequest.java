@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class ModifyLibraryRequest extends AbstractModel {
 
     /**
-    * 媒体库 ID
+    * <p>媒体库 ID</p>
     */
     @SerializedName("LibraryId")
     @Expose
     private String LibraryId;
 
     /**
-    * 媒体库名称，最多 50 个字符。如不传则不修改。
+    * <p>媒体库名称，最多 50 个字符。如不传则不修改。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 备注，最多 250 个字符。如不传则不修改。
+    * <p>备注，最多 250 个字符。如不传则不修改。</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 媒体库配置项，部分参数在新建后不可更改，且仅修改传入的参数。如不传该参数则不修改任何配置项。
+    * <p>媒体库配置项，部分参数在新建后不可更改，且仅修改传入的参数。如不传该参数则不修改任何配置项。</p>
     */
     @SerializedName("LibraryExtension")
     @Expose
     private LibraryExtension LibraryExtension;
 
     /**
-     * Get 媒体库 ID 
-     * @return LibraryId 媒体库 ID
+     * Get <p>媒体库 ID</p> 
+     * @return LibraryId <p>媒体库 ID</p>
      */
     public String getLibraryId() {
         return this.LibraryId;
     }
 
     /**
-     * Set 媒体库 ID
-     * @param LibraryId 媒体库 ID
+     * Set <p>媒体库 ID</p>
+     * @param LibraryId <p>媒体库 ID</p>
      */
     public void setLibraryId(String LibraryId) {
         this.LibraryId = LibraryId;
     }
 
     /**
-     * Get 媒体库名称，最多 50 个字符。如不传则不修改。 
-     * @return Name 媒体库名称，最多 50 个字符。如不传则不修改。
+     * Get <p>媒体库名称，最多 50 个字符。如不传则不修改。</p> 
+     * @return Name <p>媒体库名称，最多 50 个字符。如不传则不修改。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 媒体库名称，最多 50 个字符。如不传则不修改。
-     * @param Name 媒体库名称，最多 50 个字符。如不传则不修改。
+     * Set <p>媒体库名称，最多 50 个字符。如不传则不修改。</p>
+     * @param Name <p>媒体库名称，最多 50 个字符。如不传则不修改。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 备注，最多 250 个字符。如不传则不修改。 
-     * @return Remark 备注，最多 250 个字符。如不传则不修改。
+     * Get <p>备注，最多 250 个字符。如不传则不修改。</p> 
+     * @return Remark <p>备注，最多 250 个字符。如不传则不修改。</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注，最多 250 个字符。如不传则不修改。
-     * @param Remark 备注，最多 250 个字符。如不传则不修改。
+     * Set <p>备注，最多 250 个字符。如不传则不修改。</p>
+     * @param Remark <p>备注，最多 250 个字符。如不传则不修改。</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 媒体库配置项，部分参数在新建后不可更改，且仅修改传入的参数。如不传该参数则不修改任何配置项。 
-     * @return LibraryExtension 媒体库配置项，部分参数在新建后不可更改，且仅修改传入的参数。如不传该参数则不修改任何配置项。
+     * Get <p>媒体库配置项，部分参数在新建后不可更改，且仅修改传入的参数。如不传该参数则不修改任何配置项。</p> 
+     * @return LibraryExtension <p>媒体库配置项，部分参数在新建后不可更改，且仅修改传入的参数。如不传该参数则不修改任何配置项。</p>
      */
     public LibraryExtension getLibraryExtension() {
         return this.LibraryExtension;
     }
 
     /**
-     * Set 媒体库配置项，部分参数在新建后不可更改，且仅修改传入的参数。如不传该参数则不修改任何配置项。
-     * @param LibraryExtension 媒体库配置项，部分参数在新建后不可更改，且仅修改传入的参数。如不传该参数则不修改任何配置项。
+     * Set <p>媒体库配置项，部分参数在新建后不可更改，且仅修改传入的参数。如不传该参数则不修改任何配置项。</p>
+     * @param LibraryExtension <p>媒体库配置项，部分参数在新建后不可更改，且仅修改传入的参数。如不传该参数则不修改任何配置项。</p>
      */
     public void setLibraryExtension(LibraryExtension LibraryExtension) {
         this.LibraryExtension = LibraryExtension;

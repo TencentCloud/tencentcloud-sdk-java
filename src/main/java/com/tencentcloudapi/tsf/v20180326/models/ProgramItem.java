@@ -24,189 +24,184 @@ import java.util.HashMap;
 public class ProgramItem extends AbstractModel {
 
     /**
-    * 数据项ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)接口查询已创建的数据集或登陆控制台进行查看；也可以通过调用[CreateProgram](https://cloud.tencent.com/document/api/649/108544)创建新的数据集。
-
+    * <p>数据项ID，调用<a href="https://console.cloud.tencent.com/tsf/privilege?rid=1&amp;tab=program">DescribePrograms</a>接口查询已创建的数据集或登录控制台进行查看；也可以通过调用<a href="https://cloud.tencent.com/document/api/649/108544">CreateProgram</a>创建新的数据集。</p>
     */
     @SerializedName("ProgramItemId")
     @Expose
     private String ProgramItemId;
 
     /**
-    * 资源
+    * <p>资源</p>
     */
     @SerializedName("Resource")
     @Expose
     private Resource Resource;
 
     /**
-    * 数据值列表
+    * <p>数据值列表</p>
     */
     @SerializedName("ValueList")
     @Expose
     private String [] ValueList;
 
     /**
-    * 全选标识，true: 全选；false: 非全选
+    * <p>全选标识，true: 全选；false: 非全选</p>
     */
     @SerializedName("IsAll")
     @Expose
     private Boolean IsAll;
 
     /**
-    * 创建时间，时间戳格式【Long】
+    * <p>创建时间，时间戳格式【Long】</p>
     */
     @SerializedName("CreationTime")
     @Expose
     private Long CreationTime;
 
     /**
-    * 最后更新时间，时间戳格式【Long】，单位毫秒
+    * <p>最后更新时间，时间戳格式【Long】，单位毫秒</p>
     */
     @SerializedName("LastUpdateTime")
     @Expose
     private Long LastUpdateTime;
 
     /**
-    * 删除标识，true: 可删除；false: 不可删除
+    * <p>删除标识，true: 可删除；false: 不可删除</p>
     */
     @SerializedName("DeleteFlag")
     @Expose
     private Boolean DeleteFlag;
 
     /**
-    * 数据集ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)查询接口获取
+    * <p>数据集ID，调用<a href="https://console.cloud.tencent.com/tsf/privilege?rid=1&amp;tab=program">DescribePrograms</a>查询接口获取</p>
     */
     @SerializedName("ProgramId")
     @Expose
     private String ProgramId;
 
     /**
-     * Get 数据项ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)接口查询已创建的数据集或登陆控制台进行查看；也可以通过调用[CreateProgram](https://cloud.tencent.com/document/api/649/108544)创建新的数据集。
- 
-     * @return ProgramItemId 数据项ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)接口查询已创建的数据集或登陆控制台进行查看；也可以通过调用[CreateProgram](https://cloud.tencent.com/document/api/649/108544)创建新的数据集。
-
+     * Get <p>数据项ID，调用<a href="https://console.cloud.tencent.com/tsf/privilege?rid=1&amp;tab=program">DescribePrograms</a>接口查询已创建的数据集或登录控制台进行查看；也可以通过调用<a href="https://cloud.tencent.com/document/api/649/108544">CreateProgram</a>创建新的数据集。</p> 
+     * @return ProgramItemId <p>数据项ID，调用<a href="https://console.cloud.tencent.com/tsf/privilege?rid=1&amp;tab=program">DescribePrograms</a>接口查询已创建的数据集或登录控制台进行查看；也可以通过调用<a href="https://cloud.tencent.com/document/api/649/108544">CreateProgram</a>创建新的数据集。</p>
      */
     public String getProgramItemId() {
         return this.ProgramItemId;
     }
 
     /**
-     * Set 数据项ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)接口查询已创建的数据集或登陆控制台进行查看；也可以通过调用[CreateProgram](https://cloud.tencent.com/document/api/649/108544)创建新的数据集。
-
-     * @param ProgramItemId 数据项ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)接口查询已创建的数据集或登陆控制台进行查看；也可以通过调用[CreateProgram](https://cloud.tencent.com/document/api/649/108544)创建新的数据集。
-
+     * Set <p>数据项ID，调用<a href="https://console.cloud.tencent.com/tsf/privilege?rid=1&amp;tab=program">DescribePrograms</a>接口查询已创建的数据集或登录控制台进行查看；也可以通过调用<a href="https://cloud.tencent.com/document/api/649/108544">CreateProgram</a>创建新的数据集。</p>
+     * @param ProgramItemId <p>数据项ID，调用<a href="https://console.cloud.tencent.com/tsf/privilege?rid=1&amp;tab=program">DescribePrograms</a>接口查询已创建的数据集或登录控制台进行查看；也可以通过调用<a href="https://cloud.tencent.com/document/api/649/108544">CreateProgram</a>创建新的数据集。</p>
      */
     public void setProgramItemId(String ProgramItemId) {
         this.ProgramItemId = ProgramItemId;
     }
 
     /**
-     * Get 资源 
-     * @return Resource 资源
+     * Get <p>资源</p> 
+     * @return Resource <p>资源</p>
      */
     public Resource getResource() {
         return this.Resource;
     }
 
     /**
-     * Set 资源
-     * @param Resource 资源
+     * Set <p>资源</p>
+     * @param Resource <p>资源</p>
      */
     public void setResource(Resource Resource) {
         this.Resource = Resource;
     }
 
     /**
-     * Get 数据值列表 
-     * @return ValueList 数据值列表
+     * Get <p>数据值列表</p> 
+     * @return ValueList <p>数据值列表</p>
      */
     public String [] getValueList() {
         return this.ValueList;
     }
 
     /**
-     * Set 数据值列表
-     * @param ValueList 数据值列表
+     * Set <p>数据值列表</p>
+     * @param ValueList <p>数据值列表</p>
      */
     public void setValueList(String [] ValueList) {
         this.ValueList = ValueList;
     }
 
     /**
-     * Get 全选标识，true: 全选；false: 非全选 
-     * @return IsAll 全选标识，true: 全选；false: 非全选
+     * Get <p>全选标识，true: 全选；false: 非全选</p> 
+     * @return IsAll <p>全选标识，true: 全选；false: 非全选</p>
      */
     public Boolean getIsAll() {
         return this.IsAll;
     }
 
     /**
-     * Set 全选标识，true: 全选；false: 非全选
-     * @param IsAll 全选标识，true: 全选；false: 非全选
+     * Set <p>全选标识，true: 全选；false: 非全选</p>
+     * @param IsAll <p>全选标识，true: 全选；false: 非全选</p>
      */
     public void setIsAll(Boolean IsAll) {
         this.IsAll = IsAll;
     }
 
     /**
-     * Get 创建时间，时间戳格式【Long】 
-     * @return CreationTime 创建时间，时间戳格式【Long】
+     * Get <p>创建时间，时间戳格式【Long】</p> 
+     * @return CreationTime <p>创建时间，时间戳格式【Long】</p>
      */
     public Long getCreationTime() {
         return this.CreationTime;
     }
 
     /**
-     * Set 创建时间，时间戳格式【Long】
-     * @param CreationTime 创建时间，时间戳格式【Long】
+     * Set <p>创建时间，时间戳格式【Long】</p>
+     * @param CreationTime <p>创建时间，时间戳格式【Long】</p>
      */
     public void setCreationTime(Long CreationTime) {
         this.CreationTime = CreationTime;
     }
 
     /**
-     * Get 最后更新时间，时间戳格式【Long】，单位毫秒 
-     * @return LastUpdateTime 最后更新时间，时间戳格式【Long】，单位毫秒
+     * Get <p>最后更新时间，时间戳格式【Long】，单位毫秒</p> 
+     * @return LastUpdateTime <p>最后更新时间，时间戳格式【Long】，单位毫秒</p>
      */
     public Long getLastUpdateTime() {
         return this.LastUpdateTime;
     }
 
     /**
-     * Set 最后更新时间，时间戳格式【Long】，单位毫秒
-     * @param LastUpdateTime 最后更新时间，时间戳格式【Long】，单位毫秒
+     * Set <p>最后更新时间，时间戳格式【Long】，单位毫秒</p>
+     * @param LastUpdateTime <p>最后更新时间，时间戳格式【Long】，单位毫秒</p>
      */
     public void setLastUpdateTime(Long LastUpdateTime) {
         this.LastUpdateTime = LastUpdateTime;
     }
 
     /**
-     * Get 删除标识，true: 可删除；false: 不可删除 
-     * @return DeleteFlag 删除标识，true: 可删除；false: 不可删除
+     * Get <p>删除标识，true: 可删除；false: 不可删除</p> 
+     * @return DeleteFlag <p>删除标识，true: 可删除；false: 不可删除</p>
      */
     public Boolean getDeleteFlag() {
         return this.DeleteFlag;
     }
 
     /**
-     * Set 删除标识，true: 可删除；false: 不可删除
-     * @param DeleteFlag 删除标识，true: 可删除；false: 不可删除
+     * Set <p>删除标识，true: 可删除；false: 不可删除</p>
+     * @param DeleteFlag <p>删除标识，true: 可删除；false: 不可删除</p>
      */
     public void setDeleteFlag(Boolean DeleteFlag) {
         this.DeleteFlag = DeleteFlag;
     }
 
     /**
-     * Get 数据集ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)查询接口获取 
-     * @return ProgramId 数据集ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)查询接口获取
+     * Get <p>数据集ID，调用<a href="https://console.cloud.tencent.com/tsf/privilege?rid=1&amp;tab=program">DescribePrograms</a>查询接口获取</p> 
+     * @return ProgramId <p>数据集ID，调用<a href="https://console.cloud.tencent.com/tsf/privilege?rid=1&amp;tab=program">DescribePrograms</a>查询接口获取</p>
      */
     public String getProgramId() {
         return this.ProgramId;
     }
 
     /**
-     * Set 数据集ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)查询接口获取
-     * @param ProgramId 数据集ID，调用[DescribePrograms](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program)查询接口获取
+     * Set <p>数据集ID，调用<a href="https://console.cloud.tencent.com/tsf/privilege?rid=1&amp;tab=program">DescribePrograms</a>查询接口获取</p>
+     * @param ProgramId <p>数据集ID，调用<a href="https://console.cloud.tencent.com/tsf/privilege?rid=1&amp;tab=program">DescribePrograms</a>查询接口获取</p>
      */
     public void setProgramId(String ProgramId) {
         this.ProgramId = ProgramId;

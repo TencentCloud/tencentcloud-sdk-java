@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class WorkflowRunNodeInfo extends AbstractModel {
 
     /**
-    * 节点ID
+    * <p>节点ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeId")
@@ -32,7 +32,7 @@ public class WorkflowRunNodeInfo extends AbstractModel {
     private String NodeId;
 
     /**
-    * 节点类型
+    * <p>节点类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeType")
@@ -40,7 +40,7 @@ public class WorkflowRunNodeInfo extends AbstractModel {
     private Long NodeType;
 
     /**
-    * 节点名称
+    * <p>节点名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeName")
@@ -48,7 +48,7 @@ public class WorkflowRunNodeInfo extends AbstractModel {
     private String NodeName;
 
     /**
-    * 状态
+    * <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -56,7 +56,7 @@ public class WorkflowRunNodeInfo extends AbstractModel {
     private Long Status;
 
     /**
-    * 输入
+    * <p>输入</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Input")
@@ -64,7 +64,7 @@ public class WorkflowRunNodeInfo extends AbstractModel {
     private String Input;
 
     /**
-    * 输出
+    * <p>输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Output")
@@ -72,7 +72,7 @@ public class WorkflowRunNodeInfo extends AbstractModel {
     private String Output;
 
     /**
-    * 任务输出
+    * <p>任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskOutput")
@@ -80,7 +80,7 @@ public class WorkflowRunNodeInfo extends AbstractModel {
     private String TaskOutput;
 
     /**
-    * 错误信息
+    * <p>错误信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailMessage")
@@ -88,7 +88,7 @@ public class WorkflowRunNodeInfo extends AbstractModel {
     private String FailMessage;
 
     /**
-    * 花费时长
+    * <p>花费时长，单位为毫秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CostMilliSeconds")
@@ -96,7 +96,7 @@ public class WorkflowRunNodeInfo extends AbstractModel {
     private Long CostMilliSeconds;
 
     /**
-    * 大模型输出信息
+    * <p>大模型输出信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StatisticInfos")
@@ -104,7 +104,7 @@ public class WorkflowRunNodeInfo extends AbstractModel {
     private StatisticInfo [] StatisticInfos;
 
     /**
-    * 错误代码
+    * <p>错误代码</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailCode")
@@ -112,9 +112,9 @@ public class WorkflowRunNodeInfo extends AbstractModel {
     private String FailCode;
 
     /**
-     * Get 节点ID
+     * Get <p>节点ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NodeId 节点ID
+     * @return NodeId <p>节点ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNodeId() {
@@ -122,9 +122,9 @@ public class WorkflowRunNodeInfo extends AbstractModel {
     }
 
     /**
-     * Set 节点ID
+     * Set <p>节点ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NodeId 节点ID
+     * @param NodeId <p>节点ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeId(String NodeId) {
@@ -132,9 +132,9 @@ public class WorkflowRunNodeInfo extends AbstractModel {
     }
 
     /**
-     * Get 节点类型
+     * Get <p>节点类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NodeType 节点类型
+     * @return NodeType <p>节点类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNodeType() {
@@ -142,9 +142,9 @@ public class WorkflowRunNodeInfo extends AbstractModel {
     }
 
     /**
-     * Set 节点类型
+     * Set <p>节点类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NodeType 节点类型
+     * @param NodeType <p>节点类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeType(Long NodeType) {
@@ -152,9 +152,9 @@ public class WorkflowRunNodeInfo extends AbstractModel {
     }
 
     /**
-     * Get 节点名称
+     * Get <p>节点名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NodeName 节点名称
+     * @return NodeName <p>节点名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNodeName() {
@@ -162,9 +162,9 @@ public class WorkflowRunNodeInfo extends AbstractModel {
     }
 
     /**
-     * Set 节点名称
+     * Set <p>节点名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NodeName 节点名称
+     * @param NodeName <p>节点名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeName(String NodeName) {
@@ -172,9 +172,9 @@ public class WorkflowRunNodeInfo extends AbstractModel {
     }
 
     /**
-     * Get 状态
+     * Get <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 状态
+     * @return Status <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -182,9 +182,9 @@ public class WorkflowRunNodeInfo extends AbstractModel {
     }
 
     /**
-     * Set 状态
+     * Set <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 状态
+     * @param Status <p>状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
@@ -192,9 +192,9 @@ public class WorkflowRunNodeInfo extends AbstractModel {
     }
 
     /**
-     * Get 输入
+     * Get <p>输入</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Input 输入
+     * @return Input <p>输入</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInput() {
@@ -202,9 +202,9 @@ public class WorkflowRunNodeInfo extends AbstractModel {
     }
 
     /**
-     * Set 输入
+     * Set <p>输入</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Input 输入
+     * @param Input <p>输入</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInput(String Input) {
@@ -212,9 +212,9 @@ public class WorkflowRunNodeInfo extends AbstractModel {
     }
 
     /**
-     * Get 输出
+     * Get <p>输出</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Output 输出
+     * @return Output <p>输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOutput() {
@@ -222,9 +222,9 @@ public class WorkflowRunNodeInfo extends AbstractModel {
     }
 
     /**
-     * Set 输出
+     * Set <p>输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Output 输出
+     * @param Output <p>输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutput(String Output) {
@@ -232,9 +232,9 @@ public class WorkflowRunNodeInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务输出
+     * Get <p>任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskOutput 任务输出
+     * @return TaskOutput <p>任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskOutput() {
@@ -242,9 +242,9 @@ public class WorkflowRunNodeInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务输出
+     * Set <p>任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskOutput 任务输出
+     * @param TaskOutput <p>任务输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskOutput(String TaskOutput) {
@@ -252,9 +252,9 @@ public class WorkflowRunNodeInfo extends AbstractModel {
     }
 
     /**
-     * Get 错误信息
+     * Get <p>错误信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FailMessage 错误信息
+     * @return FailMessage <p>错误信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFailMessage() {
@@ -262,9 +262,9 @@ public class WorkflowRunNodeInfo extends AbstractModel {
     }
 
     /**
-     * Set 错误信息
+     * Set <p>错误信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FailMessage 错误信息
+     * @param FailMessage <p>错误信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailMessage(String FailMessage) {
@@ -272,9 +272,9 @@ public class WorkflowRunNodeInfo extends AbstractModel {
     }
 
     /**
-     * Get 花费时长
+     * Get <p>花费时长，单位为毫秒</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CostMilliSeconds 花费时长
+     * @return CostMilliSeconds <p>花费时长，单位为毫秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCostMilliSeconds() {
@@ -282,9 +282,9 @@ public class WorkflowRunNodeInfo extends AbstractModel {
     }
 
     /**
-     * Set 花费时长
+     * Set <p>花费时长，单位为毫秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CostMilliSeconds 花费时长
+     * @param CostMilliSeconds <p>花费时长，单位为毫秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCostMilliSeconds(Long CostMilliSeconds) {
@@ -292,9 +292,9 @@ public class WorkflowRunNodeInfo extends AbstractModel {
     }
 
     /**
-     * Get 大模型输出信息
+     * Get <p>大模型输出信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StatisticInfos 大模型输出信息
+     * @return StatisticInfos <p>大模型输出信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public StatisticInfo [] getStatisticInfos() {
@@ -302,9 +302,9 @@ public class WorkflowRunNodeInfo extends AbstractModel {
     }
 
     /**
-     * Set 大模型输出信息
+     * Set <p>大模型输出信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StatisticInfos 大模型输出信息
+     * @param StatisticInfos <p>大模型输出信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatisticInfos(StatisticInfo [] StatisticInfos) {
@@ -312,9 +312,9 @@ public class WorkflowRunNodeInfo extends AbstractModel {
     }
 
     /**
-     * Get 错误代码
+     * Get <p>错误代码</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FailCode 错误代码
+     * @return FailCode <p>错误代码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFailCode() {
@@ -322,9 +322,9 @@ public class WorkflowRunNodeInfo extends AbstractModel {
     }
 
     /**
-     * Set 错误代码
+     * Set <p>错误代码</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FailCode 错误代码
+     * @param FailCode <p>错误代码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailCode(String FailCode) {

@@ -73,6 +73,13 @@ public class SecurityPolicy extends AbstractModel {
     private BotManagementLite BotManagementLite;
 
     /**
+    * 默认拦截动作配置。
+    */
+    @SerializedName("DefaultDenySecurityActionParameters")
+    @Expose
+    private DefaultDenySecurityActionParameters DefaultDenySecurityActionParameters;
+
+    /**
      * Get 自定义规则配置。 
      * @return CustomRules 自定义规则配置。
      */
@@ -184,6 +191,22 @@ public class SecurityPolicy extends AbstractModel {
         this.BotManagementLite = BotManagementLite;
     }
 
+    /**
+     * Get 默认拦截动作配置。 
+     * @return DefaultDenySecurityActionParameters 默认拦截动作配置。
+     */
+    public DefaultDenySecurityActionParameters getDefaultDenySecurityActionParameters() {
+        return this.DefaultDenySecurityActionParameters;
+    }
+
+    /**
+     * Set 默认拦截动作配置。
+     * @param DefaultDenySecurityActionParameters 默认拦截动作配置。
+     */
+    public void setDefaultDenySecurityActionParameters(DefaultDenySecurityActionParameters DefaultDenySecurityActionParameters) {
+        this.DefaultDenySecurityActionParameters = DefaultDenySecurityActionParameters;
+    }
+
     public SecurityPolicy() {
     }
 
@@ -213,6 +236,9 @@ public class SecurityPolicy extends AbstractModel {
         if (source.BotManagementLite != null) {
             this.BotManagementLite = new BotManagementLite(source.BotManagementLite);
         }
+        if (source.DefaultDenySecurityActionParameters != null) {
+            this.DefaultDenySecurityActionParameters = new DefaultDenySecurityActionParameters(source.DefaultDenySecurityActionParameters);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class SecurityPolicy extends AbstractModel {
         this.setParamObj(map, prefix + "ExceptionRules.", this.ExceptionRules);
         this.setParamObj(map, prefix + "BotManagement.", this.BotManagement);
         this.setParamObj(map, prefix + "BotManagementLite.", this.BotManagementLite);
+        this.setParamObj(map, prefix + "DefaultDenySecurityActionParameters.", this.DefaultDenySecurityActionParameters);
 
     }
 }

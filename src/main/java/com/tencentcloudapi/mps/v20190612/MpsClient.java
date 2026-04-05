@@ -1241,6 +1241,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *同步接口。查询可用音色，支持通过类型、标签、语言等条件检索音色
+     * @param req DescribeVoicesRequest
+     * @return DescribeVoicesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVoicesResponse DescribeVoices(DescribeVoicesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVoices", DescribeVoicesResponse.class);
+    }
+
+    /**
      *查询用户自定义水印模板，支持根据条件，分页查询。
      * @param req DescribeWatermarkTemplatesRequest
      * @return DescribeWatermarkTemplatesResponse

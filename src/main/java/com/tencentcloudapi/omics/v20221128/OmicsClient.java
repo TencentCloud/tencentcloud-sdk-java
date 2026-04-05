@@ -105,6 +105,28 @@ public class OmicsClient extends AbstractClient{
     }
 
     /**
+     *查询HPC集群列表。
+     * @param req DescribeHPCClustersRequest
+     * @return DescribeHPCClustersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHPCClustersResponse DescribeHPCClusters(DescribeHPCClustersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHPCClusters", DescribeHPCClustersResponse.class);
+    }
+
+    /**
+     *查询HPC节点列表。
+     * @param req DescribeHPCNodesRequest
+     * @return DescribeHPCNodesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHPCNodesResponse DescribeHPCNodes(DescribeHPCNodesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHPCNodes", DescribeHPCNodesResponse.class);
+    }
+
+    /**
      *查询任务批次列表。
      * @param req DescribeRunGroupsRequest
      * @return DescribeRunGroupsResponse
@@ -212,6 +234,17 @@ public class OmicsClient extends AbstractClient{
     public ModifyVolumeResponse ModifyVolume(ModifyVolumeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyVolume", ModifyVolumeResponse.class);
+    }
+
+    /**
+     *重启HPC节点
+     * @param req RebootHPCNodesRequest
+     * @return RebootHPCNodesResponse
+     * @throws TencentCloudSDKException
+     */
+    public RebootHPCNodesResponse RebootHPCNodes(RebootHPCNodesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RebootHPCNodes", RebootHPCNodesResponse.class);
     }
 
     /**

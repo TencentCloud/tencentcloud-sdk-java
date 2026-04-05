@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteDataEngineRequest extends AbstractModel {
 
     /**
-    * 删除虚拟集群的名称数组
+    * <p>删除虚拟集群的名称数组</p>
     */
     @SerializedName("DataEngineNames")
     @Expose
     private String [] DataEngineNames;
 
     /**
-     * Get 删除虚拟集群的名称数组 
-     * @return DataEngineNames 删除虚拟集群的名称数组
+     * Get <p>删除虚拟集群的名称数组</p> 
+     * @return DataEngineNames <p>删除虚拟集群的名称数组</p>
      */
     public String [] getDataEngineNames() {
         return this.DataEngineNames;
     }
 
     /**
-     * Set 删除虚拟集群的名称数组
-     * @param DataEngineNames 删除虚拟集群的名称数组
+     * Set <p>删除虚拟集群的名称数组</p>
+     * @param DataEngineNames <p>删除虚拟集群的名称数组</p>
      */
     public void setDataEngineNames(String [] DataEngineNames) {
         this.DataEngineNames = DataEngineNames;

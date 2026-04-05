@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeviceProfile extends AbstractModel {
 
     /**
-    * 客户端设备类型。取值有：<li>iOS；</li><li>Android；</li><li>WebView。</li>
+    * 客户端设备类型。取值有：<li>iOS；</li><li>Android；</li><li>WebView；</li><li>WeChatMiniProgram。</li>
     */
     @SerializedName("ClientType")
     @Expose
@@ -59,16 +59,16 @@ public class DeviceProfile extends AbstractModel {
     private SecurityAction MediumRiskRequestAction;
 
     /**
-     * Get 客户端设备类型。取值有：<li>iOS；</li><li>Android；</li><li>WebView。</li> 
-     * @return ClientType 客户端设备类型。取值有：<li>iOS；</li><li>Android；</li><li>WebView。</li>
+     * Get 客户端设备类型。取值有：<li>iOS；</li><li>Android；</li><li>WebView；</li><li>WeChatMiniProgram。</li> 
+     * @return ClientType 客户端设备类型。取值有：<li>iOS；</li><li>Android；</li><li>WebView；</li><li>WeChatMiniProgram。</li>
      */
     public String getClientType() {
         return this.ClientType;
     }
 
     /**
-     * Set 客户端设备类型。取值有：<li>iOS；</li><li>Android；</li><li>WebView。</li>
-     * @param ClientType 客户端设备类型。取值有：<li>iOS；</li><li>Android；</li><li>WebView。</li>
+     * Set 客户端设备类型。取值有：<li>iOS；</li><li>Android；</li><li>WebView；</li><li>WeChatMiniProgram。</li>
+     * @param ClientType 客户端设备类型。取值有：<li>iOS；</li><li>Android；</li><li>WebView；</li><li>WeChatMiniProgram。</li>
      */
     public void setClientType(String ClientType) {
         this.ClientType = ClientType;

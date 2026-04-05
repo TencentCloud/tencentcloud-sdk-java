@@ -24,11 +24,18 @@ import java.util.HashMap;
 public class CreateLibraryResponse extends AbstractModel {
 
     /**
-    * 媒体库 ID
+    * <p>媒体库 ID</p>
     */
     @SerializedName("LibraryId")
     @Expose
     private String LibraryId;
+
+    /**
+    * 
+    */
+    @SerializedName("AccessDomain")
+    @Expose
+    private String AccessDomain;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +45,35 @@ public class CreateLibraryResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 媒体库 ID 
-     * @return LibraryId 媒体库 ID
+     * Get <p>媒体库 ID</p> 
+     * @return LibraryId <p>媒体库 ID</p>
      */
     public String getLibraryId() {
         return this.LibraryId;
     }
 
     /**
-     * Set 媒体库 ID
-     * @param LibraryId 媒体库 ID
+     * Set <p>媒体库 ID</p>
+     * @param LibraryId <p>媒体库 ID</p>
      */
     public void setLibraryId(String LibraryId) {
         this.LibraryId = LibraryId;
+    }
+
+    /**
+     * Get  
+     * @return AccessDomain 
+     */
+    public String getAccessDomain() {
+        return this.AccessDomain;
+    }
+
+    /**
+     * Set 
+     * @param AccessDomain 
+     */
+    public void setAccessDomain(String AccessDomain) {
+        this.AccessDomain = AccessDomain;
     }
 
     /**
@@ -80,6 +103,9 @@ public class CreateLibraryResponse extends AbstractModel {
         if (source.LibraryId != null) {
             this.LibraryId = new String(source.LibraryId);
         }
+        if (source.AccessDomain != null) {
+            this.AccessDomain = new String(source.AccessDomain);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -91,6 +117,7 @@ public class CreateLibraryResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LibraryId", this.LibraryId);
+        this.setParamSimple(map, prefix + "AccessDomain", this.AccessDomain);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

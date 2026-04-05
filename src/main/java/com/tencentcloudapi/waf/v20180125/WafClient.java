@@ -1150,17 +1150,6 @@ public class WafClient extends AbstractClient{
     }
 
     /**
-     *大模型请求内容和响应内容审核接口
-     * @param req DescribeQClawContentSecCheckRequest
-     * @return DescribeQClawContentSecCheckResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeQClawContentSecCheckResponse DescribeQClawContentSecCheck(DescribeQClawContentSecCheckRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeQClawContentSecCheck", DescribeQClawContentSecCheckResponse.class);
-    }
-
-    /**
      *查询限流规则列表接口
      * @param req DescribeRateLimitsV2Request
      * @return DescribeRateLimitsV2Response

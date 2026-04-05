@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class CreateLibraryRequest extends AbstractModel {
 
     /**
-    * 媒体库名称，最多 50 个字符
+    * <p>媒体库名称，最多 50 个字符</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 备注，最多 250 个字符
+    * <p>备注，最多 250 个字符</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 存储桶全名，新建后不可更改。当前版本不再支持指定存储桶。
+    * <p>存储桶全名，新建后不可更改。当前版本不再支持指定存储桶。</p>
     */
     @SerializedName("BucketName")
     @Expose
     private String BucketName;
 
     /**
-    * 存储桶所在地域，新建后不可更改。当前版本不再支持指定存储桶所在地域。
+    * <p>存储桶所在地域，新建后不可更改。当前版本不再支持指定存储桶所在地域。</p>
     */
     @SerializedName("BucketRegion")
     @Expose
     private String BucketRegion;
 
     /**
-    * 媒体库配置项，部分参数新建后不可更改
+    * <p>媒体库配置项，部分参数新建后不可更改</p>
     */
     @SerializedName("LibraryExtension")
     @Expose
     private LibraryExtension LibraryExtension;
 
     /**
-     * Get 媒体库名称，最多 50 个字符 
-     * @return Name 媒体库名称，最多 50 个字符
+     * Get <p>媒体库名称，最多 50 个字符</p> 
+     * @return Name <p>媒体库名称，最多 50 个字符</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 媒体库名称，最多 50 个字符
-     * @param Name 媒体库名称，最多 50 个字符
+     * Set <p>媒体库名称，最多 50 个字符</p>
+     * @param Name <p>媒体库名称，最多 50 个字符</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 备注，最多 250 个字符 
-     * @return Remark 备注，最多 250 个字符
+     * Get <p>备注，最多 250 个字符</p> 
+     * @return Remark <p>备注，最多 250 个字符</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注，最多 250 个字符
-     * @param Remark 备注，最多 250 个字符
+     * Set <p>备注，最多 250 个字符</p>
+     * @param Remark <p>备注，最多 250 个字符</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 存储桶全名，新建后不可更改。当前版本不再支持指定存储桶。 
-     * @return BucketName 存储桶全名，新建后不可更改。当前版本不再支持指定存储桶。
+     * Get <p>存储桶全名，新建后不可更改。当前版本不再支持指定存储桶。</p> 
+     * @return BucketName <p>存储桶全名，新建后不可更改。当前版本不再支持指定存储桶。</p>
      */
     public String getBucketName() {
         return this.BucketName;
     }
 
     /**
-     * Set 存储桶全名，新建后不可更改。当前版本不再支持指定存储桶。
-     * @param BucketName 存储桶全名，新建后不可更改。当前版本不再支持指定存储桶。
+     * Set <p>存储桶全名，新建后不可更改。当前版本不再支持指定存储桶。</p>
+     * @param BucketName <p>存储桶全名，新建后不可更改。当前版本不再支持指定存储桶。</p>
      */
     public void setBucketName(String BucketName) {
         this.BucketName = BucketName;
     }
 
     /**
-     * Get 存储桶所在地域，新建后不可更改。当前版本不再支持指定存储桶所在地域。 
-     * @return BucketRegion 存储桶所在地域，新建后不可更改。当前版本不再支持指定存储桶所在地域。
+     * Get <p>存储桶所在地域，新建后不可更改。当前版本不再支持指定存储桶所在地域。</p> 
+     * @return BucketRegion <p>存储桶所在地域，新建后不可更改。当前版本不再支持指定存储桶所在地域。</p>
      */
     public String getBucketRegion() {
         return this.BucketRegion;
     }
 
     /**
-     * Set 存储桶所在地域，新建后不可更改。当前版本不再支持指定存储桶所在地域。
-     * @param BucketRegion 存储桶所在地域，新建后不可更改。当前版本不再支持指定存储桶所在地域。
+     * Set <p>存储桶所在地域，新建后不可更改。当前版本不再支持指定存储桶所在地域。</p>
+     * @param BucketRegion <p>存储桶所在地域，新建后不可更改。当前版本不再支持指定存储桶所在地域。</p>
      */
     public void setBucketRegion(String BucketRegion) {
         this.BucketRegion = BucketRegion;
     }
 
     /**
-     * Get 媒体库配置项，部分参数新建后不可更改 
-     * @return LibraryExtension 媒体库配置项，部分参数新建后不可更改
+     * Get <p>媒体库配置项，部分参数新建后不可更改</p> 
+     * @return LibraryExtension <p>媒体库配置项，部分参数新建后不可更改</p>
      */
     public LibraryExtension getLibraryExtension() {
         return this.LibraryExtension;
     }
 
     /**
-     * Set 媒体库配置项，部分参数新建后不可更改
-     * @param LibraryExtension 媒体库配置项，部分参数新建后不可更改
+     * Set <p>媒体库配置项，部分参数新建后不可更改</p>
+     * @param LibraryExtension <p>媒体库配置项，部分参数新建后不可更改</p>
      */
     public void setLibraryExtension(LibraryExtension LibraryExtension) {
         this.LibraryExtension = LibraryExtension;

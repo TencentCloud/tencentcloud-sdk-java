@@ -45,6 +45,20 @@ public class DescribeLibrariesRequest extends AbstractModel {
     private Long PageSize;
 
     /**
+    * 偏移量，从0开始。
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * 单次列出的数量限制，不超过100.
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
      * Get 按照一个或者多个媒体库 ID 查询，每次请求的上限为 100 个。 
      * @return LibraryIds 按照一个或者多个媒体库 ID 查询，每次请求的上限为 100 个。
      */
@@ -92,6 +106,38 @@ public class DescribeLibrariesRequest extends AbstractModel {
         this.PageSize = PageSize;
     }
 
+    /**
+     * Get 偏移量，从0开始。 
+     * @return Offset 偏移量，从0开始。
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 偏移量，从0开始。
+     * @param Offset 偏移量，从0开始。
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get 单次列出的数量限制，不超过100. 
+     * @return Limit 单次列出的数量限制，不超过100.
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 单次列出的数量限制，不超过100.
+     * @param Limit 单次列出的数量限制，不超过100.
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
     public DescribeLibrariesRequest() {
     }
 
@@ -112,6 +158,12 @@ public class DescribeLibrariesRequest extends AbstractModel {
         if (source.PageSize != null) {
             this.PageSize = new Long(source.PageSize);
         }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
     }
 
 
@@ -122,6 +174,8 @@ public class DescribeLibrariesRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "LibraryIds.", this.LibraryIds);
         this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
 
     }
 }
