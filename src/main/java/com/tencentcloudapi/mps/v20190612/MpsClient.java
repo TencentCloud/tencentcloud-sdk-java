@@ -39,6 +39,28 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *开通SSAI
+     * @param req ActivateSSAIRequest
+     * @return ActivateSSAIResponse
+     * @throws TencentCloudSDKException
+     */
+    public ActivateSSAIResponse ActivateSSAI(ActivateSSAIRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ActivateSSAI", ActivateSSAIResponse.class);
+    }
+
+    /**
+     *创建媒体封装用户。
+     * @param req ActivateStreamPackageRequest
+     * @return ActivateStreamPackageResponse
+     * @throws TencentCloudSDKException
+     */
+    public ActivateStreamPackageResponse ActivateStreamPackage(ActivateStreamPackageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ActivateStreamPackage", ActivateStreamPackageResponse.class);
+    }
+
+    /**
      *批量删除媒体传输流。
      * @param req BatchDeleteStreamLinkFlowRequest
      * @return BatchDeleteStreamLinkFlowResponse
@@ -376,6 +398,61 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *创建媒体包装频道。
+     * @param req CreateStreamPackageLinearAssemblyChannelRequest
+     * @return CreateStreamPackageLinearAssemblyChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateStreamPackageLinearAssemblyChannelResponse CreateStreamPackageLinearAssemblyChannel(CreateStreamPackageLinearAssemblyChannelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateStreamPackageLinearAssemblyChannel", CreateStreamPackageLinearAssemblyChannelResponse.class);
+    }
+
+    /**
+     *创建线性组装Program。
+     * @param req CreateStreamPackageLinearAssemblyProgramRequest
+     * @return CreateStreamPackageLinearAssemblyProgramResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateStreamPackageLinearAssemblyProgramResponse CreateStreamPackageLinearAssemblyProgram(CreateStreamPackageLinearAssemblyProgramRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateStreamPackageLinearAssemblyProgram", CreateStreamPackageLinearAssemblyProgramResponse.class);
+    }
+
+    /**
+     *创建SSAI广告插入配置。
+     * @param req CreateStreamPackageSSAIChannelRequest
+     * @return CreateStreamPackageSSAIChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateStreamPackageSSAIChannelResponse CreateStreamPackageSSAIChannel(CreateStreamPackageSSAIChannelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateStreamPackageSSAIChannel", CreateStreamPackageSSAIChannelResponse.class);
+    }
+
+    /**
+     *创建媒体包装频道。
+     * @param req CreateStreamPackageSourceRequest
+     * @return CreateStreamPackageSourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateStreamPackageSourceResponse CreateStreamPackageSource(CreateStreamPackageSourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateStreamPackageSource", CreateStreamPackageSourceResponse.class);
+    }
+
+    /**
+     *创建媒体包装频道。
+     * @param req CreateStreamPackageSourceLocationRequest
+     * @return CreateStreamPackageSourceLocationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateStreamPackageSourceLocationResponse CreateStreamPackageSourceLocation(CreateStreamPackageSourceLocationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateStreamPackageSourceLocation", CreateStreamPackageSourceLocationResponse.class);
+    }
+
+    /**
      *创建自定义字幕压制模板
      * @param req CreateSubtitleEmbedTemplateRequest
      * @return CreateSubtitleEmbedTemplateResponse
@@ -698,6 +775,94 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *删除媒体包装Channel。
+     * @param req DeleteStreamPackageLinearAssemblyChannelRequest
+     * @return DeleteStreamPackageLinearAssemblyChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteStreamPackageLinearAssemblyChannelResponse DeleteStreamPackageLinearAssemblyChannel(DeleteStreamPackageLinearAssemblyChannelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteStreamPackageLinearAssemblyChannel", DeleteStreamPackageLinearAssemblyChannelResponse.class);
+    }
+
+    /**
+     *批量删除媒体包装Channel。
+     * @param req DeleteStreamPackageLinearAssemblyChannelsRequest
+     * @return DeleteStreamPackageLinearAssemblyChannelsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteStreamPackageLinearAssemblyChannelsResponse DeleteStreamPackageLinearAssemblyChannels(DeleteStreamPackageLinearAssemblyChannelsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteStreamPackageLinearAssemblyChannels", DeleteStreamPackageLinearAssemblyChannelsResponse.class);
+    }
+
+    /**
+     *删除线性组装Program。
+     * @param req DeleteStreamPackageLinearAssemblyProgramRequest
+     * @return DeleteStreamPackageLinearAssemblyProgramResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteStreamPackageLinearAssemblyProgramResponse DeleteStreamPackageLinearAssemblyProgram(DeleteStreamPackageLinearAssemblyProgramRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteStreamPackageLinearAssemblyProgram", DeleteStreamPackageLinearAssemblyProgramResponse.class);
+    }
+
+    /**
+     *批量删除线性组装Program。
+     * @param req DeleteStreamPackageLinearAssemblyProgramsRequest
+     * @return DeleteStreamPackageLinearAssemblyProgramsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteStreamPackageLinearAssemblyProgramsResponse DeleteStreamPackageLinearAssemblyPrograms(DeleteStreamPackageLinearAssemblyProgramsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteStreamPackageLinearAssemblyPrograms", DeleteStreamPackageLinearAssemblyProgramsResponse.class);
+    }
+
+    /**
+     *批量删除同一Channel下的ID
+     * @param req DeleteStreamPackageLinearAssemblyProgramsByChannelRequest
+     * @return DeleteStreamPackageLinearAssemblyProgramsByChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteStreamPackageLinearAssemblyProgramsByChannelResponse DeleteStreamPackageLinearAssemblyProgramsByChannel(DeleteStreamPackageLinearAssemblyProgramsByChannelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteStreamPackageLinearAssemblyProgramsByChannel", DeleteStreamPackageLinearAssemblyProgramsByChannelResponse.class);
+    }
+
+    /**
+     *删除广告插入配置。
+     * @param req DeleteStreamPackageSSAIChannelRequest
+     * @return DeleteStreamPackageSSAIChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteStreamPackageSSAIChannelResponse DeleteStreamPackageSSAIChannel(DeleteStreamPackageSSAIChannelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteStreamPackageSSAIChannel", DeleteStreamPackageSSAIChannelResponse.class);
+    }
+
+    /**
+     *批量删除媒体包装Source。
+     * @param req DeleteStreamPackageSourceRequest
+     * @return DeleteStreamPackageSourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteStreamPackageSourceResponse DeleteStreamPackageSource(DeleteStreamPackageSourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteStreamPackageSource", DeleteStreamPackageSourceResponse.class);
+    }
+
+    /**
+     *删除媒体包装SourceLocation。
+     * @param req DeleteStreamPackageSourceLocationRequest
+     * @return DeleteStreamPackageSourceLocationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteStreamPackageSourceLocationResponse DeleteStreamPackageSourceLocation(DeleteStreamPackageSourceLocationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteStreamPackageSourceLocation", DeleteStreamPackageSourceLocationResponse.class);
+    }
+
+    /**
      *删除用户自定义字幕压制模板。
      * @param req DeleteSubtitleEmbedTemplateRequest
      * @return DeleteSubtitleEmbedTemplateResponse
@@ -918,6 +1083,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *查询用户开通mps信息，是否开通/授权。
+     * @param req DescribeMDPMPSUserInfoRequest
+     * @return DescribeMDPMPSUserInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMDPMPSUserInfoResponse DescribeMDPMPSUserInfo(DescribeMDPMPSUserInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMDPMPSUserInfo", DescribeMDPMPSUserInfoResponse.class);
+    }
+
+    /**
      *获取媒体的元信息，包括视频画面宽、高、编码格式、时长、帧率等。
      * @param req DescribeMediaMetaDataRequest
      * @return DescribeMediaMetaDataResponse
@@ -959,6 +1135,17 @@ public class MpsClient extends AbstractClient{
     public DescribeQualityControlTemplatesResponse DescribeQualityControlTemplates(DescribeQualityControlTemplatesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeQualityControlTemplates", DescribeQualityControlTemplatesResponse.class);
+    }
+
+    /**
+     *查询SSAI开通状态
+     * @param req DescribeSSAIActivateStateRequest
+     * @return DescribeSSAIActivateStateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSSAIActivateStateResponse DescribeSSAIActivateState(DescribeSSAIActivateStateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSSAIActivateState", DescribeSSAIActivateStateResponse.class);
     }
 
     /**
@@ -1157,6 +1344,182 @@ public class MpsClient extends AbstractClient{
     public DescribeStreamLinkSecurityGroupsResponse DescribeStreamLinkSecurityGroups(DescribeStreamLinkSecurityGroupsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeStreamLinkSecurityGroups", DescribeStreamLinkSecurityGroupsResponse.class);
+    }
+
+    /**
+     *查询媒体封装用户开通情况。
+     * @param req DescribeStreamPackageActivateStateRequest
+     * @return DescribeStreamPackageActivateStateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamPackageActivateStateResponse DescribeStreamPackageActivateState(DescribeStreamPackageActivateStateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStreamPackageActivateState", DescribeStreamPackageActivateStateResponse.class);
+    }
+
+    /**
+     *查询媒体包装线性组装频道信息。
+     * @param req DescribeStreamPackageLinearAssemblyChannelRequest
+     * @return DescribeStreamPackageLinearAssemblyChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamPackageLinearAssemblyChannelResponse DescribeStreamPackageLinearAssemblyChannel(DescribeStreamPackageLinearAssemblyChannelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStreamPackageLinearAssemblyChannel", DescribeStreamPackageLinearAssemblyChannelResponse.class);
+    }
+
+    /**
+     *查询线性组装频道告警信息。
+     * @param req DescribeStreamPackageLinearAssemblyChannelAlertsRequest
+     * @return DescribeStreamPackageLinearAssemblyChannelAlertsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamPackageLinearAssemblyChannelAlertsResponse DescribeStreamPackageLinearAssemblyChannelAlerts(DescribeStreamPackageLinearAssemblyChannelAlertsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStreamPackageLinearAssemblyChannelAlerts", DescribeStreamPackageLinearAssemblyChannelAlertsResponse.class);
+    }
+
+    /**
+     *查询线性组装频道信息列表。
+     * @param req DescribeStreamPackageLinearAssemblyChannelsRequest
+     * @return DescribeStreamPackageLinearAssemblyChannelsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamPackageLinearAssemblyChannelsResponse DescribeStreamPackageLinearAssemblyChannels(DescribeStreamPackageLinearAssemblyChannelsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStreamPackageLinearAssemblyChannels", DescribeStreamPackageLinearAssemblyChannelsResponse.class);
+    }
+
+    /**
+     *查询媒体包装Program信息。
+     * @param req DescribeStreamPackageLinearAssemblyProgramRequest
+     * @return DescribeStreamPackageLinearAssemblyProgramResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamPackageLinearAssemblyProgramResponse DescribeStreamPackageLinearAssemblyProgram(DescribeStreamPackageLinearAssemblyProgramRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStreamPackageLinearAssemblyProgram", DescribeStreamPackageLinearAssemblyProgramResponse.class);
+    }
+
+    /**
+     *查询Programe信息列表。
+     * @param req DescribeStreamPackageLinearAssemblyProgramSchedulesRequest
+     * @return DescribeStreamPackageLinearAssemblyProgramSchedulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamPackageLinearAssemblyProgramSchedulesResponse DescribeStreamPackageLinearAssemblyProgramSchedules(DescribeStreamPackageLinearAssemblyProgramSchedulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStreamPackageLinearAssemblyProgramSchedules", DescribeStreamPackageLinearAssemblyProgramSchedulesResponse.class);
+    }
+
+    /**
+     *查询Programe信息列表。
+     * @param req DescribeStreamPackageLinearAssemblyProgramsRequest
+     * @return DescribeStreamPackageLinearAssemblyProgramsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamPackageLinearAssemblyProgramsResponse DescribeStreamPackageLinearAssemblyPrograms(DescribeStreamPackageLinearAssemblyProgramsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStreamPackageLinearAssemblyPrograms", DescribeStreamPackageLinearAssemblyProgramsResponse.class);
+    }
+
+    /**
+     *频道线性组装用量查询
+     * @param req DescribeStreamPackageLinearAssemblyUsageRequest
+     * @return DescribeStreamPackageLinearAssemblyUsageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamPackageLinearAssemblyUsageResponse DescribeStreamPackageLinearAssemblyUsage(DescribeStreamPackageLinearAssemblyUsageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStreamPackageLinearAssemblyUsage", DescribeStreamPackageLinearAssemblyUsageResponse.class);
+    }
+
+    /**
+     *查询广告插入配置。
+     * @param req DescribeStreamPackageSSAIChannelRequest
+     * @return DescribeStreamPackageSSAIChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamPackageSSAIChannelResponse DescribeStreamPackageSSAIChannel(DescribeStreamPackageSSAIChannelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStreamPackageSSAIChannel", DescribeStreamPackageSSAIChannelResponse.class);
+    }
+
+    /**
+     *批量查询广告插入配置。
+     * @param req DescribeStreamPackageSSAIChannelsRequest
+     * @return DescribeStreamPackageSSAIChannelsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamPackageSSAIChannelsResponse DescribeStreamPackageSSAIChannels(DescribeStreamPackageSSAIChannelsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStreamPackageSSAIChannels", DescribeStreamPackageSSAIChannelsResponse.class);
+    }
+
+    /**
+     *SSAI广告替换用量查询
+     * @param req DescribeStreamPackageSSAIUsageRequest
+     * @return DescribeStreamPackageSSAIUsageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamPackageSSAIUsageResponse DescribeStreamPackageSSAIUsage(DescribeStreamPackageSSAIUsageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStreamPackageSSAIUsage", DescribeStreamPackageSSAIUsageResponse.class);
+    }
+
+    /**
+     *查询媒体包装Source信息。
+     * @param req DescribeStreamPackageSourceRequest
+     * @return DescribeStreamPackageSourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamPackageSourceResponse DescribeStreamPackageSource(DescribeStreamPackageSourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStreamPackageSource", DescribeStreamPackageSourceResponse.class);
+    }
+
+    /**
+     *查询线性组装Source告警信息。
+     * @param req DescribeStreamPackageSourceAlertsRequest
+     * @return DescribeStreamPackageSourceAlertsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamPackageSourceAlertsResponse DescribeStreamPackageSourceAlerts(DescribeStreamPackageSourceAlertsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStreamPackageSourceAlerts", DescribeStreamPackageSourceAlertsResponse.class);
+    }
+
+    /**
+     *查询媒体包装SourceLocation信息。
+     * @param req DescribeStreamPackageSourceLocationRequest
+     * @return DescribeStreamPackageSourceLocationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamPackageSourceLocationResponse DescribeStreamPackageSourceLocation(DescribeStreamPackageSourceLocationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStreamPackageSourceLocation", DescribeStreamPackageSourceLocationResponse.class);
+    }
+
+    /**
+     *查询SourceLocation信息列表。
+     * @param req DescribeStreamPackageSourceLocationsRequest
+     * @return DescribeStreamPackageSourceLocationsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamPackageSourceLocationsResponse DescribeStreamPackageSourceLocations(DescribeStreamPackageSourceLocationsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStreamPackageSourceLocations", DescribeStreamPackageSourceLocationsResponse.class);
+    }
+
+    /**
+     *查询Source信息列表。
+     * @param req DescribeStreamPackageSourcesRequest
+     * @return DescribeStreamPackageSourcesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamPackageSourcesResponse DescribeStreamPackageSources(DescribeStreamPackageSourcesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStreamPackageSources", DescribeStreamPackageSourcesResponse.class);
     }
 
     /**
@@ -1640,6 +2003,61 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *修改媒体包装Source信息。
+     * @param req ModifyStreamPackageLinearAssemblyChannelRequest
+     * @return ModifyStreamPackageLinearAssemblyChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyStreamPackageLinearAssemblyChannelResponse ModifyStreamPackageLinearAssemblyChannel(ModifyStreamPackageLinearAssemblyChannelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyStreamPackageLinearAssemblyChannel", ModifyStreamPackageLinearAssemblyChannelResponse.class);
+    }
+
+    /**
+     *修改媒体包装Program信息。
+     * @param req ModifyStreamPackageLinearAssemblyProgramRequest
+     * @return ModifyStreamPackageLinearAssemblyProgramResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyStreamPackageLinearAssemblyProgramResponse ModifyStreamPackageLinearAssemblyProgram(ModifyStreamPackageLinearAssemblyProgramRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyStreamPackageLinearAssemblyProgram", ModifyStreamPackageLinearAssemblyProgramResponse.class);
+    }
+
+    /**
+     *修改广告插入配置。
+     * @param req ModifyStreamPackageSSAIChannelRequest
+     * @return ModifyStreamPackageSSAIChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyStreamPackageSSAIChannelResponse ModifyStreamPackageSSAIChannel(ModifyStreamPackageSSAIChannelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyStreamPackageSSAIChannel", ModifyStreamPackageSSAIChannelResponse.class);
+    }
+
+    /**
+     *修改媒体包装Source信息。
+     * @param req ModifyStreamPackageSourceRequest
+     * @return ModifyStreamPackageSourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyStreamPackageSourceResponse ModifyStreamPackageSource(ModifyStreamPackageSourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyStreamPackageSource", ModifyStreamPackageSourceResponse.class);
+    }
+
+    /**
+     *修改媒体包装SourceLocation信息。
+     * @param req ModifyStreamPackageSourceLocationRequest
+     * @return ModifyStreamPackageSourceLocationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyStreamPackageSourceLocationResponse ModifyStreamPackageSourceLocation(ModifyStreamPackageSourceLocationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyStreamPackageSourceLocation", ModifyStreamPackageSourceLocationResponse.class);
+    }
+
+    /**
      *修改用户自定义字幕压制模板。
      * @param req ModifySubtitleEmbedTemplateRequest
      * @return ModifySubtitleEmbedTemplateResponse
@@ -1808,6 +2226,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *启动媒体包装频道。
+     * @param req StartStreamPackageLinearAssemblyChannelRequest
+     * @return StartStreamPackageLinearAssemblyChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartStreamPackageLinearAssemblyChannelResponse StartStreamPackageLinearAssemblyChannel(StartStreamPackageLinearAssemblyChannelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StartStreamPackageLinearAssemblyChannel", StartStreamPackageLinearAssemblyChannelResponse.class);
+    }
+
+    /**
      *停止媒体传输流。
      * @param req StopStreamLinkFlowRequest
      * @return StopStreamLinkFlowResponse
@@ -1816,6 +2245,17 @@ public class MpsClient extends AbstractClient{
     public StopStreamLinkFlowResponse StopStreamLinkFlow(StopStreamLinkFlowRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StopStreamLinkFlow", StopStreamLinkFlowResponse.class);
+    }
+
+    /**
+     *停止线性组装频道。
+     * @param req StopStreamPackageLinearAssemblyChannelRequest
+     * @return StopStreamPackageLinearAssemblyChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopStreamPackageLinearAssemblyChannelResponse StopStreamPackageLinearAssemblyChannel(StopStreamPackageLinearAssemblyChannelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopStreamPackageLinearAssemblyChannel", StopStreamPackageLinearAssemblyChannelResponse.class);
     }
 
     /**

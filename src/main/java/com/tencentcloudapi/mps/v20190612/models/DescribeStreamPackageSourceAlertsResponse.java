@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tcb.v20180608.models;
+package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,7 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ReinstateEnvResponse extends AbstractModel {
+public class DescribeStreamPackageSourceAlertsResponse extends AbstractModel {
+
+    /**
+    * Source告警信息。
+    */
+    @SerializedName("Infos")
+    @Expose
+    private SourceAlert [] Infos;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -29,6 +36,22 @@ public class ReinstateEnvResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get Source告警信息。 
+     * @return Infos Source告警信息。
+     */
+    public SourceAlert [] getInfos() {
+        return this.Infos;
+    }
+
+    /**
+     * Set Source告警信息。
+     * @param Infos Source告警信息。
+     */
+    public void setInfos(SourceAlert [] Infos) {
+        this.Infos = Infos;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -46,14 +69,20 @@ public class ReinstateEnvResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public ReinstateEnvResponse() {
+    public DescribeStreamPackageSourceAlertsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ReinstateEnvResponse(ReinstateEnvResponse source) {
+    public DescribeStreamPackageSourceAlertsResponse(DescribeStreamPackageSourceAlertsResponse source) {
+        if (source.Infos != null) {
+            this.Infos = new SourceAlert[source.Infos.length];
+            for (int i = 0; i < source.Infos.length; i++) {
+                this.Infos[i] = new SourceAlert(source.Infos[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +93,7 @@ public class ReinstateEnvResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Infos.", this.Infos);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

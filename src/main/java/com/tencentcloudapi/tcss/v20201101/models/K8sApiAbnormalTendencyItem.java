@@ -24,279 +24,302 @@ import java.util.HashMap;
 public class K8sApiAbnormalTendencyItem extends AbstractModel {
 
     /**
-    * 日期
+    * <p>日期</p>
     */
     @SerializedName("Date")
     @Expose
     private String Date;
 
     /**
-    * 异常UA请求事件数
+    * <p>异常UA请求事件数</p>
     */
     @SerializedName("ExceptionUARequestCount")
     @Expose
     private Long ExceptionUARequestCount;
 
     /**
-    * 匿名用户权限事件数
+    * <p>匿名用户权限事件数</p>
     */
     @SerializedName("AnonymousUserRightCount")
     @Expose
     private Long AnonymousUserRightCount;
 
     /**
-    * 凭据信息获取事件数
+    * <p>凭据信息获取事件数</p>
     */
     @SerializedName("CredentialInformationObtainCount")
     @Expose
     private Long CredentialInformationObtainCount;
 
     /**
-    * 敏感数据挂载事件数
+    * <p>敏感数据挂载事件数</p>
     */
     @SerializedName("SensitiveDataMountCount")
     @Expose
     private Long SensitiveDataMountCount;
 
     /**
-    * 命令执行事件数
+    * <p>命令执行事件数</p>
     */
     @SerializedName("CmdExecCount")
     @Expose
     private Long CmdExecCount;
 
     /**
-    * 异常定时任务事件数
+    * <p>异常定时任务事件数</p>
     */
     @SerializedName("AbnormalScheduledTaskCount")
     @Expose
     private Long AbnormalScheduledTaskCount;
 
     /**
-    * 静态Pod创建数
+    * <p>静态Pod创建数</p>
     */
     @SerializedName("StaticsPodCreateCount")
     @Expose
     private Long StaticsPodCreateCount;
 
     /**
-    * 可疑容器创建数
+    * <p>可疑容器创建数</p>
     */
     @SerializedName("DoubtfulContainerCreateCount")
     @Expose
     private Long DoubtfulContainerCreateCount;
 
     /**
-    * 自定义规则事件数
+    * <p>自定义规则事件数</p>
     */
     @SerializedName("UserDefinedRuleCount")
     @Expose
     private Long UserDefinedRuleCount;
 
     /**
-    * 匿名访问事件数
+    * <p>匿名访问事件数</p>
     */
     @SerializedName("AnonymousAccessCount")
     @Expose
     private Long AnonymousAccessCount;
 
     /**
-    * 特权容器事件数
+    * <p>特权容器事件数</p>
     */
     @SerializedName("PrivilegeContainerCount")
     @Expose
     private Long PrivilegeContainerCount;
 
     /**
-     * Get 日期 
-     * @return Date 日期
+    * <p>规则类型对应告警数量</p>
+    */
+    @SerializedName("RuleTypeCountSet")
+    @Expose
+    private K8SAPIRuleTypeCountItem [] RuleTypeCountSet;
+
+    /**
+     * Get <p>日期</p> 
+     * @return Date <p>日期</p>
      */
     public String getDate() {
         return this.Date;
     }
 
     /**
-     * Set 日期
-     * @param Date 日期
+     * Set <p>日期</p>
+     * @param Date <p>日期</p>
      */
     public void setDate(String Date) {
         this.Date = Date;
     }
 
     /**
-     * Get 异常UA请求事件数 
-     * @return ExceptionUARequestCount 异常UA请求事件数
+     * Get <p>异常UA请求事件数</p> 
+     * @return ExceptionUARequestCount <p>异常UA请求事件数</p>
      */
     public Long getExceptionUARequestCount() {
         return this.ExceptionUARequestCount;
     }
 
     /**
-     * Set 异常UA请求事件数
-     * @param ExceptionUARequestCount 异常UA请求事件数
+     * Set <p>异常UA请求事件数</p>
+     * @param ExceptionUARequestCount <p>异常UA请求事件数</p>
      */
     public void setExceptionUARequestCount(Long ExceptionUARequestCount) {
         this.ExceptionUARequestCount = ExceptionUARequestCount;
     }
 
     /**
-     * Get 匿名用户权限事件数 
-     * @return AnonymousUserRightCount 匿名用户权限事件数
+     * Get <p>匿名用户权限事件数</p> 
+     * @return AnonymousUserRightCount <p>匿名用户权限事件数</p>
      */
     public Long getAnonymousUserRightCount() {
         return this.AnonymousUserRightCount;
     }
 
     /**
-     * Set 匿名用户权限事件数
-     * @param AnonymousUserRightCount 匿名用户权限事件数
+     * Set <p>匿名用户权限事件数</p>
+     * @param AnonymousUserRightCount <p>匿名用户权限事件数</p>
      */
     public void setAnonymousUserRightCount(Long AnonymousUserRightCount) {
         this.AnonymousUserRightCount = AnonymousUserRightCount;
     }
 
     /**
-     * Get 凭据信息获取事件数 
-     * @return CredentialInformationObtainCount 凭据信息获取事件数
+     * Get <p>凭据信息获取事件数</p> 
+     * @return CredentialInformationObtainCount <p>凭据信息获取事件数</p>
      */
     public Long getCredentialInformationObtainCount() {
         return this.CredentialInformationObtainCount;
     }
 
     /**
-     * Set 凭据信息获取事件数
-     * @param CredentialInformationObtainCount 凭据信息获取事件数
+     * Set <p>凭据信息获取事件数</p>
+     * @param CredentialInformationObtainCount <p>凭据信息获取事件数</p>
      */
     public void setCredentialInformationObtainCount(Long CredentialInformationObtainCount) {
         this.CredentialInformationObtainCount = CredentialInformationObtainCount;
     }
 
     /**
-     * Get 敏感数据挂载事件数 
-     * @return SensitiveDataMountCount 敏感数据挂载事件数
+     * Get <p>敏感数据挂载事件数</p> 
+     * @return SensitiveDataMountCount <p>敏感数据挂载事件数</p>
      */
     public Long getSensitiveDataMountCount() {
         return this.SensitiveDataMountCount;
     }
 
     /**
-     * Set 敏感数据挂载事件数
-     * @param SensitiveDataMountCount 敏感数据挂载事件数
+     * Set <p>敏感数据挂载事件数</p>
+     * @param SensitiveDataMountCount <p>敏感数据挂载事件数</p>
      */
     public void setSensitiveDataMountCount(Long SensitiveDataMountCount) {
         this.SensitiveDataMountCount = SensitiveDataMountCount;
     }
 
     /**
-     * Get 命令执行事件数 
-     * @return CmdExecCount 命令执行事件数
+     * Get <p>命令执行事件数</p> 
+     * @return CmdExecCount <p>命令执行事件数</p>
      */
     public Long getCmdExecCount() {
         return this.CmdExecCount;
     }
 
     /**
-     * Set 命令执行事件数
-     * @param CmdExecCount 命令执行事件数
+     * Set <p>命令执行事件数</p>
+     * @param CmdExecCount <p>命令执行事件数</p>
      */
     public void setCmdExecCount(Long CmdExecCount) {
         this.CmdExecCount = CmdExecCount;
     }
 
     /**
-     * Get 异常定时任务事件数 
-     * @return AbnormalScheduledTaskCount 异常定时任务事件数
+     * Get <p>异常定时任务事件数</p> 
+     * @return AbnormalScheduledTaskCount <p>异常定时任务事件数</p>
      */
     public Long getAbnormalScheduledTaskCount() {
         return this.AbnormalScheduledTaskCount;
     }
 
     /**
-     * Set 异常定时任务事件数
-     * @param AbnormalScheduledTaskCount 异常定时任务事件数
+     * Set <p>异常定时任务事件数</p>
+     * @param AbnormalScheduledTaskCount <p>异常定时任务事件数</p>
      */
     public void setAbnormalScheduledTaskCount(Long AbnormalScheduledTaskCount) {
         this.AbnormalScheduledTaskCount = AbnormalScheduledTaskCount;
     }
 
     /**
-     * Get 静态Pod创建数 
-     * @return StaticsPodCreateCount 静态Pod创建数
+     * Get <p>静态Pod创建数</p> 
+     * @return StaticsPodCreateCount <p>静态Pod创建数</p>
      */
     public Long getStaticsPodCreateCount() {
         return this.StaticsPodCreateCount;
     }
 
     /**
-     * Set 静态Pod创建数
-     * @param StaticsPodCreateCount 静态Pod创建数
+     * Set <p>静态Pod创建数</p>
+     * @param StaticsPodCreateCount <p>静态Pod创建数</p>
      */
     public void setStaticsPodCreateCount(Long StaticsPodCreateCount) {
         this.StaticsPodCreateCount = StaticsPodCreateCount;
     }
 
     /**
-     * Get 可疑容器创建数 
-     * @return DoubtfulContainerCreateCount 可疑容器创建数
+     * Get <p>可疑容器创建数</p> 
+     * @return DoubtfulContainerCreateCount <p>可疑容器创建数</p>
      */
     public Long getDoubtfulContainerCreateCount() {
         return this.DoubtfulContainerCreateCount;
     }
 
     /**
-     * Set 可疑容器创建数
-     * @param DoubtfulContainerCreateCount 可疑容器创建数
+     * Set <p>可疑容器创建数</p>
+     * @param DoubtfulContainerCreateCount <p>可疑容器创建数</p>
      */
     public void setDoubtfulContainerCreateCount(Long DoubtfulContainerCreateCount) {
         this.DoubtfulContainerCreateCount = DoubtfulContainerCreateCount;
     }
 
     /**
-     * Get 自定义规则事件数 
-     * @return UserDefinedRuleCount 自定义规则事件数
+     * Get <p>自定义规则事件数</p> 
+     * @return UserDefinedRuleCount <p>自定义规则事件数</p>
      */
     public Long getUserDefinedRuleCount() {
         return this.UserDefinedRuleCount;
     }
 
     /**
-     * Set 自定义规则事件数
-     * @param UserDefinedRuleCount 自定义规则事件数
+     * Set <p>自定义规则事件数</p>
+     * @param UserDefinedRuleCount <p>自定义规则事件数</p>
      */
     public void setUserDefinedRuleCount(Long UserDefinedRuleCount) {
         this.UserDefinedRuleCount = UserDefinedRuleCount;
     }
 
     /**
-     * Get 匿名访问事件数 
-     * @return AnonymousAccessCount 匿名访问事件数
+     * Get <p>匿名访问事件数</p> 
+     * @return AnonymousAccessCount <p>匿名访问事件数</p>
      */
     public Long getAnonymousAccessCount() {
         return this.AnonymousAccessCount;
     }
 
     /**
-     * Set 匿名访问事件数
-     * @param AnonymousAccessCount 匿名访问事件数
+     * Set <p>匿名访问事件数</p>
+     * @param AnonymousAccessCount <p>匿名访问事件数</p>
      */
     public void setAnonymousAccessCount(Long AnonymousAccessCount) {
         this.AnonymousAccessCount = AnonymousAccessCount;
     }
 
     /**
-     * Get 特权容器事件数 
-     * @return PrivilegeContainerCount 特权容器事件数
+     * Get <p>特权容器事件数</p> 
+     * @return PrivilegeContainerCount <p>特权容器事件数</p>
      */
     public Long getPrivilegeContainerCount() {
         return this.PrivilegeContainerCount;
     }
 
     /**
-     * Set 特权容器事件数
-     * @param PrivilegeContainerCount 特权容器事件数
+     * Set <p>特权容器事件数</p>
+     * @param PrivilegeContainerCount <p>特权容器事件数</p>
      */
     public void setPrivilegeContainerCount(Long PrivilegeContainerCount) {
         this.PrivilegeContainerCount = PrivilegeContainerCount;
+    }
+
+    /**
+     * Get <p>规则类型对应告警数量</p> 
+     * @return RuleTypeCountSet <p>规则类型对应告警数量</p>
+     */
+    public K8SAPIRuleTypeCountItem [] getRuleTypeCountSet() {
+        return this.RuleTypeCountSet;
+    }
+
+    /**
+     * Set <p>规则类型对应告警数量</p>
+     * @param RuleTypeCountSet <p>规则类型对应告警数量</p>
+     */
+    public void setRuleTypeCountSet(K8SAPIRuleTypeCountItem [] RuleTypeCountSet) {
+        this.RuleTypeCountSet = RuleTypeCountSet;
     }
 
     public K8sApiAbnormalTendencyItem() {
@@ -343,6 +366,12 @@ public class K8sApiAbnormalTendencyItem extends AbstractModel {
         if (source.PrivilegeContainerCount != null) {
             this.PrivilegeContainerCount = new Long(source.PrivilegeContainerCount);
         }
+        if (source.RuleTypeCountSet != null) {
+            this.RuleTypeCountSet = new K8SAPIRuleTypeCountItem[source.RuleTypeCountSet.length];
+            for (int i = 0; i < source.RuleTypeCountSet.length; i++) {
+                this.RuleTypeCountSet[i] = new K8SAPIRuleTypeCountItem(source.RuleTypeCountSet[i]);
+            }
+        }
     }
 
 
@@ -362,6 +391,7 @@ public class K8sApiAbnormalTendencyItem extends AbstractModel {
         this.setParamSimple(map, prefix + "UserDefinedRuleCount", this.UserDefinedRuleCount);
         this.setParamSimple(map, prefix + "AnonymousAccessCount", this.AnonymousAccessCount);
         this.setParamSimple(map, prefix + "PrivilegeContainerCount", this.PrivilegeContainerCount);
+        this.setParamArrayObj(map, prefix + "RuleTypeCountSet.", this.RuleTypeCountSet);
 
     }
 }

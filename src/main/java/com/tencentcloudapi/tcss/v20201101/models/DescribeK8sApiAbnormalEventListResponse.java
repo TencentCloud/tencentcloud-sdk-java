@@ -24,18 +24,25 @@ import java.util.HashMap;
 public class DescribeK8sApiAbnormalEventListResponse extends AbstractModel {
 
     /**
-    * 事件列表
+    * <p>事件列表</p>
     */
     @SerializedName("List")
     @Expose
     private K8sApiAbnormalEventListItem [] List;
 
     /**
-    * 总数量
+    * <p>总数量</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
+
+    /**
+    * <p>k8s告警类型和对应中文翻译</p>
+    */
+    @SerializedName("RuleTypeZhSet")
+    @Expose
+    private K8SAPIRuleTypeZhItem [] RuleTypeZhSet;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +52,51 @@ public class DescribeK8sApiAbnormalEventListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 事件列表 
-     * @return List 事件列表
+     * Get <p>事件列表</p> 
+     * @return List <p>事件列表</p>
      */
     public K8sApiAbnormalEventListItem [] getList() {
         return this.List;
     }
 
     /**
-     * Set 事件列表
-     * @param List 事件列表
+     * Set <p>事件列表</p>
+     * @param List <p>事件列表</p>
      */
     public void setList(K8sApiAbnormalEventListItem [] List) {
         this.List = List;
     }
 
     /**
-     * Get 总数量 
-     * @return TotalCount 总数量
+     * Get <p>总数量</p> 
+     * @return TotalCount <p>总数量</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 总数量
-     * @param TotalCount 总数量
+     * Set <p>总数量</p>
+     * @param TotalCount <p>总数量</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get <p>k8s告警类型和对应中文翻译</p> 
+     * @return RuleTypeZhSet <p>k8s告警类型和对应中文翻译</p>
+     */
+    public K8SAPIRuleTypeZhItem [] getRuleTypeZhSet() {
+        return this.RuleTypeZhSet;
+    }
+
+    /**
+     * Set <p>k8s告警类型和对应中文翻译</p>
+     * @param RuleTypeZhSet <p>k8s告警类型和对应中文翻译</p>
+     */
+    public void setRuleTypeZhSet(K8SAPIRuleTypeZhItem [] RuleTypeZhSet) {
+        this.RuleTypeZhSet = RuleTypeZhSet;
     }
 
     /**
@@ -109,6 +132,12 @@ public class DescribeK8sApiAbnormalEventListResponse extends AbstractModel {
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
+        if (source.RuleTypeZhSet != null) {
+            this.RuleTypeZhSet = new K8SAPIRuleTypeZhItem[source.RuleTypeZhSet.length];
+            for (int i = 0; i < source.RuleTypeZhSet.length; i++) {
+                this.RuleTypeZhSet[i] = new K8SAPIRuleTypeZhItem(source.RuleTypeZhSet[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -121,6 +150,7 @@ public class DescribeK8sApiAbnormalEventListResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "List.", this.List);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "RuleTypeZhSet.", this.RuleTypeZhSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ScaleOutInstanceResponse extends AbstractModel {
 
     /**
-    * 实例ID。
+    * <p>实例ID。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 订单号。
+    * <p>订单号。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DealNames")
@@ -39,28 +39,28 @@ public class ScaleOutInstanceResponse extends AbstractModel {
     private String [] DealNames;
 
     /**
-    * 客户端Token。
+    * <p>客户端Token。</p>
     */
     @SerializedName("ClientToken")
     @Expose
     private String ClientToken;
 
     /**
-    * 扩容流程ID。
+    * <p>扩容流程ID。</p>
     */
     @SerializedName("FlowId")
     @Expose
     private Long FlowId;
 
     /**
-    * 大订单号。
+    * <p>大订单号。</p>
     */
     @SerializedName("BillId")
     @Expose
     private String BillId;
 
     /**
-    * 扩容TraceId
+    * <p>扩容TraceId</p>
     */
     @SerializedName("TraceId")
     @Expose
@@ -74,25 +74,25 @@ public class ScaleOutInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实例ID。 
-     * @return InstanceId 实例ID。
+     * Get <p>实例ID。</p> 
+     * @return InstanceId <p>实例ID。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID。
-     * @param InstanceId 实例ID。
+     * Set <p>实例ID。</p>
+     * @param InstanceId <p>实例ID。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 订单号。
+     * Get <p>订单号。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DealNames 订单号。
+     * @return DealNames <p>订单号。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDealNames() {
@@ -100,9 +100,9 @@ public class ScaleOutInstanceResponse extends AbstractModel {
     }
 
     /**
-     * Set 订单号。
+     * Set <p>订单号。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DealNames 订单号。
+     * @param DealNames <p>订单号。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDealNames(String [] DealNames) {
@@ -110,64 +110,64 @@ public class ScaleOutInstanceResponse extends AbstractModel {
     }
 
     /**
-     * Get 客户端Token。 
-     * @return ClientToken 客户端Token。
+     * Get <p>客户端Token。</p> 
+     * @return ClientToken <p>客户端Token。</p>
      */
     public String getClientToken() {
         return this.ClientToken;
     }
 
     /**
-     * Set 客户端Token。
-     * @param ClientToken 客户端Token。
+     * Set <p>客户端Token。</p>
+     * @param ClientToken <p>客户端Token。</p>
      */
     public void setClientToken(String ClientToken) {
         this.ClientToken = ClientToken;
     }
 
     /**
-     * Get 扩容流程ID。 
-     * @return FlowId 扩容流程ID。
+     * Get <p>扩容流程ID。</p> 
+     * @return FlowId <p>扩容流程ID。</p>
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 扩容流程ID。
-     * @param FlowId 扩容流程ID。
+     * Set <p>扩容流程ID。</p>
+     * @param FlowId <p>扩容流程ID。</p>
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get 大订单号。 
-     * @return BillId 大订单号。
+     * Get <p>大订单号。</p> 
+     * @return BillId <p>大订单号。</p>
      */
     public String getBillId() {
         return this.BillId;
     }
 
     /**
-     * Set 大订单号。
-     * @param BillId 大订单号。
+     * Set <p>大订单号。</p>
+     * @param BillId <p>大订单号。</p>
      */
     public void setBillId(String BillId) {
         this.BillId = BillId;
     }
 
     /**
-     * Get 扩容TraceId 
-     * @return TraceId 扩容TraceId
+     * Get <p>扩容TraceId</p> 
+     * @return TraceId <p>扩容TraceId</p>
      */
     public String getTraceId() {
         return this.TraceId;
     }
 
     /**
-     * Set 扩容TraceId
-     * @param TraceId 扩容TraceId
+     * Set <p>扩容TraceId</p>
+     * @param TraceId <p>扩容TraceId</p>
      */
     public void setTraceId(String TraceId) {
         this.TraceId = TraceId;

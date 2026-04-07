@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class NoticeContentTmplItem extends AbstractModel {
 
     /**
-    * 官网通知渠道配置
+    * <p>官网通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QCloudYehe")
@@ -32,7 +32,7 @@ public class NoticeContentTmplItem extends AbstractModel {
     private QCloudYeheNoticeTmplMatcher [] QCloudYehe;
 
     /**
-    * 企业微信机器人通知渠道配置
+    * <p>企业微信机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WeWorkRobot")
@@ -40,7 +40,7 @@ public class NoticeContentTmplItem extends AbstractModel {
     private WeWorkRobotNoticeTmplMatcher [] WeWorkRobot;
 
     /**
-    * 钉钉机器人通知渠道配置
+    * <p>钉钉机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DingDingRobot")
@@ -48,7 +48,7 @@ public class NoticeContentTmplItem extends AbstractModel {
     private DingDingRobotNoticeTmplMatcher [] DingDingRobot;
 
     /**
-    * 飞书机器人通知渠道配置
+    * <p>飞书机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FeiShuRobot")
@@ -56,7 +56,7 @@ public class NoticeContentTmplItem extends AbstractModel {
     private FeiShuRobotNoticeTmplMatcher [] FeiShuRobot;
 
     /**
-    * 自定义Webhook通知渠道配置
+    * <p>自定义Webhook通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Webhook")
@@ -64,7 +64,7 @@ public class NoticeContentTmplItem extends AbstractModel {
     private WebhookNoticeTmplMatcher [] Webhook;
 
     /**
-    * Teams机器人通知渠道配置
+    * <p>Teams机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TeamsRobot")
@@ -72,7 +72,7 @@ public class NoticeContentTmplItem extends AbstractModel {
     private TeamsRobotNoticeTmplMatcher [] TeamsRobot;
 
     /**
-    * PagerDutyRobot机器人通知渠道配置
+    * <p>PagerDutyRobot机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PagerDutyRobot")
@@ -80,16 +80,23 @@ public class NoticeContentTmplItem extends AbstractModel {
     private PagerDutyRobotNoticeTmplMatcher [] PagerDutyRobot;
 
     /**
-    * GoogleChat
+    * <p>GoogleChat</p>
     */
     @SerializedName("GoogleChatRobot")
     @Expose
     private GoogleChatRobotNoticeTmplMatcher [] GoogleChatRobot;
 
     /**
-     * Get 官网通知渠道配置
+    * <p>Slack</p>
+    */
+    @SerializedName("SlackRobot")
+    @Expose
+    private SlackRobotNoticeTmplMatcher [] SlackRobot;
+
+    /**
+     * Get <p>官网通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return QCloudYehe 官网通知渠道配置
+     * @return QCloudYehe <p>官网通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public QCloudYeheNoticeTmplMatcher [] getQCloudYehe() {
@@ -97,9 +104,9 @@ public class NoticeContentTmplItem extends AbstractModel {
     }
 
     /**
-     * Set 官网通知渠道配置
+     * Set <p>官网通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param QCloudYehe 官网通知渠道配置
+     * @param QCloudYehe <p>官网通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQCloudYehe(QCloudYeheNoticeTmplMatcher [] QCloudYehe) {
@@ -107,9 +114,9 @@ public class NoticeContentTmplItem extends AbstractModel {
     }
 
     /**
-     * Get 企业微信机器人通知渠道配置
+     * Get <p>企业微信机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WeWorkRobot 企业微信机器人通知渠道配置
+     * @return WeWorkRobot <p>企业微信机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public WeWorkRobotNoticeTmplMatcher [] getWeWorkRobot() {
@@ -117,9 +124,9 @@ public class NoticeContentTmplItem extends AbstractModel {
     }
 
     /**
-     * Set 企业微信机器人通知渠道配置
+     * Set <p>企业微信机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WeWorkRobot 企业微信机器人通知渠道配置
+     * @param WeWorkRobot <p>企业微信机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWeWorkRobot(WeWorkRobotNoticeTmplMatcher [] WeWorkRobot) {
@@ -127,9 +134,9 @@ public class NoticeContentTmplItem extends AbstractModel {
     }
 
     /**
-     * Get 钉钉机器人通知渠道配置
+     * Get <p>钉钉机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DingDingRobot 钉钉机器人通知渠道配置
+     * @return DingDingRobot <p>钉钉机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DingDingRobotNoticeTmplMatcher [] getDingDingRobot() {
@@ -137,9 +144,9 @@ public class NoticeContentTmplItem extends AbstractModel {
     }
 
     /**
-     * Set 钉钉机器人通知渠道配置
+     * Set <p>钉钉机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DingDingRobot 钉钉机器人通知渠道配置
+     * @param DingDingRobot <p>钉钉机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDingDingRobot(DingDingRobotNoticeTmplMatcher [] DingDingRobot) {
@@ -147,9 +154,9 @@ public class NoticeContentTmplItem extends AbstractModel {
     }
 
     /**
-     * Get 飞书机器人通知渠道配置
+     * Get <p>飞书机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FeiShuRobot 飞书机器人通知渠道配置
+     * @return FeiShuRobot <p>飞书机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public FeiShuRobotNoticeTmplMatcher [] getFeiShuRobot() {
@@ -157,9 +164,9 @@ public class NoticeContentTmplItem extends AbstractModel {
     }
 
     /**
-     * Set 飞书机器人通知渠道配置
+     * Set <p>飞书机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FeiShuRobot 飞书机器人通知渠道配置
+     * @param FeiShuRobot <p>飞书机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFeiShuRobot(FeiShuRobotNoticeTmplMatcher [] FeiShuRobot) {
@@ -167,9 +174,9 @@ public class NoticeContentTmplItem extends AbstractModel {
     }
 
     /**
-     * Get 自定义Webhook通知渠道配置
+     * Get <p>自定义Webhook通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Webhook 自定义Webhook通知渠道配置
+     * @return Webhook <p>自定义Webhook通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public WebhookNoticeTmplMatcher [] getWebhook() {
@@ -177,9 +184,9 @@ public class NoticeContentTmplItem extends AbstractModel {
     }
 
     /**
-     * Set 自定义Webhook通知渠道配置
+     * Set <p>自定义Webhook通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Webhook 自定义Webhook通知渠道配置
+     * @param Webhook <p>自定义Webhook通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWebhook(WebhookNoticeTmplMatcher [] Webhook) {
@@ -187,9 +194,9 @@ public class NoticeContentTmplItem extends AbstractModel {
     }
 
     /**
-     * Get Teams机器人通知渠道配置
+     * Get <p>Teams机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TeamsRobot Teams机器人通知渠道配置
+     * @return TeamsRobot <p>Teams机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TeamsRobotNoticeTmplMatcher [] getTeamsRobot() {
@@ -197,9 +204,9 @@ public class NoticeContentTmplItem extends AbstractModel {
     }
 
     /**
-     * Set Teams机器人通知渠道配置
+     * Set <p>Teams机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TeamsRobot Teams机器人通知渠道配置
+     * @param TeamsRobot <p>Teams机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTeamsRobot(TeamsRobotNoticeTmplMatcher [] TeamsRobot) {
@@ -207,9 +214,9 @@ public class NoticeContentTmplItem extends AbstractModel {
     }
 
     /**
-     * Get PagerDutyRobot机器人通知渠道配置
+     * Get <p>PagerDutyRobot机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PagerDutyRobot PagerDutyRobot机器人通知渠道配置
+     * @return PagerDutyRobot <p>PagerDutyRobot机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PagerDutyRobotNoticeTmplMatcher [] getPagerDutyRobot() {
@@ -217,9 +224,9 @@ public class NoticeContentTmplItem extends AbstractModel {
     }
 
     /**
-     * Set PagerDutyRobot机器人通知渠道配置
+     * Set <p>PagerDutyRobot机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PagerDutyRobot PagerDutyRobot机器人通知渠道配置
+     * @param PagerDutyRobot <p>PagerDutyRobot机器人通知渠道配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPagerDutyRobot(PagerDutyRobotNoticeTmplMatcher [] PagerDutyRobot) {
@@ -227,19 +234,35 @@ public class NoticeContentTmplItem extends AbstractModel {
     }
 
     /**
-     * Get GoogleChat 
-     * @return GoogleChatRobot GoogleChat
+     * Get <p>GoogleChat</p> 
+     * @return GoogleChatRobot <p>GoogleChat</p>
      */
     public GoogleChatRobotNoticeTmplMatcher [] getGoogleChatRobot() {
         return this.GoogleChatRobot;
     }
 
     /**
-     * Set GoogleChat
-     * @param GoogleChatRobot GoogleChat
+     * Set <p>GoogleChat</p>
+     * @param GoogleChatRobot <p>GoogleChat</p>
      */
     public void setGoogleChatRobot(GoogleChatRobotNoticeTmplMatcher [] GoogleChatRobot) {
         this.GoogleChatRobot = GoogleChatRobot;
+    }
+
+    /**
+     * Get <p>Slack</p> 
+     * @return SlackRobot <p>Slack</p>
+     */
+    public SlackRobotNoticeTmplMatcher [] getSlackRobot() {
+        return this.SlackRobot;
+    }
+
+    /**
+     * Set <p>Slack</p>
+     * @param SlackRobot <p>Slack</p>
+     */
+    public void setSlackRobot(SlackRobotNoticeTmplMatcher [] SlackRobot) {
+        this.SlackRobot = SlackRobot;
     }
 
     public NoticeContentTmplItem() {
@@ -298,6 +321,12 @@ public class NoticeContentTmplItem extends AbstractModel {
                 this.GoogleChatRobot[i] = new GoogleChatRobotNoticeTmplMatcher(source.GoogleChatRobot[i]);
             }
         }
+        if (source.SlackRobot != null) {
+            this.SlackRobot = new SlackRobotNoticeTmplMatcher[source.SlackRobot.length];
+            for (int i = 0; i < source.SlackRobot.length; i++) {
+                this.SlackRobot[i] = new SlackRobotNoticeTmplMatcher(source.SlackRobot[i]);
+            }
+        }
     }
 
 
@@ -313,6 +342,7 @@ public class NoticeContentTmplItem extends AbstractModel {
         this.setParamArrayObj(map, prefix + "TeamsRobot.", this.TeamsRobot);
         this.setParamArrayObj(map, prefix + "PagerDutyRobot.", this.PagerDutyRobot);
         this.setParamArrayObj(map, prefix + "GoogleChatRobot.", this.GoogleChatRobot);
+        this.setParamArrayObj(map, prefix + "SlackRobot.", this.SlackRobot);
 
     }
 }

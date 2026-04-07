@@ -1,0 +1,214 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.mps.v20190612.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class DescribeStreamPackageLinearAssemblyProgramsResponse extends AbstractModel {
+
+    /**
+    * Program列表。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Infos")
+    @Expose
+    private LinearAssemblyProgramInfo [] Infos;
+
+    /**
+    * 页数。
+    */
+    @SerializedName("PageNum")
+    @Expose
+    private Long PageNum;
+
+    /**
+    * 每页大小。
+    */
+    @SerializedName("PageSize")
+    @Expose
+    private Long PageSize;
+
+    /**
+    * 总数量。
+    */
+    @SerializedName("TotalNum")
+    @Expose
+    private Long TotalNum;
+
+    /**
+    * 总页数。
+    */
+    @SerializedName("TotalPage")
+    @Expose
+    private Long TotalPage;
+
+    /**
+    * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+    */
+    @SerializedName("RequestId")
+    @Expose
+    private String RequestId;
+
+    /**
+     * Get Program列表。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Infos Program列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public LinearAssemblyProgramInfo [] getInfos() {
+        return this.Infos;
+    }
+
+    /**
+     * Set Program列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Infos Program列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInfos(LinearAssemblyProgramInfo [] Infos) {
+        this.Infos = Infos;
+    }
+
+    /**
+     * Get 页数。 
+     * @return PageNum 页数。
+     */
+    public Long getPageNum() {
+        return this.PageNum;
+    }
+
+    /**
+     * Set 页数。
+     * @param PageNum 页数。
+     */
+    public void setPageNum(Long PageNum) {
+        this.PageNum = PageNum;
+    }
+
+    /**
+     * Get 每页大小。 
+     * @return PageSize 每页大小。
+     */
+    public Long getPageSize() {
+        return this.PageSize;
+    }
+
+    /**
+     * Set 每页大小。
+     * @param PageSize 每页大小。
+     */
+    public void setPageSize(Long PageSize) {
+        this.PageSize = PageSize;
+    }
+
+    /**
+     * Get 总数量。 
+     * @return TotalNum 总数量。
+     */
+    public Long getTotalNum() {
+        return this.TotalNum;
+    }
+
+    /**
+     * Set 总数量。
+     * @param TotalNum 总数量。
+     */
+    public void setTotalNum(Long TotalNum) {
+        this.TotalNum = TotalNum;
+    }
+
+    /**
+     * Get 总页数。 
+     * @return TotalPage 总页数。
+     */
+    public Long getTotalPage() {
+        return this.TotalPage;
+    }
+
+    /**
+     * Set 总页数。
+     * @param TotalPage 总页数。
+     */
+    public void setTotalPage(Long TotalPage) {
+        this.TotalPage = TotalPage;
+    }
+
+    /**
+     * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+     */
+    public String getRequestId() {
+        return this.RequestId;
+    }
+
+    /**
+     * Set 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+     */
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
+    }
+
+    public DescribeStreamPackageLinearAssemblyProgramsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeStreamPackageLinearAssemblyProgramsResponse(DescribeStreamPackageLinearAssemblyProgramsResponse source) {
+        if (source.Infos != null) {
+            this.Infos = new LinearAssemblyProgramInfo[source.Infos.length];
+            for (int i = 0; i < source.Infos.length; i++) {
+                this.Infos[i] = new LinearAssemblyProgramInfo(source.Infos[i]);
+            }
+        }
+        if (source.PageNum != null) {
+            this.PageNum = new Long(source.PageNum);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
+        if (source.TotalNum != null) {
+            this.TotalNum = new Long(source.TotalNum);
+        }
+        if (source.TotalPage != null) {
+            this.TotalPage = new Long(source.TotalPage);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Infos.", this.Infos);
+        this.setParamSimple(map, prefix + "PageNum", this.PageNum);
+        this.setParamSimple(map, prefix + "PageSize", this.PageSize);
+        this.setParamSimple(map, prefix + "TotalNum", this.TotalNum);
+        this.setParamSimple(map, prefix + "TotalPage", this.TotalPage);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+
+    }
+}
+

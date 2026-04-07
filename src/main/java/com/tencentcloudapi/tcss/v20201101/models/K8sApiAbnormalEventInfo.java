@@ -24,465 +24,486 @@ import java.util.HashMap;
 public class K8sApiAbnormalEventInfo extends AbstractModel {
 
     /**
-    * 命中规则名称
+    * <p>命中规则名称</p>
     */
     @SerializedName("MatchRuleName")
     @Expose
     private String MatchRuleName;
 
     /**
-    * 命中规则类型
+    * <p>命中规则类型</p>
     */
     @SerializedName("MatchRuleType")
     @Expose
     private String MatchRuleType;
 
     /**
-    * 告警等级
+    * <p>告警等级</p>
     */
     @SerializedName("RiskLevel")
     @Expose
     private String RiskLevel;
 
     /**
-    * 集群ID
+    * <p>集群ID</p>
     */
     @SerializedName("ClusterID")
     @Expose
     private String ClusterID;
 
     /**
-    * 集群名称
+    * <p>集群名称</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * 集群运行状态，CSR_RUNNING-运行中，CSR_EXCEPTION-异常，CSR_CREATING-创建中
+    * <p>集群运行状态，CSR_RUNNING-运行中，CSR_EXCEPTION-异常，CSR_CREATING-创建中</p>
     */
     @SerializedName("ClusterRunningStatus")
     @Expose
     private String ClusterRunningStatus;
 
     /**
-    * 初次生成时间
+    * <p>初次生成时间</p>
     */
     @SerializedName("FirstCreateTime")
     @Expose
     private String FirstCreateTime;
 
     /**
-    * 最近一次生成时间
+    * <p>最近一次生成时间</p>
     */
     @SerializedName("LastCreateTime")
     @Expose
     private String LastCreateTime;
 
     /**
-    * 告警数量
+    * <p>告警数量</p>
     */
     @SerializedName("AlarmCount")
     @Expose
     private Long AlarmCount;
 
     /**
-    * 状态
-"EVENT_UNDEAL":未处理
-"EVENT_DEALED": 已处理
-"EVENT_IGNORE": 忽略
-"EVENT_DEL": 删除
-"EVENT_ADD_WHITE": 加白
+    * <p>状态<br>&quot;EVENT_UNDEAL&quot;:未处理<br>&quot;EVENT_DEALED&quot;: 已处理<br>&quot;EVENT_IGNORE&quot;: 忽略<br>&quot;EVENT_DEL&quot;: 删除<br>&quot;EVENT_ADD_WHITE&quot;: 加白</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 集群masterIP
+    * <p>集群masterIP</p>
     */
     @SerializedName("ClusterMasterIP")
     @Expose
     private String ClusterMasterIP;
 
     /**
-    * k8s版本
+    * <p>k8s版本</p>
     */
     @SerializedName("K8sVersion")
     @Expose
     private String K8sVersion;
 
     /**
-    * 运行时组件
+    * <p>运行时组件</p>
     */
     @SerializedName("RunningComponent")
     @Expose
     private String [] RunningComponent;
 
     /**
-    * 描述
+    * <p>描述</p>
     */
     @SerializedName("Desc")
     @Expose
     private String Desc;
 
     /**
-    * 建议
+    * <p>建议</p>
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-    * 请求信息
+    * <p>请求信息</p>
     */
     @SerializedName("Info")
     @Expose
     private String Info;
 
     /**
-    * 规则ID
+    * <p>规则ID</p>
     */
     @SerializedName("MatchRuleID")
     @Expose
     private String MatchRuleID;
 
     /**
-    * 高亮字段数组
+    * <p>高亮字段数组</p>
     */
     @SerializedName("HighLightFields")
     @Expose
     private String [] HighLightFields;
 
     /**
-    * 命中规则
+    * <p>命中规则</p>
     */
     @SerializedName("MatchRule")
     @Expose
     private K8sApiAbnormalRuleScopeInfo MatchRule;
 
     /**
-     * Get 命中规则名称 
-     * @return MatchRuleName 命中规则名称
+    * <p>高亮字段对应的命中规则内容(JSON字符串, 如: {&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;})</p><p>参数格式：{&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;}</p>
+    */
+    @SerializedName("HighLightFieldsVal")
+    @Expose
+    private String HighLightFieldsVal;
+
+    /**
+    * <p>规则中文</p>
+    */
+    @SerializedName("RuleTypeZH")
+    @Expose
+    private String RuleTypeZH;
+
+    /**
+     * Get <p>命中规则名称</p> 
+     * @return MatchRuleName <p>命中规则名称</p>
      */
     public String getMatchRuleName() {
         return this.MatchRuleName;
     }
 
     /**
-     * Set 命中规则名称
-     * @param MatchRuleName 命中规则名称
+     * Set <p>命中规则名称</p>
+     * @param MatchRuleName <p>命中规则名称</p>
      */
     public void setMatchRuleName(String MatchRuleName) {
         this.MatchRuleName = MatchRuleName;
     }
 
     /**
-     * Get 命中规则类型 
-     * @return MatchRuleType 命中规则类型
+     * Get <p>命中规则类型</p> 
+     * @return MatchRuleType <p>命中规则类型</p>
      */
     public String getMatchRuleType() {
         return this.MatchRuleType;
     }
 
     /**
-     * Set 命中规则类型
-     * @param MatchRuleType 命中规则类型
+     * Set <p>命中规则类型</p>
+     * @param MatchRuleType <p>命中规则类型</p>
      */
     public void setMatchRuleType(String MatchRuleType) {
         this.MatchRuleType = MatchRuleType;
     }
 
     /**
-     * Get 告警等级 
-     * @return RiskLevel 告警等级
+     * Get <p>告警等级</p> 
+     * @return RiskLevel <p>告警等级</p>
      */
     public String getRiskLevel() {
         return this.RiskLevel;
     }
 
     /**
-     * Set 告警等级
-     * @param RiskLevel 告警等级
+     * Set <p>告警等级</p>
+     * @param RiskLevel <p>告警等级</p>
      */
     public void setRiskLevel(String RiskLevel) {
         this.RiskLevel = RiskLevel;
     }
 
     /**
-     * Get 集群ID 
-     * @return ClusterID 集群ID
+     * Get <p>集群ID</p> 
+     * @return ClusterID <p>集群ID</p>
      */
     public String getClusterID() {
         return this.ClusterID;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterID 集群ID
+     * Set <p>集群ID</p>
+     * @param ClusterID <p>集群ID</p>
      */
     public void setClusterID(String ClusterID) {
         this.ClusterID = ClusterID;
     }
 
     /**
-     * Get 集群名称 
-     * @return ClusterName 集群名称
+     * Get <p>集群名称</p> 
+     * @return ClusterName <p>集群名称</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set 集群名称
-     * @param ClusterName 集群名称
+     * Set <p>集群名称</p>
+     * @param ClusterName <p>集群名称</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 集群运行状态，CSR_RUNNING-运行中，CSR_EXCEPTION-异常，CSR_CREATING-创建中 
-     * @return ClusterRunningStatus 集群运行状态，CSR_RUNNING-运行中，CSR_EXCEPTION-异常，CSR_CREATING-创建中
+     * Get <p>集群运行状态，CSR_RUNNING-运行中，CSR_EXCEPTION-异常，CSR_CREATING-创建中</p> 
+     * @return ClusterRunningStatus <p>集群运行状态，CSR_RUNNING-运行中，CSR_EXCEPTION-异常，CSR_CREATING-创建中</p>
      */
     public String getClusterRunningStatus() {
         return this.ClusterRunningStatus;
     }
 
     /**
-     * Set 集群运行状态，CSR_RUNNING-运行中，CSR_EXCEPTION-异常，CSR_CREATING-创建中
-     * @param ClusterRunningStatus 集群运行状态，CSR_RUNNING-运行中，CSR_EXCEPTION-异常，CSR_CREATING-创建中
+     * Set <p>集群运行状态，CSR_RUNNING-运行中，CSR_EXCEPTION-异常，CSR_CREATING-创建中</p>
+     * @param ClusterRunningStatus <p>集群运行状态，CSR_RUNNING-运行中，CSR_EXCEPTION-异常，CSR_CREATING-创建中</p>
      */
     public void setClusterRunningStatus(String ClusterRunningStatus) {
         this.ClusterRunningStatus = ClusterRunningStatus;
     }
 
     /**
-     * Get 初次生成时间 
-     * @return FirstCreateTime 初次生成时间
+     * Get <p>初次生成时间</p> 
+     * @return FirstCreateTime <p>初次生成时间</p>
      */
     public String getFirstCreateTime() {
         return this.FirstCreateTime;
     }
 
     /**
-     * Set 初次生成时间
-     * @param FirstCreateTime 初次生成时间
+     * Set <p>初次生成时间</p>
+     * @param FirstCreateTime <p>初次生成时间</p>
      */
     public void setFirstCreateTime(String FirstCreateTime) {
         this.FirstCreateTime = FirstCreateTime;
     }
 
     /**
-     * Get 最近一次生成时间 
-     * @return LastCreateTime 最近一次生成时间
+     * Get <p>最近一次生成时间</p> 
+     * @return LastCreateTime <p>最近一次生成时间</p>
      */
     public String getLastCreateTime() {
         return this.LastCreateTime;
     }
 
     /**
-     * Set 最近一次生成时间
-     * @param LastCreateTime 最近一次生成时间
+     * Set <p>最近一次生成时间</p>
+     * @param LastCreateTime <p>最近一次生成时间</p>
      */
     public void setLastCreateTime(String LastCreateTime) {
         this.LastCreateTime = LastCreateTime;
     }
 
     /**
-     * Get 告警数量 
-     * @return AlarmCount 告警数量
+     * Get <p>告警数量</p> 
+     * @return AlarmCount <p>告警数量</p>
      */
     public Long getAlarmCount() {
         return this.AlarmCount;
     }
 
     /**
-     * Set 告警数量
-     * @param AlarmCount 告警数量
+     * Set <p>告警数量</p>
+     * @param AlarmCount <p>告警数量</p>
      */
     public void setAlarmCount(Long AlarmCount) {
         this.AlarmCount = AlarmCount;
     }
 
     /**
-     * Get 状态
-"EVENT_UNDEAL":未处理
-"EVENT_DEALED": 已处理
-"EVENT_IGNORE": 忽略
-"EVENT_DEL": 删除
-"EVENT_ADD_WHITE": 加白 
-     * @return Status 状态
-"EVENT_UNDEAL":未处理
-"EVENT_DEALED": 已处理
-"EVENT_IGNORE": 忽略
-"EVENT_DEL": 删除
-"EVENT_ADD_WHITE": 加白
+     * Get <p>状态<br>&quot;EVENT_UNDEAL&quot;:未处理<br>&quot;EVENT_DEALED&quot;: 已处理<br>&quot;EVENT_IGNORE&quot;: 忽略<br>&quot;EVENT_DEL&quot;: 删除<br>&quot;EVENT_ADD_WHITE&quot;: 加白</p> 
+     * @return Status <p>状态<br>&quot;EVENT_UNDEAL&quot;:未处理<br>&quot;EVENT_DEALED&quot;: 已处理<br>&quot;EVENT_IGNORE&quot;: 忽略<br>&quot;EVENT_DEL&quot;: 删除<br>&quot;EVENT_ADD_WHITE&quot;: 加白</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态
-"EVENT_UNDEAL":未处理
-"EVENT_DEALED": 已处理
-"EVENT_IGNORE": 忽略
-"EVENT_DEL": 删除
-"EVENT_ADD_WHITE": 加白
-     * @param Status 状态
-"EVENT_UNDEAL":未处理
-"EVENT_DEALED": 已处理
-"EVENT_IGNORE": 忽略
-"EVENT_DEL": 删除
-"EVENT_ADD_WHITE": 加白
+     * Set <p>状态<br>&quot;EVENT_UNDEAL&quot;:未处理<br>&quot;EVENT_DEALED&quot;: 已处理<br>&quot;EVENT_IGNORE&quot;: 忽略<br>&quot;EVENT_DEL&quot;: 删除<br>&quot;EVENT_ADD_WHITE&quot;: 加白</p>
+     * @param Status <p>状态<br>&quot;EVENT_UNDEAL&quot;:未处理<br>&quot;EVENT_DEALED&quot;: 已处理<br>&quot;EVENT_IGNORE&quot;: 忽略<br>&quot;EVENT_DEL&quot;: 删除<br>&quot;EVENT_ADD_WHITE&quot;: 加白</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 集群masterIP 
-     * @return ClusterMasterIP 集群masterIP
+     * Get <p>集群masterIP</p> 
+     * @return ClusterMasterIP <p>集群masterIP</p>
      */
     public String getClusterMasterIP() {
         return this.ClusterMasterIP;
     }
 
     /**
-     * Set 集群masterIP
-     * @param ClusterMasterIP 集群masterIP
+     * Set <p>集群masterIP</p>
+     * @param ClusterMasterIP <p>集群masterIP</p>
      */
     public void setClusterMasterIP(String ClusterMasterIP) {
         this.ClusterMasterIP = ClusterMasterIP;
     }
 
     /**
-     * Get k8s版本 
-     * @return K8sVersion k8s版本
+     * Get <p>k8s版本</p> 
+     * @return K8sVersion <p>k8s版本</p>
      */
     public String getK8sVersion() {
         return this.K8sVersion;
     }
 
     /**
-     * Set k8s版本
-     * @param K8sVersion k8s版本
+     * Set <p>k8s版本</p>
+     * @param K8sVersion <p>k8s版本</p>
      */
     public void setK8sVersion(String K8sVersion) {
         this.K8sVersion = K8sVersion;
     }
 
     /**
-     * Get 运行时组件 
-     * @return RunningComponent 运行时组件
+     * Get <p>运行时组件</p> 
+     * @return RunningComponent <p>运行时组件</p>
      */
     public String [] getRunningComponent() {
         return this.RunningComponent;
     }
 
     /**
-     * Set 运行时组件
-     * @param RunningComponent 运行时组件
+     * Set <p>运行时组件</p>
+     * @param RunningComponent <p>运行时组件</p>
      */
     public void setRunningComponent(String [] RunningComponent) {
         this.RunningComponent = RunningComponent;
     }
 
     /**
-     * Get 描述 
-     * @return Desc 描述
+     * Get <p>描述</p> 
+     * @return Desc <p>描述</p>
      */
     public String getDesc() {
         return this.Desc;
     }
 
     /**
-     * Set 描述
-     * @param Desc 描述
+     * Set <p>描述</p>
+     * @param Desc <p>描述</p>
      */
     public void setDesc(String Desc) {
         this.Desc = Desc;
     }
 
     /**
-     * Get 建议 
-     * @return Suggestion 建议
+     * Get <p>建议</p> 
+     * @return Suggestion <p>建议</p>
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set 建议
-     * @param Suggestion 建议
+     * Set <p>建议</p>
+     * @param Suggestion <p>建议</p>
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get 请求信息 
-     * @return Info 请求信息
+     * Get <p>请求信息</p> 
+     * @return Info <p>请求信息</p>
      */
     public String getInfo() {
         return this.Info;
     }
 
     /**
-     * Set 请求信息
-     * @param Info 请求信息
+     * Set <p>请求信息</p>
+     * @param Info <p>请求信息</p>
      */
     public void setInfo(String Info) {
         this.Info = Info;
     }
 
     /**
-     * Get 规则ID 
-     * @return MatchRuleID 规则ID
+     * Get <p>规则ID</p> 
+     * @return MatchRuleID <p>规则ID</p>
      */
     public String getMatchRuleID() {
         return this.MatchRuleID;
     }
 
     /**
-     * Set 规则ID
-     * @param MatchRuleID 规则ID
+     * Set <p>规则ID</p>
+     * @param MatchRuleID <p>规则ID</p>
      */
     public void setMatchRuleID(String MatchRuleID) {
         this.MatchRuleID = MatchRuleID;
     }
 
     /**
-     * Get 高亮字段数组 
-     * @return HighLightFields 高亮字段数组
+     * Get <p>高亮字段数组</p> 
+     * @return HighLightFields <p>高亮字段数组</p>
      */
     public String [] getHighLightFields() {
         return this.HighLightFields;
     }
 
     /**
-     * Set 高亮字段数组
-     * @param HighLightFields 高亮字段数组
+     * Set <p>高亮字段数组</p>
+     * @param HighLightFields <p>高亮字段数组</p>
      */
     public void setHighLightFields(String [] HighLightFields) {
         this.HighLightFields = HighLightFields;
     }
 
     /**
-     * Get 命中规则 
-     * @return MatchRule 命中规则
+     * Get <p>命中规则</p> 
+     * @return MatchRule <p>命中规则</p>
      */
     public K8sApiAbnormalRuleScopeInfo getMatchRule() {
         return this.MatchRule;
     }
 
     /**
-     * Set 命中规则
-     * @param MatchRule 命中规则
+     * Set <p>命中规则</p>
+     * @param MatchRule <p>命中规则</p>
      */
     public void setMatchRule(K8sApiAbnormalRuleScopeInfo MatchRule) {
         this.MatchRule = MatchRule;
+    }
+
+    /**
+     * Get <p>高亮字段对应的命中规则内容(JSON字符串, 如: {&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;})</p><p>参数格式：{&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;}</p> 
+     * @return HighLightFieldsVal <p>高亮字段对应的命中规则内容(JSON字符串, 如: {&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;})</p><p>参数格式：{&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;}</p>
+     */
+    public String getHighLightFieldsVal() {
+        return this.HighLightFieldsVal;
+    }
+
+    /**
+     * Set <p>高亮字段对应的命中规则内容(JSON字符串, 如: {&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;})</p><p>参数格式：{&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;}</p>
+     * @param HighLightFieldsVal <p>高亮字段对应的命中规则内容(JSON字符串, 如: {&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;})</p><p>参数格式：{&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;}</p>
+     */
+    public void setHighLightFieldsVal(String HighLightFieldsVal) {
+        this.HighLightFieldsVal = HighLightFieldsVal;
+    }
+
+    /**
+     * Get <p>规则中文</p> 
+     * @return RuleTypeZH <p>规则中文</p>
+     */
+    public String getRuleTypeZH() {
+        return this.RuleTypeZH;
+    }
+
+    /**
+     * Set <p>规则中文</p>
+     * @param RuleTypeZH <p>规则中文</p>
+     */
+    public void setRuleTypeZH(String RuleTypeZH) {
+        this.RuleTypeZH = RuleTypeZH;
     }
 
     public K8sApiAbnormalEventInfo() {
@@ -556,6 +577,12 @@ public class K8sApiAbnormalEventInfo extends AbstractModel {
         if (source.MatchRule != null) {
             this.MatchRule = new K8sApiAbnormalRuleScopeInfo(source.MatchRule);
         }
+        if (source.HighLightFieldsVal != null) {
+            this.HighLightFieldsVal = new String(source.HighLightFieldsVal);
+        }
+        if (source.RuleTypeZH != null) {
+            this.RuleTypeZH = new String(source.RuleTypeZH);
+        }
     }
 
 
@@ -582,6 +609,8 @@ public class K8sApiAbnormalEventInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "MatchRuleID", this.MatchRuleID);
         this.setParamArraySimple(map, prefix + "HighLightFields.", this.HighLightFields);
         this.setParamObj(map, prefix + "MatchRule.", this.MatchRule);
+        this.setParamSimple(map, prefix + "HighLightFieldsVal", this.HighLightFieldsVal);
+        this.setParamSimple(map, prefix + "RuleTypeZH", this.RuleTypeZH);
 
     }
 }

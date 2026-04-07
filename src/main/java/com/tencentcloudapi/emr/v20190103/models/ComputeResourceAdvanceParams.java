@@ -24,92 +24,102 @@ import java.util.HashMap;
 public class ComputeResourceAdvanceParams extends AbstractModel {
 
     /**
-    * 节点Label数组
+    * <p>节点Label数组</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Labels")
     @Expose
     private TkeLabel [] Labels;
 
     /**
-    * 节点污点
+    * <p>节点污点</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Taints")
     @Expose
     private Taint [] Taints;
 
     /**
-    * base64 编码的用户脚本，在初始化节点之前执行
+    * <p>base64 编码的用户脚本，在初始化节点之前执行</p>
     */
     @SerializedName("PreStartUserScript")
     @Expose
     private String PreStartUserScript;
 
     /**
-    * base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看
+    * <p>base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看</p>
     */
     @SerializedName("UserScript")
     @Expose
     private String UserScript;
 
     /**
-     * Get 节点Label数组 
-     * @return Labels 节点Label数组
+     * Get <p>节点Label数组</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Labels <p>节点Label数组</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public TkeLabel [] getLabels() {
         return this.Labels;
     }
 
     /**
-     * Set 节点Label数组
-     * @param Labels 节点Label数组
+     * Set <p>节点Label数组</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Labels <p>节点Label数组</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabels(TkeLabel [] Labels) {
         this.Labels = Labels;
     }
 
     /**
-     * Get 节点污点 
-     * @return Taints 节点污点
+     * Get <p>节点污点</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Taints <p>节点污点</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Taint [] getTaints() {
         return this.Taints;
     }
 
     /**
-     * Set 节点污点
-     * @param Taints 节点污点
+     * Set <p>节点污点</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Taints <p>节点污点</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaints(Taint [] Taints) {
         this.Taints = Taints;
     }
 
     /**
-     * Get base64 编码的用户脚本，在初始化节点之前执行 
-     * @return PreStartUserScript base64 编码的用户脚本，在初始化节点之前执行
+     * Get <p>base64 编码的用户脚本，在初始化节点之前执行</p> 
+     * @return PreStartUserScript <p>base64 编码的用户脚本，在初始化节点之前执行</p>
      */
     public String getPreStartUserScript() {
         return this.PreStartUserScript;
     }
 
     /**
-     * Set base64 编码的用户脚本，在初始化节点之前执行
-     * @param PreStartUserScript base64 编码的用户脚本，在初始化节点之前执行
+     * Set <p>base64 编码的用户脚本，在初始化节点之前执行</p>
+     * @param PreStartUserScript <p>base64 编码的用户脚本，在初始化节点之前执行</p>
      */
     public void setPreStartUserScript(String PreStartUserScript) {
         this.PreStartUserScript = PreStartUserScript;
     }
 
     /**
-     * Get base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看 
-     * @return UserScript base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看
+     * Get <p>base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看</p> 
+     * @return UserScript <p>base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看</p>
      */
     public String getUserScript() {
         return this.UserScript;
     }
 
     /**
-     * Set base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看
-     * @param UserScript base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看
+     * Set <p>base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看</p>
+     * @param UserScript <p>base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看</p>
      */
     public void setUserScript(String UserScript) {
         this.UserScript = UserScript;

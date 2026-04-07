@@ -24,696 +24,624 @@ import java.util.HashMap;
 public class CreateClusterRequest extends AbstractModel {
 
     /**
-    * EMR产品版本名称如EMR-V2.3.0 表示2.3.0版本的EMR， 当前支持产品版本名称查询：[产品版本名称](https://cloud.tencent.com/document/product/589/66338)
+    * <p>EMR产品版本名称如EMR-V2.3.0 表示2.3.0版本的EMR， 当前支持产品版本名称查询：<a href="https://cloud.tencent.com/document/product/589/66338">产品版本名称</a></p>
     */
     @SerializedName("ProductVersion")
     @Expose
     private String ProductVersion;
 
     /**
-    * 是否开启节点高可用。取值范围：
-<li>true：表示开启节点高可用。</li>
-<li>false：表示不开启节点高可用。</li>
+    * <p>是否开启节点高可用。取值范围：</p><li>true：表示开启节点高可用。</li><li>false：表示不开启节点高可用。</li>
     */
     @SerializedName("EnableSupportHAFlag")
     @Expose
     private Boolean EnableSupportHAFlag;
 
     /**
-    * 实例名称。
-<li>长度限制为6-36个字符。</li>
-<li>只允许包含中文、字母、数字、-、_。</li>
+    * <p>实例名称。</p><li>长度限制为6-36个字符。</li><li>只允许包含中文、字母、数字、-、_。</li>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 实例计费模式。取值范围：
-<li>PREPAID：预付费，即包年包月。</li>
-<li>POSTPAID_BY_HOUR：按小时后付费。</li>
+    * <p>实例计费模式。取值范围：</p><li>PREPAID：预付费，即包年包月。</li><li>POSTPAID_BY_HOUR：按小时后付费。</li>
     */
     @SerializedName("InstanceChargeType")
     @Expose
     private String InstanceChargeType;
 
     /**
-    * 实例登录设置。通过该参数可以设置所购买节点的登录方式密码或者密钥。
-<li>设置密钥时，密码仅用于组件原生WebUI快捷入口登录。</li>
-<li>未设置密钥时，密码用于登录所购节点以及组件原生WebUI快捷入口登录。</li>
+    * <p>实例登录设置。通过该参数可以设置所购买节点的登录方式密码或者密钥。</p><li>设置密钥时，密码仅用于组件原生WebUI快捷入口登录。</li><li>未设置密钥时，密码用于登录所购节点以及组件原生WebUI快捷入口登录。</li>
     */
     @SerializedName("LoginSettings")
     @Expose
     private LoginSettings LoginSettings;
 
     /**
-    * 集群应用场景以及支持部署组件配置
+    * <p>集群应用场景以及支持部署组件配置</p>
     */
     @SerializedName("SceneSoftwareConfig")
     @Expose
     private SceneSoftwareConfig SceneSoftwareConfig;
 
     /**
-    * 即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
+    * <p>即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。</p>
     */
     @SerializedName("InstanceChargePrepaid")
     @Expose
     private InstanceChargePrepaid InstanceChargePrepaid;
 
     /**
-    * 实例所属安全组的ID，形如sg-xxxxxxxx。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的SecurityGroupId字段来获取。
+    * <p>实例所属安全组的ID，形如sg-xxxxxxxx。该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的SecurityGroupId字段来获取。</p>
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-    * [引导操作](https://cloud.tencent.com/document/product/589/35656)脚本设置。
+    * <p><a href="https://cloud.tencent.com/document/product/589/35656">引导操作</a>脚本设置。</p>
     */
     @SerializedName("ScriptBootstrapActionConfig")
     @Expose
     private ScriptBootstrapActionConfig [] ScriptBootstrapActionConfig;
 
     /**
-    * 唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808
+    * <p>唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-<strong><strong>-</strong></strong>-****-fae360632808</p>
     */
     @SerializedName("ClientToken")
     @Expose
     private String ClientToken;
 
     /**
-    * 是否开启集群Master节点公网。取值范围：
-<li>NEED_MASTER_WAN：表示开启集群Master节点公网。</li>
-<li>NOT_NEED_MASTER_WAN：表示不开启。</li>默认开启集群Master节点公网。
+    * <p>是否开启集群Master节点公网。取值范围：</p><li>NEED_MASTER_WAN：表示开启集群Master节点公网。</li><li>NOT_NEED_MASTER_WAN：表示不开启。</li>默认开启集群Master节点公网。
     */
     @SerializedName("NeedMasterWan")
     @Expose
     private String NeedMasterWan;
 
     /**
-    * 是否开启外网远程登录。（在SecurityGroupId不为空时，该参数无效）不填默认为不开启 取值范围：
-<li>true：表示开启</li>
-<li>false：表示不开启</li>
+    * <p>是否开启外网远程登录。（在SecurityGroupId不为空时，该参数无效）不填默认为不开启 取值范围：</p><li>true：表示开启</li><li>false：表示不开启</li>
     */
     @SerializedName("EnableRemoteLoginFlag")
     @Expose
     private Boolean EnableRemoteLoginFlag;
 
     /**
-    * 是否开启Kerberos认证。默认不开启 取值范围：
-<li>true：表示开启</li>
-<li>false：表示不开启</li>
+    * <p>是否开启Kerberos认证。默认不开启 取值范围：</p><li>true：表示开启</li><li>false：表示不开启</li>
     */
     @SerializedName("EnableKerberosFlag")
     @Expose
     private Boolean EnableKerberosFlag;
 
     /**
-    * [自定义软件配置](https://cloud.tencent.com/document/product/589/35655?from_cn_redirect=1)
+    * <p><a href="https://cloud.tencent.com/document/product/589/35655?from_cn_redirect=1">自定义软件配置</a></p>
     */
     @SerializedName("CustomConf")
     @Expose
     private String CustomConf;
 
     /**
-    * 标签描述列表。通过指定该参数可以同时绑定标签到相应的实例。
+    * <p>标签描述列表。通过指定该参数可以同时绑定标签到相应的实例。</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 分散置放群组ID列表，当前只支持指定一个。
-该参数可以通过调用 [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/product/213/17810)的返回值中的DisasterRecoverGroupId字段来获取。
+    * <p>分散置放群组ID列表，当前只支持指定一个。<br>该参数可以通过调用 <a href="https://cloud.tencent.com/document/product/213/17810">DescribeDisasterRecoverGroups</a>的返回值中的DisasterRecoverGroupId字段来获取。</p>
     */
     @SerializedName("DisasterRecoverGroupIds")
     @Expose
     private String [] DisasterRecoverGroupIds;
 
     /**
-    * 是否开启集群维度CBS加密。默认不加密 取值范围：
-<li>true：表示加密</li>
-<li>false：表示不加密</li>
+    * <p>是否开启集群维度CBS加密。默认不加密 取值范围：</p><li>true：表示加密</li><li>false：表示不加密</li>
     */
     @SerializedName("EnableCbsEncryptFlag")
     @Expose
     private Boolean EnableCbsEncryptFlag;
 
     /**
-    * MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser MetaDataPass UnifyMetaInstanceId不用填
-当MetaType选择EMR_EXIT_META时，填写UnifyMetaInstanceId
-当MetaType选择USER_CUSTOM_META时，填写MetaDataJdbcUrl MetaDataUser MetaDataPass
+    * <p>MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser MetaDataPass UnifyMetaInstanceId不用填<br>当MetaType选择EMR_EXIT_META时，填写UnifyMetaInstanceId<br>当MetaType选择USER_CUSTOM_META时，填写MetaDataJdbcUrl MetaDataUser MetaDataPass</p>
     */
     @SerializedName("MetaDBInfo")
     @Expose
     private CustomMetaDBInfo MetaDBInfo;
 
     /**
-    * 共享组件信息
+    * <p>共享组件信息</p>
     */
     @SerializedName("DependService")
     @Expose
     private DependService [] DependService;
 
     /**
-    * 节点资源的规格，有几个可用区，就填几个，按顺序第一个为主可用区，第二个为备可用区，第三个为仲裁可用区。如果没有开启跨AZ，则长度为1即可。
+    * <p>节点资源的规格，有几个可用区，就填几个，按顺序第一个为主可用区，第二个为备可用区，第三个为仲裁可用区。如果没有开启跨AZ，则长度为1即可。</p>
     */
     @SerializedName("ZoneResourceConfiguration")
     @Expose
     private ZoneResourceConfiguration [] ZoneResourceConfiguration;
 
     /**
-    * cos桶路径，创建StarRocks存算分离集群时用到
+    * <p>cos桶路径，创建StarRocks存算分离集群时用到</p>
     */
     @SerializedName("CosBucket")
     @Expose
     private String CosBucket;
 
     /**
-    * 节点标识信息，目前只提供给tf平台使用
+    * <p>节点标识信息，目前只提供给tf平台使用</p>
     */
     @SerializedName("NodeMarks")
     @Expose
     private NodeMark [] NodeMarks;
 
     /**
-    * clb id
+    * <p>clb id</p>
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * 数据库版本：mysql8/tdsql8/mysql5
+    * <p>数据库版本：mysql8/tdsql8/mysql5</p>
     */
     @SerializedName("DefaultMetaVersion")
     @Expose
     private String DefaultMetaVersion;
 
     /**
-    * 是否开通数据库审计
+    * <p>是否开通数据库审计</p>
     */
     @SerializedName("NeedCdbAudit")
     @Expose
     private Long NeedCdbAudit;
 
     /**
-    * 安全指定来源ip
+    * <p>安全指定来源ip</p>
     */
     @SerializedName("SgIP")
     @Expose
     private String SgIP;
 
     /**
-     * Get EMR产品版本名称如EMR-V2.3.0 表示2.3.0版本的EMR， 当前支持产品版本名称查询：[产品版本名称](https://cloud.tencent.com/document/product/589/66338) 
-     * @return ProductVersion EMR产品版本名称如EMR-V2.3.0 表示2.3.0版本的EMR， 当前支持产品版本名称查询：[产品版本名称](https://cloud.tencent.com/document/product/589/66338)
+    * <p>分区置放群组分区</p>
+    */
+    @SerializedName("PartitionNumber")
+    @Expose
+    private Long PartitionNumber;
+
+    /**
+     * Get <p>EMR产品版本名称如EMR-V2.3.0 表示2.3.0版本的EMR， 当前支持产品版本名称查询：<a href="https://cloud.tencent.com/document/product/589/66338">产品版本名称</a></p> 
+     * @return ProductVersion <p>EMR产品版本名称如EMR-V2.3.0 表示2.3.0版本的EMR， 当前支持产品版本名称查询：<a href="https://cloud.tencent.com/document/product/589/66338">产品版本名称</a></p>
      */
     public String getProductVersion() {
         return this.ProductVersion;
     }
 
     /**
-     * Set EMR产品版本名称如EMR-V2.3.0 表示2.3.0版本的EMR， 当前支持产品版本名称查询：[产品版本名称](https://cloud.tencent.com/document/product/589/66338)
-     * @param ProductVersion EMR产品版本名称如EMR-V2.3.0 表示2.3.0版本的EMR， 当前支持产品版本名称查询：[产品版本名称](https://cloud.tencent.com/document/product/589/66338)
+     * Set <p>EMR产品版本名称如EMR-V2.3.0 表示2.3.0版本的EMR， 当前支持产品版本名称查询：<a href="https://cloud.tencent.com/document/product/589/66338">产品版本名称</a></p>
+     * @param ProductVersion <p>EMR产品版本名称如EMR-V2.3.0 表示2.3.0版本的EMR， 当前支持产品版本名称查询：<a href="https://cloud.tencent.com/document/product/589/66338">产品版本名称</a></p>
      */
     public void setProductVersion(String ProductVersion) {
         this.ProductVersion = ProductVersion;
     }
 
     /**
-     * Get 是否开启节点高可用。取值范围：
-<li>true：表示开启节点高可用。</li>
-<li>false：表示不开启节点高可用。</li> 
-     * @return EnableSupportHAFlag 是否开启节点高可用。取值范围：
-<li>true：表示开启节点高可用。</li>
-<li>false：表示不开启节点高可用。</li>
+     * Get <p>是否开启节点高可用。取值范围：</p><li>true：表示开启节点高可用。</li><li>false：表示不开启节点高可用。</li> 
+     * @return EnableSupportHAFlag <p>是否开启节点高可用。取值范围：</p><li>true：表示开启节点高可用。</li><li>false：表示不开启节点高可用。</li>
      */
     public Boolean getEnableSupportHAFlag() {
         return this.EnableSupportHAFlag;
     }
 
     /**
-     * Set 是否开启节点高可用。取值范围：
-<li>true：表示开启节点高可用。</li>
-<li>false：表示不开启节点高可用。</li>
-     * @param EnableSupportHAFlag 是否开启节点高可用。取值范围：
-<li>true：表示开启节点高可用。</li>
-<li>false：表示不开启节点高可用。</li>
+     * Set <p>是否开启节点高可用。取值范围：</p><li>true：表示开启节点高可用。</li><li>false：表示不开启节点高可用。</li>
+     * @param EnableSupportHAFlag <p>是否开启节点高可用。取值范围：</p><li>true：表示开启节点高可用。</li><li>false：表示不开启节点高可用。</li>
      */
     public void setEnableSupportHAFlag(Boolean EnableSupportHAFlag) {
         this.EnableSupportHAFlag = EnableSupportHAFlag;
     }
 
     /**
-     * Get 实例名称。
-<li>长度限制为6-36个字符。</li>
-<li>只允许包含中文、字母、数字、-、_。</li> 
-     * @return InstanceName 实例名称。
-<li>长度限制为6-36个字符。</li>
-<li>只允许包含中文、字母、数字、-、_。</li>
+     * Get <p>实例名称。</p><li>长度限制为6-36个字符。</li><li>只允许包含中文、字母、数字、-、_。</li> 
+     * @return InstanceName <p>实例名称。</p><li>长度限制为6-36个字符。</li><li>只允许包含中文、字母、数字、-、_。</li>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称。
-<li>长度限制为6-36个字符。</li>
-<li>只允许包含中文、字母、数字、-、_。</li>
-     * @param InstanceName 实例名称。
-<li>长度限制为6-36个字符。</li>
-<li>只允许包含中文、字母、数字、-、_。</li>
+     * Set <p>实例名称。</p><li>长度限制为6-36个字符。</li><li>只允许包含中文、字母、数字、-、_。</li>
+     * @param InstanceName <p>实例名称。</p><li>长度限制为6-36个字符。</li><li>只允许包含中文、字母、数字、-、_。</li>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 实例计费模式。取值范围：
-<li>PREPAID：预付费，即包年包月。</li>
-<li>POSTPAID_BY_HOUR：按小时后付费。</li> 
-     * @return InstanceChargeType 实例计费模式。取值范围：
-<li>PREPAID：预付费，即包年包月。</li>
-<li>POSTPAID_BY_HOUR：按小时后付费。</li>
+     * Get <p>实例计费模式。取值范围：</p><li>PREPAID：预付费，即包年包月。</li><li>POSTPAID_BY_HOUR：按小时后付费。</li> 
+     * @return InstanceChargeType <p>实例计费模式。取值范围：</p><li>PREPAID：预付费，即包年包月。</li><li>POSTPAID_BY_HOUR：按小时后付费。</li>
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set 实例计费模式。取值范围：
-<li>PREPAID：预付费，即包年包月。</li>
-<li>POSTPAID_BY_HOUR：按小时后付费。</li>
-     * @param InstanceChargeType 实例计费模式。取值范围：
-<li>PREPAID：预付费，即包年包月。</li>
-<li>POSTPAID_BY_HOUR：按小时后付费。</li>
+     * Set <p>实例计费模式。取值范围：</p><li>PREPAID：预付费，即包年包月。</li><li>POSTPAID_BY_HOUR：按小时后付费。</li>
+     * @param InstanceChargeType <p>实例计费模式。取值范围：</p><li>PREPAID：预付费，即包年包月。</li><li>POSTPAID_BY_HOUR：按小时后付费。</li>
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
     }
 
     /**
-     * Get 实例登录设置。通过该参数可以设置所购买节点的登录方式密码或者密钥。
-<li>设置密钥时，密码仅用于组件原生WebUI快捷入口登录。</li>
-<li>未设置密钥时，密码用于登录所购节点以及组件原生WebUI快捷入口登录。</li> 
-     * @return LoginSettings 实例登录设置。通过该参数可以设置所购买节点的登录方式密码或者密钥。
-<li>设置密钥时，密码仅用于组件原生WebUI快捷入口登录。</li>
-<li>未设置密钥时，密码用于登录所购节点以及组件原生WebUI快捷入口登录。</li>
+     * Get <p>实例登录设置。通过该参数可以设置所购买节点的登录方式密码或者密钥。</p><li>设置密钥时，密码仅用于组件原生WebUI快捷入口登录。</li><li>未设置密钥时，密码用于登录所购节点以及组件原生WebUI快捷入口登录。</li> 
+     * @return LoginSettings <p>实例登录设置。通过该参数可以设置所购买节点的登录方式密码或者密钥。</p><li>设置密钥时，密码仅用于组件原生WebUI快捷入口登录。</li><li>未设置密钥时，密码用于登录所购节点以及组件原生WebUI快捷入口登录。</li>
      */
     public LoginSettings getLoginSettings() {
         return this.LoginSettings;
     }
 
     /**
-     * Set 实例登录设置。通过该参数可以设置所购买节点的登录方式密码或者密钥。
-<li>设置密钥时，密码仅用于组件原生WebUI快捷入口登录。</li>
-<li>未设置密钥时，密码用于登录所购节点以及组件原生WebUI快捷入口登录。</li>
-     * @param LoginSettings 实例登录设置。通过该参数可以设置所购买节点的登录方式密码或者密钥。
-<li>设置密钥时，密码仅用于组件原生WebUI快捷入口登录。</li>
-<li>未设置密钥时，密码用于登录所购节点以及组件原生WebUI快捷入口登录。</li>
+     * Set <p>实例登录设置。通过该参数可以设置所购买节点的登录方式密码或者密钥。</p><li>设置密钥时，密码仅用于组件原生WebUI快捷入口登录。</li><li>未设置密钥时，密码用于登录所购节点以及组件原生WebUI快捷入口登录。</li>
+     * @param LoginSettings <p>实例登录设置。通过该参数可以设置所购买节点的登录方式密码或者密钥。</p><li>设置密钥时，密码仅用于组件原生WebUI快捷入口登录。</li><li>未设置密钥时，密码用于登录所购节点以及组件原生WebUI快捷入口登录。</li>
      */
     public void setLoginSettings(LoginSettings LoginSettings) {
         this.LoginSettings = LoginSettings;
     }
 
     /**
-     * Get 集群应用场景以及支持部署组件配置 
-     * @return SceneSoftwareConfig 集群应用场景以及支持部署组件配置
+     * Get <p>集群应用场景以及支持部署组件配置</p> 
+     * @return SceneSoftwareConfig <p>集群应用场景以及支持部署组件配置</p>
      */
     public SceneSoftwareConfig getSceneSoftwareConfig() {
         return this.SceneSoftwareConfig;
     }
 
     /**
-     * Set 集群应用场景以及支持部署组件配置
-     * @param SceneSoftwareConfig 集群应用场景以及支持部署组件配置
+     * Set <p>集群应用场景以及支持部署组件配置</p>
+     * @param SceneSoftwareConfig <p>集群应用场景以及支持部署组件配置</p>
      */
     public void setSceneSoftwareConfig(SceneSoftwareConfig SceneSoftwareConfig) {
         this.SceneSoftwareConfig = SceneSoftwareConfig;
     }
 
     /**
-     * Get 即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。 
-     * @return InstanceChargePrepaid 即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
+     * Get <p>即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。</p> 
+     * @return InstanceChargePrepaid <p>即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。</p>
      */
     public InstanceChargePrepaid getInstanceChargePrepaid() {
         return this.InstanceChargePrepaid;
     }
 
     /**
-     * Set 即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
-     * @param InstanceChargePrepaid 即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
+     * Set <p>即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。</p>
+     * @param InstanceChargePrepaid <p>即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。</p>
      */
     public void setInstanceChargePrepaid(InstanceChargePrepaid InstanceChargePrepaid) {
         this.InstanceChargePrepaid = InstanceChargePrepaid;
     }
 
     /**
-     * Get 实例所属安全组的ID，形如sg-xxxxxxxx。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的SecurityGroupId字段来获取。 
-     * @return SecurityGroupIds 实例所属安全组的ID，形如sg-xxxxxxxx。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的SecurityGroupId字段来获取。
+     * Get <p>实例所属安全组的ID，形如sg-xxxxxxxx。该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的SecurityGroupId字段来获取。</p> 
+     * @return SecurityGroupIds <p>实例所属安全组的ID，形如sg-xxxxxxxx。该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的SecurityGroupId字段来获取。</p>
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set 实例所属安全组的ID，形如sg-xxxxxxxx。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的SecurityGroupId字段来获取。
-     * @param SecurityGroupIds 实例所属安全组的ID，形如sg-xxxxxxxx。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的SecurityGroupId字段来获取。
+     * Set <p>实例所属安全组的ID，形如sg-xxxxxxxx。该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的SecurityGroupId字段来获取。</p>
+     * @param SecurityGroupIds <p>实例所属安全组的ID，形如sg-xxxxxxxx。该参数可以通过调用 <a href="https://cloud.tencent.com/document/api/215/15808">DescribeSecurityGroups</a> 的返回值中的SecurityGroupId字段来获取。</p>
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
-     * Get [引导操作](https://cloud.tencent.com/document/product/589/35656)脚本设置。 
-     * @return ScriptBootstrapActionConfig [引导操作](https://cloud.tencent.com/document/product/589/35656)脚本设置。
+     * Get <p><a href="https://cloud.tencent.com/document/product/589/35656">引导操作</a>脚本设置。</p> 
+     * @return ScriptBootstrapActionConfig <p><a href="https://cloud.tencent.com/document/product/589/35656">引导操作</a>脚本设置。</p>
      */
     public ScriptBootstrapActionConfig [] getScriptBootstrapActionConfig() {
         return this.ScriptBootstrapActionConfig;
     }
 
     /**
-     * Set [引导操作](https://cloud.tencent.com/document/product/589/35656)脚本设置。
-     * @param ScriptBootstrapActionConfig [引导操作](https://cloud.tencent.com/document/product/589/35656)脚本设置。
+     * Set <p><a href="https://cloud.tencent.com/document/product/589/35656">引导操作</a>脚本设置。</p>
+     * @param ScriptBootstrapActionConfig <p><a href="https://cloud.tencent.com/document/product/589/35656">引导操作</a>脚本设置。</p>
      */
     public void setScriptBootstrapActionConfig(ScriptBootstrapActionConfig [] ScriptBootstrapActionConfig) {
         this.ScriptBootstrapActionConfig = ScriptBootstrapActionConfig;
     }
 
     /**
-     * Get 唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808 
-     * @return ClientToken 唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808
+     * Get <p>唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-<strong><strong>-</strong></strong>-****-fae360632808</p> 
+     * @return ClientToken <p>唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-<strong><strong>-</strong></strong>-****-fae360632808</p>
      */
     public String getClientToken() {
         return this.ClientToken;
     }
 
     /**
-     * Set 唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808
-     * @param ClientToken 唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808
+     * Set <p>唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-<strong><strong>-</strong></strong>-****-fae360632808</p>
+     * @param ClientToken <p>唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-<strong><strong>-</strong></strong>-****-fae360632808</p>
      */
     public void setClientToken(String ClientToken) {
         this.ClientToken = ClientToken;
     }
 
     /**
-     * Get 是否开启集群Master节点公网。取值范围：
-<li>NEED_MASTER_WAN：表示开启集群Master节点公网。</li>
-<li>NOT_NEED_MASTER_WAN：表示不开启。</li>默认开启集群Master节点公网。 
-     * @return NeedMasterWan 是否开启集群Master节点公网。取值范围：
-<li>NEED_MASTER_WAN：表示开启集群Master节点公网。</li>
-<li>NOT_NEED_MASTER_WAN：表示不开启。</li>默认开启集群Master节点公网。
+     * Get <p>是否开启集群Master节点公网。取值范围：</p><li>NEED_MASTER_WAN：表示开启集群Master节点公网。</li><li>NOT_NEED_MASTER_WAN：表示不开启。</li>默认开启集群Master节点公网。 
+     * @return NeedMasterWan <p>是否开启集群Master节点公网。取值范围：</p><li>NEED_MASTER_WAN：表示开启集群Master节点公网。</li><li>NOT_NEED_MASTER_WAN：表示不开启。</li>默认开启集群Master节点公网。
      */
     public String getNeedMasterWan() {
         return this.NeedMasterWan;
     }
 
     /**
-     * Set 是否开启集群Master节点公网。取值范围：
-<li>NEED_MASTER_WAN：表示开启集群Master节点公网。</li>
-<li>NOT_NEED_MASTER_WAN：表示不开启。</li>默认开启集群Master节点公网。
-     * @param NeedMasterWan 是否开启集群Master节点公网。取值范围：
-<li>NEED_MASTER_WAN：表示开启集群Master节点公网。</li>
-<li>NOT_NEED_MASTER_WAN：表示不开启。</li>默认开启集群Master节点公网。
+     * Set <p>是否开启集群Master节点公网。取值范围：</p><li>NEED_MASTER_WAN：表示开启集群Master节点公网。</li><li>NOT_NEED_MASTER_WAN：表示不开启。</li>默认开启集群Master节点公网。
+     * @param NeedMasterWan <p>是否开启集群Master节点公网。取值范围：</p><li>NEED_MASTER_WAN：表示开启集群Master节点公网。</li><li>NOT_NEED_MASTER_WAN：表示不开启。</li>默认开启集群Master节点公网。
      */
     public void setNeedMasterWan(String NeedMasterWan) {
         this.NeedMasterWan = NeedMasterWan;
     }
 
     /**
-     * Get 是否开启外网远程登录。（在SecurityGroupId不为空时，该参数无效）不填默认为不开启 取值范围：
-<li>true：表示开启</li>
-<li>false：表示不开启</li> 
-     * @return EnableRemoteLoginFlag 是否开启外网远程登录。（在SecurityGroupId不为空时，该参数无效）不填默认为不开启 取值范围：
-<li>true：表示开启</li>
-<li>false：表示不开启</li>
+     * Get <p>是否开启外网远程登录。（在SecurityGroupId不为空时，该参数无效）不填默认为不开启 取值范围：</p><li>true：表示开启</li><li>false：表示不开启</li> 
+     * @return EnableRemoteLoginFlag <p>是否开启外网远程登录。（在SecurityGroupId不为空时，该参数无效）不填默认为不开启 取值范围：</p><li>true：表示开启</li><li>false：表示不开启</li>
      */
     public Boolean getEnableRemoteLoginFlag() {
         return this.EnableRemoteLoginFlag;
     }
 
     /**
-     * Set 是否开启外网远程登录。（在SecurityGroupId不为空时，该参数无效）不填默认为不开启 取值范围：
-<li>true：表示开启</li>
-<li>false：表示不开启</li>
-     * @param EnableRemoteLoginFlag 是否开启外网远程登录。（在SecurityGroupId不为空时，该参数无效）不填默认为不开启 取值范围：
-<li>true：表示开启</li>
-<li>false：表示不开启</li>
+     * Set <p>是否开启外网远程登录。（在SecurityGroupId不为空时，该参数无效）不填默认为不开启 取值范围：</p><li>true：表示开启</li><li>false：表示不开启</li>
+     * @param EnableRemoteLoginFlag <p>是否开启外网远程登录。（在SecurityGroupId不为空时，该参数无效）不填默认为不开启 取值范围：</p><li>true：表示开启</li><li>false：表示不开启</li>
      */
     public void setEnableRemoteLoginFlag(Boolean EnableRemoteLoginFlag) {
         this.EnableRemoteLoginFlag = EnableRemoteLoginFlag;
     }
 
     /**
-     * Get 是否开启Kerberos认证。默认不开启 取值范围：
-<li>true：表示开启</li>
-<li>false：表示不开启</li> 
-     * @return EnableKerberosFlag 是否开启Kerberos认证。默认不开启 取值范围：
-<li>true：表示开启</li>
-<li>false：表示不开启</li>
+     * Get <p>是否开启Kerberos认证。默认不开启 取值范围：</p><li>true：表示开启</li><li>false：表示不开启</li> 
+     * @return EnableKerberosFlag <p>是否开启Kerberos认证。默认不开启 取值范围：</p><li>true：表示开启</li><li>false：表示不开启</li>
      */
     public Boolean getEnableKerberosFlag() {
         return this.EnableKerberosFlag;
     }
 
     /**
-     * Set 是否开启Kerberos认证。默认不开启 取值范围：
-<li>true：表示开启</li>
-<li>false：表示不开启</li>
-     * @param EnableKerberosFlag 是否开启Kerberos认证。默认不开启 取值范围：
-<li>true：表示开启</li>
-<li>false：表示不开启</li>
+     * Set <p>是否开启Kerberos认证。默认不开启 取值范围：</p><li>true：表示开启</li><li>false：表示不开启</li>
+     * @param EnableKerberosFlag <p>是否开启Kerberos认证。默认不开启 取值范围：</p><li>true：表示开启</li><li>false：表示不开启</li>
      */
     public void setEnableKerberosFlag(Boolean EnableKerberosFlag) {
         this.EnableKerberosFlag = EnableKerberosFlag;
     }
 
     /**
-     * Get [自定义软件配置](https://cloud.tencent.com/document/product/589/35655?from_cn_redirect=1) 
-     * @return CustomConf [自定义软件配置](https://cloud.tencent.com/document/product/589/35655?from_cn_redirect=1)
+     * Get <p><a href="https://cloud.tencent.com/document/product/589/35655?from_cn_redirect=1">自定义软件配置</a></p> 
+     * @return CustomConf <p><a href="https://cloud.tencent.com/document/product/589/35655?from_cn_redirect=1">自定义软件配置</a></p>
      */
     public String getCustomConf() {
         return this.CustomConf;
     }
 
     /**
-     * Set [自定义软件配置](https://cloud.tencent.com/document/product/589/35655?from_cn_redirect=1)
-     * @param CustomConf [自定义软件配置](https://cloud.tencent.com/document/product/589/35655?from_cn_redirect=1)
+     * Set <p><a href="https://cloud.tencent.com/document/product/589/35655?from_cn_redirect=1">自定义软件配置</a></p>
+     * @param CustomConf <p><a href="https://cloud.tencent.com/document/product/589/35655?from_cn_redirect=1">自定义软件配置</a></p>
      */
     public void setCustomConf(String CustomConf) {
         this.CustomConf = CustomConf;
     }
 
     /**
-     * Get 标签描述列表。通过指定该参数可以同时绑定标签到相应的实例。 
-     * @return Tags 标签描述列表。通过指定该参数可以同时绑定标签到相应的实例。
+     * Get <p>标签描述列表。通过指定该参数可以同时绑定标签到相应的实例。</p> 
+     * @return Tags <p>标签描述列表。通过指定该参数可以同时绑定标签到相应的实例。</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签描述列表。通过指定该参数可以同时绑定标签到相应的实例。
-     * @param Tags 标签描述列表。通过指定该参数可以同时绑定标签到相应的实例。
+     * Set <p>标签描述列表。通过指定该参数可以同时绑定标签到相应的实例。</p>
+     * @param Tags <p>标签描述列表。通过指定该参数可以同时绑定标签到相应的实例。</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 分散置放群组ID列表，当前只支持指定一个。
-该参数可以通过调用 [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/product/213/17810)的返回值中的DisasterRecoverGroupId字段来获取。 
-     * @return DisasterRecoverGroupIds 分散置放群组ID列表，当前只支持指定一个。
-该参数可以通过调用 [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/product/213/17810)的返回值中的DisasterRecoverGroupId字段来获取。
+     * Get <p>分散置放群组ID列表，当前只支持指定一个。<br>该参数可以通过调用 <a href="https://cloud.tencent.com/document/product/213/17810">DescribeDisasterRecoverGroups</a>的返回值中的DisasterRecoverGroupId字段来获取。</p> 
+     * @return DisasterRecoverGroupIds <p>分散置放群组ID列表，当前只支持指定一个。<br>该参数可以通过调用 <a href="https://cloud.tencent.com/document/product/213/17810">DescribeDisasterRecoverGroups</a>的返回值中的DisasterRecoverGroupId字段来获取。</p>
      */
     public String [] getDisasterRecoverGroupIds() {
         return this.DisasterRecoverGroupIds;
     }
 
     /**
-     * Set 分散置放群组ID列表，当前只支持指定一个。
-该参数可以通过调用 [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/product/213/17810)的返回值中的DisasterRecoverGroupId字段来获取。
-     * @param DisasterRecoverGroupIds 分散置放群组ID列表，当前只支持指定一个。
-该参数可以通过调用 [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/product/213/17810)的返回值中的DisasterRecoverGroupId字段来获取。
+     * Set <p>分散置放群组ID列表，当前只支持指定一个。<br>该参数可以通过调用 <a href="https://cloud.tencent.com/document/product/213/17810">DescribeDisasterRecoverGroups</a>的返回值中的DisasterRecoverGroupId字段来获取。</p>
+     * @param DisasterRecoverGroupIds <p>分散置放群组ID列表，当前只支持指定一个。<br>该参数可以通过调用 <a href="https://cloud.tencent.com/document/product/213/17810">DescribeDisasterRecoverGroups</a>的返回值中的DisasterRecoverGroupId字段来获取。</p>
      */
     public void setDisasterRecoverGroupIds(String [] DisasterRecoverGroupIds) {
         this.DisasterRecoverGroupIds = DisasterRecoverGroupIds;
     }
 
     /**
-     * Get 是否开启集群维度CBS加密。默认不加密 取值范围：
-<li>true：表示加密</li>
-<li>false：表示不加密</li> 
-     * @return EnableCbsEncryptFlag 是否开启集群维度CBS加密。默认不加密 取值范围：
-<li>true：表示加密</li>
-<li>false：表示不加密</li>
+     * Get <p>是否开启集群维度CBS加密。默认不加密 取值范围：</p><li>true：表示加密</li><li>false：表示不加密</li> 
+     * @return EnableCbsEncryptFlag <p>是否开启集群维度CBS加密。默认不加密 取值范围：</p><li>true：表示加密</li><li>false：表示不加密</li>
      */
     public Boolean getEnableCbsEncryptFlag() {
         return this.EnableCbsEncryptFlag;
     }
 
     /**
-     * Set 是否开启集群维度CBS加密。默认不加密 取值范围：
-<li>true：表示加密</li>
-<li>false：表示不加密</li>
-     * @param EnableCbsEncryptFlag 是否开启集群维度CBS加密。默认不加密 取值范围：
-<li>true：表示加密</li>
-<li>false：表示不加密</li>
+     * Set <p>是否开启集群维度CBS加密。默认不加密 取值范围：</p><li>true：表示加密</li><li>false：表示不加密</li>
+     * @param EnableCbsEncryptFlag <p>是否开启集群维度CBS加密。默认不加密 取值范围：</p><li>true：表示加密</li><li>false：表示不加密</li>
      */
     public void setEnableCbsEncryptFlag(Boolean EnableCbsEncryptFlag) {
         this.EnableCbsEncryptFlag = EnableCbsEncryptFlag;
     }
 
     /**
-     * Get MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser MetaDataPass UnifyMetaInstanceId不用填
-当MetaType选择EMR_EXIT_META时，填写UnifyMetaInstanceId
-当MetaType选择USER_CUSTOM_META时，填写MetaDataJdbcUrl MetaDataUser MetaDataPass 
-     * @return MetaDBInfo MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser MetaDataPass UnifyMetaInstanceId不用填
-当MetaType选择EMR_EXIT_META时，填写UnifyMetaInstanceId
-当MetaType选择USER_CUSTOM_META时，填写MetaDataJdbcUrl MetaDataUser MetaDataPass
+     * Get <p>MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser MetaDataPass UnifyMetaInstanceId不用填<br>当MetaType选择EMR_EXIT_META时，填写UnifyMetaInstanceId<br>当MetaType选择USER_CUSTOM_META时，填写MetaDataJdbcUrl MetaDataUser MetaDataPass</p> 
+     * @return MetaDBInfo <p>MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser MetaDataPass UnifyMetaInstanceId不用填<br>当MetaType选择EMR_EXIT_META时，填写UnifyMetaInstanceId<br>当MetaType选择USER_CUSTOM_META时，填写MetaDataJdbcUrl MetaDataUser MetaDataPass</p>
      */
     public CustomMetaDBInfo getMetaDBInfo() {
         return this.MetaDBInfo;
     }
 
     /**
-     * Set MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser MetaDataPass UnifyMetaInstanceId不用填
-当MetaType选择EMR_EXIT_META时，填写UnifyMetaInstanceId
-当MetaType选择USER_CUSTOM_META时，填写MetaDataJdbcUrl MetaDataUser MetaDataPass
-     * @param MetaDBInfo MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser MetaDataPass UnifyMetaInstanceId不用填
-当MetaType选择EMR_EXIT_META时，填写UnifyMetaInstanceId
-当MetaType选择USER_CUSTOM_META时，填写MetaDataJdbcUrl MetaDataUser MetaDataPass
+     * Set <p>MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser MetaDataPass UnifyMetaInstanceId不用填<br>当MetaType选择EMR_EXIT_META时，填写UnifyMetaInstanceId<br>当MetaType选择USER_CUSTOM_META时，填写MetaDataJdbcUrl MetaDataUser MetaDataPass</p>
+     * @param MetaDBInfo <p>MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser MetaDataPass UnifyMetaInstanceId不用填<br>当MetaType选择EMR_EXIT_META时，填写UnifyMetaInstanceId<br>当MetaType选择USER_CUSTOM_META时，填写MetaDataJdbcUrl MetaDataUser MetaDataPass</p>
      */
     public void setMetaDBInfo(CustomMetaDBInfo MetaDBInfo) {
         this.MetaDBInfo = MetaDBInfo;
     }
 
     /**
-     * Get 共享组件信息 
-     * @return DependService 共享组件信息
+     * Get <p>共享组件信息</p> 
+     * @return DependService <p>共享组件信息</p>
      */
     public DependService [] getDependService() {
         return this.DependService;
     }
 
     /**
-     * Set 共享组件信息
-     * @param DependService 共享组件信息
+     * Set <p>共享组件信息</p>
+     * @param DependService <p>共享组件信息</p>
      */
     public void setDependService(DependService [] DependService) {
         this.DependService = DependService;
     }
 
     /**
-     * Get 节点资源的规格，有几个可用区，就填几个，按顺序第一个为主可用区，第二个为备可用区，第三个为仲裁可用区。如果没有开启跨AZ，则长度为1即可。 
-     * @return ZoneResourceConfiguration 节点资源的规格，有几个可用区，就填几个，按顺序第一个为主可用区，第二个为备可用区，第三个为仲裁可用区。如果没有开启跨AZ，则长度为1即可。
+     * Get <p>节点资源的规格，有几个可用区，就填几个，按顺序第一个为主可用区，第二个为备可用区，第三个为仲裁可用区。如果没有开启跨AZ，则长度为1即可。</p> 
+     * @return ZoneResourceConfiguration <p>节点资源的规格，有几个可用区，就填几个，按顺序第一个为主可用区，第二个为备可用区，第三个为仲裁可用区。如果没有开启跨AZ，则长度为1即可。</p>
      */
     public ZoneResourceConfiguration [] getZoneResourceConfiguration() {
         return this.ZoneResourceConfiguration;
     }
 
     /**
-     * Set 节点资源的规格，有几个可用区，就填几个，按顺序第一个为主可用区，第二个为备可用区，第三个为仲裁可用区。如果没有开启跨AZ，则长度为1即可。
-     * @param ZoneResourceConfiguration 节点资源的规格，有几个可用区，就填几个，按顺序第一个为主可用区，第二个为备可用区，第三个为仲裁可用区。如果没有开启跨AZ，则长度为1即可。
+     * Set <p>节点资源的规格，有几个可用区，就填几个，按顺序第一个为主可用区，第二个为备可用区，第三个为仲裁可用区。如果没有开启跨AZ，则长度为1即可。</p>
+     * @param ZoneResourceConfiguration <p>节点资源的规格，有几个可用区，就填几个，按顺序第一个为主可用区，第二个为备可用区，第三个为仲裁可用区。如果没有开启跨AZ，则长度为1即可。</p>
      */
     public void setZoneResourceConfiguration(ZoneResourceConfiguration [] ZoneResourceConfiguration) {
         this.ZoneResourceConfiguration = ZoneResourceConfiguration;
     }
 
     /**
-     * Get cos桶路径，创建StarRocks存算分离集群时用到 
-     * @return CosBucket cos桶路径，创建StarRocks存算分离集群时用到
+     * Get <p>cos桶路径，创建StarRocks存算分离集群时用到</p> 
+     * @return CosBucket <p>cos桶路径，创建StarRocks存算分离集群时用到</p>
      */
     public String getCosBucket() {
         return this.CosBucket;
     }
 
     /**
-     * Set cos桶路径，创建StarRocks存算分离集群时用到
-     * @param CosBucket cos桶路径，创建StarRocks存算分离集群时用到
+     * Set <p>cos桶路径，创建StarRocks存算分离集群时用到</p>
+     * @param CosBucket <p>cos桶路径，创建StarRocks存算分离集群时用到</p>
      */
     public void setCosBucket(String CosBucket) {
         this.CosBucket = CosBucket;
     }
 
     /**
-     * Get 节点标识信息，目前只提供给tf平台使用 
-     * @return NodeMarks 节点标识信息，目前只提供给tf平台使用
+     * Get <p>节点标识信息，目前只提供给tf平台使用</p> 
+     * @return NodeMarks <p>节点标识信息，目前只提供给tf平台使用</p>
      */
     public NodeMark [] getNodeMarks() {
         return this.NodeMarks;
     }
 
     /**
-     * Set 节点标识信息，目前只提供给tf平台使用
-     * @param NodeMarks 节点标识信息，目前只提供给tf平台使用
+     * Set <p>节点标识信息，目前只提供给tf平台使用</p>
+     * @param NodeMarks <p>节点标识信息，目前只提供给tf平台使用</p>
      */
     public void setNodeMarks(NodeMark [] NodeMarks) {
         this.NodeMarks = NodeMarks;
     }
 
     /**
-     * Get clb id 
-     * @return LoadBalancerId clb id
+     * Get <p>clb id</p> 
+     * @return LoadBalancerId <p>clb id</p>
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set clb id
-     * @param LoadBalancerId clb id
+     * Set <p>clb id</p>
+     * @param LoadBalancerId <p>clb id</p>
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get 数据库版本：mysql8/tdsql8/mysql5 
-     * @return DefaultMetaVersion 数据库版本：mysql8/tdsql8/mysql5
+     * Get <p>数据库版本：mysql8/tdsql8/mysql5</p> 
+     * @return DefaultMetaVersion <p>数据库版本：mysql8/tdsql8/mysql5</p>
      */
     public String getDefaultMetaVersion() {
         return this.DefaultMetaVersion;
     }
 
     /**
-     * Set 数据库版本：mysql8/tdsql8/mysql5
-     * @param DefaultMetaVersion 数据库版本：mysql8/tdsql8/mysql5
+     * Set <p>数据库版本：mysql8/tdsql8/mysql5</p>
+     * @param DefaultMetaVersion <p>数据库版本：mysql8/tdsql8/mysql5</p>
      */
     public void setDefaultMetaVersion(String DefaultMetaVersion) {
         this.DefaultMetaVersion = DefaultMetaVersion;
     }
 
     /**
-     * Get 是否开通数据库审计 
-     * @return NeedCdbAudit 是否开通数据库审计
+     * Get <p>是否开通数据库审计</p> 
+     * @return NeedCdbAudit <p>是否开通数据库审计</p>
      */
     public Long getNeedCdbAudit() {
         return this.NeedCdbAudit;
     }
 
     /**
-     * Set 是否开通数据库审计
-     * @param NeedCdbAudit 是否开通数据库审计
+     * Set <p>是否开通数据库审计</p>
+     * @param NeedCdbAudit <p>是否开通数据库审计</p>
      */
     public void setNeedCdbAudit(Long NeedCdbAudit) {
         this.NeedCdbAudit = NeedCdbAudit;
     }
 
     /**
-     * Get 安全指定来源ip 
-     * @return SgIP 安全指定来源ip
+     * Get <p>安全指定来源ip</p> 
+     * @return SgIP <p>安全指定来源ip</p>
      */
     public String getSgIP() {
         return this.SgIP;
     }
 
     /**
-     * Set 安全指定来源ip
-     * @param SgIP 安全指定来源ip
+     * Set <p>安全指定来源ip</p>
+     * @param SgIP <p>安全指定来源ip</p>
      */
     public void setSgIP(String SgIP) {
         this.SgIP = SgIP;
+    }
+
+    /**
+     * Get <p>分区置放群组分区</p> 
+     * @return PartitionNumber <p>分区置放群组分区</p>
+     */
+    public Long getPartitionNumber() {
+        return this.PartitionNumber;
+    }
+
+    /**
+     * Set <p>分区置放群组分区</p>
+     * @param PartitionNumber <p>分区置放群组分区</p>
+     */
+    public void setPartitionNumber(Long PartitionNumber) {
+        this.PartitionNumber = PartitionNumber;
     }
 
     public CreateClusterRequest() {
@@ -823,6 +751,9 @@ public class CreateClusterRequest extends AbstractModel {
         if (source.SgIP != null) {
             this.SgIP = new String(source.SgIP);
         }
+        if (source.PartitionNumber != null) {
+            this.PartitionNumber = new Long(source.PartitionNumber);
+        }
     }
 
 
@@ -856,6 +787,7 @@ public class CreateClusterRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DefaultMetaVersion", this.DefaultMetaVersion);
         this.setParamSimple(map, prefix + "NeedCdbAudit", this.NeedCdbAudit);
         this.setParamSimple(map, prefix + "SgIP", this.SgIP);
+        this.setParamSimple(map, prefix + "PartitionNumber", this.PartitionNumber);
 
     }
 }

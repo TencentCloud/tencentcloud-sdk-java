@@ -66,6 +66,27 @@ public class ModifyOwnNumberApplyRequest extends AbstractModel {
     private Boolean LocalNumberTrimAC;
 
     /**
+    * 被叫格式透传 （完成透传用户输入，不做处理）
+    */
+    @SerializedName("CalleeFormatPassthrough")
+    @Expose
+    private Boolean CalleeFormatPassthrough;
+
+    /**
+    * 主叫格式透传 （完成透传用户输入，不做处理）
+    */
+    @SerializedName("CallerFormatPassthrough")
+    @Expose
+    private Boolean CallerFormatPassthrough;
+
+    /**
+    * 国际长途前缀码
+    */
+    @SerializedName("InternationalNumberPrefix")
+    @Expose
+    private String InternationalNumberPrefix;
+
+    /**
      * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
      * @return SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
@@ -161,6 +182,54 @@ public class ModifyOwnNumberApplyRequest extends AbstractModel {
         this.LocalNumberTrimAC = LocalNumberTrimAC;
     }
 
+    /**
+     * Get 被叫格式透传 （完成透传用户输入，不做处理） 
+     * @return CalleeFormatPassthrough 被叫格式透传 （完成透传用户输入，不做处理）
+     */
+    public Boolean getCalleeFormatPassthrough() {
+        return this.CalleeFormatPassthrough;
+    }
+
+    /**
+     * Set 被叫格式透传 （完成透传用户输入，不做处理）
+     * @param CalleeFormatPassthrough 被叫格式透传 （完成透传用户输入，不做处理）
+     */
+    public void setCalleeFormatPassthrough(Boolean CalleeFormatPassthrough) {
+        this.CalleeFormatPassthrough = CalleeFormatPassthrough;
+    }
+
+    /**
+     * Get 主叫格式透传 （完成透传用户输入，不做处理） 
+     * @return CallerFormatPassthrough 主叫格式透传 （完成透传用户输入，不做处理）
+     */
+    public Boolean getCallerFormatPassthrough() {
+        return this.CallerFormatPassthrough;
+    }
+
+    /**
+     * Set 主叫格式透传 （完成透传用户输入，不做处理）
+     * @param CallerFormatPassthrough 主叫格式透传 （完成透传用户输入，不做处理）
+     */
+    public void setCallerFormatPassthrough(Boolean CallerFormatPassthrough) {
+        this.CallerFormatPassthrough = CallerFormatPassthrough;
+    }
+
+    /**
+     * Get 国际长途前缀码 
+     * @return InternationalNumberPrefix 国际长途前缀码
+     */
+    public String getInternationalNumberPrefix() {
+        return this.InternationalNumberPrefix;
+    }
+
+    /**
+     * Set 国际长途前缀码
+     * @param InternationalNumberPrefix 国际长途前缀码
+     */
+    public void setInternationalNumberPrefix(String InternationalNumberPrefix) {
+        this.InternationalNumberPrefix = InternationalNumberPrefix;
+    }
+
     public ModifyOwnNumberApplyRequest() {
     }
 
@@ -190,6 +259,15 @@ public class ModifyOwnNumberApplyRequest extends AbstractModel {
         if (source.LocalNumberTrimAC != null) {
             this.LocalNumberTrimAC = new Boolean(source.LocalNumberTrimAC);
         }
+        if (source.CalleeFormatPassthrough != null) {
+            this.CalleeFormatPassthrough = new Boolean(source.CalleeFormatPassthrough);
+        }
+        if (source.CallerFormatPassthrough != null) {
+            this.CallerFormatPassthrough = new Boolean(source.CallerFormatPassthrough);
+        }
+        if (source.InternationalNumberPrefix != null) {
+            this.InternationalNumberPrefix = new String(source.InternationalNumberPrefix);
+        }
     }
 
 
@@ -203,6 +281,9 @@ public class ModifyOwnNumberApplyRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Prefix", this.Prefix);
         this.setParamSimple(map, prefix + "MobileNddPrefix", this.MobileNddPrefix);
         this.setParamSimple(map, prefix + "LocalNumberTrimAC", this.LocalNumberTrimAC);
+        this.setParamSimple(map, prefix + "CalleeFormatPassthrough", this.CalleeFormatPassthrough);
+        this.setParamSimple(map, prefix + "CallerFormatPassthrough", this.CallerFormatPassthrough);
+        this.setParamSimple(map, prefix + "InternationalNumberPrefix", this.InternationalNumberPrefix);
 
     }
 }

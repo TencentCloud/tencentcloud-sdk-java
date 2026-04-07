@@ -24,165 +24,115 @@ import java.util.HashMap;
 public class DescribeK8sApiAbnormalEventListRequest extends AbstractModel {
 
     /**
-    * 过滤条件。
-<li>TimeRange - string -是否必填: 否 - 时间范围筛选 ["2022-03-31 16:55:00", "2022-03-31 17:00:00"]</li>
-<li>MatchRules - string  - 是否必填: 否 -命中规则筛选</li>
-<li>RiskLevel - string  - 是否必填: 否 -威胁等级筛选</li>
-<li>Status - string  - 是否必填: 否 -事件状态筛选</li>
-<li>MatchRuleType - string  - 是否必填: 否 -命中规则类型筛选</li>
-<li>ClusterRunningStatus - string  - 是否必填: 否 -集群运行状态</li>
-<li>ClusterName - string  - 是否必填: 否 -集群名称</li>
-<li>ClusterID - string  - 是否必填: 否 -集群ID</li>
+    * <p>过滤条件。</p><li>TimeRange - string -是否必填: 否 - 时间范围筛选 ["2022-03-31 16:55:00", "2022-03-31 17:00:00"]</li><li>MatchRules - string  - 是否必填: 否 -命中规则筛选</li><li>RiskLevel - string  - 是否必填: 否 -威胁等级筛选</li><li>Status - string  - 是否必填: 否 -事件状态筛选</li><li>MatchRuleType - string  - 是否必填: 否 -命中规则类型筛选</li><li>ClusterRunningStatus - string  - 是否必填: 否 -集群运行状态</li><li>ClusterName - string  - 是否必填: 否 -集群名称</li><li>ClusterID - string  - 是否必填: 否 -集群ID</li>
     */
     @SerializedName("Filters")
     @Expose
     private RunTimeFilters [] Filters;
 
     /**
-    * 需要返回的数量，默认为10，最大值为100
+    * <p>需要返回的数量，默认为10，最大值为100</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量，默认为0。
+    * <p>偏移量，默认为0。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 排序方式
+    * <p>排序方式</p>
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * 排序字段
-LatestFoundTime: 最近生成时间
-AlarmCount: 告警数量
+    * <p>排序字段<br>LatestFoundTime: 最近生成时间<br>AlarmCount: 告警数量</p>
     */
     @SerializedName("By")
     @Expose
     private String By;
 
     /**
-     * Get 过滤条件。
-<li>TimeRange - string -是否必填: 否 - 时间范围筛选 ["2022-03-31 16:55:00", "2022-03-31 17:00:00"]</li>
-<li>MatchRules - string  - 是否必填: 否 -命中规则筛选</li>
-<li>RiskLevel - string  - 是否必填: 否 -威胁等级筛选</li>
-<li>Status - string  - 是否必填: 否 -事件状态筛选</li>
-<li>MatchRuleType - string  - 是否必填: 否 -命中规则类型筛选</li>
-<li>ClusterRunningStatus - string  - 是否必填: 否 -集群运行状态</li>
-<li>ClusterName - string  - 是否必填: 否 -集群名称</li>
-<li>ClusterID - string  - 是否必填: 否 -集群ID</li> 
-     * @return Filters 过滤条件。
-<li>TimeRange - string -是否必填: 否 - 时间范围筛选 ["2022-03-31 16:55:00", "2022-03-31 17:00:00"]</li>
-<li>MatchRules - string  - 是否必填: 否 -命中规则筛选</li>
-<li>RiskLevel - string  - 是否必填: 否 -威胁等级筛选</li>
-<li>Status - string  - 是否必填: 否 -事件状态筛选</li>
-<li>MatchRuleType - string  - 是否必填: 否 -命中规则类型筛选</li>
-<li>ClusterRunningStatus - string  - 是否必填: 否 -集群运行状态</li>
-<li>ClusterName - string  - 是否必填: 否 -集群名称</li>
-<li>ClusterID - string  - 是否必填: 否 -集群ID</li>
+     * Get <p>过滤条件。</p><li>TimeRange - string -是否必填: 否 - 时间范围筛选 ["2022-03-31 16:55:00", "2022-03-31 17:00:00"]</li><li>MatchRules - string  - 是否必填: 否 -命中规则筛选</li><li>RiskLevel - string  - 是否必填: 否 -威胁等级筛选</li><li>Status - string  - 是否必填: 否 -事件状态筛选</li><li>MatchRuleType - string  - 是否必填: 否 -命中规则类型筛选</li><li>ClusterRunningStatus - string  - 是否必填: 否 -集群运行状态</li><li>ClusterName - string  - 是否必填: 否 -集群名称</li><li>ClusterID - string  - 是否必填: 否 -集群ID</li> 
+     * @return Filters <p>过滤条件。</p><li>TimeRange - string -是否必填: 否 - 时间范围筛选 ["2022-03-31 16:55:00", "2022-03-31 17:00:00"]</li><li>MatchRules - string  - 是否必填: 否 -命中规则筛选</li><li>RiskLevel - string  - 是否必填: 否 -威胁等级筛选</li><li>Status - string  - 是否必填: 否 -事件状态筛选</li><li>MatchRuleType - string  - 是否必填: 否 -命中规则类型筛选</li><li>ClusterRunningStatus - string  - 是否必填: 否 -集群运行状态</li><li>ClusterName - string  - 是否必填: 否 -集群名称</li><li>ClusterID - string  - 是否必填: 否 -集群ID</li>
      */
     public RunTimeFilters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件。
-<li>TimeRange - string -是否必填: 否 - 时间范围筛选 ["2022-03-31 16:55:00", "2022-03-31 17:00:00"]</li>
-<li>MatchRules - string  - 是否必填: 否 -命中规则筛选</li>
-<li>RiskLevel - string  - 是否必填: 否 -威胁等级筛选</li>
-<li>Status - string  - 是否必填: 否 -事件状态筛选</li>
-<li>MatchRuleType - string  - 是否必填: 否 -命中规则类型筛选</li>
-<li>ClusterRunningStatus - string  - 是否必填: 否 -集群运行状态</li>
-<li>ClusterName - string  - 是否必填: 否 -集群名称</li>
-<li>ClusterID - string  - 是否必填: 否 -集群ID</li>
-     * @param Filters 过滤条件。
-<li>TimeRange - string -是否必填: 否 - 时间范围筛选 ["2022-03-31 16:55:00", "2022-03-31 17:00:00"]</li>
-<li>MatchRules - string  - 是否必填: 否 -命中规则筛选</li>
-<li>RiskLevel - string  - 是否必填: 否 -威胁等级筛选</li>
-<li>Status - string  - 是否必填: 否 -事件状态筛选</li>
-<li>MatchRuleType - string  - 是否必填: 否 -命中规则类型筛选</li>
-<li>ClusterRunningStatus - string  - 是否必填: 否 -集群运行状态</li>
-<li>ClusterName - string  - 是否必填: 否 -集群名称</li>
-<li>ClusterID - string  - 是否必填: 否 -集群ID</li>
+     * Set <p>过滤条件。</p><li>TimeRange - string -是否必填: 否 - 时间范围筛选 ["2022-03-31 16:55:00", "2022-03-31 17:00:00"]</li><li>MatchRules - string  - 是否必填: 否 -命中规则筛选</li><li>RiskLevel - string  - 是否必填: 否 -威胁等级筛选</li><li>Status - string  - 是否必填: 否 -事件状态筛选</li><li>MatchRuleType - string  - 是否必填: 否 -命中规则类型筛选</li><li>ClusterRunningStatus - string  - 是否必填: 否 -集群运行状态</li><li>ClusterName - string  - 是否必填: 否 -集群名称</li><li>ClusterID - string  - 是否必填: 否 -集群ID</li>
+     * @param Filters <p>过滤条件。</p><li>TimeRange - string -是否必填: 否 - 时间范围筛选 ["2022-03-31 16:55:00", "2022-03-31 17:00:00"]</li><li>MatchRules - string  - 是否必填: 否 -命中规则筛选</li><li>RiskLevel - string  - 是否必填: 否 -威胁等级筛选</li><li>Status - string  - 是否必填: 否 -事件状态筛选</li><li>MatchRuleType - string  - 是否必填: 否 -命中规则类型筛选</li><li>ClusterRunningStatus - string  - 是否必填: 否 -集群运行状态</li><li>ClusterName - string  - 是否必填: 否 -集群名称</li><li>ClusterID - string  - 是否必填: 否 -集群ID</li>
      */
     public void setFilters(RunTimeFilters [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 需要返回的数量，默认为10，最大值为100 
-     * @return Limit 需要返回的数量，默认为10，最大值为100
+     * Get <p>需要返回的数量，默认为10，最大值为100</p> 
+     * @return Limit <p>需要返回的数量，默认为10，最大值为100</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 需要返回的数量，默认为10，最大值为100
-     * @param Limit 需要返回的数量，默认为10，最大值为100
+     * Set <p>需要返回的数量，默认为10，最大值为100</p>
+     * @param Limit <p>需要返回的数量，默认为10，最大值为100</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量，默认为0。 
-     * @return Offset 偏移量，默认为0。
+     * Get <p>偏移量，默认为0。</p> 
+     * @return Offset <p>偏移量，默认为0。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为0。
-     * @param Offset 偏移量，默认为0。
+     * Set <p>偏移量，默认为0。</p>
+     * @param Offset <p>偏移量，默认为0。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 排序方式 
-     * @return Order 排序方式
+     * Get <p>排序方式</p> 
+     * @return Order <p>排序方式</p>
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set 排序方式
-     * @param Order 排序方式
+     * Set <p>排序方式</p>
+     * @param Order <p>排序方式</p>
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get 排序字段
-LatestFoundTime: 最近生成时间
-AlarmCount: 告警数量 
-     * @return By 排序字段
-LatestFoundTime: 最近生成时间
-AlarmCount: 告警数量
+     * Get <p>排序字段<br>LatestFoundTime: 最近生成时间<br>AlarmCount: 告警数量</p> 
+     * @return By <p>排序字段<br>LatestFoundTime: 最近生成时间<br>AlarmCount: 告警数量</p>
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set 排序字段
-LatestFoundTime: 最近生成时间
-AlarmCount: 告警数量
-     * @param By 排序字段
-LatestFoundTime: 最近生成时间
-AlarmCount: 告警数量
+     * Set <p>排序字段<br>LatestFoundTime: 最近生成时间<br>AlarmCount: 告警数量</p>
+     * @param By <p>排序字段<br>LatestFoundTime: 最近生成时间<br>AlarmCount: 告警数量</p>
      */
     public void setBy(String By) {
         this.By = By;

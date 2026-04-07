@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tcb.v20180608.models;
+package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,42 +21,16 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ReinstateEnvRequest extends AbstractModel {
+public class ActivateSSAIRequest extends AbstractModel {
 
-    /**
-    * 环境ID
-    */
-    @SerializedName("EnvId")
-    @Expose
-    private String EnvId;
-
-    /**
-     * Get 环境ID 
-     * @return EnvId 环境ID
-     */
-    public String getEnvId() {
-        return this.EnvId;
-    }
-
-    /**
-     * Set 环境ID
-     * @param EnvId 环境ID
-     */
-    public void setEnvId(String EnvId) {
-        this.EnvId = EnvId;
-    }
-
-    public ReinstateEnvRequest() {
+    public ActivateSSAIRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ReinstateEnvRequest(ReinstateEnvRequest source) {
-        if (source.EnvId != null) {
-            this.EnvId = new String(source.EnvId);
-        }
+    public ActivateSSAIRequest(ActivateSSAIRequest source) {
     }
 
 
@@ -64,7 +38,6 @@ public class ReinstateEnvRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "EnvId", this.EnvId);
 
     }
 }

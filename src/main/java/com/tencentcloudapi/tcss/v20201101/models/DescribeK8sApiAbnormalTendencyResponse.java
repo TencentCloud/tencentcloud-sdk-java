@@ -24,11 +24,18 @@ import java.util.HashMap;
 public class DescribeK8sApiAbnormalTendencyResponse extends AbstractModel {
 
     /**
-    * 趋势列表
+    * <p>趋势列表</p>
     */
     @SerializedName("List")
     @Expose
     private K8sApiAbnormalTendencyItem [] List;
+
+    /**
+    * <p>规则类型对应中文</p>
+    */
+    @SerializedName("RuleTypeZhSet")
+    @Expose
+    private K8SAPIRuleTypeZhItem [] RuleTypeZhSet;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +45,35 @@ public class DescribeK8sApiAbnormalTendencyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 趋势列表 
-     * @return List 趋势列表
+     * Get <p>趋势列表</p> 
+     * @return List <p>趋势列表</p>
      */
     public K8sApiAbnormalTendencyItem [] getList() {
         return this.List;
     }
 
     /**
-     * Set 趋势列表
-     * @param List 趋势列表
+     * Set <p>趋势列表</p>
+     * @param List <p>趋势列表</p>
      */
     public void setList(K8sApiAbnormalTendencyItem [] List) {
         this.List = List;
+    }
+
+    /**
+     * Get <p>规则类型对应中文</p> 
+     * @return RuleTypeZhSet <p>规则类型对应中文</p>
+     */
+    public K8SAPIRuleTypeZhItem [] getRuleTypeZhSet() {
+        return this.RuleTypeZhSet;
+    }
+
+    /**
+     * Set <p>规则类型对应中文</p>
+     * @param RuleTypeZhSet <p>规则类型对应中文</p>
+     */
+    public void setRuleTypeZhSet(K8SAPIRuleTypeZhItem [] RuleTypeZhSet) {
+        this.RuleTypeZhSet = RuleTypeZhSet;
     }
 
     /**
@@ -83,6 +106,12 @@ public class DescribeK8sApiAbnormalTendencyResponse extends AbstractModel {
                 this.List[i] = new K8sApiAbnormalTendencyItem(source.List[i]);
             }
         }
+        if (source.RuleTypeZhSet != null) {
+            this.RuleTypeZhSet = new K8SAPIRuleTypeZhItem[source.RuleTypeZhSet.length];
+            for (int i = 0; i < source.RuleTypeZhSet.length; i++) {
+                this.RuleTypeZhSet[i] = new K8SAPIRuleTypeZhItem(source.RuleTypeZhSet[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -94,6 +123,7 @@ public class DescribeK8sApiAbnormalTendencyResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "List.", this.List);
+        this.setParamArrayObj(map, prefix + "RuleTypeZhSet.", this.RuleTypeZhSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

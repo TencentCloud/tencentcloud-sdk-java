@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ExportContractReviewResultResponse extends AbstractModel {
 
     /**
-    * 文件下载链接
+    * <p>文件下载链接</p>
     */
     @SerializedName("Url")
     @Expose
@@ -38,16 +38,16 @@ public class ExportContractReviewResultResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 文件下载链接 
-     * @return Url 文件下载链接
+     * Get <p>文件下载链接</p> 
+     * @return Url <p>文件下载链接</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 文件下载链接
-     * @param Url 文件下载链接
+     * Set <p>文件下载链接</p>
+     * @param Url <p>文件下载链接</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;

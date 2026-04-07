@@ -24,539 +24,532 @@ import java.util.HashMap;
 public class ScaleOutClusterRequest extends AbstractModel {
 
     /**
-    * 节点计费模式。取值范围：
-<li>PREPAID：预付费，即包年包月。</li>
-<li>POSTPAID_BY_HOUR：按小时后付费。</li>
-<li>SPOTPAID：竞价付费（仅支持TASK节点）。</li>
+    * <p>节点计费模式。取值范围：</p><li>PREPAID：预付费，即包年包月。</li><li>POSTPAID_BY_HOUR：按小时后付费。</li><li>SPOTPAID：竞价付费（仅支持TASK节点）。</li>
     */
     @SerializedName("InstanceChargeType")
     @Expose
     private String InstanceChargeType;
 
     /**
-    * 集群实例ID。
+    * <p>集群实例ID。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 扩容节点类型以及数量
+    * <p>扩容节点类型以及数量</p>
     */
     @SerializedName("ScaleOutNodeConfig")
     @Expose
     private ScaleOutNodeConfig ScaleOutNodeConfig;
 
     /**
-    * 唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-****-****-****-fae36063280
+    * <p>唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-<strong><strong>-</strong></strong>-****-fae36063280</p>
     */
     @SerializedName("ClientToken")
     @Expose
     private String ClientToken;
 
     /**
-    * 即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
+    * <p>即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。</p>
     */
     @SerializedName("InstanceChargePrepaid")
     @Expose
     private InstanceChargePrepaid InstanceChargePrepaid;
 
     /**
-    * [引导操作](https://cloud.tencent.com/document/product/589/35656)脚本设置。
+    * <p><a href="https://cloud.tencent.com/document/product/589/35656">引导操作</a>脚本设置。</p>
     */
     @SerializedName("ScriptBootstrapActionConfig")
     @Expose
     private ScriptBootstrapActionConfig [] ScriptBootstrapActionConfig;
 
     /**
-    * 扩容部署服务，新增节点将默认继承当前节点类型中所部署服务，部署服务含默认可选服务，该参数仅支持可选服务填写，如：存量task节点已部署HDFS、YARN、impala；使用api扩容task节不部署impala时，部署服务仅填写HDFS、YARN。[组件名对应的映射关系表](https://cloud.tencent.com/document/product/589/98760)。
+    * <p>扩容部署服务，新增节点将默认继承当前节点类型中所部署服务，部署服务含默认可选服务，该参数仅支持可选服务填写，如：存量task节点已部署HDFS、YARN、impala；使用api扩容task节不部署impala时，部署服务仅填写HDFS、YARN。<a href="https://cloud.tencent.com/document/product/589/98760">组件名对应的映射关系表</a>。</p>
     */
     @SerializedName("SoftDeployInfo")
     @Expose
     private Long [] SoftDeployInfo;
 
     /**
-    * 部署进程，默认部署扩容服务的全部进程，支持修改部署进程，如：当前task节点部署服务为：HDFS、YARN、impala，默认部署服务为：DataNode,NodeManager,ImpalaServer，若用户需修改部署进程信息，部署进程：	DataNode,NodeManager,ImpalaServerCoordinator或DataNode,NodeManager,ImpalaServerExecutor。[进程名对应的映射关系表](https://cloud.tencent.com/document/product/589/98760)。
+    * <p>部署进程，默认部署扩容服务的全部进程，支持修改部署进程，如：当前task节点部署服务为：HDFS、YARN、impala，默认部署服务为：DataNode,NodeManager,ImpalaServer，若用户需修改部署进程信息，部署进程：    DataNode,NodeManager,ImpalaServerCoordinator或DataNode,NodeManager,ImpalaServerExecutor。<a href="https://cloud.tencent.com/document/product/589/98760">进程名对应的映射关系表</a>。</p>
     */
     @SerializedName("ServiceNodeInfo")
     @Expose
     private Long [] ServiceNodeInfo;
 
     /**
-    * 分散置放群组ID列表，当前只支持指定一个。
-该参数可以通过调用 [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/product/213/17810)的返回值中的DisasterRecoverGroupId字段来获取。
+    * <p>分散置放群组ID列表，当前只支持指定一个。<br>该参数可以通过调用 <a href="https://cloud.tencent.com/document/product/213/17810">DescribeDisasterRecoverGroups</a>的返回值中的DisasterRecoverGroupId字段来获取。</p>
     */
     @SerializedName("DisasterRecoverGroupIds")
     @Expose
     private String [] DisasterRecoverGroupIds;
 
     /**
-    * 扩容节点绑定标签列表。
+    * <p>扩容节点绑定标签列表。</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 扩容所选资源类型，可选范围为"HOST","POD","MNode"，HOST为普通的CVM资源，POD为TKE集群或EKS集群提供的资源,MNode为全托管资源类型
+    * <p>扩容所选资源类型，可选范围为&quot;HOST&quot;,&quot;POD&quot;,&quot;MNode&quot;，HOST为普通的CVM资源，POD为TKE集群或EKS集群提供的资源,MNode为全托管资源类型</p>
     */
     @SerializedName("HardwareSourceType")
     @Expose
     private String HardwareSourceType;
 
     /**
-    * Pod相关资源信息
+    * <p>Pod相关资源信息</p>
     */
     @SerializedName("PodSpecInfo")
     @Expose
     private PodSpecInfo PodSpecInfo;
 
     /**
-    * 使用clickhouse集群扩容时，选择的机器分组名称
+    * <p>使用clickhouse集群扩容时，选择的机器分组名称</p>
     */
     @SerializedName("ClickHouseClusterName")
     @Expose
     private String ClickHouseClusterName;
 
     /**
-    * 使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组
+    * <p>使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组</p>
     */
     @SerializedName("ClickHouseClusterType")
     @Expose
     private String ClickHouseClusterType;
 
     /**
-    * 扩容指定 Yarn Node Label
+    * <p>扩容指定 Yarn Node Label</p>
     */
     @SerializedName("YarnNodeLabel")
     @Expose
     private String YarnNodeLabel;
 
     /**
-    * 扩容后是否启动服务，默认取值否
-<li>true：是</li>
-<li>false：否</li>
+    * <p>扩容后是否启动服务，默认取值否</p><li>true：是</li><li>false：否</li>
     */
     @SerializedName("EnableStartServiceFlag")
     @Expose
     private Boolean EnableStartServiceFlag;
 
     /**
-    * 规格设置
+    * <p>规格设置</p>
     */
     @SerializedName("ResourceSpec")
     @Expose
     private NodeResourceSpec ResourceSpec;
 
     /**
-    * 实例所属的可用区，例如ap-guangzhou-1。该参数也可以通过调用[DescribeZones](https://cloud.tencent.com/document/product/213/15707) 的返回值中的Zone字段来获取。
+    * <p>实例所属的可用区，例如ap-guangzhou-1。该参数也可以通过调用<a href="https://cloud.tencent.com/document/product/213/15707">DescribeZones</a> 的返回值中的Zone字段来获取。</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 子网，默认是集群创建时的子网
+    * <p>子网，默认是集群创建时的子网</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 扩容指定配置组
+    * <p>扩容指定配置组</p>
     */
     @SerializedName("ScaleOutServiceConfGroupsInfo")
     @Expose
     private ScaleOutServiceConfGroupsInfo [] ScaleOutServiceConfGroupsInfo;
 
     /**
-    * 节点标记信息，当前只提供给tf平台使用
+    * <p>节点标记信息，当前只提供给tf平台使用</p>
     */
     @SerializedName("NodeMarks")
     @Expose
     private NodeMark NodeMarks;
 
     /**
-    * 扩容指定计算组名称
+    * <p>扩容指定计算组名称</p>
     */
     @SerializedName("WarehouseName")
     @Expose
     private String WarehouseName;
 
     /**
-     * Get 节点计费模式。取值范围：
-<li>PREPAID：预付费，即包年包月。</li>
-<li>POSTPAID_BY_HOUR：按小时后付费。</li>
-<li>SPOTPAID：竞价付费（仅支持TASK节点）。</li> 
-     * @return InstanceChargeType 节点计费模式。取值范围：
-<li>PREPAID：预付费，即包年包月。</li>
-<li>POSTPAID_BY_HOUR：按小时后付费。</li>
-<li>SPOTPAID：竞价付费（仅支持TASK节点）。</li>
+    * <p>分区置放群组分区</p>
+    */
+    @SerializedName("PartitionNumber")
+    @Expose
+    private Long PartitionNumber;
+
+    /**
+     * Get <p>节点计费模式。取值范围：</p><li>PREPAID：预付费，即包年包月。</li><li>POSTPAID_BY_HOUR：按小时后付费。</li><li>SPOTPAID：竞价付费（仅支持TASK节点）。</li> 
+     * @return InstanceChargeType <p>节点计费模式。取值范围：</p><li>PREPAID：预付费，即包年包月。</li><li>POSTPAID_BY_HOUR：按小时后付费。</li><li>SPOTPAID：竞价付费（仅支持TASK节点）。</li>
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set 节点计费模式。取值范围：
-<li>PREPAID：预付费，即包年包月。</li>
-<li>POSTPAID_BY_HOUR：按小时后付费。</li>
-<li>SPOTPAID：竞价付费（仅支持TASK节点）。</li>
-     * @param InstanceChargeType 节点计费模式。取值范围：
-<li>PREPAID：预付费，即包年包月。</li>
-<li>POSTPAID_BY_HOUR：按小时后付费。</li>
-<li>SPOTPAID：竞价付费（仅支持TASK节点）。</li>
+     * Set <p>节点计费模式。取值范围：</p><li>PREPAID：预付费，即包年包月。</li><li>POSTPAID_BY_HOUR：按小时后付费。</li><li>SPOTPAID：竞价付费（仅支持TASK节点）。</li>
+     * @param InstanceChargeType <p>节点计费模式。取值范围：</p><li>PREPAID：预付费，即包年包月。</li><li>POSTPAID_BY_HOUR：按小时后付费。</li><li>SPOTPAID：竞价付费（仅支持TASK节点）。</li>
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
     }
 
     /**
-     * Get 集群实例ID。 
-     * @return InstanceId 集群实例ID。
+     * Get <p>集群实例ID。</p> 
+     * @return InstanceId <p>集群实例ID。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 集群实例ID。
-     * @param InstanceId 集群实例ID。
+     * Set <p>集群实例ID。</p>
+     * @param InstanceId <p>集群实例ID。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 扩容节点类型以及数量 
-     * @return ScaleOutNodeConfig 扩容节点类型以及数量
+     * Get <p>扩容节点类型以及数量</p> 
+     * @return ScaleOutNodeConfig <p>扩容节点类型以及数量</p>
      */
     public ScaleOutNodeConfig getScaleOutNodeConfig() {
         return this.ScaleOutNodeConfig;
     }
 
     /**
-     * Set 扩容节点类型以及数量
-     * @param ScaleOutNodeConfig 扩容节点类型以及数量
+     * Set <p>扩容节点类型以及数量</p>
+     * @param ScaleOutNodeConfig <p>扩容节点类型以及数量</p>
      */
     public void setScaleOutNodeConfig(ScaleOutNodeConfig ScaleOutNodeConfig) {
         this.ScaleOutNodeConfig = ScaleOutNodeConfig;
     }
 
     /**
-     * Get 唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-****-****-****-fae36063280 
-     * @return ClientToken 唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-****-****-****-fae36063280
+     * Get <p>唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-<strong><strong>-</strong></strong>-****-fae36063280</p> 
+     * @return ClientToken <p>唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-<strong><strong>-</strong></strong>-****-fae36063280</p>
      */
     public String getClientToken() {
         return this.ClientToken;
     }
 
     /**
-     * Set 唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-****-****-****-fae36063280
-     * @param ClientToken 唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-****-****-****-fae36063280
+     * Set <p>唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-<strong><strong>-</strong></strong>-****-fae36063280</p>
+     * @param ClientToken <p>唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-<strong><strong>-</strong></strong>-****-fae36063280</p>
      */
     public void setClientToken(String ClientToken) {
         this.ClientToken = ClientToken;
     }
 
     /**
-     * Get 即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。 
-     * @return InstanceChargePrepaid 即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
+     * Get <p>即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。</p> 
+     * @return InstanceChargePrepaid <p>即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。</p>
      */
     public InstanceChargePrepaid getInstanceChargePrepaid() {
         return this.InstanceChargePrepaid;
     }
 
     /**
-     * Set 即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
-     * @param InstanceChargePrepaid 即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
+     * Set <p>即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。</p>
+     * @param InstanceChargePrepaid <p>即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。</p>
      */
     public void setInstanceChargePrepaid(InstanceChargePrepaid InstanceChargePrepaid) {
         this.InstanceChargePrepaid = InstanceChargePrepaid;
     }
 
     /**
-     * Get [引导操作](https://cloud.tencent.com/document/product/589/35656)脚本设置。 
-     * @return ScriptBootstrapActionConfig [引导操作](https://cloud.tencent.com/document/product/589/35656)脚本设置。
+     * Get <p><a href="https://cloud.tencent.com/document/product/589/35656">引导操作</a>脚本设置。</p> 
+     * @return ScriptBootstrapActionConfig <p><a href="https://cloud.tencent.com/document/product/589/35656">引导操作</a>脚本设置。</p>
      */
     public ScriptBootstrapActionConfig [] getScriptBootstrapActionConfig() {
         return this.ScriptBootstrapActionConfig;
     }
 
     /**
-     * Set [引导操作](https://cloud.tencent.com/document/product/589/35656)脚本设置。
-     * @param ScriptBootstrapActionConfig [引导操作](https://cloud.tencent.com/document/product/589/35656)脚本设置。
+     * Set <p><a href="https://cloud.tencent.com/document/product/589/35656">引导操作</a>脚本设置。</p>
+     * @param ScriptBootstrapActionConfig <p><a href="https://cloud.tencent.com/document/product/589/35656">引导操作</a>脚本设置。</p>
      */
     public void setScriptBootstrapActionConfig(ScriptBootstrapActionConfig [] ScriptBootstrapActionConfig) {
         this.ScriptBootstrapActionConfig = ScriptBootstrapActionConfig;
     }
 
     /**
-     * Get 扩容部署服务，新增节点将默认继承当前节点类型中所部署服务，部署服务含默认可选服务，该参数仅支持可选服务填写，如：存量task节点已部署HDFS、YARN、impala；使用api扩容task节不部署impala时，部署服务仅填写HDFS、YARN。[组件名对应的映射关系表](https://cloud.tencent.com/document/product/589/98760)。 
-     * @return SoftDeployInfo 扩容部署服务，新增节点将默认继承当前节点类型中所部署服务，部署服务含默认可选服务，该参数仅支持可选服务填写，如：存量task节点已部署HDFS、YARN、impala；使用api扩容task节不部署impala时，部署服务仅填写HDFS、YARN。[组件名对应的映射关系表](https://cloud.tencent.com/document/product/589/98760)。
+     * Get <p>扩容部署服务，新增节点将默认继承当前节点类型中所部署服务，部署服务含默认可选服务，该参数仅支持可选服务填写，如：存量task节点已部署HDFS、YARN、impala；使用api扩容task节不部署impala时，部署服务仅填写HDFS、YARN。<a href="https://cloud.tencent.com/document/product/589/98760">组件名对应的映射关系表</a>。</p> 
+     * @return SoftDeployInfo <p>扩容部署服务，新增节点将默认继承当前节点类型中所部署服务，部署服务含默认可选服务，该参数仅支持可选服务填写，如：存量task节点已部署HDFS、YARN、impala；使用api扩容task节不部署impala时，部署服务仅填写HDFS、YARN。<a href="https://cloud.tencent.com/document/product/589/98760">组件名对应的映射关系表</a>。</p>
      */
     public Long [] getSoftDeployInfo() {
         return this.SoftDeployInfo;
     }
 
     /**
-     * Set 扩容部署服务，新增节点将默认继承当前节点类型中所部署服务，部署服务含默认可选服务，该参数仅支持可选服务填写，如：存量task节点已部署HDFS、YARN、impala；使用api扩容task节不部署impala时，部署服务仅填写HDFS、YARN。[组件名对应的映射关系表](https://cloud.tencent.com/document/product/589/98760)。
-     * @param SoftDeployInfo 扩容部署服务，新增节点将默认继承当前节点类型中所部署服务，部署服务含默认可选服务，该参数仅支持可选服务填写，如：存量task节点已部署HDFS、YARN、impala；使用api扩容task节不部署impala时，部署服务仅填写HDFS、YARN。[组件名对应的映射关系表](https://cloud.tencent.com/document/product/589/98760)。
+     * Set <p>扩容部署服务，新增节点将默认继承当前节点类型中所部署服务，部署服务含默认可选服务，该参数仅支持可选服务填写，如：存量task节点已部署HDFS、YARN、impala；使用api扩容task节不部署impala时，部署服务仅填写HDFS、YARN。<a href="https://cloud.tencent.com/document/product/589/98760">组件名对应的映射关系表</a>。</p>
+     * @param SoftDeployInfo <p>扩容部署服务，新增节点将默认继承当前节点类型中所部署服务，部署服务含默认可选服务，该参数仅支持可选服务填写，如：存量task节点已部署HDFS、YARN、impala；使用api扩容task节不部署impala时，部署服务仅填写HDFS、YARN。<a href="https://cloud.tencent.com/document/product/589/98760">组件名对应的映射关系表</a>。</p>
      */
     public void setSoftDeployInfo(Long [] SoftDeployInfo) {
         this.SoftDeployInfo = SoftDeployInfo;
     }
 
     /**
-     * Get 部署进程，默认部署扩容服务的全部进程，支持修改部署进程，如：当前task节点部署服务为：HDFS、YARN、impala，默认部署服务为：DataNode,NodeManager,ImpalaServer，若用户需修改部署进程信息，部署进程：	DataNode,NodeManager,ImpalaServerCoordinator或DataNode,NodeManager,ImpalaServerExecutor。[进程名对应的映射关系表](https://cloud.tencent.com/document/product/589/98760)。 
-     * @return ServiceNodeInfo 部署进程，默认部署扩容服务的全部进程，支持修改部署进程，如：当前task节点部署服务为：HDFS、YARN、impala，默认部署服务为：DataNode,NodeManager,ImpalaServer，若用户需修改部署进程信息，部署进程：	DataNode,NodeManager,ImpalaServerCoordinator或DataNode,NodeManager,ImpalaServerExecutor。[进程名对应的映射关系表](https://cloud.tencent.com/document/product/589/98760)。
+     * Get <p>部署进程，默认部署扩容服务的全部进程，支持修改部署进程，如：当前task节点部署服务为：HDFS、YARN、impala，默认部署服务为：DataNode,NodeManager,ImpalaServer，若用户需修改部署进程信息，部署进程：    DataNode,NodeManager,ImpalaServerCoordinator或DataNode,NodeManager,ImpalaServerExecutor。<a href="https://cloud.tencent.com/document/product/589/98760">进程名对应的映射关系表</a>。</p> 
+     * @return ServiceNodeInfo <p>部署进程，默认部署扩容服务的全部进程，支持修改部署进程，如：当前task节点部署服务为：HDFS、YARN、impala，默认部署服务为：DataNode,NodeManager,ImpalaServer，若用户需修改部署进程信息，部署进程：    DataNode,NodeManager,ImpalaServerCoordinator或DataNode,NodeManager,ImpalaServerExecutor。<a href="https://cloud.tencent.com/document/product/589/98760">进程名对应的映射关系表</a>。</p>
      */
     public Long [] getServiceNodeInfo() {
         return this.ServiceNodeInfo;
     }
 
     /**
-     * Set 部署进程，默认部署扩容服务的全部进程，支持修改部署进程，如：当前task节点部署服务为：HDFS、YARN、impala，默认部署服务为：DataNode,NodeManager,ImpalaServer，若用户需修改部署进程信息，部署进程：	DataNode,NodeManager,ImpalaServerCoordinator或DataNode,NodeManager,ImpalaServerExecutor。[进程名对应的映射关系表](https://cloud.tencent.com/document/product/589/98760)。
-     * @param ServiceNodeInfo 部署进程，默认部署扩容服务的全部进程，支持修改部署进程，如：当前task节点部署服务为：HDFS、YARN、impala，默认部署服务为：DataNode,NodeManager,ImpalaServer，若用户需修改部署进程信息，部署进程：	DataNode,NodeManager,ImpalaServerCoordinator或DataNode,NodeManager,ImpalaServerExecutor。[进程名对应的映射关系表](https://cloud.tencent.com/document/product/589/98760)。
+     * Set <p>部署进程，默认部署扩容服务的全部进程，支持修改部署进程，如：当前task节点部署服务为：HDFS、YARN、impala，默认部署服务为：DataNode,NodeManager,ImpalaServer，若用户需修改部署进程信息，部署进程：    DataNode,NodeManager,ImpalaServerCoordinator或DataNode,NodeManager,ImpalaServerExecutor。<a href="https://cloud.tencent.com/document/product/589/98760">进程名对应的映射关系表</a>。</p>
+     * @param ServiceNodeInfo <p>部署进程，默认部署扩容服务的全部进程，支持修改部署进程，如：当前task节点部署服务为：HDFS、YARN、impala，默认部署服务为：DataNode,NodeManager,ImpalaServer，若用户需修改部署进程信息，部署进程：    DataNode,NodeManager,ImpalaServerCoordinator或DataNode,NodeManager,ImpalaServerExecutor。<a href="https://cloud.tencent.com/document/product/589/98760">进程名对应的映射关系表</a>。</p>
      */
     public void setServiceNodeInfo(Long [] ServiceNodeInfo) {
         this.ServiceNodeInfo = ServiceNodeInfo;
     }
 
     /**
-     * Get 分散置放群组ID列表，当前只支持指定一个。
-该参数可以通过调用 [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/product/213/17810)的返回值中的DisasterRecoverGroupId字段来获取。 
-     * @return DisasterRecoverGroupIds 分散置放群组ID列表，当前只支持指定一个。
-该参数可以通过调用 [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/product/213/17810)的返回值中的DisasterRecoverGroupId字段来获取。
+     * Get <p>分散置放群组ID列表，当前只支持指定一个。<br>该参数可以通过调用 <a href="https://cloud.tencent.com/document/product/213/17810">DescribeDisasterRecoverGroups</a>的返回值中的DisasterRecoverGroupId字段来获取。</p> 
+     * @return DisasterRecoverGroupIds <p>分散置放群组ID列表，当前只支持指定一个。<br>该参数可以通过调用 <a href="https://cloud.tencent.com/document/product/213/17810">DescribeDisasterRecoverGroups</a>的返回值中的DisasterRecoverGroupId字段来获取。</p>
      */
     public String [] getDisasterRecoverGroupIds() {
         return this.DisasterRecoverGroupIds;
     }
 
     /**
-     * Set 分散置放群组ID列表，当前只支持指定一个。
-该参数可以通过调用 [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/product/213/17810)的返回值中的DisasterRecoverGroupId字段来获取。
-     * @param DisasterRecoverGroupIds 分散置放群组ID列表，当前只支持指定一个。
-该参数可以通过调用 [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/product/213/17810)的返回值中的DisasterRecoverGroupId字段来获取。
+     * Set <p>分散置放群组ID列表，当前只支持指定一个。<br>该参数可以通过调用 <a href="https://cloud.tencent.com/document/product/213/17810">DescribeDisasterRecoverGroups</a>的返回值中的DisasterRecoverGroupId字段来获取。</p>
+     * @param DisasterRecoverGroupIds <p>分散置放群组ID列表，当前只支持指定一个。<br>该参数可以通过调用 <a href="https://cloud.tencent.com/document/product/213/17810">DescribeDisasterRecoverGroups</a>的返回值中的DisasterRecoverGroupId字段来获取。</p>
      */
     public void setDisasterRecoverGroupIds(String [] DisasterRecoverGroupIds) {
         this.DisasterRecoverGroupIds = DisasterRecoverGroupIds;
     }
 
     /**
-     * Get 扩容节点绑定标签列表。 
-     * @return Tags 扩容节点绑定标签列表。
+     * Get <p>扩容节点绑定标签列表。</p> 
+     * @return Tags <p>扩容节点绑定标签列表。</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 扩容节点绑定标签列表。
-     * @param Tags 扩容节点绑定标签列表。
+     * Set <p>扩容节点绑定标签列表。</p>
+     * @param Tags <p>扩容节点绑定标签列表。</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 扩容所选资源类型，可选范围为"HOST","POD","MNode"，HOST为普通的CVM资源，POD为TKE集群或EKS集群提供的资源,MNode为全托管资源类型 
-     * @return HardwareSourceType 扩容所选资源类型，可选范围为"HOST","POD","MNode"，HOST为普通的CVM资源，POD为TKE集群或EKS集群提供的资源,MNode为全托管资源类型
+     * Get <p>扩容所选资源类型，可选范围为&quot;HOST&quot;,&quot;POD&quot;,&quot;MNode&quot;，HOST为普通的CVM资源，POD为TKE集群或EKS集群提供的资源,MNode为全托管资源类型</p> 
+     * @return HardwareSourceType <p>扩容所选资源类型，可选范围为&quot;HOST&quot;,&quot;POD&quot;,&quot;MNode&quot;，HOST为普通的CVM资源，POD为TKE集群或EKS集群提供的资源,MNode为全托管资源类型</p>
      */
     public String getHardwareSourceType() {
         return this.HardwareSourceType;
     }
 
     /**
-     * Set 扩容所选资源类型，可选范围为"HOST","POD","MNode"，HOST为普通的CVM资源，POD为TKE集群或EKS集群提供的资源,MNode为全托管资源类型
-     * @param HardwareSourceType 扩容所选资源类型，可选范围为"HOST","POD","MNode"，HOST为普通的CVM资源，POD为TKE集群或EKS集群提供的资源,MNode为全托管资源类型
+     * Set <p>扩容所选资源类型，可选范围为&quot;HOST&quot;,&quot;POD&quot;,&quot;MNode&quot;，HOST为普通的CVM资源，POD为TKE集群或EKS集群提供的资源,MNode为全托管资源类型</p>
+     * @param HardwareSourceType <p>扩容所选资源类型，可选范围为&quot;HOST&quot;,&quot;POD&quot;,&quot;MNode&quot;，HOST为普通的CVM资源，POD为TKE集群或EKS集群提供的资源,MNode为全托管资源类型</p>
      */
     public void setHardwareSourceType(String HardwareSourceType) {
         this.HardwareSourceType = HardwareSourceType;
     }
 
     /**
-     * Get Pod相关资源信息 
-     * @return PodSpecInfo Pod相关资源信息
+     * Get <p>Pod相关资源信息</p> 
+     * @return PodSpecInfo <p>Pod相关资源信息</p>
      */
     public PodSpecInfo getPodSpecInfo() {
         return this.PodSpecInfo;
     }
 
     /**
-     * Set Pod相关资源信息
-     * @param PodSpecInfo Pod相关资源信息
+     * Set <p>Pod相关资源信息</p>
+     * @param PodSpecInfo <p>Pod相关资源信息</p>
      */
     public void setPodSpecInfo(PodSpecInfo PodSpecInfo) {
         this.PodSpecInfo = PodSpecInfo;
     }
 
     /**
-     * Get 使用clickhouse集群扩容时，选择的机器分组名称 
-     * @return ClickHouseClusterName 使用clickhouse集群扩容时，选择的机器分组名称
+     * Get <p>使用clickhouse集群扩容时，选择的机器分组名称</p> 
+     * @return ClickHouseClusterName <p>使用clickhouse集群扩容时，选择的机器分组名称</p>
      */
     public String getClickHouseClusterName() {
         return this.ClickHouseClusterName;
     }
 
     /**
-     * Set 使用clickhouse集群扩容时，选择的机器分组名称
-     * @param ClickHouseClusterName 使用clickhouse集群扩容时，选择的机器分组名称
+     * Set <p>使用clickhouse集群扩容时，选择的机器分组名称</p>
+     * @param ClickHouseClusterName <p>使用clickhouse集群扩容时，选择的机器分组名称</p>
      */
     public void setClickHouseClusterName(String ClickHouseClusterName) {
         this.ClickHouseClusterName = ClickHouseClusterName;
     }
 
     /**
-     * Get 使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组 
-     * @return ClickHouseClusterType 使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组
+     * Get <p>使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组</p> 
+     * @return ClickHouseClusterType <p>使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组</p>
      */
     public String getClickHouseClusterType() {
         return this.ClickHouseClusterType;
     }
 
     /**
-     * Set 使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组
-     * @param ClickHouseClusterType 使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组
+     * Set <p>使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组</p>
+     * @param ClickHouseClusterType <p>使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组</p>
      */
     public void setClickHouseClusterType(String ClickHouseClusterType) {
         this.ClickHouseClusterType = ClickHouseClusterType;
     }
 
     /**
-     * Get 扩容指定 Yarn Node Label 
-     * @return YarnNodeLabel 扩容指定 Yarn Node Label
+     * Get <p>扩容指定 Yarn Node Label</p> 
+     * @return YarnNodeLabel <p>扩容指定 Yarn Node Label</p>
      */
     public String getYarnNodeLabel() {
         return this.YarnNodeLabel;
     }
 
     /**
-     * Set 扩容指定 Yarn Node Label
-     * @param YarnNodeLabel 扩容指定 Yarn Node Label
+     * Set <p>扩容指定 Yarn Node Label</p>
+     * @param YarnNodeLabel <p>扩容指定 Yarn Node Label</p>
      */
     public void setYarnNodeLabel(String YarnNodeLabel) {
         this.YarnNodeLabel = YarnNodeLabel;
     }
 
     /**
-     * Get 扩容后是否启动服务，默认取值否
-<li>true：是</li>
-<li>false：否</li> 
-     * @return EnableStartServiceFlag 扩容后是否启动服务，默认取值否
-<li>true：是</li>
-<li>false：否</li>
+     * Get <p>扩容后是否启动服务，默认取值否</p><li>true：是</li><li>false：否</li> 
+     * @return EnableStartServiceFlag <p>扩容后是否启动服务，默认取值否</p><li>true：是</li><li>false：否</li>
      */
     public Boolean getEnableStartServiceFlag() {
         return this.EnableStartServiceFlag;
     }
 
     /**
-     * Set 扩容后是否启动服务，默认取值否
-<li>true：是</li>
-<li>false：否</li>
-     * @param EnableStartServiceFlag 扩容后是否启动服务，默认取值否
-<li>true：是</li>
-<li>false：否</li>
+     * Set <p>扩容后是否启动服务，默认取值否</p><li>true：是</li><li>false：否</li>
+     * @param EnableStartServiceFlag <p>扩容后是否启动服务，默认取值否</p><li>true：是</li><li>false：否</li>
      */
     public void setEnableStartServiceFlag(Boolean EnableStartServiceFlag) {
         this.EnableStartServiceFlag = EnableStartServiceFlag;
     }
 
     /**
-     * Get 规格设置 
-     * @return ResourceSpec 规格设置
+     * Get <p>规格设置</p> 
+     * @return ResourceSpec <p>规格设置</p>
      */
     public NodeResourceSpec getResourceSpec() {
         return this.ResourceSpec;
     }
 
     /**
-     * Set 规格设置
-     * @param ResourceSpec 规格设置
+     * Set <p>规格设置</p>
+     * @param ResourceSpec <p>规格设置</p>
      */
     public void setResourceSpec(NodeResourceSpec ResourceSpec) {
         this.ResourceSpec = ResourceSpec;
     }
 
     /**
-     * Get 实例所属的可用区，例如ap-guangzhou-1。该参数也可以通过调用[DescribeZones](https://cloud.tencent.com/document/product/213/15707) 的返回值中的Zone字段来获取。 
-     * @return Zone 实例所属的可用区，例如ap-guangzhou-1。该参数也可以通过调用[DescribeZones](https://cloud.tencent.com/document/product/213/15707) 的返回值中的Zone字段来获取。
+     * Get <p>实例所属的可用区，例如ap-guangzhou-1。该参数也可以通过调用<a href="https://cloud.tencent.com/document/product/213/15707">DescribeZones</a> 的返回值中的Zone字段来获取。</p> 
+     * @return Zone <p>实例所属的可用区，例如ap-guangzhou-1。该参数也可以通过调用<a href="https://cloud.tencent.com/document/product/213/15707">DescribeZones</a> 的返回值中的Zone字段来获取。</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 实例所属的可用区，例如ap-guangzhou-1。该参数也可以通过调用[DescribeZones](https://cloud.tencent.com/document/product/213/15707) 的返回值中的Zone字段来获取。
-     * @param Zone 实例所属的可用区，例如ap-guangzhou-1。该参数也可以通过调用[DescribeZones](https://cloud.tencent.com/document/product/213/15707) 的返回值中的Zone字段来获取。
+     * Set <p>实例所属的可用区，例如ap-guangzhou-1。该参数也可以通过调用<a href="https://cloud.tencent.com/document/product/213/15707">DescribeZones</a> 的返回值中的Zone字段来获取。</p>
+     * @param Zone <p>实例所属的可用区，例如ap-guangzhou-1。该参数也可以通过调用<a href="https://cloud.tencent.com/document/product/213/15707">DescribeZones</a> 的返回值中的Zone字段来获取。</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 子网，默认是集群创建时的子网 
-     * @return SubnetId 子网，默认是集群创建时的子网
+     * Get <p>子网，默认是集群创建时的子网</p> 
+     * @return SubnetId <p>子网，默认是集群创建时的子网</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网，默认是集群创建时的子网
-     * @param SubnetId 子网，默认是集群创建时的子网
+     * Set <p>子网，默认是集群创建时的子网</p>
+     * @param SubnetId <p>子网，默认是集群创建时的子网</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 扩容指定配置组 
-     * @return ScaleOutServiceConfGroupsInfo 扩容指定配置组
+     * Get <p>扩容指定配置组</p> 
+     * @return ScaleOutServiceConfGroupsInfo <p>扩容指定配置组</p>
      */
     public ScaleOutServiceConfGroupsInfo [] getScaleOutServiceConfGroupsInfo() {
         return this.ScaleOutServiceConfGroupsInfo;
     }
 
     /**
-     * Set 扩容指定配置组
-     * @param ScaleOutServiceConfGroupsInfo 扩容指定配置组
+     * Set <p>扩容指定配置组</p>
+     * @param ScaleOutServiceConfGroupsInfo <p>扩容指定配置组</p>
      */
     public void setScaleOutServiceConfGroupsInfo(ScaleOutServiceConfGroupsInfo [] ScaleOutServiceConfGroupsInfo) {
         this.ScaleOutServiceConfGroupsInfo = ScaleOutServiceConfGroupsInfo;
     }
 
     /**
-     * Get 节点标记信息，当前只提供给tf平台使用 
-     * @return NodeMarks 节点标记信息，当前只提供给tf平台使用
+     * Get <p>节点标记信息，当前只提供给tf平台使用</p> 
+     * @return NodeMarks <p>节点标记信息，当前只提供给tf平台使用</p>
      */
     public NodeMark getNodeMarks() {
         return this.NodeMarks;
     }
 
     /**
-     * Set 节点标记信息，当前只提供给tf平台使用
-     * @param NodeMarks 节点标记信息，当前只提供给tf平台使用
+     * Set <p>节点标记信息，当前只提供给tf平台使用</p>
+     * @param NodeMarks <p>节点标记信息，当前只提供给tf平台使用</p>
      */
     public void setNodeMarks(NodeMark NodeMarks) {
         this.NodeMarks = NodeMarks;
     }
 
     /**
-     * Get 扩容指定计算组名称 
-     * @return WarehouseName 扩容指定计算组名称
+     * Get <p>扩容指定计算组名称</p> 
+     * @return WarehouseName <p>扩容指定计算组名称</p>
      */
     public String getWarehouseName() {
         return this.WarehouseName;
     }
 
     /**
-     * Set 扩容指定计算组名称
-     * @param WarehouseName 扩容指定计算组名称
+     * Set <p>扩容指定计算组名称</p>
+     * @param WarehouseName <p>扩容指定计算组名称</p>
      */
     public void setWarehouseName(String WarehouseName) {
         this.WarehouseName = WarehouseName;
+    }
+
+    /**
+     * Get <p>分区置放群组分区</p> 
+     * @return PartitionNumber <p>分区置放群组分区</p>
+     */
+    public Long getPartitionNumber() {
+        return this.PartitionNumber;
+    }
+
+    /**
+     * Set <p>分区置放群组分区</p>
+     * @param PartitionNumber <p>分区置放群组分区</p>
+     */
+    public void setPartitionNumber(Long PartitionNumber) {
+        this.PartitionNumber = PartitionNumber;
     }
 
     public ScaleOutClusterRequest() {
@@ -651,6 +644,9 @@ public class ScaleOutClusterRequest extends AbstractModel {
         if (source.WarehouseName != null) {
             this.WarehouseName = new String(source.WarehouseName);
         }
+        if (source.PartitionNumber != null) {
+            this.PartitionNumber = new Long(source.PartitionNumber);
+        }
     }
 
 
@@ -680,6 +676,7 @@ public class ScaleOutClusterRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ScaleOutServiceConfGroupsInfo.", this.ScaleOutServiceConfGroupsInfo);
         this.setParamObj(map, prefix + "NodeMarks.", this.NodeMarks);
         this.setParamSimple(map, prefix + "WarehouseName", this.WarehouseName);
+        this.setParamSimple(map, prefix + "PartitionNumber", this.PartitionNumber);
 
     }
 }

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeK8sApiAbnormalTendencyRequest extends AbstractModel {
 
     /**
-    * 趋势周期(默认为7天)
+    * <p>趋势周期(默认为7天)</p>
     */
     @SerializedName("TendencyPeriod")
     @Expose
     private Long TendencyPeriod;
 
     /**
-     * Get 趋势周期(默认为7天) 
-     * @return TendencyPeriod 趋势周期(默认为7天)
+     * Get <p>趋势周期(默认为7天)</p> 
+     * @return TendencyPeriod <p>趋势周期(默认为7天)</p>
      */
     public Long getTendencyPeriod() {
         return this.TendencyPeriod;
     }
 
     /**
-     * Set 趋势周期(默认为7天)
-     * @param TendencyPeriod 趋势周期(默认为7天)
+     * Set <p>趋势周期(默认为7天)</p>
+     * @param TendencyPeriod <p>趋势周期(默认为7天)</p>
      */
     public void setTendencyPeriod(Long TendencyPeriod) {
         this.TendencyPeriod = TendencyPeriod;

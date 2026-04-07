@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class AddInstancesResponse extends AbstractModel {
 
     /**
-    * 冻结流水，一次开通一个冻结流水。
+    * <p>冻结流水，一次开通一个冻结流水。</p>
     */
     @SerializedName("TranId")
     @Expose
     private String TranId;
 
     /**
-    * 后付费订单号。
+    * <p>付费的订单号。说明：建议您使用 <a href="https://cloud.tencent.com/document/product/1003/52131">DescribeResourcesByDealName</a> 接口查询订单关联实例。</p>
     */
     @SerializedName("DealNames")
     @Expose
     private String [] DealNames;
 
     /**
-    * 发货资源id列表。
+    * <p>发货资源id列表。</p>
     */
     @SerializedName("ResourceIds")
     @Expose
     private String [] ResourceIds;
 
     /**
-    * 大订单号
+    * <p>大订单号</p>
     */
     @SerializedName("BigDealIds")
     @Expose
@@ -59,64 +59,68 @@ public class AddInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 冻结流水，一次开通一个冻结流水。 
-     * @return TranId 冻结流水，一次开通一个冻结流水。
+     * Get <p>冻结流水，一次开通一个冻结流水。</p> 
+     * @return TranId <p>冻结流水，一次开通一个冻结流水。</p>
      */
     public String getTranId() {
         return this.TranId;
     }
 
     /**
-     * Set 冻结流水，一次开通一个冻结流水。
-     * @param TranId 冻结流水，一次开通一个冻结流水。
+     * Set <p>冻结流水，一次开通一个冻结流水。</p>
+     * @param TranId <p>冻结流水，一次开通一个冻结流水。</p>
      */
     public void setTranId(String TranId) {
         this.TranId = TranId;
     }
 
     /**
-     * Get 后付费订单号。 
-     * @return DealNames 后付费订单号。
+     * Get <p>付费的订单号。说明：建议您使用 <a href="https://cloud.tencent.com/document/product/1003/52131">DescribeResourcesByDealName</a> 接口查询订单关联实例。</p> 
+     * @return DealNames <p>付费的订单号。说明：建议您使用 <a href="https://cloud.tencent.com/document/product/1003/52131">DescribeResourcesByDealName</a> 接口查询订单关联实例。</p>
      */
     public String [] getDealNames() {
         return this.DealNames;
     }
 
     /**
-     * Set 后付费订单号。
-     * @param DealNames 后付费订单号。
+     * Set <p>付费的订单号。说明：建议您使用 <a href="https://cloud.tencent.com/document/product/1003/52131">DescribeResourcesByDealName</a> 接口查询订单关联实例。</p>
+     * @param DealNames <p>付费的订单号。说明：建议您使用 <a href="https://cloud.tencent.com/document/product/1003/52131">DescribeResourcesByDealName</a> 接口查询订单关联实例。</p>
      */
     public void setDealNames(String [] DealNames) {
         this.DealNames = DealNames;
     }
 
     /**
-     * Get 发货资源id列表。 
-     * @return ResourceIds 发货资源id列表。
+     * Get <p>发货资源id列表。</p> 
+     * @return ResourceIds <p>发货资源id列表。</p>
+     * @deprecated
      */
+    @Deprecated
     public String [] getResourceIds() {
         return this.ResourceIds;
     }
 
     /**
-     * Set 发货资源id列表。
-     * @param ResourceIds 发货资源id列表。
+     * Set <p>发货资源id列表。</p>
+     * @param ResourceIds <p>发货资源id列表。</p>
+     * @deprecated
      */
+    @Deprecated
     public void setResourceIds(String [] ResourceIds) {
         this.ResourceIds = ResourceIds;
     }
 
     /**
-     * Get 大订单号 
-     * @return BigDealIds 大订单号
+     * Get <p>大订单号</p> 
+     * @return BigDealIds <p>大订单号</p>
      */
     public String [] getBigDealIds() {
         return this.BigDealIds;
     }
 
     /**
-     * Set 大订单号
-     * @param BigDealIds 大订单号
+     * Set <p>大订单号</p>
+     * @param BigDealIds <p>大订单号</p>
      */
     public void setBigDealIds(String [] BigDealIds) {
         this.BigDealIds = BigDealIds;

@@ -1042,6 +1042,17 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *本接口用于变更实例的计费类型
+     * @param req ModifyInstanceChargeTypeRequest
+     * @return ModifyInstanceChargeTypeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceChargeTypeResponse ModifyInstanceChargeType(ModifyInstanceChargeTypeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInstanceChargeType", ModifyInstanceChargeTypeResponse.class);
+    }
+
+    /**
      *本接口（ModifyInstanceEvent）用于修改实例的运维事件的执行计划。
      * @param req ModifyInstanceEventRequest
      * @return ModifyInstanceEventResponse

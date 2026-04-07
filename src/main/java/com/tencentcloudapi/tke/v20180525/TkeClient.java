@@ -1249,6 +1249,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *查询集群调度策略
+     * @param req DescribeClusterSchedulerPolicyRequest
+     * @return DescribeClusterSchedulerPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterSchedulerPolicyResponse DescribeClusterSchedulerPolicy(DescribeClusterSchedulerPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClusterSchedulerPolicy", DescribeClusterSchedulerPolicyResponse.class);
+    }
+
+    /**
      *集群的密钥信息
      * @param req DescribeClusterSecurityRequest
      * @return DescribeClusterSecurityResponse
@@ -2522,6 +2533,17 @@ public class TkeClient extends AbstractClient{
     public ModifyClusterRuntimeConfigResponse ModifyClusterRuntimeConfig(ModifyClusterRuntimeConfigRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyClusterRuntimeConfig", ModifyClusterRuntimeConfigResponse.class);
+    }
+
+    /**
+     *修改集群调度策略
+     * @param req ModifyClusterSchedulerPolicyRequest
+     * @return ModifyClusterSchedulerPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterSchedulerPolicyResponse ModifyClusterSchedulerPolicy(ModifyClusterSchedulerPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyClusterSchedulerPolicy", ModifyClusterSchedulerPolicyResponse.class);
     }
 
     /**

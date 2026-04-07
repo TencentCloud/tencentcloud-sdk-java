@@ -36,6 +36,9 @@ public enum TkeErrorCode {
      /* 集群节点版本过低。 */
      FAILEDOPERATION_CLUSTERUPGRADENODEVERSION("FailedOperation.ClusterUpgradeNodeVersion"),
      
+     /* 集群版本不支持该操作 */
+     FAILEDOPERATION_CLUSTERVERSIONNOTSUPPORT("FailedOperation.ClusterVersionNotSupport"),
+     
      /* 内部Client错误。 */
      FAILEDOPERATION_COMPONENTCLIENTCOMMON("FailedOperation.ComponentClientCommon"),
      

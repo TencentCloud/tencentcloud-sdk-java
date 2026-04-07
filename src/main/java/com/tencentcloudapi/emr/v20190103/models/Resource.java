@@ -24,91 +24,56 @@ import java.util.HashMap;
 public class Resource extends AbstractModel {
 
     /**
-    * 节点规格描述，如CVM.SA2。
+    * <p>节点规格描述，如CVM.SA2。</p>
     */
     @SerializedName("Spec")
     @Expose
     private String Spec;
 
     /**
-    * 取值范围:
-"LOCAL_SSD"   3     //本地SSD 
-"CLOUD_SSD"   4     //云SSD 
-"CLOUD_PREMIUM"  5  //高效云盘
-"CLOUD_HSSD"   6    //增强型SSD云硬盘 
-"CLOUD_THROUGHPUT" 11//吞吐型云硬盘 
-"CLOUD_TSSD"  12     //极速型SSD云硬盘 
-"CLOUD_BSSD"    13   //通用型SSD云硬盘 
-"CLOUD_BIGDATA" 14   //大数据型云硬盘
-"CLOUD_HIGHIO"  15   //高IO型云硬盘 
-
-该类型字段为无效字段，实际系统盘类型会根据数据盘类型和节点类型判断，如果节点支持所选的数据盘类型，系统盘类型会跟数据盘保持一致，建议使用CreateCluster接口
+    * <p>取值范围:<br>&quot;LOCAL_SSD&quot;   3     //本地SSD<br>&quot;CLOUD_SSD&quot;   4     //云SSD<br>&quot;CLOUD_PREMIUM&quot;  5  //高效云盘<br>&quot;CLOUD_HSSD&quot;   6    //增强型SSD云硬盘<br>&quot;CLOUD_THROUGHPUT&quot; 11//吞吐型云硬盘<br>&quot;CLOUD_TSSD&quot;  12     //极速型SSD云硬盘<br>&quot;CLOUD_BSSD&quot;    13   //通用型SSD云硬盘<br>&quot;CLOUD_BIGDATA&quot; 14   //大数据型云硬盘<br>&quot;CLOUD_HIGHIO&quot;  15   //高IO型云硬盘 </p><p>该类型字段为无效字段，实际系统盘类型会根据数据盘类型和节点类型判断，如果节点支持所选的数据盘类型，系统盘类型会跟数据盘保持一致，建议使用CreateCluster接口</p>
     */
     @SerializedName("StorageType")
     @Expose
     private Long StorageType;
 
     /**
-    * 数据盘类型 取值范围：
-
-CLOUD_SSD：表示云SSD。
-
-CLOUD_PREMIUM：表示高效云盘。
-
-CLOUD_BASIC：表示云硬盘。
-
-LOCAL_BASIC：表示本地盘。
-
-LOCAL_SSD：表示本地SSD。
-
-CLOUD_HSSD：表示增强型SSD云硬盘。
-
-CLOUD_THROUGHPUT：表示吞吐型云硬盘。
-
-CLOUD_TSSD：表示极速型SSD云硬盘。
-
-CLOUD_BIGDATA：表示大数据型云硬盘。
-
-CLOUD_HIGHIO：表示高IO型云硬盘。
-
-CLOUD_BSSD：表示通用型SSD云硬盘。
-
-REMOTE_SSD：表示远端SSD盘。
+    * <p>数据盘类型 取值范围：</p><p>CLOUD_SSD：表示云SSD。</p><p>CLOUD_PREMIUM：表示高效云盘。</p><p>CLOUD_BASIC：表示云硬盘。</p><p>LOCAL_BASIC：表示本地盘。</p><p>LOCAL_SSD：表示本地SSD。</p><p>CLOUD_HSSD：表示增强型SSD云硬盘。</p><p>CLOUD_THROUGHPUT：表示吞吐型云硬盘。</p><p>CLOUD_TSSD：表示极速型SSD云硬盘。</p><p>CLOUD_BIGDATA：表示大数据型云硬盘。</p><p>CLOUD_HIGHIO：表示高IO型云硬盘。</p><p>CLOUD_BSSD：表示通用型SSD云硬盘。</p><p>REMOTE_SSD：表示远端SSD盘。</p>
     */
     @SerializedName("DiskType")
     @Expose
     private String DiskType;
 
     /**
-    * 内存容量,单位为M
+    * <p>内存容量,单位为M</p>
     */
     @SerializedName("MemSize")
     @Expose
     private Long MemSize;
 
     /**
-    * CPU核数
+    * <p>CPU核数</p>
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * 数据盘容量
+    * <p>数据盘容量</p>
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-    * 系统盘容量
+    * <p>系统盘容量</p>
     */
     @SerializedName("RootSize")
     @Expose
     private Long RootSize;
 
     /**
-    * 云盘列表，当数据盘为一块云盘时，直接使用DiskType和DiskSize参数，超出部分使用MultiDisks
+    * <p>云盘列表，当数据盘为一块云盘时，直接使用DiskType和DiskSize参数，超出部分使用MultiDisks</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MultiDisks")
@@ -116,7 +81,7 @@ REMOTE_SSD：表示远端SSD盘。
     private MultiDisk [] MultiDisks;
 
     /**
-    * 需要绑定的标签列表
+    * <p>需要绑定的标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
@@ -124,289 +89,156 @@ REMOTE_SSD：表示远端SSD盘。
     private Tag [] Tags;
 
     /**
-    * 规格类型，如S2.MEDIUM8
+    * <p>规格类型，如S2.MEDIUM8</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * 本地盘数量，该字段已废弃
+    * <p>本地盘数量，该字段已废弃</p>
     */
     @SerializedName("LocalDiskNum")
     @Expose
     private Long LocalDiskNum;
 
     /**
-    * 本地盘数量，如2
+    * <p>本地盘数量，如2</p>
     */
     @SerializedName("DiskNum")
     @Expose
     private Long DiskNum;
 
     /**
-    * GPU信息
+    * <p>GPU信息</p>
     */
     @SerializedName("GpuDesc")
     @Expose
     private String GpuDesc;
 
     /**
-     * Get 节点规格描述，如CVM.SA2。 
-     * @return Spec 节点规格描述，如CVM.SA2。
+    * <p>分区置放群组分区数</p>
+    */
+    @SerializedName("PartitionNumber")
+    @Expose
+    private Long PartitionNumber;
+
+    /**
+     * Get <p>节点规格描述，如CVM.SA2。</p> 
+     * @return Spec <p>节点规格描述，如CVM.SA2。</p>
      */
     public String getSpec() {
         return this.Spec;
     }
 
     /**
-     * Set 节点规格描述，如CVM.SA2。
-     * @param Spec 节点规格描述，如CVM.SA2。
+     * Set <p>节点规格描述，如CVM.SA2。</p>
+     * @param Spec <p>节点规格描述，如CVM.SA2。</p>
      */
     public void setSpec(String Spec) {
         this.Spec = Spec;
     }
 
     /**
-     * Get 取值范围:
-"LOCAL_SSD"   3     //本地SSD 
-"CLOUD_SSD"   4     //云SSD 
-"CLOUD_PREMIUM"  5  //高效云盘
-"CLOUD_HSSD"   6    //增强型SSD云硬盘 
-"CLOUD_THROUGHPUT" 11//吞吐型云硬盘 
-"CLOUD_TSSD"  12     //极速型SSD云硬盘 
-"CLOUD_BSSD"    13   //通用型SSD云硬盘 
-"CLOUD_BIGDATA" 14   //大数据型云硬盘
-"CLOUD_HIGHIO"  15   //高IO型云硬盘 
-
-该类型字段为无效字段，实际系统盘类型会根据数据盘类型和节点类型判断，如果节点支持所选的数据盘类型，系统盘类型会跟数据盘保持一致，建议使用CreateCluster接口 
-     * @return StorageType 取值范围:
-"LOCAL_SSD"   3     //本地SSD 
-"CLOUD_SSD"   4     //云SSD 
-"CLOUD_PREMIUM"  5  //高效云盘
-"CLOUD_HSSD"   6    //增强型SSD云硬盘 
-"CLOUD_THROUGHPUT" 11//吞吐型云硬盘 
-"CLOUD_TSSD"  12     //极速型SSD云硬盘 
-"CLOUD_BSSD"    13   //通用型SSD云硬盘 
-"CLOUD_BIGDATA" 14   //大数据型云硬盘
-"CLOUD_HIGHIO"  15   //高IO型云硬盘 
-
-该类型字段为无效字段，实际系统盘类型会根据数据盘类型和节点类型判断，如果节点支持所选的数据盘类型，系统盘类型会跟数据盘保持一致，建议使用CreateCluster接口
+     * Get <p>取值范围:<br>&quot;LOCAL_SSD&quot;   3     //本地SSD<br>&quot;CLOUD_SSD&quot;   4     //云SSD<br>&quot;CLOUD_PREMIUM&quot;  5  //高效云盘<br>&quot;CLOUD_HSSD&quot;   6    //增强型SSD云硬盘<br>&quot;CLOUD_THROUGHPUT&quot; 11//吞吐型云硬盘<br>&quot;CLOUD_TSSD&quot;  12     //极速型SSD云硬盘<br>&quot;CLOUD_BSSD&quot;    13   //通用型SSD云硬盘<br>&quot;CLOUD_BIGDATA&quot; 14   //大数据型云硬盘<br>&quot;CLOUD_HIGHIO&quot;  15   //高IO型云硬盘 </p><p>该类型字段为无效字段，实际系统盘类型会根据数据盘类型和节点类型判断，如果节点支持所选的数据盘类型，系统盘类型会跟数据盘保持一致，建议使用CreateCluster接口</p> 
+     * @return StorageType <p>取值范围:<br>&quot;LOCAL_SSD&quot;   3     //本地SSD<br>&quot;CLOUD_SSD&quot;   4     //云SSD<br>&quot;CLOUD_PREMIUM&quot;  5  //高效云盘<br>&quot;CLOUD_HSSD&quot;   6    //增强型SSD云硬盘<br>&quot;CLOUD_THROUGHPUT&quot; 11//吞吐型云硬盘<br>&quot;CLOUD_TSSD&quot;  12     //极速型SSD云硬盘<br>&quot;CLOUD_BSSD&quot;    13   //通用型SSD云硬盘<br>&quot;CLOUD_BIGDATA&quot; 14   //大数据型云硬盘<br>&quot;CLOUD_HIGHIO&quot;  15   //高IO型云硬盘 </p><p>该类型字段为无效字段，实际系统盘类型会根据数据盘类型和节点类型判断，如果节点支持所选的数据盘类型，系统盘类型会跟数据盘保持一致，建议使用CreateCluster接口</p>
      */
     public Long getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set 取值范围:
-"LOCAL_SSD"   3     //本地SSD 
-"CLOUD_SSD"   4     //云SSD 
-"CLOUD_PREMIUM"  5  //高效云盘
-"CLOUD_HSSD"   6    //增强型SSD云硬盘 
-"CLOUD_THROUGHPUT" 11//吞吐型云硬盘 
-"CLOUD_TSSD"  12     //极速型SSD云硬盘 
-"CLOUD_BSSD"    13   //通用型SSD云硬盘 
-"CLOUD_BIGDATA" 14   //大数据型云硬盘
-"CLOUD_HIGHIO"  15   //高IO型云硬盘 
-
-该类型字段为无效字段，实际系统盘类型会根据数据盘类型和节点类型判断，如果节点支持所选的数据盘类型，系统盘类型会跟数据盘保持一致，建议使用CreateCluster接口
-     * @param StorageType 取值范围:
-"LOCAL_SSD"   3     //本地SSD 
-"CLOUD_SSD"   4     //云SSD 
-"CLOUD_PREMIUM"  5  //高效云盘
-"CLOUD_HSSD"   6    //增强型SSD云硬盘 
-"CLOUD_THROUGHPUT" 11//吞吐型云硬盘 
-"CLOUD_TSSD"  12     //极速型SSD云硬盘 
-"CLOUD_BSSD"    13   //通用型SSD云硬盘 
-"CLOUD_BIGDATA" 14   //大数据型云硬盘
-"CLOUD_HIGHIO"  15   //高IO型云硬盘 
-
-该类型字段为无效字段，实际系统盘类型会根据数据盘类型和节点类型判断，如果节点支持所选的数据盘类型，系统盘类型会跟数据盘保持一致，建议使用CreateCluster接口
+     * Set <p>取值范围:<br>&quot;LOCAL_SSD&quot;   3     //本地SSD<br>&quot;CLOUD_SSD&quot;   4     //云SSD<br>&quot;CLOUD_PREMIUM&quot;  5  //高效云盘<br>&quot;CLOUD_HSSD&quot;   6    //增强型SSD云硬盘<br>&quot;CLOUD_THROUGHPUT&quot; 11//吞吐型云硬盘<br>&quot;CLOUD_TSSD&quot;  12     //极速型SSD云硬盘<br>&quot;CLOUD_BSSD&quot;    13   //通用型SSD云硬盘<br>&quot;CLOUD_BIGDATA&quot; 14   //大数据型云硬盘<br>&quot;CLOUD_HIGHIO&quot;  15   //高IO型云硬盘 </p><p>该类型字段为无效字段，实际系统盘类型会根据数据盘类型和节点类型判断，如果节点支持所选的数据盘类型，系统盘类型会跟数据盘保持一致，建议使用CreateCluster接口</p>
+     * @param StorageType <p>取值范围:<br>&quot;LOCAL_SSD&quot;   3     //本地SSD<br>&quot;CLOUD_SSD&quot;   4     //云SSD<br>&quot;CLOUD_PREMIUM&quot;  5  //高效云盘<br>&quot;CLOUD_HSSD&quot;   6    //增强型SSD云硬盘<br>&quot;CLOUD_THROUGHPUT&quot; 11//吞吐型云硬盘<br>&quot;CLOUD_TSSD&quot;  12     //极速型SSD云硬盘<br>&quot;CLOUD_BSSD&quot;    13   //通用型SSD云硬盘<br>&quot;CLOUD_BIGDATA&quot; 14   //大数据型云硬盘<br>&quot;CLOUD_HIGHIO&quot;  15   //高IO型云硬盘 </p><p>该类型字段为无效字段，实际系统盘类型会根据数据盘类型和节点类型判断，如果节点支持所选的数据盘类型，系统盘类型会跟数据盘保持一致，建议使用CreateCluster接口</p>
      */
     public void setStorageType(Long StorageType) {
         this.StorageType = StorageType;
     }
 
     /**
-     * Get 数据盘类型 取值范围：
-
-CLOUD_SSD：表示云SSD。
-
-CLOUD_PREMIUM：表示高效云盘。
-
-CLOUD_BASIC：表示云硬盘。
-
-LOCAL_BASIC：表示本地盘。
-
-LOCAL_SSD：表示本地SSD。
-
-CLOUD_HSSD：表示增强型SSD云硬盘。
-
-CLOUD_THROUGHPUT：表示吞吐型云硬盘。
-
-CLOUD_TSSD：表示极速型SSD云硬盘。
-
-CLOUD_BIGDATA：表示大数据型云硬盘。
-
-CLOUD_HIGHIO：表示高IO型云硬盘。
-
-CLOUD_BSSD：表示通用型SSD云硬盘。
-
-REMOTE_SSD：表示远端SSD盘。 
-     * @return DiskType 数据盘类型 取值范围：
-
-CLOUD_SSD：表示云SSD。
-
-CLOUD_PREMIUM：表示高效云盘。
-
-CLOUD_BASIC：表示云硬盘。
-
-LOCAL_BASIC：表示本地盘。
-
-LOCAL_SSD：表示本地SSD。
-
-CLOUD_HSSD：表示增强型SSD云硬盘。
-
-CLOUD_THROUGHPUT：表示吞吐型云硬盘。
-
-CLOUD_TSSD：表示极速型SSD云硬盘。
-
-CLOUD_BIGDATA：表示大数据型云硬盘。
-
-CLOUD_HIGHIO：表示高IO型云硬盘。
-
-CLOUD_BSSD：表示通用型SSD云硬盘。
-
-REMOTE_SSD：表示远端SSD盘。
+     * Get <p>数据盘类型 取值范围：</p><p>CLOUD_SSD：表示云SSD。</p><p>CLOUD_PREMIUM：表示高效云盘。</p><p>CLOUD_BASIC：表示云硬盘。</p><p>LOCAL_BASIC：表示本地盘。</p><p>LOCAL_SSD：表示本地SSD。</p><p>CLOUD_HSSD：表示增强型SSD云硬盘。</p><p>CLOUD_THROUGHPUT：表示吞吐型云硬盘。</p><p>CLOUD_TSSD：表示极速型SSD云硬盘。</p><p>CLOUD_BIGDATA：表示大数据型云硬盘。</p><p>CLOUD_HIGHIO：表示高IO型云硬盘。</p><p>CLOUD_BSSD：表示通用型SSD云硬盘。</p><p>REMOTE_SSD：表示远端SSD盘。</p> 
+     * @return DiskType <p>数据盘类型 取值范围：</p><p>CLOUD_SSD：表示云SSD。</p><p>CLOUD_PREMIUM：表示高效云盘。</p><p>CLOUD_BASIC：表示云硬盘。</p><p>LOCAL_BASIC：表示本地盘。</p><p>LOCAL_SSD：表示本地SSD。</p><p>CLOUD_HSSD：表示增强型SSD云硬盘。</p><p>CLOUD_THROUGHPUT：表示吞吐型云硬盘。</p><p>CLOUD_TSSD：表示极速型SSD云硬盘。</p><p>CLOUD_BIGDATA：表示大数据型云硬盘。</p><p>CLOUD_HIGHIO：表示高IO型云硬盘。</p><p>CLOUD_BSSD：表示通用型SSD云硬盘。</p><p>REMOTE_SSD：表示远端SSD盘。</p>
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set 数据盘类型 取值范围：
-
-CLOUD_SSD：表示云SSD。
-
-CLOUD_PREMIUM：表示高效云盘。
-
-CLOUD_BASIC：表示云硬盘。
-
-LOCAL_BASIC：表示本地盘。
-
-LOCAL_SSD：表示本地SSD。
-
-CLOUD_HSSD：表示增强型SSD云硬盘。
-
-CLOUD_THROUGHPUT：表示吞吐型云硬盘。
-
-CLOUD_TSSD：表示极速型SSD云硬盘。
-
-CLOUD_BIGDATA：表示大数据型云硬盘。
-
-CLOUD_HIGHIO：表示高IO型云硬盘。
-
-CLOUD_BSSD：表示通用型SSD云硬盘。
-
-REMOTE_SSD：表示远端SSD盘。
-     * @param DiskType 数据盘类型 取值范围：
-
-CLOUD_SSD：表示云SSD。
-
-CLOUD_PREMIUM：表示高效云盘。
-
-CLOUD_BASIC：表示云硬盘。
-
-LOCAL_BASIC：表示本地盘。
-
-LOCAL_SSD：表示本地SSD。
-
-CLOUD_HSSD：表示增强型SSD云硬盘。
-
-CLOUD_THROUGHPUT：表示吞吐型云硬盘。
-
-CLOUD_TSSD：表示极速型SSD云硬盘。
-
-CLOUD_BIGDATA：表示大数据型云硬盘。
-
-CLOUD_HIGHIO：表示高IO型云硬盘。
-
-CLOUD_BSSD：表示通用型SSD云硬盘。
-
-REMOTE_SSD：表示远端SSD盘。
+     * Set <p>数据盘类型 取值范围：</p><p>CLOUD_SSD：表示云SSD。</p><p>CLOUD_PREMIUM：表示高效云盘。</p><p>CLOUD_BASIC：表示云硬盘。</p><p>LOCAL_BASIC：表示本地盘。</p><p>LOCAL_SSD：表示本地SSD。</p><p>CLOUD_HSSD：表示增强型SSD云硬盘。</p><p>CLOUD_THROUGHPUT：表示吞吐型云硬盘。</p><p>CLOUD_TSSD：表示极速型SSD云硬盘。</p><p>CLOUD_BIGDATA：表示大数据型云硬盘。</p><p>CLOUD_HIGHIO：表示高IO型云硬盘。</p><p>CLOUD_BSSD：表示通用型SSD云硬盘。</p><p>REMOTE_SSD：表示远端SSD盘。</p>
+     * @param DiskType <p>数据盘类型 取值范围：</p><p>CLOUD_SSD：表示云SSD。</p><p>CLOUD_PREMIUM：表示高效云盘。</p><p>CLOUD_BASIC：表示云硬盘。</p><p>LOCAL_BASIC：表示本地盘。</p><p>LOCAL_SSD：表示本地SSD。</p><p>CLOUD_HSSD：表示增强型SSD云硬盘。</p><p>CLOUD_THROUGHPUT：表示吞吐型云硬盘。</p><p>CLOUD_TSSD：表示极速型SSD云硬盘。</p><p>CLOUD_BIGDATA：表示大数据型云硬盘。</p><p>CLOUD_HIGHIO：表示高IO型云硬盘。</p><p>CLOUD_BSSD：表示通用型SSD云硬盘。</p><p>REMOTE_SSD：表示远端SSD盘。</p>
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get 内存容量,单位为M 
-     * @return MemSize 内存容量,单位为M
+     * Get <p>内存容量,单位为M</p> 
+     * @return MemSize <p>内存容量,单位为M</p>
      */
     public Long getMemSize() {
         return this.MemSize;
     }
 
     /**
-     * Set 内存容量,单位为M
-     * @param MemSize 内存容量,单位为M
+     * Set <p>内存容量,单位为M</p>
+     * @param MemSize <p>内存容量,单位为M</p>
      */
     public void setMemSize(Long MemSize) {
         this.MemSize = MemSize;
     }
 
     /**
-     * Get CPU核数 
-     * @return Cpu CPU核数
+     * Get <p>CPU核数</p> 
+     * @return Cpu <p>CPU核数</p>
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set CPU核数
-     * @param Cpu CPU核数
+     * Set <p>CPU核数</p>
+     * @param Cpu <p>CPU核数</p>
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get 数据盘容量 
-     * @return DiskSize 数据盘容量
+     * Get <p>数据盘容量</p> 
+     * @return DiskSize <p>数据盘容量</p>
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set 数据盘容量
-     * @param DiskSize 数据盘容量
+     * Set <p>数据盘容量</p>
+     * @param DiskSize <p>数据盘容量</p>
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get 系统盘容量 
-     * @return RootSize 系统盘容量
+     * Get <p>系统盘容量</p> 
+     * @return RootSize <p>系统盘容量</p>
      */
     public Long getRootSize() {
         return this.RootSize;
     }
 
     /**
-     * Set 系统盘容量
-     * @param RootSize 系统盘容量
+     * Set <p>系统盘容量</p>
+     * @param RootSize <p>系统盘容量</p>
      */
     public void setRootSize(Long RootSize) {
         this.RootSize = RootSize;
     }
 
     /**
-     * Get 云盘列表，当数据盘为一块云盘时，直接使用DiskType和DiskSize参数，超出部分使用MultiDisks
+     * Get <p>云盘列表，当数据盘为一块云盘时，直接使用DiskType和DiskSize参数，超出部分使用MultiDisks</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MultiDisks 云盘列表，当数据盘为一块云盘时，直接使用DiskType和DiskSize参数，超出部分使用MultiDisks
+     * @return MultiDisks <p>云盘列表，当数据盘为一块云盘时，直接使用DiskType和DiskSize参数，超出部分使用MultiDisks</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MultiDisk [] getMultiDisks() {
@@ -414,9 +246,9 @@ REMOTE_SSD：表示远端SSD盘。
     }
 
     /**
-     * Set 云盘列表，当数据盘为一块云盘时，直接使用DiskType和DiskSize参数，超出部分使用MultiDisks
+     * Set <p>云盘列表，当数据盘为一块云盘时，直接使用DiskType和DiskSize参数，超出部分使用MultiDisks</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MultiDisks 云盘列表，当数据盘为一块云盘时，直接使用DiskType和DiskSize参数，超出部分使用MultiDisks
+     * @param MultiDisks <p>云盘列表，当数据盘为一块云盘时，直接使用DiskType和DiskSize参数，超出部分使用MultiDisks</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMultiDisks(MultiDisk [] MultiDisks) {
@@ -424,9 +256,9 @@ REMOTE_SSD：表示远端SSD盘。
     }
 
     /**
-     * Get 需要绑定的标签列表
+     * Get <p>需要绑定的标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tags 需要绑定的标签列表
+     * @return Tags <p>需要绑定的标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
@@ -434,9 +266,9 @@ REMOTE_SSD：表示远端SSD盘。
     }
 
     /**
-     * Set 需要绑定的标签列表
+     * Set <p>需要绑定的标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tags 需要绑定的标签列表
+     * @param Tags <p>需要绑定的标签列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {
@@ -444,67 +276,83 @@ REMOTE_SSD：表示远端SSD盘。
     }
 
     /**
-     * Get 规格类型，如S2.MEDIUM8 
-     * @return InstanceType 规格类型，如S2.MEDIUM8
+     * Get <p>规格类型，如S2.MEDIUM8</p> 
+     * @return InstanceType <p>规格类型，如S2.MEDIUM8</p>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 规格类型，如S2.MEDIUM8
-     * @param InstanceType 规格类型，如S2.MEDIUM8
+     * Set <p>规格类型，如S2.MEDIUM8</p>
+     * @param InstanceType <p>规格类型，如S2.MEDIUM8</p>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 本地盘数量，该字段已废弃 
-     * @return LocalDiskNum 本地盘数量，该字段已废弃
+     * Get <p>本地盘数量，该字段已废弃</p> 
+     * @return LocalDiskNum <p>本地盘数量，该字段已废弃</p>
      */
     public Long getLocalDiskNum() {
         return this.LocalDiskNum;
     }
 
     /**
-     * Set 本地盘数量，该字段已废弃
-     * @param LocalDiskNum 本地盘数量，该字段已废弃
+     * Set <p>本地盘数量，该字段已废弃</p>
+     * @param LocalDiskNum <p>本地盘数量，该字段已废弃</p>
      */
     public void setLocalDiskNum(Long LocalDiskNum) {
         this.LocalDiskNum = LocalDiskNum;
     }
 
     /**
-     * Get 本地盘数量，如2 
-     * @return DiskNum 本地盘数量，如2
+     * Get <p>本地盘数量，如2</p> 
+     * @return DiskNum <p>本地盘数量，如2</p>
      */
     public Long getDiskNum() {
         return this.DiskNum;
     }
 
     /**
-     * Set 本地盘数量，如2
-     * @param DiskNum 本地盘数量，如2
+     * Set <p>本地盘数量，如2</p>
+     * @param DiskNum <p>本地盘数量，如2</p>
      */
     public void setDiskNum(Long DiskNum) {
         this.DiskNum = DiskNum;
     }
 
     /**
-     * Get GPU信息 
-     * @return GpuDesc GPU信息
+     * Get <p>GPU信息</p> 
+     * @return GpuDesc <p>GPU信息</p>
      */
     public String getGpuDesc() {
         return this.GpuDesc;
     }
 
     /**
-     * Set GPU信息
-     * @param GpuDesc GPU信息
+     * Set <p>GPU信息</p>
+     * @param GpuDesc <p>GPU信息</p>
      */
     public void setGpuDesc(String GpuDesc) {
         this.GpuDesc = GpuDesc;
+    }
+
+    /**
+     * Get <p>分区置放群组分区数</p> 
+     * @return PartitionNumber <p>分区置放群组分区数</p>
+     */
+    public Long getPartitionNumber() {
+        return this.PartitionNumber;
+    }
+
+    /**
+     * Set <p>分区置放群组分区数</p>
+     * @param PartitionNumber <p>分区置放群组分区数</p>
+     */
+    public void setPartitionNumber(Long PartitionNumber) {
+        this.PartitionNumber = PartitionNumber;
     }
 
     public Resource() {
@@ -560,6 +408,9 @@ REMOTE_SSD：表示远端SSD盘。
         if (source.GpuDesc != null) {
             this.GpuDesc = new String(source.GpuDesc);
         }
+        if (source.PartitionNumber != null) {
+            this.PartitionNumber = new Long(source.PartitionNumber);
+        }
     }
 
 
@@ -580,6 +431,7 @@ REMOTE_SSD：表示远端SSD盘。
         this.setParamSimple(map, prefix + "LocalDiskNum", this.LocalDiskNum);
         this.setParamSimple(map, prefix + "DiskNum", this.DiskNum);
         this.setParamSimple(map, prefix + "GpuDesc", this.GpuDesc);
+        this.setParamSimple(map, prefix + "PartitionNumber", this.PartitionNumber);
 
     }
 }

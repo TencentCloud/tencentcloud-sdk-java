@@ -24,771 +24,739 @@ import java.util.HashMap;
 public class ScaleOutInstanceRequest extends AbstractModel {
 
     /**
-    * 扩容的时间单位。取值范围：
-<li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
-<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
+    * <p>扩容的时间单位。取值范围：</p><li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li><li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
     */
     @SerializedName("TimeUnit")
     @Expose
     private String TimeUnit;
 
     /**
-    * 扩容的时长。结合TimeUnit一起使用。
-<li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
-<li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
+    * <p>扩容的时长。结合TimeUnit一起使用。</p><li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li><li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
     */
     @SerializedName("TimeSpan")
     @Expose
     private Long TimeSpan;
 
     /**
-    * 实例ID。
+    * <p>实例ID。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例计费模式。取值范围：
-<li>0：表示按量计费。</li>
-<li>1：表示包年包月。</li>
+    * <p>实例计费模式。取值范围：</p><li>0：表示按量计费。</li><li>1：表示包年包月。</li>
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * 唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-****-****-****-fae36063280
+    * <p>唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-<strong><strong>-</strong></strong>-****-fae36063280</p>
     */
     @SerializedName("ClientToken")
     @Expose
     private String ClientToken;
 
     /**
-    * 引导操作脚本设置。
+    * <p>引导操作脚本设置。</p>
     */
     @SerializedName("PreExecutedFileSettings")
     @Expose
     private PreExecuteFileSettings [] PreExecutedFileSettings;
 
     /**
-    * 扩容的Task节点数量。
+    * <p>扩容的Task节点数量。</p>
     */
     @SerializedName("TaskCount")
     @Expose
     private Long TaskCount;
 
     /**
-    * 扩容的Core节点数量。
+    * <p>扩容的Core节点数量。</p>
     */
     @SerializedName("CoreCount")
     @Expose
     private Long CoreCount;
 
     /**
-    * 扩容时不需要安装的进程。
+    * <p>扩容时不需要安装的进程。</p>
     */
     @SerializedName("UnNecessaryNodeList")
     @Expose
     private Long [] UnNecessaryNodeList;
 
     /**
-    * 扩容的Router节点数量。
+    * <p>扩容的Router节点数量。</p>
     */
     @SerializedName("RouterCount")
     @Expose
     private Long RouterCount;
 
     /**
-    * 部署的服务。
-<li>SoftDeployInfo和ServiceNodeInfo是同组参数，和UnNecessaryNodeList参数互斥。</li>
-<li>建议使用SoftDeployInfo和ServiceNodeInfo组合。</li>
+    * <p>部署的服务。</p><li>SoftDeployInfo和ServiceNodeInfo是同组参数，和UnNecessaryNodeList参数互斥。</li><li>建议使用SoftDeployInfo和ServiceNodeInfo组合。</li>
     */
     @SerializedName("SoftDeployInfo")
     @Expose
     private Long [] SoftDeployInfo;
 
     /**
-    * 启动的进程。
+    * <p>启动的进程。</p>
     */
     @SerializedName("ServiceNodeInfo")
     @Expose
     private Long [] ServiceNodeInfo;
 
     /**
-    * 分散置放群组ID列表，当前仅支持指定一个。
+    * <p>分散置放群组ID列表，当前仅支持指定一个。</p>
     */
     @SerializedName("DisasterRecoverGroupIds")
     @Expose
     private String [] DisasterRecoverGroupIds;
 
     /**
-    * 扩容节点绑定标签列表。
+    * <p>扩容节点绑定标签列表。</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 扩容所选资源类型，可选范围为"HOST","POD","MNode"，HOST为普通的CVM资源，POD为TKE集群或EKS集群提供的资源,MNode为全托管资源类型
+    * <p>扩容所选资源类型，可选范围为&quot;HOST&quot;,&quot;POD&quot;,&quot;MNode&quot;，HOST为普通的CVM资源，POD为TKE集群或EKS集群提供的资源,MNode为全托管资源类型</p>
     */
     @SerializedName("HardwareResourceType")
     @Expose
     private String HardwareResourceType;
 
     /**
-    * 使用Pod资源扩容时，指定的Pod规格以及来源等信息
+    * <p>使用Pod资源扩容时，指定的Pod规格以及来源等信息</p>
     */
     @SerializedName("PodSpec")
     @Expose
     private PodSpec PodSpec;
 
     /**
-    * 使用clickhouse集群扩容时，选择的机器分组名称
+    * <p>使用clickhouse集群扩容时，选择的机器分组名称</p>
     */
     @SerializedName("ClickHouseClusterName")
     @Expose
     private String ClickHouseClusterName;
 
     /**
-    * 使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组
+    * <p>使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组</p>
     */
     @SerializedName("ClickHouseClusterType")
     @Expose
     private String ClickHouseClusterType;
 
     /**
-    * 规则扩容指定 yarn node label
+    * <p>规则扩容指定 yarn node label</p>
     */
     @SerializedName("YarnNodeLabel")
     @Expose
     private String YarnNodeLabel;
 
     /**
-    * POD自定义权限和自定义参数
+    * <p>POD自定义权限和自定义参数</p>
     */
     @SerializedName("PodParameter")
     @Expose
     private PodParameter PodParameter;
 
     /**
-    * 扩容的Master节点的数量。
-使用clickhouse集群扩容时，该参数不生效。
-使用kafka集群扩容时，该参数不生效。
-当HardwareResourceType=POD时，该参数不生效。
+    * <p>扩容的Master节点的数量。<br>使用clickhouse集群扩容时，该参数不生效。<br>使用kafka集群扩容时，该参数不生效。<br>当HardwareResourceType=POD时，该参数不生效。</p>
     */
     @SerializedName("MasterCount")
     @Expose
     private Long MasterCount;
 
     /**
-    * 扩容后是否启动服务，true：启动，false：不启动
+    * <p>扩容后是否启动服务，true：启动，false：不启动</p>
     */
     @SerializedName("StartServiceAfterScaleOut")
     @Expose
     private String StartServiceAfterScaleOut;
 
     /**
-    * 可用区，默认是集群的主可用区
+    * <p>可用区，默认是集群的主可用区</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * 子网，默认是集群创建时的子网
+    * <p>子网，默认是集群创建时的子网</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 预设配置组
+    * <p>预设配置组</p>
     */
     @SerializedName("ScaleOutServiceConfAssign")
     @Expose
     private String ScaleOutServiceConfAssign;
 
     /**
-    * 0表示关闭自动续费，1表示开启自动续费
+    * <p>0表示关闭自动续费，1表示开启自动续费</p>
     */
     @SerializedName("AutoRenew")
     @Expose
     private Long AutoRenew;
 
     /**
-    * 类型为ComputeResource和EMR以及默认，默认为EMR,类型为EMR时,InstanceId生效,类型为ComputeResource时,使用ComputeResourceId标识
+    * <p>类型为ComputeResource和EMR以及默认，默认为EMR,类型为EMR时,InstanceId生效,类型为ComputeResource时,使用ComputeResourceId标识</p>
     */
     @SerializedName("ResourceBaseType")
     @Expose
     private String ResourceBaseType;
 
     /**
-    * 计算资源id
+    * <p>计算资源id</p>
     */
     @SerializedName("ComputeResourceId")
     @Expose
     private String ComputeResourceId;
 
     /**
-    * 计算资源高级设置
+    * <p>计算资源高级设置</p>
     */
     @SerializedName("ComputeResourceAdvanceParams")
     @Expose
     private ComputeResourceAdvanceParams ComputeResourceAdvanceParams;
 
     /**
-    * 节点标记信息，目前只提供tf平台使用
+    * <p>节点标记信息，目前只提供tf平台使用</p>
     */
     @SerializedName("NodeMarks")
     @Expose
     private NodeMark NodeMarks;
 
     /**
-    * 扩容指定计算组
+    * <p>扩容指定计算组</p>
     */
     @SerializedName("WarehouseName")
     @Expose
     private String WarehouseName;
 
     /**
-     * Get 扩容的时间单位。取值范围：
-<li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
-<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li> 
-     * @return TimeUnit 扩容的时间单位。取值范围：
-<li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
-<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
+    * <p>分区置放群组分区</p>
+    */
+    @SerializedName("PartitionNumber")
+    @Expose
+    private Long PartitionNumber;
+
+    /**
+     * Get <p>扩容的时间单位。取值范围：</p><li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li><li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li> 
+     * @return TimeUnit <p>扩容的时间单位。取值范围：</p><li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li><li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
      */
     public String getTimeUnit() {
         return this.TimeUnit;
     }
 
     /**
-     * Set 扩容的时间单位。取值范围：
-<li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
-<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
-     * @param TimeUnit 扩容的时间单位。取值范围：
-<li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
-<li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
+     * Set <p>扩容的时间单位。取值范围：</p><li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li><li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
+     * @param TimeUnit <p>扩容的时间单位。取值范围：</p><li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li><li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
     }
 
     /**
-     * Get 扩容的时长。结合TimeUnit一起使用。
-<li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
-<li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li> 
-     * @return TimeSpan 扩容的时长。结合TimeUnit一起使用。
-<li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
-<li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
+     * Get <p>扩容的时长。结合TimeUnit一起使用。</p><li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li><li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li> 
+     * @return TimeSpan <p>扩容的时长。结合TimeUnit一起使用。</p><li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li><li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set 扩容的时长。结合TimeUnit一起使用。
-<li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
-<li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
-     * @param TimeSpan 扩容的时长。结合TimeUnit一起使用。
-<li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
-<li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
+     * Set <p>扩容的时长。结合TimeUnit一起使用。</p><li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li><li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
+     * @param TimeSpan <p>扩容的时长。结合TimeUnit一起使用。</p><li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li><li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get 实例ID。 
-     * @return InstanceId 实例ID。
+     * Get <p>实例ID。</p> 
+     * @return InstanceId <p>实例ID。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID。
-     * @param InstanceId 实例ID。
+     * Set <p>实例ID。</p>
+     * @param InstanceId <p>实例ID。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例计费模式。取值范围：
-<li>0：表示按量计费。</li>
-<li>1：表示包年包月。</li> 
-     * @return PayMode 实例计费模式。取值范围：
-<li>0：表示按量计费。</li>
-<li>1：表示包年包月。</li>
+     * Get <p>实例计费模式。取值范围：</p><li>0：表示按量计费。</li><li>1：表示包年包月。</li> 
+     * @return PayMode <p>实例计费模式。取值范围：</p><li>0：表示按量计费。</li><li>1：表示包年包月。</li>
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 实例计费模式。取值范围：
-<li>0：表示按量计费。</li>
-<li>1：表示包年包月。</li>
-     * @param PayMode 实例计费模式。取值范围：
-<li>0：表示按量计费。</li>
-<li>1：表示包年包月。</li>
+     * Set <p>实例计费模式。取值范围：</p><li>0：表示按量计费。</li><li>1：表示包年包月。</li>
+     * @param PayMode <p>实例计费模式。取值范围：</p><li>0：表示按量计费。</li><li>1：表示包年包月。</li>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-****-****-****-fae36063280 
-     * @return ClientToken 唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-****-****-****-fae36063280
+     * Get <p>唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-<strong><strong>-</strong></strong>-****-fae36063280</p> 
+     * @return ClientToken <p>唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-<strong><strong>-</strong></strong>-****-fae36063280</p>
      */
     public String getClientToken() {
         return this.ClientToken;
     }
 
     /**
-     * Set 唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-****-****-****-fae36063280
-     * @param ClientToken 唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-****-****-****-fae36063280
+     * Set <p>唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-<strong><strong>-</strong></strong>-****-fae36063280</p>
+     * @param ClientToken <p>唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-<strong><strong>-</strong></strong>-****-fae36063280</p>
      */
     public void setClientToken(String ClientToken) {
         this.ClientToken = ClientToken;
     }
 
     /**
-     * Get 引导操作脚本设置。 
-     * @return PreExecutedFileSettings 引导操作脚本设置。
+     * Get <p>引导操作脚本设置。</p> 
+     * @return PreExecutedFileSettings <p>引导操作脚本设置。</p>
      */
     public PreExecuteFileSettings [] getPreExecutedFileSettings() {
         return this.PreExecutedFileSettings;
     }
 
     /**
-     * Set 引导操作脚本设置。
-     * @param PreExecutedFileSettings 引导操作脚本设置。
+     * Set <p>引导操作脚本设置。</p>
+     * @param PreExecutedFileSettings <p>引导操作脚本设置。</p>
      */
     public void setPreExecutedFileSettings(PreExecuteFileSettings [] PreExecutedFileSettings) {
         this.PreExecutedFileSettings = PreExecutedFileSettings;
     }
 
     /**
-     * Get 扩容的Task节点数量。 
-     * @return TaskCount 扩容的Task节点数量。
+     * Get <p>扩容的Task节点数量。</p> 
+     * @return TaskCount <p>扩容的Task节点数量。</p>
      */
     public Long getTaskCount() {
         return this.TaskCount;
     }
 
     /**
-     * Set 扩容的Task节点数量。
-     * @param TaskCount 扩容的Task节点数量。
+     * Set <p>扩容的Task节点数量。</p>
+     * @param TaskCount <p>扩容的Task节点数量。</p>
      */
     public void setTaskCount(Long TaskCount) {
         this.TaskCount = TaskCount;
     }
 
     /**
-     * Get 扩容的Core节点数量。 
-     * @return CoreCount 扩容的Core节点数量。
+     * Get <p>扩容的Core节点数量。</p> 
+     * @return CoreCount <p>扩容的Core节点数量。</p>
      */
     public Long getCoreCount() {
         return this.CoreCount;
     }
 
     /**
-     * Set 扩容的Core节点数量。
-     * @param CoreCount 扩容的Core节点数量。
+     * Set <p>扩容的Core节点数量。</p>
+     * @param CoreCount <p>扩容的Core节点数量。</p>
      */
     public void setCoreCount(Long CoreCount) {
         this.CoreCount = CoreCount;
     }
 
     /**
-     * Get 扩容时不需要安装的进程。 
-     * @return UnNecessaryNodeList 扩容时不需要安装的进程。
+     * Get <p>扩容时不需要安装的进程。</p> 
+     * @return UnNecessaryNodeList <p>扩容时不需要安装的进程。</p>
      */
     public Long [] getUnNecessaryNodeList() {
         return this.UnNecessaryNodeList;
     }
 
     /**
-     * Set 扩容时不需要安装的进程。
-     * @param UnNecessaryNodeList 扩容时不需要安装的进程。
+     * Set <p>扩容时不需要安装的进程。</p>
+     * @param UnNecessaryNodeList <p>扩容时不需要安装的进程。</p>
      */
     public void setUnNecessaryNodeList(Long [] UnNecessaryNodeList) {
         this.UnNecessaryNodeList = UnNecessaryNodeList;
     }
 
     /**
-     * Get 扩容的Router节点数量。 
-     * @return RouterCount 扩容的Router节点数量。
+     * Get <p>扩容的Router节点数量。</p> 
+     * @return RouterCount <p>扩容的Router节点数量。</p>
      */
     public Long getRouterCount() {
         return this.RouterCount;
     }
 
     /**
-     * Set 扩容的Router节点数量。
-     * @param RouterCount 扩容的Router节点数量。
+     * Set <p>扩容的Router节点数量。</p>
+     * @param RouterCount <p>扩容的Router节点数量。</p>
      */
     public void setRouterCount(Long RouterCount) {
         this.RouterCount = RouterCount;
     }
 
     /**
-     * Get 部署的服务。
-<li>SoftDeployInfo和ServiceNodeInfo是同组参数，和UnNecessaryNodeList参数互斥。</li>
-<li>建议使用SoftDeployInfo和ServiceNodeInfo组合。</li> 
-     * @return SoftDeployInfo 部署的服务。
-<li>SoftDeployInfo和ServiceNodeInfo是同组参数，和UnNecessaryNodeList参数互斥。</li>
-<li>建议使用SoftDeployInfo和ServiceNodeInfo组合。</li>
+     * Get <p>部署的服务。</p><li>SoftDeployInfo和ServiceNodeInfo是同组参数，和UnNecessaryNodeList参数互斥。</li><li>建议使用SoftDeployInfo和ServiceNodeInfo组合。</li> 
+     * @return SoftDeployInfo <p>部署的服务。</p><li>SoftDeployInfo和ServiceNodeInfo是同组参数，和UnNecessaryNodeList参数互斥。</li><li>建议使用SoftDeployInfo和ServiceNodeInfo组合。</li>
      */
     public Long [] getSoftDeployInfo() {
         return this.SoftDeployInfo;
     }
 
     /**
-     * Set 部署的服务。
-<li>SoftDeployInfo和ServiceNodeInfo是同组参数，和UnNecessaryNodeList参数互斥。</li>
-<li>建议使用SoftDeployInfo和ServiceNodeInfo组合。</li>
-     * @param SoftDeployInfo 部署的服务。
-<li>SoftDeployInfo和ServiceNodeInfo是同组参数，和UnNecessaryNodeList参数互斥。</li>
-<li>建议使用SoftDeployInfo和ServiceNodeInfo组合。</li>
+     * Set <p>部署的服务。</p><li>SoftDeployInfo和ServiceNodeInfo是同组参数，和UnNecessaryNodeList参数互斥。</li><li>建议使用SoftDeployInfo和ServiceNodeInfo组合。</li>
+     * @param SoftDeployInfo <p>部署的服务。</p><li>SoftDeployInfo和ServiceNodeInfo是同组参数，和UnNecessaryNodeList参数互斥。</li><li>建议使用SoftDeployInfo和ServiceNodeInfo组合。</li>
      */
     public void setSoftDeployInfo(Long [] SoftDeployInfo) {
         this.SoftDeployInfo = SoftDeployInfo;
     }
 
     /**
-     * Get 启动的进程。 
-     * @return ServiceNodeInfo 启动的进程。
+     * Get <p>启动的进程。</p> 
+     * @return ServiceNodeInfo <p>启动的进程。</p>
      */
     public Long [] getServiceNodeInfo() {
         return this.ServiceNodeInfo;
     }
 
     /**
-     * Set 启动的进程。
-     * @param ServiceNodeInfo 启动的进程。
+     * Set <p>启动的进程。</p>
+     * @param ServiceNodeInfo <p>启动的进程。</p>
      */
     public void setServiceNodeInfo(Long [] ServiceNodeInfo) {
         this.ServiceNodeInfo = ServiceNodeInfo;
     }
 
     /**
-     * Get 分散置放群组ID列表，当前仅支持指定一个。 
-     * @return DisasterRecoverGroupIds 分散置放群组ID列表，当前仅支持指定一个。
+     * Get <p>分散置放群组ID列表，当前仅支持指定一个。</p> 
+     * @return DisasterRecoverGroupIds <p>分散置放群组ID列表，当前仅支持指定一个。</p>
      */
     public String [] getDisasterRecoverGroupIds() {
         return this.DisasterRecoverGroupIds;
     }
 
     /**
-     * Set 分散置放群组ID列表，当前仅支持指定一个。
-     * @param DisasterRecoverGroupIds 分散置放群组ID列表，当前仅支持指定一个。
+     * Set <p>分散置放群组ID列表，当前仅支持指定一个。</p>
+     * @param DisasterRecoverGroupIds <p>分散置放群组ID列表，当前仅支持指定一个。</p>
      */
     public void setDisasterRecoverGroupIds(String [] DisasterRecoverGroupIds) {
         this.DisasterRecoverGroupIds = DisasterRecoverGroupIds;
     }
 
     /**
-     * Get 扩容节点绑定标签列表。 
-     * @return Tags 扩容节点绑定标签列表。
+     * Get <p>扩容节点绑定标签列表。</p> 
+     * @return Tags <p>扩容节点绑定标签列表。</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 扩容节点绑定标签列表。
-     * @param Tags 扩容节点绑定标签列表。
+     * Set <p>扩容节点绑定标签列表。</p>
+     * @param Tags <p>扩容节点绑定标签列表。</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 扩容所选资源类型，可选范围为"HOST","POD","MNode"，HOST为普通的CVM资源，POD为TKE集群或EKS集群提供的资源,MNode为全托管资源类型 
-     * @return HardwareResourceType 扩容所选资源类型，可选范围为"HOST","POD","MNode"，HOST为普通的CVM资源，POD为TKE集群或EKS集群提供的资源,MNode为全托管资源类型
+     * Get <p>扩容所选资源类型，可选范围为&quot;HOST&quot;,&quot;POD&quot;,&quot;MNode&quot;，HOST为普通的CVM资源，POD为TKE集群或EKS集群提供的资源,MNode为全托管资源类型</p> 
+     * @return HardwareResourceType <p>扩容所选资源类型，可选范围为&quot;HOST&quot;,&quot;POD&quot;,&quot;MNode&quot;，HOST为普通的CVM资源，POD为TKE集群或EKS集群提供的资源,MNode为全托管资源类型</p>
      */
     public String getHardwareResourceType() {
         return this.HardwareResourceType;
     }
 
     /**
-     * Set 扩容所选资源类型，可选范围为"HOST","POD","MNode"，HOST为普通的CVM资源，POD为TKE集群或EKS集群提供的资源,MNode为全托管资源类型
-     * @param HardwareResourceType 扩容所选资源类型，可选范围为"HOST","POD","MNode"，HOST为普通的CVM资源，POD为TKE集群或EKS集群提供的资源,MNode为全托管资源类型
+     * Set <p>扩容所选资源类型，可选范围为&quot;HOST&quot;,&quot;POD&quot;,&quot;MNode&quot;，HOST为普通的CVM资源，POD为TKE集群或EKS集群提供的资源,MNode为全托管资源类型</p>
+     * @param HardwareResourceType <p>扩容所选资源类型，可选范围为&quot;HOST&quot;,&quot;POD&quot;,&quot;MNode&quot;，HOST为普通的CVM资源，POD为TKE集群或EKS集群提供的资源,MNode为全托管资源类型</p>
      */
     public void setHardwareResourceType(String HardwareResourceType) {
         this.HardwareResourceType = HardwareResourceType;
     }
 
     /**
-     * Get 使用Pod资源扩容时，指定的Pod规格以及来源等信息 
-     * @return PodSpec 使用Pod资源扩容时，指定的Pod规格以及来源等信息
+     * Get <p>使用Pod资源扩容时，指定的Pod规格以及来源等信息</p> 
+     * @return PodSpec <p>使用Pod资源扩容时，指定的Pod规格以及来源等信息</p>
      */
     public PodSpec getPodSpec() {
         return this.PodSpec;
     }
 
     /**
-     * Set 使用Pod资源扩容时，指定的Pod规格以及来源等信息
-     * @param PodSpec 使用Pod资源扩容时，指定的Pod规格以及来源等信息
+     * Set <p>使用Pod资源扩容时，指定的Pod规格以及来源等信息</p>
+     * @param PodSpec <p>使用Pod资源扩容时，指定的Pod规格以及来源等信息</p>
      */
     public void setPodSpec(PodSpec PodSpec) {
         this.PodSpec = PodSpec;
     }
 
     /**
-     * Get 使用clickhouse集群扩容时，选择的机器分组名称 
-     * @return ClickHouseClusterName 使用clickhouse集群扩容时，选择的机器分组名称
+     * Get <p>使用clickhouse集群扩容时，选择的机器分组名称</p> 
+     * @return ClickHouseClusterName <p>使用clickhouse集群扩容时，选择的机器分组名称</p>
      */
     public String getClickHouseClusterName() {
         return this.ClickHouseClusterName;
     }
 
     /**
-     * Set 使用clickhouse集群扩容时，选择的机器分组名称
-     * @param ClickHouseClusterName 使用clickhouse集群扩容时，选择的机器分组名称
+     * Set <p>使用clickhouse集群扩容时，选择的机器分组名称</p>
+     * @param ClickHouseClusterName <p>使用clickhouse集群扩容时，选择的机器分组名称</p>
      */
     public void setClickHouseClusterName(String ClickHouseClusterName) {
         this.ClickHouseClusterName = ClickHouseClusterName;
     }
 
     /**
-     * Get 使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组 
-     * @return ClickHouseClusterType 使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组
+     * Get <p>使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组</p> 
+     * @return ClickHouseClusterType <p>使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组</p>
      */
     public String getClickHouseClusterType() {
         return this.ClickHouseClusterType;
     }
 
     /**
-     * Set 使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组
-     * @param ClickHouseClusterType 使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组
+     * Set <p>使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组</p>
+     * @param ClickHouseClusterType <p>使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组</p>
      */
     public void setClickHouseClusterType(String ClickHouseClusterType) {
         this.ClickHouseClusterType = ClickHouseClusterType;
     }
 
     /**
-     * Get 规则扩容指定 yarn node label 
-     * @return YarnNodeLabel 规则扩容指定 yarn node label
+     * Get <p>规则扩容指定 yarn node label</p> 
+     * @return YarnNodeLabel <p>规则扩容指定 yarn node label</p>
      */
     public String getYarnNodeLabel() {
         return this.YarnNodeLabel;
     }
 
     /**
-     * Set 规则扩容指定 yarn node label
-     * @param YarnNodeLabel 规则扩容指定 yarn node label
+     * Set <p>规则扩容指定 yarn node label</p>
+     * @param YarnNodeLabel <p>规则扩容指定 yarn node label</p>
      */
     public void setYarnNodeLabel(String YarnNodeLabel) {
         this.YarnNodeLabel = YarnNodeLabel;
     }
 
     /**
-     * Get POD自定义权限和自定义参数 
-     * @return PodParameter POD自定义权限和自定义参数
+     * Get <p>POD自定义权限和自定义参数</p> 
+     * @return PodParameter <p>POD自定义权限和自定义参数</p>
      */
     public PodParameter getPodParameter() {
         return this.PodParameter;
     }
 
     /**
-     * Set POD自定义权限和自定义参数
-     * @param PodParameter POD自定义权限和自定义参数
+     * Set <p>POD自定义权限和自定义参数</p>
+     * @param PodParameter <p>POD自定义权限和自定义参数</p>
      */
     public void setPodParameter(PodParameter PodParameter) {
         this.PodParameter = PodParameter;
     }
 
     /**
-     * Get 扩容的Master节点的数量。
-使用clickhouse集群扩容时，该参数不生效。
-使用kafka集群扩容时，该参数不生效。
-当HardwareResourceType=POD时，该参数不生效。 
-     * @return MasterCount 扩容的Master节点的数量。
-使用clickhouse集群扩容时，该参数不生效。
-使用kafka集群扩容时，该参数不生效。
-当HardwareResourceType=POD时，该参数不生效。
+     * Get <p>扩容的Master节点的数量。<br>使用clickhouse集群扩容时，该参数不生效。<br>使用kafka集群扩容时，该参数不生效。<br>当HardwareResourceType=POD时，该参数不生效。</p> 
+     * @return MasterCount <p>扩容的Master节点的数量。<br>使用clickhouse集群扩容时，该参数不生效。<br>使用kafka集群扩容时，该参数不生效。<br>当HardwareResourceType=POD时，该参数不生效。</p>
      */
     public Long getMasterCount() {
         return this.MasterCount;
     }
 
     /**
-     * Set 扩容的Master节点的数量。
-使用clickhouse集群扩容时，该参数不生效。
-使用kafka集群扩容时，该参数不生效。
-当HardwareResourceType=POD时，该参数不生效。
-     * @param MasterCount 扩容的Master节点的数量。
-使用clickhouse集群扩容时，该参数不生效。
-使用kafka集群扩容时，该参数不生效。
-当HardwareResourceType=POD时，该参数不生效。
+     * Set <p>扩容的Master节点的数量。<br>使用clickhouse集群扩容时，该参数不生效。<br>使用kafka集群扩容时，该参数不生效。<br>当HardwareResourceType=POD时，该参数不生效。</p>
+     * @param MasterCount <p>扩容的Master节点的数量。<br>使用clickhouse集群扩容时，该参数不生效。<br>使用kafka集群扩容时，该参数不生效。<br>当HardwareResourceType=POD时，该参数不生效。</p>
      */
     public void setMasterCount(Long MasterCount) {
         this.MasterCount = MasterCount;
     }
 
     /**
-     * Get 扩容后是否启动服务，true：启动，false：不启动 
-     * @return StartServiceAfterScaleOut 扩容后是否启动服务，true：启动，false：不启动
+     * Get <p>扩容后是否启动服务，true：启动，false：不启动</p> 
+     * @return StartServiceAfterScaleOut <p>扩容后是否启动服务，true：启动，false：不启动</p>
      */
     public String getStartServiceAfterScaleOut() {
         return this.StartServiceAfterScaleOut;
     }
 
     /**
-     * Set 扩容后是否启动服务，true：启动，false：不启动
-     * @param StartServiceAfterScaleOut 扩容后是否启动服务，true：启动，false：不启动
+     * Set <p>扩容后是否启动服务，true：启动，false：不启动</p>
+     * @param StartServiceAfterScaleOut <p>扩容后是否启动服务，true：启动，false：不启动</p>
      */
     public void setStartServiceAfterScaleOut(String StartServiceAfterScaleOut) {
         this.StartServiceAfterScaleOut = StartServiceAfterScaleOut;
     }
 
     /**
-     * Get 可用区，默认是集群的主可用区 
-     * @return ZoneId 可用区，默认是集群的主可用区
+     * Get <p>可用区，默认是集群的主可用区</p> 
+     * @return ZoneId <p>可用区，默认是集群的主可用区</p>
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 可用区，默认是集群的主可用区
-     * @param ZoneId 可用区，默认是集群的主可用区
+     * Set <p>可用区，默认是集群的主可用区</p>
+     * @param ZoneId <p>可用区，默认是集群的主可用区</p>
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 子网，默认是集群创建时的子网 
-     * @return SubnetId 子网，默认是集群创建时的子网
+     * Get <p>子网，默认是集群创建时的子网</p> 
+     * @return SubnetId <p>子网，默认是集群创建时的子网</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网，默认是集群创建时的子网
-     * @param SubnetId 子网，默认是集群创建时的子网
+     * Set <p>子网，默认是集群创建时的子网</p>
+     * @param SubnetId <p>子网，默认是集群创建时的子网</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 预设配置组 
-     * @return ScaleOutServiceConfAssign 预设配置组
+     * Get <p>预设配置组</p> 
+     * @return ScaleOutServiceConfAssign <p>预设配置组</p>
      */
     public String getScaleOutServiceConfAssign() {
         return this.ScaleOutServiceConfAssign;
     }
 
     /**
-     * Set 预设配置组
-     * @param ScaleOutServiceConfAssign 预设配置组
+     * Set <p>预设配置组</p>
+     * @param ScaleOutServiceConfAssign <p>预设配置组</p>
      */
     public void setScaleOutServiceConfAssign(String ScaleOutServiceConfAssign) {
         this.ScaleOutServiceConfAssign = ScaleOutServiceConfAssign;
     }
 
     /**
-     * Get 0表示关闭自动续费，1表示开启自动续费 
-     * @return AutoRenew 0表示关闭自动续费，1表示开启自动续费
+     * Get <p>0表示关闭自动续费，1表示开启自动续费</p> 
+     * @return AutoRenew <p>0表示关闭自动续费，1表示开启自动续费</p>
      */
     public Long getAutoRenew() {
         return this.AutoRenew;
     }
 
     /**
-     * Set 0表示关闭自动续费，1表示开启自动续费
-     * @param AutoRenew 0表示关闭自动续费，1表示开启自动续费
+     * Set <p>0表示关闭自动续费，1表示开启自动续费</p>
+     * @param AutoRenew <p>0表示关闭自动续费，1表示开启自动续费</p>
      */
     public void setAutoRenew(Long AutoRenew) {
         this.AutoRenew = AutoRenew;
     }
 
     /**
-     * Get 类型为ComputeResource和EMR以及默认，默认为EMR,类型为EMR时,InstanceId生效,类型为ComputeResource时,使用ComputeResourceId标识 
-     * @return ResourceBaseType 类型为ComputeResource和EMR以及默认，默认为EMR,类型为EMR时,InstanceId生效,类型为ComputeResource时,使用ComputeResourceId标识
+     * Get <p>类型为ComputeResource和EMR以及默认，默认为EMR,类型为EMR时,InstanceId生效,类型为ComputeResource时,使用ComputeResourceId标识</p> 
+     * @return ResourceBaseType <p>类型为ComputeResource和EMR以及默认，默认为EMR,类型为EMR时,InstanceId生效,类型为ComputeResource时,使用ComputeResourceId标识</p>
      */
     public String getResourceBaseType() {
         return this.ResourceBaseType;
     }
 
     /**
-     * Set 类型为ComputeResource和EMR以及默认，默认为EMR,类型为EMR时,InstanceId生效,类型为ComputeResource时,使用ComputeResourceId标识
-     * @param ResourceBaseType 类型为ComputeResource和EMR以及默认，默认为EMR,类型为EMR时,InstanceId生效,类型为ComputeResource时,使用ComputeResourceId标识
+     * Set <p>类型为ComputeResource和EMR以及默认，默认为EMR,类型为EMR时,InstanceId生效,类型为ComputeResource时,使用ComputeResourceId标识</p>
+     * @param ResourceBaseType <p>类型为ComputeResource和EMR以及默认，默认为EMR,类型为EMR时,InstanceId生效,类型为ComputeResource时,使用ComputeResourceId标识</p>
      */
     public void setResourceBaseType(String ResourceBaseType) {
         this.ResourceBaseType = ResourceBaseType;
     }
 
     /**
-     * Get 计算资源id 
-     * @return ComputeResourceId 计算资源id
+     * Get <p>计算资源id</p> 
+     * @return ComputeResourceId <p>计算资源id</p>
      */
     public String getComputeResourceId() {
         return this.ComputeResourceId;
     }
 
     /**
-     * Set 计算资源id
-     * @param ComputeResourceId 计算资源id
+     * Set <p>计算资源id</p>
+     * @param ComputeResourceId <p>计算资源id</p>
      */
     public void setComputeResourceId(String ComputeResourceId) {
         this.ComputeResourceId = ComputeResourceId;
     }
 
     /**
-     * Get 计算资源高级设置 
-     * @return ComputeResourceAdvanceParams 计算资源高级设置
+     * Get <p>计算资源高级设置</p> 
+     * @return ComputeResourceAdvanceParams <p>计算资源高级设置</p>
      */
     public ComputeResourceAdvanceParams getComputeResourceAdvanceParams() {
         return this.ComputeResourceAdvanceParams;
     }
 
     /**
-     * Set 计算资源高级设置
-     * @param ComputeResourceAdvanceParams 计算资源高级设置
+     * Set <p>计算资源高级设置</p>
+     * @param ComputeResourceAdvanceParams <p>计算资源高级设置</p>
      */
     public void setComputeResourceAdvanceParams(ComputeResourceAdvanceParams ComputeResourceAdvanceParams) {
         this.ComputeResourceAdvanceParams = ComputeResourceAdvanceParams;
     }
 
     /**
-     * Get 节点标记信息，目前只提供tf平台使用 
-     * @return NodeMarks 节点标记信息，目前只提供tf平台使用
+     * Get <p>节点标记信息，目前只提供tf平台使用</p> 
+     * @return NodeMarks <p>节点标记信息，目前只提供tf平台使用</p>
      */
     public NodeMark getNodeMarks() {
         return this.NodeMarks;
     }
 
     /**
-     * Set 节点标记信息，目前只提供tf平台使用
-     * @param NodeMarks 节点标记信息，目前只提供tf平台使用
+     * Set <p>节点标记信息，目前只提供tf平台使用</p>
+     * @param NodeMarks <p>节点标记信息，目前只提供tf平台使用</p>
      */
     public void setNodeMarks(NodeMark NodeMarks) {
         this.NodeMarks = NodeMarks;
     }
 
     /**
-     * Get 扩容指定计算组 
-     * @return WarehouseName 扩容指定计算组
+     * Get <p>扩容指定计算组</p> 
+     * @return WarehouseName <p>扩容指定计算组</p>
      */
     public String getWarehouseName() {
         return this.WarehouseName;
     }
 
     /**
-     * Set 扩容指定计算组
-     * @param WarehouseName 扩容指定计算组
+     * Set <p>扩容指定计算组</p>
+     * @param WarehouseName <p>扩容指定计算组</p>
      */
     public void setWarehouseName(String WarehouseName) {
         this.WarehouseName = WarehouseName;
+    }
+
+    /**
+     * Get <p>分区置放群组分区</p> 
+     * @return PartitionNumber <p>分区置放群组分区</p>
+     */
+    public Long getPartitionNumber() {
+        return this.PartitionNumber;
+    }
+
+    /**
+     * Set <p>分区置放群组分区</p>
+     * @param PartitionNumber <p>分区置放群组分区</p>
+     */
+    public void setPartitionNumber(Long PartitionNumber) {
+        this.PartitionNumber = PartitionNumber;
     }
 
     public ScaleOutInstanceRequest() {
@@ -910,6 +878,9 @@ public class ScaleOutInstanceRequest extends AbstractModel {
         if (source.WarehouseName != null) {
             this.WarehouseName = new String(source.WarehouseName);
         }
+        if (source.PartitionNumber != null) {
+            this.PartitionNumber = new Long(source.PartitionNumber);
+        }
     }
 
 
@@ -948,6 +919,7 @@ public class ScaleOutInstanceRequest extends AbstractModel {
         this.setParamObj(map, prefix + "ComputeResourceAdvanceParams.", this.ComputeResourceAdvanceParams);
         this.setParamObj(map, prefix + "NodeMarks.", this.NodeMarks);
         this.setParamSimple(map, prefix + "WarehouseName", this.WarehouseName);
+        this.setParamSimple(map, prefix + "PartitionNumber", this.PartitionNumber);
 
     }
 }

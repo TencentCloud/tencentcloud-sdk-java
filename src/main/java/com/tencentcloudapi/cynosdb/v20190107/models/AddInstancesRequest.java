@@ -24,225 +24,214 @@ import java.util.HashMap;
 public class AddInstancesRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * <p>集群ID</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Cpu核数
+    * <p>Cpu核数</p>
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * 内存，单位为GB
+    * <p>内存，单位为GB</p>
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * 新增只读实例数，取值范围为(0,15]
+    * <p>新增只读实例数，取值范围为(0,15]</p>
     */
     @SerializedName("ReadOnlyCount")
     @Expose
     private Long ReadOnlyCount;
 
     /**
-    * 实例机器类型，支持值如下：
-- common：表示通用型
-- exclusive：表示独享型
+    * <p>实例机器类型，支持值如下：</p><ul><li>common：表示通用型</li><li>exclusive：表示独享型</li></ul>
     */
     @SerializedName("DeviceType")
     @Expose
     private String DeviceType;
 
     /**
-    * 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。
+    * <p>实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。</p>
     */
     @SerializedName("InstanceGrpId")
     @Expose
     private String InstanceGrpId;
 
     /**
-    * 所属VPC网络ID。
+    * <p>所属VPC网络ID。</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 所属子网ID，如果设置了VpcId，则SubnetId必填。
+    * <p>所属子网ID，如果设置了VpcId，则SubnetId必填。</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 新增RO组时使用的Port，取值范围为[0,65535)
+    * <p>新增RO组时使用的Port，取值范围为[0,65535)</p>
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * 实例名称，字符串长度范围为[0,64)，取值范围为大小写字母，0-9数字，'_','-','.'
+    * <p>实例名称，字符串长度范围为[0,64)，取值范围为大小写字母，0-9数字，&#39;_&#39;,&#39;-&#39;,&#39;.&#39;</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 是否自动选择代金券 1是 0否 默认为0
+    * <p>是否自动选择代金券 1是 0否 默认为0</p>
     */
     @SerializedName("AutoVoucher")
     @Expose
     private Long AutoVoucher;
 
     /**
-    * 数据库类型，取值范围: 
-<li> MYSQL </li>
+    * <p>数据库类型，取值范围: </p><li> MYSQL </li>
     */
     @SerializedName("DbType")
     @Expose
     private String DbType;
 
     /**
-    * 订单来源，字符串长度范围为[0,64)
+    * <p>订单来源，字符串长度范围为[0,64)</p>
     */
     @SerializedName("OrderSource")
     @Expose
     private String OrderSource;
 
     /**
-    * 交易模式 0-下单并支付 1-下单
+    * <p>交易模式 0-下单并支付 1-下单</p>
     */
     @SerializedName("DealMode")
     @Expose
     private Long DealMode;
 
     /**
-    * 参数模板ID
+    * <p>参数模板ID</p>
     */
     @SerializedName("ParamTemplateId")
     @Expose
     private Long ParamTemplateId;
 
     /**
-    * 参数列表，ParamTemplateId 传入时InstanceParams才有效
+    * <p>参数列表，ParamTemplateId 传入时InstanceParams才有效</p>
     */
     @SerializedName("InstanceParams")
     @Expose
     private ModifyParamItem [] InstanceParams;
 
     /**
-    * 安全组ID，新建只读实例时可以指定安全组。
+    * <p>安全组ID，新建只读实例时可以指定安全组。</p>
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-    * proxy同步升级
+    * <p>proxy同步升级</p>
     */
     @SerializedName("UpgradeProxy")
     @Expose
     private UpgradeProxy UpgradeProxy;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get <p>集群ID</p> 
+     * @return ClusterId <p>集群ID</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set <p>集群ID</p>
+     * @param ClusterId <p>集群ID</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Cpu核数 
-     * @return Cpu Cpu核数
+     * Get <p>Cpu核数</p> 
+     * @return Cpu <p>Cpu核数</p>
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set Cpu核数
-     * @param Cpu Cpu核数
+     * Set <p>Cpu核数</p>
+     * @param Cpu <p>Cpu核数</p>
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get 内存，单位为GB 
-     * @return Memory 内存，单位为GB
+     * Get <p>内存，单位为GB</p> 
+     * @return Memory <p>内存，单位为GB</p>
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 内存，单位为GB
-     * @param Memory 内存，单位为GB
+     * Set <p>内存，单位为GB</p>
+     * @param Memory <p>内存，单位为GB</p>
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get 新增只读实例数，取值范围为(0,15] 
-     * @return ReadOnlyCount 新增只读实例数，取值范围为(0,15]
+     * Get <p>新增只读实例数，取值范围为(0,15]</p> 
+     * @return ReadOnlyCount <p>新增只读实例数，取值范围为(0,15]</p>
      */
     public Long getReadOnlyCount() {
         return this.ReadOnlyCount;
     }
 
     /**
-     * Set 新增只读实例数，取值范围为(0,15]
-     * @param ReadOnlyCount 新增只读实例数，取值范围为(0,15]
+     * Set <p>新增只读实例数，取值范围为(0,15]</p>
+     * @param ReadOnlyCount <p>新增只读实例数，取值范围为(0,15]</p>
      */
     public void setReadOnlyCount(Long ReadOnlyCount) {
         this.ReadOnlyCount = ReadOnlyCount;
     }
 
     /**
-     * Get 实例机器类型，支持值如下：
-- common：表示通用型
-- exclusive：表示独享型 
-     * @return DeviceType 实例机器类型，支持值如下：
-- common：表示通用型
-- exclusive：表示独享型
+     * Get <p>实例机器类型，支持值如下：</p><ul><li>common：表示通用型</li><li>exclusive：表示独享型</li></ul> 
+     * @return DeviceType <p>实例机器类型，支持值如下：</p><ul><li>common：表示通用型</li><li>exclusive：表示独享型</li></ul>
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set 实例机器类型，支持值如下：
-- common：表示通用型
-- exclusive：表示独享型
-     * @param DeviceType 实例机器类型，支持值如下：
-- common：表示通用型
-- exclusive：表示独享型
+     * Set <p>实例机器类型，支持值如下：</p><ul><li>common：表示通用型</li><li>exclusive：表示独享型</li></ul>
+     * @param DeviceType <p>实例机器类型，支持值如下：</p><ul><li>common：表示通用型</li><li>exclusive：表示独享型</li></ul>
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;
     }
 
     /**
-     * Get 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。 
-     * @return InstanceGrpId 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。
+     * Get <p>实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。</p> 
+     * @return InstanceGrpId <p>实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。</p>
      * @deprecated
      */
     @Deprecated
@@ -251,8 +240,8 @@ public class AddInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Set 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。
-     * @param InstanceGrpId 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。
+     * Set <p>实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。</p>
+     * @param InstanceGrpId <p>实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。</p>
      * @deprecated
      */
     @Deprecated
@@ -261,196 +250,192 @@ public class AddInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 所属VPC网络ID。 
-     * @return VpcId 所属VPC网络ID。
+     * Get <p>所属VPC网络ID。</p> 
+     * @return VpcId <p>所属VPC网络ID。</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 所属VPC网络ID。
-     * @param VpcId 所属VPC网络ID。
+     * Set <p>所属VPC网络ID。</p>
+     * @param VpcId <p>所属VPC网络ID。</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 所属子网ID，如果设置了VpcId，则SubnetId必填。 
-     * @return SubnetId 所属子网ID，如果设置了VpcId，则SubnetId必填。
+     * Get <p>所属子网ID，如果设置了VpcId，则SubnetId必填。</p> 
+     * @return SubnetId <p>所属子网ID，如果设置了VpcId，则SubnetId必填。</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 所属子网ID，如果设置了VpcId，则SubnetId必填。
-     * @param SubnetId 所属子网ID，如果设置了VpcId，则SubnetId必填。
+     * Set <p>所属子网ID，如果设置了VpcId，则SubnetId必填。</p>
+     * @param SubnetId <p>所属子网ID，如果设置了VpcId，则SubnetId必填。</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 新增RO组时使用的Port，取值范围为[0,65535) 
-     * @return Port 新增RO组时使用的Port，取值范围为[0,65535)
+     * Get <p>新增RO组时使用的Port，取值范围为[0,65535)</p> 
+     * @return Port <p>新增RO组时使用的Port，取值范围为[0,65535)</p>
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 新增RO组时使用的Port，取值范围为[0,65535)
-     * @param Port 新增RO组时使用的Port，取值范围为[0,65535)
+     * Set <p>新增RO组时使用的Port，取值范围为[0,65535)</p>
+     * @param Port <p>新增RO组时使用的Port，取值范围为[0,65535)</p>
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 实例名称，字符串长度范围为[0,64)，取值范围为大小写字母，0-9数字，'_','-','.' 
-     * @return InstanceName 实例名称，字符串长度范围为[0,64)，取值范围为大小写字母，0-9数字，'_','-','.'
+     * Get <p>实例名称，字符串长度范围为[0,64)，取值范围为大小写字母，0-9数字，&#39;_&#39;,&#39;-&#39;,&#39;.&#39;</p> 
+     * @return InstanceName <p>实例名称，字符串长度范围为[0,64)，取值范围为大小写字母，0-9数字，&#39;_&#39;,&#39;-&#39;,&#39;.&#39;</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称，字符串长度范围为[0,64)，取值范围为大小写字母，0-9数字，'_','-','.'
-     * @param InstanceName 实例名称，字符串长度范围为[0,64)，取值范围为大小写字母，0-9数字，'_','-','.'
+     * Set <p>实例名称，字符串长度范围为[0,64)，取值范围为大小写字母，0-9数字，&#39;_&#39;,&#39;-&#39;,&#39;.&#39;</p>
+     * @param InstanceName <p>实例名称，字符串长度范围为[0,64)，取值范围为大小写字母，0-9数字，&#39;_&#39;,&#39;-&#39;,&#39;.&#39;</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 是否自动选择代金券 1是 0否 默认为0 
-     * @return AutoVoucher 是否自动选择代金券 1是 0否 默认为0
+     * Get <p>是否自动选择代金券 1是 0否 默认为0</p> 
+     * @return AutoVoucher <p>是否自动选择代金券 1是 0否 默认为0</p>
      */
     public Long getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * Set 是否自动选择代金券 1是 0否 默认为0
-     * @param AutoVoucher 是否自动选择代金券 1是 0否 默认为0
+     * Set <p>是否自动选择代金券 1是 0否 默认为0</p>
+     * @param AutoVoucher <p>是否自动选择代金券 1是 0否 默认为0</p>
      */
     public void setAutoVoucher(Long AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
     }
 
     /**
-     * Get 数据库类型，取值范围: 
-<li> MYSQL </li> 
-     * @return DbType 数据库类型，取值范围: 
-<li> MYSQL </li>
+     * Get <p>数据库类型，取值范围: </p><li> MYSQL </li> 
+     * @return DbType <p>数据库类型，取值范围: </p><li> MYSQL </li>
      */
     public String getDbType() {
         return this.DbType;
     }
 
     /**
-     * Set 数据库类型，取值范围: 
-<li> MYSQL </li>
-     * @param DbType 数据库类型，取值范围: 
-<li> MYSQL </li>
+     * Set <p>数据库类型，取值范围: </p><li> MYSQL </li>
+     * @param DbType <p>数据库类型，取值范围: </p><li> MYSQL </li>
      */
     public void setDbType(String DbType) {
         this.DbType = DbType;
     }
 
     /**
-     * Get 订单来源，字符串长度范围为[0,64) 
-     * @return OrderSource 订单来源，字符串长度范围为[0,64)
+     * Get <p>订单来源，字符串长度范围为[0,64)</p> 
+     * @return OrderSource <p>订单来源，字符串长度范围为[0,64)</p>
      */
     public String getOrderSource() {
         return this.OrderSource;
     }
 
     /**
-     * Set 订单来源，字符串长度范围为[0,64)
-     * @param OrderSource 订单来源，字符串长度范围为[0,64)
+     * Set <p>订单来源，字符串长度范围为[0,64)</p>
+     * @param OrderSource <p>订单来源，字符串长度范围为[0,64)</p>
      */
     public void setOrderSource(String OrderSource) {
         this.OrderSource = OrderSource;
     }
 
     /**
-     * Get 交易模式 0-下单并支付 1-下单 
-     * @return DealMode 交易模式 0-下单并支付 1-下单
+     * Get <p>交易模式 0-下单并支付 1-下单</p> 
+     * @return DealMode <p>交易模式 0-下单并支付 1-下单</p>
      */
     public Long getDealMode() {
         return this.DealMode;
     }
 
     /**
-     * Set 交易模式 0-下单并支付 1-下单
-     * @param DealMode 交易模式 0-下单并支付 1-下单
+     * Set <p>交易模式 0-下单并支付 1-下单</p>
+     * @param DealMode <p>交易模式 0-下单并支付 1-下单</p>
      */
     public void setDealMode(Long DealMode) {
         this.DealMode = DealMode;
     }
 
     /**
-     * Get 参数模板ID 
-     * @return ParamTemplateId 参数模板ID
+     * Get <p>参数模板ID</p> 
+     * @return ParamTemplateId <p>参数模板ID</p>
      */
     public Long getParamTemplateId() {
         return this.ParamTemplateId;
     }
 
     /**
-     * Set 参数模板ID
-     * @param ParamTemplateId 参数模板ID
+     * Set <p>参数模板ID</p>
+     * @param ParamTemplateId <p>参数模板ID</p>
      */
     public void setParamTemplateId(Long ParamTemplateId) {
         this.ParamTemplateId = ParamTemplateId;
     }
 
     /**
-     * Get 参数列表，ParamTemplateId 传入时InstanceParams才有效 
-     * @return InstanceParams 参数列表，ParamTemplateId 传入时InstanceParams才有效
+     * Get <p>参数列表，ParamTemplateId 传入时InstanceParams才有效</p> 
+     * @return InstanceParams <p>参数列表，ParamTemplateId 传入时InstanceParams才有效</p>
      */
     public ModifyParamItem [] getInstanceParams() {
         return this.InstanceParams;
     }
 
     /**
-     * Set 参数列表，ParamTemplateId 传入时InstanceParams才有效
-     * @param InstanceParams 参数列表，ParamTemplateId 传入时InstanceParams才有效
+     * Set <p>参数列表，ParamTemplateId 传入时InstanceParams才有效</p>
+     * @param InstanceParams <p>参数列表，ParamTemplateId 传入时InstanceParams才有效</p>
      */
     public void setInstanceParams(ModifyParamItem [] InstanceParams) {
         this.InstanceParams = InstanceParams;
     }
 
     /**
-     * Get 安全组ID，新建只读实例时可以指定安全组。 
-     * @return SecurityGroupIds 安全组ID，新建只读实例时可以指定安全组。
+     * Get <p>安全组ID，新建只读实例时可以指定安全组。</p> 
+     * @return SecurityGroupIds <p>安全组ID，新建只读实例时可以指定安全组。</p>
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set 安全组ID，新建只读实例时可以指定安全组。
-     * @param SecurityGroupIds 安全组ID，新建只读实例时可以指定安全组。
+     * Set <p>安全组ID，新建只读实例时可以指定安全组。</p>
+     * @param SecurityGroupIds <p>安全组ID，新建只读实例时可以指定安全组。</p>
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
-     * Get proxy同步升级 
-     * @return UpgradeProxy proxy同步升级
+     * Get <p>proxy同步升级</p> 
+     * @return UpgradeProxy <p>proxy同步升级</p>
      */
     public UpgradeProxy getUpgradeProxy() {
         return this.UpgradeProxy;
     }
 
     /**
-     * Set proxy同步升级
-     * @param UpgradeProxy proxy同步升级
+     * Set <p>proxy同步升级</p>
+     * @param UpgradeProxy <p>proxy同步升级</p>
      */
     public void setUpgradeProxy(UpgradeProxy UpgradeProxy) {
         this.UpgradeProxy = UpgradeProxy;

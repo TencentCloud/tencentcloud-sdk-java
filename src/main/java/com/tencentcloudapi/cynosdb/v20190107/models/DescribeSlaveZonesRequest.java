@@ -38,6 +38,13 @@ public class DescribeSlaveZonesRequest extends AbstractModel {
     private Long OssClusterId;
 
     /**
+    * 存储架构类型。枚举值：1.0/2.0  默认值：1.0
+    */
+    @SerializedName("StorageVersion")
+    @Expose
+    private String StorageVersion;
+
+    /**
      * Get 可用区 
      * @return Zone 可用区
      */
@@ -69,6 +76,22 @@ public class DescribeSlaveZonesRequest extends AbstractModel {
         this.OssClusterId = OssClusterId;
     }
 
+    /**
+     * Get 存储架构类型。枚举值：1.0/2.0  默认值：1.0 
+     * @return StorageVersion 存储架构类型。枚举值：1.0/2.0  默认值：1.0
+     */
+    public String getStorageVersion() {
+        return this.StorageVersion;
+    }
+
+    /**
+     * Set 存储架构类型。枚举值：1.0/2.0  默认值：1.0
+     * @param StorageVersion 存储架构类型。枚举值：1.0/2.0  默认值：1.0
+     */
+    public void setStorageVersion(String StorageVersion) {
+        this.StorageVersion = StorageVersion;
+    }
+
     public DescribeSlaveZonesRequest() {
     }
 
@@ -83,6 +106,9 @@ public class DescribeSlaveZonesRequest extends AbstractModel {
         if (source.OssClusterId != null) {
             this.OssClusterId = new Long(source.OssClusterId);
         }
+        if (source.StorageVersion != null) {
+            this.StorageVersion = new String(source.StorageVersion);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class DescribeSlaveZonesRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "OssClusterId", this.OssClusterId);
+        this.setParamSimple(map, prefix + "StorageVersion", this.StorageVersion);
 
     }
 }

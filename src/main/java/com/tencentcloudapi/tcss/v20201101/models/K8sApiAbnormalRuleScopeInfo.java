@@ -24,178 +24,141 @@ import java.util.HashMap;
 public class K8sApiAbnormalRuleScopeInfo extends AbstractModel {
 
     /**
-    * 范围
-系统事件:
-ANONYMOUS_ACCESS: 匿名访问
-ABNORMAL_UA_REQ: 异常UA请求
-ANONYMOUS_ABNORMAL_PERMISSION: 匿名用户权限异动
-GET_CREDENTIALS: 凭据信息获取
-MOUNT_SENSITIVE_PATH: 敏感路径挂载
-COMMAND_RUN: 命令执行
-PRIVILEGE_CONTAINER: 特权容器
-EXCEPTION_CRONTAB_TASK: 异常定时任务
-STATICS_POD: 静态pod创建
-ABNORMAL_CREATE_POD: 异常pod创建
-USER_DEFINED: 用户自定义
+    * <p>范围<br>系统事件:<br>ANONYMOUS_ACCESS: 匿名访问<br>ABNORMAL_UA_REQ: 异常UA请求<br>ANONYMOUS_ABNORMAL_PERMISSION: 匿名用户权限异动<br>GET_CREDENTIALS: 凭据信息获取<br>MOUNT_SENSITIVE_PATH: 敏感路径挂载<br>COMMAND_RUN: 命令执行<br>PRIVILEGE_CONTAINER: 特权容器<br>EXCEPTION_CRONTAB_TASK: 异常定时任务<br>STATICS_POD: 静态pod创建<br>ABNORMAL_CREATE_POD: 异常pod创建<br>USER_DEFINED: 用户自定义</p>
     */
     @SerializedName("Scope")
     @Expose
     private String Scope;
 
     /**
-    * 动作(RULE_MODE_ALERT: 告警 RULE_MODE_RELEASE:放行)
+    * <p>动作(RULE_MODE_ALERT: 告警 RULE_MODE_RELEASE:放行)</p>
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * 威胁等级 HIGH:高级 MIDDLE: 中级 LOW:低级 NOTICE:提示
+    * <p>威胁等级 HIGH:高级 MIDDLE: 中级 LOW:低级 NOTICE:提示</p>
     */
     @SerializedName("RiskLevel")
     @Expose
     private String RiskLevel;
 
     /**
-    * 开关状态(true:开 false:关) 适用于系统规则
+    * <p>开关状态(true:开 false:关) 适用于系统规则</p>
     */
     @SerializedName("Status")
     @Expose
     private Boolean Status;
 
     /**
-    * 是否被删除 适用于自定义规则入参
+    * <p>是否被删除 适用于自定义规则入参</p>
     */
     @SerializedName("IsDelete")
     @Expose
     private Boolean IsDelete;
 
     /**
-     * Get 范围
-系统事件:
-ANONYMOUS_ACCESS: 匿名访问
-ABNORMAL_UA_REQ: 异常UA请求
-ANONYMOUS_ABNORMAL_PERMISSION: 匿名用户权限异动
-GET_CREDENTIALS: 凭据信息获取
-MOUNT_SENSITIVE_PATH: 敏感路径挂载
-COMMAND_RUN: 命令执行
-PRIVILEGE_CONTAINER: 特权容器
-EXCEPTION_CRONTAB_TASK: 异常定时任务
-STATICS_POD: 静态pod创建
-ABNORMAL_CREATE_POD: 异常pod创建
-USER_DEFINED: 用户自定义 
-     * @return Scope 范围
-系统事件:
-ANONYMOUS_ACCESS: 匿名访问
-ABNORMAL_UA_REQ: 异常UA请求
-ANONYMOUS_ABNORMAL_PERMISSION: 匿名用户权限异动
-GET_CREDENTIALS: 凭据信息获取
-MOUNT_SENSITIVE_PATH: 敏感路径挂载
-COMMAND_RUN: 命令执行
-PRIVILEGE_CONTAINER: 特权容器
-EXCEPTION_CRONTAB_TASK: 异常定时任务
-STATICS_POD: 静态pod创建
-ABNORMAL_CREATE_POD: 异常pod创建
-USER_DEFINED: 用户自定义
+    * <p>规则类型对应中文</p>
+    */
+    @SerializedName("RuleTypeZH")
+    @Expose
+    private String RuleTypeZH;
+
+    /**
+     * Get <p>范围<br>系统事件:<br>ANONYMOUS_ACCESS: 匿名访问<br>ABNORMAL_UA_REQ: 异常UA请求<br>ANONYMOUS_ABNORMAL_PERMISSION: 匿名用户权限异动<br>GET_CREDENTIALS: 凭据信息获取<br>MOUNT_SENSITIVE_PATH: 敏感路径挂载<br>COMMAND_RUN: 命令执行<br>PRIVILEGE_CONTAINER: 特权容器<br>EXCEPTION_CRONTAB_TASK: 异常定时任务<br>STATICS_POD: 静态pod创建<br>ABNORMAL_CREATE_POD: 异常pod创建<br>USER_DEFINED: 用户自定义</p> 
+     * @return Scope <p>范围<br>系统事件:<br>ANONYMOUS_ACCESS: 匿名访问<br>ABNORMAL_UA_REQ: 异常UA请求<br>ANONYMOUS_ABNORMAL_PERMISSION: 匿名用户权限异动<br>GET_CREDENTIALS: 凭据信息获取<br>MOUNT_SENSITIVE_PATH: 敏感路径挂载<br>COMMAND_RUN: 命令执行<br>PRIVILEGE_CONTAINER: 特权容器<br>EXCEPTION_CRONTAB_TASK: 异常定时任务<br>STATICS_POD: 静态pod创建<br>ABNORMAL_CREATE_POD: 异常pod创建<br>USER_DEFINED: 用户自定义</p>
      */
     public String getScope() {
         return this.Scope;
     }
 
     /**
-     * Set 范围
-系统事件:
-ANONYMOUS_ACCESS: 匿名访问
-ABNORMAL_UA_REQ: 异常UA请求
-ANONYMOUS_ABNORMAL_PERMISSION: 匿名用户权限异动
-GET_CREDENTIALS: 凭据信息获取
-MOUNT_SENSITIVE_PATH: 敏感路径挂载
-COMMAND_RUN: 命令执行
-PRIVILEGE_CONTAINER: 特权容器
-EXCEPTION_CRONTAB_TASK: 异常定时任务
-STATICS_POD: 静态pod创建
-ABNORMAL_CREATE_POD: 异常pod创建
-USER_DEFINED: 用户自定义
-     * @param Scope 范围
-系统事件:
-ANONYMOUS_ACCESS: 匿名访问
-ABNORMAL_UA_REQ: 异常UA请求
-ANONYMOUS_ABNORMAL_PERMISSION: 匿名用户权限异动
-GET_CREDENTIALS: 凭据信息获取
-MOUNT_SENSITIVE_PATH: 敏感路径挂载
-COMMAND_RUN: 命令执行
-PRIVILEGE_CONTAINER: 特权容器
-EXCEPTION_CRONTAB_TASK: 异常定时任务
-STATICS_POD: 静态pod创建
-ABNORMAL_CREATE_POD: 异常pod创建
-USER_DEFINED: 用户自定义
+     * Set <p>范围<br>系统事件:<br>ANONYMOUS_ACCESS: 匿名访问<br>ABNORMAL_UA_REQ: 异常UA请求<br>ANONYMOUS_ABNORMAL_PERMISSION: 匿名用户权限异动<br>GET_CREDENTIALS: 凭据信息获取<br>MOUNT_SENSITIVE_PATH: 敏感路径挂载<br>COMMAND_RUN: 命令执行<br>PRIVILEGE_CONTAINER: 特权容器<br>EXCEPTION_CRONTAB_TASK: 异常定时任务<br>STATICS_POD: 静态pod创建<br>ABNORMAL_CREATE_POD: 异常pod创建<br>USER_DEFINED: 用户自定义</p>
+     * @param Scope <p>范围<br>系统事件:<br>ANONYMOUS_ACCESS: 匿名访问<br>ABNORMAL_UA_REQ: 异常UA请求<br>ANONYMOUS_ABNORMAL_PERMISSION: 匿名用户权限异动<br>GET_CREDENTIALS: 凭据信息获取<br>MOUNT_SENSITIVE_PATH: 敏感路径挂载<br>COMMAND_RUN: 命令执行<br>PRIVILEGE_CONTAINER: 特权容器<br>EXCEPTION_CRONTAB_TASK: 异常定时任务<br>STATICS_POD: 静态pod创建<br>ABNORMAL_CREATE_POD: 异常pod创建<br>USER_DEFINED: 用户自定义</p>
      */
     public void setScope(String Scope) {
         this.Scope = Scope;
     }
 
     /**
-     * Get 动作(RULE_MODE_ALERT: 告警 RULE_MODE_RELEASE:放行) 
-     * @return Action 动作(RULE_MODE_ALERT: 告警 RULE_MODE_RELEASE:放行)
+     * Get <p>动作(RULE_MODE_ALERT: 告警 RULE_MODE_RELEASE:放行)</p> 
+     * @return Action <p>动作(RULE_MODE_ALERT: 告警 RULE_MODE_RELEASE:放行)</p>
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set 动作(RULE_MODE_ALERT: 告警 RULE_MODE_RELEASE:放行)
-     * @param Action 动作(RULE_MODE_ALERT: 告警 RULE_MODE_RELEASE:放行)
+     * Set <p>动作(RULE_MODE_ALERT: 告警 RULE_MODE_RELEASE:放行)</p>
+     * @param Action <p>动作(RULE_MODE_ALERT: 告警 RULE_MODE_RELEASE:放行)</p>
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get 威胁等级 HIGH:高级 MIDDLE: 中级 LOW:低级 NOTICE:提示 
-     * @return RiskLevel 威胁等级 HIGH:高级 MIDDLE: 中级 LOW:低级 NOTICE:提示
+     * Get <p>威胁等级 HIGH:高级 MIDDLE: 中级 LOW:低级 NOTICE:提示</p> 
+     * @return RiskLevel <p>威胁等级 HIGH:高级 MIDDLE: 中级 LOW:低级 NOTICE:提示</p>
      */
     public String getRiskLevel() {
         return this.RiskLevel;
     }
 
     /**
-     * Set 威胁等级 HIGH:高级 MIDDLE: 中级 LOW:低级 NOTICE:提示
-     * @param RiskLevel 威胁等级 HIGH:高级 MIDDLE: 中级 LOW:低级 NOTICE:提示
+     * Set <p>威胁等级 HIGH:高级 MIDDLE: 中级 LOW:低级 NOTICE:提示</p>
+     * @param RiskLevel <p>威胁等级 HIGH:高级 MIDDLE: 中级 LOW:低级 NOTICE:提示</p>
      */
     public void setRiskLevel(String RiskLevel) {
         this.RiskLevel = RiskLevel;
     }
 
     /**
-     * Get 开关状态(true:开 false:关) 适用于系统规则 
-     * @return Status 开关状态(true:开 false:关) 适用于系统规则
+     * Get <p>开关状态(true:开 false:关) 适用于系统规则</p> 
+     * @return Status <p>开关状态(true:开 false:关) 适用于系统规则</p>
      */
     public Boolean getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 开关状态(true:开 false:关) 适用于系统规则
-     * @param Status 开关状态(true:开 false:关) 适用于系统规则
+     * Set <p>开关状态(true:开 false:关) 适用于系统规则</p>
+     * @param Status <p>开关状态(true:开 false:关) 适用于系统规则</p>
      */
     public void setStatus(Boolean Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 是否被删除 适用于自定义规则入参 
-     * @return IsDelete 是否被删除 适用于自定义规则入参
+     * Get <p>是否被删除 适用于自定义规则入参</p> 
+     * @return IsDelete <p>是否被删除 适用于自定义规则入参</p>
      */
     public Boolean getIsDelete() {
         return this.IsDelete;
     }
 
     /**
-     * Set 是否被删除 适用于自定义规则入参
-     * @param IsDelete 是否被删除 适用于自定义规则入参
+     * Set <p>是否被删除 适用于自定义规则入参</p>
+     * @param IsDelete <p>是否被删除 适用于自定义规则入参</p>
      */
     public void setIsDelete(Boolean IsDelete) {
         this.IsDelete = IsDelete;
+    }
+
+    /**
+     * Get <p>规则类型对应中文</p> 
+     * @return RuleTypeZH <p>规则类型对应中文</p>
+     */
+    public String getRuleTypeZH() {
+        return this.RuleTypeZH;
+    }
+
+    /**
+     * Set <p>规则类型对应中文</p>
+     * @param RuleTypeZH <p>规则类型对应中文</p>
+     */
+    public void setRuleTypeZH(String RuleTypeZH) {
+        this.RuleTypeZH = RuleTypeZH;
     }
 
     public K8sApiAbnormalRuleScopeInfo() {
@@ -221,6 +184,9 @@ USER_DEFINED: 用户自定义
         if (source.IsDelete != null) {
             this.IsDelete = new Boolean(source.IsDelete);
         }
+        if (source.RuleTypeZH != null) {
+            this.RuleTypeZH = new String(source.RuleTypeZH);
+        }
     }
 
 
@@ -233,6 +199,7 @@ USER_DEFINED: 用户自定义
         this.setParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "IsDelete", this.IsDelete);
+        this.setParamSimple(map, prefix + "RuleTypeZH", this.RuleTypeZH);
 
     }
 }

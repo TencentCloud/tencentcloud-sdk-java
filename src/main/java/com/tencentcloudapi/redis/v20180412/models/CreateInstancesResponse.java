@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class CreateInstancesResponse extends AbstractModel {
 
     /**
-    * 交易的ID。
+    * <p>交易的ID。</p>
     */
     @SerializedName("DealId")
     @Expose
     private String DealId;
 
     /**
-    * 实例ID。
+    * <p>实例ID。</p>
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * 订单号。
+    * <p>订单号。</p>
     */
     @SerializedName("DealName")
     @Expose
@@ -52,8 +52,8 @@ public class CreateInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 交易的ID。 
-     * @return DealId 交易的ID。
+     * Get <p>交易的ID。</p> 
+     * @return DealId <p>交易的ID。</p>
      * @deprecated
      */
     @Deprecated
@@ -62,8 +62,8 @@ public class CreateInstancesResponse extends AbstractModel {
     }
 
     /**
-     * Set 交易的ID。
-     * @param DealId 交易的ID。
+     * Set <p>交易的ID。</p>
+     * @param DealId <p>交易的ID。</p>
      * @deprecated
      */
     @Deprecated
@@ -72,32 +72,32 @@ public class CreateInstancesResponse extends AbstractModel {
     }
 
     /**
-     * Get 实例ID。 
-     * @return InstanceIds 实例ID。
+     * Get <p>实例ID。</p> 
+     * @return InstanceIds <p>实例ID。</p>
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 实例ID。
-     * @param InstanceIds 实例ID。
+     * Set <p>实例ID。</p>
+     * @param InstanceIds <p>实例ID。</p>
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get 订单号。 
-     * @return DealName 订单号。
+     * Get <p>订单号。</p> 
+     * @return DealName <p>订单号。</p>
      */
     public String getDealName() {
         return this.DealName;
     }
 
     /**
-     * Set 订单号。
-     * @param DealName 订单号。
+     * Set <p>订单号。</p>
+     * @param DealName <p>订单号。</p>
      */
     public void setDealName(String DealName) {
         this.DealName = DealName;

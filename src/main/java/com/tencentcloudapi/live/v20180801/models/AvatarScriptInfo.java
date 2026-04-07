@@ -24,209 +24,207 @@ import java.util.HashMap;
 public class AvatarScriptInfo extends AbstractModel {
 
     /**
-    * 数字人直播间话术 ID。
+    * <p>数字人直播间话术 ID。</p>
     */
     @SerializedName("ScriptId")
     @Expose
     private String ScriptId;
 
     /**
-    * 话术标题。
+    * <p>数字人直播间产品 ID。</p>
+    */
+    @SerializedName("ProductId")
+    @Expose
+    private String ProductId;
+
+    /**
+    * <p>话术标题。</p>
     */
     @SerializedName("Title")
     @Expose
     private String Title;
 
     /**
-    * 话术内容。
+    * <p>话术内容。</p>
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-    * 话术状态。
-PENDING --未生成。
-PROCESSING --生成中。
-READY --已生成。
+    * <p>话术状态。PENDING --未生成。PROCESSING --生成中。READY --已生成。FAILED-失败</p><p>枚举值：</p><ul><li>FAILED： 失败</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 时长。单位：毫秒。
+    * <p>时长。单位：毫秒。</p>
     */
     @SerializedName("Duration")
     @Expose
     private Long Duration;
 
     /**
-    * 话术位置。
+    * <p>话术位置。</p>
     */
     @SerializedName("Position")
     @Expose
     private Long Position;
 
     /**
-    * 话术创建时间，UTC时间。
-注意：UTC时间和北京时间相差八小时。
+    * <p>话术创建时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 话术最后更新时间，UTC时间。
-注意：UTC时间和北京时间相差八小时。
+    * <p>话术最后更新时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get 数字人直播间话术 ID。 
-     * @return ScriptId 数字人直播间话术 ID。
+     * Get <p>数字人直播间话术 ID。</p> 
+     * @return ScriptId <p>数字人直播间话术 ID。</p>
      */
     public String getScriptId() {
         return this.ScriptId;
     }
 
     /**
-     * Set 数字人直播间话术 ID。
-     * @param ScriptId 数字人直播间话术 ID。
+     * Set <p>数字人直播间话术 ID。</p>
+     * @param ScriptId <p>数字人直播间话术 ID。</p>
      */
     public void setScriptId(String ScriptId) {
         this.ScriptId = ScriptId;
     }
 
     /**
-     * Get 话术标题。 
-     * @return Title 话术标题。
+     * Get <p>数字人直播间产品 ID。</p> 
+     * @return ProductId <p>数字人直播间产品 ID。</p>
+     */
+    public String getProductId() {
+        return this.ProductId;
+    }
+
+    /**
+     * Set <p>数字人直播间产品 ID。</p>
+     * @param ProductId <p>数字人直播间产品 ID。</p>
+     */
+    public void setProductId(String ProductId) {
+        this.ProductId = ProductId;
+    }
+
+    /**
+     * Get <p>话术标题。</p> 
+     * @return Title <p>话术标题。</p>
      */
     public String getTitle() {
         return this.Title;
     }
 
     /**
-     * Set 话术标题。
-     * @param Title 话术标题。
+     * Set <p>话术标题。</p>
+     * @param Title <p>话术标题。</p>
      */
     public void setTitle(String Title) {
         this.Title = Title;
     }
 
     /**
-     * Get 话术内容。 
-     * @return Content 话术内容。
+     * Get <p>话术内容。</p> 
+     * @return Content <p>话术内容。</p>
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set 话术内容。
-     * @param Content 话术内容。
+     * Set <p>话术内容。</p>
+     * @param Content <p>话术内容。</p>
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get 话术状态。
-PENDING --未生成。
-PROCESSING --生成中。
-READY --已生成。 
-     * @return Status 话术状态。
-PENDING --未生成。
-PROCESSING --生成中。
-READY --已生成。
+     * Get <p>话术状态。PENDING --未生成。PROCESSING --生成中。READY --已生成。FAILED-失败</p><p>枚举值：</p><ul><li>FAILED： 失败</li></ul> 
+     * @return Status <p>话术状态。PENDING --未生成。PROCESSING --生成中。READY --已生成。FAILED-失败</p><p>枚举值：</p><ul><li>FAILED： 失败</li></ul>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 话术状态。
-PENDING --未生成。
-PROCESSING --生成中。
-READY --已生成。
-     * @param Status 话术状态。
-PENDING --未生成。
-PROCESSING --生成中。
-READY --已生成。
+     * Set <p>话术状态。PENDING --未生成。PROCESSING --生成中。READY --已生成。FAILED-失败</p><p>枚举值：</p><ul><li>FAILED： 失败</li></ul>
+     * @param Status <p>话术状态。PENDING --未生成。PROCESSING --生成中。READY --已生成。FAILED-失败</p><p>枚举值：</p><ul><li>FAILED： 失败</li></ul>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 时长。单位：毫秒。 
-     * @return Duration 时长。单位：毫秒。
+     * Get <p>时长。单位：毫秒。</p> 
+     * @return Duration <p>时长。单位：毫秒。</p>
      */
     public Long getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set 时长。单位：毫秒。
-     * @param Duration 时长。单位：毫秒。
+     * Set <p>时长。单位：毫秒。</p>
+     * @param Duration <p>时长。单位：毫秒。</p>
      */
     public void setDuration(Long Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get 话术位置。 
-     * @return Position 话术位置。
+     * Get <p>话术位置。</p> 
+     * @return Position <p>话术位置。</p>
      */
     public Long getPosition() {
         return this.Position;
     }
 
     /**
-     * Set 话术位置。
-     * @param Position 话术位置。
+     * Set <p>话术位置。</p>
+     * @param Position <p>话术位置。</p>
      */
     public void setPosition(Long Position) {
         this.Position = Position;
     }
 
     /**
-     * Get 话术创建时间，UTC时间。
-注意：UTC时间和北京时间相差八小时。 
-     * @return CreateTime 话术创建时间，UTC时间。
-注意：UTC时间和北京时间相差八小时。
+     * Get <p>话术创建时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p> 
+     * @return CreateTime <p>话术创建时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 话术创建时间，UTC时间。
-注意：UTC时间和北京时间相差八小时。
-     * @param CreateTime 话术创建时间，UTC时间。
-注意：UTC时间和北京时间相差八小时。
+     * Set <p>话术创建时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p>
+     * @param CreateTime <p>话术创建时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 话术最后更新时间，UTC时间。
-注意：UTC时间和北京时间相差八小时。 
-     * @return UpdateTime 话术最后更新时间，UTC时间。
-注意：UTC时间和北京时间相差八小时。
+     * Get <p>话术最后更新时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p> 
+     * @return UpdateTime <p>话术最后更新时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 话术最后更新时间，UTC时间。
-注意：UTC时间和北京时间相差八小时。
-     * @param UpdateTime 话术最后更新时间，UTC时间。
-注意：UTC时间和北京时间相差八小时。
+     * Set <p>话术最后更新时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p>
+     * @param UpdateTime <p>话术最后更新时间，UTC时间。<br>注意：UTC时间和北京时间相差八小时。</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
@@ -242,6 +240,9 @@ READY --已生成。
     public AvatarScriptInfo(AvatarScriptInfo source) {
         if (source.ScriptId != null) {
             this.ScriptId = new String(source.ScriptId);
+        }
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
         }
         if (source.Title != null) {
             this.Title = new String(source.Title);
@@ -272,6 +273,7 @@ READY --已生成。
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ScriptId", this.ScriptId);
+        this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamSimple(map, prefix + "Title", this.Title);
         this.setParamSimple(map, prefix + "Content", this.Content);
         this.setParamSimple(map, prefix + "Status", this.Status);

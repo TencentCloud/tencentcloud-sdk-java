@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class Column extends AbstractModel {
 
     /**
-    * 列名称，不区分大小写，最大支持25个字符。
+    * <p>列名称，不区分大小写，最大支持25个字符。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|binary|array|map|struct|uniontype
+    * <p>string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|binary|array|map|struct|uniontype</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 对该类的注释。
+    * <p>对该类的注释。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Comment")
@@ -46,56 +46,56 @@ public class Column extends AbstractModel {
     private String Comment;
 
     /**
-    * 表示整个 numeric 的长度
+    * <p>表示整个 numeric 的长度</p>
     */
     @SerializedName("Precision")
     @Expose
     private Long Precision;
 
     /**
-    * 表示小数部分的长度
+    * <p>表示小数部分的长度</p>
     */
     @SerializedName("Scale")
     @Expose
     private Long Scale;
 
     /**
-    * 是否为null
+    * <p>是否为null</p>
     */
     @SerializedName("Nullable")
     @Expose
     private String Nullable;
 
     /**
-    * 字段位置，小的在前
+    * <p>字段位置，小的在前</p>
     */
     @SerializedName("Position")
     @Expose
     private Long Position;
 
     /**
-    * 字段创建时间
+    * <p>字段创建时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 字段修改时间
+    * <p>字段修改时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
     */
     @SerializedName("ModifiedTime")
     @Expose
     private String ModifiedTime;
 
     /**
-    * 是否为分区字段
+    * <p>是否为分区字段</p>
     */
     @SerializedName("IsPartition")
     @Expose
     private Boolean IsPartition;
 
     /**
-    * 数据脱敏策略信息
+    * <p>数据脱敏策略信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataMaskStrategyInfo")
@@ -103,41 +103,48 @@ public class Column extends AbstractModel {
     private DataMaskStrategyInfo DataMaskStrategyInfo;
 
     /**
-     * Get 列名称，不区分大小写，最大支持25个字符。 
-     * @return Name 列名称，不区分大小写，最大支持25个字符。
+    * <p>数据字段说明</p>
+    */
+    @SerializedName("TypeText")
+    @Expose
+    private String TypeText;
+
+    /**
+     * Get <p>列名称，不区分大小写，最大支持25个字符。</p> 
+     * @return Name <p>列名称，不区分大小写，最大支持25个字符。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 列名称，不区分大小写，最大支持25个字符。
-     * @param Name 列名称，不区分大小写，最大支持25个字符。
+     * Set <p>列名称，不区分大小写，最大支持25个字符。</p>
+     * @param Name <p>列名称，不区分大小写，最大支持25个字符。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|binary|array|map|struct|uniontype 
-     * @return Type string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|binary|array|map|struct|uniontype
+     * Get <p>string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|binary|array|map|struct|uniontype</p> 
+     * @return Type <p>string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|binary|array|map|struct|uniontype</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|binary|array|map|struct|uniontype
-     * @param Type string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|binary|array|map|struct|uniontype
+     * Set <p>string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|binary|array|map|struct|uniontype</p>
+     * @param Type <p>string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|binary|array|map|struct|uniontype</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 对该类的注释。
+     * Get <p>对该类的注释。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Comment 对该类的注释。
+     * @return Comment <p>对该类的注释。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComment() {
@@ -145,9 +152,9 @@ public class Column extends AbstractModel {
     }
 
     /**
-     * Set 对该类的注释。
+     * Set <p>对该类的注释。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Comment 对该类的注释。
+     * @param Comment <p>对该类的注释。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComment(String Comment) {
@@ -155,121 +162,121 @@ public class Column extends AbstractModel {
     }
 
     /**
-     * Get 表示整个 numeric 的长度 
-     * @return Precision 表示整个 numeric 的长度
+     * Get <p>表示整个 numeric 的长度</p> 
+     * @return Precision <p>表示整个 numeric 的长度</p>
      */
     public Long getPrecision() {
         return this.Precision;
     }
 
     /**
-     * Set 表示整个 numeric 的长度
-     * @param Precision 表示整个 numeric 的长度
+     * Set <p>表示整个 numeric 的长度</p>
+     * @param Precision <p>表示整个 numeric 的长度</p>
      */
     public void setPrecision(Long Precision) {
         this.Precision = Precision;
     }
 
     /**
-     * Get 表示小数部分的长度 
-     * @return Scale 表示小数部分的长度
+     * Get <p>表示小数部分的长度</p> 
+     * @return Scale <p>表示小数部分的长度</p>
      */
     public Long getScale() {
         return this.Scale;
     }
 
     /**
-     * Set 表示小数部分的长度
-     * @param Scale 表示小数部分的长度
+     * Set <p>表示小数部分的长度</p>
+     * @param Scale <p>表示小数部分的长度</p>
      */
     public void setScale(Long Scale) {
         this.Scale = Scale;
     }
 
     /**
-     * Get 是否为null 
-     * @return Nullable 是否为null
+     * Get <p>是否为null</p> 
+     * @return Nullable <p>是否为null</p>
      */
     public String getNullable() {
         return this.Nullable;
     }
 
     /**
-     * Set 是否为null
-     * @param Nullable 是否为null
+     * Set <p>是否为null</p>
+     * @param Nullable <p>是否为null</p>
      */
     public void setNullable(String Nullable) {
         this.Nullable = Nullable;
     }
 
     /**
-     * Get 字段位置，小的在前 
-     * @return Position 字段位置，小的在前
+     * Get <p>字段位置，小的在前</p> 
+     * @return Position <p>字段位置，小的在前</p>
      */
     public Long getPosition() {
         return this.Position;
     }
 
     /**
-     * Set 字段位置，小的在前
-     * @param Position 字段位置，小的在前
+     * Set <p>字段位置，小的在前</p>
+     * @param Position <p>字段位置，小的在前</p>
      */
     public void setPosition(Long Position) {
         this.Position = Position;
     }
 
     /**
-     * Get 字段创建时间 
-     * @return CreateTime 字段创建时间
+     * Get <p>字段创建时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p> 
+     * @return CreateTime <p>字段创建时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 字段创建时间
-     * @param CreateTime 字段创建时间
+     * Set <p>字段创建时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
+     * @param CreateTime <p>字段创建时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 字段修改时间 
-     * @return ModifiedTime 字段修改时间
+     * Get <p>字段修改时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p> 
+     * @return ModifiedTime <p>字段修改时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
      */
     public String getModifiedTime() {
         return this.ModifiedTime;
     }
 
     /**
-     * Set 字段修改时间
-     * @param ModifiedTime 字段修改时间
+     * Set <p>字段修改时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
+     * @param ModifiedTime <p>字段修改时间</p><p>参数格式：YYYY-MM-DD hh:mm:ss</p>
      */
     public void setModifiedTime(String ModifiedTime) {
         this.ModifiedTime = ModifiedTime;
     }
 
     /**
-     * Get 是否为分区字段 
-     * @return IsPartition 是否为分区字段
+     * Get <p>是否为分区字段</p> 
+     * @return IsPartition <p>是否为分区字段</p>
      */
     public Boolean getIsPartition() {
         return this.IsPartition;
     }
 
     /**
-     * Set 是否为分区字段
-     * @param IsPartition 是否为分区字段
+     * Set <p>是否为分区字段</p>
+     * @param IsPartition <p>是否为分区字段</p>
      */
     public void setIsPartition(Boolean IsPartition) {
         this.IsPartition = IsPartition;
     }
 
     /**
-     * Get 数据脱敏策略信息
+     * Get <p>数据脱敏策略信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DataMaskStrategyInfo 数据脱敏策略信息
+     * @return DataMaskStrategyInfo <p>数据脱敏策略信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DataMaskStrategyInfo getDataMaskStrategyInfo() {
@@ -277,13 +284,29 @@ public class Column extends AbstractModel {
     }
 
     /**
-     * Set 数据脱敏策略信息
+     * Set <p>数据脱敏策略信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DataMaskStrategyInfo 数据脱敏策略信息
+     * @param DataMaskStrategyInfo <p>数据脱敏策略信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataMaskStrategyInfo(DataMaskStrategyInfo DataMaskStrategyInfo) {
         this.DataMaskStrategyInfo = DataMaskStrategyInfo;
+    }
+
+    /**
+     * Get <p>数据字段说明</p> 
+     * @return TypeText <p>数据字段说明</p>
+     */
+    public String getTypeText() {
+        return this.TypeText;
+    }
+
+    /**
+     * Set <p>数据字段说明</p>
+     * @param TypeText <p>数据字段说明</p>
+     */
+    public void setTypeText(String TypeText) {
+        this.TypeText = TypeText;
     }
 
     public Column() {
@@ -327,6 +350,9 @@ public class Column extends AbstractModel {
         if (source.DataMaskStrategyInfo != null) {
             this.DataMaskStrategyInfo = new DataMaskStrategyInfo(source.DataMaskStrategyInfo);
         }
+        if (source.TypeText != null) {
+            this.TypeText = new String(source.TypeText);
+        }
     }
 
 
@@ -345,6 +371,7 @@ public class Column extends AbstractModel {
         this.setParamSimple(map, prefix + "ModifiedTime", this.ModifiedTime);
         this.setParamSimple(map, prefix + "IsPartition", this.IsPartition);
         this.setParamObj(map, prefix + "DataMaskStrategyInfo.", this.DataMaskStrategyInfo);
+        this.setParamSimple(map, prefix + "TypeText", this.TypeText);
 
     }
 }
