@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.live.v20180801.models;
+package com.tencentcloudapi.ocr.v20181119.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,28 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLiveAvatarScriptsResponse extends AbstractModel {
+public class EraseHandwrittenImageOCRResponse extends AbstractModel {
 
     /**
-    * <p>数字人直播间话术信息列表。</p>
+    * 图像处理后的jpg图片，base64格式
     */
-    @SerializedName("InfoList")
+    @SerializedName("Image")
     @Expose
-    private AvatarScriptInfo [] InfoList;
-
-    /**
-    * <p>限制可创建的数字人直播间话术总条数。</p>
-    */
-    @SerializedName("LimitCreateNum")
-    @Expose
-    private Long LimitCreateNum;
-
-    /**
-    * <p>当前数字人直播间话术总条数。</p>
-    */
-    @SerializedName("TotalNum")
-    @Expose
-    private Long TotalNum;
+    private String Image;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -52,51 +38,19 @@ public class DescribeLiveAvatarScriptsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>数字人直播间话术信息列表。</p> 
-     * @return InfoList <p>数字人直播间话术信息列表。</p>
+     * Get 图像处理后的jpg图片，base64格式 
+     * @return Image 图像处理后的jpg图片，base64格式
      */
-    public AvatarScriptInfo [] getInfoList() {
-        return this.InfoList;
+    public String getImage() {
+        return this.Image;
     }
 
     /**
-     * Set <p>数字人直播间话术信息列表。</p>
-     * @param InfoList <p>数字人直播间话术信息列表。</p>
+     * Set 图像处理后的jpg图片，base64格式
+     * @param Image 图像处理后的jpg图片，base64格式
      */
-    public void setInfoList(AvatarScriptInfo [] InfoList) {
-        this.InfoList = InfoList;
-    }
-
-    /**
-     * Get <p>限制可创建的数字人直播间话术总条数。</p> 
-     * @return LimitCreateNum <p>限制可创建的数字人直播间话术总条数。</p>
-     */
-    public Long getLimitCreateNum() {
-        return this.LimitCreateNum;
-    }
-
-    /**
-     * Set <p>限制可创建的数字人直播间话术总条数。</p>
-     * @param LimitCreateNum <p>限制可创建的数字人直播间话术总条数。</p>
-     */
-    public void setLimitCreateNum(Long LimitCreateNum) {
-        this.LimitCreateNum = LimitCreateNum;
-    }
-
-    /**
-     * Get <p>当前数字人直播间话术总条数。</p> 
-     * @return TotalNum <p>当前数字人直播间话术总条数。</p>
-     */
-    public Long getTotalNum() {
-        return this.TotalNum;
-    }
-
-    /**
-     * Set <p>当前数字人直播间话术总条数。</p>
-     * @param TotalNum <p>当前数字人直播间话术总条数。</p>
-     */
-    public void setTotalNum(Long TotalNum) {
-        this.TotalNum = TotalNum;
+    public void setImage(String Image) {
+        this.Image = Image;
     }
 
     /**
@@ -115,25 +69,16 @@ public class DescribeLiveAvatarScriptsResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeLiveAvatarScriptsResponse() {
+    public EraseHandwrittenImageOCRResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeLiveAvatarScriptsResponse(DescribeLiveAvatarScriptsResponse source) {
-        if (source.InfoList != null) {
-            this.InfoList = new AvatarScriptInfo[source.InfoList.length];
-            for (int i = 0; i < source.InfoList.length; i++) {
-                this.InfoList[i] = new AvatarScriptInfo(source.InfoList[i]);
-            }
-        }
-        if (source.LimitCreateNum != null) {
-            this.LimitCreateNum = new Long(source.LimitCreateNum);
-        }
-        if (source.TotalNum != null) {
-            this.TotalNum = new Long(source.TotalNum);
+    public EraseHandwrittenImageOCRResponse(EraseHandwrittenImageOCRResponse source) {
+        if (source.Image != null) {
+            this.Image = new String(source.Image);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -145,9 +90,7 @@ public class DescribeLiveAvatarScriptsResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "InfoList.", this.InfoList);
-        this.setParamSimple(map, prefix + "LimitCreateNum", this.LimitCreateNum);
-        this.setParamSimple(map, prefix + "TotalNum", this.TotalNum);
+        this.setParamSimple(map, prefix + "Image", this.Image);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

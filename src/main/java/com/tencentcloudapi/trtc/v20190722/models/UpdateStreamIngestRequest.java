@@ -45,7 +45,7 @@ public class UpdateStreamIngestRequest extends AbstractModel {
     private String StreamUrl;
 
     /**
-    * 音量，取值范围[0, 100]，默认100，表示原音量。
+    * 音量，取值范围[0, 200]，默认100，表示原音量。
     */
     @SerializedName("Volume")
     @Expose
@@ -121,16 +121,16 @@ public class UpdateStreamIngestRequest extends AbstractModel {
     }
 
     /**
-     * Get 音量，取值范围[0, 100]，默认100，表示原音量。 
-     * @return Volume 音量，取值范围[0, 100]，默认100，表示原音量。
+     * Get 音量，取值范围[0, 200]，默认100，表示原音量。 
+     * @return Volume 音量，取值范围[0, 200]，默认100，表示原音量。
      */
     public Long getVolume() {
         return this.Volume;
     }
 
     /**
-     * Set 音量，取值范围[0, 100]，默认100，表示原音量。
-     * @param Volume 音量，取值范围[0, 100]，默认100，表示原音量。
+     * Set 音量，取值范围[0, 200]，默认100，表示原音量。
+     * @param Volume 音量，取值范围[0, 200]，默认100，表示原音量。
      */
     public void setVolume(Long Volume) {
         this.Volume = Volume;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyAddressesBandwidthResponse extends AbstractModel {
 
     /**
-    * 异步任务TaskId。可以使用[DescribeTaskResult](https://cloud.tencent.com/document/api/215/36271)接口查询任务状态。
+    * <p>异步任务TaskId。可以使用<a href="https://cloud.tencent.com/document/api/215/36271">DescribeTaskResult</a>接口查询任务状态。</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyAddressesBandwidthResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 异步任务TaskId。可以使用[DescribeTaskResult](https://cloud.tencent.com/document/api/215/36271)接口查询任务状态。 
-     * @return TaskId 异步任务TaskId。可以使用[DescribeTaskResult](https://cloud.tencent.com/document/api/215/36271)接口查询任务状态。
+     * Get <p>异步任务TaskId。可以使用<a href="https://cloud.tencent.com/document/api/215/36271">DescribeTaskResult</a>接口查询任务状态。</p> 
+     * @return TaskId <p>异步任务TaskId。可以使用<a href="https://cloud.tencent.com/document/api/215/36271">DescribeTaskResult</a>接口查询任务状态。</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 异步任务TaskId。可以使用[DescribeTaskResult](https://cloud.tencent.com/document/api/215/36271)接口查询任务状态。
-     * @param TaskId 异步任务TaskId。可以使用[DescribeTaskResult](https://cloud.tencent.com/document/api/215/36271)接口查询任务状态。
+     * Set <p>异步任务TaskId。可以使用<a href="https://cloud.tencent.com/document/api/215/36271">DescribeTaskResult</a>接口查询任务状态。</p>
+     * @param TaskId <p>异步任务TaskId。可以使用<a href="https://cloud.tencent.com/document/api/215/36271">DescribeTaskResult</a>接口查询任务状态。</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

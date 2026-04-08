@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class ExtenderManagedResource extends AbstractModel {
 
     /**
-    * 自定义资源的名称
+    * <p>自定义资源的名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get 自定义资源的名称 
-     * @return Name 自定义资源的名称
+    * <p>调度器是否忽略该资源的默认处理</p>
+    */
+    @SerializedName("IgnoredByScheduler")
+    @Expose
+    private Boolean IgnoredByScheduler;
+
+    /**
+     * Get <p>自定义资源的名称</p> 
+     * @return Name <p>自定义资源的名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 自定义资源的名称
-     * @param Name 自定义资源的名称
+     * Set <p>自定义资源的名称</p>
+     * @param Name <p>自定义资源的名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
+    }
+
+    /**
+     * Get <p>调度器是否忽略该资源的默认处理</p> 
+     * @return IgnoredByScheduler <p>调度器是否忽略该资源的默认处理</p>
+     */
+    public Boolean getIgnoredByScheduler() {
+        return this.IgnoredByScheduler;
+    }
+
+    /**
+     * Set <p>调度器是否忽略该资源的默认处理</p>
+     * @param IgnoredByScheduler <p>调度器是否忽略该资源的默认处理</p>
+     */
+    public void setIgnoredByScheduler(Boolean IgnoredByScheduler) {
+        this.IgnoredByScheduler = IgnoredByScheduler;
     }
 
     public ExtenderManagedResource() {
@@ -57,6 +80,9 @@ public class ExtenderManagedResource extends AbstractModel {
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.IgnoredByScheduler != null) {
+            this.IgnoredByScheduler = new Boolean(source.IgnoredByScheduler);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class ExtenderManagedResource extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "IgnoredByScheduler", this.IgnoredByScheduler);
 
     }
 }

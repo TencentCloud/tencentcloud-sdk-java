@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeBackupListByVaultItem extends AbstractModel {
 
     /**
-    * 集群id
+    * <p>集群id</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 集群name
+    * <p>集群name</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * 备份信息
+    * <p>备份信息</p>
     */
     @SerializedName("BackupFileInfo")
     @Expose
     private BackupFileInfo BackupFileInfo;
 
     /**
-     * Get 集群id 
-     * @return ClusterId 集群id
+     * Get <p>集群id</p> 
+     * @return ClusterId <p>集群id</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群id
-     * @param ClusterId 集群id
+     * Set <p>集群id</p>
+     * @param ClusterId <p>集群id</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 集群name 
-     * @return ClusterName 集群name
+     * Get <p>集群name</p> 
+     * @return ClusterName <p>集群name</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set 集群name
-     * @param ClusterName 集群name
+     * Set <p>集群name</p>
+     * @param ClusterName <p>集群name</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 备份信息 
-     * @return BackupFileInfo 备份信息
+     * Get <p>备份信息</p> 
+     * @return BackupFileInfo <p>备份信息</p>
      */
     public BackupFileInfo getBackupFileInfo() {
         return this.BackupFileInfo;
     }
 
     /**
-     * Set 备份信息
-     * @param BackupFileInfo 备份信息
+     * Set <p>备份信息</p>
+     * @param BackupFileInfo <p>备份信息</p>
      */
     public void setBackupFileInfo(BackupFileInfo BackupFileInfo) {
         this.BackupFileInfo = BackupFileInfo;

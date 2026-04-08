@@ -49,7 +49,8 @@ public class ClientAttester extends AbstractModel {
     /**
     * 认证方法。取值有：
 <li>TC-RCE: 使用风险识别 RCE 进行认证；</li>
-<li>TC-CAPTCHA: 使用天御验证码进行认证。</li>
+<li>TC-CAPTCHA: 使用天御验证码进行认证；</li>
+<li>TC-EO-CAPTCHA: 使用 EdgeOne 人机校验进行认证。</li>
     */
     @SerializedName("AttesterSource")
     @Expose
@@ -80,6 +81,14 @@ public class ClientAttester extends AbstractModel {
     @SerializedName("TCCaptchaOption")
     @Expose
     private TCCaptchaOption TCCaptchaOption;
+
+    /**
+    * TC-EO-CAPTCHA 认证的配置信息。
+<li>当 AttesterSource 参数值为 TC-EO-CAPTCHA 时，此字段必填。</li>
+    */
+    @SerializedName("TCEOCaptchaOption")
+    @Expose
+    private TCEOCaptchaOption TCEOCaptchaOption;
 
     /**
      * Get 认证选项 ID。 
@@ -140,10 +149,12 @@ public class ClientAttester extends AbstractModel {
     /**
      * Get 认证方法。取值有：
 <li>TC-RCE: 使用风险识别 RCE 进行认证；</li>
-<li>TC-CAPTCHA: 使用天御验证码进行认证。</li> 
+<li>TC-CAPTCHA: 使用天御验证码进行认证；</li>
+<li>TC-EO-CAPTCHA: 使用 EdgeOne 人机校验进行认证。</li> 
      * @return AttesterSource 认证方法。取值有：
 <li>TC-RCE: 使用风险识别 RCE 进行认证；</li>
-<li>TC-CAPTCHA: 使用天御验证码进行认证。</li>
+<li>TC-CAPTCHA: 使用天御验证码进行认证；</li>
+<li>TC-EO-CAPTCHA: 使用 EdgeOne 人机校验进行认证。</li>
      */
     public String getAttesterSource() {
         return this.AttesterSource;
@@ -152,10 +163,12 @@ public class ClientAttester extends AbstractModel {
     /**
      * Set 认证方法。取值有：
 <li>TC-RCE: 使用风险识别 RCE 进行认证；</li>
-<li>TC-CAPTCHA: 使用天御验证码进行认证。</li>
+<li>TC-CAPTCHA: 使用天御验证码进行认证；</li>
+<li>TC-EO-CAPTCHA: 使用 EdgeOne 人机校验进行认证。</li>
      * @param AttesterSource 认证方法。取值有：
 <li>TC-RCE: 使用风险识别 RCE 进行认证；</li>
-<li>TC-CAPTCHA: 使用天御验证码进行认证。</li>
+<li>TC-CAPTCHA: 使用天御验证码进行认证；</li>
+<li>TC-EO-CAPTCHA: 使用 EdgeOne 人机校验进行认证。</li>
      */
     public void setAttesterSource(String AttesterSource) {
         this.AttesterSource = AttesterSource;
@@ -229,6 +242,26 @@ public class ClientAttester extends AbstractModel {
         this.TCCaptchaOption = TCCaptchaOption;
     }
 
+    /**
+     * Get TC-EO-CAPTCHA 认证的配置信息。
+<li>当 AttesterSource 参数值为 TC-EO-CAPTCHA 时，此字段必填。</li> 
+     * @return TCEOCaptchaOption TC-EO-CAPTCHA 认证的配置信息。
+<li>当 AttesterSource 参数值为 TC-EO-CAPTCHA 时，此字段必填。</li>
+     */
+    public TCEOCaptchaOption getTCEOCaptchaOption() {
+        return this.TCEOCaptchaOption;
+    }
+
+    /**
+     * Set TC-EO-CAPTCHA 认证的配置信息。
+<li>当 AttesterSource 参数值为 TC-EO-CAPTCHA 时，此字段必填。</li>
+     * @param TCEOCaptchaOption TC-EO-CAPTCHA 认证的配置信息。
+<li>当 AttesterSource 参数值为 TC-EO-CAPTCHA 时，此字段必填。</li>
+     */
+    public void setTCEOCaptchaOption(TCEOCaptchaOption TCEOCaptchaOption) {
+        this.TCEOCaptchaOption = TCEOCaptchaOption;
+    }
+
     public ClientAttester() {
     }
 
@@ -258,6 +291,9 @@ public class ClientAttester extends AbstractModel {
         if (source.TCCaptchaOption != null) {
             this.TCCaptchaOption = new TCCaptchaOption(source.TCCaptchaOption);
         }
+        if (source.TCEOCaptchaOption != null) {
+            this.TCEOCaptchaOption = new TCEOCaptchaOption(source.TCEOCaptchaOption);
+        }
     }
 
 
@@ -272,6 +308,7 @@ public class ClientAttester extends AbstractModel {
         this.setParamSimple(map, prefix + "AttesterDuration", this.AttesterDuration);
         this.setParamObj(map, prefix + "TCRCEOption.", this.TCRCEOption);
         this.setParamObj(map, prefix + "TCCaptchaOption.", this.TCCaptchaOption);
+        this.setParamObj(map, prefix + "TCEOCaptchaOption.", this.TCEOCaptchaOption);
 
     }
 }

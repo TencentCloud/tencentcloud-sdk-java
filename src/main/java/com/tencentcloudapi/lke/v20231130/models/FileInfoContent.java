@@ -24,15 +24,15 @@ import java.util.HashMap;
 public class FileInfoContent extends AbstractModel {
 
     /**
-    * 实时文档解析接口返回的 DocBizId
+    * <p>实时文档解析接口返回的 DocBizId</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DocBizId")
     @Expose
-    private Long DocBizId;
+    private String DocBizId;
 
     /**
-    * 文件名称
+    * <p>文件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileName")
@@ -40,7 +40,7 @@ public class FileInfoContent extends AbstractModel {
     private String FileName;
 
     /**
-    * 文件类型
+    * <p>文件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileType")
@@ -48,15 +48,15 @@ public class FileInfoContent extends AbstractModel {
     private String FileType;
 
     /**
-    * 文件大小
+    * <p>文件大小，单位为Byte</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileSize")
     @Expose
-    private Long FileSize;
+    private String FileSize;
 
     /**
-    * 文件 URL
+    * <p>文件 URL</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileUrl")
@@ -64,49 +64,49 @@ public class FileInfoContent extends AbstractModel {
     private String FileUrl;
 
     /**
-    * 实时文档解析接口返回的 doc_id。
+    * <p>实时文档解析接口返回的 doc_id。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DocId")
     @Expose
-    private Long DocId;
+    private String DocId;
 
     /**
-    * 文件创建时间
+    * <p>文件创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
-    private Long CreateTime;
+    private String CreateTime;
 
     /**
-     * Get 实时文档解析接口返回的 DocBizId
+     * Get <p>实时文档解析接口返回的 DocBizId</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DocBizId 实时文档解析接口返回的 DocBizId
+     * @return DocBizId <p>实时文档解析接口返回的 DocBizId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     @Deprecated
-    public Long getDocBizId() {
+    public String getDocBizId() {
         return this.DocBizId;
     }
 
     /**
-     * Set 实时文档解析接口返回的 DocBizId
+     * Set <p>实时文档解析接口返回的 DocBizId</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DocBizId 实时文档解析接口返回的 DocBizId
+     * @param DocBizId <p>实时文档解析接口返回的 DocBizId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     @Deprecated
-    public void setDocBizId(Long DocBizId) {
+    public void setDocBizId(String DocBizId) {
         this.DocBizId = DocBizId;
     }
 
     /**
-     * Get 文件名称
+     * Get <p>文件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FileName 文件名称
+     * @return FileName <p>文件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileName() {
@@ -114,9 +114,9 @@ public class FileInfoContent extends AbstractModel {
     }
 
     /**
-     * Set 文件名称
+     * Set <p>文件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FileName 文件名称
+     * @param FileName <p>文件名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileName(String FileName) {
@@ -124,9 +124,9 @@ public class FileInfoContent extends AbstractModel {
     }
 
     /**
-     * Get 文件类型
+     * Get <p>文件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FileType 文件类型
+     * @return FileType <p>文件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileType() {
@@ -134,9 +134,9 @@ public class FileInfoContent extends AbstractModel {
     }
 
     /**
-     * Set 文件类型
+     * Set <p>文件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FileType 文件类型
+     * @param FileType <p>文件类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileType(String FileType) {
@@ -144,29 +144,29 @@ public class FileInfoContent extends AbstractModel {
     }
 
     /**
-     * Get 文件大小
+     * Get <p>文件大小，单位为Byte</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FileSize 文件大小
+     * @return FileSize <p>文件大小，单位为Byte</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getFileSize() {
+    public String getFileSize() {
         return this.FileSize;
     }
 
     /**
-     * Set 文件大小
+     * Set <p>文件大小，单位为Byte</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FileSize 文件大小
+     * @param FileSize <p>文件大小，单位为Byte</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setFileSize(Long FileSize) {
+    public void setFileSize(String FileSize) {
         this.FileSize = FileSize;
     }
 
     /**
-     * Get 文件 URL
+     * Get <p>文件 URL</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FileUrl 文件 URL
+     * @return FileUrl <p>文件 URL</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileUrl() {
@@ -174,9 +174,9 @@ public class FileInfoContent extends AbstractModel {
     }
 
     /**
-     * Set 文件 URL
+     * Set <p>文件 URL</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FileUrl 文件 URL
+     * @param FileUrl <p>文件 URL</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileUrl(String FileUrl) {
@@ -184,42 +184,42 @@ public class FileInfoContent extends AbstractModel {
     }
 
     /**
-     * Get 实时文档解析接口返回的 doc_id。
+     * Get <p>实时文档解析接口返回的 doc_id。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DocId 实时文档解析接口返回的 doc_id。
+     * @return DocId <p>实时文档解析接口返回的 doc_id。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getDocId() {
+    public String getDocId() {
         return this.DocId;
     }
 
     /**
-     * Set 实时文档解析接口返回的 doc_id。
+     * Set <p>实时文档解析接口返回的 doc_id。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DocId 实时文档解析接口返回的 doc_id。
+     * @param DocId <p>实时文档解析接口返回的 doc_id。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setDocId(Long DocId) {
+    public void setDocId(String DocId) {
         this.DocId = DocId;
     }
 
     /**
-     * Get 文件创建时间
+     * Get <p>文件创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 文件创建时间
+     * @return CreateTime <p>文件创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getCreateTime() {
+    public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 文件创建时间
+     * Set <p>文件创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 文件创建时间
+     * @param CreateTime <p>文件创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setCreateTime(Long CreateTime) {
+    public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
@@ -232,7 +232,7 @@ public class FileInfoContent extends AbstractModel {
      */
     public FileInfoContent(FileInfoContent source) {
         if (source.DocBizId != null) {
-            this.DocBizId = new Long(source.DocBizId);
+            this.DocBizId = new String(source.DocBizId);
         }
         if (source.FileName != null) {
             this.FileName = new String(source.FileName);
@@ -241,16 +241,16 @@ public class FileInfoContent extends AbstractModel {
             this.FileType = new String(source.FileType);
         }
         if (source.FileSize != null) {
-            this.FileSize = new Long(source.FileSize);
+            this.FileSize = new String(source.FileSize);
         }
         if (source.FileUrl != null) {
             this.FileUrl = new String(source.FileUrl);
         }
         if (source.DocId != null) {
-            this.DocId = new Long(source.DocId);
+            this.DocId = new String(source.DocId);
         }
         if (source.CreateTime != null) {
-            this.CreateTime = new Long(source.CreateTime);
+            this.CreateTime = new String(source.CreateTime);
         }
     }
 

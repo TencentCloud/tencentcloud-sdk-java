@@ -1105,6 +1105,17 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *创建流量镜像五元组过滤规则。
+     * @param req CreateTrafficMirrorFilterRulesRequest
+     * @return CreateTrafficMirrorFilterRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTrafficMirrorFilterRulesResponse CreateTrafficMirrorFilterRules(CreateTrafficMirrorFilterRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTrafficMirrorFilterRules", CreateTrafficMirrorFilterRulesResponse.class);
+    }
+
+    /**
      *本接口 (CreateTrafficPackages) 用于创建共享流量包。
      * @param req CreateTrafficPackagesRequest
      * @return CreateTrafficPackagesResponse
@@ -1775,6 +1786,17 @@ public class VpcClient extends AbstractClient{
     public DeleteTrafficMirrorResponse DeleteTrafficMirror(DeleteTrafficMirrorRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteTrafficMirror", DeleteTrafficMirrorResponse.class);
+    }
+
+    /**
+     *删除流量镜像五元组过滤规则。
+     * @param req DeleteTrafficMirrorFilterRulesRequest
+     * @return DeleteTrafficMirrorFilterRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTrafficMirrorFilterRulesResponse DeleteTrafficMirrorFilterRules(DeleteTrafficMirrorFilterRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteTrafficMirrorFilterRules", DeleteTrafficMirrorFilterRulesResponse.class);
     }
 
     /**
@@ -3032,6 +3054,17 @@ public class VpcClient extends AbstractClient{
     public DescribeTenantCcnsResponse DescribeTenantCcns(DescribeTenantCcnsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeTenantCcns", DescribeTenantCcnsResponse.class);
+    }
+
+    /**
+     *查询流量镜像五元组过滤规则。
+     * @param req DescribeTrafficMirrorFilterRulesRequest
+     * @return DescribeTrafficMirrorFilterRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTrafficMirrorFilterRulesResponse DescribeTrafficMirrorFilterRules(DescribeTrafficMirrorFilterRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTrafficMirrorFilterRules", DescribeTrafficMirrorFilterRulesResponse.class);
     }
 
     /**
@@ -4519,6 +4552,17 @@ LimitTypes取值范围：
     public ModifyTrafficMirrorAttributeResponse ModifyTrafficMirrorAttribute(ModifyTrafficMirrorAttributeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyTrafficMirrorAttribute", ModifyTrafficMirrorAttributeResponse.class);
+    }
+
+    /**
+     *修改流量镜像五元组过滤规则。
+     * @param req ModifyTrafficMirrorFilterRulesRequest
+     * @return ModifyTrafficMirrorFilterRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTrafficMirrorFilterRulesResponse ModifyTrafficMirrorFilterRules(ModifyTrafficMirrorFilterRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyTrafficMirrorFilterRules", ModifyTrafficMirrorFilterRulesResponse.class);
     }
 
     /**

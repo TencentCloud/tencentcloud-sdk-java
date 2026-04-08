@@ -24,73 +24,68 @@ import java.util.HashMap;
 public class ModifyAddressesBandwidthRequest extends AbstractModel {
 
     /**
-    * EIP唯一标识ID列表，形如'eip-xxxx'，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
-
+    * <p>EIP唯一标识ID列表，形如&#39;eip-xxxx&#39;，可以使用<a href="https://cloud.tencent.com/document/product/215/16702">DescribeAddresses</a>接口获取AddressId。</p>
     */
     @SerializedName("AddressIds")
     @Expose
     private String [] AddressIds;
 
     /**
-    * 调整带宽目标值，可调整的带宽上限值参考产品文档[带宽上限](https://cloud.tencent.com/document/product/1199/48333)。
+    * <p>调整带宽目标值，可调整的带宽上限值参考产品文档<a href="https://cloud.tencent.com/document/product/1199/48333">带宽上限</a>。</p>
     */
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
     private Long InternetMaxBandwidthOut;
 
     /**
-    * 包月带宽起始时间(已废弃，输入无效)
+    * <p>包月带宽起始时间(已废弃，输入无效)</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 包月带宽结束时间(已废弃，输入无效)
+    * <p>包月带宽结束时间(已废弃，输入无效)</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-     * Get EIP唯一标识ID列表，形如'eip-xxxx'，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
- 
-     * @return AddressIds EIP唯一标识ID列表，形如'eip-xxxx'，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
-
+     * Get <p>EIP唯一标识ID列表，形如&#39;eip-xxxx&#39;，可以使用<a href="https://cloud.tencent.com/document/product/215/16702">DescribeAddresses</a>接口获取AddressId。</p> 
+     * @return AddressIds <p>EIP唯一标识ID列表，形如&#39;eip-xxxx&#39;，可以使用<a href="https://cloud.tencent.com/document/product/215/16702">DescribeAddresses</a>接口获取AddressId。</p>
      */
     public String [] getAddressIds() {
         return this.AddressIds;
     }
 
     /**
-     * Set EIP唯一标识ID列表，形如'eip-xxxx'，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
-
-     * @param AddressIds EIP唯一标识ID列表，形如'eip-xxxx'，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
-
+     * Set <p>EIP唯一标识ID列表，形如&#39;eip-xxxx&#39;，可以使用<a href="https://cloud.tencent.com/document/product/215/16702">DescribeAddresses</a>接口获取AddressId。</p>
+     * @param AddressIds <p>EIP唯一标识ID列表，形如&#39;eip-xxxx&#39;，可以使用<a href="https://cloud.tencent.com/document/product/215/16702">DescribeAddresses</a>接口获取AddressId。</p>
      */
     public void setAddressIds(String [] AddressIds) {
         this.AddressIds = AddressIds;
     }
 
     /**
-     * Get 调整带宽目标值，可调整的带宽上限值参考产品文档[带宽上限](https://cloud.tencent.com/document/product/1199/48333)。 
-     * @return InternetMaxBandwidthOut 调整带宽目标值，可调整的带宽上限值参考产品文档[带宽上限](https://cloud.tencent.com/document/product/1199/48333)。
+     * Get <p>调整带宽目标值，可调整的带宽上限值参考产品文档<a href="https://cloud.tencent.com/document/product/1199/48333">带宽上限</a>。</p> 
+     * @return InternetMaxBandwidthOut <p>调整带宽目标值，可调整的带宽上限值参考产品文档<a href="https://cloud.tencent.com/document/product/1199/48333">带宽上限</a>。</p>
      */
     public Long getInternetMaxBandwidthOut() {
         return this.InternetMaxBandwidthOut;
     }
 
     /**
-     * Set 调整带宽目标值，可调整的带宽上限值参考产品文档[带宽上限](https://cloud.tencent.com/document/product/1199/48333)。
-     * @param InternetMaxBandwidthOut 调整带宽目标值，可调整的带宽上限值参考产品文档[带宽上限](https://cloud.tencent.com/document/product/1199/48333)。
+     * Set <p>调整带宽目标值，可调整的带宽上限值参考产品文档<a href="https://cloud.tencent.com/document/product/1199/48333">带宽上限</a>。</p>
+     * @param InternetMaxBandwidthOut <p>调整带宽目标值，可调整的带宽上限值参考产品文档<a href="https://cloud.tencent.com/document/product/1199/48333">带宽上限</a>。</p>
      */
     public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
     }
 
     /**
-     * Get 包月带宽起始时间(已废弃，输入无效) 
-     * @return StartTime 包月带宽起始时间(已废弃，输入无效)
+     * Get <p>包月带宽起始时间(已废弃，输入无效)</p> 
+     * @return StartTime <p>包月带宽起始时间(已废弃，输入无效)</p>
      * @deprecated
      */
     @Deprecated
@@ -99,8 +94,8 @@ public class ModifyAddressesBandwidthRequest extends AbstractModel {
     }
 
     /**
-     * Set 包月带宽起始时间(已废弃，输入无效)
-     * @param StartTime 包月带宽起始时间(已废弃，输入无效)
+     * Set <p>包月带宽起始时间(已废弃，输入无效)</p>
+     * @param StartTime <p>包月带宽起始时间(已废弃，输入无效)</p>
      * @deprecated
      */
     @Deprecated
@@ -109,8 +104,8 @@ public class ModifyAddressesBandwidthRequest extends AbstractModel {
     }
 
     /**
-     * Get 包月带宽结束时间(已废弃，输入无效) 
-     * @return EndTime 包月带宽结束时间(已废弃，输入无效)
+     * Get <p>包月带宽结束时间(已废弃，输入无效)</p> 
+     * @return EndTime <p>包月带宽结束时间(已废弃，输入无效)</p>
      * @deprecated
      */
     @Deprecated
@@ -119,8 +114,8 @@ public class ModifyAddressesBandwidthRequest extends AbstractModel {
     }
 
     /**
-     * Set 包月带宽结束时间(已废弃，输入无效)
-     * @param EndTime 包月带宽结束时间(已废弃，输入无效)
+     * Set <p>包月带宽结束时间(已废弃，输入无效)</p>
+     * @param EndTime <p>包月带宽结束时间(已废弃，输入无效)</p>
      * @deprecated
      */
     @Deprecated

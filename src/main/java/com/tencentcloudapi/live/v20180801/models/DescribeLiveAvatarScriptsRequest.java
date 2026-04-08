@@ -24,95 +24,118 @@ import java.util.HashMap;
 public class DescribeLiveAvatarScriptsRequest extends AbstractModel {
 
     /**
-    * 数字人直播间 ID。
+    * <p>数字人直播间 ID。</p>
     */
     @SerializedName("RoomId")
     @Expose
     private String RoomId;
 
     /**
-    * 数字人直播间话术 ID。
+    * <p>数字人直播间话术 ID。</p>
     */
     @SerializedName("ScriptId")
     @Expose
     private String ScriptId;
 
     /**
-    * 分页查询的页数。
+    * <p>分页查询的页数。</p>
     */
     @SerializedName("PageIndex")
     @Expose
     private Long PageIndex;
 
     /**
-    * 分页查询的每页个数。
+    * <p>分页查询的每页个数。</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-     * Get 数字人直播间 ID。 
-     * @return RoomId 数字人直播间 ID。
+    * <p>数字人该话术所属的产品 ID。</p>
+    */
+    @SerializedName("ProductId")
+    @Expose
+    private String ProductId;
+
+    /**
+     * Get <p>数字人直播间 ID。</p> 
+     * @return RoomId <p>数字人直播间 ID。</p>
      */
     public String getRoomId() {
         return this.RoomId;
     }
 
     /**
-     * Set 数字人直播间 ID。
-     * @param RoomId 数字人直播间 ID。
+     * Set <p>数字人直播间 ID。</p>
+     * @param RoomId <p>数字人直播间 ID。</p>
      */
     public void setRoomId(String RoomId) {
         this.RoomId = RoomId;
     }
 
     /**
-     * Get 数字人直播间话术 ID。 
-     * @return ScriptId 数字人直播间话术 ID。
+     * Get <p>数字人直播间话术 ID。</p> 
+     * @return ScriptId <p>数字人直播间话术 ID。</p>
      */
     public String getScriptId() {
         return this.ScriptId;
     }
 
     /**
-     * Set 数字人直播间话术 ID。
-     * @param ScriptId 数字人直播间话术 ID。
+     * Set <p>数字人直播间话术 ID。</p>
+     * @param ScriptId <p>数字人直播间话术 ID。</p>
      */
     public void setScriptId(String ScriptId) {
         this.ScriptId = ScriptId;
     }
 
     /**
-     * Get 分页查询的页数。 
-     * @return PageIndex 分页查询的页数。
+     * Get <p>分页查询的页数。</p> 
+     * @return PageIndex <p>分页查询的页数。</p>
      */
     public Long getPageIndex() {
         return this.PageIndex;
     }
 
     /**
-     * Set 分页查询的页数。
-     * @param PageIndex 分页查询的页数。
+     * Set <p>分页查询的页数。</p>
+     * @param PageIndex <p>分页查询的页数。</p>
      */
     public void setPageIndex(Long PageIndex) {
         this.PageIndex = PageIndex;
     }
 
     /**
-     * Get 分页查询的每页个数。 
-     * @return PageSize 分页查询的每页个数。
+     * Get <p>分页查询的每页个数。</p> 
+     * @return PageSize <p>分页查询的每页个数。</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 分页查询的每页个数。
-     * @param PageSize 分页查询的每页个数。
+     * Set <p>分页查询的每页个数。</p>
+     * @param PageSize <p>分页查询的每页个数。</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
+    }
+
+    /**
+     * Get <p>数字人该话术所属的产品 ID。</p> 
+     * @return ProductId <p>数字人该话术所属的产品 ID。</p>
+     */
+    public String getProductId() {
+        return this.ProductId;
+    }
+
+    /**
+     * Set <p>数字人该话术所属的产品 ID。</p>
+     * @param ProductId <p>数字人该话术所属的产品 ID。</p>
+     */
+    public void setProductId(String ProductId) {
+        this.ProductId = ProductId;
     }
 
     public DescribeLiveAvatarScriptsRequest() {
@@ -135,6 +158,9 @@ public class DescribeLiveAvatarScriptsRequest extends AbstractModel {
         if (source.PageSize != null) {
             this.PageSize = new Long(source.PageSize);
         }
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class DescribeLiveAvatarScriptsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ScriptId", this.ScriptId);
         this.setParamSimple(map, prefix + "PageIndex", this.PageIndex);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
+        this.setParamSimple(map, prefix + "ProductId", this.ProductId);
 
     }
 }

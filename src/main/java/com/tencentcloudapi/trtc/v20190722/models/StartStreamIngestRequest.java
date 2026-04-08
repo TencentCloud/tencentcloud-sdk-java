@@ -62,7 +62,7 @@ public class StartStreamIngestRequest extends AbstractModel {
     private String UserSig;
 
     /**
-    * 源流URL【必填】。如果是视频流，分辨率请保持不变。
+    * 源流URL【必填】。如果是视频流，分辨率请保持不变，视频流的最大分辨率限制1080p，最大帧率限制30fps。
     */
     @SerializedName("StreamUrl")
     @Expose
@@ -128,7 +128,7 @@ public class StartStreamIngestRequest extends AbstractModel {
     private Long MaxDuration;
 
     /**
-    * 音量，取值范围[0, 100]，默认100，表示原音量。
+    * 音量，取值范围[0, 200]，默认100，表示原音量。
     */
     @SerializedName("Volume")
     @Expose
@@ -147,6 +147,13 @@ public class StartStreamIngestRequest extends AbstractModel {
     @SerializedName("Tempo")
     @Expose
     private Float Tempo;
+
+    /**
+    * 播放任务处于空闲状态的最大时长（秒）, 不填时任务会自适应销毁，可取[0, 600]，空闲状态超过设置的 IdleTimeout 后，该播放任务会自动销毁
+    */
+    @SerializedName("IdleTimeout")
+    @Expose
+    private Long IdleTimeout;
 
     /**
      * Get TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和TRTC的房间所对应的SdkAppId相同。 
@@ -241,16 +248,16 @@ public class StartStreamIngestRequest extends AbstractModel {
     }
 
     /**
-     * Get 源流URL【必填】。如果是视频流，分辨率请保持不变。 
-     * @return StreamUrl 源流URL【必填】。如果是视频流，分辨率请保持不变。
+     * Get 源流URL【必填】。如果是视频流，分辨率请保持不变，视频流的最大分辨率限制1080p，最大帧率限制30fps。 
+     * @return StreamUrl 源流URL【必填】。如果是视频流，分辨率请保持不变，视频流的最大分辨率限制1080p，最大帧率限制30fps。
      */
     public String getStreamUrl() {
         return this.StreamUrl;
     }
 
     /**
-     * Set 源流URL【必填】。如果是视频流，分辨率请保持不变。
-     * @param StreamUrl 源流URL【必填】。如果是视频流，分辨率请保持不变。
+     * Set 源流URL【必填】。如果是视频流，分辨率请保持不变，视频流的最大分辨率限制1080p，最大帧率限制30fps。
+     * @param StreamUrl 源流URL【必填】。如果是视频流，分辨率请保持不变，视频流的最大分辨率限制1080p，最大帧率限制30fps。
      */
     public void setStreamUrl(String StreamUrl) {
         this.StreamUrl = StreamUrl;
@@ -409,16 +416,16 @@ public class StartStreamIngestRequest extends AbstractModel {
     }
 
     /**
-     * Get 音量，取值范围[0, 100]，默认100，表示原音量。 
-     * @return Volume 音量，取值范围[0, 100]，默认100，表示原音量。
+     * Get 音量，取值范围[0, 200]，默认100，表示原音量。 
+     * @return Volume 音量，取值范围[0, 200]，默认100，表示原音量。
      */
     public Long getVolume() {
         return this.Volume;
     }
 
     /**
-     * Set 音量，取值范围[0, 100]，默认100，表示原音量。
-     * @param Volume 音量，取值范围[0, 100]，默认100，表示原音量。
+     * Set 音量，取值范围[0, 200]，默认100，表示原音量。
+     * @param Volume 音量，取值范围[0, 200]，默认100，表示原音量。
      */
     public void setVolume(Long Volume) {
         this.Volume = Volume;
@@ -454,6 +461,22 @@ public class StartStreamIngestRequest extends AbstractModel {
      */
     public void setTempo(Float Tempo) {
         this.Tempo = Tempo;
+    }
+
+    /**
+     * Get 播放任务处于空闲状态的最大时长（秒）, 不填时任务会自适应销毁，可取[0, 600]，空闲状态超过设置的 IdleTimeout 后，该播放任务会自动销毁 
+     * @return IdleTimeout 播放任务处于空闲状态的最大时长（秒）, 不填时任务会自适应销毁，可取[0, 600]，空闲状态超过设置的 IdleTimeout 后，该播放任务会自动销毁
+     */
+    public Long getIdleTimeout() {
+        return this.IdleTimeout;
+    }
+
+    /**
+     * Set 播放任务处于空闲状态的最大时长（秒）, 不填时任务会自适应销毁，可取[0, 600]，空闲状态超过设置的 IdleTimeout 后，该播放任务会自动销毁
+     * @param IdleTimeout 播放任务处于空闲状态的最大时长（秒）, 不填时任务会自适应销毁，可取[0, 600]，空闲状态超过设置的 IdleTimeout 后，该播放任务会自动销毁
+     */
+    public void setIdleTimeout(Long IdleTimeout) {
+        this.IdleTimeout = IdleTimeout;
     }
 
     public StartStreamIngestRequest() {
@@ -518,6 +541,9 @@ public class StartStreamIngestRequest extends AbstractModel {
         if (source.Tempo != null) {
             this.Tempo = new Float(source.Tempo);
         }
+        if (source.IdleTimeout != null) {
+            this.IdleTimeout = new Long(source.IdleTimeout);
+        }
     }
 
 
@@ -542,6 +568,7 @@ public class StartStreamIngestRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Volume", this.Volume);
         this.setParamSimple(map, prefix + "EnableProgress", this.EnableProgress);
         this.setParamSimple(map, prefix + "Tempo", this.Tempo);
+        this.setParamSimple(map, prefix + "IdleTimeout", this.IdleTimeout);
 
     }
 }

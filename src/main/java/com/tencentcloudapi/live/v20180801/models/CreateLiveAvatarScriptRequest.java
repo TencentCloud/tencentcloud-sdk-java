@@ -24,128 +24,141 @@ import java.util.HashMap;
 public class CreateLiveAvatarScriptRequest extends AbstractModel {
 
     /**
-    * 话术标题。限制500字节。
+    * <p>话术标题。限制500字节。</p>
     */
     @SerializedName("Title")
     @Expose
     private String Title;
 
     /**
-    * 话术内容。中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。
+    * <p>话术内容。中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。</p>
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-    * 话术所属的数字人直播间 ID。
+    * <p>话术所属的数字人直播间 ID。</p>
     */
     @SerializedName("RoomId")
     @Expose
     private String RoomId;
 
     /**
-    * 话术插入时，可根据已有话术位置，指定新话术插入位置。
-如已有三条话术100，200，300。
-新话术可选择150插入到第一条和第二条中间。
+    * <p>话术插入时，可根据已有话术位置，指定新话术插入位置。<br>如已有三条话术100，200，300。<br>新话术可选择150插入到第一条和第二条中间。</p>
     */
     @SerializedName("SpecifyPosition")
     @Expose
     private Long SpecifyPosition;
 
     /**
-    * 操作者。
+    * <p>操作者。</p>
     */
     @SerializedName("Operator")
     @Expose
     private String Operator;
 
     /**
-     * Get 话术标题。限制500字节。 
-     * @return Title 话术标题。限制500字节。
+    * <p>话术所属的数字人产品 ID。</p>
+    */
+    @SerializedName("ProductId")
+    @Expose
+    private String ProductId;
+
+    /**
+     * Get <p>话术标题。限制500字节。</p> 
+     * @return Title <p>话术标题。限制500字节。</p>
      */
     public String getTitle() {
         return this.Title;
     }
 
     /**
-     * Set 话术标题。限制500字节。
-     * @param Title 话术标题。限制500字节。
+     * Set <p>话术标题。限制500字节。</p>
+     * @param Title <p>话术标题。限制500字节。</p>
      */
     public void setTitle(String Title) {
         this.Title = Title;
     }
 
     /**
-     * Get 话术内容。中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。 
-     * @return Content 话术内容。中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。
+     * Get <p>话术内容。中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。</p> 
+     * @return Content <p>话术内容。中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。</p>
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set 话术内容。中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。
-     * @param Content 话术内容。中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。
+     * Set <p>话术内容。中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。</p>
+     * @param Content <p>话术内容。中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。</p>
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get 话术所属的数字人直播间 ID。 
-     * @return RoomId 话术所属的数字人直播间 ID。
+     * Get <p>话术所属的数字人直播间 ID。</p> 
+     * @return RoomId <p>话术所属的数字人直播间 ID。</p>
      */
     public String getRoomId() {
         return this.RoomId;
     }
 
     /**
-     * Set 话术所属的数字人直播间 ID。
-     * @param RoomId 话术所属的数字人直播间 ID。
+     * Set <p>话术所属的数字人直播间 ID。</p>
+     * @param RoomId <p>话术所属的数字人直播间 ID。</p>
      */
     public void setRoomId(String RoomId) {
         this.RoomId = RoomId;
     }
 
     /**
-     * Get 话术插入时，可根据已有话术位置，指定新话术插入位置。
-如已有三条话术100，200，300。
-新话术可选择150插入到第一条和第二条中间。 
-     * @return SpecifyPosition 话术插入时，可根据已有话术位置，指定新话术插入位置。
-如已有三条话术100，200，300。
-新话术可选择150插入到第一条和第二条中间。
+     * Get <p>话术插入时，可根据已有话术位置，指定新话术插入位置。<br>如已有三条话术100，200，300。<br>新话术可选择150插入到第一条和第二条中间。</p> 
+     * @return SpecifyPosition <p>话术插入时，可根据已有话术位置，指定新话术插入位置。<br>如已有三条话术100，200，300。<br>新话术可选择150插入到第一条和第二条中间。</p>
      */
     public Long getSpecifyPosition() {
         return this.SpecifyPosition;
     }
 
     /**
-     * Set 话术插入时，可根据已有话术位置，指定新话术插入位置。
-如已有三条话术100，200，300。
-新话术可选择150插入到第一条和第二条中间。
-     * @param SpecifyPosition 话术插入时，可根据已有话术位置，指定新话术插入位置。
-如已有三条话术100，200，300。
-新话术可选择150插入到第一条和第二条中间。
+     * Set <p>话术插入时，可根据已有话术位置，指定新话术插入位置。<br>如已有三条话术100，200，300。<br>新话术可选择150插入到第一条和第二条中间。</p>
+     * @param SpecifyPosition <p>话术插入时，可根据已有话术位置，指定新话术插入位置。<br>如已有三条话术100，200，300。<br>新话术可选择150插入到第一条和第二条中间。</p>
      */
     public void setSpecifyPosition(Long SpecifyPosition) {
         this.SpecifyPosition = SpecifyPosition;
     }
 
     /**
-     * Get 操作者。 
-     * @return Operator 操作者。
+     * Get <p>操作者。</p> 
+     * @return Operator <p>操作者。</p>
      */
     public String getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 操作者。
-     * @param Operator 操作者。
+     * Set <p>操作者。</p>
+     * @param Operator <p>操作者。</p>
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;
+    }
+
+    /**
+     * Get <p>话术所属的数字人产品 ID。</p> 
+     * @return ProductId <p>话术所属的数字人产品 ID。</p>
+     */
+    public String getProductId() {
+        return this.ProductId;
+    }
+
+    /**
+     * Set <p>话术所属的数字人产品 ID。</p>
+     * @param ProductId <p>话术所属的数字人产品 ID。</p>
+     */
+    public void setProductId(String ProductId) {
+        this.ProductId = ProductId;
     }
 
     public CreateLiveAvatarScriptRequest() {
@@ -171,6 +184,9 @@ public class CreateLiveAvatarScriptRequest extends AbstractModel {
         if (source.Operator != null) {
             this.Operator = new String(source.Operator);
         }
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
     }
 
 
@@ -183,6 +199,7 @@ public class CreateLiveAvatarScriptRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RoomId", this.RoomId);
         this.setParamSimple(map, prefix + "SpecifyPosition", this.SpecifyPosition);
         this.setParamSimple(map, prefix + "Operator", this.Operator);
+        this.setParamSimple(map, prefix + "ProductId", this.ProductId);
 
     }
 }

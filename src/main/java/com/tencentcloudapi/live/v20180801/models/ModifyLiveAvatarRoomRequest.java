@@ -24,286 +24,279 @@ import java.util.HashMap;
 public class ModifyLiveAvatarRoomRequest extends AbstractModel {
 
     /**
-    * 数字人直播间 ID。
+    * <p>数字人直播间 ID。</p>
     */
     @SerializedName("RoomId")
     @Expose
     private String RoomId;
 
     /**
-    * 直播间名称。
+    * <p>直播间名称。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 数字人形象KEY。
+    * <p>数字人形象KEY。</p>
     */
     @SerializedName("AvatarKey")
     @Expose
     private String AvatarKey;
 
     /**
-    * 音色KEY。
+    * <p>音色KEY。</p>
     */
     @SerializedName("TimbreKey")
     @Expose
     private String TimbreKey;
 
     /**
-    * 背景图片URL。
+    * <p>背景图片URL。</p>
     */
     @SerializedName("BackgroundUrl")
     @Expose
     private String BackgroundUrl;
 
     /**
-    * 主播大小，默认1.00。
-取值范围(0, 15.00]。
-精度：使用小数点后两位。
+    * <p>主播大小，默认1.00。<br>取值范围(0, 15.00]。<br>精度：使用小数点后两位。</p>
     */
     @SerializedName("AnchorScale")
     @Expose
     private Float AnchorScale;
 
     /**
-    * 主播纵向位置。默认-1贴底部。
-左上角为原点，形象顶部离屏幕顶部的距离，最大不能使形象底部超出屏幕。
-即该纵向位置最大为：数字人分辨率的高 - 形象高。
+    * <p>主播纵向位置。默认-1贴底部。<br>左上角为原点，形象顶部离屏幕顶部的距离，最大不能使形象底部超出屏幕。<br>即该纵向位置最大为：数字人分辨率的高 - 形象高。</p>
     */
     @SerializedName("AnchorVerticalPos")
     @Expose
     private Long AnchorVerticalPos;
 
     /**
-    * 主播横向位置。默认-1居中。
-左上角为原点，形象左侧离左侧屏幕的距离。最大值不可使形象右侧超出右侧屏幕。
-即最大值为：数字人分辨率的宽 - 形象宽。
+    * <p>主播横向位置。默认-1居中。<br>左上角为原点，形象左侧离左侧屏幕的距离。最大值不可使形象右侧超出右侧屏幕。<br>即最大值为：数字人分辨率的宽 - 形象宽。</p>
     */
     @SerializedName("AnchorHorizontalPos")
     @Expose
     private Long AnchorHorizontalPos;
 
     /**
-    * 语速（1.0为正常语速，范围[0.6-2.5]，值为0.6时播报语速最慢，值为2.5时播报语速最快。
+    * <p>语速（1.0为正常语速，范围[0.6-2.5]，值为0.6时播报语速最慢，值为2.5时播报语速最快。</p>
     */
     @SerializedName("SpeechSpeed")
     @Expose
     private Float SpeechSpeed;
 
     /**
-    * 音量大小，范围[0，10]，对应音量大小。默认为5，代表正常音量，值越大音量越高。
+    * <p>音量大小，范围[0，10]，对应音量大小。默认为5，代表正常音量，值越大音量越高。</p>
     */
     @SerializedName("SpeechVolume")
     @Expose
     private Long SpeechVolume;
 
     /**
-    * 操作者。
+    * <p>操作者。</p>
     */
     @SerializedName("Operator")
     @Expose
     private String Operator;
 
     /**
-     * Get 数字人直播间 ID。 
-     * @return RoomId 数字人直播间 ID。
+    * <p>房间类型。AIGC：AIGC形象房间；PRESET：预设形象房间</p><p>枚举值：</p><ul><li>AIGC： AIGC形象房间</li><li>PRESET： 预设形象房间</li></ul>
+    */
+    @SerializedName("RoomType")
+    @Expose
+    private String RoomType;
+
+    /**
+     * Get <p>数字人直播间 ID。</p> 
+     * @return RoomId <p>数字人直播间 ID。</p>
      */
     public String getRoomId() {
         return this.RoomId;
     }
 
     /**
-     * Set 数字人直播间 ID。
-     * @param RoomId 数字人直播间 ID。
+     * Set <p>数字人直播间 ID。</p>
+     * @param RoomId <p>数字人直播间 ID。</p>
      */
     public void setRoomId(String RoomId) {
         this.RoomId = RoomId;
     }
 
     /**
-     * Get 直播间名称。 
-     * @return Name 直播间名称。
+     * Get <p>直播间名称。</p> 
+     * @return Name <p>直播间名称。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 直播间名称。
-     * @param Name 直播间名称。
+     * Set <p>直播间名称。</p>
+     * @param Name <p>直播间名称。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 数字人形象KEY。 
-     * @return AvatarKey 数字人形象KEY。
+     * Get <p>数字人形象KEY。</p> 
+     * @return AvatarKey <p>数字人形象KEY。</p>
      */
     public String getAvatarKey() {
         return this.AvatarKey;
     }
 
     /**
-     * Set 数字人形象KEY。
-     * @param AvatarKey 数字人形象KEY。
+     * Set <p>数字人形象KEY。</p>
+     * @param AvatarKey <p>数字人形象KEY。</p>
      */
     public void setAvatarKey(String AvatarKey) {
         this.AvatarKey = AvatarKey;
     }
 
     /**
-     * Get 音色KEY。 
-     * @return TimbreKey 音色KEY。
+     * Get <p>音色KEY。</p> 
+     * @return TimbreKey <p>音色KEY。</p>
      */
     public String getTimbreKey() {
         return this.TimbreKey;
     }
 
     /**
-     * Set 音色KEY。
-     * @param TimbreKey 音色KEY。
+     * Set <p>音色KEY。</p>
+     * @param TimbreKey <p>音色KEY。</p>
      */
     public void setTimbreKey(String TimbreKey) {
         this.TimbreKey = TimbreKey;
     }
 
     /**
-     * Get 背景图片URL。 
-     * @return BackgroundUrl 背景图片URL。
+     * Get <p>背景图片URL。</p> 
+     * @return BackgroundUrl <p>背景图片URL。</p>
      */
     public String getBackgroundUrl() {
         return this.BackgroundUrl;
     }
 
     /**
-     * Set 背景图片URL。
-     * @param BackgroundUrl 背景图片URL。
+     * Set <p>背景图片URL。</p>
+     * @param BackgroundUrl <p>背景图片URL。</p>
      */
     public void setBackgroundUrl(String BackgroundUrl) {
         this.BackgroundUrl = BackgroundUrl;
     }
 
     /**
-     * Get 主播大小，默认1.00。
-取值范围(0, 15.00]。
-精度：使用小数点后两位。 
-     * @return AnchorScale 主播大小，默认1.00。
-取值范围(0, 15.00]。
-精度：使用小数点后两位。
+     * Get <p>主播大小，默认1.00。<br>取值范围(0, 15.00]。<br>精度：使用小数点后两位。</p> 
+     * @return AnchorScale <p>主播大小，默认1.00。<br>取值范围(0, 15.00]。<br>精度：使用小数点后两位。</p>
      */
     public Float getAnchorScale() {
         return this.AnchorScale;
     }
 
     /**
-     * Set 主播大小，默认1.00。
-取值范围(0, 15.00]。
-精度：使用小数点后两位。
-     * @param AnchorScale 主播大小，默认1.00。
-取值范围(0, 15.00]。
-精度：使用小数点后两位。
+     * Set <p>主播大小，默认1.00。<br>取值范围(0, 15.00]。<br>精度：使用小数点后两位。</p>
+     * @param AnchorScale <p>主播大小，默认1.00。<br>取值范围(0, 15.00]。<br>精度：使用小数点后两位。</p>
      */
     public void setAnchorScale(Float AnchorScale) {
         this.AnchorScale = AnchorScale;
     }
 
     /**
-     * Get 主播纵向位置。默认-1贴底部。
-左上角为原点，形象顶部离屏幕顶部的距离，最大不能使形象底部超出屏幕。
-即该纵向位置最大为：数字人分辨率的高 - 形象高。 
-     * @return AnchorVerticalPos 主播纵向位置。默认-1贴底部。
-左上角为原点，形象顶部离屏幕顶部的距离，最大不能使形象底部超出屏幕。
-即该纵向位置最大为：数字人分辨率的高 - 形象高。
+     * Get <p>主播纵向位置。默认-1贴底部。<br>左上角为原点，形象顶部离屏幕顶部的距离，最大不能使形象底部超出屏幕。<br>即该纵向位置最大为：数字人分辨率的高 - 形象高。</p> 
+     * @return AnchorVerticalPos <p>主播纵向位置。默认-1贴底部。<br>左上角为原点，形象顶部离屏幕顶部的距离，最大不能使形象底部超出屏幕。<br>即该纵向位置最大为：数字人分辨率的高 - 形象高。</p>
      */
     public Long getAnchorVerticalPos() {
         return this.AnchorVerticalPos;
     }
 
     /**
-     * Set 主播纵向位置。默认-1贴底部。
-左上角为原点，形象顶部离屏幕顶部的距离，最大不能使形象底部超出屏幕。
-即该纵向位置最大为：数字人分辨率的高 - 形象高。
-     * @param AnchorVerticalPos 主播纵向位置。默认-1贴底部。
-左上角为原点，形象顶部离屏幕顶部的距离，最大不能使形象底部超出屏幕。
-即该纵向位置最大为：数字人分辨率的高 - 形象高。
+     * Set <p>主播纵向位置。默认-1贴底部。<br>左上角为原点，形象顶部离屏幕顶部的距离，最大不能使形象底部超出屏幕。<br>即该纵向位置最大为：数字人分辨率的高 - 形象高。</p>
+     * @param AnchorVerticalPos <p>主播纵向位置。默认-1贴底部。<br>左上角为原点，形象顶部离屏幕顶部的距离，最大不能使形象底部超出屏幕。<br>即该纵向位置最大为：数字人分辨率的高 - 形象高。</p>
      */
     public void setAnchorVerticalPos(Long AnchorVerticalPos) {
         this.AnchorVerticalPos = AnchorVerticalPos;
     }
 
     /**
-     * Get 主播横向位置。默认-1居中。
-左上角为原点，形象左侧离左侧屏幕的距离。最大值不可使形象右侧超出右侧屏幕。
-即最大值为：数字人分辨率的宽 - 形象宽。 
-     * @return AnchorHorizontalPos 主播横向位置。默认-1居中。
-左上角为原点，形象左侧离左侧屏幕的距离。最大值不可使形象右侧超出右侧屏幕。
-即最大值为：数字人分辨率的宽 - 形象宽。
+     * Get <p>主播横向位置。默认-1居中。<br>左上角为原点，形象左侧离左侧屏幕的距离。最大值不可使形象右侧超出右侧屏幕。<br>即最大值为：数字人分辨率的宽 - 形象宽。</p> 
+     * @return AnchorHorizontalPos <p>主播横向位置。默认-1居中。<br>左上角为原点，形象左侧离左侧屏幕的距离。最大值不可使形象右侧超出右侧屏幕。<br>即最大值为：数字人分辨率的宽 - 形象宽。</p>
      */
     public Long getAnchorHorizontalPos() {
         return this.AnchorHorizontalPos;
     }
 
     /**
-     * Set 主播横向位置。默认-1居中。
-左上角为原点，形象左侧离左侧屏幕的距离。最大值不可使形象右侧超出右侧屏幕。
-即最大值为：数字人分辨率的宽 - 形象宽。
-     * @param AnchorHorizontalPos 主播横向位置。默认-1居中。
-左上角为原点，形象左侧离左侧屏幕的距离。最大值不可使形象右侧超出右侧屏幕。
-即最大值为：数字人分辨率的宽 - 形象宽。
+     * Set <p>主播横向位置。默认-1居中。<br>左上角为原点，形象左侧离左侧屏幕的距离。最大值不可使形象右侧超出右侧屏幕。<br>即最大值为：数字人分辨率的宽 - 形象宽。</p>
+     * @param AnchorHorizontalPos <p>主播横向位置。默认-1居中。<br>左上角为原点，形象左侧离左侧屏幕的距离。最大值不可使形象右侧超出右侧屏幕。<br>即最大值为：数字人分辨率的宽 - 形象宽。</p>
      */
     public void setAnchorHorizontalPos(Long AnchorHorizontalPos) {
         this.AnchorHorizontalPos = AnchorHorizontalPos;
     }
 
     /**
-     * Get 语速（1.0为正常语速，范围[0.6-2.5]，值为0.6时播报语速最慢，值为2.5时播报语速最快。 
-     * @return SpeechSpeed 语速（1.0为正常语速，范围[0.6-2.5]，值为0.6时播报语速最慢，值为2.5时播报语速最快。
+     * Get <p>语速（1.0为正常语速，范围[0.6-2.5]，值为0.6时播报语速最慢，值为2.5时播报语速最快。</p> 
+     * @return SpeechSpeed <p>语速（1.0为正常语速，范围[0.6-2.5]，值为0.6时播报语速最慢，值为2.5时播报语速最快。</p>
      */
     public Float getSpeechSpeed() {
         return this.SpeechSpeed;
     }
 
     /**
-     * Set 语速（1.0为正常语速，范围[0.6-2.5]，值为0.6时播报语速最慢，值为2.5时播报语速最快。
-     * @param SpeechSpeed 语速（1.0为正常语速，范围[0.6-2.5]，值为0.6时播报语速最慢，值为2.5时播报语速最快。
+     * Set <p>语速（1.0为正常语速，范围[0.6-2.5]，值为0.6时播报语速最慢，值为2.5时播报语速最快。</p>
+     * @param SpeechSpeed <p>语速（1.0为正常语速，范围[0.6-2.5]，值为0.6时播报语速最慢，值为2.5时播报语速最快。</p>
      */
     public void setSpeechSpeed(Float SpeechSpeed) {
         this.SpeechSpeed = SpeechSpeed;
     }
 
     /**
-     * Get 音量大小，范围[0，10]，对应音量大小。默认为5，代表正常音量，值越大音量越高。 
-     * @return SpeechVolume 音量大小，范围[0，10]，对应音量大小。默认为5，代表正常音量，值越大音量越高。
+     * Get <p>音量大小，范围[0，10]，对应音量大小。默认为5，代表正常音量，值越大音量越高。</p> 
+     * @return SpeechVolume <p>音量大小，范围[0，10]，对应音量大小。默认为5，代表正常音量，值越大音量越高。</p>
      */
     public Long getSpeechVolume() {
         return this.SpeechVolume;
     }
 
     /**
-     * Set 音量大小，范围[0，10]，对应音量大小。默认为5，代表正常音量，值越大音量越高。
-     * @param SpeechVolume 音量大小，范围[0，10]，对应音量大小。默认为5，代表正常音量，值越大音量越高。
+     * Set <p>音量大小，范围[0，10]，对应音量大小。默认为5，代表正常音量，值越大音量越高。</p>
+     * @param SpeechVolume <p>音量大小，范围[0，10]，对应音量大小。默认为5，代表正常音量，值越大音量越高。</p>
      */
     public void setSpeechVolume(Long SpeechVolume) {
         this.SpeechVolume = SpeechVolume;
     }
 
     /**
-     * Get 操作者。 
-     * @return Operator 操作者。
+     * Get <p>操作者。</p> 
+     * @return Operator <p>操作者。</p>
      */
     public String getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 操作者。
-     * @param Operator 操作者。
+     * Set <p>操作者。</p>
+     * @param Operator <p>操作者。</p>
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;
+    }
+
+    /**
+     * Get <p>房间类型。AIGC：AIGC形象房间；PRESET：预设形象房间</p><p>枚举值：</p><ul><li>AIGC： AIGC形象房间</li><li>PRESET： 预设形象房间</li></ul> 
+     * @return RoomType <p>房间类型。AIGC：AIGC形象房间；PRESET：预设形象房间</p><p>枚举值：</p><ul><li>AIGC： AIGC形象房间</li><li>PRESET： 预设形象房间</li></ul>
+     */
+    public String getRoomType() {
+        return this.RoomType;
+    }
+
+    /**
+     * Set <p>房间类型。AIGC：AIGC形象房间；PRESET：预设形象房间</p><p>枚举值：</p><ul><li>AIGC： AIGC形象房间</li><li>PRESET： 预设形象房间</li></ul>
+     * @param RoomType <p>房间类型。AIGC：AIGC形象房间；PRESET：预设形象房间</p><p>枚举值：</p><ul><li>AIGC： AIGC形象房间</li><li>PRESET： 预设形象房间</li></ul>
+     */
+    public void setRoomType(String RoomType) {
+        this.RoomType = RoomType;
     }
 
     public ModifyLiveAvatarRoomRequest() {
@@ -347,6 +340,9 @@ public class ModifyLiveAvatarRoomRequest extends AbstractModel {
         if (source.Operator != null) {
             this.Operator = new String(source.Operator);
         }
+        if (source.RoomType != null) {
+            this.RoomType = new String(source.RoomType);
+        }
     }
 
 
@@ -365,6 +361,7 @@ public class ModifyLiveAvatarRoomRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SpeechSpeed", this.SpeechSpeed);
         this.setParamSimple(map, prefix + "SpeechVolume", this.SpeechVolume);
         this.setParamSimple(map, prefix + "Operator", this.Operator);
+        this.setParamSimple(map, prefix + "RoomType", this.RoomType);
 
     }
 }

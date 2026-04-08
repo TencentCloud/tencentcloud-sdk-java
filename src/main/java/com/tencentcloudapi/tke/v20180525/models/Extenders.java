@@ -24,118 +24,164 @@ import java.util.HashMap;
 public class Extenders extends AbstractModel {
 
     /**
-    * 过滤阶段接口
+    * <p>过滤阶段接口</p>
     */
     @SerializedName("FilterVerb")
     @Expose
     private String FilterVerb;
 
     /**
-    * 打分阶段扩展接口
+    * <p>打分阶段扩展接口</p>
     */
     @SerializedName("PrioritizeVerb")
     @Expose
     private String PrioritizeVerb;
 
     /**
-    * 打分阶段节点分数的权重,取值范围限定(0,2】
+    * <p>打分阶段节点分数的权重,取值范围限定(0,2】</p>
     */
     @SerializedName("Weight")
     @Expose
     private Long Weight;
 
     /**
-    * 扩展调度器(Extender)管理的扩展资源
+    * <p>扩展调度器(Extender)管理的扩展资源</p>
     */
     @SerializedName("ManagedResources")
     @Expose
     private ExtenderManagedResource [] ManagedResources;
 
     /**
-    * extender客户端配置
+    * <p>extender客户端配置</p>
     */
     @SerializedName("ExtenderClientConfig")
     @Expose
     private ExtenderClientConfig ExtenderClientConfig;
 
     /**
-     * Get 过滤阶段接口 
-     * @return FilterVerb 过滤阶段接口
+    * <p>抢占接口</p>
+    */
+    @SerializedName("PreemptVerb")
+    @Expose
+    private String PreemptVerb;
+
+    /**
+    * <p>节点缓存能力</p>
+    */
+    @SerializedName("NodeCacheCapable")
+    @Expose
+    private Boolean NodeCacheCapable;
+
+    /**
+     * Get <p>过滤阶段接口</p> 
+     * @return FilterVerb <p>过滤阶段接口</p>
      */
     public String getFilterVerb() {
         return this.FilterVerb;
     }
 
     /**
-     * Set 过滤阶段接口
-     * @param FilterVerb 过滤阶段接口
+     * Set <p>过滤阶段接口</p>
+     * @param FilterVerb <p>过滤阶段接口</p>
      */
     public void setFilterVerb(String FilterVerb) {
         this.FilterVerb = FilterVerb;
     }
 
     /**
-     * Get 打分阶段扩展接口 
-     * @return PrioritizeVerb 打分阶段扩展接口
+     * Get <p>打分阶段扩展接口</p> 
+     * @return PrioritizeVerb <p>打分阶段扩展接口</p>
      */
     public String getPrioritizeVerb() {
         return this.PrioritizeVerb;
     }
 
     /**
-     * Set 打分阶段扩展接口
-     * @param PrioritizeVerb 打分阶段扩展接口
+     * Set <p>打分阶段扩展接口</p>
+     * @param PrioritizeVerb <p>打分阶段扩展接口</p>
      */
     public void setPrioritizeVerb(String PrioritizeVerb) {
         this.PrioritizeVerb = PrioritizeVerb;
     }
 
     /**
-     * Get 打分阶段节点分数的权重,取值范围限定(0,2】 
-     * @return Weight 打分阶段节点分数的权重,取值范围限定(0,2】
+     * Get <p>打分阶段节点分数的权重,取值范围限定(0,2】</p> 
+     * @return Weight <p>打分阶段节点分数的权重,取值范围限定(0,2】</p>
      */
     public Long getWeight() {
         return this.Weight;
     }
 
     /**
-     * Set 打分阶段节点分数的权重,取值范围限定(0,2】
-     * @param Weight 打分阶段节点分数的权重,取值范围限定(0,2】
+     * Set <p>打分阶段节点分数的权重,取值范围限定(0,2】</p>
+     * @param Weight <p>打分阶段节点分数的权重,取值范围限定(0,2】</p>
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;
     }
 
     /**
-     * Get 扩展调度器(Extender)管理的扩展资源 
-     * @return ManagedResources 扩展调度器(Extender)管理的扩展资源
+     * Get <p>扩展调度器(Extender)管理的扩展资源</p> 
+     * @return ManagedResources <p>扩展调度器(Extender)管理的扩展资源</p>
      */
     public ExtenderManagedResource [] getManagedResources() {
         return this.ManagedResources;
     }
 
     /**
-     * Set 扩展调度器(Extender)管理的扩展资源
-     * @param ManagedResources 扩展调度器(Extender)管理的扩展资源
+     * Set <p>扩展调度器(Extender)管理的扩展资源</p>
+     * @param ManagedResources <p>扩展调度器(Extender)管理的扩展资源</p>
      */
     public void setManagedResources(ExtenderManagedResource [] ManagedResources) {
         this.ManagedResources = ManagedResources;
     }
 
     /**
-     * Get extender客户端配置 
-     * @return ExtenderClientConfig extender客户端配置
+     * Get <p>extender客户端配置</p> 
+     * @return ExtenderClientConfig <p>extender客户端配置</p>
      */
     public ExtenderClientConfig getExtenderClientConfig() {
         return this.ExtenderClientConfig;
     }
 
     /**
-     * Set extender客户端配置
-     * @param ExtenderClientConfig extender客户端配置
+     * Set <p>extender客户端配置</p>
+     * @param ExtenderClientConfig <p>extender客户端配置</p>
      */
     public void setExtenderClientConfig(ExtenderClientConfig ExtenderClientConfig) {
         this.ExtenderClientConfig = ExtenderClientConfig;
+    }
+
+    /**
+     * Get <p>抢占接口</p> 
+     * @return PreemptVerb <p>抢占接口</p>
+     */
+    public String getPreemptVerb() {
+        return this.PreemptVerb;
+    }
+
+    /**
+     * Set <p>抢占接口</p>
+     * @param PreemptVerb <p>抢占接口</p>
+     */
+    public void setPreemptVerb(String PreemptVerb) {
+        this.PreemptVerb = PreemptVerb;
+    }
+
+    /**
+     * Get <p>节点缓存能力</p> 
+     * @return NodeCacheCapable <p>节点缓存能力</p>
+     */
+    public Boolean getNodeCacheCapable() {
+        return this.NodeCacheCapable;
+    }
+
+    /**
+     * Set <p>节点缓存能力</p>
+     * @param NodeCacheCapable <p>节点缓存能力</p>
+     */
+    public void setNodeCacheCapable(Boolean NodeCacheCapable) {
+        this.NodeCacheCapable = NodeCacheCapable;
     }
 
     public Extenders() {
@@ -164,6 +210,12 @@ public class Extenders extends AbstractModel {
         if (source.ExtenderClientConfig != null) {
             this.ExtenderClientConfig = new ExtenderClientConfig(source.ExtenderClientConfig);
         }
+        if (source.PreemptVerb != null) {
+            this.PreemptVerb = new String(source.PreemptVerb);
+        }
+        if (source.NodeCacheCapable != null) {
+            this.NodeCacheCapable = new Boolean(source.NodeCacheCapable);
+        }
     }
 
 
@@ -176,6 +228,8 @@ public class Extenders extends AbstractModel {
         this.setParamSimple(map, prefix + "Weight", this.Weight);
         this.setParamArrayObj(map, prefix + "ManagedResources.", this.ManagedResources);
         this.setParamObj(map, prefix + "ExtenderClientConfig.", this.ExtenderClientConfig);
+        this.setParamSimple(map, prefix + "PreemptVerb", this.PreemptVerb);
+        this.setParamSimple(map, prefix + "NodeCacheCapable", this.NodeCacheCapable);
 
     }
 }

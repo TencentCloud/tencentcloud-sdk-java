@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class AgentPluginInfo extends AbstractModel {
 
     /**
-    * 插件id
+    * <p>插件id</p>
     */
     @SerializedName("PluginId")
     @Expose
     private String PluginId;
 
     /**
-    * 应用配置的插件header信息
+    * <p>应用配置的插件header信息</p>
     */
     @SerializedName("Headers")
     @Expose
     private AgentPluginHeader [] Headers;
 
     /**
-    * 插件调用LLM时使用的模型配置，一般用于指定知识库问答插件的生成模型
+    * <p>插件调用LLM时使用的模型配置，一般用于指定知识库问答插件的生成模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Model")
@@ -46,14 +46,14 @@ public class AgentPluginInfo extends AbstractModel {
     private AgentModelInfo Model;
 
     /**
-    * 插件信息类型; 0: 未指定类型; 1: 知识库问答插件
+    * <p>插件信息类型; 0: 未指定类型; 1: 知识库问答插件</p>
     */
     @SerializedName("PluginInfoType")
     @Expose
     private Long PluginInfoType;
 
     /**
-    * 知识库问答插件配置
+    * <p>知识库问答插件配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KnowledgeQa")
@@ -61,7 +61,7 @@ public class AgentPluginInfo extends AbstractModel {
     private AgentKnowledgeQAPlugin KnowledgeQa;
 
     /**
-    * 是否使用一键授权
+    * <p>是否使用一键授权</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableRoleAuth")
@@ -69,55 +69,55 @@ public class AgentPluginInfo extends AbstractModel {
     private Boolean EnableRoleAuth;
 
     /**
-    * 应用配置的插件query信息
+    * <p>应用配置的插件query信息</p>
     */
     @SerializedName("Query")
     @Expose
     private AgentPluginQuery [] Query;
 
     /**
-    * MCP类型
+    * <p>MCP类型</p><p>枚举值：</p><ul><li>0： SSE 模式</li><li>1： Streamable Http 模式</li></ul>
     */
     @SerializedName("McpType")
     @Expose
     private Long McpType;
 
     /**
-     * Get 插件id 
-     * @return PluginId 插件id
+     * Get <p>插件id</p> 
+     * @return PluginId <p>插件id</p>
      */
     public String getPluginId() {
         return this.PluginId;
     }
 
     /**
-     * Set 插件id
-     * @param PluginId 插件id
+     * Set <p>插件id</p>
+     * @param PluginId <p>插件id</p>
      */
     public void setPluginId(String PluginId) {
         this.PluginId = PluginId;
     }
 
     /**
-     * Get 应用配置的插件header信息 
-     * @return Headers 应用配置的插件header信息
+     * Get <p>应用配置的插件header信息</p> 
+     * @return Headers <p>应用配置的插件header信息</p>
      */
     public AgentPluginHeader [] getHeaders() {
         return this.Headers;
     }
 
     /**
-     * Set 应用配置的插件header信息
-     * @param Headers 应用配置的插件header信息
+     * Set <p>应用配置的插件header信息</p>
+     * @param Headers <p>应用配置的插件header信息</p>
      */
     public void setHeaders(AgentPluginHeader [] Headers) {
         this.Headers = Headers;
     }
 
     /**
-     * Get 插件调用LLM时使用的模型配置，一般用于指定知识库问答插件的生成模型
+     * Get <p>插件调用LLM时使用的模型配置，一般用于指定知识库问答插件的生成模型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Model 插件调用LLM时使用的模型配置，一般用于指定知识库问答插件的生成模型
+     * @return Model <p>插件调用LLM时使用的模型配置，一般用于指定知识库问答插件的生成模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AgentModelInfo getModel() {
@@ -125,9 +125,9 @@ public class AgentPluginInfo extends AbstractModel {
     }
 
     /**
-     * Set 插件调用LLM时使用的模型配置，一般用于指定知识库问答插件的生成模型
+     * Set <p>插件调用LLM时使用的模型配置，一般用于指定知识库问答插件的生成模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Model 插件调用LLM时使用的模型配置，一般用于指定知识库问答插件的生成模型
+     * @param Model <p>插件调用LLM时使用的模型配置，一般用于指定知识库问答插件的生成模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModel(AgentModelInfo Model) {
@@ -135,25 +135,25 @@ public class AgentPluginInfo extends AbstractModel {
     }
 
     /**
-     * Get 插件信息类型; 0: 未指定类型; 1: 知识库问答插件 
-     * @return PluginInfoType 插件信息类型; 0: 未指定类型; 1: 知识库问答插件
+     * Get <p>插件信息类型; 0: 未指定类型; 1: 知识库问答插件</p> 
+     * @return PluginInfoType <p>插件信息类型; 0: 未指定类型; 1: 知识库问答插件</p>
      */
     public Long getPluginInfoType() {
         return this.PluginInfoType;
     }
 
     /**
-     * Set 插件信息类型; 0: 未指定类型; 1: 知识库问答插件
-     * @param PluginInfoType 插件信息类型; 0: 未指定类型; 1: 知识库问答插件
+     * Set <p>插件信息类型; 0: 未指定类型; 1: 知识库问答插件</p>
+     * @param PluginInfoType <p>插件信息类型; 0: 未指定类型; 1: 知识库问答插件</p>
      */
     public void setPluginInfoType(Long PluginInfoType) {
         this.PluginInfoType = PluginInfoType;
     }
 
     /**
-     * Get 知识库问答插件配置
+     * Get <p>知识库问答插件配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KnowledgeQa 知识库问答插件配置
+     * @return KnowledgeQa <p>知识库问答插件配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AgentKnowledgeQAPlugin getKnowledgeQa() {
@@ -161,9 +161,9 @@ public class AgentPluginInfo extends AbstractModel {
     }
 
     /**
-     * Set 知识库问答插件配置
+     * Set <p>知识库问答插件配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param KnowledgeQa 知识库问答插件配置
+     * @param KnowledgeQa <p>知识库问答插件配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKnowledgeQa(AgentKnowledgeQAPlugin KnowledgeQa) {
@@ -171,9 +171,9 @@ public class AgentPluginInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否使用一键授权
+     * Get <p>是否使用一键授权</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EnableRoleAuth 是否使用一键授权
+     * @return EnableRoleAuth <p>是否使用一键授权</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableRoleAuth() {
@@ -181,9 +181,9 @@ public class AgentPluginInfo extends AbstractModel {
     }
 
     /**
-     * Set 是否使用一键授权
+     * Set <p>是否使用一键授权</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EnableRoleAuth 是否使用一键授权
+     * @param EnableRoleAuth <p>是否使用一键授权</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableRoleAuth(Boolean EnableRoleAuth) {
@@ -191,32 +191,32 @@ public class AgentPluginInfo extends AbstractModel {
     }
 
     /**
-     * Get 应用配置的插件query信息 
-     * @return Query 应用配置的插件query信息
+     * Get <p>应用配置的插件query信息</p> 
+     * @return Query <p>应用配置的插件query信息</p>
      */
     public AgentPluginQuery [] getQuery() {
         return this.Query;
     }
 
     /**
-     * Set 应用配置的插件query信息
-     * @param Query 应用配置的插件query信息
+     * Set <p>应用配置的插件query信息</p>
+     * @param Query <p>应用配置的插件query信息</p>
      */
     public void setQuery(AgentPluginQuery [] Query) {
         this.Query = Query;
     }
 
     /**
-     * Get MCP类型 
-     * @return McpType MCP类型
+     * Get <p>MCP类型</p><p>枚举值：</p><ul><li>0： SSE 模式</li><li>1： Streamable Http 模式</li></ul> 
+     * @return McpType <p>MCP类型</p><p>枚举值：</p><ul><li>0： SSE 模式</li><li>1： Streamable Http 模式</li></ul>
      */
     public Long getMcpType() {
         return this.McpType;
     }
 
     /**
-     * Set MCP类型
-     * @param McpType MCP类型
+     * Set <p>MCP类型</p><p>枚举值：</p><ul><li>0： SSE 模式</li><li>1： Streamable Http 模式</li></ul>
+     * @param McpType <p>MCP类型</p><p>枚举值：</p><ul><li>0： SSE 模式</li><li>1： Streamable Http 模式</li></ul>
      */
     public void setMcpType(Long McpType) {
         this.McpType = McpType;

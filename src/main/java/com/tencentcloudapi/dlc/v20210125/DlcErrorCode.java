@@ -675,6 +675,9 @@ public enum DlcErrorCode {
      /* 任务已经完成 */
      RESOURCENOTFOUND_TASKALREADYFINISHED("ResourceNotFound.TaskAlreadyFinished"),
      
+     /* 用户不存在 */
+     RESOURCENOTFOUND_USERNOTEXIST("ResourceNotFound.UserNotExist"),
+     
      /* 找不到Warehouse存储路径，请到控制台->数据探索页面->存储配置中设置 */
      RESOURCENOTFOUND_WAREHOUSEDIRNOTFOUND("ResourceNotFound.WarehouseDirNotFound"),
      
@@ -713,6 +716,9 @@ public enum DlcErrorCode {
      
      /* 子用户不是管理员，无权绑定工作组到用户。 */
      UNAUTHORIZEDOPERATION_BINDWORKGROUPSTOUSER("UnauthorizedOperation.BindWorkgroupsToUser"),
+     
+     /* 用户无权限创建管理员 */
+     UNAUTHORIZEDOPERATION_CREATEADMINISTRATOR("UnauthorizedOperation.CreateAdministrator"),
      
      /* 子用户无权创建联邦查询数据源。 */
      UNAUTHORIZEDOPERATION_CREATECATALOG("UnauthorizedOperation.CreateCatalog"),

@@ -24,11 +24,18 @@ import java.util.HashMap;
 public class ClassifyStoreNameResponse extends AbstractModel {
 
     /**
-    * 门头照标签
+    * <p>门头照标签</p>
     */
     @SerializedName("StoreLabel")
     @Expose
     private String [] StoreLabel;
+
+    /**
+    * <p>具体场景标签，输出3个最匹配的场景， 注：仅SceneType配置为true时支持。</p>
+    */
+    @SerializedName("SceneType")
+    @Expose
+    private String SceneType;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +45,35 @@ public class ClassifyStoreNameResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 门头照标签 
-     * @return StoreLabel 门头照标签
+     * Get <p>门头照标签</p> 
+     * @return StoreLabel <p>门头照标签</p>
      */
     public String [] getStoreLabel() {
         return this.StoreLabel;
     }
 
     /**
-     * Set 门头照标签
-     * @param StoreLabel 门头照标签
+     * Set <p>门头照标签</p>
+     * @param StoreLabel <p>门头照标签</p>
      */
     public void setStoreLabel(String [] StoreLabel) {
         this.StoreLabel = StoreLabel;
+    }
+
+    /**
+     * Get <p>具体场景标签，输出3个最匹配的场景， 注：仅SceneType配置为true时支持。</p> 
+     * @return SceneType <p>具体场景标签，输出3个最匹配的场景， 注：仅SceneType配置为true时支持。</p>
+     */
+    public String getSceneType() {
+        return this.SceneType;
+    }
+
+    /**
+     * Set <p>具体场景标签，输出3个最匹配的场景， 注：仅SceneType配置为true时支持。</p>
+     * @param SceneType <p>具体场景标签，输出3个最匹配的场景， 注：仅SceneType配置为true时支持。</p>
+     */
+    public void setSceneType(String SceneType) {
+        this.SceneType = SceneType;
     }
 
     /**
@@ -83,6 +106,9 @@ public class ClassifyStoreNameResponse extends AbstractModel {
                 this.StoreLabel[i] = new String(source.StoreLabel[i]);
             }
         }
+        if (source.SceneType != null) {
+            this.SceneType = new String(source.SceneType);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -94,6 +120,7 @@ public class ClassifyStoreNameResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "StoreLabel.", this.StoreLabel);
+        this.setParamSimple(map, prefix + "SceneType", this.SceneType);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeRedoLogListByVaultItem extends AbstractModel {
 
     /**
-    * 集群ID
+    * <p>集群ID</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 集群名称
+    * <p>集群名称</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * RedoLog文件信息
+    * <p>RedoLog文件信息</p>
     */
     @SerializedName("RedoFileInfo")
     @Expose
     private RedoLogItem RedoFileInfo;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get <p>集群ID</p> 
+     * @return ClusterId <p>集群ID</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set <p>集群ID</p>
+     * @param ClusterId <p>集群ID</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 集群名称 
-     * @return ClusterName 集群名称
+     * Get <p>集群名称</p> 
+     * @return ClusterName <p>集群名称</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set 集群名称
-     * @param ClusterName 集群名称
+     * Set <p>集群名称</p>
+     * @param ClusterName <p>集群名称</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get RedoLog文件信息 
-     * @return RedoFileInfo RedoLog文件信息
+     * Get <p>RedoLog文件信息</p> 
+     * @return RedoFileInfo <p>RedoLog文件信息</p>
      */
     public RedoLogItem getRedoFileInfo() {
         return this.RedoFileInfo;
     }
 
     /**
-     * Set RedoLog文件信息
-     * @param RedoFileInfo RedoLog文件信息
+     * Set <p>RedoLog文件信息</p>
+     * @param RedoFileInfo <p>RedoLog文件信息</p>
      */
     public void setRedoFileInfo(RedoLogItem RedoFileInfo) {
         this.RedoFileInfo = RedoFileInfo;

@@ -24,394 +24,463 @@ import java.util.HashMap;
 public class CostDetail extends AbstractModel {
 
     /**
-    * 支付者uin
+    * <p>支付者uin</p>
     */
     @SerializedName("PayerUin")
     @Expose
     private String PayerUin;
 
     /**
-    * 产品名称
+    * <p>产品名称</p>
     */
     @SerializedName("BusinessCodeName")
     @Expose
     private String BusinessCodeName;
 
     /**
-    * 子产品名称
+    * <p>子产品名称</p>
     */
     @SerializedName("ProductCodeName")
     @Expose
     private String ProductCodeName;
 
     /**
-    * 计费模式名称
+    * <p>计费模式名称</p>
     */
     @SerializedName("PayModeName")
     @Expose
     private String PayModeName;
 
     /**
-    * 项目名称
+    * <p>项目名称</p>
     */
     @SerializedName("ProjectName")
     @Expose
     private String ProjectName;
 
     /**
-    * 区域名称
+    * <p>区域名称</p>
     */
     @SerializedName("RegionName")
     @Expose
     private String RegionName;
 
     /**
-    * 地区名称
+    * <p>地区名称</p>
     */
     @SerializedName("ZoneName")
     @Expose
     private String ZoneName;
 
     /**
-    * 资源id
+    * <p>资源id</p>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 资源名称
+    * <p>资源名称</p>
     */
     @SerializedName("ResourceName")
     @Expose
     private String ResourceName;
 
     /**
-    * 类型名称
+    * <p>类型名称</p>
     */
     @SerializedName("ActionTypeName")
     @Expose
     private String ActionTypeName;
 
     /**
-    * 订单id
+    * <p>订单id</p>
     */
     @SerializedName("OrderId")
     @Expose
     private String OrderId;
 
     /**
-    * 交易id
+    * <p>交易id</p>
     */
     @SerializedName("BillId")
     @Expose
     private String BillId;
 
     /**
-    * 费用开始时间
+    * <p>费用开始时间</p>
     */
     @SerializedName("FeeBeginTime")
     @Expose
     private String FeeBeginTime;
 
     /**
-    * 费用结束时间
+    * <p>费用结束时间</p>
     */
     @SerializedName("FeeEndTime")
     @Expose
     private String FeeEndTime;
 
     /**
-    * 组件明细
+    * <p>组件明细</p>
     */
     @SerializedName("ComponentSet")
     @Expose
     private CostComponentSet [] ComponentSet;
 
     /**
-    * 子产品名称代码
+    * <p>子产品名称代码</p>
     */
     @SerializedName("ProductCode")
     @Expose
     private String ProductCode;
 
     /**
-    * 标签信息	
+    * <p>标签信息</p>
     */
     @SerializedName("Tags")
     @Expose
     private BillTagInfo [] Tags;
 
     /**
-     * Get 支付者uin 
-     * @return PayerUin 支付者uin
+    * <p>操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）</p>
+    */
+    @SerializedName("OperateUin")
+    @Expose
+    private String OperateUin;
+
+    /**
+    * <p>使用者UIN：实际使用资源的账号 ID</p>
+    */
+    @SerializedName("OwnerUin")
+    @Expose
+    private String OwnerUin;
+
+    /**
+    * <p>扣费时间：结算扣费时间</p>
+    */
+    @SerializedName("PayTime")
+    @Expose
+    private String PayTime;
+
+    /**
+     * Get <p>支付者uin</p> 
+     * @return PayerUin <p>支付者uin</p>
      */
     public String getPayerUin() {
         return this.PayerUin;
     }
 
     /**
-     * Set 支付者uin
-     * @param PayerUin 支付者uin
+     * Set <p>支付者uin</p>
+     * @param PayerUin <p>支付者uin</p>
      */
     public void setPayerUin(String PayerUin) {
         this.PayerUin = PayerUin;
     }
 
     /**
-     * Get 产品名称 
-     * @return BusinessCodeName 产品名称
+     * Get <p>产品名称</p> 
+     * @return BusinessCodeName <p>产品名称</p>
      */
     public String getBusinessCodeName() {
         return this.BusinessCodeName;
     }
 
     /**
-     * Set 产品名称
-     * @param BusinessCodeName 产品名称
+     * Set <p>产品名称</p>
+     * @param BusinessCodeName <p>产品名称</p>
      */
     public void setBusinessCodeName(String BusinessCodeName) {
         this.BusinessCodeName = BusinessCodeName;
     }
 
     /**
-     * Get 子产品名称 
-     * @return ProductCodeName 子产品名称
+     * Get <p>子产品名称</p> 
+     * @return ProductCodeName <p>子产品名称</p>
      */
     public String getProductCodeName() {
         return this.ProductCodeName;
     }
 
     /**
-     * Set 子产品名称
-     * @param ProductCodeName 子产品名称
+     * Set <p>子产品名称</p>
+     * @param ProductCodeName <p>子产品名称</p>
      */
     public void setProductCodeName(String ProductCodeName) {
         this.ProductCodeName = ProductCodeName;
     }
 
     /**
-     * Get 计费模式名称 
-     * @return PayModeName 计费模式名称
+     * Get <p>计费模式名称</p> 
+     * @return PayModeName <p>计费模式名称</p>
      */
     public String getPayModeName() {
         return this.PayModeName;
     }
 
     /**
-     * Set 计费模式名称
-     * @param PayModeName 计费模式名称
+     * Set <p>计费模式名称</p>
+     * @param PayModeName <p>计费模式名称</p>
      */
     public void setPayModeName(String PayModeName) {
         this.PayModeName = PayModeName;
     }
 
     /**
-     * Get 项目名称 
-     * @return ProjectName 项目名称
+     * Get <p>项目名称</p> 
+     * @return ProjectName <p>项目名称</p>
      */
     public String getProjectName() {
         return this.ProjectName;
     }
 
     /**
-     * Set 项目名称
-     * @param ProjectName 项目名称
+     * Set <p>项目名称</p>
+     * @param ProjectName <p>项目名称</p>
      */
     public void setProjectName(String ProjectName) {
         this.ProjectName = ProjectName;
     }
 
     /**
-     * Get 区域名称 
-     * @return RegionName 区域名称
+     * Get <p>区域名称</p> 
+     * @return RegionName <p>区域名称</p>
      */
     public String getRegionName() {
         return this.RegionName;
     }
 
     /**
-     * Set 区域名称
-     * @param RegionName 区域名称
+     * Set <p>区域名称</p>
+     * @param RegionName <p>区域名称</p>
      */
     public void setRegionName(String RegionName) {
         this.RegionName = RegionName;
     }
 
     /**
-     * Get 地区名称 
-     * @return ZoneName 地区名称
+     * Get <p>地区名称</p> 
+     * @return ZoneName <p>地区名称</p>
      */
     public String getZoneName() {
         return this.ZoneName;
     }
 
     /**
-     * Set 地区名称
-     * @param ZoneName 地区名称
+     * Set <p>地区名称</p>
+     * @param ZoneName <p>地区名称</p>
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;
     }
 
     /**
-     * Get 资源id 
-     * @return ResourceId 资源id
+     * Get <p>资源id</p> 
+     * @return ResourceId <p>资源id</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源id
-     * @param ResourceId 资源id
+     * Set <p>资源id</p>
+     * @param ResourceId <p>资源id</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 资源名称 
-     * @return ResourceName 资源名称
+     * Get <p>资源名称</p> 
+     * @return ResourceName <p>资源名称</p>
      */
     public String getResourceName() {
         return this.ResourceName;
     }
 
     /**
-     * Set 资源名称
-     * @param ResourceName 资源名称
+     * Set <p>资源名称</p>
+     * @param ResourceName <p>资源名称</p>
      */
     public void setResourceName(String ResourceName) {
         this.ResourceName = ResourceName;
     }
 
     /**
-     * Get 类型名称 
-     * @return ActionTypeName 类型名称
+     * Get <p>类型名称</p> 
+     * @return ActionTypeName <p>类型名称</p>
      */
     public String getActionTypeName() {
         return this.ActionTypeName;
     }
 
     /**
-     * Set 类型名称
-     * @param ActionTypeName 类型名称
+     * Set <p>类型名称</p>
+     * @param ActionTypeName <p>类型名称</p>
      */
     public void setActionTypeName(String ActionTypeName) {
         this.ActionTypeName = ActionTypeName;
     }
 
     /**
-     * Get 订单id 
-     * @return OrderId 订单id
+     * Get <p>订单id</p> 
+     * @return OrderId <p>订单id</p>
      */
     public String getOrderId() {
         return this.OrderId;
     }
 
     /**
-     * Set 订单id
-     * @param OrderId 订单id
+     * Set <p>订单id</p>
+     * @param OrderId <p>订单id</p>
      */
     public void setOrderId(String OrderId) {
         this.OrderId = OrderId;
     }
 
     /**
-     * Get 交易id 
-     * @return BillId 交易id
+     * Get <p>交易id</p> 
+     * @return BillId <p>交易id</p>
      */
     public String getBillId() {
         return this.BillId;
     }
 
     /**
-     * Set 交易id
-     * @param BillId 交易id
+     * Set <p>交易id</p>
+     * @param BillId <p>交易id</p>
      */
     public void setBillId(String BillId) {
         this.BillId = BillId;
     }
 
     /**
-     * Get 费用开始时间 
-     * @return FeeBeginTime 费用开始时间
+     * Get <p>费用开始时间</p> 
+     * @return FeeBeginTime <p>费用开始时间</p>
      */
     public String getFeeBeginTime() {
         return this.FeeBeginTime;
     }
 
     /**
-     * Set 费用开始时间
-     * @param FeeBeginTime 费用开始时间
+     * Set <p>费用开始时间</p>
+     * @param FeeBeginTime <p>费用开始时间</p>
      */
     public void setFeeBeginTime(String FeeBeginTime) {
         this.FeeBeginTime = FeeBeginTime;
     }
 
     /**
-     * Get 费用结束时间 
-     * @return FeeEndTime 费用结束时间
+     * Get <p>费用结束时间</p> 
+     * @return FeeEndTime <p>费用结束时间</p>
      */
     public String getFeeEndTime() {
         return this.FeeEndTime;
     }
 
     /**
-     * Set 费用结束时间
-     * @param FeeEndTime 费用结束时间
+     * Set <p>费用结束时间</p>
+     * @param FeeEndTime <p>费用结束时间</p>
      */
     public void setFeeEndTime(String FeeEndTime) {
         this.FeeEndTime = FeeEndTime;
     }
 
     /**
-     * Get 组件明细 
-     * @return ComponentSet 组件明细
+     * Get <p>组件明细</p> 
+     * @return ComponentSet <p>组件明细</p>
      */
     public CostComponentSet [] getComponentSet() {
         return this.ComponentSet;
     }
 
     /**
-     * Set 组件明细
-     * @param ComponentSet 组件明细
+     * Set <p>组件明细</p>
+     * @param ComponentSet <p>组件明细</p>
      */
     public void setComponentSet(CostComponentSet [] ComponentSet) {
         this.ComponentSet = ComponentSet;
     }
 
     /**
-     * Get 子产品名称代码 
-     * @return ProductCode 子产品名称代码
+     * Get <p>子产品名称代码</p> 
+     * @return ProductCode <p>子产品名称代码</p>
      */
     public String getProductCode() {
         return this.ProductCode;
     }
 
     /**
-     * Set 子产品名称代码
-     * @param ProductCode 子产品名称代码
+     * Set <p>子产品名称代码</p>
+     * @param ProductCode <p>子产品名称代码</p>
      */
     public void setProductCode(String ProductCode) {
         this.ProductCode = ProductCode;
     }
 
     /**
-     * Get 标签信息	 
-     * @return Tags 标签信息	
+     * Get <p>标签信息</p> 
+     * @return Tags <p>标签信息</p>
      */
     public BillTagInfo [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签信息	
-     * @param Tags 标签信息	
+     * Set <p>标签信息</p>
+     * @param Tags <p>标签信息</p>
      */
     public void setTags(BillTagInfo [] Tags) {
         this.Tags = Tags;
+    }
+
+    /**
+     * Get <p>操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）</p> 
+     * @return OperateUin <p>操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）</p>
+     */
+    public String getOperateUin() {
+        return this.OperateUin;
+    }
+
+    /**
+     * Set <p>操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）</p>
+     * @param OperateUin <p>操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）</p>
+     */
+    public void setOperateUin(String OperateUin) {
+        this.OperateUin = OperateUin;
+    }
+
+    /**
+     * Get <p>使用者UIN：实际使用资源的账号 ID</p> 
+     * @return OwnerUin <p>使用者UIN：实际使用资源的账号 ID</p>
+     */
+    public String getOwnerUin() {
+        return this.OwnerUin;
+    }
+
+    /**
+     * Set <p>使用者UIN：实际使用资源的账号 ID</p>
+     * @param OwnerUin <p>使用者UIN：实际使用资源的账号 ID</p>
+     */
+    public void setOwnerUin(String OwnerUin) {
+        this.OwnerUin = OwnerUin;
+    }
+
+    /**
+     * Get <p>扣费时间：结算扣费时间</p> 
+     * @return PayTime <p>扣费时间：结算扣费时间</p>
+     */
+    public String getPayTime() {
+        return this.PayTime;
+    }
+
+    /**
+     * Set <p>扣费时间：结算扣费时间</p>
+     * @param PayTime <p>扣费时间：结算扣费时间</p>
+     */
+    public void setPayTime(String PayTime) {
+        this.PayTime = PayTime;
     }
 
     public CostDetail() {
@@ -479,6 +548,15 @@ public class CostDetail extends AbstractModel {
                 this.Tags[i] = new BillTagInfo(source.Tags[i]);
             }
         }
+        if (source.OperateUin != null) {
+            this.OperateUin = new String(source.OperateUin);
+        }
+        if (source.OwnerUin != null) {
+            this.OwnerUin = new String(source.OwnerUin);
+        }
+        if (source.PayTime != null) {
+            this.PayTime = new String(source.PayTime);
+        }
     }
 
 
@@ -503,6 +581,9 @@ public class CostDetail extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ComponentSet.", this.ComponentSet);
         this.setParamSimple(map, prefix + "ProductCode", this.ProductCode);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "OperateUin", this.OperateUin);
+        this.setParamSimple(map, prefix + "OwnerUin", this.OwnerUin);
+        this.setParamSimple(map, prefix + "PayTime", this.PayTime);
 
     }
 }

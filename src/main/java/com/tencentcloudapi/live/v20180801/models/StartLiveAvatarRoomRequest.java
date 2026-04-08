@@ -24,95 +24,118 @@ import java.util.HashMap;
 public class StartLiveAvatarRoomRequest extends AbstractModel {
 
     /**
-    * 数字人直播间 ID。
+    * <p>数字人直播间 ID。</p>
     */
     @SerializedName("RoomId")
     @Expose
     private String RoomId;
 
     /**
-    * 目标地址描述。
+    * <p>目标地址描述。</p>
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * 推流目标地址。
+    * <p>推流目标地址。</p>
     */
     @SerializedName("ToUrl")
     @Expose
     private String ToUrl;
 
     /**
-    * 操作者。
+    * <p>操作者。</p>
     */
     @SerializedName("Operator")
     @Expose
     private String Operator;
 
     /**
-     * Get 数字人直播间 ID。 
-     * @return RoomId 数字人直播间 ID。
+    * <p>房间类型。AIGC：AIGC形象房间；PRESET：预设形象房间</p><p>枚举值：</p><ul><li>AIGC： AIGC形象房间</li><li>PRESET： 预设形象房间</li></ul>
+    */
+    @SerializedName("RoomType")
+    @Expose
+    private String RoomType;
+
+    /**
+     * Get <p>数字人直播间 ID。</p> 
+     * @return RoomId <p>数字人直播间 ID。</p>
      */
     public String getRoomId() {
         return this.RoomId;
     }
 
     /**
-     * Set 数字人直播间 ID。
-     * @param RoomId 数字人直播间 ID。
+     * Set <p>数字人直播间 ID。</p>
+     * @param RoomId <p>数字人直播间 ID。</p>
      */
     public void setRoomId(String RoomId) {
         this.RoomId = RoomId;
     }
 
     /**
-     * Get 目标地址描述。 
-     * @return Comment 目标地址描述。
+     * Get <p>目标地址描述。</p> 
+     * @return Comment <p>目标地址描述。</p>
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 目标地址描述。
-     * @param Comment 目标地址描述。
+     * Set <p>目标地址描述。</p>
+     * @param Comment <p>目标地址描述。</p>
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get 推流目标地址。 
-     * @return ToUrl 推流目标地址。
+     * Get <p>推流目标地址。</p> 
+     * @return ToUrl <p>推流目标地址。</p>
      */
     public String getToUrl() {
         return this.ToUrl;
     }
 
     /**
-     * Set 推流目标地址。
-     * @param ToUrl 推流目标地址。
+     * Set <p>推流目标地址。</p>
+     * @param ToUrl <p>推流目标地址。</p>
      */
     public void setToUrl(String ToUrl) {
         this.ToUrl = ToUrl;
     }
 
     /**
-     * Get 操作者。 
-     * @return Operator 操作者。
+     * Get <p>操作者。</p> 
+     * @return Operator <p>操作者。</p>
      */
     public String getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 操作者。
-     * @param Operator 操作者。
+     * Set <p>操作者。</p>
+     * @param Operator <p>操作者。</p>
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;
+    }
+
+    /**
+     * Get <p>房间类型。AIGC：AIGC形象房间；PRESET：预设形象房间</p><p>枚举值：</p><ul><li>AIGC： AIGC形象房间</li><li>PRESET： 预设形象房间</li></ul> 
+     * @return RoomType <p>房间类型。AIGC：AIGC形象房间；PRESET：预设形象房间</p><p>枚举值：</p><ul><li>AIGC： AIGC形象房间</li><li>PRESET： 预设形象房间</li></ul>
+     */
+    public String getRoomType() {
+        return this.RoomType;
+    }
+
+    /**
+     * Set <p>房间类型。AIGC：AIGC形象房间；PRESET：预设形象房间</p><p>枚举值：</p><ul><li>AIGC： AIGC形象房间</li><li>PRESET： 预设形象房间</li></ul>
+     * @param RoomType <p>房间类型。AIGC：AIGC形象房间；PRESET：预设形象房间</p><p>枚举值：</p><ul><li>AIGC： AIGC形象房间</li><li>PRESET： 预设形象房间</li></ul>
+     */
+    public void setRoomType(String RoomType) {
+        this.RoomType = RoomType;
     }
 
     public StartLiveAvatarRoomRequest() {
@@ -135,6 +158,9 @@ public class StartLiveAvatarRoomRequest extends AbstractModel {
         if (source.Operator != null) {
             this.Operator = new String(source.Operator);
         }
+        if (source.RoomType != null) {
+            this.RoomType = new String(source.RoomType);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class StartLiveAvatarRoomRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamSimple(map, prefix + "ToUrl", this.ToUrl);
         this.setParamSimple(map, prefix + "Operator", this.Operator);
+        this.setParamSimple(map, prefix + "RoomType", this.RoomType);
 
     }
 }

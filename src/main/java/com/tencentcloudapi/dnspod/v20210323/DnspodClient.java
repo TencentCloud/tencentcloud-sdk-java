@@ -962,6 +962,17 @@ public class DnspodClient extends AbstractClient{
     }
 
     /**
+     *批量修改记录
+     * @param req ModifyRecordBatchV3Request
+     * @return ModifyRecordBatchV3Response
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRecordBatchV3Response ModifyRecordBatchV3(ModifyRecordBatchV3Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyRecordBatchV3", ModifyRecordBatchV3Response.class);
+    }
+
+    /**
      *修改记录可选字段
      * @param req ModifyRecordFieldsRequest
      * @return ModifyRecordFieldsResponse

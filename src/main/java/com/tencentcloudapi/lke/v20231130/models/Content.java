@@ -24,25 +24,14 @@ import java.util.HashMap;
 public class Content extends AbstractModel {
 
     /**
-    * 消息内容类型
-text：文本
-image：图片
-file：文件
-option_cards：选项卡
-custom_params：用户自定义业务参数
-sandbox：云桌面
-custom_variables：自定义输入参数
-web_search: 网页搜索内容
-file_collection：文件收集信息
-widget：widget信息
-widget_action：用户端widget动作信息
+    * <p>消息内容类型<br>text：文本<br>image：图片<br>file：文件<br>option_cards：选项卡<br>custom_params：用户自定义业务参数<br>sandbox：云桌面<br>custom_variables：自定义输入参数<br>web_search: 网页搜索内容<br>file_collection：文件收集信息<br>widget：widget信息<br>widget_action：用户端widget动作信息</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 文本内容
+    * <p>文本内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Text")
@@ -50,7 +39,7 @@ widget_action：用户端widget动作信息
     private String Text;
 
     /**
-    * 引用信息
+    * <p>引用信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QuoteInfos")
@@ -58,7 +47,7 @@ widget_action：用户端widget动作信息
     private QuoteInfo [] QuoteInfos;
 
     /**
-    * 参考文献信息
+    * <p>参考文献信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("References")
@@ -66,7 +55,7 @@ widget_action：用户端widget动作信息
     private ContentReference [] References;
 
     /**
-    * 图片信息
+    * <p>图片信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Image")
@@ -74,7 +63,7 @@ widget_action：用户端widget动作信息
     private ImageInfoContent Image;
 
     /**
-    * 文件信息
+    * <p>文件信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("File")
@@ -82,7 +71,7 @@ widget_action：用户端widget动作信息
     private FileInfoContent File;
 
     /**
-    * 选项卡信息
+    * <p>选项卡信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OptionCards")
@@ -90,7 +79,7 @@ widget_action：用户端widget动作信息
     private String [] OptionCards;
 
     /**
-    * 用户自定义业务参数信息
+    * <p>用户自定义业务参数信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CustomParams")
@@ -98,7 +87,7 @@ widget_action：用户端widget动作信息
     private String [] CustomParams;
 
     /**
-    * 自定义变量
+    * <p>自定义变量</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CustomVariables")
@@ -106,7 +95,7 @@ widget_action：用户端widget动作信息
     private String [] CustomVariables;
 
     /**
-    * 沙盒信息
+    * <p>沙盒信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Sandbox")
@@ -114,7 +103,7 @@ widget_action：用户端widget动作信息
     private SandboxContent Sandbox;
 
     /**
-    * 网页搜索内容
+    * <p>网页搜索内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WebSearch")
@@ -122,7 +111,7 @@ widget_action：用户端widget动作信息
     private WebSearchContent WebSearch;
 
     /**
-    * 文件收集信息
+    * <p>文件收集信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileCollection")
@@ -130,7 +119,7 @@ widget_action：用户端widget动作信息
     private FileCollection FileCollection;
 
     /**
-    * Widget信息
+    * <p>Widget信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Widget")
@@ -138,7 +127,7 @@ widget_action：用户端widget动作信息
     private Widget Widget;
 
     /**
-    * Widget动作信息
+    * <p>Widget动作信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WidgetAction")
@@ -146,69 +135,48 @@ widget_action：用户端widget动作信息
     private WidgetAction WidgetAction;
 
     /**
-     * Get 消息内容类型
-text：文本
-image：图片
-file：文件
-option_cards：选项卡
-custom_params：用户自定义业务参数
-sandbox：云桌面
-custom_variables：自定义输入参数
-web_search: 网页搜索内容
-file_collection：文件收集信息
-widget：widget信息
-widget_action：用户端widget动作信息 
-     * @return Type 消息内容类型
-text：文本
-image：图片
-file：文件
-option_cards：选项卡
-custom_params：用户自定义业务参数
-sandbox：云桌面
-custom_variables：自定义输入参数
-web_search: 网页搜索内容
-file_collection：文件收集信息
-widget：widget信息
-widget_action：用户端widget动作信息
+    * <p>任务列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tasks")
+    @Expose
+    private AgentTask [] Tasks;
+
+    /**
+    * <p>问卷信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Questionnaire")
+    @Expose
+    private Questionnaire Questionnaire;
+
+    /**
+    * <p>选项卡模式</p>
+    */
+    @SerializedName("OptionMode")
+    @Expose
+    private Long OptionMode;
+
+    /**
+     * Get <p>消息内容类型<br>text：文本<br>image：图片<br>file：文件<br>option_cards：选项卡<br>custom_params：用户自定义业务参数<br>sandbox：云桌面<br>custom_variables：自定义输入参数<br>web_search: 网页搜索内容<br>file_collection：文件收集信息<br>widget：widget信息<br>widget_action：用户端widget动作信息</p> 
+     * @return Type <p>消息内容类型<br>text：文本<br>image：图片<br>file：文件<br>option_cards：选项卡<br>custom_params：用户自定义业务参数<br>sandbox：云桌面<br>custom_variables：自定义输入参数<br>web_search: 网页搜索内容<br>file_collection：文件收集信息<br>widget：widget信息<br>widget_action：用户端widget动作信息</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 消息内容类型
-text：文本
-image：图片
-file：文件
-option_cards：选项卡
-custom_params：用户自定义业务参数
-sandbox：云桌面
-custom_variables：自定义输入参数
-web_search: 网页搜索内容
-file_collection：文件收集信息
-widget：widget信息
-widget_action：用户端widget动作信息
-     * @param Type 消息内容类型
-text：文本
-image：图片
-file：文件
-option_cards：选项卡
-custom_params：用户自定义业务参数
-sandbox：云桌面
-custom_variables：自定义输入参数
-web_search: 网页搜索内容
-file_collection：文件收集信息
-widget：widget信息
-widget_action：用户端widget动作信息
+     * Set <p>消息内容类型<br>text：文本<br>image：图片<br>file：文件<br>option_cards：选项卡<br>custom_params：用户自定义业务参数<br>sandbox：云桌面<br>custom_variables：自定义输入参数<br>web_search: 网页搜索内容<br>file_collection：文件收集信息<br>widget：widget信息<br>widget_action：用户端widget动作信息</p>
+     * @param Type <p>消息内容类型<br>text：文本<br>image：图片<br>file：文件<br>option_cards：选项卡<br>custom_params：用户自定义业务参数<br>sandbox：云桌面<br>custom_variables：自定义输入参数<br>web_search: 网页搜索内容<br>file_collection：文件收集信息<br>widget：widget信息<br>widget_action：用户端widget动作信息</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 文本内容
+     * Get <p>文本内容</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Text 文本内容
+     * @return Text <p>文本内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getText() {
@@ -216,9 +184,9 @@ widget_action：用户端widget动作信息
     }
 
     /**
-     * Set 文本内容
+     * Set <p>文本内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Text 文本内容
+     * @param Text <p>文本内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setText(String Text) {
@@ -226,9 +194,9 @@ widget_action：用户端widget动作信息
     }
 
     /**
-     * Get 引用信息
+     * Get <p>引用信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return QuoteInfos 引用信息
+     * @return QuoteInfos <p>引用信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public QuoteInfo [] getQuoteInfos() {
@@ -236,9 +204,9 @@ widget_action：用户端widget动作信息
     }
 
     /**
-     * Set 引用信息
+     * Set <p>引用信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param QuoteInfos 引用信息
+     * @param QuoteInfos <p>引用信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQuoteInfos(QuoteInfo [] QuoteInfos) {
@@ -246,9 +214,9 @@ widget_action：用户端widget动作信息
     }
 
     /**
-     * Get 参考文献信息
+     * Get <p>参考文献信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return References 参考文献信息
+     * @return References <p>参考文献信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ContentReference [] getReferences() {
@@ -256,9 +224,9 @@ widget_action：用户端widget动作信息
     }
 
     /**
-     * Set 参考文献信息
+     * Set <p>参考文献信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param References 参考文献信息
+     * @param References <p>参考文献信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReferences(ContentReference [] References) {
@@ -266,9 +234,9 @@ widget_action：用户端widget动作信息
     }
 
     /**
-     * Get 图片信息
+     * Get <p>图片信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Image 图片信息
+     * @return Image <p>图片信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ImageInfoContent getImage() {
@@ -276,9 +244,9 @@ widget_action：用户端widget动作信息
     }
 
     /**
-     * Set 图片信息
+     * Set <p>图片信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Image 图片信息
+     * @param Image <p>图片信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImage(ImageInfoContent Image) {
@@ -286,9 +254,9 @@ widget_action：用户端widget动作信息
     }
 
     /**
-     * Get 文件信息
+     * Get <p>文件信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return File 文件信息
+     * @return File <p>文件信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public FileInfoContent getFile() {
@@ -296,9 +264,9 @@ widget_action：用户端widget动作信息
     }
 
     /**
-     * Set 文件信息
+     * Set <p>文件信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param File 文件信息
+     * @param File <p>文件信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFile(FileInfoContent File) {
@@ -306,9 +274,9 @@ widget_action：用户端widget动作信息
     }
 
     /**
-     * Get 选项卡信息
+     * Get <p>选项卡信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OptionCards 选项卡信息
+     * @return OptionCards <p>选项卡信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getOptionCards() {
@@ -316,9 +284,9 @@ widget_action：用户端widget动作信息
     }
 
     /**
-     * Set 选项卡信息
+     * Set <p>选项卡信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OptionCards 选项卡信息
+     * @param OptionCards <p>选项卡信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOptionCards(String [] OptionCards) {
@@ -326,9 +294,9 @@ widget_action：用户端widget动作信息
     }
 
     /**
-     * Get 用户自定义业务参数信息
+     * Get <p>用户自定义业务参数信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CustomParams 用户自定义业务参数信息
+     * @return CustomParams <p>用户自定义业务参数信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getCustomParams() {
@@ -336,9 +304,9 @@ widget_action：用户端widget动作信息
     }
 
     /**
-     * Set 用户自定义业务参数信息
+     * Set <p>用户自定义业务参数信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CustomParams 用户自定义业务参数信息
+     * @param CustomParams <p>用户自定义业务参数信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCustomParams(String [] CustomParams) {
@@ -346,9 +314,9 @@ widget_action：用户端widget动作信息
     }
 
     /**
-     * Get 自定义变量
+     * Get <p>自定义变量</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CustomVariables 自定义变量
+     * @return CustomVariables <p>自定义变量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getCustomVariables() {
@@ -356,9 +324,9 @@ widget_action：用户端widget动作信息
     }
 
     /**
-     * Set 自定义变量
+     * Set <p>自定义变量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CustomVariables 自定义变量
+     * @param CustomVariables <p>自定义变量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCustomVariables(String [] CustomVariables) {
@@ -366,9 +334,9 @@ widget_action：用户端widget动作信息
     }
 
     /**
-     * Get 沙盒信息
+     * Get <p>沙盒信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Sandbox 沙盒信息
+     * @return Sandbox <p>沙盒信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SandboxContent getSandbox() {
@@ -376,9 +344,9 @@ widget_action：用户端widget动作信息
     }
 
     /**
-     * Set 沙盒信息
+     * Set <p>沙盒信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Sandbox 沙盒信息
+     * @param Sandbox <p>沙盒信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSandbox(SandboxContent Sandbox) {
@@ -386,9 +354,9 @@ widget_action：用户端widget动作信息
     }
 
     /**
-     * Get 网页搜索内容
+     * Get <p>网页搜索内容</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WebSearch 网页搜索内容
+     * @return WebSearch <p>网页搜索内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public WebSearchContent getWebSearch() {
@@ -396,9 +364,9 @@ widget_action：用户端widget动作信息
     }
 
     /**
-     * Set 网页搜索内容
+     * Set <p>网页搜索内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WebSearch 网页搜索内容
+     * @param WebSearch <p>网页搜索内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWebSearch(WebSearchContent WebSearch) {
@@ -406,9 +374,9 @@ widget_action：用户端widget动作信息
     }
 
     /**
-     * Get 文件收集信息
+     * Get <p>文件收集信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FileCollection 文件收集信息
+     * @return FileCollection <p>文件收集信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public FileCollection getFileCollection() {
@@ -416,9 +384,9 @@ widget_action：用户端widget动作信息
     }
 
     /**
-     * Set 文件收集信息
+     * Set <p>文件收集信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FileCollection 文件收集信息
+     * @param FileCollection <p>文件收集信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileCollection(FileCollection FileCollection) {
@@ -426,9 +394,9 @@ widget_action：用户端widget动作信息
     }
 
     /**
-     * Get Widget信息
+     * Get <p>Widget信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Widget Widget信息
+     * @return Widget <p>Widget信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Widget getWidget() {
@@ -436,9 +404,9 @@ widget_action：用户端widget动作信息
     }
 
     /**
-     * Set Widget信息
+     * Set <p>Widget信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Widget Widget信息
+     * @param Widget <p>Widget信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWidget(Widget Widget) {
@@ -446,9 +414,9 @@ widget_action：用户端widget动作信息
     }
 
     /**
-     * Get Widget动作信息
+     * Get <p>Widget动作信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WidgetAction Widget动作信息
+     * @return WidgetAction <p>Widget动作信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public WidgetAction getWidgetAction() {
@@ -456,13 +424,69 @@ widget_action：用户端widget动作信息
     }
 
     /**
-     * Set Widget动作信息
+     * Set <p>Widget动作信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WidgetAction Widget动作信息
+     * @param WidgetAction <p>Widget动作信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWidgetAction(WidgetAction WidgetAction) {
         this.WidgetAction = WidgetAction;
+    }
+
+    /**
+     * Get <p>任务列表</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tasks <p>任务列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AgentTask [] getTasks() {
+        return this.Tasks;
+    }
+
+    /**
+     * Set <p>任务列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tasks <p>任务列表</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTasks(AgentTask [] Tasks) {
+        this.Tasks = Tasks;
+    }
+
+    /**
+     * Get <p>问卷信息</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Questionnaire <p>问卷信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Questionnaire getQuestionnaire() {
+        return this.Questionnaire;
+    }
+
+    /**
+     * Set <p>问卷信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Questionnaire <p>问卷信息</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setQuestionnaire(Questionnaire Questionnaire) {
+        this.Questionnaire = Questionnaire;
+    }
+
+    /**
+     * Get <p>选项卡模式</p> 
+     * @return OptionMode <p>选项卡模式</p>
+     */
+    public Long getOptionMode() {
+        return this.OptionMode;
+    }
+
+    /**
+     * Set <p>选项卡模式</p>
+     * @param OptionMode <p>选项卡模式</p>
+     */
+    public void setOptionMode(Long OptionMode) {
+        this.OptionMode = OptionMode;
     }
 
     public Content() {
@@ -530,6 +554,18 @@ widget_action：用户端widget动作信息
         if (source.WidgetAction != null) {
             this.WidgetAction = new WidgetAction(source.WidgetAction);
         }
+        if (source.Tasks != null) {
+            this.Tasks = new AgentTask[source.Tasks.length];
+            for (int i = 0; i < source.Tasks.length; i++) {
+                this.Tasks[i] = new AgentTask(source.Tasks[i]);
+            }
+        }
+        if (source.Questionnaire != null) {
+            this.Questionnaire = new Questionnaire(source.Questionnaire);
+        }
+        if (source.OptionMode != null) {
+            this.OptionMode = new Long(source.OptionMode);
+        }
     }
 
 
@@ -551,6 +587,9 @@ widget_action：用户端widget动作信息
         this.setParamObj(map, prefix + "FileCollection.", this.FileCollection);
         this.setParamObj(map, prefix + "Widget.", this.Widget);
         this.setParamObj(map, prefix + "WidgetAction.", this.WidgetAction);
+        this.setParamArrayObj(map, prefix + "Tasks.", this.Tasks);
+        this.setParamObj(map, prefix + "Questionnaire.", this.Questionnaire);
+        this.setParamSimple(map, prefix + "OptionMode", this.OptionMode);
 
     }
 }

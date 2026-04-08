@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.live.v20180801.models;
+package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,28 +21,28 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLiveAvatarScriptsResponse extends AbstractModel {
+public class CreateTrafficMirrorFilterRulesResponse extends AbstractModel {
 
     /**
-    * <p>数字人直播间话术信息列表。</p>
+    * 流量镜像实例唯一ID。
     */
-    @SerializedName("InfoList")
+    @SerializedName("TrafficMirrorId")
     @Expose
-    private AvatarScriptInfo [] InfoList;
+    private String TrafficMirrorId;
 
     /**
-    * <p>限制可创建的数字人直播间话术总条数。</p>
+    * 流量镜像入站过滤规则。
     */
-    @SerializedName("LimitCreateNum")
+    @SerializedName("IngressFilterRules")
     @Expose
-    private Long LimitCreateNum;
+    private TrafficMirrorFilter [] IngressFilterRules;
 
     /**
-    * <p>当前数字人直播间话术总条数。</p>
+    * 流量镜像出站过滤规则。
     */
-    @SerializedName("TotalNum")
+    @SerializedName("EgressFilterRules")
     @Expose
-    private Long TotalNum;
+    private TrafficMirrorFilter [] EgressFilterRules;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -52,51 +52,51 @@ public class DescribeLiveAvatarScriptsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>数字人直播间话术信息列表。</p> 
-     * @return InfoList <p>数字人直播间话术信息列表。</p>
+     * Get 流量镜像实例唯一ID。 
+     * @return TrafficMirrorId 流量镜像实例唯一ID。
      */
-    public AvatarScriptInfo [] getInfoList() {
-        return this.InfoList;
+    public String getTrafficMirrorId() {
+        return this.TrafficMirrorId;
     }
 
     /**
-     * Set <p>数字人直播间话术信息列表。</p>
-     * @param InfoList <p>数字人直播间话术信息列表。</p>
+     * Set 流量镜像实例唯一ID。
+     * @param TrafficMirrorId 流量镜像实例唯一ID。
      */
-    public void setInfoList(AvatarScriptInfo [] InfoList) {
-        this.InfoList = InfoList;
+    public void setTrafficMirrorId(String TrafficMirrorId) {
+        this.TrafficMirrorId = TrafficMirrorId;
     }
 
     /**
-     * Get <p>限制可创建的数字人直播间话术总条数。</p> 
-     * @return LimitCreateNum <p>限制可创建的数字人直播间话术总条数。</p>
+     * Get 流量镜像入站过滤规则。 
+     * @return IngressFilterRules 流量镜像入站过滤规则。
      */
-    public Long getLimitCreateNum() {
-        return this.LimitCreateNum;
+    public TrafficMirrorFilter [] getIngressFilterRules() {
+        return this.IngressFilterRules;
     }
 
     /**
-     * Set <p>限制可创建的数字人直播间话术总条数。</p>
-     * @param LimitCreateNum <p>限制可创建的数字人直播间话术总条数。</p>
+     * Set 流量镜像入站过滤规则。
+     * @param IngressFilterRules 流量镜像入站过滤规则。
      */
-    public void setLimitCreateNum(Long LimitCreateNum) {
-        this.LimitCreateNum = LimitCreateNum;
+    public void setIngressFilterRules(TrafficMirrorFilter [] IngressFilterRules) {
+        this.IngressFilterRules = IngressFilterRules;
     }
 
     /**
-     * Get <p>当前数字人直播间话术总条数。</p> 
-     * @return TotalNum <p>当前数字人直播间话术总条数。</p>
+     * Get 流量镜像出站过滤规则。 
+     * @return EgressFilterRules 流量镜像出站过滤规则。
      */
-    public Long getTotalNum() {
-        return this.TotalNum;
+    public TrafficMirrorFilter [] getEgressFilterRules() {
+        return this.EgressFilterRules;
     }
 
     /**
-     * Set <p>当前数字人直播间话术总条数。</p>
-     * @param TotalNum <p>当前数字人直播间话术总条数。</p>
+     * Set 流量镜像出站过滤规则。
+     * @param EgressFilterRules 流量镜像出站过滤规则。
      */
-    public void setTotalNum(Long TotalNum) {
-        this.TotalNum = TotalNum;
+    public void setEgressFilterRules(TrafficMirrorFilter [] EgressFilterRules) {
+        this.EgressFilterRules = EgressFilterRules;
     }
 
     /**
@@ -115,25 +115,28 @@ public class DescribeLiveAvatarScriptsResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeLiveAvatarScriptsResponse() {
+    public CreateTrafficMirrorFilterRulesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeLiveAvatarScriptsResponse(DescribeLiveAvatarScriptsResponse source) {
-        if (source.InfoList != null) {
-            this.InfoList = new AvatarScriptInfo[source.InfoList.length];
-            for (int i = 0; i < source.InfoList.length; i++) {
-                this.InfoList[i] = new AvatarScriptInfo(source.InfoList[i]);
+    public CreateTrafficMirrorFilterRulesResponse(CreateTrafficMirrorFilterRulesResponse source) {
+        if (source.TrafficMirrorId != null) {
+            this.TrafficMirrorId = new String(source.TrafficMirrorId);
+        }
+        if (source.IngressFilterRules != null) {
+            this.IngressFilterRules = new TrafficMirrorFilter[source.IngressFilterRules.length];
+            for (int i = 0; i < source.IngressFilterRules.length; i++) {
+                this.IngressFilterRules[i] = new TrafficMirrorFilter(source.IngressFilterRules[i]);
             }
         }
-        if (source.LimitCreateNum != null) {
-            this.LimitCreateNum = new Long(source.LimitCreateNum);
-        }
-        if (source.TotalNum != null) {
-            this.TotalNum = new Long(source.TotalNum);
+        if (source.EgressFilterRules != null) {
+            this.EgressFilterRules = new TrafficMirrorFilter[source.EgressFilterRules.length];
+            for (int i = 0; i < source.EgressFilterRules.length; i++) {
+                this.EgressFilterRules[i] = new TrafficMirrorFilter(source.EgressFilterRules[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -145,9 +148,9 @@ public class DescribeLiveAvatarScriptsResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "InfoList.", this.InfoList);
-        this.setParamSimple(map, prefix + "LimitCreateNum", this.LimitCreateNum);
-        this.setParamSimple(map, prefix + "TotalNum", this.TotalNum);
+        this.setParamSimple(map, prefix + "TrafficMirrorId", this.TrafficMirrorId);
+        this.setParamArrayObj(map, prefix + "IngressFilterRules.", this.IngressFilterRules);
+        this.setParamArrayObj(map, prefix + "EgressFilterRules.", this.EgressFilterRules);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
