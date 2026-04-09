@@ -31,7 +31,7 @@ public class SubmitTextToImageJobRequest extends AbstractModel {
     private String Prompt;
 
     /**
-    * <p>参考图，最多三张图。  - Base64 或 Url 。 - 单张图片限制：图片base64后大小小于6M ；格式支持 jpg、jpeg、png、bmp、tiff、webp。</p>
+    * <p>参考图，最多三张图。  - Base64 或 Url 。</p><ul><li>单张图片限制：输入图分辨率单边最小50，最大5000；图片base64后大小小于6M ；格式支持 jpg、jpeg、png、bmp、tiff、webp。</li></ul>
     */
     @SerializedName("Images")
     @Expose
@@ -45,7 +45,7 @@ public class SubmitTextToImageJobRequest extends AbstractModel {
     private String Resolution;
 
     /**
-    * <p>随机种子，默认随机。<br>不传：随机种子生成。<br>正数：固定种子生成。<br>扩写开启时固定种子不生效，将保持随机。</p>
+    * <p>随机种子，默认随机。<br>不传：随机种子生成。<br>正数：固定种子生成。<br>扩写开启时固定种子不生效，将保持随机。<br>取值范围：1 - 4294967295</p>
     */
     @SerializedName("Seed")
     @Expose
@@ -89,16 +89,16 @@ public class SubmitTextToImageJobRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>参考图，最多三张图。  - Base64 或 Url 。 - 单张图片限制：图片base64后大小小于6M ；格式支持 jpg、jpeg、png、bmp、tiff、webp。</p> 
-     * @return Images <p>参考图，最多三张图。  - Base64 或 Url 。 - 单张图片限制：图片base64后大小小于6M ；格式支持 jpg、jpeg、png、bmp、tiff、webp。</p>
+     * Get <p>参考图，最多三张图。  - Base64 或 Url 。</p><ul><li>单张图片限制：输入图分辨率单边最小50，最大5000；图片base64后大小小于6M ；格式支持 jpg、jpeg、png、bmp、tiff、webp。</li></ul> 
+     * @return Images <p>参考图，最多三张图。  - Base64 或 Url 。</p><ul><li>单张图片限制：输入图分辨率单边最小50，最大5000；图片base64后大小小于6M ；格式支持 jpg、jpeg、png、bmp、tiff、webp。</li></ul>
      */
     public String [] getImages() {
         return this.Images;
     }
 
     /**
-     * Set <p>参考图，最多三张图。  - Base64 或 Url 。 - 单张图片限制：图片base64后大小小于6M ；格式支持 jpg、jpeg、png、bmp、tiff、webp。</p>
-     * @param Images <p>参考图，最多三张图。  - Base64 或 Url 。 - 单张图片限制：图片base64后大小小于6M ；格式支持 jpg、jpeg、png、bmp、tiff、webp。</p>
+     * Set <p>参考图，最多三张图。  - Base64 或 Url 。</p><ul><li>单张图片限制：输入图分辨率单边最小50，最大5000；图片base64后大小小于6M ；格式支持 jpg、jpeg、png、bmp、tiff、webp。</li></ul>
+     * @param Images <p>参考图，最多三张图。  - Base64 或 Url 。</p><ul><li>单张图片限制：输入图分辨率单边最小50，最大5000；图片base64后大小小于6M ；格式支持 jpg、jpeg、png、bmp、tiff、webp。</li></ul>
      */
     public void setImages(String [] Images) {
         this.Images = Images;
@@ -121,16 +121,16 @@ public class SubmitTextToImageJobRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>随机种子，默认随机。<br>不传：随机种子生成。<br>正数：固定种子生成。<br>扩写开启时固定种子不生效，将保持随机。</p> 
-     * @return Seed <p>随机种子，默认随机。<br>不传：随机种子生成。<br>正数：固定种子生成。<br>扩写开启时固定种子不生效，将保持随机。</p>
+     * Get <p>随机种子，默认随机。<br>不传：随机种子生成。<br>正数：固定种子生成。<br>扩写开启时固定种子不生效，将保持随机。<br>取值范围：1 - 4294967295</p> 
+     * @return Seed <p>随机种子，默认随机。<br>不传：随机种子生成。<br>正数：固定种子生成。<br>扩写开启时固定种子不生效，将保持随机。<br>取值范围：1 - 4294967295</p>
      */
     public Long getSeed() {
         return this.Seed;
     }
 
     /**
-     * Set <p>随机种子，默认随机。<br>不传：随机种子生成。<br>正数：固定种子生成。<br>扩写开启时固定种子不生效，将保持随机。</p>
-     * @param Seed <p>随机种子，默认随机。<br>不传：随机种子生成。<br>正数：固定种子生成。<br>扩写开启时固定种子不生效，将保持随机。</p>
+     * Set <p>随机种子，默认随机。<br>不传：随机种子生成。<br>正数：固定种子生成。<br>扩写开启时固定种子不生效，将保持随机。<br>取值范围：1 - 4294967295</p>
+     * @param Seed <p>随机种子，默认随机。<br>不传：随机种子生成。<br>正数：固定种子生成。<br>扩写开启时固定种子不生效，将保持随机。<br>取值范围：1 - 4294967295</p>
      */
     public void setSeed(Long Seed) {
         this.Seed = Seed;

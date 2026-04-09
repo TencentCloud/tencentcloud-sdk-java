@@ -24,118 +24,141 @@ import java.util.HashMap;
 public class ModifyApmAssociationRequest extends AbstractModel {
 
     /**
-    * 关联的产品名，当前只支持Prometheus、CKafka
+    * <p>关联的产品名，当前只支持Prometheus、CKafka</p>
     */
     @SerializedName("ProductName")
     @Expose
     private String ProductName;
 
     /**
-    * 关联关系的状态：// 关联关系状态：1（启用）、2（不启用）
+    * <p>关联关系的状态：// 关联关系状态：1（启用）、2（不启用）</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 业务系统ID
+    * <p>业务系统ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 关联的产品实例ID
+    * <p>关联的产品实例ID</p>
     */
     @SerializedName("PeerId")
     @Expose
     private String PeerId;
 
     /**
-    * CKafka消息主题
+    * <p>CKafka消息主题</p>
     */
     @SerializedName("Topic")
     @Expose
     private String Topic;
 
     /**
-     * Get 关联的产品名，当前只支持Prometheus、CKafka 
-     * @return ProductName 关联的产品名，当前只支持Prometheus、CKafka
+    * <p>Ckafka消息主题</p>
+    */
+    @SerializedName("MetricTopic")
+    @Expose
+    private String MetricTopic;
+
+    /**
+     * Get <p>关联的产品名，当前只支持Prometheus、CKafka</p> 
+     * @return ProductName <p>关联的产品名，当前只支持Prometheus、CKafka</p>
      */
     public String getProductName() {
         return this.ProductName;
     }
 
     /**
-     * Set 关联的产品名，当前只支持Prometheus、CKafka
-     * @param ProductName 关联的产品名，当前只支持Prometheus、CKafka
+     * Set <p>关联的产品名，当前只支持Prometheus、CKafka</p>
+     * @param ProductName <p>关联的产品名，当前只支持Prometheus、CKafka</p>
      */
     public void setProductName(String ProductName) {
         this.ProductName = ProductName;
     }
 
     /**
-     * Get 关联关系的状态：// 关联关系状态：1（启用）、2（不启用） 
-     * @return Status 关联关系的状态：// 关联关系状态：1（启用）、2（不启用）
+     * Get <p>关联关系的状态：// 关联关系状态：1（启用）、2（不启用）</p> 
+     * @return Status <p>关联关系的状态：// 关联关系状态：1（启用）、2（不启用）</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 关联关系的状态：// 关联关系状态：1（启用）、2（不启用）
-     * @param Status 关联关系的状态：// 关联关系状态：1（启用）、2（不启用）
+     * Set <p>关联关系的状态：// 关联关系状态：1（启用）、2（不启用）</p>
+     * @param Status <p>关联关系的状态：// 关联关系状态：1（启用）、2（不启用）</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 业务系统ID 
-     * @return InstanceId 业务系统ID
+     * Get <p>业务系统ID</p> 
+     * @return InstanceId <p>业务系统ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 业务系统ID
-     * @param InstanceId 业务系统ID
+     * Set <p>业务系统ID</p>
+     * @param InstanceId <p>业务系统ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 关联的产品实例ID 
-     * @return PeerId 关联的产品实例ID
+     * Get <p>关联的产品实例ID</p> 
+     * @return PeerId <p>关联的产品实例ID</p>
      */
     public String getPeerId() {
         return this.PeerId;
     }
 
     /**
-     * Set 关联的产品实例ID
-     * @param PeerId 关联的产品实例ID
+     * Set <p>关联的产品实例ID</p>
+     * @param PeerId <p>关联的产品实例ID</p>
      */
     public void setPeerId(String PeerId) {
         this.PeerId = PeerId;
     }
 
     /**
-     * Get CKafka消息主题 
-     * @return Topic CKafka消息主题
+     * Get <p>CKafka消息主题</p> 
+     * @return Topic <p>CKafka消息主题</p>
      */
     public String getTopic() {
         return this.Topic;
     }
 
     /**
-     * Set CKafka消息主题
-     * @param Topic CKafka消息主题
+     * Set <p>CKafka消息主题</p>
+     * @param Topic <p>CKafka消息主题</p>
      */
     public void setTopic(String Topic) {
         this.Topic = Topic;
+    }
+
+    /**
+     * Get <p>Ckafka消息主题</p> 
+     * @return MetricTopic <p>Ckafka消息主题</p>
+     */
+    public String getMetricTopic() {
+        return this.MetricTopic;
+    }
+
+    /**
+     * Set <p>Ckafka消息主题</p>
+     * @param MetricTopic <p>Ckafka消息主题</p>
+     */
+    public void setMetricTopic(String MetricTopic) {
+        this.MetricTopic = MetricTopic;
     }
 
     public ModifyApmAssociationRequest() {
@@ -161,6 +184,9 @@ public class ModifyApmAssociationRequest extends AbstractModel {
         if (source.Topic != null) {
             this.Topic = new String(source.Topic);
         }
+        if (source.MetricTopic != null) {
+            this.MetricTopic = new String(source.MetricTopic);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class ModifyApmAssociationRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "PeerId", this.PeerId);
         this.setParamSimple(map, prefix + "Topic", this.Topic);
+        this.setParamSimple(map, prefix + "MetricTopic", this.MetricTopic);
 
     }
 }

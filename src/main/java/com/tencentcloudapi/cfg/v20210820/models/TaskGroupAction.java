@@ -24,483 +24,483 @@ import java.util.HashMap;
 public class TaskGroupAction extends AbstractModel {
 
     /**
-    * 任务分组动作ID
+    * <p>任务分组动作ID</p>
     */
     @SerializedName("TaskGroupActionId")
     @Expose
     private Long TaskGroupActionId;
 
     /**
-    * 任务分组动作实例列表
+    * <p>任务分组动作实例列表</p>
     */
     @SerializedName("TaskGroupInstances")
     @Expose
     private TaskGroupInstance [] TaskGroupInstances;
 
     /**
-    * 动作ID
+    * <p>动作ID</p>
     */
     @SerializedName("ActionId")
     @Expose
     private Long ActionId;
 
     /**
-    * 分组动作顺序
+    * <p>分组动作顺序</p>
     */
     @SerializedName("TaskGroupActionOrder")
     @Expose
     private Long TaskGroupActionOrder;
 
     /**
-    * 分组动作通用配置
+    * <p>分组动作通用配置</p>
     */
     @SerializedName("TaskGroupActionGeneralConfiguration")
     @Expose
     private String TaskGroupActionGeneralConfiguration;
 
     /**
-    * 分组动作自定义配置
+    * <p>分组动作自定义配置</p>
     */
     @SerializedName("TaskGroupActionCustomConfiguration")
     @Expose
     private String TaskGroupActionCustomConfiguration;
 
     /**
-    * 分组动作状态
+    * <p>分组动作状态</p><p>枚举值：</p><ul><li>2001： 未开始</li><li>2002： 待执行</li><li>2003： 执行中</li><li>2004： 执行结束</li></ul>
     */
     @SerializedName("TaskGroupActionStatus")
     @Expose
     private Long TaskGroupActionStatus;
 
     /**
-    * 动作分组创建时间
+    * <p>动作分组创建时间</p>
     */
     @SerializedName("TaskGroupActionCreateTime")
     @Expose
     private String TaskGroupActionCreateTime;
 
     /**
-    * 动作分组更新时间
+    * <p>动作分组更新时间</p>
     */
     @SerializedName("TaskGroupActionUpdateTime")
     @Expose
     private String TaskGroupActionUpdateTime;
 
     /**
-    * 动作名称
+    * <p>动作名称</p>
     */
     @SerializedName("ActionTitle")
     @Expose
     private String ActionTitle;
 
     /**
-    * 状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止，4--跳过
+    * <p>状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止，4--跳过</p>
     */
     @SerializedName("TaskGroupActionStatusType")
     @Expose
     private Long TaskGroupActionStatusType;
 
     /**
-    * RandomId
+    * <p>RandomId</p>
     */
     @SerializedName("TaskGroupActionRandomId")
     @Expose
     private Long TaskGroupActionRandomId;
 
     /**
-    * RecoverId
+    * <p>RecoverId</p>
     */
     @SerializedName("TaskGroupActionRecoverId")
     @Expose
     private Long TaskGroupActionRecoverId;
 
     /**
-    * ExecuteId
+    * <p>ExecuteId</p>
     */
     @SerializedName("TaskGroupActionExecuteId")
     @Expose
     private Long TaskGroupActionExecuteId;
 
     /**
-    * 调用api类型，0:tat, 1:云api
+    * <p>调用api类型，0:tat, 1:云api</p>
     */
     @SerializedName("ActionApiType")
     @Expose
     private Long ActionApiType;
 
     /**
-    * 1:故障，2:恢复
+    * <p>1:故障，2:恢复</p>
     */
     @SerializedName("ActionAttribute")
     @Expose
     private Long ActionAttribute;
 
     /**
-    * 动作类型：平台、自定义
+    * <p>动作类型：平台、自定义</p>
     */
     @SerializedName("ActionType")
     @Expose
     private String ActionType;
 
     /**
-    * 是否可重试
+    * <p>是否可重试</p>
     */
     @SerializedName("IsExecuteRedo")
     @Expose
     private Boolean IsExecuteRedo;
 
     /**
-    * 动作风险级别
+    * <p>动作风险级别</p>
     */
     @SerializedName("ActionRisk")
     @Expose
     private String ActionRisk;
 
     /**
-    * 动作运行时间
+    * <p>动作运行时间</p><p>单位：秒</p>
     */
     @SerializedName("TaskGroupActionExecuteTime")
     @Expose
     private Long TaskGroupActionExecuteTime;
 
     /**
-    * 动作开始执行时间
+    * <p>动作开始执行时间</p>
     */
     @SerializedName("TaskGroupActionStartTime")
     @Expose
     private String TaskGroupActionStartTime;
 
     /**
-     * Get 任务分组动作ID 
-     * @return TaskGroupActionId 任务分组动作ID
+     * Get <p>任务分组动作ID</p> 
+     * @return TaskGroupActionId <p>任务分组动作ID</p>
      */
     public Long getTaskGroupActionId() {
         return this.TaskGroupActionId;
     }
 
     /**
-     * Set 任务分组动作ID
-     * @param TaskGroupActionId 任务分组动作ID
+     * Set <p>任务分组动作ID</p>
+     * @param TaskGroupActionId <p>任务分组动作ID</p>
      */
     public void setTaskGroupActionId(Long TaskGroupActionId) {
         this.TaskGroupActionId = TaskGroupActionId;
     }
 
     /**
-     * Get 任务分组动作实例列表 
-     * @return TaskGroupInstances 任务分组动作实例列表
+     * Get <p>任务分组动作实例列表</p> 
+     * @return TaskGroupInstances <p>任务分组动作实例列表</p>
      */
     public TaskGroupInstance [] getTaskGroupInstances() {
         return this.TaskGroupInstances;
     }
 
     /**
-     * Set 任务分组动作实例列表
-     * @param TaskGroupInstances 任务分组动作实例列表
+     * Set <p>任务分组动作实例列表</p>
+     * @param TaskGroupInstances <p>任务分组动作实例列表</p>
      */
     public void setTaskGroupInstances(TaskGroupInstance [] TaskGroupInstances) {
         this.TaskGroupInstances = TaskGroupInstances;
     }
 
     /**
-     * Get 动作ID 
-     * @return ActionId 动作ID
+     * Get <p>动作ID</p> 
+     * @return ActionId <p>动作ID</p>
      */
     public Long getActionId() {
         return this.ActionId;
     }
 
     /**
-     * Set 动作ID
-     * @param ActionId 动作ID
+     * Set <p>动作ID</p>
+     * @param ActionId <p>动作ID</p>
      */
     public void setActionId(Long ActionId) {
         this.ActionId = ActionId;
     }
 
     /**
-     * Get 分组动作顺序 
-     * @return TaskGroupActionOrder 分组动作顺序
+     * Get <p>分组动作顺序</p> 
+     * @return TaskGroupActionOrder <p>分组动作顺序</p>
      */
     public Long getTaskGroupActionOrder() {
         return this.TaskGroupActionOrder;
     }
 
     /**
-     * Set 分组动作顺序
-     * @param TaskGroupActionOrder 分组动作顺序
+     * Set <p>分组动作顺序</p>
+     * @param TaskGroupActionOrder <p>分组动作顺序</p>
      */
     public void setTaskGroupActionOrder(Long TaskGroupActionOrder) {
         this.TaskGroupActionOrder = TaskGroupActionOrder;
     }
 
     /**
-     * Get 分组动作通用配置 
-     * @return TaskGroupActionGeneralConfiguration 分组动作通用配置
+     * Get <p>分组动作通用配置</p> 
+     * @return TaskGroupActionGeneralConfiguration <p>分组动作通用配置</p>
      */
     public String getTaskGroupActionGeneralConfiguration() {
         return this.TaskGroupActionGeneralConfiguration;
     }
 
     /**
-     * Set 分组动作通用配置
-     * @param TaskGroupActionGeneralConfiguration 分组动作通用配置
+     * Set <p>分组动作通用配置</p>
+     * @param TaskGroupActionGeneralConfiguration <p>分组动作通用配置</p>
      */
     public void setTaskGroupActionGeneralConfiguration(String TaskGroupActionGeneralConfiguration) {
         this.TaskGroupActionGeneralConfiguration = TaskGroupActionGeneralConfiguration;
     }
 
     /**
-     * Get 分组动作自定义配置 
-     * @return TaskGroupActionCustomConfiguration 分组动作自定义配置
+     * Get <p>分组动作自定义配置</p> 
+     * @return TaskGroupActionCustomConfiguration <p>分组动作自定义配置</p>
      */
     public String getTaskGroupActionCustomConfiguration() {
         return this.TaskGroupActionCustomConfiguration;
     }
 
     /**
-     * Set 分组动作自定义配置
-     * @param TaskGroupActionCustomConfiguration 分组动作自定义配置
+     * Set <p>分组动作自定义配置</p>
+     * @param TaskGroupActionCustomConfiguration <p>分组动作自定义配置</p>
      */
     public void setTaskGroupActionCustomConfiguration(String TaskGroupActionCustomConfiguration) {
         this.TaskGroupActionCustomConfiguration = TaskGroupActionCustomConfiguration;
     }
 
     /**
-     * Get 分组动作状态 
-     * @return TaskGroupActionStatus 分组动作状态
+     * Get <p>分组动作状态</p><p>枚举值：</p><ul><li>2001： 未开始</li><li>2002： 待执行</li><li>2003： 执行中</li><li>2004： 执行结束</li></ul> 
+     * @return TaskGroupActionStatus <p>分组动作状态</p><p>枚举值：</p><ul><li>2001： 未开始</li><li>2002： 待执行</li><li>2003： 执行中</li><li>2004： 执行结束</li></ul>
      */
     public Long getTaskGroupActionStatus() {
         return this.TaskGroupActionStatus;
     }
 
     /**
-     * Set 分组动作状态
-     * @param TaskGroupActionStatus 分组动作状态
+     * Set <p>分组动作状态</p><p>枚举值：</p><ul><li>2001： 未开始</li><li>2002： 待执行</li><li>2003： 执行中</li><li>2004： 执行结束</li></ul>
+     * @param TaskGroupActionStatus <p>分组动作状态</p><p>枚举值：</p><ul><li>2001： 未开始</li><li>2002： 待执行</li><li>2003： 执行中</li><li>2004： 执行结束</li></ul>
      */
     public void setTaskGroupActionStatus(Long TaskGroupActionStatus) {
         this.TaskGroupActionStatus = TaskGroupActionStatus;
     }
 
     /**
-     * Get 动作分组创建时间 
-     * @return TaskGroupActionCreateTime 动作分组创建时间
+     * Get <p>动作分组创建时间</p> 
+     * @return TaskGroupActionCreateTime <p>动作分组创建时间</p>
      */
     public String getTaskGroupActionCreateTime() {
         return this.TaskGroupActionCreateTime;
     }
 
     /**
-     * Set 动作分组创建时间
-     * @param TaskGroupActionCreateTime 动作分组创建时间
+     * Set <p>动作分组创建时间</p>
+     * @param TaskGroupActionCreateTime <p>动作分组创建时间</p>
      */
     public void setTaskGroupActionCreateTime(String TaskGroupActionCreateTime) {
         this.TaskGroupActionCreateTime = TaskGroupActionCreateTime;
     }
 
     /**
-     * Get 动作分组更新时间 
-     * @return TaskGroupActionUpdateTime 动作分组更新时间
+     * Get <p>动作分组更新时间</p> 
+     * @return TaskGroupActionUpdateTime <p>动作分组更新时间</p>
      */
     public String getTaskGroupActionUpdateTime() {
         return this.TaskGroupActionUpdateTime;
     }
 
     /**
-     * Set 动作分组更新时间
-     * @param TaskGroupActionUpdateTime 动作分组更新时间
+     * Set <p>动作分组更新时间</p>
+     * @param TaskGroupActionUpdateTime <p>动作分组更新时间</p>
      */
     public void setTaskGroupActionUpdateTime(String TaskGroupActionUpdateTime) {
         this.TaskGroupActionUpdateTime = TaskGroupActionUpdateTime;
     }
 
     /**
-     * Get 动作名称 
-     * @return ActionTitle 动作名称
+     * Get <p>动作名称</p> 
+     * @return ActionTitle <p>动作名称</p>
      */
     public String getActionTitle() {
         return this.ActionTitle;
     }
 
     /**
-     * Set 动作名称
-     * @param ActionTitle 动作名称
+     * Set <p>动作名称</p>
+     * @param ActionTitle <p>动作名称</p>
      */
     public void setActionTitle(String ActionTitle) {
         this.ActionTitle = ActionTitle;
     }
 
     /**
-     * Get 状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止，4--跳过 
-     * @return TaskGroupActionStatusType 状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止，4--跳过
+     * Get <p>状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止，4--跳过</p> 
+     * @return TaskGroupActionStatusType <p>状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止，4--跳过</p>
      */
     public Long getTaskGroupActionStatusType() {
         return this.TaskGroupActionStatusType;
     }
 
     /**
-     * Set 状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止，4--跳过
-     * @param TaskGroupActionStatusType 状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止，4--跳过
+     * Set <p>状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止，4--跳过</p>
+     * @param TaskGroupActionStatusType <p>状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止，4--跳过</p>
      */
     public void setTaskGroupActionStatusType(Long TaskGroupActionStatusType) {
         this.TaskGroupActionStatusType = TaskGroupActionStatusType;
     }
 
     /**
-     * Get RandomId 
-     * @return TaskGroupActionRandomId RandomId
+     * Get <p>RandomId</p> 
+     * @return TaskGroupActionRandomId <p>RandomId</p>
      */
     public Long getTaskGroupActionRandomId() {
         return this.TaskGroupActionRandomId;
     }
 
     /**
-     * Set RandomId
-     * @param TaskGroupActionRandomId RandomId
+     * Set <p>RandomId</p>
+     * @param TaskGroupActionRandomId <p>RandomId</p>
      */
     public void setTaskGroupActionRandomId(Long TaskGroupActionRandomId) {
         this.TaskGroupActionRandomId = TaskGroupActionRandomId;
     }
 
     /**
-     * Get RecoverId 
-     * @return TaskGroupActionRecoverId RecoverId
+     * Get <p>RecoverId</p> 
+     * @return TaskGroupActionRecoverId <p>RecoverId</p>
      */
     public Long getTaskGroupActionRecoverId() {
         return this.TaskGroupActionRecoverId;
     }
 
     /**
-     * Set RecoverId
-     * @param TaskGroupActionRecoverId RecoverId
+     * Set <p>RecoverId</p>
+     * @param TaskGroupActionRecoverId <p>RecoverId</p>
      */
     public void setTaskGroupActionRecoverId(Long TaskGroupActionRecoverId) {
         this.TaskGroupActionRecoverId = TaskGroupActionRecoverId;
     }
 
     /**
-     * Get ExecuteId 
-     * @return TaskGroupActionExecuteId ExecuteId
+     * Get <p>ExecuteId</p> 
+     * @return TaskGroupActionExecuteId <p>ExecuteId</p>
      */
     public Long getTaskGroupActionExecuteId() {
         return this.TaskGroupActionExecuteId;
     }
 
     /**
-     * Set ExecuteId
-     * @param TaskGroupActionExecuteId ExecuteId
+     * Set <p>ExecuteId</p>
+     * @param TaskGroupActionExecuteId <p>ExecuteId</p>
      */
     public void setTaskGroupActionExecuteId(Long TaskGroupActionExecuteId) {
         this.TaskGroupActionExecuteId = TaskGroupActionExecuteId;
     }
 
     /**
-     * Get 调用api类型，0:tat, 1:云api 
-     * @return ActionApiType 调用api类型，0:tat, 1:云api
+     * Get <p>调用api类型，0:tat, 1:云api</p> 
+     * @return ActionApiType <p>调用api类型，0:tat, 1:云api</p>
      */
     public Long getActionApiType() {
         return this.ActionApiType;
     }
 
     /**
-     * Set 调用api类型，0:tat, 1:云api
-     * @param ActionApiType 调用api类型，0:tat, 1:云api
+     * Set <p>调用api类型，0:tat, 1:云api</p>
+     * @param ActionApiType <p>调用api类型，0:tat, 1:云api</p>
      */
     public void setActionApiType(Long ActionApiType) {
         this.ActionApiType = ActionApiType;
     }
 
     /**
-     * Get 1:故障，2:恢复 
-     * @return ActionAttribute 1:故障，2:恢复
+     * Get <p>1:故障，2:恢复</p> 
+     * @return ActionAttribute <p>1:故障，2:恢复</p>
      */
     public Long getActionAttribute() {
         return this.ActionAttribute;
     }
 
     /**
-     * Set 1:故障，2:恢复
-     * @param ActionAttribute 1:故障，2:恢复
+     * Set <p>1:故障，2:恢复</p>
+     * @param ActionAttribute <p>1:故障，2:恢复</p>
      */
     public void setActionAttribute(Long ActionAttribute) {
         this.ActionAttribute = ActionAttribute;
     }
 
     /**
-     * Get 动作类型：平台、自定义 
-     * @return ActionType 动作类型：平台、自定义
+     * Get <p>动作类型：平台、自定义</p> 
+     * @return ActionType <p>动作类型：平台、自定义</p>
      */
     public String getActionType() {
         return this.ActionType;
     }
 
     /**
-     * Set 动作类型：平台、自定义
-     * @param ActionType 动作类型：平台、自定义
+     * Set <p>动作类型：平台、自定义</p>
+     * @param ActionType <p>动作类型：平台、自定义</p>
      */
     public void setActionType(String ActionType) {
         this.ActionType = ActionType;
     }
 
     /**
-     * Get 是否可重试 
-     * @return IsExecuteRedo 是否可重试
+     * Get <p>是否可重试</p> 
+     * @return IsExecuteRedo <p>是否可重试</p>
      */
     public Boolean getIsExecuteRedo() {
         return this.IsExecuteRedo;
     }
 
     /**
-     * Set 是否可重试
-     * @param IsExecuteRedo 是否可重试
+     * Set <p>是否可重试</p>
+     * @param IsExecuteRedo <p>是否可重试</p>
      */
     public void setIsExecuteRedo(Boolean IsExecuteRedo) {
         this.IsExecuteRedo = IsExecuteRedo;
     }
 
     /**
-     * Get 动作风险级别 
-     * @return ActionRisk 动作风险级别
+     * Get <p>动作风险级别</p> 
+     * @return ActionRisk <p>动作风险级别</p>
      */
     public String getActionRisk() {
         return this.ActionRisk;
     }
 
     /**
-     * Set 动作风险级别
-     * @param ActionRisk 动作风险级别
+     * Set <p>动作风险级别</p>
+     * @param ActionRisk <p>动作风险级别</p>
      */
     public void setActionRisk(String ActionRisk) {
         this.ActionRisk = ActionRisk;
     }
 
     /**
-     * Get 动作运行时间 
-     * @return TaskGroupActionExecuteTime 动作运行时间
+     * Get <p>动作运行时间</p><p>单位：秒</p> 
+     * @return TaskGroupActionExecuteTime <p>动作运行时间</p><p>单位：秒</p>
      */
     public Long getTaskGroupActionExecuteTime() {
         return this.TaskGroupActionExecuteTime;
     }
 
     /**
-     * Set 动作运行时间
-     * @param TaskGroupActionExecuteTime 动作运行时间
+     * Set <p>动作运行时间</p><p>单位：秒</p>
+     * @param TaskGroupActionExecuteTime <p>动作运行时间</p><p>单位：秒</p>
      */
     public void setTaskGroupActionExecuteTime(Long TaskGroupActionExecuteTime) {
         this.TaskGroupActionExecuteTime = TaskGroupActionExecuteTime;
     }
 
     /**
-     * Get 动作开始执行时间 
-     * @return TaskGroupActionStartTime 动作开始执行时间
+     * Get <p>动作开始执行时间</p> 
+     * @return TaskGroupActionStartTime <p>动作开始执行时间</p>
      */
     public String getTaskGroupActionStartTime() {
         return this.TaskGroupActionStartTime;
     }
 
     /**
-     * Set 动作开始执行时间
-     * @param TaskGroupActionStartTime 动作开始执行时间
+     * Set <p>动作开始执行时间</p>
+     * @param TaskGroupActionStartTime <p>动作开始执行时间</p>
      */
     public void setTaskGroupActionStartTime(String TaskGroupActionStartTime) {
         this.TaskGroupActionStartTime = TaskGroupActionStartTime;

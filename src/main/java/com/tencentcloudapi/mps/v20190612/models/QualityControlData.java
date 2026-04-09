@@ -24,138 +24,161 @@ import java.util.HashMap;
 public class QualityControlData extends AbstractModel {
 
     /**
-    * 为true时表示视频无音频轨。
+    * <p>为true时表示视频无音频轨。</p>
     */
     @SerializedName("NoAudio")
     @Expose
     private Boolean NoAudio;
 
     /**
-    * 为true时表示视频无视频轨。
+    * <p>为true时表示视频无视频轨。</p>
     */
     @SerializedName("NoVideo")
     @Expose
     private Boolean NoVideo;
 
     /**
-    * 视频无参考质量评分，百分制。
+    * <p>视频无参考质量评分，百分制。</p>
     */
     @SerializedName("QualityEvaluationScore")
     @Expose
     private Long QualityEvaluationScore;
 
     /**
-    * 视频无参考质量评分，MOS分数。
+    * <p>视频无参考质量评分，MOS分数。</p>
     */
     @SerializedName("QualityEvaluationMeanOpinionScore")
     @Expose
     private Float QualityEvaluationMeanOpinionScore;
 
     /**
-    * 内容质检检出异常项。
+    * <p>视频美学评分，范围：[0,100]。</p>
+    */
+    @SerializedName("AestheticEvaluationScore")
+    @Expose
+    private Long AestheticEvaluationScore;
+
+    /**
+    * <p>内容质检检出异常项。</p>
     */
     @SerializedName("QualityControlResultSet")
     @Expose
     private QualityControlResult [] QualityControlResultSet;
 
     /**
-    * 格式诊断检出异常项。
+    * <p>格式诊断检出异常项。</p>
     */
     @SerializedName("ContainerDiagnoseResultSet")
     @Expose
     private ContainerDiagnoseResultItem [] ContainerDiagnoseResultSet;
 
     /**
-     * Get 为true时表示视频无音频轨。 
-     * @return NoAudio 为true时表示视频无音频轨。
+     * Get <p>为true时表示视频无音频轨。</p> 
+     * @return NoAudio <p>为true时表示视频无音频轨。</p>
      */
     public Boolean getNoAudio() {
         return this.NoAudio;
     }
 
     /**
-     * Set 为true时表示视频无音频轨。
-     * @param NoAudio 为true时表示视频无音频轨。
+     * Set <p>为true时表示视频无音频轨。</p>
+     * @param NoAudio <p>为true时表示视频无音频轨。</p>
      */
     public void setNoAudio(Boolean NoAudio) {
         this.NoAudio = NoAudio;
     }
 
     /**
-     * Get 为true时表示视频无视频轨。 
-     * @return NoVideo 为true时表示视频无视频轨。
+     * Get <p>为true时表示视频无视频轨。</p> 
+     * @return NoVideo <p>为true时表示视频无视频轨。</p>
      */
     public Boolean getNoVideo() {
         return this.NoVideo;
     }
 
     /**
-     * Set 为true时表示视频无视频轨。
-     * @param NoVideo 为true时表示视频无视频轨。
+     * Set <p>为true时表示视频无视频轨。</p>
+     * @param NoVideo <p>为true时表示视频无视频轨。</p>
      */
     public void setNoVideo(Boolean NoVideo) {
         this.NoVideo = NoVideo;
     }
 
     /**
-     * Get 视频无参考质量评分，百分制。 
-     * @return QualityEvaluationScore 视频无参考质量评分，百分制。
+     * Get <p>视频无参考质量评分，百分制。</p> 
+     * @return QualityEvaluationScore <p>视频无参考质量评分，百分制。</p>
      */
     public Long getQualityEvaluationScore() {
         return this.QualityEvaluationScore;
     }
 
     /**
-     * Set 视频无参考质量评分，百分制。
-     * @param QualityEvaluationScore 视频无参考质量评分，百分制。
+     * Set <p>视频无参考质量评分，百分制。</p>
+     * @param QualityEvaluationScore <p>视频无参考质量评分，百分制。</p>
      */
     public void setQualityEvaluationScore(Long QualityEvaluationScore) {
         this.QualityEvaluationScore = QualityEvaluationScore;
     }
 
     /**
-     * Get 视频无参考质量评分，MOS分数。 
-     * @return QualityEvaluationMeanOpinionScore 视频无参考质量评分，MOS分数。
+     * Get <p>视频无参考质量评分，MOS分数。</p> 
+     * @return QualityEvaluationMeanOpinionScore <p>视频无参考质量评分，MOS分数。</p>
      */
     public Float getQualityEvaluationMeanOpinionScore() {
         return this.QualityEvaluationMeanOpinionScore;
     }
 
     /**
-     * Set 视频无参考质量评分，MOS分数。
-     * @param QualityEvaluationMeanOpinionScore 视频无参考质量评分，MOS分数。
+     * Set <p>视频无参考质量评分，MOS分数。</p>
+     * @param QualityEvaluationMeanOpinionScore <p>视频无参考质量评分，MOS分数。</p>
      */
     public void setQualityEvaluationMeanOpinionScore(Float QualityEvaluationMeanOpinionScore) {
         this.QualityEvaluationMeanOpinionScore = QualityEvaluationMeanOpinionScore;
     }
 
     /**
-     * Get 内容质检检出异常项。 
-     * @return QualityControlResultSet 内容质检检出异常项。
+     * Get <p>视频美学评分，范围：[0,100]。</p> 
+     * @return AestheticEvaluationScore <p>视频美学评分，范围：[0,100]。</p>
+     */
+    public Long getAestheticEvaluationScore() {
+        return this.AestheticEvaluationScore;
+    }
+
+    /**
+     * Set <p>视频美学评分，范围：[0,100]。</p>
+     * @param AestheticEvaluationScore <p>视频美学评分，范围：[0,100]。</p>
+     */
+    public void setAestheticEvaluationScore(Long AestheticEvaluationScore) {
+        this.AestheticEvaluationScore = AestheticEvaluationScore;
+    }
+
+    /**
+     * Get <p>内容质检检出异常项。</p> 
+     * @return QualityControlResultSet <p>内容质检检出异常项。</p>
      */
     public QualityControlResult [] getQualityControlResultSet() {
         return this.QualityControlResultSet;
     }
 
     /**
-     * Set 内容质检检出异常项。
-     * @param QualityControlResultSet 内容质检检出异常项。
+     * Set <p>内容质检检出异常项。</p>
+     * @param QualityControlResultSet <p>内容质检检出异常项。</p>
      */
     public void setQualityControlResultSet(QualityControlResult [] QualityControlResultSet) {
         this.QualityControlResultSet = QualityControlResultSet;
     }
 
     /**
-     * Get 格式诊断检出异常项。 
-     * @return ContainerDiagnoseResultSet 格式诊断检出异常项。
+     * Get <p>格式诊断检出异常项。</p> 
+     * @return ContainerDiagnoseResultSet <p>格式诊断检出异常项。</p>
      */
     public ContainerDiagnoseResultItem [] getContainerDiagnoseResultSet() {
         return this.ContainerDiagnoseResultSet;
     }
 
     /**
-     * Set 格式诊断检出异常项。
-     * @param ContainerDiagnoseResultSet 格式诊断检出异常项。
+     * Set <p>格式诊断检出异常项。</p>
+     * @param ContainerDiagnoseResultSet <p>格式诊断检出异常项。</p>
      */
     public void setContainerDiagnoseResultSet(ContainerDiagnoseResultItem [] ContainerDiagnoseResultSet) {
         this.ContainerDiagnoseResultSet = ContainerDiagnoseResultSet;
@@ -181,6 +204,9 @@ public class QualityControlData extends AbstractModel {
         if (source.QualityEvaluationMeanOpinionScore != null) {
             this.QualityEvaluationMeanOpinionScore = new Float(source.QualityEvaluationMeanOpinionScore);
         }
+        if (source.AestheticEvaluationScore != null) {
+            this.AestheticEvaluationScore = new Long(source.AestheticEvaluationScore);
+        }
         if (source.QualityControlResultSet != null) {
             this.QualityControlResultSet = new QualityControlResult[source.QualityControlResultSet.length];
             for (int i = 0; i < source.QualityControlResultSet.length; i++) {
@@ -204,6 +230,7 @@ public class QualityControlData extends AbstractModel {
         this.setParamSimple(map, prefix + "NoVideo", this.NoVideo);
         this.setParamSimple(map, prefix + "QualityEvaluationScore", this.QualityEvaluationScore);
         this.setParamSimple(map, prefix + "QualityEvaluationMeanOpinionScore", this.QualityEvaluationMeanOpinionScore);
+        this.setParamSimple(map, prefix + "AestheticEvaluationScore", this.AestheticEvaluationScore);
         this.setParamArrayObj(map, prefix + "QualityControlResultSet.", this.QualityControlResultSet);
         this.setParamArrayObj(map, prefix + "ContainerDiagnoseResultSet.", this.ContainerDiagnoseResultSet);
 

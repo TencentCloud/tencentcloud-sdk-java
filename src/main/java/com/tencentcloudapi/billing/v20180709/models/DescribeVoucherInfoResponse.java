@@ -45,6 +45,13 @@ public class DescribeVoucherInfoResponse extends AbstractModel {
     private VoucherInfos [] VoucherInfos;
 
     /**
+    * <p>接口返回的金额字段单位</p><p>默认值：micro</p><p>金额单位：micro（微分）<br>代金券发放和使用按8位高精度处理，所以金额单位默认为micro（微分），如需CNY或USD请按以下公式换算<br>CNY：1 micro = 10⁻⁸ 元<br>USD：1 micro = 10⁻⁸ 美元</p>
+    */
+    @SerializedName("Unit")
+    @Expose
+    private String Unit;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -100,6 +107,22 @@ public class DescribeVoucherInfoResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>接口返回的金额字段单位</p><p>默认值：micro</p><p>金额单位：micro（微分）<br>代金券发放和使用按8位高精度处理，所以金额单位默认为micro（微分），如需CNY或USD请按以下公式换算<br>CNY：1 micro = 10⁻⁸ 元<br>USD：1 micro = 10⁻⁸ 美元</p> 
+     * @return Unit <p>接口返回的金额字段单位</p><p>默认值：micro</p><p>金额单位：micro（微分）<br>代金券发放和使用按8位高精度处理，所以金额单位默认为micro（微分），如需CNY或USD请按以下公式换算<br>CNY：1 micro = 10⁻⁸ 元<br>USD：1 micro = 10⁻⁸ 美元</p>
+     */
+    public String getUnit() {
+        return this.Unit;
+    }
+
+    /**
+     * Set <p>接口返回的金额字段单位</p><p>默认值：micro</p><p>金额单位：micro（微分）<br>代金券发放和使用按8位高精度处理，所以金额单位默认为micro（微分），如需CNY或USD请按以下公式换算<br>CNY：1 micro = 10⁻⁸ 元<br>USD：1 micro = 10⁻⁸ 美元</p>
+     * @param Unit <p>接口返回的金额字段单位</p><p>默认值：micro</p><p>金额单位：micro（微分）<br>代金券发放和使用按8位高精度处理，所以金额单位默认为micro（微分），如需CNY或USD请按以下公式换算<br>CNY：1 micro = 10⁻⁸ 元<br>USD：1 micro = 10⁻⁸ 美元</p>
+     */
+    public void setUnit(String Unit) {
+        this.Unit = Unit;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -135,6 +158,9 @@ public class DescribeVoucherInfoResponse extends AbstractModel {
                 this.VoucherInfos[i] = new VoucherInfos(source.VoucherInfos[i]);
             }
         }
+        if (source.Unit != null) {
+            this.Unit = new String(source.Unit);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -148,6 +174,7 @@ public class DescribeVoucherInfoResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "TotalBalance", this.TotalBalance);
         this.setParamArrayObj(map, prefix + "VoucherInfos.", this.VoucherInfos);
+        this.setParamSimple(map, prefix + "Unit", this.Unit);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

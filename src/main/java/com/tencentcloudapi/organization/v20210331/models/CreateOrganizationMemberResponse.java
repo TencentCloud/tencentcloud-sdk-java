@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateOrganizationMemberResponse extends AbstractModel {
 
     /**
-    * 成员Uin。
+    * <p>成员Uin。</p>
     */
     @SerializedName("Uin")
     @Expose
@@ -38,16 +38,16 @@ public class CreateOrganizationMemberResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 成员Uin。 
-     * @return Uin 成员Uin。
+     * Get <p>成员Uin。</p> 
+     * @return Uin <p>成员Uin。</p>
      */
     public Long getUin() {
         return this.Uin;
     }
 
     /**
-     * Set 成员Uin。
-     * @param Uin 成员Uin。
+     * Set <p>成员Uin。</p>
+     * @param Uin <p>成员Uin。</p>
      */
     public void setUin(Long Uin) {
         this.Uin = Uin;

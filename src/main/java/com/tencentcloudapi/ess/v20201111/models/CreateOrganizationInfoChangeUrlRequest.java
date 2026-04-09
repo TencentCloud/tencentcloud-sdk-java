@@ -24,87 +24,95 @@ import java.util.HashMap;
 public class CreateOrganizationInfoChangeUrlRequest extends AbstractModel {
 
     /**
-    * 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+    * <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
 
     /**
-    * 企业信息变更类型，可选类型如下：
-<ul><li>**1**：企业超管变更</li><li>**2**：企业基础信息变更</li></ul>
+    * <p>企业信息变更类型，可选类型如下：</p><ul><li>**1**：企业超管变更</li><li>**2**：企业基础信息变更</li></ul>
     */
     @SerializedName("ChangeType")
     @Expose
     private Long ChangeType;
 
     /**
-    * 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+    * <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-     * Get 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
-     * @return Operator 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+    * <p>他方企业的统一社会信用代码，如果不传默认生成当前企业信息变更链接</p>
+    */
+    @SerializedName("UnifiedSocialCreditCode")
+    @Expose
+    private String UnifiedSocialCreditCode;
+
+    /**
+     * Get <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p> 
+     * @return Operator <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
-     * @param Operator 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * Set <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
+     * @param Operator <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 企业信息变更类型，可选类型如下：
-<ul><li>**1**：企业超管变更</li><li>**2**：企业基础信息变更</li></ul> 
-     * @return ChangeType 企业信息变更类型，可选类型如下：
-<ul><li>**1**：企业超管变更</li><li>**2**：企业基础信息变更</li></ul>
+     * Get <p>企业信息变更类型，可选类型如下：</p><ul><li>**1**：企业超管变更</li><li>**2**：企业基础信息变更</li></ul> 
+     * @return ChangeType <p>企业信息变更类型，可选类型如下：</p><ul><li>**1**：企业超管变更</li><li>**2**：企业基础信息变更</li></ul>
      */
     public Long getChangeType() {
         return this.ChangeType;
     }
 
     /**
-     * Set 企业信息变更类型，可选类型如下：
-<ul><li>**1**：企业超管变更</li><li>**2**：企业基础信息变更</li></ul>
-     * @param ChangeType 企业信息变更类型，可选类型如下：
-<ul><li>**1**：企业超管变更</li><li>**2**：企业基础信息变更</li></ul>
+     * Set <p>企业信息变更类型，可选类型如下：</p><ul><li>**1**：企业超管变更</li><li>**2**：企业基础信息变更</li></ul>
+     * @param ChangeType <p>企业信息变更类型，可选类型如下：</p><ul><li>**1**：企业超管变更</li><li>**2**：企业基础信息变更</li></ul>
      */
     public void setChangeType(Long ChangeType) {
         this.ChangeType = ChangeType;
     }
 
     /**
-     * Get 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。 
-     * @return Agent 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * Get <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p> 
+     * @return Agent <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
-     * @param Agent 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * Set <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
+     * @param Agent <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
+    }
+
+    /**
+     * Get <p>他方企业的统一社会信用代码，如果不传默认生成当前企业信息变更链接</p> 
+     * @return UnifiedSocialCreditCode <p>他方企业的统一社会信用代码，如果不传默认生成当前企业信息变更链接</p>
+     */
+    public String getUnifiedSocialCreditCode() {
+        return this.UnifiedSocialCreditCode;
+    }
+
+    /**
+     * Set <p>他方企业的统一社会信用代码，如果不传默认生成当前企业信息变更链接</p>
+     * @param UnifiedSocialCreditCode <p>他方企业的统一社会信用代码，如果不传默认生成当前企业信息变更链接</p>
+     */
+    public void setUnifiedSocialCreditCode(String UnifiedSocialCreditCode) {
+        this.UnifiedSocialCreditCode = UnifiedSocialCreditCode;
     }
 
     public CreateOrganizationInfoChangeUrlRequest() {
@@ -124,6 +132,9 @@ public class CreateOrganizationInfoChangeUrlRequest extends AbstractModel {
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
         }
+        if (source.UnifiedSocialCreditCode != null) {
+            this.UnifiedSocialCreditCode = new String(source.UnifiedSocialCreditCode);
+        }
     }
 
 
@@ -134,6 +145,7 @@ public class CreateOrganizationInfoChangeUrlRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "ChangeType", this.ChangeType);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
+        this.setParamSimple(map, prefix + "UnifiedSocialCreditCode", this.UnifiedSocialCreditCode);
 
     }
 }

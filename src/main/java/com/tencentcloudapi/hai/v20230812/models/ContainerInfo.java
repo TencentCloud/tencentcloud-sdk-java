@@ -24,118 +24,141 @@ import java.util.HashMap;
 public class ContainerInfo extends AbstractModel {
 
     /**
-    * 镜像相关信息
+    * <p>镜像相关信息</p>
     */
     @SerializedName("Image")
     @Expose
     private ImageInfo Image;
 
     /**
-    * 服务监听端口
+    * <p>服务监听端口</p>
     */
     @SerializedName("Port")
     @Expose
     private String Port;
 
     /**
-    * 启动命令
+    * <p>启动命令</p>
     */
     @SerializedName("Scripts")
     @Expose
     private String [] Scripts;
 
     /**
-    * 环境变量列表
+    * <p>环境变量列表</p>
     */
     @SerializedName("Envs")
     @Expose
     private EnvParam [] Envs;
 
     /**
-    * 存储挂载配置
+    * <p>存储挂载配置</p>
     */
     @SerializedName("Storages")
     @Expose
     private StorageInfo [] Storages;
 
     /**
-     * Get 镜像相关信息 
-     * @return Image 镜像相关信息
+    * <p>探针信息</p>
+    */
+    @SerializedName("Probe")
+    @Expose
+    private ProbeInfo Probe;
+
+    /**
+     * Get <p>镜像相关信息</p> 
+     * @return Image <p>镜像相关信息</p>
      */
     public ImageInfo getImage() {
         return this.Image;
     }
 
     /**
-     * Set 镜像相关信息
-     * @param Image 镜像相关信息
+     * Set <p>镜像相关信息</p>
+     * @param Image <p>镜像相关信息</p>
      */
     public void setImage(ImageInfo Image) {
         this.Image = Image;
     }
 
     /**
-     * Get 服务监听端口 
-     * @return Port 服务监听端口
+     * Get <p>服务监听端口</p> 
+     * @return Port <p>服务监听端口</p>
      */
     public String getPort() {
         return this.Port;
     }
 
     /**
-     * Set 服务监听端口
-     * @param Port 服务监听端口
+     * Set <p>服务监听端口</p>
+     * @param Port <p>服务监听端口</p>
      */
     public void setPort(String Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 启动命令 
-     * @return Scripts 启动命令
+     * Get <p>启动命令</p> 
+     * @return Scripts <p>启动命令</p>
      */
     public String [] getScripts() {
         return this.Scripts;
     }
 
     /**
-     * Set 启动命令
-     * @param Scripts 启动命令
+     * Set <p>启动命令</p>
+     * @param Scripts <p>启动命令</p>
      */
     public void setScripts(String [] Scripts) {
         this.Scripts = Scripts;
     }
 
     /**
-     * Get 环境变量列表 
-     * @return Envs 环境变量列表
+     * Get <p>环境变量列表</p> 
+     * @return Envs <p>环境变量列表</p>
      */
     public EnvParam [] getEnvs() {
         return this.Envs;
     }
 
     /**
-     * Set 环境变量列表
-     * @param Envs 环境变量列表
+     * Set <p>环境变量列表</p>
+     * @param Envs <p>环境变量列表</p>
      */
     public void setEnvs(EnvParam [] Envs) {
         this.Envs = Envs;
     }
 
     /**
-     * Get 存储挂载配置 
-     * @return Storages 存储挂载配置
+     * Get <p>存储挂载配置</p> 
+     * @return Storages <p>存储挂载配置</p>
      */
     public StorageInfo [] getStorages() {
         return this.Storages;
     }
 
     /**
-     * Set 存储挂载配置
-     * @param Storages 存储挂载配置
+     * Set <p>存储挂载配置</p>
+     * @param Storages <p>存储挂载配置</p>
      */
     public void setStorages(StorageInfo [] Storages) {
         this.Storages = Storages;
+    }
+
+    /**
+     * Get <p>探针信息</p> 
+     * @return Probe <p>探针信息</p>
+     */
+    public ProbeInfo getProbe() {
+        return this.Probe;
+    }
+
+    /**
+     * Set <p>探针信息</p>
+     * @param Probe <p>探针信息</p>
+     */
+    public void setProbe(ProbeInfo Probe) {
+        this.Probe = Probe;
     }
 
     public ContainerInfo() {
@@ -170,6 +193,9 @@ public class ContainerInfo extends AbstractModel {
                 this.Storages[i] = new StorageInfo(source.Storages[i]);
             }
         }
+        if (source.Probe != null) {
+            this.Probe = new ProbeInfo(source.Probe);
+        }
     }
 
 
@@ -182,6 +208,7 @@ public class ContainerInfo extends AbstractModel {
         this.setParamArraySimple(map, prefix + "Scripts.", this.Scripts);
         this.setParamArrayObj(map, prefix + "Envs.", this.Envs);
         this.setParamArrayObj(map, prefix + "Storages.", this.Storages);
+        this.setParamObj(map, prefix + "Probe.", this.Probe);
 
     }
 }

@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class AiAnalysisTaskVideoRemakeInput extends AbstractModel {
 
     /**
-    * 视频智能去重模板 ID
+    * <p>视频智能去重模板 ID</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get 视频智能去重模板 ID 
-     * @return Definition 视频智能去重模板 ID
+    * <p>扩展参数。</p>
+    */
+    @SerializedName("ExtendedParameter")
+    @Expose
+    private String ExtendedParameter;
+
+    /**
+     * Get <p>视频智能去重模板 ID</p> 
+     * @return Definition <p>视频智能去重模板 ID</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 视频智能去重模板 ID
-     * @param Definition 视频智能去重模板 ID
+     * Set <p>视频智能去重模板 ID</p>
+     * @param Definition <p>视频智能去重模板 ID</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
+    }
+
+    /**
+     * Get <p>扩展参数。</p> 
+     * @return ExtendedParameter <p>扩展参数。</p>
+     */
+    public String getExtendedParameter() {
+        return this.ExtendedParameter;
+    }
+
+    /**
+     * Set <p>扩展参数。</p>
+     * @param ExtendedParameter <p>扩展参数。</p>
+     */
+    public void setExtendedParameter(String ExtendedParameter) {
+        this.ExtendedParameter = ExtendedParameter;
     }
 
     public AiAnalysisTaskVideoRemakeInput() {
@@ -57,6 +80,9 @@ public class AiAnalysisTaskVideoRemakeInput extends AbstractModel {
         if (source.Definition != null) {
             this.Definition = new Long(source.Definition);
         }
+        if (source.ExtendedParameter != null) {
+            this.ExtendedParameter = new String(source.ExtendedParameter);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class AiAnalysisTaskVideoRemakeInput extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);
+        this.setParamSimple(map, prefix + "ExtendedParameter", this.ExtendedParameter);
 
     }
 }

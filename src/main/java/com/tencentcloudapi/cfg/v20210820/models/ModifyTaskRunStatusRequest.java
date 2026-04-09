@@ -66,6 +66,13 @@ public class ModifyTaskRunStatusRequest extends AbstractModel {
     private String Record;
 
     /**
+    * 
+    */
+    @SerializedName("IncludeRecordInReport")
+    @Expose
+    private Long IncludeRecordInReport;
+
+    /**
      * Get 任务ID 
      * @return TaskId 任务ID
      */
@@ -161,6 +168,22 @@ public class ModifyTaskRunStatusRequest extends AbstractModel {
         this.Record = Record;
     }
 
+    /**
+     * Get  
+     * @return IncludeRecordInReport 
+     */
+    public Long getIncludeRecordInReport() {
+        return this.IncludeRecordInReport;
+    }
+
+    /**
+     * Set 
+     * @param IncludeRecordInReport 
+     */
+    public void setIncludeRecordInReport(Long IncludeRecordInReport) {
+        this.IncludeRecordInReport = IncludeRecordInReport;
+    }
+
     public ModifyTaskRunStatusRequest() {
     }
 
@@ -187,6 +210,9 @@ public class ModifyTaskRunStatusRequest extends AbstractModel {
         if (source.Record != null) {
             this.Record = new String(source.Record);
         }
+        if (source.IncludeRecordInReport != null) {
+            this.IncludeRecordInReport = new Long(source.IncludeRecordInReport);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class ModifyTaskRunStatusRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Summary", this.Summary);
         this.setParamSimple(map, prefix + "Issue", this.Issue);
         this.setParamSimple(map, prefix + "Record", this.Record);
+        this.setParamSimple(map, prefix + "IncludeRecordInReport", this.IncludeRecordInReport);
 
     }
 }

@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class CreateOrganizationAuthUrlResponse extends AbstractModel {
 
     /**
-    * 生成的认证链接。
-
-注： `链接有效期统一30天`
+    * <p>生成的认证链接。</p><p>注： <code>链接有效期统一30天</code></p>
     */
     @SerializedName("AuthUrl")
     @Expose
     private String AuthUrl;
 
     /**
-    * 链接过期时间，格式为Unix标准时间戳（秒）
+    * <p>链接过期时间，格式为Unix标准时间戳（秒）</p>
     */
     @SerializedName("ExpiredTime")
     @Expose
@@ -47,40 +45,32 @@ public class CreateOrganizationAuthUrlResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 生成的认证链接。
-
-注： `链接有效期统一30天` 
-     * @return AuthUrl 生成的认证链接。
-
-注： `链接有效期统一30天`
+     * Get <p>生成的认证链接。</p><p>注： <code>链接有效期统一30天</code></p> 
+     * @return AuthUrl <p>生成的认证链接。</p><p>注： <code>链接有效期统一30天</code></p>
      */
     public String getAuthUrl() {
         return this.AuthUrl;
     }
 
     /**
-     * Set 生成的认证链接。
-
-注： `链接有效期统一30天`
-     * @param AuthUrl 生成的认证链接。
-
-注： `链接有效期统一30天`
+     * Set <p>生成的认证链接。</p><p>注： <code>链接有效期统一30天</code></p>
+     * @param AuthUrl <p>生成的认证链接。</p><p>注： <code>链接有效期统一30天</code></p>
      */
     public void setAuthUrl(String AuthUrl) {
         this.AuthUrl = AuthUrl;
     }
 
     /**
-     * Get 链接过期时间，格式为Unix标准时间戳（秒） 
-     * @return ExpiredTime 链接过期时间，格式为Unix标准时间戳（秒）
+     * Get <p>链接过期时间，格式为Unix标准时间戳（秒）</p> 
+     * @return ExpiredTime <p>链接过期时间，格式为Unix标准时间戳（秒）</p>
      */
     public Long getExpiredTime() {
         return this.ExpiredTime;
     }
 
     /**
-     * Set 链接过期时间，格式为Unix标准时间戳（秒）
-     * @param ExpiredTime 链接过期时间，格式为Unix标准时间戳（秒）
+     * Set <p>链接过期时间，格式为Unix标准时间戳（秒）</p>
+     * @param ExpiredTime <p>链接过期时间，格式为Unix标准时间戳（秒）</p>
      */
     public void setExpiredTime(Long ExpiredTime) {
         this.ExpiredTime = ExpiredTime;

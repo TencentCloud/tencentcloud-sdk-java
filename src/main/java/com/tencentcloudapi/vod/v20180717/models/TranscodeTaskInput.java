@@ -24,240 +24,233 @@ import java.util.HashMap;
 public class TranscodeTaskInput extends AbstractModel {
 
     /**
-    * 视频转码模板 ID。
+    * <p>视频转码模板 ID。</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 水印列表，支持多张图片或文字水印，最大可支持 10 张。
+    * <p>水印列表，支持多张图片或文字水印，最大可支持 10 张。</p>
     */
     @SerializedName("WatermarkSet")
     @Expose
     private WatermarkInput [] WatermarkSet;
 
     /**
-    * 溯源水印。
+    * <p>溯源水印。</p>
     */
     @SerializedName("TraceWatermark")
     @Expose
     private TraceWatermarkInput TraceWatermark;
 
     /**
-    * 版权水印。
+    * <p>版权水印。</p>
     */
     @SerializedName("CopyRightWatermark")
     @Expose
     private CopyRightWatermarkInput CopyRightWatermark;
 
     /**
-    * 数字水印。
+    * <p>数字水印。</p>
     */
     @SerializedName("BlindWatermark")
     @Expose
     private BlindWatermarkInput BlindWatermark;
 
     /**
-    * 马赛克列表，最大可支持 10 张。
+    * <p>马赛克列表，最大可支持 10 张。</p>
     */
     @SerializedName("MosaicSet")
     @Expose
     private MosaicInput [] MosaicSet;
 
     /**
-    * 片头片尾列表，支持多片头片尾，最大可支持 10 个。
+    * <p>片头片尾列表，支持多片头片尾，最大可支持 10 个。</p>
     */
     @SerializedName("HeadTailSet")
     @Expose
     private HeadTailTaskInput [] HeadTailSet;
 
     /**
-    * 转码后的视频的起始时间偏移，单位：秒。
-<li>不填或填0，表示转码后的视频从原始视频的起始位置开始；</li>
-<li>当数值大于0时（假设为 n），表示转码后的视频从原始视频的第 n 秒位置开始；</li>
-<li>当数值小于0时（假设为 -n），表示转码后的视频从原始视频结束 n 秒前的位置开始。</li>
+    * <p>转码后的视频的起始时间偏移，单位：秒。</p><li>不填或填0，表示转码后的视频从原始视频的起始位置开始；</li><li>当数值大于0时（假设为 n），表示转码后的视频从原始视频的第 n 秒位置开始；</li><li>当数值小于0时（假设为 -n），表示转码后的视频从原始视频结束 n 秒前的位置开始。</li>
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * 转码后视频的终止时间偏移，单位：秒。
-<li>不填或填0，表示转码后的视频持续到原始视频的末尾终止；</li>
-<li>当数值大于0时（假设为 n），表示转码后的视频持续到原始视频第 n 秒时终止；</li>
-<li>当数值小于0时（假设为 -n），表示转码后的视频持续到原始视频结束 n 秒前终止。</li>
+    * <p>转码后视频的终止时间偏移，单位：秒。</p><li>不填或填0，表示转码后的视频持续到原始视频的末尾终止；</li><li>当数值大于0时（假设为 n），表示转码后的视频持续到原始视频第 n 秒时终止；</li><li>当数值小于0时（假设为 -n），表示转码后的视频持续到原始视频结束 n 秒前终止。</li>
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-     * Get 视频转码模板 ID。 
-     * @return Definition 视频转码模板 ID。
+    * <p>字幕压制信息列表。最大可支持 2 个。</p>
+    */
+    @SerializedName("SubtitleInfoSet")
+    @Expose
+    private SubtitleInfoInput [] SubtitleInfoSet;
+
+    /**
+     * Get <p>视频转码模板 ID。</p> 
+     * @return Definition <p>视频转码模板 ID。</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 视频转码模板 ID。
-     * @param Definition 视频转码模板 ID。
+     * Set <p>视频转码模板 ID。</p>
+     * @param Definition <p>视频转码模板 ID。</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get 水印列表，支持多张图片或文字水印，最大可支持 10 张。 
-     * @return WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
+     * Get <p>水印列表，支持多张图片或文字水印，最大可支持 10 张。</p> 
+     * @return WatermarkSet <p>水印列表，支持多张图片或文字水印，最大可支持 10 张。</p>
      */
     public WatermarkInput [] getWatermarkSet() {
         return this.WatermarkSet;
     }
 
     /**
-     * Set 水印列表，支持多张图片或文字水印，最大可支持 10 张。
-     * @param WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
+     * Set <p>水印列表，支持多张图片或文字水印，最大可支持 10 张。</p>
+     * @param WatermarkSet <p>水印列表，支持多张图片或文字水印，最大可支持 10 张。</p>
      */
     public void setWatermarkSet(WatermarkInput [] WatermarkSet) {
         this.WatermarkSet = WatermarkSet;
     }
 
     /**
-     * Get 溯源水印。 
-     * @return TraceWatermark 溯源水印。
+     * Get <p>溯源水印。</p> 
+     * @return TraceWatermark <p>溯源水印。</p>
      */
     public TraceWatermarkInput getTraceWatermark() {
         return this.TraceWatermark;
     }
 
     /**
-     * Set 溯源水印。
-     * @param TraceWatermark 溯源水印。
+     * Set <p>溯源水印。</p>
+     * @param TraceWatermark <p>溯源水印。</p>
      */
     public void setTraceWatermark(TraceWatermarkInput TraceWatermark) {
         this.TraceWatermark = TraceWatermark;
     }
 
     /**
-     * Get 版权水印。 
-     * @return CopyRightWatermark 版权水印。
+     * Get <p>版权水印。</p> 
+     * @return CopyRightWatermark <p>版权水印。</p>
      */
     public CopyRightWatermarkInput getCopyRightWatermark() {
         return this.CopyRightWatermark;
     }
 
     /**
-     * Set 版权水印。
-     * @param CopyRightWatermark 版权水印。
+     * Set <p>版权水印。</p>
+     * @param CopyRightWatermark <p>版权水印。</p>
      */
     public void setCopyRightWatermark(CopyRightWatermarkInput CopyRightWatermark) {
         this.CopyRightWatermark = CopyRightWatermark;
     }
 
     /**
-     * Get 数字水印。 
-     * @return BlindWatermark 数字水印。
+     * Get <p>数字水印。</p> 
+     * @return BlindWatermark <p>数字水印。</p>
      */
     public BlindWatermarkInput getBlindWatermark() {
         return this.BlindWatermark;
     }
 
     /**
-     * Set 数字水印。
-     * @param BlindWatermark 数字水印。
+     * Set <p>数字水印。</p>
+     * @param BlindWatermark <p>数字水印。</p>
      */
     public void setBlindWatermark(BlindWatermarkInput BlindWatermark) {
         this.BlindWatermark = BlindWatermark;
     }
 
     /**
-     * Get 马赛克列表，最大可支持 10 张。 
-     * @return MosaicSet 马赛克列表，最大可支持 10 张。
+     * Get <p>马赛克列表，最大可支持 10 张。</p> 
+     * @return MosaicSet <p>马赛克列表，最大可支持 10 张。</p>
      */
     public MosaicInput [] getMosaicSet() {
         return this.MosaicSet;
     }
 
     /**
-     * Set 马赛克列表，最大可支持 10 张。
-     * @param MosaicSet 马赛克列表，最大可支持 10 张。
+     * Set <p>马赛克列表，最大可支持 10 张。</p>
+     * @param MosaicSet <p>马赛克列表，最大可支持 10 张。</p>
      */
     public void setMosaicSet(MosaicInput [] MosaicSet) {
         this.MosaicSet = MosaicSet;
     }
 
     /**
-     * Get 片头片尾列表，支持多片头片尾，最大可支持 10 个。 
-     * @return HeadTailSet 片头片尾列表，支持多片头片尾，最大可支持 10 个。
+     * Get <p>片头片尾列表，支持多片头片尾，最大可支持 10 个。</p> 
+     * @return HeadTailSet <p>片头片尾列表，支持多片头片尾，最大可支持 10 个。</p>
      */
     public HeadTailTaskInput [] getHeadTailSet() {
         return this.HeadTailSet;
     }
 
     /**
-     * Set 片头片尾列表，支持多片头片尾，最大可支持 10 个。
-     * @param HeadTailSet 片头片尾列表，支持多片头片尾，最大可支持 10 个。
+     * Set <p>片头片尾列表，支持多片头片尾，最大可支持 10 个。</p>
+     * @param HeadTailSet <p>片头片尾列表，支持多片头片尾，最大可支持 10 个。</p>
      */
     public void setHeadTailSet(HeadTailTaskInput [] HeadTailSet) {
         this.HeadTailSet = HeadTailSet;
     }
 
     /**
-     * Get 转码后的视频的起始时间偏移，单位：秒。
-<li>不填或填0，表示转码后的视频从原始视频的起始位置开始；</li>
-<li>当数值大于0时（假设为 n），表示转码后的视频从原始视频的第 n 秒位置开始；</li>
-<li>当数值小于0时（假设为 -n），表示转码后的视频从原始视频结束 n 秒前的位置开始。</li> 
-     * @return StartTimeOffset 转码后的视频的起始时间偏移，单位：秒。
-<li>不填或填0，表示转码后的视频从原始视频的起始位置开始；</li>
-<li>当数值大于0时（假设为 n），表示转码后的视频从原始视频的第 n 秒位置开始；</li>
-<li>当数值小于0时（假设为 -n），表示转码后的视频从原始视频结束 n 秒前的位置开始。</li>
+     * Get <p>转码后的视频的起始时间偏移，单位：秒。</p><li>不填或填0，表示转码后的视频从原始视频的起始位置开始；</li><li>当数值大于0时（假设为 n），表示转码后的视频从原始视频的第 n 秒位置开始；</li><li>当数值小于0时（假设为 -n），表示转码后的视频从原始视频结束 n 秒前的位置开始。</li> 
+     * @return StartTimeOffset <p>转码后的视频的起始时间偏移，单位：秒。</p><li>不填或填0，表示转码后的视频从原始视频的起始位置开始；</li><li>当数值大于0时（假设为 n），表示转码后的视频从原始视频的第 n 秒位置开始；</li><li>当数值小于0时（假设为 -n），表示转码后的视频从原始视频结束 n 秒前的位置开始。</li>
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set 转码后的视频的起始时间偏移，单位：秒。
-<li>不填或填0，表示转码后的视频从原始视频的起始位置开始；</li>
-<li>当数值大于0时（假设为 n），表示转码后的视频从原始视频的第 n 秒位置开始；</li>
-<li>当数值小于0时（假设为 -n），表示转码后的视频从原始视频结束 n 秒前的位置开始。</li>
-     * @param StartTimeOffset 转码后的视频的起始时间偏移，单位：秒。
-<li>不填或填0，表示转码后的视频从原始视频的起始位置开始；</li>
-<li>当数值大于0时（假设为 n），表示转码后的视频从原始视频的第 n 秒位置开始；</li>
-<li>当数值小于0时（假设为 -n），表示转码后的视频从原始视频结束 n 秒前的位置开始。</li>
+     * Set <p>转码后的视频的起始时间偏移，单位：秒。</p><li>不填或填0，表示转码后的视频从原始视频的起始位置开始；</li><li>当数值大于0时（假设为 n），表示转码后的视频从原始视频的第 n 秒位置开始；</li><li>当数值小于0时（假设为 -n），表示转码后的视频从原始视频结束 n 秒前的位置开始。</li>
+     * @param StartTimeOffset <p>转码后的视频的起始时间偏移，单位：秒。</p><li>不填或填0，表示转码后的视频从原始视频的起始位置开始；</li><li>当数值大于0时（假设为 n），表示转码后的视频从原始视频的第 n 秒位置开始；</li><li>当数值小于0时（假设为 -n），表示转码后的视频从原始视频结束 n 秒前的位置开始。</li>
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get 转码后视频的终止时间偏移，单位：秒。
-<li>不填或填0，表示转码后的视频持续到原始视频的末尾终止；</li>
-<li>当数值大于0时（假设为 n），表示转码后的视频持续到原始视频第 n 秒时终止；</li>
-<li>当数值小于0时（假设为 -n），表示转码后的视频持续到原始视频结束 n 秒前终止。</li> 
-     * @return EndTimeOffset 转码后视频的终止时间偏移，单位：秒。
-<li>不填或填0，表示转码后的视频持续到原始视频的末尾终止；</li>
-<li>当数值大于0时（假设为 n），表示转码后的视频持续到原始视频第 n 秒时终止；</li>
-<li>当数值小于0时（假设为 -n），表示转码后的视频持续到原始视频结束 n 秒前终止。</li>
+     * Get <p>转码后视频的终止时间偏移，单位：秒。</p><li>不填或填0，表示转码后的视频持续到原始视频的末尾终止；</li><li>当数值大于0时（假设为 n），表示转码后的视频持续到原始视频第 n 秒时终止；</li><li>当数值小于0时（假设为 -n），表示转码后的视频持续到原始视频结束 n 秒前终止。</li> 
+     * @return EndTimeOffset <p>转码后视频的终止时间偏移，单位：秒。</p><li>不填或填0，表示转码后的视频持续到原始视频的末尾终止；</li><li>当数值大于0时（假设为 n），表示转码后的视频持续到原始视频第 n 秒时终止；</li><li>当数值小于0时（假设为 -n），表示转码后的视频持续到原始视频结束 n 秒前终止。</li>
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set 转码后视频的终止时间偏移，单位：秒。
-<li>不填或填0，表示转码后的视频持续到原始视频的末尾终止；</li>
-<li>当数值大于0时（假设为 n），表示转码后的视频持续到原始视频第 n 秒时终止；</li>
-<li>当数值小于0时（假设为 -n），表示转码后的视频持续到原始视频结束 n 秒前终止。</li>
-     * @param EndTimeOffset 转码后视频的终止时间偏移，单位：秒。
-<li>不填或填0，表示转码后的视频持续到原始视频的末尾终止；</li>
-<li>当数值大于0时（假设为 n），表示转码后的视频持续到原始视频第 n 秒时终止；</li>
-<li>当数值小于0时（假设为 -n），表示转码后的视频持续到原始视频结束 n 秒前终止。</li>
+     * Set <p>转码后视频的终止时间偏移，单位：秒。</p><li>不填或填0，表示转码后的视频持续到原始视频的末尾终止；</li><li>当数值大于0时（假设为 n），表示转码后的视频持续到原始视频第 n 秒时终止；</li><li>当数值小于0时（假设为 -n），表示转码后的视频持续到原始视频结束 n 秒前终止。</li>
+     * @param EndTimeOffset <p>转码后视频的终止时间偏移，单位：秒。</p><li>不填或填0，表示转码后的视频持续到原始视频的末尾终止；</li><li>当数值大于0时（假设为 n），表示转码后的视频持续到原始视频第 n 秒时终止；</li><li>当数值小于0时（假设为 -n），表示转码后的视频持续到原始视频结束 n 秒前终止。</li>
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
+    }
+
+    /**
+     * Get <p>字幕压制信息列表。最大可支持 2 个。</p> 
+     * @return SubtitleInfoSet <p>字幕压制信息列表。最大可支持 2 个。</p>
+     */
+    public SubtitleInfoInput [] getSubtitleInfoSet() {
+        return this.SubtitleInfoSet;
+    }
+
+    /**
+     * Set <p>字幕压制信息列表。最大可支持 2 个。</p>
+     * @param SubtitleInfoSet <p>字幕压制信息列表。最大可支持 2 个。</p>
+     */
+    public void setSubtitleInfoSet(SubtitleInfoInput [] SubtitleInfoSet) {
+        this.SubtitleInfoSet = SubtitleInfoSet;
     }
 
     public TranscodeTaskInput() {
@@ -304,6 +297,12 @@ public class TranscodeTaskInput extends AbstractModel {
         if (source.EndTimeOffset != null) {
             this.EndTimeOffset = new Float(source.EndTimeOffset);
         }
+        if (source.SubtitleInfoSet != null) {
+            this.SubtitleInfoSet = new SubtitleInfoInput[source.SubtitleInfoSet.length];
+            for (int i = 0; i < source.SubtitleInfoSet.length; i++) {
+                this.SubtitleInfoSet[i] = new SubtitleInfoInput(source.SubtitleInfoSet[i]);
+            }
+        }
     }
 
 
@@ -320,6 +319,7 @@ public class TranscodeTaskInput extends AbstractModel {
         this.setParamArrayObj(map, prefix + "HeadTailSet.", this.HeadTailSet);
         this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
         this.setParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
+        this.setParamArrayObj(map, prefix + "SubtitleInfoSet.", this.SubtitleInfoSet);
 
     }
 }

@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class CreateInferServiceByTemplateRequest extends AbstractModel {
 
     /**
-    * 模版ID
+    * <p>模版ID</p>
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-    * 服务名称
+    * <p>服务名称</p>
     */
     @SerializedName("ServiceName")
     @Expose
     private String ServiceName;
 
     /**
-    * 副本数
+    * <p>副本数</p>
     */
     @SerializedName("Replicas")
     @Expose
     private Long Replicas;
 
     /**
-    * 付费方式，POSTPAID_BY_HOUR按量后付费
+    * <p>付费方式，POSTPAID_BY_HOUR按量后付费</p>
     */
     @SerializedName("ServiceChargeType")
     @Expose
     private String ServiceChargeType;
 
     /**
-    * 描述了服务的超参数配置
+    * <p>描述了服务的超参数配置</p>
     */
     @SerializedName("HyperParam")
     @Expose
     private HyperParam HyperParam;
 
     /**
-    * 网络设置
+    * <p>网络设置</p>
     */
     @SerializedName("NetworkSetting")
     @Expose
     private NetworkSetting NetworkSetting;
 
     /**
-     * Get 模版ID 
-     * @return TemplateId 模版ID
+     * Get <p>模版ID</p> 
+     * @return TemplateId <p>模版ID</p>
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模版ID
-     * @param TemplateId 模版ID
+     * Set <p>模版ID</p>
+     * @param TemplateId <p>模版ID</p>
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 服务名称 
-     * @return ServiceName 服务名称
+     * Get <p>服务名称</p> 
+     * @return ServiceName <p>服务名称</p>
      */
     public String getServiceName() {
         return this.ServiceName;
     }
 
     /**
-     * Set 服务名称
-     * @param ServiceName 服务名称
+     * Set <p>服务名称</p>
+     * @param ServiceName <p>服务名称</p>
      */
     public void setServiceName(String ServiceName) {
         this.ServiceName = ServiceName;
     }
 
     /**
-     * Get 副本数 
-     * @return Replicas 副本数
+     * Get <p>副本数</p> 
+     * @return Replicas <p>副本数</p>
      */
     public Long getReplicas() {
         return this.Replicas;
     }
 
     /**
-     * Set 副本数
-     * @param Replicas 副本数
+     * Set <p>副本数</p>
+     * @param Replicas <p>副本数</p>
      */
     public void setReplicas(Long Replicas) {
         this.Replicas = Replicas;
     }
 
     /**
-     * Get 付费方式，POSTPAID_BY_HOUR按量后付费 
-     * @return ServiceChargeType 付费方式，POSTPAID_BY_HOUR按量后付费
+     * Get <p>付费方式，POSTPAID_BY_HOUR按量后付费</p> 
+     * @return ServiceChargeType <p>付费方式，POSTPAID_BY_HOUR按量后付费</p>
      */
     public String getServiceChargeType() {
         return this.ServiceChargeType;
     }
 
     /**
-     * Set 付费方式，POSTPAID_BY_HOUR按量后付费
-     * @param ServiceChargeType 付费方式，POSTPAID_BY_HOUR按量后付费
+     * Set <p>付费方式，POSTPAID_BY_HOUR按量后付费</p>
+     * @param ServiceChargeType <p>付费方式，POSTPAID_BY_HOUR按量后付费</p>
      */
     public void setServiceChargeType(String ServiceChargeType) {
         this.ServiceChargeType = ServiceChargeType;
     }
 
     /**
-     * Get 描述了服务的超参数配置 
-     * @return HyperParam 描述了服务的超参数配置
+     * Get <p>描述了服务的超参数配置</p> 
+     * @return HyperParam <p>描述了服务的超参数配置</p>
      */
     public HyperParam getHyperParam() {
         return this.HyperParam;
     }
 
     /**
-     * Set 描述了服务的超参数配置
-     * @param HyperParam 描述了服务的超参数配置
+     * Set <p>描述了服务的超参数配置</p>
+     * @param HyperParam <p>描述了服务的超参数配置</p>
      */
     public void setHyperParam(HyperParam HyperParam) {
         this.HyperParam = HyperParam;
     }
 
     /**
-     * Get 网络设置 
-     * @return NetworkSetting 网络设置
+     * Get <p>网络设置</p> 
+     * @return NetworkSetting <p>网络设置</p>
      */
     public NetworkSetting getNetworkSetting() {
         return this.NetworkSetting;
     }
 
     /**
-     * Set 网络设置
-     * @param NetworkSetting 网络设置
+     * Set <p>网络设置</p>
+     * @param NetworkSetting <p>网络设置</p>
      */
     public void setNetworkSetting(NetworkSetting NetworkSetting) {
         this.NetworkSetting = NetworkSetting;

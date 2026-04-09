@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ApmAssociation extends AbstractModel {
 
     /**
-    * 关联产品的实例ID
+    * <p>关联产品的实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PeerId")
@@ -32,7 +32,7 @@ public class ApmAssociation extends AbstractModel {
     private String PeerId;
 
     /**
-    * 关联关系状态：1（启用）、2（不启用）、3（已失效）
+    * <p>关联关系状态：1（启用）、2（不启用）、3（已失效）</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -40,16 +40,23 @@ public class ApmAssociation extends AbstractModel {
     private Long Status;
 
     /**
-    * CKafka消息主题
+    * <p>CKafka消息主题</p>
     */
     @SerializedName("Topic")
     @Expose
     private String Topic;
 
     /**
-     * Get 关联产品的实例ID
+    * <p>Ckafka消费主题</p><p>用于Kafka指标投递</p>
+    */
+    @SerializedName("MetricTopic")
+    @Expose
+    private String MetricTopic;
+
+    /**
+     * Get <p>关联产品的实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PeerId 关联产品的实例ID
+     * @return PeerId <p>关联产品的实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPeerId() {
@@ -57,9 +64,9 @@ public class ApmAssociation extends AbstractModel {
     }
 
     /**
-     * Set 关联产品的实例ID
+     * Set <p>关联产品的实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PeerId 关联产品的实例ID
+     * @param PeerId <p>关联产品的实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPeerId(String PeerId) {
@@ -67,9 +74,9 @@ public class ApmAssociation extends AbstractModel {
     }
 
     /**
-     * Get 关联关系状态：1（启用）、2（不启用）、3（已失效）
+     * Get <p>关联关系状态：1（启用）、2（不启用）、3（已失效）</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 关联关系状态：1（启用）、2（不启用）、3（已失效）
+     * @return Status <p>关联关系状态：1（启用）、2（不启用）、3（已失效）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -77,9 +84,9 @@ public class ApmAssociation extends AbstractModel {
     }
 
     /**
-     * Set 关联关系状态：1（启用）、2（不启用）、3（已失效）
+     * Set <p>关联关系状态：1（启用）、2（不启用）、3（已失效）</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 关联关系状态：1（启用）、2（不启用）、3（已失效）
+     * @param Status <p>关联关系状态：1（启用）、2（不启用）、3（已失效）</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
@@ -87,19 +94,35 @@ public class ApmAssociation extends AbstractModel {
     }
 
     /**
-     * Get CKafka消息主题 
-     * @return Topic CKafka消息主题
+     * Get <p>CKafka消息主题</p> 
+     * @return Topic <p>CKafka消息主题</p>
      */
     public String getTopic() {
         return this.Topic;
     }
 
     /**
-     * Set CKafka消息主题
-     * @param Topic CKafka消息主题
+     * Set <p>CKafka消息主题</p>
+     * @param Topic <p>CKafka消息主题</p>
      */
     public void setTopic(String Topic) {
         this.Topic = Topic;
+    }
+
+    /**
+     * Get <p>Ckafka消费主题</p><p>用于Kafka指标投递</p> 
+     * @return MetricTopic <p>Ckafka消费主题</p><p>用于Kafka指标投递</p>
+     */
+    public String getMetricTopic() {
+        return this.MetricTopic;
+    }
+
+    /**
+     * Set <p>Ckafka消费主题</p><p>用于Kafka指标投递</p>
+     * @param MetricTopic <p>Ckafka消费主题</p><p>用于Kafka指标投递</p>
+     */
+    public void setMetricTopic(String MetricTopic) {
+        this.MetricTopic = MetricTopic;
     }
 
     public ApmAssociation() {
@@ -119,6 +142,9 @@ public class ApmAssociation extends AbstractModel {
         if (source.Topic != null) {
             this.Topic = new String(source.Topic);
         }
+        if (source.MetricTopic != null) {
+            this.MetricTopic = new String(source.MetricTopic);
+        }
     }
 
 
@@ -129,6 +155,7 @@ public class ApmAssociation extends AbstractModel {
         this.setParamSimple(map, prefix + "PeerId", this.PeerId);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Topic", this.Topic);
+        this.setParamSimple(map, prefix + "MetricTopic", this.MetricTopic);
 
     }
 }

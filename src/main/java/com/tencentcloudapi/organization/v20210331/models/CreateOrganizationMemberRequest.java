@@ -24,253 +24,253 @@ import java.util.HashMap;
 public class CreateOrganizationMemberRequest extends AbstractModel {
 
     /**
-    * 成员名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&._[]-:,
+    * <p>成员名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&amp;._[]-:,</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 关系策略。取值：Financial
+    * <p>关系策略。取值：Financial</p>
     */
     @SerializedName("PolicyType")
     @Expose
     private String PolicyType;
 
     /**
-    * 成员财务权限ID列表。取值：1-查看账单、2-查看余额、3-资金划拨（若需要开启资金划拨权限，请联系您的商务经理内部开通。）、4-合并出账、5-开票、6-优惠继承、7-代付费、8-成本分析、9-预算管理、10-信用额度设置（若需要开启信用额度设置权限，请联系您的商务经理内部开通。），1、2 默认必须
+    * <p>成员财务权限ID列表。取值：1-查看账单、2-查看余额、3-资金划拨（若需要开启资金划拨权限，请联系您的商务经理内部开通。）、4-合并出账、5-开票、6-优惠继承、7-代付费、8-成本分析、9-预算管理、10-信用额度设置（若需要开启信用额度设置权限，请联系您的商务经理内部开通。），1、2 默认必须</p>
     */
     @SerializedName("PermissionIds")
     @Expose
     private Long [] PermissionIds;
 
     /**
-    * 成员所属部门的节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
+    * <p>成员所属部门的节点ID。可以通过<a href="https://cloud.tencent.com/document/product/850/82926">DescribeOrganizationNodes</a>获取</p>
     */
     @SerializedName("NodeId")
     @Expose
     private Long NodeId;
 
     /**
-    * 账号名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&._[]-:,
+    * <p>账号名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&amp;._[]-:,</p>
     */
     @SerializedName("AccountName")
     @Expose
     private String AccountName;
 
     /**
-    * 备注。
+    * <p>备注。</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 成员创建记录ID。创建异常重试时需要
+    * <p>成员创建记录ID。创建异常重试时需要</p>
     */
     @SerializedName("RecordId")
     @Expose
     private Long RecordId;
 
     /**
-    * 代付者Uin。成员代付费时需要
+    * <p>代付者Uin。成员代付费时需要</p>
     */
     @SerializedName("PayUin")
     @Expose
     private String PayUin;
 
     /**
-    * 成员访问身份ID列表。可以调用ListOrganizationIdentity获取，1默认支持
+    * <p>成员访问身份ID列表。可以调用ListOrganizationIdentity获取，1默认支持</p>
     */
     @SerializedName("IdentityRoleID")
     @Expose
     private Long [] IdentityRoleID;
 
     /**
-    * 认证主体关系ID。给不同主体创建成员时需要，可以调用DescribeOrganizationAuthNode获取
+    * <p>认证主体关系ID。给不同主体创建成员时需要，可以调用DescribeOrganizationAuthNode获取</p>
     */
     @SerializedName("AuthRelationId")
     @Expose
     private Long AuthRelationId;
 
     /**
-    * 成员标签列表。最大10个
+    * <p>成员标签列表。最大10个</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-     * Get 成员名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&._[]-:, 
-     * @return Name 成员名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&._[]-:,
+     * Get <p>成员名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&amp;._[]-:,</p> 
+     * @return Name <p>成员名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&amp;._[]-:,</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 成员名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&._[]-:,
-     * @param Name 成员名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&._[]-:,
+     * Set <p>成员名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&amp;._[]-:,</p>
+     * @param Name <p>成员名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&amp;._[]-:,</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 关系策略。取值：Financial 
-     * @return PolicyType 关系策略。取值：Financial
+     * Get <p>关系策略。取值：Financial</p> 
+     * @return PolicyType <p>关系策略。取值：Financial</p>
      */
     public String getPolicyType() {
         return this.PolicyType;
     }
 
     /**
-     * Set 关系策略。取值：Financial
-     * @param PolicyType 关系策略。取值：Financial
+     * Set <p>关系策略。取值：Financial</p>
+     * @param PolicyType <p>关系策略。取值：Financial</p>
      */
     public void setPolicyType(String PolicyType) {
         this.PolicyType = PolicyType;
     }
 
     /**
-     * Get 成员财务权限ID列表。取值：1-查看账单、2-查看余额、3-资金划拨（若需要开启资金划拨权限，请联系您的商务经理内部开通。）、4-合并出账、5-开票、6-优惠继承、7-代付费、8-成本分析、9-预算管理、10-信用额度设置（若需要开启信用额度设置权限，请联系您的商务经理内部开通。），1、2 默认必须 
-     * @return PermissionIds 成员财务权限ID列表。取值：1-查看账单、2-查看余额、3-资金划拨（若需要开启资金划拨权限，请联系您的商务经理内部开通。）、4-合并出账、5-开票、6-优惠继承、7-代付费、8-成本分析、9-预算管理、10-信用额度设置（若需要开启信用额度设置权限，请联系您的商务经理内部开通。），1、2 默认必须
+     * Get <p>成员财务权限ID列表。取值：1-查看账单、2-查看余额、3-资金划拨（若需要开启资金划拨权限，请联系您的商务经理内部开通。）、4-合并出账、5-开票、6-优惠继承、7-代付费、8-成本分析、9-预算管理、10-信用额度设置（若需要开启信用额度设置权限，请联系您的商务经理内部开通。），1、2 默认必须</p> 
+     * @return PermissionIds <p>成员财务权限ID列表。取值：1-查看账单、2-查看余额、3-资金划拨（若需要开启资金划拨权限，请联系您的商务经理内部开通。）、4-合并出账、5-开票、6-优惠继承、7-代付费、8-成本分析、9-预算管理、10-信用额度设置（若需要开启信用额度设置权限，请联系您的商务经理内部开通。），1、2 默认必须</p>
      */
     public Long [] getPermissionIds() {
         return this.PermissionIds;
     }
 
     /**
-     * Set 成员财务权限ID列表。取值：1-查看账单、2-查看余额、3-资金划拨（若需要开启资金划拨权限，请联系您的商务经理内部开通。）、4-合并出账、5-开票、6-优惠继承、7-代付费、8-成本分析、9-预算管理、10-信用额度设置（若需要开启信用额度设置权限，请联系您的商务经理内部开通。），1、2 默认必须
-     * @param PermissionIds 成员财务权限ID列表。取值：1-查看账单、2-查看余额、3-资金划拨（若需要开启资金划拨权限，请联系您的商务经理内部开通。）、4-合并出账、5-开票、6-优惠继承、7-代付费、8-成本分析、9-预算管理、10-信用额度设置（若需要开启信用额度设置权限，请联系您的商务经理内部开通。），1、2 默认必须
+     * Set <p>成员财务权限ID列表。取值：1-查看账单、2-查看余额、3-资金划拨（若需要开启资金划拨权限，请联系您的商务经理内部开通。）、4-合并出账、5-开票、6-优惠继承、7-代付费、8-成本分析、9-预算管理、10-信用额度设置（若需要开启信用额度设置权限，请联系您的商务经理内部开通。），1、2 默认必须</p>
+     * @param PermissionIds <p>成员财务权限ID列表。取值：1-查看账单、2-查看余额、3-资金划拨（若需要开启资金划拨权限，请联系您的商务经理内部开通。）、4-合并出账、5-开票、6-优惠继承、7-代付费、8-成本分析、9-预算管理、10-信用额度设置（若需要开启信用额度设置权限，请联系您的商务经理内部开通。），1、2 默认必须</p>
      */
     public void setPermissionIds(Long [] PermissionIds) {
         this.PermissionIds = PermissionIds;
     }
 
     /**
-     * Get 成员所属部门的节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取 
-     * @return NodeId 成员所属部门的节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
+     * Get <p>成员所属部门的节点ID。可以通过<a href="https://cloud.tencent.com/document/product/850/82926">DescribeOrganizationNodes</a>获取</p> 
+     * @return NodeId <p>成员所属部门的节点ID。可以通过<a href="https://cloud.tencent.com/document/product/850/82926">DescribeOrganizationNodes</a>获取</p>
      */
     public Long getNodeId() {
         return this.NodeId;
     }
 
     /**
-     * Set 成员所属部门的节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
-     * @param NodeId 成员所属部门的节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
+     * Set <p>成员所属部门的节点ID。可以通过<a href="https://cloud.tencent.com/document/product/850/82926">DescribeOrganizationNodes</a>获取</p>
+     * @param NodeId <p>成员所属部门的节点ID。可以通过<a href="https://cloud.tencent.com/document/product/850/82926">DescribeOrganizationNodes</a>获取</p>
      */
     public void setNodeId(Long NodeId) {
         this.NodeId = NodeId;
     }
 
     /**
-     * Get 账号名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&._[]-:, 
-     * @return AccountName 账号名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&._[]-:,
+     * Get <p>账号名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&amp;._[]-:,</p> 
+     * @return AccountName <p>账号名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&amp;._[]-:,</p>
      */
     public String getAccountName() {
         return this.AccountName;
     }
 
     /**
-     * Set 账号名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&._[]-:,
-     * @param AccountName 账号名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&._[]-:,
+     * Set <p>账号名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&amp;._[]-:,</p>
+     * @param AccountName <p>账号名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&amp;._[]-:,</p>
      */
     public void setAccountName(String AccountName) {
         this.AccountName = AccountName;
     }
 
     /**
-     * Get 备注。 
-     * @return Remark 备注。
+     * Get <p>备注。</p> 
+     * @return Remark <p>备注。</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注。
-     * @param Remark 备注。
+     * Set <p>备注。</p>
+     * @param Remark <p>备注。</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 成员创建记录ID。创建异常重试时需要 
-     * @return RecordId 成员创建记录ID。创建异常重试时需要
+     * Get <p>成员创建记录ID。创建异常重试时需要</p> 
+     * @return RecordId <p>成员创建记录ID。创建异常重试时需要</p>
      */
     public Long getRecordId() {
         return this.RecordId;
     }
 
     /**
-     * Set 成员创建记录ID。创建异常重试时需要
-     * @param RecordId 成员创建记录ID。创建异常重试时需要
+     * Set <p>成员创建记录ID。创建异常重试时需要</p>
+     * @param RecordId <p>成员创建记录ID。创建异常重试时需要</p>
      */
     public void setRecordId(Long RecordId) {
         this.RecordId = RecordId;
     }
 
     /**
-     * Get 代付者Uin。成员代付费时需要 
-     * @return PayUin 代付者Uin。成员代付费时需要
+     * Get <p>代付者Uin。成员代付费时需要</p> 
+     * @return PayUin <p>代付者Uin。成员代付费时需要</p>
      */
     public String getPayUin() {
         return this.PayUin;
     }
 
     /**
-     * Set 代付者Uin。成员代付费时需要
-     * @param PayUin 代付者Uin。成员代付费时需要
+     * Set <p>代付者Uin。成员代付费时需要</p>
+     * @param PayUin <p>代付者Uin。成员代付费时需要</p>
      */
     public void setPayUin(String PayUin) {
         this.PayUin = PayUin;
     }
 
     /**
-     * Get 成员访问身份ID列表。可以调用ListOrganizationIdentity获取，1默认支持 
-     * @return IdentityRoleID 成员访问身份ID列表。可以调用ListOrganizationIdentity获取，1默认支持
+     * Get <p>成员访问身份ID列表。可以调用ListOrganizationIdentity获取，1默认支持</p> 
+     * @return IdentityRoleID <p>成员访问身份ID列表。可以调用ListOrganizationIdentity获取，1默认支持</p>
      */
     public Long [] getIdentityRoleID() {
         return this.IdentityRoleID;
     }
 
     /**
-     * Set 成员访问身份ID列表。可以调用ListOrganizationIdentity获取，1默认支持
-     * @param IdentityRoleID 成员访问身份ID列表。可以调用ListOrganizationIdentity获取，1默认支持
+     * Set <p>成员访问身份ID列表。可以调用ListOrganizationIdentity获取，1默认支持</p>
+     * @param IdentityRoleID <p>成员访问身份ID列表。可以调用ListOrganizationIdentity获取，1默认支持</p>
      */
     public void setIdentityRoleID(Long [] IdentityRoleID) {
         this.IdentityRoleID = IdentityRoleID;
     }
 
     /**
-     * Get 认证主体关系ID。给不同主体创建成员时需要，可以调用DescribeOrganizationAuthNode获取 
-     * @return AuthRelationId 认证主体关系ID。给不同主体创建成员时需要，可以调用DescribeOrganizationAuthNode获取
+     * Get <p>认证主体关系ID。给不同主体创建成员时需要，可以调用DescribeOrganizationAuthNode获取</p> 
+     * @return AuthRelationId <p>认证主体关系ID。给不同主体创建成员时需要，可以调用DescribeOrganizationAuthNode获取</p>
      */
     public Long getAuthRelationId() {
         return this.AuthRelationId;
     }
 
     /**
-     * Set 认证主体关系ID。给不同主体创建成员时需要，可以调用DescribeOrganizationAuthNode获取
-     * @param AuthRelationId 认证主体关系ID。给不同主体创建成员时需要，可以调用DescribeOrganizationAuthNode获取
+     * Set <p>认证主体关系ID。给不同主体创建成员时需要，可以调用DescribeOrganizationAuthNode获取</p>
+     * @param AuthRelationId <p>认证主体关系ID。给不同主体创建成员时需要，可以调用DescribeOrganizationAuthNode获取</p>
      */
     public void setAuthRelationId(Long AuthRelationId) {
         this.AuthRelationId = AuthRelationId;
     }
 
     /**
-     * Get 成员标签列表。最大10个 
-     * @return Tags 成员标签列表。最大10个
+     * Get <p>成员标签列表。最大10个</p> 
+     * @return Tags <p>成员标签列表。最大10个</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 成员标签列表。最大10个
-     * @param Tags 成员标签列表。最大10个
+     * Set <p>成员标签列表。最大10个</p>
+     * @param Tags <p>成员标签列表。最大10个</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ListAggregateCompliancePacksResponse extends AbstractModel {
 
     /**
-    * 总数
+    * <p>总数</p>
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * 详情
+    * <p>详情</p>
     */
     @SerializedName("Items")
     @Expose
@@ -45,32 +45,32 @@ public class ListAggregateCompliancePacksResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总数 
-     * @return Total 总数
+     * Get <p>总数</p> 
+     * @return Total <p>总数</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 总数
-     * @param Total 总数
+     * Set <p>总数</p>
+     * @param Total <p>总数</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 详情 
-     * @return Items 详情
+     * Get <p>详情</p> 
+     * @return Items <p>详情</p>
      */
     public ConfigCompliancePack [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set 详情
-     * @param Items 详情
+     * Set <p>详情</p>
+     * @param Items <p>详情</p>
      */
     public void setItems(ConfigCompliancePack [] Items) {
         this.Items = Items;

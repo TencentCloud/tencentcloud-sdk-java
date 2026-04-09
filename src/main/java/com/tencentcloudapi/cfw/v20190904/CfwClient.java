@@ -182,6 +182,17 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *创建Nat防火墙Dnat规则
+     * @param req CreateNatFwDnatRuleRequest
+     * @return CreateNatFwDnatRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateNatFwDnatRuleResponse CreateNatFwDnatRule(CreateNatFwDnatRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateNatFwDnatRule", CreateNatFwDnatRuleResponse.class);
+    }
+
+    /**
      *创建NAT防火墙实例（Region参数必填）
      * @param req CreateNatFwInstanceRequest
      * @return CreateNatFwInstanceResponse
@@ -267,6 +278,17 @@ public class CfwClient extends AbstractClient{
     public DeleteBlockIgnoreRuleNewResponse DeleteBlockIgnoreRuleNew(DeleteBlockIgnoreRuleNewRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteBlockIgnoreRuleNew", DeleteBlockIgnoreRuleNewResponse.class);
+    }
+
+    /**
+     *删除Nat防火墙Dnat规则
+     * @param req DeleteNatFwDnatRuleRequest
+     * @return DeleteNatFwDnatRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteNatFwDnatRuleResponse DeleteNatFwDnatRule(DeleteNatFwDnatRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteNatFwDnatRule", DeleteNatFwDnatRuleResponse.class);
     }
 
     /**

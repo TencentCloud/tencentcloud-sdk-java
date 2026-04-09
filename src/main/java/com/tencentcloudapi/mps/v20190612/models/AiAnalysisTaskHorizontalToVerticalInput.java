@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AiAnalysisTaskHorizontalToVerticalInput extends AbstractModel {
 
     /**
-    * 视频智能横转竖模板 ID
+    * <p>视频智能横转竖模板 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Definition")
@@ -32,9 +32,16 @@ public class AiAnalysisTaskHorizontalToVerticalInput extends AbstractModel {
     private Long Definition;
 
     /**
-     * Get 视频智能横转竖模板 ID
+    * <p>扩展参数。</p>
+    */
+    @SerializedName("ExtendedParameter")
+    @Expose
+    private String ExtendedParameter;
+
+    /**
+     * Get <p>视频智能横转竖模板 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Definition 视频智能横转竖模板 ID
+     * @return Definition <p>视频智能横转竖模板 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDefinition() {
@@ -42,13 +49,29 @@ public class AiAnalysisTaskHorizontalToVerticalInput extends AbstractModel {
     }
 
     /**
-     * Set 视频智能横转竖模板 ID
+     * Set <p>视频智能横转竖模板 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Definition 视频智能横转竖模板 ID
+     * @param Definition <p>视频智能横转竖模板 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
+    }
+
+    /**
+     * Get <p>扩展参数。</p> 
+     * @return ExtendedParameter <p>扩展参数。</p>
+     */
+    public String getExtendedParameter() {
+        return this.ExtendedParameter;
+    }
+
+    /**
+     * Set <p>扩展参数。</p>
+     * @param ExtendedParameter <p>扩展参数。</p>
+     */
+    public void setExtendedParameter(String ExtendedParameter) {
+        this.ExtendedParameter = ExtendedParameter;
     }
 
     public AiAnalysisTaskHorizontalToVerticalInput() {
@@ -62,6 +85,9 @@ public class AiAnalysisTaskHorizontalToVerticalInput extends AbstractModel {
         if (source.Definition != null) {
             this.Definition = new Long(source.Definition);
         }
+        if (source.ExtendedParameter != null) {
+            this.ExtendedParameter = new String(source.ExtendedParameter);
+        }
     }
 
 
@@ -70,6 +96,7 @@ public class AiAnalysisTaskHorizontalToVerticalInput extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);
+        this.setParamSimple(map, prefix + "ExtendedParameter", this.ExtendedParameter);
 
     }
 }

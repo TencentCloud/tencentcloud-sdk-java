@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class TaskGroupInstancesExecuteRules extends AbstractModel {
 
     /**
-    * 实例选取模式
+    * <p>实例选取模式</p><p>枚举值：</p><ul><li>1： 全部注入</li><li>2： 随机选取指定比例注入</li><li>3： 随机选取指定数量注入</li></ul>
     */
     @SerializedName("TaskGroupInstancesExecuteMode")
     @Expose
     private Long TaskGroupInstancesExecuteMode;
 
     /**
-    * 按比例选取模式下选取比例
+    * <p>按比例选取模式下选取比例</p>
     */
     @SerializedName("TaskGroupInstancesExecutePercent")
     @Expose
     private Long TaskGroupInstancesExecutePercent;
 
     /**
-    * 按数量选取模式下选取数量
+    * <p>按数量选取模式下选取数量</p>
     */
     @SerializedName("TaskGroupInstancesExecuteNum")
     @Expose
     private Long TaskGroupInstancesExecuteNum;
 
     /**
-     * Get 实例选取模式 
-     * @return TaskGroupInstancesExecuteMode 实例选取模式
+     * Get <p>实例选取模式</p><p>枚举值：</p><ul><li>1： 全部注入</li><li>2： 随机选取指定比例注入</li><li>3： 随机选取指定数量注入</li></ul> 
+     * @return TaskGroupInstancesExecuteMode <p>实例选取模式</p><p>枚举值：</p><ul><li>1： 全部注入</li><li>2： 随机选取指定比例注入</li><li>3： 随机选取指定数量注入</li></ul>
      */
     public Long getTaskGroupInstancesExecuteMode() {
         return this.TaskGroupInstancesExecuteMode;
     }
 
     /**
-     * Set 实例选取模式
-     * @param TaskGroupInstancesExecuteMode 实例选取模式
+     * Set <p>实例选取模式</p><p>枚举值：</p><ul><li>1： 全部注入</li><li>2： 随机选取指定比例注入</li><li>3： 随机选取指定数量注入</li></ul>
+     * @param TaskGroupInstancesExecuteMode <p>实例选取模式</p><p>枚举值：</p><ul><li>1： 全部注入</li><li>2： 随机选取指定比例注入</li><li>3： 随机选取指定数量注入</li></ul>
      */
     public void setTaskGroupInstancesExecuteMode(Long TaskGroupInstancesExecuteMode) {
         this.TaskGroupInstancesExecuteMode = TaskGroupInstancesExecuteMode;
     }
 
     /**
-     * Get 按比例选取模式下选取比例 
-     * @return TaskGroupInstancesExecutePercent 按比例选取模式下选取比例
+     * Get <p>按比例选取模式下选取比例</p> 
+     * @return TaskGroupInstancesExecutePercent <p>按比例选取模式下选取比例</p>
      */
     public Long getTaskGroupInstancesExecutePercent() {
         return this.TaskGroupInstancesExecutePercent;
     }
 
     /**
-     * Set 按比例选取模式下选取比例
-     * @param TaskGroupInstancesExecutePercent 按比例选取模式下选取比例
+     * Set <p>按比例选取模式下选取比例</p>
+     * @param TaskGroupInstancesExecutePercent <p>按比例选取模式下选取比例</p>
      */
     public void setTaskGroupInstancesExecutePercent(Long TaskGroupInstancesExecutePercent) {
         this.TaskGroupInstancesExecutePercent = TaskGroupInstancesExecutePercent;
     }
 
     /**
-     * Get 按数量选取模式下选取数量 
-     * @return TaskGroupInstancesExecuteNum 按数量选取模式下选取数量
+     * Get <p>按数量选取模式下选取数量</p> 
+     * @return TaskGroupInstancesExecuteNum <p>按数量选取模式下选取数量</p>
      */
     public Long getTaskGroupInstancesExecuteNum() {
         return this.TaskGroupInstancesExecuteNum;
     }
 
     /**
-     * Set 按数量选取模式下选取数量
-     * @param TaskGroupInstancesExecuteNum 按数量选取模式下选取数量
+     * Set <p>按数量选取模式下选取数量</p>
+     * @param TaskGroupInstancesExecuteNum <p>按数量选取模式下选取数量</p>
      */
     public void setTaskGroupInstancesExecuteNum(Long TaskGroupInstancesExecuteNum) {
         this.TaskGroupInstancesExecuteNum = TaskGroupInstancesExecuteNum;

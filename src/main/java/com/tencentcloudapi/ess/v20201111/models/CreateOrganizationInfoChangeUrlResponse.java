@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateOrganizationInfoChangeUrlResponse extends AbstractModel {
 
     /**
-    * 创建的企业信息变更链接。
+    * <p>创建的企业信息变更链接。</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 链接过期时间。链接7天有效。
+    * <p>链接过期时间。链接7天有效。</p>
     */
     @SerializedName("ExpiredTime")
     @Expose
@@ -45,32 +45,32 @@ public class CreateOrganizationInfoChangeUrlResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 创建的企业信息变更链接。 
-     * @return Url 创建的企业信息变更链接。
+     * Get <p>创建的企业信息变更链接。</p> 
+     * @return Url <p>创建的企业信息变更链接。</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 创建的企业信息变更链接。
-     * @param Url 创建的企业信息变更链接。
+     * Set <p>创建的企业信息变更链接。</p>
+     * @param Url <p>创建的企业信息变更链接。</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get 链接过期时间。链接7天有效。 
-     * @return ExpiredTime 链接过期时间。链接7天有效。
+     * Get <p>链接过期时间。链接7天有效。</p> 
+     * @return ExpiredTime <p>链接过期时间。链接7天有效。</p>
      */
     public Long getExpiredTime() {
         return this.ExpiredTime;
     }
 
     /**
-     * Set 链接过期时间。链接7天有效。
-     * @param ExpiredTime 链接过期时间。链接7天有效。
+     * Set <p>链接过期时间。链接7天有效。</p>
+     * @param ExpiredTime <p>链接过期时间。链接7天有效。</p>
      */
     public void setExpiredTime(Long ExpiredTime) {
         this.ExpiredTime = ExpiredTime;

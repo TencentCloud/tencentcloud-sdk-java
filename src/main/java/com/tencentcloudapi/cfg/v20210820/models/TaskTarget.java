@@ -24,120 +24,115 @@ import java.util.HashMap;
 public class TaskTarget extends AbstractModel {
 
     /**
-    * 目标标签ID
+    * <p>目标标签ID</p>
     */
     @SerializedName("TargetId")
     @Expose
     private Long TargetId;
 
     /**
-    * 目标描述
+    * <p>目标描述</p>
     */
     @SerializedName("TargetDesc")
     @Expose
     private String TargetDesc;
 
     /**
-    * 1:演练场景
-2:演练目标
+    * <p>1:演练场景<br>2:演练目标</p>
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 1:平台 2:用户个人
+    * <p>1:平台 2:用户个人</p>
     */
     @SerializedName("Source")
     @Expose
     private Long Source;
 
     /**
-    * 目标标签是否已被删除
+    * <p>目标标签是否已被删除</p><p>枚举值：</p><ul><li>0： 未删除</li><li>1： 已删除</li></ul>
     */
     @SerializedName("TargetStatus")
     @Expose
     private Long TargetStatus;
 
     /**
-     * Get 目标标签ID 
-     * @return TargetId 目标标签ID
+     * Get <p>目标标签ID</p> 
+     * @return TargetId <p>目标标签ID</p>
      */
     public Long getTargetId() {
         return this.TargetId;
     }
 
     /**
-     * Set 目标标签ID
-     * @param TargetId 目标标签ID
+     * Set <p>目标标签ID</p>
+     * @param TargetId <p>目标标签ID</p>
      */
     public void setTargetId(Long TargetId) {
         this.TargetId = TargetId;
     }
 
     /**
-     * Get 目标描述 
-     * @return TargetDesc 目标描述
+     * Get <p>目标描述</p> 
+     * @return TargetDesc <p>目标描述</p>
      */
     public String getTargetDesc() {
         return this.TargetDesc;
     }
 
     /**
-     * Set 目标描述
-     * @param TargetDesc 目标描述
+     * Set <p>目标描述</p>
+     * @param TargetDesc <p>目标描述</p>
      */
     public void setTargetDesc(String TargetDesc) {
         this.TargetDesc = TargetDesc;
     }
 
     /**
-     * Get 1:演练场景
-2:演练目标 
-     * @return Type 1:演练场景
-2:演练目标
+     * Get <p>1:演练场景<br>2:演练目标</p> 
+     * @return Type <p>1:演练场景<br>2:演练目标</p>
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 1:演练场景
-2:演练目标
-     * @param Type 1:演练场景
-2:演练目标
+     * Set <p>1:演练场景<br>2:演练目标</p>
+     * @param Type <p>1:演练场景<br>2:演练目标</p>
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 1:平台 2:用户个人 
-     * @return Source 1:平台 2:用户个人
+     * Get <p>1:平台 2:用户个人</p> 
+     * @return Source <p>1:平台 2:用户个人</p>
      */
     public Long getSource() {
         return this.Source;
     }
 
     /**
-     * Set 1:平台 2:用户个人
-     * @param Source 1:平台 2:用户个人
+     * Set <p>1:平台 2:用户个人</p>
+     * @param Source <p>1:平台 2:用户个人</p>
      */
     public void setSource(Long Source) {
         this.Source = Source;
     }
 
     /**
-     * Get 目标标签是否已被删除 
-     * @return TargetStatus 目标标签是否已被删除
+     * Get <p>目标标签是否已被删除</p><p>枚举值：</p><ul><li>0： 未删除</li><li>1： 已删除</li></ul> 
+     * @return TargetStatus <p>目标标签是否已被删除</p><p>枚举值：</p><ul><li>0： 未删除</li><li>1： 已删除</li></ul>
      */
     public Long getTargetStatus() {
         return this.TargetStatus;
     }
 
     /**
-     * Set 目标标签是否已被删除
-     * @param TargetStatus 目标标签是否已被删除
+     * Set <p>目标标签是否已被删除</p><p>枚举值：</p><ul><li>0： 未删除</li><li>1： 已删除</li></ul>
+     * @param TargetStatus <p>目标标签是否已被删除</p><p>枚举值：</p><ul><li>0： 未删除</li><li>1： 已删除</li></ul>
      */
     public void setTargetStatus(Long TargetStatus) {
         this.TargetStatus = TargetStatus;

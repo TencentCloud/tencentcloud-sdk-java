@@ -24,141 +24,164 @@ import java.util.HashMap;
 public class AdaptiveDynamicStreamingTaskInput extends AbstractModel {
 
     /**
-    * 转自适应码流模板 ID。
+    * <p>转自适应码流模板 ID。</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * 水印列表，支持多张图片或文字水印，最大可支持 10 张。
+    * <p>水印列表，支持多张图片或文字水印，最大可支持 10 张。</p>
     */
     @SerializedName("WatermarkSet")
     @Expose
     private WatermarkInput [] WatermarkSet;
 
     /**
-    * 溯源水印。
+    * <p>溯源水印。</p>
     */
     @SerializedName("TraceWatermark")
     @Expose
     private TraceWatermarkInput TraceWatermark;
 
     /**
-    * 版权水印。
+    * <p>版权水印。</p>
     */
     @SerializedName("CopyRightWatermark")
     @Expose
     private CopyRightWatermarkInput CopyRightWatermark;
 
     /**
-    * 数字水印。
+    * <p>数字水印。</p>
     */
     @SerializedName("BlindWatermark")
     @Expose
     private BlindWatermarkInput BlindWatermark;
 
     /**
-    * 字幕列表，元素为字幕 ID，支持多个字幕，最大可支持16个。
+    * <p>外挂字幕列表，元素为字幕 ID，支持多个字幕，最大可支持16个。</p>
     */
     @SerializedName("SubtitleSet")
     @Expose
     private String [] SubtitleSet;
 
     /**
-     * Get 转自适应码流模板 ID。 
-     * @return Definition 转自适应码流模板 ID。
+    * <p>字幕压制信息列表。最大可支持 2 个。</p>
+    */
+    @SerializedName("SubtitleInfoSet")
+    @Expose
+    private SubtitleInfoInput [] SubtitleInfoSet;
+
+    /**
+     * Get <p>转自适应码流模板 ID。</p> 
+     * @return Definition <p>转自适应码流模板 ID。</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 转自适应码流模板 ID。
-     * @param Definition 转自适应码流模板 ID。
+     * Set <p>转自适应码流模板 ID。</p>
+     * @param Definition <p>转自适应码流模板 ID。</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get 水印列表，支持多张图片或文字水印，最大可支持 10 张。 
-     * @return WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
+     * Get <p>水印列表，支持多张图片或文字水印，最大可支持 10 张。</p> 
+     * @return WatermarkSet <p>水印列表，支持多张图片或文字水印，最大可支持 10 张。</p>
      */
     public WatermarkInput [] getWatermarkSet() {
         return this.WatermarkSet;
     }
 
     /**
-     * Set 水印列表，支持多张图片或文字水印，最大可支持 10 张。
-     * @param WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
+     * Set <p>水印列表，支持多张图片或文字水印，最大可支持 10 张。</p>
+     * @param WatermarkSet <p>水印列表，支持多张图片或文字水印，最大可支持 10 张。</p>
      */
     public void setWatermarkSet(WatermarkInput [] WatermarkSet) {
         this.WatermarkSet = WatermarkSet;
     }
 
     /**
-     * Get 溯源水印。 
-     * @return TraceWatermark 溯源水印。
+     * Get <p>溯源水印。</p> 
+     * @return TraceWatermark <p>溯源水印。</p>
      */
     public TraceWatermarkInput getTraceWatermark() {
         return this.TraceWatermark;
     }
 
     /**
-     * Set 溯源水印。
-     * @param TraceWatermark 溯源水印。
+     * Set <p>溯源水印。</p>
+     * @param TraceWatermark <p>溯源水印。</p>
      */
     public void setTraceWatermark(TraceWatermarkInput TraceWatermark) {
         this.TraceWatermark = TraceWatermark;
     }
 
     /**
-     * Get 版权水印。 
-     * @return CopyRightWatermark 版权水印。
+     * Get <p>版权水印。</p> 
+     * @return CopyRightWatermark <p>版权水印。</p>
      */
     public CopyRightWatermarkInput getCopyRightWatermark() {
         return this.CopyRightWatermark;
     }
 
     /**
-     * Set 版权水印。
-     * @param CopyRightWatermark 版权水印。
+     * Set <p>版权水印。</p>
+     * @param CopyRightWatermark <p>版权水印。</p>
      */
     public void setCopyRightWatermark(CopyRightWatermarkInput CopyRightWatermark) {
         this.CopyRightWatermark = CopyRightWatermark;
     }
 
     /**
-     * Get 数字水印。 
-     * @return BlindWatermark 数字水印。
+     * Get <p>数字水印。</p> 
+     * @return BlindWatermark <p>数字水印。</p>
      */
     public BlindWatermarkInput getBlindWatermark() {
         return this.BlindWatermark;
     }
 
     /**
-     * Set 数字水印。
-     * @param BlindWatermark 数字水印。
+     * Set <p>数字水印。</p>
+     * @param BlindWatermark <p>数字水印。</p>
      */
     public void setBlindWatermark(BlindWatermarkInput BlindWatermark) {
         this.BlindWatermark = BlindWatermark;
     }
 
     /**
-     * Get 字幕列表，元素为字幕 ID，支持多个字幕，最大可支持16个。 
-     * @return SubtitleSet 字幕列表，元素为字幕 ID，支持多个字幕，最大可支持16个。
+     * Get <p>外挂字幕列表，元素为字幕 ID，支持多个字幕，最大可支持16个。</p> 
+     * @return SubtitleSet <p>外挂字幕列表，元素为字幕 ID，支持多个字幕，最大可支持16个。</p>
      */
     public String [] getSubtitleSet() {
         return this.SubtitleSet;
     }
 
     /**
-     * Set 字幕列表，元素为字幕 ID，支持多个字幕，最大可支持16个。
-     * @param SubtitleSet 字幕列表，元素为字幕 ID，支持多个字幕，最大可支持16个。
+     * Set <p>外挂字幕列表，元素为字幕 ID，支持多个字幕，最大可支持16个。</p>
+     * @param SubtitleSet <p>外挂字幕列表，元素为字幕 ID，支持多个字幕，最大可支持16个。</p>
      */
     public void setSubtitleSet(String [] SubtitleSet) {
         this.SubtitleSet = SubtitleSet;
+    }
+
+    /**
+     * Get <p>字幕压制信息列表。最大可支持 2 个。</p> 
+     * @return SubtitleInfoSet <p>字幕压制信息列表。最大可支持 2 个。</p>
+     */
+    public SubtitleInfoInput [] getSubtitleInfoSet() {
+        return this.SubtitleInfoSet;
+    }
+
+    /**
+     * Set <p>字幕压制信息列表。最大可支持 2 个。</p>
+     * @param SubtitleInfoSet <p>字幕压制信息列表。最大可支持 2 个。</p>
+     */
+    public void setSubtitleInfoSet(SubtitleInfoInput [] SubtitleInfoSet) {
+        this.SubtitleInfoSet = SubtitleInfoSet;
     }
 
     public AdaptiveDynamicStreamingTaskInput() {
@@ -193,6 +216,12 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel {
                 this.SubtitleSet[i] = new String(source.SubtitleSet[i]);
             }
         }
+        if (source.SubtitleInfoSet != null) {
+            this.SubtitleInfoSet = new SubtitleInfoInput[source.SubtitleInfoSet.length];
+            for (int i = 0; i < source.SubtitleInfoSet.length; i++) {
+                this.SubtitleInfoSet[i] = new SubtitleInfoInput(source.SubtitleInfoSet[i]);
+            }
+        }
     }
 
 
@@ -206,6 +235,7 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel {
         this.setParamObj(map, prefix + "CopyRightWatermark.", this.CopyRightWatermark);
         this.setParamObj(map, prefix + "BlindWatermark.", this.BlindWatermark);
         this.setParamArraySimple(map, prefix + "SubtitleSet.", this.SubtitleSet);
+        this.setParamArrayObj(map, prefix + "SubtitleInfoSet.", this.SubtitleInfoSet);
 
     }
 }

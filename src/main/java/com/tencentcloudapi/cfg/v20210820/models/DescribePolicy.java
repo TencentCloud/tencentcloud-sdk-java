@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribePolicy extends AbstractModel {
 
     /**
-    * 保护策略ID列表
+    * <p>保护策略ID列表</p>
     */
     @SerializedName("TaskPolicyIdList")
     @Expose
     private String [] TaskPolicyIdList;
 
     /**
-    * 保护策略状态
+    * <p>保护策略状态</p><p>枚举值：</p><ul><li>已触发： 表示已触发护栏策略</li><li>未触发： 表示未触发护栏策略</li><li>已恢复： 表示护栏策略已恢复</li></ul>
     */
     @SerializedName("TaskPolicyStatus")
     @Expose
     private String TaskPolicyStatus;
 
     /**
-    * 策略规则
+    * <p>策略规则</p>
     */
     @SerializedName("TaskPolicyRule")
     @Expose
     private String TaskPolicyRule;
 
     /**
-    * 护栏策略生效处理策略 1:顺序执行，2:暂停
+    * <p>护栏策略生效处理策略 1:顺序执行，2:暂停</p>
     */
     @SerializedName("TaskPolicyDealType")
     @Expose
     private Long TaskPolicyDealType;
 
     /**
-     * Get 保护策略ID列表 
-     * @return TaskPolicyIdList 保护策略ID列表
+     * Get <p>保护策略ID列表</p> 
+     * @return TaskPolicyIdList <p>保护策略ID列表</p>
      */
     public String [] getTaskPolicyIdList() {
         return this.TaskPolicyIdList;
     }
 
     /**
-     * Set 保护策略ID列表
-     * @param TaskPolicyIdList 保护策略ID列表
+     * Set <p>保护策略ID列表</p>
+     * @param TaskPolicyIdList <p>保护策略ID列表</p>
      */
     public void setTaskPolicyIdList(String [] TaskPolicyIdList) {
         this.TaskPolicyIdList = TaskPolicyIdList;
     }
 
     /**
-     * Get 保护策略状态 
-     * @return TaskPolicyStatus 保护策略状态
+     * Get <p>保护策略状态</p><p>枚举值：</p><ul><li>已触发： 表示已触发护栏策略</li><li>未触发： 表示未触发护栏策略</li><li>已恢复： 表示护栏策略已恢复</li></ul> 
+     * @return TaskPolicyStatus <p>保护策略状态</p><p>枚举值：</p><ul><li>已触发： 表示已触发护栏策略</li><li>未触发： 表示未触发护栏策略</li><li>已恢复： 表示护栏策略已恢复</li></ul>
      */
     public String getTaskPolicyStatus() {
         return this.TaskPolicyStatus;
     }
 
     /**
-     * Set 保护策略状态
-     * @param TaskPolicyStatus 保护策略状态
+     * Set <p>保护策略状态</p><p>枚举值：</p><ul><li>已触发： 表示已触发护栏策略</li><li>未触发： 表示未触发护栏策略</li><li>已恢复： 表示护栏策略已恢复</li></ul>
+     * @param TaskPolicyStatus <p>保护策略状态</p><p>枚举值：</p><ul><li>已触发： 表示已触发护栏策略</li><li>未触发： 表示未触发护栏策略</li><li>已恢复： 表示护栏策略已恢复</li></ul>
      */
     public void setTaskPolicyStatus(String TaskPolicyStatus) {
         this.TaskPolicyStatus = TaskPolicyStatus;
     }
 
     /**
-     * Get 策略规则 
-     * @return TaskPolicyRule 策略规则
+     * Get <p>策略规则</p> 
+     * @return TaskPolicyRule <p>策略规则</p>
      */
     public String getTaskPolicyRule() {
         return this.TaskPolicyRule;
     }
 
     /**
-     * Set 策略规则
-     * @param TaskPolicyRule 策略规则
+     * Set <p>策略规则</p>
+     * @param TaskPolicyRule <p>策略规则</p>
      */
     public void setTaskPolicyRule(String TaskPolicyRule) {
         this.TaskPolicyRule = TaskPolicyRule;
     }
 
     /**
-     * Get 护栏策略生效处理策略 1:顺序执行，2:暂停 
-     * @return TaskPolicyDealType 护栏策略生效处理策略 1:顺序执行，2:暂停
+     * Get <p>护栏策略生效处理策略 1:顺序执行，2:暂停</p> 
+     * @return TaskPolicyDealType <p>护栏策略生效处理策略 1:顺序执行，2:暂停</p>
      */
     public Long getTaskPolicyDealType() {
         return this.TaskPolicyDealType;
     }
 
     /**
-     * Set 护栏策略生效处理策略 1:顺序执行，2:暂停
-     * @param TaskPolicyDealType 护栏策略生效处理策略 1:顺序执行，2:暂停
+     * Set <p>护栏策略生效处理策略 1:顺序执行，2:暂停</p>
+     * @param TaskPolicyDealType <p>护栏策略生效处理策略 1:顺序执行，2:暂停</p>
      */
     public void setTaskPolicyDealType(Long TaskPolicyDealType) {
         this.TaskPolicyDealType = TaskPolicyDealType;

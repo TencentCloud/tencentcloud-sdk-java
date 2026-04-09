@@ -38,7 +38,7 @@ public class DescribeVoucherInfoRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * <p>券状态：待使用：unUsed，已使用：&nbsp;used，已发货：delivered，已作废：&nbsp;cancel，已过期：overdue</p>
+    * <p>券状态：待使用：unUsed，已使用：xa0used，已发货：delivered，已作废：xa0cancel，已过期：overdue</p>
     */
     @SerializedName("Status")
     @Expose
@@ -224,16 +224,16 @@ public class DescribeVoucherInfoRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>券状态：待使用：unUsed，已使用：&nbsp;used，已发货：delivered，已作废：&nbsp;cancel，已过期：overdue</p> 
-     * @return Status <p>券状态：待使用：unUsed，已使用：&nbsp;used，已发货：delivered，已作废：&nbsp;cancel，已过期：overdue</p>
+     * Get <p>券状态：待使用：unUsed，已使用：xa0used，已发货：delivered，已作废：xa0cancel，已过期：overdue</p> 
+     * @return Status <p>券状态：待使用：unUsed，已使用：xa0used，已发货：delivered，已作废：xa0cancel，已过期：overdue</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set <p>券状态：待使用：unUsed，已使用：&nbsp;used，已发货：delivered，已作废：&nbsp;cancel，已过期：overdue</p>
-     * @param Status <p>券状态：待使用：unUsed，已使用：&nbsp;used，已发货：delivered，已作废：&nbsp;cancel，已过期：overdue</p>
+     * Set <p>券状态：待使用：unUsed，已使用：xa0used，已发货：delivered，已作废：xa0cancel，已过期：overdue</p>
+     * @param Status <p>券状态：待使用：unUsed，已使用：xa0used，已发货：delivered，已作废：xa0cancel，已过期：overdue</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;

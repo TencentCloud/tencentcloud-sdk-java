@@ -24,258 +24,276 @@ import java.util.HashMap;
 public class AIAgentAsset extends AbstractModel {
 
     /**
-    * ID 标识
+    * <p>ID 标识</p>
     */
     @SerializedName("ID")
     @Expose
     private String ID;
 
     /**
-    * agent 名称
+    * <p>agent 名称</p>
     */
     @SerializedName("AgentName")
     @Expose
     private String AgentName;
 
     /**
-    * agent 使用模型名称
+    * <p>agent 使用模型名称</p>
     */
     @SerializedName("AgentModel")
     @Expose
     private String [] AgentModel;
 
     /**
-    * 实例 ID
+    * <p>实例 ID</p>
     */
     @SerializedName("InstanceID")
     @Expose
     private String InstanceID;
 
     /**
-    * metadata 风险列表。有如下枚举值: 1. AK_TMP  2. USER_DATA
+    * <p>实例名称</p>
+    */
+    @SerializedName("InstanceName")
+    @Expose
+    private String InstanceName;
+
+    /**
+    * <p>metadata 风险列表。有如下枚举值: 1. AK_TMP  2. USER_DATA</p>
     */
     @SerializedName("MetadataRiskList")
     @Expose
     private String [] MetadataRiskList;
 
     /**
-    * 首次检出时间
+    * <p>首次检出时间</p>
     */
     @SerializedName("IdentityTimeFirst")
     @Expose
     private String IdentityTimeFirst;
 
     /**
-    * 最近检出时间
+    * <p>最近检出时间</p>
     */
     @SerializedName("IdentityTimeLast")
     @Expose
     private String IdentityTimeLast;
 
     /**
-    * 检出方式。有如下枚举值 1. FINGER 资产指纹方式检出 2. NETWORK 网络访问方式检出
+    * <p>检出方式。有如下枚举值 1. FINGER 资产指纹方式检出 2. NETWORK 网络访问方式检出</p>
     */
     @SerializedName("IdentityMethod")
     @Expose
     private String IdentityMethod;
 
     /**
-    * 暴露状态。有如下枚举值。1. EXPOSED；2.UNEXPOSED；
-3. UNKNOWN;
+    * <p>暴露状态。有如下枚举值。1. EXPOSED；2.UNEXPOSED；</p><ol start="3"><li>UNKNOWN;</li></ol>
     */
     @SerializedName("ExposureStatus")
     @Expose
     private String ExposureStatus;
 
     /**
-    * metadata 有风险时对应路径
+    * <p>metadata 有风险时对应路径</p>
     */
     @SerializedName("MetadataRiskURL")
     @Expose
     private String MetadataRiskURL;
 
     /**
-    * 无
+    * <p>无</p>
     */
     @SerializedName("SkillState")
     @Expose
     private SkillState SkillState;
 
     /**
-     * Get ID 标识 
-     * @return ID ID 标识
+     * Get <p>ID 标识</p> 
+     * @return ID <p>ID 标识</p>
      */
     public String getID() {
         return this.ID;
     }
 
     /**
-     * Set ID 标识
-     * @param ID ID 标识
+     * Set <p>ID 标识</p>
+     * @param ID <p>ID 标识</p>
      */
     public void setID(String ID) {
         this.ID = ID;
     }
 
     /**
-     * Get agent 名称 
-     * @return AgentName agent 名称
+     * Get <p>agent 名称</p> 
+     * @return AgentName <p>agent 名称</p>
      */
     public String getAgentName() {
         return this.AgentName;
     }
 
     /**
-     * Set agent 名称
-     * @param AgentName agent 名称
+     * Set <p>agent 名称</p>
+     * @param AgentName <p>agent 名称</p>
      */
     public void setAgentName(String AgentName) {
         this.AgentName = AgentName;
     }
 
     /**
-     * Get agent 使用模型名称 
-     * @return AgentModel agent 使用模型名称
+     * Get <p>agent 使用模型名称</p> 
+     * @return AgentModel <p>agent 使用模型名称</p>
      */
     public String [] getAgentModel() {
         return this.AgentModel;
     }
 
     /**
-     * Set agent 使用模型名称
-     * @param AgentModel agent 使用模型名称
+     * Set <p>agent 使用模型名称</p>
+     * @param AgentModel <p>agent 使用模型名称</p>
      */
     public void setAgentModel(String [] AgentModel) {
         this.AgentModel = AgentModel;
     }
 
     /**
-     * Get 实例 ID 
-     * @return InstanceID 实例 ID
+     * Get <p>实例 ID</p> 
+     * @return InstanceID <p>实例 ID</p>
      */
     public String getInstanceID() {
         return this.InstanceID;
     }
 
     /**
-     * Set 实例 ID
-     * @param InstanceID 实例 ID
+     * Set <p>实例 ID</p>
+     * @param InstanceID <p>实例 ID</p>
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;
     }
 
     /**
-     * Get metadata 风险列表。有如下枚举值: 1. AK_TMP  2. USER_DATA 
-     * @return MetadataRiskList metadata 风险列表。有如下枚举值: 1. AK_TMP  2. USER_DATA
+     * Get <p>实例名称</p> 
+     * @return InstanceName <p>实例名称</p>
+     */
+    public String getInstanceName() {
+        return this.InstanceName;
+    }
+
+    /**
+     * Set <p>实例名称</p>
+     * @param InstanceName <p>实例名称</p>
+     */
+    public void setInstanceName(String InstanceName) {
+        this.InstanceName = InstanceName;
+    }
+
+    /**
+     * Get <p>metadata 风险列表。有如下枚举值: 1. AK_TMP  2. USER_DATA</p> 
+     * @return MetadataRiskList <p>metadata 风险列表。有如下枚举值: 1. AK_TMP  2. USER_DATA</p>
      */
     public String [] getMetadataRiskList() {
         return this.MetadataRiskList;
     }
 
     /**
-     * Set metadata 风险列表。有如下枚举值: 1. AK_TMP  2. USER_DATA
-     * @param MetadataRiskList metadata 风险列表。有如下枚举值: 1. AK_TMP  2. USER_DATA
+     * Set <p>metadata 风险列表。有如下枚举值: 1. AK_TMP  2. USER_DATA</p>
+     * @param MetadataRiskList <p>metadata 风险列表。有如下枚举值: 1. AK_TMP  2. USER_DATA</p>
      */
     public void setMetadataRiskList(String [] MetadataRiskList) {
         this.MetadataRiskList = MetadataRiskList;
     }
 
     /**
-     * Get 首次检出时间 
-     * @return IdentityTimeFirst 首次检出时间
+     * Get <p>首次检出时间</p> 
+     * @return IdentityTimeFirst <p>首次检出时间</p>
      */
     public String getIdentityTimeFirst() {
         return this.IdentityTimeFirst;
     }
 
     /**
-     * Set 首次检出时间
-     * @param IdentityTimeFirst 首次检出时间
+     * Set <p>首次检出时间</p>
+     * @param IdentityTimeFirst <p>首次检出时间</p>
      */
     public void setIdentityTimeFirst(String IdentityTimeFirst) {
         this.IdentityTimeFirst = IdentityTimeFirst;
     }
 
     /**
-     * Get 最近检出时间 
-     * @return IdentityTimeLast 最近检出时间
+     * Get <p>最近检出时间</p> 
+     * @return IdentityTimeLast <p>最近检出时间</p>
      */
     public String getIdentityTimeLast() {
         return this.IdentityTimeLast;
     }
 
     /**
-     * Set 最近检出时间
-     * @param IdentityTimeLast 最近检出时间
+     * Set <p>最近检出时间</p>
+     * @param IdentityTimeLast <p>最近检出时间</p>
      */
     public void setIdentityTimeLast(String IdentityTimeLast) {
         this.IdentityTimeLast = IdentityTimeLast;
     }
 
     /**
-     * Get 检出方式。有如下枚举值 1. FINGER 资产指纹方式检出 2. NETWORK 网络访问方式检出 
-     * @return IdentityMethod 检出方式。有如下枚举值 1. FINGER 资产指纹方式检出 2. NETWORK 网络访问方式检出
+     * Get <p>检出方式。有如下枚举值 1. FINGER 资产指纹方式检出 2. NETWORK 网络访问方式检出</p> 
+     * @return IdentityMethod <p>检出方式。有如下枚举值 1. FINGER 资产指纹方式检出 2. NETWORK 网络访问方式检出</p>
      */
     public String getIdentityMethod() {
         return this.IdentityMethod;
     }
 
     /**
-     * Set 检出方式。有如下枚举值 1. FINGER 资产指纹方式检出 2. NETWORK 网络访问方式检出
-     * @param IdentityMethod 检出方式。有如下枚举值 1. FINGER 资产指纹方式检出 2. NETWORK 网络访问方式检出
+     * Set <p>检出方式。有如下枚举值 1. FINGER 资产指纹方式检出 2. NETWORK 网络访问方式检出</p>
+     * @param IdentityMethod <p>检出方式。有如下枚举值 1. FINGER 资产指纹方式检出 2. NETWORK 网络访问方式检出</p>
      */
     public void setIdentityMethod(String IdentityMethod) {
         this.IdentityMethod = IdentityMethod;
     }
 
     /**
-     * Get 暴露状态。有如下枚举值。1. EXPOSED；2.UNEXPOSED；
-3. UNKNOWN; 
-     * @return ExposureStatus 暴露状态。有如下枚举值。1. EXPOSED；2.UNEXPOSED；
-3. UNKNOWN;
+     * Get <p>暴露状态。有如下枚举值。1. EXPOSED；2.UNEXPOSED；</p><ol start="3"><li>UNKNOWN;</li></ol> 
+     * @return ExposureStatus <p>暴露状态。有如下枚举值。1. EXPOSED；2.UNEXPOSED；</p><ol start="3"><li>UNKNOWN;</li></ol>
      */
     public String getExposureStatus() {
         return this.ExposureStatus;
     }
 
     /**
-     * Set 暴露状态。有如下枚举值。1. EXPOSED；2.UNEXPOSED；
-3. UNKNOWN;
-     * @param ExposureStatus 暴露状态。有如下枚举值。1. EXPOSED；2.UNEXPOSED；
-3. UNKNOWN;
+     * Set <p>暴露状态。有如下枚举值。1. EXPOSED；2.UNEXPOSED；</p><ol start="3"><li>UNKNOWN;</li></ol>
+     * @param ExposureStatus <p>暴露状态。有如下枚举值。1. EXPOSED；2.UNEXPOSED；</p><ol start="3"><li>UNKNOWN;</li></ol>
      */
     public void setExposureStatus(String ExposureStatus) {
         this.ExposureStatus = ExposureStatus;
     }
 
     /**
-     * Get metadata 有风险时对应路径 
-     * @return MetadataRiskURL metadata 有风险时对应路径
+     * Get <p>metadata 有风险时对应路径</p> 
+     * @return MetadataRiskURL <p>metadata 有风险时对应路径</p>
      */
     public String getMetadataRiskURL() {
         return this.MetadataRiskURL;
     }
 
     /**
-     * Set metadata 有风险时对应路径
-     * @param MetadataRiskURL metadata 有风险时对应路径
+     * Set <p>metadata 有风险时对应路径</p>
+     * @param MetadataRiskURL <p>metadata 有风险时对应路径</p>
      */
     public void setMetadataRiskURL(String MetadataRiskURL) {
         this.MetadataRiskURL = MetadataRiskURL;
     }
 
     /**
-     * Get 无 
-     * @return SkillState 无
+     * Get <p>无</p> 
+     * @return SkillState <p>无</p>
      */
     public SkillState getSkillState() {
         return this.SkillState;
     }
 
     /**
-     * Set 无
-     * @param SkillState 无
+     * Set <p>无</p>
+     * @param SkillState <p>无</p>
      */
     public void setSkillState(SkillState SkillState) {
         this.SkillState = SkillState;
@@ -303,6 +321,9 @@ public class AIAgentAsset extends AbstractModel {
         }
         if (source.InstanceID != null) {
             this.InstanceID = new String(source.InstanceID);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
         }
         if (source.MetadataRiskList != null) {
             this.MetadataRiskList = new String[source.MetadataRiskList.length];
@@ -339,6 +360,7 @@ public class AIAgentAsset extends AbstractModel {
         this.setParamSimple(map, prefix + "AgentName", this.AgentName);
         this.setParamArraySimple(map, prefix + "AgentModel.", this.AgentModel);
         this.setParamSimple(map, prefix + "InstanceID", this.InstanceID);
+        this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamArraySimple(map, prefix + "MetadataRiskList.", this.MetadataRiskList);
         this.setParamSimple(map, prefix + "IdentityTimeFirst", this.IdentityTimeFirst);
         this.setParamSimple(map, prefix + "IdentityTimeLast", this.IdentityTimeLast);
