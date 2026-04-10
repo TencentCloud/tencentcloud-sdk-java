@@ -94,6 +94,28 @@ public class OmicsClient extends AbstractClient{
     }
 
     /**
+     *查询应用版本列表
+     * @param req DescribeApplicationVersionsRequest
+     * @return DescribeApplicationVersionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApplicationVersionsResponse DescribeApplicationVersions(DescribeApplicationVersionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeApplicationVersions", DescribeApplicationVersionsResponse.class);
+    }
+
+    /**
+     *查询项目应用列表
+     * @param req DescribeApplicationsRequest
+     * @return DescribeApplicationsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApplicationsResponse DescribeApplications(DescribeApplicationsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeApplications", DescribeApplicationsResponse.class);
+    }
+
+    /**
      *查询环境列表。
      * @param req DescribeEnvironmentsRequest
      * @return DescribeEnvironmentsResponse
@@ -124,6 +146,28 @@ public class OmicsClient extends AbstractClient{
     public DescribeHPCNodesResponse DescribeHPCNodes(DescribeHPCNodesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeHPCNodes", DescribeHPCNodesResponse.class);
+    }
+
+    /**
+     *查询运行参数模板列表
+     * @param req DescribeInputTemplatesRequest
+     * @return DescribeInputTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInputTemplatesResponse DescribeInputTemplates(DescribeInputTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInputTemplates", DescribeInputTemplatesResponse.class);
+    }
+
+    /**
+     *查询项目列表
+     * @param req DescribeProjectsRequest
+     * @return DescribeProjectsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProjectsResponse DescribeProjects(DescribeProjectsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeProjects", DescribeProjectsResponse.class);
     }
 
     /**
@@ -182,6 +226,17 @@ public class OmicsClient extends AbstractClient{
     }
 
     /**
+     *查询运行参数模板内容
+     * @param req GetInputTemplateFileRequest
+     * @return GetInputTemplateFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetInputTemplateFileResponse GetInputTemplateFile(GetInputTemplateFileRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetInputTemplateFile", GetInputTemplateFileResponse.class);
+    }
+
+    /**
      *查询作业详情。
      * @param req GetRunCallsRequest
      * @return GetRunCallsResponse
@@ -212,6 +267,17 @@ public class OmicsClient extends AbstractClient{
     public GetRunStatusResponse GetRunStatus(GetRunStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetRunStatus", GetRunStatusResponse.class);
+    }
+
+    /**
+     *导入公共应用到项目
+     * @param req ImportCommonApplicationRequest
+     * @return ImportCommonApplicationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ImportCommonApplicationResponse ImportCommonApplication(ImportCommonApplicationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ImportCommonApplication", ImportCommonApplicationResponse.class);
     }
 
     /**
