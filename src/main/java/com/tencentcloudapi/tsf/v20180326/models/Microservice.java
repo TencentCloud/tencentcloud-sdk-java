@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Microservice extends AbstractModel {
 
     /**
-    * 微服务ID
+    * <p>微服务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MicroserviceId")
@@ -32,7 +32,7 @@ public class Microservice extends AbstractModel {
     private String MicroserviceId;
 
     /**
-    * 微服务名称
+    * <p>微服务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MicroserviceName")
@@ -40,7 +40,7 @@ public class Microservice extends AbstractModel {
     private String MicroserviceName;
 
     /**
-    * 微服务描述
+    * <p>微服务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MicroserviceDesc")
@@ -48,7 +48,7 @@ public class Microservice extends AbstractModel {
     private String MicroserviceDesc;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
@@ -56,7 +56,7 @@ public class Microservice extends AbstractModel {
     private Long CreateTime;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
@@ -64,7 +64,7 @@ public class Microservice extends AbstractModel {
     private Long UpdateTime;
 
     /**
-    * 命名空间ID
+    * <p>命名空间ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NamespaceId")
@@ -72,7 +72,7 @@ public class Microservice extends AbstractModel {
     private String NamespaceId;
 
     /**
-    * 微服务的运行实例数目
+    * <p>微服务的运行实例数目</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunInstanceCount")
@@ -80,7 +80,7 @@ public class Microservice extends AbstractModel {
     private Long RunInstanceCount;
 
     /**
-    * 微服务的离线实例数目
+    * <p>微服务的离线实例数目</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CriticalInstanceCount")
@@ -88,9 +88,25 @@ public class Microservice extends AbstractModel {
     private Long CriticalInstanceCount;
 
     /**
-     * Get 微服务ID
+    * <p>是否禁用删除按钮，true：是；false：否。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeleteDisabled")
+    @Expose
+    private Boolean DeleteDisabled;
+
+    /**
+    * <p>禁用删除原因。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeleteDisabledReason")
+    @Expose
+    private String DeleteDisabledReason;
+
+    /**
+     * Get <p>微服务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MicroserviceId 微服务ID
+     * @return MicroserviceId <p>微服务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMicroserviceId() {
@@ -98,9 +114,9 @@ public class Microservice extends AbstractModel {
     }
 
     /**
-     * Set 微服务ID
+     * Set <p>微服务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MicroserviceId 微服务ID
+     * @param MicroserviceId <p>微服务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMicroserviceId(String MicroserviceId) {
@@ -108,9 +124,9 @@ public class Microservice extends AbstractModel {
     }
 
     /**
-     * Get 微服务名称
+     * Get <p>微服务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MicroserviceName 微服务名称
+     * @return MicroserviceName <p>微服务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMicroserviceName() {
@@ -118,9 +134,9 @@ public class Microservice extends AbstractModel {
     }
 
     /**
-     * Set 微服务名称
+     * Set <p>微服务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MicroserviceName 微服务名称
+     * @param MicroserviceName <p>微服务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMicroserviceName(String MicroserviceName) {
@@ -128,9 +144,9 @@ public class Microservice extends AbstractModel {
     }
 
     /**
-     * Get 微服务描述
+     * Get <p>微服务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MicroserviceDesc 微服务描述
+     * @return MicroserviceDesc <p>微服务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMicroserviceDesc() {
@@ -138,9 +154,9 @@ public class Microservice extends AbstractModel {
     }
 
     /**
-     * Set 微服务描述
+     * Set <p>微服务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MicroserviceDesc 微服务描述
+     * @param MicroserviceDesc <p>微服务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMicroserviceDesc(String MicroserviceDesc) {
@@ -148,9 +164,9 @@ public class Microservice extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
+     * Get <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 创建时间
+     * @return CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateTime() {
@@ -158,9 +174,9 @@ public class Microservice extends AbstractModel {
     }
 
     /**
-     * Set 创建时间
+     * Set <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 创建时间
+     * @param CreateTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(Long CreateTime) {
@@ -168,9 +184,9 @@ public class Microservice extends AbstractModel {
     }
 
     /**
-     * Get 更新时间
+     * Get <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateTime 更新时间
+     * @return UpdateTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUpdateTime() {
@@ -178,9 +194,9 @@ public class Microservice extends AbstractModel {
     }
 
     /**
-     * Set 更新时间
+     * Set <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateTime 更新时间
+     * @param UpdateTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(Long UpdateTime) {
@@ -188,9 +204,9 @@ public class Microservice extends AbstractModel {
     }
 
     /**
-     * Get 命名空间ID
+     * Get <p>命名空间ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NamespaceId 命名空间ID
+     * @return NamespaceId <p>命名空间ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespaceId() {
@@ -198,9 +214,9 @@ public class Microservice extends AbstractModel {
     }
 
     /**
-     * Set 命名空间ID
+     * Set <p>命名空间ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NamespaceId 命名空间ID
+     * @param NamespaceId <p>命名空间ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespaceId(String NamespaceId) {
@@ -208,9 +224,9 @@ public class Microservice extends AbstractModel {
     }
 
     /**
-     * Get 微服务的运行实例数目
+     * Get <p>微服务的运行实例数目</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RunInstanceCount 微服务的运行实例数目
+     * @return RunInstanceCount <p>微服务的运行实例数目</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRunInstanceCount() {
@@ -218,9 +234,9 @@ public class Microservice extends AbstractModel {
     }
 
     /**
-     * Set 微服务的运行实例数目
+     * Set <p>微服务的运行实例数目</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RunInstanceCount 微服务的运行实例数目
+     * @param RunInstanceCount <p>微服务的运行实例数目</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunInstanceCount(Long RunInstanceCount) {
@@ -228,9 +244,9 @@ public class Microservice extends AbstractModel {
     }
 
     /**
-     * Get 微服务的离线实例数目
+     * Get <p>微服务的离线实例数目</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CriticalInstanceCount 微服务的离线实例数目
+     * @return CriticalInstanceCount <p>微服务的离线实例数目</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCriticalInstanceCount() {
@@ -238,13 +254,53 @@ public class Microservice extends AbstractModel {
     }
 
     /**
-     * Set 微服务的离线实例数目
+     * Set <p>微服务的离线实例数目</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CriticalInstanceCount 微服务的离线实例数目
+     * @param CriticalInstanceCount <p>微服务的离线实例数目</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCriticalInstanceCount(Long CriticalInstanceCount) {
         this.CriticalInstanceCount = CriticalInstanceCount;
+    }
+
+    /**
+     * Get <p>是否禁用删除按钮，true：是；false：否。</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeleteDisabled <p>是否禁用删除按钮，true：是；false：否。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getDeleteDisabled() {
+        return this.DeleteDisabled;
+    }
+
+    /**
+     * Set <p>是否禁用删除按钮，true：是；false：否。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeleteDisabled <p>是否禁用删除按钮，true：是；false：否。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeleteDisabled(Boolean DeleteDisabled) {
+        this.DeleteDisabled = DeleteDisabled;
+    }
+
+    /**
+     * Get <p>禁用删除原因。</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeleteDisabledReason <p>禁用删除原因。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDeleteDisabledReason() {
+        return this.DeleteDisabledReason;
+    }
+
+    /**
+     * Set <p>禁用删除原因。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeleteDisabledReason <p>禁用删除原因。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeleteDisabledReason(String DeleteDisabledReason) {
+        this.DeleteDisabledReason = DeleteDisabledReason;
     }
 
     public Microservice() {
@@ -279,6 +335,12 @@ public class Microservice extends AbstractModel {
         if (source.CriticalInstanceCount != null) {
             this.CriticalInstanceCount = new Long(source.CriticalInstanceCount);
         }
+        if (source.DeleteDisabled != null) {
+            this.DeleteDisabled = new Boolean(source.DeleteDisabled);
+        }
+        if (source.DeleteDisabledReason != null) {
+            this.DeleteDisabledReason = new String(source.DeleteDisabledReason);
+        }
     }
 
 
@@ -294,6 +356,8 @@ public class Microservice extends AbstractModel {
         this.setParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
         this.setParamSimple(map, prefix + "RunInstanceCount", this.RunInstanceCount);
         this.setParamSimple(map, prefix + "CriticalInstanceCount", this.CriticalInstanceCount);
+        this.setParamSimple(map, prefix + "DeleteDisabled", this.DeleteDisabled);
+        this.setParamSimple(map, prefix + "DeleteDisabledReason", this.DeleteDisabledReason);
 
     }
 }

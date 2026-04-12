@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class SmartSubtitleTaskBatchOutput extends AbstractModel {
 
     /**
-    * 任务进度。
+    * <p>任务进度。</p>
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-    * 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
+    * <p>任务状态，有 PROCESSING，SUCCESS，WAITING 和 FAIL 四种。</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 错误码，空字符串表示成功，其他值表示失败，取值请参考 [媒体处理类错误码](https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) 列表。
+    * <p>错误码，空字符串表示成功，其他值表示失败，取值请参考 <a href="https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">媒体处理类错误码</a> 列表。</p>
     */
     @SerializedName("ErrCodeExt")
     @Expose
     private String ErrCodeExt;
 
     /**
-    * 错误信息。
+    * <p>错误信息。</p>
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * 翻译任务输出信息。
+    * <p>翻译任务输出信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TransTextTask")
@@ -60,7 +60,7 @@ public class SmartSubtitleTaskBatchOutput extends AbstractModel {
     private SmartSubtitleTaskTransTextResultOutput TransTextTask;
 
     /**
-    * 语音全文识别任务输出信息。
+    * <p>语音全文识别任务输出信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsrFullTextTask")
@@ -68,73 +68,73 @@ public class SmartSubtitleTaskBatchOutput extends AbstractModel {
     private SmartSubtitleTaskAsrFullTextResultOutput AsrFullTextTask;
 
     /**
-     * Get 任务进度。 
-     * @return Progress 任务进度。
+     * Get <p>任务进度。</p> 
+     * @return Progress <p>任务进度。</p>
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set 任务进度。
-     * @param Progress 任务进度。
+     * Set <p>任务进度。</p>
+     * @param Progress <p>任务进度。</p>
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。 
-     * @return Status 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
+     * Get <p>任务状态，有 PROCESSING，SUCCESS，WAITING 和 FAIL 四种。</p> 
+     * @return Status <p>任务状态，有 PROCESSING，SUCCESS，WAITING 和 FAIL 四种。</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
-     * @param Status 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
+     * Set <p>任务状态，有 PROCESSING，SUCCESS，WAITING 和 FAIL 四种。</p>
+     * @param Status <p>任务状态，有 PROCESSING，SUCCESS，WAITING 和 FAIL 四种。</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 错误码，空字符串表示成功，其他值表示失败，取值请参考 [媒体处理类错误码](https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) 列表。 
-     * @return ErrCodeExt 错误码，空字符串表示成功，其他值表示失败，取值请参考 [媒体处理类错误码](https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) 列表。
+     * Get <p>错误码，空字符串表示成功，其他值表示失败，取值请参考 <a href="https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">媒体处理类错误码</a> 列表。</p> 
+     * @return ErrCodeExt <p>错误码，空字符串表示成功，其他值表示失败，取值请参考 <a href="https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">媒体处理类错误码</a> 列表。</p>
      */
     public String getErrCodeExt() {
         return this.ErrCodeExt;
     }
 
     /**
-     * Set 错误码，空字符串表示成功，其他值表示失败，取值请参考 [媒体处理类错误码](https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) 列表。
-     * @param ErrCodeExt 错误码，空字符串表示成功，其他值表示失败，取值请参考 [媒体处理类错误码](https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) 列表。
+     * Set <p>错误码，空字符串表示成功，其他值表示失败，取值请参考 <a href="https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">媒体处理类错误码</a> 列表。</p>
+     * @param ErrCodeExt <p>错误码，空字符串表示成功，其他值表示失败，取值请参考 <a href="https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">媒体处理类错误码</a> 列表。</p>
      */
     public void setErrCodeExt(String ErrCodeExt) {
         this.ErrCodeExt = ErrCodeExt;
     }
 
     /**
-     * Get 错误信息。 
-     * @return Message 错误信息。
+     * Get <p>错误信息。</p> 
+     * @return Message <p>错误信息。</p>
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set 错误信息。
-     * @param Message 错误信息。
+     * Set <p>错误信息。</p>
+     * @param Message <p>错误信息。</p>
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get 翻译任务输出信息。
+     * Get <p>翻译任务输出信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TransTextTask 翻译任务输出信息。
+     * @return TransTextTask <p>翻译任务输出信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SmartSubtitleTaskTransTextResultOutput getTransTextTask() {
@@ -142,9 +142,9 @@ public class SmartSubtitleTaskBatchOutput extends AbstractModel {
     }
 
     /**
-     * Set 翻译任务输出信息。
+     * Set <p>翻译任务输出信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TransTextTask 翻译任务输出信息。
+     * @param TransTextTask <p>翻译任务输出信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTransTextTask(SmartSubtitleTaskTransTextResultOutput TransTextTask) {
@@ -152,9 +152,9 @@ public class SmartSubtitleTaskBatchOutput extends AbstractModel {
     }
 
     /**
-     * Get 语音全文识别任务输出信息。
+     * Get <p>语音全文识别任务输出信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AsrFullTextTask 语音全文识别任务输出信息。
+     * @return AsrFullTextTask <p>语音全文识别任务输出信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SmartSubtitleTaskAsrFullTextResultOutput getAsrFullTextTask() {
@@ -162,9 +162,9 @@ public class SmartSubtitleTaskBatchOutput extends AbstractModel {
     }
 
     /**
-     * Set 语音全文识别任务输出信息。
+     * Set <p>语音全文识别任务输出信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AsrFullTextTask 语音全文识别任务输出信息。
+     * @param AsrFullTextTask <p>语音全文识别任务输出信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsrFullTextTask(SmartSubtitleTaskAsrFullTextResultOutput AsrFullTextTask) {

@@ -45,6 +45,13 @@ public class UpdateApiRateLimitRulesRequest extends AbstractModel {
     private Long MaxQps;
 
     /**
+    * 旧格式 method 与 path 分开，新格式 path-<Method>,如 /checkToken-GET，默认为新格式
+    */
+    @SerializedName("UsePathAndMethodFormat")
+    @Expose
+    private Boolean UsePathAndMethodFormat;
+
+    /**
      * Get API ID 列表 
      * @return ApiIds API ID 列表
      */
@@ -92,6 +99,22 @@ public class UpdateApiRateLimitRulesRequest extends AbstractModel {
         this.MaxQps = MaxQps;
     }
 
+    /**
+     * Get 旧格式 method 与 path 分开，新格式 path-<Method>,如 /checkToken-GET，默认为新格式 
+     * @return UsePathAndMethodFormat 旧格式 method 与 path 分开，新格式 path-<Method>,如 /checkToken-GET，默认为新格式
+     */
+    public Boolean getUsePathAndMethodFormat() {
+        return this.UsePathAndMethodFormat;
+    }
+
+    /**
+     * Set 旧格式 method 与 path 分开，新格式 path-<Method>,如 /checkToken-GET，默认为新格式
+     * @param UsePathAndMethodFormat 旧格式 method 与 path 分开，新格式 path-<Method>,如 /checkToken-GET，默认为新格式
+     */
+    public void setUsePathAndMethodFormat(Boolean UsePathAndMethodFormat) {
+        this.UsePathAndMethodFormat = UsePathAndMethodFormat;
+    }
+
     public UpdateApiRateLimitRulesRequest() {
     }
 
@@ -112,6 +135,9 @@ public class UpdateApiRateLimitRulesRequest extends AbstractModel {
         if (source.MaxQps != null) {
             this.MaxQps = new Long(source.MaxQps);
         }
+        if (source.UsePathAndMethodFormat != null) {
+            this.UsePathAndMethodFormat = new Boolean(source.UsePathAndMethodFormat);
+        }
     }
 
 
@@ -122,6 +148,7 @@ public class UpdateApiRateLimitRulesRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ApiIds.", this.ApiIds);
         this.setParamSimple(map, prefix + "UsableStatus", this.UsableStatus);
         this.setParamSimple(map, prefix + "MaxQps", this.MaxQps);
+        this.setParamSimple(map, prefix + "UsePathAndMethodFormat", this.UsePathAndMethodFormat);
 
     }
 }

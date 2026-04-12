@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ApiDetailInfo extends AbstractModel {
 
     /**
-    * API ID
+    * <p>API ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApiId")
@@ -32,7 +32,7 @@ public class ApiDetailInfo extends AbstractModel {
     private String ApiId;
 
     /**
-    * 命名空间ID
+    * <p>命名空间ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NamespaceId")
@@ -40,7 +40,7 @@ public class ApiDetailInfo extends AbstractModel {
     private String NamespaceId;
 
     /**
-    * 命名空间名称
+    * <p>命名空间名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NamespaceName")
@@ -48,7 +48,7 @@ public class ApiDetailInfo extends AbstractModel {
     private String NamespaceName;
 
     /**
-    * 服务ID
+    * <p>服务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MicroserviceId")
@@ -56,7 +56,7 @@ public class ApiDetailInfo extends AbstractModel {
     private String MicroserviceId;
 
     /**
-    * 服务名称
+    * <p>服务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MicroserviceName")
@@ -64,7 +64,7 @@ public class ApiDetailInfo extends AbstractModel {
     private String MicroserviceName;
 
     /**
-    * API 请求路径
+    * <p>API 请求路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Path")
@@ -72,7 +72,7 @@ public class ApiDetailInfo extends AbstractModel {
     private String Path;
 
     /**
-    * Api 映射路径
+    * <p>Api 映射路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PathMapping")
@@ -80,7 +80,7 @@ public class ApiDetailInfo extends AbstractModel {
     private String PathMapping;
 
     /**
-    * 请求方法
+    * <p>请求方法</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Method")
@@ -88,7 +88,7 @@ public class ApiDetailInfo extends AbstractModel {
     private String Method;
 
     /**
-    * 所属分组ID
+    * <p>所属分组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupId")
@@ -96,7 +96,7 @@ public class ApiDetailInfo extends AbstractModel {
     private String GroupId;
 
     /**
-    * 是否禁用
+    * <p>是否禁用</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UsableStatus")
@@ -104,7 +104,7 @@ public class ApiDetailInfo extends AbstractModel {
     private String UsableStatus;
 
     /**
-    * 发布状态
+    * <p>发布状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReleaseStatus")
@@ -112,7 +112,7 @@ public class ApiDetailInfo extends AbstractModel {
     private String ReleaseStatus;
 
     /**
-    * 开启限流
+    * <p>开启限流</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RateLimitStatus")
@@ -120,7 +120,7 @@ public class ApiDetailInfo extends AbstractModel {
     private String RateLimitStatus;
 
     /**
-    * 是否开启mock
+    * <p>是否开启mock</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MockStatus")
@@ -128,7 +128,7 @@ public class ApiDetailInfo extends AbstractModel {
     private String MockStatus;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedTime")
@@ -136,7 +136,7 @@ public class ApiDetailInfo extends AbstractModel {
     private String CreatedTime;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdatedTime")
@@ -144,7 +144,7 @@ public class ApiDetailInfo extends AbstractModel {
     private String UpdatedTime;
 
     /**
-    * 发布时间
+    * <p>发布时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReleasedTime")
@@ -152,7 +152,7 @@ public class ApiDetailInfo extends AbstractModel {
     private String ReleasedTime;
 
     /**
-    * 所属分组名称
+    * <p>所属分组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupName")
@@ -160,7 +160,7 @@ public class ApiDetailInfo extends AbstractModel {
     private String GroupName;
 
     /**
-    * API 超时，单位毫秒
+    * <p>API 超时，单位毫秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Timeout")
@@ -168,7 +168,7 @@ public class ApiDetailInfo extends AbstractModel {
     private Long Timeout;
 
     /**
-    * Api所在服务host
+    * <p>Api所在服务host</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Host")
@@ -176,7 +176,7 @@ public class ApiDetailInfo extends AbstractModel {
     private String Host;
 
     /**
-    * API类型。 ms ： 微服务API； external :外部服务Api
+    * <p>API类型。 ms ： 微服务API； external :外部服务Api</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApiType")
@@ -184,7 +184,7 @@ public class ApiDetailInfo extends AbstractModel {
     private String ApiType;
 
     /**
-    * Api描述信息
+    * <p>Api描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
@@ -192,7 +192,7 @@ public class ApiDetailInfo extends AbstractModel {
     private String Description;
 
     /**
-    * API路径匹配类型。normal：普通API；wildcard：通配API。
+    * <p>API路径匹配类型。normal：普通API；wildcard：通配API。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApiMatchType")
@@ -200,7 +200,7 @@ public class ApiDetailInfo extends AbstractModel {
     private String ApiMatchType;
 
     /**
-    * RPC 额外信息
+    * <p>RPC 额外信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RpcExt")
@@ -208,7 +208,7 @@ public class ApiDetailInfo extends AbstractModel {
     private String RpcExt;
 
     /**
-    * 部署组id
+    * <p>部署组id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GatewayDeployGroupId")
@@ -216,7 +216,7 @@ public class ApiDetailInfo extends AbstractModel {
     private String GatewayDeployGroupId;
 
     /**
-    * md5
+    * <p>md5</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Md5")
@@ -224,7 +224,7 @@ public class ApiDetailInfo extends AbstractModel {
     private String Md5;
 
     /**
-    * RPC 类型
+    * <p>RPC 类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RpcType")
@@ -232,9 +232,23 @@ public class ApiDetailInfo extends AbstractModel {
     private String RpcType;
 
     /**
-     * Get API ID
+    * <p>是否禁用短路径访问开关</p>
+    */
+    @SerializedName("PathMappingUnsupported")
+    @Expose
+    private Boolean PathMappingUnsupported;
+
+    /**
+    * <p>禁用短路径访问开关原因</p>
+    */
+    @SerializedName("PathMappingUnsupportedMsg")
+    @Expose
+    private String PathMappingUnsupportedMsg;
+
+    /**
+     * Get <p>API ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ApiId API ID
+     * @return ApiId <p>API ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApiId() {
@@ -242,9 +256,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Set API ID
+     * Set <p>API ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ApiId API ID
+     * @param ApiId <p>API ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApiId(String ApiId) {
@@ -252,9 +266,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get 命名空间ID
+     * Get <p>命名空间ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NamespaceId 命名空间ID
+     * @return NamespaceId <p>命名空间ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespaceId() {
@@ -262,9 +276,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Set 命名空间ID
+     * Set <p>命名空间ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NamespaceId 命名空间ID
+     * @param NamespaceId <p>命名空间ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespaceId(String NamespaceId) {
@@ -272,9 +286,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get 命名空间名称
+     * Get <p>命名空间名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NamespaceName 命名空间名称
+     * @return NamespaceName <p>命名空间名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespaceName() {
@@ -282,9 +296,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Set 命名空间名称
+     * Set <p>命名空间名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NamespaceName 命名空间名称
+     * @param NamespaceName <p>命名空间名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespaceName(String NamespaceName) {
@@ -292,9 +306,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get 服务ID
+     * Get <p>服务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MicroserviceId 服务ID
+     * @return MicroserviceId <p>服务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMicroserviceId() {
@@ -302,9 +316,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Set 服务ID
+     * Set <p>服务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MicroserviceId 服务ID
+     * @param MicroserviceId <p>服务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMicroserviceId(String MicroserviceId) {
@@ -312,9 +326,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get 服务名称
+     * Get <p>服务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MicroserviceName 服务名称
+     * @return MicroserviceName <p>服务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMicroserviceName() {
@@ -322,9 +336,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Set 服务名称
+     * Set <p>服务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MicroserviceName 服务名称
+     * @param MicroserviceName <p>服务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMicroserviceName(String MicroserviceName) {
@@ -332,9 +346,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get API 请求路径
+     * Get <p>API 请求路径</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Path API 请求路径
+     * @return Path <p>API 请求路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPath() {
@@ -342,9 +356,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Set API 请求路径
+     * Set <p>API 请求路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Path API 请求路径
+     * @param Path <p>API 请求路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPath(String Path) {
@@ -352,9 +366,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get Api 映射路径
+     * Get <p>Api 映射路径</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PathMapping Api 映射路径
+     * @return PathMapping <p>Api 映射路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPathMapping() {
@@ -362,9 +376,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Set Api 映射路径
+     * Set <p>Api 映射路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PathMapping Api 映射路径
+     * @param PathMapping <p>Api 映射路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPathMapping(String PathMapping) {
@@ -372,9 +386,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get 请求方法
+     * Get <p>请求方法</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Method 请求方法
+     * @return Method <p>请求方法</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMethod() {
@@ -382,9 +396,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Set 请求方法
+     * Set <p>请求方法</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Method 请求方法
+     * @param Method <p>请求方法</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMethod(String Method) {
@@ -392,9 +406,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get 所属分组ID
+     * Get <p>所属分组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GroupId 所属分组ID
+     * @return GroupId <p>所属分组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupId() {
@@ -402,9 +416,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Set 所属分组ID
+     * Set <p>所属分组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GroupId 所属分组ID
+     * @param GroupId <p>所属分组ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupId(String GroupId) {
@@ -412,9 +426,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否禁用
+     * Get <p>是否禁用</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UsableStatus 是否禁用
+     * @return UsableStatus <p>是否禁用</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUsableStatus() {
@@ -422,9 +436,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Set 是否禁用
+     * Set <p>是否禁用</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UsableStatus 是否禁用
+     * @param UsableStatus <p>是否禁用</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsableStatus(String UsableStatus) {
@@ -432,9 +446,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get 发布状态
+     * Get <p>发布状态</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReleaseStatus 发布状态
+     * @return ReleaseStatus <p>发布状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReleaseStatus() {
@@ -442,9 +456,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Set 发布状态
+     * Set <p>发布状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReleaseStatus 发布状态
+     * @param ReleaseStatus <p>发布状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReleaseStatus(String ReleaseStatus) {
@@ -452,9 +466,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get 开启限流
+     * Get <p>开启限流</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RateLimitStatus 开启限流
+     * @return RateLimitStatus <p>开启限流</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRateLimitStatus() {
@@ -462,9 +476,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Set 开启限流
+     * Set <p>开启限流</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RateLimitStatus 开启限流
+     * @param RateLimitStatus <p>开启限流</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRateLimitStatus(String RateLimitStatus) {
@@ -472,9 +486,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否开启mock
+     * Get <p>是否开启mock</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MockStatus 是否开启mock
+     * @return MockStatus <p>是否开启mock</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMockStatus() {
@@ -482,9 +496,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Set 是否开启mock
+     * Set <p>是否开启mock</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MockStatus 是否开启mock
+     * @param MockStatus <p>是否开启mock</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMockStatus(String MockStatus) {
@@ -492,9 +506,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
+     * Get <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreatedTime 创建时间
+     * @return CreatedTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedTime() {
@@ -502,9 +516,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Set 创建时间
+     * Set <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreatedTime 创建时间
+     * @param CreatedTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedTime(String CreatedTime) {
@@ -512,9 +526,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get 更新时间
+     * Get <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdatedTime 更新时间
+     * @return UpdatedTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdatedTime() {
@@ -522,9 +536,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Set 更新时间
+     * Set <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdatedTime 更新时间
+     * @param UpdatedTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdatedTime(String UpdatedTime) {
@@ -532,9 +546,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get 发布时间
+     * Get <p>发布时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReleasedTime 发布时间
+     * @return ReleasedTime <p>发布时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReleasedTime() {
@@ -542,9 +556,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Set 发布时间
+     * Set <p>发布时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReleasedTime 发布时间
+     * @param ReleasedTime <p>发布时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReleasedTime(String ReleasedTime) {
@@ -552,9 +566,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get 所属分组名称
+     * Get <p>所属分组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GroupName 所属分组名称
+     * @return GroupName <p>所属分组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupName() {
@@ -562,9 +576,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Set 所属分组名称
+     * Set <p>所属分组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GroupName 所属分组名称
+     * @param GroupName <p>所属分组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupName(String GroupName) {
@@ -572,9 +586,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get API 超时，单位毫秒
+     * Get <p>API 超时，单位毫秒</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Timeout API 超时，单位毫秒
+     * @return Timeout <p>API 超时，单位毫秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTimeout() {
@@ -582,9 +596,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Set API 超时，单位毫秒
+     * Set <p>API 超时，单位毫秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Timeout API 超时，单位毫秒
+     * @param Timeout <p>API 超时，单位毫秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeout(Long Timeout) {
@@ -592,9 +606,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get Api所在服务host
+     * Get <p>Api所在服务host</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Host Api所在服务host
+     * @return Host <p>Api所在服务host</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHost() {
@@ -602,9 +616,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Set Api所在服务host
+     * Set <p>Api所在服务host</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Host Api所在服务host
+     * @param Host <p>Api所在服务host</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHost(String Host) {
@@ -612,9 +626,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get API类型。 ms ： 微服务API； external :外部服务Api
+     * Get <p>API类型。 ms ： 微服务API； external :外部服务Api</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ApiType API类型。 ms ： 微服务API； external :外部服务Api
+     * @return ApiType <p>API类型。 ms ： 微服务API； external :外部服务Api</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApiType() {
@@ -622,9 +636,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Set API类型。 ms ： 微服务API； external :外部服务Api
+     * Set <p>API类型。 ms ： 微服务API； external :外部服务Api</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ApiType API类型。 ms ： 微服务API； external :外部服务Api
+     * @param ApiType <p>API类型。 ms ： 微服务API； external :外部服务Api</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApiType(String ApiType) {
@@ -632,9 +646,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get Api描述信息
+     * Get <p>Api描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Description Api描述信息
+     * @return Description <p>Api描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
@@ -642,9 +656,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Set Api描述信息
+     * Set <p>Api描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Description Api描述信息
+     * @param Description <p>Api描述信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
@@ -652,9 +666,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get API路径匹配类型。normal：普通API；wildcard：通配API。
+     * Get <p>API路径匹配类型。normal：普通API；wildcard：通配API。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ApiMatchType API路径匹配类型。normal：普通API；wildcard：通配API。
+     * @return ApiMatchType <p>API路径匹配类型。normal：普通API；wildcard：通配API。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApiMatchType() {
@@ -662,9 +676,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Set API路径匹配类型。normal：普通API；wildcard：通配API。
+     * Set <p>API路径匹配类型。normal：普通API；wildcard：通配API。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ApiMatchType API路径匹配类型。normal：普通API；wildcard：通配API。
+     * @param ApiMatchType <p>API路径匹配类型。normal：普通API；wildcard：通配API。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApiMatchType(String ApiMatchType) {
@@ -672,9 +686,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get RPC 额外信息
+     * Get <p>RPC 额外信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RpcExt RPC 额外信息
+     * @return RpcExt <p>RPC 额外信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRpcExt() {
@@ -682,9 +696,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Set RPC 额外信息
+     * Set <p>RPC 额外信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RpcExt RPC 额外信息
+     * @param RpcExt <p>RPC 额外信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRpcExt(String RpcExt) {
@@ -692,9 +706,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get 部署组id
+     * Get <p>部署组id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GatewayDeployGroupId 部署组id
+     * @return GatewayDeployGroupId <p>部署组id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGatewayDeployGroupId() {
@@ -702,9 +716,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Set 部署组id
+     * Set <p>部署组id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GatewayDeployGroupId 部署组id
+     * @param GatewayDeployGroupId <p>部署组id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGatewayDeployGroupId(String GatewayDeployGroupId) {
@@ -712,9 +726,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get md5
+     * Get <p>md5</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Md5 md5
+     * @return Md5 <p>md5</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMd5() {
@@ -722,9 +736,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Set md5
+     * Set <p>md5</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Md5 md5
+     * @param Md5 <p>md5</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMd5(String Md5) {
@@ -732,9 +746,9 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Get RPC 类型
+     * Get <p>RPC 类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RpcType RPC 类型
+     * @return RpcType <p>RPC 类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRpcType() {
@@ -742,13 +756,45 @@ public class ApiDetailInfo extends AbstractModel {
     }
 
     /**
-     * Set RPC 类型
+     * Set <p>RPC 类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RpcType RPC 类型
+     * @param RpcType <p>RPC 类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRpcType(String RpcType) {
         this.RpcType = RpcType;
+    }
+
+    /**
+     * Get <p>是否禁用短路径访问开关</p> 
+     * @return PathMappingUnsupported <p>是否禁用短路径访问开关</p>
+     */
+    public Boolean getPathMappingUnsupported() {
+        return this.PathMappingUnsupported;
+    }
+
+    /**
+     * Set <p>是否禁用短路径访问开关</p>
+     * @param PathMappingUnsupported <p>是否禁用短路径访问开关</p>
+     */
+    public void setPathMappingUnsupported(Boolean PathMappingUnsupported) {
+        this.PathMappingUnsupported = PathMappingUnsupported;
+    }
+
+    /**
+     * Get <p>禁用短路径访问开关原因</p> 
+     * @return PathMappingUnsupportedMsg <p>禁用短路径访问开关原因</p>
+     */
+    public String getPathMappingUnsupportedMsg() {
+        return this.PathMappingUnsupportedMsg;
+    }
+
+    /**
+     * Set <p>禁用短路径访问开关原因</p>
+     * @param PathMappingUnsupportedMsg <p>禁用短路径访问开关原因</p>
+     */
+    public void setPathMappingUnsupportedMsg(String PathMappingUnsupportedMsg) {
+        this.PathMappingUnsupportedMsg = PathMappingUnsupportedMsg;
     }
 
     public ApiDetailInfo() {
@@ -837,6 +883,12 @@ public class ApiDetailInfo extends AbstractModel {
         if (source.RpcType != null) {
             this.RpcType = new String(source.RpcType);
         }
+        if (source.PathMappingUnsupported != null) {
+            this.PathMappingUnsupported = new Boolean(source.PathMappingUnsupported);
+        }
+        if (source.PathMappingUnsupportedMsg != null) {
+            this.PathMappingUnsupportedMsg = new String(source.PathMappingUnsupportedMsg);
+        }
     }
 
 
@@ -870,6 +922,8 @@ public class ApiDetailInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "GatewayDeployGroupId", this.GatewayDeployGroupId);
         this.setParamSimple(map, prefix + "Md5", this.Md5);
         this.setParamSimple(map, prefix + "RpcType", this.RpcType);
+        this.setParamSimple(map, prefix + "PathMappingUnsupported", this.PathMappingUnsupported);
+        this.setParamSimple(map, prefix + "PathMappingUnsupportedMsg", this.PathMappingUnsupportedMsg);
 
     }
 }

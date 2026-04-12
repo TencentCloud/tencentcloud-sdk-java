@@ -31,7 +31,7 @@ public class AigcVideoTaskInputFileInfo extends AbstractModel {
     private String Type;
 
     /**
-    * <p>文件分类。取值为：</p><li>Image: 图片；</li><li>Video: 视频。</li>
+    * <p>文件分类。取值为：</p><ul><li>Image: 图片；<strong>注意，要使用Usage字段定义图片类型</strong>。</li><li>Video: 视频。</li></ul>
     */
     @SerializedName("Category")
     @Expose
@@ -59,7 +59,7 @@ public class AigcVideoTaskInputFileInfo extends AbstractModel {
     private String ReferenceType;
 
     /**
-    * <p>用法：Vidu主体Id、参考图模式。<br>参考图模式：只有一张图时候，ObjectId必须不为空（一张图、ObjectId为空，为首帧模式）。<br>Vidu主体Id：prompt可以通过 @主体Id 的方式使用。当 Category 为 Image 时有效。</p>
+    * <p>用法：Vidu主体Id。<br>Vidu主体Id：prompt可以通过 @主体Id 的方式使用。当 Category 为 Image 时有效。</p>
     */
     @SerializedName("ObjectId")
     @Expose
@@ -80,7 +80,7 @@ public class AigcVideoTaskInputFileInfo extends AbstractModel {
     private String KeepOriginalSound;
 
     /**
-    * <p>用于区分输入是首帧或参考帧。可选值：</p><ul><li>FirstFrame：首帧；</li><li>Reference：参考帧；</li></ul>
+    * <p>用于区分输入是首帧或参考帧。可选值：</p><ul><li>FirstFrame：首帧；</li><li>Reference：参考帧；</li></ul><p><strong>注意，默认是FirstFrame</strong></p>
     */
     @SerializedName("Usage")
     @Expose
@@ -103,16 +103,16 @@ public class AigcVideoTaskInputFileInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>文件分类。取值为：</p><li>Image: 图片；</li><li>Video: 视频。</li> 
-     * @return Category <p>文件分类。取值为：</p><li>Image: 图片；</li><li>Video: 视频。</li>
+     * Get <p>文件分类。取值为：</p><ul><li>Image: 图片；<strong>注意，要使用Usage字段定义图片类型</strong>。</li><li>Video: 视频。</li></ul> 
+     * @return Category <p>文件分类。取值为：</p><ul><li>Image: 图片；<strong>注意，要使用Usage字段定义图片类型</strong>。</li><li>Video: 视频。</li></ul>
      */
     public String getCategory() {
         return this.Category;
     }
 
     /**
-     * Set <p>文件分类。取值为：</p><li>Image: 图片；</li><li>Video: 视频。</li>
-     * @param Category <p>文件分类。取值为：</p><li>Image: 图片；</li><li>Video: 视频。</li>
+     * Set <p>文件分类。取值为：</p><ul><li>Image: 图片；<strong>注意，要使用Usage字段定义图片类型</strong>。</li><li>Video: 视频。</li></ul>
+     * @param Category <p>文件分类。取值为：</p><ul><li>Image: 图片；<strong>注意，要使用Usage字段定义图片类型</strong>。</li><li>Video: 视频。</li></ul>
      */
     public void setCategory(String Category) {
         this.Category = Category;
@@ -167,16 +167,16 @@ public class AigcVideoTaskInputFileInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>用法：Vidu主体Id、参考图模式。<br>参考图模式：只有一张图时候，ObjectId必须不为空（一张图、ObjectId为空，为首帧模式）。<br>Vidu主体Id：prompt可以通过 @主体Id 的方式使用。当 Category 为 Image 时有效。</p> 
-     * @return ObjectId <p>用法：Vidu主体Id、参考图模式。<br>参考图模式：只有一张图时候，ObjectId必须不为空（一张图、ObjectId为空，为首帧模式）。<br>Vidu主体Id：prompt可以通过 @主体Id 的方式使用。当 Category 为 Image 时有效。</p>
+     * Get <p>用法：Vidu主体Id。<br>Vidu主体Id：prompt可以通过 @主体Id 的方式使用。当 Category 为 Image 时有效。</p> 
+     * @return ObjectId <p>用法：Vidu主体Id。<br>Vidu主体Id：prompt可以通过 @主体Id 的方式使用。当 Category 为 Image 时有效。</p>
      */
     public String getObjectId() {
         return this.ObjectId;
     }
 
     /**
-     * Set <p>用法：Vidu主体Id、参考图模式。<br>参考图模式：只有一张图时候，ObjectId必须不为空（一张图、ObjectId为空，为首帧模式）。<br>Vidu主体Id：prompt可以通过 @主体Id 的方式使用。当 Category 为 Image 时有效。</p>
-     * @param ObjectId <p>用法：Vidu主体Id、参考图模式。<br>参考图模式：只有一张图时候，ObjectId必须不为空（一张图、ObjectId为空，为首帧模式）。<br>Vidu主体Id：prompt可以通过 @主体Id 的方式使用。当 Category 为 Image 时有效。</p>
+     * Set <p>用法：Vidu主体Id。<br>Vidu主体Id：prompt可以通过 @主体Id 的方式使用。当 Category 为 Image 时有效。</p>
+     * @param ObjectId <p>用法：Vidu主体Id。<br>Vidu主体Id：prompt可以通过 @主体Id 的方式使用。当 Category 为 Image 时有效。</p>
      */
     public void setObjectId(String ObjectId) {
         this.ObjectId = ObjectId;
@@ -215,16 +215,16 @@ public class AigcVideoTaskInputFileInfo extends AbstractModel {
     }
 
     /**
-     * Get <p>用于区分输入是首帧或参考帧。可选值：</p><ul><li>FirstFrame：首帧；</li><li>Reference：参考帧；</li></ul> 
-     * @return Usage <p>用于区分输入是首帧或参考帧。可选值：</p><ul><li>FirstFrame：首帧；</li><li>Reference：参考帧；</li></ul>
+     * Get <p>用于区分输入是首帧或参考帧。可选值：</p><ul><li>FirstFrame：首帧；</li><li>Reference：参考帧；</li></ul><p><strong>注意，默认是FirstFrame</strong></p> 
+     * @return Usage <p>用于区分输入是首帧或参考帧。可选值：</p><ul><li>FirstFrame：首帧；</li><li>Reference：参考帧；</li></ul><p><strong>注意，默认是FirstFrame</strong></p>
      */
     public String getUsage() {
         return this.Usage;
     }
 
     /**
-     * Set <p>用于区分输入是首帧或参考帧。可选值：</p><ul><li>FirstFrame：首帧；</li><li>Reference：参考帧；</li></ul>
-     * @param Usage <p>用于区分输入是首帧或参考帧。可选值：</p><ul><li>FirstFrame：首帧；</li><li>Reference：参考帧；</li></ul>
+     * Set <p>用于区分输入是首帧或参考帧。可选值：</p><ul><li>FirstFrame：首帧；</li><li>Reference：参考帧；</li></ul><p><strong>注意，默认是FirstFrame</strong></p>
+     * @param Usage <p>用于区分输入是首帧或参考帧。可选值：</p><ul><li>FirstFrame：首帧；</li><li>Reference：参考帧；</li></ul><p><strong>注意，默认是FirstFrame</strong></p>
      */
     public void setUsage(String Usage) {
         this.Usage = Usage;

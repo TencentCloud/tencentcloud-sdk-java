@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ApiRateLimitRule extends AbstractModel {
 
     /**
-    * rule Id
+    * <p>rule Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleId")
@@ -32,7 +32,7 @@ public class ApiRateLimitRule extends AbstractModel {
     private String RuleId;
 
     /**
-    * API ID
+    * <p>API ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApiId")
@@ -40,7 +40,7 @@ public class ApiRateLimitRule extends AbstractModel {
     private String ApiId;
 
     /**
-    * 限流名称
+    * <p>限流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleName")
@@ -48,7 +48,7 @@ public class ApiRateLimitRule extends AbstractModel {
     private String RuleName;
 
     /**
-    * 最大限流qps
+    * <p>最大限流qps</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxQps")
@@ -56,7 +56,7 @@ public class ApiRateLimitRule extends AbstractModel {
     private Long MaxQps;
 
     /**
-    * 生效/禁用, enabled/disabled
+    * <p>生效/禁用, enabled/disabled</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UsableStatus")
@@ -64,7 +64,7 @@ public class ApiRateLimitRule extends AbstractModel {
     private String UsableStatus;
 
     /**
-    * 规则内容
+    * <p>规则内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleContent")
@@ -72,7 +72,7 @@ public class ApiRateLimitRule extends AbstractModel {
     private String RuleContent;
 
     /**
-    * Tsf Rule ID
+    * <p>Tsf Rule ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TsfRuleId")
@@ -80,7 +80,7 @@ public class ApiRateLimitRule extends AbstractModel {
     private String TsfRuleId;
 
     /**
-    * 描述
+    * <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
@@ -88,7 +88,7 @@ public class ApiRateLimitRule extends AbstractModel {
     private String Description;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedTime")
@@ -96,7 +96,7 @@ public class ApiRateLimitRule extends AbstractModel {
     private String CreatedTime;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdatedTime")
@@ -104,7 +104,7 @@ public class ApiRateLimitRule extends AbstractModel {
     private String UpdatedTime;
 
     /**
-    * 分页参数limit
+    * <p>分页参数limit</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Limit")
@@ -112,7 +112,7 @@ public class ApiRateLimitRule extends AbstractModel {
     private Long Limit;
 
     /**
-    * 分页参数offset
+    * <p>分页参数offset</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Offset")
@@ -120,7 +120,7 @@ public class ApiRateLimitRule extends AbstractModel {
     private Long Offset;
 
     /**
-    * AppId
+    * <p>AppId</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
@@ -128,9 +128,16 @@ public class ApiRateLimitRule extends AbstractModel {
     private String AppId;
 
     /**
-     * Get rule Id
+    * <p>旧格式 method 与 path 分开，新格式 path-Method,如 /checkToken-GET，默认为新格式</p>
+    */
+    @SerializedName("UsePathAndMethodFormat")
+    @Expose
+    private Boolean UsePathAndMethodFormat;
+
+    /**
+     * Get <p>rule Id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleId rule Id
+     * @return RuleId <p>rule Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleId() {
@@ -138,9 +145,9 @@ public class ApiRateLimitRule extends AbstractModel {
     }
 
     /**
-     * Set rule Id
+     * Set <p>rule Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleId rule Id
+     * @param RuleId <p>rule Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleId(String RuleId) {
@@ -148,9 +155,9 @@ public class ApiRateLimitRule extends AbstractModel {
     }
 
     /**
-     * Get API ID
+     * Get <p>API ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ApiId API ID
+     * @return ApiId <p>API ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApiId() {
@@ -158,9 +165,9 @@ public class ApiRateLimitRule extends AbstractModel {
     }
 
     /**
-     * Set API ID
+     * Set <p>API ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ApiId API ID
+     * @param ApiId <p>API ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApiId(String ApiId) {
@@ -168,9 +175,9 @@ public class ApiRateLimitRule extends AbstractModel {
     }
 
     /**
-     * Get 限流名称
+     * Get <p>限流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleName 限流名称
+     * @return RuleName <p>限流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleName() {
@@ -178,9 +185,9 @@ public class ApiRateLimitRule extends AbstractModel {
     }
 
     /**
-     * Set 限流名称
+     * Set <p>限流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleName 限流名称
+     * @param RuleName <p>限流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleName(String RuleName) {
@@ -188,9 +195,9 @@ public class ApiRateLimitRule extends AbstractModel {
     }
 
     /**
-     * Get 最大限流qps
+     * Get <p>最大限流qps</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MaxQps 最大限流qps
+     * @return MaxQps <p>最大限流qps</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxQps() {
@@ -198,9 +205,9 @@ public class ApiRateLimitRule extends AbstractModel {
     }
 
     /**
-     * Set 最大限流qps
+     * Set <p>最大限流qps</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaxQps 最大限流qps
+     * @param MaxQps <p>最大限流qps</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxQps(Long MaxQps) {
@@ -208,9 +215,9 @@ public class ApiRateLimitRule extends AbstractModel {
     }
 
     /**
-     * Get 生效/禁用, enabled/disabled
+     * Get <p>生效/禁用, enabled/disabled</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UsableStatus 生效/禁用, enabled/disabled
+     * @return UsableStatus <p>生效/禁用, enabled/disabled</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUsableStatus() {
@@ -218,9 +225,9 @@ public class ApiRateLimitRule extends AbstractModel {
     }
 
     /**
-     * Set 生效/禁用, enabled/disabled
+     * Set <p>生效/禁用, enabled/disabled</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UsableStatus 生效/禁用, enabled/disabled
+     * @param UsableStatus <p>生效/禁用, enabled/disabled</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsableStatus(String UsableStatus) {
@@ -228,9 +235,9 @@ public class ApiRateLimitRule extends AbstractModel {
     }
 
     /**
-     * Get 规则内容
+     * Get <p>规则内容</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleContent 规则内容
+     * @return RuleContent <p>规则内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleContent() {
@@ -238,9 +245,9 @@ public class ApiRateLimitRule extends AbstractModel {
     }
 
     /**
-     * Set 规则内容
+     * Set <p>规则内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleContent 规则内容
+     * @param RuleContent <p>规则内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleContent(String RuleContent) {
@@ -248,9 +255,9 @@ public class ApiRateLimitRule extends AbstractModel {
     }
 
     /**
-     * Get Tsf Rule ID
+     * Get <p>Tsf Rule ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TsfRuleId Tsf Rule ID
+     * @return TsfRuleId <p>Tsf Rule ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTsfRuleId() {
@@ -258,9 +265,9 @@ public class ApiRateLimitRule extends AbstractModel {
     }
 
     /**
-     * Set Tsf Rule ID
+     * Set <p>Tsf Rule ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TsfRuleId Tsf Rule ID
+     * @param TsfRuleId <p>Tsf Rule ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTsfRuleId(String TsfRuleId) {
@@ -268,9 +275,9 @@ public class ApiRateLimitRule extends AbstractModel {
     }
 
     /**
-     * Get 描述
+     * Get <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Description 描述
+     * @return Description <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
@@ -278,9 +285,9 @@ public class ApiRateLimitRule extends AbstractModel {
     }
 
     /**
-     * Set 描述
+     * Set <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Description 描述
+     * @param Description <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
@@ -288,9 +295,9 @@ public class ApiRateLimitRule extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
+     * Get <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreatedTime 创建时间
+     * @return CreatedTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedTime() {
@@ -298,9 +305,9 @@ public class ApiRateLimitRule extends AbstractModel {
     }
 
     /**
-     * Set 创建时间
+     * Set <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreatedTime 创建时间
+     * @param CreatedTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedTime(String CreatedTime) {
@@ -308,9 +315,9 @@ public class ApiRateLimitRule extends AbstractModel {
     }
 
     /**
-     * Get 更新时间
+     * Get <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdatedTime 更新时间
+     * @return UpdatedTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdatedTime() {
@@ -318,9 +325,9 @@ public class ApiRateLimitRule extends AbstractModel {
     }
 
     /**
-     * Set 更新时间
+     * Set <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdatedTime 更新时间
+     * @param UpdatedTime <p>更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdatedTime(String UpdatedTime) {
@@ -328,9 +335,9 @@ public class ApiRateLimitRule extends AbstractModel {
     }
 
     /**
-     * Get 分页参数limit
+     * Get <p>分页参数limit</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Limit 分页参数limit
+     * @return Limit <p>分页参数limit</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLimit() {
@@ -338,9 +345,9 @@ public class ApiRateLimitRule extends AbstractModel {
     }
 
     /**
-     * Set 分页参数limit
+     * Set <p>分页参数limit</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Limit 分页参数limit
+     * @param Limit <p>分页参数limit</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLimit(Long Limit) {
@@ -348,9 +355,9 @@ public class ApiRateLimitRule extends AbstractModel {
     }
 
     /**
-     * Get 分页参数offset
+     * Get <p>分页参数offset</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Offset 分页参数offset
+     * @return Offset <p>分页参数offset</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOffset() {
@@ -358,9 +365,9 @@ public class ApiRateLimitRule extends AbstractModel {
     }
 
     /**
-     * Set 分页参数offset
+     * Set <p>分页参数offset</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Offset 分页参数offset
+     * @param Offset <p>分页参数offset</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOffset(Long Offset) {
@@ -368,9 +375,9 @@ public class ApiRateLimitRule extends AbstractModel {
     }
 
     /**
-     * Get AppId
+     * Get <p>AppId</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AppId AppId
+     * @return AppId <p>AppId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppId() {
@@ -378,13 +385,29 @@ public class ApiRateLimitRule extends AbstractModel {
     }
 
     /**
-     * Set AppId
+     * Set <p>AppId</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AppId AppId
+     * @param AppId <p>AppId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
+    }
+
+    /**
+     * Get <p>旧格式 method 与 path 分开，新格式 path-Method,如 /checkToken-GET，默认为新格式</p> 
+     * @return UsePathAndMethodFormat <p>旧格式 method 与 path 分开，新格式 path-Method,如 /checkToken-GET，默认为新格式</p>
+     */
+    public Boolean getUsePathAndMethodFormat() {
+        return this.UsePathAndMethodFormat;
+    }
+
+    /**
+     * Set <p>旧格式 method 与 path 分开，新格式 path-Method,如 /checkToken-GET，默认为新格式</p>
+     * @param UsePathAndMethodFormat <p>旧格式 method 与 path 分开，新格式 path-Method,如 /checkToken-GET，默认为新格式</p>
+     */
+    public void setUsePathAndMethodFormat(Boolean UsePathAndMethodFormat) {
+        this.UsePathAndMethodFormat = UsePathAndMethodFormat;
     }
 
     public ApiRateLimitRule() {
@@ -434,6 +457,9 @@ public class ApiRateLimitRule extends AbstractModel {
         if (source.AppId != null) {
             this.AppId = new String(source.AppId);
         }
+        if (source.UsePathAndMethodFormat != null) {
+            this.UsePathAndMethodFormat = new Boolean(source.UsePathAndMethodFormat);
+        }
     }
 
 
@@ -454,6 +480,7 @@ public class ApiRateLimitRule extends AbstractModel {
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
+        this.setParamSimple(map, prefix + "UsePathAndMethodFormat", this.UsePathAndMethodFormat);
 
     }
 }

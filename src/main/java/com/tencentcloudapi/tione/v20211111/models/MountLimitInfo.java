@@ -24,63 +24,63 @@ import java.util.HashMap;
 public class MountLimitInfo extends AbstractModel {
 
     /**
-    * 数据源类型英文名
+    * <p>数据源类型英文名</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 数据源所属存储实例ID
+    * <p>数据源所属存储实例ID</p>
     */
     @SerializedName("StorageId")
     @Expose
     private String StorageId;
 
     /**
-    * 数据源所属存储实例名称
+    * <p>数据源所属存储实例名称</p>
     */
     @SerializedName("StorageName")
     @Expose
     private String StorageName;
 
     /**
-    * 限制开关是否开启，只有开启时才有限制
+    * <p>限制开关是否开启，只有开启时才有限制</p>
     */
     @SerializedName("LimitMount")
     @Expose
     private Boolean LimitMount;
 
     /**
-    * 创建者uin
+    * <p>创建者uin</p>
     */
     @SerializedName("Creator")
     @Expose
     private String Creator;
 
     /**
-    * 创建者名称
+    * <p>创建者名称</p>
     */
     @SerializedName("CreatorName")
     @Expose
     private String CreatorName;
 
     /**
-    * 创建时间, 格式为yyyy-mm-ddThh:mm:ssZ
+    * <p>创建时间, 格式为yyyy-mm-ddThh:mm:ssZ</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 更新时间, 格式为yyyy-mm-ddThh:mm:ssZ
+    * <p>更新时间, 格式为yyyy-mm-ddThh:mm:ssZ</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 额外配置
+    * <p>额外配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExtraConf")
@@ -88,137 +88,137 @@ public class MountLimitInfo extends AbstractModel {
     private StorageExtraConf ExtraConf;
 
     /**
-     * Get 数据源类型英文名 
-     * @return Type 数据源类型英文名
+     * Get <p>数据源类型英文名</p> 
+     * @return Type <p>数据源类型英文名</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 数据源类型英文名
-     * @param Type 数据源类型英文名
+     * Set <p>数据源类型英文名</p>
+     * @param Type <p>数据源类型英文名</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 数据源所属存储实例ID 
-     * @return StorageId 数据源所属存储实例ID
+     * Get <p>数据源所属存储实例ID</p> 
+     * @return StorageId <p>数据源所属存储实例ID</p>
      */
     public String getStorageId() {
         return this.StorageId;
     }
 
     /**
-     * Set 数据源所属存储实例ID
-     * @param StorageId 数据源所属存储实例ID
+     * Set <p>数据源所属存储实例ID</p>
+     * @param StorageId <p>数据源所属存储实例ID</p>
      */
     public void setStorageId(String StorageId) {
         this.StorageId = StorageId;
     }
 
     /**
-     * Get 数据源所属存储实例名称 
-     * @return StorageName 数据源所属存储实例名称
+     * Get <p>数据源所属存储实例名称</p> 
+     * @return StorageName <p>数据源所属存储实例名称</p>
      */
     public String getStorageName() {
         return this.StorageName;
     }
 
     /**
-     * Set 数据源所属存储实例名称
-     * @param StorageName 数据源所属存储实例名称
+     * Set <p>数据源所属存储实例名称</p>
+     * @param StorageName <p>数据源所属存储实例名称</p>
      */
     public void setStorageName(String StorageName) {
         this.StorageName = StorageName;
     }
 
     /**
-     * Get 限制开关是否开启，只有开启时才有限制 
-     * @return LimitMount 限制开关是否开启，只有开启时才有限制
+     * Get <p>限制开关是否开启，只有开启时才有限制</p> 
+     * @return LimitMount <p>限制开关是否开启，只有开启时才有限制</p>
      */
     public Boolean getLimitMount() {
         return this.LimitMount;
     }
 
     /**
-     * Set 限制开关是否开启，只有开启时才有限制
-     * @param LimitMount 限制开关是否开启，只有开启时才有限制
+     * Set <p>限制开关是否开启，只有开启时才有限制</p>
+     * @param LimitMount <p>限制开关是否开启，只有开启时才有限制</p>
      */
     public void setLimitMount(Boolean LimitMount) {
         this.LimitMount = LimitMount;
     }
 
     /**
-     * Get 创建者uin 
-     * @return Creator 创建者uin
+     * Get <p>创建者uin</p> 
+     * @return Creator <p>创建者uin</p>
      */
     public String getCreator() {
         return this.Creator;
     }
 
     /**
-     * Set 创建者uin
-     * @param Creator 创建者uin
+     * Set <p>创建者uin</p>
+     * @param Creator <p>创建者uin</p>
      */
     public void setCreator(String Creator) {
         this.Creator = Creator;
     }
 
     /**
-     * Get 创建者名称 
-     * @return CreatorName 创建者名称
+     * Get <p>创建者名称</p> 
+     * @return CreatorName <p>创建者名称</p>
      */
     public String getCreatorName() {
         return this.CreatorName;
     }
 
     /**
-     * Set 创建者名称
-     * @param CreatorName 创建者名称
+     * Set <p>创建者名称</p>
+     * @param CreatorName <p>创建者名称</p>
      */
     public void setCreatorName(String CreatorName) {
         this.CreatorName = CreatorName;
     }
 
     /**
-     * Get 创建时间, 格式为yyyy-mm-ddThh:mm:ssZ 
-     * @return CreateTime 创建时间, 格式为yyyy-mm-ddThh:mm:ssZ
+     * Get <p>创建时间, 格式为yyyy-mm-ddThh:mm:ssZ</p> 
+     * @return CreateTime <p>创建时间, 格式为yyyy-mm-ddThh:mm:ssZ</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间, 格式为yyyy-mm-ddThh:mm:ssZ
-     * @param CreateTime 创建时间, 格式为yyyy-mm-ddThh:mm:ssZ
+     * Set <p>创建时间, 格式为yyyy-mm-ddThh:mm:ssZ</p>
+     * @param CreateTime <p>创建时间, 格式为yyyy-mm-ddThh:mm:ssZ</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 更新时间, 格式为yyyy-mm-ddThh:mm:ssZ 
-     * @return UpdateTime 更新时间, 格式为yyyy-mm-ddThh:mm:ssZ
+     * Get <p>更新时间, 格式为yyyy-mm-ddThh:mm:ssZ</p> 
+     * @return UpdateTime <p>更新时间, 格式为yyyy-mm-ddThh:mm:ssZ</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 更新时间, 格式为yyyy-mm-ddThh:mm:ssZ
-     * @param UpdateTime 更新时间, 格式为yyyy-mm-ddThh:mm:ssZ
+     * Set <p>更新时间, 格式为yyyy-mm-ddThh:mm:ssZ</p>
+     * @param UpdateTime <p>更新时间, 格式为yyyy-mm-ddThh:mm:ssZ</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 额外配置
+     * Get <p>额外配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExtraConf 额外配置
+     * @return ExtraConf <p>额外配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public StorageExtraConf getExtraConf() {
@@ -226,9 +226,9 @@ public class MountLimitInfo extends AbstractModel {
     }
 
     /**
-     * Set 额外配置
+     * Set <p>额外配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExtraConf 额外配置
+     * @param ExtraConf <p>额外配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtraConf(StorageExtraConf ExtraConf) {

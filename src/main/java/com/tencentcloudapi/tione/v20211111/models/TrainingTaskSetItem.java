@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class TrainingTaskSetItem extends AbstractModel {
 
     /**
-    * 训练任务ID
+    * <p>训练任务ID</p>
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 训练任务名称
+    * <p>训练任务名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 框架名称
+    * <p>框架名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FrameworkName")
@@ -46,7 +46,7 @@ public class TrainingTaskSetItem extends AbstractModel {
     private String FrameworkName;
 
     /**
-    * 训练框架版本
+    * <p>训练框架版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FrameworkVersion")
@@ -54,7 +54,7 @@ public class TrainingTaskSetItem extends AbstractModel {
     private String FrameworkVersion;
 
     /**
-    * 框架运行环境
+    * <p>框架运行环境</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FrameworkEnvironment")
@@ -62,21 +62,21 @@ public class TrainingTaskSetItem extends AbstractModel {
     private String FrameworkEnvironment;
 
     /**
-    * 计费模式
+    * <p>计费模式</p>
     */
     @SerializedName("ChargeType")
     @Expose
     private String ChargeType;
 
     /**
-    * 计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中
+    * <p>计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中</p>
     */
     @SerializedName("ChargeStatus")
     @Expose
     private String ChargeStatus;
 
     /**
-    * 预付费专用资源组
+    * <p>预付费专用资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceGroupId")
@@ -84,14 +84,14 @@ public class TrainingTaskSetItem extends AbstractModel {
     private String ResourceGroupId;
 
     /**
-    * 资源配置
+    * <p>资源配置</p>
     */
     @SerializedName("ResourceConfigInfos")
     @Expose
     private ResourceConfigInfo [] ResourceConfigInfos;
 
     /**
-    * 训练模式eg：PS_WORKER、DDP、MPI、HOROVOD
+    * <p>训练模式eg：PS_WORKER、DDP、MPI、HOROVOD</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TrainingMode")
@@ -99,15 +99,14 @@ public class TrainingTaskSetItem extends AbstractModel {
     private String TrainingMode;
 
     /**
-    * 任务状态，eg：SUBMITTING提交中、PENDING排队中、
-STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成
+    * <p>任务状态，eg：SUBMITTING提交中、PENDING排队中、<br>STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 运行时长
+    * <p>运行时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuntimeInSeconds")
@@ -115,14 +114,14 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
     private Long RuntimeInSeconds;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 训练开始时间
+    * <p>训练开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
@@ -130,7 +129,7 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
     private String StartTime;
 
     /**
-    * 训练结束时间
+    * <p>训练结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
@@ -138,14 +137,14 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
     private String EndTime;
 
     /**
-    * 训练输出
+    * <p>训练输出</p>
     */
     @SerializedName("Output")
     @Expose
     private CosPathInfo Output;
 
     /**
-    * 失败原因
+    * <p>失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailureReason")
@@ -153,28 +152,28 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
     private String FailureReason;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 计费金额信息，eg：2.00元/小时 (按量计费)
+    * <p>计费金额信息，eg：2.00元/小时 (按量计费)</p>
     */
     @SerializedName("BillingInfo")
     @Expose
     private String BillingInfo;
 
     /**
-    * 预付费专用资源组名称
+    * <p>预付费专用资源组名称</p>
     */
     @SerializedName("ResourceGroupName")
     @Expose
     private String ResourceGroupName;
 
     /**
-    * 自定义镜像信息
+    * <p>自定义镜像信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageInfo")
@@ -182,7 +181,7 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
     private ImageInfo ImageInfo;
 
     /**
-    * 任务信息
+    * <p>任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
@@ -190,7 +189,7 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
     private String Message;
 
     /**
-    * 标签配置
+    * <p>标签配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
@@ -198,7 +197,7 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
     private Tag [] Tags;
 
     /**
-    * 回调地址
+    * <p>回调地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CallbackUrl")
@@ -206,7 +205,7 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
     private String CallbackUrl;
 
     /**
-    * 任务subUin信息
+    * <p>任务subUin信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubUin")
@@ -214,7 +213,7 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
     private String SubUin;
 
     /**
-    * 任务创建者名称
+    * <p>任务创建者名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubUinName")
@@ -222,48 +221,55 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
     private String SubUinName;
 
     /**
-    * 任务AppId
+    * <p>任务AppId</p>
     */
     @SerializedName("AppId")
     @Expose
     private String AppId;
 
     /**
-     * Get 训练任务ID 
-     * @return Id 训练任务ID
+    * <p>环境变量</p>
+    */
+    @SerializedName("Envs")
+    @Expose
+    private EnvVar [] Envs;
+
+    /**
+     * Get <p>训练任务ID</p> 
+     * @return Id <p>训练任务ID</p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 训练任务ID
-     * @param Id 训练任务ID
+     * Set <p>训练任务ID</p>
+     * @param Id <p>训练任务ID</p>
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 训练任务名称 
-     * @return Name 训练任务名称
+     * Get <p>训练任务名称</p> 
+     * @return Name <p>训练任务名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 训练任务名称
-     * @param Name 训练任务名称
+     * Set <p>训练任务名称</p>
+     * @param Name <p>训练任务名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 框架名称
+     * Get <p>框架名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FrameworkName 框架名称
+     * @return FrameworkName <p>框架名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFrameworkName() {
@@ -271,9 +277,9 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
     }
 
     /**
-     * Set 框架名称
+     * Set <p>框架名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FrameworkName 框架名称
+     * @param FrameworkName <p>框架名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFrameworkName(String FrameworkName) {
@@ -281,9 +287,9 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
     }
 
     /**
-     * Get 训练框架版本
+     * Get <p>训练框架版本</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FrameworkVersion 训练框架版本
+     * @return FrameworkVersion <p>训练框架版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFrameworkVersion() {
@@ -291,9 +297,9 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
     }
 
     /**
-     * Set 训练框架版本
+     * Set <p>训练框架版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FrameworkVersion 训练框架版本
+     * @param FrameworkVersion <p>训练框架版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFrameworkVersion(String FrameworkVersion) {
@@ -301,9 +307,9 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
     }
 
     /**
-     * Get 框架运行环境
+     * Get <p>框架运行环境</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FrameworkEnvironment 框架运行环境
+     * @return FrameworkEnvironment <p>框架运行环境</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFrameworkEnvironment() {
@@ -311,9 +317,9 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
     }
 
     /**
-     * Set 框架运行环境
+     * Set <p>框架运行环境</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FrameworkEnvironment 框架运行环境
+     * @param FrameworkEnvironment <p>框架运行环境</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFrameworkEnvironment(String FrameworkEnvironment) {
@@ -321,41 +327,41 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
     }
 
     /**
-     * Get 计费模式 
-     * @return ChargeType 计费模式
+     * Get <p>计费模式</p> 
+     * @return ChargeType <p>计费模式</p>
      */
     public String getChargeType() {
         return this.ChargeType;
     }
 
     /**
-     * Set 计费模式
-     * @param ChargeType 计费模式
+     * Set <p>计费模式</p>
+     * @param ChargeType <p>计费模式</p>
      */
     public void setChargeType(String ChargeType) {
         this.ChargeType = ChargeType;
     }
 
     /**
-     * Get 计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中 
-     * @return ChargeStatus 计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中
+     * Get <p>计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中</p> 
+     * @return ChargeStatus <p>计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中</p>
      */
     public String getChargeStatus() {
         return this.ChargeStatus;
     }
 
     /**
-     * Set 计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中
-     * @param ChargeStatus 计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中
+     * Set <p>计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中</p>
+     * @param ChargeStatus <p>计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中</p>
      */
     public void setChargeStatus(String ChargeStatus) {
         this.ChargeStatus = ChargeStatus;
     }
 
     /**
-     * Get 预付费专用资源组
+     * Get <p>预付费专用资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceGroupId 预付费专用资源组
+     * @return ResourceGroupId <p>预付费专用资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceGroupId() {
@@ -363,9 +369,9 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
     }
 
     /**
-     * Set 预付费专用资源组
+     * Set <p>预付费专用资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceGroupId 预付费专用资源组
+     * @param ResourceGroupId <p>预付费专用资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceGroupId(String ResourceGroupId) {
@@ -373,25 +379,25 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
     }
 
     /**
-     * Get 资源配置 
-     * @return ResourceConfigInfos 资源配置
+     * Get <p>资源配置</p> 
+     * @return ResourceConfigInfos <p>资源配置</p>
      */
     public ResourceConfigInfo [] getResourceConfigInfos() {
         return this.ResourceConfigInfos;
     }
 
     /**
-     * Set 资源配置
-     * @param ResourceConfigInfos 资源配置
+     * Set <p>资源配置</p>
+     * @param ResourceConfigInfos <p>资源配置</p>
      */
     public void setResourceConfigInfos(ResourceConfigInfo [] ResourceConfigInfos) {
         this.ResourceConfigInfos = ResourceConfigInfos;
     }
 
     /**
-     * Get 训练模式eg：PS_WORKER、DDP、MPI、HOROVOD
+     * Get <p>训练模式eg：PS_WORKER、DDP、MPI、HOROVOD</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TrainingMode 训练模式eg：PS_WORKER、DDP、MPI、HOROVOD
+     * @return TrainingMode <p>训练模式eg：PS_WORKER、DDP、MPI、HOROVOD</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTrainingMode() {
@@ -399,9 +405,9 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
     }
 
     /**
-     * Set 训练模式eg：PS_WORKER、DDP、MPI、HOROVOD
+     * Set <p>训练模式eg：PS_WORKER、DDP、MPI、HOROVOD</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TrainingMode 训练模式eg：PS_WORKER、DDP、MPI、HOROVOD
+     * @param TrainingMode <p>训练模式eg：PS_WORKER、DDP、MPI、HOROVOD</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTrainingMode(String TrainingMode) {
@@ -409,29 +415,25 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
     }
 
     /**
-     * Get 任务状态，eg：SUBMITTING提交中、PENDING排队中、
-STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成 
-     * @return Status 任务状态，eg：SUBMITTING提交中、PENDING排队中、
-STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成
+     * Get <p>任务状态，eg：SUBMITTING提交中、PENDING排队中、<br>STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成</p> 
+     * @return Status <p>任务状态，eg：SUBMITTING提交中、PENDING排队中、<br>STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 任务状态，eg：SUBMITTING提交中、PENDING排队中、
-STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成
-     * @param Status 任务状态，eg：SUBMITTING提交中、PENDING排队中、
-STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成
+     * Set <p>任务状态，eg：SUBMITTING提交中、PENDING排队中、<br>STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成</p>
+     * @param Status <p>任务状态，eg：SUBMITTING提交中、PENDING排队中、<br>STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 运行时长
+     * Get <p>运行时长</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuntimeInSeconds 运行时长
+     * @return RuntimeInSeconds <p>运行时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuntimeInSeconds() {
@@ -439,9 +441,9 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
     }
 
     /**
-     * Set 运行时长
+     * Set <p>运行时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuntimeInSeconds 运行时长
+     * @param RuntimeInSeconds <p>运行时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuntimeInSeconds(Long RuntimeInSeconds) {
@@ -449,25 +451,25 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 训练开始时间
+     * Get <p>训练开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StartTime 训练开始时间
+     * @return StartTime <p>训练开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
@@ -475,9 +477,9 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
     }
 
     /**
-     * Set 训练开始时间
+     * Set <p>训练开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StartTime 训练开始时间
+     * @param StartTime <p>训练开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
@@ -485,9 +487,9 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
     }
 
     /**
-     * Get 训练结束时间
+     * Get <p>训练结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EndTime 训练结束时间
+     * @return EndTime <p>训练结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
@@ -495,9 +497,9 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
     }
 
     /**
-     * Set 训练结束时间
+     * Set <p>训练结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EndTime 训练结束时间
+     * @param EndTime <p>训练结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
@@ -505,25 +507,25 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
     }
 
     /**
-     * Get 训练输出 
-     * @return Output 训练输出
+     * Get <p>训练输出</p> 
+     * @return Output <p>训练输出</p>
      */
     public CosPathInfo getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 训练输出
-     * @param Output 训练输出
+     * Set <p>训练输出</p>
+     * @param Output <p>训练输出</p>
      */
     public void setOutput(CosPathInfo Output) {
         this.Output = Output;
     }
 
     /**
-     * Get 失败原因
+     * Get <p>失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FailureReason 失败原因
+     * @return FailureReason <p>失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFailureReason() {
@@ -531,9 +533,9 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
     }
 
     /**
-     * Set 失败原因
+     * Set <p>失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FailureReason 失败原因
+     * @param FailureReason <p>失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailureReason(String FailureReason) {
@@ -541,57 +543,57 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
     }
 
     /**
-     * Get 更新时间 
-     * @return UpdateTime 更新时间
+     * Get <p>更新时间</p> 
+     * @return UpdateTime <p>更新时间</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 更新时间
-     * @param UpdateTime 更新时间
+     * Set <p>更新时间</p>
+     * @param UpdateTime <p>更新时间</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 计费金额信息，eg：2.00元/小时 (按量计费) 
-     * @return BillingInfo 计费金额信息，eg：2.00元/小时 (按量计费)
+     * Get <p>计费金额信息，eg：2.00元/小时 (按量计费)</p> 
+     * @return BillingInfo <p>计费金额信息，eg：2.00元/小时 (按量计费)</p>
      */
     public String getBillingInfo() {
         return this.BillingInfo;
     }
 
     /**
-     * Set 计费金额信息，eg：2.00元/小时 (按量计费)
-     * @param BillingInfo 计费金额信息，eg：2.00元/小时 (按量计费)
+     * Set <p>计费金额信息，eg：2.00元/小时 (按量计费)</p>
+     * @param BillingInfo <p>计费金额信息，eg：2.00元/小时 (按量计费)</p>
      */
     public void setBillingInfo(String BillingInfo) {
         this.BillingInfo = BillingInfo;
     }
 
     /**
-     * Get 预付费专用资源组名称 
-     * @return ResourceGroupName 预付费专用资源组名称
+     * Get <p>预付费专用资源组名称</p> 
+     * @return ResourceGroupName <p>预付费专用资源组名称</p>
      */
     public String getResourceGroupName() {
         return this.ResourceGroupName;
     }
 
     /**
-     * Set 预付费专用资源组名称
-     * @param ResourceGroupName 预付费专用资源组名称
+     * Set <p>预付费专用资源组名称</p>
+     * @param ResourceGroupName <p>预付费专用资源组名称</p>
      */
     public void setResourceGroupName(String ResourceGroupName) {
         this.ResourceGroupName = ResourceGroupName;
     }
 
     /**
-     * Get 自定义镜像信息
+     * Get <p>自定义镜像信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ImageInfo 自定义镜像信息
+     * @return ImageInfo <p>自定义镜像信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ImageInfo getImageInfo() {
@@ -599,9 +601,9 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
     }
 
     /**
-     * Set 自定义镜像信息
+     * Set <p>自定义镜像信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImageInfo 自定义镜像信息
+     * @param ImageInfo <p>自定义镜像信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageInfo(ImageInfo ImageInfo) {
@@ -609,9 +611,9 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
     }
 
     /**
-     * Get 任务信息
+     * Get <p>任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Message 任务信息
+     * @return Message <p>任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
@@ -619,9 +621,9 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
     }
 
     /**
-     * Set 任务信息
+     * Set <p>任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Message 任务信息
+     * @param Message <p>任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
@@ -629,9 +631,9 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
     }
 
     /**
-     * Get 标签配置
+     * Get <p>标签配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tags 标签配置
+     * @return Tags <p>标签配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
@@ -639,9 +641,9 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
     }
 
     /**
-     * Set 标签配置
+     * Set <p>标签配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tags 标签配置
+     * @param Tags <p>标签配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {
@@ -649,9 +651,9 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
     }
 
     /**
-     * Get 回调地址
+     * Get <p>回调地址</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CallbackUrl 回调地址
+     * @return CallbackUrl <p>回调地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCallbackUrl() {
@@ -659,9 +661,9 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
     }
 
     /**
-     * Set 回调地址
+     * Set <p>回调地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CallbackUrl 回调地址
+     * @param CallbackUrl <p>回调地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCallbackUrl(String CallbackUrl) {
@@ -669,9 +671,9 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
     }
 
     /**
-     * Get 任务subUin信息
+     * Get <p>任务subUin信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SubUin 任务subUin信息
+     * @return SubUin <p>任务subUin信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubUin() {
@@ -679,9 +681,9 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
     }
 
     /**
-     * Set 任务subUin信息
+     * Set <p>任务subUin信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SubUin 任务subUin信息
+     * @param SubUin <p>任务subUin信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubUin(String SubUin) {
@@ -689,9 +691,9 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
     }
 
     /**
-     * Get 任务创建者名称
+     * Get <p>任务创建者名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SubUinName 任务创建者名称
+     * @return SubUinName <p>任务创建者名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubUinName() {
@@ -699,9 +701,9 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
     }
 
     /**
-     * Set 任务创建者名称
+     * Set <p>任务创建者名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SubUinName 任务创建者名称
+     * @param SubUinName <p>任务创建者名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubUinName(String SubUinName) {
@@ -709,19 +711,35 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
     }
 
     /**
-     * Get 任务AppId 
-     * @return AppId 任务AppId
+     * Get <p>任务AppId</p> 
+     * @return AppId <p>任务AppId</p>
      */
     public String getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 任务AppId
-     * @param AppId 任务AppId
+     * Set <p>任务AppId</p>
+     * @param AppId <p>任务AppId</p>
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
+    }
+
+    /**
+     * Get <p>环境变量</p> 
+     * @return Envs <p>环境变量</p>
+     */
+    public EnvVar [] getEnvs() {
+        return this.Envs;
+    }
+
+    /**
+     * Set <p>环境变量</p>
+     * @param Envs <p>环境变量</p>
+     */
+    public void setEnvs(EnvVar [] Envs) {
+        this.Envs = Envs;
     }
 
     public TrainingTaskSetItem() {
@@ -819,6 +837,12 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
         if (source.AppId != null) {
             this.AppId = new String(source.AppId);
         }
+        if (source.Envs != null) {
+            this.Envs = new EnvVar[source.Envs.length];
+            for (int i = 0; i < source.Envs.length; i++) {
+                this.Envs[i] = new EnvVar(source.Envs[i]);
+            }
+        }
     }
 
 
@@ -853,6 +877,7 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
         this.setParamSimple(map, prefix + "SubUin", this.SubUin);
         this.setParamSimple(map, prefix + "SubUinName", this.SubUinName);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
+        this.setParamArrayObj(map, prefix + "Envs.", this.Envs);
 
     }
 }

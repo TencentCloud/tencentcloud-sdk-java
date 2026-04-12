@@ -24,509 +24,532 @@ import java.util.HashMap;
 public class ServiceSetting extends AbstractModel {
 
     /**
-    * 0:公网, 1:集群内访问, 2：NodePort, 3: VPC 内网访问
+    * <p>0:公网, 1:集群内访问, 2：NodePort, 3: VPC 内网访问</p>
     */
     @SerializedName("AccessType")
     @Expose
     private Long AccessType;
 
     /**
-    * 容器端口映射
+    * <p>容器端口映射</p>
     */
     @SerializedName("ProtocolPorts")
     @Expose
     private ProtocolPort [] ProtocolPorts;
 
     /**
-    * 子网ID
+    * <p>子网ID</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 是否创建 k8s service，默认为 false
+    * <p>是否创建 k8s service，默认为 false</p>
     */
     @SerializedName("DisableService")
     @Expose
     private Boolean DisableService;
 
     /**
-    * service 是否为 headless 类型
+    * <p>service 是否为 headless 类型</p>
     */
     @SerializedName("HeadlessService")
     @Expose
     private Boolean HeadlessService;
 
     /**
-    * 当为 true 且 DisableService 也为 true 时，会删除之前创建的 service，请小心使用
+    * <p>当为 true 且 DisableService 也为 true 时，会删除之前创建的 service，请小心使用</p>
     */
     @SerializedName("AllowDeleteService")
     @Expose
     private Boolean AllowDeleteService;
 
     /**
-    * 开启SessionAffinity，true为开启，false为不开启，默认为false
+    * <p>开启SessionAffinity，true为开启，false为不开启，默认为false</p>
     */
     @SerializedName("OpenSessionAffinity")
     @Expose
     private Boolean OpenSessionAffinity;
 
     /**
-    * SessionAffinity会话时间，默认10800
+    * <p>SessionAffinity会话时间，默认10800</p>
     */
     @SerializedName("SessionAffinityTimeoutSeconds")
     @Expose
     private Long SessionAffinityTimeoutSeconds;
 
     /**
-    * 服务名称
+    * <p>服务名称</p>
     */
     @SerializedName("ServiceName")
     @Expose
     private String ServiceName;
 
     /**
-    * 外部流量策略
+    * <p>外部流量策略</p>
     */
     @SerializedName("ExternalTrafficStrategy")
     @Expose
     private String ExternalTrafficStrategy;
 
     /**
-    * 外部流量策略
+    * <p>外部流量策略</p>
     */
     @SerializedName("ExternalTrafficPolicy")
     @Expose
     private String ExternalTrafficPolicy;
 
     /**
-    * 负载均衡提供者
+    * <p>负载均衡提供者</p>
     */
     @SerializedName("LoadBalancerProvisioner")
     @Expose
     private String LoadBalancerProvisioner;
 
     /**
-    * 负载均衡类型，Intranet表示内网，Internet表示外网
+    * <p>负载均衡类型，Intranet表示内网，Internet表示外网</p>
     */
     @SerializedName("LoadBalancingType")
     @Expose
     private String LoadBalancingType;
 
     /**
-    * k8s负载均衡内网vip
+    * <p>k8s负载均衡内网vip</p>
     */
     @SerializedName("ClusterIp")
     @Expose
     private String ClusterIp;
 
     /**
-    * 禁用服务Int记录
+    * <p>禁用服务Int记录</p>
     */
     @SerializedName("DisableServiceInt")
     @Expose
     private Long DisableServiceInt;
 
     /**
-    * 开启SessionAffinity Int记录
+    * <p>开启SessionAffinity Int记录</p>
     */
     @SerializedName("OpenSessionAffinityInt")
     @Expose
     private Long OpenSessionAffinityInt;
 
     /**
-    * 开启HeadlessService int记录
+    * <p>开启HeadlessService int记录</p>
     */
     @SerializedName("HeadlessServiceInt")
     @Expose
     private Long HeadlessServiceInt;
 
     /**
-    * 服务名称
+    * <p>服务名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * VPC网络ID
+    * <p>VPC网络ID</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 负载均衡VIP
+    * <p>负载均衡VIP</p>
     */
     @SerializedName("LoadBalancingIp")
     @Expose
     private String LoadBalancingIp;
 
     /**
-    * 负载均衡id
+    * <p>负载均衡id</p>
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * 已存在的负载均衡id
+    * <p>已存在的负载均衡id</p>
     */
     @SerializedName("ExistingLoadBalancerId")
     @Expose
     private String ExistingLoadBalancerId;
 
     /**
-     * Get 0:公网, 1:集群内访问, 2：NodePort, 3: VPC 内网访问 
-     * @return AccessType 0:公网, 1:集群内访问, 2：NodePort, 3: VPC 内网访问
+    * <p>是否为全局服务（仅TCS环境使用）</p>
+    */
+    @SerializedName("EnableGlobalService")
+    @Expose
+    private Boolean EnableGlobalService;
+
+    /**
+     * Get <p>0:公网, 1:集群内访问, 2：NodePort, 3: VPC 内网访问</p> 
+     * @return AccessType <p>0:公网, 1:集群内访问, 2：NodePort, 3: VPC 内网访问</p>
      */
     public Long getAccessType() {
         return this.AccessType;
     }
 
     /**
-     * Set 0:公网, 1:集群内访问, 2：NodePort, 3: VPC 内网访问
-     * @param AccessType 0:公网, 1:集群内访问, 2：NodePort, 3: VPC 内网访问
+     * Set <p>0:公网, 1:集群内访问, 2：NodePort, 3: VPC 内网访问</p>
+     * @param AccessType <p>0:公网, 1:集群内访问, 2：NodePort, 3: VPC 内网访问</p>
      */
     public void setAccessType(Long AccessType) {
         this.AccessType = AccessType;
     }
 
     /**
-     * Get 容器端口映射 
-     * @return ProtocolPorts 容器端口映射
+     * Get <p>容器端口映射</p> 
+     * @return ProtocolPorts <p>容器端口映射</p>
      */
     public ProtocolPort [] getProtocolPorts() {
         return this.ProtocolPorts;
     }
 
     /**
-     * Set 容器端口映射
-     * @param ProtocolPorts 容器端口映射
+     * Set <p>容器端口映射</p>
+     * @param ProtocolPorts <p>容器端口映射</p>
      */
     public void setProtocolPorts(ProtocolPort [] ProtocolPorts) {
         this.ProtocolPorts = ProtocolPorts;
     }
 
     /**
-     * Get 子网ID 
-     * @return SubnetId 子网ID
+     * Get <p>子网ID</p> 
+     * @return SubnetId <p>子网ID</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网ID
-     * @param SubnetId 子网ID
+     * Set <p>子网ID</p>
+     * @param SubnetId <p>子网ID</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 是否创建 k8s service，默认为 false 
-     * @return DisableService 是否创建 k8s service，默认为 false
+     * Get <p>是否创建 k8s service，默认为 false</p> 
+     * @return DisableService <p>是否创建 k8s service，默认为 false</p>
      */
     public Boolean getDisableService() {
         return this.DisableService;
     }
 
     /**
-     * Set 是否创建 k8s service，默认为 false
-     * @param DisableService 是否创建 k8s service，默认为 false
+     * Set <p>是否创建 k8s service，默认为 false</p>
+     * @param DisableService <p>是否创建 k8s service，默认为 false</p>
      */
     public void setDisableService(Boolean DisableService) {
         this.DisableService = DisableService;
     }
 
     /**
-     * Get service 是否为 headless 类型 
-     * @return HeadlessService service 是否为 headless 类型
+     * Get <p>service 是否为 headless 类型</p> 
+     * @return HeadlessService <p>service 是否为 headless 类型</p>
      */
     public Boolean getHeadlessService() {
         return this.HeadlessService;
     }
 
     /**
-     * Set service 是否为 headless 类型
-     * @param HeadlessService service 是否为 headless 类型
+     * Set <p>service 是否为 headless 类型</p>
+     * @param HeadlessService <p>service 是否为 headless 类型</p>
      */
     public void setHeadlessService(Boolean HeadlessService) {
         this.HeadlessService = HeadlessService;
     }
 
     /**
-     * Get 当为 true 且 DisableService 也为 true 时，会删除之前创建的 service，请小心使用 
-     * @return AllowDeleteService 当为 true 且 DisableService 也为 true 时，会删除之前创建的 service，请小心使用
+     * Get <p>当为 true 且 DisableService 也为 true 时，会删除之前创建的 service，请小心使用</p> 
+     * @return AllowDeleteService <p>当为 true 且 DisableService 也为 true 时，会删除之前创建的 service，请小心使用</p>
      */
     public Boolean getAllowDeleteService() {
         return this.AllowDeleteService;
     }
 
     /**
-     * Set 当为 true 且 DisableService 也为 true 时，会删除之前创建的 service，请小心使用
-     * @param AllowDeleteService 当为 true 且 DisableService 也为 true 时，会删除之前创建的 service，请小心使用
+     * Set <p>当为 true 且 DisableService 也为 true 时，会删除之前创建的 service，请小心使用</p>
+     * @param AllowDeleteService <p>当为 true 且 DisableService 也为 true 时，会删除之前创建的 service，请小心使用</p>
      */
     public void setAllowDeleteService(Boolean AllowDeleteService) {
         this.AllowDeleteService = AllowDeleteService;
     }
 
     /**
-     * Get 开启SessionAffinity，true为开启，false为不开启，默认为false 
-     * @return OpenSessionAffinity 开启SessionAffinity，true为开启，false为不开启，默认为false
+     * Get <p>开启SessionAffinity，true为开启，false为不开启，默认为false</p> 
+     * @return OpenSessionAffinity <p>开启SessionAffinity，true为开启，false为不开启，默认为false</p>
      */
     public Boolean getOpenSessionAffinity() {
         return this.OpenSessionAffinity;
     }
 
     /**
-     * Set 开启SessionAffinity，true为开启，false为不开启，默认为false
-     * @param OpenSessionAffinity 开启SessionAffinity，true为开启，false为不开启，默认为false
+     * Set <p>开启SessionAffinity，true为开启，false为不开启，默认为false</p>
+     * @param OpenSessionAffinity <p>开启SessionAffinity，true为开启，false为不开启，默认为false</p>
      */
     public void setOpenSessionAffinity(Boolean OpenSessionAffinity) {
         this.OpenSessionAffinity = OpenSessionAffinity;
     }
 
     /**
-     * Get SessionAffinity会话时间，默认10800 
-     * @return SessionAffinityTimeoutSeconds SessionAffinity会话时间，默认10800
+     * Get <p>SessionAffinity会话时间，默认10800</p> 
+     * @return SessionAffinityTimeoutSeconds <p>SessionAffinity会话时间，默认10800</p>
      */
     public Long getSessionAffinityTimeoutSeconds() {
         return this.SessionAffinityTimeoutSeconds;
     }
 
     /**
-     * Set SessionAffinity会话时间，默认10800
-     * @param SessionAffinityTimeoutSeconds SessionAffinity会话时间，默认10800
+     * Set <p>SessionAffinity会话时间，默认10800</p>
+     * @param SessionAffinityTimeoutSeconds <p>SessionAffinity会话时间，默认10800</p>
      */
     public void setSessionAffinityTimeoutSeconds(Long SessionAffinityTimeoutSeconds) {
         this.SessionAffinityTimeoutSeconds = SessionAffinityTimeoutSeconds;
     }
 
     /**
-     * Get 服务名称 
-     * @return ServiceName 服务名称
+     * Get <p>服务名称</p> 
+     * @return ServiceName <p>服务名称</p>
      */
     public String getServiceName() {
         return this.ServiceName;
     }
 
     /**
-     * Set 服务名称
-     * @param ServiceName 服务名称
+     * Set <p>服务名称</p>
+     * @param ServiceName <p>服务名称</p>
      */
     public void setServiceName(String ServiceName) {
         this.ServiceName = ServiceName;
     }
 
     /**
-     * Get 外部流量策略 
-     * @return ExternalTrafficStrategy 外部流量策略
+     * Get <p>外部流量策略</p> 
+     * @return ExternalTrafficStrategy <p>外部流量策略</p>
      */
     public String getExternalTrafficStrategy() {
         return this.ExternalTrafficStrategy;
     }
 
     /**
-     * Set 外部流量策略
-     * @param ExternalTrafficStrategy 外部流量策略
+     * Set <p>外部流量策略</p>
+     * @param ExternalTrafficStrategy <p>外部流量策略</p>
      */
     public void setExternalTrafficStrategy(String ExternalTrafficStrategy) {
         this.ExternalTrafficStrategy = ExternalTrafficStrategy;
     }
 
     /**
-     * Get 外部流量策略 
-     * @return ExternalTrafficPolicy 外部流量策略
+     * Get <p>外部流量策略</p> 
+     * @return ExternalTrafficPolicy <p>外部流量策略</p>
      */
     public String getExternalTrafficPolicy() {
         return this.ExternalTrafficPolicy;
     }
 
     /**
-     * Set 外部流量策略
-     * @param ExternalTrafficPolicy 外部流量策略
+     * Set <p>外部流量策略</p>
+     * @param ExternalTrafficPolicy <p>外部流量策略</p>
      */
     public void setExternalTrafficPolicy(String ExternalTrafficPolicy) {
         this.ExternalTrafficPolicy = ExternalTrafficPolicy;
     }
 
     /**
-     * Get 负载均衡提供者 
-     * @return LoadBalancerProvisioner 负载均衡提供者
+     * Get <p>负载均衡提供者</p> 
+     * @return LoadBalancerProvisioner <p>负载均衡提供者</p>
      */
     public String getLoadBalancerProvisioner() {
         return this.LoadBalancerProvisioner;
     }
 
     /**
-     * Set 负载均衡提供者
-     * @param LoadBalancerProvisioner 负载均衡提供者
+     * Set <p>负载均衡提供者</p>
+     * @param LoadBalancerProvisioner <p>负载均衡提供者</p>
      */
     public void setLoadBalancerProvisioner(String LoadBalancerProvisioner) {
         this.LoadBalancerProvisioner = LoadBalancerProvisioner;
     }
 
     /**
-     * Get 负载均衡类型，Intranet表示内网，Internet表示外网 
-     * @return LoadBalancingType 负载均衡类型，Intranet表示内网，Internet表示外网
+     * Get <p>负载均衡类型，Intranet表示内网，Internet表示外网</p> 
+     * @return LoadBalancingType <p>负载均衡类型，Intranet表示内网，Internet表示外网</p>
      */
     public String getLoadBalancingType() {
         return this.LoadBalancingType;
     }
 
     /**
-     * Set 负载均衡类型，Intranet表示内网，Internet表示外网
-     * @param LoadBalancingType 负载均衡类型，Intranet表示内网，Internet表示外网
+     * Set <p>负载均衡类型，Intranet表示内网，Internet表示外网</p>
+     * @param LoadBalancingType <p>负载均衡类型，Intranet表示内网，Internet表示外网</p>
      */
     public void setLoadBalancingType(String LoadBalancingType) {
         this.LoadBalancingType = LoadBalancingType;
     }
 
     /**
-     * Get k8s负载均衡内网vip 
-     * @return ClusterIp k8s负载均衡内网vip
+     * Get <p>k8s负载均衡内网vip</p> 
+     * @return ClusterIp <p>k8s负载均衡内网vip</p>
      */
     public String getClusterIp() {
         return this.ClusterIp;
     }
 
     /**
-     * Set k8s负载均衡内网vip
-     * @param ClusterIp k8s负载均衡内网vip
+     * Set <p>k8s负载均衡内网vip</p>
+     * @param ClusterIp <p>k8s负载均衡内网vip</p>
      */
     public void setClusterIp(String ClusterIp) {
         this.ClusterIp = ClusterIp;
     }
 
     /**
-     * Get 禁用服务Int记录 
-     * @return DisableServiceInt 禁用服务Int记录
+     * Get <p>禁用服务Int记录</p> 
+     * @return DisableServiceInt <p>禁用服务Int记录</p>
      */
     public Long getDisableServiceInt() {
         return this.DisableServiceInt;
     }
 
     /**
-     * Set 禁用服务Int记录
-     * @param DisableServiceInt 禁用服务Int记录
+     * Set <p>禁用服务Int记录</p>
+     * @param DisableServiceInt <p>禁用服务Int记录</p>
      */
     public void setDisableServiceInt(Long DisableServiceInt) {
         this.DisableServiceInt = DisableServiceInt;
     }
 
     /**
-     * Get 开启SessionAffinity Int记录 
-     * @return OpenSessionAffinityInt 开启SessionAffinity Int记录
+     * Get <p>开启SessionAffinity Int记录</p> 
+     * @return OpenSessionAffinityInt <p>开启SessionAffinity Int记录</p>
      */
     public Long getOpenSessionAffinityInt() {
         return this.OpenSessionAffinityInt;
     }
 
     /**
-     * Set 开启SessionAffinity Int记录
-     * @param OpenSessionAffinityInt 开启SessionAffinity Int记录
+     * Set <p>开启SessionAffinity Int记录</p>
+     * @param OpenSessionAffinityInt <p>开启SessionAffinity Int记录</p>
      */
     public void setOpenSessionAffinityInt(Long OpenSessionAffinityInt) {
         this.OpenSessionAffinityInt = OpenSessionAffinityInt;
     }
 
     /**
-     * Get 开启HeadlessService int记录 
-     * @return HeadlessServiceInt 开启HeadlessService int记录
+     * Get <p>开启HeadlessService int记录</p> 
+     * @return HeadlessServiceInt <p>开启HeadlessService int记录</p>
      */
     public Long getHeadlessServiceInt() {
         return this.HeadlessServiceInt;
     }
 
     /**
-     * Set 开启HeadlessService int记录
-     * @param HeadlessServiceInt 开启HeadlessService int记录
+     * Set <p>开启HeadlessService int记录</p>
+     * @param HeadlessServiceInt <p>开启HeadlessService int记录</p>
      */
     public void setHeadlessServiceInt(Long HeadlessServiceInt) {
         this.HeadlessServiceInt = HeadlessServiceInt;
     }
 
     /**
-     * Get 服务名称 
-     * @return Name 服务名称
+     * Get <p>服务名称</p> 
+     * @return Name <p>服务名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 服务名称
-     * @param Name 服务名称
+     * Set <p>服务名称</p>
+     * @param Name <p>服务名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get VPC网络ID 
-     * @return VpcId VPC网络ID
+     * Get <p>VPC网络ID</p> 
+     * @return VpcId <p>VPC网络ID</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC网络ID
-     * @param VpcId VPC网络ID
+     * Set <p>VPC网络ID</p>
+     * @param VpcId <p>VPC网络ID</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 负载均衡VIP 
-     * @return LoadBalancingIp 负载均衡VIP
+     * Get <p>负载均衡VIP</p> 
+     * @return LoadBalancingIp <p>负载均衡VIP</p>
      */
     public String getLoadBalancingIp() {
         return this.LoadBalancingIp;
     }
 
     /**
-     * Set 负载均衡VIP
-     * @param LoadBalancingIp 负载均衡VIP
+     * Set <p>负载均衡VIP</p>
+     * @param LoadBalancingIp <p>负载均衡VIP</p>
      */
     public void setLoadBalancingIp(String LoadBalancingIp) {
         this.LoadBalancingIp = LoadBalancingIp;
     }
 
     /**
-     * Get 负载均衡id 
-     * @return LoadBalancerId 负载均衡id
+     * Get <p>负载均衡id</p> 
+     * @return LoadBalancerId <p>负载均衡id</p>
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set 负载均衡id
-     * @param LoadBalancerId 负载均衡id
+     * Set <p>负载均衡id</p>
+     * @param LoadBalancerId <p>负载均衡id</p>
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get 已存在的负载均衡id 
-     * @return ExistingLoadBalancerId 已存在的负载均衡id
+     * Get <p>已存在的负载均衡id</p> 
+     * @return ExistingLoadBalancerId <p>已存在的负载均衡id</p>
      */
     public String getExistingLoadBalancerId() {
         return this.ExistingLoadBalancerId;
     }
 
     /**
-     * Set 已存在的负载均衡id
-     * @param ExistingLoadBalancerId 已存在的负载均衡id
+     * Set <p>已存在的负载均衡id</p>
+     * @param ExistingLoadBalancerId <p>已存在的负载均衡id</p>
      */
     public void setExistingLoadBalancerId(String ExistingLoadBalancerId) {
         this.ExistingLoadBalancerId = ExistingLoadBalancerId;
+    }
+
+    /**
+     * Get <p>是否为全局服务（仅TCS环境使用）</p> 
+     * @return EnableGlobalService <p>是否为全局服务（仅TCS环境使用）</p>
+     */
+    public Boolean getEnableGlobalService() {
+        return this.EnableGlobalService;
+    }
+
+    /**
+     * Set <p>是否为全局服务（仅TCS环境使用）</p>
+     * @param EnableGlobalService <p>是否为全局服务（仅TCS环境使用）</p>
+     */
+    public void setEnableGlobalService(Boolean EnableGlobalService) {
+        this.EnableGlobalService = EnableGlobalService;
     }
 
     public ServiceSetting() {
@@ -606,6 +629,9 @@ public class ServiceSetting extends AbstractModel {
         if (source.ExistingLoadBalancerId != null) {
             this.ExistingLoadBalancerId = new String(source.ExistingLoadBalancerId);
         }
+        if (source.EnableGlobalService != null) {
+            this.EnableGlobalService = new Boolean(source.EnableGlobalService);
+        }
     }
 
 
@@ -635,6 +661,7 @@ public class ServiceSetting extends AbstractModel {
         this.setParamSimple(map, prefix + "LoadBalancingIp", this.LoadBalancingIp);
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
         this.setParamSimple(map, prefix + "ExistingLoadBalancerId", this.ExistingLoadBalancerId);
+        this.setParamSimple(map, prefix + "EnableGlobalService", this.EnableGlobalService);
 
     }
 }

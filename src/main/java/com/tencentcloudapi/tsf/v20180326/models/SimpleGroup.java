@@ -122,6 +122,20 @@ public class SimpleGroup extends AbstractModel {
     private String K8sNamespaceName;
 
     /**
+    * 创建时间
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
+    * 更新时间
+    */
+    @SerializedName("UpdatedTime")
+    @Expose
+    private String UpdatedTime;
+
+    /**
      * Get 部署组ID 
      * @return GroupId 部署组ID
      */
@@ -345,6 +359,38 @@ public class SimpleGroup extends AbstractModel {
         this.K8sNamespaceName = K8sNamespaceName;
     }
 
+    /**
+     * Get 创建时间 
+     * @return CreateTime 创建时间
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 创建时间
+     * @param CreateTime 创建时间
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get 更新时间 
+     * @return UpdatedTime 更新时间
+     */
+    public String getUpdatedTime() {
+        return this.UpdatedTime;
+    }
+
+    /**
+     * Set 更新时间
+     * @param UpdatedTime 更新时间
+     */
+    public void setUpdatedTime(String UpdatedTime) {
+        this.UpdatedTime = UpdatedTime;
+    }
+
     public SimpleGroup() {
     }
 
@@ -395,6 +441,12 @@ public class SimpleGroup extends AbstractModel {
         if (source.K8sNamespaceName != null) {
             this.K8sNamespaceName = new String(source.K8sNamespaceName);
         }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdatedTime != null) {
+            this.UpdatedTime = new String(source.UpdatedTime);
+        }
     }
 
 
@@ -416,6 +468,8 @@ public class SimpleGroup extends AbstractModel {
         this.setParamSimple(map, prefix + "GroupResourceType", this.GroupResourceType);
         this.setParamSimple(map, prefix + "AppMicroServiceType", this.AppMicroServiceType);
         this.setParamSimple(map, prefix + "K8sNamespaceName", this.K8sNamespaceName);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
 
     }
 }

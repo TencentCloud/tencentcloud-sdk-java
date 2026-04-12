@@ -171,6 +171,17 @@ public class OmicsClient extends AbstractClient{
     }
 
     /**
+     *查询公共应用列表。
+     * @param req DescribePublicApplicationsRequest
+     * @return DescribePublicApplicationsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePublicApplicationsResponse DescribePublicApplications(DescribePublicApplicationsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePublicApplications", DescribePublicApplicationsResponse.class);
+    }
+
+    /**
      *查询任务批次列表。
      * @param req DescribeRunGroupsRequest
      * @return DescribeRunGroupsResponse

@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class UpdateVarRequest extends AbstractModel {
 
     /**
-    * 应用ID
+    * <p>应用ID，获取方法参看如何获取   <a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a>。</p>
     */
     @SerializedName("AppBizId")
     @Expose
     private String AppBizId;
 
     /**
-    * 变量ID
+    * <p>变量 ID。由 CreateVar 接口生成，通过 CreateVar / DescribeVar 返回结果获取。</p>
     */
     @SerializedName("VarId")
     @Expose
     private String VarId;
 
     /**
-    * 变量名称，最大支持50个字符
+    * <p>变量名称，最大支持50个字符，英文字母开头，支持英文数字与下划线”_” 。</p>
     */
     @SerializedName("VarName")
     @Expose
     private String VarName;
 
     /**
-    * 参数描述
+    * <p>参数描述</p>
     */
     @SerializedName("VarDesc")
     @Expose
     private String VarDesc;
 
     /**
-    * 参数类型
+    * <p>变量类型</p><p>枚举值：</p><ul><li>STRING： 字符串</li><li>INT： 整形</li><li>BOOL： 布尔型</li><li>OBJECT： 对象</li><li>ARRAY_STRING： 字符串数组</li><li>ARRAY_INT： 整型数组</li><li>ARRAY_FLOAT： 浮点型数组</li><li>ARRAY_BOOL： 布尔型数组</li><li>ARRAY_OBJECT： 对象数组</li><li>FILE： 文件类型</li><li>DOCUMENT： 文档类型</li><li>IMAGE： 图片类型</li><li>AUDIO： 音频</li><li>VIDEO： 视频</li><li>ARRAY_FILE： 文件数组</li><li>ARRAY_DOCUMENT： 文档数组</li><li>ARRAY_IMAGE： 图片数组</li><li>ARRAY_AUDIO： 音频数组</li><li>ARRAY_VIDEO： 视频数组</li><li>SECRET： 秘钥</li><li>ARRAY_ARRAY： 多维数组</li></ul><p>默认值：STRING</p>
     */
     @SerializedName("VarType")
     @Expose
     private String VarType;
 
     /**
-    * 自定义变量默认值
+    * <p>自定义变量默认值，<code>VarDefaultValue</code>&nbsp;默认为空</p>
     */
     @SerializedName("VarDefaultValue")
     @Expose
     private String VarDefaultValue;
 
     /**
-    * 自定义变量文件默认名称
+    * <p>自定义变量文件默认名称，<code>VarDefaultFileName</code> 默认为空</p>
     */
     @SerializedName("VarDefaultFileName")
     @Expose
     private String VarDefaultFileName;
 
     /**
-    * 变量类型
+    * <p>变量模块类型</p><p>枚举值：</p><ul><li>0： API参数</li><li>1： 环境参数</li><li>2： 应用参数</li><li>3： 系统参数</li></ul>
     */
     @SerializedName("VarModuleType")
     @Expose
     private Long VarModuleType;
 
     /**
-     * Get 应用ID 
-     * @return AppBizId 应用ID
+     * Get <p>应用ID，获取方法参看如何获取   <a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a>。</p> 
+     * @return AppBizId <p>应用ID，获取方法参看如何获取   <a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a>。</p>
      */
     public String getAppBizId() {
         return this.AppBizId;
     }
 
     /**
-     * Set 应用ID
-     * @param AppBizId 应用ID
+     * Set <p>应用ID，获取方法参看如何获取   <a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a>。</p>
+     * @param AppBizId <p>应用ID，获取方法参看如何获取   <a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a>。</p>
      */
     public void setAppBizId(String AppBizId) {
         this.AppBizId = AppBizId;
     }
 
     /**
-     * Get 变量ID 
-     * @return VarId 变量ID
+     * Get <p>变量 ID。由 CreateVar 接口生成，通过 CreateVar / DescribeVar 返回结果获取。</p> 
+     * @return VarId <p>变量 ID。由 CreateVar 接口生成，通过 CreateVar / DescribeVar 返回结果获取。</p>
      */
     public String getVarId() {
         return this.VarId;
     }
 
     /**
-     * Set 变量ID
-     * @param VarId 变量ID
+     * Set <p>变量 ID。由 CreateVar 接口生成，通过 CreateVar / DescribeVar 返回结果获取。</p>
+     * @param VarId <p>变量 ID。由 CreateVar 接口生成，通过 CreateVar / DescribeVar 返回结果获取。</p>
      */
     public void setVarId(String VarId) {
         this.VarId = VarId;
     }
 
     /**
-     * Get 变量名称，最大支持50个字符 
-     * @return VarName 变量名称，最大支持50个字符
+     * Get <p>变量名称，最大支持50个字符，英文字母开头，支持英文数字与下划线”_” 。</p> 
+     * @return VarName <p>变量名称，最大支持50个字符，英文字母开头，支持英文数字与下划线”_” 。</p>
      */
     public String getVarName() {
         return this.VarName;
     }
 
     /**
-     * Set 变量名称，最大支持50个字符
-     * @param VarName 变量名称，最大支持50个字符
+     * Set <p>变量名称，最大支持50个字符，英文字母开头，支持英文数字与下划线”_” 。</p>
+     * @param VarName <p>变量名称，最大支持50个字符，英文字母开头，支持英文数字与下划线”_” 。</p>
      */
     public void setVarName(String VarName) {
         this.VarName = VarName;
     }
 
     /**
-     * Get 参数描述 
-     * @return VarDesc 参数描述
+     * Get <p>参数描述</p> 
+     * @return VarDesc <p>参数描述</p>
      */
     public String getVarDesc() {
         return this.VarDesc;
     }
 
     /**
-     * Set 参数描述
-     * @param VarDesc 参数描述
+     * Set <p>参数描述</p>
+     * @param VarDesc <p>参数描述</p>
      */
     public void setVarDesc(String VarDesc) {
         this.VarDesc = VarDesc;
     }
 
     /**
-     * Get 参数类型 
-     * @return VarType 参数类型
+     * Get <p>变量类型</p><p>枚举值：</p><ul><li>STRING： 字符串</li><li>INT： 整形</li><li>BOOL： 布尔型</li><li>OBJECT： 对象</li><li>ARRAY_STRING： 字符串数组</li><li>ARRAY_INT： 整型数组</li><li>ARRAY_FLOAT： 浮点型数组</li><li>ARRAY_BOOL： 布尔型数组</li><li>ARRAY_OBJECT： 对象数组</li><li>FILE： 文件类型</li><li>DOCUMENT： 文档类型</li><li>IMAGE： 图片类型</li><li>AUDIO： 音频</li><li>VIDEO： 视频</li><li>ARRAY_FILE： 文件数组</li><li>ARRAY_DOCUMENT： 文档数组</li><li>ARRAY_IMAGE： 图片数组</li><li>ARRAY_AUDIO： 音频数组</li><li>ARRAY_VIDEO： 视频数组</li><li>SECRET： 秘钥</li><li>ARRAY_ARRAY： 多维数组</li></ul><p>默认值：STRING</p> 
+     * @return VarType <p>变量类型</p><p>枚举值：</p><ul><li>STRING： 字符串</li><li>INT： 整形</li><li>BOOL： 布尔型</li><li>OBJECT： 对象</li><li>ARRAY_STRING： 字符串数组</li><li>ARRAY_INT： 整型数组</li><li>ARRAY_FLOAT： 浮点型数组</li><li>ARRAY_BOOL： 布尔型数组</li><li>ARRAY_OBJECT： 对象数组</li><li>FILE： 文件类型</li><li>DOCUMENT： 文档类型</li><li>IMAGE： 图片类型</li><li>AUDIO： 音频</li><li>VIDEO： 视频</li><li>ARRAY_FILE： 文件数组</li><li>ARRAY_DOCUMENT： 文档数组</li><li>ARRAY_IMAGE： 图片数组</li><li>ARRAY_AUDIO： 音频数组</li><li>ARRAY_VIDEO： 视频数组</li><li>SECRET： 秘钥</li><li>ARRAY_ARRAY： 多维数组</li></ul><p>默认值：STRING</p>
      */
     public String getVarType() {
         return this.VarType;
     }
 
     /**
-     * Set 参数类型
-     * @param VarType 参数类型
+     * Set <p>变量类型</p><p>枚举值：</p><ul><li>STRING： 字符串</li><li>INT： 整形</li><li>BOOL： 布尔型</li><li>OBJECT： 对象</li><li>ARRAY_STRING： 字符串数组</li><li>ARRAY_INT： 整型数组</li><li>ARRAY_FLOAT： 浮点型数组</li><li>ARRAY_BOOL： 布尔型数组</li><li>ARRAY_OBJECT： 对象数组</li><li>FILE： 文件类型</li><li>DOCUMENT： 文档类型</li><li>IMAGE： 图片类型</li><li>AUDIO： 音频</li><li>VIDEO： 视频</li><li>ARRAY_FILE： 文件数组</li><li>ARRAY_DOCUMENT： 文档数组</li><li>ARRAY_IMAGE： 图片数组</li><li>ARRAY_AUDIO： 音频数组</li><li>ARRAY_VIDEO： 视频数组</li><li>SECRET： 秘钥</li><li>ARRAY_ARRAY： 多维数组</li></ul><p>默认值：STRING</p>
+     * @param VarType <p>变量类型</p><p>枚举值：</p><ul><li>STRING： 字符串</li><li>INT： 整形</li><li>BOOL： 布尔型</li><li>OBJECT： 对象</li><li>ARRAY_STRING： 字符串数组</li><li>ARRAY_INT： 整型数组</li><li>ARRAY_FLOAT： 浮点型数组</li><li>ARRAY_BOOL： 布尔型数组</li><li>ARRAY_OBJECT： 对象数组</li><li>FILE： 文件类型</li><li>DOCUMENT： 文档类型</li><li>IMAGE： 图片类型</li><li>AUDIO： 音频</li><li>VIDEO： 视频</li><li>ARRAY_FILE： 文件数组</li><li>ARRAY_DOCUMENT： 文档数组</li><li>ARRAY_IMAGE： 图片数组</li><li>ARRAY_AUDIO： 音频数组</li><li>ARRAY_VIDEO： 视频数组</li><li>SECRET： 秘钥</li><li>ARRAY_ARRAY： 多维数组</li></ul><p>默认值：STRING</p>
      */
     public void setVarType(String VarType) {
         this.VarType = VarType;
     }
 
     /**
-     * Get 自定义变量默认值 
-     * @return VarDefaultValue 自定义变量默认值
+     * Get <p>自定义变量默认值，<code>VarDefaultValue</code>&nbsp;默认为空</p> 
+     * @return VarDefaultValue <p>自定义变量默认值，<code>VarDefaultValue</code>&nbsp;默认为空</p>
      */
     public String getVarDefaultValue() {
         return this.VarDefaultValue;
     }
 
     /**
-     * Set 自定义变量默认值
-     * @param VarDefaultValue 自定义变量默认值
+     * Set <p>自定义变量默认值，<code>VarDefaultValue</code>&nbsp;默认为空</p>
+     * @param VarDefaultValue <p>自定义变量默认值，<code>VarDefaultValue</code>&nbsp;默认为空</p>
      */
     public void setVarDefaultValue(String VarDefaultValue) {
         this.VarDefaultValue = VarDefaultValue;
     }
 
     /**
-     * Get 自定义变量文件默认名称 
-     * @return VarDefaultFileName 自定义变量文件默认名称
+     * Get <p>自定义变量文件默认名称，<code>VarDefaultFileName</code> 默认为空</p> 
+     * @return VarDefaultFileName <p>自定义变量文件默认名称，<code>VarDefaultFileName</code> 默认为空</p>
      */
     public String getVarDefaultFileName() {
         return this.VarDefaultFileName;
     }
 
     /**
-     * Set 自定义变量文件默认名称
-     * @param VarDefaultFileName 自定义变量文件默认名称
+     * Set <p>自定义变量文件默认名称，<code>VarDefaultFileName</code> 默认为空</p>
+     * @param VarDefaultFileName <p>自定义变量文件默认名称，<code>VarDefaultFileName</code> 默认为空</p>
      */
     public void setVarDefaultFileName(String VarDefaultFileName) {
         this.VarDefaultFileName = VarDefaultFileName;
     }
 
     /**
-     * Get 变量类型 
-     * @return VarModuleType 变量类型
+     * Get <p>变量模块类型</p><p>枚举值：</p><ul><li>0： API参数</li><li>1： 环境参数</li><li>2： 应用参数</li><li>3： 系统参数</li></ul> 
+     * @return VarModuleType <p>变量模块类型</p><p>枚举值：</p><ul><li>0： API参数</li><li>1： 环境参数</li><li>2： 应用参数</li><li>3： 系统参数</li></ul>
      */
     public Long getVarModuleType() {
         return this.VarModuleType;
     }
 
     /**
-     * Set 变量类型
-     * @param VarModuleType 变量类型
+     * Set <p>变量模块类型</p><p>枚举值：</p><ul><li>0： API参数</li><li>1： 环境参数</li><li>2： 应用参数</li><li>3： 系统参数</li></ul>
+     * @param VarModuleType <p>变量模块类型</p><p>枚举值：</p><ul><li>0： API参数</li><li>1： 环境参数</li><li>2： 应用参数</li><li>3： 系统参数</li></ul>
      */
     public void setVarModuleType(Long VarModuleType) {
         this.VarModuleType = VarModuleType;

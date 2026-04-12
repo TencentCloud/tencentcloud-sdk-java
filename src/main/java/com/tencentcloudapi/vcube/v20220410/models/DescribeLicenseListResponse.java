@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DescribeLicenseListResponse extends AbstractModel {
 
     /**
-    * 临期license数量
+    * <p>临期license数量</p>
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
 
     /**
-    * 正式license总览统计数据
+    * <p>正式license总览统计数据</p>
     */
     @SerializedName("Overview")
     @Expose
     private Overview Overview;
 
     /**
-    * 临期license列表
+    * <p>临期license列表</p>
     */
     @SerializedName("LicenseList")
     @Expose
     private OverviewLicense [] LicenseList;
 
     /**
-    * 测试license总览统计数据
+    * <p>测试license总览统计数据</p>
     */
     @SerializedName("TrialOverview")
     @Expose
@@ -59,64 +59,64 @@ public class DescribeLicenseListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 临期license数量 
-     * @return Count 临期license数量
+     * Get <p>临期license数量</p> 
+     * @return Count <p>临期license数量</p>
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set 临期license数量
-     * @param Count 临期license数量
+     * Set <p>临期license数量</p>
+     * @param Count <p>临期license数量</p>
      */
     public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * Get 正式license总览统计数据 
-     * @return Overview 正式license总览统计数据
+     * Get <p>正式license总览统计数据</p> 
+     * @return Overview <p>正式license总览统计数据</p>
      */
     public Overview getOverview() {
         return this.Overview;
     }
 
     /**
-     * Set 正式license总览统计数据
-     * @param Overview 正式license总览统计数据
+     * Set <p>正式license总览统计数据</p>
+     * @param Overview <p>正式license总览统计数据</p>
      */
     public void setOverview(Overview Overview) {
         this.Overview = Overview;
     }
 
     /**
-     * Get 临期license列表 
-     * @return LicenseList 临期license列表
+     * Get <p>临期license列表</p> 
+     * @return LicenseList <p>临期license列表</p>
      */
     public OverviewLicense [] getLicenseList() {
         return this.LicenseList;
     }
 
     /**
-     * Set 临期license列表
-     * @param LicenseList 临期license列表
+     * Set <p>临期license列表</p>
+     * @param LicenseList <p>临期license列表</p>
      */
     public void setLicenseList(OverviewLicense [] LicenseList) {
         this.LicenseList = LicenseList;
     }
 
     /**
-     * Get 测试license总览统计数据 
-     * @return TrialOverview 测试license总览统计数据
+     * Get <p>测试license总览统计数据</p> 
+     * @return TrialOverview <p>测试license总览统计数据</p>
      */
     public Overview getTrialOverview() {
         return this.TrialOverview;
     }
 
     /**
-     * Set 测试license总览统计数据
-     * @param TrialOverview 测试license总览统计数据
+     * Set <p>测试license总览统计数据</p>
+     * @param TrialOverview <p>测试license总览统计数据</p>
      */
     public void setTrialOverview(Overview TrialOverview) {
         this.TrialOverview = TrialOverview;

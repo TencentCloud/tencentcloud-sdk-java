@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UpdateVarResponse extends AbstractModel {
 
     /**
-    * 变量ID
+    * <p>变量ID</p>
     */
     @SerializedName("VarId")
     @Expose
@@ -38,16 +38,16 @@ public class UpdateVarResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 变量ID 
-     * @return VarId 变量ID
+     * Get <p>变量ID</p> 
+     * @return VarId <p>变量ID</p>
      */
     public String getVarId() {
         return this.VarId;
     }
 
     /**
-     * Set 变量ID
-     * @param VarId 变量ID
+     * Set <p>变量ID</p>
+     * @param VarId <p>变量ID</p>
      */
     public void setVarId(String VarId) {
         this.VarId = VarId;

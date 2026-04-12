@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class MountInstanceInfo extends AbstractModel {
 
     /**
-    * 类型英文名
+    * <p>类型英文名</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 存储实例ID
+    * <p>存储实例ID</p>
     */
     @SerializedName("StorageId")
     @Expose
     private String StorageId;
 
     /**
-    * 存储实例名称
+    * <p>存储实例名称</p>
     */
     @SerializedName("StorageName")
     @Expose
     private String StorageName;
 
     /**
-    * 状态，0可挂载 1不可挂载(挂载限制)
+    * <p>状态</p><p>枚举值：</p><ul><li>0： 可挂载（正常）</li><li>1： 不可挂载（挂载限制）</li><li>2： 不可挂载（存储配置关闭）</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 额外配置
+    * <p>额外配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExtraConf")
@@ -60,73 +60,73 @@ public class MountInstanceInfo extends AbstractModel {
     private StorageExtraConf ExtraConf;
 
     /**
-     * Get 类型英文名 
-     * @return Type 类型英文名
+     * Get <p>类型英文名</p> 
+     * @return Type <p>类型英文名</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 类型英文名
-     * @param Type 类型英文名
+     * Set <p>类型英文名</p>
+     * @param Type <p>类型英文名</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 存储实例ID 
-     * @return StorageId 存储实例ID
+     * Get <p>存储实例ID</p> 
+     * @return StorageId <p>存储实例ID</p>
      */
     public String getStorageId() {
         return this.StorageId;
     }
 
     /**
-     * Set 存储实例ID
-     * @param StorageId 存储实例ID
+     * Set <p>存储实例ID</p>
+     * @param StorageId <p>存储实例ID</p>
      */
     public void setStorageId(String StorageId) {
         this.StorageId = StorageId;
     }
 
     /**
-     * Get 存储实例名称 
-     * @return StorageName 存储实例名称
+     * Get <p>存储实例名称</p> 
+     * @return StorageName <p>存储实例名称</p>
      */
     public String getStorageName() {
         return this.StorageName;
     }
 
     /**
-     * Set 存储实例名称
-     * @param StorageName 存储实例名称
+     * Set <p>存储实例名称</p>
+     * @param StorageName <p>存储实例名称</p>
      */
     public void setStorageName(String StorageName) {
         this.StorageName = StorageName;
     }
 
     /**
-     * Get 状态，0可挂载 1不可挂载(挂载限制) 
-     * @return Status 状态，0可挂载 1不可挂载(挂载限制)
+     * Get <p>状态</p><p>枚举值：</p><ul><li>0： 可挂载（正常）</li><li>1： 不可挂载（挂载限制）</li><li>2： 不可挂载（存储配置关闭）</li></ul> 
+     * @return Status <p>状态</p><p>枚举值：</p><ul><li>0： 可挂载（正常）</li><li>1： 不可挂载（挂载限制）</li><li>2： 不可挂载（存储配置关闭）</li></ul>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态，0可挂载 1不可挂载(挂载限制)
-     * @param Status 状态，0可挂载 1不可挂载(挂载限制)
+     * Set <p>状态</p><p>枚举值：</p><ul><li>0： 可挂载（正常）</li><li>1： 不可挂载（挂载限制）</li><li>2： 不可挂载（存储配置关闭）</li></ul>
+     * @param Status <p>状态</p><p>枚举值：</p><ul><li>0： 可挂载（正常）</li><li>1： 不可挂载（挂载限制）</li><li>2： 不可挂载（存储配置关闭）</li></ul>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 额外配置
+     * Get <p>额外配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExtraConf 额外配置
+     * @return ExtraConf <p>额外配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public StorageExtraConf getExtraConf() {
@@ -134,9 +134,9 @@ public class MountInstanceInfo extends AbstractModel {
     }
 
     /**
-     * Set 额外配置
+     * Set <p>额外配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExtraConf 额外配置
+     * @param ExtraConf <p>额外配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtraConf(StorageExtraConf ExtraConf) {

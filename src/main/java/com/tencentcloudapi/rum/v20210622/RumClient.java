@@ -171,6 +171,28 @@ public class RumClient extends AbstractClient{
     }
 
     /**
+     *获取应用退出个例上报详情
+     * @param req DescribeApplicationExitReportDetailRequest
+     * @return DescribeApplicationExitReportDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApplicationExitReportDetailResponse DescribeApplicationExitReportDetail(DescribeApplicationExitReportDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeApplicationExitReportDetail", DescribeApplicationExitReportDetailResponse.class);
+    }
+
+    /**
+     *获取应用退出个例上报列表
+     * @param req DescribeApplicationExitReportListRequest
+     * @return DescribeApplicationExitReportListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApplicationExitReportListResponse DescribeApplicationExitReportList(DescribeApplicationExitReportListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeApplicationExitReportList", DescribeApplicationExitReportListResponse.class);
+    }
+
+    /**
      *转发monitor查询
      * @param req DescribeDataRequest
      * @return DescribeDataResponse
@@ -514,6 +536,160 @@ public class RumClient extends AbstractClient{
     }
 
     /**
+     *获取异常问题详情数据
+     * @param req DescribeExceptionDetailRequest
+     * @return DescribeExceptionDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExceptionDetailResponse DescribeExceptionDetail(DescribeExceptionDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeExceptionDetail", DescribeExceptionDetailResponse.class);
+    }
+
+    /**
+     *获取异常个例列表
+     * @param req DescribeExceptionReportListRequest
+     * @return DescribeExceptionReportListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExceptionReportListResponse DescribeExceptionReportList(DescribeExceptionReportListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeExceptionReportList", DescribeExceptionReportListResponse.class);
+    }
+
+    /**
+     *获取FOOM内存分配问题详情数据
+     * @param req DescribeFOOMMallocProblemDetailRequest
+     * @return DescribeFOOMMallocProblemDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFOOMMallocProblemDetailResponse DescribeFOOMMallocProblemDetail(DescribeFOOMMallocProblemDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFOOMMallocProblemDetail", DescribeFOOMMallocProblemDetailResponse.class);
+    }
+
+    /**
+     *获取FOOM内存分配问题列表数据
+     * @param req DescribeFOOMMallocProblemListRequest
+     * @return DescribeFOOMMallocProblemListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFOOMMallocProblemListResponse DescribeFOOMMallocProblemList(DescribeFOOMMallocProblemListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFOOMMallocProblemList", DescribeFOOMMallocProblemListResponse.class);
+    }
+
+    /**
+     *获取FOOM内存分配问题上报列表
+     * @param req DescribeFOOMMallocReportListRequest
+     * @return DescribeFOOMMallocReportListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFOOMMallocReportListResponse DescribeFOOMMallocReportList(DescribeFOOMMallocReportListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFOOMMallocReportList", DescribeFOOMMallocReportListResponse.class);
+    }
+
+    /**
+     *获取FOOM问题详情数据
+     * @param req DescribeFOOMProblemDetailRequest
+     * @return DescribeFOOMProblemDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFOOMProblemDetailResponse DescribeFOOMProblemDetail(DescribeFOOMProblemDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFOOMProblemDetail", DescribeFOOMProblemDetailResponse.class);
+    }
+
+    /**
+     *获取FOOM问题列表数据
+     * @param req DescribeFOOMProblemListRequest
+     * @return DescribeFOOMProblemListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFOOMProblemListResponse DescribeFOOMProblemList(DescribeFOOMProblemListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFOOMProblemList", DescribeFOOMProblemListResponse.class);
+    }
+
+    /**
+     *获取FOOM问题上报列表
+     * @param req DescribeFOOMReportListRequest
+     * @return DescribeFOOMReportListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFOOMReportListResponse DescribeFOOMReportList(DescribeFOOMReportListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFOOMReportList", DescribeFOOMReportListResponse.class);
+    }
+
+    /**
+     *获取问题分布数据
+     * @param req DescribeIssuesDistributionRequest
+     * @return DescribeIssuesDistributionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIssuesDistributionResponse DescribeIssuesDistribution(DescribeIssuesDistributionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIssuesDistribution", DescribeIssuesDistributionResponse.class);
+    }
+
+    /**
+     *获取问题列表数据
+     * @param req DescribeIssuesListRequest
+     * @return DescribeIssuesListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIssuesListResponse DescribeIssuesList(DescribeIssuesListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIssuesList", DescribeIssuesListResponse.class);
+    }
+
+    /**
+     *获取问题趋势数据
+     * @param req DescribeIssuesStatisticsTrendRequest
+     * @return DescribeIssuesStatisticsTrendResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIssuesStatisticsTrendResponse DescribeIssuesStatisticsTrend(DescribeIssuesStatisticsTrendRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIssuesStatisticsTrend", DescribeIssuesStatisticsTrendResponse.class);
+    }
+
+    /**
+     *获取卡顿ANR问题用户详情
+     * @param req DescribeLagANRProblemAccountDetailRequest
+     * @return DescribeLagANRProblemAccountDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLagANRProblemAccountDetailResponse DescribeLagANRProblemAccountDetail(DescribeLagANRProblemAccountDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLagANRProblemAccountDetail", DescribeLagANRProblemAccountDetailResponse.class);
+    }
+
+    /**
+     *获取卡顿ANR问题用户列表
+     * @param req DescribeLagANRProblemFeatureAccountsRequest
+     * @return DescribeLagANRProblemFeatureAccountsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLagANRProblemFeatureAccountsResponse DescribeLagANRProblemFeatureAccounts(DescribeLagANRProblemFeatureAccountsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLagANRProblemFeatureAccounts", DescribeLagANRProblemFeatureAccountsResponse.class);
+    }
+
+    /**
+     *获取卡顿ANR问题列表数据
+     * @param req DescribeLagANRProblemListRequest
+     * @return DescribeLagANRProblemListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLagANRProblemListResponse DescribeLagANRProblemList(DescribeLagANRProblemListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLagANRProblemList", DescribeLagANRProblemListResponse.class);
+    }
+
+    /**
      *获取应用上报抽样信息
      * @param req DescribeProjectLimitsRequest
      * @return DescribeProjectLimitsResponse
@@ -665,6 +841,28 @@ public class RumClient extends AbstractClient{
     public DescribeTawInstancesResponse DescribeTawInstances(DescribeTawInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeTawInstances", DescribeTawInstancesResponse.class);
+    }
+
+    /**
+     *查询令牌
+     * @param req DescribeTokenRequest
+     * @return DescribeTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTokenResponse DescribeToken(DescribeTokenRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeToken", DescribeTokenResponse.class);
+    }
+
+    /**
+     *查询top问题列表
+     * @param req DescribeTopIssuesRequest
+     * @return DescribeTopIssuesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTopIssuesResponse DescribeTopIssues(DescribeTopIssuesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTopIssues", DescribeTopIssuesResponse.class);
     }
 
     /**

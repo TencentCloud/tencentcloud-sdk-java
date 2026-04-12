@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeImageTaskDetailRequest extends AbstractModel {
 
     /**
-    * 图片处理任务的任务 ID。
+    * <p>图片处理任务的任务 ID。</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-     * Get 图片处理任务的任务 ID。 
-     * @return TaskId 图片处理任务的任务 ID。
+     * Get <p>图片处理任务的任务 ID。</p> 
+     * @return TaskId <p>图片处理任务的任务 ID。</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 图片处理任务的任务 ID。
-     * @param TaskId 图片处理任务的任务 ID。
+     * Set <p>图片处理任务的任务 ID。</p>
+     * @param TaskId <p>图片处理任务的任务 ID。</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

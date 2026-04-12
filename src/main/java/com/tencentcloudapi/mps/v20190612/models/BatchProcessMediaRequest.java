@@ -24,235 +24,233 @@ import java.util.HashMap;
 public class BatchProcessMediaRequest extends AbstractModel {
 
     /**
-    * 媒体处理的文件输入信息。
+    * <p>媒体处理的文件输入信息。</p>
     */
     @SerializedName("InputInfo")
     @Expose
     private MediaInputInfo [] InputInfo;
 
     /**
-    * 媒体处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
-注意：当InputInfo.Type为URL时，该参数是必填项，目前只支持COS输出
+    * <p>媒体处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。<br>注意：当InputInfo.Type为URL时，该参数是必填项，目前只支持COS输出</p>
     */
     @SerializedName("OutputStorage")
     @Expose
     private TaskOutputStorage OutputStorage;
 
     /**
-    * 媒体处理生成的文件输出的目标目录，必选以 / 开头和结尾，如`/movie/201907/`。
-如果不填，表示与 InputInfo 中文件所在的目录一致。
+    * <p>媒体处理生成的文件输出的目标目录，必选以 / 开头和结尾，如<code>/movie/201907/</code>。<br>如果不填，表示与 InputInfo 中文件所在的目录一致。</p>
     */
     @SerializedName("OutputDir")
     @Expose
     private String OutputDir;
 
     /**
-    * 智能字幕
+    * <p>智能字幕</p>
     */
     @SerializedName("SmartSubtitlesTask")
     @Expose
     private SmartSubtitlesTaskInput SmartSubtitlesTask;
 
     /**
-    * 任务的事件通知信息，不填代表不获取事件通知。
+    * <p>任务的事件通知信息，不填代表不获取事件通知。</p>
     */
     @SerializedName("TaskNotifyConfig")
     @Expose
     private TaskNotifyConfig TaskNotifyConfig;
 
     /**
-    * 任务流的优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。
+    * <p>任务流的优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。</p>
     */
     @SerializedName("TasksPriority")
     @Expose
     private Long TasksPriority;
 
     /**
-    * 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+    * <p>来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。</p>
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-    * 资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。
+    * <p>资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。</p>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 是否跳过元信息获取，可选值： 
-0：表示不跳过 
-1：表示跳过 
-默认值：0	
+    * <p>是否跳过元信息获取，可选值：<br>0：表示不跳过<br>1：表示跳过<br>默认值：0</p>
     */
     @SerializedName("SkipMateData")
     @Expose
     private Long SkipMateData;
 
     /**
-     * Get 媒体处理的文件输入信息。 
-     * @return InputInfo 媒体处理的文件输入信息。
+    * <p>执行模式，可选值：</p><li>Parallel: 并发执行</li><li>Serial: 串行执行</li>注意：默认并发执行。
+    */
+    @SerializedName("TaskMode")
+    @Expose
+    private String TaskMode;
+
+    /**
+     * Get <p>媒体处理的文件输入信息。</p> 
+     * @return InputInfo <p>媒体处理的文件输入信息。</p>
      */
     public MediaInputInfo [] getInputInfo() {
         return this.InputInfo;
     }
 
     /**
-     * Set 媒体处理的文件输入信息。
-     * @param InputInfo 媒体处理的文件输入信息。
+     * Set <p>媒体处理的文件输入信息。</p>
+     * @param InputInfo <p>媒体处理的文件输入信息。</p>
      */
     public void setInputInfo(MediaInputInfo [] InputInfo) {
         this.InputInfo = InputInfo;
     }
 
     /**
-     * Get 媒体处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
-注意：当InputInfo.Type为URL时，该参数是必填项，目前只支持COS输出 
-     * @return OutputStorage 媒体处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
-注意：当InputInfo.Type为URL时，该参数是必填项，目前只支持COS输出
+     * Get <p>媒体处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。<br>注意：当InputInfo.Type为URL时，该参数是必填项，目前只支持COS输出</p> 
+     * @return OutputStorage <p>媒体处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。<br>注意：当InputInfo.Type为URL时，该参数是必填项，目前只支持COS输出</p>
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set 媒体处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
-注意：当InputInfo.Type为URL时，该参数是必填项，目前只支持COS输出
-     * @param OutputStorage 媒体处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
-注意：当InputInfo.Type为URL时，该参数是必填项，目前只支持COS输出
+     * Set <p>媒体处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。<br>注意：当InputInfo.Type为URL时，该参数是必填项，目前只支持COS输出</p>
+     * @param OutputStorage <p>媒体处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。<br>注意：当InputInfo.Type为URL时，该参数是必填项，目前只支持COS输出</p>
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
     }
 
     /**
-     * Get 媒体处理生成的文件输出的目标目录，必选以 / 开头和结尾，如`/movie/201907/`。
-如果不填，表示与 InputInfo 中文件所在的目录一致。 
-     * @return OutputDir 媒体处理生成的文件输出的目标目录，必选以 / 开头和结尾，如`/movie/201907/`。
-如果不填，表示与 InputInfo 中文件所在的目录一致。
+     * Get <p>媒体处理生成的文件输出的目标目录，必选以 / 开头和结尾，如<code>/movie/201907/</code>。<br>如果不填，表示与 InputInfo 中文件所在的目录一致。</p> 
+     * @return OutputDir <p>媒体处理生成的文件输出的目标目录，必选以 / 开头和结尾，如<code>/movie/201907/</code>。<br>如果不填，表示与 InputInfo 中文件所在的目录一致。</p>
      */
     public String getOutputDir() {
         return this.OutputDir;
     }
 
     /**
-     * Set 媒体处理生成的文件输出的目标目录，必选以 / 开头和结尾，如`/movie/201907/`。
-如果不填，表示与 InputInfo 中文件所在的目录一致。
-     * @param OutputDir 媒体处理生成的文件输出的目标目录，必选以 / 开头和结尾，如`/movie/201907/`。
-如果不填，表示与 InputInfo 中文件所在的目录一致。
+     * Set <p>媒体处理生成的文件输出的目标目录，必选以 / 开头和结尾，如<code>/movie/201907/</code>。<br>如果不填，表示与 InputInfo 中文件所在的目录一致。</p>
+     * @param OutputDir <p>媒体处理生成的文件输出的目标目录，必选以 / 开头和结尾，如<code>/movie/201907/</code>。<br>如果不填，表示与 InputInfo 中文件所在的目录一致。</p>
      */
     public void setOutputDir(String OutputDir) {
         this.OutputDir = OutputDir;
     }
 
     /**
-     * Get 智能字幕 
-     * @return SmartSubtitlesTask 智能字幕
+     * Get <p>智能字幕</p> 
+     * @return SmartSubtitlesTask <p>智能字幕</p>
      */
     public SmartSubtitlesTaskInput getSmartSubtitlesTask() {
         return this.SmartSubtitlesTask;
     }
 
     /**
-     * Set 智能字幕
-     * @param SmartSubtitlesTask 智能字幕
+     * Set <p>智能字幕</p>
+     * @param SmartSubtitlesTask <p>智能字幕</p>
      */
     public void setSmartSubtitlesTask(SmartSubtitlesTaskInput SmartSubtitlesTask) {
         this.SmartSubtitlesTask = SmartSubtitlesTask;
     }
 
     /**
-     * Get 任务的事件通知信息，不填代表不获取事件通知。 
-     * @return TaskNotifyConfig 任务的事件通知信息，不填代表不获取事件通知。
+     * Get <p>任务的事件通知信息，不填代表不获取事件通知。</p> 
+     * @return TaskNotifyConfig <p>任务的事件通知信息，不填代表不获取事件通知。</p>
      */
     public TaskNotifyConfig getTaskNotifyConfig() {
         return this.TaskNotifyConfig;
     }
 
     /**
-     * Set 任务的事件通知信息，不填代表不获取事件通知。
-     * @param TaskNotifyConfig 任务的事件通知信息，不填代表不获取事件通知。
+     * Set <p>任务的事件通知信息，不填代表不获取事件通知。</p>
+     * @param TaskNotifyConfig <p>任务的事件通知信息，不填代表不获取事件通知。</p>
      */
     public void setTaskNotifyConfig(TaskNotifyConfig TaskNotifyConfig) {
         this.TaskNotifyConfig = TaskNotifyConfig;
     }
 
     /**
-     * Get 任务流的优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。 
-     * @return TasksPriority 任务流的优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。
+     * Get <p>任务流的优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。</p> 
+     * @return TasksPriority <p>任务流的优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。</p>
      */
     public Long getTasksPriority() {
         return this.TasksPriority;
     }
 
     /**
-     * Set 任务流的优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。
-     * @param TasksPriority 任务流的优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。
+     * Set <p>任务流的优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。</p>
+     * @param TasksPriority <p>任务流的优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。</p>
      */
     public void setTasksPriority(Long TasksPriority) {
         this.TasksPriority = TasksPriority;
     }
 
     /**
-     * Get 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。 
-     * @return SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+     * Get <p>来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。</p> 
+     * @return SessionContext <p>来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。</p>
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
-     * @param SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+     * Set <p>来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。</p>
+     * @param SessionContext <p>来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。</p>
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
     }
 
     /**
-     * Get 资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。 
-     * @return ResourceId 资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。
+     * Get <p>资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。</p> 
+     * @return ResourceId <p>资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。
-     * @param ResourceId 资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。
+     * Set <p>资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。</p>
+     * @param ResourceId <p>资源ID，需要保证对应资源是开启状态。默认为账号主资源ID。</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 是否跳过元信息获取，可选值： 
-0：表示不跳过 
-1：表示跳过 
-默认值：0	 
-     * @return SkipMateData 是否跳过元信息获取，可选值： 
-0：表示不跳过 
-1：表示跳过 
-默认值：0	
+     * Get <p>是否跳过元信息获取，可选值：<br>0：表示不跳过<br>1：表示跳过<br>默认值：0</p> 
+     * @return SkipMateData <p>是否跳过元信息获取，可选值：<br>0：表示不跳过<br>1：表示跳过<br>默认值：0</p>
      */
     public Long getSkipMateData() {
         return this.SkipMateData;
     }
 
     /**
-     * Set 是否跳过元信息获取，可选值： 
-0：表示不跳过 
-1：表示跳过 
-默认值：0	
-     * @param SkipMateData 是否跳过元信息获取，可选值： 
-0：表示不跳过 
-1：表示跳过 
-默认值：0	
+     * Set <p>是否跳过元信息获取，可选值：<br>0：表示不跳过<br>1：表示跳过<br>默认值：0</p>
+     * @param SkipMateData <p>是否跳过元信息获取，可选值：<br>0：表示不跳过<br>1：表示跳过<br>默认值：0</p>
      */
     public void setSkipMateData(Long SkipMateData) {
         this.SkipMateData = SkipMateData;
+    }
+
+    /**
+     * Get <p>执行模式，可选值：</p><li>Parallel: 并发执行</li><li>Serial: 串行执行</li>注意：默认并发执行。 
+     * @return TaskMode <p>执行模式，可选值：</p><li>Parallel: 并发执行</li><li>Serial: 串行执行</li>注意：默认并发执行。
+     */
+    public String getTaskMode() {
+        return this.TaskMode;
+    }
+
+    /**
+     * Set <p>执行模式，可选值：</p><li>Parallel: 并发执行</li><li>Serial: 串行执行</li>注意：默认并发执行。
+     * @param TaskMode <p>执行模式，可选值：</p><li>Parallel: 并发执行</li><li>Serial: 串行执行</li>注意：默认并发执行。
+     */
+    public void setTaskMode(String TaskMode) {
+        this.TaskMode = TaskMode;
     }
 
     public BatchProcessMediaRequest() {
@@ -293,6 +291,9 @@ public class BatchProcessMediaRequest extends AbstractModel {
         if (source.SkipMateData != null) {
             this.SkipMateData = new Long(source.SkipMateData);
         }
+        if (source.TaskMode != null) {
+            this.TaskMode = new String(source.TaskMode);
+        }
     }
 
 
@@ -309,6 +310,7 @@ public class BatchProcessMediaRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamSimple(map, prefix + "SkipMateData", this.SkipMateData);
+        this.setParamSimple(map, prefix + "TaskMode", this.TaskMode);
 
     }
 }

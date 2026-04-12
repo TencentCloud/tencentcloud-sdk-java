@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class SubmitQuestionMarkAgentJobResponse extends AbstractModel {
 
     /**
-    * 任务唯一ID。由服务端生成.
+    * <p>任务唯一ID。由服务端生成.</p>
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-    * 切题题目边框坐标列表 （如果BoolSingleQuestion为true则返回空）
+    * <p>切题题目边框坐标列表 （如果BoolSingleQuestion为true则返回空）</p>
     */
     @SerializedName("QuestionInfo")
     @Expose
     private QuestionInfo [] QuestionInfo;
 
     /**
-    * 题目切题数量，作为计费题目数总量
+    * <p>题目切题数量，作为计费题目数总量</p>
     */
     @SerializedName("QuestionCount")
     @Expose
@@ -52,48 +52,48 @@ public class SubmitQuestionMarkAgentJobResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务唯一ID。由服务端生成. 
-     * @return JobId 任务唯一ID。由服务端生成.
+     * Get <p>任务唯一ID。由服务端生成.</p> 
+     * @return JobId <p>任务唯一ID。由服务端生成.</p>
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 任务唯一ID。由服务端生成.
-     * @param JobId 任务唯一ID。由服务端生成.
+     * Set <p>任务唯一ID。由服务端生成.</p>
+     * @param JobId <p>任务唯一ID。由服务端生成.</p>
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get 切题题目边框坐标列表 （如果BoolSingleQuestion为true则返回空） 
-     * @return QuestionInfo 切题题目边框坐标列表 （如果BoolSingleQuestion为true则返回空）
+     * Get <p>切题题目边框坐标列表 （如果BoolSingleQuestion为true则返回空）</p> 
+     * @return QuestionInfo <p>切题题目边框坐标列表 （如果BoolSingleQuestion为true则返回空）</p>
      */
     public QuestionInfo [] getQuestionInfo() {
         return this.QuestionInfo;
     }
 
     /**
-     * Set 切题题目边框坐标列表 （如果BoolSingleQuestion为true则返回空）
-     * @param QuestionInfo 切题题目边框坐标列表 （如果BoolSingleQuestion为true则返回空）
+     * Set <p>切题题目边框坐标列表 （如果BoolSingleQuestion为true则返回空）</p>
+     * @param QuestionInfo <p>切题题目边框坐标列表 （如果BoolSingleQuestion为true则返回空）</p>
      */
     public void setQuestionInfo(QuestionInfo [] QuestionInfo) {
         this.QuestionInfo = QuestionInfo;
     }
 
     /**
-     * Get 题目切题数量，作为计费题目数总量 
-     * @return QuestionCount 题目切题数量，作为计费题目数总量
+     * Get <p>题目切题数量，作为计费题目数总量</p> 
+     * @return QuestionCount <p>题目切题数量，作为计费题目数总量</p>
      */
     public String getQuestionCount() {
         return this.QuestionCount;
     }
 
     /**
-     * Set 题目切题数量，作为计费题目数总量
-     * @param QuestionCount 题目切题数量，作为计费题目数总量
+     * Set <p>题目切题数量，作为计费题目数总量</p>
+     * @param QuestionCount <p>题目切题数量，作为计费题目数总量</p>
      */
     public void setQuestionCount(String QuestionCount) {
         this.QuestionCount = QuestionCount;

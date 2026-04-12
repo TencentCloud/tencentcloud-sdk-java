@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeImageTaskDetailResponse extends AbstractModel {
 
     /**
-    * 任务类型，目前取值有：
-<li>WorkflowTask：工作流处理任务。</li>
+    * <p>任务类型，目前取值有：</p><li>WorkflowTask：工作流处理任务。</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskType")
@@ -33,10 +32,7 @@ public class DescribeImageTaskDetailResponse extends AbstractModel {
     private String TaskType;
 
     /**
-    * 任务状态，取值：
-<li>WAITING：等待中；</li>
-<li>PROCESSING：处理中；</li>
-<li>FINISH：已完成。</li>
+    * <p>任务状态，取值：</p><li>WAITING：等待中；</li><li>PROCESSING：处理中；</li><li>FINISH：已完成。</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -44,28 +40,28 @@ public class DescribeImageTaskDetailResponse extends AbstractModel {
     private String Status;
 
     /**
-    * 任务失败时的错误码。
+    * <p>任务失败时的错误码。</p>
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * 错误码，空字符串表示成功，其他值表示失败，取值请参考 [媒体处理类错误码](https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) 列表。
+    * <p>错误码，空字符串表示成功，其他值表示失败，取值请参考 <a href="https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">媒体处理类错误码</a> 列表。</p>
     */
     @SerializedName("ErrMsg")
     @Expose
     private String ErrMsg;
 
     /**
-    * 任务异常Message。
+    * <p>任务异常Message。</p>
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * 图片处理任务的执行状态与结果。
+    * <p>图片处理任务的执行状态与结果。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageProcessTaskResultSet")
@@ -73,7 +69,7 @@ public class DescribeImageTaskDetailResponse extends AbstractModel {
     private ImageProcessTaskResult [] ImageProcessTaskResultSet;
 
     /**
-    * 任务的创建时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+    * <p>任务的创建时间，采用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
@@ -81,12 +77,33 @@ public class DescribeImageTaskDetailResponse extends AbstractModel {
     private String CreateTime;
 
     /**
-    * 任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+    * <p>任务执行完毕的时间，采用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FinishTime")
     @Expose
     private String FinishTime;
+
+    /**
+    * <p>模板唯一标识。</p>
+    */
+    @SerializedName("Definition")
+    @Expose
+    private Long Definition;
+
+    /**
+    * <p>任务发起参数。</p>
+    */
+    @SerializedName("ImageTask")
+    @Expose
+    private ImageTaskInput ImageTask;
+
+    /**
+    * <p>图片任务输入信息。</p>
+    */
+    @SerializedName("InputInfo")
+    @Expose
+    private MediaInputInfo InputInfo;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -96,11 +113,9 @@ public class DescribeImageTaskDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务类型，目前取值有：
-<li>WorkflowTask：工作流处理任务。</li>
+     * Get <p>任务类型，目前取值有：</p><li>WorkflowTask：工作流处理任务。</li>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskType 任务类型，目前取值有：
-<li>WorkflowTask：工作流处理任务。</li>
+     * @return TaskType <p>任务类型，目前取值有：</p><li>WorkflowTask：工作流处理任务。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskType() {
@@ -108,11 +123,9 @@ public class DescribeImageTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 任务类型，目前取值有：
-<li>WorkflowTask：工作流处理任务。</li>
+     * Set <p>任务类型，目前取值有：</p><li>WorkflowTask：工作流处理任务。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskType 任务类型，目前取值有：
-<li>WorkflowTask：工作流处理任务。</li>
+     * @param TaskType <p>任务类型，目前取值有：</p><li>WorkflowTask：工作流处理任务。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskType(String TaskType) {
@@ -120,15 +133,9 @@ public class DescribeImageTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 任务状态，取值：
-<li>WAITING：等待中；</li>
-<li>PROCESSING：处理中；</li>
-<li>FINISH：已完成。</li>
+     * Get <p>任务状态，取值：</p><li>WAITING：等待中；</li><li>PROCESSING：处理中；</li><li>FINISH：已完成。</li>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 任务状态，取值：
-<li>WAITING：等待中；</li>
-<li>PROCESSING：处理中；</li>
-<li>FINISH：已完成。</li>
+     * @return Status <p>任务状态，取值：</p><li>WAITING：等待中；</li><li>PROCESSING：处理中；</li><li>FINISH：已完成。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
@@ -136,15 +143,9 @@ public class DescribeImageTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 任务状态，取值：
-<li>WAITING：等待中；</li>
-<li>PROCESSING：处理中；</li>
-<li>FINISH：已完成。</li>
+     * Set <p>任务状态，取值：</p><li>WAITING：等待中；</li><li>PROCESSING：处理中；</li><li>FINISH：已完成。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 任务状态，取值：
-<li>WAITING：等待中；</li>
-<li>PROCESSING：处理中；</li>
-<li>FINISH：已完成。</li>
+     * @param Status <p>任务状态，取值：</p><li>WAITING：等待中；</li><li>PROCESSING：处理中；</li><li>FINISH：已完成。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
@@ -152,57 +153,57 @@ public class DescribeImageTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 任务失败时的错误码。 
-     * @return ErrCode 任务失败时的错误码。
+     * Get <p>任务失败时的错误码。</p> 
+     * @return ErrCode <p>任务失败时的错误码。</p>
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set 任务失败时的错误码。
-     * @param ErrCode 任务失败时的错误码。
+     * Set <p>任务失败时的错误码。</p>
+     * @param ErrCode <p>任务失败时的错误码。</p>
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get 错误码，空字符串表示成功，其他值表示失败，取值请参考 [媒体处理类错误码](https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) 列表。 
-     * @return ErrMsg 错误码，空字符串表示成功，其他值表示失败，取值请参考 [媒体处理类错误码](https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) 列表。
+     * Get <p>错误码，空字符串表示成功，其他值表示失败，取值请参考 <a href="https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">媒体处理类错误码</a> 列表。</p> 
+     * @return ErrMsg <p>错误码，空字符串表示成功，其他值表示失败，取值请参考 <a href="https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">媒体处理类错误码</a> 列表。</p>
      */
     public String getErrMsg() {
         return this.ErrMsg;
     }
 
     /**
-     * Set 错误码，空字符串表示成功，其他值表示失败，取值请参考 [媒体处理类错误码](https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) 列表。
-     * @param ErrMsg 错误码，空字符串表示成功，其他值表示失败，取值请参考 [媒体处理类错误码](https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) 列表。
+     * Set <p>错误码，空字符串表示成功，其他值表示失败，取值请参考 <a href="https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">媒体处理类错误码</a> 列表。</p>
+     * @param ErrMsg <p>错误码，空字符串表示成功，其他值表示失败，取值请参考 <a href="https://cloud.tencent.com/document/product/862/50369#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">媒体处理类错误码</a> 列表。</p>
      */
     public void setErrMsg(String ErrMsg) {
         this.ErrMsg = ErrMsg;
     }
 
     /**
-     * Get 任务异常Message。 
-     * @return Message 任务异常Message。
+     * Get <p>任务异常Message。</p> 
+     * @return Message <p>任务异常Message。</p>
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set 任务异常Message。
-     * @param Message 任务异常Message。
+     * Set <p>任务异常Message。</p>
+     * @param Message <p>任务异常Message。</p>
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get 图片处理任务的执行状态与结果。
+     * Get <p>图片处理任务的执行状态与结果。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ImageProcessTaskResultSet 图片处理任务的执行状态与结果。
+     * @return ImageProcessTaskResultSet <p>图片处理任务的执行状态与结果。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ImageProcessTaskResult [] getImageProcessTaskResultSet() {
@@ -210,9 +211,9 @@ public class DescribeImageTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 图片处理任务的执行状态与结果。
+     * Set <p>图片处理任务的执行状态与结果。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImageProcessTaskResultSet 图片处理任务的执行状态与结果。
+     * @param ImageProcessTaskResultSet <p>图片处理任务的执行状态与结果。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageProcessTaskResultSet(ImageProcessTaskResult [] ImageProcessTaskResultSet) {
@@ -220,9 +221,9 @@ public class DescribeImageTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 任务的创建时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+     * Get <p>任务的创建时间，采用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 任务的创建时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+     * @return CreateTime <p>任务的创建时间，采用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
@@ -230,9 +231,9 @@ public class DescribeImageTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 任务的创建时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+     * Set <p>任务的创建时间，采用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 任务的创建时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+     * @param CreateTime <p>任务的创建时间，采用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
@@ -240,9 +241,9 @@ public class DescribeImageTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+     * Get <p>任务执行完毕的时间，采用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FinishTime 任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+     * @return FinishTime <p>任务执行完毕的时间，采用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFinishTime() {
@@ -250,13 +251,61 @@ public class DescribeImageTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+     * Set <p>任务执行完毕的时间，采用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FinishTime 任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+     * @param FinishTime <p>任务执行完毕的时间，采用 <a href="https://cloud.tencent.com/document/product/862/37710#52">ISO 日期格式</a>。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;
+    }
+
+    /**
+     * Get <p>模板唯一标识。</p> 
+     * @return Definition <p>模板唯一标识。</p>
+     */
+    public Long getDefinition() {
+        return this.Definition;
+    }
+
+    /**
+     * Set <p>模板唯一标识。</p>
+     * @param Definition <p>模板唯一标识。</p>
+     */
+    public void setDefinition(Long Definition) {
+        this.Definition = Definition;
+    }
+
+    /**
+     * Get <p>任务发起参数。</p> 
+     * @return ImageTask <p>任务发起参数。</p>
+     */
+    public ImageTaskInput getImageTask() {
+        return this.ImageTask;
+    }
+
+    /**
+     * Set <p>任务发起参数。</p>
+     * @param ImageTask <p>任务发起参数。</p>
+     */
+    public void setImageTask(ImageTaskInput ImageTask) {
+        this.ImageTask = ImageTask;
+    }
+
+    /**
+     * Get <p>图片任务输入信息。</p> 
+     * @return InputInfo <p>图片任务输入信息。</p>
+     */
+    public MediaInputInfo getInputInfo() {
+        return this.InputInfo;
+    }
+
+    /**
+     * Set <p>图片任务输入信息。</p>
+     * @param InputInfo <p>图片任务输入信息。</p>
+     */
+    public void setInputInfo(MediaInputInfo InputInfo) {
+        this.InputInfo = InputInfo;
     }
 
     /**
@@ -310,6 +359,15 @@ public class DescribeImageTaskDetailResponse extends AbstractModel {
         if (source.FinishTime != null) {
             this.FinishTime = new String(source.FinishTime);
         }
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
+        if (source.ImageTask != null) {
+            this.ImageTask = new ImageTaskInput(source.ImageTask);
+        }
+        if (source.InputInfo != null) {
+            this.InputInfo = new MediaInputInfo(source.InputInfo);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -328,6 +386,9 @@ public class DescribeImageTaskDetailResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ImageProcessTaskResultSet.", this.ImageProcessTaskResultSet);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "FinishTime", this.FinishTime);
+        this.setParamSimple(map, prefix + "Definition", this.Definition);
+        this.setParamObj(map, prefix + "ImageTask.", this.ImageTask);
+        this.setParamObj(map, prefix + "InputInfo.", this.InputInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
