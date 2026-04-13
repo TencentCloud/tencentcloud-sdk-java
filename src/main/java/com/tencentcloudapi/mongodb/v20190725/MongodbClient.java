@@ -793,6 +793,17 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *本接口(RestoreDBInstance)用于回档数据库实例到指定时间点。
+     * @param req RestoreDBInstanceRequest
+     * @return RestoreDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public RestoreDBInstanceResponse RestoreDBInstance(RestoreDBInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RestoreDBInstance", RestoreDBInstanceResponse.class);
+    }
+
+    /**
      *本接口（SetAccountUserPrivilege）用于设置实例的账号权限。
      * @param req SetAccountUserPrivilegeRequest
      * @return SetAccountUserPrivilegeResponse

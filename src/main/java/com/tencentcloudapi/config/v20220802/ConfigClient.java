@@ -61,6 +61,17 @@ public class ConfigClient extends AbstractClient{
     }
 
     /**
+     *新增告警监控规则
+     * @param req AddAlarmPolicyRequest
+     * @return AddAlarmPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddAlarmPolicyResponse AddAlarmPolicy(AddAlarmPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddAlarmPolicy", AddAlarmPolicyResponse.class);
+    }
+
+    /**
      *新建合规包
      * @param req AddCompliancePackRequest
      * @return AddCompliancePackResponse
@@ -157,6 +168,17 @@ public class ConfigClient extends AbstractClient{
     public DeleteAggregateConfigRuleResponse DeleteAggregateConfigRule(DeleteAggregateConfigRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteAggregateConfigRule", DeleteAggregateConfigRuleResponse.class);
+    }
+
+    /**
+     *删除告警规则
+     * @param req DeleteAlarmPolicyRequest
+     * @return DeleteAlarmPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAlarmPolicyResponse DeleteAlarmPolicy(DeleteAlarmPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAlarmPolicy", DeleteAlarmPolicyResponse.class);
     }
 
     /**
@@ -402,6 +424,17 @@ public class ConfigClient extends AbstractClient{
     }
 
     /**
+     *告警规则列表
+     * @param req ListAlarmPolicyRequest
+     * @return ListAlarmPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListAlarmPolicyResponse ListAlarmPolicy(ListAlarmPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListAlarmPolicy", ListAlarmPolicyResponse.class);
+    }
+
+    /**
      *获取合规包列表
      * @param req ListCompliancePacksRequest
      * @return ListCompliancePacksResponse
@@ -619,6 +652,17 @@ public class ConfigClient extends AbstractClient{
     public UpdateAggregateConfigRuleResponse UpdateAggregateConfigRule(UpdateAggregateConfigRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateAggregateConfigRule", UpdateAggregateConfigRuleResponse.class);
+    }
+
+    /**
+     *更新告警规则
+     * @param req UpdateAlarmPolicyRequest
+     * @return UpdateAlarmPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateAlarmPolicyResponse UpdateAlarmPolicy(UpdateAlarmPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateAlarmPolicy", UpdateAlarmPolicyResponse.class);
     }
 
     /**

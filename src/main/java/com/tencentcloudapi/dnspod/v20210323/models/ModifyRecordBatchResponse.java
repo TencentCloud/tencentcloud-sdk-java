@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyRecordBatchResponse extends AbstractModel {
 
     /**
-    * 批量任务ID
+    * <p>批量任务ID</p>
     */
     @SerializedName("JobId")
     @Expose
     private Long JobId;
 
     /**
-    * 见ModifyRecordBatchDetail
+    * <p>见ModifyRecordBatchDetail</p>
     */
     @SerializedName("DetailList")
     @Expose
@@ -45,32 +45,32 @@ public class ModifyRecordBatchResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 批量任务ID 
-     * @return JobId 批量任务ID
+     * Get <p>批量任务ID</p> 
+     * @return JobId <p>批量任务ID</p>
      */
     public Long getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 批量任务ID
-     * @param JobId 批量任务ID
+     * Set <p>批量任务ID</p>
+     * @param JobId <p>批量任务ID</p>
      */
     public void setJobId(Long JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get 见ModifyRecordBatchDetail 
-     * @return DetailList 见ModifyRecordBatchDetail
+     * Get <p>见ModifyRecordBatchDetail</p> 
+     * @return DetailList <p>见ModifyRecordBatchDetail</p>
      */
     public ModifyRecordBatchDetail [] getDetailList() {
         return this.DetailList;
     }
 
     /**
-     * Set 见ModifyRecordBatchDetail
-     * @param DetailList 见ModifyRecordBatchDetail
+     * Set <p>见ModifyRecordBatchDetail</p>
+     * @param DetailList <p>见ModifyRecordBatchDetail</p>
      */
     public void setDetailList(ModifyRecordBatchDetail [] DetailList) {
         this.DetailList = DetailList;

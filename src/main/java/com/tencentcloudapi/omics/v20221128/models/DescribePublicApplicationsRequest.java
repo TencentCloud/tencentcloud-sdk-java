@@ -24,49 +24,95 @@ import java.util.HashMap;
 public class DescribePublicApplicationsRequest extends AbstractModel {
 
     /**
-    * 返回数量，默认为20，最大值为100。
+    * <p>返回数量，默认为20，最大值为100。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量，默认为0。
+    * <p>偏移量，默认为0。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get 返回数量，默认为20，最大值为100。 
-     * @return Limit 返回数量，默认为20，最大值为100。
+    * <p>父应用ID</p>
+    */
+    @SerializedName("ParentAppId")
+    @Expose
+    private String ParentAppId;
+
+    /**
+    * <p>应用类型</p><p>枚举值：</p><ul><li>WDL： WDL</li><li>NEXTFLOW： NEXTFLOW</li></ul>
+    */
+    @SerializedName("AppType")
+    @Expose
+    private String AppType;
+
+    /**
+     * Get <p>返回数量，默认为20，最大值为100。</p> 
+     * @return Limit <p>返回数量，默认为20，最大值为100。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认为20，最大值为100。
-     * @param Limit 返回数量，默认为20，最大值为100。
+     * Set <p>返回数量，默认为20，最大值为100。</p>
+     * @param Limit <p>返回数量，默认为20，最大值为100。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量，默认为0。 
-     * @return Offset 偏移量，默认为0。
+     * Get <p>偏移量，默认为0。</p> 
+     * @return Offset <p>偏移量，默认为0。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为0。
-     * @param Offset 偏移量，默认为0。
+     * Set <p>偏移量，默认为0。</p>
+     * @param Offset <p>偏移量，默认为0。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
+    }
+
+    /**
+     * Get <p>父应用ID</p> 
+     * @return ParentAppId <p>父应用ID</p>
+     */
+    public String getParentAppId() {
+        return this.ParentAppId;
+    }
+
+    /**
+     * Set <p>父应用ID</p>
+     * @param ParentAppId <p>父应用ID</p>
+     */
+    public void setParentAppId(String ParentAppId) {
+        this.ParentAppId = ParentAppId;
+    }
+
+    /**
+     * Get <p>应用类型</p><p>枚举值：</p><ul><li>WDL： WDL</li><li>NEXTFLOW： NEXTFLOW</li></ul> 
+     * @return AppType <p>应用类型</p><p>枚举值：</p><ul><li>WDL： WDL</li><li>NEXTFLOW： NEXTFLOW</li></ul>
+     */
+    public String getAppType() {
+        return this.AppType;
+    }
+
+    /**
+     * Set <p>应用类型</p><p>枚举值：</p><ul><li>WDL： WDL</li><li>NEXTFLOW： NEXTFLOW</li></ul>
+     * @param AppType <p>应用类型</p><p>枚举值：</p><ul><li>WDL： WDL</li><li>NEXTFLOW： NEXTFLOW</li></ul>
+     */
+    public void setAppType(String AppType) {
+        this.AppType = AppType;
     }
 
     public DescribePublicApplicationsRequest() {
@@ -83,6 +129,12 @@ public class DescribePublicApplicationsRequest extends AbstractModel {
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.ParentAppId != null) {
+            this.ParentAppId = new String(source.ParentAppId);
+        }
+        if (source.AppType != null) {
+            this.AppType = new String(source.AppType);
+        }
     }
 
 
@@ -92,6 +144,8 @@ public class DescribePublicApplicationsRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "ParentAppId", this.ParentAppId);
+        this.setParamSimple(map, prefix + "AppType", this.AppType);
 
     }
 }

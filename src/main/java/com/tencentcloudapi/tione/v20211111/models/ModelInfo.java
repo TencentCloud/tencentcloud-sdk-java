@@ -24,50 +24,49 @@ import java.util.HashMap;
 public class ModelInfo extends AbstractModel {
 
     /**
-    * 模型版本id, DescribeTrainingModelVersion查询模型接口时的id
-自动学习类型的模型填写自动学习的任务id
+    * <p>模型版本id, DescribeTrainingModelVersion查询模型接口时的id<br>自动学习类型的模型填写自动学习的任务id</p>
     */
     @SerializedName("ModelVersionId")
     @Expose
     private String ModelVersionId;
 
     /**
-    * 模型id
+    * <p>模型id</p>
     */
     @SerializedName("ModelId")
     @Expose
     private String ModelId;
 
     /**
-    * 模型名
+    * <p>模型名</p>
     */
     @SerializedName("ModelName")
     @Expose
     private String ModelName;
 
     /**
-    * 模型版本
+    * <p>模型版本</p>
     */
     @SerializedName("ModelVersion")
     @Expose
     private String ModelVersion;
 
     /**
-    * 模型来源
+    * <p>模型来源</p>
     */
     @SerializedName("ModelSource")
     @Expose
     private String ModelSource;
 
     /**
-    * cos路径信息
+    * <p>cos路径信息</p>
     */
     @SerializedName("CosPathInfo")
     @Expose
     private CosPathInfo CosPathInfo;
 
     /**
-    * GooseFSx的配置，ModelSource为GooseFSx时有效
+    * <p>GooseFSx的配置，ModelSource为GooseFSx时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GooseFSx")
@@ -75,7 +74,7 @@ public class ModelInfo extends AbstractModel {
     private GooseFSx GooseFSx;
 
     /**
-    * 模型对应的算法框架，预留
+    * <p>模型对应的算法框架，预留</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlgorithmFramework")
@@ -83,7 +82,7 @@ public class ModelInfo extends AbstractModel {
     private String AlgorithmFramework;
 
     /**
-    * 默认为 NORMAL, 已加速模型: ACCELERATE, 自动学习模型 AUTO_ML
+    * <p>默认为 NORMAL, 已加速模型: ACCELERATE, 自动学习模型 AUTO_ML</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModelType")
@@ -91,7 +90,7 @@ public class ModelInfo extends AbstractModel {
     private String ModelType;
 
     /**
-    * 模型格式
+    * <p>模型格式</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModelFormat")
@@ -99,7 +98,7 @@ public class ModelInfo extends AbstractModel {
     private String ModelFormat;
 
     /**
-    * 是否为私有化大模型
+    * <p>是否为私有化大模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsPrivateModel")
@@ -107,123 +106,119 @@ public class ModelInfo extends AbstractModel {
     private Boolean IsPrivateModel;
 
     /**
-    * 模型的类别 多模态MultiModal, 文本大模型 LLM
+    * <p>模型的类别 多模态MultiModal, 文本大模型 LLM</p>
     */
     @SerializedName("ModelCategory")
     @Expose
     private String ModelCategory;
 
     /**
-    * 数据源的配置
+    * <p>数据源的配置</p>
     */
     @SerializedName("PublicDataSource")
     @Expose
     private PublicDataSourceFS PublicDataSource;
 
     /**
-     * Get 模型版本id, DescribeTrainingModelVersion查询模型接口时的id
-自动学习类型的模型填写自动学习的任务id 
-     * @return ModelVersionId 模型版本id, DescribeTrainingModelVersion查询模型接口时的id
-自动学习类型的模型填写自动学习的任务id
+     * Get <p>模型版本id, DescribeTrainingModelVersion查询模型接口时的id<br>自动学习类型的模型填写自动学习的任务id</p> 
+     * @return ModelVersionId <p>模型版本id, DescribeTrainingModelVersion查询模型接口时的id<br>自动学习类型的模型填写自动学习的任务id</p>
      */
     public String getModelVersionId() {
         return this.ModelVersionId;
     }
 
     /**
-     * Set 模型版本id, DescribeTrainingModelVersion查询模型接口时的id
-自动学习类型的模型填写自动学习的任务id
-     * @param ModelVersionId 模型版本id, DescribeTrainingModelVersion查询模型接口时的id
-自动学习类型的模型填写自动学习的任务id
+     * Set <p>模型版本id, DescribeTrainingModelVersion查询模型接口时的id<br>自动学习类型的模型填写自动学习的任务id</p>
+     * @param ModelVersionId <p>模型版本id, DescribeTrainingModelVersion查询模型接口时的id<br>自动学习类型的模型填写自动学习的任务id</p>
      */
     public void setModelVersionId(String ModelVersionId) {
         this.ModelVersionId = ModelVersionId;
     }
 
     /**
-     * Get 模型id 
-     * @return ModelId 模型id
+     * Get <p>模型id</p> 
+     * @return ModelId <p>模型id</p>
      */
     public String getModelId() {
         return this.ModelId;
     }
 
     /**
-     * Set 模型id
-     * @param ModelId 模型id
+     * Set <p>模型id</p>
+     * @param ModelId <p>模型id</p>
      */
     public void setModelId(String ModelId) {
         this.ModelId = ModelId;
     }
 
     /**
-     * Get 模型名 
-     * @return ModelName 模型名
+     * Get <p>模型名</p> 
+     * @return ModelName <p>模型名</p>
      */
     public String getModelName() {
         return this.ModelName;
     }
 
     /**
-     * Set 模型名
-     * @param ModelName 模型名
+     * Set <p>模型名</p>
+     * @param ModelName <p>模型名</p>
      */
     public void setModelName(String ModelName) {
         this.ModelName = ModelName;
     }
 
     /**
-     * Get 模型版本 
-     * @return ModelVersion 模型版本
+     * Get <p>模型版本</p> 
+     * @return ModelVersion <p>模型版本</p>
      */
     public String getModelVersion() {
         return this.ModelVersion;
     }
 
     /**
-     * Set 模型版本
-     * @param ModelVersion 模型版本
+     * Set <p>模型版本</p>
+     * @param ModelVersion <p>模型版本</p>
      */
     public void setModelVersion(String ModelVersion) {
         this.ModelVersion = ModelVersion;
     }
 
     /**
-     * Get 模型来源 
-     * @return ModelSource 模型来源
+     * Get <p>模型来源</p> 
+     * @return ModelSource <p>模型来源</p>
      */
     public String getModelSource() {
         return this.ModelSource;
     }
 
     /**
-     * Set 模型来源
-     * @param ModelSource 模型来源
+     * Set <p>模型来源</p>
+     * @param ModelSource <p>模型来源</p>
      */
     public void setModelSource(String ModelSource) {
         this.ModelSource = ModelSource;
     }
 
     /**
-     * Get cos路径信息 
-     * @return CosPathInfo cos路径信息
+     * Get <p>cos路径信息</p> 
+     * @return CosPathInfo <p>cos路径信息</p>
      */
     public CosPathInfo getCosPathInfo() {
         return this.CosPathInfo;
     }
 
     /**
-     * Set cos路径信息
-     * @param CosPathInfo cos路径信息
+     * Set <p>cos路径信息</p>
+     * @param CosPathInfo <p>cos路径信息</p>
      */
     public void setCosPathInfo(CosPathInfo CosPathInfo) {
         this.CosPathInfo = CosPathInfo;
     }
 
     /**
-     * Get GooseFSx的配置，ModelSource为GooseFSx时有效
+     * Get <p>GooseFSx的配置，ModelSource为GooseFSx时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GooseFSx GooseFSx的配置，ModelSource为GooseFSx时有效
+     * @return GooseFSx <p>GooseFSx的配置，ModelSource为GooseFSx时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public GooseFSx getGooseFSx() {
@@ -231,9 +226,9 @@ public class ModelInfo extends AbstractModel {
     }
 
     /**
-     * Set GooseFSx的配置，ModelSource为GooseFSx时有效
+     * Set <p>GooseFSx的配置，ModelSource为GooseFSx时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GooseFSx GooseFSx的配置，ModelSource为GooseFSx时有效
+     * @param GooseFSx <p>GooseFSx的配置，ModelSource为GooseFSx时有效</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGooseFSx(GooseFSx GooseFSx) {
@@ -241,9 +236,9 @@ public class ModelInfo extends AbstractModel {
     }
 
     /**
-     * Get 模型对应的算法框架，预留
+     * Get <p>模型对应的算法框架，预留</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AlgorithmFramework 模型对应的算法框架，预留
+     * @return AlgorithmFramework <p>模型对应的算法框架，预留</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAlgorithmFramework() {
@@ -251,9 +246,9 @@ public class ModelInfo extends AbstractModel {
     }
 
     /**
-     * Set 模型对应的算法框架，预留
+     * Set <p>模型对应的算法框架，预留</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AlgorithmFramework 模型对应的算法框架，预留
+     * @param AlgorithmFramework <p>模型对应的算法框架，预留</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlgorithmFramework(String AlgorithmFramework) {
@@ -261,9 +256,9 @@ public class ModelInfo extends AbstractModel {
     }
 
     /**
-     * Get 默认为 NORMAL, 已加速模型: ACCELERATE, 自动学习模型 AUTO_ML
+     * Get <p>默认为 NORMAL, 已加速模型: ACCELERATE, 自动学习模型 AUTO_ML</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ModelType 默认为 NORMAL, 已加速模型: ACCELERATE, 自动学习模型 AUTO_ML
+     * @return ModelType <p>默认为 NORMAL, 已加速模型: ACCELERATE, 自动学习模型 AUTO_ML</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModelType() {
@@ -271,9 +266,9 @@ public class ModelInfo extends AbstractModel {
     }
 
     /**
-     * Set 默认为 NORMAL, 已加速模型: ACCELERATE, 自动学习模型 AUTO_ML
+     * Set <p>默认为 NORMAL, 已加速模型: ACCELERATE, 自动学习模型 AUTO_ML</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ModelType 默认为 NORMAL, 已加速模型: ACCELERATE, 自动学习模型 AUTO_ML
+     * @param ModelType <p>默认为 NORMAL, 已加速模型: ACCELERATE, 自动学习模型 AUTO_ML</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModelType(String ModelType) {
@@ -281,9 +276,9 @@ public class ModelInfo extends AbstractModel {
     }
 
     /**
-     * Get 模型格式
+     * Get <p>模型格式</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ModelFormat 模型格式
+     * @return ModelFormat <p>模型格式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModelFormat() {
@@ -291,9 +286,9 @@ public class ModelInfo extends AbstractModel {
     }
 
     /**
-     * Set 模型格式
+     * Set <p>模型格式</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ModelFormat 模型格式
+     * @param ModelFormat <p>模型格式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModelFormat(String ModelFormat) {
@@ -301,9 +296,9 @@ public class ModelInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否为私有化大模型
+     * Get <p>是否为私有化大模型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsPrivateModel 是否为私有化大模型
+     * @return IsPrivateModel <p>是否为私有化大模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsPrivateModel() {
@@ -311,9 +306,9 @@ public class ModelInfo extends AbstractModel {
     }
 
     /**
-     * Set 是否为私有化大模型
+     * Set <p>是否为私有化大模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsPrivateModel 是否为私有化大模型
+     * @param IsPrivateModel <p>是否为私有化大模型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsPrivateModel(Boolean IsPrivateModel) {
@@ -321,32 +316,32 @@ public class ModelInfo extends AbstractModel {
     }
 
     /**
-     * Get 模型的类别 多模态MultiModal, 文本大模型 LLM 
-     * @return ModelCategory 模型的类别 多模态MultiModal, 文本大模型 LLM
+     * Get <p>模型的类别 多模态MultiModal, 文本大模型 LLM</p> 
+     * @return ModelCategory <p>模型的类别 多模态MultiModal, 文本大模型 LLM</p>
      */
     public String getModelCategory() {
         return this.ModelCategory;
     }
 
     /**
-     * Set 模型的类别 多模态MultiModal, 文本大模型 LLM
-     * @param ModelCategory 模型的类别 多模态MultiModal, 文本大模型 LLM
+     * Set <p>模型的类别 多模态MultiModal, 文本大模型 LLM</p>
+     * @param ModelCategory <p>模型的类别 多模态MultiModal, 文本大模型 LLM</p>
      */
     public void setModelCategory(String ModelCategory) {
         this.ModelCategory = ModelCategory;
     }
 
     /**
-     * Get 数据源的配置 
-     * @return PublicDataSource 数据源的配置
+     * Get <p>数据源的配置</p> 
+     * @return PublicDataSource <p>数据源的配置</p>
      */
     public PublicDataSourceFS getPublicDataSource() {
         return this.PublicDataSource;
     }
 
     /**
-     * Set 数据源的配置
-     * @param PublicDataSource 数据源的配置
+     * Set <p>数据源的配置</p>
+     * @param PublicDataSource <p>数据源的配置</p>
      */
     public void setPublicDataSource(PublicDataSourceFS PublicDataSource) {
         this.PublicDataSource = PublicDataSource;

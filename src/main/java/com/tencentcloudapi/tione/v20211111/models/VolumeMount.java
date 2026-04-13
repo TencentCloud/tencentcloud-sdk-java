@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class VolumeMount extends AbstractModel {
 
     /**
-    * cfs的配置信息
+    * <p>cfs的配置信息</p>
     */
     @SerializedName("CFSConfig")
     @Expose
     private CFSConfig CFSConfig;
 
     /**
-    * 挂载源类型，CFS、COS、PUBLIC_DATA_SOURCE，默认为CFS
+    * <p>挂载源类型，CFS、COS、PUBLIC_DATA_SOURCE，默认为CFS</p>
     */
     @SerializedName("VolumeSourceType")
     @Expose
     private String VolumeSourceType;
 
     /**
-    * 自定义容器内挂载路径
+    * <p>自定义容器内挂载路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MountPath")
@@ -46,48 +46,48 @@ public class VolumeMount extends AbstractModel {
     private String MountPath;
 
     /**
-    * 挂载数据源时的配置信息
+    * <p>挂载数据源时的配置信息</p>
     */
     @SerializedName("PublicDataSource")
     @Expose
     private PublicDataSourceFS PublicDataSource;
 
     /**
-     * Get cfs的配置信息 
-     * @return CFSConfig cfs的配置信息
+     * Get <p>cfs的配置信息</p> 
+     * @return CFSConfig <p>cfs的配置信息</p>
      */
     public CFSConfig getCFSConfig() {
         return this.CFSConfig;
     }
 
     /**
-     * Set cfs的配置信息
-     * @param CFSConfig cfs的配置信息
+     * Set <p>cfs的配置信息</p>
+     * @param CFSConfig <p>cfs的配置信息</p>
      */
     public void setCFSConfig(CFSConfig CFSConfig) {
         this.CFSConfig = CFSConfig;
     }
 
     /**
-     * Get 挂载源类型，CFS、COS、PUBLIC_DATA_SOURCE，默认为CFS 
-     * @return VolumeSourceType 挂载源类型，CFS、COS、PUBLIC_DATA_SOURCE，默认为CFS
+     * Get <p>挂载源类型，CFS、COS、PUBLIC_DATA_SOURCE，默认为CFS</p> 
+     * @return VolumeSourceType <p>挂载源类型，CFS、COS、PUBLIC_DATA_SOURCE，默认为CFS</p>
      */
     public String getVolumeSourceType() {
         return this.VolumeSourceType;
     }
 
     /**
-     * Set 挂载源类型，CFS、COS、PUBLIC_DATA_SOURCE，默认为CFS
-     * @param VolumeSourceType 挂载源类型，CFS、COS、PUBLIC_DATA_SOURCE，默认为CFS
+     * Set <p>挂载源类型，CFS、COS、PUBLIC_DATA_SOURCE，默认为CFS</p>
+     * @param VolumeSourceType <p>挂载源类型，CFS、COS、PUBLIC_DATA_SOURCE，默认为CFS</p>
      */
     public void setVolumeSourceType(String VolumeSourceType) {
         this.VolumeSourceType = VolumeSourceType;
     }
 
     /**
-     * Get 自定义容器内挂载路径
+     * Get <p>自定义容器内挂载路径</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MountPath 自定义容器内挂载路径
+     * @return MountPath <p>自定义容器内挂载路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMountPath() {
@@ -95,9 +95,9 @@ public class VolumeMount extends AbstractModel {
     }
 
     /**
-     * Set 自定义容器内挂载路径
+     * Set <p>自定义容器内挂载路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MountPath 自定义容器内挂载路径
+     * @param MountPath <p>自定义容器内挂载路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMountPath(String MountPath) {
@@ -105,16 +105,16 @@ public class VolumeMount extends AbstractModel {
     }
 
     /**
-     * Get 挂载数据源时的配置信息 
-     * @return PublicDataSource 挂载数据源时的配置信息
+     * Get <p>挂载数据源时的配置信息</p> 
+     * @return PublicDataSource <p>挂载数据源时的配置信息</p>
      */
     public PublicDataSourceFS getPublicDataSource() {
         return this.PublicDataSource;
     }
 
     /**
-     * Set 挂载数据源时的配置信息
-     * @param PublicDataSource 挂载数据源时的配置信息
+     * Set <p>挂载数据源时的配置信息</p>
+     * @param PublicDataSource <p>挂载数据源时的配置信息</p>
      */
     public void setPublicDataSource(PublicDataSourceFS PublicDataSource) {
         this.PublicDataSource = PublicDataSource;

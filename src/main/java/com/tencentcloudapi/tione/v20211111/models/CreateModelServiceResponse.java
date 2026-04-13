@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateModelServiceResponse extends AbstractModel {
 
     /**
-    * 生成的模型服务
+    * <p>生成的模型服务</p>
     */
     @SerializedName("Service")
     @Expose
@@ -38,16 +38,16 @@ public class CreateModelServiceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 生成的模型服务 
-     * @return Service 生成的模型服务
+     * Get <p>生成的模型服务</p> 
+     * @return Service <p>生成的模型服务</p>
      */
     public Service getService() {
         return this.Service;
     }
 
     /**
-     * Set 生成的模型服务
-     * @param Service 生成的模型服务
+     * Set <p>生成的模型服务</p>
+     * @param Service <p>生成的模型服务</p>
      */
     public void setService(Service Service) {
         this.Service = Service;

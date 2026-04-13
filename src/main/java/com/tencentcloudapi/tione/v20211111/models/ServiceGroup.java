@@ -24,49 +24,49 @@ import java.util.HashMap;
 public class ServiceGroup extends AbstractModel {
 
     /**
-    * 服务组id
+    * <p>服务组id</p>
     */
     @SerializedName("ServiceGroupId")
     @Expose
     private String ServiceGroupId;
 
     /**
-    * 服务组名
+    * <p>服务组名</p>
     */
     @SerializedName("ServiceGroupName")
     @Expose
     private String ServiceGroupName;
 
     /**
-    * 创建者
+    * <p>创建者</p>
     */
     @SerializedName("CreatedBy")
     @Expose
     private String CreatedBy;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 主账号
+    * <p>主账号</p>
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * 服务组下服务总数
+    * <p>服务组下服务总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceCount")
@@ -74,7 +74,7 @@ public class ServiceGroup extends AbstractModel {
     private Long ServiceCount;
 
     /**
-    * 服务组下在运行的服务数量
+    * <p>服务组下在运行的服务数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunningServiceCount")
@@ -82,7 +82,7 @@ public class ServiceGroup extends AbstractModel {
     private Long RunningServiceCount;
 
     /**
-    * 服务描述
+    * <p>服务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Services")
@@ -90,15 +90,7 @@ public class ServiceGroup extends AbstractModel {
     private Service [] Services;
 
     /**
-    * 服务组状态，与服务一致
- CREATING 创建中
-     CREATE_FAILED 创建失败
-     Normal	正常运行中
-     Stopped  已停止
-     Stopping 停止中
-     Abnormal 异常
-     Pending 启动中
-     Waiting 就绪中
+    * <p>服务组状态，与服务一致<br> CREATING 创建中<br>     CREATE_FAILED 创建失败<br>     Normal    正常运行中<br>     Stopped  已停止<br>     Stopping 停止中<br>     Abnormal 异常<br>     Pending 启动中<br>     Waiting 就绪中</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -106,7 +98,7 @@ public class ServiceGroup extends AbstractModel {
     private String Status;
 
     /**
-    * 服务组标签
+    * <p>服务组标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
@@ -114,7 +106,7 @@ public class ServiceGroup extends AbstractModel {
     private Tag [] Tags;
 
     /**
-    * 服务组下最高版本
+    * <p>服务组下最高版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LatestVersion")
@@ -122,13 +114,7 @@ public class ServiceGroup extends AbstractModel {
     private String LatestVersion;
 
     /**
-    * 服务的业务状态
-CREATING 创建中
-     CREATE_FAILED 创建失败
-     ARREARS_STOP 因欠费被强制停止
-     BILLING 计费中
-     WHITELIST_USING 白名单试用中
-     WHITELIST_STOP 白名单额度不足
+    * <p>服务的业务状态<br>CREATING 创建中<br>     CREATE_FAILED 创建失败<br>     ARREARS_STOP 因欠费被强制停止<br>     BILLING 计费中<br>     WHITELIST_USING 白名单试用中<br>     WHITELIST_STOP 白名单额度不足</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BusinessStatus")
@@ -136,7 +122,7 @@ CREATING 创建中
     private String BusinessStatus;
 
     /**
-    * 服务的计费信息
+    * <p>服务的计费信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BillingInfo")
@@ -144,7 +130,7 @@ CREATING 创建中
     private String BillingInfo;
 
     /**
-    * 服务的创建来源
+    * <p>服务的创建来源</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateSource")
@@ -152,10 +138,7 @@ CREATING 创建中
     private String CreateSource;
 
     /**
-    * 服务组的权重更新状态 
-UPDATING 更新中
-     UPDATED 更新成功
-     UPDATE_FAILED 更新失败
+    * <p>服务组的权重更新状态<br>UPDATING 更新中<br>     UPDATED 更新成功<br>     UPDATE_FAILED 更新失败</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WeightUpdateStatus")
@@ -163,7 +146,7 @@ UPDATING 更新中
     private String WeightUpdateStatus;
 
     /**
-    * 服务组下运行的pod数量
+    * <p>服务组下运行的pod数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReplicasCount")
@@ -171,7 +154,7 @@ UPDATING 更新中
     private Long ReplicasCount;
 
     /**
-    * 服务组下期望的pod数
+    * <p>服务组下期望的pod数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AvailableReplicasCount")
@@ -179,161 +162,161 @@ UPDATING 更新中
     private Long AvailableReplicasCount;
 
     /**
-    * 服务组的subuin
+    * <p>服务组的subuin</p>
     */
     @SerializedName("SubUin")
     @Expose
     private String SubUin;
 
     /**
-    * 服务组的app_id
+    * <p>服务组的app_id</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * 是否开启鉴权
+    * <p>是否开启鉴权</p>
     */
     @SerializedName("AuthorizationEnable")
     @Expose
     private Boolean AuthorizationEnable;
 
     /**
-    * 限流鉴权 token 列表
+    * <p>限流鉴权 token 列表</p>
     */
     @SerializedName("AuthTokens")
     @Expose
     private AuthToken [] AuthTokens;
 
     /**
-    * 用于监控的创建来源字段
+    * <p>用于监控的创建来源字段</p>
     */
     @SerializedName("MonitorSource")
     @Expose
     private String MonitorSource;
 
     /**
-    * 子用户的 nickname
+    * <p>子用户的 nickname</p>
     */
     @SerializedName("SubUinName")
     @Expose
     private String SubUinName;
 
     /**
-    * 网关日志投递相关配置
+    * <p>网关日志投递相关配置</p>
     */
     @SerializedName("GatewayLogConfig")
     @Expose
     private LogConfig GatewayLogConfig;
 
     /**
-    * 网关路由相关配置
+    * <p>网关路由相关配置</p>
     */
     @SerializedName("GatewayConfig")
     @Expose
     private GatewayConfig GatewayConfig;
 
     /**
-     * Get 服务组id 
-     * @return ServiceGroupId 服务组id
+     * Get <p>服务组id</p> 
+     * @return ServiceGroupId <p>服务组id</p>
      */
     public String getServiceGroupId() {
         return this.ServiceGroupId;
     }
 
     /**
-     * Set 服务组id
-     * @param ServiceGroupId 服务组id
+     * Set <p>服务组id</p>
+     * @param ServiceGroupId <p>服务组id</p>
      */
     public void setServiceGroupId(String ServiceGroupId) {
         this.ServiceGroupId = ServiceGroupId;
     }
 
     /**
-     * Get 服务组名 
-     * @return ServiceGroupName 服务组名
+     * Get <p>服务组名</p> 
+     * @return ServiceGroupName <p>服务组名</p>
      */
     public String getServiceGroupName() {
         return this.ServiceGroupName;
     }
 
     /**
-     * Set 服务组名
-     * @param ServiceGroupName 服务组名
+     * Set <p>服务组名</p>
+     * @param ServiceGroupName <p>服务组名</p>
      */
     public void setServiceGroupName(String ServiceGroupName) {
         this.ServiceGroupName = ServiceGroupName;
     }
 
     /**
-     * Get 创建者 
-     * @return CreatedBy 创建者
+     * Get <p>创建者</p> 
+     * @return CreatedBy <p>创建者</p>
      */
     public String getCreatedBy() {
         return this.CreatedBy;
     }
 
     /**
-     * Set 创建者
-     * @param CreatedBy 创建者
+     * Set <p>创建者</p>
+     * @param CreatedBy <p>创建者</p>
      */
     public void setCreatedBy(String CreatedBy) {
         this.CreatedBy = CreatedBy;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 更新时间 
-     * @return UpdateTime 更新时间
+     * Get <p>更新时间</p> 
+     * @return UpdateTime <p>更新时间</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 更新时间
-     * @param UpdateTime 更新时间
+     * Set <p>更新时间</p>
+     * @param UpdateTime <p>更新时间</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 主账号 
-     * @return Uin 主账号
+     * Get <p>主账号</p> 
+     * @return Uin <p>主账号</p>
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set 主账号
-     * @param Uin 主账号
+     * Set <p>主账号</p>
+     * @param Uin <p>主账号</p>
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 服务组下服务总数
+     * Get <p>服务组下服务总数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ServiceCount 服务组下服务总数
+     * @return ServiceCount <p>服务组下服务总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getServiceCount() {
@@ -341,9 +324,9 @@ UPDATING 更新中
     }
 
     /**
-     * Set 服务组下服务总数
+     * Set <p>服务组下服务总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ServiceCount 服务组下服务总数
+     * @param ServiceCount <p>服务组下服务总数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceCount(Long ServiceCount) {
@@ -351,9 +334,9 @@ UPDATING 更新中
     }
 
     /**
-     * Get 服务组下在运行的服务数量
+     * Get <p>服务组下在运行的服务数量</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RunningServiceCount 服务组下在运行的服务数量
+     * @return RunningServiceCount <p>服务组下在运行的服务数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRunningServiceCount() {
@@ -361,9 +344,9 @@ UPDATING 更新中
     }
 
     /**
-     * Set 服务组下在运行的服务数量
+     * Set <p>服务组下在运行的服务数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RunningServiceCount 服务组下在运行的服务数量
+     * @param RunningServiceCount <p>服务组下在运行的服务数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunningServiceCount(Long RunningServiceCount) {
@@ -371,9 +354,9 @@ UPDATING 更新中
     }
 
     /**
-     * Get 服务描述
+     * Get <p>服务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Services 服务描述
+     * @return Services <p>服务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Service [] getServices() {
@@ -381,9 +364,9 @@ UPDATING 更新中
     }
 
     /**
-     * Set 服务描述
+     * Set <p>服务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Services 服务描述
+     * @param Services <p>服务描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServices(Service [] Services) {
@@ -391,25 +374,9 @@ UPDATING 更新中
     }
 
     /**
-     * Get 服务组状态，与服务一致
- CREATING 创建中
-     CREATE_FAILED 创建失败
-     Normal	正常运行中
-     Stopped  已停止
-     Stopping 停止中
-     Abnormal 异常
-     Pending 启动中
-     Waiting 就绪中
+     * Get <p>服务组状态，与服务一致<br> CREATING 创建中<br>     CREATE_FAILED 创建失败<br>     Normal    正常运行中<br>     Stopped  已停止<br>     Stopping 停止中<br>     Abnormal 异常<br>     Pending 启动中<br>     Waiting 就绪中</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 服务组状态，与服务一致
- CREATING 创建中
-     CREATE_FAILED 创建失败
-     Normal	正常运行中
-     Stopped  已停止
-     Stopping 停止中
-     Abnormal 异常
-     Pending 启动中
-     Waiting 就绪中
+     * @return Status <p>服务组状态，与服务一致<br> CREATING 创建中<br>     CREATE_FAILED 创建失败<br>     Normal    正常运行中<br>     Stopped  已停止<br>     Stopping 停止中<br>     Abnormal 异常<br>     Pending 启动中<br>     Waiting 就绪中</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
@@ -417,25 +384,9 @@ UPDATING 更新中
     }
 
     /**
-     * Set 服务组状态，与服务一致
- CREATING 创建中
-     CREATE_FAILED 创建失败
-     Normal	正常运行中
-     Stopped  已停止
-     Stopping 停止中
-     Abnormal 异常
-     Pending 启动中
-     Waiting 就绪中
+     * Set <p>服务组状态，与服务一致<br> CREATING 创建中<br>     CREATE_FAILED 创建失败<br>     Normal    正常运行中<br>     Stopped  已停止<br>     Stopping 停止中<br>     Abnormal 异常<br>     Pending 启动中<br>     Waiting 就绪中</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 服务组状态，与服务一致
- CREATING 创建中
-     CREATE_FAILED 创建失败
-     Normal	正常运行中
-     Stopped  已停止
-     Stopping 停止中
-     Abnormal 异常
-     Pending 启动中
-     Waiting 就绪中
+     * @param Status <p>服务组状态，与服务一致<br> CREATING 创建中<br>     CREATE_FAILED 创建失败<br>     Normal    正常运行中<br>     Stopped  已停止<br>     Stopping 停止中<br>     Abnormal 异常<br>     Pending 启动中<br>     Waiting 就绪中</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
@@ -443,9 +394,9 @@ UPDATING 更新中
     }
 
     /**
-     * Get 服务组标签
+     * Get <p>服务组标签</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tags 服务组标签
+     * @return Tags <p>服务组标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
@@ -453,9 +404,9 @@ UPDATING 更新中
     }
 
     /**
-     * Set 服务组标签
+     * Set <p>服务组标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tags 服务组标签
+     * @param Tags <p>服务组标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {
@@ -463,9 +414,9 @@ UPDATING 更新中
     }
 
     /**
-     * Get 服务组下最高版本
+     * Get <p>服务组下最高版本</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LatestVersion 服务组下最高版本
+     * @return LatestVersion <p>服务组下最高版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLatestVersion() {
@@ -473,9 +424,9 @@ UPDATING 更新中
     }
 
     /**
-     * Set 服务组下最高版本
+     * Set <p>服务组下最高版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LatestVersion 服务组下最高版本
+     * @param LatestVersion <p>服务组下最高版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLatestVersion(String LatestVersion) {
@@ -483,21 +434,9 @@ UPDATING 更新中
     }
 
     /**
-     * Get 服务的业务状态
-CREATING 创建中
-     CREATE_FAILED 创建失败
-     ARREARS_STOP 因欠费被强制停止
-     BILLING 计费中
-     WHITELIST_USING 白名单试用中
-     WHITELIST_STOP 白名单额度不足
+     * Get <p>服务的业务状态<br>CREATING 创建中<br>     CREATE_FAILED 创建失败<br>     ARREARS_STOP 因欠费被强制停止<br>     BILLING 计费中<br>     WHITELIST_USING 白名单试用中<br>     WHITELIST_STOP 白名单额度不足</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BusinessStatus 服务的业务状态
-CREATING 创建中
-     CREATE_FAILED 创建失败
-     ARREARS_STOP 因欠费被强制停止
-     BILLING 计费中
-     WHITELIST_USING 白名单试用中
-     WHITELIST_STOP 白名单额度不足
+     * @return BusinessStatus <p>服务的业务状态<br>CREATING 创建中<br>     CREATE_FAILED 创建失败<br>     ARREARS_STOP 因欠费被强制停止<br>     BILLING 计费中<br>     WHITELIST_USING 白名单试用中<br>     WHITELIST_STOP 白名单额度不足</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBusinessStatus() {
@@ -505,21 +444,9 @@ CREATING 创建中
     }
 
     /**
-     * Set 服务的业务状态
-CREATING 创建中
-     CREATE_FAILED 创建失败
-     ARREARS_STOP 因欠费被强制停止
-     BILLING 计费中
-     WHITELIST_USING 白名单试用中
-     WHITELIST_STOP 白名单额度不足
+     * Set <p>服务的业务状态<br>CREATING 创建中<br>     CREATE_FAILED 创建失败<br>     ARREARS_STOP 因欠费被强制停止<br>     BILLING 计费中<br>     WHITELIST_USING 白名单试用中<br>     WHITELIST_STOP 白名单额度不足</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BusinessStatus 服务的业务状态
-CREATING 创建中
-     CREATE_FAILED 创建失败
-     ARREARS_STOP 因欠费被强制停止
-     BILLING 计费中
-     WHITELIST_USING 白名单试用中
-     WHITELIST_STOP 白名单额度不足
+     * @param BusinessStatus <p>服务的业务状态<br>CREATING 创建中<br>     CREATE_FAILED 创建失败<br>     ARREARS_STOP 因欠费被强制停止<br>     BILLING 计费中<br>     WHITELIST_USING 白名单试用中<br>     WHITELIST_STOP 白名单额度不足</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBusinessStatus(String BusinessStatus) {
@@ -527,9 +454,9 @@ CREATING 创建中
     }
 
     /**
-     * Get 服务的计费信息
+     * Get <p>服务的计费信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BillingInfo 服务的计费信息
+     * @return BillingInfo <p>服务的计费信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBillingInfo() {
@@ -537,9 +464,9 @@ CREATING 创建中
     }
 
     /**
-     * Set 服务的计费信息
+     * Set <p>服务的计费信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BillingInfo 服务的计费信息
+     * @param BillingInfo <p>服务的计费信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBillingInfo(String BillingInfo) {
@@ -547,9 +474,9 @@ CREATING 创建中
     }
 
     /**
-     * Get 服务的创建来源
+     * Get <p>服务的创建来源</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateSource 服务的创建来源
+     * @return CreateSource <p>服务的创建来源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateSource() {
@@ -557,9 +484,9 @@ CREATING 创建中
     }
 
     /**
-     * Set 服务的创建来源
+     * Set <p>服务的创建来源</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateSource 服务的创建来源
+     * @param CreateSource <p>服务的创建来源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateSource(String CreateSource) {
@@ -567,15 +494,9 @@ CREATING 创建中
     }
 
     /**
-     * Get 服务组的权重更新状态 
-UPDATING 更新中
-     UPDATED 更新成功
-     UPDATE_FAILED 更新失败
+     * Get <p>服务组的权重更新状态<br>UPDATING 更新中<br>     UPDATED 更新成功<br>     UPDATE_FAILED 更新失败</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WeightUpdateStatus 服务组的权重更新状态 
-UPDATING 更新中
-     UPDATED 更新成功
-     UPDATE_FAILED 更新失败
+     * @return WeightUpdateStatus <p>服务组的权重更新状态<br>UPDATING 更新中<br>     UPDATED 更新成功<br>     UPDATE_FAILED 更新失败</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWeightUpdateStatus() {
@@ -583,15 +504,9 @@ UPDATING 更新中
     }
 
     /**
-     * Set 服务组的权重更新状态 
-UPDATING 更新中
-     UPDATED 更新成功
-     UPDATE_FAILED 更新失败
+     * Set <p>服务组的权重更新状态<br>UPDATING 更新中<br>     UPDATED 更新成功<br>     UPDATE_FAILED 更新失败</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WeightUpdateStatus 服务组的权重更新状态 
-UPDATING 更新中
-     UPDATED 更新成功
-     UPDATE_FAILED 更新失败
+     * @param WeightUpdateStatus <p>服务组的权重更新状态<br>UPDATING 更新中<br>     UPDATED 更新成功<br>     UPDATE_FAILED 更新失败</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWeightUpdateStatus(String WeightUpdateStatus) {
@@ -599,9 +514,9 @@ UPDATING 更新中
     }
 
     /**
-     * Get 服务组下运行的pod数量
+     * Get <p>服务组下运行的pod数量</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReplicasCount 服务组下运行的pod数量
+     * @return ReplicasCount <p>服务组下运行的pod数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReplicasCount() {
@@ -609,9 +524,9 @@ UPDATING 更新中
     }
 
     /**
-     * Set 服务组下运行的pod数量
+     * Set <p>服务组下运行的pod数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReplicasCount 服务组下运行的pod数量
+     * @param ReplicasCount <p>服务组下运行的pod数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReplicasCount(Long ReplicasCount) {
@@ -619,9 +534,9 @@ UPDATING 更新中
     }
 
     /**
-     * Get 服务组下期望的pod数
+     * Get <p>服务组下期望的pod数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AvailableReplicasCount 服务组下期望的pod数
+     * @return AvailableReplicasCount <p>服务组下期望的pod数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAvailableReplicasCount() {
@@ -629,9 +544,9 @@ UPDATING 更新中
     }
 
     /**
-     * Set 服务组下期望的pod数
+     * Set <p>服务组下期望的pod数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AvailableReplicasCount 服务组下期望的pod数
+     * @param AvailableReplicasCount <p>服务组下期望的pod数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAvailableReplicasCount(Long AvailableReplicasCount) {
@@ -639,128 +554,128 @@ UPDATING 更新中
     }
 
     /**
-     * Get 服务组的subuin 
-     * @return SubUin 服务组的subuin
+     * Get <p>服务组的subuin</p> 
+     * @return SubUin <p>服务组的subuin</p>
      */
     public String getSubUin() {
         return this.SubUin;
     }
 
     /**
-     * Set 服务组的subuin
-     * @param SubUin 服务组的subuin
+     * Set <p>服务组的subuin</p>
+     * @param SubUin <p>服务组的subuin</p>
      */
     public void setSubUin(String SubUin) {
         this.SubUin = SubUin;
     }
 
     /**
-     * Get 服务组的app_id 
-     * @return AppId 服务组的app_id
+     * Get <p>服务组的app_id</p> 
+     * @return AppId <p>服务组的app_id</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 服务组的app_id
-     * @param AppId 服务组的app_id
+     * Set <p>服务组的app_id</p>
+     * @param AppId <p>服务组的app_id</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 是否开启鉴权 
-     * @return AuthorizationEnable 是否开启鉴权
+     * Get <p>是否开启鉴权</p> 
+     * @return AuthorizationEnable <p>是否开启鉴权</p>
      */
     public Boolean getAuthorizationEnable() {
         return this.AuthorizationEnable;
     }
 
     /**
-     * Set 是否开启鉴权
-     * @param AuthorizationEnable 是否开启鉴权
+     * Set <p>是否开启鉴权</p>
+     * @param AuthorizationEnable <p>是否开启鉴权</p>
      */
     public void setAuthorizationEnable(Boolean AuthorizationEnable) {
         this.AuthorizationEnable = AuthorizationEnable;
     }
 
     /**
-     * Get 限流鉴权 token 列表 
-     * @return AuthTokens 限流鉴权 token 列表
+     * Get <p>限流鉴权 token 列表</p> 
+     * @return AuthTokens <p>限流鉴权 token 列表</p>
      */
     public AuthToken [] getAuthTokens() {
         return this.AuthTokens;
     }
 
     /**
-     * Set 限流鉴权 token 列表
-     * @param AuthTokens 限流鉴权 token 列表
+     * Set <p>限流鉴权 token 列表</p>
+     * @param AuthTokens <p>限流鉴权 token 列表</p>
      */
     public void setAuthTokens(AuthToken [] AuthTokens) {
         this.AuthTokens = AuthTokens;
     }
 
     /**
-     * Get 用于监控的创建来源字段 
-     * @return MonitorSource 用于监控的创建来源字段
+     * Get <p>用于监控的创建来源字段</p> 
+     * @return MonitorSource <p>用于监控的创建来源字段</p>
      */
     public String getMonitorSource() {
         return this.MonitorSource;
     }
 
     /**
-     * Set 用于监控的创建来源字段
-     * @param MonitorSource 用于监控的创建来源字段
+     * Set <p>用于监控的创建来源字段</p>
+     * @param MonitorSource <p>用于监控的创建来源字段</p>
      */
     public void setMonitorSource(String MonitorSource) {
         this.MonitorSource = MonitorSource;
     }
 
     /**
-     * Get 子用户的 nickname 
-     * @return SubUinName 子用户的 nickname
+     * Get <p>子用户的 nickname</p> 
+     * @return SubUinName <p>子用户的 nickname</p>
      */
     public String getSubUinName() {
         return this.SubUinName;
     }
 
     /**
-     * Set 子用户的 nickname
-     * @param SubUinName 子用户的 nickname
+     * Set <p>子用户的 nickname</p>
+     * @param SubUinName <p>子用户的 nickname</p>
      */
     public void setSubUinName(String SubUinName) {
         this.SubUinName = SubUinName;
     }
 
     /**
-     * Get 网关日志投递相关配置 
-     * @return GatewayLogConfig 网关日志投递相关配置
+     * Get <p>网关日志投递相关配置</p> 
+     * @return GatewayLogConfig <p>网关日志投递相关配置</p>
      */
     public LogConfig getGatewayLogConfig() {
         return this.GatewayLogConfig;
     }
 
     /**
-     * Set 网关日志投递相关配置
-     * @param GatewayLogConfig 网关日志投递相关配置
+     * Set <p>网关日志投递相关配置</p>
+     * @param GatewayLogConfig <p>网关日志投递相关配置</p>
      */
     public void setGatewayLogConfig(LogConfig GatewayLogConfig) {
         this.GatewayLogConfig = GatewayLogConfig;
     }
 
     /**
-     * Get 网关路由相关配置 
-     * @return GatewayConfig 网关路由相关配置
+     * Get <p>网关路由相关配置</p> 
+     * @return GatewayConfig <p>网关路由相关配置</p>
      */
     public GatewayConfig getGatewayConfig() {
         return this.GatewayConfig;
     }
 
     /**
-     * Set 网关路由相关配置
-     * @param GatewayConfig 网关路由相关配置
+     * Set <p>网关路由相关配置</p>
+     * @param GatewayConfig <p>网关路由相关配置</p>
      */
     public void setGatewayConfig(GatewayConfig GatewayConfig) {
         this.GatewayConfig = GatewayConfig;

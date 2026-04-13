@@ -24,14 +24,7 @@ import java.util.HashMap;
 public class ServiceInfo extends AbstractModel {
 
     /**
-    * 期望运行的Pod数量，停止状态是0
-不同计费模式和调节模式下对应关系如下
-PREPAID 和 POSTPAID_BY_HOUR:
-手动调节模式下对应 实例数量
-自动调节模式下对应 基于时间的默认策略的实例数量
-HYBRID_PAID:
-后付费实例手动调节模式下对应 实例数量
-后付费实例自动调节模式下对应 时间策略的默认策略的实例数量
+    * <p>期望运行的Pod数量，停止状态是0<br>不同计费模式和调节模式下对应关系如下<br>PREPAID 和 POSTPAID_BY_HOUR:<br>手动调节模式下对应 实例数量<br>自动调节模式下对应 基于时间的默认策略的实例数量<br>HYBRID_PAID:<br>后付费实例手动调节模式下对应 实例数量<br>后付费实例自动调节模式下对应 时间策略的默认策略的实例数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Replicas")
@@ -39,7 +32,7 @@ HYBRID_PAID:
     private Long Replicas;
 
     /**
-    * 镜像信息
+    * <p>镜像信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageInfo")
@@ -47,7 +40,7 @@ HYBRID_PAID:
     private ImageInfo ImageInfo;
 
     /**
-    * 环境变量
+    * <p>环境变量</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Env")
@@ -55,7 +48,7 @@ HYBRID_PAID:
     private EnvVar [] Env;
 
     /**
-    * 资源信息
+    * <p>资源信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Resources")
@@ -63,49 +56,49 @@ HYBRID_PAID:
     private ResourceInfo Resources;
 
     /**
-    * 后付费实例对应的机型规格
+    * <p>后付费实例对应的机型规格</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * 模型信息
+    * <p>模型信息</p>
     */
     @SerializedName("ModelInfo")
     @Expose
     private ModelInfo ModelInfo;
 
     /**
-    * 是否启用日志
+    * <p>是否启用日志</p>
     */
     @SerializedName("LogEnable")
     @Expose
     private Boolean LogEnable;
 
     /**
-    * 日志配置
+    * <p>日志配置</p>
     */
     @SerializedName("LogConfig")
     @Expose
     private LogConfig LogConfig;
 
     /**
-    * 是否开启鉴权
+    * <p>是否开启鉴权</p>
     */
     @SerializedName("AuthorizationEnable")
     @Expose
     private Boolean AuthorizationEnable;
 
     /**
-    * hpa配置
+    * <p>hpa配置</p>
     */
     @SerializedName("HorizontalPodAutoscaler")
     @Expose
     private HorizontalPodAutoscaler HorizontalPodAutoscaler;
 
     /**
-    * 服务的状态描述
+    * <p>服务的状态描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -113,7 +106,7 @@ HYBRID_PAID:
     private WorkloadStatus Status;
 
     /**
-    * 权重
+    * <p>权重</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Weight")
@@ -121,7 +114,7 @@ HYBRID_PAID:
     private Long Weight;
 
     /**
-    * 资源总量
+    * <p>资源总量</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceTotal")
@@ -129,7 +122,7 @@ HYBRID_PAID:
     private ResourceInfo ResourceTotal;
 
     /**
-    * 历史实例数
+    * <p>历史实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OldReplicas")
@@ -137,7 +130,7 @@ HYBRID_PAID:
     private Long OldReplicas;
 
     /**
-    * 计费模式[HYBRID_PAID]时生效, 用于标识混合计费模式下的预付费实例数, 若不填则默认为1
+    * <p>计费模式[HYBRID_PAID]时生效, 用于标识混合计费模式下的预付费实例数, 若不填则默认为1</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HybridBillingPrepaidReplicas")
@@ -145,7 +138,7 @@ HYBRID_PAID:
     private Long HybridBillingPrepaidReplicas;
 
     /**
-    * 历史 HYBRID_PAID 时的实例数，用户恢复服务
+    * <p>历史 HYBRID_PAID 时的实例数，用户恢复服务</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OldHybridBillingPrepaidReplicas")
@@ -153,7 +146,7 @@ HYBRID_PAID:
     private Long OldHybridBillingPrepaidReplicas;
 
     /**
-    * 是否开启模型的热更新。默认不开启
+    * <p>是否开启模型的热更新。默认不开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModelHotUpdateEnable")
@@ -161,15 +154,14 @@ HYBRID_PAID:
     private Boolean ModelHotUpdateEnable;
 
     /**
-    * 服务的规格别名
+    * <p>服务的规格别名</p>
     */
     @SerializedName("InstanceAlias")
     @Expose
     private String InstanceAlias;
 
     /**
-    * 实例数量调节方式,默认为手动
-支持：自动 - "AUTO", 手动 - "MANUAL"
+    * <p>实例数量调节方式,默认为手动<br>支持：自动 - &quot;AUTO&quot;, 手动 - &quot;MANUAL&quot;</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScaleMode")
@@ -177,7 +169,7 @@ HYBRID_PAID:
     private String ScaleMode;
 
     /**
-    * 定时伸缩任务
+    * <p>定时伸缩任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CronScaleJobs")
@@ -185,7 +177,7 @@ HYBRID_PAID:
     private CronScaleJob [] CronScaleJobs;
 
     /**
-    * 定时伸缩策略
+    * <p>定时伸缩策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScaleStrategy")
@@ -193,7 +185,7 @@ HYBRID_PAID:
     private String ScaleStrategy;
 
     /**
-    * 定时停止的配置
+    * <p>定时停止的配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScheduledAction")
@@ -201,7 +193,7 @@ HYBRID_PAID:
     private ScheduledAction ScheduledAction;
 
     /**
-    * 实例列表
+    * <p>实例列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PodList")
@@ -209,7 +201,7 @@ HYBRID_PAID:
     private String [] PodList;
 
     /**
-    * Pod列表信息
+    * <p>Pod列表信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Pods")
@@ -217,7 +209,7 @@ HYBRID_PAID:
     private Pod Pods;
 
     /**
-    * Pod列表信息
+    * <p>Pod列表信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PodInfos")
@@ -225,7 +217,7 @@ HYBRID_PAID:
     private Pod [] PodInfos;
 
     /**
-    * 服务限速限流相关配置
+    * <p>服务限速限流相关配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceLimit")
@@ -233,7 +225,7 @@ HYBRID_PAID:
     private ServiceLimit ServiceLimit;
 
     /**
-    * 是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。
+    * <p>是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModelTurboEnable")
@@ -241,7 +233,7 @@ HYBRID_PAID:
     private Boolean ModelTurboEnable;
 
     /**
-    * 挂载
+    * <p>挂载</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VolumeMount")
@@ -249,7 +241,7 @@ HYBRID_PAID:
     private VolumeMount VolumeMount;
 
     /**
-    * 推理代码信息
+    * <p>推理代码信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InferCodeInfo")
@@ -257,7 +249,7 @@ HYBRID_PAID:
     private InferCodeInfo InferCodeInfo;
 
     /**
-    * 服务的启动命令
+    * <p>服务的启动命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Command")
@@ -265,7 +257,7 @@ HYBRID_PAID:
     private String Command;
 
     /**
-    * 开启TIONE内网访问外部设置
+    * <p>开启TIONE内网访问外部设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceEIP")
@@ -273,7 +265,7 @@ HYBRID_PAID:
     private ServiceEIP ServiceEIP;
 
     /**
-    * 服务端口，默认为8501
+    * <p>服务端口，默认为8501</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServicePort")
@@ -281,86 +273,72 @@ HYBRID_PAID:
     private Long ServicePort;
 
     /**
-    * 服务的优雅退出时限。单位为秒，默认值为30，最小为1
+    * <p>服务的优雅退出时限。单位为秒，默认值为30，最小为1</p>
     */
     @SerializedName("TerminationGracePeriodSeconds")
     @Expose
     private Long TerminationGracePeriodSeconds;
 
     /**
-    * 服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束
+    * <p>服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束</p>
     */
     @SerializedName("PreStopCommand")
     @Expose
     private String [] PreStopCommand;
 
     /**
-    * 是否启用grpc端口
+    * <p>是否启用grpc端口</p>
     */
     @SerializedName("GrpcEnable")
     @Expose
     private Boolean GrpcEnable;
 
     /**
-    * 健康探针
+    * <p>健康探针</p>
     */
     @SerializedName("HealthProbe")
     @Expose
     private HealthProbe HealthProbe;
 
     /**
-    * 滚动更新配置
+    * <p>滚动更新配置</p>
     */
     @SerializedName("RollingUpdate")
     @Expose
     private RollingUpdate RollingUpdate;
 
     /**
-    * 单副本下的实例数，仅在部署类型为DIST、ROLE时生效，默认1
+    * <p>单副本下的实例数，仅在部署类型为DIST、ROLE时生效，默认1</p>
     */
     @SerializedName("InstancePerReplicas")
     @Expose
     private Long InstancePerReplicas;
 
     /**
-    * 批量数据盘挂载配置
+    * <p>批量数据盘挂载配置</p>
     */
     @SerializedName("VolumeMounts")
     @Expose
     private VolumeMount [] VolumeMounts;
 
     /**
-    * 调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用
+    * <p>调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用</p>
     */
     @SerializedName("SchedulingStrategy")
     @Expose
     private String SchedulingStrategy;
 
     /**
-    * 服务实际运行的节点数
+    * <p>服务实际运行的节点数</p>
     */
     @SerializedName("NodeCount")
     @Expose
     private Long NodeCount;
 
     /**
-     * Get 期望运行的Pod数量，停止状态是0
-不同计费模式和调节模式下对应关系如下
-PREPAID 和 POSTPAID_BY_HOUR:
-手动调节模式下对应 实例数量
-自动调节模式下对应 基于时间的默认策略的实例数量
-HYBRID_PAID:
-后付费实例手动调节模式下对应 实例数量
-后付费实例自动调节模式下对应 时间策略的默认策略的实例数量
+     * Get <p>期望运行的Pod数量，停止状态是0<br>不同计费模式和调节模式下对应关系如下<br>PREPAID 和 POSTPAID_BY_HOUR:<br>手动调节模式下对应 实例数量<br>自动调节模式下对应 基于时间的默认策略的实例数量<br>HYBRID_PAID:<br>后付费实例手动调节模式下对应 实例数量<br>后付费实例自动调节模式下对应 时间策略的默认策略的实例数量</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Replicas 期望运行的Pod数量，停止状态是0
-不同计费模式和调节模式下对应关系如下
-PREPAID 和 POSTPAID_BY_HOUR:
-手动调节模式下对应 实例数量
-自动调节模式下对应 基于时间的默认策略的实例数量
-HYBRID_PAID:
-后付费实例手动调节模式下对应 实例数量
-后付费实例自动调节模式下对应 时间策略的默认策略的实例数量
+     * @return Replicas <p>期望运行的Pod数量，停止状态是0<br>不同计费模式和调节模式下对应关系如下<br>PREPAID 和 POSTPAID_BY_HOUR:<br>手动调节模式下对应 实例数量<br>自动调节模式下对应 基于时间的默认策略的实例数量<br>HYBRID_PAID:<br>后付费实例手动调节模式下对应 实例数量<br>后付费实例自动调节模式下对应 时间策略的默认策略的实例数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReplicas() {
@@ -368,23 +346,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Set 期望运行的Pod数量，停止状态是0
-不同计费模式和调节模式下对应关系如下
-PREPAID 和 POSTPAID_BY_HOUR:
-手动调节模式下对应 实例数量
-自动调节模式下对应 基于时间的默认策略的实例数量
-HYBRID_PAID:
-后付费实例手动调节模式下对应 实例数量
-后付费实例自动调节模式下对应 时间策略的默认策略的实例数量
+     * Set <p>期望运行的Pod数量，停止状态是0<br>不同计费模式和调节模式下对应关系如下<br>PREPAID 和 POSTPAID_BY_HOUR:<br>手动调节模式下对应 实例数量<br>自动调节模式下对应 基于时间的默认策略的实例数量<br>HYBRID_PAID:<br>后付费实例手动调节模式下对应 实例数量<br>后付费实例自动调节模式下对应 时间策略的默认策略的实例数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Replicas 期望运行的Pod数量，停止状态是0
-不同计费模式和调节模式下对应关系如下
-PREPAID 和 POSTPAID_BY_HOUR:
-手动调节模式下对应 实例数量
-自动调节模式下对应 基于时间的默认策略的实例数量
-HYBRID_PAID:
-后付费实例手动调节模式下对应 实例数量
-后付费实例自动调节模式下对应 时间策略的默认策略的实例数量
+     * @param Replicas <p>期望运行的Pod数量，停止状态是0<br>不同计费模式和调节模式下对应关系如下<br>PREPAID 和 POSTPAID_BY_HOUR:<br>手动调节模式下对应 实例数量<br>自动调节模式下对应 基于时间的默认策略的实例数量<br>HYBRID_PAID:<br>后付费实例手动调节模式下对应 实例数量<br>后付费实例自动调节模式下对应 时间策略的默认策略的实例数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReplicas(Long Replicas) {
@@ -392,9 +356,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Get 镜像信息
+     * Get <p>镜像信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ImageInfo 镜像信息
+     * @return ImageInfo <p>镜像信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ImageInfo getImageInfo() {
@@ -402,9 +366,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Set 镜像信息
+     * Set <p>镜像信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImageInfo 镜像信息
+     * @param ImageInfo <p>镜像信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageInfo(ImageInfo ImageInfo) {
@@ -412,9 +376,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Get 环境变量
+     * Get <p>环境变量</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Env 环境变量
+     * @return Env <p>环境变量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public EnvVar [] getEnv() {
@@ -422,9 +386,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Set 环境变量
+     * Set <p>环境变量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Env 环境变量
+     * @param Env <p>环境变量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnv(EnvVar [] Env) {
@@ -432,9 +396,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Get 资源信息
+     * Get <p>资源信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Resources 资源信息
+     * @return Resources <p>资源信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ResourceInfo getResources() {
@@ -442,9 +406,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Set 资源信息
+     * Set <p>资源信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Resources 资源信息
+     * @param Resources <p>资源信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResources(ResourceInfo Resources) {
@@ -452,105 +416,105 @@ HYBRID_PAID:
     }
 
     /**
-     * Get 后付费实例对应的机型规格 
-     * @return InstanceType 后付费实例对应的机型规格
+     * Get <p>后付费实例对应的机型规格</p> 
+     * @return InstanceType <p>后付费实例对应的机型规格</p>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 后付费实例对应的机型规格
-     * @param InstanceType 后付费实例对应的机型规格
+     * Set <p>后付费实例对应的机型规格</p>
+     * @param InstanceType <p>后付费实例对应的机型规格</p>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 模型信息 
-     * @return ModelInfo 模型信息
+     * Get <p>模型信息</p> 
+     * @return ModelInfo <p>模型信息</p>
      */
     public ModelInfo getModelInfo() {
         return this.ModelInfo;
     }
 
     /**
-     * Set 模型信息
-     * @param ModelInfo 模型信息
+     * Set <p>模型信息</p>
+     * @param ModelInfo <p>模型信息</p>
      */
     public void setModelInfo(ModelInfo ModelInfo) {
         this.ModelInfo = ModelInfo;
     }
 
     /**
-     * Get 是否启用日志 
-     * @return LogEnable 是否启用日志
+     * Get <p>是否启用日志</p> 
+     * @return LogEnable <p>是否启用日志</p>
      */
     public Boolean getLogEnable() {
         return this.LogEnable;
     }
 
     /**
-     * Set 是否启用日志
-     * @param LogEnable 是否启用日志
+     * Set <p>是否启用日志</p>
+     * @param LogEnable <p>是否启用日志</p>
      */
     public void setLogEnable(Boolean LogEnable) {
         this.LogEnable = LogEnable;
     }
 
     /**
-     * Get 日志配置 
-     * @return LogConfig 日志配置
+     * Get <p>日志配置</p> 
+     * @return LogConfig <p>日志配置</p>
      */
     public LogConfig getLogConfig() {
         return this.LogConfig;
     }
 
     /**
-     * Set 日志配置
-     * @param LogConfig 日志配置
+     * Set <p>日志配置</p>
+     * @param LogConfig <p>日志配置</p>
      */
     public void setLogConfig(LogConfig LogConfig) {
         this.LogConfig = LogConfig;
     }
 
     /**
-     * Get 是否开启鉴权 
-     * @return AuthorizationEnable 是否开启鉴权
+     * Get <p>是否开启鉴权</p> 
+     * @return AuthorizationEnable <p>是否开启鉴权</p>
      */
     public Boolean getAuthorizationEnable() {
         return this.AuthorizationEnable;
     }
 
     /**
-     * Set 是否开启鉴权
-     * @param AuthorizationEnable 是否开启鉴权
+     * Set <p>是否开启鉴权</p>
+     * @param AuthorizationEnable <p>是否开启鉴权</p>
      */
     public void setAuthorizationEnable(Boolean AuthorizationEnable) {
         this.AuthorizationEnable = AuthorizationEnable;
     }
 
     /**
-     * Get hpa配置 
-     * @return HorizontalPodAutoscaler hpa配置
+     * Get <p>hpa配置</p> 
+     * @return HorizontalPodAutoscaler <p>hpa配置</p>
      */
     public HorizontalPodAutoscaler getHorizontalPodAutoscaler() {
         return this.HorizontalPodAutoscaler;
     }
 
     /**
-     * Set hpa配置
-     * @param HorizontalPodAutoscaler hpa配置
+     * Set <p>hpa配置</p>
+     * @param HorizontalPodAutoscaler <p>hpa配置</p>
      */
     public void setHorizontalPodAutoscaler(HorizontalPodAutoscaler HorizontalPodAutoscaler) {
         this.HorizontalPodAutoscaler = HorizontalPodAutoscaler;
     }
 
     /**
-     * Get 服务的状态描述
+     * Get <p>服务的状态描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 服务的状态描述
+     * @return Status <p>服务的状态描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public WorkloadStatus getStatus() {
@@ -558,9 +522,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Set 服务的状态描述
+     * Set <p>服务的状态描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 服务的状态描述
+     * @param Status <p>服务的状态描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(WorkloadStatus Status) {
@@ -568,9 +532,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Get 权重
+     * Get <p>权重</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Weight 权重
+     * @return Weight <p>权重</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWeight() {
@@ -578,9 +542,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Set 权重
+     * Set <p>权重</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Weight 权重
+     * @param Weight <p>权重</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWeight(Long Weight) {
@@ -588,9 +552,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Get 资源总量
+     * Get <p>资源总量</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceTotal 资源总量
+     * @return ResourceTotal <p>资源总量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ResourceInfo getResourceTotal() {
@@ -598,9 +562,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Set 资源总量
+     * Set <p>资源总量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceTotal 资源总量
+     * @param ResourceTotal <p>资源总量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceTotal(ResourceInfo ResourceTotal) {
@@ -608,9 +572,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Get 历史实例数
+     * Get <p>历史实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OldReplicas 历史实例数
+     * @return OldReplicas <p>历史实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOldReplicas() {
@@ -618,9 +582,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Set 历史实例数
+     * Set <p>历史实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OldReplicas 历史实例数
+     * @param OldReplicas <p>历史实例数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOldReplicas(Long OldReplicas) {
@@ -628,9 +592,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Get 计费模式[HYBRID_PAID]时生效, 用于标识混合计费模式下的预付费实例数, 若不填则默认为1
+     * Get <p>计费模式[HYBRID_PAID]时生效, 用于标识混合计费模式下的预付费实例数, 若不填则默认为1</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HybridBillingPrepaidReplicas 计费模式[HYBRID_PAID]时生效, 用于标识混合计费模式下的预付费实例数, 若不填则默认为1
+     * @return HybridBillingPrepaidReplicas <p>计费模式[HYBRID_PAID]时生效, 用于标识混合计费模式下的预付费实例数, 若不填则默认为1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHybridBillingPrepaidReplicas() {
@@ -638,9 +602,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Set 计费模式[HYBRID_PAID]时生效, 用于标识混合计费模式下的预付费实例数, 若不填则默认为1
+     * Set <p>计费模式[HYBRID_PAID]时生效, 用于标识混合计费模式下的预付费实例数, 若不填则默认为1</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HybridBillingPrepaidReplicas 计费模式[HYBRID_PAID]时生效, 用于标识混合计费模式下的预付费实例数, 若不填则默认为1
+     * @param HybridBillingPrepaidReplicas <p>计费模式[HYBRID_PAID]时生效, 用于标识混合计费模式下的预付费实例数, 若不填则默认为1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHybridBillingPrepaidReplicas(Long HybridBillingPrepaidReplicas) {
@@ -648,9 +612,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Get 历史 HYBRID_PAID 时的实例数，用户恢复服务
+     * Get <p>历史 HYBRID_PAID 时的实例数，用户恢复服务</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OldHybridBillingPrepaidReplicas 历史 HYBRID_PAID 时的实例数，用户恢复服务
+     * @return OldHybridBillingPrepaidReplicas <p>历史 HYBRID_PAID 时的实例数，用户恢复服务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOldHybridBillingPrepaidReplicas() {
@@ -658,9 +622,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Set 历史 HYBRID_PAID 时的实例数，用户恢复服务
+     * Set <p>历史 HYBRID_PAID 时的实例数，用户恢复服务</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OldHybridBillingPrepaidReplicas 历史 HYBRID_PAID 时的实例数，用户恢复服务
+     * @param OldHybridBillingPrepaidReplicas <p>历史 HYBRID_PAID 时的实例数，用户恢复服务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOldHybridBillingPrepaidReplicas(Long OldHybridBillingPrepaidReplicas) {
@@ -668,9 +632,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Get 是否开启模型的热更新。默认不开启
+     * Get <p>是否开启模型的热更新。默认不开启</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ModelHotUpdateEnable 是否开启模型的热更新。默认不开启
+     * @return ModelHotUpdateEnable <p>是否开启模型的热更新。默认不开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getModelHotUpdateEnable() {
@@ -678,9 +642,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Set 是否开启模型的热更新。默认不开启
+     * Set <p>是否开启模型的热更新。默认不开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ModelHotUpdateEnable 是否开启模型的热更新。默认不开启
+     * @param ModelHotUpdateEnable <p>是否开启模型的热更新。默认不开启</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModelHotUpdateEnable(Boolean ModelHotUpdateEnable) {
@@ -688,27 +652,25 @@ HYBRID_PAID:
     }
 
     /**
-     * Get 服务的规格别名 
-     * @return InstanceAlias 服务的规格别名
+     * Get <p>服务的规格别名</p> 
+     * @return InstanceAlias <p>服务的规格别名</p>
      */
     public String getInstanceAlias() {
         return this.InstanceAlias;
     }
 
     /**
-     * Set 服务的规格别名
-     * @param InstanceAlias 服务的规格别名
+     * Set <p>服务的规格别名</p>
+     * @param InstanceAlias <p>服务的规格别名</p>
      */
     public void setInstanceAlias(String InstanceAlias) {
         this.InstanceAlias = InstanceAlias;
     }
 
     /**
-     * Get 实例数量调节方式,默认为手动
-支持：自动 - "AUTO", 手动 - "MANUAL"
+     * Get <p>实例数量调节方式,默认为手动<br>支持：自动 - &quot;AUTO&quot;, 手动 - &quot;MANUAL&quot;</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScaleMode 实例数量调节方式,默认为手动
-支持：自动 - "AUTO", 手动 - "MANUAL"
+     * @return ScaleMode <p>实例数量调节方式,默认为手动<br>支持：自动 - &quot;AUTO&quot;, 手动 - &quot;MANUAL&quot;</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScaleMode() {
@@ -716,11 +678,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Set 实例数量调节方式,默认为手动
-支持：自动 - "AUTO", 手动 - "MANUAL"
+     * Set <p>实例数量调节方式,默认为手动<br>支持：自动 - &quot;AUTO&quot;, 手动 - &quot;MANUAL&quot;</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScaleMode 实例数量调节方式,默认为手动
-支持：自动 - "AUTO", 手动 - "MANUAL"
+     * @param ScaleMode <p>实例数量调节方式,默认为手动<br>支持：自动 - &quot;AUTO&quot;, 手动 - &quot;MANUAL&quot;</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScaleMode(String ScaleMode) {
@@ -728,9 +688,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Get 定时伸缩任务
+     * Get <p>定时伸缩任务</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CronScaleJobs 定时伸缩任务
+     * @return CronScaleJobs <p>定时伸缩任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CronScaleJob [] getCronScaleJobs() {
@@ -738,9 +698,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Set 定时伸缩任务
+     * Set <p>定时伸缩任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CronScaleJobs 定时伸缩任务
+     * @param CronScaleJobs <p>定时伸缩任务</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCronScaleJobs(CronScaleJob [] CronScaleJobs) {
@@ -748,9 +708,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Get 定时伸缩策略
+     * Get <p>定时伸缩策略</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScaleStrategy 定时伸缩策略
+     * @return ScaleStrategy <p>定时伸缩策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScaleStrategy() {
@@ -758,9 +718,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Set 定时伸缩策略
+     * Set <p>定时伸缩策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScaleStrategy 定时伸缩策略
+     * @param ScaleStrategy <p>定时伸缩策略</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScaleStrategy(String ScaleStrategy) {
@@ -768,9 +728,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Get 定时停止的配置
+     * Get <p>定时停止的配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScheduledAction 定时停止的配置
+     * @return ScheduledAction <p>定时停止的配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ScheduledAction getScheduledAction() {
@@ -778,9 +738,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Set 定时停止的配置
+     * Set <p>定时停止的配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScheduledAction 定时停止的配置
+     * @param ScheduledAction <p>定时停止的配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScheduledAction(ScheduledAction ScheduledAction) {
@@ -788,9 +748,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Get 实例列表
+     * Get <p>实例列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PodList 实例列表
+     * @return PodList <p>实例列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -800,9 +760,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Set 实例列表
+     * Set <p>实例列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PodList 实例列表
+     * @param PodList <p>实例列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -812,9 +772,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Get Pod列表信息
+     * Get <p>Pod列表信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Pods Pod列表信息
+     * @return Pods <p>Pod列表信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -824,9 +784,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Set Pod列表信息
+     * Set <p>Pod列表信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Pods Pod列表信息
+     * @param Pods <p>Pod列表信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -836,9 +796,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Get Pod列表信息
+     * Get <p>Pod列表信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PodInfos Pod列表信息
+     * @return PodInfos <p>Pod列表信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Pod [] getPodInfos() {
@@ -846,9 +806,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Set Pod列表信息
+     * Set <p>Pod列表信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PodInfos Pod列表信息
+     * @param PodInfos <p>Pod列表信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPodInfos(Pod [] PodInfos) {
@@ -856,9 +816,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Get 服务限速限流相关配置
+     * Get <p>服务限速限流相关配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ServiceLimit 服务限速限流相关配置
+     * @return ServiceLimit <p>服务限速限流相关配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ServiceLimit getServiceLimit() {
@@ -866,9 +826,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Set 服务限速限流相关配置
+     * Set <p>服务限速限流相关配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ServiceLimit 服务限速限流相关配置
+     * @param ServiceLimit <p>服务限速限流相关配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceLimit(ServiceLimit ServiceLimit) {
@@ -876,9 +836,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Get 是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。
+     * Get <p>是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ModelTurboEnable 是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。
+     * @return ModelTurboEnable <p>是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getModelTurboEnable() {
@@ -886,9 +846,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Set 是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。
+     * Set <p>是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ModelTurboEnable 是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。
+     * @param ModelTurboEnable <p>是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModelTurboEnable(Boolean ModelTurboEnable) {
@@ -896,9 +856,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Get 挂载
+     * Get <p>挂载</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VolumeMount 挂载
+     * @return VolumeMount <p>挂载</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public VolumeMount getVolumeMount() {
@@ -906,9 +866,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Set 挂载
+     * Set <p>挂载</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VolumeMount 挂载
+     * @param VolumeMount <p>挂载</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVolumeMount(VolumeMount VolumeMount) {
@@ -916,9 +876,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Get 推理代码信息
+     * Get <p>推理代码信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InferCodeInfo 推理代码信息
+     * @return InferCodeInfo <p>推理代码信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public InferCodeInfo getInferCodeInfo() {
@@ -926,9 +886,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Set 推理代码信息
+     * Set <p>推理代码信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InferCodeInfo 推理代码信息
+     * @param InferCodeInfo <p>推理代码信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInferCodeInfo(InferCodeInfo InferCodeInfo) {
@@ -936,9 +896,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Get 服务的启动命令
+     * Get <p>服务的启动命令</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Command 服务的启动命令
+     * @return Command <p>服务的启动命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCommand() {
@@ -946,9 +906,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Set 服务的启动命令
+     * Set <p>服务的启动命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Command 服务的启动命令
+     * @param Command <p>服务的启动命令</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCommand(String Command) {
@@ -956,9 +916,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Get 开启TIONE内网访问外部设置
+     * Get <p>开启TIONE内网访问外部设置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ServiceEIP 开启TIONE内网访问外部设置
+     * @return ServiceEIP <p>开启TIONE内网访问外部设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ServiceEIP getServiceEIP() {
@@ -966,9 +926,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Set 开启TIONE内网访问外部设置
+     * Set <p>开启TIONE内网访问外部设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ServiceEIP 开启TIONE内网访问外部设置
+     * @param ServiceEIP <p>开启TIONE内网访问外部设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceEIP(ServiceEIP ServiceEIP) {
@@ -976,9 +936,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Get 服务端口，默认为8501
+     * Get <p>服务端口，默认为8501</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ServicePort 服务端口，默认为8501
+     * @return ServicePort <p>服务端口，默认为8501</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getServicePort() {
@@ -986,9 +946,9 @@ HYBRID_PAID:
     }
 
     /**
-     * Set 服务端口，默认为8501
+     * Set <p>服务端口，默认为8501</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ServicePort 服务端口，默认为8501
+     * @param ServicePort <p>服务端口，默认为8501</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServicePort(Long ServicePort) {
@@ -996,144 +956,144 @@ HYBRID_PAID:
     }
 
     /**
-     * Get 服务的优雅退出时限。单位为秒，默认值为30，最小为1 
-     * @return TerminationGracePeriodSeconds 服务的优雅退出时限。单位为秒，默认值为30，最小为1
+     * Get <p>服务的优雅退出时限。单位为秒，默认值为30，最小为1</p> 
+     * @return TerminationGracePeriodSeconds <p>服务的优雅退出时限。单位为秒，默认值为30，最小为1</p>
      */
     public Long getTerminationGracePeriodSeconds() {
         return this.TerminationGracePeriodSeconds;
     }
 
     /**
-     * Set 服务的优雅退出时限。单位为秒，默认值为30，最小为1
-     * @param TerminationGracePeriodSeconds 服务的优雅退出时限。单位为秒，默认值为30，最小为1
+     * Set <p>服务的优雅退出时限。单位为秒，默认值为30，最小为1</p>
+     * @param TerminationGracePeriodSeconds <p>服务的优雅退出时限。单位为秒，默认值为30，最小为1</p>
      */
     public void setTerminationGracePeriodSeconds(Long TerminationGracePeriodSeconds) {
         this.TerminationGracePeriodSeconds = TerminationGracePeriodSeconds;
     }
 
     /**
-     * Get 服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束 
-     * @return PreStopCommand 服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束
+     * Get <p>服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束</p> 
+     * @return PreStopCommand <p>服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束</p>
      */
     public String [] getPreStopCommand() {
         return this.PreStopCommand;
     }
 
     /**
-     * Set 服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束
-     * @param PreStopCommand 服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束
+     * Set <p>服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束</p>
+     * @param PreStopCommand <p>服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束</p>
      */
     public void setPreStopCommand(String [] PreStopCommand) {
         this.PreStopCommand = PreStopCommand;
     }
 
     /**
-     * Get 是否启用grpc端口 
-     * @return GrpcEnable 是否启用grpc端口
+     * Get <p>是否启用grpc端口</p> 
+     * @return GrpcEnable <p>是否启用grpc端口</p>
      */
     public Boolean getGrpcEnable() {
         return this.GrpcEnable;
     }
 
     /**
-     * Set 是否启用grpc端口
-     * @param GrpcEnable 是否启用grpc端口
+     * Set <p>是否启用grpc端口</p>
+     * @param GrpcEnable <p>是否启用grpc端口</p>
      */
     public void setGrpcEnable(Boolean GrpcEnable) {
         this.GrpcEnable = GrpcEnable;
     }
 
     /**
-     * Get 健康探针 
-     * @return HealthProbe 健康探针
+     * Get <p>健康探针</p> 
+     * @return HealthProbe <p>健康探针</p>
      */
     public HealthProbe getHealthProbe() {
         return this.HealthProbe;
     }
 
     /**
-     * Set 健康探针
-     * @param HealthProbe 健康探针
+     * Set <p>健康探针</p>
+     * @param HealthProbe <p>健康探针</p>
      */
     public void setHealthProbe(HealthProbe HealthProbe) {
         this.HealthProbe = HealthProbe;
     }
 
     /**
-     * Get 滚动更新配置 
-     * @return RollingUpdate 滚动更新配置
+     * Get <p>滚动更新配置</p> 
+     * @return RollingUpdate <p>滚动更新配置</p>
      */
     public RollingUpdate getRollingUpdate() {
         return this.RollingUpdate;
     }
 
     /**
-     * Set 滚动更新配置
-     * @param RollingUpdate 滚动更新配置
+     * Set <p>滚动更新配置</p>
+     * @param RollingUpdate <p>滚动更新配置</p>
      */
     public void setRollingUpdate(RollingUpdate RollingUpdate) {
         this.RollingUpdate = RollingUpdate;
     }
 
     /**
-     * Get 单副本下的实例数，仅在部署类型为DIST、ROLE时生效，默认1 
-     * @return InstancePerReplicas 单副本下的实例数，仅在部署类型为DIST、ROLE时生效，默认1
+     * Get <p>单副本下的实例数，仅在部署类型为DIST、ROLE时生效，默认1</p> 
+     * @return InstancePerReplicas <p>单副本下的实例数，仅在部署类型为DIST、ROLE时生效，默认1</p>
      */
     public Long getInstancePerReplicas() {
         return this.InstancePerReplicas;
     }
 
     /**
-     * Set 单副本下的实例数，仅在部署类型为DIST、ROLE时生效，默认1
-     * @param InstancePerReplicas 单副本下的实例数，仅在部署类型为DIST、ROLE时生效，默认1
+     * Set <p>单副本下的实例数，仅在部署类型为DIST、ROLE时生效，默认1</p>
+     * @param InstancePerReplicas <p>单副本下的实例数，仅在部署类型为DIST、ROLE时生效，默认1</p>
      */
     public void setInstancePerReplicas(Long InstancePerReplicas) {
         this.InstancePerReplicas = InstancePerReplicas;
     }
 
     /**
-     * Get 批量数据盘挂载配置 
-     * @return VolumeMounts 批量数据盘挂载配置
+     * Get <p>批量数据盘挂载配置</p> 
+     * @return VolumeMounts <p>批量数据盘挂载配置</p>
      */
     public VolumeMount [] getVolumeMounts() {
         return this.VolumeMounts;
     }
 
     /**
-     * Set 批量数据盘挂载配置
-     * @param VolumeMounts 批量数据盘挂载配置
+     * Set <p>批量数据盘挂载配置</p>
+     * @param VolumeMounts <p>批量数据盘挂载配置</p>
      */
     public void setVolumeMounts(VolumeMount [] VolumeMounts) {
         this.VolumeMounts = VolumeMounts;
     }
 
     /**
-     * Get 调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用 
-     * @return SchedulingStrategy 调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用
+     * Get <p>调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用</p> 
+     * @return SchedulingStrategy <p>调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用</p>
      */
     public String getSchedulingStrategy() {
         return this.SchedulingStrategy;
     }
 
     /**
-     * Set 调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用
-     * @param SchedulingStrategy 调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用
+     * Set <p>调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用</p>
+     * @param SchedulingStrategy <p>调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用</p>
      */
     public void setSchedulingStrategy(String SchedulingStrategy) {
         this.SchedulingStrategy = SchedulingStrategy;
     }
 
     /**
-     * Get 服务实际运行的节点数 
-     * @return NodeCount 服务实际运行的节点数
+     * Get <p>服务实际运行的节点数</p> 
+     * @return NodeCount <p>服务实际运行的节点数</p>
      */
     public Long getNodeCount() {
         return this.NodeCount;
     }
 
     /**
-     * Set 服务实际运行的节点数
-     * @param NodeCount 服务实际运行的节点数
+     * Set <p>服务实际运行的节点数</p>
+     * @param NodeCount <p>服务实际运行的节点数</p>
      */
     public void setNodeCount(Long NodeCount) {
         this.NodeCount = NodeCount;

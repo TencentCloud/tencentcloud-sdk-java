@@ -24,254 +24,256 @@ import java.util.HashMap;
 public class DescribeInstanceResponse extends AbstractModel {
 
     /**
-    * 实例类型
-BASIC 基础版
-PRO  专业版
-PLATINUM 铂金版
+    * <p>实例类型<br>BASIC 基础版<br>PRO  专业版<br>PLATINUM 铂金版</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例名称
+    * <p>实例名称</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 主题数量
+    * <p>主题数量</p>
     */
     @SerializedName("TopicNum")
     @Expose
     private Long TopicNum;
 
     /**
-    * 实例最大主题数量
+    * <p>实例最大主题数量</p>
     */
     @SerializedName("TopicNumLimit")
     @Expose
     private Long TopicNumLimit;
 
     /**
-    * TPS限流值
+    * <p>TPS限流值</p>
     */
     @SerializedName("TpsLimit")
     @Expose
     private Long TpsLimit;
 
     /**
-    * 创建时间，秒为单位
+    * <p>创建时间，秒为单位</p>
     */
     @SerializedName("CreatedTime")
     @Expose
     private Long CreatedTime;
 
     /**
-    * 备注信息
+    * <p>备注信息</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 实例状态， RUNNING, 运行中 MAINTAINING，维护中 ABNORMAL，异常 OVERDUE，欠费 DESTROYED，已删除 CREATING，创建中 MODIFYING，变配中 CREATE_FAILURE，创建失败 MODIFY_FAILURE，变配失败 DELETING，删除中
+    * <p>实例状态， RUNNING, 运行中 MAINTAINING，维护中 ABNORMAL，异常 OVERDUE，欠费 DESTROYED，已删除 CREATING，创建中 MODIFYING，变配中 CREATE_FAILURE，创建失败 MODIFY_FAILURE，变配失败 DELETING，删除中</p>
     */
     @SerializedName("InstanceStatus")
     @Expose
     private String InstanceStatus;
 
     /**
-    * 实例规格
+    * <p>实例规格</p>
     */
     @SerializedName("SkuCode")
     @Expose
     private String SkuCode;
 
     /**
-    * 单客户端最大订阅数
+    * <p>单客户端最大订阅数</p>
     */
     @SerializedName("MaxSubscriptionPerClient")
     @Expose
     private Long MaxSubscriptionPerClient;
 
     /**
-    * 授权规则条数
+    * <p>授权规则条数</p>
     */
     @SerializedName("AuthorizationPolicyLimit")
     @Expose
     private Long AuthorizationPolicyLimit;
 
     /**
-    * 客户端数量上限
+    * <p>客户端数量上限</p>
     */
     @SerializedName("ClientNumLimit")
     @Expose
     private Long ClientNumLimit;
 
     /**
-    * 客户端证书注册方式：
-JITP：自动注册
-API：通过API手动注册
+    * <p>客户端证书注册方式：<br>JITP：自动注册<br>API：通过API手动注册</p>
     */
     @SerializedName("DeviceCertificateProvisionType")
     @Expose
     private String DeviceCertificateProvisionType;
 
     /**
-    * 自动注册设备证书时是否自动激活
+    * <p>自动注册设备证书时是否自动激活</p>
     */
     @SerializedName("AutomaticActivation")
     @Expose
     private Boolean AutomaticActivation;
 
     /**
-    * 是否自动续费。仅包年包月集群生效。 1:自动续费 0:非自动续费
+    * <p>是否自动续费。仅包年包月集群生效。 1:自动续费 0:非自动续费</p>
     */
     @SerializedName("RenewFlag")
     @Expose
     private Long RenewFlag;
 
     /**
-    * 计费模式， POSTPAID，按量计费 PREPAID，包年包月
+    * <p>计费模式， POSTPAID，按量计费 PREPAID，包年包月</p>
     */
     @SerializedName("PayMode")
     @Expose
     private String PayMode;
 
     /**
-    * 到期时间，毫秒级时间戳
+    * <p>到期时间，毫秒级时间戳</p>
     */
     @SerializedName("ExpiryTime")
     @Expose
     private Long ExpiryTime;
 
     /**
-    * 预销毁时间，毫秒级时间戳
+    * <p>预销毁时间，毫秒级时间戳</p>
     */
     @SerializedName("DestroyTime")
     @Expose
     private Long DestroyTime;
 
     /**
-    * TLS,单向认证    mTLS,双向认证    BYOC;一机一证
+    * <p>TLS,单向认证    mTLS,双向认证    BYOC;一机一证</p>
     */
     @SerializedName("X509Mode")
     @Expose
     private String X509Mode;
 
     /**
-    * 最大Ca配额
+    * <p>最大Ca配额</p>
     */
     @SerializedName("MaxCaNum")
     @Expose
     private Long MaxCaNum;
 
     /**
-    * 证书注册码
+    * <p>证书注册码</p>
     */
     @SerializedName("RegistrationCode")
     @Expose
     private String RegistrationCode;
 
     /**
-    * 集群最大订阅数
+    * <p>集群最大订阅数</p>
     */
     @SerializedName("MaxSubscription")
     @Expose
     private Long MaxSubscription;
 
     /**
-    * 授权策略开关
+    * <p>授权策略开关</p>
     */
     @SerializedName("AuthorizationPolicy")
     @Expose
     private Boolean AuthorizationPolicy;
 
     /**
-    * 共享订阅组数最大限制
+    * <p>共享订阅组数最大限制</p>
     */
     @SerializedName("SharedSubscriptionGroupLimit")
     @Expose
     private Long SharedSubscriptionGroupLimit;
 
     /**
-    * 单个共享订阅组TopicFilter数限制
+    * <p>单个共享订阅组TopicFilter数限制</p>
     */
     @SerializedName("MaxTopicFilterPerSharedSubscriptionGroup")
     @Expose
     private Long MaxTopicFilterPerSharedSubscriptionGroup;
 
     /**
-    * 自动订阅规则条数限制
+    * <p>自动订阅规则条数限制</p>
     */
     @SerializedName("AutoSubscriptionPolicyLimit")
     @Expose
     private Long AutoSubscriptionPolicyLimit;
 
     /**
-    * 单条自动订阅规则TopicFilter数限制
+    * <p>单条自动订阅规则TopicFilter数限制</p>
     */
     @SerializedName("MaxTopicFilterPerAutoSubscriptionPolicy")
     @Expose
     private Long MaxTopicFilterPerAutoSubscriptionPolicy;
 
     /**
-    * 是否使用默认的服务端证书
+    * <p>是否使用默认的服务端证书</p>
     */
     @SerializedName("UseDefaultServerCert")
     @Expose
     private Boolean UseDefaultServerCert;
 
     /**
-    * 服务端CA最大数量
+    * <p>服务端CA最大数量</p>
     */
     @SerializedName("TrustedCaLimit")
     @Expose
     private Long TrustedCaLimit;
 
     /**
-    * 服务端证书最大数量
+    * <p>服务端证书最大数量</p>
     */
     @SerializedName("ServerCertLimit")
     @Expose
     private Long ServerCertLimit;
 
     /**
-    * topic前缀最大层级
+    * <p>topic前缀最大层级</p>
     */
     @SerializedName("TopicPrefixSlashLimit")
     @Expose
     private Long TopicPrefixSlashLimit;
 
     /**
-    * 单客户端发送消息限速，单位 条/秒
+    * <p>单客户端发送消息限速，单位 条/秒</p>
     */
     @SerializedName("MessageRate")
     @Expose
     private Long MessageRate;
 
     /**
-    * 服务端tls支持的协议，使用“,”分割。例如：TLSv1.3,TLSv1.2,TLSv1.1,TLSv1
+    * <p>服务端tls支持的协议，使用“,”分割。例如：TLSv1.3,TLSv1.2,TLSv1.1,TLSv1</p>
     */
     @SerializedName("TransportLayerSecurity")
     @Expose
     private String TransportLayerSecurity;
 
     /**
-    * 消息属性增强规则配额
+    * <p>消息属性增强规则配额</p>
     */
     @SerializedName("MessageEnrichmentRuleLimit")
     @Expose
     private Long MessageEnrichmentRuleLimit;
+
+    /**
+    * <p>封禁规则最大数量</p>
+    */
+    @SerializedName("BlockRuleLimit")
+    @Expose
+    private Long BlockRuleLimit;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -281,583 +283,583 @@ API：通过API手动注册
     private String RequestId;
 
     /**
-     * Get 实例类型
-BASIC 基础版
-PRO  专业版
-PLATINUM 铂金版 
-     * @return InstanceType 实例类型
-BASIC 基础版
-PRO  专业版
-PLATINUM 铂金版
+     * Get <p>实例类型<br>BASIC 基础版<br>PRO  专业版<br>PLATINUM 铂金版</p> 
+     * @return InstanceType <p>实例类型<br>BASIC 基础版<br>PRO  专业版<br>PLATINUM 铂金版</p>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 实例类型
-BASIC 基础版
-PRO  专业版
-PLATINUM 铂金版
-     * @param InstanceType 实例类型
-BASIC 基础版
-PRO  专业版
-PLATINUM 铂金版
+     * Set <p>实例类型<br>BASIC 基础版<br>PRO  专业版<br>PLATINUM 铂金版</p>
+     * @param InstanceType <p>实例类型<br>BASIC 基础版<br>PRO  专业版<br>PLATINUM 铂金版</p>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例名称 
-     * @return InstanceName 实例名称
+     * Get <p>实例名称</p> 
+     * @return InstanceName <p>实例名称</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称
-     * @param InstanceName 实例名称
+     * Set <p>实例名称</p>
+     * @param InstanceName <p>实例名称</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 主题数量 
-     * @return TopicNum 主题数量
+     * Get <p>主题数量</p> 
+     * @return TopicNum <p>主题数量</p>
      */
     public Long getTopicNum() {
         return this.TopicNum;
     }
 
     /**
-     * Set 主题数量
-     * @param TopicNum 主题数量
+     * Set <p>主题数量</p>
+     * @param TopicNum <p>主题数量</p>
      */
     public void setTopicNum(Long TopicNum) {
         this.TopicNum = TopicNum;
     }
 
     /**
-     * Get 实例最大主题数量 
-     * @return TopicNumLimit 实例最大主题数量
+     * Get <p>实例最大主题数量</p> 
+     * @return TopicNumLimit <p>实例最大主题数量</p>
      */
     public Long getTopicNumLimit() {
         return this.TopicNumLimit;
     }
 
     /**
-     * Set 实例最大主题数量
-     * @param TopicNumLimit 实例最大主题数量
+     * Set <p>实例最大主题数量</p>
+     * @param TopicNumLimit <p>实例最大主题数量</p>
      */
     public void setTopicNumLimit(Long TopicNumLimit) {
         this.TopicNumLimit = TopicNumLimit;
     }
 
     /**
-     * Get TPS限流值 
-     * @return TpsLimit TPS限流值
+     * Get <p>TPS限流值</p> 
+     * @return TpsLimit <p>TPS限流值</p>
      */
     public Long getTpsLimit() {
         return this.TpsLimit;
     }
 
     /**
-     * Set TPS限流值
-     * @param TpsLimit TPS限流值
+     * Set <p>TPS限流值</p>
+     * @param TpsLimit <p>TPS限流值</p>
      */
     public void setTpsLimit(Long TpsLimit) {
         this.TpsLimit = TpsLimit;
     }
 
     /**
-     * Get 创建时间，秒为单位 
-     * @return CreatedTime 创建时间，秒为单位
+     * Get <p>创建时间，秒为单位</p> 
+     * @return CreatedTime <p>创建时间，秒为单位</p>
      */
     public Long getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间，秒为单位
-     * @param CreatedTime 创建时间，秒为单位
+     * Set <p>创建时间，秒为单位</p>
+     * @param CreatedTime <p>创建时间，秒为单位</p>
      */
     public void setCreatedTime(Long CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 备注信息 
-     * @return Remark 备注信息
+     * Get <p>备注信息</p> 
+     * @return Remark <p>备注信息</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注信息
-     * @param Remark 备注信息
+     * Set <p>备注信息</p>
+     * @param Remark <p>备注信息</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 实例状态， RUNNING, 运行中 MAINTAINING，维护中 ABNORMAL，异常 OVERDUE，欠费 DESTROYED，已删除 CREATING，创建中 MODIFYING，变配中 CREATE_FAILURE，创建失败 MODIFY_FAILURE，变配失败 DELETING，删除中 
-     * @return InstanceStatus 实例状态， RUNNING, 运行中 MAINTAINING，维护中 ABNORMAL，异常 OVERDUE，欠费 DESTROYED，已删除 CREATING，创建中 MODIFYING，变配中 CREATE_FAILURE，创建失败 MODIFY_FAILURE，变配失败 DELETING，删除中
+     * Get <p>实例状态， RUNNING, 运行中 MAINTAINING，维护中 ABNORMAL，异常 OVERDUE，欠费 DESTROYED，已删除 CREATING，创建中 MODIFYING，变配中 CREATE_FAILURE，创建失败 MODIFY_FAILURE，变配失败 DELETING，删除中</p> 
+     * @return InstanceStatus <p>实例状态， RUNNING, 运行中 MAINTAINING，维护中 ABNORMAL，异常 OVERDUE，欠费 DESTROYED，已删除 CREATING，创建中 MODIFYING，变配中 CREATE_FAILURE，创建失败 MODIFY_FAILURE，变配失败 DELETING，删除中</p>
      */
     public String getInstanceStatus() {
         return this.InstanceStatus;
     }
 
     /**
-     * Set 实例状态， RUNNING, 运行中 MAINTAINING，维护中 ABNORMAL，异常 OVERDUE，欠费 DESTROYED，已删除 CREATING，创建中 MODIFYING，变配中 CREATE_FAILURE，创建失败 MODIFY_FAILURE，变配失败 DELETING，删除中
-     * @param InstanceStatus 实例状态， RUNNING, 运行中 MAINTAINING，维护中 ABNORMAL，异常 OVERDUE，欠费 DESTROYED，已删除 CREATING，创建中 MODIFYING，变配中 CREATE_FAILURE，创建失败 MODIFY_FAILURE，变配失败 DELETING，删除中
+     * Set <p>实例状态， RUNNING, 运行中 MAINTAINING，维护中 ABNORMAL，异常 OVERDUE，欠费 DESTROYED，已删除 CREATING，创建中 MODIFYING，变配中 CREATE_FAILURE，创建失败 MODIFY_FAILURE，变配失败 DELETING，删除中</p>
+     * @param InstanceStatus <p>实例状态， RUNNING, 运行中 MAINTAINING，维护中 ABNORMAL，异常 OVERDUE，欠费 DESTROYED，已删除 CREATING，创建中 MODIFYING，变配中 CREATE_FAILURE，创建失败 MODIFY_FAILURE，变配失败 DELETING，删除中</p>
      */
     public void setInstanceStatus(String InstanceStatus) {
         this.InstanceStatus = InstanceStatus;
     }
 
     /**
-     * Get 实例规格 
-     * @return SkuCode 实例规格
+     * Get <p>实例规格</p> 
+     * @return SkuCode <p>实例规格</p>
      */
     public String getSkuCode() {
         return this.SkuCode;
     }
 
     /**
-     * Set 实例规格
-     * @param SkuCode 实例规格
+     * Set <p>实例规格</p>
+     * @param SkuCode <p>实例规格</p>
      */
     public void setSkuCode(String SkuCode) {
         this.SkuCode = SkuCode;
     }
 
     /**
-     * Get 单客户端最大订阅数 
-     * @return MaxSubscriptionPerClient 单客户端最大订阅数
+     * Get <p>单客户端最大订阅数</p> 
+     * @return MaxSubscriptionPerClient <p>单客户端最大订阅数</p>
      */
     public Long getMaxSubscriptionPerClient() {
         return this.MaxSubscriptionPerClient;
     }
 
     /**
-     * Set 单客户端最大订阅数
-     * @param MaxSubscriptionPerClient 单客户端最大订阅数
+     * Set <p>单客户端最大订阅数</p>
+     * @param MaxSubscriptionPerClient <p>单客户端最大订阅数</p>
      */
     public void setMaxSubscriptionPerClient(Long MaxSubscriptionPerClient) {
         this.MaxSubscriptionPerClient = MaxSubscriptionPerClient;
     }
 
     /**
-     * Get 授权规则条数 
-     * @return AuthorizationPolicyLimit 授权规则条数
+     * Get <p>授权规则条数</p> 
+     * @return AuthorizationPolicyLimit <p>授权规则条数</p>
      */
     public Long getAuthorizationPolicyLimit() {
         return this.AuthorizationPolicyLimit;
     }
 
     /**
-     * Set 授权规则条数
-     * @param AuthorizationPolicyLimit 授权规则条数
+     * Set <p>授权规则条数</p>
+     * @param AuthorizationPolicyLimit <p>授权规则条数</p>
      */
     public void setAuthorizationPolicyLimit(Long AuthorizationPolicyLimit) {
         this.AuthorizationPolicyLimit = AuthorizationPolicyLimit;
     }
 
     /**
-     * Get 客户端数量上限 
-     * @return ClientNumLimit 客户端数量上限
+     * Get <p>客户端数量上限</p> 
+     * @return ClientNumLimit <p>客户端数量上限</p>
      */
     public Long getClientNumLimit() {
         return this.ClientNumLimit;
     }
 
     /**
-     * Set 客户端数量上限
-     * @param ClientNumLimit 客户端数量上限
+     * Set <p>客户端数量上限</p>
+     * @param ClientNumLimit <p>客户端数量上限</p>
      */
     public void setClientNumLimit(Long ClientNumLimit) {
         this.ClientNumLimit = ClientNumLimit;
     }
 
     /**
-     * Get 客户端证书注册方式：
-JITP：自动注册
-API：通过API手动注册 
-     * @return DeviceCertificateProvisionType 客户端证书注册方式：
-JITP：自动注册
-API：通过API手动注册
+     * Get <p>客户端证书注册方式：<br>JITP：自动注册<br>API：通过API手动注册</p> 
+     * @return DeviceCertificateProvisionType <p>客户端证书注册方式：<br>JITP：自动注册<br>API：通过API手动注册</p>
      */
     public String getDeviceCertificateProvisionType() {
         return this.DeviceCertificateProvisionType;
     }
 
     /**
-     * Set 客户端证书注册方式：
-JITP：自动注册
-API：通过API手动注册
-     * @param DeviceCertificateProvisionType 客户端证书注册方式：
-JITP：自动注册
-API：通过API手动注册
+     * Set <p>客户端证书注册方式：<br>JITP：自动注册<br>API：通过API手动注册</p>
+     * @param DeviceCertificateProvisionType <p>客户端证书注册方式：<br>JITP：自动注册<br>API：通过API手动注册</p>
      */
     public void setDeviceCertificateProvisionType(String DeviceCertificateProvisionType) {
         this.DeviceCertificateProvisionType = DeviceCertificateProvisionType;
     }
 
     /**
-     * Get 自动注册设备证书时是否自动激活 
-     * @return AutomaticActivation 自动注册设备证书时是否自动激活
+     * Get <p>自动注册设备证书时是否自动激活</p> 
+     * @return AutomaticActivation <p>自动注册设备证书时是否自动激活</p>
      */
     public Boolean getAutomaticActivation() {
         return this.AutomaticActivation;
     }
 
     /**
-     * Set 自动注册设备证书时是否自动激活
-     * @param AutomaticActivation 自动注册设备证书时是否自动激活
+     * Set <p>自动注册设备证书时是否自动激活</p>
+     * @param AutomaticActivation <p>自动注册设备证书时是否自动激活</p>
      */
     public void setAutomaticActivation(Boolean AutomaticActivation) {
         this.AutomaticActivation = AutomaticActivation;
     }
 
     /**
-     * Get 是否自动续费。仅包年包月集群生效。 1:自动续费 0:非自动续费 
-     * @return RenewFlag 是否自动续费。仅包年包月集群生效。 1:自动续费 0:非自动续费
+     * Get <p>是否自动续费。仅包年包月集群生效。 1:自动续费 0:非自动续费</p> 
+     * @return RenewFlag <p>是否自动续费。仅包年包月集群生效。 1:自动续费 0:非自动续费</p>
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 是否自动续费。仅包年包月集群生效。 1:自动续费 0:非自动续费
-     * @param RenewFlag 是否自动续费。仅包年包月集群生效。 1:自动续费 0:非自动续费
+     * Set <p>是否自动续费。仅包年包月集群生效。 1:自动续费 0:非自动续费</p>
+     * @param RenewFlag <p>是否自动续费。仅包年包月集群生效。 1:自动续费 0:非自动续费</p>
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get 计费模式， POSTPAID，按量计费 PREPAID，包年包月 
-     * @return PayMode 计费模式， POSTPAID，按量计费 PREPAID，包年包月
+     * Get <p>计费模式， POSTPAID，按量计费 PREPAID，包年包月</p> 
+     * @return PayMode <p>计费模式， POSTPAID，按量计费 PREPAID，包年包月</p>
      */
     public String getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 计费模式， POSTPAID，按量计费 PREPAID，包年包月
-     * @param PayMode 计费模式， POSTPAID，按量计费 PREPAID，包年包月
+     * Set <p>计费模式， POSTPAID，按量计费 PREPAID，包年包月</p>
+     * @param PayMode <p>计费模式， POSTPAID，按量计费 PREPAID，包年包月</p>
      */
     public void setPayMode(String PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 到期时间，毫秒级时间戳 
-     * @return ExpiryTime 到期时间，毫秒级时间戳
+     * Get <p>到期时间，毫秒级时间戳</p> 
+     * @return ExpiryTime <p>到期时间，毫秒级时间戳</p>
      */
     public Long getExpiryTime() {
         return this.ExpiryTime;
     }
 
     /**
-     * Set 到期时间，毫秒级时间戳
-     * @param ExpiryTime 到期时间，毫秒级时间戳
+     * Set <p>到期时间，毫秒级时间戳</p>
+     * @param ExpiryTime <p>到期时间，毫秒级时间戳</p>
      */
     public void setExpiryTime(Long ExpiryTime) {
         this.ExpiryTime = ExpiryTime;
     }
 
     /**
-     * Get 预销毁时间，毫秒级时间戳 
-     * @return DestroyTime 预销毁时间，毫秒级时间戳
+     * Get <p>预销毁时间，毫秒级时间戳</p> 
+     * @return DestroyTime <p>预销毁时间，毫秒级时间戳</p>
      */
     public Long getDestroyTime() {
         return this.DestroyTime;
     }
 
     /**
-     * Set 预销毁时间，毫秒级时间戳
-     * @param DestroyTime 预销毁时间，毫秒级时间戳
+     * Set <p>预销毁时间，毫秒级时间戳</p>
+     * @param DestroyTime <p>预销毁时间，毫秒级时间戳</p>
      */
     public void setDestroyTime(Long DestroyTime) {
         this.DestroyTime = DestroyTime;
     }
 
     /**
-     * Get TLS,单向认证    mTLS,双向认证    BYOC;一机一证 
-     * @return X509Mode TLS,单向认证    mTLS,双向认证    BYOC;一机一证
+     * Get <p>TLS,单向认证    mTLS,双向认证    BYOC;一机一证</p> 
+     * @return X509Mode <p>TLS,单向认证    mTLS,双向认证    BYOC;一机一证</p>
      */
     public String getX509Mode() {
         return this.X509Mode;
     }
 
     /**
-     * Set TLS,单向认证    mTLS,双向认证    BYOC;一机一证
-     * @param X509Mode TLS,单向认证    mTLS,双向认证    BYOC;一机一证
+     * Set <p>TLS,单向认证    mTLS,双向认证    BYOC;一机一证</p>
+     * @param X509Mode <p>TLS,单向认证    mTLS,双向认证    BYOC;一机一证</p>
      */
     public void setX509Mode(String X509Mode) {
         this.X509Mode = X509Mode;
     }
 
     /**
-     * Get 最大Ca配额 
-     * @return MaxCaNum 最大Ca配额
+     * Get <p>最大Ca配额</p> 
+     * @return MaxCaNum <p>最大Ca配额</p>
      */
     public Long getMaxCaNum() {
         return this.MaxCaNum;
     }
 
     /**
-     * Set 最大Ca配额
-     * @param MaxCaNum 最大Ca配额
+     * Set <p>最大Ca配额</p>
+     * @param MaxCaNum <p>最大Ca配额</p>
      */
     public void setMaxCaNum(Long MaxCaNum) {
         this.MaxCaNum = MaxCaNum;
     }
 
     /**
-     * Get 证书注册码 
-     * @return RegistrationCode 证书注册码
+     * Get <p>证书注册码</p> 
+     * @return RegistrationCode <p>证书注册码</p>
      */
     public String getRegistrationCode() {
         return this.RegistrationCode;
     }
 
     /**
-     * Set 证书注册码
-     * @param RegistrationCode 证书注册码
+     * Set <p>证书注册码</p>
+     * @param RegistrationCode <p>证书注册码</p>
      */
     public void setRegistrationCode(String RegistrationCode) {
         this.RegistrationCode = RegistrationCode;
     }
 
     /**
-     * Get 集群最大订阅数 
-     * @return MaxSubscription 集群最大订阅数
+     * Get <p>集群最大订阅数</p> 
+     * @return MaxSubscription <p>集群最大订阅数</p>
      */
     public Long getMaxSubscription() {
         return this.MaxSubscription;
     }
 
     /**
-     * Set 集群最大订阅数
-     * @param MaxSubscription 集群最大订阅数
+     * Set <p>集群最大订阅数</p>
+     * @param MaxSubscription <p>集群最大订阅数</p>
      */
     public void setMaxSubscription(Long MaxSubscription) {
         this.MaxSubscription = MaxSubscription;
     }
 
     /**
-     * Get 授权策略开关 
-     * @return AuthorizationPolicy 授权策略开关
+     * Get <p>授权策略开关</p> 
+     * @return AuthorizationPolicy <p>授权策略开关</p>
      */
     public Boolean getAuthorizationPolicy() {
         return this.AuthorizationPolicy;
     }
 
     /**
-     * Set 授权策略开关
-     * @param AuthorizationPolicy 授权策略开关
+     * Set <p>授权策略开关</p>
+     * @param AuthorizationPolicy <p>授权策略开关</p>
      */
     public void setAuthorizationPolicy(Boolean AuthorizationPolicy) {
         this.AuthorizationPolicy = AuthorizationPolicy;
     }
 
     /**
-     * Get 共享订阅组数最大限制 
-     * @return SharedSubscriptionGroupLimit 共享订阅组数最大限制
+     * Get <p>共享订阅组数最大限制</p> 
+     * @return SharedSubscriptionGroupLimit <p>共享订阅组数最大限制</p>
      */
     public Long getSharedSubscriptionGroupLimit() {
         return this.SharedSubscriptionGroupLimit;
     }
 
     /**
-     * Set 共享订阅组数最大限制
-     * @param SharedSubscriptionGroupLimit 共享订阅组数最大限制
+     * Set <p>共享订阅组数最大限制</p>
+     * @param SharedSubscriptionGroupLimit <p>共享订阅组数最大限制</p>
      */
     public void setSharedSubscriptionGroupLimit(Long SharedSubscriptionGroupLimit) {
         this.SharedSubscriptionGroupLimit = SharedSubscriptionGroupLimit;
     }
 
     /**
-     * Get 单个共享订阅组TopicFilter数限制 
-     * @return MaxTopicFilterPerSharedSubscriptionGroup 单个共享订阅组TopicFilter数限制
+     * Get <p>单个共享订阅组TopicFilter数限制</p> 
+     * @return MaxTopicFilterPerSharedSubscriptionGroup <p>单个共享订阅组TopicFilter数限制</p>
+     * @deprecated
      */
+    @Deprecated
     public Long getMaxTopicFilterPerSharedSubscriptionGroup() {
         return this.MaxTopicFilterPerSharedSubscriptionGroup;
     }
 
     /**
-     * Set 单个共享订阅组TopicFilter数限制
-     * @param MaxTopicFilterPerSharedSubscriptionGroup 单个共享订阅组TopicFilter数限制
+     * Set <p>单个共享订阅组TopicFilter数限制</p>
+     * @param MaxTopicFilterPerSharedSubscriptionGroup <p>单个共享订阅组TopicFilter数限制</p>
+     * @deprecated
      */
+    @Deprecated
     public void setMaxTopicFilterPerSharedSubscriptionGroup(Long MaxTopicFilterPerSharedSubscriptionGroup) {
         this.MaxTopicFilterPerSharedSubscriptionGroup = MaxTopicFilterPerSharedSubscriptionGroup;
     }
 
     /**
-     * Get 自动订阅规则条数限制 
-     * @return AutoSubscriptionPolicyLimit 自动订阅规则条数限制
+     * Get <p>自动订阅规则条数限制</p> 
+     * @return AutoSubscriptionPolicyLimit <p>自动订阅规则条数限制</p>
      */
     public Long getAutoSubscriptionPolicyLimit() {
         return this.AutoSubscriptionPolicyLimit;
     }
 
     /**
-     * Set 自动订阅规则条数限制
-     * @param AutoSubscriptionPolicyLimit 自动订阅规则条数限制
+     * Set <p>自动订阅规则条数限制</p>
+     * @param AutoSubscriptionPolicyLimit <p>自动订阅规则条数限制</p>
      */
     public void setAutoSubscriptionPolicyLimit(Long AutoSubscriptionPolicyLimit) {
         this.AutoSubscriptionPolicyLimit = AutoSubscriptionPolicyLimit;
     }
 
     /**
-     * Get 单条自动订阅规则TopicFilter数限制 
-     * @return MaxTopicFilterPerAutoSubscriptionPolicy 单条自动订阅规则TopicFilter数限制
+     * Get <p>单条自动订阅规则TopicFilter数限制</p> 
+     * @return MaxTopicFilterPerAutoSubscriptionPolicy <p>单条自动订阅规则TopicFilter数限制</p>
      */
     public Long getMaxTopicFilterPerAutoSubscriptionPolicy() {
         return this.MaxTopicFilterPerAutoSubscriptionPolicy;
     }
 
     /**
-     * Set 单条自动订阅规则TopicFilter数限制
-     * @param MaxTopicFilterPerAutoSubscriptionPolicy 单条自动订阅规则TopicFilter数限制
+     * Set <p>单条自动订阅规则TopicFilter数限制</p>
+     * @param MaxTopicFilterPerAutoSubscriptionPolicy <p>单条自动订阅规则TopicFilter数限制</p>
      */
     public void setMaxTopicFilterPerAutoSubscriptionPolicy(Long MaxTopicFilterPerAutoSubscriptionPolicy) {
         this.MaxTopicFilterPerAutoSubscriptionPolicy = MaxTopicFilterPerAutoSubscriptionPolicy;
     }
 
     /**
-     * Get 是否使用默认的服务端证书 
-     * @return UseDefaultServerCert 是否使用默认的服务端证书
+     * Get <p>是否使用默认的服务端证书</p> 
+     * @return UseDefaultServerCert <p>是否使用默认的服务端证书</p>
      */
     public Boolean getUseDefaultServerCert() {
         return this.UseDefaultServerCert;
     }
 
     /**
-     * Set 是否使用默认的服务端证书
-     * @param UseDefaultServerCert 是否使用默认的服务端证书
+     * Set <p>是否使用默认的服务端证书</p>
+     * @param UseDefaultServerCert <p>是否使用默认的服务端证书</p>
      */
     public void setUseDefaultServerCert(Boolean UseDefaultServerCert) {
         this.UseDefaultServerCert = UseDefaultServerCert;
     }
 
     /**
-     * Get 服务端CA最大数量 
-     * @return TrustedCaLimit 服务端CA最大数量
+     * Get <p>服务端CA最大数量</p> 
+     * @return TrustedCaLimit <p>服务端CA最大数量</p>
      */
     public Long getTrustedCaLimit() {
         return this.TrustedCaLimit;
     }
 
     /**
-     * Set 服务端CA最大数量
-     * @param TrustedCaLimit 服务端CA最大数量
+     * Set <p>服务端CA最大数量</p>
+     * @param TrustedCaLimit <p>服务端CA最大数量</p>
      */
     public void setTrustedCaLimit(Long TrustedCaLimit) {
         this.TrustedCaLimit = TrustedCaLimit;
     }
 
     /**
-     * Get 服务端证书最大数量 
-     * @return ServerCertLimit 服务端证书最大数量
+     * Get <p>服务端证书最大数量</p> 
+     * @return ServerCertLimit <p>服务端证书最大数量</p>
      */
     public Long getServerCertLimit() {
         return this.ServerCertLimit;
     }
 
     /**
-     * Set 服务端证书最大数量
-     * @param ServerCertLimit 服务端证书最大数量
+     * Set <p>服务端证书最大数量</p>
+     * @param ServerCertLimit <p>服务端证书最大数量</p>
      */
     public void setServerCertLimit(Long ServerCertLimit) {
         this.ServerCertLimit = ServerCertLimit;
     }
 
     /**
-     * Get topic前缀最大层级 
-     * @return TopicPrefixSlashLimit topic前缀最大层级
+     * Get <p>topic前缀最大层级</p> 
+     * @return TopicPrefixSlashLimit <p>topic前缀最大层级</p>
      */
     public Long getTopicPrefixSlashLimit() {
         return this.TopicPrefixSlashLimit;
     }
 
     /**
-     * Set topic前缀最大层级
-     * @param TopicPrefixSlashLimit topic前缀最大层级
+     * Set <p>topic前缀最大层级</p>
+     * @param TopicPrefixSlashLimit <p>topic前缀最大层级</p>
      */
     public void setTopicPrefixSlashLimit(Long TopicPrefixSlashLimit) {
         this.TopicPrefixSlashLimit = TopicPrefixSlashLimit;
     }
 
     /**
-     * Get 单客户端发送消息限速，单位 条/秒 
-     * @return MessageRate 单客户端发送消息限速，单位 条/秒
+     * Get <p>单客户端发送消息限速，单位 条/秒</p> 
+     * @return MessageRate <p>单客户端发送消息限速，单位 条/秒</p>
      */
     public Long getMessageRate() {
         return this.MessageRate;
     }
 
     /**
-     * Set 单客户端发送消息限速，单位 条/秒
-     * @param MessageRate 单客户端发送消息限速，单位 条/秒
+     * Set <p>单客户端发送消息限速，单位 条/秒</p>
+     * @param MessageRate <p>单客户端发送消息限速，单位 条/秒</p>
      */
     public void setMessageRate(Long MessageRate) {
         this.MessageRate = MessageRate;
     }
 
     /**
-     * Get 服务端tls支持的协议，使用“,”分割。例如：TLSv1.3,TLSv1.2,TLSv1.1,TLSv1 
-     * @return TransportLayerSecurity 服务端tls支持的协议，使用“,”分割。例如：TLSv1.3,TLSv1.2,TLSv1.1,TLSv1
+     * Get <p>服务端tls支持的协议，使用“,”分割。例如：TLSv1.3,TLSv1.2,TLSv1.1,TLSv1</p> 
+     * @return TransportLayerSecurity <p>服务端tls支持的协议，使用“,”分割。例如：TLSv1.3,TLSv1.2,TLSv1.1,TLSv1</p>
      */
     public String getTransportLayerSecurity() {
         return this.TransportLayerSecurity;
     }
 
     /**
-     * Set 服务端tls支持的协议，使用“,”分割。例如：TLSv1.3,TLSv1.2,TLSv1.1,TLSv1
-     * @param TransportLayerSecurity 服务端tls支持的协议，使用“,”分割。例如：TLSv1.3,TLSv1.2,TLSv1.1,TLSv1
+     * Set <p>服务端tls支持的协议，使用“,”分割。例如：TLSv1.3,TLSv1.2,TLSv1.1,TLSv1</p>
+     * @param TransportLayerSecurity <p>服务端tls支持的协议，使用“,”分割。例如：TLSv1.3,TLSv1.2,TLSv1.1,TLSv1</p>
      */
     public void setTransportLayerSecurity(String TransportLayerSecurity) {
         this.TransportLayerSecurity = TransportLayerSecurity;
     }
 
     /**
-     * Get 消息属性增强规则配额 
-     * @return MessageEnrichmentRuleLimit 消息属性增强规则配额
+     * Get <p>消息属性增强规则配额</p> 
+     * @return MessageEnrichmentRuleLimit <p>消息属性增强规则配额</p>
      */
     public Long getMessageEnrichmentRuleLimit() {
         return this.MessageEnrichmentRuleLimit;
     }
 
     /**
-     * Set 消息属性增强规则配额
-     * @param MessageEnrichmentRuleLimit 消息属性增强规则配额
+     * Set <p>消息属性增强规则配额</p>
+     * @param MessageEnrichmentRuleLimit <p>消息属性增强规则配额</p>
      */
     public void setMessageEnrichmentRuleLimit(Long MessageEnrichmentRuleLimit) {
         this.MessageEnrichmentRuleLimit = MessageEnrichmentRuleLimit;
+    }
+
+    /**
+     * Get <p>封禁规则最大数量</p> 
+     * @return BlockRuleLimit <p>封禁规则最大数量</p>
+     */
+    public Long getBlockRuleLimit() {
+        return this.BlockRuleLimit;
+    }
+
+    /**
+     * Set <p>封禁规则最大数量</p>
+     * @param BlockRuleLimit <p>封禁规则最大数量</p>
+     */
+    public void setBlockRuleLimit(Long BlockRuleLimit) {
+        this.BlockRuleLimit = BlockRuleLimit;
     }
 
     /**
@@ -989,6 +991,9 @@ API：通过API手动注册
         if (source.MessageEnrichmentRuleLimit != null) {
             this.MessageEnrichmentRuleLimit = new Long(source.MessageEnrichmentRuleLimit);
         }
+        if (source.BlockRuleLimit != null) {
+            this.BlockRuleLimit = new Long(source.BlockRuleLimit);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1034,6 +1039,7 @@ API：通过API手动注册
         this.setParamSimple(map, prefix + "MessageRate", this.MessageRate);
         this.setParamSimple(map, prefix + "TransportLayerSecurity", this.TransportLayerSecurity);
         this.setParamSimple(map, prefix + "MessageEnrichmentRuleLimit", this.MessageEnrichmentRuleLimit);
+        this.setParamSimple(map, prefix + "BlockRuleLimit", this.BlockRuleLimit);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

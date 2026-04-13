@@ -74,6 +74,17 @@ public class TrocketClient extends AbstractClient{
     }
 
     /**
+     *创建元数据迁移上云任务
+     * @param req CreateMigrationTaskRequest
+     * @return CreateMigrationTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMigrationTaskResponse CreateMigrationTask(CreateMigrationTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateMigrationTask", CreateMigrationTaskResponse.class);
+    }
+
+    /**
      *添加角色。
 当前 API 适用集群：5.x 集群。4.x 集群的创建角色接口文档见 [CreateRocketMQRole](https://cloud.tencent.com/document/product/1179/107538)，给角色授权接口文档见 [CreateRocketMQEnvironmentRole](https://cloud.tencent.com/document/product/1179/107539)。
      * @param req CreateRoleRequest

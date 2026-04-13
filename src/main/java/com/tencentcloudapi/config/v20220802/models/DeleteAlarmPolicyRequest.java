@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ags.v20250920.models;
+package com.tencentcloudapi.config.v20220802.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LogConfiguration extends AbstractModel {
+public class DeleteAlarmPolicyRequest extends AbstractModel {
 
     /**
-    * <p>日志推送CLS的配置。</p>
+    * 告警策略id
     */
-    @SerializedName("CLSConfig")
+    @SerializedName("AlarmPolicyId")
     @Expose
-    private CLSConfig CLSConfig;
+    private Long AlarmPolicyId;
 
     /**
-     * Get <p>日志推送CLS的配置。</p> 
-     * @return CLSConfig <p>日志推送CLS的配置。</p>
+     * Get 告警策略id 
+     * @return AlarmPolicyId 告警策略id
      */
-    public CLSConfig getCLSConfig() {
-        return this.CLSConfig;
+    public Long getAlarmPolicyId() {
+        return this.AlarmPolicyId;
     }
 
     /**
-     * Set <p>日志推送CLS的配置。</p>
-     * @param CLSConfig <p>日志推送CLS的配置。</p>
+     * Set 告警策略id
+     * @param AlarmPolicyId 告警策略id
      */
-    public void setCLSConfig(CLSConfig CLSConfig) {
-        this.CLSConfig = CLSConfig;
+    public void setAlarmPolicyId(Long AlarmPolicyId) {
+        this.AlarmPolicyId = AlarmPolicyId;
     }
 
-    public LogConfiguration() {
+    public DeleteAlarmPolicyRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public LogConfiguration(LogConfiguration source) {
-        if (source.CLSConfig != null) {
-            this.CLSConfig = new CLSConfig(source.CLSConfig);
+    public DeleteAlarmPolicyRequest(DeleteAlarmPolicyRequest source) {
+        if (source.AlarmPolicyId != null) {
+            this.AlarmPolicyId = new Long(source.AlarmPolicyId);
         }
     }
 
@@ -64,7 +64,7 @@ public class LogConfiguration extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "CLSConfig.", this.CLSConfig);
+        this.setParamSimple(map, prefix + "AlarmPolicyId", this.AlarmPolicyId);
 
     }
 }

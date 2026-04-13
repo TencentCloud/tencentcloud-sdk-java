@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tione.v20211111.models;
+package com.tencentcloudapi.config.v20220802.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,23 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLogsResponse extends AbstractModel {
-
-    /**
-    * <p>分页的游标</p>
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Context")
-    @Expose
-    private String Context;
-
-    /**
-    * <p>日志数组</p>
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Content")
-    @Expose
-    private LogIdentity [] Content;
+public class DeleteAlarmPolicyResponse extends AbstractModel {
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,46 +29,6 @@ public class DescribeLogsResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get <p>分页的游标</p>
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Context <p>分页的游标</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getContext() {
-        return this.Context;
-    }
-
-    /**
-     * Set <p>分页的游标</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Context <p>分页的游标</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setContext(String Context) {
-        this.Context = Context;
-    }
-
-    /**
-     * Get <p>日志数组</p>
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Content <p>日志数组</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public LogIdentity [] getContent() {
-        return this.Content;
-    }
-
-    /**
-     * Set <p>日志数组</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Content <p>日志数组</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setContent(LogIdentity [] Content) {
-        this.Content = Content;
-    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -102,23 +46,14 @@ public class DescribeLogsResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeLogsResponse() {
+    public DeleteAlarmPolicyResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeLogsResponse(DescribeLogsResponse source) {
-        if (source.Context != null) {
-            this.Context = new String(source.Context);
-        }
-        if (source.Content != null) {
-            this.Content = new LogIdentity[source.Content.length];
-            for (int i = 0; i < source.Content.length; i++) {
-                this.Content[i] = new LogIdentity(source.Content[i]);
-            }
-        }
+    public DeleteAlarmPolicyResponse(DeleteAlarmPolicyResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -129,8 +64,6 @@ public class DescribeLogsResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Context", this.Context);
-        this.setParamArrayObj(map, prefix + "Content.", this.Content);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

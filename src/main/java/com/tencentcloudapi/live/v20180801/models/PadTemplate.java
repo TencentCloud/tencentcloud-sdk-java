@@ -24,230 +24,233 @@ import java.util.HashMap;
 public class PadTemplate extends AbstractModel {
 
     /**
-    * 模板id。
+    * <p>模板id。</p>
     */
     @SerializedName("TemplateId")
     @Expose
     private Long TemplateId;
 
     /**
-    * 模板名称。
+    * <p>模板名称。</p>
     */
     @SerializedName("TemplateName")
     @Expose
     private String TemplateName;
 
     /**
-    * 垫片内容。
+    * <p>垫片内容。</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 模板创建时间。
+    * <p>模板创建时间。</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 模板修改时间。
+    * <p>模板修改时间。</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 模板描述。
+    * <p>模板描述。</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 断流等待时间。
-取值范围：0-30000。
-单位：ms。
+    * <p>断流等待时间。<br>取值范围：0-30000。<br>单位：ms。</p>
     */
     @SerializedName("WaitDuration")
     @Expose
     private Long WaitDuration;
 
     /**
-    * 最大垫片时长。
-取值范围：0 - 正无穷。
-单位：ms。
+    * <p>最大垫片时长。<br>取值范围：0 - 正无穷。<br>单位：ms。</p>
     */
     @SerializedName("MaxDuration")
     @Expose
     private Long MaxDuration;
 
     /**
-    * 垫片内容类型： 1：图片，2：视频。 默认值：1。
+    * <p>垫片内容类型： 1：图片，2：视频。 默认值：1。</p>
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-     * Get 模板id。 
-     * @return TemplateId 模板id。
+    * <p>断流垫片触发条件</p><p>枚举值：</p><ul><li>0： 主动及异常断流</li><li>1： 异常断流</li></ul><p>默认值：0</p>
+    */
+    @SerializedName("TriggerCondition")
+    @Expose
+    private Long TriggerCondition;
+
+    /**
+     * Get <p>模板id。</p> 
+     * @return TemplateId <p>模板id。</p>
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模板id。
-     * @param TemplateId 模板id。
+     * Set <p>模板id。</p>
+     * @param TemplateId <p>模板id。</p>
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 模板名称。 
-     * @return TemplateName 模板名称。
+     * Get <p>模板名称。</p> 
+     * @return TemplateName <p>模板名称。</p>
      */
     public String getTemplateName() {
         return this.TemplateName;
     }
 
     /**
-     * Set 模板名称。
-     * @param TemplateName 模板名称。
+     * Set <p>模板名称。</p>
+     * @param TemplateName <p>模板名称。</p>
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;
     }
 
     /**
-     * Get 垫片内容。 
-     * @return Url 垫片内容。
+     * Get <p>垫片内容。</p> 
+     * @return Url <p>垫片内容。</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 垫片内容。
-     * @param Url 垫片内容。
+     * Set <p>垫片内容。</p>
+     * @param Url <p>垫片内容。</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get 模板创建时间。 
-     * @return CreateTime 模板创建时间。
+     * Get <p>模板创建时间。</p> 
+     * @return CreateTime <p>模板创建时间。</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 模板创建时间。
-     * @param CreateTime 模板创建时间。
+     * Set <p>模板创建时间。</p>
+     * @param CreateTime <p>模板创建时间。</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 模板修改时间。 
-     * @return UpdateTime 模板修改时间。
+     * Get <p>模板修改时间。</p> 
+     * @return UpdateTime <p>模板修改时间。</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 模板修改时间。
-     * @param UpdateTime 模板修改时间。
+     * Set <p>模板修改时间。</p>
+     * @param UpdateTime <p>模板修改时间。</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 模板描述。 
-     * @return Description 模板描述。
+     * Get <p>模板描述。</p> 
+     * @return Description <p>模板描述。</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 模板描述。
-     * @param Description 模板描述。
+     * Set <p>模板描述。</p>
+     * @param Description <p>模板描述。</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 断流等待时间。
-取值范围：0-30000。
-单位：ms。 
-     * @return WaitDuration 断流等待时间。
-取值范围：0-30000。
-单位：ms。
+     * Get <p>断流等待时间。<br>取值范围：0-30000。<br>单位：ms。</p> 
+     * @return WaitDuration <p>断流等待时间。<br>取值范围：0-30000。<br>单位：ms。</p>
      */
     public Long getWaitDuration() {
         return this.WaitDuration;
     }
 
     /**
-     * Set 断流等待时间。
-取值范围：0-30000。
-单位：ms。
-     * @param WaitDuration 断流等待时间。
-取值范围：0-30000。
-单位：ms。
+     * Set <p>断流等待时间。<br>取值范围：0-30000。<br>单位：ms。</p>
+     * @param WaitDuration <p>断流等待时间。<br>取值范围：0-30000。<br>单位：ms。</p>
      */
     public void setWaitDuration(Long WaitDuration) {
         this.WaitDuration = WaitDuration;
     }
 
     /**
-     * Get 最大垫片时长。
-取值范围：0 - 正无穷。
-单位：ms。 
-     * @return MaxDuration 最大垫片时长。
-取值范围：0 - 正无穷。
-单位：ms。
+     * Get <p>最大垫片时长。<br>取值范围：0 - 正无穷。<br>单位：ms。</p> 
+     * @return MaxDuration <p>最大垫片时长。<br>取值范围：0 - 正无穷。<br>单位：ms。</p>
      */
     public Long getMaxDuration() {
         return this.MaxDuration;
     }
 
     /**
-     * Set 最大垫片时长。
-取值范围：0 - 正无穷。
-单位：ms。
-     * @param MaxDuration 最大垫片时长。
-取值范围：0 - 正无穷。
-单位：ms。
+     * Set <p>最大垫片时长。<br>取值范围：0 - 正无穷。<br>单位：ms。</p>
+     * @param MaxDuration <p>最大垫片时长。<br>取值范围：0 - 正无穷。<br>单位：ms。</p>
      */
     public void setMaxDuration(Long MaxDuration) {
         this.MaxDuration = MaxDuration;
     }
 
     /**
-     * Get 垫片内容类型： 1：图片，2：视频。 默认值：1。 
-     * @return Type 垫片内容类型： 1：图片，2：视频。 默认值：1。
+     * Get <p>垫片内容类型： 1：图片，2：视频。 默认值：1。</p> 
+     * @return Type <p>垫片内容类型： 1：图片，2：视频。 默认值：1。</p>
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 垫片内容类型： 1：图片，2：视频。 默认值：1。
-     * @param Type 垫片内容类型： 1：图片，2：视频。 默认值：1。
+     * Set <p>垫片内容类型： 1：图片，2：视频。 默认值：1。</p>
+     * @param Type <p>垫片内容类型： 1：图片，2：视频。 默认值：1。</p>
      */
     public void setType(Long Type) {
         this.Type = Type;
+    }
+
+    /**
+     * Get <p>断流垫片触发条件</p><p>枚举值：</p><ul><li>0： 主动及异常断流</li><li>1： 异常断流</li></ul><p>默认值：0</p> 
+     * @return TriggerCondition <p>断流垫片触发条件</p><p>枚举值：</p><ul><li>0： 主动及异常断流</li><li>1： 异常断流</li></ul><p>默认值：0</p>
+     */
+    public Long getTriggerCondition() {
+        return this.TriggerCondition;
+    }
+
+    /**
+     * Set <p>断流垫片触发条件</p><p>枚举值：</p><ul><li>0： 主动及异常断流</li><li>1： 异常断流</li></ul><p>默认值：0</p>
+     * @param TriggerCondition <p>断流垫片触发条件</p><p>枚举值：</p><ul><li>0： 主动及异常断流</li><li>1： 异常断流</li></ul><p>默认值：0</p>
+     */
+    public void setTriggerCondition(Long TriggerCondition) {
+        this.TriggerCondition = TriggerCondition;
     }
 
     public PadTemplate() {
@@ -285,6 +288,9 @@ public class PadTemplate extends AbstractModel {
         if (source.Type != null) {
             this.Type = new Long(source.Type);
         }
+        if (source.TriggerCondition != null) {
+            this.TriggerCondition = new Long(source.TriggerCondition);
+        }
     }
 
 
@@ -301,6 +307,7 @@ public class PadTemplate extends AbstractModel {
         this.setParamSimple(map, prefix + "WaitDuration", this.WaitDuration);
         this.setParamSimple(map, prefix + "MaxDuration", this.MaxDuration);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "TriggerCondition", this.TriggerCondition);
 
     }
 }

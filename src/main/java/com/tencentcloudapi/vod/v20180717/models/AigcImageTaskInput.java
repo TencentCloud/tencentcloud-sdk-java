@@ -24,187 +24,210 @@ import java.util.HashMap;
 public class AigcImageTaskInput extends AbstractModel {
 
     /**
-    * 模型名称。
+    * <p>模型名称。</p>
     */
     @SerializedName("ModelName")
     @Expose
     private String ModelName;
 
     /**
-    * 模型版本。
+    * <p>模型版本。</p>
     */
     @SerializedName("ModelVersion")
     @Expose
     private String ModelVersion;
 
     /**
-    * AIGC生图任务输入文件信息。
+    * <p>AIGC生图任务输入文件信息。</p>
     */
     @SerializedName("FileInfos")
     @Expose
     private AigcImageTaskInputFileInfo [] FileInfos;
 
     /**
-    * 生成图片的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。
+    * <p>生成图片的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。</p>
     */
     @SerializedName("Prompt")
     @Expose
     private String Prompt;
 
     /**
-    * 要阻止模型生成图片的提示词。最大支持1000字符。
+    * <p>要阻止模型生成图片的提示词。最大支持1000字符。</p>
     */
     @SerializedName("NegativePrompt")
     @Expose
     private String NegativePrompt;
 
     /**
-    * 是否自动优化提示词。开启时将自动优化传入的Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 
+    * <p>是否自动优化提示词。开启时将自动优化传入的Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
     */
     @SerializedName("EnhancePrompt")
     @Expose
     private String EnhancePrompt;
 
     /**
-    * 生成模式。取值有： <li>Standard：标准模式；</li> <li>Professional：高品质模式；</li> 
+    * <p>生成模式。取值有： <li>Standard：标准模式；</li> <li>Professional：高品质模式；</li></p>
     */
     @SerializedName("GenerationMode")
     @Expose
     private String GenerationMode;
 
     /**
-    * AIGC 生图输出结果文件输出。
+    * <p>AIGC 生图输出结果文件输出。</p>
     */
     @SerializedName("OutputConfig")
     @Expose
     private AigcImageOutputConfig OutputConfig;
 
     /**
-     * Get 模型名称。 
-     * @return ModelName 模型名称。
+    * <p>模型随机种子。</p>
+    */
+    @SerializedName("Seed")
+    @Expose
+    private Long Seed;
+
+    /**
+     * Get <p>模型名称。</p> 
+     * @return ModelName <p>模型名称。</p>
      */
     public String getModelName() {
         return this.ModelName;
     }
 
     /**
-     * Set 模型名称。
-     * @param ModelName 模型名称。
+     * Set <p>模型名称。</p>
+     * @param ModelName <p>模型名称。</p>
      */
     public void setModelName(String ModelName) {
         this.ModelName = ModelName;
     }
 
     /**
-     * Get 模型版本。 
-     * @return ModelVersion 模型版本。
+     * Get <p>模型版本。</p> 
+     * @return ModelVersion <p>模型版本。</p>
      */
     public String getModelVersion() {
         return this.ModelVersion;
     }
 
     /**
-     * Set 模型版本。
-     * @param ModelVersion 模型版本。
+     * Set <p>模型版本。</p>
+     * @param ModelVersion <p>模型版本。</p>
      */
     public void setModelVersion(String ModelVersion) {
         this.ModelVersion = ModelVersion;
     }
 
     /**
-     * Get AIGC生图任务输入文件信息。 
-     * @return FileInfos AIGC生图任务输入文件信息。
+     * Get <p>AIGC生图任务输入文件信息。</p> 
+     * @return FileInfos <p>AIGC生图任务输入文件信息。</p>
      */
     public AigcImageTaskInputFileInfo [] getFileInfos() {
         return this.FileInfos;
     }
 
     /**
-     * Set AIGC生图任务输入文件信息。
-     * @param FileInfos AIGC生图任务输入文件信息。
+     * Set <p>AIGC生图任务输入文件信息。</p>
+     * @param FileInfos <p>AIGC生图任务输入文件信息。</p>
      */
     public void setFileInfos(AigcImageTaskInputFileInfo [] FileInfos) {
         this.FileInfos = FileInfos;
     }
 
     /**
-     * Get 生成图片的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。 
-     * @return Prompt 生成图片的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。
+     * Get <p>生成图片的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。</p> 
+     * @return Prompt <p>生成图片的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。</p>
      */
     public String getPrompt() {
         return this.Prompt;
     }
 
     /**
-     * Set 生成图片的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。
-     * @param Prompt 生成图片的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。
+     * Set <p>生成图片的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。</p>
+     * @param Prompt <p>生成图片的提示词。最大支持1000字符，当 FileInfos 为空时，此参数必填。</p>
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
     }
 
     /**
-     * Get 要阻止模型生成图片的提示词。最大支持1000字符。 
-     * @return NegativePrompt 要阻止模型生成图片的提示词。最大支持1000字符。
+     * Get <p>要阻止模型生成图片的提示词。最大支持1000字符。</p> 
+     * @return NegativePrompt <p>要阻止模型生成图片的提示词。最大支持1000字符。</p>
      */
     public String getNegativePrompt() {
         return this.NegativePrompt;
     }
 
     /**
-     * Set 要阻止模型生成图片的提示词。最大支持1000字符。
-     * @param NegativePrompt 要阻止模型生成图片的提示词。最大支持1000字符。
+     * Set <p>要阻止模型生成图片的提示词。最大支持1000字符。</p>
+     * @param NegativePrompt <p>要阻止模型生成图片的提示词。最大支持1000字符。</p>
      */
     public void setNegativePrompt(String NegativePrompt) {
         this.NegativePrompt = NegativePrompt;
     }
 
     /**
-     * Get 是否自动优化提示词。开启时将自动优化传入的Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li>  
-     * @return EnhancePrompt 是否自动优化提示词。开启时将自动优化传入的Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 
+     * Get <p>是否自动优化提示词。开启时将自动优化传入的Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p> 
+     * @return EnhancePrompt <p>是否自动优化提示词。开启时将自动优化传入的Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
      */
     public String getEnhancePrompt() {
         return this.EnhancePrompt;
     }
 
     /**
-     * Set 是否自动优化提示词。开启时将自动优化传入的Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 
-     * @param EnhancePrompt 是否自动优化提示词。开启时将自动优化传入的Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li> 
+     * Set <p>是否自动优化提示词。开启时将自动优化传入的Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
+     * @param EnhancePrompt <p>是否自动优化提示词。开启时将自动优化传入的Prompt，以提升生成质量。取值有： <li>Enabled：开启；</li> <li>Disabled：关闭；</li></p>
      */
     public void setEnhancePrompt(String EnhancePrompt) {
         this.EnhancePrompt = EnhancePrompt;
     }
 
     /**
-     * Get 生成模式。取值有： <li>Standard：标准模式；</li> <li>Professional：高品质模式；</li>  
-     * @return GenerationMode 生成模式。取值有： <li>Standard：标准模式；</li> <li>Professional：高品质模式；</li> 
+     * Get <p>生成模式。取值有： <li>Standard：标准模式；</li> <li>Professional：高品质模式；</li></p> 
+     * @return GenerationMode <p>生成模式。取值有： <li>Standard：标准模式；</li> <li>Professional：高品质模式；</li></p>
      */
     public String getGenerationMode() {
         return this.GenerationMode;
     }
 
     /**
-     * Set 生成模式。取值有： <li>Standard：标准模式；</li> <li>Professional：高品质模式；</li> 
-     * @param GenerationMode 生成模式。取值有： <li>Standard：标准模式；</li> <li>Professional：高品质模式；</li> 
+     * Set <p>生成模式。取值有： <li>Standard：标准模式；</li> <li>Professional：高品质模式；</li></p>
+     * @param GenerationMode <p>生成模式。取值有： <li>Standard：标准模式；</li> <li>Professional：高品质模式；</li></p>
      */
     public void setGenerationMode(String GenerationMode) {
         this.GenerationMode = GenerationMode;
     }
 
     /**
-     * Get AIGC 生图输出结果文件输出。 
-     * @return OutputConfig AIGC 生图输出结果文件输出。
+     * Get <p>AIGC 生图输出结果文件输出。</p> 
+     * @return OutputConfig <p>AIGC 生图输出结果文件输出。</p>
      */
     public AigcImageOutputConfig getOutputConfig() {
         return this.OutputConfig;
     }
 
     /**
-     * Set AIGC 生图输出结果文件输出。
-     * @param OutputConfig AIGC 生图输出结果文件输出。
+     * Set <p>AIGC 生图输出结果文件输出。</p>
+     * @param OutputConfig <p>AIGC 生图输出结果文件输出。</p>
      */
     public void setOutputConfig(AigcImageOutputConfig OutputConfig) {
         this.OutputConfig = OutputConfig;
+    }
+
+    /**
+     * Get <p>模型随机种子。</p> 
+     * @return Seed <p>模型随机种子。</p>
+     */
+    public Long getSeed() {
+        return this.Seed;
+    }
+
+    /**
+     * Set <p>模型随机种子。</p>
+     * @param Seed <p>模型随机种子。</p>
+     */
+    public void setSeed(Long Seed) {
+        this.Seed = Seed;
     }
 
     public AigcImageTaskInput() {
@@ -242,6 +265,9 @@ public class AigcImageTaskInput extends AbstractModel {
         if (source.OutputConfig != null) {
             this.OutputConfig = new AigcImageOutputConfig(source.OutputConfig);
         }
+        if (source.Seed != null) {
+            this.Seed = new Long(source.Seed);
+        }
     }
 
 
@@ -257,6 +283,7 @@ public class AigcImageTaskInput extends AbstractModel {
         this.setParamSimple(map, prefix + "EnhancePrompt", this.EnhancePrompt);
         this.setParamSimple(map, prefix + "GenerationMode", this.GenerationMode);
         this.setParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
+        this.setParamSimple(map, prefix + "Seed", this.Seed);
 
     }
 }

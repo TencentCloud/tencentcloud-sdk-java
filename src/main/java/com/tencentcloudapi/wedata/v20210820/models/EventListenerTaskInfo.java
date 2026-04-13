@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class EventListenerTaskInfo extends AbstractModel {
 
     /**
-    * 任务id
+    * <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
@@ -32,7 +32,7 @@ public class EventListenerTaskInfo extends AbstractModel {
     private String TaskId;
 
     /**
-    * 任务名称
+    * <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskName")
@@ -40,7 +40,7 @@ public class EventListenerTaskInfo extends AbstractModel {
     private String TaskName;
 
     /**
-    * 工作流id
+    * <p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowId")
@@ -48,7 +48,7 @@ public class EventListenerTaskInfo extends AbstractModel {
     private String WorkflowId;
 
     /**
-    * 工作流名称
+    * <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowName")
@@ -56,7 +56,7 @@ public class EventListenerTaskInfo extends AbstractModel {
     private String WorkflowName;
 
     /**
-    * 任务类型id
+    * <p>任务类型id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskTypeId")
@@ -64,7 +64,7 @@ public class EventListenerTaskInfo extends AbstractModel {
     private Long TaskTypeId;
 
     /**
-    * 任务类型名称
+    * <p>任务类型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskType")
@@ -72,7 +72,7 @@ public class EventListenerTaskInfo extends AbstractModel {
     private String TaskType;
 
     /**
-    * 项目id
+    * <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
@@ -80,7 +80,7 @@ public class EventListenerTaskInfo extends AbstractModel {
     private String ProjectId;
 
     /**
-    * 任务周期类型
+    * <p>任务周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CycleType")
@@ -88,9 +88,17 @@ public class EventListenerTaskInfo extends AbstractModel {
     private String CycleType;
 
     /**
-     * Get 任务id
+    * <p>事件名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EventName")
+    @Expose
+    private String EventName;
+
+    /**
+     * Get <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskId 任务id
+     * @return TaskId <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
@@ -98,9 +106,9 @@ public class EventListenerTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务id
+     * Set <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskId 任务id
+     * @param TaskId <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {
@@ -108,9 +116,9 @@ public class EventListenerTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务名称
+     * Get <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskName 任务名称
+     * @return TaskName <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskName() {
@@ -118,9 +126,9 @@ public class EventListenerTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务名称
+     * Set <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskName 任务名称
+     * @param TaskName <p>任务名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskName(String TaskName) {
@@ -128,9 +136,9 @@ public class EventListenerTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 工作流id
+     * Get <p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowId 工作流id
+     * @return WorkflowId <p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowId() {
@@ -138,9 +146,9 @@ public class EventListenerTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 工作流id
+     * Set <p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowId 工作流id
+     * @param WorkflowId <p>工作流id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowId(String WorkflowId) {
@@ -148,9 +156,9 @@ public class EventListenerTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 工作流名称
+     * Get <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowName 工作流名称
+     * @return WorkflowName <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowName() {
@@ -158,9 +166,9 @@ public class EventListenerTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 工作流名称
+     * Set <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowName 工作流名称
+     * @param WorkflowName <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowName(String WorkflowName) {
@@ -168,9 +176,9 @@ public class EventListenerTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务类型id
+     * Get <p>任务类型id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskTypeId 任务类型id
+     * @return TaskTypeId <p>任务类型id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskTypeId() {
@@ -178,9 +186,9 @@ public class EventListenerTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务类型id
+     * Set <p>任务类型id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskTypeId 任务类型id
+     * @param TaskTypeId <p>任务类型id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskTypeId(Long TaskTypeId) {
@@ -188,9 +196,9 @@ public class EventListenerTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务类型名称
+     * Get <p>任务类型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskType 任务类型名称
+     * @return TaskType <p>任务类型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskType() {
@@ -198,9 +206,9 @@ public class EventListenerTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务类型名称
+     * Set <p>任务类型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskType 任务类型名称
+     * @param TaskType <p>任务类型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskType(String TaskType) {
@@ -208,9 +216,9 @@ public class EventListenerTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 项目id
+     * Get <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectId 项目id
+     * @return ProjectId <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectId() {
@@ -218,9 +226,9 @@ public class EventListenerTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 项目id
+     * Set <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectId 项目id
+     * @param ProjectId <p>项目id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(String ProjectId) {
@@ -228,9 +236,9 @@ public class EventListenerTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务周期类型
+     * Get <p>任务周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CycleType 任务周期类型
+     * @return CycleType <p>任务周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCycleType() {
@@ -238,13 +246,33 @@ public class EventListenerTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set 任务周期类型
+     * Set <p>任务周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CycleType 任务周期类型
+     * @param CycleType <p>任务周期类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCycleType(String CycleType) {
         this.CycleType = CycleType;
+    }
+
+    /**
+     * Get <p>事件名称</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EventName <p>事件名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEventName() {
+        return this.EventName;
+    }
+
+    /**
+     * Set <p>事件名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EventName <p>事件名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEventName(String EventName) {
+        this.EventName = EventName;
     }
 
     public EventListenerTaskInfo() {
@@ -279,6 +307,9 @@ public class EventListenerTaskInfo extends AbstractModel {
         if (source.CycleType != null) {
             this.CycleType = new String(source.CycleType);
         }
+        if (source.EventName != null) {
+            this.EventName = new String(source.EventName);
+        }
     }
 
 
@@ -294,6 +325,7 @@ public class EventListenerTaskInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "CycleType", this.CycleType);
+        this.setParamSimple(map, prefix + "EventName", this.EventName);
 
     }
 }

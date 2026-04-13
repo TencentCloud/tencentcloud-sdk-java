@@ -87,6 +87,13 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
     private String InputRegion;
 
     /**
+    * <p>模型随机种子。</p>
+    */
+    @SerializedName("Seed")
+    @Expose
+    private Long Seed;
+
+    /**
     * <p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
     */
     @SerializedName("SessionId")
@@ -259,6 +266,22 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
     }
 
     /**
+     * Get <p>模型随机种子。</p> 
+     * @return Seed <p>模型随机种子。</p>
+     */
+    public Long getSeed() {
+        return this.Seed;
+    }
+
+    /**
+     * Set <p>模型随机种子。</p>
+     * @param Seed <p>模型随机种子。</p>
+     */
+    public void setSeed(Long Seed) {
+        this.Seed = Seed;
+    }
+
+    /**
      * Get <p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p> 
      * @return SessionId <p>用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。</p>
      */
@@ -360,6 +383,9 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
         if (source.InputRegion != null) {
             this.InputRegion = new String(source.InputRegion);
         }
+        if (source.Seed != null) {
+            this.Seed = new Long(source.Seed);
+        }
         if (source.SessionId != null) {
             this.SessionId = new String(source.SessionId);
         }
@@ -388,6 +414,7 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EnhancePrompt", this.EnhancePrompt);
         this.setParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
         this.setParamSimple(map, prefix + "InputRegion", this.InputRegion);
+        this.setParamSimple(map, prefix + "Seed", this.Seed);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "TasksPriority", this.TasksPriority);

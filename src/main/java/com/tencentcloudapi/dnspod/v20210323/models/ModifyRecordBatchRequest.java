@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class ModifyRecordBatchRequest extends AbstractModel {
 
     /**
-    * 记录ID数组。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId。单次最多修改5000条记录。
+    * <p>记录ID数组。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId。单次最多修改5000条记录。</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1427/56166">DescribeRecordList</a></p>
     */
     @SerializedName("RecordIdList")
     @Expose
     private Long [] RecordIdList;
 
     /**
-    * 要修改的字段，可选值为 [“sub_domain”、”record_type”、”area”、”value”、”mx”、”ttl”、”status”] 中的某一个。
+    * <p>要修改的字段，可选值为 [“sub_domain”、”record_type”、”area”、”value”、”mx”、”ttl”、”status”] 中的某一个。</p>
     */
     @SerializedName("Change")
     @Expose
     private String Change;
 
     /**
-    * 修改为，具体依赖 change 字段，必填参数。
+    * <p>修改为，具体依赖 change 字段，必填参数。</p>
     */
     @SerializedName("ChangeTo")
     @Expose
     private String ChangeTo;
 
     /**
-    * 要修改到的记录值，仅当 change 字段为 “record_type” 时为必填参数。
+    * <p>要修改到的记录值，仅当 change 字段为 “record_type” 时为必填参数。</p>
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-    * MX 优先级，当记录类型是 MX、HTTPS、SVCB 时必填，范围1-65535。
+    * <p>MX 优先级，当记录类型是 MX、HTTPS、SVCB 时必填，范围0-65535。</p>
     */
     @SerializedName("MX")
     @Expose
     private String MX;
 
     /**
-     * Get 记录ID数组。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId。单次最多修改5000条记录。 
-     * @return RecordIdList 记录ID数组。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId。单次最多修改5000条记录。
+     * Get <p>记录ID数组。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId。单次最多修改5000条记录。</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1427/56166">DescribeRecordList</a></p> 
+     * @return RecordIdList <p>记录ID数组。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId。单次最多修改5000条记录。</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1427/56166">DescribeRecordList</a></p>
      */
     public Long [] getRecordIdList() {
         return this.RecordIdList;
     }
 
     /**
-     * Set 记录ID数组。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId。单次最多修改5000条记录。
-     * @param RecordIdList 记录ID数组。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId。单次最多修改5000条记录。
+     * Set <p>记录ID数组。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId。单次最多修改5000条记录。</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1427/56166">DescribeRecordList</a></p>
+     * @param RecordIdList <p>记录ID数组。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId。单次最多修改5000条记录。</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/1427/56166">DescribeRecordList</a></p>
      */
     public void setRecordIdList(Long [] RecordIdList) {
         this.RecordIdList = RecordIdList;
     }
 
     /**
-     * Get 要修改的字段，可选值为 [“sub_domain”、”record_type”、”area”、”value”、”mx”、”ttl”、”status”] 中的某一个。 
-     * @return Change 要修改的字段，可选值为 [“sub_domain”、”record_type”、”area”、”value”、”mx”、”ttl”、”status”] 中的某一个。
+     * Get <p>要修改的字段，可选值为 [“sub_domain”、”record_type”、”area”、”value”、”mx”、”ttl”、”status”] 中的某一个。</p> 
+     * @return Change <p>要修改的字段，可选值为 [“sub_domain”、”record_type”、”area”、”value”、”mx”、”ttl”、”status”] 中的某一个。</p>
      */
     public String getChange() {
         return this.Change;
     }
 
     /**
-     * Set 要修改的字段，可选值为 [“sub_domain”、”record_type”、”area”、”value”、”mx”、”ttl”、”status”] 中的某一个。
-     * @param Change 要修改的字段，可选值为 [“sub_domain”、”record_type”、”area”、”value”、”mx”、”ttl”、”status”] 中的某一个。
+     * Set <p>要修改的字段，可选值为 [“sub_domain”、”record_type”、”area”、”value”、”mx”、”ttl”、”status”] 中的某一个。</p>
+     * @param Change <p>要修改的字段，可选值为 [“sub_domain”、”record_type”、”area”、”value”、”mx”、”ttl”、”status”] 中的某一个。</p>
      */
     public void setChange(String Change) {
         this.Change = Change;
     }
 
     /**
-     * Get 修改为，具体依赖 change 字段，必填参数。 
-     * @return ChangeTo 修改为，具体依赖 change 字段，必填参数。
+     * Get <p>修改为，具体依赖 change 字段，必填参数。</p> 
+     * @return ChangeTo <p>修改为，具体依赖 change 字段，必填参数。</p>
      */
     public String getChangeTo() {
         return this.ChangeTo;
     }
 
     /**
-     * Set 修改为，具体依赖 change 字段，必填参数。
-     * @param ChangeTo 修改为，具体依赖 change 字段，必填参数。
+     * Set <p>修改为，具体依赖 change 字段，必填参数。</p>
+     * @param ChangeTo <p>修改为，具体依赖 change 字段，必填参数。</p>
      */
     public void setChangeTo(String ChangeTo) {
         this.ChangeTo = ChangeTo;
     }
 
     /**
-     * Get 要修改到的记录值，仅当 change 字段为 “record_type” 时为必填参数。 
-     * @return Value 要修改到的记录值，仅当 change 字段为 “record_type” 时为必填参数。
+     * Get <p>要修改到的记录值，仅当 change 字段为 “record_type” 时为必填参数。</p> 
+     * @return Value <p>要修改到的记录值，仅当 change 字段为 “record_type” 时为必填参数。</p>
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set 要修改到的记录值，仅当 change 字段为 “record_type” 时为必填参数。
-     * @param Value 要修改到的记录值，仅当 change 字段为 “record_type” 时为必填参数。
+     * Set <p>要修改到的记录值，仅当 change 字段为 “record_type” 时为必填参数。</p>
+     * @param Value <p>要修改到的记录值，仅当 change 字段为 “record_type” 时为必填参数。</p>
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get MX 优先级，当记录类型是 MX、HTTPS、SVCB 时必填，范围1-65535。 
-     * @return MX MX 优先级，当记录类型是 MX、HTTPS、SVCB 时必填，范围1-65535。
+     * Get <p>MX 优先级，当记录类型是 MX、HTTPS、SVCB 时必填，范围0-65535。</p> 
+     * @return MX <p>MX 优先级，当记录类型是 MX、HTTPS、SVCB 时必填，范围0-65535。</p>
      */
     public String getMX() {
         return this.MX;
     }
 
     /**
-     * Set MX 优先级，当记录类型是 MX、HTTPS、SVCB 时必填，范围1-65535。
-     * @param MX MX 优先级，当记录类型是 MX、HTTPS、SVCB 时必填，范围1-65535。
+     * Set <p>MX 优先级，当记录类型是 MX、HTTPS、SVCB 时必填，范围0-65535。</p>
+     * @param MX <p>MX 优先级，当记录类型是 MX、HTTPS、SVCB 时必填，范围0-65535。</p>
      */
     public void setMX(String MX) {
         this.MX = MX;

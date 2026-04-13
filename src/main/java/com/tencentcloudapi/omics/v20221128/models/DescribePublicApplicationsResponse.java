@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribePublicApplicationsResponse extends AbstractModel {
 
     /**
-    * 公共应用。
+    * <p>公共应用。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Applications")
@@ -32,7 +32,7 @@ public class DescribePublicApplicationsResponse extends AbstractModel {
     private PublicApplication [] Applications;
 
     /**
-    * 符合条件的数量。
+    * <p>符合条件的数量。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
@@ -47,9 +47,9 @@ public class DescribePublicApplicationsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 公共应用。
+     * Get <p>公共应用。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Applications 公共应用。
+     * @return Applications <p>公共应用。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PublicApplication [] getApplications() {
@@ -57,9 +57,9 @@ public class DescribePublicApplicationsResponse extends AbstractModel {
     }
 
     /**
-     * Set 公共应用。
+     * Set <p>公共应用。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Applications 公共应用。
+     * @param Applications <p>公共应用。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplications(PublicApplication [] Applications) {
@@ -67,9 +67,9 @@ public class DescribePublicApplicationsResponse extends AbstractModel {
     }
 
     /**
-     * Get 符合条件的数量。
+     * Get <p>符合条件的数量。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalCount 符合条件的数量。
+     * @return TotalCount <p>符合条件的数量。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
@@ -77,9 +77,9 @@ public class DescribePublicApplicationsResponse extends AbstractModel {
     }
 
     /**
-     * Set 符合条件的数量。
+     * Set <p>符合条件的数量。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalCount 符合条件的数量。
+     * @param TotalCount <p>符合条件的数量。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {

@@ -24,383 +24,253 @@ import java.util.HashMap;
 public class DescribeLogsRequest extends AbstractModel {
 
     /**
-    * 服务类型，TRAIN为任务式建模, NOTEBOOK为Notebook, INFER为在线服务, BATCH为批量预测
-枚举值：
-- TRAIN
-- NOTEBOOK
-- INFER
-- BATCH
+    * <p>服务类型，TRAIN为任务式建模, NOTEBOOK为Notebook, INFER为在线服务, BATCH为批量预测<br>枚举值：</p><ul><li>TRAIN</li><li>NOTEBOOK</li><li>INFER</li><li>BATCH</li></ul>
     */
     @SerializedName("Service")
     @Expose
     private String Service;
 
     /**
-    * 日志查询开始时间（RFC3339格式的时间字符串），默认值为当前时间的前一个小时
+    * <p>日志查询开始时间（RFC3339格式的时间字符串），默认值为当前时间的前一个小时</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 日志查询结束时间（RFC3339格式的时间字符串），默认值为当前时间
+    * <p>日志查询结束时间（RFC3339格式的时间字符串），默认值为当前时间</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 日志查询条数，默认值100，最大值1000
+    * <p>日志查询条数，默认值100，最大值1000</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 服务ID，和Service参数对应，不同Service的服务ID获取方式不同，具体如下：
-- Service类型为TRAIN：
-  调用[DescribeTrainingTask接口](/document/product/851/75089)查询训练任务详情，ServiceId为接口返回值中Response.TrainingTaskDetail.LatestInstanceId
-- Service类型为NOTEBOOK：
-  调用[DescribeNotebook接口](/document/product/851/95662)查询Notebook详情，ServiceId为接口返回值中Response.NotebookDetail.PodName
-- Service类型为INFER：
-  调用[DescribeModelServiceGroup接口](/document/product/851/82285)查询服务组详情，ServiceId为接口返回值中Response.ServiceGroup.Services.ServiceId
-- Service类型为BATCH：
-  调用[DescribeBatchTask接口](/document/product/851/80180)查询跑批任务详情，ServiceId为接口返回值中Response.BatchTaskDetail.LatestInstanceId
+    * <p>服务ID，和Service参数对应，不同Service的服务ID获取方式不同，具体如下：</p><ul><li>Service类型为TRAIN：<br>调用<a href="/document/product/851/75089">DescribeTrainingTask接口</a>查询训练任务详情，ServiceId为接口返回值中Response.TrainingTaskDetail.LatestInstanceId</li><li>Service类型为NOTEBOOK：<br>调用<a href="/document/product/851/95662">DescribeNotebook接口</a>查询Notebook详情，ServiceId为接口返回值中Response.NotebookDetail.PodName</li><li>Service类型为INFER：<br>调用<a href="/document/product/851/82285">DescribeModelServiceGroup接口</a>查询服务组详情，ServiceId为接口返回值中Response.ServiceGroup.Services.ServiceId</li><li>Service类型为BATCH：<br>调用<a href="/document/product/851/80180">DescribeBatchTask接口</a>查询跑批任务详情，ServiceId为接口返回值中Response.BatchTaskDetail.LatestInstanceId</li></ul>
     */
     @SerializedName("ServiceId")
     @Expose
     private String ServiceId;
 
     /**
-    * Pod的名称，即需要查询服务对应的Pod，和Service参数对应，不同Service的PodName获取方式不同，具体如下：
-- Service类型为TRAIN：
-  调用[DescribeTrainingTaskPods接口](/document/product/851/75088)查询训练任务pod列表，PodName为接口返回值中Response.PodNames
-- Service类型为NOTEBOOK：
-  调用[DescribeNotebook接口](/document/product/851/95662)查询Notebook详情，PodName为接口返回值中Response.NotebookDetail.PodName
-- Service类型为INFER：
-  调用[DescribeModelService接口](/document/product/851/82287)查询单个服务详情，PodName为接口返回值中Response.Service.ServiceInfo.PodInfos
-- Service类型为BATCH：
-  调用[DescribeBatchTask接口](/document/product/851/80180)查询跑批任务详情，PodName为接口返回值中Response.BatchTaskDetail. PodList
-注：支持结尾通配符*
+    * <p>Pod的名称，即需要查询服务对应的Pod，和Service参数对应，不同Service的PodName获取方式不同，具体如下：</p><ul><li>Service类型为TRAIN：<br>调用<a href="/document/product/851/75088">DescribeTrainingTaskPods接口</a>查询训练任务pod列表，PodName为接口返回值中Response.PodNames</li><li>Service类型为NOTEBOOK：<br>调用<a href="/document/product/851/95662">DescribeNotebook接口</a>查询Notebook详情，PodName为接口返回值中Response.NotebookDetail.PodName</li><li>Service类型为INFER：<br>调用<a href="/document/product/851/82287">DescribeModelService接口</a>查询单个服务详情，PodName为接口返回值中Response.Service.ServiceInfo.PodInfos</li><li>Service类型为BATCH：<br>调用<a href="/document/product/851/80180">DescribeBatchTask接口</a>查询跑批任务详情，PodName为接口返回值中Response.BatchTaskDetail. PodList<br>注：支持结尾通配符*</li></ul>
     */
     @SerializedName("PodName")
     @Expose
     private String PodName;
 
     /**
-    * 排序方向（可选值为ASC, DESC ），默认为DESC
+    * <p>排序方向（可选值为ASC, DESC ），默认为DESC</p>
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * 按哪个字段排序（可选值为Timestamp），默认值为Timestamp
+    * <p>按哪个字段排序（可选值为Timestamp），默认值为Timestamp</p>
     */
     @SerializedName("OrderField")
     @Expose
     private String OrderField;
 
     /**
-    * 日志查询上下文，查询下一页的时候需要回传这个字段，该字段来自本接口的返回
+    * <p>日志查询上下文，查询下一页的时候需要回传这个字段，该字段来自本接口的返回</p>
     */
     @SerializedName("Context")
     @Expose
     private String Context;
 
     /**
-    * 过滤条件
-注意: 
-1. Filter.Name：目前只支持Key（也就是按关键字过滤日志）
-2. Filter.Values：表示过滤日志的关键字；Values为多个的时候表示同时满足
-3. Filter. Negative和Filter. Fuzzy没有使用
+    * <p>过滤条件<br>注意: </p><ol><li>Filter.Name：目前只支持Key（也就是按关键字过滤日志）</li><li>Filter.Values：表示过滤日志的关键字；Values为多个的时候表示同时满足</li><li>Filter. Negative和Filter. Fuzzy没有使用</li></ol>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 使用OFFSET分页查询时，指定返回的数据偏移量，默认为0
+    * <p>使用OFFSET分页查询时，指定返回的数据偏移量，默认为0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get 服务类型，TRAIN为任务式建模, NOTEBOOK为Notebook, INFER为在线服务, BATCH为批量预测
-枚举值：
-- TRAIN
-- NOTEBOOK
-- INFER
-- BATCH 
-     * @return Service 服务类型，TRAIN为任务式建模, NOTEBOOK为Notebook, INFER为在线服务, BATCH为批量预测
-枚举值：
-- TRAIN
-- NOTEBOOK
-- INFER
-- BATCH
+     * Get <p>服务类型，TRAIN为任务式建模, NOTEBOOK为Notebook, INFER为在线服务, BATCH为批量预测<br>枚举值：</p><ul><li>TRAIN</li><li>NOTEBOOK</li><li>INFER</li><li>BATCH</li></ul> 
+     * @return Service <p>服务类型，TRAIN为任务式建模, NOTEBOOK为Notebook, INFER为在线服务, BATCH为批量预测<br>枚举值：</p><ul><li>TRAIN</li><li>NOTEBOOK</li><li>INFER</li><li>BATCH</li></ul>
      */
     public String getService() {
         return this.Service;
     }
 
     /**
-     * Set 服务类型，TRAIN为任务式建模, NOTEBOOK为Notebook, INFER为在线服务, BATCH为批量预测
-枚举值：
-- TRAIN
-- NOTEBOOK
-- INFER
-- BATCH
-     * @param Service 服务类型，TRAIN为任务式建模, NOTEBOOK为Notebook, INFER为在线服务, BATCH为批量预测
-枚举值：
-- TRAIN
-- NOTEBOOK
-- INFER
-- BATCH
+     * Set <p>服务类型，TRAIN为任务式建模, NOTEBOOK为Notebook, INFER为在线服务, BATCH为批量预测<br>枚举值：</p><ul><li>TRAIN</li><li>NOTEBOOK</li><li>INFER</li><li>BATCH</li></ul>
+     * @param Service <p>服务类型，TRAIN为任务式建模, NOTEBOOK为Notebook, INFER为在线服务, BATCH为批量预测<br>枚举值：</p><ul><li>TRAIN</li><li>NOTEBOOK</li><li>INFER</li><li>BATCH</li></ul>
      */
     public void setService(String Service) {
         this.Service = Service;
     }
 
     /**
-     * Get 日志查询开始时间（RFC3339格式的时间字符串），默认值为当前时间的前一个小时 
-     * @return StartTime 日志查询开始时间（RFC3339格式的时间字符串），默认值为当前时间的前一个小时
+     * Get <p>日志查询开始时间（RFC3339格式的时间字符串），默认值为当前时间的前一个小时</p> 
+     * @return StartTime <p>日志查询开始时间（RFC3339格式的时间字符串），默认值为当前时间的前一个小时</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 日志查询开始时间（RFC3339格式的时间字符串），默认值为当前时间的前一个小时
-     * @param StartTime 日志查询开始时间（RFC3339格式的时间字符串），默认值为当前时间的前一个小时
+     * Set <p>日志查询开始时间（RFC3339格式的时间字符串），默认值为当前时间的前一个小时</p>
+     * @param StartTime <p>日志查询开始时间（RFC3339格式的时间字符串），默认值为当前时间的前一个小时</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 日志查询结束时间（RFC3339格式的时间字符串），默认值为当前时间 
-     * @return EndTime 日志查询结束时间（RFC3339格式的时间字符串），默认值为当前时间
+     * Get <p>日志查询结束时间（RFC3339格式的时间字符串），默认值为当前时间</p> 
+     * @return EndTime <p>日志查询结束时间（RFC3339格式的时间字符串），默认值为当前时间</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 日志查询结束时间（RFC3339格式的时间字符串），默认值为当前时间
-     * @param EndTime 日志查询结束时间（RFC3339格式的时间字符串），默认值为当前时间
+     * Set <p>日志查询结束时间（RFC3339格式的时间字符串），默认值为当前时间</p>
+     * @param EndTime <p>日志查询结束时间（RFC3339格式的时间字符串），默认值为当前时间</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 日志查询条数，默认值100，最大值1000 
-     * @return Limit 日志查询条数，默认值100，最大值1000
+     * Get <p>日志查询条数，默认值100，最大值1000</p> 
+     * @return Limit <p>日志查询条数，默认值100，最大值1000</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 日志查询条数，默认值100，最大值1000
-     * @param Limit 日志查询条数，默认值100，最大值1000
+     * Set <p>日志查询条数，默认值100，最大值1000</p>
+     * @param Limit <p>日志查询条数，默认值100，最大值1000</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 服务ID，和Service参数对应，不同Service的服务ID获取方式不同，具体如下：
-- Service类型为TRAIN：
-  调用[DescribeTrainingTask接口](/document/product/851/75089)查询训练任务详情，ServiceId为接口返回值中Response.TrainingTaskDetail.LatestInstanceId
-- Service类型为NOTEBOOK：
-  调用[DescribeNotebook接口](/document/product/851/95662)查询Notebook详情，ServiceId为接口返回值中Response.NotebookDetail.PodName
-- Service类型为INFER：
-  调用[DescribeModelServiceGroup接口](/document/product/851/82285)查询服务组详情，ServiceId为接口返回值中Response.ServiceGroup.Services.ServiceId
-- Service类型为BATCH：
-  调用[DescribeBatchTask接口](/document/product/851/80180)查询跑批任务详情，ServiceId为接口返回值中Response.BatchTaskDetail.LatestInstanceId 
-     * @return ServiceId 服务ID，和Service参数对应，不同Service的服务ID获取方式不同，具体如下：
-- Service类型为TRAIN：
-  调用[DescribeTrainingTask接口](/document/product/851/75089)查询训练任务详情，ServiceId为接口返回值中Response.TrainingTaskDetail.LatestInstanceId
-- Service类型为NOTEBOOK：
-  调用[DescribeNotebook接口](/document/product/851/95662)查询Notebook详情，ServiceId为接口返回值中Response.NotebookDetail.PodName
-- Service类型为INFER：
-  调用[DescribeModelServiceGroup接口](/document/product/851/82285)查询服务组详情，ServiceId为接口返回值中Response.ServiceGroup.Services.ServiceId
-- Service类型为BATCH：
-  调用[DescribeBatchTask接口](/document/product/851/80180)查询跑批任务详情，ServiceId为接口返回值中Response.BatchTaskDetail.LatestInstanceId
+     * Get <p>服务ID，和Service参数对应，不同Service的服务ID获取方式不同，具体如下：</p><ul><li>Service类型为TRAIN：<br>调用<a href="/document/product/851/75089">DescribeTrainingTask接口</a>查询训练任务详情，ServiceId为接口返回值中Response.TrainingTaskDetail.LatestInstanceId</li><li>Service类型为NOTEBOOK：<br>调用<a href="/document/product/851/95662">DescribeNotebook接口</a>查询Notebook详情，ServiceId为接口返回值中Response.NotebookDetail.PodName</li><li>Service类型为INFER：<br>调用<a href="/document/product/851/82285">DescribeModelServiceGroup接口</a>查询服务组详情，ServiceId为接口返回值中Response.ServiceGroup.Services.ServiceId</li><li>Service类型为BATCH：<br>调用<a href="/document/product/851/80180">DescribeBatchTask接口</a>查询跑批任务详情，ServiceId为接口返回值中Response.BatchTaskDetail.LatestInstanceId</li></ul> 
+     * @return ServiceId <p>服务ID，和Service参数对应，不同Service的服务ID获取方式不同，具体如下：</p><ul><li>Service类型为TRAIN：<br>调用<a href="/document/product/851/75089">DescribeTrainingTask接口</a>查询训练任务详情，ServiceId为接口返回值中Response.TrainingTaskDetail.LatestInstanceId</li><li>Service类型为NOTEBOOK：<br>调用<a href="/document/product/851/95662">DescribeNotebook接口</a>查询Notebook详情，ServiceId为接口返回值中Response.NotebookDetail.PodName</li><li>Service类型为INFER：<br>调用<a href="/document/product/851/82285">DescribeModelServiceGroup接口</a>查询服务组详情，ServiceId为接口返回值中Response.ServiceGroup.Services.ServiceId</li><li>Service类型为BATCH：<br>调用<a href="/document/product/851/80180">DescribeBatchTask接口</a>查询跑批任务详情，ServiceId为接口返回值中Response.BatchTaskDetail.LatestInstanceId</li></ul>
      */
     public String getServiceId() {
         return this.ServiceId;
     }
 
     /**
-     * Set 服务ID，和Service参数对应，不同Service的服务ID获取方式不同，具体如下：
-- Service类型为TRAIN：
-  调用[DescribeTrainingTask接口](/document/product/851/75089)查询训练任务详情，ServiceId为接口返回值中Response.TrainingTaskDetail.LatestInstanceId
-- Service类型为NOTEBOOK：
-  调用[DescribeNotebook接口](/document/product/851/95662)查询Notebook详情，ServiceId为接口返回值中Response.NotebookDetail.PodName
-- Service类型为INFER：
-  调用[DescribeModelServiceGroup接口](/document/product/851/82285)查询服务组详情，ServiceId为接口返回值中Response.ServiceGroup.Services.ServiceId
-- Service类型为BATCH：
-  调用[DescribeBatchTask接口](/document/product/851/80180)查询跑批任务详情，ServiceId为接口返回值中Response.BatchTaskDetail.LatestInstanceId
-     * @param ServiceId 服务ID，和Service参数对应，不同Service的服务ID获取方式不同，具体如下：
-- Service类型为TRAIN：
-  调用[DescribeTrainingTask接口](/document/product/851/75089)查询训练任务详情，ServiceId为接口返回值中Response.TrainingTaskDetail.LatestInstanceId
-- Service类型为NOTEBOOK：
-  调用[DescribeNotebook接口](/document/product/851/95662)查询Notebook详情，ServiceId为接口返回值中Response.NotebookDetail.PodName
-- Service类型为INFER：
-  调用[DescribeModelServiceGroup接口](/document/product/851/82285)查询服务组详情，ServiceId为接口返回值中Response.ServiceGroup.Services.ServiceId
-- Service类型为BATCH：
-  调用[DescribeBatchTask接口](/document/product/851/80180)查询跑批任务详情，ServiceId为接口返回值中Response.BatchTaskDetail.LatestInstanceId
+     * Set <p>服务ID，和Service参数对应，不同Service的服务ID获取方式不同，具体如下：</p><ul><li>Service类型为TRAIN：<br>调用<a href="/document/product/851/75089">DescribeTrainingTask接口</a>查询训练任务详情，ServiceId为接口返回值中Response.TrainingTaskDetail.LatestInstanceId</li><li>Service类型为NOTEBOOK：<br>调用<a href="/document/product/851/95662">DescribeNotebook接口</a>查询Notebook详情，ServiceId为接口返回值中Response.NotebookDetail.PodName</li><li>Service类型为INFER：<br>调用<a href="/document/product/851/82285">DescribeModelServiceGroup接口</a>查询服务组详情，ServiceId为接口返回值中Response.ServiceGroup.Services.ServiceId</li><li>Service类型为BATCH：<br>调用<a href="/document/product/851/80180">DescribeBatchTask接口</a>查询跑批任务详情，ServiceId为接口返回值中Response.BatchTaskDetail.LatestInstanceId</li></ul>
+     * @param ServiceId <p>服务ID，和Service参数对应，不同Service的服务ID获取方式不同，具体如下：</p><ul><li>Service类型为TRAIN：<br>调用<a href="/document/product/851/75089">DescribeTrainingTask接口</a>查询训练任务详情，ServiceId为接口返回值中Response.TrainingTaskDetail.LatestInstanceId</li><li>Service类型为NOTEBOOK：<br>调用<a href="/document/product/851/95662">DescribeNotebook接口</a>查询Notebook详情，ServiceId为接口返回值中Response.NotebookDetail.PodName</li><li>Service类型为INFER：<br>调用<a href="/document/product/851/82285">DescribeModelServiceGroup接口</a>查询服务组详情，ServiceId为接口返回值中Response.ServiceGroup.Services.ServiceId</li><li>Service类型为BATCH：<br>调用<a href="/document/product/851/80180">DescribeBatchTask接口</a>查询跑批任务详情，ServiceId为接口返回值中Response.BatchTaskDetail.LatestInstanceId</li></ul>
      */
     public void setServiceId(String ServiceId) {
         this.ServiceId = ServiceId;
     }
 
     /**
-     * Get Pod的名称，即需要查询服务对应的Pod，和Service参数对应，不同Service的PodName获取方式不同，具体如下：
-- Service类型为TRAIN：
-  调用[DescribeTrainingTaskPods接口](/document/product/851/75088)查询训练任务pod列表，PodName为接口返回值中Response.PodNames
-- Service类型为NOTEBOOK：
-  调用[DescribeNotebook接口](/document/product/851/95662)查询Notebook详情，PodName为接口返回值中Response.NotebookDetail.PodName
-- Service类型为INFER：
-  调用[DescribeModelService接口](/document/product/851/82287)查询单个服务详情，PodName为接口返回值中Response.Service.ServiceInfo.PodInfos
-- Service类型为BATCH：
-  调用[DescribeBatchTask接口](/document/product/851/80180)查询跑批任务详情，PodName为接口返回值中Response.BatchTaskDetail. PodList
-注：支持结尾通配符* 
-     * @return PodName Pod的名称，即需要查询服务对应的Pod，和Service参数对应，不同Service的PodName获取方式不同，具体如下：
-- Service类型为TRAIN：
-  调用[DescribeTrainingTaskPods接口](/document/product/851/75088)查询训练任务pod列表，PodName为接口返回值中Response.PodNames
-- Service类型为NOTEBOOK：
-  调用[DescribeNotebook接口](/document/product/851/95662)查询Notebook详情，PodName为接口返回值中Response.NotebookDetail.PodName
-- Service类型为INFER：
-  调用[DescribeModelService接口](/document/product/851/82287)查询单个服务详情，PodName为接口返回值中Response.Service.ServiceInfo.PodInfos
-- Service类型为BATCH：
-  调用[DescribeBatchTask接口](/document/product/851/80180)查询跑批任务详情，PodName为接口返回值中Response.BatchTaskDetail. PodList
-注：支持结尾通配符*
+     * Get <p>Pod的名称，即需要查询服务对应的Pod，和Service参数对应，不同Service的PodName获取方式不同，具体如下：</p><ul><li>Service类型为TRAIN：<br>调用<a href="/document/product/851/75088">DescribeTrainingTaskPods接口</a>查询训练任务pod列表，PodName为接口返回值中Response.PodNames</li><li>Service类型为NOTEBOOK：<br>调用<a href="/document/product/851/95662">DescribeNotebook接口</a>查询Notebook详情，PodName为接口返回值中Response.NotebookDetail.PodName</li><li>Service类型为INFER：<br>调用<a href="/document/product/851/82287">DescribeModelService接口</a>查询单个服务详情，PodName为接口返回值中Response.Service.ServiceInfo.PodInfos</li><li>Service类型为BATCH：<br>调用<a href="/document/product/851/80180">DescribeBatchTask接口</a>查询跑批任务详情，PodName为接口返回值中Response.BatchTaskDetail. PodList<br>注：支持结尾通配符*</li></ul> 
+     * @return PodName <p>Pod的名称，即需要查询服务对应的Pod，和Service参数对应，不同Service的PodName获取方式不同，具体如下：</p><ul><li>Service类型为TRAIN：<br>调用<a href="/document/product/851/75088">DescribeTrainingTaskPods接口</a>查询训练任务pod列表，PodName为接口返回值中Response.PodNames</li><li>Service类型为NOTEBOOK：<br>调用<a href="/document/product/851/95662">DescribeNotebook接口</a>查询Notebook详情，PodName为接口返回值中Response.NotebookDetail.PodName</li><li>Service类型为INFER：<br>调用<a href="/document/product/851/82287">DescribeModelService接口</a>查询单个服务详情，PodName为接口返回值中Response.Service.ServiceInfo.PodInfos</li><li>Service类型为BATCH：<br>调用<a href="/document/product/851/80180">DescribeBatchTask接口</a>查询跑批任务详情，PodName为接口返回值中Response.BatchTaskDetail. PodList<br>注：支持结尾通配符*</li></ul>
      */
     public String getPodName() {
         return this.PodName;
     }
 
     /**
-     * Set Pod的名称，即需要查询服务对应的Pod，和Service参数对应，不同Service的PodName获取方式不同，具体如下：
-- Service类型为TRAIN：
-  调用[DescribeTrainingTaskPods接口](/document/product/851/75088)查询训练任务pod列表，PodName为接口返回值中Response.PodNames
-- Service类型为NOTEBOOK：
-  调用[DescribeNotebook接口](/document/product/851/95662)查询Notebook详情，PodName为接口返回值中Response.NotebookDetail.PodName
-- Service类型为INFER：
-  调用[DescribeModelService接口](/document/product/851/82287)查询单个服务详情，PodName为接口返回值中Response.Service.ServiceInfo.PodInfos
-- Service类型为BATCH：
-  调用[DescribeBatchTask接口](/document/product/851/80180)查询跑批任务详情，PodName为接口返回值中Response.BatchTaskDetail. PodList
-注：支持结尾通配符*
-     * @param PodName Pod的名称，即需要查询服务对应的Pod，和Service参数对应，不同Service的PodName获取方式不同，具体如下：
-- Service类型为TRAIN：
-  调用[DescribeTrainingTaskPods接口](/document/product/851/75088)查询训练任务pod列表，PodName为接口返回值中Response.PodNames
-- Service类型为NOTEBOOK：
-  调用[DescribeNotebook接口](/document/product/851/95662)查询Notebook详情，PodName为接口返回值中Response.NotebookDetail.PodName
-- Service类型为INFER：
-  调用[DescribeModelService接口](/document/product/851/82287)查询单个服务详情，PodName为接口返回值中Response.Service.ServiceInfo.PodInfos
-- Service类型为BATCH：
-  调用[DescribeBatchTask接口](/document/product/851/80180)查询跑批任务详情，PodName为接口返回值中Response.BatchTaskDetail. PodList
-注：支持结尾通配符*
+     * Set <p>Pod的名称，即需要查询服务对应的Pod，和Service参数对应，不同Service的PodName获取方式不同，具体如下：</p><ul><li>Service类型为TRAIN：<br>调用<a href="/document/product/851/75088">DescribeTrainingTaskPods接口</a>查询训练任务pod列表，PodName为接口返回值中Response.PodNames</li><li>Service类型为NOTEBOOK：<br>调用<a href="/document/product/851/95662">DescribeNotebook接口</a>查询Notebook详情，PodName为接口返回值中Response.NotebookDetail.PodName</li><li>Service类型为INFER：<br>调用<a href="/document/product/851/82287">DescribeModelService接口</a>查询单个服务详情，PodName为接口返回值中Response.Service.ServiceInfo.PodInfos</li><li>Service类型为BATCH：<br>调用<a href="/document/product/851/80180">DescribeBatchTask接口</a>查询跑批任务详情，PodName为接口返回值中Response.BatchTaskDetail. PodList<br>注：支持结尾通配符*</li></ul>
+     * @param PodName <p>Pod的名称，即需要查询服务对应的Pod，和Service参数对应，不同Service的PodName获取方式不同，具体如下：</p><ul><li>Service类型为TRAIN：<br>调用<a href="/document/product/851/75088">DescribeTrainingTaskPods接口</a>查询训练任务pod列表，PodName为接口返回值中Response.PodNames</li><li>Service类型为NOTEBOOK：<br>调用<a href="/document/product/851/95662">DescribeNotebook接口</a>查询Notebook详情，PodName为接口返回值中Response.NotebookDetail.PodName</li><li>Service类型为INFER：<br>调用<a href="/document/product/851/82287">DescribeModelService接口</a>查询单个服务详情，PodName为接口返回值中Response.Service.ServiceInfo.PodInfos</li><li>Service类型为BATCH：<br>调用<a href="/document/product/851/80180">DescribeBatchTask接口</a>查询跑批任务详情，PodName为接口返回值中Response.BatchTaskDetail. PodList<br>注：支持结尾通配符*</li></ul>
      */
     public void setPodName(String PodName) {
         this.PodName = PodName;
     }
 
     /**
-     * Get 排序方向（可选值为ASC, DESC ），默认为DESC 
-     * @return Order 排序方向（可选值为ASC, DESC ），默认为DESC
+     * Get <p>排序方向（可选值为ASC, DESC ），默认为DESC</p> 
+     * @return Order <p>排序方向（可选值为ASC, DESC ），默认为DESC</p>
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set 排序方向（可选值为ASC, DESC ），默认为DESC
-     * @param Order 排序方向（可选值为ASC, DESC ），默认为DESC
+     * Set <p>排序方向（可选值为ASC, DESC ），默认为DESC</p>
+     * @param Order <p>排序方向（可选值为ASC, DESC ），默认为DESC</p>
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get 按哪个字段排序（可选值为Timestamp），默认值为Timestamp 
-     * @return OrderField 按哪个字段排序（可选值为Timestamp），默认值为Timestamp
+     * Get <p>按哪个字段排序（可选值为Timestamp），默认值为Timestamp</p> 
+     * @return OrderField <p>按哪个字段排序（可选值为Timestamp），默认值为Timestamp</p>
      */
     public String getOrderField() {
         return this.OrderField;
     }
 
     /**
-     * Set 按哪个字段排序（可选值为Timestamp），默认值为Timestamp
-     * @param OrderField 按哪个字段排序（可选值为Timestamp），默认值为Timestamp
+     * Set <p>按哪个字段排序（可选值为Timestamp），默认值为Timestamp</p>
+     * @param OrderField <p>按哪个字段排序（可选值为Timestamp），默认值为Timestamp</p>
      */
     public void setOrderField(String OrderField) {
         this.OrderField = OrderField;
     }
 
     /**
-     * Get 日志查询上下文，查询下一页的时候需要回传这个字段，该字段来自本接口的返回 
-     * @return Context 日志查询上下文，查询下一页的时候需要回传这个字段，该字段来自本接口的返回
+     * Get <p>日志查询上下文，查询下一页的时候需要回传这个字段，该字段来自本接口的返回</p> 
+     * @return Context <p>日志查询上下文，查询下一页的时候需要回传这个字段，该字段来自本接口的返回</p>
      */
     public String getContext() {
         return this.Context;
     }
 
     /**
-     * Set 日志查询上下文，查询下一页的时候需要回传这个字段，该字段来自本接口的返回
-     * @param Context 日志查询上下文，查询下一页的时候需要回传这个字段，该字段来自本接口的返回
+     * Set <p>日志查询上下文，查询下一页的时候需要回传这个字段，该字段来自本接口的返回</p>
+     * @param Context <p>日志查询上下文，查询下一页的时候需要回传这个字段，该字段来自本接口的返回</p>
      */
     public void setContext(String Context) {
         this.Context = Context;
     }
 
     /**
-     * Get 过滤条件
-注意: 
-1. Filter.Name：目前只支持Key（也就是按关键字过滤日志）
-2. Filter.Values：表示过滤日志的关键字；Values为多个的时候表示同时满足
-3. Filter. Negative和Filter. Fuzzy没有使用 
-     * @return Filters 过滤条件
-注意: 
-1. Filter.Name：目前只支持Key（也就是按关键字过滤日志）
-2. Filter.Values：表示过滤日志的关键字；Values为多个的时候表示同时满足
-3. Filter. Negative和Filter. Fuzzy没有使用
+     * Get <p>过滤条件<br>注意: </p><ol><li>Filter.Name：目前只支持Key（也就是按关键字过滤日志）</li><li>Filter.Values：表示过滤日志的关键字；Values为多个的时候表示同时满足</li><li>Filter. Negative和Filter. Fuzzy没有使用</li></ol> 
+     * @return Filters <p>过滤条件<br>注意: </p><ol><li>Filter.Name：目前只支持Key（也就是按关键字过滤日志）</li><li>Filter.Values：表示过滤日志的关键字；Values为多个的时候表示同时满足</li><li>Filter. Negative和Filter. Fuzzy没有使用</li></ol>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件
-注意: 
-1. Filter.Name：目前只支持Key（也就是按关键字过滤日志）
-2. Filter.Values：表示过滤日志的关键字；Values为多个的时候表示同时满足
-3. Filter. Negative和Filter. Fuzzy没有使用
-     * @param Filters 过滤条件
-注意: 
-1. Filter.Name：目前只支持Key（也就是按关键字过滤日志）
-2. Filter.Values：表示过滤日志的关键字；Values为多个的时候表示同时满足
-3. Filter. Negative和Filter. Fuzzy没有使用
+     * Set <p>过滤条件<br>注意: </p><ol><li>Filter.Name：目前只支持Key（也就是按关键字过滤日志）</li><li>Filter.Values：表示过滤日志的关键字；Values为多个的时候表示同时满足</li><li>Filter. Negative和Filter. Fuzzy没有使用</li></ol>
+     * @param Filters <p>过滤条件<br>注意: </p><ol><li>Filter.Name：目前只支持Key（也就是按关键字过滤日志）</li><li>Filter.Values：表示过滤日志的关键字；Values为多个的时候表示同时满足</li><li>Filter. Negative和Filter. Fuzzy没有使用</li></ol>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 使用OFFSET分页查询时，指定返回的数据偏移量，默认为0 
-     * @return Offset 使用OFFSET分页查询时，指定返回的数据偏移量，默认为0
+     * Get <p>使用OFFSET分页查询时，指定返回的数据偏移量，默认为0</p> 
+     * @return Offset <p>使用OFFSET分页查询时，指定返回的数据偏移量，默认为0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 使用OFFSET分页查询时，指定返回的数据偏移量，默认为0
-     * @param Offset 使用OFFSET分页查询时，指定返回的数据偏移量，默认为0
+     * Set <p>使用OFFSET分页查询时，指定返回的数据偏移量，默认为0</p>
+     * @param Offset <p>使用OFFSET分页查询时，指定返回的数据偏移量，默认为0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

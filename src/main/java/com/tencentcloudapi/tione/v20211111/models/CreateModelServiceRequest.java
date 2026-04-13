@@ -24,1150 +24,1035 @@ import java.util.HashMap;
 public class CreateModelServiceRequest extends AbstractModel {
 
     /**
-    * 新增版本时需要填写
+    * <p>新增版本时需要填写</p>
     */
     @SerializedName("ServiceGroupId")
     @Expose
     private String ServiceGroupId;
 
     /**
-    * 不超过60个字，仅支持英文、数字、下划线"_"、短横"-"，只能以英文、数字开头
+    * <p>不超过60个字，仅支持英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以英文、数字开头</p>
     */
     @SerializedName("ServiceGroupName")
     @Expose
     private String ServiceGroupName;
 
     /**
-    * 模型服务的描述
+    * <p>模型服务的描述</p>
     */
     @SerializedName("ServiceDescription")
     @Expose
     private String ServiceDescription;
 
     /**
-    * 付费模式,有 PREPAID （包年包月）和 POSTPAID_BY_HOUR（按量付费）
+    * <p>付费模式,有 PREPAID （包年包月）和 POSTPAID_BY_HOUR（按量付费）</p>
     */
     @SerializedName("ChargeType")
     @Expose
     private String ChargeType;
 
     /**
-    * 预付费模式下所属的资源组id，同服务组下唯一
+    * <p>预付费模式下所属的资源组id，同服务组下唯一</p>
     */
     @SerializedName("ResourceGroupId")
     @Expose
     private String ResourceGroupId;
 
     /**
-    * 模型信息，需要挂载模型时填写
+    * <p>模型信息，需要挂载模型时填写</p>
     */
     @SerializedName("ModelInfo")
     @Expose
     private ModelInfo ModelInfo;
 
     /**
-    * 镜像信息，配置服务运行所需的镜像地址等信息
+    * <p>镜像信息，配置服务运行所需的镜像地址等信息</p>
     */
     @SerializedName("ImageInfo")
     @Expose
     private ImageInfo ImageInfo;
 
     /**
-    * 环境变量，可选参数，用于配置容器中的环境变量
+    * <p>环境变量，可选参数，用于配置容器中的环境变量</p>
     */
     @SerializedName("Env")
     @Expose
     private EnvVar [] Env;
 
     /**
-    * 资源描述，指定包年包月模式下的cpu,mem,gpu等信息，后付费无需填写
+    * <p>资源描述，指定包年包月模式下的cpu,mem,gpu等信息，后付费无需填写</p>
     */
     @SerializedName("Resources")
     @Expose
     private ResourceInfo Resources;
 
     /**
-    * 使用DescribeBillingSpecs接口返回的规格列表中的值，或者参考实例列表:
-TI.S.MEDIUM.POST	2C4G
-TI.S.LARGE.POST	4C8G
-TI.S.2XLARGE16.POST	8C16G
-TI.S.2XLARGE32.POST	8C32G
-TI.S.4XLARGE32.POST	16C32G
-TI.S.4XLARGE64.POST	16C64G
-TI.S.6XLARGE48.POST	24C48G
-TI.S.6XLARGE96.POST	24C96G
-TI.S.8XLARGE64.POST	32C64G
-TI.S.8XLARGE128.POST 32C128G
-TI.GN7.LARGE20.POST	4C20G T4*1/4
-TI.GN7.2XLARGE40.POST	10C40G T4*1/2
-TI.GN7.2XLARGE32.POST	8C32G T4*1
-TI.GN7.5XLARGE80.POST	20C80G T4*1
-TI.GN7.8XLARGE128.POST	32C128G T4*1
-TI.GN7.10XLARGE160.POST	40C160G T4*2
-TI.GN7.20XLARGE320.POST	80C320G T4*4
+    * <p>使用DescribeBillingSpecs接口返回的规格列表中的值，或者参考实例列表:<br>TI.S.MEDIUM.POST    2C4G<br>TI.S.LARGE.POST    4C8G<br>TI.S.2XLARGE16.POST    8C16G<br>TI.S.2XLARGE32.POST    8C32G<br>TI.S.4XLARGE32.POST    16C32G<br>TI.S.4XLARGE64.POST    16C64G<br>TI.S.6XLARGE48.POST    24C48G<br>TI.S.6XLARGE96.POST    24C96G<br>TI.S.8XLARGE64.POST    32C64G<br>TI.S.8XLARGE128.POST 32C128G<br>TI.GN7.LARGE20.POST    4C20G T4<em>1/4<br>TI.GN7.2XLARGE40.POST    10C40G T4</em>1/2<br>TI.GN7.2XLARGE32.POST    8C32G T4<em>1<br>TI.GN7.5XLARGE80.POST    20C80G T4</em>1<br>TI.GN7.8XLARGE128.POST    32C128G T4<em>1<br>TI.GN7.10XLARGE160.POST    40C160G T4</em>2<br>TI.GN7.20XLARGE320.POST    80C320G T4*4</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * 扩缩容类型 支持：自动 - "AUTO", 手动 - "MANUAL",默认为MANUAL
+    * <p>扩缩容类型 支持：自动 - &quot;AUTO&quot;, 手动 - &quot;MANUAL&quot;,默认为MANUAL</p>
     */
     @SerializedName("ScaleMode")
     @Expose
     private String ScaleMode;
 
     /**
-    * 实例数量, 不同计费模式和调节模式下对应关系如下
-PREPAID 和 POSTPAID_BY_HOUR:
-手动调节模式下对应 实例数量
-自动调节模式下对应 基于时间的默认策略的实例数量
-HYBRID_PAID:
-后付费实例手动调节模式下对应 实例数量
-后付费实例自动调节模式下对应 时间策略的默认策略的实例数量
+    * <p>实例数量, 不同计费模式和调节模式下对应关系如下<br>PREPAID 和 POSTPAID_BY_HOUR:<br>手动调节模式下对应 实例数量<br>自动调节模式下对应 基于时间的默认策略的实例数量<br>HYBRID_PAID:<br>后付费实例手动调节模式下对应 实例数量<br>后付费实例自动调节模式下对应 时间策略的默认策略的实例数量</p>
     */
     @SerializedName("Replicas")
     @Expose
     private Long Replicas;
 
     /**
-    * 自动伸缩信息
+    * <p>自动伸缩信息</p>
     */
     @SerializedName("HorizontalPodAutoscaler")
     @Expose
     private HorizontalPodAutoscaler HorizontalPodAutoscaler;
 
     /**
-    * 是否开启日志投递，开启后需填写配置投递到指定cls
+    * <p>是否开启日志投递，开启后需填写配置投递到指定cls</p>
     */
     @SerializedName("LogEnable")
     @Expose
     private Boolean LogEnable;
 
     /**
-    * 日志配置，需要投递服务日志到指定cls时填写
+    * <p>日志配置，需要投递服务日志到指定cls时填写</p>
     */
     @SerializedName("LogConfig")
     @Expose
     private LogConfig LogConfig;
 
     /**
-    * 是否开启接口鉴权，开启后自动生成token信息，访问需要token鉴权
+    * <p>是否开启接口鉴权，开启后自动生成token信息，访问需要token鉴权</p>
     */
     @SerializedName("AuthorizationEnable")
     @Expose
     private Boolean AuthorizationEnable;
 
     /**
-    * 腾讯云标签
+    * <p>腾讯云标签</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 是否新增版本
+    * <p>是否新增版本</p>
     */
     @SerializedName("NewVersion")
     @Expose
     private Boolean NewVersion;
 
     /**
-    * 定时任务配置，使用定时策略时填写
+    * <p>定时任务配置，使用定时策略时填写</p>
     */
     @SerializedName("CronScaleJobs")
     @Expose
     private CronScaleJob [] CronScaleJobs;
 
     /**
-    * 自动伸缩策略配置 HPA : 通过HPA进行弹性伸缩 CRON 通过定时任务进行伸缩
+    * <p>自动伸缩策略配置 HPA : 通过HPA进行弹性伸缩 CRON 通过定时任务进行伸缩</p>
     */
     @SerializedName("ScaleStrategy")
     @Expose
     private String ScaleStrategy;
 
     /**
-    * 计费模式[HYBRID_PAID]时生效, 用于标识混合计费模式下的预付费实例数
+    * <p>计费模式[HYBRID_PAID]时生效, 用于标识混合计费模式下的预付费实例数</p>
     */
     @SerializedName("HybridBillingPrepaidReplicas")
     @Expose
     private Long HybridBillingPrepaidReplicas;
 
     /**
-    * [AUTO_ML 自动学习，自动学习正式发布 AUTO_ML_FORMAL, DEFAULT 默认]
+    * <p>[AUTO_ML 自动学习，自动学习正式发布 AUTO_ML_FORMAL, DEFAULT 默认]</p>
     */
     @SerializedName("CreateSource")
     @Expose
     private String CreateSource;
 
     /**
-    * 是否开启模型的热更新。默认不开启
+    * <p>是否开启模型的热更新。默认不开启</p>
     */
     @SerializedName("ModelHotUpdateEnable")
     @Expose
     private Boolean ModelHotUpdateEnable;
 
     /**
-    * 定时停止配置
+    * <p>定时停止配置</p>
     */
     @SerializedName("ScheduledAction")
     @Expose
     private ScheduledAction ScheduledAction;
 
     /**
-    * 挂载配置，目前只支持CFS
+    * <p>挂载配置，目前只支持CFS</p>
     */
     @SerializedName("VolumeMount")
     @Expose
     private VolumeMount VolumeMount;
 
     /**
-    * 服务限速限流相关配置
+    * <p>服务限速限流相关配置</p>
     */
     @SerializedName("ServiceLimit")
     @Expose
     private ServiceLimit ServiceLimit;
 
     /**
-    * 回调地址，用于回调创建服务状态信息，回调格式&内容详情见：[TI-ONE 接口回调说明](https://cloud.tencent.com/document/product/851/84292)
+    * <p>回调地址，用于回调创建服务状态信息，回调格式&amp;内容详情见：<a href="https://cloud.tencent.com/document/product/851/84292">TI-ONE 接口回调说明</a></p>
     */
     @SerializedName("CallbackUrl")
     @Expose
     private String CallbackUrl;
 
     /**
-    * 是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。
+    * <p>是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。</p>
     */
     @SerializedName("ModelTurboEnable")
     @Expose
     private Boolean ModelTurboEnable;
 
     /**
-    * 服务分类
+    * <p>服务分类</p>
     */
     @SerializedName("ServiceCategory")
     @Expose
     private String ServiceCategory;
 
     /**
-    * 服务的启动命令，如遇特殊字符导致配置失败，可使用CommandBase64参数
+    * <p>服务的启动命令，如遇特殊字符导致配置失败，可使用CommandBase64参数</p>
     */
     @SerializedName("Command")
     @Expose
     private String Command;
 
     /**
-    * 是否开启TIONE内网访问外部，此功能仅支持后付费机型与从TIONE平台购买的预付费机型；使用从CVM选择资源组时此配置不生效。
+    * <p>是否开启TIONE内网访问外部，此功能仅支持后付费机型与从TIONE平台购买的预付费机型；使用从CVM选择资源组时此配置不生效。</p>
     */
     @SerializedName("ServiceEIP")
     @Expose
     private ServiceEIP ServiceEIP;
 
     /**
-    * 服务的启动命令，以base64格式进行输入，与Command同时配置时，仅当前参数生效
+    * <p>服务的启动命令，以base64格式进行输入，与Command同时配置时，仅当前参数生效</p>
     */
     @SerializedName("CommandBase64")
     @Expose
     private String CommandBase64;
 
     /**
-    * 服务端口，仅在非内置镜像时生效，默认8501。不支持输入8501-8510,6006,9092
+    * <p>服务端口，仅在非内置镜像时生效，默认8501。不支持输入8501-8510,6006,9092</p>
     */
     @SerializedName("ServicePort")
     @Expose
     private Long ServicePort;
 
     /**
-    * 服务的部署类型 [STANDARD 标准部署，DIST 分布式多机部署] 默认STANDARD
+    * <p>服务的部署类型 [标准部署，分布式多机部署，] 默认STANDARD</p><p>枚举值：</p><ul><li>STANDARD： 标准部署</li><li>DIST： 多机分布式部署</li><li>ROLE_SET： 多角色部署</li></ul>
     */
     @SerializedName("DeployType")
     @Expose
     private String DeployType;
 
     /**
-    * 单副本下的实例数，仅在部署类型为DIST时生效，默认1
+    * <p>单副本下的实例数，仅在部署类型为DIST时生效，默认1</p>
     */
     @SerializedName("InstancePerReplicas")
     @Expose
     private Long InstancePerReplicas;
 
     /**
-    * 服务的优雅退出时限。单位为秒，默认值为30，最小为1
+    * <p>服务的优雅退出时限。单位为秒，默认值为30，最小为1</p>
     */
     @SerializedName("TerminationGracePeriodSeconds")
     @Expose
     private Long TerminationGracePeriodSeconds;
 
     /**
-    * 服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束
+    * <p>服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束</p>
     */
     @SerializedName("PreStopCommand")
     @Expose
     private String [] PreStopCommand;
 
     /**
-    * 是否启用 grpc 端口
+    * <p>是否启用 grpc 端口</p>
     */
     @SerializedName("GrpcEnable")
     @Expose
     private Boolean GrpcEnable;
 
     /**
-    * 健康探针
+    * <p>健康探针</p>
     */
     @SerializedName("HealthProbe")
     @Expose
     private HealthProbe HealthProbe;
 
     /**
-    * 滚动更新策略
+    * <p>滚动更新策略</p>
     */
     @SerializedName("RollingUpdate")
     @Expose
     private RollingUpdate RollingUpdate;
 
     /**
-    * sidecar配置
+    * <p>sidecar配置</p>
     */
     @SerializedName("Sidecar")
     @Expose
     private SidecarSpec Sidecar;
 
     /**
-    * 数据盘批量挂载配置，当前仅支持CFS，仅针对“模型来源-腾讯云存储、模型来源-腾讯云容器镜像、模型来源-资源组、模型来源-数据源”。
+    * <p>数据盘批量挂载配置，当前仅支持CFS，仅针对“模型来源-腾讯云存储、模型来源-腾讯云容器镜像、模型来源-资源组、模型来源-数据源”。</p>
     */
     @SerializedName("VolumeMounts")
     @Expose
     private VolumeMount [] VolumeMounts;
 
     /**
-    * 调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用
+    * <p>调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用</p>
     */
     @SerializedName("SchedulingStrategy")
     @Expose
     private String SchedulingStrategy;
 
     /**
-    * 网关日志投递相关配置
+    * <p>网关日志投递相关配置</p>
     */
     @SerializedName("GatewayLogConfig")
     @Expose
     private LogConfig GatewayLogConfig;
 
     /**
-    * 网关相关配置
+    * <p>网关相关配置</p>
     */
     @SerializedName("GatewayConfig")
     @Expose
     private GatewayConfig GatewayConfig;
 
     /**
-     * Get 新增版本时需要填写 
-     * @return ServiceGroupId 新增版本时需要填写
+     * Get <p>新增版本时需要填写</p> 
+     * @return ServiceGroupId <p>新增版本时需要填写</p>
      */
     public String getServiceGroupId() {
         return this.ServiceGroupId;
     }
 
     /**
-     * Set 新增版本时需要填写
-     * @param ServiceGroupId 新增版本时需要填写
+     * Set <p>新增版本时需要填写</p>
+     * @param ServiceGroupId <p>新增版本时需要填写</p>
      */
     public void setServiceGroupId(String ServiceGroupId) {
         this.ServiceGroupId = ServiceGroupId;
     }
 
     /**
-     * Get 不超过60个字，仅支持英文、数字、下划线"_"、短横"-"，只能以英文、数字开头 
-     * @return ServiceGroupName 不超过60个字，仅支持英文、数字、下划线"_"、短横"-"，只能以英文、数字开头
+     * Get <p>不超过60个字，仅支持英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以英文、数字开头</p> 
+     * @return ServiceGroupName <p>不超过60个字，仅支持英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以英文、数字开头</p>
      */
     public String getServiceGroupName() {
         return this.ServiceGroupName;
     }
 
     /**
-     * Set 不超过60个字，仅支持英文、数字、下划线"_"、短横"-"，只能以英文、数字开头
-     * @param ServiceGroupName 不超过60个字，仅支持英文、数字、下划线"_"、短横"-"，只能以英文、数字开头
+     * Set <p>不超过60个字，仅支持英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以英文、数字开头</p>
+     * @param ServiceGroupName <p>不超过60个字，仅支持英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以英文、数字开头</p>
      */
     public void setServiceGroupName(String ServiceGroupName) {
         this.ServiceGroupName = ServiceGroupName;
     }
 
     /**
-     * Get 模型服务的描述 
-     * @return ServiceDescription 模型服务的描述
+     * Get <p>模型服务的描述</p> 
+     * @return ServiceDescription <p>模型服务的描述</p>
      */
     public String getServiceDescription() {
         return this.ServiceDescription;
     }
 
     /**
-     * Set 模型服务的描述
-     * @param ServiceDescription 模型服务的描述
+     * Set <p>模型服务的描述</p>
+     * @param ServiceDescription <p>模型服务的描述</p>
      */
     public void setServiceDescription(String ServiceDescription) {
         this.ServiceDescription = ServiceDescription;
     }
 
     /**
-     * Get 付费模式,有 PREPAID （包年包月）和 POSTPAID_BY_HOUR（按量付费） 
-     * @return ChargeType 付费模式,有 PREPAID （包年包月）和 POSTPAID_BY_HOUR（按量付费）
+     * Get <p>付费模式,有 PREPAID （包年包月）和 POSTPAID_BY_HOUR（按量付费）</p> 
+     * @return ChargeType <p>付费模式,有 PREPAID （包年包月）和 POSTPAID_BY_HOUR（按量付费）</p>
      */
     public String getChargeType() {
         return this.ChargeType;
     }
 
     /**
-     * Set 付费模式,有 PREPAID （包年包月）和 POSTPAID_BY_HOUR（按量付费）
-     * @param ChargeType 付费模式,有 PREPAID （包年包月）和 POSTPAID_BY_HOUR（按量付费）
+     * Set <p>付费模式,有 PREPAID （包年包月）和 POSTPAID_BY_HOUR（按量付费）</p>
+     * @param ChargeType <p>付费模式,有 PREPAID （包年包月）和 POSTPAID_BY_HOUR（按量付费）</p>
      */
     public void setChargeType(String ChargeType) {
         this.ChargeType = ChargeType;
     }
 
     /**
-     * Get 预付费模式下所属的资源组id，同服务组下唯一 
-     * @return ResourceGroupId 预付费模式下所属的资源组id，同服务组下唯一
+     * Get <p>预付费模式下所属的资源组id，同服务组下唯一</p> 
+     * @return ResourceGroupId <p>预付费模式下所属的资源组id，同服务组下唯一</p>
      */
     public String getResourceGroupId() {
         return this.ResourceGroupId;
     }
 
     /**
-     * Set 预付费模式下所属的资源组id，同服务组下唯一
-     * @param ResourceGroupId 预付费模式下所属的资源组id，同服务组下唯一
+     * Set <p>预付费模式下所属的资源组id，同服务组下唯一</p>
+     * @param ResourceGroupId <p>预付费模式下所属的资源组id，同服务组下唯一</p>
      */
     public void setResourceGroupId(String ResourceGroupId) {
         this.ResourceGroupId = ResourceGroupId;
     }
 
     /**
-     * Get 模型信息，需要挂载模型时填写 
-     * @return ModelInfo 模型信息，需要挂载模型时填写
+     * Get <p>模型信息，需要挂载模型时填写</p> 
+     * @return ModelInfo <p>模型信息，需要挂载模型时填写</p>
      */
     public ModelInfo getModelInfo() {
         return this.ModelInfo;
     }
 
     /**
-     * Set 模型信息，需要挂载模型时填写
-     * @param ModelInfo 模型信息，需要挂载模型时填写
+     * Set <p>模型信息，需要挂载模型时填写</p>
+     * @param ModelInfo <p>模型信息，需要挂载模型时填写</p>
      */
     public void setModelInfo(ModelInfo ModelInfo) {
         this.ModelInfo = ModelInfo;
     }
 
     /**
-     * Get 镜像信息，配置服务运行所需的镜像地址等信息 
-     * @return ImageInfo 镜像信息，配置服务运行所需的镜像地址等信息
+     * Get <p>镜像信息，配置服务运行所需的镜像地址等信息</p> 
+     * @return ImageInfo <p>镜像信息，配置服务运行所需的镜像地址等信息</p>
      */
     public ImageInfo getImageInfo() {
         return this.ImageInfo;
     }
 
     /**
-     * Set 镜像信息，配置服务运行所需的镜像地址等信息
-     * @param ImageInfo 镜像信息，配置服务运行所需的镜像地址等信息
+     * Set <p>镜像信息，配置服务运行所需的镜像地址等信息</p>
+     * @param ImageInfo <p>镜像信息，配置服务运行所需的镜像地址等信息</p>
      */
     public void setImageInfo(ImageInfo ImageInfo) {
         this.ImageInfo = ImageInfo;
     }
 
     /**
-     * Get 环境变量，可选参数，用于配置容器中的环境变量 
-     * @return Env 环境变量，可选参数，用于配置容器中的环境变量
+     * Get <p>环境变量，可选参数，用于配置容器中的环境变量</p> 
+     * @return Env <p>环境变量，可选参数，用于配置容器中的环境变量</p>
      */
     public EnvVar [] getEnv() {
         return this.Env;
     }
 
     /**
-     * Set 环境变量，可选参数，用于配置容器中的环境变量
-     * @param Env 环境变量，可选参数，用于配置容器中的环境变量
+     * Set <p>环境变量，可选参数，用于配置容器中的环境变量</p>
+     * @param Env <p>环境变量，可选参数，用于配置容器中的环境变量</p>
      */
     public void setEnv(EnvVar [] Env) {
         this.Env = Env;
     }
 
     /**
-     * Get 资源描述，指定包年包月模式下的cpu,mem,gpu等信息，后付费无需填写 
-     * @return Resources 资源描述，指定包年包月模式下的cpu,mem,gpu等信息，后付费无需填写
+     * Get <p>资源描述，指定包年包月模式下的cpu,mem,gpu等信息，后付费无需填写</p> 
+     * @return Resources <p>资源描述，指定包年包月模式下的cpu,mem,gpu等信息，后付费无需填写</p>
      */
     public ResourceInfo getResources() {
         return this.Resources;
     }
 
     /**
-     * Set 资源描述，指定包年包月模式下的cpu,mem,gpu等信息，后付费无需填写
-     * @param Resources 资源描述，指定包年包月模式下的cpu,mem,gpu等信息，后付费无需填写
+     * Set <p>资源描述，指定包年包月模式下的cpu,mem,gpu等信息，后付费无需填写</p>
+     * @param Resources <p>资源描述，指定包年包月模式下的cpu,mem,gpu等信息，后付费无需填写</p>
      */
     public void setResources(ResourceInfo Resources) {
         this.Resources = Resources;
     }
 
     /**
-     * Get 使用DescribeBillingSpecs接口返回的规格列表中的值，或者参考实例列表:
-TI.S.MEDIUM.POST	2C4G
-TI.S.LARGE.POST	4C8G
-TI.S.2XLARGE16.POST	8C16G
-TI.S.2XLARGE32.POST	8C32G
-TI.S.4XLARGE32.POST	16C32G
-TI.S.4XLARGE64.POST	16C64G
-TI.S.6XLARGE48.POST	24C48G
-TI.S.6XLARGE96.POST	24C96G
-TI.S.8XLARGE64.POST	32C64G
-TI.S.8XLARGE128.POST 32C128G
-TI.GN7.LARGE20.POST	4C20G T4*1/4
-TI.GN7.2XLARGE40.POST	10C40G T4*1/2
-TI.GN7.2XLARGE32.POST	8C32G T4*1
-TI.GN7.5XLARGE80.POST	20C80G T4*1
-TI.GN7.8XLARGE128.POST	32C128G T4*1
-TI.GN7.10XLARGE160.POST	40C160G T4*2
-TI.GN7.20XLARGE320.POST	80C320G T4*4 
-     * @return InstanceType 使用DescribeBillingSpecs接口返回的规格列表中的值，或者参考实例列表:
-TI.S.MEDIUM.POST	2C4G
-TI.S.LARGE.POST	4C8G
-TI.S.2XLARGE16.POST	8C16G
-TI.S.2XLARGE32.POST	8C32G
-TI.S.4XLARGE32.POST	16C32G
-TI.S.4XLARGE64.POST	16C64G
-TI.S.6XLARGE48.POST	24C48G
-TI.S.6XLARGE96.POST	24C96G
-TI.S.8XLARGE64.POST	32C64G
-TI.S.8XLARGE128.POST 32C128G
-TI.GN7.LARGE20.POST	4C20G T4*1/4
-TI.GN7.2XLARGE40.POST	10C40G T4*1/2
-TI.GN7.2XLARGE32.POST	8C32G T4*1
-TI.GN7.5XLARGE80.POST	20C80G T4*1
-TI.GN7.8XLARGE128.POST	32C128G T4*1
-TI.GN7.10XLARGE160.POST	40C160G T4*2
-TI.GN7.20XLARGE320.POST	80C320G T4*4
+     * Get <p>使用DescribeBillingSpecs接口返回的规格列表中的值，或者参考实例列表:<br>TI.S.MEDIUM.POST    2C4G<br>TI.S.LARGE.POST    4C8G<br>TI.S.2XLARGE16.POST    8C16G<br>TI.S.2XLARGE32.POST    8C32G<br>TI.S.4XLARGE32.POST    16C32G<br>TI.S.4XLARGE64.POST    16C64G<br>TI.S.6XLARGE48.POST    24C48G<br>TI.S.6XLARGE96.POST    24C96G<br>TI.S.8XLARGE64.POST    32C64G<br>TI.S.8XLARGE128.POST 32C128G<br>TI.GN7.LARGE20.POST    4C20G T4<em>1/4<br>TI.GN7.2XLARGE40.POST    10C40G T4</em>1/2<br>TI.GN7.2XLARGE32.POST    8C32G T4<em>1<br>TI.GN7.5XLARGE80.POST    20C80G T4</em>1<br>TI.GN7.8XLARGE128.POST    32C128G T4<em>1<br>TI.GN7.10XLARGE160.POST    40C160G T4</em>2<br>TI.GN7.20XLARGE320.POST    80C320G T4*4</p> 
+     * @return InstanceType <p>使用DescribeBillingSpecs接口返回的规格列表中的值，或者参考实例列表:<br>TI.S.MEDIUM.POST    2C4G<br>TI.S.LARGE.POST    4C8G<br>TI.S.2XLARGE16.POST    8C16G<br>TI.S.2XLARGE32.POST    8C32G<br>TI.S.4XLARGE32.POST    16C32G<br>TI.S.4XLARGE64.POST    16C64G<br>TI.S.6XLARGE48.POST    24C48G<br>TI.S.6XLARGE96.POST    24C96G<br>TI.S.8XLARGE64.POST    32C64G<br>TI.S.8XLARGE128.POST 32C128G<br>TI.GN7.LARGE20.POST    4C20G T4<em>1/4<br>TI.GN7.2XLARGE40.POST    10C40G T4</em>1/2<br>TI.GN7.2XLARGE32.POST    8C32G T4<em>1<br>TI.GN7.5XLARGE80.POST    20C80G T4</em>1<br>TI.GN7.8XLARGE128.POST    32C128G T4<em>1<br>TI.GN7.10XLARGE160.POST    40C160G T4</em>2<br>TI.GN7.20XLARGE320.POST    80C320G T4*4</p>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 使用DescribeBillingSpecs接口返回的规格列表中的值，或者参考实例列表:
-TI.S.MEDIUM.POST	2C4G
-TI.S.LARGE.POST	4C8G
-TI.S.2XLARGE16.POST	8C16G
-TI.S.2XLARGE32.POST	8C32G
-TI.S.4XLARGE32.POST	16C32G
-TI.S.4XLARGE64.POST	16C64G
-TI.S.6XLARGE48.POST	24C48G
-TI.S.6XLARGE96.POST	24C96G
-TI.S.8XLARGE64.POST	32C64G
-TI.S.8XLARGE128.POST 32C128G
-TI.GN7.LARGE20.POST	4C20G T4*1/4
-TI.GN7.2XLARGE40.POST	10C40G T4*1/2
-TI.GN7.2XLARGE32.POST	8C32G T4*1
-TI.GN7.5XLARGE80.POST	20C80G T4*1
-TI.GN7.8XLARGE128.POST	32C128G T4*1
-TI.GN7.10XLARGE160.POST	40C160G T4*2
-TI.GN7.20XLARGE320.POST	80C320G T4*4
-     * @param InstanceType 使用DescribeBillingSpecs接口返回的规格列表中的值，或者参考实例列表:
-TI.S.MEDIUM.POST	2C4G
-TI.S.LARGE.POST	4C8G
-TI.S.2XLARGE16.POST	8C16G
-TI.S.2XLARGE32.POST	8C32G
-TI.S.4XLARGE32.POST	16C32G
-TI.S.4XLARGE64.POST	16C64G
-TI.S.6XLARGE48.POST	24C48G
-TI.S.6XLARGE96.POST	24C96G
-TI.S.8XLARGE64.POST	32C64G
-TI.S.8XLARGE128.POST 32C128G
-TI.GN7.LARGE20.POST	4C20G T4*1/4
-TI.GN7.2XLARGE40.POST	10C40G T4*1/2
-TI.GN7.2XLARGE32.POST	8C32G T4*1
-TI.GN7.5XLARGE80.POST	20C80G T4*1
-TI.GN7.8XLARGE128.POST	32C128G T4*1
-TI.GN7.10XLARGE160.POST	40C160G T4*2
-TI.GN7.20XLARGE320.POST	80C320G T4*4
+     * Set <p>使用DescribeBillingSpecs接口返回的规格列表中的值，或者参考实例列表:<br>TI.S.MEDIUM.POST    2C4G<br>TI.S.LARGE.POST    4C8G<br>TI.S.2XLARGE16.POST    8C16G<br>TI.S.2XLARGE32.POST    8C32G<br>TI.S.4XLARGE32.POST    16C32G<br>TI.S.4XLARGE64.POST    16C64G<br>TI.S.6XLARGE48.POST    24C48G<br>TI.S.6XLARGE96.POST    24C96G<br>TI.S.8XLARGE64.POST    32C64G<br>TI.S.8XLARGE128.POST 32C128G<br>TI.GN7.LARGE20.POST    4C20G T4<em>1/4<br>TI.GN7.2XLARGE40.POST    10C40G T4</em>1/2<br>TI.GN7.2XLARGE32.POST    8C32G T4<em>1<br>TI.GN7.5XLARGE80.POST    20C80G T4</em>1<br>TI.GN7.8XLARGE128.POST    32C128G T4<em>1<br>TI.GN7.10XLARGE160.POST    40C160G T4</em>2<br>TI.GN7.20XLARGE320.POST    80C320G T4*4</p>
+     * @param InstanceType <p>使用DescribeBillingSpecs接口返回的规格列表中的值，或者参考实例列表:<br>TI.S.MEDIUM.POST    2C4G<br>TI.S.LARGE.POST    4C8G<br>TI.S.2XLARGE16.POST    8C16G<br>TI.S.2XLARGE32.POST    8C32G<br>TI.S.4XLARGE32.POST    16C32G<br>TI.S.4XLARGE64.POST    16C64G<br>TI.S.6XLARGE48.POST    24C48G<br>TI.S.6XLARGE96.POST    24C96G<br>TI.S.8XLARGE64.POST    32C64G<br>TI.S.8XLARGE128.POST 32C128G<br>TI.GN7.LARGE20.POST    4C20G T4<em>1/4<br>TI.GN7.2XLARGE40.POST    10C40G T4</em>1/2<br>TI.GN7.2XLARGE32.POST    8C32G T4<em>1<br>TI.GN7.5XLARGE80.POST    20C80G T4</em>1<br>TI.GN7.8XLARGE128.POST    32C128G T4<em>1<br>TI.GN7.10XLARGE160.POST    40C160G T4</em>2<br>TI.GN7.20XLARGE320.POST    80C320G T4*4</p>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 扩缩容类型 支持：自动 - "AUTO", 手动 - "MANUAL",默认为MANUAL 
-     * @return ScaleMode 扩缩容类型 支持：自动 - "AUTO", 手动 - "MANUAL",默认为MANUAL
+     * Get <p>扩缩容类型 支持：自动 - &quot;AUTO&quot;, 手动 - &quot;MANUAL&quot;,默认为MANUAL</p> 
+     * @return ScaleMode <p>扩缩容类型 支持：自动 - &quot;AUTO&quot;, 手动 - &quot;MANUAL&quot;,默认为MANUAL</p>
      */
     public String getScaleMode() {
         return this.ScaleMode;
     }
 
     /**
-     * Set 扩缩容类型 支持：自动 - "AUTO", 手动 - "MANUAL",默认为MANUAL
-     * @param ScaleMode 扩缩容类型 支持：自动 - "AUTO", 手动 - "MANUAL",默认为MANUAL
+     * Set <p>扩缩容类型 支持：自动 - &quot;AUTO&quot;, 手动 - &quot;MANUAL&quot;,默认为MANUAL</p>
+     * @param ScaleMode <p>扩缩容类型 支持：自动 - &quot;AUTO&quot;, 手动 - &quot;MANUAL&quot;,默认为MANUAL</p>
      */
     public void setScaleMode(String ScaleMode) {
         this.ScaleMode = ScaleMode;
     }
 
     /**
-     * Get 实例数量, 不同计费模式和调节模式下对应关系如下
-PREPAID 和 POSTPAID_BY_HOUR:
-手动调节模式下对应 实例数量
-自动调节模式下对应 基于时间的默认策略的实例数量
-HYBRID_PAID:
-后付费实例手动调节模式下对应 实例数量
-后付费实例自动调节模式下对应 时间策略的默认策略的实例数量 
-     * @return Replicas 实例数量, 不同计费模式和调节模式下对应关系如下
-PREPAID 和 POSTPAID_BY_HOUR:
-手动调节模式下对应 实例数量
-自动调节模式下对应 基于时间的默认策略的实例数量
-HYBRID_PAID:
-后付费实例手动调节模式下对应 实例数量
-后付费实例自动调节模式下对应 时间策略的默认策略的实例数量
+     * Get <p>实例数量, 不同计费模式和调节模式下对应关系如下<br>PREPAID 和 POSTPAID_BY_HOUR:<br>手动调节模式下对应 实例数量<br>自动调节模式下对应 基于时间的默认策略的实例数量<br>HYBRID_PAID:<br>后付费实例手动调节模式下对应 实例数量<br>后付费实例自动调节模式下对应 时间策略的默认策略的实例数量</p> 
+     * @return Replicas <p>实例数量, 不同计费模式和调节模式下对应关系如下<br>PREPAID 和 POSTPAID_BY_HOUR:<br>手动调节模式下对应 实例数量<br>自动调节模式下对应 基于时间的默认策略的实例数量<br>HYBRID_PAID:<br>后付费实例手动调节模式下对应 实例数量<br>后付费实例自动调节模式下对应 时间策略的默认策略的实例数量</p>
      */
     public Long getReplicas() {
         return this.Replicas;
     }
 
     /**
-     * Set 实例数量, 不同计费模式和调节模式下对应关系如下
-PREPAID 和 POSTPAID_BY_HOUR:
-手动调节模式下对应 实例数量
-自动调节模式下对应 基于时间的默认策略的实例数量
-HYBRID_PAID:
-后付费实例手动调节模式下对应 实例数量
-后付费实例自动调节模式下对应 时间策略的默认策略的实例数量
-     * @param Replicas 实例数量, 不同计费模式和调节模式下对应关系如下
-PREPAID 和 POSTPAID_BY_HOUR:
-手动调节模式下对应 实例数量
-自动调节模式下对应 基于时间的默认策略的实例数量
-HYBRID_PAID:
-后付费实例手动调节模式下对应 实例数量
-后付费实例自动调节模式下对应 时间策略的默认策略的实例数量
+     * Set <p>实例数量, 不同计费模式和调节模式下对应关系如下<br>PREPAID 和 POSTPAID_BY_HOUR:<br>手动调节模式下对应 实例数量<br>自动调节模式下对应 基于时间的默认策略的实例数量<br>HYBRID_PAID:<br>后付费实例手动调节模式下对应 实例数量<br>后付费实例自动调节模式下对应 时间策略的默认策略的实例数量</p>
+     * @param Replicas <p>实例数量, 不同计费模式和调节模式下对应关系如下<br>PREPAID 和 POSTPAID_BY_HOUR:<br>手动调节模式下对应 实例数量<br>自动调节模式下对应 基于时间的默认策略的实例数量<br>HYBRID_PAID:<br>后付费实例手动调节模式下对应 实例数量<br>后付费实例自动调节模式下对应 时间策略的默认策略的实例数量</p>
      */
     public void setReplicas(Long Replicas) {
         this.Replicas = Replicas;
     }
 
     /**
-     * Get 自动伸缩信息 
-     * @return HorizontalPodAutoscaler 自动伸缩信息
+     * Get <p>自动伸缩信息</p> 
+     * @return HorizontalPodAutoscaler <p>自动伸缩信息</p>
      */
     public HorizontalPodAutoscaler getHorizontalPodAutoscaler() {
         return this.HorizontalPodAutoscaler;
     }
 
     /**
-     * Set 自动伸缩信息
-     * @param HorizontalPodAutoscaler 自动伸缩信息
+     * Set <p>自动伸缩信息</p>
+     * @param HorizontalPodAutoscaler <p>自动伸缩信息</p>
      */
     public void setHorizontalPodAutoscaler(HorizontalPodAutoscaler HorizontalPodAutoscaler) {
         this.HorizontalPodAutoscaler = HorizontalPodAutoscaler;
     }
 
     /**
-     * Get 是否开启日志投递，开启后需填写配置投递到指定cls 
-     * @return LogEnable 是否开启日志投递，开启后需填写配置投递到指定cls
+     * Get <p>是否开启日志投递，开启后需填写配置投递到指定cls</p> 
+     * @return LogEnable <p>是否开启日志投递，开启后需填写配置投递到指定cls</p>
      */
     public Boolean getLogEnable() {
         return this.LogEnable;
     }
 
     /**
-     * Set 是否开启日志投递，开启后需填写配置投递到指定cls
-     * @param LogEnable 是否开启日志投递，开启后需填写配置投递到指定cls
+     * Set <p>是否开启日志投递，开启后需填写配置投递到指定cls</p>
+     * @param LogEnable <p>是否开启日志投递，开启后需填写配置投递到指定cls</p>
      */
     public void setLogEnable(Boolean LogEnable) {
         this.LogEnable = LogEnable;
     }
 
     /**
-     * Get 日志配置，需要投递服务日志到指定cls时填写 
-     * @return LogConfig 日志配置，需要投递服务日志到指定cls时填写
+     * Get <p>日志配置，需要投递服务日志到指定cls时填写</p> 
+     * @return LogConfig <p>日志配置，需要投递服务日志到指定cls时填写</p>
      */
     public LogConfig getLogConfig() {
         return this.LogConfig;
     }
 
     /**
-     * Set 日志配置，需要投递服务日志到指定cls时填写
-     * @param LogConfig 日志配置，需要投递服务日志到指定cls时填写
+     * Set <p>日志配置，需要投递服务日志到指定cls时填写</p>
+     * @param LogConfig <p>日志配置，需要投递服务日志到指定cls时填写</p>
      */
     public void setLogConfig(LogConfig LogConfig) {
         this.LogConfig = LogConfig;
     }
 
     /**
-     * Get 是否开启接口鉴权，开启后自动生成token信息，访问需要token鉴权 
-     * @return AuthorizationEnable 是否开启接口鉴权，开启后自动生成token信息，访问需要token鉴权
+     * Get <p>是否开启接口鉴权，开启后自动生成token信息，访问需要token鉴权</p> 
+     * @return AuthorizationEnable <p>是否开启接口鉴权，开启后自动生成token信息，访问需要token鉴权</p>
      */
     public Boolean getAuthorizationEnable() {
         return this.AuthorizationEnable;
     }
 
     /**
-     * Set 是否开启接口鉴权，开启后自动生成token信息，访问需要token鉴权
-     * @param AuthorizationEnable 是否开启接口鉴权，开启后自动生成token信息，访问需要token鉴权
+     * Set <p>是否开启接口鉴权，开启后自动生成token信息，访问需要token鉴权</p>
+     * @param AuthorizationEnable <p>是否开启接口鉴权，开启后自动生成token信息，访问需要token鉴权</p>
      */
     public void setAuthorizationEnable(Boolean AuthorizationEnable) {
         this.AuthorizationEnable = AuthorizationEnable;
     }
 
     /**
-     * Get 腾讯云标签 
-     * @return Tags 腾讯云标签
+     * Get <p>腾讯云标签</p> 
+     * @return Tags <p>腾讯云标签</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 腾讯云标签
-     * @param Tags 腾讯云标签
+     * Set <p>腾讯云标签</p>
+     * @param Tags <p>腾讯云标签</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 是否新增版本 
-     * @return NewVersion 是否新增版本
+     * Get <p>是否新增版本</p> 
+     * @return NewVersion <p>是否新增版本</p>
      */
     public Boolean getNewVersion() {
         return this.NewVersion;
     }
 
     /**
-     * Set 是否新增版本
-     * @param NewVersion 是否新增版本
+     * Set <p>是否新增版本</p>
+     * @param NewVersion <p>是否新增版本</p>
      */
     public void setNewVersion(Boolean NewVersion) {
         this.NewVersion = NewVersion;
     }
 
     /**
-     * Get 定时任务配置，使用定时策略时填写 
-     * @return CronScaleJobs 定时任务配置，使用定时策略时填写
+     * Get <p>定时任务配置，使用定时策略时填写</p> 
+     * @return CronScaleJobs <p>定时任务配置，使用定时策略时填写</p>
      */
     public CronScaleJob [] getCronScaleJobs() {
         return this.CronScaleJobs;
     }
 
     /**
-     * Set 定时任务配置，使用定时策略时填写
-     * @param CronScaleJobs 定时任务配置，使用定时策略时填写
+     * Set <p>定时任务配置，使用定时策略时填写</p>
+     * @param CronScaleJobs <p>定时任务配置，使用定时策略时填写</p>
      */
     public void setCronScaleJobs(CronScaleJob [] CronScaleJobs) {
         this.CronScaleJobs = CronScaleJobs;
     }
 
     /**
-     * Get 自动伸缩策略配置 HPA : 通过HPA进行弹性伸缩 CRON 通过定时任务进行伸缩 
-     * @return ScaleStrategy 自动伸缩策略配置 HPA : 通过HPA进行弹性伸缩 CRON 通过定时任务进行伸缩
+     * Get <p>自动伸缩策略配置 HPA : 通过HPA进行弹性伸缩 CRON 通过定时任务进行伸缩</p> 
+     * @return ScaleStrategy <p>自动伸缩策略配置 HPA : 通过HPA进行弹性伸缩 CRON 通过定时任务进行伸缩</p>
      */
     public String getScaleStrategy() {
         return this.ScaleStrategy;
     }
 
     /**
-     * Set 自动伸缩策略配置 HPA : 通过HPA进行弹性伸缩 CRON 通过定时任务进行伸缩
-     * @param ScaleStrategy 自动伸缩策略配置 HPA : 通过HPA进行弹性伸缩 CRON 通过定时任务进行伸缩
+     * Set <p>自动伸缩策略配置 HPA : 通过HPA进行弹性伸缩 CRON 通过定时任务进行伸缩</p>
+     * @param ScaleStrategy <p>自动伸缩策略配置 HPA : 通过HPA进行弹性伸缩 CRON 通过定时任务进行伸缩</p>
      */
     public void setScaleStrategy(String ScaleStrategy) {
         this.ScaleStrategy = ScaleStrategy;
     }
 
     /**
-     * Get 计费模式[HYBRID_PAID]时生效, 用于标识混合计费模式下的预付费实例数 
-     * @return HybridBillingPrepaidReplicas 计费模式[HYBRID_PAID]时生效, 用于标识混合计费模式下的预付费实例数
+     * Get <p>计费模式[HYBRID_PAID]时生效, 用于标识混合计费模式下的预付费实例数</p> 
+     * @return HybridBillingPrepaidReplicas <p>计费模式[HYBRID_PAID]时生效, 用于标识混合计费模式下的预付费实例数</p>
      */
     public Long getHybridBillingPrepaidReplicas() {
         return this.HybridBillingPrepaidReplicas;
     }
 
     /**
-     * Set 计费模式[HYBRID_PAID]时生效, 用于标识混合计费模式下的预付费实例数
-     * @param HybridBillingPrepaidReplicas 计费模式[HYBRID_PAID]时生效, 用于标识混合计费模式下的预付费实例数
+     * Set <p>计费模式[HYBRID_PAID]时生效, 用于标识混合计费模式下的预付费实例数</p>
+     * @param HybridBillingPrepaidReplicas <p>计费模式[HYBRID_PAID]时生效, 用于标识混合计费模式下的预付费实例数</p>
      */
     public void setHybridBillingPrepaidReplicas(Long HybridBillingPrepaidReplicas) {
         this.HybridBillingPrepaidReplicas = HybridBillingPrepaidReplicas;
     }
 
     /**
-     * Get [AUTO_ML 自动学习，自动学习正式发布 AUTO_ML_FORMAL, DEFAULT 默认] 
-     * @return CreateSource [AUTO_ML 自动学习，自动学习正式发布 AUTO_ML_FORMAL, DEFAULT 默认]
+     * Get <p>[AUTO_ML 自动学习，自动学习正式发布 AUTO_ML_FORMAL, DEFAULT 默认]</p> 
+     * @return CreateSource <p>[AUTO_ML 自动学习，自动学习正式发布 AUTO_ML_FORMAL, DEFAULT 默认]</p>
      */
     public String getCreateSource() {
         return this.CreateSource;
     }
 
     /**
-     * Set [AUTO_ML 自动学习，自动学习正式发布 AUTO_ML_FORMAL, DEFAULT 默认]
-     * @param CreateSource [AUTO_ML 自动学习，自动学习正式发布 AUTO_ML_FORMAL, DEFAULT 默认]
+     * Set <p>[AUTO_ML 自动学习，自动学习正式发布 AUTO_ML_FORMAL, DEFAULT 默认]</p>
+     * @param CreateSource <p>[AUTO_ML 自动学习，自动学习正式发布 AUTO_ML_FORMAL, DEFAULT 默认]</p>
      */
     public void setCreateSource(String CreateSource) {
         this.CreateSource = CreateSource;
     }
 
     /**
-     * Get 是否开启模型的热更新。默认不开启 
-     * @return ModelHotUpdateEnable 是否开启模型的热更新。默认不开启
+     * Get <p>是否开启模型的热更新。默认不开启</p> 
+     * @return ModelHotUpdateEnable <p>是否开启模型的热更新。默认不开启</p>
      */
     public Boolean getModelHotUpdateEnable() {
         return this.ModelHotUpdateEnable;
     }
 
     /**
-     * Set 是否开启模型的热更新。默认不开启
-     * @param ModelHotUpdateEnable 是否开启模型的热更新。默认不开启
+     * Set <p>是否开启模型的热更新。默认不开启</p>
+     * @param ModelHotUpdateEnable <p>是否开启模型的热更新。默认不开启</p>
      */
     public void setModelHotUpdateEnable(Boolean ModelHotUpdateEnable) {
         this.ModelHotUpdateEnable = ModelHotUpdateEnable;
     }
 
     /**
-     * Get 定时停止配置 
-     * @return ScheduledAction 定时停止配置
+     * Get <p>定时停止配置</p> 
+     * @return ScheduledAction <p>定时停止配置</p>
      */
     public ScheduledAction getScheduledAction() {
         return this.ScheduledAction;
     }
 
     /**
-     * Set 定时停止配置
-     * @param ScheduledAction 定时停止配置
+     * Set <p>定时停止配置</p>
+     * @param ScheduledAction <p>定时停止配置</p>
      */
     public void setScheduledAction(ScheduledAction ScheduledAction) {
         this.ScheduledAction = ScheduledAction;
     }
 
     /**
-     * Get 挂载配置，目前只支持CFS 
-     * @return VolumeMount 挂载配置，目前只支持CFS
+     * Get <p>挂载配置，目前只支持CFS</p> 
+     * @return VolumeMount <p>挂载配置，目前只支持CFS</p>
      */
     public VolumeMount getVolumeMount() {
         return this.VolumeMount;
     }
 
     /**
-     * Set 挂载配置，目前只支持CFS
-     * @param VolumeMount 挂载配置，目前只支持CFS
+     * Set <p>挂载配置，目前只支持CFS</p>
+     * @param VolumeMount <p>挂载配置，目前只支持CFS</p>
      */
     public void setVolumeMount(VolumeMount VolumeMount) {
         this.VolumeMount = VolumeMount;
     }
 
     /**
-     * Get 服务限速限流相关配置 
-     * @return ServiceLimit 服务限速限流相关配置
+     * Get <p>服务限速限流相关配置</p> 
+     * @return ServiceLimit <p>服务限速限流相关配置</p>
      */
     public ServiceLimit getServiceLimit() {
         return this.ServiceLimit;
     }
 
     /**
-     * Set 服务限速限流相关配置
-     * @param ServiceLimit 服务限速限流相关配置
+     * Set <p>服务限速限流相关配置</p>
+     * @param ServiceLimit <p>服务限速限流相关配置</p>
      */
     public void setServiceLimit(ServiceLimit ServiceLimit) {
         this.ServiceLimit = ServiceLimit;
     }
 
     /**
-     * Get 回调地址，用于回调创建服务状态信息，回调格式&内容详情见：[TI-ONE 接口回调说明](https://cloud.tencent.com/document/product/851/84292) 
-     * @return CallbackUrl 回调地址，用于回调创建服务状态信息，回调格式&内容详情见：[TI-ONE 接口回调说明](https://cloud.tencent.com/document/product/851/84292)
+     * Get <p>回调地址，用于回调创建服务状态信息，回调格式&amp;内容详情见：<a href="https://cloud.tencent.com/document/product/851/84292">TI-ONE 接口回调说明</a></p> 
+     * @return CallbackUrl <p>回调地址，用于回调创建服务状态信息，回调格式&amp;内容详情见：<a href="https://cloud.tencent.com/document/product/851/84292">TI-ONE 接口回调说明</a></p>
      */
     public String getCallbackUrl() {
         return this.CallbackUrl;
     }
 
     /**
-     * Set 回调地址，用于回调创建服务状态信息，回调格式&内容详情见：[TI-ONE 接口回调说明](https://cloud.tencent.com/document/product/851/84292)
-     * @param CallbackUrl 回调地址，用于回调创建服务状态信息，回调格式&内容详情见：[TI-ONE 接口回调说明](https://cloud.tencent.com/document/product/851/84292)
+     * Set <p>回调地址，用于回调创建服务状态信息，回调格式&amp;内容详情见：<a href="https://cloud.tencent.com/document/product/851/84292">TI-ONE 接口回调说明</a></p>
+     * @param CallbackUrl <p>回调地址，用于回调创建服务状态信息，回调格式&amp;内容详情见：<a href="https://cloud.tencent.com/document/product/851/84292">TI-ONE 接口回调说明</a></p>
      */
     public void setCallbackUrl(String CallbackUrl) {
         this.CallbackUrl = CallbackUrl;
     }
 
     /**
-     * Get 是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。 
-     * @return ModelTurboEnable 是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。
+     * Get <p>是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。</p> 
+     * @return ModelTurboEnable <p>是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。</p>
      */
     public Boolean getModelTurboEnable() {
         return this.ModelTurboEnable;
     }
 
     /**
-     * Set 是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。
-     * @param ModelTurboEnable 是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。
+     * Set <p>是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。</p>
+     * @param ModelTurboEnable <p>是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。</p>
      */
     public void setModelTurboEnable(Boolean ModelTurboEnable) {
         this.ModelTurboEnable = ModelTurboEnable;
     }
 
     /**
-     * Get 服务分类 
-     * @return ServiceCategory 服务分类
+     * Get <p>服务分类</p> 
+     * @return ServiceCategory <p>服务分类</p>
      */
     public String getServiceCategory() {
         return this.ServiceCategory;
     }
 
     /**
-     * Set 服务分类
-     * @param ServiceCategory 服务分类
+     * Set <p>服务分类</p>
+     * @param ServiceCategory <p>服务分类</p>
      */
     public void setServiceCategory(String ServiceCategory) {
         this.ServiceCategory = ServiceCategory;
     }
 
     /**
-     * Get 服务的启动命令，如遇特殊字符导致配置失败，可使用CommandBase64参数 
-     * @return Command 服务的启动命令，如遇特殊字符导致配置失败，可使用CommandBase64参数
+     * Get <p>服务的启动命令，如遇特殊字符导致配置失败，可使用CommandBase64参数</p> 
+     * @return Command <p>服务的启动命令，如遇特殊字符导致配置失败，可使用CommandBase64参数</p>
      */
     public String getCommand() {
         return this.Command;
     }
 
     /**
-     * Set 服务的启动命令，如遇特殊字符导致配置失败，可使用CommandBase64参数
-     * @param Command 服务的启动命令，如遇特殊字符导致配置失败，可使用CommandBase64参数
+     * Set <p>服务的启动命令，如遇特殊字符导致配置失败，可使用CommandBase64参数</p>
+     * @param Command <p>服务的启动命令，如遇特殊字符导致配置失败，可使用CommandBase64参数</p>
      */
     public void setCommand(String Command) {
         this.Command = Command;
     }
 
     /**
-     * Get 是否开启TIONE内网访问外部，此功能仅支持后付费机型与从TIONE平台购买的预付费机型；使用从CVM选择资源组时此配置不生效。 
-     * @return ServiceEIP 是否开启TIONE内网访问外部，此功能仅支持后付费机型与从TIONE平台购买的预付费机型；使用从CVM选择资源组时此配置不生效。
+     * Get <p>是否开启TIONE内网访问外部，此功能仅支持后付费机型与从TIONE平台购买的预付费机型；使用从CVM选择资源组时此配置不生效。</p> 
+     * @return ServiceEIP <p>是否开启TIONE内网访问外部，此功能仅支持后付费机型与从TIONE平台购买的预付费机型；使用从CVM选择资源组时此配置不生效。</p>
      */
     public ServiceEIP getServiceEIP() {
         return this.ServiceEIP;
     }
 
     /**
-     * Set 是否开启TIONE内网访问外部，此功能仅支持后付费机型与从TIONE平台购买的预付费机型；使用从CVM选择资源组时此配置不生效。
-     * @param ServiceEIP 是否开启TIONE内网访问外部，此功能仅支持后付费机型与从TIONE平台购买的预付费机型；使用从CVM选择资源组时此配置不生效。
+     * Set <p>是否开启TIONE内网访问外部，此功能仅支持后付费机型与从TIONE平台购买的预付费机型；使用从CVM选择资源组时此配置不生效。</p>
+     * @param ServiceEIP <p>是否开启TIONE内网访问外部，此功能仅支持后付费机型与从TIONE平台购买的预付费机型；使用从CVM选择资源组时此配置不生效。</p>
      */
     public void setServiceEIP(ServiceEIP ServiceEIP) {
         this.ServiceEIP = ServiceEIP;
     }
 
     /**
-     * Get 服务的启动命令，以base64格式进行输入，与Command同时配置时，仅当前参数生效 
-     * @return CommandBase64 服务的启动命令，以base64格式进行输入，与Command同时配置时，仅当前参数生效
+     * Get <p>服务的启动命令，以base64格式进行输入，与Command同时配置时，仅当前参数生效</p> 
+     * @return CommandBase64 <p>服务的启动命令，以base64格式进行输入，与Command同时配置时，仅当前参数生效</p>
      */
     public String getCommandBase64() {
         return this.CommandBase64;
     }
 
     /**
-     * Set 服务的启动命令，以base64格式进行输入，与Command同时配置时，仅当前参数生效
-     * @param CommandBase64 服务的启动命令，以base64格式进行输入，与Command同时配置时，仅当前参数生效
+     * Set <p>服务的启动命令，以base64格式进行输入，与Command同时配置时，仅当前参数生效</p>
+     * @param CommandBase64 <p>服务的启动命令，以base64格式进行输入，与Command同时配置时，仅当前参数生效</p>
      */
     public void setCommandBase64(String CommandBase64) {
         this.CommandBase64 = CommandBase64;
     }
 
     /**
-     * Get 服务端口，仅在非内置镜像时生效，默认8501。不支持输入8501-8510,6006,9092 
-     * @return ServicePort 服务端口，仅在非内置镜像时生效，默认8501。不支持输入8501-8510,6006,9092
+     * Get <p>服务端口，仅在非内置镜像时生效，默认8501。不支持输入8501-8510,6006,9092</p> 
+     * @return ServicePort <p>服务端口，仅在非内置镜像时生效，默认8501。不支持输入8501-8510,6006,9092</p>
      */
     public Long getServicePort() {
         return this.ServicePort;
     }
 
     /**
-     * Set 服务端口，仅在非内置镜像时生效，默认8501。不支持输入8501-8510,6006,9092
-     * @param ServicePort 服务端口，仅在非内置镜像时生效，默认8501。不支持输入8501-8510,6006,9092
+     * Set <p>服务端口，仅在非内置镜像时生效，默认8501。不支持输入8501-8510,6006,9092</p>
+     * @param ServicePort <p>服务端口，仅在非内置镜像时生效，默认8501。不支持输入8501-8510,6006,9092</p>
      */
     public void setServicePort(Long ServicePort) {
         this.ServicePort = ServicePort;
     }
 
     /**
-     * Get 服务的部署类型 [STANDARD 标准部署，DIST 分布式多机部署] 默认STANDARD 
-     * @return DeployType 服务的部署类型 [STANDARD 标准部署，DIST 分布式多机部署] 默认STANDARD
+     * Get <p>服务的部署类型 [标准部署，分布式多机部署，] 默认STANDARD</p><p>枚举值：</p><ul><li>STANDARD： 标准部署</li><li>DIST： 多机分布式部署</li><li>ROLE_SET： 多角色部署</li></ul> 
+     * @return DeployType <p>服务的部署类型 [标准部署，分布式多机部署，] 默认STANDARD</p><p>枚举值：</p><ul><li>STANDARD： 标准部署</li><li>DIST： 多机分布式部署</li><li>ROLE_SET： 多角色部署</li></ul>
      */
     public String getDeployType() {
         return this.DeployType;
     }
 
     /**
-     * Set 服务的部署类型 [STANDARD 标准部署，DIST 分布式多机部署] 默认STANDARD
-     * @param DeployType 服务的部署类型 [STANDARD 标准部署，DIST 分布式多机部署] 默认STANDARD
+     * Set <p>服务的部署类型 [标准部署，分布式多机部署，] 默认STANDARD</p><p>枚举值：</p><ul><li>STANDARD： 标准部署</li><li>DIST： 多机分布式部署</li><li>ROLE_SET： 多角色部署</li></ul>
+     * @param DeployType <p>服务的部署类型 [标准部署，分布式多机部署，] 默认STANDARD</p><p>枚举值：</p><ul><li>STANDARD： 标准部署</li><li>DIST： 多机分布式部署</li><li>ROLE_SET： 多角色部署</li></ul>
      */
     public void setDeployType(String DeployType) {
         this.DeployType = DeployType;
     }
 
     /**
-     * Get 单副本下的实例数，仅在部署类型为DIST时生效，默认1 
-     * @return InstancePerReplicas 单副本下的实例数，仅在部署类型为DIST时生效，默认1
+     * Get <p>单副本下的实例数，仅在部署类型为DIST时生效，默认1</p> 
+     * @return InstancePerReplicas <p>单副本下的实例数，仅在部署类型为DIST时生效，默认1</p>
      */
     public Long getInstancePerReplicas() {
         return this.InstancePerReplicas;
     }
 
     /**
-     * Set 单副本下的实例数，仅在部署类型为DIST时生效，默认1
-     * @param InstancePerReplicas 单副本下的实例数，仅在部署类型为DIST时生效，默认1
+     * Set <p>单副本下的实例数，仅在部署类型为DIST时生效，默认1</p>
+     * @param InstancePerReplicas <p>单副本下的实例数，仅在部署类型为DIST时生效，默认1</p>
      */
     public void setInstancePerReplicas(Long InstancePerReplicas) {
         this.InstancePerReplicas = InstancePerReplicas;
     }
 
     /**
-     * Get 服务的优雅退出时限。单位为秒，默认值为30，最小为1 
-     * @return TerminationGracePeriodSeconds 服务的优雅退出时限。单位为秒，默认值为30，最小为1
+     * Get <p>服务的优雅退出时限。单位为秒，默认值为30，最小为1</p> 
+     * @return TerminationGracePeriodSeconds <p>服务的优雅退出时限。单位为秒，默认值为30，最小为1</p>
      */
     public Long getTerminationGracePeriodSeconds() {
         return this.TerminationGracePeriodSeconds;
     }
 
     /**
-     * Set 服务的优雅退出时限。单位为秒，默认值为30，最小为1
-     * @param TerminationGracePeriodSeconds 服务的优雅退出时限。单位为秒，默认值为30，最小为1
+     * Set <p>服务的优雅退出时限。单位为秒，默认值为30，最小为1</p>
+     * @param TerminationGracePeriodSeconds <p>服务的优雅退出时限。单位为秒，默认值为30，最小为1</p>
      */
     public void setTerminationGracePeriodSeconds(Long TerminationGracePeriodSeconds) {
         this.TerminationGracePeriodSeconds = TerminationGracePeriodSeconds;
     }
 
     /**
-     * Get 服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束 
-     * @return PreStopCommand 服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束
+     * Get <p>服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束</p> 
+     * @return PreStopCommand <p>服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束</p>
      */
     public String [] getPreStopCommand() {
         return this.PreStopCommand;
     }
 
     /**
-     * Set 服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束
-     * @param PreStopCommand 服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束
+     * Set <p>服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束</p>
+     * @param PreStopCommand <p>服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束</p>
      */
     public void setPreStopCommand(String [] PreStopCommand) {
         this.PreStopCommand = PreStopCommand;
     }
 
     /**
-     * Get 是否启用 grpc 端口 
-     * @return GrpcEnable 是否启用 grpc 端口
+     * Get <p>是否启用 grpc 端口</p> 
+     * @return GrpcEnable <p>是否启用 grpc 端口</p>
      */
     public Boolean getGrpcEnable() {
         return this.GrpcEnable;
     }
 
     /**
-     * Set 是否启用 grpc 端口
-     * @param GrpcEnable 是否启用 grpc 端口
+     * Set <p>是否启用 grpc 端口</p>
+     * @param GrpcEnable <p>是否启用 grpc 端口</p>
      */
     public void setGrpcEnable(Boolean GrpcEnable) {
         this.GrpcEnable = GrpcEnable;
     }
 
     /**
-     * Get 健康探针 
-     * @return HealthProbe 健康探针
+     * Get <p>健康探针</p> 
+     * @return HealthProbe <p>健康探针</p>
      */
     public HealthProbe getHealthProbe() {
         return this.HealthProbe;
     }
 
     /**
-     * Set 健康探针
-     * @param HealthProbe 健康探针
+     * Set <p>健康探针</p>
+     * @param HealthProbe <p>健康探针</p>
      */
     public void setHealthProbe(HealthProbe HealthProbe) {
         this.HealthProbe = HealthProbe;
     }
 
     /**
-     * Get 滚动更新策略 
-     * @return RollingUpdate 滚动更新策略
+     * Get <p>滚动更新策略</p> 
+     * @return RollingUpdate <p>滚动更新策略</p>
      */
     public RollingUpdate getRollingUpdate() {
         return this.RollingUpdate;
     }
 
     /**
-     * Set 滚动更新策略
-     * @param RollingUpdate 滚动更新策略
+     * Set <p>滚动更新策略</p>
+     * @param RollingUpdate <p>滚动更新策略</p>
      */
     public void setRollingUpdate(RollingUpdate RollingUpdate) {
         this.RollingUpdate = RollingUpdate;
     }
 
     /**
-     * Get sidecar配置 
-     * @return Sidecar sidecar配置
+     * Get <p>sidecar配置</p> 
+     * @return Sidecar <p>sidecar配置</p>
      */
     public SidecarSpec getSidecar() {
         return this.Sidecar;
     }
 
     /**
-     * Set sidecar配置
-     * @param Sidecar sidecar配置
+     * Set <p>sidecar配置</p>
+     * @param Sidecar <p>sidecar配置</p>
      */
     public void setSidecar(SidecarSpec Sidecar) {
         this.Sidecar = Sidecar;
     }
 
     /**
-     * Get 数据盘批量挂载配置，当前仅支持CFS，仅针对“模型来源-腾讯云存储、模型来源-腾讯云容器镜像、模型来源-资源组、模型来源-数据源”。 
-     * @return VolumeMounts 数据盘批量挂载配置，当前仅支持CFS，仅针对“模型来源-腾讯云存储、模型来源-腾讯云容器镜像、模型来源-资源组、模型来源-数据源”。
+     * Get <p>数据盘批量挂载配置，当前仅支持CFS，仅针对“模型来源-腾讯云存储、模型来源-腾讯云容器镜像、模型来源-资源组、模型来源-数据源”。</p> 
+     * @return VolumeMounts <p>数据盘批量挂载配置，当前仅支持CFS，仅针对“模型来源-腾讯云存储、模型来源-腾讯云容器镜像、模型来源-资源组、模型来源-数据源”。</p>
      */
     public VolumeMount [] getVolumeMounts() {
         return this.VolumeMounts;
     }
 
     /**
-     * Set 数据盘批量挂载配置，当前仅支持CFS，仅针对“模型来源-腾讯云存储、模型来源-腾讯云容器镜像、模型来源-资源组、模型来源-数据源”。
-     * @param VolumeMounts 数据盘批量挂载配置，当前仅支持CFS，仅针对“模型来源-腾讯云存储、模型来源-腾讯云容器镜像、模型来源-资源组、模型来源-数据源”。
+     * Set <p>数据盘批量挂载配置，当前仅支持CFS，仅针对“模型来源-腾讯云存储、模型来源-腾讯云容器镜像、模型来源-资源组、模型来源-数据源”。</p>
+     * @param VolumeMounts <p>数据盘批量挂载配置，当前仅支持CFS，仅针对“模型来源-腾讯云存储、模型来源-腾讯云容器镜像、模型来源-资源组、模型来源-数据源”。</p>
      */
     public void setVolumeMounts(VolumeMount [] VolumeMounts) {
         this.VolumeMounts = VolumeMounts;
     }
 
     /**
-     * Get 调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用 
-     * @return SchedulingStrategy 调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用
+     * Get <p>调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用</p> 
+     * @return SchedulingStrategy <p>调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用</p>
      */
     public String getSchedulingStrategy() {
         return this.SchedulingStrategy;
     }
 
     /**
-     * Set 调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用
-     * @param SchedulingStrategy 调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用
+     * Set <p>调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用</p>
+     * @param SchedulingStrategy <p>调度策略 [binpack] 优先占满整机，尽量避免碎卡（默认值）[spread] 优先分散在各个节点，确保服务高可用</p>
      */
     public void setSchedulingStrategy(String SchedulingStrategy) {
         this.SchedulingStrategy = SchedulingStrategy;
     }
 
     /**
-     * Get 网关日志投递相关配置 
-     * @return GatewayLogConfig 网关日志投递相关配置
+     * Get <p>网关日志投递相关配置</p> 
+     * @return GatewayLogConfig <p>网关日志投递相关配置</p>
      */
     public LogConfig getGatewayLogConfig() {
         return this.GatewayLogConfig;
     }
 
     /**
-     * Set 网关日志投递相关配置
-     * @param GatewayLogConfig 网关日志投递相关配置
+     * Set <p>网关日志投递相关配置</p>
+     * @param GatewayLogConfig <p>网关日志投递相关配置</p>
      */
     public void setGatewayLogConfig(LogConfig GatewayLogConfig) {
         this.GatewayLogConfig = GatewayLogConfig;
     }
 
     /**
-     * Get 网关相关配置 
-     * @return GatewayConfig 网关相关配置
+     * Get <p>网关相关配置</p> 
+     * @return GatewayConfig <p>网关相关配置</p>
      */
     public GatewayConfig getGatewayConfig() {
         return this.GatewayConfig;
     }
 
     /**
-     * Set 网关相关配置
-     * @param GatewayConfig 网关相关配置
+     * Set <p>网关相关配置</p>
+     * @param GatewayConfig <p>网关相关配置</p>
      */
     public void setGatewayConfig(GatewayConfig GatewayConfig) {
         this.GatewayConfig = GatewayConfig;
