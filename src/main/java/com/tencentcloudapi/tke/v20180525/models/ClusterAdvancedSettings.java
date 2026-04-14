@@ -24,554 +24,532 @@ import java.util.HashMap;
 public class ClusterAdvancedSettings extends AbstractModel {
 
     /**
-    * 是否启用集群节点自动扩缩容(创建集群流程不支持开启此功能)
+    * <p>是否启用集群节点自动扩缩容(创建集群流程不支持开启此功能)</p>
     */
     @SerializedName("AsEnabled")
     @Expose
     private Boolean AsEnabled;
 
     /**
-    * 是否开启审计开关
+    * <p>是否开启审计开关</p>
     */
     @SerializedName("AuditEnabled")
     @Expose
     private Boolean AuditEnabled;
 
     /**
-    * 审计日志上传到的topic
+    * <p>审计日志上传到的topic</p>
     */
     @SerializedName("AuditLogTopicId")
     @Expose
     private String AuditLogTopicId;
 
     /**
-    * 审计日志上传到的logset日志集
+    * <p>审计日志上传到的logset日志集</p>
     */
     @SerializedName("AuditLogsetId")
     @Expose
     private String AuditLogsetId;
 
     /**
-    * 自定义模式下的基础pod数量
+    * <p>自定义模式下的基础pod数量</p>
     */
     @SerializedName("BasePodNumber")
     @Expose
     private Long BasePodNumber;
 
     /**
-    * 启用 CiliumMode 的模式，空值表示不启用，“clusterIP” 表示启用 Cilium 支持 ClusterIP
+    * <p>启用 CiliumMode 的模式，空值表示不启用，“clusterIP” 表示启用 Cilium 支持 ClusterIP</p>
     */
     @SerializedName("CiliumMode")
     @Expose
     private String CiliumMode;
 
     /**
-    * 集群使用的runtime类型，包括"docker"和"containerd"两种类型，默认为"docker"
+    * <p>集群使用的runtime类型，包括&quot;docker&quot;和&quot;containerd&quot;两种类型，默认为&quot;docker&quot;</p>
     */
     @SerializedName("ContainerRuntime")
     @Expose
     private String ContainerRuntime;
 
     /**
-    * 是否启用 DataPlaneV2（cilium替代kube-proxy） 
+    * <p>是否启用 DataPlaneV2（cilium替代kube-proxy）</p>
     */
     @SerializedName("DataPlaneV2")
     @Expose
     private Boolean DataPlaneV2;
 
     /**
-    * 是否启用集群删除保护
+    * <p>是否启用集群删除保护</p>
     */
     @SerializedName("DeletionProtection")
     @Expose
     private Boolean DeletionProtection;
 
     /**
-    * 是否开节点podCIDR大小的自定义模式
+    * <p>是否开节点podCIDR大小的自定义模式</p>
     */
     @SerializedName("EnableCustomizedPodCIDR")
     @Expose
     private Boolean EnableCustomizedPodCIDR;
 
     /**
-    * 元数据拆分存储Etcd配置
+    * <p>元数据拆分存储Etcd配置</p>
     */
     @SerializedName("EtcdOverrideConfigs")
     @Expose
     private EtcdOverrideConfig [] EtcdOverrideConfigs;
 
     /**
-    * 集群自定义参数
+    * <p>集群自定义参数</p>
     */
     @SerializedName("ExtraArgs")
     @Expose
     private ClusterExtraArgs ExtraArgs;
 
     /**
-    * 是否启用IPVS
+    * <p>是否启用IPVS</p>
     */
     @SerializedName("IPVS")
     @Expose
     private Boolean IPVS;
 
     /**
-    * 集群VPC-CNI模式下是否是双栈集群，默认false，表明非双栈集群。
+    * <p>集群VPC-CNI模式下是否是双栈集群，默认false，表明非双栈集群。</p>
     */
     @SerializedName("IsDualStack")
     @Expose
     private Boolean IsDualStack;
 
     /**
-    * 集群VPC-CNI模式是否为非固定IP，默认: FALSE 固定IP。
+    * <p>集群VPC-CNI模式是否为非固定IP，默认: FALSE 固定IP。</p>
     */
     @SerializedName("IsNonStaticIpMode")
     @Expose
     private Boolean IsNonStaticIpMode;
 
     /**
-    * 集群的网络代理模型，目前tke集群支持的网络代理模式有三种：iptables,ipvs,ipvs-bpf，此参数仅在使用ipvs-bpf模式时使用，三种网络模式的参数设置关系如下：
-iptables模式：IPVS和KubeProxyMode都不设置
-ipvs模式: 设置IPVS为true, KubeProxyMode不设置
-ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
-使用ipvs-bpf的网络模式需要满足以下条件：
-1. 集群版本必须为1.14及以上；
-2. 系统镜像必须是: Tencent Linux 2.4；
+    * <p>集群的网络代理模型，目前tke集群支持的网络代理模式有三种：iptables,ipvs,ipvs-bpf，此参数仅在使用ipvs-bpf模式时使用，三种网络模式的参数设置关系如下：<br>iptables模式：IPVS和KubeProxyMode都不设置<br>ipvs模式: 设置IPVS为true, KubeProxyMode不设置<br>ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf<br>使用ipvs-bpf的网络模式需要满足以下条件：</p><ol><li>集群版本必须为1.14及以上；</li><li>系统镜像必须是: Tencent Linux 2.4；</li></ol>
     */
     @SerializedName("KubeProxyMode")
     @Expose
     private String KubeProxyMode;
 
     /**
-    * 集群网络类型，默认为GR。
-- GR: 全局路由
-- VPC-CNI: VPC-CNI模式
-- CiliumOverlay: CiliumOverlay模式
+    * <p>集群网络类型，默认为GR。</p><ul><li>GR: 全局路由</li><li>VPC-CNI: VPC-CNI模式</li><li>CiliumOverlay: CiliumOverlay模式</li></ul>
     */
     @SerializedName("NetworkType")
     @Expose
     private String NetworkType;
 
     /**
-    * 集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip。如果开启了hostname模式，创建节点时需要设置HostName参数，并且InstanceName需要和HostName一致）
+    * <p>集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip。如果开启了hostname模式，创建节点时需要设置HostName参数，并且InstanceName需要和HostName一致）</p>
     */
     @SerializedName("NodeNameType")
     @Expose
     private String NodeNameType;
 
     /**
-    * 是否开启QGPU共享
+    * <p>是否开启QGPU共享</p>
     */
     @SerializedName("QGPUShareEnable")
     @Expose
     private Boolean QGPUShareEnable;
 
     /**
-    * 运行时版本
+    * <p>运行时版本</p>
     */
     @SerializedName("RuntimeVersion")
     @Expose
     private String RuntimeVersion;
 
     /**
-    * 区分共享网卡多IP模式和独立网卡模式，共享网卡多 IP 模式填写"tke-route-eni"，独立网卡模式填写"tke-direct-eni"，默认为共享网卡模式
+    * <p>区分共享网卡多IP模式和独立网卡模式，共享网卡多 IP 模式填写&quot;tke-route-eni&quot;，独立网卡模式填写&quot;tke-direct-eni&quot;，默认为共享网卡模式</p>
     */
     @SerializedName("VpcCniType")
     @Expose
     private String VpcCniType;
 
     /**
-    * 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行，默认为true
+    * <p>集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行，默认为true</p>
     */
     @SerializedName("IsHighAvailability")
     @Expose
     private Boolean IsHighAvailability;
 
     /**
-     * Get 是否启用集群节点自动扩缩容(创建集群流程不支持开启此功能) 
-     * @return AsEnabled 是否启用集群节点自动扩缩容(创建集群流程不支持开启此功能)
+    * <p>集群安全模式配置</p>
+    */
+    @SerializedName("SecurityModeConfig")
+    @Expose
+    private SecurityModeConfig SecurityModeConfig;
+
+    /**
+     * Get <p>是否启用集群节点自动扩缩容(创建集群流程不支持开启此功能)</p> 
+     * @return AsEnabled <p>是否启用集群节点自动扩缩容(创建集群流程不支持开启此功能)</p>
      */
     public Boolean getAsEnabled() {
         return this.AsEnabled;
     }
 
     /**
-     * Set 是否启用集群节点自动扩缩容(创建集群流程不支持开启此功能)
-     * @param AsEnabled 是否启用集群节点自动扩缩容(创建集群流程不支持开启此功能)
+     * Set <p>是否启用集群节点自动扩缩容(创建集群流程不支持开启此功能)</p>
+     * @param AsEnabled <p>是否启用集群节点自动扩缩容(创建集群流程不支持开启此功能)</p>
      */
     public void setAsEnabled(Boolean AsEnabled) {
         this.AsEnabled = AsEnabled;
     }
 
     /**
-     * Get 是否开启审计开关 
-     * @return AuditEnabled 是否开启审计开关
+     * Get <p>是否开启审计开关</p> 
+     * @return AuditEnabled <p>是否开启审计开关</p>
      */
     public Boolean getAuditEnabled() {
         return this.AuditEnabled;
     }
 
     /**
-     * Set 是否开启审计开关
-     * @param AuditEnabled 是否开启审计开关
+     * Set <p>是否开启审计开关</p>
+     * @param AuditEnabled <p>是否开启审计开关</p>
      */
     public void setAuditEnabled(Boolean AuditEnabled) {
         this.AuditEnabled = AuditEnabled;
     }
 
     /**
-     * Get 审计日志上传到的topic 
-     * @return AuditLogTopicId 审计日志上传到的topic
+     * Get <p>审计日志上传到的topic</p> 
+     * @return AuditLogTopicId <p>审计日志上传到的topic</p>
      */
     public String getAuditLogTopicId() {
         return this.AuditLogTopicId;
     }
 
     /**
-     * Set 审计日志上传到的topic
-     * @param AuditLogTopicId 审计日志上传到的topic
+     * Set <p>审计日志上传到的topic</p>
+     * @param AuditLogTopicId <p>审计日志上传到的topic</p>
      */
     public void setAuditLogTopicId(String AuditLogTopicId) {
         this.AuditLogTopicId = AuditLogTopicId;
     }
 
     /**
-     * Get 审计日志上传到的logset日志集 
-     * @return AuditLogsetId 审计日志上传到的logset日志集
+     * Get <p>审计日志上传到的logset日志集</p> 
+     * @return AuditLogsetId <p>审计日志上传到的logset日志集</p>
      */
     public String getAuditLogsetId() {
         return this.AuditLogsetId;
     }
 
     /**
-     * Set 审计日志上传到的logset日志集
-     * @param AuditLogsetId 审计日志上传到的logset日志集
+     * Set <p>审计日志上传到的logset日志集</p>
+     * @param AuditLogsetId <p>审计日志上传到的logset日志集</p>
      */
     public void setAuditLogsetId(String AuditLogsetId) {
         this.AuditLogsetId = AuditLogsetId;
     }
 
     /**
-     * Get 自定义模式下的基础pod数量 
-     * @return BasePodNumber 自定义模式下的基础pod数量
+     * Get <p>自定义模式下的基础pod数量</p> 
+     * @return BasePodNumber <p>自定义模式下的基础pod数量</p>
      */
     public Long getBasePodNumber() {
         return this.BasePodNumber;
     }
 
     /**
-     * Set 自定义模式下的基础pod数量
-     * @param BasePodNumber 自定义模式下的基础pod数量
+     * Set <p>自定义模式下的基础pod数量</p>
+     * @param BasePodNumber <p>自定义模式下的基础pod数量</p>
      */
     public void setBasePodNumber(Long BasePodNumber) {
         this.BasePodNumber = BasePodNumber;
     }
 
     /**
-     * Get 启用 CiliumMode 的模式，空值表示不启用，“clusterIP” 表示启用 Cilium 支持 ClusterIP 
-     * @return CiliumMode 启用 CiliumMode 的模式，空值表示不启用，“clusterIP” 表示启用 Cilium 支持 ClusterIP
+     * Get <p>启用 CiliumMode 的模式，空值表示不启用，“clusterIP” 表示启用 Cilium 支持 ClusterIP</p> 
+     * @return CiliumMode <p>启用 CiliumMode 的模式，空值表示不启用，“clusterIP” 表示启用 Cilium 支持 ClusterIP</p>
      */
     public String getCiliumMode() {
         return this.CiliumMode;
     }
 
     /**
-     * Set 启用 CiliumMode 的模式，空值表示不启用，“clusterIP” 表示启用 Cilium 支持 ClusterIP
-     * @param CiliumMode 启用 CiliumMode 的模式，空值表示不启用，“clusterIP” 表示启用 Cilium 支持 ClusterIP
+     * Set <p>启用 CiliumMode 的模式，空值表示不启用，“clusterIP” 表示启用 Cilium 支持 ClusterIP</p>
+     * @param CiliumMode <p>启用 CiliumMode 的模式，空值表示不启用，“clusterIP” 表示启用 Cilium 支持 ClusterIP</p>
      */
     public void setCiliumMode(String CiliumMode) {
         this.CiliumMode = CiliumMode;
     }
 
     /**
-     * Get 集群使用的runtime类型，包括"docker"和"containerd"两种类型，默认为"docker" 
-     * @return ContainerRuntime 集群使用的runtime类型，包括"docker"和"containerd"两种类型，默认为"docker"
+     * Get <p>集群使用的runtime类型，包括&quot;docker&quot;和&quot;containerd&quot;两种类型，默认为&quot;docker&quot;</p> 
+     * @return ContainerRuntime <p>集群使用的runtime类型，包括&quot;docker&quot;和&quot;containerd&quot;两种类型，默认为&quot;docker&quot;</p>
      */
     public String getContainerRuntime() {
         return this.ContainerRuntime;
     }
 
     /**
-     * Set 集群使用的runtime类型，包括"docker"和"containerd"两种类型，默认为"docker"
-     * @param ContainerRuntime 集群使用的runtime类型，包括"docker"和"containerd"两种类型，默认为"docker"
+     * Set <p>集群使用的runtime类型，包括&quot;docker&quot;和&quot;containerd&quot;两种类型，默认为&quot;docker&quot;</p>
+     * @param ContainerRuntime <p>集群使用的runtime类型，包括&quot;docker&quot;和&quot;containerd&quot;两种类型，默认为&quot;docker&quot;</p>
      */
     public void setContainerRuntime(String ContainerRuntime) {
         this.ContainerRuntime = ContainerRuntime;
     }
 
     /**
-     * Get 是否启用 DataPlaneV2（cilium替代kube-proxy）  
-     * @return DataPlaneV2 是否启用 DataPlaneV2（cilium替代kube-proxy） 
+     * Get <p>是否启用 DataPlaneV2（cilium替代kube-proxy）</p> 
+     * @return DataPlaneV2 <p>是否启用 DataPlaneV2（cilium替代kube-proxy）</p>
      */
     public Boolean getDataPlaneV2() {
         return this.DataPlaneV2;
     }
 
     /**
-     * Set 是否启用 DataPlaneV2（cilium替代kube-proxy） 
-     * @param DataPlaneV2 是否启用 DataPlaneV2（cilium替代kube-proxy） 
+     * Set <p>是否启用 DataPlaneV2（cilium替代kube-proxy）</p>
+     * @param DataPlaneV2 <p>是否启用 DataPlaneV2（cilium替代kube-proxy）</p>
      */
     public void setDataPlaneV2(Boolean DataPlaneV2) {
         this.DataPlaneV2 = DataPlaneV2;
     }
 
     /**
-     * Get 是否启用集群删除保护 
-     * @return DeletionProtection 是否启用集群删除保护
+     * Get <p>是否启用集群删除保护</p> 
+     * @return DeletionProtection <p>是否启用集群删除保护</p>
      */
     public Boolean getDeletionProtection() {
         return this.DeletionProtection;
     }
 
     /**
-     * Set 是否启用集群删除保护
-     * @param DeletionProtection 是否启用集群删除保护
+     * Set <p>是否启用集群删除保护</p>
+     * @param DeletionProtection <p>是否启用集群删除保护</p>
      */
     public void setDeletionProtection(Boolean DeletionProtection) {
         this.DeletionProtection = DeletionProtection;
     }
 
     /**
-     * Get 是否开节点podCIDR大小的自定义模式 
-     * @return EnableCustomizedPodCIDR 是否开节点podCIDR大小的自定义模式
+     * Get <p>是否开节点podCIDR大小的自定义模式</p> 
+     * @return EnableCustomizedPodCIDR <p>是否开节点podCIDR大小的自定义模式</p>
      */
     public Boolean getEnableCustomizedPodCIDR() {
         return this.EnableCustomizedPodCIDR;
     }
 
     /**
-     * Set 是否开节点podCIDR大小的自定义模式
-     * @param EnableCustomizedPodCIDR 是否开节点podCIDR大小的自定义模式
+     * Set <p>是否开节点podCIDR大小的自定义模式</p>
+     * @param EnableCustomizedPodCIDR <p>是否开节点podCIDR大小的自定义模式</p>
      */
     public void setEnableCustomizedPodCIDR(Boolean EnableCustomizedPodCIDR) {
         this.EnableCustomizedPodCIDR = EnableCustomizedPodCIDR;
     }
 
     /**
-     * Get 元数据拆分存储Etcd配置 
-     * @return EtcdOverrideConfigs 元数据拆分存储Etcd配置
+     * Get <p>元数据拆分存储Etcd配置</p> 
+     * @return EtcdOverrideConfigs <p>元数据拆分存储Etcd配置</p>
      */
     public EtcdOverrideConfig [] getEtcdOverrideConfigs() {
         return this.EtcdOverrideConfigs;
     }
 
     /**
-     * Set 元数据拆分存储Etcd配置
-     * @param EtcdOverrideConfigs 元数据拆分存储Etcd配置
+     * Set <p>元数据拆分存储Etcd配置</p>
+     * @param EtcdOverrideConfigs <p>元数据拆分存储Etcd配置</p>
      */
     public void setEtcdOverrideConfigs(EtcdOverrideConfig [] EtcdOverrideConfigs) {
         this.EtcdOverrideConfigs = EtcdOverrideConfigs;
     }
 
     /**
-     * Get 集群自定义参数 
-     * @return ExtraArgs 集群自定义参数
+     * Get <p>集群自定义参数</p> 
+     * @return ExtraArgs <p>集群自定义参数</p>
      */
     public ClusterExtraArgs getExtraArgs() {
         return this.ExtraArgs;
     }
 
     /**
-     * Set 集群自定义参数
-     * @param ExtraArgs 集群自定义参数
+     * Set <p>集群自定义参数</p>
+     * @param ExtraArgs <p>集群自定义参数</p>
      */
     public void setExtraArgs(ClusterExtraArgs ExtraArgs) {
         this.ExtraArgs = ExtraArgs;
     }
 
     /**
-     * Get 是否启用IPVS 
-     * @return IPVS 是否启用IPVS
+     * Get <p>是否启用IPVS</p> 
+     * @return IPVS <p>是否启用IPVS</p>
      */
     public Boolean getIPVS() {
         return this.IPVS;
     }
 
     /**
-     * Set 是否启用IPVS
-     * @param IPVS 是否启用IPVS
+     * Set <p>是否启用IPVS</p>
+     * @param IPVS <p>是否启用IPVS</p>
      */
     public void setIPVS(Boolean IPVS) {
         this.IPVS = IPVS;
     }
 
     /**
-     * Get 集群VPC-CNI模式下是否是双栈集群，默认false，表明非双栈集群。 
-     * @return IsDualStack 集群VPC-CNI模式下是否是双栈集群，默认false，表明非双栈集群。
+     * Get <p>集群VPC-CNI模式下是否是双栈集群，默认false，表明非双栈集群。</p> 
+     * @return IsDualStack <p>集群VPC-CNI模式下是否是双栈集群，默认false，表明非双栈集群。</p>
      */
     public Boolean getIsDualStack() {
         return this.IsDualStack;
     }
 
     /**
-     * Set 集群VPC-CNI模式下是否是双栈集群，默认false，表明非双栈集群。
-     * @param IsDualStack 集群VPC-CNI模式下是否是双栈集群，默认false，表明非双栈集群。
+     * Set <p>集群VPC-CNI模式下是否是双栈集群，默认false，表明非双栈集群。</p>
+     * @param IsDualStack <p>集群VPC-CNI模式下是否是双栈集群，默认false，表明非双栈集群。</p>
      */
     public void setIsDualStack(Boolean IsDualStack) {
         this.IsDualStack = IsDualStack;
     }
 
     /**
-     * Get 集群VPC-CNI模式是否为非固定IP，默认: FALSE 固定IP。 
-     * @return IsNonStaticIpMode 集群VPC-CNI模式是否为非固定IP，默认: FALSE 固定IP。
+     * Get <p>集群VPC-CNI模式是否为非固定IP，默认: FALSE 固定IP。</p> 
+     * @return IsNonStaticIpMode <p>集群VPC-CNI模式是否为非固定IP，默认: FALSE 固定IP。</p>
      */
     public Boolean getIsNonStaticIpMode() {
         return this.IsNonStaticIpMode;
     }
 
     /**
-     * Set 集群VPC-CNI模式是否为非固定IP，默认: FALSE 固定IP。
-     * @param IsNonStaticIpMode 集群VPC-CNI模式是否为非固定IP，默认: FALSE 固定IP。
+     * Set <p>集群VPC-CNI模式是否为非固定IP，默认: FALSE 固定IP。</p>
+     * @param IsNonStaticIpMode <p>集群VPC-CNI模式是否为非固定IP，默认: FALSE 固定IP。</p>
      */
     public void setIsNonStaticIpMode(Boolean IsNonStaticIpMode) {
         this.IsNonStaticIpMode = IsNonStaticIpMode;
     }
 
     /**
-     * Get 集群的网络代理模型，目前tke集群支持的网络代理模式有三种：iptables,ipvs,ipvs-bpf，此参数仅在使用ipvs-bpf模式时使用，三种网络模式的参数设置关系如下：
-iptables模式：IPVS和KubeProxyMode都不设置
-ipvs模式: 设置IPVS为true, KubeProxyMode不设置
-ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
-使用ipvs-bpf的网络模式需要满足以下条件：
-1. 集群版本必须为1.14及以上；
-2. 系统镜像必须是: Tencent Linux 2.4； 
-     * @return KubeProxyMode 集群的网络代理模型，目前tke集群支持的网络代理模式有三种：iptables,ipvs,ipvs-bpf，此参数仅在使用ipvs-bpf模式时使用，三种网络模式的参数设置关系如下：
-iptables模式：IPVS和KubeProxyMode都不设置
-ipvs模式: 设置IPVS为true, KubeProxyMode不设置
-ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
-使用ipvs-bpf的网络模式需要满足以下条件：
-1. 集群版本必须为1.14及以上；
-2. 系统镜像必须是: Tencent Linux 2.4；
+     * Get <p>集群的网络代理模型，目前tke集群支持的网络代理模式有三种：iptables,ipvs,ipvs-bpf，此参数仅在使用ipvs-bpf模式时使用，三种网络模式的参数设置关系如下：<br>iptables模式：IPVS和KubeProxyMode都不设置<br>ipvs模式: 设置IPVS为true, KubeProxyMode不设置<br>ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf<br>使用ipvs-bpf的网络模式需要满足以下条件：</p><ol><li>集群版本必须为1.14及以上；</li><li>系统镜像必须是: Tencent Linux 2.4；</li></ol> 
+     * @return KubeProxyMode <p>集群的网络代理模型，目前tke集群支持的网络代理模式有三种：iptables,ipvs,ipvs-bpf，此参数仅在使用ipvs-bpf模式时使用，三种网络模式的参数设置关系如下：<br>iptables模式：IPVS和KubeProxyMode都不设置<br>ipvs模式: 设置IPVS为true, KubeProxyMode不设置<br>ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf<br>使用ipvs-bpf的网络模式需要满足以下条件：</p><ol><li>集群版本必须为1.14及以上；</li><li>系统镜像必须是: Tencent Linux 2.4；</li></ol>
      */
     public String getKubeProxyMode() {
         return this.KubeProxyMode;
     }
 
     /**
-     * Set 集群的网络代理模型，目前tke集群支持的网络代理模式有三种：iptables,ipvs,ipvs-bpf，此参数仅在使用ipvs-bpf模式时使用，三种网络模式的参数设置关系如下：
-iptables模式：IPVS和KubeProxyMode都不设置
-ipvs模式: 设置IPVS为true, KubeProxyMode不设置
-ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
-使用ipvs-bpf的网络模式需要满足以下条件：
-1. 集群版本必须为1.14及以上；
-2. 系统镜像必须是: Tencent Linux 2.4；
-     * @param KubeProxyMode 集群的网络代理模型，目前tke集群支持的网络代理模式有三种：iptables,ipvs,ipvs-bpf，此参数仅在使用ipvs-bpf模式时使用，三种网络模式的参数设置关系如下：
-iptables模式：IPVS和KubeProxyMode都不设置
-ipvs模式: 设置IPVS为true, KubeProxyMode不设置
-ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
-使用ipvs-bpf的网络模式需要满足以下条件：
-1. 集群版本必须为1.14及以上；
-2. 系统镜像必须是: Tencent Linux 2.4；
+     * Set <p>集群的网络代理模型，目前tke集群支持的网络代理模式有三种：iptables,ipvs,ipvs-bpf，此参数仅在使用ipvs-bpf模式时使用，三种网络模式的参数设置关系如下：<br>iptables模式：IPVS和KubeProxyMode都不设置<br>ipvs模式: 设置IPVS为true, KubeProxyMode不设置<br>ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf<br>使用ipvs-bpf的网络模式需要满足以下条件：</p><ol><li>集群版本必须为1.14及以上；</li><li>系统镜像必须是: Tencent Linux 2.4；</li></ol>
+     * @param KubeProxyMode <p>集群的网络代理模型，目前tke集群支持的网络代理模式有三种：iptables,ipvs,ipvs-bpf，此参数仅在使用ipvs-bpf模式时使用，三种网络模式的参数设置关系如下：<br>iptables模式：IPVS和KubeProxyMode都不设置<br>ipvs模式: 设置IPVS为true, KubeProxyMode不设置<br>ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf<br>使用ipvs-bpf的网络模式需要满足以下条件：</p><ol><li>集群版本必须为1.14及以上；</li><li>系统镜像必须是: Tencent Linux 2.4；</li></ol>
      */
     public void setKubeProxyMode(String KubeProxyMode) {
         this.KubeProxyMode = KubeProxyMode;
     }
 
     /**
-     * Get 集群网络类型，默认为GR。
-- GR: 全局路由
-- VPC-CNI: VPC-CNI模式
-- CiliumOverlay: CiliumOverlay模式 
-     * @return NetworkType 集群网络类型，默认为GR。
-- GR: 全局路由
-- VPC-CNI: VPC-CNI模式
-- CiliumOverlay: CiliumOverlay模式
+     * Get <p>集群网络类型，默认为GR。</p><ul><li>GR: 全局路由</li><li>VPC-CNI: VPC-CNI模式</li><li>CiliumOverlay: CiliumOverlay模式</li></ul> 
+     * @return NetworkType <p>集群网络类型，默认为GR。</p><ul><li>GR: 全局路由</li><li>VPC-CNI: VPC-CNI模式</li><li>CiliumOverlay: CiliumOverlay模式</li></ul>
      */
     public String getNetworkType() {
         return this.NetworkType;
     }
 
     /**
-     * Set 集群网络类型，默认为GR。
-- GR: 全局路由
-- VPC-CNI: VPC-CNI模式
-- CiliumOverlay: CiliumOverlay模式
-     * @param NetworkType 集群网络类型，默认为GR。
-- GR: 全局路由
-- VPC-CNI: VPC-CNI模式
-- CiliumOverlay: CiliumOverlay模式
+     * Set <p>集群网络类型，默认为GR。</p><ul><li>GR: 全局路由</li><li>VPC-CNI: VPC-CNI模式</li><li>CiliumOverlay: CiliumOverlay模式</li></ul>
+     * @param NetworkType <p>集群网络类型，默认为GR。</p><ul><li>GR: 全局路由</li><li>VPC-CNI: VPC-CNI模式</li><li>CiliumOverlay: CiliumOverlay模式</li></ul>
      */
     public void setNetworkType(String NetworkType) {
         this.NetworkType = NetworkType;
     }
 
     /**
-     * Get 集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip。如果开启了hostname模式，创建节点时需要设置HostName参数，并且InstanceName需要和HostName一致） 
-     * @return NodeNameType 集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip。如果开启了hostname模式，创建节点时需要设置HostName参数，并且InstanceName需要和HostName一致）
+     * Get <p>集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip。如果开启了hostname模式，创建节点时需要设置HostName参数，并且InstanceName需要和HostName一致）</p> 
+     * @return NodeNameType <p>集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip。如果开启了hostname模式，创建节点时需要设置HostName参数，并且InstanceName需要和HostName一致）</p>
      */
     public String getNodeNameType() {
         return this.NodeNameType;
     }
 
     /**
-     * Set 集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip。如果开启了hostname模式，创建节点时需要设置HostName参数，并且InstanceName需要和HostName一致）
-     * @param NodeNameType 集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip。如果开启了hostname模式，创建节点时需要设置HostName参数，并且InstanceName需要和HostName一致）
+     * Set <p>集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip。如果开启了hostname模式，创建节点时需要设置HostName参数，并且InstanceName需要和HostName一致）</p>
+     * @param NodeNameType <p>集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip。如果开启了hostname模式，创建节点时需要设置HostName参数，并且InstanceName需要和HostName一致）</p>
      */
     public void setNodeNameType(String NodeNameType) {
         this.NodeNameType = NodeNameType;
     }
 
     /**
-     * Get 是否开启QGPU共享 
-     * @return QGPUShareEnable 是否开启QGPU共享
+     * Get <p>是否开启QGPU共享</p> 
+     * @return QGPUShareEnable <p>是否开启QGPU共享</p>
      */
     public Boolean getQGPUShareEnable() {
         return this.QGPUShareEnable;
     }
 
     /**
-     * Set 是否开启QGPU共享
-     * @param QGPUShareEnable 是否开启QGPU共享
+     * Set <p>是否开启QGPU共享</p>
+     * @param QGPUShareEnable <p>是否开启QGPU共享</p>
      */
     public void setQGPUShareEnable(Boolean QGPUShareEnable) {
         this.QGPUShareEnable = QGPUShareEnable;
     }
 
     /**
-     * Get 运行时版本 
-     * @return RuntimeVersion 运行时版本
+     * Get <p>运行时版本</p> 
+     * @return RuntimeVersion <p>运行时版本</p>
      */
     public String getRuntimeVersion() {
         return this.RuntimeVersion;
     }
 
     /**
-     * Set 运行时版本
-     * @param RuntimeVersion 运行时版本
+     * Set <p>运行时版本</p>
+     * @param RuntimeVersion <p>运行时版本</p>
      */
     public void setRuntimeVersion(String RuntimeVersion) {
         this.RuntimeVersion = RuntimeVersion;
     }
 
     /**
-     * Get 区分共享网卡多IP模式和独立网卡模式，共享网卡多 IP 模式填写"tke-route-eni"，独立网卡模式填写"tke-direct-eni"，默认为共享网卡模式 
-     * @return VpcCniType 区分共享网卡多IP模式和独立网卡模式，共享网卡多 IP 模式填写"tke-route-eni"，独立网卡模式填写"tke-direct-eni"，默认为共享网卡模式
+     * Get <p>区分共享网卡多IP模式和独立网卡模式，共享网卡多 IP 模式填写&quot;tke-route-eni&quot;，独立网卡模式填写&quot;tke-direct-eni&quot;，默认为共享网卡模式</p> 
+     * @return VpcCniType <p>区分共享网卡多IP模式和独立网卡模式，共享网卡多 IP 模式填写&quot;tke-route-eni&quot;，独立网卡模式填写&quot;tke-direct-eni&quot;，默认为共享网卡模式</p>
      */
     public String getVpcCniType() {
         return this.VpcCniType;
     }
 
     /**
-     * Set 区分共享网卡多IP模式和独立网卡模式，共享网卡多 IP 模式填写"tke-route-eni"，独立网卡模式填写"tke-direct-eni"，默认为共享网卡模式
-     * @param VpcCniType 区分共享网卡多IP模式和独立网卡模式，共享网卡多 IP 模式填写"tke-route-eni"，独立网卡模式填写"tke-direct-eni"，默认为共享网卡模式
+     * Set <p>区分共享网卡多IP模式和独立网卡模式，共享网卡多 IP 模式填写&quot;tke-route-eni&quot;，独立网卡模式填写&quot;tke-direct-eni&quot;，默认为共享网卡模式</p>
+     * @param VpcCniType <p>区分共享网卡多IP模式和独立网卡模式，共享网卡多 IP 模式填写&quot;tke-route-eni&quot;，独立网卡模式填写&quot;tke-direct-eni&quot;，默认为共享网卡模式</p>
      */
     public void setVpcCniType(String VpcCniType) {
         this.VpcCniType = VpcCniType;
     }
 
     /**
-     * Get 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行，默认为true 
-     * @return IsHighAvailability 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行，默认为true
+     * Get <p>集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行，默认为true</p> 
+     * @return IsHighAvailability <p>集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行，默认为true</p>
      */
     public Boolean getIsHighAvailability() {
         return this.IsHighAvailability;
     }
 
     /**
-     * Set 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行，默认为true
-     * @param IsHighAvailability 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行，默认为true
+     * Set <p>集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行，默认为true</p>
+     * @param IsHighAvailability <p>集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行，默认为true</p>
      */
     public void setIsHighAvailability(Boolean IsHighAvailability) {
         this.IsHighAvailability = IsHighAvailability;
+    }
+
+    /**
+     * Get <p>集群安全模式配置</p> 
+     * @return SecurityModeConfig <p>集群安全模式配置</p>
+     */
+    public SecurityModeConfig getSecurityModeConfig() {
+        return this.SecurityModeConfig;
+    }
+
+    /**
+     * Set <p>集群安全模式配置</p>
+     * @param SecurityModeConfig <p>集群安全模式配置</p>
+     */
+    public void setSecurityModeConfig(SecurityModeConfig SecurityModeConfig) {
+        this.SecurityModeConfig = SecurityModeConfig;
     }
 
     public ClusterAdvancedSettings() {
@@ -651,6 +629,9 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
         if (source.IsHighAvailability != null) {
             this.IsHighAvailability = new Boolean(source.IsHighAvailability);
         }
+        if (source.SecurityModeConfig != null) {
+            this.SecurityModeConfig = new SecurityModeConfig(source.SecurityModeConfig);
+        }
     }
 
 
@@ -680,6 +661,7 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
         this.setParamSimple(map, prefix + "RuntimeVersion", this.RuntimeVersion);
         this.setParamSimple(map, prefix + "VpcCniType", this.VpcCniType);
         this.setParamSimple(map, prefix + "IsHighAvailability", this.IsHighAvailability);
+        this.setParamObj(map, prefix + "SecurityModeConfig.", this.SecurityModeConfig);
 
     }
 }

@@ -101,6 +101,13 @@ public class CreateSandboxToolRequest extends AbstractModel {
     private LogConfiguration LogConfiguration;
 
     /**
+    * <p>常驻沙箱标识</p>
+    */
+    @SerializedName("Persistent")
+    @Expose
+    private Boolean Persistent;
+
+    /**
      * Get <p>沙箱工具名称，长度 1-50 字符，支持英文、数字、下划线和连接线。同一 AppId 下沙箱工具名称必须唯一</p> 
      * @return ToolName <p>沙箱工具名称，长度 1-50 字符，支持英文、数字、下划线和连接线。同一 AppId 下沙箱工具名称必须唯一</p>
      */
@@ -276,6 +283,22 @@ public class CreateSandboxToolRequest extends AbstractModel {
         this.LogConfiguration = LogConfiguration;
     }
 
+    /**
+     * Get <p>常驻沙箱标识</p> 
+     * @return Persistent <p>常驻沙箱标识</p>
+     */
+    public Boolean getPersistent() {
+        return this.Persistent;
+    }
+
+    /**
+     * Set <p>常驻沙箱标识</p>
+     * @param Persistent <p>常驻沙箱标识</p>
+     */
+    public void setPersistent(Boolean Persistent) {
+        this.Persistent = Persistent;
+    }
+
     public CreateSandboxToolRequest() {
     }
 
@@ -323,6 +346,9 @@ public class CreateSandboxToolRequest extends AbstractModel {
         if (source.LogConfiguration != null) {
             this.LogConfiguration = new LogConfiguration(source.LogConfiguration);
         }
+        if (source.Persistent != null) {
+            this.Persistent = new Boolean(source.Persistent);
+        }
     }
 
 
@@ -341,6 +367,7 @@ public class CreateSandboxToolRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "StorageMounts.", this.StorageMounts);
         this.setParamObj(map, prefix + "CustomConfiguration.", this.CustomConfiguration);
         this.setParamObj(map, prefix + "LogConfiguration.", this.LogConfiguration);
+        this.setParamSimple(map, prefix + "Persistent", this.Persistent);
 
     }
 }

@@ -32,7 +32,7 @@ public class DescribeExternalNodePoolsResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * 第三方节点池列表
+    * 注册节点池列表
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodePoolSet")
@@ -67,9 +67,9 @@ public class DescribeExternalNodePoolsResponse extends AbstractModel {
     }
 
     /**
-     * Get 第三方节点池列表
+     * Get 注册节点池列表
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NodePoolSet 第三方节点池列表
+     * @return NodePoolSet 注册节点池列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ExternalNodePool [] getNodePoolSet() {
@@ -77,9 +77,9 @@ public class DescribeExternalNodePoolsResponse extends AbstractModel {
     }
 
     /**
-     * Set 第三方节点池列表
+     * Set 注册节点池列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NodePoolSet 第三方节点池列表
+     * @param NodePoolSet 注册节点池列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodePoolSet(ExternalNodePool [] NodePoolSet) {

@@ -31,14 +31,14 @@ public class DeleteExternalNodeRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * 第三方节点列表
+    * 注册节点列表
     */
     @SerializedName("Names")
     @Expose
     private String [] Names;
 
     /**
-    * 是否强制删除：如果第三方节点上有运行中Pod，则非强制删除状态下不会进行删除
+    * 是否强制删除：如果注册节点上有运行中Pod，则非强制删除状态下不会进行删除
     */
     @SerializedName("Force")
     @Expose
@@ -61,32 +61,32 @@ public class DeleteExternalNodeRequest extends AbstractModel {
     }
 
     /**
-     * Get 第三方节点列表 
-     * @return Names 第三方节点列表
+     * Get 注册节点列表 
+     * @return Names 注册节点列表
      */
     public String [] getNames() {
         return this.Names;
     }
 
     /**
-     * Set 第三方节点列表
-     * @param Names 第三方节点列表
+     * Set 注册节点列表
+     * @param Names 注册节点列表
      */
     public void setNames(String [] Names) {
         this.Names = Names;
     }
 
     /**
-     * Get 是否强制删除：如果第三方节点上有运行中Pod，则非强制删除状态下不会进行删除 
-     * @return Force 是否强制删除：如果第三方节点上有运行中Pod，则非强制删除状态下不会进行删除
+     * Get 是否强制删除：如果注册节点上有运行中Pod，则非强制删除状态下不会进行删除 
+     * @return Force 是否强制删除：如果注册节点上有运行中Pod，则非强制删除状态下不会进行删除
      */
     public Boolean getForce() {
         return this.Force;
     }
 
     /**
-     * Set 是否强制删除：如果第三方节点上有运行中Pod，则非强制删除状态下不会进行删除
-     * @param Force 是否强制删除：如果第三方节点上有运行中Pod，则非强制删除状态下不会进行删除
+     * Set 是否强制删除：如果注册节点上有运行中Pod，则非强制删除状态下不会进行删除
+     * @param Force 是否强制删除：如果注册节点上有运行中Pod，则非强制删除状态下不会进行删除
      */
     public void setForce(Boolean Force) {
         this.Force = Force;

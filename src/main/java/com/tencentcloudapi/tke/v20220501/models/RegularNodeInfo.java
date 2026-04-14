@@ -40,6 +40,14 @@ public class RegularNodeInfo extends AbstractModel {
     private String AutoscalingGroupId;
 
     /**
+    * 普通节点云标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 节点配置
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceAdvancedSettings 节点配置
@@ -79,6 +87,26 @@ public class RegularNodeInfo extends AbstractModel {
         this.AutoscalingGroupId = AutoscalingGroupId;
     }
 
+    /**
+     * Get 普通节点云标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 普通节点云标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 普通节点云标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 普通节点云标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public RegularNodeInfo() {
     }
 
@@ -93,6 +121,12 @@ public class RegularNodeInfo extends AbstractModel {
         if (source.AutoscalingGroupId != null) {
             this.AutoscalingGroupId = new String(source.AutoscalingGroupId);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -102,6 +136,7 @@ public class RegularNodeInfo extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "InstanceAdvancedSettings.", this.InstanceAdvancedSettings);
         this.setParamSimple(map, prefix + "AutoscalingGroupId", this.AutoscalingGroupId);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

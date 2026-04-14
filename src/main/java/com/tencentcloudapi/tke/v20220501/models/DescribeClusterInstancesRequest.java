@@ -60,6 +60,13 @@ InstanceIds(实例ID),InstanceType(实例类型：Regular，Native，Super，Ext
     private SortBy SortBy;
 
     /**
+    * 是否返回节点云标签
+    */
+    @SerializedName("NeedTags")
+    @Expose
+    private Boolean NeedTags;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -143,6 +150,22 @@ InstanceIds(实例ID),InstanceType(实例类型：Regular，Native，Super，Ext
         this.SortBy = SortBy;
     }
 
+    /**
+     * Get 是否返回节点云标签 
+     * @return NeedTags 是否返回节点云标签
+     */
+    public Boolean getNeedTags() {
+        return this.NeedTags;
+    }
+
+    /**
+     * Set 是否返回节点云标签
+     * @param NeedTags 是否返回节点云标签
+     */
+    public void setNeedTags(Boolean NeedTags) {
+        this.NeedTags = NeedTags;
+    }
+
     public DescribeClusterInstancesRequest() {
     }
 
@@ -169,6 +192,9 @@ InstanceIds(实例ID),InstanceType(实例类型：Regular，Native，Super，Ext
         if (source.SortBy != null) {
             this.SortBy = new SortBy(source.SortBy);
         }
+        if (source.NeedTags != null) {
+            this.NeedTags = new Boolean(source.NeedTags);
+        }
     }
 
 
@@ -181,6 +207,7 @@ InstanceIds(实例ID),InstanceType(实例类型：Regular，Native，Super，Ext
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamObj(map, prefix + "SortBy.", this.SortBy);
+        this.setParamSimple(map, prefix + "NeedTags", this.NeedTags);
 
     }
 }

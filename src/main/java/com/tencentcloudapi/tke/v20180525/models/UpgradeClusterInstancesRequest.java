@@ -73,7 +73,7 @@ major 大版本原地升级
     private Boolean SkipPreCheck;
 
     /**
-    * 最大可容忍的不可用Pod比例
+    * 最大可容忍的不可用Pod比例，如果设置 0 表示不做校验
     */
     @SerializedName("MaxNotReadyPercent")
     @Expose
@@ -85,6 +85,13 @@ major 大版本原地升级
     @SerializedName("UpgradeRunTime")
     @Expose
     private Boolean UpgradeRunTime;
+
+    /**
+    * 支持多个节点并行升级，默认值为 1，最大并行数为15
+    */
+    @SerializedName("Concurrent")
+    @Expose
+    private Long Concurrent;
 
     /**
      * Get 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ） 
@@ -211,16 +218,16 @@ major 大版本原地升级
     }
 
     /**
-     * Get 最大可容忍的不可用Pod比例 
-     * @return MaxNotReadyPercent 最大可容忍的不可用Pod比例
+     * Get 最大可容忍的不可用Pod比例，如果设置 0 表示不做校验 
+     * @return MaxNotReadyPercent 最大可容忍的不可用Pod比例，如果设置 0 表示不做校验
      */
     public Float getMaxNotReadyPercent() {
         return this.MaxNotReadyPercent;
     }
 
     /**
-     * Set 最大可容忍的不可用Pod比例
-     * @param MaxNotReadyPercent 最大可容忍的不可用Pod比例
+     * Set 最大可容忍的不可用Pod比例，如果设置 0 表示不做校验
+     * @param MaxNotReadyPercent 最大可容忍的不可用Pod比例，如果设置 0 表示不做校验
      */
     public void setMaxNotReadyPercent(Float MaxNotReadyPercent) {
         this.MaxNotReadyPercent = MaxNotReadyPercent;
@@ -240,6 +247,22 @@ major 大版本原地升级
      */
     public void setUpgradeRunTime(Boolean UpgradeRunTime) {
         this.UpgradeRunTime = UpgradeRunTime;
+    }
+
+    /**
+     * Get 支持多个节点并行升级，默认值为 1，最大并行数为15 
+     * @return Concurrent 支持多个节点并行升级，默认值为 1，最大并行数为15
+     */
+    public Long getConcurrent() {
+        return this.Concurrent;
+    }
+
+    /**
+     * Set 支持多个节点并行升级，默认值为 1，最大并行数为15
+     * @param Concurrent 支持多个节点并行升级，默认值为 1，最大并行数为15
+     */
+    public void setConcurrent(Long Concurrent) {
+        this.Concurrent = Concurrent;
     }
 
     public UpgradeClusterInstancesRequest() {
@@ -277,6 +300,9 @@ major 大版本原地升级
         if (source.UpgradeRunTime != null) {
             this.UpgradeRunTime = new Boolean(source.UpgradeRunTime);
         }
+        if (source.Concurrent != null) {
+            this.Concurrent = new Long(source.Concurrent);
+        }
     }
 
 
@@ -292,6 +318,7 @@ major 大版本原地升级
         this.setParamSimple(map, prefix + "SkipPreCheck", this.SkipPreCheck);
         this.setParamSimple(map, prefix + "MaxNotReadyPercent", this.MaxNotReadyPercent);
         this.setParamSimple(map, prefix + "UpgradeRunTime", this.UpgradeRunTime);
+        this.setParamSimple(map, prefix + "Concurrent", this.Concurrent);
 
     }
 }

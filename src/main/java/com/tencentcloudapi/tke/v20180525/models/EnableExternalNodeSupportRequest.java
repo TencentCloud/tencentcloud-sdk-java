@@ -31,7 +31,7 @@ public class EnableExternalNodeSupportRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * 开启第三方节点池支持配置信息
+    * 开启注册节点池支持配置信息
     */
     @SerializedName("ClusterExternalConfig")
     @Expose
@@ -54,16 +54,16 @@ public class EnableExternalNodeSupportRequest extends AbstractModel {
     }
 
     /**
-     * Get 开启第三方节点池支持配置信息 
-     * @return ClusterExternalConfig 开启第三方节点池支持配置信息
+     * Get 开启注册节点池支持配置信息 
+     * @return ClusterExternalConfig 开启注册节点池支持配置信息
      */
     public ClusterExternalConfig getClusterExternalConfig() {
         return this.ClusterExternalConfig;
     }
 
     /**
-     * Set 开启第三方节点池支持配置信息
-     * @param ClusterExternalConfig 开启第三方节点池支持配置信息
+     * Set 开启注册节点池支持配置信息
+     * @param ClusterExternalConfig 开启注册节点池支持配置信息
      */
     public void setClusterExternalConfig(ClusterExternalConfig ClusterExternalConfig) {
         this.ClusterExternalConfig = ClusterExternalConfig;

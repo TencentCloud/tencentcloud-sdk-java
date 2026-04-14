@@ -31,7 +31,7 @@ public class DescribeExternalNodeSupportConfigResponse extends AbstractModel {
     private String ClusterCIDR;
 
     /**
-    * 集群网络插件类型，支持：CiliumBGP、CiliumVXLan
+    * 集群网络插件类型，支持：CiliumOverlay、HostNetwork
     */
     @SerializedName("NetworkType")
     @Expose
@@ -45,7 +45,7 @@ public class DescribeExternalNodeSupportConfigResponse extends AbstractModel {
     private String SubnetId;
 
     /**
-    * 是否开启第三方节点专线连接支持
+    * 是否开启注册节点专线连接支持
     */
     @SerializedName("Enabled")
     @Expose
@@ -66,7 +66,7 @@ public class DescribeExternalNodeSupportConfigResponse extends AbstractModel {
     private String SwitchIP;
 
     /**
-    * 开启第三方节点池状态
+    * 开启注册节点池状态，支持 Initializing、InitFailed、Enabled、Disabled
     */
     @SerializedName("Status")
     @Expose
@@ -94,7 +94,7 @@ public class DescribeExternalNodeSupportConfigResponse extends AbstractModel {
     private String Proxy;
 
     /**
-    * 用于记录开启第三方节点的过程进行到哪一步了
+    * 开启注册节点能力的进度
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Progress")
@@ -102,7 +102,7 @@ public class DescribeExternalNodeSupportConfigResponse extends AbstractModel {
     private Step [] Progress;
 
     /**
-    * 是否开启第三方节点公网连接支持
+    * 是否开启注册节点公网连接支持
     */
     @SerializedName("EnabledPublicConnect")
     @Expose
@@ -146,16 +146,16 @@ public class DescribeExternalNodeSupportConfigResponse extends AbstractModel {
     }
 
     /**
-     * Get 集群网络插件类型，支持：CiliumBGP、CiliumVXLan 
-     * @return NetworkType 集群网络插件类型，支持：CiliumBGP、CiliumVXLan
+     * Get 集群网络插件类型，支持：CiliumOverlay、HostNetwork 
+     * @return NetworkType 集群网络插件类型，支持：CiliumOverlay、HostNetwork
      */
     public String getNetworkType() {
         return this.NetworkType;
     }
 
     /**
-     * Set 集群网络插件类型，支持：CiliumBGP、CiliumVXLan
-     * @param NetworkType 集群网络插件类型，支持：CiliumBGP、CiliumVXLan
+     * Set 集群网络插件类型，支持：CiliumOverlay、HostNetwork
+     * @param NetworkType 集群网络插件类型，支持：CiliumOverlay、HostNetwork
      */
     public void setNetworkType(String NetworkType) {
         this.NetworkType = NetworkType;
@@ -178,16 +178,16 @@ public class DescribeExternalNodeSupportConfigResponse extends AbstractModel {
     }
 
     /**
-     * Get 是否开启第三方节点专线连接支持 
-     * @return Enabled 是否开启第三方节点专线连接支持
+     * Get 是否开启注册节点专线连接支持 
+     * @return Enabled 是否开启注册节点专线连接支持
      */
     public Boolean getEnabled() {
         return this.Enabled;
     }
 
     /**
-     * Set 是否开启第三方节点专线连接支持
-     * @param Enabled 是否开启第三方节点专线连接支持
+     * Set 是否开启注册节点专线连接支持
+     * @param Enabled 是否开启注册节点专线连接支持
      */
     public void setEnabled(Boolean Enabled) {
         this.Enabled = Enabled;
@@ -226,16 +226,16 @@ public class DescribeExternalNodeSupportConfigResponse extends AbstractModel {
     }
 
     /**
-     * Get 开启第三方节点池状态 
-     * @return Status 开启第三方节点池状态
+     * Get 开启注册节点池状态，支持 Initializing、InitFailed、Enabled、Disabled 
+     * @return Status 开启注册节点池状态，支持 Initializing、InitFailed、Enabled、Disabled
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 开启第三方节点池状态
-     * @param Status 开启第三方节点池状态
+     * Set 开启注册节点池状态，支持 Initializing、InitFailed、Enabled、Disabled
+     * @param Status 开启注册节点池状态，支持 Initializing、InitFailed、Enabled、Disabled
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -290,9 +290,9 @@ public class DescribeExternalNodeSupportConfigResponse extends AbstractModel {
     }
 
     /**
-     * Get 用于记录开启第三方节点的过程进行到哪一步了
+     * Get 开启注册节点能力的进度
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Progress 用于记录开启第三方节点的过程进行到哪一步了
+     * @return Progress 开启注册节点能力的进度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Step [] getProgress() {
@@ -300,9 +300,9 @@ public class DescribeExternalNodeSupportConfigResponse extends AbstractModel {
     }
 
     /**
-     * Set 用于记录开启第三方节点的过程进行到哪一步了
+     * Set 开启注册节点能力的进度
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Progress 用于记录开启第三方节点的过程进行到哪一步了
+     * @param Progress 开启注册节点能力的进度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProgress(Step [] Progress) {
@@ -310,16 +310,16 @@ public class DescribeExternalNodeSupportConfigResponse extends AbstractModel {
     }
 
     /**
-     * Get 是否开启第三方节点公网连接支持 
-     * @return EnabledPublicConnect 是否开启第三方节点公网连接支持
+     * Get 是否开启注册节点公网连接支持 
+     * @return EnabledPublicConnect 是否开启注册节点公网连接支持
      */
     public Boolean getEnabledPublicConnect() {
         return this.EnabledPublicConnect;
     }
 
     /**
-     * Set 是否开启第三方节点公网连接支持
-     * @param EnabledPublicConnect 是否开启第三方节点公网连接支持
+     * Set 是否开启注册节点公网连接支持
+     * @param EnabledPublicConnect 是否开启注册节点公网连接支持
      */
     public void setEnabledPublicConnect(Boolean EnabledPublicConnect) {
         this.EnabledPublicConnect = EnabledPublicConnect;

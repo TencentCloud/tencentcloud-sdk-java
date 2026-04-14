@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tke.v20180525.models;
+package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeExternalNodeSupportConfigRequest extends AbstractModel {
+public class TermBase extends AbstractModel {
 
     /**
-    * 集群Id，可通过查看集群的基本信息->基础信息页获取
+    * <p>术语原语言</p>
     */
-    @SerializedName("ClusterId")
+    @SerializedName("Src")
     @Expose
-    private String ClusterId;
+    private String Src;
 
     /**
-     * Get 集群Id，可通过查看集群的基本信息->基础信息页获取 
-     * @return ClusterId 集群Id，可通过查看集群的基本信息->基础信息页获取
+    * <p>术语目标语言</p>
+    */
+    @SerializedName("Dst")
+    @Expose
+    private String Dst;
+
+    /**
+     * Get <p>术语原语言</p> 
+     * @return Src <p>术语原语言</p>
      */
-    public String getClusterId() {
-        return this.ClusterId;
+    public String getSrc() {
+        return this.Src;
     }
 
     /**
-     * Set 集群Id，可通过查看集群的基本信息->基础信息页获取
-     * @param ClusterId 集群Id，可通过查看集群的基本信息->基础信息页获取
+     * Set <p>术语原语言</p>
+     * @param Src <p>术语原语言</p>
      */
-    public void setClusterId(String ClusterId) {
-        this.ClusterId = ClusterId;
+    public void setSrc(String Src) {
+        this.Src = Src;
     }
 
-    public DescribeExternalNodeSupportConfigRequest() {
+    /**
+     * Get <p>术语目标语言</p> 
+     * @return Dst <p>术语目标语言</p>
+     */
+    public String getDst() {
+        return this.Dst;
+    }
+
+    /**
+     * Set <p>术语目标语言</p>
+     * @param Dst <p>术语目标语言</p>
+     */
+    public void setDst(String Dst) {
+        this.Dst = Dst;
+    }
+
+    public TermBase() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeExternalNodeSupportConfigRequest(DescribeExternalNodeSupportConfigRequest source) {
-        if (source.ClusterId != null) {
-            this.ClusterId = new String(source.ClusterId);
+    public TermBase(TermBase source) {
+        if (source.Src != null) {
+            this.Src = new String(source.Src);
+        }
+        if (source.Dst != null) {
+            this.Dst = new String(source.Dst);
         }
     }
 
@@ -64,7 +90,8 @@ public class DescribeExternalNodeSupportConfigRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "Src", this.Src);
+        this.setParamSimple(map, prefix + "Dst", this.Dst);
 
     }
 }

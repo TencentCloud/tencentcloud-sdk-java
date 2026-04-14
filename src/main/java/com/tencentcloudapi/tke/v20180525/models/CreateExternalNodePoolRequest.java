@@ -52,21 +52,21 @@ public class CreateExternalNodePoolRequest extends AbstractModel {
     private String RuntimeVersion;
 
     /**
-    * 第三方节点label
+    * 注册节点标签
     */
     @SerializedName("Labels")
     @Expose
     private Label [] Labels;
 
     /**
-    * 第三方节点taint
+    * 注册节点污点
     */
     @SerializedName("Taints")
     @Expose
     private Taint [] Taints;
 
     /**
-    * 第三方节点高级设置
+    * 注册节点高级设置
     */
     @SerializedName("InstanceAdvancedSettings")
     @Expose
@@ -80,7 +80,7 @@ public class CreateExternalNodePoolRequest extends AbstractModel {
     private Boolean DeletionProtection;
 
     /**
-    * 节点类型
+    * 节点类型，支持 CPU、GPU
     */
     @SerializedName("NodeType")
     @Expose
@@ -151,48 +151,48 @@ public class CreateExternalNodePoolRequest extends AbstractModel {
     }
 
     /**
-     * Get 第三方节点label 
-     * @return Labels 第三方节点label
+     * Get 注册节点标签 
+     * @return Labels 注册节点标签
      */
     public Label [] getLabels() {
         return this.Labels;
     }
 
     /**
-     * Set 第三方节点label
-     * @param Labels 第三方节点label
+     * Set 注册节点标签
+     * @param Labels 注册节点标签
      */
     public void setLabels(Label [] Labels) {
         this.Labels = Labels;
     }
 
     /**
-     * Get 第三方节点taint 
-     * @return Taints 第三方节点taint
+     * Get 注册节点污点 
+     * @return Taints 注册节点污点
      */
     public Taint [] getTaints() {
         return this.Taints;
     }
 
     /**
-     * Set 第三方节点taint
-     * @param Taints 第三方节点taint
+     * Set 注册节点污点
+     * @param Taints 注册节点污点
      */
     public void setTaints(Taint [] Taints) {
         this.Taints = Taints;
     }
 
     /**
-     * Get 第三方节点高级设置 
-     * @return InstanceAdvancedSettings 第三方节点高级设置
+     * Get 注册节点高级设置 
+     * @return InstanceAdvancedSettings 注册节点高级设置
      */
     public InstanceAdvancedSettings getInstanceAdvancedSettings() {
         return this.InstanceAdvancedSettings;
     }
 
     /**
-     * Set 第三方节点高级设置
-     * @param InstanceAdvancedSettings 第三方节点高级设置
+     * Set 注册节点高级设置
+     * @param InstanceAdvancedSettings 注册节点高级设置
      */
     public void setInstanceAdvancedSettings(InstanceAdvancedSettings InstanceAdvancedSettings) {
         this.InstanceAdvancedSettings = InstanceAdvancedSettings;
@@ -215,16 +215,16 @@ public class CreateExternalNodePoolRequest extends AbstractModel {
     }
 
     /**
-     * Get 节点类型 
-     * @return NodeType 节点类型
+     * Get 节点类型，支持 CPU、GPU 
+     * @return NodeType 节点类型，支持 CPU、GPU
      */
     public String getNodeType() {
         return this.NodeType;
     }
 
     /**
-     * Set 节点类型
-     * @param NodeType 节点类型
+     * Set 节点类型，支持 CPU、GPU
+     * @param NodeType 节点类型，支持 CPU、GPU
      */
     public void setNodeType(String NodeType) {
         this.NodeType = NodeType;

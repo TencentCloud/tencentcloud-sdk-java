@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class LogoRect extends AbstractModel {
 
     /**
-    * 水印图框X坐标值。当值大于0时，坐标轴原点位于原图左侧，方向指右；当值小于0时，坐标轴原点位于原图右侧，方向指左。
+    * <p>水印图框X坐标值。当值大于0时，坐标轴原点位于原图左侧，方向指右；当值小于0时，坐标轴原点位于原图右侧，方向指左。</p>
     */
     @SerializedName("X")
     @Expose
     private Long X;
 
     /**
-    * 水印图框Y坐标值。当值大于0时，坐标轴原点位于原图上侧，方向指下；当值小于0时，坐标轴原点位于原图下侧，方向指上。
+    * <p>水印图框Y坐标值。当值大于0时，坐标轴原点位于原图上侧，方向指下；当值小于0时，坐标轴原点位于原图下侧，方向指上。</p>
     */
     @SerializedName("Y")
     @Expose
     private Long Y;
 
     /**
-    * 水印图框宽度。
+    * <p>水印图框宽度。<br>单位：px</p>
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * 水印图框高度。
+    * <p>水印图框高度。<br>单位：px</p>
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-     * Get 水印图框X坐标值。当值大于0时，坐标轴原点位于原图左侧，方向指右；当值小于0时，坐标轴原点位于原图右侧，方向指左。 
-     * @return X 水印图框X坐标值。当值大于0时，坐标轴原点位于原图左侧，方向指右；当值小于0时，坐标轴原点位于原图右侧，方向指左。
+     * Get <p>水印图框X坐标值。当值大于0时，坐标轴原点位于原图左侧，方向指右；当值小于0时，坐标轴原点位于原图右侧，方向指左。</p> 
+     * @return X <p>水印图框X坐标值。当值大于0时，坐标轴原点位于原图左侧，方向指右；当值小于0时，坐标轴原点位于原图右侧，方向指左。</p>
      */
     public Long getX() {
         return this.X;
     }
 
     /**
-     * Set 水印图框X坐标值。当值大于0时，坐标轴原点位于原图左侧，方向指右；当值小于0时，坐标轴原点位于原图右侧，方向指左。
-     * @param X 水印图框X坐标值。当值大于0时，坐标轴原点位于原图左侧，方向指右；当值小于0时，坐标轴原点位于原图右侧，方向指左。
+     * Set <p>水印图框X坐标值。当值大于0时，坐标轴原点位于原图左侧，方向指右；当值小于0时，坐标轴原点位于原图右侧，方向指左。</p>
+     * @param X <p>水印图框X坐标值。当值大于0时，坐标轴原点位于原图左侧，方向指右；当值小于0时，坐标轴原点位于原图右侧，方向指左。</p>
      */
     public void setX(Long X) {
         this.X = X;
     }
 
     /**
-     * Get 水印图框Y坐标值。当值大于0时，坐标轴原点位于原图上侧，方向指下；当值小于0时，坐标轴原点位于原图下侧，方向指上。 
-     * @return Y 水印图框Y坐标值。当值大于0时，坐标轴原点位于原图上侧，方向指下；当值小于0时，坐标轴原点位于原图下侧，方向指上。
+     * Get <p>水印图框Y坐标值。当值大于0时，坐标轴原点位于原图上侧，方向指下；当值小于0时，坐标轴原点位于原图下侧，方向指上。</p> 
+     * @return Y <p>水印图框Y坐标值。当值大于0时，坐标轴原点位于原图上侧，方向指下；当值小于0时，坐标轴原点位于原图下侧，方向指上。</p>
      */
     public Long getY() {
         return this.Y;
     }
 
     /**
-     * Set 水印图框Y坐标值。当值大于0时，坐标轴原点位于原图上侧，方向指下；当值小于0时，坐标轴原点位于原图下侧，方向指上。
-     * @param Y 水印图框Y坐标值。当值大于0时，坐标轴原点位于原图上侧，方向指下；当值小于0时，坐标轴原点位于原图下侧，方向指上。
+     * Set <p>水印图框Y坐标值。当值大于0时，坐标轴原点位于原图上侧，方向指下；当值小于0时，坐标轴原点位于原图下侧，方向指上。</p>
+     * @param Y <p>水印图框Y坐标值。当值大于0时，坐标轴原点位于原图上侧，方向指下；当值小于0时，坐标轴原点位于原图下侧，方向指上。</p>
      */
     public void setY(Long Y) {
         this.Y = Y;
     }
 
     /**
-     * Get 水印图框宽度。 
-     * @return Width 水印图框宽度。
+     * Get <p>水印图框宽度。<br>单位：px</p> 
+     * @return Width <p>水印图框宽度。<br>单位：px</p>
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 水印图框宽度。
-     * @param Width 水印图框宽度。
+     * Set <p>水印图框宽度。<br>单位：px</p>
+     * @param Width <p>水印图框宽度。<br>单位：px</p>
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 水印图框高度。 
-     * @return Height 水印图框高度。
+     * Get <p>水印图框高度。<br>单位：px</p> 
+     * @return Height <p>水印图框高度。<br>单位：px</p>
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 水印图框高度。
-     * @param Height 水印图框高度。
+     * Set <p>水印图框高度。<br>单位：px</p>
+     * @param Height <p>水印图框高度。<br>单位：px</p>
      */
     public void setHeight(Long Height) {
         this.Height = Height;

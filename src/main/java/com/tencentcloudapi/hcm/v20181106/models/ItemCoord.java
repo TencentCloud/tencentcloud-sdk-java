@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class ItemCoord extends AbstractModel {
 
     /**
-    * 算式高度
+    * <p>算式高度（单位：px）</p>
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * 算式宽度
+    * <p>算式宽度（单位：px）</p>
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * 算式图的左上角横坐标
+    * <p>算式图的左上角横坐标</p>
     */
     @SerializedName("X")
     @Expose
     private Long X;
 
     /**
-    * 算式图的左上角纵坐标
+    * <p>算式图的左上角纵坐标</p>
     */
     @SerializedName("Y")
     @Expose
     private Long Y;
 
     /**
-     * Get 算式高度 
-     * @return Height 算式高度
+     * Get <p>算式高度（单位：px）</p> 
+     * @return Height <p>算式高度（单位：px）</p>
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 算式高度
-     * @param Height 算式高度
+     * Set <p>算式高度（单位：px）</p>
+     * @param Height <p>算式高度（单位：px）</p>
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get 算式宽度 
-     * @return Width 算式宽度
+     * Get <p>算式宽度（单位：px）</p> 
+     * @return Width <p>算式宽度（单位：px）</p>
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 算式宽度
-     * @param Width 算式宽度
+     * Set <p>算式宽度（单位：px）</p>
+     * @param Width <p>算式宽度（单位：px）</p>
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 算式图的左上角横坐标 
-     * @return X 算式图的左上角横坐标
+     * Get <p>算式图的左上角横坐标</p> 
+     * @return X <p>算式图的左上角横坐标</p>
      */
     public Long getX() {
         return this.X;
     }
 
     /**
-     * Set 算式图的左上角横坐标
-     * @param X 算式图的左上角横坐标
+     * Set <p>算式图的左上角横坐标</p>
+     * @param X <p>算式图的左上角横坐标</p>
      */
     public void setX(Long X) {
         this.X = X;
     }
 
     /**
-     * Get 算式图的左上角纵坐标 
-     * @return Y 算式图的左上角纵坐标
+     * Get <p>算式图的左上角纵坐标</p> 
+     * @return Y <p>算式图的左上角纵坐标</p>
      */
     public Long getY() {
         return this.Y;
     }
 
     /**
-     * Set 算式图的左上角纵坐标
-     * @param Y 算式图的左上角纵坐标
+     * Set <p>算式图的左上角纵坐标</p>
+     * @param Y <p>算式图的左上角纵坐标</p>
      */
     public void setY(Long Y) {
         this.Y = Y;

@@ -24,49 +24,72 @@ import java.util.HashMap;
 public class UpdateServiceConfigsRequest extends AbstractModel {
 
     /**
-    * 服务ID
+    * <p>服务ID</p>
     */
     @SerializedName("ServiceId")
     @Expose
     private String ServiceId;
 
     /**
-    * 期望副本数
+    * <p>期望副本数</p>
     */
     @SerializedName("TargetReplicas")
     @Expose
     private Long TargetReplicas;
 
     /**
-     * Get 服务ID 
-     * @return ServiceId 服务ID
+    * <p>启动参数、环境变量等参数</p>
+    */
+    @SerializedName("DeploymentConfigs")
+    @Expose
+    private DeploymentConfig [] DeploymentConfigs;
+
+    /**
+     * Get <p>服务ID</p> 
+     * @return ServiceId <p>服务ID</p>
      */
     public String getServiceId() {
         return this.ServiceId;
     }
 
     /**
-     * Set 服务ID
-     * @param ServiceId 服务ID
+     * Set <p>服务ID</p>
+     * @param ServiceId <p>服务ID</p>
      */
     public void setServiceId(String ServiceId) {
         this.ServiceId = ServiceId;
     }
 
     /**
-     * Get 期望副本数 
-     * @return TargetReplicas 期望副本数
+     * Get <p>期望副本数</p> 
+     * @return TargetReplicas <p>期望副本数</p>
      */
     public Long getTargetReplicas() {
         return this.TargetReplicas;
     }
 
     /**
-     * Set 期望副本数
-     * @param TargetReplicas 期望副本数
+     * Set <p>期望副本数</p>
+     * @param TargetReplicas <p>期望副本数</p>
      */
     public void setTargetReplicas(Long TargetReplicas) {
         this.TargetReplicas = TargetReplicas;
+    }
+
+    /**
+     * Get <p>启动参数、环境变量等参数</p> 
+     * @return DeploymentConfigs <p>启动参数、环境变量等参数</p>
+     */
+    public DeploymentConfig [] getDeploymentConfigs() {
+        return this.DeploymentConfigs;
+    }
+
+    /**
+     * Set <p>启动参数、环境变量等参数</p>
+     * @param DeploymentConfigs <p>启动参数、环境变量等参数</p>
+     */
+    public void setDeploymentConfigs(DeploymentConfig [] DeploymentConfigs) {
+        this.DeploymentConfigs = DeploymentConfigs;
     }
 
     public UpdateServiceConfigsRequest() {
@@ -83,6 +106,12 @@ public class UpdateServiceConfigsRequest extends AbstractModel {
         if (source.TargetReplicas != null) {
             this.TargetReplicas = new Long(source.TargetReplicas);
         }
+        if (source.DeploymentConfigs != null) {
+            this.DeploymentConfigs = new DeploymentConfig[source.DeploymentConfigs.length];
+            for (int i = 0; i < source.DeploymentConfigs.length; i++) {
+                this.DeploymentConfigs[i] = new DeploymentConfig(source.DeploymentConfigs[i]);
+            }
+        }
     }
 
 
@@ -92,6 +121,7 @@ public class UpdateServiceConfigsRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ServiceId", this.ServiceId);
         this.setParamSimple(map, prefix + "TargetReplicas", this.TargetReplicas);
+        this.setParamArrayObj(map, prefix + "DeploymentConfigs.", this.DeploymentConfigs);
 
     }
 }

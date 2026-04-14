@@ -52,6 +52,13 @@ public class SandboxInstance extends AbstractModel {
     private String Status;
 
     /**
+    * <p>是否常驻实例</p>
+    */
+    @SerializedName("Persistent")
+    @Expose
+    private Boolean Persistent;
+
+    /**
     * <p>超时时间（秒），null 表示无超时设置</p>
     */
     @SerializedName("TimeoutSeconds")
@@ -176,6 +183,22 @@ public class SandboxInstance extends AbstractModel {
      */
     public void setStatus(String Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get <p>是否常驻实例</p> 
+     * @return Persistent <p>是否常驻实例</p>
+     */
+    public Boolean getPersistent() {
+        return this.Persistent;
+    }
+
+    /**
+     * Set <p>是否常驻实例</p>
+     * @param Persistent <p>是否常驻实例</p>
+     */
+    public void setPersistent(Boolean Persistent) {
+        this.Persistent = Persistent;
     }
 
     /**
@@ -342,6 +365,9 @@ public class SandboxInstance extends AbstractModel {
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.Persistent != null) {
+            this.Persistent = new Boolean(source.Persistent);
+        }
         if (source.TimeoutSeconds != null) {
             this.TimeoutSeconds = new Long(source.TimeoutSeconds);
         }
@@ -386,6 +412,7 @@ public class SandboxInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "ToolId", this.ToolId);
         this.setParamSimple(map, prefix + "ToolName", this.ToolName);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Persistent", this.Persistent);
         this.setParamSimple(map, prefix + "TimeoutSeconds", this.TimeoutSeconds);
         this.setParamSimple(map, prefix + "ExpiresAt", this.ExpiresAt);
         this.setParamSimple(map, prefix + "StopReason", this.StopReason);

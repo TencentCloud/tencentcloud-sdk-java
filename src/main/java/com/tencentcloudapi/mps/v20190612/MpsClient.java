@@ -263,6 +263,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *剧集项目创建
+     * @param req CreateProjectRequest
+     * @return CreateProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateProjectResponse CreateProject(CreateProjectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateProject", CreateProjectResponse.class);
+    }
+
+    /**
      *创建媒体质检模板，数量上限：50。
      * @param req CreateQualityControlTemplateRequest
      * @return CreateQualityControlTemplateResponse
@@ -662,6 +673,17 @@ public class MpsClient extends AbstractClient{
     public DeleteProcessImageTemplateResponse DeleteProcessImageTemplate(DeleteProcessImageTemplateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteProcessImageTemplate", DeleteProcessImageTemplateResponse.class);
+    }
+
+    /**
+     *剧集项目删除接口
+     * @param req DeleteProjectRequest
+     * @return DeleteProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteProjectResponse DeleteProject(DeleteProjectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteProject", DeleteProjectResponse.class);
     }
 
     /**
@@ -2182,6 +2204,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *剧集项目查询
+     * @param req QueryProjectRequest
+     * @return QueryProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryProjectResponse QueryProject(QueryProjectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryProject", QueryProjectResponse.class);
+    }
+
+    /**
      *同步接口，返回语音识别结果
      * @param req RecognizeAudioRequest
      * @return RecognizeAudioResponse
@@ -2278,6 +2311,17 @@ public class MpsClient extends AbstractClient{
     public TextTranslationResponse TextTranslation(TextTranslationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "TextTranslation", TextTranslationResponse.class);
+    }
+
+    /**
+     *剧集项目更新
+     * @param req UpdateProjectRequest
+     * @return UpdateProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateProjectResponse UpdateProject(UpdateProjectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateProject", UpdateProjectResponse.class);
     }
 
     /**

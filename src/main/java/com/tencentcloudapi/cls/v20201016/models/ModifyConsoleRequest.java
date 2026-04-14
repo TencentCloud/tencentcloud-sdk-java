@@ -38,7 +38,7 @@ public class ModifyConsoleRequest extends AbstractModel {
     private String [] AccessMode;
 
     /**
-    * <p>登录方式：0 - 账号密码鉴权，1 - 匿名登陆，2 - 第三方认证登录</p>
+    * <p>登录方式</p><p>枚举值：</p><ul><li>0： 账号密码鉴权</li><li>1： 匿名登录</li><li>2： 第三方认证登录</li></ul>
     */
     @SerializedName("LoginMode")
     @Expose
@@ -52,7 +52,7 @@ public class ModifyConsoleRequest extends AbstractModel {
     private String DomainPrefix;
 
     /**
-    * <p>用户账号信息</p><p>“账号密码鉴权“登录方式必传</p>
+    * <p>用户账号信息</p><p>“账号密码鉴权”登录方式必传</p>
     */
     @SerializedName("Accounts")
     @Expose
@@ -161,16 +161,16 @@ public class ModifyConsoleRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>登录方式：0 - 账号密码鉴权，1 - 匿名登陆，2 - 第三方认证登录</p> 
-     * @return LoginMode <p>登录方式：0 - 账号密码鉴权，1 - 匿名登陆，2 - 第三方认证登录</p>
+     * Get <p>登录方式</p><p>枚举值：</p><ul><li>0： 账号密码鉴权</li><li>1： 匿名登录</li><li>2： 第三方认证登录</li></ul> 
+     * @return LoginMode <p>登录方式</p><p>枚举值：</p><ul><li>0： 账号密码鉴权</li><li>1： 匿名登录</li><li>2： 第三方认证登录</li></ul>
      */
     public Long getLoginMode() {
         return this.LoginMode;
     }
 
     /**
-     * Set <p>登录方式：0 - 账号密码鉴权，1 - 匿名登陆，2 - 第三方认证登录</p>
-     * @param LoginMode <p>登录方式：0 - 账号密码鉴权，1 - 匿名登陆，2 - 第三方认证登录</p>
+     * Set <p>登录方式</p><p>枚举值：</p><ul><li>0： 账号密码鉴权</li><li>1： 匿名登录</li><li>2： 第三方认证登录</li></ul>
+     * @param LoginMode <p>登录方式</p><p>枚举值：</p><ul><li>0： 账号密码鉴权</li><li>1： 匿名登录</li><li>2： 第三方认证登录</li></ul>
      */
     public void setLoginMode(Long LoginMode) {
         this.LoginMode = LoginMode;
@@ -193,16 +193,16 @@ public class ModifyConsoleRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>用户账号信息</p><p>“账号密码鉴权“登录方式必传</p> 
-     * @return Accounts <p>用户账号信息</p><p>“账号密码鉴权“登录方式必传</p>
+     * Get <p>用户账号信息</p><p>“账号密码鉴权”登录方式必传</p> 
+     * @return Accounts <p>用户账号信息</p><p>“账号密码鉴权”登录方式必传</p>
      */
     public ConsoleAccount [] getAccounts() {
         return this.Accounts;
     }
 
     /**
-     * Set <p>用户账号信息</p><p>“账号密码鉴权“登录方式必传</p>
-     * @param Accounts <p>用户账号信息</p><p>“账号密码鉴权“登录方式必传</p>
+     * Set <p>用户账号信息</p><p>“账号密码鉴权”登录方式必传</p>
+     * @param Accounts <p>用户账号信息</p><p>“账号密码鉴权”登录方式必传</p>
      */
     public void setAccounts(ConsoleAccount [] Accounts) {
         this.Accounts = Accounts;

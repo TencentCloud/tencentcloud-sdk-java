@@ -136,6 +136,27 @@ public class SuperNodeInfo extends AbstractModel {
     private String InstanceAttribute;
 
     /**
+    * 节点名称
+    */
+    @SerializedName("NodeName")
+    @Expose
+    private String NodeName;
+
+    /**
+    * 包销时长
+    */
+    @SerializedName("Duration")
+    @Expose
+    private String Duration;
+
+    /**
+    * 预付费资源ID
+    */
+    @SerializedName("ResourceId")
+    @Expose
+    private String ResourceId;
+
+    /**
      * Get 实例名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 实例名称
@@ -415,6 +436,54 @@ public class SuperNodeInfo extends AbstractModel {
         this.InstanceAttribute = InstanceAttribute;
     }
 
+    /**
+     * Get 节点名称 
+     * @return NodeName 节点名称
+     */
+    public String getNodeName() {
+        return this.NodeName;
+    }
+
+    /**
+     * Set 节点名称
+     * @param NodeName 节点名称
+     */
+    public void setNodeName(String NodeName) {
+        this.NodeName = NodeName;
+    }
+
+    /**
+     * Get 包销时长 
+     * @return Duration 包销时长
+     */
+    public String getDuration() {
+        return this.Duration;
+    }
+
+    /**
+     * Set 包销时长
+     * @param Duration 包销时长
+     */
+    public void setDuration(String Duration) {
+        this.Duration = Duration;
+    }
+
+    /**
+     * Get 预付费资源ID 
+     * @return ResourceId 预付费资源ID
+     */
+    public String getResourceId() {
+        return this.ResourceId;
+    }
+
+    /**
+     * Set 预付费资源ID
+     * @param ResourceId 预付费资源ID
+     */
+    public void setResourceId(String ResourceId) {
+        this.ResourceId = ResourceId;
+    }
+
     public SuperNodeInfo() {
     }
 
@@ -465,6 +534,15 @@ public class SuperNodeInfo extends AbstractModel {
         if (source.InstanceAttribute != null) {
             this.InstanceAttribute = new String(source.InstanceAttribute);
         }
+        if (source.NodeName != null) {
+            this.NodeName = new String(source.NodeName);
+        }
+        if (source.Duration != null) {
+            this.Duration = new String(source.Duration);
+        }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
     }
 
 
@@ -486,6 +564,9 @@ public class SuperNodeInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ExpireAt", this.ExpireAt);
         this.setParamSimple(map, prefix + "MaxCPUScheduledPod", this.MaxCPUScheduledPod);
         this.setParamSimple(map, prefix + "InstanceAttribute", this.InstanceAttribute);
+        this.setParamSimple(map, prefix + "NodeName", this.NodeName);
+        this.setParamSimple(map, prefix + "Duration", this.Duration);
+        this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
 
     }
 }

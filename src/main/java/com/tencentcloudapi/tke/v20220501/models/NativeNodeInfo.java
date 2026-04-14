@@ -245,6 +245,14 @@ public class NativeNodeInfo extends AbstractModel {
     private String InstanceId;
 
     /**
+    * 原生节点云标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 节点名称 
      * @return MachineName 节点名称
      */
@@ -780,6 +788,26 @@ public class NativeNodeInfo extends AbstractModel {
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get 原生节点云标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 原生节点云标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 原生节点云标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 原生节点云标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public NativeNodeInfo() {
     }
 
@@ -884,6 +912,12 @@ public class NativeNodeInfo extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -920,6 +954,7 @@ public class NativeNodeInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "OsImage", this.OsImage);
         this.setParamSimple(map, prefix + "MachineType", this.MachineType);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

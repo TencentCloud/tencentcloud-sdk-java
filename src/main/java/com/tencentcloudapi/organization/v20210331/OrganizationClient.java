@@ -1337,6 +1337,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *更新新建ip白名单
+     * @param req UpdateIPWhitelistRequest
+     * @return UpdateIPWhitelistResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateIPWhitelistResponse UpdateIPWhitelist(UpdateIPWhitelistRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateIPWhitelist", UpdateIPWhitelistResponse.class);
+    }
+
+    /**
      *更新组织身份
      * @param req UpdateOrganizationIdentityRequest
      * @return UpdateOrganizationIdentityResponse

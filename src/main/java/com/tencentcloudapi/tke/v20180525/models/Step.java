@@ -32,6 +32,7 @@ public class Step extends AbstractModel {
 
     /**
     * 开始时间
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartAt")
     @Expose
@@ -39,6 +40,7 @@ public class Step extends AbstractModel {
 
     /**
     * 结束时间
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndAt")
     @Expose
@@ -59,6 +61,13 @@ public class Step extends AbstractModel {
     private String Message;
 
     /**
+    * 错误详情
+    */
+    @SerializedName("Detail")
+    @Expose
+    private String Detail;
+
+    /**
      * Get 名称 
      * @return Name 名称
      */
@@ -75,8 +84,10 @@ public class Step extends AbstractModel {
     }
 
     /**
-     * Get 开始时间 
+     * Get 开始时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return StartAt 开始时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartAt() {
         return this.StartAt;
@@ -84,15 +95,19 @@ public class Step extends AbstractModel {
 
     /**
      * Set 开始时间
+注意：此字段可能返回 null，表示取不到有效值。
      * @param StartAt 开始时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartAt(String StartAt) {
         this.StartAt = StartAt;
     }
 
     /**
-     * Get 结束时间 
+     * Get 结束时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return EndAt 结束时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndAt() {
         return this.EndAt;
@@ -100,7 +115,9 @@ public class Step extends AbstractModel {
 
     /**
      * Set 结束时间
+注意：此字段可能返回 null，表示取不到有效值。
      * @param EndAt 结束时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndAt(String EndAt) {
         this.EndAt = EndAt;
@@ -138,6 +155,22 @@ public class Step extends AbstractModel {
         this.Message = Message;
     }
 
+    /**
+     * Get 错误详情 
+     * @return Detail 错误详情
+     */
+    public String getDetail() {
+        return this.Detail;
+    }
+
+    /**
+     * Set 错误详情
+     * @param Detail 错误详情
+     */
+    public void setDetail(String Detail) {
+        this.Detail = Detail;
+    }
+
     public Step() {
     }
 
@@ -161,6 +194,9 @@ public class Step extends AbstractModel {
         if (source.Message != null) {
             this.Message = new String(source.Message);
         }
+        if (source.Detail != null) {
+            this.Detail = new String(source.Detail);
+        }
     }
 
 
@@ -173,6 +209,7 @@ public class Step extends AbstractModel {
         this.setParamSimple(map, prefix + "EndAt", this.EndAt);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Message", this.Message);
+        this.setParamSimple(map, prefix + "Detail", this.Detail);
 
     }
 }

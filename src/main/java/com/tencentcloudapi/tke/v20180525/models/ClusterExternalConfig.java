@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ClusterExternalConfig extends AbstractModel {
 
     /**
-    * 集群网络插件类型，支持：Flannel、CiliumBGP、CiliumVXLan
+    * 容器网络类型，支持：HostNetwork、CiliumBGP
     */
     @SerializedName("NetworkType")
     @Expose
@@ -38,7 +38,7 @@ public class ClusterExternalConfig extends AbstractModel {
     private String SubnetId;
 
     /**
-    * Pod CIDR
+    * 集群CIDR，网络模式HostNetwork 时无需填写
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterCIDR")
@@ -46,23 +46,23 @@ public class ClusterExternalConfig extends AbstractModel {
     private String ClusterCIDR;
 
     /**
-    * 是否开启第三方节点池支持
+    * 【已废弃】是否开启专线连接能力
     */
     @SerializedName("Enabled")
     @Expose
     private Boolean Enabled;
 
     /**
-     * Get 集群网络插件类型，支持：Flannel、CiliumBGP、CiliumVXLan 
-     * @return NetworkType 集群网络插件类型，支持：Flannel、CiliumBGP、CiliumVXLan
+     * Get 容器网络类型，支持：HostNetwork、CiliumBGP 
+     * @return NetworkType 容器网络类型，支持：HostNetwork、CiliumBGP
      */
     public String getNetworkType() {
         return this.NetworkType;
     }
 
     /**
-     * Set 集群网络插件类型，支持：Flannel、CiliumBGP、CiliumVXLan
-     * @param NetworkType 集群网络插件类型，支持：Flannel、CiliumBGP、CiliumVXLan
+     * Set 容器网络类型，支持：HostNetwork、CiliumBGP
+     * @param NetworkType 容器网络类型，支持：HostNetwork、CiliumBGP
      */
     public void setNetworkType(String NetworkType) {
         this.NetworkType = NetworkType;
@@ -85,9 +85,9 @@ public class ClusterExternalConfig extends AbstractModel {
     }
 
     /**
-     * Get Pod CIDR
+     * Get 集群CIDR，网络模式HostNetwork 时无需填写
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClusterCIDR Pod CIDR
+     * @return ClusterCIDR 集群CIDR，网络模式HostNetwork 时无需填写
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterCIDR() {
@@ -95,9 +95,9 @@ public class ClusterExternalConfig extends AbstractModel {
     }
 
     /**
-     * Set Pod CIDR
+     * Set 集群CIDR，网络模式HostNetwork 时无需填写
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClusterCIDR Pod CIDR
+     * @param ClusterCIDR 集群CIDR，网络模式HostNetwork 时无需填写
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterCIDR(String ClusterCIDR) {
@@ -105,16 +105,16 @@ public class ClusterExternalConfig extends AbstractModel {
     }
 
     /**
-     * Get 是否开启第三方节点池支持 
-     * @return Enabled 是否开启第三方节点池支持
+     * Get 【已废弃】是否开启专线连接能力 
+     * @return Enabled 【已废弃】是否开启专线连接能力
      */
     public Boolean getEnabled() {
         return this.Enabled;
     }
 
     /**
-     * Set 是否开启第三方节点池支持
-     * @param Enabled 是否开启第三方节点池支持
+     * Set 【已废弃】是否开启专线连接能力
+     * @param Enabled 【已废弃】是否开启专线连接能力
      */
     public void setEnabled(Boolean Enabled) {
         this.Enabled = Enabled;

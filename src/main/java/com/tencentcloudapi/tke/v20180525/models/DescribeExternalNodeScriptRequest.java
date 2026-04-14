@@ -31,7 +31,7 @@ public class DescribeExternalNodeScriptRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * 节点池ID
+    * 注册节点池ID
     */
     @SerializedName("NodePoolId")
     @Expose
@@ -75,16 +75,16 @@ public class DescribeExternalNodeScriptRequest extends AbstractModel {
     }
 
     /**
-     * Get 节点池ID 
-     * @return NodePoolId 节点池ID
+     * Get 注册节点池ID 
+     * @return NodePoolId 注册节点池ID
      */
     public String getNodePoolId() {
         return this.NodePoolId;
     }
 
     /**
-     * Set 节点池ID
-     * @param NodePoolId 节点池ID
+     * Set 注册节点池ID
+     * @param NodePoolId 注册节点池ID
      */
     public void setNodePoolId(String NodePoolId) {
         this.NodePoolId = NodePoolId;

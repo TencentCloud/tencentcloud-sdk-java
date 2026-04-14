@@ -24,184 +24,207 @@ import java.util.HashMap;
 public class AddAlarmPolicyRequest extends AbstractModel {
 
     /**
-    * 告警策略名
+    * <p>告警策略名</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 事件范围  1：当前账号  2：多账号
+    * <p>事件类型 1：资源不合规事件</p>
+    */
+    @SerializedName("Type")
+    @Expose
+    private Long Type;
+
+    /**
+    * <p>事件范围  1：当前账号  2：多账号</p>
     */
     @SerializedName("EventScope")
     @Expose
     private Long [] EventScope;
 
     /**
-    * 风险等级 1：高风险  2：中风险 3：低风险
+    * <p>风险等级 1：高风险  2：中风险 3：低风险</p>
     */
     @SerializedName("RiskLevel")
     @Expose
     private Long [] RiskLevel;
 
     /**
-    * 通知时间段
+    * <p>通知时间段</p>
     */
     @SerializedName("NoticeTime")
     @Expose
     private String NoticeTime;
 
     /**
-    * 通知机制
+    * <p>通知机制</p>
     */
     @SerializedName("NotificationMechanism")
     @Expose
     private String NotificationMechanism;
 
     /**
-    * 状态 1：启用 2：停用
+    * <p>状态 1：启用 2：停用</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 通知周期
+    * <p>通知周期</p>
     */
     @SerializedName("NoticePeriod")
     @Expose
     private Long [] NoticePeriod;
 
     /**
-    * 策略描述
+    * <p>策略描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-     * Get 告警策略名 
-     * @return Name 告警策略名
+     * Get <p>告警策略名</p> 
+     * @return Name <p>告警策略名</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 告警策略名
-     * @param Name 告警策略名
+     * Set <p>告警策略名</p>
+     * @param Name <p>告警策略名</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 事件范围  1：当前账号  2：多账号 
-     * @return EventScope 事件范围  1：当前账号  2：多账号
+     * Get <p>事件类型 1：资源不合规事件</p> 
+     * @return Type <p>事件类型 1：资源不合规事件</p>
+     */
+    public Long getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set <p>事件类型 1：资源不合规事件</p>
+     * @param Type <p>事件类型 1：资源不合规事件</p>
+     */
+    public void setType(Long Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get <p>事件范围  1：当前账号  2：多账号</p> 
+     * @return EventScope <p>事件范围  1：当前账号  2：多账号</p>
      */
     public Long [] getEventScope() {
         return this.EventScope;
     }
 
     /**
-     * Set 事件范围  1：当前账号  2：多账号
-     * @param EventScope 事件范围  1：当前账号  2：多账号
+     * Set <p>事件范围  1：当前账号  2：多账号</p>
+     * @param EventScope <p>事件范围  1：当前账号  2：多账号</p>
      */
     public void setEventScope(Long [] EventScope) {
         this.EventScope = EventScope;
     }
 
     /**
-     * Get 风险等级 1：高风险  2：中风险 3：低风险 
-     * @return RiskLevel 风险等级 1：高风险  2：中风险 3：低风险
+     * Get <p>风险等级 1：高风险  2：中风险 3：低风险</p> 
+     * @return RiskLevel <p>风险等级 1：高风险  2：中风险 3：低风险</p>
      */
     public Long [] getRiskLevel() {
         return this.RiskLevel;
     }
 
     /**
-     * Set 风险等级 1：高风险  2：中风险 3：低风险
-     * @param RiskLevel 风险等级 1：高风险  2：中风险 3：低风险
+     * Set <p>风险等级 1：高风险  2：中风险 3：低风险</p>
+     * @param RiskLevel <p>风险等级 1：高风险  2：中风险 3：低风险</p>
      */
     public void setRiskLevel(Long [] RiskLevel) {
         this.RiskLevel = RiskLevel;
     }
 
     /**
-     * Get 通知时间段 
-     * @return NoticeTime 通知时间段
+     * Get <p>通知时间段</p> 
+     * @return NoticeTime <p>通知时间段</p>
      */
     public String getNoticeTime() {
         return this.NoticeTime;
     }
 
     /**
-     * Set 通知时间段
-     * @param NoticeTime 通知时间段
+     * Set <p>通知时间段</p>
+     * @param NoticeTime <p>通知时间段</p>
      */
     public void setNoticeTime(String NoticeTime) {
         this.NoticeTime = NoticeTime;
     }
 
     /**
-     * Get 通知机制 
-     * @return NotificationMechanism 通知机制
+     * Get <p>通知机制</p> 
+     * @return NotificationMechanism <p>通知机制</p>
      */
     public String getNotificationMechanism() {
         return this.NotificationMechanism;
     }
 
     /**
-     * Set 通知机制
-     * @param NotificationMechanism 通知机制
+     * Set <p>通知机制</p>
+     * @param NotificationMechanism <p>通知机制</p>
      */
     public void setNotificationMechanism(String NotificationMechanism) {
         this.NotificationMechanism = NotificationMechanism;
     }
 
     /**
-     * Get 状态 1：启用 2：停用 
-     * @return Status 状态 1：启用 2：停用
+     * Get <p>状态 1：启用 2：停用</p> 
+     * @return Status <p>状态 1：启用 2：停用</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态 1：启用 2：停用
-     * @param Status 状态 1：启用 2：停用
+     * Set <p>状态 1：启用 2：停用</p>
+     * @param Status <p>状态 1：启用 2：停用</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 通知周期 
-     * @return NoticePeriod 通知周期
+     * Get <p>通知周期</p> 
+     * @return NoticePeriod <p>通知周期</p>
      */
     public Long [] getNoticePeriod() {
         return this.NoticePeriod;
     }
 
     /**
-     * Set 通知周期
-     * @param NoticePeriod 通知周期
+     * Set <p>通知周期</p>
+     * @param NoticePeriod <p>通知周期</p>
      */
     public void setNoticePeriod(Long [] NoticePeriod) {
         this.NoticePeriod = NoticePeriod;
     }
 
     /**
-     * Get 策略描述 
-     * @return Description 策略描述
+     * Get <p>策略描述</p> 
+     * @return Description <p>策略描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 策略描述
-     * @param Description 策略描述
+     * Set <p>策略描述</p>
+     * @param Description <p>策略描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -217,6 +240,9 @@ public class AddAlarmPolicyRequest extends AbstractModel {
     public AddAlarmPolicyRequest(AddAlarmPolicyRequest source) {
         if (source.Name != null) {
             this.Name = new String(source.Name);
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
         }
         if (source.EventScope != null) {
             this.EventScope = new Long[source.EventScope.length];
@@ -256,6 +282,7 @@ public class AddAlarmPolicyRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamArraySimple(map, prefix + "EventScope.", this.EventScope);
         this.setParamArraySimple(map, prefix + "RiskLevel.", this.RiskLevel);
         this.setParamSimple(map, prefix + "NoticeTime", this.NoticeTime);

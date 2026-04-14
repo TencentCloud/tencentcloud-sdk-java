@@ -59,6 +59,13 @@ public class SandboxTool extends AbstractModel {
     private String Description;
 
     /**
+    * <p>是否常驻沙箱</p>
+    */
+    @SerializedName("Persistent")
+    @Expose
+    private Boolean Persistent;
+
+    /**
     * <p>默认超时时间，支持格式：5m、300s、1h 等，不指定则使用系统默认值（5 分钟）。最大 24 小时</p>
     */
     @SerializedName("DefaultTimeoutSeconds")
@@ -206,6 +213,22 @@ public class SandboxTool extends AbstractModel {
      */
     public void setDescription(String Description) {
         this.Description = Description;
+    }
+
+    /**
+     * Get <p>是否常驻沙箱</p> 
+     * @return Persistent <p>是否常驻沙箱</p>
+     */
+    public Boolean getPersistent() {
+        return this.Persistent;
+    }
+
+    /**
+     * Set <p>是否常驻沙箱</p>
+     * @param Persistent <p>是否常驻沙箱</p>
+     */
+    public void setPersistent(Boolean Persistent) {
+        this.Persistent = Persistent;
     }
 
     /**
@@ -391,6 +414,9 @@ public class SandboxTool extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.Persistent != null) {
+            this.Persistent = new Boolean(source.Persistent);
+        }
         if (source.DefaultTimeoutSeconds != null) {
             this.DefaultTimeoutSeconds = new Long(source.DefaultTimeoutSeconds);
         }
@@ -439,6 +465,7 @@ public class SandboxTool extends AbstractModel {
         this.setParamSimple(map, prefix + "ToolType", this.ToolType);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "Persistent", this.Persistent);
         this.setParamSimple(map, prefix + "DefaultTimeoutSeconds", this.DefaultTimeoutSeconds);
         this.setParamObj(map, prefix + "NetworkConfiguration.", this.NetworkConfiguration);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);

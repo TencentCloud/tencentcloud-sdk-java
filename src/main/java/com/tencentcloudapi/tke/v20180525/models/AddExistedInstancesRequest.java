@@ -108,6 +108,20 @@ public class AddExistedInstancesRequest extends AbstractModel {
     private String NodeType;
 
     /**
+    * 云标签列表
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
+    * 自动续费标识，NOTIFY_AND_AUTO_RENEW（通知过期且自动续费）、NOTIFY_AND_MANUAL_RENEW（通知过期不自动续费）
+    */
+    @SerializedName("RenewFlag")
+    @Expose
+    private String RenewFlag;
+
+    /**
      * Get 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ） 
      * @return ClusterId 集群ID（请登录 [TKE 控制台](https://console.cloud.tencent.com/tke2) 获取集群 ID ）
      */
@@ -299,6 +313,38 @@ public class AddExistedInstancesRequest extends AbstractModel {
         this.NodeType = NodeType;
     }
 
+    /**
+     * Get 云标签列表 
+     * @return Tags 云标签列表
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 云标签列表
+     * @param Tags 云标签列表
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get 自动续费标识，NOTIFY_AND_AUTO_RENEW（通知过期且自动续费）、NOTIFY_AND_MANUAL_RENEW（通知过期不自动续费） 
+     * @return RenewFlag 自动续费标识，NOTIFY_AND_AUTO_RENEW（通知过期且自动续费）、NOTIFY_AND_MANUAL_RENEW（通知过期不自动续费）
+     */
+    public String getRenewFlag() {
+        return this.RenewFlag;
+    }
+
+    /**
+     * Set 自动续费标识，NOTIFY_AND_AUTO_RENEW（通知过期且自动续费）、NOTIFY_AND_MANUAL_RENEW（通知过期不自动续费）
+     * @param RenewFlag 自动续费标识，NOTIFY_AND_AUTO_RENEW（通知过期且自动续费）、NOTIFY_AND_MANUAL_RENEW（通知过期不自动续费）
+     */
+    public void setRenewFlag(String RenewFlag) {
+        this.RenewFlag = RenewFlag;
+    }
+
     public AddExistedInstancesRequest() {
     }
 
@@ -355,6 +401,15 @@ public class AddExistedInstancesRequest extends AbstractModel {
         if (source.NodeType != null) {
             this.NodeType = new String(source.NodeType);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.RenewFlag != null) {
+            this.RenewFlag = new String(source.RenewFlag);
+        }
     }
 
 
@@ -374,6 +429,8 @@ public class AddExistedInstancesRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "InstanceAdvancedSettingsOverrides.", this.InstanceAdvancedSettingsOverrides);
         this.setParamSimple(map, prefix + "ImageId", this.ImageId);
         this.setParamSimple(map, prefix + "NodeType", this.NodeType);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
 
     }
 }

@@ -24,70 +24,70 @@ import java.util.HashMap;
 public class Cluster extends AbstractModel {
 
     /**
-    * 集群ID
+    * <p>集群ID</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 集群名称
+    * <p>集群名称</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * 集群描述
+    * <p>集群描述</p>
     */
     @SerializedName("ClusterDescription")
     @Expose
     private String ClusterDescription;
 
     /**
-    * 集群版本（默认值为1.10.5）
+    * <p>集群版本（默认值为1.10.5）</p>
     */
     @SerializedName("ClusterVersion")
     @Expose
     private String ClusterVersion;
 
     /**
-    * 集群系统。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，默认取值为ubuntu16.04.1 LTSx86_64
+    * <p>集群系统。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，默认取值为ubuntu16.04.1 LTSx86_64</p>
     */
     @SerializedName("ClusterOs")
     @Expose
     private String ClusterOs;
 
     /**
-    * 集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。
+    * <p>集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。</p>
     */
     @SerializedName("ClusterType")
     @Expose
     private String ClusterType;
 
     /**
-    * 集群网络相关参数
+    * <p>集群网络相关参数</p>
     */
     @SerializedName("ClusterNetworkSettings")
     @Expose
     private ClusterNetworkSettings ClusterNetworkSettings;
 
     /**
-    * 集群当前node数量
+    * <p>集群当前node数量</p>
     */
     @SerializedName("ClusterNodeNum")
     @Expose
     private Long ClusterNodeNum;
 
     /**
-    * 集群所属的项目ID
+    * <p>集群所属的项目ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 标签描述列表。
+    * <p>标签描述列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagSpecification")
@@ -95,265 +95,272 @@ public class Cluster extends AbstractModel {
     private TagSpecification [] TagSpecification;
 
     /**
-    * 集群状态 (Trading 集群开通中,Creating 创建中,Running 运行中,Deleting 删除中,Idling 闲置中,Recovering 唤醒中,Scaling 规模调整中,Upgrading 升级中,WaittingForConnect 等待注册,Trading 集群开通中,Isolated 欠费隔离中,Pause 集群升级暂停,NodeUpgrading 节点升级中,RuntimeUpgrading 节点运行时升级中,MasterScaling Master扩缩容中,ClusterLevelUpgrading 调整规格中,ResourceIsolate 隔离中,ResourceIsolated 已隔离,ResourceReverse 冲正中,Abnormal 异常)
+    * <p>集群状态 (Trading 集群开通中,Creating 创建中,Running 运行中,Deleting 删除中,Idling 闲置中,Recovering 唤醒中,Scaling 规模调整中,Upgrading 升级中,WaittingForConnect 等待注册,Trading 集群开通中,Isolated 欠费隔离中,Pause 集群升级暂停,NodeUpgrading 节点升级中,RuntimeUpgrading 节点运行时升级中,MasterScaling Master扩缩容中,ClusterLevelUpgrading 调整规格中,ResourceIsolate 隔离中,ResourceIsolated 已隔离,ResourceReverse 冲正中,Abnormal 异常)</p>
     */
     @SerializedName("ClusterStatus")
     @Expose
     private String ClusterStatus;
 
     /**
-    * 集群属性(包括集群不同属性的MAP，属性字段包括NodeNameType (lan-ip模式和hostname 模式，默认无lan-ip模式))
+    * <p>集群属性(包括集群不同属性的MAP，属性字段包括NodeNameType (lan-ip模式和hostname 模式，默认无lan-ip模式))</p>
     */
     @SerializedName("Property")
     @Expose
     private String Property;
 
     /**
-    * 集群当前master数量
+    * <p>集群当前master数量</p>
     */
     @SerializedName("ClusterMaterNodeNum")
     @Expose
     private Long ClusterMaterNodeNum;
 
     /**
-    * 集群使用镜像id
+    * <p>集群使用镜像id</p>
     */
     @SerializedName("ImageId")
     @Expose
     private String ImageId;
 
     /**
-    * OsCustomizeType 系统定制类型
+    * <p>OsCustomizeType 系统定制类型</p>
     */
     @SerializedName("OsCustomizeType")
     @Expose
     private String OsCustomizeType;
 
     /**
-    * 集群运行环境docker或container
+    * <p>集群运行环境docker或container</p>
     */
     @SerializedName("ContainerRuntime")
     @Expose
     private String ContainerRuntime;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * 集群删除保护开关，打开：true，关闭：false
+    * <p>集群删除保护开关，打开：true，关闭：false</p>
     */
     @SerializedName("DeletionProtection")
     @Expose
     private Boolean DeletionProtection;
 
     /**
-    * 集群是否开启第三方节点支持，开启：true，关闭：false
+    * <p>集群是否开启第三方节点支持，开启：true，关闭：false</p>
     */
     @SerializedName("EnableExternalNode")
     @Expose
     private Boolean EnableExternalNode;
 
     /**
-    * 集群等级，针对托管集群生效
+    * <p>集群等级，针对托管集群生效</p>
     */
     @SerializedName("ClusterLevel")
     @Expose
     private String ClusterLevel;
 
     /**
-    * 自动变配集群等级，针对托管集群生效。开启：true，关闭：false
+    * <p>自动变配集群等级，针对托管集群生效。开启：true，关闭：false</p>
     */
     @SerializedName("AutoUpgradeClusterLevel")
     @Expose
     private Boolean AutoUpgradeClusterLevel;
 
     /**
-    * 是否开启QGPU共享，开启：true，关闭：false
+    * <p>是否开启QGPU共享，开启：true，关闭：false</p>
     */
     @SerializedName("QGPUShareEnable")
     @Expose
     private Boolean QGPUShareEnable;
 
     /**
-    * 运行时版本
+    * <p>运行时版本</p>
     */
     @SerializedName("RuntimeVersion")
     @Expose
     private String RuntimeVersion;
 
     /**
-    * 集群当前etcd数量
+    * <p>集群当前etcd数量</p>
     */
     @SerializedName("ClusterEtcdNodeNum")
     @Expose
     private Long ClusterEtcdNodeNum;
 
     /**
-    * 本地专用集群Id
+    * <p>本地专用集群Id</p>
     */
     @SerializedName("CdcId")
     @Expose
     private String CdcId;
 
     /**
-    * 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行
+    * <p>集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行</p>
     */
     @SerializedName("IsHighAvailability")
     @Expose
     private Boolean IsHighAvailability;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+    * <p>开启后会下发Gatekeeper和网络策略</p>
+    */
+    @SerializedName("SecurityModeConfig")
+    @Expose
+    private SecurityModeConfig SecurityModeConfig;
+
+    /**
+     * Get <p>集群ID</p> 
+     * @return ClusterId <p>集群ID</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set <p>集群ID</p>
+     * @param ClusterId <p>集群ID</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 集群名称 
-     * @return ClusterName 集群名称
+     * Get <p>集群名称</p> 
+     * @return ClusterName <p>集群名称</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set 集群名称
-     * @param ClusterName 集群名称
+     * Set <p>集群名称</p>
+     * @param ClusterName <p>集群名称</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 集群描述 
-     * @return ClusterDescription 集群描述
+     * Get <p>集群描述</p> 
+     * @return ClusterDescription <p>集群描述</p>
      */
     public String getClusterDescription() {
         return this.ClusterDescription;
     }
 
     /**
-     * Set 集群描述
-     * @param ClusterDescription 集群描述
+     * Set <p>集群描述</p>
+     * @param ClusterDescription <p>集群描述</p>
      */
     public void setClusterDescription(String ClusterDescription) {
         this.ClusterDescription = ClusterDescription;
     }
 
     /**
-     * Get 集群版本（默认值为1.10.5） 
-     * @return ClusterVersion 集群版本（默认值为1.10.5）
+     * Get <p>集群版本（默认值为1.10.5）</p> 
+     * @return ClusterVersion <p>集群版本（默认值为1.10.5）</p>
      */
     public String getClusterVersion() {
         return this.ClusterVersion;
     }
 
     /**
-     * Set 集群版本（默认值为1.10.5）
-     * @param ClusterVersion 集群版本（默认值为1.10.5）
+     * Set <p>集群版本（默认值为1.10.5）</p>
+     * @param ClusterVersion <p>集群版本（默认值为1.10.5）</p>
      */
     public void setClusterVersion(String ClusterVersion) {
         this.ClusterVersion = ClusterVersion;
     }
 
     /**
-     * Get 集群系统。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，默认取值为ubuntu16.04.1 LTSx86_64 
-     * @return ClusterOs 集群系统。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，默认取值为ubuntu16.04.1 LTSx86_64
+     * Get <p>集群系统。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，默认取值为ubuntu16.04.1 LTSx86_64</p> 
+     * @return ClusterOs <p>集群系统。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，默认取值为ubuntu16.04.1 LTSx86_64</p>
      */
     public String getClusterOs() {
         return this.ClusterOs;
     }
 
     /**
-     * Set 集群系统。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，默认取值为ubuntu16.04.1 LTSx86_64
-     * @param ClusterOs 集群系统。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，默认取值为ubuntu16.04.1 LTSx86_64
+     * Set <p>集群系统。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，默认取值为ubuntu16.04.1 LTSx86_64</p>
+     * @param ClusterOs <p>集群系统。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，默认取值为ubuntu16.04.1 LTSx86_64</p>
      */
     public void setClusterOs(String ClusterOs) {
         this.ClusterOs = ClusterOs;
     }
 
     /**
-     * Get 集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。 
-     * @return ClusterType 集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。
+     * Get <p>集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。</p> 
+     * @return ClusterType <p>集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。</p>
      */
     public String getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set 集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。
-     * @param ClusterType 集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。
+     * Set <p>集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。</p>
+     * @param ClusterType <p>集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。</p>
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;
     }
 
     /**
-     * Get 集群网络相关参数 
-     * @return ClusterNetworkSettings 集群网络相关参数
+     * Get <p>集群网络相关参数</p> 
+     * @return ClusterNetworkSettings <p>集群网络相关参数</p>
      */
     public ClusterNetworkSettings getClusterNetworkSettings() {
         return this.ClusterNetworkSettings;
     }
 
     /**
-     * Set 集群网络相关参数
-     * @param ClusterNetworkSettings 集群网络相关参数
+     * Set <p>集群网络相关参数</p>
+     * @param ClusterNetworkSettings <p>集群网络相关参数</p>
      */
     public void setClusterNetworkSettings(ClusterNetworkSettings ClusterNetworkSettings) {
         this.ClusterNetworkSettings = ClusterNetworkSettings;
     }
 
     /**
-     * Get 集群当前node数量 
-     * @return ClusterNodeNum 集群当前node数量
+     * Get <p>集群当前node数量</p> 
+     * @return ClusterNodeNum <p>集群当前node数量</p>
      */
     public Long getClusterNodeNum() {
         return this.ClusterNodeNum;
     }
 
     /**
-     * Set 集群当前node数量
-     * @param ClusterNodeNum 集群当前node数量
+     * Set <p>集群当前node数量</p>
+     * @param ClusterNodeNum <p>集群当前node数量</p>
      */
     public void setClusterNodeNum(Long ClusterNodeNum) {
         this.ClusterNodeNum = ClusterNodeNum;
     }
 
     /**
-     * Get 集群所属的项目ID 
-     * @return ProjectId 集群所属的项目ID
+     * Get <p>集群所属的项目ID</p> 
+     * @return ProjectId <p>集群所属的项目ID</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 集群所属的项目ID
-     * @param ProjectId 集群所属的项目ID
+     * Set <p>集群所属的项目ID</p>
+     * @param ProjectId <p>集群所属的项目ID</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 标签描述列表。
+     * Get <p>标签描述列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TagSpecification 标签描述列表。
+     * @return TagSpecification <p>标签描述列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TagSpecification [] getTagSpecification() {
@@ -361,9 +368,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Set 标签描述列表。
+     * Set <p>标签描述列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TagSpecification 标签描述列表。
+     * @param TagSpecification <p>标签描述列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagSpecification(TagSpecification [] TagSpecification) {
@@ -371,259 +378,275 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get 集群状态 (Trading 集群开通中,Creating 创建中,Running 运行中,Deleting 删除中,Idling 闲置中,Recovering 唤醒中,Scaling 规模调整中,Upgrading 升级中,WaittingForConnect 等待注册,Trading 集群开通中,Isolated 欠费隔离中,Pause 集群升级暂停,NodeUpgrading 节点升级中,RuntimeUpgrading 节点运行时升级中,MasterScaling Master扩缩容中,ClusterLevelUpgrading 调整规格中,ResourceIsolate 隔离中,ResourceIsolated 已隔离,ResourceReverse 冲正中,Abnormal 异常) 
-     * @return ClusterStatus 集群状态 (Trading 集群开通中,Creating 创建中,Running 运行中,Deleting 删除中,Idling 闲置中,Recovering 唤醒中,Scaling 规模调整中,Upgrading 升级中,WaittingForConnect 等待注册,Trading 集群开通中,Isolated 欠费隔离中,Pause 集群升级暂停,NodeUpgrading 节点升级中,RuntimeUpgrading 节点运行时升级中,MasterScaling Master扩缩容中,ClusterLevelUpgrading 调整规格中,ResourceIsolate 隔离中,ResourceIsolated 已隔离,ResourceReverse 冲正中,Abnormal 异常)
+     * Get <p>集群状态 (Trading 集群开通中,Creating 创建中,Running 运行中,Deleting 删除中,Idling 闲置中,Recovering 唤醒中,Scaling 规模调整中,Upgrading 升级中,WaittingForConnect 等待注册,Trading 集群开通中,Isolated 欠费隔离中,Pause 集群升级暂停,NodeUpgrading 节点升级中,RuntimeUpgrading 节点运行时升级中,MasterScaling Master扩缩容中,ClusterLevelUpgrading 调整规格中,ResourceIsolate 隔离中,ResourceIsolated 已隔离,ResourceReverse 冲正中,Abnormal 异常)</p> 
+     * @return ClusterStatus <p>集群状态 (Trading 集群开通中,Creating 创建中,Running 运行中,Deleting 删除中,Idling 闲置中,Recovering 唤醒中,Scaling 规模调整中,Upgrading 升级中,WaittingForConnect 等待注册,Trading 集群开通中,Isolated 欠费隔离中,Pause 集群升级暂停,NodeUpgrading 节点升级中,RuntimeUpgrading 节点运行时升级中,MasterScaling Master扩缩容中,ClusterLevelUpgrading 调整规格中,ResourceIsolate 隔离中,ResourceIsolated 已隔离,ResourceReverse 冲正中,Abnormal 异常)</p>
      */
     public String getClusterStatus() {
         return this.ClusterStatus;
     }
 
     /**
-     * Set 集群状态 (Trading 集群开通中,Creating 创建中,Running 运行中,Deleting 删除中,Idling 闲置中,Recovering 唤醒中,Scaling 规模调整中,Upgrading 升级中,WaittingForConnect 等待注册,Trading 集群开通中,Isolated 欠费隔离中,Pause 集群升级暂停,NodeUpgrading 节点升级中,RuntimeUpgrading 节点运行时升级中,MasterScaling Master扩缩容中,ClusterLevelUpgrading 调整规格中,ResourceIsolate 隔离中,ResourceIsolated 已隔离,ResourceReverse 冲正中,Abnormal 异常)
-     * @param ClusterStatus 集群状态 (Trading 集群开通中,Creating 创建中,Running 运行中,Deleting 删除中,Idling 闲置中,Recovering 唤醒中,Scaling 规模调整中,Upgrading 升级中,WaittingForConnect 等待注册,Trading 集群开通中,Isolated 欠费隔离中,Pause 集群升级暂停,NodeUpgrading 节点升级中,RuntimeUpgrading 节点运行时升级中,MasterScaling Master扩缩容中,ClusterLevelUpgrading 调整规格中,ResourceIsolate 隔离中,ResourceIsolated 已隔离,ResourceReverse 冲正中,Abnormal 异常)
+     * Set <p>集群状态 (Trading 集群开通中,Creating 创建中,Running 运行中,Deleting 删除中,Idling 闲置中,Recovering 唤醒中,Scaling 规模调整中,Upgrading 升级中,WaittingForConnect 等待注册,Trading 集群开通中,Isolated 欠费隔离中,Pause 集群升级暂停,NodeUpgrading 节点升级中,RuntimeUpgrading 节点运行时升级中,MasterScaling Master扩缩容中,ClusterLevelUpgrading 调整规格中,ResourceIsolate 隔离中,ResourceIsolated 已隔离,ResourceReverse 冲正中,Abnormal 异常)</p>
+     * @param ClusterStatus <p>集群状态 (Trading 集群开通中,Creating 创建中,Running 运行中,Deleting 删除中,Idling 闲置中,Recovering 唤醒中,Scaling 规模调整中,Upgrading 升级中,WaittingForConnect 等待注册,Trading 集群开通中,Isolated 欠费隔离中,Pause 集群升级暂停,NodeUpgrading 节点升级中,RuntimeUpgrading 节点运行时升级中,MasterScaling Master扩缩容中,ClusterLevelUpgrading 调整规格中,ResourceIsolate 隔离中,ResourceIsolated 已隔离,ResourceReverse 冲正中,Abnormal 异常)</p>
      */
     public void setClusterStatus(String ClusterStatus) {
         this.ClusterStatus = ClusterStatus;
     }
 
     /**
-     * Get 集群属性(包括集群不同属性的MAP，属性字段包括NodeNameType (lan-ip模式和hostname 模式，默认无lan-ip模式)) 
-     * @return Property 集群属性(包括集群不同属性的MAP，属性字段包括NodeNameType (lan-ip模式和hostname 模式，默认无lan-ip模式))
+     * Get <p>集群属性(包括集群不同属性的MAP，属性字段包括NodeNameType (lan-ip模式和hostname 模式，默认无lan-ip模式))</p> 
+     * @return Property <p>集群属性(包括集群不同属性的MAP，属性字段包括NodeNameType (lan-ip模式和hostname 模式，默认无lan-ip模式))</p>
      */
     public String getProperty() {
         return this.Property;
     }
 
     /**
-     * Set 集群属性(包括集群不同属性的MAP，属性字段包括NodeNameType (lan-ip模式和hostname 模式，默认无lan-ip模式))
-     * @param Property 集群属性(包括集群不同属性的MAP，属性字段包括NodeNameType (lan-ip模式和hostname 模式，默认无lan-ip模式))
+     * Set <p>集群属性(包括集群不同属性的MAP，属性字段包括NodeNameType (lan-ip模式和hostname 模式，默认无lan-ip模式))</p>
+     * @param Property <p>集群属性(包括集群不同属性的MAP，属性字段包括NodeNameType (lan-ip模式和hostname 模式，默认无lan-ip模式))</p>
      */
     public void setProperty(String Property) {
         this.Property = Property;
     }
 
     /**
-     * Get 集群当前master数量 
-     * @return ClusterMaterNodeNum 集群当前master数量
+     * Get <p>集群当前master数量</p> 
+     * @return ClusterMaterNodeNum <p>集群当前master数量</p>
      */
     public Long getClusterMaterNodeNum() {
         return this.ClusterMaterNodeNum;
     }
 
     /**
-     * Set 集群当前master数量
-     * @param ClusterMaterNodeNum 集群当前master数量
+     * Set <p>集群当前master数量</p>
+     * @param ClusterMaterNodeNum <p>集群当前master数量</p>
      */
     public void setClusterMaterNodeNum(Long ClusterMaterNodeNum) {
         this.ClusterMaterNodeNum = ClusterMaterNodeNum;
     }
 
     /**
-     * Get 集群使用镜像id 
-     * @return ImageId 集群使用镜像id
+     * Get <p>集群使用镜像id</p> 
+     * @return ImageId <p>集群使用镜像id</p>
      */
     public String getImageId() {
         return this.ImageId;
     }
 
     /**
-     * Set 集群使用镜像id
-     * @param ImageId 集群使用镜像id
+     * Set <p>集群使用镜像id</p>
+     * @param ImageId <p>集群使用镜像id</p>
      */
     public void setImageId(String ImageId) {
         this.ImageId = ImageId;
     }
 
     /**
-     * Get OsCustomizeType 系统定制类型 
-     * @return OsCustomizeType OsCustomizeType 系统定制类型
+     * Get <p>OsCustomizeType 系统定制类型</p> 
+     * @return OsCustomizeType <p>OsCustomizeType 系统定制类型</p>
      */
     public String getOsCustomizeType() {
         return this.OsCustomizeType;
     }
 
     /**
-     * Set OsCustomizeType 系统定制类型
-     * @param OsCustomizeType OsCustomizeType 系统定制类型
+     * Set <p>OsCustomizeType 系统定制类型</p>
+     * @param OsCustomizeType <p>OsCustomizeType 系统定制类型</p>
      */
     public void setOsCustomizeType(String OsCustomizeType) {
         this.OsCustomizeType = OsCustomizeType;
     }
 
     /**
-     * Get 集群运行环境docker或container 
-     * @return ContainerRuntime 集群运行环境docker或container
+     * Get <p>集群运行环境docker或container</p> 
+     * @return ContainerRuntime <p>集群运行环境docker或container</p>
      */
     public String getContainerRuntime() {
         return this.ContainerRuntime;
     }
 
     /**
-     * Set 集群运行环境docker或container
-     * @param ContainerRuntime 集群运行环境docker或container
+     * Set <p>集群运行环境docker或container</p>
+     * @param ContainerRuntime <p>集群运行环境docker或container</p>
      */
     public void setContainerRuntime(String ContainerRuntime) {
         this.ContainerRuntime = ContainerRuntime;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreatedTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreatedTime <p>创建时间</p>
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreatedTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreatedTime <p>创建时间</p>
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 集群删除保护开关，打开：true，关闭：false 
-     * @return DeletionProtection 集群删除保护开关，打开：true，关闭：false
+     * Get <p>集群删除保护开关，打开：true，关闭：false</p> 
+     * @return DeletionProtection <p>集群删除保护开关，打开：true，关闭：false</p>
      */
     public Boolean getDeletionProtection() {
         return this.DeletionProtection;
     }
 
     /**
-     * Set 集群删除保护开关，打开：true，关闭：false
-     * @param DeletionProtection 集群删除保护开关，打开：true，关闭：false
+     * Set <p>集群删除保护开关，打开：true，关闭：false</p>
+     * @param DeletionProtection <p>集群删除保护开关，打开：true，关闭：false</p>
      */
     public void setDeletionProtection(Boolean DeletionProtection) {
         this.DeletionProtection = DeletionProtection;
     }
 
     /**
-     * Get 集群是否开启第三方节点支持，开启：true，关闭：false 
-     * @return EnableExternalNode 集群是否开启第三方节点支持，开启：true，关闭：false
+     * Get <p>集群是否开启第三方节点支持，开启：true，关闭：false</p> 
+     * @return EnableExternalNode <p>集群是否开启第三方节点支持，开启：true，关闭：false</p>
      */
     public Boolean getEnableExternalNode() {
         return this.EnableExternalNode;
     }
 
     /**
-     * Set 集群是否开启第三方节点支持，开启：true，关闭：false
-     * @param EnableExternalNode 集群是否开启第三方节点支持，开启：true，关闭：false
+     * Set <p>集群是否开启第三方节点支持，开启：true，关闭：false</p>
+     * @param EnableExternalNode <p>集群是否开启第三方节点支持，开启：true，关闭：false</p>
      */
     public void setEnableExternalNode(Boolean EnableExternalNode) {
         this.EnableExternalNode = EnableExternalNode;
     }
 
     /**
-     * Get 集群等级，针对托管集群生效 
-     * @return ClusterLevel 集群等级，针对托管集群生效
+     * Get <p>集群等级，针对托管集群生效</p> 
+     * @return ClusterLevel <p>集群等级，针对托管集群生效</p>
      */
     public String getClusterLevel() {
         return this.ClusterLevel;
     }
 
     /**
-     * Set 集群等级，针对托管集群生效
-     * @param ClusterLevel 集群等级，针对托管集群生效
+     * Set <p>集群等级，针对托管集群生效</p>
+     * @param ClusterLevel <p>集群等级，针对托管集群生效</p>
      */
     public void setClusterLevel(String ClusterLevel) {
         this.ClusterLevel = ClusterLevel;
     }
 
     /**
-     * Get 自动变配集群等级，针对托管集群生效。开启：true，关闭：false 
-     * @return AutoUpgradeClusterLevel 自动变配集群等级，针对托管集群生效。开启：true，关闭：false
+     * Get <p>自动变配集群等级，针对托管集群生效。开启：true，关闭：false</p> 
+     * @return AutoUpgradeClusterLevel <p>自动变配集群等级，针对托管集群生效。开启：true，关闭：false</p>
      */
     public Boolean getAutoUpgradeClusterLevel() {
         return this.AutoUpgradeClusterLevel;
     }
 
     /**
-     * Set 自动变配集群等级，针对托管集群生效。开启：true，关闭：false
-     * @param AutoUpgradeClusterLevel 自动变配集群等级，针对托管集群生效。开启：true，关闭：false
+     * Set <p>自动变配集群等级，针对托管集群生效。开启：true，关闭：false</p>
+     * @param AutoUpgradeClusterLevel <p>自动变配集群等级，针对托管集群生效。开启：true，关闭：false</p>
      */
     public void setAutoUpgradeClusterLevel(Boolean AutoUpgradeClusterLevel) {
         this.AutoUpgradeClusterLevel = AutoUpgradeClusterLevel;
     }
 
     /**
-     * Get 是否开启QGPU共享，开启：true，关闭：false 
-     * @return QGPUShareEnable 是否开启QGPU共享，开启：true，关闭：false
+     * Get <p>是否开启QGPU共享，开启：true，关闭：false</p> 
+     * @return QGPUShareEnable <p>是否开启QGPU共享，开启：true，关闭：false</p>
      */
     public Boolean getQGPUShareEnable() {
         return this.QGPUShareEnable;
     }
 
     /**
-     * Set 是否开启QGPU共享，开启：true，关闭：false
-     * @param QGPUShareEnable 是否开启QGPU共享，开启：true，关闭：false
+     * Set <p>是否开启QGPU共享，开启：true，关闭：false</p>
+     * @param QGPUShareEnable <p>是否开启QGPU共享，开启：true，关闭：false</p>
      */
     public void setQGPUShareEnable(Boolean QGPUShareEnable) {
         this.QGPUShareEnable = QGPUShareEnable;
     }
 
     /**
-     * Get 运行时版本 
-     * @return RuntimeVersion 运行时版本
+     * Get <p>运行时版本</p> 
+     * @return RuntimeVersion <p>运行时版本</p>
      */
     public String getRuntimeVersion() {
         return this.RuntimeVersion;
     }
 
     /**
-     * Set 运行时版本
-     * @param RuntimeVersion 运行时版本
+     * Set <p>运行时版本</p>
+     * @param RuntimeVersion <p>运行时版本</p>
      */
     public void setRuntimeVersion(String RuntimeVersion) {
         this.RuntimeVersion = RuntimeVersion;
     }
 
     /**
-     * Get 集群当前etcd数量 
-     * @return ClusterEtcdNodeNum 集群当前etcd数量
+     * Get <p>集群当前etcd数量</p> 
+     * @return ClusterEtcdNodeNum <p>集群当前etcd数量</p>
      */
     public Long getClusterEtcdNodeNum() {
         return this.ClusterEtcdNodeNum;
     }
 
     /**
-     * Set 集群当前etcd数量
-     * @param ClusterEtcdNodeNum 集群当前etcd数量
+     * Set <p>集群当前etcd数量</p>
+     * @param ClusterEtcdNodeNum <p>集群当前etcd数量</p>
      */
     public void setClusterEtcdNodeNum(Long ClusterEtcdNodeNum) {
         this.ClusterEtcdNodeNum = ClusterEtcdNodeNum;
     }
 
     /**
-     * Get 本地专用集群Id 
-     * @return CdcId 本地专用集群Id
+     * Get <p>本地专用集群Id</p> 
+     * @return CdcId <p>本地专用集群Id</p>
      */
     public String getCdcId() {
         return this.CdcId;
     }
 
     /**
-     * Set 本地专用集群Id
-     * @param CdcId 本地专用集群Id
+     * Set <p>本地专用集群Id</p>
+     * @param CdcId <p>本地专用集群Id</p>
      */
     public void setCdcId(String CdcId) {
         this.CdcId = CdcId;
     }
 
     /**
-     * Get 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行 
-     * @return IsHighAvailability 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行
+     * Get <p>集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行</p> 
+     * @return IsHighAvailability <p>集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行</p>
      */
     public Boolean getIsHighAvailability() {
         return this.IsHighAvailability;
     }
 
     /**
-     * Set 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行
-     * @param IsHighAvailability 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行
+     * Set <p>集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行</p>
+     * @param IsHighAvailability <p>集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行</p>
      */
     public void setIsHighAvailability(Boolean IsHighAvailability) {
         this.IsHighAvailability = IsHighAvailability;
+    }
+
+    /**
+     * Get <p>开启后会下发Gatekeeper和网络策略</p> 
+     * @return SecurityModeConfig <p>开启后会下发Gatekeeper和网络策略</p>
+     */
+    public SecurityModeConfig getSecurityModeConfig() {
+        return this.SecurityModeConfig;
+    }
+
+    /**
+     * Set <p>开启后会下发Gatekeeper和网络策略</p>
+     * @param SecurityModeConfig <p>开启后会下发Gatekeeper和网络策略</p>
+     */
+    public void setSecurityModeConfig(SecurityModeConfig SecurityModeConfig) {
+        this.SecurityModeConfig = SecurityModeConfig;
     }
 
     public Cluster() {
@@ -715,6 +738,9 @@ public class Cluster extends AbstractModel {
         if (source.IsHighAvailability != null) {
             this.IsHighAvailability = new Boolean(source.IsHighAvailability);
         }
+        if (source.SecurityModeConfig != null) {
+            this.SecurityModeConfig = new SecurityModeConfig(source.SecurityModeConfig);
+        }
     }
 
 
@@ -748,6 +774,7 @@ public class Cluster extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterEtcdNodeNum", this.ClusterEtcdNodeNum);
         this.setParamSimple(map, prefix + "CdcId", this.CdcId);
         this.setParamSimple(map, prefix + "IsHighAvailability", this.IsHighAvailability);
+        this.setParamObj(map, prefix + "SecurityModeConfig.", this.SecurityModeConfig);
 
     }
 }

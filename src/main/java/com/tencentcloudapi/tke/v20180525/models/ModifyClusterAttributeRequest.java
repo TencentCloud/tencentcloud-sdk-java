@@ -24,210 +24,233 @@ import java.util.HashMap;
 public class ModifyClusterAttributeRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * <p>集群ID</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/457/31862">DescribeClusters</a></p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 集群所属项目
+    * <p>集群所属项目</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 集群名称,字符长度50
+    * <p>集群名称,字符长度50</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * 集群描述
+    * <p>集群描述</p>
     */
     @SerializedName("ClusterDesc")
     @Expose
     private String ClusterDesc;
 
     /**
-    * 集群等级，等级类型：L20、L50、L100、L200、L500、L1000、L3000、L5000
+    * <p>集群等级，等级类型：L20、L50、L100、L200、L500、L1000、L3000、L5000</p>
     */
     @SerializedName("ClusterLevel")
     @Expose
     private String ClusterLevel;
 
     /**
-    * 自动变配集群等级
+    * <p>自动变配集群等级</p>
     */
     @SerializedName("AutoUpgradeClusterLevel")
     @Expose
     private AutoUpgradeClusterLevel AutoUpgradeClusterLevel;
 
     /**
-    * 是否开启QGPU共享
+    * <p>是否开启QGPU共享</p>
     */
     @SerializedName("QGPUShareEnable")
     @Expose
     private Boolean QGPUShareEnable;
 
     /**
-    * 集群属性
+    * <p>集群属性</p>
     */
     @SerializedName("ClusterProperty")
     @Expose
     private ClusterProperty ClusterProperty;
 
     /**
-    * 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行
+    * <p>集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行</p>
     */
     @SerializedName("IsHighAvailability")
     @Expose
     private Boolean IsHighAvailability;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+    * <p>集群安全模式配置</p>
+    */
+    @SerializedName("SecurityModeConfig")
+    @Expose
+    private SecurityModeConfig SecurityModeConfig;
+
+    /**
+     * Get <p>集群ID</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/457/31862">DescribeClusters</a></p> 
+     * @return ClusterId <p>集群ID</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/457/31862">DescribeClusters</a></p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set <p>集群ID</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/457/31862">DescribeClusters</a></p>
+     * @param ClusterId <p>集群ID</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/457/31862">DescribeClusters</a></p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 集群所属项目 
-     * @return ProjectId 集群所属项目
+     * Get <p>集群所属项目</p> 
+     * @return ProjectId <p>集群所属项目</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 集群所属项目
-     * @param ProjectId 集群所属项目
+     * Set <p>集群所属项目</p>
+     * @param ProjectId <p>集群所属项目</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 集群名称,字符长度50 
-     * @return ClusterName 集群名称,字符长度50
+     * Get <p>集群名称,字符长度50</p> 
+     * @return ClusterName <p>集群名称,字符长度50</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set 集群名称,字符长度50
-     * @param ClusterName 集群名称,字符长度50
+     * Set <p>集群名称,字符长度50</p>
+     * @param ClusterName <p>集群名称,字符长度50</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 集群描述 
-     * @return ClusterDesc 集群描述
+     * Get <p>集群描述</p> 
+     * @return ClusterDesc <p>集群描述</p>
      */
     public String getClusterDesc() {
         return this.ClusterDesc;
     }
 
     /**
-     * Set 集群描述
-     * @param ClusterDesc 集群描述
+     * Set <p>集群描述</p>
+     * @param ClusterDesc <p>集群描述</p>
      */
     public void setClusterDesc(String ClusterDesc) {
         this.ClusterDesc = ClusterDesc;
     }
 
     /**
-     * Get 集群等级，等级类型：L20、L50、L100、L200、L500、L1000、L3000、L5000 
-     * @return ClusterLevel 集群等级，等级类型：L20、L50、L100、L200、L500、L1000、L3000、L5000
+     * Get <p>集群等级，等级类型：L20、L50、L100、L200、L500、L1000、L3000、L5000</p> 
+     * @return ClusterLevel <p>集群等级，等级类型：L20、L50、L100、L200、L500、L1000、L3000、L5000</p>
      */
     public String getClusterLevel() {
         return this.ClusterLevel;
     }
 
     /**
-     * Set 集群等级，等级类型：L20、L50、L100、L200、L500、L1000、L3000、L5000
-     * @param ClusterLevel 集群等级，等级类型：L20、L50、L100、L200、L500、L1000、L3000、L5000
+     * Set <p>集群等级，等级类型：L20、L50、L100、L200、L500、L1000、L3000、L5000</p>
+     * @param ClusterLevel <p>集群等级，等级类型：L20、L50、L100、L200、L500、L1000、L3000、L5000</p>
      */
     public void setClusterLevel(String ClusterLevel) {
         this.ClusterLevel = ClusterLevel;
     }
 
     /**
-     * Get 自动变配集群等级 
-     * @return AutoUpgradeClusterLevel 自动变配集群等级
+     * Get <p>自动变配集群等级</p> 
+     * @return AutoUpgradeClusterLevel <p>自动变配集群等级</p>
      */
     public AutoUpgradeClusterLevel getAutoUpgradeClusterLevel() {
         return this.AutoUpgradeClusterLevel;
     }
 
     /**
-     * Set 自动变配集群等级
-     * @param AutoUpgradeClusterLevel 自动变配集群等级
+     * Set <p>自动变配集群等级</p>
+     * @param AutoUpgradeClusterLevel <p>自动变配集群等级</p>
      */
     public void setAutoUpgradeClusterLevel(AutoUpgradeClusterLevel AutoUpgradeClusterLevel) {
         this.AutoUpgradeClusterLevel = AutoUpgradeClusterLevel;
     }
 
     /**
-     * Get 是否开启QGPU共享 
-     * @return QGPUShareEnable 是否开启QGPU共享
+     * Get <p>是否开启QGPU共享</p> 
+     * @return QGPUShareEnable <p>是否开启QGPU共享</p>
      */
     public Boolean getQGPUShareEnable() {
         return this.QGPUShareEnable;
     }
 
     /**
-     * Set 是否开启QGPU共享
-     * @param QGPUShareEnable 是否开启QGPU共享
+     * Set <p>是否开启QGPU共享</p>
+     * @param QGPUShareEnable <p>是否开启QGPU共享</p>
      */
     public void setQGPUShareEnable(Boolean QGPUShareEnable) {
         this.QGPUShareEnable = QGPUShareEnable;
     }
 
     /**
-     * Get 集群属性 
-     * @return ClusterProperty 集群属性
+     * Get <p>集群属性</p> 
+     * @return ClusterProperty <p>集群属性</p>
      */
     public ClusterProperty getClusterProperty() {
         return this.ClusterProperty;
     }
 
     /**
-     * Set 集群属性
-     * @param ClusterProperty 集群属性
+     * Set <p>集群属性</p>
+     * @param ClusterProperty <p>集群属性</p>
      */
     public void setClusterProperty(ClusterProperty ClusterProperty) {
         this.ClusterProperty = ClusterProperty;
     }
 
     /**
-     * Get 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行 
-     * @return IsHighAvailability 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行
+     * Get <p>集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行</p> 
+     * @return IsHighAvailability <p>集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行</p>
      */
     public Boolean getIsHighAvailability() {
         return this.IsHighAvailability;
     }
 
     /**
-     * Set 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行
-     * @param IsHighAvailability 集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行
+     * Set <p>集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行</p>
+     * @param IsHighAvailability <p>集群是否启用高可用模式。用于指导跨可用区资源打散等高可用策略的执行</p>
      */
     public void setIsHighAvailability(Boolean IsHighAvailability) {
         this.IsHighAvailability = IsHighAvailability;
+    }
+
+    /**
+     * Get <p>集群安全模式配置</p> 
+     * @return SecurityModeConfig <p>集群安全模式配置</p>
+     */
+    public SecurityModeConfig getSecurityModeConfig() {
+        return this.SecurityModeConfig;
+    }
+
+    /**
+     * Set <p>集群安全模式配置</p>
+     * @param SecurityModeConfig <p>集群安全模式配置</p>
+     */
+    public void setSecurityModeConfig(SecurityModeConfig SecurityModeConfig) {
+        this.SecurityModeConfig = SecurityModeConfig;
     }
 
     public ModifyClusterAttributeRequest() {
@@ -265,6 +288,9 @@ public class ModifyClusterAttributeRequest extends AbstractModel {
         if (source.IsHighAvailability != null) {
             this.IsHighAvailability = new Boolean(source.IsHighAvailability);
         }
+        if (source.SecurityModeConfig != null) {
+            this.SecurityModeConfig = new SecurityModeConfig(source.SecurityModeConfig);
+        }
     }
 
 
@@ -281,6 +307,7 @@ public class ModifyClusterAttributeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "QGPUShareEnable", this.QGPUShareEnable);
         this.setParamObj(map, prefix + "ClusterProperty.", this.ClusterProperty);
         this.setParamSimple(map, prefix + "IsHighAvailability", this.IsHighAvailability);
+        this.setParamObj(map, prefix + "SecurityModeConfig.", this.SecurityModeConfig);
 
     }
 }

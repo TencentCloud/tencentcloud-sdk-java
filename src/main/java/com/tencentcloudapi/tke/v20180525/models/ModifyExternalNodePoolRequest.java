@@ -45,14 +45,14 @@ public class ModifyExternalNodePoolRequest extends AbstractModel {
     private String Name;
 
     /**
-    * 第三方节点label
+    * 注册节点标签
     */
     @SerializedName("Labels")
     @Expose
     private Label [] Labels;
 
     /**
-    * 第三方节点taint
+    * 注册节点污点
     */
     @SerializedName("Taints")
     @Expose
@@ -121,32 +121,32 @@ public class ModifyExternalNodePoolRequest extends AbstractModel {
     }
 
     /**
-     * Get 第三方节点label 
-     * @return Labels 第三方节点label
+     * Get 注册节点标签 
+     * @return Labels 注册节点标签
      */
     public Label [] getLabels() {
         return this.Labels;
     }
 
     /**
-     * Set 第三方节点label
-     * @param Labels 第三方节点label
+     * Set 注册节点标签
+     * @param Labels 注册节点标签
      */
     public void setLabels(Label [] Labels) {
         this.Labels = Labels;
     }
 
     /**
-     * Get 第三方节点taint 
-     * @return Taints 第三方节点taint
+     * Get 注册节点污点 
+     * @return Taints 注册节点污点
      */
     public Taint [] getTaints() {
         return this.Taints;
     }
 
     /**
-     * Set 第三方节点taint
-     * @param Taints 第三方节点taint
+     * Set 注册节点污点
+     * @param Taints 注册节点污点
      */
     public void setTaints(Taint [] Taints) {
         this.Taints = Taints;

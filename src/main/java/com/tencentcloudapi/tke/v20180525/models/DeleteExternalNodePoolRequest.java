@@ -31,14 +31,14 @@ public class DeleteExternalNodePoolRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * 第三方节点池ID列表
+    * 注册节点池ID列表
     */
     @SerializedName("NodePoolIds")
     @Expose
     private String [] NodePoolIds;
 
     /**
-    * 是否强制删除，在第三方节点上有pod的情况下，如果选择非强制删除，则删除会失败
+    * 是否强制删除，在注册节点上有pod的情况下，如果选择非强制删除，则删除会失败
     */
     @SerializedName("Force")
     @Expose
@@ -61,32 +61,32 @@ public class DeleteExternalNodePoolRequest extends AbstractModel {
     }
 
     /**
-     * Get 第三方节点池ID列表 
-     * @return NodePoolIds 第三方节点池ID列表
+     * Get 注册节点池ID列表 
+     * @return NodePoolIds 注册节点池ID列表
      */
     public String [] getNodePoolIds() {
         return this.NodePoolIds;
     }
 
     /**
-     * Set 第三方节点池ID列表
-     * @param NodePoolIds 第三方节点池ID列表
+     * Set 注册节点池ID列表
+     * @param NodePoolIds 注册节点池ID列表
      */
     public void setNodePoolIds(String [] NodePoolIds) {
         this.NodePoolIds = NodePoolIds;
     }
 
     /**
-     * Get 是否强制删除，在第三方节点上有pod的情况下，如果选择非强制删除，则删除会失败 
-     * @return Force 是否强制删除，在第三方节点上有pod的情况下，如果选择非强制删除，则删除会失败
+     * Get 是否强制删除，在注册节点上有pod的情况下，如果选择非强制删除，则删除会失败 
+     * @return Force 是否强制删除，在注册节点上有pod的情况下，如果选择非强制删除，则删除会失败
      */
     public Boolean getForce() {
         return this.Force;
     }
 
     /**
-     * Set 是否强制删除，在第三方节点上有pod的情况下，如果选择非强制删除，则删除会失败
-     * @param Force 是否强制删除，在第三方节点上有pod的情况下，如果选择非强制删除，则删除会失败
+     * Set 是否强制删除，在注册节点上有pod的情况下，如果选择非强制删除，则删除会失败
+     * @param Force 是否强制删除，在注册节点上有pod的情况下，如果选择非强制删除，则删除会失败
      */
     public void setForce(Boolean Force) {
         this.Force = Force;

@@ -347,7 +347,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *创建第三方节点池
+     *创建注册节点池
      * @param req CreateExternalNodePoolRequest
      * @return CreateExternalNodePoolResponse
      * @throws TencentCloudSDKException
@@ -710,7 +710,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *删除第三方节点
+     *删除注册节点
      * @param req DeleteExternalNodeRequest
      * @return DeleteExternalNodeResponse
      * @throws TencentCloudSDKException
@@ -721,7 +721,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *删除第三方节点池
+     *删除注册节点池
      * @param req DeleteExternalNodePoolRequest
      * @return DeleteExternalNodePoolResponse
      * @throws TencentCloudSDKException
@@ -1502,7 +1502,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *查看第三方节点列表
+     *查看注册节点列表
      * @param req DescribeExternalNodeRequest
      * @return DescribeExternalNodeResponse
      * @throws TencentCloudSDKException
@@ -1513,7 +1513,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *查看第三方节点池列表
+     *查看注册节点池列表
      * @param req DescribeExternalNodePoolsRequest
      * @return DescribeExternalNodePoolsResponse
      * @throws TencentCloudSDKException
@@ -1524,7 +1524,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *获取第三方节点添加脚本
+     *获取注册节点初始化脚本
      * @param req DescribeExternalNodeScriptRequest
      * @return DescribeExternalNodeScriptResponse
      * @throws TencentCloudSDKException
@@ -1535,7 +1535,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *查看开启第三方节点池配置信息
+     *查看开启注册节点池配置信息
      * @param req DescribeExternalNodeSupportConfigRequest
      * @return DescribeExternalNodeSupportConfigResponse
      * @throws TencentCloudSDKException
@@ -2184,7 +2184,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *驱逐第三方节点
+     *驱逐注册节点
      * @param req DrainExternalNodeRequest
      * @return DrainExternalNodeResponse
      * @throws TencentCloudSDKException
@@ -2261,7 +2261,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *开启第三方节点池支持
+     *开启注册节点池支持
      * @param req EnableExternalNodeSupportRequest
      * @return EnableExternalNodeSupportResponse
      * @throws TencentCloudSDKException
@@ -2569,7 +2569,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *修改第三方节点池
+     *修改注册节点池
      * @param req ModifyExternalNodePoolRequest
      * @return ModifyExternalNodePoolResponse
      * @throws TencentCloudSDKException

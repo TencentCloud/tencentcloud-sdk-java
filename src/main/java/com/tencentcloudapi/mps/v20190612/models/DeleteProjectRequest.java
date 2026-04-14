@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tke.v20180525.models;
+package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeExternalNodeSupportConfigRequest extends AbstractModel {
+public class DeleteProjectRequest extends AbstractModel {
 
     /**
-    * 集群Id，可通过查看集群的基本信息->基础信息页获取
+    * <p>项目id</p>
     */
-    @SerializedName("ClusterId")
+    @SerializedName("ProjectId")
     @Expose
-    private String ClusterId;
+    private String ProjectId;
 
     /**
-     * Get 集群Id，可通过查看集群的基本信息->基础信息页获取 
-     * @return ClusterId 集群Id，可通过查看集群的基本信息->基础信息页获取
+     * Get <p>项目id</p> 
+     * @return ProjectId <p>项目id</p>
      */
-    public String getClusterId() {
-        return this.ClusterId;
+    public String getProjectId() {
+        return this.ProjectId;
     }
 
     /**
-     * Set 集群Id，可通过查看集群的基本信息->基础信息页获取
-     * @param ClusterId 集群Id，可通过查看集群的基本信息->基础信息页获取
+     * Set <p>项目id</p>
+     * @param ProjectId <p>项目id</p>
      */
-    public void setClusterId(String ClusterId) {
-        this.ClusterId = ClusterId;
+    public void setProjectId(String ProjectId) {
+        this.ProjectId = ProjectId;
     }
 
-    public DescribeExternalNodeSupportConfigRequest() {
+    public DeleteProjectRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeExternalNodeSupportConfigRequest(DescribeExternalNodeSupportConfigRequest source) {
-        if (source.ClusterId != null) {
-            this.ClusterId = new String(source.ClusterId);
+    public DeleteProjectRequest(DeleteProjectRequest source) {
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
         }
     }
 
@@ -64,7 +64,7 @@ public class DescribeExternalNodeSupportConfigRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
 
     }
 }

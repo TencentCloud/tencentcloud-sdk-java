@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.config.v20220802.models;
+package com.tencentcloudapi.vclm.v20240523.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,15 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddAlarmPolicyResponse extends AbstractModel {
+public class SubmitImageToVideoViduJobResponse extends AbstractModel {
 
     /**
-    * <p>告警策略唯一id</p>
-注意：此字段可能返回 null，表示取不到有效值。
+    * <p>任务ID。</p>
     */
-    @SerializedName("AlarmPolicyId")
+    @SerializedName("JobId")
     @Expose
-    private Long AlarmPolicyId;
+    private String JobId;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -39,23 +38,19 @@ public class AddAlarmPolicyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>告警策略唯一id</p>
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AlarmPolicyId <p>告警策略唯一id</p>
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get <p>任务ID。</p> 
+     * @return JobId <p>任务ID。</p>
      */
-    public Long getAlarmPolicyId() {
-        return this.AlarmPolicyId;
+    public String getJobId() {
+        return this.JobId;
     }
 
     /**
-     * Set <p>告警策略唯一id</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param AlarmPolicyId <p>告警策略唯一id</p>
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set <p>任务ID。</p>
+     * @param JobId <p>任务ID。</p>
      */
-    public void setAlarmPolicyId(Long AlarmPolicyId) {
-        this.AlarmPolicyId = AlarmPolicyId;
+    public void setJobId(String JobId) {
+        this.JobId = JobId;
     }
 
     /**
@@ -74,16 +69,16 @@ public class AddAlarmPolicyResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public AddAlarmPolicyResponse() {
+    public SubmitImageToVideoViduJobResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public AddAlarmPolicyResponse(AddAlarmPolicyResponse source) {
-        if (source.AlarmPolicyId != null) {
-            this.AlarmPolicyId = new Long(source.AlarmPolicyId);
+    public SubmitImageToVideoViduJobResponse(SubmitImageToVideoViduJobResponse source) {
+        if (source.JobId != null) {
+            this.JobId = new String(source.JobId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -95,7 +90,7 @@ public class AddAlarmPolicyResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "AlarmPolicyId", this.AlarmPolicyId);
+        this.setParamSimple(map, prefix + "JobId", this.JobId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

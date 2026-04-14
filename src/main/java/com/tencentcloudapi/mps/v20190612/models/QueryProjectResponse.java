@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.config.v20220802.models;
+package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,15 +21,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddAlarmPolicyResponse extends AbstractModel {
+public class QueryProjectResponse extends AbstractModel {
 
     /**
-    * <p>告警策略唯一id</p>
-注意：此字段可能返回 null，表示取不到有效值。
+    * <p>符合条件的总数量</p>
     */
-    @SerializedName("AlarmPolicyId")
+    @SerializedName("Total")
     @Expose
-    private Long AlarmPolicyId;
+    private Long Total;
+
+    /**
+    * <p>项目数据</p>
+    */
+    @SerializedName("Data")
+    @Expose
+    private Project [] Data;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -39,23 +45,35 @@ public class AddAlarmPolicyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>告警策略唯一id</p>
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AlarmPolicyId <p>告警策略唯一id</p>
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get <p>符合条件的总数量</p> 
+     * @return Total <p>符合条件的总数量</p>
      */
-    public Long getAlarmPolicyId() {
-        return this.AlarmPolicyId;
+    public Long getTotal() {
+        return this.Total;
     }
 
     /**
-     * Set <p>告警策略唯一id</p>
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param AlarmPolicyId <p>告警策略唯一id</p>
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set <p>符合条件的总数量</p>
+     * @param Total <p>符合条件的总数量</p>
      */
-    public void setAlarmPolicyId(Long AlarmPolicyId) {
-        this.AlarmPolicyId = AlarmPolicyId;
+    public void setTotal(Long Total) {
+        this.Total = Total;
+    }
+
+    /**
+     * Get <p>项目数据</p> 
+     * @return Data <p>项目数据</p>
+     */
+    public Project [] getData() {
+        return this.Data;
+    }
+
+    /**
+     * Set <p>项目数据</p>
+     * @param Data <p>项目数据</p>
+     */
+    public void setData(Project [] Data) {
+        this.Data = Data;
     }
 
     /**
@@ -74,16 +92,22 @@ public class AddAlarmPolicyResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public AddAlarmPolicyResponse() {
+    public QueryProjectResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public AddAlarmPolicyResponse(AddAlarmPolicyResponse source) {
-        if (source.AlarmPolicyId != null) {
-            this.AlarmPolicyId = new Long(source.AlarmPolicyId);
+    public QueryProjectResponse(QueryProjectResponse source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.Data != null) {
+            this.Data = new Project[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new Project(source.Data[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -95,7 +119,8 @@ public class AddAlarmPolicyResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "AlarmPolicyId", this.AlarmPolicyId);
+        this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamArrayObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

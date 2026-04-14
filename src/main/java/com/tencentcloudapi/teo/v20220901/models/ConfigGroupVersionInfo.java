@@ -45,9 +45,7 @@ public class ConfigGroupVersionInfo extends AbstractModel {
     private String GroupId;
 
     /**
-    * 配置组类型。取值有：
-<li>l7_acceleration ：七层加速配置组。</li>
-<li>edge_functions ：边缘函数配置组。</li>
+    * 配置组类型，可选项如下：<li>l7_acceleration: 七层加速配置组；</li><li>edge_functions: 边缘函数配置组；</li><li>web_security: Web 防护配置组。</li>
     */
     @SerializedName("GroupType")
     @Expose
@@ -126,24 +124,16 @@ public class ConfigGroupVersionInfo extends AbstractModel {
     }
 
     /**
-     * Get 配置组类型。取值有：
-<li>l7_acceleration ：七层加速配置组。</li>
-<li>edge_functions ：边缘函数配置组。</li> 
-     * @return GroupType 配置组类型。取值有：
-<li>l7_acceleration ：七层加速配置组。</li>
-<li>edge_functions ：边缘函数配置组。</li>
+     * Get 配置组类型，可选项如下：<li>l7_acceleration: 七层加速配置组；</li><li>edge_functions: 边缘函数配置组；</li><li>web_security: Web 防护配置组。</li> 
+     * @return GroupType 配置组类型，可选项如下：<li>l7_acceleration: 七层加速配置组；</li><li>edge_functions: 边缘函数配置组；</li><li>web_security: Web 防护配置组。</li>
      */
     public String getGroupType() {
         return this.GroupType;
     }
 
     /**
-     * Set 配置组类型。取值有：
-<li>l7_acceleration ：七层加速配置组。</li>
-<li>edge_functions ：边缘函数配置组。</li>
-     * @param GroupType 配置组类型。取值有：
-<li>l7_acceleration ：七层加速配置组。</li>
-<li>edge_functions ：边缘函数配置组。</li>
+     * Set 配置组类型，可选项如下：<li>l7_acceleration: 七层加速配置组；</li><li>edge_functions: 边缘函数配置组；</li><li>web_security: Web 防护配置组。</li>
+     * @param GroupType 配置组类型，可选项如下：<li>l7_acceleration: 七层加速配置组；</li><li>edge_functions: 边缘函数配置组；</li><li>web_security: Web 防护配置组。</li>
      */
     public void setGroupType(String GroupType) {
         this.GroupType = GroupType;

@@ -230,6 +230,17 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *创建RocketMQ元数据迁移任务，用于批量创建主题和消费组数据
+     * @param req CreateRocketMQMigrationTaskRequest
+     * @return CreateRocketMQMigrationTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRocketMQMigrationTaskResponse CreateRocketMQMigrationTask(CreateRocketMQMigrationTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateRocketMQMigrationTask", CreateRocketMQMigrationTaskResponse.class);
+    }
+
+    /**
      *创建 RocketMQ 命名空间。
 当前 API 适用集群：4.x 虚拟集群和 4.x 专享集群，其他集群类型均不支持该功能。
      * @param req CreateRocketMQNamespaceRequest

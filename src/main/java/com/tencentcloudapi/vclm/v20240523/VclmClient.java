@@ -230,6 +230,17 @@ public class VclmClient extends AbstractClient{
     }
 
     /**
+     *提交Vidu图生视频任务接口
+     * @param req SubmitImageToVideoViduJobRequest
+     * @return SubmitImageToVideoViduJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitImageToVideoViduJobResponse SubmitImageToVideoViduJob(SubmitImageToVideoViduJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitImageToVideoViduJob", SubmitImageToVideoViduJobResponse.class);
+    }
+
+    /**
      *用于提交图片唱演任务。
 支持提交音频和图片生成唱演视频，满足社交娱乐、互动营销等场景的需求。
      * @param req SubmitPortraitSingJobRequest

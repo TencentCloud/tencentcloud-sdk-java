@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ExternalNode extends AbstractModel {
 
     /**
-    * 第三方节点名称
+    * <p>注册节点名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 第三方节点所属节点池
+    * <p>注册节点所属节点池</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodePoolId")
@@ -39,28 +39,28 @@ public class ExternalNode extends AbstractModel {
     private String NodePoolId;
 
     /**
-    * 第三方IP地址
+    * <p>注册节点IP地址</p>
     */
     @SerializedName("IP")
     @Expose
     private String IP;
 
     /**
-    * 第三方地域
+    * <p>注册节点地域</p>
     */
     @SerializedName("Location")
     @Expose
     private String Location;
 
     /**
-    * 第三方节点状态
+    * <p>注册节点状态</p><p>枚举值：</p><ul><li>Running： 运行中</li><li>Failed： 异常状态</li><li>Terminating： 删除中</li><li>Draining： 驱逐中</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedTime")
@@ -68,7 +68,7 @@ public class ExternalNode extends AbstractModel {
     private String CreatedTime;
 
     /**
-    * 异常原因
+    * <p>异常原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Reason")
@@ -76,7 +76,7 @@ public class ExternalNode extends AbstractModel {
     private String Reason;
 
     /**
-    * 是否封锁。true表示已封锁，false表示未封锁
+    * <p>是否封锁。true表示已封锁，false表示未封锁</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Unschedulable")
@@ -84,25 +84,25 @@ public class ExternalNode extends AbstractModel {
     private Boolean Unschedulable;
 
     /**
-     * Get 第三方节点名称 
-     * @return Name 第三方节点名称
+     * Get <p>注册节点名称</p> 
+     * @return Name <p>注册节点名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 第三方节点名称
-     * @param Name 第三方节点名称
+     * Set <p>注册节点名称</p>
+     * @param Name <p>注册节点名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 第三方节点所属节点池
+     * Get <p>注册节点所属节点池</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NodePoolId 第三方节点所属节点池
+     * @return NodePoolId <p>注册节点所属节点池</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNodePoolId() {
@@ -110,9 +110,9 @@ public class ExternalNode extends AbstractModel {
     }
 
     /**
-     * Set 第三方节点所属节点池
+     * Set <p>注册节点所属节点池</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NodePoolId 第三方节点所属节点池
+     * @param NodePoolId <p>注册节点所属节点池</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodePoolId(String NodePoolId) {
@@ -120,57 +120,57 @@ public class ExternalNode extends AbstractModel {
     }
 
     /**
-     * Get 第三方IP地址 
-     * @return IP 第三方IP地址
+     * Get <p>注册节点IP地址</p> 
+     * @return IP <p>注册节点IP地址</p>
      */
     public String getIP() {
         return this.IP;
     }
 
     /**
-     * Set 第三方IP地址
-     * @param IP 第三方IP地址
+     * Set <p>注册节点IP地址</p>
+     * @param IP <p>注册节点IP地址</p>
      */
     public void setIP(String IP) {
         this.IP = IP;
     }
 
     /**
-     * Get 第三方地域 
-     * @return Location 第三方地域
+     * Get <p>注册节点地域</p> 
+     * @return Location <p>注册节点地域</p>
      */
     public String getLocation() {
         return this.Location;
     }
 
     /**
-     * Set 第三方地域
-     * @param Location 第三方地域
+     * Set <p>注册节点地域</p>
+     * @param Location <p>注册节点地域</p>
      */
     public void setLocation(String Location) {
         this.Location = Location;
     }
 
     /**
-     * Get 第三方节点状态 
-     * @return Status 第三方节点状态
+     * Get <p>注册节点状态</p><p>枚举值：</p><ul><li>Running： 运行中</li><li>Failed： 异常状态</li><li>Terminating： 删除中</li><li>Draining： 驱逐中</li></ul> 
+     * @return Status <p>注册节点状态</p><p>枚举值：</p><ul><li>Running： 运行中</li><li>Failed： 异常状态</li><li>Terminating： 删除中</li><li>Draining： 驱逐中</li></ul>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 第三方节点状态
-     * @param Status 第三方节点状态
+     * Set <p>注册节点状态</p><p>枚举值：</p><ul><li>Running： 运行中</li><li>Failed： 异常状态</li><li>Terminating： 删除中</li><li>Draining： 驱逐中</li></ul>
+     * @param Status <p>注册节点状态</p><p>枚举值：</p><ul><li>Running： 运行中</li><li>Failed： 异常状态</li><li>Terminating： 删除中</li><li>Draining： 驱逐中</li></ul>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 创建时间
+     * Get <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreatedTime 创建时间
+     * @return CreatedTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedTime() {
@@ -178,9 +178,9 @@ public class ExternalNode extends AbstractModel {
     }
 
     /**
-     * Set 创建时间
+     * Set <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreatedTime 创建时间
+     * @param CreatedTime <p>创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedTime(String CreatedTime) {
@@ -188,9 +188,9 @@ public class ExternalNode extends AbstractModel {
     }
 
     /**
-     * Get 异常原因
+     * Get <p>异常原因</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Reason 异常原因
+     * @return Reason <p>异常原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReason() {
@@ -198,9 +198,9 @@ public class ExternalNode extends AbstractModel {
     }
 
     /**
-     * Set 异常原因
+     * Set <p>异常原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Reason 异常原因
+     * @param Reason <p>异常原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReason(String Reason) {
@@ -208,9 +208,9 @@ public class ExternalNode extends AbstractModel {
     }
 
     /**
-     * Get 是否封锁。true表示已封锁，false表示未封锁
+     * Get <p>是否封锁。true表示已封锁，false表示未封锁</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Unschedulable 是否封锁。true表示已封锁，false表示未封锁
+     * @return Unschedulable <p>是否封锁。true表示已封锁，false表示未封锁</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getUnschedulable() {
@@ -218,9 +218,9 @@ public class ExternalNode extends AbstractModel {
     }
 
     /**
-     * Set 是否封锁。true表示已封锁，false表示未封锁
+     * Set <p>是否封锁。true表示已封锁，false表示未封锁</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Unschedulable 是否封锁。true表示已封锁，false表示未封锁
+     * @param Unschedulable <p>是否封锁。true表示已封锁，false表示未封锁</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnschedulable(Boolean Unschedulable) {

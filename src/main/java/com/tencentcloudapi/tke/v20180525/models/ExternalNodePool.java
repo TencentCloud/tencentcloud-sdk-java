@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ExternalNodePool extends AbstractModel {
 
     /**
-    * 第三方节点池ID
+    * 注册节点池ID
     */
     @SerializedName("NodePoolId")
     @Expose
     private String NodePoolId;
 
     /**
-    * 第三方节点池名称
+    * 注册节点池名称
     */
     @SerializedName("Name")
     @Expose
@@ -59,14 +59,14 @@ public class ExternalNodePool extends AbstractModel {
     private String NetworkType;
 
     /**
-    * 第三方节点Runtime配置
+    * 注册节点运行时配置
     */
     @SerializedName("RuntimeConfig")
     @Expose
     private RuntimeConfig RuntimeConfig;
 
     /**
-    * 第三方节点label
+    * 注册节点标签
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Labels")
@@ -74,7 +74,7 @@ public class ExternalNodePool extends AbstractModel {
     private Label [] Labels;
 
     /**
-    * 第三方节点taint
+    * 注册节点污点
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Taints")
@@ -82,7 +82,7 @@ public class ExternalNodePool extends AbstractModel {
     private Taint [] Taints;
 
     /**
-    * 第三方节点高级设置
+    * 注册节点高级设置
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceAdvancedSettings")
@@ -98,32 +98,39 @@ public class ExternalNodePool extends AbstractModel {
     private Boolean DeletionProtection;
 
     /**
-     * Get 第三方节点池ID 
-     * @return NodePoolId 第三方节点池ID
+    * 注册节点类型
+    */
+    @SerializedName("NodeType")
+    @Expose
+    private String NodeType;
+
+    /**
+     * Get 注册节点池ID 
+     * @return NodePoolId 注册节点池ID
      */
     public String getNodePoolId() {
         return this.NodePoolId;
     }
 
     /**
-     * Set 第三方节点池ID
-     * @param NodePoolId 第三方节点池ID
+     * Set 注册节点池ID
+     * @param NodePoolId 注册节点池ID
      */
     public void setNodePoolId(String NodePoolId) {
         this.NodePoolId = NodePoolId;
     }
 
     /**
-     * Get 第三方节点池名称 
-     * @return Name 第三方节点池名称
+     * Get 注册节点池名称 
+     * @return Name 注册节点池名称
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 第三方节点池名称
-     * @param Name 第三方节点池名称
+     * Set 注册节点池名称
+     * @param Name 注册节点池名称
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -178,25 +185,25 @@ public class ExternalNodePool extends AbstractModel {
     }
 
     /**
-     * Get 第三方节点Runtime配置 
-     * @return RuntimeConfig 第三方节点Runtime配置
+     * Get 注册节点运行时配置 
+     * @return RuntimeConfig 注册节点运行时配置
      */
     public RuntimeConfig getRuntimeConfig() {
         return this.RuntimeConfig;
     }
 
     /**
-     * Set 第三方节点Runtime配置
-     * @param RuntimeConfig 第三方节点Runtime配置
+     * Set 注册节点运行时配置
+     * @param RuntimeConfig 注册节点运行时配置
      */
     public void setRuntimeConfig(RuntimeConfig RuntimeConfig) {
         this.RuntimeConfig = RuntimeConfig;
     }
 
     /**
-     * Get 第三方节点label
+     * Get 注册节点标签
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Labels 第三方节点label
+     * @return Labels 注册节点标签
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Label [] getLabels() {
@@ -204,9 +211,9 @@ public class ExternalNodePool extends AbstractModel {
     }
 
     /**
-     * Set 第三方节点label
+     * Set 注册节点标签
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Labels 第三方节点label
+     * @param Labels 注册节点标签
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabels(Label [] Labels) {
@@ -214,9 +221,9 @@ public class ExternalNodePool extends AbstractModel {
     }
 
     /**
-     * Get 第三方节点taint
+     * Get 注册节点污点
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Taints 第三方节点taint
+     * @return Taints 注册节点污点
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Taint [] getTaints() {
@@ -224,9 +231,9 @@ public class ExternalNodePool extends AbstractModel {
     }
 
     /**
-     * Set 第三方节点taint
+     * Set 注册节点污点
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Taints 第三方节点taint
+     * @param Taints 注册节点污点
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaints(Taint [] Taints) {
@@ -234,9 +241,9 @@ public class ExternalNodePool extends AbstractModel {
     }
 
     /**
-     * Get 第三方节点高级设置
+     * Get 注册节点高级设置
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceAdvancedSettings 第三方节点高级设置
+     * @return InstanceAdvancedSettings 注册节点高级设置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstanceAdvancedSettings getInstanceAdvancedSettings() {
@@ -244,9 +251,9 @@ public class ExternalNodePool extends AbstractModel {
     }
 
     /**
-     * Set 第三方节点高级设置
+     * Set 注册节点高级设置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceAdvancedSettings 第三方节点高级设置
+     * @param InstanceAdvancedSettings 注册节点高级设置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceAdvancedSettings(InstanceAdvancedSettings InstanceAdvancedSettings) {
@@ -271,6 +278,22 @@ public class ExternalNodePool extends AbstractModel {
      */
     public void setDeletionProtection(Boolean DeletionProtection) {
         this.DeletionProtection = DeletionProtection;
+    }
+
+    /**
+     * Get 注册节点类型 
+     * @return NodeType 注册节点类型
+     */
+    public String getNodeType() {
+        return this.NodeType;
+    }
+
+    /**
+     * Set 注册节点类型
+     * @param NodeType 注册节点类型
+     */
+    public void setNodeType(String NodeType) {
+        this.NodeType = NodeType;
     }
 
     public ExternalNodePool() {
@@ -317,6 +340,9 @@ public class ExternalNodePool extends AbstractModel {
         if (source.DeletionProtection != null) {
             this.DeletionProtection = new Boolean(source.DeletionProtection);
         }
+        if (source.NodeType != null) {
+            this.NodeType = new String(source.NodeType);
+        }
     }
 
 
@@ -334,6 +360,7 @@ public class ExternalNodePool extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Taints.", this.Taints);
         this.setParamObj(map, prefix + "InstanceAdvancedSettings.", this.InstanceAdvancedSettings);
         this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
+        this.setParamSimple(map, prefix + "NodeType", this.NodeType);
 
     }
 }
