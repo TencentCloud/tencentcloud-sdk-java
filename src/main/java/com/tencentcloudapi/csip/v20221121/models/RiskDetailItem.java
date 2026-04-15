@@ -115,6 +115,13 @@ public class RiskDetailItem extends AbstractModel {
     private String CheckStatus;
 
     /**
+    * 
+    */
+    @SerializedName("AppID")
+    @Expose
+    private Long AppID;
+
+    /**
      * Get 首次发现时间 
      * @return CreateTime 首次发现时间
      */
@@ -322,6 +329,22 @@ public class RiskDetailItem extends AbstractModel {
         this.CheckStatus = CheckStatus;
     }
 
+    /**
+     * Get  
+     * @return AppID 
+     */
+    public Long getAppID() {
+        return this.AppID;
+    }
+
+    /**
+     * Set 
+     * @param AppID 
+     */
+    public void setAppID(Long AppID) {
+        this.AppID = AppID;
+    }
+
     public RiskDetailItem() {
     }
 
@@ -369,6 +392,9 @@ public class RiskDetailItem extends AbstractModel {
         if (source.CheckStatus != null) {
             this.CheckStatus = new String(source.CheckStatus);
         }
+        if (source.AppID != null) {
+            this.AppID = new Long(source.AppID);
+        }
     }
 
 
@@ -389,6 +415,7 @@ public class RiskDetailItem extends AbstractModel {
         this.setParamSimple(map, prefix + "RiskId", this.RiskId);
         this.setParamSimple(map, prefix + "RiskRuleId", this.RiskRuleId);
         this.setParamSimple(map, prefix + "CheckStatus", this.CheckStatus);
+        this.setParamSimple(map, prefix + "AppID", this.AppID);
 
     }
 }

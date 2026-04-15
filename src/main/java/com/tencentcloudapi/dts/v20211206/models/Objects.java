@@ -46,13 +46,6 @@ public class Objects extends AbstractModel {
     private String [] AdvancedObjects;
 
     /**
-    * OnlineDDL类型，冗余字段不做配置用途
-    */
-    @SerializedName("OnlineDDL")
-    @Expose
-    private OnlineDDL OnlineDDL;
-
-    /**
     * 库/表/视图级 DML/DDL 白名单
     */
     @SerializedName("DatabasesOpFilter")
@@ -112,22 +105,6 @@ public class Objects extends AbstractModel {
     }
 
     /**
-     * Get OnlineDDL类型，冗余字段不做配置用途 
-     * @return OnlineDDL OnlineDDL类型，冗余字段不做配置用途
-     */
-    public OnlineDDL getOnlineDDL() {
-        return this.OnlineDDL;
-    }
-
-    /**
-     * Set OnlineDDL类型，冗余字段不做配置用途
-     * @param OnlineDDL OnlineDDL类型，冗余字段不做配置用途
-     */
-    public void setOnlineDDL(OnlineDDL OnlineDDL) {
-        this.OnlineDDL = OnlineDDL;
-    }
-
-    /**
      * Get 库/表/视图级 DML/DDL 白名单 
      * @return DatabasesOpFilter 库/表/视图级 DML/DDL 白名单
      */
@@ -166,9 +143,6 @@ public class Objects extends AbstractModel {
                 this.AdvancedObjects[i] = new String(source.AdvancedObjects[i]);
             }
         }
-        if (source.OnlineDDL != null) {
-            this.OnlineDDL = new OnlineDDL(source.OnlineDDL);
-        }
         if (source.DatabasesOpFilter != null) {
             this.DatabasesOpFilter = new DBOpFilter[source.DatabasesOpFilter.length];
             for (int i = 0; i < source.DatabasesOpFilter.length; i++) {
@@ -185,7 +159,6 @@ public class Objects extends AbstractModel {
         this.setParamSimple(map, prefix + "Mode", this.Mode);
         this.setParamArrayObj(map, prefix + "Databases.", this.Databases);
         this.setParamArraySimple(map, prefix + "AdvancedObjects.", this.AdvancedObjects);
-        this.setParamObj(map, prefix + "OnlineDDL.", this.OnlineDDL);
         this.setParamArrayObj(map, prefix + "DatabasesOpFilter.", this.DatabasesOpFilter);
 
     }

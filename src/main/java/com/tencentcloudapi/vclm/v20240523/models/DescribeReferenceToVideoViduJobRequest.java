@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dts.v20211206.models;
+package com.tencentcloudapi.vclm.v20240523.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OnlineDDL extends AbstractModel {
+public class DescribeReferenceToVideoViduJobRequest extends AbstractModel {
 
     /**
-    * 状态，ON-启用，OFF-不启用。
+    * <p>任务ID</p>
     */
-    @SerializedName("Status")
+    @SerializedName("JobId")
     @Expose
-    private String Status;
+    private String JobId;
 
     /**
-     * Get 状态，ON-启用，OFF-不启用。 
-     * @return Status 状态，ON-启用，OFF-不启用。
+     * Get <p>任务ID</p> 
+     * @return JobId <p>任务ID</p>
      */
-    public String getStatus() {
-        return this.Status;
+    public String getJobId() {
+        return this.JobId;
     }
 
     /**
-     * Set 状态，ON-启用，OFF-不启用。
-     * @param Status 状态，ON-启用，OFF-不启用。
+     * Set <p>任务ID</p>
+     * @param JobId <p>任务ID</p>
      */
-    public void setStatus(String Status) {
-        this.Status = Status;
+    public void setJobId(String JobId) {
+        this.JobId = JobId;
     }
 
-    public OnlineDDL() {
+    public DescribeReferenceToVideoViduJobRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public OnlineDDL(OnlineDDL source) {
-        if (source.Status != null) {
-            this.Status = new String(source.Status);
+    public DescribeReferenceToVideoViduJobRequest(DescribeReferenceToVideoViduJobRequest source) {
+        if (source.JobId != null) {
+            this.JobId = new String(source.JobId);
         }
     }
 
@@ -64,7 +64,7 @@ public class OnlineDDL extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "JobId", this.JobId);
 
     }
 }

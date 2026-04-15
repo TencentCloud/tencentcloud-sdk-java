@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AddRecordBackupTemplateResponse extends AbstractModel {
 
     /**
-    * 返回数据
+    * <p>返回数据</p>
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class AddRecordBackupTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回数据 
-     * @return Data 返回数据
+     * Get <p>返回数据</p> 
+     * @return Data <p>返回数据</p>
      */
     public AddRecordBackupTemplateData getData() {
         return this.Data;
     }
 
     /**
-     * Set 返回数据
-     * @param Data 返回数据
+     * Set <p>返回数据</p>
+     * @param Data <p>返回数据</p>
      */
     public void setData(AddRecordBackupTemplateData Data) {
         this.Data = Data;

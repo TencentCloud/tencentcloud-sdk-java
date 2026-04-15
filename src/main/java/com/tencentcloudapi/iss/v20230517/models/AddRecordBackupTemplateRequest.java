@@ -24,95 +24,118 @@ import java.util.HashMap;
 public class AddRecordBackupTemplateRequest extends AbstractModel {
 
     /**
-    * 模板名称（仅支持中文、英文、数字、_、-，长度不超过32个字符，模板名称全局唯一，不能为空，不能重复）
+    * <p>模板名称（仅支持中文、英文、数字、_、-，长度不超过32个字符，模板名称全局唯一，不能为空，不能重复）</p>
     */
     @SerializedName("TemplateName")
     @Expose
     private String TemplateName;
 
     /**
-    * 上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
+    * <p>上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）</p>
     */
     @SerializedName("TimeSections")
     @Expose
     private RecordTemplateTimeSections [] TimeSections;
 
     /**
-    * 录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
+    * <p>录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）</p>
     */
     @SerializedName("DevTimeSections")
     @Expose
     private RecordTemplateTimeSections [] DevTimeSections;
 
     /**
-    * 上云倍速（支持1，2，4倍速）
+    * <p>上云倍速（支持1，2，4倍速）</p>
     */
     @SerializedName("Scale")
     @Expose
     private Long Scale;
 
     /**
-     * Get 模板名称（仅支持中文、英文、数字、_、-，长度不超过32个字符，模板名称全局唯一，不能为空，不能重复） 
-     * @return TemplateName 模板名称（仅支持中文、英文、数字、_、-，长度不超过32个字符，模板名称全局唯一，不能为空，不能重复）
+    * <p>周期偏移量，默认1，表示拉取昨天的设备录像，0表示取去今天的设备录像，3表示拉取前天的设备录像</p><p>取值范围：[0, 90]</p><p>默认值：1</p>
+    */
+    @SerializedName("DayOffset")
+    @Expose
+    private Long DayOffset;
+
+    /**
+     * Get <p>模板名称（仅支持中文、英文、数字、_、-，长度不超过32个字符，模板名称全局唯一，不能为空，不能重复）</p> 
+     * @return TemplateName <p>模板名称（仅支持中文、英文、数字、_、-，长度不超过32个字符，模板名称全局唯一，不能为空，不能重复）</p>
      */
     public String getTemplateName() {
         return this.TemplateName;
     }
 
     /**
-     * Set 模板名称（仅支持中文、英文、数字、_、-，长度不超过32个字符，模板名称全局唯一，不能为空，不能重复）
-     * @param TemplateName 模板名称（仅支持中文、英文、数字、_、-，长度不超过32个字符，模板名称全局唯一，不能为空，不能重复）
+     * Set <p>模板名称（仅支持中文、英文、数字、_、-，长度不超过32个字符，模板名称全局唯一，不能为空，不能重复）</p>
+     * @param TemplateName <p>模板名称（仅支持中文、英文、数字、_、-，长度不超过32个字符，模板名称全局唯一，不能为空，不能重复）</p>
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;
     }
 
     /**
-     * Get 上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟） 
-     * @return TimeSections 上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
+     * Get <p>上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）</p> 
+     * @return TimeSections <p>上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）</p>
      */
     public RecordTemplateTimeSections [] getTimeSections() {
         return this.TimeSections;
     }
 
     /**
-     * Set 上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-     * @param TimeSections 上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
+     * Set <p>上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）</p>
+     * @param TimeSections <p>上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）</p>
      */
     public void setTimeSections(RecordTemplateTimeSections [] TimeSections) {
         this.TimeSections = TimeSections;
     }
 
     /**
-     * Get 录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟） 
-     * @return DevTimeSections 录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
+     * Get <p>录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）</p> 
+     * @return DevTimeSections <p>录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）</p>
      */
     public RecordTemplateTimeSections [] getDevTimeSections() {
         return this.DevTimeSections;
     }
 
     /**
-     * Set 录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-     * @param DevTimeSections 录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
+     * Set <p>录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）</p>
+     * @param DevTimeSections <p>录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）</p>
      */
     public void setDevTimeSections(RecordTemplateTimeSections [] DevTimeSections) {
         this.DevTimeSections = DevTimeSections;
     }
 
     /**
-     * Get 上云倍速（支持1，2，4倍速） 
-     * @return Scale 上云倍速（支持1，2，4倍速）
+     * Get <p>上云倍速（支持1，2，4倍速）</p> 
+     * @return Scale <p>上云倍速（支持1，2，4倍速）</p>
      */
     public Long getScale() {
         return this.Scale;
     }
 
     /**
-     * Set 上云倍速（支持1，2，4倍速）
-     * @param Scale 上云倍速（支持1，2，4倍速）
+     * Set <p>上云倍速（支持1，2，4倍速）</p>
+     * @param Scale <p>上云倍速（支持1，2，4倍速）</p>
      */
     public void setScale(Long Scale) {
         this.Scale = Scale;
+    }
+
+    /**
+     * Get <p>周期偏移量，默认1，表示拉取昨天的设备录像，0表示取去今天的设备录像，3表示拉取前天的设备录像</p><p>取值范围：[0, 90]</p><p>默认值：1</p> 
+     * @return DayOffset <p>周期偏移量，默认1，表示拉取昨天的设备录像，0表示取去今天的设备录像，3表示拉取前天的设备录像</p><p>取值范围：[0, 90]</p><p>默认值：1</p>
+     */
+    public Long getDayOffset() {
+        return this.DayOffset;
+    }
+
+    /**
+     * Set <p>周期偏移量，默认1，表示拉取昨天的设备录像，0表示取去今天的设备录像，3表示拉取前天的设备录像</p><p>取值范围：[0, 90]</p><p>默认值：1</p>
+     * @param DayOffset <p>周期偏移量，默认1，表示拉取昨天的设备录像，0表示取去今天的设备录像，3表示拉取前天的设备录像</p><p>取值范围：[0, 90]</p><p>默认值：1</p>
+     */
+    public void setDayOffset(Long DayOffset) {
+        this.DayOffset = DayOffset;
     }
 
     public AddRecordBackupTemplateRequest() {
@@ -141,6 +164,9 @@ public class AddRecordBackupTemplateRequest extends AbstractModel {
         if (source.Scale != null) {
             this.Scale = new Long(source.Scale);
         }
+        if (source.DayOffset != null) {
+            this.DayOffset = new Long(source.DayOffset);
+        }
     }
 
 
@@ -152,6 +178,7 @@ public class AddRecordBackupTemplateRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "TimeSections.", this.TimeSections);
         this.setParamArrayObj(map, prefix + "DevTimeSections.", this.DevTimeSections);
         this.setParamSimple(map, prefix + "Scale", this.Scale);
+        this.setParamSimple(map, prefix + "DayOffset", this.DayOffset);
 
     }
 }

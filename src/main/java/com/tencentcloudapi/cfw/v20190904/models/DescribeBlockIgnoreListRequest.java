@@ -59,6 +59,14 @@ public class DescribeBlockIgnoreListRequest extends AbstractModel {
     private String By;
 
     /**
+    * blocklist 封禁列表
+whitelist 白名单列表
+    */
+    @SerializedName("ShowType")
+    @Expose
+    private String ShowType;
+
+    /**
     * 搜索参数，json格式字符串，空则传"{}"，域名：domain，危险等级：level，放通原因：ignore_reason，安全事件来源：rule_source，地理位置：address，模糊搜索：common
     */
     @SerializedName("SearchValue")
@@ -71,14 +79,6 @@ public class DescribeBlockIgnoreListRequest extends AbstractModel {
     @SerializedName("RuleType")
     @Expose
     private Long RuleType;
-
-    /**
-    * blocklist 封禁列表
-whitelist 白名单列表
-    */
-    @SerializedName("ShowType")
-    @Expose
-    private String ShowType;
 
     /**
      * Get 单页数量 
@@ -161,6 +161,26 @@ whitelist 白名单列表
     }
 
     /**
+     * Get blocklist 封禁列表
+whitelist 白名单列表 
+     * @return ShowType blocklist 封禁列表
+whitelist 白名单列表
+     */
+    public String getShowType() {
+        return this.ShowType;
+    }
+
+    /**
+     * Set blocklist 封禁列表
+whitelist 白名单列表
+     * @param ShowType blocklist 封禁列表
+whitelist 白名单列表
+     */
+    public void setShowType(String ShowType) {
+        this.ShowType = ShowType;
+    }
+
+    /**
      * Get 搜索参数，json格式字符串，空则传"{}"，域名：domain，危险等级：level，放通原因：ignore_reason，安全事件来源：rule_source，地理位置：address，模糊搜索：common 
      * @return SearchValue 搜索参数，json格式字符串，空则传"{}"，域名：domain，危险等级：level，放通原因：ignore_reason，安全事件来源：rule_source，地理位置：address，模糊搜索：common
      */
@@ -192,26 +212,6 @@ whitelist 白名单列表
         this.RuleType = RuleType;
     }
 
-    /**
-     * Get blocklist 封禁列表
-whitelist 白名单列表 
-     * @return ShowType blocklist 封禁列表
-whitelist 白名单列表
-     */
-    public String getShowType() {
-        return this.ShowType;
-    }
-
-    /**
-     * Set blocklist 封禁列表
-whitelist 白名单列表
-     * @param ShowType blocklist 封禁列表
-whitelist 白名单列表
-     */
-    public void setShowType(String ShowType) {
-        this.ShowType = ShowType;
-    }
-
     public DescribeBlockIgnoreListRequest() {
     }
 
@@ -235,14 +235,14 @@ whitelist 白名单列表
         if (source.By != null) {
             this.By = new String(source.By);
         }
+        if (source.ShowType != null) {
+            this.ShowType = new String(source.ShowType);
+        }
         if (source.SearchValue != null) {
             this.SearchValue = new String(source.SearchValue);
         }
         if (source.RuleType != null) {
             this.RuleType = new Long(source.RuleType);
-        }
-        if (source.ShowType != null) {
-            this.ShowType = new String(source.ShowType);
         }
     }
 
@@ -256,9 +256,9 @@ whitelist 白名单列表
         this.setParamSimple(map, prefix + "Direction", this.Direction);
         this.setParamSimple(map, prefix + "Order", this.Order);
         this.setParamSimple(map, prefix + "By", this.By);
+        this.setParamSimple(map, prefix + "ShowType", this.ShowType);
         this.setParamSimple(map, prefix + "SearchValue", this.SearchValue);
         this.setParamSimple(map, prefix + "RuleType", this.RuleType);
-        this.setParamSimple(map, prefix + "ShowType", this.ShowType);
 
     }
 }

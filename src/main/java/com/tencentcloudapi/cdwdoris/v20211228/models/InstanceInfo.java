@@ -460,6 +460,20 @@ Changing  变更中
     private String SyncerIp;
 
     /**
+    * 是否支持sql convertor
+    */
+    @SerializedName("EnableSqlConv")
+    @Expose
+    private Long EnableSqlConv;
+
+    /**
+    * 集群时区，默认+08:00
+    */
+    @SerializedName("TimeZone")
+    @Expose
+    private String TimeZone;
+
+    /**
      * Get 集群实例ID, "cdwdoris-xxxx" 字符串类型 
      * @return InstanceId 集群实例ID, "cdwdoris-xxxx" 字符串类型
      */
@@ -1475,6 +1489,38 @@ Changing  变更中
         this.SyncerIp = SyncerIp;
     }
 
+    /**
+     * Get 是否支持sql convertor 
+     * @return EnableSqlConv 是否支持sql convertor
+     */
+    public Long getEnableSqlConv() {
+        return this.EnableSqlConv;
+    }
+
+    /**
+     * Set 是否支持sql convertor
+     * @param EnableSqlConv 是否支持sql convertor
+     */
+    public void setEnableSqlConv(Long EnableSqlConv) {
+        this.EnableSqlConv = EnableSqlConv;
+    }
+
+    /**
+     * Get 集群时区，默认+08:00 
+     * @return TimeZone 集群时区，默认+08:00
+     */
+    public String getTimeZone() {
+        return this.TimeZone;
+    }
+
+    /**
+     * Set 集群时区，默认+08:00
+     * @param TimeZone 集群时区，默认+08:00
+     */
+    public void setTimeZone(String TimeZone) {
+        this.TimeZone = TimeZone;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1678,6 +1724,12 @@ Changing  变更中
         if (source.SyncerIp != null) {
             this.SyncerIp = new String(source.SyncerIp);
         }
+        if (source.EnableSqlConv != null) {
+            this.EnableSqlConv = new Long(source.EnableSqlConv);
+        }
+        if (source.TimeZone != null) {
+            this.TimeZone = new String(source.TimeZone);
+        }
     }
 
 
@@ -1746,6 +1798,8 @@ Changing  变更中
         this.setParamSimple(map, prefix + "MasterInstance", this.MasterInstance);
         this.setParamArraySimple(map, prefix + "SlaveInstances.", this.SlaveInstances);
         this.setParamSimple(map, prefix + "SyncerIp", this.SyncerIp);
+        this.setParamSimple(map, prefix + "EnableSqlConv", this.EnableSqlConv);
+        this.setParamSimple(map, prefix + "TimeZone", this.TimeZone);
 
     }
 }

@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class CreateProClusterResponse extends AbstractModel {
 
     /**
-    * 子订单号
+    * <p>子订单号</p>
     */
     @SerializedName("DealName")
     @Expose
     private String DealName;
 
     /**
-    * 订单号
+    * <p>订单号</p>
     */
     @SerializedName("BigDealId")
     @Expose
     private String BigDealId;
 
     /**
-    * 集群Id
+    * <p>集群Id</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 集群名称
+    * <p>集群名称</p>
     */
     @SerializedName("ClusterName")
     @Expose
@@ -59,64 +59,64 @@ public class CreateProClusterResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 子订单号 
-     * @return DealName 子订单号
+     * Get <p>子订单号</p> 
+     * @return DealName <p>子订单号</p>
      */
     public String getDealName() {
         return this.DealName;
     }
 
     /**
-     * Set 子订单号
-     * @param DealName 子订单号
+     * Set <p>子订单号</p>
+     * @param DealName <p>子订单号</p>
      */
     public void setDealName(String DealName) {
         this.DealName = DealName;
     }
 
     /**
-     * Get 订单号 
-     * @return BigDealId 订单号
+     * Get <p>订单号</p> 
+     * @return BigDealId <p>订单号</p>
      */
     public String getBigDealId() {
         return this.BigDealId;
     }
 
     /**
-     * Set 订单号
-     * @param BigDealId 订单号
+     * Set <p>订单号</p>
+     * @param BigDealId <p>订单号</p>
      */
     public void setBigDealId(String BigDealId) {
         this.BigDealId = BigDealId;
     }
 
     /**
-     * Get 集群Id 
-     * @return ClusterId 集群Id
+     * Get <p>集群Id</p> 
+     * @return ClusterId <p>集群Id</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群Id
-     * @param ClusterId 集群Id
+     * Set <p>集群Id</p>
+     * @param ClusterId <p>集群Id</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 集群名称 
-     * @return ClusterName 集群名称
+     * Get <p>集群名称</p> 
+     * @return ClusterName <p>集群名称</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set 集群名称
-     * @param ClusterName 集群名称
+     * Set <p>集群名称</p>
+     * @param ClusterName <p>集群名称</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;

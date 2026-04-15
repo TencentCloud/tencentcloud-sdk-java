@@ -24,160 +24,115 @@ import java.util.HashMap;
 public class CreateBatchInformationExtractionTaskRequest extends AbstractModel {
 
     /**
-    * 执行合同智能提取的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+    * <p>执行合同智能提取的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
 
     /**
-    * 合同智能提取的PDF文件资源编号列表，通过[UploadFiles](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口获取PDF文件资源编号。
-
- 注:  `目前，此接口仅支持5个文件发起。每个文件限制在10M以下`
+    * <p>合同智能提取的文件资源编号列表，通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles">UploadFiles</a>接口获取PDF、WORD、PNG、JPEG文件资源编号。</p><p>注意：</p><ul><li>此接口仅支持5个文件发起</li><li>PDF、WORD文件限制在10M以内</li><li>PNG、JPEG文件限制在5M以内</li></ul>
     */
     @SerializedName("ResourceIds")
     @Expose
     private String [] ResourceIds;
 
     /**
-    * 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+    * <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-    * 用户配置的合同智能提取字段模板ID，会基于此模板批量创建合同智能提取任务，为32位字符串。
-[点击查看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/99008608577532423ea437c7fdbedca1.png)
-
-注:  `此配置优先级最高，设置了模板ID后Fields配置就会无效`
+    * <p>用户配置的合同智能提取字段模板ID，会基于此模板批量创建合同智能提取任务，为32位字符串。<br><a href="https://qcloudimg.tencent-cloud.cn/raw/99008608577532423ea437c7fdbedca1.png">点击查看模板Id在控制台上的位置</a></p><p>注:  <code>此配置优先级最高，设置了模板ID后Fields配置就会无效</code></p>
     */
     @SerializedName("FieldTemplateId")
     @Expose
     private String FieldTemplateId;
 
     /**
-    * 用于合同智能提取的字段信息。
-
-注意：`字段模板优先级最高，如果设置了FieldTemplateId值，此配置就无效`
+    * <p>用于合同智能提取的字段信息。</p><p>注意：<code>字段模板优先级最高，如果设置了FieldTemplateId值，此配置就无效</code></p>
     */
     @SerializedName("Fields")
     @Expose
     private ExtractionField [] Fields;
 
     /**
-     * Get 执行合同智能提取的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
-     * @return Operator 执行合同智能提取的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * Get <p>执行合同智能提取的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p> 
+     * @return Operator <p>执行合同智能提取的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 执行合同智能提取的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
-     * @param Operator 执行合同智能提取的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * Set <p>执行合同智能提取的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
+     * @param Operator <p>执行合同智能提取的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 合同智能提取的PDF文件资源编号列表，通过[UploadFiles](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口获取PDF文件资源编号。
-
- 注:  `目前，此接口仅支持5个文件发起。每个文件限制在10M以下` 
-     * @return ResourceIds 合同智能提取的PDF文件资源编号列表，通过[UploadFiles](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口获取PDF文件资源编号。
-
- 注:  `目前，此接口仅支持5个文件发起。每个文件限制在10M以下`
+     * Get <p>合同智能提取的文件资源编号列表，通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles">UploadFiles</a>接口获取PDF、WORD、PNG、JPEG文件资源编号。</p><p>注意：</p><ul><li>此接口仅支持5个文件发起</li><li>PDF、WORD文件限制在10M以内</li><li>PNG、JPEG文件限制在5M以内</li></ul> 
+     * @return ResourceIds <p>合同智能提取的文件资源编号列表，通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles">UploadFiles</a>接口获取PDF、WORD、PNG、JPEG文件资源编号。</p><p>注意：</p><ul><li>此接口仅支持5个文件发起</li><li>PDF、WORD文件限制在10M以内</li><li>PNG、JPEG文件限制在5M以内</li></ul>
      */
     public String [] getResourceIds() {
         return this.ResourceIds;
     }
 
     /**
-     * Set 合同智能提取的PDF文件资源编号列表，通过[UploadFiles](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口获取PDF文件资源编号。
-
- 注:  `目前，此接口仅支持5个文件发起。每个文件限制在10M以下`
-     * @param ResourceIds 合同智能提取的PDF文件资源编号列表，通过[UploadFiles](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口获取PDF文件资源编号。
-
- 注:  `目前，此接口仅支持5个文件发起。每个文件限制在10M以下`
+     * Set <p>合同智能提取的文件资源编号列表，通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles">UploadFiles</a>接口获取PDF、WORD、PNG、JPEG文件资源编号。</p><p>注意：</p><ul><li>此接口仅支持5个文件发起</li><li>PDF、WORD文件限制在10M以内</li><li>PNG、JPEG文件限制在5M以内</li></ul>
+     * @param ResourceIds <p>合同智能提取的文件资源编号列表，通过<a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles">UploadFiles</a>接口获取PDF、WORD、PNG、JPEG文件资源编号。</p><p>注意：</p><ul><li>此接口仅支持5个文件发起</li><li>PDF、WORD文件限制在10M以内</li><li>PNG、JPEG文件限制在5M以内</li></ul>
      */
     public void setResourceIds(String [] ResourceIds) {
         this.ResourceIds = ResourceIds;
     }
 
     /**
-     * Get 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。 
-     * @return Agent 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * Get <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p> 
+     * @return Agent <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
-     * @param Agent 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * Set <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
+     * @param Agent <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
     }
 
     /**
-     * Get 用户配置的合同智能提取字段模板ID，会基于此模板批量创建合同智能提取任务，为32位字符串。
-[点击查看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/99008608577532423ea437c7fdbedca1.png)
-
-注:  `此配置优先级最高，设置了模板ID后Fields配置就会无效` 
-     * @return FieldTemplateId 用户配置的合同智能提取字段模板ID，会基于此模板批量创建合同智能提取任务，为32位字符串。
-[点击查看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/99008608577532423ea437c7fdbedca1.png)
-
-注:  `此配置优先级最高，设置了模板ID后Fields配置就会无效`
+     * Get <p>用户配置的合同智能提取字段模板ID，会基于此模板批量创建合同智能提取任务，为32位字符串。<br><a href="https://qcloudimg.tencent-cloud.cn/raw/99008608577532423ea437c7fdbedca1.png">点击查看模板Id在控制台上的位置</a></p><p>注:  <code>此配置优先级最高，设置了模板ID后Fields配置就会无效</code></p> 
+     * @return FieldTemplateId <p>用户配置的合同智能提取字段模板ID，会基于此模板批量创建合同智能提取任务，为32位字符串。<br><a href="https://qcloudimg.tencent-cloud.cn/raw/99008608577532423ea437c7fdbedca1.png">点击查看模板Id在控制台上的位置</a></p><p>注:  <code>此配置优先级最高，设置了模板ID后Fields配置就会无效</code></p>
      */
     public String getFieldTemplateId() {
         return this.FieldTemplateId;
     }
 
     /**
-     * Set 用户配置的合同智能提取字段模板ID，会基于此模板批量创建合同智能提取任务，为32位字符串。
-[点击查看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/99008608577532423ea437c7fdbedca1.png)
-
-注:  `此配置优先级最高，设置了模板ID后Fields配置就会无效`
-     * @param FieldTemplateId 用户配置的合同智能提取字段模板ID，会基于此模板批量创建合同智能提取任务，为32位字符串。
-[点击查看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/99008608577532423ea437c7fdbedca1.png)
-
-注:  `此配置优先级最高，设置了模板ID后Fields配置就会无效`
+     * Set <p>用户配置的合同智能提取字段模板ID，会基于此模板批量创建合同智能提取任务，为32位字符串。<br><a href="https://qcloudimg.tencent-cloud.cn/raw/99008608577532423ea437c7fdbedca1.png">点击查看模板Id在控制台上的位置</a></p><p>注:  <code>此配置优先级最高，设置了模板ID后Fields配置就会无效</code></p>
+     * @param FieldTemplateId <p>用户配置的合同智能提取字段模板ID，会基于此模板批量创建合同智能提取任务，为32位字符串。<br><a href="https://qcloudimg.tencent-cloud.cn/raw/99008608577532423ea437c7fdbedca1.png">点击查看模板Id在控制台上的位置</a></p><p>注:  <code>此配置优先级最高，设置了模板ID后Fields配置就会无效</code></p>
      */
     public void setFieldTemplateId(String FieldTemplateId) {
         this.FieldTemplateId = FieldTemplateId;
     }
 
     /**
-     * Get 用于合同智能提取的字段信息。
-
-注意：`字段模板优先级最高，如果设置了FieldTemplateId值，此配置就无效` 
-     * @return Fields 用于合同智能提取的字段信息。
-
-注意：`字段模板优先级最高，如果设置了FieldTemplateId值，此配置就无效`
+     * Get <p>用于合同智能提取的字段信息。</p><p>注意：<code>字段模板优先级最高，如果设置了FieldTemplateId值，此配置就无效</code></p> 
+     * @return Fields <p>用于合同智能提取的字段信息。</p><p>注意：<code>字段模板优先级最高，如果设置了FieldTemplateId值，此配置就无效</code></p>
      */
     public ExtractionField [] getFields() {
         return this.Fields;
     }
 
     /**
-     * Set 用于合同智能提取的字段信息。
-
-注意：`字段模板优先级最高，如果设置了FieldTemplateId值，此配置就无效`
-     * @param Fields 用于合同智能提取的字段信息。
-
-注意：`字段模板优先级最高，如果设置了FieldTemplateId值，此配置就无效`
+     * Set <p>用于合同智能提取的字段信息。</p><p>注意：<code>字段模板优先级最高，如果设置了FieldTemplateId值，此配置就无效</code></p>
+     * @param Fields <p>用于合同智能提取的字段信息。</p><p>注意：<code>字段模板优先级最高，如果设置了FieldTemplateId值，此配置就无效</code></p>
      */
     public void setFields(ExtractionField [] Fields) {
         this.Fields = Fields;

@@ -66,6 +66,13 @@ public class ApproverOption extends AbstractModel {
     private Boolean ForbidAddSignDate;
 
     /**
+    * <p>签署人手机号传参模式</p><p>枚举值：</p><ul><li>REPLACE： 接受已有认证手机号并替换</li><li>GIVEN： 以客户入参输入手机号为主</li><li>VALIDATE： 若与认证手机号不一致则报错</li></ul><p>默认值：REPLACE</p><p>会触发手机号传参模式的前提是：签署人是指定了具体身份信息的</p><ul><li>渠道方签署人不会触发</li><li>非渠道方签署人在指定签署人姓名，证件号的情况下会触发</li></ul>
+    */
+    @SerializedName("ApproverMobileMode")
+    @Expose
+    private String ApproverMobileMode;
+
+    /**
      * Get <p>是否可以拒签 默认false-可以拒签 true-不可以拒签</p> 
      * @return NoRefuse <p>是否可以拒签 默认false-可以拒签 true-不可以拒签</p>
      */
@@ -161,6 +168,22 @@ public class ApproverOption extends AbstractModel {
         this.ForbidAddSignDate = ForbidAddSignDate;
     }
 
+    /**
+     * Get <p>签署人手机号传参模式</p><p>枚举值：</p><ul><li>REPLACE： 接受已有认证手机号并替换</li><li>GIVEN： 以客户入参输入手机号为主</li><li>VALIDATE： 若与认证手机号不一致则报错</li></ul><p>默认值：REPLACE</p><p>会触发手机号传参模式的前提是：签署人是指定了具体身份信息的</p><ul><li>渠道方签署人不会触发</li><li>非渠道方签署人在指定签署人姓名，证件号的情况下会触发</li></ul> 
+     * @return ApproverMobileMode <p>签署人手机号传参模式</p><p>枚举值：</p><ul><li>REPLACE： 接受已有认证手机号并替换</li><li>GIVEN： 以客户入参输入手机号为主</li><li>VALIDATE： 若与认证手机号不一致则报错</li></ul><p>默认值：REPLACE</p><p>会触发手机号传参模式的前提是：签署人是指定了具体身份信息的</p><ul><li>渠道方签署人不会触发</li><li>非渠道方签署人在指定签署人姓名，证件号的情况下会触发</li></ul>
+     */
+    public String getApproverMobileMode() {
+        return this.ApproverMobileMode;
+    }
+
+    /**
+     * Set <p>签署人手机号传参模式</p><p>枚举值：</p><ul><li>REPLACE： 接受已有认证手机号并替换</li><li>GIVEN： 以客户入参输入手机号为主</li><li>VALIDATE： 若与认证手机号不一致则报错</li></ul><p>默认值：REPLACE</p><p>会触发手机号传参模式的前提是：签署人是指定了具体身份信息的</p><ul><li>渠道方签署人不会触发</li><li>非渠道方签署人在指定签署人姓名，证件号的情况下会触发</li></ul>
+     * @param ApproverMobileMode <p>签署人手机号传参模式</p><p>枚举值：</p><ul><li>REPLACE： 接受已有认证手机号并替换</li><li>GIVEN： 以客户入参输入手机号为主</li><li>VALIDATE： 若与认证手机号不一致则报错</li></ul><p>默认值：REPLACE</p><p>会触发手机号传参模式的前提是：签署人是指定了具体身份信息的</p><ul><li>渠道方签署人不会触发</li><li>非渠道方签署人在指定签署人姓名，证件号的情况下会触发</li></ul>
+     */
+    public void setApproverMobileMode(String ApproverMobileMode) {
+        this.ApproverMobileMode = ApproverMobileMode;
+    }
+
     public ApproverOption() {
     }
 
@@ -187,6 +210,9 @@ public class ApproverOption extends AbstractModel {
         if (source.ForbidAddSignDate != null) {
             this.ForbidAddSignDate = new Boolean(source.ForbidAddSignDate);
         }
+        if (source.ApproverMobileMode != null) {
+            this.ApproverMobileMode = new String(source.ApproverMobileMode);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class ApproverOption extends AbstractModel {
         this.setParamSimple(map, prefix + "FillType", this.FillType);
         this.setParamSimple(map, prefix + "FlowReadLimit", this.FlowReadLimit);
         this.setParamSimple(map, prefix + "ForbidAddSignDate", this.ForbidAddSignDate);
+        this.setParamSimple(map, prefix + "ApproverMobileMode", this.ApproverMobileMode);
 
     }
 }

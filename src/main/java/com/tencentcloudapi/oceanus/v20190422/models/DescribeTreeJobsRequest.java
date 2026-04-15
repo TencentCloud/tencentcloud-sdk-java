@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeTreeJobsRequest extends AbstractModel {
 
     /**
-    * 筛选条件字段，使用了筛选字段后不支持分页，最多返回2000条记录
+    * <p>筛选条件字段，使用了筛选字段后不支持分页，最多返回2000条记录</p>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 工作空间 Serialid
+    * <p>工作空间 Serialid</p>
     */
     @SerializedName("WorkSpaceId")
     @Expose
     private String WorkSpaceId;
 
     /**
-     * Get 筛选条件字段，使用了筛选字段后不支持分页，最多返回2000条记录 
-     * @return Filters 筛选条件字段，使用了筛选字段后不支持分页，最多返回2000条记录
+     * Get <p>筛选条件字段，使用了筛选字段后不支持分页，最多返回2000条记录</p> 
+     * @return Filters <p>筛选条件字段，使用了筛选字段后不支持分页，最多返回2000条记录</p>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 筛选条件字段，使用了筛选字段后不支持分页，最多返回2000条记录
-     * @param Filters 筛选条件字段，使用了筛选字段后不支持分页，最多返回2000条记录
+     * Set <p>筛选条件字段，使用了筛选字段后不支持分页，最多返回2000条记录</p>
+     * @param Filters <p>筛选条件字段，使用了筛选字段后不支持分页，最多返回2000条记录</p>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 工作空间 Serialid 
-     * @return WorkSpaceId 工作空间 Serialid
+     * Get <p>工作空间 Serialid</p> 
+     * @return WorkSpaceId <p>工作空间 Serialid</p>
      */
     public String getWorkSpaceId() {
         return this.WorkSpaceId;
     }
 
     /**
-     * Set 工作空间 Serialid
-     * @param WorkSpaceId 工作空间 Serialid
+     * Set <p>工作空间 Serialid</p>
+     * @param WorkSpaceId <p>工作空间 Serialid</p>
      */
     public void setWorkSpaceId(String WorkSpaceId) {
         this.WorkSpaceId = WorkSpaceId;

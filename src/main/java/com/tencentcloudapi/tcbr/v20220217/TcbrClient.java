@@ -226,6 +226,28 @@ public class TcbrClient extends AbstractClient{
     }
 
     /**
+     *启动版本实例
+     * @param req StartVersionInstanceRequest
+     * @return StartVersionInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartVersionInstanceResponse StartVersionInstance(StartVersionInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StartVersionInstance", StartVersionInstanceResponse.class);
+    }
+
+    /**
+     *停止版本实例
+     * @param req StopVersionInstanceRequest
+     * @return StopVersionInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopVersionInstanceResponse StopVersionInstance(StopVersionInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopVersionInstance", StopVersionInstanceResponse.class);
+    }
+
+    /**
      *回滚版本
      * @param req SubmitServerRollbackRequest
      * @return SubmitServerRollbackResponse

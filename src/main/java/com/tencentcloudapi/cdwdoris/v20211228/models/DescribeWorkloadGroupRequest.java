@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeWorkloadGroupRequest extends AbstractModel {
 
     /**
-    * 集群id
+    * <p>集群id</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get 集群id 
-     * @return InstanceId 集群id
+     * Get <p>集群id</p> 
+     * @return InstanceId <p>集群id</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 集群id
-     * @param InstanceId 集群id
+     * Set <p>集群id</p>
+     * @param InstanceId <p>集群id</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

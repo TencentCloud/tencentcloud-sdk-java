@@ -129,6 +129,13 @@ public class AigcVideoOutputConfig extends AbstractModel {
     private String LogoAdd;
 
     /**
+    * <p>是否为生成的视频添加背景音乐。</p><p>枚举值：</p><ul><li>Enabled： 系统将从预设 BGM 库中自动挑选合适的音乐并添加。</li><li>Disabled： 不添加BGM。</li></ul><p>默认值：Disabled</p>
+    */
+    @SerializedName("EnableBGM")
+    @Expose
+    private String EnableBGM;
+
+    /**
      * Get <p>存储模式</p><p>枚举值：</p><ul><li>Temporary： 临时存储，生成的视频文件不会存储到云点播，可在事件通知中获取到临时访问的 URL，有效期 7 天</li><li>Permanent： 永久存储，生成的视频文件将存储到云点播，可在事件通知中获取到 FileId</li></ul><p>默认值：Temporary</p> 
      * @return StorageMode <p>存储模式</p><p>枚举值：</p><ul><li>Temporary： 临时存储，生成的视频文件不会存储到云点播，可在事件通知中获取到临时访问的 URL，有效期 7 天</li><li>Permanent： 永久存储，生成的视频文件将存储到云点播，可在事件通知中获取到 FileId</li></ul><p>默认值：Temporary</p>
      */
@@ -368,6 +375,22 @@ public class AigcVideoOutputConfig extends AbstractModel {
         this.LogoAdd = LogoAdd;
     }
 
+    /**
+     * Get <p>是否为生成的视频添加背景音乐。</p><p>枚举值：</p><ul><li>Enabled： 系统将从预设 BGM 库中自动挑选合适的音乐并添加。</li><li>Disabled： 不添加BGM。</li></ul><p>默认值：Disabled</p> 
+     * @return EnableBGM <p>是否为生成的视频添加背景音乐。</p><p>枚举值：</p><ul><li>Enabled： 系统将从预设 BGM 库中自动挑选合适的音乐并添加。</li><li>Disabled： 不添加BGM。</li></ul><p>默认值：Disabled</p>
+     */
+    public String getEnableBGM() {
+        return this.EnableBGM;
+    }
+
+    /**
+     * Set <p>是否为生成的视频添加背景音乐。</p><p>枚举值：</p><ul><li>Enabled： 系统将从预设 BGM 库中自动挑选合适的音乐并添加。</li><li>Disabled： 不添加BGM。</li></ul><p>默认值：Disabled</p>
+     * @param EnableBGM <p>是否为生成的视频添加背景音乐。</p><p>枚举值：</p><ul><li>Enabled： 系统将从预设 BGM 库中自动挑选合适的音乐并添加。</li><li>Disabled： 不添加BGM。</li></ul><p>默认值：Disabled</p>
+     */
+    public void setEnableBGM(String EnableBGM) {
+        this.EnableBGM = EnableBGM;
+    }
+
     public AigcVideoOutputConfig() {
     }
 
@@ -421,6 +444,9 @@ public class AigcVideoOutputConfig extends AbstractModel {
         if (source.LogoAdd != null) {
             this.LogoAdd = new String(source.LogoAdd);
         }
+        if (source.EnableBGM != null) {
+            this.EnableBGM = new String(source.EnableBGM);
+        }
     }
 
 
@@ -443,6 +469,7 @@ public class AigcVideoOutputConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "OffPeak", this.OffPeak);
         this.setParamSimple(map, prefix + "FrameInterpolate", this.FrameInterpolate);
         this.setParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
+        this.setParamSimple(map, prefix + "EnableBGM", this.EnableBGM);
 
     }
 }

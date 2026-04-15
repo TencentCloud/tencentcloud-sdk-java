@@ -240,6 +240,17 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *获取引导脚本
+     * @param req DescribeBootScriptRequest
+     * @return DescribeBootScriptResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBootScriptResponse DescribeBootScript(DescribeBootScriptRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBootScript", DescribeBootScriptResponse.class);
+    }
+
+    /**
      *查询EMR任务运行详情状态
      * @param req DescribeClusterFlowStatusDetailRequest
      * @return DescribeClusterFlowStatusDetailResponse
@@ -756,6 +767,17 @@ public class EmrClient extends AbstractClient{
     public ModifyAutoScaleStrategyResponse ModifyAutoScaleStrategy(ModifyAutoScaleStrategyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyAutoScaleStrategy", ModifyAutoScaleStrategyResponse.class);
+    }
+
+    /**
+     *修改引导脚本
+     * @param req ModifyBootScriptRequest
+     * @return ModifyBootScriptResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBootScriptResponse ModifyBootScript(ModifyBootScriptRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyBootScript", ModifyBootScriptResponse.class);
     }
 
     /**

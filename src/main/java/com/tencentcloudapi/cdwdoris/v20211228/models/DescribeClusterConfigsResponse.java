@@ -59,6 +59,13 @@ public class DescribeClusterConfigsResponse extends AbstractModel {
     private ClusterConfigsInfoFromEMR [] ExistingJarConfList;
 
     /**
+    * ipdb的文件大小 byte
+    */
+    @SerializedName("IPDBFileSizeLimit")
+    @Expose
+    private String IPDBFileSizeLimit;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -146,6 +153,22 @@ public class DescribeClusterConfigsResponse extends AbstractModel {
     }
 
     /**
+     * Get ipdb的文件大小 byte 
+     * @return IPDBFileSizeLimit ipdb的文件大小 byte
+     */
+    public String getIPDBFileSizeLimit() {
+        return this.IPDBFileSizeLimit;
+    }
+
+    /**
+     * Set ipdb的文件大小 byte
+     * @param IPDBFileSizeLimit ipdb的文件大小 byte
+     */
+    public void setIPDBFileSizeLimit(String IPDBFileSizeLimit) {
+        this.IPDBFileSizeLimit = IPDBFileSizeLimit;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -190,6 +213,9 @@ public class DescribeClusterConfigsResponse extends AbstractModel {
                 this.ExistingJarConfList[i] = new ClusterConfigsInfoFromEMR(source.ExistingJarConfList[i]);
             }
         }
+        if (source.IPDBFileSizeLimit != null) {
+            this.IPDBFileSizeLimit = new String(source.IPDBFileSizeLimit);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -205,6 +231,7 @@ public class DescribeClusterConfigsResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
         this.setParamSimple(map, prefix + "HasCN", this.HasCN);
         this.setParamArrayObj(map, prefix + "ExistingJarConfList.", this.ExistingJarConfList);
+        this.setParamSimple(map, prefix + "IPDBFileSizeLimit", this.IPDBFileSizeLimit);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

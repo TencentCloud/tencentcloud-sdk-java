@@ -45,6 +45,16 @@ public class SnapshotRemainPolicy extends AbstractModel {
     private Long RemainLatestNum;
 
     /**
+    * 天数单位
+0：天
+1：季度
+2：年
+    */
+    @SerializedName("RemainDaysUnit")
+    @Expose
+    private Long RemainDaysUnit;
+
+    /**
      * Get 0-不主动删除；1-超过指定时间周期自动删除；2-保留指定数据快照 
      * @return Type 0-不主动删除；1-超过指定时间周期自动删除；2-保留指定数据快照
      */
@@ -92,6 +102,34 @@ public class SnapshotRemainPolicy extends AbstractModel {
         this.RemainLatestNum = RemainLatestNum;
     }
 
+    /**
+     * Get 天数单位
+0：天
+1：季度
+2：年 
+     * @return RemainDaysUnit 天数单位
+0：天
+1：季度
+2：年
+     */
+    public Long getRemainDaysUnit() {
+        return this.RemainDaysUnit;
+    }
+
+    /**
+     * Set 天数单位
+0：天
+1：季度
+2：年
+     * @param RemainDaysUnit 天数单位
+0：天
+1：季度
+2：年
+     */
+    public void setRemainDaysUnit(Long RemainDaysUnit) {
+        this.RemainDaysUnit = RemainDaysUnit;
+    }
+
     public SnapshotRemainPolicy() {
     }
 
@@ -109,6 +147,9 @@ public class SnapshotRemainPolicy extends AbstractModel {
         if (source.RemainLatestNum != null) {
             this.RemainLatestNum = new Long(source.RemainLatestNum);
         }
+        if (source.RemainDaysUnit != null) {
+            this.RemainDaysUnit = new Long(source.RemainDaysUnit);
+        }
     }
 
 
@@ -119,6 +160,7 @@ public class SnapshotRemainPolicy extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "RemainDays", this.RemainDays);
         this.setParamSimple(map, prefix + "RemainLatestNum", this.RemainLatestNum);
+        this.setParamSimple(map, prefix + "RemainDaysUnit", this.RemainDaysUnit);
 
     }
 }

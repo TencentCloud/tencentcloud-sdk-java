@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ListAlarmPolicyResponse extends AbstractModel {
 
     /**
-    * 返回记录的数量
+    * <p>返回记录的数量</p>
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * 告警策略返回值
+    * <p>告警策略返回值</p>
     */
     @SerializedName("AlarmPolicyList")
     @Expose
@@ -45,32 +45,32 @@ public class ListAlarmPolicyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回记录的数量 
-     * @return Total 返回记录的数量
+     * Get <p>返回记录的数量</p> 
+     * @return Total <p>返回记录的数量</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 返回记录的数量
-     * @param Total 返回记录的数量
+     * Set <p>返回记录的数量</p>
+     * @param Total <p>返回记录的数量</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 告警策略返回值 
-     * @return AlarmPolicyList 告警策略返回值
+     * Get <p>告警策略返回值</p> 
+     * @return AlarmPolicyList <p>告警策略返回值</p>
      */
     public AlarmPolicyRsp [] getAlarmPolicyList() {
         return this.AlarmPolicyList;
     }
 
     /**
-     * Set 告警策略返回值
-     * @param AlarmPolicyList 告警策略返回值
+     * Set <p>告警策略返回值</p>
+     * @param AlarmPolicyList <p>告警策略返回值</p>
      */
     public void setAlarmPolicyList(AlarmPolicyRsp [] AlarmPolicyList) {
         this.AlarmPolicyList = AlarmPolicyList;

@@ -4247,6 +4247,17 @@ LimitTypes取值范围：
     }
 
     /**
+     *本接口（ModifyNatGatewayAdvancedAttribute）用于修改NAT网关的高级属性。
+     * @param req ModifyNatGatewayAdvancedAttributeRequest
+     * @return ModifyNatGatewayAdvancedAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNatGatewayAdvancedAttributeResponse ModifyNatGatewayAdvancedAttribute(ModifyNatGatewayAdvancedAttributeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyNatGatewayAdvancedAttribute", ModifyNatGatewayAdvancedAttributeResponse.class);
+    }
+
+    /**
      *本接口（ModifyNatGatewayAttribute）用于修改NAT网关的属性。
      * @param req ModifyNatGatewayAttributeRequest
      * @return ModifyNatGatewayAttributeResponse

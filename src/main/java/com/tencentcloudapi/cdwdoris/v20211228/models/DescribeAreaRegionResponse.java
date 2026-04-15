@@ -45,6 +45,13 @@ public class DescribeAreaRegionResponse extends AbstractModel {
     private String [] AvailableWhiteListNames;
 
     /**
+    * 隔离天数
+    */
+    @SerializedName("IsolationDays")
+    @Expose
+    private Long IsolationDays;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -100,6 +107,22 @@ public class DescribeAreaRegionResponse extends AbstractModel {
     }
 
     /**
+     * Get 隔离天数 
+     * @return IsolationDays 隔离天数
+     */
+    public Long getIsolationDays() {
+        return this.IsolationDays;
+    }
+
+    /**
+     * Set 隔离天数
+     * @param IsolationDays 隔离天数
+     */
+    public void setIsolationDays(Long IsolationDays) {
+        this.IsolationDays = IsolationDays;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -141,6 +164,9 @@ public class DescribeAreaRegionResponse extends AbstractModel {
                 this.AvailableWhiteListNames[i] = new String(source.AvailableWhiteListNames[i]);
             }
         }
+        if (source.IsolationDays != null) {
+            this.IsolationDays = new Long(source.IsolationDays);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -154,6 +180,7 @@ public class DescribeAreaRegionResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Items.", this.Items);
         this.setParamArrayObj(map, prefix + "FrontEndRules.", this.FrontEndRules);
         this.setParamArraySimple(map, prefix + "AvailableWhiteListNames.", this.AvailableWhiteListNames);
+        this.setParamSimple(map, prefix + "IsolationDays", this.IsolationDays);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

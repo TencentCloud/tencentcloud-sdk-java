@@ -83,6 +83,17 @@ public class TdmysqlClient extends AbstractClient{
     }
 
     /**
+     *查询实例归档日志列表 DescribeDBSArchiveLogs
+     * @param req DescribeDBSArchiveLogsRequest
+     * @return DescribeDBSArchiveLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBSArchiveLogsResponse DescribeDBSArchiveLogs(DescribeDBSArchiveLogsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBSArchiveLogs", DescribeDBSArchiveLogsResponse.class);
+    }
+
+    /**
      *获取可恢复时间 DescribeDBSAvailableRecoveryTime
      * @param req DescribeDBSAvailableRecoveryTimeRequest
      * @return DescribeDBSAvailableRecoveryTimeResponse

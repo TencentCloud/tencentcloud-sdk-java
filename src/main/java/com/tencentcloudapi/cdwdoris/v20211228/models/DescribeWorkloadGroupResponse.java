@@ -24,25 +24,32 @@ import java.util.HashMap;
 public class DescribeWorkloadGroupResponse extends AbstractModel {
 
     /**
-    * 资源组信息
+    * <p>资源组信息</p>
     */
     @SerializedName("WorkloadGroups")
     @Expose
     private WorkloadGroupConfig [] WorkloadGroups;
 
     /**
-    * 是否开启资源组：开启-open、关闭-close
+    * <p>是否开启资源组：开启-open、关闭-close</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 错误信息
+    * <p>错误信息</p>
     */
     @SerializedName("ErrorMsg")
     @Expose
     private String ErrorMsg;
+
+    /**
+    * <p>是否开启监控，0：未开启，1：开启</p>
+    */
+    @SerializedName("MonitorStatus")
+    @Expose
+    private Long MonitorStatus;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -52,51 +59,67 @@ public class DescribeWorkloadGroupResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 资源组信息 
-     * @return WorkloadGroups 资源组信息
+     * Get <p>资源组信息</p> 
+     * @return WorkloadGroups <p>资源组信息</p>
      */
     public WorkloadGroupConfig [] getWorkloadGroups() {
         return this.WorkloadGroups;
     }
 
     /**
-     * Set 资源组信息
-     * @param WorkloadGroups 资源组信息
+     * Set <p>资源组信息</p>
+     * @param WorkloadGroups <p>资源组信息</p>
      */
     public void setWorkloadGroups(WorkloadGroupConfig [] WorkloadGroups) {
         this.WorkloadGroups = WorkloadGroups;
     }
 
     /**
-     * Get 是否开启资源组：开启-open、关闭-close 
-     * @return Status 是否开启资源组：开启-open、关闭-close
+     * Get <p>是否开启资源组：开启-open、关闭-close</p> 
+     * @return Status <p>是否开启资源组：开启-open、关闭-close</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 是否开启资源组：开启-open、关闭-close
-     * @param Status 是否开启资源组：开启-open、关闭-close
+     * Set <p>是否开启资源组：开启-open、关闭-close</p>
+     * @param Status <p>是否开启资源组：开启-open、关闭-close</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 错误信息 
-     * @return ErrorMsg 错误信息
+     * Get <p>错误信息</p> 
+     * @return ErrorMsg <p>错误信息</p>
      */
     public String getErrorMsg() {
         return this.ErrorMsg;
     }
 
     /**
-     * Set 错误信息
-     * @param ErrorMsg 错误信息
+     * Set <p>错误信息</p>
+     * @param ErrorMsg <p>错误信息</p>
      */
     public void setErrorMsg(String ErrorMsg) {
         this.ErrorMsg = ErrorMsg;
+    }
+
+    /**
+     * Get <p>是否开启监控，0：未开启，1：开启</p> 
+     * @return MonitorStatus <p>是否开启监控，0：未开启，1：开启</p>
+     */
+    public Long getMonitorStatus() {
+        return this.MonitorStatus;
+    }
+
+    /**
+     * Set <p>是否开启监控，0：未开启，1：开启</p>
+     * @param MonitorStatus <p>是否开启监控，0：未开启，1：开启</p>
+     */
+    public void setMonitorStatus(Long MonitorStatus) {
+        this.MonitorStatus = MonitorStatus;
     }
 
     /**
@@ -135,6 +158,9 @@ public class DescribeWorkloadGroupResponse extends AbstractModel {
         if (source.ErrorMsg != null) {
             this.ErrorMsg = new String(source.ErrorMsg);
         }
+        if (source.MonitorStatus != null) {
+            this.MonitorStatus = new Long(source.MonitorStatus);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -148,6 +174,7 @@ public class DescribeWorkloadGroupResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "WorkloadGroups.", this.WorkloadGroups);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
+        this.setParamSimple(map, prefix + "MonitorStatus", this.MonitorStatus);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

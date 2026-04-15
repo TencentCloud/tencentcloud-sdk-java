@@ -24,240 +24,233 @@ import java.util.HashMap;
 public class CreateProClusterRequest extends AbstractModel {
 
     /**
-    * 多可用区部署选择三个可用区，示例[200002,200003,200004]
-
-单可用区部署选择一个可用区，示例[200002]
+    * <p>多可用区部署选择三个可用区，示例[200002,200003,200004]<br>单可用区部署选择一个可用区，示例[200002]</p><p>当选择PULSAR.P2.MINI1 时只支持两个可用区，其他支持三个可用区</p>
     */
     @SerializedName("ZoneIds")
     @Expose
     private Long [] ZoneIds;
 
     /**
-    * 集群规格代号
-参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705)
+    * <p>集群规格代号<br>参考 <a href="https://cloud.tencent.com/document/product/1179/83705">专业集群规格</a></p>
     */
     @SerializedName("ProductName")
     @Expose
     private String ProductName;
 
     /**
-    * 1: true，开启自动按月续费
-
-0: false，关闭自动按月续费
+    * <p>1: true，开启自动按月续费</p><p>0: false，关闭自动按月续费</p>
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-    * 购买时长，取值范围：1～50
+    * <p>购买时长，取值范围：1～50</p>
     */
     @SerializedName("TimeSpan")
     @Expose
     private Long TimeSpan;
 
     /**
-    * 集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。
+    * <p>集群名称不能为空，支持数字、字母、中文以及符号 “-_=:.”，长度不超过64个字符</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * 是否自动选择代金券 1是 0否 默认为0
+    * <p>是否自动选择代金券 1是 0否 默认为0</p>
     */
     @SerializedName("AutoVoucher")
     @Expose
     private Long AutoVoucher;
 
     /**
-    * 存储规格
-参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705)
+    * <p>存储规格<br>参考 <a href="https://cloud.tencent.com/document/product/1179/83705">专业集群规格</a></p>
     */
     @SerializedName("StorageSize")
     @Expose
     private Long StorageSize;
 
     /**
-    * vpc网络标签
+    * <p>vpc网络标签</p>
     */
     @SerializedName("Vpc")
     @Expose
     private VpcInfo Vpc;
 
     /**
-    * 集群的标签列表(已废弃)
+    * <p>集群的标签列表(已废弃)</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-     * Get 多可用区部署选择三个可用区，示例[200002,200003,200004]
+    * <p>集群版本信息</p>
+    */
+    @SerializedName("InstanceVersion")
+    @Expose
+    private String InstanceVersion;
 
-单可用区部署选择一个可用区，示例[200002] 
-     * @return ZoneIds 多可用区部署选择三个可用区，示例[200002,200003,200004]
-
-单可用区部署选择一个可用区，示例[200002]
+    /**
+     * Get <p>多可用区部署选择三个可用区，示例[200002,200003,200004]<br>单可用区部署选择一个可用区，示例[200002]</p><p>当选择PULSAR.P2.MINI1 时只支持两个可用区，其他支持三个可用区</p> 
+     * @return ZoneIds <p>多可用区部署选择三个可用区，示例[200002,200003,200004]<br>单可用区部署选择一个可用区，示例[200002]</p><p>当选择PULSAR.P2.MINI1 时只支持两个可用区，其他支持三个可用区</p>
      */
     public Long [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set 多可用区部署选择三个可用区，示例[200002,200003,200004]
-
-单可用区部署选择一个可用区，示例[200002]
-     * @param ZoneIds 多可用区部署选择三个可用区，示例[200002,200003,200004]
-
-单可用区部署选择一个可用区，示例[200002]
+     * Set <p>多可用区部署选择三个可用区，示例[200002,200003,200004]<br>单可用区部署选择一个可用区，示例[200002]</p><p>当选择PULSAR.P2.MINI1 时只支持两个可用区，其他支持三个可用区</p>
+     * @param ZoneIds <p>多可用区部署选择三个可用区，示例[200002,200003,200004]<br>单可用区部署选择一个可用区，示例[200002]</p><p>当选择PULSAR.P2.MINI1 时只支持两个可用区，其他支持三个可用区</p>
      */
     public void setZoneIds(Long [] ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
     /**
-     * Get 集群规格代号
-参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705) 
-     * @return ProductName 集群规格代号
-参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705)
+     * Get <p>集群规格代号<br>参考 <a href="https://cloud.tencent.com/document/product/1179/83705">专业集群规格</a></p> 
+     * @return ProductName <p>集群规格代号<br>参考 <a href="https://cloud.tencent.com/document/product/1179/83705">专业集群规格</a></p>
      */
     public String getProductName() {
         return this.ProductName;
     }
 
     /**
-     * Set 集群规格代号
-参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705)
-     * @param ProductName 集群规格代号
-参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705)
+     * Set <p>集群规格代号<br>参考 <a href="https://cloud.tencent.com/document/product/1179/83705">专业集群规格</a></p>
+     * @param ProductName <p>集群规格代号<br>参考 <a href="https://cloud.tencent.com/document/product/1179/83705">专业集群规格</a></p>
      */
     public void setProductName(String ProductName) {
         this.ProductName = ProductName;
     }
 
     /**
-     * Get 1: true，开启自动按月续费
-
-0: false，关闭自动按月续费 
-     * @return AutoRenewFlag 1: true，开启自动按月续费
-
-0: false，关闭自动按月续费
+     * Get <p>1: true，开启自动按月续费</p><p>0: false，关闭自动按月续费</p> 
+     * @return AutoRenewFlag <p>1: true，开启自动按月续费</p><p>0: false，关闭自动按月续费</p>
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set 1: true，开启自动按月续费
-
-0: false，关闭自动按月续费
-     * @param AutoRenewFlag 1: true，开启自动按月续费
-
-0: false，关闭自动按月续费
+     * Set <p>1: true，开启自动按月续费</p><p>0: false，关闭自动按月续费</p>
+     * @param AutoRenewFlag <p>1: true，开启自动按月续费</p><p>0: false，关闭自动按月续费</p>
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get 购买时长，取值范围：1～50 
-     * @return TimeSpan 购买时长，取值范围：1～50
+     * Get <p>购买时长，取值范围：1～50</p> 
+     * @return TimeSpan <p>购买时长，取值范围：1～50</p>
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set 购买时长，取值范围：1～50
-     * @param TimeSpan 购买时长，取值范围：1～50
+     * Set <p>购买时长，取值范围：1～50</p>
+     * @param TimeSpan <p>购买时长，取值范围：1～50</p>
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get 集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。 
-     * @return ClusterName 集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。
+     * Get <p>集群名称不能为空，支持数字、字母、中文以及符号 “-_=:.”，长度不超过64个字符</p> 
+     * @return ClusterName <p>集群名称不能为空，支持数字、字母、中文以及符号 “-_=:.”，长度不超过64个字符</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set 集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。
-     * @param ClusterName 集群名称，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。
+     * Set <p>集群名称不能为空，支持数字、字母、中文以及符号 “-_=:.”，长度不超过64个字符</p>
+     * @param ClusterName <p>集群名称不能为空，支持数字、字母、中文以及符号 “-_=:.”，长度不超过64个字符</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 是否自动选择代金券 1是 0否 默认为0 
-     * @return AutoVoucher 是否自动选择代金券 1是 0否 默认为0
+     * Get <p>是否自动选择代金券 1是 0否 默认为0</p> 
+     * @return AutoVoucher <p>是否自动选择代金券 1是 0否 默认为0</p>
      */
     public Long getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * Set 是否自动选择代金券 1是 0否 默认为0
-     * @param AutoVoucher 是否自动选择代金券 1是 0否 默认为0
+     * Set <p>是否自动选择代金券 1是 0否 默认为0</p>
+     * @param AutoVoucher <p>是否自动选择代金券 1是 0否 默认为0</p>
      */
     public void setAutoVoucher(Long AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
     }
 
     /**
-     * Get 存储规格
-参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705) 
-     * @return StorageSize 存储规格
-参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705)
+     * Get <p>存储规格<br>参考 <a href="https://cloud.tencent.com/document/product/1179/83705">专业集群规格</a></p> 
+     * @return StorageSize <p>存储规格<br>参考 <a href="https://cloud.tencent.com/document/product/1179/83705">专业集群规格</a></p>
      */
     public Long getStorageSize() {
         return this.StorageSize;
     }
 
     /**
-     * Set 存储规格
-参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705)
-     * @param StorageSize 存储规格
-参考 [专业集群规格](https://cloud.tencent.com/document/product/1179/83705)
+     * Set <p>存储规格<br>参考 <a href="https://cloud.tencent.com/document/product/1179/83705">专业集群规格</a></p>
+     * @param StorageSize <p>存储规格<br>参考 <a href="https://cloud.tencent.com/document/product/1179/83705">专业集群规格</a></p>
      */
     public void setStorageSize(Long StorageSize) {
         this.StorageSize = StorageSize;
     }
 
     /**
-     * Get vpc网络标签 
-     * @return Vpc vpc网络标签
+     * Get <p>vpc网络标签</p> 
+     * @return Vpc <p>vpc网络标签</p>
      */
     public VpcInfo getVpc() {
         return this.Vpc;
     }
 
     /**
-     * Set vpc网络标签
-     * @param Vpc vpc网络标签
+     * Set <p>vpc网络标签</p>
+     * @param Vpc <p>vpc网络标签</p>
      */
     public void setVpc(VpcInfo Vpc) {
         this.Vpc = Vpc;
     }
 
     /**
-     * Get 集群的标签列表(已废弃) 
-     * @return Tags 集群的标签列表(已废弃)
+     * Get <p>集群的标签列表(已废弃)</p> 
+     * @return Tags <p>集群的标签列表(已废弃)</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 集群的标签列表(已废弃)
-     * @param Tags 集群的标签列表(已废弃)
+     * Set <p>集群的标签列表(已废弃)</p>
+     * @param Tags <p>集群的标签列表(已废弃)</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
+    }
+
+    /**
+     * Get <p>集群版本信息</p> 
+     * @return InstanceVersion <p>集群版本信息</p>
+     */
+    public String getInstanceVersion() {
+        return this.InstanceVersion;
+    }
+
+    /**
+     * Set <p>集群版本信息</p>
+     * @param InstanceVersion <p>集群版本信息</p>
+     */
+    public void setInstanceVersion(String InstanceVersion) {
+        this.InstanceVersion = InstanceVersion;
     }
 
     public CreateProClusterRequest() {
@@ -301,6 +294,9 @@ public class CreateProClusterRequest extends AbstractModel {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.InstanceVersion != null) {
+            this.InstanceVersion = new String(source.InstanceVersion);
+        }
     }
 
 
@@ -317,6 +313,7 @@ public class CreateProClusterRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "StorageSize", this.StorageSize);
         this.setParamObj(map, prefix + "Vpc.", this.Vpc);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "InstanceVersion", this.InstanceVersion);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTreeJobsResponse extends AbstractModel {
 
     /**
-    * 父节点ID
+    * <p>父节点ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParentId")
@@ -32,7 +32,7 @@ public class DescribeTreeJobsResponse extends AbstractModel {
     private String ParentId;
 
     /**
-    * 当前文件夹ID
+    * <p>当前文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
@@ -40,7 +40,7 @@ public class DescribeTreeJobsResponse extends AbstractModel {
     private String Id;
 
     /**
-    * 当前文件夹名
+    * <p>当前文件夹名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -48,7 +48,7 @@ public class DescribeTreeJobsResponse extends AbstractModel {
     private String Name;
 
     /**
-    * 当前文件夹下的作业列表
+    * <p>当前文件夹下的作业列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobSet")
@@ -56,7 +56,7 @@ public class DescribeTreeJobsResponse extends AbstractModel {
     private TreeJobSets [] JobSet;
 
     /**
-    * 迭代子目录
+    * <p>迭代子目录</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Children")
@@ -71,9 +71,9 @@ public class DescribeTreeJobsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 父节点ID
+     * Get <p>父节点ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ParentId 父节点ID
+     * @return ParentId <p>父节点ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParentId() {
@@ -81,9 +81,9 @@ public class DescribeTreeJobsResponse extends AbstractModel {
     }
 
     /**
-     * Set 父节点ID
+     * Set <p>父节点ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ParentId 父节点ID
+     * @param ParentId <p>父节点ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParentId(String ParentId) {
@@ -91,9 +91,9 @@ public class DescribeTreeJobsResponse extends AbstractModel {
     }
 
     /**
-     * Get 当前文件夹ID
+     * Get <p>当前文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Id 当前文件夹ID
+     * @return Id <p>当前文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
@@ -101,9 +101,9 @@ public class DescribeTreeJobsResponse extends AbstractModel {
     }
 
     /**
-     * Set 当前文件夹ID
+     * Set <p>当前文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Id 当前文件夹ID
+     * @param Id <p>当前文件夹ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {
@@ -111,9 +111,9 @@ public class DescribeTreeJobsResponse extends AbstractModel {
     }
 
     /**
-     * Get 当前文件夹名
+     * Get <p>当前文件夹名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 当前文件夹名
+     * @return Name <p>当前文件夹名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -121,9 +121,9 @@ public class DescribeTreeJobsResponse extends AbstractModel {
     }
 
     /**
-     * Set 当前文件夹名
+     * Set <p>当前文件夹名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 当前文件夹名
+     * @param Name <p>当前文件夹名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
@@ -131,9 +131,9 @@ public class DescribeTreeJobsResponse extends AbstractModel {
     }
 
     /**
-     * Get 当前文件夹下的作业列表
+     * Get <p>当前文件夹下的作业列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return JobSet 当前文件夹下的作业列表
+     * @return JobSet <p>当前文件夹下的作业列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TreeJobSets [] getJobSet() {
@@ -141,9 +141,9 @@ public class DescribeTreeJobsResponse extends AbstractModel {
     }
 
     /**
-     * Set 当前文件夹下的作业列表
+     * Set <p>当前文件夹下的作业列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param JobSet 当前文件夹下的作业列表
+     * @param JobSet <p>当前文件夹下的作业列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobSet(TreeJobSets [] JobSet) {
@@ -151,9 +151,9 @@ public class DescribeTreeJobsResponse extends AbstractModel {
     }
 
     /**
-     * Get 迭代子目录
+     * Get <p>迭代子目录</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Children 迭代子目录
+     * @return Children <p>迭代子目录</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribeTreeJobsRsp [] getChildren() {
@@ -161,9 +161,9 @@ public class DescribeTreeJobsResponse extends AbstractModel {
     }
 
     /**
-     * Set 迭代子目录
+     * Set <p>迭代子目录</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Children 迭代子目录
+     * @param Children <p>迭代子目录</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChildren(DescribeTreeJobsRsp [] Children) {

@@ -87,6 +87,13 @@ public class AigcImageOutputConfig extends AbstractModel {
     private String OutputComplianceCheck;
 
     /**
+    * <p>生成图片张数。*<em>仅ModelName为Kling时有效，可选值 1-9 *</em>。</p>
+    */
+    @SerializedName("OutputImageCount")
+    @Expose
+    private Long OutputImageCount;
+
+    /**
      * Get <p>存储模式</p><p>枚举值：</p><ul><li>Temporary： 临时存储，生成的视频文件不会存储到云点播，可在事件通知中获取到临时访问的 URL，有效期 7 天</li><li>Permanent： 永久存储，生成的视频文件将存储到云点播，可在事件通知中获取到 FileId</li></ul><p>默认值：Temporary</p> 
      * @return StorageMode <p>存储模式</p><p>枚举值：</p><ul><li>Temporary： 临时存储，生成的视频文件不会存储到云点播，可在事件通知中获取到临时访问的 URL，有效期 7 天</li><li>Permanent： 永久存储，生成的视频文件将存储到云点播，可在事件通知中获取到 FileId</li></ul><p>默认值：Temporary</p>
      */
@@ -230,6 +237,22 @@ public class AigcImageOutputConfig extends AbstractModel {
         this.OutputComplianceCheck = OutputComplianceCheck;
     }
 
+    /**
+     * Get <p>生成图片张数。*<em>仅ModelName为Kling时有效，可选值 1-9 *</em>。</p> 
+     * @return OutputImageCount <p>生成图片张数。*<em>仅ModelName为Kling时有效，可选值 1-9 *</em>。</p>
+     */
+    public Long getOutputImageCount() {
+        return this.OutputImageCount;
+    }
+
+    /**
+     * Set <p>生成图片张数。*<em>仅ModelName为Kling时有效，可选值 1-9 *</em>。</p>
+     * @param OutputImageCount <p>生成图片张数。*<em>仅ModelName为Kling时有效，可选值 1-9 *</em>。</p>
+     */
+    public void setOutputImageCount(Long OutputImageCount) {
+        this.OutputImageCount = OutputImageCount;
+    }
+
     public AigcImageOutputConfig() {
     }
 
@@ -265,6 +288,9 @@ public class AigcImageOutputConfig extends AbstractModel {
         if (source.OutputComplianceCheck != null) {
             this.OutputComplianceCheck = new String(source.OutputComplianceCheck);
         }
+        if (source.OutputImageCount != null) {
+            this.OutputImageCount = new Long(source.OutputImageCount);
+        }
     }
 
 
@@ -281,6 +307,7 @@ public class AigcImageOutputConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "PersonGeneration", this.PersonGeneration);
         this.setParamSimple(map, prefix + "InputComplianceCheck", this.InputComplianceCheck);
         this.setParamSimple(map, prefix + "OutputComplianceCheck", this.OutputComplianceCheck);
+        this.setParamSimple(map, prefix + "OutputImageCount", this.OutputImageCount);
 
     }
 }

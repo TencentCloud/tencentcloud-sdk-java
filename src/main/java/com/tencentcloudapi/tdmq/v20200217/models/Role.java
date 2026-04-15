@@ -24,141 +24,210 @@ import java.util.HashMap;
 public class Role extends AbstractModel {
 
     /**
-    * 角色名称。
+    * <p>角色名称。</p>
     */
     @SerializedName("RoleName")
     @Expose
     private String RoleName;
 
     /**
-    * 角色token值。
+    * <p>角色token值。</p>
     */
     @SerializedName("Token")
     @Expose
     private String Token;
 
     /**
-    * 备注说明。
+    * <p>备注说明。</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 创建时间。
+    * <p>创建时间。</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 更新时间。
+    * <p>更新时间。</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 授权类型（Cluster：集群；TopicAndGroup：主题或消费组）
+    * <p>授权类型（Cluster：集群；TopicAndGroup：主题或消费组）</p>
     */
     @SerializedName("PermType")
     @Expose
     private String PermType;
 
     /**
-     * Get 角色名称。 
-     * @return RoleName 角色名称。
+    * <p>角色类型</p><p>枚举值：</p><ul><li>Temporary： 轮转密钥</li><li>Permanent： 永久密钥</li></ul>
+    */
+    @SerializedName("TokenType")
+    @Expose
+    private String TokenType;
+
+    /**
+    * <p>SSM 唯一 ID</p>
+    */
+    @SerializedName("SecretName")
+    @Expose
+    private String SecretName;
+
+    /**
+    * <p>轮转周期</p><p>单位：天</p>
+    */
+    @SerializedName("RotateFreq")
+    @Expose
+    private Long RotateFreq;
+
+    /**
+     * Get <p>角色名称。</p> 
+     * @return RoleName <p>角色名称。</p>
      */
     public String getRoleName() {
         return this.RoleName;
     }
 
     /**
-     * Set 角色名称。
-     * @param RoleName 角色名称。
+     * Set <p>角色名称。</p>
+     * @param RoleName <p>角色名称。</p>
      */
     public void setRoleName(String RoleName) {
         this.RoleName = RoleName;
     }
 
     /**
-     * Get 角色token值。 
-     * @return Token 角色token值。
+     * Get <p>角色token值。</p> 
+     * @return Token <p>角色token值。</p>
      */
     public String getToken() {
         return this.Token;
     }
 
     /**
-     * Set 角色token值。
-     * @param Token 角色token值。
+     * Set <p>角色token值。</p>
+     * @param Token <p>角色token值。</p>
      */
     public void setToken(String Token) {
         this.Token = Token;
     }
 
     /**
-     * Get 备注说明。 
-     * @return Remark 备注说明。
+     * Get <p>备注说明。</p> 
+     * @return Remark <p>备注说明。</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注说明。
-     * @param Remark 备注说明。
+     * Set <p>备注说明。</p>
+     * @param Remark <p>备注说明。</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 创建时间。 
-     * @return CreateTime 创建时间。
+     * Get <p>创建时间。</p> 
+     * @return CreateTime <p>创建时间。</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间。
-     * @param CreateTime 创建时间。
+     * Set <p>创建时间。</p>
+     * @param CreateTime <p>创建时间。</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 更新时间。 
-     * @return UpdateTime 更新时间。
+     * Get <p>更新时间。</p> 
+     * @return UpdateTime <p>更新时间。</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 更新时间。
-     * @param UpdateTime 更新时间。
+     * Set <p>更新时间。</p>
+     * @param UpdateTime <p>更新时间。</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 授权类型（Cluster：集群；TopicAndGroup：主题或消费组） 
-     * @return PermType 授权类型（Cluster：集群；TopicAndGroup：主题或消费组）
+     * Get <p>授权类型（Cluster：集群；TopicAndGroup：主题或消费组）</p> 
+     * @return PermType <p>授权类型（Cluster：集群；TopicAndGroup：主题或消费组）</p>
      */
     public String getPermType() {
         return this.PermType;
     }
 
     /**
-     * Set 授权类型（Cluster：集群；TopicAndGroup：主题或消费组）
-     * @param PermType 授权类型（Cluster：集群；TopicAndGroup：主题或消费组）
+     * Set <p>授权类型（Cluster：集群；TopicAndGroup：主题或消费组）</p>
+     * @param PermType <p>授权类型（Cluster：集群；TopicAndGroup：主题或消费组）</p>
      */
     public void setPermType(String PermType) {
         this.PermType = PermType;
+    }
+
+    /**
+     * Get <p>角色类型</p><p>枚举值：</p><ul><li>Temporary： 轮转密钥</li><li>Permanent： 永久密钥</li></ul> 
+     * @return TokenType <p>角色类型</p><p>枚举值：</p><ul><li>Temporary： 轮转密钥</li><li>Permanent： 永久密钥</li></ul>
+     */
+    public String getTokenType() {
+        return this.TokenType;
+    }
+
+    /**
+     * Set <p>角色类型</p><p>枚举值：</p><ul><li>Temporary： 轮转密钥</li><li>Permanent： 永久密钥</li></ul>
+     * @param TokenType <p>角色类型</p><p>枚举值：</p><ul><li>Temporary： 轮转密钥</li><li>Permanent： 永久密钥</li></ul>
+     */
+    public void setTokenType(String TokenType) {
+        this.TokenType = TokenType;
+    }
+
+    /**
+     * Get <p>SSM 唯一 ID</p> 
+     * @return SecretName <p>SSM 唯一 ID</p>
+     */
+    public String getSecretName() {
+        return this.SecretName;
+    }
+
+    /**
+     * Set <p>SSM 唯一 ID</p>
+     * @param SecretName <p>SSM 唯一 ID</p>
+     */
+    public void setSecretName(String SecretName) {
+        this.SecretName = SecretName;
+    }
+
+    /**
+     * Get <p>轮转周期</p><p>单位：天</p> 
+     * @return RotateFreq <p>轮转周期</p><p>单位：天</p>
+     */
+    public Long getRotateFreq() {
+        return this.RotateFreq;
+    }
+
+    /**
+     * Set <p>轮转周期</p><p>单位：天</p>
+     * @param RotateFreq <p>轮转周期</p><p>单位：天</p>
+     */
+    public void setRotateFreq(Long RotateFreq) {
+        this.RotateFreq = RotateFreq;
     }
 
     public Role() {
@@ -187,6 +256,15 @@ public class Role extends AbstractModel {
         if (source.PermType != null) {
             this.PermType = new String(source.PermType);
         }
+        if (source.TokenType != null) {
+            this.TokenType = new String(source.TokenType);
+        }
+        if (source.SecretName != null) {
+            this.SecretName = new String(source.SecretName);
+        }
+        if (source.RotateFreq != null) {
+            this.RotateFreq = new Long(source.RotateFreq);
+        }
     }
 
 
@@ -200,6 +278,9 @@ public class Role extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "PermType", this.PermType);
+        this.setParamSimple(map, prefix + "TokenType", this.TokenType);
+        this.setParamSimple(map, prefix + "SecretName", this.SecretName);
+        this.setParamSimple(map, prefix + "RotateFreq", this.RotateFreq);
 
     }
 }

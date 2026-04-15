@@ -24,605 +24,575 @@ import java.util.HashMap;
 public class EnvInfo extends AbstractModel {
 
     /**
-    * 账户下该环境唯一标识
+    * <p>账户下该环境唯一标识</p>
     */
     @SerializedName("EnvId")
     @Expose
     private String EnvId;
 
     /**
-    * 环境来源。包含以下取值：
-<li>miniapp：微信小程序</li>
-<li>qcloud ：腾讯云</li>
+    * <p>环境来源。包含以下取值：</p><li>miniapp：微信小程序</li><li>qcloud ：腾讯云</li>
     */
     @SerializedName("Source")
     @Expose
     private String Source;
 
     /**
-    * 环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
+    * <p>环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符</p>
     */
     @SerializedName("Alias")
     @Expose
     private String Alias;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 最后修改时间
+    * <p>最后修改时间</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 环境状态。包含以下取值：
-<li>NORMAL：正常可用</li>
-<li>UNAVAILABLE：服务不可用，可能是尚未初始化或者初始化过程中</li>
+    * <p>环境状态。包含以下取值：</p><li>NORMAL：正常可用</li><li>UNAVAILABLE：服务不可用，可能是尚未初始化或者初始化过程中</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 数据库列表
+    * <p>数据库列表</p>
     */
     @SerializedName("Databases")
     @Expose
     private DatabasesInfo [] Databases;
 
     /**
-    * 存储列表
+    * <p>存储列表</p>
     */
     @SerializedName("Storages")
     @Expose
     private StorageInfo [] Storages;
 
     /**
-    * 函数列表
+    * <p>函数列表</p>
     */
     @SerializedName("Functions")
     @Expose
     private FunctionInfo [] Functions;
 
     /**
-    * tcb产品套餐ID，参考DescribePackages接口的返回值。
+    * <p>tcb产品套餐ID，参考DescribePackages接口的返回值。</p>
     */
     @SerializedName("PackageId")
     @Expose
     private String PackageId;
 
     /**
-    * 套餐中文名称，参考DescribePackages接口的返回值。
+    * <p>套餐中文名称，参考DescribePackages接口的返回值。</p>
     */
     @SerializedName("PackageName")
     @Expose
     private String PackageName;
 
     /**
-    * 云日志服务列表
+    * <p>云日志服务列表</p>
     */
     @SerializedName("LogServices")
     @Expose
     private LogServiceInfo [] LogServices;
 
     /**
-    * 静态资源信息
+    * <p>静态资源信息</p>
     */
     @SerializedName("StaticStorages")
     @Expose
     private StaticStorageInfo [] StaticStorages;
 
     /**
-    * 是否到期自动降为免费版
+    * <p>是否到期自动降为免费版</p>
     */
     @SerializedName("IsAutoDegrade")
     @Expose
     private Boolean IsAutoDegrade;
 
     /**
-    * 环境渠道
+    * <p>环境渠道</p>
     */
     @SerializedName("EnvChannel")
     @Expose
     private String EnvChannel;
 
     /**
-    * 支付方式。包含以下取值：
-<li> prepayment：预付费</li>
-<li> postpaid：后付费</li>
+    * <p>支付方式。包含以下取值：</p><li> prepayment：预付费</li><li> postpaid：后付费</li>
     */
     @SerializedName("PayMode")
     @Expose
     private String PayMode;
 
     /**
-    * 是否为默认环境
+    * <p>是否为默认环境</p>
     */
     @SerializedName("IsDefault")
     @Expose
     private Boolean IsDefault;
 
     /**
-    * 环境所属地域
+    * <p>环境所属地域</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 环境标签列表
+    * <p>环境标签列表</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 自定义日志服务
+    * <p>自定义日志服务</p>
     */
     @SerializedName("CustomLogServices")
     @Expose
     private ClsInfo [] CustomLogServices;
 
     /**
-    * 环境类型：baas, run, hoting, weda
+    * <p>环境类型：baas, run, hoting, weda</p>
     */
     @SerializedName("EnvType")
     @Expose
     private String EnvType;
 
     /**
-    * 是否是dau新套餐
+    * <p>是否是dau新套餐</p>
     */
     @SerializedName("IsDauPackage")
     @Expose
     private Boolean IsDauPackage;
 
     /**
-    * 套餐类型:空\baas\tcbr
+    * <p>套餐类型:空\baas\tcbr</p>
     */
     @SerializedName("PackageType")
     @Expose
     private String PackageType;
 
     /**
-    * 架构类型
+    * <p>架构类型</p>
     */
     @SerializedName("ArchitectureType")
     @Expose
     private String ArchitectureType;
 
     /**
-    * 回收标志，默认为空
+    * <p>回收标志，默认为空</p>
     */
     @SerializedName("Recycle")
     @Expose
     private String Recycle;
 
     /**
-     * Get 账户下该环境唯一标识 
-     * @return EnvId 账户下该环境唯一标识
+     * Get <p>账户下该环境唯一标识</p> 
+     * @return EnvId <p>账户下该环境唯一标识</p>
      */
     public String getEnvId() {
         return this.EnvId;
     }
 
     /**
-     * Set 账户下该环境唯一标识
-     * @param EnvId 账户下该环境唯一标识
+     * Set <p>账户下该环境唯一标识</p>
+     * @param EnvId <p>账户下该环境唯一标识</p>
      */
     public void setEnvId(String EnvId) {
         this.EnvId = EnvId;
     }
 
     /**
-     * Get 环境来源。包含以下取值：
-<li>miniapp：微信小程序</li>
-<li>qcloud ：腾讯云</li> 
-     * @return Source 环境来源。包含以下取值：
-<li>miniapp：微信小程序</li>
-<li>qcloud ：腾讯云</li>
+     * Get <p>环境来源。包含以下取值：</p><li>miniapp：微信小程序</li><li>qcloud ：腾讯云</li> 
+     * @return Source <p>环境来源。包含以下取值：</p><li>miniapp：微信小程序</li><li>qcloud ：腾讯云</li>
      */
     public String getSource() {
         return this.Source;
     }
 
     /**
-     * Set 环境来源。包含以下取值：
-<li>miniapp：微信小程序</li>
-<li>qcloud ：腾讯云</li>
-     * @param Source 环境来源。包含以下取值：
-<li>miniapp：微信小程序</li>
-<li>qcloud ：腾讯云</li>
+     * Set <p>环境来源。包含以下取值：</p><li>miniapp：微信小程序</li><li>qcloud ：腾讯云</li>
+     * @param Source <p>环境来源。包含以下取值：</p><li>miniapp：微信小程序</li><li>qcloud ：腾讯云</li>
      */
     public void setSource(String Source) {
         this.Source = Source;
     }
 
     /**
-     * Get 环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符 
-     * @return Alias 环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
+     * Get <p>环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符</p> 
+     * @return Alias <p>环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符</p>
      */
     public String getAlias() {
         return this.Alias;
     }
 
     /**
-     * Set 环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
-     * @param Alias 环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符
+     * Set <p>环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符</p>
+     * @param Alias <p>环境别名，要以a-z开头，不能包含 a-zA-z0-9- 以外的字符</p>
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 最后修改时间 
-     * @return UpdateTime 最后修改时间
+     * Get <p>最后修改时间</p> 
+     * @return UpdateTime <p>最后修改时间</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 最后修改时间
-     * @param UpdateTime 最后修改时间
+     * Set <p>最后修改时间</p>
+     * @param UpdateTime <p>最后修改时间</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 环境状态。包含以下取值：
-<li>NORMAL：正常可用</li>
-<li>UNAVAILABLE：服务不可用，可能是尚未初始化或者初始化过程中</li> 
-     * @return Status 环境状态。包含以下取值：
-<li>NORMAL：正常可用</li>
-<li>UNAVAILABLE：服务不可用，可能是尚未初始化或者初始化过程中</li>
+     * Get <p>环境状态。包含以下取值：</p><li>NORMAL：正常可用</li><li>UNAVAILABLE：服务不可用，可能是尚未初始化或者初始化过程中</li> 
+     * @return Status <p>环境状态。包含以下取值：</p><li>NORMAL：正常可用</li><li>UNAVAILABLE：服务不可用，可能是尚未初始化或者初始化过程中</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 环境状态。包含以下取值：
-<li>NORMAL：正常可用</li>
-<li>UNAVAILABLE：服务不可用，可能是尚未初始化或者初始化过程中</li>
-     * @param Status 环境状态。包含以下取值：
-<li>NORMAL：正常可用</li>
-<li>UNAVAILABLE：服务不可用，可能是尚未初始化或者初始化过程中</li>
+     * Set <p>环境状态。包含以下取值：</p><li>NORMAL：正常可用</li><li>UNAVAILABLE：服务不可用，可能是尚未初始化或者初始化过程中</li>
+     * @param Status <p>环境状态。包含以下取值：</p><li>NORMAL：正常可用</li><li>UNAVAILABLE：服务不可用，可能是尚未初始化或者初始化过程中</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 数据库列表 
-     * @return Databases 数据库列表
+     * Get <p>数据库列表</p> 
+     * @return Databases <p>数据库列表</p>
      */
     public DatabasesInfo [] getDatabases() {
         return this.Databases;
     }
 
     /**
-     * Set 数据库列表
-     * @param Databases 数据库列表
+     * Set <p>数据库列表</p>
+     * @param Databases <p>数据库列表</p>
      */
     public void setDatabases(DatabasesInfo [] Databases) {
         this.Databases = Databases;
     }
 
     /**
-     * Get 存储列表 
-     * @return Storages 存储列表
+     * Get <p>存储列表</p> 
+     * @return Storages <p>存储列表</p>
      */
     public StorageInfo [] getStorages() {
         return this.Storages;
     }
 
     /**
-     * Set 存储列表
-     * @param Storages 存储列表
+     * Set <p>存储列表</p>
+     * @param Storages <p>存储列表</p>
      */
     public void setStorages(StorageInfo [] Storages) {
         this.Storages = Storages;
     }
 
     /**
-     * Get 函数列表 
-     * @return Functions 函数列表
+     * Get <p>函数列表</p> 
+     * @return Functions <p>函数列表</p>
      */
     public FunctionInfo [] getFunctions() {
         return this.Functions;
     }
 
     /**
-     * Set 函数列表
-     * @param Functions 函数列表
+     * Set <p>函数列表</p>
+     * @param Functions <p>函数列表</p>
      */
     public void setFunctions(FunctionInfo [] Functions) {
         this.Functions = Functions;
     }
 
     /**
-     * Get tcb产品套餐ID，参考DescribePackages接口的返回值。 
-     * @return PackageId tcb产品套餐ID，参考DescribePackages接口的返回值。
+     * Get <p>tcb产品套餐ID，参考DescribePackages接口的返回值。</p> 
+     * @return PackageId <p>tcb产品套餐ID，参考DescribePackages接口的返回值。</p>
      */
     public String getPackageId() {
         return this.PackageId;
     }
 
     /**
-     * Set tcb产品套餐ID，参考DescribePackages接口的返回值。
-     * @param PackageId tcb产品套餐ID，参考DescribePackages接口的返回值。
+     * Set <p>tcb产品套餐ID，参考DescribePackages接口的返回值。</p>
+     * @param PackageId <p>tcb产品套餐ID，参考DescribePackages接口的返回值。</p>
      */
     public void setPackageId(String PackageId) {
         this.PackageId = PackageId;
     }
 
     /**
-     * Get 套餐中文名称，参考DescribePackages接口的返回值。 
-     * @return PackageName 套餐中文名称，参考DescribePackages接口的返回值。
+     * Get <p>套餐中文名称，参考DescribePackages接口的返回值。</p> 
+     * @return PackageName <p>套餐中文名称，参考DescribePackages接口的返回值。</p>
      */
     public String getPackageName() {
         return this.PackageName;
     }
 
     /**
-     * Set 套餐中文名称，参考DescribePackages接口的返回值。
-     * @param PackageName 套餐中文名称，参考DescribePackages接口的返回值。
+     * Set <p>套餐中文名称，参考DescribePackages接口的返回值。</p>
+     * @param PackageName <p>套餐中文名称，参考DescribePackages接口的返回值。</p>
      */
     public void setPackageName(String PackageName) {
         this.PackageName = PackageName;
     }
 
     /**
-     * Get 云日志服务列表 
-     * @return LogServices 云日志服务列表
+     * Get <p>云日志服务列表</p> 
+     * @return LogServices <p>云日志服务列表</p>
      */
     public LogServiceInfo [] getLogServices() {
         return this.LogServices;
     }
 
     /**
-     * Set 云日志服务列表
-     * @param LogServices 云日志服务列表
+     * Set <p>云日志服务列表</p>
+     * @param LogServices <p>云日志服务列表</p>
      */
     public void setLogServices(LogServiceInfo [] LogServices) {
         this.LogServices = LogServices;
     }
 
     /**
-     * Get 静态资源信息 
-     * @return StaticStorages 静态资源信息
+     * Get <p>静态资源信息</p> 
+     * @return StaticStorages <p>静态资源信息</p>
      */
     public StaticStorageInfo [] getStaticStorages() {
         return this.StaticStorages;
     }
 
     /**
-     * Set 静态资源信息
-     * @param StaticStorages 静态资源信息
+     * Set <p>静态资源信息</p>
+     * @param StaticStorages <p>静态资源信息</p>
      */
     public void setStaticStorages(StaticStorageInfo [] StaticStorages) {
         this.StaticStorages = StaticStorages;
     }
 
     /**
-     * Get 是否到期自动降为免费版 
-     * @return IsAutoDegrade 是否到期自动降为免费版
+     * Get <p>是否到期自动降为免费版</p> 
+     * @return IsAutoDegrade <p>是否到期自动降为免费版</p>
      */
     public Boolean getIsAutoDegrade() {
         return this.IsAutoDegrade;
     }
 
     /**
-     * Set 是否到期自动降为免费版
-     * @param IsAutoDegrade 是否到期自动降为免费版
+     * Set <p>是否到期自动降为免费版</p>
+     * @param IsAutoDegrade <p>是否到期自动降为免费版</p>
      */
     public void setIsAutoDegrade(Boolean IsAutoDegrade) {
         this.IsAutoDegrade = IsAutoDegrade;
     }
 
     /**
-     * Get 环境渠道 
-     * @return EnvChannel 环境渠道
+     * Get <p>环境渠道</p> 
+     * @return EnvChannel <p>环境渠道</p>
      */
     public String getEnvChannel() {
         return this.EnvChannel;
     }
 
     /**
-     * Set 环境渠道
-     * @param EnvChannel 环境渠道
+     * Set <p>环境渠道</p>
+     * @param EnvChannel <p>环境渠道</p>
      */
     public void setEnvChannel(String EnvChannel) {
         this.EnvChannel = EnvChannel;
     }
 
     /**
-     * Get 支付方式。包含以下取值：
-<li> prepayment：预付费</li>
-<li> postpaid：后付费</li> 
-     * @return PayMode 支付方式。包含以下取值：
-<li> prepayment：预付费</li>
-<li> postpaid：后付费</li>
+     * Get <p>支付方式。包含以下取值：</p><li> prepayment：预付费</li><li> postpaid：后付费</li> 
+     * @return PayMode <p>支付方式。包含以下取值：</p><li> prepayment：预付费</li><li> postpaid：后付费</li>
      */
     public String getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 支付方式。包含以下取值：
-<li> prepayment：预付费</li>
-<li> postpaid：后付费</li>
-     * @param PayMode 支付方式。包含以下取值：
-<li> prepayment：预付费</li>
-<li> postpaid：后付费</li>
+     * Set <p>支付方式。包含以下取值：</p><li> prepayment：预付费</li><li> postpaid：后付费</li>
+     * @param PayMode <p>支付方式。包含以下取值：</p><li> prepayment：预付费</li><li> postpaid：后付费</li>
      */
     public void setPayMode(String PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 是否为默认环境 
-     * @return IsDefault 是否为默认环境
+     * Get <p>是否为默认环境</p> 
+     * @return IsDefault <p>是否为默认环境</p>
      */
     public Boolean getIsDefault() {
         return this.IsDefault;
     }
 
     /**
-     * Set 是否为默认环境
-     * @param IsDefault 是否为默认环境
+     * Set <p>是否为默认环境</p>
+     * @param IsDefault <p>是否为默认环境</p>
      */
     public void setIsDefault(Boolean IsDefault) {
         this.IsDefault = IsDefault;
     }
 
     /**
-     * Get 环境所属地域 
-     * @return Region 环境所属地域
+     * Get <p>环境所属地域</p> 
+     * @return Region <p>环境所属地域</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 环境所属地域
-     * @param Region 环境所属地域
+     * Set <p>环境所属地域</p>
+     * @param Region <p>环境所属地域</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 环境标签列表 
-     * @return Tags 环境标签列表
+     * Get <p>环境标签列表</p> 
+     * @return Tags <p>环境标签列表</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 环境标签列表
-     * @param Tags 环境标签列表
+     * Set <p>环境标签列表</p>
+     * @param Tags <p>环境标签列表</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 自定义日志服务 
-     * @return CustomLogServices 自定义日志服务
+     * Get <p>自定义日志服务</p> 
+     * @return CustomLogServices <p>自定义日志服务</p>
      */
     public ClsInfo [] getCustomLogServices() {
         return this.CustomLogServices;
     }
 
     /**
-     * Set 自定义日志服务
-     * @param CustomLogServices 自定义日志服务
+     * Set <p>自定义日志服务</p>
+     * @param CustomLogServices <p>自定义日志服务</p>
      */
     public void setCustomLogServices(ClsInfo [] CustomLogServices) {
         this.CustomLogServices = CustomLogServices;
     }
 
     /**
-     * Get 环境类型：baas, run, hoting, weda 
-     * @return EnvType 环境类型：baas, run, hoting, weda
+     * Get <p>环境类型：baas, run, hoting, weda</p> 
+     * @return EnvType <p>环境类型：baas, run, hoting, weda</p>
      */
     public String getEnvType() {
         return this.EnvType;
     }
 
     /**
-     * Set 环境类型：baas, run, hoting, weda
-     * @param EnvType 环境类型：baas, run, hoting, weda
+     * Set <p>环境类型：baas, run, hoting, weda</p>
+     * @param EnvType <p>环境类型：baas, run, hoting, weda</p>
      */
     public void setEnvType(String EnvType) {
         this.EnvType = EnvType;
     }
 
     /**
-     * Get 是否是dau新套餐 
-     * @return IsDauPackage 是否是dau新套餐
+     * Get <p>是否是dau新套餐</p> 
+     * @return IsDauPackage <p>是否是dau新套餐</p>
      */
     public Boolean getIsDauPackage() {
         return this.IsDauPackage;
     }
 
     /**
-     * Set 是否是dau新套餐
-     * @param IsDauPackage 是否是dau新套餐
+     * Set <p>是否是dau新套餐</p>
+     * @param IsDauPackage <p>是否是dau新套餐</p>
      */
     public void setIsDauPackage(Boolean IsDauPackage) {
         this.IsDauPackage = IsDauPackage;
     }
 
     /**
-     * Get 套餐类型:空\baas\tcbr 
-     * @return PackageType 套餐类型:空\baas\tcbr
+     * Get <p>套餐类型:空\baas\tcbr</p> 
+     * @return PackageType <p>套餐类型:空\baas\tcbr</p>
      */
     public String getPackageType() {
         return this.PackageType;
     }
 
     /**
-     * Set 套餐类型:空\baas\tcbr
-     * @param PackageType 套餐类型:空\baas\tcbr
+     * Set <p>套餐类型:空\baas\tcbr</p>
+     * @param PackageType <p>套餐类型:空\baas\tcbr</p>
      */
     public void setPackageType(String PackageType) {
         this.PackageType = PackageType;
     }
 
     /**
-     * Get 架构类型 
-     * @return ArchitectureType 架构类型
+     * Get <p>架构类型</p> 
+     * @return ArchitectureType <p>架构类型</p>
      */
     public String getArchitectureType() {
         return this.ArchitectureType;
     }
 
     /**
-     * Set 架构类型
-     * @param ArchitectureType 架构类型
+     * Set <p>架构类型</p>
+     * @param ArchitectureType <p>架构类型</p>
      */
     public void setArchitectureType(String ArchitectureType) {
         this.ArchitectureType = ArchitectureType;
     }
 
     /**
-     * Get 回收标志，默认为空 
-     * @return Recycle 回收标志，默认为空
+     * Get <p>回收标志，默认为空</p> 
+     * @return Recycle <p>回收标志，默认为空</p>
      */
     public String getRecycle() {
         return this.Recycle;
     }
 
     /**
-     * Set 回收标志，默认为空
-     * @param Recycle 回收标志，默认为空
+     * Set <p>回收标志，默认为空</p>
+     * @param Recycle <p>回收标志，默认为空</p>
      */
     public void setRecycle(String Recycle) {
         this.Recycle = Recycle;

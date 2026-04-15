@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class Options extends AbstractModel {
 
     /**
-    * 同步初始化选项，Data(全量数据初始化)、Structure(结构初始化)、Full(全量数据且结构初始化，默认)、None(仅增量)；mongodb链路只支持全量数据初始化或仅增量。
+    * <p>同步初始化选项，Data(全量数据初始化)、Structure(结构初始化)、Full(全量数据且结构初始化，默认)、None(仅增量)；mongodb链路只支持全量数据初始化或仅增量。</p>
     */
     @SerializedName("InitType")
     @Expose
     private String InitType;
 
     /**
-    * 同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、ExecuteAfterIgnore(忽略并继续执行)
+    * <p>同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、ExecuteAfterIgnore(忽略并继续执行)</p>
     */
     @SerializedName("DealOfExistSameTable")
     @Expose
     private String DealOfExistSameTable;
 
     /**
-    * 冲突处理选项，ReportError(报错，默认为该值)、Ignore(忽略)、Cover(覆盖)、ConditionCover(条件覆盖)
+    * <p>冲突处理选项，ReportError(报错，默认为该值)、Ignore(忽略)、Cover(覆盖)、ConditionCover(条件覆盖)</p>
     */
     @SerializedName("ConflictHandleType")
     @Expose
     private String ConflictHandleType;
 
     /**
-    * 是否添加附加列
+    * <p>是否添加附加列</p>
     */
     @SerializedName("AddAdditionalColumn")
     @Expose
     private Boolean AddAdditionalColumn;
 
     /**
-    * 所要同步的DML和DDL的选项，Insert(插入操作)、Update(更新操作)、Delete(删除操作)、DDL(结构同步)， PartialDDL(自定义,和DdlOptions一起配合使用)。注意，这里至少需要包含DML中的一种。
+    * <p>所要同步的DML和DDL的选项，Insert(插入操作)、Update(更新操作)、Delete(删除操作)、DDL(结构同步)， PartialDDL(自定义,和DdlOptions一起配合使用)。注意，这里至少需要包含DML中的一种。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OpTypes")
@@ -60,14 +60,14 @@ public class Options extends AbstractModel {
     private String [] OpTypes;
 
     /**
-    * 冲突处理的详细选项，如条件覆盖中的条件行和条件操作
+    * <p>冲突处理的详细选项，如条件覆盖中的条件行和条件操作</p>
     */
     @SerializedName("ConflictHandleOption")
     @Expose
     private ConflictHandleOption ConflictHandleOption;
 
     /**
-    * DDL同步选项，具体描述要同步哪些DDL
+    * <p>DDL同步选项，具体描述要同步哪些DDL</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DdlOptions")
@@ -75,115 +75,115 @@ public class Options extends AbstractModel {
     private DdlOption [] DdlOptions;
 
     /**
-    * kafka同步选项
+    * <p>kafka同步选项</p>
     */
     @SerializedName("KafkaOption")
     @Expose
     private KafkaOption KafkaOption;
 
     /**
-    * 任务限速信息
+    * <p>任务限速信息</p>
     */
     @SerializedName("RateLimitOption")
     @Expose
     private RateLimitOption RateLimitOption;
 
     /**
-    * 自动重试的时间窗口设置
+    * <p>自动重试的时间窗口设置</p>
     */
     @SerializedName("AutoRetryTimeRangeMinutes")
     @Expose
     private Long AutoRetryTimeRangeMinutes;
 
     /**
-    * 同步到kafka链路指定位点。目前只支持时间格式：2023-12-20T19:24:23+08:00。如果没有指定位点，为空。
+    * <p>同步到kafka链路指定位点。目前只支持时间格式：2023-12-20T19:24:23+08:00。如果没有指定位点，为空。</p>
     */
     @SerializedName("StartPosition")
     @Expose
     private String StartPosition;
 
     /**
-    * 同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持
+    * <p>同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持</p>
     */
     @SerializedName("FilterBeginCommit")
     @Expose
     private Boolean FilterBeginCommit;
 
     /**
-    * 同步到kafka链路是否过滤掉checkpoint消息。目前仅mysql2kafka链路支持
+    * <p>同步到kafka链路是否过滤掉checkpoint消息。目前仅mysql2kafka链路支持</p>
     */
     @SerializedName("FilterCheckpoint")
     @Expose
     private Boolean FilterCheckpoint;
 
     /**
-     * Get 同步初始化选项，Data(全量数据初始化)、Structure(结构初始化)、Full(全量数据且结构初始化，默认)、None(仅增量)；mongodb链路只支持全量数据初始化或仅增量。 
-     * @return InitType 同步初始化选项，Data(全量数据初始化)、Structure(结构初始化)、Full(全量数据且结构初始化，默认)、None(仅增量)；mongodb链路只支持全量数据初始化或仅增量。
+     * Get <p>同步初始化选项，Data(全量数据初始化)、Structure(结构初始化)、Full(全量数据且结构初始化，默认)、None(仅增量)；mongodb链路只支持全量数据初始化或仅增量。</p> 
+     * @return InitType <p>同步初始化选项，Data(全量数据初始化)、Structure(结构初始化)、Full(全量数据且结构初始化，默认)、None(仅增量)；mongodb链路只支持全量数据初始化或仅增量。</p>
      */
     public String getInitType() {
         return this.InitType;
     }
 
     /**
-     * Set 同步初始化选项，Data(全量数据初始化)、Structure(结构初始化)、Full(全量数据且结构初始化，默认)、None(仅增量)；mongodb链路只支持全量数据初始化或仅增量。
-     * @param InitType 同步初始化选项，Data(全量数据初始化)、Structure(结构初始化)、Full(全量数据且结构初始化，默认)、None(仅增量)；mongodb链路只支持全量数据初始化或仅增量。
+     * Set <p>同步初始化选项，Data(全量数据初始化)、Structure(结构初始化)、Full(全量数据且结构初始化，默认)、None(仅增量)；mongodb链路只支持全量数据初始化或仅增量。</p>
+     * @param InitType <p>同步初始化选项，Data(全量数据初始化)、Structure(结构初始化)、Full(全量数据且结构初始化，默认)、None(仅增量)；mongodb链路只支持全量数据初始化或仅增量。</p>
      */
     public void setInitType(String InitType) {
         this.InitType = InitType;
     }
 
     /**
-     * Get 同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、ExecuteAfterIgnore(忽略并继续执行) 
-     * @return DealOfExistSameTable 同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、ExecuteAfterIgnore(忽略并继续执行)
+     * Get <p>同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、ExecuteAfterIgnore(忽略并继续执行)</p> 
+     * @return DealOfExistSameTable <p>同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、ExecuteAfterIgnore(忽略并继续执行)</p>
      */
     public String getDealOfExistSameTable() {
         return this.DealOfExistSameTable;
     }
 
     /**
-     * Set 同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、ExecuteAfterIgnore(忽略并继续执行)
-     * @param DealOfExistSameTable 同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、ExecuteAfterIgnore(忽略并继续执行)
+     * Set <p>同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、ExecuteAfterIgnore(忽略并继续执行)</p>
+     * @param DealOfExistSameTable <p>同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、ExecuteAfterIgnore(忽略并继续执行)</p>
      */
     public void setDealOfExistSameTable(String DealOfExistSameTable) {
         this.DealOfExistSameTable = DealOfExistSameTable;
     }
 
     /**
-     * Get 冲突处理选项，ReportError(报错，默认为该值)、Ignore(忽略)、Cover(覆盖)、ConditionCover(条件覆盖) 
-     * @return ConflictHandleType 冲突处理选项，ReportError(报错，默认为该值)、Ignore(忽略)、Cover(覆盖)、ConditionCover(条件覆盖)
+     * Get <p>冲突处理选项，ReportError(报错，默认为该值)、Ignore(忽略)、Cover(覆盖)、ConditionCover(条件覆盖)</p> 
+     * @return ConflictHandleType <p>冲突处理选项，ReportError(报错，默认为该值)、Ignore(忽略)、Cover(覆盖)、ConditionCover(条件覆盖)</p>
      */
     public String getConflictHandleType() {
         return this.ConflictHandleType;
     }
 
     /**
-     * Set 冲突处理选项，ReportError(报错，默认为该值)、Ignore(忽略)、Cover(覆盖)、ConditionCover(条件覆盖)
-     * @param ConflictHandleType 冲突处理选项，ReportError(报错，默认为该值)、Ignore(忽略)、Cover(覆盖)、ConditionCover(条件覆盖)
+     * Set <p>冲突处理选项，ReportError(报错，默认为该值)、Ignore(忽略)、Cover(覆盖)、ConditionCover(条件覆盖)</p>
+     * @param ConflictHandleType <p>冲突处理选项，ReportError(报错，默认为该值)、Ignore(忽略)、Cover(覆盖)、ConditionCover(条件覆盖)</p>
      */
     public void setConflictHandleType(String ConflictHandleType) {
         this.ConflictHandleType = ConflictHandleType;
     }
 
     /**
-     * Get 是否添加附加列 
-     * @return AddAdditionalColumn 是否添加附加列
+     * Get <p>是否添加附加列</p> 
+     * @return AddAdditionalColumn <p>是否添加附加列</p>
      */
     public Boolean getAddAdditionalColumn() {
         return this.AddAdditionalColumn;
     }
 
     /**
-     * Set 是否添加附加列
-     * @param AddAdditionalColumn 是否添加附加列
+     * Set <p>是否添加附加列</p>
+     * @param AddAdditionalColumn <p>是否添加附加列</p>
      */
     public void setAddAdditionalColumn(Boolean AddAdditionalColumn) {
         this.AddAdditionalColumn = AddAdditionalColumn;
     }
 
     /**
-     * Get 所要同步的DML和DDL的选项，Insert(插入操作)、Update(更新操作)、Delete(删除操作)、DDL(结构同步)， PartialDDL(自定义,和DdlOptions一起配合使用)。注意，这里至少需要包含DML中的一种。
+     * Get <p>所要同步的DML和DDL的选项，Insert(插入操作)、Update(更新操作)、Delete(删除操作)、DDL(结构同步)， PartialDDL(自定义,和DdlOptions一起配合使用)。注意，这里至少需要包含DML中的一种。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OpTypes 所要同步的DML和DDL的选项，Insert(插入操作)、Update(更新操作)、Delete(删除操作)、DDL(结构同步)， PartialDDL(自定义,和DdlOptions一起配合使用)。注意，这里至少需要包含DML中的一种。
+     * @return OpTypes <p>所要同步的DML和DDL的选项，Insert(插入操作)、Update(更新操作)、Delete(删除操作)、DDL(结构同步)， PartialDDL(自定义,和DdlOptions一起配合使用)。注意，这里至少需要包含DML中的一种。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getOpTypes() {
@@ -191,9 +191,9 @@ public class Options extends AbstractModel {
     }
 
     /**
-     * Set 所要同步的DML和DDL的选项，Insert(插入操作)、Update(更新操作)、Delete(删除操作)、DDL(结构同步)， PartialDDL(自定义,和DdlOptions一起配合使用)。注意，这里至少需要包含DML中的一种。
+     * Set <p>所要同步的DML和DDL的选项，Insert(插入操作)、Update(更新操作)、Delete(删除操作)、DDL(结构同步)， PartialDDL(自定义,和DdlOptions一起配合使用)。注意，这里至少需要包含DML中的一种。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OpTypes 所要同步的DML和DDL的选项，Insert(插入操作)、Update(更新操作)、Delete(删除操作)、DDL(结构同步)， PartialDDL(自定义,和DdlOptions一起配合使用)。注意，这里至少需要包含DML中的一种。
+     * @param OpTypes <p>所要同步的DML和DDL的选项，Insert(插入操作)、Update(更新操作)、Delete(删除操作)、DDL(结构同步)， PartialDDL(自定义,和DdlOptions一起配合使用)。注意，这里至少需要包含DML中的一种。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOpTypes(String [] OpTypes) {
@@ -201,25 +201,25 @@ public class Options extends AbstractModel {
     }
 
     /**
-     * Get 冲突处理的详细选项，如条件覆盖中的条件行和条件操作 
-     * @return ConflictHandleOption 冲突处理的详细选项，如条件覆盖中的条件行和条件操作
+     * Get <p>冲突处理的详细选项，如条件覆盖中的条件行和条件操作</p> 
+     * @return ConflictHandleOption <p>冲突处理的详细选项，如条件覆盖中的条件行和条件操作</p>
      */
     public ConflictHandleOption getConflictHandleOption() {
         return this.ConflictHandleOption;
     }
 
     /**
-     * Set 冲突处理的详细选项，如条件覆盖中的条件行和条件操作
-     * @param ConflictHandleOption 冲突处理的详细选项，如条件覆盖中的条件行和条件操作
+     * Set <p>冲突处理的详细选项，如条件覆盖中的条件行和条件操作</p>
+     * @param ConflictHandleOption <p>冲突处理的详细选项，如条件覆盖中的条件行和条件操作</p>
      */
     public void setConflictHandleOption(ConflictHandleOption ConflictHandleOption) {
         this.ConflictHandleOption = ConflictHandleOption;
     }
 
     /**
-     * Get DDL同步选项，具体描述要同步哪些DDL
+     * Get <p>DDL同步选项，具体描述要同步哪些DDL</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DdlOptions DDL同步选项，具体描述要同步哪些DDL
+     * @return DdlOptions <p>DDL同步选项，具体描述要同步哪些DDL</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DdlOption [] getDdlOptions() {
@@ -227,9 +227,9 @@ public class Options extends AbstractModel {
     }
 
     /**
-     * Set DDL同步选项，具体描述要同步哪些DDL
+     * Set <p>DDL同步选项，具体描述要同步哪些DDL</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DdlOptions DDL同步选项，具体描述要同步哪些DDL
+     * @param DdlOptions <p>DDL同步选项，具体描述要同步哪些DDL</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDdlOptions(DdlOption [] DdlOptions) {
@@ -237,96 +237,96 @@ public class Options extends AbstractModel {
     }
 
     /**
-     * Get kafka同步选项 
-     * @return KafkaOption kafka同步选项
+     * Get <p>kafka同步选项</p> 
+     * @return KafkaOption <p>kafka同步选项</p>
      */
     public KafkaOption getKafkaOption() {
         return this.KafkaOption;
     }
 
     /**
-     * Set kafka同步选项
-     * @param KafkaOption kafka同步选项
+     * Set <p>kafka同步选项</p>
+     * @param KafkaOption <p>kafka同步选项</p>
      */
     public void setKafkaOption(KafkaOption KafkaOption) {
         this.KafkaOption = KafkaOption;
     }
 
     /**
-     * Get 任务限速信息 
-     * @return RateLimitOption 任务限速信息
+     * Get <p>任务限速信息</p> 
+     * @return RateLimitOption <p>任务限速信息</p>
      */
     public RateLimitOption getRateLimitOption() {
         return this.RateLimitOption;
     }
 
     /**
-     * Set 任务限速信息
-     * @param RateLimitOption 任务限速信息
+     * Set <p>任务限速信息</p>
+     * @param RateLimitOption <p>任务限速信息</p>
      */
     public void setRateLimitOption(RateLimitOption RateLimitOption) {
         this.RateLimitOption = RateLimitOption;
     }
 
     /**
-     * Get 自动重试的时间窗口设置 
-     * @return AutoRetryTimeRangeMinutes 自动重试的时间窗口设置
+     * Get <p>自动重试的时间窗口设置</p> 
+     * @return AutoRetryTimeRangeMinutes <p>自动重试的时间窗口设置</p>
      */
     public Long getAutoRetryTimeRangeMinutes() {
         return this.AutoRetryTimeRangeMinutes;
     }
 
     /**
-     * Set 自动重试的时间窗口设置
-     * @param AutoRetryTimeRangeMinutes 自动重试的时间窗口设置
+     * Set <p>自动重试的时间窗口设置</p>
+     * @param AutoRetryTimeRangeMinutes <p>自动重试的时间窗口设置</p>
      */
     public void setAutoRetryTimeRangeMinutes(Long AutoRetryTimeRangeMinutes) {
         this.AutoRetryTimeRangeMinutes = AutoRetryTimeRangeMinutes;
     }
 
     /**
-     * Get 同步到kafka链路指定位点。目前只支持时间格式：2023-12-20T19:24:23+08:00。如果没有指定位点，为空。 
-     * @return StartPosition 同步到kafka链路指定位点。目前只支持时间格式：2023-12-20T19:24:23+08:00。如果没有指定位点，为空。
+     * Get <p>同步到kafka链路指定位点。目前只支持时间格式：2023-12-20T19:24:23+08:00。如果没有指定位点，为空。</p> 
+     * @return StartPosition <p>同步到kafka链路指定位点。目前只支持时间格式：2023-12-20T19:24:23+08:00。如果没有指定位点，为空。</p>
      */
     public String getStartPosition() {
         return this.StartPosition;
     }
 
     /**
-     * Set 同步到kafka链路指定位点。目前只支持时间格式：2023-12-20T19:24:23+08:00。如果没有指定位点，为空。
-     * @param StartPosition 同步到kafka链路指定位点。目前只支持时间格式：2023-12-20T19:24:23+08:00。如果没有指定位点，为空。
+     * Set <p>同步到kafka链路指定位点。目前只支持时间格式：2023-12-20T19:24:23+08:00。如果没有指定位点，为空。</p>
+     * @param StartPosition <p>同步到kafka链路指定位点。目前只支持时间格式：2023-12-20T19:24:23+08:00。如果没有指定位点，为空。</p>
      */
     public void setStartPosition(String StartPosition) {
         this.StartPosition = StartPosition;
     }
 
     /**
-     * Get 同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持 
-     * @return FilterBeginCommit 同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持
+     * Get <p>同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持</p> 
+     * @return FilterBeginCommit <p>同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持</p>
      */
     public Boolean getFilterBeginCommit() {
         return this.FilterBeginCommit;
     }
 
     /**
-     * Set 同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持
-     * @param FilterBeginCommit 同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持
+     * Set <p>同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持</p>
+     * @param FilterBeginCommit <p>同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持</p>
      */
     public void setFilterBeginCommit(Boolean FilterBeginCommit) {
         this.FilterBeginCommit = FilterBeginCommit;
     }
 
     /**
-     * Get 同步到kafka链路是否过滤掉checkpoint消息。目前仅mysql2kafka链路支持 
-     * @return FilterCheckpoint 同步到kafka链路是否过滤掉checkpoint消息。目前仅mysql2kafka链路支持
+     * Get <p>同步到kafka链路是否过滤掉checkpoint消息。目前仅mysql2kafka链路支持</p> 
+     * @return FilterCheckpoint <p>同步到kafka链路是否过滤掉checkpoint消息。目前仅mysql2kafka链路支持</p>
      */
     public Boolean getFilterCheckpoint() {
         return this.FilterCheckpoint;
     }
 
     /**
-     * Set 同步到kafka链路是否过滤掉checkpoint消息。目前仅mysql2kafka链路支持
-     * @param FilterCheckpoint 同步到kafka链路是否过滤掉checkpoint消息。目前仅mysql2kafka链路支持
+     * Set <p>同步到kafka链路是否过滤掉checkpoint消息。目前仅mysql2kafka链路支持</p>
+     * @param FilterCheckpoint <p>同步到kafka链路是否过滤掉checkpoint消息。目前仅mysql2kafka链路支持</p>
      */
     public void setFilterCheckpoint(Boolean FilterCheckpoint) {
         this.FilterCheckpoint = FilterCheckpoint;

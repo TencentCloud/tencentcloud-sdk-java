@@ -105,6 +105,39 @@ public class VclmClient extends AbstractClient{
     }
 
     /**
+     *用于查询视频特效任务。
+     * @param req DescribeImageToVideoJobRequest
+     * @return DescribeImageToVideoJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageToVideoJobResponse DescribeImageToVideoJob(DescribeImageToVideoJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageToVideoJob", DescribeImageToVideoJobResponse.class);
+    }
+
+    /**
+     *查询Vidu图生视频任务接口
+     * @param req DescribeImageToVideoViduJobRequest
+     * @return DescribeImageToVideoViduJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageToVideoViduJobResponse DescribeImageToVideoViduJob(DescribeImageToVideoViduJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageToVideoViduJob", DescribeImageToVideoViduJobResponse.class);
+    }
+
+    /**
+     *查询Kling动作控制任务
+     * @param req DescribeMotionControlKlingJobRequest
+     * @return DescribeMotionControlKlingJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMotionControlKlingJobResponse DescribeMotionControlKlingJob(DescribeMotionControlKlingJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMotionControlKlingJob", DescribeMotionControlKlingJobResponse.class);
+    }
+
+    /**
      *用于查询图片唱演任务。
 支持提交音频和图片生成唱演视频，满足社交娱乐、互动营销等场景的需求。
      * @param req DescribePortraitSingJobRequest
@@ -114,6 +147,17 @@ public class VclmClient extends AbstractClient{
     public DescribePortraitSingJobResponse DescribePortraitSingJob(DescribePortraitSingJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribePortraitSingJob", DescribePortraitSingJobResponse.class);
+    }
+
+    /**
+     *查询Vidu参考生视频任务接口
+     * @param req DescribeReferenceToVideoViduJobRequest
+     * @return DescribeReferenceToVideoViduJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReferenceToVideoViduJobResponse DescribeReferenceToVideoViduJob(DescribeReferenceToVideoViduJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeReferenceToVideoViduJob", DescribeReferenceToVideoViduJobResponse.class);
     }
 
     /**
@@ -128,6 +172,28 @@ public class VclmClient extends AbstractClient{
     }
 
     /**
+     *用于查询文生视频任务。
+     * @param req DescribeTextToVideoJobRequest
+     * @return DescribeTextToVideoJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTextToVideoJobResponse DescribeTextToVideoJob(DescribeTextToVideoJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTextToVideoJob", DescribeTextToVideoJobResponse.class);
+    }
+
+    /**
+     *查询Vidu文生视频任务接口
+     * @param req DescribeTextToVideoViduJobRequest
+     * @return DescribeTextToVideoViduJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTextToVideoViduJobResponse DescribeTextToVideoViduJob(DescribeTextToVideoViduJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTextToVideoViduJob", DescribeTextToVideoViduJobResponse.class);
+    }
+
+    /**
      *用于提交视频编辑任务，支持上传视频、文本及图片素材开展编辑操作，涵盖风格迁移、元素替换、内容增减等核心能力。
      * @param req DescribeVideoEditJobRequest
      * @return DescribeVideoEditJobResponse
@@ -136,6 +202,28 @@ public class VclmClient extends AbstractClient{
     public DescribeVideoEditJobResponse DescribeVideoEditJob(DescribeVideoEditJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeVideoEditJob", DescribeVideoEditJobResponse.class);
+    }
+
+    /**
+     *查询Kling多模态编辑任务
+     * @param req DescribeVideoEditKlingJobRequest
+     * @return DescribeVideoEditKlingJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVideoEditKlingJobResponse DescribeVideoEditKlingJob(DescribeVideoEditKlingJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVideoEditKlingJob", DescribeVideoEditKlingJobResponse.class);
+    }
+
+    /**
+     *查询视频延长任务
+     * @param req DescribeVideoExtendKlingJobRequest
+     * @return DescribeVideoExtendKlingJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVideoExtendKlingJobResponse DescribeVideoExtendKlingJob(DescribeVideoExtendKlingJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVideoExtendKlingJob", DescribeVideoExtendKlingJobResponse.class);
     }
 
     /**
@@ -230,6 +318,17 @@ public class VclmClient extends AbstractClient{
     }
 
     /**
+     *提交视频特效任务接口
+     * @param req SubmitImageToVideoJobRequest
+     * @return SubmitImageToVideoJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitImageToVideoJobResponse SubmitImageToVideoJob(SubmitImageToVideoJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitImageToVideoJob", SubmitImageToVideoJobResponse.class);
+    }
+
+    /**
      *提交Vidu图生视频任务接口
      * @param req SubmitImageToVideoViduJobRequest
      * @return SubmitImageToVideoViduJobResponse
@@ -238,6 +337,17 @@ public class VclmClient extends AbstractClient{
     public SubmitImageToVideoViduJobResponse SubmitImageToVideoViduJob(SubmitImageToVideoViduJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SubmitImageToVideoViduJob", SubmitImageToVideoViduJobResponse.class);
+    }
+
+    /**
+     *提交动作控制(Kling)任务并发
+     * @param req SubmitMotionControlKlingJobRequest
+     * @return SubmitMotionControlKlingJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitMotionControlKlingJobResponse SubmitMotionControlKlingJob(SubmitMotionControlKlingJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitMotionControlKlingJob", SubmitMotionControlKlingJobResponse.class);
     }
 
     /**
@@ -253,6 +363,17 @@ public class VclmClient extends AbstractClient{
     }
 
     /**
+     *提交Vidu参考生视频任务接口
+     * @param req SubmitReferenceToVideoViduJobRequest
+     * @return SubmitReferenceToVideoViduJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitReferenceToVideoViduJobResponse SubmitReferenceToVideoViduJob(SubmitReferenceToVideoViduJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitReferenceToVideoViduJob", SubmitReferenceToVideoViduJobResponse.class);
+    }
+
+    /**
      *提交视频特效任务接口
      * @param req SubmitTemplateToVideoJobRequest
      * @return SubmitTemplateToVideoJobResponse
@@ -264,6 +385,28 @@ public class VclmClient extends AbstractClient{
     }
 
     /**
+     *通过提交对视频内容的描述文本生成一个短视频。文生视频为异步处理任务，成功提交任务后返回任务的JobId。
+     * @param req SubmitTextToVideoJobRequest
+     * @return SubmitTextToVideoJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitTextToVideoJobResponse SubmitTextToVideoJob(SubmitTextToVideoJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitTextToVideoJob", SubmitTextToVideoJobResponse.class);
+    }
+
+    /**
+     *提交Vidu文生视频任务接口
+     * @param req SubmitTextToVideoViduJobRequest
+     * @return SubmitTextToVideoViduJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitTextToVideoViduJobResponse SubmitTextToVideoViduJob(SubmitTextToVideoViduJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitTextToVideoViduJob", SubmitTextToVideoViduJobResponse.class);
+    }
+
+    /**
      *用于提交视频编辑任务，支持上传视频、文本及图片素材开展编辑操作，涵盖风格迁移、元素替换、内容增减等核心能力。
      * @param req SubmitVideoEditJobRequest
      * @return SubmitVideoEditJobResponse
@@ -272,6 +415,28 @@ public class VclmClient extends AbstractClient{
     public SubmitVideoEditJobResponse SubmitVideoEditJob(SubmitVideoEditJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SubmitVideoEditJob", SubmitVideoEditJobResponse.class);
+    }
+
+    /**
+     *提交Kling多模态编辑任务
+     * @param req SubmitVideoEditKlingJobRequest
+     * @return SubmitVideoEditKlingJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitVideoEditKlingJobResponse SubmitVideoEditKlingJob(SubmitVideoEditKlingJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitVideoEditKlingJob", SubmitVideoEditKlingJobResponse.class);
+    }
+
+    /**
+     *用于提交视频延长任务接口。
+     * @param req SubmitVideoExtendKlingJobRequest
+     * @return SubmitVideoExtendKlingJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitVideoExtendKlingJobResponse SubmitVideoExtendKlingJob(SubmitVideoExtendKlingJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitVideoExtendKlingJob", SubmitVideoExtendKlingJobResponse.class);
     }
 
     /**

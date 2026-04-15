@@ -41,6 +41,13 @@ public class DescribeBackUpSchedulesRequest extends AbstractModel {
     private Long [] EncryptionFilters;
 
     /**
+    * 调度任务id过滤
+    */
+    @SerializedName("ScheduleId")
+    @Expose
+    private Long ScheduleId;
+
+    /**
      * Get 任务类型
 0-不限制，或使用TypeFilters过滤；
 1-备份恢复（包括周期备份和一次性备份）；
@@ -84,6 +91,22 @@ public class DescribeBackUpSchedulesRequest extends AbstractModel {
         this.EncryptionFilters = EncryptionFilters;
     }
 
+    /**
+     * Get 调度任务id过滤 
+     * @return ScheduleId 调度任务id过滤
+     */
+    public Long getScheduleId() {
+        return this.ScheduleId;
+    }
+
+    /**
+     * Set 调度任务id过滤
+     * @param ScheduleId 调度任务id过滤
+     */
+    public void setScheduleId(Long ScheduleId) {
+        this.ScheduleId = ScheduleId;
+    }
+
     public DescribeBackUpSchedulesRequest() {
     }
 
@@ -101,6 +124,9 @@ public class DescribeBackUpSchedulesRequest extends AbstractModel {
                 this.EncryptionFilters[i] = new Long(source.EncryptionFilters[i]);
             }
         }
+        if (source.ScheduleId != null) {
+            this.ScheduleId = new Long(source.ScheduleId);
+        }
     }
 
 
@@ -110,6 +136,7 @@ public class DescribeBackUpSchedulesRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationType", this.ApplicationType);
         this.setParamArraySimple(map, prefix + "EncryptionFilters.", this.EncryptionFilters);
+        this.setParamSimple(map, prefix + "ScheduleId", this.ScheduleId);
 
     }
 }

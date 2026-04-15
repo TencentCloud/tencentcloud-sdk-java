@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateBatchQuickSignUrlResponse extends AbstractModel {
 
     /**
-    * 签署人签署链接信息
+    * <p>签署人签署链接信息</p>
     */
     @SerializedName("FlowApproverUrlInfo")
     @Expose
@@ -38,16 +38,16 @@ public class CreateBatchQuickSignUrlResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 签署人签署链接信息 
-     * @return FlowApproverUrlInfo 签署人签署链接信息
+     * Get <p>签署人签署链接信息</p> 
+     * @return FlowApproverUrlInfo <p>签署人签署链接信息</p>
      */
     public FlowApproverUrlInfo getFlowApproverUrlInfo() {
         return this.FlowApproverUrlInfo;
     }
 
     /**
-     * Set 签署人签署链接信息
-     * @param FlowApproverUrlInfo 签署人签署链接信息
+     * Set <p>签署人签署链接信息</p>
+     * @param FlowApproverUrlInfo <p>签署人签署链接信息</p>
      */
     public void setFlowApproverUrlInfo(FlowApproverUrlInfo FlowApproverUrlInfo) {
         this.FlowApproverUrlInfo = FlowApproverUrlInfo;

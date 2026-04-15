@@ -24,126 +24,126 @@ import java.util.HashMap;
 public class Cluster extends AbstractModel {
 
     /**
-    * 集群 ID
+    * <p>集群 ID</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 集群名称
+    * <p>集群名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 地域
+    * <p>地域</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 用户 AppID
+    * <p>用户 AppID</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * 主账号 UIN
+    * <p>主账号 UIN</p>
     */
     @SerializedName("OwnerUin")
     @Expose
     private String OwnerUin;
 
     /**
-    * 创建者 UIN
+    * <p>创建者 UIN</p>
     */
     @SerializedName("CreatorUin")
     @Expose
     private String CreatorUin;
 
     /**
-    * 集群状态, 1 未初始化,3 初始化中，2 运行中
+    * <p>集群状态, 1 未初始化,3 初始化中，2 运行中</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 描述
+    * <p>描述</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 集群创建时间
+    * <p>集群创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 最后一次操作集群的时间
+    * <p>最后一次操作集群的时间</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * CU 数量
+    * <p>CU 数量</p>
     */
     @SerializedName("CuNum")
     @Expose
     private Long CuNum;
 
     /**
-    * CU 内存规格
+    * <p>CU 内存规格</p>
     */
     @SerializedName("CuMem")
     @Expose
     private Long CuMem;
 
     /**
-    * 可用区
+    * <p>可用区</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 状态描述
+    * <p>状态描述</p>
     */
     @SerializedName("StatusDesc")
     @Expose
     private String StatusDesc;
 
     /**
-    * 网络
+    * <p>网络</p>
     */
     @SerializedName("CCNs")
     @Expose
     private CCN [] CCNs;
 
     /**
-    * 网络
+    * <p>网络</p>
     */
     @SerializedName("NetEnvironmentType")
     @Expose
     private Long NetEnvironmentType;
 
     /**
-    * 空闲 CU
+    * <p>空闲 CU</p>
     */
     @SerializedName("FreeCuNum")
     @Expose
     private Long FreeCuNum;
 
     /**
-    * 集群绑定的标签
+    * <p>集群绑定的标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
@@ -151,7 +151,7 @@ public class Cluster extends AbstractModel {
     private Tag [] Tags;
 
     /**
-    * 集群隔离时间; 没隔离时间，则为 -
+    * <p>集群隔离时间; 没隔离时间，则为 -</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsolatedTime")
@@ -159,7 +159,7 @@ public class Cluster extends AbstractModel {
     private String IsolatedTime;
 
     /**
-    * 集群过期时间; 没过期概念，则为 -
+    * <p>集群过期时间; 没过期概念，则为 -</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpireTime")
@@ -167,7 +167,7 @@ public class Cluster extends AbstractModel {
     private String ExpireTime;
 
     /**
-    * 距离过期还有多少秒; 没过期概念，则为 -
+    * <p>距离过期还有多少秒; 没过期概念，则为 -</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecondsUntilExpiry")
@@ -175,7 +175,7 @@ public class Cluster extends AbstractModel {
     private String SecondsUntilExpiry;
 
     /**
-    * 自动续费标记，0 表示默认状态 (用户未设置，即初始状态，用户开通了预付费不停服特权会进行自动续费)， 1 表示自动续费，2表示明确不自动续费(用户设置)
+    * <p>自动续费标记，0 表示默认状态 (用户未设置，即初始状态，用户开通了预付费不停服特权会进行自动续费)， 1 表示自动续费，2表示明确不自动续费(用户设置)</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoRenewFlag")
@@ -183,7 +183,7 @@ public class Cluster extends AbstractModel {
     private Long AutoRenewFlag;
 
     /**
-    * 集群的默认 COS 存储桶
+    * <p>集群的默认 COS 存储桶</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefaultCOSBucket")
@@ -191,7 +191,7 @@ public class Cluster extends AbstractModel {
     private String DefaultCOSBucket;
 
     /**
-    * 集群的CLS 日志集 LogSet
+    * <p>集群的CLS 日志集 LogSet</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CLSLogSet")
@@ -199,7 +199,7 @@ public class Cluster extends AbstractModel {
     private String CLSLogSet;
 
     /**
-    * 集群的CLS 日志主题 TopicId
+    * <p>集群的CLS 日志主题 TopicId</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CLSTopicId")
@@ -207,7 +207,7 @@ public class Cluster extends AbstractModel {
     private String CLSTopicId;
 
     /**
-    * 集群的CLS 日志集  名字
+    * <p>集群的CLS 日志集  名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CLSLogName")
@@ -215,7 +215,7 @@ public class Cluster extends AbstractModel {
     private String CLSLogName;
 
     /**
-    * 集群的CLS 日志主题  名字
+    * <p>集群的CLS 日志主题  名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CLSTopicName")
@@ -223,7 +223,7 @@ public class Cluster extends AbstractModel {
     private String CLSTopicName;
 
     /**
-    * 集群的版本信息
+    * <p>集群的版本信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Version")
@@ -231,7 +231,7 @@ public class Cluster extends AbstractModel {
     private ClusterVersion Version;
 
     /**
-    * 细粒度资源下的空闲CU
+    * <p>细粒度资源下的空闲CU</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FreeCu")
@@ -239,7 +239,7 @@ public class Cluster extends AbstractModel {
     private Float FreeCu;
 
     /**
-    * 集群的默认日志采集配置
+    * <p>集群的默认日志采集配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefaultLogCollectConf")
@@ -247,7 +247,7 @@ public class Cluster extends AbstractModel {
     private String DefaultLogCollectConf;
 
     /**
-    * 取值：0-没有设置，1-已设置，2-不允许设置
+    * <p>取值：0-没有设置，1-已设置，2-不允许设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CustomizedDNSEnabled")
@@ -255,7 +255,7 @@ public class Cluster extends AbstractModel {
     private Long CustomizedDNSEnabled;
 
     /**
-    * 空间信息
+    * <p>空间信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Correlations")
@@ -263,7 +263,7 @@ public class Cluster extends AbstractModel {
     private WorkSpaceClusterItem [] Correlations;
 
     /**
-    * 运行CU
+    * <p>运行CU</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunningCu")
@@ -271,7 +271,7 @@ public class Cluster extends AbstractModel {
     private Float RunningCu;
 
     /**
-    * 0 后付费,1 预付费
+    * <p>0 后付费,1 预付费</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PayMode")
@@ -279,7 +279,7 @@ public class Cluster extends AbstractModel {
     private Long PayMode;
 
     /**
-    * 前端区分 集群是否需要2CU逻辑 因为历史集群 变配不需要, default 1  新集群都需要
+    * <p>前端区分 集群是否需要2CU逻辑 因为历史集群 变配不需要, default 1  新集群都需要</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsNeedManageNode")
@@ -287,7 +287,7 @@ public class Cluster extends AbstractModel {
     private Long IsNeedManageNode;
 
     /**
-    * session集群信息
+    * <p>session集群信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterSessions")
@@ -295,7 +295,7 @@ public class Cluster extends AbstractModel {
     private ClusterSession [] ClusterSessions;
 
     /**
-    * V3版本 = 2
+    * <p>V3版本 = 2</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ArchGeneration")
@@ -303,7 +303,7 @@ public class Cluster extends AbstractModel {
     private Long ArchGeneration;
 
     /**
-    * 0:TKE, 1:EKS
+    * <p>0:TKE, 1:EKS</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterType")
@@ -311,7 +311,7 @@ public class Cluster extends AbstractModel {
     private Long ClusterType;
 
     /**
-    * 订单信息
+    * <p>订单信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Orders")
@@ -319,7 +319,7 @@ public class Cluster extends AbstractModel {
     private Order [] Orders;
 
     /**
-    * Gateway信息
+    * <p>Gateway信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SqlGateways")
@@ -327,7 +327,7 @@ public class Cluster extends AbstractModel {
     private SqlGatewayItem [] SqlGateways;
 
     /**
-    * 0 公网访问 // 1 内网访问	
+    * <p>0 公网访问 // 1 内网访问</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WebUIType")
@@ -335,7 +335,7 @@ public class Cluster extends AbstractModel {
     private Long WebUIType;
 
     /**
-    * 2 独享集群
+    * <p>2 独享集群</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -343,7 +343,7 @@ public class Cluster extends AbstractModel {
     private Long Type;
 
     /**
-    * 子eks集群
+    * <p>子eks集群</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubEks")
@@ -351,7 +351,7 @@ public class Cluster extends AbstractModel {
     private SubEks SubEks;
 
     /**
-    * 上级集群
+    * <p>上级集群</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AgentSerialId")
@@ -359,7 +359,7 @@ public class Cluster extends AbstractModel {
     private String AgentSerialId;
 
     /**
-    * 资源类型
+    * <p>资源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceType")
@@ -367,7 +367,7 @@ public class Cluster extends AbstractModel {
     private Long ResourceType;
 
     /**
-    * 集群类型
+    * <p>集群类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BillingResourceMode")
@@ -375,7 +375,7 @@ public class Cluster extends AbstractModel {
     private String BillingResourceMode;
 
     /**
-    * Cu比例
+    * <p>Cu比例</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MemRatio")
@@ -383,42 +383,42 @@ public class Cluster extends AbstractModel {
     private Long MemRatio;
 
     /**
-    * 是否开启跨租户弹性网卡
+    * <p>是否开启跨租户弹性网卡</p>
     */
     @SerializedName("CrossTenantEniMode")
     @Expose
     private Long CrossTenantEniMode;
 
     /**
-    * 总的CPU
+    * <p>总的CPU</p>
     */
     @SerializedName("TotalCpu")
     @Expose
     private Float TotalCpu;
 
     /**
-    * 总的内存
+    * <p>总的内存</p>
     */
     @SerializedName("TotalMem")
     @Expose
     private Float TotalMem;
 
     /**
-    * 运行的CPU
+    * <p>运行的CPU</p>
     */
     @SerializedName("RunningCpu")
     @Expose
     private Float RunningCpu;
 
     /**
-    * 运行的内存
+    * <p>运行的内存</p>
     */
     @SerializedName("RunningMem")
     @Expose
     private Float RunningMem;
 
     /**
-    * setats集群
+    * <p>setats集群</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Setats")
@@ -426,7 +426,7 @@ public class Cluster extends AbstractModel {
     private Setats Setats;
 
     /**
-    * []
+    * <p>[]</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Yarns")
@@ -434,7 +434,7 @@ public class Cluster extends AbstractModel {
     private HadoopYarnItem [] Yarns;
 
     /**
-    * 0 单可用区 1多可用区
+    * <p>0 单可用区 1多可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeploymentMode")
@@ -442,7 +442,7 @@ public class Cluster extends AbstractModel {
     private Long DeploymentMode;
 
     /**
-    * 备可用区
+    * <p>备可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SlaveZones")
@@ -450,14 +450,14 @@ public class Cluster extends AbstractModel {
     private SlaveZone [] SlaveZones;
 
     /**
-    * 集群的日志cos存储
+    * <p>集群的日志cos存储</p>
     */
     @SerializedName("LogCOSBucket")
     @Expose
     private String LogCOSBucket;
 
     /**
-    * Cdc集群Id
+    * <p>Cdc集群Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CdcId")
@@ -465,281 +465,296 @@ public class Cluster extends AbstractModel {
     private String CdcId;
 
     /**
-     * Get 集群 ID 
-     * @return ClusterId 集群 ID
+    * <p>集群进度</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterProcessMsg")
+    @Expose
+    private String ClusterProcessMsg;
+
+    /**
+    * <p>单作业最大可配置 CU 数</p>
+    */
+    @SerializedName("MaxCuPerJob")
+    @Expose
+    private Long MaxCuPerJob;
+
+    /**
+     * Get <p>集群 ID</p> 
+     * @return ClusterId <p>集群 ID</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群 ID
-     * @param ClusterId 集群 ID
+     * Set <p>集群 ID</p>
+     * @param ClusterId <p>集群 ID</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 集群名称 
-     * @return Name 集群名称
+     * Get <p>集群名称</p> 
+     * @return Name <p>集群名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 集群名称
-     * @param Name 集群名称
+     * Set <p>集群名称</p>
+     * @param Name <p>集群名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 地域 
-     * @return Region 地域
+     * Get <p>地域</p> 
+     * @return Region <p>地域</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 地域
-     * @param Region 地域
+     * Set <p>地域</p>
+     * @param Region <p>地域</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 用户 AppID 
-     * @return AppId 用户 AppID
+     * Get <p>用户 AppID</p> 
+     * @return AppId <p>用户 AppID</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 用户 AppID
-     * @param AppId 用户 AppID
+     * Set <p>用户 AppID</p>
+     * @param AppId <p>用户 AppID</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 主账号 UIN 
-     * @return OwnerUin 主账号 UIN
+     * Get <p>主账号 UIN</p> 
+     * @return OwnerUin <p>主账号 UIN</p>
      */
     public String getOwnerUin() {
         return this.OwnerUin;
     }
 
     /**
-     * Set 主账号 UIN
-     * @param OwnerUin 主账号 UIN
+     * Set <p>主账号 UIN</p>
+     * @param OwnerUin <p>主账号 UIN</p>
      */
     public void setOwnerUin(String OwnerUin) {
         this.OwnerUin = OwnerUin;
     }
 
     /**
-     * Get 创建者 UIN 
-     * @return CreatorUin 创建者 UIN
+     * Get <p>创建者 UIN</p> 
+     * @return CreatorUin <p>创建者 UIN</p>
      */
     public String getCreatorUin() {
         return this.CreatorUin;
     }
 
     /**
-     * Set 创建者 UIN
-     * @param CreatorUin 创建者 UIN
+     * Set <p>创建者 UIN</p>
+     * @param CreatorUin <p>创建者 UIN</p>
      */
     public void setCreatorUin(String CreatorUin) {
         this.CreatorUin = CreatorUin;
     }
 
     /**
-     * Get 集群状态, 1 未初始化,3 初始化中，2 运行中 
-     * @return Status 集群状态, 1 未初始化,3 初始化中，2 运行中
+     * Get <p>集群状态, 1 未初始化,3 初始化中，2 运行中</p> 
+     * @return Status <p>集群状态, 1 未初始化,3 初始化中，2 运行中</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 集群状态, 1 未初始化,3 初始化中，2 运行中
-     * @param Status 集群状态, 1 未初始化,3 初始化中，2 运行中
+     * Set <p>集群状态, 1 未初始化,3 初始化中，2 运行中</p>
+     * @param Status <p>集群状态, 1 未初始化,3 初始化中，2 运行中</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 描述 
-     * @return Remark 描述
+     * Get <p>描述</p> 
+     * @return Remark <p>描述</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 描述
-     * @param Remark 描述
+     * Set <p>描述</p>
+     * @param Remark <p>描述</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 集群创建时间 
-     * @return CreateTime 集群创建时间
+     * Get <p>集群创建时间</p> 
+     * @return CreateTime <p>集群创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 集群创建时间
-     * @param CreateTime 集群创建时间
+     * Set <p>集群创建时间</p>
+     * @param CreateTime <p>集群创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 最后一次操作集群的时间 
-     * @return UpdateTime 最后一次操作集群的时间
+     * Get <p>最后一次操作集群的时间</p> 
+     * @return UpdateTime <p>最后一次操作集群的时间</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 最后一次操作集群的时间
-     * @param UpdateTime 最后一次操作集群的时间
+     * Set <p>最后一次操作集群的时间</p>
+     * @param UpdateTime <p>最后一次操作集群的时间</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get CU 数量 
-     * @return CuNum CU 数量
+     * Get <p>CU 数量</p> 
+     * @return CuNum <p>CU 数量</p>
      */
     public Long getCuNum() {
         return this.CuNum;
     }
 
     /**
-     * Set CU 数量
-     * @param CuNum CU 数量
+     * Set <p>CU 数量</p>
+     * @param CuNum <p>CU 数量</p>
      */
     public void setCuNum(Long CuNum) {
         this.CuNum = CuNum;
     }
 
     /**
-     * Get CU 内存规格 
-     * @return CuMem CU 内存规格
+     * Get <p>CU 内存规格</p> 
+     * @return CuMem <p>CU 内存规格</p>
      */
     public Long getCuMem() {
         return this.CuMem;
     }
 
     /**
-     * Set CU 内存规格
-     * @param CuMem CU 内存规格
+     * Set <p>CU 内存规格</p>
+     * @param CuMem <p>CU 内存规格</p>
      */
     public void setCuMem(Long CuMem) {
         this.CuMem = CuMem;
     }
 
     /**
-     * Get 可用区 
-     * @return Zone 可用区
+     * Get <p>可用区</p> 
+     * @return Zone <p>可用区</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区
-     * @param Zone 可用区
+     * Set <p>可用区</p>
+     * @param Zone <p>可用区</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 状态描述 
-     * @return StatusDesc 状态描述
+     * Get <p>状态描述</p> 
+     * @return StatusDesc <p>状态描述</p>
      */
     public String getStatusDesc() {
         return this.StatusDesc;
     }
 
     /**
-     * Set 状态描述
-     * @param StatusDesc 状态描述
+     * Set <p>状态描述</p>
+     * @param StatusDesc <p>状态描述</p>
      */
     public void setStatusDesc(String StatusDesc) {
         this.StatusDesc = StatusDesc;
     }
 
     /**
-     * Get 网络 
-     * @return CCNs 网络
+     * Get <p>网络</p> 
+     * @return CCNs <p>网络</p>
      */
     public CCN [] getCCNs() {
         return this.CCNs;
     }
 
     /**
-     * Set 网络
-     * @param CCNs 网络
+     * Set <p>网络</p>
+     * @param CCNs <p>网络</p>
      */
     public void setCCNs(CCN [] CCNs) {
         this.CCNs = CCNs;
     }
 
     /**
-     * Get 网络 
-     * @return NetEnvironmentType 网络
+     * Get <p>网络</p> 
+     * @return NetEnvironmentType <p>网络</p>
      */
     public Long getNetEnvironmentType() {
         return this.NetEnvironmentType;
     }
 
     /**
-     * Set 网络
-     * @param NetEnvironmentType 网络
+     * Set <p>网络</p>
+     * @param NetEnvironmentType <p>网络</p>
      */
     public void setNetEnvironmentType(Long NetEnvironmentType) {
         this.NetEnvironmentType = NetEnvironmentType;
     }
 
     /**
-     * Get 空闲 CU 
-     * @return FreeCuNum 空闲 CU
+     * Get <p>空闲 CU</p> 
+     * @return FreeCuNum <p>空闲 CU</p>
      */
     public Long getFreeCuNum() {
         return this.FreeCuNum;
     }
 
     /**
-     * Set 空闲 CU
-     * @param FreeCuNum 空闲 CU
+     * Set <p>空闲 CU</p>
+     * @param FreeCuNum <p>空闲 CU</p>
      */
     public void setFreeCuNum(Long FreeCuNum) {
         this.FreeCuNum = FreeCuNum;
     }
 
     /**
-     * Get 集群绑定的标签
+     * Get <p>集群绑定的标签</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tags 集群绑定的标签
+     * @return Tags <p>集群绑定的标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
@@ -747,9 +762,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Set 集群绑定的标签
+     * Set <p>集群绑定的标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tags 集群绑定的标签
+     * @param Tags <p>集群绑定的标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {
@@ -757,9 +772,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get 集群隔离时间; 没隔离时间，则为 -
+     * Get <p>集群隔离时间; 没隔离时间，则为 -</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsolatedTime 集群隔离时间; 没隔离时间，则为 -
+     * @return IsolatedTime <p>集群隔离时间; 没隔离时间，则为 -</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIsolatedTime() {
@@ -767,9 +782,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Set 集群隔离时间; 没隔离时间，则为 -
+     * Set <p>集群隔离时间; 没隔离时间，则为 -</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsolatedTime 集群隔离时间; 没隔离时间，则为 -
+     * @param IsolatedTime <p>集群隔离时间; 没隔离时间，则为 -</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsolatedTime(String IsolatedTime) {
@@ -777,9 +792,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get 集群过期时间; 没过期概念，则为 -
+     * Get <p>集群过期时间; 没过期概念，则为 -</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExpireTime 集群过期时间; 没过期概念，则为 -
+     * @return ExpireTime <p>集群过期时间; 没过期概念，则为 -</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpireTime() {
@@ -787,9 +802,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Set 集群过期时间; 没过期概念，则为 -
+     * Set <p>集群过期时间; 没过期概念，则为 -</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExpireTime 集群过期时间; 没过期概念，则为 -
+     * @param ExpireTime <p>集群过期时间; 没过期概念，则为 -</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpireTime(String ExpireTime) {
@@ -797,9 +812,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get 距离过期还有多少秒; 没过期概念，则为 -
+     * Get <p>距离过期还有多少秒; 没过期概念，则为 -</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SecondsUntilExpiry 距离过期还有多少秒; 没过期概念，则为 -
+     * @return SecondsUntilExpiry <p>距离过期还有多少秒; 没过期概念，则为 -</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSecondsUntilExpiry() {
@@ -807,9 +822,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Set 距离过期还有多少秒; 没过期概念，则为 -
+     * Set <p>距离过期还有多少秒; 没过期概念，则为 -</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SecondsUntilExpiry 距离过期还有多少秒; 没过期概念，则为 -
+     * @param SecondsUntilExpiry <p>距离过期还有多少秒; 没过期概念，则为 -</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecondsUntilExpiry(String SecondsUntilExpiry) {
@@ -817,9 +832,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get 自动续费标记，0 表示默认状态 (用户未设置，即初始状态，用户开通了预付费不停服特权会进行自动续费)， 1 表示自动续费，2表示明确不自动续费(用户设置)
+     * Get <p>自动续费标记，0 表示默认状态 (用户未设置，即初始状态，用户开通了预付费不停服特权会进行自动续费)， 1 表示自动续费，2表示明确不自动续费(用户设置)</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AutoRenewFlag 自动续费标记，0 表示默认状态 (用户未设置，即初始状态，用户开通了预付费不停服特权会进行自动续费)， 1 表示自动续费，2表示明确不自动续费(用户设置)
+     * @return AutoRenewFlag <p>自动续费标记，0 表示默认状态 (用户未设置，即初始状态，用户开通了预付费不停服特权会进行自动续费)， 1 表示自动续费，2表示明确不自动续费(用户设置)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAutoRenewFlag() {
@@ -827,9 +842,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Set 自动续费标记，0 表示默认状态 (用户未设置，即初始状态，用户开通了预付费不停服特权会进行自动续费)， 1 表示自动续费，2表示明确不自动续费(用户设置)
+     * Set <p>自动续费标记，0 表示默认状态 (用户未设置，即初始状态，用户开通了预付费不停服特权会进行自动续费)， 1 表示自动续费，2表示明确不自动续费(用户设置)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AutoRenewFlag 自动续费标记，0 表示默认状态 (用户未设置，即初始状态，用户开通了预付费不停服特权会进行自动续费)， 1 表示自动续费，2表示明确不自动续费(用户设置)
+     * @param AutoRenewFlag <p>自动续费标记，0 表示默认状态 (用户未设置，即初始状态，用户开通了预付费不停服特权会进行自动续费)， 1 表示自动续费，2表示明确不自动续费(用户设置)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
@@ -837,9 +852,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get 集群的默认 COS 存储桶
+     * Get <p>集群的默认 COS 存储桶</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DefaultCOSBucket 集群的默认 COS 存储桶
+     * @return DefaultCOSBucket <p>集群的默认 COS 存储桶</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDefaultCOSBucket() {
@@ -847,9 +862,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Set 集群的默认 COS 存储桶
+     * Set <p>集群的默认 COS 存储桶</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DefaultCOSBucket 集群的默认 COS 存储桶
+     * @param DefaultCOSBucket <p>集群的默认 COS 存储桶</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefaultCOSBucket(String DefaultCOSBucket) {
@@ -857,9 +872,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get 集群的CLS 日志集 LogSet
+     * Get <p>集群的CLS 日志集 LogSet</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CLSLogSet 集群的CLS 日志集 LogSet
+     * @return CLSLogSet <p>集群的CLS 日志集 LogSet</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCLSLogSet() {
@@ -867,9 +882,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Set 集群的CLS 日志集 LogSet
+     * Set <p>集群的CLS 日志集 LogSet</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CLSLogSet 集群的CLS 日志集 LogSet
+     * @param CLSLogSet <p>集群的CLS 日志集 LogSet</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCLSLogSet(String CLSLogSet) {
@@ -877,9 +892,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get 集群的CLS 日志主题 TopicId
+     * Get <p>集群的CLS 日志主题 TopicId</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CLSTopicId 集群的CLS 日志主题 TopicId
+     * @return CLSTopicId <p>集群的CLS 日志主题 TopicId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCLSTopicId() {
@@ -887,9 +902,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Set 集群的CLS 日志主题 TopicId
+     * Set <p>集群的CLS 日志主题 TopicId</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CLSTopicId 集群的CLS 日志主题 TopicId
+     * @param CLSTopicId <p>集群的CLS 日志主题 TopicId</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCLSTopicId(String CLSTopicId) {
@@ -897,9 +912,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get 集群的CLS 日志集  名字
+     * Get <p>集群的CLS 日志集  名字</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CLSLogName 集群的CLS 日志集  名字
+     * @return CLSLogName <p>集群的CLS 日志集  名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCLSLogName() {
@@ -907,9 +922,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Set 集群的CLS 日志集  名字
+     * Set <p>集群的CLS 日志集  名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CLSLogName 集群的CLS 日志集  名字
+     * @param CLSLogName <p>集群的CLS 日志集  名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCLSLogName(String CLSLogName) {
@@ -917,9 +932,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get 集群的CLS 日志主题  名字
+     * Get <p>集群的CLS 日志主题  名字</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CLSTopicName 集群的CLS 日志主题  名字
+     * @return CLSTopicName <p>集群的CLS 日志主题  名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCLSTopicName() {
@@ -927,9 +942,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Set 集群的CLS 日志主题  名字
+     * Set <p>集群的CLS 日志主题  名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CLSTopicName 集群的CLS 日志主题  名字
+     * @param CLSTopicName <p>集群的CLS 日志主题  名字</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCLSTopicName(String CLSTopicName) {
@@ -937,9 +952,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get 集群的版本信息
+     * Get <p>集群的版本信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Version 集群的版本信息
+     * @return Version <p>集群的版本信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ClusterVersion getVersion() {
@@ -947,9 +962,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Set 集群的版本信息
+     * Set <p>集群的版本信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Version 集群的版本信息
+     * @param Version <p>集群的版本信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersion(ClusterVersion Version) {
@@ -957,9 +972,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get 细粒度资源下的空闲CU
+     * Get <p>细粒度资源下的空闲CU</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FreeCu 细粒度资源下的空闲CU
+     * @return FreeCu <p>细粒度资源下的空闲CU</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getFreeCu() {
@@ -967,9 +982,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Set 细粒度资源下的空闲CU
+     * Set <p>细粒度资源下的空闲CU</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FreeCu 细粒度资源下的空闲CU
+     * @param FreeCu <p>细粒度资源下的空闲CU</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFreeCu(Float FreeCu) {
@@ -977,9 +992,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get 集群的默认日志采集配置
+     * Get <p>集群的默认日志采集配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DefaultLogCollectConf 集群的默认日志采集配置
+     * @return DefaultLogCollectConf <p>集群的默认日志采集配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDefaultLogCollectConf() {
@@ -987,9 +1002,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Set 集群的默认日志采集配置
+     * Set <p>集群的默认日志采集配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DefaultLogCollectConf 集群的默认日志采集配置
+     * @param DefaultLogCollectConf <p>集群的默认日志采集配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefaultLogCollectConf(String DefaultLogCollectConf) {
@@ -997,9 +1012,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get 取值：0-没有设置，1-已设置，2-不允许设置
+     * Get <p>取值：0-没有设置，1-已设置，2-不允许设置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CustomizedDNSEnabled 取值：0-没有设置，1-已设置，2-不允许设置
+     * @return CustomizedDNSEnabled <p>取值：0-没有设置，1-已设置，2-不允许设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCustomizedDNSEnabled() {
@@ -1007,9 +1022,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Set 取值：0-没有设置，1-已设置，2-不允许设置
+     * Set <p>取值：0-没有设置，1-已设置，2-不允许设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CustomizedDNSEnabled 取值：0-没有设置，1-已设置，2-不允许设置
+     * @param CustomizedDNSEnabled <p>取值：0-没有设置，1-已设置，2-不允许设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCustomizedDNSEnabled(Long CustomizedDNSEnabled) {
@@ -1017,9 +1032,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get 空间信息
+     * Get <p>空间信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Correlations 空间信息
+     * @return Correlations <p>空间信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public WorkSpaceClusterItem [] getCorrelations() {
@@ -1027,9 +1042,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Set 空间信息
+     * Set <p>空间信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Correlations 空间信息
+     * @param Correlations <p>空间信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCorrelations(WorkSpaceClusterItem [] Correlations) {
@@ -1037,9 +1052,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get 运行CU
+     * Get <p>运行CU</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RunningCu 运行CU
+     * @return RunningCu <p>运行CU</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getRunningCu() {
@@ -1047,9 +1062,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Set 运行CU
+     * Set <p>运行CU</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RunningCu 运行CU
+     * @param RunningCu <p>运行CU</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunningCu(Float RunningCu) {
@@ -1057,9 +1072,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get 0 后付费,1 预付费
+     * Get <p>0 后付费,1 预付费</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PayMode 0 后付费,1 预付费
+     * @return PayMode <p>0 后付费,1 预付费</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPayMode() {
@@ -1067,9 +1082,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Set 0 后付费,1 预付费
+     * Set <p>0 后付费,1 预付费</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PayMode 0 后付费,1 预付费
+     * @param PayMode <p>0 后付费,1 预付费</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayMode(Long PayMode) {
@@ -1077,9 +1092,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get 前端区分 集群是否需要2CU逻辑 因为历史集群 变配不需要, default 1  新集群都需要
+     * Get <p>前端区分 集群是否需要2CU逻辑 因为历史集群 变配不需要, default 1  新集群都需要</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsNeedManageNode 前端区分 集群是否需要2CU逻辑 因为历史集群 变配不需要, default 1  新集群都需要
+     * @return IsNeedManageNode <p>前端区分 集群是否需要2CU逻辑 因为历史集群 变配不需要, default 1  新集群都需要</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsNeedManageNode() {
@@ -1087,9 +1102,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Set 前端区分 集群是否需要2CU逻辑 因为历史集群 变配不需要, default 1  新集群都需要
+     * Set <p>前端区分 集群是否需要2CU逻辑 因为历史集群 变配不需要, default 1  新集群都需要</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsNeedManageNode 前端区分 集群是否需要2CU逻辑 因为历史集群 变配不需要, default 1  新集群都需要
+     * @param IsNeedManageNode <p>前端区分 集群是否需要2CU逻辑 因为历史集群 变配不需要, default 1  新集群都需要</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsNeedManageNode(Long IsNeedManageNode) {
@@ -1097,9 +1112,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get session集群信息
+     * Get <p>session集群信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClusterSessions session集群信息
+     * @return ClusterSessions <p>session集群信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ClusterSession [] getClusterSessions() {
@@ -1107,9 +1122,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Set session集群信息
+     * Set <p>session集群信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClusterSessions session集群信息
+     * @param ClusterSessions <p>session集群信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterSessions(ClusterSession [] ClusterSessions) {
@@ -1117,9 +1132,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get V3版本 = 2
+     * Get <p>V3版本 = 2</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ArchGeneration V3版本 = 2
+     * @return ArchGeneration <p>V3版本 = 2</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getArchGeneration() {
@@ -1127,9 +1142,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Set V3版本 = 2
+     * Set <p>V3版本 = 2</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ArchGeneration V3版本 = 2
+     * @param ArchGeneration <p>V3版本 = 2</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setArchGeneration(Long ArchGeneration) {
@@ -1137,9 +1152,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get 0:TKE, 1:EKS
+     * Get <p>0:TKE, 1:EKS</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClusterType 0:TKE, 1:EKS
+     * @return ClusterType <p>0:TKE, 1:EKS</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getClusterType() {
@@ -1147,9 +1162,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Set 0:TKE, 1:EKS
+     * Set <p>0:TKE, 1:EKS</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClusterType 0:TKE, 1:EKS
+     * @param ClusterType <p>0:TKE, 1:EKS</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterType(Long ClusterType) {
@@ -1157,9 +1172,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get 订单信息
+     * Get <p>订单信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Orders 订单信息
+     * @return Orders <p>订单信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Order [] getOrders() {
@@ -1167,9 +1182,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Set 订单信息
+     * Set <p>订单信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Orders 订单信息
+     * @param Orders <p>订单信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrders(Order [] Orders) {
@@ -1177,9 +1192,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get Gateway信息
+     * Get <p>Gateway信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SqlGateways Gateway信息
+     * @return SqlGateways <p>Gateway信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SqlGatewayItem [] getSqlGateways() {
@@ -1187,9 +1202,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Set Gateway信息
+     * Set <p>Gateway信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SqlGateways Gateway信息
+     * @param SqlGateways <p>Gateway信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSqlGateways(SqlGatewayItem [] SqlGateways) {
@@ -1197,9 +1212,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get 0 公网访问 // 1 内网访问	
+     * Get <p>0 公网访问 // 1 内网访问</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WebUIType 0 公网访问 // 1 内网访问	
+     * @return WebUIType <p>0 公网访问 // 1 内网访问</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWebUIType() {
@@ -1207,9 +1222,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Set 0 公网访问 // 1 内网访问	
+     * Set <p>0 公网访问 // 1 内网访问</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WebUIType 0 公网访问 // 1 内网访问	
+     * @param WebUIType <p>0 公网访问 // 1 内网访问</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWebUIType(Long WebUIType) {
@@ -1217,9 +1232,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get 2 独享集群
+     * Get <p>2 独享集群</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Type 2 独享集群
+     * @return Type <p>2 独享集群</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getType() {
@@ -1227,9 +1242,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Set 2 独享集群
+     * Set <p>2 独享集群</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Type 2 独享集群
+     * @param Type <p>2 独享集群</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(Long Type) {
@@ -1237,9 +1252,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get 子eks集群
+     * Get <p>子eks集群</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SubEks 子eks集群
+     * @return SubEks <p>子eks集群</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SubEks getSubEks() {
@@ -1247,9 +1262,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Set 子eks集群
+     * Set <p>子eks集群</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SubEks 子eks集群
+     * @param SubEks <p>子eks集群</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubEks(SubEks SubEks) {
@@ -1257,9 +1272,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get 上级集群
+     * Get <p>上级集群</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AgentSerialId 上级集群
+     * @return AgentSerialId <p>上级集群</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAgentSerialId() {
@@ -1267,9 +1282,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Set 上级集群
+     * Set <p>上级集群</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AgentSerialId 上级集群
+     * @param AgentSerialId <p>上级集群</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAgentSerialId(String AgentSerialId) {
@@ -1277,9 +1292,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get 资源类型
+     * Get <p>资源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceType 资源类型
+     * @return ResourceType <p>资源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getResourceType() {
@@ -1287,9 +1302,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Set 资源类型
+     * Set <p>资源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceType 资源类型
+     * @param ResourceType <p>资源类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceType(Long ResourceType) {
@@ -1297,9 +1312,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get 集群类型
+     * Get <p>集群类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BillingResourceMode 集群类型
+     * @return BillingResourceMode <p>集群类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBillingResourceMode() {
@@ -1307,9 +1322,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Set 集群类型
+     * Set <p>集群类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BillingResourceMode 集群类型
+     * @param BillingResourceMode <p>集群类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBillingResourceMode(String BillingResourceMode) {
@@ -1317,9 +1332,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get Cu比例
+     * Get <p>Cu比例</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MemRatio Cu比例
+     * @return MemRatio <p>Cu比例</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMemRatio() {
@@ -1327,9 +1342,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Set Cu比例
+     * Set <p>Cu比例</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MemRatio Cu比例
+     * @param MemRatio <p>Cu比例</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemRatio(Long MemRatio) {
@@ -1337,89 +1352,89 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get 是否开启跨租户弹性网卡 
-     * @return CrossTenantEniMode 是否开启跨租户弹性网卡
+     * Get <p>是否开启跨租户弹性网卡</p> 
+     * @return CrossTenantEniMode <p>是否开启跨租户弹性网卡</p>
      */
     public Long getCrossTenantEniMode() {
         return this.CrossTenantEniMode;
     }
 
     /**
-     * Set 是否开启跨租户弹性网卡
-     * @param CrossTenantEniMode 是否开启跨租户弹性网卡
+     * Set <p>是否开启跨租户弹性网卡</p>
+     * @param CrossTenantEniMode <p>是否开启跨租户弹性网卡</p>
      */
     public void setCrossTenantEniMode(Long CrossTenantEniMode) {
         this.CrossTenantEniMode = CrossTenantEniMode;
     }
 
     /**
-     * Get 总的CPU 
-     * @return TotalCpu 总的CPU
+     * Get <p>总的CPU</p> 
+     * @return TotalCpu <p>总的CPU</p>
      */
     public Float getTotalCpu() {
         return this.TotalCpu;
     }
 
     /**
-     * Set 总的CPU
-     * @param TotalCpu 总的CPU
+     * Set <p>总的CPU</p>
+     * @param TotalCpu <p>总的CPU</p>
      */
     public void setTotalCpu(Float TotalCpu) {
         this.TotalCpu = TotalCpu;
     }
 
     /**
-     * Get 总的内存 
-     * @return TotalMem 总的内存
+     * Get <p>总的内存</p> 
+     * @return TotalMem <p>总的内存</p>
      */
     public Float getTotalMem() {
         return this.TotalMem;
     }
 
     /**
-     * Set 总的内存
-     * @param TotalMem 总的内存
+     * Set <p>总的内存</p>
+     * @param TotalMem <p>总的内存</p>
      */
     public void setTotalMem(Float TotalMem) {
         this.TotalMem = TotalMem;
     }
 
     /**
-     * Get 运行的CPU 
-     * @return RunningCpu 运行的CPU
+     * Get <p>运行的CPU</p> 
+     * @return RunningCpu <p>运行的CPU</p>
      */
     public Float getRunningCpu() {
         return this.RunningCpu;
     }
 
     /**
-     * Set 运行的CPU
-     * @param RunningCpu 运行的CPU
+     * Set <p>运行的CPU</p>
+     * @param RunningCpu <p>运行的CPU</p>
      */
     public void setRunningCpu(Float RunningCpu) {
         this.RunningCpu = RunningCpu;
     }
 
     /**
-     * Get 运行的内存 
-     * @return RunningMem 运行的内存
+     * Get <p>运行的内存</p> 
+     * @return RunningMem <p>运行的内存</p>
      */
     public Float getRunningMem() {
         return this.RunningMem;
     }
 
     /**
-     * Set 运行的内存
-     * @param RunningMem 运行的内存
+     * Set <p>运行的内存</p>
+     * @param RunningMem <p>运行的内存</p>
      */
     public void setRunningMem(Float RunningMem) {
         this.RunningMem = RunningMem;
     }
 
     /**
-     * Get setats集群
+     * Get <p>setats集群</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Setats setats集群
+     * @return Setats <p>setats集群</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Setats getSetats() {
@@ -1427,9 +1442,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Set setats集群
+     * Set <p>setats集群</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Setats setats集群
+     * @param Setats <p>setats集群</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSetats(Setats Setats) {
@@ -1437,9 +1452,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get []
+     * Get <p>[]</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Yarns []
+     * @return Yarns <p>[]</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public HadoopYarnItem [] getYarns() {
@@ -1447,9 +1462,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Set []
+     * Set <p>[]</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Yarns []
+     * @param Yarns <p>[]</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setYarns(HadoopYarnItem [] Yarns) {
@@ -1457,9 +1472,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get 0 单可用区 1多可用区
+     * Get <p>0 单可用区 1多可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DeploymentMode 0 单可用区 1多可用区
+     * @return DeploymentMode <p>0 单可用区 1多可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDeploymentMode() {
@@ -1467,9 +1482,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Set 0 单可用区 1多可用区
+     * Set <p>0 单可用区 1多可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DeploymentMode 0 单可用区 1多可用区
+     * @param DeploymentMode <p>0 单可用区 1多可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeploymentMode(Long DeploymentMode) {
@@ -1477,9 +1492,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get 备可用区
+     * Get <p>备可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SlaveZones 备可用区
+     * @return SlaveZones <p>备可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SlaveZone [] getSlaveZones() {
@@ -1487,9 +1502,9 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Set 备可用区
+     * Set <p>备可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SlaveZones 备可用区
+     * @param SlaveZones <p>备可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSlaveZones(SlaveZone [] SlaveZones) {
@@ -1497,25 +1512,25 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Get 集群的日志cos存储 
-     * @return LogCOSBucket 集群的日志cos存储
+     * Get <p>集群的日志cos存储</p> 
+     * @return LogCOSBucket <p>集群的日志cos存储</p>
      */
     public String getLogCOSBucket() {
         return this.LogCOSBucket;
     }
 
     /**
-     * Set 集群的日志cos存储
-     * @param LogCOSBucket 集群的日志cos存储
+     * Set <p>集群的日志cos存储</p>
+     * @param LogCOSBucket <p>集群的日志cos存储</p>
      */
     public void setLogCOSBucket(String LogCOSBucket) {
         this.LogCOSBucket = LogCOSBucket;
     }
 
     /**
-     * Get Cdc集群Id
+     * Get <p>Cdc集群Id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CdcId Cdc集群Id
+     * @return CdcId <p>Cdc集群Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCdcId() {
@@ -1523,13 +1538,49 @@ public class Cluster extends AbstractModel {
     }
 
     /**
-     * Set Cdc集群Id
+     * Set <p>Cdc集群Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CdcId Cdc集群Id
+     * @param CdcId <p>Cdc集群Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCdcId(String CdcId) {
         this.CdcId = CdcId;
+    }
+
+    /**
+     * Get <p>集群进度</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterProcessMsg <p>集群进度</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClusterProcessMsg() {
+        return this.ClusterProcessMsg;
+    }
+
+    /**
+     * Set <p>集群进度</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterProcessMsg <p>集群进度</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterProcessMsg(String ClusterProcessMsg) {
+        this.ClusterProcessMsg = ClusterProcessMsg;
+    }
+
+    /**
+     * Get <p>单作业最大可配置 CU 数</p> 
+     * @return MaxCuPerJob <p>单作业最大可配置 CU 数</p>
+     */
+    public Long getMaxCuPerJob() {
+        return this.MaxCuPerJob;
+    }
+
+    /**
+     * Set <p>单作业最大可配置 CU 数</p>
+     * @param MaxCuPerJob <p>单作业最大可配置 CU 数</p>
+     */
+    public void setMaxCuPerJob(Long MaxCuPerJob) {
+        this.MaxCuPerJob = MaxCuPerJob;
     }
 
     public Cluster() {
@@ -1738,6 +1789,12 @@ public class Cluster extends AbstractModel {
         if (source.CdcId != null) {
             this.CdcId = new String(source.CdcId);
         }
+        if (source.ClusterProcessMsg != null) {
+            this.ClusterProcessMsg = new String(source.ClusterProcessMsg);
+        }
+        if (source.MaxCuPerJob != null) {
+            this.MaxCuPerJob = new Long(source.MaxCuPerJob);
+        }
     }
 
 
@@ -1803,6 +1860,8 @@ public class Cluster extends AbstractModel {
         this.setParamArrayObj(map, prefix + "SlaveZones.", this.SlaveZones);
         this.setParamSimple(map, prefix + "LogCOSBucket", this.LogCOSBucket);
         this.setParamSimple(map, prefix + "CdcId", this.CdcId);
+        this.setParamSimple(map, prefix + "ClusterProcessMsg", this.ClusterProcessMsg);
+        this.setParamSimple(map, prefix + "MaxCuPerJob", this.MaxCuPerJob);
 
     }
 }

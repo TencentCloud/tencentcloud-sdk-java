@@ -24,349 +24,299 @@ import java.util.HashMap;
 public class BackupInfo extends AbstractModel {
 
     /**
-    * 实例ID。
+    * <p>实例ID。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 备份方式。
-- 0：自动备份。
-- 1：手动备份。
+    * <p>备份方式。</p><ul><li>0：自动备份。</li><li>1：手动备份。</li></ul>
     */
     @SerializedName("BackupType")
     @Expose
     private Long BackupType;
 
     /**
-    * 备份文件名称。
+    * <p>备份文件名称。</p>
     */
     @SerializedName("BackupName")
     @Expose
     private String BackupName;
 
     /**
-    * 备份任务备注信息。
+    * <p>备份任务备注信息。</p>
     */
     @SerializedName("BackupDesc")
     @Expose
     private String BackupDesc;
 
     /**
-    * 备份文件大小，单位：KB。
+    * <p>备份文件大小，单位：KB。</p>
     */
     @SerializedName("BackupSize")
     @Expose
     private Long BackupSize;
 
     /**
-    * 备份开始时间。
+    * <p>备份开始时间。</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 备份结束时间。
+    * <p>备份结束时间。</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 备份状态。
-- 1：备份中。
-- 2：备份成功。
+    * <p>备份状态。</p><ul><li>1：备份中。</li><li>2：备份成功。</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 备份方式。
-- 0：逻辑备份。
-- 1：物理备份。
-- 3：快照备份。
-**说明:**
-- 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
-- 实例开通存储加密，则备份方式不能为物理备份。
+    * <p>备份方式。</p><ul><li>0：逻辑备份。</li><li>1：物理备份。</li><li>3：快照备份。<br><strong>说明:</strong></li><li>通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。</li><li>实例开通存储加密，则备份方式不能为物理备份。</li></ul>
     */
     @SerializedName("BackupMethod")
     @Expose
     private Long BackupMethod;
 
     /**
-    * 备份记录 ID。
+    * <p>备份记录 ID。</p>
     */
     @SerializedName("BackId")
     @Expose
     private Long BackId;
 
     /**
-    * 备份删除时间。
+    * <p>备份删除时间。</p>
     */
     @SerializedName("DeleteTime")
     @Expose
     private String DeleteTime;
 
     /**
-    * 异地备份地域。
+    * <p>异地备份地域。</p>
     */
     @SerializedName("BackupRegion")
     @Expose
     private String BackupRegion;
 
     /**
-    * 备份支持的回档时间。
+    * <p>备份支持的回档时间。</p>
     */
     @SerializedName("RestoreTime")
     @Expose
     private String RestoreTime;
 
     /**
-     * Get 实例ID。 
-     * @return InstanceId 实例ID。
+     * Get <p>实例ID。</p> 
+     * @return InstanceId <p>实例ID。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID。
-     * @param InstanceId 实例ID。
+     * Set <p>实例ID。</p>
+     * @param InstanceId <p>实例ID。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 备份方式。
-- 0：自动备份。
-- 1：手动备份。 
-     * @return BackupType 备份方式。
-- 0：自动备份。
-- 1：手动备份。
+     * Get <p>备份方式。</p><ul><li>0：自动备份。</li><li>1：手动备份。</li></ul> 
+     * @return BackupType <p>备份方式。</p><ul><li>0：自动备份。</li><li>1：手动备份。</li></ul>
      */
     public Long getBackupType() {
         return this.BackupType;
     }
 
     /**
-     * Set 备份方式。
-- 0：自动备份。
-- 1：手动备份。
-     * @param BackupType 备份方式。
-- 0：自动备份。
-- 1：手动备份。
+     * Set <p>备份方式。</p><ul><li>0：自动备份。</li><li>1：手动备份。</li></ul>
+     * @param BackupType <p>备份方式。</p><ul><li>0：自动备份。</li><li>1：手动备份。</li></ul>
      */
     public void setBackupType(Long BackupType) {
         this.BackupType = BackupType;
     }
 
     /**
-     * Get 备份文件名称。 
-     * @return BackupName 备份文件名称。
+     * Get <p>备份文件名称。</p> 
+     * @return BackupName <p>备份文件名称。</p>
      */
     public String getBackupName() {
         return this.BackupName;
     }
 
     /**
-     * Set 备份文件名称。
-     * @param BackupName 备份文件名称。
+     * Set <p>备份文件名称。</p>
+     * @param BackupName <p>备份文件名称。</p>
      */
     public void setBackupName(String BackupName) {
         this.BackupName = BackupName;
     }
 
     /**
-     * Get 备份任务备注信息。 
-     * @return BackupDesc 备份任务备注信息。
+     * Get <p>备份任务备注信息。</p> 
+     * @return BackupDesc <p>备份任务备注信息。</p>
      */
     public String getBackupDesc() {
         return this.BackupDesc;
     }
 
     /**
-     * Set 备份任务备注信息。
-     * @param BackupDesc 备份任务备注信息。
+     * Set <p>备份任务备注信息。</p>
+     * @param BackupDesc <p>备份任务备注信息。</p>
      */
     public void setBackupDesc(String BackupDesc) {
         this.BackupDesc = BackupDesc;
     }
 
     /**
-     * Get 备份文件大小，单位：KB。 
-     * @return BackupSize 备份文件大小，单位：KB。
+     * Get <p>备份文件大小，单位：KB。</p> 
+     * @return BackupSize <p>备份文件大小，单位：KB。</p>
      */
     public Long getBackupSize() {
         return this.BackupSize;
     }
 
     /**
-     * Set 备份文件大小，单位：KB。
-     * @param BackupSize 备份文件大小，单位：KB。
+     * Set <p>备份文件大小，单位：KB。</p>
+     * @param BackupSize <p>备份文件大小，单位：KB。</p>
      */
     public void setBackupSize(Long BackupSize) {
         this.BackupSize = BackupSize;
     }
 
     /**
-     * Get 备份开始时间。 
-     * @return StartTime 备份开始时间。
+     * Get <p>备份开始时间。</p> 
+     * @return StartTime <p>备份开始时间。</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 备份开始时间。
-     * @param StartTime 备份开始时间。
+     * Set <p>备份开始时间。</p>
+     * @param StartTime <p>备份开始时间。</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 备份结束时间。 
-     * @return EndTime 备份结束时间。
+     * Get <p>备份结束时间。</p> 
+     * @return EndTime <p>备份结束时间。</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 备份结束时间。
-     * @param EndTime 备份结束时间。
+     * Set <p>备份结束时间。</p>
+     * @param EndTime <p>备份结束时间。</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 备份状态。
-- 1：备份中。
-- 2：备份成功。 
-     * @return Status 备份状态。
-- 1：备份中。
-- 2：备份成功。
+     * Get <p>备份状态。</p><ul><li>1：备份中。</li><li>2：备份成功。</li></ul> 
+     * @return Status <p>备份状态。</p><ul><li>1：备份中。</li><li>2：备份成功。</li></ul>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 备份状态。
-- 1：备份中。
-- 2：备份成功。
-     * @param Status 备份状态。
-- 1：备份中。
-- 2：备份成功。
+     * Set <p>备份状态。</p><ul><li>1：备份中。</li><li>2：备份成功。</li></ul>
+     * @param Status <p>备份状态。</p><ul><li>1：备份中。</li><li>2：备份成功。</li></ul>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 备份方式。
-- 0：逻辑备份。
-- 1：物理备份。
-- 3：快照备份。
-**说明:**
-- 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
-- 实例开通存储加密，则备份方式不能为物理备份。 
-     * @return BackupMethod 备份方式。
-- 0：逻辑备份。
-- 1：物理备份。
-- 3：快照备份。
-**说明:**
-- 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
-- 实例开通存储加密，则备份方式不能为物理备份。
+     * Get <p>备份方式。</p><ul><li>0：逻辑备份。</li><li>1：物理备份。</li><li>3：快照备份。<br><strong>说明:</strong></li><li>通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。</li><li>实例开通存储加密，则备份方式不能为物理备份。</li></ul> 
+     * @return BackupMethod <p>备份方式。</p><ul><li>0：逻辑备份。</li><li>1：物理备份。</li><li>3：快照备份。<br><strong>说明:</strong></li><li>通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。</li><li>实例开通存储加密，则备份方式不能为物理备份。</li></ul>
      */
     public Long getBackupMethod() {
         return this.BackupMethod;
     }
 
     /**
-     * Set 备份方式。
-- 0：逻辑备份。
-- 1：物理备份。
-- 3：快照备份。
-**说明:**
-- 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
-- 实例开通存储加密，则备份方式不能为物理备份。
-     * @param BackupMethod 备份方式。
-- 0：逻辑备份。
-- 1：物理备份。
-- 3：快照备份。
-**说明:**
-- 通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。
-- 实例开通存储加密，则备份方式不能为物理备份。
+     * Set <p>备份方式。</p><ul><li>0：逻辑备份。</li><li>1：物理备份。</li><li>3：快照备份。<br><strong>说明:</strong></li><li>通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。</li><li>实例开通存储加密，则备份方式不能为物理备份。</li></ul>
+     * @param BackupMethod <p>备份方式。</p><ul><li>0：逻辑备份。</li><li>1：物理备份。</li><li>3：快照备份。<br><strong>说明:</strong></li><li>通用版实例支持逻辑备份与物理备份。云盘版实例支持物理备份与快照备份，暂不支持逻辑备份。</li><li>实例开通存储加密，则备份方式不能为物理备份。</li></ul>
      */
     public void setBackupMethod(Long BackupMethod) {
         this.BackupMethod = BackupMethod;
     }
 
     /**
-     * Get 备份记录 ID。 
-     * @return BackId 备份记录 ID。
+     * Get <p>备份记录 ID。</p> 
+     * @return BackId <p>备份记录 ID。</p>
      */
     public Long getBackId() {
         return this.BackId;
     }
 
     /**
-     * Set 备份记录 ID。
-     * @param BackId 备份记录 ID。
+     * Set <p>备份记录 ID。</p>
+     * @param BackId <p>备份记录 ID。</p>
      */
     public void setBackId(Long BackId) {
         this.BackId = BackId;
     }
 
     /**
-     * Get 备份删除时间。 
-     * @return DeleteTime 备份删除时间。
+     * Get <p>备份删除时间。</p> 
+     * @return DeleteTime <p>备份删除时间。</p>
      */
     public String getDeleteTime() {
         return this.DeleteTime;
     }
 
     /**
-     * Set 备份删除时间。
-     * @param DeleteTime 备份删除时间。
+     * Set <p>备份删除时间。</p>
+     * @param DeleteTime <p>备份删除时间。</p>
      */
     public void setDeleteTime(String DeleteTime) {
         this.DeleteTime = DeleteTime;
     }
 
     /**
-     * Get 异地备份地域。 
-     * @return BackupRegion 异地备份地域。
+     * Get <p>异地备份地域。</p> 
+     * @return BackupRegion <p>异地备份地域。</p>
      */
     public String getBackupRegion() {
         return this.BackupRegion;
     }
 
     /**
-     * Set 异地备份地域。
-     * @param BackupRegion 异地备份地域。
+     * Set <p>异地备份地域。</p>
+     * @param BackupRegion <p>异地备份地域。</p>
      */
     public void setBackupRegion(String BackupRegion) {
         this.BackupRegion = BackupRegion;
     }
 
     /**
-     * Get 备份支持的回档时间。 
-     * @return RestoreTime 备份支持的回档时间。
+     * Get <p>备份支持的回档时间。</p> 
+     * @return RestoreTime <p>备份支持的回档时间。</p>
      */
     public String getRestoreTime() {
         return this.RestoreTime;
     }
 
     /**
-     * Set 备份支持的回档时间。
-     * @param RestoreTime 备份支持的回档时间。
+     * Set <p>备份支持的回档时间。</p>
+     * @param RestoreTime <p>备份支持的回档时间。</p>
      */
     public void setRestoreTime(String RestoreTime) {
         this.RestoreTime = RestoreTime;

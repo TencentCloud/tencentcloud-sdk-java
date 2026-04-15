@@ -148,6 +148,13 @@ public class Setats extends AbstractModel {
     private String ImageVersion;
 
     /**
+    * <p>类型：0 公网，1 内网</p><p>枚举值：</p><ul><li>0： 公网</li><li>1： 内网</li></ul><p>默认值：0</p>
+    */
+    @SerializedName("WebUIType")
+    @Expose
+    private Long WebUIType;
+
+    /**
      * Get <p>setats serialId</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SetatsSerialId <p>setats serialId</p>
@@ -451,6 +458,22 @@ public class Setats extends AbstractModel {
         this.ImageVersion = ImageVersion;
     }
 
+    /**
+     * Get <p>类型：0 公网，1 内网</p><p>枚举值：</p><ul><li>0： 公网</li><li>1： 内网</li></ul><p>默认值：0</p> 
+     * @return WebUIType <p>类型：0 公网，1 内网</p><p>枚举值：</p><ul><li>0： 公网</li><li>1： 内网</li></ul><p>默认值：0</p>
+     */
+    public Long getWebUIType() {
+        return this.WebUIType;
+    }
+
+    /**
+     * Set <p>类型：0 公网，1 内网</p><p>枚举值：</p><ul><li>0： 公网</li><li>1： 内网</li></ul><p>默认值：0</p>
+     * @param WebUIType <p>类型：0 公网，1 内网</p><p>枚举值：</p><ul><li>0： 公网</li><li>1： 内网</li></ul><p>默认值：0</p>
+     */
+    public void setWebUIType(Long WebUIType) {
+        this.WebUIType = WebUIType;
+    }
+
     public Setats() {
     }
 
@@ -510,6 +533,9 @@ public class Setats extends AbstractModel {
         if (source.ImageVersion != null) {
             this.ImageVersion = new String(source.ImageVersion);
         }
+        if (source.WebUIType != null) {
+            this.WebUIType = new Long(source.WebUIType);
+        }
     }
 
 
@@ -533,6 +559,7 @@ public class Setats extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "SetatsUiUrl", this.SetatsUiUrl);
         this.setParamSimple(map, prefix + "ImageVersion", this.ImageVersion);
+        this.setParamSimple(map, prefix + "WebUIType", this.WebUIType);
 
     }
 }

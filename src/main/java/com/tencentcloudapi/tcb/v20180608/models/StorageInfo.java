@@ -24,100 +24,118 @@ import java.util.HashMap;
 public class StorageInfo extends AbstractModel {
 
     /**
-    * 资源所属地域。
-当前支持ap-shanghai
+    * <p>资源所属地域。<br>当前支持ap-shanghai</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 桶名，存储资源的唯一标识
+    * <p>桶名，存储资源的唯一标识</p>
     */
     @SerializedName("Bucket")
     @Expose
     private String Bucket;
 
     /**
-    * cdn 域名
+    * <p>cdn 域名</p>
     */
     @SerializedName("CdnDomain")
     @Expose
     private String CdnDomain;
 
     /**
-    * 资源所属用户的腾讯云appId
+    * <p>资源所属用户的腾讯云appId</p>
     */
     @SerializedName("AppId")
     @Expose
     private String AppId;
 
     /**
-     * Get 资源所属地域。
-当前支持ap-shanghai 
-     * @return Region 资源所属地域。
-当前支持ap-shanghai
+    * <p>外部存储介质相关信息。</p>
+    */
+    @SerializedName("ExternalStorage")
+    @Expose
+    private ExternalStorage ExternalStorage;
+
+    /**
+     * Get <p>资源所属地域。<br>当前支持ap-shanghai</p> 
+     * @return Region <p>资源所属地域。<br>当前支持ap-shanghai</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 资源所属地域。
-当前支持ap-shanghai
-     * @param Region 资源所属地域。
-当前支持ap-shanghai
+     * Set <p>资源所属地域。<br>当前支持ap-shanghai</p>
+     * @param Region <p>资源所属地域。<br>当前支持ap-shanghai</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 桶名，存储资源的唯一标识 
-     * @return Bucket 桶名，存储资源的唯一标识
+     * Get <p>桶名，存储资源的唯一标识</p> 
+     * @return Bucket <p>桶名，存储资源的唯一标识</p>
      */
     public String getBucket() {
         return this.Bucket;
     }
 
     /**
-     * Set 桶名，存储资源的唯一标识
-     * @param Bucket 桶名，存储资源的唯一标识
+     * Set <p>桶名，存储资源的唯一标识</p>
+     * @param Bucket <p>桶名，存储资源的唯一标识</p>
      */
     public void setBucket(String Bucket) {
         this.Bucket = Bucket;
     }
 
     /**
-     * Get cdn 域名 
-     * @return CdnDomain cdn 域名
+     * Get <p>cdn 域名</p> 
+     * @return CdnDomain <p>cdn 域名</p>
      */
     public String getCdnDomain() {
         return this.CdnDomain;
     }
 
     /**
-     * Set cdn 域名
-     * @param CdnDomain cdn 域名
+     * Set <p>cdn 域名</p>
+     * @param CdnDomain <p>cdn 域名</p>
      */
     public void setCdnDomain(String CdnDomain) {
         this.CdnDomain = CdnDomain;
     }
 
     /**
-     * Get 资源所属用户的腾讯云appId 
-     * @return AppId 资源所属用户的腾讯云appId
+     * Get <p>资源所属用户的腾讯云appId</p> 
+     * @return AppId <p>资源所属用户的腾讯云appId</p>
      */
     public String getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 资源所属用户的腾讯云appId
-     * @param AppId 资源所属用户的腾讯云appId
+     * Set <p>资源所属用户的腾讯云appId</p>
+     * @param AppId <p>资源所属用户的腾讯云appId</p>
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
+    }
+
+    /**
+     * Get <p>外部存储介质相关信息。</p> 
+     * @return ExternalStorage <p>外部存储介质相关信息。</p>
+     */
+    public ExternalStorage getExternalStorage() {
+        return this.ExternalStorage;
+    }
+
+    /**
+     * Set <p>外部存储介质相关信息。</p>
+     * @param ExternalStorage <p>外部存储介质相关信息。</p>
+     */
+    public void setExternalStorage(ExternalStorage ExternalStorage) {
+        this.ExternalStorage = ExternalStorage;
     }
 
     public StorageInfo() {
@@ -140,6 +158,9 @@ public class StorageInfo extends AbstractModel {
         if (source.AppId != null) {
             this.AppId = new String(source.AppId);
         }
+        if (source.ExternalStorage != null) {
+            this.ExternalStorage = new ExternalStorage(source.ExternalStorage);
+        }
     }
 
 
@@ -151,6 +172,7 @@ public class StorageInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Bucket", this.Bucket);
         this.setParamSimple(map, prefix + "CdnDomain", this.CdnDomain);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
+        this.setParamObj(map, prefix + "ExternalStorage.", this.ExternalStorage);
 
     }
 }

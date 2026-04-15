@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class ListAlarmPolicyRequest extends AbstractModel {
 
     /**
-    * 页码
+    * <p>页码</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get 页码 
-     * @return Offset 页码
+    * <p>每页展示数量</p>
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+     * Get <p>页码</p> 
+     * @return Offset <p>页码</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 页码
-     * @param Offset 页码
+     * Set <p>页码</p>
+     * @param Offset <p>页码</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
+    }
+
+    /**
+     * Get <p>每页展示数量</p> 
+     * @return Limit <p>每页展示数量</p>
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set <p>每页展示数量</p>
+     * @param Limit <p>每页展示数量</p>
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
     }
 
     public ListAlarmPolicyRequest() {
@@ -57,6 +80,9 @@ public class ListAlarmPolicyRequest extends AbstractModel {
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class ListAlarmPolicyRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
 
     }
 }

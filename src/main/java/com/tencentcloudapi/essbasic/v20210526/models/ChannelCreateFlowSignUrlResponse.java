@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ChannelCreateFlowSignUrlResponse extends AbstractModel {
 
     /**
-    * 签署人签署链接信息
+    * <p>签署人签署链接信息</p>
     */
     @SerializedName("FlowApproverUrlInfos")
     @Expose
@@ -38,16 +38,16 @@ public class ChannelCreateFlowSignUrlResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 签署人签署链接信息 
-     * @return FlowApproverUrlInfos 签署人签署链接信息
+     * Get <p>签署人签署链接信息</p> 
+     * @return FlowApproverUrlInfos <p>签署人签署链接信息</p>
      */
     public FlowApproverUrlInfo [] getFlowApproverUrlInfos() {
         return this.FlowApproverUrlInfos;
     }
 
     /**
-     * Set 签署人签署链接信息
-     * @param FlowApproverUrlInfos 签署人签署链接信息
+     * Set <p>签署人签署链接信息</p>
+     * @param FlowApproverUrlInfos <p>签署人签署链接信息</p>
      */
     public void setFlowApproverUrlInfos(FlowApproverUrlInfo [] FlowApproverUrlInfos) {
         this.FlowApproverUrlInfos = FlowApproverUrlInfos;

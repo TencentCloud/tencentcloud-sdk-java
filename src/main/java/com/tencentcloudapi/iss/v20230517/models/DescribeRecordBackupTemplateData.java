@@ -24,164 +24,187 @@ import java.util.HashMap;
 public class DescribeRecordBackupTemplateData extends AbstractModel {
 
     /**
-    * 模板ID
+    * <p>模板ID</p>
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-    * 模板名称
+    * <p>模板名称</p>
     */
     @SerializedName("TemplateName")
     @Expose
     private String TemplateName;
 
     /**
-    * 上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
+    * <p>上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）</p>
     */
     @SerializedName("TimeSections")
     @Expose
     private RecordTemplateTimeSections [] TimeSections;
 
     /**
-    * 录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
+    * <p>录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）</p>
     */
     @SerializedName("DevTimeSections")
     @Expose
     private RecordTemplateTimeSections [] DevTimeSections;
 
     /**
-    * 上云倍速（支持1，2，4倍速）
+    * <p>上云倍速（支持1，2，4倍速）</p>
     */
     @SerializedName("Scale")
     @Expose
     private Long Scale;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateAt")
     @Expose
     private String CreateAt;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
     */
     @SerializedName("UpdateAt")
     @Expose
     private String UpdateAt;
 
     /**
-     * Get 模板ID 
-     * @return TemplateId 模板ID
+    * <p>周期偏移量，默认1，表示拉取昨天的设备录像，0表示取去今天的设备录像，3表示拉取前天的设备录像</p>
+    */
+    @SerializedName("DayOffset")
+    @Expose
+    private Long DayOffset;
+
+    /**
+     * Get <p>模板ID</p> 
+     * @return TemplateId <p>模板ID</p>
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模板ID
-     * @param TemplateId 模板ID
+     * Set <p>模板ID</p>
+     * @param TemplateId <p>模板ID</p>
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 模板名称 
-     * @return TemplateName 模板名称
+     * Get <p>模板名称</p> 
+     * @return TemplateName <p>模板名称</p>
      */
     public String getTemplateName() {
         return this.TemplateName;
     }
 
     /**
-     * Set 模板名称
-     * @param TemplateName 模板名称
+     * Set <p>模板名称</p>
+     * @param TemplateName <p>模板名称</p>
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;
     }
 
     /**
-     * Get 上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟） 
-     * @return TimeSections 上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
+     * Get <p>上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）</p> 
+     * @return TimeSections <p>上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）</p>
      */
     public RecordTemplateTimeSections [] getTimeSections() {
         return this.TimeSections;
     }
 
     /**
-     * Set 上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-     * @param TimeSections 上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
+     * Set <p>上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）</p>
+     * @param TimeSections <p>上云时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）</p>
      */
     public void setTimeSections(RecordTemplateTimeSections [] TimeSections) {
         this.TimeSections = TimeSections;
     }
 
     /**
-     * Get 录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟） 
-     * @return DevTimeSections 录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
+     * Get <p>录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）</p> 
+     * @return DevTimeSections <p>录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）</p>
      */
     public RecordTemplateTimeSections [] getDevTimeSections() {
         return this.DevTimeSections;
     }
 
     /**
-     * Set 录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
-     * @param DevTimeSections 录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）
+     * Set <p>录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）</p>
+     * @param DevTimeSections <p>录像时间段（按周进行设置，支持一天设置多个时间段，每个时间段不小于10分钟）</p>
      */
     public void setDevTimeSections(RecordTemplateTimeSections [] DevTimeSections) {
         this.DevTimeSections = DevTimeSections;
     }
 
     /**
-     * Get 上云倍速（支持1，2，4倍速） 
-     * @return Scale 上云倍速（支持1，2，4倍速）
+     * Get <p>上云倍速（支持1，2，4倍速）</p> 
+     * @return Scale <p>上云倍速（支持1，2，4倍速）</p>
      */
     public Long getScale() {
         return this.Scale;
     }
 
     /**
-     * Set 上云倍速（支持1，2，4倍速）
-     * @param Scale 上云倍速（支持1，2，4倍速）
+     * Set <p>上云倍速（支持1，2，4倍速）</p>
+     * @param Scale <p>上云倍速（支持1，2，4倍速）</p>
      */
     public void setScale(Long Scale) {
         this.Scale = Scale;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateAt 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateAt <p>创建时间</p>
      */
     public String getCreateAt() {
         return this.CreateAt;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateAt 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateAt <p>创建时间</p>
      */
     public void setCreateAt(String CreateAt) {
         this.CreateAt = CreateAt;
     }
 
     /**
-     * Get 更新时间 
-     * @return UpdateAt 更新时间
+     * Get <p>更新时间</p> 
+     * @return UpdateAt <p>更新时间</p>
      */
     public String getUpdateAt() {
         return this.UpdateAt;
     }
 
     /**
-     * Set 更新时间
-     * @param UpdateAt 更新时间
+     * Set <p>更新时间</p>
+     * @param UpdateAt <p>更新时间</p>
      */
     public void setUpdateAt(String UpdateAt) {
         this.UpdateAt = UpdateAt;
+    }
+
+    /**
+     * Get <p>周期偏移量，默认1，表示拉取昨天的设备录像，0表示取去今天的设备录像，3表示拉取前天的设备录像</p> 
+     * @return DayOffset <p>周期偏移量，默认1，表示拉取昨天的设备录像，0表示取去今天的设备录像，3表示拉取前天的设备录像</p>
+     */
+    public Long getDayOffset() {
+        return this.DayOffset;
+    }
+
+    /**
+     * Set <p>周期偏移量，默认1，表示拉取昨天的设备录像，0表示取去今天的设备录像，3表示拉取前天的设备录像</p>
+     * @param DayOffset <p>周期偏移量，默认1，表示拉取昨天的设备录像，0表示取去今天的设备录像，3表示拉取前天的设备录像</p>
+     */
+    public void setDayOffset(Long DayOffset) {
+        this.DayOffset = DayOffset;
     }
 
     public DescribeRecordBackupTemplateData() {
@@ -219,6 +242,9 @@ public class DescribeRecordBackupTemplateData extends AbstractModel {
         if (source.UpdateAt != null) {
             this.UpdateAt = new String(source.UpdateAt);
         }
+        if (source.DayOffset != null) {
+            this.DayOffset = new Long(source.DayOffset);
+        }
     }
 
 
@@ -233,6 +259,7 @@ public class DescribeRecordBackupTemplateData extends AbstractModel {
         this.setParamSimple(map, prefix + "Scale", this.Scale);
         this.setParamSimple(map, prefix + "CreateAt", this.CreateAt);
         this.setParamSimple(map, prefix + "UpdateAt", this.UpdateAt);
+        this.setParamSimple(map, prefix + "DayOffset", this.DayOffset);
 
     }
 }

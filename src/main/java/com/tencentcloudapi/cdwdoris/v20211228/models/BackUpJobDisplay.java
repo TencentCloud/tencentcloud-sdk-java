@@ -227,6 +227,13 @@ public class BackUpJobDisplay extends AbstractModel {
     private Boolean EncryptionEnabled;
 
     /**
+    * 任务调度id
+    */
+    @SerializedName("ScheduleId")
+    @Expose
+    private Long ScheduleId;
+
+    /**
      * Get 备份实例id 
      * @return JobId 备份实例id
      */
@@ -690,6 +697,22 @@ public class BackUpJobDisplay extends AbstractModel {
         this.EncryptionEnabled = EncryptionEnabled;
     }
 
+    /**
+     * Get 任务调度id 
+     * @return ScheduleId 任务调度id
+     */
+    public Long getScheduleId() {
+        return this.ScheduleId;
+    }
+
+    /**
+     * Set 任务调度id
+     * @param ScheduleId 任务调度id
+     */
+    public void setScheduleId(Long ScheduleId) {
+        this.ScheduleId = ScheduleId;
+    }
+
     public BackUpJobDisplay() {
     }
 
@@ -785,6 +808,9 @@ public class BackUpJobDisplay extends AbstractModel {
         if (source.EncryptionEnabled != null) {
             this.EncryptionEnabled = new Boolean(source.EncryptionEnabled);
         }
+        if (source.ScheduleId != null) {
+            this.ScheduleId = new Long(source.ScheduleId);
+        }
     }
 
 
@@ -821,6 +847,7 @@ public class BackUpJobDisplay extends AbstractModel {
         this.setParamObj(map, prefix + "BucketEncryption.", this.BucketEncryption);
         this.setParamSimple(map, prefix + "Encryption", this.Encryption);
         this.setParamSimple(map, prefix + "EncryptionEnabled", this.EncryptionEnabled);
+        this.setParamSimple(map, prefix + "ScheduleId", this.ScheduleId);
 
     }
 }

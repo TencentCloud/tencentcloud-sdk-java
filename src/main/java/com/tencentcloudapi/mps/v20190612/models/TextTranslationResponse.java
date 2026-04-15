@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class TextTranslationResponse extends AbstractModel {
 
     /**
-    * 翻译后的文本
+    * <p>翻译后的文本</p>
     */
     @SerializedName("TargetText")
     @Expose
     private String TargetText;
 
     /**
-    * 源语言，详见入参Source
+    * <p>源语言，详见入参Source</p>
     */
     @SerializedName("Source")
     @Expose
     private String Source;
 
     /**
-    * 目标语言，详见入参Target
+    * <p>目标语言，详见入参Target</p>
     */
     @SerializedName("Target")
     @Expose
@@ -52,48 +52,48 @@ public class TextTranslationResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 翻译后的文本 
-     * @return TargetText 翻译后的文本
+     * Get <p>翻译后的文本</p> 
+     * @return TargetText <p>翻译后的文本</p>
      */
     public String getTargetText() {
         return this.TargetText;
     }
 
     /**
-     * Set 翻译后的文本
-     * @param TargetText 翻译后的文本
+     * Set <p>翻译后的文本</p>
+     * @param TargetText <p>翻译后的文本</p>
      */
     public void setTargetText(String TargetText) {
         this.TargetText = TargetText;
     }
 
     /**
-     * Get 源语言，详见入参Source 
-     * @return Source 源语言，详见入参Source
+     * Get <p>源语言，详见入参Source</p> 
+     * @return Source <p>源语言，详见入参Source</p>
      */
     public String getSource() {
         return this.Source;
     }
 
     /**
-     * Set 源语言，详见入参Source
-     * @param Source 源语言，详见入参Source
+     * Set <p>源语言，详见入参Source</p>
+     * @param Source <p>源语言，详见入参Source</p>
      */
     public void setSource(String Source) {
         this.Source = Source;
     }
 
     /**
-     * Get 目标语言，详见入参Target 
-     * @return Target 目标语言，详见入参Target
+     * Get <p>目标语言，详见入参Target</p> 
+     * @return Target <p>目标语言，详见入参Target</p>
      */
     public String getTarget() {
         return this.Target;
     }
 
     /**
-     * Set 目标语言，详见入参Target
-     * @param Target 目标语言，详见入参Target
+     * Set <p>目标语言，详见入参Target</p>
+     * @param Target <p>目标语言，详见入参Target</p>
      */
     public void setTarget(String Target) {
         this.Target = Target;

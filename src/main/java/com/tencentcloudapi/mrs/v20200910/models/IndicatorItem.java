@@ -24,348 +24,375 @@ import java.util.HashMap;
 public class IndicatorItem extends AbstractModel {
 
     /**
-    * 英文缩写
+    * <p>英文缩写</p>
     */
     @SerializedName("Code")
     @Expose
     private String Code;
 
     /**
-    * 标准缩写
+    * <p>标准缩写</p>
     */
     @SerializedName("Scode")
     @Expose
     private String Scode;
 
     /**
-    * 项目名称
+    * <p>项目名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 标准名
+    * <p>标准名</p>
     */
     @SerializedName("Sname")
     @Expose
     private String Sname;
 
     /**
-    * 结果
+    * <p>结果</p>
     */
     @SerializedName("Result")
     @Expose
     private String Result;
 
     /**
-    * 单位
+    * <p>单位</p>
     */
     @SerializedName("Unit")
     @Expose
     private String Unit;
 
     /**
-    * 参考范围
+    * <p>参考范围</p>
     */
     @SerializedName("Range")
     @Expose
     private String Range;
 
     /**
-    * 上下箭头
+    * <p>上下箭头</p>
     */
     @SerializedName("Arrow")
     @Expose
     private String Arrow;
 
     /**
-    * 是否正常
+    * <p>是否正常</p>
     */
     @SerializedName("Normal")
     @Expose
     private Boolean Normal;
 
     /**
-    * 项目原文
+    * <p>项目原文</p>
     */
     @SerializedName("ItemString")
     @Expose
     private String ItemString;
 
     /**
-    * 指标项ID
+    * <p>指标项ID</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 指标项坐标位置
+    * <p>指标项坐标位置</p>
     */
     @SerializedName("Coords")
     @Expose
     private Coordinate Coords;
 
     /**
-    * 推测结果是否异常
+    * <p>推测结果是否异常</p>
     */
     @SerializedName("InferNormal")
     @Expose
     private String InferNormal;
 
     /**
-    * 标本
+    * <p>标本</p>
     */
     @SerializedName("Sample")
     @Expose
     private String Sample;
 
     /**
-    * 检测方法
+    * <p>检测方法</p>
     */
     @SerializedName("Method")
     @Expose
     private String Method;
 
     /**
-     * Get 英文缩写 
-     * @return Code 英文缩写
+    * <p>检验指标项坐标信息</p>
+    */
+    @SerializedName("ItemCoords")
+    @Expose
+    private ItemCoordinate ItemCoords;
+
+    /**
+     * Get <p>英文缩写</p> 
+     * @return Code <p>英文缩写</p>
      */
     public String getCode() {
         return this.Code;
     }
 
     /**
-     * Set 英文缩写
-     * @param Code 英文缩写
+     * Set <p>英文缩写</p>
+     * @param Code <p>英文缩写</p>
      */
     public void setCode(String Code) {
         this.Code = Code;
     }
 
     /**
-     * Get 标准缩写 
-     * @return Scode 标准缩写
+     * Get <p>标准缩写</p> 
+     * @return Scode <p>标准缩写</p>
      */
     public String getScode() {
         return this.Scode;
     }
 
     /**
-     * Set 标准缩写
-     * @param Scode 标准缩写
+     * Set <p>标准缩写</p>
+     * @param Scode <p>标准缩写</p>
      */
     public void setScode(String Scode) {
         this.Scode = Scode;
     }
 
     /**
-     * Get 项目名称 
-     * @return Name 项目名称
+     * Get <p>项目名称</p> 
+     * @return Name <p>项目名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 项目名称
-     * @param Name 项目名称
+     * Set <p>项目名称</p>
+     * @param Name <p>项目名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 标准名 
-     * @return Sname 标准名
+     * Get <p>标准名</p> 
+     * @return Sname <p>标准名</p>
      */
     public String getSname() {
         return this.Sname;
     }
 
     /**
-     * Set 标准名
-     * @param Sname 标准名
+     * Set <p>标准名</p>
+     * @param Sname <p>标准名</p>
      */
     public void setSname(String Sname) {
         this.Sname = Sname;
     }
 
     /**
-     * Get 结果 
-     * @return Result 结果
+     * Get <p>结果</p> 
+     * @return Result <p>结果</p>
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set 结果
-     * @param Result 结果
+     * Set <p>结果</p>
+     * @param Result <p>结果</p>
      */
     public void setResult(String Result) {
         this.Result = Result;
     }
 
     /**
-     * Get 单位 
-     * @return Unit 单位
+     * Get <p>单位</p> 
+     * @return Unit <p>单位</p>
      */
     public String getUnit() {
         return this.Unit;
     }
 
     /**
-     * Set 单位
-     * @param Unit 单位
+     * Set <p>单位</p>
+     * @param Unit <p>单位</p>
      */
     public void setUnit(String Unit) {
         this.Unit = Unit;
     }
 
     /**
-     * Get 参考范围 
-     * @return Range 参考范围
+     * Get <p>参考范围</p> 
+     * @return Range <p>参考范围</p>
      */
     public String getRange() {
         return this.Range;
     }
 
     /**
-     * Set 参考范围
-     * @param Range 参考范围
+     * Set <p>参考范围</p>
+     * @param Range <p>参考范围</p>
      */
     public void setRange(String Range) {
         this.Range = Range;
     }
 
     /**
-     * Get 上下箭头 
-     * @return Arrow 上下箭头
+     * Get <p>上下箭头</p> 
+     * @return Arrow <p>上下箭头</p>
      */
     public String getArrow() {
         return this.Arrow;
     }
 
     /**
-     * Set 上下箭头
-     * @param Arrow 上下箭头
+     * Set <p>上下箭头</p>
+     * @param Arrow <p>上下箭头</p>
      */
     public void setArrow(String Arrow) {
         this.Arrow = Arrow;
     }
 
     /**
-     * Get 是否正常 
-     * @return Normal 是否正常
+     * Get <p>是否正常</p> 
+     * @return Normal <p>是否正常</p>
      */
     public Boolean getNormal() {
         return this.Normal;
     }
 
     /**
-     * Set 是否正常
-     * @param Normal 是否正常
+     * Set <p>是否正常</p>
+     * @param Normal <p>是否正常</p>
      */
     public void setNormal(Boolean Normal) {
         this.Normal = Normal;
     }
 
     /**
-     * Get 项目原文 
-     * @return ItemString 项目原文
+     * Get <p>项目原文</p> 
+     * @return ItemString <p>项目原文</p>
      */
     public String getItemString() {
         return this.ItemString;
     }
 
     /**
-     * Set 项目原文
-     * @param ItemString 项目原文
+     * Set <p>项目原文</p>
+     * @param ItemString <p>项目原文</p>
      */
     public void setItemString(String ItemString) {
         this.ItemString = ItemString;
     }
 
     /**
-     * Get 指标项ID 
-     * @return Id 指标项ID
+     * Get <p>指标项ID</p> 
+     * @return Id <p>指标项ID</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 指标项ID
-     * @param Id 指标项ID
+     * Set <p>指标项ID</p>
+     * @param Id <p>指标项ID</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 指标项坐标位置 
-     * @return Coords 指标项坐标位置
+     * Get <p>指标项坐标位置</p> 
+     * @return Coords <p>指标项坐标位置</p>
+     * @deprecated
      */
+    @Deprecated
     public Coordinate getCoords() {
         return this.Coords;
     }
 
     /**
-     * Set 指标项坐标位置
-     * @param Coords 指标项坐标位置
+     * Set <p>指标项坐标位置</p>
+     * @param Coords <p>指标项坐标位置</p>
+     * @deprecated
      */
+    @Deprecated
     public void setCoords(Coordinate Coords) {
         this.Coords = Coords;
     }
 
     /**
-     * Get 推测结果是否异常 
-     * @return InferNormal 推测结果是否异常
+     * Get <p>推测结果是否异常</p> 
+     * @return InferNormal <p>推测结果是否异常</p>
      */
     public String getInferNormal() {
         return this.InferNormal;
     }
 
     /**
-     * Set 推测结果是否异常
-     * @param InferNormal 推测结果是否异常
+     * Set <p>推测结果是否异常</p>
+     * @param InferNormal <p>推测结果是否异常</p>
      */
     public void setInferNormal(String InferNormal) {
         this.InferNormal = InferNormal;
     }
 
     /**
-     * Get 标本 
-     * @return Sample 标本
+     * Get <p>标本</p> 
+     * @return Sample <p>标本</p>
      */
     public String getSample() {
         return this.Sample;
     }
 
     /**
-     * Set 标本
-     * @param Sample 标本
+     * Set <p>标本</p>
+     * @param Sample <p>标本</p>
      */
     public void setSample(String Sample) {
         this.Sample = Sample;
     }
 
     /**
-     * Get 检测方法 
-     * @return Method 检测方法
+     * Get <p>检测方法</p> 
+     * @return Method <p>检测方法</p>
      */
     public String getMethod() {
         return this.Method;
     }
 
     /**
-     * Set 检测方法
-     * @param Method 检测方法
+     * Set <p>检测方法</p>
+     * @param Method <p>检测方法</p>
      */
     public void setMethod(String Method) {
         this.Method = Method;
+    }
+
+    /**
+     * Get <p>检验指标项坐标信息</p> 
+     * @return ItemCoords <p>检验指标项坐标信息</p>
+     */
+    public ItemCoordinate getItemCoords() {
+        return this.ItemCoords;
+    }
+
+    /**
+     * Set <p>检验指标项坐标信息</p>
+     * @param ItemCoords <p>检验指标项坐标信息</p>
+     */
+    public void setItemCoords(ItemCoordinate ItemCoords) {
+        this.ItemCoords = ItemCoords;
     }
 
     public IndicatorItem() {
@@ -421,6 +448,9 @@ public class IndicatorItem extends AbstractModel {
         if (source.Method != null) {
             this.Method = new String(source.Method);
         }
+        if (source.ItemCoords != null) {
+            this.ItemCoords = new ItemCoordinate(source.ItemCoords);
+        }
     }
 
 
@@ -443,6 +473,7 @@ public class IndicatorItem extends AbstractModel {
         this.setParamSimple(map, prefix + "InferNormal", this.InferNormal);
         this.setParamSimple(map, prefix + "Sample", this.Sample);
         this.setParamSimple(map, prefix + "Method", this.Method);
+        this.setParamObj(map, prefix + "ItemCoords.", this.ItemCoords);
 
     }
 }
