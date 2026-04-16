@@ -21,10 +21,10 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TextToSpeechRequest extends AbstractModel {
+public class AsyncTextToSpeechRequest extends AbstractModel {
 
     /**
-    * 需要转语音的文字内容，长度范围：[1, 255]
+    * 需要转语音的文字内容，最大允许50000字符，注意 1汉字=2字符
     */
     @SerializedName("Text")
     @Expose
@@ -52,33 +52,11 @@ public class TextToSpeechRequest extends AbstractModel {
     private AudioFormat AudioFormat;
 
     /**
-    * TTS的API密钥
-    */
-    @SerializedName("APIKey")
-    @Expose
-    private String APIKey;
-
-    /**
     * TTS的模型，当前固定为：flow_01_turbo
     */
     @SerializedName("Model")
     @Expose
     private String Model;
-
-    /**
-    *  需要合成的语言（ISO 639-1），默认自动识别，支持的语言如下：
-- zh（中文）
-- en（英文）
-- yue（粤语）
-- ja（日语）
-- ko（韩语）
-- ar（阿拉伯语）
-- id（印尼语）
-- th（泰语）
-    */
-    @SerializedName("Language")
-    @Expose
-    private String Language;
 
     /**
     * 多音字/生僻字发音纠正词典条目。指定特定词语在本次请求中使用的发音。
@@ -95,16 +73,23 @@ public class TextToSpeechRequest extends AbstractModel {
     private Long AlignmentMode;
 
     /**
-     * Get 需要转语音的文字内容，长度范围：[1, 255] 
-     * @return Text 需要转语音的文字内容，长度范围：[1, 255]
+    * 需要合成的语言（ISO 639-1），默认自动识别，支持的语言如下：  zh（中文） en（英文） yue（粤语） ja（日语） ko（韩语） ar（阿拉伯语） id（印尼语） th（泰语）
+    */
+    @SerializedName("LanguageCode")
+    @Expose
+    private String LanguageCode;
+
+    /**
+     * Get 需要转语音的文字内容，最大允许50000字符，注意 1汉字=2字符 
+     * @return Text 需要转语音的文字内容，最大允许50000字符，注意 1汉字=2字符
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set 需要转语音的文字内容，长度范围：[1, 255]
-     * @param Text 需要转语音的文字内容，长度范围：[1, 255]
+     * Set 需要转语音的文字内容，最大允许50000字符，注意 1汉字=2字符
+     * @param Text 需要转语音的文字内容，最大允许50000字符，注意 1汉字=2字符
      */
     public void setText(String Text) {
         this.Text = Text;
@@ -159,26 +144,6 @@ public class TextToSpeechRequest extends AbstractModel {
     }
 
     /**
-     * Get TTS的API密钥 
-     * @return APIKey TTS的API密钥
-     * @deprecated
-     */
-    @Deprecated
-    public String getAPIKey() {
-        return this.APIKey;
-    }
-
-    /**
-     * Set TTS的API密钥
-     * @param APIKey TTS的API密钥
-     * @deprecated
-     */
-    @Deprecated
-    public void setAPIKey(String APIKey) {
-        this.APIKey = APIKey;
-    }
-
-    /**
      * Get TTS的模型，当前固定为：flow_01_turbo 
      * @return Model TTS的模型，当前固定为：flow_01_turbo
      */
@@ -192,54 +157,6 @@ public class TextToSpeechRequest extends AbstractModel {
      */
     public void setModel(String Model) {
         this.Model = Model;
-    }
-
-    /**
-     * Get  需要合成的语言（ISO 639-1），默认自动识别，支持的语言如下：
-- zh（中文）
-- en（英文）
-- yue（粤语）
-- ja（日语）
-- ko（韩语）
-- ar（阿拉伯语）
-- id（印尼语）
-- th（泰语） 
-     * @return Language  需要合成的语言（ISO 639-1），默认自动识别，支持的语言如下：
-- zh（中文）
-- en（英文）
-- yue（粤语）
-- ja（日语）
-- ko（韩语）
-- ar（阿拉伯语）
-- id（印尼语）
-- th（泰语）
-     */
-    public String getLanguage() {
-        return this.Language;
-    }
-
-    /**
-     * Set  需要合成的语言（ISO 639-1），默认自动识别，支持的语言如下：
-- zh（中文）
-- en（英文）
-- yue（粤语）
-- ja（日语）
-- ko（韩语）
-- ar（阿拉伯语）
-- id（印尼语）
-- th（泰语）
-     * @param Language  需要合成的语言（ISO 639-1），默认自动识别，支持的语言如下：
-- zh（中文）
-- en（英文）
-- yue（粤语）
-- ja（日语）
-- ko（韩语）
-- ar（阿拉伯语）
-- id（印尼语）
-- th（泰语）
-     */
-    public void setLanguage(String Language) {
-        this.Language = Language;
     }
 
     /**
@@ -274,14 +191,30 @@ public class TextToSpeechRequest extends AbstractModel {
         this.AlignmentMode = AlignmentMode;
     }
 
-    public TextToSpeechRequest() {
+    /**
+     * Get 需要合成的语言（ISO 639-1），默认自动识别，支持的语言如下：  zh（中文） en（英文） yue（粤语） ja（日语） ko（韩语） ar（阿拉伯语） id（印尼语） th（泰语） 
+     * @return LanguageCode 需要合成的语言（ISO 639-1），默认自动识别，支持的语言如下：  zh（中文） en（英文） yue（粤语） ja（日语） ko（韩语） ar（阿拉伯语） id（印尼语） th（泰语）
+     */
+    public String getLanguageCode() {
+        return this.LanguageCode;
+    }
+
+    /**
+     * Set 需要合成的语言（ISO 639-1），默认自动识别，支持的语言如下：  zh（中文） en（英文） yue（粤语） ja（日语） ko（韩语） ar（阿拉伯语） id（印尼语） th（泰语）
+     * @param LanguageCode 需要合成的语言（ISO 639-1），默认自动识别，支持的语言如下：  zh（中文） en（英文） yue（粤语） ja（日语） ko（韩语） ar（阿拉伯语） id（印尼语） th（泰语）
+     */
+    public void setLanguageCode(String LanguageCode) {
+        this.LanguageCode = LanguageCode;
+    }
+
+    public AsyncTextToSpeechRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public TextToSpeechRequest(TextToSpeechRequest source) {
+    public AsyncTextToSpeechRequest(AsyncTextToSpeechRequest source) {
         if (source.Text != null) {
             this.Text = new String(source.Text);
         }
@@ -294,14 +227,8 @@ public class TextToSpeechRequest extends AbstractModel {
         if (source.AudioFormat != null) {
             this.AudioFormat = new AudioFormat(source.AudioFormat);
         }
-        if (source.APIKey != null) {
-            this.APIKey = new String(source.APIKey);
-        }
         if (source.Model != null) {
             this.Model = new String(source.Model);
-        }
-        if (source.Language != null) {
-            this.Language = new String(source.Language);
         }
         if (source.PronunciationDict != null) {
             this.PronunciationDict = new PronunciationDict[source.PronunciationDict.length];
@@ -311,6 +238,9 @@ public class TextToSpeechRequest extends AbstractModel {
         }
         if (source.AlignmentMode != null) {
             this.AlignmentMode = new Long(source.AlignmentMode);
+        }
+        if (source.LanguageCode != null) {
+            this.LanguageCode = new String(source.LanguageCode);
         }
     }
 
@@ -323,11 +253,10 @@ public class TextToSpeechRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Voice.", this.Voice);
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
         this.setParamObj(map, prefix + "AudioFormat.", this.AudioFormat);
-        this.setParamSimple(map, prefix + "APIKey", this.APIKey);
         this.setParamSimple(map, prefix + "Model", this.Model);
-        this.setParamSimple(map, prefix + "Language", this.Language);
         this.setParamArrayObj(map, prefix + "PronunciationDict.", this.PronunciationDict);
         this.setParamSimple(map, prefix + "AlignmentMode", this.AlignmentMode);
+        this.setParamSimple(map, prefix + "LanguageCode", this.LanguageCode);
 
     }
 }

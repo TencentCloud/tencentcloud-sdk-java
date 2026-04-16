@@ -31,6 +31,13 @@ public class LogConfiguration extends AbstractModel {
     private CLSConfig CLSConfig;
 
     /**
+    * <p>日志源配置</p>
+    */
+    @SerializedName("LogSources")
+    @Expose
+    private LogSources LogSources;
+
+    /**
      * Get <p>日志推送CLS的配置。</p> 
      * @return CLSConfig <p>日志推送CLS的配置。</p>
      */
@@ -46,6 +53,22 @@ public class LogConfiguration extends AbstractModel {
         this.CLSConfig = CLSConfig;
     }
 
+    /**
+     * Get <p>日志源配置</p> 
+     * @return LogSources <p>日志源配置</p>
+     */
+    public LogSources getLogSources() {
+        return this.LogSources;
+    }
+
+    /**
+     * Set <p>日志源配置</p>
+     * @param LogSources <p>日志源配置</p>
+     */
+    public void setLogSources(LogSources LogSources) {
+        this.LogSources = LogSources;
+    }
+
     public LogConfiguration() {
     }
 
@@ -57,6 +80,9 @@ public class LogConfiguration extends AbstractModel {
         if (source.CLSConfig != null) {
             this.CLSConfig = new CLSConfig(source.CLSConfig);
         }
+        if (source.LogSources != null) {
+            this.LogSources = new LogSources(source.LogSources);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class LogConfiguration extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "CLSConfig.", this.CLSConfig);
+        this.setParamObj(map, prefix + "LogSources.", this.LogSources);
 
     }
 }

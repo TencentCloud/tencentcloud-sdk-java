@@ -24,368 +24,368 @@ import java.util.HashMap;
 public class DescribeMigrationJobsRequest extends AbstractModel {
 
     /**
-    * 数据迁移任务ID，如：dts-amm1jw5q
+    * <p>数据迁移任务ID，如：dts-amm1jw5q</p>
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-    * 数据迁移任务名称
+    * <p>数据迁移任务名称</p>
     */
     @SerializedName("JobName")
     @Expose
     private String JobName;
 
     /**
-    * 数据迁移任务状态，可取值包括：created(创建完成)、checking(校验中)、checkPass(校验通过)、checkNotPass(校验不通过)、readyRun(准备运行)、running(任务运行中)、readyComplete(准备完成)、success(任务成功)、failed(任务失败)、stopping(中止中)、completing(完成中)
+    * <p>数据迁移任务状态，可取值包括：created(创建完成)、checking(校验中)、checkPass(校验通过)、checkNotPass(校验不通过)、readyRun(准备运行)、running(任务运行中)、readyComplete(准备完成)、success(任务成功)、failed(任务失败)、stopping(中止中)、completing(完成中)</p>
     */
     @SerializedName("Status")
     @Expose
     private String [] Status;
 
     /**
-    * 源实例ID，格式如：cdb-c1nl9rpv
+    * <p>源实例ID，格式如：cdb-c1nl9rpv</p>
     */
     @SerializedName("SrcInstanceId")
     @Expose
     private String SrcInstanceId;
 
     /**
-    * 源实例地域，如：ap-guangzhou
+    * <p>源实例地域，如：ap-guangzhou</p>
     */
     @SerializedName("SrcRegion")
     @Expose
     private String SrcRegion;
 
     /**
-    * 源实例数据库类型，如：sqlserver,mysql,mongodb,redis,tendis,keewidb,clickhouse,cynosdbmysql,percona,tdsqlpercona,mariadb,tdsqlmysql,postgresql
+    * <p>源实例数据库类型，如：sqlserver,mysql,mongodb,redis,tendis,keewidb,clickhouse,cynosdbmysql,percona,tdsqlpercona,mariadb,tdsqlmysql,postgresql</p>
     */
     @SerializedName("SrcDatabaseType")
     @Expose
     private String [] SrcDatabaseType;
 
     /**
-    * 源实例接入类型，值包括：extranet(外网)、vpncloud(云vpn接入的实例)、dcg(专线接入的实例)、ccn(云联网接入的实例)、cdb(云上cdb实例)、cvm(cvm自建实例)
+    * <p>源实例接入类型，值包括：extranet(外网)、vpncloud(云vpn接入的实例)、dcg(专线接入的实例)、ccn(云联网接入的实例)、cdb(云上cdb实例)、cvm(cvm自建实例)</p>
     */
     @SerializedName("SrcAccessType")
     @Expose
     private String [] SrcAccessType;
 
     /**
-    * 目标实例ID，格式如：cdb-c1nl9rpv
+    * <p>目标实例ID，格式如：cdb-c1nl9rpv</p>
     */
     @SerializedName("DstInstanceId")
     @Expose
     private String DstInstanceId;
 
     /**
-    * 目标实例地域，如：ap-guangzhou
+    * <p>目标实例地域，如：ap-guangzhou</p>
     */
     @SerializedName("DstRegion")
     @Expose
     private String DstRegion;
 
     /**
-    * 目标源实例数据库类型，如：sqlserver,mysql,mongodb,redis,tendis,keewidb,clickhouse,cynosdbmysql,percona,tdsqlpercona,mariadb,tdsqlmysql,postgresql
+    * <p>目标源实例数据库类型，如：sqlserver,mysql,mongodb,redis,tendis,keewidb,clickhouse,cynosdbmysql,percona,tdsqlpercona,mariadb,tdsqlmysql,postgresql</p>
     */
     @SerializedName("DstDatabaseType")
     @Expose
     private String [] DstDatabaseType;
 
     /**
-    * 目标实例接入类型，值包括：extranet(外网)、vpncloud(云vpn接入的实例)、dcg(专线接入的实例)、ccn(云联网接入的实例)、cdb(云上cdb实例)、cvm(cvm自建实例)
+    * <p>目标实例接入类型，值包括：extranet(外网)、vpncloud(云vpn接入的实例)、dcg(专线接入的实例)、ccn(云联网接入的实例)、cdb(云上cdb实例)、cvm(cvm自建实例)</p>
     */
     @SerializedName("DstAccessType")
     @Expose
     private String [] DstAccessType;
 
     /**
-    * 任务运行模式，值包括：immediate(立即运行)，timed(定时运行)
+    * <p>任务运行模式，值包括：immediate(立即运行)，timed(定时运行)</p>
     */
     @SerializedName("RunMode")
     @Expose
     private String RunMode;
 
     /**
-    * 排序方式，可能取值为asc、desc，默认按照创建时间倒序
+    * <p>排序方式，可能取值为asc、desc，默认按照创建时间倒序</p>
     */
     @SerializedName("OrderSeq")
     @Expose
     private String OrderSeq;
 
     /**
-    * 返回实例数量，默认20，有效区间[1,100]
+    * <p>返回实例数量，默认20，有效区间[1,100]</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量，默认为0
+    * <p>偏移量，默认为0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 标签过滤
+    * <p>标签过滤</p>
     */
     @SerializedName("TagFilters")
     @Expose
     private TagFilter [] TagFilters;
 
     /**
-     * Get 数据迁移任务ID，如：dts-amm1jw5q 
-     * @return JobId 数据迁移任务ID，如：dts-amm1jw5q
+     * Get <p>数据迁移任务ID，如：dts-amm1jw5q</p> 
+     * @return JobId <p>数据迁移任务ID，如：dts-amm1jw5q</p>
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 数据迁移任务ID，如：dts-amm1jw5q
-     * @param JobId 数据迁移任务ID，如：dts-amm1jw5q
+     * Set <p>数据迁移任务ID，如：dts-amm1jw5q</p>
+     * @param JobId <p>数据迁移任务ID，如：dts-amm1jw5q</p>
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get 数据迁移任务名称 
-     * @return JobName 数据迁移任务名称
+     * Get <p>数据迁移任务名称</p> 
+     * @return JobName <p>数据迁移任务名称</p>
      */
     public String getJobName() {
         return this.JobName;
     }
 
     /**
-     * Set 数据迁移任务名称
-     * @param JobName 数据迁移任务名称
+     * Set <p>数据迁移任务名称</p>
+     * @param JobName <p>数据迁移任务名称</p>
      */
     public void setJobName(String JobName) {
         this.JobName = JobName;
     }
 
     /**
-     * Get 数据迁移任务状态，可取值包括：created(创建完成)、checking(校验中)、checkPass(校验通过)、checkNotPass(校验不通过)、readyRun(准备运行)、running(任务运行中)、readyComplete(准备完成)、success(任务成功)、failed(任务失败)、stopping(中止中)、completing(完成中) 
-     * @return Status 数据迁移任务状态，可取值包括：created(创建完成)、checking(校验中)、checkPass(校验通过)、checkNotPass(校验不通过)、readyRun(准备运行)、running(任务运行中)、readyComplete(准备完成)、success(任务成功)、failed(任务失败)、stopping(中止中)、completing(完成中)
+     * Get <p>数据迁移任务状态，可取值包括：created(创建完成)、checking(校验中)、checkPass(校验通过)、checkNotPass(校验不通过)、readyRun(准备运行)、running(任务运行中)、readyComplete(准备完成)、success(任务成功)、failed(任务失败)、stopping(中止中)、completing(完成中)</p> 
+     * @return Status <p>数据迁移任务状态，可取值包括：created(创建完成)、checking(校验中)、checkPass(校验通过)、checkNotPass(校验不通过)、readyRun(准备运行)、running(任务运行中)、readyComplete(准备完成)、success(任务成功)、failed(任务失败)、stopping(中止中)、completing(完成中)</p>
      */
     public String [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 数据迁移任务状态，可取值包括：created(创建完成)、checking(校验中)、checkPass(校验通过)、checkNotPass(校验不通过)、readyRun(准备运行)、running(任务运行中)、readyComplete(准备完成)、success(任务成功)、failed(任务失败)、stopping(中止中)、completing(完成中)
-     * @param Status 数据迁移任务状态，可取值包括：created(创建完成)、checking(校验中)、checkPass(校验通过)、checkNotPass(校验不通过)、readyRun(准备运行)、running(任务运行中)、readyComplete(准备完成)、success(任务成功)、failed(任务失败)、stopping(中止中)、completing(完成中)
+     * Set <p>数据迁移任务状态，可取值包括：created(创建完成)、checking(校验中)、checkPass(校验通过)、checkNotPass(校验不通过)、readyRun(准备运行)、running(任务运行中)、readyComplete(准备完成)、success(任务成功)、failed(任务失败)、stopping(中止中)、completing(完成中)</p>
+     * @param Status <p>数据迁移任务状态，可取值包括：created(创建完成)、checking(校验中)、checkPass(校验通过)、checkNotPass(校验不通过)、readyRun(准备运行)、running(任务运行中)、readyComplete(准备完成)、success(任务成功)、failed(任务失败)、stopping(中止中)、completing(完成中)</p>
      */
     public void setStatus(String [] Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 源实例ID，格式如：cdb-c1nl9rpv 
-     * @return SrcInstanceId 源实例ID，格式如：cdb-c1nl9rpv
+     * Get <p>源实例ID，格式如：cdb-c1nl9rpv</p> 
+     * @return SrcInstanceId <p>源实例ID，格式如：cdb-c1nl9rpv</p>
      */
     public String getSrcInstanceId() {
         return this.SrcInstanceId;
     }
 
     /**
-     * Set 源实例ID，格式如：cdb-c1nl9rpv
-     * @param SrcInstanceId 源实例ID，格式如：cdb-c1nl9rpv
+     * Set <p>源实例ID，格式如：cdb-c1nl9rpv</p>
+     * @param SrcInstanceId <p>源实例ID，格式如：cdb-c1nl9rpv</p>
      */
     public void setSrcInstanceId(String SrcInstanceId) {
         this.SrcInstanceId = SrcInstanceId;
     }
 
     /**
-     * Get 源实例地域，如：ap-guangzhou 
-     * @return SrcRegion 源实例地域，如：ap-guangzhou
+     * Get <p>源实例地域，如：ap-guangzhou</p> 
+     * @return SrcRegion <p>源实例地域，如：ap-guangzhou</p>
      */
     public String getSrcRegion() {
         return this.SrcRegion;
     }
 
     /**
-     * Set 源实例地域，如：ap-guangzhou
-     * @param SrcRegion 源实例地域，如：ap-guangzhou
+     * Set <p>源实例地域，如：ap-guangzhou</p>
+     * @param SrcRegion <p>源实例地域，如：ap-guangzhou</p>
      */
     public void setSrcRegion(String SrcRegion) {
         this.SrcRegion = SrcRegion;
     }
 
     /**
-     * Get 源实例数据库类型，如：sqlserver,mysql,mongodb,redis,tendis,keewidb,clickhouse,cynosdbmysql,percona,tdsqlpercona,mariadb,tdsqlmysql,postgresql 
-     * @return SrcDatabaseType 源实例数据库类型，如：sqlserver,mysql,mongodb,redis,tendis,keewidb,clickhouse,cynosdbmysql,percona,tdsqlpercona,mariadb,tdsqlmysql,postgresql
+     * Get <p>源实例数据库类型，如：sqlserver,mysql,mongodb,redis,tendis,keewidb,clickhouse,cynosdbmysql,percona,tdsqlpercona,mariadb,tdsqlmysql,postgresql</p> 
+     * @return SrcDatabaseType <p>源实例数据库类型，如：sqlserver,mysql,mongodb,redis,tendis,keewidb,clickhouse,cynosdbmysql,percona,tdsqlpercona,mariadb,tdsqlmysql,postgresql</p>
      */
     public String [] getSrcDatabaseType() {
         return this.SrcDatabaseType;
     }
 
     /**
-     * Set 源实例数据库类型，如：sqlserver,mysql,mongodb,redis,tendis,keewidb,clickhouse,cynosdbmysql,percona,tdsqlpercona,mariadb,tdsqlmysql,postgresql
-     * @param SrcDatabaseType 源实例数据库类型，如：sqlserver,mysql,mongodb,redis,tendis,keewidb,clickhouse,cynosdbmysql,percona,tdsqlpercona,mariadb,tdsqlmysql,postgresql
+     * Set <p>源实例数据库类型，如：sqlserver,mysql,mongodb,redis,tendis,keewidb,clickhouse,cynosdbmysql,percona,tdsqlpercona,mariadb,tdsqlmysql,postgresql</p>
+     * @param SrcDatabaseType <p>源实例数据库类型，如：sqlserver,mysql,mongodb,redis,tendis,keewidb,clickhouse,cynosdbmysql,percona,tdsqlpercona,mariadb,tdsqlmysql,postgresql</p>
      */
     public void setSrcDatabaseType(String [] SrcDatabaseType) {
         this.SrcDatabaseType = SrcDatabaseType;
     }
 
     /**
-     * Get 源实例接入类型，值包括：extranet(外网)、vpncloud(云vpn接入的实例)、dcg(专线接入的实例)、ccn(云联网接入的实例)、cdb(云上cdb实例)、cvm(cvm自建实例) 
-     * @return SrcAccessType 源实例接入类型，值包括：extranet(外网)、vpncloud(云vpn接入的实例)、dcg(专线接入的实例)、ccn(云联网接入的实例)、cdb(云上cdb实例)、cvm(cvm自建实例)
+     * Get <p>源实例接入类型，值包括：extranet(外网)、vpncloud(云vpn接入的实例)、dcg(专线接入的实例)、ccn(云联网接入的实例)、cdb(云上cdb实例)、cvm(cvm自建实例)</p> 
+     * @return SrcAccessType <p>源实例接入类型，值包括：extranet(外网)、vpncloud(云vpn接入的实例)、dcg(专线接入的实例)、ccn(云联网接入的实例)、cdb(云上cdb实例)、cvm(cvm自建实例)</p>
      */
     public String [] getSrcAccessType() {
         return this.SrcAccessType;
     }
 
     /**
-     * Set 源实例接入类型，值包括：extranet(外网)、vpncloud(云vpn接入的实例)、dcg(专线接入的实例)、ccn(云联网接入的实例)、cdb(云上cdb实例)、cvm(cvm自建实例)
-     * @param SrcAccessType 源实例接入类型，值包括：extranet(外网)、vpncloud(云vpn接入的实例)、dcg(专线接入的实例)、ccn(云联网接入的实例)、cdb(云上cdb实例)、cvm(cvm自建实例)
+     * Set <p>源实例接入类型，值包括：extranet(外网)、vpncloud(云vpn接入的实例)、dcg(专线接入的实例)、ccn(云联网接入的实例)、cdb(云上cdb实例)、cvm(cvm自建实例)</p>
+     * @param SrcAccessType <p>源实例接入类型，值包括：extranet(外网)、vpncloud(云vpn接入的实例)、dcg(专线接入的实例)、ccn(云联网接入的实例)、cdb(云上cdb实例)、cvm(cvm自建实例)</p>
      */
     public void setSrcAccessType(String [] SrcAccessType) {
         this.SrcAccessType = SrcAccessType;
     }
 
     /**
-     * Get 目标实例ID，格式如：cdb-c1nl9rpv 
-     * @return DstInstanceId 目标实例ID，格式如：cdb-c1nl9rpv
+     * Get <p>目标实例ID，格式如：cdb-c1nl9rpv</p> 
+     * @return DstInstanceId <p>目标实例ID，格式如：cdb-c1nl9rpv</p>
      */
     public String getDstInstanceId() {
         return this.DstInstanceId;
     }
 
     /**
-     * Set 目标实例ID，格式如：cdb-c1nl9rpv
-     * @param DstInstanceId 目标实例ID，格式如：cdb-c1nl9rpv
+     * Set <p>目标实例ID，格式如：cdb-c1nl9rpv</p>
+     * @param DstInstanceId <p>目标实例ID，格式如：cdb-c1nl9rpv</p>
      */
     public void setDstInstanceId(String DstInstanceId) {
         this.DstInstanceId = DstInstanceId;
     }
 
     /**
-     * Get 目标实例地域，如：ap-guangzhou 
-     * @return DstRegion 目标实例地域，如：ap-guangzhou
+     * Get <p>目标实例地域，如：ap-guangzhou</p> 
+     * @return DstRegion <p>目标实例地域，如：ap-guangzhou</p>
      */
     public String getDstRegion() {
         return this.DstRegion;
     }
 
     /**
-     * Set 目标实例地域，如：ap-guangzhou
-     * @param DstRegion 目标实例地域，如：ap-guangzhou
+     * Set <p>目标实例地域，如：ap-guangzhou</p>
+     * @param DstRegion <p>目标实例地域，如：ap-guangzhou</p>
      */
     public void setDstRegion(String DstRegion) {
         this.DstRegion = DstRegion;
     }
 
     /**
-     * Get 目标源实例数据库类型，如：sqlserver,mysql,mongodb,redis,tendis,keewidb,clickhouse,cynosdbmysql,percona,tdsqlpercona,mariadb,tdsqlmysql,postgresql 
-     * @return DstDatabaseType 目标源实例数据库类型，如：sqlserver,mysql,mongodb,redis,tendis,keewidb,clickhouse,cynosdbmysql,percona,tdsqlpercona,mariadb,tdsqlmysql,postgresql
+     * Get <p>目标源实例数据库类型，如：sqlserver,mysql,mongodb,redis,tendis,keewidb,clickhouse,cynosdbmysql,percona,tdsqlpercona,mariadb,tdsqlmysql,postgresql</p> 
+     * @return DstDatabaseType <p>目标源实例数据库类型，如：sqlserver,mysql,mongodb,redis,tendis,keewidb,clickhouse,cynosdbmysql,percona,tdsqlpercona,mariadb,tdsqlmysql,postgresql</p>
      */
     public String [] getDstDatabaseType() {
         return this.DstDatabaseType;
     }
 
     /**
-     * Set 目标源实例数据库类型，如：sqlserver,mysql,mongodb,redis,tendis,keewidb,clickhouse,cynosdbmysql,percona,tdsqlpercona,mariadb,tdsqlmysql,postgresql
-     * @param DstDatabaseType 目标源实例数据库类型，如：sqlserver,mysql,mongodb,redis,tendis,keewidb,clickhouse,cynosdbmysql,percona,tdsqlpercona,mariadb,tdsqlmysql,postgresql
+     * Set <p>目标源实例数据库类型，如：sqlserver,mysql,mongodb,redis,tendis,keewidb,clickhouse,cynosdbmysql,percona,tdsqlpercona,mariadb,tdsqlmysql,postgresql</p>
+     * @param DstDatabaseType <p>目标源实例数据库类型，如：sqlserver,mysql,mongodb,redis,tendis,keewidb,clickhouse,cynosdbmysql,percona,tdsqlpercona,mariadb,tdsqlmysql,postgresql</p>
      */
     public void setDstDatabaseType(String [] DstDatabaseType) {
         this.DstDatabaseType = DstDatabaseType;
     }
 
     /**
-     * Get 目标实例接入类型，值包括：extranet(外网)、vpncloud(云vpn接入的实例)、dcg(专线接入的实例)、ccn(云联网接入的实例)、cdb(云上cdb实例)、cvm(cvm自建实例) 
-     * @return DstAccessType 目标实例接入类型，值包括：extranet(外网)、vpncloud(云vpn接入的实例)、dcg(专线接入的实例)、ccn(云联网接入的实例)、cdb(云上cdb实例)、cvm(cvm自建实例)
+     * Get <p>目标实例接入类型，值包括：extranet(外网)、vpncloud(云vpn接入的实例)、dcg(专线接入的实例)、ccn(云联网接入的实例)、cdb(云上cdb实例)、cvm(cvm自建实例)</p> 
+     * @return DstAccessType <p>目标实例接入类型，值包括：extranet(外网)、vpncloud(云vpn接入的实例)、dcg(专线接入的实例)、ccn(云联网接入的实例)、cdb(云上cdb实例)、cvm(cvm自建实例)</p>
      */
     public String [] getDstAccessType() {
         return this.DstAccessType;
     }
 
     /**
-     * Set 目标实例接入类型，值包括：extranet(外网)、vpncloud(云vpn接入的实例)、dcg(专线接入的实例)、ccn(云联网接入的实例)、cdb(云上cdb实例)、cvm(cvm自建实例)
-     * @param DstAccessType 目标实例接入类型，值包括：extranet(外网)、vpncloud(云vpn接入的实例)、dcg(专线接入的实例)、ccn(云联网接入的实例)、cdb(云上cdb实例)、cvm(cvm自建实例)
+     * Set <p>目标实例接入类型，值包括：extranet(外网)、vpncloud(云vpn接入的实例)、dcg(专线接入的实例)、ccn(云联网接入的实例)、cdb(云上cdb实例)、cvm(cvm自建实例)</p>
+     * @param DstAccessType <p>目标实例接入类型，值包括：extranet(外网)、vpncloud(云vpn接入的实例)、dcg(专线接入的实例)、ccn(云联网接入的实例)、cdb(云上cdb实例)、cvm(cvm自建实例)</p>
      */
     public void setDstAccessType(String [] DstAccessType) {
         this.DstAccessType = DstAccessType;
     }
 
     /**
-     * Get 任务运行模式，值包括：immediate(立即运行)，timed(定时运行) 
-     * @return RunMode 任务运行模式，值包括：immediate(立即运行)，timed(定时运行)
+     * Get <p>任务运行模式，值包括：immediate(立即运行)，timed(定时运行)</p> 
+     * @return RunMode <p>任务运行模式，值包括：immediate(立即运行)，timed(定时运行)</p>
      */
     public String getRunMode() {
         return this.RunMode;
     }
 
     /**
-     * Set 任务运行模式，值包括：immediate(立即运行)，timed(定时运行)
-     * @param RunMode 任务运行模式，值包括：immediate(立即运行)，timed(定时运行)
+     * Set <p>任务运行模式，值包括：immediate(立即运行)，timed(定时运行)</p>
+     * @param RunMode <p>任务运行模式，值包括：immediate(立即运行)，timed(定时运行)</p>
      */
     public void setRunMode(String RunMode) {
         this.RunMode = RunMode;
     }
 
     /**
-     * Get 排序方式，可能取值为asc、desc，默认按照创建时间倒序 
-     * @return OrderSeq 排序方式，可能取值为asc、desc，默认按照创建时间倒序
+     * Get <p>排序方式，可能取值为asc、desc，默认按照创建时间倒序</p> 
+     * @return OrderSeq <p>排序方式，可能取值为asc、desc，默认按照创建时间倒序</p>
      */
     public String getOrderSeq() {
         return this.OrderSeq;
     }
 
     /**
-     * Set 排序方式，可能取值为asc、desc，默认按照创建时间倒序
-     * @param OrderSeq 排序方式，可能取值为asc、desc，默认按照创建时间倒序
+     * Set <p>排序方式，可能取值为asc、desc，默认按照创建时间倒序</p>
+     * @param OrderSeq <p>排序方式，可能取值为asc、desc，默认按照创建时间倒序</p>
      */
     public void setOrderSeq(String OrderSeq) {
         this.OrderSeq = OrderSeq;
     }
 
     /**
-     * Get 返回实例数量，默认20，有效区间[1,100] 
-     * @return Limit 返回实例数量，默认20，有效区间[1,100]
+     * Get <p>返回实例数量，默认20，有效区间[1,100]</p> 
+     * @return Limit <p>返回实例数量，默认20，有效区间[1,100]</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回实例数量，默认20，有效区间[1,100]
-     * @param Limit 返回实例数量，默认20，有效区间[1,100]
+     * Set <p>返回实例数量，默认20，有效区间[1,100]</p>
+     * @param Limit <p>返回实例数量，默认20，有效区间[1,100]</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量，默认为0 
-     * @return Offset 偏移量，默认为0
+     * Get <p>偏移量，默认为0</p> 
+     * @return Offset <p>偏移量，默认为0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为0
-     * @param Offset 偏移量，默认为0
+     * Set <p>偏移量，默认为0</p>
+     * @param Offset <p>偏移量，默认为0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 标签过滤 
-     * @return TagFilters 标签过滤
+     * Get <p>标签过滤</p> 
+     * @return TagFilters <p>标签过滤</p>
      */
     public TagFilter [] getTagFilters() {
         return this.TagFilters;
     }
 
     /**
-     * Set 标签过滤
-     * @param TagFilters 标签过滤
+     * Set <p>标签过滤</p>
+     * @param TagFilters <p>标签过滤</p>
      */
     public void setTagFilters(TagFilter [] TagFilters) {
         this.TagFilters = TagFilters;

@@ -82,6 +82,20 @@ public class TextToSpeechSSERequest extends AbstractModel {
     private String Language;
 
     /**
+    * 多音字/生僻字发音纠正词典条目。指定特定词语在本次请求中使用的发音。
+    */
+    @SerializedName("PronunciationDict")
+    @Expose
+    private PronunciationDict [] PronunciationDict;
+
+    /**
+    * 默认为0，0表示不生成字幕，1表示生成字幕
+    */
+    @SerializedName("AlignmentMode")
+    @Expose
+    private Long AlignmentMode;
+
+    /**
      * Get 需要转语音的文字内容，长度范围：[1, 255] 
      * @return Text 需要转语音的文字内容，长度范围：[1, 255]
      */
@@ -233,6 +247,38 @@ public class TextToSpeechSSERequest extends AbstractModel {
         this.Language = Language;
     }
 
+    /**
+     * Get 多音字/生僻字发音纠正词典条目。指定特定词语在本次请求中使用的发音。 
+     * @return PronunciationDict 多音字/生僻字发音纠正词典条目。指定特定词语在本次请求中使用的发音。
+     */
+    public PronunciationDict [] getPronunciationDict() {
+        return this.PronunciationDict;
+    }
+
+    /**
+     * Set 多音字/生僻字发音纠正词典条目。指定特定词语在本次请求中使用的发音。
+     * @param PronunciationDict 多音字/生僻字发音纠正词典条目。指定特定词语在本次请求中使用的发音。
+     */
+    public void setPronunciationDict(PronunciationDict [] PronunciationDict) {
+        this.PronunciationDict = PronunciationDict;
+    }
+
+    /**
+     * Get 默认为0，0表示不生成字幕，1表示生成字幕 
+     * @return AlignmentMode 默认为0，0表示不生成字幕，1表示生成字幕
+     */
+    public Long getAlignmentMode() {
+        return this.AlignmentMode;
+    }
+
+    /**
+     * Set 默认为0，0表示不生成字幕，1表示生成字幕
+     * @param AlignmentMode 默认为0，0表示不生成字幕，1表示生成字幕
+     */
+    public void setAlignmentMode(Long AlignmentMode) {
+        this.AlignmentMode = AlignmentMode;
+    }
+
     public TextToSpeechSSERequest() {
     }
 
@@ -262,6 +308,15 @@ public class TextToSpeechSSERequest extends AbstractModel {
         if (source.Language != null) {
             this.Language = new String(source.Language);
         }
+        if (source.PronunciationDict != null) {
+            this.PronunciationDict = new PronunciationDict[source.PronunciationDict.length];
+            for (int i = 0; i < source.PronunciationDict.length; i++) {
+                this.PronunciationDict[i] = new PronunciationDict(source.PronunciationDict[i]);
+            }
+        }
+        if (source.AlignmentMode != null) {
+            this.AlignmentMode = new Long(source.AlignmentMode);
+        }
     }
 
 
@@ -276,6 +331,8 @@ public class TextToSpeechSSERequest extends AbstractModel {
         this.setParamSimple(map, prefix + "APIKey", this.APIKey);
         this.setParamSimple(map, prefix + "Model", this.Model);
         this.setParamSimple(map, prefix + "Language", this.Language);
+        this.setParamArrayObj(map, prefix + "PronunciationDict.", this.PronunciationDict);
+        this.setParamSimple(map, prefix + "AlignmentMode", this.AlignmentMode);
 
     }
 }

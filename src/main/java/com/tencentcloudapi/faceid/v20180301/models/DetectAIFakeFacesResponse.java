@@ -38,7 +38,7 @@ public class DetectAIFakeFacesResponse extends AbstractModel {
     private AttackRiskDetail [] AttackRiskDetailList;
 
     /**
-    * <p>返回额外信息（包括命中模版的详细信息）。</p>
+    * <p>返回额外信息（包括命中模板的详细信息）。</p>
     */
     @SerializedName("ExtraInfo")
     @Expose
@@ -84,16 +84,16 @@ public class DetectAIFakeFacesResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>返回额外信息（包括命中模版的详细信息）。</p> 
-     * @return ExtraInfo <p>返回额外信息（包括命中模版的详细信息）。</p>
+     * Get <p>返回额外信息（包括命中模板的详细信息）。</p> 
+     * @return ExtraInfo <p>返回额外信息（包括命中模板的详细信息）。</p>
      */
     public ExtraInfo getExtraInfo() {
         return this.ExtraInfo;
     }
 
     /**
-     * Set <p>返回额外信息（包括命中模版的详细信息）。</p>
-     * @param ExtraInfo <p>返回额外信息（包括命中模版的详细信息）。</p>
+     * Set <p>返回额外信息（包括命中模板的详细信息）。</p>
+     * @param ExtraInfo <p>返回额外信息（包括命中模板的详细信息）。</p>
      */
     public void setExtraInfo(ExtraInfo ExtraInfo) {
         this.ExtraInfo = ExtraInfo;

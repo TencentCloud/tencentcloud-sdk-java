@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.goosefs.v20220519.models;
+package com.tencentcloudapi.trtc.v20190722.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,10 +21,10 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateLoadTaskResponse extends AbstractModel {
+public class AsyncTextToSpeechResponse extends AbstractModel {
 
     /**
-    * <p>预热任务 ID</p>
+    * 任务ID
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateLoadTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>预热任务 ID</p> 
-     * @return TaskId <p>预热任务 ID</p>
+     * Get 任务ID 
+     * @return TaskId 任务ID
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set <p>预热任务 ID</p>
-     * @param TaskId <p>预热任务 ID</p>
+     * Set 任务ID
+     * @param TaskId 任务ID
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
@@ -69,14 +69,14 @@ public class CreateLoadTaskResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreateLoadTaskResponse() {
+    public AsyncTextToSpeechResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateLoadTaskResponse(CreateLoadTaskResponse source) {
+    public AsyncTextToSpeechResponse(AsyncTextToSpeechResponse source) {
         if (source.TaskId != null) {
             this.TaskId = new String(source.TaskId);
         }

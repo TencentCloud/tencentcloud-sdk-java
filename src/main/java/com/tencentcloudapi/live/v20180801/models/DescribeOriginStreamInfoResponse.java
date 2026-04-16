@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.goosefs.v20220519.models;
+package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,17 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateLoadTaskResponse extends AbstractModel {
+public class DescribeOriginStreamInfoResponse extends AbstractModel {
 
     /**
-    * <p>预热任务 ID</p>
+    * 缓存格式规则。 
+0：默认格式。
+1：云直播源站格式。
+当 OriginStreamPlayType 为 customization 时候生效。
     */
-    @SerializedName("TaskId")
+    @SerializedName("CacheFormatRule")
     @Expose
-    private String TaskId;
+    private Long CacheFormatRule;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +41,31 @@ public class CreateLoadTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>预热任务 ID</p> 
-     * @return TaskId <p>预热任务 ID</p>
+     * Get 缓存格式规则。 
+0：默认格式。
+1：云直播源站格式。
+当 OriginStreamPlayType 为 customization 时候生效。 
+     * @return CacheFormatRule 缓存格式规则。 
+0：默认格式。
+1：云直播源站格式。
+当 OriginStreamPlayType 为 customization 时候生效。
      */
-    public String getTaskId() {
-        return this.TaskId;
+    public Long getCacheFormatRule() {
+        return this.CacheFormatRule;
     }
 
     /**
-     * Set <p>预热任务 ID</p>
-     * @param TaskId <p>预热任务 ID</p>
+     * Set 缓存格式规则。 
+0：默认格式。
+1：云直播源站格式。
+当 OriginStreamPlayType 为 customization 时候生效。
+     * @param CacheFormatRule 缓存格式规则。 
+0：默认格式。
+1：云直播源站格式。
+当 OriginStreamPlayType 为 customization 时候生效。
      */
-    public void setTaskId(String TaskId) {
-        this.TaskId = TaskId;
+    public void setCacheFormatRule(Long CacheFormatRule) {
+        this.CacheFormatRule = CacheFormatRule;
     }
 
     /**
@@ -69,16 +84,16 @@ public class CreateLoadTaskResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreateLoadTaskResponse() {
+    public DescribeOriginStreamInfoResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateLoadTaskResponse(CreateLoadTaskResponse source) {
-        if (source.TaskId != null) {
-            this.TaskId = new String(source.TaskId);
+    public DescribeOriginStreamInfoResponse(DescribeOriginStreamInfoResponse source) {
+        if (source.CacheFormatRule != null) {
+            this.CacheFormatRule = new Long(source.CacheFormatRule);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +105,7 @@ public class CreateLoadTaskResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "CacheFormatRule", this.CacheFormatRule);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -1061,6 +1061,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *查询配音相关任务（异步）结果
+     * @param req DescribeDesignTaskRequest
+     * @return DescribeDesignTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDesignTaskResponse DescribeDesignTask(DescribeDesignTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDesignTask", DescribeDesignTaskResponse.class);
+    }
+
+    /**
      *根据安全组反差关联的Flow信息。
      * @param req DescribeGroupAttachFlowsByIdRequest
      * @return DescribeGroupAttachFlowsByIdResponse
@@ -1667,6 +1678,17 @@ public class MpsClient extends AbstractClient{
     public DescribeWorkflowsResponse DescribeWorkflows(DescribeWorkflowsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeWorkflows", DescribeWorkflowsResponse.class);
+    }
+
+    /**
+     *音色设计，根据prompt生成音色ID
+     * @param req DesignVoiceAsyncRequest
+     * @return DesignVoiceAsyncResponse
+     * @throws TencentCloudSDKException
+     */
+    public DesignVoiceAsyncResponse DesignVoiceAsync(DesignVoiceAsyncRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DesignVoiceAsync", DesignVoiceAsyncResponse.class);
     }
 
     /**

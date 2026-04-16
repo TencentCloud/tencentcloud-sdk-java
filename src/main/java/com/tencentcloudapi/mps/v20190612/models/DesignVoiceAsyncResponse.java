@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.goosefs.v20220519.models;
+package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,10 +21,24 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateLoadTaskResponse extends AbstractModel {
+public class DesignVoiceAsyncResponse extends AbstractModel {
 
     /**
-    * <p>预热任务 ID</p>
+    * <p>错误码，成功时返回0</p>
+    */
+    @SerializedName("ErrorCode")
+    @Expose
+    private Long ErrorCode;
+
+    /**
+    * <p>错误信息，成功时返回success</p>
+    */
+    @SerializedName("Msg")
+    @Expose
+    private String Msg;
+
+    /**
+    * <p>任务id，查询任务时使用</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +52,48 @@ public class CreateLoadTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>预热任务 ID</p> 
-     * @return TaskId <p>预热任务 ID</p>
+     * Get <p>错误码，成功时返回0</p> 
+     * @return ErrorCode <p>错误码，成功时返回0</p>
+     */
+    public Long getErrorCode() {
+        return this.ErrorCode;
+    }
+
+    /**
+     * Set <p>错误码，成功时返回0</p>
+     * @param ErrorCode <p>错误码，成功时返回0</p>
+     */
+    public void setErrorCode(Long ErrorCode) {
+        this.ErrorCode = ErrorCode;
+    }
+
+    /**
+     * Get <p>错误信息，成功时返回success</p> 
+     * @return Msg <p>错误信息，成功时返回success</p>
+     */
+    public String getMsg() {
+        return this.Msg;
+    }
+
+    /**
+     * Set <p>错误信息，成功时返回success</p>
+     * @param Msg <p>错误信息，成功时返回success</p>
+     */
+    public void setMsg(String Msg) {
+        this.Msg = Msg;
+    }
+
+    /**
+     * Get <p>任务id，查询任务时使用</p> 
+     * @return TaskId <p>任务id，查询任务时使用</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set <p>预热任务 ID</p>
-     * @param TaskId <p>预热任务 ID</p>
+     * Set <p>任务id，查询任务时使用</p>
+     * @param TaskId <p>任务id，查询任务时使用</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
@@ -69,14 +115,20 @@ public class CreateLoadTaskResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreateLoadTaskResponse() {
+    public DesignVoiceAsyncResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateLoadTaskResponse(CreateLoadTaskResponse source) {
+    public DesignVoiceAsyncResponse(DesignVoiceAsyncResponse source) {
+        if (source.ErrorCode != null) {
+            this.ErrorCode = new Long(source.ErrorCode);
+        }
+        if (source.Msg != null) {
+            this.Msg = new String(source.Msg);
+        }
         if (source.TaskId != null) {
             this.TaskId = new String(source.TaskId);
         }
@@ -90,6 +142,8 @@ public class CreateLoadTaskResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ErrorCode", this.ErrorCode);
+        this.setParamSimple(map, prefix + "Msg", this.Msg);
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

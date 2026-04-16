@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CreateLoadTaskRequest extends AbstractModel {
 
     /**
-    * 集群 ID
+    * <p>集群 ID</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 创建预热任务参数
+    * <p>创建预热任务参数</p>
     */
     @SerializedName("LoadTaskCreationAttrs")
     @Expose
     private LoadTaskCreationAttrs LoadTaskCreationAttrs;
 
     /**
-     * Get 集群 ID 
-     * @return ClusterId 集群 ID
+     * Get <p>集群 ID</p> 
+     * @return ClusterId <p>集群 ID</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群 ID
-     * @param ClusterId 集群 ID
+     * Set <p>集群 ID</p>
+     * @param ClusterId <p>集群 ID</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 创建预热任务参数 
-     * @return LoadTaskCreationAttrs 创建预热任务参数
+     * Get <p>创建预热任务参数</p> 
+     * @return LoadTaskCreationAttrs <p>创建预热任务参数</p>
      */
     public LoadTaskCreationAttrs getLoadTaskCreationAttrs() {
         return this.LoadTaskCreationAttrs;
     }
 
     /**
-     * Set 创建预热任务参数
-     * @param LoadTaskCreationAttrs 创建预热任务参数
+     * Set <p>创建预热任务参数</p>
+     * @param LoadTaskCreationAttrs <p>创建预热任务参数</p>
      */
     public void setLoadTaskCreationAttrs(LoadTaskCreationAttrs LoadTaskCreationAttrs) {
         this.LoadTaskCreationAttrs = LoadTaskCreationAttrs;

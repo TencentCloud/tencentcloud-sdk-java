@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dts.v20211206.models;
+package com.tencentcloudapi.vclm.v20240523.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,21 +21,42 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMigrationJobsResponse extends AbstractModel {
+public class CreateAigcElementResponse extends AbstractModel {
 
     /**
-    * <p>迁移任务数量</p>
+    * <p>任务ID。</p>
     */
-    @SerializedName("TotalCount")
+    @SerializedName("JobId")
     @Expose
-    private Long TotalCount;
+    private String JobId;
 
     /**
-    * <p>迁移任务列表</p>
+    * 
     */
-    @SerializedName("JobList")
+    @SerializedName("ElementId")
     @Expose
-    private JobItem [] JobList;
+    private String ElementId;
+
+    /**
+    * 
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
+    * 
+    */
+    @SerializedName("Provider")
+    @Expose
+    private String [] Provider;
+
+    /**
+    * 
+    */
+    @SerializedName("CreatedAt")
+    @Expose
+    private String CreatedAt;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +66,83 @@ public class DescribeMigrationJobsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>迁移任务数量</p> 
-     * @return TotalCount <p>迁移任务数量</p>
+     * Get <p>任务ID。</p> 
+     * @return JobId <p>任务ID。</p>
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public String getJobId() {
+        return this.JobId;
     }
 
     /**
-     * Set <p>迁移任务数量</p>
-     * @param TotalCount <p>迁移任务数量</p>
+     * Set <p>任务ID。</p>
+     * @param JobId <p>任务ID。</p>
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setJobId(String JobId) {
+        this.JobId = JobId;
     }
 
     /**
-     * Get <p>迁移任务列表</p> 
-     * @return JobList <p>迁移任务列表</p>
+     * Get  
+     * @return ElementId 
      */
-    public JobItem [] getJobList() {
-        return this.JobList;
+    public String getElementId() {
+        return this.ElementId;
     }
 
     /**
-     * Set <p>迁移任务列表</p>
-     * @param JobList <p>迁移任务列表</p>
+     * Set 
+     * @param ElementId 
      */
-    public void setJobList(JobItem [] JobList) {
-        this.JobList = JobList;
+    public void setElementId(String ElementId) {
+        this.ElementId = ElementId;
+    }
+
+    /**
+     * Get  
+     * @return Status 
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 
+     * @param Status 
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get  
+     * @return Provider 
+     */
+    public String [] getProvider() {
+        return this.Provider;
+    }
+
+    /**
+     * Set 
+     * @param Provider 
+     */
+    public void setProvider(String [] Provider) {
+        this.Provider = Provider;
+    }
+
+    /**
+     * Get  
+     * @return CreatedAt 
+     */
+    public String getCreatedAt() {
+        return this.CreatedAt;
+    }
+
+    /**
+     * Set 
+     * @param CreatedAt 
+     */
+    public void setCreatedAt(String CreatedAt) {
+        this.CreatedAt = CreatedAt;
     }
 
     /**
@@ -92,22 +161,31 @@ public class DescribeMigrationJobsResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeMigrationJobsResponse() {
+    public CreateAigcElementResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeMigrationJobsResponse(DescribeMigrationJobsResponse source) {
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
+    public CreateAigcElementResponse(CreateAigcElementResponse source) {
+        if (source.JobId != null) {
+            this.JobId = new String(source.JobId);
         }
-        if (source.JobList != null) {
-            this.JobList = new JobItem[source.JobList.length];
-            for (int i = 0; i < source.JobList.length; i++) {
-                this.JobList[i] = new JobItem(source.JobList[i]);
+        if (source.ElementId != null) {
+            this.ElementId = new String(source.ElementId);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.Provider != null) {
+            this.Provider = new String[source.Provider.length];
+            for (int i = 0; i < source.Provider.length; i++) {
+                this.Provider[i] = new String(source.Provider[i]);
             }
+        }
+        if (source.CreatedAt != null) {
+            this.CreatedAt = new String(source.CreatedAt);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -119,8 +197,11 @@ public class DescribeMigrationJobsResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "JobList.", this.JobList);
+        this.setParamSimple(map, prefix + "JobId", this.JobId);
+        this.setParamSimple(map, prefix + "ElementId", this.ElementId);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamArraySimple(map, prefix + "Provider.", this.Provider);
+        this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -39,6 +39,17 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
+     *异步语音合成
+     * @param req AsyncTextToSpeechRequest
+     * @return AsyncTextToSpeechResponse
+     * @throws TencentCloudSDKException
+     */
+    public AsyncTextToSpeechResponse AsyncTextToSpeech(AsyncTextToSpeechRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AsyncTextToSpeech", AsyncTextToSpeechResponse.class);
+    }
+
+    /**
      *提供服务端控制机器人的功能
      * @param req ControlAIConversationRequest
      * @return ControlAIConversationResponse
@@ -236,6 +247,17 @@ public class TrtcClient extends AbstractClient{
     public DescribeAITranscriptionResponse DescribeAITranscription(DescribeAITranscriptionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAITranscription", DescribeAITranscriptionResponse.class);
+    }
+
+    /**
+     *查询异步语音合成状态
+     * @param req DescribeAsyncTextToSpeechRequest
+     * @return DescribeAsyncTextToSpeechResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAsyncTextToSpeechResponse DescribeAsyncTextToSpeech(DescribeAsyncTextToSpeechRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAsyncTextToSpeech", DescribeAsyncTextToSpeechResponse.class);
     }
 
     /**

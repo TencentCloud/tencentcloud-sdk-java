@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RetrievalLivenessExtraInfo extends AbstractModel {
 
     /**
-    * <p>命中的模版类型，其中Common-公共库；Auto-自动聚类库；Owner-自建模版库</p>
+    * <p>命中的模板类型，其中Common-公共库；Auto-自动聚类库；Owner-自建模板库</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HitGroup")
@@ -48,9 +48,9 @@ public class RetrievalLivenessExtraInfo extends AbstractModel {
     private String HitTemplate;
 
     /**
-     * Get <p>命中的模版类型，其中Common-公共库；Auto-自动聚类库；Owner-自建模版库</p>
+     * Get <p>命中的模板类型，其中Common-公共库；Auto-自动聚类库；Owner-自建模板库</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HitGroup <p>命中的模版类型，其中Common-公共库；Auto-自动聚类库；Owner-自建模版库</p>
+     * @return HitGroup <p>命中的模板类型，其中Common-公共库；Auto-自动聚类库；Owner-自建模板库</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHitGroup() {
@@ -58,9 +58,9 @@ public class RetrievalLivenessExtraInfo extends AbstractModel {
     }
 
     /**
-     * Set <p>命中的模版类型，其中Common-公共库；Auto-自动聚类库；Owner-自建模版库</p>
+     * Set <p>命中的模板类型，其中Common-公共库；Auto-自动聚类库；Owner-自建模板库</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HitGroup <p>命中的模版类型，其中Common-公共库；Auto-自动聚类库；Owner-自建模版库</p>
+     * @param HitGroup <p>命中的模板类型，其中Common-公共库；Auto-自动聚类库；Owner-自建模板库</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHitGroup(String HitGroup) {

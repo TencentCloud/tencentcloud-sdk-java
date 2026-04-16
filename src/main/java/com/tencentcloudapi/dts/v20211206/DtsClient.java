@@ -253,6 +253,17 @@ public class DtsClient extends AbstractClient{
     }
 
     /**
+     *本接口用于查询一致性校验任务中，不一致数据块的详情信息
+     * @param req DescribeCompareDiffItemsRequest
+     * @return DescribeCompareDiffItemsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCompareDiffItemsResponse DescribeCompareDiffItems(DescribeCompareDiffItemsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCompareDiffItems", DescribeCompareDiffItemsResponse.class);
+    }
+
+    /**
      *查询一致性校验任务详情
      * @param req DescribeCompareReportRequest
      * @return DescribeCompareReportResponse
@@ -399,6 +410,17 @@ public class DtsClient extends AbstractClient{
     public DescribeSubscribeReturnableResponse DescribeSubscribeReturnable(DescribeSubscribeReturnableRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSubscribeReturnable", DescribeSubscribeReturnableResponse.class);
+    }
+
+    /**
+     *本接口用于查询一致性校验任务中，不一致数据块的详情信息
+     * @param req DescribeSyncCompareDiffItemsRequest
+     * @return DescribeSyncCompareDiffItemsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSyncCompareDiffItemsResponse DescribeSyncCompareDiffItems(DescribeSyncCompareDiffItemsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSyncCompareDiffItems", DescribeSyncCompareDiffItemsResponse.class);
     }
 
     /**

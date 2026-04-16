@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.goosefs.v20220519.models;
+package com.tencentcloudapi.trtc.v20190722.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,32 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateLoadTaskResponse extends AbstractModel {
+public class DescribeAsyncTextToSpeechResponse extends AbstractModel {
 
     /**
-    * <p>预热任务 ID</p>
+    * 任务状态
+- Processing，处理中
+- Success，任务成功
+- Failed，任务失败
+- Expired，任务过期
     */
-    @SerializedName("TaskId")
+    @SerializedName("Status")
     @Expose
-    private String TaskId;
+    private String Status;
+
+    /**
+    * 音频下载url
+    */
+    @SerializedName("AudioDownloadUrl")
+    @Expose
+    private String AudioDownloadUrl;
+
+    /**
+    * 字幕下载url
+    */
+    @SerializedName("SubtitleDownloadUrl")
+    @Expose
+    private String SubtitleDownloadUrl;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +56,67 @@ public class CreateLoadTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>预热任务 ID</p> 
-     * @return TaskId <p>预热任务 ID</p>
+     * Get 任务状态
+- Processing，处理中
+- Success，任务成功
+- Failed，任务失败
+- Expired，任务过期 
+     * @return Status 任务状态
+- Processing，处理中
+- Success，任务成功
+- Failed，任务失败
+- Expired，任务过期
      */
-    public String getTaskId() {
-        return this.TaskId;
+    public String getStatus() {
+        return this.Status;
     }
 
     /**
-     * Set <p>预热任务 ID</p>
-     * @param TaskId <p>预热任务 ID</p>
+     * Set 任务状态
+- Processing，处理中
+- Success，任务成功
+- Failed，任务失败
+- Expired，任务过期
+     * @param Status 任务状态
+- Processing，处理中
+- Success，任务成功
+- Failed，任务失败
+- Expired，任务过期
      */
-    public void setTaskId(String TaskId) {
-        this.TaskId = TaskId;
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 音频下载url 
+     * @return AudioDownloadUrl 音频下载url
+     */
+    public String getAudioDownloadUrl() {
+        return this.AudioDownloadUrl;
+    }
+
+    /**
+     * Set 音频下载url
+     * @param AudioDownloadUrl 音频下载url
+     */
+    public void setAudioDownloadUrl(String AudioDownloadUrl) {
+        this.AudioDownloadUrl = AudioDownloadUrl;
+    }
+
+    /**
+     * Get 字幕下载url 
+     * @return SubtitleDownloadUrl 字幕下载url
+     */
+    public String getSubtitleDownloadUrl() {
+        return this.SubtitleDownloadUrl;
+    }
+
+    /**
+     * Set 字幕下载url
+     * @param SubtitleDownloadUrl 字幕下载url
+     */
+    public void setSubtitleDownloadUrl(String SubtitleDownloadUrl) {
+        this.SubtitleDownloadUrl = SubtitleDownloadUrl;
     }
 
     /**
@@ -69,16 +135,22 @@ public class CreateLoadTaskResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public CreateLoadTaskResponse() {
+    public DescribeAsyncTextToSpeechResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateLoadTaskResponse(CreateLoadTaskResponse source) {
-        if (source.TaskId != null) {
-            this.TaskId = new String(source.TaskId);
+    public DescribeAsyncTextToSpeechResponse(DescribeAsyncTextToSpeechResponse source) {
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.AudioDownloadUrl != null) {
+            this.AudioDownloadUrl = new String(source.AudioDownloadUrl);
+        }
+        if (source.SubtitleDownloadUrl != null) {
+            this.SubtitleDownloadUrl = new String(source.SubtitleDownloadUrl);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +162,9 @@ public class CreateLoadTaskResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "AudioDownloadUrl", this.AudioDownloadUrl);
+        this.setParamSimple(map, prefix + "SubtitleDownloadUrl", this.SubtitleDownloadUrl);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

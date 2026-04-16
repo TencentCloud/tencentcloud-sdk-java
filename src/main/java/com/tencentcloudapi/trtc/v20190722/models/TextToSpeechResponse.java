@@ -31,6 +31,13 @@ public class TextToSpeechResponse extends AbstractModel {
     private String Audio;
 
     /**
+    * 字幕对齐数据
+    */
+    @SerializedName("Alignments")
+    @Expose
+    private AlignmentItem [] Alignments;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +58,22 @@ public class TextToSpeechResponse extends AbstractModel {
      */
     public void setAudio(String Audio) {
         this.Audio = Audio;
+    }
+
+    /**
+     * Get 字幕对齐数据 
+     * @return Alignments 字幕对齐数据
+     */
+    public AlignmentItem [] getAlignments() {
+        return this.Alignments;
+    }
+
+    /**
+     * Set 字幕对齐数据
+     * @param Alignments 字幕对齐数据
+     */
+    public void setAlignments(AlignmentItem [] Alignments) {
+        this.Alignments = Alignments;
     }
 
     /**
@@ -80,6 +103,12 @@ public class TextToSpeechResponse extends AbstractModel {
         if (source.Audio != null) {
             this.Audio = new String(source.Audio);
         }
+        if (source.Alignments != null) {
+            this.Alignments = new AlignmentItem[source.Alignments.length];
+            for (int i = 0; i < source.Alignments.length; i++) {
+                this.Alignments[i] = new AlignmentItem(source.Alignments[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -91,6 +120,7 @@ public class TextToSpeechResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Audio", this.Audio);
+        this.setParamArrayObj(map, prefix + "Alignments.", this.Alignments);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

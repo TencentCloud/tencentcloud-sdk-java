@@ -50,6 +50,39 @@ public class VclmClient extends AbstractClient{
     }
 
     /**
+     *提交视频特效任务接口
+     * @param req CreateAigcElementRequest
+     * @return CreateAigcElementResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAigcElementResponse CreateAigcElement(CreateAigcElementRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAigcElement", CreateAigcElementResponse.class);
+    }
+
+    /**
+     *删除主体库
+     * @param req DeleteAigcElementRequest
+     * @return DeleteAigcElementResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAigcElementResponse DeleteAigcElement(DeleteAigcElementRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAigcElement", DeleteAigcElementResponse.class);
+    }
+
+    /**
+     *提交视频特效任务接口
+     * @param req DescribeAigcElementRequest
+     * @return DescribeAigcElementResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAigcElementResponse DescribeAigcElement(DescribeAigcElementRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAigcElement", DescribeAigcElementResponse.class);
+    }
+
+    /**
      *查询生视频任务
      * @param req DescribeAigcVideoJobRequest
      * @return DescribeAigcVideoJobResponse
