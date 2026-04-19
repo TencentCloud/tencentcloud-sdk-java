@@ -24,567 +24,497 @@ import java.util.HashMap;
 public class CreateTaskSchedulerConfiguration extends AbstractModel {
 
     /**
-    * 周期类型：默认为 DAY_CYCLE
-
-支持的类型为 
-
-* ONEOFF_CYCLE: 一次性
-* YEAR_CYCLE: 年
-* MONTH_CYCLE: 月
-* WEEK_CYCLE: 周
-* DAY_CYCLE: 天
-* HOUR_CYCLE: 小时
-* MINUTE_CYCLE: 分钟
-* CRONTAB_CYCLE: crontab表达式类型
+    * <p>周期类型：默认为 DAY_CYCLE</p><p>支持的类型为 </p><ul><li>ONEOFF_CYCLE: 一次性</li><li>YEAR_CYCLE: 年</li><li>MONTH_CYCLE: 月</li><li>WEEK_CYCLE: 周</li><li>DAY_CYCLE: 天</li><li>HOUR_CYCLE: 小时</li><li>MINUTE_CYCLE: 分钟</li><li>CRONTAB_CYCLE: crontab表达式类型</li></ul>
     */
     @SerializedName("CycleType")
     @Expose
     private String CycleType;
 
     /**
-    * 时区，默认为 UTC+8
+    * <p>时区，默认为 UTC+8</p>
     */
     @SerializedName("ScheduleTimeZone")
     @Expose
     private String ScheduleTimeZone;
 
     /**
-    * Cron表达式，默认为 0 0 0 * * ? * 
+    * <p>Cron表达式，默认为 0 0 0 * * ? *</p>
     */
     @SerializedName("CrontabExpression")
     @Expose
     private String CrontabExpression;
 
     /**
-    * 生效日期，默认为当前日期的 00:00:00
+    * <p>生效日期，默认为当前日期的 00:00:00</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束日期，默认为 2099-12-31 23:59:59
+    * <p>结束日期，默认为 2099-12-31 23:59:59</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 执行时间 左闭区间，默认 00:00
+    * <p>执行时间 左闭区间，默认 00:00</p>
     */
     @SerializedName("ExecutionStartTime")
     @Expose
     private String ExecutionStartTime;
 
     /**
-    * 执行时间 右闭区间，默认 23:59
+    * <p>执行时间 右闭区间，默认 23:59</p>
     */
     @SerializedName("ExecutionEndTime")
     @Expose
     private String ExecutionEndTime;
 
     /**
-    * 日历调度 取值为 0 和 1， 1为打开，0为关闭，默认为0
+    * <p>日历调度 取值为 0 和 1， 1为打开，0为关闭，默认为0</p>
     */
     @SerializedName("CalendarOpen")
     @Expose
     private String CalendarOpen;
 
     /**
-    * 日历调度 日历 ID
+    * <p>日历调度 日历 ID</p>
     */
     @SerializedName("CalendarId")
     @Expose
     private String CalendarId;
 
     /**
-    * 自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)
+    * <p>自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)</p>
     */
     @SerializedName("SelfDepend")
     @Expose
     private String SelfDepend;
 
     /**
-    * 上游依赖数组
+    * <p>上游依赖数组</p>
     */
     @SerializedName("UpstreamDependencyConfigList")
     @Expose
     private DependencyTaskBrief [] UpstreamDependencyConfigList;
 
     /**
-    * 事件数组
+    * <p>事件数组</p>
     */
     @SerializedName("EventListenerList")
     @Expose
     private EventListener [] EventListenerList;
 
     /**
-    * 重跑&补录配置, 默认为 ALL; , ALL 运行成功或失败后皆可重跑或补录, FAILURE 运行成功后不可重跑或补录，运行失败后可重跑或补录, NONE 运行成功或失败后皆不可重跑或补录;
+    * <p>重跑&amp;补录配置, 默认为 ALL; , ALL 运行成功或失败后皆可重跑或补录, FAILURE 运行成功后不可重跑或补录，运行失败后可重跑或补录, NONE 运行成功或失败后皆不可重跑或补录;</p>
     */
     @SerializedName("AllowRedoType")
     @Expose
     private String AllowRedoType;
 
     /**
-    * 输出参数数组
+    * <p>输出参数数组</p>
     */
     @SerializedName("ParamTaskOutList")
     @Expose
     private OutTaskParameter [] ParamTaskOutList;
 
     /**
-    * 输入参数数组
+    * <p>输入参数数组</p>
     */
     @SerializedName("ParamTaskInList")
     @Expose
     private InTaskParameter [] ParamTaskInList;
 
     /**
-    * 产出登记
+    * <p>产出登记</p>
     */
     @SerializedName("TaskOutputRegistryList")
     @Expose
     private TaskDataRegistry [] TaskOutputRegistryList;
 
     /**
-    * **实例生成策略**
-* T_PLUS_0: T+0生成,默认策略
-* T_PLUS_1: T+1生成
+    * <p><strong>实例生成策略</strong></p><ul><li>T_PLUS_0: T+0生成,默认策略</li><li>T_PLUS_1: T+1生成</li></ul>
     */
     @SerializedName("InitStrategy")
     @Expose
     private String InitStrategy;
 
     /**
-    * 调度类型: 0 正常调度 1 空跑调度，默认为 0
+    * <p>调度类型: 0 正常调度 1 空跑调度，默认为 0</p>
     */
     @SerializedName("ScheduleRunType")
     @Expose
     private String ScheduleRunType;
 
     /**
-    * 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+    * <p>任务调度优先级 运行优先级 4高 5中 6低 , 默认:6</p>
     */
     @SerializedName("RunPriority")
     @Expose
     private String RunPriority;
 
     /**
-    * 重试策略 重试等待时间,单位分钟: 默认: 5
+    * <p>重试策略 重试等待时间,单位分钟: 默认: 5</p>
     */
     @SerializedName("RetryWait")
     @Expose
     private String RetryWait;
 
     /**
-    * 重试策略 最大尝试次数, 默认: 4
+    * <p>重试策略 最大尝试次数, 默认: 4</p>
     */
     @SerializedName("MaxRetryAttempts")
     @Expose
     private String MaxRetryAttempts;
 
     /**
-    * 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+    * <p>超时处理策略 运行耗时超时（单位：分钟）默认为 -1</p>
     */
     @SerializedName("ExecutionTTL")
     @Expose
     private String ExecutionTTL;
 
     /**
-    * 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+    * <p>超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1</p>
     */
     @SerializedName("WaitExecutionTotalTTL")
     @Expose
     private String WaitExecutionTotalTTL;
 
     /**
-    * 调度类型: 0 正常调度 1 空跑调度，默认为 0
+    * <p>调度类型: 0 正常调度 1 空跑调度，默认为 0</p>
     */
     @SerializedName("ScheduleType")
     @Expose
     private Long ScheduleType;
 
     /**
-    * 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+    * <p>任务调度优先级 运行优先级 4高 5中 6低 , 默认:6</p>
     */
     @SerializedName("RunPriorityType")
     @Expose
     private Long RunPriorityType;
 
     /**
-    * 重试策略 重试等待时间,单位分钟: 默认: 5
+    * <p>重试策略 重试等待时间,单位分钟: 默认: 5</p>
     */
     @SerializedName("RetryWaitMinute")
     @Expose
     private Long RetryWaitMinute;
 
     /**
-    * 重试策略 最大尝试次数, 默认: 4
+    * <p>重试策略 最大尝试次数, 默认: 4</p>
     */
     @SerializedName("MaxRetryNumber")
     @Expose
     private Long MaxRetryNumber;
 
     /**
-    * 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+    * <p>超时处理策略 运行耗时超时（单位：分钟）默认为 -1</p>
     */
     @SerializedName("ExecutionTTLMinute")
     @Expose
     private Long ExecutionTTLMinute;
 
     /**
-    * 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+    * <p>超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1</p>
     */
     @SerializedName("WaitExecutionTotalTTLMinute")
     @Expose
     private Long WaitExecutionTotalTTLMinute;
 
     /**
-    * - 任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置
-- ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败
-- ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行
-- ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功
-- ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行
-- ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行
-- ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行
-- ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行
-- ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游
-- NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败
-- ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行
-- NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行
-- ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行
+    * <ul><li>任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置</li><li>ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败</li><li>ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行</li><li>ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行</li><li>ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行</li><li>ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行</li><li>ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行</li><li>ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游</li><li>NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行</li><li>NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行</li><li>ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行</li></ul>
     */
     @SerializedName("DependencyTriggerPolicy")
     @Expose
     private String DependencyTriggerPolicy;
 
     /**
-     * Get 周期类型：默认为 DAY_CYCLE
+    * <p>是否允许下游依赖 1允许 0不允许</p><p>取值范围：[0, 1]</p><p>默认值：1</p>
+    */
+    @SerializedName("AllowDownstreamDependency")
+    @Expose
+    private Long AllowDownstreamDependency;
 
-支持的类型为 
-
-* ONEOFF_CYCLE: 一次性
-* YEAR_CYCLE: 年
-* MONTH_CYCLE: 月
-* WEEK_CYCLE: 周
-* DAY_CYCLE: 天
-* HOUR_CYCLE: 小时
-* MINUTE_CYCLE: 分钟
-* CRONTAB_CYCLE: crontab表达式类型 
-     * @return CycleType 周期类型：默认为 DAY_CYCLE
-
-支持的类型为 
-
-* ONEOFF_CYCLE: 一次性
-* YEAR_CYCLE: 年
-* MONTH_CYCLE: 月
-* WEEK_CYCLE: 周
-* DAY_CYCLE: 天
-* HOUR_CYCLE: 小时
-* MINUTE_CYCLE: 分钟
-* CRONTAB_CYCLE: crontab表达式类型
+    /**
+     * Get <p>周期类型：默认为 DAY_CYCLE</p><p>支持的类型为 </p><ul><li>ONEOFF_CYCLE: 一次性</li><li>YEAR_CYCLE: 年</li><li>MONTH_CYCLE: 月</li><li>WEEK_CYCLE: 周</li><li>DAY_CYCLE: 天</li><li>HOUR_CYCLE: 小时</li><li>MINUTE_CYCLE: 分钟</li><li>CRONTAB_CYCLE: crontab表达式类型</li></ul> 
+     * @return CycleType <p>周期类型：默认为 DAY_CYCLE</p><p>支持的类型为 </p><ul><li>ONEOFF_CYCLE: 一次性</li><li>YEAR_CYCLE: 年</li><li>MONTH_CYCLE: 月</li><li>WEEK_CYCLE: 周</li><li>DAY_CYCLE: 天</li><li>HOUR_CYCLE: 小时</li><li>MINUTE_CYCLE: 分钟</li><li>CRONTAB_CYCLE: crontab表达式类型</li></ul>
      */
     public String getCycleType() {
         return this.CycleType;
     }
 
     /**
-     * Set 周期类型：默认为 DAY_CYCLE
-
-支持的类型为 
-
-* ONEOFF_CYCLE: 一次性
-* YEAR_CYCLE: 年
-* MONTH_CYCLE: 月
-* WEEK_CYCLE: 周
-* DAY_CYCLE: 天
-* HOUR_CYCLE: 小时
-* MINUTE_CYCLE: 分钟
-* CRONTAB_CYCLE: crontab表达式类型
-     * @param CycleType 周期类型：默认为 DAY_CYCLE
-
-支持的类型为 
-
-* ONEOFF_CYCLE: 一次性
-* YEAR_CYCLE: 年
-* MONTH_CYCLE: 月
-* WEEK_CYCLE: 周
-* DAY_CYCLE: 天
-* HOUR_CYCLE: 小时
-* MINUTE_CYCLE: 分钟
-* CRONTAB_CYCLE: crontab表达式类型
+     * Set <p>周期类型：默认为 DAY_CYCLE</p><p>支持的类型为 </p><ul><li>ONEOFF_CYCLE: 一次性</li><li>YEAR_CYCLE: 年</li><li>MONTH_CYCLE: 月</li><li>WEEK_CYCLE: 周</li><li>DAY_CYCLE: 天</li><li>HOUR_CYCLE: 小时</li><li>MINUTE_CYCLE: 分钟</li><li>CRONTAB_CYCLE: crontab表达式类型</li></ul>
+     * @param CycleType <p>周期类型：默认为 DAY_CYCLE</p><p>支持的类型为 </p><ul><li>ONEOFF_CYCLE: 一次性</li><li>YEAR_CYCLE: 年</li><li>MONTH_CYCLE: 月</li><li>WEEK_CYCLE: 周</li><li>DAY_CYCLE: 天</li><li>HOUR_CYCLE: 小时</li><li>MINUTE_CYCLE: 分钟</li><li>CRONTAB_CYCLE: crontab表达式类型</li></ul>
      */
     public void setCycleType(String CycleType) {
         this.CycleType = CycleType;
     }
 
     /**
-     * Get 时区，默认为 UTC+8 
-     * @return ScheduleTimeZone 时区，默认为 UTC+8
+     * Get <p>时区，默认为 UTC+8</p> 
+     * @return ScheduleTimeZone <p>时区，默认为 UTC+8</p>
      */
     public String getScheduleTimeZone() {
         return this.ScheduleTimeZone;
     }
 
     /**
-     * Set 时区，默认为 UTC+8
-     * @param ScheduleTimeZone 时区，默认为 UTC+8
+     * Set <p>时区，默认为 UTC+8</p>
+     * @param ScheduleTimeZone <p>时区，默认为 UTC+8</p>
      */
     public void setScheduleTimeZone(String ScheduleTimeZone) {
         this.ScheduleTimeZone = ScheduleTimeZone;
     }
 
     /**
-     * Get Cron表达式，默认为 0 0 0 * * ? *  
-     * @return CrontabExpression Cron表达式，默认为 0 0 0 * * ? * 
+     * Get <p>Cron表达式，默认为 0 0 0 * * ? *</p> 
+     * @return CrontabExpression <p>Cron表达式，默认为 0 0 0 * * ? *</p>
      */
     public String getCrontabExpression() {
         return this.CrontabExpression;
     }
 
     /**
-     * Set Cron表达式，默认为 0 0 0 * * ? * 
-     * @param CrontabExpression Cron表达式，默认为 0 0 0 * * ? * 
+     * Set <p>Cron表达式，默认为 0 0 0 * * ? *</p>
+     * @param CrontabExpression <p>Cron表达式，默认为 0 0 0 * * ? *</p>
      */
     public void setCrontabExpression(String CrontabExpression) {
         this.CrontabExpression = CrontabExpression;
     }
 
     /**
-     * Get 生效日期，默认为当前日期的 00:00:00 
-     * @return StartTime 生效日期，默认为当前日期的 00:00:00
+     * Get <p>生效日期，默认为当前日期的 00:00:00</p> 
+     * @return StartTime <p>生效日期，默认为当前日期的 00:00:00</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 生效日期，默认为当前日期的 00:00:00
-     * @param StartTime 生效日期，默认为当前日期的 00:00:00
+     * Set <p>生效日期，默认为当前日期的 00:00:00</p>
+     * @param StartTime <p>生效日期，默认为当前日期的 00:00:00</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束日期，默认为 2099-12-31 23:59:59 
-     * @return EndTime 结束日期，默认为 2099-12-31 23:59:59
+     * Get <p>结束日期，默认为 2099-12-31 23:59:59</p> 
+     * @return EndTime <p>结束日期，默认为 2099-12-31 23:59:59</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束日期，默认为 2099-12-31 23:59:59
-     * @param EndTime 结束日期，默认为 2099-12-31 23:59:59
+     * Set <p>结束日期，默认为 2099-12-31 23:59:59</p>
+     * @param EndTime <p>结束日期，默认为 2099-12-31 23:59:59</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 执行时间 左闭区间，默认 00:00 
-     * @return ExecutionStartTime 执行时间 左闭区间，默认 00:00
+     * Get <p>执行时间 左闭区间，默认 00:00</p> 
+     * @return ExecutionStartTime <p>执行时间 左闭区间，默认 00:00</p>
      */
     public String getExecutionStartTime() {
         return this.ExecutionStartTime;
     }
 
     /**
-     * Set 执行时间 左闭区间，默认 00:00
-     * @param ExecutionStartTime 执行时间 左闭区间，默认 00:00
+     * Set <p>执行时间 左闭区间，默认 00:00</p>
+     * @param ExecutionStartTime <p>执行时间 左闭区间，默认 00:00</p>
      */
     public void setExecutionStartTime(String ExecutionStartTime) {
         this.ExecutionStartTime = ExecutionStartTime;
     }
 
     /**
-     * Get 执行时间 右闭区间，默认 23:59 
-     * @return ExecutionEndTime 执行时间 右闭区间，默认 23:59
+     * Get <p>执行时间 右闭区间，默认 23:59</p> 
+     * @return ExecutionEndTime <p>执行时间 右闭区间，默认 23:59</p>
      */
     public String getExecutionEndTime() {
         return this.ExecutionEndTime;
     }
 
     /**
-     * Set 执行时间 右闭区间，默认 23:59
-     * @param ExecutionEndTime 执行时间 右闭区间，默认 23:59
+     * Set <p>执行时间 右闭区间，默认 23:59</p>
+     * @param ExecutionEndTime <p>执行时间 右闭区间，默认 23:59</p>
      */
     public void setExecutionEndTime(String ExecutionEndTime) {
         this.ExecutionEndTime = ExecutionEndTime;
     }
 
     /**
-     * Get 日历调度 取值为 0 和 1， 1为打开，0为关闭，默认为0 
-     * @return CalendarOpen 日历调度 取值为 0 和 1， 1为打开，0为关闭，默认为0
+     * Get <p>日历调度 取值为 0 和 1， 1为打开，0为关闭，默认为0</p> 
+     * @return CalendarOpen <p>日历调度 取值为 0 和 1， 1为打开，0为关闭，默认为0</p>
      */
     public String getCalendarOpen() {
         return this.CalendarOpen;
     }
 
     /**
-     * Set 日历调度 取值为 0 和 1， 1为打开，0为关闭，默认为0
-     * @param CalendarOpen 日历调度 取值为 0 和 1， 1为打开，0为关闭，默认为0
+     * Set <p>日历调度 取值为 0 和 1， 1为打开，0为关闭，默认为0</p>
+     * @param CalendarOpen <p>日历调度 取值为 0 和 1， 1为打开，0为关闭，默认为0</p>
      */
     public void setCalendarOpen(String CalendarOpen) {
         this.CalendarOpen = CalendarOpen;
     }
 
     /**
-     * Get 日历调度 日历 ID 
-     * @return CalendarId 日历调度 日历 ID
+     * Get <p>日历调度 日历 ID</p> 
+     * @return CalendarId <p>日历调度 日历 ID</p>
      */
     public String getCalendarId() {
         return this.CalendarId;
     }
 
     /**
-     * Set 日历调度 日历 ID
-     * @param CalendarId 日历调度 日历 ID
+     * Set <p>日历调度 日历 ID</p>
+     * @param CalendarId <p>日历调度 日历 ID</p>
      */
     public void setCalendarId(String CalendarId) {
         this.CalendarId = CalendarId;
     }
 
     /**
-     * Get 自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序) 
-     * @return SelfDepend 自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)
+     * Get <p>自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)</p> 
+     * @return SelfDepend <p>自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)</p>
      */
     public String getSelfDepend() {
         return this.SelfDepend;
     }
 
     /**
-     * Set 自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)
-     * @param SelfDepend 自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)
+     * Set <p>自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)</p>
+     * @param SelfDepend <p>自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)</p>
      */
     public void setSelfDepend(String SelfDepend) {
         this.SelfDepend = SelfDepend;
     }
 
     /**
-     * Get 上游依赖数组 
-     * @return UpstreamDependencyConfigList 上游依赖数组
+     * Get <p>上游依赖数组</p> 
+     * @return UpstreamDependencyConfigList <p>上游依赖数组</p>
      */
     public DependencyTaskBrief [] getUpstreamDependencyConfigList() {
         return this.UpstreamDependencyConfigList;
     }
 
     /**
-     * Set 上游依赖数组
-     * @param UpstreamDependencyConfigList 上游依赖数组
+     * Set <p>上游依赖数组</p>
+     * @param UpstreamDependencyConfigList <p>上游依赖数组</p>
      */
     public void setUpstreamDependencyConfigList(DependencyTaskBrief [] UpstreamDependencyConfigList) {
         this.UpstreamDependencyConfigList = UpstreamDependencyConfigList;
     }
 
     /**
-     * Get 事件数组 
-     * @return EventListenerList 事件数组
+     * Get <p>事件数组</p> 
+     * @return EventListenerList <p>事件数组</p>
      */
     public EventListener [] getEventListenerList() {
         return this.EventListenerList;
     }
 
     /**
-     * Set 事件数组
-     * @param EventListenerList 事件数组
+     * Set <p>事件数组</p>
+     * @param EventListenerList <p>事件数组</p>
      */
     public void setEventListenerList(EventListener [] EventListenerList) {
         this.EventListenerList = EventListenerList;
     }
 
     /**
-     * Get 重跑&补录配置, 默认为 ALL; , ALL 运行成功或失败后皆可重跑或补录, FAILURE 运行成功后不可重跑或补录，运行失败后可重跑或补录, NONE 运行成功或失败后皆不可重跑或补录; 
-     * @return AllowRedoType 重跑&补录配置, 默认为 ALL; , ALL 运行成功或失败后皆可重跑或补录, FAILURE 运行成功后不可重跑或补录，运行失败后可重跑或补录, NONE 运行成功或失败后皆不可重跑或补录;
+     * Get <p>重跑&amp;补录配置, 默认为 ALL; , ALL 运行成功或失败后皆可重跑或补录, FAILURE 运行成功后不可重跑或补录，运行失败后可重跑或补录, NONE 运行成功或失败后皆不可重跑或补录;</p> 
+     * @return AllowRedoType <p>重跑&amp;补录配置, 默认为 ALL; , ALL 运行成功或失败后皆可重跑或补录, FAILURE 运行成功后不可重跑或补录，运行失败后可重跑或补录, NONE 运行成功或失败后皆不可重跑或补录;</p>
      */
     public String getAllowRedoType() {
         return this.AllowRedoType;
     }
 
     /**
-     * Set 重跑&补录配置, 默认为 ALL; , ALL 运行成功或失败后皆可重跑或补录, FAILURE 运行成功后不可重跑或补录，运行失败后可重跑或补录, NONE 运行成功或失败后皆不可重跑或补录;
-     * @param AllowRedoType 重跑&补录配置, 默认为 ALL; , ALL 运行成功或失败后皆可重跑或补录, FAILURE 运行成功后不可重跑或补录，运行失败后可重跑或补录, NONE 运行成功或失败后皆不可重跑或补录;
+     * Set <p>重跑&amp;补录配置, 默认为 ALL; , ALL 运行成功或失败后皆可重跑或补录, FAILURE 运行成功后不可重跑或补录，运行失败后可重跑或补录, NONE 运行成功或失败后皆不可重跑或补录;</p>
+     * @param AllowRedoType <p>重跑&amp;补录配置, 默认为 ALL; , ALL 运行成功或失败后皆可重跑或补录, FAILURE 运行成功后不可重跑或补录，运行失败后可重跑或补录, NONE 运行成功或失败后皆不可重跑或补录;</p>
      */
     public void setAllowRedoType(String AllowRedoType) {
         this.AllowRedoType = AllowRedoType;
     }
 
     /**
-     * Get 输出参数数组 
-     * @return ParamTaskOutList 输出参数数组
+     * Get <p>输出参数数组</p> 
+     * @return ParamTaskOutList <p>输出参数数组</p>
      */
     public OutTaskParameter [] getParamTaskOutList() {
         return this.ParamTaskOutList;
     }
 
     /**
-     * Set 输出参数数组
-     * @param ParamTaskOutList 输出参数数组
+     * Set <p>输出参数数组</p>
+     * @param ParamTaskOutList <p>输出参数数组</p>
      */
     public void setParamTaskOutList(OutTaskParameter [] ParamTaskOutList) {
         this.ParamTaskOutList = ParamTaskOutList;
     }
 
     /**
-     * Get 输入参数数组 
-     * @return ParamTaskInList 输入参数数组
+     * Get <p>输入参数数组</p> 
+     * @return ParamTaskInList <p>输入参数数组</p>
      */
     public InTaskParameter [] getParamTaskInList() {
         return this.ParamTaskInList;
     }
 
     /**
-     * Set 输入参数数组
-     * @param ParamTaskInList 输入参数数组
+     * Set <p>输入参数数组</p>
+     * @param ParamTaskInList <p>输入参数数组</p>
      */
     public void setParamTaskInList(InTaskParameter [] ParamTaskInList) {
         this.ParamTaskInList = ParamTaskInList;
     }
 
     /**
-     * Get 产出登记 
-     * @return TaskOutputRegistryList 产出登记
+     * Get <p>产出登记</p> 
+     * @return TaskOutputRegistryList <p>产出登记</p>
      */
     public TaskDataRegistry [] getTaskOutputRegistryList() {
         return this.TaskOutputRegistryList;
     }
 
     /**
-     * Set 产出登记
-     * @param TaskOutputRegistryList 产出登记
+     * Set <p>产出登记</p>
+     * @param TaskOutputRegistryList <p>产出登记</p>
      */
     public void setTaskOutputRegistryList(TaskDataRegistry [] TaskOutputRegistryList) {
         this.TaskOutputRegistryList = TaskOutputRegistryList;
     }
 
     /**
-     * Get **实例生成策略**
-* T_PLUS_0: T+0生成,默认策略
-* T_PLUS_1: T+1生成 
-     * @return InitStrategy **实例生成策略**
-* T_PLUS_0: T+0生成,默认策略
-* T_PLUS_1: T+1生成
+     * Get <p><strong>实例生成策略</strong></p><ul><li>T_PLUS_0: T+0生成,默认策略</li><li>T_PLUS_1: T+1生成</li></ul> 
+     * @return InitStrategy <p><strong>实例生成策略</strong></p><ul><li>T_PLUS_0: T+0生成,默认策略</li><li>T_PLUS_1: T+1生成</li></ul>
      */
     public String getInitStrategy() {
         return this.InitStrategy;
     }
 
     /**
-     * Set **实例生成策略**
-* T_PLUS_0: T+0生成,默认策略
-* T_PLUS_1: T+1生成
-     * @param InitStrategy **实例生成策略**
-* T_PLUS_0: T+0生成,默认策略
-* T_PLUS_1: T+1生成
+     * Set <p><strong>实例生成策略</strong></p><ul><li>T_PLUS_0: T+0生成,默认策略</li><li>T_PLUS_1: T+1生成</li></ul>
+     * @param InitStrategy <p><strong>实例生成策略</strong></p><ul><li>T_PLUS_0: T+0生成,默认策略</li><li>T_PLUS_1: T+1生成</li></ul>
      */
     public void setInitStrategy(String InitStrategy) {
         this.InitStrategy = InitStrategy;
     }
 
     /**
-     * Get 调度类型: 0 正常调度 1 空跑调度，默认为 0 
-     * @return ScheduleRunType 调度类型: 0 正常调度 1 空跑调度，默认为 0
+     * Get <p>调度类型: 0 正常调度 1 空跑调度，默认为 0</p> 
+     * @return ScheduleRunType <p>调度类型: 0 正常调度 1 空跑调度，默认为 0</p>
      * @deprecated
      */
     @Deprecated
@@ -593,8 +523,8 @@ public class CreateTaskSchedulerConfiguration extends AbstractModel {
     }
 
     /**
-     * Set 调度类型: 0 正常调度 1 空跑调度，默认为 0
-     * @param ScheduleRunType 调度类型: 0 正常调度 1 空跑调度，默认为 0
+     * Set <p>调度类型: 0 正常调度 1 空跑调度，默认为 0</p>
+     * @param ScheduleRunType <p>调度类型: 0 正常调度 1 空跑调度，默认为 0</p>
      * @deprecated
      */
     @Deprecated
@@ -603,8 +533,8 @@ public class CreateTaskSchedulerConfiguration extends AbstractModel {
     }
 
     /**
-     * Get 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6 
-     * @return RunPriority 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+     * Get <p>任务调度优先级 运行优先级 4高 5中 6低 , 默认:6</p> 
+     * @return RunPriority <p>任务调度优先级 运行优先级 4高 5中 6低 , 默认:6</p>
      * @deprecated
      */
     @Deprecated
@@ -613,8 +543,8 @@ public class CreateTaskSchedulerConfiguration extends AbstractModel {
     }
 
     /**
-     * Set 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
-     * @param RunPriority 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+     * Set <p>任务调度优先级 运行优先级 4高 5中 6低 , 默认:6</p>
+     * @param RunPriority <p>任务调度优先级 运行优先级 4高 5中 6低 , 默认:6</p>
      * @deprecated
      */
     @Deprecated
@@ -623,8 +553,8 @@ public class CreateTaskSchedulerConfiguration extends AbstractModel {
     }
 
     /**
-     * Get 重试策略 重试等待时间,单位分钟: 默认: 5 
-     * @return RetryWait 重试策略 重试等待时间,单位分钟: 默认: 5
+     * Get <p>重试策略 重试等待时间,单位分钟: 默认: 5</p> 
+     * @return RetryWait <p>重试策略 重试等待时间,单位分钟: 默认: 5</p>
      * @deprecated
      */
     @Deprecated
@@ -633,8 +563,8 @@ public class CreateTaskSchedulerConfiguration extends AbstractModel {
     }
 
     /**
-     * Set 重试策略 重试等待时间,单位分钟: 默认: 5
-     * @param RetryWait 重试策略 重试等待时间,单位分钟: 默认: 5
+     * Set <p>重试策略 重试等待时间,单位分钟: 默认: 5</p>
+     * @param RetryWait <p>重试策略 重试等待时间,单位分钟: 默认: 5</p>
      * @deprecated
      */
     @Deprecated
@@ -643,8 +573,8 @@ public class CreateTaskSchedulerConfiguration extends AbstractModel {
     }
 
     /**
-     * Get 重试策略 最大尝试次数, 默认: 4 
-     * @return MaxRetryAttempts 重试策略 最大尝试次数, 默认: 4
+     * Get <p>重试策略 最大尝试次数, 默认: 4</p> 
+     * @return MaxRetryAttempts <p>重试策略 最大尝试次数, 默认: 4</p>
      * @deprecated
      */
     @Deprecated
@@ -653,8 +583,8 @@ public class CreateTaskSchedulerConfiguration extends AbstractModel {
     }
 
     /**
-     * Set 重试策略 最大尝试次数, 默认: 4
-     * @param MaxRetryAttempts 重试策略 最大尝试次数, 默认: 4
+     * Set <p>重试策略 最大尝试次数, 默认: 4</p>
+     * @param MaxRetryAttempts <p>重试策略 最大尝试次数, 默认: 4</p>
      * @deprecated
      */
     @Deprecated
@@ -663,8 +593,8 @@ public class CreateTaskSchedulerConfiguration extends AbstractModel {
     }
 
     /**
-     * Get 超时处理策略 运行耗时超时（单位：分钟）默认为 -1 
-     * @return ExecutionTTL 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+     * Get <p>超时处理策略 运行耗时超时（单位：分钟）默认为 -1</p> 
+     * @return ExecutionTTL <p>超时处理策略 运行耗时超时（单位：分钟）默认为 -1</p>
      * @deprecated
      */
     @Deprecated
@@ -673,8 +603,8 @@ public class CreateTaskSchedulerConfiguration extends AbstractModel {
     }
 
     /**
-     * Set 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
-     * @param ExecutionTTL 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+     * Set <p>超时处理策略 运行耗时超时（单位：分钟）默认为 -1</p>
+     * @param ExecutionTTL <p>超时处理策略 运行耗时超时（单位：分钟）默认为 -1</p>
      * @deprecated
      */
     @Deprecated
@@ -683,8 +613,8 @@ public class CreateTaskSchedulerConfiguration extends AbstractModel {
     }
 
     /**
-     * Get 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1 
-     * @return WaitExecutionTotalTTL 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+     * Get <p>超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1</p> 
+     * @return WaitExecutionTotalTTL <p>超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1</p>
      * @deprecated
      */
     @Deprecated
@@ -693,8 +623,8 @@ public class CreateTaskSchedulerConfiguration extends AbstractModel {
     }
 
     /**
-     * Set 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
-     * @param WaitExecutionTotalTTL 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+     * Set <p>超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1</p>
+     * @param WaitExecutionTotalTTL <p>超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1</p>
      * @deprecated
      */
     @Deprecated
@@ -703,163 +633,135 @@ public class CreateTaskSchedulerConfiguration extends AbstractModel {
     }
 
     /**
-     * Get 调度类型: 0 正常调度 1 空跑调度，默认为 0 
-     * @return ScheduleType 调度类型: 0 正常调度 1 空跑调度，默认为 0
+     * Get <p>调度类型: 0 正常调度 1 空跑调度，默认为 0</p> 
+     * @return ScheduleType <p>调度类型: 0 正常调度 1 空跑调度，默认为 0</p>
      */
     public Long getScheduleType() {
         return this.ScheduleType;
     }
 
     /**
-     * Set 调度类型: 0 正常调度 1 空跑调度，默认为 0
-     * @param ScheduleType 调度类型: 0 正常调度 1 空跑调度，默认为 0
+     * Set <p>调度类型: 0 正常调度 1 空跑调度，默认为 0</p>
+     * @param ScheduleType <p>调度类型: 0 正常调度 1 空跑调度，默认为 0</p>
      */
     public void setScheduleType(Long ScheduleType) {
         this.ScheduleType = ScheduleType;
     }
 
     /**
-     * Get 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6 
-     * @return RunPriorityType 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+     * Get <p>任务调度优先级 运行优先级 4高 5中 6低 , 默认:6</p> 
+     * @return RunPriorityType <p>任务调度优先级 运行优先级 4高 5中 6低 , 默认:6</p>
      */
     public Long getRunPriorityType() {
         return this.RunPriorityType;
     }
 
     /**
-     * Set 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
-     * @param RunPriorityType 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+     * Set <p>任务调度优先级 运行优先级 4高 5中 6低 , 默认:6</p>
+     * @param RunPriorityType <p>任务调度优先级 运行优先级 4高 5中 6低 , 默认:6</p>
      */
     public void setRunPriorityType(Long RunPriorityType) {
         this.RunPriorityType = RunPriorityType;
     }
 
     /**
-     * Get 重试策略 重试等待时间,单位分钟: 默认: 5 
-     * @return RetryWaitMinute 重试策略 重试等待时间,单位分钟: 默认: 5
+     * Get <p>重试策略 重试等待时间,单位分钟: 默认: 5</p> 
+     * @return RetryWaitMinute <p>重试策略 重试等待时间,单位分钟: 默认: 5</p>
      */
     public Long getRetryWaitMinute() {
         return this.RetryWaitMinute;
     }
 
     /**
-     * Set 重试策略 重试等待时间,单位分钟: 默认: 5
-     * @param RetryWaitMinute 重试策略 重试等待时间,单位分钟: 默认: 5
+     * Set <p>重试策略 重试等待时间,单位分钟: 默认: 5</p>
+     * @param RetryWaitMinute <p>重试策略 重试等待时间,单位分钟: 默认: 5</p>
      */
     public void setRetryWaitMinute(Long RetryWaitMinute) {
         this.RetryWaitMinute = RetryWaitMinute;
     }
 
     /**
-     * Get 重试策略 最大尝试次数, 默认: 4 
-     * @return MaxRetryNumber 重试策略 最大尝试次数, 默认: 4
+     * Get <p>重试策略 最大尝试次数, 默认: 4</p> 
+     * @return MaxRetryNumber <p>重试策略 最大尝试次数, 默认: 4</p>
      */
     public Long getMaxRetryNumber() {
         return this.MaxRetryNumber;
     }
 
     /**
-     * Set 重试策略 最大尝试次数, 默认: 4
-     * @param MaxRetryNumber 重试策略 最大尝试次数, 默认: 4
+     * Set <p>重试策略 最大尝试次数, 默认: 4</p>
+     * @param MaxRetryNumber <p>重试策略 最大尝试次数, 默认: 4</p>
      */
     public void setMaxRetryNumber(Long MaxRetryNumber) {
         this.MaxRetryNumber = MaxRetryNumber;
     }
 
     /**
-     * Get 超时处理策略 运行耗时超时（单位：分钟）默认为 -1 
-     * @return ExecutionTTLMinute 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+     * Get <p>超时处理策略 运行耗时超时（单位：分钟）默认为 -1</p> 
+     * @return ExecutionTTLMinute <p>超时处理策略 运行耗时超时（单位：分钟）默认为 -1</p>
      */
     public Long getExecutionTTLMinute() {
         return this.ExecutionTTLMinute;
     }
 
     /**
-     * Set 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
-     * @param ExecutionTTLMinute 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+     * Set <p>超时处理策略 运行耗时超时（单位：分钟）默认为 -1</p>
+     * @param ExecutionTTLMinute <p>超时处理策略 运行耗时超时（单位：分钟）默认为 -1</p>
      */
     public void setExecutionTTLMinute(Long ExecutionTTLMinute) {
         this.ExecutionTTLMinute = ExecutionTTLMinute;
     }
 
     /**
-     * Get 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1 
-     * @return WaitExecutionTotalTTLMinute 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+     * Get <p>超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1</p> 
+     * @return WaitExecutionTotalTTLMinute <p>超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1</p>
      */
     public Long getWaitExecutionTotalTTLMinute() {
         return this.WaitExecutionTotalTTLMinute;
     }
 
     /**
-     * Set 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
-     * @param WaitExecutionTotalTTLMinute 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+     * Set <p>超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1</p>
+     * @param WaitExecutionTotalTTLMinute <p>超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1</p>
      */
     public void setWaitExecutionTotalTTLMinute(Long WaitExecutionTotalTTLMinute) {
         this.WaitExecutionTotalTTLMinute = WaitExecutionTotalTTLMinute;
     }
 
     /**
-     * Get - 任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置
-- ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败
-- ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行
-- ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功
-- ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行
-- ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行
-- ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行
-- ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行
-- ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游
-- NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败
-- ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行
-- NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行
-- ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行 
-     * @return DependencyTriggerPolicy - 任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置
-- ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败
-- ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行
-- ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功
-- ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行
-- ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行
-- ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行
-- ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行
-- ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游
-- NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败
-- ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行
-- NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行
-- ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行
+     * Get <ul><li>任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置</li><li>ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败</li><li>ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行</li><li>ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行</li><li>ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行</li><li>ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行</li><li>ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行</li><li>ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游</li><li>NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行</li><li>NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行</li><li>ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行</li></ul> 
+     * @return DependencyTriggerPolicy <ul><li>任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置</li><li>ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败</li><li>ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行</li><li>ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行</li><li>ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行</li><li>ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行</li><li>ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行</li><li>ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游</li><li>NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行</li><li>NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行</li><li>ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行</li></ul>
      */
     public String getDependencyTriggerPolicy() {
         return this.DependencyTriggerPolicy;
     }
 
     /**
-     * Set - 任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置
-- ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败
-- ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行
-- ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功
-- ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行
-- ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行
-- ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行
-- ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行
-- ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游
-- NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败
-- ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行
-- NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行
-- ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行
-     * @param DependencyTriggerPolicy - 任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置
-- ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败
-- ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行
-- ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功
-- ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行
-- ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行
-- ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行
-- ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行
-- ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游
-- NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败
-- ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行
-- NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行
-- ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行
+     * Set <ul><li>任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置</li><li>ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败</li><li>ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行</li><li>ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行</li><li>ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行</li><li>ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行</li><li>ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行</li><li>ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游</li><li>NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行</li><li>NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行</li><li>ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行</li></ul>
+     * @param DependencyTriggerPolicy <ul><li>任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置</li><li>ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败</li><li>ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行</li><li>ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行</li><li>ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行</li><li>ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行</li><li>ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行</li><li>ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游</li><li>NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行</li><li>NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行</li><li>ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行</li></ul>
      */
     public void setDependencyTriggerPolicy(String DependencyTriggerPolicy) {
         this.DependencyTriggerPolicy = DependencyTriggerPolicy;
+    }
+
+    /**
+     * Get <p>是否允许下游依赖 1允许 0不允许</p><p>取值范围：[0, 1]</p><p>默认值：1</p> 
+     * @return AllowDownstreamDependency <p>是否允许下游依赖 1允许 0不允许</p><p>取值范围：[0, 1]</p><p>默认值：1</p>
+     * @deprecated
+     */
+    @Deprecated
+    public Long getAllowDownstreamDependency() {
+        return this.AllowDownstreamDependency;
+    }
+
+    /**
+     * Set <p>是否允许下游依赖 1允许 0不允许</p><p>取值范围：[0, 1]</p><p>默认值：1</p>
+     * @param AllowDownstreamDependency <p>是否允许下游依赖 1允许 0不允许</p><p>取值范围：[0, 1]</p><p>默认值：1</p>
+     * @deprecated
+     */
+    @Deprecated
+    public void setAllowDownstreamDependency(Long AllowDownstreamDependency) {
+        this.AllowDownstreamDependency = AllowDownstreamDependency;
     }
 
     public CreateTaskSchedulerConfiguration() {
@@ -975,6 +877,9 @@ public class CreateTaskSchedulerConfiguration extends AbstractModel {
         if (source.DependencyTriggerPolicy != null) {
             this.DependencyTriggerPolicy = new String(source.DependencyTriggerPolicy);
         }
+        if (source.AllowDownstreamDependency != null) {
+            this.AllowDownstreamDependency = new Long(source.AllowDownstreamDependency);
+        }
     }
 
 
@@ -1012,6 +917,7 @@ public class CreateTaskSchedulerConfiguration extends AbstractModel {
         this.setParamSimple(map, prefix + "ExecutionTTLMinute", this.ExecutionTTLMinute);
         this.setParamSimple(map, prefix + "WaitExecutionTotalTTLMinute", this.WaitExecutionTotalTTLMinute);
         this.setParamSimple(map, prefix + "DependencyTriggerPolicy", this.DependencyTriggerPolicy);
+        this.setParamSimple(map, prefix + "AllowDownstreamDependency", this.AllowDownstreamDependency);
 
     }
 }

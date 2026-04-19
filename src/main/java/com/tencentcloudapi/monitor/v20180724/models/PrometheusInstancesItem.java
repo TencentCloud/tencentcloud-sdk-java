@@ -24,60 +24,56 @@ import java.util.HashMap;
 public class PrometheusInstancesItem extends AbstractModel {
 
     /**
-    * 实例ID。
+    * <p>实例ID。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例名称。
+    * <p>实例名称。</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 实例计费模式。取值范围：
-<ul>
-<li>2：包年包月</li>
-<li>3：按量</li>
-</ul>
+    * <p>实例计费模式。取值范围：</p><ul><li>2：包年包月</li><li>3：按量</li></ul>
     */
     @SerializedName("InstanceChargeType")
     @Expose
     private Long InstanceChargeType;
 
     /**
-    * 地域 ID
+    * <p>地域 ID</p>
     */
     @SerializedName("RegionId")
     @Expose
     private Long RegionId;
 
     /**
-    * 可用区
+    * <p>可用区</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * VPC ID
+    * <p>VPC ID</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 子网 ID
+    * <p>子网 ID</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 存储周期
+    * <p>存储周期</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataRetentionTime")
@@ -85,24 +81,14 @@ public class PrometheusInstancesItem extends AbstractModel {
     private Long DataRetentionTime;
 
     /**
-    * 实例业务状态。取值范围：
-<ul>
-<li>1：正在创建</li>
-<li>2：运行中</li>
-<li>3：异常</li>
-<li>4：重建中</li>
-<li>5：销毁中</li>
-<li>6：已停服</li>
-<li>8：欠费停服中</li>
-<li>9：欠费已停服</li>
-</ul>
+    * <p>实例业务状态。取值范围：</p><ul><li>1：正在创建</li><li>2：运行中</li><li>3：异常</li><li>4：重建中</li><li>5：销毁中</li><li>6：已停服</li><li>8：欠费停服中</li><li>9：欠费已停服</li></ul>
     */
     @SerializedName("InstanceStatus")
     @Expose
     private Long InstanceStatus;
 
     /**
-    * Grafana 面板 URL
+    * <p>Grafana 面板 URL</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GrafanaURL")
@@ -110,23 +96,21 @@ public class PrometheusInstancesItem extends AbstractModel {
     private String GrafanaURL;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreatedAt")
     @Expose
     private String CreatedAt;
 
     /**
-    * 是否开启 Grafana
-<li>0：不开启</li>
-<li>1：开启</li>
+    * <p>是否开启 Grafana</p><li>0：不开启</li><li>1：开启</li>
     */
     @SerializedName("EnableGrafana")
     @Expose
     private Long EnableGrafana;
 
     /**
-    * 实例IPV4地址
+    * <p>实例IPV4地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IPv4Address")
@@ -134,7 +118,7 @@ public class PrometheusInstancesItem extends AbstractModel {
     private String IPv4Address;
 
     /**
-    * 实例关联的标签列表。
+    * <p>实例关联的标签列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagSpecification")
@@ -142,7 +126,7 @@ public class PrometheusInstancesItem extends AbstractModel {
     private PrometheusTag [] TagSpecification;
 
     /**
-    * 购买的实例过期时间
+    * <p>购买的实例过期时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpireTime")
@@ -150,14 +134,7 @@ public class PrometheusInstancesItem extends AbstractModel {
     private String ExpireTime;
 
     /**
-    * 计费状态
-<ul>
-<li>1：正常</li>
-<li>2：过期</li>
-<li>3：销毁</li>
-<li>4：分配中</li>
-<li>5：分配失败</li>
-</ul>
+    * <p>计费状态</p><ul><li>1：正常</li><li>2：过期</li><li>3：销毁</li><li>4：分配中</li><li>5：分配失败</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChargeStatus")
@@ -165,7 +142,7 @@ public class PrometheusInstancesItem extends AbstractModel {
     private Long ChargeStatus;
 
     /**
-    * 规格名称
+    * <p>规格名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpecName")
@@ -173,13 +150,7 @@ public class PrometheusInstancesItem extends AbstractModel {
     private String SpecName;
 
     /**
-    * 自动续费标记
-<ul>
-<li>0：不自动续费</li>
-<li>1：开启自动续费</li>
-<li>2：禁止自动续费</li>
-<li>-1：无效</li>
-</ul>
+    * <p>自动续费标记</p><ul><li>0：不自动续费</li><li>1：开启自动续费</li><li>2：禁止自动续费</li><li>-1：无效</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoRenewFlag")
@@ -187,11 +158,7 @@ public class PrometheusInstancesItem extends AbstractModel {
     private Long AutoRenewFlag;
 
     /**
-    * 是否快过期
-<ul>
-<li>0：否</li>
-<li>1：快过期</li>
-</ul>
+    * <p>是否快过期</p><ul><li>0：否</li><li>1：快过期</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsNearExpire")
@@ -199,7 +166,7 @@ public class PrometheusInstancesItem extends AbstractModel {
     private Long IsNearExpire;
 
     /**
-    * 数据写入需要的 Token
+    * <p>数据写入需要的 Token</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuthToken")
@@ -207,7 +174,7 @@ public class PrometheusInstancesItem extends AbstractModel {
     private String AuthToken;
 
     /**
-    * Prometheus Remote Write 的地址
+    * <p>Prometheus Remote Write 的地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RemoteWrite")
@@ -215,7 +182,7 @@ public class PrometheusInstancesItem extends AbstractModel {
     private String RemoteWrite;
 
     /**
-    * Prometheus HTTP Api 根地址
+    * <p>Prometheus HTTP Api 根地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApiRootPath")
@@ -223,7 +190,7 @@ public class PrometheusInstancesItem extends AbstractModel {
     private String ApiRootPath;
 
     /**
-    * Proxy 的地址
+    * <p>Proxy 的地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxyAddress")
@@ -231,16 +198,7 @@ public class PrometheusInstancesItem extends AbstractModel {
     private String ProxyAddress;
 
     /**
-    * Grafana 运行状态
-<ul>
-<li>1：正在创建</li>
-<li>2：运行中</li>
-<li>3：异常</li>
-<li>4：重启中</li>
-<li>5：销毁中</li>
-<li>6：已停机</li>
-<li>7：已删除</li>
-</ul>
+    * <p>Grafana 运行状态</p><ul><li>1：正在创建</li><li>2：运行中</li><li>3：异常</li><li>4：重启中</li><li>5：销毁中</li><li>6：已停机</li><li>7：已删除</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GrafanaStatus")
@@ -248,7 +206,7 @@ public class PrometheusInstancesItem extends AbstractModel {
     private Long GrafanaStatus;
 
     /**
-    * Grafana IP 白名单列表，使用英文分号分隔
+    * <p>Grafana IP 白名单列表，使用英文分号分隔</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GrafanaIpWhiteList")
@@ -256,7 +214,7 @@ public class PrometheusInstancesItem extends AbstractModel {
     private String GrafanaIpWhiteList;
 
     /**
-    * 实例的授权信息
+    * <p>实例的授权信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Grant")
@@ -264,7 +222,7 @@ public class PrometheusInstancesItem extends AbstractModel {
     private PrometheusInstanceGrantInfo Grant;
 
     /**
-    * 绑定的 Grafana 实例 ID
+    * <p>绑定的 Grafana 实例 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GrafanaInstanceId")
@@ -272,7 +230,7 @@ public class PrometheusInstancesItem extends AbstractModel {
     private String GrafanaInstanceId;
 
     /**
-    * 告警规则限制
+    * <p>告警规则限制</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlertRuleLimit")
@@ -280,7 +238,7 @@ public class PrometheusInstancesItem extends AbstractModel {
     private Long AlertRuleLimit;
 
     /**
-    * 预聚合规则限制
+    * <p>预聚合规则限制</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordingRuleLimit")
@@ -288,7 +246,7 @@ public class PrometheusInstancesItem extends AbstractModel {
     private Long RecordingRuleLimit;
 
     /**
-    * 迁移状态，0-不在迁移中，1-迁移中、原实例，2-迁移中、目标实例
+    * <p>迁移状态，0-不在迁移中，1-迁移中、原实例，2-迁移中、目标实例</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MigrationType")
@@ -296,137 +254,129 @@ public class PrometheusInstancesItem extends AbstractModel {
     private Long MigrationType;
 
     /**
-     * Get 实例ID。 
-     * @return InstanceId 实例ID。
+    * <p>标识prom实例特殊属性</p><p>归档存储时长(天):<br>key: LongTermStorageRetentionTime<br>value: 60-730</p><p>实例创建方式：<br>key: CreatedFrom<br>value: 0 - 来自prom控制台<br>1 - 来自tke集群详情页<br>2 - 来自新建集群页</p><p>免费试用到期时间:<br>key: FreeTrialExpireAt<br>value: RFC3339 格式时间字符串</p><p>关联的资源包ID:<br>key: ResourcePackageID<br>value: prompkg-xxxxx</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceAttributes")
+    @Expose
+    private PrometheusRuleKV [] InstanceAttributes;
+
+    /**
+     * Get <p>实例ID。</p> 
+     * @return InstanceId <p>实例ID。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID。
-     * @param InstanceId 实例ID。
+     * Set <p>实例ID。</p>
+     * @param InstanceId <p>实例ID。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例名称。 
-     * @return InstanceName 实例名称。
+     * Get <p>实例名称。</p> 
+     * @return InstanceName <p>实例名称。</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称。
-     * @param InstanceName 实例名称。
+     * Set <p>实例名称。</p>
+     * @param InstanceName <p>实例名称。</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 实例计费模式。取值范围：
-<ul>
-<li>2：包年包月</li>
-<li>3：按量</li>
-</ul> 
-     * @return InstanceChargeType 实例计费模式。取值范围：
-<ul>
-<li>2：包年包月</li>
-<li>3：按量</li>
-</ul>
+     * Get <p>实例计费模式。取值范围：</p><ul><li>2：包年包月</li><li>3：按量</li></ul> 
+     * @return InstanceChargeType <p>实例计费模式。取值范围：</p><ul><li>2：包年包月</li><li>3：按量</li></ul>
      */
     public Long getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set 实例计费模式。取值范围：
-<ul>
-<li>2：包年包月</li>
-<li>3：按量</li>
-</ul>
-     * @param InstanceChargeType 实例计费模式。取值范围：
-<ul>
-<li>2：包年包月</li>
-<li>3：按量</li>
-</ul>
+     * Set <p>实例计费模式。取值范围：</p><ul><li>2：包年包月</li><li>3：按量</li></ul>
+     * @param InstanceChargeType <p>实例计费模式。取值范围：</p><ul><li>2：包年包月</li><li>3：按量</li></ul>
      */
     public void setInstanceChargeType(Long InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
     }
 
     /**
-     * Get 地域 ID 
-     * @return RegionId 地域 ID
+     * Get <p>地域 ID</p> 
+     * @return RegionId <p>地域 ID</p>
      */
     public Long getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set 地域 ID
-     * @param RegionId 地域 ID
+     * Set <p>地域 ID</p>
+     * @param RegionId <p>地域 ID</p>
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get 可用区 
-     * @return Zone 可用区
+     * Get <p>可用区</p> 
+     * @return Zone <p>可用区</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区
-     * @param Zone 可用区
+     * Set <p>可用区</p>
+     * @param Zone <p>可用区</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get VPC ID 
-     * @return VpcId VPC ID
+     * Get <p>VPC ID</p> 
+     * @return VpcId <p>VPC ID</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID
-     * @param VpcId VPC ID
+     * Set <p>VPC ID</p>
+     * @param VpcId <p>VPC ID</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网 ID 
-     * @return SubnetId 子网 ID
+     * Get <p>子网 ID</p> 
+     * @return SubnetId <p>子网 ID</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网 ID
-     * @param SubnetId 子网 ID
+     * Set <p>子网 ID</p>
+     * @param SubnetId <p>子网 ID</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 存储周期
+     * Get <p>存储周期</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DataRetentionTime 存储周期
+     * @return DataRetentionTime <p>存储周期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDataRetentionTime() {
@@ -434,9 +384,9 @@ public class PrometheusInstancesItem extends AbstractModel {
     }
 
     /**
-     * Set 存储周期
+     * Set <p>存储周期</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DataRetentionTime 存储周期
+     * @param DataRetentionTime <p>存储周期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataRetentionTime(Long DataRetentionTime) {
@@ -444,65 +394,25 @@ public class PrometheusInstancesItem extends AbstractModel {
     }
 
     /**
-     * Get 实例业务状态。取值范围：
-<ul>
-<li>1：正在创建</li>
-<li>2：运行中</li>
-<li>3：异常</li>
-<li>4：重建中</li>
-<li>5：销毁中</li>
-<li>6：已停服</li>
-<li>8：欠费停服中</li>
-<li>9：欠费已停服</li>
-</ul> 
-     * @return InstanceStatus 实例业务状态。取值范围：
-<ul>
-<li>1：正在创建</li>
-<li>2：运行中</li>
-<li>3：异常</li>
-<li>4：重建中</li>
-<li>5：销毁中</li>
-<li>6：已停服</li>
-<li>8：欠费停服中</li>
-<li>9：欠费已停服</li>
-</ul>
+     * Get <p>实例业务状态。取值范围：</p><ul><li>1：正在创建</li><li>2：运行中</li><li>3：异常</li><li>4：重建中</li><li>5：销毁中</li><li>6：已停服</li><li>8：欠费停服中</li><li>9：欠费已停服</li></ul> 
+     * @return InstanceStatus <p>实例业务状态。取值范围：</p><ul><li>1：正在创建</li><li>2：运行中</li><li>3：异常</li><li>4：重建中</li><li>5：销毁中</li><li>6：已停服</li><li>8：欠费停服中</li><li>9：欠费已停服</li></ul>
      */
     public Long getInstanceStatus() {
         return this.InstanceStatus;
     }
 
     /**
-     * Set 实例业务状态。取值范围：
-<ul>
-<li>1：正在创建</li>
-<li>2：运行中</li>
-<li>3：异常</li>
-<li>4：重建中</li>
-<li>5：销毁中</li>
-<li>6：已停服</li>
-<li>8：欠费停服中</li>
-<li>9：欠费已停服</li>
-</ul>
-     * @param InstanceStatus 实例业务状态。取值范围：
-<ul>
-<li>1：正在创建</li>
-<li>2：运行中</li>
-<li>3：异常</li>
-<li>4：重建中</li>
-<li>5：销毁中</li>
-<li>6：已停服</li>
-<li>8：欠费停服中</li>
-<li>9：欠费已停服</li>
-</ul>
+     * Set <p>实例业务状态。取值范围：</p><ul><li>1：正在创建</li><li>2：运行中</li><li>3：异常</li><li>4：重建中</li><li>5：销毁中</li><li>6：已停服</li><li>8：欠费停服中</li><li>9：欠费已停服</li></ul>
+     * @param InstanceStatus <p>实例业务状态。取值范围：</p><ul><li>1：正在创建</li><li>2：运行中</li><li>3：异常</li><li>4：重建中</li><li>5：销毁中</li><li>6：已停服</li><li>8：欠费停服中</li><li>9：欠费已停服</li></ul>
      */
     public void setInstanceStatus(Long InstanceStatus) {
         this.InstanceStatus = InstanceStatus;
     }
 
     /**
-     * Get Grafana 面板 URL
+     * Get <p>Grafana 面板 URL</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GrafanaURL Grafana 面板 URL
+     * @return GrafanaURL <p>Grafana 面板 URL</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGrafanaURL() {
@@ -510,9 +420,9 @@ public class PrometheusInstancesItem extends AbstractModel {
     }
 
     /**
-     * Set Grafana 面板 URL
+     * Set <p>Grafana 面板 URL</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GrafanaURL Grafana 面板 URL
+     * @param GrafanaURL <p>Grafana 面板 URL</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGrafanaURL(String GrafanaURL) {
@@ -520,49 +430,41 @@ public class PrometheusInstancesItem extends AbstractModel {
     }
 
     /**
-     * Get 创建时间 
-     * @return CreatedAt 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreatedAt <p>创建时间</p>
      */
     public String getCreatedAt() {
         return this.CreatedAt;
     }
 
     /**
-     * Set 创建时间
-     * @param CreatedAt 创建时间
+     * Set <p>创建时间</p>
+     * @param CreatedAt <p>创建时间</p>
      */
     public void setCreatedAt(String CreatedAt) {
         this.CreatedAt = CreatedAt;
     }
 
     /**
-     * Get 是否开启 Grafana
-<li>0：不开启</li>
-<li>1：开启</li> 
-     * @return EnableGrafana 是否开启 Grafana
-<li>0：不开启</li>
-<li>1：开启</li>
+     * Get <p>是否开启 Grafana</p><li>0：不开启</li><li>1：开启</li> 
+     * @return EnableGrafana <p>是否开启 Grafana</p><li>0：不开启</li><li>1：开启</li>
      */
     public Long getEnableGrafana() {
         return this.EnableGrafana;
     }
 
     /**
-     * Set 是否开启 Grafana
-<li>0：不开启</li>
-<li>1：开启</li>
-     * @param EnableGrafana 是否开启 Grafana
-<li>0：不开启</li>
-<li>1：开启</li>
+     * Set <p>是否开启 Grafana</p><li>0：不开启</li><li>1：开启</li>
+     * @param EnableGrafana <p>是否开启 Grafana</p><li>0：不开启</li><li>1：开启</li>
      */
     public void setEnableGrafana(Long EnableGrafana) {
         this.EnableGrafana = EnableGrafana;
     }
 
     /**
-     * Get 实例IPV4地址
+     * Get <p>实例IPV4地址</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IPv4Address 实例IPV4地址
+     * @return IPv4Address <p>实例IPV4地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIPv4Address() {
@@ -570,9 +472,9 @@ public class PrometheusInstancesItem extends AbstractModel {
     }
 
     /**
-     * Set 实例IPV4地址
+     * Set <p>实例IPV4地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IPv4Address 实例IPV4地址
+     * @param IPv4Address <p>实例IPV4地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIPv4Address(String IPv4Address) {
@@ -580,9 +482,9 @@ public class PrometheusInstancesItem extends AbstractModel {
     }
 
     /**
-     * Get 实例关联的标签列表。
+     * Get <p>实例关联的标签列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TagSpecification 实例关联的标签列表。
+     * @return TagSpecification <p>实例关联的标签列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PrometheusTag [] getTagSpecification() {
@@ -590,9 +492,9 @@ public class PrometheusInstancesItem extends AbstractModel {
     }
 
     /**
-     * Set 实例关联的标签列表。
+     * Set <p>实例关联的标签列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TagSpecification 实例关联的标签列表。
+     * @param TagSpecification <p>实例关联的标签列表。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagSpecification(PrometheusTag [] TagSpecification) {
@@ -600,9 +502,9 @@ public class PrometheusInstancesItem extends AbstractModel {
     }
 
     /**
-     * Get 购买的实例过期时间
+     * Get <p>购买的实例过期时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExpireTime 购买的实例过期时间
+     * @return ExpireTime <p>购买的实例过期时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpireTime() {
@@ -610,9 +512,9 @@ public class PrometheusInstancesItem extends AbstractModel {
     }
 
     /**
-     * Set 购买的实例过期时间
+     * Set <p>购买的实例过期时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExpireTime 购买的实例过期时间
+     * @param ExpireTime <p>购买的实例过期时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpireTime(String ExpireTime) {
@@ -620,23 +522,9 @@ public class PrometheusInstancesItem extends AbstractModel {
     }
 
     /**
-     * Get 计费状态
-<ul>
-<li>1：正常</li>
-<li>2：过期</li>
-<li>3：销毁</li>
-<li>4：分配中</li>
-<li>5：分配失败</li>
-</ul>
+     * Get <p>计费状态</p><ul><li>1：正常</li><li>2：过期</li><li>3：销毁</li><li>4：分配中</li><li>5：分配失败</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ChargeStatus 计费状态
-<ul>
-<li>1：正常</li>
-<li>2：过期</li>
-<li>3：销毁</li>
-<li>4：分配中</li>
-<li>5：分配失败</li>
-</ul>
+     * @return ChargeStatus <p>计费状态</p><ul><li>1：正常</li><li>2：过期</li><li>3：销毁</li><li>4：分配中</li><li>5：分配失败</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getChargeStatus() {
@@ -644,23 +532,9 @@ public class PrometheusInstancesItem extends AbstractModel {
     }
 
     /**
-     * Set 计费状态
-<ul>
-<li>1：正常</li>
-<li>2：过期</li>
-<li>3：销毁</li>
-<li>4：分配中</li>
-<li>5：分配失败</li>
-</ul>
+     * Set <p>计费状态</p><ul><li>1：正常</li><li>2：过期</li><li>3：销毁</li><li>4：分配中</li><li>5：分配失败</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ChargeStatus 计费状态
-<ul>
-<li>1：正常</li>
-<li>2：过期</li>
-<li>3：销毁</li>
-<li>4：分配中</li>
-<li>5：分配失败</li>
-</ul>
+     * @param ChargeStatus <p>计费状态</p><ul><li>1：正常</li><li>2：过期</li><li>3：销毁</li><li>4：分配中</li><li>5：分配失败</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChargeStatus(Long ChargeStatus) {
@@ -668,9 +542,9 @@ public class PrometheusInstancesItem extends AbstractModel {
     }
 
     /**
-     * Get 规格名称
+     * Get <p>规格名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SpecName 规格名称
+     * @return SpecName <p>规格名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSpecName() {
@@ -678,9 +552,9 @@ public class PrometheusInstancesItem extends AbstractModel {
     }
 
     /**
-     * Set 规格名称
+     * Set <p>规格名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SpecName 规格名称
+     * @param SpecName <p>规格名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpecName(String SpecName) {
@@ -688,21 +562,9 @@ public class PrometheusInstancesItem extends AbstractModel {
     }
 
     /**
-     * Get 自动续费标记
-<ul>
-<li>0：不自动续费</li>
-<li>1：开启自动续费</li>
-<li>2：禁止自动续费</li>
-<li>-1：无效</li>
-</ul>
+     * Get <p>自动续费标记</p><ul><li>0：不自动续费</li><li>1：开启自动续费</li><li>2：禁止自动续费</li><li>-1：无效</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AutoRenewFlag 自动续费标记
-<ul>
-<li>0：不自动续费</li>
-<li>1：开启自动续费</li>
-<li>2：禁止自动续费</li>
-<li>-1：无效</li>
-</ul>
+     * @return AutoRenewFlag <p>自动续费标记</p><ul><li>0：不自动续费</li><li>1：开启自动续费</li><li>2：禁止自动续费</li><li>-1：无效</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAutoRenewFlag() {
@@ -710,21 +572,9 @@ public class PrometheusInstancesItem extends AbstractModel {
     }
 
     /**
-     * Set 自动续费标记
-<ul>
-<li>0：不自动续费</li>
-<li>1：开启自动续费</li>
-<li>2：禁止自动续费</li>
-<li>-1：无效</li>
-</ul>
+     * Set <p>自动续费标记</p><ul><li>0：不自动续费</li><li>1：开启自动续费</li><li>2：禁止自动续费</li><li>-1：无效</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AutoRenewFlag 自动续费标记
-<ul>
-<li>0：不自动续费</li>
-<li>1：开启自动续费</li>
-<li>2：禁止自动续费</li>
-<li>-1：无效</li>
-</ul>
+     * @param AutoRenewFlag <p>自动续费标记</p><ul><li>0：不自动续费</li><li>1：开启自动续费</li><li>2：禁止自动续费</li><li>-1：无效</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
@@ -732,17 +582,9 @@ public class PrometheusInstancesItem extends AbstractModel {
     }
 
     /**
-     * Get 是否快过期
-<ul>
-<li>0：否</li>
-<li>1：快过期</li>
-</ul>
+     * Get <p>是否快过期</p><ul><li>0：否</li><li>1：快过期</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsNearExpire 是否快过期
-<ul>
-<li>0：否</li>
-<li>1：快过期</li>
-</ul>
+     * @return IsNearExpire <p>是否快过期</p><ul><li>0：否</li><li>1：快过期</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsNearExpire() {
@@ -750,17 +592,9 @@ public class PrometheusInstancesItem extends AbstractModel {
     }
 
     /**
-     * Set 是否快过期
-<ul>
-<li>0：否</li>
-<li>1：快过期</li>
-</ul>
+     * Set <p>是否快过期</p><ul><li>0：否</li><li>1：快过期</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsNearExpire 是否快过期
-<ul>
-<li>0：否</li>
-<li>1：快过期</li>
-</ul>
+     * @param IsNearExpire <p>是否快过期</p><ul><li>0：否</li><li>1：快过期</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsNearExpire(Long IsNearExpire) {
@@ -768,9 +602,9 @@ public class PrometheusInstancesItem extends AbstractModel {
     }
 
     /**
-     * Get 数据写入需要的 Token
+     * Get <p>数据写入需要的 Token</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AuthToken 数据写入需要的 Token
+     * @return AuthToken <p>数据写入需要的 Token</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAuthToken() {
@@ -778,9 +612,9 @@ public class PrometheusInstancesItem extends AbstractModel {
     }
 
     /**
-     * Set 数据写入需要的 Token
+     * Set <p>数据写入需要的 Token</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AuthToken 数据写入需要的 Token
+     * @param AuthToken <p>数据写入需要的 Token</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuthToken(String AuthToken) {
@@ -788,9 +622,9 @@ public class PrometheusInstancesItem extends AbstractModel {
     }
 
     /**
-     * Get Prometheus Remote Write 的地址
+     * Get <p>Prometheus Remote Write 的地址</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RemoteWrite Prometheus Remote Write 的地址
+     * @return RemoteWrite <p>Prometheus Remote Write 的地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemoteWrite() {
@@ -798,9 +632,9 @@ public class PrometheusInstancesItem extends AbstractModel {
     }
 
     /**
-     * Set Prometheus Remote Write 的地址
+     * Set <p>Prometheus Remote Write 的地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RemoteWrite Prometheus Remote Write 的地址
+     * @param RemoteWrite <p>Prometheus Remote Write 的地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemoteWrite(String RemoteWrite) {
@@ -808,9 +642,9 @@ public class PrometheusInstancesItem extends AbstractModel {
     }
 
     /**
-     * Get Prometheus HTTP Api 根地址
+     * Get <p>Prometheus HTTP Api 根地址</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ApiRootPath Prometheus HTTP Api 根地址
+     * @return ApiRootPath <p>Prometheus HTTP Api 根地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApiRootPath() {
@@ -818,9 +652,9 @@ public class PrometheusInstancesItem extends AbstractModel {
     }
 
     /**
-     * Set Prometheus HTTP Api 根地址
+     * Set <p>Prometheus HTTP Api 根地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ApiRootPath Prometheus HTTP Api 根地址
+     * @param ApiRootPath <p>Prometheus HTTP Api 根地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApiRootPath(String ApiRootPath) {
@@ -828,9 +662,9 @@ public class PrometheusInstancesItem extends AbstractModel {
     }
 
     /**
-     * Get Proxy 的地址
+     * Get <p>Proxy 的地址</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProxyAddress Proxy 的地址
+     * @return ProxyAddress <p>Proxy 的地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProxyAddress() {
@@ -838,9 +672,9 @@ public class PrometheusInstancesItem extends AbstractModel {
     }
 
     /**
-     * Set Proxy 的地址
+     * Set <p>Proxy 的地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProxyAddress Proxy 的地址
+     * @param ProxyAddress <p>Proxy 的地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxyAddress(String ProxyAddress) {
@@ -848,27 +682,9 @@ public class PrometheusInstancesItem extends AbstractModel {
     }
 
     /**
-     * Get Grafana 运行状态
-<ul>
-<li>1：正在创建</li>
-<li>2：运行中</li>
-<li>3：异常</li>
-<li>4：重启中</li>
-<li>5：销毁中</li>
-<li>6：已停机</li>
-<li>7：已删除</li>
-</ul>
+     * Get <p>Grafana 运行状态</p><ul><li>1：正在创建</li><li>2：运行中</li><li>3：异常</li><li>4：重启中</li><li>5：销毁中</li><li>6：已停机</li><li>7：已删除</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GrafanaStatus Grafana 运行状态
-<ul>
-<li>1：正在创建</li>
-<li>2：运行中</li>
-<li>3：异常</li>
-<li>4：重启中</li>
-<li>5：销毁中</li>
-<li>6：已停机</li>
-<li>7：已删除</li>
-</ul>
+     * @return GrafanaStatus <p>Grafana 运行状态</p><ul><li>1：正在创建</li><li>2：运行中</li><li>3：异常</li><li>4：重启中</li><li>5：销毁中</li><li>6：已停机</li><li>7：已删除</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getGrafanaStatus() {
@@ -876,27 +692,9 @@ public class PrometheusInstancesItem extends AbstractModel {
     }
 
     /**
-     * Set Grafana 运行状态
-<ul>
-<li>1：正在创建</li>
-<li>2：运行中</li>
-<li>3：异常</li>
-<li>4：重启中</li>
-<li>5：销毁中</li>
-<li>6：已停机</li>
-<li>7：已删除</li>
-</ul>
+     * Set <p>Grafana 运行状态</p><ul><li>1：正在创建</li><li>2：运行中</li><li>3：异常</li><li>4：重启中</li><li>5：销毁中</li><li>6：已停机</li><li>7：已删除</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GrafanaStatus Grafana 运行状态
-<ul>
-<li>1：正在创建</li>
-<li>2：运行中</li>
-<li>3：异常</li>
-<li>4：重启中</li>
-<li>5：销毁中</li>
-<li>6：已停机</li>
-<li>7：已删除</li>
-</ul>
+     * @param GrafanaStatus <p>Grafana 运行状态</p><ul><li>1：正在创建</li><li>2：运行中</li><li>3：异常</li><li>4：重启中</li><li>5：销毁中</li><li>6：已停机</li><li>7：已删除</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGrafanaStatus(Long GrafanaStatus) {
@@ -904,9 +702,9 @@ public class PrometheusInstancesItem extends AbstractModel {
     }
 
     /**
-     * Get Grafana IP 白名单列表，使用英文分号分隔
+     * Get <p>Grafana IP 白名单列表，使用英文分号分隔</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GrafanaIpWhiteList Grafana IP 白名单列表，使用英文分号分隔
+     * @return GrafanaIpWhiteList <p>Grafana IP 白名单列表，使用英文分号分隔</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGrafanaIpWhiteList() {
@@ -914,9 +712,9 @@ public class PrometheusInstancesItem extends AbstractModel {
     }
 
     /**
-     * Set Grafana IP 白名单列表，使用英文分号分隔
+     * Set <p>Grafana IP 白名单列表，使用英文分号分隔</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GrafanaIpWhiteList Grafana IP 白名单列表，使用英文分号分隔
+     * @param GrafanaIpWhiteList <p>Grafana IP 白名单列表，使用英文分号分隔</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGrafanaIpWhiteList(String GrafanaIpWhiteList) {
@@ -924,9 +722,9 @@ public class PrometheusInstancesItem extends AbstractModel {
     }
 
     /**
-     * Get 实例的授权信息
+     * Get <p>实例的授权信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Grant 实例的授权信息
+     * @return Grant <p>实例的授权信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PrometheusInstanceGrantInfo getGrant() {
@@ -934,9 +732,9 @@ public class PrometheusInstancesItem extends AbstractModel {
     }
 
     /**
-     * Set 实例的授权信息
+     * Set <p>实例的授权信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Grant 实例的授权信息
+     * @param Grant <p>实例的授权信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGrant(PrometheusInstanceGrantInfo Grant) {
@@ -944,9 +742,9 @@ public class PrometheusInstancesItem extends AbstractModel {
     }
 
     /**
-     * Get 绑定的 Grafana 实例 ID
+     * Get <p>绑定的 Grafana 实例 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GrafanaInstanceId 绑定的 Grafana 实例 ID
+     * @return GrafanaInstanceId <p>绑定的 Grafana 实例 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGrafanaInstanceId() {
@@ -954,9 +752,9 @@ public class PrometheusInstancesItem extends AbstractModel {
     }
 
     /**
-     * Set 绑定的 Grafana 实例 ID
+     * Set <p>绑定的 Grafana 实例 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GrafanaInstanceId 绑定的 Grafana 实例 ID
+     * @param GrafanaInstanceId <p>绑定的 Grafana 实例 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGrafanaInstanceId(String GrafanaInstanceId) {
@@ -964,9 +762,9 @@ public class PrometheusInstancesItem extends AbstractModel {
     }
 
     /**
-     * Get 告警规则限制
+     * Get <p>告警规则限制</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AlertRuleLimit 告警规则限制
+     * @return AlertRuleLimit <p>告警规则限制</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAlertRuleLimit() {
@@ -974,9 +772,9 @@ public class PrometheusInstancesItem extends AbstractModel {
     }
 
     /**
-     * Set 告警规则限制
+     * Set <p>告警规则限制</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AlertRuleLimit 告警规则限制
+     * @param AlertRuleLimit <p>告警规则限制</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlertRuleLimit(Long AlertRuleLimit) {
@@ -984,9 +782,9 @@ public class PrometheusInstancesItem extends AbstractModel {
     }
 
     /**
-     * Get 预聚合规则限制
+     * Get <p>预聚合规则限制</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RecordingRuleLimit 预聚合规则限制
+     * @return RecordingRuleLimit <p>预聚合规则限制</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRecordingRuleLimit() {
@@ -994,9 +792,9 @@ public class PrometheusInstancesItem extends AbstractModel {
     }
 
     /**
-     * Set 预聚合规则限制
+     * Set <p>预聚合规则限制</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RecordingRuleLimit 预聚合规则限制
+     * @param RecordingRuleLimit <p>预聚合规则限制</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordingRuleLimit(Long RecordingRuleLimit) {
@@ -1004,9 +802,9 @@ public class PrometheusInstancesItem extends AbstractModel {
     }
 
     /**
-     * Get 迁移状态，0-不在迁移中，1-迁移中、原实例，2-迁移中、目标实例
+     * Get <p>迁移状态，0-不在迁移中，1-迁移中、原实例，2-迁移中、目标实例</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MigrationType 迁移状态，0-不在迁移中，1-迁移中、原实例，2-迁移中、目标实例
+     * @return MigrationType <p>迁移状态，0-不在迁移中，1-迁移中、原实例，2-迁移中、目标实例</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMigrationType() {
@@ -1014,13 +812,33 @@ public class PrometheusInstancesItem extends AbstractModel {
     }
 
     /**
-     * Set 迁移状态，0-不在迁移中，1-迁移中、原实例，2-迁移中、目标实例
+     * Set <p>迁移状态，0-不在迁移中，1-迁移中、原实例，2-迁移中、目标实例</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MigrationType 迁移状态，0-不在迁移中，1-迁移中、原实例，2-迁移中、目标实例
+     * @param MigrationType <p>迁移状态，0-不在迁移中，1-迁移中、原实例，2-迁移中、目标实例</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMigrationType(Long MigrationType) {
         this.MigrationType = MigrationType;
+    }
+
+    /**
+     * Get <p>标识prom实例特殊属性</p><p>归档存储时长(天):<br>key: LongTermStorageRetentionTime<br>value: 60-730</p><p>实例创建方式：<br>key: CreatedFrom<br>value: 0 - 来自prom控制台<br>1 - 来自tke集群详情页<br>2 - 来自新建集群页</p><p>免费试用到期时间:<br>key: FreeTrialExpireAt<br>value: RFC3339 格式时间字符串</p><p>关联的资源包ID:<br>key: ResourcePackageID<br>value: prompkg-xxxxx</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceAttributes <p>标识prom实例特殊属性</p><p>归档存储时长(天):<br>key: LongTermStorageRetentionTime<br>value: 60-730</p><p>实例创建方式：<br>key: CreatedFrom<br>value: 0 - 来自prom控制台<br>1 - 来自tke集群详情页<br>2 - 来自新建集群页</p><p>免费试用到期时间:<br>key: FreeTrialExpireAt<br>value: RFC3339 格式时间字符串</p><p>关联的资源包ID:<br>key: ResourcePackageID<br>value: prompkg-xxxxx</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public PrometheusRuleKV [] getInstanceAttributes() {
+        return this.InstanceAttributes;
+    }
+
+    /**
+     * Set <p>标识prom实例特殊属性</p><p>归档存储时长(天):<br>key: LongTermStorageRetentionTime<br>value: 60-730</p><p>实例创建方式：<br>key: CreatedFrom<br>value: 0 - 来自prom控制台<br>1 - 来自tke集群详情页<br>2 - 来自新建集群页</p><p>免费试用到期时间:<br>key: FreeTrialExpireAt<br>value: RFC3339 格式时间字符串</p><p>关联的资源包ID:<br>key: ResourcePackageID<br>value: prompkg-xxxxx</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceAttributes <p>标识prom实例特殊属性</p><p>归档存储时长(天):<br>key: LongTermStorageRetentionTime<br>value: 60-730</p><p>实例创建方式：<br>key: CreatedFrom<br>value: 0 - 来自prom控制台<br>1 - 来自tke集群详情页<br>2 - 来自新建集群页</p><p>免费试用到期时间:<br>key: FreeTrialExpireAt<br>value: RFC3339 格式时间字符串</p><p>关联的资源包ID:<br>key: ResourcePackageID<br>value: prompkg-xxxxx</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceAttributes(PrometheusRuleKV [] InstanceAttributes) {
+        this.InstanceAttributes = InstanceAttributes;
     }
 
     public PrometheusInstancesItem() {
@@ -1124,6 +942,12 @@ public class PrometheusInstancesItem extends AbstractModel {
         if (source.MigrationType != null) {
             this.MigrationType = new Long(source.MigrationType);
         }
+        if (source.InstanceAttributes != null) {
+            this.InstanceAttributes = new PrometheusRuleKV[source.InstanceAttributes.length];
+            for (int i = 0; i < source.InstanceAttributes.length; i++) {
+                this.InstanceAttributes[i] = new PrometheusRuleKV(source.InstanceAttributes[i]);
+            }
+        }
     }
 
 
@@ -1161,6 +985,7 @@ public class PrometheusInstancesItem extends AbstractModel {
         this.setParamSimple(map, prefix + "AlertRuleLimit", this.AlertRuleLimit);
         this.setParamSimple(map, prefix + "RecordingRuleLimit", this.RecordingRuleLimit);
         this.setParamSimple(map, prefix + "MigrationType", this.MigrationType);
+        this.setParamArrayObj(map, prefix + "InstanceAttributes.", this.InstanceAttributes);
 
     }
 }

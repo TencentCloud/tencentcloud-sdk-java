@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class ReplaceBackgroundResponse extends AbstractModel {
 
     /**
-    * 根据入参 RspImgType 填入不同，返回不同的内容。
-如果传入 base64 则返回生成图 Base64 编码。
-如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。
+    * <p>根据入参 RspImgType 填入不同，返回不同的内容。<br>如果传入 base64 则返回生成图 Base64 编码。<br>如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。</p>
     */
     @SerializedName("ResultImage")
     @Expose
     private String ResultImage;
 
     /**
-    * 如果 MaskUrl 未传，则返回使用内置商品分割算法得到的 Mask 结果。
+    * <p>如果 MaskUrl 未传，则返回使用内置商品分割算法得到的 Mask 结果。</p>
     */
     @SerializedName("MaskImage")
     @Expose
@@ -47,40 +45,32 @@ public class ReplaceBackgroundResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 根据入参 RspImgType 填入不同，返回不同的内容。
-如果传入 base64 则返回生成图 Base64 编码。
-如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。 
-     * @return ResultImage 根据入参 RspImgType 填入不同，返回不同的内容。
-如果传入 base64 则返回生成图 Base64 编码。
-如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。
+     * Get <p>根据入参 RspImgType 填入不同，返回不同的内容。<br>如果传入 base64 则返回生成图 Base64 编码。<br>如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。</p> 
+     * @return ResultImage <p>根据入参 RspImgType 填入不同，返回不同的内容。<br>如果传入 base64 则返回生成图 Base64 编码。<br>如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。</p>
      */
     public String getResultImage() {
         return this.ResultImage;
     }
 
     /**
-     * Set 根据入参 RspImgType 填入不同，返回不同的内容。
-如果传入 base64 则返回生成图 Base64 编码。
-如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。
-     * @param ResultImage 根据入参 RspImgType 填入不同，返回不同的内容。
-如果传入 base64 则返回生成图 Base64 编码。
-如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。
+     * Set <p>根据入参 RspImgType 填入不同，返回不同的内容。<br>如果传入 base64 则返回生成图 Base64 编码。<br>如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。</p>
+     * @param ResultImage <p>根据入参 RspImgType 填入不同，返回不同的内容。<br>如果传入 base64 则返回生成图 Base64 编码。<br>如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。</p>
      */
     public void setResultImage(String ResultImage) {
         this.ResultImage = ResultImage;
     }
 
     /**
-     * Get 如果 MaskUrl 未传，则返回使用内置商品分割算法得到的 Mask 结果。 
-     * @return MaskImage 如果 MaskUrl 未传，则返回使用内置商品分割算法得到的 Mask 结果。
+     * Get <p>如果 MaskUrl 未传，则返回使用内置商品分割算法得到的 Mask 结果。</p> 
+     * @return MaskImage <p>如果 MaskUrl 未传，则返回使用内置商品分割算法得到的 Mask 结果。</p>
      */
     public String getMaskImage() {
         return this.MaskImage;
     }
 
     /**
-     * Set 如果 MaskUrl 未传，则返回使用内置商品分割算法得到的 Mask 结果。
-     * @param MaskImage 如果 MaskUrl 未传，则返回使用内置商品分割算法得到的 Mask 结果。
+     * Set <p>如果 MaskUrl 未传，则返回使用内置商品分割算法得到的 Mask 结果。</p>
+     * @param MaskImage <p>如果 MaskUrl 未传，则返回使用内置商品分割算法得到的 Mask 结果。</p>
      */
     public void setMaskImage(String MaskImage) {
         this.MaskImage = MaskImage;

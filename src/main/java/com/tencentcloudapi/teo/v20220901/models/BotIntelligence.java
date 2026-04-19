@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class BotIntelligence extends AbstractModel {
 
     /**
-    * 基于客户端和请求特征，将请求来源分为人类来源请求、合法 Bot 请求、疑似 Bot 请求和高风险 Bot 请求，并提供请求处置选项。
-    */
-    @SerializedName("BotRatings")
-    @Expose
-    private BotRatings BotRatings;
-
-    /**
     * Bot 智能分析的具体配置开关。取值有：
 
 on：开启；
@@ -41,20 +34,18 @@ off：关闭。
     private String Enabled;
 
     /**
-     * Get 基于客户端和请求特征，将请求来源分为人类来源请求、合法 Bot 请求、疑似 Bot 请求和高风险 Bot 请求，并提供请求处置选项。 
-     * @return BotRatings 基于客户端和请求特征，将请求来源分为人类来源请求、合法 Bot 请求、疑似 Bot 请求和高风险 Bot 请求，并提供请求处置选项。
-     */
-    public BotRatings getBotRatings() {
-        return this.BotRatings;
-    }
+    * Bot 智能分析的规则 ID，仅作为出参返回。
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
 
     /**
-     * Set 基于客户端和请求特征，将请求来源分为人类来源请求、合法 Bot 请求、疑似 Bot 请求和高风险 Bot 请求，并提供请求处置选项。
-     * @param BotRatings 基于客户端和请求特征，将请求来源分为人类来源请求、合法 Bot 请求、疑似 Bot 请求和高风险 Bot 请求，并提供请求处置选项。
-     */
-    public void setBotRatings(BotRatings BotRatings) {
-        this.BotRatings = BotRatings;
-    }
+    * 基于客户端和请求特征，将请求来源分为人类来源请求、合法 Bot 请求、疑似 Bot 请求和高风险 Bot 请求，并提供请求处置选项。
+    */
+    @SerializedName("BotRatings")
+    @Expose
+    private BotRatings BotRatings;
 
     /**
      * Get Bot 智能分析的具体配置开关。取值有：
@@ -84,6 +75,38 @@ off：关闭。
         this.Enabled = Enabled;
     }
 
+    /**
+     * Get Bot 智能分析的规则 ID，仅作为出参返回。 
+     * @return Id Bot 智能分析的规则 ID，仅作为出参返回。
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set Bot 智能分析的规则 ID，仅作为出参返回。
+     * @param Id Bot 智能分析的规则 ID，仅作为出参返回。
+     */
+    public void setId(String Id) {
+        this.Id = Id;
+    }
+
+    /**
+     * Get 基于客户端和请求特征，将请求来源分为人类来源请求、合法 Bot 请求、疑似 Bot 请求和高风险 Bot 请求，并提供请求处置选项。 
+     * @return BotRatings 基于客户端和请求特征，将请求来源分为人类来源请求、合法 Bot 请求、疑似 Bot 请求和高风险 Bot 请求，并提供请求处置选项。
+     */
+    public BotRatings getBotRatings() {
+        return this.BotRatings;
+    }
+
+    /**
+     * Set 基于客户端和请求特征，将请求来源分为人类来源请求、合法 Bot 请求、疑似 Bot 请求和高风险 Bot 请求，并提供请求处置选项。
+     * @param BotRatings 基于客户端和请求特征，将请求来源分为人类来源请求、合法 Bot 请求、疑似 Bot 请求和高风险 Bot 请求，并提供请求处置选项。
+     */
+    public void setBotRatings(BotRatings BotRatings) {
+        this.BotRatings = BotRatings;
+    }
+
     public BotIntelligence() {
     }
 
@@ -92,11 +115,14 @@ off：关闭。
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public BotIntelligence(BotIntelligence source) {
-        if (source.BotRatings != null) {
-            this.BotRatings = new BotRatings(source.BotRatings);
-        }
         if (source.Enabled != null) {
             this.Enabled = new String(source.Enabled);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.BotRatings != null) {
+            this.BotRatings = new BotRatings(source.BotRatings);
         }
     }
 
@@ -105,8 +131,9 @@ off：关闭。
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "BotRatings.", this.BotRatings);
         this.setParamSimple(map, prefix + "Enabled", this.Enabled);
+        this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamObj(map, prefix + "BotRatings.", this.BotRatings);
 
     }
 }

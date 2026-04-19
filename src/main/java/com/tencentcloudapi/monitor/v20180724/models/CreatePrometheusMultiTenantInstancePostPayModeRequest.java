@@ -24,164 +24,187 @@ import java.util.HashMap;
 public class CreatePrometheusMultiTenantInstancePostPayModeRequest extends AbstractModel {
 
     /**
-    * 实例名
+    * <p>实例名</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * VPC ID(可通过 vpc:DescribeVpcs 接口获取，与实例同地域)
+    * <p>VPC ID(可通过 vpc:DescribeVpcs 接口获取，与实例同地域)</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 子网 ID(可通过 vpc:DescribeSubnets 接口获取)
+    * <p>子网 ID(可通过 vpc:DescribeSubnets 接口获取)</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一
+    * <p>数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一</p>
     */
     @SerializedName("DataRetentionTime")
     @Expose
     private Long DataRetentionTime;
 
     /**
-    * 可用区(与子网同可用区)
+    * <p>可用区(与子网同可用区)</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 实例的标签
+    * <p>实例的标签</p>
     */
     @SerializedName("TagSpecification")
     @Expose
     private PrometheusTag [] TagSpecification;
 
     /**
-    * 需要关联的 Grafana 实例
+    * <p>需要关联的 Grafana 实例</p>
     */
     @SerializedName("GrafanaInstanceId")
     @Expose
     private String GrafanaInstanceId;
 
     /**
-     * Get 实例名 
-     * @return InstanceName 实例名
+    * <p>标识prom实例特殊属性</p><p>归档存储时长(天):<br>key: LongTermStorageRetentionTime<br>value: 60-730</p>
+    */
+    @SerializedName("InstanceAttributes")
+    @Expose
+    private PrometheusRuleKV [] InstanceAttributes;
+
+    /**
+     * Get <p>实例名</p> 
+     * @return InstanceName <p>实例名</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名
-     * @param InstanceName 实例名
+     * Set <p>实例名</p>
+     * @param InstanceName <p>实例名</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get VPC ID(可通过 vpc:DescribeVpcs 接口获取，与实例同地域) 
-     * @return VpcId VPC ID(可通过 vpc:DescribeVpcs 接口获取，与实例同地域)
+     * Get <p>VPC ID(可通过 vpc:DescribeVpcs 接口获取，与实例同地域)</p> 
+     * @return VpcId <p>VPC ID(可通过 vpc:DescribeVpcs 接口获取，与实例同地域)</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID(可通过 vpc:DescribeVpcs 接口获取，与实例同地域)
-     * @param VpcId VPC ID(可通过 vpc:DescribeVpcs 接口获取，与实例同地域)
+     * Set <p>VPC ID(可通过 vpc:DescribeVpcs 接口获取，与实例同地域)</p>
+     * @param VpcId <p>VPC ID(可通过 vpc:DescribeVpcs 接口获取，与实例同地域)</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网 ID(可通过 vpc:DescribeSubnets 接口获取) 
-     * @return SubnetId 子网 ID(可通过 vpc:DescribeSubnets 接口获取)
+     * Get <p>子网 ID(可通过 vpc:DescribeSubnets 接口获取)</p> 
+     * @return SubnetId <p>子网 ID(可通过 vpc:DescribeSubnets 接口获取)</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网 ID(可通过 vpc:DescribeSubnets 接口获取)
-     * @param SubnetId 子网 ID(可通过 vpc:DescribeSubnets 接口获取)
+     * Set <p>子网 ID(可通过 vpc:DescribeSubnets 接口获取)</p>
+     * @param SubnetId <p>子网 ID(可通过 vpc:DescribeSubnets 接口获取)</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一 
-     * @return DataRetentionTime 数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一
+     * Get <p>数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一</p> 
+     * @return DataRetentionTime <p>数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一</p>
      */
     public Long getDataRetentionTime() {
         return this.DataRetentionTime;
     }
 
     /**
-     * Set 数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一
-     * @param DataRetentionTime 数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一
+     * Set <p>数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一</p>
+     * @param DataRetentionTime <p>数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一</p>
      */
     public void setDataRetentionTime(Long DataRetentionTime) {
         this.DataRetentionTime = DataRetentionTime;
     }
 
     /**
-     * Get 可用区(与子网同可用区) 
-     * @return Zone 可用区(与子网同可用区)
+     * Get <p>可用区(与子网同可用区)</p> 
+     * @return Zone <p>可用区(与子网同可用区)</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区(与子网同可用区)
-     * @param Zone 可用区(与子网同可用区)
+     * Set <p>可用区(与子网同可用区)</p>
+     * @param Zone <p>可用区(与子网同可用区)</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 实例的标签 
-     * @return TagSpecification 实例的标签
+     * Get <p>实例的标签</p> 
+     * @return TagSpecification <p>实例的标签</p>
      */
     public PrometheusTag [] getTagSpecification() {
         return this.TagSpecification;
     }
 
     /**
-     * Set 实例的标签
-     * @param TagSpecification 实例的标签
+     * Set <p>实例的标签</p>
+     * @param TagSpecification <p>实例的标签</p>
      */
     public void setTagSpecification(PrometheusTag [] TagSpecification) {
         this.TagSpecification = TagSpecification;
     }
 
     /**
-     * Get 需要关联的 Grafana 实例 
-     * @return GrafanaInstanceId 需要关联的 Grafana 实例
+     * Get <p>需要关联的 Grafana 实例</p> 
+     * @return GrafanaInstanceId <p>需要关联的 Grafana 实例</p>
      */
     public String getGrafanaInstanceId() {
         return this.GrafanaInstanceId;
     }
 
     /**
-     * Set 需要关联的 Grafana 实例
-     * @param GrafanaInstanceId 需要关联的 Grafana 实例
+     * Set <p>需要关联的 Grafana 实例</p>
+     * @param GrafanaInstanceId <p>需要关联的 Grafana 实例</p>
      */
     public void setGrafanaInstanceId(String GrafanaInstanceId) {
         this.GrafanaInstanceId = GrafanaInstanceId;
+    }
+
+    /**
+     * Get <p>标识prom实例特殊属性</p><p>归档存储时长(天):<br>key: LongTermStorageRetentionTime<br>value: 60-730</p> 
+     * @return InstanceAttributes <p>标识prom实例特殊属性</p><p>归档存储时长(天):<br>key: LongTermStorageRetentionTime<br>value: 60-730</p>
+     */
+    public PrometheusRuleKV [] getInstanceAttributes() {
+        return this.InstanceAttributes;
+    }
+
+    /**
+     * Set <p>标识prom实例特殊属性</p><p>归档存储时长(天):<br>key: LongTermStorageRetentionTime<br>value: 60-730</p>
+     * @param InstanceAttributes <p>标识prom实例特殊属性</p><p>归档存储时长(天):<br>key: LongTermStorageRetentionTime<br>value: 60-730</p>
+     */
+    public void setInstanceAttributes(PrometheusRuleKV [] InstanceAttributes) {
+        this.InstanceAttributes = InstanceAttributes;
     }
 
     public CreatePrometheusMultiTenantInstancePostPayModeRequest() {
@@ -216,6 +239,12 @@ public class CreatePrometheusMultiTenantInstancePostPayModeRequest extends Abstr
         if (source.GrafanaInstanceId != null) {
             this.GrafanaInstanceId = new String(source.GrafanaInstanceId);
         }
+        if (source.InstanceAttributes != null) {
+            this.InstanceAttributes = new PrometheusRuleKV[source.InstanceAttributes.length];
+            for (int i = 0; i < source.InstanceAttributes.length; i++) {
+                this.InstanceAttributes[i] = new PrometheusRuleKV(source.InstanceAttributes[i]);
+            }
+        }
     }
 
 
@@ -230,6 +259,7 @@ public class CreatePrometheusMultiTenantInstancePostPayModeRequest extends Abstr
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
         this.setParamSimple(map, prefix + "GrafanaInstanceId", this.GrafanaInstanceId);
+        this.setParamArrayObj(map, prefix + "InstanceAttributes.", this.InstanceAttributes);
 
     }
 }

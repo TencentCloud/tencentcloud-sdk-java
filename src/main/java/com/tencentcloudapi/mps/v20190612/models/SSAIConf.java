@@ -24,11 +24,18 @@ import java.util.HashMap;
 public class SSAIConf extends AbstractModel {
 
     /**
-    * <p>广告决策服务器URL(ADS)。</p>
+    * <p>广告决策服务器URL(ADS)。注意：填了AdsUrl会自动代替覆盖AdsUrls[0]</p>
     */
     @SerializedName("AdsUrl")
     @Expose
     private String AdsUrl;
+
+    /**
+    * <p>广告决策服务器URL数组(ADS)</p>
+    */
+    @SerializedName("AdsUrls")
+    @Expose
+    private String [] AdsUrls;
 
     /**
     * <p>参数配置。</p>
@@ -105,11 +112,18 @@ public class SSAIConf extends AbstractModel {
     private String AdCDNPrefix;
 
     /**
-    * <p>预加载广告决策服务地址。</p>
+    * <p>预加载广告决策服务地址。注意：填了PreRollAdsUrl会自动代替覆盖PreRollAdsUrls[0]</p>
     */
     @SerializedName("PreRollAdsUrl")
     @Expose
     private String PreRollAdsUrl;
+
+    /**
+    * <p>预加载广告决策服务地址数组</p>
+    */
+    @SerializedName("PreRollAdsUrls")
+    @Expose
+    private String [] PreRollAdsUrls;
 
     /**
     * <p>预加载广告最大允许时长，0-3600。</p>
@@ -126,19 +140,35 @@ public class SSAIConf extends AbstractModel {
     private Boolean MultiRequest;
 
     /**
-     * Get <p>广告决策服务器URL(ADS)。</p> 
-     * @return AdsUrl <p>广告决策服务器URL(ADS)。</p>
+     * Get <p>广告决策服务器URL(ADS)。注意：填了AdsUrl会自动代替覆盖AdsUrls[0]</p> 
+     * @return AdsUrl <p>广告决策服务器URL(ADS)。注意：填了AdsUrl会自动代替覆盖AdsUrls[0]</p>
      */
     public String getAdsUrl() {
         return this.AdsUrl;
     }
 
     /**
-     * Set <p>广告决策服务器URL(ADS)。</p>
-     * @param AdsUrl <p>广告决策服务器URL(ADS)。</p>
+     * Set <p>广告决策服务器URL(ADS)。注意：填了AdsUrl会自动代替覆盖AdsUrls[0]</p>
+     * @param AdsUrl <p>广告决策服务器URL(ADS)。注意：填了AdsUrl会自动代替覆盖AdsUrls[0]</p>
      */
     public void setAdsUrl(String AdsUrl) {
         this.AdsUrl = AdsUrl;
+    }
+
+    /**
+     * Get <p>广告决策服务器URL数组(ADS)</p> 
+     * @return AdsUrls <p>广告决策服务器URL数组(ADS)</p>
+     */
+    public String [] getAdsUrls() {
+        return this.AdsUrls;
+    }
+
+    /**
+     * Set <p>广告决策服务器URL数组(ADS)</p>
+     * @param AdsUrls <p>广告决策服务器URL数组(ADS)</p>
+     */
+    public void setAdsUrls(String [] AdsUrls) {
+        this.AdsUrls = AdsUrls;
     }
 
     /**
@@ -318,19 +348,35 @@ public class SSAIConf extends AbstractModel {
     }
 
     /**
-     * Get <p>预加载广告决策服务地址。</p> 
-     * @return PreRollAdsUrl <p>预加载广告决策服务地址。</p>
+     * Get <p>预加载广告决策服务地址。注意：填了PreRollAdsUrl会自动代替覆盖PreRollAdsUrls[0]</p> 
+     * @return PreRollAdsUrl <p>预加载广告决策服务地址。注意：填了PreRollAdsUrl会自动代替覆盖PreRollAdsUrls[0]</p>
      */
     public String getPreRollAdsUrl() {
         return this.PreRollAdsUrl;
     }
 
     /**
-     * Set <p>预加载广告决策服务地址。</p>
-     * @param PreRollAdsUrl <p>预加载广告决策服务地址。</p>
+     * Set <p>预加载广告决策服务地址。注意：填了PreRollAdsUrl会自动代替覆盖PreRollAdsUrls[0]</p>
+     * @param PreRollAdsUrl <p>预加载广告决策服务地址。注意：填了PreRollAdsUrl会自动代替覆盖PreRollAdsUrls[0]</p>
      */
     public void setPreRollAdsUrl(String PreRollAdsUrl) {
         this.PreRollAdsUrl = PreRollAdsUrl;
+    }
+
+    /**
+     * Get <p>预加载广告决策服务地址数组</p> 
+     * @return PreRollAdsUrls <p>预加载广告决策服务地址数组</p>
+     */
+    public String [] getPreRollAdsUrls() {
+        return this.PreRollAdsUrls;
+    }
+
+    /**
+     * Set <p>预加载广告决策服务地址数组</p>
+     * @param PreRollAdsUrls <p>预加载广告决策服务地址数组</p>
+     */
+    public void setPreRollAdsUrls(String [] PreRollAdsUrls) {
+        this.PreRollAdsUrls = PreRollAdsUrls;
     }
 
     /**
@@ -376,6 +422,12 @@ public class SSAIConf extends AbstractModel {
         if (source.AdsUrl != null) {
             this.AdsUrl = new String(source.AdsUrl);
         }
+        if (source.AdsUrls != null) {
+            this.AdsUrls = new String[source.AdsUrls.length];
+            for (int i = 0; i < source.AdsUrls.length; i++) {
+                this.AdsUrls[i] = new String(source.AdsUrls[i]);
+            }
+        }
         if (source.ConfigAliases != null) {
             this.ConfigAliases = new ConfigAliasesInfo[source.ConfigAliases.length];
             for (int i = 0; i < source.ConfigAliases.length; i++) {
@@ -415,6 +467,12 @@ public class SSAIConf extends AbstractModel {
         if (source.PreRollAdsUrl != null) {
             this.PreRollAdsUrl = new String(source.PreRollAdsUrl);
         }
+        if (source.PreRollAdsUrls != null) {
+            this.PreRollAdsUrls = new String[source.PreRollAdsUrls.length];
+            for (int i = 0; i < source.PreRollAdsUrls.length; i++) {
+                this.PreRollAdsUrls[i] = new String(source.PreRollAdsUrls[i]);
+            }
+        }
         if (source.PreRollMaxAllowedDuration != null) {
             this.PreRollMaxAllowedDuration = new Long(source.PreRollMaxAllowedDuration);
         }
@@ -429,6 +487,7 @@ public class SSAIConf extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AdsUrl", this.AdsUrl);
+        this.setParamArraySimple(map, prefix + "AdsUrls.", this.AdsUrls);
         this.setParamArrayObj(map, prefix + "ConfigAliases.", this.ConfigAliases);
         this.setParamSimple(map, prefix + "AdMarkerPassthrough", this.AdMarkerPassthrough);
         this.setParamSimple(map, prefix + "SCTE35AdType", this.SCTE35AdType);
@@ -440,6 +499,7 @@ public class SSAIConf extends AbstractModel {
         this.setParamSimple(map, prefix + "SourceCDNPrefix", this.SourceCDNPrefix);
         this.setParamSimple(map, prefix + "AdCDNPrefix", this.AdCDNPrefix);
         this.setParamSimple(map, prefix + "PreRollAdsUrl", this.PreRollAdsUrl);
+        this.setParamArraySimple(map, prefix + "PreRollAdsUrls.", this.PreRollAdsUrls);
         this.setParamSimple(map, prefix + "PreRollMaxAllowedDuration", this.PreRollMaxAllowedDuration);
         this.setParamSimple(map, prefix + "MultiRequest", this.MultiRequest);
 

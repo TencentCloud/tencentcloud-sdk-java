@@ -24,322 +24,322 @@ import java.util.HashMap;
 public class RiskDetailItem extends AbstractModel {
 
     /**
-    * 首次发现时间
+    * <p>首次发现时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 风险状态
+    * <p>风险状态</p>
     */
     @SerializedName("RiskStatus")
     @Expose
     private Long RiskStatus;
 
     /**
-    * 风险内容
+    * <p>风险内容</p>
     */
     @SerializedName("RiskContent")
     @Expose
     private String RiskContent;
 
     /**
-    * 云厂商
+    * <p>云厂商</p>
     */
     @SerializedName("Provider")
     @Expose
     private String Provider;
 
     /**
-    * 云厂商名称
+    * <p>云厂商名称</p>
     */
     @SerializedName("ProviderName")
     @Expose
     private String ProviderName;
 
     /**
-    * 云账号
+    * <p>云账号</p>
     */
     @SerializedName("CloudAccountId")
     @Expose
     private String CloudAccountId;
 
     /**
-    * 云账号名称
+    * <p>云账号名称</p>
     */
     @SerializedName("CloudAccountName")
     @Expose
     private String CloudAccountName;
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例名称
+    * <p>实例名称</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 风险ID
+    * <p>风险ID</p>
     */
     @SerializedName("RiskId")
     @Expose
     private Long RiskId;
 
     /**
-    * 风险规则ID
+    * <p>风险规则ID</p>
     */
     @SerializedName("RiskRuleId")
     @Expose
     private String RiskRuleId;
 
     /**
-    * 风险验证状态
+    * <p>风险验证状态</p>
     */
     @SerializedName("CheckStatus")
     @Expose
     private String CheckStatus;
 
     /**
-    * 
+    * <p>用户AppID</p>
     */
     @SerializedName("AppID")
     @Expose
     private Long AppID;
 
     /**
-     * Get 首次发现时间 
-     * @return CreateTime 首次发现时间
+     * Get <p>首次发现时间</p> 
+     * @return CreateTime <p>首次发现时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 首次发现时间
-     * @param CreateTime 首次发现时间
+     * Set <p>首次发现时间</p>
+     * @param CreateTime <p>首次发现时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 更新时间 
-     * @return UpdateTime 更新时间
+     * Get <p>更新时间</p> 
+     * @return UpdateTime <p>更新时间</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 更新时间
-     * @param UpdateTime 更新时间
+     * Set <p>更新时间</p>
+     * @param UpdateTime <p>更新时间</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 风险状态 
-     * @return RiskStatus 风险状态
+     * Get <p>风险状态</p> 
+     * @return RiskStatus <p>风险状态</p>
      */
     public Long getRiskStatus() {
         return this.RiskStatus;
     }
 
     /**
-     * Set 风险状态
-     * @param RiskStatus 风险状态
+     * Set <p>风险状态</p>
+     * @param RiskStatus <p>风险状态</p>
      */
     public void setRiskStatus(Long RiskStatus) {
         this.RiskStatus = RiskStatus;
     }
 
     /**
-     * Get 风险内容 
-     * @return RiskContent 风险内容
+     * Get <p>风险内容</p> 
+     * @return RiskContent <p>风险内容</p>
      */
     public String getRiskContent() {
         return this.RiskContent;
     }
 
     /**
-     * Set 风险内容
-     * @param RiskContent 风险内容
+     * Set <p>风险内容</p>
+     * @param RiskContent <p>风险内容</p>
      */
     public void setRiskContent(String RiskContent) {
         this.RiskContent = RiskContent;
     }
 
     /**
-     * Get 云厂商 
-     * @return Provider 云厂商
+     * Get <p>云厂商</p> 
+     * @return Provider <p>云厂商</p>
      */
     public String getProvider() {
         return this.Provider;
     }
 
     /**
-     * Set 云厂商
-     * @param Provider 云厂商
+     * Set <p>云厂商</p>
+     * @param Provider <p>云厂商</p>
      */
     public void setProvider(String Provider) {
         this.Provider = Provider;
     }
 
     /**
-     * Get 云厂商名称 
-     * @return ProviderName 云厂商名称
+     * Get <p>云厂商名称</p> 
+     * @return ProviderName <p>云厂商名称</p>
      */
     public String getProviderName() {
         return this.ProviderName;
     }
 
     /**
-     * Set 云厂商名称
-     * @param ProviderName 云厂商名称
+     * Set <p>云厂商名称</p>
+     * @param ProviderName <p>云厂商名称</p>
      */
     public void setProviderName(String ProviderName) {
         this.ProviderName = ProviderName;
     }
 
     /**
-     * Get 云账号 
-     * @return CloudAccountId 云账号
+     * Get <p>云账号</p> 
+     * @return CloudAccountId <p>云账号</p>
      */
     public String getCloudAccountId() {
         return this.CloudAccountId;
     }
 
     /**
-     * Set 云账号
-     * @param CloudAccountId 云账号
+     * Set <p>云账号</p>
+     * @param CloudAccountId <p>云账号</p>
      */
     public void setCloudAccountId(String CloudAccountId) {
         this.CloudAccountId = CloudAccountId;
     }
 
     /**
-     * Get 云账号名称 
-     * @return CloudAccountName 云账号名称
+     * Get <p>云账号名称</p> 
+     * @return CloudAccountName <p>云账号名称</p>
      */
     public String getCloudAccountName() {
         return this.CloudAccountName;
     }
 
     /**
-     * Set 云账号名称
-     * @param CloudAccountName 云账号名称
+     * Set <p>云账号名称</p>
+     * @param CloudAccountName <p>云账号名称</p>
      */
     public void setCloudAccountName(String CloudAccountName) {
         this.CloudAccountName = CloudAccountName;
     }
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get <p>实例ID</p> 
+     * @return InstanceId <p>实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceId <p>实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例名称 
-     * @return InstanceName 实例名称
+     * Get <p>实例名称</p> 
+     * @return InstanceName <p>实例名称</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称
-     * @param InstanceName 实例名称
+     * Set <p>实例名称</p>
+     * @param InstanceName <p>实例名称</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 风险ID 
-     * @return RiskId 风险ID
+     * Get <p>风险ID</p> 
+     * @return RiskId <p>风险ID</p>
      */
     public Long getRiskId() {
         return this.RiskId;
     }
 
     /**
-     * Set 风险ID
-     * @param RiskId 风险ID
+     * Set <p>风险ID</p>
+     * @param RiskId <p>风险ID</p>
      */
     public void setRiskId(Long RiskId) {
         this.RiskId = RiskId;
     }
 
     /**
-     * Get 风险规则ID 
-     * @return RiskRuleId 风险规则ID
+     * Get <p>风险规则ID</p> 
+     * @return RiskRuleId <p>风险规则ID</p>
      */
     public String getRiskRuleId() {
         return this.RiskRuleId;
     }
 
     /**
-     * Set 风险规则ID
-     * @param RiskRuleId 风险规则ID
+     * Set <p>风险规则ID</p>
+     * @param RiskRuleId <p>风险规则ID</p>
      */
     public void setRiskRuleId(String RiskRuleId) {
         this.RiskRuleId = RiskRuleId;
     }
 
     /**
-     * Get 风险验证状态 
-     * @return CheckStatus 风险验证状态
+     * Get <p>风险验证状态</p> 
+     * @return CheckStatus <p>风险验证状态</p>
      */
     public String getCheckStatus() {
         return this.CheckStatus;
     }
 
     /**
-     * Set 风险验证状态
-     * @param CheckStatus 风险验证状态
+     * Set <p>风险验证状态</p>
+     * @param CheckStatus <p>风险验证状态</p>
      */
     public void setCheckStatus(String CheckStatus) {
         this.CheckStatus = CheckStatus;
     }
 
     /**
-     * Get  
-     * @return AppID 
+     * Get <p>用户AppID</p> 
+     * @return AppID <p>用户AppID</p>
      */
     public Long getAppID() {
         return this.AppID;
     }
 
     /**
-     * Set 
-     * @param AppID 
+     * Set <p>用户AppID</p>
+     * @param AppID <p>用户AppID</p>
      */
     public void setAppID(Long AppID) {
         this.AppID = AppID;

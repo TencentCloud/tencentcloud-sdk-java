@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class InputInfo extends AbstractModel {
 
     /**
-    * 该字段表示文件访问类型，取值为**URL**（资源链接）和**COS** (腾讯云对象存储)。
+    * <p>该字段表示文件访问类型，取值为<strong>URL</strong>（资源链接）和<strong>COS</strong> (腾讯云对象存储)。</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 该字段表示文件访问的链接地址，格式为标准URL格式。<br> 备注：当Type为URL时此字段不为空。
+    * <p>该字段表示文件访问的链接地址，格式为标准URL格式。<br> 备注：当Type为URL时此字段不为空。</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 该字段表示文件访问的腾讯云存储桶信息。<br> 备注：当Type为COS时此字段不为空。
+    * <p>该字段表示文件访问的腾讯云存储桶信息。<br> 备注：当Type为COS时此字段不为空。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BucketInfo")
@@ -46,41 +46,55 @@ public class InputInfo extends AbstractModel {
     private BucketInfo BucketInfo;
 
     /**
-     * Get 该字段表示文件访问类型，取值为**URL**（资源链接）和**COS** (腾讯云对象存储)。 
-     * @return Type 该字段表示文件访问类型，取值为**URL**（资源链接）和**COS** (腾讯云对象存储)。
+    * <p>大模型审核可选输入图片列表</p>
+    */
+    @SerializedName("ImageUrlList")
+    @Expose
+    private String [] ImageUrlList;
+
+    /**
+    * <p>大模型审核场景下，base64编码的审核要求内容</p>
+    */
+    @SerializedName("TextContent")
+    @Expose
+    private String TextContent;
+
+    /**
+     * Get <p>该字段表示文件访问类型，取值为<strong>URL</strong>（资源链接）和<strong>COS</strong> (腾讯云对象存储)。</p> 
+     * @return Type <p>该字段表示文件访问类型，取值为<strong>URL</strong>（资源链接）和<strong>COS</strong> (腾讯云对象存储)。</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 该字段表示文件访问类型，取值为**URL**（资源链接）和**COS** (腾讯云对象存储)。
-     * @param Type 该字段表示文件访问类型，取值为**URL**（资源链接）和**COS** (腾讯云对象存储)。
+     * Set <p>该字段表示文件访问类型，取值为<strong>URL</strong>（资源链接）和<strong>COS</strong> (腾讯云对象存储)。</p>
+     * @param Type <p>该字段表示文件访问类型，取值为<strong>URL</strong>（资源链接）和<strong>COS</strong> (腾讯云对象存储)。</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 该字段表示文件访问的链接地址，格式为标准URL格式。<br> 备注：当Type为URL时此字段不为空。 
-     * @return Url 该字段表示文件访问的链接地址，格式为标准URL格式。<br> 备注：当Type为URL时此字段不为空。
+     * Get <p>该字段表示文件访问的链接地址，格式为标准URL格式。<br> 备注：当Type为URL时此字段不为空。</p> 
+     * @return Url <p>该字段表示文件访问的链接地址，格式为标准URL格式。<br> 备注：当Type为URL时此字段不为空。</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 该字段表示文件访问的链接地址，格式为标准URL格式。<br> 备注：当Type为URL时此字段不为空。
-     * @param Url 该字段表示文件访问的链接地址，格式为标准URL格式。<br> 备注：当Type为URL时此字段不为空。
+     * Set <p>该字段表示文件访问的链接地址，格式为标准URL格式。<br> 备注：当Type为URL时此字段不为空。</p>
+     * @param Url <p>该字段表示文件访问的链接地址，格式为标准URL格式。<br> 备注：当Type为URL时此字段不为空。</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get 该字段表示文件访问的腾讯云存储桶信息。<br> 备注：当Type为COS时此字段不为空。
+     * Get <p>该字段表示文件访问的腾讯云存储桶信息。<br> 备注：当Type为COS时此字段不为空。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BucketInfo 该字段表示文件访问的腾讯云存储桶信息。<br> 备注：当Type为COS时此字段不为空。
+     * @return BucketInfo <p>该字段表示文件访问的腾讯云存储桶信息。<br> 备注：当Type为COS时此字段不为空。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BucketInfo getBucketInfo() {
@@ -88,13 +102,45 @@ public class InputInfo extends AbstractModel {
     }
 
     /**
-     * Set 该字段表示文件访问的腾讯云存储桶信息。<br> 备注：当Type为COS时此字段不为空。
+     * Set <p>该字段表示文件访问的腾讯云存储桶信息。<br> 备注：当Type为COS时此字段不为空。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BucketInfo 该字段表示文件访问的腾讯云存储桶信息。<br> 备注：当Type为COS时此字段不为空。
+     * @param BucketInfo <p>该字段表示文件访问的腾讯云存储桶信息。<br> 备注：当Type为COS时此字段不为空。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBucketInfo(BucketInfo BucketInfo) {
         this.BucketInfo = BucketInfo;
+    }
+
+    /**
+     * Get <p>大模型审核可选输入图片列表</p> 
+     * @return ImageUrlList <p>大模型审核可选输入图片列表</p>
+     */
+    public String [] getImageUrlList() {
+        return this.ImageUrlList;
+    }
+
+    /**
+     * Set <p>大模型审核可选输入图片列表</p>
+     * @param ImageUrlList <p>大模型审核可选输入图片列表</p>
+     */
+    public void setImageUrlList(String [] ImageUrlList) {
+        this.ImageUrlList = ImageUrlList;
+    }
+
+    /**
+     * Get <p>大模型审核场景下，base64编码的审核要求内容</p> 
+     * @return TextContent <p>大模型审核场景下，base64编码的审核要求内容</p>
+     */
+    public String getTextContent() {
+        return this.TextContent;
+    }
+
+    /**
+     * Set <p>大模型审核场景下，base64编码的审核要求内容</p>
+     * @param TextContent <p>大模型审核场景下，base64编码的审核要求内容</p>
+     */
+    public void setTextContent(String TextContent) {
+        this.TextContent = TextContent;
     }
 
     public InputInfo() {
@@ -114,6 +160,15 @@ public class InputInfo extends AbstractModel {
         if (source.BucketInfo != null) {
             this.BucketInfo = new BucketInfo(source.BucketInfo);
         }
+        if (source.ImageUrlList != null) {
+            this.ImageUrlList = new String[source.ImageUrlList.length];
+            for (int i = 0; i < source.ImageUrlList.length; i++) {
+                this.ImageUrlList[i] = new String(source.ImageUrlList[i]);
+            }
+        }
+        if (source.TextContent != null) {
+            this.TextContent = new String(source.TextContent);
+        }
     }
 
 
@@ -124,6 +179,8 @@ public class InputInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamObj(map, prefix + "BucketInfo.", this.BucketInfo);
+        this.setParamArraySimple(map, prefix + "ImageUrlList.", this.ImageUrlList);
+        this.setParamSimple(map, prefix + "TextContent", this.TextContent);
 
     }
 }

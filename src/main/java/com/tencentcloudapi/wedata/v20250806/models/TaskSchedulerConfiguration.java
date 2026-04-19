@@ -24,16 +24,7 @@ import java.util.HashMap;
 public class TaskSchedulerConfiguration extends AbstractModel {
 
     /**
-    * 周期类型：支持的类型为
-
-ONEOFF_CYCLE: 一次性
-YEAR_CYCLE: 年
-MONTH_CYCLE: 月
-WEEK_CYCLE: 周
-DAY_CYCLE: 天
-HOUR_CYCLE: 小时
-MINUTE_CYCLE: 分钟
-CRONTAB_CYCLE: crontab表达式类型
+    * <p>周期类型：支持的类型为</p><p>ONEOFF_CYCLE: 一次性<br>YEAR_CYCLE: 年<br>MONTH_CYCLE: 月<br>WEEK_CYCLE: 周<br>DAY_CYCLE: 天<br>HOUR_CYCLE: 小时<br>MINUTE_CYCLE: 分钟<br>CRONTAB_CYCLE: crontab表达式类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CycleType")
@@ -41,7 +32,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private String CycleType;
 
     /**
-    * 时区
+    * <p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScheduleTimeZone")
@@ -49,7 +40,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private String ScheduleTimeZone;
 
     /**
-    * 0 2 3 1,L,2 * ?	
+    * <p>0 2 3 1,L,2 * ?</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CrontabExpression")
@@ -57,7 +48,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private String CrontabExpression;
 
     /**
-    * 生效日期
+    * <p>生效日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
@@ -65,7 +56,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private String StartTime;
 
     /**
-    * 结束日期
+    * <p>结束日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
@@ -73,7 +64,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private String EndTime;
 
     /**
-    * 执行时间 左闭区间
+    * <p>执行时间 左闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutionStartTime")
@@ -81,7 +72,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private String ExecutionStartTime;
 
     /**
-    * 执行时间 右闭区间
+    * <p>执行时间 右闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutionEndTime")
@@ -89,7 +80,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private String ExecutionEndTime;
 
     /**
-    * 日历调度 取值为 0 和 1， 1为打开，0为关闭，默认为0
+    * <p>日历调度 取值为 0 和 1， 1为打开，0为关闭，默认为0</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CalendarOpen")
@@ -97,7 +88,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private String CalendarOpen;
 
     /**
-    * 日历调度 日历 ID
+    * <p>日历调度 日历 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CalendarId")
@@ -105,7 +96,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private String CalendarId;
 
     /**
-    * 日历调度 日历名称, 需要从 DescribeScheduleCalendarPageList 中获取
+    * <p>日历调度 日历名称, 需要从 DescribeScheduleCalendarPageList 中获取</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CalendarName")
@@ -113,7 +104,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private String CalendarName;
 
     /**
-    * 自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)
+    * <p>自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SelfDepend")
@@ -121,7 +112,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private String SelfDepend;
 
     /**
-    * 上游依赖数组
+    * <p>上游依赖数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpstreamDependencyConfigList")
@@ -129,7 +120,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private DependencyTaskBrief [] UpstreamDependencyConfigList;
 
     /**
-    * 下游依赖数组
+    * <p>下游依赖数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DownstreamDependencyConfigList")
@@ -137,7 +128,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private DependencyTaskBrief [] DownstreamDependencyConfigList;
 
     /**
-    * 事件数组
+    * <p>事件数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventListenerList")
@@ -145,7 +136,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private EventListener [] EventListenerList;
 
     /**
-    * 重跑&补录配置, 默认为 ALL; , ALL 运行成功或失败后皆可重跑或补录, FAILURE 运行成功后不可重跑或补录，运行失败后可重跑或补录, NONE 运行成功或失败后皆不可重跑或补录;
+    * <p>重跑&amp;补录配置, 默认为 ALL; , ALL 运行成功或失败后皆可重跑或补录, FAILURE 运行成功后不可重跑或补录，运行失败后可重跑或补录, NONE 运行成功或失败后皆不可重跑或补录;</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AllowRedoType")
@@ -153,7 +144,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private String AllowRedoType;
 
     /**
-    * 输出参数数组
+    * <p>输出参数数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParamTaskOutList")
@@ -161,7 +152,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private OutTaskParameter [] ParamTaskOutList;
 
     /**
-    * 输入参数数组
+    * <p>输入参数数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParamTaskInList")
@@ -169,7 +160,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private InTaskParameter [] ParamTaskInList;
 
     /**
-    * 产出登记
+    * <p>产出登记</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskOutputRegistryList")
@@ -177,9 +168,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private TaskDataRegistry [] TaskOutputRegistryList;
 
     /**
-    * **实例生成策略**
-* T_PLUS_0: T+0生成,默认策略
-* T_PLUS_1: T+1生成
+    * <p><strong>实例生成策略</strong></p><ul><li>T_PLUS_0: T+0生成,默认策略</li><li>T_PLUS_1: T+1生成</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InitStrategy")
@@ -187,7 +176,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private String InitStrategy;
 
     /**
-    * 调度类型: 0 正常调度 1 空跑调度，默认为 0
+    * <p>调度类型: 0 正常调度 1 空跑调度，默认为 0</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScheduleRunType")
@@ -195,7 +184,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private Long ScheduleRunType;
 
     /**
-    * （废弃，建议使用 DownstreamDependencyConfigList）下游依赖数组
+    * <p>（废弃，建议使用 DownstreamDependencyConfigList）下游依赖数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DownStreamDependencyConfigList")
@@ -203,7 +192,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private DependencyTaskBrief [] DownStreamDependencyConfigList;
 
     /**
-    * 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+    * <p>任务调度优先级 运行优先级 4高 5中 6低 , 默认:6</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunPriority")
@@ -211,7 +200,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private Long RunPriority;
 
     /**
-    * 重试策略 重试等待时间,单位分钟: 默认: 5
+    * <p>重试策略 重试等待时间,单位分钟: 默认: 5</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RetryWait")
@@ -219,7 +208,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private Long RetryWait;
 
     /**
-    * 重试策略 最大尝试次数, 默认: 4
+    * <p>重试策略 最大尝试次数, 默认: 4</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxRetryAttempts")
@@ -227,7 +216,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private Long MaxRetryAttempts;
 
     /**
-    * 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+    * <p>超时处理策略 运行耗时超时（单位：分钟）默认为 -1</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutionTTL")
@@ -235,7 +224,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private Long ExecutionTTL;
 
     /**
-    * 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+    * <p>超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WaitExecutionTotalTTL")
@@ -243,7 +232,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private String WaitExecutionTotalTTL;
 
     /**
-    * 调度类型: 0 正常调度 1 空跑调度，默认为 0
+    * <p>调度类型: 0 正常调度 1 空跑调度，默认为 0</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScheduleType")
@@ -251,7 +240,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private Long ScheduleType;
 
     /**
-    * 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+    * <p>任务调度优先级 运行优先级 4高 5中 6低 , 默认:6</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunPriorityType")
@@ -259,7 +248,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private Long RunPriorityType;
 
     /**
-    * 重试策略 重试等待时间,单位分钟: 默认: 5
+    * <p>重试策略 重试等待时间,单位分钟: 默认: 5</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RetryWaitMinute")
@@ -267,7 +256,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private Long RetryWaitMinute;
 
     /**
-    * 重试策略 最大尝试次数, 默认: 4
+    * <p>重试策略 最大尝试次数, 默认: 4</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxRetryNumber")
@@ -275,7 +264,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private Long MaxRetryNumber;
 
     /**
-    * 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+    * <p>超时处理策略 运行耗时超时（单位：分钟）默认为 -1</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutionTTLMinute")
@@ -283,7 +272,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private Long ExecutionTTLMinute;
 
     /**
-    * 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+    * <p>超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WaitExecutionTotalTTLMinute")
@@ -291,19 +280,7 @@ CRONTAB_CYCLE: crontab表达式类型
     private Long WaitExecutionTotalTTLMinute;
 
     /**
-    * - 任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置
-- ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败
-- ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行
-- ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功
-- ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行
-- ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行
-- ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行
-- ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行
-- ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游
-- NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败
-- ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行
-- NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行
-- ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行
+    * <ul><li>任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置</li><li>ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败</li><li>ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行</li><li>ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行</li><li>ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行</li><li>ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行</li><li>ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行</li><li>ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游</li><li>NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行</li><li>NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行</li><li>ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DependencyTriggerPolicy")
@@ -311,27 +288,17 @@ CRONTAB_CYCLE: crontab表达式类型
     private String DependencyTriggerPolicy;
 
     /**
-     * Get 周期类型：支持的类型为
+    * <p>是否允许下游依赖 1允许 0不允许</p><p>取值范围：[0, 1]</p><p>默认值：1</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AllowDownstreamDependency")
+    @Expose
+    private Long AllowDownstreamDependency;
 
-ONEOFF_CYCLE: 一次性
-YEAR_CYCLE: 年
-MONTH_CYCLE: 月
-WEEK_CYCLE: 周
-DAY_CYCLE: 天
-HOUR_CYCLE: 小时
-MINUTE_CYCLE: 分钟
-CRONTAB_CYCLE: crontab表达式类型
+    /**
+     * Get <p>周期类型：支持的类型为</p><p>ONEOFF_CYCLE: 一次性<br>YEAR_CYCLE: 年<br>MONTH_CYCLE: 月<br>WEEK_CYCLE: 周<br>DAY_CYCLE: 天<br>HOUR_CYCLE: 小时<br>MINUTE_CYCLE: 分钟<br>CRONTAB_CYCLE: crontab表达式类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CycleType 周期类型：支持的类型为
-
-ONEOFF_CYCLE: 一次性
-YEAR_CYCLE: 年
-MONTH_CYCLE: 月
-WEEK_CYCLE: 周
-DAY_CYCLE: 天
-HOUR_CYCLE: 小时
-MINUTE_CYCLE: 分钟
-CRONTAB_CYCLE: crontab表达式类型
+     * @return CycleType <p>周期类型：支持的类型为</p><p>ONEOFF_CYCLE: 一次性<br>YEAR_CYCLE: 年<br>MONTH_CYCLE: 月<br>WEEK_CYCLE: 周<br>DAY_CYCLE: 天<br>HOUR_CYCLE: 小时<br>MINUTE_CYCLE: 分钟<br>CRONTAB_CYCLE: crontab表达式类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCycleType() {
@@ -339,27 +306,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 周期类型：支持的类型为
-
-ONEOFF_CYCLE: 一次性
-YEAR_CYCLE: 年
-MONTH_CYCLE: 月
-WEEK_CYCLE: 周
-DAY_CYCLE: 天
-HOUR_CYCLE: 小时
-MINUTE_CYCLE: 分钟
-CRONTAB_CYCLE: crontab表达式类型
+     * Set <p>周期类型：支持的类型为</p><p>ONEOFF_CYCLE: 一次性<br>YEAR_CYCLE: 年<br>MONTH_CYCLE: 月<br>WEEK_CYCLE: 周<br>DAY_CYCLE: 天<br>HOUR_CYCLE: 小时<br>MINUTE_CYCLE: 分钟<br>CRONTAB_CYCLE: crontab表达式类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CycleType 周期类型：支持的类型为
-
-ONEOFF_CYCLE: 一次性
-YEAR_CYCLE: 年
-MONTH_CYCLE: 月
-WEEK_CYCLE: 周
-DAY_CYCLE: 天
-HOUR_CYCLE: 小时
-MINUTE_CYCLE: 分钟
-CRONTAB_CYCLE: crontab表达式类型
+     * @param CycleType <p>周期类型：支持的类型为</p><p>ONEOFF_CYCLE: 一次性<br>YEAR_CYCLE: 年<br>MONTH_CYCLE: 月<br>WEEK_CYCLE: 周<br>DAY_CYCLE: 天<br>HOUR_CYCLE: 小时<br>MINUTE_CYCLE: 分钟<br>CRONTAB_CYCLE: crontab表达式类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCycleType(String CycleType) {
@@ -367,9 +316,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 时区
+     * Get <p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScheduleTimeZone 时区
+     * @return ScheduleTimeZone <p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScheduleTimeZone() {
@@ -377,9 +326,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 时区
+     * Set <p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScheduleTimeZone 时区
+     * @param ScheduleTimeZone <p>时区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScheduleTimeZone(String ScheduleTimeZone) {
@@ -387,9 +336,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 0 2 3 1,L,2 * ?	
+     * Get <p>0 2 3 1,L,2 * ?</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CrontabExpression 0 2 3 1,L,2 * ?	
+     * @return CrontabExpression <p>0 2 3 1,L,2 * ?</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCrontabExpression() {
@@ -397,9 +346,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 0 2 3 1,L,2 * ?	
+     * Set <p>0 2 3 1,L,2 * ?</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CrontabExpression 0 2 3 1,L,2 * ?	
+     * @param CrontabExpression <p>0 2 3 1,L,2 * ?</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCrontabExpression(String CrontabExpression) {
@@ -407,9 +356,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 生效日期
+     * Get <p>生效日期</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StartTime 生效日期
+     * @return StartTime <p>生效日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
@@ -417,9 +366,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 生效日期
+     * Set <p>生效日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StartTime 生效日期
+     * @param StartTime <p>生效日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
@@ -427,9 +376,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 结束日期
+     * Get <p>结束日期</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EndTime 结束日期
+     * @return EndTime <p>结束日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
@@ -437,9 +386,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 结束日期
+     * Set <p>结束日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EndTime 结束日期
+     * @param EndTime <p>结束日期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
@@ -447,9 +396,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 执行时间 左闭区间
+     * Get <p>执行时间 左闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecutionStartTime 执行时间 左闭区间
+     * @return ExecutionStartTime <p>执行时间 左闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecutionStartTime() {
@@ -457,9 +406,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 执行时间 左闭区间
+     * Set <p>执行时间 左闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecutionStartTime 执行时间 左闭区间
+     * @param ExecutionStartTime <p>执行时间 左闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutionStartTime(String ExecutionStartTime) {
@@ -467,9 +416,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 执行时间 右闭区间
+     * Get <p>执行时间 右闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecutionEndTime 执行时间 右闭区间
+     * @return ExecutionEndTime <p>执行时间 右闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecutionEndTime() {
@@ -477,9 +426,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 执行时间 右闭区间
+     * Set <p>执行时间 右闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecutionEndTime 执行时间 右闭区间
+     * @param ExecutionEndTime <p>执行时间 右闭区间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutionEndTime(String ExecutionEndTime) {
@@ -487,9 +436,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 日历调度 取值为 0 和 1， 1为打开，0为关闭，默认为0
+     * Get <p>日历调度 取值为 0 和 1， 1为打开，0为关闭，默认为0</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CalendarOpen 日历调度 取值为 0 和 1， 1为打开，0为关闭，默认为0
+     * @return CalendarOpen <p>日历调度 取值为 0 和 1， 1为打开，0为关闭，默认为0</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCalendarOpen() {
@@ -497,9 +446,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 日历调度 取值为 0 和 1， 1为打开，0为关闭，默认为0
+     * Set <p>日历调度 取值为 0 和 1， 1为打开，0为关闭，默认为0</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CalendarOpen 日历调度 取值为 0 和 1， 1为打开，0为关闭，默认为0
+     * @param CalendarOpen <p>日历调度 取值为 0 和 1， 1为打开，0为关闭，默认为0</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCalendarOpen(String CalendarOpen) {
@@ -507,9 +456,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 日历调度 日历 ID
+     * Get <p>日历调度 日历 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CalendarId 日历调度 日历 ID
+     * @return CalendarId <p>日历调度 日历 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCalendarId() {
@@ -517,9 +466,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 日历调度 日历 ID
+     * Set <p>日历调度 日历 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CalendarId 日历调度 日历 ID
+     * @param CalendarId <p>日历调度 日历 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCalendarId(String CalendarId) {
@@ -527,9 +476,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 日历调度 日历名称, 需要从 DescribeScheduleCalendarPageList 中获取
+     * Get <p>日历调度 日历名称, 需要从 DescribeScheduleCalendarPageList 中获取</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CalendarName 日历调度 日历名称, 需要从 DescribeScheduleCalendarPageList 中获取
+     * @return CalendarName <p>日历调度 日历名称, 需要从 DescribeScheduleCalendarPageList 中获取</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCalendarName() {
@@ -537,9 +486,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 日历调度 日历名称, 需要从 DescribeScheduleCalendarPageList 中获取
+     * Set <p>日历调度 日历名称, 需要从 DescribeScheduleCalendarPageList 中获取</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CalendarName 日历调度 日历名称, 需要从 DescribeScheduleCalendarPageList 中获取
+     * @param CalendarName <p>日历调度 日历名称, 需要从 DescribeScheduleCalendarPageList 中获取</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCalendarName(String CalendarName) {
@@ -547,9 +496,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)
+     * Get <p>自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SelfDepend 自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)
+     * @return SelfDepend <p>自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSelfDepend() {
@@ -557,9 +506,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)
+     * Set <p>自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SelfDepend 自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)
+     * @param SelfDepend <p>自依赖, 默认值 serial, 取值为：parallel(并行), serial(串行), orderly(有序)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSelfDepend(String SelfDepend) {
@@ -567,9 +516,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 上游依赖数组
+     * Get <p>上游依赖数组</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpstreamDependencyConfigList 上游依赖数组
+     * @return UpstreamDependencyConfigList <p>上游依赖数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DependencyTaskBrief [] getUpstreamDependencyConfigList() {
@@ -577,9 +526,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 上游依赖数组
+     * Set <p>上游依赖数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpstreamDependencyConfigList 上游依赖数组
+     * @param UpstreamDependencyConfigList <p>上游依赖数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpstreamDependencyConfigList(DependencyTaskBrief [] UpstreamDependencyConfigList) {
@@ -587,9 +536,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 下游依赖数组
+     * Get <p>下游依赖数组</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DownstreamDependencyConfigList 下游依赖数组
+     * @return DownstreamDependencyConfigList <p>下游依赖数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DependencyTaskBrief [] getDownstreamDependencyConfigList() {
@@ -597,9 +546,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 下游依赖数组
+     * Set <p>下游依赖数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DownstreamDependencyConfigList 下游依赖数组
+     * @param DownstreamDependencyConfigList <p>下游依赖数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDownstreamDependencyConfigList(DependencyTaskBrief [] DownstreamDependencyConfigList) {
@@ -607,9 +556,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 事件数组
+     * Get <p>事件数组</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EventListenerList 事件数组
+     * @return EventListenerList <p>事件数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public EventListener [] getEventListenerList() {
@@ -617,9 +566,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 事件数组
+     * Set <p>事件数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EventListenerList 事件数组
+     * @param EventListenerList <p>事件数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventListenerList(EventListener [] EventListenerList) {
@@ -627,9 +576,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 重跑&补录配置, 默认为 ALL; , ALL 运行成功或失败后皆可重跑或补录, FAILURE 运行成功后不可重跑或补录，运行失败后可重跑或补录, NONE 运行成功或失败后皆不可重跑或补录;
+     * Get <p>重跑&amp;补录配置, 默认为 ALL; , ALL 运行成功或失败后皆可重跑或补录, FAILURE 运行成功后不可重跑或补录，运行失败后可重跑或补录, NONE 运行成功或失败后皆不可重跑或补录;</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AllowRedoType 重跑&补录配置, 默认为 ALL; , ALL 运行成功或失败后皆可重跑或补录, FAILURE 运行成功后不可重跑或补录，运行失败后可重跑或补录, NONE 运行成功或失败后皆不可重跑或补录;
+     * @return AllowRedoType <p>重跑&amp;补录配置, 默认为 ALL; , ALL 运行成功或失败后皆可重跑或补录, FAILURE 运行成功后不可重跑或补录，运行失败后可重跑或补录, NONE 运行成功或失败后皆不可重跑或补录;</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAllowRedoType() {
@@ -637,9 +586,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 重跑&补录配置, 默认为 ALL; , ALL 运行成功或失败后皆可重跑或补录, FAILURE 运行成功后不可重跑或补录，运行失败后可重跑或补录, NONE 运行成功或失败后皆不可重跑或补录;
+     * Set <p>重跑&amp;补录配置, 默认为 ALL; , ALL 运行成功或失败后皆可重跑或补录, FAILURE 运行成功后不可重跑或补录，运行失败后可重跑或补录, NONE 运行成功或失败后皆不可重跑或补录;</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AllowRedoType 重跑&补录配置, 默认为 ALL; , ALL 运行成功或失败后皆可重跑或补录, FAILURE 运行成功后不可重跑或补录，运行失败后可重跑或补录, NONE 运行成功或失败后皆不可重跑或补录;
+     * @param AllowRedoType <p>重跑&amp;补录配置, 默认为 ALL; , ALL 运行成功或失败后皆可重跑或补录, FAILURE 运行成功后不可重跑或补录，运行失败后可重跑或补录, NONE 运行成功或失败后皆不可重跑或补录;</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAllowRedoType(String AllowRedoType) {
@@ -647,9 +596,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 输出参数数组
+     * Get <p>输出参数数组</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ParamTaskOutList 输出参数数组
+     * @return ParamTaskOutList <p>输出参数数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public OutTaskParameter [] getParamTaskOutList() {
@@ -657,9 +606,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 输出参数数组
+     * Set <p>输出参数数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ParamTaskOutList 输出参数数组
+     * @param ParamTaskOutList <p>输出参数数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParamTaskOutList(OutTaskParameter [] ParamTaskOutList) {
@@ -667,9 +616,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 输入参数数组
+     * Get <p>输入参数数组</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ParamTaskInList 输入参数数组
+     * @return ParamTaskInList <p>输入参数数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public InTaskParameter [] getParamTaskInList() {
@@ -677,9 +626,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 输入参数数组
+     * Set <p>输入参数数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ParamTaskInList 输入参数数组
+     * @param ParamTaskInList <p>输入参数数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParamTaskInList(InTaskParameter [] ParamTaskInList) {
@@ -687,9 +636,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 产出登记
+     * Get <p>产出登记</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskOutputRegistryList 产出登记
+     * @return TaskOutputRegistryList <p>产出登记</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskDataRegistry [] getTaskOutputRegistryList() {
@@ -697,9 +646,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 产出登记
+     * Set <p>产出登记</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskOutputRegistryList 产出登记
+     * @param TaskOutputRegistryList <p>产出登记</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskOutputRegistryList(TaskDataRegistry [] TaskOutputRegistryList) {
@@ -707,13 +656,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get **实例生成策略**
-* T_PLUS_0: T+0生成,默认策略
-* T_PLUS_1: T+1生成
+     * Get <p><strong>实例生成策略</strong></p><ul><li>T_PLUS_0: T+0生成,默认策略</li><li>T_PLUS_1: T+1生成</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InitStrategy **实例生成策略**
-* T_PLUS_0: T+0生成,默认策略
-* T_PLUS_1: T+1生成
+     * @return InitStrategy <p><strong>实例生成策略</strong></p><ul><li>T_PLUS_0: T+0生成,默认策略</li><li>T_PLUS_1: T+1生成</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInitStrategy() {
@@ -721,13 +666,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set **实例生成策略**
-* T_PLUS_0: T+0生成,默认策略
-* T_PLUS_1: T+1生成
+     * Set <p><strong>实例生成策略</strong></p><ul><li>T_PLUS_0: T+0生成,默认策略</li><li>T_PLUS_1: T+1生成</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InitStrategy **实例生成策略**
-* T_PLUS_0: T+0生成,默认策略
-* T_PLUS_1: T+1生成
+     * @param InitStrategy <p><strong>实例生成策略</strong></p><ul><li>T_PLUS_0: T+0生成,默认策略</li><li>T_PLUS_1: T+1生成</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInitStrategy(String InitStrategy) {
@@ -735,9 +676,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 调度类型: 0 正常调度 1 空跑调度，默认为 0
+     * Get <p>调度类型: 0 正常调度 1 空跑调度，默认为 0</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScheduleRunType 调度类型: 0 正常调度 1 空跑调度，默认为 0
+     * @return ScheduleRunType <p>调度类型: 0 正常调度 1 空跑调度，默认为 0</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -747,9 +688,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 调度类型: 0 正常调度 1 空跑调度，默认为 0
+     * Set <p>调度类型: 0 正常调度 1 空跑调度，默认为 0</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScheduleRunType 调度类型: 0 正常调度 1 空跑调度，默认为 0
+     * @param ScheduleRunType <p>调度类型: 0 正常调度 1 空跑调度，默认为 0</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -759,9 +700,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get （废弃，建议使用 DownstreamDependencyConfigList）下游依赖数组
+     * Get <p>（废弃，建议使用 DownstreamDependencyConfigList）下游依赖数组</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DownStreamDependencyConfigList （废弃，建议使用 DownstreamDependencyConfigList）下游依赖数组
+     * @return DownStreamDependencyConfigList <p>（废弃，建议使用 DownstreamDependencyConfigList）下游依赖数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -771,9 +712,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set （废弃，建议使用 DownstreamDependencyConfigList）下游依赖数组
+     * Set <p>（废弃，建议使用 DownstreamDependencyConfigList）下游依赖数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DownStreamDependencyConfigList （废弃，建议使用 DownstreamDependencyConfigList）下游依赖数组
+     * @param DownStreamDependencyConfigList <p>（废弃，建议使用 DownstreamDependencyConfigList）下游依赖数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -783,9 +724,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+     * Get <p>任务调度优先级 运行优先级 4高 5中 6低 , 默认:6</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RunPriority 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+     * @return RunPriority <p>任务调度优先级 运行优先级 4高 5中 6低 , 默认:6</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -795,9 +736,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+     * Set <p>任务调度优先级 运行优先级 4高 5中 6低 , 默认:6</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RunPriority 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+     * @param RunPriority <p>任务调度优先级 运行优先级 4高 5中 6低 , 默认:6</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -807,9 +748,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 重试策略 重试等待时间,单位分钟: 默认: 5
+     * Get <p>重试策略 重试等待时间,单位分钟: 默认: 5</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RetryWait 重试策略 重试等待时间,单位分钟: 默认: 5
+     * @return RetryWait <p>重试策略 重试等待时间,单位分钟: 默认: 5</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -819,9 +760,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 重试策略 重试等待时间,单位分钟: 默认: 5
+     * Set <p>重试策略 重试等待时间,单位分钟: 默认: 5</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RetryWait 重试策略 重试等待时间,单位分钟: 默认: 5
+     * @param RetryWait <p>重试策略 重试等待时间,单位分钟: 默认: 5</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -831,9 +772,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 重试策略 最大尝试次数, 默认: 4
+     * Get <p>重试策略 最大尝试次数, 默认: 4</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MaxRetryAttempts 重试策略 最大尝试次数, 默认: 4
+     * @return MaxRetryAttempts <p>重试策略 最大尝试次数, 默认: 4</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -843,9 +784,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 重试策略 最大尝试次数, 默认: 4
+     * Set <p>重试策略 最大尝试次数, 默认: 4</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaxRetryAttempts 重试策略 最大尝试次数, 默认: 4
+     * @param MaxRetryAttempts <p>重试策略 最大尝试次数, 默认: 4</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -855,9 +796,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+     * Get <p>超时处理策略 运行耗时超时（单位：分钟）默认为 -1</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecutionTTL 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+     * @return ExecutionTTL <p>超时处理策略 运行耗时超时（单位：分钟）默认为 -1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -867,9 +808,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+     * Set <p>超时处理策略 运行耗时超时（单位：分钟）默认为 -1</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecutionTTL 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+     * @param ExecutionTTL <p>超时处理策略 运行耗时超时（单位：分钟）默认为 -1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -879,9 +820,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+     * Get <p>超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WaitExecutionTotalTTL 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+     * @return WaitExecutionTotalTTL <p>超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -891,9 +832,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+     * Set <p>超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WaitExecutionTotalTTL 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+     * @param WaitExecutionTotalTTL <p>超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -903,9 +844,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 调度类型: 0 正常调度 1 空跑调度，默认为 0
+     * Get <p>调度类型: 0 正常调度 1 空跑调度，默认为 0</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScheduleType 调度类型: 0 正常调度 1 空跑调度，默认为 0
+     * @return ScheduleType <p>调度类型: 0 正常调度 1 空跑调度，默认为 0</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScheduleType() {
@@ -913,9 +854,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 调度类型: 0 正常调度 1 空跑调度，默认为 0
+     * Set <p>调度类型: 0 正常调度 1 空跑调度，默认为 0</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScheduleType 调度类型: 0 正常调度 1 空跑调度，默认为 0
+     * @param ScheduleType <p>调度类型: 0 正常调度 1 空跑调度，默认为 0</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScheduleType(Long ScheduleType) {
@@ -923,9 +864,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+     * Get <p>任务调度优先级 运行优先级 4高 5中 6低 , 默认:6</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RunPriorityType 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+     * @return RunPriorityType <p>任务调度优先级 运行优先级 4高 5中 6低 , 默认:6</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRunPriorityType() {
@@ -933,9 +874,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+     * Set <p>任务调度优先级 运行优先级 4高 5中 6低 , 默认:6</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RunPriorityType 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+     * @param RunPriorityType <p>任务调度优先级 运行优先级 4高 5中 6低 , 默认:6</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunPriorityType(Long RunPriorityType) {
@@ -943,9 +884,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 重试策略 重试等待时间,单位分钟: 默认: 5
+     * Get <p>重试策略 重试等待时间,单位分钟: 默认: 5</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RetryWaitMinute 重试策略 重试等待时间,单位分钟: 默认: 5
+     * @return RetryWaitMinute <p>重试策略 重试等待时间,单位分钟: 默认: 5</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRetryWaitMinute() {
@@ -953,9 +894,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 重试策略 重试等待时间,单位分钟: 默认: 5
+     * Set <p>重试策略 重试等待时间,单位分钟: 默认: 5</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RetryWaitMinute 重试策略 重试等待时间,单位分钟: 默认: 5
+     * @param RetryWaitMinute <p>重试策略 重试等待时间,单位分钟: 默认: 5</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRetryWaitMinute(Long RetryWaitMinute) {
@@ -963,9 +904,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 重试策略 最大尝试次数, 默认: 4
+     * Get <p>重试策略 最大尝试次数, 默认: 4</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MaxRetryNumber 重试策略 最大尝试次数, 默认: 4
+     * @return MaxRetryNumber <p>重试策略 最大尝试次数, 默认: 4</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxRetryNumber() {
@@ -973,9 +914,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 重试策略 最大尝试次数, 默认: 4
+     * Set <p>重试策略 最大尝试次数, 默认: 4</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaxRetryNumber 重试策略 最大尝试次数, 默认: 4
+     * @param MaxRetryNumber <p>重试策略 最大尝试次数, 默认: 4</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxRetryNumber(Long MaxRetryNumber) {
@@ -983,9 +924,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+     * Get <p>超时处理策略 运行耗时超时（单位：分钟）默认为 -1</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecutionTTLMinute 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+     * @return ExecutionTTLMinute <p>超时处理策略 运行耗时超时（单位：分钟）默认为 -1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getExecutionTTLMinute() {
@@ -993,9 +934,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+     * Set <p>超时处理策略 运行耗时超时（单位：分钟）默认为 -1</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecutionTTLMinute 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+     * @param ExecutionTTLMinute <p>超时处理策略 运行耗时超时（单位：分钟）默认为 -1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutionTTLMinute(Long ExecutionTTLMinute) {
@@ -1003,9 +944,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+     * Get <p>超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WaitExecutionTotalTTLMinute 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+     * @return WaitExecutionTotalTTLMinute <p>超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWaitExecutionTotalTTLMinute() {
@@ -1013,9 +954,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+     * Set <p>超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WaitExecutionTotalTTLMinute 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+     * @param WaitExecutionTotalTTLMinute <p>超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWaitExecutionTotalTTLMinute(Long WaitExecutionTotalTTLMinute) {
@@ -1023,33 +964,9 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Get - 任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置
-- ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败
-- ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行
-- ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功
-- ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行
-- ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行
-- ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行
-- ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行
-- ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游
-- NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败
-- ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行
-- NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行
-- ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行
+     * Get <ul><li>任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置</li><li>ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败</li><li>ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行</li><li>ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行</li><li>ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行</li><li>ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行</li><li>ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行</li><li>ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游</li><li>NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行</li><li>NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行</li><li>ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DependencyTriggerPolicy - 任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置
-- ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败
-- ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行
-- ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功
-- ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行
-- ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行
-- ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行
-- ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行
-- ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游
-- NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败
-- ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行
-- NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行
-- ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行
+     * @return DependencyTriggerPolicy <ul><li>任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置</li><li>ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败</li><li>ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行</li><li>ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行</li><li>ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行</li><li>ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行</li><li>ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行</li><li>ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游</li><li>NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行</li><li>NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行</li><li>ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDependencyTriggerPolicy() {
@@ -1057,37 +974,33 @@ CRONTAB_CYCLE: crontab表达式类型
     }
 
     /**
-     * Set - 任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置
-- ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败
-- ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行
-- ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功
-- ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行
-- ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行
-- ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行
-- ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行
-- ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游
-- NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败
-- ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行
-- NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行
-- ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行
+     * Set <ul><li>任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置</li><li>ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败</li><li>ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行</li><li>ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行</li><li>ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行</li><li>ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行</li><li>ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行</li><li>ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游</li><li>NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行</li><li>NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行</li><li>ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DependencyTriggerPolicy - 任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置
-- ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败
-- ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行
-- ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功
-- ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行
-- ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行
-- ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行
-- ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行
-- ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游
-- NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败
-- ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行
-- NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行
-- ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行
+     * @param DependencyTriggerPolicy <ul><li>任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置</li><li>ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败</li><li>ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行</li><li>ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行</li><li>ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行</li><li>ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行</li><li>ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行</li><li>ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游</li><li>NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行</li><li>NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行</li><li>ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDependencyTriggerPolicy(String DependencyTriggerPolicy) {
         this.DependencyTriggerPolicy = DependencyTriggerPolicy;
+    }
+
+    /**
+     * Get <p>是否允许下游依赖 1允许 0不允许</p><p>取值范围：[0, 1]</p><p>默认值：1</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AllowDownstreamDependency <p>是否允许下游依赖 1允许 0不允许</p><p>取值范围：[0, 1]</p><p>默认值：1</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAllowDownstreamDependency() {
+        return this.AllowDownstreamDependency;
+    }
+
+    /**
+     * Set <p>是否允许下游依赖 1允许 0不允许</p><p>取值范围：[0, 1]</p><p>默认值：1</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AllowDownstreamDependency <p>是否允许下游依赖 1允许 0不允许</p><p>取值范围：[0, 1]</p><p>默认值：1</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAllowDownstreamDependency(Long AllowDownstreamDependency) {
+        this.AllowDownstreamDependency = AllowDownstreamDependency;
     }
 
     public TaskSchedulerConfiguration() {
@@ -1218,6 +1131,9 @@ CRONTAB_CYCLE: crontab表达式类型
         if (source.DependencyTriggerPolicy != null) {
             this.DependencyTriggerPolicy = new String(source.DependencyTriggerPolicy);
         }
+        if (source.AllowDownstreamDependency != null) {
+            this.AllowDownstreamDependency = new Long(source.AllowDownstreamDependency);
+        }
     }
 
 
@@ -1258,6 +1174,7 @@ CRONTAB_CYCLE: crontab表达式类型
         this.setParamSimple(map, prefix + "ExecutionTTLMinute", this.ExecutionTTLMinute);
         this.setParamSimple(map, prefix + "WaitExecutionTotalTTLMinute", this.WaitExecutionTotalTTLMinute);
         this.setParamSimple(map, prefix + "DependencyTriggerPolicy", this.DependencyTriggerPolicy);
+        this.setParamSimple(map, prefix + "AllowDownstreamDependency", this.AllowDownstreamDependency);
 
     }
 }

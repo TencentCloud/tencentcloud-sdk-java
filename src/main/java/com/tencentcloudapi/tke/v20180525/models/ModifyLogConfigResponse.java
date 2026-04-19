@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.aiart.v20221229.models;
+package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SubmitMemeJobResponse extends AbstractModel {
-
-    /**
-    * <p>任务id</p>
-    */
-    @SerializedName("JobId")
-    @Expose
-    private String JobId;
+public class ModifyLogConfigResponse extends AbstractModel {
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -36,22 +29,6 @@ public class SubmitMemeJobResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get <p>任务id</p> 
-     * @return JobId <p>任务id</p>
-     */
-    public String getJobId() {
-        return this.JobId;
-    }
-
-    /**
-     * Set <p>任务id</p>
-     * @param JobId <p>任务id</p>
-     */
-    public void setJobId(String JobId) {
-        this.JobId = JobId;
-    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -69,17 +46,14 @@ public class SubmitMemeJobResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public SubmitMemeJobResponse() {
+    public ModifyLogConfigResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public SubmitMemeJobResponse(SubmitMemeJobResponse source) {
-        if (source.JobId != null) {
-            this.JobId = new String(source.JobId);
-        }
+    public ModifyLogConfigResponse(ModifyLogConfigResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,7 +64,6 @@ public class SubmitMemeJobResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "JobId", this.JobId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

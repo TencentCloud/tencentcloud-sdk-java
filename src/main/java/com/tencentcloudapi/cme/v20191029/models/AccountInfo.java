@@ -24,105 +24,118 @@ import java.util.HashMap;
 public class AccountInfo extends AbstractModel {
 
     /**
-    * 用户 Id。
+    * <p>用户 Id。</p>
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * 用户手机号码。
+    * <p>用户手机号码。</p>
     */
     @SerializedName("Phone")
     @Expose
     private String Phone;
 
     /**
-    * 用户昵称。
+    * <p>用户昵称。</p>
     */
     @SerializedName("Nick")
     @Expose
     private String Nick;
 
     /**
-    * 账号状态，取值：
-<li>Normal：有效；</li>
-<li>Stopped：无效。</li>
+    * <p>账号状态，取值：</p><li>Normal：有效；</li><li>Stopped：无效。</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get 用户 Id。 
-     * @return UserId 用户 Id。
+    * <p>账户的创建时间。</p><p>参数格式：使用 ISO 日期格式。</p>
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
+     * Get <p>用户 Id。</p> 
+     * @return UserId <p>用户 Id。</p>
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 用户 Id。
-     * @param UserId 用户 Id。
+     * Set <p>用户 Id。</p>
+     * @param UserId <p>用户 Id。</p>
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get 用户手机号码。 
-     * @return Phone 用户手机号码。
+     * Get <p>用户手机号码。</p> 
+     * @return Phone <p>用户手机号码。</p>
      */
     public String getPhone() {
         return this.Phone;
     }
 
     /**
-     * Set 用户手机号码。
-     * @param Phone 用户手机号码。
+     * Set <p>用户手机号码。</p>
+     * @param Phone <p>用户手机号码。</p>
      */
     public void setPhone(String Phone) {
         this.Phone = Phone;
     }
 
     /**
-     * Get 用户昵称。 
-     * @return Nick 用户昵称。
+     * Get <p>用户昵称。</p> 
+     * @return Nick <p>用户昵称。</p>
      */
     public String getNick() {
         return this.Nick;
     }
 
     /**
-     * Set 用户昵称。
-     * @param Nick 用户昵称。
+     * Set <p>用户昵称。</p>
+     * @param Nick <p>用户昵称。</p>
      */
     public void setNick(String Nick) {
         this.Nick = Nick;
     }
 
     /**
-     * Get 账号状态，取值：
-<li>Normal：有效；</li>
-<li>Stopped：无效。</li> 
-     * @return Status 账号状态，取值：
-<li>Normal：有效；</li>
-<li>Stopped：无效。</li>
+     * Get <p>账号状态，取值：</p><li>Normal：有效；</li><li>Stopped：无效。</li> 
+     * @return Status <p>账号状态，取值：</p><li>Normal：有效；</li><li>Stopped：无效。</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 账号状态，取值：
-<li>Normal：有效；</li>
-<li>Stopped：无效。</li>
-     * @param Status 账号状态，取值：
-<li>Normal：有效；</li>
-<li>Stopped：无效。</li>
+     * Set <p>账号状态，取值：</p><li>Normal：有效；</li><li>Stopped：无效。</li>
+     * @param Status <p>账号状态，取值：</p><li>Normal：有效；</li><li>Stopped：无效。</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get <p>账户的创建时间。</p><p>参数格式：使用 ISO 日期格式。</p> 
+     * @return CreateTime <p>账户的创建时间。</p><p>参数格式：使用 ISO 日期格式。</p>
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set <p>账户的创建时间。</p><p>参数格式：使用 ISO 日期格式。</p>
+     * @param CreateTime <p>账户的创建时间。</p><p>参数格式：使用 ISO 日期格式。</p>
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
     }
 
     public AccountInfo() {
@@ -145,6 +158,9 @@ public class AccountInfo extends AbstractModel {
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
     }
 
 
@@ -156,6 +172,7 @@ public class AccountInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Phone", this.Phone);
         this.setParamSimple(map, prefix + "Nick", this.Nick);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }

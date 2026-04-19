@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class TextToImageLiteResponse extends AbstractModel {
 
     /**
-    * 根据入参 RspImgType 填入不同，返回不同的内容。
-如果传入 base64 则返回生成图 Base64 编码。
-如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。
+    * <p>根据入参 RspImgType 填入不同，返回不同的内容。<br>如果传入 base64 则返回生成图 Base64 编码。<br>如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。</p>
     */
     @SerializedName("ResultImage")
     @Expose
     private String ResultImage;
 
     /**
-    * Seed
+    * <p>Seed</p>
     */
     @SerializedName("Seed")
     @Expose
@@ -47,40 +45,32 @@ public class TextToImageLiteResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 根据入参 RspImgType 填入不同，返回不同的内容。
-如果传入 base64 则返回生成图 Base64 编码。
-如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。 
-     * @return ResultImage 根据入参 RspImgType 填入不同，返回不同的内容。
-如果传入 base64 则返回生成图 Base64 编码。
-如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。
+     * Get <p>根据入参 RspImgType 填入不同，返回不同的内容。<br>如果传入 base64 则返回生成图 Base64 编码。<br>如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。</p> 
+     * @return ResultImage <p>根据入参 RspImgType 填入不同，返回不同的内容。<br>如果传入 base64 则返回生成图 Base64 编码。<br>如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。</p>
      */
     public String getResultImage() {
         return this.ResultImage;
     }
 
     /**
-     * Set 根据入参 RspImgType 填入不同，返回不同的内容。
-如果传入 base64 则返回生成图 Base64 编码。
-如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。
-     * @param ResultImage 根据入参 RspImgType 填入不同，返回不同的内容。
-如果传入 base64 则返回生成图 Base64 编码。
-如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。
+     * Set <p>根据入参 RspImgType 填入不同，返回不同的内容。<br>如果传入 base64 则返回生成图 Base64 编码。<br>如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。</p>
+     * @param ResultImage <p>根据入参 RspImgType 填入不同，返回不同的内容。<br>如果传入 base64 则返回生成图 Base64 编码。<br>如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。</p>
      */
     public void setResultImage(String ResultImage) {
         this.ResultImage = ResultImage;
     }
 
     /**
-     * Get Seed 
-     * @return Seed Seed
+     * Get <p>Seed</p> 
+     * @return Seed <p>Seed</p>
      */
     public Long getSeed() {
         return this.Seed;
     }
 
     /**
-     * Set Seed
-     * @param Seed Seed
+     * Set <p>Seed</p>
+     * @param Seed <p>Seed</p>
      */
     public void setSeed(Long Seed) {
         this.Seed = Seed;

@@ -31,6 +31,13 @@ public class FrequentScanningProtection extends AbstractModel {
     private String Enabled;
 
     /**
+    * 高频扫描防护的规则 ID，仅作为出参返回。
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
+
+    /**
     * 高频扫描防护的处置动作。 当 Enabled 为 on 时，此字段必填。SecurityAction 的 Name 取值支持：<li>Deny：拦截，响应拦截页面；</li><li>Monitor：观察，不处理请求记录安全事件到日志中；</li><li>JSChallenge：JavaScript 挑战，响应 JavaScript 挑战页面。</li>
     */
     @SerializedName("Action")
@@ -79,6 +86,22 @@ public class FrequentScanningProtection extends AbstractModel {
      */
     public void setEnabled(String Enabled) {
         this.Enabled = Enabled;
+    }
+
+    /**
+     * Get 高频扫描防护的规则 ID，仅作为出参返回。 
+     * @return Id 高频扫描防护的规则 ID，仅作为出参返回。
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set 高频扫描防护的规则 ID，仅作为出参返回。
+     * @param Id 高频扫描防护的规则 ID，仅作为出参返回。
+     */
+    public void setId(String Id) {
+        this.Id = Id;
     }
 
     /**
@@ -172,6 +195,9 @@ public class FrequentScanningProtection extends AbstractModel {
         if (source.Enabled != null) {
             this.Enabled = new String(source.Enabled);
         }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
         if (source.Action != null) {
             this.Action = new SecurityAction(source.Action);
         }
@@ -195,6 +221,7 @@ public class FrequentScanningProtection extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Enabled", this.Enabled);
+        this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamObj(map, prefix + "Action.", this.Action);
         this.setParamSimple(map, prefix + "CountBy", this.CountBy);
         this.setParamSimple(map, prefix + "BlockThreshold", this.BlockThreshold);

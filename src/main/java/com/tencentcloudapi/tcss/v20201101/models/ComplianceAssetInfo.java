@@ -24,398 +24,371 @@ import java.util.HashMap;
 public class ComplianceAssetInfo extends AbstractModel {
 
     /**
-    * 客户资产的ID。
+    * <p>客户资产的ID。</p>
     */
     @SerializedName("CustomerAssetId")
     @Expose
     private Long CustomerAssetId;
 
     /**
-    * 资产类别。
+    * <p>资产类别。</p>
     */
     @SerializedName("AssetType")
     @Expose
     private String AssetType;
 
     /**
-    * 资产的名称。
+    * <p>资产的名称。</p>
     */
     @SerializedName("AssetName")
     @Expose
     private String AssetName;
 
     /**
-    * 当资产为镜像时，这个字段为镜像Tag。
+    * <p>当资产为镜像时，这个字段为镜像Tag。</p>
     */
     @SerializedName("ImageTag")
     @Expose
     private String ImageTag;
 
     /**
-    * 资产所在的主机IP。
+    * <p>资产所在的主机IP。</p>
     */
     @SerializedName("HostIP")
     @Expose
     private String HostIP;
 
     /**
-    * 资产所属的节点的名称
+    * <p>资产所属的节点的名称</p>
     */
     @SerializedName("NodeName")
     @Expose
     private String NodeName;
 
     /**
-    * 检测状态
-
-CHECK_INIT, 待检测
-
-CHECK_RUNNING, 检测中
-
-CHECK_FINISHED, 检测完成
-
-CHECK_FAILED, 检测失败
+    * <p>检测状态</p><p>CHECK_INIT, 待检测</p><p>CHECK_RUNNING, 检测中</p><p>CHECK_FINISHED, 检测完成</p><p>CHECK_FAILED, 检测失败</p>
     */
     @SerializedName("CheckStatus")
     @Expose
     private String CheckStatus;
 
     /**
-    * 此类资产通过的检测项的数目。
+    * <p>此类资产通过的检测项的数目。</p>
     */
     @SerializedName("PassedPolicyItemCount")
     @Expose
     private Long PassedPolicyItemCount;
 
     /**
-    * 此类资产未通过的检测的数目。
+    * <p>此类资产未通过的检测的数目。</p>
     */
     @SerializedName("FailedPolicyItemCount")
     @Expose
     private Long FailedPolicyItemCount;
 
     /**
-    * 上次检测的时间。
+    * <p>上次检测的时间。</p>
     */
     @SerializedName("LastCheckTime")
     @Expose
     private String LastCheckTime;
 
     /**
-    * 检测结果：
-RESULT_FAILED: 未通过。
-RESULT_PASSED: 通过。
+    * <p>检测结果：<br>RESULT_FAILED: 未通过。<br>RESULT_PASSED: 通过。</p>
     */
     @SerializedName("CheckResult")
     @Expose
     private String CheckResult;
 
     /**
-    * 主机节点的实例id
+    * <p>主机节点的实例id</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 镜像仓库信息
+    * <p>镜像仓库信息</p>
     */
     @SerializedName("ImageRegistryInfo")
     @Expose
     private ImageRegistryInfo ImageRegistryInfo;
 
     /**
-    * 集群id
+    * <p>集群id</p>
     */
     @SerializedName("ClusterID")
     @Expose
     private String ClusterID;
 
     /**
-    * 集群名称
+    * <p>集群名称</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-     * Get 客户资产的ID。 
-     * @return CustomerAssetId 客户资产的ID。
+    * <p>资产唯一ID</p><p>默认值：-</p>
+    */
+    @SerializedName("AssetUniqueID")
+    @Expose
+    private String AssetUniqueID;
+
+    /**
+     * Get <p>客户资产的ID。</p> 
+     * @return CustomerAssetId <p>客户资产的ID。</p>
      */
     public Long getCustomerAssetId() {
         return this.CustomerAssetId;
     }
 
     /**
-     * Set 客户资产的ID。
-     * @param CustomerAssetId 客户资产的ID。
+     * Set <p>客户资产的ID。</p>
+     * @param CustomerAssetId <p>客户资产的ID。</p>
      */
     public void setCustomerAssetId(Long CustomerAssetId) {
         this.CustomerAssetId = CustomerAssetId;
     }
 
     /**
-     * Get 资产类别。 
-     * @return AssetType 资产类别。
+     * Get <p>资产类别。</p> 
+     * @return AssetType <p>资产类别。</p>
      */
     public String getAssetType() {
         return this.AssetType;
     }
 
     /**
-     * Set 资产类别。
-     * @param AssetType 资产类别。
+     * Set <p>资产类别。</p>
+     * @param AssetType <p>资产类别。</p>
      */
     public void setAssetType(String AssetType) {
         this.AssetType = AssetType;
     }
 
     /**
-     * Get 资产的名称。 
-     * @return AssetName 资产的名称。
+     * Get <p>资产的名称。</p> 
+     * @return AssetName <p>资产的名称。</p>
      */
     public String getAssetName() {
         return this.AssetName;
     }
 
     /**
-     * Set 资产的名称。
-     * @param AssetName 资产的名称。
+     * Set <p>资产的名称。</p>
+     * @param AssetName <p>资产的名称。</p>
      */
     public void setAssetName(String AssetName) {
         this.AssetName = AssetName;
     }
 
     /**
-     * Get 当资产为镜像时，这个字段为镜像Tag。 
-     * @return ImageTag 当资产为镜像时，这个字段为镜像Tag。
+     * Get <p>当资产为镜像时，这个字段为镜像Tag。</p> 
+     * @return ImageTag <p>当资产为镜像时，这个字段为镜像Tag。</p>
      */
     public String getImageTag() {
         return this.ImageTag;
     }
 
     /**
-     * Set 当资产为镜像时，这个字段为镜像Tag。
-     * @param ImageTag 当资产为镜像时，这个字段为镜像Tag。
+     * Set <p>当资产为镜像时，这个字段为镜像Tag。</p>
+     * @param ImageTag <p>当资产为镜像时，这个字段为镜像Tag。</p>
      */
     public void setImageTag(String ImageTag) {
         this.ImageTag = ImageTag;
     }
 
     /**
-     * Get 资产所在的主机IP。 
-     * @return HostIP 资产所在的主机IP。
+     * Get <p>资产所在的主机IP。</p> 
+     * @return HostIP <p>资产所在的主机IP。</p>
      */
     public String getHostIP() {
         return this.HostIP;
     }
 
     /**
-     * Set 资产所在的主机IP。
-     * @param HostIP 资产所在的主机IP。
+     * Set <p>资产所在的主机IP。</p>
+     * @param HostIP <p>资产所在的主机IP。</p>
      */
     public void setHostIP(String HostIP) {
         this.HostIP = HostIP;
     }
 
     /**
-     * Get 资产所属的节点的名称 
-     * @return NodeName 资产所属的节点的名称
+     * Get <p>资产所属的节点的名称</p> 
+     * @return NodeName <p>资产所属的节点的名称</p>
      */
     public String getNodeName() {
         return this.NodeName;
     }
 
     /**
-     * Set 资产所属的节点的名称
-     * @param NodeName 资产所属的节点的名称
+     * Set <p>资产所属的节点的名称</p>
+     * @param NodeName <p>资产所属的节点的名称</p>
      */
     public void setNodeName(String NodeName) {
         this.NodeName = NodeName;
     }
 
     /**
-     * Get 检测状态
-
-CHECK_INIT, 待检测
-
-CHECK_RUNNING, 检测中
-
-CHECK_FINISHED, 检测完成
-
-CHECK_FAILED, 检测失败 
-     * @return CheckStatus 检测状态
-
-CHECK_INIT, 待检测
-
-CHECK_RUNNING, 检测中
-
-CHECK_FINISHED, 检测完成
-
-CHECK_FAILED, 检测失败
+     * Get <p>检测状态</p><p>CHECK_INIT, 待检测</p><p>CHECK_RUNNING, 检测中</p><p>CHECK_FINISHED, 检测完成</p><p>CHECK_FAILED, 检测失败</p> 
+     * @return CheckStatus <p>检测状态</p><p>CHECK_INIT, 待检测</p><p>CHECK_RUNNING, 检测中</p><p>CHECK_FINISHED, 检测完成</p><p>CHECK_FAILED, 检测失败</p>
      */
     public String getCheckStatus() {
         return this.CheckStatus;
     }
 
     /**
-     * Set 检测状态
-
-CHECK_INIT, 待检测
-
-CHECK_RUNNING, 检测中
-
-CHECK_FINISHED, 检测完成
-
-CHECK_FAILED, 检测失败
-     * @param CheckStatus 检测状态
-
-CHECK_INIT, 待检测
-
-CHECK_RUNNING, 检测中
-
-CHECK_FINISHED, 检测完成
-
-CHECK_FAILED, 检测失败
+     * Set <p>检测状态</p><p>CHECK_INIT, 待检测</p><p>CHECK_RUNNING, 检测中</p><p>CHECK_FINISHED, 检测完成</p><p>CHECK_FAILED, 检测失败</p>
+     * @param CheckStatus <p>检测状态</p><p>CHECK_INIT, 待检测</p><p>CHECK_RUNNING, 检测中</p><p>CHECK_FINISHED, 检测完成</p><p>CHECK_FAILED, 检测失败</p>
      */
     public void setCheckStatus(String CheckStatus) {
         this.CheckStatus = CheckStatus;
     }
 
     /**
-     * Get 此类资产通过的检测项的数目。 
-     * @return PassedPolicyItemCount 此类资产通过的检测项的数目。
+     * Get <p>此类资产通过的检测项的数目。</p> 
+     * @return PassedPolicyItemCount <p>此类资产通过的检测项的数目。</p>
      */
     public Long getPassedPolicyItemCount() {
         return this.PassedPolicyItemCount;
     }
 
     /**
-     * Set 此类资产通过的检测项的数目。
-     * @param PassedPolicyItemCount 此类资产通过的检测项的数目。
+     * Set <p>此类资产通过的检测项的数目。</p>
+     * @param PassedPolicyItemCount <p>此类资产通过的检测项的数目。</p>
      */
     public void setPassedPolicyItemCount(Long PassedPolicyItemCount) {
         this.PassedPolicyItemCount = PassedPolicyItemCount;
     }
 
     /**
-     * Get 此类资产未通过的检测的数目。 
-     * @return FailedPolicyItemCount 此类资产未通过的检测的数目。
+     * Get <p>此类资产未通过的检测的数目。</p> 
+     * @return FailedPolicyItemCount <p>此类资产未通过的检测的数目。</p>
      */
     public Long getFailedPolicyItemCount() {
         return this.FailedPolicyItemCount;
     }
 
     /**
-     * Set 此类资产未通过的检测的数目。
-     * @param FailedPolicyItemCount 此类资产未通过的检测的数目。
+     * Set <p>此类资产未通过的检测的数目。</p>
+     * @param FailedPolicyItemCount <p>此类资产未通过的检测的数目。</p>
      */
     public void setFailedPolicyItemCount(Long FailedPolicyItemCount) {
         this.FailedPolicyItemCount = FailedPolicyItemCount;
     }
 
     /**
-     * Get 上次检测的时间。 
-     * @return LastCheckTime 上次检测的时间。
+     * Get <p>上次检测的时间。</p> 
+     * @return LastCheckTime <p>上次检测的时间。</p>
      */
     public String getLastCheckTime() {
         return this.LastCheckTime;
     }
 
     /**
-     * Set 上次检测的时间。
-     * @param LastCheckTime 上次检测的时间。
+     * Set <p>上次检测的时间。</p>
+     * @param LastCheckTime <p>上次检测的时间。</p>
      */
     public void setLastCheckTime(String LastCheckTime) {
         this.LastCheckTime = LastCheckTime;
     }
 
     /**
-     * Get 检测结果：
-RESULT_FAILED: 未通过。
-RESULT_PASSED: 通过。 
-     * @return CheckResult 检测结果：
-RESULT_FAILED: 未通过。
-RESULT_PASSED: 通过。
+     * Get <p>检测结果：<br>RESULT_FAILED: 未通过。<br>RESULT_PASSED: 通过。</p> 
+     * @return CheckResult <p>检测结果：<br>RESULT_FAILED: 未通过。<br>RESULT_PASSED: 通过。</p>
      */
     public String getCheckResult() {
         return this.CheckResult;
     }
 
     /**
-     * Set 检测结果：
-RESULT_FAILED: 未通过。
-RESULT_PASSED: 通过。
-     * @param CheckResult 检测结果：
-RESULT_FAILED: 未通过。
-RESULT_PASSED: 通过。
+     * Set <p>检测结果：<br>RESULT_FAILED: 未通过。<br>RESULT_PASSED: 通过。</p>
+     * @param CheckResult <p>检测结果：<br>RESULT_FAILED: 未通过。<br>RESULT_PASSED: 通过。</p>
      */
     public void setCheckResult(String CheckResult) {
         this.CheckResult = CheckResult;
     }
 
     /**
-     * Get 主机节点的实例id 
-     * @return InstanceId 主机节点的实例id
+     * Get <p>主机节点的实例id</p> 
+     * @return InstanceId <p>主机节点的实例id</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 主机节点的实例id
-     * @param InstanceId 主机节点的实例id
+     * Set <p>主机节点的实例id</p>
+     * @param InstanceId <p>主机节点的实例id</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 镜像仓库信息 
-     * @return ImageRegistryInfo 镜像仓库信息
+     * Get <p>镜像仓库信息</p> 
+     * @return ImageRegistryInfo <p>镜像仓库信息</p>
      */
     public ImageRegistryInfo getImageRegistryInfo() {
         return this.ImageRegistryInfo;
     }
 
     /**
-     * Set 镜像仓库信息
-     * @param ImageRegistryInfo 镜像仓库信息
+     * Set <p>镜像仓库信息</p>
+     * @param ImageRegistryInfo <p>镜像仓库信息</p>
      */
     public void setImageRegistryInfo(ImageRegistryInfo ImageRegistryInfo) {
         this.ImageRegistryInfo = ImageRegistryInfo;
     }
 
     /**
-     * Get 集群id 
-     * @return ClusterID 集群id
+     * Get <p>集群id</p> 
+     * @return ClusterID <p>集群id</p>
      */
     public String getClusterID() {
         return this.ClusterID;
     }
 
     /**
-     * Set 集群id
-     * @param ClusterID 集群id
+     * Set <p>集群id</p>
+     * @param ClusterID <p>集群id</p>
      */
     public void setClusterID(String ClusterID) {
         this.ClusterID = ClusterID;
     }
 
     /**
-     * Get 集群名称 
-     * @return ClusterName 集群名称
+     * Get <p>集群名称</p> 
+     * @return ClusterName <p>集群名称</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set 集群名称
-     * @param ClusterName 集群名称
+     * Set <p>集群名称</p>
+     * @param ClusterName <p>集群名称</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
+    }
+
+    /**
+     * Get <p>资产唯一ID</p><p>默认值：-</p> 
+     * @return AssetUniqueID <p>资产唯一ID</p><p>默认值：-</p>
+     */
+    public String getAssetUniqueID() {
+        return this.AssetUniqueID;
+    }
+
+    /**
+     * Set <p>资产唯一ID</p><p>默认值：-</p>
+     * @param AssetUniqueID <p>资产唯一ID</p><p>默认值：-</p>
+     */
+    public void setAssetUniqueID(String AssetUniqueID) {
+        this.AssetUniqueID = AssetUniqueID;
     }
 
     public ComplianceAssetInfo() {
@@ -471,6 +444,9 @@ RESULT_PASSED: 通过。
         if (source.ClusterName != null) {
             this.ClusterName = new String(source.ClusterName);
         }
+        if (source.AssetUniqueID != null) {
+            this.AssetUniqueID = new String(source.AssetUniqueID);
+        }
     }
 
 
@@ -493,6 +469,7 @@ RESULT_PASSED: 通过。
         this.setParamObj(map, prefix + "ImageRegistryInfo.", this.ImageRegistryInfo);
         this.setParamSimple(map, prefix + "ClusterID", this.ClusterID);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
+        this.setParamSimple(map, prefix + "AssetUniqueID", this.AssetUniqueID);
 
     }
 }

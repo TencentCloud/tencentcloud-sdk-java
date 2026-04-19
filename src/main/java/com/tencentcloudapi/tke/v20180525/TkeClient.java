@@ -2591,6 +2591,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *修改日志采集配置
+     * @param req ModifyLogConfigRequest
+     * @return ModifyLogConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLogConfigResponse ModifyLogConfig(ModifyLogConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLogConfig", ModifyLogConfigResponse.class);
+    }
+
+    /**
      *修改master组件，支持kube-apiserver、kube-scheduler、kube-controller-manager副本数调整为0和恢复
      * @param req ModifyMasterComponentRequest
      * @return ModifyMasterComponentResponse

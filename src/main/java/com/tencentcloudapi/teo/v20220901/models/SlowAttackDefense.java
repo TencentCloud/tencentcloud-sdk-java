@@ -31,6 +31,13 @@ public class SlowAttackDefense extends AbstractModel {
     private String Enabled;
 
     /**
+    * 慢速攻击防护的规则 ID，仅作为出参返回。
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
+
+    /**
     * 慢速攻击防护的处置方式，当 Enabled 为 on 时，此字段必填。SecurityAction 的 Name 取值支持：<li>Monitor：观察；</li><li>Deny：拦截；</li>
     */
     @SerializedName("Action")
@@ -65,6 +72,22 @@ public class SlowAttackDefense extends AbstractModel {
      */
     public void setEnabled(String Enabled) {
         this.Enabled = Enabled;
+    }
+
+    /**
+     * Get 慢速攻击防护的规则 ID，仅作为出参返回。 
+     * @return Id 慢速攻击防护的规则 ID，仅作为出参返回。
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set 慢速攻击防护的规则 ID，仅作为出参返回。
+     * @param Id 慢速攻击防护的规则 ID，仅作为出参返回。
+     */
+    public void setId(String Id) {
+        this.Id = Id;
     }
 
     /**
@@ -126,6 +149,9 @@ public class SlowAttackDefense extends AbstractModel {
         if (source.Enabled != null) {
             this.Enabled = new String(source.Enabled);
         }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
         if (source.Action != null) {
             this.Action = new SecurityAction(source.Action);
         }
@@ -143,6 +169,7 @@ public class SlowAttackDefense extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Enabled", this.Enabled);
+        this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamObj(map, prefix + "Action.", this.Action);
         this.setParamObj(map, prefix + "MinimalRequestBodyTransferRate.", this.MinimalRequestBodyTransferRate);
         this.setParamObj(map, prefix + "RequestBodyTransferTimeout.", this.RequestBodyTransferTimeout);

@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class SubmitDrawPortraitJobResponse extends AbstractModel {
 
     /**
-    * 提交生成写真图片任务 ID。
-
+    * <p>提交生成写真图片任务 ID。</p>
     */
     @SerializedName("JobId")
     @Expose
@@ -39,20 +38,16 @@ public class SubmitDrawPortraitJobResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 提交生成写真图片任务 ID。
- 
-     * @return JobId 提交生成写真图片任务 ID。
-
+     * Get <p>提交生成写真图片任务 ID。</p> 
+     * @return JobId <p>提交生成写真图片任务 ID。</p>
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 提交生成写真图片任务 ID。
-
-     * @param JobId 提交生成写真图片任务 ID。
-
+     * Set <p>提交生成写真图片任务 ID。</p>
+     * @param JobId <p>提交生成写真图片任务 ID。</p>
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;

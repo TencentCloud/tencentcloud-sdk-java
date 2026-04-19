@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TriggerTaskSchedulerConfiguration extends AbstractModel {
 
     /**
-    * 上游依赖数组
+    * <p>上游依赖数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpstreamDependencyConfigList")
@@ -32,7 +32,7 @@ public class TriggerTaskSchedulerConfiguration extends AbstractModel {
     private DependencyTriggerTaskBrief [] UpstreamDependencyConfigList;
 
     /**
-    * 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+    * <p>任务调度优先级 运行优先级 4高 5中 6低 , 默认:6</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunPriorityType")
@@ -40,7 +40,7 @@ public class TriggerTaskSchedulerConfiguration extends AbstractModel {
     private Long RunPriorityType;
 
     /**
-    * 重试策略 重试等待时间,单位分钟: 默认: 5
+    * <p>重试策略 重试等待时间,单位分钟: 默认: 5</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RetryWaitMinute")
@@ -48,7 +48,7 @@ public class TriggerTaskSchedulerConfiguration extends AbstractModel {
     private Long RetryWaitMinute;
 
     /**
-    * 重试策略 最大尝试次数, 默认: 4
+    * <p>重试策略 最大尝试次数, 默认: 4</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxRetryNumber")
@@ -56,7 +56,7 @@ public class TriggerTaskSchedulerConfiguration extends AbstractModel {
     private Long MaxRetryNumber;
 
     /**
-    * 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+    * <p>超时处理策略 运行耗时超时（单位：分钟）默认为 -1</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutionTTLMinute")
@@ -64,7 +64,7 @@ public class TriggerTaskSchedulerConfiguration extends AbstractModel {
     private Long ExecutionTTLMinute;
 
     /**
-    * 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+    * <p>超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WaitExecutionTotalTTLMinute")
@@ -72,7 +72,7 @@ public class TriggerTaskSchedulerConfiguration extends AbstractModel {
     private Long WaitExecutionTotalTTLMinute;
 
     /**
-    * 重跑&补录配置, 默认为 ALL; , ALL 运行成功或失败后皆可重跑或补录, FAILURE 运行成功后不可重跑或补录，运行失败后可重跑或补录, NONE 运行成功或失败后皆不可重跑或补录;
+    * <p>重跑&amp;补录配置, 默认为 ALL; , ALL 运行成功或失败后皆可重跑或补录, FAILURE 运行成功后不可重跑或补录，运行失败后可重跑或补录, NONE 运行成功或失败后皆不可重跑或补录;</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AllowRedoType")
@@ -80,7 +80,7 @@ public class TriggerTaskSchedulerConfiguration extends AbstractModel {
     private String AllowRedoType;
 
     /**
-    * 输出参数数组
+    * <p>输出参数数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParamTaskOutList")
@@ -88,7 +88,7 @@ public class TriggerTaskSchedulerConfiguration extends AbstractModel {
     private OutTaskParameter [] ParamTaskOutList;
 
     /**
-    * 输入参数数组
+    * <p>输入参数数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParamTaskInList")
@@ -96,7 +96,7 @@ public class TriggerTaskSchedulerConfiguration extends AbstractModel {
     private InTaskParameter [] ParamTaskInList;
 
     /**
-    * 产出登记
+    * <p>产出登记</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskOutputRegistryList")
@@ -104,19 +104,7 @@ public class TriggerTaskSchedulerConfiguration extends AbstractModel {
     private TaskDataRegistry [] TaskOutputRegistryList;
 
     /**
-    * - 任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置
-- ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败
-- ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行
-- ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功
-- ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行
-- ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行
-- ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行
-- ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行
-- ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游
-- NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败
-- ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行
-- NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行
-- ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行
+    * <ul><li>任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置</li><li>ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败</li><li>ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行</li><li>ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行</li><li>ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行</li><li>ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行</li><li>ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行</li><li>ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游</li><li>NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行</li><li>NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行</li><li>ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DependencyTriggerPolicy")
@@ -124,9 +112,17 @@ public class TriggerTaskSchedulerConfiguration extends AbstractModel {
     private String DependencyTriggerPolicy;
 
     /**
-     * Get 上游依赖数组
+    * <p>是否允许下游依赖 1允许 0不允许</p><p>取值范围：[0, 1]</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AllowDownstreamDependency")
+    @Expose
+    private Long AllowDownstreamDependency;
+
+    /**
+     * Get <p>上游依赖数组</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpstreamDependencyConfigList 上游依赖数组
+     * @return UpstreamDependencyConfigList <p>上游依赖数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DependencyTriggerTaskBrief [] getUpstreamDependencyConfigList() {
@@ -134,9 +130,9 @@ public class TriggerTaskSchedulerConfiguration extends AbstractModel {
     }
 
     /**
-     * Set 上游依赖数组
+     * Set <p>上游依赖数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpstreamDependencyConfigList 上游依赖数组
+     * @param UpstreamDependencyConfigList <p>上游依赖数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpstreamDependencyConfigList(DependencyTriggerTaskBrief [] UpstreamDependencyConfigList) {
@@ -144,9 +140,9 @@ public class TriggerTaskSchedulerConfiguration extends AbstractModel {
     }
 
     /**
-     * Get 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+     * Get <p>任务调度优先级 运行优先级 4高 5中 6低 , 默认:6</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RunPriorityType 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+     * @return RunPriorityType <p>任务调度优先级 运行优先级 4高 5中 6低 , 默认:6</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRunPriorityType() {
@@ -154,9 +150,9 @@ public class TriggerTaskSchedulerConfiguration extends AbstractModel {
     }
 
     /**
-     * Set 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+     * Set <p>任务调度优先级 运行优先级 4高 5中 6低 , 默认:6</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RunPriorityType 任务调度优先级 运行优先级 4高 5中 6低 , 默认:6
+     * @param RunPriorityType <p>任务调度优先级 运行优先级 4高 5中 6低 , 默认:6</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunPriorityType(Long RunPriorityType) {
@@ -164,9 +160,9 @@ public class TriggerTaskSchedulerConfiguration extends AbstractModel {
     }
 
     /**
-     * Get 重试策略 重试等待时间,单位分钟: 默认: 5
+     * Get <p>重试策略 重试等待时间,单位分钟: 默认: 5</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RetryWaitMinute 重试策略 重试等待时间,单位分钟: 默认: 5
+     * @return RetryWaitMinute <p>重试策略 重试等待时间,单位分钟: 默认: 5</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRetryWaitMinute() {
@@ -174,9 +170,9 @@ public class TriggerTaskSchedulerConfiguration extends AbstractModel {
     }
 
     /**
-     * Set 重试策略 重试等待时间,单位分钟: 默认: 5
+     * Set <p>重试策略 重试等待时间,单位分钟: 默认: 5</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RetryWaitMinute 重试策略 重试等待时间,单位分钟: 默认: 5
+     * @param RetryWaitMinute <p>重试策略 重试等待时间,单位分钟: 默认: 5</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRetryWaitMinute(Long RetryWaitMinute) {
@@ -184,9 +180,9 @@ public class TriggerTaskSchedulerConfiguration extends AbstractModel {
     }
 
     /**
-     * Get 重试策略 最大尝试次数, 默认: 4
+     * Get <p>重试策略 最大尝试次数, 默认: 4</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MaxRetryNumber 重试策略 最大尝试次数, 默认: 4
+     * @return MaxRetryNumber <p>重试策略 最大尝试次数, 默认: 4</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxRetryNumber() {
@@ -194,9 +190,9 @@ public class TriggerTaskSchedulerConfiguration extends AbstractModel {
     }
 
     /**
-     * Set 重试策略 最大尝试次数, 默认: 4
+     * Set <p>重试策略 最大尝试次数, 默认: 4</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaxRetryNumber 重试策略 最大尝试次数, 默认: 4
+     * @param MaxRetryNumber <p>重试策略 最大尝试次数, 默认: 4</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxRetryNumber(Long MaxRetryNumber) {
@@ -204,9 +200,9 @@ public class TriggerTaskSchedulerConfiguration extends AbstractModel {
     }
 
     /**
-     * Get 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+     * Get <p>超时处理策略 运行耗时超时（单位：分钟）默认为 -1</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExecutionTTLMinute 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+     * @return ExecutionTTLMinute <p>超时处理策略 运行耗时超时（单位：分钟）默认为 -1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getExecutionTTLMinute() {
@@ -214,9 +210,9 @@ public class TriggerTaskSchedulerConfiguration extends AbstractModel {
     }
 
     /**
-     * Set 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+     * Set <p>超时处理策略 运行耗时超时（单位：分钟）默认为 -1</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExecutionTTLMinute 超时处理策略 运行耗时超时（单位：分钟）默认为 -1
+     * @param ExecutionTTLMinute <p>超时处理策略 运行耗时超时（单位：分钟）默认为 -1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutionTTLMinute(Long ExecutionTTLMinute) {
@@ -224,9 +220,9 @@ public class TriggerTaskSchedulerConfiguration extends AbstractModel {
     }
 
     /**
-     * Get 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+     * Get <p>超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WaitExecutionTotalTTLMinute 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+     * @return WaitExecutionTotalTTLMinute <p>超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWaitExecutionTotalTTLMinute() {
@@ -234,9 +230,9 @@ public class TriggerTaskSchedulerConfiguration extends AbstractModel {
     }
 
     /**
-     * Set 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+     * Set <p>超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WaitExecutionTotalTTLMinute 超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1
+     * @param WaitExecutionTotalTTLMinute <p>超时处理策略 等待总时长耗时超时（单位：分钟）默认为 -1</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWaitExecutionTotalTTLMinute(Long WaitExecutionTotalTTLMinute) {
@@ -244,9 +240,9 @@ public class TriggerTaskSchedulerConfiguration extends AbstractModel {
     }
 
     /**
-     * Get 重跑&补录配置, 默认为 ALL; , ALL 运行成功或失败后皆可重跑或补录, FAILURE 运行成功后不可重跑或补录，运行失败后可重跑或补录, NONE 运行成功或失败后皆不可重跑或补录;
+     * Get <p>重跑&amp;补录配置, 默认为 ALL; , ALL 运行成功或失败后皆可重跑或补录, FAILURE 运行成功后不可重跑或补录，运行失败后可重跑或补录, NONE 运行成功或失败后皆不可重跑或补录;</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AllowRedoType 重跑&补录配置, 默认为 ALL; , ALL 运行成功或失败后皆可重跑或补录, FAILURE 运行成功后不可重跑或补录，运行失败后可重跑或补录, NONE 运行成功或失败后皆不可重跑或补录;
+     * @return AllowRedoType <p>重跑&amp;补录配置, 默认为 ALL; , ALL 运行成功或失败后皆可重跑或补录, FAILURE 运行成功后不可重跑或补录，运行失败后可重跑或补录, NONE 运行成功或失败后皆不可重跑或补录;</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAllowRedoType() {
@@ -254,9 +250,9 @@ public class TriggerTaskSchedulerConfiguration extends AbstractModel {
     }
 
     /**
-     * Set 重跑&补录配置, 默认为 ALL; , ALL 运行成功或失败后皆可重跑或补录, FAILURE 运行成功后不可重跑或补录，运行失败后可重跑或补录, NONE 运行成功或失败后皆不可重跑或补录;
+     * Set <p>重跑&amp;补录配置, 默认为 ALL; , ALL 运行成功或失败后皆可重跑或补录, FAILURE 运行成功后不可重跑或补录，运行失败后可重跑或补录, NONE 运行成功或失败后皆不可重跑或补录;</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AllowRedoType 重跑&补录配置, 默认为 ALL; , ALL 运行成功或失败后皆可重跑或补录, FAILURE 运行成功后不可重跑或补录，运行失败后可重跑或补录, NONE 运行成功或失败后皆不可重跑或补录;
+     * @param AllowRedoType <p>重跑&amp;补录配置, 默认为 ALL; , ALL 运行成功或失败后皆可重跑或补录, FAILURE 运行成功后不可重跑或补录，运行失败后可重跑或补录, NONE 运行成功或失败后皆不可重跑或补录;</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAllowRedoType(String AllowRedoType) {
@@ -264,9 +260,9 @@ public class TriggerTaskSchedulerConfiguration extends AbstractModel {
     }
 
     /**
-     * Get 输出参数数组
+     * Get <p>输出参数数组</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ParamTaskOutList 输出参数数组
+     * @return ParamTaskOutList <p>输出参数数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public OutTaskParameter [] getParamTaskOutList() {
@@ -274,9 +270,9 @@ public class TriggerTaskSchedulerConfiguration extends AbstractModel {
     }
 
     /**
-     * Set 输出参数数组
+     * Set <p>输出参数数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ParamTaskOutList 输出参数数组
+     * @param ParamTaskOutList <p>输出参数数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParamTaskOutList(OutTaskParameter [] ParamTaskOutList) {
@@ -284,9 +280,9 @@ public class TriggerTaskSchedulerConfiguration extends AbstractModel {
     }
 
     /**
-     * Get 输入参数数组
+     * Get <p>输入参数数组</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ParamTaskInList 输入参数数组
+     * @return ParamTaskInList <p>输入参数数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public InTaskParameter [] getParamTaskInList() {
@@ -294,9 +290,9 @@ public class TriggerTaskSchedulerConfiguration extends AbstractModel {
     }
 
     /**
-     * Set 输入参数数组
+     * Set <p>输入参数数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ParamTaskInList 输入参数数组
+     * @param ParamTaskInList <p>输入参数数组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParamTaskInList(InTaskParameter [] ParamTaskInList) {
@@ -304,9 +300,9 @@ public class TriggerTaskSchedulerConfiguration extends AbstractModel {
     }
 
     /**
-     * Get 产出登记
+     * Get <p>产出登记</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskOutputRegistryList 产出登记
+     * @return TaskOutputRegistryList <p>产出登记</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskDataRegistry [] getTaskOutputRegistryList() {
@@ -314,9 +310,9 @@ public class TriggerTaskSchedulerConfiguration extends AbstractModel {
     }
 
     /**
-     * Set 产出登记
+     * Set <p>产出登记</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskOutputRegistryList 产出登记
+     * @param TaskOutputRegistryList <p>产出登记</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskOutputRegistryList(TaskDataRegistry [] TaskOutputRegistryList) {
@@ -324,33 +320,9 @@ public class TriggerTaskSchedulerConfiguration extends AbstractModel {
     }
 
     /**
-     * Get - 任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置
-- ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败
-- ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行
-- ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功
-- ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行
-- ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行
-- ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行
-- ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行
-- ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游
-- NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败
-- ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行
-- NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行
-- ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行
+     * Get <ul><li>任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置</li><li>ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败</li><li>ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行</li><li>ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行</li><li>ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行</li><li>ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行</li><li>ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行</li><li>ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游</li><li>NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行</li><li>NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行</li><li>ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DependencyTriggerPolicy - 任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置
-- ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败
-- ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行
-- ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功
-- ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行
-- ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行
-- ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行
-- ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行
-- ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游
-- NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败
-- ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行
-- NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行
-- ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行
+     * @return DependencyTriggerPolicy <ul><li>任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置</li><li>ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败</li><li>ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行</li><li>ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行</li><li>ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行</li><li>ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行</li><li>ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行</li><li>ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游</li><li>NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行</li><li>NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行</li><li>ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDependencyTriggerPolicy() {
@@ -358,37 +330,33 @@ public class TriggerTaskSchedulerConfiguration extends AbstractModel {
     }
 
     /**
-     * Set - 任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置
-- ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败
-- ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行
-- ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功
-- ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行
-- ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行
-- ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行
-- ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行
-- ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游
-- NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败
-- ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行
-- NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行
-- ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行
+     * Set <ul><li>任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置</li><li>ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败</li><li>ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行</li><li>ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行</li><li>ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行</li><li>ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行</li><li>ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行</li><li>ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游</li><li>NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行</li><li>NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行</li><li>ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DependencyTriggerPolicy - 任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置
-- ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败
-- ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行
-- ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功
-- ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行
-- ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行
-- ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行
-- ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行
-- ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游
-- NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败
-- ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行
-- NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行
-- ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行
+     * @param DependencyTriggerPolicy <ul><li>任务依赖运行条件，默认为ALL_SUCCESS，暂时只支持工作流调度项目下配置</li><li>ALL_SUCCESS： 全部成功：所有上游依赖任务都达到终态时，进行依赖判断，如果上游全部都成功，则依赖判断成功，否则如果上游有一个跳过运行，则标记为跳过运行，其余情况标记为上游失败</li><li>ALL_FAILED：全部失败：所有上游依赖任务都达到终态时，进行依赖判断，如果上游状态都是失败或者上游失败，则依赖判断成功，否则就标记为跳过运行</li><li>ALL_DONE：全部完成：所有上游依赖任务都达到终态时，进行依赖判断，直接是依赖判断成功</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS：上游全部完成至少一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个成功，则依赖判断成功，否则就是跳过运行</li><li>ALL_SKIPPED：上游全部都跳过: 所有上游依赖任务都达到终态时，进行依赖判断，所有的上游都是跳过状态才算依赖判断成功，否则当前节点就是跳过运行</li><li>ONE_FAILED：至少一个失败: 上游只要有一个失败了，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有失败，则跳过运行</li><li>ONE_SUCCESS：至少一个成功：上游只要有一个成功，就进行依赖判断，且依赖判断成功，如果上游全部完成但是没有成功，则跳过运行</li><li>ONE_DONE：至少一个完成：上游只要有一个完成了，就进行依赖判断，且依赖判断成功，否则还是等待上游</li><li>NONE_FAILED：上游全部完成，没有失败: 所有上游依赖任务都达到终态时，进行依赖判断，如果上游都是成功或者跳过运行，则依赖判断成功，否则标记为上游失败</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS：上游全部完成，没有失败，至少有一个成功: 所有上游依赖任务都达到终态时，进行依赖判断，上游没有一个失败且至少有一个成功的情况下，依赖判断成功，否则就是跳过运行</li><li>NONE_SKIPPED：上游全部完成，没有跳过运行: 所有上游依赖任务都达到终态时，进行依赖判断, 如果上游状态全部都是成功、失败、上游失败状态，则依赖判断成功，否则为跳过运行</li><li>ALL_DONE_AT_LEAST_ONE_FAILED：上游全部完成至少一个失败: 所有上游依赖任务都达到终态时，进行依赖判断，至少有一个失败，则依赖判断成功，否则就是跳过运行</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDependencyTriggerPolicy(String DependencyTriggerPolicy) {
         this.DependencyTriggerPolicy = DependencyTriggerPolicy;
+    }
+
+    /**
+     * Get <p>是否允许下游依赖 1允许 0不允许</p><p>取值范围：[0, 1]</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AllowDownstreamDependency <p>是否允许下游依赖 1允许 0不允许</p><p>取值范围：[0, 1]</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAllowDownstreamDependency() {
+        return this.AllowDownstreamDependency;
+    }
+
+    /**
+     * Set <p>是否允许下游依赖 1允许 0不允许</p><p>取值范围：[0, 1]</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AllowDownstreamDependency <p>是否允许下游依赖 1允许 0不允许</p><p>取值范围：[0, 1]</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAllowDownstreamDependency(Long AllowDownstreamDependency) {
+        this.AllowDownstreamDependency = AllowDownstreamDependency;
     }
 
     public TriggerTaskSchedulerConfiguration() {
@@ -444,6 +412,9 @@ public class TriggerTaskSchedulerConfiguration extends AbstractModel {
         if (source.DependencyTriggerPolicy != null) {
             this.DependencyTriggerPolicy = new String(source.DependencyTriggerPolicy);
         }
+        if (source.AllowDownstreamDependency != null) {
+            this.AllowDownstreamDependency = new Long(source.AllowDownstreamDependency);
+        }
     }
 
 
@@ -462,6 +433,7 @@ public class TriggerTaskSchedulerConfiguration extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ParamTaskInList.", this.ParamTaskInList);
         this.setParamArrayObj(map, prefix + "TaskOutputRegistryList.", this.TaskOutputRegistryList);
         this.setParamSimple(map, prefix + "DependencyTriggerPolicy", this.DependencyTriggerPolicy);
+        this.setParamSimple(map, prefix + "AllowDownstreamDependency", this.AllowDownstreamDependency);
 
     }
 }

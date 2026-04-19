@@ -213,6 +213,13 @@ public class CreateClusterRequest extends AbstractModel {
     private Long PartitionNumber;
 
     /**
+    * <p>服务ui地址</p><p>枚举值：</p><ul><li>0： 服务ui地址，只返回1条服务ui地址</li><li>1： 服务ui地址，如果服务含有多个ui地址将全部返回，例如impala的Impalad、StateStore、Catalogd</li></ul><p>默认值：0</p>
+    */
+    @SerializedName("WebUiVersion")
+    @Expose
+    private Long WebUiVersion;
+
+    /**
      * Get <p>EMR产品版本名称如EMR-V2.3.0 表示2.3.0版本的EMR， 当前支持产品版本名称查询：<a href="https://cloud.tencent.com/document/product/589/66338">产品版本名称</a></p> 
      * @return ProductVersion <p>EMR产品版本名称如EMR-V2.3.0 表示2.3.0版本的EMR， 当前支持产品版本名称查询：<a href="https://cloud.tencent.com/document/product/589/66338">产品版本名称</a></p>
      */
@@ -644,6 +651,22 @@ public class CreateClusterRequest extends AbstractModel {
         this.PartitionNumber = PartitionNumber;
     }
 
+    /**
+     * Get <p>服务ui地址</p><p>枚举值：</p><ul><li>0： 服务ui地址，只返回1条服务ui地址</li><li>1： 服务ui地址，如果服务含有多个ui地址将全部返回，例如impala的Impalad、StateStore、Catalogd</li></ul><p>默认值：0</p> 
+     * @return WebUiVersion <p>服务ui地址</p><p>枚举值：</p><ul><li>0： 服务ui地址，只返回1条服务ui地址</li><li>1： 服务ui地址，如果服务含有多个ui地址将全部返回，例如impala的Impalad、StateStore、Catalogd</li></ul><p>默认值：0</p>
+     */
+    public Long getWebUiVersion() {
+        return this.WebUiVersion;
+    }
+
+    /**
+     * Set <p>服务ui地址</p><p>枚举值：</p><ul><li>0： 服务ui地址，只返回1条服务ui地址</li><li>1： 服务ui地址，如果服务含有多个ui地址将全部返回，例如impala的Impalad、StateStore、Catalogd</li></ul><p>默认值：0</p>
+     * @param WebUiVersion <p>服务ui地址</p><p>枚举值：</p><ul><li>0： 服务ui地址，只返回1条服务ui地址</li><li>1： 服务ui地址，如果服务含有多个ui地址将全部返回，例如impala的Impalad、StateStore、Catalogd</li></ul><p>默认值：0</p>
+     */
+    public void setWebUiVersion(Long WebUiVersion) {
+        this.WebUiVersion = WebUiVersion;
+    }
+
     public CreateClusterRequest() {
     }
 
@@ -754,6 +777,9 @@ public class CreateClusterRequest extends AbstractModel {
         if (source.PartitionNumber != null) {
             this.PartitionNumber = new Long(source.PartitionNumber);
         }
+        if (source.WebUiVersion != null) {
+            this.WebUiVersion = new Long(source.WebUiVersion);
+        }
     }
 
 
@@ -788,6 +814,7 @@ public class CreateClusterRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "NeedCdbAudit", this.NeedCdbAudit);
         this.setParamSimple(map, prefix + "SgIP", this.SgIP);
         this.setParamSimple(map, prefix + "PartitionNumber", this.PartitionNumber);
+        this.setParamSimple(map, prefix + "WebUiVersion", this.WebUiVersion);
 
     }
 }

@@ -24,395 +24,348 @@ import java.util.HashMap;
 public class ComplianceAffectedAsset extends AbstractModel {
 
     /**
-    * 为客户分配的唯一的资产项的ID。
+    * <p>为客户分配的唯一的资产项的ID。</p>
     */
     @SerializedName("CustomerAssetId")
     @Expose
     private Long CustomerAssetId;
 
     /**
-    * 资产项的名称。
+    * <p>资产项的名称。</p>
     */
     @SerializedName("AssetName")
     @Expose
     private String AssetName;
 
     /**
-    * 资产项的类型
+    * <p>资产项的类型</p>
     */
     @SerializedName("AssetType")
     @Expose
     private String AssetType;
 
     /**
-    * 检测状态
-
-CHECK_INIT, 待检测
-
-CHECK_RUNNING, 检测中
-
-CHECK_FINISHED, 检测完成
-
-CHECK_FAILED, 检测失败
+    * <p>检测状态</p><p>CHECK_INIT, 待检测</p><p>CHECK_RUNNING, 检测中</p><p>CHECK_FINISHED, 检测完成</p><p>CHECK_FAILED, 检测失败</p>
     */
     @SerializedName("CheckStatus")
     @Expose
     private String CheckStatus;
 
     /**
-    * 节点名称。
+    * <p>节点名称。</p>
     */
     @SerializedName("NodeName")
     @Expose
     private String NodeName;
 
     /**
-    * 上次检测的时间，格式为”YYYY-MM-DD HH:m::SS“。
-
-如果没有检测过，此处为”0000-00-00 00:00:00“。
+    * <p>上次检测的时间，格式为”YYYY-MM-DD HH:m::SS“。</p><p>如果没有检测过，此处为”0000-00-00 00:00:00“。</p>
     */
     @SerializedName("LastCheckTime")
     @Expose
     private String LastCheckTime;
 
     /**
-    * 检测结果。取值为：
-
-RESULT_FAILED: 未通过
-
-RESULT_PASSED: 通过
+    * <p>检测结果。取值为：</p><p>RESULT_FAILED: 未通过</p><p>RESULT_PASSED: 通过</p>
     */
     @SerializedName("CheckResult")
     @Expose
     private String CheckResult;
 
     /**
-    * 主机IP
+    * <p>主机IP</p>
     */
     @SerializedName("HostIP")
     @Expose
     private String HostIP;
 
     /**
-    * 镜像的tag
+    * <p>镜像的tag</p>
     */
     @SerializedName("ImageTag")
     @Expose
     private String ImageTag;
 
     /**
-    * 检查项验证信息
+    * <p>检查项验证信息</p>
     */
     @SerializedName("VerifyInfo")
     @Expose
     private String VerifyInfo;
 
     /**
-    * 主机实例id
+    * <p>主机实例id</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 镜像仓库信息
+    * <p>镜像仓库信息</p>
     */
     @SerializedName("ImageRegistryInfo")
     @Expose
     private ImageRegistryInfo ImageRegistryInfo;
 
     /**
-    * 集群id
+    * <p>集群id</p>
     */
     @SerializedName("ClusterID")
     @Expose
     private String ClusterID;
 
     /**
-    * 集群名称
+    * <p>集群名称</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-     * Get 为客户分配的唯一的资产项的ID。 
-     * @return CustomerAssetId 为客户分配的唯一的资产项的ID。
+    * <p>资产唯一ID</p><p>默认值：-</p>
+    */
+    @SerializedName("AssetUniqueID")
+    @Expose
+    private String AssetUniqueID;
+
+    /**
+     * Get <p>为客户分配的唯一的资产项的ID。</p> 
+     * @return CustomerAssetId <p>为客户分配的唯一的资产项的ID。</p>
      */
     public Long getCustomerAssetId() {
         return this.CustomerAssetId;
     }
 
     /**
-     * Set 为客户分配的唯一的资产项的ID。
-     * @param CustomerAssetId 为客户分配的唯一的资产项的ID。
+     * Set <p>为客户分配的唯一的资产项的ID。</p>
+     * @param CustomerAssetId <p>为客户分配的唯一的资产项的ID。</p>
      */
     public void setCustomerAssetId(Long CustomerAssetId) {
         this.CustomerAssetId = CustomerAssetId;
     }
 
     /**
-     * Get 资产项的名称。 
-     * @return AssetName 资产项的名称。
+     * Get <p>资产项的名称。</p> 
+     * @return AssetName <p>资产项的名称。</p>
      */
     public String getAssetName() {
         return this.AssetName;
     }
 
     /**
-     * Set 资产项的名称。
-     * @param AssetName 资产项的名称。
+     * Set <p>资产项的名称。</p>
+     * @param AssetName <p>资产项的名称。</p>
      */
     public void setAssetName(String AssetName) {
         this.AssetName = AssetName;
     }
 
     /**
-     * Get 资产项的类型 
-     * @return AssetType 资产项的类型
+     * Get <p>资产项的类型</p> 
+     * @return AssetType <p>资产项的类型</p>
      */
     public String getAssetType() {
         return this.AssetType;
     }
 
     /**
-     * Set 资产项的类型
-     * @param AssetType 资产项的类型
+     * Set <p>资产项的类型</p>
+     * @param AssetType <p>资产项的类型</p>
      */
     public void setAssetType(String AssetType) {
         this.AssetType = AssetType;
     }
 
     /**
-     * Get 检测状态
-
-CHECK_INIT, 待检测
-
-CHECK_RUNNING, 检测中
-
-CHECK_FINISHED, 检测完成
-
-CHECK_FAILED, 检测失败 
-     * @return CheckStatus 检测状态
-
-CHECK_INIT, 待检测
-
-CHECK_RUNNING, 检测中
-
-CHECK_FINISHED, 检测完成
-
-CHECK_FAILED, 检测失败
+     * Get <p>检测状态</p><p>CHECK_INIT, 待检测</p><p>CHECK_RUNNING, 检测中</p><p>CHECK_FINISHED, 检测完成</p><p>CHECK_FAILED, 检测失败</p> 
+     * @return CheckStatus <p>检测状态</p><p>CHECK_INIT, 待检测</p><p>CHECK_RUNNING, 检测中</p><p>CHECK_FINISHED, 检测完成</p><p>CHECK_FAILED, 检测失败</p>
      */
     public String getCheckStatus() {
         return this.CheckStatus;
     }
 
     /**
-     * Set 检测状态
-
-CHECK_INIT, 待检测
-
-CHECK_RUNNING, 检测中
-
-CHECK_FINISHED, 检测完成
-
-CHECK_FAILED, 检测失败
-     * @param CheckStatus 检测状态
-
-CHECK_INIT, 待检测
-
-CHECK_RUNNING, 检测中
-
-CHECK_FINISHED, 检测完成
-
-CHECK_FAILED, 检测失败
+     * Set <p>检测状态</p><p>CHECK_INIT, 待检测</p><p>CHECK_RUNNING, 检测中</p><p>CHECK_FINISHED, 检测完成</p><p>CHECK_FAILED, 检测失败</p>
+     * @param CheckStatus <p>检测状态</p><p>CHECK_INIT, 待检测</p><p>CHECK_RUNNING, 检测中</p><p>CHECK_FINISHED, 检测完成</p><p>CHECK_FAILED, 检测失败</p>
      */
     public void setCheckStatus(String CheckStatus) {
         this.CheckStatus = CheckStatus;
     }
 
     /**
-     * Get 节点名称。 
-     * @return NodeName 节点名称。
+     * Get <p>节点名称。</p> 
+     * @return NodeName <p>节点名称。</p>
      */
     public String getNodeName() {
         return this.NodeName;
     }
 
     /**
-     * Set 节点名称。
-     * @param NodeName 节点名称。
+     * Set <p>节点名称。</p>
+     * @param NodeName <p>节点名称。</p>
      */
     public void setNodeName(String NodeName) {
         this.NodeName = NodeName;
     }
 
     /**
-     * Get 上次检测的时间，格式为”YYYY-MM-DD HH:m::SS“。
-
-如果没有检测过，此处为”0000-00-00 00:00:00“。 
-     * @return LastCheckTime 上次检测的时间，格式为”YYYY-MM-DD HH:m::SS“。
-
-如果没有检测过，此处为”0000-00-00 00:00:00“。
+     * Get <p>上次检测的时间，格式为”YYYY-MM-DD HH:m::SS“。</p><p>如果没有检测过，此处为”0000-00-00 00:00:00“。</p> 
+     * @return LastCheckTime <p>上次检测的时间，格式为”YYYY-MM-DD HH:m::SS“。</p><p>如果没有检测过，此处为”0000-00-00 00:00:00“。</p>
      */
     public String getLastCheckTime() {
         return this.LastCheckTime;
     }
 
     /**
-     * Set 上次检测的时间，格式为”YYYY-MM-DD HH:m::SS“。
-
-如果没有检测过，此处为”0000-00-00 00:00:00“。
-     * @param LastCheckTime 上次检测的时间，格式为”YYYY-MM-DD HH:m::SS“。
-
-如果没有检测过，此处为”0000-00-00 00:00:00“。
+     * Set <p>上次检测的时间，格式为”YYYY-MM-DD HH:m::SS“。</p><p>如果没有检测过，此处为”0000-00-00 00:00:00“。</p>
+     * @param LastCheckTime <p>上次检测的时间，格式为”YYYY-MM-DD HH:m::SS“。</p><p>如果没有检测过，此处为”0000-00-00 00:00:00“。</p>
      */
     public void setLastCheckTime(String LastCheckTime) {
         this.LastCheckTime = LastCheckTime;
     }
 
     /**
-     * Get 检测结果。取值为：
-
-RESULT_FAILED: 未通过
-
-RESULT_PASSED: 通过 
-     * @return CheckResult 检测结果。取值为：
-
-RESULT_FAILED: 未通过
-
-RESULT_PASSED: 通过
+     * Get <p>检测结果。取值为：</p><p>RESULT_FAILED: 未通过</p><p>RESULT_PASSED: 通过</p> 
+     * @return CheckResult <p>检测结果。取值为：</p><p>RESULT_FAILED: 未通过</p><p>RESULT_PASSED: 通过</p>
      */
     public String getCheckResult() {
         return this.CheckResult;
     }
 
     /**
-     * Set 检测结果。取值为：
-
-RESULT_FAILED: 未通过
-
-RESULT_PASSED: 通过
-     * @param CheckResult 检测结果。取值为：
-
-RESULT_FAILED: 未通过
-
-RESULT_PASSED: 通过
+     * Set <p>检测结果。取值为：</p><p>RESULT_FAILED: 未通过</p><p>RESULT_PASSED: 通过</p>
+     * @param CheckResult <p>检测结果。取值为：</p><p>RESULT_FAILED: 未通过</p><p>RESULT_PASSED: 通过</p>
      */
     public void setCheckResult(String CheckResult) {
         this.CheckResult = CheckResult;
     }
 
     /**
-     * Get 主机IP 
-     * @return HostIP 主机IP
+     * Get <p>主机IP</p> 
+     * @return HostIP <p>主机IP</p>
      */
     public String getHostIP() {
         return this.HostIP;
     }
 
     /**
-     * Set 主机IP
-     * @param HostIP 主机IP
+     * Set <p>主机IP</p>
+     * @param HostIP <p>主机IP</p>
      */
     public void setHostIP(String HostIP) {
         this.HostIP = HostIP;
     }
 
     /**
-     * Get 镜像的tag 
-     * @return ImageTag 镜像的tag
+     * Get <p>镜像的tag</p> 
+     * @return ImageTag <p>镜像的tag</p>
      */
     public String getImageTag() {
         return this.ImageTag;
     }
 
     /**
-     * Set 镜像的tag
-     * @param ImageTag 镜像的tag
+     * Set <p>镜像的tag</p>
+     * @param ImageTag <p>镜像的tag</p>
      */
     public void setImageTag(String ImageTag) {
         this.ImageTag = ImageTag;
     }
 
     /**
-     * Get 检查项验证信息 
-     * @return VerifyInfo 检查项验证信息
+     * Get <p>检查项验证信息</p> 
+     * @return VerifyInfo <p>检查项验证信息</p>
      */
     public String getVerifyInfo() {
         return this.VerifyInfo;
     }
 
     /**
-     * Set 检查项验证信息
-     * @param VerifyInfo 检查项验证信息
+     * Set <p>检查项验证信息</p>
+     * @param VerifyInfo <p>检查项验证信息</p>
      */
     public void setVerifyInfo(String VerifyInfo) {
         this.VerifyInfo = VerifyInfo;
     }
 
     /**
-     * Get 主机实例id 
-     * @return InstanceId 主机实例id
+     * Get <p>主机实例id</p> 
+     * @return InstanceId <p>主机实例id</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 主机实例id
-     * @param InstanceId 主机实例id
+     * Set <p>主机实例id</p>
+     * @param InstanceId <p>主机实例id</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 镜像仓库信息 
-     * @return ImageRegistryInfo 镜像仓库信息
+     * Get <p>镜像仓库信息</p> 
+     * @return ImageRegistryInfo <p>镜像仓库信息</p>
      */
     public ImageRegistryInfo getImageRegistryInfo() {
         return this.ImageRegistryInfo;
     }
 
     /**
-     * Set 镜像仓库信息
-     * @param ImageRegistryInfo 镜像仓库信息
+     * Set <p>镜像仓库信息</p>
+     * @param ImageRegistryInfo <p>镜像仓库信息</p>
      */
     public void setImageRegistryInfo(ImageRegistryInfo ImageRegistryInfo) {
         this.ImageRegistryInfo = ImageRegistryInfo;
     }
 
     /**
-     * Get 集群id 
-     * @return ClusterID 集群id
+     * Get <p>集群id</p> 
+     * @return ClusterID <p>集群id</p>
      */
     public String getClusterID() {
         return this.ClusterID;
     }
 
     /**
-     * Set 集群id
-     * @param ClusterID 集群id
+     * Set <p>集群id</p>
+     * @param ClusterID <p>集群id</p>
      */
     public void setClusterID(String ClusterID) {
         this.ClusterID = ClusterID;
     }
 
     /**
-     * Get 集群名称 
-     * @return ClusterName 集群名称
+     * Get <p>集群名称</p> 
+     * @return ClusterName <p>集群名称</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set 集群名称
-     * @param ClusterName 集群名称
+     * Set <p>集群名称</p>
+     * @param ClusterName <p>集群名称</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
+    }
+
+    /**
+     * Get <p>资产唯一ID</p><p>默认值：-</p> 
+     * @return AssetUniqueID <p>资产唯一ID</p><p>默认值：-</p>
+     */
+    public String getAssetUniqueID() {
+        return this.AssetUniqueID;
+    }
+
+    /**
+     * Set <p>资产唯一ID</p><p>默认值：-</p>
+     * @param AssetUniqueID <p>资产唯一ID</p><p>默认值：-</p>
+     */
+    public void setAssetUniqueID(String AssetUniqueID) {
+        this.AssetUniqueID = AssetUniqueID;
     }
 
     public ComplianceAffectedAsset() {
@@ -465,6 +418,9 @@ RESULT_PASSED: 通过
         if (source.ClusterName != null) {
             this.ClusterName = new String(source.ClusterName);
         }
+        if (source.AssetUniqueID != null) {
+            this.AssetUniqueID = new String(source.AssetUniqueID);
+        }
     }
 
 
@@ -486,6 +442,7 @@ RESULT_PASSED: 通过
         this.setParamObj(map, prefix + "ImageRegistryInfo.", this.ImageRegistryInfo);
         this.setParamSimple(map, prefix + "ClusterID", this.ClusterID);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
+        this.setParamSimple(map, prefix + "AssetUniqueID", this.AssetUniqueID);
 
     }
 }

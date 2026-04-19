@@ -31,6 +31,13 @@ public class ClientFiltering extends AbstractModel {
     private String Enabled;
 
     /**
+    * 智能客户端过滤的规则 ID，仅作为出参返回。
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
+
+    /**
     * 智能客户端过滤的处置方式，当 Enabled 为 on 时，此字段必填。SecurityAction 的 Name 取值支持：<li>Monitor：观察；</li><li>Deny：拦截；</li><li>Challenge：挑战，其中ChallengeActionParameters.Name仅支持JSChallenge。</li>
     */
     @SerializedName("Action")
@@ -51,6 +58,22 @@ public class ClientFiltering extends AbstractModel {
      */
     public void setEnabled(String Enabled) {
         this.Enabled = Enabled;
+    }
+
+    /**
+     * Get 智能客户端过滤的规则 ID，仅作为出参返回。 
+     * @return Id 智能客户端过滤的规则 ID，仅作为出参返回。
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set 智能客户端过滤的规则 ID，仅作为出参返回。
+     * @param Id 智能客户端过滤的规则 ID，仅作为出参返回。
+     */
+    public void setId(String Id) {
+        this.Id = Id;
     }
 
     /**
@@ -80,6 +103,9 @@ public class ClientFiltering extends AbstractModel {
         if (source.Enabled != null) {
             this.Enabled = new String(source.Enabled);
         }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
         if (source.Action != null) {
             this.Action = new SecurityAction(source.Action);
         }
@@ -91,6 +117,7 @@ public class ClientFiltering extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Enabled", this.Enabled);
+        this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamObj(map, prefix + "Action.", this.Action);
 
     }
