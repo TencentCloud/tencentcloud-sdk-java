@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ResumeDatahubTaskResponse extends AbstractModel {
 
     /**
-    * 任务id
+    * <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
@@ -39,9 +39,9 @@ public class ResumeDatahubTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务id
+     * Get <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Result 任务id
+     * @return Result <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DatahubTaskIdRes getResult() {
@@ -49,9 +49,9 @@ public class ResumeDatahubTaskResponse extends AbstractModel {
     }
 
     /**
-     * Set 任务id
+     * Set <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Result 任务id
+     * @param Result <p>任务id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(DatahubTaskIdRes Result) {

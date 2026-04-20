@@ -24,82 +24,118 @@ import java.util.HashMap;
 public class ModifyKafkaConsumerRequest extends AbstractModel {
 
     /**
-    * 日志主题Id。
-- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
-- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
+    * <p>日志主题Id。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a> 获取日志主题Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/56456">创建日志主题</a> 获取日志主题Id。</li></ul>
     */
     @SerializedName("FromTopicId")
     @Expose
     private String FromTopicId;
 
     /**
-    * 压缩方式。0：不压缩；2：使用Snappy压缩；3：使用LZ4压缩
+    * <p>压缩方式。0：不压缩；2：使用Snappy压缩；3：使用LZ4压缩</p>
     */
     @SerializedName("Compression")
     @Expose
     private Long Compression;
 
     /**
-    * kafka协议消费数据格式
+    * <p>kafka协议消费数据格式</p>
     */
     @SerializedName("ConsumerContent")
     @Expose
     private KafkaConsumerContent ConsumerContent;
 
     /**
-     * Get 日志主题Id。
-- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
-- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。 
-     * @return FromTopicId 日志主题Id。
-- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
-- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
+    * <p>是否开启投递服务日志。1：关闭，2：开启。</p>
+    */
+    @SerializedName("HasServicesLog")
+    @Expose
+    private Long HasServicesLog;
+
+    /**
+    * <p>消费范围类型，0:最新，1:历史+最新</p>
+    */
+    @SerializedName("ScopeType")
+    @Expose
+    private Long ScopeType;
+
+    /**
+     * Get <p>日志主题Id。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a> 获取日志主题Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/56456">创建日志主题</a> 获取日志主题Id。</li></ul> 
+     * @return FromTopicId <p>日志主题Id。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a> 获取日志主题Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/56456">创建日志主题</a> 获取日志主题Id。</li></ul>
      */
     public String getFromTopicId() {
         return this.FromTopicId;
     }
 
     /**
-     * Set 日志主题Id。
-- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
-- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
-     * @param FromTopicId 日志主题Id。
-- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
-- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
+     * Set <p>日志主题Id。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a> 获取日志主题Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/56456">创建日志主题</a> 获取日志主题Id。</li></ul>
+     * @param FromTopicId <p>日志主题Id。</p><ul><li>通过 <a href="https://cloud.tencent.com/document/product/614/56454">获取日志主题列表</a> 获取日志主题Id。</li><li>通过 <a href="https://cloud.tencent.com/document/product/614/56456">创建日志主题</a> 获取日志主题Id。</li></ul>
      */
     public void setFromTopicId(String FromTopicId) {
         this.FromTopicId = FromTopicId;
     }
 
     /**
-     * Get 压缩方式。0：不压缩；2：使用Snappy压缩；3：使用LZ4压缩 
-     * @return Compression 压缩方式。0：不压缩；2：使用Snappy压缩；3：使用LZ4压缩
+     * Get <p>压缩方式。0：不压缩；2：使用Snappy压缩；3：使用LZ4压缩</p> 
+     * @return Compression <p>压缩方式。0：不压缩；2：使用Snappy压缩；3：使用LZ4压缩</p>
      */
     public Long getCompression() {
         return this.Compression;
     }
 
     /**
-     * Set 压缩方式。0：不压缩；2：使用Snappy压缩；3：使用LZ4压缩
-     * @param Compression 压缩方式。0：不压缩；2：使用Snappy压缩；3：使用LZ4压缩
+     * Set <p>压缩方式。0：不压缩；2：使用Snappy压缩；3：使用LZ4压缩</p>
+     * @param Compression <p>压缩方式。0：不压缩；2：使用Snappy压缩；3：使用LZ4压缩</p>
      */
     public void setCompression(Long Compression) {
         this.Compression = Compression;
     }
 
     /**
-     * Get kafka协议消费数据格式 
-     * @return ConsumerContent kafka协议消费数据格式
+     * Get <p>kafka协议消费数据格式</p> 
+     * @return ConsumerContent <p>kafka协议消费数据格式</p>
      */
     public KafkaConsumerContent getConsumerContent() {
         return this.ConsumerContent;
     }
 
     /**
-     * Set kafka协议消费数据格式
-     * @param ConsumerContent kafka协议消费数据格式
+     * Set <p>kafka协议消费数据格式</p>
+     * @param ConsumerContent <p>kafka协议消费数据格式</p>
      */
     public void setConsumerContent(KafkaConsumerContent ConsumerContent) {
         this.ConsumerContent = ConsumerContent;
+    }
+
+    /**
+     * Get <p>是否开启投递服务日志。1：关闭，2：开启。</p> 
+     * @return HasServicesLog <p>是否开启投递服务日志。1：关闭，2：开启。</p>
+     */
+    public Long getHasServicesLog() {
+        return this.HasServicesLog;
+    }
+
+    /**
+     * Set <p>是否开启投递服务日志。1：关闭，2：开启。</p>
+     * @param HasServicesLog <p>是否开启投递服务日志。1：关闭，2：开启。</p>
+     */
+    public void setHasServicesLog(Long HasServicesLog) {
+        this.HasServicesLog = HasServicesLog;
+    }
+
+    /**
+     * Get <p>消费范围类型，0:最新，1:历史+最新</p> 
+     * @return ScopeType <p>消费范围类型，0:最新，1:历史+最新</p>
+     */
+    public Long getScopeType() {
+        return this.ScopeType;
+    }
+
+    /**
+     * Set <p>消费范围类型，0:最新，1:历史+最新</p>
+     * @param ScopeType <p>消费范围类型，0:最新，1:历史+最新</p>
+     */
+    public void setScopeType(Long ScopeType) {
+        this.ScopeType = ScopeType;
     }
 
     public ModifyKafkaConsumerRequest() {
@@ -119,6 +155,12 @@ public class ModifyKafkaConsumerRequest extends AbstractModel {
         if (source.ConsumerContent != null) {
             this.ConsumerContent = new KafkaConsumerContent(source.ConsumerContent);
         }
+        if (source.HasServicesLog != null) {
+            this.HasServicesLog = new Long(source.HasServicesLog);
+        }
+        if (source.ScopeType != null) {
+            this.ScopeType = new Long(source.ScopeType);
+        }
     }
 
 
@@ -129,6 +171,8 @@ public class ModifyKafkaConsumerRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "FromTopicId", this.FromTopicId);
         this.setParamSimple(map, prefix + "Compression", this.Compression);
         this.setParamObj(map, prefix + "ConsumerContent.", this.ConsumerContent);
+        this.setParamSimple(map, prefix + "HasServicesLog", this.HasServicesLog);
+        this.setParamSimple(map, prefix + "ScopeType", this.ScopeType);
 
     }
 }

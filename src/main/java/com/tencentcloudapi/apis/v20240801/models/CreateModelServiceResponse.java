@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateModelServiceResponse extends AbstractModel {
 
     /**
-    * 结果集
+    * <p>结果集</p>
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class CreateModelServiceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 结果集 
-     * @return Data 结果集
+     * Get <p>结果集</p> 
+     * @return Data <p>结果集</p>
      */
     public ResultIDVO getData() {
         return this.Data;
     }
 
     /**
-     * Set 结果集
-     * @param Data 结果集
+     * Set <p>结果集</p>
+     * @param Data <p>结果集</p>
      */
     public void setData(ResultIDVO Data) {
         this.Data = Data;

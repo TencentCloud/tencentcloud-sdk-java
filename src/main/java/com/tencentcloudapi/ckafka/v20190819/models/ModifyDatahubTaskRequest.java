@@ -24,72 +24,141 @@ import java.util.HashMap;
 public class ModifyDatahubTaskRequest extends AbstractModel {
 
     /**
-    * 任务id
+    * <p>任务id</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 任务名称
+    * <p>任务名称</p>
     */
     @SerializedName("TaskName")
     @Expose
     private String TaskName;
 
     /**
-    * 任务描述信息
+    * <p>任务描述信息</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-     * Get 任务id 
-     * @return TaskId 任务id
+    * <p>任务并发上限</p>
+    */
+    @SerializedName("TasksMax")
+    @Expose
+    private Long TasksMax;
+
+    /**
+    * <p>数据同步限流值上限</p>单位：MB/s
+    */
+    @SerializedName("SyncThrottleLimit")
+    @Expose
+    private Long SyncThrottleLimit;
+
+    /**
+    * <p>开启自动扩容</p>枚举值：<ul><li> true： 自动扩容</li><li> false： 手动扩容</li></ul>
+    */
+    @SerializedName("AutoExpandFlag")
+    @Expose
+    private Boolean AutoExpandFlag;
+
+    /**
+     * Get <p>任务id</p> 
+     * @return TaskId <p>任务id</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务id
-     * @param TaskId 任务id
+     * Set <p>任务id</p>
+     * @param TaskId <p>任务id</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 任务名称 
-     * @return TaskName 任务名称
+     * Get <p>任务名称</p> 
+     * @return TaskName <p>任务名称</p>
      */
     public String getTaskName() {
         return this.TaskName;
     }
 
     /**
-     * Set 任务名称
-     * @param TaskName 任务名称
+     * Set <p>任务名称</p>
+     * @param TaskName <p>任务名称</p>
      */
     public void setTaskName(String TaskName) {
         this.TaskName = TaskName;
     }
 
     /**
-     * Get 任务描述信息 
-     * @return Description 任务描述信息
+     * Get <p>任务描述信息</p> 
+     * @return Description <p>任务描述信息</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 任务描述信息
-     * @param Description 任务描述信息
+     * Set <p>任务描述信息</p>
+     * @param Description <p>任务描述信息</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
+    }
+
+    /**
+     * Get <p>任务并发上限</p> 
+     * @return TasksMax <p>任务并发上限</p>
+     */
+    public Long getTasksMax() {
+        return this.TasksMax;
+    }
+
+    /**
+     * Set <p>任务并发上限</p>
+     * @param TasksMax <p>任务并发上限</p>
+     */
+    public void setTasksMax(Long TasksMax) {
+        this.TasksMax = TasksMax;
+    }
+
+    /**
+     * Get <p>数据同步限流值上限</p>单位：MB/s 
+     * @return SyncThrottleLimit <p>数据同步限流值上限</p>单位：MB/s
+     */
+    public Long getSyncThrottleLimit() {
+        return this.SyncThrottleLimit;
+    }
+
+    /**
+     * Set <p>数据同步限流值上限</p>单位：MB/s
+     * @param SyncThrottleLimit <p>数据同步限流值上限</p>单位：MB/s
+     */
+    public void setSyncThrottleLimit(Long SyncThrottleLimit) {
+        this.SyncThrottleLimit = SyncThrottleLimit;
+    }
+
+    /**
+     * Get <p>开启自动扩容</p>枚举值：<ul><li> true： 自动扩容</li><li> false： 手动扩容</li></ul> 
+     * @return AutoExpandFlag <p>开启自动扩容</p>枚举值：<ul><li> true： 自动扩容</li><li> false： 手动扩容</li></ul>
+     */
+    public Boolean getAutoExpandFlag() {
+        return this.AutoExpandFlag;
+    }
+
+    /**
+     * Set <p>开启自动扩容</p>枚举值：<ul><li> true： 自动扩容</li><li> false： 手动扩容</li></ul>
+     * @param AutoExpandFlag <p>开启自动扩容</p>枚举值：<ul><li> true： 自动扩容</li><li> false： 手动扩容</li></ul>
+     */
+    public void setAutoExpandFlag(Boolean AutoExpandFlag) {
+        this.AutoExpandFlag = AutoExpandFlag;
     }
 
     public ModifyDatahubTaskRequest() {
@@ -109,6 +178,15 @@ public class ModifyDatahubTaskRequest extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.TasksMax != null) {
+            this.TasksMax = new Long(source.TasksMax);
+        }
+        if (source.SyncThrottleLimit != null) {
+            this.SyncThrottleLimit = new Long(source.SyncThrottleLimit);
+        }
+        if (source.AutoExpandFlag != null) {
+            this.AutoExpandFlag = new Boolean(source.AutoExpandFlag);
+        }
     }
 
 
@@ -119,6 +197,9 @@ public class ModifyDatahubTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "TaskName", this.TaskName);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "TasksMax", this.TasksMax);
+        this.setParamSimple(map, prefix + "SyncThrottleLimit", this.SyncThrottleLimit);
+        this.setParamSimple(map, prefix + "AutoExpandFlag", this.AutoExpandFlag);
 
     }
 }

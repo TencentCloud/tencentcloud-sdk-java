@@ -122,6 +122,17 @@ public class CmeClient extends AbstractClient{
     }
 
     /**
+     *删除平台归属的账户。
+     * @param req DeleteAccountRequest
+     * @return DeleteAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAccountResponse DeleteAccount(DeleteAccountRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAccount", DeleteAccountResponse.class);
+    }
+
+    /**
      *删除分类信息，删除时检验下述限制：
 <li>分类路径必须存在；</li>
 <li>分类下没有绑定素材。</li>
@@ -414,6 +425,17 @@ public class CmeClient extends AbstractClient{
     public FlattenListMediaResponse FlattenListMedia(FlattenListMediaRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "FlattenListMedia", FlattenListMediaResponse.class);
+    }
+
+    /**
+     *禁用账号。
+     * @param req ForbidAccountRequest
+     * @return ForbidAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public ForbidAccountResponse ForbidAccount(ForbidAccountRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ForbidAccount", ForbidAccountResponse.class);
     }
 
     /**

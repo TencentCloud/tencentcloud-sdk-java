@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class ModifyLoadBalancerSlaResponse extends AbstractModel {
 
     /**
+    * 订单号。
+    */
+    @SerializedName("DealName")
+    @Expose
+    private String DealName;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 订单号。 
+     * @return DealName 订单号。
+     */
+    public String getDealName() {
+        return this.DealName;
+    }
+
+    /**
+     * Set 订单号。
+     * @param DealName 订单号。
+     */
+    public void setDealName(String DealName) {
+        this.DealName = DealName;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,9 @@ public class ModifyLoadBalancerSlaResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ModifyLoadBalancerSlaResponse(ModifyLoadBalancerSlaResponse source) {
+        if (source.DealName != null) {
+            this.DealName = new String(source.DealName);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +90,7 @@ public class ModifyLoadBalancerSlaResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "DealName", this.DealName);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

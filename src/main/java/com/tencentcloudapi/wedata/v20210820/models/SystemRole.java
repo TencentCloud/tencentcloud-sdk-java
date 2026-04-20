@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class SystemRole extends AbstractModel {
 
     /**
-    * 角色id
+    * <p>角色id</p>
     */
     @SerializedName("RoleId")
     @Expose
     private String RoleId;
 
     /**
-    * 角色名称
+    * <p>角色名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -39,7 +39,7 @@ public class SystemRole extends AbstractModel {
     private String Name;
 
     /**
-    * 角色昵称
+    * <p>角色昵称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NameCn")
@@ -47,7 +47,7 @@ public class SystemRole extends AbstractModel {
     private String NameCn;
 
     /**
-    * 描述
+    * <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
@@ -55,7 +55,7 @@ public class SystemRole extends AbstractModel {
     private String Description;
 
     /**
-    * 角色权限
+    * <p>角色权限</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Privileges")
@@ -63,7 +63,7 @@ public class SystemRole extends AbstractModel {
     private RolePrivilege [] Privileges;
 
     /**
-    * 方法路径
+    * <p>方法路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MethodPaths")
@@ -71,7 +71,7 @@ public class SystemRole extends AbstractModel {
     private String [] MethodPaths;
 
     /**
-    * 角色类型, 分为System,Tenant,Project,Commercial
+    * <p>角色类型, 分为System,Tenant,Project,Commercial</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RoleType")
@@ -79,7 +79,7 @@ public class SystemRole extends AbstractModel {
     private String RoleType;
 
     /**
-    * 是否系统默认
+    * <p>是否系统默认</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SystemInit")
@@ -87,7 +87,7 @@ public class SystemRole extends AbstractModel {
     private Boolean SystemInit;
 
     /**
-    * 自定义参数
+    * <p>自定义参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Params")
@@ -95,25 +95,41 @@ public class SystemRole extends AbstractModel {
     private String Params;
 
     /**
-     * Get 角色id 
-     * @return RoleId 角色id
+    * <p>创建时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateTimeStr")
+    @Expose
+    private String CreateTimeStr;
+
+    /**
+    * <p>创建人</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Creator")
+    @Expose
+    private String Creator;
+
+    /**
+     * Get <p>角色id</p> 
+     * @return RoleId <p>角色id</p>
      */
     public String getRoleId() {
         return this.RoleId;
     }
 
     /**
-     * Set 角色id
-     * @param RoleId 角色id
+     * Set <p>角色id</p>
+     * @param RoleId <p>角色id</p>
      */
     public void setRoleId(String RoleId) {
         this.RoleId = RoleId;
     }
 
     /**
-     * Get 角色名称
+     * Get <p>角色名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 角色名称
+     * @return Name <p>角色名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -121,9 +137,9 @@ public class SystemRole extends AbstractModel {
     }
 
     /**
-     * Set 角色名称
+     * Set <p>角色名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 角色名称
+     * @param Name <p>角色名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
@@ -131,9 +147,9 @@ public class SystemRole extends AbstractModel {
     }
 
     /**
-     * Get 角色昵称
+     * Get <p>角色昵称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NameCn 角色昵称
+     * @return NameCn <p>角色昵称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNameCn() {
@@ -141,9 +157,9 @@ public class SystemRole extends AbstractModel {
     }
 
     /**
-     * Set 角色昵称
+     * Set <p>角色昵称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NameCn 角色昵称
+     * @param NameCn <p>角色昵称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNameCn(String NameCn) {
@@ -151,9 +167,9 @@ public class SystemRole extends AbstractModel {
     }
 
     /**
-     * Get 描述
+     * Get <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Description 描述
+     * @return Description <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
@@ -161,9 +177,9 @@ public class SystemRole extends AbstractModel {
     }
 
     /**
-     * Set 描述
+     * Set <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Description 描述
+     * @param Description <p>描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
@@ -171,9 +187,9 @@ public class SystemRole extends AbstractModel {
     }
 
     /**
-     * Get 角色权限
+     * Get <p>角色权限</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Privileges 角色权限
+     * @return Privileges <p>角色权限</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RolePrivilege [] getPrivileges() {
@@ -181,9 +197,9 @@ public class SystemRole extends AbstractModel {
     }
 
     /**
-     * Set 角色权限
+     * Set <p>角色权限</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Privileges 角色权限
+     * @param Privileges <p>角色权限</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrivileges(RolePrivilege [] Privileges) {
@@ -191,9 +207,9 @@ public class SystemRole extends AbstractModel {
     }
 
     /**
-     * Get 方法路径
+     * Get <p>方法路径</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MethodPaths 方法路径
+     * @return MethodPaths <p>方法路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getMethodPaths() {
@@ -201,9 +217,9 @@ public class SystemRole extends AbstractModel {
     }
 
     /**
-     * Set 方法路径
+     * Set <p>方法路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MethodPaths 方法路径
+     * @param MethodPaths <p>方法路径</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMethodPaths(String [] MethodPaths) {
@@ -211,9 +227,9 @@ public class SystemRole extends AbstractModel {
     }
 
     /**
-     * Get 角色类型, 分为System,Tenant,Project,Commercial
+     * Get <p>角色类型, 分为System,Tenant,Project,Commercial</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RoleType 角色类型, 分为System,Tenant,Project,Commercial
+     * @return RoleType <p>角色类型, 分为System,Tenant,Project,Commercial</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRoleType() {
@@ -221,9 +237,9 @@ public class SystemRole extends AbstractModel {
     }
 
     /**
-     * Set 角色类型, 分为System,Tenant,Project,Commercial
+     * Set <p>角色类型, 分为System,Tenant,Project,Commercial</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RoleType 角色类型, 分为System,Tenant,Project,Commercial
+     * @param RoleType <p>角色类型, 分为System,Tenant,Project,Commercial</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoleType(String RoleType) {
@@ -231,9 +247,9 @@ public class SystemRole extends AbstractModel {
     }
 
     /**
-     * Get 是否系统默认
+     * Get <p>是否系统默认</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SystemInit 是否系统默认
+     * @return SystemInit <p>是否系统默认</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSystemInit() {
@@ -241,9 +257,9 @@ public class SystemRole extends AbstractModel {
     }
 
     /**
-     * Set 是否系统默认
+     * Set <p>是否系统默认</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SystemInit 是否系统默认
+     * @param SystemInit <p>是否系统默认</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSystemInit(Boolean SystemInit) {
@@ -251,9 +267,9 @@ public class SystemRole extends AbstractModel {
     }
 
     /**
-     * Get 自定义参数
+     * Get <p>自定义参数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Params 自定义参数
+     * @return Params <p>自定义参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParams() {
@@ -261,13 +277,53 @@ public class SystemRole extends AbstractModel {
     }
 
     /**
-     * Set 自定义参数
+     * Set <p>自定义参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Params 自定义参数
+     * @param Params <p>自定义参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParams(String Params) {
         this.Params = Params;
+    }
+
+    /**
+     * Get <p>创建时间</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateTimeStr <p>创建时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreateTimeStr() {
+        return this.CreateTimeStr;
+    }
+
+    /**
+     * Set <p>创建时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateTimeStr <p>创建时间</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateTimeStr(String CreateTimeStr) {
+        this.CreateTimeStr = CreateTimeStr;
+    }
+
+    /**
+     * Get <p>创建人</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Creator <p>创建人</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreator() {
+        return this.Creator;
+    }
+
+    /**
+     * Set <p>创建人</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Creator <p>创建人</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreator(String Creator) {
+        this.Creator = Creator;
     }
 
     public SystemRole() {
@@ -311,6 +367,12 @@ public class SystemRole extends AbstractModel {
         if (source.Params != null) {
             this.Params = new String(source.Params);
         }
+        if (source.CreateTimeStr != null) {
+            this.CreateTimeStr = new String(source.CreateTimeStr);
+        }
+        if (source.Creator != null) {
+            this.Creator = new String(source.Creator);
+        }
     }
 
 
@@ -327,6 +389,8 @@ public class SystemRole extends AbstractModel {
         this.setParamSimple(map, prefix + "RoleType", this.RoleType);
         this.setParamSimple(map, prefix + "SystemInit", this.SystemInit);
         this.setParamSimple(map, prefix + "Params", this.Params);
+        this.setParamSimple(map, prefix + "CreateTimeStr", this.CreateTimeStr);
+        this.setParamSimple(map, prefix + "Creator", this.Creator);
 
     }
 }

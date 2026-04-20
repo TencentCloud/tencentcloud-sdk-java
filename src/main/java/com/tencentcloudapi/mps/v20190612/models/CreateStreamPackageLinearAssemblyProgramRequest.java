@@ -24,164 +24,187 @@ import java.util.HashMap;
 public class CreateStreamPackageLinearAssemblyProgramRequest extends AbstractModel {
 
     /**
-    * Program名称。
+    * <p>Program名称。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 绑定的channel。
+    * <p>绑定的channel。</p>
     */
     @SerializedName("AttachedChannel")
     @Expose
     private String AttachedChannel;
 
     /**
-    * 编排的目标source的类型，分直播Live和点播VOD。Tier为Basic时只支持VOD，Tier为Standard时支持Live和VOD
+    * <p>编排的目标source的类型，分直播Live和点播VOD。Tier为Basic时只支持VOD，Tier为Standard时支持Live和VOD</p>
     */
     @SerializedName("SourceType")
     @Expose
     private String SourceType;
 
     /**
-    * 关联的source location。
+    * <p>关联的source location。</p>
     */
     @SerializedName("SourceLocationId")
     @Expose
     private String SourceLocationId;
 
     /**
-    * 关联的直播or点播，source名称，location下全局唯一。
+    * <p>关联的直播or点播，source名称，location下全局唯一。</p>
     */
     @SerializedName("SourceName")
     @Expose
     private String SourceName;
 
     /**
-    * PlaybackConf。
+    * <p>PlaybackConf。</p>
     */
     @SerializedName("PlaybackConf")
     @Expose
     private PlaybackInfoReq PlaybackConf;
 
     /**
-    * AdBreaks，只有source类型为Vod时有效。
+    * <p>AdBreaks，只有source类型为Vod时有效。</p>
     */
     @SerializedName("AdBreaks")
     @Expose
     private AdBreakInfo [] AdBreaks;
 
     /**
-     * Get Program名称。 
-     * @return Name Program名称。
+    * <p>VOD获取方式，支持PreCaching和DynamicUpdating，默认PreCaching，仅Linear频道支持</p>
+    */
+    @SerializedName("VodAcquisitionMethod")
+    @Expose
+    private String VodAcquisitionMethod;
+
+    /**
+     * Get <p>Program名称。</p> 
+     * @return Name <p>Program名称。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Program名称。
-     * @param Name Program名称。
+     * Set <p>Program名称。</p>
+     * @param Name <p>Program名称。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 绑定的channel。 
-     * @return AttachedChannel 绑定的channel。
+     * Get <p>绑定的channel。</p> 
+     * @return AttachedChannel <p>绑定的channel。</p>
      */
     public String getAttachedChannel() {
         return this.AttachedChannel;
     }
 
     /**
-     * Set 绑定的channel。
-     * @param AttachedChannel 绑定的channel。
+     * Set <p>绑定的channel。</p>
+     * @param AttachedChannel <p>绑定的channel。</p>
      */
     public void setAttachedChannel(String AttachedChannel) {
         this.AttachedChannel = AttachedChannel;
     }
 
     /**
-     * Get 编排的目标source的类型，分直播Live和点播VOD。Tier为Basic时只支持VOD，Tier为Standard时支持Live和VOD 
-     * @return SourceType 编排的目标source的类型，分直播Live和点播VOD。Tier为Basic时只支持VOD，Tier为Standard时支持Live和VOD
+     * Get <p>编排的目标source的类型，分直播Live和点播VOD。Tier为Basic时只支持VOD，Tier为Standard时支持Live和VOD</p> 
+     * @return SourceType <p>编排的目标source的类型，分直播Live和点播VOD。Tier为Basic时只支持VOD，Tier为Standard时支持Live和VOD</p>
      */
     public String getSourceType() {
         return this.SourceType;
     }
 
     /**
-     * Set 编排的目标source的类型，分直播Live和点播VOD。Tier为Basic时只支持VOD，Tier为Standard时支持Live和VOD
-     * @param SourceType 编排的目标source的类型，分直播Live和点播VOD。Tier为Basic时只支持VOD，Tier为Standard时支持Live和VOD
+     * Set <p>编排的目标source的类型，分直播Live和点播VOD。Tier为Basic时只支持VOD，Tier为Standard时支持Live和VOD</p>
+     * @param SourceType <p>编排的目标source的类型，分直播Live和点播VOD。Tier为Basic时只支持VOD，Tier为Standard时支持Live和VOD</p>
      */
     public void setSourceType(String SourceType) {
         this.SourceType = SourceType;
     }
 
     /**
-     * Get 关联的source location。 
-     * @return SourceLocationId 关联的source location。
+     * Get <p>关联的source location。</p> 
+     * @return SourceLocationId <p>关联的source location。</p>
      */
     public String getSourceLocationId() {
         return this.SourceLocationId;
     }
 
     /**
-     * Set 关联的source location。
-     * @param SourceLocationId 关联的source location。
+     * Set <p>关联的source location。</p>
+     * @param SourceLocationId <p>关联的source location。</p>
      */
     public void setSourceLocationId(String SourceLocationId) {
         this.SourceLocationId = SourceLocationId;
     }
 
     /**
-     * Get 关联的直播or点播，source名称，location下全局唯一。 
-     * @return SourceName 关联的直播or点播，source名称，location下全局唯一。
+     * Get <p>关联的直播or点播，source名称，location下全局唯一。</p> 
+     * @return SourceName <p>关联的直播or点播，source名称，location下全局唯一。</p>
      */
     public String getSourceName() {
         return this.SourceName;
     }
 
     /**
-     * Set 关联的直播or点播，source名称，location下全局唯一。
-     * @param SourceName 关联的直播or点播，source名称，location下全局唯一。
+     * Set <p>关联的直播or点播，source名称，location下全局唯一。</p>
+     * @param SourceName <p>关联的直播or点播，source名称，location下全局唯一。</p>
      */
     public void setSourceName(String SourceName) {
         this.SourceName = SourceName;
     }
 
     /**
-     * Get PlaybackConf。 
-     * @return PlaybackConf PlaybackConf。
+     * Get <p>PlaybackConf。</p> 
+     * @return PlaybackConf <p>PlaybackConf。</p>
      */
     public PlaybackInfoReq getPlaybackConf() {
         return this.PlaybackConf;
     }
 
     /**
-     * Set PlaybackConf。
-     * @param PlaybackConf PlaybackConf。
+     * Set <p>PlaybackConf。</p>
+     * @param PlaybackConf <p>PlaybackConf。</p>
      */
     public void setPlaybackConf(PlaybackInfoReq PlaybackConf) {
         this.PlaybackConf = PlaybackConf;
     }
 
     /**
-     * Get AdBreaks，只有source类型为Vod时有效。 
-     * @return AdBreaks AdBreaks，只有source类型为Vod时有效。
+     * Get <p>AdBreaks，只有source类型为Vod时有效。</p> 
+     * @return AdBreaks <p>AdBreaks，只有source类型为Vod时有效。</p>
      */
     public AdBreakInfo [] getAdBreaks() {
         return this.AdBreaks;
     }
 
     /**
-     * Set AdBreaks，只有source类型为Vod时有效。
-     * @param AdBreaks AdBreaks，只有source类型为Vod时有效。
+     * Set <p>AdBreaks，只有source类型为Vod时有效。</p>
+     * @param AdBreaks <p>AdBreaks，只有source类型为Vod时有效。</p>
      */
     public void setAdBreaks(AdBreakInfo [] AdBreaks) {
         this.AdBreaks = AdBreaks;
+    }
+
+    /**
+     * Get <p>VOD获取方式，支持PreCaching和DynamicUpdating，默认PreCaching，仅Linear频道支持</p> 
+     * @return VodAcquisitionMethod <p>VOD获取方式，支持PreCaching和DynamicUpdating，默认PreCaching，仅Linear频道支持</p>
+     */
+    public String getVodAcquisitionMethod() {
+        return this.VodAcquisitionMethod;
+    }
+
+    /**
+     * Set <p>VOD获取方式，支持PreCaching和DynamicUpdating，默认PreCaching，仅Linear频道支持</p>
+     * @param VodAcquisitionMethod <p>VOD获取方式，支持PreCaching和DynamicUpdating，默认PreCaching，仅Linear频道支持</p>
+     */
+    public void setVodAcquisitionMethod(String VodAcquisitionMethod) {
+        this.VodAcquisitionMethod = VodAcquisitionMethod;
     }
 
     public CreateStreamPackageLinearAssemblyProgramRequest() {
@@ -216,6 +239,9 @@ public class CreateStreamPackageLinearAssemblyProgramRequest extends AbstractMod
                 this.AdBreaks[i] = new AdBreakInfo(source.AdBreaks[i]);
             }
         }
+        if (source.VodAcquisitionMethod != null) {
+            this.VodAcquisitionMethod = new String(source.VodAcquisitionMethod);
+        }
     }
 
 
@@ -230,6 +256,7 @@ public class CreateStreamPackageLinearAssemblyProgramRequest extends AbstractMod
         this.setParamSimple(map, prefix + "SourceName", this.SourceName);
         this.setParamObj(map, prefix + "PlaybackConf.", this.PlaybackConf);
         this.setParamArrayObj(map, prefix + "AdBreaks.", this.AdBreaks);
+        this.setParamSimple(map, prefix + "VodAcquisitionMethod", this.VodAcquisitionMethod);
 
     }
 }

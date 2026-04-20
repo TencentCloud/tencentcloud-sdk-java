@@ -69,6 +69,9 @@ public enum CkafkaErrorCode {
      /* 任务资源暂停。 */
      OPERATIONDENIED_RESOURCETASKPAUSED("OperationDenied.ResourceTaskPaused"),
      
+     /* 地域错误 */
+     REGIONERROR("RegionError"),
+     
      /* 请求的次数超过了频率限制。 */
      REQUESTLIMITEXCEEDED("RequestLimitExceeded"),
      

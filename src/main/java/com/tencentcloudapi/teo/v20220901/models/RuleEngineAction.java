@@ -51,6 +51,7 @@ public class RuleEngineAction extends AbstractModel {
 <li>ClientIPCountry：回源时携带客户端 IP 所属地域信息；</li>
 <li>UpstreamFollowRedirect：回源跟随重定向参数配置；</li>
 <li>UpstreamRequest：回源请求参数；</li>
+<li>Shield：源站卸载配置；</li>
 <li>TLSConfig：SSL/TLS 安全；</li>
 <li>ModifyOrigin：修改源站；</li>
 <li>HTTPUpstreamTimeout：七层回源超时配置；</li>
@@ -277,6 +278,14 @@ public class RuleEngineAction extends AbstractModel {
     private UpstreamRequestParameters UpstreamRequestParameters;
 
     /**
+    * 源站卸载配置参数，当 Name 取值为 Shield 时，该参数必填。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ShieldParameters")
+    @Expose
+    private ShieldParameters ShieldParameters;
+
+    /**
     * SSL/TLS 安全配置参数，当 Name 取值为 TLSConfig 时，该参数必填。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -398,6 +407,7 @@ public class RuleEngineAction extends AbstractModel {
 <li>ClientIPCountry：回源时携带客户端 IP 所属地域信息；</li>
 <li>UpstreamFollowRedirect：回源跟随重定向参数配置；</li>
 <li>UpstreamRequest：回源请求参数；</li>
+<li>Shield：源站卸载配置；</li>
 <li>TLSConfig：SSL/TLS 安全；</li>
 <li>ModifyOrigin：修改源站；</li>
 <li>HTTPUpstreamTimeout：七层回源超时配置；</li>
@@ -437,6 +447,7 @@ public class RuleEngineAction extends AbstractModel {
 <li>ClientIPCountry：回源时携带客户端 IP 所属地域信息；</li>
 <li>UpstreamFollowRedirect：回源跟随重定向参数配置；</li>
 <li>UpstreamRequest：回源请求参数；</li>
+<li>Shield：源站卸载配置；</li>
 <li>TLSConfig：SSL/TLS 安全；</li>
 <li>ModifyOrigin：修改源站；</li>
 <li>HTTPUpstreamTimeout：七层回源超时配置；</li>
@@ -482,6 +493,7 @@ public class RuleEngineAction extends AbstractModel {
 <li>ClientIPCountry：回源时携带客户端 IP 所属地域信息；</li>
 <li>UpstreamFollowRedirect：回源跟随重定向参数配置；</li>
 <li>UpstreamRequest：回源请求参数；</li>
+<li>Shield：源站卸载配置；</li>
 <li>TLSConfig：SSL/TLS 安全；</li>
 <li>ModifyOrigin：修改源站；</li>
 <li>HTTPUpstreamTimeout：七层回源超时配置；</li>
@@ -521,6 +533,7 @@ public class RuleEngineAction extends AbstractModel {
 <li>ClientIPCountry：回源时携带客户端 IP 所属地域信息；</li>
 <li>UpstreamFollowRedirect：回源跟随重定向参数配置；</li>
 <li>UpstreamRequest：回源请求参数；</li>
+<li>Shield：源站卸载配置；</li>
 <li>TLSConfig：SSL/TLS 安全；</li>
 <li>ModifyOrigin：修改源站；</li>
 <li>HTTPUpstreamTimeout：七层回源超时配置；</li>
@@ -1059,6 +1072,26 @@ public class RuleEngineAction extends AbstractModel {
     }
 
     /**
+     * Get 源站卸载配置参数，当 Name 取值为 Shield 时，该参数必填。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ShieldParameters 源站卸载配置参数，当 Name 取值为 Shield 时，该参数必填。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ShieldParameters getShieldParameters() {
+        return this.ShieldParameters;
+    }
+
+    /**
+     * Set 源站卸载配置参数，当 Name 取值为 Shield 时，该参数必填。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ShieldParameters 源站卸载配置参数，当 Name 取值为 Shield 时，该参数必填。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setShieldParameters(ShieldParameters ShieldParameters) {
+        this.ShieldParameters = ShieldParameters;
+    }
+
+    /**
      * Get SSL/TLS 安全配置参数，当 Name 取值为 TLSConfig 时，该参数必填。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TLSConfigParameters SSL/TLS 安全配置参数，当 Name 取值为 TLSConfig 时，该参数必填。
@@ -1379,6 +1412,9 @@ public class RuleEngineAction extends AbstractModel {
         if (source.UpstreamRequestParameters != null) {
             this.UpstreamRequestParameters = new UpstreamRequestParameters(source.UpstreamRequestParameters);
         }
+        if (source.ShieldParameters != null) {
+            this.ShieldParameters = new ShieldParameters(source.ShieldParameters);
+        }
         if (source.TLSConfigParameters != null) {
             this.TLSConfigParameters = new TLSConfigParameters(source.TLSConfigParameters);
         }
@@ -1449,6 +1485,7 @@ public class RuleEngineAction extends AbstractModel {
         this.setParamObj(map, prefix + "ClientIPCountryParameters.", this.ClientIPCountryParameters);
         this.setParamObj(map, prefix + "UpstreamFollowRedirectParameters.", this.UpstreamFollowRedirectParameters);
         this.setParamObj(map, prefix + "UpstreamRequestParameters.", this.UpstreamRequestParameters);
+        this.setParamObj(map, prefix + "ShieldParameters.", this.ShieldParameters);
         this.setParamObj(map, prefix + "TLSConfigParameters.", this.TLSConfigParameters);
         this.setParamObj(map, prefix + "ModifyOriginParameters.", this.ModifyOriginParameters);
         this.setParamObj(map, prefix + "HTTPUpstreamTimeoutParameters.", this.HTTPUpstreamTimeoutParameters);

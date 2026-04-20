@@ -24,91 +24,91 @@ import java.util.HashMap;
 public class MainlandPermitOCRResponse extends AbstractModel {
 
     /**
-    * 中文姓名
+    * <p>中文姓名</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 英文姓名
+    * <p>英文姓名</p>
     */
     @SerializedName("EnglishName")
     @Expose
     private String EnglishName;
 
     /**
-    * 性别
+    * <p>性别</p>
     */
     @SerializedName("Sex")
     @Expose
     private String Sex;
 
     /**
-    * 出生日期
+    * <p>出生日期</p>
     */
     @SerializedName("Birthday")
     @Expose
     private String Birthday;
 
     /**
-    * 签发机关
+    * <p>签发机关</p>
     */
     @SerializedName("IssueAuthority")
     @Expose
     private String IssueAuthority;
 
     /**
-    * 有效期限
+    * <p>有效期限</p>
     */
     @SerializedName("ValidDate")
     @Expose
     private String ValidDate;
 
     /**
-    * 证件号
+    * <p>证件号</p>
     */
     @SerializedName("Number")
     @Expose
     private String Number;
 
     /**
-    * 签发地点
+    * <p>签发地点</p>
     */
     @SerializedName("IssueAddress")
     @Expose
     private String IssueAddress;
 
     /**
-    * 签发次数
+    * <p>签发次数</p>
     */
     @SerializedName("IssueNumber")
     @Expose
     private String IssueNumber;
 
     /**
-    * 证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证、往来港澳通行证。
+    * <p>证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证、往来港澳通行证。</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * RetProfile为True时返回头像字段， Base64编码
+    * <p>RetProfile为True时返回头像字段， Base64编码</p>
     */
     @SerializedName("Profile")
     @Expose
     private String Profile;
 
     /**
-    * 国籍
+    * <p>国籍</p>
     */
     @SerializedName("Nationality")
     @Expose
     private String Nationality;
 
     /**
-    * 背面字段信息
+    * <p>背面字段信息</p>
     */
     @SerializedName("MainlandTravelPermitBackInfos")
     @Expose
@@ -122,208 +122,208 @@ public class MainlandPermitOCRResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 中文姓名 
-     * @return Name 中文姓名
+     * Get <p>中文姓名</p> 
+     * @return Name <p>中文姓名</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 中文姓名
-     * @param Name 中文姓名
+     * Set <p>中文姓名</p>
+     * @param Name <p>中文姓名</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 英文姓名 
-     * @return EnglishName 英文姓名
+     * Get <p>英文姓名</p> 
+     * @return EnglishName <p>英文姓名</p>
      */
     public String getEnglishName() {
         return this.EnglishName;
     }
 
     /**
-     * Set 英文姓名
-     * @param EnglishName 英文姓名
+     * Set <p>英文姓名</p>
+     * @param EnglishName <p>英文姓名</p>
      */
     public void setEnglishName(String EnglishName) {
         this.EnglishName = EnglishName;
     }
 
     /**
-     * Get 性别 
-     * @return Sex 性别
+     * Get <p>性别</p> 
+     * @return Sex <p>性别</p>
      */
     public String getSex() {
         return this.Sex;
     }
 
     /**
-     * Set 性别
-     * @param Sex 性别
+     * Set <p>性别</p>
+     * @param Sex <p>性别</p>
      */
     public void setSex(String Sex) {
         this.Sex = Sex;
     }
 
     /**
-     * Get 出生日期 
-     * @return Birthday 出生日期
+     * Get <p>出生日期</p> 
+     * @return Birthday <p>出生日期</p>
      */
     public String getBirthday() {
         return this.Birthday;
     }
 
     /**
-     * Set 出生日期
-     * @param Birthday 出生日期
+     * Set <p>出生日期</p>
+     * @param Birthday <p>出生日期</p>
      */
     public void setBirthday(String Birthday) {
         this.Birthday = Birthday;
     }
 
     /**
-     * Get 签发机关 
-     * @return IssueAuthority 签发机关
+     * Get <p>签发机关</p> 
+     * @return IssueAuthority <p>签发机关</p>
      */
     public String getIssueAuthority() {
         return this.IssueAuthority;
     }
 
     /**
-     * Set 签发机关
-     * @param IssueAuthority 签发机关
+     * Set <p>签发机关</p>
+     * @param IssueAuthority <p>签发机关</p>
      */
     public void setIssueAuthority(String IssueAuthority) {
         this.IssueAuthority = IssueAuthority;
     }
 
     /**
-     * Get 有效期限 
-     * @return ValidDate 有效期限
+     * Get <p>有效期限</p> 
+     * @return ValidDate <p>有效期限</p>
      */
     public String getValidDate() {
         return this.ValidDate;
     }
 
     /**
-     * Set 有效期限
-     * @param ValidDate 有效期限
+     * Set <p>有效期限</p>
+     * @param ValidDate <p>有效期限</p>
      */
     public void setValidDate(String ValidDate) {
         this.ValidDate = ValidDate;
     }
 
     /**
-     * Get 证件号 
-     * @return Number 证件号
+     * Get <p>证件号</p> 
+     * @return Number <p>证件号</p>
      */
     public String getNumber() {
         return this.Number;
     }
 
     /**
-     * Set 证件号
-     * @param Number 证件号
+     * Set <p>证件号</p>
+     * @param Number <p>证件号</p>
      */
     public void setNumber(String Number) {
         this.Number = Number;
     }
 
     /**
-     * Get 签发地点 
-     * @return IssueAddress 签发地点
+     * Get <p>签发地点</p> 
+     * @return IssueAddress <p>签发地点</p>
      */
     public String getIssueAddress() {
         return this.IssueAddress;
     }
 
     /**
-     * Set 签发地点
-     * @param IssueAddress 签发地点
+     * Set <p>签发地点</p>
+     * @param IssueAddress <p>签发地点</p>
      */
     public void setIssueAddress(String IssueAddress) {
         this.IssueAddress = IssueAddress;
     }
 
     /**
-     * Get 签发次数 
-     * @return IssueNumber 签发次数
+     * Get <p>签发次数</p> 
+     * @return IssueNumber <p>签发次数</p>
      */
     public String getIssueNumber() {
         return this.IssueNumber;
     }
 
     /**
-     * Set 签发次数
-     * @param IssueNumber 签发次数
+     * Set <p>签发次数</p>
+     * @param IssueNumber <p>签发次数</p>
      */
     public void setIssueNumber(String IssueNumber) {
         this.IssueNumber = IssueNumber;
     }
 
     /**
-     * Get 证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证、往来港澳通行证。 
-     * @return Type 证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证、往来港澳通行证。
+     * Get <p>证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证、往来港澳通行证。</p> 
+     * @return Type <p>证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证、往来港澳通行证。</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证、往来港澳通行证。
-     * @param Type 证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证、往来港澳通行证。
+     * Set <p>证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证、往来港澳通行证。</p>
+     * @param Type <p>证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证、往来港澳通行证。</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get RetProfile为True时返回头像字段， Base64编码 
-     * @return Profile RetProfile为True时返回头像字段， Base64编码
+     * Get <p>RetProfile为True时返回头像字段， Base64编码</p> 
+     * @return Profile <p>RetProfile为True时返回头像字段， Base64编码</p>
      */
     public String getProfile() {
         return this.Profile;
     }
 
     /**
-     * Set RetProfile为True时返回头像字段， Base64编码
-     * @param Profile RetProfile为True时返回头像字段， Base64编码
+     * Set <p>RetProfile为True时返回头像字段， Base64编码</p>
+     * @param Profile <p>RetProfile为True时返回头像字段， Base64编码</p>
      */
     public void setProfile(String Profile) {
         this.Profile = Profile;
     }
 
     /**
-     * Get 国籍 
-     * @return Nationality 国籍
+     * Get <p>国籍</p> 
+     * @return Nationality <p>国籍</p>
      */
     public String getNationality() {
         return this.Nationality;
     }
 
     /**
-     * Set 国籍
-     * @param Nationality 国籍
+     * Set <p>国籍</p>
+     * @param Nationality <p>国籍</p>
      */
     public void setNationality(String Nationality) {
         this.Nationality = Nationality;
     }
 
     /**
-     * Get 背面字段信息 
-     * @return MainlandTravelPermitBackInfos 背面字段信息
+     * Get <p>背面字段信息</p> 
+     * @return MainlandTravelPermitBackInfos <p>背面字段信息</p>
      */
     public MainlandTravelPermitBackInfos getMainlandTravelPermitBackInfos() {
         return this.MainlandTravelPermitBackInfos;
     }
 
     /**
-     * Set 背面字段信息
-     * @param MainlandTravelPermitBackInfos 背面字段信息
+     * Set <p>背面字段信息</p>
+     * @param MainlandTravelPermitBackInfos <p>背面字段信息</p>
      */
     public void setMainlandTravelPermitBackInfos(MainlandTravelPermitBackInfos MainlandTravelPermitBackInfos) {
         this.MainlandTravelPermitBackInfos = MainlandTravelPermitBackInfos;

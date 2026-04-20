@@ -24,164 +24,233 @@ import java.util.HashMap;
 public class UpdateIndexRequest extends AbstractModel {
 
     /**
-    * ES集群ID
+    * <p>ES集群ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 更新的索引类型。auto：自治索引；normal：普通索引
+    * <p>更新的索引类型。auto：自治索引；normal：普通索引</p>
     */
     @SerializedName("IndexType")
     @Expose
     private String IndexType;
 
     /**
-    * 更新的索引名
+    * <p>更新的索引名</p>
     */
     @SerializedName("IndexName")
     @Expose
     private String IndexName;
 
     /**
-    * 更新的索引元数据JSON，如mappings、settings
+    * <p>更新的索引元数据JSON，如mappings、settings</p>
     */
     @SerializedName("UpdateMetaJson")
     @Expose
     private String UpdateMetaJson;
 
     /**
-    * 集群访问用户名
+    * <p>集群访问用户名</p>
     */
     @SerializedName("Username")
     @Expose
     private String Username;
 
     /**
-    * 集群访问密码
+    * <p>集群访问密码</p>
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * 是否滚动后备索引
+    * <p>是否滚动后备索引</p>
     */
     @SerializedName("RolloverBackingIndex")
     @Expose
     private Boolean RolloverBackingIndex;
 
     /**
-     * Get ES集群ID 
-     * @return InstanceId ES集群ID
+    * <p>是否为取回完全卸载索引</p>
+    */
+    @SerializedName("MountIndex")
+    @Expose
+    private Boolean MountIndex;
+
+    /**
+    * <p>索引Uuid</p>
+    */
+    @SerializedName("IndexUuid")
+    @Expose
+    private String IndexUuid;
+
+    /**
+    * <p>后备索引名</p>
+    */
+    @SerializedName("BackingIndexName")
+    @Expose
+    private String BackingIndexName;
+
+    /**
+     * Get <p>ES集群ID</p> 
+     * @return InstanceId <p>ES集群ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ES集群ID
-     * @param InstanceId ES集群ID
+     * Set <p>ES集群ID</p>
+     * @param InstanceId <p>ES集群ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 更新的索引类型。auto：自治索引；normal：普通索引 
-     * @return IndexType 更新的索引类型。auto：自治索引；normal：普通索引
+     * Get <p>更新的索引类型。auto：自治索引；normal：普通索引</p> 
+     * @return IndexType <p>更新的索引类型。auto：自治索引；normal：普通索引</p>
      */
     public String getIndexType() {
         return this.IndexType;
     }
 
     /**
-     * Set 更新的索引类型。auto：自治索引；normal：普通索引
-     * @param IndexType 更新的索引类型。auto：自治索引；normal：普通索引
+     * Set <p>更新的索引类型。auto：自治索引；normal：普通索引</p>
+     * @param IndexType <p>更新的索引类型。auto：自治索引；normal：普通索引</p>
      */
     public void setIndexType(String IndexType) {
         this.IndexType = IndexType;
     }
 
     /**
-     * Get 更新的索引名 
-     * @return IndexName 更新的索引名
+     * Get <p>更新的索引名</p> 
+     * @return IndexName <p>更新的索引名</p>
      */
     public String getIndexName() {
         return this.IndexName;
     }
 
     /**
-     * Set 更新的索引名
-     * @param IndexName 更新的索引名
+     * Set <p>更新的索引名</p>
+     * @param IndexName <p>更新的索引名</p>
      */
     public void setIndexName(String IndexName) {
         this.IndexName = IndexName;
     }
 
     /**
-     * Get 更新的索引元数据JSON，如mappings、settings 
-     * @return UpdateMetaJson 更新的索引元数据JSON，如mappings、settings
+     * Get <p>更新的索引元数据JSON，如mappings、settings</p> 
+     * @return UpdateMetaJson <p>更新的索引元数据JSON，如mappings、settings</p>
      */
     public String getUpdateMetaJson() {
         return this.UpdateMetaJson;
     }
 
     /**
-     * Set 更新的索引元数据JSON，如mappings、settings
-     * @param UpdateMetaJson 更新的索引元数据JSON，如mappings、settings
+     * Set <p>更新的索引元数据JSON，如mappings、settings</p>
+     * @param UpdateMetaJson <p>更新的索引元数据JSON，如mappings、settings</p>
      */
     public void setUpdateMetaJson(String UpdateMetaJson) {
         this.UpdateMetaJson = UpdateMetaJson;
     }
 
     /**
-     * Get 集群访问用户名 
-     * @return Username 集群访问用户名
+     * Get <p>集群访问用户名</p> 
+     * @return Username <p>集群访问用户名</p>
      */
     public String getUsername() {
         return this.Username;
     }
 
     /**
-     * Set 集群访问用户名
-     * @param Username 集群访问用户名
+     * Set <p>集群访问用户名</p>
+     * @param Username <p>集群访问用户名</p>
      */
     public void setUsername(String Username) {
         this.Username = Username;
     }
 
     /**
-     * Get 集群访问密码 
-     * @return Password 集群访问密码
+     * Get <p>集群访问密码</p> 
+     * @return Password <p>集群访问密码</p>
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set 集群访问密码
-     * @param Password 集群访问密码
+     * Set <p>集群访问密码</p>
+     * @param Password <p>集群访问密码</p>
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get 是否滚动后备索引 
-     * @return RolloverBackingIndex 是否滚动后备索引
+     * Get <p>是否滚动后备索引</p> 
+     * @return RolloverBackingIndex <p>是否滚动后备索引</p>
      */
     public Boolean getRolloverBackingIndex() {
         return this.RolloverBackingIndex;
     }
 
     /**
-     * Set 是否滚动后备索引
-     * @param RolloverBackingIndex 是否滚动后备索引
+     * Set <p>是否滚动后备索引</p>
+     * @param RolloverBackingIndex <p>是否滚动后备索引</p>
      */
     public void setRolloverBackingIndex(Boolean RolloverBackingIndex) {
         this.RolloverBackingIndex = RolloverBackingIndex;
+    }
+
+    /**
+     * Get <p>是否为取回完全卸载索引</p> 
+     * @return MountIndex <p>是否为取回完全卸载索引</p>
+     */
+    public Boolean getMountIndex() {
+        return this.MountIndex;
+    }
+
+    /**
+     * Set <p>是否为取回完全卸载索引</p>
+     * @param MountIndex <p>是否为取回完全卸载索引</p>
+     */
+    public void setMountIndex(Boolean MountIndex) {
+        this.MountIndex = MountIndex;
+    }
+
+    /**
+     * Get <p>索引Uuid</p> 
+     * @return IndexUuid <p>索引Uuid</p>
+     */
+    public String getIndexUuid() {
+        return this.IndexUuid;
+    }
+
+    /**
+     * Set <p>索引Uuid</p>
+     * @param IndexUuid <p>索引Uuid</p>
+     */
+    public void setIndexUuid(String IndexUuid) {
+        this.IndexUuid = IndexUuid;
+    }
+
+    /**
+     * Get <p>后备索引名</p> 
+     * @return BackingIndexName <p>后备索引名</p>
+     */
+    public String getBackingIndexName() {
+        return this.BackingIndexName;
+    }
+
+    /**
+     * Set <p>后备索引名</p>
+     * @param BackingIndexName <p>后备索引名</p>
+     */
+    public void setBackingIndexName(String BackingIndexName) {
+        this.BackingIndexName = BackingIndexName;
     }
 
     public UpdateIndexRequest() {
@@ -213,6 +282,15 @@ public class UpdateIndexRequest extends AbstractModel {
         if (source.RolloverBackingIndex != null) {
             this.RolloverBackingIndex = new Boolean(source.RolloverBackingIndex);
         }
+        if (source.MountIndex != null) {
+            this.MountIndex = new Boolean(source.MountIndex);
+        }
+        if (source.IndexUuid != null) {
+            this.IndexUuid = new String(source.IndexUuid);
+        }
+        if (source.BackingIndexName != null) {
+            this.BackingIndexName = new String(source.BackingIndexName);
+        }
     }
 
 
@@ -227,6 +305,9 @@ public class UpdateIndexRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Username", this.Username);
         this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamSimple(map, prefix + "RolloverBackingIndex", this.RolloverBackingIndex);
+        this.setParamSimple(map, prefix + "MountIndex", this.MountIndex);
+        this.setParamSimple(map, prefix + "IndexUuid", this.IndexUuid);
+        this.setParamSimple(map, prefix + "BackingIndexName", this.BackingIndexName);
 
     }
 }

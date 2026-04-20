@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class ModifyDatahubTopicRequest extends AbstractModel {
 
     /**
-    * 弹性topic名称
+    * <p>弹性topic名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/86863">DescribeDatahubTopics</a></p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 消息保留时间，单位：ms，当前最小值为60000ms。
+    * <p>消息保留时间，单位：ms，当前最小值为60000ms。</p>
     */
     @SerializedName("RetentionMs")
     @Expose
     private Long RetentionMs;
 
     /**
-    * 主题备注，是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线-。
+    * <p>主题备注</p><p>入参限制：不超过64个字符</p>
     */
     @SerializedName("Note")
     @Expose
     private String Note;
 
     /**
-    * 标签列表
+    * <p>标签列表</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-     * Get 弹性topic名称 
-     * @return Name 弹性topic名称
+     * Get <p>弹性topic名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/86863">DescribeDatahubTopics</a></p> 
+     * @return Name <p>弹性topic名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/86863">DescribeDatahubTopics</a></p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 弹性topic名称
-     * @param Name 弹性topic名称
+     * Set <p>弹性topic名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/86863">DescribeDatahubTopics</a></p>
+     * @param Name <p>弹性topic名称</p><p>取值参考：<a href="https://cloud.tencent.com/document/api/597/86863">DescribeDatahubTopics</a></p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 消息保留时间，单位：ms，当前最小值为60000ms。 
-     * @return RetentionMs 消息保留时间，单位：ms，当前最小值为60000ms。
+     * Get <p>消息保留时间，单位：ms，当前最小值为60000ms。</p> 
+     * @return RetentionMs <p>消息保留时间，单位：ms，当前最小值为60000ms。</p>
      */
     public Long getRetentionMs() {
         return this.RetentionMs;
     }
 
     /**
-     * Set 消息保留时间，单位：ms，当前最小值为60000ms。
-     * @param RetentionMs 消息保留时间，单位：ms，当前最小值为60000ms。
+     * Set <p>消息保留时间，单位：ms，当前最小值为60000ms。</p>
+     * @param RetentionMs <p>消息保留时间，单位：ms，当前最小值为60000ms。</p>
      */
     public void setRetentionMs(Long RetentionMs) {
         this.RetentionMs = RetentionMs;
     }
 
     /**
-     * Get 主题备注，是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线-。 
-     * @return Note 主题备注，是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线-。
+     * Get <p>主题备注</p><p>入参限制：不超过64个字符</p> 
+     * @return Note <p>主题备注</p><p>入参限制：不超过64个字符</p>
      */
     public String getNote() {
         return this.Note;
     }
 
     /**
-     * Set 主题备注，是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线-。
-     * @param Note 主题备注，是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线-。
+     * Set <p>主题备注</p><p>入参限制：不超过64个字符</p>
+     * @param Note <p>主题备注</p><p>入参限制：不超过64个字符</p>
      */
     public void setNote(String Note) {
         this.Note = Note;
     }
 
     /**
-     * Get 标签列表 
-     * @return Tags 标签列表
+     * Get <p>标签列表</p> 
+     * @return Tags <p>标签列表</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签列表
-     * @param Tags 标签列表
+     * Set <p>标签列表</p>
+     * @param Tags <p>标签列表</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;

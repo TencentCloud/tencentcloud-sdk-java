@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class CreateDatahubTopicRequest extends AbstractModel {
 
     /**
-    * 名称，是一个不超过 128 个字符的字符串，必须以“AppId-”为首字符，剩余部分可以包含字母、数字和横划线(-)
+    * <p>名称，是一个不超过 128 个字符的字符串，必须以“AppId-”为首字符，剩余部分可以包含字母、数字和横划线(-)，可通过接口DescribeAppInfo获取。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Partition个数，大于0
+    * <p>Partition个数，最大值为500，大于0</p>
     */
     @SerializedName("PartitionNum")
     @Expose
     private Long PartitionNum;
 
     /**
-    * 消息保留时间，单位ms，当前最小值为60000ms
+    * <p>消息保留时间，单位ms，当前最小值为60000ms</p>
     */
     @SerializedName("RetentionMs")
     @Expose
     private Long RetentionMs;
 
     /**
-    * 主题备注，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
+    * <p>主题备注，是一个不超过 64 个字符的字符串，可以包含字母、数字和横划线(-)。</p>
     */
     @SerializedName("Note")
     @Expose
     private String Note;
 
     /**
-    * 标签列表
+    * <p>标签列表</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-     * Get 名称，是一个不超过 128 个字符的字符串，必须以“AppId-”为首字符，剩余部分可以包含字母、数字和横划线(-) 
-     * @return Name 名称，是一个不超过 128 个字符的字符串，必须以“AppId-”为首字符，剩余部分可以包含字母、数字和横划线(-)
+     * Get <p>名称，是一个不超过 128 个字符的字符串，必须以“AppId-”为首字符，剩余部分可以包含字母、数字和横划线(-)，可通过接口DescribeAppInfo获取。</p> 
+     * @return Name <p>名称，是一个不超过 128 个字符的字符串，必须以“AppId-”为首字符，剩余部分可以包含字母、数字和横划线(-)，可通过接口DescribeAppInfo获取。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 名称，是一个不超过 128 个字符的字符串，必须以“AppId-”为首字符，剩余部分可以包含字母、数字和横划线(-)
-     * @param Name 名称，是一个不超过 128 个字符的字符串，必须以“AppId-”为首字符，剩余部分可以包含字母、数字和横划线(-)
+     * Set <p>名称，是一个不超过 128 个字符的字符串，必须以“AppId-”为首字符，剩余部分可以包含字母、数字和横划线(-)，可通过接口DescribeAppInfo获取。</p>
+     * @param Name <p>名称，是一个不超过 128 个字符的字符串，必须以“AppId-”为首字符，剩余部分可以包含字母、数字和横划线(-)，可通过接口DescribeAppInfo获取。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Partition个数，大于0 
-     * @return PartitionNum Partition个数，大于0
+     * Get <p>Partition个数，最大值为500，大于0</p> 
+     * @return PartitionNum <p>Partition个数，最大值为500，大于0</p>
      */
     public Long getPartitionNum() {
         return this.PartitionNum;
     }
 
     /**
-     * Set Partition个数，大于0
-     * @param PartitionNum Partition个数，大于0
+     * Set <p>Partition个数，最大值为500，大于0</p>
+     * @param PartitionNum <p>Partition个数，最大值为500，大于0</p>
      */
     public void setPartitionNum(Long PartitionNum) {
         this.PartitionNum = PartitionNum;
     }
 
     /**
-     * Get 消息保留时间，单位ms，当前最小值为60000ms 
-     * @return RetentionMs 消息保留时间，单位ms，当前最小值为60000ms
+     * Get <p>消息保留时间，单位ms，当前最小值为60000ms</p> 
+     * @return RetentionMs <p>消息保留时间，单位ms，当前最小值为60000ms</p>
      */
     public Long getRetentionMs() {
         return this.RetentionMs;
     }
 
     /**
-     * Set 消息保留时间，单位ms，当前最小值为60000ms
-     * @param RetentionMs 消息保留时间，单位ms，当前最小值为60000ms
+     * Set <p>消息保留时间，单位ms，当前最小值为60000ms</p>
+     * @param RetentionMs <p>消息保留时间，单位ms，当前最小值为60000ms</p>
      */
     public void setRetentionMs(Long RetentionMs) {
         this.RetentionMs = RetentionMs;
     }
 
     /**
-     * Get 主题备注，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-) 
-     * @return Note 主题备注，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
+     * Get <p>主题备注，是一个不超过 64 个字符的字符串，可以包含字母、数字和横划线(-)。</p> 
+     * @return Note <p>主题备注，是一个不超过 64 个字符的字符串，可以包含字母、数字和横划线(-)。</p>
      */
     public String getNote() {
         return this.Note;
     }
 
     /**
-     * Set 主题备注，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
-     * @param Note 主题备注，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
+     * Set <p>主题备注，是一个不超过 64 个字符的字符串，可以包含字母、数字和横划线(-)。</p>
+     * @param Note <p>主题备注，是一个不超过 64 个字符的字符串，可以包含字母、数字和横划线(-)。</p>
      */
     public void setNote(String Note) {
         this.Note = Note;
     }
 
     /**
-     * Get 标签列表 
-     * @return Tags 标签列表
+     * Get <p>标签列表</p> 
+     * @return Tags <p>标签列表</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签列表
-     * @param Tags 标签列表
+     * Set <p>标签列表</p>
+     * @param Tags <p>标签列表</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;

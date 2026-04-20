@@ -24,279 +24,440 @@ import java.util.HashMap;
 public class AgentInstance extends AbstractModel {
 
     /**
-    * 智能体实例ID
+    * <p>智能体实例ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 智能体实例名称
+    * <p>智能体实例名称</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 智能体ID
+    * <p>智能体ID</p>
     */
     @SerializedName("AgentId")
     @Expose
     private String AgentId;
 
     /**
-    * 智能体名称
+    * <p>智能体名称</p>
     */
     @SerializedName("AgentName")
     @Expose
     private String AgentName;
 
     /**
-    * 智能体类型
+    * <p>智能体类型</p>
     */
     @SerializedName("AgentInternalName")
     @Expose
     private String AgentInternalName;
 
     /**
-    * 智能体服务模式
+    * <p>智能体服务模式</p>
     */
     @SerializedName("AgentType")
     @Expose
     private String AgentType;
 
     /**
-    * 智能体版本
+    * <p>智能体版本</p>
     */
     @SerializedName("AgentVersion")
     @Expose
     private String AgentVersion;
 
     /**
-    * 智能体实例状态
+    * <p>智能体实例状态</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 智能体实例参数列表
+    * <p>智能体实例参数列表</p>
     */
     @SerializedName("Parameters")
     @Expose
     private Parameter [] Parameters;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 修改时间
+    * <p>修改时间</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 资源绑定Tag列表
+    * <p>资源绑定Tag列表</p>
     */
     @SerializedName("Tags")
     @Expose
     private TagItem [] Tags;
 
     /**
-     * Get 智能体实例ID 
-     * @return InstanceId 智能体实例ID
+    * <p>部署位置,intranet-共享版，userVpc-专享版</p>
+    */
+    @SerializedName("DeployPlace")
+    @Expose
+    private String DeployPlace;
+
+    /**
+    * <p>关联的告警策略ID。</p>
+    */
+    @SerializedName("PolicyIds")
+    @Expose
+    private String [] PolicyIds;
+
+    /**
+    * <p>无</p>
+    */
+    @SerializedName("ClawConfig")
+    @Expose
+    private ClawConfigInfo ClawConfig;
+
+    /**
+    * <p>无</p>
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
+
+    /**
+    * <p>无</p>
+    */
+    @SerializedName("AllowedActions")
+    @Expose
+    private String [] AllowedActions;
+
+    /**
+    * <p>无</p>
+    */
+    @SerializedName("LastActiveTime")
+    @Expose
+    private String LastActiveTime;
+
+    /**
+    * <p>无</p>
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
+     * Get <p>智能体实例ID</p> 
+     * @return InstanceId <p>智能体实例ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 智能体实例ID
-     * @param InstanceId 智能体实例ID
+     * Set <p>智能体实例ID</p>
+     * @param InstanceId <p>智能体实例ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 智能体实例名称 
-     * @return InstanceName 智能体实例名称
+     * Get <p>智能体实例名称</p> 
+     * @return InstanceName <p>智能体实例名称</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 智能体实例名称
-     * @param InstanceName 智能体实例名称
+     * Set <p>智能体实例名称</p>
+     * @param InstanceName <p>智能体实例名称</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 智能体ID 
-     * @return AgentId 智能体ID
+     * Get <p>智能体ID</p> 
+     * @return AgentId <p>智能体ID</p>
      */
     public String getAgentId() {
         return this.AgentId;
     }
 
     /**
-     * Set 智能体ID
-     * @param AgentId 智能体ID
+     * Set <p>智能体ID</p>
+     * @param AgentId <p>智能体ID</p>
      */
     public void setAgentId(String AgentId) {
         this.AgentId = AgentId;
     }
 
     /**
-     * Get 智能体名称 
-     * @return AgentName 智能体名称
+     * Get <p>智能体名称</p> 
+     * @return AgentName <p>智能体名称</p>
      */
     public String getAgentName() {
         return this.AgentName;
     }
 
     /**
-     * Set 智能体名称
-     * @param AgentName 智能体名称
+     * Set <p>智能体名称</p>
+     * @param AgentName <p>智能体名称</p>
      */
     public void setAgentName(String AgentName) {
         this.AgentName = AgentName;
     }
 
     /**
-     * Get 智能体类型 
-     * @return AgentInternalName 智能体类型
+     * Get <p>智能体类型</p> 
+     * @return AgentInternalName <p>智能体类型</p>
      */
     public String getAgentInternalName() {
         return this.AgentInternalName;
     }
 
     /**
-     * Set 智能体类型
-     * @param AgentInternalName 智能体类型
+     * Set <p>智能体类型</p>
+     * @param AgentInternalName <p>智能体类型</p>
      */
     public void setAgentInternalName(String AgentInternalName) {
         this.AgentInternalName = AgentInternalName;
     }
 
     /**
-     * Get 智能体服务模式 
-     * @return AgentType 智能体服务模式
+     * Get <p>智能体服务模式</p> 
+     * @return AgentType <p>智能体服务模式</p>
      */
     public String getAgentType() {
         return this.AgentType;
     }
 
     /**
-     * Set 智能体服务模式
-     * @param AgentType 智能体服务模式
+     * Set <p>智能体服务模式</p>
+     * @param AgentType <p>智能体服务模式</p>
      */
     public void setAgentType(String AgentType) {
         this.AgentType = AgentType;
     }
 
     /**
-     * Get 智能体版本 
-     * @return AgentVersion 智能体版本
+     * Get <p>智能体版本</p> 
+     * @return AgentVersion <p>智能体版本</p>
      */
     public String getAgentVersion() {
         return this.AgentVersion;
     }
 
     /**
-     * Set 智能体版本
-     * @param AgentVersion 智能体版本
+     * Set <p>智能体版本</p>
+     * @param AgentVersion <p>智能体版本</p>
      */
     public void setAgentVersion(String AgentVersion) {
         this.AgentVersion = AgentVersion;
     }
 
     /**
-     * Get 智能体实例状态 
-     * @return Status 智能体实例状态
+     * Get <p>智能体实例状态</p> 
+     * @return Status <p>智能体实例状态</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 智能体实例状态
-     * @param Status 智能体实例状态
+     * Set <p>智能体实例状态</p>
+     * @param Status <p>智能体实例状态</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 智能体实例参数列表 
-     * @return Parameters 智能体实例参数列表
+     * Get <p>智能体实例参数列表</p> 
+     * @return Parameters <p>智能体实例参数列表</p>
      */
     public Parameter [] getParameters() {
         return this.Parameters;
     }
 
     /**
-     * Set 智能体实例参数列表
-     * @param Parameters 智能体实例参数列表
+     * Set <p>智能体实例参数列表</p>
+     * @param Parameters <p>智能体实例参数列表</p>
      */
     public void setParameters(Parameter [] Parameters) {
         this.Parameters = Parameters;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 修改时间 
-     * @return UpdateTime 修改时间
+     * Get <p>修改时间</p> 
+     * @return UpdateTime <p>修改时间</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 修改时间
-     * @param UpdateTime 修改时间
+     * Set <p>修改时间</p>
+     * @param UpdateTime <p>修改时间</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 资源绑定Tag列表 
-     * @return Tags 资源绑定Tag列表
+     * Get <p>资源绑定Tag列表</p> 
+     * @return Tags <p>资源绑定Tag列表</p>
      */
     public TagItem [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 资源绑定Tag列表
-     * @param Tags 资源绑定Tag列表
+     * Set <p>资源绑定Tag列表</p>
+     * @param Tags <p>资源绑定Tag列表</p>
      */
     public void setTags(TagItem [] Tags) {
         this.Tags = Tags;
+    }
+
+    /**
+     * Get <p>部署位置,intranet-共享版，userVpc-专享版</p> 
+     * @return DeployPlace <p>部署位置,intranet-共享版，userVpc-专享版</p>
+     */
+    public String getDeployPlace() {
+        return this.DeployPlace;
+    }
+
+    /**
+     * Set <p>部署位置,intranet-共享版，userVpc-专享版</p>
+     * @param DeployPlace <p>部署位置,intranet-共享版，userVpc-专享版</p>
+     */
+    public void setDeployPlace(String DeployPlace) {
+        this.DeployPlace = DeployPlace;
+    }
+
+    /**
+     * Get <p>关联的告警策略ID。</p> 
+     * @return PolicyIds <p>关联的告警策略ID。</p>
+     */
+    public String [] getPolicyIds() {
+        return this.PolicyIds;
+    }
+
+    /**
+     * Set <p>关联的告警策略ID。</p>
+     * @param PolicyIds <p>关联的告警策略ID。</p>
+     */
+    public void setPolicyIds(String [] PolicyIds) {
+        this.PolicyIds = PolicyIds;
+    }
+
+    /**
+     * Get <p>无</p> 
+     * @return ClawConfig <p>无</p>
+     */
+    public ClawConfigInfo getClawConfig() {
+        return this.ClawConfig;
+    }
+
+    /**
+     * Set <p>无</p>
+     * @param ClawConfig <p>无</p>
+     */
+    public void setClawConfig(ClawConfigInfo ClawConfig) {
+        this.ClawConfig = ClawConfig;
+    }
+
+    /**
+     * Get <p>无</p> 
+     * @return InstanceType <p>无</p>
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set <p>无</p>
+     * @param InstanceType <p>无</p>
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
+    /**
+     * Get <p>无</p> 
+     * @return AllowedActions <p>无</p>
+     */
+    public String [] getAllowedActions() {
+        return this.AllowedActions;
+    }
+
+    /**
+     * Set <p>无</p>
+     * @param AllowedActions <p>无</p>
+     */
+    public void setAllowedActions(String [] AllowedActions) {
+        this.AllowedActions = AllowedActions;
+    }
+
+    /**
+     * Get <p>无</p> 
+     * @return LastActiveTime <p>无</p>
+     */
+    public String getLastActiveTime() {
+        return this.LastActiveTime;
+    }
+
+    /**
+     * Set <p>无</p>
+     * @param LastActiveTime <p>无</p>
+     */
+    public void setLastActiveTime(String LastActiveTime) {
+        this.LastActiveTime = LastActiveTime;
+    }
+
+    /**
+     * Get <p>无</p> 
+     * @return Description <p>无</p>
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set <p>无</p>
+     * @param Description <p>无</p>
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
     }
 
     public AgentInstance() {
@@ -349,6 +510,33 @@ public class AgentInstance extends AbstractModel {
                 this.Tags[i] = new TagItem(source.Tags[i]);
             }
         }
+        if (source.DeployPlace != null) {
+            this.DeployPlace = new String(source.DeployPlace);
+        }
+        if (source.PolicyIds != null) {
+            this.PolicyIds = new String[source.PolicyIds.length];
+            for (int i = 0; i < source.PolicyIds.length; i++) {
+                this.PolicyIds[i] = new String(source.PolicyIds[i]);
+            }
+        }
+        if (source.ClawConfig != null) {
+            this.ClawConfig = new ClawConfigInfo(source.ClawConfig);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.AllowedActions != null) {
+            this.AllowedActions = new String[source.AllowedActions.length];
+            for (int i = 0; i < source.AllowedActions.length; i++) {
+                this.AllowedActions[i] = new String(source.AllowedActions[i]);
+            }
+        }
+        if (source.LastActiveTime != null) {
+            this.LastActiveTime = new String(source.LastActiveTime);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
     }
 
 
@@ -368,6 +556,13 @@ public class AgentInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "DeployPlace", this.DeployPlace);
+        this.setParamArraySimple(map, prefix + "PolicyIds.", this.PolicyIds);
+        this.setParamObj(map, prefix + "ClawConfig.", this.ClawConfig);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamArraySimple(map, prefix + "AllowedActions.", this.AllowedActions);
+        this.setParamSimple(map, prefix + "LastActiveTime", this.LastActiveTime);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

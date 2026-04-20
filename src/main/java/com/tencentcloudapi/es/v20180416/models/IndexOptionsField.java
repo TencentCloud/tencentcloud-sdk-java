@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class IndexOptionsField extends AbstractModel {
 
     /**
-    * 过期时间
+    * <p>过期时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpireMaxAge")
@@ -32,7 +32,7 @@ public class IndexOptionsField extends AbstractModel {
     private String ExpireMaxAge;
 
     /**
-    * 过期大小
+    * <p>过期大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpireMaxSize")
@@ -40,7 +40,7 @@ public class IndexOptionsField extends AbstractModel {
     private String ExpireMaxSize;
 
     /**
-    * 滚动周期
+    * <p>滚动周期</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RolloverMaxAge")
@@ -48,7 +48,7 @@ public class IndexOptionsField extends AbstractModel {
     private String RolloverMaxAge;
 
     /**
-    * 是否开启动态滚动
+    * <p>是否开启动态滚动</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RolloverDynamic")
@@ -56,7 +56,7 @@ public class IndexOptionsField extends AbstractModel {
     private String RolloverDynamic;
 
     /**
-    * 是否开启动态分片
+    * <p>是否开启动态分片</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ShardNumDynamic")
@@ -64,7 +64,7 @@ public class IndexOptionsField extends AbstractModel {
     private String ShardNumDynamic;
 
     /**
-    * 时间分区字段
+    * <p>时间分区字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimestampField")
@@ -72,7 +72,7 @@ public class IndexOptionsField extends AbstractModel {
     private String TimestampField;
 
     /**
-    * 写入模式
+    * <p>写入模式</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WriteMode")
@@ -80,9 +80,30 @@ public class IndexOptionsField extends AbstractModel {
     private String WriteMode;
 
     /**
-     * Get 过期时间
+    * <p>是否开启完全卸载</p><p>枚举值：</p><ul><li>true： 开启完全卸载</li><li>false： 关闭完全卸载</li></ul>
+    */
+    @SerializedName("FullOffloadedEnable")
+    @Expose
+    private String FullOffloadedEnable;
+
+    /**
+    * <p>完全卸载生命周期</p>
+    */
+    @SerializedName("FullOffloadedMaxAge")
+    @Expose
+    private String FullOffloadedMaxAge;
+
+    /**
+    * <p>完全卸载后备索引取回后生命周期</p>
+    */
+    @SerializedName("FullOffloadedRetrieveMaxAge")
+    @Expose
+    private String FullOffloadedRetrieveMaxAge;
+
+    /**
+     * Get <p>过期时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExpireMaxAge 过期时间
+     * @return ExpireMaxAge <p>过期时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpireMaxAge() {
@@ -90,9 +111,9 @@ public class IndexOptionsField extends AbstractModel {
     }
 
     /**
-     * Set 过期时间
+     * Set <p>过期时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExpireMaxAge 过期时间
+     * @param ExpireMaxAge <p>过期时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpireMaxAge(String ExpireMaxAge) {
@@ -100,9 +121,9 @@ public class IndexOptionsField extends AbstractModel {
     }
 
     /**
-     * Get 过期大小
+     * Get <p>过期大小</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExpireMaxSize 过期大小
+     * @return ExpireMaxSize <p>过期大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpireMaxSize() {
@@ -110,9 +131,9 @@ public class IndexOptionsField extends AbstractModel {
     }
 
     /**
-     * Set 过期大小
+     * Set <p>过期大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExpireMaxSize 过期大小
+     * @param ExpireMaxSize <p>过期大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpireMaxSize(String ExpireMaxSize) {
@@ -120,9 +141,9 @@ public class IndexOptionsField extends AbstractModel {
     }
 
     /**
-     * Get 滚动周期
+     * Get <p>滚动周期</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RolloverMaxAge 滚动周期
+     * @return RolloverMaxAge <p>滚动周期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRolloverMaxAge() {
@@ -130,9 +151,9 @@ public class IndexOptionsField extends AbstractModel {
     }
 
     /**
-     * Set 滚动周期
+     * Set <p>滚动周期</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RolloverMaxAge 滚动周期
+     * @param RolloverMaxAge <p>滚动周期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRolloverMaxAge(String RolloverMaxAge) {
@@ -140,9 +161,9 @@ public class IndexOptionsField extends AbstractModel {
     }
 
     /**
-     * Get 是否开启动态滚动
+     * Get <p>是否开启动态滚动</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RolloverDynamic 是否开启动态滚动
+     * @return RolloverDynamic <p>是否开启动态滚动</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRolloverDynamic() {
@@ -150,9 +171,9 @@ public class IndexOptionsField extends AbstractModel {
     }
 
     /**
-     * Set 是否开启动态滚动
+     * Set <p>是否开启动态滚动</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RolloverDynamic 是否开启动态滚动
+     * @param RolloverDynamic <p>是否开启动态滚动</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRolloverDynamic(String RolloverDynamic) {
@@ -160,9 +181,9 @@ public class IndexOptionsField extends AbstractModel {
     }
 
     /**
-     * Get 是否开启动态分片
+     * Get <p>是否开启动态分片</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ShardNumDynamic 是否开启动态分片
+     * @return ShardNumDynamic <p>是否开启动态分片</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getShardNumDynamic() {
@@ -170,9 +191,9 @@ public class IndexOptionsField extends AbstractModel {
     }
 
     /**
-     * Set 是否开启动态分片
+     * Set <p>是否开启动态分片</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ShardNumDynamic 是否开启动态分片
+     * @param ShardNumDynamic <p>是否开启动态分片</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setShardNumDynamic(String ShardNumDynamic) {
@@ -180,9 +201,9 @@ public class IndexOptionsField extends AbstractModel {
     }
 
     /**
-     * Get 时间分区字段
+     * Get <p>时间分区字段</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TimestampField 时间分区字段
+     * @return TimestampField <p>时间分区字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimestampField() {
@@ -190,9 +211,9 @@ public class IndexOptionsField extends AbstractModel {
     }
 
     /**
-     * Set 时间分区字段
+     * Set <p>时间分区字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TimestampField 时间分区字段
+     * @param TimestampField <p>时间分区字段</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimestampField(String TimestampField) {
@@ -200,9 +221,9 @@ public class IndexOptionsField extends AbstractModel {
     }
 
     /**
-     * Get 写入模式
+     * Get <p>写入模式</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WriteMode 写入模式
+     * @return WriteMode <p>写入模式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWriteMode() {
@@ -210,13 +231,61 @@ public class IndexOptionsField extends AbstractModel {
     }
 
     /**
-     * Set 写入模式
+     * Set <p>写入模式</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WriteMode 写入模式
+     * @param WriteMode <p>写入模式</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWriteMode(String WriteMode) {
         this.WriteMode = WriteMode;
+    }
+
+    /**
+     * Get <p>是否开启完全卸载</p><p>枚举值：</p><ul><li>true： 开启完全卸载</li><li>false： 关闭完全卸载</li></ul> 
+     * @return FullOffloadedEnable <p>是否开启完全卸载</p><p>枚举值：</p><ul><li>true： 开启完全卸载</li><li>false： 关闭完全卸载</li></ul>
+     */
+    public String getFullOffloadedEnable() {
+        return this.FullOffloadedEnable;
+    }
+
+    /**
+     * Set <p>是否开启完全卸载</p><p>枚举值：</p><ul><li>true： 开启完全卸载</li><li>false： 关闭完全卸载</li></ul>
+     * @param FullOffloadedEnable <p>是否开启完全卸载</p><p>枚举值：</p><ul><li>true： 开启完全卸载</li><li>false： 关闭完全卸载</li></ul>
+     */
+    public void setFullOffloadedEnable(String FullOffloadedEnable) {
+        this.FullOffloadedEnable = FullOffloadedEnable;
+    }
+
+    /**
+     * Get <p>完全卸载生命周期</p> 
+     * @return FullOffloadedMaxAge <p>完全卸载生命周期</p>
+     */
+    public String getFullOffloadedMaxAge() {
+        return this.FullOffloadedMaxAge;
+    }
+
+    /**
+     * Set <p>完全卸载生命周期</p>
+     * @param FullOffloadedMaxAge <p>完全卸载生命周期</p>
+     */
+    public void setFullOffloadedMaxAge(String FullOffloadedMaxAge) {
+        this.FullOffloadedMaxAge = FullOffloadedMaxAge;
+    }
+
+    /**
+     * Get <p>完全卸载后备索引取回后生命周期</p> 
+     * @return FullOffloadedRetrieveMaxAge <p>完全卸载后备索引取回后生命周期</p>
+     */
+    public String getFullOffloadedRetrieveMaxAge() {
+        return this.FullOffloadedRetrieveMaxAge;
+    }
+
+    /**
+     * Set <p>完全卸载后备索引取回后生命周期</p>
+     * @param FullOffloadedRetrieveMaxAge <p>完全卸载后备索引取回后生命周期</p>
+     */
+    public void setFullOffloadedRetrieveMaxAge(String FullOffloadedRetrieveMaxAge) {
+        this.FullOffloadedRetrieveMaxAge = FullOffloadedRetrieveMaxAge;
     }
 
     public IndexOptionsField() {
@@ -248,6 +317,15 @@ public class IndexOptionsField extends AbstractModel {
         if (source.WriteMode != null) {
             this.WriteMode = new String(source.WriteMode);
         }
+        if (source.FullOffloadedEnable != null) {
+            this.FullOffloadedEnable = new String(source.FullOffloadedEnable);
+        }
+        if (source.FullOffloadedMaxAge != null) {
+            this.FullOffloadedMaxAge = new String(source.FullOffloadedMaxAge);
+        }
+        if (source.FullOffloadedRetrieveMaxAge != null) {
+            this.FullOffloadedRetrieveMaxAge = new String(source.FullOffloadedRetrieveMaxAge);
+        }
     }
 
 
@@ -262,6 +340,9 @@ public class IndexOptionsField extends AbstractModel {
         this.setParamSimple(map, prefix + "ShardNumDynamic", this.ShardNumDynamic);
         this.setParamSimple(map, prefix + "TimestampField", this.TimestampField);
         this.setParamSimple(map, prefix + "WriteMode", this.WriteMode);
+        this.setParamSimple(map, prefix + "FullOffloadedEnable", this.FullOffloadedEnable);
+        this.setParamSimple(map, prefix + "FullOffloadedMaxAge", this.FullOffloadedMaxAge);
+        this.setParamSimple(map, prefix + "FullOffloadedRetrieveMaxAge", this.FullOffloadedRetrieveMaxAge);
 
     }
 }

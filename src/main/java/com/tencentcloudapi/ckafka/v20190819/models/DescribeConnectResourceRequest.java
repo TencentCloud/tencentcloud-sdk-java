@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeConnectResourceRequest extends AbstractModel {
 
     /**
-    * 连接源的Id
+    * <p>连接源的Id</p>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-     * Get 连接源的Id 
-     * @return ResourceId 连接源的Id
+     * Get <p>连接源的Id</p> 
+     * @return ResourceId <p>连接源的Id</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 连接源的Id
-     * @param ResourceId 连接源的Id
+     * Set <p>连接源的Id</p>
+     * @param ResourceId <p>连接源的Id</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;

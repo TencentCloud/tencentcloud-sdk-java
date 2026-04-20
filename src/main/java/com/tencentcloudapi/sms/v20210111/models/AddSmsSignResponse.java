@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AddSmsSignResponse extends AbstractModel {
 
     /**
-    * 添加签名响应
+    * <p>添加签名响应</p>
     */
     @SerializedName("AddSignStatus")
     @Expose
@@ -38,16 +38,16 @@ public class AddSmsSignResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 添加签名响应 
-     * @return AddSignStatus 添加签名响应
+     * Get <p>添加签名响应</p> 
+     * @return AddSignStatus <p>添加签名响应</p>
      */
     public AddSignStatus getAddSignStatus() {
         return this.AddSignStatus;
     }
 
     /**
-     * Set 添加签名响应
-     * @param AddSignStatus 添加签名响应
+     * Set <p>添加签名响应</p>
+     * @param AddSignStatus <p>添加签名响应</p>
      */
     public void setAddSignStatus(AddSignStatus AddSignStatus) {
         this.AddSignStatus = AddSignStatus;

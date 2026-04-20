@@ -24,164 +24,187 @@ import java.util.HashMap;
 public class ModifyStreamPackageLinearAssemblyProgramRequest extends AbstractModel {
 
     /**
-    * Program Id。
+    * <p>Program Id。</p>
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 修改后的名称。
+    * <p>修改后的名称。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 编排的目标source的类型，分直播和点播。Tier为Basic时只支持VOD，Tier为Standard时支持Live和VOD
+    * <p>编排的目标source的类型，分直播和点播。Tier为Basic时只支持VOD，Tier为Standard时支持Live和VOD</p>
     */
     @SerializedName("SourceType")
     @Expose
     private String SourceType;
 
     /**
-    * 关联的source location。	
+    * <p>关联的source location。</p>
     */
     @SerializedName("SourceLocationId")
     @Expose
     private String SourceLocationId;
 
     /**
-    * 关联的直播or点播，source名称，location下全局唯一。
+    * <p>关联的直播or点播，source名称，location下全局唯一。</p>
     */
     @SerializedName("SourceName")
     @Expose
     private String SourceName;
 
     /**
-    * PlaybackConf。
+    * <p>PlaybackConf。</p>
     */
     @SerializedName("PlaybackConf")
     @Expose
     private PlaybackInfoReq PlaybackConf;
 
     /**
-    * AdBreaks。
+    * <p>AdBreaks。</p>
     */
     @SerializedName("AdBreaks")
     @Expose
     private AdBreakInfo [] AdBreaks;
 
     /**
-     * Get Program Id。 
-     * @return Id Program Id。
+    * <p>VOD获取方式，支持PreCaching和DynamicUpdating，默认PreCaching，仅Linear频道支持</p>
+    */
+    @SerializedName("VodAcquisitionMethod")
+    @Expose
+    private String VodAcquisitionMethod;
+
+    /**
+     * Get <p>Program Id。</p> 
+     * @return Id <p>Program Id。</p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Program Id。
-     * @param Id Program Id。
+     * Set <p>Program Id。</p>
+     * @param Id <p>Program Id。</p>
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 修改后的名称。 
-     * @return Name 修改后的名称。
+     * Get <p>修改后的名称。</p> 
+     * @return Name <p>修改后的名称。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 修改后的名称。
-     * @param Name 修改后的名称。
+     * Set <p>修改后的名称。</p>
+     * @param Name <p>修改后的名称。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 编排的目标source的类型，分直播和点播。Tier为Basic时只支持VOD，Tier为Standard时支持Live和VOD 
-     * @return SourceType 编排的目标source的类型，分直播和点播。Tier为Basic时只支持VOD，Tier为Standard时支持Live和VOD
+     * Get <p>编排的目标source的类型，分直播和点播。Tier为Basic时只支持VOD，Tier为Standard时支持Live和VOD</p> 
+     * @return SourceType <p>编排的目标source的类型，分直播和点播。Tier为Basic时只支持VOD，Tier为Standard时支持Live和VOD</p>
      */
     public String getSourceType() {
         return this.SourceType;
     }
 
     /**
-     * Set 编排的目标source的类型，分直播和点播。Tier为Basic时只支持VOD，Tier为Standard时支持Live和VOD
-     * @param SourceType 编排的目标source的类型，分直播和点播。Tier为Basic时只支持VOD，Tier为Standard时支持Live和VOD
+     * Set <p>编排的目标source的类型，分直播和点播。Tier为Basic时只支持VOD，Tier为Standard时支持Live和VOD</p>
+     * @param SourceType <p>编排的目标source的类型，分直播和点播。Tier为Basic时只支持VOD，Tier为Standard时支持Live和VOD</p>
      */
     public void setSourceType(String SourceType) {
         this.SourceType = SourceType;
     }
 
     /**
-     * Get 关联的source location。	 
-     * @return SourceLocationId 关联的source location。	
+     * Get <p>关联的source location。</p> 
+     * @return SourceLocationId <p>关联的source location。</p>
      */
     public String getSourceLocationId() {
         return this.SourceLocationId;
     }
 
     /**
-     * Set 关联的source location。	
-     * @param SourceLocationId 关联的source location。	
+     * Set <p>关联的source location。</p>
+     * @param SourceLocationId <p>关联的source location。</p>
      */
     public void setSourceLocationId(String SourceLocationId) {
         this.SourceLocationId = SourceLocationId;
     }
 
     /**
-     * Get 关联的直播or点播，source名称，location下全局唯一。 
-     * @return SourceName 关联的直播or点播，source名称，location下全局唯一。
+     * Get <p>关联的直播or点播，source名称，location下全局唯一。</p> 
+     * @return SourceName <p>关联的直播or点播，source名称，location下全局唯一。</p>
      */
     public String getSourceName() {
         return this.SourceName;
     }
 
     /**
-     * Set 关联的直播or点播，source名称，location下全局唯一。
-     * @param SourceName 关联的直播or点播，source名称，location下全局唯一。
+     * Set <p>关联的直播or点播，source名称，location下全局唯一。</p>
+     * @param SourceName <p>关联的直播or点播，source名称，location下全局唯一。</p>
      */
     public void setSourceName(String SourceName) {
         this.SourceName = SourceName;
     }
 
     /**
-     * Get PlaybackConf。 
-     * @return PlaybackConf PlaybackConf。
+     * Get <p>PlaybackConf。</p> 
+     * @return PlaybackConf <p>PlaybackConf。</p>
      */
     public PlaybackInfoReq getPlaybackConf() {
         return this.PlaybackConf;
     }
 
     /**
-     * Set PlaybackConf。
-     * @param PlaybackConf PlaybackConf。
+     * Set <p>PlaybackConf。</p>
+     * @param PlaybackConf <p>PlaybackConf。</p>
      */
     public void setPlaybackConf(PlaybackInfoReq PlaybackConf) {
         this.PlaybackConf = PlaybackConf;
     }
 
     /**
-     * Get AdBreaks。 
-     * @return AdBreaks AdBreaks。
+     * Get <p>AdBreaks。</p> 
+     * @return AdBreaks <p>AdBreaks。</p>
      */
     public AdBreakInfo [] getAdBreaks() {
         return this.AdBreaks;
     }
 
     /**
-     * Set AdBreaks。
-     * @param AdBreaks AdBreaks。
+     * Set <p>AdBreaks。</p>
+     * @param AdBreaks <p>AdBreaks。</p>
      */
     public void setAdBreaks(AdBreakInfo [] AdBreaks) {
         this.AdBreaks = AdBreaks;
+    }
+
+    /**
+     * Get <p>VOD获取方式，支持PreCaching和DynamicUpdating，默认PreCaching，仅Linear频道支持</p> 
+     * @return VodAcquisitionMethod <p>VOD获取方式，支持PreCaching和DynamicUpdating，默认PreCaching，仅Linear频道支持</p>
+     */
+    public String getVodAcquisitionMethod() {
+        return this.VodAcquisitionMethod;
+    }
+
+    /**
+     * Set <p>VOD获取方式，支持PreCaching和DynamicUpdating，默认PreCaching，仅Linear频道支持</p>
+     * @param VodAcquisitionMethod <p>VOD获取方式，支持PreCaching和DynamicUpdating，默认PreCaching，仅Linear频道支持</p>
+     */
+    public void setVodAcquisitionMethod(String VodAcquisitionMethod) {
+        this.VodAcquisitionMethod = VodAcquisitionMethod;
     }
 
     public ModifyStreamPackageLinearAssemblyProgramRequest() {
@@ -216,6 +239,9 @@ public class ModifyStreamPackageLinearAssemblyProgramRequest extends AbstractMod
                 this.AdBreaks[i] = new AdBreakInfo(source.AdBreaks[i]);
             }
         }
+        if (source.VodAcquisitionMethod != null) {
+            this.VodAcquisitionMethod = new String(source.VodAcquisitionMethod);
+        }
     }
 
 
@@ -230,6 +256,7 @@ public class ModifyStreamPackageLinearAssemblyProgramRequest extends AbstractMod
         this.setParamSimple(map, prefix + "SourceName", this.SourceName);
         this.setParamObj(map, prefix + "PlaybackConf.", this.PlaybackConf);
         this.setParamArrayObj(map, prefix + "AdBreaks.", this.AdBreaks);
+        this.setParamSimple(map, prefix + "VodAcquisitionMethod", this.VodAcquisitionMethod);
 
     }
 }

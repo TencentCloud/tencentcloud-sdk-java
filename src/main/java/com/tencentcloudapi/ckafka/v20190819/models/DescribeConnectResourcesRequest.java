@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeConnectResourcesRequest extends AbstractModel {
 
     /**
-    * 连接源类型
+    * <p>连接源类型</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 连接源名称的关键字查询,支持模糊匹配
+    * <p>连接源名称的关键字查询,支持模糊匹配</p>
     */
     @SerializedName("SearchWord")
     @Expose
     private String SearchWord;
 
     /**
-    * 分页偏移量，默认为0
+    * <p>分页偏移量，默认为0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数量，默认为20，最大值为1000 (超过1000,则限制为1000)
+    * <p>返回数量，默认为20，最大值为1000 (超过1000,则限制为1000)</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 连接源的关键字查询, 根据地域查询本地域内连接管理列表中的连接(仅支持包含region输入的连接源)
+    * <p>连接源的关键字查询, 根据地域查询本地域内连接管理列表中的连接(仅支持包含region输入的连接源)</p>
     */
     @SerializedName("ResourceRegion")
     @Expose
     private String ResourceRegion;
 
     /**
-     * Get 连接源类型 
-     * @return Type 连接源类型
+     * Get <p>连接源类型</p> 
+     * @return Type <p>连接源类型</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 连接源类型
-     * @param Type 连接源类型
+     * Set <p>连接源类型</p>
+     * @param Type <p>连接源类型</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 连接源名称的关键字查询,支持模糊匹配 
-     * @return SearchWord 连接源名称的关键字查询,支持模糊匹配
+     * Get <p>连接源名称的关键字查询,支持模糊匹配</p> 
+     * @return SearchWord <p>连接源名称的关键字查询,支持模糊匹配</p>
      */
     public String getSearchWord() {
         return this.SearchWord;
     }
 
     /**
-     * Set 连接源名称的关键字查询,支持模糊匹配
-     * @param SearchWord 连接源名称的关键字查询,支持模糊匹配
+     * Set <p>连接源名称的关键字查询,支持模糊匹配</p>
+     * @param SearchWord <p>连接源名称的关键字查询,支持模糊匹配</p>
      */
     public void setSearchWord(String SearchWord) {
         this.SearchWord = SearchWord;
     }
 
     /**
-     * Get 分页偏移量，默认为0 
-     * @return Offset 分页偏移量，默认为0
+     * Get <p>分页偏移量，默认为0</p> 
+     * @return Offset <p>分页偏移量，默认为0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页偏移量，默认为0
-     * @param Offset 分页偏移量，默认为0
+     * Set <p>分页偏移量，默认为0</p>
+     * @param Offset <p>分页偏移量，默认为0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量，默认为20，最大值为1000 (超过1000,则限制为1000) 
-     * @return Limit 返回数量，默认为20，最大值为1000 (超过1000,则限制为1000)
+     * Get <p>返回数量，默认为20，最大值为1000 (超过1000,则限制为1000)</p> 
+     * @return Limit <p>返回数量，默认为20，最大值为1000 (超过1000,则限制为1000)</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认为20，最大值为1000 (超过1000,则限制为1000)
-     * @param Limit 返回数量，默认为20，最大值为1000 (超过1000,则限制为1000)
+     * Set <p>返回数量，默认为20，最大值为1000 (超过1000,则限制为1000)</p>
+     * @param Limit <p>返回数量，默认为20，最大值为1000 (超过1000,则限制为1000)</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 连接源的关键字查询, 根据地域查询本地域内连接管理列表中的连接(仅支持包含region输入的连接源) 
-     * @return ResourceRegion 连接源的关键字查询, 根据地域查询本地域内连接管理列表中的连接(仅支持包含region输入的连接源)
+     * Get <p>连接源的关键字查询, 根据地域查询本地域内连接管理列表中的连接(仅支持包含region输入的连接源)</p> 
+     * @return ResourceRegion <p>连接源的关键字查询, 根据地域查询本地域内连接管理列表中的连接(仅支持包含region输入的连接源)</p>
      */
     public String getResourceRegion() {
         return this.ResourceRegion;
     }
 
     /**
-     * Set 连接源的关键字查询, 根据地域查询本地域内连接管理列表中的连接(仅支持包含region输入的连接源)
-     * @param ResourceRegion 连接源的关键字查询, 根据地域查询本地域内连接管理列表中的连接(仅支持包含region输入的连接源)
+     * Set <p>连接源的关键字查询, 根据地域查询本地域内连接管理列表中的连接(仅支持包含region输入的连接源)</p>
+     * @param ResourceRegion <p>连接源的关键字查询, 根据地域查询本地域内连接管理列表中的连接(仅支持包含region输入的连接源)</p>
      */
     public void setResourceRegion(String ResourceRegion) {
         this.ResourceRegion = ResourceRegion;

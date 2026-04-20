@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class CosParam extends AbstractModel {
 
     /**
-    * cos 存储桶名称
+    * <p>cos 存储桶名称</p>
     */
     @SerializedName("BucketName")
     @Expose
     private String BucketName;
 
     /**
-    * 地域代码
+    * <p>地域代码</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 对象名称
+    * <p>对象名称</p>
     */
     @SerializedName("ObjectKey")
     @Expose
     private String ObjectKey;
 
     /**
-    * 汇聚消息量的大小（单位：MB)
+    * <p>汇聚消息量的大小（单位：MB)</p>
     */
     @SerializedName("AggregateBatchSize")
     @Expose
     private Long AggregateBatchSize;
 
     /**
-    * 汇聚的时间间隔（单位：小时）
+    * <p>汇聚的时间间隔（单位：小时）</p>
     */
     @SerializedName("AggregateInterval")
     @Expose
     private Long AggregateInterval;
 
     /**
-    * 消息汇聚后的文件格式（支持csv, json）
+    * <p>消息汇聚后的文件格式（支持csv, json）</p>
     */
     @SerializedName("FormatOutputType")
     @Expose
     private String FormatOutputType;
 
     /**
-    * 转储的对象目录前缀
+    * <p>转储的对象目录前缀</p>
     */
     @SerializedName("ObjectKeyPrefix")
     @Expose
     private String ObjectKeyPrefix;
 
     /**
-    * 根据strptime 时间格式化的分区格式
+    * <p>根据strptime 时间格式化的分区格式</p>
     */
     @SerializedName("DirectoryTimeFormat")
     @Expose
     private String DirectoryTimeFormat;
 
     /**
-     * Get cos 存储桶名称 
-     * @return BucketName cos 存储桶名称
+     * Get <p>cos 存储桶名称</p> 
+     * @return BucketName <p>cos 存储桶名称</p>
      */
     public String getBucketName() {
         return this.BucketName;
     }
 
     /**
-     * Set cos 存储桶名称
-     * @param BucketName cos 存储桶名称
+     * Set <p>cos 存储桶名称</p>
+     * @param BucketName <p>cos 存储桶名称</p>
      */
     public void setBucketName(String BucketName) {
         this.BucketName = BucketName;
     }
 
     /**
-     * Get 地域代码 
-     * @return Region 地域代码
+     * Get <p>地域代码</p> 
+     * @return Region <p>地域代码</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 地域代码
-     * @param Region 地域代码
+     * Set <p>地域代码</p>
+     * @param Region <p>地域代码</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 对象名称 
-     * @return ObjectKey 对象名称
+     * Get <p>对象名称</p> 
+     * @return ObjectKey <p>对象名称</p>
      */
     public String getObjectKey() {
         return this.ObjectKey;
     }
 
     /**
-     * Set 对象名称
-     * @param ObjectKey 对象名称
+     * Set <p>对象名称</p>
+     * @param ObjectKey <p>对象名称</p>
      */
     public void setObjectKey(String ObjectKey) {
         this.ObjectKey = ObjectKey;
     }
 
     /**
-     * Get 汇聚消息量的大小（单位：MB) 
-     * @return AggregateBatchSize 汇聚消息量的大小（单位：MB)
+     * Get <p>汇聚消息量的大小（单位：MB)</p> 
+     * @return AggregateBatchSize <p>汇聚消息量的大小（单位：MB)</p>
      */
     public Long getAggregateBatchSize() {
         return this.AggregateBatchSize;
     }
 
     /**
-     * Set 汇聚消息量的大小（单位：MB)
-     * @param AggregateBatchSize 汇聚消息量的大小（单位：MB)
+     * Set <p>汇聚消息量的大小（单位：MB)</p>
+     * @param AggregateBatchSize <p>汇聚消息量的大小（单位：MB)</p>
      */
     public void setAggregateBatchSize(Long AggregateBatchSize) {
         this.AggregateBatchSize = AggregateBatchSize;
     }
 
     /**
-     * Get 汇聚的时间间隔（单位：小时） 
-     * @return AggregateInterval 汇聚的时间间隔（单位：小时）
+     * Get <p>汇聚的时间间隔（单位：小时）</p> 
+     * @return AggregateInterval <p>汇聚的时间间隔（单位：小时）</p>
      */
     public Long getAggregateInterval() {
         return this.AggregateInterval;
     }
 
     /**
-     * Set 汇聚的时间间隔（单位：小时）
-     * @param AggregateInterval 汇聚的时间间隔（单位：小时）
+     * Set <p>汇聚的时间间隔（单位：小时）</p>
+     * @param AggregateInterval <p>汇聚的时间间隔（单位：小时）</p>
      */
     public void setAggregateInterval(Long AggregateInterval) {
         this.AggregateInterval = AggregateInterval;
     }
 
     /**
-     * Get 消息汇聚后的文件格式（支持csv, json） 
-     * @return FormatOutputType 消息汇聚后的文件格式（支持csv, json）
+     * Get <p>消息汇聚后的文件格式（支持csv, json）</p> 
+     * @return FormatOutputType <p>消息汇聚后的文件格式（支持csv, json）</p>
      */
     public String getFormatOutputType() {
         return this.FormatOutputType;
     }
 
     /**
-     * Set 消息汇聚后的文件格式（支持csv, json）
-     * @param FormatOutputType 消息汇聚后的文件格式（支持csv, json）
+     * Set <p>消息汇聚后的文件格式（支持csv, json）</p>
+     * @param FormatOutputType <p>消息汇聚后的文件格式（支持csv, json）</p>
      */
     public void setFormatOutputType(String FormatOutputType) {
         this.FormatOutputType = FormatOutputType;
     }
 
     /**
-     * Get 转储的对象目录前缀 
-     * @return ObjectKeyPrefix 转储的对象目录前缀
+     * Get <p>转储的对象目录前缀</p> 
+     * @return ObjectKeyPrefix <p>转储的对象目录前缀</p>
      */
     public String getObjectKeyPrefix() {
         return this.ObjectKeyPrefix;
     }
 
     /**
-     * Set 转储的对象目录前缀
-     * @param ObjectKeyPrefix 转储的对象目录前缀
+     * Set <p>转储的对象目录前缀</p>
+     * @param ObjectKeyPrefix <p>转储的对象目录前缀</p>
      */
     public void setObjectKeyPrefix(String ObjectKeyPrefix) {
         this.ObjectKeyPrefix = ObjectKeyPrefix;
     }
 
     /**
-     * Get 根据strptime 时间格式化的分区格式 
-     * @return DirectoryTimeFormat 根据strptime 时间格式化的分区格式
+     * Get <p>根据strptime 时间格式化的分区格式</p> 
+     * @return DirectoryTimeFormat <p>根据strptime 时间格式化的分区格式</p>
      */
     public String getDirectoryTimeFormat() {
         return this.DirectoryTimeFormat;
     }
 
     /**
-     * Set 根据strptime 时间格式化的分区格式
-     * @param DirectoryTimeFormat 根据strptime 时间格式化的分区格式
+     * Set <p>根据strptime 时间格式化的分区格式</p>
+     * @param DirectoryTimeFormat <p>根据strptime 时间格式化的分区格式</p>
      */
     public void setDirectoryTimeFormat(String DirectoryTimeFormat) {
         this.DirectoryTimeFormat = DirectoryTimeFormat;

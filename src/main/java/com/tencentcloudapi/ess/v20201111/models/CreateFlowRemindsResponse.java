@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateFlowRemindsResponse extends AbstractModel {
 
     /**
-    * 合同催办结果的详细信息列表。
+    * <p>合同催办结果的详细信息列表。</p>
     */
     @SerializedName("RemindFlowRecords")
     @Expose
@@ -38,16 +38,16 @@ public class CreateFlowRemindsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 合同催办结果的详细信息列表。 
-     * @return RemindFlowRecords 合同催办结果的详细信息列表。
+     * Get <p>合同催办结果的详细信息列表。</p> 
+     * @return RemindFlowRecords <p>合同催办结果的详细信息列表。</p>
      */
     public RemindFlowRecords [] getRemindFlowRecords() {
         return this.RemindFlowRecords;
     }
 
     /**
-     * Set 合同催办结果的详细信息列表。
-     * @param RemindFlowRecords 合同催办结果的详细信息列表。
+     * Set <p>合同催办结果的详细信息列表。</p>
+     * @param RemindFlowRecords <p>合同催办结果的详细信息列表。</p>
      */
     public void setRemindFlowRecords(RemindFlowRecords [] RemindFlowRecords) {
         this.RemindFlowRecords = RemindFlowRecords;

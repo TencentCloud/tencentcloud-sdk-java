@@ -24,165 +24,165 @@ import java.util.HashMap;
 public class CreateDatahubTaskRequest extends AbstractModel {
 
     /**
-    * 任务名称,只能以字母起始,允许包含字母、数字、- 、.  、 下划线且长度不超过64 (、为分割符号规则不包含)
+    * <p>任务名称,只能以字母起始,允许包含字母、数字、- 、.  、 下划线且长度不超过64 (、为分割符号规则不包含)</p>
     */
     @SerializedName("TaskName")
     @Expose
     private String TaskName;
 
     /**
-    * 任务类型，SOURCE数据接入，SINK数据流出
+    * <p>任务类型，SOURCE数据接入，SINK数据流出</p>
     */
     @SerializedName("TaskType")
     @Expose
     private String TaskType;
 
     /**
-    * 数据源
+    * <p>数据源</p>
     */
     @SerializedName("SourceResource")
     @Expose
     private DatahubResource SourceResource;
 
     /**
-    * 数据目标
+    * <p>数据目标</p>
     */
     @SerializedName("TargetResource")
     @Expose
     private DatahubResource TargetResource;
 
     /**
-    * 数据处理规则
+    * <p>数据处理规则</p>
     */
     @SerializedName("TransformParam")
     @Expose
     private TransformParam TransformParam;
 
     /**
-    * 实例连接参数【已废弃】
+    * <p>实例连接参数【已废弃】</p>
     */
     @SerializedName("PrivateLinkParam")
     @Expose
     private PrivateLinkParam PrivateLinkParam;
 
     /**
-    * 选择所要绑定的SchemaId
+    * <p>选择所要绑定的SchemaId</p>
     */
     @SerializedName("SchemaId")
     @Expose
     private String SchemaId;
 
     /**
-    * 数据处理规则
+    * <p>数据处理规则</p>
     */
     @SerializedName("TransformsParam")
     @Expose
     private TransformsParam TransformsParam;
 
     /**
-    * 任务Id
+    * <p>任务Id</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 标签列表
+    * <p>标签列表</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 任务描述信息
+    * <p>任务描述信息</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-     * Get 任务名称,只能以字母起始,允许包含字母、数字、- 、.  、 下划线且长度不超过64 (、为分割符号规则不包含) 
-     * @return TaskName 任务名称,只能以字母起始,允许包含字母、数字、- 、.  、 下划线且长度不超过64 (、为分割符号规则不包含)
+     * Get <p>任务名称,只能以字母起始,允许包含字母、数字、- 、.  、 下划线且长度不超过64 (、为分割符号规则不包含)</p> 
+     * @return TaskName <p>任务名称,只能以字母起始,允许包含字母、数字、- 、.  、 下划线且长度不超过64 (、为分割符号规则不包含)</p>
      */
     public String getTaskName() {
         return this.TaskName;
     }
 
     /**
-     * Set 任务名称,只能以字母起始,允许包含字母、数字、- 、.  、 下划线且长度不超过64 (、为分割符号规则不包含)
-     * @param TaskName 任务名称,只能以字母起始,允许包含字母、数字、- 、.  、 下划线且长度不超过64 (、为分割符号规则不包含)
+     * Set <p>任务名称,只能以字母起始,允许包含字母、数字、- 、.  、 下划线且长度不超过64 (、为分割符号规则不包含)</p>
+     * @param TaskName <p>任务名称,只能以字母起始,允许包含字母、数字、- 、.  、 下划线且长度不超过64 (、为分割符号规则不包含)</p>
      */
     public void setTaskName(String TaskName) {
         this.TaskName = TaskName;
     }
 
     /**
-     * Get 任务类型，SOURCE数据接入，SINK数据流出 
-     * @return TaskType 任务类型，SOURCE数据接入，SINK数据流出
+     * Get <p>任务类型，SOURCE数据接入，SINK数据流出</p> 
+     * @return TaskType <p>任务类型，SOURCE数据接入，SINK数据流出</p>
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 任务类型，SOURCE数据接入，SINK数据流出
-     * @param TaskType 任务类型，SOURCE数据接入，SINK数据流出
+     * Set <p>任务类型，SOURCE数据接入，SINK数据流出</p>
+     * @param TaskType <p>任务类型，SOURCE数据接入，SINK数据流出</p>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get 数据源 
-     * @return SourceResource 数据源
+     * Get <p>数据源</p> 
+     * @return SourceResource <p>数据源</p>
      */
     public DatahubResource getSourceResource() {
         return this.SourceResource;
     }
 
     /**
-     * Set 数据源
-     * @param SourceResource 数据源
+     * Set <p>数据源</p>
+     * @param SourceResource <p>数据源</p>
      */
     public void setSourceResource(DatahubResource SourceResource) {
         this.SourceResource = SourceResource;
     }
 
     /**
-     * Get 数据目标 
-     * @return TargetResource 数据目标
+     * Get <p>数据目标</p> 
+     * @return TargetResource <p>数据目标</p>
      */
     public DatahubResource getTargetResource() {
         return this.TargetResource;
     }
 
     /**
-     * Set 数据目标
-     * @param TargetResource 数据目标
+     * Set <p>数据目标</p>
+     * @param TargetResource <p>数据目标</p>
      */
     public void setTargetResource(DatahubResource TargetResource) {
         this.TargetResource = TargetResource;
     }
 
     /**
-     * Get 数据处理规则 
-     * @return TransformParam 数据处理规则
+     * Get <p>数据处理规则</p> 
+     * @return TransformParam <p>数据处理规则</p>
      */
     public TransformParam getTransformParam() {
         return this.TransformParam;
     }
 
     /**
-     * Set 数据处理规则
-     * @param TransformParam 数据处理规则
+     * Set <p>数据处理规则</p>
+     * @param TransformParam <p>数据处理规则</p>
      */
     public void setTransformParam(TransformParam TransformParam) {
         this.TransformParam = TransformParam;
     }
 
     /**
-     * Get 实例连接参数【已废弃】 
-     * @return PrivateLinkParam 实例连接参数【已废弃】
+     * Get <p>实例连接参数【已废弃】</p> 
+     * @return PrivateLinkParam <p>实例连接参数【已废弃】</p>
      * @deprecated
      */
     @Deprecated
@@ -191,8 +191,8 @@ public class CreateDatahubTaskRequest extends AbstractModel {
     }
 
     /**
-     * Set 实例连接参数【已废弃】
-     * @param PrivateLinkParam 实例连接参数【已废弃】
+     * Set <p>实例连接参数【已废弃】</p>
+     * @param PrivateLinkParam <p>实例连接参数【已废弃】</p>
      * @deprecated
      */
     @Deprecated
@@ -201,80 +201,80 @@ public class CreateDatahubTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 选择所要绑定的SchemaId 
-     * @return SchemaId 选择所要绑定的SchemaId
+     * Get <p>选择所要绑定的SchemaId</p> 
+     * @return SchemaId <p>选择所要绑定的SchemaId</p>
      */
     public String getSchemaId() {
         return this.SchemaId;
     }
 
     /**
-     * Set 选择所要绑定的SchemaId
-     * @param SchemaId 选择所要绑定的SchemaId
+     * Set <p>选择所要绑定的SchemaId</p>
+     * @param SchemaId <p>选择所要绑定的SchemaId</p>
      */
     public void setSchemaId(String SchemaId) {
         this.SchemaId = SchemaId;
     }
 
     /**
-     * Get 数据处理规则 
-     * @return TransformsParam 数据处理规则
+     * Get <p>数据处理规则</p> 
+     * @return TransformsParam <p>数据处理规则</p>
      */
     public TransformsParam getTransformsParam() {
         return this.TransformsParam;
     }
 
     /**
-     * Set 数据处理规则
-     * @param TransformsParam 数据处理规则
+     * Set <p>数据处理规则</p>
+     * @param TransformsParam <p>数据处理规则</p>
      */
     public void setTransformsParam(TransformsParam TransformsParam) {
         this.TransformsParam = TransformsParam;
     }
 
     /**
-     * Get 任务Id 
-     * @return TaskId 任务Id
+     * Get <p>任务Id</p> 
+     * @return TaskId <p>任务Id</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务Id
-     * @param TaskId 任务Id
+     * Set <p>任务Id</p>
+     * @param TaskId <p>任务Id</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 标签列表 
-     * @return Tags 标签列表
+     * Get <p>标签列表</p> 
+     * @return Tags <p>标签列表</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签列表
-     * @param Tags 标签列表
+     * Set <p>标签列表</p>
+     * @param Tags <p>标签列表</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 任务描述信息 
-     * @return Description 任务描述信息
+     * Get <p>任务描述信息</p> 
+     * @return Description <p>任务描述信息</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 任务描述信息
-     * @param Description 任务描述信息
+     * Set <p>任务描述信息</p>
+     * @param Description <p>任务描述信息</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;

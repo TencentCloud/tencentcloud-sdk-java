@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class TdwParam extends AbstractModel {
 
     /**
-    * Tdw的bid
+    * <p>Tdw的bid</p>
     */
     @SerializedName("Bid")
     @Expose
     private String Bid;
 
     /**
-    * Tdw的tid
+    * <p>Tdw的tid</p>
     */
     @SerializedName("Tid")
     @Expose
     private String Tid;
 
     /**
-    * 默认true
+    * <p>默认true</p>
     */
     @SerializedName("IsDomestic")
     @Expose
     private Boolean IsDomestic;
 
     /**
-    * TDW地址，默认tl-tdbank-tdmanager.tencent-distribute.com
+    * <p>TDW地址，默认tl-tdbank-tdmanager.tencent-distribute.com</p>
     */
     @SerializedName("TdwHost")
     @Expose
     private String TdwHost;
 
     /**
-    * TDW端口，默认8099
+    * <p>TDW端口，默认8099</p>
     */
     @SerializedName("TdwPort")
     @Expose
     private Long TdwPort;
 
     /**
-     * Get Tdw的bid 
-     * @return Bid Tdw的bid
+     * Get <p>Tdw的bid</p> 
+     * @return Bid <p>Tdw的bid</p>
      */
     public String getBid() {
         return this.Bid;
     }
 
     /**
-     * Set Tdw的bid
-     * @param Bid Tdw的bid
+     * Set <p>Tdw的bid</p>
+     * @param Bid <p>Tdw的bid</p>
      */
     public void setBid(String Bid) {
         this.Bid = Bid;
     }
 
     /**
-     * Get Tdw的tid 
-     * @return Tid Tdw的tid
+     * Get <p>Tdw的tid</p> 
+     * @return Tid <p>Tdw的tid</p>
      */
     public String getTid() {
         return this.Tid;
     }
 
     /**
-     * Set Tdw的tid
-     * @param Tid Tdw的tid
+     * Set <p>Tdw的tid</p>
+     * @param Tid <p>Tdw的tid</p>
      */
     public void setTid(String Tid) {
         this.Tid = Tid;
     }
 
     /**
-     * Get 默认true 
-     * @return IsDomestic 默认true
+     * Get <p>默认true</p> 
+     * @return IsDomestic <p>默认true</p>
      */
     public Boolean getIsDomestic() {
         return this.IsDomestic;
     }
 
     /**
-     * Set 默认true
-     * @param IsDomestic 默认true
+     * Set <p>默认true</p>
+     * @param IsDomestic <p>默认true</p>
      */
     public void setIsDomestic(Boolean IsDomestic) {
         this.IsDomestic = IsDomestic;
     }
 
     /**
-     * Get TDW地址，默认tl-tdbank-tdmanager.tencent-distribute.com 
-     * @return TdwHost TDW地址，默认tl-tdbank-tdmanager.tencent-distribute.com
+     * Get <p>TDW地址，默认tl-tdbank-tdmanager.tencent-distribute.com</p> 
+     * @return TdwHost <p>TDW地址，默认tl-tdbank-tdmanager.tencent-distribute.com</p>
      */
     public String getTdwHost() {
         return this.TdwHost;
     }
 
     /**
-     * Set TDW地址，默认tl-tdbank-tdmanager.tencent-distribute.com
-     * @param TdwHost TDW地址，默认tl-tdbank-tdmanager.tencent-distribute.com
+     * Set <p>TDW地址，默认tl-tdbank-tdmanager.tencent-distribute.com</p>
+     * @param TdwHost <p>TDW地址，默认tl-tdbank-tdmanager.tencent-distribute.com</p>
      */
     public void setTdwHost(String TdwHost) {
         this.TdwHost = TdwHost;
     }
 
     /**
-     * Get TDW端口，默认8099 
-     * @return TdwPort TDW端口，默认8099
+     * Get <p>TDW端口，默认8099</p> 
+     * @return TdwPort <p>TDW端口，默认8099</p>
      */
     public Long getTdwPort() {
         return this.TdwPort;
     }
 
     /**
-     * Set TDW端口，默认8099
-     * @param TdwPort TDW端口，默认8099
+     * Set <p>TDW端口，默认8099</p>
+     * @param TdwPort <p>TDW端口，默认8099</p>
      */
     public void setTdwPort(Long TdwPort) {
         this.TdwPort = TdwPort;

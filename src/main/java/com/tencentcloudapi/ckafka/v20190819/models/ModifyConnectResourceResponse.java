@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyConnectResourceResponse extends AbstractModel {
 
     /**
-    * 连接源的Id
+    * <p>连接源的Id</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyConnectResourceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 连接源的Id 
-     * @return Result 连接源的Id
+     * Get <p>连接源的Id</p> 
+     * @return Result <p>连接源的Id</p>
      */
     public ConnectResourceResourceIdResp getResult() {
         return this.Result;
     }
 
     /**
-     * Set 连接源的Id
-     * @param Result 连接源的Id
+     * Set <p>连接源的Id</p>
+     * @param Result <p>连接源的Id</p>
      */
     public void setResult(ConnectResourceResourceIdResp Result) {
         this.Result = Result;

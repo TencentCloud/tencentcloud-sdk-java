@@ -209,6 +209,17 @@ public class VodClient extends AbstractClient{
 
     /**
      *该接口用于[生成 AIGC 视频](https://cloud.tencent.com/document/product/266/124474)。<b>接口处于内测阶段，如需使用请[联系我们](https://cloud.tencent.com/online-service?from=sales_sales&source=PRESALE)，接口调用会产生实际费用</b>，请参考点播 [AIGC 生视频计费文档](https://cloud.tencent.com/document/product/266/95125#96b3b59a-f9e1-49e9-966a-bedb70a4bf12)。该功能结算模式为[后付费](https://cloud.tencent.com/document/product/266/2838)，日结客户当天使用将在第二天出账，月结客户将在次月1日统一出上月使用费用。
+     * @param req CreateAigcVideoRedrawTaskRequest
+     * @return CreateAigcVideoRedrawTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAigcVideoRedrawTaskResponse CreateAigcVideoRedrawTask(CreateAigcVideoRedrawTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAigcVideoRedrawTask", CreateAigcVideoRedrawTaskResponse.class);
+    }
+
+    /**
+     *该接口用于[生成 AIGC 视频](https://cloud.tencent.com/document/product/266/124474)。<b>接口处于内测阶段，如需使用请[联系我们](https://cloud.tencent.com/online-service?from=sales_sales&source=PRESALE)，接口调用会产生实际费用</b>，请参考点播 [AIGC 生视频计费文档](https://cloud.tencent.com/document/product/266/95125#96b3b59a-f9e1-49e9-966a-bedb70a4bf12)。该功能结算模式为[后付费](https://cloud.tencent.com/document/product/266/2838)，日结客户当天使用将在第二天出账，月结客户将在次月1日统一出上月使用费用。
      * @param req CreateAigcVideoTaskRequest
      * @return CreateAigcVideoTaskResponse
      * @throws TencentCloudSDKException

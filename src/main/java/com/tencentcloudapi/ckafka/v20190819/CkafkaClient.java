@@ -138,7 +138,7 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
-     *创建Datahub连接源
+     *创建连接器连接
      * @param req CreateConnectResourceRequest
      * @return CreateConnectResourceResponse
      * @throws TencentCloudSDKException
@@ -160,7 +160,7 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
-     *创建DIP转储任务
+     *创建连接器任务
      * @param req CreateDatahubTaskRequest
      * @return CreateDatahubTaskResponse
      * @throws TencentCloudSDKException
@@ -303,7 +303,7 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
-     *删除Datahub连接源
+     *删除连接器连接
      * @param req DeleteConnectResourceRequest
      * @return DeleteConnectResourceResponse
      * @throws TencentCloudSDKException
@@ -314,7 +314,7 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
-     *删除Dip任务
+     *删除连接器任务
      * @param req DeleteDatahubTaskRequest
      * @return DeleteDatahubTaskResponse
      * @throws TencentCloudSDKException
@@ -446,6 +446,17 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *查询实例公网IP白名单列表接口
+     * @param req DescribeAccessPolicyRequest
+     * @return DescribeAccessPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccessPolicyResponse DescribeAccessPolicy(DescribeAccessPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAccessPolicy", DescribeAccessPolicyResponse.class);
+    }
+
+    /**
      *查询ACL规则列表
      * @param req DescribeAclRuleRequest
      * @return DescribeAclRuleResponse
@@ -479,7 +490,7 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
-     *查询Datahub连接源
+     *查询连接器连接详情
      * @param req DescribeConnectResourceRequest
      * @return DescribeConnectResourceResponse
      * @throws TencentCloudSDKException
@@ -490,7 +501,7 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
-     *查询Datahub连接源列表
+     *查询连接器连接列表
      * @param req DescribeConnectResourcesRequest
      * @return DescribeConnectResourcesResponse
      * @throws TencentCloudSDKException
@@ -534,7 +545,7 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
-     *查询Datahub任务信息
+     *查询连接器任务详情
      * @param req DescribeDatahubTaskRequest
      * @return DescribeDatahubTaskResponse
      * @throws TencentCloudSDKException
@@ -545,7 +556,7 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
-     *查询Datahub任务列表
+     *查询连接器任务列表
      * @param req DescribeDatahubTasksRequest
      * @return DescribeDatahubTasksResponse
      * @throws TencentCloudSDKException
@@ -887,6 +898,17 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *修改实例公网IP白名单列表接口
+     * @param req ModifyAccessPolicyRequest
+     * @return ModifyAccessPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAccessPolicyResponse ModifyAccessPolicy(ModifyAccessPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAccessPolicy", ModifyAccessPolicyResponse.class);
+    }
+
+    /**
      *修改ACL策略，目前只支持预设规则的是否应用到新增topic这一项的修改
      * @param req ModifyAclRuleRequest
      * @return ModifyAclRuleResponse
@@ -898,7 +920,7 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
-     *编辑Datahub连接源
+     *编辑连接器连接
      * @param req ModifyConnectResourceRequest
      * @return ModifyConnectResourceResponse
      * @throws TencentCloudSDKException
@@ -909,7 +931,7 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
-     *修改Datahub任务
+     *修改连接器任务
      * @param req ModifyDatahubTaskRequest
      * @return ModifyDatahubTaskResponse
      * @throws TencentCloudSDKException
@@ -997,7 +1019,7 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
-     *暂停Dip任务
+     *暂停连接器任务
      * @param req PauseDatahubTaskRequest
      * @return PauseDatahubTaskResponse
      * @throws TencentCloudSDKException
@@ -1019,7 +1041,7 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
-     *Datahub任务异常时，重启Datahub任务
+     *连接器任务异常时，重启连接器任务
      * @param req RestartDatahubTaskRequest
      * @return RestartDatahubTaskResponse
      * @throws TencentCloudSDKException
@@ -1030,7 +1052,7 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
-     *恢复Dip任务
+     *恢复连接器任务
      * @param req ResumeDatahubTaskRequest
      * @return ResumeDatahubTaskResponse
      * @throws TencentCloudSDKException

@@ -31,11 +31,18 @@ public class DescribeAgentInstancesResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * 智能体实例列表
+    * <p>智能体实例列表</p>
     */
     @SerializedName("Items")
     @Expose
     private AgentInstance [] Items;
+
+    /**
+    * <p>无</p>
+    */
+    @SerializedName("StatusCounts")
+    @Expose
+    private StatusItem [] StatusCounts;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -61,19 +68,35 @@ public class DescribeAgentInstancesResponse extends AbstractModel {
     }
 
     /**
-     * Get 智能体实例列表 
-     * @return Items 智能体实例列表
+     * Get <p>智能体实例列表</p> 
+     * @return Items <p>智能体实例列表</p>
      */
     public AgentInstance [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set 智能体实例列表
-     * @param Items 智能体实例列表
+     * Set <p>智能体实例列表</p>
+     * @param Items <p>智能体实例列表</p>
      */
     public void setItems(AgentInstance [] Items) {
         this.Items = Items;
+    }
+
+    /**
+     * Get <p>无</p> 
+     * @return StatusCounts <p>无</p>
+     */
+    public StatusItem [] getStatusCounts() {
+        return this.StatusCounts;
+    }
+
+    /**
+     * Set <p>无</p>
+     * @param StatusCounts <p>无</p>
+     */
+    public void setStatusCounts(StatusItem [] StatusCounts) {
+        this.StatusCounts = StatusCounts;
     }
 
     /**
@@ -109,6 +132,12 @@ public class DescribeAgentInstancesResponse extends AbstractModel {
                 this.Items[i] = new AgentInstance(source.Items[i]);
             }
         }
+        if (source.StatusCounts != null) {
+            this.StatusCounts = new StatusItem[source.StatusCounts.length];
+            for (int i = 0; i < source.StatusCounts.length; i++) {
+                this.StatusCounts[i] = new StatusItem(source.StatusCounts[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -121,6 +150,7 @@ public class DescribeAgentInstancesResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "Items.", this.Items);
+        this.setParamArrayObj(map, prefix + "StatusCounts.", this.StatusCounts);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

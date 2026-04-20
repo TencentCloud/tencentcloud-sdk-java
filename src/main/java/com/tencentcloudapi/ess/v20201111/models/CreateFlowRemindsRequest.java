@@ -24,82 +24,118 @@ import java.util.HashMap;
 public class CreateFlowRemindsRequest extends AbstractModel {
 
     /**
-    * 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+    * <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
 
     /**
-    * 需执行催办的签署流程ID数组，最多包含100个。
+    * <p>需执行催办的签署流程ID数组，最多包含100个。</p>
     */
     @SerializedName("FlowIds")
     @Expose
     private String [] FlowIds;
 
     /**
-    * 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+    * <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-     * Get 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
-     * @return Operator 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+    * <p>指定通知方式，枚举值：SMS / EMAIL；为空则按签署人原始 NotifyType 处理</p>
+    */
+    @SerializedName("RemindTypes")
+    @Expose
+    private String [] RemindTypes;
+
+    /**
+    * <p>邮箱覆盖列表，为指定签署人使用特定邮箱发送邮件催办</p>
+    */
+    @SerializedName("RemindEmailInfos")
+    @Expose
+    private RemindEmailInfo [] RemindEmailInfos;
+
+    /**
+     * Get <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p> 
+     * @return Operator <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
-     * @param Operator 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * Set <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
+     * @param Operator <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 需执行催办的签署流程ID数组，最多包含100个。 
-     * @return FlowIds 需执行催办的签署流程ID数组，最多包含100个。
+     * Get <p>需执行催办的签署流程ID数组，最多包含100个。</p> 
+     * @return FlowIds <p>需执行催办的签署流程ID数组，最多包含100个。</p>
      */
     public String [] getFlowIds() {
         return this.FlowIds;
     }
 
     /**
-     * Set 需执行催办的签署流程ID数组，最多包含100个。
-     * @param FlowIds 需执行催办的签署流程ID数组，最多包含100个。
+     * Set <p>需执行催办的签署流程ID数组，最多包含100个。</p>
+     * @param FlowIds <p>需执行催办的签署流程ID数组，最多包含100个。</p>
      */
     public void setFlowIds(String [] FlowIds) {
         this.FlowIds = FlowIds;
     }
 
     /**
-     * Get 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。 
-     * @return Agent 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * Get <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p> 
+     * @return Agent <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
-     * @param Agent 代理企业和员工的信息。
-在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * Set <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
+     * @param Agent <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
+    }
+
+    /**
+     * Get <p>指定通知方式，枚举值：SMS / EMAIL；为空则按签署人原始 NotifyType 处理</p> 
+     * @return RemindTypes <p>指定通知方式，枚举值：SMS / EMAIL；为空则按签署人原始 NotifyType 处理</p>
+     */
+    public String [] getRemindTypes() {
+        return this.RemindTypes;
+    }
+
+    /**
+     * Set <p>指定通知方式，枚举值：SMS / EMAIL；为空则按签署人原始 NotifyType 处理</p>
+     * @param RemindTypes <p>指定通知方式，枚举值：SMS / EMAIL；为空则按签署人原始 NotifyType 处理</p>
+     */
+    public void setRemindTypes(String [] RemindTypes) {
+        this.RemindTypes = RemindTypes;
+    }
+
+    /**
+     * Get <p>邮箱覆盖列表，为指定签署人使用特定邮箱发送邮件催办</p> 
+     * @return RemindEmailInfos <p>邮箱覆盖列表，为指定签署人使用特定邮箱发送邮件催办</p>
+     */
+    public RemindEmailInfo [] getRemindEmailInfos() {
+        return this.RemindEmailInfos;
+    }
+
+    /**
+     * Set <p>邮箱覆盖列表，为指定签署人使用特定邮箱发送邮件催办</p>
+     * @param RemindEmailInfos <p>邮箱覆盖列表，为指定签署人使用特定邮箱发送邮件催办</p>
+     */
+    public void setRemindEmailInfos(RemindEmailInfo [] RemindEmailInfos) {
+        this.RemindEmailInfos = RemindEmailInfos;
     }
 
     public CreateFlowRemindsRequest() {
@@ -122,6 +158,18 @@ public class CreateFlowRemindsRequest extends AbstractModel {
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
         }
+        if (source.RemindTypes != null) {
+            this.RemindTypes = new String[source.RemindTypes.length];
+            for (int i = 0; i < source.RemindTypes.length; i++) {
+                this.RemindTypes[i] = new String(source.RemindTypes[i]);
+            }
+        }
+        if (source.RemindEmailInfos != null) {
+            this.RemindEmailInfos = new RemindEmailInfo[source.RemindEmailInfos.length];
+            for (int i = 0; i < source.RemindEmailInfos.length; i++) {
+                this.RemindEmailInfos[i] = new RemindEmailInfo(source.RemindEmailInfos[i]);
+            }
+        }
     }
 
 
@@ -132,6 +180,8 @@ public class CreateFlowRemindsRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamArraySimple(map, prefix + "FlowIds.", this.FlowIds);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
+        this.setParamArraySimple(map, prefix + "RemindTypes.", this.RemindTypes);
+        this.setParamArrayObj(map, prefix + "RemindEmailInfos.", this.RemindEmailInfos);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteDatahubTaskResponse extends AbstractModel {
 
     /**
-    * 操作结果
+    * <p>操作结果</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DeleteDatahubTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 操作结果 
-     * @return Result 操作结果
+     * Get <p>操作结果</p> 
+     * @return Result <p>操作结果</p>
      */
     public DatahubTaskIdRes getResult() {
         return this.Result;
     }
 
     /**
-     * Set 操作结果
-     * @param Result 操作结果
+     * Set <p>操作结果</p>
+     * @param Result <p>操作结果</p>
      */
     public void setResult(DatahubTaskIdRes Result) {
         this.Result = Result;

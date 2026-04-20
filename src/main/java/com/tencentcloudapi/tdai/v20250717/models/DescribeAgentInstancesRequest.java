@@ -38,53 +38,60 @@ public class DescribeAgentInstancesRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 实例ID，为空时查询所有，如果填写则会根据InstanceId筛选
+    * <p>实例ID，为空时查询所有，如果填写则会根据InstanceId筛选</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例名，为空时查询所有，如果填写则会根据InstanceName筛选
+    * <p>实例名，为空时查询所有，如果填写则会根据InstanceName筛选</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 智能体ID，为空时查询所有，如果填写则会根据AgentId筛选
+    * <p>智能体ID，为空时查询所有，如果填写则会根据AgentId筛选</p>
     */
     @SerializedName("AgentId")
     @Expose
     private String AgentId;
 
     /**
-    * 智能体名称，为空时查询所有，如果填写则会根据AgentName筛选
+    * <p>智能体名称，为空时查询所有，如果填写则会根据AgentName筛选</p>
     */
     @SerializedName("AgentName")
     @Expose
     private String AgentName;
 
     /**
-    * 智能体类型，为空时查询所有，如果填写则会根据AgentName筛选
+    * <p>智能体类型，为空时查询所有，如果填写则会根据AgentName筛选</p>
     */
     @SerializedName("AgentInternalName")
     @Expose
     private String AgentInternalName;
 
     /**
-    * 智能体实例状态，为空时查询所有，如果填写则会根据Status筛选
+    * <p>智能体实例状态，为空时查询所有，如果填写则会根据Status筛选</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 标签过滤信息
+    * <p>标签过滤信息</p>
     */
     @SerializedName("TagFilter")
     @Expose
     private TagFilter [] TagFilter;
+
+    /**
+    * <p>实例类型</p>
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
 
     /**
      * Get 查询开始位置 
@@ -119,115 +126,131 @@ public class DescribeAgentInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例ID，为空时查询所有，如果填写则会根据InstanceId筛选 
-     * @return InstanceId 实例ID，为空时查询所有，如果填写则会根据InstanceId筛选
+     * Get <p>实例ID，为空时查询所有，如果填写则会根据InstanceId筛选</p> 
+     * @return InstanceId <p>实例ID，为空时查询所有，如果填写则会根据InstanceId筛选</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID，为空时查询所有，如果填写则会根据InstanceId筛选
-     * @param InstanceId 实例ID，为空时查询所有，如果填写则会根据InstanceId筛选
+     * Set <p>实例ID，为空时查询所有，如果填写则会根据InstanceId筛选</p>
+     * @param InstanceId <p>实例ID，为空时查询所有，如果填写则会根据InstanceId筛选</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例名，为空时查询所有，如果填写则会根据InstanceName筛选 
-     * @return InstanceName 实例名，为空时查询所有，如果填写则会根据InstanceName筛选
+     * Get <p>实例名，为空时查询所有，如果填写则会根据InstanceName筛选</p> 
+     * @return InstanceName <p>实例名，为空时查询所有，如果填写则会根据InstanceName筛选</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名，为空时查询所有，如果填写则会根据InstanceName筛选
-     * @param InstanceName 实例名，为空时查询所有，如果填写则会根据InstanceName筛选
+     * Set <p>实例名，为空时查询所有，如果填写则会根据InstanceName筛选</p>
+     * @param InstanceName <p>实例名，为空时查询所有，如果填写则会根据InstanceName筛选</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 智能体ID，为空时查询所有，如果填写则会根据AgentId筛选 
-     * @return AgentId 智能体ID，为空时查询所有，如果填写则会根据AgentId筛选
+     * Get <p>智能体ID，为空时查询所有，如果填写则会根据AgentId筛选</p> 
+     * @return AgentId <p>智能体ID，为空时查询所有，如果填写则会根据AgentId筛选</p>
      */
     public String getAgentId() {
         return this.AgentId;
     }
 
     /**
-     * Set 智能体ID，为空时查询所有，如果填写则会根据AgentId筛选
-     * @param AgentId 智能体ID，为空时查询所有，如果填写则会根据AgentId筛选
+     * Set <p>智能体ID，为空时查询所有，如果填写则会根据AgentId筛选</p>
+     * @param AgentId <p>智能体ID，为空时查询所有，如果填写则会根据AgentId筛选</p>
      */
     public void setAgentId(String AgentId) {
         this.AgentId = AgentId;
     }
 
     /**
-     * Get 智能体名称，为空时查询所有，如果填写则会根据AgentName筛选 
-     * @return AgentName 智能体名称，为空时查询所有，如果填写则会根据AgentName筛选
+     * Get <p>智能体名称，为空时查询所有，如果填写则会根据AgentName筛选</p> 
+     * @return AgentName <p>智能体名称，为空时查询所有，如果填写则会根据AgentName筛选</p>
      */
     public String getAgentName() {
         return this.AgentName;
     }
 
     /**
-     * Set 智能体名称，为空时查询所有，如果填写则会根据AgentName筛选
-     * @param AgentName 智能体名称，为空时查询所有，如果填写则会根据AgentName筛选
+     * Set <p>智能体名称，为空时查询所有，如果填写则会根据AgentName筛选</p>
+     * @param AgentName <p>智能体名称，为空时查询所有，如果填写则会根据AgentName筛选</p>
      */
     public void setAgentName(String AgentName) {
         this.AgentName = AgentName;
     }
 
     /**
-     * Get 智能体类型，为空时查询所有，如果填写则会根据AgentName筛选 
-     * @return AgentInternalName 智能体类型，为空时查询所有，如果填写则会根据AgentName筛选
+     * Get <p>智能体类型，为空时查询所有，如果填写则会根据AgentName筛选</p> 
+     * @return AgentInternalName <p>智能体类型，为空时查询所有，如果填写则会根据AgentName筛选</p>
      */
     public String getAgentInternalName() {
         return this.AgentInternalName;
     }
 
     /**
-     * Set 智能体类型，为空时查询所有，如果填写则会根据AgentName筛选
-     * @param AgentInternalName 智能体类型，为空时查询所有，如果填写则会根据AgentName筛选
+     * Set <p>智能体类型，为空时查询所有，如果填写则会根据AgentName筛选</p>
+     * @param AgentInternalName <p>智能体类型，为空时查询所有，如果填写则会根据AgentName筛选</p>
      */
     public void setAgentInternalName(String AgentInternalName) {
         this.AgentInternalName = AgentInternalName;
     }
 
     /**
-     * Get 智能体实例状态，为空时查询所有，如果填写则会根据Status筛选 
-     * @return Status 智能体实例状态，为空时查询所有，如果填写则会根据Status筛选
+     * Get <p>智能体实例状态，为空时查询所有，如果填写则会根据Status筛选</p> 
+     * @return Status <p>智能体实例状态，为空时查询所有，如果填写则会根据Status筛选</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 智能体实例状态，为空时查询所有，如果填写则会根据Status筛选
-     * @param Status 智能体实例状态，为空时查询所有，如果填写则会根据Status筛选
+     * Set <p>智能体实例状态，为空时查询所有，如果填写则会根据Status筛选</p>
+     * @param Status <p>智能体实例状态，为空时查询所有，如果填写则会根据Status筛选</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 标签过滤信息 
-     * @return TagFilter 标签过滤信息
+     * Get <p>标签过滤信息</p> 
+     * @return TagFilter <p>标签过滤信息</p>
      */
     public TagFilter [] getTagFilter() {
         return this.TagFilter;
     }
 
     /**
-     * Set 标签过滤信息
-     * @param TagFilter 标签过滤信息
+     * Set <p>标签过滤信息</p>
+     * @param TagFilter <p>标签过滤信息</p>
      */
     public void setTagFilter(TagFilter [] TagFilter) {
         this.TagFilter = TagFilter;
+    }
+
+    /**
+     * Get <p>实例类型</p> 
+     * @return InstanceType <p>实例类型</p>
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set <p>实例类型</p>
+     * @param InstanceType <p>实例类型</p>
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
     }
 
     public DescribeAgentInstancesRequest() {
@@ -268,6 +291,9 @@ public class DescribeAgentInstancesRequest extends AbstractModel {
                 this.TagFilter[i] = new TagFilter(source.TagFilter[i]);
             }
         }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
     }
 
 
@@ -284,6 +310,7 @@ public class DescribeAgentInstancesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AgentInternalName", this.AgentInternalName);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArrayObj(map, prefix + "TagFilter.", this.TagFilter);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
 
     }
 }

@@ -59,6 +59,41 @@ public class CreateAgentInstanceRequest extends AbstractModel {
     private TagItem [] Tags;
 
     /**
+    * <p>无</p>
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
+
+    /**
+    * <p>无</p>
+    */
+    @SerializedName("TemplateId")
+    @Expose
+    private Long TemplateId;
+
+    /**
+    * <p>无</p>
+    */
+    @SerializedName("Skills")
+    @Expose
+    private String [] Skills;
+
+    /**
+    * <p>无</p>
+    */
+    @SerializedName("SoulId")
+    @Expose
+    private Long SoulId;
+
+    /**
+    * <p>无</p>
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
      * Get <p>智能体ID</p> 
      * @return AgentId <p>智能体ID</p>
      */
@@ -138,6 +173,86 @@ public class CreateAgentInstanceRequest extends AbstractModel {
         this.Tags = Tags;
     }
 
+    /**
+     * Get <p>无</p> 
+     * @return InstanceType <p>无</p>
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set <p>无</p>
+     * @param InstanceType <p>无</p>
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
+    /**
+     * Get <p>无</p> 
+     * @return TemplateId <p>无</p>
+     */
+    public Long getTemplateId() {
+        return this.TemplateId;
+    }
+
+    /**
+     * Set <p>无</p>
+     * @param TemplateId <p>无</p>
+     */
+    public void setTemplateId(Long TemplateId) {
+        this.TemplateId = TemplateId;
+    }
+
+    /**
+     * Get <p>无</p> 
+     * @return Skills <p>无</p>
+     */
+    public String [] getSkills() {
+        return this.Skills;
+    }
+
+    /**
+     * Set <p>无</p>
+     * @param Skills <p>无</p>
+     */
+    public void setSkills(String [] Skills) {
+        this.Skills = Skills;
+    }
+
+    /**
+     * Get <p>无</p> 
+     * @return SoulId <p>无</p>
+     */
+    public Long getSoulId() {
+        return this.SoulId;
+    }
+
+    /**
+     * Set <p>无</p>
+     * @param SoulId <p>无</p>
+     */
+    public void setSoulId(Long SoulId) {
+        this.SoulId = SoulId;
+    }
+
+    /**
+     * Get <p>无</p> 
+     * @return Description <p>无</p>
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set <p>无</p>
+     * @param Description <p>无</p>
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
     public CreateAgentInstanceRequest() {
     }
 
@@ -167,6 +282,24 @@ public class CreateAgentInstanceRequest extends AbstractModel {
                 this.Tags[i] = new TagItem(source.Tags[i]);
             }
         }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.TemplateId != null) {
+            this.TemplateId = new Long(source.TemplateId);
+        }
+        if (source.Skills != null) {
+            this.Skills = new String[source.Skills.length];
+            for (int i = 0; i < source.Skills.length; i++) {
+                this.Skills[i] = new String(source.Skills[i]);
+            }
+        }
+        if (source.SoulId != null) {
+            this.SoulId = new Long(source.SoulId);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
     }
 
 
@@ -179,6 +312,11 @@ public class CreateAgentInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamArrayObj(map, prefix + "Parameters.", this.Parameters);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
+        this.setParamArraySimple(map, prefix + "Skills.", this.Skills);
+        this.setParamSimple(map, prefix + "SoulId", this.SoulId);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

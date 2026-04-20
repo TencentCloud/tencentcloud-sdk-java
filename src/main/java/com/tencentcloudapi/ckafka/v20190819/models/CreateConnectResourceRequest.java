@@ -24,325 +24,348 @@ import java.util.HashMap;
 public class CreateConnectResourceRequest extends AbstractModel {
 
     /**
-    * 连接源名称
+    * <p>连接源名称</p>
     */
     @SerializedName("ResourceName")
     @Expose
     private String ResourceName;
 
     /**
-    * 连接源类型
+    * <p>连接源类型</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 连接源描述
+    * <p>连接源描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Dts配置，Type为DTS时必填
+    * <p>Dts配置，Type为DTS时必填</p>
     */
     @SerializedName("DtsConnectParam")
     @Expose
     private DtsConnectParam DtsConnectParam;
 
     /**
-    * MongoDB配置，Type为MONGODB时必填
+    * <p>MongoDB配置，Type为MONGODB时必填</p>
     */
     @SerializedName("MongoDBConnectParam")
     @Expose
     private MongoDBConnectParam MongoDBConnectParam;
 
     /**
-    * Es配置，Type为ES时必填
+    * <p>Es配置，Type为ES时必填</p>
     */
     @SerializedName("EsConnectParam")
     @Expose
     private EsConnectParam EsConnectParam;
 
     /**
-    * ClickHouse配置，Type为CLICKHOUSE时必填
+    * <p>ClickHouse配置，Type为CLICKHOUSE时必填</p>
     */
     @SerializedName("ClickHouseConnectParam")
     @Expose
     private ClickHouseConnectParam ClickHouseConnectParam;
 
     /**
-    * MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时必填
+    * <p>MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时必填</p>
     */
     @SerializedName("MySQLConnectParam")
     @Expose
     private MySQLConnectParam MySQLConnectParam;
 
     /**
-    * PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填
+    * <p>PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填</p>
     */
     @SerializedName("PostgreSQLConnectParam")
     @Expose
     private PostgreSQLConnectParam PostgreSQLConnectParam;
 
     /**
-    * MariaDB配置，Type为MARIADB时必填
+    * <p>MariaDB配置，Type为MARIADB时必填</p>
     */
     @SerializedName("MariaDBConnectParam")
     @Expose
     private MariaDBConnectParam MariaDBConnectParam;
 
     /**
-    * SQLServer配置，Type为SQLSERVER时必填
+    * <p>SQLServer配置，Type为SQLSERVER时必填</p>
     */
     @SerializedName("SQLServerConnectParam")
     @Expose
     private SQLServerConnectParam SQLServerConnectParam;
 
     /**
-    * Doris 配置，Type为 DORIS 时必填
+    * <p>Doris 配置，Type为 DORIS 时必填</p>
     */
     @SerializedName("DorisConnectParam")
     @Expose
     private DorisConnectParam DorisConnectParam;
 
     /**
-    * Kafka配置，Type为 KAFKA 时必填
+    * <p>Kafka配置，Type为 KAFKA 时必填</p>
     */
     @SerializedName("KafkaConnectParam")
     @Expose
     private KafkaConnectParam KafkaConnectParam;
 
     /**
-    * MQTT配置，Type为 MQTT 时必填
+    * <p>MQTT配置，Type为 MQTT 时必填</p>
     */
     @SerializedName("MqttConnectParam")
     @Expose
     private MqttConnectParam MqttConnectParam;
 
     /**
-     * Get 连接源名称 
-     * @return ResourceName 连接源名称
+    * <p>标签列表</p>
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
+     * Get <p>连接源名称</p> 
+     * @return ResourceName <p>连接源名称</p>
      */
     public String getResourceName() {
         return this.ResourceName;
     }
 
     /**
-     * Set 连接源名称
-     * @param ResourceName 连接源名称
+     * Set <p>连接源名称</p>
+     * @param ResourceName <p>连接源名称</p>
      */
     public void setResourceName(String ResourceName) {
         this.ResourceName = ResourceName;
     }
 
     /**
-     * Get 连接源类型 
-     * @return Type 连接源类型
+     * Get <p>连接源类型</p> 
+     * @return Type <p>连接源类型</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 连接源类型
-     * @param Type 连接源类型
+     * Set <p>连接源类型</p>
+     * @param Type <p>连接源类型</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 连接源描述 
-     * @return Description 连接源描述
+     * Get <p>连接源描述</p> 
+     * @return Description <p>连接源描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 连接源描述
-     * @param Description 连接源描述
+     * Set <p>连接源描述</p>
+     * @param Description <p>连接源描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Dts配置，Type为DTS时必填 
-     * @return DtsConnectParam Dts配置，Type为DTS时必填
+     * Get <p>Dts配置，Type为DTS时必填</p> 
+     * @return DtsConnectParam <p>Dts配置，Type为DTS时必填</p>
      */
     public DtsConnectParam getDtsConnectParam() {
         return this.DtsConnectParam;
     }
 
     /**
-     * Set Dts配置，Type为DTS时必填
-     * @param DtsConnectParam Dts配置，Type为DTS时必填
+     * Set <p>Dts配置，Type为DTS时必填</p>
+     * @param DtsConnectParam <p>Dts配置，Type为DTS时必填</p>
      */
     public void setDtsConnectParam(DtsConnectParam DtsConnectParam) {
         this.DtsConnectParam = DtsConnectParam;
     }
 
     /**
-     * Get MongoDB配置，Type为MONGODB时必填 
-     * @return MongoDBConnectParam MongoDB配置，Type为MONGODB时必填
+     * Get <p>MongoDB配置，Type为MONGODB时必填</p> 
+     * @return MongoDBConnectParam <p>MongoDB配置，Type为MONGODB时必填</p>
      */
     public MongoDBConnectParam getMongoDBConnectParam() {
         return this.MongoDBConnectParam;
     }
 
     /**
-     * Set MongoDB配置，Type为MONGODB时必填
-     * @param MongoDBConnectParam MongoDB配置，Type为MONGODB时必填
+     * Set <p>MongoDB配置，Type为MONGODB时必填</p>
+     * @param MongoDBConnectParam <p>MongoDB配置，Type为MONGODB时必填</p>
      */
     public void setMongoDBConnectParam(MongoDBConnectParam MongoDBConnectParam) {
         this.MongoDBConnectParam = MongoDBConnectParam;
     }
 
     /**
-     * Get Es配置，Type为ES时必填 
-     * @return EsConnectParam Es配置，Type为ES时必填
+     * Get <p>Es配置，Type为ES时必填</p> 
+     * @return EsConnectParam <p>Es配置，Type为ES时必填</p>
      */
     public EsConnectParam getEsConnectParam() {
         return this.EsConnectParam;
     }
 
     /**
-     * Set Es配置，Type为ES时必填
-     * @param EsConnectParam Es配置，Type为ES时必填
+     * Set <p>Es配置，Type为ES时必填</p>
+     * @param EsConnectParam <p>Es配置，Type为ES时必填</p>
      */
     public void setEsConnectParam(EsConnectParam EsConnectParam) {
         this.EsConnectParam = EsConnectParam;
     }
 
     /**
-     * Get ClickHouse配置，Type为CLICKHOUSE时必填 
-     * @return ClickHouseConnectParam ClickHouse配置，Type为CLICKHOUSE时必填
+     * Get <p>ClickHouse配置，Type为CLICKHOUSE时必填</p> 
+     * @return ClickHouseConnectParam <p>ClickHouse配置，Type为CLICKHOUSE时必填</p>
      */
     public ClickHouseConnectParam getClickHouseConnectParam() {
         return this.ClickHouseConnectParam;
     }
 
     /**
-     * Set ClickHouse配置，Type为CLICKHOUSE时必填
-     * @param ClickHouseConnectParam ClickHouse配置，Type为CLICKHOUSE时必填
+     * Set <p>ClickHouse配置，Type为CLICKHOUSE时必填</p>
+     * @param ClickHouseConnectParam <p>ClickHouse配置，Type为CLICKHOUSE时必填</p>
      */
     public void setClickHouseConnectParam(ClickHouseConnectParam ClickHouseConnectParam) {
         this.ClickHouseConnectParam = ClickHouseConnectParam;
     }
 
     /**
-     * Get MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时必填 
-     * @return MySQLConnectParam MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时必填
+     * Get <p>MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时必填</p> 
+     * @return MySQLConnectParam <p>MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时必填</p>
      */
     public MySQLConnectParam getMySQLConnectParam() {
         return this.MySQLConnectParam;
     }
 
     /**
-     * Set MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时必填
-     * @param MySQLConnectParam MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时必填
+     * Set <p>MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时必填</p>
+     * @param MySQLConnectParam <p>MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时必填</p>
      */
     public void setMySQLConnectParam(MySQLConnectParam MySQLConnectParam) {
         this.MySQLConnectParam = MySQLConnectParam;
     }
 
     /**
-     * Get PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填 
-     * @return PostgreSQLConnectParam PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填
+     * Get <p>PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填</p> 
+     * @return PostgreSQLConnectParam <p>PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填</p>
      */
     public PostgreSQLConnectParam getPostgreSQLConnectParam() {
         return this.PostgreSQLConnectParam;
     }
 
     /**
-     * Set PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填
-     * @param PostgreSQLConnectParam PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填
+     * Set <p>PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填</p>
+     * @param PostgreSQLConnectParam <p>PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时必填</p>
      */
     public void setPostgreSQLConnectParam(PostgreSQLConnectParam PostgreSQLConnectParam) {
         this.PostgreSQLConnectParam = PostgreSQLConnectParam;
     }
 
     /**
-     * Get MariaDB配置，Type为MARIADB时必填 
-     * @return MariaDBConnectParam MariaDB配置，Type为MARIADB时必填
+     * Get <p>MariaDB配置，Type为MARIADB时必填</p> 
+     * @return MariaDBConnectParam <p>MariaDB配置，Type为MARIADB时必填</p>
      */
     public MariaDBConnectParam getMariaDBConnectParam() {
         return this.MariaDBConnectParam;
     }
 
     /**
-     * Set MariaDB配置，Type为MARIADB时必填
-     * @param MariaDBConnectParam MariaDB配置，Type为MARIADB时必填
+     * Set <p>MariaDB配置，Type为MARIADB时必填</p>
+     * @param MariaDBConnectParam <p>MariaDB配置，Type为MARIADB时必填</p>
      */
     public void setMariaDBConnectParam(MariaDBConnectParam MariaDBConnectParam) {
         this.MariaDBConnectParam = MariaDBConnectParam;
     }
 
     /**
-     * Get SQLServer配置，Type为SQLSERVER时必填 
-     * @return SQLServerConnectParam SQLServer配置，Type为SQLSERVER时必填
+     * Get <p>SQLServer配置，Type为SQLSERVER时必填</p> 
+     * @return SQLServerConnectParam <p>SQLServer配置，Type为SQLSERVER时必填</p>
      */
     public SQLServerConnectParam getSQLServerConnectParam() {
         return this.SQLServerConnectParam;
     }
 
     /**
-     * Set SQLServer配置，Type为SQLSERVER时必填
-     * @param SQLServerConnectParam SQLServer配置，Type为SQLSERVER时必填
+     * Set <p>SQLServer配置，Type为SQLSERVER时必填</p>
+     * @param SQLServerConnectParam <p>SQLServer配置，Type为SQLSERVER时必填</p>
      */
     public void setSQLServerConnectParam(SQLServerConnectParam SQLServerConnectParam) {
         this.SQLServerConnectParam = SQLServerConnectParam;
     }
 
     /**
-     * Get Doris 配置，Type为 DORIS 时必填 
-     * @return DorisConnectParam Doris 配置，Type为 DORIS 时必填
+     * Get <p>Doris 配置，Type为 DORIS 时必填</p> 
+     * @return DorisConnectParam <p>Doris 配置，Type为 DORIS 时必填</p>
      */
     public DorisConnectParam getDorisConnectParam() {
         return this.DorisConnectParam;
     }
 
     /**
-     * Set Doris 配置，Type为 DORIS 时必填
-     * @param DorisConnectParam Doris 配置，Type为 DORIS 时必填
+     * Set <p>Doris 配置，Type为 DORIS 时必填</p>
+     * @param DorisConnectParam <p>Doris 配置，Type为 DORIS 时必填</p>
      */
     public void setDorisConnectParam(DorisConnectParam DorisConnectParam) {
         this.DorisConnectParam = DorisConnectParam;
     }
 
     /**
-     * Get Kafka配置，Type为 KAFKA 时必填 
-     * @return KafkaConnectParam Kafka配置，Type为 KAFKA 时必填
+     * Get <p>Kafka配置，Type为 KAFKA 时必填</p> 
+     * @return KafkaConnectParam <p>Kafka配置，Type为 KAFKA 时必填</p>
      */
     public KafkaConnectParam getKafkaConnectParam() {
         return this.KafkaConnectParam;
     }
 
     /**
-     * Set Kafka配置，Type为 KAFKA 时必填
-     * @param KafkaConnectParam Kafka配置，Type为 KAFKA 时必填
+     * Set <p>Kafka配置，Type为 KAFKA 时必填</p>
+     * @param KafkaConnectParam <p>Kafka配置，Type为 KAFKA 时必填</p>
      */
     public void setKafkaConnectParam(KafkaConnectParam KafkaConnectParam) {
         this.KafkaConnectParam = KafkaConnectParam;
     }
 
     /**
-     * Get MQTT配置，Type为 MQTT 时必填 
-     * @return MqttConnectParam MQTT配置，Type为 MQTT 时必填
+     * Get <p>MQTT配置，Type为 MQTT 时必填</p> 
+     * @return MqttConnectParam <p>MQTT配置，Type为 MQTT 时必填</p>
      */
     public MqttConnectParam getMqttConnectParam() {
         return this.MqttConnectParam;
     }
 
     /**
-     * Set MQTT配置，Type为 MQTT 时必填
-     * @param MqttConnectParam MQTT配置，Type为 MQTT 时必填
+     * Set <p>MQTT配置，Type为 MQTT 时必填</p>
+     * @param MqttConnectParam <p>MQTT配置，Type为 MQTT 时必填</p>
      */
     public void setMqttConnectParam(MqttConnectParam MqttConnectParam) {
         this.MqttConnectParam = MqttConnectParam;
+    }
+
+    /**
+     * Get <p>标签列表</p> 
+     * @return Tags <p>标签列表</p>
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set <p>标签列表</p>
+     * @param Tags <p>标签列表</p>
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
     }
 
     public CreateConnectResourceRequest() {
@@ -395,6 +418,12 @@ public class CreateConnectResourceRequest extends AbstractModel {
         if (source.MqttConnectParam != null) {
             this.MqttConnectParam = new MqttConnectParam(source.MqttConnectParam);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -416,6 +445,7 @@ public class CreateConnectResourceRequest extends AbstractModel {
         this.setParamObj(map, prefix + "DorisConnectParam.", this.DorisConnectParam);
         this.setParamObj(map, prefix + "KafkaConnectParam.", this.KafkaConnectParam);
         this.setParamObj(map, prefix + "MqttConnectParam.", this.MqttConnectParam);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

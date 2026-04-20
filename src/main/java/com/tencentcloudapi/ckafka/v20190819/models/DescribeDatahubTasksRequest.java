@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class DescribeDatahubTasksRequest extends AbstractModel {
 
     /**
-    * 返回数量，默认为20，最大值为100 (超过100限制为100)
+    * <p>返回数量，默认为20，最大值为100 (超过100限制为100)</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 分页偏移量，默认为0
+    * <p>分页偏移量，默认为0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 过滤条件，按照 TaskName 过滤，支持模糊查询
+    * <p>过滤条件，按照 TaskName 过滤，支持模糊查询</p>
     */
     @SerializedName("SearchWord")
     @Expose
     private String SearchWord;
 
     /**
-    * 转储的目标类型
+    * <p>转储的目标类型</p>
     */
     @SerializedName("TargetType")
     @Expose
     private String TargetType;
 
     /**
-    * 任务类型，SOURCE数据接入，SINK数据流出
+    * <p>任务类型，SOURCE数据接入，SINK数据流出</p>
     */
     @SerializedName("TaskType")
     @Expose
     private String TaskType;
 
     /**
-    * 转储的源类型
+    * <p>转储的源类型</p>
     */
     @SerializedName("SourceType")
     @Expose
     private String SourceType;
 
     /**
-    * 转储的资源
+    * <p>转储的资源</p>
     */
     @SerializedName("Resource")
     @Expose
     private String Resource;
 
     /**
-     * Get 返回数量，默认为20，最大值为100 (超过100限制为100) 
-     * @return Limit 返回数量，默认为20，最大值为100 (超过100限制为100)
+     * Get <p>返回数量，默认为20，最大值为100 (超过100限制为100)</p> 
+     * @return Limit <p>返回数量，默认为20，最大值为100 (超过100限制为100)</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认为20，最大值为100 (超过100限制为100)
-     * @param Limit 返回数量，默认为20，最大值为100 (超过100限制为100)
+     * Set <p>返回数量，默认为20，最大值为100 (超过100限制为100)</p>
+     * @param Limit <p>返回数量，默认为20，最大值为100 (超过100限制为100)</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页偏移量，默认为0 
-     * @return Offset 分页偏移量，默认为0
+     * Get <p>分页偏移量，默认为0</p> 
+     * @return Offset <p>分页偏移量，默认为0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页偏移量，默认为0
-     * @param Offset 分页偏移量，默认为0
+     * Set <p>分页偏移量，默认为0</p>
+     * @param Offset <p>分页偏移量，默认为0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 过滤条件，按照 TaskName 过滤，支持模糊查询 
-     * @return SearchWord 过滤条件，按照 TaskName 过滤，支持模糊查询
+     * Get <p>过滤条件，按照 TaskName 过滤，支持模糊查询</p> 
+     * @return SearchWord <p>过滤条件，按照 TaskName 过滤，支持模糊查询</p>
      */
     public String getSearchWord() {
         return this.SearchWord;
     }
 
     /**
-     * Set 过滤条件，按照 TaskName 过滤，支持模糊查询
-     * @param SearchWord 过滤条件，按照 TaskName 过滤，支持模糊查询
+     * Set <p>过滤条件，按照 TaskName 过滤，支持模糊查询</p>
+     * @param SearchWord <p>过滤条件，按照 TaskName 过滤，支持模糊查询</p>
      */
     public void setSearchWord(String SearchWord) {
         this.SearchWord = SearchWord;
     }
 
     /**
-     * Get 转储的目标类型 
-     * @return TargetType 转储的目标类型
+     * Get <p>转储的目标类型</p> 
+     * @return TargetType <p>转储的目标类型</p>
      */
     public String getTargetType() {
         return this.TargetType;
     }
 
     /**
-     * Set 转储的目标类型
-     * @param TargetType 转储的目标类型
+     * Set <p>转储的目标类型</p>
+     * @param TargetType <p>转储的目标类型</p>
      */
     public void setTargetType(String TargetType) {
         this.TargetType = TargetType;
     }
 
     /**
-     * Get 任务类型，SOURCE数据接入，SINK数据流出 
-     * @return TaskType 任务类型，SOURCE数据接入，SINK数据流出
+     * Get <p>任务类型，SOURCE数据接入，SINK数据流出</p> 
+     * @return TaskType <p>任务类型，SOURCE数据接入，SINK数据流出</p>
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 任务类型，SOURCE数据接入，SINK数据流出
-     * @param TaskType 任务类型，SOURCE数据接入，SINK数据流出
+     * Set <p>任务类型，SOURCE数据接入，SINK数据流出</p>
+     * @param TaskType <p>任务类型，SOURCE数据接入，SINK数据流出</p>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get 转储的源类型 
-     * @return SourceType 转储的源类型
+     * Get <p>转储的源类型</p> 
+     * @return SourceType <p>转储的源类型</p>
      */
     public String getSourceType() {
         return this.SourceType;
     }
 
     /**
-     * Set 转储的源类型
-     * @param SourceType 转储的源类型
+     * Set <p>转储的源类型</p>
+     * @param SourceType <p>转储的源类型</p>
      */
     public void setSourceType(String SourceType) {
         this.SourceType = SourceType;
     }
 
     /**
-     * Get 转储的资源 
-     * @return Resource 转储的资源
+     * Get <p>转储的资源</p> 
+     * @return Resource <p>转储的资源</p>
      */
     public String getResource() {
         return this.Resource;
     }
 
     /**
-     * Set 转储的资源
-     * @param Resource 转储的资源
+     * Set <p>转储的资源</p>
+     * @param Resource <p>转储的资源</p>
      */
     public void setResource(String Resource) {
         this.Resource = Resource;

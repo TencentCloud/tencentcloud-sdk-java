@@ -539,6 +539,17 @@ public class MqttClient extends AbstractClient{
     }
 
     /**
+     *查询集群下共享订阅组列表
+     * @param req DescribeSharedSubscriptionGroupsRequest
+     * @return DescribeSharedSubscriptionGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSharedSubscriptionGroupsResponse DescribeSharedSubscriptionGroups(DescribeSharedSubscriptionGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSharedSubscriptionGroups", DescribeSharedSubscriptionGroupsResponse.class);
+    }
+
+    /**
      *查询共享订阅消息堆积量
      * @param req DescribeSharedSubscriptionLagRequest
      * @return DescribeSharedSubscriptionLagResponse

@@ -24,63 +24,63 @@ import java.util.HashMap;
 public class DescribeDatahubTaskRes extends AbstractModel {
 
     /**
-    * 任务ID
+    * <p>任务ID</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 任务名称
+    * <p>任务名称</p>
     */
     @SerializedName("TaskName")
     @Expose
     private String TaskName;
 
     /**
-    * 任务类型，SOURCE数据接入，SINK数据流出
+    * <p>任务类型，SOURCE数据接入，SINK数据流出</p>
     */
     @SerializedName("TaskType")
     @Expose
     private String TaskType;
 
     /**
-    * 状态，-1创建失败，0创建中，1运行中，2删除中，3已删除，4删除失败，5暂停中，6已暂停，7暂停失败，8恢复中，9恢复失败
+    * <p>状态，-1创建失败，0创建中，1运行中，2删除中，3已删除，4删除失败，5暂停中，6已暂停，7暂停失败，8恢复中，9恢复失败</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 数据源
+    * <p>数据源</p>
     */
     @SerializedName("SourceResource")
     @Expose
     private DatahubResource SourceResource;
 
     /**
-    * 数据目标
+    * <p>数据目标</p>
     */
     @SerializedName("TargetResource")
     @Expose
     private DatahubResource TargetResource;
 
     /**
-    * Connection列表
+    * <p>Connection列表</p>
     */
     @SerializedName("Connections")
     @Expose
     private Connection [] Connections;
 
     /**
-    * 任务创建时间
+    * <p>任务创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 消息处理规则
+    * <p>消息处理规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TransformParam")
@@ -88,28 +88,28 @@ public class DescribeDatahubTaskRes extends AbstractModel {
     private TransformParam TransformParam;
 
     /**
-    * 数据接入ID
+    * <p>数据接入ID</p>
     */
     @SerializedName("DatahubId")
     @Expose
     private String DatahubId;
 
     /**
-    * 绑定的SchemaId
+    * <p>绑定的SchemaId</p>
     */
     @SerializedName("SchemaId")
     @Expose
     private String SchemaId;
 
     /**
-    * 绑定的Schema名称
+    * <p>绑定的Schema名称</p>
     */
     @SerializedName("SchemaName")
     @Expose
     private String SchemaName;
 
     /**
-    * 数据处理规则
+    * <p>数据处理规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TransformsParam")
@@ -117,165 +117,186 @@ public class DescribeDatahubTaskRes extends AbstractModel {
     private TransformsParam TransformsParam;
 
     /**
-    * 异常信息
+    * <p>异常信息</p>
     */
     @SerializedName("ErrorMessage")
     @Expose
     private String ErrorMessage;
 
     /**
-    * 任务标签列表
+    * <p>任务标签列表</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 任务描述信息	
+    * <p>任务描述信息</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 1:正常 2:隔离中
+    * <p>1:正常 2:隔离中</p>
     */
     @SerializedName("IsolateStatus")
     @Expose
     private Long IsolateStatus;
 
     /**
-     * Get 任务ID 
-     * @return TaskId 任务ID
+    * <p>并发数</p><p>默认值：1</p>
+    */
+    @SerializedName("TaskMax")
+    @Expose
+    private Long TaskMax;
+
+    /**
+    * <p>并发流量预估参考上限，MB/s</p>
+    */
+    @SerializedName("SyncThrottleLimit")
+    @Expose
+    private Long SyncThrottleLimit;
+
+    /**
+    * <p>自动扩容 true:自动扩容 false:手动扩容</p><p>默认值：true</p>
+    */
+    @SerializedName("AutoExpandFlag")
+    @Expose
+    private Boolean AutoExpandFlag;
+
+    /**
+     * Get <p>任务ID</p> 
+     * @return TaskId <p>任务ID</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务ID
-     * @param TaskId 任务ID
+     * Set <p>任务ID</p>
+     * @param TaskId <p>任务ID</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 任务名称 
-     * @return TaskName 任务名称
+     * Get <p>任务名称</p> 
+     * @return TaskName <p>任务名称</p>
      */
     public String getTaskName() {
         return this.TaskName;
     }
 
     /**
-     * Set 任务名称
-     * @param TaskName 任务名称
+     * Set <p>任务名称</p>
+     * @param TaskName <p>任务名称</p>
      */
     public void setTaskName(String TaskName) {
         this.TaskName = TaskName;
     }
 
     /**
-     * Get 任务类型，SOURCE数据接入，SINK数据流出 
-     * @return TaskType 任务类型，SOURCE数据接入，SINK数据流出
+     * Get <p>任务类型，SOURCE数据接入，SINK数据流出</p> 
+     * @return TaskType <p>任务类型，SOURCE数据接入，SINK数据流出</p>
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 任务类型，SOURCE数据接入，SINK数据流出
-     * @param TaskType 任务类型，SOURCE数据接入，SINK数据流出
+     * Set <p>任务类型，SOURCE数据接入，SINK数据流出</p>
+     * @param TaskType <p>任务类型，SOURCE数据接入，SINK数据流出</p>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get 状态，-1创建失败，0创建中，1运行中，2删除中，3已删除，4删除失败，5暂停中，6已暂停，7暂停失败，8恢复中，9恢复失败 
-     * @return Status 状态，-1创建失败，0创建中，1运行中，2删除中，3已删除，4删除失败，5暂停中，6已暂停，7暂停失败，8恢复中，9恢复失败
+     * Get <p>状态，-1创建失败，0创建中，1运行中，2删除中，3已删除，4删除失败，5暂停中，6已暂停，7暂停失败，8恢复中，9恢复失败</p> 
+     * @return Status <p>状态，-1创建失败，0创建中，1运行中，2删除中，3已删除，4删除失败，5暂停中，6已暂停，7暂停失败，8恢复中，9恢复失败</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态，-1创建失败，0创建中，1运行中，2删除中，3已删除，4删除失败，5暂停中，6已暂停，7暂停失败，8恢复中，9恢复失败
-     * @param Status 状态，-1创建失败，0创建中，1运行中，2删除中，3已删除，4删除失败，5暂停中，6已暂停，7暂停失败，8恢复中，9恢复失败
+     * Set <p>状态，-1创建失败，0创建中，1运行中，2删除中，3已删除，4删除失败，5暂停中，6已暂停，7暂停失败，8恢复中，9恢复失败</p>
+     * @param Status <p>状态，-1创建失败，0创建中，1运行中，2删除中，3已删除，4删除失败，5暂停中，6已暂停，7暂停失败，8恢复中，9恢复失败</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 数据源 
-     * @return SourceResource 数据源
+     * Get <p>数据源</p> 
+     * @return SourceResource <p>数据源</p>
      */
     public DatahubResource getSourceResource() {
         return this.SourceResource;
     }
 
     /**
-     * Set 数据源
-     * @param SourceResource 数据源
+     * Set <p>数据源</p>
+     * @param SourceResource <p>数据源</p>
      */
     public void setSourceResource(DatahubResource SourceResource) {
         this.SourceResource = SourceResource;
     }
 
     /**
-     * Get 数据目标 
-     * @return TargetResource 数据目标
+     * Get <p>数据目标</p> 
+     * @return TargetResource <p>数据目标</p>
      */
     public DatahubResource getTargetResource() {
         return this.TargetResource;
     }
 
     /**
-     * Set 数据目标
-     * @param TargetResource 数据目标
+     * Set <p>数据目标</p>
+     * @param TargetResource <p>数据目标</p>
      */
     public void setTargetResource(DatahubResource TargetResource) {
         this.TargetResource = TargetResource;
     }
 
     /**
-     * Get Connection列表 
-     * @return Connections Connection列表
+     * Get <p>Connection列表</p> 
+     * @return Connections <p>Connection列表</p>
      */
     public Connection [] getConnections() {
         return this.Connections;
     }
 
     /**
-     * Set Connection列表
-     * @param Connections Connection列表
+     * Set <p>Connection列表</p>
+     * @param Connections <p>Connection列表</p>
      */
     public void setConnections(Connection [] Connections) {
         this.Connections = Connections;
     }
 
     /**
-     * Get 任务创建时间 
-     * @return CreateTime 任务创建时间
+     * Get <p>任务创建时间</p> 
+     * @return CreateTime <p>任务创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 任务创建时间
-     * @param CreateTime 任务创建时间
+     * Set <p>任务创建时间</p>
+     * @param CreateTime <p>任务创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 消息处理规则
+     * Get <p>消息处理规则</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TransformParam 消息处理规则
+     * @return TransformParam <p>消息处理规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TransformParam getTransformParam() {
@@ -283,9 +304,9 @@ public class DescribeDatahubTaskRes extends AbstractModel {
     }
 
     /**
-     * Set 消息处理规则
+     * Set <p>消息处理规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TransformParam 消息处理规则
+     * @param TransformParam <p>消息处理规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTransformParam(TransformParam TransformParam) {
@@ -293,57 +314,57 @@ public class DescribeDatahubTaskRes extends AbstractModel {
     }
 
     /**
-     * Get 数据接入ID 
-     * @return DatahubId 数据接入ID
+     * Get <p>数据接入ID</p> 
+     * @return DatahubId <p>数据接入ID</p>
      */
     public String getDatahubId() {
         return this.DatahubId;
     }
 
     /**
-     * Set 数据接入ID
-     * @param DatahubId 数据接入ID
+     * Set <p>数据接入ID</p>
+     * @param DatahubId <p>数据接入ID</p>
      */
     public void setDatahubId(String DatahubId) {
         this.DatahubId = DatahubId;
     }
 
     /**
-     * Get 绑定的SchemaId 
-     * @return SchemaId 绑定的SchemaId
+     * Get <p>绑定的SchemaId</p> 
+     * @return SchemaId <p>绑定的SchemaId</p>
      */
     public String getSchemaId() {
         return this.SchemaId;
     }
 
     /**
-     * Set 绑定的SchemaId
-     * @param SchemaId 绑定的SchemaId
+     * Set <p>绑定的SchemaId</p>
+     * @param SchemaId <p>绑定的SchemaId</p>
      */
     public void setSchemaId(String SchemaId) {
         this.SchemaId = SchemaId;
     }
 
     /**
-     * Get 绑定的Schema名称 
-     * @return SchemaName 绑定的Schema名称
+     * Get <p>绑定的Schema名称</p> 
+     * @return SchemaName <p>绑定的Schema名称</p>
      */
     public String getSchemaName() {
         return this.SchemaName;
     }
 
     /**
-     * Set 绑定的Schema名称
-     * @param SchemaName 绑定的Schema名称
+     * Set <p>绑定的Schema名称</p>
+     * @param SchemaName <p>绑定的Schema名称</p>
      */
     public void setSchemaName(String SchemaName) {
         this.SchemaName = SchemaName;
     }
 
     /**
-     * Get 数据处理规则
+     * Get <p>数据处理规则</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TransformsParam 数据处理规则
+     * @return TransformsParam <p>数据处理规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TransformsParam getTransformsParam() {
@@ -351,9 +372,9 @@ public class DescribeDatahubTaskRes extends AbstractModel {
     }
 
     /**
-     * Set 数据处理规则
+     * Set <p>数据处理规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TransformsParam 数据处理规则
+     * @param TransformsParam <p>数据处理规则</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTransformsParam(TransformsParam TransformsParam) {
@@ -361,67 +382,115 @@ public class DescribeDatahubTaskRes extends AbstractModel {
     }
 
     /**
-     * Get 异常信息 
-     * @return ErrorMessage 异常信息
+     * Get <p>异常信息</p> 
+     * @return ErrorMessage <p>异常信息</p>
      */
     public String getErrorMessage() {
         return this.ErrorMessage;
     }
 
     /**
-     * Set 异常信息
-     * @param ErrorMessage 异常信息
+     * Set <p>异常信息</p>
+     * @param ErrorMessage <p>异常信息</p>
      */
     public void setErrorMessage(String ErrorMessage) {
         this.ErrorMessage = ErrorMessage;
     }
 
     /**
-     * Get 任务标签列表 
-     * @return Tags 任务标签列表
+     * Get <p>任务标签列表</p> 
+     * @return Tags <p>任务标签列表</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 任务标签列表
-     * @param Tags 任务标签列表
+     * Set <p>任务标签列表</p>
+     * @param Tags <p>任务标签列表</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 任务描述信息	 
-     * @return Description 任务描述信息	
+     * Get <p>任务描述信息</p> 
+     * @return Description <p>任务描述信息</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 任务描述信息	
-     * @param Description 任务描述信息	
+     * Set <p>任务描述信息</p>
+     * @param Description <p>任务描述信息</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 1:正常 2:隔离中 
-     * @return IsolateStatus 1:正常 2:隔离中
+     * Get <p>1:正常 2:隔离中</p> 
+     * @return IsolateStatus <p>1:正常 2:隔离中</p>
      */
     public Long getIsolateStatus() {
         return this.IsolateStatus;
     }
 
     /**
-     * Set 1:正常 2:隔离中
-     * @param IsolateStatus 1:正常 2:隔离中
+     * Set <p>1:正常 2:隔离中</p>
+     * @param IsolateStatus <p>1:正常 2:隔离中</p>
      */
     public void setIsolateStatus(Long IsolateStatus) {
         this.IsolateStatus = IsolateStatus;
+    }
+
+    /**
+     * Get <p>并发数</p><p>默认值：1</p> 
+     * @return TaskMax <p>并发数</p><p>默认值：1</p>
+     */
+    public Long getTaskMax() {
+        return this.TaskMax;
+    }
+
+    /**
+     * Set <p>并发数</p><p>默认值：1</p>
+     * @param TaskMax <p>并发数</p><p>默认值：1</p>
+     */
+    public void setTaskMax(Long TaskMax) {
+        this.TaskMax = TaskMax;
+    }
+
+    /**
+     * Get <p>并发流量预估参考上限，MB/s</p> 
+     * @return SyncThrottleLimit <p>并发流量预估参考上限，MB/s</p>
+     */
+    public Long getSyncThrottleLimit() {
+        return this.SyncThrottleLimit;
+    }
+
+    /**
+     * Set <p>并发流量预估参考上限，MB/s</p>
+     * @param SyncThrottleLimit <p>并发流量预估参考上限，MB/s</p>
+     */
+    public void setSyncThrottleLimit(Long SyncThrottleLimit) {
+        this.SyncThrottleLimit = SyncThrottleLimit;
+    }
+
+    /**
+     * Get <p>自动扩容 true:自动扩容 false:手动扩容</p><p>默认值：true</p> 
+     * @return AutoExpandFlag <p>自动扩容 true:自动扩容 false:手动扩容</p><p>默认值：true</p>
+     */
+    public Boolean getAutoExpandFlag() {
+        return this.AutoExpandFlag;
+    }
+
+    /**
+     * Set <p>自动扩容 true:自动扩容 false:手动扩容</p><p>默认值：true</p>
+     * @param AutoExpandFlag <p>自动扩容 true:自动扩容 false:手动扩容</p><p>默认值：true</p>
+     */
+    public void setAutoExpandFlag(Boolean AutoExpandFlag) {
+        this.AutoExpandFlag = AutoExpandFlag;
     }
 
     public DescribeDatahubTaskRes() {
@@ -489,6 +558,15 @@ public class DescribeDatahubTaskRes extends AbstractModel {
         if (source.IsolateStatus != null) {
             this.IsolateStatus = new Long(source.IsolateStatus);
         }
+        if (source.TaskMax != null) {
+            this.TaskMax = new Long(source.TaskMax);
+        }
+        if (source.SyncThrottleLimit != null) {
+            this.SyncThrottleLimit = new Long(source.SyncThrottleLimit);
+        }
+        if (source.AutoExpandFlag != null) {
+            this.AutoExpandFlag = new Boolean(source.AutoExpandFlag);
+        }
     }
 
 
@@ -513,6 +591,9 @@ public class DescribeDatahubTaskRes extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "IsolateStatus", this.IsolateStatus);
+        this.setParamSimple(map, prefix + "TaskMax", this.TaskMax);
+        this.setParamSimple(map, prefix + "SyncThrottleLimit", this.SyncThrottleLimit);
+        this.setParamSimple(map, prefix + "AutoExpandFlag", this.AutoExpandFlag);
 
     }
 }

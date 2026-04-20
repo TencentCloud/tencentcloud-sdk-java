@@ -24,56 +24,56 @@ import java.util.HashMap;
 public class DescribeCurveDataResponse extends AbstractModel {
 
     /**
-    * 开始时间, 会根据数据的统计周期进行取整
+    * <p>开始时间, 会根据数据的统计周期进行取整</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间, 会根据数据的统计周期进行取整
+    * <p>结束时间, 会根据数据的统计周期进行取整</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 指标名
+    * <p>指标名</p>
     */
     @SerializedName("MetricName")
     @Expose
     private String MetricName;
 
     /**
-    * 统计周期(单位秒), 当时间区间为1天内, 统计周期为5分钟; 当时间区间选择为1天以上, 15天以下, 统计周期为1小时; 当时间区间选择为15天以上, 180天以下, 统计周期为1天
+    * <p>统计周期(单位秒), 当时间区间为1天内, 统计周期为5分钟; 当时间区间选择为1天以上, 15天以下, 统计周期为1小时; 当时间区间选择为15天以上, 180天以下, 统计周期为1天</p>
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到
+    * <p>有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到</p>
     */
     @SerializedName("Values")
     @Expose
     private Long [] Values;
 
     /**
-    * 各数据点的时间戳数组（Unix 时间戳，秒级），与  ⁠Values⁠  一一对应
+    * <p>各数据点的时间戳数组（Unix 时间戳，秒级），与  ⁠Values⁠  一一对应</p>
     */
     @SerializedName("Time")
     @Expose
     private Long [] Time;
 
     /**
-    * 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到
+    * <p>有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到</p>
     */
     @SerializedName("NewValues")
     @Expose
     private Float [] NewValues;
 
     /**
-    *  聚合方式， ⁠"last"⁠  表示取时间段内最后一个值，“max”表示取时间段内最大值，“avg”表示取时间段内的平均值
+    * <p>聚合方式， ⁠&quot;last&quot;⁠  表示取时间段内最后一个值，“max”表示取时间段内最大值，“avg”表示取时间段内的平均值</p>
     */
     @SerializedName("Statistics")
     @Expose
@@ -87,128 +87,128 @@ public class DescribeCurveDataResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 开始时间, 会根据数据的统计周期进行取整 
-     * @return StartTime 开始时间, 会根据数据的统计周期进行取整
+     * Get <p>开始时间, 会根据数据的统计周期进行取整</p> 
+     * @return StartTime <p>开始时间, 会根据数据的统计周期进行取整</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间, 会根据数据的统计周期进行取整
-     * @param StartTime 开始时间, 会根据数据的统计周期进行取整
+     * Set <p>开始时间, 会根据数据的统计周期进行取整</p>
+     * @param StartTime <p>开始时间, 会根据数据的统计周期进行取整</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间, 会根据数据的统计周期进行取整 
-     * @return EndTime 结束时间, 会根据数据的统计周期进行取整
+     * Get <p>结束时间, 会根据数据的统计周期进行取整</p> 
+     * @return EndTime <p>结束时间, 会根据数据的统计周期进行取整</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间, 会根据数据的统计周期进行取整
-     * @param EndTime 结束时间, 会根据数据的统计周期进行取整
+     * Set <p>结束时间, 会根据数据的统计周期进行取整</p>
+     * @param EndTime <p>结束时间, 会根据数据的统计周期进行取整</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 指标名 
-     * @return MetricName 指标名
+     * Get <p>指标名</p> 
+     * @return MetricName <p>指标名</p>
      */
     public String getMetricName() {
         return this.MetricName;
     }
 
     /**
-     * Set 指标名
-     * @param MetricName 指标名
+     * Set <p>指标名</p>
+     * @param MetricName <p>指标名</p>
      */
     public void setMetricName(String MetricName) {
         this.MetricName = MetricName;
     }
 
     /**
-     * Get 统计周期(单位秒), 当时间区间为1天内, 统计周期为5分钟; 当时间区间选择为1天以上, 15天以下, 统计周期为1小时; 当时间区间选择为15天以上, 180天以下, 统计周期为1天 
-     * @return Period 统计周期(单位秒), 当时间区间为1天内, 统计周期为5分钟; 当时间区间选择为1天以上, 15天以下, 统计周期为1小时; 当时间区间选择为15天以上, 180天以下, 统计周期为1天
+     * Get <p>统计周期(单位秒), 当时间区间为1天内, 统计周期为5分钟; 当时间区间选择为1天以上, 15天以下, 统计周期为1小时; 当时间区间选择为15天以上, 180天以下, 统计周期为1天</p> 
+     * @return Period <p>统计周期(单位秒), 当时间区间为1天内, 统计周期为5分钟; 当时间区间选择为1天以上, 15天以下, 统计周期为1小时; 当时间区间选择为15天以上, 180天以下, 统计周期为1天</p>
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 统计周期(单位秒), 当时间区间为1天内, 统计周期为5分钟; 当时间区间选择为1天以上, 15天以下, 统计周期为1小时; 当时间区间选择为15天以上, 180天以下, 统计周期为1天
-     * @param Period 统计周期(单位秒), 当时间区间为1天内, 统计周期为5分钟; 当时间区间选择为1天以上, 15天以下, 统计周期为1小时; 当时间区间选择为15天以上, 180天以下, 统计周期为1天
+     * Set <p>统计周期(单位秒), 当时间区间为1天内, 统计周期为5分钟; 当时间区间选择为1天以上, 15天以下, 统计周期为1小时; 当时间区间选择为15天以上, 180天以下, 统计周期为1天</p>
+     * @param Period <p>统计周期(单位秒), 当时间区间为1天内, 统计周期为5分钟; 当时间区间选择为1天以上, 15天以下, 统计周期为1小时; 当时间区间选择为15天以上, 180天以下, 统计周期为1天</p>
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到 
-     * @return Values 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到
+     * Get <p>有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到</p> 
+     * @return Values <p>有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到</p>
      */
     public Long [] getValues() {
         return this.Values;
     }
 
     /**
-     * Set 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到
-     * @param Values 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到
+     * Set <p>有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到</p>
+     * @param Values <p>有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到</p>
      */
     public void setValues(Long [] Values) {
         this.Values = Values;
     }
 
     /**
-     * Get 各数据点的时间戳数组（Unix 时间戳，秒级），与  ⁠Values⁠  一一对应 
-     * @return Time 各数据点的时间戳数组（Unix 时间戳，秒级），与  ⁠Values⁠  一一对应
+     * Get <p>各数据点的时间戳数组（Unix 时间戳，秒级），与  ⁠Values⁠  一一对应</p> 
+     * @return Time <p>各数据点的时间戳数组（Unix 时间戳，秒级），与  ⁠Values⁠  一一对应</p>
      */
     public Long [] getTime() {
         return this.Time;
     }
 
     /**
-     * Set 各数据点的时间戳数组（Unix 时间戳，秒级），与  ⁠Values⁠  一一对应
-     * @param Time 各数据点的时间戳数组（Unix 时间戳，秒级），与  ⁠Values⁠  一一对应
+     * Set <p>各数据点的时间戳数组（Unix 时间戳，秒级），与  ⁠Values⁠  一一对应</p>
+     * @param Time <p>各数据点的时间戳数组（Unix 时间戳，秒级），与  ⁠Values⁠  一一对应</p>
      */
     public void setTime(Long [] Time) {
         this.Time = Time;
     }
 
     /**
-     * Get 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到 
-     * @return NewValues 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到
+     * Get <p>有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到</p> 
+     * @return NewValues <p>有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到</p>
      */
     public Float [] getNewValues() {
         return this.NewValues;
     }
 
     /**
-     * Set 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到
-     * @param NewValues 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到
+     * Set <p>有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到</p>
+     * @param NewValues <p>有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到</p>
      */
     public void setNewValues(Float [] NewValues) {
         this.NewValues = NewValues;
     }
 
     /**
-     * Get  聚合方式， ⁠"last"⁠  表示取时间段内最后一个值，“max”表示取时间段内最大值，“avg”表示取时间段内的平均值 
-     * @return Statistics  聚合方式， ⁠"last"⁠  表示取时间段内最后一个值，“max”表示取时间段内最大值，“avg”表示取时间段内的平均值
+     * Get <p>聚合方式， ⁠&quot;last&quot;⁠  表示取时间段内最后一个值，“max”表示取时间段内最大值，“avg”表示取时间段内的平均值</p> 
+     * @return Statistics <p>聚合方式， ⁠&quot;last&quot;⁠  表示取时间段内最后一个值，“max”表示取时间段内最大值，“avg”表示取时间段内的平均值</p>
      */
     public String getStatistics() {
         return this.Statistics;
     }
 
     /**
-     * Set  聚合方式， ⁠"last"⁠  表示取时间段内最后一个值，“max”表示取时间段内最大值，“avg”表示取时间段内的平均值
-     * @param Statistics  聚合方式， ⁠"last"⁠  表示取时间段内最后一个值，“max”表示取时间段内最大值，“avg”表示取时间段内的平均值
+     * Set <p>聚合方式， ⁠&quot;last&quot;⁠  表示取时间段内最后一个值，“max”表示取时间段内最大值，“avg”表示取时间段内的平均值</p>
+     * @param Statistics <p>聚合方式， ⁠&quot;last&quot;⁠  表示取时间段内最后一个值，“max”表示取时间段内最大值，“avg”表示取时间段内的平均值</p>
      */
     public void setStatistics(String Statistics) {
         this.Statistics = Statistics;

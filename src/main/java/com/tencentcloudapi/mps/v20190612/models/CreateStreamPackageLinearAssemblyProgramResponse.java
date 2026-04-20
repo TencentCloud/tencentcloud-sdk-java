@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateStreamPackageLinearAssemblyProgramResponse extends AbstractModel {
 
     /**
-    * channel信息。
+    * <p>channel信息。</p>
     */
     @SerializedName("Info")
     @Expose
@@ -38,16 +38,16 @@ public class CreateStreamPackageLinearAssemblyProgramResponse extends AbstractMo
     private String RequestId;
 
     /**
-     * Get channel信息。 
-     * @return Info channel信息。
+     * Get <p>channel信息。</p> 
+     * @return Info <p>channel信息。</p>
      */
     public LinearAssemblyProgramInfo getInfo() {
         return this.Info;
     }
 
     /**
-     * Set channel信息。
-     * @param Info channel信息。
+     * Set <p>channel信息。</p>
+     * @param Info <p>channel信息。</p>
      */
     public void setInfo(LinearAssemblyProgramInfo Info) {
         this.Info = Info;

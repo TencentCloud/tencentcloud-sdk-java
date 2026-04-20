@@ -24,302 +24,371 @@ import java.util.HashMap;
 public class DatahubTaskInfo extends AbstractModel {
 
     /**
-    * 任务Id
+    * <p>任务Id</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 任务名称
+    * <p>任务名称</p>
     */
     @SerializedName("TaskName")
     @Expose
     private String TaskName;
 
     /**
-    * 任务类型，SOURCE数据接入，SINK数据流出
+    * <p>任务类型，SOURCE数据接入，SINK数据流出</p>
     */
     @SerializedName("TaskType")
     @Expose
     private String TaskType;
 
     /**
-    * 状态，-1创建失败，0创建中，1运行中，2删除中，3已删除，4删除失败，5暂停中，6已暂停，7暂停失败，8恢复中，9恢复失败
+    * <p>状态，-1创建失败，0创建中，1运行中，2删除中，3已删除，4删除失败，5暂停中，6已暂停，7暂停失败，8恢复中，9恢复失败</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 数据源
+    * <p>数据源</p>
     */
     @SerializedName("SourceResource")
     @Expose
     private DatahubResource SourceResource;
 
     /**
-    * 数据目标
+    * <p>数据目标</p>
     */
     @SerializedName("TargetResource")
     @Expose
     private DatahubResource TargetResource;
 
     /**
-    * 任务创建时间
+    * <p>任务创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 异常信息
+    * <p>异常信息</p>
     */
     @SerializedName("ErrorMessage")
     @Expose
     private String ErrorMessage;
 
     /**
-    * 创建进度百分比
+    * <p>创建进度百分比</p>
     */
     @SerializedName("TaskProgress")
     @Expose
     private Float TaskProgress;
 
     /**
-    * 任务当前处于的步骤
+    * <p>任务当前处于的步骤</p>
     */
     @SerializedName("TaskCurrentStep")
     @Expose
     private String TaskCurrentStep;
 
     /**
-    * Datahub转储Id
+    * <p>Datahub转储Id</p>
     */
     @SerializedName("DatahubId")
     @Expose
     private String DatahubId;
 
     /**
-    * 步骤列表
+    * <p>步骤列表</p>
     */
     @SerializedName("StepList")
     @Expose
     private String [] StepList;
 
     /**
-    * 任务描述信息
+    * <p>任务描述信息</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-     * Get 任务Id 
-     * @return TaskId 任务Id
+    * <p>任务并发数</p><p>默认值：1</p>
+    */
+    @SerializedName("TaskMax")
+    @Expose
+    private Long TaskMax;
+
+    /**
+    * <p>任务同步限流值,单位MB/s</p><p>默认值：20MB/s</p>
+    */
+    @SerializedName("SyncThrottleLimit")
+    @Expose
+    private Long SyncThrottleLimit;
+
+    /**
+    * <p>任务是否自动扩容标识</p><p>枚举值：</p><ul><li>true： 自动扩容</li><li>false： 手动扩容</li></ul><p>默认值：true</p>
+    */
+    @SerializedName("AutoExpandFlag")
+    @Expose
+    private Boolean AutoExpandFlag;
+
+    /**
+     * Get <p>任务Id</p> 
+     * @return TaskId <p>任务Id</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务Id
-     * @param TaskId 任务Id
+     * Set <p>任务Id</p>
+     * @param TaskId <p>任务Id</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 任务名称 
-     * @return TaskName 任务名称
+     * Get <p>任务名称</p> 
+     * @return TaskName <p>任务名称</p>
      */
     public String getTaskName() {
         return this.TaskName;
     }
 
     /**
-     * Set 任务名称
-     * @param TaskName 任务名称
+     * Set <p>任务名称</p>
+     * @param TaskName <p>任务名称</p>
      */
     public void setTaskName(String TaskName) {
         this.TaskName = TaskName;
     }
 
     /**
-     * Get 任务类型，SOURCE数据接入，SINK数据流出 
-     * @return TaskType 任务类型，SOURCE数据接入，SINK数据流出
+     * Get <p>任务类型，SOURCE数据接入，SINK数据流出</p> 
+     * @return TaskType <p>任务类型，SOURCE数据接入，SINK数据流出</p>
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 任务类型，SOURCE数据接入，SINK数据流出
-     * @param TaskType 任务类型，SOURCE数据接入，SINK数据流出
+     * Set <p>任务类型，SOURCE数据接入，SINK数据流出</p>
+     * @param TaskType <p>任务类型，SOURCE数据接入，SINK数据流出</p>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get 状态，-1创建失败，0创建中，1运行中，2删除中，3已删除，4删除失败，5暂停中，6已暂停，7暂停失败，8恢复中，9恢复失败 
-     * @return Status 状态，-1创建失败，0创建中，1运行中，2删除中，3已删除，4删除失败，5暂停中，6已暂停，7暂停失败，8恢复中，9恢复失败
+     * Get <p>状态，-1创建失败，0创建中，1运行中，2删除中，3已删除，4删除失败，5暂停中，6已暂停，7暂停失败，8恢复中，9恢复失败</p> 
+     * @return Status <p>状态，-1创建失败，0创建中，1运行中，2删除中，3已删除，4删除失败，5暂停中，6已暂停，7暂停失败，8恢复中，9恢复失败</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态，-1创建失败，0创建中，1运行中，2删除中，3已删除，4删除失败，5暂停中，6已暂停，7暂停失败，8恢复中，9恢复失败
-     * @param Status 状态，-1创建失败，0创建中，1运行中，2删除中，3已删除，4删除失败，5暂停中，6已暂停，7暂停失败，8恢复中，9恢复失败
+     * Set <p>状态，-1创建失败，0创建中，1运行中，2删除中，3已删除，4删除失败，5暂停中，6已暂停，7暂停失败，8恢复中，9恢复失败</p>
+     * @param Status <p>状态，-1创建失败，0创建中，1运行中，2删除中，3已删除，4删除失败，5暂停中，6已暂停，7暂停失败，8恢复中，9恢复失败</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 数据源 
-     * @return SourceResource 数据源
+     * Get <p>数据源</p> 
+     * @return SourceResource <p>数据源</p>
      */
     public DatahubResource getSourceResource() {
         return this.SourceResource;
     }
 
     /**
-     * Set 数据源
-     * @param SourceResource 数据源
+     * Set <p>数据源</p>
+     * @param SourceResource <p>数据源</p>
      */
     public void setSourceResource(DatahubResource SourceResource) {
         this.SourceResource = SourceResource;
     }
 
     /**
-     * Get 数据目标 
-     * @return TargetResource 数据目标
+     * Get <p>数据目标</p> 
+     * @return TargetResource <p>数据目标</p>
      */
     public DatahubResource getTargetResource() {
         return this.TargetResource;
     }
 
     /**
-     * Set 数据目标
-     * @param TargetResource 数据目标
+     * Set <p>数据目标</p>
+     * @param TargetResource <p>数据目标</p>
      */
     public void setTargetResource(DatahubResource TargetResource) {
         this.TargetResource = TargetResource;
     }
 
     /**
-     * Get 任务创建时间 
-     * @return CreateTime 任务创建时间
+     * Get <p>任务创建时间</p> 
+     * @return CreateTime <p>任务创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 任务创建时间
-     * @param CreateTime 任务创建时间
+     * Set <p>任务创建时间</p>
+     * @param CreateTime <p>任务创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 异常信息 
-     * @return ErrorMessage 异常信息
+     * Get <p>异常信息</p> 
+     * @return ErrorMessage <p>异常信息</p>
      */
     public String getErrorMessage() {
         return this.ErrorMessage;
     }
 
     /**
-     * Set 异常信息
-     * @param ErrorMessage 异常信息
+     * Set <p>异常信息</p>
+     * @param ErrorMessage <p>异常信息</p>
      */
     public void setErrorMessage(String ErrorMessage) {
         this.ErrorMessage = ErrorMessage;
     }
 
     /**
-     * Get 创建进度百分比 
-     * @return TaskProgress 创建进度百分比
+     * Get <p>创建进度百分比</p> 
+     * @return TaskProgress <p>创建进度百分比</p>
      */
     public Float getTaskProgress() {
         return this.TaskProgress;
     }
 
     /**
-     * Set 创建进度百分比
-     * @param TaskProgress 创建进度百分比
+     * Set <p>创建进度百分比</p>
+     * @param TaskProgress <p>创建进度百分比</p>
      */
     public void setTaskProgress(Float TaskProgress) {
         this.TaskProgress = TaskProgress;
     }
 
     /**
-     * Get 任务当前处于的步骤 
-     * @return TaskCurrentStep 任务当前处于的步骤
+     * Get <p>任务当前处于的步骤</p> 
+     * @return TaskCurrentStep <p>任务当前处于的步骤</p>
      */
     public String getTaskCurrentStep() {
         return this.TaskCurrentStep;
     }
 
     /**
-     * Set 任务当前处于的步骤
-     * @param TaskCurrentStep 任务当前处于的步骤
+     * Set <p>任务当前处于的步骤</p>
+     * @param TaskCurrentStep <p>任务当前处于的步骤</p>
      */
     public void setTaskCurrentStep(String TaskCurrentStep) {
         this.TaskCurrentStep = TaskCurrentStep;
     }
 
     /**
-     * Get Datahub转储Id 
-     * @return DatahubId Datahub转储Id
+     * Get <p>Datahub转储Id</p> 
+     * @return DatahubId <p>Datahub转储Id</p>
      */
     public String getDatahubId() {
         return this.DatahubId;
     }
 
     /**
-     * Set Datahub转储Id
-     * @param DatahubId Datahub转储Id
+     * Set <p>Datahub转储Id</p>
+     * @param DatahubId <p>Datahub转储Id</p>
      */
     public void setDatahubId(String DatahubId) {
         this.DatahubId = DatahubId;
     }
 
     /**
-     * Get 步骤列表 
-     * @return StepList 步骤列表
+     * Get <p>步骤列表</p> 
+     * @return StepList <p>步骤列表</p>
      */
     public String [] getStepList() {
         return this.StepList;
     }
 
     /**
-     * Set 步骤列表
-     * @param StepList 步骤列表
+     * Set <p>步骤列表</p>
+     * @param StepList <p>步骤列表</p>
      */
     public void setStepList(String [] StepList) {
         this.StepList = StepList;
     }
 
     /**
-     * Get 任务描述信息 
-     * @return Description 任务描述信息
+     * Get <p>任务描述信息</p> 
+     * @return Description <p>任务描述信息</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 任务描述信息
-     * @param Description 任务描述信息
+     * Set <p>任务描述信息</p>
+     * @param Description <p>任务描述信息</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
+    }
+
+    /**
+     * Get <p>任务并发数</p><p>默认值：1</p> 
+     * @return TaskMax <p>任务并发数</p><p>默认值：1</p>
+     */
+    public Long getTaskMax() {
+        return this.TaskMax;
+    }
+
+    /**
+     * Set <p>任务并发数</p><p>默认值：1</p>
+     * @param TaskMax <p>任务并发数</p><p>默认值：1</p>
+     */
+    public void setTaskMax(Long TaskMax) {
+        this.TaskMax = TaskMax;
+    }
+
+    /**
+     * Get <p>任务同步限流值,单位MB/s</p><p>默认值：20MB/s</p> 
+     * @return SyncThrottleLimit <p>任务同步限流值,单位MB/s</p><p>默认值：20MB/s</p>
+     */
+    public Long getSyncThrottleLimit() {
+        return this.SyncThrottleLimit;
+    }
+
+    /**
+     * Set <p>任务同步限流值,单位MB/s</p><p>默认值：20MB/s</p>
+     * @param SyncThrottleLimit <p>任务同步限流值,单位MB/s</p><p>默认值：20MB/s</p>
+     */
+    public void setSyncThrottleLimit(Long SyncThrottleLimit) {
+        this.SyncThrottleLimit = SyncThrottleLimit;
+    }
+
+    /**
+     * Get <p>任务是否自动扩容标识</p><p>枚举值：</p><ul><li>true： 自动扩容</li><li>false： 手动扩容</li></ul><p>默认值：true</p> 
+     * @return AutoExpandFlag <p>任务是否自动扩容标识</p><p>枚举值：</p><ul><li>true： 自动扩容</li><li>false： 手动扩容</li></ul><p>默认值：true</p>
+     */
+    public Boolean getAutoExpandFlag() {
+        return this.AutoExpandFlag;
+    }
+
+    /**
+     * Set <p>任务是否自动扩容标识</p><p>枚举值：</p><ul><li>true： 自动扩容</li><li>false： 手动扩容</li></ul><p>默认值：true</p>
+     * @param AutoExpandFlag <p>任务是否自动扩容标识</p><p>枚举值：</p><ul><li>true： 自动扩容</li><li>false： 手动扩容</li></ul><p>默认值：true</p>
+     */
+    public void setAutoExpandFlag(Boolean AutoExpandFlag) {
+        this.AutoExpandFlag = AutoExpandFlag;
     }
 
     public DatahubTaskInfo() {
@@ -372,6 +441,15 @@ public class DatahubTaskInfo extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.TaskMax != null) {
+            this.TaskMax = new Long(source.TaskMax);
+        }
+        if (source.SyncThrottleLimit != null) {
+            this.SyncThrottleLimit = new Long(source.SyncThrottleLimit);
+        }
+        if (source.AutoExpandFlag != null) {
+            this.AutoExpandFlag = new Boolean(source.AutoExpandFlag);
+        }
     }
 
 
@@ -392,6 +470,9 @@ public class DatahubTaskInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "DatahubId", this.DatahubId);
         this.setParamArraySimple(map, prefix + "StepList.", this.StepList);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "TaskMax", this.TaskMax);
+        this.setParamSimple(map, prefix + "SyncThrottleLimit", this.SyncThrottleLimit);
+        this.setParamSimple(map, prefix + "AutoExpandFlag", this.AutoExpandFlag);
 
     }
 }

@@ -24,63 +24,63 @@ import java.util.HashMap;
 public class DescribeModelServiceResponseVO extends AbstractModel {
 
     /**
-    * 腾讯云AppID
+    * <p>腾讯云AppID</p>
     */
     @SerializedName("AppID")
     @Expose
     private Long AppID;
 
     /**
-    * 腾讯云Uin
+    * <p>腾讯云Uin</p>
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * 实例ID
+    * <p>实例ID</p>
     */
     @SerializedName("InstanceID")
     @Expose
     private String InstanceID;
 
     /**
-    * 模型ID
+    * <p>模型ID</p>
     */
     @SerializedName("ID")
     @Expose
     private String ID;
 
     /**
-    * 模型名称
+    * <p>模型名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 描述
+    * <p>描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 访问路径
+    * <p>访问路径</p>
     */
     @SerializedName("PubPath")
     @Expose
     private String PubPath;
 
     /**
-    * 路径匹配方式：absolute，prefix，regex
+    * <p>路径匹配方式：absolute，prefix，regex</p>
     */
     @SerializedName("PathMatchType")
     @Expose
     private String PathMatchType;
 
     /**
-    * 目标模型列表
+    * <p>目标模型列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetModels")
@@ -88,7 +88,7 @@ public class DescribeModelServiceResponseVO extends AbstractModel {
     private TargetModelDTO [] TargetModels;
 
     /**
-    * 模板模型的名称列表
+    * <p>模板模型的名称列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModelNames")
@@ -96,70 +96,70 @@ public class DescribeModelServiceResponseVO extends AbstractModel {
     private String [] ModelNames;
 
     /**
-    * 是否开启限流
+    * <p>是否开启限流</p>
     */
     @SerializedName("InvokeLimitConfigStatus")
     @Expose
     private Boolean InvokeLimitConfigStatus;
 
     /**
-    * 限流配置
+    * <p>限流配置</p>
     */
     @SerializedName("InvokeLimitConfig")
     @Expose
     private InvokeLimitConfigDTO InvokeLimitConfig;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 最后修改时间
+    * <p>最后修改时间</p>
     */
     @SerializedName("LastUpdateTime")
     @Expose
     private String LastUpdateTime;
 
     /**
-    * 是否开启token控制
+    * <p>是否开启token控制</p>
     */
     @SerializedName("TokenLimitStatus")
     @Expose
     private Boolean TokenLimitStatus;
 
     /**
-    * token控制
+    * <p>token控制</p>
     */
     @SerializedName("TokenLimitConfig")
     @Expose
     private TokenLimitConfigDTO TokenLimitConfig;
 
     /**
-    * 是否开启tms配置
+    * <p>是否开启tms配置</p>
     */
     @SerializedName("TmsStatus")
     @Expose
     private Boolean TmsStatus;
 
     /**
-    * tms配置
+    * <p>tms配置</p>
     */
     @SerializedName("TmsConfig")
     @Expose
     private TmsConfigDTO TmsConfig;
 
     /**
-    * 是否开启IP白名单
+    * <p>是否开启IP白名单</p>
     */
     @SerializedName("IpWhiteStatus")
     @Expose
     private Boolean IpWhiteStatus;
 
     /**
-    * IP白名单列表
+    * <p>IP白名单列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IpWhiteList")
@@ -167,14 +167,14 @@ public class DescribeModelServiceResponseVO extends AbstractModel {
     private String [] IpWhiteList;
 
     /**
-    * 是否开启IP黑名单
+    * <p>是否开启IP黑名单</p>
     */
     @SerializedName("IpBlackStatus")
     @Expose
     private Boolean IpBlackStatus;
 
     /**
-    * IP黑名单列表
+    * <p>IP黑名单列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IpBlackList")
@@ -182,7 +182,7 @@ public class DescribeModelServiceResponseVO extends AbstractModel {
     private String [] IpBlackList;
 
     /**
-    * 插件配置
+    * <p>插件配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PluginConfigs")
@@ -190,35 +190,35 @@ public class DescribeModelServiceResponseVO extends AbstractModel {
     private PluginConfigDTO [] PluginConfigs;
 
     /**
-    * 超时配置，单位秒
+    * <p>超时配置，单位秒</p>
     */
     @SerializedName("Timeout")
     @Expose
     private Long Timeout;
 
     /**
-    * 状态：normal，disabled
+    * <p>状态：normal，disabled</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 关联应用数
+    * <p>关联应用数</p>
     */
     @SerializedName("RelateAgentAppNum")
     @Expose
     private Long RelateAgentAppNum;
 
     /**
-    * 请求路径
+    * <p>请求路径</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 是否开启提示词安全检测
+    * <p>是否开启提示词安全检测</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PromptModerateStatus")
@@ -226,7 +226,7 @@ public class DescribeModelServiceResponseVO extends AbstractModel {
     private Boolean PromptModerateStatus;
 
     /**
-    * 提示词安全检测配置
+    * <p>提示词安全检测配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PromptModerateConfig")
@@ -234,137 +234,153 @@ public class DescribeModelServiceResponseVO extends AbstractModel {
     private PromptModerateConfigDTO PromptModerateConfig;
 
     /**
-     * Get 腾讯云AppID 
-     * @return AppID 腾讯云AppID
+    * <p>是否开启敏感数据检测</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SensitiveDataCheckStatus")
+    @Expose
+    private Boolean SensitiveDataCheckStatus;
+
+    /**
+    * <p>敏感数据检测配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SensitiveDataCheckConfig")
+    @Expose
+    private SensitiveDataCheckConfigDTO SensitiveDataCheckConfig;
+
+    /**
+     * Get <p>腾讯云AppID</p> 
+     * @return AppID <p>腾讯云AppID</p>
      */
     public Long getAppID() {
         return this.AppID;
     }
 
     /**
-     * Set 腾讯云AppID
-     * @param AppID 腾讯云AppID
+     * Set <p>腾讯云AppID</p>
+     * @param AppID <p>腾讯云AppID</p>
      */
     public void setAppID(Long AppID) {
         this.AppID = AppID;
     }
 
     /**
-     * Get 腾讯云Uin 
-     * @return Uin 腾讯云Uin
+     * Get <p>腾讯云Uin</p> 
+     * @return Uin <p>腾讯云Uin</p>
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set 腾讯云Uin
-     * @param Uin 腾讯云Uin
+     * Set <p>腾讯云Uin</p>
+     * @param Uin <p>腾讯云Uin</p>
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 实例ID 
-     * @return InstanceID 实例ID
+     * Get <p>实例ID</p> 
+     * @return InstanceID <p>实例ID</p>
      */
     public String getInstanceID() {
         return this.InstanceID;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceID 实例ID
+     * Set <p>实例ID</p>
+     * @param InstanceID <p>实例ID</p>
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;
     }
 
     /**
-     * Get 模型ID 
-     * @return ID 模型ID
+     * Get <p>模型ID</p> 
+     * @return ID <p>模型ID</p>
      */
     public String getID() {
         return this.ID;
     }
 
     /**
-     * Set 模型ID
-     * @param ID 模型ID
+     * Set <p>模型ID</p>
+     * @param ID <p>模型ID</p>
      */
     public void setID(String ID) {
         this.ID = ID;
     }
 
     /**
-     * Get 模型名称 
-     * @return Name 模型名称
+     * Get <p>模型名称</p> 
+     * @return Name <p>模型名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 模型名称
-     * @param Name 模型名称
+     * Set <p>模型名称</p>
+     * @param Name <p>模型名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 描述 
-     * @return Description 描述
+     * Get <p>描述</p> 
+     * @return Description <p>描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 描述
-     * @param Description 描述
+     * Set <p>描述</p>
+     * @param Description <p>描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 访问路径 
-     * @return PubPath 访问路径
+     * Get <p>访问路径</p> 
+     * @return PubPath <p>访问路径</p>
      */
     public String getPubPath() {
         return this.PubPath;
     }
 
     /**
-     * Set 访问路径
-     * @param PubPath 访问路径
+     * Set <p>访问路径</p>
+     * @param PubPath <p>访问路径</p>
      */
     public void setPubPath(String PubPath) {
         this.PubPath = PubPath;
     }
 
     /**
-     * Get 路径匹配方式：absolute，prefix，regex 
-     * @return PathMatchType 路径匹配方式：absolute，prefix，regex
+     * Get <p>路径匹配方式：absolute，prefix，regex</p> 
+     * @return PathMatchType <p>路径匹配方式：absolute，prefix，regex</p>
      */
     public String getPathMatchType() {
         return this.PathMatchType;
     }
 
     /**
-     * Set 路径匹配方式：absolute，prefix，regex
-     * @param PathMatchType 路径匹配方式：absolute，prefix，regex
+     * Set <p>路径匹配方式：absolute，prefix，regex</p>
+     * @param PathMatchType <p>路径匹配方式：absolute，prefix，regex</p>
      */
     public void setPathMatchType(String PathMatchType) {
         this.PathMatchType = PathMatchType;
     }
 
     /**
-     * Get 目标模型列表
+     * Get <p>目标模型列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TargetModels 目标模型列表
+     * @return TargetModels <p>目标模型列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TargetModelDTO [] getTargetModels() {
@@ -372,9 +388,9 @@ public class DescribeModelServiceResponseVO extends AbstractModel {
     }
 
     /**
-     * Set 目标模型列表
+     * Set <p>目标模型列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TargetModels 目标模型列表
+     * @param TargetModels <p>目标模型列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetModels(TargetModelDTO [] TargetModels) {
@@ -382,9 +398,9 @@ public class DescribeModelServiceResponseVO extends AbstractModel {
     }
 
     /**
-     * Get 模板模型的名称列表
+     * Get <p>模板模型的名称列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ModelNames 模板模型的名称列表
+     * @return ModelNames <p>模板模型的名称列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getModelNames() {
@@ -392,9 +408,9 @@ public class DescribeModelServiceResponseVO extends AbstractModel {
     }
 
     /**
-     * Set 模板模型的名称列表
+     * Set <p>模板模型的名称列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ModelNames 模板模型的名称列表
+     * @param ModelNames <p>模板模型的名称列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModelNames(String [] ModelNames) {
@@ -402,153 +418,153 @@ public class DescribeModelServiceResponseVO extends AbstractModel {
     }
 
     /**
-     * Get 是否开启限流 
-     * @return InvokeLimitConfigStatus 是否开启限流
+     * Get <p>是否开启限流</p> 
+     * @return InvokeLimitConfigStatus <p>是否开启限流</p>
      */
     public Boolean getInvokeLimitConfigStatus() {
         return this.InvokeLimitConfigStatus;
     }
 
     /**
-     * Set 是否开启限流
-     * @param InvokeLimitConfigStatus 是否开启限流
+     * Set <p>是否开启限流</p>
+     * @param InvokeLimitConfigStatus <p>是否开启限流</p>
      */
     public void setInvokeLimitConfigStatus(Boolean InvokeLimitConfigStatus) {
         this.InvokeLimitConfigStatus = InvokeLimitConfigStatus;
     }
 
     /**
-     * Get 限流配置 
-     * @return InvokeLimitConfig 限流配置
+     * Get <p>限流配置</p> 
+     * @return InvokeLimitConfig <p>限流配置</p>
      */
     public InvokeLimitConfigDTO getInvokeLimitConfig() {
         return this.InvokeLimitConfig;
     }
 
     /**
-     * Set 限流配置
-     * @param InvokeLimitConfig 限流配置
+     * Set <p>限流配置</p>
+     * @param InvokeLimitConfig <p>限流配置</p>
      */
     public void setInvokeLimitConfig(InvokeLimitConfigDTO InvokeLimitConfig) {
         this.InvokeLimitConfig = InvokeLimitConfig;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 最后修改时间 
-     * @return LastUpdateTime 最后修改时间
+     * Get <p>最后修改时间</p> 
+     * @return LastUpdateTime <p>最后修改时间</p>
      */
     public String getLastUpdateTime() {
         return this.LastUpdateTime;
     }
 
     /**
-     * Set 最后修改时间
-     * @param LastUpdateTime 最后修改时间
+     * Set <p>最后修改时间</p>
+     * @param LastUpdateTime <p>最后修改时间</p>
      */
     public void setLastUpdateTime(String LastUpdateTime) {
         this.LastUpdateTime = LastUpdateTime;
     }
 
     /**
-     * Get 是否开启token控制 
-     * @return TokenLimitStatus 是否开启token控制
+     * Get <p>是否开启token控制</p> 
+     * @return TokenLimitStatus <p>是否开启token控制</p>
      */
     public Boolean getTokenLimitStatus() {
         return this.TokenLimitStatus;
     }
 
     /**
-     * Set 是否开启token控制
-     * @param TokenLimitStatus 是否开启token控制
+     * Set <p>是否开启token控制</p>
+     * @param TokenLimitStatus <p>是否开启token控制</p>
      */
     public void setTokenLimitStatus(Boolean TokenLimitStatus) {
         this.TokenLimitStatus = TokenLimitStatus;
     }
 
     /**
-     * Get token控制 
-     * @return TokenLimitConfig token控制
+     * Get <p>token控制</p> 
+     * @return TokenLimitConfig <p>token控制</p>
      */
     public TokenLimitConfigDTO getTokenLimitConfig() {
         return this.TokenLimitConfig;
     }
 
     /**
-     * Set token控制
-     * @param TokenLimitConfig token控制
+     * Set <p>token控制</p>
+     * @param TokenLimitConfig <p>token控制</p>
      */
     public void setTokenLimitConfig(TokenLimitConfigDTO TokenLimitConfig) {
         this.TokenLimitConfig = TokenLimitConfig;
     }
 
     /**
-     * Get 是否开启tms配置 
-     * @return TmsStatus 是否开启tms配置
+     * Get <p>是否开启tms配置</p> 
+     * @return TmsStatus <p>是否开启tms配置</p>
      */
     public Boolean getTmsStatus() {
         return this.TmsStatus;
     }
 
     /**
-     * Set 是否开启tms配置
-     * @param TmsStatus 是否开启tms配置
+     * Set <p>是否开启tms配置</p>
+     * @param TmsStatus <p>是否开启tms配置</p>
      */
     public void setTmsStatus(Boolean TmsStatus) {
         this.TmsStatus = TmsStatus;
     }
 
     /**
-     * Get tms配置 
-     * @return TmsConfig tms配置
+     * Get <p>tms配置</p> 
+     * @return TmsConfig <p>tms配置</p>
      */
     public TmsConfigDTO getTmsConfig() {
         return this.TmsConfig;
     }
 
     /**
-     * Set tms配置
-     * @param TmsConfig tms配置
+     * Set <p>tms配置</p>
+     * @param TmsConfig <p>tms配置</p>
      */
     public void setTmsConfig(TmsConfigDTO TmsConfig) {
         this.TmsConfig = TmsConfig;
     }
 
     /**
-     * Get 是否开启IP白名单 
-     * @return IpWhiteStatus 是否开启IP白名单
+     * Get <p>是否开启IP白名单</p> 
+     * @return IpWhiteStatus <p>是否开启IP白名单</p>
      */
     public Boolean getIpWhiteStatus() {
         return this.IpWhiteStatus;
     }
 
     /**
-     * Set 是否开启IP白名单
-     * @param IpWhiteStatus 是否开启IP白名单
+     * Set <p>是否开启IP白名单</p>
+     * @param IpWhiteStatus <p>是否开启IP白名单</p>
      */
     public void setIpWhiteStatus(Boolean IpWhiteStatus) {
         this.IpWhiteStatus = IpWhiteStatus;
     }
 
     /**
-     * Get IP白名单列表
+     * Get <p>IP白名单列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IpWhiteList IP白名单列表
+     * @return IpWhiteList <p>IP白名单列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getIpWhiteList() {
@@ -556,9 +572,9 @@ public class DescribeModelServiceResponseVO extends AbstractModel {
     }
 
     /**
-     * Set IP白名单列表
+     * Set <p>IP白名单列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IpWhiteList IP白名单列表
+     * @param IpWhiteList <p>IP白名单列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpWhiteList(String [] IpWhiteList) {
@@ -566,25 +582,25 @@ public class DescribeModelServiceResponseVO extends AbstractModel {
     }
 
     /**
-     * Get 是否开启IP黑名单 
-     * @return IpBlackStatus 是否开启IP黑名单
+     * Get <p>是否开启IP黑名单</p> 
+     * @return IpBlackStatus <p>是否开启IP黑名单</p>
      */
     public Boolean getIpBlackStatus() {
         return this.IpBlackStatus;
     }
 
     /**
-     * Set 是否开启IP黑名单
-     * @param IpBlackStatus 是否开启IP黑名单
+     * Set <p>是否开启IP黑名单</p>
+     * @param IpBlackStatus <p>是否开启IP黑名单</p>
      */
     public void setIpBlackStatus(Boolean IpBlackStatus) {
         this.IpBlackStatus = IpBlackStatus;
     }
 
     /**
-     * Get IP黑名单列表
+     * Get <p>IP黑名单列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IpBlackList IP黑名单列表
+     * @return IpBlackList <p>IP黑名单列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getIpBlackList() {
@@ -592,9 +608,9 @@ public class DescribeModelServiceResponseVO extends AbstractModel {
     }
 
     /**
-     * Set IP黑名单列表
+     * Set <p>IP黑名单列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IpBlackList IP黑名单列表
+     * @param IpBlackList <p>IP黑名单列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpBlackList(String [] IpBlackList) {
@@ -602,9 +618,9 @@ public class DescribeModelServiceResponseVO extends AbstractModel {
     }
 
     /**
-     * Get 插件配置
+     * Get <p>插件配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PluginConfigs 插件配置
+     * @return PluginConfigs <p>插件配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PluginConfigDTO [] getPluginConfigs() {
@@ -612,9 +628,9 @@ public class DescribeModelServiceResponseVO extends AbstractModel {
     }
 
     /**
-     * Set 插件配置
+     * Set <p>插件配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PluginConfigs 插件配置
+     * @param PluginConfigs <p>插件配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPluginConfigs(PluginConfigDTO [] PluginConfigs) {
@@ -622,73 +638,73 @@ public class DescribeModelServiceResponseVO extends AbstractModel {
     }
 
     /**
-     * Get 超时配置，单位秒 
-     * @return Timeout 超时配置，单位秒
+     * Get <p>超时配置，单位秒</p> 
+     * @return Timeout <p>超时配置，单位秒</p>
      */
     public Long getTimeout() {
         return this.Timeout;
     }
 
     /**
-     * Set 超时配置，单位秒
-     * @param Timeout 超时配置，单位秒
+     * Set <p>超时配置，单位秒</p>
+     * @param Timeout <p>超时配置，单位秒</p>
      */
     public void setTimeout(Long Timeout) {
         this.Timeout = Timeout;
     }
 
     /**
-     * Get 状态：normal，disabled 
-     * @return Status 状态：normal，disabled
+     * Get <p>状态：normal，disabled</p> 
+     * @return Status <p>状态：normal，disabled</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态：normal，disabled
-     * @param Status 状态：normal，disabled
+     * Set <p>状态：normal，disabled</p>
+     * @param Status <p>状态：normal，disabled</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 关联应用数 
-     * @return RelateAgentAppNum 关联应用数
+     * Get <p>关联应用数</p> 
+     * @return RelateAgentAppNum <p>关联应用数</p>
      */
     public Long getRelateAgentAppNum() {
         return this.RelateAgentAppNum;
     }
 
     /**
-     * Set 关联应用数
-     * @param RelateAgentAppNum 关联应用数
+     * Set <p>关联应用数</p>
+     * @param RelateAgentAppNum <p>关联应用数</p>
      */
     public void setRelateAgentAppNum(Long RelateAgentAppNum) {
         this.RelateAgentAppNum = RelateAgentAppNum;
     }
 
     /**
-     * Get 请求路径 
-     * @return Url 请求路径
+     * Get <p>请求路径</p> 
+     * @return Url <p>请求路径</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 请求路径
-     * @param Url 请求路径
+     * Set <p>请求路径</p>
+     * @param Url <p>请求路径</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get 是否开启提示词安全检测
+     * Get <p>是否开启提示词安全检测</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PromptModerateStatus 是否开启提示词安全检测
+     * @return PromptModerateStatus <p>是否开启提示词安全检测</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getPromptModerateStatus() {
@@ -696,9 +712,9 @@ public class DescribeModelServiceResponseVO extends AbstractModel {
     }
 
     /**
-     * Set 是否开启提示词安全检测
+     * Set <p>是否开启提示词安全检测</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PromptModerateStatus 是否开启提示词安全检测
+     * @param PromptModerateStatus <p>是否开启提示词安全检测</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPromptModerateStatus(Boolean PromptModerateStatus) {
@@ -706,9 +722,9 @@ public class DescribeModelServiceResponseVO extends AbstractModel {
     }
 
     /**
-     * Get 提示词安全检测配置
+     * Get <p>提示词安全检测配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PromptModerateConfig 提示词安全检测配置
+     * @return PromptModerateConfig <p>提示词安全检测配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PromptModerateConfigDTO getPromptModerateConfig() {
@@ -716,13 +732,53 @@ public class DescribeModelServiceResponseVO extends AbstractModel {
     }
 
     /**
-     * Set 提示词安全检测配置
+     * Set <p>提示词安全检测配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PromptModerateConfig 提示词安全检测配置
+     * @param PromptModerateConfig <p>提示词安全检测配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPromptModerateConfig(PromptModerateConfigDTO PromptModerateConfig) {
         this.PromptModerateConfig = PromptModerateConfig;
+    }
+
+    /**
+     * Get <p>是否开启敏感数据检测</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SensitiveDataCheckStatus <p>是否开启敏感数据检测</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getSensitiveDataCheckStatus() {
+        return this.SensitiveDataCheckStatus;
+    }
+
+    /**
+     * Set <p>是否开启敏感数据检测</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SensitiveDataCheckStatus <p>是否开启敏感数据检测</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSensitiveDataCheckStatus(Boolean SensitiveDataCheckStatus) {
+        this.SensitiveDataCheckStatus = SensitiveDataCheckStatus;
+    }
+
+    /**
+     * Get <p>敏感数据检测配置</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SensitiveDataCheckConfig <p>敏感数据检测配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SensitiveDataCheckConfigDTO getSensitiveDataCheckConfig() {
+        return this.SensitiveDataCheckConfig;
+    }
+
+    /**
+     * Set <p>敏感数据检测配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SensitiveDataCheckConfig <p>敏感数据检测配置</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSensitiveDataCheckConfig(SensitiveDataCheckConfigDTO SensitiveDataCheckConfig) {
+        this.SensitiveDataCheckConfig = SensitiveDataCheckConfig;
     }
 
     public DescribeModelServiceResponseVO() {
@@ -835,6 +891,12 @@ public class DescribeModelServiceResponseVO extends AbstractModel {
         if (source.PromptModerateConfig != null) {
             this.PromptModerateConfig = new PromptModerateConfigDTO(source.PromptModerateConfig);
         }
+        if (source.SensitiveDataCheckStatus != null) {
+            this.SensitiveDataCheckStatus = new Boolean(source.SensitiveDataCheckStatus);
+        }
+        if (source.SensitiveDataCheckConfig != null) {
+            this.SensitiveDataCheckConfig = new SensitiveDataCheckConfigDTO(source.SensitiveDataCheckConfig);
+        }
     }
 
 
@@ -871,6 +933,8 @@ public class DescribeModelServiceResponseVO extends AbstractModel {
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "PromptModerateStatus", this.PromptModerateStatus);
         this.setParamObj(map, prefix + "PromptModerateConfig.", this.PromptModerateConfig);
+        this.setParamSimple(map, prefix + "SensitiveDataCheckStatus", this.SensitiveDataCheckStatus);
+        this.setParamObj(map, prefix + "SensitiveDataCheckConfig.", this.SensitiveDataCheckConfig);
 
     }
 }

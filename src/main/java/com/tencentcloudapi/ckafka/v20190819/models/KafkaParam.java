@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class KafkaParam extends AbstractModel {
 
     /**
-    * 是否为自建集群
+    * <p>是否为自建集群</p>
     */
     @SerializedName("SelfBuilt")
     @Expose
     private Boolean SelfBuilt;
 
     /**
-    * ckafka集群实例Id
+    * <p>ckafka集群实例Id</p>
     */
     @SerializedName("Resource")
     @Expose
     private String Resource;
 
     /**
-    * 主题名，多个以“,”分隔
+    * <p>主题名，多个以“,”分隔</p>
     */
     @SerializedName("Topic")
     @Expose
     private String Topic;
 
     /**
-    * Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp
+    * <p>Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OffsetType")
@@ -53,7 +53,7 @@ public class KafkaParam extends AbstractModel {
     private String OffsetType;
 
     /**
-    * Offset类型为timestamp时必传，传时间戳，精确到秒
+    * <p>Offset类型为timestamp时必传，传时间戳，精确到秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
@@ -61,7 +61,7 @@ public class KafkaParam extends AbstractModel {
     private Long StartTime;
 
     /**
-    * 实例资源名称
+    * <p>实例资源名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceName")
@@ -69,7 +69,7 @@ public class KafkaParam extends AbstractModel {
     private String ResourceName;
 
     /**
-    * 可用区
+    * <p>可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneId")
@@ -77,7 +77,7 @@ public class KafkaParam extends AbstractModel {
     private Long ZoneId;
 
     /**
-    * 主题Id
+    * <p>主题Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicId")
@@ -85,7 +85,7 @@ public class KafkaParam extends AbstractModel {
     private String TopicId;
 
     /**
-    * Topic的分区数
+    * <p>Topic的分区数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PartitionNum")
@@ -93,7 +93,7 @@ public class KafkaParam extends AbstractModel {
     private Long PartitionNum;
 
     /**
-    * 启用容错实例/开启死信队列
+    * <p>启用容错实例/开启死信队列</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableToleration")
@@ -101,14 +101,14 @@ public class KafkaParam extends AbstractModel {
     private Boolean EnableToleration;
 
     /**
-    * Qps 限制
+    * <p>Qps 限制</p>
     */
     @SerializedName("QpsLimit")
     @Expose
     private Long QpsLimit;
 
     /**
-    * Table到Topic的路由，「分发到多个topic」开关打开时必传
+    * <p>Table到Topic的路由，「分发到多个topic」开关打开时必传</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableMappings")
@@ -116,120 +116,127 @@ public class KafkaParam extends AbstractModel {
     private TableMapping [] TableMappings;
 
     /**
-    * 「分发到多个topic」开关，默认为false
+    * <p>「分发到多个topic」开关，默认为false</p>
     */
     @SerializedName("UseTableMapping")
     @Expose
     private Boolean UseTableMapping;
 
     /**
-    * 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务，如果不使用分发到多个topic，需要在Topic字段填写需要自动创建的topic名）
+    * <p>使用的Topic是否需要自动创建（目前只支持SOURCE流入任务，如果不使用分发到多个topic，需要在Topic字段填写需要自动创建的topic名）</p>
     */
     @SerializedName("UseAutoCreateTopic")
     @Expose
     private Boolean UseAutoCreateTopic;
 
     /**
-    * 写入Topic时是否进行压缩，不开启填"none"，开启的话，填写"open"。
+    * <p>写入Topic时是否进行压缩，不开启填&quot;none&quot;，开启的话，填写&quot;open&quot;。</p>
     */
     @SerializedName("CompressionType")
     @Expose
     private String CompressionType;
 
     /**
-    * 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
+    * <p>源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)</p>
     */
     @SerializedName("MsgMultiple")
     @Expose
     private Long MsgMultiple;
 
     /**
-    * 数据同步专用参数, 正常数据处理可为空, 实例级别同步: 仅同步元数据填写"META_SYNC_INSTANCE_TYPE", 同步元数据及全部topic内消息的填写"META_AND_DATA_SYNC_INSTANCE_TYPE"; topic级别同步: 选中的源和目标topic中的消息(需要目标实例也包含该topic)填写"DATA_SYNC_TYPE"
+    * <p>数据同步专用参数, 正常数据处理可为空, 实例级别同步: 仅同步元数据填写&quot;META_SYNC_INSTANCE_TYPE&quot;, 同步元数据及全部topic内消息的填写&quot;META_AND_DATA_SYNC_INSTANCE_TYPE&quot;; topic级别同步: 选中的源和目标topic中的消息(需要目标实例也包含该topic)填写&quot;DATA_SYNC_TYPE&quot;</p>
     */
     @SerializedName("ConnectorSyncType")
     @Expose
     private String ConnectorSyncType;
 
     /**
-    * 数据同步专用参数, 当通过时,希望下游的消息写入分区与上游的一致,则填true,但下游分区小于上游时,会报错; 不需要一致则为false, 默认为false
+    * <p>数据同步专用参数, 当通过时,希望下游的消息写入分区与上游的一致,则填true,但下游分区小于上游时,会报错; 不需要一致则为false, 默认为false</p>
     */
     @SerializedName("KeepPartition")
     @Expose
     private Boolean KeepPartition;
 
     /**
-    * 正则匹配Topic列表
+    * <p>正则匹配Topic列表</p>
     */
     @SerializedName("TopicRegularExpression")
     @Expose
     private String TopicRegularExpression;
 
     /**
-    * Topic 前缀
+    * <p>Topic 前缀</p>
     */
     @SerializedName("Prefix")
     @Expose
     private String Prefix;
 
     /**
-    * Topic前缀分隔符
+    * <p>Topic前缀分隔符</p>
     */
     @SerializedName("Separator")
     @Expose
     private String Separator;
 
     /**
-     * Get 是否为自建集群 
-     * @return SelfBuilt 是否为自建集群
+    * <p>多选topic列表</p>
+    */
+    @SerializedName("TopicList")
+    @Expose
+    private String [] TopicList;
+
+    /**
+     * Get <p>是否为自建集群</p> 
+     * @return SelfBuilt <p>是否为自建集群</p>
      */
     public Boolean getSelfBuilt() {
         return this.SelfBuilt;
     }
 
     /**
-     * Set 是否为自建集群
-     * @param SelfBuilt 是否为自建集群
+     * Set <p>是否为自建集群</p>
+     * @param SelfBuilt <p>是否为自建集群</p>
      */
     public void setSelfBuilt(Boolean SelfBuilt) {
         this.SelfBuilt = SelfBuilt;
     }
 
     /**
-     * Get ckafka集群实例Id 
-     * @return Resource ckafka集群实例Id
+     * Get <p>ckafka集群实例Id</p> 
+     * @return Resource <p>ckafka集群实例Id</p>
      */
     public String getResource() {
         return this.Resource;
     }
 
     /**
-     * Set ckafka集群实例Id
-     * @param Resource ckafka集群实例Id
+     * Set <p>ckafka集群实例Id</p>
+     * @param Resource <p>ckafka集群实例Id</p>
      */
     public void setResource(String Resource) {
         this.Resource = Resource;
     }
 
     /**
-     * Get 主题名，多个以“,”分隔 
-     * @return Topic 主题名，多个以“,”分隔
+     * Get <p>主题名，多个以“,”分隔</p> 
+     * @return Topic <p>主题名，多个以“,”分隔</p>
      */
     public String getTopic() {
         return this.Topic;
     }
 
     /**
-     * Set 主题名，多个以“,”分隔
-     * @param Topic 主题名，多个以“,”分隔
+     * Set <p>主题名，多个以“,”分隔</p>
+     * @param Topic <p>主题名，多个以“,”分隔</p>
      */
     public void setTopic(String Topic) {
         this.Topic = Topic;
     }
 
     /**
-     * Get Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp
+     * Get <p>Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OffsetType Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp
+     * @return OffsetType <p>Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOffsetType() {
@@ -237,9 +244,9 @@ public class KafkaParam extends AbstractModel {
     }
 
     /**
-     * Set Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp
+     * Set <p>Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OffsetType Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp
+     * @param OffsetType <p>Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOffsetType(String OffsetType) {
@@ -247,9 +254,9 @@ public class KafkaParam extends AbstractModel {
     }
 
     /**
-     * Get Offset类型为timestamp时必传，传时间戳，精确到秒
+     * Get <p>Offset类型为timestamp时必传，传时间戳，精确到秒</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StartTime Offset类型为timestamp时必传，传时间戳，精确到秒
+     * @return StartTime <p>Offset类型为timestamp时必传，传时间戳，精确到秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStartTime() {
@@ -257,9 +264,9 @@ public class KafkaParam extends AbstractModel {
     }
 
     /**
-     * Set Offset类型为timestamp时必传，传时间戳，精确到秒
+     * Set <p>Offset类型为timestamp时必传，传时间戳，精确到秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StartTime Offset类型为timestamp时必传，传时间戳，精确到秒
+     * @param StartTime <p>Offset类型为timestamp时必传，传时间戳，精确到秒</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(Long StartTime) {
@@ -267,9 +274,9 @@ public class KafkaParam extends AbstractModel {
     }
 
     /**
-     * Get 实例资源名称
+     * Get <p>实例资源名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceName 实例资源名称
+     * @return ResourceName <p>实例资源名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceName() {
@@ -277,9 +284,9 @@ public class KafkaParam extends AbstractModel {
     }
 
     /**
-     * Set 实例资源名称
+     * Set <p>实例资源名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceName 实例资源名称
+     * @param ResourceName <p>实例资源名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceName(String ResourceName) {
@@ -287,9 +294,9 @@ public class KafkaParam extends AbstractModel {
     }
 
     /**
-     * Get 可用区
+     * Get <p>可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ZoneId 可用区
+     * @return ZoneId <p>可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getZoneId() {
@@ -297,9 +304,9 @@ public class KafkaParam extends AbstractModel {
     }
 
     /**
-     * Set 可用区
+     * Set <p>可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ZoneId 可用区
+     * @param ZoneId <p>可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneId(Long ZoneId) {
@@ -307,9 +314,9 @@ public class KafkaParam extends AbstractModel {
     }
 
     /**
-     * Get 主题Id
+     * Get <p>主题Id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TopicId 主题Id
+     * @return TopicId <p>主题Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicId() {
@@ -317,9 +324,9 @@ public class KafkaParam extends AbstractModel {
     }
 
     /**
-     * Set 主题Id
+     * Set <p>主题Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TopicId 主题Id
+     * @param TopicId <p>主题Id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicId(String TopicId) {
@@ -327,9 +334,9 @@ public class KafkaParam extends AbstractModel {
     }
 
     /**
-     * Get Topic的分区数
+     * Get <p>Topic的分区数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PartitionNum Topic的分区数
+     * @return PartitionNum <p>Topic的分区数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPartitionNum() {
@@ -337,9 +344,9 @@ public class KafkaParam extends AbstractModel {
     }
 
     /**
-     * Set Topic的分区数
+     * Set <p>Topic的分区数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PartitionNum Topic的分区数
+     * @param PartitionNum <p>Topic的分区数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPartitionNum(Long PartitionNum) {
@@ -347,9 +354,9 @@ public class KafkaParam extends AbstractModel {
     }
 
     /**
-     * Get 启用容错实例/开启死信队列
+     * Get <p>启用容错实例/开启死信队列</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EnableToleration 启用容错实例/开启死信队列
+     * @return EnableToleration <p>启用容错实例/开启死信队列</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableToleration() {
@@ -357,9 +364,9 @@ public class KafkaParam extends AbstractModel {
     }
 
     /**
-     * Set 启用容错实例/开启死信队列
+     * Set <p>启用容错实例/开启死信队列</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EnableToleration 启用容错实例/开启死信队列
+     * @param EnableToleration <p>启用容错实例/开启死信队列</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableToleration(Boolean EnableToleration) {
@@ -367,25 +374,25 @@ public class KafkaParam extends AbstractModel {
     }
 
     /**
-     * Get Qps 限制 
-     * @return QpsLimit Qps 限制
+     * Get <p>Qps 限制</p> 
+     * @return QpsLimit <p>Qps 限制</p>
      */
     public Long getQpsLimit() {
         return this.QpsLimit;
     }
 
     /**
-     * Set Qps 限制
-     * @param QpsLimit Qps 限制
+     * Set <p>Qps 限制</p>
+     * @param QpsLimit <p>Qps 限制</p>
      */
     public void setQpsLimit(Long QpsLimit) {
         this.QpsLimit = QpsLimit;
     }
 
     /**
-     * Get Table到Topic的路由，「分发到多个topic」开关打开时必传
+     * Get <p>Table到Topic的路由，「分发到多个topic」开关打开时必传</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TableMappings Table到Topic的路由，「分发到多个topic」开关打开时必传
+     * @return TableMappings <p>Table到Topic的路由，「分发到多个topic」开关打开时必传</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TableMapping [] getTableMappings() {
@@ -393,9 +400,9 @@ public class KafkaParam extends AbstractModel {
     }
 
     /**
-     * Set Table到Topic的路由，「分发到多个topic」开关打开时必传
+     * Set <p>Table到Topic的路由，「分发到多个topic」开关打开时必传</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TableMappings Table到Topic的路由，「分发到多个topic」开关打开时必传
+     * @param TableMappings <p>Table到Topic的路由，「分发到多个topic」开关打开时必传</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableMappings(TableMapping [] TableMappings) {
@@ -403,147 +410,163 @@ public class KafkaParam extends AbstractModel {
     }
 
     /**
-     * Get 「分发到多个topic」开关，默认为false 
-     * @return UseTableMapping 「分发到多个topic」开关，默认为false
+     * Get <p>「分发到多个topic」开关，默认为false</p> 
+     * @return UseTableMapping <p>「分发到多个topic」开关，默认为false</p>
      */
     public Boolean getUseTableMapping() {
         return this.UseTableMapping;
     }
 
     /**
-     * Set 「分发到多个topic」开关，默认为false
-     * @param UseTableMapping 「分发到多个topic」开关，默认为false
+     * Set <p>「分发到多个topic」开关，默认为false</p>
+     * @param UseTableMapping <p>「分发到多个topic」开关，默认为false</p>
      */
     public void setUseTableMapping(Boolean UseTableMapping) {
         this.UseTableMapping = UseTableMapping;
     }
 
     /**
-     * Get 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务，如果不使用分发到多个topic，需要在Topic字段填写需要自动创建的topic名） 
-     * @return UseAutoCreateTopic 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务，如果不使用分发到多个topic，需要在Topic字段填写需要自动创建的topic名）
+     * Get <p>使用的Topic是否需要自动创建（目前只支持SOURCE流入任务，如果不使用分发到多个topic，需要在Topic字段填写需要自动创建的topic名）</p> 
+     * @return UseAutoCreateTopic <p>使用的Topic是否需要自动创建（目前只支持SOURCE流入任务，如果不使用分发到多个topic，需要在Topic字段填写需要自动创建的topic名）</p>
      */
     public Boolean getUseAutoCreateTopic() {
         return this.UseAutoCreateTopic;
     }
 
     /**
-     * Set 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务，如果不使用分发到多个topic，需要在Topic字段填写需要自动创建的topic名）
-     * @param UseAutoCreateTopic 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务，如果不使用分发到多个topic，需要在Topic字段填写需要自动创建的topic名）
+     * Set <p>使用的Topic是否需要自动创建（目前只支持SOURCE流入任务，如果不使用分发到多个topic，需要在Topic字段填写需要自动创建的topic名）</p>
+     * @param UseAutoCreateTopic <p>使用的Topic是否需要自动创建（目前只支持SOURCE流入任务，如果不使用分发到多个topic，需要在Topic字段填写需要自动创建的topic名）</p>
      */
     public void setUseAutoCreateTopic(Boolean UseAutoCreateTopic) {
         this.UseAutoCreateTopic = UseAutoCreateTopic;
     }
 
     /**
-     * Get 写入Topic时是否进行压缩，不开启填"none"，开启的话，填写"open"。 
-     * @return CompressionType 写入Topic时是否进行压缩，不开启填"none"，开启的话，填写"open"。
+     * Get <p>写入Topic时是否进行压缩，不开启填&quot;none&quot;，开启的话，填写&quot;open&quot;。</p> 
+     * @return CompressionType <p>写入Topic时是否进行压缩，不开启填&quot;none&quot;，开启的话，填写&quot;open&quot;。</p>
      */
     public String getCompressionType() {
         return this.CompressionType;
     }
 
     /**
-     * Set 写入Topic时是否进行压缩，不开启填"none"，开启的话，填写"open"。
-     * @param CompressionType 写入Topic时是否进行压缩，不开启填"none"，开启的话，填写"open"。
+     * Set <p>写入Topic时是否进行压缩，不开启填&quot;none&quot;，开启的话，填写&quot;open&quot;。</p>
+     * @param CompressionType <p>写入Topic时是否进行压缩，不开启填&quot;none&quot;，开启的话，填写&quot;open&quot;。</p>
      */
     public void setCompressionType(String CompressionType) {
         this.CompressionType = CompressionType;
     }
 
     /**
-     * Get 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用) 
-     * @return MsgMultiple 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
+     * Get <p>源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)</p> 
+     * @return MsgMultiple <p>源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)</p>
      */
     public Long getMsgMultiple() {
         return this.MsgMultiple;
     }
 
     /**
-     * Set 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
-     * @param MsgMultiple 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
+     * Set <p>源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)</p>
+     * @param MsgMultiple <p>源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)</p>
      */
     public void setMsgMultiple(Long MsgMultiple) {
         this.MsgMultiple = MsgMultiple;
     }
 
     /**
-     * Get 数据同步专用参数, 正常数据处理可为空, 实例级别同步: 仅同步元数据填写"META_SYNC_INSTANCE_TYPE", 同步元数据及全部topic内消息的填写"META_AND_DATA_SYNC_INSTANCE_TYPE"; topic级别同步: 选中的源和目标topic中的消息(需要目标实例也包含该topic)填写"DATA_SYNC_TYPE" 
-     * @return ConnectorSyncType 数据同步专用参数, 正常数据处理可为空, 实例级别同步: 仅同步元数据填写"META_SYNC_INSTANCE_TYPE", 同步元数据及全部topic内消息的填写"META_AND_DATA_SYNC_INSTANCE_TYPE"; topic级别同步: 选中的源和目标topic中的消息(需要目标实例也包含该topic)填写"DATA_SYNC_TYPE"
+     * Get <p>数据同步专用参数, 正常数据处理可为空, 实例级别同步: 仅同步元数据填写&quot;META_SYNC_INSTANCE_TYPE&quot;, 同步元数据及全部topic内消息的填写&quot;META_AND_DATA_SYNC_INSTANCE_TYPE&quot;; topic级别同步: 选中的源和目标topic中的消息(需要目标实例也包含该topic)填写&quot;DATA_SYNC_TYPE&quot;</p> 
+     * @return ConnectorSyncType <p>数据同步专用参数, 正常数据处理可为空, 实例级别同步: 仅同步元数据填写&quot;META_SYNC_INSTANCE_TYPE&quot;, 同步元数据及全部topic内消息的填写&quot;META_AND_DATA_SYNC_INSTANCE_TYPE&quot;; topic级别同步: 选中的源和目标topic中的消息(需要目标实例也包含该topic)填写&quot;DATA_SYNC_TYPE&quot;</p>
      */
     public String getConnectorSyncType() {
         return this.ConnectorSyncType;
     }
 
     /**
-     * Set 数据同步专用参数, 正常数据处理可为空, 实例级别同步: 仅同步元数据填写"META_SYNC_INSTANCE_TYPE", 同步元数据及全部topic内消息的填写"META_AND_DATA_SYNC_INSTANCE_TYPE"; topic级别同步: 选中的源和目标topic中的消息(需要目标实例也包含该topic)填写"DATA_SYNC_TYPE"
-     * @param ConnectorSyncType 数据同步专用参数, 正常数据处理可为空, 实例级别同步: 仅同步元数据填写"META_SYNC_INSTANCE_TYPE", 同步元数据及全部topic内消息的填写"META_AND_DATA_SYNC_INSTANCE_TYPE"; topic级别同步: 选中的源和目标topic中的消息(需要目标实例也包含该topic)填写"DATA_SYNC_TYPE"
+     * Set <p>数据同步专用参数, 正常数据处理可为空, 实例级别同步: 仅同步元数据填写&quot;META_SYNC_INSTANCE_TYPE&quot;, 同步元数据及全部topic内消息的填写&quot;META_AND_DATA_SYNC_INSTANCE_TYPE&quot;; topic级别同步: 选中的源和目标topic中的消息(需要目标实例也包含该topic)填写&quot;DATA_SYNC_TYPE&quot;</p>
+     * @param ConnectorSyncType <p>数据同步专用参数, 正常数据处理可为空, 实例级别同步: 仅同步元数据填写&quot;META_SYNC_INSTANCE_TYPE&quot;, 同步元数据及全部topic内消息的填写&quot;META_AND_DATA_SYNC_INSTANCE_TYPE&quot;; topic级别同步: 选中的源和目标topic中的消息(需要目标实例也包含该topic)填写&quot;DATA_SYNC_TYPE&quot;</p>
      */
     public void setConnectorSyncType(String ConnectorSyncType) {
         this.ConnectorSyncType = ConnectorSyncType;
     }
 
     /**
-     * Get 数据同步专用参数, 当通过时,希望下游的消息写入分区与上游的一致,则填true,但下游分区小于上游时,会报错; 不需要一致则为false, 默认为false 
-     * @return KeepPartition 数据同步专用参数, 当通过时,希望下游的消息写入分区与上游的一致,则填true,但下游分区小于上游时,会报错; 不需要一致则为false, 默认为false
+     * Get <p>数据同步专用参数, 当通过时,希望下游的消息写入分区与上游的一致,则填true,但下游分区小于上游时,会报错; 不需要一致则为false, 默认为false</p> 
+     * @return KeepPartition <p>数据同步专用参数, 当通过时,希望下游的消息写入分区与上游的一致,则填true,但下游分区小于上游时,会报错; 不需要一致则为false, 默认为false</p>
      */
     public Boolean getKeepPartition() {
         return this.KeepPartition;
     }
 
     /**
-     * Set 数据同步专用参数, 当通过时,希望下游的消息写入分区与上游的一致,则填true,但下游分区小于上游时,会报错; 不需要一致则为false, 默认为false
-     * @param KeepPartition 数据同步专用参数, 当通过时,希望下游的消息写入分区与上游的一致,则填true,但下游分区小于上游时,会报错; 不需要一致则为false, 默认为false
+     * Set <p>数据同步专用参数, 当通过时,希望下游的消息写入分区与上游的一致,则填true,但下游分区小于上游时,会报错; 不需要一致则为false, 默认为false</p>
+     * @param KeepPartition <p>数据同步专用参数, 当通过时,希望下游的消息写入分区与上游的一致,则填true,但下游分区小于上游时,会报错; 不需要一致则为false, 默认为false</p>
      */
     public void setKeepPartition(Boolean KeepPartition) {
         this.KeepPartition = KeepPartition;
     }
 
     /**
-     * Get 正则匹配Topic列表 
-     * @return TopicRegularExpression 正则匹配Topic列表
+     * Get <p>正则匹配Topic列表</p> 
+     * @return TopicRegularExpression <p>正则匹配Topic列表</p>
      */
     public String getTopicRegularExpression() {
         return this.TopicRegularExpression;
     }
 
     /**
-     * Set 正则匹配Topic列表
-     * @param TopicRegularExpression 正则匹配Topic列表
+     * Set <p>正则匹配Topic列表</p>
+     * @param TopicRegularExpression <p>正则匹配Topic列表</p>
      */
     public void setTopicRegularExpression(String TopicRegularExpression) {
         this.TopicRegularExpression = TopicRegularExpression;
     }
 
     /**
-     * Get Topic 前缀 
-     * @return Prefix Topic 前缀
+     * Get <p>Topic 前缀</p> 
+     * @return Prefix <p>Topic 前缀</p>
      */
     public String getPrefix() {
         return this.Prefix;
     }
 
     /**
-     * Set Topic 前缀
-     * @param Prefix Topic 前缀
+     * Set <p>Topic 前缀</p>
+     * @param Prefix <p>Topic 前缀</p>
      */
     public void setPrefix(String Prefix) {
         this.Prefix = Prefix;
     }
 
     /**
-     * Get Topic前缀分隔符 
-     * @return Separator Topic前缀分隔符
+     * Get <p>Topic前缀分隔符</p> 
+     * @return Separator <p>Topic前缀分隔符</p>
      */
     public String getSeparator() {
         return this.Separator;
     }
 
     /**
-     * Set Topic前缀分隔符
-     * @param Separator Topic前缀分隔符
+     * Set <p>Topic前缀分隔符</p>
+     * @param Separator <p>Topic前缀分隔符</p>
      */
     public void setSeparator(String Separator) {
         this.Separator = Separator;
+    }
+
+    /**
+     * Get <p>多选topic列表</p> 
+     * @return TopicList <p>多选topic列表</p>
+     */
+    public String [] getTopicList() {
+        return this.TopicList;
+    }
+
+    /**
+     * Set <p>多选topic列表</p>
+     * @param TopicList <p>多选topic列表</p>
+     */
+    public void setTopicList(String [] TopicList) {
+        this.TopicList = TopicList;
     }
 
     public KafkaParam() {
@@ -620,6 +643,12 @@ public class KafkaParam extends AbstractModel {
         if (source.Separator != null) {
             this.Separator = new String(source.Separator);
         }
+        if (source.TopicList != null) {
+            this.TopicList = new String[source.TopicList.length];
+            for (int i = 0; i < source.TopicList.length; i++) {
+                this.TopicList[i] = new String(source.TopicList[i]);
+            }
+        }
     }
 
 
@@ -648,6 +677,7 @@ public class KafkaParam extends AbstractModel {
         this.setParamSimple(map, prefix + "TopicRegularExpression", this.TopicRegularExpression);
         this.setParamSimple(map, prefix + "Prefix", this.Prefix);
         this.setParamSimple(map, prefix + "Separator", this.Separator);
+        this.setParamArraySimple(map, prefix + "TopicList.", this.TopicList);
 
     }
 }

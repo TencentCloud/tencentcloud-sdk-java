@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class Rect extends AbstractModel {
 
     /**
-    * 人脸框左上角横坐标。
+    * <p>人脸框左上角横坐标。</p>
     */
     @SerializedName("X")
     @Expose
     private Long X;
 
     /**
-    * 人脸框左上角纵坐标。
+    * <p>人脸框左上角纵坐标。</p>
     */
     @SerializedName("Y")
     @Expose
     private Long Y;
 
     /**
-    * 人脸框宽度。
+    * <p>人脸框宽度。<br>单位：px</p>
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * 人脸框高度。
+    * <p>人脸框高度。<br>单位：px</p>
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-     * Get 人脸框左上角横坐标。 
-     * @return X 人脸框左上角横坐标。
+     * Get <p>人脸框左上角横坐标。</p> 
+     * @return X <p>人脸框左上角横坐标。</p>
      */
     public Long getX() {
         return this.X;
     }
 
     /**
-     * Set 人脸框左上角横坐标。
-     * @param X 人脸框左上角横坐标。
+     * Set <p>人脸框左上角横坐标。</p>
+     * @param X <p>人脸框左上角横坐标。</p>
      */
     public void setX(Long X) {
         this.X = X;
     }
 
     /**
-     * Get 人脸框左上角纵坐标。 
-     * @return Y 人脸框左上角纵坐标。
+     * Get <p>人脸框左上角纵坐标。</p> 
+     * @return Y <p>人脸框左上角纵坐标。</p>
      */
     public Long getY() {
         return this.Y;
     }
 
     /**
-     * Set 人脸框左上角纵坐标。
-     * @param Y 人脸框左上角纵坐标。
+     * Set <p>人脸框左上角纵坐标。</p>
+     * @param Y <p>人脸框左上角纵坐标。</p>
      */
     public void setY(Long Y) {
         this.Y = Y;
     }
 
     /**
-     * Get 人脸框宽度。 
-     * @return Width 人脸框宽度。
+     * Get <p>人脸框宽度。<br>单位：px</p> 
+     * @return Width <p>人脸框宽度。<br>单位：px</p>
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 人脸框宽度。
-     * @param Width 人脸框宽度。
+     * Set <p>人脸框宽度。<br>单位：px</p>
+     * @param Width <p>人脸框宽度。<br>单位：px</p>
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 人脸框高度。 
-     * @return Height 人脸框高度。
+     * Get <p>人脸框高度。<br>单位：px</p> 
+     * @return Height <p>人脸框高度。<br>单位：px</p>
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 人脸框高度。
-     * @param Height 人脸框高度。
+     * Set <p>人脸框高度。<br>单位：px</p>
+     * @param Height <p>人脸框高度。<br>单位：px</p>
      */
     public void setHeight(Long Height) {
         this.Height = Height;

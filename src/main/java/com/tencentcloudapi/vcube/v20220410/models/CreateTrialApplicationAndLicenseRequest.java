@@ -24,299 +24,322 @@ import java.util.HashMap;
 public class CreateTrialApplicationAndLicenseRequest extends AbstractModel {
 
     /**
-    * 应用名
+    * <p>应用名</p>
     */
     @SerializedName("AppName")
     @Expose
     private String AppName;
 
     /**
-    * 应用ID
+    * <p>应用ID</p>
     */
     @SerializedName("BundleId")
     @Expose
     private String BundleId;
 
     /**
-    * 包名
+    * <p>包名</p>
     */
     @SerializedName("PackageName")
     @Expose
     private String PackageName;
 
     /**
-    * 功能 id 数组
+    * <p>鸿蒙包包名</p>
+    */
+    @SerializedName("BundleName")
+    @Expose
+    private String BundleName;
+
+    /**
+    * <p>功能 id 数组</p>
     */
     @SerializedName("FeatureIds")
     @Expose
     private Long [] FeatureIds;
 
     /**
-    * 是否要开通优图功能
+    * <p>是否要开通优图功能</p>
     */
     @SerializedName("XMagic")
     @Expose
     private Boolean XMagic;
 
     /**
-    * 营业执照
+    * <p>营业执照</p>
     */
     @SerializedName("CompanyPermit")
     @Expose
     private String CompanyPermit;
 
     /**
-    * 公司类型
+    * <p>公司类型</p>
     */
     @SerializedName("CompanyType")
     @Expose
     private String CompanyType;
 
     /**
-    * 公司名称
+    * <p>公司名称</p>
     */
     @SerializedName("CompanyName")
     @Expose
     private String CompanyName;
 
     /**
-    * 要开通的测试功能名称，基础套餐只能有一个
+    * <p>要开通的测试功能名称，基础套餐只能有一个</p>
     */
     @SerializedName("PlanList")
     @Expose
     private String [] PlanList;
 
     /**
-    * Mac 进程名
+    * <p>Mac 进程名</p>
     */
     @SerializedName("MacBundleId")
     @Expose
     private String MacBundleId;
 
     /**
-    * Windows 进程名
+    * <p>Windows 进程名</p>
     */
     @SerializedName("WinProcessName")
     @Expose
     private String WinProcessName;
 
     /**
-    * 要创建到哪个平台，web、mobile、pc，默认mobile
+    * <p>要创建到哪个平台，web、mobile、pc，默认mobile</p>
     */
     @SerializedName("Platform")
     @Expose
     private String Platform;
 
     /**
-    * 授权域名列表
+    * <p>授权域名列表</p>
     */
     @SerializedName("DomainList")
     @Expose
     private String [] DomainList;
 
     /**
-     * Get 应用名 
-     * @return AppName 应用名
+     * Get <p>应用名</p> 
+     * @return AppName <p>应用名</p>
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * Set 应用名
-     * @param AppName 应用名
+     * Set <p>应用名</p>
+     * @param AppName <p>应用名</p>
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;
     }
 
     /**
-     * Get 应用ID 
-     * @return BundleId 应用ID
+     * Get <p>应用ID</p> 
+     * @return BundleId <p>应用ID</p>
      */
     public String getBundleId() {
         return this.BundleId;
     }
 
     /**
-     * Set 应用ID
-     * @param BundleId 应用ID
+     * Set <p>应用ID</p>
+     * @param BundleId <p>应用ID</p>
      */
     public void setBundleId(String BundleId) {
         this.BundleId = BundleId;
     }
 
     /**
-     * Get 包名 
-     * @return PackageName 包名
+     * Get <p>包名</p> 
+     * @return PackageName <p>包名</p>
      */
     public String getPackageName() {
         return this.PackageName;
     }
 
     /**
-     * Set 包名
-     * @param PackageName 包名
+     * Set <p>包名</p>
+     * @param PackageName <p>包名</p>
      */
     public void setPackageName(String PackageName) {
         this.PackageName = PackageName;
     }
 
     /**
-     * Get 功能 id 数组 
-     * @return FeatureIds 功能 id 数组
+     * Get <p>鸿蒙包包名</p> 
+     * @return BundleName <p>鸿蒙包包名</p>
+     */
+    public String getBundleName() {
+        return this.BundleName;
+    }
+
+    /**
+     * Set <p>鸿蒙包包名</p>
+     * @param BundleName <p>鸿蒙包包名</p>
+     */
+    public void setBundleName(String BundleName) {
+        this.BundleName = BundleName;
+    }
+
+    /**
+     * Get <p>功能 id 数组</p> 
+     * @return FeatureIds <p>功能 id 数组</p>
      */
     public Long [] getFeatureIds() {
         return this.FeatureIds;
     }
 
     /**
-     * Set 功能 id 数组
-     * @param FeatureIds 功能 id 数组
+     * Set <p>功能 id 数组</p>
+     * @param FeatureIds <p>功能 id 数组</p>
      */
     public void setFeatureIds(Long [] FeatureIds) {
         this.FeatureIds = FeatureIds;
     }
 
     /**
-     * Get 是否要开通优图功能 
-     * @return XMagic 是否要开通优图功能
+     * Get <p>是否要开通优图功能</p> 
+     * @return XMagic <p>是否要开通优图功能</p>
      */
     public Boolean getXMagic() {
         return this.XMagic;
     }
 
     /**
-     * Set 是否要开通优图功能
-     * @param XMagic 是否要开通优图功能
+     * Set <p>是否要开通优图功能</p>
+     * @param XMagic <p>是否要开通优图功能</p>
      */
     public void setXMagic(Boolean XMagic) {
         this.XMagic = XMagic;
     }
 
     /**
-     * Get 营业执照 
-     * @return CompanyPermit 营业执照
+     * Get <p>营业执照</p> 
+     * @return CompanyPermit <p>营业执照</p>
      */
     public String getCompanyPermit() {
         return this.CompanyPermit;
     }
 
     /**
-     * Set 营业执照
-     * @param CompanyPermit 营业执照
+     * Set <p>营业执照</p>
+     * @param CompanyPermit <p>营业执照</p>
      */
     public void setCompanyPermit(String CompanyPermit) {
         this.CompanyPermit = CompanyPermit;
     }
 
     /**
-     * Get 公司类型 
-     * @return CompanyType 公司类型
+     * Get <p>公司类型</p> 
+     * @return CompanyType <p>公司类型</p>
      */
     public String getCompanyType() {
         return this.CompanyType;
     }
 
     /**
-     * Set 公司类型
-     * @param CompanyType 公司类型
+     * Set <p>公司类型</p>
+     * @param CompanyType <p>公司类型</p>
      */
     public void setCompanyType(String CompanyType) {
         this.CompanyType = CompanyType;
     }
 
     /**
-     * Get 公司名称 
-     * @return CompanyName 公司名称
+     * Get <p>公司名称</p> 
+     * @return CompanyName <p>公司名称</p>
      */
     public String getCompanyName() {
         return this.CompanyName;
     }
 
     /**
-     * Set 公司名称
-     * @param CompanyName 公司名称
+     * Set <p>公司名称</p>
+     * @param CompanyName <p>公司名称</p>
      */
     public void setCompanyName(String CompanyName) {
         this.CompanyName = CompanyName;
     }
 
     /**
-     * Get 要开通的测试功能名称，基础套餐只能有一个 
-     * @return PlanList 要开通的测试功能名称，基础套餐只能有一个
+     * Get <p>要开通的测试功能名称，基础套餐只能有一个</p> 
+     * @return PlanList <p>要开通的测试功能名称，基础套餐只能有一个</p>
      */
     public String [] getPlanList() {
         return this.PlanList;
     }
 
     /**
-     * Set 要开通的测试功能名称，基础套餐只能有一个
-     * @param PlanList 要开通的测试功能名称，基础套餐只能有一个
+     * Set <p>要开通的测试功能名称，基础套餐只能有一个</p>
+     * @param PlanList <p>要开通的测试功能名称，基础套餐只能有一个</p>
      */
     public void setPlanList(String [] PlanList) {
         this.PlanList = PlanList;
     }
 
     /**
-     * Get Mac 进程名 
-     * @return MacBundleId Mac 进程名
+     * Get <p>Mac 进程名</p> 
+     * @return MacBundleId <p>Mac 进程名</p>
      */
     public String getMacBundleId() {
         return this.MacBundleId;
     }
 
     /**
-     * Set Mac 进程名
-     * @param MacBundleId Mac 进程名
+     * Set <p>Mac 进程名</p>
+     * @param MacBundleId <p>Mac 进程名</p>
      */
     public void setMacBundleId(String MacBundleId) {
         this.MacBundleId = MacBundleId;
     }
 
     /**
-     * Get Windows 进程名 
-     * @return WinProcessName Windows 进程名
+     * Get <p>Windows 进程名</p> 
+     * @return WinProcessName <p>Windows 进程名</p>
      */
     public String getWinProcessName() {
         return this.WinProcessName;
     }
 
     /**
-     * Set Windows 进程名
-     * @param WinProcessName Windows 进程名
+     * Set <p>Windows 进程名</p>
+     * @param WinProcessName <p>Windows 进程名</p>
      */
     public void setWinProcessName(String WinProcessName) {
         this.WinProcessName = WinProcessName;
     }
 
     /**
-     * Get 要创建到哪个平台，web、mobile、pc，默认mobile 
-     * @return Platform 要创建到哪个平台，web、mobile、pc，默认mobile
+     * Get <p>要创建到哪个平台，web、mobile、pc，默认mobile</p> 
+     * @return Platform <p>要创建到哪个平台，web、mobile、pc，默认mobile</p>
      */
     public String getPlatform() {
         return this.Platform;
     }
 
     /**
-     * Set 要创建到哪个平台，web、mobile、pc，默认mobile
-     * @param Platform 要创建到哪个平台，web、mobile、pc，默认mobile
+     * Set <p>要创建到哪个平台，web、mobile、pc，默认mobile</p>
+     * @param Platform <p>要创建到哪个平台，web、mobile、pc，默认mobile</p>
      */
     public void setPlatform(String Platform) {
         this.Platform = Platform;
     }
 
     /**
-     * Get 授权域名列表 
-     * @return DomainList 授权域名列表
+     * Get <p>授权域名列表</p> 
+     * @return DomainList <p>授权域名列表</p>
      */
     public String [] getDomainList() {
         return this.DomainList;
     }
 
     /**
-     * Set 授权域名列表
-     * @param DomainList 授权域名列表
+     * Set <p>授权域名列表</p>
+     * @param DomainList <p>授权域名列表</p>
      */
     public void setDomainList(String [] DomainList) {
         this.DomainList = DomainList;
@@ -338,6 +361,9 @@ public class CreateTrialApplicationAndLicenseRequest extends AbstractModel {
         }
         if (source.PackageName != null) {
             this.PackageName = new String(source.PackageName);
+        }
+        if (source.BundleName != null) {
+            this.BundleName = new String(source.BundleName);
         }
         if (source.FeatureIds != null) {
             this.FeatureIds = new Long[source.FeatureIds.length];
@@ -388,6 +414,7 @@ public class CreateTrialApplicationAndLicenseRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AppName", this.AppName);
         this.setParamSimple(map, prefix + "BundleId", this.BundleId);
         this.setParamSimple(map, prefix + "PackageName", this.PackageName);
+        this.setParamSimple(map, prefix + "BundleName", this.BundleName);
         this.setParamArraySimple(map, prefix + "FeatureIds.", this.FeatureIds);
         this.setParamSimple(map, prefix + "XMagic", this.XMagic);
         this.setParamSimple(map, prefix + "CompanyPermit", this.CompanyPermit);

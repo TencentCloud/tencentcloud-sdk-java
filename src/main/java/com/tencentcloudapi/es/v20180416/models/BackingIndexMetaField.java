@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class BackingIndexMetaField extends AbstractModel {
 
     /**
-    * 后备索引名
+    * <p>后备索引名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IndexName")
@@ -32,7 +32,7 @@ public class BackingIndexMetaField extends AbstractModel {
     private String IndexName;
 
     /**
-    * 后备索引状态
+    * <p>后备索引状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IndexStatus")
@@ -40,7 +40,7 @@ public class BackingIndexMetaField extends AbstractModel {
     private String IndexStatus;
 
     /**
-    * 后备索引存储大小
+    * <p>后备索引存储大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IndexStorage")
@@ -48,7 +48,7 @@ public class BackingIndexMetaField extends AbstractModel {
     private Long IndexStorage;
 
     /**
-    * 后备索引当前生命周期
+    * <p>后备索引当前生命周期</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IndexPhrase")
@@ -56,7 +56,7 @@ public class BackingIndexMetaField extends AbstractModel {
     private String IndexPhrase;
 
     /**
-    * 后备索引创建时间
+    * <p>后备索引创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IndexCreateTime")
@@ -64,9 +64,16 @@ public class BackingIndexMetaField extends AbstractModel {
     private String IndexCreateTime;
 
     /**
-     * Get 后备索引名
+    * <p>索引Uuid</p>
+    */
+    @SerializedName("IndexUuid")
+    @Expose
+    private String IndexUuid;
+
+    /**
+     * Get <p>后备索引名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IndexName 后备索引名
+     * @return IndexName <p>后备索引名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIndexName() {
@@ -74,9 +81,9 @@ public class BackingIndexMetaField extends AbstractModel {
     }
 
     /**
-     * Set 后备索引名
+     * Set <p>后备索引名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IndexName 后备索引名
+     * @param IndexName <p>后备索引名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndexName(String IndexName) {
@@ -84,9 +91,9 @@ public class BackingIndexMetaField extends AbstractModel {
     }
 
     /**
-     * Get 后备索引状态
+     * Get <p>后备索引状态</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IndexStatus 后备索引状态
+     * @return IndexStatus <p>后备索引状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIndexStatus() {
@@ -94,9 +101,9 @@ public class BackingIndexMetaField extends AbstractModel {
     }
 
     /**
-     * Set 后备索引状态
+     * Set <p>后备索引状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IndexStatus 后备索引状态
+     * @param IndexStatus <p>后备索引状态</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndexStatus(String IndexStatus) {
@@ -104,9 +111,9 @@ public class BackingIndexMetaField extends AbstractModel {
     }
 
     /**
-     * Get 后备索引存储大小
+     * Get <p>后备索引存储大小</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IndexStorage 后备索引存储大小
+     * @return IndexStorage <p>后备索引存储大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIndexStorage() {
@@ -114,9 +121,9 @@ public class BackingIndexMetaField extends AbstractModel {
     }
 
     /**
-     * Set 后备索引存储大小
+     * Set <p>后备索引存储大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IndexStorage 后备索引存储大小
+     * @param IndexStorage <p>后备索引存储大小</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndexStorage(Long IndexStorage) {
@@ -124,9 +131,9 @@ public class BackingIndexMetaField extends AbstractModel {
     }
 
     /**
-     * Get 后备索引当前生命周期
+     * Get <p>后备索引当前生命周期</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IndexPhrase 后备索引当前生命周期
+     * @return IndexPhrase <p>后备索引当前生命周期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIndexPhrase() {
@@ -134,9 +141,9 @@ public class BackingIndexMetaField extends AbstractModel {
     }
 
     /**
-     * Set 后备索引当前生命周期
+     * Set <p>后备索引当前生命周期</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IndexPhrase 后备索引当前生命周期
+     * @param IndexPhrase <p>后备索引当前生命周期</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndexPhrase(String IndexPhrase) {
@@ -144,9 +151,9 @@ public class BackingIndexMetaField extends AbstractModel {
     }
 
     /**
-     * Get 后备索引创建时间
+     * Get <p>后备索引创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IndexCreateTime 后备索引创建时间
+     * @return IndexCreateTime <p>后备索引创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIndexCreateTime() {
@@ -154,13 +161,29 @@ public class BackingIndexMetaField extends AbstractModel {
     }
 
     /**
-     * Set 后备索引创建时间
+     * Set <p>后备索引创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IndexCreateTime 后备索引创建时间
+     * @param IndexCreateTime <p>后备索引创建时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndexCreateTime(String IndexCreateTime) {
         this.IndexCreateTime = IndexCreateTime;
+    }
+
+    /**
+     * Get <p>索引Uuid</p> 
+     * @return IndexUuid <p>索引Uuid</p>
+     */
+    public String getIndexUuid() {
+        return this.IndexUuid;
+    }
+
+    /**
+     * Set <p>索引Uuid</p>
+     * @param IndexUuid <p>索引Uuid</p>
+     */
+    public void setIndexUuid(String IndexUuid) {
+        this.IndexUuid = IndexUuid;
     }
 
     public BackingIndexMetaField() {
@@ -186,6 +209,9 @@ public class BackingIndexMetaField extends AbstractModel {
         if (source.IndexCreateTime != null) {
             this.IndexCreateTime = new String(source.IndexCreateTime);
         }
+        if (source.IndexUuid != null) {
+            this.IndexUuid = new String(source.IndexUuid);
+        }
     }
 
 
@@ -198,6 +224,7 @@ public class BackingIndexMetaField extends AbstractModel {
         this.setParamSimple(map, prefix + "IndexStorage", this.IndexStorage);
         this.setParamSimple(map, prefix + "IndexPhrase", this.IndexPhrase);
         this.setParamSimple(map, prefix + "IndexCreateTime", this.IndexCreateTime);
+        this.setParamSimple(map, prefix + "IndexUuid", this.IndexUuid);
 
     }
 }

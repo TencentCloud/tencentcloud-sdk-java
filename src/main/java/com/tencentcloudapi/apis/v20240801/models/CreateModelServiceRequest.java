@@ -24,440 +24,486 @@ import java.util.HashMap;
 public class CreateModelServiceRequest extends AbstractModel {
 
     /**
-    * 实例
+    * <p>实例</p>
     */
     @SerializedName("InstanceID")
     @Expose
     private String InstanceID;
 
     /**
-    * 模型服务名称
+    * <p>模型服务名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 描述
+    * <p>描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 访问路径
+    * <p>访问路径</p>
     */
     @SerializedName("PubPath")
     @Expose
     private String PubPath;
 
     /**
-    * 模型ID列表
+    * <p>模型ID列表</p>
     */
     @SerializedName("TargetModels")
     @Expose
     private TargetModelDTO [] TargetModels;
 
     /**
-    * 路径匹配类型: prefix 前缀匹配(不送默认); absolute 绝对匹配; regex正则匹配;
+    * <p>路径匹配类型: prefix 前缀匹配(不送默认); absolute 绝对匹配; regex正则匹配;</p>
     */
     @SerializedName("PathMatchType")
     @Expose
     private String PathMatchType;
 
     /**
-    * 是否开启限流
+    * <p>是否开启限流</p>
     */
     @SerializedName("InvokeLimitConfigStatus")
     @Expose
     private Boolean InvokeLimitConfigStatus;
 
     /**
-    * 限流配置
+    * <p>限流配置</p>
     */
     @SerializedName("InvokeLimitConfig")
     @Expose
     private InvokeLimitConfigDTO InvokeLimitConfig;
 
     /**
-    * 是否开启token控制
+    * <p>是否开启token控制</p>
     */
     @SerializedName("TokenLimitStatus")
     @Expose
     private Boolean TokenLimitStatus;
 
     /**
-    * token控制
+    * <p>token控制</p>
     */
     @SerializedName("TokenLimitConfig")
     @Expose
     private TokenLimitConfigDTO TokenLimitConfig;
 
     /**
-    * 是否开启内容安全
+    * <p>是否开启内容安全</p>
     */
     @SerializedName("TmsStatus")
     @Expose
     private Boolean TmsStatus;
 
     /**
-    * 内容安全配置
+    * <p>内容安全配置</p>
     */
     @SerializedName("TmsConfig")
     @Expose
     private TmsConfigDTO TmsConfig;
 
     /**
-    * 是否开启IP白名单
+    * <p>是否开启IP白名单</p>
     */
     @SerializedName("IpWhiteStatus")
     @Expose
     private Boolean IpWhiteStatus;
 
     /**
-    * IP白名单
+    * <p>IP白名单</p>
     */
     @SerializedName("IpWhiteList")
     @Expose
     private String [] IpWhiteList;
 
     /**
-    * IP黑名单
+    * <p>IP黑名单</p>
     */
     @SerializedName("IpBlackList")
     @Expose
     private String [] IpBlackList;
 
     /**
-    * 插件配置
+    * <p>插件配置</p>
     */
     @SerializedName("PluginConfigs")
     @Expose
     private PluginConfigDTO [] PluginConfigs;
 
     /**
-    * 超时配置，秒
+    * <p>超时配置，秒</p>
     */
     @SerializedName("Timeout")
     @Expose
     private Long Timeout;
 
     /**
-    * 是否开启提示词安全检测
+    * <p>是否开启提示词安全检测</p>
     */
     @SerializedName("PromptModerateStatus")
     @Expose
     private Boolean PromptModerateStatus;
 
     /**
-    * 提示词安全检测配置
+    * <p>提示词安全检测配置</p>
     */
     @SerializedName("PromptModerateConfig")
     @Expose
     private PromptModerateConfigDTO PromptModerateConfig;
 
     /**
-     * Get 实例 
-     * @return InstanceID 实例
+    * <p>是否开启敏感数据检测</p>
+    */
+    @SerializedName("SensitiveDataCheckStatus")
+    @Expose
+    private Boolean SensitiveDataCheckStatus;
+
+    /**
+    * <p>敏感数据检测配置</p>
+    */
+    @SerializedName("SensitiveDataCheckConfig")
+    @Expose
+    private SensitiveDataCheckConfigDTO SensitiveDataCheckConfig;
+
+    /**
+     * Get <p>实例</p> 
+     * @return InstanceID <p>实例</p>
      */
     public String getInstanceID() {
         return this.InstanceID;
     }
 
     /**
-     * Set 实例
-     * @param InstanceID 实例
+     * Set <p>实例</p>
+     * @param InstanceID <p>实例</p>
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;
     }
 
     /**
-     * Get 模型服务名称 
-     * @return Name 模型服务名称
+     * Get <p>模型服务名称</p> 
+     * @return Name <p>模型服务名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 模型服务名称
-     * @param Name 模型服务名称
+     * Set <p>模型服务名称</p>
+     * @param Name <p>模型服务名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 描述 
-     * @return Description 描述
+     * Get <p>描述</p> 
+     * @return Description <p>描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 描述
-     * @param Description 描述
+     * Set <p>描述</p>
+     * @param Description <p>描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 访问路径 
-     * @return PubPath 访问路径
+     * Get <p>访问路径</p> 
+     * @return PubPath <p>访问路径</p>
      */
     public String getPubPath() {
         return this.PubPath;
     }
 
     /**
-     * Set 访问路径
-     * @param PubPath 访问路径
+     * Set <p>访问路径</p>
+     * @param PubPath <p>访问路径</p>
      */
     public void setPubPath(String PubPath) {
         this.PubPath = PubPath;
     }
 
     /**
-     * Get 模型ID列表 
-     * @return TargetModels 模型ID列表
+     * Get <p>模型ID列表</p> 
+     * @return TargetModels <p>模型ID列表</p>
      */
     public TargetModelDTO [] getTargetModels() {
         return this.TargetModels;
     }
 
     /**
-     * Set 模型ID列表
-     * @param TargetModels 模型ID列表
+     * Set <p>模型ID列表</p>
+     * @param TargetModels <p>模型ID列表</p>
      */
     public void setTargetModels(TargetModelDTO [] TargetModels) {
         this.TargetModels = TargetModels;
     }
 
     /**
-     * Get 路径匹配类型: prefix 前缀匹配(不送默认); absolute 绝对匹配; regex正则匹配; 
-     * @return PathMatchType 路径匹配类型: prefix 前缀匹配(不送默认); absolute 绝对匹配; regex正则匹配;
+     * Get <p>路径匹配类型: prefix 前缀匹配(不送默认); absolute 绝对匹配; regex正则匹配;</p> 
+     * @return PathMatchType <p>路径匹配类型: prefix 前缀匹配(不送默认); absolute 绝对匹配; regex正则匹配;</p>
      */
     public String getPathMatchType() {
         return this.PathMatchType;
     }
 
     /**
-     * Set 路径匹配类型: prefix 前缀匹配(不送默认); absolute 绝对匹配; regex正则匹配;
-     * @param PathMatchType 路径匹配类型: prefix 前缀匹配(不送默认); absolute 绝对匹配; regex正则匹配;
+     * Set <p>路径匹配类型: prefix 前缀匹配(不送默认); absolute 绝对匹配; regex正则匹配;</p>
+     * @param PathMatchType <p>路径匹配类型: prefix 前缀匹配(不送默认); absolute 绝对匹配; regex正则匹配;</p>
      */
     public void setPathMatchType(String PathMatchType) {
         this.PathMatchType = PathMatchType;
     }
 
     /**
-     * Get 是否开启限流 
-     * @return InvokeLimitConfigStatus 是否开启限流
+     * Get <p>是否开启限流</p> 
+     * @return InvokeLimitConfigStatus <p>是否开启限流</p>
      */
     public Boolean getInvokeLimitConfigStatus() {
         return this.InvokeLimitConfigStatus;
     }
 
     /**
-     * Set 是否开启限流
-     * @param InvokeLimitConfigStatus 是否开启限流
+     * Set <p>是否开启限流</p>
+     * @param InvokeLimitConfigStatus <p>是否开启限流</p>
      */
     public void setInvokeLimitConfigStatus(Boolean InvokeLimitConfigStatus) {
         this.InvokeLimitConfigStatus = InvokeLimitConfigStatus;
     }
 
     /**
-     * Get 限流配置 
-     * @return InvokeLimitConfig 限流配置
+     * Get <p>限流配置</p> 
+     * @return InvokeLimitConfig <p>限流配置</p>
      */
     public InvokeLimitConfigDTO getInvokeLimitConfig() {
         return this.InvokeLimitConfig;
     }
 
     /**
-     * Set 限流配置
-     * @param InvokeLimitConfig 限流配置
+     * Set <p>限流配置</p>
+     * @param InvokeLimitConfig <p>限流配置</p>
      */
     public void setInvokeLimitConfig(InvokeLimitConfigDTO InvokeLimitConfig) {
         this.InvokeLimitConfig = InvokeLimitConfig;
     }
 
     /**
-     * Get 是否开启token控制 
-     * @return TokenLimitStatus 是否开启token控制
+     * Get <p>是否开启token控制</p> 
+     * @return TokenLimitStatus <p>是否开启token控制</p>
      */
     public Boolean getTokenLimitStatus() {
         return this.TokenLimitStatus;
     }
 
     /**
-     * Set 是否开启token控制
-     * @param TokenLimitStatus 是否开启token控制
+     * Set <p>是否开启token控制</p>
+     * @param TokenLimitStatus <p>是否开启token控制</p>
      */
     public void setTokenLimitStatus(Boolean TokenLimitStatus) {
         this.TokenLimitStatus = TokenLimitStatus;
     }
 
     /**
-     * Get token控制 
-     * @return TokenLimitConfig token控制
+     * Get <p>token控制</p> 
+     * @return TokenLimitConfig <p>token控制</p>
      */
     public TokenLimitConfigDTO getTokenLimitConfig() {
         return this.TokenLimitConfig;
     }
 
     /**
-     * Set token控制
-     * @param TokenLimitConfig token控制
+     * Set <p>token控制</p>
+     * @param TokenLimitConfig <p>token控制</p>
      */
     public void setTokenLimitConfig(TokenLimitConfigDTO TokenLimitConfig) {
         this.TokenLimitConfig = TokenLimitConfig;
     }
 
     /**
-     * Get 是否开启内容安全 
-     * @return TmsStatus 是否开启内容安全
+     * Get <p>是否开启内容安全</p> 
+     * @return TmsStatus <p>是否开启内容安全</p>
      */
     public Boolean getTmsStatus() {
         return this.TmsStatus;
     }
 
     /**
-     * Set 是否开启内容安全
-     * @param TmsStatus 是否开启内容安全
+     * Set <p>是否开启内容安全</p>
+     * @param TmsStatus <p>是否开启内容安全</p>
      */
     public void setTmsStatus(Boolean TmsStatus) {
         this.TmsStatus = TmsStatus;
     }
 
     /**
-     * Get 内容安全配置 
-     * @return TmsConfig 内容安全配置
+     * Get <p>内容安全配置</p> 
+     * @return TmsConfig <p>内容安全配置</p>
      */
     public TmsConfigDTO getTmsConfig() {
         return this.TmsConfig;
     }
 
     /**
-     * Set 内容安全配置
-     * @param TmsConfig 内容安全配置
+     * Set <p>内容安全配置</p>
+     * @param TmsConfig <p>内容安全配置</p>
      */
     public void setTmsConfig(TmsConfigDTO TmsConfig) {
         this.TmsConfig = TmsConfig;
     }
 
     /**
-     * Get 是否开启IP白名单 
-     * @return IpWhiteStatus 是否开启IP白名单
+     * Get <p>是否开启IP白名单</p> 
+     * @return IpWhiteStatus <p>是否开启IP白名单</p>
      */
     public Boolean getIpWhiteStatus() {
         return this.IpWhiteStatus;
     }
 
     /**
-     * Set 是否开启IP白名单
-     * @param IpWhiteStatus 是否开启IP白名单
+     * Set <p>是否开启IP白名单</p>
+     * @param IpWhiteStatus <p>是否开启IP白名单</p>
      */
     public void setIpWhiteStatus(Boolean IpWhiteStatus) {
         this.IpWhiteStatus = IpWhiteStatus;
     }
 
     /**
-     * Get IP白名单 
-     * @return IpWhiteList IP白名单
+     * Get <p>IP白名单</p> 
+     * @return IpWhiteList <p>IP白名单</p>
      */
     public String [] getIpWhiteList() {
         return this.IpWhiteList;
     }
 
     /**
-     * Set IP白名单
-     * @param IpWhiteList IP白名单
+     * Set <p>IP白名单</p>
+     * @param IpWhiteList <p>IP白名单</p>
      */
     public void setIpWhiteList(String [] IpWhiteList) {
         this.IpWhiteList = IpWhiteList;
     }
 
     /**
-     * Get IP黑名单 
-     * @return IpBlackList IP黑名单
+     * Get <p>IP黑名单</p> 
+     * @return IpBlackList <p>IP黑名单</p>
      */
     public String [] getIpBlackList() {
         return this.IpBlackList;
     }
 
     /**
-     * Set IP黑名单
-     * @param IpBlackList IP黑名单
+     * Set <p>IP黑名单</p>
+     * @param IpBlackList <p>IP黑名单</p>
      */
     public void setIpBlackList(String [] IpBlackList) {
         this.IpBlackList = IpBlackList;
     }
 
     /**
-     * Get 插件配置 
-     * @return PluginConfigs 插件配置
+     * Get <p>插件配置</p> 
+     * @return PluginConfigs <p>插件配置</p>
      */
     public PluginConfigDTO [] getPluginConfigs() {
         return this.PluginConfigs;
     }
 
     /**
-     * Set 插件配置
-     * @param PluginConfigs 插件配置
+     * Set <p>插件配置</p>
+     * @param PluginConfigs <p>插件配置</p>
      */
     public void setPluginConfigs(PluginConfigDTO [] PluginConfigs) {
         this.PluginConfigs = PluginConfigs;
     }
 
     /**
-     * Get 超时配置，秒 
-     * @return Timeout 超时配置，秒
+     * Get <p>超时配置，秒</p> 
+     * @return Timeout <p>超时配置，秒</p>
      */
     public Long getTimeout() {
         return this.Timeout;
     }
 
     /**
-     * Set 超时配置，秒
-     * @param Timeout 超时配置，秒
+     * Set <p>超时配置，秒</p>
+     * @param Timeout <p>超时配置，秒</p>
      */
     public void setTimeout(Long Timeout) {
         this.Timeout = Timeout;
     }
 
     /**
-     * Get 是否开启提示词安全检测 
-     * @return PromptModerateStatus 是否开启提示词安全检测
+     * Get <p>是否开启提示词安全检测</p> 
+     * @return PromptModerateStatus <p>是否开启提示词安全检测</p>
      */
     public Boolean getPromptModerateStatus() {
         return this.PromptModerateStatus;
     }
 
     /**
-     * Set 是否开启提示词安全检测
-     * @param PromptModerateStatus 是否开启提示词安全检测
+     * Set <p>是否开启提示词安全检测</p>
+     * @param PromptModerateStatus <p>是否开启提示词安全检测</p>
      */
     public void setPromptModerateStatus(Boolean PromptModerateStatus) {
         this.PromptModerateStatus = PromptModerateStatus;
     }
 
     /**
-     * Get 提示词安全检测配置 
-     * @return PromptModerateConfig 提示词安全检测配置
+     * Get <p>提示词安全检测配置</p> 
+     * @return PromptModerateConfig <p>提示词安全检测配置</p>
      */
     public PromptModerateConfigDTO getPromptModerateConfig() {
         return this.PromptModerateConfig;
     }
 
     /**
-     * Set 提示词安全检测配置
-     * @param PromptModerateConfig 提示词安全检测配置
+     * Set <p>提示词安全检测配置</p>
+     * @param PromptModerateConfig <p>提示词安全检测配置</p>
      */
     public void setPromptModerateConfig(PromptModerateConfigDTO PromptModerateConfig) {
         this.PromptModerateConfig = PromptModerateConfig;
+    }
+
+    /**
+     * Get <p>是否开启敏感数据检测</p> 
+     * @return SensitiveDataCheckStatus <p>是否开启敏感数据检测</p>
+     */
+    public Boolean getSensitiveDataCheckStatus() {
+        return this.SensitiveDataCheckStatus;
+    }
+
+    /**
+     * Set <p>是否开启敏感数据检测</p>
+     * @param SensitiveDataCheckStatus <p>是否开启敏感数据检测</p>
+     */
+    public void setSensitiveDataCheckStatus(Boolean SensitiveDataCheckStatus) {
+        this.SensitiveDataCheckStatus = SensitiveDataCheckStatus;
+    }
+
+    /**
+     * Get <p>敏感数据检测配置</p> 
+     * @return SensitiveDataCheckConfig <p>敏感数据检测配置</p>
+     */
+    public SensitiveDataCheckConfigDTO getSensitiveDataCheckConfig() {
+        return this.SensitiveDataCheckConfig;
+    }
+
+    /**
+     * Set <p>敏感数据检测配置</p>
+     * @param SensitiveDataCheckConfig <p>敏感数据检测配置</p>
+     */
+    public void setSensitiveDataCheckConfig(SensitiveDataCheckConfigDTO SensitiveDataCheckConfig) {
+        this.SensitiveDataCheckConfig = SensitiveDataCheckConfig;
     }
 
     public CreateModelServiceRequest() {
@@ -537,6 +583,12 @@ public class CreateModelServiceRequest extends AbstractModel {
         if (source.PromptModerateConfig != null) {
             this.PromptModerateConfig = new PromptModerateConfigDTO(source.PromptModerateConfig);
         }
+        if (source.SensitiveDataCheckStatus != null) {
+            this.SensitiveDataCheckStatus = new Boolean(source.SensitiveDataCheckStatus);
+        }
+        if (source.SensitiveDataCheckConfig != null) {
+            this.SensitiveDataCheckConfig = new SensitiveDataCheckConfigDTO(source.SensitiveDataCheckConfig);
+        }
     }
 
 
@@ -563,6 +615,8 @@ public class CreateModelServiceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Timeout", this.Timeout);
         this.setParamSimple(map, prefix + "PromptModerateStatus", this.PromptModerateStatus);
         this.setParamObj(map, prefix + "PromptModerateConfig.", this.PromptModerateConfig);
+        this.setParamSimple(map, prefix + "SensitiveDataCheckStatus", this.SensitiveDataCheckStatus);
+        this.setParamObj(map, prefix + "SensitiveDataCheckConfig.", this.SensitiveDataCheckConfig);
 
     }
 }

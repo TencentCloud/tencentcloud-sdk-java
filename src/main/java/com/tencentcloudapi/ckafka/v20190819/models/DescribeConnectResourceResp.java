@@ -24,63 +24,63 @@ import java.util.HashMap;
 public class DescribeConnectResourceResp extends AbstractModel {
 
     /**
-    * 连接源的Id
+    * <p>连接源的Id</p>
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 连接源名称
+    * <p>连接源名称</p>
     */
     @SerializedName("ResourceName")
     @Expose
     private String ResourceName;
 
     /**
-    * 连接源描述
+    * <p>连接源描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 连接源类型
+    * <p>连接源类型</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 连接源的状态  枚举值: -1 (创建失败) 、0 (创建中) 、 1 (运行中)、 2 (删除中) 、 4 (删除失败) 、 5 (配置更改中) 、 6 (配置更改失败) 、 7 (异常)
+    * <p>连接源的状态  枚举值: -1 (创建失败) 、0 (创建中) 、 1 (运行中)、 2 (删除中) 、 4 (删除失败) 、 5 (配置更改中) 、 6 (配置更改失败) 、 7 (异常)</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 连接源的创建时间
+    * <p>连接源的创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 连接源的异常信息
+    * <p>连接源的异常信息</p>
     */
     @SerializedName("ErrorMessage")
     @Expose
     private String ErrorMessage;
 
     /**
-    * 连接源的当前所处步骤
+    * <p>连接源的当前所处步骤</p>
     */
     @SerializedName("CurrentStep")
     @Expose
     private String CurrentStep;
 
     /**
-    * 步骤列表
+    * <p>步骤列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StepList")
@@ -88,7 +88,7 @@ public class DescribeConnectResourceResp extends AbstractModel {
     private String [] StepList;
 
     /**
-    * MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时返回
+    * <p>MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MySQLConnectParam")
@@ -96,7 +96,7 @@ public class DescribeConnectResourceResp extends AbstractModel {
     private MySQLConnectParam MySQLConnectParam;
 
     /**
-    * PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时返回
+    * <p>PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PostgreSQLConnectParam")
@@ -104,7 +104,7 @@ public class DescribeConnectResourceResp extends AbstractModel {
     private PostgreSQLConnectParam PostgreSQLConnectParam;
 
     /**
-    * Dts配置，Type为DTS时返回
+    * <p>Dts配置，Type为DTS时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DtsConnectParam")
@@ -112,7 +112,7 @@ public class DescribeConnectResourceResp extends AbstractModel {
     private DtsConnectParam DtsConnectParam;
 
     /**
-    * MongoDB配置，Type为MONGODB时返回
+    * <p>MongoDB配置，Type为MONGODB时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MongoDBConnectParam")
@@ -120,7 +120,7 @@ public class DescribeConnectResourceResp extends AbstractModel {
     private MongoDBConnectParam MongoDBConnectParam;
 
     /**
-    * Es配置，Type为ES时返回
+    * <p>Es配置，Type为ES时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EsConnectParam")
@@ -128,7 +128,7 @@ public class DescribeConnectResourceResp extends AbstractModel {
     private EsConnectParam EsConnectParam;
 
     /**
-    * ClickHouse配置，Type为CLICKHOUSE时返回
+    * <p>ClickHouse配置，Type为CLICKHOUSE时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClickHouseConnectParam")
@@ -136,7 +136,7 @@ public class DescribeConnectResourceResp extends AbstractModel {
     private ClickHouseConnectParam ClickHouseConnectParam;
 
     /**
-    * MariaDB配置，Type为MARIADB时返回
+    * <p>MariaDB配置，Type为MARIADB时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MariaDBConnectParam")
@@ -144,7 +144,7 @@ public class DescribeConnectResourceResp extends AbstractModel {
     private MariaDBConnectParam MariaDBConnectParam;
 
     /**
-    * SQLServer配置，Type为SQLSERVER时返回
+    * <p>SQLServer配置，Type为SQLSERVER时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SQLServerConnectParam")
@@ -152,7 +152,7 @@ public class DescribeConnectResourceResp extends AbstractModel {
     private SQLServerConnectParam SQLServerConnectParam;
 
     /**
-    * Ctsdb配置，Type为CTSDB时返回
+    * <p>Ctsdb配置，Type为CTSDB时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CtsdbConnectParam")
@@ -160,7 +160,7 @@ public class DescribeConnectResourceResp extends AbstractModel {
     private CtsdbConnectParam CtsdbConnectParam;
 
     /**
-    * Doris 配置，Type 为 DORIS 时返回
+    * <p>Doris 配置，Type 为 DORIS 时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DorisConnectParam")
@@ -168,7 +168,7 @@ public class DescribeConnectResourceResp extends AbstractModel {
     private DorisConnectParam DorisConnectParam;
 
     /**
-    * Kafka配置，Type 为 KAFKA 时返回
+    * <p>Kafka配置，Type 为 KAFKA 时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KafkaConnectParam")
@@ -176,7 +176,7 @@ public class DescribeConnectResourceResp extends AbstractModel {
     private KafkaConnectParam KafkaConnectParam;
 
     /**
-    * MQTT配置，Type 为 MQTT 时返回
+    * <p>MQTT配置，Type 为 MQTT 时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MqttConnectParam")
@@ -184,137 +184,144 @@ public class DescribeConnectResourceResp extends AbstractModel {
     private MqttConnectParam MqttConnectParam;
 
     /**
-     * Get 连接源的Id 
-     * @return ResourceId 连接源的Id
+    * <p>标签列表</p>
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
+     * Get <p>连接源的Id</p> 
+     * @return ResourceId <p>连接源的Id</p>
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 连接源的Id
-     * @param ResourceId 连接源的Id
+     * Set <p>连接源的Id</p>
+     * @param ResourceId <p>连接源的Id</p>
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 连接源名称 
-     * @return ResourceName 连接源名称
+     * Get <p>连接源名称</p> 
+     * @return ResourceName <p>连接源名称</p>
      */
     public String getResourceName() {
         return this.ResourceName;
     }
 
     /**
-     * Set 连接源名称
-     * @param ResourceName 连接源名称
+     * Set <p>连接源名称</p>
+     * @param ResourceName <p>连接源名称</p>
      */
     public void setResourceName(String ResourceName) {
         this.ResourceName = ResourceName;
     }
 
     /**
-     * Get 连接源描述 
-     * @return Description 连接源描述
+     * Get <p>连接源描述</p> 
+     * @return Description <p>连接源描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 连接源描述
-     * @param Description 连接源描述
+     * Set <p>连接源描述</p>
+     * @param Description <p>连接源描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 连接源类型 
-     * @return Type 连接源类型
+     * Get <p>连接源类型</p> 
+     * @return Type <p>连接源类型</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 连接源类型
-     * @param Type 连接源类型
+     * Set <p>连接源类型</p>
+     * @param Type <p>连接源类型</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 连接源的状态  枚举值: -1 (创建失败) 、0 (创建中) 、 1 (运行中)、 2 (删除中) 、 4 (删除失败) 、 5 (配置更改中) 、 6 (配置更改失败) 、 7 (异常) 
-     * @return Status 连接源的状态  枚举值: -1 (创建失败) 、0 (创建中) 、 1 (运行中)、 2 (删除中) 、 4 (删除失败) 、 5 (配置更改中) 、 6 (配置更改失败) 、 7 (异常)
+     * Get <p>连接源的状态  枚举值: -1 (创建失败) 、0 (创建中) 、 1 (运行中)、 2 (删除中) 、 4 (删除失败) 、 5 (配置更改中) 、 6 (配置更改失败) 、 7 (异常)</p> 
+     * @return Status <p>连接源的状态  枚举值: -1 (创建失败) 、0 (创建中) 、 1 (运行中)、 2 (删除中) 、 4 (删除失败) 、 5 (配置更改中) 、 6 (配置更改失败) 、 7 (异常)</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 连接源的状态  枚举值: -1 (创建失败) 、0 (创建中) 、 1 (运行中)、 2 (删除中) 、 4 (删除失败) 、 5 (配置更改中) 、 6 (配置更改失败) 、 7 (异常)
-     * @param Status 连接源的状态  枚举值: -1 (创建失败) 、0 (创建中) 、 1 (运行中)、 2 (删除中) 、 4 (删除失败) 、 5 (配置更改中) 、 6 (配置更改失败) 、 7 (异常)
+     * Set <p>连接源的状态  枚举值: -1 (创建失败) 、0 (创建中) 、 1 (运行中)、 2 (删除中) 、 4 (删除失败) 、 5 (配置更改中) 、 6 (配置更改失败) 、 7 (异常)</p>
+     * @param Status <p>连接源的状态  枚举值: -1 (创建失败) 、0 (创建中) 、 1 (运行中)、 2 (删除中) 、 4 (删除失败) 、 5 (配置更改中) 、 6 (配置更改失败) 、 7 (异常)</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 连接源的创建时间 
-     * @return CreateTime 连接源的创建时间
+     * Get <p>连接源的创建时间</p> 
+     * @return CreateTime <p>连接源的创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 连接源的创建时间
-     * @param CreateTime 连接源的创建时间
+     * Set <p>连接源的创建时间</p>
+     * @param CreateTime <p>连接源的创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 连接源的异常信息 
-     * @return ErrorMessage 连接源的异常信息
+     * Get <p>连接源的异常信息</p> 
+     * @return ErrorMessage <p>连接源的异常信息</p>
      */
     public String getErrorMessage() {
         return this.ErrorMessage;
     }
 
     /**
-     * Set 连接源的异常信息
-     * @param ErrorMessage 连接源的异常信息
+     * Set <p>连接源的异常信息</p>
+     * @param ErrorMessage <p>连接源的异常信息</p>
      */
     public void setErrorMessage(String ErrorMessage) {
         this.ErrorMessage = ErrorMessage;
     }
 
     /**
-     * Get 连接源的当前所处步骤 
-     * @return CurrentStep 连接源的当前所处步骤
+     * Get <p>连接源的当前所处步骤</p> 
+     * @return CurrentStep <p>连接源的当前所处步骤</p>
      */
     public String getCurrentStep() {
         return this.CurrentStep;
     }
 
     /**
-     * Set 连接源的当前所处步骤
-     * @param CurrentStep 连接源的当前所处步骤
+     * Set <p>连接源的当前所处步骤</p>
+     * @param CurrentStep <p>连接源的当前所处步骤</p>
      */
     public void setCurrentStep(String CurrentStep) {
         this.CurrentStep = CurrentStep;
     }
 
     /**
-     * Get 步骤列表
+     * Get <p>步骤列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StepList 步骤列表
+     * @return StepList <p>步骤列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getStepList() {
@@ -322,9 +329,9 @@ public class DescribeConnectResourceResp extends AbstractModel {
     }
 
     /**
-     * Set 步骤列表
+     * Set <p>步骤列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StepList 步骤列表
+     * @param StepList <p>步骤列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStepList(String [] StepList) {
@@ -332,9 +339,9 @@ public class DescribeConnectResourceResp extends AbstractModel {
     }
 
     /**
-     * Get MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时返回
+     * Get <p>MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MySQLConnectParam MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时返回
+     * @return MySQLConnectParam <p>MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MySQLConnectParam getMySQLConnectParam() {
@@ -342,9 +349,9 @@ public class DescribeConnectResourceResp extends AbstractModel {
     }
 
     /**
-     * Set MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时返回
+     * Set <p>MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MySQLConnectParam MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时返回
+     * @param MySQLConnectParam <p>MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMySQLConnectParam(MySQLConnectParam MySQLConnectParam) {
@@ -352,9 +359,9 @@ public class DescribeConnectResourceResp extends AbstractModel {
     }
 
     /**
-     * Get PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时返回
+     * Get <p>PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PostgreSQLConnectParam PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时返回
+     * @return PostgreSQLConnectParam <p>PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PostgreSQLConnectParam getPostgreSQLConnectParam() {
@@ -362,9 +369,9 @@ public class DescribeConnectResourceResp extends AbstractModel {
     }
 
     /**
-     * Set PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时返回
+     * Set <p>PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PostgreSQLConnectParam PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时返回
+     * @param PostgreSQLConnectParam <p>PostgreSQL配置，Type为POSTGRESQL或TDSQL_C_POSTGRESQL时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPostgreSQLConnectParam(PostgreSQLConnectParam PostgreSQLConnectParam) {
@@ -372,9 +379,9 @@ public class DescribeConnectResourceResp extends AbstractModel {
     }
 
     /**
-     * Get Dts配置，Type为DTS时返回
+     * Get <p>Dts配置，Type为DTS时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DtsConnectParam Dts配置，Type为DTS时返回
+     * @return DtsConnectParam <p>Dts配置，Type为DTS时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DtsConnectParam getDtsConnectParam() {
@@ -382,9 +389,9 @@ public class DescribeConnectResourceResp extends AbstractModel {
     }
 
     /**
-     * Set Dts配置，Type为DTS时返回
+     * Set <p>Dts配置，Type为DTS时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DtsConnectParam Dts配置，Type为DTS时返回
+     * @param DtsConnectParam <p>Dts配置，Type为DTS时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDtsConnectParam(DtsConnectParam DtsConnectParam) {
@@ -392,9 +399,9 @@ public class DescribeConnectResourceResp extends AbstractModel {
     }
 
     /**
-     * Get MongoDB配置，Type为MONGODB时返回
+     * Get <p>MongoDB配置，Type为MONGODB时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MongoDBConnectParam MongoDB配置，Type为MONGODB时返回
+     * @return MongoDBConnectParam <p>MongoDB配置，Type为MONGODB时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MongoDBConnectParam getMongoDBConnectParam() {
@@ -402,9 +409,9 @@ public class DescribeConnectResourceResp extends AbstractModel {
     }
 
     /**
-     * Set MongoDB配置，Type为MONGODB时返回
+     * Set <p>MongoDB配置，Type为MONGODB时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MongoDBConnectParam MongoDB配置，Type为MONGODB时返回
+     * @param MongoDBConnectParam <p>MongoDB配置，Type为MONGODB时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMongoDBConnectParam(MongoDBConnectParam MongoDBConnectParam) {
@@ -412,9 +419,9 @@ public class DescribeConnectResourceResp extends AbstractModel {
     }
 
     /**
-     * Get Es配置，Type为ES时返回
+     * Get <p>Es配置，Type为ES时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EsConnectParam Es配置，Type为ES时返回
+     * @return EsConnectParam <p>Es配置，Type为ES时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public EsConnectParam getEsConnectParam() {
@@ -422,9 +429,9 @@ public class DescribeConnectResourceResp extends AbstractModel {
     }
 
     /**
-     * Set Es配置，Type为ES时返回
+     * Set <p>Es配置，Type为ES时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EsConnectParam Es配置，Type为ES时返回
+     * @param EsConnectParam <p>Es配置，Type为ES时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEsConnectParam(EsConnectParam EsConnectParam) {
@@ -432,9 +439,9 @@ public class DescribeConnectResourceResp extends AbstractModel {
     }
 
     /**
-     * Get ClickHouse配置，Type为CLICKHOUSE时返回
+     * Get <p>ClickHouse配置，Type为CLICKHOUSE时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClickHouseConnectParam ClickHouse配置，Type为CLICKHOUSE时返回
+     * @return ClickHouseConnectParam <p>ClickHouse配置，Type为CLICKHOUSE时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ClickHouseConnectParam getClickHouseConnectParam() {
@@ -442,9 +449,9 @@ public class DescribeConnectResourceResp extends AbstractModel {
     }
 
     /**
-     * Set ClickHouse配置，Type为CLICKHOUSE时返回
+     * Set <p>ClickHouse配置，Type为CLICKHOUSE时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClickHouseConnectParam ClickHouse配置，Type为CLICKHOUSE时返回
+     * @param ClickHouseConnectParam <p>ClickHouse配置，Type为CLICKHOUSE时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClickHouseConnectParam(ClickHouseConnectParam ClickHouseConnectParam) {
@@ -452,9 +459,9 @@ public class DescribeConnectResourceResp extends AbstractModel {
     }
 
     /**
-     * Get MariaDB配置，Type为MARIADB时返回
+     * Get <p>MariaDB配置，Type为MARIADB时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MariaDBConnectParam MariaDB配置，Type为MARIADB时返回
+     * @return MariaDBConnectParam <p>MariaDB配置，Type为MARIADB时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MariaDBConnectParam getMariaDBConnectParam() {
@@ -462,9 +469,9 @@ public class DescribeConnectResourceResp extends AbstractModel {
     }
 
     /**
-     * Set MariaDB配置，Type为MARIADB时返回
+     * Set <p>MariaDB配置，Type为MARIADB时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MariaDBConnectParam MariaDB配置，Type为MARIADB时返回
+     * @param MariaDBConnectParam <p>MariaDB配置，Type为MARIADB时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMariaDBConnectParam(MariaDBConnectParam MariaDBConnectParam) {
@@ -472,9 +479,9 @@ public class DescribeConnectResourceResp extends AbstractModel {
     }
 
     /**
-     * Get SQLServer配置，Type为SQLSERVER时返回
+     * Get <p>SQLServer配置，Type为SQLSERVER时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SQLServerConnectParam SQLServer配置，Type为SQLSERVER时返回
+     * @return SQLServerConnectParam <p>SQLServer配置，Type为SQLSERVER时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SQLServerConnectParam getSQLServerConnectParam() {
@@ -482,9 +489,9 @@ public class DescribeConnectResourceResp extends AbstractModel {
     }
 
     /**
-     * Set SQLServer配置，Type为SQLSERVER时返回
+     * Set <p>SQLServer配置，Type为SQLSERVER时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SQLServerConnectParam SQLServer配置，Type为SQLSERVER时返回
+     * @param SQLServerConnectParam <p>SQLServer配置，Type为SQLSERVER时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSQLServerConnectParam(SQLServerConnectParam SQLServerConnectParam) {
@@ -492,9 +499,9 @@ public class DescribeConnectResourceResp extends AbstractModel {
     }
 
     /**
-     * Get Ctsdb配置，Type为CTSDB时返回
+     * Get <p>Ctsdb配置，Type为CTSDB时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CtsdbConnectParam Ctsdb配置，Type为CTSDB时返回
+     * @return CtsdbConnectParam <p>Ctsdb配置，Type为CTSDB时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CtsdbConnectParam getCtsdbConnectParam() {
@@ -502,9 +509,9 @@ public class DescribeConnectResourceResp extends AbstractModel {
     }
 
     /**
-     * Set Ctsdb配置，Type为CTSDB时返回
+     * Set <p>Ctsdb配置，Type为CTSDB时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CtsdbConnectParam Ctsdb配置，Type为CTSDB时返回
+     * @param CtsdbConnectParam <p>Ctsdb配置，Type为CTSDB时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCtsdbConnectParam(CtsdbConnectParam CtsdbConnectParam) {
@@ -512,9 +519,9 @@ public class DescribeConnectResourceResp extends AbstractModel {
     }
 
     /**
-     * Get Doris 配置，Type 为 DORIS 时返回
+     * Get <p>Doris 配置，Type 为 DORIS 时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DorisConnectParam Doris 配置，Type 为 DORIS 时返回
+     * @return DorisConnectParam <p>Doris 配置，Type 为 DORIS 时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DorisConnectParam getDorisConnectParam() {
@@ -522,9 +529,9 @@ public class DescribeConnectResourceResp extends AbstractModel {
     }
 
     /**
-     * Set Doris 配置，Type 为 DORIS 时返回
+     * Set <p>Doris 配置，Type 为 DORIS 时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DorisConnectParam Doris 配置，Type 为 DORIS 时返回
+     * @param DorisConnectParam <p>Doris 配置，Type 为 DORIS 时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDorisConnectParam(DorisConnectParam DorisConnectParam) {
@@ -532,9 +539,9 @@ public class DescribeConnectResourceResp extends AbstractModel {
     }
 
     /**
-     * Get Kafka配置，Type 为 KAFKA 时返回
+     * Get <p>Kafka配置，Type 为 KAFKA 时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KafkaConnectParam Kafka配置，Type 为 KAFKA 时返回
+     * @return KafkaConnectParam <p>Kafka配置，Type 为 KAFKA 时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public KafkaConnectParam getKafkaConnectParam() {
@@ -542,9 +549,9 @@ public class DescribeConnectResourceResp extends AbstractModel {
     }
 
     /**
-     * Set Kafka配置，Type 为 KAFKA 时返回
+     * Set <p>Kafka配置，Type 为 KAFKA 时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param KafkaConnectParam Kafka配置，Type 为 KAFKA 时返回
+     * @param KafkaConnectParam <p>Kafka配置，Type 为 KAFKA 时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKafkaConnectParam(KafkaConnectParam KafkaConnectParam) {
@@ -552,9 +559,9 @@ public class DescribeConnectResourceResp extends AbstractModel {
     }
 
     /**
-     * Get MQTT配置，Type 为 MQTT 时返回
+     * Get <p>MQTT配置，Type 为 MQTT 时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MqttConnectParam MQTT配置，Type 为 MQTT 时返回
+     * @return MqttConnectParam <p>MQTT配置，Type 为 MQTT 时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MqttConnectParam getMqttConnectParam() {
@@ -562,13 +569,29 @@ public class DescribeConnectResourceResp extends AbstractModel {
     }
 
     /**
-     * Set MQTT配置，Type 为 MQTT 时返回
+     * Set <p>MQTT配置，Type 为 MQTT 时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MqttConnectParam MQTT配置，Type 为 MQTT 时返回
+     * @param MqttConnectParam <p>MQTT配置，Type 为 MQTT 时返回</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMqttConnectParam(MqttConnectParam MqttConnectParam) {
         this.MqttConnectParam = MqttConnectParam;
+    }
+
+    /**
+     * Get <p>标签列表</p> 
+     * @return Tags <p>标签列表</p>
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set <p>标签列表</p>
+     * @param Tags <p>标签列表</p>
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
     }
 
     public DescribeConnectResourceResp() {
@@ -645,6 +668,12 @@ public class DescribeConnectResourceResp extends AbstractModel {
         if (source.MqttConnectParam != null) {
             this.MqttConnectParam = new MqttConnectParam(source.MqttConnectParam);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -673,6 +702,7 @@ public class DescribeConnectResourceResp extends AbstractModel {
         this.setParamObj(map, prefix + "DorisConnectParam.", this.DorisConnectParam);
         this.setParamObj(map, prefix + "KafkaConnectParam.", this.KafkaConnectParam);
         this.setParamObj(map, prefix + "MqttConnectParam.", this.MqttConnectParam);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

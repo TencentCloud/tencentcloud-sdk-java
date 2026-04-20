@@ -24,78 +24,77 @@ import java.util.HashMap;
 public class HmtResidentPermitOCRResponse extends AbstractModel {
 
     /**
-    * 证件姓名
+    * <p>证件姓名</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 性别
+    * <p>性别</p>
     */
     @SerializedName("Sex")
     @Expose
     private String Sex;
 
     /**
-    * 出生日期
+    * <p>出生日期</p>
     */
     @SerializedName("Birth")
     @Expose
     private String Birth;
 
     /**
-    * 地址
+    * <p>地址</p>
     */
     @SerializedName("Address")
     @Expose
     private String Address;
 
     /**
-    * 身份证号
+    * <p>身份证号</p>
     */
     @SerializedName("IdCardNo")
     @Expose
     private String IdCardNo;
 
     /**
-    * 0-正面
-1-反面
+    * <p>0-正面<br>1-反面</p>
     */
     @SerializedName("CardType")
     @Expose
     private Long CardType;
 
     /**
-    * 证件有效期限
+    * <p>证件有效期限</p>
     */
     @SerializedName("ValidDate")
     @Expose
     private String ValidDate;
 
     /**
-    * 签发机关
+    * <p>签发机关</p>
     */
     @SerializedName("Authority")
     @Expose
     private String Authority;
 
     /**
-    * 签发次数
+    * <p>签发次数</p>
     */
     @SerializedName("VisaNum")
     @Expose
     private String VisaNum;
 
     /**
-    * 通行证号码
+    * <p>通行证号码</p>
     */
     @SerializedName("PassNo")
     @Expose
     private String PassNo;
 
     /**
-    * 头像和坐标信息
+    * <p>头像和坐标信息</p>
     */
     @SerializedName("PortraitImageInfo")
     @Expose
@@ -109,180 +108,176 @@ public class HmtResidentPermitOCRResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 证件姓名 
-     * @return Name 证件姓名
+     * Get <p>证件姓名</p> 
+     * @return Name <p>证件姓名</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 证件姓名
-     * @param Name 证件姓名
+     * Set <p>证件姓名</p>
+     * @param Name <p>证件姓名</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 性别 
-     * @return Sex 性别
+     * Get <p>性别</p> 
+     * @return Sex <p>性别</p>
      */
     public String getSex() {
         return this.Sex;
     }
 
     /**
-     * Set 性别
-     * @param Sex 性别
+     * Set <p>性别</p>
+     * @param Sex <p>性别</p>
      */
     public void setSex(String Sex) {
         this.Sex = Sex;
     }
 
     /**
-     * Get 出生日期 
-     * @return Birth 出生日期
+     * Get <p>出生日期</p> 
+     * @return Birth <p>出生日期</p>
      */
     public String getBirth() {
         return this.Birth;
     }
 
     /**
-     * Set 出生日期
-     * @param Birth 出生日期
+     * Set <p>出生日期</p>
+     * @param Birth <p>出生日期</p>
      */
     public void setBirth(String Birth) {
         this.Birth = Birth;
     }
 
     /**
-     * Get 地址 
-     * @return Address 地址
+     * Get <p>地址</p> 
+     * @return Address <p>地址</p>
      */
     public String getAddress() {
         return this.Address;
     }
 
     /**
-     * Set 地址
-     * @param Address 地址
+     * Set <p>地址</p>
+     * @param Address <p>地址</p>
      */
     public void setAddress(String Address) {
         this.Address = Address;
     }
 
     /**
-     * Get 身份证号 
-     * @return IdCardNo 身份证号
+     * Get <p>身份证号</p> 
+     * @return IdCardNo <p>身份证号</p>
      */
     public String getIdCardNo() {
         return this.IdCardNo;
     }
 
     /**
-     * Set 身份证号
-     * @param IdCardNo 身份证号
+     * Set <p>身份证号</p>
+     * @param IdCardNo <p>身份证号</p>
      */
     public void setIdCardNo(String IdCardNo) {
         this.IdCardNo = IdCardNo;
     }
 
     /**
-     * Get 0-正面
-1-反面 
-     * @return CardType 0-正面
-1-反面
+     * Get <p>0-正面<br>1-反面</p> 
+     * @return CardType <p>0-正面<br>1-反面</p>
      */
     public Long getCardType() {
         return this.CardType;
     }
 
     /**
-     * Set 0-正面
-1-反面
-     * @param CardType 0-正面
-1-反面
+     * Set <p>0-正面<br>1-反面</p>
+     * @param CardType <p>0-正面<br>1-反面</p>
      */
     public void setCardType(Long CardType) {
         this.CardType = CardType;
     }
 
     /**
-     * Get 证件有效期限 
-     * @return ValidDate 证件有效期限
+     * Get <p>证件有效期限</p> 
+     * @return ValidDate <p>证件有效期限</p>
      */
     public String getValidDate() {
         return this.ValidDate;
     }
 
     /**
-     * Set 证件有效期限
-     * @param ValidDate 证件有效期限
+     * Set <p>证件有效期限</p>
+     * @param ValidDate <p>证件有效期限</p>
      */
     public void setValidDate(String ValidDate) {
         this.ValidDate = ValidDate;
     }
 
     /**
-     * Get 签发机关 
-     * @return Authority 签发机关
+     * Get <p>签发机关</p> 
+     * @return Authority <p>签发机关</p>
      */
     public String getAuthority() {
         return this.Authority;
     }
 
     /**
-     * Set 签发机关
-     * @param Authority 签发机关
+     * Set <p>签发机关</p>
+     * @param Authority <p>签发机关</p>
      */
     public void setAuthority(String Authority) {
         this.Authority = Authority;
     }
 
     /**
-     * Get 签发次数 
-     * @return VisaNum 签发次数
+     * Get <p>签发次数</p> 
+     * @return VisaNum <p>签发次数</p>
      */
     public String getVisaNum() {
         return this.VisaNum;
     }
 
     /**
-     * Set 签发次数
-     * @param VisaNum 签发次数
+     * Set <p>签发次数</p>
+     * @param VisaNum <p>签发次数</p>
      */
     public void setVisaNum(String VisaNum) {
         this.VisaNum = VisaNum;
     }
 
     /**
-     * Get 通行证号码 
-     * @return PassNo 通行证号码
+     * Get <p>通行证号码</p> 
+     * @return PassNo <p>通行证号码</p>
      */
     public String getPassNo() {
         return this.PassNo;
     }
 
     /**
-     * Set 通行证号码
-     * @param PassNo 通行证号码
+     * Set <p>通行证号码</p>
+     * @param PassNo <p>通行证号码</p>
      */
     public void setPassNo(String PassNo) {
         this.PassNo = PassNo;
     }
 
     /**
-     * Get 头像和坐标信息 
-     * @return PortraitImageInfo 头像和坐标信息
+     * Get <p>头像和坐标信息</p> 
+     * @return PortraitImageInfo <p>头像和坐标信息</p>
      */
     public PortraitImageInfo getPortraitImageInfo() {
         return this.PortraitImageInfo;
     }
 
     /**
-     * Set 头像和坐标信息
-     * @param PortraitImageInfo 头像和坐标信息
+     * Set <p>头像和坐标信息</p>
+     * @param PortraitImageInfo <p>头像和坐标信息</p>
      */
     public void setPortraitImageInfo(PortraitImageInfo PortraitImageInfo) {
         this.PortraitImageInfo = PortraitImageInfo;
