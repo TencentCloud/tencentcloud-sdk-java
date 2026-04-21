@@ -24,234 +24,184 @@ import java.util.HashMap;
 public class DescribeGeneralOTSpanListRequest extends AbstractModel {
 
     /**
-    * 业务系统 ID
+    * <p>业务系统 ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Span 查询开始时间戳（单位：秒）
+    * <p>Span 查询开始时间戳（单位：秒）</p>
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * Span 查询结束时间戳（单位：秒）
+    * <p>Span 查询结束时间戳（单位：秒）</p>
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * 通用过滤参数
+    * <p>通用过滤参数 支持的过滤key如service.name</p>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 排序
-现支持的 Key 有：
-
-- startTime(开始时间)
-- endTime(结束时间)
-- duration(响应时间)
-
-现支持的 Value 有：
-
-- desc(降序排序)
-- asc(升序排序)
+    * <p>排序<br>现支持的 Key 有：</p><ul><li>startTime(开始时间)</li><li>endTime(结束时间)</li><li>duration(响应时间)</li></ul><p>现支持的 Value 有：</p><ul><li>desc(降序排序)</li><li>asc(升序排序)</li></ul>
     */
     @SerializedName("OrderBy")
     @Expose
     private OrderBy OrderBy;
 
     /**
-    * 业务自身服务名，控制台用户请填写taw
+    * <p>业务自身服务名，控制台用户请填写taw</p>
     */
     @SerializedName("BusinessName")
     @Expose
     private String BusinessName;
 
     /**
-    * 单页项目个数，默认为10000，合法取值范围为0～10000
+    * <p>单页项目个数，默认为10000，合法取值范围为0～10000</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 分页
+    * <p>分页</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get 业务系统 ID 
-     * @return InstanceId 业务系统 ID
+     * Get <p>业务系统 ID</p> 
+     * @return InstanceId <p>业务系统 ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 业务系统 ID
-     * @param InstanceId 业务系统 ID
+     * Set <p>业务系统 ID</p>
+     * @param InstanceId <p>业务系统 ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Span 查询开始时间戳（单位：秒） 
-     * @return StartTime Span 查询开始时间戳（单位：秒）
+     * Get <p>Span 查询开始时间戳（单位：秒）</p> 
+     * @return StartTime <p>Span 查询开始时间戳（单位：秒）</p>
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Span 查询开始时间戳（单位：秒）
-     * @param StartTime Span 查询开始时间戳（单位：秒）
+     * Set <p>Span 查询开始时间戳（单位：秒）</p>
+     * @param StartTime <p>Span 查询开始时间戳（单位：秒）</p>
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Span 查询结束时间戳（单位：秒） 
-     * @return EndTime Span 查询结束时间戳（单位：秒）
+     * Get <p>Span 查询结束时间戳（单位：秒）</p> 
+     * @return EndTime <p>Span 查询结束时间戳（单位：秒）</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Span 查询结束时间戳（单位：秒）
-     * @param EndTime Span 查询结束时间戳（单位：秒）
+     * Set <p>Span 查询结束时间戳（单位：秒）</p>
+     * @param EndTime <p>Span 查询结束时间戳（单位：秒）</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 通用过滤参数 
-     * @return Filters 通用过滤参数
+     * Get <p>通用过滤参数 支持的过滤key如service.name</p> 
+     * @return Filters <p>通用过滤参数 支持的过滤key如service.name</p>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 通用过滤参数
-     * @param Filters 通用过滤参数
+     * Set <p>通用过滤参数 支持的过滤key如service.name</p>
+     * @param Filters <p>通用过滤参数 支持的过滤key如service.name</p>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 排序
-现支持的 Key 有：
-
-- startTime(开始时间)
-- endTime(结束时间)
-- duration(响应时间)
-
-现支持的 Value 有：
-
-- desc(降序排序)
-- asc(升序排序) 
-     * @return OrderBy 排序
-现支持的 Key 有：
-
-- startTime(开始时间)
-- endTime(结束时间)
-- duration(响应时间)
-
-现支持的 Value 有：
-
-- desc(降序排序)
-- asc(升序排序)
+     * Get <p>排序<br>现支持的 Key 有：</p><ul><li>startTime(开始时间)</li><li>endTime(结束时间)</li><li>duration(响应时间)</li></ul><p>现支持的 Value 有：</p><ul><li>desc(降序排序)</li><li>asc(升序排序)</li></ul> 
+     * @return OrderBy <p>排序<br>现支持的 Key 有：</p><ul><li>startTime(开始时间)</li><li>endTime(结束时间)</li><li>duration(响应时间)</li></ul><p>现支持的 Value 有：</p><ul><li>desc(降序排序)</li><li>asc(升序排序)</li></ul>
      */
     public OrderBy getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 排序
-现支持的 Key 有：
-
-- startTime(开始时间)
-- endTime(结束时间)
-- duration(响应时间)
-
-现支持的 Value 有：
-
-- desc(降序排序)
-- asc(升序排序)
-     * @param OrderBy 排序
-现支持的 Key 有：
-
-- startTime(开始时间)
-- endTime(结束时间)
-- duration(响应时间)
-
-现支持的 Value 有：
-
-- desc(降序排序)
-- asc(升序排序)
+     * Set <p>排序<br>现支持的 Key 有：</p><ul><li>startTime(开始时间)</li><li>endTime(结束时间)</li><li>duration(响应时间)</li></ul><p>现支持的 Value 有：</p><ul><li>desc(降序排序)</li><li>asc(升序排序)</li></ul>
+     * @param OrderBy <p>排序<br>现支持的 Key 有：</p><ul><li>startTime(开始时间)</li><li>endTime(结束时间)</li><li>duration(响应时间)</li></ul><p>现支持的 Value 有：</p><ul><li>desc(降序排序)</li><li>asc(升序排序)</li></ul>
      */
     public void setOrderBy(OrderBy OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get 业务自身服务名，控制台用户请填写taw 
-     * @return BusinessName 业务自身服务名，控制台用户请填写taw
+     * Get <p>业务自身服务名，控制台用户请填写taw</p> 
+     * @return BusinessName <p>业务自身服务名，控制台用户请填写taw</p>
      */
     public String getBusinessName() {
         return this.BusinessName;
     }
 
     /**
-     * Set 业务自身服务名，控制台用户请填写taw
-     * @param BusinessName 业务自身服务名，控制台用户请填写taw
+     * Set <p>业务自身服务名，控制台用户请填写taw</p>
+     * @param BusinessName <p>业务自身服务名，控制台用户请填写taw</p>
      */
     public void setBusinessName(String BusinessName) {
         this.BusinessName = BusinessName;
     }
 
     /**
-     * Get 单页项目个数，默认为10000，合法取值范围为0～10000 
-     * @return Limit 单页项目个数，默认为10000，合法取值范围为0～10000
+     * Get <p>单页项目个数，默认为10000，合法取值范围为0～10000</p> 
+     * @return Limit <p>单页项目个数，默认为10000，合法取值范围为0～10000</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 单页项目个数，默认为10000，合法取值范围为0～10000
-     * @param Limit 单页项目个数，默认为10000，合法取值范围为0～10000
+     * Set <p>单页项目个数，默认为10000，合法取值范围为0～10000</p>
+     * @param Limit <p>单页项目个数，默认为10000，合法取值范围为0～10000</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页 
-     * @return Offset 分页
+     * Get <p>分页</p> 
+     * @return Offset <p>分页</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页
-     * @param Offset 分页
+     * Set <p>分页</p>
+     * @param Offset <p>分页</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

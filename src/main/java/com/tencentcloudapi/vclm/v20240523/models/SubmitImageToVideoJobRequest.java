@@ -164,6 +164,13 @@ public class SubmitImageToVideoJobRequest extends AbstractModel {
     private Voice [] VoiceList;
 
     /**
+    * 
+    */
+    @SerializedName("ExternalTaskId")
+    @Expose
+    private String ExternalTaskId;
+
+    /**
      * Get <p>模型名称。<br>v1.6：Kling-V1-6<br>v2.0：Kling-V2-Master<br>v2.1：Kling-V2-1<br>v2.5：Kling-V2-5-Turbo<br>v2.6：Kling-V2-6<br>V3.0：kling-v3</p> 
      * @return Model <p>模型名称。<br>v1.6：Kling-V1-6<br>v2.0：Kling-V2-Master<br>v2.1：Kling-V2-1<br>v2.5：Kling-V2-5-Turbo<br>v2.6：Kling-V2-6<br>V3.0：kling-v3</p>
      */
@@ -483,6 +490,22 @@ public class SubmitImageToVideoJobRequest extends AbstractModel {
         this.VoiceList = VoiceList;
     }
 
+    /**
+     * Get  
+     * @return ExternalTaskId 
+     */
+    public String getExternalTaskId() {
+        return this.ExternalTaskId;
+    }
+
+    /**
+     * Set 
+     * @param ExternalTaskId 
+     */
+    public void setExternalTaskId(String ExternalTaskId) {
+        this.ExternalTaskId = ExternalTaskId;
+    }
+
     public SubmitImageToVideoJobRequest() {
     }
 
@@ -563,6 +586,9 @@ public class SubmitImageToVideoJobRequest extends AbstractModel {
                 this.VoiceList[i] = new Voice(source.VoiceList[i]);
             }
         }
+        if (source.ExternalTaskId != null) {
+            this.ExternalTaskId = new String(source.ExternalTaskId);
+        }
     }
 
 
@@ -590,6 +616,7 @@ public class SubmitImageToVideoJobRequest extends AbstractModel {
         this.setParamObj(map, prefix + "CameraControl.", this.CameraControl);
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
         this.setParamArrayObj(map, prefix + "VoiceList.", this.VoiceList);
+        this.setParamSimple(map, prefix + "ExternalTaskId", this.ExternalTaskId);
 
     }
 }

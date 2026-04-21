@@ -24,568 +24,483 @@ import java.util.HashMap;
 public class DescribeAllocationSummaryByResourceRequest extends AbstractModel {
 
     /**
-    * 数量，最大值为1000
-
+    * <p>数量，最大值为1000</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推
+    * <p>分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 账单月份，格式为2024-02，不传默认当前月
-
+    * <p>账单月份，格式为2024-02，不传默认当前月</p>
     */
     @SerializedName("Month")
     @Expose
     private String Month;
 
     /**
-    * 统计周期，枚举值如下
-month - 月
-day - 日
+    * <p>统计周期，枚举值如下<br>month - 月<br>day - 日</p>
     */
     @SerializedName("PeriodType")
     @Expose
     private String PeriodType;
 
     /**
-    * 分账单元唯一标识，用作筛选
+    * <p>分账单元唯一标识，用作筛选</p>
     */
     @SerializedName("TreeNodeUniqKeys")
     @Expose
     private String [] TreeNodeUniqKeys;
 
     /**
-    * 排序字段，枚举值如下：
-RiTimeSpan - 预留实例抵扣时长
-ExtendPayAmount1 - 预留实例抵扣组件原价
-RealCost - 折后总价
-CashPayAmount - 现金金额
-VoucherPayAmount - 代金券金额
-IncentivePayAmount - 赠送金金额
-TransferPayAmount -分成金金额
-Cost - 组件原价
+    * <p>排序字段，枚举值如下：<br>RiTimeSpan - 预留实例抵扣时长<br>ExtendPayAmount1 - 预留实例抵扣组件原价<br>RealCost - 折后总价<br>CashPayAmount - 现金金额<br>VoucherPayAmount - 代金券金额<br>IncentivePayAmount - 赠送金金额<br>TransferPayAmount -分成金金额<br>Cost - 组件原价</p>
     */
     @SerializedName("Sort")
     @Expose
     private String Sort;
 
     /**
-    * 排序类型，枚举值如下：
-asc - 升序
-desc - 降序
+    * <p>排序类型，枚举值如下：<br>asc - 升序<br>desc - 降序</p>
     */
     @SerializedName("SortType")
     @Expose
     private String SortType;
 
     /**
-    * 日期，用作筛选
+    * <p>日期，用作筛选</p>
     */
     @SerializedName("BillDates")
     @Expose
     private String [] BillDates;
 
     /**
-    * 产品编码，用作筛选
+    * <p>产品编码，用作筛选</p>
     */
     @SerializedName("BusinessCodes")
     @Expose
     private String [] BusinessCodes;
 
     /**
-    * 使用者UIN，用作筛选
+    * <p>使用者UIN，用作筛选</p>
     */
     @SerializedName("OwnerUins")
     @Expose
     private String [] OwnerUins;
 
     /**
-    * 操作者UIN，用作筛选
+    * <p>操作者UIN，用作筛选</p>
     */
     @SerializedName("OperateUins")
     @Expose
     private String [] OperateUins;
 
     /**
-    * 计费模式编码，用作筛选
+    * <p>计费模式编码，用作筛选</p>
     */
     @SerializedName("PayModes")
     @Expose
     private String [] PayModes;
 
     /**
-    * 交易类型编码，用作筛选
+    * <p>交易类型编码，用作筛选</p>
     */
     @SerializedName("ActionTypes")
     @Expose
     private String [] ActionTypes;
 
     /**
-    * 子产品编码，用作筛选
+    * <p>子产品编码，用作筛选</p>
     */
     @SerializedName("ProductCodes")
     @Expose
     private String [] ProductCodes;
 
     /**
-    * 地域ID，用作筛选
+    * <p>地域ID，用作筛选</p>
     */
     @SerializedName("RegionIds")
     @Expose
     private String [] RegionIds;
 
     /**
-    * 可用区ID，用作筛选
+    * <p>可用区ID，用作筛选</p>
     */
     @SerializedName("ZoneIds")
     @Expose
     private String [] ZoneIds;
 
     /**
-    * 实例类型编码，用作筛选
+    * <p>实例类型编码，用作筛选</p>
     */
     @SerializedName("InstanceTypes")
     @Expose
     private String [] InstanceTypes;
 
     /**
-    * 标签，用作筛选
+    * <p>标签，用作筛选</p>
     */
     @SerializedName("Tag")
     @Expose
     private String [] Tag;
 
     /**
-    * 模糊搜索：支持标签、资源id、资源别名
+    * <p>模糊搜索：支持标签、资源id、资源别名</p>
     */
     @SerializedName("SearchKey")
     @Expose
     private String SearchKey;
 
     /**
-    * 项目ID，用作筛选
+    * <p>项目ID，用作筛选</p>
     */
     @SerializedName("ProjectIds")
     @Expose
     private Long [] ProjectIds;
 
     /**
-    * 费用归集类型，枚举值如下：
-0 - 分摊 
-1 - 归集 
--1 -  未分配
+    * <p>费用归集类型，枚举值如下：<br>0 - 分摊<br>1 - 归集<br>-1 -  未分配</p>
     */
     @SerializedName("AllocationType")
     @Expose
     private Long [] AllocationType;
 
     /**
-     * Get 数量，最大值为1000
- 
-     * @return Limit 数量，最大值为1000
-
+     * Get <p>数量，最大值为1000</p> 
+     * @return Limit <p>数量，最大值为1000</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 数量，最大值为1000
-
-     * @param Limit 数量，最大值为1000
-
+     * Set <p>数量，最大值为1000</p>
+     * @param Limit <p>数量，最大值为1000</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推 
-     * @return Offset 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推
+     * Get <p>分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推</p> 
+     * @return Offset <p>分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推
-     * @param Offset 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推
+     * Set <p>分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推</p>
+     * @param Offset <p>分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 账单月份，格式为2024-02，不传默认当前月
- 
-     * @return Month 账单月份，格式为2024-02，不传默认当前月
-
+     * Get <p>账单月份，格式为2024-02，不传默认当前月</p> 
+     * @return Month <p>账单月份，格式为2024-02，不传默认当前月</p>
      */
     public String getMonth() {
         return this.Month;
     }
 
     /**
-     * Set 账单月份，格式为2024-02，不传默认当前月
-
-     * @param Month 账单月份，格式为2024-02，不传默认当前月
-
+     * Set <p>账单月份，格式为2024-02，不传默认当前月</p>
+     * @param Month <p>账单月份，格式为2024-02，不传默认当前月</p>
      */
     public void setMonth(String Month) {
         this.Month = Month;
     }
 
     /**
-     * Get 统计周期，枚举值如下
-month - 月
-day - 日 
-     * @return PeriodType 统计周期，枚举值如下
-month - 月
-day - 日
+     * Get <p>统计周期，枚举值如下<br>month - 月<br>day - 日</p> 
+     * @return PeriodType <p>统计周期，枚举值如下<br>month - 月<br>day - 日</p>
      */
     public String getPeriodType() {
         return this.PeriodType;
     }
 
     /**
-     * Set 统计周期，枚举值如下
-month - 月
-day - 日
-     * @param PeriodType 统计周期，枚举值如下
-month - 月
-day - 日
+     * Set <p>统计周期，枚举值如下<br>month - 月<br>day - 日</p>
+     * @param PeriodType <p>统计周期，枚举值如下<br>month - 月<br>day - 日</p>
      */
     public void setPeriodType(String PeriodType) {
         this.PeriodType = PeriodType;
     }
 
     /**
-     * Get 分账单元唯一标识，用作筛选 
-     * @return TreeNodeUniqKeys 分账单元唯一标识，用作筛选
+     * Get <p>分账单元唯一标识，用作筛选</p> 
+     * @return TreeNodeUniqKeys <p>分账单元唯一标识，用作筛选</p>
      */
     public String [] getTreeNodeUniqKeys() {
         return this.TreeNodeUniqKeys;
     }
 
     /**
-     * Set 分账单元唯一标识，用作筛选
-     * @param TreeNodeUniqKeys 分账单元唯一标识，用作筛选
+     * Set <p>分账单元唯一标识，用作筛选</p>
+     * @param TreeNodeUniqKeys <p>分账单元唯一标识，用作筛选</p>
      */
     public void setTreeNodeUniqKeys(String [] TreeNodeUniqKeys) {
         this.TreeNodeUniqKeys = TreeNodeUniqKeys;
     }
 
     /**
-     * Get 排序字段，枚举值如下：
-RiTimeSpan - 预留实例抵扣时长
-ExtendPayAmount1 - 预留实例抵扣组件原价
-RealCost - 折后总价
-CashPayAmount - 现金金额
-VoucherPayAmount - 代金券金额
-IncentivePayAmount - 赠送金金额
-TransferPayAmount -分成金金额
-Cost - 组件原价 
-     * @return Sort 排序字段，枚举值如下：
-RiTimeSpan - 预留实例抵扣时长
-ExtendPayAmount1 - 预留实例抵扣组件原价
-RealCost - 折后总价
-CashPayAmount - 现金金额
-VoucherPayAmount - 代金券金额
-IncentivePayAmount - 赠送金金额
-TransferPayAmount -分成金金额
-Cost - 组件原价
+     * Get <p>排序字段，枚举值如下：<br>RiTimeSpan - 预留实例抵扣时长<br>ExtendPayAmount1 - 预留实例抵扣组件原价<br>RealCost - 折后总价<br>CashPayAmount - 现金金额<br>VoucherPayAmount - 代金券金额<br>IncentivePayAmount - 赠送金金额<br>TransferPayAmount -分成金金额<br>Cost - 组件原价</p> 
+     * @return Sort <p>排序字段，枚举值如下：<br>RiTimeSpan - 预留实例抵扣时长<br>ExtendPayAmount1 - 预留实例抵扣组件原价<br>RealCost - 折后总价<br>CashPayAmount - 现金金额<br>VoucherPayAmount - 代金券金额<br>IncentivePayAmount - 赠送金金额<br>TransferPayAmount -分成金金额<br>Cost - 组件原价</p>
      */
     public String getSort() {
         return this.Sort;
     }
 
     /**
-     * Set 排序字段，枚举值如下：
-RiTimeSpan - 预留实例抵扣时长
-ExtendPayAmount1 - 预留实例抵扣组件原价
-RealCost - 折后总价
-CashPayAmount - 现金金额
-VoucherPayAmount - 代金券金额
-IncentivePayAmount - 赠送金金额
-TransferPayAmount -分成金金额
-Cost - 组件原价
-     * @param Sort 排序字段，枚举值如下：
-RiTimeSpan - 预留实例抵扣时长
-ExtendPayAmount1 - 预留实例抵扣组件原价
-RealCost - 折后总价
-CashPayAmount - 现金金额
-VoucherPayAmount - 代金券金额
-IncentivePayAmount - 赠送金金额
-TransferPayAmount -分成金金额
-Cost - 组件原价
+     * Set <p>排序字段，枚举值如下：<br>RiTimeSpan - 预留实例抵扣时长<br>ExtendPayAmount1 - 预留实例抵扣组件原价<br>RealCost - 折后总价<br>CashPayAmount - 现金金额<br>VoucherPayAmount - 代金券金额<br>IncentivePayAmount - 赠送金金额<br>TransferPayAmount -分成金金额<br>Cost - 组件原价</p>
+     * @param Sort <p>排序字段，枚举值如下：<br>RiTimeSpan - 预留实例抵扣时长<br>ExtendPayAmount1 - 预留实例抵扣组件原价<br>RealCost - 折后总价<br>CashPayAmount - 现金金额<br>VoucherPayAmount - 代金券金额<br>IncentivePayAmount - 赠送金金额<br>TransferPayAmount -分成金金额<br>Cost - 组件原价</p>
      */
     public void setSort(String Sort) {
         this.Sort = Sort;
     }
 
     /**
-     * Get 排序类型，枚举值如下：
-asc - 升序
-desc - 降序 
-     * @return SortType 排序类型，枚举值如下：
-asc - 升序
-desc - 降序
+     * Get <p>排序类型，枚举值如下：<br>asc - 升序<br>desc - 降序</p> 
+     * @return SortType <p>排序类型，枚举值如下：<br>asc - 升序<br>desc - 降序</p>
      */
     public String getSortType() {
         return this.SortType;
     }
 
     /**
-     * Set 排序类型，枚举值如下：
-asc - 升序
-desc - 降序
-     * @param SortType 排序类型，枚举值如下：
-asc - 升序
-desc - 降序
+     * Set <p>排序类型，枚举值如下：<br>asc - 升序<br>desc - 降序</p>
+     * @param SortType <p>排序类型，枚举值如下：<br>asc - 升序<br>desc - 降序</p>
      */
     public void setSortType(String SortType) {
         this.SortType = SortType;
     }
 
     /**
-     * Get 日期，用作筛选 
-     * @return BillDates 日期，用作筛选
+     * Get <p>日期，用作筛选</p> 
+     * @return BillDates <p>日期，用作筛选</p>
      */
     public String [] getBillDates() {
         return this.BillDates;
     }
 
     /**
-     * Set 日期，用作筛选
-     * @param BillDates 日期，用作筛选
+     * Set <p>日期，用作筛选</p>
+     * @param BillDates <p>日期，用作筛选</p>
      */
     public void setBillDates(String [] BillDates) {
         this.BillDates = BillDates;
     }
 
     /**
-     * Get 产品编码，用作筛选 
-     * @return BusinessCodes 产品编码，用作筛选
+     * Get <p>产品编码，用作筛选</p> 
+     * @return BusinessCodes <p>产品编码，用作筛选</p>
      */
     public String [] getBusinessCodes() {
         return this.BusinessCodes;
     }
 
     /**
-     * Set 产品编码，用作筛选
-     * @param BusinessCodes 产品编码，用作筛选
+     * Set <p>产品编码，用作筛选</p>
+     * @param BusinessCodes <p>产品编码，用作筛选</p>
      */
     public void setBusinessCodes(String [] BusinessCodes) {
         this.BusinessCodes = BusinessCodes;
     }
 
     /**
-     * Get 使用者UIN，用作筛选 
-     * @return OwnerUins 使用者UIN，用作筛选
+     * Get <p>使用者UIN，用作筛选</p> 
+     * @return OwnerUins <p>使用者UIN，用作筛选</p>
      */
     public String [] getOwnerUins() {
         return this.OwnerUins;
     }
 
     /**
-     * Set 使用者UIN，用作筛选
-     * @param OwnerUins 使用者UIN，用作筛选
+     * Set <p>使用者UIN，用作筛选</p>
+     * @param OwnerUins <p>使用者UIN，用作筛选</p>
      */
     public void setOwnerUins(String [] OwnerUins) {
         this.OwnerUins = OwnerUins;
     }
 
     /**
-     * Get 操作者UIN，用作筛选 
-     * @return OperateUins 操作者UIN，用作筛选
+     * Get <p>操作者UIN，用作筛选</p> 
+     * @return OperateUins <p>操作者UIN，用作筛选</p>
      */
     public String [] getOperateUins() {
         return this.OperateUins;
     }
 
     /**
-     * Set 操作者UIN，用作筛选
-     * @param OperateUins 操作者UIN，用作筛选
+     * Set <p>操作者UIN，用作筛选</p>
+     * @param OperateUins <p>操作者UIN，用作筛选</p>
      */
     public void setOperateUins(String [] OperateUins) {
         this.OperateUins = OperateUins;
     }
 
     /**
-     * Get 计费模式编码，用作筛选 
-     * @return PayModes 计费模式编码，用作筛选
+     * Get <p>计费模式编码，用作筛选</p> 
+     * @return PayModes <p>计费模式编码，用作筛选</p>
      */
     public String [] getPayModes() {
         return this.PayModes;
     }
 
     /**
-     * Set 计费模式编码，用作筛选
-     * @param PayModes 计费模式编码，用作筛选
+     * Set <p>计费模式编码，用作筛选</p>
+     * @param PayModes <p>计费模式编码，用作筛选</p>
      */
     public void setPayModes(String [] PayModes) {
         this.PayModes = PayModes;
     }
 
     /**
-     * Get 交易类型编码，用作筛选 
-     * @return ActionTypes 交易类型编码，用作筛选
+     * Get <p>交易类型编码，用作筛选</p> 
+     * @return ActionTypes <p>交易类型编码，用作筛选</p>
      */
     public String [] getActionTypes() {
         return this.ActionTypes;
     }
 
     /**
-     * Set 交易类型编码，用作筛选
-     * @param ActionTypes 交易类型编码，用作筛选
+     * Set <p>交易类型编码，用作筛选</p>
+     * @param ActionTypes <p>交易类型编码，用作筛选</p>
      */
     public void setActionTypes(String [] ActionTypes) {
         this.ActionTypes = ActionTypes;
     }
 
     /**
-     * Get 子产品编码，用作筛选 
-     * @return ProductCodes 子产品编码，用作筛选
+     * Get <p>子产品编码，用作筛选</p> 
+     * @return ProductCodes <p>子产品编码，用作筛选</p>
      */
     public String [] getProductCodes() {
         return this.ProductCodes;
     }
 
     /**
-     * Set 子产品编码，用作筛选
-     * @param ProductCodes 子产品编码，用作筛选
+     * Set <p>子产品编码，用作筛选</p>
+     * @param ProductCodes <p>子产品编码，用作筛选</p>
      */
     public void setProductCodes(String [] ProductCodes) {
         this.ProductCodes = ProductCodes;
     }
 
     /**
-     * Get 地域ID，用作筛选 
-     * @return RegionIds 地域ID，用作筛选
+     * Get <p>地域ID，用作筛选</p> 
+     * @return RegionIds <p>地域ID，用作筛选</p>
      */
     public String [] getRegionIds() {
         return this.RegionIds;
     }
 
     /**
-     * Set 地域ID，用作筛选
-     * @param RegionIds 地域ID，用作筛选
+     * Set <p>地域ID，用作筛选</p>
+     * @param RegionIds <p>地域ID，用作筛选</p>
      */
     public void setRegionIds(String [] RegionIds) {
         this.RegionIds = RegionIds;
     }
 
     /**
-     * Get 可用区ID，用作筛选 
-     * @return ZoneIds 可用区ID，用作筛选
+     * Get <p>可用区ID，用作筛选</p> 
+     * @return ZoneIds <p>可用区ID，用作筛选</p>
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set 可用区ID，用作筛选
-     * @param ZoneIds 可用区ID，用作筛选
+     * Set <p>可用区ID，用作筛选</p>
+     * @param ZoneIds <p>可用区ID，用作筛选</p>
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
     /**
-     * Get 实例类型编码，用作筛选 
-     * @return InstanceTypes 实例类型编码，用作筛选
+     * Get <p>实例类型编码，用作筛选</p> 
+     * @return InstanceTypes <p>实例类型编码，用作筛选</p>
      */
     public String [] getInstanceTypes() {
         return this.InstanceTypes;
     }
 
     /**
-     * Set 实例类型编码，用作筛选
-     * @param InstanceTypes 实例类型编码，用作筛选
+     * Set <p>实例类型编码，用作筛选</p>
+     * @param InstanceTypes <p>实例类型编码，用作筛选</p>
      */
     public void setInstanceTypes(String [] InstanceTypes) {
         this.InstanceTypes = InstanceTypes;
     }
 
     /**
-     * Get 标签，用作筛选 
-     * @return Tag 标签，用作筛选
+     * Get <p>标签，用作筛选</p> 
+     * @return Tag <p>标签，用作筛选</p>
      */
     public String [] getTag() {
         return this.Tag;
     }
 
     /**
-     * Set 标签，用作筛选
-     * @param Tag 标签，用作筛选
+     * Set <p>标签，用作筛选</p>
+     * @param Tag <p>标签，用作筛选</p>
      */
     public void setTag(String [] Tag) {
         this.Tag = Tag;
     }
 
     /**
-     * Get 模糊搜索：支持标签、资源id、资源别名 
-     * @return SearchKey 模糊搜索：支持标签、资源id、资源别名
+     * Get <p>模糊搜索：支持标签、资源id、资源别名</p> 
+     * @return SearchKey <p>模糊搜索：支持标签、资源id、资源别名</p>
      */
     public String getSearchKey() {
         return this.SearchKey;
     }
 
     /**
-     * Set 模糊搜索：支持标签、资源id、资源别名
-     * @param SearchKey 模糊搜索：支持标签、资源id、资源别名
+     * Set <p>模糊搜索：支持标签、资源id、资源别名</p>
+     * @param SearchKey <p>模糊搜索：支持标签、资源id、资源别名</p>
      */
     public void setSearchKey(String SearchKey) {
         this.SearchKey = SearchKey;
     }
 
     /**
-     * Get 项目ID，用作筛选 
-     * @return ProjectIds 项目ID，用作筛选
+     * Get <p>项目ID，用作筛选</p> 
+     * @return ProjectIds <p>项目ID，用作筛选</p>
      */
     public Long [] getProjectIds() {
         return this.ProjectIds;
     }
 
     /**
-     * Set 项目ID，用作筛选
-     * @param ProjectIds 项目ID，用作筛选
+     * Set <p>项目ID，用作筛选</p>
+     * @param ProjectIds <p>项目ID，用作筛选</p>
      */
     public void setProjectIds(Long [] ProjectIds) {
         this.ProjectIds = ProjectIds;
     }
 
     /**
-     * Get 费用归集类型，枚举值如下：
-0 - 分摊 
-1 - 归集 
--1 -  未分配 
-     * @return AllocationType 费用归集类型，枚举值如下：
-0 - 分摊 
-1 - 归集 
--1 -  未分配
+     * Get <p>费用归集类型，枚举值如下：<br>0 - 分摊<br>1 - 归集<br>-1 -  未分配</p> 
+     * @return AllocationType <p>费用归集类型，枚举值如下：<br>0 - 分摊<br>1 - 归集<br>-1 -  未分配</p>
      */
     public Long [] getAllocationType() {
         return this.AllocationType;
     }
 
     /**
-     * Set 费用归集类型，枚举值如下：
-0 - 分摊 
-1 - 归集 
--1 -  未分配
-     * @param AllocationType 费用归集类型，枚举值如下：
-0 - 分摊 
-1 - 归集 
--1 -  未分配
+     * Set <p>费用归集类型，枚举值如下：<br>0 - 分摊<br>1 - 归集<br>-1 -  未分配</p>
+     * @param AllocationType <p>费用归集类型，枚举值如下：<br>0 - 分摊<br>1 - 归集<br>-1 -  未分配</p>
      */
     public void setAllocationType(Long [] AllocationType) {
         this.AllocationType = AllocationType;

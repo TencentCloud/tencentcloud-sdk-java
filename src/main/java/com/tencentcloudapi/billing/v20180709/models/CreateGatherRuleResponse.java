@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateGatherRuleResponse extends AbstractModel {
 
     /**
-    * 归集规则ID
+    * <p>归集规则ID</p>
     */
     @SerializedName("Id")
     @Expose
@@ -38,16 +38,16 @@ public class CreateGatherRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 归集规则ID 
-     * @return Id 归集规则ID
+     * Get <p>归集规则ID</p> 
+     * @return Id <p>归集规则ID</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 归集规则ID
-     * @param Id 归集规则ID
+     * Set <p>归集规则ID</p>
+     * @param Id <p>归集规则ID</p>
      */
     public void setId(Long Id) {
         this.Id = Id;

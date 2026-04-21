@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateAllocationUnitResponse extends AbstractModel {
 
     /**
-    * 新增分账单元ID
+    * <p>新增分账单元ID</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 分账单元唯一标识
+    * <p>分账单元唯一标识</p>
     */
     @SerializedName("TreeNodeUniqKey")
     @Expose
@@ -45,32 +45,32 @@ public class CreateAllocationUnitResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 新增分账单元ID 
-     * @return Id 新增分账单元ID
+     * Get <p>新增分账单元ID</p> 
+     * @return Id <p>新增分账单元ID</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 新增分账单元ID
-     * @param Id 新增分账单元ID
+     * Set <p>新增分账单元ID</p>
+     * @param Id <p>新增分账单元ID</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 分账单元唯一标识 
-     * @return TreeNodeUniqKey 分账单元唯一标识
+     * Get <p>分账单元唯一标识</p> 
+     * @return TreeNodeUniqKey <p>分账单元唯一标识</p>
      */
     public String getTreeNodeUniqKey() {
         return this.TreeNodeUniqKey;
     }
 
     /**
-     * Set 分账单元唯一标识
-     * @param TreeNodeUniqKey 分账单元唯一标识
+     * Set <p>分账单元唯一标识</p>
+     * @param TreeNodeUniqKey <p>分账单元唯一标识</p>
      */
     public void setTreeNodeUniqKey(String TreeNodeUniqKey) {
         this.TreeNodeUniqKey = TreeNodeUniqKey;

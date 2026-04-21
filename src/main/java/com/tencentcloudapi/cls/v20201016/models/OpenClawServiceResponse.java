@@ -108,6 +108,20 @@ public class OpenClawServiceResponse extends AbstractModel {
     private String SessionLogConfigName;
 
     /**
+    * <p>trace 主题 ID</p>
+    */
+    @SerializedName("TraceTopicId")
+    @Expose
+    private String TraceTopicId;
+
+    /**
+    * <p>trace 主题名称</p>
+    */
+    @SerializedName("TraceTopicName")
+    @Expose
+    private String TraceTopicName;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -307,6 +321,38 @@ public class OpenClawServiceResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>trace 主题 ID</p> 
+     * @return TraceTopicId <p>trace 主题 ID</p>
+     */
+    public String getTraceTopicId() {
+        return this.TraceTopicId;
+    }
+
+    /**
+     * Set <p>trace 主题 ID</p>
+     * @param TraceTopicId <p>trace 主题 ID</p>
+     */
+    public void setTraceTopicId(String TraceTopicId) {
+        this.TraceTopicId = TraceTopicId;
+    }
+
+    /**
+     * Get <p>trace 主题名称</p> 
+     * @return TraceTopicName <p>trace 主题名称</p>
+     */
+    public String getTraceTopicName() {
+        return this.TraceTopicName;
+    }
+
+    /**
+     * Set <p>trace 主题名称</p>
+     * @param TraceTopicName <p>trace 主题名称</p>
+     */
+    public void setTraceTopicName(String TraceTopicName) {
+        this.TraceTopicName = TraceTopicName;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -366,6 +412,12 @@ public class OpenClawServiceResponse extends AbstractModel {
         if (source.SessionLogConfigName != null) {
             this.SessionLogConfigName = new String(source.SessionLogConfigName);
         }
+        if (source.TraceTopicId != null) {
+            this.TraceTopicId = new String(source.TraceTopicId);
+        }
+        if (source.TraceTopicName != null) {
+            this.TraceTopicName = new String(source.TraceTopicName);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -388,6 +440,8 @@ public class OpenClawServiceResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "AppLogConfigName", this.AppLogConfigName);
         this.setParamSimple(map, prefix + "SessionLogConfigId", this.SessionLogConfigId);
         this.setParamSimple(map, prefix + "SessionLogConfigName", this.SessionLogConfigName);
+        this.setParamSimple(map, prefix + "TraceTopicId", this.TraceTopicId);
+        this.setParamSimple(map, prefix + "TraceTopicName", this.TraceTopicName);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

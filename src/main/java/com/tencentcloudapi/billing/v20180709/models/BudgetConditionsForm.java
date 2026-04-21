@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class BudgetConditionsForm extends AbstractModel {
 
     /**
-    * 产品
+    * <p>产品</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Business")
@@ -32,7 +32,7 @@ public class BudgetConditionsForm extends AbstractModel {
     private String [] Business;
 
     /**
-    * 计费模式
+    * <p>计费模式</p><p>枚举值：</p><ul><li>prePay： 包年包月</li><li>postPay： 按量计费</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PayMode")
@@ -40,7 +40,7 @@ public class BudgetConditionsForm extends AbstractModel {
     private String [] PayMode;
 
     /**
-    * 子产品
+    * <p>子产品</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductCodes")
@@ -48,7 +48,7 @@ public class BudgetConditionsForm extends AbstractModel {
     private String [] ProductCodes;
 
     /**
-    * 组件编码
+    * <p>组件编码</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComponentCodes")
@@ -56,7 +56,7 @@ public class BudgetConditionsForm extends AbstractModel {
     private String [] ComponentCodes;
 
     /**
-    * 地域
+    * <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneIds")
@@ -64,7 +64,7 @@ public class BudgetConditionsForm extends AbstractModel {
     private String [] ZoneIds;
 
     /**
-    * 可用区
+    * <p>可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionIds")
@@ -72,7 +72,7 @@ public class BudgetConditionsForm extends AbstractModel {
     private String [] RegionIds;
 
     /**
-    * 项目
+    * <p>项目</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectIds")
@@ -80,7 +80,7 @@ public class BudgetConditionsForm extends AbstractModel {
     private String [] ProjectIds;
 
     /**
-    * 交易类型
+    * <p>交易类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActionTypes")
@@ -88,7 +88,7 @@ public class BudgetConditionsForm extends AbstractModel {
     private String [] ActionTypes;
 
     /**
-    * 消耗类型
+    * <p>消耗类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConsumptionTypes")
@@ -96,7 +96,7 @@ public class BudgetConditionsForm extends AbstractModel {
     private String [] ConsumptionTypes;
 
     /**
-    * 标签
+    * <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
@@ -104,7 +104,7 @@ public class BudgetConditionsForm extends AbstractModel {
     private TagsForm [] Tags;
 
     /**
-    *  末级分账单元
+    * <p>末级分账单元</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PayerUins")
@@ -112,7 +112,7 @@ public class BudgetConditionsForm extends AbstractModel {
     private String [] PayerUins;
 
     /**
-    * 主用户Uin
+    * <p>主用户Uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OwnerUins")
@@ -120,7 +120,7 @@ public class BudgetConditionsForm extends AbstractModel {
     private String [] OwnerUins;
 
     /**
-    *  末级分账单元唯一键
+    * <p>末级分账单元唯一键</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TreeNodeUniqKeys")
@@ -128,9 +128,9 @@ public class BudgetConditionsForm extends AbstractModel {
     private String [] TreeNodeUniqKeys;
 
     /**
-     * Get 产品
+     * Get <p>产品</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Business 产品
+     * @return Business <p>产品</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getBusiness() {
@@ -138,9 +138,9 @@ public class BudgetConditionsForm extends AbstractModel {
     }
 
     /**
-     * Set 产品
+     * Set <p>产品</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Business 产品
+     * @param Business <p>产品</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBusiness(String [] Business) {
@@ -148,9 +148,9 @@ public class BudgetConditionsForm extends AbstractModel {
     }
 
     /**
-     * Get 计费模式
+     * Get <p>计费模式</p><p>枚举值：</p><ul><li>prePay： 包年包月</li><li>postPay： 按量计费</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PayMode 计费模式
+     * @return PayMode <p>计费模式</p><p>枚举值：</p><ul><li>prePay： 包年包月</li><li>postPay： 按量计费</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getPayMode() {
@@ -158,9 +158,9 @@ public class BudgetConditionsForm extends AbstractModel {
     }
 
     /**
-     * Set 计费模式
+     * Set <p>计费模式</p><p>枚举值：</p><ul><li>prePay： 包年包月</li><li>postPay： 按量计费</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PayMode 计费模式
+     * @param PayMode <p>计费模式</p><p>枚举值：</p><ul><li>prePay： 包年包月</li><li>postPay： 按量计费</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayMode(String [] PayMode) {
@@ -168,9 +168,9 @@ public class BudgetConditionsForm extends AbstractModel {
     }
 
     /**
-     * Get 子产品
+     * Get <p>子产品</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProductCodes 子产品
+     * @return ProductCodes <p>子产品</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getProductCodes() {
@@ -178,9 +178,9 @@ public class BudgetConditionsForm extends AbstractModel {
     }
 
     /**
-     * Set 子产品
+     * Set <p>子产品</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProductCodes 子产品
+     * @param ProductCodes <p>子产品</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductCodes(String [] ProductCodes) {
@@ -188,9 +188,9 @@ public class BudgetConditionsForm extends AbstractModel {
     }
 
     /**
-     * Get 组件编码
+     * Get <p>组件编码</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ComponentCodes 组件编码
+     * @return ComponentCodes <p>组件编码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getComponentCodes() {
@@ -198,9 +198,9 @@ public class BudgetConditionsForm extends AbstractModel {
     }
 
     /**
-     * Set 组件编码
+     * Set <p>组件编码</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ComponentCodes 组件编码
+     * @param ComponentCodes <p>组件编码</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComponentCodes(String [] ComponentCodes) {
@@ -208,9 +208,9 @@ public class BudgetConditionsForm extends AbstractModel {
     }
 
     /**
-     * Get 地域
+     * Get <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ZoneIds 地域
+     * @return ZoneIds <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getZoneIds() {
@@ -218,9 +218,9 @@ public class BudgetConditionsForm extends AbstractModel {
     }
 
     /**
-     * Set 地域
+     * Set <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ZoneIds 地域
+     * @param ZoneIds <p>地域</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneIds(String [] ZoneIds) {
@@ -228,9 +228,9 @@ public class BudgetConditionsForm extends AbstractModel {
     }
 
     /**
-     * Get 可用区
+     * Get <p>可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RegionIds 可用区
+     * @return RegionIds <p>可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getRegionIds() {
@@ -238,9 +238,9 @@ public class BudgetConditionsForm extends AbstractModel {
     }
 
     /**
-     * Set 可用区
+     * Set <p>可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RegionIds 可用区
+     * @param RegionIds <p>可用区</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionIds(String [] RegionIds) {
@@ -248,9 +248,9 @@ public class BudgetConditionsForm extends AbstractModel {
     }
 
     /**
-     * Get 项目
+     * Get <p>项目</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectIds 项目
+     * @return ProjectIds <p>项目</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getProjectIds() {
@@ -258,9 +258,9 @@ public class BudgetConditionsForm extends AbstractModel {
     }
 
     /**
-     * Set 项目
+     * Set <p>项目</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectIds 项目
+     * @param ProjectIds <p>项目</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectIds(String [] ProjectIds) {
@@ -268,9 +268,9 @@ public class BudgetConditionsForm extends AbstractModel {
     }
 
     /**
-     * Get 交易类型
+     * Get <p>交易类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ActionTypes 交易类型
+     * @return ActionTypes <p>交易类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getActionTypes() {
@@ -278,9 +278,9 @@ public class BudgetConditionsForm extends AbstractModel {
     }
 
     /**
-     * Set 交易类型
+     * Set <p>交易类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ActionTypes 交易类型
+     * @param ActionTypes <p>交易类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActionTypes(String [] ActionTypes) {
@@ -288,9 +288,9 @@ public class BudgetConditionsForm extends AbstractModel {
     }
 
     /**
-     * Get 消耗类型
+     * Get <p>消耗类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ConsumptionTypes 消耗类型
+     * @return ConsumptionTypes <p>消耗类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getConsumptionTypes() {
@@ -298,9 +298,9 @@ public class BudgetConditionsForm extends AbstractModel {
     }
 
     /**
-     * Set 消耗类型
+     * Set <p>消耗类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ConsumptionTypes 消耗类型
+     * @param ConsumptionTypes <p>消耗类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConsumptionTypes(String [] ConsumptionTypes) {
@@ -308,9 +308,9 @@ public class BudgetConditionsForm extends AbstractModel {
     }
 
     /**
-     * Get 标签
+     * Get <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tags 标签
+     * @return Tags <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TagsForm [] getTags() {
@@ -318,9 +318,9 @@ public class BudgetConditionsForm extends AbstractModel {
     }
 
     /**
-     * Set 标签
+     * Set <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tags 标签
+     * @param Tags <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(TagsForm [] Tags) {
@@ -328,9 +328,9 @@ public class BudgetConditionsForm extends AbstractModel {
     }
 
     /**
-     * Get  末级分账单元
+     * Get <p>末级分账单元</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PayerUins  末级分账单元
+     * @return PayerUins <p>末级分账单元</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getPayerUins() {
@@ -338,9 +338,9 @@ public class BudgetConditionsForm extends AbstractModel {
     }
 
     /**
-     * Set  末级分账单元
+     * Set <p>末级分账单元</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PayerUins  末级分账单元
+     * @param PayerUins <p>末级分账单元</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayerUins(String [] PayerUins) {
@@ -348,9 +348,9 @@ public class BudgetConditionsForm extends AbstractModel {
     }
 
     /**
-     * Get 主用户Uin
+     * Get <p>主用户Uin</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OwnerUins 主用户Uin
+     * @return OwnerUins <p>主用户Uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getOwnerUins() {
@@ -358,9 +358,9 @@ public class BudgetConditionsForm extends AbstractModel {
     }
 
     /**
-     * Set 主用户Uin
+     * Set <p>主用户Uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OwnerUins 主用户Uin
+     * @param OwnerUins <p>主用户Uin</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOwnerUins(String [] OwnerUins) {
@@ -368,9 +368,9 @@ public class BudgetConditionsForm extends AbstractModel {
     }
 
     /**
-     * Get  末级分账单元唯一键
+     * Get <p>末级分账单元唯一键</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TreeNodeUniqKeys  末级分账单元唯一键
+     * @return TreeNodeUniqKeys <p>末级分账单元唯一键</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getTreeNodeUniqKeys() {
@@ -378,9 +378,9 @@ public class BudgetConditionsForm extends AbstractModel {
     }
 
     /**
-     * Set  末级分账单元唯一键
+     * Set <p>末级分账单元唯一键</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TreeNodeUniqKeys  末级分账单元唯一键
+     * @param TreeNodeUniqKeys <p>末级分账单元唯一键</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTreeNodeUniqKeys(String [] TreeNodeUniqKeys) {

@@ -24,141 +24,164 @@ import java.util.HashMap;
 public class DeleteIndexRequest extends AbstractModel {
 
     /**
-    * ES集群ID
+    * <p>ES集群ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 删除的索引类型。auto：自治索引；normal：普通索引
+    * <p>删除的索引类型。auto：自治索引；normal：普通索引</p>
     */
     @SerializedName("IndexType")
     @Expose
     private String IndexType;
 
     /**
-    * 删除的索引名
+    * <p>删除的索引名</p>
     */
     @SerializedName("IndexName")
     @Expose
     private String IndexName;
 
     /**
-    * 集群访问用户名
+    * <p>集群访问用户名</p>
     */
     @SerializedName("Username")
     @Expose
     private String Username;
 
     /**
-    * 集群访问密码
+    * <p>集群访问密码</p>
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * 后备索引名
+    * <p>后备索引名</p>
     */
     @SerializedName("BackingIndexName")
     @Expose
     private String BackingIndexName;
 
     /**
-     * Get ES集群ID 
-     * @return InstanceId ES集群ID
+    * <p>索引生命阶段</p>
+    */
+    @SerializedName("IndexPhrase")
+    @Expose
+    private String IndexPhrase;
+
+    /**
+     * Get <p>ES集群ID</p> 
+     * @return InstanceId <p>ES集群ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ES集群ID
-     * @param InstanceId ES集群ID
+     * Set <p>ES集群ID</p>
+     * @param InstanceId <p>ES集群ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 删除的索引类型。auto：自治索引；normal：普通索引 
-     * @return IndexType 删除的索引类型。auto：自治索引；normal：普通索引
+     * Get <p>删除的索引类型。auto：自治索引；normal：普通索引</p> 
+     * @return IndexType <p>删除的索引类型。auto：自治索引；normal：普通索引</p>
      */
     public String getIndexType() {
         return this.IndexType;
     }
 
     /**
-     * Set 删除的索引类型。auto：自治索引；normal：普通索引
-     * @param IndexType 删除的索引类型。auto：自治索引；normal：普通索引
+     * Set <p>删除的索引类型。auto：自治索引；normal：普通索引</p>
+     * @param IndexType <p>删除的索引类型。auto：自治索引；normal：普通索引</p>
      */
     public void setIndexType(String IndexType) {
         this.IndexType = IndexType;
     }
 
     /**
-     * Get 删除的索引名 
-     * @return IndexName 删除的索引名
+     * Get <p>删除的索引名</p> 
+     * @return IndexName <p>删除的索引名</p>
      */
     public String getIndexName() {
         return this.IndexName;
     }
 
     /**
-     * Set 删除的索引名
-     * @param IndexName 删除的索引名
+     * Set <p>删除的索引名</p>
+     * @param IndexName <p>删除的索引名</p>
      */
     public void setIndexName(String IndexName) {
         this.IndexName = IndexName;
     }
 
     /**
-     * Get 集群访问用户名 
-     * @return Username 集群访问用户名
+     * Get <p>集群访问用户名</p> 
+     * @return Username <p>集群访问用户名</p>
      */
     public String getUsername() {
         return this.Username;
     }
 
     /**
-     * Set 集群访问用户名
-     * @param Username 集群访问用户名
+     * Set <p>集群访问用户名</p>
+     * @param Username <p>集群访问用户名</p>
      */
     public void setUsername(String Username) {
         this.Username = Username;
     }
 
     /**
-     * Get 集群访问密码 
-     * @return Password 集群访问密码
+     * Get <p>集群访问密码</p> 
+     * @return Password <p>集群访问密码</p>
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set 集群访问密码
-     * @param Password 集群访问密码
+     * Set <p>集群访问密码</p>
+     * @param Password <p>集群访问密码</p>
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get 后备索引名 
-     * @return BackingIndexName 后备索引名
+     * Get <p>后备索引名</p> 
+     * @return BackingIndexName <p>后备索引名</p>
      */
     public String getBackingIndexName() {
         return this.BackingIndexName;
     }
 
     /**
-     * Set 后备索引名
-     * @param BackingIndexName 后备索引名
+     * Set <p>后备索引名</p>
+     * @param BackingIndexName <p>后备索引名</p>
      */
     public void setBackingIndexName(String BackingIndexName) {
         this.BackingIndexName = BackingIndexName;
+    }
+
+    /**
+     * Get <p>索引生命阶段</p> 
+     * @return IndexPhrase <p>索引生命阶段</p>
+     */
+    public String getIndexPhrase() {
+        return this.IndexPhrase;
+    }
+
+    /**
+     * Set <p>索引生命阶段</p>
+     * @param IndexPhrase <p>索引生命阶段</p>
+     */
+    public void setIndexPhrase(String IndexPhrase) {
+        this.IndexPhrase = IndexPhrase;
     }
 
     public DeleteIndexRequest() {
@@ -187,6 +210,9 @@ public class DeleteIndexRequest extends AbstractModel {
         if (source.BackingIndexName != null) {
             this.BackingIndexName = new String(source.BackingIndexName);
         }
+        if (source.IndexPhrase != null) {
+            this.IndexPhrase = new String(source.IndexPhrase);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class DeleteIndexRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Username", this.Username);
         this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamSimple(map, prefix + "BackingIndexName", this.BackingIndexName);
+        this.setParamSimple(map, prefix + "IndexPhrase", this.IndexPhrase);
 
     }
 }

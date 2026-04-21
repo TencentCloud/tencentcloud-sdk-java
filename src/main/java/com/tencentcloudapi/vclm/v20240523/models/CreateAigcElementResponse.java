@@ -31,28 +31,28 @@ public class CreateAigcElementResponse extends AbstractModel {
     private String JobId;
 
     /**
-    * 
+    * <p>主体Id</p>
     */
     @SerializedName("ElementId")
     @Expose
     private String ElementId;
 
     /**
-    * 
+    * <p>任务状态</p><p>默认值：任务状态</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 
+    * <p>厂商</p>
     */
     @SerializedName("Provider")
     @Expose
     private String [] Provider;
 
     /**
-    * 
+    * <p>任务创建时间</p>
     */
     @SerializedName("CreatedAt")
     @Expose
@@ -82,64 +82,64 @@ public class CreateAigcElementResponse extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return ElementId 
+     * Get <p>主体Id</p> 
+     * @return ElementId <p>主体Id</p>
      */
     public String getElementId() {
         return this.ElementId;
     }
 
     /**
-     * Set 
-     * @param ElementId 
+     * Set <p>主体Id</p>
+     * @param ElementId <p>主体Id</p>
      */
     public void setElementId(String ElementId) {
         this.ElementId = ElementId;
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get <p>任务状态</p><p>默认值：任务状态</p> 
+     * @return Status <p>任务状态</p><p>默认值：任务状态</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set <p>任务状态</p><p>默认值：任务状态</p>
+     * @param Status <p>任务状态</p><p>默认值：任务状态</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get  
-     * @return Provider 
+     * Get <p>厂商</p> 
+     * @return Provider <p>厂商</p>
      */
     public String [] getProvider() {
         return this.Provider;
     }
 
     /**
-     * Set 
-     * @param Provider 
+     * Set <p>厂商</p>
+     * @param Provider <p>厂商</p>
      */
     public void setProvider(String [] Provider) {
         this.Provider = Provider;
     }
 
     /**
-     * Get  
-     * @return CreatedAt 
+     * Get <p>任务创建时间</p> 
+     * @return CreatedAt <p>任务创建时间</p>
      */
     public String getCreatedAt() {
         return this.CreatedAt;
     }
 
     /**
-     * Set 
-     * @param CreatedAt 
+     * Set <p>任务创建时间</p>
+     * @param CreatedAt <p>任务创建时间</p>
      */
     public void setCreatedAt(String CreatedAt) {
         this.CreatedAt = CreatedAt;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeAllocationUnitDetailRequest extends AbstractModel {
 
     /**
-    * 所查询分账单元Id
+    * <p>所查询分账单元Id</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 月份，不传默认当前月
+    * <p>月份，不传默认当前月</p>
     */
     @SerializedName("Month")
     @Expose
     private String Month;
 
     /**
-     * Get 所查询分账单元Id 
-     * @return Id 所查询分账单元Id
+     * Get <p>所查询分账单元Id</p> 
+     * @return Id <p>所查询分账单元Id</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 所查询分账单元Id
-     * @param Id 所查询分账单元Id
+     * Set <p>所查询分账单元Id</p>
+     * @param Id <p>所查询分账单元Id</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 月份，不传默认当前月 
-     * @return Month 月份，不传默认当前月
+     * Get <p>月份，不传默认当前月</p> 
+     * @return Month <p>月份，不传默认当前月</p>
      */
     public String getMonth() {
         return this.Month;
     }
 
     /**
-     * Set 月份，不传默认当前月
-     * @param Month 月份，不传默认当前月
+     * Set <p>月份，不传默认当前月</p>
+     * @param Month <p>月份，不传默认当前月</p>
      */
     public void setMonth(String Month) {
         this.Month = Month;

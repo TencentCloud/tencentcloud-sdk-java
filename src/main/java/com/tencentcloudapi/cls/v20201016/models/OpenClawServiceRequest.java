@@ -31,6 +31,13 @@ public class OpenClawServiceRequest extends AbstractModel {
     private String Tag;
 
     /**
+    * <p>是否创建 trace 主题，默认为 false</p><p>枚举值：</p><ul><li>true： 创建trace 主题</li><li>false： 不创建trace 主题</li></ul>
+    */
+    @SerializedName("EnableTrace")
+    @Expose
+    private Boolean EnableTrace;
+
+    /**
      * Get <p>标签类型</p><p>枚举值：</p><ul><li>OpenClaw： OpenClaw类型</li><li>ClawPro： ClawPro类型</li></ul> 
      * @return Tag <p>标签类型</p><p>枚举值：</p><ul><li>OpenClaw： OpenClaw类型</li><li>ClawPro： ClawPro类型</li></ul>
      */
@@ -46,6 +53,22 @@ public class OpenClawServiceRequest extends AbstractModel {
         this.Tag = Tag;
     }
 
+    /**
+     * Get <p>是否创建 trace 主题，默认为 false</p><p>枚举值：</p><ul><li>true： 创建trace 主题</li><li>false： 不创建trace 主题</li></ul> 
+     * @return EnableTrace <p>是否创建 trace 主题，默认为 false</p><p>枚举值：</p><ul><li>true： 创建trace 主题</li><li>false： 不创建trace 主题</li></ul>
+     */
+    public Boolean getEnableTrace() {
+        return this.EnableTrace;
+    }
+
+    /**
+     * Set <p>是否创建 trace 主题，默认为 false</p><p>枚举值：</p><ul><li>true： 创建trace 主题</li><li>false： 不创建trace 主题</li></ul>
+     * @param EnableTrace <p>是否创建 trace 主题，默认为 false</p><p>枚举值：</p><ul><li>true： 创建trace 主题</li><li>false： 不创建trace 主题</li></ul>
+     */
+    public void setEnableTrace(Boolean EnableTrace) {
+        this.EnableTrace = EnableTrace;
+    }
+
     public OpenClawServiceRequest() {
     }
 
@@ -57,6 +80,9 @@ public class OpenClawServiceRequest extends AbstractModel {
         if (source.Tag != null) {
             this.Tag = new String(source.Tag);
         }
+        if (source.EnableTrace != null) {
+            this.EnableTrace = new Boolean(source.EnableTrace);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class OpenClawServiceRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Tag", this.Tag);
+        this.setParamSimple(map, prefix + "EnableTrace", this.EnableTrace);
 
     }
 }

@@ -116,6 +116,28 @@ public class BiClient extends AbstractClient{
     }
 
     /**
+     *CreateUserGroup
+     * @param req CreateUserGroupRequest
+     * @return CreateUserGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateUserGroupResponse CreateUserGroup(CreateUserGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateUserGroup", CreateUserGroupResponse.class);
+    }
+
+    /**
+     *CreateUserGroupMember
+     * @param req CreateUserGroupMemberRequest
+     * @return CreateUserGroupMemberResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateUserGroupMemberResponse CreateUserGroupMember(CreateUserGroupMemberRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateUserGroupMember", CreateUserGroupMemberResponse.class);
+    }
+
+    /**
      *创建用户角色
      * @param req CreateUserRoleRequest
      * @return CreateUserRoleResponse
@@ -157,6 +179,28 @@ public class BiClient extends AbstractClient{
     public DeleteProjectResponse DeleteProject(DeleteProjectRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteProject", DeleteProjectResponse.class);
+    }
+
+    /**
+     *DeleteUserGroup
+     * @param req DeleteUserGroupRequest
+     * @return DeleteUserGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteUserGroupResponse DeleteUserGroup(DeleteUserGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteUserGroup", DeleteUserGroupResponse.class);
+    }
+
+    /**
+     *DeleteUserGroupMember
+     * @param req DeleteUserGroupMemberRequest
+     * @return DeleteUserGroupMemberResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteUserGroupMemberResponse DeleteUserGroupMember(DeleteUserGroupMemberRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteUserGroupMember", DeleteUserGroupMemberResponse.class);
     }
 
     /**
@@ -259,6 +303,50 @@ public class BiClient extends AbstractClient{
     }
 
     /**
+     *用户组资源权限查询接口
+     * @param req DescribeResourceUserGroupPageListRequest
+     * @return DescribeResourceUserGroupPageListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourceUserGroupPageListResponse DescribeResourceUserGroupPageList(DescribeResourceUserGroupPageListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeResourceUserGroupPageList", DescribeResourceUserGroupPageListResponse.class);
+    }
+
+    /**
+     *DescribeUserGroupInfo
+     * @param req DescribeUserGroupInfoRequest
+     * @return DescribeUserGroupInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserGroupInfoResponse DescribeUserGroupInfo(DescribeUserGroupInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUserGroupInfo", DescribeUserGroupInfoResponse.class);
+    }
+
+    /**
+     *DescribeUserGroupMemberList
+     * @param req DescribeUserGroupMemberListRequest
+     * @return DescribeUserGroupMemberListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserGroupMemberListResponse DescribeUserGroupMemberList(DescribeUserGroupMemberListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUserGroupMemberList", DescribeUserGroupMemberListResponse.class);
+    }
+
+    /**
+     *用户组数查询接口
+     * @param req DescribeUserGroupTreeListRequest
+     * @return DescribeUserGroupTreeListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserGroupTreeListResponse DescribeUserGroupTreeList(DescribeUserGroupTreeListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUserGroupTreeList", DescribeUserGroupTreeListResponse.class);
+    }
+
+    /**
      *项目内-用户接口
      * @param req DescribeUserProjectListRequest
      * @return DescribeUserProjectListResponse
@@ -336,6 +424,50 @@ public class BiClient extends AbstractClient{
     }
 
     /**
+     *更新用户组权限
+     * @param req ModifyResourceUserGroupRequest
+     * @return ModifyResourceUserGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyResourceUserGroupResponse ModifyResourceUserGroup(ModifyResourceUserGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyResourceUserGroup", ModifyResourceUserGroupResponse.class);
+    }
+
+    /**
+     *按资源 - 更新用户组权限
+     * @param req ModifyResourceUserGroupResourceRequest
+     * @return ModifyResourceUserGroupResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyResourceUserGroupResourceResponse ModifyResourceUserGroupResource(ModifyResourceUserGroupResourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyResourceUserGroupResource", ModifyResourceUserGroupResourceResponse.class);
+    }
+
+    /**
+     *修改用户角色信息
+     * @param req ModifyUserDetailInfoRequest
+     * @return ModifyUserDetailInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyUserDetailInfoResponse ModifyUserDetailInfo(ModifyUserDetailInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyUserDetailInfo", ModifyUserDetailInfoResponse.class);
+    }
+
+    /**
+     *ModifyUserGroup
+     * @param req ModifyUserGroupRequest
+     * @return ModifyUserGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyUserGroupResponse ModifyUserGroup(ModifyUserGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyUserGroup", ModifyUserGroupResponse.class);
+    }
+
+    /**
      *修改用户角色信息
      * @param req ModifyUserRoleRequest
      * @return ModifyUserRoleResponse
@@ -355,6 +487,17 @@ public class BiClient extends AbstractClient{
     public ModifyUserRoleProjectResponse ModifyUserRoleProject(ModifyUserRoleProjectRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyUserRoleProject", ModifyUserRoleProjectResponse.class);
+    }
+
+    /**
+     *QueryUserGroupMember
+     * @param req QueryUserGroupMemberRequest
+     * @return QueryUserGroupMemberResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryUserGroupMemberResponse QueryUserGroupMember(QueryUserGroupMemberRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryUserGroupMember", QueryUserGroupMemberResponse.class);
     }
 
 }

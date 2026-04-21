@@ -579,6 +579,28 @@ public class EsClient extends AbstractClient{
     }
 
     /**
+     *请求集群实例
+     * @param req RequestInstancesRequest
+     * @return RequestInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public RequestInstancesResponse RequestInstances(RequestInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RequestInstances", RequestInstancesResponse.class);
+    }
+
+    /**
+     *GET请求集群实例
+     * @param req RequestInstancesByGetRequest
+     * @return RequestInstancesByGetResponse
+     * @throws TencentCloudSDKException
+     */
+    public RequestInstancesByGetResponse RequestInstancesByGet(RequestInstancesByGetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RequestInstancesByGet", RequestInstancesByGetResponse.class);
+    }
+
+    /**
      *重启ES集群实例(用于系统版本更新等操作)
      * @param req RestartInstanceRequest
      * @return RestartInstanceResponse

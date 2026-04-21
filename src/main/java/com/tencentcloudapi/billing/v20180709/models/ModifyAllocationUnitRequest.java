@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class ModifyAllocationUnitRequest extends AbstractModel {
 
     /**
-    * 所修改分账单元ID
+    * <p>所修改分账单元ID</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 修改后分账单元名称
+    * <p>修改后分账单元名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 修改后分账单元源组织名称
+    * <p>修改后分账单元源组织名称</p>
     */
     @SerializedName("SourceName")
     @Expose
     private String SourceName;
 
     /**
-    * 修改后分账单元源组织ID
+    * <p>修改后分账单元源组织ID</p>
     */
     @SerializedName("SourceId")
     @Expose
     private String SourceId;
 
     /**
-    * 分账单元备注说明
+    * <p>分账单元备注说明</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 月份，不传默认当前月
+    * <p>月份，不传默认当前月</p>
     */
     @SerializedName("Month")
     @Expose
     private String Month;
 
     /**
-     * Get 所修改分账单元ID 
-     * @return Id 所修改分账单元ID
+     * Get <p>所修改分账单元ID</p> 
+     * @return Id <p>所修改分账单元ID</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 所修改分账单元ID
-     * @param Id 所修改分账单元ID
+     * Set <p>所修改分账单元ID</p>
+     * @param Id <p>所修改分账单元ID</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 修改后分账单元名称 
-     * @return Name 修改后分账单元名称
+     * Get <p>修改后分账单元名称</p> 
+     * @return Name <p>修改后分账单元名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 修改后分账单元名称
-     * @param Name 修改后分账单元名称
+     * Set <p>修改后分账单元名称</p>
+     * @param Name <p>修改后分账单元名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 修改后分账单元源组织名称 
-     * @return SourceName 修改后分账单元源组织名称
+     * Get <p>修改后分账单元源组织名称</p> 
+     * @return SourceName <p>修改后分账单元源组织名称</p>
      */
     public String getSourceName() {
         return this.SourceName;
     }
 
     /**
-     * Set 修改后分账单元源组织名称
-     * @param SourceName 修改后分账单元源组织名称
+     * Set <p>修改后分账单元源组织名称</p>
+     * @param SourceName <p>修改后分账单元源组织名称</p>
      */
     public void setSourceName(String SourceName) {
         this.SourceName = SourceName;
     }
 
     /**
-     * Get 修改后分账单元源组织ID 
-     * @return SourceId 修改后分账单元源组织ID
+     * Get <p>修改后分账单元源组织ID</p> 
+     * @return SourceId <p>修改后分账单元源组织ID</p>
      */
     public String getSourceId() {
         return this.SourceId;
     }
 
     /**
-     * Set 修改后分账单元源组织ID
-     * @param SourceId 修改后分账单元源组织ID
+     * Set <p>修改后分账单元源组织ID</p>
+     * @param SourceId <p>修改后分账单元源组织ID</p>
      */
     public void setSourceId(String SourceId) {
         this.SourceId = SourceId;
     }
 
     /**
-     * Get 分账单元备注说明 
-     * @return Remark 分账单元备注说明
+     * Get <p>分账单元备注说明</p> 
+     * @return Remark <p>分账单元备注说明</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 分账单元备注说明
-     * @param Remark 分账单元备注说明
+     * Set <p>分账单元备注说明</p>
+     * @param Remark <p>分账单元备注说明</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 月份，不传默认当前月 
-     * @return Month 月份，不传默认当前月
+     * Get <p>月份，不传默认当前月</p> 
+     * @return Month <p>月份，不传默认当前月</p>
      */
     public String getMonth() {
         return this.Month;
     }
 
     /**
-     * Set 月份，不传默认当前月
-     * @param Month 月份，不传默认当前月
+     * Set <p>月份，不传默认当前月</p>
+     * @param Month <p>月份，不传默认当前月</p>
      */
     public void setMonth(String Month) {
         this.Month = Month;

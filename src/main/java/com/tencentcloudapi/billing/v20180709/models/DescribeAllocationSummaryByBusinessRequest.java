@@ -24,347 +24,222 @@ import java.util.HashMap;
 public class DescribeAllocationSummaryByBusinessRequest extends AbstractModel {
 
     /**
-    * 数量，最大值为1000
+    * <p>数量，最大值为1000</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推
+    * <p>分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 账单月份，格式为2024-02，不传默认当前月
-
+    * <p>账单月份，格式为2024-02，不传默认当前月</p>
     */
     @SerializedName("Month")
     @Expose
     private String Month;
 
     /**
-    * 统计周期，枚举值如下
-month - 月
-day - 日
+    * <p>统计周期，枚举值如下<br>month - 月<br>day - 日</p>
     */
     @SerializedName("PeriodType")
     @Expose
     private String PeriodType;
 
     /**
-    * 分账单元唯一标识，用作筛选
-
+    * <p>分账单元唯一标识，用作筛选</p>
     */
     @SerializedName("TreeNodeUniqKeys")
     @Expose
     private String [] TreeNodeUniqKeys;
 
     /**
-    * 排序类型，枚举值如下：
-asc - 升序
-desc - 降序
+    * <p>排序类型，枚举值如下：<br>asc - 升序<br>desc - 降序</p>
     */
     @SerializedName("SortType")
     @Expose
     private String SortType;
 
     /**
-    * 排序字段，枚举值如下：
-GatherCashPayAmount - 归集费用(现金)
-GatherVoucherPayAmount- 归集费用(优惠券)
-GatherIncentivePayAmount - 归集费用(赠送金)
-GatherTransferPayAmount - 归集费用(分成金)
-AllocateCashPayAmount - 分摊费用(现金)
-AllocateVoucherPayAmount - 分摊费用(优惠券)
-AllocateIncentivePayAmount - 分摊费用(赠送金)
-AllocateTransferPayAmount - 分摊费用(分成金)
-TotalCashPayAmount - 合计费用(现金)
-TotalVoucherPayAmount - 合计费用(优惠券)
-TotalIncentivePayAmount - 合计费用(赠送金)
-TotalTransferPayAmount - 合计费用(分成金)
-GatherRealCost - 归集费用(折后总额)
-AllocateRealCost - 分摊费用(折后总额)
-RealTotalCost - 合计费用(折后总额)
-BusinessCode - 产品代码
-Ratio - 占比(折后总额)
-Trend - 环比(折后总额)
+    * <p>排序字段，枚举值如下：<br>GatherCashPayAmount - 归集费用(现金)<br>GatherVoucherPayAmount- 归集费用(优惠券)<br>GatherIncentivePayAmount - 归集费用(赠送金)<br>GatherTransferPayAmount - 归集费用(分成金)<br>AllocateCashPayAmount - 分摊费用(现金)<br>AllocateVoucherPayAmount - 分摊费用(优惠券)<br>AllocateIncentivePayAmount - 分摊费用(赠送金)<br>AllocateTransferPayAmount - 分摊费用(分成金)<br>TotalCashPayAmount - 合计费用(现金)<br>TotalVoucherPayAmount - 合计费用(优惠券)<br>TotalIncentivePayAmount - 合计费用(赠送金)<br>TotalTransferPayAmount - 合计费用(分成金)<br>GatherRealCost - 归集费用(折后总额)<br>AllocateRealCost - 分摊费用(折后总额)<br>RealTotalCost - 合计费用(折后总额)<br>BusinessCode - 产品代码<br>Ratio - 占比(折后总额)<br>Trend - 环比(折后总额)</p>
     */
     @SerializedName("Sort")
     @Expose
     private String Sort;
 
     /**
-    * 日期，用作筛选，PeriodType=day时可传
-
+    * <p>日期，用作筛选，PeriodType=day时可传</p>
     */
     @SerializedName("BillDates")
     @Expose
     private String [] BillDates;
 
     /**
-    * 产品编码，用作筛选
+    * <p>产品编码，用作筛选</p>
     */
     @SerializedName("BusinessCodes")
     @Expose
     private String [] BusinessCodes;
 
     /**
-    * 模糊搜索条件
+    * <p>模糊搜索条件</p>
     */
     @SerializedName("SearchKey")
     @Expose
     private String SearchKey;
 
     /**
-     * Get 数量，最大值为1000 
-     * @return Limit 数量，最大值为1000
+     * Get <p>数量，最大值为1000</p> 
+     * @return Limit <p>数量，最大值为1000</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 数量，最大值为1000
-     * @param Limit 数量，最大值为1000
+     * Set <p>数量，最大值为1000</p>
+     * @param Limit <p>数量，最大值为1000</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推 
-     * @return Offset 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推
+     * Get <p>分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推</p> 
+     * @return Offset <p>分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推
-     * @param Offset 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推
+     * Set <p>分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推</p>
+     * @param Offset <p>分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，以此类推</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 账单月份，格式为2024-02，不传默认当前月
- 
-     * @return Month 账单月份，格式为2024-02，不传默认当前月
-
+     * Get <p>账单月份，格式为2024-02，不传默认当前月</p> 
+     * @return Month <p>账单月份，格式为2024-02，不传默认当前月</p>
      */
     public String getMonth() {
         return this.Month;
     }
 
     /**
-     * Set 账单月份，格式为2024-02，不传默认当前月
-
-     * @param Month 账单月份，格式为2024-02，不传默认当前月
-
+     * Set <p>账单月份，格式为2024-02，不传默认当前月</p>
+     * @param Month <p>账单月份，格式为2024-02，不传默认当前月</p>
      */
     public void setMonth(String Month) {
         this.Month = Month;
     }
 
     /**
-     * Get 统计周期，枚举值如下
-month - 月
-day - 日 
-     * @return PeriodType 统计周期，枚举值如下
-month - 月
-day - 日
+     * Get <p>统计周期，枚举值如下<br>month - 月<br>day - 日</p> 
+     * @return PeriodType <p>统计周期，枚举值如下<br>month - 月<br>day - 日</p>
      */
     public String getPeriodType() {
         return this.PeriodType;
     }
 
     /**
-     * Set 统计周期，枚举值如下
-month - 月
-day - 日
-     * @param PeriodType 统计周期，枚举值如下
-month - 月
-day - 日
+     * Set <p>统计周期，枚举值如下<br>month - 月<br>day - 日</p>
+     * @param PeriodType <p>统计周期，枚举值如下<br>month - 月<br>day - 日</p>
      */
     public void setPeriodType(String PeriodType) {
         this.PeriodType = PeriodType;
     }
 
     /**
-     * Get 分账单元唯一标识，用作筛选
- 
-     * @return TreeNodeUniqKeys 分账单元唯一标识，用作筛选
-
+     * Get <p>分账单元唯一标识，用作筛选</p> 
+     * @return TreeNodeUniqKeys <p>分账单元唯一标识，用作筛选</p>
      */
     public String [] getTreeNodeUniqKeys() {
         return this.TreeNodeUniqKeys;
     }
 
     /**
-     * Set 分账单元唯一标识，用作筛选
-
-     * @param TreeNodeUniqKeys 分账单元唯一标识，用作筛选
-
+     * Set <p>分账单元唯一标识，用作筛选</p>
+     * @param TreeNodeUniqKeys <p>分账单元唯一标识，用作筛选</p>
      */
     public void setTreeNodeUniqKeys(String [] TreeNodeUniqKeys) {
         this.TreeNodeUniqKeys = TreeNodeUniqKeys;
     }
 
     /**
-     * Get 排序类型，枚举值如下：
-asc - 升序
-desc - 降序 
-     * @return SortType 排序类型，枚举值如下：
-asc - 升序
-desc - 降序
+     * Get <p>排序类型，枚举值如下：<br>asc - 升序<br>desc - 降序</p> 
+     * @return SortType <p>排序类型，枚举值如下：<br>asc - 升序<br>desc - 降序</p>
      */
     public String getSortType() {
         return this.SortType;
     }
 
     /**
-     * Set 排序类型，枚举值如下：
-asc - 升序
-desc - 降序
-     * @param SortType 排序类型，枚举值如下：
-asc - 升序
-desc - 降序
+     * Set <p>排序类型，枚举值如下：<br>asc - 升序<br>desc - 降序</p>
+     * @param SortType <p>排序类型，枚举值如下：<br>asc - 升序<br>desc - 降序</p>
      */
     public void setSortType(String SortType) {
         this.SortType = SortType;
     }
 
     /**
-     * Get 排序字段，枚举值如下：
-GatherCashPayAmount - 归集费用(现金)
-GatherVoucherPayAmount- 归集费用(优惠券)
-GatherIncentivePayAmount - 归集费用(赠送金)
-GatherTransferPayAmount - 归集费用(分成金)
-AllocateCashPayAmount - 分摊费用(现金)
-AllocateVoucherPayAmount - 分摊费用(优惠券)
-AllocateIncentivePayAmount - 分摊费用(赠送金)
-AllocateTransferPayAmount - 分摊费用(分成金)
-TotalCashPayAmount - 合计费用(现金)
-TotalVoucherPayAmount - 合计费用(优惠券)
-TotalIncentivePayAmount - 合计费用(赠送金)
-TotalTransferPayAmount - 合计费用(分成金)
-GatherRealCost - 归集费用(折后总额)
-AllocateRealCost - 分摊费用(折后总额)
-RealTotalCost - 合计费用(折后总额)
-BusinessCode - 产品代码
-Ratio - 占比(折后总额)
-Trend - 环比(折后总额) 
-     * @return Sort 排序字段，枚举值如下：
-GatherCashPayAmount - 归集费用(现金)
-GatherVoucherPayAmount- 归集费用(优惠券)
-GatherIncentivePayAmount - 归集费用(赠送金)
-GatherTransferPayAmount - 归集费用(分成金)
-AllocateCashPayAmount - 分摊费用(现金)
-AllocateVoucherPayAmount - 分摊费用(优惠券)
-AllocateIncentivePayAmount - 分摊费用(赠送金)
-AllocateTransferPayAmount - 分摊费用(分成金)
-TotalCashPayAmount - 合计费用(现金)
-TotalVoucherPayAmount - 合计费用(优惠券)
-TotalIncentivePayAmount - 合计费用(赠送金)
-TotalTransferPayAmount - 合计费用(分成金)
-GatherRealCost - 归集费用(折后总额)
-AllocateRealCost - 分摊费用(折后总额)
-RealTotalCost - 合计费用(折后总额)
-BusinessCode - 产品代码
-Ratio - 占比(折后总额)
-Trend - 环比(折后总额)
+     * Get <p>排序字段，枚举值如下：<br>GatherCashPayAmount - 归集费用(现金)<br>GatherVoucherPayAmount- 归集费用(优惠券)<br>GatherIncentivePayAmount - 归集费用(赠送金)<br>GatherTransferPayAmount - 归集费用(分成金)<br>AllocateCashPayAmount - 分摊费用(现金)<br>AllocateVoucherPayAmount - 分摊费用(优惠券)<br>AllocateIncentivePayAmount - 分摊费用(赠送金)<br>AllocateTransferPayAmount - 分摊费用(分成金)<br>TotalCashPayAmount - 合计费用(现金)<br>TotalVoucherPayAmount - 合计费用(优惠券)<br>TotalIncentivePayAmount - 合计费用(赠送金)<br>TotalTransferPayAmount - 合计费用(分成金)<br>GatherRealCost - 归集费用(折后总额)<br>AllocateRealCost - 分摊费用(折后总额)<br>RealTotalCost - 合计费用(折后总额)<br>BusinessCode - 产品代码<br>Ratio - 占比(折后总额)<br>Trend - 环比(折后总额)</p> 
+     * @return Sort <p>排序字段，枚举值如下：<br>GatherCashPayAmount - 归集费用(现金)<br>GatherVoucherPayAmount- 归集费用(优惠券)<br>GatherIncentivePayAmount - 归集费用(赠送金)<br>GatherTransferPayAmount - 归集费用(分成金)<br>AllocateCashPayAmount - 分摊费用(现金)<br>AllocateVoucherPayAmount - 分摊费用(优惠券)<br>AllocateIncentivePayAmount - 分摊费用(赠送金)<br>AllocateTransferPayAmount - 分摊费用(分成金)<br>TotalCashPayAmount - 合计费用(现金)<br>TotalVoucherPayAmount - 合计费用(优惠券)<br>TotalIncentivePayAmount - 合计费用(赠送金)<br>TotalTransferPayAmount - 合计费用(分成金)<br>GatherRealCost - 归集费用(折后总额)<br>AllocateRealCost - 分摊费用(折后总额)<br>RealTotalCost - 合计费用(折后总额)<br>BusinessCode - 产品代码<br>Ratio - 占比(折后总额)<br>Trend - 环比(折后总额)</p>
      */
     public String getSort() {
         return this.Sort;
     }
 
     /**
-     * Set 排序字段，枚举值如下：
-GatherCashPayAmount - 归集费用(现金)
-GatherVoucherPayAmount- 归集费用(优惠券)
-GatherIncentivePayAmount - 归集费用(赠送金)
-GatherTransferPayAmount - 归集费用(分成金)
-AllocateCashPayAmount - 分摊费用(现金)
-AllocateVoucherPayAmount - 分摊费用(优惠券)
-AllocateIncentivePayAmount - 分摊费用(赠送金)
-AllocateTransferPayAmount - 分摊费用(分成金)
-TotalCashPayAmount - 合计费用(现金)
-TotalVoucherPayAmount - 合计费用(优惠券)
-TotalIncentivePayAmount - 合计费用(赠送金)
-TotalTransferPayAmount - 合计费用(分成金)
-GatherRealCost - 归集费用(折后总额)
-AllocateRealCost - 分摊费用(折后总额)
-RealTotalCost - 合计费用(折后总额)
-BusinessCode - 产品代码
-Ratio - 占比(折后总额)
-Trend - 环比(折后总额)
-     * @param Sort 排序字段，枚举值如下：
-GatherCashPayAmount - 归集费用(现金)
-GatherVoucherPayAmount- 归集费用(优惠券)
-GatherIncentivePayAmount - 归集费用(赠送金)
-GatherTransferPayAmount - 归集费用(分成金)
-AllocateCashPayAmount - 分摊费用(现金)
-AllocateVoucherPayAmount - 分摊费用(优惠券)
-AllocateIncentivePayAmount - 分摊费用(赠送金)
-AllocateTransferPayAmount - 分摊费用(分成金)
-TotalCashPayAmount - 合计费用(现金)
-TotalVoucherPayAmount - 合计费用(优惠券)
-TotalIncentivePayAmount - 合计费用(赠送金)
-TotalTransferPayAmount - 合计费用(分成金)
-GatherRealCost - 归集费用(折后总额)
-AllocateRealCost - 分摊费用(折后总额)
-RealTotalCost - 合计费用(折后总额)
-BusinessCode - 产品代码
-Ratio - 占比(折后总额)
-Trend - 环比(折后总额)
+     * Set <p>排序字段，枚举值如下：<br>GatherCashPayAmount - 归集费用(现金)<br>GatherVoucherPayAmount- 归集费用(优惠券)<br>GatherIncentivePayAmount - 归集费用(赠送金)<br>GatherTransferPayAmount - 归集费用(分成金)<br>AllocateCashPayAmount - 分摊费用(现金)<br>AllocateVoucherPayAmount - 分摊费用(优惠券)<br>AllocateIncentivePayAmount - 分摊费用(赠送金)<br>AllocateTransferPayAmount - 分摊费用(分成金)<br>TotalCashPayAmount - 合计费用(现金)<br>TotalVoucherPayAmount - 合计费用(优惠券)<br>TotalIncentivePayAmount - 合计费用(赠送金)<br>TotalTransferPayAmount - 合计费用(分成金)<br>GatherRealCost - 归集费用(折后总额)<br>AllocateRealCost - 分摊费用(折后总额)<br>RealTotalCost - 合计费用(折后总额)<br>BusinessCode - 产品代码<br>Ratio - 占比(折后总额)<br>Trend - 环比(折后总额)</p>
+     * @param Sort <p>排序字段，枚举值如下：<br>GatherCashPayAmount - 归集费用(现金)<br>GatherVoucherPayAmount- 归集费用(优惠券)<br>GatherIncentivePayAmount - 归集费用(赠送金)<br>GatherTransferPayAmount - 归集费用(分成金)<br>AllocateCashPayAmount - 分摊费用(现金)<br>AllocateVoucherPayAmount - 分摊费用(优惠券)<br>AllocateIncentivePayAmount - 分摊费用(赠送金)<br>AllocateTransferPayAmount - 分摊费用(分成金)<br>TotalCashPayAmount - 合计费用(现金)<br>TotalVoucherPayAmount - 合计费用(优惠券)<br>TotalIncentivePayAmount - 合计费用(赠送金)<br>TotalTransferPayAmount - 合计费用(分成金)<br>GatherRealCost - 归集费用(折后总额)<br>AllocateRealCost - 分摊费用(折后总额)<br>RealTotalCost - 合计费用(折后总额)<br>BusinessCode - 产品代码<br>Ratio - 占比(折后总额)<br>Trend - 环比(折后总额)</p>
      */
     public void setSort(String Sort) {
         this.Sort = Sort;
     }
 
     /**
-     * Get 日期，用作筛选，PeriodType=day时可传
- 
-     * @return BillDates 日期，用作筛选，PeriodType=day时可传
-
+     * Get <p>日期，用作筛选，PeriodType=day时可传</p> 
+     * @return BillDates <p>日期，用作筛选，PeriodType=day时可传</p>
      */
     public String [] getBillDates() {
         return this.BillDates;
     }
 
     /**
-     * Set 日期，用作筛选，PeriodType=day时可传
-
-     * @param BillDates 日期，用作筛选，PeriodType=day时可传
-
+     * Set <p>日期，用作筛选，PeriodType=day时可传</p>
+     * @param BillDates <p>日期，用作筛选，PeriodType=day时可传</p>
      */
     public void setBillDates(String [] BillDates) {
         this.BillDates = BillDates;
     }
 
     /**
-     * Get 产品编码，用作筛选 
-     * @return BusinessCodes 产品编码，用作筛选
+     * Get <p>产品编码，用作筛选</p> 
+     * @return BusinessCodes <p>产品编码，用作筛选</p>
      */
     public String [] getBusinessCodes() {
         return this.BusinessCodes;
     }
 
     /**
-     * Set 产品编码，用作筛选
-     * @param BusinessCodes 产品编码，用作筛选
+     * Set <p>产品编码，用作筛选</p>
+     * @param BusinessCodes <p>产品编码，用作筛选</p>
      */
     public void setBusinessCodes(String [] BusinessCodes) {
         this.BusinessCodes = BusinessCodes;
     }
 
     /**
-     * Get 模糊搜索条件 
-     * @return SearchKey 模糊搜索条件
+     * Get <p>模糊搜索条件</p> 
+     * @return SearchKey <p>模糊搜索条件</p>
      * @deprecated
      */
     @Deprecated
@@ -373,8 +248,8 @@ Trend - 环比(折后总额)
     }
 
     /**
-     * Set 模糊搜索条件
-     * @param SearchKey 模糊搜索条件
+     * Set <p>模糊搜索条件</p>
+     * @param SearchKey <p>模糊搜索条件</p>
      * @deprecated
      */
     @Deprecated

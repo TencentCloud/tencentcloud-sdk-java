@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeAllocationTrendByMonthRequest extends AbstractModel {
 
     /**
-    * 账单月份，格式为2024-02，不传默认当前月
+    * <p>账单月份，格式为2024-02，不传默认当前月</p>
     */
     @SerializedName("Month")
     @Expose
     private String Month;
 
     /**
-    * 分账单元唯一标识
+    * <p>分账单元唯一标识</p>
     */
     @SerializedName("TreeNodeUniqKey")
     @Expose
     private String TreeNodeUniqKey;
 
     /**
-    * 产品编码，用作筛选
+    * <p>产品编码，用作筛选</p>
     */
     @SerializedName("BusinessCode")
     @Expose
     private String BusinessCode;
 
     /**
-     * Get 账单月份，格式为2024-02，不传默认当前月 
-     * @return Month 账单月份，格式为2024-02，不传默认当前月
+     * Get <p>账单月份，格式为2024-02，不传默认当前月</p> 
+     * @return Month <p>账单月份，格式为2024-02，不传默认当前月</p>
      */
     public String getMonth() {
         return this.Month;
     }
 
     /**
-     * Set 账单月份，格式为2024-02，不传默认当前月
-     * @param Month 账单月份，格式为2024-02，不传默认当前月
+     * Set <p>账单月份，格式为2024-02，不传默认当前月</p>
+     * @param Month <p>账单月份，格式为2024-02，不传默认当前月</p>
      */
     public void setMonth(String Month) {
         this.Month = Month;
     }
 
     /**
-     * Get 分账单元唯一标识 
-     * @return TreeNodeUniqKey 分账单元唯一标识
+     * Get <p>分账单元唯一标识</p> 
+     * @return TreeNodeUniqKey <p>分账单元唯一标识</p>
      */
     public String getTreeNodeUniqKey() {
         return this.TreeNodeUniqKey;
     }
 
     /**
-     * Set 分账单元唯一标识
-     * @param TreeNodeUniqKey 分账单元唯一标识
+     * Set <p>分账单元唯一标识</p>
+     * @param TreeNodeUniqKey <p>分账单元唯一标识</p>
      */
     public void setTreeNodeUniqKey(String TreeNodeUniqKey) {
         this.TreeNodeUniqKey = TreeNodeUniqKey;
     }
 
     /**
-     * Get 产品编码，用作筛选 
-     * @return BusinessCode 产品编码，用作筛选
+     * Get <p>产品编码，用作筛选</p> 
+     * @return BusinessCode <p>产品编码，用作筛选</p>
      */
     public String getBusinessCode() {
         return this.BusinessCode;
     }
 
     /**
-     * Set 产品编码，用作筛选
-     * @param BusinessCode 产品编码，用作筛选
+     * Set <p>产品编码，用作筛选</p>
+     * @param BusinessCode <p>产品编码，用作筛选</p>
      */
     public void setBusinessCode(String BusinessCode) {
         this.BusinessCode = BusinessCode;

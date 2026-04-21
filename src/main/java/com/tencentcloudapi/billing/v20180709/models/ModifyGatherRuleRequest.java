@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ModifyGatherRuleRequest extends AbstractModel {
 
     /**
-    * 所编辑归集规则ID
+    * <p>所编辑归集规则ID</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 所编辑分账规则详情
+    * <p>所编辑分账规则详情</p>
     */
     @SerializedName("RuleDetail")
     @Expose
     private AllocationRuleExpression RuleDetail;
 
     /**
-    * 月份，不传默认当前月
+    * <p>月份，不传默认当前月</p>
     */
     @SerializedName("Month")
     @Expose
     private String Month;
 
     /**
-     * Get 所编辑归集规则ID 
-     * @return Id 所编辑归集规则ID
+     * Get <p>所编辑归集规则ID</p> 
+     * @return Id <p>所编辑归集规则ID</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 所编辑归集规则ID
-     * @param Id 所编辑归集规则ID
+     * Set <p>所编辑归集规则ID</p>
+     * @param Id <p>所编辑归集规则ID</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 所编辑分账规则详情 
-     * @return RuleDetail 所编辑分账规则详情
+     * Get <p>所编辑分账规则详情</p> 
+     * @return RuleDetail <p>所编辑分账规则详情</p>
      */
     public AllocationRuleExpression getRuleDetail() {
         return this.RuleDetail;
     }
 
     /**
-     * Set 所编辑分账规则详情
-     * @param RuleDetail 所编辑分账规则详情
+     * Set <p>所编辑分账规则详情</p>
+     * @param RuleDetail <p>所编辑分账规则详情</p>
      */
     public void setRuleDetail(AllocationRuleExpression RuleDetail) {
         this.RuleDetail = RuleDetail;
     }
 
     /**
-     * Get 月份，不传默认当前月 
-     * @return Month 月份，不传默认当前月
+     * Get <p>月份，不传默认当前月</p> 
+     * @return Month <p>月份，不传默认当前月</p>
      */
     public String getMonth() {
         return this.Month;
     }
 
     /**
-     * Set 月份，不传默认当前月
-     * @param Month 月份，不传默认当前月
+     * Set <p>月份，不传默认当前月</p>
+     * @param Month <p>月份，不传默认当前月</p>
      */
     public void setMonth(String Month) {
         this.Month = Month;

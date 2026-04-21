@@ -31,6 +31,13 @@ public class SubmitVideoEditKlingJobResponse extends AbstractModel {
     private String JobId;
 
     /**
+    * 
+    */
+    @SerializedName("ExternalTaskId")
+    @Expose
+    private String ExternalTaskId;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +58,22 @@ public class SubmitVideoEditKlingJobResponse extends AbstractModel {
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
+    }
+
+    /**
+     * Get  
+     * @return ExternalTaskId 
+     */
+    public String getExternalTaskId() {
+        return this.ExternalTaskId;
+    }
+
+    /**
+     * Set 
+     * @param ExternalTaskId 
+     */
+    public void setExternalTaskId(String ExternalTaskId) {
+        this.ExternalTaskId = ExternalTaskId;
     }
 
     /**
@@ -80,6 +103,9 @@ public class SubmitVideoEditKlingJobResponse extends AbstractModel {
         if (source.JobId != null) {
             this.JobId = new String(source.JobId);
         }
+        if (source.ExternalTaskId != null) {
+            this.ExternalTaskId = new String(source.ExternalTaskId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -91,6 +117,7 @@ public class SubmitVideoEditKlingJobResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "JobId", this.JobId);
+        this.setParamSimple(map, prefix + "ExternalTaskId", this.ExternalTaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

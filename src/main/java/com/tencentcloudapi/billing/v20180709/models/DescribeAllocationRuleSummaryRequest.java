@@ -24,135 +24,115 @@ import java.util.HashMap;
 public class DescribeAllocationRuleSummaryRequest extends AbstractModel {
 
     /**
-    * 每次获取数据量，最大值1000
+    * <p>每次获取数据量，最大值1000</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 分页偏移量
+    * <p>分页偏移量</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 月份，不传默认当前月
+    * <p>月份，不传默认当前月</p>
     */
     @SerializedName("Month")
     @Expose
     private String Month;
 
     /**
-    * 公摊策略类型，用于筛选。
-枚举值如下： 
-1 - 自定义分摊占比 
-2 - 等比分摊 
-3 - 按占比分摊
+    * <p>公摊策略类型，用于筛选。<br>枚举值如下：<br>1 - 自定义分摊占比<br>2 - 等比分摊<br>3 - 按占比分摊</p>
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 公摊规则名称或分账单元名称，用于模糊筛选。
+    * <p>公摊规则名称或分账单元名称，用于模糊筛选。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get 每次获取数据量，最大值1000 
-     * @return Limit 每次获取数据量，最大值1000
+     * Get <p>每次获取数据量，最大值1000</p> 
+     * @return Limit <p>每次获取数据量，最大值1000</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每次获取数据量，最大值1000
-     * @param Limit 每次获取数据量，最大值1000
+     * Set <p>每次获取数据量，最大值1000</p>
+     * @param Limit <p>每次获取数据量，最大值1000</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页偏移量 
-     * @return Offset 分页偏移量
+     * Get <p>分页偏移量</p> 
+     * @return Offset <p>分页偏移量</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页偏移量
-     * @param Offset 分页偏移量
+     * Set <p>分页偏移量</p>
+     * @param Offset <p>分页偏移量</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 月份，不传默认当前月 
-     * @return Month 月份，不传默认当前月
+     * Get <p>月份，不传默认当前月</p> 
+     * @return Month <p>月份，不传默认当前月</p>
      */
     public String getMonth() {
         return this.Month;
     }
 
     /**
-     * Set 月份，不传默认当前月
-     * @param Month 月份，不传默认当前月
+     * Set <p>月份，不传默认当前月</p>
+     * @param Month <p>月份，不传默认当前月</p>
      */
     public void setMonth(String Month) {
         this.Month = Month;
     }
 
     /**
-     * Get 公摊策略类型，用于筛选。
-枚举值如下： 
-1 - 自定义分摊占比 
-2 - 等比分摊 
-3 - 按占比分摊 
-     * @return Type 公摊策略类型，用于筛选。
-枚举值如下： 
-1 - 自定义分摊占比 
-2 - 等比分摊 
-3 - 按占比分摊
+     * Get <p>公摊策略类型，用于筛选。<br>枚举值如下：<br>1 - 自定义分摊占比<br>2 - 等比分摊<br>3 - 按占比分摊</p> 
+     * @return Type <p>公摊策略类型，用于筛选。<br>枚举值如下：<br>1 - 自定义分摊占比<br>2 - 等比分摊<br>3 - 按占比分摊</p>
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 公摊策略类型，用于筛选。
-枚举值如下： 
-1 - 自定义分摊占比 
-2 - 等比分摊 
-3 - 按占比分摊
-     * @param Type 公摊策略类型，用于筛选。
-枚举值如下： 
-1 - 自定义分摊占比 
-2 - 等比分摊 
-3 - 按占比分摊
+     * Set <p>公摊策略类型，用于筛选。<br>枚举值如下：<br>1 - 自定义分摊占比<br>2 - 等比分摊<br>3 - 按占比分摊</p>
+     * @param Type <p>公摊策略类型，用于筛选。<br>枚举值如下：<br>1 - 自定义分摊占比<br>2 - 等比分摊<br>3 - 按占比分摊</p>
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 公摊规则名称或分账单元名称，用于模糊筛选。 
-     * @return Name 公摊规则名称或分账单元名称，用于模糊筛选。
+     * Get <p>公摊规则名称或分账单元名称，用于模糊筛选。</p> 
+     * @return Name <p>公摊规则名称或分账单元名称，用于模糊筛选。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 公摊规则名称或分账单元名称，用于模糊筛选。
-     * @param Name 公摊规则名称或分账单元名称，用于模糊筛选。
+     * Set <p>公摊规则名称或分账单元名称，用于模糊筛选。</p>
+     * @param Name <p>公摊规则名称或分账单元名称，用于模糊筛选。</p>
      */
     public void setName(String Name) {
         this.Name = Name;

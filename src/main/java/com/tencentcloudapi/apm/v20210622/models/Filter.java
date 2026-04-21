@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class Filter extends AbstractModel {
 
     /**
-    * 过滤方式（=, !=, in）
+    * <p>过滤方式（=, !=, in）</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 过滤维度名
+    * <p>过滤维度名</p><p>详情参考实际接口字段描述</p>
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * 过滤值，in过滤方式用逗号分割多个值
+    * <p>过滤值，in过滤方式用逗号分割多个值</p>
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get 过滤方式（=, !=, in） 
-     * @return Type 过滤方式（=, !=, in）
+     * Get <p>过滤方式（=, !=, in）</p> 
+     * @return Type <p>过滤方式（=, !=, in）</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 过滤方式（=, !=, in）
-     * @param Type 过滤方式（=, !=, in）
+     * Set <p>过滤方式（=, !=, in）</p>
+     * @param Type <p>过滤方式（=, !=, in）</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 过滤维度名 
-     * @return Key 过滤维度名
+     * Get <p>过滤维度名</p><p>详情参考实际接口字段描述</p> 
+     * @return Key <p>过滤维度名</p><p>详情参考实际接口字段描述</p>
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set 过滤维度名
-     * @param Key 过滤维度名
+     * Set <p>过滤维度名</p><p>详情参考实际接口字段描述</p>
+     * @param Key <p>过滤维度名</p><p>详情参考实际接口字段描述</p>
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 过滤值，in过滤方式用逗号分割多个值 
-     * @return Value 过滤值，in过滤方式用逗号分割多个值
+     * Get <p>过滤值，in过滤方式用逗号分割多个值</p> 
+     * @return Value <p>过滤值，in过滤方式用逗号分割多个值</p>
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set 过滤值，in过滤方式用逗号分割多个值
-     * @param Value 过滤值，in过滤方式用逗号分割多个值
+     * Set <p>过滤值，in过滤方式用逗号分割多个值</p>
+     * @param Value <p>过滤值，in过滤方式用逗号分割多个值</p>
      */
     public void setValue(String Value) {
         this.Value = Value;

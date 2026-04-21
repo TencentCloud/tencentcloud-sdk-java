@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAllocationRuleSummaryResponse extends AbstractModel {
 
     /**
-    * 公摊规则表达式
+    * <p>公摊规则表达式</p>
     */
     @SerializedName("RuleList")
     @Expose
     private AllocationRuleOverview [] RuleList;
 
     /**
-    * 规则总数
+    * <p>规则总数</p>
     */
     @SerializedName("Total")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeAllocationRuleSummaryResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 公摊规则表达式 
-     * @return RuleList 公摊规则表达式
+     * Get <p>公摊规则表达式</p> 
+     * @return RuleList <p>公摊规则表达式</p>
      */
     public AllocationRuleOverview [] getRuleList() {
         return this.RuleList;
     }
 
     /**
-     * Set 公摊规则表达式
-     * @param RuleList 公摊规则表达式
+     * Set <p>公摊规则表达式</p>
+     * @param RuleList <p>公摊规则表达式</p>
      */
     public void setRuleList(AllocationRuleOverview [] RuleList) {
         this.RuleList = RuleList;
     }
 
     /**
-     * Get 规则总数 
-     * @return Total 规则总数
+     * Get <p>规则总数</p> 
+     * @return Total <p>规则总数</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 规则总数
-     * @param Total 规则总数
+     * Set <p>规则总数</p>
+     * @param Total <p>规则总数</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;

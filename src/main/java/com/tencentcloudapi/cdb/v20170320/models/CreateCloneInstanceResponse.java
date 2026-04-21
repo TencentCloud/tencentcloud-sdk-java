@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateCloneInstanceResponse extends AbstractModel {
 
     /**
-    * 异步任务的请求ID，可使用此 ID 查询异步任务的执行结果。
+    * <p>异步任务的请求ID，可使用此 ID 查询异步任务的执行结果。</p>
     */
     @SerializedName("AsyncRequestId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateCloneInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 异步任务的请求ID，可使用此 ID 查询异步任务的执行结果。 
-     * @return AsyncRequestId 异步任务的请求ID，可使用此 ID 查询异步任务的执行结果。
+     * Get <p>异步任务的请求ID，可使用此 ID 查询异步任务的执行结果。</p> 
+     * @return AsyncRequestId <p>异步任务的请求ID，可使用此 ID 查询异步任务的执行结果。</p>
      */
     public String getAsyncRequestId() {
         return this.AsyncRequestId;
     }
 
     /**
-     * Set 异步任务的请求ID，可使用此 ID 查询异步任务的执行结果。
-     * @param AsyncRequestId 异步任务的请求ID，可使用此 ID 查询异步任务的执行结果。
+     * Set <p>异步任务的请求ID，可使用此 ID 查询异步任务的执行结果。</p>
+     * @param AsyncRequestId <p>异步任务的请求ID，可使用此 ID 查询异步任务的执行结果。</p>
      */
     public void setAsyncRequestId(String AsyncRequestId) {
         this.AsyncRequestId = AsyncRequestId;

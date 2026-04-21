@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateSubAppIdResponse extends AbstractModel {
 
     /**
-    * 新创建的应用 ID。
+    * <p>新创建的应用 ID。</p>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateSubAppIdResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 新创建的应用 ID。 
-     * @return SubAppId 新创建的应用 ID。
+     * Get <p>新创建的应用 ID。</p> 
+     * @return SubAppId <p>新创建的应用 ID。</p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 新创建的应用 ID。
-     * @param SubAppId 新创建的应用 ID。
+     * Set <p>新创建的应用 ID。</p>
+     * @param SubAppId <p>新创建的应用 ID。</p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;

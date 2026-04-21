@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteAllocationRuleRequest extends AbstractModel {
 
     /**
-    * 所删除公摊规则ID
+    * <p>所删除公摊规则ID</p>
     */
     @SerializedName("RuleId")
     @Expose
     private Long RuleId;
 
     /**
-    * 月份，不传默认当前月
+    * <p>月份，不传默认当前月</p>
     */
     @SerializedName("Month")
     @Expose
     private String Month;
 
     /**
-     * Get 所删除公摊规则ID 
-     * @return RuleId 所删除公摊规则ID
+     * Get <p>所删除公摊规则ID</p> 
+     * @return RuleId <p>所删除公摊规则ID</p>
      */
     public Long getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set 所删除公摊规则ID
-     * @param RuleId 所删除公摊规则ID
+     * Set <p>所删除公摊规则ID</p>
+     * @param RuleId <p>所删除公摊规则ID</p>
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get 月份，不传默认当前月 
-     * @return Month 月份，不传默认当前月
+     * Get <p>月份，不传默认当前月</p> 
+     * @return Month <p>月份，不传默认当前月</p>
      */
     public String getMonth() {
         return this.Month;
     }
 
     /**
-     * Set 月份，不传默认当前月
-     * @param Month 月份，不传默认当前月
+     * Set <p>月份，不传默认当前月</p>
+     * @param Month <p>月份，不传默认当前月</p>
      */
     public void setMonth(String Month) {
         this.Month = Month;

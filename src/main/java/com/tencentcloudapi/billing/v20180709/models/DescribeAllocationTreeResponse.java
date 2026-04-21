@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DescribeAllocationTreeResponse extends AbstractModel {
 
     /**
-    * 分账单元ID
+    * <p>分账单元ID</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 分账单元名称
+    * <p>分账单元名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 分账单元唯一标识
+    * <p>分账单元唯一标识</p>
     */
     @SerializedName("TreeNodeUniqKey")
     @Expose
     private String TreeNodeUniqKey;
 
     /**
-    * 子树
+    * <p>子树</p>
     */
     @SerializedName("Children")
     @Expose
@@ -59,64 +59,64 @@ public class DescribeAllocationTreeResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 分账单元ID 
-     * @return Id 分账单元ID
+     * Get <p>分账单元ID</p> 
+     * @return Id <p>分账单元ID</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 分账单元ID
-     * @param Id 分账单元ID
+     * Set <p>分账单元ID</p>
+     * @param Id <p>分账单元ID</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 分账单元名称 
-     * @return Name 分账单元名称
+     * Get <p>分账单元名称</p> 
+     * @return Name <p>分账单元名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 分账单元名称
-     * @param Name 分账单元名称
+     * Set <p>分账单元名称</p>
+     * @param Name <p>分账单元名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 分账单元唯一标识 
-     * @return TreeNodeUniqKey 分账单元唯一标识
+     * Get <p>分账单元唯一标识</p> 
+     * @return TreeNodeUniqKey <p>分账单元唯一标识</p>
      */
     public String getTreeNodeUniqKey() {
         return this.TreeNodeUniqKey;
     }
 
     /**
-     * Set 分账单元唯一标识
-     * @param TreeNodeUniqKey 分账单元唯一标识
+     * Set <p>分账单元唯一标识</p>
+     * @param TreeNodeUniqKey <p>分账单元唯一标识</p>
      */
     public void setTreeNodeUniqKey(String TreeNodeUniqKey) {
         this.TreeNodeUniqKey = TreeNodeUniqKey;
     }
 
     /**
-     * Get 子树 
-     * @return Children 子树
+     * Get <p>子树</p> 
+     * @return Children <p>子树</p>
      */
     public AllocationTree [] getChildren() {
         return this.Children;
     }
 
     /**
-     * Set 子树
-     * @param Children 子树
+     * Set <p>子树</p>
+     * @param Children <p>子树</p>
      */
     public void setChildren(AllocationTree [] Children) {
         this.Children = Children;

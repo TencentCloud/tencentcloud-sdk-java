@@ -24,75 +24,70 @@ import java.util.HashMap;
 public class ClusterSwitchDetail extends AbstractModel {
 
     /**
-    * 实例对象可以是ccnid类型:ccn-ad21xuds形式;nat网关类型:nat-da12daxd形式;ip类型:1.1.1.1形式等
+    * <p>实例对象可以是ccnid类型:ccn-ad21xuds形式;nat网关类型:nat-da12daxd形式;ip类型:1.1.1.1形式等</p>
     */
     @SerializedName("InsObj")
     @Expose
     private String InsObj;
 
     /**
-    * 实例对象名称
+    * <p>实例对象名称</p>
     */
     @SerializedName("ObjName")
     @Expose
     private String ObjName;
 
     /**
-    * 防火墙类型，ew：vpc间防火墙；nat：nat防火墙；border：互联网边界防火墙
+    * <p>防火墙类型，ew：vpc间防火墙；nat：nat防火墙；border：互联网边界防火墙</p>
     */
     @SerializedName("FwType")
     @Expose
     private String FwType;
 
     /**
-    * 资产类型，ccn：ccn实例类型；nat：nat网关类型
+    * <p>资产类型，ccn：ccn实例类型；nat：nat网关类型</p>
     */
     @SerializedName("AssetType")
     @Expose
     private String AssetType;
 
     /**
-    * 地域
+    * <p>地域</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 开关状态
-0 : 关闭
-1 : 开启
-2 : 开启中
-3 : 关闭中
-4 : 异常
+    * <p>开关状态<br>0 : 关闭<br>1 : 开启<br>2 : 开启中<br>3 : 关闭中<br>4 : 异常</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 开关接入模式，1：自动接入；2，手动接入，0：未选择
+    * <p>开关接入模式，1：自动接入；2，手动接入，0：未选择</p>
     */
     @SerializedName("SwitchMode")
     @Expose
     private Long SwitchMode;
 
     /**
-    * 实例对象是否处于非集群接入场景（主备模式）
+    * <p>实例对象是否处于非集群接入场景（主备模式）</p>
     */
     @SerializedName("NonCluster")
     @Expose
     private Long NonCluster;
 
     /**
-    * ip版本，0：ipv4；1：ipv6
+    * <p>ip版本，0：ipv4；1：ipv6</p>
     */
     @SerializedName("IpVersion")
     @Expose
     private Long IpVersion;
 
     /**
-    * 关联实例
+    * <p>关联实例</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AttachIns")
@@ -100,7 +95,7 @@ public class ClusterSwitchDetail extends AbstractModel {
     private AttachInsInfo [] AttachIns;
 
     /**
-    * 引流私有网络端点信息
+    * <p>引流私有网络端点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Endpoints")
@@ -108,222 +103,216 @@ public class ClusterSwitchDetail extends AbstractModel {
     private EndpointInfo [] Endpoints;
 
     /**
-    * 入侵防护模式,0:观察;1:拦截;2:严格;3:关闭
+    * <p>入侵防护模式,0:观察;1:拦截;2:严格;3:关闭</p>
     */
     @SerializedName("Idpsaction")
     @Expose
     private Long Idpsaction;
 
     /**
-    * //透明模式开关,0:未开启,1:已开启
+    * <p>//透明模式开关,0:未开启,1:已开启</p>
     */
     @SerializedName("TransEnable")
     @Expose
     private Long TransEnable;
 
     /**
-    * 开关状态 0关闭 1开启
+    * <p>开关状态 0关闭 1开启</p>
     */
     @SerializedName("Enable")
     @Expose
     private Long Enable;
 
     /**
-    * 路由模式：0：多路由表，1：策略路由
+    * <p>路由模式：0：多路由表，1：策略路由</p>
     */
     @SerializedName("RoutingMode")
     @Expose
     private Long RoutingMode;
 
     /**
-    * 是否跨租户开关 1是 0不是
+    * <p>是否跨租户开关 1是 0不是</p>
     */
     @SerializedName("IsPeer")
     @Expose
     private Long IsPeer;
 
     /**
-    * 跨租户appid
+    * <p>跨租户appid</p>
     */
     @SerializedName("PeerAppid")
     @Expose
     private String PeerAppid;
 
     /**
-    * 跨租户操作状态 1不允许操作 0可以
+    * <p>跨租户操作状态 1不允许操作 0可以</p>
     */
     @SerializedName("PeerStatus")
     @Expose
     private Long PeerStatus;
 
     /**
-     * Get 实例对象可以是ccnid类型:ccn-ad21xuds形式;nat网关类型:nat-da12daxd形式;ip类型:1.1.1.1形式等 
-     * @return InsObj 实例对象可以是ccnid类型:ccn-ad21xuds形式;nat网关类型:nat-da12daxd形式;ip类型:1.1.1.1形式等
+    * <p>Bypass状态</p>
+    */
+    @SerializedName("Bypass")
+    @Expose
+    private Long Bypass;
+
+    /**
+    * <p>防火墙开关操作时的进度状态：</p><p>// 开启 — 自动模式（3步）<br>&quot;AUTO_OPEN_ORCHESTRATING&quot; // 步骤1: 预编排策略路由<br>&quot;AUTO_OPEN_CREATING_RESOURCES&quot; // 步骤2: 创建引流网络和资源<br>&quot;AUTO_OPEN_PUSHING_ROUTES&quot; // 步骤3: 创建策略路由</p><p>// 开启 — 手动模式（1步）<br>&quot;MANUAL_OPEN_CREATING_RESOURCES&quot; // 步骤1: 创建引流网络和资源</p><p>// 关闭 — 自动模式（2步）<br>&quot;AUTO_CLOSE_DELETING_ROUTES&quot; // 步骤1: 删除策略路由<br>&quot;AUTO_CLOSE_DELETING_RESOURCES&quot; // 步骤2: 删除引流网络和资源<br>// 关闭 — 手动模式（1步）<br>&quot;MANUAL_CLOSE_DELETING_RESOURCES&quot; // 步骤1: 删除引流网络和资源</p><p>// 修改 — 自动模式（3步）<br>&quot;AUTO_MODIFY_ORCHESTRATING&quot; // 步骤1: 预编排策略路由<br>&quot;AUTO_MODIFY_DELETING_ROUTES&quot; // 步骤2: 删除旧策略路由<br>&quot;AUTO_MODIFY_PUSHING_ROUTES&quot; // 步骤3: 创建新策略路由</p><p>// 修改 — 手动模式（1步，仅 VPC 防火墙存在手动模式修改）<br>&quot;MANUAL_MODIFY_UPDATING_RESOURCES&quot; // 步骤1: 更新引流网络和资源</p>
+    */
+    @SerializedName("Progress")
+    @Expose
+    private String Progress;
+
+    /**
+     * Get <p>实例对象可以是ccnid类型:ccn-ad21xuds形式;nat网关类型:nat-da12daxd形式;ip类型:1.1.1.1形式等</p> 
+     * @return InsObj <p>实例对象可以是ccnid类型:ccn-ad21xuds形式;nat网关类型:nat-da12daxd形式;ip类型:1.1.1.1形式等</p>
      */
     public String getInsObj() {
         return this.InsObj;
     }
 
     /**
-     * Set 实例对象可以是ccnid类型:ccn-ad21xuds形式;nat网关类型:nat-da12daxd形式;ip类型:1.1.1.1形式等
-     * @param InsObj 实例对象可以是ccnid类型:ccn-ad21xuds形式;nat网关类型:nat-da12daxd形式;ip类型:1.1.1.1形式等
+     * Set <p>实例对象可以是ccnid类型:ccn-ad21xuds形式;nat网关类型:nat-da12daxd形式;ip类型:1.1.1.1形式等</p>
+     * @param InsObj <p>实例对象可以是ccnid类型:ccn-ad21xuds形式;nat网关类型:nat-da12daxd形式;ip类型:1.1.1.1形式等</p>
      */
     public void setInsObj(String InsObj) {
         this.InsObj = InsObj;
     }
 
     /**
-     * Get 实例对象名称 
-     * @return ObjName 实例对象名称
+     * Get <p>实例对象名称</p> 
+     * @return ObjName <p>实例对象名称</p>
      */
     public String getObjName() {
         return this.ObjName;
     }
 
     /**
-     * Set 实例对象名称
-     * @param ObjName 实例对象名称
+     * Set <p>实例对象名称</p>
+     * @param ObjName <p>实例对象名称</p>
      */
     public void setObjName(String ObjName) {
         this.ObjName = ObjName;
     }
 
     /**
-     * Get 防火墙类型，ew：vpc间防火墙；nat：nat防火墙；border：互联网边界防火墙 
-     * @return FwType 防火墙类型，ew：vpc间防火墙；nat：nat防火墙；border：互联网边界防火墙
+     * Get <p>防火墙类型，ew：vpc间防火墙；nat：nat防火墙；border：互联网边界防火墙</p> 
+     * @return FwType <p>防火墙类型，ew：vpc间防火墙；nat：nat防火墙；border：互联网边界防火墙</p>
      */
     public String getFwType() {
         return this.FwType;
     }
 
     /**
-     * Set 防火墙类型，ew：vpc间防火墙；nat：nat防火墙；border：互联网边界防火墙
-     * @param FwType 防火墙类型，ew：vpc间防火墙；nat：nat防火墙；border：互联网边界防火墙
+     * Set <p>防火墙类型，ew：vpc间防火墙；nat：nat防火墙；border：互联网边界防火墙</p>
+     * @param FwType <p>防火墙类型，ew：vpc间防火墙；nat：nat防火墙；border：互联网边界防火墙</p>
      */
     public void setFwType(String FwType) {
         this.FwType = FwType;
     }
 
     /**
-     * Get 资产类型，ccn：ccn实例类型；nat：nat网关类型 
-     * @return AssetType 资产类型，ccn：ccn实例类型；nat：nat网关类型
+     * Get <p>资产类型，ccn：ccn实例类型；nat：nat网关类型</p> 
+     * @return AssetType <p>资产类型，ccn：ccn实例类型；nat：nat网关类型</p>
      */
     public String getAssetType() {
         return this.AssetType;
     }
 
     /**
-     * Set 资产类型，ccn：ccn实例类型；nat：nat网关类型
-     * @param AssetType 资产类型，ccn：ccn实例类型；nat：nat网关类型
+     * Set <p>资产类型，ccn：ccn实例类型；nat：nat网关类型</p>
+     * @param AssetType <p>资产类型，ccn：ccn实例类型；nat：nat网关类型</p>
      */
     public void setAssetType(String AssetType) {
         this.AssetType = AssetType;
     }
 
     /**
-     * Get 地域 
-     * @return Region 地域
+     * Get <p>地域</p> 
+     * @return Region <p>地域</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 地域
-     * @param Region 地域
+     * Set <p>地域</p>
+     * @param Region <p>地域</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 开关状态
-0 : 关闭
-1 : 开启
-2 : 开启中
-3 : 关闭中
-4 : 异常 
-     * @return Status 开关状态
-0 : 关闭
-1 : 开启
-2 : 开启中
-3 : 关闭中
-4 : 异常
+     * Get <p>开关状态<br>0 : 关闭<br>1 : 开启<br>2 : 开启中<br>3 : 关闭中<br>4 : 异常</p> 
+     * @return Status <p>开关状态<br>0 : 关闭<br>1 : 开启<br>2 : 开启中<br>3 : 关闭中<br>4 : 异常</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 开关状态
-0 : 关闭
-1 : 开启
-2 : 开启中
-3 : 关闭中
-4 : 异常
-     * @param Status 开关状态
-0 : 关闭
-1 : 开启
-2 : 开启中
-3 : 关闭中
-4 : 异常
+     * Set <p>开关状态<br>0 : 关闭<br>1 : 开启<br>2 : 开启中<br>3 : 关闭中<br>4 : 异常</p>
+     * @param Status <p>开关状态<br>0 : 关闭<br>1 : 开启<br>2 : 开启中<br>3 : 关闭中<br>4 : 异常</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 开关接入模式，1：自动接入；2，手动接入，0：未选择 
-     * @return SwitchMode 开关接入模式，1：自动接入；2，手动接入，0：未选择
+     * Get <p>开关接入模式，1：自动接入；2，手动接入，0：未选择</p> 
+     * @return SwitchMode <p>开关接入模式，1：自动接入；2，手动接入，0：未选择</p>
      */
     public Long getSwitchMode() {
         return this.SwitchMode;
     }
 
     /**
-     * Set 开关接入模式，1：自动接入；2，手动接入，0：未选择
-     * @param SwitchMode 开关接入模式，1：自动接入；2，手动接入，0：未选择
+     * Set <p>开关接入模式，1：自动接入；2，手动接入，0：未选择</p>
+     * @param SwitchMode <p>开关接入模式，1：自动接入；2，手动接入，0：未选择</p>
      */
     public void setSwitchMode(Long SwitchMode) {
         this.SwitchMode = SwitchMode;
     }
 
     /**
-     * Get 实例对象是否处于非集群接入场景（主备模式） 
-     * @return NonCluster 实例对象是否处于非集群接入场景（主备模式）
+     * Get <p>实例对象是否处于非集群接入场景（主备模式）</p> 
+     * @return NonCluster <p>实例对象是否处于非集群接入场景（主备模式）</p>
      */
     public Long getNonCluster() {
         return this.NonCluster;
     }
 
     /**
-     * Set 实例对象是否处于非集群接入场景（主备模式）
-     * @param NonCluster 实例对象是否处于非集群接入场景（主备模式）
+     * Set <p>实例对象是否处于非集群接入场景（主备模式）</p>
+     * @param NonCluster <p>实例对象是否处于非集群接入场景（主备模式）</p>
      */
     public void setNonCluster(Long NonCluster) {
         this.NonCluster = NonCluster;
     }
 
     /**
-     * Get ip版本，0：ipv4；1：ipv6 
-     * @return IpVersion ip版本，0：ipv4；1：ipv6
+     * Get <p>ip版本，0：ipv4；1：ipv6</p> 
+     * @return IpVersion <p>ip版本，0：ipv4；1：ipv6</p>
      */
     public Long getIpVersion() {
         return this.IpVersion;
     }
 
     /**
-     * Set ip版本，0：ipv4；1：ipv6
-     * @param IpVersion ip版本，0：ipv4；1：ipv6
+     * Set <p>ip版本，0：ipv4；1：ipv6</p>
+     * @param IpVersion <p>ip版本，0：ipv4；1：ipv6</p>
      */
     public void setIpVersion(Long IpVersion) {
         this.IpVersion = IpVersion;
     }
 
     /**
-     * Get 关联实例
+     * Get <p>关联实例</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AttachIns 关联实例
+     * @return AttachIns <p>关联实例</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AttachInsInfo [] getAttachIns() {
@@ -331,9 +320,9 @@ public class ClusterSwitchDetail extends AbstractModel {
     }
 
     /**
-     * Set 关联实例
+     * Set <p>关联实例</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AttachIns 关联实例
+     * @param AttachIns <p>关联实例</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttachIns(AttachInsInfo [] AttachIns) {
@@ -341,9 +330,9 @@ public class ClusterSwitchDetail extends AbstractModel {
     }
 
     /**
-     * Get 引流私有网络端点信息
+     * Get <p>引流私有网络端点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Endpoints 引流私有网络端点信息
+     * @return Endpoints <p>引流私有网络端点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public EndpointInfo [] getEndpoints() {
@@ -351,9 +340,9 @@ public class ClusterSwitchDetail extends AbstractModel {
     }
 
     /**
-     * Set 引流私有网络端点信息
+     * Set <p>引流私有网络端点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Endpoints 引流私有网络端点信息
+     * @param Endpoints <p>引流私有网络端点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndpoints(EndpointInfo [] Endpoints) {
@@ -361,115 +350,147 @@ public class ClusterSwitchDetail extends AbstractModel {
     }
 
     /**
-     * Get 入侵防护模式,0:观察;1:拦截;2:严格;3:关闭 
-     * @return Idpsaction 入侵防护模式,0:观察;1:拦截;2:严格;3:关闭
+     * Get <p>入侵防护模式,0:观察;1:拦截;2:严格;3:关闭</p> 
+     * @return Idpsaction <p>入侵防护模式,0:观察;1:拦截;2:严格;3:关闭</p>
      */
     public Long getIdpsaction() {
         return this.Idpsaction;
     }
 
     /**
-     * Set 入侵防护模式,0:观察;1:拦截;2:严格;3:关闭
-     * @param Idpsaction 入侵防护模式,0:观察;1:拦截;2:严格;3:关闭
+     * Set <p>入侵防护模式,0:观察;1:拦截;2:严格;3:关闭</p>
+     * @param Idpsaction <p>入侵防护模式,0:观察;1:拦截;2:严格;3:关闭</p>
      */
     public void setIdpsaction(Long Idpsaction) {
         this.Idpsaction = Idpsaction;
     }
 
     /**
-     * Get //透明模式开关,0:未开启,1:已开启 
-     * @return TransEnable //透明模式开关,0:未开启,1:已开启
+     * Get <p>//透明模式开关,0:未开启,1:已开启</p> 
+     * @return TransEnable <p>//透明模式开关,0:未开启,1:已开启</p>
      */
     public Long getTransEnable() {
         return this.TransEnable;
     }
 
     /**
-     * Set //透明模式开关,0:未开启,1:已开启
-     * @param TransEnable //透明模式开关,0:未开启,1:已开启
+     * Set <p>//透明模式开关,0:未开启,1:已开启</p>
+     * @param TransEnable <p>//透明模式开关,0:未开启,1:已开启</p>
      */
     public void setTransEnable(Long TransEnable) {
         this.TransEnable = TransEnable;
     }
 
     /**
-     * Get 开关状态 0关闭 1开启 
-     * @return Enable 开关状态 0关闭 1开启
+     * Get <p>开关状态 0关闭 1开启</p> 
+     * @return Enable <p>开关状态 0关闭 1开启</p>
      */
     public Long getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set 开关状态 0关闭 1开启
-     * @param Enable 开关状态 0关闭 1开启
+     * Set <p>开关状态 0关闭 1开启</p>
+     * @param Enable <p>开关状态 0关闭 1开启</p>
      */
     public void setEnable(Long Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get 路由模式：0：多路由表，1：策略路由 
-     * @return RoutingMode 路由模式：0：多路由表，1：策略路由
+     * Get <p>路由模式：0：多路由表，1：策略路由</p> 
+     * @return RoutingMode <p>路由模式：0：多路由表，1：策略路由</p>
      */
     public Long getRoutingMode() {
         return this.RoutingMode;
     }
 
     /**
-     * Set 路由模式：0：多路由表，1：策略路由
-     * @param RoutingMode 路由模式：0：多路由表，1：策略路由
+     * Set <p>路由模式：0：多路由表，1：策略路由</p>
+     * @param RoutingMode <p>路由模式：0：多路由表，1：策略路由</p>
      */
     public void setRoutingMode(Long RoutingMode) {
         this.RoutingMode = RoutingMode;
     }
 
     /**
-     * Get 是否跨租户开关 1是 0不是 
-     * @return IsPeer 是否跨租户开关 1是 0不是
+     * Get <p>是否跨租户开关 1是 0不是</p> 
+     * @return IsPeer <p>是否跨租户开关 1是 0不是</p>
      */
     public Long getIsPeer() {
         return this.IsPeer;
     }
 
     /**
-     * Set 是否跨租户开关 1是 0不是
-     * @param IsPeer 是否跨租户开关 1是 0不是
+     * Set <p>是否跨租户开关 1是 0不是</p>
+     * @param IsPeer <p>是否跨租户开关 1是 0不是</p>
      */
     public void setIsPeer(Long IsPeer) {
         this.IsPeer = IsPeer;
     }
 
     /**
-     * Get 跨租户appid 
-     * @return PeerAppid 跨租户appid
+     * Get <p>跨租户appid</p> 
+     * @return PeerAppid <p>跨租户appid</p>
      */
     public String getPeerAppid() {
         return this.PeerAppid;
     }
 
     /**
-     * Set 跨租户appid
-     * @param PeerAppid 跨租户appid
+     * Set <p>跨租户appid</p>
+     * @param PeerAppid <p>跨租户appid</p>
      */
     public void setPeerAppid(String PeerAppid) {
         this.PeerAppid = PeerAppid;
     }
 
     /**
-     * Get 跨租户操作状态 1不允许操作 0可以 
-     * @return PeerStatus 跨租户操作状态 1不允许操作 0可以
+     * Get <p>跨租户操作状态 1不允许操作 0可以</p> 
+     * @return PeerStatus <p>跨租户操作状态 1不允许操作 0可以</p>
      */
     public Long getPeerStatus() {
         return this.PeerStatus;
     }
 
     /**
-     * Set 跨租户操作状态 1不允许操作 0可以
-     * @param PeerStatus 跨租户操作状态 1不允许操作 0可以
+     * Set <p>跨租户操作状态 1不允许操作 0可以</p>
+     * @param PeerStatus <p>跨租户操作状态 1不允许操作 0可以</p>
      */
     public void setPeerStatus(Long PeerStatus) {
         this.PeerStatus = PeerStatus;
+    }
+
+    /**
+     * Get <p>Bypass状态</p> 
+     * @return Bypass <p>Bypass状态</p>
+     */
+    public Long getBypass() {
+        return this.Bypass;
+    }
+
+    /**
+     * Set <p>Bypass状态</p>
+     * @param Bypass <p>Bypass状态</p>
+     */
+    public void setBypass(Long Bypass) {
+        this.Bypass = Bypass;
+    }
+
+    /**
+     * Get <p>防火墙开关操作时的进度状态：</p><p>// 开启 — 自动模式（3步）<br>&quot;AUTO_OPEN_ORCHESTRATING&quot; // 步骤1: 预编排策略路由<br>&quot;AUTO_OPEN_CREATING_RESOURCES&quot; // 步骤2: 创建引流网络和资源<br>&quot;AUTO_OPEN_PUSHING_ROUTES&quot; // 步骤3: 创建策略路由</p><p>// 开启 — 手动模式（1步）<br>&quot;MANUAL_OPEN_CREATING_RESOURCES&quot; // 步骤1: 创建引流网络和资源</p><p>// 关闭 — 自动模式（2步）<br>&quot;AUTO_CLOSE_DELETING_ROUTES&quot; // 步骤1: 删除策略路由<br>&quot;AUTO_CLOSE_DELETING_RESOURCES&quot; // 步骤2: 删除引流网络和资源<br>// 关闭 — 手动模式（1步）<br>&quot;MANUAL_CLOSE_DELETING_RESOURCES&quot; // 步骤1: 删除引流网络和资源</p><p>// 修改 — 自动模式（3步）<br>&quot;AUTO_MODIFY_ORCHESTRATING&quot; // 步骤1: 预编排策略路由<br>&quot;AUTO_MODIFY_DELETING_ROUTES&quot; // 步骤2: 删除旧策略路由<br>&quot;AUTO_MODIFY_PUSHING_ROUTES&quot; // 步骤3: 创建新策略路由</p><p>// 修改 — 手动模式（1步，仅 VPC 防火墙存在手动模式修改）<br>&quot;MANUAL_MODIFY_UPDATING_RESOURCES&quot; // 步骤1: 更新引流网络和资源</p> 
+     * @return Progress <p>防火墙开关操作时的进度状态：</p><p>// 开启 — 自动模式（3步）<br>&quot;AUTO_OPEN_ORCHESTRATING&quot; // 步骤1: 预编排策略路由<br>&quot;AUTO_OPEN_CREATING_RESOURCES&quot; // 步骤2: 创建引流网络和资源<br>&quot;AUTO_OPEN_PUSHING_ROUTES&quot; // 步骤3: 创建策略路由</p><p>// 开启 — 手动模式（1步）<br>&quot;MANUAL_OPEN_CREATING_RESOURCES&quot; // 步骤1: 创建引流网络和资源</p><p>// 关闭 — 自动模式（2步）<br>&quot;AUTO_CLOSE_DELETING_ROUTES&quot; // 步骤1: 删除策略路由<br>&quot;AUTO_CLOSE_DELETING_RESOURCES&quot; // 步骤2: 删除引流网络和资源<br>// 关闭 — 手动模式（1步）<br>&quot;MANUAL_CLOSE_DELETING_RESOURCES&quot; // 步骤1: 删除引流网络和资源</p><p>// 修改 — 自动模式（3步）<br>&quot;AUTO_MODIFY_ORCHESTRATING&quot; // 步骤1: 预编排策略路由<br>&quot;AUTO_MODIFY_DELETING_ROUTES&quot; // 步骤2: 删除旧策略路由<br>&quot;AUTO_MODIFY_PUSHING_ROUTES&quot; // 步骤3: 创建新策略路由</p><p>// 修改 — 手动模式（1步，仅 VPC 防火墙存在手动模式修改）<br>&quot;MANUAL_MODIFY_UPDATING_RESOURCES&quot; // 步骤1: 更新引流网络和资源</p>
+     */
+    public String getProgress() {
+        return this.Progress;
+    }
+
+    /**
+     * Set <p>防火墙开关操作时的进度状态：</p><p>// 开启 — 自动模式（3步）<br>&quot;AUTO_OPEN_ORCHESTRATING&quot; // 步骤1: 预编排策略路由<br>&quot;AUTO_OPEN_CREATING_RESOURCES&quot; // 步骤2: 创建引流网络和资源<br>&quot;AUTO_OPEN_PUSHING_ROUTES&quot; // 步骤3: 创建策略路由</p><p>// 开启 — 手动模式（1步）<br>&quot;MANUAL_OPEN_CREATING_RESOURCES&quot; // 步骤1: 创建引流网络和资源</p><p>// 关闭 — 自动模式（2步）<br>&quot;AUTO_CLOSE_DELETING_ROUTES&quot; // 步骤1: 删除策略路由<br>&quot;AUTO_CLOSE_DELETING_RESOURCES&quot; // 步骤2: 删除引流网络和资源<br>// 关闭 — 手动模式（1步）<br>&quot;MANUAL_CLOSE_DELETING_RESOURCES&quot; // 步骤1: 删除引流网络和资源</p><p>// 修改 — 自动模式（3步）<br>&quot;AUTO_MODIFY_ORCHESTRATING&quot; // 步骤1: 预编排策略路由<br>&quot;AUTO_MODIFY_DELETING_ROUTES&quot; // 步骤2: 删除旧策略路由<br>&quot;AUTO_MODIFY_PUSHING_ROUTES&quot; // 步骤3: 创建新策略路由</p><p>// 修改 — 手动模式（1步，仅 VPC 防火墙存在手动模式修改）<br>&quot;MANUAL_MODIFY_UPDATING_RESOURCES&quot; // 步骤1: 更新引流网络和资源</p>
+     * @param Progress <p>防火墙开关操作时的进度状态：</p><p>// 开启 — 自动模式（3步）<br>&quot;AUTO_OPEN_ORCHESTRATING&quot; // 步骤1: 预编排策略路由<br>&quot;AUTO_OPEN_CREATING_RESOURCES&quot; // 步骤2: 创建引流网络和资源<br>&quot;AUTO_OPEN_PUSHING_ROUTES&quot; // 步骤3: 创建策略路由</p><p>// 开启 — 手动模式（1步）<br>&quot;MANUAL_OPEN_CREATING_RESOURCES&quot; // 步骤1: 创建引流网络和资源</p><p>// 关闭 — 自动模式（2步）<br>&quot;AUTO_CLOSE_DELETING_ROUTES&quot; // 步骤1: 删除策略路由<br>&quot;AUTO_CLOSE_DELETING_RESOURCES&quot; // 步骤2: 删除引流网络和资源<br>// 关闭 — 手动模式（1步）<br>&quot;MANUAL_CLOSE_DELETING_RESOURCES&quot; // 步骤1: 删除引流网络和资源</p><p>// 修改 — 自动模式（3步）<br>&quot;AUTO_MODIFY_ORCHESTRATING&quot; // 步骤1: 预编排策略路由<br>&quot;AUTO_MODIFY_DELETING_ROUTES&quot; // 步骤2: 删除旧策略路由<br>&quot;AUTO_MODIFY_PUSHING_ROUTES&quot; // 步骤3: 创建新策略路由</p><p>// 修改 — 手动模式（1步，仅 VPC 防火墙存在手动模式修改）<br>&quot;MANUAL_MODIFY_UPDATING_RESOURCES&quot; // 步骤1: 更新引流网络和资源</p>
+     */
+    public void setProgress(String Progress) {
+        this.Progress = Progress;
     }
 
     public ClusterSwitchDetail() {
@@ -540,6 +561,12 @@ public class ClusterSwitchDetail extends AbstractModel {
         if (source.PeerStatus != null) {
             this.PeerStatus = new Long(source.PeerStatus);
         }
+        if (source.Bypass != null) {
+            this.Bypass = new Long(source.Bypass);
+        }
+        if (source.Progress != null) {
+            this.Progress = new String(source.Progress);
+        }
     }
 
 
@@ -565,6 +592,8 @@ public class ClusterSwitchDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "IsPeer", this.IsPeer);
         this.setParamSimple(map, prefix + "PeerAppid", this.PeerAppid);
         this.setParamSimple(map, prefix + "PeerStatus", this.PeerStatus);
+        this.setParamSimple(map, prefix + "Bypass", this.Bypass);
+        this.setParamSimple(map, prefix + "Progress", this.Progress);
 
     }
 }

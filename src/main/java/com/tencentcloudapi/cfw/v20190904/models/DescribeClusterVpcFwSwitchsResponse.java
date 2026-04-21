@@ -39,6 +39,13 @@ public class DescribeClusterVpcFwSwitchsResponse extends AbstractModel {
     private ClusterSwitchDetail [] Data;
 
     /**
+    * 开关开启失败列表
+    */
+    @SerializedName("FailData")
+    @Expose
+    private SwitchFailInfo [] FailData;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -82,6 +89,22 @@ public class DescribeClusterVpcFwSwitchsResponse extends AbstractModel {
     }
 
     /**
+     * Get 开关开启失败列表 
+     * @return FailData 开关开启失败列表
+     */
+    public SwitchFailInfo [] getFailData() {
+        return this.FailData;
+    }
+
+    /**
+     * Set 开关开启失败列表
+     * @param FailData 开关开启失败列表
+     */
+    public void setFailData(SwitchFailInfo [] FailData) {
+        this.FailData = FailData;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -114,6 +137,12 @@ public class DescribeClusterVpcFwSwitchsResponse extends AbstractModel {
                 this.Data[i] = new ClusterSwitchDetail(source.Data[i]);
             }
         }
+        if (source.FailData != null) {
+            this.FailData = new SwitchFailInfo[source.FailData.length];
+            for (int i = 0; i < source.FailData.length; i++) {
+                this.FailData[i] = new SwitchFailInfo(source.FailData[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -126,6 +155,7 @@ public class DescribeClusterVpcFwSwitchsResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamArrayObj(map, prefix + "FailData.", this.FailData);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

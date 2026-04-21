@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AnalysePayModeDetail extends AbstractModel {
 
     /**
-    * 计费模式code
+    * <p>计费模式code</p><p>枚举值：</p><ul><li>prePay： 包年包月</li><li>postPay： 按量计费</li></ul>
     */
     @SerializedName("PayMode")
     @Expose
     private String PayMode;
 
     /**
-    * 计费模式Name
+    * <p>计费模式Name</p>
     */
     @SerializedName("PayModeName")
     @Expose
     private String PayModeName;
 
     /**
-     * Get 计费模式code 
-     * @return PayMode 计费模式code
+     * Get <p>计费模式code</p><p>枚举值：</p><ul><li>prePay： 包年包月</li><li>postPay： 按量计费</li></ul> 
+     * @return PayMode <p>计费模式code</p><p>枚举值：</p><ul><li>prePay： 包年包月</li><li>postPay： 按量计费</li></ul>
      */
     public String getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 计费模式code
-     * @param PayMode 计费模式code
+     * Set <p>计费模式code</p><p>枚举值：</p><ul><li>prePay： 包年包月</li><li>postPay： 按量计费</li></ul>
+     * @param PayMode <p>计费模式code</p><p>枚举值：</p><ul><li>prePay： 包年包月</li><li>postPay： 按量计费</li></ul>
      */
     public void setPayMode(String PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 计费模式Name 
-     * @return PayModeName 计费模式Name
+     * Get <p>计费模式Name</p> 
+     * @return PayModeName <p>计费模式Name</p>
      */
     public String getPayModeName() {
         return this.PayModeName;
     }
 
     /**
-     * Set 计费模式Name
-     * @param PayModeName 计费模式Name
+     * Set <p>计费模式Name</p>
+     * @param PayModeName <p>计费模式Name</p>
      */
     public void setPayModeName(String PayModeName) {
         this.PayModeName = PayModeName;

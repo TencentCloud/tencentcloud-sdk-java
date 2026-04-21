@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DescribeGatherRuleDetailResponse extends AbstractModel {
 
     /**
-    * 归集规则ID
+    * <p>归集规则ID</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 归集规则所属UIN
+    * <p>归集规则所属UIN</p>
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * 归集规则最后更新时间
+    * <p>归集规则最后更新时间</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 归集规则详情
+    * <p>归集规则详情</p>
     */
     @SerializedName("RuleDetail")
     @Expose
@@ -59,64 +59,64 @@ public class DescribeGatherRuleDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 归集规则ID 
-     * @return Id 归集规则ID
+     * Get <p>归集规则ID</p> 
+     * @return Id <p>归集规则ID</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 归集规则ID
-     * @param Id 归集规则ID
+     * Set <p>归集规则ID</p>
+     * @param Id <p>归集规则ID</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 归集规则所属UIN 
-     * @return Uin 归集规则所属UIN
+     * Get <p>归集规则所属UIN</p> 
+     * @return Uin <p>归集规则所属UIN</p>
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set 归集规则所属UIN
-     * @param Uin 归集规则所属UIN
+     * Set <p>归集规则所属UIN</p>
+     * @param Uin <p>归集规则所属UIN</p>
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 归集规则最后更新时间 
-     * @return UpdateTime 归集规则最后更新时间
+     * Get <p>归集规则最后更新时间</p> 
+     * @return UpdateTime <p>归集规则最后更新时间</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 归集规则最后更新时间
-     * @param UpdateTime 归集规则最后更新时间
+     * Set <p>归集规则最后更新时间</p>
+     * @param UpdateTime <p>归集规则最后更新时间</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 归集规则详情 
-     * @return RuleDetail 归集规则详情
+     * Get <p>归集规则详情</p> 
+     * @return RuleDetail <p>归集规则详情</p>
      */
     public AllocationRuleExpression getRuleDetail() {
         return this.RuleDetail;
     }
 
     /**
-     * Set 归集规则详情
-     * @param RuleDetail 归集规则详情
+     * Set <p>归集规则详情</p>
+     * @param RuleDetail <p>归集规则详情</p>
      */
     public void setRuleDetail(AllocationRuleExpression RuleDetail) {
         this.RuleDetail = RuleDetail;

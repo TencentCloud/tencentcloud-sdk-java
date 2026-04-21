@@ -108,6 +108,13 @@ public class DescribeAigcElementResponse extends AbstractModel {
     private String UpdatedAt;
 
     /**
+    * <p>音色Id</p>
+    */
+    @SerializedName("ElementVoiceId")
+    @Expose
+    private String ElementVoiceId;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -307,6 +314,22 @@ public class DescribeAigcElementResponse extends AbstractModel {
     }
 
     /**
+     * Get <p>音色Id</p> 
+     * @return ElementVoiceId <p>音色Id</p>
+     */
+    public String getElementVoiceId() {
+        return this.ElementVoiceId;
+    }
+
+    /**
+     * Set <p>音色Id</p>
+     * @param ElementVoiceId <p>音色Id</p>
+     */
+    public void setElementVoiceId(String ElementVoiceId) {
+        this.ElementVoiceId = ElementVoiceId;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -378,6 +401,9 @@ public class DescribeAigcElementResponse extends AbstractModel {
         if (source.UpdatedAt != null) {
             this.UpdatedAt = new String(source.UpdatedAt);
         }
+        if (source.ElementVoiceId != null) {
+            this.ElementVoiceId = new String(source.ElementVoiceId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -400,6 +426,7 @@ public class DescribeAigcElementResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ProviderDetails.", this.ProviderDetails);
         this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
         this.setParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
+        this.setParamSimple(map, prefix + "ElementVoiceId", this.ElementVoiceId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

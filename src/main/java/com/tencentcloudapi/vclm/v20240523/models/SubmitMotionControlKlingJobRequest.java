@@ -38,6 +38,13 @@ public class SubmitMotionControlKlingJobRequest extends AbstractModel {
     private String Prompt;
 
     /**
+    * 
+    */
+    @SerializedName("ExternalTaskId")
+    @Expose
+    private String ExternalTaskId;
+
+    /**
     * <p>参考图像，生成视频中的人物、背景等元素均以参考图为准  视频内容需满足以下要求：  人物比例尽量与参考动作比例一致，尽量避免全身动作驱动半身人物进行生成  人物需要露出清晰的上半身或全身的肢体及头部，避免遮挡  画面中人物避免存在极端朝向，比如倒立、平卧等。人物占画面比例不得太低  支持真实/风格化的角色（包括人物/类人动物/部分纯动物/部分类人肢体比例的角色）通过  包含支持传入图片Base64编码或图片URL（确保可访问）。</p>
     */
     @SerializedName("Image")
@@ -130,6 +137,22 @@ public class SubmitMotionControlKlingJobRequest extends AbstractModel {
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
+    }
+
+    /**
+     * Get  
+     * @return ExternalTaskId 
+     */
+    public String getExternalTaskId() {
+        return this.ExternalTaskId;
+    }
+
+    /**
+     * Set 
+     * @param ExternalTaskId 
+     */
+    public void setExternalTaskId(String ExternalTaskId) {
+        this.ExternalTaskId = ExternalTaskId;
     }
 
     /**
@@ -290,6 +313,9 @@ public class SubmitMotionControlKlingJobRequest extends AbstractModel {
         if (source.Prompt != null) {
             this.Prompt = new String(source.Prompt);
         }
+        if (source.ExternalTaskId != null) {
+            this.ExternalTaskId = new String(source.ExternalTaskId);
+        }
         if (source.Image != null) {
             this.Image = new String(source.Image);
         }
@@ -329,6 +355,7 @@ public class SubmitMotionControlKlingJobRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Model", this.Model);
         this.setParamSimple(map, prefix + "Prompt", this.Prompt);
+        this.setParamSimple(map, prefix + "ExternalTaskId", this.ExternalTaskId);
         this.setParamSimple(map, prefix + "Image", this.Image);
         this.setParamSimple(map, prefix + "Video", this.Video);
         this.setParamSimple(map, prefix + "Mode", this.Mode);

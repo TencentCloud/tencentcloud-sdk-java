@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class CreateGatherRuleRequest extends AbstractModel {
 
     /**
-    * 规则所属分账单元ID
+    * <p>规则所属分账单元ID</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 归集规则详情
+    * <p>归集规则详情</p>
     */
     @SerializedName("RuleList")
     @Expose
     private GatherRuleSummary RuleList;
 
     /**
-    * 月份，不传默认当前月
+    * <p>月份，不传默认当前月</p>
     */
     @SerializedName("Month")
     @Expose
     private String Month;
 
     /**
-     * Get 规则所属分账单元ID 
-     * @return Id 规则所属分账单元ID
+     * Get <p>规则所属分账单元ID</p> 
+     * @return Id <p>规则所属分账单元ID</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 规则所属分账单元ID
-     * @param Id 规则所属分账单元ID
+     * Set <p>规则所属分账单元ID</p>
+     * @param Id <p>规则所属分账单元ID</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 归集规则详情 
-     * @return RuleList 归集规则详情
+     * Get <p>归集规则详情</p> 
+     * @return RuleList <p>归集规则详情</p>
      */
     public GatherRuleSummary getRuleList() {
         return this.RuleList;
     }
 
     /**
-     * Set 归集规则详情
-     * @param RuleList 归集规则详情
+     * Set <p>归集规则详情</p>
+     * @param RuleList <p>归集规则详情</p>
      */
     public void setRuleList(GatherRuleSummary RuleList) {
         this.RuleList = RuleList;
     }
 
     /**
-     * Get 月份，不传默认当前月 
-     * @return Month 月份，不传默认当前月
+     * Get <p>月份，不传默认当前月</p> 
+     * @return Month <p>月份，不传默认当前月</p>
      */
     public String getMonth() {
         return this.Month;
     }
 
     /**
-     * Set 月份，不传默认当前月
-     * @param Month 月份，不传默认当前月
+     * Set <p>月份，不传默认当前月</p>
+     * @param Month <p>月份，不传默认当前月</p>
      */
     public void setMonth(String Month) {
         this.Month = Month;

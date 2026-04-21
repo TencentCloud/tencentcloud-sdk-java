@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeAigcElementRequest extends AbstractModel {
 
     /**
-    * 
+    * <p>主体Id</p>
     */
     @SerializedName("ElementId")
     @Expose
     private String ElementId;
 
     /**
-     * Get  
-     * @return ElementId 
+     * Get <p>主体Id</p> 
+     * @return ElementId <p>主体Id</p>
      */
     public String getElementId() {
         return this.ElementId;
     }
 
     /**
-     * Set 
-     * @param ElementId 
+     * Set <p>主体Id</p>
+     * @param ElementId <p>主体Id</p>
      */
     public void setElementId(String ElementId) {
         this.ElementId = ElementId;

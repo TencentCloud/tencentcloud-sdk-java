@@ -24,153 +24,138 @@ import java.util.HashMap;
 public class CreateSubAppIdRequest extends AbstractModel {
 
     /**
-    * 应用名称，长度限制：40个字符。
+    * <p>应用名称，长度限制：40个字符。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 应用简介，长度限制： 300个字符。不填则应用简介默认为空。
+    * <p>应用简介，长度限制： 300个字符。不填则应用简介默认为空。</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 应用类型， 取值有：<li>AllInOne：一体化；</li><li>Professional：专业版。</li>默认值为 AllInOne。
+    * <p>应用类型， 取值有：<li>AllInOne：一体化；</li><li>Professional：专业版。</li>默认值为 AllInOne。</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 此应用的模式，可选值为：
-- fileid：仅FileID模式
-- fileid+path：FileID & Path模式
-留空时默认选择仅FileID模式
+    * <p>此应用的模式，可选值为：</p><ul><li>fileid：仅FileID模式</li><li>fileid+path：FileID &amp; Path模式<br>留空时默认选择仅FileID模式</li></ul>
     */
     @SerializedName("Mode")
     @Expose
     private String Mode;
 
     /**
-    * 存储地域
+    * <p>Mode是仅fileid时，用于设置默认存储地域，可选。<br>Mode是fileid+path时，用于指定存储地域，必填。</p><p>取值参考：<a href="https://cloud.tencent.com/document/product/266/9760">已支持地域列表</a></p>
     */
     @SerializedName("StorageRegion")
     @Expose
     private String StorageRegion;
 
     /**
-    * 此应用需要绑定的tag
+    * <p>此应用需要绑定的tag</p>
     */
     @SerializedName("Tags")
     @Expose
     private ResourceTag [] Tags;
 
     /**
-     * Get 应用名称，长度限制：40个字符。 
-     * @return Name 应用名称，长度限制：40个字符。
+     * Get <p>应用名称，长度限制：40个字符。</p> 
+     * @return Name <p>应用名称，长度限制：40个字符。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 应用名称，长度限制：40个字符。
-     * @param Name 应用名称，长度限制：40个字符。
+     * Set <p>应用名称，长度限制：40个字符。</p>
+     * @param Name <p>应用名称，长度限制：40个字符。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 应用简介，长度限制： 300个字符。不填则应用简介默认为空。 
-     * @return Description 应用简介，长度限制： 300个字符。不填则应用简介默认为空。
+     * Get <p>应用简介，长度限制： 300个字符。不填则应用简介默认为空。</p> 
+     * @return Description <p>应用简介，长度限制： 300个字符。不填则应用简介默认为空。</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 应用简介，长度限制： 300个字符。不填则应用简介默认为空。
-     * @param Description 应用简介，长度限制： 300个字符。不填则应用简介默认为空。
+     * Set <p>应用简介，长度限制： 300个字符。不填则应用简介默认为空。</p>
+     * @param Description <p>应用简介，长度限制： 300个字符。不填则应用简介默认为空。</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 应用类型， 取值有：<li>AllInOne：一体化；</li><li>Professional：专业版。</li>默认值为 AllInOne。 
-     * @return Type 应用类型， 取值有：<li>AllInOne：一体化；</li><li>Professional：专业版。</li>默认值为 AllInOne。
+     * Get <p>应用类型， 取值有：<li>AllInOne：一体化；</li><li>Professional：专业版。</li>默认值为 AllInOne。</p> 
+     * @return Type <p>应用类型， 取值有：<li>AllInOne：一体化；</li><li>Professional：专业版。</li>默认值为 AllInOne。</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 应用类型， 取值有：<li>AllInOne：一体化；</li><li>Professional：专业版。</li>默认值为 AllInOne。
-     * @param Type 应用类型， 取值有：<li>AllInOne：一体化；</li><li>Professional：专业版。</li>默认值为 AllInOne。
+     * Set <p>应用类型， 取值有：<li>AllInOne：一体化；</li><li>Professional：专业版。</li>默认值为 AllInOne。</p>
+     * @param Type <p>应用类型， 取值有：<li>AllInOne：一体化；</li><li>Professional：专业版。</li>默认值为 AllInOne。</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 此应用的模式，可选值为：
-- fileid：仅FileID模式
-- fileid+path：FileID & Path模式
-留空时默认选择仅FileID模式 
-     * @return Mode 此应用的模式，可选值为：
-- fileid：仅FileID模式
-- fileid+path：FileID & Path模式
-留空时默认选择仅FileID模式
+     * Get <p>此应用的模式，可选值为：</p><ul><li>fileid：仅FileID模式</li><li>fileid+path：FileID &amp; Path模式<br>留空时默认选择仅FileID模式</li></ul> 
+     * @return Mode <p>此应用的模式，可选值为：</p><ul><li>fileid：仅FileID模式</li><li>fileid+path：FileID &amp; Path模式<br>留空时默认选择仅FileID模式</li></ul>
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set 此应用的模式，可选值为：
-- fileid：仅FileID模式
-- fileid+path：FileID & Path模式
-留空时默认选择仅FileID模式
-     * @param Mode 此应用的模式，可选值为：
-- fileid：仅FileID模式
-- fileid+path：FileID & Path模式
-留空时默认选择仅FileID模式
+     * Set <p>此应用的模式，可选值为：</p><ul><li>fileid：仅FileID模式</li><li>fileid+path：FileID &amp; Path模式<br>留空时默认选择仅FileID模式</li></ul>
+     * @param Mode <p>此应用的模式，可选值为：</p><ul><li>fileid：仅FileID模式</li><li>fileid+path：FileID &amp; Path模式<br>留空时默认选择仅FileID模式</li></ul>
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get 存储地域 
-     * @return StorageRegion 存储地域
+     * Get <p>Mode是仅fileid时，用于设置默认存储地域，可选。<br>Mode是fileid+path时，用于指定存储地域，必填。</p><p>取值参考：<a href="https://cloud.tencent.com/document/product/266/9760">已支持地域列表</a></p> 
+     * @return StorageRegion <p>Mode是仅fileid时，用于设置默认存储地域，可选。<br>Mode是fileid+path时，用于指定存储地域，必填。</p><p>取值参考：<a href="https://cloud.tencent.com/document/product/266/9760">已支持地域列表</a></p>
      */
     public String getStorageRegion() {
         return this.StorageRegion;
     }
 
     /**
-     * Set 存储地域
-     * @param StorageRegion 存储地域
+     * Set <p>Mode是仅fileid时，用于设置默认存储地域，可选。<br>Mode是fileid+path时，用于指定存储地域，必填。</p><p>取值参考：<a href="https://cloud.tencent.com/document/product/266/9760">已支持地域列表</a></p>
+     * @param StorageRegion <p>Mode是仅fileid时，用于设置默认存储地域，可选。<br>Mode是fileid+path时，用于指定存储地域，必填。</p><p>取值参考：<a href="https://cloud.tencent.com/document/product/266/9760">已支持地域列表</a></p>
      */
     public void setStorageRegion(String StorageRegion) {
         this.StorageRegion = StorageRegion;
     }
 
     /**
-     * Get 此应用需要绑定的tag 
-     * @return Tags 此应用需要绑定的tag
+     * Get <p>此应用需要绑定的tag</p> 
+     * @return Tags <p>此应用需要绑定的tag</p>
      */
     public ResourceTag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 此应用需要绑定的tag
-     * @param Tags 此应用需要绑定的tag
+     * Set <p>此应用需要绑定的tag</p>
+     * @param Tags <p>此应用需要绑定的tag</p>
      */
     public void setTags(ResourceTag [] Tags) {
         this.Tags = Tags;

@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeAllocationOverviewResponse extends AbstractModel {
 
     /**
-    * 总条数
+    * <p>总条数</p>
     */
     @SerializedName("RecordNum")
     @Expose
     private Long RecordNum;
 
     /**
-    * 分账账单概览金额汇总
+    * <p>分账账单概览金额汇总</p>
     */
     @SerializedName("Total")
     @Expose
     private AllocationOverviewTotal Total;
 
     /**
-    * 分账概览明细
+    * <p>分账概览明细</p>
     */
     @SerializedName("Detail")
     @Expose
@@ -52,48 +52,48 @@ public class DescribeAllocationOverviewResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总条数 
-     * @return RecordNum 总条数
+     * Get <p>总条数</p> 
+     * @return RecordNum <p>总条数</p>
      */
     public Long getRecordNum() {
         return this.RecordNum;
     }
 
     /**
-     * Set 总条数
-     * @param RecordNum 总条数
+     * Set <p>总条数</p>
+     * @param RecordNum <p>总条数</p>
      */
     public void setRecordNum(Long RecordNum) {
         this.RecordNum = RecordNum;
     }
 
     /**
-     * Get 分账账单概览金额汇总 
-     * @return Total 分账账单概览金额汇总
+     * Get <p>分账账单概览金额汇总</p> 
+     * @return Total <p>分账账单概览金额汇总</p>
      */
     public AllocationOverviewTotal getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 分账账单概览金额汇总
-     * @param Total 分账账单概览金额汇总
+     * Set <p>分账账单概览金额汇总</p>
+     * @param Total <p>分账账单概览金额汇总</p>
      */
     public void setTotal(AllocationOverviewTotal Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 分账概览明细 
-     * @return Detail 分账概览明细
+     * Get <p>分账概览明细</p> 
+     * @return Detail <p>分账概览明细</p>
      */
     public AllocationOverviewDetail [] getDetail() {
         return this.Detail;
     }
 
     /**
-     * Set 分账概览明细
-     * @param Detail 分账概览明细
+     * Set <p>分账概览明细</p>
+     * @param Detail <p>分账概览明细</p>
      */
     public void setDetail(AllocationOverviewDetail [] Detail) {
         this.Detail = Detail;

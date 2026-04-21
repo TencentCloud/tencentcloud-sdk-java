@@ -24,210 +24,233 @@ import java.util.HashMap;
 public class CreateCasInput extends AbstractModel {
 
     /**
-    * 敏捷上云名称
+    * <p>敏捷上云名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 需要接入敏捷上云的IDC的地址
+    * <p>需要接入敏捷上云的IDC的地址</p>
     */
     @SerializedName("IdcAddress")
     @Expose
     private String IdcAddress;
 
     /**
-    * 需要接入敏捷上云的IDC的互联网服务提供商类型
+    * <p>需要接入敏捷上云的IDC的互联网服务提供商类型</p>
     */
     @SerializedName("IdcType")
     @Expose
     private String IdcType;
 
     /**
-    * 敏捷上云的带宽，单位为MB
+    * <p>敏捷上云的带宽，单位为MB</p>
     */
     @SerializedName("Bandwidth")
     @Expose
     private Long Bandwidth;
 
     /**
-    * 联系电话
+    * <p>联系电话</p>
     */
     @SerializedName("Telephone")
     @Expose
     private String Telephone;
 
     /**
-    * 备注信息
+    * <p>备注信息</p>
     */
     @SerializedName("Remarks")
     @Expose
     private String Remarks;
 
     /**
-    * 接入地域
+    * <p>接入地域</p>
     */
     @SerializedName("ArRegion")
     @Expose
     private String ArRegion;
 
     /**
-    * IDC侧类型，默认为OTHER。枚举值：CLOUD-云，ISP-运营商，OTHER-第三方
+    * <p>IDC侧类型，默认为OTHER。枚举值：CLOUD-云，ISP-运营商，OTHER-第三方</p>
     */
     @SerializedName("IdcPointType")
     @Expose
     private String IdcPointType;
 
     /**
-    * 运营商链路是否有保护
+    * <p>运营商链路是否有保护</p>
     */
     @SerializedName("BIapLinkProtected")
     @Expose
     private Boolean BIapLinkProtected;
 
     /**
-     * Get 敏捷上云名称 
-     * @return Name 敏捷上云名称
+    * <p>服务类型，SHARE-共享型，EXCLUSIVE-独占型</p>
+    */
+    @SerializedName("ServiceType")
+    @Expose
+    private String ServiceType;
+
+    /**
+     * Get <p>敏捷上云名称</p> 
+     * @return Name <p>敏捷上云名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 敏捷上云名称
-     * @param Name 敏捷上云名称
+     * Set <p>敏捷上云名称</p>
+     * @param Name <p>敏捷上云名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 需要接入敏捷上云的IDC的地址 
-     * @return IdcAddress 需要接入敏捷上云的IDC的地址
+     * Get <p>需要接入敏捷上云的IDC的地址</p> 
+     * @return IdcAddress <p>需要接入敏捷上云的IDC的地址</p>
      */
     public String getIdcAddress() {
         return this.IdcAddress;
     }
 
     /**
-     * Set 需要接入敏捷上云的IDC的地址
-     * @param IdcAddress 需要接入敏捷上云的IDC的地址
+     * Set <p>需要接入敏捷上云的IDC的地址</p>
+     * @param IdcAddress <p>需要接入敏捷上云的IDC的地址</p>
      */
     public void setIdcAddress(String IdcAddress) {
         this.IdcAddress = IdcAddress;
     }
 
     /**
-     * Get 需要接入敏捷上云的IDC的互联网服务提供商类型 
-     * @return IdcType 需要接入敏捷上云的IDC的互联网服务提供商类型
+     * Get <p>需要接入敏捷上云的IDC的互联网服务提供商类型</p> 
+     * @return IdcType <p>需要接入敏捷上云的IDC的互联网服务提供商类型</p>
      */
     public String getIdcType() {
         return this.IdcType;
     }
 
     /**
-     * Set 需要接入敏捷上云的IDC的互联网服务提供商类型
-     * @param IdcType 需要接入敏捷上云的IDC的互联网服务提供商类型
+     * Set <p>需要接入敏捷上云的IDC的互联网服务提供商类型</p>
+     * @param IdcType <p>需要接入敏捷上云的IDC的互联网服务提供商类型</p>
      */
     public void setIdcType(String IdcType) {
         this.IdcType = IdcType;
     }
 
     /**
-     * Get 敏捷上云的带宽，单位为MB 
-     * @return Bandwidth 敏捷上云的带宽，单位为MB
+     * Get <p>敏捷上云的带宽，单位为MB</p> 
+     * @return Bandwidth <p>敏捷上云的带宽，单位为MB</p>
      */
     public Long getBandwidth() {
         return this.Bandwidth;
     }
 
     /**
-     * Set 敏捷上云的带宽，单位为MB
-     * @param Bandwidth 敏捷上云的带宽，单位为MB
+     * Set <p>敏捷上云的带宽，单位为MB</p>
+     * @param Bandwidth <p>敏捷上云的带宽，单位为MB</p>
      */
     public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 
     /**
-     * Get 联系电话 
-     * @return Telephone 联系电话
+     * Get <p>联系电话</p> 
+     * @return Telephone <p>联系电话</p>
      */
     public String getTelephone() {
         return this.Telephone;
     }
 
     /**
-     * Set 联系电话
-     * @param Telephone 联系电话
+     * Set <p>联系电话</p>
+     * @param Telephone <p>联系电话</p>
      */
     public void setTelephone(String Telephone) {
         this.Telephone = Telephone;
     }
 
     /**
-     * Get 备注信息 
-     * @return Remarks 备注信息
+     * Get <p>备注信息</p> 
+     * @return Remarks <p>备注信息</p>
      */
     public String getRemarks() {
         return this.Remarks;
     }
 
     /**
-     * Set 备注信息
-     * @param Remarks 备注信息
+     * Set <p>备注信息</p>
+     * @param Remarks <p>备注信息</p>
      */
     public void setRemarks(String Remarks) {
         this.Remarks = Remarks;
     }
 
     /**
-     * Get 接入地域 
-     * @return ArRegion 接入地域
+     * Get <p>接入地域</p> 
+     * @return ArRegion <p>接入地域</p>
      */
     public String getArRegion() {
         return this.ArRegion;
     }
 
     /**
-     * Set 接入地域
-     * @param ArRegion 接入地域
+     * Set <p>接入地域</p>
+     * @param ArRegion <p>接入地域</p>
      */
     public void setArRegion(String ArRegion) {
         this.ArRegion = ArRegion;
     }
 
     /**
-     * Get IDC侧类型，默认为OTHER。枚举值：CLOUD-云，ISP-运营商，OTHER-第三方 
-     * @return IdcPointType IDC侧类型，默认为OTHER。枚举值：CLOUD-云，ISP-运营商，OTHER-第三方
+     * Get <p>IDC侧类型，默认为OTHER。枚举值：CLOUD-云，ISP-运营商，OTHER-第三方</p> 
+     * @return IdcPointType <p>IDC侧类型，默认为OTHER。枚举值：CLOUD-云，ISP-运营商，OTHER-第三方</p>
      */
     public String getIdcPointType() {
         return this.IdcPointType;
     }
 
     /**
-     * Set IDC侧类型，默认为OTHER。枚举值：CLOUD-云，ISP-运营商，OTHER-第三方
-     * @param IdcPointType IDC侧类型，默认为OTHER。枚举值：CLOUD-云，ISP-运营商，OTHER-第三方
+     * Set <p>IDC侧类型，默认为OTHER。枚举值：CLOUD-云，ISP-运营商，OTHER-第三方</p>
+     * @param IdcPointType <p>IDC侧类型，默认为OTHER。枚举值：CLOUD-云，ISP-运营商，OTHER-第三方</p>
      */
     public void setIdcPointType(String IdcPointType) {
         this.IdcPointType = IdcPointType;
     }
 
     /**
-     * Get 运营商链路是否有保护 
-     * @return BIapLinkProtected 运营商链路是否有保护
+     * Get <p>运营商链路是否有保护</p> 
+     * @return BIapLinkProtected <p>运营商链路是否有保护</p>
      */
     public Boolean getBIapLinkProtected() {
         return this.BIapLinkProtected;
     }
 
     /**
-     * Set 运营商链路是否有保护
-     * @param BIapLinkProtected 运营商链路是否有保护
+     * Set <p>运营商链路是否有保护</p>
+     * @param BIapLinkProtected <p>运营商链路是否有保护</p>
      */
     public void setBIapLinkProtected(Boolean BIapLinkProtected) {
         this.BIapLinkProtected = BIapLinkProtected;
+    }
+
+    /**
+     * Get <p>服务类型，SHARE-共享型，EXCLUSIVE-独占型</p> 
+     * @return ServiceType <p>服务类型，SHARE-共享型，EXCLUSIVE-独占型</p>
+     */
+    public String getServiceType() {
+        return this.ServiceType;
+    }
+
+    /**
+     * Set <p>服务类型，SHARE-共享型，EXCLUSIVE-独占型</p>
+     * @param ServiceType <p>服务类型，SHARE-共享型，EXCLUSIVE-独占型</p>
+     */
+    public void setServiceType(String ServiceType) {
+        this.ServiceType = ServiceType;
     }
 
     public CreateCasInput() {
@@ -265,6 +288,9 @@ public class CreateCasInput extends AbstractModel {
         if (source.BIapLinkProtected != null) {
             this.BIapLinkProtected = new Boolean(source.BIapLinkProtected);
         }
+        if (source.ServiceType != null) {
+            this.ServiceType = new String(source.ServiceType);
+        }
     }
 
 
@@ -281,6 +307,7 @@ public class CreateCasInput extends AbstractModel {
         this.setParamSimple(map, prefix + "ArRegion", this.ArRegion);
         this.setParamSimple(map, prefix + "IdcPointType", this.IdcPointType);
         this.setParamSimple(map, prefix + "BIapLinkProtected", this.BIapLinkProtected);
+        this.setParamSimple(map, prefix + "ServiceType", this.ServiceType);
 
     }
 }

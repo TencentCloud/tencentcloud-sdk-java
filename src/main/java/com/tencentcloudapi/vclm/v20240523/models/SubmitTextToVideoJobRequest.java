@@ -31,7 +31,7 @@ public class SubmitTextToVideoJobRequest extends AbstractModel {
     private String Prompt;
 
     /**
-    * <p>模型名称。<br>v1.6：Kling-V1-6<br>v2.0：Kling-V2-Master<br>v2.5：Kling-V2-5-Turbo<br>v2.6：Kling-V2-6<br>v3.0：kling-v3</p>
+    * <p>模型名称。<br>v1.0：Kling-V1<br>v1.5：Kling-V1-5<br>v1.6：Kling-V1-6<br>v2.0：Kling-V2-Master<br>v2.1m：Kling-V2-1-master<br>v2.5：Kling-V2-5-Turbo<br>v2.6：Kling-V2-6<br>v3.0：kling-v3</p>
     */
     @SerializedName("Model")
     @Expose
@@ -45,14 +45,14 @@ public class SubmitTextToVideoJobRequest extends AbstractModel {
     private String NegativePrompt;
 
     /**
-    * <p>生成视频时长，单位s。默认值为5。<br>枚举值：3，4，5，6，7，8，9，10，11，12，13，14，15</p><p>不同模型支持时长不同</p><ul><li>模型v1.6、v2.0、v2.5、v2.6：支持5、10</li><li>模型v3.0：支持3～15s</li></ul>
+    * <p>生成视频时长，单位s。默认值为5。<br>枚举值：3，4，5，6，7，8，9，10，11，12，13，14，15不同模型支持时长不同<br>●模型v1.0、v1.6、v2.0、v2.1m、v2.5、v2.6：支持5、10<br>●模型v3.0：支持3～15s</p>
     */
     @SerializedName("Duration")
     @Expose
     private String Duration;
 
     /**
-    * <p>生成视频的模式；</p><p>枚举值：std，pro</p><ul><li>其中std：标准模式（标准），基础模式，性价比高</li><li>其中pro：专家模式（高品质），高表现模式，生成视频质量更佳</li></ul><p>不同模型版本、视频模式支持范围不同</p><ul><li>v1.6：std、pro。</li><li>v2.0、v3.0：模型无需配置。</li><li>v2.5：首尾帧情况下支持pro。</li><li>v2.6：仅支持pro，选择v2.6模型时，默认自动生成高品质pro视频。</li></ul>
+    * <p>生成视频的模式；<br>枚举值：std，pro<br>●其中std：标准模式（标准），基础模式，性价比高<br>●其中pro：专家模式（高品质），高表现模式，生成视频质量更佳<br>不同模型版本、视频模式支持范围不同</p><p>●v1.6：std、pro。<br>●v1.0、v1.5：pro<br>●v2.0、v2.1m、v3.0：模型无需配置。<br>●v2.5：首尾帧情况下支持pro。<br>●v2.6：仅支持pro，选择v2.6模型时，默认自动生成高品质pro视频。</p>
     */
     @SerializedName("Mode")
     @Expose
@@ -129,6 +129,13 @@ public class SubmitTextToVideoJobRequest extends AbstractModel {
     private String CallbackUrl;
 
     /**
+    * 
+    */
+    @SerializedName("ExternalTaskId")
+    @Expose
+    private String ExternalTaskId;
+
+    /**
      * Get <p>正向文本提示词。不能超过2500个字符</p> 
      * @return Prompt <p>正向文本提示词。不能超过2500个字符</p>
      */
@@ -145,16 +152,16 @@ public class SubmitTextToVideoJobRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>模型名称。<br>v1.6：Kling-V1-6<br>v2.0：Kling-V2-Master<br>v2.5：Kling-V2-5-Turbo<br>v2.6：Kling-V2-6<br>v3.0：kling-v3</p> 
-     * @return Model <p>模型名称。<br>v1.6：Kling-V1-6<br>v2.0：Kling-V2-Master<br>v2.5：Kling-V2-5-Turbo<br>v2.6：Kling-V2-6<br>v3.0：kling-v3</p>
+     * Get <p>模型名称。<br>v1.0：Kling-V1<br>v1.5：Kling-V1-5<br>v1.6：Kling-V1-6<br>v2.0：Kling-V2-Master<br>v2.1m：Kling-V2-1-master<br>v2.5：Kling-V2-5-Turbo<br>v2.6：Kling-V2-6<br>v3.0：kling-v3</p> 
+     * @return Model <p>模型名称。<br>v1.0：Kling-V1<br>v1.5：Kling-V1-5<br>v1.6：Kling-V1-6<br>v2.0：Kling-V2-Master<br>v2.1m：Kling-V2-1-master<br>v2.5：Kling-V2-5-Turbo<br>v2.6：Kling-V2-6<br>v3.0：kling-v3</p>
      */
     public String getModel() {
         return this.Model;
     }
 
     /**
-     * Set <p>模型名称。<br>v1.6：Kling-V1-6<br>v2.0：Kling-V2-Master<br>v2.5：Kling-V2-5-Turbo<br>v2.6：Kling-V2-6<br>v3.0：kling-v3</p>
-     * @param Model <p>模型名称。<br>v1.6：Kling-V1-6<br>v2.0：Kling-V2-Master<br>v2.5：Kling-V2-5-Turbo<br>v2.6：Kling-V2-6<br>v3.0：kling-v3</p>
+     * Set <p>模型名称。<br>v1.0：Kling-V1<br>v1.5：Kling-V1-5<br>v1.6：Kling-V1-6<br>v2.0：Kling-V2-Master<br>v2.1m：Kling-V2-1-master<br>v2.5：Kling-V2-5-Turbo<br>v2.6：Kling-V2-6<br>v3.0：kling-v3</p>
+     * @param Model <p>模型名称。<br>v1.0：Kling-V1<br>v1.5：Kling-V1-5<br>v1.6：Kling-V1-6<br>v2.0：Kling-V2-Master<br>v2.1m：Kling-V2-1-master<br>v2.5：Kling-V2-5-Turbo<br>v2.6：Kling-V2-6<br>v3.0：kling-v3</p>
      */
     public void setModel(String Model) {
         this.Model = Model;
@@ -177,32 +184,32 @@ public class SubmitTextToVideoJobRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>生成视频时长，单位s。默认值为5。<br>枚举值：3，4，5，6，7，8，9，10，11，12，13，14，15</p><p>不同模型支持时长不同</p><ul><li>模型v1.6、v2.0、v2.5、v2.6：支持5、10</li><li>模型v3.0：支持3～15s</li></ul> 
-     * @return Duration <p>生成视频时长，单位s。默认值为5。<br>枚举值：3，4，5，6，7，8，9，10，11，12，13，14，15</p><p>不同模型支持时长不同</p><ul><li>模型v1.6、v2.0、v2.5、v2.6：支持5、10</li><li>模型v3.0：支持3～15s</li></ul>
+     * Get <p>生成视频时长，单位s。默认值为5。<br>枚举值：3，4，5，6，7，8，9，10，11，12，13，14，15不同模型支持时长不同<br>●模型v1.0、v1.6、v2.0、v2.1m、v2.5、v2.6：支持5、10<br>●模型v3.0：支持3～15s</p> 
+     * @return Duration <p>生成视频时长，单位s。默认值为5。<br>枚举值：3，4，5，6，7，8，9，10，11，12，13，14，15不同模型支持时长不同<br>●模型v1.0、v1.6、v2.0、v2.1m、v2.5、v2.6：支持5、10<br>●模型v3.0：支持3～15s</p>
      */
     public String getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set <p>生成视频时长，单位s。默认值为5。<br>枚举值：3，4，5，6，7，8，9，10，11，12，13，14，15</p><p>不同模型支持时长不同</p><ul><li>模型v1.6、v2.0、v2.5、v2.6：支持5、10</li><li>模型v3.0：支持3～15s</li></ul>
-     * @param Duration <p>生成视频时长，单位s。默认值为5。<br>枚举值：3，4，5，6，7，8，9，10，11，12，13，14，15</p><p>不同模型支持时长不同</p><ul><li>模型v1.6、v2.0、v2.5、v2.6：支持5、10</li><li>模型v3.0：支持3～15s</li></ul>
+     * Set <p>生成视频时长，单位s。默认值为5。<br>枚举值：3，4，5，6，7，8，9，10，11，12，13，14，15不同模型支持时长不同<br>●模型v1.0、v1.6、v2.0、v2.1m、v2.5、v2.6：支持5、10<br>●模型v3.0：支持3～15s</p>
+     * @param Duration <p>生成视频时长，单位s。默认值为5。<br>枚举值：3，4，5，6，7，8，9，10，11，12，13，14，15不同模型支持时长不同<br>●模型v1.0、v1.6、v2.0、v2.1m、v2.5、v2.6：支持5、10<br>●模型v3.0：支持3～15s</p>
      */
     public void setDuration(String Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get <p>生成视频的模式；</p><p>枚举值：std，pro</p><ul><li>其中std：标准模式（标准），基础模式，性价比高</li><li>其中pro：专家模式（高品质），高表现模式，生成视频质量更佳</li></ul><p>不同模型版本、视频模式支持范围不同</p><ul><li>v1.6：std、pro。</li><li>v2.0、v3.0：模型无需配置。</li><li>v2.5：首尾帧情况下支持pro。</li><li>v2.6：仅支持pro，选择v2.6模型时，默认自动生成高品质pro视频。</li></ul> 
-     * @return Mode <p>生成视频的模式；</p><p>枚举值：std，pro</p><ul><li>其中std：标准模式（标准），基础模式，性价比高</li><li>其中pro：专家模式（高品质），高表现模式，生成视频质量更佳</li></ul><p>不同模型版本、视频模式支持范围不同</p><ul><li>v1.6：std、pro。</li><li>v2.0、v3.0：模型无需配置。</li><li>v2.5：首尾帧情况下支持pro。</li><li>v2.6：仅支持pro，选择v2.6模型时，默认自动生成高品质pro视频。</li></ul>
+     * Get <p>生成视频的模式；<br>枚举值：std，pro<br>●其中std：标准模式（标准），基础模式，性价比高<br>●其中pro：专家模式（高品质），高表现模式，生成视频质量更佳<br>不同模型版本、视频模式支持范围不同</p><p>●v1.6：std、pro。<br>●v1.0、v1.5：pro<br>●v2.0、v2.1m、v3.0：模型无需配置。<br>●v2.5：首尾帧情况下支持pro。<br>●v2.6：仅支持pro，选择v2.6模型时，默认自动生成高品质pro视频。</p> 
+     * @return Mode <p>生成视频的模式；<br>枚举值：std，pro<br>●其中std：标准模式（标准），基础模式，性价比高<br>●其中pro：专家模式（高品质），高表现模式，生成视频质量更佳<br>不同模型版本、视频模式支持范围不同</p><p>●v1.6：std、pro。<br>●v1.0、v1.5：pro<br>●v2.0、v2.1m、v3.0：模型无需配置。<br>●v2.5：首尾帧情况下支持pro。<br>●v2.6：仅支持pro，选择v2.6模型时，默认自动生成高品质pro视频。</p>
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set <p>生成视频的模式；</p><p>枚举值：std，pro</p><ul><li>其中std：标准模式（标准），基础模式，性价比高</li><li>其中pro：专家模式（高品质），高表现模式，生成视频质量更佳</li></ul><p>不同模型版本、视频模式支持范围不同</p><ul><li>v1.6：std、pro。</li><li>v2.0、v3.0：模型无需配置。</li><li>v2.5：首尾帧情况下支持pro。</li><li>v2.6：仅支持pro，选择v2.6模型时，默认自动生成高品质pro视频。</li></ul>
-     * @param Mode <p>生成视频的模式；</p><p>枚举值：std，pro</p><ul><li>其中std：标准模式（标准），基础模式，性价比高</li><li>其中pro：专家模式（高品质），高表现模式，生成视频质量更佳</li></ul><p>不同模型版本、视频模式支持范围不同</p><ul><li>v1.6：std、pro。</li><li>v2.0、v3.0：模型无需配置。</li><li>v2.5：首尾帧情况下支持pro。</li><li>v2.6：仅支持pro，选择v2.6模型时，默认自动生成高品质pro视频。</li></ul>
+     * Set <p>生成视频的模式；<br>枚举值：std，pro<br>●其中std：标准模式（标准），基础模式，性价比高<br>●其中pro：专家模式（高品质），高表现模式，生成视频质量更佳<br>不同模型版本、视频模式支持范围不同</p><p>●v1.6：std、pro。<br>●v1.0、v1.5：pro<br>●v2.0、v2.1m、v3.0：模型无需配置。<br>●v2.5：首尾帧情况下支持pro。<br>●v2.6：仅支持pro，选择v2.6模型时，默认自动生成高品质pro视频。</p>
+     * @param Mode <p>生成视频的模式；<br>枚举值：std，pro<br>●其中std：标准模式（标准），基础模式，性价比高<br>●其中pro：专家模式（高品质），高表现模式，生成视频质量更佳<br>不同模型版本、视频模式支持范围不同</p><p>●v1.6：std、pro。<br>●v1.0、v1.5：pro<br>●v2.0、v2.1m、v3.0：模型无需配置。<br>●v2.5：首尾帧情况下支持pro。<br>●v2.6：仅支持pro，选择v2.6模型时，默认自动生成高品质pro视频。</p>
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
@@ -368,6 +375,22 @@ public class SubmitTextToVideoJobRequest extends AbstractModel {
         this.CallbackUrl = CallbackUrl;
     }
 
+    /**
+     * Get  
+     * @return ExternalTaskId 
+     */
+    public String getExternalTaskId() {
+        return this.ExternalTaskId;
+    }
+
+    /**
+     * Set 
+     * @param ExternalTaskId 
+     */
+    public void setExternalTaskId(String ExternalTaskId) {
+        this.ExternalTaskId = ExternalTaskId;
+    }
+
     public SubmitTextToVideoJobRequest() {
     }
 
@@ -424,6 +447,9 @@ public class SubmitTextToVideoJobRequest extends AbstractModel {
         if (source.CallbackUrl != null) {
             this.CallbackUrl = new String(source.CallbackUrl);
         }
+        if (source.ExternalTaskId != null) {
+            this.ExternalTaskId = new String(source.ExternalTaskId);
+        }
     }
 
 
@@ -446,6 +472,7 @@ public class SubmitTextToVideoJobRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "MultiPrompt.", this.MultiPrompt);
         this.setParamObj(map, prefix + "CameraControl.", this.CameraControl);
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
+        this.setParamSimple(map, prefix + "ExternalTaskId", this.ExternalTaskId);
 
     }
 }

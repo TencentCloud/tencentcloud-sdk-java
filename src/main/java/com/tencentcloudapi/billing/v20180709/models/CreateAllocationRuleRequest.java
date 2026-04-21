@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CreateAllocationRuleRequest extends AbstractModel {
 
     /**
-    * 公摊规则列表
+    * <p>公摊规则列表</p>
     */
     @SerializedName("RuleList")
     @Expose
     private AllocationRulesSummary RuleList;
 
     /**
-    * 月份，不传默认当前月
+    * <p>月份，不传默认当前月</p>
     */
     @SerializedName("Month")
     @Expose
     private String Month;
 
     /**
-     * Get 公摊规则列表 
-     * @return RuleList 公摊规则列表
+     * Get <p>公摊规则列表</p> 
+     * @return RuleList <p>公摊规则列表</p>
      */
     public AllocationRulesSummary getRuleList() {
         return this.RuleList;
     }
 
     /**
-     * Set 公摊规则列表
-     * @param RuleList 公摊规则列表
+     * Set <p>公摊规则列表</p>
+     * @param RuleList <p>公摊规则列表</p>
      */
     public void setRuleList(AllocationRulesSummary RuleList) {
         this.RuleList = RuleList;
     }
 
     /**
-     * Get 月份，不传默认当前月 
-     * @return Month 月份，不传默认当前月
+     * Get <p>月份，不传默认当前月</p> 
+     * @return Month <p>月份，不传默认当前月</p>
      */
     public String getMonth() {
         return this.Month;
     }
 
     /**
-     * Set 月份，不传默认当前月
-     * @param Month 月份，不传默认当前月
+     * Set <p>月份，不传默认当前月</p>
+     * @param Month <p>月份，不传默认当前月</p>
      */
     public void setMonth(String Month) {
         this.Month = Month;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeGatherRuleDetailRequest extends AbstractModel {
 
     /**
-    * 所查询归集规则ID
+    * <p>所查询归集规则ID</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 月份，不传默认当前月
+    * <p>月份，不传默认当前月</p>
     */
     @SerializedName("Month")
     @Expose
     private String Month;
 
     /**
-     * Get 所查询归集规则ID 
-     * @return Id 所查询归集规则ID
+     * Get <p>所查询归集规则ID</p> 
+     * @return Id <p>所查询归集规则ID</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 所查询归集规则ID
-     * @param Id 所查询归集规则ID
+     * Set <p>所查询归集规则ID</p>
+     * @param Id <p>所查询归集规则ID</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 月份，不传默认当前月 
-     * @return Month 月份，不传默认当前月
+     * Get <p>月份，不传默认当前月</p> 
+     * @return Month <p>月份，不传默认当前月</p>
      */
     public String getMonth() {
         return this.Month;
     }
 
     /**
-     * Set 月份，不传默认当前月
-     * @param Month 月份，不传默认当前月
+     * Set <p>月份，不传默认当前月</p>
+     * @param Month <p>月份，不传默认当前月</p>
      */
     public void setMonth(String Month) {
         this.Month = Month;

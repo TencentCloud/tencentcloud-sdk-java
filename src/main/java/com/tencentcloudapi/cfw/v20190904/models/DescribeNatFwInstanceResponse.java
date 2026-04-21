@@ -24,11 +24,18 @@ import java.util.HashMap;
 public class DescribeNatFwInstanceResponse extends AbstractModel {
 
     /**
-    * 实例数组
+    * <p>实例数组</p>
     */
     @SerializedName("NatinsLst")
     @Expose
     private NatFwInstance [] NatinsLst;
+
+    /**
+    * <p>nat ccn集群防火墙列表</p>
+    */
+    @SerializedName("NatClusterLst")
+    @Expose
+    private NatClusterInfo [] NatClusterLst;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +45,35 @@ public class DescribeNatFwInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实例数组 
-     * @return NatinsLst 实例数组
+     * Get <p>实例数组</p> 
+     * @return NatinsLst <p>实例数组</p>
      */
     public NatFwInstance [] getNatinsLst() {
         return this.NatinsLst;
     }
 
     /**
-     * Set 实例数组
-     * @param NatinsLst 实例数组
+     * Set <p>实例数组</p>
+     * @param NatinsLst <p>实例数组</p>
      */
     public void setNatinsLst(NatFwInstance [] NatinsLst) {
         this.NatinsLst = NatinsLst;
+    }
+
+    /**
+     * Get <p>nat ccn集群防火墙列表</p> 
+     * @return NatClusterLst <p>nat ccn集群防火墙列表</p>
+     */
+    public NatClusterInfo [] getNatClusterLst() {
+        return this.NatClusterLst;
+    }
+
+    /**
+     * Set <p>nat ccn集群防火墙列表</p>
+     * @param NatClusterLst <p>nat ccn集群防火墙列表</p>
+     */
+    public void setNatClusterLst(NatClusterInfo [] NatClusterLst) {
+        this.NatClusterLst = NatClusterLst;
     }
 
     /**
@@ -83,6 +106,12 @@ public class DescribeNatFwInstanceResponse extends AbstractModel {
                 this.NatinsLst[i] = new NatFwInstance(source.NatinsLst[i]);
             }
         }
+        if (source.NatClusterLst != null) {
+            this.NatClusterLst = new NatClusterInfo[source.NatClusterLst.length];
+            for (int i = 0; i < source.NatClusterLst.length; i++) {
+                this.NatClusterLst[i] = new NatClusterInfo(source.NatClusterLst[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -94,6 +123,7 @@ public class DescribeNatFwInstanceResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "NatinsLst.", this.NatinsLst);
+        this.setParamArrayObj(map, prefix + "NatClusterLst.", this.NatClusterLst);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

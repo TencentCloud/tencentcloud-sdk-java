@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateAllocationRuleResponse extends AbstractModel {
 
     /**
-    * 新增公摊规则ID
+    * <p>新增公摊规则ID</p>
     */
     @SerializedName("Id")
     @Expose
@@ -38,16 +38,16 @@ public class CreateAllocationRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 新增公摊规则ID 
-     * @return Id 新增公摊规则ID
+     * Get <p>新增公摊规则ID</p> 
+     * @return Id <p>新增公摊规则ID</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 新增公摊规则ID
-     * @param Id 新增公摊规则ID
+     * Set <p>新增公摊规则ID</p>
+     * @param Id <p>新增公摊规则ID</p>
      */
     public void setId(Long Id) {
         this.Id = Id;

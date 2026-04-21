@@ -24,437 +24,437 @@ import java.util.HashMap;
 public class Conditions extends AbstractModel {
 
     /**
-    * 只支持6和12两个值
+    * <p>只支持6个月和12个月两个值</p>
     */
     @SerializedName("TimeRange")
     @Expose
     private Long TimeRange;
 
     /**
-    * 产品名称代码
+    * <p>产品名称代码</p>
     */
     @SerializedName("BusinessCode")
     @Expose
     private String BusinessCode;
 
     /**
-    * 项目ID
+    * <p>项目ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 地域ID
+    * <p>地域ID</p>
     */
     @SerializedName("RegionId")
     @Expose
     private Long RegionId;
 
     /**
-    * 付费模式，可选prePay和postPay
+    * <p>付费模式，可选prePay和postPay</p>
     */
     @SerializedName("PayMode")
     @Expose
     private String PayMode;
 
     /**
-    * 资源关键字
+    * <p>资源关键字</p>
     */
     @SerializedName("ResourceKeyword")
     @Expose
     private String ResourceKeyword;
 
     /**
-    * 产品名称代码
+    * <p>产品名称代码</p>
     */
     @SerializedName("BusinessCodes")
     @Expose
     private String [] BusinessCodes;
 
     /**
-    * 子产品名称代码
+    * <p>子产品名称代码</p>
     */
     @SerializedName("ProductCodes")
     @Expose
     private String [] ProductCodes;
 
     /**
-    * 地域ID
+    * <p>地域ID</p>
     */
     @SerializedName("RegionIds")
     @Expose
     private Long [] RegionIds;
 
     /**
-    * 项目ID
+    * <p>项目ID</p>
     */
     @SerializedName("ProjectIds")
     @Expose
     private Long [] ProjectIds;
 
     /**
-    * 付费模式，可选prePay和postPay
+    * <p>付费模式，可选prePay和postPay</p>
     */
     @SerializedName("PayModes")
     @Expose
     private String [] PayModes;
 
     /**
-    * 交易类型
+    * <p>交易类型</p>
     */
     @SerializedName("ActionTypes")
     @Expose
     private String [] ActionTypes;
 
     /**
-    * 是否隐藏0元流水
+    * <p>是否隐藏0元流水</p>
     */
     @SerializedName("HideFreeCost")
     @Expose
     private Long HideFreeCost;
 
     /**
-    * 排序规则，可选desc和asc
+    * <p>排序规则，可选desc和asc</p>
     */
     @SerializedName("OrderByCost")
     @Expose
     private String OrderByCost;
 
     /**
-    * 交易ID
+    * <p>交易ID</p>
     */
     @SerializedName("BillIds")
     @Expose
     private String [] BillIds;
 
     /**
-    * 组件编码
+    * <p>组件编码</p>
     */
     @SerializedName("ComponentCodes")
     @Expose
     private String [] ComponentCodes;
 
     /**
-    * 文件ID
+    * <p>文件ID</p>
     */
     @SerializedName("FileIds")
     @Expose
     private String [] FileIds;
 
     /**
-    * 文件类型
+    * <p>文件类型</p>
     */
     @SerializedName("FileTypes")
     @Expose
     private String [] FileTypes;
 
     /**
-    * 状态
+    * <p>状态</p>
     */
     @SerializedName("Status")
     @Expose
     private Long [] Status;
 
     /**
-     * Get 只支持6和12两个值 
-     * @return TimeRange 只支持6和12两个值
+     * Get <p>只支持6个月和12个月两个值</p> 
+     * @return TimeRange <p>只支持6个月和12个月两个值</p>
      */
     public Long getTimeRange() {
         return this.TimeRange;
     }
 
     /**
-     * Set 只支持6和12两个值
-     * @param TimeRange 只支持6和12两个值
+     * Set <p>只支持6个月和12个月两个值</p>
+     * @param TimeRange <p>只支持6个月和12个月两个值</p>
      */
     public void setTimeRange(Long TimeRange) {
         this.TimeRange = TimeRange;
     }
 
     /**
-     * Get 产品名称代码 
-     * @return BusinessCode 产品名称代码
+     * Get <p>产品名称代码</p> 
+     * @return BusinessCode <p>产品名称代码</p>
      */
     public String getBusinessCode() {
         return this.BusinessCode;
     }
 
     /**
-     * Set 产品名称代码
-     * @param BusinessCode 产品名称代码
+     * Set <p>产品名称代码</p>
+     * @param BusinessCode <p>产品名称代码</p>
      */
     public void setBusinessCode(String BusinessCode) {
         this.BusinessCode = BusinessCode;
     }
 
     /**
-     * Get 项目ID 
-     * @return ProjectId 项目ID
+     * Get <p>项目ID</p> 
+     * @return ProjectId <p>项目ID</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID
-     * @param ProjectId 项目ID
+     * Set <p>项目ID</p>
+     * @param ProjectId <p>项目ID</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 地域ID 
-     * @return RegionId 地域ID
+     * Get <p>地域ID</p> 
+     * @return RegionId <p>地域ID</p>
      */
     public Long getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set 地域ID
-     * @param RegionId 地域ID
+     * Set <p>地域ID</p>
+     * @param RegionId <p>地域ID</p>
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get 付费模式，可选prePay和postPay 
-     * @return PayMode 付费模式，可选prePay和postPay
+     * Get <p>付费模式，可选prePay和postPay</p> 
+     * @return PayMode <p>付费模式，可选prePay和postPay</p>
      */
     public String getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 付费模式，可选prePay和postPay
-     * @param PayMode 付费模式，可选prePay和postPay
+     * Set <p>付费模式，可选prePay和postPay</p>
+     * @param PayMode <p>付费模式，可选prePay和postPay</p>
      */
     public void setPayMode(String PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 资源关键字 
-     * @return ResourceKeyword 资源关键字
+     * Get <p>资源关键字</p> 
+     * @return ResourceKeyword <p>资源关键字</p>
      */
     public String getResourceKeyword() {
         return this.ResourceKeyword;
     }
 
     /**
-     * Set 资源关键字
-     * @param ResourceKeyword 资源关键字
+     * Set <p>资源关键字</p>
+     * @param ResourceKeyword <p>资源关键字</p>
      */
     public void setResourceKeyword(String ResourceKeyword) {
         this.ResourceKeyword = ResourceKeyword;
     }
 
     /**
-     * Get 产品名称代码 
-     * @return BusinessCodes 产品名称代码
+     * Get <p>产品名称代码</p> 
+     * @return BusinessCodes <p>产品名称代码</p>
      */
     public String [] getBusinessCodes() {
         return this.BusinessCodes;
     }
 
     /**
-     * Set 产品名称代码
-     * @param BusinessCodes 产品名称代码
+     * Set <p>产品名称代码</p>
+     * @param BusinessCodes <p>产品名称代码</p>
      */
     public void setBusinessCodes(String [] BusinessCodes) {
         this.BusinessCodes = BusinessCodes;
     }
 
     /**
-     * Get 子产品名称代码 
-     * @return ProductCodes 子产品名称代码
+     * Get <p>子产品名称代码</p> 
+     * @return ProductCodes <p>子产品名称代码</p>
      */
     public String [] getProductCodes() {
         return this.ProductCodes;
     }
 
     /**
-     * Set 子产品名称代码
-     * @param ProductCodes 子产品名称代码
+     * Set <p>子产品名称代码</p>
+     * @param ProductCodes <p>子产品名称代码</p>
      */
     public void setProductCodes(String [] ProductCodes) {
         this.ProductCodes = ProductCodes;
     }
 
     /**
-     * Get 地域ID 
-     * @return RegionIds 地域ID
+     * Get <p>地域ID</p> 
+     * @return RegionIds <p>地域ID</p>
      */
     public Long [] getRegionIds() {
         return this.RegionIds;
     }
 
     /**
-     * Set 地域ID
-     * @param RegionIds 地域ID
+     * Set <p>地域ID</p>
+     * @param RegionIds <p>地域ID</p>
      */
     public void setRegionIds(Long [] RegionIds) {
         this.RegionIds = RegionIds;
     }
 
     /**
-     * Get 项目ID 
-     * @return ProjectIds 项目ID
+     * Get <p>项目ID</p> 
+     * @return ProjectIds <p>项目ID</p>
      */
     public Long [] getProjectIds() {
         return this.ProjectIds;
     }
 
     /**
-     * Set 项目ID
-     * @param ProjectIds 项目ID
+     * Set <p>项目ID</p>
+     * @param ProjectIds <p>项目ID</p>
      */
     public void setProjectIds(Long [] ProjectIds) {
         this.ProjectIds = ProjectIds;
     }
 
     /**
-     * Get 付费模式，可选prePay和postPay 
-     * @return PayModes 付费模式，可选prePay和postPay
+     * Get <p>付费模式，可选prePay和postPay</p> 
+     * @return PayModes <p>付费模式，可选prePay和postPay</p>
      */
     public String [] getPayModes() {
         return this.PayModes;
     }
 
     /**
-     * Set 付费模式，可选prePay和postPay
-     * @param PayModes 付费模式，可选prePay和postPay
+     * Set <p>付费模式，可选prePay和postPay</p>
+     * @param PayModes <p>付费模式，可选prePay和postPay</p>
      */
     public void setPayModes(String [] PayModes) {
         this.PayModes = PayModes;
     }
 
     /**
-     * Get 交易类型 
-     * @return ActionTypes 交易类型
+     * Get <p>交易类型</p> 
+     * @return ActionTypes <p>交易类型</p>
      */
     public String [] getActionTypes() {
         return this.ActionTypes;
     }
 
     /**
-     * Set 交易类型
-     * @param ActionTypes 交易类型
+     * Set <p>交易类型</p>
+     * @param ActionTypes <p>交易类型</p>
      */
     public void setActionTypes(String [] ActionTypes) {
         this.ActionTypes = ActionTypes;
     }
 
     /**
-     * Get 是否隐藏0元流水 
-     * @return HideFreeCost 是否隐藏0元流水
+     * Get <p>是否隐藏0元流水</p> 
+     * @return HideFreeCost <p>是否隐藏0元流水</p>
      */
     public Long getHideFreeCost() {
         return this.HideFreeCost;
     }
 
     /**
-     * Set 是否隐藏0元流水
-     * @param HideFreeCost 是否隐藏0元流水
+     * Set <p>是否隐藏0元流水</p>
+     * @param HideFreeCost <p>是否隐藏0元流水</p>
      */
     public void setHideFreeCost(Long HideFreeCost) {
         this.HideFreeCost = HideFreeCost;
     }
 
     /**
-     * Get 排序规则，可选desc和asc 
-     * @return OrderByCost 排序规则，可选desc和asc
+     * Get <p>排序规则，可选desc和asc</p> 
+     * @return OrderByCost <p>排序规则，可选desc和asc</p>
      */
     public String getOrderByCost() {
         return this.OrderByCost;
     }
 
     /**
-     * Set 排序规则，可选desc和asc
-     * @param OrderByCost 排序规则，可选desc和asc
+     * Set <p>排序规则，可选desc和asc</p>
+     * @param OrderByCost <p>排序规则，可选desc和asc</p>
      */
     public void setOrderByCost(String OrderByCost) {
         this.OrderByCost = OrderByCost;
     }
 
     /**
-     * Get 交易ID 
-     * @return BillIds 交易ID
+     * Get <p>交易ID</p> 
+     * @return BillIds <p>交易ID</p>
      */
     public String [] getBillIds() {
         return this.BillIds;
     }
 
     /**
-     * Set 交易ID
-     * @param BillIds 交易ID
+     * Set <p>交易ID</p>
+     * @param BillIds <p>交易ID</p>
      */
     public void setBillIds(String [] BillIds) {
         this.BillIds = BillIds;
     }
 
     /**
-     * Get 组件编码 
-     * @return ComponentCodes 组件编码
+     * Get <p>组件编码</p> 
+     * @return ComponentCodes <p>组件编码</p>
      */
     public String [] getComponentCodes() {
         return this.ComponentCodes;
     }
 
     /**
-     * Set 组件编码
-     * @param ComponentCodes 组件编码
+     * Set <p>组件编码</p>
+     * @param ComponentCodes <p>组件编码</p>
      */
     public void setComponentCodes(String [] ComponentCodes) {
         this.ComponentCodes = ComponentCodes;
     }
 
     /**
-     * Get 文件ID 
-     * @return FileIds 文件ID
+     * Get <p>文件ID</p> 
+     * @return FileIds <p>文件ID</p>
      */
     public String [] getFileIds() {
         return this.FileIds;
     }
 
     /**
-     * Set 文件ID
-     * @param FileIds 文件ID
+     * Set <p>文件ID</p>
+     * @param FileIds <p>文件ID</p>
      */
     public void setFileIds(String [] FileIds) {
         this.FileIds = FileIds;
     }
 
     /**
-     * Get 文件类型 
-     * @return FileTypes 文件类型
+     * Get <p>文件类型</p> 
+     * @return FileTypes <p>文件类型</p>
      */
     public String [] getFileTypes() {
         return this.FileTypes;
     }
 
     /**
-     * Set 文件类型
-     * @param FileTypes 文件类型
+     * Set <p>文件类型</p>
+     * @param FileTypes <p>文件类型</p>
      */
     public void setFileTypes(String [] FileTypes) {
         this.FileTypes = FileTypes;
     }
 
     /**
-     * Get 状态 
-     * @return Status 状态
+     * Get <p>状态</p> 
+     * @return Status <p>状态</p>
      */
     public Long [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态
-     * @param Status 状态
+     * Set <p>状态</p>
+     * @param Status <p>状态</p>
      */
     public void setStatus(Long [] Status) {
         this.Status = Status;

@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class ModifyAllocationRuleRequest extends AbstractModel {
 
     /**
-    * 所编辑公摊规则ID
+    * <p>所编辑公摊规则ID</p>
     */
     @SerializedName("RuleId")
     @Expose
     private Long RuleId;
 
     /**
-    * 编辑后公摊规则名称
+    * <p>编辑后公摊规则名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 公摊策略类型，枚举值如下： 1 - 自定义分摊占比 2 - 等比分摊 3 - 按占比分摊
+    * <p>公摊策略类型，枚举值如下： 1 - 自定义分摊占比 2 - 等比分摊 3 - 按占比分摊</p>
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 编辑后公摊规则表达式
+    * <p>编辑后公摊规则表达式</p>
     */
     @SerializedName("RuleDetail")
     @Expose
     private AllocationRuleExpression RuleDetail;
 
     /**
-    * 编辑后公摊比例表达式
+    * <p>编辑后公摊比例表达式</p>
     */
     @SerializedName("RatioDetail")
     @Expose
     private AllocationRationExpression [] RatioDetail;
 
     /**
-    * 月份，不传默认当前月
+    * <p>月份，不传默认当前月</p>
     */
     @SerializedName("Month")
     @Expose
     private String Month;
 
     /**
-     * Get 所编辑公摊规则ID 
-     * @return RuleId 所编辑公摊规则ID
+     * Get <p>所编辑公摊规则ID</p> 
+     * @return RuleId <p>所编辑公摊规则ID</p>
      */
     public Long getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set 所编辑公摊规则ID
-     * @param RuleId 所编辑公摊规则ID
+     * Set <p>所编辑公摊规则ID</p>
+     * @param RuleId <p>所编辑公摊规则ID</p>
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get 编辑后公摊规则名称 
-     * @return Name 编辑后公摊规则名称
+     * Get <p>编辑后公摊规则名称</p> 
+     * @return Name <p>编辑后公摊规则名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 编辑后公摊规则名称
-     * @param Name 编辑后公摊规则名称
+     * Set <p>编辑后公摊规则名称</p>
+     * @param Name <p>编辑后公摊规则名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 公摊策略类型，枚举值如下： 1 - 自定义分摊占比 2 - 等比分摊 3 - 按占比分摊 
-     * @return Type 公摊策略类型，枚举值如下： 1 - 自定义分摊占比 2 - 等比分摊 3 - 按占比分摊
+     * Get <p>公摊策略类型，枚举值如下： 1 - 自定义分摊占比 2 - 等比分摊 3 - 按占比分摊</p> 
+     * @return Type <p>公摊策略类型，枚举值如下： 1 - 自定义分摊占比 2 - 等比分摊 3 - 按占比分摊</p>
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 公摊策略类型，枚举值如下： 1 - 自定义分摊占比 2 - 等比分摊 3 - 按占比分摊
-     * @param Type 公摊策略类型，枚举值如下： 1 - 自定义分摊占比 2 - 等比分摊 3 - 按占比分摊
+     * Set <p>公摊策略类型，枚举值如下： 1 - 自定义分摊占比 2 - 等比分摊 3 - 按占比分摊</p>
+     * @param Type <p>公摊策略类型，枚举值如下： 1 - 自定义分摊占比 2 - 等比分摊 3 - 按占比分摊</p>
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 编辑后公摊规则表达式 
-     * @return RuleDetail 编辑后公摊规则表达式
+     * Get <p>编辑后公摊规则表达式</p> 
+     * @return RuleDetail <p>编辑后公摊规则表达式</p>
      */
     public AllocationRuleExpression getRuleDetail() {
         return this.RuleDetail;
     }
 
     /**
-     * Set 编辑后公摊规则表达式
-     * @param RuleDetail 编辑后公摊规则表达式
+     * Set <p>编辑后公摊规则表达式</p>
+     * @param RuleDetail <p>编辑后公摊规则表达式</p>
      */
     public void setRuleDetail(AllocationRuleExpression RuleDetail) {
         this.RuleDetail = RuleDetail;
     }
 
     /**
-     * Get 编辑后公摊比例表达式 
-     * @return RatioDetail 编辑后公摊比例表达式
+     * Get <p>编辑后公摊比例表达式</p> 
+     * @return RatioDetail <p>编辑后公摊比例表达式</p>
      */
     public AllocationRationExpression [] getRatioDetail() {
         return this.RatioDetail;
     }
 
     /**
-     * Set 编辑后公摊比例表达式
-     * @param RatioDetail 编辑后公摊比例表达式
+     * Set <p>编辑后公摊比例表达式</p>
+     * @param RatioDetail <p>编辑后公摊比例表达式</p>
      */
     public void setRatioDetail(AllocationRationExpression [] RatioDetail) {
         this.RatioDetail = RatioDetail;
     }
 
     /**
-     * Get 月份，不传默认当前月 
-     * @return Month 月份，不传默认当前月
+     * Get <p>月份，不传默认当前月</p> 
+     * @return Month <p>月份，不传默认当前月</p>
      */
     public String getMonth() {
         return this.Month;
     }
 
     /**
-     * Set 月份，不传默认当前月
-     * @param Month 月份，不传默认当前月
+     * Set <p>月份，不传默认当前月</p>
+     * @param Month <p>月份，不传默认当前月</p>
      */
     public void setMonth(String Month) {
         this.Month = Month;

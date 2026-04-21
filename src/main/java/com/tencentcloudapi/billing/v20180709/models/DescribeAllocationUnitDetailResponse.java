@@ -24,63 +24,63 @@ import java.util.HashMap;
 public class DescribeAllocationUnitDetailResponse extends AbstractModel {
 
     /**
-    * 分账单元ID
+    * <p>分账单元ID</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 分账单元所属UIN
+    * <p>分账单元所属UIN</p>
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * 分账单元名称
+    * <p>分账单元名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 分账单元父节点ID
+    * <p>分账单元父节点ID</p>
     */
     @SerializedName("ParentId")
     @Expose
     private Long ParentId;
 
     /**
-    * 源组织名称
+    * <p>源组织名称</p>
     */
     @SerializedName("SourceName")
     @Expose
     private String SourceName;
 
     /**
-    * 源组织ID
+    * <p>源组织ID</p>
     */
     @SerializedName("SourceId")
     @Expose
     private String SourceId;
 
     /**
-    * 备注说明
+    * <p>备注说明</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 分账单元标识
+    * <p>分账单元标识</p>
     */
     @SerializedName("TreeNodeUniqKey")
     @Expose
     private String TreeNodeUniqKey;
 
     /**
-    * 若分账单元设置归集规则，返回归集规则ID，若无分账规则，则不返回
+    * <p>若分账单元设置归集规则，返回归集规则ID，若无分账规则，则不返回</p>
     */
     @SerializedName("RuleId")
     @Expose
@@ -94,144 +94,144 @@ public class DescribeAllocationUnitDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 分账单元ID 
-     * @return Id 分账单元ID
+     * Get <p>分账单元ID</p> 
+     * @return Id <p>分账单元ID</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 分账单元ID
-     * @param Id 分账单元ID
+     * Set <p>分账单元ID</p>
+     * @param Id <p>分账单元ID</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 分账单元所属UIN 
-     * @return Uin 分账单元所属UIN
+     * Get <p>分账单元所属UIN</p> 
+     * @return Uin <p>分账单元所属UIN</p>
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set 分账单元所属UIN
-     * @param Uin 分账单元所属UIN
+     * Set <p>分账单元所属UIN</p>
+     * @param Uin <p>分账单元所属UIN</p>
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 分账单元名称 
-     * @return Name 分账单元名称
+     * Get <p>分账单元名称</p> 
+     * @return Name <p>分账单元名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 分账单元名称
-     * @param Name 分账单元名称
+     * Set <p>分账单元名称</p>
+     * @param Name <p>分账单元名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 分账单元父节点ID 
-     * @return ParentId 分账单元父节点ID
+     * Get <p>分账单元父节点ID</p> 
+     * @return ParentId <p>分账单元父节点ID</p>
      */
     public Long getParentId() {
         return this.ParentId;
     }
 
     /**
-     * Set 分账单元父节点ID
-     * @param ParentId 分账单元父节点ID
+     * Set <p>分账单元父节点ID</p>
+     * @param ParentId <p>分账单元父节点ID</p>
      */
     public void setParentId(Long ParentId) {
         this.ParentId = ParentId;
     }
 
     /**
-     * Get 源组织名称 
-     * @return SourceName 源组织名称
+     * Get <p>源组织名称</p> 
+     * @return SourceName <p>源组织名称</p>
      */
     public String getSourceName() {
         return this.SourceName;
     }
 
     /**
-     * Set 源组织名称
-     * @param SourceName 源组织名称
+     * Set <p>源组织名称</p>
+     * @param SourceName <p>源组织名称</p>
      */
     public void setSourceName(String SourceName) {
         this.SourceName = SourceName;
     }
 
     /**
-     * Get 源组织ID 
-     * @return SourceId 源组织ID
+     * Get <p>源组织ID</p> 
+     * @return SourceId <p>源组织ID</p>
      */
     public String getSourceId() {
         return this.SourceId;
     }
 
     /**
-     * Set 源组织ID
-     * @param SourceId 源组织ID
+     * Set <p>源组织ID</p>
+     * @param SourceId <p>源组织ID</p>
      */
     public void setSourceId(String SourceId) {
         this.SourceId = SourceId;
     }
 
     /**
-     * Get 备注说明 
-     * @return Remark 备注说明
+     * Get <p>备注说明</p> 
+     * @return Remark <p>备注说明</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注说明
-     * @param Remark 备注说明
+     * Set <p>备注说明</p>
+     * @param Remark <p>备注说明</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 分账单元标识 
-     * @return TreeNodeUniqKey 分账单元标识
+     * Get <p>分账单元标识</p> 
+     * @return TreeNodeUniqKey <p>分账单元标识</p>
      */
     public String getTreeNodeUniqKey() {
         return this.TreeNodeUniqKey;
     }
 
     /**
-     * Set 分账单元标识
-     * @param TreeNodeUniqKey 分账单元标识
+     * Set <p>分账单元标识</p>
+     * @param TreeNodeUniqKey <p>分账单元标识</p>
      */
     public void setTreeNodeUniqKey(String TreeNodeUniqKey) {
         this.TreeNodeUniqKey = TreeNodeUniqKey;
     }
 
     /**
-     * Get 若分账单元设置归集规则，返回归集规则ID，若无分账规则，则不返回 
-     * @return RuleId 若分账单元设置归集规则，返回归集规则ID，若无分账规则，则不返回
+     * Get <p>若分账单元设置归集规则，返回归集规则ID，若无分账规则，则不返回</p> 
+     * @return RuleId <p>若分账单元设置归集规则，返回归集规则ID，若无分账规则，则不返回</p>
      */
     public Long getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set 若分账单元设置归集规则，返回归集规则ID，若无分账规则，则不返回
-     * @param RuleId 若分账单元设置归集规则，返回归集规则ID，若无分账规则，则不返回
+     * Set <p>若分账单元设置归集规则，返回归集规则ID，若无分账规则，则不返回</p>
+     * @param RuleId <p>若分账单元设置归集规则，返回归集规则ID，若无分账规则，则不返回</p>
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;

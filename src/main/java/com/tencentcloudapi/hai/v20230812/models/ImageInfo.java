@@ -24,26 +24,72 @@ import java.util.HashMap;
 public class ImageInfo extends AbstractModel {
 
     /**
-    * tcr仓库地址
+    * <p>tcr仓库地址</p>
     */
     @SerializedName("ImageRegistryUrl")
     @Expose
     private String ImageRegistryUrl;
 
     /**
-     * Get tcr仓库地址 
-     * @return ImageRegistryUrl tcr仓库地址
+    * <p>仓库用户名</p>
+    */
+    @SerializedName("ImageRegistryUsername")
+    @Expose
+    private String ImageRegistryUsername;
+
+    /**
+    * <p>仓库密码</p>
+    */
+    @SerializedName("ImageRegistryPassword")
+    @Expose
+    private String ImageRegistryPassword;
+
+    /**
+     * Get <p>tcr仓库地址</p> 
+     * @return ImageRegistryUrl <p>tcr仓库地址</p>
      */
     public String getImageRegistryUrl() {
         return this.ImageRegistryUrl;
     }
 
     /**
-     * Set tcr仓库地址
-     * @param ImageRegistryUrl tcr仓库地址
+     * Set <p>tcr仓库地址</p>
+     * @param ImageRegistryUrl <p>tcr仓库地址</p>
      */
     public void setImageRegistryUrl(String ImageRegistryUrl) {
         this.ImageRegistryUrl = ImageRegistryUrl;
+    }
+
+    /**
+     * Get <p>仓库用户名</p> 
+     * @return ImageRegistryUsername <p>仓库用户名</p>
+     */
+    public String getImageRegistryUsername() {
+        return this.ImageRegistryUsername;
+    }
+
+    /**
+     * Set <p>仓库用户名</p>
+     * @param ImageRegistryUsername <p>仓库用户名</p>
+     */
+    public void setImageRegistryUsername(String ImageRegistryUsername) {
+        this.ImageRegistryUsername = ImageRegistryUsername;
+    }
+
+    /**
+     * Get <p>仓库密码</p> 
+     * @return ImageRegistryPassword <p>仓库密码</p>
+     */
+    public String getImageRegistryPassword() {
+        return this.ImageRegistryPassword;
+    }
+
+    /**
+     * Set <p>仓库密码</p>
+     * @param ImageRegistryPassword <p>仓库密码</p>
+     */
+    public void setImageRegistryPassword(String ImageRegistryPassword) {
+        this.ImageRegistryPassword = ImageRegistryPassword;
     }
 
     public ImageInfo() {
@@ -57,6 +103,12 @@ public class ImageInfo extends AbstractModel {
         if (source.ImageRegistryUrl != null) {
             this.ImageRegistryUrl = new String(source.ImageRegistryUrl);
         }
+        if (source.ImageRegistryUsername != null) {
+            this.ImageRegistryUsername = new String(source.ImageRegistryUsername);
+        }
+        if (source.ImageRegistryPassword != null) {
+            this.ImageRegistryPassword = new String(source.ImageRegistryPassword);
+        }
     }
 
 
@@ -65,6 +117,8 @@ public class ImageInfo extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ImageRegistryUrl", this.ImageRegistryUrl);
+        this.setParamSimple(map, prefix + "ImageRegistryUsername", this.ImageRegistryUsername);
+        this.setParamSimple(map, prefix + "ImageRegistryPassword", this.ImageRegistryPassword);
 
     }
 }

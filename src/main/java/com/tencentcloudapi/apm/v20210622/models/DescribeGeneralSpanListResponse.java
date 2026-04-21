@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeGeneralSpanListResponse extends AbstractModel {
 
     /**
-    * 总数量
+    * <p>总数量</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Span 分页列表
+    * <p>Span 分页列表</p>
     */
     @SerializedName("Spans")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeGeneralSpanListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总数量 
-     * @return TotalCount 总数量
+     * Get <p>总数量</p> 
+     * @return TotalCount <p>总数量</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 总数量
-     * @param TotalCount 总数量
+     * Set <p>总数量</p>
+     * @param TotalCount <p>总数量</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Span 分页列表 
-     * @return Spans Span 分页列表
+     * Get <p>Span 分页列表</p> 
+     * @return Spans <p>Span 分页列表</p>
      */
     public Span [] getSpans() {
         return this.Spans;
     }
 
     /**
-     * Set Span 分页列表
-     * @param Spans Span 分页列表
+     * Set <p>Span 分页列表</p>
+     * @param Spans <p>Span 分页列表</p>
      */
     public void setSpans(Span [] Spans) {
         this.Spans = Spans;

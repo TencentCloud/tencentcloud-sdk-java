@@ -24,112 +24,112 @@ import java.util.HashMap;
 public class DescribeAllocationBillConditionsResponse extends AbstractModel {
 
     /**
-    * 产品筛选列表
+    * <p>产品筛选列表</p>
     */
     @SerializedName("Business")
     @Expose
     private BillBusiness [] Business;
 
     /**
-    * 子产品筛选列表
+    * <p>子产品筛选列表</p>
     */
     @SerializedName("Product")
     @Expose
     private BillProduct [] Product;
 
     /**
-    * 组件名称筛选列表
+    * <p>组件名称筛选列表</p>
     */
     @SerializedName("Item")
     @Expose
     private BillItem [] Item;
 
     /**
-    * 地域筛选列表
+    * <p>地域筛选列表</p>
     */
     @SerializedName("Region")
     @Expose
     private BillRegion [] Region;
 
     /**
-    * 实例类型筛选列表
+    * <p>实例类型筛选列表</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private BillInstanceType [] InstanceType;
 
     /**
-    * 计费模式筛选列表
+    * <p>计费模式筛选列表</p>
     */
     @SerializedName("PayMode")
     @Expose
     private BillPayMode [] PayMode;
 
     /**
-    * 项目筛选列表
+    * <p>项目筛选列表</p>
     */
     @SerializedName("Project")
     @Expose
     private BillProject [] Project;
 
     /**
-    * 标签筛选列表
+    * <p>标签筛选列表</p>
     */
     @SerializedName("Tag")
     @Expose
     private BillTag [] Tag;
 
     /**
-    * 使用者 UIN 筛选列表
+    * <p>使用者 UIN 筛选列表</p>
     */
     @SerializedName("OwnerUin")
     @Expose
     private BillOwnerUin [] OwnerUin;
 
     /**
-    * 操作者 UIN 筛选列表
+    * <p>操作者 UIN 筛选列表</p>
     */
     @SerializedName("OperateUin")
     @Expose
     private BillOperateUin [] OperateUin;
 
     /**
-    * 日期筛选列表
+    * <p>日期筛选列表</p>
     */
     @SerializedName("BillDay")
     @Expose
     private BillDays [] BillDay;
 
     /**
-    * 交易类型筛选列表
+    * <p>交易类型筛选列表</p>
     */
     @SerializedName("ActionType")
     @Expose
     private BillActionType [] ActionType;
 
     /**
-    * 组件类型筛选列表
+    * <p>组件类型筛选列表</p>
     */
     @SerializedName("Component")
     @Expose
     private BillComponent [] Component;
 
     /**
-    * 可用区筛选列表
+    * <p>可用区筛选列表</p>
     */
     @SerializedName("Zone")
     @Expose
     private BillZoneId [] Zone;
 
     /**
-    * 分账单元筛选列表
+    * <p>分账单元筛选列表</p>
     */
     @SerializedName("AllocationTreeNode")
     @Expose
     private AllocationTreeNode [] AllocationTreeNode;
 
     /**
-    * 分账标签键
+    * <p>分账标签键</p>
     */
     @SerializedName("TagKey")
     @Expose
@@ -143,256 +143,256 @@ public class DescribeAllocationBillConditionsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 产品筛选列表 
-     * @return Business 产品筛选列表
+     * Get <p>产品筛选列表</p> 
+     * @return Business <p>产品筛选列表</p>
      */
     public BillBusiness [] getBusiness() {
         return this.Business;
     }
 
     /**
-     * Set 产品筛选列表
-     * @param Business 产品筛选列表
+     * Set <p>产品筛选列表</p>
+     * @param Business <p>产品筛选列表</p>
      */
     public void setBusiness(BillBusiness [] Business) {
         this.Business = Business;
     }
 
     /**
-     * Get 子产品筛选列表 
-     * @return Product 子产品筛选列表
+     * Get <p>子产品筛选列表</p> 
+     * @return Product <p>子产品筛选列表</p>
      */
     public BillProduct [] getProduct() {
         return this.Product;
     }
 
     /**
-     * Set 子产品筛选列表
-     * @param Product 子产品筛选列表
+     * Set <p>子产品筛选列表</p>
+     * @param Product <p>子产品筛选列表</p>
      */
     public void setProduct(BillProduct [] Product) {
         this.Product = Product;
     }
 
     /**
-     * Get 组件名称筛选列表 
-     * @return Item 组件名称筛选列表
+     * Get <p>组件名称筛选列表</p> 
+     * @return Item <p>组件名称筛选列表</p>
      */
     public BillItem [] getItem() {
         return this.Item;
     }
 
     /**
-     * Set 组件名称筛选列表
-     * @param Item 组件名称筛选列表
+     * Set <p>组件名称筛选列表</p>
+     * @param Item <p>组件名称筛选列表</p>
      */
     public void setItem(BillItem [] Item) {
         this.Item = Item;
     }
 
     /**
-     * Get 地域筛选列表 
-     * @return Region 地域筛选列表
+     * Get <p>地域筛选列表</p> 
+     * @return Region <p>地域筛选列表</p>
      */
     public BillRegion [] getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 地域筛选列表
-     * @param Region 地域筛选列表
+     * Set <p>地域筛选列表</p>
+     * @param Region <p>地域筛选列表</p>
      */
     public void setRegion(BillRegion [] Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 实例类型筛选列表 
-     * @return InstanceType 实例类型筛选列表
+     * Get <p>实例类型筛选列表</p> 
+     * @return InstanceType <p>实例类型筛选列表</p>
      */
     public BillInstanceType [] getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 实例类型筛选列表
-     * @param InstanceType 实例类型筛选列表
+     * Set <p>实例类型筛选列表</p>
+     * @param InstanceType <p>实例类型筛选列表</p>
      */
     public void setInstanceType(BillInstanceType [] InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 计费模式筛选列表 
-     * @return PayMode 计费模式筛选列表
+     * Get <p>计费模式筛选列表</p> 
+     * @return PayMode <p>计费模式筛选列表</p>
      */
     public BillPayMode [] getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 计费模式筛选列表
-     * @param PayMode 计费模式筛选列表
+     * Set <p>计费模式筛选列表</p>
+     * @param PayMode <p>计费模式筛选列表</p>
      */
     public void setPayMode(BillPayMode [] PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 项目筛选列表 
-     * @return Project 项目筛选列表
+     * Get <p>项目筛选列表</p> 
+     * @return Project <p>项目筛选列表</p>
      */
     public BillProject [] getProject() {
         return this.Project;
     }
 
     /**
-     * Set 项目筛选列表
-     * @param Project 项目筛选列表
+     * Set <p>项目筛选列表</p>
+     * @param Project <p>项目筛选列表</p>
      */
     public void setProject(BillProject [] Project) {
         this.Project = Project;
     }
 
     /**
-     * Get 标签筛选列表 
-     * @return Tag 标签筛选列表
+     * Get <p>标签筛选列表</p> 
+     * @return Tag <p>标签筛选列表</p>
      */
     public BillTag [] getTag() {
         return this.Tag;
     }
 
     /**
-     * Set 标签筛选列表
-     * @param Tag 标签筛选列表
+     * Set <p>标签筛选列表</p>
+     * @param Tag <p>标签筛选列表</p>
      */
     public void setTag(BillTag [] Tag) {
         this.Tag = Tag;
     }
 
     /**
-     * Get 使用者 UIN 筛选列表 
-     * @return OwnerUin 使用者 UIN 筛选列表
+     * Get <p>使用者 UIN 筛选列表</p> 
+     * @return OwnerUin <p>使用者 UIN 筛选列表</p>
      */
     public BillOwnerUin [] getOwnerUin() {
         return this.OwnerUin;
     }
 
     /**
-     * Set 使用者 UIN 筛选列表
-     * @param OwnerUin 使用者 UIN 筛选列表
+     * Set <p>使用者 UIN 筛选列表</p>
+     * @param OwnerUin <p>使用者 UIN 筛选列表</p>
      */
     public void setOwnerUin(BillOwnerUin [] OwnerUin) {
         this.OwnerUin = OwnerUin;
     }
 
     /**
-     * Get 操作者 UIN 筛选列表 
-     * @return OperateUin 操作者 UIN 筛选列表
+     * Get <p>操作者 UIN 筛选列表</p> 
+     * @return OperateUin <p>操作者 UIN 筛选列表</p>
      */
     public BillOperateUin [] getOperateUin() {
         return this.OperateUin;
     }
 
     /**
-     * Set 操作者 UIN 筛选列表
-     * @param OperateUin 操作者 UIN 筛选列表
+     * Set <p>操作者 UIN 筛选列表</p>
+     * @param OperateUin <p>操作者 UIN 筛选列表</p>
      */
     public void setOperateUin(BillOperateUin [] OperateUin) {
         this.OperateUin = OperateUin;
     }
 
     /**
-     * Get 日期筛选列表 
-     * @return BillDay 日期筛选列表
+     * Get <p>日期筛选列表</p> 
+     * @return BillDay <p>日期筛选列表</p>
      */
     public BillDays [] getBillDay() {
         return this.BillDay;
     }
 
     /**
-     * Set 日期筛选列表
-     * @param BillDay 日期筛选列表
+     * Set <p>日期筛选列表</p>
+     * @param BillDay <p>日期筛选列表</p>
      */
     public void setBillDay(BillDays [] BillDay) {
         this.BillDay = BillDay;
     }
 
     /**
-     * Get 交易类型筛选列表 
-     * @return ActionType 交易类型筛选列表
+     * Get <p>交易类型筛选列表</p> 
+     * @return ActionType <p>交易类型筛选列表</p>
      */
     public BillActionType [] getActionType() {
         return this.ActionType;
     }
 
     /**
-     * Set 交易类型筛选列表
-     * @param ActionType 交易类型筛选列表
+     * Set <p>交易类型筛选列表</p>
+     * @param ActionType <p>交易类型筛选列表</p>
      */
     public void setActionType(BillActionType [] ActionType) {
         this.ActionType = ActionType;
     }
 
     /**
-     * Get 组件类型筛选列表 
-     * @return Component 组件类型筛选列表
+     * Get <p>组件类型筛选列表</p> 
+     * @return Component <p>组件类型筛选列表</p>
      */
     public BillComponent [] getComponent() {
         return this.Component;
     }
 
     /**
-     * Set 组件类型筛选列表
-     * @param Component 组件类型筛选列表
+     * Set <p>组件类型筛选列表</p>
+     * @param Component <p>组件类型筛选列表</p>
      */
     public void setComponent(BillComponent [] Component) {
         this.Component = Component;
     }
 
     /**
-     * Get 可用区筛选列表 
-     * @return Zone 可用区筛选列表
+     * Get <p>可用区筛选列表</p> 
+     * @return Zone <p>可用区筛选列表</p>
      */
     public BillZoneId [] getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区筛选列表
-     * @param Zone 可用区筛选列表
+     * Set <p>可用区筛选列表</p>
+     * @param Zone <p>可用区筛选列表</p>
      */
     public void setZone(BillZoneId [] Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 分账单元筛选列表 
-     * @return AllocationTreeNode 分账单元筛选列表
+     * Get <p>分账单元筛选列表</p> 
+     * @return AllocationTreeNode <p>分账单元筛选列表</p>
      */
     public AllocationTreeNode [] getAllocationTreeNode() {
         return this.AllocationTreeNode;
     }
 
     /**
-     * Set 分账单元筛选列表
-     * @param AllocationTreeNode 分账单元筛选列表
+     * Set <p>分账单元筛选列表</p>
+     * @param AllocationTreeNode <p>分账单元筛选列表</p>
      */
     public void setAllocationTreeNode(AllocationTreeNode [] AllocationTreeNode) {
         this.AllocationTreeNode = AllocationTreeNode;
     }
 
     /**
-     * Get 分账标签键 
-     * @return TagKey 分账标签键
+     * Get <p>分账标签键</p> 
+     * @return TagKey <p>分账标签键</p>
      */
     public String [] getTagKey() {
         return this.TagKey;
     }
 
     /**
-     * Set 分账标签键
-     * @param TagKey 分账标签键
+     * Set <p>分账标签键</p>
+     * @param TagKey <p>分账标签键</p>
      */
     public void setTagKey(String [] TagKey) {
         this.TagKey = TagKey;

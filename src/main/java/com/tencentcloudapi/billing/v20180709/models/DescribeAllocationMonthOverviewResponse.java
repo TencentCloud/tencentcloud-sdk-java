@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAllocationMonthOverviewResponse extends AbstractModel {
 
     /**
-    * 分账账单月概览详情
+    * <p>分账账单月概览详情</p>
     */
     @SerializedName("Detail")
     @Expose
     private AllocationOverviewNode [] Detail;
 
     /**
-    * 分账账单概览金额汇总
+    * <p>分账账单概览金额汇总</p>
     */
     @SerializedName("Total")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeAllocationMonthOverviewResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 分账账单月概览详情 
-     * @return Detail 分账账单月概览详情
+     * Get <p>分账账单月概览详情</p> 
+     * @return Detail <p>分账账单月概览详情</p>
      */
     public AllocationOverviewNode [] getDetail() {
         return this.Detail;
     }
 
     /**
-     * Set 分账账单月概览详情
-     * @param Detail 分账账单月概览详情
+     * Set <p>分账账单月概览详情</p>
+     * @param Detail <p>分账账单月概览详情</p>
      */
     public void setDetail(AllocationOverviewNode [] Detail) {
         this.Detail = Detail;
     }
 
     /**
-     * Get 分账账单概览金额汇总 
-     * @return Total 分账账单概览金额汇总
+     * Get <p>分账账单概览金额汇总</p> 
+     * @return Total <p>分账账单概览金额汇总</p>
      */
     public AllocationOverviewTotal getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 分账账单概览金额汇总
-     * @param Total 分账账单概览金额汇总
+     * Set <p>分账账单概览金额汇总</p>
+     * @param Total <p>分账账单概览金额汇总</p>
      */
     public void setTotal(AllocationOverviewTotal Total) {
         this.Total = Total;

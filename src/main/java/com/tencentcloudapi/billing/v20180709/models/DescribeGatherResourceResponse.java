@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeGatherResourceResponse extends AbstractModel {
 
     /**
-    * 总条数
+    * <p>总条数</p>
     */
     @SerializedName("RecordNum")
     @Expose
     private Long RecordNum;
 
     /**
-    * 资源归集汇总
+    * <p>资源归集汇总</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GatherResourceSummary")
@@ -39,7 +39,7 @@ public class DescribeGatherResourceResponse extends AbstractModel {
     private GatherResourceSummary [] GatherResourceSummary;
 
     /**
-    * 数据更新时间
+    * <p>数据更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastUpdateTime")
@@ -54,25 +54,25 @@ public class DescribeGatherResourceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总条数 
-     * @return RecordNum 总条数
+     * Get <p>总条数</p> 
+     * @return RecordNum <p>总条数</p>
      */
     public Long getRecordNum() {
         return this.RecordNum;
     }
 
     /**
-     * Set 总条数
-     * @param RecordNum 总条数
+     * Set <p>总条数</p>
+     * @param RecordNum <p>总条数</p>
      */
     public void setRecordNum(Long RecordNum) {
         this.RecordNum = RecordNum;
     }
 
     /**
-     * Get 资源归集汇总
+     * Get <p>资源归集汇总</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GatherResourceSummary 资源归集汇总
+     * @return GatherResourceSummary <p>资源归集汇总</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public GatherResourceSummary [] getGatherResourceSummary() {
@@ -80,9 +80,9 @@ public class DescribeGatherResourceResponse extends AbstractModel {
     }
 
     /**
-     * Set 资源归集汇总
+     * Set <p>资源归集汇总</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GatherResourceSummary 资源归集汇总
+     * @param GatherResourceSummary <p>资源归集汇总</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGatherResourceSummary(GatherResourceSummary [] GatherResourceSummary) {
@@ -90,9 +90,9 @@ public class DescribeGatherResourceResponse extends AbstractModel {
     }
 
     /**
-     * Get 数据更新时间
+     * Get <p>数据更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LastUpdateTime 数据更新时间
+     * @return LastUpdateTime <p>数据更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastUpdateTime() {
@@ -100,9 +100,9 @@ public class DescribeGatherResourceResponse extends AbstractModel {
     }
 
     /**
-     * Set 数据更新时间
+     * Set <p>数据更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LastUpdateTime 数据更新时间
+     * @param LastUpdateTime <p>数据更新时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastUpdateTime(String LastUpdateTime) {

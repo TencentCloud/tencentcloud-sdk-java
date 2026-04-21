@@ -73,6 +73,13 @@ public class DescribeImageToVideoJobResponse extends AbstractModel {
     private String FinalUnitDeduction;
 
     /**
+    * 
+    */
+    @SerializedName("ExternalTaskId")
+    @Expose
+    private String ExternalTaskId;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -192,6 +199,22 @@ public class DescribeImageToVideoJobResponse extends AbstractModel {
     }
 
     /**
+     * Get  
+     * @return ExternalTaskId 
+     */
+    public String getExternalTaskId() {
+        return this.ExternalTaskId;
+    }
+
+    /**
+     * Set 
+     * @param ExternalTaskId 
+     */
+    public void setExternalTaskId(String ExternalTaskId) {
+        this.ExternalTaskId = ExternalTaskId;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -236,6 +259,9 @@ public class DescribeImageToVideoJobResponse extends AbstractModel {
         if (source.FinalUnitDeduction != null) {
             this.FinalUnitDeduction = new String(source.FinalUnitDeduction);
         }
+        if (source.ExternalTaskId != null) {
+            this.ExternalTaskId = new String(source.ExternalTaskId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -253,6 +279,7 @@ public class DescribeImageToVideoJobResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "VideoId", this.VideoId);
         this.setParamSimple(map, prefix + "Duration", this.Duration);
         this.setParamSimple(map, prefix + "FinalUnitDeduction", this.FinalUnitDeduction);
+        this.setParamSimple(map, prefix + "ExternalTaskId", this.ExternalTaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

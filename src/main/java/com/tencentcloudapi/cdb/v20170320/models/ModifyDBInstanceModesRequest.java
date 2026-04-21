@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ModifyDBInstanceModesRequest extends AbstractModel {
 
     /**
-    * 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+    * <p>实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 云数据库的模式，目前仅支持传入 "protectMode" 表示修改主从同步方式。
+    * <p>云数据库的模式，目前仅支持传入 &quot;protectMode&quot; 表示修改主从同步方式。</p>
     */
     @SerializedName("Mode")
     @Expose
     private String Mode;
 
     /**
-    * 数据同步方式，可选值：0-异步复制，1-半同步复制，2-强同步复制。
+    * <p>数据同步方式，可选值：0-异步复制，1-半同步复制，2-强同步复制。</p>
     */
     @SerializedName("ProtectMode")
     @Expose
     private Long ProtectMode;
 
     /**
-     * Get 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。 
-     * @return InstanceId 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+     * Get <p>实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。</p> 
+     * @return InstanceId <p>实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
-     * @param InstanceId 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+     * Set <p>实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。</p>
+     * @param InstanceId <p>实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 云数据库的模式，目前仅支持传入 "protectMode" 表示修改主从同步方式。 
-     * @return Mode 云数据库的模式，目前仅支持传入 "protectMode" 表示修改主从同步方式。
+     * Get <p>云数据库的模式，目前仅支持传入 &quot;protectMode&quot; 表示修改主从同步方式。</p> 
+     * @return Mode <p>云数据库的模式，目前仅支持传入 &quot;protectMode&quot; 表示修改主从同步方式。</p>
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set 云数据库的模式，目前仅支持传入 "protectMode" 表示修改主从同步方式。
-     * @param Mode 云数据库的模式，目前仅支持传入 "protectMode" 表示修改主从同步方式。
+     * Set <p>云数据库的模式，目前仅支持传入 &quot;protectMode&quot; 表示修改主从同步方式。</p>
+     * @param Mode <p>云数据库的模式，目前仅支持传入 &quot;protectMode&quot; 表示修改主从同步方式。</p>
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get 数据同步方式，可选值：0-异步复制，1-半同步复制，2-强同步复制。 
-     * @return ProtectMode 数据同步方式，可选值：0-异步复制，1-半同步复制，2-强同步复制。
+     * Get <p>数据同步方式，可选值：0-异步复制，1-半同步复制，2-强同步复制。</p> 
+     * @return ProtectMode <p>数据同步方式，可选值：0-异步复制，1-半同步复制，2-强同步复制。</p>
      */
     public Long getProtectMode() {
         return this.ProtectMode;
     }
 
     /**
-     * Set 数据同步方式，可选值：0-异步复制，1-半同步复制，2-强同步复制。
-     * @param ProtectMode 数据同步方式，可选值：0-异步复制，1-半同步复制，2-强同步复制。
+     * Set <p>数据同步方式，可选值：0-异步复制，1-半同步复制，2-强同步复制。</p>
+     * @param ProtectMode <p>数据同步方式，可选值：0-异步复制，1-半同步复制，2-强同步复制。</p>
      */
     public void setProtectMode(Long ProtectMode) {
         this.ProtectMode = ProtectMode;

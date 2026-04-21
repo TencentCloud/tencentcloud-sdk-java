@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class CreateAllocationUnitRequest extends AbstractModel {
 
     /**
-    * 新增分账单元父节点ID
+    * <p>新增分账单元父节点ID</p>
     */
     @SerializedName("ParentId")
     @Expose
     private Long ParentId;
 
     /**
-    * 新增分账单元名称
+    * <p>新增分账单元名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 月份，不传默认当前月
+    * <p>月份，不传默认当前月</p>
     */
     @SerializedName("Month")
     @Expose
     private String Month;
 
     /**
-     * Get 新增分账单元父节点ID 
-     * @return ParentId 新增分账单元父节点ID
+     * Get <p>新增分账单元父节点ID</p> 
+     * @return ParentId <p>新增分账单元父节点ID</p>
      */
     public Long getParentId() {
         return this.ParentId;
     }
 
     /**
-     * Set 新增分账单元父节点ID
-     * @param ParentId 新增分账单元父节点ID
+     * Set <p>新增分账单元父节点ID</p>
+     * @param ParentId <p>新增分账单元父节点ID</p>
      */
     public void setParentId(Long ParentId) {
         this.ParentId = ParentId;
     }
 
     /**
-     * Get 新增分账单元名称 
-     * @return Name 新增分账单元名称
+     * Get <p>新增分账单元名称</p> 
+     * @return Name <p>新增分账单元名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 新增分账单元名称
-     * @param Name 新增分账单元名称
+     * Set <p>新增分账单元名称</p>
+     * @param Name <p>新增分账单元名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 月份，不传默认当前月 
-     * @return Month 月份，不传默认当前月
+     * Get <p>月份，不传默认当前月</p> 
+     * @return Month <p>月份，不传默认当前月</p>
      */
     public String getMonth() {
         return this.Month;
     }
 
     /**
-     * Set 月份，不传默认当前月
-     * @param Month 月份，不传默认当前月
+     * Set <p>月份，不传默认当前月</p>
+     * @param Month <p>月份，不传默认当前月</p>
      */
     public void setMonth(String Month) {
         this.Month = Month;

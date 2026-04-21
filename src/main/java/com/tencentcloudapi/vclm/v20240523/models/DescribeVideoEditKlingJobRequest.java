@@ -31,6 +31,13 @@ public class DescribeVideoEditKlingJobRequest extends AbstractModel {
     private String JobId;
 
     /**
+    * 
+    */
+    @SerializedName("ExternalTaskId")
+    @Expose
+    private String ExternalTaskId;
+
+    /**
      * Get <p>任务ID</p> 
      * @return JobId <p>任务ID</p>
      */
@@ -46,6 +53,22 @@ public class DescribeVideoEditKlingJobRequest extends AbstractModel {
         this.JobId = JobId;
     }
 
+    /**
+     * Get  
+     * @return ExternalTaskId 
+     */
+    public String getExternalTaskId() {
+        return this.ExternalTaskId;
+    }
+
+    /**
+     * Set 
+     * @param ExternalTaskId 
+     */
+    public void setExternalTaskId(String ExternalTaskId) {
+        this.ExternalTaskId = ExternalTaskId;
+    }
+
     public DescribeVideoEditKlingJobRequest() {
     }
 
@@ -57,6 +80,9 @@ public class DescribeVideoEditKlingJobRequest extends AbstractModel {
         if (source.JobId != null) {
             this.JobId = new String(source.JobId);
         }
+        if (source.ExternalTaskId != null) {
+            this.ExternalTaskId = new String(source.ExternalTaskId);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DescribeVideoEditKlingJobRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "JobId", this.JobId);
+        this.setParamSimple(map, prefix + "ExternalTaskId", this.ExternalTaskId);
 
     }
 }

@@ -24,45 +24,42 @@ import java.util.HashMap;
 public class DescribeAllocationRuleDetailResponse extends AbstractModel {
 
     /**
-    * 公摊规则ID
+    * <p>公摊规则ID</p>
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 公摊规则所属UIN
+    * <p>公摊规则所属UIN</p>
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * 公摊规则名称
+    * <p>公摊规则名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 公摊策略类型，枚举值如下：
-1 - 自定义分摊占比 
-2 - 等比分摊 
-3 - 按占比分摊
+    * <p>公摊策略类型，枚举值如下：<br>1 - 自定义分摊占比<br>2 - 等比分摊<br>3 - 按占比分摊</p>
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 公摊规则表达式
+    * <p>公摊规则表达式</p>
     */
     @SerializedName("RuleDetail")
     @Expose
     private AllocationRuleExpression RuleDetail;
 
     /**
-    * 公摊比例表达式，Type为1和2时返回
+    * <p>公摊比例表达式，Type为1和2时返回</p>
     */
     @SerializedName("RatioDetail")
     @Expose
@@ -76,108 +73,96 @@ public class DescribeAllocationRuleDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 公摊规则ID 
-     * @return Id 公摊规则ID
+     * Get <p>公摊规则ID</p> 
+     * @return Id <p>公摊规则ID</p>
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 公摊规则ID
-     * @param Id 公摊规则ID
+     * Set <p>公摊规则ID</p>
+     * @param Id <p>公摊规则ID</p>
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 公摊规则所属UIN 
-     * @return Uin 公摊规则所属UIN
+     * Get <p>公摊规则所属UIN</p> 
+     * @return Uin <p>公摊规则所属UIN</p>
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set 公摊规则所属UIN
-     * @param Uin 公摊规则所属UIN
+     * Set <p>公摊规则所属UIN</p>
+     * @param Uin <p>公摊规则所属UIN</p>
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 公摊规则名称 
-     * @return Name 公摊规则名称
+     * Get <p>公摊规则名称</p> 
+     * @return Name <p>公摊规则名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 公摊规则名称
-     * @param Name 公摊规则名称
+     * Set <p>公摊规则名称</p>
+     * @param Name <p>公摊规则名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 公摊策略类型，枚举值如下：
-1 - 自定义分摊占比 
-2 - 等比分摊 
-3 - 按占比分摊 
-     * @return Type 公摊策略类型，枚举值如下：
-1 - 自定义分摊占比 
-2 - 等比分摊 
-3 - 按占比分摊
+     * Get <p>公摊策略类型，枚举值如下：<br>1 - 自定义分摊占比<br>2 - 等比分摊<br>3 - 按占比分摊</p> 
+     * @return Type <p>公摊策略类型，枚举值如下：<br>1 - 自定义分摊占比<br>2 - 等比分摊<br>3 - 按占比分摊</p>
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 公摊策略类型，枚举值如下：
-1 - 自定义分摊占比 
-2 - 等比分摊 
-3 - 按占比分摊
-     * @param Type 公摊策略类型，枚举值如下：
-1 - 自定义分摊占比 
-2 - 等比分摊 
-3 - 按占比分摊
+     * Set <p>公摊策略类型，枚举值如下：<br>1 - 自定义分摊占比<br>2 - 等比分摊<br>3 - 按占比分摊</p>
+     * @param Type <p>公摊策略类型，枚举值如下：<br>1 - 自定义分摊占比<br>2 - 等比分摊<br>3 - 按占比分摊</p>
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 公摊规则表达式 
-     * @return RuleDetail 公摊规则表达式
+     * Get <p>公摊规则表达式</p> 
+     * @return RuleDetail <p>公摊规则表达式</p>
      */
     public AllocationRuleExpression getRuleDetail() {
         return this.RuleDetail;
     }
 
     /**
-     * Set 公摊规则表达式
-     * @param RuleDetail 公摊规则表达式
+     * Set <p>公摊规则表达式</p>
+     * @param RuleDetail <p>公摊规则表达式</p>
      */
     public void setRuleDetail(AllocationRuleExpression RuleDetail) {
         this.RuleDetail = RuleDetail;
     }
 
     /**
-     * Get 公摊比例表达式，Type为1和2时返回 
-     * @return RatioDetail 公摊比例表达式，Type为1和2时返回
+     * Get <p>公摊比例表达式，Type为1和2时返回</p> 
+     * @return RatioDetail <p>公摊比例表达式，Type为1和2时返回</p>
      */
     public AllocationRationExpression [] getRatioDetail() {
         return this.RatioDetail;
     }
 
     /**
-     * Set 公摊比例表达式，Type为1和2时返回
-     * @param RatioDetail 公摊比例表达式，Type为1和2时返回
+     * Set <p>公摊比例表达式，Type为1和2时返回</p>
+     * @param RatioDetail <p>公摊比例表达式，Type为1和2时返回</p>
      */
     public void setRatioDetail(AllocationRationExpression [] RatioDetail) {
         this.RatioDetail = RatioDetail;

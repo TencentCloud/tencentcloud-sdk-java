@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DescribeDBInstanceConfigResponse extends AbstractModel {
 
     /**
-    * 主实例数据保护方式，可能的返回值：0 - 异步复制方式，1 - 半同步复制方式，2 - 强同步复制方式。
+    * <p>主实例数据保护方式，可能的返回值：0 - 异步复制方式，1 - 半同步复制方式，2 - 强同步复制方式。</p>
     */
     @SerializedName("ProtectMode")
     @Expose
     private Long ProtectMode;
 
     /**
-    * 主实例部署方式，可能的返回值：0 - 单可用部署，1 - 多可用区部署。
+    * <p>主实例部署方式，可能的返回值：0 - 单可用部署，1 - 多可用区部署。</p>
     */
     @SerializedName("DeployMode")
     @Expose
     private Long DeployMode;
 
     /**
-    * 实例可用区信息，格式如 "ap-shanghai-2"。
+    * <p>实例可用区信息，格式如 &quot;ap-shanghai-2&quot;。</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 备库的配置信息。
+    * <p>备库的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SlaveConfig")
@@ -53,7 +53,7 @@ public class DescribeDBInstanceConfigResponse extends AbstractModel {
     private SlaveConfig SlaveConfig;
 
     /**
-    * 强同步实例第二备库的配置信息。
+    * <p>强同步实例第二备库的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackupConfig")
@@ -61,7 +61,7 @@ public class DescribeDBInstanceConfigResponse extends AbstractModel {
     private BackupConfig BackupConfig;
 
     /**
-    * 是否切换备库。
+    * <p>是否切换备库。</p>
     */
     @SerializedName("Switched")
     @Expose
@@ -75,57 +75,57 @@ public class DescribeDBInstanceConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 主实例数据保护方式，可能的返回值：0 - 异步复制方式，1 - 半同步复制方式，2 - 强同步复制方式。 
-     * @return ProtectMode 主实例数据保护方式，可能的返回值：0 - 异步复制方式，1 - 半同步复制方式，2 - 强同步复制方式。
+     * Get <p>主实例数据保护方式，可能的返回值：0 - 异步复制方式，1 - 半同步复制方式，2 - 强同步复制方式。</p> 
+     * @return ProtectMode <p>主实例数据保护方式，可能的返回值：0 - 异步复制方式，1 - 半同步复制方式，2 - 强同步复制方式。</p>
      */
     public Long getProtectMode() {
         return this.ProtectMode;
     }
 
     /**
-     * Set 主实例数据保护方式，可能的返回值：0 - 异步复制方式，1 - 半同步复制方式，2 - 强同步复制方式。
-     * @param ProtectMode 主实例数据保护方式，可能的返回值：0 - 异步复制方式，1 - 半同步复制方式，2 - 强同步复制方式。
+     * Set <p>主实例数据保护方式，可能的返回值：0 - 异步复制方式，1 - 半同步复制方式，2 - 强同步复制方式。</p>
+     * @param ProtectMode <p>主实例数据保护方式，可能的返回值：0 - 异步复制方式，1 - 半同步复制方式，2 - 强同步复制方式。</p>
      */
     public void setProtectMode(Long ProtectMode) {
         this.ProtectMode = ProtectMode;
     }
 
     /**
-     * Get 主实例部署方式，可能的返回值：0 - 单可用部署，1 - 多可用区部署。 
-     * @return DeployMode 主实例部署方式，可能的返回值：0 - 单可用部署，1 - 多可用区部署。
+     * Get <p>主实例部署方式，可能的返回值：0 - 单可用部署，1 - 多可用区部署。</p> 
+     * @return DeployMode <p>主实例部署方式，可能的返回值：0 - 单可用部署，1 - 多可用区部署。</p>
      */
     public Long getDeployMode() {
         return this.DeployMode;
     }
 
     /**
-     * Set 主实例部署方式，可能的返回值：0 - 单可用部署，1 - 多可用区部署。
-     * @param DeployMode 主实例部署方式，可能的返回值：0 - 单可用部署，1 - 多可用区部署。
+     * Set <p>主实例部署方式，可能的返回值：0 - 单可用部署，1 - 多可用区部署。</p>
+     * @param DeployMode <p>主实例部署方式，可能的返回值：0 - 单可用部署，1 - 多可用区部署。</p>
      */
     public void setDeployMode(Long DeployMode) {
         this.DeployMode = DeployMode;
     }
 
     /**
-     * Get 实例可用区信息，格式如 "ap-shanghai-2"。 
-     * @return Zone 实例可用区信息，格式如 "ap-shanghai-2"。
+     * Get <p>实例可用区信息，格式如 &quot;ap-shanghai-2&quot;。</p> 
+     * @return Zone <p>实例可用区信息，格式如 &quot;ap-shanghai-2&quot;。</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 实例可用区信息，格式如 "ap-shanghai-2"。
-     * @param Zone 实例可用区信息，格式如 "ap-shanghai-2"。
+     * Set <p>实例可用区信息，格式如 &quot;ap-shanghai-2&quot;。</p>
+     * @param Zone <p>实例可用区信息，格式如 &quot;ap-shanghai-2&quot;。</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 备库的配置信息。
+     * Get <p>备库的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SlaveConfig 备库的配置信息。
+     * @return SlaveConfig <p>备库的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SlaveConfig getSlaveConfig() {
@@ -133,9 +133,9 @@ public class DescribeDBInstanceConfigResponse extends AbstractModel {
     }
 
     /**
-     * Set 备库的配置信息。
+     * Set <p>备库的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SlaveConfig 备库的配置信息。
+     * @param SlaveConfig <p>备库的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSlaveConfig(SlaveConfig SlaveConfig) {
@@ -143,9 +143,9 @@ public class DescribeDBInstanceConfigResponse extends AbstractModel {
     }
 
     /**
-     * Get 强同步实例第二备库的配置信息。
+     * Get <p>强同步实例第二备库的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BackupConfig 强同步实例第二备库的配置信息。
+     * @return BackupConfig <p>强同步实例第二备库的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BackupConfig getBackupConfig() {
@@ -153,9 +153,9 @@ public class DescribeDBInstanceConfigResponse extends AbstractModel {
     }
 
     /**
-     * Set 强同步实例第二备库的配置信息。
+     * Set <p>强同步实例第二备库的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BackupConfig 强同步实例第二备库的配置信息。
+     * @param BackupConfig <p>强同步实例第二备库的配置信息。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackupConfig(BackupConfig BackupConfig) {
@@ -163,16 +163,16 @@ public class DescribeDBInstanceConfigResponse extends AbstractModel {
     }
 
     /**
-     * Get 是否切换备库。 
-     * @return Switched 是否切换备库。
+     * Get <p>是否切换备库。</p> 
+     * @return Switched <p>是否切换备库。</p>
      */
     public Boolean getSwitched() {
         return this.Switched;
     }
 
     /**
-     * Set 是否切换备库。
-     * @param Switched 是否切换备库。
+     * Set <p>是否切换备库。</p>
+     * @param Switched <p>是否切换备库。</p>
      */
     public void setSwitched(Boolean Switched) {
         this.Switched = Switched;

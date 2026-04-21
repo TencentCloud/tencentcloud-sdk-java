@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeAllocationTrendByMonthResponse extends AbstractModel {
 
     /**
-    * 当月费用信息
+    * <p>当月费用信息</p>
     */
     @SerializedName("Current")
     @Expose
     private AllocationBillTrendDetail Current;
 
     /**
-    * 之前月份费用信息
+    * <p>之前月份费用信息</p>
     */
     @SerializedName("Previous")
     @Expose
     private AllocationBillTrendDetail [] Previous;
 
     /**
-    * 费用统计信息
+    * <p>费用统计信息</p>
     */
     @SerializedName("Stat")
     @Expose
@@ -52,48 +52,48 @@ public class DescribeAllocationTrendByMonthResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 当月费用信息 
-     * @return Current 当月费用信息
+     * Get <p>当月费用信息</p> 
+     * @return Current <p>当月费用信息</p>
      */
     public AllocationBillTrendDetail getCurrent() {
         return this.Current;
     }
 
     /**
-     * Set 当月费用信息
-     * @param Current 当月费用信息
+     * Set <p>当月费用信息</p>
+     * @param Current <p>当月费用信息</p>
      */
     public void setCurrent(AllocationBillTrendDetail Current) {
         this.Current = Current;
     }
 
     /**
-     * Get 之前月份费用信息 
-     * @return Previous 之前月份费用信息
+     * Get <p>之前月份费用信息</p> 
+     * @return Previous <p>之前月份费用信息</p>
      */
     public AllocationBillTrendDetail [] getPrevious() {
         return this.Previous;
     }
 
     /**
-     * Set 之前月份费用信息
-     * @param Previous 之前月份费用信息
+     * Set <p>之前月份费用信息</p>
+     * @param Previous <p>之前月份费用信息</p>
      */
     public void setPrevious(AllocationBillTrendDetail [] Previous) {
         this.Previous = Previous;
     }
 
     /**
-     * Get 费用统计信息 
-     * @return Stat 费用统计信息
+     * Get <p>费用统计信息</p> 
+     * @return Stat <p>费用统计信息</p>
      */
     public AllocationStat getStat() {
         return this.Stat;
     }
 
     /**
-     * Set 费用统计信息
-     * @param Stat 费用统计信息
+     * Set <p>费用统计信息</p>
+     * @param Stat <p>费用统计信息</p>
      */
     public void setStat(AllocationStat Stat) {
         this.Stat = Stat;

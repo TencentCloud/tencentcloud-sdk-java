@@ -24,414 +24,414 @@ import java.util.HashMap;
 public class DescribeAllocationBillConditionsRequest extends AbstractModel {
 
     /**
-    * 账单月份，格式为2024-02，不传默认当前月
+    * <p>账单月份，格式为2024-02，不传默认当前月</p>
     */
     @SerializedName("Month")
     @Expose
     private String Month;
 
     /**
-    * 分账单元唯一标识，用作筛选
+    * <p>分账单元唯一标识，用作筛选</p>
     */
     @SerializedName("TreeNodeUniqKeys")
     @Expose
     private String [] TreeNodeUniqKeys;
 
     /**
-    * 日期
+    * <p>日期</p>
     */
     @SerializedName("BillDates")
     @Expose
     private String [] BillDates;
 
     /**
-    * 产品编码
+    * <p>产品编码</p>
     */
     @SerializedName("BusinessCodes")
     @Expose
     private String [] BusinessCodes;
 
     /**
-    * 使用者UIN
+    * <p>使用者UIN</p>
     */
     @SerializedName("OwnerUins")
     @Expose
     private String [] OwnerUins;
 
     /**
-    * 操作者UIN
+    * <p>操作者UIN</p>
     */
     @SerializedName("OperateUins")
     @Expose
     private String [] OperateUins;
 
     /**
-    * 计费模式编码
+    * <p>计费模式编码</p>
     */
     @SerializedName("PayModes")
     @Expose
     private String [] PayModes;
 
     /**
-    * 交易类型编码
+    * <p>交易类型编码</p>
     */
     @SerializedName("ActionTypes")
     @Expose
     private String [] ActionTypes;
 
     /**
-    * 子产品编码
+    * <p>子产品编码</p>
     */
     @SerializedName("ProductCodes")
     @Expose
     private String [] ProductCodes;
 
     /**
-    * 地域ID
+    * <p>地域ID</p>
     */
     @SerializedName("RegionIds")
     @Expose
     private String [] RegionIds;
 
     /**
-    * 可用区ID
+    * <p>可用区ID</p>
     */
     @SerializedName("ZoneIds")
     @Expose
     private String [] ZoneIds;
 
     /**
-    * 实例类型编码
+    * <p>实例类型编码</p>
     */
     @SerializedName("InstanceTypes")
     @Expose
     private String [] InstanceTypes;
 
     /**
-    * 标签
+    * <p>标签</p>
     */
     @SerializedName("Tag")
     @Expose
     private String [] Tag;
 
     /**
-    * 组件类型编码
+    * <p>组件类型编码</p>
     */
     @SerializedName("ComponentCodes")
     @Expose
     private String [] ComponentCodes;
 
     /**
-    * 组件名称编码
+    * <p>组件名称编码</p>
     */
     @SerializedName("ItemCodes")
     @Expose
     private String [] ItemCodes;
 
     /**
-    * 模糊搜索条件
+    * <p>模糊搜索条件</p>
     */
     @SerializedName("SearchKey")
     @Expose
     private String SearchKey;
 
     /**
-    * 项目id
+    * <p>项目id</p>
     */
     @SerializedName("ProjectIds")
     @Expose
     private Long [] ProjectIds;
 
     /**
-    * 费用归集类型
+    * <p>费用归集类型</p><p>枚举值：</p><ul><li>0： 分摊</li><li>1： 归集</li><li>-1： 未分配</li></ul>
     */
     @SerializedName("AllocationType")
     @Expose
     private Long [] AllocationType;
 
     /**
-     * Get 账单月份，格式为2024-02，不传默认当前月 
-     * @return Month 账单月份，格式为2024-02，不传默认当前月
+     * Get <p>账单月份，格式为2024-02，不传默认当前月</p> 
+     * @return Month <p>账单月份，格式为2024-02，不传默认当前月</p>
      */
     public String getMonth() {
         return this.Month;
     }
 
     /**
-     * Set 账单月份，格式为2024-02，不传默认当前月
-     * @param Month 账单月份，格式为2024-02，不传默认当前月
+     * Set <p>账单月份，格式为2024-02，不传默认当前月</p>
+     * @param Month <p>账单月份，格式为2024-02，不传默认当前月</p>
      */
     public void setMonth(String Month) {
         this.Month = Month;
     }
 
     /**
-     * Get 分账单元唯一标识，用作筛选 
-     * @return TreeNodeUniqKeys 分账单元唯一标识，用作筛选
+     * Get <p>分账单元唯一标识，用作筛选</p> 
+     * @return TreeNodeUniqKeys <p>分账单元唯一标识，用作筛选</p>
      */
     public String [] getTreeNodeUniqKeys() {
         return this.TreeNodeUniqKeys;
     }
 
     /**
-     * Set 分账单元唯一标识，用作筛选
-     * @param TreeNodeUniqKeys 分账单元唯一标识，用作筛选
+     * Set <p>分账单元唯一标识，用作筛选</p>
+     * @param TreeNodeUniqKeys <p>分账单元唯一标识，用作筛选</p>
      */
     public void setTreeNodeUniqKeys(String [] TreeNodeUniqKeys) {
         this.TreeNodeUniqKeys = TreeNodeUniqKeys;
     }
 
     /**
-     * Get 日期 
-     * @return BillDates 日期
+     * Get <p>日期</p> 
+     * @return BillDates <p>日期</p>
      */
     public String [] getBillDates() {
         return this.BillDates;
     }
 
     /**
-     * Set 日期
-     * @param BillDates 日期
+     * Set <p>日期</p>
+     * @param BillDates <p>日期</p>
      */
     public void setBillDates(String [] BillDates) {
         this.BillDates = BillDates;
     }
 
     /**
-     * Get 产品编码 
-     * @return BusinessCodes 产品编码
+     * Get <p>产品编码</p> 
+     * @return BusinessCodes <p>产品编码</p>
      */
     public String [] getBusinessCodes() {
         return this.BusinessCodes;
     }
 
     /**
-     * Set 产品编码
-     * @param BusinessCodes 产品编码
+     * Set <p>产品编码</p>
+     * @param BusinessCodes <p>产品编码</p>
      */
     public void setBusinessCodes(String [] BusinessCodes) {
         this.BusinessCodes = BusinessCodes;
     }
 
     /**
-     * Get 使用者UIN 
-     * @return OwnerUins 使用者UIN
+     * Get <p>使用者UIN</p> 
+     * @return OwnerUins <p>使用者UIN</p>
      */
     public String [] getOwnerUins() {
         return this.OwnerUins;
     }
 
     /**
-     * Set 使用者UIN
-     * @param OwnerUins 使用者UIN
+     * Set <p>使用者UIN</p>
+     * @param OwnerUins <p>使用者UIN</p>
      */
     public void setOwnerUins(String [] OwnerUins) {
         this.OwnerUins = OwnerUins;
     }
 
     /**
-     * Get 操作者UIN 
-     * @return OperateUins 操作者UIN
+     * Get <p>操作者UIN</p> 
+     * @return OperateUins <p>操作者UIN</p>
      */
     public String [] getOperateUins() {
         return this.OperateUins;
     }
 
     /**
-     * Set 操作者UIN
-     * @param OperateUins 操作者UIN
+     * Set <p>操作者UIN</p>
+     * @param OperateUins <p>操作者UIN</p>
      */
     public void setOperateUins(String [] OperateUins) {
         this.OperateUins = OperateUins;
     }
 
     /**
-     * Get 计费模式编码 
-     * @return PayModes 计费模式编码
+     * Get <p>计费模式编码</p> 
+     * @return PayModes <p>计费模式编码</p>
      */
     public String [] getPayModes() {
         return this.PayModes;
     }
 
     /**
-     * Set 计费模式编码
-     * @param PayModes 计费模式编码
+     * Set <p>计费模式编码</p>
+     * @param PayModes <p>计费模式编码</p>
      */
     public void setPayModes(String [] PayModes) {
         this.PayModes = PayModes;
     }
 
     /**
-     * Get 交易类型编码 
-     * @return ActionTypes 交易类型编码
+     * Get <p>交易类型编码</p> 
+     * @return ActionTypes <p>交易类型编码</p>
      */
     public String [] getActionTypes() {
         return this.ActionTypes;
     }
 
     /**
-     * Set 交易类型编码
-     * @param ActionTypes 交易类型编码
+     * Set <p>交易类型编码</p>
+     * @param ActionTypes <p>交易类型编码</p>
      */
     public void setActionTypes(String [] ActionTypes) {
         this.ActionTypes = ActionTypes;
     }
 
     /**
-     * Get 子产品编码 
-     * @return ProductCodes 子产品编码
+     * Get <p>子产品编码</p> 
+     * @return ProductCodes <p>子产品编码</p>
      */
     public String [] getProductCodes() {
         return this.ProductCodes;
     }
 
     /**
-     * Set 子产品编码
-     * @param ProductCodes 子产品编码
+     * Set <p>子产品编码</p>
+     * @param ProductCodes <p>子产品编码</p>
      */
     public void setProductCodes(String [] ProductCodes) {
         this.ProductCodes = ProductCodes;
     }
 
     /**
-     * Get 地域ID 
-     * @return RegionIds 地域ID
+     * Get <p>地域ID</p> 
+     * @return RegionIds <p>地域ID</p>
      */
     public String [] getRegionIds() {
         return this.RegionIds;
     }
 
     /**
-     * Set 地域ID
-     * @param RegionIds 地域ID
+     * Set <p>地域ID</p>
+     * @param RegionIds <p>地域ID</p>
      */
     public void setRegionIds(String [] RegionIds) {
         this.RegionIds = RegionIds;
     }
 
     /**
-     * Get 可用区ID 
-     * @return ZoneIds 可用区ID
+     * Get <p>可用区ID</p> 
+     * @return ZoneIds <p>可用区ID</p>
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set 可用区ID
-     * @param ZoneIds 可用区ID
+     * Set <p>可用区ID</p>
+     * @param ZoneIds <p>可用区ID</p>
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
     /**
-     * Get 实例类型编码 
-     * @return InstanceTypes 实例类型编码
+     * Get <p>实例类型编码</p> 
+     * @return InstanceTypes <p>实例类型编码</p>
      */
     public String [] getInstanceTypes() {
         return this.InstanceTypes;
     }
 
     /**
-     * Set 实例类型编码
-     * @param InstanceTypes 实例类型编码
+     * Set <p>实例类型编码</p>
+     * @param InstanceTypes <p>实例类型编码</p>
      */
     public void setInstanceTypes(String [] InstanceTypes) {
         this.InstanceTypes = InstanceTypes;
     }
 
     /**
-     * Get 标签 
-     * @return Tag 标签
+     * Get <p>标签</p> 
+     * @return Tag <p>标签</p>
      */
     public String [] getTag() {
         return this.Tag;
     }
 
     /**
-     * Set 标签
-     * @param Tag 标签
+     * Set <p>标签</p>
+     * @param Tag <p>标签</p>
      */
     public void setTag(String [] Tag) {
         this.Tag = Tag;
     }
 
     /**
-     * Get 组件类型编码 
-     * @return ComponentCodes 组件类型编码
+     * Get <p>组件类型编码</p> 
+     * @return ComponentCodes <p>组件类型编码</p>
      */
     public String [] getComponentCodes() {
         return this.ComponentCodes;
     }
 
     /**
-     * Set 组件类型编码
-     * @param ComponentCodes 组件类型编码
+     * Set <p>组件类型编码</p>
+     * @param ComponentCodes <p>组件类型编码</p>
      */
     public void setComponentCodes(String [] ComponentCodes) {
         this.ComponentCodes = ComponentCodes;
     }
 
     /**
-     * Get 组件名称编码 
-     * @return ItemCodes 组件名称编码
+     * Get <p>组件名称编码</p> 
+     * @return ItemCodes <p>组件名称编码</p>
      */
     public String [] getItemCodes() {
         return this.ItemCodes;
     }
 
     /**
-     * Set 组件名称编码
-     * @param ItemCodes 组件名称编码
+     * Set <p>组件名称编码</p>
+     * @param ItemCodes <p>组件名称编码</p>
      */
     public void setItemCodes(String [] ItemCodes) {
         this.ItemCodes = ItemCodes;
     }
 
     /**
-     * Get 模糊搜索条件 
-     * @return SearchKey 模糊搜索条件
+     * Get <p>模糊搜索条件</p> 
+     * @return SearchKey <p>模糊搜索条件</p>
      */
     public String getSearchKey() {
         return this.SearchKey;
     }
 
     /**
-     * Set 模糊搜索条件
-     * @param SearchKey 模糊搜索条件
+     * Set <p>模糊搜索条件</p>
+     * @param SearchKey <p>模糊搜索条件</p>
      */
     public void setSearchKey(String SearchKey) {
         this.SearchKey = SearchKey;
     }
 
     /**
-     * Get 项目id 
-     * @return ProjectIds 项目id
+     * Get <p>项目id</p> 
+     * @return ProjectIds <p>项目id</p>
      */
     public Long [] getProjectIds() {
         return this.ProjectIds;
     }
 
     /**
-     * Set 项目id
-     * @param ProjectIds 项目id
+     * Set <p>项目id</p>
+     * @param ProjectIds <p>项目id</p>
      */
     public void setProjectIds(Long [] ProjectIds) {
         this.ProjectIds = ProjectIds;
     }
 
     /**
-     * Get 费用归集类型 
-     * @return AllocationType 费用归集类型
+     * Get <p>费用归集类型</p><p>枚举值：</p><ul><li>0： 分摊</li><li>1： 归集</li><li>-1： 未分配</li></ul> 
+     * @return AllocationType <p>费用归集类型</p><p>枚举值：</p><ul><li>0： 分摊</li><li>1： 归集</li><li>-1： 未分配</li></ul>
      */
     public Long [] getAllocationType() {
         return this.AllocationType;
     }
 
     /**
-     * Set 费用归集类型
-     * @param AllocationType 费用归集类型
+     * Set <p>费用归集类型</p><p>枚举值：</p><ul><li>0： 分摊</li><li>1： 归集</li><li>-1： 未分配</li></ul>
+     * @param AllocationType <p>费用归集类型</p><p>枚举值：</p><ul><li>0： 分摊</li><li>1： 归集</li><li>-1： 未分配</li></ul>
      */
     public void setAllocationType(Long [] AllocationType) {
         this.AllocationType = AllocationType;

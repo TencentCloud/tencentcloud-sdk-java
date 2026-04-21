@@ -45,6 +45,13 @@ public class SubmitVideoExtendKlingJobRequest extends AbstractModel {
     private String NegativePrompt;
 
     /**
+    * 
+    */
+    @SerializedName("ExternalTaskId")
+    @Expose
+    private String ExternalTaskId;
+
+    /**
     * <p>提示词参考强度  取值范围：[0,1]，数值越大参考强度越大</p>
     */
     @SerializedName("CfgScale")
@@ -118,6 +125,22 @@ public class SubmitVideoExtendKlingJobRequest extends AbstractModel {
      */
     public void setNegativePrompt(String NegativePrompt) {
         this.NegativePrompt = NegativePrompt;
+    }
+
+    /**
+     * Get  
+     * @return ExternalTaskId 
+     */
+    public String getExternalTaskId() {
+        return this.ExternalTaskId;
+    }
+
+    /**
+     * Set 
+     * @param ExternalTaskId 
+     */
+    public void setExternalTaskId(String ExternalTaskId) {
+        this.ExternalTaskId = ExternalTaskId;
     }
 
     /**
@@ -201,6 +224,9 @@ public class SubmitVideoExtendKlingJobRequest extends AbstractModel {
         if (source.NegativePrompt != null) {
             this.NegativePrompt = new String(source.NegativePrompt);
         }
+        if (source.ExternalTaskId != null) {
+            this.ExternalTaskId = new String(source.ExternalTaskId);
+        }
         if (source.CfgScale != null) {
             this.CfgScale = new Float(source.CfgScale);
         }
@@ -223,6 +249,7 @@ public class SubmitVideoExtendKlingJobRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "VideoId", this.VideoId);
         this.setParamSimple(map, prefix + "Prompt", this.Prompt);
         this.setParamSimple(map, prefix + "NegativePrompt", this.NegativePrompt);
+        this.setParamSimple(map, prefix + "ExternalTaskId", this.ExternalTaskId);
         this.setParamSimple(map, prefix + "CfgScale", this.CfgScale);
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
         this.setParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
