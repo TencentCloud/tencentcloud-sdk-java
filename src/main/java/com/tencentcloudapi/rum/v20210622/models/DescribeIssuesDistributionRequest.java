@@ -24,391 +24,391 @@ import java.util.HashMap;
 public class DescribeIssuesDistributionRequest extends AbstractModel {
 
     /**
-    * 产品Id
+    * <p>产品Id</p>
     */
     @SerializedName("ProductId")
     @Expose
     private String ProductId;
 
     /**
-    * 接口调试专用，当 token 为空时，以这里的 value 作为筛选表单信息
+    * <p>接口调试专用，当 token 为空时，以这里的 value 作为筛选表单信息</p>
     */
     @SerializedName("FormListString")
     @Expose
     private String FormListString;
 
     /**
-    * 分布维度是自定义维度时，填‘user_custom’
+    * <p>分布维度是自定义维度时，填‘user_custom’</p>
     */
     @SerializedName("DimType")
     @Expose
     private String DimType;
 
     /**
-    * 维度，e.g. os_version, app_version, model等
+    * <p>维度，e.g. os_version, app_version, model等</p>
     */
     @SerializedName("Dimension")
     @Expose
     private String Dimension;
 
     /**
-    * 数字类型字段的区间范围
+    * <p>数字类型字段的区间范围</p>
     */
     @SerializedName("Intervals")
     @Expose
     private Long [] Intervals;
 
     /**
-    * 提供给前端使用，当填写本字段时，会覆盖 form_list 的值
+    * <p>提供给前端使用，当填写本字段时，会覆盖 form_list 的值</p>
     */
     @SerializedName("ParamToken")
     @Expose
     private String ParamToken;
 
     /**
-    * 问题Id
+    * <p>问题Id</p>
     */
     @SerializedName("IssueId")
     @Expose
     private String IssueId;
 
     /**
-    * 问题类型
+    * <p>问题类型</p>
     */
     @SerializedName("IssueType")
     @Expose
     private Long IssueType;
 
     /**
-    * 限制返回的个数，默认返回所有值
+    * <p>限制返回的个数，默认返回所有值</p>
     */
     @SerializedName("ParamLimit")
     @Expose
     private Long ParamLimit;
 
     /**
-    * 键
+    * <p>键</p>
     */
     @SerializedName("MapKey")
     @Expose
     private String MapKey;
 
     /**
-    * 名称
+    * <p>名称</p>
     */
     @SerializedName("MapName")
     @Expose
     private String MapName;
 
     /**
-    * 指标类型
+    * <p>指标类型</p>
     */
     @SerializedName("MetricType")
     @Expose
     private Long MetricType;
 
     /**
-    * 每页数目
+    * <p>每页数目</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 页码
+    * <p>页码</p>
     */
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
 
     /**
-    * 用户自定义维度key
+    * <p>用户自定义维度key</p>
     */
     @SerializedName("UserCustomKey")
     @Expose
     private String UserCustomKey;
 
     /**
-    * 拓展字段
+    * <p>拓展字段</p>
     */
     @SerializedName("ExtraData")
     @Expose
     private String ExtraData;
 
     /**
-    * 请求头
+    * <p>请求头</p>
     */
     @SerializedName("RequestHeader")
     @Expose
     private String RequestHeader;
 
     /**
-     * Get 产品Id 
-     * @return ProductId 产品Id
+     * Get <p>产品Id</p> 
+     * @return ProductId <p>产品Id</p>
      */
     public String getProductId() {
         return this.ProductId;
     }
 
     /**
-     * Set 产品Id
-     * @param ProductId 产品Id
+     * Set <p>产品Id</p>
+     * @param ProductId <p>产品Id</p>
      */
     public void setProductId(String ProductId) {
         this.ProductId = ProductId;
     }
 
     /**
-     * Get 接口调试专用，当 token 为空时，以这里的 value 作为筛选表单信息 
-     * @return FormListString 接口调试专用，当 token 为空时，以这里的 value 作为筛选表单信息
+     * Get <p>接口调试专用，当 token 为空时，以这里的 value 作为筛选表单信息</p> 
+     * @return FormListString <p>接口调试专用，当 token 为空时，以这里的 value 作为筛选表单信息</p>
      */
     public String getFormListString() {
         return this.FormListString;
     }
 
     /**
-     * Set 接口调试专用，当 token 为空时，以这里的 value 作为筛选表单信息
-     * @param FormListString 接口调试专用，当 token 为空时，以这里的 value 作为筛选表单信息
+     * Set <p>接口调试专用，当 token 为空时，以这里的 value 作为筛选表单信息</p>
+     * @param FormListString <p>接口调试专用，当 token 为空时，以这里的 value 作为筛选表单信息</p>
      */
     public void setFormListString(String FormListString) {
         this.FormListString = FormListString;
     }
 
     /**
-     * Get 分布维度是自定义维度时，填‘user_custom’ 
-     * @return DimType 分布维度是自定义维度时，填‘user_custom’
+     * Get <p>分布维度是自定义维度时，填‘user_custom’</p> 
+     * @return DimType <p>分布维度是自定义维度时，填‘user_custom’</p>
      */
     public String getDimType() {
         return this.DimType;
     }
 
     /**
-     * Set 分布维度是自定义维度时，填‘user_custom’
-     * @param DimType 分布维度是自定义维度时，填‘user_custom’
+     * Set <p>分布维度是自定义维度时，填‘user_custom’</p>
+     * @param DimType <p>分布维度是自定义维度时，填‘user_custom’</p>
      */
     public void setDimType(String DimType) {
         this.DimType = DimType;
     }
 
     /**
-     * Get 维度，e.g. os_version, app_version, model等 
-     * @return Dimension 维度，e.g. os_version, app_version, model等
+     * Get <p>维度，e.g. os_version, app_version, model等</p> 
+     * @return Dimension <p>维度，e.g. os_version, app_version, model等</p>
      */
     public String getDimension() {
         return this.Dimension;
     }
 
     /**
-     * Set 维度，e.g. os_version, app_version, model等
-     * @param Dimension 维度，e.g. os_version, app_version, model等
+     * Set <p>维度，e.g. os_version, app_version, model等</p>
+     * @param Dimension <p>维度，e.g. os_version, app_version, model等</p>
      */
     public void setDimension(String Dimension) {
         this.Dimension = Dimension;
     }
 
     /**
-     * Get 数字类型字段的区间范围 
-     * @return Intervals 数字类型字段的区间范围
+     * Get <p>数字类型字段的区间范围</p> 
+     * @return Intervals <p>数字类型字段的区间范围</p>
      */
     public Long [] getIntervals() {
         return this.Intervals;
     }
 
     /**
-     * Set 数字类型字段的区间范围
-     * @param Intervals 数字类型字段的区间范围
+     * Set <p>数字类型字段的区间范围</p>
+     * @param Intervals <p>数字类型字段的区间范围</p>
      */
     public void setIntervals(Long [] Intervals) {
         this.Intervals = Intervals;
     }
 
     /**
-     * Get 提供给前端使用，当填写本字段时，会覆盖 form_list 的值 
-     * @return ParamToken 提供给前端使用，当填写本字段时，会覆盖 form_list 的值
+     * Get <p>提供给前端使用，当填写本字段时，会覆盖 form_list 的值</p> 
+     * @return ParamToken <p>提供给前端使用，当填写本字段时，会覆盖 form_list 的值</p>
      */
     public String getParamToken() {
         return this.ParamToken;
     }
 
     /**
-     * Set 提供给前端使用，当填写本字段时，会覆盖 form_list 的值
-     * @param ParamToken 提供给前端使用，当填写本字段时，会覆盖 form_list 的值
+     * Set <p>提供给前端使用，当填写本字段时，会覆盖 form_list 的值</p>
+     * @param ParamToken <p>提供给前端使用，当填写本字段时，会覆盖 form_list 的值</p>
      */
     public void setParamToken(String ParamToken) {
         this.ParamToken = ParamToken;
     }
 
     /**
-     * Get 问题Id 
-     * @return IssueId 问题Id
+     * Get <p>问题Id</p> 
+     * @return IssueId <p>问题Id</p>
      */
     public String getIssueId() {
         return this.IssueId;
     }
 
     /**
-     * Set 问题Id
-     * @param IssueId 问题Id
+     * Set <p>问题Id</p>
+     * @param IssueId <p>问题Id</p>
      */
     public void setIssueId(String IssueId) {
         this.IssueId = IssueId;
     }
 
     /**
-     * Get 问题类型 
-     * @return IssueType 问题类型
+     * Get <p>问题类型</p> 
+     * @return IssueType <p>问题类型</p>
      */
     public Long getIssueType() {
         return this.IssueType;
     }
 
     /**
-     * Set 问题类型
-     * @param IssueType 问题类型
+     * Set <p>问题类型</p>
+     * @param IssueType <p>问题类型</p>
      */
     public void setIssueType(Long IssueType) {
         this.IssueType = IssueType;
     }
 
     /**
-     * Get 限制返回的个数，默认返回所有值 
-     * @return ParamLimit 限制返回的个数，默认返回所有值
+     * Get <p>限制返回的个数，默认返回所有值</p> 
+     * @return ParamLimit <p>限制返回的个数，默认返回所有值</p>
      */
     public Long getParamLimit() {
         return this.ParamLimit;
     }
 
     /**
-     * Set 限制返回的个数，默认返回所有值
-     * @param ParamLimit 限制返回的个数，默认返回所有值
+     * Set <p>限制返回的个数，默认返回所有值</p>
+     * @param ParamLimit <p>限制返回的个数，默认返回所有值</p>
      */
     public void setParamLimit(Long ParamLimit) {
         this.ParamLimit = ParamLimit;
     }
 
     /**
-     * Get 键 
-     * @return MapKey 键
+     * Get <p>键</p> 
+     * @return MapKey <p>键</p>
      */
     public String getMapKey() {
         return this.MapKey;
     }
 
     /**
-     * Set 键
-     * @param MapKey 键
+     * Set <p>键</p>
+     * @param MapKey <p>键</p>
      */
     public void setMapKey(String MapKey) {
         this.MapKey = MapKey;
     }
 
     /**
-     * Get 名称 
-     * @return MapName 名称
+     * Get <p>名称</p> 
+     * @return MapName <p>名称</p>
      */
     public String getMapName() {
         return this.MapName;
     }
 
     /**
-     * Set 名称
-     * @param MapName 名称
+     * Set <p>名称</p>
+     * @param MapName <p>名称</p>
      */
     public void setMapName(String MapName) {
         this.MapName = MapName;
     }
 
     /**
-     * Get 指标类型 
-     * @return MetricType 指标类型
+     * Get <p>指标类型</p> 
+     * @return MetricType <p>指标类型</p>
      */
     public Long getMetricType() {
         return this.MetricType;
     }
 
     /**
-     * Set 指标类型
-     * @param MetricType 指标类型
+     * Set <p>指标类型</p>
+     * @param MetricType <p>指标类型</p>
      */
     public void setMetricType(Long MetricType) {
         this.MetricType = MetricType;
     }
 
     /**
-     * Get 每页数目 
-     * @return PageSize 每页数目
+     * Get <p>每页数目</p> 
+     * @return PageSize <p>每页数目</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 每页数目
-     * @param PageSize 每页数目
+     * Set <p>每页数目</p>
+     * @param PageSize <p>每页数目</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 页码 
-     * @return PageNumber 页码
+     * Get <p>页码</p> 
+     * @return PageNumber <p>页码</p>
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set 页码
-     * @param PageNumber 页码
+     * Set <p>页码</p>
+     * @param PageNumber <p>页码</p>
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 用户自定义维度key 
-     * @return UserCustomKey 用户自定义维度key
+     * Get <p>用户自定义维度key</p> 
+     * @return UserCustomKey <p>用户自定义维度key</p>
      */
     public String getUserCustomKey() {
         return this.UserCustomKey;
     }
 
     /**
-     * Set 用户自定义维度key
-     * @param UserCustomKey 用户自定义维度key
+     * Set <p>用户自定义维度key</p>
+     * @param UserCustomKey <p>用户自定义维度key</p>
      */
     public void setUserCustomKey(String UserCustomKey) {
         this.UserCustomKey = UserCustomKey;
     }
 
     /**
-     * Get 拓展字段 
-     * @return ExtraData 拓展字段
+     * Get <p>拓展字段</p> 
+     * @return ExtraData <p>拓展字段</p>
      */
     public String getExtraData() {
         return this.ExtraData;
     }
 
     /**
-     * Set 拓展字段
-     * @param ExtraData 拓展字段
+     * Set <p>拓展字段</p>
+     * @param ExtraData <p>拓展字段</p>
      */
     public void setExtraData(String ExtraData) {
         this.ExtraData = ExtraData;
     }
 
     /**
-     * Get 请求头 
-     * @return RequestHeader 请求头
+     * Get <p>请求头</p> 
+     * @return RequestHeader <p>请求头</p>
      */
     public String getRequestHeader() {
         return this.RequestHeader;
     }
 
     /**
-     * Set 请求头
-     * @param RequestHeader 请求头
+     * Set <p>请求头</p>
+     * @param RequestHeader <p>请求头</p>
      */
     public void setRequestHeader(String RequestHeader) {
         this.RequestHeader = RequestHeader;

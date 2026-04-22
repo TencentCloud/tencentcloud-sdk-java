@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeDBErrlogsResponse extends AbstractModel {
 
     /**
-    * 查询到的日志数量，最大值为10000条。
+    * <p>查询到的日志数量，最大值为10000条。</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 错误日志详细信息集合。
+    * <p>错误日志详细信息集合。</p>
     */
     @SerializedName("Details")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeDBErrlogsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 查询到的日志数量，最大值为10000条。 
-     * @return TotalCount 查询到的日志数量，最大值为10000条。
+     * Get <p>查询到的日志数量，最大值为10000条。</p> 
+     * @return TotalCount <p>查询到的日志数量，最大值为10000条。</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 查询到的日志数量，最大值为10000条。
-     * @param TotalCount 查询到的日志数量，最大值为10000条。
+     * Set <p>查询到的日志数量，最大值为10000条。</p>
+     * @param TotalCount <p>查询到的日志数量，最大值为10000条。</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 错误日志详细信息集合。 
-     * @return Details 错误日志详细信息集合。
+     * Get <p>错误日志详细信息集合。</p> 
+     * @return Details <p>错误日志详细信息集合。</p>
      */
     public ErrLogDetail [] getDetails() {
         return this.Details;
     }
 
     /**
-     * Set 错误日志详细信息集合。
-     * @param Details 错误日志详细信息集合。
+     * Set <p>错误日志详细信息集合。</p>
+     * @param Details <p>错误日志详细信息集合。</p>
      */
     public void setDetails(ErrLogDetail [] Details) {
         this.Details = Details;

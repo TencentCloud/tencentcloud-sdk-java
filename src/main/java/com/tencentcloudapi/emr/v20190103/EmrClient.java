@@ -747,6 +747,17 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *安装组件。对于依赖元数据库的组件，有可能会需要下单一个cdb。可根据InstallSoftWareInfo查看当前集群可安装的组件，以及哪些组件有可能需要cdb。
+     * @param req InstallSoftwareRequest
+     * @return InstallSoftwareResponse
+     * @throws TencentCloudSDKException
+     */
+    public InstallSoftwareResponse InstallSoftware(InstallSoftwareRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InstallSoftware", InstallSoftwareResponse.class);
+    }
+
+    /**
      *前提：预付费集群
 资源级别开启或关闭自动续费
      * @param req ModifyAutoRenewFlagRequest

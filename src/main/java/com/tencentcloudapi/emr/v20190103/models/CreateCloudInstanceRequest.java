@@ -24,500 +24,463 @@ import java.util.HashMap;
 public class CreateCloudInstanceRequest extends AbstractModel {
 
     /**
-    * 实例名称。
-<li>长度限制为6-36个字符。</li>
-<li>只允许包含中文、字母、数字、-、_。</li>
+    * <p>实例名称。</p><li>长度限制为6-36个字符。</li><li>只允许包含中文、字母、数字、-、_。</li>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 容器集群类型，取值范围
-<li>EMR容器集群实例: EMR-TKE</li>
+    * <p>容器集群类型，取值范围</p><li>EMR容器集群实例: EMR-TKE</li>
     */
     @SerializedName("ClusterClass")
     @Expose
     private String ClusterClass;
 
     /**
-    * 部署的组件列表，不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）对应不同可选组件列表，不同产品版本可选组件列表查询：[组件版本](https://cloud.tencent.com/document/product/589/20279) ；
-
+    * <p>部署的组件列表，不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）对应不同可选组件列表，不同产品版本可选组件列表查询：<a href="https://cloud.tencent.com/document/product/589/20279">组件版本</a> ；</p>
     */
     @SerializedName("Software")
     @Expose
     private String [] Software;
 
     /**
-    * 容器平台类型，取值范围
-<li>EMR容器集群实例: tke</li>
+    * <p>容器平台类型，取值范围</p><li>EMR容器集群实例: tke</li>
     */
     @SerializedName("PlatFormType")
     @Expose
     private String PlatFormType;
 
     /**
-    * cos存储桶
+    * <p>cos存储桶</p>
     */
     @SerializedName("CosBucket")
     @Expose
     private String CosBucket;
 
     /**
-    * 容器集群id
+    * <p>容器集群id</p>
     */
     @SerializedName("EksClusterId")
     @Expose
     private String EksClusterId;
 
     /**
-    * 产品Id，不同产品ID表示不同的EMR产品版本。取值范围：
-<li>60:表示EMR-TKE-V1.1.0</li>
-<li>55:表示EMR-TKE-V1.0.1</li>
-<li>52:表示EMR-TKE-V1.0.0</li>
+    * <p>产品Id，不同产品ID表示不同的EMR产品版本。取值范围：</p><li>60:表示EMR-TKE-V1.1.0</li><li>55:表示EMR-TKE-V1.0.1</li><li>52:表示EMR-TKE-V1.0.0</li>
     */
     @SerializedName("ProductId")
     @Expose
     private Long ProductId;
 
     /**
-    * 客户端token，唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，小于等于64个字符，例如 a9a90aa6fae36063280
-示例值：a9a90aa6fae36063280
+    * <p>客户端token，唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，小于等于64个字符，例如 a9a90aa6fae36063280<br>示例值：a9a90aa6fae36063280</p>
     */
     @SerializedName("ClientToken")
     @Expose
     private String ClientToken;
 
     /**
-    * 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
+    * <p>私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。</p>
     */
     @SerializedName("VPCSettings")
     @Expose
     private VPCSettings VPCSettings;
 
     /**
-    * 所有组件角色及其对应的Pod资源请求信息
+    * <p>所有组件角色及其对应的Pod资源请求信息</p>
     */
     @SerializedName("CloudResources")
     @Expose
     private CloudResource [] CloudResources;
 
     /**
-    * 安全组Id，为空默认创建新的安全组
+    * <p>安全组Id，为空默认创建新的安全组</p>
     */
     @SerializedName("SgId")
     @Expose
     private String SgId;
 
     /**
-    * 元数据库信息
-MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser MetaDataPass UnifyMetaInstanceId不用填
-当MetaType选择EMR_EXIT_META时，填写UnifyMetaInstanceId
-当MetaType选择USER_CUSTOM_META时，填写MetaDataJdbcUrl MetaDataUser MetaDataPass
+    * <p>元数据库信息<br>MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser MetaDataPass UnifyMetaInstanceId不用填<br>当MetaType选择EMR_EXIT_META时，填写UnifyMetaInstanceId<br>当MetaType选择USER_CUSTOM_META时，填写MetaDataJdbcUrl MetaDataUser MetaDataPass</p>
     */
     @SerializedName("MetaDBInfo")
     @Expose
     private CustomMetaDBInfo MetaDBInfo;
 
     /**
-    * 标签信息
+    * <p>标签信息</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 登录密码，LoginSettings中的Password字段
+    * <p>登录密码，LoginSettings中的Password字段</p>
     */
     @SerializedName("LoginSettings")
     @Expose
     private LoginSettings LoginSettings;
 
     /**
-    * 共享服务信息
+    * <p>共享服务信息</p>
     */
     @SerializedName("ExternalService")
     @Expose
     private ExternalService [] ExternalService;
 
     /**
-    * 可用区id
+    * <p>可用区id</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * 数据库版本
+    * <p>数据库版本</p>
     */
     @SerializedName("DefaultMetaVersion")
     @Expose
     private String DefaultMetaVersion;
 
     /**
-    * 是否开通审计
+    * <p>是否开通审计</p>
     */
     @SerializedName("NeedCdbAudit")
     @Expose
     private Long NeedCdbAudit;
 
     /**
-    * 安全组来源IP
+    * <p>安全组来源IP</p>
     */
     @SerializedName("SgIP")
     @Expose
     private String SgIP;
 
     /**
-     * Get 实例名称。
-<li>长度限制为6-36个字符。</li>
-<li>只允许包含中文、字母、数字、-、_。</li> 
-     * @return InstanceName 实例名称。
-<li>长度限制为6-36个字符。</li>
-<li>只允许包含中文、字母、数字、-、_。</li>
+    * <p>额外容器相关配置</p>
+    */
+    @SerializedName("ContainerExtraConf")
+    @Expose
+    private ContainerExtraConf ContainerExtraConf;
+
+    /**
+     * Get <p>实例名称。</p><li>长度限制为6-36个字符。</li><li>只允许包含中文、字母、数字、-、_。</li> 
+     * @return InstanceName <p>实例名称。</p><li>长度限制为6-36个字符。</li><li>只允许包含中文、字母、数字、-、_。</li>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称。
-<li>长度限制为6-36个字符。</li>
-<li>只允许包含中文、字母、数字、-、_。</li>
-     * @param InstanceName 实例名称。
-<li>长度限制为6-36个字符。</li>
-<li>只允许包含中文、字母、数字、-、_。</li>
+     * Set <p>实例名称。</p><li>长度限制为6-36个字符。</li><li>只允许包含中文、字母、数字、-、_。</li>
+     * @param InstanceName <p>实例名称。</p><li>长度限制为6-36个字符。</li><li>只允许包含中文、字母、数字、-、_。</li>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 容器集群类型，取值范围
-<li>EMR容器集群实例: EMR-TKE</li> 
-     * @return ClusterClass 容器集群类型，取值范围
-<li>EMR容器集群实例: EMR-TKE</li>
+     * Get <p>容器集群类型，取值范围</p><li>EMR容器集群实例: EMR-TKE</li> 
+     * @return ClusterClass <p>容器集群类型，取值范围</p><li>EMR容器集群实例: EMR-TKE</li>
      */
     public String getClusterClass() {
         return this.ClusterClass;
     }
 
     /**
-     * Set 容器集群类型，取值范围
-<li>EMR容器集群实例: EMR-TKE</li>
-     * @param ClusterClass 容器集群类型，取值范围
-<li>EMR容器集群实例: EMR-TKE</li>
+     * Set <p>容器集群类型，取值范围</p><li>EMR容器集群实例: EMR-TKE</li>
+     * @param ClusterClass <p>容器集群类型，取值范围</p><li>EMR容器集群实例: EMR-TKE</li>
      */
     public void setClusterClass(String ClusterClass) {
         this.ClusterClass = ClusterClass;
     }
 
     /**
-     * Get 部署的组件列表，不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）对应不同可选组件列表，不同产品版本可选组件列表查询：[组件版本](https://cloud.tencent.com/document/product/589/20279) ；
- 
-     * @return Software 部署的组件列表，不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）对应不同可选组件列表，不同产品版本可选组件列表查询：[组件版本](https://cloud.tencent.com/document/product/589/20279) ；
-
+     * Get <p>部署的组件列表，不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）对应不同可选组件列表，不同产品版本可选组件列表查询：<a href="https://cloud.tencent.com/document/product/589/20279">组件版本</a> ；</p> 
+     * @return Software <p>部署的组件列表，不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）对应不同可选组件列表，不同产品版本可选组件列表查询：<a href="https://cloud.tencent.com/document/product/589/20279">组件版本</a> ；</p>
      */
     public String [] getSoftware() {
         return this.Software;
     }
 
     /**
-     * Set 部署的组件列表，不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）对应不同可选组件列表，不同产品版本可选组件列表查询：[组件版本](https://cloud.tencent.com/document/product/589/20279) ；
-
-     * @param Software 部署的组件列表，不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）对应不同可选组件列表，不同产品版本可选组件列表查询：[组件版本](https://cloud.tencent.com/document/product/589/20279) ；
-
+     * Set <p>部署的组件列表，不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）对应不同可选组件列表，不同产品版本可选组件列表查询：<a href="https://cloud.tencent.com/document/product/589/20279">组件版本</a> ；</p>
+     * @param Software <p>部署的组件列表，不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）对应不同可选组件列表，不同产品版本可选组件列表查询：<a href="https://cloud.tencent.com/document/product/589/20279">组件版本</a> ；</p>
      */
     public void setSoftware(String [] Software) {
         this.Software = Software;
     }
 
     /**
-     * Get 容器平台类型，取值范围
-<li>EMR容器集群实例: tke</li> 
-     * @return PlatFormType 容器平台类型，取值范围
-<li>EMR容器集群实例: tke</li>
+     * Get <p>容器平台类型，取值范围</p><li>EMR容器集群实例: tke</li> 
+     * @return PlatFormType <p>容器平台类型，取值范围</p><li>EMR容器集群实例: tke</li>
      */
     public String getPlatFormType() {
         return this.PlatFormType;
     }
 
     /**
-     * Set 容器平台类型，取值范围
-<li>EMR容器集群实例: tke</li>
-     * @param PlatFormType 容器平台类型，取值范围
-<li>EMR容器集群实例: tke</li>
+     * Set <p>容器平台类型，取值范围</p><li>EMR容器集群实例: tke</li>
+     * @param PlatFormType <p>容器平台类型，取值范围</p><li>EMR容器集群实例: tke</li>
      */
     public void setPlatFormType(String PlatFormType) {
         this.PlatFormType = PlatFormType;
     }
 
     /**
-     * Get cos存储桶 
-     * @return CosBucket cos存储桶
+     * Get <p>cos存储桶</p> 
+     * @return CosBucket <p>cos存储桶</p>
      */
     public String getCosBucket() {
         return this.CosBucket;
     }
 
     /**
-     * Set cos存储桶
-     * @param CosBucket cos存储桶
+     * Set <p>cos存储桶</p>
+     * @param CosBucket <p>cos存储桶</p>
      */
     public void setCosBucket(String CosBucket) {
         this.CosBucket = CosBucket;
     }
 
     /**
-     * Get 容器集群id 
-     * @return EksClusterId 容器集群id
+     * Get <p>容器集群id</p> 
+     * @return EksClusterId <p>容器集群id</p>
      */
     public String getEksClusterId() {
         return this.EksClusterId;
     }
 
     /**
-     * Set 容器集群id
-     * @param EksClusterId 容器集群id
+     * Set <p>容器集群id</p>
+     * @param EksClusterId <p>容器集群id</p>
      */
     public void setEksClusterId(String EksClusterId) {
         this.EksClusterId = EksClusterId;
     }
 
     /**
-     * Get 产品Id，不同产品ID表示不同的EMR产品版本。取值范围：
-<li>60:表示EMR-TKE-V1.1.0</li>
-<li>55:表示EMR-TKE-V1.0.1</li>
-<li>52:表示EMR-TKE-V1.0.0</li> 
-     * @return ProductId 产品Id，不同产品ID表示不同的EMR产品版本。取值范围：
-<li>60:表示EMR-TKE-V1.1.0</li>
-<li>55:表示EMR-TKE-V1.0.1</li>
-<li>52:表示EMR-TKE-V1.0.0</li>
+     * Get <p>产品Id，不同产品ID表示不同的EMR产品版本。取值范围：</p><li>60:表示EMR-TKE-V1.1.0</li><li>55:表示EMR-TKE-V1.0.1</li><li>52:表示EMR-TKE-V1.0.0</li> 
+     * @return ProductId <p>产品Id，不同产品ID表示不同的EMR产品版本。取值范围：</p><li>60:表示EMR-TKE-V1.1.0</li><li>55:表示EMR-TKE-V1.0.1</li><li>52:表示EMR-TKE-V1.0.0</li>
      */
     public Long getProductId() {
         return this.ProductId;
     }
 
     /**
-     * Set 产品Id，不同产品ID表示不同的EMR产品版本。取值范围：
-<li>60:表示EMR-TKE-V1.1.0</li>
-<li>55:表示EMR-TKE-V1.0.1</li>
-<li>52:表示EMR-TKE-V1.0.0</li>
-     * @param ProductId 产品Id，不同产品ID表示不同的EMR产品版本。取值范围：
-<li>60:表示EMR-TKE-V1.1.0</li>
-<li>55:表示EMR-TKE-V1.0.1</li>
-<li>52:表示EMR-TKE-V1.0.0</li>
+     * Set <p>产品Id，不同产品ID表示不同的EMR产品版本。取值范围：</p><li>60:表示EMR-TKE-V1.1.0</li><li>55:表示EMR-TKE-V1.0.1</li><li>52:表示EMR-TKE-V1.0.0</li>
+     * @param ProductId <p>产品Id，不同产品ID表示不同的EMR产品版本。取值范围：</p><li>60:表示EMR-TKE-V1.1.0</li><li>55:表示EMR-TKE-V1.0.1</li><li>52:表示EMR-TKE-V1.0.0</li>
      */
     public void setProductId(Long ProductId) {
         this.ProductId = ProductId;
     }
 
     /**
-     * Get 客户端token，唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，小于等于64个字符，例如 a9a90aa6fae36063280
-示例值：a9a90aa6fae36063280 
-     * @return ClientToken 客户端token，唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，小于等于64个字符，例如 a9a90aa6fae36063280
-示例值：a9a90aa6fae36063280
+     * Get <p>客户端token，唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，小于等于64个字符，例如 a9a90aa6fae36063280<br>示例值：a9a90aa6fae36063280</p> 
+     * @return ClientToken <p>客户端token，唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，小于等于64个字符，例如 a9a90aa6fae36063280<br>示例值：a9a90aa6fae36063280</p>
      */
     public String getClientToken() {
         return this.ClientToken;
     }
 
     /**
-     * Set 客户端token，唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，小于等于64个字符，例如 a9a90aa6fae36063280
-示例值：a9a90aa6fae36063280
-     * @param ClientToken 客户端token，唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，小于等于64个字符，例如 a9a90aa6fae36063280
-示例值：a9a90aa6fae36063280
+     * Set <p>客户端token，唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，小于等于64个字符，例如 a9a90aa6fae36063280<br>示例值：a9a90aa6fae36063280</p>
+     * @param ClientToken <p>客户端token，唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，小于等于64个字符，例如 a9a90aa6fae36063280<br>示例值：a9a90aa6fae36063280</p>
      */
     public void setClientToken(String ClientToken) {
         this.ClientToken = ClientToken;
     }
 
     /**
-     * Get 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。 
-     * @return VPCSettings 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
+     * Get <p>私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。</p> 
+     * @return VPCSettings <p>私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。</p>
      */
     public VPCSettings getVPCSettings() {
         return this.VPCSettings;
     }
 
     /**
-     * Set 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
-     * @param VPCSettings 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
+     * Set <p>私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。</p>
+     * @param VPCSettings <p>私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。</p>
      */
     public void setVPCSettings(VPCSettings VPCSettings) {
         this.VPCSettings = VPCSettings;
     }
 
     /**
-     * Get 所有组件角色及其对应的Pod资源请求信息 
-     * @return CloudResources 所有组件角色及其对应的Pod资源请求信息
+     * Get <p>所有组件角色及其对应的Pod资源请求信息</p> 
+     * @return CloudResources <p>所有组件角色及其对应的Pod资源请求信息</p>
      */
     public CloudResource [] getCloudResources() {
         return this.CloudResources;
     }
 
     /**
-     * Set 所有组件角色及其对应的Pod资源请求信息
-     * @param CloudResources 所有组件角色及其对应的Pod资源请求信息
+     * Set <p>所有组件角色及其对应的Pod资源请求信息</p>
+     * @param CloudResources <p>所有组件角色及其对应的Pod资源请求信息</p>
      */
     public void setCloudResources(CloudResource [] CloudResources) {
         this.CloudResources = CloudResources;
     }
 
     /**
-     * Get 安全组Id，为空默认创建新的安全组 
-     * @return SgId 安全组Id，为空默认创建新的安全组
+     * Get <p>安全组Id，为空默认创建新的安全组</p> 
+     * @return SgId <p>安全组Id，为空默认创建新的安全组</p>
      */
     public String getSgId() {
         return this.SgId;
     }
 
     /**
-     * Set 安全组Id，为空默认创建新的安全组
-     * @param SgId 安全组Id，为空默认创建新的安全组
+     * Set <p>安全组Id，为空默认创建新的安全组</p>
+     * @param SgId <p>安全组Id，为空默认创建新的安全组</p>
      */
     public void setSgId(String SgId) {
         this.SgId = SgId;
     }
 
     /**
-     * Get 元数据库信息
-MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser MetaDataPass UnifyMetaInstanceId不用填
-当MetaType选择EMR_EXIT_META时，填写UnifyMetaInstanceId
-当MetaType选择USER_CUSTOM_META时，填写MetaDataJdbcUrl MetaDataUser MetaDataPass 
-     * @return MetaDBInfo 元数据库信息
-MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser MetaDataPass UnifyMetaInstanceId不用填
-当MetaType选择EMR_EXIT_META时，填写UnifyMetaInstanceId
-当MetaType选择USER_CUSTOM_META时，填写MetaDataJdbcUrl MetaDataUser MetaDataPass
+     * Get <p>元数据库信息<br>MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser MetaDataPass UnifyMetaInstanceId不用填<br>当MetaType选择EMR_EXIT_META时，填写UnifyMetaInstanceId<br>当MetaType选择USER_CUSTOM_META时，填写MetaDataJdbcUrl MetaDataUser MetaDataPass</p> 
+     * @return MetaDBInfo <p>元数据库信息<br>MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser MetaDataPass UnifyMetaInstanceId不用填<br>当MetaType选择EMR_EXIT_META时，填写UnifyMetaInstanceId<br>当MetaType选择USER_CUSTOM_META时，填写MetaDataJdbcUrl MetaDataUser MetaDataPass</p>
      */
     public CustomMetaDBInfo getMetaDBInfo() {
         return this.MetaDBInfo;
     }
 
     /**
-     * Set 元数据库信息
-MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser MetaDataPass UnifyMetaInstanceId不用填
-当MetaType选择EMR_EXIT_META时，填写UnifyMetaInstanceId
-当MetaType选择USER_CUSTOM_META时，填写MetaDataJdbcUrl MetaDataUser MetaDataPass
-     * @param MetaDBInfo 元数据库信息
-MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser MetaDataPass UnifyMetaInstanceId不用填
-当MetaType选择EMR_EXIT_META时，填写UnifyMetaInstanceId
-当MetaType选择USER_CUSTOM_META时，填写MetaDataJdbcUrl MetaDataUser MetaDataPass
+     * Set <p>元数据库信息<br>MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser MetaDataPass UnifyMetaInstanceId不用填<br>当MetaType选择EMR_EXIT_META时，填写UnifyMetaInstanceId<br>当MetaType选择USER_CUSTOM_META时，填写MetaDataJdbcUrl MetaDataUser MetaDataPass</p>
+     * @param MetaDBInfo <p>元数据库信息<br>MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser MetaDataPass UnifyMetaInstanceId不用填<br>当MetaType选择EMR_EXIT_META时，填写UnifyMetaInstanceId<br>当MetaType选择USER_CUSTOM_META时，填写MetaDataJdbcUrl MetaDataUser MetaDataPass</p>
      */
     public void setMetaDBInfo(CustomMetaDBInfo MetaDBInfo) {
         this.MetaDBInfo = MetaDBInfo;
     }
 
     /**
-     * Get 标签信息 
-     * @return Tags 标签信息
+     * Get <p>标签信息</p> 
+     * @return Tags <p>标签信息</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签信息
-     * @param Tags 标签信息
+     * Set <p>标签信息</p>
+     * @param Tags <p>标签信息</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 登录密码，LoginSettings中的Password字段 
-     * @return LoginSettings 登录密码，LoginSettings中的Password字段
+     * Get <p>登录密码，LoginSettings中的Password字段</p> 
+     * @return LoginSettings <p>登录密码，LoginSettings中的Password字段</p>
      */
     public LoginSettings getLoginSettings() {
         return this.LoginSettings;
     }
 
     /**
-     * Set 登录密码，LoginSettings中的Password字段
-     * @param LoginSettings 登录密码，LoginSettings中的Password字段
+     * Set <p>登录密码，LoginSettings中的Password字段</p>
+     * @param LoginSettings <p>登录密码，LoginSettings中的Password字段</p>
      */
     public void setLoginSettings(LoginSettings LoginSettings) {
         this.LoginSettings = LoginSettings;
     }
 
     /**
-     * Get 共享服务信息 
-     * @return ExternalService 共享服务信息
+     * Get <p>共享服务信息</p> 
+     * @return ExternalService <p>共享服务信息</p>
      */
     public ExternalService [] getExternalService() {
         return this.ExternalService;
     }
 
     /**
-     * Set 共享服务信息
-     * @param ExternalService 共享服务信息
+     * Set <p>共享服务信息</p>
+     * @param ExternalService <p>共享服务信息</p>
      */
     public void setExternalService(ExternalService [] ExternalService) {
         this.ExternalService = ExternalService;
     }
 
     /**
-     * Get 可用区id 
-     * @return ZoneId 可用区id
+     * Get <p>可用区id</p> 
+     * @return ZoneId <p>可用区id</p>
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 可用区id
-     * @param ZoneId 可用区id
+     * Set <p>可用区id</p>
+     * @param ZoneId <p>可用区id</p>
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 数据库版本 
-     * @return DefaultMetaVersion 数据库版本
+     * Get <p>数据库版本</p> 
+     * @return DefaultMetaVersion <p>数据库版本</p>
      */
     public String getDefaultMetaVersion() {
         return this.DefaultMetaVersion;
     }
 
     /**
-     * Set 数据库版本
-     * @param DefaultMetaVersion 数据库版本
+     * Set <p>数据库版本</p>
+     * @param DefaultMetaVersion <p>数据库版本</p>
      */
     public void setDefaultMetaVersion(String DefaultMetaVersion) {
         this.DefaultMetaVersion = DefaultMetaVersion;
     }
 
     /**
-     * Get 是否开通审计 
-     * @return NeedCdbAudit 是否开通审计
+     * Get <p>是否开通审计</p> 
+     * @return NeedCdbAudit <p>是否开通审计</p>
      */
     public Long getNeedCdbAudit() {
         return this.NeedCdbAudit;
     }
 
     /**
-     * Set 是否开通审计
-     * @param NeedCdbAudit 是否开通审计
+     * Set <p>是否开通审计</p>
+     * @param NeedCdbAudit <p>是否开通审计</p>
      */
     public void setNeedCdbAudit(Long NeedCdbAudit) {
         this.NeedCdbAudit = NeedCdbAudit;
     }
 
     /**
-     * Get 安全组来源IP 
-     * @return SgIP 安全组来源IP
+     * Get <p>安全组来源IP</p> 
+     * @return SgIP <p>安全组来源IP</p>
      */
     public String getSgIP() {
         return this.SgIP;
     }
 
     /**
-     * Set 安全组来源IP
-     * @param SgIP 安全组来源IP
+     * Set <p>安全组来源IP</p>
+     * @param SgIP <p>安全组来源IP</p>
      */
     public void setSgIP(String SgIP) {
         this.SgIP = SgIP;
+    }
+
+    /**
+     * Get <p>额外容器相关配置</p> 
+     * @return ContainerExtraConf <p>额外容器相关配置</p>
+     */
+    public ContainerExtraConf getContainerExtraConf() {
+        return this.ContainerExtraConf;
+    }
+
+    /**
+     * Set <p>额外容器相关配置</p>
+     * @param ContainerExtraConf <p>额外容器相关配置</p>
+     */
+    public void setContainerExtraConf(ContainerExtraConf ContainerExtraConf) {
+        this.ContainerExtraConf = ContainerExtraConf;
     }
 
     public CreateCloudInstanceRequest() {
@@ -597,6 +560,9 @@ MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser M
         if (source.SgIP != null) {
             this.SgIP = new String(source.SgIP);
         }
+        if (source.ContainerExtraConf != null) {
+            this.ContainerExtraConf = new ContainerExtraConf(source.ContainerExtraConf);
+        }
     }
 
 
@@ -623,6 +589,7 @@ MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser M
         this.setParamSimple(map, prefix + "DefaultMetaVersion", this.DefaultMetaVersion);
         this.setParamSimple(map, prefix + "NeedCdbAudit", this.NeedCdbAudit);
         this.setParamSimple(map, prefix + "SgIP", this.SgIP);
+        this.setParamObj(map, prefix + "ContainerExtraConf.", this.ContainerExtraConf);
 
     }
 }

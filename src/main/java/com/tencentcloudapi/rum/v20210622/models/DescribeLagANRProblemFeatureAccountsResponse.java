@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeLagANRProblemFeatureAccountsResponse extends AbstractModel {
 
     /**
-    * 返回值
+    * <p>返回值</p>
     */
     @SerializedName("Data")
     @Expose
     private String Data;
 
     /**
-    * 消息
+    * <p>消息</p>
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * 状态码
+    * <p>状态码</p>
     */
     @SerializedName("Code")
     @Expose
@@ -52,48 +52,48 @@ public class DescribeLagANRProblemFeatureAccountsResponse extends AbstractModel 
     private String RequestId;
 
     /**
-     * Get 返回值 
-     * @return Data 返回值
+     * Get <p>返回值</p> 
+     * @return Data <p>返回值</p>
      */
     public String getData() {
         return this.Data;
     }
 
     /**
-     * Set 返回值
-     * @param Data 返回值
+     * Set <p>返回值</p>
+     * @param Data <p>返回值</p>
      */
     public void setData(String Data) {
         this.Data = Data;
     }
 
     /**
-     * Get 消息 
-     * @return Message 消息
+     * Get <p>消息</p> 
+     * @return Message <p>消息</p>
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set 消息
-     * @param Message 消息
+     * Set <p>消息</p>
+     * @param Message <p>消息</p>
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get 状态码 
-     * @return Code 状态码
+     * Get <p>状态码</p> 
+     * @return Code <p>状态码</p>
      */
     public Long getCode() {
         return this.Code;
     }
 
     /**
-     * Set 状态码
-     * @param Code 状态码
+     * Set <p>状态码</p>
+     * @param Code <p>状态码</p>
      */
     public void setCode(Long Code) {
         this.Code = Code;

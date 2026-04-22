@@ -24,164 +24,187 @@ import java.util.HashMap;
 public class DescribeDBErrlogsRequest extends AbstractModel {
 
     /**
-    * 实例ID。	可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+    * <p>实例ID。    可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
     */
     @SerializedName("DBInstanceId")
     @Expose
     private String DBInstanceId;
 
     /**
-    * 查询起始时间，形如2018-01-01 00:00:00。日志保留时间默认为7天，起始时间不能超出保留时间范围。	
+    * <p>查询起始时间，形如2018-01-01 00:00:00。日志保留时间默认为7天，起始时间不能超出保留时间范围。</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 查询结束时间，形如2018-01-01 00:00:00。	
+    * <p>查询结束时间，形如2018-01-01 00:00:00。</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 数据库名字。
+    * <p>数据库名字。</p>
     */
     @SerializedName("DatabaseName")
     @Expose
     private String DatabaseName;
 
     /**
-    * 搜索关键字。
+    * <p>搜索关键字。</p>
     */
     @SerializedName("SearchKeys")
     @Expose
     private String [] SearchKeys;
 
     /**
-    * 每页显示数量，取值范围为1-100。默认值为50。	
+    * <p>每页显示数量，取值范围为1-100。默认值为50。</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 数据偏移量，从0开始。默认值为0。	
+    * <p>数据偏移量，从0开始。默认值为0。</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get 实例ID。	可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取 
-     * @return DBInstanceId 实例ID。	可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+    * <p>日志过滤条件。格式为  [{Type: &quot;ApplicationName&quot;, Compare: &quot;INC&quot;, Value: [&quot;123&quot;]}]。</p>
+    */
+    @SerializedName("LogFilters")
+    @Expose
+    private LogFilter [] LogFilters;
+
+    /**
+     * Get <p>实例ID。    可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p> 
+     * @return DBInstanceId <p>实例ID。    可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set 实例ID。	可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
-     * @param DBInstanceId 实例ID。	可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * Set <p>实例ID。    可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
+     * @param DBInstanceId <p>实例ID。    可通过<a href="https://cloud.tencent.com/document/api/409/16773">DescribeDBInstances</a>接口获取</p>
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
     }
 
     /**
-     * Get 查询起始时间，形如2018-01-01 00:00:00。日志保留时间默认为7天，起始时间不能超出保留时间范围。	 
-     * @return StartTime 查询起始时间，形如2018-01-01 00:00:00。日志保留时间默认为7天，起始时间不能超出保留时间范围。	
+     * Get <p>查询起始时间，形如2018-01-01 00:00:00。日志保留时间默认为7天，起始时间不能超出保留时间范围。</p> 
+     * @return StartTime <p>查询起始时间，形如2018-01-01 00:00:00。日志保留时间默认为7天，起始时间不能超出保留时间范围。</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 查询起始时间，形如2018-01-01 00:00:00。日志保留时间默认为7天，起始时间不能超出保留时间范围。	
-     * @param StartTime 查询起始时间，形如2018-01-01 00:00:00。日志保留时间默认为7天，起始时间不能超出保留时间范围。	
+     * Set <p>查询起始时间，形如2018-01-01 00:00:00。日志保留时间默认为7天，起始时间不能超出保留时间范围。</p>
+     * @param StartTime <p>查询起始时间，形如2018-01-01 00:00:00。日志保留时间默认为7天，起始时间不能超出保留时间范围。</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 查询结束时间，形如2018-01-01 00:00:00。	 
-     * @return EndTime 查询结束时间，形如2018-01-01 00:00:00。	
+     * Get <p>查询结束时间，形如2018-01-01 00:00:00。</p> 
+     * @return EndTime <p>查询结束时间，形如2018-01-01 00:00:00。</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 查询结束时间，形如2018-01-01 00:00:00。	
-     * @param EndTime 查询结束时间，形如2018-01-01 00:00:00。	
+     * Set <p>查询结束时间，形如2018-01-01 00:00:00。</p>
+     * @param EndTime <p>查询结束时间，形如2018-01-01 00:00:00。</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 数据库名字。 
-     * @return DatabaseName 数据库名字。
+     * Get <p>数据库名字。</p> 
+     * @return DatabaseName <p>数据库名字。</p>
      */
     public String getDatabaseName() {
         return this.DatabaseName;
     }
 
     /**
-     * Set 数据库名字。
-     * @param DatabaseName 数据库名字。
+     * Set <p>数据库名字。</p>
+     * @param DatabaseName <p>数据库名字。</p>
      */
     public void setDatabaseName(String DatabaseName) {
         this.DatabaseName = DatabaseName;
     }
 
     /**
-     * Get 搜索关键字。 
-     * @return SearchKeys 搜索关键字。
+     * Get <p>搜索关键字。</p> 
+     * @return SearchKeys <p>搜索关键字。</p>
      */
     public String [] getSearchKeys() {
         return this.SearchKeys;
     }
 
     /**
-     * Set 搜索关键字。
-     * @param SearchKeys 搜索关键字。
+     * Set <p>搜索关键字。</p>
+     * @param SearchKeys <p>搜索关键字。</p>
      */
     public void setSearchKeys(String [] SearchKeys) {
         this.SearchKeys = SearchKeys;
     }
 
     /**
-     * Get 每页显示数量，取值范围为1-100。默认值为50。	 
-     * @return Limit 每页显示数量，取值范围为1-100。默认值为50。	
+     * Get <p>每页显示数量，取值范围为1-100。默认值为50。</p> 
+     * @return Limit <p>每页显示数量，取值范围为1-100。默认值为50。</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页显示数量，取值范围为1-100。默认值为50。	
-     * @param Limit 每页显示数量，取值范围为1-100。默认值为50。	
+     * Set <p>每页显示数量，取值范围为1-100。默认值为50。</p>
+     * @param Limit <p>每页显示数量，取值范围为1-100。默认值为50。</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 数据偏移量，从0开始。默认值为0。	 
-     * @return Offset 数据偏移量，从0开始。默认值为0。	
+     * Get <p>数据偏移量，从0开始。默认值为0。</p> 
+     * @return Offset <p>数据偏移量，从0开始。默认值为0。</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 数据偏移量，从0开始。默认值为0。	
-     * @param Offset 数据偏移量，从0开始。默认值为0。	
+     * Set <p>数据偏移量，从0开始。默认值为0。</p>
+     * @param Offset <p>数据偏移量，从0开始。默认值为0。</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
+    }
+
+    /**
+     * Get <p>日志过滤条件。格式为  [{Type: &quot;ApplicationName&quot;, Compare: &quot;INC&quot;, Value: [&quot;123&quot;]}]。</p> 
+     * @return LogFilters <p>日志过滤条件。格式为  [{Type: &quot;ApplicationName&quot;, Compare: &quot;INC&quot;, Value: [&quot;123&quot;]}]。</p>
+     */
+    public LogFilter [] getLogFilters() {
+        return this.LogFilters;
+    }
+
+    /**
+     * Set <p>日志过滤条件。格式为  [{Type: &quot;ApplicationName&quot;, Compare: &quot;INC&quot;, Value: [&quot;123&quot;]}]。</p>
+     * @param LogFilters <p>日志过滤条件。格式为  [{Type: &quot;ApplicationName&quot;, Compare: &quot;INC&quot;, Value: [&quot;123&quot;]}]。</p>
+     */
+    public void setLogFilters(LogFilter [] LogFilters) {
+        this.LogFilters = LogFilters;
     }
 
     public DescribeDBErrlogsRequest() {
@@ -216,6 +239,12 @@ public class DescribeDBErrlogsRequest extends AbstractModel {
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.LogFilters != null) {
+            this.LogFilters = new LogFilter[source.LogFilters.length];
+            for (int i = 0; i < source.LogFilters.length; i++) {
+                this.LogFilters[i] = new LogFilter(source.LogFilters[i]);
+            }
+        }
     }
 
 
@@ -230,6 +259,7 @@ public class DescribeDBErrlogsRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "SearchKeys.", this.SearchKeys);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamArrayObj(map, prefix + "LogFilters.", this.LogFilters);
 
     }
 }

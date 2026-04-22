@@ -24,26 +24,32 @@ import java.util.HashMap;
 public class DescribeFlowInfoResponse extends AbstractModel {
 
     /**
-    * 合同流程的详细信息。
-如果查询的是合同组信息，则返回的是组内所有子合同流程的详细信息。
+    * <p>合同流程的详细信息。<br>如果查询的是合同组信息，则返回的是组内所有子合同流程的详细信息。</p>
     */
     @SerializedName("FlowDetailInfos")
     @Expose
     private FlowDetailInfo [] FlowDetailInfos;
 
     /**
-    * 合同组ID，只有在查询合同组信息时才会返回。
+    * <p>合同组ID，只有在查询合同组信息时才会返回。</p>
     */
     @SerializedName("FlowGroupId")
     @Expose
     private String FlowGroupId;
 
     /**
-    * 合同组名称，只有在查询合同组信息时才会返回。
+    * <p>合同组名称，只有在查询合同组信息时才会返回。</p>
     */
     @SerializedName("FlowGroupName")
     @Expose
     private String FlowGroupName;
+
+    /**
+    * <p>合同组合同备注列表</p>
+    */
+    @SerializedName("FlowGroupRemarks")
+    @Expose
+    private String [] FlowGroupRemarks;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -53,55 +59,67 @@ public class DescribeFlowInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 合同流程的详细信息。
-如果查询的是合同组信息，则返回的是组内所有子合同流程的详细信息。 
-     * @return FlowDetailInfos 合同流程的详细信息。
-如果查询的是合同组信息，则返回的是组内所有子合同流程的详细信息。
+     * Get <p>合同流程的详细信息。<br>如果查询的是合同组信息，则返回的是组内所有子合同流程的详细信息。</p> 
+     * @return FlowDetailInfos <p>合同流程的详细信息。<br>如果查询的是合同组信息，则返回的是组内所有子合同流程的详细信息。</p>
      */
     public FlowDetailInfo [] getFlowDetailInfos() {
         return this.FlowDetailInfos;
     }
 
     /**
-     * Set 合同流程的详细信息。
-如果查询的是合同组信息，则返回的是组内所有子合同流程的详细信息。
-     * @param FlowDetailInfos 合同流程的详细信息。
-如果查询的是合同组信息，则返回的是组内所有子合同流程的详细信息。
+     * Set <p>合同流程的详细信息。<br>如果查询的是合同组信息，则返回的是组内所有子合同流程的详细信息。</p>
+     * @param FlowDetailInfos <p>合同流程的详细信息。<br>如果查询的是合同组信息，则返回的是组内所有子合同流程的详细信息。</p>
      */
     public void setFlowDetailInfos(FlowDetailInfo [] FlowDetailInfos) {
         this.FlowDetailInfos = FlowDetailInfos;
     }
 
     /**
-     * Get 合同组ID，只有在查询合同组信息时才会返回。 
-     * @return FlowGroupId 合同组ID，只有在查询合同组信息时才会返回。
+     * Get <p>合同组ID，只有在查询合同组信息时才会返回。</p> 
+     * @return FlowGroupId <p>合同组ID，只有在查询合同组信息时才会返回。</p>
      */
     public String getFlowGroupId() {
         return this.FlowGroupId;
     }
 
     /**
-     * Set 合同组ID，只有在查询合同组信息时才会返回。
-     * @param FlowGroupId 合同组ID，只有在查询合同组信息时才会返回。
+     * Set <p>合同组ID，只有在查询合同组信息时才会返回。</p>
+     * @param FlowGroupId <p>合同组ID，只有在查询合同组信息时才会返回。</p>
      */
     public void setFlowGroupId(String FlowGroupId) {
         this.FlowGroupId = FlowGroupId;
     }
 
     /**
-     * Get 合同组名称，只有在查询合同组信息时才会返回。 
-     * @return FlowGroupName 合同组名称，只有在查询合同组信息时才会返回。
+     * Get <p>合同组名称，只有在查询合同组信息时才会返回。</p> 
+     * @return FlowGroupName <p>合同组名称，只有在查询合同组信息时才会返回。</p>
      */
     public String getFlowGroupName() {
         return this.FlowGroupName;
     }
 
     /**
-     * Set 合同组名称，只有在查询合同组信息时才会返回。
-     * @param FlowGroupName 合同组名称，只有在查询合同组信息时才会返回。
+     * Set <p>合同组名称，只有在查询合同组信息时才会返回。</p>
+     * @param FlowGroupName <p>合同组名称，只有在查询合同组信息时才会返回。</p>
      */
     public void setFlowGroupName(String FlowGroupName) {
         this.FlowGroupName = FlowGroupName;
+    }
+
+    /**
+     * Get <p>合同组合同备注列表</p> 
+     * @return FlowGroupRemarks <p>合同组合同备注列表</p>
+     */
+    public String [] getFlowGroupRemarks() {
+        return this.FlowGroupRemarks;
+    }
+
+    /**
+     * Set <p>合同组合同备注列表</p>
+     * @param FlowGroupRemarks <p>合同组合同备注列表</p>
+     */
+    public void setFlowGroupRemarks(String [] FlowGroupRemarks) {
+        this.FlowGroupRemarks = FlowGroupRemarks;
     }
 
     /**
@@ -140,6 +158,12 @@ public class DescribeFlowInfoResponse extends AbstractModel {
         if (source.FlowGroupName != null) {
             this.FlowGroupName = new String(source.FlowGroupName);
         }
+        if (source.FlowGroupRemarks != null) {
+            this.FlowGroupRemarks = new String[source.FlowGroupRemarks.length];
+            for (int i = 0; i < source.FlowGroupRemarks.length; i++) {
+                this.FlowGroupRemarks[i] = new String(source.FlowGroupRemarks[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -153,6 +177,7 @@ public class DescribeFlowInfoResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "FlowDetailInfos.", this.FlowDetailInfos);
         this.setParamSimple(map, prefix + "FlowGroupId", this.FlowGroupId);
         this.setParamSimple(map, prefix + "FlowGroupName", this.FlowGroupName);
+        this.setParamArraySimple(map, prefix + "FlowGroupRemarks.", this.FlowGroupRemarks);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -24,95 +24,118 @@ import java.util.HashMap;
 public class TerminateInstanceRequest extends AbstractModel {
 
     /**
-    * 实例ID。
+    * <p>实例ID。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 销毁节点ID。该参数为预留参数，用户无需配置。
+    * <p>销毁节点ID。该参数为预留参数，用户无需配置。</p>
     */
     @SerializedName("ResourceIds")
     @Expose
     private String [] ResourceIds;
 
     /**
-    * 类型为ComputeResource和EMR以及默认，默认为EMR,类型为EMR时,InstanceId生效,类型为ComputeResource时,使用ComputeResourceId标识
+    * <p>类型为ComputeResource和EMR以及默认，默认为EMR,类型为EMR时,InstanceId生效,类型为ComputeResource时,使用ComputeResourceId标识</p>
     */
     @SerializedName("ResourceBaseType")
     @Expose
     private String ResourceBaseType;
 
     /**
-    * 计算资源ID
+    * <p>计算资源ID</p>
     */
     @SerializedName("ComputeResourceId")
     @Expose
     private String ComputeResourceId;
 
     /**
-     * Get 实例ID。 
-     * @return InstanceId 实例ID。
+    * <p>保留计算资源关联的TKE集群</p>
+    */
+    @SerializedName("RetainTkeCluster")
+    @Expose
+    private Boolean RetainTkeCluster;
+
+    /**
+     * Get <p>实例ID。</p> 
+     * @return InstanceId <p>实例ID。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID。
-     * @param InstanceId 实例ID。
+     * Set <p>实例ID。</p>
+     * @param InstanceId <p>实例ID。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 销毁节点ID。该参数为预留参数，用户无需配置。 
-     * @return ResourceIds 销毁节点ID。该参数为预留参数，用户无需配置。
+     * Get <p>销毁节点ID。该参数为预留参数，用户无需配置。</p> 
+     * @return ResourceIds <p>销毁节点ID。该参数为预留参数，用户无需配置。</p>
      */
     public String [] getResourceIds() {
         return this.ResourceIds;
     }
 
     /**
-     * Set 销毁节点ID。该参数为预留参数，用户无需配置。
-     * @param ResourceIds 销毁节点ID。该参数为预留参数，用户无需配置。
+     * Set <p>销毁节点ID。该参数为预留参数，用户无需配置。</p>
+     * @param ResourceIds <p>销毁节点ID。该参数为预留参数，用户无需配置。</p>
      */
     public void setResourceIds(String [] ResourceIds) {
         this.ResourceIds = ResourceIds;
     }
 
     /**
-     * Get 类型为ComputeResource和EMR以及默认，默认为EMR,类型为EMR时,InstanceId生效,类型为ComputeResource时,使用ComputeResourceId标识 
-     * @return ResourceBaseType 类型为ComputeResource和EMR以及默认，默认为EMR,类型为EMR时,InstanceId生效,类型为ComputeResource时,使用ComputeResourceId标识
+     * Get <p>类型为ComputeResource和EMR以及默认，默认为EMR,类型为EMR时,InstanceId生效,类型为ComputeResource时,使用ComputeResourceId标识</p> 
+     * @return ResourceBaseType <p>类型为ComputeResource和EMR以及默认，默认为EMR,类型为EMR时,InstanceId生效,类型为ComputeResource时,使用ComputeResourceId标识</p>
      */
     public String getResourceBaseType() {
         return this.ResourceBaseType;
     }
 
     /**
-     * Set 类型为ComputeResource和EMR以及默认，默认为EMR,类型为EMR时,InstanceId生效,类型为ComputeResource时,使用ComputeResourceId标识
-     * @param ResourceBaseType 类型为ComputeResource和EMR以及默认，默认为EMR,类型为EMR时,InstanceId生效,类型为ComputeResource时,使用ComputeResourceId标识
+     * Set <p>类型为ComputeResource和EMR以及默认，默认为EMR,类型为EMR时,InstanceId生效,类型为ComputeResource时,使用ComputeResourceId标识</p>
+     * @param ResourceBaseType <p>类型为ComputeResource和EMR以及默认，默认为EMR,类型为EMR时,InstanceId生效,类型为ComputeResource时,使用ComputeResourceId标识</p>
      */
     public void setResourceBaseType(String ResourceBaseType) {
         this.ResourceBaseType = ResourceBaseType;
     }
 
     /**
-     * Get 计算资源ID 
-     * @return ComputeResourceId 计算资源ID
+     * Get <p>计算资源ID</p> 
+     * @return ComputeResourceId <p>计算资源ID</p>
      */
     public String getComputeResourceId() {
         return this.ComputeResourceId;
     }
 
     /**
-     * Set 计算资源ID
-     * @param ComputeResourceId 计算资源ID
+     * Set <p>计算资源ID</p>
+     * @param ComputeResourceId <p>计算资源ID</p>
      */
     public void setComputeResourceId(String ComputeResourceId) {
         this.ComputeResourceId = ComputeResourceId;
+    }
+
+    /**
+     * Get <p>保留计算资源关联的TKE集群</p> 
+     * @return RetainTkeCluster <p>保留计算资源关联的TKE集群</p>
+     */
+    public Boolean getRetainTkeCluster() {
+        return this.RetainTkeCluster;
+    }
+
+    /**
+     * Set <p>保留计算资源关联的TKE集群</p>
+     * @param RetainTkeCluster <p>保留计算资源关联的TKE集群</p>
+     */
+    public void setRetainTkeCluster(Boolean RetainTkeCluster) {
+        this.RetainTkeCluster = RetainTkeCluster;
     }
 
     public TerminateInstanceRequest() {
@@ -138,6 +161,9 @@ public class TerminateInstanceRequest extends AbstractModel {
         if (source.ComputeResourceId != null) {
             this.ComputeResourceId = new String(source.ComputeResourceId);
         }
+        if (source.RetainTkeCluster != null) {
+            this.RetainTkeCluster = new Boolean(source.RetainTkeCluster);
+        }
     }
 
 
@@ -149,6 +175,7 @@ public class TerminateInstanceRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
         this.setParamSimple(map, prefix + "ResourceBaseType", this.ResourceBaseType);
         this.setParamSimple(map, prefix + "ComputeResourceId", this.ComputeResourceId);
+        this.setParamSimple(map, prefix + "RetainTkeCluster", this.RetainTkeCluster);
 
     }
 }

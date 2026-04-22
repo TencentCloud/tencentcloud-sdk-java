@@ -24,92 +24,112 @@ import java.util.HashMap;
 public class FaceRect extends AbstractModel {
 
     /**
-    * 人脸框左上角纵坐标。
+    * <p>人脸框左上角纵坐标。</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Y")
     @Expose
     private Long Y;
 
     /**
-    * 人脸框左上角横坐标。
+    * <p>人脸框左上角横坐标。</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("X")
     @Expose
     private Long X;
 
     /**
-    * 人脸框宽度。
+    * <p>人脸框宽度。<br>单位：px</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * 人脸框高度。
+    * <p>人脸框高度。<br>单位：px</p>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-     * Get 人脸框左上角纵坐标。 
-     * @return Y 人脸框左上角纵坐标。
+     * Get <p>人脸框左上角纵坐标。</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Y <p>人脸框左上角纵坐标。</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getY() {
         return this.Y;
     }
 
     /**
-     * Set 人脸框左上角纵坐标。
-     * @param Y 人脸框左上角纵坐标。
+     * Set <p>人脸框左上角纵坐标。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Y <p>人脸框左上角纵坐标。</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setY(Long Y) {
         this.Y = Y;
     }
 
     /**
-     * Get 人脸框左上角横坐标。 
-     * @return X 人脸框左上角横坐标。
+     * Get <p>人脸框左上角横坐标。</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return X <p>人脸框左上角横坐标。</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getX() {
         return this.X;
     }
 
     /**
-     * Set 人脸框左上角横坐标。
-     * @param X 人脸框左上角横坐标。
+     * Set <p>人脸框左上角横坐标。</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param X <p>人脸框左上角横坐标。</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setX(Long X) {
         this.X = X;
     }
 
     /**
-     * Get 人脸框宽度。 
-     * @return Width 人脸框宽度。
+     * Get <p>人脸框宽度。<br>单位：px</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Width <p>人脸框宽度。<br>单位：px</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 人脸框宽度。
-     * @param Width 人脸框宽度。
+     * Set <p>人脸框宽度。<br>单位：px</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Width <p>人脸框宽度。<br>单位：px</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 人脸框高度。 
-     * @return Height 人脸框高度。
+     * Get <p>人脸框高度。<br>单位：px</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Height <p>人脸框高度。<br>单位：px</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 人脸框高度。
-     * @param Height 人脸框高度。
+     * Set <p>人脸框高度。<br>单位：px</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Height <p>人脸框高度。<br>单位：px</p>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeight(Long Height) {
         this.Height = Height;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AlarmNotice extends AbstractModel {
 
     /**
-    * 告警通知模板 ID
+    * <p>告警通知模板 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
@@ -32,7 +32,7 @@ public class AlarmNotice extends AbstractModel {
     private String Id;
 
     /**
-    * 告警通知模板名称
+    * <p>告警通知模板名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -40,7 +40,7 @@ public class AlarmNotice extends AbstractModel {
     private String Name;
 
     /**
-    * 上次修改时间
+    * <p>上次修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdatedAt")
@@ -48,7 +48,7 @@ public class AlarmNotice extends AbstractModel {
     private String UpdatedAt;
 
     /**
-    * 上次修改人
+    * <p>上次修改人</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdatedBy")
@@ -56,7 +56,7 @@ public class AlarmNotice extends AbstractModel {
     private String UpdatedBy;
 
     /**
-    * 告警通知类型 ALARM=未恢复通知 OK=已恢复通知 ALL=全部通知
+    * <p>告警通知类型 ALARM=未恢复通知 OK=已恢复通知 ALL=全部通知</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NoticeType")
@@ -64,7 +64,7 @@ public class AlarmNotice extends AbstractModel {
     private String NoticeType;
 
     /**
-    * 用户通知列表
+    * <p>用户通知列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserNotices")
@@ -72,7 +72,7 @@ public class AlarmNotice extends AbstractModel {
     private UserNotice [] UserNotices;
 
     /**
-    * 回调通知列表
+    * <p>回调通知列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("URLNotices")
@@ -80,7 +80,7 @@ public class AlarmNotice extends AbstractModel {
     private URLNotice [] URLNotices;
 
     /**
-    * 是否是系统预设通知模板 0=否 1=是
+    * <p>是否是系统预设通知模板 0=否 1=是</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsPreset")
@@ -88,7 +88,7 @@ public class AlarmNotice extends AbstractModel {
     private Long IsPreset;
 
     /**
-    * 通知语言 zh-CN=中文 en-US=英文
+    * <p>通知语言 zh-CN=中文 en-US=英文</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NoticeLanguage")
@@ -96,7 +96,7 @@ public class AlarmNotice extends AbstractModel {
     private String NoticeLanguage;
 
     /**
-    * 告警通知模板绑定的告警策略ID列表
+    * <p>告警通知模板绑定的告警策略ID列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolicyIds")
@@ -104,7 +104,7 @@ public class AlarmNotice extends AbstractModel {
     private String [] PolicyIds;
 
     /**
-    * 后台 amp consumer id
+    * <p>后台 amp consumer id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AMPConsumerId")
@@ -112,7 +112,7 @@ public class AlarmNotice extends AbstractModel {
     private String AMPConsumerId;
 
     /**
-    * 推送cls渠道
+    * <p>推送cls渠道</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CLSNotices")
@@ -120,7 +120,7 @@ public class AlarmNotice extends AbstractModel {
     private CLSNotice [] CLSNotices;
 
     /**
-    * 通知模板绑定的标签
+    * <p>通知模板绑定的标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
@@ -128,16 +128,23 @@ public class AlarmNotice extends AbstractModel {
     private Tag [] Tags;
 
     /**
-    * 是否免登录，0-否，1-是
+    * <p>是否免登录，0-否，1-是</p>
     */
     @SerializedName("IsLoginFree")
     @Expose
     private Long IsLoginFree;
 
     /**
-     * Get 告警通知模板 ID
+    * <p>IANA 时区名</p>
+    */
+    @SerializedName("TimeZoneName")
+    @Expose
+    private String TimeZoneName;
+
+    /**
+     * Get <p>告警通知模板 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Id 告警通知模板 ID
+     * @return Id <p>告警通知模板 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
@@ -145,9 +152,9 @@ public class AlarmNotice extends AbstractModel {
     }
 
     /**
-     * Set 告警通知模板 ID
+     * Set <p>告警通知模板 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Id 告警通知模板 ID
+     * @param Id <p>告警通知模板 ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {
@@ -155,9 +162,9 @@ public class AlarmNotice extends AbstractModel {
     }
 
     /**
-     * Get 告警通知模板名称
+     * Get <p>告警通知模板名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 告警通知模板名称
+     * @return Name <p>告警通知模板名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -165,9 +172,9 @@ public class AlarmNotice extends AbstractModel {
     }
 
     /**
-     * Set 告警通知模板名称
+     * Set <p>告警通知模板名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 告警通知模板名称
+     * @param Name <p>告警通知模板名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
@@ -175,9 +182,9 @@ public class AlarmNotice extends AbstractModel {
     }
 
     /**
-     * Get 上次修改时间
+     * Get <p>上次修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdatedAt 上次修改时间
+     * @return UpdatedAt <p>上次修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdatedAt() {
@@ -185,9 +192,9 @@ public class AlarmNotice extends AbstractModel {
     }
 
     /**
-     * Set 上次修改时间
+     * Set <p>上次修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdatedAt 上次修改时间
+     * @param UpdatedAt <p>上次修改时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdatedAt(String UpdatedAt) {
@@ -195,9 +202,9 @@ public class AlarmNotice extends AbstractModel {
     }
 
     /**
-     * Get 上次修改人
+     * Get <p>上次修改人</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdatedBy 上次修改人
+     * @return UpdatedBy <p>上次修改人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdatedBy() {
@@ -205,9 +212,9 @@ public class AlarmNotice extends AbstractModel {
     }
 
     /**
-     * Set 上次修改人
+     * Set <p>上次修改人</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdatedBy 上次修改人
+     * @param UpdatedBy <p>上次修改人</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdatedBy(String UpdatedBy) {
@@ -215,9 +222,9 @@ public class AlarmNotice extends AbstractModel {
     }
 
     /**
-     * Get 告警通知类型 ALARM=未恢复通知 OK=已恢复通知 ALL=全部通知
+     * Get <p>告警通知类型 ALARM=未恢复通知 OK=已恢复通知 ALL=全部通知</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NoticeType 告警通知类型 ALARM=未恢复通知 OK=已恢复通知 ALL=全部通知
+     * @return NoticeType <p>告警通知类型 ALARM=未恢复通知 OK=已恢复通知 ALL=全部通知</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNoticeType() {
@@ -225,9 +232,9 @@ public class AlarmNotice extends AbstractModel {
     }
 
     /**
-     * Set 告警通知类型 ALARM=未恢复通知 OK=已恢复通知 ALL=全部通知
+     * Set <p>告警通知类型 ALARM=未恢复通知 OK=已恢复通知 ALL=全部通知</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NoticeType 告警通知类型 ALARM=未恢复通知 OK=已恢复通知 ALL=全部通知
+     * @param NoticeType <p>告警通知类型 ALARM=未恢复通知 OK=已恢复通知 ALL=全部通知</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNoticeType(String NoticeType) {
@@ -235,9 +242,9 @@ public class AlarmNotice extends AbstractModel {
     }
 
     /**
-     * Get 用户通知列表
+     * Get <p>用户通知列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UserNotices 用户通知列表
+     * @return UserNotices <p>用户通知列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public UserNotice [] getUserNotices() {
@@ -245,9 +252,9 @@ public class AlarmNotice extends AbstractModel {
     }
 
     /**
-     * Set 用户通知列表
+     * Set <p>用户通知列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserNotices 用户通知列表
+     * @param UserNotices <p>用户通知列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserNotices(UserNotice [] UserNotices) {
@@ -255,9 +262,9 @@ public class AlarmNotice extends AbstractModel {
     }
 
     /**
-     * Get 回调通知列表
+     * Get <p>回调通知列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return URLNotices 回调通知列表
+     * @return URLNotices <p>回调通知列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public URLNotice [] getURLNotices() {
@@ -265,9 +272,9 @@ public class AlarmNotice extends AbstractModel {
     }
 
     /**
-     * Set 回调通知列表
+     * Set <p>回调通知列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param URLNotices 回调通知列表
+     * @param URLNotices <p>回调通知列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setURLNotices(URLNotice [] URLNotices) {
@@ -275,9 +282,9 @@ public class AlarmNotice extends AbstractModel {
     }
 
     /**
-     * Get 是否是系统预设通知模板 0=否 1=是
+     * Get <p>是否是系统预设通知模板 0=否 1=是</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsPreset 是否是系统预设通知模板 0=否 1=是
+     * @return IsPreset <p>是否是系统预设通知模板 0=否 1=是</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsPreset() {
@@ -285,9 +292,9 @@ public class AlarmNotice extends AbstractModel {
     }
 
     /**
-     * Set 是否是系统预设通知模板 0=否 1=是
+     * Set <p>是否是系统预设通知模板 0=否 1=是</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsPreset 是否是系统预设通知模板 0=否 1=是
+     * @param IsPreset <p>是否是系统预设通知模板 0=否 1=是</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsPreset(Long IsPreset) {
@@ -295,9 +302,9 @@ public class AlarmNotice extends AbstractModel {
     }
 
     /**
-     * Get 通知语言 zh-CN=中文 en-US=英文
+     * Get <p>通知语言 zh-CN=中文 en-US=英文</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NoticeLanguage 通知语言 zh-CN=中文 en-US=英文
+     * @return NoticeLanguage <p>通知语言 zh-CN=中文 en-US=英文</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNoticeLanguage() {
@@ -305,9 +312,9 @@ public class AlarmNotice extends AbstractModel {
     }
 
     /**
-     * Set 通知语言 zh-CN=中文 en-US=英文
+     * Set <p>通知语言 zh-CN=中文 en-US=英文</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NoticeLanguage 通知语言 zh-CN=中文 en-US=英文
+     * @param NoticeLanguage <p>通知语言 zh-CN=中文 en-US=英文</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNoticeLanguage(String NoticeLanguage) {
@@ -315,9 +322,9 @@ public class AlarmNotice extends AbstractModel {
     }
 
     /**
-     * Get 告警通知模板绑定的告警策略ID列表
+     * Get <p>告警通知模板绑定的告警策略ID列表</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PolicyIds 告警通知模板绑定的告警策略ID列表
+     * @return PolicyIds <p>告警通知模板绑定的告警策略ID列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getPolicyIds() {
@@ -325,9 +332,9 @@ public class AlarmNotice extends AbstractModel {
     }
 
     /**
-     * Set 告警通知模板绑定的告警策略ID列表
+     * Set <p>告警通知模板绑定的告警策略ID列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PolicyIds 告警通知模板绑定的告警策略ID列表
+     * @param PolicyIds <p>告警通知模板绑定的告警策略ID列表</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicyIds(String [] PolicyIds) {
@@ -335,9 +342,9 @@ public class AlarmNotice extends AbstractModel {
     }
 
     /**
-     * Get 后台 amp consumer id
+     * Get <p>后台 amp consumer id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AMPConsumerId 后台 amp consumer id
+     * @return AMPConsumerId <p>后台 amp consumer id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAMPConsumerId() {
@@ -345,9 +352,9 @@ public class AlarmNotice extends AbstractModel {
     }
 
     /**
-     * Set 后台 amp consumer id
+     * Set <p>后台 amp consumer id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AMPConsumerId 后台 amp consumer id
+     * @param AMPConsumerId <p>后台 amp consumer id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAMPConsumerId(String AMPConsumerId) {
@@ -355,9 +362,9 @@ public class AlarmNotice extends AbstractModel {
     }
 
     /**
-     * Get 推送cls渠道
+     * Get <p>推送cls渠道</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CLSNotices 推送cls渠道
+     * @return CLSNotices <p>推送cls渠道</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CLSNotice [] getCLSNotices() {
@@ -365,9 +372,9 @@ public class AlarmNotice extends AbstractModel {
     }
 
     /**
-     * Set 推送cls渠道
+     * Set <p>推送cls渠道</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CLSNotices 推送cls渠道
+     * @param CLSNotices <p>推送cls渠道</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCLSNotices(CLSNotice [] CLSNotices) {
@@ -375,9 +382,9 @@ public class AlarmNotice extends AbstractModel {
     }
 
     /**
-     * Get 通知模板绑定的标签
+     * Get <p>通知模板绑定的标签</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tags 通知模板绑定的标签
+     * @return Tags <p>通知模板绑定的标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
@@ -385,9 +392,9 @@ public class AlarmNotice extends AbstractModel {
     }
 
     /**
-     * Set 通知模板绑定的标签
+     * Set <p>通知模板绑定的标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tags 通知模板绑定的标签
+     * @param Tags <p>通知模板绑定的标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {
@@ -395,19 +402,35 @@ public class AlarmNotice extends AbstractModel {
     }
 
     /**
-     * Get 是否免登录，0-否，1-是 
-     * @return IsLoginFree 是否免登录，0-否，1-是
+     * Get <p>是否免登录，0-否，1-是</p> 
+     * @return IsLoginFree <p>是否免登录，0-否，1-是</p>
      */
     public Long getIsLoginFree() {
         return this.IsLoginFree;
     }
 
     /**
-     * Set 是否免登录，0-否，1-是
-     * @param IsLoginFree 是否免登录，0-否，1-是
+     * Set <p>是否免登录，0-否，1-是</p>
+     * @param IsLoginFree <p>是否免登录，0-否，1-是</p>
      */
     public void setIsLoginFree(Long IsLoginFree) {
         this.IsLoginFree = IsLoginFree;
+    }
+
+    /**
+     * Get <p>IANA 时区名</p> 
+     * @return TimeZoneName <p>IANA 时区名</p>
+     */
+    public String getTimeZoneName() {
+        return this.TimeZoneName;
+    }
+
+    /**
+     * Set <p>IANA 时区名</p>
+     * @param TimeZoneName <p>IANA 时区名</p>
+     */
+    public void setTimeZoneName(String TimeZoneName) {
+        this.TimeZoneName = TimeZoneName;
     }
 
     public AlarmNotice() {
@@ -475,6 +498,9 @@ public class AlarmNotice extends AbstractModel {
         if (source.IsLoginFree != null) {
             this.IsLoginFree = new Long(source.IsLoginFree);
         }
+        if (source.TimeZoneName != null) {
+            this.TimeZoneName = new String(source.TimeZoneName);
+        }
     }
 
 
@@ -496,6 +522,7 @@ public class AlarmNotice extends AbstractModel {
         this.setParamArrayObj(map, prefix + "CLSNotices.", this.CLSNotices);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "IsLoginFree", this.IsLoginFree);
+        this.setParamSimple(map, prefix + "TimeZoneName", this.TimeZoneName);
 
     }
 }

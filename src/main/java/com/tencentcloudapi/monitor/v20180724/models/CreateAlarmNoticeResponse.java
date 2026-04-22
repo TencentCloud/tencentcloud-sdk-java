@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateAlarmNoticeResponse extends AbstractModel {
 
     /**
-    * 告警通知模板ID
+    * <p>告警通知模板ID</p>
     */
     @SerializedName("NoticeId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateAlarmNoticeResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 告警通知模板ID 
-     * @return NoticeId 告警通知模板ID
+     * Get <p>告警通知模板ID</p> 
+     * @return NoticeId <p>告警通知模板ID</p>
      */
     public String getNoticeId() {
         return this.NoticeId;
     }
 
     /**
-     * Set 告警通知模板ID
-     * @param NoticeId 告警通知模板ID
+     * Set <p>告警通知模板ID</p>
+     * @param NoticeId <p>告警通知模板ID</p>
      */
     public void setNoticeId(String NoticeId) {
         this.NoticeId = NoticeId;

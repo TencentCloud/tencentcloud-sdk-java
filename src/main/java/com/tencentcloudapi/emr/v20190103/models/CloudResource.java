@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class CloudResource extends AbstractModel {
 
     /**
-    * 组件角色名
+    * <p>组件角色名</p>
     */
     @SerializedName("ComponentName")
     @Expose
     private String ComponentName;
 
     /**
-    * pod请求数量
+    * <p>pod请求数量</p>
     */
     @SerializedName("PodNumber")
     @Expose
     private Long PodNumber;
 
     /**
-    * Cpu请求数量最大值
+    * <p>Cpu请求数量最大值</p>
     */
     @SerializedName("LimitCpu")
     @Expose
     private Long LimitCpu;
 
     /**
-    * 内存请求数量最大值
+    * <p>内存请求数量最大值</p>
     */
     @SerializedName("LimitMemory")
     @Expose
     private Long LimitMemory;
 
     /**
-    * 服务名称，如HIVE
+    * <p>服务名称，如HIVE</p>
     */
     @SerializedName("Service")
     @Expose
     private String Service;
 
     /**
-    * 数据卷目录设置
+    * <p>数据卷目录设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VolumeDir")
@@ -67,7 +67,7 @@ public class CloudResource extends AbstractModel {
     private VolumeSetting VolumeDir;
 
     /**
-    * 组件外部访问设置
+    * <p>组件外部访问设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExternalAccess")
@@ -75,7 +75,7 @@ public class CloudResource extends AbstractModel {
     private ExternalAccess ExternalAccess;
 
     /**
-    * 节点亲和性设置
+    * <p>节点亲和性设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Affinity")
@@ -83,7 +83,7 @@ public class CloudResource extends AbstractModel {
     private NodeAffinity Affinity;
 
     /**
-    * 所选数据盘信息
+    * <p>所选数据盘信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Disks")
@@ -91,7 +91,7 @@ public class CloudResource extends AbstractModel {
     private Disk [] Disks;
 
     /**
-    * 容忍
+    * <p>容忍</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tolerations")
@@ -99,89 +99,124 @@ public class CloudResource extends AbstractModel {
     private Toleration [] Tolerations;
 
     /**
-     * Get 组件角色名 
-     * @return ComponentName 组件角色名
+    * <p>pod亲和性</p>
+    */
+    @SerializedName("PodAffinity")
+    @Expose
+    private PodAffinitySpec PodAffinity;
+
+    /**
+    * <p>pod反亲和性</p>
+    */
+    @SerializedName("PodAntiAffinity")
+    @Expose
+    private PodAffinitySpec PodAntiAffinity;
+
+    /**
+    * <p>拓扑分布约束</p>
+    */
+    @SerializedName("TopologySpreadConstraints")
+    @Expose
+    private TopologySpreadConstraint [] TopologySpreadConstraints;
+
+    /**
+    * <p>pod标签</p>
+    */
+    @SerializedName("PodLabels")
+    @Expose
+    private StringMap [] PodLabels;
+
+    /**
+    * <p>是否创建默认raycluster</p>
+    */
+    @SerializedName("EnableDefaultRayCluster")
+    @Expose
+    private Boolean EnableDefaultRayCluster;
+
+    /**
+     * Get <p>组件角色名</p> 
+     * @return ComponentName <p>组件角色名</p>
      */
     public String getComponentName() {
         return this.ComponentName;
     }
 
     /**
-     * Set 组件角色名
-     * @param ComponentName 组件角色名
+     * Set <p>组件角色名</p>
+     * @param ComponentName <p>组件角色名</p>
      */
     public void setComponentName(String ComponentName) {
         this.ComponentName = ComponentName;
     }
 
     /**
-     * Get pod请求数量 
-     * @return PodNumber pod请求数量
+     * Get <p>pod请求数量</p> 
+     * @return PodNumber <p>pod请求数量</p>
      */
     public Long getPodNumber() {
         return this.PodNumber;
     }
 
     /**
-     * Set pod请求数量
-     * @param PodNumber pod请求数量
+     * Set <p>pod请求数量</p>
+     * @param PodNumber <p>pod请求数量</p>
      */
     public void setPodNumber(Long PodNumber) {
         this.PodNumber = PodNumber;
     }
 
     /**
-     * Get Cpu请求数量最大值 
-     * @return LimitCpu Cpu请求数量最大值
+     * Get <p>Cpu请求数量最大值</p> 
+     * @return LimitCpu <p>Cpu请求数量最大值</p>
      */
     public Long getLimitCpu() {
         return this.LimitCpu;
     }
 
     /**
-     * Set Cpu请求数量最大值
-     * @param LimitCpu Cpu请求数量最大值
+     * Set <p>Cpu请求数量最大值</p>
+     * @param LimitCpu <p>Cpu请求数量最大值</p>
      */
     public void setLimitCpu(Long LimitCpu) {
         this.LimitCpu = LimitCpu;
     }
 
     /**
-     * Get 内存请求数量最大值 
-     * @return LimitMemory 内存请求数量最大值
+     * Get <p>内存请求数量最大值</p> 
+     * @return LimitMemory <p>内存请求数量最大值</p>
      */
     public Long getLimitMemory() {
         return this.LimitMemory;
     }
 
     /**
-     * Set 内存请求数量最大值
-     * @param LimitMemory 内存请求数量最大值
+     * Set <p>内存请求数量最大值</p>
+     * @param LimitMemory <p>内存请求数量最大值</p>
      */
     public void setLimitMemory(Long LimitMemory) {
         this.LimitMemory = LimitMemory;
     }
 
     /**
-     * Get 服务名称，如HIVE 
-     * @return Service 服务名称，如HIVE
+     * Get <p>服务名称，如HIVE</p> 
+     * @return Service <p>服务名称，如HIVE</p>
      */
     public String getService() {
         return this.Service;
     }
 
     /**
-     * Set 服务名称，如HIVE
-     * @param Service 服务名称，如HIVE
+     * Set <p>服务名称，如HIVE</p>
+     * @param Service <p>服务名称，如HIVE</p>
      */
     public void setService(String Service) {
         this.Service = Service;
     }
 
     /**
-     * Get 数据卷目录设置
+     * Get <p>数据卷目录设置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VolumeDir 数据卷目录设置
+     * @return VolumeDir <p>数据卷目录设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public VolumeSetting getVolumeDir() {
@@ -189,9 +224,9 @@ public class CloudResource extends AbstractModel {
     }
 
     /**
-     * Set 数据卷目录设置
+     * Set <p>数据卷目录设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VolumeDir 数据卷目录设置
+     * @param VolumeDir <p>数据卷目录设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVolumeDir(VolumeSetting VolumeDir) {
@@ -199,9 +234,9 @@ public class CloudResource extends AbstractModel {
     }
 
     /**
-     * Get 组件外部访问设置
+     * Get <p>组件外部访问设置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExternalAccess 组件外部访问设置
+     * @return ExternalAccess <p>组件外部访问设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ExternalAccess getExternalAccess() {
@@ -209,9 +244,9 @@ public class CloudResource extends AbstractModel {
     }
 
     /**
-     * Set 组件外部访问设置
+     * Set <p>组件外部访问设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExternalAccess 组件外部访问设置
+     * @param ExternalAccess <p>组件外部访问设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExternalAccess(ExternalAccess ExternalAccess) {
@@ -219,9 +254,9 @@ public class CloudResource extends AbstractModel {
     }
 
     /**
-     * Get 节点亲和性设置
+     * Get <p>节点亲和性设置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Affinity 节点亲和性设置
+     * @return Affinity <p>节点亲和性设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public NodeAffinity getAffinity() {
@@ -229,9 +264,9 @@ public class CloudResource extends AbstractModel {
     }
 
     /**
-     * Set 节点亲和性设置
+     * Set <p>节点亲和性设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Affinity 节点亲和性设置
+     * @param Affinity <p>节点亲和性设置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAffinity(NodeAffinity Affinity) {
@@ -239,9 +274,9 @@ public class CloudResource extends AbstractModel {
     }
 
     /**
-     * Get 所选数据盘信息
+     * Get <p>所选数据盘信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Disks 所选数据盘信息
+     * @return Disks <p>所选数据盘信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Disk [] getDisks() {
@@ -249,9 +284,9 @@ public class CloudResource extends AbstractModel {
     }
 
     /**
-     * Set 所选数据盘信息
+     * Set <p>所选数据盘信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Disks 所选数据盘信息
+     * @param Disks <p>所选数据盘信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDisks(Disk [] Disks) {
@@ -259,9 +294,9 @@ public class CloudResource extends AbstractModel {
     }
 
     /**
-     * Get 容忍
+     * Get <p>容忍</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tolerations 容忍
+     * @return Tolerations <p>容忍</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Toleration [] getTolerations() {
@@ -269,13 +304,93 @@ public class CloudResource extends AbstractModel {
     }
 
     /**
-     * Set 容忍
+     * Set <p>容忍</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tolerations 容忍
+     * @param Tolerations <p>容忍</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTolerations(Toleration [] Tolerations) {
         this.Tolerations = Tolerations;
+    }
+
+    /**
+     * Get <p>pod亲和性</p> 
+     * @return PodAffinity <p>pod亲和性</p>
+     */
+    public PodAffinitySpec getPodAffinity() {
+        return this.PodAffinity;
+    }
+
+    /**
+     * Set <p>pod亲和性</p>
+     * @param PodAffinity <p>pod亲和性</p>
+     */
+    public void setPodAffinity(PodAffinitySpec PodAffinity) {
+        this.PodAffinity = PodAffinity;
+    }
+
+    /**
+     * Get <p>pod反亲和性</p> 
+     * @return PodAntiAffinity <p>pod反亲和性</p>
+     */
+    public PodAffinitySpec getPodAntiAffinity() {
+        return this.PodAntiAffinity;
+    }
+
+    /**
+     * Set <p>pod反亲和性</p>
+     * @param PodAntiAffinity <p>pod反亲和性</p>
+     */
+    public void setPodAntiAffinity(PodAffinitySpec PodAntiAffinity) {
+        this.PodAntiAffinity = PodAntiAffinity;
+    }
+
+    /**
+     * Get <p>拓扑分布约束</p> 
+     * @return TopologySpreadConstraints <p>拓扑分布约束</p>
+     */
+    public TopologySpreadConstraint [] getTopologySpreadConstraints() {
+        return this.TopologySpreadConstraints;
+    }
+
+    /**
+     * Set <p>拓扑分布约束</p>
+     * @param TopologySpreadConstraints <p>拓扑分布约束</p>
+     */
+    public void setTopologySpreadConstraints(TopologySpreadConstraint [] TopologySpreadConstraints) {
+        this.TopologySpreadConstraints = TopologySpreadConstraints;
+    }
+
+    /**
+     * Get <p>pod标签</p> 
+     * @return PodLabels <p>pod标签</p>
+     */
+    public StringMap [] getPodLabels() {
+        return this.PodLabels;
+    }
+
+    /**
+     * Set <p>pod标签</p>
+     * @param PodLabels <p>pod标签</p>
+     */
+    public void setPodLabels(StringMap [] PodLabels) {
+        this.PodLabels = PodLabels;
+    }
+
+    /**
+     * Get <p>是否创建默认raycluster</p> 
+     * @return EnableDefaultRayCluster <p>是否创建默认raycluster</p>
+     */
+    public Boolean getEnableDefaultRayCluster() {
+        return this.EnableDefaultRayCluster;
+    }
+
+    /**
+     * Set <p>是否创建默认raycluster</p>
+     * @param EnableDefaultRayCluster <p>是否创建默认raycluster</p>
+     */
+    public void setEnableDefaultRayCluster(Boolean EnableDefaultRayCluster) {
+        this.EnableDefaultRayCluster = EnableDefaultRayCluster;
     }
 
     public CloudResource() {
@@ -322,6 +437,27 @@ public class CloudResource extends AbstractModel {
                 this.Tolerations[i] = new Toleration(source.Tolerations[i]);
             }
         }
+        if (source.PodAffinity != null) {
+            this.PodAffinity = new PodAffinitySpec(source.PodAffinity);
+        }
+        if (source.PodAntiAffinity != null) {
+            this.PodAntiAffinity = new PodAffinitySpec(source.PodAntiAffinity);
+        }
+        if (source.TopologySpreadConstraints != null) {
+            this.TopologySpreadConstraints = new TopologySpreadConstraint[source.TopologySpreadConstraints.length];
+            for (int i = 0; i < source.TopologySpreadConstraints.length; i++) {
+                this.TopologySpreadConstraints[i] = new TopologySpreadConstraint(source.TopologySpreadConstraints[i]);
+            }
+        }
+        if (source.PodLabels != null) {
+            this.PodLabels = new StringMap[source.PodLabels.length];
+            for (int i = 0; i < source.PodLabels.length; i++) {
+                this.PodLabels[i] = new StringMap(source.PodLabels[i]);
+            }
+        }
+        if (source.EnableDefaultRayCluster != null) {
+            this.EnableDefaultRayCluster = new Boolean(source.EnableDefaultRayCluster);
+        }
     }
 
 
@@ -339,6 +475,11 @@ public class CloudResource extends AbstractModel {
         this.setParamObj(map, prefix + "Affinity.", this.Affinity);
         this.setParamArrayObj(map, prefix + "Disks.", this.Disks);
         this.setParamArrayObj(map, prefix + "Tolerations.", this.Tolerations);
+        this.setParamObj(map, prefix + "PodAffinity.", this.PodAffinity);
+        this.setParamObj(map, prefix + "PodAntiAffinity.", this.PodAntiAffinity);
+        this.setParamArrayObj(map, prefix + "TopologySpreadConstraints.", this.TopologySpreadConstraints);
+        this.setParamArrayObj(map, prefix + "PodLabels.", this.PodLabels);
+        this.setParamSimple(map, prefix + "EnableDefaultRayCluster", this.EnableDefaultRayCluster);
 
     }
 }

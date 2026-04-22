@@ -24,141 +24,281 @@ import java.util.HashMap;
 public class RawSlowQuery extends AbstractModel {
 
     /**
-    * 慢SQL 语句
+    * <p>慢SQL 语句</p>
     */
     @SerializedName("RawQuery")
     @Expose
     private String RawQuery;
 
     /**
-    * 慢SQL 查询的数据库
+    * <p>慢SQL 查询的数据库</p>
     */
     @SerializedName("DatabaseName")
     @Expose
     private String DatabaseName;
 
     /**
-    * 慢SQL执行 耗时
+    * <p>慢SQL执行 耗时</p>
     */
     @SerializedName("Duration")
     @Expose
     private Float Duration;
 
     /**
-    * 执行慢SQL的客户端
+    * <p>执行慢SQL的客户端</p>
     */
     @SerializedName("ClientAddr")
     @Expose
     private String ClientAddr;
 
     /**
-    * 执行慢SQL的用户名
+    * <p>执行慢SQL的用户名</p>
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * 慢SQL执行的开始时间
+    * <p>慢SQL执行的开始时间</p>
     */
     @SerializedName("SessionStartTime")
     @Expose
     private String SessionStartTime;
 
     /**
-     * Get 慢SQL 语句 
-     * @return RawQuery 慢SQL 语句
+    * <p>执行慢SQL的进程ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProcessId")
+    @Expose
+    private Long ProcessId;
+
+    /**
+    * <p>执行慢SQL的会话ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SessionId")
+    @Expose
+    private String SessionId;
+
+    /**
+    * <p>执行慢SQL的事务ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VirtualTransactionId")
+    @Expose
+    private String VirtualTransactionId;
+
+    /**
+    * <p>执行慢SQL的状态码</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SqlStateCode")
+    @Expose
+    private String SqlStateCode;
+
+    /**
+    * <p>执行慢SQL的客户端名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApplicationName")
+    @Expose
+    private String ApplicationName;
+
+    /**
+     * Get <p>慢SQL 语句</p> 
+     * @return RawQuery <p>慢SQL 语句</p>
      */
     public String getRawQuery() {
         return this.RawQuery;
     }
 
     /**
-     * Set 慢SQL 语句
-     * @param RawQuery 慢SQL 语句
+     * Set <p>慢SQL 语句</p>
+     * @param RawQuery <p>慢SQL 语句</p>
      */
     public void setRawQuery(String RawQuery) {
         this.RawQuery = RawQuery;
     }
 
     /**
-     * Get 慢SQL 查询的数据库 
-     * @return DatabaseName 慢SQL 查询的数据库
+     * Get <p>慢SQL 查询的数据库</p> 
+     * @return DatabaseName <p>慢SQL 查询的数据库</p>
      */
     public String getDatabaseName() {
         return this.DatabaseName;
     }
 
     /**
-     * Set 慢SQL 查询的数据库
-     * @param DatabaseName 慢SQL 查询的数据库
+     * Set <p>慢SQL 查询的数据库</p>
+     * @param DatabaseName <p>慢SQL 查询的数据库</p>
      */
     public void setDatabaseName(String DatabaseName) {
         this.DatabaseName = DatabaseName;
     }
 
     /**
-     * Get 慢SQL执行 耗时 
-     * @return Duration 慢SQL执行 耗时
+     * Get <p>慢SQL执行 耗时</p> 
+     * @return Duration <p>慢SQL执行 耗时</p>
      */
     public Float getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set 慢SQL执行 耗时
-     * @param Duration 慢SQL执行 耗时
+     * Set <p>慢SQL执行 耗时</p>
+     * @param Duration <p>慢SQL执行 耗时</p>
      */
     public void setDuration(Float Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get 执行慢SQL的客户端 
-     * @return ClientAddr 执行慢SQL的客户端
+     * Get <p>执行慢SQL的客户端</p> 
+     * @return ClientAddr <p>执行慢SQL的客户端</p>
      */
     public String getClientAddr() {
         return this.ClientAddr;
     }
 
     /**
-     * Set 执行慢SQL的客户端
-     * @param ClientAddr 执行慢SQL的客户端
+     * Set <p>执行慢SQL的客户端</p>
+     * @param ClientAddr <p>执行慢SQL的客户端</p>
      */
     public void setClientAddr(String ClientAddr) {
         this.ClientAddr = ClientAddr;
     }
 
     /**
-     * Get 执行慢SQL的用户名 
-     * @return UserName 执行慢SQL的用户名
+     * Get <p>执行慢SQL的用户名</p> 
+     * @return UserName <p>执行慢SQL的用户名</p>
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set 执行慢SQL的用户名
-     * @param UserName 执行慢SQL的用户名
+     * Set <p>执行慢SQL的用户名</p>
+     * @param UserName <p>执行慢SQL的用户名</p>
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get 慢SQL执行的开始时间 
-     * @return SessionStartTime 慢SQL执行的开始时间
+     * Get <p>慢SQL执行的开始时间</p> 
+     * @return SessionStartTime <p>慢SQL执行的开始时间</p>
      */
     public String getSessionStartTime() {
         return this.SessionStartTime;
     }
 
     /**
-     * Set 慢SQL执行的开始时间
-     * @param SessionStartTime 慢SQL执行的开始时间
+     * Set <p>慢SQL执行的开始时间</p>
+     * @param SessionStartTime <p>慢SQL执行的开始时间</p>
      */
     public void setSessionStartTime(String SessionStartTime) {
         this.SessionStartTime = SessionStartTime;
+    }
+
+    /**
+     * Get <p>执行慢SQL的进程ID</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProcessId <p>执行慢SQL的进程ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getProcessId() {
+        return this.ProcessId;
+    }
+
+    /**
+     * Set <p>执行慢SQL的进程ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProcessId <p>执行慢SQL的进程ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProcessId(Long ProcessId) {
+        this.ProcessId = ProcessId;
+    }
+
+    /**
+     * Get <p>执行慢SQL的会话ID</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SessionId <p>执行慢SQL的会话ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSessionId() {
+        return this.SessionId;
+    }
+
+    /**
+     * Set <p>执行慢SQL的会话ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SessionId <p>执行慢SQL的会话ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSessionId(String SessionId) {
+        this.SessionId = SessionId;
+    }
+
+    /**
+     * Get <p>执行慢SQL的事务ID</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VirtualTransactionId <p>执行慢SQL的事务ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVirtualTransactionId() {
+        return this.VirtualTransactionId;
+    }
+
+    /**
+     * Set <p>执行慢SQL的事务ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VirtualTransactionId <p>执行慢SQL的事务ID</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVirtualTransactionId(String VirtualTransactionId) {
+        this.VirtualTransactionId = VirtualTransactionId;
+    }
+
+    /**
+     * Get <p>执行慢SQL的状态码</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SqlStateCode <p>执行慢SQL的状态码</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSqlStateCode() {
+        return this.SqlStateCode;
+    }
+
+    /**
+     * Set <p>执行慢SQL的状态码</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SqlStateCode <p>执行慢SQL的状态码</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSqlStateCode(String SqlStateCode) {
+        this.SqlStateCode = SqlStateCode;
+    }
+
+    /**
+     * Get <p>执行慢SQL的客户端名称</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApplicationName <p>执行慢SQL的客户端名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApplicationName() {
+        return this.ApplicationName;
+    }
+
+    /**
+     * Set <p>执行慢SQL的客户端名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApplicationName <p>执行慢SQL的客户端名称</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApplicationName(String ApplicationName) {
+        this.ApplicationName = ApplicationName;
     }
 
     public RawSlowQuery() {
@@ -187,6 +327,21 @@ public class RawSlowQuery extends AbstractModel {
         if (source.SessionStartTime != null) {
             this.SessionStartTime = new String(source.SessionStartTime);
         }
+        if (source.ProcessId != null) {
+            this.ProcessId = new Long(source.ProcessId);
+        }
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
+        if (source.VirtualTransactionId != null) {
+            this.VirtualTransactionId = new String(source.VirtualTransactionId);
+        }
+        if (source.SqlStateCode != null) {
+            this.SqlStateCode = new String(source.SqlStateCode);
+        }
+        if (source.ApplicationName != null) {
+            this.ApplicationName = new String(source.ApplicationName);
+        }
     }
 
 
@@ -200,6 +355,11 @@ public class RawSlowQuery extends AbstractModel {
         this.setParamSimple(map, prefix + "ClientAddr", this.ClientAddr);
         this.setParamSimple(map, prefix + "UserName", this.UserName);
         this.setParamSimple(map, prefix + "SessionStartTime", this.SessionStartTime);
+        this.setParamSimple(map, prefix + "ProcessId", this.ProcessId);
+        this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamSimple(map, prefix + "VirtualTransactionId", this.VirtualTransactionId);
+        this.setParamSimple(map, prefix + "SqlStateCode", this.SqlStateCode);
+        this.setParamSimple(map, prefix + "ApplicationName", this.ApplicationName);
 
     }
 }

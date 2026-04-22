@@ -54,6 +54,13 @@ public class ComputeResourceAdvanceParams extends AbstractModel {
     private String UserScript;
 
     /**
+    * <p>节点组Id</p>
+    */
+    @SerializedName("TkeClusterNodePool")
+    @Expose
+    private String TkeClusterNodePool;
+
+    /**
      * Get <p>节点Label数组</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Labels <p>节点Label数组</p>
@@ -125,6 +132,22 @@ public class ComputeResourceAdvanceParams extends AbstractModel {
         this.UserScript = UserScript;
     }
 
+    /**
+     * Get <p>节点组Id</p> 
+     * @return TkeClusterNodePool <p>节点组Id</p>
+     */
+    public String getTkeClusterNodePool() {
+        return this.TkeClusterNodePool;
+    }
+
+    /**
+     * Set <p>节点组Id</p>
+     * @param TkeClusterNodePool <p>节点组Id</p>
+     */
+    public void setTkeClusterNodePool(String TkeClusterNodePool) {
+        this.TkeClusterNodePool = TkeClusterNodePool;
+    }
+
     public ComputeResourceAdvanceParams() {
     }
 
@@ -151,6 +174,9 @@ public class ComputeResourceAdvanceParams extends AbstractModel {
         if (source.UserScript != null) {
             this.UserScript = new String(source.UserScript);
         }
+        if (source.TkeClusterNodePool != null) {
+            this.TkeClusterNodePool = new String(source.TkeClusterNodePool);
+        }
     }
 
 
@@ -162,6 +188,7 @@ public class ComputeResourceAdvanceParams extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Taints.", this.Taints);
         this.setParamSimple(map, prefix + "PreStartUserScript", this.PreStartUserScript);
         this.setParamSimple(map, prefix + "UserScript", this.UserScript);
+        this.setParamSimple(map, prefix + "TkeClusterNodePool", this.TkeClusterNodePool);
 
     }
 }

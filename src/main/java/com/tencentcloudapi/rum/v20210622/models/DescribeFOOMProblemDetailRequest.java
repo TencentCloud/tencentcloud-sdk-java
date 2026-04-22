@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class DescribeFOOMProblemDetailRequest extends AbstractModel {
 
     /**
-    * 产品Id
+    * <p>产品Id</p>
     */
     @SerializedName("ProductId")
     @Expose
     private String ProductId;
 
     /**
-    * 消息唯一标识
+    * <p>消息唯一标识</p>
     */
     @SerializedName("ClientIdentify")
     @Expose
     private String ClientIdentify;
 
     /**
-    * 特征
+    * <p>特征</p>
     */
     @SerializedName("Feature")
     @Expose
     private String Feature;
 
     /**
-    * 事件开始时间
+    * <p>事件开始时间</p>
     */
     @SerializedName("StartEventTime")
     @Expose
     private Long StartEventTime;
 
     /**
-    * 事件结束时间
+    * <p>事件结束时间</p>
     */
     @SerializedName("EndEventTime")
     @Expose
     private Long EndEventTime;
 
     /**
-    * 拓展数据
+    * <p>拓展数据</p>
     */
     @SerializedName("ExtraData")
     @Expose
     private String ExtraData;
 
     /**
-    * 请求头
+    * <p>请求头</p>
     */
     @SerializedName("RequestHeader")
     @Expose
     private String RequestHeader;
 
     /**
-     * Get 产品Id 
-     * @return ProductId 产品Id
+     * Get <p>产品Id</p> 
+     * @return ProductId <p>产品Id</p>
      */
     public String getProductId() {
         return this.ProductId;
     }
 
     /**
-     * Set 产品Id
-     * @param ProductId 产品Id
+     * Set <p>产品Id</p>
+     * @param ProductId <p>产品Id</p>
      */
     public void setProductId(String ProductId) {
         this.ProductId = ProductId;
     }
 
     /**
-     * Get 消息唯一标识 
-     * @return ClientIdentify 消息唯一标识
+     * Get <p>消息唯一标识</p> 
+     * @return ClientIdentify <p>消息唯一标识</p>
      */
     public String getClientIdentify() {
         return this.ClientIdentify;
     }
 
     /**
-     * Set 消息唯一标识
-     * @param ClientIdentify 消息唯一标识
+     * Set <p>消息唯一标识</p>
+     * @param ClientIdentify <p>消息唯一标识</p>
      */
     public void setClientIdentify(String ClientIdentify) {
         this.ClientIdentify = ClientIdentify;
     }
 
     /**
-     * Get 特征 
-     * @return Feature 特征
+     * Get <p>特征</p> 
+     * @return Feature <p>特征</p>
      */
     public String getFeature() {
         return this.Feature;
     }
 
     /**
-     * Set 特征
-     * @param Feature 特征
+     * Set <p>特征</p>
+     * @param Feature <p>特征</p>
      */
     public void setFeature(String Feature) {
         this.Feature = Feature;
     }
 
     /**
-     * Get 事件开始时间 
-     * @return StartEventTime 事件开始时间
+     * Get <p>事件开始时间</p> 
+     * @return StartEventTime <p>事件开始时间</p>
      */
     public Long getStartEventTime() {
         return this.StartEventTime;
     }
 
     /**
-     * Set 事件开始时间
-     * @param StartEventTime 事件开始时间
+     * Set <p>事件开始时间</p>
+     * @param StartEventTime <p>事件开始时间</p>
      */
     public void setStartEventTime(Long StartEventTime) {
         this.StartEventTime = StartEventTime;
     }
 
     /**
-     * Get 事件结束时间 
-     * @return EndEventTime 事件结束时间
+     * Get <p>事件结束时间</p> 
+     * @return EndEventTime <p>事件结束时间</p>
      */
     public Long getEndEventTime() {
         return this.EndEventTime;
     }
 
     /**
-     * Set 事件结束时间
-     * @param EndEventTime 事件结束时间
+     * Set <p>事件结束时间</p>
+     * @param EndEventTime <p>事件结束时间</p>
      */
     public void setEndEventTime(Long EndEventTime) {
         this.EndEventTime = EndEventTime;
     }
 
     /**
-     * Get 拓展数据 
-     * @return ExtraData 拓展数据
+     * Get <p>拓展数据</p> 
+     * @return ExtraData <p>拓展数据</p>
      */
     public String getExtraData() {
         return this.ExtraData;
     }
 
     /**
-     * Set 拓展数据
-     * @param ExtraData 拓展数据
+     * Set <p>拓展数据</p>
+     * @param ExtraData <p>拓展数据</p>
      */
     public void setExtraData(String ExtraData) {
         this.ExtraData = ExtraData;
     }
 
     /**
-     * Get 请求头 
-     * @return RequestHeader 请求头
+     * Get <p>请求头</p> 
+     * @return RequestHeader <p>请求头</p>
      */
     public String getRequestHeader() {
         return this.RequestHeader;
     }
 
     /**
-     * Set 请求头
-     * @param RequestHeader 请求头
+     * Set <p>请求头</p>
+     * @param RequestHeader <p>请求头</p>
      */
     public void setRequestHeader(String RequestHeader) {
         this.RequestHeader = RequestHeader;

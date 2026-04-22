@@ -24,210 +24,233 @@ import java.util.HashMap;
 public class CreateAlarmNoticeRequest extends AbstractModel {
 
     /**
-    * 模块名，这里填“monitor”
+    * <p>模块名，这里填“monitor”</p>
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * 通知模板名称 60字符以内
+    * <p>通知模板名称 60字符以内</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 通知类型 ALARM=未恢复通知 OK=已恢复通知 ALL=都通知
+    * <p>通知类型 ALARM=未恢复通知 OK=已恢复通知 ALL=都通知</p>
     */
     @SerializedName("NoticeType")
     @Expose
     private String NoticeType;
 
     /**
-    * 通知语言 zh-CN=中文 en-US=英文
+    * <p>通知语言 zh-CN=中文 en-US=英文</p>
     */
     @SerializedName("NoticeLanguage")
     @Expose
     private String NoticeLanguage;
 
     /**
-    * 用户通知 最多5个
+    * <p>用户通知 最多5个</p>
     */
     @SerializedName("UserNotices")
     @Expose
     private UserNotice [] UserNotices;
 
     /**
-    * 回调通知 最多6个
+    * <p>回调通知 最多6个</p>
     */
     @SerializedName("URLNotices")
     @Expose
     private URLNotice [] URLNotices;
 
     /**
-    * 推送CLS日志服务的操作 最多1个
+    * <p>推送CLS日志服务的操作 最多1个</p>
     */
     @SerializedName("CLSNotices")
     @Expose
     private CLSNotice [] CLSNotices;
 
     /**
-    * 模板绑定的标签
+    * <p>模板绑定的标签</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 是否免登录，0-否，1-是
+    * <p>是否免登录，0-否，1-是</p>
     */
     @SerializedName("IsLoginFree")
     @Expose
     private Long IsLoginFree;
 
     /**
-     * Get 模块名，这里填“monitor” 
-     * @return Module 模块名，这里填“monitor”
+    * <p>IANA 时区名</p>
+    */
+    @SerializedName("TimeZoneName")
+    @Expose
+    private String TimeZoneName;
+
+    /**
+     * Get <p>模块名，这里填“monitor”</p> 
+     * @return Module <p>模块名，这里填“monitor”</p>
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * Set 模块名，这里填“monitor”
-     * @param Module 模块名，这里填“monitor”
+     * Set <p>模块名，这里填“monitor”</p>
+     * @param Module <p>模块名，这里填“monitor”</p>
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * Get 通知模板名称 60字符以内 
-     * @return Name 通知模板名称 60字符以内
+     * Get <p>通知模板名称 60字符以内</p> 
+     * @return Name <p>通知模板名称 60字符以内</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 通知模板名称 60字符以内
-     * @param Name 通知模板名称 60字符以内
+     * Set <p>通知模板名称 60字符以内</p>
+     * @param Name <p>通知模板名称 60字符以内</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 通知类型 ALARM=未恢复通知 OK=已恢复通知 ALL=都通知 
-     * @return NoticeType 通知类型 ALARM=未恢复通知 OK=已恢复通知 ALL=都通知
+     * Get <p>通知类型 ALARM=未恢复通知 OK=已恢复通知 ALL=都通知</p> 
+     * @return NoticeType <p>通知类型 ALARM=未恢复通知 OK=已恢复通知 ALL=都通知</p>
      */
     public String getNoticeType() {
         return this.NoticeType;
     }
 
     /**
-     * Set 通知类型 ALARM=未恢复通知 OK=已恢复通知 ALL=都通知
-     * @param NoticeType 通知类型 ALARM=未恢复通知 OK=已恢复通知 ALL=都通知
+     * Set <p>通知类型 ALARM=未恢复通知 OK=已恢复通知 ALL=都通知</p>
+     * @param NoticeType <p>通知类型 ALARM=未恢复通知 OK=已恢复通知 ALL=都通知</p>
      */
     public void setNoticeType(String NoticeType) {
         this.NoticeType = NoticeType;
     }
 
     /**
-     * Get 通知语言 zh-CN=中文 en-US=英文 
-     * @return NoticeLanguage 通知语言 zh-CN=中文 en-US=英文
+     * Get <p>通知语言 zh-CN=中文 en-US=英文</p> 
+     * @return NoticeLanguage <p>通知语言 zh-CN=中文 en-US=英文</p>
      */
     public String getNoticeLanguage() {
         return this.NoticeLanguage;
     }
 
     /**
-     * Set 通知语言 zh-CN=中文 en-US=英文
-     * @param NoticeLanguage 通知语言 zh-CN=中文 en-US=英文
+     * Set <p>通知语言 zh-CN=中文 en-US=英文</p>
+     * @param NoticeLanguage <p>通知语言 zh-CN=中文 en-US=英文</p>
      */
     public void setNoticeLanguage(String NoticeLanguage) {
         this.NoticeLanguage = NoticeLanguage;
     }
 
     /**
-     * Get 用户通知 最多5个 
-     * @return UserNotices 用户通知 最多5个
+     * Get <p>用户通知 最多5个</p> 
+     * @return UserNotices <p>用户通知 最多5个</p>
      */
     public UserNotice [] getUserNotices() {
         return this.UserNotices;
     }
 
     /**
-     * Set 用户通知 最多5个
-     * @param UserNotices 用户通知 最多5个
+     * Set <p>用户通知 最多5个</p>
+     * @param UserNotices <p>用户通知 最多5个</p>
      */
     public void setUserNotices(UserNotice [] UserNotices) {
         this.UserNotices = UserNotices;
     }
 
     /**
-     * Get 回调通知 最多6个 
-     * @return URLNotices 回调通知 最多6个
+     * Get <p>回调通知 最多6个</p> 
+     * @return URLNotices <p>回调通知 最多6个</p>
      */
     public URLNotice [] getURLNotices() {
         return this.URLNotices;
     }
 
     /**
-     * Set 回调通知 最多6个
-     * @param URLNotices 回调通知 最多6个
+     * Set <p>回调通知 最多6个</p>
+     * @param URLNotices <p>回调通知 最多6个</p>
      */
     public void setURLNotices(URLNotice [] URLNotices) {
         this.URLNotices = URLNotices;
     }
 
     /**
-     * Get 推送CLS日志服务的操作 最多1个 
-     * @return CLSNotices 推送CLS日志服务的操作 最多1个
+     * Get <p>推送CLS日志服务的操作 最多1个</p> 
+     * @return CLSNotices <p>推送CLS日志服务的操作 最多1个</p>
      */
     public CLSNotice [] getCLSNotices() {
         return this.CLSNotices;
     }
 
     /**
-     * Set 推送CLS日志服务的操作 最多1个
-     * @param CLSNotices 推送CLS日志服务的操作 最多1个
+     * Set <p>推送CLS日志服务的操作 最多1个</p>
+     * @param CLSNotices <p>推送CLS日志服务的操作 最多1个</p>
      */
     public void setCLSNotices(CLSNotice [] CLSNotices) {
         this.CLSNotices = CLSNotices;
     }
 
     /**
-     * Get 模板绑定的标签 
-     * @return Tags 模板绑定的标签
+     * Get <p>模板绑定的标签</p> 
+     * @return Tags <p>模板绑定的标签</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 模板绑定的标签
-     * @param Tags 模板绑定的标签
+     * Set <p>模板绑定的标签</p>
+     * @param Tags <p>模板绑定的标签</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 是否免登录，0-否，1-是 
-     * @return IsLoginFree 是否免登录，0-否，1-是
+     * Get <p>是否免登录，0-否，1-是</p> 
+     * @return IsLoginFree <p>是否免登录，0-否，1-是</p>
      */
     public Long getIsLoginFree() {
         return this.IsLoginFree;
     }
 
     /**
-     * Set 是否免登录，0-否，1-是
-     * @param IsLoginFree 是否免登录，0-否，1-是
+     * Set <p>是否免登录，0-否，1-是</p>
+     * @param IsLoginFree <p>是否免登录，0-否，1-是</p>
      */
     public void setIsLoginFree(Long IsLoginFree) {
         this.IsLoginFree = IsLoginFree;
+    }
+
+    /**
+     * Get <p>IANA 时区名</p> 
+     * @return TimeZoneName <p>IANA 时区名</p>
+     */
+    public String getTimeZoneName() {
+        return this.TimeZoneName;
+    }
+
+    /**
+     * Set <p>IANA 时区名</p>
+     * @param TimeZoneName <p>IANA 时区名</p>
+     */
+    public void setTimeZoneName(String TimeZoneName) {
+        this.TimeZoneName = TimeZoneName;
     }
 
     public CreateAlarmNoticeRequest() {
@@ -277,6 +300,9 @@ public class CreateAlarmNoticeRequest extends AbstractModel {
         if (source.IsLoginFree != null) {
             this.IsLoginFree = new Long(source.IsLoginFree);
         }
+        if (source.TimeZoneName != null) {
+            this.TimeZoneName = new String(source.TimeZoneName);
+        }
     }
 
 
@@ -293,6 +319,7 @@ public class CreateAlarmNoticeRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "CLSNotices.", this.CLSNotices);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "IsLoginFree", this.IsLoginFree);
+        this.setParamSimple(map, prefix + "TimeZoneName", this.TimeZoneName);
 
     }
 }

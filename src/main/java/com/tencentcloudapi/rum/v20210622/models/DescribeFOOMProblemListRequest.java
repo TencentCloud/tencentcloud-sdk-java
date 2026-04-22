@@ -24,207 +24,207 @@ import java.util.HashMap;
 public class DescribeFOOMProblemListRequest extends AbstractModel {
 
     /**
-    * 产品Id
+    * <p>产品Id</p>
     */
     @SerializedName("ProductId")
     @Expose
     private String ProductId;
 
     /**
-    * 提供给前端使用，当填写本字段时，会覆盖 formlist 的值
+    * <p>提供给前端使用，当填写本字段时，会覆盖 formlist 的值</p>
     */
     @SerializedName("ParamToken")
     @Expose
     private String ParamToken;
 
     /**
-    * 接口调试专用，当 token 为空时，以这里的 value 作为筛选表单信息
+    * <p>接口调试专用，当 token 为空时，以这里的 value 作为筛选表单信息</p>
     */
     @SerializedName("FormListString")
     @Expose
     private String FormListString;
 
     /**
-    * 当前页码
+    * <p>当前页码</p>
     */
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
 
     /**
-    * 每页展示最大数量
+    * <p>每页展示最大数量</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 排序字段
+    * <p>排序字段</p>
     */
     @SerializedName("SortField")
     @Expose
     private String SortField;
 
     /**
-    * 排序类型
+    * <p>排序类型</p>
     */
     @SerializedName("SortType")
     @Expose
     private String SortType;
 
     /**
-    * 拓展数据
+    * <p>拓展数据</p>
     */
     @SerializedName("ExtraData")
     @Expose
     private String ExtraData;
 
     /**
-    * 请求头
+    * <p>请求头</p>
     */
     @SerializedName("RequestHeader")
     @Expose
     private String RequestHeader;
 
     /**
-     * Get 产品Id 
-     * @return ProductId 产品Id
+     * Get <p>产品Id</p> 
+     * @return ProductId <p>产品Id</p>
      */
     public String getProductId() {
         return this.ProductId;
     }
 
     /**
-     * Set 产品Id
-     * @param ProductId 产品Id
+     * Set <p>产品Id</p>
+     * @param ProductId <p>产品Id</p>
      */
     public void setProductId(String ProductId) {
         this.ProductId = ProductId;
     }
 
     /**
-     * Get 提供给前端使用，当填写本字段时，会覆盖 formlist 的值 
-     * @return ParamToken 提供给前端使用，当填写本字段时，会覆盖 formlist 的值
+     * Get <p>提供给前端使用，当填写本字段时，会覆盖 formlist 的值</p> 
+     * @return ParamToken <p>提供给前端使用，当填写本字段时，会覆盖 formlist 的值</p>
      */
     public String getParamToken() {
         return this.ParamToken;
     }
 
     /**
-     * Set 提供给前端使用，当填写本字段时，会覆盖 formlist 的值
-     * @param ParamToken 提供给前端使用，当填写本字段时，会覆盖 formlist 的值
+     * Set <p>提供给前端使用，当填写本字段时，会覆盖 formlist 的值</p>
+     * @param ParamToken <p>提供给前端使用，当填写本字段时，会覆盖 formlist 的值</p>
      */
     public void setParamToken(String ParamToken) {
         this.ParamToken = ParamToken;
     }
 
     /**
-     * Get 接口调试专用，当 token 为空时，以这里的 value 作为筛选表单信息 
-     * @return FormListString 接口调试专用，当 token 为空时，以这里的 value 作为筛选表单信息
+     * Get <p>接口调试专用，当 token 为空时，以这里的 value 作为筛选表单信息</p> 
+     * @return FormListString <p>接口调试专用，当 token 为空时，以这里的 value 作为筛选表单信息</p>
      */
     public String getFormListString() {
         return this.FormListString;
     }
 
     /**
-     * Set 接口调试专用，当 token 为空时，以这里的 value 作为筛选表单信息
-     * @param FormListString 接口调试专用，当 token 为空时，以这里的 value 作为筛选表单信息
+     * Set <p>接口调试专用，当 token 为空时，以这里的 value 作为筛选表单信息</p>
+     * @param FormListString <p>接口调试专用，当 token 为空时，以这里的 value 作为筛选表单信息</p>
      */
     public void setFormListString(String FormListString) {
         this.FormListString = FormListString;
     }
 
     /**
-     * Get 当前页码 
-     * @return PageNumber 当前页码
+     * Get <p>当前页码</p> 
+     * @return PageNumber <p>当前页码</p>
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set 当前页码
-     * @param PageNumber 当前页码
+     * Set <p>当前页码</p>
+     * @param PageNumber <p>当前页码</p>
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 每页展示最大数量 
-     * @return PageSize 每页展示最大数量
+     * Get <p>每页展示最大数量</p> 
+     * @return PageSize <p>每页展示最大数量</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 每页展示最大数量
-     * @param PageSize 每页展示最大数量
+     * Set <p>每页展示最大数量</p>
+     * @param PageSize <p>每页展示最大数量</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 排序字段 
-     * @return SortField 排序字段
+     * Get <p>排序字段</p> 
+     * @return SortField <p>排序字段</p>
      */
     public String getSortField() {
         return this.SortField;
     }
 
     /**
-     * Set 排序字段
-     * @param SortField 排序字段
+     * Set <p>排序字段</p>
+     * @param SortField <p>排序字段</p>
      */
     public void setSortField(String SortField) {
         this.SortField = SortField;
     }
 
     /**
-     * Get 排序类型 
-     * @return SortType 排序类型
+     * Get <p>排序类型</p> 
+     * @return SortType <p>排序类型</p>
      */
     public String getSortType() {
         return this.SortType;
     }
 
     /**
-     * Set 排序类型
-     * @param SortType 排序类型
+     * Set <p>排序类型</p>
+     * @param SortType <p>排序类型</p>
      */
     public void setSortType(String SortType) {
         this.SortType = SortType;
     }
 
     /**
-     * Get 拓展数据 
-     * @return ExtraData 拓展数据
+     * Get <p>拓展数据</p> 
+     * @return ExtraData <p>拓展数据</p>
      */
     public String getExtraData() {
         return this.ExtraData;
     }
 
     /**
-     * Set 拓展数据
-     * @param ExtraData 拓展数据
+     * Set <p>拓展数据</p>
+     * @param ExtraData <p>拓展数据</p>
      */
     public void setExtraData(String ExtraData) {
         this.ExtraData = ExtraData;
     }
 
     /**
-     * Get 请求头 
-     * @return RequestHeader 请求头
+     * Get <p>请求头</p> 
+     * @return RequestHeader <p>请求头</p>
      */
     public String getRequestHeader() {
         return this.RequestHeader;
     }
 
     /**
-     * Set 请求头
-     * @param RequestHeader 请求头
+     * Set <p>请求头</p>
+     * @param RequestHeader <p>请求头</p>
      */
     public void setRequestHeader(String RequestHeader) {
         this.RequestHeader = RequestHeader;

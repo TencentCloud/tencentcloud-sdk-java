@@ -24,207 +24,207 @@ import java.util.HashMap;
 public class DescribeTopIssuesRequest extends AbstractModel {
 
     /**
-    * 产品Id
+    * <p>产品Id</p>
     */
     @SerializedName("ProductId")
     @Expose
     private String ProductId;
 
     /**
-    * 需要对比的查询条件，没有则不填
+    * <p>需要对比的查询条件，没有则不填</p>
     */
     @SerializedName("Compare")
     @Expose
     private CompareCondition Compare;
 
     /**
-    * 查询条件
+    * <p>查询条件</p>
     */
     @SerializedName("Condition")
     @Expose
     private CompareCondition Condition;
 
     /**
-    * 问题类型
+    * <p>问题类型</p>
     */
     @SerializedName("IssueType")
     @Expose
     private Long IssueType;
 
     /**
-    * 排序字段
+    * <p>排序字段</p>
     */
     @SerializedName("SortField")
     @Expose
     private String SortField;
 
     /**
-    * 排序方式
+    * <p>排序方式</p>
     */
     @SerializedName("SortType")
     @Expose
     private String SortType;
 
     /**
-    * topN
+    * <p>topN</p>
     */
     @SerializedName("TopNum")
     @Expose
     private Long TopNum;
 
     /**
-    * 拓展字段
+    * <p>拓展字段</p>
     */
     @SerializedName("ExtraData")
     @Expose
     private String ExtraData;
 
     /**
-    * 请求头
+    * <p>请求头</p>
     */
     @SerializedName("RequestHeader")
     @Expose
     private String RequestHeader;
 
     /**
-     * Get 产品Id 
-     * @return ProductId 产品Id
+     * Get <p>产品Id</p> 
+     * @return ProductId <p>产品Id</p>
      */
     public String getProductId() {
         return this.ProductId;
     }
 
     /**
-     * Set 产品Id
-     * @param ProductId 产品Id
+     * Set <p>产品Id</p>
+     * @param ProductId <p>产品Id</p>
      */
     public void setProductId(String ProductId) {
         this.ProductId = ProductId;
     }
 
     /**
-     * Get 需要对比的查询条件，没有则不填 
-     * @return Compare 需要对比的查询条件，没有则不填
+     * Get <p>需要对比的查询条件，没有则不填</p> 
+     * @return Compare <p>需要对比的查询条件，没有则不填</p>
      */
     public CompareCondition getCompare() {
         return this.Compare;
     }
 
     /**
-     * Set 需要对比的查询条件，没有则不填
-     * @param Compare 需要对比的查询条件，没有则不填
+     * Set <p>需要对比的查询条件，没有则不填</p>
+     * @param Compare <p>需要对比的查询条件，没有则不填</p>
      */
     public void setCompare(CompareCondition Compare) {
         this.Compare = Compare;
     }
 
     /**
-     * Get 查询条件 
-     * @return Condition 查询条件
+     * Get <p>查询条件</p> 
+     * @return Condition <p>查询条件</p>
      */
     public CompareCondition getCondition() {
         return this.Condition;
     }
 
     /**
-     * Set 查询条件
-     * @param Condition 查询条件
+     * Set <p>查询条件</p>
+     * @param Condition <p>查询条件</p>
      */
     public void setCondition(CompareCondition Condition) {
         this.Condition = Condition;
     }
 
     /**
-     * Get 问题类型 
-     * @return IssueType 问题类型
+     * Get <p>问题类型</p> 
+     * @return IssueType <p>问题类型</p>
      */
     public Long getIssueType() {
         return this.IssueType;
     }
 
     /**
-     * Set 问题类型
-     * @param IssueType 问题类型
+     * Set <p>问题类型</p>
+     * @param IssueType <p>问题类型</p>
      */
     public void setIssueType(Long IssueType) {
         this.IssueType = IssueType;
     }
 
     /**
-     * Get 排序字段 
-     * @return SortField 排序字段
+     * Get <p>排序字段</p> 
+     * @return SortField <p>排序字段</p>
      */
     public String getSortField() {
         return this.SortField;
     }
 
     /**
-     * Set 排序字段
-     * @param SortField 排序字段
+     * Set <p>排序字段</p>
+     * @param SortField <p>排序字段</p>
      */
     public void setSortField(String SortField) {
         this.SortField = SortField;
     }
 
     /**
-     * Get 排序方式 
-     * @return SortType 排序方式
+     * Get <p>排序方式</p> 
+     * @return SortType <p>排序方式</p>
      */
     public String getSortType() {
         return this.SortType;
     }
 
     /**
-     * Set 排序方式
-     * @param SortType 排序方式
+     * Set <p>排序方式</p>
+     * @param SortType <p>排序方式</p>
      */
     public void setSortType(String SortType) {
         this.SortType = SortType;
     }
 
     /**
-     * Get topN 
-     * @return TopNum topN
+     * Get <p>topN</p> 
+     * @return TopNum <p>topN</p>
      */
     public Long getTopNum() {
         return this.TopNum;
     }
 
     /**
-     * Set topN
-     * @param TopNum topN
+     * Set <p>topN</p>
+     * @param TopNum <p>topN</p>
      */
     public void setTopNum(Long TopNum) {
         this.TopNum = TopNum;
     }
 
     /**
-     * Get 拓展字段 
-     * @return ExtraData 拓展字段
+     * Get <p>拓展字段</p> 
+     * @return ExtraData <p>拓展字段</p>
      */
     public String getExtraData() {
         return this.ExtraData;
     }
 
     /**
-     * Set 拓展字段
-     * @param ExtraData 拓展字段
+     * Set <p>拓展字段</p>
+     * @param ExtraData <p>拓展字段</p>
      */
     public void setExtraData(String ExtraData) {
         this.ExtraData = ExtraData;
     }
 
     /**
-     * Get 请求头 
-     * @return RequestHeader 请求头
+     * Get <p>请求头</p> 
+     * @return RequestHeader <p>请求头</p>
      */
     public String getRequestHeader() {
         return this.RequestHeader;
     }
 
     /**
-     * Set 请求头
-     * @param RequestHeader 请求头
+     * Set <p>请求头</p>
+     * @param RequestHeader <p>请求头</p>
      */
     public void setRequestHeader(String RequestHeader) {
         this.RequestHeader = RequestHeader;

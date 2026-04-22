@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeDLPFileDetectResultResponse extends AbstractModel {
 
     /**
-    * 文件鉴定任务结果数据。详情查看具体数据结构
+    * <p>文件鉴定任务结果数据。详情查看具体数据结构</p>
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeDLPFileDetectResultResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 文件鉴定任务结果数据。详情查看具体数据结构 
-     * @return Data 文件鉴定任务结果数据。详情查看具体数据结构
+     * Get <p>文件鉴定任务结果数据。详情查看具体数据结构</p> 
+     * @return Data <p>文件鉴定任务结果数据。详情查看具体数据结构</p>
      */
     public DescribeDLPFileDetectResultData getData() {
         return this.Data;
     }
 
     /**
-     * Set 文件鉴定任务结果数据。详情查看具体数据结构
-     * @param Data 文件鉴定任务结果数据。详情查看具体数据结构
+     * Set <p>文件鉴定任务结果数据。详情查看具体数据结构</p>
+     * @param Data <p>文件鉴定任务结果数据。详情查看具体数据结构</p>
      */
     public void setData(DescribeDLPFileDetectResultData Data) {
         this.Data = Data;

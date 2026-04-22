@@ -115,6 +115,13 @@ public class InstanceConfigInfo extends AbstractModel {
     private String AbnormalParam;
 
     /**
+    * <p>是否生效</p>
+    */
+    @SerializedName("ConfigEffective")
+    @Expose
+    private String ConfigEffective;
+
+    /**
      * Get <p>配置项名称</p> 
      * @return ConfKey <p>配置项名称</p>
      */
@@ -322,6 +329,22 @@ public class InstanceConfigInfo extends AbstractModel {
         this.AbnormalParam = AbnormalParam;
     }
 
+    /**
+     * Get <p>是否生效</p> 
+     * @return ConfigEffective <p>是否生效</p>
+     */
+    public String getConfigEffective() {
+        return this.ConfigEffective;
+    }
+
+    /**
+     * Set <p>是否生效</p>
+     * @param ConfigEffective <p>是否生效</p>
+     */
+    public void setConfigEffective(String ConfigEffective) {
+        this.ConfigEffective = ConfigEffective;
+    }
+
     public InstanceConfigInfo() {
     }
 
@@ -369,6 +392,9 @@ public class InstanceConfigInfo extends AbstractModel {
         if (source.AbnormalParam != null) {
             this.AbnormalParam = new String(source.AbnormalParam);
         }
+        if (source.ConfigEffective != null) {
+            this.ConfigEffective = new String(source.ConfigEffective);
+        }
     }
 
 
@@ -389,6 +415,7 @@ public class InstanceConfigInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamSimple(map, prefix + "ValueRange", this.ValueRange);
         this.setParamSimple(map, prefix + "AbnormalParam", this.AbnormalParam);
+        this.setParamSimple(map, prefix + "ConfigEffective", this.ConfigEffective);
 
     }
 }

@@ -31,7 +31,7 @@ public class DescribeDLPFileDetectResultRequest extends AbstractModel {
     private String DomainInstanceId;
 
     /**
-    * 查询ID，即提交送检任务接口（CreateDLPFileDetectionTask）返回的任务ID（DLPFileDetectionTaskID）
+    * <p>查询ID，即提交送检任务接口（CreateDLPFileDetectionTask）返回的任务ID（DLPFileDetectionTaskID）</p>
     */
     @SerializedName("QueryID")
     @Expose
@@ -54,16 +54,16 @@ public class DescribeDLPFileDetectResultRequest extends AbstractModel {
     }
 
     /**
-     * Get 查询ID，即提交送检任务接口（CreateDLPFileDetectionTask）返回的任务ID（DLPFileDetectionTaskID） 
-     * @return QueryID 查询ID，即提交送检任务接口（CreateDLPFileDetectionTask）返回的任务ID（DLPFileDetectionTaskID）
+     * Get <p>查询ID，即提交送检任务接口（CreateDLPFileDetectionTask）返回的任务ID（DLPFileDetectionTaskID）</p> 
+     * @return QueryID <p>查询ID，即提交送检任务接口（CreateDLPFileDetectionTask）返回的任务ID（DLPFileDetectionTaskID）</p>
      */
     public String getQueryID() {
         return this.QueryID;
     }
 
     /**
-     * Set 查询ID，即提交送检任务接口（CreateDLPFileDetectionTask）返回的任务ID（DLPFileDetectionTaskID）
-     * @param QueryID 查询ID，即提交送检任务接口（CreateDLPFileDetectionTask）返回的任务ID（DLPFileDetectionTaskID）
+     * Set <p>查询ID，即提交送检任务接口（CreateDLPFileDetectionTask）返回的任务ID（DLPFileDetectionTaskID）</p>
+     * @param QueryID <p>查询ID，即提交送检任务接口（CreateDLPFileDetectionTask）返回的任务ID（DLPFileDetectionTaskID）</p>
      */
     public void setQueryID(String QueryID) {
         this.QueryID = QueryID;

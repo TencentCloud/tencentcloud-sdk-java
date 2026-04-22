@@ -255,6 +255,9 @@ public enum PostgresErrorCode {
      /* Json数据解析失败，请联系客服进行处理。 */
      INTERNALERROR_JSONPARSEERROR("InternalError.JsonParseError"),
      
+     /* 查询实例不存在 */
+     INTERNALERROR_LISTINSTANCESERROR("InternalError.ListInstancesError"),
+     
      /* 后台数据解析失败，请联系客服进行处理。 */
      INTERNALERROR_MARSHALERROR("InternalError.MarshalError"),
      

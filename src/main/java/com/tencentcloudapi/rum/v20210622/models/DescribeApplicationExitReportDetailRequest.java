@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class DescribeApplicationExitReportDetailRequest extends AbstractModel {
 
     /**
-    * 产品Id
+    * <p>产品Id</p>
     */
     @SerializedName("ProductId")
     @Expose
     private String ProductId;
 
     /**
-    * 提供给前端使用，当填写本字段时，会覆盖 formlist 的值
+    * <p>提供给前端使用，当填写本字段时，会覆盖 formlist 的值</p>
     */
     @SerializedName("ParamToken")
     @Expose
     private String ParamToken;
 
     /**
-    * 问题Id
+    * <p>问题Id</p>
     */
     @SerializedName("ClientIdentify")
     @Expose
     private String ClientIdentify;
 
     /**
-    * 开始时间
+    * <p>开始时间</p>
     */
     @SerializedName("StartEventTime")
     @Expose
     private Long StartEventTime;
 
     /**
-    * 结束时间
+    * <p>结束时间</p>
     */
     @SerializedName("EndEventTime")
     @Expose
     private Long EndEventTime;
 
     /**
-    * 拓展数据
+    * <p>拓展数据</p>
     */
     @SerializedName("ExtraData")
     @Expose
     private String ExtraData;
 
     /**
-    * 请求头
+    * <p>请求头</p>
     */
     @SerializedName("RequestHeader")
     @Expose
     private String RequestHeader;
 
     /**
-     * Get 产品Id 
-     * @return ProductId 产品Id
+     * Get <p>产品Id</p> 
+     * @return ProductId <p>产品Id</p>
      */
     public String getProductId() {
         return this.ProductId;
     }
 
     /**
-     * Set 产品Id
-     * @param ProductId 产品Id
+     * Set <p>产品Id</p>
+     * @param ProductId <p>产品Id</p>
      */
     public void setProductId(String ProductId) {
         this.ProductId = ProductId;
     }
 
     /**
-     * Get 提供给前端使用，当填写本字段时，会覆盖 formlist 的值 
-     * @return ParamToken 提供给前端使用，当填写本字段时，会覆盖 formlist 的值
+     * Get <p>提供给前端使用，当填写本字段时，会覆盖 formlist 的值</p> 
+     * @return ParamToken <p>提供给前端使用，当填写本字段时，会覆盖 formlist 的值</p>
      */
     public String getParamToken() {
         return this.ParamToken;
     }
 
     /**
-     * Set 提供给前端使用，当填写本字段时，会覆盖 formlist 的值
-     * @param ParamToken 提供给前端使用，当填写本字段时，会覆盖 formlist 的值
+     * Set <p>提供给前端使用，当填写本字段时，会覆盖 formlist 的值</p>
+     * @param ParamToken <p>提供给前端使用，当填写本字段时，会覆盖 formlist 的值</p>
      */
     public void setParamToken(String ParamToken) {
         this.ParamToken = ParamToken;
     }
 
     /**
-     * Get 问题Id 
-     * @return ClientIdentify 问题Id
+     * Get <p>问题Id</p> 
+     * @return ClientIdentify <p>问题Id</p>
      */
     public String getClientIdentify() {
         return this.ClientIdentify;
     }
 
     /**
-     * Set 问题Id
-     * @param ClientIdentify 问题Id
+     * Set <p>问题Id</p>
+     * @param ClientIdentify <p>问题Id</p>
      */
     public void setClientIdentify(String ClientIdentify) {
         this.ClientIdentify = ClientIdentify;
     }
 
     /**
-     * Get 开始时间 
-     * @return StartEventTime 开始时间
+     * Get <p>开始时间</p> 
+     * @return StartEventTime <p>开始时间</p>
      */
     public Long getStartEventTime() {
         return this.StartEventTime;
     }
 
     /**
-     * Set 开始时间
-     * @param StartEventTime 开始时间
+     * Set <p>开始时间</p>
+     * @param StartEventTime <p>开始时间</p>
      */
     public void setStartEventTime(Long StartEventTime) {
         this.StartEventTime = StartEventTime;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndEventTime 结束时间
+     * Get <p>结束时间</p> 
+     * @return EndEventTime <p>结束时间</p>
      */
     public Long getEndEventTime() {
         return this.EndEventTime;
     }
 
     /**
-     * Set 结束时间
-     * @param EndEventTime 结束时间
+     * Set <p>结束时间</p>
+     * @param EndEventTime <p>结束时间</p>
      */
     public void setEndEventTime(Long EndEventTime) {
         this.EndEventTime = EndEventTime;
     }
 
     /**
-     * Get 拓展数据 
-     * @return ExtraData 拓展数据
+     * Get <p>拓展数据</p> 
+     * @return ExtraData <p>拓展数据</p>
      */
     public String getExtraData() {
         return this.ExtraData;
     }
 
     /**
-     * Set 拓展数据
-     * @param ExtraData 拓展数据
+     * Set <p>拓展数据</p>
+     * @param ExtraData <p>拓展数据</p>
      */
     public void setExtraData(String ExtraData) {
         this.ExtraData = ExtraData;
     }
 
     /**
-     * Get 请求头 
-     * @return RequestHeader 请求头
+     * Get <p>请求头</p> 
+     * @return RequestHeader <p>请求头</p>
      */
     public String getRequestHeader() {
         return this.RequestHeader;
     }
 
     /**
-     * Set 请求头
-     * @param RequestHeader 请求头
+     * Set <p>请求头</p>
+     * @param RequestHeader <p>请求头</p>
      */
     public void setRequestHeader(String RequestHeader) {
         this.RequestHeader = RequestHeader;

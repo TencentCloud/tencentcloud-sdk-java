@@ -83,6 +83,28 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *批量新增自定义规则接口
+     * @param req AddBatchCustomRuleRequest
+     * @return AddBatchCustomRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddBatchCustomRuleResponse AddBatchCustomRule(AddBatchCustomRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddBatchCustomRule", AddBatchCustomRuleResponse.class);
+    }
+
+    /**
+     *增加批量精准白名单规则
+     * @param req AddBatchCustomWhiteRuleRequest
+     * @return AddBatchCustomWhiteRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddBatchCustomWhiteRuleResponse AddBatchCustomWhiteRule(AddBatchCustomWhiteRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddBatchCustomWhiteRule", AddBatchCustomWhiteRuleResponse.class);
+    }
+
+    /**
      *添加一键bypass能力支持,直接添加APPID
      * @param req AddBypassAllRuleRequest
      * @return AddBypassAllRuleResponse
@@ -259,6 +281,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *新建防护对象组
+     * @param req CreateProtectGroupRequest
+     * @return CreateProtectGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateProtectGroupResponse CreateProtectGroup(CreateProtectGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateProtectGroup", CreateProtectGroupResponse.class);
+    }
+
+    /**
      *创建限流规则
      * @param req CreateRateLimitV2Request
      * @return CreateRateLimitV2Response
@@ -322,6 +355,28 @@ public class WafClient extends AbstractClient{
     public DeleteAttackWhiteRuleResponse DeleteAttackWhiteRule(DeleteAttackWhiteRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteAttackWhiteRule", DeleteAttackWhiteRuleResponse.class);
+    }
+
+    /**
+     *[自定义规则]-批量删除接口
+     * @param req DeleteBatchCustomRuleRequest
+     * @return DeleteBatchCustomRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteBatchCustomRuleResponse DeleteBatchCustomRule(DeleteBatchCustomRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteBatchCustomRule", DeleteBatchCustomRuleResponse.class);
+    }
+
+    /**
+     *删除批量精准白名单规则
+     * @param req DeleteBatchCustomWhiteRuleRequest
+     * @return DeleteBatchCustomWhiteRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteBatchCustomWhiteRuleResponse DeleteBatchCustomWhiteRule(DeleteBatchCustomWhiteRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteBatchCustomWhiteRule", DeleteBatchCustomWhiteRuleResponse.class);
     }
 
     /**
@@ -454,6 +509,28 @@ public class WafClient extends AbstractClient{
     public DeleteOwaspWhiteRuleResponse DeleteOwaspWhiteRule(DeleteOwaspWhiteRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteOwaspWhiteRule", DeleteOwaspWhiteRuleResponse.class);
+    }
+
+    /**
+     *删除防护对象组
+     * @param req DeleteProtectGroupRequest
+     * @return DeleteProtectGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteProtectGroupResponse DeleteProtectGroup(DeleteProtectGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteProtectGroup", DeleteProtectGroupResponse.class);
+    }
+
+    /**
+     *解除防护对象组中的域名绑定
+     * @param req DeleteProtectGroupDomainRequest
+     * @return DeleteProtectGroupDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteProtectGroupDomainResponse DeleteProtectGroupDomain(DeleteProtectGroupDomainRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteProtectGroupDomain", DeleteProtectGroupDomainResponse.class);
     }
 
     /**
@@ -674,6 +751,28 @@ public class WafClient extends AbstractClient{
     public DescribeAutoDenyIPResponse DescribeAutoDenyIP(DescribeAutoDenyIPRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAutoDenyIP", DescribeAutoDenyIPResponse.class);
+    }
+
+    /**
+     *批量自定义规则列表接口
+     * @param req DescribeBatchCustomRuleListRequest
+     * @return DescribeBatchCustomRuleListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBatchCustomRuleListResponse DescribeBatchCustomRuleList(DescribeBatchCustomRuleListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBatchCustomRuleList", DescribeBatchCustomRuleListResponse.class);
+    }
+
+    /**
+     *获取批量精准白名单的规则列表
+     * @param req DescribeBatchCustomWhiteRulesRequest
+     * @return DescribeBatchCustomWhiteRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBatchCustomWhiteRulesResponse DescribeBatchCustomWhiteRules(DescribeBatchCustomWhiteRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBatchCustomWhiteRules", DescribeBatchCustomWhiteRulesResponse.class);
     }
 
     /**
@@ -1136,6 +1235,17 @@ public class WafClient extends AbstractClient{
     public DescribePostCLSFlowsResponse DescribePostCLSFlows(DescribePostCLSFlowsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribePostCLSFlows", DescribePostCLSFlowsResponse.class);
+    }
+
+    /**
+     *获取防护对象组详情
+     * @param req DescribeProtectGroupRequest
+     * @return DescribeProtectGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProtectGroupResponse DescribeProtectGroup(DescribeProtectGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeProtectGroup", DescribeProtectGroupResponse.class);
     }
 
     /**
@@ -1614,6 +1724,50 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *批量编辑自定义规则接口
+     * @param req ModifyBatchCustomRuleRequest
+     * @return ModifyBatchCustomRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBatchCustomRuleResponse ModifyBatchCustomRule(ModifyBatchCustomRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyBatchCustomRule", ModifyBatchCustomRuleResponse.class);
+    }
+
+    /**
+     *批量自定义规则开关接口
+     * @param req ModifyBatchCustomRuleStatusRequest
+     * @return ModifyBatchCustomRuleStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBatchCustomRuleStatusResponse ModifyBatchCustomRuleStatus(ModifyBatchCustomRuleStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyBatchCustomRuleStatus", ModifyBatchCustomRuleStatusResponse.class);
+    }
+
+    /**
+     *修改批量精准白名单规则
+     * @param req ModifyBatchCustomWhiteRuleRequest
+     * @return ModifyBatchCustomWhiteRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBatchCustomWhiteRuleResponse ModifyBatchCustomWhiteRule(ModifyBatchCustomWhiteRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyBatchCustomWhiteRule", ModifyBatchCustomWhiteRuleResponse.class);
+    }
+
+    /**
+     *更新批量精准白名单规则
+     * @param req ModifyBatchCustomWhiteRuleStatusRequest
+     * @return ModifyBatchCustomWhiteRuleStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBatchCustomWhiteRuleStatusResponse ModifyBatchCustomWhiteRuleStatus(ModifyBatchCustomWhiteRuleStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyBatchCustomWhiteRuleStatus", ModifyBatchCustomWhiteRuleStatusResponse.class);
+    }
+
+    /**
      *批量IP黑白名单新增接口
      * @param req ModifyBatchIpAccessControlRequest
      * @return ModifyBatchIpAccessControlResponse
@@ -1964,6 +2118,17 @@ public class WafClient extends AbstractClient{
     public ModifyOwaspWhiteRuleResponse ModifyOwaspWhiteRule(ModifyOwaspWhiteRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyOwaspWhiteRule", ModifyOwaspWhiteRuleResponse.class);
+    }
+
+    /**
+     *编辑防护对象组
+     * @param req ModifyProtectGroupRequest
+     * @return ModifyProtectGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyProtectGroupResponse ModifyProtectGroup(ModifyProtectGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyProtectGroup", ModifyProtectGroupResponse.class);
     }
 
     /**

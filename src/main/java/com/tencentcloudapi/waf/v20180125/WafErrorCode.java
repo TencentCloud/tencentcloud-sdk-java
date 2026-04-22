@@ -30,6 +30,9 @@ public enum WafErrorCode {
      /* 操作CH数据库失败 */
      FAILEDOPERATION_CLICKHOUSEOPERATIONFAILED("FailedOperation.ClickHouseOperationFailed"),
      
+     /* 域名校验有误 */
+     FAILEDOPERATION_DOMAINNAMEVERIFICATIONERROR("FailedOperation.DomainNameVerificationError"),
+     
      /* FailedOperation.InvalidContext */
      FAILEDOPERATION_INVALIDCONTEXT("FailedOperation.InvalidContext"),
      
@@ -56,6 +59,18 @@ public enum WafErrorCode {
      
      /* FailedOperation.TagQpsLimit */
      FAILEDOPERATION_TAGQPSLIMIT("FailedOperation.TagQpsLimit"),
+     
+     /* 该批量防护规则名称已存在 */
+     FAILEDOPERATION_THEBATCHPROTECTIONRULENAMEALREADYEXISTS("FailedOperation.TheBatchProtectionRuleNameAlreadyExists"),
+     
+     /* 以下域名已超过规格上限值 */
+     FAILEDOPERATION_THEFOLLOWINGDOMAINSHAVEEXCEEDEDTHEUPPERLIMIT("FailedOperation.TheFollowingDomainsHaveExceededTheUpperLimit"),
+     
+     /* 以下域名有无效规格上限值 */
+     FAILEDOPERATION_THEFOLLOWINGDOMAINSHAVEINVALIDTHEUPPERLIMIT("FailedOperation.TheFollowingDomainsHaveInvalidTheUpperLimit"),
+     
+     /* 批量防护规则名称不能为空 */
+     FAILEDOPERATION_THENAMEOFTHEBATCHPROTECTIONRULECANNOTBEEMPTY("FailedOperation.TheNameOfTheBatchProtectionRuleCannotBeEmpty"),
      
      /* 黑白名单添加数超过上限 */
      FAILEDOPERATION_THENUMBEROFADDEDBLACKANDWHITELISTEXCEEDSTHEUPPERLIMIT("FailedOperation.TheNumberOfAddedBlackAndWhiteListExceedsTheUpperLimit"),

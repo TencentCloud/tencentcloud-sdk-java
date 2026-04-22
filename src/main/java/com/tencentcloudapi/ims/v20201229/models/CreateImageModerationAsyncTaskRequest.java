@@ -94,6 +94,20 @@ public class CreateImageModerationAsyncTaskRequest extends AbstractModel {
     private String Type;
 
     /**
+    * <p>该字段表示待审核的图片资源链接，最多支持传入4张图片</p>
+    */
+    @SerializedName("FileUrlList")
+    @Expose
+    private String [] FileUrlList;
+
+    /**
+    * <p>待审核的文本内容，需为UTF-8编码并以Base64格式传入，字数限制5000字内。</p>
+    */
+    @SerializedName("TextContent")
+    @Expose
+    private String TextContent;
+
+    /**
      * Get <p>接收审核信息回调地址，审核过程中产生的所有结果发送至此地址。</p> 
      * @return CallbackUrl <p>接收审核信息回调地址，审核过程中产生的所有结果发送至此地址。</p>
      */
@@ -253,6 +267,38 @@ public class CreateImageModerationAsyncTaskRequest extends AbstractModel {
         this.Type = Type;
     }
 
+    /**
+     * Get <p>该字段表示待审核的图片资源链接，最多支持传入4张图片</p> 
+     * @return FileUrlList <p>该字段表示待审核的图片资源链接，最多支持传入4张图片</p>
+     */
+    public String [] getFileUrlList() {
+        return this.FileUrlList;
+    }
+
+    /**
+     * Set <p>该字段表示待审核的图片资源链接，最多支持传入4张图片</p>
+     * @param FileUrlList <p>该字段表示待审核的图片资源链接，最多支持传入4张图片</p>
+     */
+    public void setFileUrlList(String [] FileUrlList) {
+        this.FileUrlList = FileUrlList;
+    }
+
+    /**
+     * Get <p>待审核的文本内容，需为UTF-8编码并以Base64格式传入，字数限制5000字内。</p> 
+     * @return TextContent <p>待审核的文本内容，需为UTF-8编码并以Base64格式传入，字数限制5000字内。</p>
+     */
+    public String getTextContent() {
+        return this.TextContent;
+    }
+
+    /**
+     * Set <p>待审核的文本内容，需为UTF-8编码并以Base64格式传入，字数限制5000字内。</p>
+     * @param TextContent <p>待审核的文本内容，需为UTF-8编码并以Base64格式传入，字数限制5000字内。</p>
+     */
+    public void setTextContent(String TextContent) {
+        this.TextContent = TextContent;
+    }
+
     public CreateImageModerationAsyncTaskRequest() {
     }
 
@@ -291,6 +337,15 @@ public class CreateImageModerationAsyncTaskRequest extends AbstractModel {
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
+        if (source.FileUrlList != null) {
+            this.FileUrlList = new String[source.FileUrlList.length];
+            for (int i = 0; i < source.FileUrlList.length; i++) {
+                this.FileUrlList[i] = new String(source.FileUrlList[i]);
+            }
+        }
+        if (source.TextContent != null) {
+            this.TextContent = new String(source.TextContent);
+        }
     }
 
 
@@ -308,6 +363,8 @@ public class CreateImageModerationAsyncTaskRequest extends AbstractModel {
         this.setParamObj(map, prefix + "User.", this.User);
         this.setParamObj(map, prefix + "Device.", this.Device);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamArraySimple(map, prefix + "FileUrlList.", this.FileUrlList);
+        this.setParamSimple(map, prefix + "TextContent", this.TextContent);
 
     }
 }

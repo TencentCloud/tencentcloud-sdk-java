@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeTokenRequest extends AbstractModel {
 
     /**
-    * 筛选条件
+    * <p>筛选条件</p>
     */
     @SerializedName("FormListString")
     @Expose
     private String FormListString;
 
     /**
-    * 仅对比模式下填写，筛选条件A
+    * <p>仅对比模式下填写，筛选条件A</p>
     */
     @SerializedName("FormListAString")
     @Expose
     private String FormListAString;
 
     /**
-    * 仅对比模式下填写，筛选条件B
+    * <p>仅对比模式下填写，筛选条件B</p>
     */
     @SerializedName("FormListBString")
     @Expose
     private String FormListBString;
 
     /**
-    * 请求头
+    * <p>请求头</p>
     */
     @SerializedName("RequestHeader")
     @Expose
     private String RequestHeader;
 
     /**
-    * 拓展字段
+    * <p>拓展字段</p>
     */
     @SerializedName("ExtraData")
     @Expose
     private String ExtraData;
 
     /**
-     * Get 筛选条件 
-     * @return FormListString 筛选条件
+     * Get <p>筛选条件</p> 
+     * @return FormListString <p>筛选条件</p>
      */
     public String getFormListString() {
         return this.FormListString;
     }
 
     /**
-     * Set 筛选条件
-     * @param FormListString 筛选条件
+     * Set <p>筛选条件</p>
+     * @param FormListString <p>筛选条件</p>
      */
     public void setFormListString(String FormListString) {
         this.FormListString = FormListString;
     }
 
     /**
-     * Get 仅对比模式下填写，筛选条件A 
-     * @return FormListAString 仅对比模式下填写，筛选条件A
+     * Get <p>仅对比模式下填写，筛选条件A</p> 
+     * @return FormListAString <p>仅对比模式下填写，筛选条件A</p>
      */
     public String getFormListAString() {
         return this.FormListAString;
     }
 
     /**
-     * Set 仅对比模式下填写，筛选条件A
-     * @param FormListAString 仅对比模式下填写，筛选条件A
+     * Set <p>仅对比模式下填写，筛选条件A</p>
+     * @param FormListAString <p>仅对比模式下填写，筛选条件A</p>
      */
     public void setFormListAString(String FormListAString) {
         this.FormListAString = FormListAString;
     }
 
     /**
-     * Get 仅对比模式下填写，筛选条件B 
-     * @return FormListBString 仅对比模式下填写，筛选条件B
+     * Get <p>仅对比模式下填写，筛选条件B</p> 
+     * @return FormListBString <p>仅对比模式下填写，筛选条件B</p>
      */
     public String getFormListBString() {
         return this.FormListBString;
     }
 
     /**
-     * Set 仅对比模式下填写，筛选条件B
-     * @param FormListBString 仅对比模式下填写，筛选条件B
+     * Set <p>仅对比模式下填写，筛选条件B</p>
+     * @param FormListBString <p>仅对比模式下填写，筛选条件B</p>
      */
     public void setFormListBString(String FormListBString) {
         this.FormListBString = FormListBString;
     }
 
     /**
-     * Get 请求头 
-     * @return RequestHeader 请求头
+     * Get <p>请求头</p> 
+     * @return RequestHeader <p>请求头</p>
      */
     public String getRequestHeader() {
         return this.RequestHeader;
     }
 
     /**
-     * Set 请求头
-     * @param RequestHeader 请求头
+     * Set <p>请求头</p>
+     * @param RequestHeader <p>请求头</p>
      */
     public void setRequestHeader(String RequestHeader) {
         this.RequestHeader = RequestHeader;
     }
 
     /**
-     * Get 拓展字段 
-     * @return ExtraData 拓展字段
+     * Get <p>拓展字段</p> 
+     * @return ExtraData <p>拓展字段</p>
      */
     public String getExtraData() {
         return this.ExtraData;
     }
 
     /**
-     * Set 拓展字段
-     * @param ExtraData 拓展字段
+     * Set <p>拓展字段</p>
+     * @param ExtraData <p>拓展字段</p>
      */
     public void setExtraData(String ExtraData) {
         this.ExtraData = ExtraData;

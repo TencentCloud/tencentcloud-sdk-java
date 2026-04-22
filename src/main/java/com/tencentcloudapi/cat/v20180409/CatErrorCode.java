@@ -18,6 +18,9 @@ public enum CatErrorCode {
      /* 任务绑定的预付费套餐已过期。 */
      FAILEDOPERATION_ERRPREPAIDRESOURCEEXPIRE("FailedOperation.ErrPrePaidResourceExpire"),
      
+     /* 触发指定审批流 */
+     FAILEDOPERATION_NEEDAPPROVAL("FailedOperation.NeedApproval"),
+     
      /* 无有效节点。 */
      FAILEDOPERATION_NOVALIDNODES("FailedOperation.NoValidNodes"),
      
