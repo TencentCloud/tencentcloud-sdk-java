@@ -24,562 +24,598 @@ import java.util.HashMap;
 public class HostInfo extends AbstractModel {
 
     /**
-    * 主机id
+    * <p>主机id</p>
     */
     @SerializedName("HostID")
     @Expose
     private String HostID;
 
     /**
-    * 主机ip即内网ip
+    * <p>主机ip即内网ip</p>
     */
     @SerializedName("HostIP")
     @Expose
     private String HostIP;
 
     /**
-    * 主机名称
+    * <p>主机名称</p>
     */
     @SerializedName("HostName")
     @Expose
     private String HostName;
 
     /**
-    * 业务组
+    * <p>业务组</p>
     */
     @SerializedName("Group")
     @Expose
     private String Group;
 
     /**
-    * docker 版本
+    * <p>docker 版本</p>
     */
     @SerializedName("DockerVersion")
     @Expose
     private String DockerVersion;
 
     /**
-    * docker 文件系统类型
+    * <p>docker 文件系统类型</p>
     */
     @SerializedName("DockerFileSystemDriver")
     @Expose
     private String DockerFileSystemDriver;
 
     /**
-    * 镜像个数
+    * <p>镜像个数</p>
     */
     @SerializedName("ImageCnt")
     @Expose
     private Long ImageCnt;
 
     /**
-    * 容器个数
+    * <p>容器个数</p>
     */
     @SerializedName("ContainerCnt")
     @Expose
     private Long ContainerCnt;
 
     /**
-    * agent运行状态
+    * <p>agent运行状态</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 是否是Containerd
+    * <p>是否是Containerd</p>
     */
     @SerializedName("IsContainerd")
     @Expose
     private Boolean IsContainerd;
 
     /**
-    * 主机来源：["CVM", "ECM", "LH", "BM"]  中的之一为腾讯云服务器；["Other"]之一非腾讯云服务器；
+    * <p>主机来源：[&quot;CVM&quot;, &quot;ECM&quot;, &quot;LH&quot;, &quot;BM&quot;]  中的之一为腾讯云服务器；[&quot;Other&quot;]之一非腾讯云服务器；</p>
     */
     @SerializedName("MachineType")
     @Expose
     private String MachineType;
 
     /**
-    * 外网ip
+    * <p>外网ip</p>
     */
     @SerializedName("PublicIp")
     @Expose
     private String PublicIp;
 
     /**
-    * 主机uuid
+    * <p>主机uuid</p>
     */
     @SerializedName("Uuid")
     @Expose
     private String Uuid;
 
     /**
-    * 主机实例ID
+    * <p>主机实例ID</p>
     */
     @SerializedName("InstanceID")
     @Expose
     private String InstanceID;
 
     /**
-    * 地域ID
+    * <p>地域ID</p>
     */
     @SerializedName("RegionID")
     @Expose
     private Long RegionID;
 
     /**
-    * 所属项目
+    * <p>所属项目</p>
     */
     @SerializedName("Project")
     @Expose
     private ProjectInfo Project;
 
     /**
-    * 标签
+    * <p>标签</p>
     */
     @SerializedName("Tags")
     @Expose
     private TagInfo [] Tags;
 
     /**
-    * 集群id
+    * <p>集群id</p>
     */
     @SerializedName("ClusterID")
     @Expose
     private String ClusterID;
 
     /**
-    * 集群名称
+    * <p>集群名称</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * 集群接入状态
+    * <p>集群接入状态</p>
     */
     @SerializedName("ClusterAccessedStatus")
     @Expose
     private String ClusterAccessedStatus;
 
     /**
-    * 计费核数
+    * <p>集群接入子状态</p><p>枚举值：</p><ul><li>AccessedSubNone： 无</li><li>AccessedSubUninstallException： 卸载异常</li><li>AccessedSubTimeout： 接入超时</li><li>AccessedSubUninstallTimeout： 卸载超时</li><li>AccessedSubResourceException： 集群组件检查异常-Deployment/DaemonSet等异常</li><li>AccessedSubCAMPermissionDenied： CAM权限不够</li></ul>
+    */
+    @SerializedName("ClusterAccessedSubStatus")
+    @Expose
+    private String ClusterAccessedSubStatus;
+
+    /**
+    * <p>失败具体原因描述</p>
+    */
+    @SerializedName("ClusterAccessedErrorReason")
+    @Expose
+    private String ClusterAccessedErrorReason;
+
+    /**
+    * <p>计费核数</p>
     */
     @SerializedName("ChargeCoresCnt")
     @Expose
     private Long ChargeCoresCnt;
 
     /**
-    * 防护状态:
-已防护: Defended
-未防护: UnDefended
+    * <p>防护状态:<br>已防护: Defended<br>未防护: UnDefended</p>
     */
     @SerializedName("DefendStatus")
     @Expose
     private String DefendStatus;
 
     /**
-    * 核数
+    * <p>核数</p>
     */
     @SerializedName("CoresCnt")
     @Expose
     private Long CoresCnt;
 
     /**
-    * 最近在线时间
+    * <p>最近在线时间</p>
     */
     @SerializedName("LastOnlineTime")
     @Expose
     private String LastOnlineTime;
 
     /**
-     * Get 主机id 
-     * @return HostID 主机id
+     * Get <p>主机id</p> 
+     * @return HostID <p>主机id</p>
      */
     public String getHostID() {
         return this.HostID;
     }
 
     /**
-     * Set 主机id
-     * @param HostID 主机id
+     * Set <p>主机id</p>
+     * @param HostID <p>主机id</p>
      */
     public void setHostID(String HostID) {
         this.HostID = HostID;
     }
 
     /**
-     * Get 主机ip即内网ip 
-     * @return HostIP 主机ip即内网ip
+     * Get <p>主机ip即内网ip</p> 
+     * @return HostIP <p>主机ip即内网ip</p>
      */
     public String getHostIP() {
         return this.HostIP;
     }
 
     /**
-     * Set 主机ip即内网ip
-     * @param HostIP 主机ip即内网ip
+     * Set <p>主机ip即内网ip</p>
+     * @param HostIP <p>主机ip即内网ip</p>
      */
     public void setHostIP(String HostIP) {
         this.HostIP = HostIP;
     }
 
     /**
-     * Get 主机名称 
-     * @return HostName 主机名称
+     * Get <p>主机名称</p> 
+     * @return HostName <p>主机名称</p>
      */
     public String getHostName() {
         return this.HostName;
     }
 
     /**
-     * Set 主机名称
-     * @param HostName 主机名称
+     * Set <p>主机名称</p>
+     * @param HostName <p>主机名称</p>
      */
     public void setHostName(String HostName) {
         this.HostName = HostName;
     }
 
     /**
-     * Get 业务组 
-     * @return Group 业务组
+     * Get <p>业务组</p> 
+     * @return Group <p>业务组</p>
      */
     public String getGroup() {
         return this.Group;
     }
 
     /**
-     * Set 业务组
-     * @param Group 业务组
+     * Set <p>业务组</p>
+     * @param Group <p>业务组</p>
      */
     public void setGroup(String Group) {
         this.Group = Group;
     }
 
     /**
-     * Get docker 版本 
-     * @return DockerVersion docker 版本
+     * Get <p>docker 版本</p> 
+     * @return DockerVersion <p>docker 版本</p>
      */
     public String getDockerVersion() {
         return this.DockerVersion;
     }
 
     /**
-     * Set docker 版本
-     * @param DockerVersion docker 版本
+     * Set <p>docker 版本</p>
+     * @param DockerVersion <p>docker 版本</p>
      */
     public void setDockerVersion(String DockerVersion) {
         this.DockerVersion = DockerVersion;
     }
 
     /**
-     * Get docker 文件系统类型 
-     * @return DockerFileSystemDriver docker 文件系统类型
+     * Get <p>docker 文件系统类型</p> 
+     * @return DockerFileSystemDriver <p>docker 文件系统类型</p>
      */
     public String getDockerFileSystemDriver() {
         return this.DockerFileSystemDriver;
     }
 
     /**
-     * Set docker 文件系统类型
-     * @param DockerFileSystemDriver docker 文件系统类型
+     * Set <p>docker 文件系统类型</p>
+     * @param DockerFileSystemDriver <p>docker 文件系统类型</p>
      */
     public void setDockerFileSystemDriver(String DockerFileSystemDriver) {
         this.DockerFileSystemDriver = DockerFileSystemDriver;
     }
 
     /**
-     * Get 镜像个数 
-     * @return ImageCnt 镜像个数
+     * Get <p>镜像个数</p> 
+     * @return ImageCnt <p>镜像个数</p>
      */
     public Long getImageCnt() {
         return this.ImageCnt;
     }
 
     /**
-     * Set 镜像个数
-     * @param ImageCnt 镜像个数
+     * Set <p>镜像个数</p>
+     * @param ImageCnt <p>镜像个数</p>
      */
     public void setImageCnt(Long ImageCnt) {
         this.ImageCnt = ImageCnt;
     }
 
     /**
-     * Get 容器个数 
-     * @return ContainerCnt 容器个数
+     * Get <p>容器个数</p> 
+     * @return ContainerCnt <p>容器个数</p>
      */
     public Long getContainerCnt() {
         return this.ContainerCnt;
     }
 
     /**
-     * Set 容器个数
-     * @param ContainerCnt 容器个数
+     * Set <p>容器个数</p>
+     * @param ContainerCnt <p>容器个数</p>
      */
     public void setContainerCnt(Long ContainerCnt) {
         this.ContainerCnt = ContainerCnt;
     }
 
     /**
-     * Get agent运行状态 
-     * @return Status agent运行状态
+     * Get <p>agent运行状态</p> 
+     * @return Status <p>agent运行状态</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set agent运行状态
-     * @param Status agent运行状态
+     * Set <p>agent运行状态</p>
+     * @param Status <p>agent运行状态</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 是否是Containerd 
-     * @return IsContainerd 是否是Containerd
+     * Get <p>是否是Containerd</p> 
+     * @return IsContainerd <p>是否是Containerd</p>
      */
     public Boolean getIsContainerd() {
         return this.IsContainerd;
     }
 
     /**
-     * Set 是否是Containerd
-     * @param IsContainerd 是否是Containerd
+     * Set <p>是否是Containerd</p>
+     * @param IsContainerd <p>是否是Containerd</p>
      */
     public void setIsContainerd(Boolean IsContainerd) {
         this.IsContainerd = IsContainerd;
     }
 
     /**
-     * Get 主机来源：["CVM", "ECM", "LH", "BM"]  中的之一为腾讯云服务器；["Other"]之一非腾讯云服务器； 
-     * @return MachineType 主机来源：["CVM", "ECM", "LH", "BM"]  中的之一为腾讯云服务器；["Other"]之一非腾讯云服务器；
+     * Get <p>主机来源：[&quot;CVM&quot;, &quot;ECM&quot;, &quot;LH&quot;, &quot;BM&quot;]  中的之一为腾讯云服务器；[&quot;Other&quot;]之一非腾讯云服务器；</p> 
+     * @return MachineType <p>主机来源：[&quot;CVM&quot;, &quot;ECM&quot;, &quot;LH&quot;, &quot;BM&quot;]  中的之一为腾讯云服务器；[&quot;Other&quot;]之一非腾讯云服务器；</p>
      */
     public String getMachineType() {
         return this.MachineType;
     }
 
     /**
-     * Set 主机来源：["CVM", "ECM", "LH", "BM"]  中的之一为腾讯云服务器；["Other"]之一非腾讯云服务器；
-     * @param MachineType 主机来源：["CVM", "ECM", "LH", "BM"]  中的之一为腾讯云服务器；["Other"]之一非腾讯云服务器；
+     * Set <p>主机来源：[&quot;CVM&quot;, &quot;ECM&quot;, &quot;LH&quot;, &quot;BM&quot;]  中的之一为腾讯云服务器；[&quot;Other&quot;]之一非腾讯云服务器；</p>
+     * @param MachineType <p>主机来源：[&quot;CVM&quot;, &quot;ECM&quot;, &quot;LH&quot;, &quot;BM&quot;]  中的之一为腾讯云服务器；[&quot;Other&quot;]之一非腾讯云服务器；</p>
      */
     public void setMachineType(String MachineType) {
         this.MachineType = MachineType;
     }
 
     /**
-     * Get 外网ip 
-     * @return PublicIp 外网ip
+     * Get <p>外网ip</p> 
+     * @return PublicIp <p>外网ip</p>
      */
     public String getPublicIp() {
         return this.PublicIp;
     }
 
     /**
-     * Set 外网ip
-     * @param PublicIp 外网ip
+     * Set <p>外网ip</p>
+     * @param PublicIp <p>外网ip</p>
      */
     public void setPublicIp(String PublicIp) {
         this.PublicIp = PublicIp;
     }
 
     /**
-     * Get 主机uuid 
-     * @return Uuid 主机uuid
+     * Get <p>主机uuid</p> 
+     * @return Uuid <p>主机uuid</p>
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set 主机uuid
-     * @param Uuid 主机uuid
+     * Set <p>主机uuid</p>
+     * @param Uuid <p>主机uuid</p>
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get 主机实例ID 
-     * @return InstanceID 主机实例ID
+     * Get <p>主机实例ID</p> 
+     * @return InstanceID <p>主机实例ID</p>
      */
     public String getInstanceID() {
         return this.InstanceID;
     }
 
     /**
-     * Set 主机实例ID
-     * @param InstanceID 主机实例ID
+     * Set <p>主机实例ID</p>
+     * @param InstanceID <p>主机实例ID</p>
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;
     }
 
     /**
-     * Get 地域ID 
-     * @return RegionID 地域ID
+     * Get <p>地域ID</p> 
+     * @return RegionID <p>地域ID</p>
      */
     public Long getRegionID() {
         return this.RegionID;
     }
 
     /**
-     * Set 地域ID
-     * @param RegionID 地域ID
+     * Set <p>地域ID</p>
+     * @param RegionID <p>地域ID</p>
      */
     public void setRegionID(Long RegionID) {
         this.RegionID = RegionID;
     }
 
     /**
-     * Get 所属项目 
-     * @return Project 所属项目
+     * Get <p>所属项目</p> 
+     * @return Project <p>所属项目</p>
      */
     public ProjectInfo getProject() {
         return this.Project;
     }
 
     /**
-     * Set 所属项目
-     * @param Project 所属项目
+     * Set <p>所属项目</p>
+     * @param Project <p>所属项目</p>
      */
     public void setProject(ProjectInfo Project) {
         this.Project = Project;
     }
 
     /**
-     * Get 标签 
-     * @return Tags 标签
+     * Get <p>标签</p> 
+     * @return Tags <p>标签</p>
      */
     public TagInfo [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签
-     * @param Tags 标签
+     * Set <p>标签</p>
+     * @param Tags <p>标签</p>
      */
     public void setTags(TagInfo [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 集群id 
-     * @return ClusterID 集群id
+     * Get <p>集群id</p> 
+     * @return ClusterID <p>集群id</p>
      */
     public String getClusterID() {
         return this.ClusterID;
     }
 
     /**
-     * Set 集群id
-     * @param ClusterID 集群id
+     * Set <p>集群id</p>
+     * @param ClusterID <p>集群id</p>
      */
     public void setClusterID(String ClusterID) {
         this.ClusterID = ClusterID;
     }
 
     /**
-     * Get 集群名称 
-     * @return ClusterName 集群名称
+     * Get <p>集群名称</p> 
+     * @return ClusterName <p>集群名称</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set 集群名称
-     * @param ClusterName 集群名称
+     * Set <p>集群名称</p>
+     * @param ClusterName <p>集群名称</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 集群接入状态 
-     * @return ClusterAccessedStatus 集群接入状态
+     * Get <p>集群接入状态</p> 
+     * @return ClusterAccessedStatus <p>集群接入状态</p>
      */
     public String getClusterAccessedStatus() {
         return this.ClusterAccessedStatus;
     }
 
     /**
-     * Set 集群接入状态
-     * @param ClusterAccessedStatus 集群接入状态
+     * Set <p>集群接入状态</p>
+     * @param ClusterAccessedStatus <p>集群接入状态</p>
      */
     public void setClusterAccessedStatus(String ClusterAccessedStatus) {
         this.ClusterAccessedStatus = ClusterAccessedStatus;
     }
 
     /**
-     * Get 计费核数 
-     * @return ChargeCoresCnt 计费核数
+     * Get <p>集群接入子状态</p><p>枚举值：</p><ul><li>AccessedSubNone： 无</li><li>AccessedSubUninstallException： 卸载异常</li><li>AccessedSubTimeout： 接入超时</li><li>AccessedSubUninstallTimeout： 卸载超时</li><li>AccessedSubResourceException： 集群组件检查异常-Deployment/DaemonSet等异常</li><li>AccessedSubCAMPermissionDenied： CAM权限不够</li></ul> 
+     * @return ClusterAccessedSubStatus <p>集群接入子状态</p><p>枚举值：</p><ul><li>AccessedSubNone： 无</li><li>AccessedSubUninstallException： 卸载异常</li><li>AccessedSubTimeout： 接入超时</li><li>AccessedSubUninstallTimeout： 卸载超时</li><li>AccessedSubResourceException： 集群组件检查异常-Deployment/DaemonSet等异常</li><li>AccessedSubCAMPermissionDenied： CAM权限不够</li></ul>
+     */
+    public String getClusterAccessedSubStatus() {
+        return this.ClusterAccessedSubStatus;
+    }
+
+    /**
+     * Set <p>集群接入子状态</p><p>枚举值：</p><ul><li>AccessedSubNone： 无</li><li>AccessedSubUninstallException： 卸载异常</li><li>AccessedSubTimeout： 接入超时</li><li>AccessedSubUninstallTimeout： 卸载超时</li><li>AccessedSubResourceException： 集群组件检查异常-Deployment/DaemonSet等异常</li><li>AccessedSubCAMPermissionDenied： CAM权限不够</li></ul>
+     * @param ClusterAccessedSubStatus <p>集群接入子状态</p><p>枚举值：</p><ul><li>AccessedSubNone： 无</li><li>AccessedSubUninstallException： 卸载异常</li><li>AccessedSubTimeout： 接入超时</li><li>AccessedSubUninstallTimeout： 卸载超时</li><li>AccessedSubResourceException： 集群组件检查异常-Deployment/DaemonSet等异常</li><li>AccessedSubCAMPermissionDenied： CAM权限不够</li></ul>
+     */
+    public void setClusterAccessedSubStatus(String ClusterAccessedSubStatus) {
+        this.ClusterAccessedSubStatus = ClusterAccessedSubStatus;
+    }
+
+    /**
+     * Get <p>失败具体原因描述</p> 
+     * @return ClusterAccessedErrorReason <p>失败具体原因描述</p>
+     */
+    public String getClusterAccessedErrorReason() {
+        return this.ClusterAccessedErrorReason;
+    }
+
+    /**
+     * Set <p>失败具体原因描述</p>
+     * @param ClusterAccessedErrorReason <p>失败具体原因描述</p>
+     */
+    public void setClusterAccessedErrorReason(String ClusterAccessedErrorReason) {
+        this.ClusterAccessedErrorReason = ClusterAccessedErrorReason;
+    }
+
+    /**
+     * Get <p>计费核数</p> 
+     * @return ChargeCoresCnt <p>计费核数</p>
      */
     public Long getChargeCoresCnt() {
         return this.ChargeCoresCnt;
     }
 
     /**
-     * Set 计费核数
-     * @param ChargeCoresCnt 计费核数
+     * Set <p>计费核数</p>
+     * @param ChargeCoresCnt <p>计费核数</p>
      */
     public void setChargeCoresCnt(Long ChargeCoresCnt) {
         this.ChargeCoresCnt = ChargeCoresCnt;
     }
 
     /**
-     * Get 防护状态:
-已防护: Defended
-未防护: UnDefended 
-     * @return DefendStatus 防护状态:
-已防护: Defended
-未防护: UnDefended
+     * Get <p>防护状态:<br>已防护: Defended<br>未防护: UnDefended</p> 
+     * @return DefendStatus <p>防护状态:<br>已防护: Defended<br>未防护: UnDefended</p>
      */
     public String getDefendStatus() {
         return this.DefendStatus;
     }
 
     /**
-     * Set 防护状态:
-已防护: Defended
-未防护: UnDefended
-     * @param DefendStatus 防护状态:
-已防护: Defended
-未防护: UnDefended
+     * Set <p>防护状态:<br>已防护: Defended<br>未防护: UnDefended</p>
+     * @param DefendStatus <p>防护状态:<br>已防护: Defended<br>未防护: UnDefended</p>
      */
     public void setDefendStatus(String DefendStatus) {
         this.DefendStatus = DefendStatus;
     }
 
     /**
-     * Get 核数 
-     * @return CoresCnt 核数
+     * Get <p>核数</p> 
+     * @return CoresCnt <p>核数</p>
      */
     public Long getCoresCnt() {
         return this.CoresCnt;
     }
 
     /**
-     * Set 核数
-     * @param CoresCnt 核数
+     * Set <p>核数</p>
+     * @param CoresCnt <p>核数</p>
      */
     public void setCoresCnt(Long CoresCnt) {
         this.CoresCnt = CoresCnt;
     }
 
     /**
-     * Get 最近在线时间 
-     * @return LastOnlineTime 最近在线时间
+     * Get <p>最近在线时间</p> 
+     * @return LastOnlineTime <p>最近在线时间</p>
      */
     public String getLastOnlineTime() {
         return this.LastOnlineTime;
     }
 
     /**
-     * Set 最近在线时间
-     * @param LastOnlineTime 最近在线时间
+     * Set <p>最近在线时间</p>
+     * @param LastOnlineTime <p>最近在线时间</p>
      */
     public void setLastOnlineTime(String LastOnlineTime) {
         this.LastOnlineTime = LastOnlineTime;
@@ -656,6 +692,12 @@ public class HostInfo extends AbstractModel {
         if (source.ClusterAccessedStatus != null) {
             this.ClusterAccessedStatus = new String(source.ClusterAccessedStatus);
         }
+        if (source.ClusterAccessedSubStatus != null) {
+            this.ClusterAccessedSubStatus = new String(source.ClusterAccessedSubStatus);
+        }
+        if (source.ClusterAccessedErrorReason != null) {
+            this.ClusterAccessedErrorReason = new String(source.ClusterAccessedErrorReason);
+        }
         if (source.ChargeCoresCnt != null) {
             this.ChargeCoresCnt = new Long(source.ChargeCoresCnt);
         }
@@ -695,6 +737,8 @@ public class HostInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterID", this.ClusterID);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
         this.setParamSimple(map, prefix + "ClusterAccessedStatus", this.ClusterAccessedStatus);
+        this.setParamSimple(map, prefix + "ClusterAccessedSubStatus", this.ClusterAccessedSubStatus);
+        this.setParamSimple(map, prefix + "ClusterAccessedErrorReason", this.ClusterAccessedErrorReason);
         this.setParamSimple(map, prefix + "ChargeCoresCnt", this.ChargeCoresCnt);
         this.setParamSimple(map, prefix + "DefendStatus", this.DefendStatus);
         this.setParamSimple(map, prefix + "CoresCnt", this.CoresCnt);

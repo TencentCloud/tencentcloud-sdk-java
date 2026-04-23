@@ -225,6 +225,28 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
+     *增加或修改恶意外连的白名单
+     * @param req AddOrModifyMaliciousConnectionWhiteListRequest
+     * @return AddOrModifyMaliciousConnectionWhiteListResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddOrModifyMaliciousConnectionWhiteListResponse AddOrModifyMaliciousConnectionWhiteList(AddOrModifyMaliciousConnectionWhiteListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddOrModifyMaliciousConnectionWhiteList", AddOrModifyMaliciousConnectionWhiteListResponse.class);
+    }
+
+    /**
+     *新增或修改木马白名单规则
+     * @param req AddOrModifyVirusWhiteListRuleRequest
+     * @return AddOrModifyVirusWhiteListRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddOrModifyVirusWhiteListRuleResponse AddOrModifyVirusWhiteListRule(AddOrModifyVirusWhiteListRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddOrModifyVirusWhiteListRule", AddOrModifyVirusWhiteListRuleResponse.class);
+    }
+
+    /**
      *功能已下线待三合一重构
 
 容器网络创建检查Yaml网络策略任务
@@ -899,6 +921,17 @@ public class TcssClient extends AbstractClient{
     public DeleteSearchTemplateResponse DeleteSearchTemplate(DeleteSearchTemplateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteSearchTemplate", DeleteSearchTemplateResponse.class);
+    }
+
+    /**
+     *删除木马白名单规则
+     * @param req DeleteVirusWhiteListRuleRequest
+     * @return DeleteVirusWhiteListRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteVirusWhiteListRuleResponse DeleteVirusWhiteListRule(DeleteVirusWhiteListRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteVirusWhiteListRule", DeleteVirusWhiteListRuleResponse.class);
     }
 
     /**
@@ -2981,6 +3014,17 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
+     *运行时查询文件查杀实时监控设置信息
+     * @param req DescribeVirusMonitorConfigRequest
+     * @return DescribeVirusMonitorConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVirusMonitorConfigResponse DescribeVirusMonitorConfig(DescribeVirusMonitorConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVirusMonitorConfig", DescribeVirusMonitorConfigResponse.class);
+    }
+
+    /**
      *运行时查询文件查杀实时监控设置
      * @param req DescribeVirusMonitorSettingRequest
      * @return DescribeVirusMonitorSettingResponse
@@ -3000,6 +3044,17 @@ public class TcssClient extends AbstractClient{
     public DescribeVirusSampleDownloadUrlResponse DescribeVirusSampleDownloadUrl(DescribeVirusSampleDownloadUrlRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeVirusSampleDownloadUrl", DescribeVirusSampleDownloadUrlResponse.class);
+    }
+
+    /**
+     *运行时查询文件查杀新设置
+     * @param req DescribeVirusScanConfigRequest
+     * @return DescribeVirusScanConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVirusScanConfigResponse DescribeVirusScanConfig(DescribeVirusScanConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVirusScanConfig", DescribeVirusScanConfigResponse.class);
     }
 
     /**
@@ -3055,6 +3110,17 @@ public class TcssClient extends AbstractClient{
     public DescribeVirusTaskListResponse DescribeVirusTaskList(DescribeVirusTaskListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeVirusTaskList", DescribeVirusTaskListResponse.class);
+    }
+
+    /**
+     *查询木马白名单规则列表
+     * @param req DescribeVirusWhiteListRulesRequest
+     * @return DescribeVirusWhiteListRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVirusWhiteListRulesResponse DescribeVirusWhiteListRules(DescribeVirusWhiteListRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVirusWhiteListRules", DescribeVirusWhiteListRulesResponse.class);
     }
 
     /**

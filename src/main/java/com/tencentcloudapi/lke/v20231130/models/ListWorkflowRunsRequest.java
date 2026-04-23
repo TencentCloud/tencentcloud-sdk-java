@@ -66,6 +66,13 @@ public class ListWorkflowRunsRequest extends AbstractModel {
     private String LoginSubAccountUin;
 
     /**
+    * 查询内容
+    */
+    @SerializedName("Query")
+    @Expose
+    private String Query;
+
+    /**
      * Get 应用ID, 获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa) 
      * @return AppBizId 应用ID, 获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      */
@@ -161,6 +168,22 @@ public class ListWorkflowRunsRequest extends AbstractModel {
         this.LoginSubAccountUin = LoginSubAccountUin;
     }
 
+    /**
+     * Get 查询内容 
+     * @return Query 查询内容
+     */
+    public String getQuery() {
+        return this.Query;
+    }
+
+    /**
+     * Set 查询内容
+     * @param Query 查询内容
+     */
+    public void setQuery(String Query) {
+        this.Query = Query;
+    }
+
     public ListWorkflowRunsRequest() {
     }
 
@@ -187,6 +210,9 @@ public class ListWorkflowRunsRequest extends AbstractModel {
         if (source.LoginSubAccountUin != null) {
             this.LoginSubAccountUin = new String(source.LoginSubAccountUin);
         }
+        if (source.Query != null) {
+            this.Query = new String(source.Query);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class ListWorkflowRunsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Page", this.Page);
         this.setParamSimple(map, prefix + "LoginUin", this.LoginUin);
         this.setParamSimple(map, prefix + "LoginSubAccountUin", this.LoginSubAccountUin);
+        this.setParamSimple(map, prefix + "Query", this.Query);
 
     }
 }

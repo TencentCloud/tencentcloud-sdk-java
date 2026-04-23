@@ -24,230 +24,230 @@ import java.util.HashMap;
 public class MsgRecordReference extends AbstractModel {
 
     /**
-    * id
+    * <p>id</p>
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 链接
+    * <p>链接</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 类型
+    * <p>类型</p><p>枚举值：</p><ul><li>1： 问答</li><li>2： 文档片段</li><li>4： 联网检索到的内容</li></ul>
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 名称
+    * <p>名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 来源文档ID
+    * <p>来源文档ID</p>
     */
     @SerializedName("DocId")
     @Expose
     private String DocId;
 
     /**
-    * 知识库名称
+    * <p>知识库名称</p>
     */
     @SerializedName("KnowledgeName")
     @Expose
     private String KnowledgeName;
 
     /**
-    * 知识库业务id
+    * <p>知识库业务id</p>
     */
     @SerializedName("KnowledgeBizId")
     @Expose
     private String KnowledgeBizId;
 
     /**
-    * 文档业务id
+    * <p>文档业务id</p>
     */
     @SerializedName("DocBizId")
     @Expose
     private String DocBizId;
 
     /**
-    * 问答业务id
+    * <p>问答业务id</p>
     */
     @SerializedName("QaBizId")
     @Expose
     private String QaBizId;
 
     /**
-    * 文档索引id
+    * <p>文档索引id</p>
     */
     @SerializedName("Index")
     @Expose
     private Long Index;
 
     /**
-     * Get id 
-     * @return Id id
+     * Get <p>id</p> 
+     * @return Id <p>id</p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set id
-     * @param Id id
+     * Set <p>id</p>
+     * @param Id <p>id</p>
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 链接 
-     * @return Url 链接
+     * Get <p>链接</p> 
+     * @return Url <p>链接</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 链接
-     * @param Url 链接
+     * Set <p>链接</p>
+     * @param Url <p>链接</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get 类型 
-     * @return Type 类型
+     * Get <p>类型</p><p>枚举值：</p><ul><li>1： 问答</li><li>2： 文档片段</li><li>4： 联网检索到的内容</li></ul> 
+     * @return Type <p>类型</p><p>枚举值：</p><ul><li>1： 问答</li><li>2： 文档片段</li><li>4： 联网检索到的内容</li></ul>
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 类型
-     * @param Type 类型
+     * Set <p>类型</p><p>枚举值：</p><ul><li>1： 问答</li><li>2： 文档片段</li><li>4： 联网检索到的内容</li></ul>
+     * @param Type <p>类型</p><p>枚举值：</p><ul><li>1： 问答</li><li>2： 文档片段</li><li>4： 联网检索到的内容</li></ul>
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 名称 
-     * @return Name 名称
+     * Get <p>名称</p> 
+     * @return Name <p>名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 名称
-     * @param Name 名称
+     * Set <p>名称</p>
+     * @param Name <p>名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 来源文档ID 
-     * @return DocId 来源文档ID
+     * Get <p>来源文档ID</p> 
+     * @return DocId <p>来源文档ID</p>
      */
     public String getDocId() {
         return this.DocId;
     }
 
     /**
-     * Set 来源文档ID
-     * @param DocId 来源文档ID
+     * Set <p>来源文档ID</p>
+     * @param DocId <p>来源文档ID</p>
      */
     public void setDocId(String DocId) {
         this.DocId = DocId;
     }
 
     /**
-     * Get 知识库名称 
-     * @return KnowledgeName 知识库名称
+     * Get <p>知识库名称</p> 
+     * @return KnowledgeName <p>知识库名称</p>
      */
     public String getKnowledgeName() {
         return this.KnowledgeName;
     }
 
     /**
-     * Set 知识库名称
-     * @param KnowledgeName 知识库名称
+     * Set <p>知识库名称</p>
+     * @param KnowledgeName <p>知识库名称</p>
      */
     public void setKnowledgeName(String KnowledgeName) {
         this.KnowledgeName = KnowledgeName;
     }
 
     /**
-     * Get 知识库业务id 
-     * @return KnowledgeBizId 知识库业务id
+     * Get <p>知识库业务id</p> 
+     * @return KnowledgeBizId <p>知识库业务id</p>
      */
     public String getKnowledgeBizId() {
         return this.KnowledgeBizId;
     }
 
     /**
-     * Set 知识库业务id
-     * @param KnowledgeBizId 知识库业务id
+     * Set <p>知识库业务id</p>
+     * @param KnowledgeBizId <p>知识库业务id</p>
      */
     public void setKnowledgeBizId(String KnowledgeBizId) {
         this.KnowledgeBizId = KnowledgeBizId;
     }
 
     /**
-     * Get 文档业务id 
-     * @return DocBizId 文档业务id
+     * Get <p>文档业务id</p> 
+     * @return DocBizId <p>文档业务id</p>
      */
     public String getDocBizId() {
         return this.DocBizId;
     }
 
     /**
-     * Set 文档业务id
-     * @param DocBizId 文档业务id
+     * Set <p>文档业务id</p>
+     * @param DocBizId <p>文档业务id</p>
      */
     public void setDocBizId(String DocBizId) {
         this.DocBizId = DocBizId;
     }
 
     /**
-     * Get 问答业务id 
-     * @return QaBizId 问答业务id
+     * Get <p>问答业务id</p> 
+     * @return QaBizId <p>问答业务id</p>
      */
     public String getQaBizId() {
         return this.QaBizId;
     }
 
     /**
-     * Set 问答业务id
-     * @param QaBizId 问答业务id
+     * Set <p>问答业务id</p>
+     * @param QaBizId <p>问答业务id</p>
      */
     public void setQaBizId(String QaBizId) {
         this.QaBizId = QaBizId;
     }
 
     /**
-     * Get 文档索引id 
-     * @return Index 文档索引id
+     * Get <p>文档索引id</p> 
+     * @return Index <p>文档索引id</p>
      */
     public Long getIndex() {
         return this.Index;
     }
 
     /**
-     * Set 文档索引id
-     * @param Index 文档索引id
+     * Set <p>文档索引id</p>
+     * @param Index <p>文档索引id</p>
      */
     public void setIndex(Long Index) {
         this.Index = Index;

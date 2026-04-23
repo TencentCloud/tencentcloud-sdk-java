@@ -24,394 +24,486 @@ import java.util.HashMap;
 public class CreateAutoCalloutTaskRequest extends AbstractModel {
 
     /**
-    * 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+    * <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-    * 任务起始时间戳，Unix 秒级时间戳
+    * <p>任务起始时间戳，Unix 秒级时间戳</p>
     */
     @SerializedName("NotBefore")
     @Expose
     private Long NotBefore;
 
     /**
-    * 被叫号码列表
+    * <p>被叫号码列表</p>
     */
     @SerializedName("Callees")
     @Expose
     private String [] Callees;
 
     /**
-    * 主叫号码列表
+    * <p>主叫号码列表</p>
     */
     @SerializedName("Callers")
     @Expose
     private String [] Callers;
 
     /**
-    * 呼叫使用的 IVR Id，不填时需要填写 AIAgentId
+    * <p>呼叫使用的 IVR Id，不填时需要填写 AIAgentId</p>
     */
     @SerializedName("IvrId")
     @Expose
     private Long IvrId;
 
     /**
-    * 任务名
+    * <p>任务名</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 任务描述
+    * <p>任务描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 任务停止时间戳，Unix 秒级时间戳
+    * <p>任务停止时间戳，Unix 秒级时间戳</p>
     */
     @SerializedName("NotAfter")
     @Expose
     private Long NotAfter;
 
     /**
-    * 最大尝试次数，1-3 次
+    * <p>最大尝试次数，1-3 次</p>
     */
     @SerializedName("Tries")
     @Expose
     private Long Tries;
 
     /**
-    * 自定义变量（仅高级版支持），CalleeAttributes 字段中使用相同变量会覆盖此处
+    * <p>自定义变量（仅高级版支持），CalleeAttributes 字段中使用相同变量会覆盖此处</p>
     */
     @SerializedName("Variables")
     @Expose
     private Variable [] Variables;
 
     /**
-    * 用户自定义数据，CalleeAttributes 字段中使用 UUI 会覆盖此处
+    * <p>用户自定义数据，CalleeAttributes 字段中使用 UUI 会覆盖此处</p>
     */
     @SerializedName("UUI")
     @Expose
     private String UUI;
 
     /**
-    * 被叫属性
+    * <p>被叫属性</p>
     */
     @SerializedName("CalleeAttributes")
     @Expose
     private CalleeAttribute [] CalleeAttributes;
 
     /**
-    * IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones
+    * <p>IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones</p>
     */
     @SerializedName("TimeZone")
     @Expose
     private String TimeZone;
 
     /**
-    * 可用时间段
+    * <p>可用时间段</p>
     */
     @SerializedName("AvailableTime")
     @Expose
     private TimeRange [] AvailableTime;
 
     /**
-    * 智能体 ID，不填写时需要填写 IvrId
+    * <p>智能体 ID，不填写时需要填写 IvrId</p>
     */
     @SerializedName("AIAgentId")
     @Expose
     private Long AIAgentId;
 
     /**
-    * 任务失败重试时间间隔，重试间隔 600秒～86400 秒
+    * <p>任务失败重试时间间隔，重试间隔 600秒～86400 秒</p>
     */
     @SerializedName("RetryInterval")
     @Expose
     private Long RetryInterval;
 
     /**
-    * 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
+    * <p>最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数</p>
     */
     @SerializedName("MaxRingTimeoutSecond")
     @Expose
     private Long MaxRingTimeoutSecond;
 
     /**
-     * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
-     * @return SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+    * <p>根据限定的挂断原因(可选挂断状态码:202,203,204,205,206,207,208,210,212,213,215,216,217,218,219,221,222,234)进行重试，只对使用AIAgentID的任务有效，挂断状态码说明</p><p><a href="https://cloud.tencent.com/document/product/679/123938">详见</a></p>
+    */
+    @SerializedName("RetryHangupTypes")
+    @Expose
+    private String [] RetryHangupTypes;
+
+    /**
+    * <p>根据限定的话后标签进行重试，只对使用对话模型的AIAgentID任务有效，标签信息可在智能体配置中查询</p>
+    */
+    @SerializedName("RetryTags")
+    @Expose
+    private RetryTagItem [] RetryTags;
+
+    /**
+    * <p>生效的工作时间配置。建议使用此字段代替AvailableTime 字段，当同时使用时，优先生效AvailableTime。</p>
+    */
+    @SerializedName("AvailableWorkTimeConfig")
+    @Expose
+    private AvailableTimeConfig [] AvailableWorkTimeConfig;
+
+    /**
+    * <p>触发策略</p>
+    */
+    @SerializedName("TriggerStrategy")
+    @Expose
+    private TriggerStrategyItem [] TriggerStrategy;
+
+    /**
+     * Get <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p> 
+     * @return SdkAppId <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
-     * @param SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+     * Set <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
+     * @param SdkAppId <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get 任务起始时间戳，Unix 秒级时间戳 
-     * @return NotBefore 任务起始时间戳，Unix 秒级时间戳
+     * Get <p>任务起始时间戳，Unix 秒级时间戳</p> 
+     * @return NotBefore <p>任务起始时间戳，Unix 秒级时间戳</p>
      */
     public Long getNotBefore() {
         return this.NotBefore;
     }
 
     /**
-     * Set 任务起始时间戳，Unix 秒级时间戳
-     * @param NotBefore 任务起始时间戳，Unix 秒级时间戳
+     * Set <p>任务起始时间戳，Unix 秒级时间戳</p>
+     * @param NotBefore <p>任务起始时间戳，Unix 秒级时间戳</p>
      */
     public void setNotBefore(Long NotBefore) {
         this.NotBefore = NotBefore;
     }
 
     /**
-     * Get 被叫号码列表 
-     * @return Callees 被叫号码列表
+     * Get <p>被叫号码列表</p> 
+     * @return Callees <p>被叫号码列表</p>
      */
     public String [] getCallees() {
         return this.Callees;
     }
 
     /**
-     * Set 被叫号码列表
-     * @param Callees 被叫号码列表
+     * Set <p>被叫号码列表</p>
+     * @param Callees <p>被叫号码列表</p>
      */
     public void setCallees(String [] Callees) {
         this.Callees = Callees;
     }
 
     /**
-     * Get 主叫号码列表 
-     * @return Callers 主叫号码列表
+     * Get <p>主叫号码列表</p> 
+     * @return Callers <p>主叫号码列表</p>
      */
     public String [] getCallers() {
         return this.Callers;
     }
 
     /**
-     * Set 主叫号码列表
-     * @param Callers 主叫号码列表
+     * Set <p>主叫号码列表</p>
+     * @param Callers <p>主叫号码列表</p>
      */
     public void setCallers(String [] Callers) {
         this.Callers = Callers;
     }
 
     /**
-     * Get 呼叫使用的 IVR Id，不填时需要填写 AIAgentId 
-     * @return IvrId 呼叫使用的 IVR Id，不填时需要填写 AIAgentId
+     * Get <p>呼叫使用的 IVR Id，不填时需要填写 AIAgentId</p> 
+     * @return IvrId <p>呼叫使用的 IVR Id，不填时需要填写 AIAgentId</p>
      */
     public Long getIvrId() {
         return this.IvrId;
     }
 
     /**
-     * Set 呼叫使用的 IVR Id，不填时需要填写 AIAgentId
-     * @param IvrId 呼叫使用的 IVR Id，不填时需要填写 AIAgentId
+     * Set <p>呼叫使用的 IVR Id，不填时需要填写 AIAgentId</p>
+     * @param IvrId <p>呼叫使用的 IVR Id，不填时需要填写 AIAgentId</p>
      */
     public void setIvrId(Long IvrId) {
         this.IvrId = IvrId;
     }
 
     /**
-     * Get 任务名 
-     * @return Name 任务名
+     * Get <p>任务名</p> 
+     * @return Name <p>任务名</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 任务名
-     * @param Name 任务名
+     * Set <p>任务名</p>
+     * @param Name <p>任务名</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 任务描述 
-     * @return Description 任务描述
+     * Get <p>任务描述</p> 
+     * @return Description <p>任务描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 任务描述
-     * @param Description 任务描述
+     * Set <p>任务描述</p>
+     * @param Description <p>任务描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 任务停止时间戳，Unix 秒级时间戳 
-     * @return NotAfter 任务停止时间戳，Unix 秒级时间戳
+     * Get <p>任务停止时间戳，Unix 秒级时间戳</p> 
+     * @return NotAfter <p>任务停止时间戳，Unix 秒级时间戳</p>
      */
     public Long getNotAfter() {
         return this.NotAfter;
     }
 
     /**
-     * Set 任务停止时间戳，Unix 秒级时间戳
-     * @param NotAfter 任务停止时间戳，Unix 秒级时间戳
+     * Set <p>任务停止时间戳，Unix 秒级时间戳</p>
+     * @param NotAfter <p>任务停止时间戳，Unix 秒级时间戳</p>
      */
     public void setNotAfter(Long NotAfter) {
         this.NotAfter = NotAfter;
     }
 
     /**
-     * Get 最大尝试次数，1-3 次 
-     * @return Tries 最大尝试次数，1-3 次
+     * Get <p>最大尝试次数，1-3 次</p> 
+     * @return Tries <p>最大尝试次数，1-3 次</p>
      */
     public Long getTries() {
         return this.Tries;
     }
 
     /**
-     * Set 最大尝试次数，1-3 次
-     * @param Tries 最大尝试次数，1-3 次
+     * Set <p>最大尝试次数，1-3 次</p>
+     * @param Tries <p>最大尝试次数，1-3 次</p>
      */
     public void setTries(Long Tries) {
         this.Tries = Tries;
     }
 
     /**
-     * Get 自定义变量（仅高级版支持），CalleeAttributes 字段中使用相同变量会覆盖此处 
-     * @return Variables 自定义变量（仅高级版支持），CalleeAttributes 字段中使用相同变量会覆盖此处
+     * Get <p>自定义变量（仅高级版支持），CalleeAttributes 字段中使用相同变量会覆盖此处</p> 
+     * @return Variables <p>自定义变量（仅高级版支持），CalleeAttributes 字段中使用相同变量会覆盖此处</p>
      */
     public Variable [] getVariables() {
         return this.Variables;
     }
 
     /**
-     * Set 自定义变量（仅高级版支持），CalleeAttributes 字段中使用相同变量会覆盖此处
-     * @param Variables 自定义变量（仅高级版支持），CalleeAttributes 字段中使用相同变量会覆盖此处
+     * Set <p>自定义变量（仅高级版支持），CalleeAttributes 字段中使用相同变量会覆盖此处</p>
+     * @param Variables <p>自定义变量（仅高级版支持），CalleeAttributes 字段中使用相同变量会覆盖此处</p>
      */
     public void setVariables(Variable [] Variables) {
         this.Variables = Variables;
     }
 
     /**
-     * Get 用户自定义数据，CalleeAttributes 字段中使用 UUI 会覆盖此处 
-     * @return UUI 用户自定义数据，CalleeAttributes 字段中使用 UUI 会覆盖此处
+     * Get <p>用户自定义数据，CalleeAttributes 字段中使用 UUI 会覆盖此处</p> 
+     * @return UUI <p>用户自定义数据，CalleeAttributes 字段中使用 UUI 会覆盖此处</p>
      */
     public String getUUI() {
         return this.UUI;
     }
 
     /**
-     * Set 用户自定义数据，CalleeAttributes 字段中使用 UUI 会覆盖此处
-     * @param UUI 用户自定义数据，CalleeAttributes 字段中使用 UUI 会覆盖此处
+     * Set <p>用户自定义数据，CalleeAttributes 字段中使用 UUI 会覆盖此处</p>
+     * @param UUI <p>用户自定义数据，CalleeAttributes 字段中使用 UUI 会覆盖此处</p>
      */
     public void setUUI(String UUI) {
         this.UUI = UUI;
     }
 
     /**
-     * Get 被叫属性 
-     * @return CalleeAttributes 被叫属性
+     * Get <p>被叫属性</p> 
+     * @return CalleeAttributes <p>被叫属性</p>
      */
     public CalleeAttribute [] getCalleeAttributes() {
         return this.CalleeAttributes;
     }
 
     /**
-     * Set 被叫属性
-     * @param CalleeAttributes 被叫属性
+     * Set <p>被叫属性</p>
+     * @param CalleeAttributes <p>被叫属性</p>
      */
     public void setCalleeAttributes(CalleeAttribute [] CalleeAttributes) {
         this.CalleeAttributes = CalleeAttributes;
     }
 
     /**
-     * Get IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones 
-     * @return TimeZone IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones
+     * Get <p>IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones</p> 
+     * @return TimeZone <p>IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones</p>
      */
     public String getTimeZone() {
         return this.TimeZone;
     }
 
     /**
-     * Set IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones
-     * @param TimeZone IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones
+     * Set <p>IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones</p>
+     * @param TimeZone <p>IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones</p>
      */
     public void setTimeZone(String TimeZone) {
         this.TimeZone = TimeZone;
     }
 
     /**
-     * Get 可用时间段 
-     * @return AvailableTime 可用时间段
+     * Get <p>可用时间段</p> 
+     * @return AvailableTime <p>可用时间段</p>
      */
     public TimeRange [] getAvailableTime() {
         return this.AvailableTime;
     }
 
     /**
-     * Set 可用时间段
-     * @param AvailableTime 可用时间段
+     * Set <p>可用时间段</p>
+     * @param AvailableTime <p>可用时间段</p>
      */
     public void setAvailableTime(TimeRange [] AvailableTime) {
         this.AvailableTime = AvailableTime;
     }
 
     /**
-     * Get 智能体 ID，不填写时需要填写 IvrId 
-     * @return AIAgentId 智能体 ID，不填写时需要填写 IvrId
+     * Get <p>智能体 ID，不填写时需要填写 IvrId</p> 
+     * @return AIAgentId <p>智能体 ID，不填写时需要填写 IvrId</p>
      */
     public Long getAIAgentId() {
         return this.AIAgentId;
     }
 
     /**
-     * Set 智能体 ID，不填写时需要填写 IvrId
-     * @param AIAgentId 智能体 ID，不填写时需要填写 IvrId
+     * Set <p>智能体 ID，不填写时需要填写 IvrId</p>
+     * @param AIAgentId <p>智能体 ID，不填写时需要填写 IvrId</p>
      */
     public void setAIAgentId(Long AIAgentId) {
         this.AIAgentId = AIAgentId;
     }
 
     /**
-     * Get 任务失败重试时间间隔，重试间隔 600秒～86400 秒 
-     * @return RetryInterval 任务失败重试时间间隔，重试间隔 600秒～86400 秒
+     * Get <p>任务失败重试时间间隔，重试间隔 600秒～86400 秒</p> 
+     * @return RetryInterval <p>任务失败重试时间间隔，重试间隔 600秒～86400 秒</p>
      */
     public Long getRetryInterval() {
         return this.RetryInterval;
     }
 
     /**
-     * Set 任务失败重试时间间隔，重试间隔 600秒～86400 秒
-     * @param RetryInterval 任务失败重试时间间隔，重试间隔 600秒～86400 秒
+     * Set <p>任务失败重试时间间隔，重试间隔 600秒～86400 秒</p>
+     * @param RetryInterval <p>任务失败重试时间间隔，重试间隔 600秒～86400 秒</p>
      */
     public void setRetryInterval(Long RetryInterval) {
         this.RetryInterval = RetryInterval;
     }
 
     /**
-     * Get 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数 
-     * @return MaxRingTimeoutSecond 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
+     * Get <p>最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数</p> 
+     * @return MaxRingTimeoutSecond <p>最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数</p>
      */
     public Long getMaxRingTimeoutSecond() {
         return this.MaxRingTimeoutSecond;
     }
 
     /**
-     * Set 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
-     * @param MaxRingTimeoutSecond 最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数
+     * Set <p>最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数</p>
+     * @param MaxRingTimeoutSecond <p>最大振铃时长，达到时长阈值自动挂断。 仅自携号码支持当前参数</p>
      */
     public void setMaxRingTimeoutSecond(Long MaxRingTimeoutSecond) {
         this.MaxRingTimeoutSecond = MaxRingTimeoutSecond;
+    }
+
+    /**
+     * Get <p>根据限定的挂断原因(可选挂断状态码:202,203,204,205,206,207,208,210,212,213,215,216,217,218,219,221,222,234)进行重试，只对使用AIAgentID的任务有效，挂断状态码说明</p><p><a href="https://cloud.tencent.com/document/product/679/123938">详见</a></p> 
+     * @return RetryHangupTypes <p>根据限定的挂断原因(可选挂断状态码:202,203,204,205,206,207,208,210,212,213,215,216,217,218,219,221,222,234)进行重试，只对使用AIAgentID的任务有效，挂断状态码说明</p><p><a href="https://cloud.tencent.com/document/product/679/123938">详见</a></p>
+     */
+    public String [] getRetryHangupTypes() {
+        return this.RetryHangupTypes;
+    }
+
+    /**
+     * Set <p>根据限定的挂断原因(可选挂断状态码:202,203,204,205,206,207,208,210,212,213,215,216,217,218,219,221,222,234)进行重试，只对使用AIAgentID的任务有效，挂断状态码说明</p><p><a href="https://cloud.tencent.com/document/product/679/123938">详见</a></p>
+     * @param RetryHangupTypes <p>根据限定的挂断原因(可选挂断状态码:202,203,204,205,206,207,208,210,212,213,215,216,217,218,219,221,222,234)进行重试，只对使用AIAgentID的任务有效，挂断状态码说明</p><p><a href="https://cloud.tencent.com/document/product/679/123938">详见</a></p>
+     */
+    public void setRetryHangupTypes(String [] RetryHangupTypes) {
+        this.RetryHangupTypes = RetryHangupTypes;
+    }
+
+    /**
+     * Get <p>根据限定的话后标签进行重试，只对使用对话模型的AIAgentID任务有效，标签信息可在智能体配置中查询</p> 
+     * @return RetryTags <p>根据限定的话后标签进行重试，只对使用对话模型的AIAgentID任务有效，标签信息可在智能体配置中查询</p>
+     */
+    public RetryTagItem [] getRetryTags() {
+        return this.RetryTags;
+    }
+
+    /**
+     * Set <p>根据限定的话后标签进行重试，只对使用对话模型的AIAgentID任务有效，标签信息可在智能体配置中查询</p>
+     * @param RetryTags <p>根据限定的话后标签进行重试，只对使用对话模型的AIAgentID任务有效，标签信息可在智能体配置中查询</p>
+     */
+    public void setRetryTags(RetryTagItem [] RetryTags) {
+        this.RetryTags = RetryTags;
+    }
+
+    /**
+     * Get <p>生效的工作时间配置。建议使用此字段代替AvailableTime 字段，当同时使用时，优先生效AvailableTime。</p> 
+     * @return AvailableWorkTimeConfig <p>生效的工作时间配置。建议使用此字段代替AvailableTime 字段，当同时使用时，优先生效AvailableTime。</p>
+     */
+    public AvailableTimeConfig [] getAvailableWorkTimeConfig() {
+        return this.AvailableWorkTimeConfig;
+    }
+
+    /**
+     * Set <p>生效的工作时间配置。建议使用此字段代替AvailableTime 字段，当同时使用时，优先生效AvailableTime。</p>
+     * @param AvailableWorkTimeConfig <p>生效的工作时间配置。建议使用此字段代替AvailableTime 字段，当同时使用时，优先生效AvailableTime。</p>
+     */
+    public void setAvailableWorkTimeConfig(AvailableTimeConfig [] AvailableWorkTimeConfig) {
+        this.AvailableWorkTimeConfig = AvailableWorkTimeConfig;
+    }
+
+    /**
+     * Get <p>触发策略</p> 
+     * @return TriggerStrategy <p>触发策略</p>
+     */
+    public TriggerStrategyItem [] getTriggerStrategy() {
+        return this.TriggerStrategy;
+    }
+
+    /**
+     * Set <p>触发策略</p>
+     * @param TriggerStrategy <p>触发策略</p>
+     */
+    public void setTriggerStrategy(TriggerStrategyItem [] TriggerStrategy) {
+        this.TriggerStrategy = TriggerStrategy;
     }
 
     public CreateAutoCalloutTaskRequest() {
@@ -488,6 +580,30 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel {
         if (source.MaxRingTimeoutSecond != null) {
             this.MaxRingTimeoutSecond = new Long(source.MaxRingTimeoutSecond);
         }
+        if (source.RetryHangupTypes != null) {
+            this.RetryHangupTypes = new String[source.RetryHangupTypes.length];
+            for (int i = 0; i < source.RetryHangupTypes.length; i++) {
+                this.RetryHangupTypes[i] = new String(source.RetryHangupTypes[i]);
+            }
+        }
+        if (source.RetryTags != null) {
+            this.RetryTags = new RetryTagItem[source.RetryTags.length];
+            for (int i = 0; i < source.RetryTags.length; i++) {
+                this.RetryTags[i] = new RetryTagItem(source.RetryTags[i]);
+            }
+        }
+        if (source.AvailableWorkTimeConfig != null) {
+            this.AvailableWorkTimeConfig = new AvailableTimeConfig[source.AvailableWorkTimeConfig.length];
+            for (int i = 0; i < source.AvailableWorkTimeConfig.length; i++) {
+                this.AvailableWorkTimeConfig[i] = new AvailableTimeConfig(source.AvailableWorkTimeConfig[i]);
+            }
+        }
+        if (source.TriggerStrategy != null) {
+            this.TriggerStrategy = new TriggerStrategyItem[source.TriggerStrategy.length];
+            for (int i = 0; i < source.TriggerStrategy.length; i++) {
+                this.TriggerStrategy[i] = new TriggerStrategyItem(source.TriggerStrategy[i]);
+            }
+        }
     }
 
 
@@ -512,6 +628,10 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AIAgentId", this.AIAgentId);
         this.setParamSimple(map, prefix + "RetryInterval", this.RetryInterval);
         this.setParamSimple(map, prefix + "MaxRingTimeoutSecond", this.MaxRingTimeoutSecond);
+        this.setParamArraySimple(map, prefix + "RetryHangupTypes.", this.RetryHangupTypes);
+        this.setParamArrayObj(map, prefix + "RetryTags.", this.RetryTags);
+        this.setParamArrayObj(map, prefix + "AvailableWorkTimeConfig.", this.AvailableWorkTimeConfig);
+        this.setParamArrayObj(map, prefix + "TriggerStrategy.", this.TriggerStrategy);
 
     }
 }

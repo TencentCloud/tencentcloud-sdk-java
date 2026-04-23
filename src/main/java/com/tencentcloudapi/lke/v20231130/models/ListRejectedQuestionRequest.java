@@ -24,100 +24,118 @@ import java.util.HashMap;
 public class ListRejectedQuestionRequest extends AbstractModel {
 
     /**
-    * 应用ID, 获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。
+    * <p>应用ID, 获取方法参看如何获取   <a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a>。</p>
     */
     @SerializedName("BotBizId")
     @Expose
     private String BotBizId;
 
     /**
-    * 页码（必须大于0）
+    * <p>页码（必须大于0）</p><p>默认值：1</p>
     */
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
 
     /**
-    * 每页数量（取值范围1-200）
+    * <p>每页数量（取值范围1-200）</p><p>默认值：15</p>
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 查询内容
-
+    * <p>查询内容</p>
     */
     @SerializedName("Query")
     @Expose
     private String Query;
 
     /**
-     * Get 应用ID, 获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。 
-     * @return BotBizId 应用ID, 获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。
+    * <p>过滤条件：<br>生效： EnableScope: 1,2,3,4</p>
+    */
+    @SerializedName("Filters")
+    @Expose
+    private FilterItem [] Filters;
+
+    /**
+     * Get <p>应用ID, 获取方法参看如何获取   <a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a>。</p> 
+     * @return BotBizId <p>应用ID, 获取方法参看如何获取   <a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a>。</p>
      */
     public String getBotBizId() {
         return this.BotBizId;
     }
 
     /**
-     * Set 应用ID, 获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。
-     * @param BotBizId 应用ID, 获取方法参看如何获取   [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)。
+     * Set <p>应用ID, 获取方法参看如何获取   <a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a>。</p>
+     * @param BotBizId <p>应用ID, 获取方法参看如何获取   <a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a>。</p>
      */
     public void setBotBizId(String BotBizId) {
         this.BotBizId = BotBizId;
     }
 
     /**
-     * Get 页码（必须大于0） 
-     * @return PageNumber 页码（必须大于0）
+     * Get <p>页码（必须大于0）</p><p>默认值：1</p> 
+     * @return PageNumber <p>页码（必须大于0）</p><p>默认值：1</p>
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set 页码（必须大于0）
-     * @param PageNumber 页码（必须大于0）
+     * Set <p>页码（必须大于0）</p><p>默认值：1</p>
+     * @param PageNumber <p>页码（必须大于0）</p><p>默认值：1</p>
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get 每页数量（取值范围1-200） 
-     * @return PageSize 每页数量（取值范围1-200）
+     * Get <p>每页数量（取值范围1-200）</p><p>默认值：15</p> 
+     * @return PageSize <p>每页数量（取值范围1-200）</p><p>默认值：15</p>
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 每页数量（取值范围1-200）
-     * @param PageSize 每页数量（取值范围1-200）
+     * Set <p>每页数量（取值范围1-200）</p><p>默认值：15</p>
+     * @param PageSize <p>每页数量（取值范围1-200）</p><p>默认值：15</p>
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 查询内容
- 
-     * @return Query 查询内容
-
+     * Get <p>查询内容</p> 
+     * @return Query <p>查询内容</p>
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set 查询内容
-
-     * @param Query 查询内容
-
+     * Set <p>查询内容</p>
+     * @param Query <p>查询内容</p>
      */
     public void setQuery(String Query) {
         this.Query = Query;
+    }
+
+    /**
+     * Get <p>过滤条件：<br>生效： EnableScope: 1,2,3,4</p> 
+     * @return Filters <p>过滤条件：<br>生效： EnableScope: 1,2,3,4</p>
+     */
+    public FilterItem [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set <p>过滤条件：<br>生效： EnableScope: 1,2,3,4</p>
+     * @param Filters <p>过滤条件：<br>生效： EnableScope: 1,2,3,4</p>
+     */
+    public void setFilters(FilterItem [] Filters) {
+        this.Filters = Filters;
     }
 
     public ListRejectedQuestionRequest() {
@@ -140,6 +158,12 @@ public class ListRejectedQuestionRequest extends AbstractModel {
         if (source.Query != null) {
             this.Query = new String(source.Query);
         }
+        if (source.Filters != null) {
+            this.Filters = new FilterItem[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new FilterItem(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -151,6 +175,7 @@ public class ListRejectedQuestionRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "Query", this.Query);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

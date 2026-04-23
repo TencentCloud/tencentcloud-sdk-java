@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class UpgradeDBInstanceResponse extends AbstractModel {
 
     /**
-    * 订单 ID。
+    * <p>订单 ID。</p>
     */
     @SerializedName("DealIds")
     @Expose
     private String [] DealIds;
 
     /**
-    * 异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/236/20410)。
+    * <p>异步任务的请求 ID，可使用此 ID <a href="https://cloud.tencent.com/document/product/236/20410">查询异步任务的执行结果</a>。</p>
     */
     @SerializedName("AsyncRequestId")
     @Expose
@@ -45,32 +45,32 @@ public class UpgradeDBInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 订单 ID。 
-     * @return DealIds 订单 ID。
+     * Get <p>订单 ID。</p> 
+     * @return DealIds <p>订单 ID。</p>
      */
     public String [] getDealIds() {
         return this.DealIds;
     }
 
     /**
-     * Set 订单 ID。
-     * @param DealIds 订单 ID。
+     * Set <p>订单 ID。</p>
+     * @param DealIds <p>订单 ID。</p>
      */
     public void setDealIds(String [] DealIds) {
         this.DealIds = DealIds;
     }
 
     /**
-     * Get 异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/236/20410)。 
-     * @return AsyncRequestId 异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/236/20410)。
+     * Get <p>异步任务的请求 ID，可使用此 ID <a href="https://cloud.tencent.com/document/product/236/20410">查询异步任务的执行结果</a>。</p> 
+     * @return AsyncRequestId <p>异步任务的请求 ID，可使用此 ID <a href="https://cloud.tencent.com/document/product/236/20410">查询异步任务的执行结果</a>。</p>
      */
     public String getAsyncRequestId() {
         return this.AsyncRequestId;
     }
 
     /**
-     * Set 异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/236/20410)。
-     * @param AsyncRequestId 异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/236/20410)。
+     * Set <p>异步任务的请求 ID，可使用此 ID <a href="https://cloud.tencent.com/document/product/236/20410">查询异步任务的执行结果</a>。</p>
+     * @param AsyncRequestId <p>异步任务的请求 ID，可使用此 ID <a href="https://cloud.tencent.com/document/product/236/20410">查询异步任务的执行结果</a>。</p>
      */
     public void setAsyncRequestId(String AsyncRequestId) {
         this.AsyncRequestId = AsyncRequestId;

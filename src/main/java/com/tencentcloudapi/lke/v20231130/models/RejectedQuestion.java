@@ -94,6 +94,14 @@ public class RejectedQuestion extends AbstractModel {
     private String Operator;
 
     /**
+    * 拒答生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableScope")
+    @Expose
+    private Long EnableScope;
+
+    /**
      * Get 拒答问题ID
 
 
@@ -277,6 +285,26 @@ public class RejectedQuestion extends AbstractModel {
         this.Operator = Operator;
     }
 
+    /**
+     * Get 拒答生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableScope 拒答生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getEnableScope() {
+        return this.EnableScope;
+    }
+
+    /**
+     * Set 拒答生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableScope 拒答生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableScope(Long EnableScope) {
+        this.EnableScope = EnableScope;
+    }
+
     public RejectedQuestion() {
     }
 
@@ -309,6 +337,9 @@ public class RejectedQuestion extends AbstractModel {
         if (source.Operator != null) {
             this.Operator = new String(source.Operator);
         }
+        if (source.EnableScope != null) {
+            this.EnableScope = new Long(source.EnableScope);
+        }
     }
 
 
@@ -324,6 +355,7 @@ public class RejectedQuestion extends AbstractModel {
         this.setParamSimple(map, prefix + "IsAllowEdit", this.IsAllowEdit);
         this.setParamSimple(map, prefix + "IsAllowDelete", this.IsAllowDelete);
         this.setParamSimple(map, prefix + "Operator", this.Operator);
+        this.setParamSimple(map, prefix + "EnableScope", this.EnableScope);
 
     }
 }

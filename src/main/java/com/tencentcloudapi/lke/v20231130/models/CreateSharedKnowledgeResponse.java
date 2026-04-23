@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateSharedKnowledgeResponse extends AbstractModel {
 
     /**
-    * 共享知识库业务ID
+    * <p>共享知识库业务ID</p>
     */
     @SerializedName("KnowledgeBizId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateSharedKnowledgeResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 共享知识库业务ID 
-     * @return KnowledgeBizId 共享知识库业务ID
+     * Get <p>共享知识库业务ID</p> 
+     * @return KnowledgeBizId <p>共享知识库业务ID</p>
      */
     public String getKnowledgeBizId() {
         return this.KnowledgeBizId;
     }
 
     /**
-     * Set 共享知识库业务ID
-     * @param KnowledgeBizId 共享知识库业务ID
+     * Set <p>共享知识库业务ID</p>
+     * @param KnowledgeBizId <p>共享知识库业务ID</p>
      */
     public void setKnowledgeBizId(String KnowledgeBizId) {
         this.KnowledgeBizId = KnowledgeBizId;

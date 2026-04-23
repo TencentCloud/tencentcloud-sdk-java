@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class RemoteWrite extends AbstractModel {
 
     /**
-    * 多写url
+    * <p>多写url</p>
     */
     @SerializedName("URL")
     @Expose
     private String URL;
 
     /**
-    * RelabelConfig
+    * <p>RelabelConfig</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("URLRelabelConfig")
@@ -39,7 +39,7 @@ public class RemoteWrite extends AbstractModel {
     private String URLRelabelConfig;
 
     /**
-    * 鉴权
+    * <p>鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BasicAuth")
@@ -47,7 +47,7 @@ public class RemoteWrite extends AbstractModel {
     private BasicAuth BasicAuth;
 
     /**
-    * 最大block
+    * <p>最大block</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxBlockSize")
@@ -55,7 +55,7 @@ public class RemoteWrite extends AbstractModel {
     private String MaxBlockSize;
 
     /**
-    * Label
+    * <p>Label</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Label")
@@ -63,7 +63,7 @@ public class RemoteWrite extends AbstractModel {
     private String Label;
 
     /**
-    * HTTP 额外添加的头
+    * <p>HTTP 额外添加的头</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Headers")
@@ -71,25 +71,33 @@ public class RemoteWrite extends AbstractModel {
     private RemoteWriteHeader [] Headers;
 
     /**
-     * Get 多写url 
-     * @return URL 多写url
+    * <p>数据多写类型:<br>1- 只多写采集指标<br>2- 只多写预聚合指标<br>3- 同时多写采集和预聚合指标</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RemoteWriteType")
+    @Expose
+    private Long RemoteWriteType;
+
+    /**
+     * Get <p>多写url</p> 
+     * @return URL <p>多写url</p>
      */
     public String getURL() {
         return this.URL;
     }
 
     /**
-     * Set 多写url
-     * @param URL 多写url
+     * Set <p>多写url</p>
+     * @param URL <p>多写url</p>
      */
     public void setURL(String URL) {
         this.URL = URL;
     }
 
     /**
-     * Get RelabelConfig
+     * Get <p>RelabelConfig</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return URLRelabelConfig RelabelConfig
+     * @return URLRelabelConfig <p>RelabelConfig</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getURLRelabelConfig() {
@@ -97,9 +105,9 @@ public class RemoteWrite extends AbstractModel {
     }
 
     /**
-     * Set RelabelConfig
+     * Set <p>RelabelConfig</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param URLRelabelConfig RelabelConfig
+     * @param URLRelabelConfig <p>RelabelConfig</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setURLRelabelConfig(String URLRelabelConfig) {
@@ -107,9 +115,9 @@ public class RemoteWrite extends AbstractModel {
     }
 
     /**
-     * Get 鉴权
+     * Get <p>鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BasicAuth 鉴权
+     * @return BasicAuth <p>鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BasicAuth getBasicAuth() {
@@ -117,9 +125,9 @@ public class RemoteWrite extends AbstractModel {
     }
 
     /**
-     * Set 鉴权
+     * Set <p>鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BasicAuth 鉴权
+     * @param BasicAuth <p>鉴权</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBasicAuth(BasicAuth BasicAuth) {
@@ -127,9 +135,9 @@ public class RemoteWrite extends AbstractModel {
     }
 
     /**
-     * Get 最大block
+     * Get <p>最大block</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MaxBlockSize 最大block
+     * @return MaxBlockSize <p>最大block</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -139,9 +147,9 @@ public class RemoteWrite extends AbstractModel {
     }
 
     /**
-     * Set 最大block
+     * Set <p>最大block</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaxBlockSize 最大block
+     * @param MaxBlockSize <p>最大block</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -151,9 +159,9 @@ public class RemoteWrite extends AbstractModel {
     }
 
     /**
-     * Get Label
+     * Get <p>Label</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Label Label
+     * @return Label <p>Label</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -163,9 +171,9 @@ public class RemoteWrite extends AbstractModel {
     }
 
     /**
-     * Set Label
+     * Set <p>Label</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Label Label
+     * @param Label <p>Label</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -175,9 +183,9 @@ public class RemoteWrite extends AbstractModel {
     }
 
     /**
-     * Get HTTP 额外添加的头
+     * Get <p>HTTP 额外添加的头</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Headers HTTP 额外添加的头
+     * @return Headers <p>HTTP 额外添加的头</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RemoteWriteHeader [] getHeaders() {
@@ -185,13 +193,33 @@ public class RemoteWrite extends AbstractModel {
     }
 
     /**
-     * Set HTTP 额外添加的头
+     * Set <p>HTTP 额外添加的头</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Headers HTTP 额外添加的头
+     * @param Headers <p>HTTP 额外添加的头</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeaders(RemoteWriteHeader [] Headers) {
         this.Headers = Headers;
+    }
+
+    /**
+     * Get <p>数据多写类型:<br>1- 只多写采集指标<br>2- 只多写预聚合指标<br>3- 同时多写采集和预聚合指标</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RemoteWriteType <p>数据多写类型:<br>1- 只多写采集指标<br>2- 只多写预聚合指标<br>3- 同时多写采集和预聚合指标</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRemoteWriteType() {
+        return this.RemoteWriteType;
+    }
+
+    /**
+     * Set <p>数据多写类型:<br>1- 只多写采集指标<br>2- 只多写预聚合指标<br>3- 同时多写采集和预聚合指标</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RemoteWriteType <p>数据多写类型:<br>1- 只多写采集指标<br>2- 只多写预聚合指标<br>3- 同时多写采集和预聚合指标</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRemoteWriteType(Long RemoteWriteType) {
+        this.RemoteWriteType = RemoteWriteType;
     }
 
     public RemoteWrite() {
@@ -223,6 +251,9 @@ public class RemoteWrite extends AbstractModel {
                 this.Headers[i] = new RemoteWriteHeader(source.Headers[i]);
             }
         }
+        if (source.RemoteWriteType != null) {
+            this.RemoteWriteType = new Long(source.RemoteWriteType);
+        }
     }
 
 
@@ -236,6 +267,7 @@ public class RemoteWrite extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxBlockSize", this.MaxBlockSize);
         this.setParamSimple(map, prefix + "Label", this.Label);
         this.setParamArrayObj(map, prefix + "Headers.", this.Headers);
+        this.setParamSimple(map, prefix + "RemoteWriteType", this.RemoteWriteType);
 
     }
 }

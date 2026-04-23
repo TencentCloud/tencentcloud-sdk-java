@@ -461,6 +461,17 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *新建查询视图
+     * @param req CreateSearchViewRequest
+     * @return CreateSearchViewResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSearchViewResponse CreateSearchView(CreateSearchViewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSearchView", CreateSearchViewResponse.class);
+    }
+
+    /**
      *新建投递到COS的任务，【！！！注意】使用此接口，需要检查是否配置了投递COS的角色和权限。如果没有配置，请参考文档投递权限查看和配置https://cloud.tencent.com/document/product/614/71623。
      * @param req CreateShipperRequest
      * @return CreateShipperResponse
@@ -821,6 +832,17 @@ public class ClsClient extends AbstractClient{
     public DeleteScheduledSqlResponse DeleteScheduledSql(DeleteScheduledSqlRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteScheduledSql", DeleteScheduledSqlResponse.class);
+    }
+
+    /**
+     *删除查询视图
+     * @param req DeleteSearchViewRequest
+     * @return DeleteSearchViewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSearchViewResponse DeleteSearchView(DeleteSearchViewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteSearchView", DeleteSearchViewResponse.class);
     }
 
     /**
@@ -1397,6 +1419,17 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
     }
 
     /**
+     *获取查询视图列表
+     * @param req DescribeSearchViewsRequest
+     * @return DescribeSearchViewsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSearchViewsResponse DescribeSearchViews(DescribeSearchViewsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSearchViews", DescribeSearchViewsResponse.class);
+    }
+
+    /**
      *获取投递任务列表
      * @param req DescribeShipperTasksRequest
      * @return DescribeShipperTasksResponse
@@ -1835,6 +1868,17 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
     public ModifyScheduledSqlResponse ModifyScheduledSql(ModifyScheduledSqlRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyScheduledSql", ModifyScheduledSqlResponse.class);
+    }
+
+    /**
+     *修改查询视图
+     * @param req ModifySearchViewRequest
+     * @return ModifySearchViewResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySearchViewResponse ModifySearchView(ModifySearchViewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySearchView", ModifySearchViewResponse.class);
     }
 
     /**

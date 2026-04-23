@@ -24,240 +24,253 @@ import java.util.HashMap;
 public class JobView extends AbstractModel {
 
     /**
-    * 作业ID
+    * <p>作业ID</p>
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-    * 作业名称
+    * <p>作业名称</p>
     */
     @SerializedName("JobName")
     @Expose
     private String JobName;
 
     /**
-    * 作业描述
+    * <p>作业描述</p>
     */
     @SerializedName("JobDescription")
     @Expose
     private String JobDescription;
 
     /**
-    * 作业优先级
+    * <p>作业创建者</p>
+    */
+    @SerializedName("Creator")
+    @Expose
+    private String Creator;
+
+    /**
+    * <p>作业优先级</p>
     */
     @SerializedName("Priority")
     @Expose
     private Long Priority;
 
     /**
-    * 作业状态，包括CREATED, QUEING, STARTNG, RUNING, TERMINATING, TERMINATED, SUCCESS, 
-FAILED
-
+    * <p>作业状态，包括CREATED, QUEING, STARTNG, RUNING, TERMINATING, TERMINATED, SUCCESS,<br>FAILED</p>
     */
     @SerializedName("JobState")
     @Expose
     private String JobState;
 
     /**
-    * 作业所属集群ID
+    * <p>作业所属集群ID</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 作业所属队列名称
+    * <p>作业所属队列名称</p>
     */
     @SerializedName("QueueName")
     @Expose
     private String QueueName;
 
     /**
-    * 完成作业任务所需资源
+    * <p>完成作业任务所需资源</p>
     */
     @SerializedName("OccupyResources")
     @Expose
     private String OccupyResources;
 
     /**
-    * 作业任务创建时间
+    * <p>作业任务创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 作业任务结束时间
+    * <p>作业任务结束时间</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-     * Get 作业ID 
-     * @return JobId 作业ID
+     * Get <p>作业ID</p> 
+     * @return JobId <p>作业ID</p>
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 作业ID
-     * @param JobId 作业ID
+     * Set <p>作业ID</p>
+     * @param JobId <p>作业ID</p>
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get 作业名称 
-     * @return JobName 作业名称
+     * Get <p>作业名称</p> 
+     * @return JobName <p>作业名称</p>
      */
     public String getJobName() {
         return this.JobName;
     }
 
     /**
-     * Set 作业名称
-     * @param JobName 作业名称
+     * Set <p>作业名称</p>
+     * @param JobName <p>作业名称</p>
      */
     public void setJobName(String JobName) {
         this.JobName = JobName;
     }
 
     /**
-     * Get 作业描述 
-     * @return JobDescription 作业描述
+     * Get <p>作业描述</p> 
+     * @return JobDescription <p>作业描述</p>
      */
     public String getJobDescription() {
         return this.JobDescription;
     }
 
     /**
-     * Set 作业描述
-     * @param JobDescription 作业描述
+     * Set <p>作业描述</p>
+     * @param JobDescription <p>作业描述</p>
      */
     public void setJobDescription(String JobDescription) {
         this.JobDescription = JobDescription;
     }
 
     /**
-     * Get 作业优先级 
-     * @return Priority 作业优先级
+     * Get <p>作业创建者</p> 
+     * @return Creator <p>作业创建者</p>
+     */
+    public String getCreator() {
+        return this.Creator;
+    }
+
+    /**
+     * Set <p>作业创建者</p>
+     * @param Creator <p>作业创建者</p>
+     */
+    public void setCreator(String Creator) {
+        this.Creator = Creator;
+    }
+
+    /**
+     * Get <p>作业优先级</p> 
+     * @return Priority <p>作业优先级</p>
      */
     public Long getPriority() {
         return this.Priority;
     }
 
     /**
-     * Set 作业优先级
-     * @param Priority 作业优先级
+     * Set <p>作业优先级</p>
+     * @param Priority <p>作业优先级</p>
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;
     }
 
     /**
-     * Get 作业状态，包括CREATED, QUEING, STARTNG, RUNING, TERMINATING, TERMINATED, SUCCESS, 
-FAILED
- 
-     * @return JobState 作业状态，包括CREATED, QUEING, STARTNG, RUNING, TERMINATING, TERMINATED, SUCCESS, 
-FAILED
-
+     * Get <p>作业状态，包括CREATED, QUEING, STARTNG, RUNING, TERMINATING, TERMINATED, SUCCESS,<br>FAILED</p> 
+     * @return JobState <p>作业状态，包括CREATED, QUEING, STARTNG, RUNING, TERMINATING, TERMINATED, SUCCESS,<br>FAILED</p>
      */
     public String getJobState() {
         return this.JobState;
     }
 
     /**
-     * Set 作业状态，包括CREATED, QUEING, STARTNG, RUNING, TERMINATING, TERMINATED, SUCCESS, 
-FAILED
-
-     * @param JobState 作业状态，包括CREATED, QUEING, STARTNG, RUNING, TERMINATING, TERMINATED, SUCCESS, 
-FAILED
-
+     * Set <p>作业状态，包括CREATED, QUEING, STARTNG, RUNING, TERMINATING, TERMINATED, SUCCESS,<br>FAILED</p>
+     * @param JobState <p>作业状态，包括CREATED, QUEING, STARTNG, RUNING, TERMINATING, TERMINATED, SUCCESS,<br>FAILED</p>
      */
     public void setJobState(String JobState) {
         this.JobState = JobState;
     }
 
     /**
-     * Get 作业所属集群ID 
-     * @return ClusterId 作业所属集群ID
+     * Get <p>作业所属集群ID</p> 
+     * @return ClusterId <p>作业所属集群ID</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 作业所属集群ID
-     * @param ClusterId 作业所属集群ID
+     * Set <p>作业所属集群ID</p>
+     * @param ClusterId <p>作业所属集群ID</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 作业所属队列名称 
-     * @return QueueName 作业所属队列名称
+     * Get <p>作业所属队列名称</p> 
+     * @return QueueName <p>作业所属队列名称</p>
      */
     public String getQueueName() {
         return this.QueueName;
     }
 
     /**
-     * Set 作业所属队列名称
-     * @param QueueName 作业所属队列名称
+     * Set <p>作业所属队列名称</p>
+     * @param QueueName <p>作业所属队列名称</p>
      */
     public void setQueueName(String QueueName) {
         this.QueueName = QueueName;
     }
 
     /**
-     * Get 完成作业任务所需资源 
-     * @return OccupyResources 完成作业任务所需资源
+     * Get <p>完成作业任务所需资源</p> 
+     * @return OccupyResources <p>完成作业任务所需资源</p>
      */
     public String getOccupyResources() {
         return this.OccupyResources;
     }
 
     /**
-     * Set 完成作业任务所需资源
-     * @param OccupyResources 完成作业任务所需资源
+     * Set <p>完成作业任务所需资源</p>
+     * @param OccupyResources <p>完成作业任务所需资源</p>
      */
     public void setOccupyResources(String OccupyResources) {
         this.OccupyResources = OccupyResources;
     }
 
     /**
-     * Get 作业任务创建时间 
-     * @return CreateTime 作业任务创建时间
+     * Get <p>作业任务创建时间</p> 
+     * @return CreateTime <p>作业任务创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 作业任务创建时间
-     * @param CreateTime 作业任务创建时间
+     * Set <p>作业任务创建时间</p>
+     * @param CreateTime <p>作业任务创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 作业任务结束时间 
-     * @return EndTime 作业任务结束时间
+     * Get <p>作业任务结束时间</p> 
+     * @return EndTime <p>作业任务结束时间</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 作业任务结束时间
-     * @param EndTime 作业任务结束时间
+     * Set <p>作业任务结束时间</p>
+     * @param EndTime <p>作业任务结束时间</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -279,6 +292,9 @@ FAILED
         }
         if (source.JobDescription != null) {
             this.JobDescription = new String(source.JobDescription);
+        }
+        if (source.Creator != null) {
+            this.Creator = new String(source.Creator);
         }
         if (source.Priority != null) {
             this.Priority = new Long(source.Priority);
@@ -311,6 +327,7 @@ FAILED
         this.setParamSimple(map, prefix + "JobId", this.JobId);
         this.setParamSimple(map, prefix + "JobName", this.JobName);
         this.setParamSimple(map, prefix + "JobDescription", this.JobDescription);
+        this.setParamSimple(map, prefix + "Creator", this.Creator);
         this.setParamSimple(map, prefix + "Priority", this.Priority);
         this.setParamSimple(map, prefix + "JobState", this.JobState);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);

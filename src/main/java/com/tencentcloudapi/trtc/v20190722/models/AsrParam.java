@@ -101,6 +101,30 @@ public class AsrParam extends AbstractModel {
     private Long VadLevel;
 
     /**
+    * 是否过滤脏词（目前仅支持填写基础语言引擎和标准语言引擎），范围为[0, 2]，默认值为 0。
+0：不过滤脏词；1：过滤脏词；2：将脏词替换为 " * "。
+    */
+    @SerializedName("FilterDirty")
+    @Expose
+    private Long FilterDirty;
+
+    /**
+    * 是否过滤语气词（目前仅支持填写基础语言引擎和标准语言引擎），范围为[0, 2]，默认值为 0。
+0：不过滤语气词；1：部分过滤；2：严格过滤。
+    */
+    @SerializedName("FilterModal")
+    @Expose
+    private Long FilterModal;
+
+    /**
+    * 是否过滤句末的句号（目前仅支持填写基础语言引擎和标准语言引擎），范围为[0, 1]，默认值为 0。
+0：不过滤句末的句号；1：过滤句末的句号。
+    */
+    @SerializedName("FilterPunc")
+    @Expose
+    private Long FilterPunc;
+
+    /**
      * Get 转录服务使用的模型类型。示例值"16k_zh_en"。语音转文本不同套餐版本支持的语言如下：
 
 基础语言引擎：
@@ -348,6 +372,66 @@ public class AsrParam extends AbstractModel {
         this.VadLevel = VadLevel;
     }
 
+    /**
+     * Get 是否过滤脏词（目前仅支持填写基础语言引擎和标准语言引擎），范围为[0, 2]，默认值为 0。
+0：不过滤脏词；1：过滤脏词；2：将脏词替换为 " * "。 
+     * @return FilterDirty 是否过滤脏词（目前仅支持填写基础语言引擎和标准语言引擎），范围为[0, 2]，默认值为 0。
+0：不过滤脏词；1：过滤脏词；2：将脏词替换为 " * "。
+     */
+    public Long getFilterDirty() {
+        return this.FilterDirty;
+    }
+
+    /**
+     * Set 是否过滤脏词（目前仅支持填写基础语言引擎和标准语言引擎），范围为[0, 2]，默认值为 0。
+0：不过滤脏词；1：过滤脏词；2：将脏词替换为 " * "。
+     * @param FilterDirty 是否过滤脏词（目前仅支持填写基础语言引擎和标准语言引擎），范围为[0, 2]，默认值为 0。
+0：不过滤脏词；1：过滤脏词；2：将脏词替换为 " * "。
+     */
+    public void setFilterDirty(Long FilterDirty) {
+        this.FilterDirty = FilterDirty;
+    }
+
+    /**
+     * Get 是否过滤语气词（目前仅支持填写基础语言引擎和标准语言引擎），范围为[0, 2]，默认值为 0。
+0：不过滤语气词；1：部分过滤；2：严格过滤。 
+     * @return FilterModal 是否过滤语气词（目前仅支持填写基础语言引擎和标准语言引擎），范围为[0, 2]，默认值为 0。
+0：不过滤语气词；1：部分过滤；2：严格过滤。
+     */
+    public Long getFilterModal() {
+        return this.FilterModal;
+    }
+
+    /**
+     * Set 是否过滤语气词（目前仅支持填写基础语言引擎和标准语言引擎），范围为[0, 2]，默认值为 0。
+0：不过滤语气词；1：部分过滤；2：严格过滤。
+     * @param FilterModal 是否过滤语气词（目前仅支持填写基础语言引擎和标准语言引擎），范围为[0, 2]，默认值为 0。
+0：不过滤语气词；1：部分过滤；2：严格过滤。
+     */
+    public void setFilterModal(Long FilterModal) {
+        this.FilterModal = FilterModal;
+    }
+
+    /**
+     * Get 是否过滤句末的句号（目前仅支持填写基础语言引擎和标准语言引擎），范围为[0, 1]，默认值为 0。
+0：不过滤句末的句号；1：过滤句末的句号。 
+     * @return FilterPunc 是否过滤句末的句号（目前仅支持填写基础语言引擎和标准语言引擎），范围为[0, 1]，默认值为 0。
+0：不过滤句末的句号；1：过滤句末的句号。
+     */
+    public Long getFilterPunc() {
+        return this.FilterPunc;
+    }
+
+    /**
+     * Set 是否过滤句末的句号（目前仅支持填写基础语言引擎和标准语言引擎），范围为[0, 1]，默认值为 0。
+0：不过滤句末的句号；1：过滤句末的句号。
+     * @param FilterPunc 是否过滤句末的句号（目前仅支持填写基础语言引擎和标准语言引擎），范围为[0, 1]，默认值为 0。
+0：不过滤句末的句号；1：过滤句末的句号。
+     */
+    public void setFilterPunc(Long FilterPunc) {
+        this.FilterPunc = FilterPunc;
+    }
+
     public AsrParam() {
     }
 
@@ -374,6 +458,15 @@ public class AsrParam extends AbstractModel {
         if (source.VadLevel != null) {
             this.VadLevel = new Long(source.VadLevel);
         }
+        if (source.FilterDirty != null) {
+            this.FilterDirty = new Long(source.FilterDirty);
+        }
+        if (source.FilterModal != null) {
+            this.FilterModal = new Long(source.FilterModal);
+        }
+        if (source.FilterPunc != null) {
+            this.FilterPunc = new Long(source.FilterPunc);
+        }
     }
 
 
@@ -386,6 +479,9 @@ public class AsrParam extends AbstractModel {
         this.setParamSimple(map, prefix + "HotWordList", this.HotWordList);
         this.setParamArraySimple(map, prefix + "AlternativeLanguage.", this.AlternativeLanguage);
         this.setParamSimple(map, prefix + "VadLevel", this.VadLevel);
+        this.setParamSimple(map, prefix + "FilterDirty", this.FilterDirty);
+        this.setParamSimple(map, prefix + "FilterModal", this.FilterModal);
+        this.setParamSimple(map, prefix + "FilterPunc", this.FilterPunc);
 
     }
 }

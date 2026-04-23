@@ -24,427 +24,463 @@ import java.util.HashMap;
 public class SuperNodeListItem extends AbstractModel {
 
     /**
-    * 超级节点ID
+    * <p>超级节点ID</p>
     */
     @SerializedName("NodeID")
     @Expose
     private String NodeID;
 
     /**
-    * 超级节点名称
+    * <p>超级节点名称</p>
     */
     @SerializedName("NodeName")
     @Expose
     private String NodeName;
 
     /**
-    * 所属集群名
+    * <p>所属集群名</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * 所属集群ID
+    * <p>所属集群ID</p>
     */
     @SerializedName("ClusterID")
     @Expose
     private String ClusterID;
 
     /**
-    * 节点状态:Running,Ready,Notready,Initializing,Failed,Error
+    * <p>节点状态:Running,Ready,Notready,Initializing,Failed,Error</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 子网ID
+    * <p>子网ID</p>
     */
     @SerializedName("SubNetID")
     @Expose
     private String SubNetID;
 
     /**
-    * 子网名称
+    * <p>子网名称</p>
     */
     @SerializedName("SubNetName")
     @Expose
     private String SubNetName;
 
     /**
-    * 子网网段
+    * <p>子网网段</p>
     */
     @SerializedName("SubNetCidr")
     @Expose
     private String SubNetCidr;
 
     /**
-    * 可用区ID
+    * <p>可用区ID</p>
     */
     @SerializedName("ZoneID")
     @Expose
     private String ZoneID;
 
     /**
-    * 可用区
+    * <p>可用区</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 关联pod数
+    * <p>关联pod数</p>
     */
     @SerializedName("RelatePodCount")
     @Expose
     private Long RelatePodCount;
 
     /**
-    * 关联容器数
+    * <p>关联容器数</p>
     */
     @SerializedName("RelateContainerCount")
     @Expose
     private Long RelateContainerCount;
 
     /**
-    * agent安装状态UNINSTALL:未安装;INSTALLED:已安装;INSTALLING:安装中;
+    * <p>agent安装状态UNINSTALL:未安装;INSTALLED:已安装;INSTALLING:安装中;</p>
     */
     @SerializedName("AgentStatus")
     @Expose
     private String AgentStatus;
 
     /**
-    * 节点唯一id
+    * <p>节点唯一id</p>
     */
     @SerializedName("NodeUniqueID")
     @Expose
     private String NodeUniqueID;
 
     /**
-    * 集群接入状态
+    * <p>集群接入状态</p>
     */
     @SerializedName("ClusterAccessedStatus")
     @Expose
     private String ClusterAccessedStatus;
 
     /**
-    * 计费核数
+    * <p>计费核数</p>
     */
     @SerializedName("ChargeCoresCnt")
     @Expose
     private Long ChargeCoresCnt;
 
     /**
-    * 防护状态:
-已防护: Defended
-未防护: UnDefended
+    * <p>防护状态:<br>已防护: Defended<br>未防护: UnDefended</p>
     */
     @SerializedName("DefendStatus")
     @Expose
     private String DefendStatus;
 
     /**
-     * Get 超级节点ID 
-     * @return NodeID 超级节点ID
+    * <p>集群接入子状态</p><p>枚举值：</p><ul><li>AccessedSubNone： 无</li><li>AccessedSubUninstallException： 卸载异常</li><li>AccessedSubTimeout： 接入超时</li><li>AccessedSubUninstallTimeout： 卸载超时</li><li>AccessedSubResourceException： 集群组件检查异常-Deployment/DaemonSet等异常</li><li>AccessedSubCAMPermissionDenied： CAM权限不够</li></ul>
+    */
+    @SerializedName("ClusterAccessedSubStatus")
+    @Expose
+    private String ClusterAccessedSubStatus;
+
+    /**
+    * <p>失败具体原因描述</p>
+    */
+    @SerializedName("ClusterAccessedErrorReason")
+    @Expose
+    private String ClusterAccessedErrorReason;
+
+    /**
+     * Get <p>超级节点ID</p> 
+     * @return NodeID <p>超级节点ID</p>
      */
     public String getNodeID() {
         return this.NodeID;
     }
 
     /**
-     * Set 超级节点ID
-     * @param NodeID 超级节点ID
+     * Set <p>超级节点ID</p>
+     * @param NodeID <p>超级节点ID</p>
      */
     public void setNodeID(String NodeID) {
         this.NodeID = NodeID;
     }
 
     /**
-     * Get 超级节点名称 
-     * @return NodeName 超级节点名称
+     * Get <p>超级节点名称</p> 
+     * @return NodeName <p>超级节点名称</p>
      */
     public String getNodeName() {
         return this.NodeName;
     }
 
     /**
-     * Set 超级节点名称
-     * @param NodeName 超级节点名称
+     * Set <p>超级节点名称</p>
+     * @param NodeName <p>超级节点名称</p>
      */
     public void setNodeName(String NodeName) {
         this.NodeName = NodeName;
     }
 
     /**
-     * Get 所属集群名 
-     * @return ClusterName 所属集群名
+     * Get <p>所属集群名</p> 
+     * @return ClusterName <p>所属集群名</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set 所属集群名
-     * @param ClusterName 所属集群名
+     * Set <p>所属集群名</p>
+     * @param ClusterName <p>所属集群名</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 所属集群ID 
-     * @return ClusterID 所属集群ID
+     * Get <p>所属集群ID</p> 
+     * @return ClusterID <p>所属集群ID</p>
      */
     public String getClusterID() {
         return this.ClusterID;
     }
 
     /**
-     * Set 所属集群ID
-     * @param ClusterID 所属集群ID
+     * Set <p>所属集群ID</p>
+     * @param ClusterID <p>所属集群ID</p>
      */
     public void setClusterID(String ClusterID) {
         this.ClusterID = ClusterID;
     }
 
     /**
-     * Get 节点状态:Running,Ready,Notready,Initializing,Failed,Error 
-     * @return Status 节点状态:Running,Ready,Notready,Initializing,Failed,Error
+     * Get <p>节点状态:Running,Ready,Notready,Initializing,Failed,Error</p> 
+     * @return Status <p>节点状态:Running,Ready,Notready,Initializing,Failed,Error</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 节点状态:Running,Ready,Notready,Initializing,Failed,Error
-     * @param Status 节点状态:Running,Ready,Notready,Initializing,Failed,Error
+     * Set <p>节点状态:Running,Ready,Notready,Initializing,Failed,Error</p>
+     * @param Status <p>节点状态:Running,Ready,Notready,Initializing,Failed,Error</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 子网ID 
-     * @return SubNetID 子网ID
+     * Get <p>子网ID</p> 
+     * @return SubNetID <p>子网ID</p>
      */
     public String getSubNetID() {
         return this.SubNetID;
     }
 
     /**
-     * Set 子网ID
-     * @param SubNetID 子网ID
+     * Set <p>子网ID</p>
+     * @param SubNetID <p>子网ID</p>
      */
     public void setSubNetID(String SubNetID) {
         this.SubNetID = SubNetID;
     }
 
     /**
-     * Get 子网名称 
-     * @return SubNetName 子网名称
+     * Get <p>子网名称</p> 
+     * @return SubNetName <p>子网名称</p>
      */
     public String getSubNetName() {
         return this.SubNetName;
     }
 
     /**
-     * Set 子网名称
-     * @param SubNetName 子网名称
+     * Set <p>子网名称</p>
+     * @param SubNetName <p>子网名称</p>
      */
     public void setSubNetName(String SubNetName) {
         this.SubNetName = SubNetName;
     }
 
     /**
-     * Get 子网网段 
-     * @return SubNetCidr 子网网段
+     * Get <p>子网网段</p> 
+     * @return SubNetCidr <p>子网网段</p>
      */
     public String getSubNetCidr() {
         return this.SubNetCidr;
     }
 
     /**
-     * Set 子网网段
-     * @param SubNetCidr 子网网段
+     * Set <p>子网网段</p>
+     * @param SubNetCidr <p>子网网段</p>
      */
     public void setSubNetCidr(String SubNetCidr) {
         this.SubNetCidr = SubNetCidr;
     }
 
     /**
-     * Get 可用区ID 
-     * @return ZoneID 可用区ID
+     * Get <p>可用区ID</p> 
+     * @return ZoneID <p>可用区ID</p>
      */
     public String getZoneID() {
         return this.ZoneID;
     }
 
     /**
-     * Set 可用区ID
-     * @param ZoneID 可用区ID
+     * Set <p>可用区ID</p>
+     * @param ZoneID <p>可用区ID</p>
      */
     public void setZoneID(String ZoneID) {
         this.ZoneID = ZoneID;
     }
 
     /**
-     * Get 可用区 
-     * @return Zone 可用区
+     * Get <p>可用区</p> 
+     * @return Zone <p>可用区</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区
-     * @param Zone 可用区
+     * Set <p>可用区</p>
+     * @param Zone <p>可用区</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 关联pod数 
-     * @return RelatePodCount 关联pod数
+     * Get <p>关联pod数</p> 
+     * @return RelatePodCount <p>关联pod数</p>
      */
     public Long getRelatePodCount() {
         return this.RelatePodCount;
     }
 
     /**
-     * Set 关联pod数
-     * @param RelatePodCount 关联pod数
+     * Set <p>关联pod数</p>
+     * @param RelatePodCount <p>关联pod数</p>
      */
     public void setRelatePodCount(Long RelatePodCount) {
         this.RelatePodCount = RelatePodCount;
     }
 
     /**
-     * Get 关联容器数 
-     * @return RelateContainerCount 关联容器数
+     * Get <p>关联容器数</p> 
+     * @return RelateContainerCount <p>关联容器数</p>
      */
     public Long getRelateContainerCount() {
         return this.RelateContainerCount;
     }
 
     /**
-     * Set 关联容器数
-     * @param RelateContainerCount 关联容器数
+     * Set <p>关联容器数</p>
+     * @param RelateContainerCount <p>关联容器数</p>
      */
     public void setRelateContainerCount(Long RelateContainerCount) {
         this.RelateContainerCount = RelateContainerCount;
     }
 
     /**
-     * Get agent安装状态UNINSTALL:未安装;INSTALLED:已安装;INSTALLING:安装中; 
-     * @return AgentStatus agent安装状态UNINSTALL:未安装;INSTALLED:已安装;INSTALLING:安装中;
+     * Get <p>agent安装状态UNINSTALL:未安装;INSTALLED:已安装;INSTALLING:安装中;</p> 
+     * @return AgentStatus <p>agent安装状态UNINSTALL:未安装;INSTALLED:已安装;INSTALLING:安装中;</p>
      */
     public String getAgentStatus() {
         return this.AgentStatus;
     }
 
     /**
-     * Set agent安装状态UNINSTALL:未安装;INSTALLED:已安装;INSTALLING:安装中;
-     * @param AgentStatus agent安装状态UNINSTALL:未安装;INSTALLED:已安装;INSTALLING:安装中;
+     * Set <p>agent安装状态UNINSTALL:未安装;INSTALLED:已安装;INSTALLING:安装中;</p>
+     * @param AgentStatus <p>agent安装状态UNINSTALL:未安装;INSTALLED:已安装;INSTALLING:安装中;</p>
      */
     public void setAgentStatus(String AgentStatus) {
         this.AgentStatus = AgentStatus;
     }
 
     /**
-     * Get 节点唯一id 
-     * @return NodeUniqueID 节点唯一id
+     * Get <p>节点唯一id</p> 
+     * @return NodeUniqueID <p>节点唯一id</p>
      */
     public String getNodeUniqueID() {
         return this.NodeUniqueID;
     }
 
     /**
-     * Set 节点唯一id
-     * @param NodeUniqueID 节点唯一id
+     * Set <p>节点唯一id</p>
+     * @param NodeUniqueID <p>节点唯一id</p>
      */
     public void setNodeUniqueID(String NodeUniqueID) {
         this.NodeUniqueID = NodeUniqueID;
     }
 
     /**
-     * Get 集群接入状态 
-     * @return ClusterAccessedStatus 集群接入状态
+     * Get <p>集群接入状态</p> 
+     * @return ClusterAccessedStatus <p>集群接入状态</p>
      */
     public String getClusterAccessedStatus() {
         return this.ClusterAccessedStatus;
     }
 
     /**
-     * Set 集群接入状态
-     * @param ClusterAccessedStatus 集群接入状态
+     * Set <p>集群接入状态</p>
+     * @param ClusterAccessedStatus <p>集群接入状态</p>
      */
     public void setClusterAccessedStatus(String ClusterAccessedStatus) {
         this.ClusterAccessedStatus = ClusterAccessedStatus;
     }
 
     /**
-     * Get 计费核数 
-     * @return ChargeCoresCnt 计费核数
+     * Get <p>计费核数</p> 
+     * @return ChargeCoresCnt <p>计费核数</p>
      */
     public Long getChargeCoresCnt() {
         return this.ChargeCoresCnt;
     }
 
     /**
-     * Set 计费核数
-     * @param ChargeCoresCnt 计费核数
+     * Set <p>计费核数</p>
+     * @param ChargeCoresCnt <p>计费核数</p>
      */
     public void setChargeCoresCnt(Long ChargeCoresCnt) {
         this.ChargeCoresCnt = ChargeCoresCnt;
     }
 
     /**
-     * Get 防护状态:
-已防护: Defended
-未防护: UnDefended 
-     * @return DefendStatus 防护状态:
-已防护: Defended
-未防护: UnDefended
+     * Get <p>防护状态:<br>已防护: Defended<br>未防护: UnDefended</p> 
+     * @return DefendStatus <p>防护状态:<br>已防护: Defended<br>未防护: UnDefended</p>
      */
     public String getDefendStatus() {
         return this.DefendStatus;
     }
 
     /**
-     * Set 防护状态:
-已防护: Defended
-未防护: UnDefended
-     * @param DefendStatus 防护状态:
-已防护: Defended
-未防护: UnDefended
+     * Set <p>防护状态:<br>已防护: Defended<br>未防护: UnDefended</p>
+     * @param DefendStatus <p>防护状态:<br>已防护: Defended<br>未防护: UnDefended</p>
      */
     public void setDefendStatus(String DefendStatus) {
         this.DefendStatus = DefendStatus;
+    }
+
+    /**
+     * Get <p>集群接入子状态</p><p>枚举值：</p><ul><li>AccessedSubNone： 无</li><li>AccessedSubUninstallException： 卸载异常</li><li>AccessedSubTimeout： 接入超时</li><li>AccessedSubUninstallTimeout： 卸载超时</li><li>AccessedSubResourceException： 集群组件检查异常-Deployment/DaemonSet等异常</li><li>AccessedSubCAMPermissionDenied： CAM权限不够</li></ul> 
+     * @return ClusterAccessedSubStatus <p>集群接入子状态</p><p>枚举值：</p><ul><li>AccessedSubNone： 无</li><li>AccessedSubUninstallException： 卸载异常</li><li>AccessedSubTimeout： 接入超时</li><li>AccessedSubUninstallTimeout： 卸载超时</li><li>AccessedSubResourceException： 集群组件检查异常-Deployment/DaemonSet等异常</li><li>AccessedSubCAMPermissionDenied： CAM权限不够</li></ul>
+     */
+    public String getClusterAccessedSubStatus() {
+        return this.ClusterAccessedSubStatus;
+    }
+
+    /**
+     * Set <p>集群接入子状态</p><p>枚举值：</p><ul><li>AccessedSubNone： 无</li><li>AccessedSubUninstallException： 卸载异常</li><li>AccessedSubTimeout： 接入超时</li><li>AccessedSubUninstallTimeout： 卸载超时</li><li>AccessedSubResourceException： 集群组件检查异常-Deployment/DaemonSet等异常</li><li>AccessedSubCAMPermissionDenied： CAM权限不够</li></ul>
+     * @param ClusterAccessedSubStatus <p>集群接入子状态</p><p>枚举值：</p><ul><li>AccessedSubNone： 无</li><li>AccessedSubUninstallException： 卸载异常</li><li>AccessedSubTimeout： 接入超时</li><li>AccessedSubUninstallTimeout： 卸载超时</li><li>AccessedSubResourceException： 集群组件检查异常-Deployment/DaemonSet等异常</li><li>AccessedSubCAMPermissionDenied： CAM权限不够</li></ul>
+     */
+    public void setClusterAccessedSubStatus(String ClusterAccessedSubStatus) {
+        this.ClusterAccessedSubStatus = ClusterAccessedSubStatus;
+    }
+
+    /**
+     * Get <p>失败具体原因描述</p> 
+     * @return ClusterAccessedErrorReason <p>失败具体原因描述</p>
+     */
+    public String getClusterAccessedErrorReason() {
+        return this.ClusterAccessedErrorReason;
+    }
+
+    /**
+     * Set <p>失败具体原因描述</p>
+     * @param ClusterAccessedErrorReason <p>失败具体原因描述</p>
+     */
+    public void setClusterAccessedErrorReason(String ClusterAccessedErrorReason) {
+        this.ClusterAccessedErrorReason = ClusterAccessedErrorReason;
     }
 
     public SuperNodeListItem() {
@@ -509,6 +545,12 @@ public class SuperNodeListItem extends AbstractModel {
         if (source.DefendStatus != null) {
             this.DefendStatus = new String(source.DefendStatus);
         }
+        if (source.ClusterAccessedSubStatus != null) {
+            this.ClusterAccessedSubStatus = new String(source.ClusterAccessedSubStatus);
+        }
+        if (source.ClusterAccessedErrorReason != null) {
+            this.ClusterAccessedErrorReason = new String(source.ClusterAccessedErrorReason);
+        }
     }
 
 
@@ -534,6 +576,8 @@ public class SuperNodeListItem extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterAccessedStatus", this.ClusterAccessedStatus);
         this.setParamSimple(map, prefix + "ChargeCoresCnt", this.ChargeCoresCnt);
         this.setParamSimple(map, prefix + "DefendStatus", this.DefendStatus);
+        this.setParamSimple(map, prefix + "ClusterAccessedSubStatus", this.ClusterAccessedSubStatus);
+        this.setParamSimple(map, prefix + "ClusterAccessedErrorReason", this.ClusterAccessedErrorReason);
 
     }
 }

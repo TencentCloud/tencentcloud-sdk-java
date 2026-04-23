@@ -140,6 +140,34 @@ public class SSAIConf extends AbstractModel {
     private Boolean MultiRequest;
 
     /**
+    * <p>dash周期类型：SinglePeriod 或 MultiPeriod，默认 MultiPeriod</p>
+    */
+    @SerializedName("DashOriginManifestType")
+    @Expose
+    private String DashOriginManifestType;
+
+    /**
+    * <p>Empty VAST时是否播放Slate，默认开启(true)</p>
+    */
+    @SerializedName("SlateOnEmptyVast")
+    @Expose
+    private Boolean SlateOnEmptyVast;
+
+    /**
+    * <p>SCTE marker duration，默认180，范围0-3600</p>
+    */
+    @SerializedName("SCTEMarkerDuration")
+    @Expose
+    private Long SCTEMarkerDuration;
+
+    /**
+    * <p>安全组Id</p>
+    */
+    @SerializedName("SecurityGroupId")
+    @Expose
+    private String SecurityGroupId;
+
+    /**
      * Get <p>广告决策服务器URL(ADS)。注意：填了AdsUrl会自动代替覆盖AdsUrls[0]</p> 
      * @return AdsUrl <p>广告决策服务器URL(ADS)。注意：填了AdsUrl会自动代替覆盖AdsUrls[0]</p>
      */
@@ -411,6 +439,70 @@ public class SSAIConf extends AbstractModel {
         this.MultiRequest = MultiRequest;
     }
 
+    /**
+     * Get <p>dash周期类型：SinglePeriod 或 MultiPeriod，默认 MultiPeriod</p> 
+     * @return DashOriginManifestType <p>dash周期类型：SinglePeriod 或 MultiPeriod，默认 MultiPeriod</p>
+     */
+    public String getDashOriginManifestType() {
+        return this.DashOriginManifestType;
+    }
+
+    /**
+     * Set <p>dash周期类型：SinglePeriod 或 MultiPeriod，默认 MultiPeriod</p>
+     * @param DashOriginManifestType <p>dash周期类型：SinglePeriod 或 MultiPeriod，默认 MultiPeriod</p>
+     */
+    public void setDashOriginManifestType(String DashOriginManifestType) {
+        this.DashOriginManifestType = DashOriginManifestType;
+    }
+
+    /**
+     * Get <p>Empty VAST时是否播放Slate，默认开启(true)</p> 
+     * @return SlateOnEmptyVast <p>Empty VAST时是否播放Slate，默认开启(true)</p>
+     */
+    public Boolean getSlateOnEmptyVast() {
+        return this.SlateOnEmptyVast;
+    }
+
+    /**
+     * Set <p>Empty VAST时是否播放Slate，默认开启(true)</p>
+     * @param SlateOnEmptyVast <p>Empty VAST时是否播放Slate，默认开启(true)</p>
+     */
+    public void setSlateOnEmptyVast(Boolean SlateOnEmptyVast) {
+        this.SlateOnEmptyVast = SlateOnEmptyVast;
+    }
+
+    /**
+     * Get <p>SCTE marker duration，默认180，范围0-3600</p> 
+     * @return SCTEMarkerDuration <p>SCTE marker duration，默认180，范围0-3600</p>
+     */
+    public Long getSCTEMarkerDuration() {
+        return this.SCTEMarkerDuration;
+    }
+
+    /**
+     * Set <p>SCTE marker duration，默认180，范围0-3600</p>
+     * @param SCTEMarkerDuration <p>SCTE marker duration，默认180，范围0-3600</p>
+     */
+    public void setSCTEMarkerDuration(Long SCTEMarkerDuration) {
+        this.SCTEMarkerDuration = SCTEMarkerDuration;
+    }
+
+    /**
+     * Get <p>安全组Id</p> 
+     * @return SecurityGroupId <p>安全组Id</p>
+     */
+    public String getSecurityGroupId() {
+        return this.SecurityGroupId;
+    }
+
+    /**
+     * Set <p>安全组Id</p>
+     * @param SecurityGroupId <p>安全组Id</p>
+     */
+    public void setSecurityGroupId(String SecurityGroupId) {
+        this.SecurityGroupId = SecurityGroupId;
+    }
+
     public SSAIConf() {
     }
 
@@ -479,6 +571,18 @@ public class SSAIConf extends AbstractModel {
         if (source.MultiRequest != null) {
             this.MultiRequest = new Boolean(source.MultiRequest);
         }
+        if (source.DashOriginManifestType != null) {
+            this.DashOriginManifestType = new String(source.DashOriginManifestType);
+        }
+        if (source.SlateOnEmptyVast != null) {
+            this.SlateOnEmptyVast = new Boolean(source.SlateOnEmptyVast);
+        }
+        if (source.SCTEMarkerDuration != null) {
+            this.SCTEMarkerDuration = new Long(source.SCTEMarkerDuration);
+        }
+        if (source.SecurityGroupId != null) {
+            this.SecurityGroupId = new String(source.SecurityGroupId);
+        }
     }
 
 
@@ -502,6 +606,10 @@ public class SSAIConf extends AbstractModel {
         this.setParamArraySimple(map, prefix + "PreRollAdsUrls.", this.PreRollAdsUrls);
         this.setParamSimple(map, prefix + "PreRollMaxAllowedDuration", this.PreRollMaxAllowedDuration);
         this.setParamSimple(map, prefix + "MultiRequest", this.MultiRequest);
+        this.setParamSimple(map, prefix + "DashOriginManifestType", this.DashOriginManifestType);
+        this.setParamSimple(map, prefix + "SlateOnEmptyVast", this.SlateOnEmptyVast);
+        this.setParamSimple(map, prefix + "SCTEMarkerDuration", this.SCTEMarkerDuration);
+        this.setParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);
 
     }
 }

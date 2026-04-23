@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class MsgRecord extends AbstractModel {
 
     /**
-    * 内容
+    * <p>内容</p>
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-    * 当前记录所对应的 Session ID
+    * <p>当前记录所对应的 Session ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SessionId")
@@ -39,70 +39,70 @@ public class MsgRecord extends AbstractModel {
     private String SessionId;
 
     /**
-    * 记录ID
+    * <p>记录ID</p>
     */
     @SerializedName("RecordId")
     @Expose
     private String RecordId;
 
     /**
-    * 关联记录ID
+    * <p>关联记录ID</p>
     */
     @SerializedName("RelatedRecordId")
     @Expose
     private String RelatedRecordId;
 
     /**
-    * 是否来自自己
+    * <p>是否来自自己</p>
     */
     @SerializedName("IsFromSelf")
     @Expose
     private Boolean IsFromSelf;
 
     /**
-    * 发送者名称
+    * <p>发送者名称</p>
     */
     @SerializedName("FromName")
     @Expose
     private String FromName;
 
     /**
-    * 发送者头像
+    * <p>发送者头像</p>
     */
     @SerializedName("FromAvatar")
     @Expose
     private String FromAvatar;
 
     /**
-    * 时间戳
+    * <p>时间戳</p>
     */
     @SerializedName("Timestamp")
     @Expose
     private String Timestamp;
 
     /**
-    * 是否已读
+    * <p>是否已读</p>
     */
     @SerializedName("HasRead")
     @Expose
     private Boolean HasRead;
 
     /**
-    * 评价
+    * <p>评价</p>
     */
     @SerializedName("Score")
     @Expose
     private Long Score;
 
     /**
-    * 是否评分
+    * <p>是否评分</p>
     */
     @SerializedName("CanRating")
     @Expose
     private Boolean CanRating;
 
     /**
-    * 是否展示反馈按钮
+    * <p>是否展示反馈按钮</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CanFeedback")
@@ -110,35 +110,35 @@ public class MsgRecord extends AbstractModel {
     private Boolean CanFeedback;
 
     /**
-    * 记录类型
+    * <p>记录类型</p>
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 引用来源
+    * <p>引用来源</p>
     */
     @SerializedName("References")
     @Expose
     private MsgRecordReference [] References;
 
     /**
-    * 评价原因
+    * <p>评价原因</p>
     */
     @SerializedName("Reasons")
     @Expose
     private String [] Reasons;
 
     /**
-    * 是否大模型
+    * <p>是否大模型</p>
     */
     @SerializedName("IsLlmGenerated")
     @Expose
     private Boolean IsLlmGenerated;
 
     /**
-    * 图片链接，可公有读
+    * <p>图片链接，可公有读</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageUrls")
@@ -146,7 +146,7 @@ public class MsgRecord extends AbstractModel {
     private String [] ImageUrls;
 
     /**
-    * 当次 token 统计信息
+    * <p>当次 token 统计信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TokenStat")
@@ -154,21 +154,7 @@ public class MsgRecord extends AbstractModel {
     private TokenStat TokenStat;
 
     /**
-    * 回复方式
-1:大模型直接回复;
-2:保守回复, 未知问题回复;
-3:拒答问题回复;
-4:敏感回复;
-5:问答对直接回复, 已采纳问答对优先回复;
-6:欢迎语回复;
-7:并发超限回复;
-8:全局干预知识;
-9:任务流程过程回复, 当历史记录中 task_flow.type = 0 时, 为大模型回复;
-10:任务流程答案回复;
-11:搜索引擎回复;
-12:知识润色后回复;
-13:图片理解回复;
-14:实时文档回复;
+    * <p>回复方式<br>1:大模型直接回复;<br>2:保守回复, 未知问题回复;<br>3:拒答问题回复;<br>4:敏感回复;<br>5:问答对直接回复, 已采纳问答对优先回复;<br>6:欢迎语回复;<br>7:并发超限回复;<br>8:全局干预知识;<br>9:任务流程过程回复, 当历史记录中 task_flow.type = 0 时, 为大模型回复;<br>10:任务流程答案回复;<br>11:搜索引擎回复;<br>12:知识润色后回复;<br>13:图片理解回复;<br>14:实时文档回复;</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReplyMethod")
@@ -176,7 +162,7 @@ public class MsgRecord extends AbstractModel {
     private Long ReplyMethod;
 
     /**
-    * 选项卡, 用于多轮对话
+    * <p>选项卡, 用于多轮对话</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OptionCards")
@@ -184,7 +170,7 @@ public class MsgRecord extends AbstractModel {
     private String [] OptionCards;
 
     /**
-    * 任务信息
+    * <p>任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskFlow")
@@ -192,7 +178,7 @@ public class MsgRecord extends AbstractModel {
     private TaskFlowInfo TaskFlow;
 
     /**
-    * 用户传入的文件信息
+    * <p>用户传入的文件信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileInfos")
@@ -200,7 +186,7 @@ public class MsgRecord extends AbstractModel {
     private FileInfo [] FileInfos;
 
     /**
-    * 参考来源引用位置信息
+    * <p>参考来源引用位置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QuoteInfos")
@@ -208,7 +194,7 @@ public class MsgRecord extends AbstractModel {
     private QuoteInfo [] QuoteInfos;
 
     /**
-    * Agent的思考过程信息
+    * <p>Agent的思考过程信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AgentThought")
@@ -216,7 +202,7 @@ public class MsgRecord extends AbstractModel {
     private AgentThought AgentThought;
 
     /**
-    * 扩展信息
+    * <p>扩展信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExtraInfo")
@@ -224,7 +210,7 @@ public class MsgRecord extends AbstractModel {
     private ExtraInfo ExtraInfo;
 
     /**
-    * 工作流信息
+    * <p>工作流信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkFlow")
@@ -232,7 +218,7 @@ public class MsgRecord extends AbstractModel {
     private WorkflowInfo WorkFlow;
 
     /**
-    * Widget信息
+    * <p>Widget信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Widgets")
@@ -240,7 +226,7 @@ public class MsgRecord extends AbstractModel {
     private Widget [] Widgets;
 
     /**
-    * Widget动作信息
+    * <p>Widget动作信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WidgetAction")
@@ -248,7 +234,7 @@ public class MsgRecord extends AbstractModel {
     private WidgetAction WidgetAction;
 
     /**
-    * 音频信息
+    * <p>音频信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Audios")
@@ -256,25 +242,32 @@ public class MsgRecord extends AbstractModel {
     private Audio [] Audios;
 
     /**
-     * Get 内容 
-     * @return Content 内容
+    * <p>标识选项卡为单选还是双选</p><p>枚举值：</p><ul><li>0： 单选</li><li>1： 双选</li></ul>
+    */
+    @SerializedName("OptionMode")
+    @Expose
+    private Long OptionMode;
+
+    /**
+     * Get <p>内容</p> 
+     * @return Content <p>内容</p>
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set 内容
-     * @param Content 内容
+     * Set <p>内容</p>
+     * @param Content <p>内容</p>
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get 当前记录所对应的 Session ID
+     * Get <p>当前记录所对应的 Session ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SessionId 当前记录所对应的 Session ID
+     * @return SessionId <p>当前记录所对应的 Session ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSessionId() {
@@ -282,9 +275,9 @@ public class MsgRecord extends AbstractModel {
     }
 
     /**
-     * Set 当前记录所对应的 Session ID
+     * Set <p>当前记录所对应的 Session ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SessionId 当前记录所对应的 Session ID
+     * @param SessionId <p>当前记录所对应的 Session ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSessionId(String SessionId) {
@@ -292,153 +285,153 @@ public class MsgRecord extends AbstractModel {
     }
 
     /**
-     * Get 记录ID 
-     * @return RecordId 记录ID
+     * Get <p>记录ID</p> 
+     * @return RecordId <p>记录ID</p>
      */
     public String getRecordId() {
         return this.RecordId;
     }
 
     /**
-     * Set 记录ID
-     * @param RecordId 记录ID
+     * Set <p>记录ID</p>
+     * @param RecordId <p>记录ID</p>
      */
     public void setRecordId(String RecordId) {
         this.RecordId = RecordId;
     }
 
     /**
-     * Get 关联记录ID 
-     * @return RelatedRecordId 关联记录ID
+     * Get <p>关联记录ID</p> 
+     * @return RelatedRecordId <p>关联记录ID</p>
      */
     public String getRelatedRecordId() {
         return this.RelatedRecordId;
     }
 
     /**
-     * Set 关联记录ID
-     * @param RelatedRecordId 关联记录ID
+     * Set <p>关联记录ID</p>
+     * @param RelatedRecordId <p>关联记录ID</p>
      */
     public void setRelatedRecordId(String RelatedRecordId) {
         this.RelatedRecordId = RelatedRecordId;
     }
 
     /**
-     * Get 是否来自自己 
-     * @return IsFromSelf 是否来自自己
+     * Get <p>是否来自自己</p> 
+     * @return IsFromSelf <p>是否来自自己</p>
      */
     public Boolean getIsFromSelf() {
         return this.IsFromSelf;
     }
 
     /**
-     * Set 是否来自自己
-     * @param IsFromSelf 是否来自自己
+     * Set <p>是否来自自己</p>
+     * @param IsFromSelf <p>是否来自自己</p>
      */
     public void setIsFromSelf(Boolean IsFromSelf) {
         this.IsFromSelf = IsFromSelf;
     }
 
     /**
-     * Get 发送者名称 
-     * @return FromName 发送者名称
+     * Get <p>发送者名称</p> 
+     * @return FromName <p>发送者名称</p>
      */
     public String getFromName() {
         return this.FromName;
     }
 
     /**
-     * Set 发送者名称
-     * @param FromName 发送者名称
+     * Set <p>发送者名称</p>
+     * @param FromName <p>发送者名称</p>
      */
     public void setFromName(String FromName) {
         this.FromName = FromName;
     }
 
     /**
-     * Get 发送者头像 
-     * @return FromAvatar 发送者头像
+     * Get <p>发送者头像</p> 
+     * @return FromAvatar <p>发送者头像</p>
      */
     public String getFromAvatar() {
         return this.FromAvatar;
     }
 
     /**
-     * Set 发送者头像
-     * @param FromAvatar 发送者头像
+     * Set <p>发送者头像</p>
+     * @param FromAvatar <p>发送者头像</p>
      */
     public void setFromAvatar(String FromAvatar) {
         this.FromAvatar = FromAvatar;
     }
 
     /**
-     * Get 时间戳 
-     * @return Timestamp 时间戳
+     * Get <p>时间戳</p> 
+     * @return Timestamp <p>时间戳</p>
      */
     public String getTimestamp() {
         return this.Timestamp;
     }
 
     /**
-     * Set 时间戳
-     * @param Timestamp 时间戳
+     * Set <p>时间戳</p>
+     * @param Timestamp <p>时间戳</p>
      */
     public void setTimestamp(String Timestamp) {
         this.Timestamp = Timestamp;
     }
 
     /**
-     * Get 是否已读 
-     * @return HasRead 是否已读
+     * Get <p>是否已读</p> 
+     * @return HasRead <p>是否已读</p>
      */
     public Boolean getHasRead() {
         return this.HasRead;
     }
 
     /**
-     * Set 是否已读
-     * @param HasRead 是否已读
+     * Set <p>是否已读</p>
+     * @param HasRead <p>是否已读</p>
      */
     public void setHasRead(Boolean HasRead) {
         this.HasRead = HasRead;
     }
 
     /**
-     * Get 评价 
-     * @return Score 评价
+     * Get <p>评价</p> 
+     * @return Score <p>评价</p>
      */
     public Long getScore() {
         return this.Score;
     }
 
     /**
-     * Set 评价
-     * @param Score 评价
+     * Set <p>评价</p>
+     * @param Score <p>评价</p>
      */
     public void setScore(Long Score) {
         this.Score = Score;
     }
 
     /**
-     * Get 是否评分 
-     * @return CanRating 是否评分
+     * Get <p>是否评分</p> 
+     * @return CanRating <p>是否评分</p>
      */
     public Boolean getCanRating() {
         return this.CanRating;
     }
 
     /**
-     * Set 是否评分
-     * @param CanRating 是否评分
+     * Set <p>是否评分</p>
+     * @param CanRating <p>是否评分</p>
      */
     public void setCanRating(Boolean CanRating) {
         this.CanRating = CanRating;
     }
 
     /**
-     * Get 是否展示反馈按钮
+     * Get <p>是否展示反馈按钮</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CanFeedback 是否展示反馈按钮
+     * @return CanFeedback <p>是否展示反馈按钮</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getCanFeedback() {
@@ -446,9 +439,9 @@ public class MsgRecord extends AbstractModel {
     }
 
     /**
-     * Set 是否展示反馈按钮
+     * Set <p>是否展示反馈按钮</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CanFeedback 是否展示反馈按钮
+     * @param CanFeedback <p>是否展示反馈按钮</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCanFeedback(Boolean CanFeedback) {
@@ -456,73 +449,73 @@ public class MsgRecord extends AbstractModel {
     }
 
     /**
-     * Get 记录类型 
-     * @return Type 记录类型
+     * Get <p>记录类型</p> 
+     * @return Type <p>记录类型</p>
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 记录类型
-     * @param Type 记录类型
+     * Set <p>记录类型</p>
+     * @param Type <p>记录类型</p>
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 引用来源 
-     * @return References 引用来源
+     * Get <p>引用来源</p> 
+     * @return References <p>引用来源</p>
      */
     public MsgRecordReference [] getReferences() {
         return this.References;
     }
 
     /**
-     * Set 引用来源
-     * @param References 引用来源
+     * Set <p>引用来源</p>
+     * @param References <p>引用来源</p>
      */
     public void setReferences(MsgRecordReference [] References) {
         this.References = References;
     }
 
     /**
-     * Get 评价原因 
-     * @return Reasons 评价原因
+     * Get <p>评价原因</p> 
+     * @return Reasons <p>评价原因</p>
      */
     public String [] getReasons() {
         return this.Reasons;
     }
 
     /**
-     * Set 评价原因
-     * @param Reasons 评价原因
+     * Set <p>评价原因</p>
+     * @param Reasons <p>评价原因</p>
      */
     public void setReasons(String [] Reasons) {
         this.Reasons = Reasons;
     }
 
     /**
-     * Get 是否大模型 
-     * @return IsLlmGenerated 是否大模型
+     * Get <p>是否大模型</p> 
+     * @return IsLlmGenerated <p>是否大模型</p>
      */
     public Boolean getIsLlmGenerated() {
         return this.IsLlmGenerated;
     }
 
     /**
-     * Set 是否大模型
-     * @param IsLlmGenerated 是否大模型
+     * Set <p>是否大模型</p>
+     * @param IsLlmGenerated <p>是否大模型</p>
      */
     public void setIsLlmGenerated(Boolean IsLlmGenerated) {
         this.IsLlmGenerated = IsLlmGenerated;
     }
 
     /**
-     * Get 图片链接，可公有读
+     * Get <p>图片链接，可公有读</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ImageUrls 图片链接，可公有读
+     * @return ImageUrls <p>图片链接，可公有读</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getImageUrls() {
@@ -530,9 +523,9 @@ public class MsgRecord extends AbstractModel {
     }
 
     /**
-     * Set 图片链接，可公有读
+     * Set <p>图片链接，可公有读</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImageUrls 图片链接，可公有读
+     * @param ImageUrls <p>图片链接，可公有读</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageUrls(String [] ImageUrls) {
@@ -540,9 +533,9 @@ public class MsgRecord extends AbstractModel {
     }
 
     /**
-     * Get 当次 token 统计信息
+     * Get <p>当次 token 统计信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TokenStat 当次 token 统计信息
+     * @return TokenStat <p>当次 token 统计信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TokenStat getTokenStat() {
@@ -550,9 +543,9 @@ public class MsgRecord extends AbstractModel {
     }
 
     /**
-     * Set 当次 token 统计信息
+     * Set <p>当次 token 统计信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TokenStat 当次 token 统计信息
+     * @param TokenStat <p>当次 token 统计信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTokenStat(TokenStat TokenStat) {
@@ -560,37 +553,9 @@ public class MsgRecord extends AbstractModel {
     }
 
     /**
-     * Get 回复方式
-1:大模型直接回复;
-2:保守回复, 未知问题回复;
-3:拒答问题回复;
-4:敏感回复;
-5:问答对直接回复, 已采纳问答对优先回复;
-6:欢迎语回复;
-7:并发超限回复;
-8:全局干预知识;
-9:任务流程过程回复, 当历史记录中 task_flow.type = 0 时, 为大模型回复;
-10:任务流程答案回复;
-11:搜索引擎回复;
-12:知识润色后回复;
-13:图片理解回复;
-14:实时文档回复;
+     * Get <p>回复方式<br>1:大模型直接回复;<br>2:保守回复, 未知问题回复;<br>3:拒答问题回复;<br>4:敏感回复;<br>5:问答对直接回复, 已采纳问答对优先回复;<br>6:欢迎语回复;<br>7:并发超限回复;<br>8:全局干预知识;<br>9:任务流程过程回复, 当历史记录中 task_flow.type = 0 时, 为大模型回复;<br>10:任务流程答案回复;<br>11:搜索引擎回复;<br>12:知识润色后回复;<br>13:图片理解回复;<br>14:实时文档回复;</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReplyMethod 回复方式
-1:大模型直接回复;
-2:保守回复, 未知问题回复;
-3:拒答问题回复;
-4:敏感回复;
-5:问答对直接回复, 已采纳问答对优先回复;
-6:欢迎语回复;
-7:并发超限回复;
-8:全局干预知识;
-9:任务流程过程回复, 当历史记录中 task_flow.type = 0 时, 为大模型回复;
-10:任务流程答案回复;
-11:搜索引擎回复;
-12:知识润色后回复;
-13:图片理解回复;
-14:实时文档回复;
+     * @return ReplyMethod <p>回复方式<br>1:大模型直接回复;<br>2:保守回复, 未知问题回复;<br>3:拒答问题回复;<br>4:敏感回复;<br>5:问答对直接回复, 已采纳问答对优先回复;<br>6:欢迎语回复;<br>7:并发超限回复;<br>8:全局干预知识;<br>9:任务流程过程回复, 当历史记录中 task_flow.type = 0 时, 为大模型回复;<br>10:任务流程答案回复;<br>11:搜索引擎回复;<br>12:知识润色后回复;<br>13:图片理解回复;<br>14:实时文档回复;</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReplyMethod() {
@@ -598,37 +563,9 @@ public class MsgRecord extends AbstractModel {
     }
 
     /**
-     * Set 回复方式
-1:大模型直接回复;
-2:保守回复, 未知问题回复;
-3:拒答问题回复;
-4:敏感回复;
-5:问答对直接回复, 已采纳问答对优先回复;
-6:欢迎语回复;
-7:并发超限回复;
-8:全局干预知识;
-9:任务流程过程回复, 当历史记录中 task_flow.type = 0 时, 为大模型回复;
-10:任务流程答案回复;
-11:搜索引擎回复;
-12:知识润色后回复;
-13:图片理解回复;
-14:实时文档回复;
+     * Set <p>回复方式<br>1:大模型直接回复;<br>2:保守回复, 未知问题回复;<br>3:拒答问题回复;<br>4:敏感回复;<br>5:问答对直接回复, 已采纳问答对优先回复;<br>6:欢迎语回复;<br>7:并发超限回复;<br>8:全局干预知识;<br>9:任务流程过程回复, 当历史记录中 task_flow.type = 0 时, 为大模型回复;<br>10:任务流程答案回复;<br>11:搜索引擎回复;<br>12:知识润色后回复;<br>13:图片理解回复;<br>14:实时文档回复;</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReplyMethod 回复方式
-1:大模型直接回复;
-2:保守回复, 未知问题回复;
-3:拒答问题回复;
-4:敏感回复;
-5:问答对直接回复, 已采纳问答对优先回复;
-6:欢迎语回复;
-7:并发超限回复;
-8:全局干预知识;
-9:任务流程过程回复, 当历史记录中 task_flow.type = 0 时, 为大模型回复;
-10:任务流程答案回复;
-11:搜索引擎回复;
-12:知识润色后回复;
-13:图片理解回复;
-14:实时文档回复;
+     * @param ReplyMethod <p>回复方式<br>1:大模型直接回复;<br>2:保守回复, 未知问题回复;<br>3:拒答问题回复;<br>4:敏感回复;<br>5:问答对直接回复, 已采纳问答对优先回复;<br>6:欢迎语回复;<br>7:并发超限回复;<br>8:全局干预知识;<br>9:任务流程过程回复, 当历史记录中 task_flow.type = 0 时, 为大模型回复;<br>10:任务流程答案回复;<br>11:搜索引擎回复;<br>12:知识润色后回复;<br>13:图片理解回复;<br>14:实时文档回复;</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReplyMethod(Long ReplyMethod) {
@@ -636,9 +573,9 @@ public class MsgRecord extends AbstractModel {
     }
 
     /**
-     * Get 选项卡, 用于多轮对话
+     * Get <p>选项卡, 用于多轮对话</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OptionCards 选项卡, 用于多轮对话
+     * @return OptionCards <p>选项卡, 用于多轮对话</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getOptionCards() {
@@ -646,9 +583,9 @@ public class MsgRecord extends AbstractModel {
     }
 
     /**
-     * Set 选项卡, 用于多轮对话
+     * Set <p>选项卡, 用于多轮对话</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OptionCards 选项卡, 用于多轮对话
+     * @param OptionCards <p>选项卡, 用于多轮对话</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOptionCards(String [] OptionCards) {
@@ -656,9 +593,9 @@ public class MsgRecord extends AbstractModel {
     }
 
     /**
-     * Get 任务信息
+     * Get <p>任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskFlow 任务信息
+     * @return TaskFlow <p>任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskFlowInfo getTaskFlow() {
@@ -666,9 +603,9 @@ public class MsgRecord extends AbstractModel {
     }
 
     /**
-     * Set 任务信息
+     * Set <p>任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskFlow 任务信息
+     * @param TaskFlow <p>任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskFlow(TaskFlowInfo TaskFlow) {
@@ -676,9 +613,9 @@ public class MsgRecord extends AbstractModel {
     }
 
     /**
-     * Get 用户传入的文件信息
+     * Get <p>用户传入的文件信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FileInfos 用户传入的文件信息
+     * @return FileInfos <p>用户传入的文件信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public FileInfo [] getFileInfos() {
@@ -686,9 +623,9 @@ public class MsgRecord extends AbstractModel {
     }
 
     /**
-     * Set 用户传入的文件信息
+     * Set <p>用户传入的文件信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FileInfos 用户传入的文件信息
+     * @param FileInfos <p>用户传入的文件信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileInfos(FileInfo [] FileInfos) {
@@ -696,9 +633,9 @@ public class MsgRecord extends AbstractModel {
     }
 
     /**
-     * Get 参考来源引用位置信息
+     * Get <p>参考来源引用位置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return QuoteInfos 参考来源引用位置信息
+     * @return QuoteInfos <p>参考来源引用位置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public QuoteInfo [] getQuoteInfos() {
@@ -706,9 +643,9 @@ public class MsgRecord extends AbstractModel {
     }
 
     /**
-     * Set 参考来源引用位置信息
+     * Set <p>参考来源引用位置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param QuoteInfos 参考来源引用位置信息
+     * @param QuoteInfos <p>参考来源引用位置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQuoteInfos(QuoteInfo [] QuoteInfos) {
@@ -716,9 +653,9 @@ public class MsgRecord extends AbstractModel {
     }
 
     /**
-     * Get Agent的思考过程信息
+     * Get <p>Agent的思考过程信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AgentThought Agent的思考过程信息
+     * @return AgentThought <p>Agent的思考过程信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AgentThought getAgentThought() {
@@ -726,9 +663,9 @@ public class MsgRecord extends AbstractModel {
     }
 
     /**
-     * Set Agent的思考过程信息
+     * Set <p>Agent的思考过程信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AgentThought Agent的思考过程信息
+     * @param AgentThought <p>Agent的思考过程信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAgentThought(AgentThought AgentThought) {
@@ -736,9 +673,9 @@ public class MsgRecord extends AbstractModel {
     }
 
     /**
-     * Get 扩展信息
+     * Get <p>扩展信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ExtraInfo 扩展信息
+     * @return ExtraInfo <p>扩展信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ExtraInfo getExtraInfo() {
@@ -746,9 +683,9 @@ public class MsgRecord extends AbstractModel {
     }
 
     /**
-     * Set 扩展信息
+     * Set <p>扩展信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ExtraInfo 扩展信息
+     * @param ExtraInfo <p>扩展信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtraInfo(ExtraInfo ExtraInfo) {
@@ -756,9 +693,9 @@ public class MsgRecord extends AbstractModel {
     }
 
     /**
-     * Get 工作流信息
+     * Get <p>工作流信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkFlow 工作流信息
+     * @return WorkFlow <p>工作流信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public WorkflowInfo getWorkFlow() {
@@ -766,9 +703,9 @@ public class MsgRecord extends AbstractModel {
     }
 
     /**
-     * Set 工作流信息
+     * Set <p>工作流信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkFlow 工作流信息
+     * @param WorkFlow <p>工作流信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkFlow(WorkflowInfo WorkFlow) {
@@ -776,9 +713,9 @@ public class MsgRecord extends AbstractModel {
     }
 
     /**
-     * Get Widget信息
+     * Get <p>Widget信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Widgets Widget信息
+     * @return Widgets <p>Widget信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Widget [] getWidgets() {
@@ -786,9 +723,9 @@ public class MsgRecord extends AbstractModel {
     }
 
     /**
-     * Set Widget信息
+     * Set <p>Widget信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Widgets Widget信息
+     * @param Widgets <p>Widget信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWidgets(Widget [] Widgets) {
@@ -796,9 +733,9 @@ public class MsgRecord extends AbstractModel {
     }
 
     /**
-     * Get Widget动作信息
+     * Get <p>Widget动作信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WidgetAction Widget动作信息
+     * @return WidgetAction <p>Widget动作信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public WidgetAction getWidgetAction() {
@@ -806,9 +743,9 @@ public class MsgRecord extends AbstractModel {
     }
 
     /**
-     * Set Widget动作信息
+     * Set <p>Widget动作信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WidgetAction Widget动作信息
+     * @param WidgetAction <p>Widget动作信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWidgetAction(WidgetAction WidgetAction) {
@@ -816,9 +753,9 @@ public class MsgRecord extends AbstractModel {
     }
 
     /**
-     * Get 音频信息
+     * Get <p>音频信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Audios 音频信息
+     * @return Audios <p>音频信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Audio [] getAudios() {
@@ -826,13 +763,29 @@ public class MsgRecord extends AbstractModel {
     }
 
     /**
-     * Set 音频信息
+     * Set <p>音频信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Audios 音频信息
+     * @param Audios <p>音频信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAudios(Audio [] Audios) {
         this.Audios = Audios;
+    }
+
+    /**
+     * Get <p>标识选项卡为单选还是双选</p><p>枚举值：</p><ul><li>0： 单选</li><li>1： 双选</li></ul> 
+     * @return OptionMode <p>标识选项卡为单选还是双选</p><p>枚举值：</p><ul><li>0： 单选</li><li>1： 双选</li></ul>
+     */
+    public Long getOptionMode() {
+        return this.OptionMode;
+    }
+
+    /**
+     * Set <p>标识选项卡为单选还是双选</p><p>枚举值：</p><ul><li>0： 单选</li><li>1： 双选</li></ul>
+     * @param OptionMode <p>标识选项卡为单选还是双选</p><p>枚举值：</p><ul><li>0： 单选</li><li>1： 双选</li></ul>
+     */
+    public void setOptionMode(Long OptionMode) {
+        this.OptionMode = OptionMode;
     }
 
     public MsgRecord() {
@@ -954,6 +907,9 @@ public class MsgRecord extends AbstractModel {
                 this.Audios[i] = new Audio(source.Audios[i]);
             }
         }
+        if (source.OptionMode != null) {
+            this.OptionMode = new Long(source.OptionMode);
+        }
     }
 
 
@@ -990,6 +946,7 @@ public class MsgRecord extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Widgets.", this.Widgets);
         this.setParamObj(map, prefix + "WidgetAction.", this.WidgetAction);
         this.setParamArrayObj(map, prefix + "Audios.", this.Audios);
+        this.setParamSimple(map, prefix + "OptionMode", this.OptionMode);
 
     }
 }

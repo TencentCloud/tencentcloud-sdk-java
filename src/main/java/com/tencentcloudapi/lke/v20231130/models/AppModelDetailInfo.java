@@ -24,95 +24,95 @@ import java.util.HashMap;
 public class AppModelDetailInfo extends AbstractModel {
 
     /**
-    * 模型名称
-    */
-    @SerializedName("ModelName")
-    @Expose
-    private String ModelName;
-
-    /**
-    * 模型参数
-    */
-    @SerializedName("ModelParams")
-    @Expose
-    private ModelParams ModelParams;
-
-    /**
-    * 限制
-    */
-    @SerializedName("HistoryLimit")
-    @Expose
-    private Long HistoryLimit;
-
-    /**
-    * 模型别名
+    * <p>模型别名</p>
     */
     @SerializedName("AliasName")
     @Expose
     private String AliasName;
 
     /**
-     * Get 模型名称 
-     * @return ModelName 模型名称
-     */
-    public String getModelName() {
-        return this.ModelName;
-    }
+    * <p>限制</p>
+    */
+    @SerializedName("HistoryLimit")
+    @Expose
+    private Long HistoryLimit;
 
     /**
-     * Set 模型名称
-     * @param ModelName 模型名称
-     */
-    public void setModelName(String ModelName) {
-        this.ModelName = ModelName;
-    }
+    * <p>模型名称</p>
+    */
+    @SerializedName("ModelName")
+    @Expose
+    private String ModelName;
 
     /**
-     * Get 模型参数 
-     * @return ModelParams 模型参数
-     */
-    public ModelParams getModelParams() {
-        return this.ModelParams;
-    }
+    * <p>模型参数</p>
+    */
+    @SerializedName("ModelParams")
+    @Expose
+    private ModelParams ModelParams;
 
     /**
-     * Set 模型参数
-     * @param ModelParams 模型参数
-     */
-    public void setModelParams(ModelParams ModelParams) {
-        this.ModelParams = ModelParams;
-    }
-
-    /**
-     * Get 限制 
-     * @return HistoryLimit 限制
-     */
-    public Long getHistoryLimit() {
-        return this.HistoryLimit;
-    }
-
-    /**
-     * Set 限制
-     * @param HistoryLimit 限制
-     */
-    public void setHistoryLimit(Long HistoryLimit) {
-        this.HistoryLimit = HistoryLimit;
-    }
-
-    /**
-     * Get 模型别名 
-     * @return AliasName 模型别名
+     * Get <p>模型别名</p> 
+     * @return AliasName <p>模型别名</p>
      */
     public String getAliasName() {
         return this.AliasName;
     }
 
     /**
-     * Set 模型别名
-     * @param AliasName 模型别名
+     * Set <p>模型别名</p>
+     * @param AliasName <p>模型别名</p>
      */
     public void setAliasName(String AliasName) {
         this.AliasName = AliasName;
+    }
+
+    /**
+     * Get <p>限制</p> 
+     * @return HistoryLimit <p>限制</p>
+     */
+    public Long getHistoryLimit() {
+        return this.HistoryLimit;
+    }
+
+    /**
+     * Set <p>限制</p>
+     * @param HistoryLimit <p>限制</p>
+     */
+    public void setHistoryLimit(Long HistoryLimit) {
+        this.HistoryLimit = HistoryLimit;
+    }
+
+    /**
+     * Get <p>模型名称</p> 
+     * @return ModelName <p>模型名称</p>
+     */
+    public String getModelName() {
+        return this.ModelName;
+    }
+
+    /**
+     * Set <p>模型名称</p>
+     * @param ModelName <p>模型名称</p>
+     */
+    public void setModelName(String ModelName) {
+        this.ModelName = ModelName;
+    }
+
+    /**
+     * Get <p>模型参数</p> 
+     * @return ModelParams <p>模型参数</p>
+     */
+    public ModelParams getModelParams() {
+        return this.ModelParams;
+    }
+
+    /**
+     * Set <p>模型参数</p>
+     * @param ModelParams <p>模型参数</p>
+     */
+    public void setModelParams(ModelParams ModelParams) {
+        this.ModelParams = ModelParams;
     }
 
     public AppModelDetailInfo() {
@@ -123,17 +123,17 @@ public class AppModelDetailInfo extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public AppModelDetailInfo(AppModelDetailInfo source) {
+        if (source.AliasName != null) {
+            this.AliasName = new String(source.AliasName);
+        }
+        if (source.HistoryLimit != null) {
+            this.HistoryLimit = new Long(source.HistoryLimit);
+        }
         if (source.ModelName != null) {
             this.ModelName = new String(source.ModelName);
         }
         if (source.ModelParams != null) {
             this.ModelParams = new ModelParams(source.ModelParams);
-        }
-        if (source.HistoryLimit != null) {
-            this.HistoryLimit = new Long(source.HistoryLimit);
-        }
-        if (source.AliasName != null) {
-            this.AliasName = new String(source.AliasName);
         }
     }
 
@@ -142,10 +142,10 @@ public class AppModelDetailInfo extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "AliasName", this.AliasName);
+        this.setParamSimple(map, prefix + "HistoryLimit", this.HistoryLimit);
         this.setParamSimple(map, prefix + "ModelName", this.ModelName);
         this.setParamObj(map, prefix + "ModelParams.", this.ModelParams);
-        this.setParamSimple(map, prefix + "HistoryLimit", this.HistoryLimit);
-        this.setParamSimple(map, prefix + "AliasName", this.AliasName);
 
     }
 }

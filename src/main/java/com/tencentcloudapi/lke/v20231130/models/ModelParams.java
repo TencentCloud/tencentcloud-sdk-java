@@ -24,72 +24,7 @@ import java.util.HashMap;
 public class ModelParams extends AbstractModel {
 
     /**
-    * 温度
-    */
-    @SerializedName("Temperature")
-    @Expose
-    private Float Temperature;
-
-    /**
-    * Top_P
-    */
-    @SerializedName("TopP")
-    @Expose
-    private Float TopP;
-
-    /**
-    * 随机种子
-    */
-    @SerializedName("Seed")
-    @Expose
-    private Long Seed;
-
-    /**
-    * 存在惩罚
-    */
-    @SerializedName("PresencePenalty")
-    @Expose
-    private Float PresencePenalty;
-
-    /**
-    * 频率惩罚
-    */
-    @SerializedName("FrequencyPenalty")
-    @Expose
-    private Float FrequencyPenalty;
-
-    /**
-    * 重复惩罚
-    */
-    @SerializedName("RepetitionPenalty")
-    @Expose
-    private Float RepetitionPenalty;
-
-    /**
-    * 最大输出长度
-    */
-    @SerializedName("MaxTokens")
-    @Expose
-    private Long MaxTokens;
-
-    /**
-    * 停止序列
-    */
-    @SerializedName("StopSequences")
-    @Expose
-    private String [] StopSequences;
-
-    /**
-    * 输出格式
-    */
-    @SerializedName("ReplyFormat")
-    @Expose
-    private String ReplyFormat;
-
-    /**
-    * 深度思考值
-disabled
-enabled
+    * <p>深度思考值<br>disabled<br>enabled</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeepThinking")
@@ -97,7 +32,28 @@ enabled
     private String DeepThinking;
 
     /**
-    * 效果 disabled low medium high
+    * <p>频率惩罚</p>
+    */
+    @SerializedName("FrequencyPenalty")
+    @Expose
+    private Float FrequencyPenalty;
+
+    /**
+    * <p>最大输出长度</p>
+    */
+    @SerializedName("MaxTokens")
+    @Expose
+    private Long MaxTokens;
+
+    /**
+    * <p>存在惩罚</p>
+    */
+    @SerializedName("PresencePenalty")
+    @Expose
+    private Float PresencePenalty;
+
+    /**
+    * <p>效果 disabled low medium high</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReasoningEffort")
@@ -105,157 +61,51 @@ enabled
     private String ReasoningEffort;
 
     /**
-     * Get 温度 
-     * @return Temperature 温度
-     */
-    public Float getTemperature() {
-        return this.Temperature;
-    }
+    * <p>重复惩罚</p>
+    */
+    @SerializedName("RepetitionPenalty")
+    @Expose
+    private Float RepetitionPenalty;
 
     /**
-     * Set 温度
-     * @param Temperature 温度
-     */
-    public void setTemperature(Float Temperature) {
-        this.Temperature = Temperature;
-    }
+    * <p>输出格式</p>
+    */
+    @SerializedName("ReplyFormat")
+    @Expose
+    private String ReplyFormat;
 
     /**
-     * Get Top_P 
-     * @return TopP Top_P
-     */
-    public Float getTopP() {
-        return this.TopP;
-    }
+    * <p>随机种子</p>
+    */
+    @SerializedName("Seed")
+    @Expose
+    private Long Seed;
 
     /**
-     * Set Top_P
-     * @param TopP Top_P
-     */
-    public void setTopP(Float TopP) {
-        this.TopP = TopP;
-    }
+    * <p>停止序列</p>
+    */
+    @SerializedName("StopSequences")
+    @Expose
+    private String [] StopSequences;
 
     /**
-     * Get 随机种子 
-     * @return Seed 随机种子
-     */
-    public Long getSeed() {
-        return this.Seed;
-    }
+    * <p>温度</p>
+    */
+    @SerializedName("Temperature")
+    @Expose
+    private Float Temperature;
 
     /**
-     * Set 随机种子
-     * @param Seed 随机种子
-     */
-    public void setSeed(Long Seed) {
-        this.Seed = Seed;
-    }
+    * <p>Top_P</p>
+    */
+    @SerializedName("TopP")
+    @Expose
+    private Float TopP;
 
     /**
-     * Get 存在惩罚 
-     * @return PresencePenalty 存在惩罚
-     */
-    public Float getPresencePenalty() {
-        return this.PresencePenalty;
-    }
-
-    /**
-     * Set 存在惩罚
-     * @param PresencePenalty 存在惩罚
-     */
-    public void setPresencePenalty(Float PresencePenalty) {
-        this.PresencePenalty = PresencePenalty;
-    }
-
-    /**
-     * Get 频率惩罚 
-     * @return FrequencyPenalty 频率惩罚
-     */
-    public Float getFrequencyPenalty() {
-        return this.FrequencyPenalty;
-    }
-
-    /**
-     * Set 频率惩罚
-     * @param FrequencyPenalty 频率惩罚
-     */
-    public void setFrequencyPenalty(Float FrequencyPenalty) {
-        this.FrequencyPenalty = FrequencyPenalty;
-    }
-
-    /**
-     * Get 重复惩罚 
-     * @return RepetitionPenalty 重复惩罚
-     */
-    public Float getRepetitionPenalty() {
-        return this.RepetitionPenalty;
-    }
-
-    /**
-     * Set 重复惩罚
-     * @param RepetitionPenalty 重复惩罚
-     */
-    public void setRepetitionPenalty(Float RepetitionPenalty) {
-        this.RepetitionPenalty = RepetitionPenalty;
-    }
-
-    /**
-     * Get 最大输出长度 
-     * @return MaxTokens 最大输出长度
-     */
-    public Long getMaxTokens() {
-        return this.MaxTokens;
-    }
-
-    /**
-     * Set 最大输出长度
-     * @param MaxTokens 最大输出长度
-     */
-    public void setMaxTokens(Long MaxTokens) {
-        this.MaxTokens = MaxTokens;
-    }
-
-    /**
-     * Get 停止序列 
-     * @return StopSequences 停止序列
-     */
-    public String [] getStopSequences() {
-        return this.StopSequences;
-    }
-
-    /**
-     * Set 停止序列
-     * @param StopSequences 停止序列
-     */
-    public void setStopSequences(String [] StopSequences) {
-        this.StopSequences = StopSequences;
-    }
-
-    /**
-     * Get 输出格式 
-     * @return ReplyFormat 输出格式
-     */
-    public String getReplyFormat() {
-        return this.ReplyFormat;
-    }
-
-    /**
-     * Set 输出格式
-     * @param ReplyFormat 输出格式
-     */
-    public void setReplyFormat(String ReplyFormat) {
-        this.ReplyFormat = ReplyFormat;
-    }
-
-    /**
-     * Get 深度思考值
-disabled
-enabled
+     * Get <p>深度思考值<br>disabled<br>enabled</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DeepThinking 深度思考值
-disabled
-enabled
+     * @return DeepThinking <p>深度思考值<br>disabled<br>enabled</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeepThinking() {
@@ -263,13 +113,9 @@ enabled
     }
 
     /**
-     * Set 深度思考值
-disabled
-enabled
+     * Set <p>深度思考值<br>disabled<br>enabled</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DeepThinking 深度思考值
-disabled
-enabled
+     * @param DeepThinking <p>深度思考值<br>disabled<br>enabled</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeepThinking(String DeepThinking) {
@@ -277,9 +123,57 @@ enabled
     }
 
     /**
-     * Get 效果 disabled low medium high
+     * Get <p>频率惩罚</p> 
+     * @return FrequencyPenalty <p>频率惩罚</p>
+     */
+    public Float getFrequencyPenalty() {
+        return this.FrequencyPenalty;
+    }
+
+    /**
+     * Set <p>频率惩罚</p>
+     * @param FrequencyPenalty <p>频率惩罚</p>
+     */
+    public void setFrequencyPenalty(Float FrequencyPenalty) {
+        this.FrequencyPenalty = FrequencyPenalty;
+    }
+
+    /**
+     * Get <p>最大输出长度</p> 
+     * @return MaxTokens <p>最大输出长度</p>
+     */
+    public Long getMaxTokens() {
+        return this.MaxTokens;
+    }
+
+    /**
+     * Set <p>最大输出长度</p>
+     * @param MaxTokens <p>最大输出长度</p>
+     */
+    public void setMaxTokens(Long MaxTokens) {
+        this.MaxTokens = MaxTokens;
+    }
+
+    /**
+     * Get <p>存在惩罚</p> 
+     * @return PresencePenalty <p>存在惩罚</p>
+     */
+    public Float getPresencePenalty() {
+        return this.PresencePenalty;
+    }
+
+    /**
+     * Set <p>存在惩罚</p>
+     * @param PresencePenalty <p>存在惩罚</p>
+     */
+    public void setPresencePenalty(Float PresencePenalty) {
+        this.PresencePenalty = PresencePenalty;
+    }
+
+    /**
+     * Get <p>效果 disabled low medium high</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReasoningEffort 效果 disabled low medium high
+     * @return ReasoningEffort <p>效果 disabled low medium high</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReasoningEffort() {
@@ -287,13 +181,109 @@ enabled
     }
 
     /**
-     * Set 效果 disabled low medium high
+     * Set <p>效果 disabled low medium high</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReasoningEffort 效果 disabled low medium high
+     * @param ReasoningEffort <p>效果 disabled low medium high</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReasoningEffort(String ReasoningEffort) {
         this.ReasoningEffort = ReasoningEffort;
+    }
+
+    /**
+     * Get <p>重复惩罚</p> 
+     * @return RepetitionPenalty <p>重复惩罚</p>
+     */
+    public Float getRepetitionPenalty() {
+        return this.RepetitionPenalty;
+    }
+
+    /**
+     * Set <p>重复惩罚</p>
+     * @param RepetitionPenalty <p>重复惩罚</p>
+     */
+    public void setRepetitionPenalty(Float RepetitionPenalty) {
+        this.RepetitionPenalty = RepetitionPenalty;
+    }
+
+    /**
+     * Get <p>输出格式</p> 
+     * @return ReplyFormat <p>输出格式</p>
+     */
+    public String getReplyFormat() {
+        return this.ReplyFormat;
+    }
+
+    /**
+     * Set <p>输出格式</p>
+     * @param ReplyFormat <p>输出格式</p>
+     */
+    public void setReplyFormat(String ReplyFormat) {
+        this.ReplyFormat = ReplyFormat;
+    }
+
+    /**
+     * Get <p>随机种子</p> 
+     * @return Seed <p>随机种子</p>
+     */
+    public Long getSeed() {
+        return this.Seed;
+    }
+
+    /**
+     * Set <p>随机种子</p>
+     * @param Seed <p>随机种子</p>
+     */
+    public void setSeed(Long Seed) {
+        this.Seed = Seed;
+    }
+
+    /**
+     * Get <p>停止序列</p> 
+     * @return StopSequences <p>停止序列</p>
+     */
+    public String [] getStopSequences() {
+        return this.StopSequences;
+    }
+
+    /**
+     * Set <p>停止序列</p>
+     * @param StopSequences <p>停止序列</p>
+     */
+    public void setStopSequences(String [] StopSequences) {
+        this.StopSequences = StopSequences;
+    }
+
+    /**
+     * Get <p>温度</p> 
+     * @return Temperature <p>温度</p>
+     */
+    public Float getTemperature() {
+        return this.Temperature;
+    }
+
+    /**
+     * Set <p>温度</p>
+     * @param Temperature <p>温度</p>
+     */
+    public void setTemperature(Float Temperature) {
+        this.Temperature = Temperature;
+    }
+
+    /**
+     * Get <p>Top_P</p> 
+     * @return TopP <p>Top_P</p>
+     */
+    public Float getTopP() {
+        return this.TopP;
+    }
+
+    /**
+     * Set <p>Top_P</p>
+     * @param TopP <p>Top_P</p>
+     */
+    public void setTopP(Float TopP) {
+        this.TopP = TopP;
     }
 
     public ModelParams() {
@@ -304,26 +294,29 @@ enabled
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ModelParams(ModelParams source) {
-        if (source.Temperature != null) {
-            this.Temperature = new Float(source.Temperature);
-        }
-        if (source.TopP != null) {
-            this.TopP = new Float(source.TopP);
-        }
-        if (source.Seed != null) {
-            this.Seed = new Long(source.Seed);
-        }
-        if (source.PresencePenalty != null) {
-            this.PresencePenalty = new Float(source.PresencePenalty);
+        if (source.DeepThinking != null) {
+            this.DeepThinking = new String(source.DeepThinking);
         }
         if (source.FrequencyPenalty != null) {
             this.FrequencyPenalty = new Float(source.FrequencyPenalty);
         }
+        if (source.MaxTokens != null) {
+            this.MaxTokens = new Long(source.MaxTokens);
+        }
+        if (source.PresencePenalty != null) {
+            this.PresencePenalty = new Float(source.PresencePenalty);
+        }
+        if (source.ReasoningEffort != null) {
+            this.ReasoningEffort = new String(source.ReasoningEffort);
+        }
         if (source.RepetitionPenalty != null) {
             this.RepetitionPenalty = new Float(source.RepetitionPenalty);
         }
-        if (source.MaxTokens != null) {
-            this.MaxTokens = new Long(source.MaxTokens);
+        if (source.ReplyFormat != null) {
+            this.ReplyFormat = new String(source.ReplyFormat);
+        }
+        if (source.Seed != null) {
+            this.Seed = new Long(source.Seed);
         }
         if (source.StopSequences != null) {
             this.StopSequences = new String[source.StopSequences.length];
@@ -331,14 +324,11 @@ enabled
                 this.StopSequences[i] = new String(source.StopSequences[i]);
             }
         }
-        if (source.ReplyFormat != null) {
-            this.ReplyFormat = new String(source.ReplyFormat);
+        if (source.Temperature != null) {
+            this.Temperature = new Float(source.Temperature);
         }
-        if (source.DeepThinking != null) {
-            this.DeepThinking = new String(source.DeepThinking);
-        }
-        if (source.ReasoningEffort != null) {
-            this.ReasoningEffort = new String(source.ReasoningEffort);
+        if (source.TopP != null) {
+            this.TopP = new Float(source.TopP);
         }
     }
 
@@ -347,17 +337,17 @@ enabled
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "DeepThinking", this.DeepThinking);
+        this.setParamSimple(map, prefix + "FrequencyPenalty", this.FrequencyPenalty);
+        this.setParamSimple(map, prefix + "MaxTokens", this.MaxTokens);
+        this.setParamSimple(map, prefix + "PresencePenalty", this.PresencePenalty);
+        this.setParamSimple(map, prefix + "ReasoningEffort", this.ReasoningEffort);
+        this.setParamSimple(map, prefix + "RepetitionPenalty", this.RepetitionPenalty);
+        this.setParamSimple(map, prefix + "ReplyFormat", this.ReplyFormat);
+        this.setParamSimple(map, prefix + "Seed", this.Seed);
+        this.setParamArraySimple(map, prefix + "StopSequences.", this.StopSequences);
         this.setParamSimple(map, prefix + "Temperature", this.Temperature);
         this.setParamSimple(map, prefix + "TopP", this.TopP);
-        this.setParamSimple(map, prefix + "Seed", this.Seed);
-        this.setParamSimple(map, prefix + "PresencePenalty", this.PresencePenalty);
-        this.setParamSimple(map, prefix + "FrequencyPenalty", this.FrequencyPenalty);
-        this.setParamSimple(map, prefix + "RepetitionPenalty", this.RepetitionPenalty);
-        this.setParamSimple(map, prefix + "MaxTokens", this.MaxTokens);
-        this.setParamArraySimple(map, prefix + "StopSequences.", this.StopSequences);
-        this.setParamSimple(map, prefix + "ReplyFormat", this.ReplyFormat);
-        this.setParamSimple(map, prefix + "DeepThinking", this.DeepThinking);
-        this.setParamSimple(map, prefix + "ReasoningEffort", this.ReasoningEffort);
 
     }
 }

@@ -24,68 +24,75 @@ import java.util.HashMap;
 public class CreateSharedKnowledgeRequest extends AbstractModel {
 
     /**
-    * 共享知识库名称，字符数量范围：[1, 50]
+    * <p>共享知识库名称，字符数量范围：[1, 50]</p>
     */
     @SerializedName("KnowledgeName")
     @Expose
     private String KnowledgeName;
 
     /**
-    * 共享知识库描述，字符数量上限2000
+    * <p>共享知识库描述，字符数量上限2000</p>
     */
     @SerializedName("KnowledgeDescription")
     @Expose
     private String KnowledgeDescription;
 
     /**
-    * Embedding模型，字符数量上限128
+    * <p>Embedding模型，字符数量上限128</p>
     */
     @SerializedName("EmbeddingModel")
     @Expose
     private String EmbeddingModel;
 
     /**
-    * 共享知识库类型，0普通，1公众号
+    * <p>共享知识库类型，0普通，1公众号</p>
     */
     @SerializedName("KnowledgeType")
     @Expose
     private Long KnowledgeType;
 
     /**
-     * Get 共享知识库名称，字符数量范围：[1, 50] 
-     * @return KnowledgeName 共享知识库名称，字符数量范围：[1, 50]
+    * <p>ES存储配置</p>
+    */
+    @SerializedName("EsConfig")
+    @Expose
+    private ESConfig EsConfig;
+
+    /**
+     * Get <p>共享知识库名称，字符数量范围：[1, 50]</p> 
+     * @return KnowledgeName <p>共享知识库名称，字符数量范围：[1, 50]</p>
      */
     public String getKnowledgeName() {
         return this.KnowledgeName;
     }
 
     /**
-     * Set 共享知识库名称，字符数量范围：[1, 50]
-     * @param KnowledgeName 共享知识库名称，字符数量范围：[1, 50]
+     * Set <p>共享知识库名称，字符数量范围：[1, 50]</p>
+     * @param KnowledgeName <p>共享知识库名称，字符数量范围：[1, 50]</p>
      */
     public void setKnowledgeName(String KnowledgeName) {
         this.KnowledgeName = KnowledgeName;
     }
 
     /**
-     * Get 共享知识库描述，字符数量上限2000 
-     * @return KnowledgeDescription 共享知识库描述，字符数量上限2000
+     * Get <p>共享知识库描述，字符数量上限2000</p> 
+     * @return KnowledgeDescription <p>共享知识库描述，字符数量上限2000</p>
      */
     public String getKnowledgeDescription() {
         return this.KnowledgeDescription;
     }
 
     /**
-     * Set 共享知识库描述，字符数量上限2000
-     * @param KnowledgeDescription 共享知识库描述，字符数量上限2000
+     * Set <p>共享知识库描述，字符数量上限2000</p>
+     * @param KnowledgeDescription <p>共享知识库描述，字符数量上限2000</p>
      */
     public void setKnowledgeDescription(String KnowledgeDescription) {
         this.KnowledgeDescription = KnowledgeDescription;
     }
 
     /**
-     * Get Embedding模型，字符数量上限128 
-     * @return EmbeddingModel Embedding模型，字符数量上限128
+     * Get <p>Embedding模型，字符数量上限128</p> 
+     * @return EmbeddingModel <p>Embedding模型，字符数量上限128</p>
      * @deprecated
      */
     @Deprecated
@@ -94,8 +101,8 @@ public class CreateSharedKnowledgeRequest extends AbstractModel {
     }
 
     /**
-     * Set Embedding模型，字符数量上限128
-     * @param EmbeddingModel Embedding模型，字符数量上限128
+     * Set <p>Embedding模型，字符数量上限128</p>
+     * @param EmbeddingModel <p>Embedding模型，字符数量上限128</p>
      * @deprecated
      */
     @Deprecated
@@ -104,19 +111,35 @@ public class CreateSharedKnowledgeRequest extends AbstractModel {
     }
 
     /**
-     * Get 共享知识库类型，0普通，1公众号 
-     * @return KnowledgeType 共享知识库类型，0普通，1公众号
+     * Get <p>共享知识库类型，0普通，1公众号</p> 
+     * @return KnowledgeType <p>共享知识库类型，0普通，1公众号</p>
      */
     public Long getKnowledgeType() {
         return this.KnowledgeType;
     }
 
     /**
-     * Set 共享知识库类型，0普通，1公众号
-     * @param KnowledgeType 共享知识库类型，0普通，1公众号
+     * Set <p>共享知识库类型，0普通，1公众号</p>
+     * @param KnowledgeType <p>共享知识库类型，0普通，1公众号</p>
      */
     public void setKnowledgeType(Long KnowledgeType) {
         this.KnowledgeType = KnowledgeType;
+    }
+
+    /**
+     * Get <p>ES存储配置</p> 
+     * @return EsConfig <p>ES存储配置</p>
+     */
+    public ESConfig getEsConfig() {
+        return this.EsConfig;
+    }
+
+    /**
+     * Set <p>ES存储配置</p>
+     * @param EsConfig <p>ES存储配置</p>
+     */
+    public void setEsConfig(ESConfig EsConfig) {
+        this.EsConfig = EsConfig;
     }
 
     public CreateSharedKnowledgeRequest() {
@@ -139,6 +162,9 @@ public class CreateSharedKnowledgeRequest extends AbstractModel {
         if (source.KnowledgeType != null) {
             this.KnowledgeType = new Long(source.KnowledgeType);
         }
+        if (source.EsConfig != null) {
+            this.EsConfig = new ESConfig(source.EsConfig);
+        }
     }
 
 
@@ -150,6 +176,7 @@ public class CreateSharedKnowledgeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "KnowledgeDescription", this.KnowledgeDescription);
         this.setParamSimple(map, prefix + "EmbeddingModel", this.EmbeddingModel);
         this.setParamSimple(map, prefix + "KnowledgeType", this.KnowledgeType);
+        this.setParamObj(map, prefix + "EsConfig.", this.EsConfig);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AgentReference extends AbstractModel {
 
     /**
-    * 来源文档ID
+    * <p>来源文档ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DocId")
@@ -32,7 +32,7 @@ public class AgentReference extends AbstractModel {
     private String DocId;
 
     /**
-    * id
+    * <p>id</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
@@ -40,7 +40,7 @@ public class AgentReference extends AbstractModel {
     private String Id;
 
     /**
-    * 名称
+    * <p>名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -48,7 +48,7 @@ public class AgentReference extends AbstractModel {
     private String Name;
 
     /**
-    * 类型
+    * <p>类型</p><p>枚举值：</p><ul><li>1： 问答</li><li>2： 文档片段</li><li>4： 联网检索到的内容</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -56,7 +56,7 @@ public class AgentReference extends AbstractModel {
     private Long Type;
 
     /**
-    * 链接
+    * <p>链接</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Url")
@@ -64,7 +64,7 @@ public class AgentReference extends AbstractModel {
     private String Url;
 
     /**
-    * 文档业务ID
+    * <p>文档业务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DocBizId")
@@ -72,7 +72,7 @@ public class AgentReference extends AbstractModel {
     private String DocBizId;
 
     /**
-    * 文档名称
+    * <p>文档名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DocName")
@@ -80,7 +80,7 @@ public class AgentReference extends AbstractModel {
     private String DocName;
 
     /**
-    * 问答业务ID
+    * <p>问答业务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QaBizId")
@@ -88,7 +88,7 @@ public class AgentReference extends AbstractModel {
     private String QaBizId;
 
     /**
-    * 搜索引擎索引
+    * <p>搜索引擎索引</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Index")
@@ -96,7 +96,7 @@ public class AgentReference extends AbstractModel {
     private Long Index;
 
     /**
-    * 标题
+    * <p>标题</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Title")
@@ -104,7 +104,7 @@ public class AgentReference extends AbstractModel {
     private String Title;
 
     /**
-    * 知识库名称
+    * <p>知识库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KnowledgeName")
@@ -112,7 +112,7 @@ public class AgentReference extends AbstractModel {
     private String KnowledgeName;
 
     /**
-    * 知识库标识
+    * <p>知识库标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KnowledgeBizId")
@@ -120,9 +120,9 @@ public class AgentReference extends AbstractModel {
     private String KnowledgeBizId;
 
     /**
-     * Get 来源文档ID
+     * Get <p>来源文档ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DocId 来源文档ID
+     * @return DocId <p>来源文档ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDocId() {
@@ -130,9 +130,9 @@ public class AgentReference extends AbstractModel {
     }
 
     /**
-     * Set 来源文档ID
+     * Set <p>来源文档ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DocId 来源文档ID
+     * @param DocId <p>来源文档ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDocId(String DocId) {
@@ -140,9 +140,9 @@ public class AgentReference extends AbstractModel {
     }
 
     /**
-     * Get id
+     * Get <p>id</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Id id
+     * @return Id <p>id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
@@ -150,9 +150,9 @@ public class AgentReference extends AbstractModel {
     }
 
     /**
-     * Set id
+     * Set <p>id</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Id id
+     * @param Id <p>id</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {
@@ -160,9 +160,9 @@ public class AgentReference extends AbstractModel {
     }
 
     /**
-     * Get 名称
+     * Get <p>名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 名称
+     * @return Name <p>名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -170,9 +170,9 @@ public class AgentReference extends AbstractModel {
     }
 
     /**
-     * Set 名称
+     * Set <p>名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 名称
+     * @param Name <p>名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
@@ -180,9 +180,9 @@ public class AgentReference extends AbstractModel {
     }
 
     /**
-     * Get 类型
+     * Get <p>类型</p><p>枚举值：</p><ul><li>1： 问答</li><li>2： 文档片段</li><li>4： 联网检索到的内容</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Type 类型
+     * @return Type <p>类型</p><p>枚举值：</p><ul><li>1： 问答</li><li>2： 文档片段</li><li>4： 联网检索到的内容</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getType() {
@@ -190,9 +190,9 @@ public class AgentReference extends AbstractModel {
     }
 
     /**
-     * Set 类型
+     * Set <p>类型</p><p>枚举值：</p><ul><li>1： 问答</li><li>2： 文档片段</li><li>4： 联网检索到的内容</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Type 类型
+     * @param Type <p>类型</p><p>枚举值：</p><ul><li>1： 问答</li><li>2： 文档片段</li><li>4： 联网检索到的内容</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(Long Type) {
@@ -200,9 +200,9 @@ public class AgentReference extends AbstractModel {
     }
 
     /**
-     * Get 链接
+     * Get <p>链接</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Url 链接
+     * @return Url <p>链接</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUrl() {
@@ -210,9 +210,9 @@ public class AgentReference extends AbstractModel {
     }
 
     /**
-     * Set 链接
+     * Set <p>链接</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Url 链接
+     * @param Url <p>链接</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrl(String Url) {
@@ -220,9 +220,9 @@ public class AgentReference extends AbstractModel {
     }
 
     /**
-     * Get 文档业务ID
+     * Get <p>文档业务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DocBizId 文档业务ID
+     * @return DocBizId <p>文档业务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDocBizId() {
@@ -230,9 +230,9 @@ public class AgentReference extends AbstractModel {
     }
 
     /**
-     * Set 文档业务ID
+     * Set <p>文档业务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DocBizId 文档业务ID
+     * @param DocBizId <p>文档业务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDocBizId(String DocBizId) {
@@ -240,9 +240,9 @@ public class AgentReference extends AbstractModel {
     }
 
     /**
-     * Get 文档名称
+     * Get <p>文档名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DocName 文档名称
+     * @return DocName <p>文档名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDocName() {
@@ -250,9 +250,9 @@ public class AgentReference extends AbstractModel {
     }
 
     /**
-     * Set 文档名称
+     * Set <p>文档名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DocName 文档名称
+     * @param DocName <p>文档名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDocName(String DocName) {
@@ -260,9 +260,9 @@ public class AgentReference extends AbstractModel {
     }
 
     /**
-     * Get 问答业务ID
+     * Get <p>问答业务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return QaBizId 问答业务ID
+     * @return QaBizId <p>问答业务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQaBizId() {
@@ -270,9 +270,9 @@ public class AgentReference extends AbstractModel {
     }
 
     /**
-     * Set 问答业务ID
+     * Set <p>问答业务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param QaBizId 问答业务ID
+     * @param QaBizId <p>问答业务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQaBizId(String QaBizId) {
@@ -280,9 +280,9 @@ public class AgentReference extends AbstractModel {
     }
 
     /**
-     * Get 搜索引擎索引
+     * Get <p>搜索引擎索引</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Index 搜索引擎索引
+     * @return Index <p>搜索引擎索引</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIndex() {
@@ -290,9 +290,9 @@ public class AgentReference extends AbstractModel {
     }
 
     /**
-     * Set 搜索引擎索引
+     * Set <p>搜索引擎索引</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Index 搜索引擎索引
+     * @param Index <p>搜索引擎索引</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndex(Long Index) {
@@ -300,9 +300,9 @@ public class AgentReference extends AbstractModel {
     }
 
     /**
-     * Get 标题
+     * Get <p>标题</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Title 标题
+     * @return Title <p>标题</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTitle() {
@@ -310,9 +310,9 @@ public class AgentReference extends AbstractModel {
     }
 
     /**
-     * Set 标题
+     * Set <p>标题</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Title 标题
+     * @param Title <p>标题</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTitle(String Title) {
@@ -320,9 +320,9 @@ public class AgentReference extends AbstractModel {
     }
 
     /**
-     * Get 知识库名称
+     * Get <p>知识库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KnowledgeName 知识库名称
+     * @return KnowledgeName <p>知识库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKnowledgeName() {
@@ -330,9 +330,9 @@ public class AgentReference extends AbstractModel {
     }
 
     /**
-     * Set 知识库名称
+     * Set <p>知识库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param KnowledgeName 知识库名称
+     * @param KnowledgeName <p>知识库名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKnowledgeName(String KnowledgeName) {
@@ -340,9 +340,9 @@ public class AgentReference extends AbstractModel {
     }
 
     /**
-     * Get 知识库标识
+     * Get <p>知识库标识</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return KnowledgeBizId 知识库标识
+     * @return KnowledgeBizId <p>知识库标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKnowledgeBizId() {
@@ -350,9 +350,9 @@ public class AgentReference extends AbstractModel {
     }
 
     /**
-     * Set 知识库标识
+     * Set <p>知识库标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param KnowledgeBizId 知识库标识
+     * @param KnowledgeBizId <p>知识库标识</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKnowledgeBizId(String KnowledgeBizId) {

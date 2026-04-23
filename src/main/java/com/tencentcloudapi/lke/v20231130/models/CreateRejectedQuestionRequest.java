@@ -24,115 +24,118 @@ import java.util.HashMap;
 public class CreateRejectedQuestionRequest extends AbstractModel {
 
     /**
-    * 应用ID, 获取方式参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+    * <p>应用ID, 获取方式参看如何获取<a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a></p>
     */
     @SerializedName("BotBizId")
     @Expose
     private String BotBizId;
 
     /**
-    * 拒答问题
-
-
+    * <p>拒答问题</p>
     */
     @SerializedName("Question")
     @Expose
     private String Question;
 
     /**
-    * 拒答问题来源， 1- 来源于不满意回复;  2 - 来源于手动添加
+    * <p>拒答问题来源， 1- 来源于不满意回复;  2 - 来源于手动添加</p>
     */
     @SerializedName("BusinessSource")
     @Expose
     private Long BusinessSource;
 
     /**
-    * 拒答问题来源的数据源唯一id
-
-
+    * <p>拒答问题来源的数据源唯一id</p>
     */
     @SerializedName("BusinessId")
     @Expose
     private String BusinessId;
 
     /**
-     * Get 应用ID, 获取方式参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa) 
-     * @return BotBizId 应用ID, 获取方式参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+    * <p>拒答生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效 默认值：2。</p>
+    */
+    @SerializedName("EnableScope")
+    @Expose
+    private Long EnableScope;
+
+    /**
+     * Get <p>应用ID, 获取方式参看如何获取<a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a></p> 
+     * @return BotBizId <p>应用ID, 获取方式参看如何获取<a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a></p>
      */
     public String getBotBizId() {
         return this.BotBizId;
     }
 
     /**
-     * Set 应用ID, 获取方式参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
-     * @param BotBizId 应用ID, 获取方式参看如何获取[BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
+     * Set <p>应用ID, 获取方式参看如何获取<a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a></p>
+     * @param BotBizId <p>应用ID, 获取方式参看如何获取<a href="https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa">BotBizId</a></p>
      */
     public void setBotBizId(String BotBizId) {
         this.BotBizId = BotBizId;
     }
 
     /**
-     * Get 拒答问题
-
- 
-     * @return Question 拒答问题
-
-
+     * Get <p>拒答问题</p> 
+     * @return Question <p>拒答问题</p>
      */
     public String getQuestion() {
         return this.Question;
     }
 
     /**
-     * Set 拒答问题
-
-
-     * @param Question 拒答问题
-
-
+     * Set <p>拒答问题</p>
+     * @param Question <p>拒答问题</p>
      */
     public void setQuestion(String Question) {
         this.Question = Question;
     }
 
     /**
-     * Get 拒答问题来源， 1- 来源于不满意回复;  2 - 来源于手动添加 
-     * @return BusinessSource 拒答问题来源， 1- 来源于不满意回复;  2 - 来源于手动添加
+     * Get <p>拒答问题来源， 1- 来源于不满意回复;  2 - 来源于手动添加</p> 
+     * @return BusinessSource <p>拒答问题来源， 1- 来源于不满意回复;  2 - 来源于手动添加</p>
      */
     public Long getBusinessSource() {
         return this.BusinessSource;
     }
 
     /**
-     * Set 拒答问题来源， 1- 来源于不满意回复;  2 - 来源于手动添加
-     * @param BusinessSource 拒答问题来源， 1- 来源于不满意回复;  2 - 来源于手动添加
+     * Set <p>拒答问题来源， 1- 来源于不满意回复;  2 - 来源于手动添加</p>
+     * @param BusinessSource <p>拒答问题来源， 1- 来源于不满意回复;  2 - 来源于手动添加</p>
      */
     public void setBusinessSource(Long BusinessSource) {
         this.BusinessSource = BusinessSource;
     }
 
     /**
-     * Get 拒答问题来源的数据源唯一id
-
- 
-     * @return BusinessId 拒答问题来源的数据源唯一id
-
-
+     * Get <p>拒答问题来源的数据源唯一id</p> 
+     * @return BusinessId <p>拒答问题来源的数据源唯一id</p>
      */
     public String getBusinessId() {
         return this.BusinessId;
     }
 
     /**
-     * Set 拒答问题来源的数据源唯一id
-
-
-     * @param BusinessId 拒答问题来源的数据源唯一id
-
-
+     * Set <p>拒答问题来源的数据源唯一id</p>
+     * @param BusinessId <p>拒答问题来源的数据源唯一id</p>
      */
     public void setBusinessId(String BusinessId) {
         this.BusinessId = BusinessId;
+    }
+
+    /**
+     * Get <p>拒答生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效 默认值：2。</p> 
+     * @return EnableScope <p>拒答生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效 默认值：2。</p>
+     */
+    public Long getEnableScope() {
+        return this.EnableScope;
+    }
+
+    /**
+     * Set <p>拒答生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效 默认值：2。</p>
+     * @param EnableScope <p>拒答生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效 默认值：2。</p>
+     */
+    public void setEnableScope(Long EnableScope) {
+        this.EnableScope = EnableScope;
     }
 
     public CreateRejectedQuestionRequest() {
@@ -155,6 +158,9 @@ public class CreateRejectedQuestionRequest extends AbstractModel {
         if (source.BusinessId != null) {
             this.BusinessId = new String(source.BusinessId);
         }
+        if (source.EnableScope != null) {
+            this.EnableScope = new Long(source.EnableScope);
+        }
     }
 
 
@@ -166,6 +172,7 @@ public class CreateRejectedQuestionRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Question", this.Question);
         this.setParamSimple(map, prefix + "BusinessSource", this.BusinessSource);
         this.setParamSimple(map, prefix + "BusinessId", this.BusinessId);
+        this.setParamSimple(map, prefix + "EnableScope", this.EnableScope);
 
     }
 }

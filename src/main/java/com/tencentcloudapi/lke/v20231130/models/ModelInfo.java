@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModelInfo extends AbstractModel {
 
     /**
-    * 模型名称
+    * <p>模型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModelName")
@@ -32,7 +32,7 @@ public class ModelInfo extends AbstractModel {
     private String ModelName;
 
     /**
-    * 模型描述
+    * <p>模型描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModelDesc")
@@ -40,7 +40,7 @@ public class ModelInfo extends AbstractModel {
     private String ModelDesc;
 
     /**
-    * 模型名称
+    * <p>模型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AliasName")
@@ -48,7 +48,7 @@ public class ModelInfo extends AbstractModel {
     private String AliasName;
 
     /**
-    * 资源状态 1：资源可用；2：资源已用尽
+    * <p>资源状态 1：资源可用；2：资源已用尽</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceStatus")
@@ -56,7 +56,7 @@ public class ModelInfo extends AbstractModel {
     private Long ResourceStatus;
 
     /**
-    * 提示词内容字符限制
+    * <p>提示词内容字符限制</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PromptWordsLimit")
@@ -64,7 +64,7 @@ public class ModelInfo extends AbstractModel {
     private String PromptWordsLimit;
 
     /**
-    * 通过核心采样控制内容生成的多样性，较高的Top P值会导致生成更多样的内容
+    * <p>通过核心采样控制内容生成的多样性，较高的Top P值会导致生成更多样的内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopP")
@@ -72,7 +72,7 @@ public class ModelInfo extends AbstractModel {
     private ModelParameter TopP;
 
     /**
-    * 温度控制随机性
+    * <p>温度控制随机性</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Temperature")
@@ -80,7 +80,7 @@ public class ModelInfo extends AbstractModel {
     private ModelParameter Temperature;
 
     /**
-    * 最多能生成的token数量
+    * <p>最多能生成的token数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxTokens")
@@ -88,28 +88,28 @@ public class ModelInfo extends AbstractModel {
     private ModelParameter MaxTokens;
 
     /**
-    * 模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验,Custom自定义模型
+    * <p>模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验,Custom自定义模型</p>
     */
     @SerializedName("Source")
     @Expose
     private String Source;
 
     /**
-    * 模型图标
+    * <p>模型图标</p>
     */
     @SerializedName("Icon")
     @Expose
     private String Icon;
 
     /**
-    * 是否免费
+    * <p>是否免费</p>
     */
     @SerializedName("IsFree")
     @Expose
     private Boolean IsFree;
 
     /**
-    * 模型对话框可输入的上限
+    * <p>模型对话框可输入的上限</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InputLenLimit")
@@ -117,7 +117,7 @@ public class ModelInfo extends AbstractModel {
     private Long InputLenLimit;
 
     /**
-    * 支持工作流的类型 0:模型不支持; 1: 模型支持工作流； 2： 模型支持效果不佳；
+    * <p>支持工作流的类型 0:模型不支持; 1: 模型支持工作流； 2： 模型支持效果不佳；</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SupportWorkflowStatus")
@@ -125,49 +125,49 @@ public class ModelInfo extends AbstractModel {
     private Long SupportWorkflowStatus;
 
     /**
-    * 模型类别 generate：生成模型，thought：思考模型
+    * <p>模型类别 generate：生成模型，thought：思考模型</p>
     */
     @SerializedName("ModelCategory")
     @Expose
     private String ModelCategory;
 
     /**
-    * 是否默认模型
+    * <p>是否默认模型</p>
     */
     @SerializedName("IsDefault")
     @Expose
     private Boolean IsDefault;
 
     /**
-    * 角色提示词输入长度限制
+    * <p>角色提示词输入长度限制</p>
     */
     @SerializedName("RoleLenLimit")
     @Expose
     private Long RoleLenLimit;
 
     /**
-    * 是否专属并发模型
+    * <p>是否专属并发模型</p>
     */
     @SerializedName("IsExclusive")
     @Expose
     private Boolean IsExclusive;
 
     /**
-    * 模型支持智能通话效果
+    * <p>模型支持智能通话效果</p><p>枚举值：</p><ul><li>0： 模型不支持</li><li>1： 模型支持ai通话</li><li>2： 模型ai通话支持效果不佳</li></ul>
     */
     @SerializedName("SupportAiCallStatus")
     @Expose
     private Long SupportAiCallStatus;
 
     /**
-    * 专属并发数
+    * <p>专属并发数</p>
     */
     @SerializedName("Concurrency")
     @Expose
     private Long Concurrency;
 
     /**
-    * 模型标签
+    * <p>模型标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModelTags")
@@ -175,7 +175,7 @@ public class ModelInfo extends AbstractModel {
     private String [] ModelTags;
 
     /**
-    * 模型超参定义
+    * <p>模型超参定义</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModelParams")
@@ -183,44 +183,44 @@ public class ModelInfo extends AbstractModel {
     private ModelParameter [] ModelParams;
 
     /**
-    * 提供商名称
+    * <p>提供商名称</p>
     */
     @SerializedName("ProviderName")
     @Expose
     private String ProviderName;
 
     /**
-    * 提供商别名
+    * <p>提供商别名</p>
     */
     @SerializedName("ProviderAliasName")
     @Expose
     private String ProviderAliasName;
 
     /**
-    * 提供商类型 Self:提供商，Custom：自定义模型提供商，Third：第三方模型提供商
+    * <p>提供商类型 Self:提供商，Custom：自定义模型提供商，Third：第三方模型提供商</p>
     */
     @SerializedName("ProviderType")
     @Expose
     private String ProviderType;
 
     /**
-    * 是否关闭模型超参
+    * <p>是否关闭模型超参</p>
     */
     @SerializedName("IsCloseModelParams")
     @Expose
     private Boolean IsCloseModelParams;
 
     /**
-    * 是否支持深度思考
+    * <p>是否支持深度思考</p>
     */
     @SerializedName("IsDeepThinking")
     @Expose
     private Boolean IsDeepThinking;
 
     /**
-     * Get 模型名称
+     * Get <p>模型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ModelName 模型名称
+     * @return ModelName <p>模型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModelName() {
@@ -228,9 +228,9 @@ public class ModelInfo extends AbstractModel {
     }
 
     /**
-     * Set 模型名称
+     * Set <p>模型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ModelName 模型名称
+     * @param ModelName <p>模型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModelName(String ModelName) {
@@ -238,9 +238,9 @@ public class ModelInfo extends AbstractModel {
     }
 
     /**
-     * Get 模型描述
+     * Get <p>模型描述</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ModelDesc 模型描述
+     * @return ModelDesc <p>模型描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModelDesc() {
@@ -248,9 +248,9 @@ public class ModelInfo extends AbstractModel {
     }
 
     /**
-     * Set 模型描述
+     * Set <p>模型描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ModelDesc 模型描述
+     * @param ModelDesc <p>模型描述</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModelDesc(String ModelDesc) {
@@ -258,9 +258,9 @@ public class ModelInfo extends AbstractModel {
     }
 
     /**
-     * Get 模型名称
+     * Get <p>模型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AliasName 模型名称
+     * @return AliasName <p>模型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAliasName() {
@@ -268,9 +268,9 @@ public class ModelInfo extends AbstractModel {
     }
 
     /**
-     * Set 模型名称
+     * Set <p>模型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AliasName 模型名称
+     * @param AliasName <p>模型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAliasName(String AliasName) {
@@ -278,9 +278,9 @@ public class ModelInfo extends AbstractModel {
     }
 
     /**
-     * Get 资源状态 1：资源可用；2：资源已用尽
+     * Get <p>资源状态 1：资源可用；2：资源已用尽</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceStatus 资源状态 1：资源可用；2：资源已用尽
+     * @return ResourceStatus <p>资源状态 1：资源可用；2：资源已用尽</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getResourceStatus() {
@@ -288,9 +288,9 @@ public class ModelInfo extends AbstractModel {
     }
 
     /**
-     * Set 资源状态 1：资源可用；2：资源已用尽
+     * Set <p>资源状态 1：资源可用；2：资源已用尽</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceStatus 资源状态 1：资源可用；2：资源已用尽
+     * @param ResourceStatus <p>资源状态 1：资源可用；2：资源已用尽</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceStatus(Long ResourceStatus) {
@@ -298,9 +298,9 @@ public class ModelInfo extends AbstractModel {
     }
 
     /**
-     * Get 提示词内容字符限制
+     * Get <p>提示词内容字符限制</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PromptWordsLimit 提示词内容字符限制
+     * @return PromptWordsLimit <p>提示词内容字符限制</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPromptWordsLimit() {
@@ -308,9 +308,9 @@ public class ModelInfo extends AbstractModel {
     }
 
     /**
-     * Set 提示词内容字符限制
+     * Set <p>提示词内容字符限制</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PromptWordsLimit 提示词内容字符限制
+     * @param PromptWordsLimit <p>提示词内容字符限制</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPromptWordsLimit(String PromptWordsLimit) {
@@ -318,9 +318,9 @@ public class ModelInfo extends AbstractModel {
     }
 
     /**
-     * Get 通过核心采样控制内容生成的多样性，较高的Top P值会导致生成更多样的内容
+     * Get <p>通过核心采样控制内容生成的多样性，较高的Top P值会导致生成更多样的内容</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TopP 通过核心采样控制内容生成的多样性，较高的Top P值会导致生成更多样的内容
+     * @return TopP <p>通过核心采样控制内容生成的多样性，较高的Top P值会导致生成更多样的内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ModelParameter getTopP() {
@@ -328,9 +328,9 @@ public class ModelInfo extends AbstractModel {
     }
 
     /**
-     * Set 通过核心采样控制内容生成的多样性，较高的Top P值会导致生成更多样的内容
+     * Set <p>通过核心采样控制内容生成的多样性，较高的Top P值会导致生成更多样的内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TopP 通过核心采样控制内容生成的多样性，较高的Top P值会导致生成更多样的内容
+     * @param TopP <p>通过核心采样控制内容生成的多样性，较高的Top P值会导致生成更多样的内容</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopP(ModelParameter TopP) {
@@ -338,9 +338,9 @@ public class ModelInfo extends AbstractModel {
     }
 
     /**
-     * Get 温度控制随机性
+     * Get <p>温度控制随机性</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Temperature 温度控制随机性
+     * @return Temperature <p>温度控制随机性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ModelParameter getTemperature() {
@@ -348,9 +348,9 @@ public class ModelInfo extends AbstractModel {
     }
 
     /**
-     * Set 温度控制随机性
+     * Set <p>温度控制随机性</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Temperature 温度控制随机性
+     * @param Temperature <p>温度控制随机性</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemperature(ModelParameter Temperature) {
@@ -358,9 +358,9 @@ public class ModelInfo extends AbstractModel {
     }
 
     /**
-     * Get 最多能生成的token数量
+     * Get <p>最多能生成的token数量</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MaxTokens 最多能生成的token数量
+     * @return MaxTokens <p>最多能生成的token数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ModelParameter getMaxTokens() {
@@ -368,9 +368,9 @@ public class ModelInfo extends AbstractModel {
     }
 
     /**
-     * Set 最多能生成的token数量
+     * Set <p>最多能生成的token数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaxTokens 最多能生成的token数量
+     * @param MaxTokens <p>最多能生成的token数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxTokens(ModelParameter MaxTokens) {
@@ -378,57 +378,57 @@ public class ModelInfo extends AbstractModel {
     }
 
     /**
-     * Get 模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验,Custom自定义模型 
-     * @return Source 模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验,Custom自定义模型
+     * Get <p>模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验,Custom自定义模型</p> 
+     * @return Source <p>模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验,Custom自定义模型</p>
      */
     public String getSource() {
         return this.Source;
     }
 
     /**
-     * Set 模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验,Custom自定义模型
-     * @param Source 模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验,Custom自定义模型
+     * Set <p>模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验,Custom自定义模型</p>
+     * @param Source <p>模型来源 Hunyuan：腾讯混元大模型,Industry：腾讯云行业大模型,Experience：新模型体验,Custom自定义模型</p>
      */
     public void setSource(String Source) {
         this.Source = Source;
     }
 
     /**
-     * Get 模型图标 
-     * @return Icon 模型图标
+     * Get <p>模型图标</p> 
+     * @return Icon <p>模型图标</p>
      */
     public String getIcon() {
         return this.Icon;
     }
 
     /**
-     * Set 模型图标
-     * @param Icon 模型图标
+     * Set <p>模型图标</p>
+     * @param Icon <p>模型图标</p>
      */
     public void setIcon(String Icon) {
         this.Icon = Icon;
     }
 
     /**
-     * Get 是否免费 
-     * @return IsFree 是否免费
+     * Get <p>是否免费</p> 
+     * @return IsFree <p>是否免费</p>
      */
     public Boolean getIsFree() {
         return this.IsFree;
     }
 
     /**
-     * Set 是否免费
-     * @param IsFree 是否免费
+     * Set <p>是否免费</p>
+     * @param IsFree <p>是否免费</p>
      */
     public void setIsFree(Boolean IsFree) {
         this.IsFree = IsFree;
     }
 
     /**
-     * Get 模型对话框可输入的上限
+     * Get <p>模型对话框可输入的上限</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InputLenLimit 模型对话框可输入的上限
+     * @return InputLenLimit <p>模型对话框可输入的上限</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInputLenLimit() {
@@ -436,9 +436,9 @@ public class ModelInfo extends AbstractModel {
     }
 
     /**
-     * Set 模型对话框可输入的上限
+     * Set <p>模型对话框可输入的上限</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InputLenLimit 模型对话框可输入的上限
+     * @param InputLenLimit <p>模型对话框可输入的上限</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInputLenLimit(Long InputLenLimit) {
@@ -446,9 +446,9 @@ public class ModelInfo extends AbstractModel {
     }
 
     /**
-     * Get 支持工作流的类型 0:模型不支持; 1: 模型支持工作流； 2： 模型支持效果不佳；
+     * Get <p>支持工作流的类型 0:模型不支持; 1: 模型支持工作流； 2： 模型支持效果不佳；</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SupportWorkflowStatus 支持工作流的类型 0:模型不支持; 1: 模型支持工作流； 2： 模型支持效果不佳；
+     * @return SupportWorkflowStatus <p>支持工作流的类型 0:模型不支持; 1: 模型支持工作流； 2： 模型支持效果不佳；</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSupportWorkflowStatus() {
@@ -456,9 +456,9 @@ public class ModelInfo extends AbstractModel {
     }
 
     /**
-     * Set 支持工作流的类型 0:模型不支持; 1: 模型支持工作流； 2： 模型支持效果不佳；
+     * Set <p>支持工作流的类型 0:模型不支持; 1: 模型支持工作流； 2： 模型支持效果不佳；</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SupportWorkflowStatus 支持工作流的类型 0:模型不支持; 1: 模型支持工作流； 2： 模型支持效果不佳；
+     * @param SupportWorkflowStatus <p>支持工作流的类型 0:模型不支持; 1: 模型支持工作流； 2： 模型支持效果不佳；</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSupportWorkflowStatus(Long SupportWorkflowStatus) {
@@ -466,105 +466,105 @@ public class ModelInfo extends AbstractModel {
     }
 
     /**
-     * Get 模型类别 generate：生成模型，thought：思考模型 
-     * @return ModelCategory 模型类别 generate：生成模型，thought：思考模型
+     * Get <p>模型类别 generate：生成模型，thought：思考模型</p> 
+     * @return ModelCategory <p>模型类别 generate：生成模型，thought：思考模型</p>
      */
     public String getModelCategory() {
         return this.ModelCategory;
     }
 
     /**
-     * Set 模型类别 generate：生成模型，thought：思考模型
-     * @param ModelCategory 模型类别 generate：生成模型，thought：思考模型
+     * Set <p>模型类别 generate：生成模型，thought：思考模型</p>
+     * @param ModelCategory <p>模型类别 generate：生成模型，thought：思考模型</p>
      */
     public void setModelCategory(String ModelCategory) {
         this.ModelCategory = ModelCategory;
     }
 
     /**
-     * Get 是否默认模型 
-     * @return IsDefault 是否默认模型
+     * Get <p>是否默认模型</p> 
+     * @return IsDefault <p>是否默认模型</p>
      */
     public Boolean getIsDefault() {
         return this.IsDefault;
     }
 
     /**
-     * Set 是否默认模型
-     * @param IsDefault 是否默认模型
+     * Set <p>是否默认模型</p>
+     * @param IsDefault <p>是否默认模型</p>
      */
     public void setIsDefault(Boolean IsDefault) {
         this.IsDefault = IsDefault;
     }
 
     /**
-     * Get 角色提示词输入长度限制 
-     * @return RoleLenLimit 角色提示词输入长度限制
+     * Get <p>角色提示词输入长度限制</p> 
+     * @return RoleLenLimit <p>角色提示词输入长度限制</p>
      */
     public Long getRoleLenLimit() {
         return this.RoleLenLimit;
     }
 
     /**
-     * Set 角色提示词输入长度限制
-     * @param RoleLenLimit 角色提示词输入长度限制
+     * Set <p>角色提示词输入长度限制</p>
+     * @param RoleLenLimit <p>角色提示词输入长度限制</p>
      */
     public void setRoleLenLimit(Long RoleLenLimit) {
         this.RoleLenLimit = RoleLenLimit;
     }
 
     /**
-     * Get 是否专属并发模型 
-     * @return IsExclusive 是否专属并发模型
+     * Get <p>是否专属并发模型</p> 
+     * @return IsExclusive <p>是否专属并发模型</p>
      */
     public Boolean getIsExclusive() {
         return this.IsExclusive;
     }
 
     /**
-     * Set 是否专属并发模型
-     * @param IsExclusive 是否专属并发模型
+     * Set <p>是否专属并发模型</p>
+     * @param IsExclusive <p>是否专属并发模型</p>
      */
     public void setIsExclusive(Boolean IsExclusive) {
         this.IsExclusive = IsExclusive;
     }
 
     /**
-     * Get 模型支持智能通话效果 
-     * @return SupportAiCallStatus 模型支持智能通话效果
+     * Get <p>模型支持智能通话效果</p><p>枚举值：</p><ul><li>0： 模型不支持</li><li>1： 模型支持ai通话</li><li>2： 模型ai通话支持效果不佳</li></ul> 
+     * @return SupportAiCallStatus <p>模型支持智能通话效果</p><p>枚举值：</p><ul><li>0： 模型不支持</li><li>1： 模型支持ai通话</li><li>2： 模型ai通话支持效果不佳</li></ul>
      */
     public Long getSupportAiCallStatus() {
         return this.SupportAiCallStatus;
     }
 
     /**
-     * Set 模型支持智能通话效果
-     * @param SupportAiCallStatus 模型支持智能通话效果
+     * Set <p>模型支持智能通话效果</p><p>枚举值：</p><ul><li>0： 模型不支持</li><li>1： 模型支持ai通话</li><li>2： 模型ai通话支持效果不佳</li></ul>
+     * @param SupportAiCallStatus <p>模型支持智能通话效果</p><p>枚举值：</p><ul><li>0： 模型不支持</li><li>1： 模型支持ai通话</li><li>2： 模型ai通话支持效果不佳</li></ul>
      */
     public void setSupportAiCallStatus(Long SupportAiCallStatus) {
         this.SupportAiCallStatus = SupportAiCallStatus;
     }
 
     /**
-     * Get 专属并发数 
-     * @return Concurrency 专属并发数
+     * Get <p>专属并发数</p> 
+     * @return Concurrency <p>专属并发数</p>
      */
     public Long getConcurrency() {
         return this.Concurrency;
     }
 
     /**
-     * Set 专属并发数
-     * @param Concurrency 专属并发数
+     * Set <p>专属并发数</p>
+     * @param Concurrency <p>专属并发数</p>
      */
     public void setConcurrency(Long Concurrency) {
         this.Concurrency = Concurrency;
     }
 
     /**
-     * Get 模型标签
+     * Get <p>模型标签</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ModelTags 模型标签
+     * @return ModelTags <p>模型标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getModelTags() {
@@ -572,9 +572,9 @@ public class ModelInfo extends AbstractModel {
     }
 
     /**
-     * Set 模型标签
+     * Set <p>模型标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ModelTags 模型标签
+     * @param ModelTags <p>模型标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModelTags(String [] ModelTags) {
@@ -582,9 +582,9 @@ public class ModelInfo extends AbstractModel {
     }
 
     /**
-     * Get 模型超参定义
+     * Get <p>模型超参定义</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ModelParams 模型超参定义
+     * @return ModelParams <p>模型超参定义</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ModelParameter [] getModelParams() {
@@ -592,9 +592,9 @@ public class ModelInfo extends AbstractModel {
     }
 
     /**
-     * Set 模型超参定义
+     * Set <p>模型超参定义</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ModelParams 模型超参定义
+     * @param ModelParams <p>模型超参定义</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModelParams(ModelParameter [] ModelParams) {
@@ -602,80 +602,80 @@ public class ModelInfo extends AbstractModel {
     }
 
     /**
-     * Get 提供商名称 
-     * @return ProviderName 提供商名称
+     * Get <p>提供商名称</p> 
+     * @return ProviderName <p>提供商名称</p>
      */
     public String getProviderName() {
         return this.ProviderName;
     }
 
     /**
-     * Set 提供商名称
-     * @param ProviderName 提供商名称
+     * Set <p>提供商名称</p>
+     * @param ProviderName <p>提供商名称</p>
      */
     public void setProviderName(String ProviderName) {
         this.ProviderName = ProviderName;
     }
 
     /**
-     * Get 提供商别名 
-     * @return ProviderAliasName 提供商别名
+     * Get <p>提供商别名</p> 
+     * @return ProviderAliasName <p>提供商别名</p>
      */
     public String getProviderAliasName() {
         return this.ProviderAliasName;
     }
 
     /**
-     * Set 提供商别名
-     * @param ProviderAliasName 提供商别名
+     * Set <p>提供商别名</p>
+     * @param ProviderAliasName <p>提供商别名</p>
      */
     public void setProviderAliasName(String ProviderAliasName) {
         this.ProviderAliasName = ProviderAliasName;
     }
 
     /**
-     * Get 提供商类型 Self:提供商，Custom：自定义模型提供商，Third：第三方模型提供商 
-     * @return ProviderType 提供商类型 Self:提供商，Custom：自定义模型提供商，Third：第三方模型提供商
+     * Get <p>提供商类型 Self:提供商，Custom：自定义模型提供商，Third：第三方模型提供商</p> 
+     * @return ProviderType <p>提供商类型 Self:提供商，Custom：自定义模型提供商，Third：第三方模型提供商</p>
      */
     public String getProviderType() {
         return this.ProviderType;
     }
 
     /**
-     * Set 提供商类型 Self:提供商，Custom：自定义模型提供商，Third：第三方模型提供商
-     * @param ProviderType 提供商类型 Self:提供商，Custom：自定义模型提供商，Third：第三方模型提供商
+     * Set <p>提供商类型 Self:提供商，Custom：自定义模型提供商，Third：第三方模型提供商</p>
+     * @param ProviderType <p>提供商类型 Self:提供商，Custom：自定义模型提供商，Third：第三方模型提供商</p>
      */
     public void setProviderType(String ProviderType) {
         this.ProviderType = ProviderType;
     }
 
     /**
-     * Get 是否关闭模型超参 
-     * @return IsCloseModelParams 是否关闭模型超参
+     * Get <p>是否关闭模型超参</p> 
+     * @return IsCloseModelParams <p>是否关闭模型超参</p>
      */
     public Boolean getIsCloseModelParams() {
         return this.IsCloseModelParams;
     }
 
     /**
-     * Set 是否关闭模型超参
-     * @param IsCloseModelParams 是否关闭模型超参
+     * Set <p>是否关闭模型超参</p>
+     * @param IsCloseModelParams <p>是否关闭模型超参</p>
      */
     public void setIsCloseModelParams(Boolean IsCloseModelParams) {
         this.IsCloseModelParams = IsCloseModelParams;
     }
 
     /**
-     * Get 是否支持深度思考 
-     * @return IsDeepThinking 是否支持深度思考
+     * Get <p>是否支持深度思考</p> 
+     * @return IsDeepThinking <p>是否支持深度思考</p>
      */
     public Boolean getIsDeepThinking() {
         return this.IsDeepThinking;
     }
 
     /**
-     * Set 是否支持深度思考
-     * @param IsDeepThinking 是否支持深度思考
+     * Set <p>是否支持深度思考</p>
+     * @param IsDeepThinking <p>是否支持深度思考</p>
      */
     public void setIsDeepThinking(Boolean IsDeepThinking) {
         this.IsDeepThinking = IsDeepThinking;

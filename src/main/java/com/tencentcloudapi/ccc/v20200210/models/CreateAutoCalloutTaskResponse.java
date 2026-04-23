@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateAutoCalloutTaskResponse extends AbstractModel {
 
     /**
-    * 任务Id
+    * <p>任务Id</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateAutoCalloutTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务Id 
-     * @return TaskId 任务Id
+     * Get <p>任务Id</p> 
+     * @return TaskId <p>任务Id</p>
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务Id
-     * @param TaskId 任务Id
+     * Set <p>任务Id</p>
+     * @param TaskId <p>任务Id</p>
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

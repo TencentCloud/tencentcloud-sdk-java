@@ -24,161 +24,207 @@ import java.util.HashMap;
 public class SSAIChannelInfo extends AbstractModel {
 
     /**
-    * 频道ID，全局唯一标识。
+    * <p>频道ID，全局唯一标识。</p>
     */
     @SerializedName("ID")
     @Expose
     private String ID;
 
     /**
-    * 频道名称。
+    * <p>频道名称。</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 广告源信息。
+    * <p>广告源信息。</p>
     */
     @SerializedName("ContentSource")
     @Expose
     private String ContentSource;
 
     /**
-    * 播放地址。
+    * <p>播放地址。兼容旧版本参数，推荐使用HlsPlaybackPrefix或DashPlaybackPrefix</p>
     */
     @SerializedName("PlaybackPrefix")
     @Expose
     private String PlaybackPrefix;
 
     /**
-    * 广告插入SSAI配置信息。
+    * <p>hls播放地址</p>
+    */
+    @SerializedName("HlsPlaybackPrefix")
+    @Expose
+    private String HlsPlaybackPrefix;
+
+    /**
+    * <p>dash播放地址</p>
+    */
+    @SerializedName("DashPlaybackPrefix")
+    @Expose
+    private String DashPlaybackPrefix;
+
+    /**
+    * <p>广告插入SSAI配置信息。</p>
     */
     @SerializedName("SSAIInfo")
     @Expose
     private SSAIConf SSAIInfo;
 
     /**
-    * 地域信息。
+    * <p>地域信息。</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 用于clickthrough地址
+    * <p>用于clickthrough地址</p>
     */
     @SerializedName("SessionInitPrefix")
     @Expose
     private String SessionInitPrefix;
 
     /**
-     * Get 频道ID，全局唯一标识。 
-     * @return ID 频道ID，全局唯一标识。
+     * Get <p>频道ID，全局唯一标识。</p> 
+     * @return ID <p>频道ID，全局唯一标识。</p>
      */
     public String getID() {
         return this.ID;
     }
 
     /**
-     * Set 频道ID，全局唯一标识。
-     * @param ID 频道ID，全局唯一标识。
+     * Set <p>频道ID，全局唯一标识。</p>
+     * @param ID <p>频道ID，全局唯一标识。</p>
      */
     public void setID(String ID) {
         this.ID = ID;
     }
 
     /**
-     * Get 频道名称。 
-     * @return Name 频道名称。
+     * Get <p>频道名称。</p> 
+     * @return Name <p>频道名称。</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 频道名称。
-     * @param Name 频道名称。
+     * Set <p>频道名称。</p>
+     * @param Name <p>频道名称。</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 广告源信息。 
-     * @return ContentSource 广告源信息。
+     * Get <p>广告源信息。</p> 
+     * @return ContentSource <p>广告源信息。</p>
      */
     public String getContentSource() {
         return this.ContentSource;
     }
 
     /**
-     * Set 广告源信息。
-     * @param ContentSource 广告源信息。
+     * Set <p>广告源信息。</p>
+     * @param ContentSource <p>广告源信息。</p>
      */
     public void setContentSource(String ContentSource) {
         this.ContentSource = ContentSource;
     }
 
     /**
-     * Get 播放地址。 
-     * @return PlaybackPrefix 播放地址。
+     * Get <p>播放地址。兼容旧版本参数，推荐使用HlsPlaybackPrefix或DashPlaybackPrefix</p> 
+     * @return PlaybackPrefix <p>播放地址。兼容旧版本参数，推荐使用HlsPlaybackPrefix或DashPlaybackPrefix</p>
      */
     public String getPlaybackPrefix() {
         return this.PlaybackPrefix;
     }
 
     /**
-     * Set 播放地址。
-     * @param PlaybackPrefix 播放地址。
+     * Set <p>播放地址。兼容旧版本参数，推荐使用HlsPlaybackPrefix或DashPlaybackPrefix</p>
+     * @param PlaybackPrefix <p>播放地址。兼容旧版本参数，推荐使用HlsPlaybackPrefix或DashPlaybackPrefix</p>
      */
     public void setPlaybackPrefix(String PlaybackPrefix) {
         this.PlaybackPrefix = PlaybackPrefix;
     }
 
     /**
-     * Get 广告插入SSAI配置信息。 
-     * @return SSAIInfo 广告插入SSAI配置信息。
+     * Get <p>hls播放地址</p> 
+     * @return HlsPlaybackPrefix <p>hls播放地址</p>
+     */
+    public String getHlsPlaybackPrefix() {
+        return this.HlsPlaybackPrefix;
+    }
+
+    /**
+     * Set <p>hls播放地址</p>
+     * @param HlsPlaybackPrefix <p>hls播放地址</p>
+     */
+    public void setHlsPlaybackPrefix(String HlsPlaybackPrefix) {
+        this.HlsPlaybackPrefix = HlsPlaybackPrefix;
+    }
+
+    /**
+     * Get <p>dash播放地址</p> 
+     * @return DashPlaybackPrefix <p>dash播放地址</p>
+     */
+    public String getDashPlaybackPrefix() {
+        return this.DashPlaybackPrefix;
+    }
+
+    /**
+     * Set <p>dash播放地址</p>
+     * @param DashPlaybackPrefix <p>dash播放地址</p>
+     */
+    public void setDashPlaybackPrefix(String DashPlaybackPrefix) {
+        this.DashPlaybackPrefix = DashPlaybackPrefix;
+    }
+
+    /**
+     * Get <p>广告插入SSAI配置信息。</p> 
+     * @return SSAIInfo <p>广告插入SSAI配置信息。</p>
      */
     public SSAIConf getSSAIInfo() {
         return this.SSAIInfo;
     }
 
     /**
-     * Set 广告插入SSAI配置信息。
-     * @param SSAIInfo 广告插入SSAI配置信息。
+     * Set <p>广告插入SSAI配置信息。</p>
+     * @param SSAIInfo <p>广告插入SSAI配置信息。</p>
      */
     public void setSSAIInfo(SSAIConf SSAIInfo) {
         this.SSAIInfo = SSAIInfo;
     }
 
     /**
-     * Get 地域信息。 
-     * @return Region 地域信息。
+     * Get <p>地域信息。</p> 
+     * @return Region <p>地域信息。</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 地域信息。
-     * @param Region 地域信息。
+     * Set <p>地域信息。</p>
+     * @param Region <p>地域信息。</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 用于clickthrough地址 
-     * @return SessionInitPrefix 用于clickthrough地址
+     * Get <p>用于clickthrough地址</p> 
+     * @return SessionInitPrefix <p>用于clickthrough地址</p>
      */
     public String getSessionInitPrefix() {
         return this.SessionInitPrefix;
     }
 
     /**
-     * Set 用于clickthrough地址
-     * @param SessionInitPrefix 用于clickthrough地址
+     * Set <p>用于clickthrough地址</p>
+     * @param SessionInitPrefix <p>用于clickthrough地址</p>
      */
     public void setSessionInitPrefix(String SessionInitPrefix) {
         this.SessionInitPrefix = SessionInitPrefix;
@@ -204,6 +250,12 @@ public class SSAIChannelInfo extends AbstractModel {
         if (source.PlaybackPrefix != null) {
             this.PlaybackPrefix = new String(source.PlaybackPrefix);
         }
+        if (source.HlsPlaybackPrefix != null) {
+            this.HlsPlaybackPrefix = new String(source.HlsPlaybackPrefix);
+        }
+        if (source.DashPlaybackPrefix != null) {
+            this.DashPlaybackPrefix = new String(source.DashPlaybackPrefix);
+        }
         if (source.SSAIInfo != null) {
             this.SSAIInfo = new SSAIConf(source.SSAIInfo);
         }
@@ -224,6 +276,8 @@ public class SSAIChannelInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "ContentSource", this.ContentSource);
         this.setParamSimple(map, prefix + "PlaybackPrefix", this.PlaybackPrefix);
+        this.setParamSimple(map, prefix + "HlsPlaybackPrefix", this.HlsPlaybackPrefix);
+        this.setParamSimple(map, prefix + "DashPlaybackPrefix", this.DashPlaybackPrefix);
         this.setParamObj(map, prefix + "SSAIInfo.", this.SSAIInfo);
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "SessionInitPrefix", this.SessionInitPrefix);

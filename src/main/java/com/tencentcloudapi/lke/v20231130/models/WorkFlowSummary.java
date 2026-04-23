@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class WorkFlowSummary extends AbstractModel {
 
     /**
-    * 工作流ID
+    * <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowId")
@@ -32,7 +32,7 @@ public class WorkFlowSummary extends AbstractModel {
     private String WorkflowId;
 
     /**
-    * 工作流名称
+    * <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowName")
@@ -40,7 +40,7 @@ public class WorkFlowSummary extends AbstractModel {
     private String WorkflowName;
 
     /**
-    * 工作流运行ID
+    * <p>工作流运行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowRunId")
@@ -48,7 +48,7 @@ public class WorkFlowSummary extends AbstractModel {
     private String WorkflowRunId;
 
     /**
-    * 节点信息
+    * <p>节点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunNodes")
@@ -56,7 +56,7 @@ public class WorkFlowSummary extends AbstractModel {
     private WorkflowRunNodeInfo [] RunNodes;
 
     /**
-    * 选项卡
+    * <p>选项卡</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OptionCards")
@@ -64,7 +64,7 @@ public class WorkFlowSummary extends AbstractModel {
     private String [] OptionCards;
 
     /**
-    * 多气泡的输出结果
+    * <p>多气泡的输出结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Outputs")
@@ -72,7 +72,7 @@ public class WorkFlowSummary extends AbstractModel {
     private String [] Outputs;
 
     /**
-    * 工作流发布时间，unix时间戳
+    * <p>工作流发布时间，unix时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkflowReleaseTime")
@@ -80,21 +80,21 @@ public class WorkFlowSummary extends AbstractModel {
     private String WorkflowReleaseTime;
 
     /**
-    * 中间消息
+    * <p>中间消息</p>
     */
     @SerializedName("PendingMessages")
     @Expose
     private String [] PendingMessages;
 
     /**
-    * 选项卡索引
+    * <p>选项卡索引</p>
     */
     @SerializedName("OptionCardIndex")
     @Expose
     private OptionCardIndex OptionCardIndex;
 
     /**
-    * 工作流多气泡输出
+    * <p>工作流多气泡输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Contents")
@@ -102,9 +102,16 @@ public class WorkFlowSummary extends AbstractModel {
     private Content [] Contents;
 
     /**
-     * Get 工作流ID
+    * <p>标识选项卡为单选还是双选</p><p>枚举值：</p><ul><li>0： 单选</li><li>1： 多选</li></ul>
+    */
+    @SerializedName("OptionMode")
+    @Expose
+    private Long OptionMode;
+
+    /**
+     * Get <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowId 工作流ID
+     * @return WorkflowId <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowId() {
@@ -112,9 +119,9 @@ public class WorkFlowSummary extends AbstractModel {
     }
 
     /**
-     * Set 工作流ID
+     * Set <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowId 工作流ID
+     * @param WorkflowId <p>工作流ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowId(String WorkflowId) {
@@ -122,9 +129,9 @@ public class WorkFlowSummary extends AbstractModel {
     }
 
     /**
-     * Get 工作流名称
+     * Get <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowName 工作流名称
+     * @return WorkflowName <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowName() {
@@ -132,9 +139,9 @@ public class WorkFlowSummary extends AbstractModel {
     }
 
     /**
-     * Set 工作流名称
+     * Set <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowName 工作流名称
+     * @param WorkflowName <p>工作流名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowName(String WorkflowName) {
@@ -142,9 +149,9 @@ public class WorkFlowSummary extends AbstractModel {
     }
 
     /**
-     * Get 工作流运行ID
+     * Get <p>工作流运行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowRunId 工作流运行ID
+     * @return WorkflowRunId <p>工作流运行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowRunId() {
@@ -152,9 +159,9 @@ public class WorkFlowSummary extends AbstractModel {
     }
 
     /**
-     * Set 工作流运行ID
+     * Set <p>工作流运行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowRunId 工作流运行ID
+     * @param WorkflowRunId <p>工作流运行ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowRunId(String WorkflowRunId) {
@@ -162,9 +169,9 @@ public class WorkFlowSummary extends AbstractModel {
     }
 
     /**
-     * Get 节点信息
+     * Get <p>节点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RunNodes 节点信息
+     * @return RunNodes <p>节点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public WorkflowRunNodeInfo [] getRunNodes() {
@@ -172,9 +179,9 @@ public class WorkFlowSummary extends AbstractModel {
     }
 
     /**
-     * Set 节点信息
+     * Set <p>节点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RunNodes 节点信息
+     * @param RunNodes <p>节点信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunNodes(WorkflowRunNodeInfo [] RunNodes) {
@@ -182,9 +189,9 @@ public class WorkFlowSummary extends AbstractModel {
     }
 
     /**
-     * Get 选项卡
+     * Get <p>选项卡</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OptionCards 选项卡
+     * @return OptionCards <p>选项卡</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getOptionCards() {
@@ -192,9 +199,9 @@ public class WorkFlowSummary extends AbstractModel {
     }
 
     /**
-     * Set 选项卡
+     * Set <p>选项卡</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OptionCards 选项卡
+     * @param OptionCards <p>选项卡</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOptionCards(String [] OptionCards) {
@@ -202,9 +209,9 @@ public class WorkFlowSummary extends AbstractModel {
     }
 
     /**
-     * Get 多气泡的输出结果
+     * Get <p>多气泡的输出结果</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Outputs 多气泡的输出结果
+     * @return Outputs <p>多气泡的输出结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getOutputs() {
@@ -212,9 +219,9 @@ public class WorkFlowSummary extends AbstractModel {
     }
 
     /**
-     * Set 多气泡的输出结果
+     * Set <p>多气泡的输出结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Outputs 多气泡的输出结果
+     * @param Outputs <p>多气泡的输出结果</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutputs(String [] Outputs) {
@@ -222,9 +229,9 @@ public class WorkFlowSummary extends AbstractModel {
     }
 
     /**
-     * Get 工作流发布时间，unix时间戳
+     * Get <p>工作流发布时间，unix时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WorkflowReleaseTime 工作流发布时间，unix时间戳
+     * @return WorkflowReleaseTime <p>工作流发布时间，unix时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkflowReleaseTime() {
@@ -232,9 +239,9 @@ public class WorkFlowSummary extends AbstractModel {
     }
 
     /**
-     * Set 工作流发布时间，unix时间戳
+     * Set <p>工作流发布时间，unix时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WorkflowReleaseTime 工作流发布时间，unix时间戳
+     * @param WorkflowReleaseTime <p>工作流发布时间，unix时间戳</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkflowReleaseTime(String WorkflowReleaseTime) {
@@ -242,41 +249,41 @@ public class WorkFlowSummary extends AbstractModel {
     }
 
     /**
-     * Get 中间消息 
-     * @return PendingMessages 中间消息
+     * Get <p>中间消息</p> 
+     * @return PendingMessages <p>中间消息</p>
      */
     public String [] getPendingMessages() {
         return this.PendingMessages;
     }
 
     /**
-     * Set 中间消息
-     * @param PendingMessages 中间消息
+     * Set <p>中间消息</p>
+     * @param PendingMessages <p>中间消息</p>
      */
     public void setPendingMessages(String [] PendingMessages) {
         this.PendingMessages = PendingMessages;
     }
 
     /**
-     * Get 选项卡索引 
-     * @return OptionCardIndex 选项卡索引
+     * Get <p>选项卡索引</p> 
+     * @return OptionCardIndex <p>选项卡索引</p>
      */
     public OptionCardIndex getOptionCardIndex() {
         return this.OptionCardIndex;
     }
 
     /**
-     * Set 选项卡索引
-     * @param OptionCardIndex 选项卡索引
+     * Set <p>选项卡索引</p>
+     * @param OptionCardIndex <p>选项卡索引</p>
      */
     public void setOptionCardIndex(OptionCardIndex OptionCardIndex) {
         this.OptionCardIndex = OptionCardIndex;
     }
 
     /**
-     * Get 工作流多气泡输出
+     * Get <p>工作流多气泡输出</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Contents 工作流多气泡输出
+     * @return Contents <p>工作流多气泡输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Content [] getContents() {
@@ -284,13 +291,29 @@ public class WorkFlowSummary extends AbstractModel {
     }
 
     /**
-     * Set 工作流多气泡输出
+     * Set <p>工作流多气泡输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Contents 工作流多气泡输出
+     * @param Contents <p>工作流多气泡输出</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContents(Content [] Contents) {
         this.Contents = Contents;
+    }
+
+    /**
+     * Get <p>标识选项卡为单选还是双选</p><p>枚举值：</p><ul><li>0： 单选</li><li>1： 多选</li></ul> 
+     * @return OptionMode <p>标识选项卡为单选还是双选</p><p>枚举值：</p><ul><li>0： 单选</li><li>1： 多选</li></ul>
+     */
+    public Long getOptionMode() {
+        return this.OptionMode;
+    }
+
+    /**
+     * Set <p>标识选项卡为单选还是双选</p><p>枚举值：</p><ul><li>0： 单选</li><li>1： 多选</li></ul>
+     * @param OptionMode <p>标识选项卡为单选还是双选</p><p>枚举值：</p><ul><li>0： 单选</li><li>1： 多选</li></ul>
+     */
+    public void setOptionMode(Long OptionMode) {
+        this.OptionMode = OptionMode;
     }
 
     public WorkFlowSummary() {
@@ -346,6 +369,9 @@ public class WorkFlowSummary extends AbstractModel {
                 this.Contents[i] = new Content(source.Contents[i]);
             }
         }
+        if (source.OptionMode != null) {
+            this.OptionMode = new Long(source.OptionMode);
+        }
     }
 
 
@@ -363,6 +389,7 @@ public class WorkFlowSummary extends AbstractModel {
         this.setParamArraySimple(map, prefix + "PendingMessages.", this.PendingMessages);
         this.setParamObj(map, prefix + "OptionCardIndex.", this.OptionCardIndex);
         this.setParamArrayObj(map, prefix + "Contents.", this.Contents);
+        this.setParamSimple(map, prefix + "OptionMode", this.OptionMode);
 
     }
 }

@@ -295,6 +295,17 @@ https://cloud.tencent.com/document/product/1278/85305
     }
 
     /**
+     *查询资源组关联的工作空间列表
+     * @param req DescribeBillingResourceGroupAttachedWorkspacesRequest
+     * @return DescribeBillingResourceGroupAttachedWorkspacesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBillingResourceGroupAttachedWorkspacesResponse DescribeBillingResourceGroupAttachedWorkspaces(DescribeBillingResourceGroupAttachedWorkspacesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBillingResourceGroupAttachedWorkspaces", DescribeBillingResourceGroupAttachedWorkspacesResponse.class);
+    }
+
+    /**
      *查询资源组列表
      * @param req DescribeBillingResourceGroupsRequest
      * @return DescribeBillingResourceGroupsResponse

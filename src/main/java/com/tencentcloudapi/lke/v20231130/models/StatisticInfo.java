@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class StatisticInfo extends AbstractModel {
 
     /**
-    * 模型名称
+    * <p>模型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModelName")
@@ -32,7 +32,7 @@ public class StatisticInfo extends AbstractModel {
     private String ModelName;
 
     /**
-    * 首Token耗时
+    * <p>首Token耗时</p><p>单位：ms</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FirstTokenCost")
@@ -40,7 +40,7 @@ public class StatisticInfo extends AbstractModel {
     private Long FirstTokenCost;
 
     /**
-    * 总耗时
+    * <p>总耗时</p><p>单位：ms</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCost")
@@ -48,7 +48,7 @@ public class StatisticInfo extends AbstractModel {
     private Long TotalCost;
 
     /**
-    * 输入Token数量
+    * <p>输入Token数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InputTokens")
@@ -56,7 +56,7 @@ public class StatisticInfo extends AbstractModel {
     private Long InputTokens;
 
     /**
-    * 输出Token数量
+    * <p>输出Token数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutputTokens")
@@ -64,7 +64,7 @@ public class StatisticInfo extends AbstractModel {
     private Long OutputTokens;
 
     /**
-    * 总Token数量
+    * <p>总Token数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalTokens")
@@ -72,9 +72,9 @@ public class StatisticInfo extends AbstractModel {
     private Long TotalTokens;
 
     /**
-     * Get 模型名称
+     * Get <p>模型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ModelName 模型名称
+     * @return ModelName <p>模型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModelName() {
@@ -82,9 +82,9 @@ public class StatisticInfo extends AbstractModel {
     }
 
     /**
-     * Set 模型名称
+     * Set <p>模型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ModelName 模型名称
+     * @param ModelName <p>模型名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModelName(String ModelName) {
@@ -92,9 +92,9 @@ public class StatisticInfo extends AbstractModel {
     }
 
     /**
-     * Get 首Token耗时
+     * Get <p>首Token耗时</p><p>单位：ms</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FirstTokenCost 首Token耗时
+     * @return FirstTokenCost <p>首Token耗时</p><p>单位：ms</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFirstTokenCost() {
@@ -102,9 +102,9 @@ public class StatisticInfo extends AbstractModel {
     }
 
     /**
-     * Set 首Token耗时
+     * Set <p>首Token耗时</p><p>单位：ms</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FirstTokenCost 首Token耗时
+     * @param FirstTokenCost <p>首Token耗时</p><p>单位：ms</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFirstTokenCost(Long FirstTokenCost) {
@@ -112,9 +112,9 @@ public class StatisticInfo extends AbstractModel {
     }
 
     /**
-     * Get 总耗时
+     * Get <p>总耗时</p><p>单位：ms</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalCost 总耗时
+     * @return TotalCost <p>总耗时</p><p>单位：ms</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCost() {
@@ -122,9 +122,9 @@ public class StatisticInfo extends AbstractModel {
     }
 
     /**
-     * Set 总耗时
+     * Set <p>总耗时</p><p>单位：ms</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalCost 总耗时
+     * @param TotalCost <p>总耗时</p><p>单位：ms</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCost(Long TotalCost) {
@@ -132,9 +132,9 @@ public class StatisticInfo extends AbstractModel {
     }
 
     /**
-     * Get 输入Token数量
+     * Get <p>输入Token数量</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InputTokens 输入Token数量
+     * @return InputTokens <p>输入Token数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInputTokens() {
@@ -142,9 +142,9 @@ public class StatisticInfo extends AbstractModel {
     }
 
     /**
-     * Set 输入Token数量
+     * Set <p>输入Token数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InputTokens 输入Token数量
+     * @param InputTokens <p>输入Token数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInputTokens(Long InputTokens) {
@@ -152,9 +152,9 @@ public class StatisticInfo extends AbstractModel {
     }
 
     /**
-     * Get 输出Token数量
+     * Get <p>输出Token数量</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OutputTokens 输出Token数量
+     * @return OutputTokens <p>输出Token数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOutputTokens() {
@@ -162,9 +162,9 @@ public class StatisticInfo extends AbstractModel {
     }
 
     /**
-     * Set 输出Token数量
+     * Set <p>输出Token数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OutputTokens 输出Token数量
+     * @param OutputTokens <p>输出Token数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutputTokens(Long OutputTokens) {
@@ -172,9 +172,9 @@ public class StatisticInfo extends AbstractModel {
     }
 
     /**
-     * Get 总Token数量
+     * Get <p>总Token数量</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalTokens 总Token数量
+     * @return TotalTokens <p>总Token数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalTokens() {
@@ -182,9 +182,9 @@ public class StatisticInfo extends AbstractModel {
     }
 
     /**
-     * Set 总Token数量
+     * Set <p>总Token数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalTokens 总Token数量
+     * @param TotalTokens <p>总Token数量</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalTokens(Long TotalTokens) {

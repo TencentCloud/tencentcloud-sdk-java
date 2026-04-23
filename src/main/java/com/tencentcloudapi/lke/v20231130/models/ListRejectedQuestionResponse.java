@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ListRejectedQuestionResponse extends AbstractModel {
 
     /**
-    * 总数
+    * <p>总数</p>
     */
     @SerializedName("Total")
     @Expose
     private String Total;
 
     /**
-    * 拒答问题列表
+    * <p>拒答问题列表</p>
     */
     @SerializedName("List")
     @Expose
@@ -45,32 +45,32 @@ public class ListRejectedQuestionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总数 
-     * @return Total 总数
+     * Get <p>总数</p> 
+     * @return Total <p>总数</p>
      */
     public String getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 总数
-     * @param Total 总数
+     * Set <p>总数</p>
+     * @param Total <p>总数</p>
      */
     public void setTotal(String Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 拒答问题列表 
-     * @return List 拒答问题列表
+     * Get <p>拒答问题列表</p> 
+     * @return List <p>拒答问题列表</p>
      */
     public RejectedQuestion [] getList() {
         return this.List;
     }
 
     /**
-     * Set 拒答问题列表
-     * @param List 拒答问题列表
+     * Set <p>拒答问题列表</p>
+     * @param List <p>拒答问题列表</p>
      */
     public void setList(RejectedQuestion [] List) {
         this.List = List;

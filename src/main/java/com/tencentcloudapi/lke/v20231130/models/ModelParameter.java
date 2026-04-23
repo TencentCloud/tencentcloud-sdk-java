@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModelParameter extends AbstractModel {
 
     /**
-    * 超参名称
+    * <p>超参名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -32,28 +32,28 @@ public class ModelParameter extends AbstractModel {
     private String Name;
 
     /**
-    * 类型
+    * <p>类型</p><p>枚举值：</p><ul><li>string： 字符类型</li><li>int： 整数类型</li><li>float： 浮点数类型</li><li>array： 数组类型</li></ul>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 默认值
+    * <p>默认值</p>
     */
     @SerializedName("DefaultValue")
     @Expose
     private String DefaultValue;
 
     /**
-    * 枚举值
+    * <p>枚举值</p>
     */
     @SerializedName("EnumValues")
     @Expose
     private String [] EnumValues;
 
     /**
-    * 默认值
+    * <p>默认值</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Default")
@@ -61,7 +61,7 @@ public class ModelParameter extends AbstractModel {
     private Float Default;
 
     /**
-    * 最小值
+    * <p>最小值</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Min")
@@ -69,7 +69,7 @@ public class ModelParameter extends AbstractModel {
     private Float Min;
 
     /**
-    * 最大值
+    * <p>最大值</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Max")
@@ -77,9 +77,9 @@ public class ModelParameter extends AbstractModel {
     private Float Max;
 
     /**
-     * Get 超参名称
+     * Get <p>超参名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 超参名称
+     * @return Name <p>超参名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -87,9 +87,9 @@ public class ModelParameter extends AbstractModel {
     }
 
     /**
-     * Set 超参名称
+     * Set <p>超参名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 超参名称
+     * @param Name <p>超参名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
@@ -97,57 +97,57 @@ public class ModelParameter extends AbstractModel {
     }
 
     /**
-     * Get 类型 
-     * @return Type 类型
+     * Get <p>类型</p><p>枚举值：</p><ul><li>string： 字符类型</li><li>int： 整数类型</li><li>float： 浮点数类型</li><li>array： 数组类型</li></ul> 
+     * @return Type <p>类型</p><p>枚举值：</p><ul><li>string： 字符类型</li><li>int： 整数类型</li><li>float： 浮点数类型</li><li>array： 数组类型</li></ul>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 类型
-     * @param Type 类型
+     * Set <p>类型</p><p>枚举值：</p><ul><li>string： 字符类型</li><li>int： 整数类型</li><li>float： 浮点数类型</li><li>array： 数组类型</li></ul>
+     * @param Type <p>类型</p><p>枚举值：</p><ul><li>string： 字符类型</li><li>int： 整数类型</li><li>float： 浮点数类型</li><li>array： 数组类型</li></ul>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 默认值 
-     * @return DefaultValue 默认值
+     * Get <p>默认值</p> 
+     * @return DefaultValue <p>默认值</p>
      */
     public String getDefaultValue() {
         return this.DefaultValue;
     }
 
     /**
-     * Set 默认值
-     * @param DefaultValue 默认值
+     * Set <p>默认值</p>
+     * @param DefaultValue <p>默认值</p>
      */
     public void setDefaultValue(String DefaultValue) {
         this.DefaultValue = DefaultValue;
     }
 
     /**
-     * Get 枚举值 
-     * @return EnumValues 枚举值
+     * Get <p>枚举值</p> 
+     * @return EnumValues <p>枚举值</p>
      */
     public String [] getEnumValues() {
         return this.EnumValues;
     }
 
     /**
-     * Set 枚举值
-     * @param EnumValues 枚举值
+     * Set <p>枚举值</p>
+     * @param EnumValues <p>枚举值</p>
      */
     public void setEnumValues(String [] EnumValues) {
         this.EnumValues = EnumValues;
     }
 
     /**
-     * Get 默认值
+     * Get <p>默认值</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Default 默认值
+     * @return Default <p>默认值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getDefault() {
@@ -155,9 +155,9 @@ public class ModelParameter extends AbstractModel {
     }
 
     /**
-     * Set 默认值
+     * Set <p>默认值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Default 默认值
+     * @param Default <p>默认值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefault(Float Default) {
@@ -165,9 +165,9 @@ public class ModelParameter extends AbstractModel {
     }
 
     /**
-     * Get 最小值
+     * Get <p>最小值</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Min 最小值
+     * @return Min <p>最小值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getMin() {
@@ -175,9 +175,9 @@ public class ModelParameter extends AbstractModel {
     }
 
     /**
-     * Set 最小值
+     * Set <p>最小值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Min 最小值
+     * @param Min <p>最小值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMin(Float Min) {
@@ -185,9 +185,9 @@ public class ModelParameter extends AbstractModel {
     }
 
     /**
-     * Get 最大值
+     * Get <p>最大值</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Max 最大值
+     * @return Max <p>最大值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getMax() {
@@ -195,9 +195,9 @@ public class ModelParameter extends AbstractModel {
     }
 
     /**
-     * Set 最大值
+     * Set <p>最大值</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Max 最大值
+     * @param Max <p>最大值</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMax(Float Max) {

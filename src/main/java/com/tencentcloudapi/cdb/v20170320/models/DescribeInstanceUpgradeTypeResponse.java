@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeInstanceUpgradeTypeResponse extends AbstractModel {
 
     /**
-    * 实例 ID。
+    * <p>实例 ID。</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例升级类型。Trsf - 迁移升级，InPlace - 原地升级，Topology - 架构升级。
+    * <p>实例升级类型。Trsf - 迁移升级，InPlace - 原地升级，Topology - 架构升级。</p>
     */
     @SerializedName("UpgradeType")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeInstanceUpgradeTypeResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实例 ID。 
-     * @return InstanceId 实例 ID。
+     * Get <p>实例 ID。</p> 
+     * @return InstanceId <p>实例 ID。</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID。
-     * @param InstanceId 实例 ID。
+     * Set <p>实例 ID。</p>
+     * @param InstanceId <p>实例 ID。</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例升级类型。Trsf - 迁移升级，InPlace - 原地升级，Topology - 架构升级。 
-     * @return UpgradeType 实例升级类型。Trsf - 迁移升级，InPlace - 原地升级，Topology - 架构升级。
+     * Get <p>实例升级类型。Trsf - 迁移升级，InPlace - 原地升级，Topology - 架构升级。</p> 
+     * @return UpgradeType <p>实例升级类型。Trsf - 迁移升级，InPlace - 原地升级，Topology - 架构升级。</p>
      */
     public String getUpgradeType() {
         return this.UpgradeType;
     }
 
     /**
-     * Set 实例升级类型。Trsf - 迁移升级，InPlace - 原地升级，Topology - 架构升级。
-     * @param UpgradeType 实例升级类型。Trsf - 迁移升级，InPlace - 原地升级，Topology - 架构升级。
+     * Set <p>实例升级类型。Trsf - 迁移升级，InPlace - 原地升级，Topology - 架构升级。</p>
+     * @param UpgradeType <p>实例升级类型。Trsf - 迁移升级，InPlace - 原地升级，Topology - 架构升级。</p>
      */
     public void setUpgradeType(String UpgradeType) {
         this.UpgradeType = UpgradeType;

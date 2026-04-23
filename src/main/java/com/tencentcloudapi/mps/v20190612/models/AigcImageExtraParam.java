@@ -24,94 +24,72 @@ import java.util.HashMap;
 public class AigcImageExtraParam extends AbstractModel {
 
     /**
-    * 指定所生成视频的宽高比。
-
-不同模型支持的宽高比:
-1. GEM支持：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9 和 21:9。
-
-注：具体模型的宽高比参数，可查看相应模型官网获取更完整描述。
+    * <p>指定所生成视频的宽高比。</p><p>不同模型支持的宽高比:</p><ol><li>GEM支持：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9 和 21:9。</li></ol><p>注：具体模型的宽高比参数，可查看相应模型官网获取更完整描述。</p>
     */
     @SerializedName("AspectRatio")
     @Expose
     private String AspectRatio;
 
     /**
-    * 指定图片输出分辨率。
-
-支持该参数的模型：
-支持选择: 720P, 1080P, 2K, 4K。
-
+    * <p>指定图片输出分辨率。</p><p>支持该参数的模型：<br>支持选择: 720P, 1080P, 2K, 4K。</p>
     */
     @SerializedName("Resolution")
     @Expose
     private String Resolution;
 
     /**
-     * Get 指定所生成视频的宽高比。
+    * <p>是否添加图标水印。默认不加。1-添加，0-不添加。</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+    */
+    @SerializedName("LogoAdd")
+    @Expose
+    private Long LogoAdd;
 
-不同模型支持的宽高比:
-1. GEM支持：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9 和 21:9。
-
-注：具体模型的宽高比参数，可查看相应模型官网获取更完整描述。 
-     * @return AspectRatio 指定所生成视频的宽高比。
-
-不同模型支持的宽高比:
-1. GEM支持：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9 和 21:9。
-
-注：具体模型的宽高比参数，可查看相应模型官网获取更完整描述。
+    /**
+     * Get <p>指定所生成视频的宽高比。</p><p>不同模型支持的宽高比:</p><ol><li>GEM支持：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9 和 21:9。</li></ol><p>注：具体模型的宽高比参数，可查看相应模型官网获取更完整描述。</p> 
+     * @return AspectRatio <p>指定所生成视频的宽高比。</p><p>不同模型支持的宽高比:</p><ol><li>GEM支持：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9 和 21:9。</li></ol><p>注：具体模型的宽高比参数，可查看相应模型官网获取更完整描述。</p>
      */
     public String getAspectRatio() {
         return this.AspectRatio;
     }
 
     /**
-     * Set 指定所生成视频的宽高比。
-
-不同模型支持的宽高比:
-1. GEM支持：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9 和 21:9。
-
-注：具体模型的宽高比参数，可查看相应模型官网获取更完整描述。
-     * @param AspectRatio 指定所生成视频的宽高比。
-
-不同模型支持的宽高比:
-1. GEM支持：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9 和 21:9。
-
-注：具体模型的宽高比参数，可查看相应模型官网获取更完整描述。
+     * Set <p>指定所生成视频的宽高比。</p><p>不同模型支持的宽高比:</p><ol><li>GEM支持：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9 和 21:9。</li></ol><p>注：具体模型的宽高比参数，可查看相应模型官网获取更完整描述。</p>
+     * @param AspectRatio <p>指定所生成视频的宽高比。</p><p>不同模型支持的宽高比:</p><ol><li>GEM支持：1:1、3:2、2:3、3:4、4:3、4:5、5:4、9:16、16:9 和 21:9。</li></ol><p>注：具体模型的宽高比参数，可查看相应模型官网获取更完整描述。</p>
      */
     public void setAspectRatio(String AspectRatio) {
         this.AspectRatio = AspectRatio;
     }
 
     /**
-     * Get 指定图片输出分辨率。
-
-支持该参数的模型：
-支持选择: 720P, 1080P, 2K, 4K。
- 
-     * @return Resolution 指定图片输出分辨率。
-
-支持该参数的模型：
-支持选择: 720P, 1080P, 2K, 4K。
-
+     * Get <p>指定图片输出分辨率。</p><p>支持该参数的模型：<br>支持选择: 720P, 1080P, 2K, 4K。</p> 
+     * @return Resolution <p>指定图片输出分辨率。</p><p>支持该参数的模型：<br>支持选择: 720P, 1080P, 2K, 4K。</p>
      */
     public String getResolution() {
         return this.Resolution;
     }
 
     /**
-     * Set 指定图片输出分辨率。
-
-支持该参数的模型：
-支持选择: 720P, 1080P, 2K, 4K。
-
-     * @param Resolution 指定图片输出分辨率。
-
-支持该参数的模型：
-支持选择: 720P, 1080P, 2K, 4K。
-
+     * Set <p>指定图片输出分辨率。</p><p>支持该参数的模型：<br>支持选择: 720P, 1080P, 2K, 4K。</p>
+     * @param Resolution <p>指定图片输出分辨率。</p><p>支持该参数的模型：<br>支持选择: 720P, 1080P, 2K, 4K。</p>
      */
     public void setResolution(String Resolution) {
         this.Resolution = Resolution;
+    }
+
+    /**
+     * Get <p>是否添加图标水印。默认不加。1-添加，0-不添加。</p><p>取值范围：[0, 1]</p><p>默认值：0</p> 
+     * @return LogoAdd <p>是否添加图标水印。默认不加。1-添加，0-不添加。</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+     */
+    public Long getLogoAdd() {
+        return this.LogoAdd;
+    }
+
+    /**
+     * Set <p>是否添加图标水印。默认不加。1-添加，0-不添加。</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+     * @param LogoAdd <p>是否添加图标水印。默认不加。1-添加，0-不添加。</p><p>取值范围：[0, 1]</p><p>默认值：0</p>
+     */
+    public void setLogoAdd(Long LogoAdd) {
+        this.LogoAdd = LogoAdd;
     }
 
     public AigcImageExtraParam() {
@@ -128,6 +106,9 @@ public class AigcImageExtraParam extends AbstractModel {
         if (source.Resolution != null) {
             this.Resolution = new String(source.Resolution);
         }
+        if (source.LogoAdd != null) {
+            this.LogoAdd = new Long(source.LogoAdd);
+        }
     }
 
 
@@ -137,6 +118,7 @@ public class AigcImageExtraParam extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AspectRatio", this.AspectRatio);
         this.setParamSimple(map, prefix + "Resolution", this.Resolution);
+        this.setParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
 
     }
 }
