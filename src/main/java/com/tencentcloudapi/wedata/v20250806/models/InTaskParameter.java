@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InTaskParameter extends AbstractModel {
 
     /**
-    * 参数名
+    * <p>参数名</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParamKey")
@@ -32,7 +32,7 @@ public class InTaskParameter extends AbstractModel {
     private String ParamKey;
 
     /**
-    * 参数描述：格式为 项目标识.任务名称.参数名；例：project_wedata_1.sh_250820_104107.pp_out
+    * <p>参数描述：格式为 项目标识.任务名称.参数名；例：project_wedata_1.sh_250820_104107.pp_out</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParamDesc")
@@ -40,7 +40,7 @@ public class InTaskParameter extends AbstractModel {
     private String ParamDesc;
 
     /**
-    * 父任务ID
+    * <p>父任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FromTaskId")
@@ -48,7 +48,7 @@ public class InTaskParameter extends AbstractModel {
     private String FromTaskId;
 
     /**
-    * 父任务参数key
+    * <p>父任务参数key</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FromParamKey")
@@ -56,9 +56,17 @@ public class InTaskParameter extends AbstractModel {
     private String FromParamKey;
 
     /**
-     * Get 参数名
+    * <p>任务输入类型，默认使用TASK</p><p>枚举值：</p><ul><li>TASK： 来源为父任务</li><li>CONSTANT： 常量值，目前仅for-each节点支持</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
+     * Get <p>参数名</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ParamKey 参数名
+     * @return ParamKey <p>参数名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParamKey() {
@@ -66,9 +74,9 @@ public class InTaskParameter extends AbstractModel {
     }
 
     /**
-     * Set 参数名
+     * Set <p>参数名</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ParamKey 参数名
+     * @param ParamKey <p>参数名</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParamKey(String ParamKey) {
@@ -76,9 +84,9 @@ public class InTaskParameter extends AbstractModel {
     }
 
     /**
-     * Get 参数描述：格式为 项目标识.任务名称.参数名；例：project_wedata_1.sh_250820_104107.pp_out
+     * Get <p>参数描述：格式为 项目标识.任务名称.参数名；例：project_wedata_1.sh_250820_104107.pp_out</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ParamDesc 参数描述：格式为 项目标识.任务名称.参数名；例：project_wedata_1.sh_250820_104107.pp_out
+     * @return ParamDesc <p>参数描述：格式为 项目标识.任务名称.参数名；例：project_wedata_1.sh_250820_104107.pp_out</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParamDesc() {
@@ -86,9 +94,9 @@ public class InTaskParameter extends AbstractModel {
     }
 
     /**
-     * Set 参数描述：格式为 项目标识.任务名称.参数名；例：project_wedata_1.sh_250820_104107.pp_out
+     * Set <p>参数描述：格式为 项目标识.任务名称.参数名；例：project_wedata_1.sh_250820_104107.pp_out</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ParamDesc 参数描述：格式为 项目标识.任务名称.参数名；例：project_wedata_1.sh_250820_104107.pp_out
+     * @param ParamDesc <p>参数描述：格式为 项目标识.任务名称.参数名；例：project_wedata_1.sh_250820_104107.pp_out</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParamDesc(String ParamDesc) {
@@ -96,9 +104,9 @@ public class InTaskParameter extends AbstractModel {
     }
 
     /**
-     * Get 父任务ID
+     * Get <p>父任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FromTaskId 父任务ID
+     * @return FromTaskId <p>父任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFromTaskId() {
@@ -106,9 +114,9 @@ public class InTaskParameter extends AbstractModel {
     }
 
     /**
-     * Set 父任务ID
+     * Set <p>父任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FromTaskId 父任务ID
+     * @param FromTaskId <p>父任务ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFromTaskId(String FromTaskId) {
@@ -116,9 +124,9 @@ public class InTaskParameter extends AbstractModel {
     }
 
     /**
-     * Get 父任务参数key
+     * Get <p>父任务参数key</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FromParamKey 父任务参数key
+     * @return FromParamKey <p>父任务参数key</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFromParamKey() {
@@ -126,13 +134,33 @@ public class InTaskParameter extends AbstractModel {
     }
 
     /**
-     * Set 父任务参数key
+     * Set <p>父任务参数key</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FromParamKey 父任务参数key
+     * @param FromParamKey <p>父任务参数key</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFromParamKey(String FromParamKey) {
         this.FromParamKey = FromParamKey;
+    }
+
+    /**
+     * Get <p>任务输入类型，默认使用TASK</p><p>枚举值：</p><ul><li>TASK： 来源为父任务</li><li>CONSTANT： 常量值，目前仅for-each节点支持</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Type <p>任务输入类型，默认使用TASK</p><p>枚举值：</p><ul><li>TASK： 来源为父任务</li><li>CONSTANT： 常量值，目前仅for-each节点支持</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set <p>任务输入类型，默认使用TASK</p><p>枚举值：</p><ul><li>TASK： 来源为父任务</li><li>CONSTANT： 常量值，目前仅for-each节点支持</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Type <p>任务输入类型，默认使用TASK</p><p>枚举值：</p><ul><li>TASK： 来源为父任务</li><li>CONSTANT： 常量值，目前仅for-each节点支持</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setType(String Type) {
+        this.Type = Type;
     }
 
     public InTaskParameter() {
@@ -155,6 +183,9 @@ public class InTaskParameter extends AbstractModel {
         if (source.FromParamKey != null) {
             this.FromParamKey = new String(source.FromParamKey);
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
     }
 
 
@@ -166,6 +197,7 @@ public class InTaskParameter extends AbstractModel {
         this.setParamSimple(map, prefix + "ParamDesc", this.ParamDesc);
         this.setParamSimple(map, prefix + "FromTaskId", this.FromTaskId);
         this.setParamSimple(map, prefix + "FromParamKey", this.FromParamKey);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

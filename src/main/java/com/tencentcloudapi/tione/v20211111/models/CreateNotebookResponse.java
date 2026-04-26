@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateNotebookResponse extends AbstractModel {
 
     /**
-    * notebook标志
+    * <p>notebook标志</p>
     */
     @SerializedName("Id")
     @Expose
@@ -38,16 +38,16 @@ public class CreateNotebookResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get notebook标志 
-     * @return Id notebook标志
+     * Get <p>notebook标志</p> 
+     * @return Id <p>notebook标志</p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set notebook标志
-     * @param Id notebook标志
+     * Set <p>notebook标志</p>
+     * @param Id <p>notebook标志</p>
      */
     public void setId(String Id) {
         this.Id = Id;

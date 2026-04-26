@@ -24,628 +24,598 @@ import java.util.HashMap;
 public class ModifyNotebookRequest extends AbstractModel {
 
     /**
-    * notebook id
+    * <p>notebook id</p>
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 名称。不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
+    * <p>名称。不超过60个字符，仅支持中英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以中英文、数字开头</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * （不允许修改）计算资源付费模式 ，可选值为：
-PREPAID：预付费，即包年包月
-POSTPAID_BY_HOUR：按小时后付费
+    * <p>（不允许修改）计算资源付费模式 ，可选值为：<br>PREPAID：预付费，即包年包月<br>POSTPAID_BY_HOUR：按小时后付费</p>
     */
     @SerializedName("ChargeType")
     @Expose
     private String ChargeType;
 
     /**
-    * 计算资源配置
+    * <p>计算资源配置</p>
     */
     @SerializedName("ResourceConf")
     @Expose
     private ResourceConf ResourceConf;
 
     /**
-    * 是否自动停止
+    * <p>是否自动停止</p>
     */
     @SerializedName("AutoStopping")
     @Expose
     private Boolean AutoStopping;
 
     /**
-    * 是否访问公网
+    * <p>是否访问公网</p>
     */
     @SerializedName("DirectInternetAccess")
     @Expose
     private Boolean DirectInternetAccess;
 
     /**
-    * 是否ROOT权限
+    * <p>是否ROOT权限</p>
     */
     @SerializedName("RootAccess")
     @Expose
     private Boolean RootAccess;
 
     /**
-    * 是否上报日志
+    * <p>是否上报日志</p>
     */
     @SerializedName("LogEnable")
     @Expose
     private Boolean LogEnable;
 
     /**
-    * 资源组ID(for预付费)
+    * <p>资源组ID(for预付费)</p>
     */
     @SerializedName("ResourceGroupId")
     @Expose
     private String ResourceGroupId;
 
     /**
-    * （不允许修改）Vpc-Id
+    * <p>（不允许修改）Vpc-Id</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * （不允许修改）子网Id
+    * <p>（不允许修改）子网Id</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 存储卷大小，单位GB
+    * <p>存储卷大小，单位GB</p>
     */
     @SerializedName("VolumeSizeInGB")
     @Expose
     private Long VolumeSizeInGB;
 
     /**
-    * （不允许修改）存储的类型。取值包含： 
-    FREE:    预付费的免费存储
-    CLOUD_PREMIUM： 高性能云硬盘
-    CLOUD_SSD： SSD云硬盘
-    CFS:     CFS存储，包含NFS和turbo
+    * <p>（不允许修改）存储的类型。取值包含：<br>    FREE:    预付费的免费存储<br>    CLOUD_PREMIUM： 高性能云硬盘<br>    CLOUD_SSD： SSD云硬盘<br>    CFS:     CFS存储，包含NFS和turbo</p>
     */
     @SerializedName("VolumeSourceType")
     @Expose
     private String VolumeSourceType;
 
     /**
-    * （不允许修改）CFS存储的配置
+    * <p>（不允许修改）CFS存储的配置</p>
     */
     @SerializedName("VolumeSourceCFS")
     @Expose
     private CFSConfig VolumeSourceCFS;
 
     /**
-    * 日志配置
+    * <p>日志配置</p>
     */
     @SerializedName("LogConfig")
     @Expose
     private LogConfig LogConfig;
 
     /**
-    * 生命周期脚本的ID
+    * <p>生命周期脚本的ID</p>
     */
     @SerializedName("LifecycleScriptId")
     @Expose
     private String LifecycleScriptId;
 
     /**
-    * 默认GIT存储库的ID
+    * <p>默认GIT存储库的ID</p>
     */
     @SerializedName("DefaultCodeRepoId")
     @Expose
     private String DefaultCodeRepoId;
 
     /**
-    * 其他GIT存储库的ID，最多3个
+    * <p>其他GIT存储库的ID，最多3个</p>
     */
     @SerializedName("AdditionalCodeRepoIds")
     @Expose
     private String [] AdditionalCodeRepoIds;
 
     /**
-    * 自动停止时间，单位小时
+    * <p>自动停止时间，单位小时</p>
     */
     @SerializedName("AutomaticStopTime")
     @Expose
     private Long AutomaticStopTime;
 
     /**
-    * 标签配置
+    * <p>标签配置</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 数据配置，只支持WEDATA_HDFS
+    * <p>数据配置，只支持WEDATA_HDFS</p>
     */
     @SerializedName("DataConfigs")
     @Expose
     private DataConfig [] DataConfigs;
 
     /**
-    * 镜像信息
+    * <p>镜像信息</p>
     */
     @SerializedName("ImageInfo")
     @Expose
     private ImageInfo ImageInfo;
 
     /**
-    * 镜像类型，包括SYSTEM、TCR、CCR
+    * <p>镜像类型，包括SYSTEM、TCR、CCR</p>
     */
     @SerializedName("ImageType")
     @Expose
     private String ImageType;
 
     /**
-    * SSH配置
+    * <p>SSH配置</p>
     */
     @SerializedName("SSHConfig")
     @Expose
     private SSHConfig SSHConfig;
 
     /**
-    * 自定义环境变量
+    * <p>自定义环境变量</p>
     */
     @SerializedName("Envs")
     @Expose
     private EnvVar [] Envs;
 
     /**
-    * 描述
+    * <p>描述</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-     * Get notebook id 
-     * @return Id notebook id
+     * Get <p>notebook id</p> 
+     * @return Id <p>notebook id</p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set notebook id
-     * @param Id notebook id
+     * Set <p>notebook id</p>
+     * @param Id <p>notebook id</p>
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 名称。不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头 
-     * @return Name 名称。不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
+     * Get <p>名称。不超过60个字符，仅支持中英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以中英文、数字开头</p> 
+     * @return Name <p>名称。不超过60个字符，仅支持中英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以中英文、数字开头</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 名称。不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
-     * @param Name 名称。不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
+     * Set <p>名称。不超过60个字符，仅支持中英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以中英文、数字开头</p>
+     * @param Name <p>名称。不超过60个字符，仅支持中英文、数字、下划线&quot;_&quot;、短横&quot;-&quot;，只能以中英文、数字开头</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get （不允许修改）计算资源付费模式 ，可选值为：
-PREPAID：预付费，即包年包月
-POSTPAID_BY_HOUR：按小时后付费 
-     * @return ChargeType （不允许修改）计算资源付费模式 ，可选值为：
-PREPAID：预付费，即包年包月
-POSTPAID_BY_HOUR：按小时后付费
+     * Get <p>（不允许修改）计算资源付费模式 ，可选值为：<br>PREPAID：预付费，即包年包月<br>POSTPAID_BY_HOUR：按小时后付费</p> 
+     * @return ChargeType <p>（不允许修改）计算资源付费模式 ，可选值为：<br>PREPAID：预付费，即包年包月<br>POSTPAID_BY_HOUR：按小时后付费</p>
      */
     public String getChargeType() {
         return this.ChargeType;
     }
 
     /**
-     * Set （不允许修改）计算资源付费模式 ，可选值为：
-PREPAID：预付费，即包年包月
-POSTPAID_BY_HOUR：按小时后付费
-     * @param ChargeType （不允许修改）计算资源付费模式 ，可选值为：
-PREPAID：预付费，即包年包月
-POSTPAID_BY_HOUR：按小时后付费
+     * Set <p>（不允许修改）计算资源付费模式 ，可选值为：<br>PREPAID：预付费，即包年包月<br>POSTPAID_BY_HOUR：按小时后付费</p>
+     * @param ChargeType <p>（不允许修改）计算资源付费模式 ，可选值为：<br>PREPAID：预付费，即包年包月<br>POSTPAID_BY_HOUR：按小时后付费</p>
      */
     public void setChargeType(String ChargeType) {
         this.ChargeType = ChargeType;
     }
 
     /**
-     * Get 计算资源配置 
-     * @return ResourceConf 计算资源配置
+     * Get <p>计算资源配置</p> 
+     * @return ResourceConf <p>计算资源配置</p>
      */
     public ResourceConf getResourceConf() {
         return this.ResourceConf;
     }
 
     /**
-     * Set 计算资源配置
-     * @param ResourceConf 计算资源配置
+     * Set <p>计算资源配置</p>
+     * @param ResourceConf <p>计算资源配置</p>
      */
     public void setResourceConf(ResourceConf ResourceConf) {
         this.ResourceConf = ResourceConf;
     }
 
     /**
-     * Get 是否自动停止 
-     * @return AutoStopping 是否自动停止
+     * Get <p>是否自动停止</p> 
+     * @return AutoStopping <p>是否自动停止</p>
      */
     public Boolean getAutoStopping() {
         return this.AutoStopping;
     }
 
     /**
-     * Set 是否自动停止
-     * @param AutoStopping 是否自动停止
+     * Set <p>是否自动停止</p>
+     * @param AutoStopping <p>是否自动停止</p>
      */
     public void setAutoStopping(Boolean AutoStopping) {
         this.AutoStopping = AutoStopping;
     }
 
     /**
-     * Get 是否访问公网 
-     * @return DirectInternetAccess 是否访问公网
+     * Get <p>是否访问公网</p> 
+     * @return DirectInternetAccess <p>是否访问公网</p>
      */
     public Boolean getDirectInternetAccess() {
         return this.DirectInternetAccess;
     }
 
     /**
-     * Set 是否访问公网
-     * @param DirectInternetAccess 是否访问公网
+     * Set <p>是否访问公网</p>
+     * @param DirectInternetAccess <p>是否访问公网</p>
      */
     public void setDirectInternetAccess(Boolean DirectInternetAccess) {
         this.DirectInternetAccess = DirectInternetAccess;
     }
 
     /**
-     * Get 是否ROOT权限 
-     * @return RootAccess 是否ROOT权限
+     * Get <p>是否ROOT权限</p> 
+     * @return RootAccess <p>是否ROOT权限</p>
      */
     public Boolean getRootAccess() {
         return this.RootAccess;
     }
 
     /**
-     * Set 是否ROOT权限
-     * @param RootAccess 是否ROOT权限
+     * Set <p>是否ROOT权限</p>
+     * @param RootAccess <p>是否ROOT权限</p>
      */
     public void setRootAccess(Boolean RootAccess) {
         this.RootAccess = RootAccess;
     }
 
     /**
-     * Get 是否上报日志 
-     * @return LogEnable 是否上报日志
+     * Get <p>是否上报日志</p> 
+     * @return LogEnable <p>是否上报日志</p>
      */
     public Boolean getLogEnable() {
         return this.LogEnable;
     }
 
     /**
-     * Set 是否上报日志
-     * @param LogEnable 是否上报日志
+     * Set <p>是否上报日志</p>
+     * @param LogEnable <p>是否上报日志</p>
      */
     public void setLogEnable(Boolean LogEnable) {
         this.LogEnable = LogEnable;
     }
 
     /**
-     * Get 资源组ID(for预付费) 
-     * @return ResourceGroupId 资源组ID(for预付费)
+     * Get <p>资源组ID(for预付费)</p> 
+     * @return ResourceGroupId <p>资源组ID(for预付费)</p>
      */
     public String getResourceGroupId() {
         return this.ResourceGroupId;
     }
 
     /**
-     * Set 资源组ID(for预付费)
-     * @param ResourceGroupId 资源组ID(for预付费)
+     * Set <p>资源组ID(for预付费)</p>
+     * @param ResourceGroupId <p>资源组ID(for预付费)</p>
      */
     public void setResourceGroupId(String ResourceGroupId) {
         this.ResourceGroupId = ResourceGroupId;
     }
 
     /**
-     * Get （不允许修改）Vpc-Id 
-     * @return VpcId （不允许修改）Vpc-Id
+     * Get <p>（不允许修改）Vpc-Id</p> 
+     * @return VpcId <p>（不允许修改）Vpc-Id</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set （不允许修改）Vpc-Id
-     * @param VpcId （不允许修改）Vpc-Id
+     * Set <p>（不允许修改）Vpc-Id</p>
+     * @param VpcId <p>（不允许修改）Vpc-Id</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get （不允许修改）子网Id 
-     * @return SubnetId （不允许修改）子网Id
+     * Get <p>（不允许修改）子网Id</p> 
+     * @return SubnetId <p>（不允许修改）子网Id</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set （不允许修改）子网Id
-     * @param SubnetId （不允许修改）子网Id
+     * Set <p>（不允许修改）子网Id</p>
+     * @param SubnetId <p>（不允许修改）子网Id</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 存储卷大小，单位GB 
-     * @return VolumeSizeInGB 存储卷大小，单位GB
+     * Get <p>存储卷大小，单位GB</p> 
+     * @return VolumeSizeInGB <p>存储卷大小，单位GB</p>
      */
     public Long getVolumeSizeInGB() {
         return this.VolumeSizeInGB;
     }
 
     /**
-     * Set 存储卷大小，单位GB
-     * @param VolumeSizeInGB 存储卷大小，单位GB
+     * Set <p>存储卷大小，单位GB</p>
+     * @param VolumeSizeInGB <p>存储卷大小，单位GB</p>
      */
     public void setVolumeSizeInGB(Long VolumeSizeInGB) {
         this.VolumeSizeInGB = VolumeSizeInGB;
     }
 
     /**
-     * Get （不允许修改）存储的类型。取值包含： 
-    FREE:    预付费的免费存储
-    CLOUD_PREMIUM： 高性能云硬盘
-    CLOUD_SSD： SSD云硬盘
-    CFS:     CFS存储，包含NFS和turbo 
-     * @return VolumeSourceType （不允许修改）存储的类型。取值包含： 
-    FREE:    预付费的免费存储
-    CLOUD_PREMIUM： 高性能云硬盘
-    CLOUD_SSD： SSD云硬盘
-    CFS:     CFS存储，包含NFS和turbo
+     * Get <p>（不允许修改）存储的类型。取值包含：<br>    FREE:    预付费的免费存储<br>    CLOUD_PREMIUM： 高性能云硬盘<br>    CLOUD_SSD： SSD云硬盘<br>    CFS:     CFS存储，包含NFS和turbo</p> 
+     * @return VolumeSourceType <p>（不允许修改）存储的类型。取值包含：<br>    FREE:    预付费的免费存储<br>    CLOUD_PREMIUM： 高性能云硬盘<br>    CLOUD_SSD： SSD云硬盘<br>    CFS:     CFS存储，包含NFS和turbo</p>
      */
     public String getVolumeSourceType() {
         return this.VolumeSourceType;
     }
 
     /**
-     * Set （不允许修改）存储的类型。取值包含： 
-    FREE:    预付费的免费存储
-    CLOUD_PREMIUM： 高性能云硬盘
-    CLOUD_SSD： SSD云硬盘
-    CFS:     CFS存储，包含NFS和turbo
-     * @param VolumeSourceType （不允许修改）存储的类型。取值包含： 
-    FREE:    预付费的免费存储
-    CLOUD_PREMIUM： 高性能云硬盘
-    CLOUD_SSD： SSD云硬盘
-    CFS:     CFS存储，包含NFS和turbo
+     * Set <p>（不允许修改）存储的类型。取值包含：<br>    FREE:    预付费的免费存储<br>    CLOUD_PREMIUM： 高性能云硬盘<br>    CLOUD_SSD： SSD云硬盘<br>    CFS:     CFS存储，包含NFS和turbo</p>
+     * @param VolumeSourceType <p>（不允许修改）存储的类型。取值包含：<br>    FREE:    预付费的免费存储<br>    CLOUD_PREMIUM： 高性能云硬盘<br>    CLOUD_SSD： SSD云硬盘<br>    CFS:     CFS存储，包含NFS和turbo</p>
      */
     public void setVolumeSourceType(String VolumeSourceType) {
         this.VolumeSourceType = VolumeSourceType;
     }
 
     /**
-     * Get （不允许修改）CFS存储的配置 
-     * @return VolumeSourceCFS （不允许修改）CFS存储的配置
+     * Get <p>（不允许修改）CFS存储的配置</p> 
+     * @return VolumeSourceCFS <p>（不允许修改）CFS存储的配置</p>
      */
     public CFSConfig getVolumeSourceCFS() {
         return this.VolumeSourceCFS;
     }
 
     /**
-     * Set （不允许修改）CFS存储的配置
-     * @param VolumeSourceCFS （不允许修改）CFS存储的配置
+     * Set <p>（不允许修改）CFS存储的配置</p>
+     * @param VolumeSourceCFS <p>（不允许修改）CFS存储的配置</p>
      */
     public void setVolumeSourceCFS(CFSConfig VolumeSourceCFS) {
         this.VolumeSourceCFS = VolumeSourceCFS;
     }
 
     /**
-     * Get 日志配置 
-     * @return LogConfig 日志配置
+     * Get <p>日志配置</p> 
+     * @return LogConfig <p>日志配置</p>
      */
     public LogConfig getLogConfig() {
         return this.LogConfig;
     }
 
     /**
-     * Set 日志配置
-     * @param LogConfig 日志配置
+     * Set <p>日志配置</p>
+     * @param LogConfig <p>日志配置</p>
      */
     public void setLogConfig(LogConfig LogConfig) {
         this.LogConfig = LogConfig;
     }
 
     /**
-     * Get 生命周期脚本的ID 
-     * @return LifecycleScriptId 生命周期脚本的ID
+     * Get <p>生命周期脚本的ID</p> 
+     * @return LifecycleScriptId <p>生命周期脚本的ID</p>
      */
     public String getLifecycleScriptId() {
         return this.LifecycleScriptId;
     }
 
     /**
-     * Set 生命周期脚本的ID
-     * @param LifecycleScriptId 生命周期脚本的ID
+     * Set <p>生命周期脚本的ID</p>
+     * @param LifecycleScriptId <p>生命周期脚本的ID</p>
      */
     public void setLifecycleScriptId(String LifecycleScriptId) {
         this.LifecycleScriptId = LifecycleScriptId;
     }
 
     /**
-     * Get 默认GIT存储库的ID 
-     * @return DefaultCodeRepoId 默认GIT存储库的ID
+     * Get <p>默认GIT存储库的ID</p> 
+     * @return DefaultCodeRepoId <p>默认GIT存储库的ID</p>
      */
     public String getDefaultCodeRepoId() {
         return this.DefaultCodeRepoId;
     }
 
     /**
-     * Set 默认GIT存储库的ID
-     * @param DefaultCodeRepoId 默认GIT存储库的ID
+     * Set <p>默认GIT存储库的ID</p>
+     * @param DefaultCodeRepoId <p>默认GIT存储库的ID</p>
      */
     public void setDefaultCodeRepoId(String DefaultCodeRepoId) {
         this.DefaultCodeRepoId = DefaultCodeRepoId;
     }
 
     /**
-     * Get 其他GIT存储库的ID，最多3个 
-     * @return AdditionalCodeRepoIds 其他GIT存储库的ID，最多3个
+     * Get <p>其他GIT存储库的ID，最多3个</p> 
+     * @return AdditionalCodeRepoIds <p>其他GIT存储库的ID，最多3个</p>
      */
     public String [] getAdditionalCodeRepoIds() {
         return this.AdditionalCodeRepoIds;
     }
 
     /**
-     * Set 其他GIT存储库的ID，最多3个
-     * @param AdditionalCodeRepoIds 其他GIT存储库的ID，最多3个
+     * Set <p>其他GIT存储库的ID，最多3个</p>
+     * @param AdditionalCodeRepoIds <p>其他GIT存储库的ID，最多3个</p>
      */
     public void setAdditionalCodeRepoIds(String [] AdditionalCodeRepoIds) {
         this.AdditionalCodeRepoIds = AdditionalCodeRepoIds;
     }
 
     /**
-     * Get 自动停止时间，单位小时 
-     * @return AutomaticStopTime 自动停止时间，单位小时
+     * Get <p>自动停止时间，单位小时</p> 
+     * @return AutomaticStopTime <p>自动停止时间，单位小时</p>
      */
     public Long getAutomaticStopTime() {
         return this.AutomaticStopTime;
     }
 
     /**
-     * Set 自动停止时间，单位小时
-     * @param AutomaticStopTime 自动停止时间，单位小时
+     * Set <p>自动停止时间，单位小时</p>
+     * @param AutomaticStopTime <p>自动停止时间，单位小时</p>
      */
     public void setAutomaticStopTime(Long AutomaticStopTime) {
         this.AutomaticStopTime = AutomaticStopTime;
     }
 
     /**
-     * Get 标签配置 
-     * @return Tags 标签配置
+     * Get <p>标签配置</p> 
+     * @return Tags <p>标签配置</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 标签配置
-     * @param Tags 标签配置
+     * Set <p>标签配置</p>
+     * @param Tags <p>标签配置</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 数据配置，只支持WEDATA_HDFS 
-     * @return DataConfigs 数据配置，只支持WEDATA_HDFS
+     * Get <p>数据配置，只支持WEDATA_HDFS</p> 
+     * @return DataConfigs <p>数据配置，只支持WEDATA_HDFS</p>
      */
     public DataConfig [] getDataConfigs() {
         return this.DataConfigs;
     }
 
     /**
-     * Set 数据配置，只支持WEDATA_HDFS
-     * @param DataConfigs 数据配置，只支持WEDATA_HDFS
+     * Set <p>数据配置，只支持WEDATA_HDFS</p>
+     * @param DataConfigs <p>数据配置，只支持WEDATA_HDFS</p>
      */
     public void setDataConfigs(DataConfig [] DataConfigs) {
         this.DataConfigs = DataConfigs;
     }
 
     /**
-     * Get 镜像信息 
-     * @return ImageInfo 镜像信息
+     * Get <p>镜像信息</p> 
+     * @return ImageInfo <p>镜像信息</p>
      */
     public ImageInfo getImageInfo() {
         return this.ImageInfo;
     }
 
     /**
-     * Set 镜像信息
-     * @param ImageInfo 镜像信息
+     * Set <p>镜像信息</p>
+     * @param ImageInfo <p>镜像信息</p>
      */
     public void setImageInfo(ImageInfo ImageInfo) {
         this.ImageInfo = ImageInfo;
     }
 
     /**
-     * Get 镜像类型，包括SYSTEM、TCR、CCR 
-     * @return ImageType 镜像类型，包括SYSTEM、TCR、CCR
+     * Get <p>镜像类型，包括SYSTEM、TCR、CCR</p> 
+     * @return ImageType <p>镜像类型，包括SYSTEM、TCR、CCR</p>
      */
     public String getImageType() {
         return this.ImageType;
     }
 
     /**
-     * Set 镜像类型，包括SYSTEM、TCR、CCR
-     * @param ImageType 镜像类型，包括SYSTEM、TCR、CCR
+     * Set <p>镜像类型，包括SYSTEM、TCR、CCR</p>
+     * @param ImageType <p>镜像类型，包括SYSTEM、TCR、CCR</p>
      */
     public void setImageType(String ImageType) {
         this.ImageType = ImageType;
     }
 
     /**
-     * Get SSH配置 
-     * @return SSHConfig SSH配置
+     * Get <p>SSH配置</p> 
+     * @return SSHConfig <p>SSH配置</p>
      */
     public SSHConfig getSSHConfig() {
         return this.SSHConfig;
     }
 
     /**
-     * Set SSH配置
-     * @param SSHConfig SSH配置
+     * Set <p>SSH配置</p>
+     * @param SSHConfig <p>SSH配置</p>
      */
     public void setSSHConfig(SSHConfig SSHConfig) {
         this.SSHConfig = SSHConfig;
     }
 
     /**
-     * Get 自定义环境变量 
-     * @return Envs 自定义环境变量
+     * Get <p>自定义环境变量</p> 
+     * @return Envs <p>自定义环境变量</p>
      */
     public EnvVar [] getEnvs() {
         return this.Envs;
     }
 
     /**
-     * Set 自定义环境变量
-     * @param Envs 自定义环境变量
+     * Set <p>自定义环境变量</p>
+     * @param Envs <p>自定义环境变量</p>
      */
     public void setEnvs(EnvVar [] Envs) {
         this.Envs = Envs;
     }
 
     /**
-     * Get 描述 
-     * @return Description 描述
+     * Get <p>描述</p> 
+     * @return Description <p>描述</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 描述
-     * @param Description 描述
+     * Set <p>描述</p>
+     * @param Description <p>描述</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;

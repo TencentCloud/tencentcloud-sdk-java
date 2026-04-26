@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class TrainingTaskDetail extends AbstractModel {
 
     /**
-    * 训练任务ID
+    * <p>训练任务ID</p>
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 训练任务名称
+    * <p>训练任务名称</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 主账号uin
+    * <p>主账号uin</p>
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * 子账号uin
+    * <p>子账号uin</p>
     */
     @SerializedName("SubUin")
     @Expose
     private String SubUin;
 
     /**
-    * 创建者名称
+    * <p>创建者名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubUinName")
@@ -60,14 +60,14 @@ public class TrainingTaskDetail extends AbstractModel {
     private String SubUinName;
 
     /**
-    * 地域
+    * <p>地域</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 训练框架名称，eg：SPARK、PYSARK、TENSORFLOW、PYTORCH
+    * <p>训练框架名称，eg：SPARK、PYSARK、TENSORFLOW、PYTORCH</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FrameworkName")
@@ -75,7 +75,7 @@ public class TrainingTaskDetail extends AbstractModel {
     private String FrameworkName;
 
     /**
-    * 训练框架版本
+    * <p>训练框架版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FrameworkVersion")
@@ -83,7 +83,7 @@ public class TrainingTaskDetail extends AbstractModel {
     private String FrameworkVersion;
 
     /**
-    * 框架运行环境
+    * <p>框架运行环境</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FrameworkEnvironment")
@@ -91,14 +91,14 @@ public class TrainingTaskDetail extends AbstractModel {
     private String FrameworkEnvironment;
 
     /**
-    * 计费模式
+    * <p>计费模式</p>
     */
     @SerializedName("ChargeType")
     @Expose
     private String ChargeType;
 
     /**
-    * 预付费专用资源组
+    * <p>预付费专用资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceGroupId")
@@ -106,14 +106,14 @@ public class TrainingTaskDetail extends AbstractModel {
     private String ResourceGroupId;
 
     /**
-    * 资源配置
+    * <p>资源配置</p>
     */
     @SerializedName("ResourceConfigInfos")
     @Expose
     private ResourceConfigInfo [] ResourceConfigInfos;
 
     /**
-    * 标签
+    * <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
@@ -121,7 +121,7 @@ public class TrainingTaskDetail extends AbstractModel {
     private Tag [] Tags;
 
     /**
-    * 训练模式，eg：PS_WORKER、DDP、MPI、HOROVOD
+    * <p>训练模式，eg：PS_WORKER、DDP、MPI、HOROVOD</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TrainingMode")
@@ -129,21 +129,21 @@ public class TrainingTaskDetail extends AbstractModel {
     private String TrainingMode;
 
     /**
-    * 代码包
+    * <p>代码包</p>
     */
     @SerializedName("CodePackagePath")
     @Expose
     private CosPathInfo CodePackagePath;
 
     /**
-    * 启动命令信息
+    * <p>启动命令信息</p>
     */
     @SerializedName("StartCmdInfo")
     @Expose
     private StartCmdInfo StartCmdInfo;
 
     /**
-    * 数据来源，eg：DATASET、COS
+    * <p>数据来源，eg：DATASET、COS</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataSource")
@@ -151,7 +151,7 @@ public class TrainingTaskDetail extends AbstractModel {
     private String DataSource;
 
     /**
-    * 数据配置
+    * <p>数据配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataConfigs")
@@ -159,7 +159,7 @@ public class TrainingTaskDetail extends AbstractModel {
     private DataConfig [] DataConfigs;
 
     /**
-    * 调优参数
+    * <p>调优参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TuningParameters")
@@ -167,21 +167,21 @@ public class TrainingTaskDetail extends AbstractModel {
     private String TuningParameters;
 
     /**
-    * 训练输出
+    * <p>训练输出</p>
     */
     @SerializedName("Output")
     @Expose
     private CosPathInfo Output;
 
     /**
-    * 是否上报日志
+    * <p>是否上报日志</p>
     */
     @SerializedName("LogEnable")
     @Expose
     private Boolean LogEnable;
 
     /**
-    * 日志配置
+    * <p>日志配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogConfig")
@@ -189,7 +189,7 @@ public class TrainingTaskDetail extends AbstractModel {
     private LogConfig LogConfig;
 
     /**
-    * VPC ID
+    * <p>VPC ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
@@ -197,7 +197,7 @@ public class TrainingTaskDetail extends AbstractModel {
     private String VpcId;
 
     /**
-    * 子网ID
+    * <p>子网ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetId")
@@ -205,7 +205,7 @@ public class TrainingTaskDetail extends AbstractModel {
     private String SubnetId;
 
     /**
-    * 自定义镜像信息
+    * <p>自定义镜像信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageInfo")
@@ -213,7 +213,7 @@ public class TrainingTaskDetail extends AbstractModel {
     private ImageInfo ImageInfo;
 
     /**
-    * 运行时长
+    * <p>运行时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuntimeInSeconds")
@@ -221,14 +221,14 @@ public class TrainingTaskDetail extends AbstractModel {
     private Long RuntimeInSeconds;
 
     /**
-    * 创建时间
+    * <p>创建时间</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 训练开始时间
+    * <p>训练开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
@@ -236,14 +236,14 @@ public class TrainingTaskDetail extends AbstractModel {
     private String StartTime;
 
     /**
-    * 计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中
+    * <p>计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中</p>
     */
     @SerializedName("ChargeStatus")
     @Expose
     private String ChargeStatus;
 
     /**
-    * 最近一次实例ID
+    * <p>最近一次实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LatestInstanceId")
@@ -251,7 +251,7 @@ public class TrainingTaskDetail extends AbstractModel {
     private String LatestInstanceId;
 
     /**
-    * TensorBoard ID
+    * <p>TensorBoard ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TensorBoardId")
@@ -259,7 +259,7 @@ public class TrainingTaskDetail extends AbstractModel {
     private String TensorBoardId;
 
     /**
-    * 备注
+    * <p>备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
@@ -267,7 +267,7 @@ public class TrainingTaskDetail extends AbstractModel {
     private String Remark;
 
     /**
-    * 失败原因
+    * <p>失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailureReason")
@@ -275,14 +275,14 @@ public class TrainingTaskDetail extends AbstractModel {
     private String FailureReason;
 
     /**
-    * 更新时间
+    * <p>更新时间</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 训练结束时间
+    * <p>训练结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
@@ -290,7 +290,7 @@ public class TrainingTaskDetail extends AbstractModel {
     private String EndTime;
 
     /**
-    * 计费金额信息，eg：2.00元/小时 (按量计费)
+    * <p>计费金额信息，eg：2.00元/小时 (按量计费)</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BillingInfo")
@@ -298,7 +298,7 @@ public class TrainingTaskDetail extends AbstractModel {
     private String BillingInfo;
 
     /**
-    * 预付费专用资源组名称
+    * <p>预付费专用资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceGroupName")
@@ -306,7 +306,7 @@ public class TrainingTaskDetail extends AbstractModel {
     private String ResourceGroupName;
 
     /**
-    * 任务信息
+    * <p>任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
@@ -314,14 +314,14 @@ public class TrainingTaskDetail extends AbstractModel {
     private String Message;
 
     /**
-    * 任务状态，eg：STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成
+    * <p>任务状态，eg：STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 回调地址
+    * <p>回调地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CallbackUrl")
@@ -329,87 +329,94 @@ public class TrainingTaskDetail extends AbstractModel {
     private String CallbackUrl;
 
     /**
-    * 任务关联的代码仓库配置
+    * <p>任务关联的代码仓库配置</p>
     */
     @SerializedName("CodeRepos")
     @Expose
     private CodeRepoConfig [] CodeRepos;
 
     /**
-    * 暴露网络配置
+    * <p>暴露网络配置</p>
     */
     @SerializedName("ExposeNetworkConfig")
     @Expose
     private ExposeNetworkConfig ExposeNetworkConfig;
 
     /**
-     * Get 训练任务ID 
-     * @return Id 训练任务ID
+    * <p>操作者信息</p>
+    */
+    @SerializedName("OperatorInfo")
+    @Expose
+    private OperatorInfo OperatorInfo;
+
+    /**
+     * Get <p>训练任务ID</p> 
+     * @return Id <p>训练任务ID</p>
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 训练任务ID
-     * @param Id 训练任务ID
+     * Set <p>训练任务ID</p>
+     * @param Id <p>训练任务ID</p>
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 训练任务名称 
-     * @return Name 训练任务名称
+     * Get <p>训练任务名称</p> 
+     * @return Name <p>训练任务名称</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 训练任务名称
-     * @param Name 训练任务名称
+     * Set <p>训练任务名称</p>
+     * @param Name <p>训练任务名称</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 主账号uin 
-     * @return Uin 主账号uin
+     * Get <p>主账号uin</p> 
+     * @return Uin <p>主账号uin</p>
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set 主账号uin
-     * @param Uin 主账号uin
+     * Set <p>主账号uin</p>
+     * @param Uin <p>主账号uin</p>
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 子账号uin 
-     * @return SubUin 子账号uin
+     * Get <p>子账号uin</p> 
+     * @return SubUin <p>子账号uin</p>
      */
     public String getSubUin() {
         return this.SubUin;
     }
 
     /**
-     * Set 子账号uin
-     * @param SubUin 子账号uin
+     * Set <p>子账号uin</p>
+     * @param SubUin <p>子账号uin</p>
      */
     public void setSubUin(String SubUin) {
         this.SubUin = SubUin;
     }
 
     /**
-     * Get 创建者名称
+     * Get <p>创建者名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SubUinName 创建者名称
+     * @return SubUinName <p>创建者名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubUinName() {
@@ -417,9 +424,9 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Set 创建者名称
+     * Set <p>创建者名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SubUinName 创建者名称
+     * @param SubUinName <p>创建者名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubUinName(String SubUinName) {
@@ -427,25 +434,25 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Get 地域 
-     * @return Region 地域
+     * Get <p>地域</p> 
+     * @return Region <p>地域</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 地域
-     * @param Region 地域
+     * Set <p>地域</p>
+     * @param Region <p>地域</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 训练框架名称，eg：SPARK、PYSARK、TENSORFLOW、PYTORCH
+     * Get <p>训练框架名称，eg：SPARK、PYSARK、TENSORFLOW、PYTORCH</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FrameworkName 训练框架名称，eg：SPARK、PYSARK、TENSORFLOW、PYTORCH
+     * @return FrameworkName <p>训练框架名称，eg：SPARK、PYSARK、TENSORFLOW、PYTORCH</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFrameworkName() {
@@ -453,9 +460,9 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Set 训练框架名称，eg：SPARK、PYSARK、TENSORFLOW、PYTORCH
+     * Set <p>训练框架名称，eg：SPARK、PYSARK、TENSORFLOW、PYTORCH</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FrameworkName 训练框架名称，eg：SPARK、PYSARK、TENSORFLOW、PYTORCH
+     * @param FrameworkName <p>训练框架名称，eg：SPARK、PYSARK、TENSORFLOW、PYTORCH</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFrameworkName(String FrameworkName) {
@@ -463,9 +470,9 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Get 训练框架版本
+     * Get <p>训练框架版本</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FrameworkVersion 训练框架版本
+     * @return FrameworkVersion <p>训练框架版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFrameworkVersion() {
@@ -473,9 +480,9 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Set 训练框架版本
+     * Set <p>训练框架版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FrameworkVersion 训练框架版本
+     * @param FrameworkVersion <p>训练框架版本</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFrameworkVersion(String FrameworkVersion) {
@@ -483,9 +490,9 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Get 框架运行环境
+     * Get <p>框架运行环境</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FrameworkEnvironment 框架运行环境
+     * @return FrameworkEnvironment <p>框架运行环境</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFrameworkEnvironment() {
@@ -493,9 +500,9 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Set 框架运行环境
+     * Set <p>框架运行环境</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FrameworkEnvironment 框架运行环境
+     * @param FrameworkEnvironment <p>框架运行环境</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFrameworkEnvironment(String FrameworkEnvironment) {
@@ -503,25 +510,25 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Get 计费模式 
-     * @return ChargeType 计费模式
+     * Get <p>计费模式</p> 
+     * @return ChargeType <p>计费模式</p>
      */
     public String getChargeType() {
         return this.ChargeType;
     }
 
     /**
-     * Set 计费模式
-     * @param ChargeType 计费模式
+     * Set <p>计费模式</p>
+     * @param ChargeType <p>计费模式</p>
      */
     public void setChargeType(String ChargeType) {
         this.ChargeType = ChargeType;
     }
 
     /**
-     * Get 预付费专用资源组
+     * Get <p>预付费专用资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceGroupId 预付费专用资源组
+     * @return ResourceGroupId <p>预付费专用资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceGroupId() {
@@ -529,9 +536,9 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Set 预付费专用资源组
+     * Set <p>预付费专用资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceGroupId 预付费专用资源组
+     * @param ResourceGroupId <p>预付费专用资源组</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceGroupId(String ResourceGroupId) {
@@ -539,25 +546,25 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Get 资源配置 
-     * @return ResourceConfigInfos 资源配置
+     * Get <p>资源配置</p> 
+     * @return ResourceConfigInfos <p>资源配置</p>
      */
     public ResourceConfigInfo [] getResourceConfigInfos() {
         return this.ResourceConfigInfos;
     }
 
     /**
-     * Set 资源配置
-     * @param ResourceConfigInfos 资源配置
+     * Set <p>资源配置</p>
+     * @param ResourceConfigInfos <p>资源配置</p>
      */
     public void setResourceConfigInfos(ResourceConfigInfo [] ResourceConfigInfos) {
         this.ResourceConfigInfos = ResourceConfigInfos;
     }
 
     /**
-     * Get 标签
+     * Get <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tags 标签
+     * @return Tags <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
@@ -565,9 +572,9 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Set 标签
+     * Set <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tags 标签
+     * @param Tags <p>标签</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {
@@ -575,9 +582,9 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Get 训练模式，eg：PS_WORKER、DDP、MPI、HOROVOD
+     * Get <p>训练模式，eg：PS_WORKER、DDP、MPI、HOROVOD</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TrainingMode 训练模式，eg：PS_WORKER、DDP、MPI、HOROVOD
+     * @return TrainingMode <p>训练模式，eg：PS_WORKER、DDP、MPI、HOROVOD</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTrainingMode() {
@@ -585,9 +592,9 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Set 训练模式，eg：PS_WORKER、DDP、MPI、HOROVOD
+     * Set <p>训练模式，eg：PS_WORKER、DDP、MPI、HOROVOD</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TrainingMode 训练模式，eg：PS_WORKER、DDP、MPI、HOROVOD
+     * @param TrainingMode <p>训练模式，eg：PS_WORKER、DDP、MPI、HOROVOD</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTrainingMode(String TrainingMode) {
@@ -595,41 +602,41 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Get 代码包 
-     * @return CodePackagePath 代码包
+     * Get <p>代码包</p> 
+     * @return CodePackagePath <p>代码包</p>
      */
     public CosPathInfo getCodePackagePath() {
         return this.CodePackagePath;
     }
 
     /**
-     * Set 代码包
-     * @param CodePackagePath 代码包
+     * Set <p>代码包</p>
+     * @param CodePackagePath <p>代码包</p>
      */
     public void setCodePackagePath(CosPathInfo CodePackagePath) {
         this.CodePackagePath = CodePackagePath;
     }
 
     /**
-     * Get 启动命令信息 
-     * @return StartCmdInfo 启动命令信息
+     * Get <p>启动命令信息</p> 
+     * @return StartCmdInfo <p>启动命令信息</p>
      */
     public StartCmdInfo getStartCmdInfo() {
         return this.StartCmdInfo;
     }
 
     /**
-     * Set 启动命令信息
-     * @param StartCmdInfo 启动命令信息
+     * Set <p>启动命令信息</p>
+     * @param StartCmdInfo <p>启动命令信息</p>
      */
     public void setStartCmdInfo(StartCmdInfo StartCmdInfo) {
         this.StartCmdInfo = StartCmdInfo;
     }
 
     /**
-     * Get 数据来源，eg：DATASET、COS
+     * Get <p>数据来源，eg：DATASET、COS</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DataSource 数据来源，eg：DATASET、COS
+     * @return DataSource <p>数据来源，eg：DATASET、COS</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataSource() {
@@ -637,9 +644,9 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Set 数据来源，eg：DATASET、COS
+     * Set <p>数据来源，eg：DATASET、COS</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DataSource 数据来源，eg：DATASET、COS
+     * @param DataSource <p>数据来源，eg：DATASET、COS</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataSource(String DataSource) {
@@ -647,9 +654,9 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Get 数据配置
+     * Get <p>数据配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DataConfigs 数据配置
+     * @return DataConfigs <p>数据配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DataConfig [] getDataConfigs() {
@@ -657,9 +664,9 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Set 数据配置
+     * Set <p>数据配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DataConfigs 数据配置
+     * @param DataConfigs <p>数据配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataConfigs(DataConfig [] DataConfigs) {
@@ -667,9 +674,9 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Get 调优参数
+     * Get <p>调优参数</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TuningParameters 调优参数
+     * @return TuningParameters <p>调优参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTuningParameters() {
@@ -677,9 +684,9 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Set 调优参数
+     * Set <p>调优参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TuningParameters 调优参数
+     * @param TuningParameters <p>调优参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTuningParameters(String TuningParameters) {
@@ -687,41 +694,41 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Get 训练输出 
-     * @return Output 训练输出
+     * Get <p>训练输出</p> 
+     * @return Output <p>训练输出</p>
      */
     public CosPathInfo getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 训练输出
-     * @param Output 训练输出
+     * Set <p>训练输出</p>
+     * @param Output <p>训练输出</p>
      */
     public void setOutput(CosPathInfo Output) {
         this.Output = Output;
     }
 
     /**
-     * Get 是否上报日志 
-     * @return LogEnable 是否上报日志
+     * Get <p>是否上报日志</p> 
+     * @return LogEnable <p>是否上报日志</p>
      */
     public Boolean getLogEnable() {
         return this.LogEnable;
     }
 
     /**
-     * Set 是否上报日志
-     * @param LogEnable 是否上报日志
+     * Set <p>是否上报日志</p>
+     * @param LogEnable <p>是否上报日志</p>
      */
     public void setLogEnable(Boolean LogEnable) {
         this.LogEnable = LogEnable;
     }
 
     /**
-     * Get 日志配置
+     * Get <p>日志配置</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LogConfig 日志配置
+     * @return LogConfig <p>日志配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public LogConfig getLogConfig() {
@@ -729,9 +736,9 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Set 日志配置
+     * Set <p>日志配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LogConfig 日志配置
+     * @param LogConfig <p>日志配置</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogConfig(LogConfig LogConfig) {
@@ -739,9 +746,9 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Get VPC ID
+     * Get <p>VPC ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VpcId VPC ID
+     * @return VpcId <p>VPC ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
@@ -749,9 +756,9 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Set VPC ID
+     * Set <p>VPC ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VpcId VPC ID
+     * @param VpcId <p>VPC ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
@@ -759,9 +766,9 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Get 子网ID
+     * Get <p>子网ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SubnetId 子网ID
+     * @return SubnetId <p>子网ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetId() {
@@ -769,9 +776,9 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Set 子网ID
+     * Set <p>子网ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SubnetId 子网ID
+     * @param SubnetId <p>子网ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetId(String SubnetId) {
@@ -779,9 +786,9 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Get 自定义镜像信息
+     * Get <p>自定义镜像信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ImageInfo 自定义镜像信息
+     * @return ImageInfo <p>自定义镜像信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ImageInfo getImageInfo() {
@@ -789,9 +796,9 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Set 自定义镜像信息
+     * Set <p>自定义镜像信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImageInfo 自定义镜像信息
+     * @param ImageInfo <p>自定义镜像信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageInfo(ImageInfo ImageInfo) {
@@ -799,9 +806,9 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Get 运行时长
+     * Get <p>运行时长</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuntimeInSeconds 运行时长
+     * @return RuntimeInSeconds <p>运行时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuntimeInSeconds() {
@@ -809,9 +816,9 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Set 运行时长
+     * Set <p>运行时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuntimeInSeconds 运行时长
+     * @param RuntimeInSeconds <p>运行时长</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuntimeInSeconds(Long RuntimeInSeconds) {
@@ -819,25 +826,25 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get <p>创建时间</p> 
+     * @return CreateTime <p>创建时间</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set <p>创建时间</p>
+     * @param CreateTime <p>创建时间</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 训练开始时间
+     * Get <p>训练开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StartTime 训练开始时间
+     * @return StartTime <p>训练开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
@@ -845,9 +852,9 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Set 训练开始时间
+     * Set <p>训练开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StartTime 训练开始时间
+     * @param StartTime <p>训练开始时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
@@ -855,25 +862,25 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Get 计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中 
-     * @return ChargeStatus 计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中
+     * Get <p>计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中</p> 
+     * @return ChargeStatus <p>计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中</p>
      */
     public String getChargeStatus() {
         return this.ChargeStatus;
     }
 
     /**
-     * Set 计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中
-     * @param ChargeStatus 计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中
+     * Set <p>计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中</p>
+     * @param ChargeStatus <p>计费状态，eg：BILLING计费中，ARREARS_STOP欠费停止，NOT_BILLING不在计费中</p>
      */
     public void setChargeStatus(String ChargeStatus) {
         this.ChargeStatus = ChargeStatus;
     }
 
     /**
-     * Get 最近一次实例ID
+     * Get <p>最近一次实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LatestInstanceId 最近一次实例ID
+     * @return LatestInstanceId <p>最近一次实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLatestInstanceId() {
@@ -881,9 +888,9 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Set 最近一次实例ID
+     * Set <p>最近一次实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LatestInstanceId 最近一次实例ID
+     * @param LatestInstanceId <p>最近一次实例ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLatestInstanceId(String LatestInstanceId) {
@@ -891,9 +898,9 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Get TensorBoard ID
+     * Get <p>TensorBoard ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TensorBoardId TensorBoard ID
+     * @return TensorBoardId <p>TensorBoard ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTensorBoardId() {
@@ -901,9 +908,9 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Set TensorBoard ID
+     * Set <p>TensorBoard ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TensorBoardId TensorBoard ID
+     * @param TensorBoardId <p>TensorBoard ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTensorBoardId(String TensorBoardId) {
@@ -911,9 +918,9 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Get 备注
+     * Get <p>备注</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Remark 备注
+     * @return Remark <p>备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
@@ -921,9 +928,9 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Set 备注
+     * Set <p>备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Remark 备注
+     * @param Remark <p>备注</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
@@ -931,9 +938,9 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Get 失败原因
+     * Get <p>失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FailureReason 失败原因
+     * @return FailureReason <p>失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFailureReason() {
@@ -941,9 +948,9 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Set 失败原因
+     * Set <p>失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FailureReason 失败原因
+     * @param FailureReason <p>失败原因</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailureReason(String FailureReason) {
@@ -951,25 +958,25 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Get 更新时间 
-     * @return UpdateTime 更新时间
+     * Get <p>更新时间</p> 
+     * @return UpdateTime <p>更新时间</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 更新时间
-     * @param UpdateTime 更新时间
+     * Set <p>更新时间</p>
+     * @param UpdateTime <p>更新时间</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 训练结束时间
+     * Get <p>训练结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EndTime 训练结束时间
+     * @return EndTime <p>训练结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
@@ -977,9 +984,9 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Set 训练结束时间
+     * Set <p>训练结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EndTime 训练结束时间
+     * @param EndTime <p>训练结束时间</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
@@ -987,9 +994,9 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Get 计费金额信息，eg：2.00元/小时 (按量计费)
+     * Get <p>计费金额信息，eg：2.00元/小时 (按量计费)</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BillingInfo 计费金额信息，eg：2.00元/小时 (按量计费)
+     * @return BillingInfo <p>计费金额信息，eg：2.00元/小时 (按量计费)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBillingInfo() {
@@ -997,9 +1004,9 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Set 计费金额信息，eg：2.00元/小时 (按量计费)
+     * Set <p>计费金额信息，eg：2.00元/小时 (按量计费)</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BillingInfo 计费金额信息，eg：2.00元/小时 (按量计费)
+     * @param BillingInfo <p>计费金额信息，eg：2.00元/小时 (按量计费)</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBillingInfo(String BillingInfo) {
@@ -1007,9 +1014,9 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Get 预付费专用资源组名称
+     * Get <p>预付费专用资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceGroupName 预付费专用资源组名称
+     * @return ResourceGroupName <p>预付费专用资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceGroupName() {
@@ -1017,9 +1024,9 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Set 预付费专用资源组名称
+     * Set <p>预付费专用资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceGroupName 预付费专用资源组名称
+     * @param ResourceGroupName <p>预付费专用资源组名称</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceGroupName(String ResourceGroupName) {
@@ -1027,9 +1034,9 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Get 任务信息
+     * Get <p>任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Message 任务信息
+     * @return Message <p>任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
@@ -1037,9 +1044,9 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Set 任务信息
+     * Set <p>任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Message 任务信息
+     * @param Message <p>任务信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
@@ -1047,25 +1054,25 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Get 任务状态，eg：STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成 
-     * @return Status 任务状态，eg：STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成
+     * Get <p>任务状态，eg：STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成</p> 
+     * @return Status <p>任务状态，eg：STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 任务状态，eg：STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成
-     * @param Status 任务状态，eg：STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成
+     * Set <p>任务状态，eg：STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成</p>
+     * @param Status <p>任务状态，eg：STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 回调地址
+     * Get <p>回调地址</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CallbackUrl 回调地址
+     * @return CallbackUrl <p>回调地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCallbackUrl() {
@@ -1073,9 +1080,9 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Set 回调地址
+     * Set <p>回调地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CallbackUrl 回调地址
+     * @param CallbackUrl <p>回调地址</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCallbackUrl(String CallbackUrl) {
@@ -1083,35 +1090,51 @@ public class TrainingTaskDetail extends AbstractModel {
     }
 
     /**
-     * Get 任务关联的代码仓库配置 
-     * @return CodeRepos 任务关联的代码仓库配置
+     * Get <p>任务关联的代码仓库配置</p> 
+     * @return CodeRepos <p>任务关联的代码仓库配置</p>
      */
     public CodeRepoConfig [] getCodeRepos() {
         return this.CodeRepos;
     }
 
     /**
-     * Set 任务关联的代码仓库配置
-     * @param CodeRepos 任务关联的代码仓库配置
+     * Set <p>任务关联的代码仓库配置</p>
+     * @param CodeRepos <p>任务关联的代码仓库配置</p>
      */
     public void setCodeRepos(CodeRepoConfig [] CodeRepos) {
         this.CodeRepos = CodeRepos;
     }
 
     /**
-     * Get 暴露网络配置 
-     * @return ExposeNetworkConfig 暴露网络配置
+     * Get <p>暴露网络配置</p> 
+     * @return ExposeNetworkConfig <p>暴露网络配置</p>
      */
     public ExposeNetworkConfig getExposeNetworkConfig() {
         return this.ExposeNetworkConfig;
     }
 
     /**
-     * Set 暴露网络配置
-     * @param ExposeNetworkConfig 暴露网络配置
+     * Set <p>暴露网络配置</p>
+     * @param ExposeNetworkConfig <p>暴露网络配置</p>
      */
     public void setExposeNetworkConfig(ExposeNetworkConfig ExposeNetworkConfig) {
         this.ExposeNetworkConfig = ExposeNetworkConfig;
+    }
+
+    /**
+     * Get <p>操作者信息</p> 
+     * @return OperatorInfo <p>操作者信息</p>
+     */
+    public OperatorInfo getOperatorInfo() {
+        return this.OperatorInfo;
+    }
+
+    /**
+     * Set <p>操作者信息</p>
+     * @param OperatorInfo <p>操作者信息</p>
+     */
+    public void setOperatorInfo(OperatorInfo OperatorInfo) {
+        this.OperatorInfo = OperatorInfo;
     }
 
     public TrainingTaskDetail() {
@@ -1260,6 +1283,9 @@ public class TrainingTaskDetail extends AbstractModel {
         if (source.ExposeNetworkConfig != null) {
             this.ExposeNetworkConfig = new ExposeNetworkConfig(source.ExposeNetworkConfig);
         }
+        if (source.OperatorInfo != null) {
+            this.OperatorInfo = new OperatorInfo(source.OperatorInfo);
+        }
     }
 
 
@@ -1309,6 +1335,7 @@ public class TrainingTaskDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
         this.setParamArrayObj(map, prefix + "CodeRepos.", this.CodeRepos);
         this.setParamObj(map, prefix + "ExposeNetworkConfig.", this.ExposeNetworkConfig);
+        this.setParamObj(map, prefix + "OperatorInfo.", this.OperatorInfo);
 
     }
 }

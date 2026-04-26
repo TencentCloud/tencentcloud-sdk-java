@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UnsatisfiedReply extends AbstractModel {
 
     /**
-    * 不满意回复ID
+    * <p>不满意回复ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReplyBizId")
@@ -32,7 +32,7 @@ public class UnsatisfiedReply extends AbstractModel {
     private String ReplyBizId;
 
     /**
-    * 消息记录ID
+    * <p>消息记录ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordBizId")
@@ -40,7 +40,7 @@ public class UnsatisfiedReply extends AbstractModel {
     private String RecordBizId;
 
     /**
-    * 用户问题
+    * <p>用户问题</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Question")
@@ -48,7 +48,7 @@ public class UnsatisfiedReply extends AbstractModel {
     private String Question;
 
     /**
-    * 问题回复
+    * <p>问题回复</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Answer")
@@ -56,7 +56,7 @@ public class UnsatisfiedReply extends AbstractModel {
     private String Answer;
 
     /**
-    * 错误类型
+    * <p>错误类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Reasons")
@@ -64,7 +64,7 @@ public class UnsatisfiedReply extends AbstractModel {
     private String [] Reasons;
 
     /**
-    * 处理状态，0：待处理，1：已拒答，2：已忽略，3：已纠错
+    * <p>处理状态，0：待处理，1：已拒答，2：已忽略，3：已纠错</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -72,37 +72,37 @@ public class UnsatisfiedReply extends AbstractModel {
     private Long Status;
 
     /**
-    * 创建时间，秒级时间戳
+    * <p>创建时间，秒级时间戳</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 更新时间,秒级时间戳
+    * <p>更新时间,秒级时间戳</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 操作人
+    * <p>操作人</p>
     */
     @SerializedName("Operator")
     @Expose
     private String Operator;
 
     /**
-    * 自定义反馈
+    * <p>自定义反馈</p>
     */
     @SerializedName("FeedbackContent")
     @Expose
     private String FeedbackContent;
 
     /**
-     * Get 不满意回复ID
+     * Get <p>不满意回复ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReplyBizId 不满意回复ID
+     * @return ReplyBizId <p>不满意回复ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReplyBizId() {
@@ -110,9 +110,9 @@ public class UnsatisfiedReply extends AbstractModel {
     }
 
     /**
-     * Set 不满意回复ID
+     * Set <p>不满意回复ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReplyBizId 不满意回复ID
+     * @param ReplyBizId <p>不满意回复ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReplyBizId(String ReplyBizId) {
@@ -120,9 +120,9 @@ public class UnsatisfiedReply extends AbstractModel {
     }
 
     /**
-     * Get 消息记录ID
+     * Get <p>消息记录ID</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RecordBizId 消息记录ID
+     * @return RecordBizId <p>消息记录ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRecordBizId() {
@@ -130,9 +130,9 @@ public class UnsatisfiedReply extends AbstractModel {
     }
 
     /**
-     * Set 消息记录ID
+     * Set <p>消息记录ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RecordBizId 消息记录ID
+     * @param RecordBizId <p>消息记录ID</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordBizId(String RecordBizId) {
@@ -140,9 +140,9 @@ public class UnsatisfiedReply extends AbstractModel {
     }
 
     /**
-     * Get 用户问题
+     * Get <p>用户问题</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Question 用户问题
+     * @return Question <p>用户问题</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQuestion() {
@@ -150,9 +150,9 @@ public class UnsatisfiedReply extends AbstractModel {
     }
 
     /**
-     * Set 用户问题
+     * Set <p>用户问题</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Question 用户问题
+     * @param Question <p>用户问题</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQuestion(String Question) {
@@ -160,9 +160,9 @@ public class UnsatisfiedReply extends AbstractModel {
     }
 
     /**
-     * Get 问题回复
+     * Get <p>问题回复</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Answer 问题回复
+     * @return Answer <p>问题回复</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAnswer() {
@@ -170,9 +170,9 @@ public class UnsatisfiedReply extends AbstractModel {
     }
 
     /**
-     * Set 问题回复
+     * Set <p>问题回复</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Answer 问题回复
+     * @param Answer <p>问题回复</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAnswer(String Answer) {
@@ -180,9 +180,9 @@ public class UnsatisfiedReply extends AbstractModel {
     }
 
     /**
-     * Get 错误类型
+     * Get <p>错误类型</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Reasons 错误类型
+     * @return Reasons <p>错误类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getReasons() {
@@ -190,9 +190,9 @@ public class UnsatisfiedReply extends AbstractModel {
     }
 
     /**
-     * Set 错误类型
+     * Set <p>错误类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Reasons 错误类型
+     * @param Reasons <p>错误类型</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReasons(String [] Reasons) {
@@ -200,9 +200,9 @@ public class UnsatisfiedReply extends AbstractModel {
     }
 
     /**
-     * Get 处理状态，0：待处理，1：已拒答，2：已忽略，3：已纠错
+     * Get <p>处理状态，0：待处理，1：已拒答，2：已忽略，3：已纠错</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 处理状态，0：待处理，1：已拒答，2：已忽略，3：已纠错
+     * @return Status <p>处理状态，0：待处理，1：已拒答，2：已忽略，3：已纠错</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -210,9 +210,9 @@ public class UnsatisfiedReply extends AbstractModel {
     }
 
     /**
-     * Set 处理状态，0：待处理，1：已拒答，2：已忽略，3：已纠错
+     * Set <p>处理状态，0：待处理，1：已拒答，2：已忽略，3：已纠错</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 处理状态，0：待处理，1：已拒答，2：已忽略，3：已纠错
+     * @param Status <p>处理状态，0：待处理，1：已拒答，2：已忽略，3：已纠错</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
@@ -220,64 +220,64 @@ public class UnsatisfiedReply extends AbstractModel {
     }
 
     /**
-     * Get 创建时间，秒级时间戳 
-     * @return CreateTime 创建时间，秒级时间戳
+     * Get <p>创建时间，秒级时间戳</p> 
+     * @return CreateTime <p>创建时间，秒级时间戳</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间，秒级时间戳
-     * @param CreateTime 创建时间，秒级时间戳
+     * Set <p>创建时间，秒级时间戳</p>
+     * @param CreateTime <p>创建时间，秒级时间戳</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 更新时间,秒级时间戳 
-     * @return UpdateTime 更新时间,秒级时间戳
+     * Get <p>更新时间,秒级时间戳</p> 
+     * @return UpdateTime <p>更新时间,秒级时间戳</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 更新时间,秒级时间戳
-     * @param UpdateTime 更新时间,秒级时间戳
+     * Set <p>更新时间,秒级时间戳</p>
+     * @param UpdateTime <p>更新时间,秒级时间戳</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 操作人 
-     * @return Operator 操作人
+     * Get <p>操作人</p> 
+     * @return Operator <p>操作人</p>
      */
     public String getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 操作人
-     * @param Operator 操作人
+     * Set <p>操作人</p>
+     * @param Operator <p>操作人</p>
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 自定义反馈 
-     * @return FeedbackContent 自定义反馈
+     * Get <p>自定义反馈</p> 
+     * @return FeedbackContent <p>自定义反馈</p>
      */
     public String getFeedbackContent() {
         return this.FeedbackContent;
     }
 
     /**
-     * Set 自定义反馈
-     * @param FeedbackContent 自定义反馈
+     * Set <p>自定义反馈</p>
+     * @param FeedbackContent <p>自定义反馈</p>
      */
     public void setFeedbackContent(String FeedbackContent) {
         this.FeedbackContent = FeedbackContent;

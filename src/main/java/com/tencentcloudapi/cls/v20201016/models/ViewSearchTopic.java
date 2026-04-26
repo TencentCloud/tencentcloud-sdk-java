@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ViewSearchTopic extends AbstractModel {
 
     /**
-    * <p>日志集与日志主题所属地域</p><p>参数格式：ap-guangzhou</p>
+    * <p>日志集与主题所属地域</p><p>参数格式：ap-guangzhou</p><p>同一查询视图内，包含的各个主题需为相同地域</p>
     */
     @SerializedName("Region")
     @Expose
@@ -45,16 +45,16 @@ public class ViewSearchTopic extends AbstractModel {
     private String TopicId;
 
     /**
-     * Get <p>日志集与日志主题所属地域</p><p>参数格式：ap-guangzhou</p> 
-     * @return Region <p>日志集与日志主题所属地域</p><p>参数格式：ap-guangzhou</p>
+     * Get <p>日志集与主题所属地域</p><p>参数格式：ap-guangzhou</p><p>同一查询视图内，包含的各个主题需为相同地域</p> 
+     * @return Region <p>日志集与主题所属地域</p><p>参数格式：ap-guangzhou</p><p>同一查询视图内，包含的各个主题需为相同地域</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set <p>日志集与日志主题所属地域</p><p>参数格式：ap-guangzhou</p>
-     * @param Region <p>日志集与日志主题所属地域</p><p>参数格式：ap-guangzhou</p>
+     * Set <p>日志集与主题所属地域</p><p>参数格式：ap-guangzhou</p><p>同一查询视图内，包含的各个主题需为相同地域</p>
+     * @param Region <p>日志集与主题所属地域</p><p>参数格式：ap-guangzhou</p><p>同一查询视图内，包含的各个主题需为相同地域</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;

@@ -235,6 +235,13 @@ public class TrainingTaskSetItem extends AbstractModel {
     private EnvVar [] Envs;
 
     /**
+    * <p>操作者信息</p>
+    */
+    @SerializedName("LatestOperatorInfo")
+    @Expose
+    private OperatorInfo LatestOperatorInfo;
+
+    /**
      * Get <p>训练任务ID</p> 
      * @return Id <p>训练任务ID</p>
      */
@@ -742,6 +749,22 @@ public class TrainingTaskSetItem extends AbstractModel {
         this.Envs = Envs;
     }
 
+    /**
+     * Get <p>操作者信息</p> 
+     * @return LatestOperatorInfo <p>操作者信息</p>
+     */
+    public OperatorInfo getLatestOperatorInfo() {
+        return this.LatestOperatorInfo;
+    }
+
+    /**
+     * Set <p>操作者信息</p>
+     * @param LatestOperatorInfo <p>操作者信息</p>
+     */
+    public void setLatestOperatorInfo(OperatorInfo LatestOperatorInfo) {
+        this.LatestOperatorInfo = LatestOperatorInfo;
+    }
+
     public TrainingTaskSetItem() {
     }
 
@@ -843,6 +866,9 @@ public class TrainingTaskSetItem extends AbstractModel {
                 this.Envs[i] = new EnvVar(source.Envs[i]);
             }
         }
+        if (source.LatestOperatorInfo != null) {
+            this.LatestOperatorInfo = new OperatorInfo(source.LatestOperatorInfo);
+        }
     }
 
 
@@ -878,6 +904,7 @@ public class TrainingTaskSetItem extends AbstractModel {
         this.setParamSimple(map, prefix + "SubUinName", this.SubUinName);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamArrayObj(map, prefix + "Envs.", this.Envs);
+        this.setParamObj(map, prefix + "LatestOperatorInfo.", this.LatestOperatorInfo);
 
     }
 }

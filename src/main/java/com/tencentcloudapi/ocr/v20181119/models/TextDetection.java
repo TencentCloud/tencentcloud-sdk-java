@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class TextDetection extends AbstractModel {
 
     /**
-    * <p>识别出的文本行内容</p>
+    * <p>识别出的文本行内容。</p>
     */
     @SerializedName("DetectedText")
     @Expose
     private String DetectedText;
 
     /**
-    * <p>置信度 0 ~100</p>
+    * <p>置信度 0 ~100。</p>
     */
     @SerializedName("Confidence")
     @Expose
     private Long Confidence;
 
     /**
-    * <p>文本行坐标，以四个顶点坐标表示</p>
+    * <p>文本行坐标，以四个顶点坐标表示。</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Polygon")
@@ -46,76 +46,76 @@ public class TextDetection extends AbstractModel {
     private Coord [] Polygon;
 
     /**
-    * <p>此字段为扩展字段。<br>GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。</p>
+    * <p>此字段为扩展字段。GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。</p>
     */
     @SerializedName("AdvancedInfo")
     @Expose
     private String AdvancedInfo;
 
     /**
-    * <p>文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）</p>
+    * <p>文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）。</p>
     */
     @SerializedName("ItemPolygon")
     @Expose
     private ItemCoord ItemPolygon;
 
     /**
-    * <p>识别出来的单字信息包括单字（包括单字Character和单字置信度confidence）， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR</p>
+    * <p>识别出来的单字信息包括单字（包括单字Character和单字置信度confidence）， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR。</p>
     */
     @SerializedName("Words")
     @Expose
     private DetectedWords [] Words;
 
     /**
-    * <p>单字在原图中的四点坐标， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR</p>
+    * <p>单字在原图中的四点坐标， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR。</p>
     */
     @SerializedName("WordCoordPoint")
     @Expose
     private DetectedWordCoordPoint [] WordCoordPoint;
 
     /**
-    * <p>语种信息。zh:中文; en:英文; th:泰语; id:印尼语; ja:日语; ko:韩语; es:西班牙语; fr:法语; de:德语; pt:葡萄牙语; vi:越南语; ms:马来语; ru:俄语; it:意大利语; nl:荷兰语; sv:瑞典语; fi:芬兰语; no:挪威语; hu:匈牙利语; ar:阿拉伯语; hi:印地语</p>
+    * <p>语种信息。注：仅ConfigID配置为MulOCR时支持。zh:中文; en:英文; tha:泰语; may:印尼语; jap:日语; kor:韩语; spa:西班牙语; fre:法语; ger:德语; por:葡萄牙语; vie:越南语; may:马来语; rus:俄语; ita:意大利语; hol:荷兰语; swe:瑞典语; fin:芬兰语; nor:挪威语; hun:匈牙利语; ara:阿拉伯语; hi:印地语。</p>
     */
     @SerializedName("Language")
     @Expose
     private String Language;
 
     /**
-     * Get <p>识别出的文本行内容</p> 
-     * @return DetectedText <p>识别出的文本行内容</p>
+     * Get <p>识别出的文本行内容。</p> 
+     * @return DetectedText <p>识别出的文本行内容。</p>
      */
     public String getDetectedText() {
         return this.DetectedText;
     }
 
     /**
-     * Set <p>识别出的文本行内容</p>
-     * @param DetectedText <p>识别出的文本行内容</p>
+     * Set <p>识别出的文本行内容。</p>
+     * @param DetectedText <p>识别出的文本行内容。</p>
      */
     public void setDetectedText(String DetectedText) {
         this.DetectedText = DetectedText;
     }
 
     /**
-     * Get <p>置信度 0 ~100</p> 
-     * @return Confidence <p>置信度 0 ~100</p>
+     * Get <p>置信度 0 ~100。</p> 
+     * @return Confidence <p>置信度 0 ~100。</p>
      */
     public Long getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set <p>置信度 0 ~100</p>
-     * @param Confidence <p>置信度 0 ~100</p>
+     * Set <p>置信度 0 ~100。</p>
+     * @param Confidence <p>置信度 0 ~100。</p>
      */
     public void setConfidence(Long Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get <p>文本行坐标，以四个顶点坐标表示</p>
+     * Get <p>文本行坐标，以四个顶点坐标表示。</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Polygon <p>文本行坐标，以四个顶点坐标表示</p>
+     * @return Polygon <p>文本行坐标，以四个顶点坐标表示。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Coord [] getPolygon() {
@@ -123,9 +123,9 @@ public class TextDetection extends AbstractModel {
     }
 
     /**
-     * Set <p>文本行坐标，以四个顶点坐标表示</p>
+     * Set <p>文本行坐标，以四个顶点坐标表示。</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Polygon <p>文本行坐标，以四个顶点坐标表示</p>
+     * @param Polygon <p>文本行坐标，以四个顶点坐标表示。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolygon(Coord [] Polygon) {
@@ -133,80 +133,80 @@ public class TextDetection extends AbstractModel {
     }
 
     /**
-     * Get <p>此字段为扩展字段。<br>GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。</p> 
-     * @return AdvancedInfo <p>此字段为扩展字段。<br>GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。</p>
+     * Get <p>此字段为扩展字段。GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。</p> 
+     * @return AdvancedInfo <p>此字段为扩展字段。GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。</p>
      */
     public String getAdvancedInfo() {
         return this.AdvancedInfo;
     }
 
     /**
-     * Set <p>此字段为扩展字段。<br>GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。</p>
-     * @param AdvancedInfo <p>此字段为扩展字段。<br>GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。</p>
+     * Set <p>此字段为扩展字段。GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。</p>
+     * @param AdvancedInfo <p>此字段为扩展字段。GeneralBasicOcr接口返回段落信息Parag，包含ParagNo。</p>
      */
     public void setAdvancedInfo(String AdvancedInfo) {
         this.AdvancedInfo = AdvancedInfo;
     }
 
     /**
-     * Get <p>文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）</p> 
-     * @return ItemPolygon <p>文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）</p>
+     * Get <p>文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）。</p> 
+     * @return ItemPolygon <p>文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）。</p>
      */
     public ItemCoord getItemPolygon() {
         return this.ItemPolygon;
     }
 
     /**
-     * Set <p>文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）</p>
-     * @param ItemPolygon <p>文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）</p>
+     * Set <p>文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）。</p>
+     * @param ItemPolygon <p>文本行在旋转纠正之后的图像中的像素坐标，表示为（左上角x, 左上角y，宽width，高height）。</p>
      */
     public void setItemPolygon(ItemCoord ItemPolygon) {
         this.ItemPolygon = ItemPolygon;
     }
 
     /**
-     * Get <p>识别出来的单字信息包括单字（包括单字Character和单字置信度confidence）， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR</p> 
-     * @return Words <p>识别出来的单字信息包括单字（包括单字Character和单字置信度confidence）， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR</p>
+     * Get <p>识别出来的单字信息包括单字（包括单字Character和单字置信度confidence）， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR。</p> 
+     * @return Words <p>识别出来的单字信息包括单字（包括单字Character和单字置信度confidence）， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR。</p>
      */
     public DetectedWords [] getWords() {
         return this.Words;
     }
 
     /**
-     * Set <p>识别出来的单字信息包括单字（包括单字Character和单字置信度confidence）， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR</p>
-     * @param Words <p>识别出来的单字信息包括单字（包括单字Character和单字置信度confidence）， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR</p>
+     * Set <p>识别出来的单字信息包括单字（包括单字Character和单字置信度confidence）， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR。</p>
+     * @param Words <p>识别出来的单字信息包括单字（包括单字Character和单字置信度confidence）， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR。</p>
      */
     public void setWords(DetectedWords [] Words) {
         this.Words = Words;
     }
 
     /**
-     * Get <p>单字在原图中的四点坐标， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR</p> 
-     * @return WordCoordPoint <p>单字在原图中的四点坐标， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR</p>
+     * Get <p>单字在原图中的四点坐标， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR。</p> 
+     * @return WordCoordPoint <p>单字在原图中的四点坐标， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR。</p>
      */
     public DetectedWordCoordPoint [] getWordCoordPoint() {
         return this.WordCoordPoint;
     }
 
     /**
-     * Set <p>单字在原图中的四点坐标， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR</p>
-     * @param WordCoordPoint <p>单字在原图中的四点坐标， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR</p>
+     * Set <p>单字在原图中的四点坐标， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR。</p>
+     * @param WordCoordPoint <p>单字在原图中的四点坐标， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR。</p>
      */
     public void setWordCoordPoint(DetectedWordCoordPoint [] WordCoordPoint) {
         this.WordCoordPoint = WordCoordPoint;
     }
 
     /**
-     * Get <p>语种信息。zh:中文; en:英文; th:泰语; id:印尼语; ja:日语; ko:韩语; es:西班牙语; fr:法语; de:德语; pt:葡萄牙语; vi:越南语; ms:马来语; ru:俄语; it:意大利语; nl:荷兰语; sv:瑞典语; fi:芬兰语; no:挪威语; hu:匈牙利语; ar:阿拉伯语; hi:印地语</p> 
-     * @return Language <p>语种信息。zh:中文; en:英文; th:泰语; id:印尼语; ja:日语; ko:韩语; es:西班牙语; fr:法语; de:德语; pt:葡萄牙语; vi:越南语; ms:马来语; ru:俄语; it:意大利语; nl:荷兰语; sv:瑞典语; fi:芬兰语; no:挪威语; hu:匈牙利语; ar:阿拉伯语; hi:印地语</p>
+     * Get <p>语种信息。注：仅ConfigID配置为MulOCR时支持。zh:中文; en:英文; tha:泰语; may:印尼语; jap:日语; kor:韩语; spa:西班牙语; fre:法语; ger:德语; por:葡萄牙语; vie:越南语; may:马来语; rus:俄语; ita:意大利语; hol:荷兰语; swe:瑞典语; fin:芬兰语; nor:挪威语; hun:匈牙利语; ara:阿拉伯语; hi:印地语。</p> 
+     * @return Language <p>语种信息。注：仅ConfigID配置为MulOCR时支持。zh:中文; en:英文; tha:泰语; may:印尼语; jap:日语; kor:韩语; spa:西班牙语; fre:法语; ger:德语; por:葡萄牙语; vie:越南语; may:马来语; rus:俄语; ita:意大利语; hol:荷兰语; swe:瑞典语; fin:芬兰语; nor:挪威语; hun:匈牙利语; ara:阿拉伯语; hi:印地语。</p>
      */
     public String getLanguage() {
         return this.Language;
     }
 
     /**
-     * Set <p>语种信息。zh:中文; en:英文; th:泰语; id:印尼语; ja:日语; ko:韩语; es:西班牙语; fr:法语; de:德语; pt:葡萄牙语; vi:越南语; ms:马来语; ru:俄语; it:意大利语; nl:荷兰语; sv:瑞典语; fi:芬兰语; no:挪威语; hu:匈牙利语; ar:阿拉伯语; hi:印地语</p>
-     * @param Language <p>语种信息。zh:中文; en:英文; th:泰语; id:印尼语; ja:日语; ko:韩语; es:西班牙语; fr:法语; de:德语; pt:葡萄牙语; vi:越南语; ms:马来语; ru:俄语; it:意大利语; nl:荷兰语; sv:瑞典语; fi:芬兰语; no:挪威语; hu:匈牙利语; ar:阿拉伯语; hi:印地语</p>
+     * Set <p>语种信息。注：仅ConfigID配置为MulOCR时支持。zh:中文; en:英文; tha:泰语; may:印尼语; jap:日语; kor:韩语; spa:西班牙语; fre:法语; ger:德语; por:葡萄牙语; vie:越南语; may:马来语; rus:俄语; ita:意大利语; hol:荷兰语; swe:瑞典语; fin:芬兰语; nor:挪威语; hun:匈牙利语; ara:阿拉伯语; hi:印地语。</p>
+     * @param Language <p>语种信息。注：仅ConfigID配置为MulOCR时支持。zh:中文; en:英文; tha:泰语; may:印尼语; jap:日语; kor:韩语; spa:西班牙语; fre:法语; ger:德语; por:葡萄牙语; vie:越南语; may:马来语; rus:俄语; ita:意大利语; hol:荷兰语; swe:瑞典语; fin:芬兰语; nor:挪威语; hun:匈牙利语; ara:阿拉伯语; hi:印地语。</p>
      */
     public void setLanguage(String Language) {
         this.Language = Language;

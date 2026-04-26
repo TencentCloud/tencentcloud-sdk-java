@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DetectedWords extends AbstractModel {
 
     /**
-    * 置信度 0 ~100
+    * <p>置信度 0 ~100。</p>
     */
     @SerializedName("Confidence")
     @Expose
     private Long Confidence;
 
     /**
-    * 候选字Character
+    * <p>候选字Character。</p>
     */
     @SerializedName("Character")
     @Expose
     private String Character;
 
     /**
-     * Get 置信度 0 ~100 
-     * @return Confidence 置信度 0 ~100
+     * Get <p>置信度 0 ~100。</p> 
+     * @return Confidence <p>置信度 0 ~100。</p>
      */
     public Long getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set 置信度 0 ~100
-     * @param Confidence 置信度 0 ~100
+     * Set <p>置信度 0 ~100。</p>
+     * @param Confidence <p>置信度 0 ~100。</p>
      */
     public void setConfidence(Long Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get 候选字Character 
-     * @return Character 候选字Character
+     * Get <p>候选字Character。</p> 
+     * @return Character <p>候选字Character。</p>
      */
     public String getCharacter() {
         return this.Character;
     }
 
     /**
-     * Set 候选字Character
-     * @param Character 候选字Character
+     * Set <p>候选字Character。</p>
+     * @param Character <p>候选字Character。</p>
      */
     public void setCharacter(String Character) {
         this.Character = Character;

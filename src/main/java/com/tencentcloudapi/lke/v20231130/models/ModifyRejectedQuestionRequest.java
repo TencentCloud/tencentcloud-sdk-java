@@ -50,6 +50,13 @@ public class ModifyRejectedQuestionRequest extends AbstractModel {
     private String RejectedBizId;
 
     /**
+    * 拒答生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
+    */
+    @SerializedName("EnableScope")
+    @Expose
+    private Long EnableScope;
+
+    /**
      * Get 应用ID, 获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa) 
      * @return BotBizId 应用ID, 获取方法参看如何获取 [BotBizId](https://cloud.tencent.com/document/product/1759/109469#4eecb8c1-6ce4-45f5-8fa2-b269449d8efa)
      */
@@ -117,6 +124,22 @@ public class ModifyRejectedQuestionRequest extends AbstractModel {
         this.RejectedBizId = RejectedBizId;
     }
 
+    /**
+     * Get 拒答生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效 
+     * @return EnableScope 拒答生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
+     */
+    public Long getEnableScope() {
+        return this.EnableScope;
+    }
+
+    /**
+     * Set 拒答生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
+     * @param EnableScope 拒答生效域: 1-不生效；2-仅开发域生效；3-仅发布域生效；4-开发域和发布域均生效
+     */
+    public void setEnableScope(Long EnableScope) {
+        this.EnableScope = EnableScope;
+    }
+
     public ModifyRejectedQuestionRequest() {
     }
 
@@ -134,6 +157,9 @@ public class ModifyRejectedQuestionRequest extends AbstractModel {
         if (source.RejectedBizId != null) {
             this.RejectedBizId = new String(source.RejectedBizId);
         }
+        if (source.EnableScope != null) {
+            this.EnableScope = new Long(source.EnableScope);
+        }
     }
 
 
@@ -144,6 +170,7 @@ public class ModifyRejectedQuestionRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "BotBizId", this.BotBizId);
         this.setParamSimple(map, prefix + "Question", this.Question);
         this.setParamSimple(map, prefix + "RejectedBizId", this.RejectedBizId);
+        this.setParamSimple(map, prefix + "EnableScope", this.EnableScope);
 
     }
 }

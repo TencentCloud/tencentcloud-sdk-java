@@ -24,130 +24,151 @@ import java.util.HashMap;
 public class GetServiceStatusResponse extends AbstractModel {
 
     /**
-    * KMS服务是否开通， true 表示已开通
+    * <p>KMS服务是否开通， true 表示已开通</p>
     */
     @SerializedName("ServiceEnabled")
     @Expose
     private Boolean ServiceEnabled;
 
     /**
-    * 服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放
+    * <p>服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放</p>
     */
     @SerializedName("InvalidType")
     @Expose
     private Long InvalidType;
 
     /**
-    * 0-普通版，1-旗舰版
+    * <p>0-普通版，1-旗舰版</p>
     */
     @SerializedName("UserLevel")
     @Expose
     private Long UserLevel;
 
     /**
-    * 旗舰版到期时间（Epoch Unix Timestamp）。
+    * <p>旗舰版到期时间（Epoch Unix Timestamp）。</p>
     */
     @SerializedName("ProExpireTime")
     @Expose
     private Long ProExpireTime;
 
     /**
-    * 旗舰版是否自动续费：0-不自动续费，1-自动续费
+    * <p>旗舰版是否自动续费：0-不自动续费，1-自动续费</p>
     */
     @SerializedName("ProRenewFlag")
     @Expose
     private Long ProRenewFlag;
 
     /**
-    * 旗舰版购买记录的唯一性标识。如果未开通旗舰版，则返回值为空
+    * <p>旗舰版购买记录的唯一性标识。如果未开通旗舰版，则返回值为空</p>
     */
     @SerializedName("ProResourceId")
     @Expose
     private String ProResourceId;
 
     /**
-    * 是否开通 KMS 托管版
+    * <p>是否开通 KMS 托管版</p>
     */
     @SerializedName("ExclusiveVSMEnabled")
     @Expose
     private Boolean ExclusiveVSMEnabled;
 
     /**
-    * 是否开通 KMS 独享版
+    * <p>是否开通 KMS 独享版</p>
     */
     @SerializedName("ExclusiveHSMEnabled")
     @Expose
     private Boolean ExclusiveHSMEnabled;
 
     /**
-    * KMS 订阅信息。
+    * <p>KMS 订阅信息。</p>
     */
     @SerializedName("SubscriptionInfo")
     @Expose
     private String SubscriptionInfo;
 
     /**
-    * 返回KMS用户密钥使用数量
+    * <p>返回KMS用户密钥使用数量</p>
     */
     @SerializedName("CmkUserCount")
     @Expose
     private Long CmkUserCount;
 
     /**
-    * 返回KMS用户密钥规格数量
+    * <p>返回KMS用户密钥规格数量</p>
     */
     @SerializedName("CmkLimit")
     @Expose
     private Long CmkLimit;
 
     /**
-    * 返回独享集群组
+    * <p>返回独享集群组</p>
     */
     @SerializedName("ExclusiveHSMList")
     @Expose
     private ExclusiveHSM [] ExclusiveHSMList;
 
     /**
-    * 是否支持数据密钥托管。1:支持，0:不支持。
+    * <p>是否支持数据密钥托管。1:支持，0:不支持。</p>
     */
     @SerializedName("IsAllowedDataKeyHosted")
     @Expose
     private Boolean IsAllowedDataKeyHosted;
 
     /**
-    * IsAllowedDataKeyHosted为1时有效，数据密钥的购买额度
+    * <p>IsAllowedDataKeyHosted为1时有效，数据密钥的购买额度</p>
     */
     @SerializedName("DataKeyLimit")
     @Expose
     private Long DataKeyLimit;
 
     /**
-    * IsAllowedDataKeyHosted为1时有效，数据密钥免费额度。
+    * <p>IsAllowedDataKeyHosted为1时有效，数据密钥免费额度。</p>
     */
     @SerializedName("FreeDataKeyLimit")
     @Expose
     private Long FreeDataKeyLimit;
 
     /**
-    * IsAllowedDataKeyHosted为1时有效，已使用的数据密钥数量。
+    * <p>IsAllowedDataKeyHosted为1时有效，已使用的数据密钥数量。</p>
     */
     @SerializedName("DataKeyUsedCount")
     @Expose
     private Long DataKeyUsedCount;
 
     /**
-    * 同步任务的目标地域信息
+    * <p>同步任务的目标地域信息</p>
     */
     @SerializedName("SyncTaskList")
     @Expose
     private DestinationSyncConfig [] SyncTaskList;
 
     /**
-    * 是否支持同步任务。true:支持，false:不支持。
+    * <p>是否支持同步任务。true:支持，false:不支持。</p>
     */
     @SerializedName("IsAllowedSync")
     @Expose
     private Boolean IsAllowedSync;
+
+    /**
+    * <p>地域下的QPS</p>
+    */
+    @SerializedName("QpsLimit")
+    @Expose
+    private Long QpsLimit;
+
+    /**
+    * <p>总的QPS值</p>
+    */
+    @SerializedName("QpsTotalLimit")
+    @Expose
+    private Long QpsTotalLimit;
+
+    /**
+    * <p>地域下的QPS</p>
+    */
+    @SerializedName("RegionsQps")
+    @Expose
+    private RegionQps [] RegionsQps;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -157,291 +178,339 @@ public class GetServiceStatusResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get KMS服务是否开通， true 表示已开通 
-     * @return ServiceEnabled KMS服务是否开通， true 表示已开通
+     * Get <p>KMS服务是否开通， true 表示已开通</p> 
+     * @return ServiceEnabled <p>KMS服务是否开通， true 表示已开通</p>
      */
     public Boolean getServiceEnabled() {
         return this.ServiceEnabled;
     }
 
     /**
-     * Set KMS服务是否开通， true 表示已开通
-     * @param ServiceEnabled KMS服务是否开通， true 表示已开通
+     * Set <p>KMS服务是否开通， true 表示已开通</p>
+     * @param ServiceEnabled <p>KMS服务是否开通， true 表示已开通</p>
      */
     public void setServiceEnabled(Boolean ServiceEnabled) {
         this.ServiceEnabled = ServiceEnabled;
     }
 
     /**
-     * Get 服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放 
-     * @return InvalidType 服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放
+     * Get <p>服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放</p> 
+     * @return InvalidType <p>服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放</p>
      */
     public Long getInvalidType() {
         return this.InvalidType;
     }
 
     /**
-     * Set 服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放
-     * @param InvalidType 服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放
+     * Set <p>服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放</p>
+     * @param InvalidType <p>服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放</p>
      */
     public void setInvalidType(Long InvalidType) {
         this.InvalidType = InvalidType;
     }
 
     /**
-     * Get 0-普通版，1-旗舰版 
-     * @return UserLevel 0-普通版，1-旗舰版
+     * Get <p>0-普通版，1-旗舰版</p> 
+     * @return UserLevel <p>0-普通版，1-旗舰版</p>
      */
     public Long getUserLevel() {
         return this.UserLevel;
     }
 
     /**
-     * Set 0-普通版，1-旗舰版
-     * @param UserLevel 0-普通版，1-旗舰版
+     * Set <p>0-普通版，1-旗舰版</p>
+     * @param UserLevel <p>0-普通版，1-旗舰版</p>
      */
     public void setUserLevel(Long UserLevel) {
         this.UserLevel = UserLevel;
     }
 
     /**
-     * Get 旗舰版到期时间（Epoch Unix Timestamp）。 
-     * @return ProExpireTime 旗舰版到期时间（Epoch Unix Timestamp）。
+     * Get <p>旗舰版到期时间（Epoch Unix Timestamp）。</p> 
+     * @return ProExpireTime <p>旗舰版到期时间（Epoch Unix Timestamp）。</p>
      */
     public Long getProExpireTime() {
         return this.ProExpireTime;
     }
 
     /**
-     * Set 旗舰版到期时间（Epoch Unix Timestamp）。
-     * @param ProExpireTime 旗舰版到期时间（Epoch Unix Timestamp）。
+     * Set <p>旗舰版到期时间（Epoch Unix Timestamp）。</p>
+     * @param ProExpireTime <p>旗舰版到期时间（Epoch Unix Timestamp）。</p>
      */
     public void setProExpireTime(Long ProExpireTime) {
         this.ProExpireTime = ProExpireTime;
     }
 
     /**
-     * Get 旗舰版是否自动续费：0-不自动续费，1-自动续费 
-     * @return ProRenewFlag 旗舰版是否自动续费：0-不自动续费，1-自动续费
+     * Get <p>旗舰版是否自动续费：0-不自动续费，1-自动续费</p> 
+     * @return ProRenewFlag <p>旗舰版是否自动续费：0-不自动续费，1-自动续费</p>
      */
     public Long getProRenewFlag() {
         return this.ProRenewFlag;
     }
 
     /**
-     * Set 旗舰版是否自动续费：0-不自动续费，1-自动续费
-     * @param ProRenewFlag 旗舰版是否自动续费：0-不自动续费，1-自动续费
+     * Set <p>旗舰版是否自动续费：0-不自动续费，1-自动续费</p>
+     * @param ProRenewFlag <p>旗舰版是否自动续费：0-不自动续费，1-自动续费</p>
      */
     public void setProRenewFlag(Long ProRenewFlag) {
         this.ProRenewFlag = ProRenewFlag;
     }
 
     /**
-     * Get 旗舰版购买记录的唯一性标识。如果未开通旗舰版，则返回值为空 
-     * @return ProResourceId 旗舰版购买记录的唯一性标识。如果未开通旗舰版，则返回值为空
+     * Get <p>旗舰版购买记录的唯一性标识。如果未开通旗舰版，则返回值为空</p> 
+     * @return ProResourceId <p>旗舰版购买记录的唯一性标识。如果未开通旗舰版，则返回值为空</p>
      */
     public String getProResourceId() {
         return this.ProResourceId;
     }
 
     /**
-     * Set 旗舰版购买记录的唯一性标识。如果未开通旗舰版，则返回值为空
-     * @param ProResourceId 旗舰版购买记录的唯一性标识。如果未开通旗舰版，则返回值为空
+     * Set <p>旗舰版购买记录的唯一性标识。如果未开通旗舰版，则返回值为空</p>
+     * @param ProResourceId <p>旗舰版购买记录的唯一性标识。如果未开通旗舰版，则返回值为空</p>
      */
     public void setProResourceId(String ProResourceId) {
         this.ProResourceId = ProResourceId;
     }
 
     /**
-     * Get 是否开通 KMS 托管版 
-     * @return ExclusiveVSMEnabled 是否开通 KMS 托管版
+     * Get <p>是否开通 KMS 托管版</p> 
+     * @return ExclusiveVSMEnabled <p>是否开通 KMS 托管版</p>
      */
     public Boolean getExclusiveVSMEnabled() {
         return this.ExclusiveVSMEnabled;
     }
 
     /**
-     * Set 是否开通 KMS 托管版
-     * @param ExclusiveVSMEnabled 是否开通 KMS 托管版
+     * Set <p>是否开通 KMS 托管版</p>
+     * @param ExclusiveVSMEnabled <p>是否开通 KMS 托管版</p>
      */
     public void setExclusiveVSMEnabled(Boolean ExclusiveVSMEnabled) {
         this.ExclusiveVSMEnabled = ExclusiveVSMEnabled;
     }
 
     /**
-     * Get 是否开通 KMS 独享版 
-     * @return ExclusiveHSMEnabled 是否开通 KMS 独享版
+     * Get <p>是否开通 KMS 独享版</p> 
+     * @return ExclusiveHSMEnabled <p>是否开通 KMS 独享版</p>
      */
     public Boolean getExclusiveHSMEnabled() {
         return this.ExclusiveHSMEnabled;
     }
 
     /**
-     * Set 是否开通 KMS 独享版
-     * @param ExclusiveHSMEnabled 是否开通 KMS 独享版
+     * Set <p>是否开通 KMS 独享版</p>
+     * @param ExclusiveHSMEnabled <p>是否开通 KMS 独享版</p>
      */
     public void setExclusiveHSMEnabled(Boolean ExclusiveHSMEnabled) {
         this.ExclusiveHSMEnabled = ExclusiveHSMEnabled;
     }
 
     /**
-     * Get KMS 订阅信息。 
-     * @return SubscriptionInfo KMS 订阅信息。
+     * Get <p>KMS 订阅信息。</p> 
+     * @return SubscriptionInfo <p>KMS 订阅信息。</p>
      */
     public String getSubscriptionInfo() {
         return this.SubscriptionInfo;
     }
 
     /**
-     * Set KMS 订阅信息。
-     * @param SubscriptionInfo KMS 订阅信息。
+     * Set <p>KMS 订阅信息。</p>
+     * @param SubscriptionInfo <p>KMS 订阅信息。</p>
      */
     public void setSubscriptionInfo(String SubscriptionInfo) {
         this.SubscriptionInfo = SubscriptionInfo;
     }
 
     /**
-     * Get 返回KMS用户密钥使用数量 
-     * @return CmkUserCount 返回KMS用户密钥使用数量
+     * Get <p>返回KMS用户密钥使用数量</p> 
+     * @return CmkUserCount <p>返回KMS用户密钥使用数量</p>
      */
     public Long getCmkUserCount() {
         return this.CmkUserCount;
     }
 
     /**
-     * Set 返回KMS用户密钥使用数量
-     * @param CmkUserCount 返回KMS用户密钥使用数量
+     * Set <p>返回KMS用户密钥使用数量</p>
+     * @param CmkUserCount <p>返回KMS用户密钥使用数量</p>
      */
     public void setCmkUserCount(Long CmkUserCount) {
         this.CmkUserCount = CmkUserCount;
     }
 
     /**
-     * Get 返回KMS用户密钥规格数量 
-     * @return CmkLimit 返回KMS用户密钥规格数量
+     * Get <p>返回KMS用户密钥规格数量</p> 
+     * @return CmkLimit <p>返回KMS用户密钥规格数量</p>
      */
     public Long getCmkLimit() {
         return this.CmkLimit;
     }
 
     /**
-     * Set 返回KMS用户密钥规格数量
-     * @param CmkLimit 返回KMS用户密钥规格数量
+     * Set <p>返回KMS用户密钥规格数量</p>
+     * @param CmkLimit <p>返回KMS用户密钥规格数量</p>
      */
     public void setCmkLimit(Long CmkLimit) {
         this.CmkLimit = CmkLimit;
     }
 
     /**
-     * Get 返回独享集群组 
-     * @return ExclusiveHSMList 返回独享集群组
+     * Get <p>返回独享集群组</p> 
+     * @return ExclusiveHSMList <p>返回独享集群组</p>
      */
     public ExclusiveHSM [] getExclusiveHSMList() {
         return this.ExclusiveHSMList;
     }
 
     /**
-     * Set 返回独享集群组
-     * @param ExclusiveHSMList 返回独享集群组
+     * Set <p>返回独享集群组</p>
+     * @param ExclusiveHSMList <p>返回独享集群组</p>
      */
     public void setExclusiveHSMList(ExclusiveHSM [] ExclusiveHSMList) {
         this.ExclusiveHSMList = ExclusiveHSMList;
     }
 
     /**
-     * Get 是否支持数据密钥托管。1:支持，0:不支持。 
-     * @return IsAllowedDataKeyHosted 是否支持数据密钥托管。1:支持，0:不支持。
+     * Get <p>是否支持数据密钥托管。1:支持，0:不支持。</p> 
+     * @return IsAllowedDataKeyHosted <p>是否支持数据密钥托管。1:支持，0:不支持。</p>
      */
     public Boolean getIsAllowedDataKeyHosted() {
         return this.IsAllowedDataKeyHosted;
     }
 
     /**
-     * Set 是否支持数据密钥托管。1:支持，0:不支持。
-     * @param IsAllowedDataKeyHosted 是否支持数据密钥托管。1:支持，0:不支持。
+     * Set <p>是否支持数据密钥托管。1:支持，0:不支持。</p>
+     * @param IsAllowedDataKeyHosted <p>是否支持数据密钥托管。1:支持，0:不支持。</p>
      */
     public void setIsAllowedDataKeyHosted(Boolean IsAllowedDataKeyHosted) {
         this.IsAllowedDataKeyHosted = IsAllowedDataKeyHosted;
     }
 
     /**
-     * Get IsAllowedDataKeyHosted为1时有效，数据密钥的购买额度 
-     * @return DataKeyLimit IsAllowedDataKeyHosted为1时有效，数据密钥的购买额度
+     * Get <p>IsAllowedDataKeyHosted为1时有效，数据密钥的购买额度</p> 
+     * @return DataKeyLimit <p>IsAllowedDataKeyHosted为1时有效，数据密钥的购买额度</p>
      */
     public Long getDataKeyLimit() {
         return this.DataKeyLimit;
     }
 
     /**
-     * Set IsAllowedDataKeyHosted为1时有效，数据密钥的购买额度
-     * @param DataKeyLimit IsAllowedDataKeyHosted为1时有效，数据密钥的购买额度
+     * Set <p>IsAllowedDataKeyHosted为1时有效，数据密钥的购买额度</p>
+     * @param DataKeyLimit <p>IsAllowedDataKeyHosted为1时有效，数据密钥的购买额度</p>
      */
     public void setDataKeyLimit(Long DataKeyLimit) {
         this.DataKeyLimit = DataKeyLimit;
     }
 
     /**
-     * Get IsAllowedDataKeyHosted为1时有效，数据密钥免费额度。 
-     * @return FreeDataKeyLimit IsAllowedDataKeyHosted为1时有效，数据密钥免费额度。
+     * Get <p>IsAllowedDataKeyHosted为1时有效，数据密钥免费额度。</p> 
+     * @return FreeDataKeyLimit <p>IsAllowedDataKeyHosted为1时有效，数据密钥免费额度。</p>
      */
     public Long getFreeDataKeyLimit() {
         return this.FreeDataKeyLimit;
     }
 
     /**
-     * Set IsAllowedDataKeyHosted为1时有效，数据密钥免费额度。
-     * @param FreeDataKeyLimit IsAllowedDataKeyHosted为1时有效，数据密钥免费额度。
+     * Set <p>IsAllowedDataKeyHosted为1时有效，数据密钥免费额度。</p>
+     * @param FreeDataKeyLimit <p>IsAllowedDataKeyHosted为1时有效，数据密钥免费额度。</p>
      */
     public void setFreeDataKeyLimit(Long FreeDataKeyLimit) {
         this.FreeDataKeyLimit = FreeDataKeyLimit;
     }
 
     /**
-     * Get IsAllowedDataKeyHosted为1时有效，已使用的数据密钥数量。 
-     * @return DataKeyUsedCount IsAllowedDataKeyHosted为1时有效，已使用的数据密钥数量。
+     * Get <p>IsAllowedDataKeyHosted为1时有效，已使用的数据密钥数量。</p> 
+     * @return DataKeyUsedCount <p>IsAllowedDataKeyHosted为1时有效，已使用的数据密钥数量。</p>
      */
     public Long getDataKeyUsedCount() {
         return this.DataKeyUsedCount;
     }
 
     /**
-     * Set IsAllowedDataKeyHosted为1时有效，已使用的数据密钥数量。
-     * @param DataKeyUsedCount IsAllowedDataKeyHosted为1时有效，已使用的数据密钥数量。
+     * Set <p>IsAllowedDataKeyHosted为1时有效，已使用的数据密钥数量。</p>
+     * @param DataKeyUsedCount <p>IsAllowedDataKeyHosted为1时有效，已使用的数据密钥数量。</p>
      */
     public void setDataKeyUsedCount(Long DataKeyUsedCount) {
         this.DataKeyUsedCount = DataKeyUsedCount;
     }
 
     /**
-     * Get 同步任务的目标地域信息 
-     * @return SyncTaskList 同步任务的目标地域信息
+     * Get <p>同步任务的目标地域信息</p> 
+     * @return SyncTaskList <p>同步任务的目标地域信息</p>
      */
     public DestinationSyncConfig [] getSyncTaskList() {
         return this.SyncTaskList;
     }
 
     /**
-     * Set 同步任务的目标地域信息
-     * @param SyncTaskList 同步任务的目标地域信息
+     * Set <p>同步任务的目标地域信息</p>
+     * @param SyncTaskList <p>同步任务的目标地域信息</p>
      */
     public void setSyncTaskList(DestinationSyncConfig [] SyncTaskList) {
         this.SyncTaskList = SyncTaskList;
     }
 
     /**
-     * Get 是否支持同步任务。true:支持，false:不支持。 
-     * @return IsAllowedSync 是否支持同步任务。true:支持，false:不支持。
+     * Get <p>是否支持同步任务。true:支持，false:不支持。</p> 
+     * @return IsAllowedSync <p>是否支持同步任务。true:支持，false:不支持。</p>
      */
     public Boolean getIsAllowedSync() {
         return this.IsAllowedSync;
     }
 
     /**
-     * Set 是否支持同步任务。true:支持，false:不支持。
-     * @param IsAllowedSync 是否支持同步任务。true:支持，false:不支持。
+     * Set <p>是否支持同步任务。true:支持，false:不支持。</p>
+     * @param IsAllowedSync <p>是否支持同步任务。true:支持，false:不支持。</p>
      */
     public void setIsAllowedSync(Boolean IsAllowedSync) {
         this.IsAllowedSync = IsAllowedSync;
+    }
+
+    /**
+     * Get <p>地域下的QPS</p> 
+     * @return QpsLimit <p>地域下的QPS</p>
+     */
+    public Long getQpsLimit() {
+        return this.QpsLimit;
+    }
+
+    /**
+     * Set <p>地域下的QPS</p>
+     * @param QpsLimit <p>地域下的QPS</p>
+     */
+    public void setQpsLimit(Long QpsLimit) {
+        this.QpsLimit = QpsLimit;
+    }
+
+    /**
+     * Get <p>总的QPS值</p> 
+     * @return QpsTotalLimit <p>总的QPS值</p>
+     */
+    public Long getQpsTotalLimit() {
+        return this.QpsTotalLimit;
+    }
+
+    /**
+     * Set <p>总的QPS值</p>
+     * @param QpsTotalLimit <p>总的QPS值</p>
+     */
+    public void setQpsTotalLimit(Long QpsTotalLimit) {
+        this.QpsTotalLimit = QpsTotalLimit;
+    }
+
+    /**
+     * Get <p>地域下的QPS</p> 
+     * @return RegionsQps <p>地域下的QPS</p>
+     */
+    public RegionQps [] getRegionsQps() {
+        return this.RegionsQps;
+    }
+
+    /**
+     * Set <p>地域下的QPS</p>
+     * @param RegionsQps <p>地域下的QPS</p>
+     */
+    public void setRegionsQps(RegionQps [] RegionsQps) {
+        this.RegionsQps = RegionsQps;
     }
 
     /**
@@ -528,6 +597,18 @@ public class GetServiceStatusResponse extends AbstractModel {
         if (source.IsAllowedSync != null) {
             this.IsAllowedSync = new Boolean(source.IsAllowedSync);
         }
+        if (source.QpsLimit != null) {
+            this.QpsLimit = new Long(source.QpsLimit);
+        }
+        if (source.QpsTotalLimit != null) {
+            this.QpsTotalLimit = new Long(source.QpsTotalLimit);
+        }
+        if (source.RegionsQps != null) {
+            this.RegionsQps = new RegionQps[source.RegionsQps.length];
+            for (int i = 0; i < source.RegionsQps.length; i++) {
+                this.RegionsQps[i] = new RegionQps(source.RegionsQps[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -556,6 +637,9 @@ public class GetServiceStatusResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "DataKeyUsedCount", this.DataKeyUsedCount);
         this.setParamArrayObj(map, prefix + "SyncTaskList.", this.SyncTaskList);
         this.setParamSimple(map, prefix + "IsAllowedSync", this.IsAllowedSync);
+        this.setParamSimple(map, prefix + "QpsLimit", this.QpsLimit);
+        this.setParamSimple(map, prefix + "QpsTotalLimit", this.QpsTotalLimit);
+        this.setParamArrayObj(map, prefix + "RegionsQps.", this.RegionsQps);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

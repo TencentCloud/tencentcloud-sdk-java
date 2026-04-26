@@ -24,18 +24,25 @@ import java.util.HashMap;
 public class AcquireSandboxInstanceTokenResponse extends AbstractModel {
 
     /**
-    * 访问Token
+    * <p>访问Token</p>
     */
     @SerializedName("Token")
     @Expose
     private String Token;
 
     /**
-    * 过期时间
+    * <p>过期时间</p>
     */
     @SerializedName("ExpiresAt")
     @Expose
     private String ExpiresAt;
+
+    /**
+    * <p>非管控面（envd）的访问Token</p>
+    */
+    @SerializedName("TrafficToken")
+    @Expose
+    private String TrafficToken;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +52,51 @@ public class AcquireSandboxInstanceTokenResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 访问Token 
-     * @return Token 访问Token
+     * Get <p>访问Token</p> 
+     * @return Token <p>访问Token</p>
      */
     public String getToken() {
         return this.Token;
     }
 
     /**
-     * Set 访问Token
-     * @param Token 访问Token
+     * Set <p>访问Token</p>
+     * @param Token <p>访问Token</p>
      */
     public void setToken(String Token) {
         this.Token = Token;
     }
 
     /**
-     * Get 过期时间 
-     * @return ExpiresAt 过期时间
+     * Get <p>过期时间</p> 
+     * @return ExpiresAt <p>过期时间</p>
      */
     public String getExpiresAt() {
         return this.ExpiresAt;
     }
 
     /**
-     * Set 过期时间
-     * @param ExpiresAt 过期时间
+     * Set <p>过期时间</p>
+     * @param ExpiresAt <p>过期时间</p>
      */
     public void setExpiresAt(String ExpiresAt) {
         this.ExpiresAt = ExpiresAt;
+    }
+
+    /**
+     * Get <p>非管控面（envd）的访问Token</p> 
+     * @return TrafficToken <p>非管控面（envd）的访问Token</p>
+     */
+    public String getTrafficToken() {
+        return this.TrafficToken;
+    }
+
+    /**
+     * Set <p>非管控面（envd）的访问Token</p>
+     * @param TrafficToken <p>非管控面（envd）的访问Token</p>
+     */
+    public void setTrafficToken(String TrafficToken) {
+        this.TrafficToken = TrafficToken;
     }
 
     /**
@@ -106,6 +129,9 @@ public class AcquireSandboxInstanceTokenResponse extends AbstractModel {
         if (source.ExpiresAt != null) {
             this.ExpiresAt = new String(source.ExpiresAt);
         }
+        if (source.TrafficToken != null) {
+            this.TrafficToken = new String(source.TrafficToken);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -118,6 +144,7 @@ public class AcquireSandboxInstanceTokenResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Token", this.Token);
         this.setParamSimple(map, prefix + "ExpiresAt", this.ExpiresAt);
+        this.setParamSimple(map, prefix + "TrafficToken", this.TrafficToken);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

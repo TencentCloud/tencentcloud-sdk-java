@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ocr.v20181119.models;
+package com.tencentcloudapi.kms.v20190118.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,67 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Coord extends AbstractModel {
+public class RegionQps extends AbstractModel {
 
     /**
-    * <p>横坐标。</p>
+    * <p>地域</p>
     */
-    @SerializedName("X")
+    @SerializedName("Region")
     @Expose
-    private Long X;
+    private String Region;
 
     /**
-    * <p>纵坐标。</p>
+    * <p>qps的大小</p>
     */
-    @SerializedName("Y")
+    @SerializedName("Qps")
     @Expose
-    private Long Y;
+    private Long Qps;
 
     /**
-     * Get <p>横坐标。</p> 
-     * @return X <p>横坐标。</p>
+     * Get <p>地域</p> 
+     * @return Region <p>地域</p>
      */
-    public Long getX() {
-        return this.X;
+    public String getRegion() {
+        return this.Region;
     }
 
     /**
-     * Set <p>横坐标。</p>
-     * @param X <p>横坐标。</p>
+     * Set <p>地域</p>
+     * @param Region <p>地域</p>
      */
-    public void setX(Long X) {
-        this.X = X;
+    public void setRegion(String Region) {
+        this.Region = Region;
     }
 
     /**
-     * Get <p>纵坐标。</p> 
-     * @return Y <p>纵坐标。</p>
+     * Get <p>qps的大小</p> 
+     * @return Qps <p>qps的大小</p>
      */
-    public Long getY() {
-        return this.Y;
+    public Long getQps() {
+        return this.Qps;
     }
 
     /**
-     * Set <p>纵坐标。</p>
-     * @param Y <p>纵坐标。</p>
+     * Set <p>qps的大小</p>
+     * @param Qps <p>qps的大小</p>
      */
-    public void setY(Long Y) {
-        this.Y = Y;
+    public void setQps(Long Qps) {
+        this.Qps = Qps;
     }
 
-    public Coord() {
+    public RegionQps() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public Coord(Coord source) {
-        if (source.X != null) {
-            this.X = new Long(source.X);
+    public RegionQps(RegionQps source) {
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
         }
-        if (source.Y != null) {
-            this.Y = new Long(source.Y);
+        if (source.Qps != null) {
+            this.Qps = new Long(source.Qps);
         }
     }
 
@@ -90,8 +90,8 @@ public class Coord extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "X", this.X);
-        this.setParamSimple(map, prefix + "Y", this.Y);
+        this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "Qps", this.Qps);
 
     }
 }

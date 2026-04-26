@@ -24,15 +24,14 @@ import java.util.HashMap;
 public class DataConfig extends AbstractModel {
 
     /**
-    * 映射路径
+    * <p>映射路径</p>
     */
     @SerializedName("MappingPath")
     @Expose
     private String MappingPath;
 
     /**
-    * 存储用途
-可选值为 BUILTIN_CODE, BUILTIN_DATA, BUILTIN_MODEL, USER_DATA, USER_CODE, USER_MODEL, OUTPUT, OTHER
+    * <p>存储用途<br>可选值为 BUILTIN_CODE, BUILTIN_DATA, BUILTIN_MODEL, USER_DATA, USER_CODE, USER_MODEL, OUTPUT, OTHER</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataSourceUsage")
@@ -40,7 +39,7 @@ public class DataConfig extends AbstractModel {
     private String DataSourceUsage;
 
     /**
-    * DATASET、COS、CFS、CFSTurbo、GooseFSx、HDFS、WEDATA_HDFS
+    * <p>DATASET、COS、CFS、CFSTurbo、GooseFSx、HDFS、WEDATA_HDFS</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataSourceType")
@@ -48,7 +47,7 @@ public class DataConfig extends AbstractModel {
     private String DataSourceType;
 
     /**
-    * 来自数据集的数据
+    * <p>来自数据集的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataSetSource")
@@ -56,7 +55,7 @@ public class DataConfig extends AbstractModel {
     private DataSetConfig DataSetSource;
 
     /**
-    * 来自cos的数据
+    * <p>来自cos的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("COSSource")
@@ -64,7 +63,7 @@ public class DataConfig extends AbstractModel {
     private CosPathInfo COSSource;
 
     /**
-    * 来自CFS的数据
+    * <p>来自CFS的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CFSSource")
@@ -72,7 +71,7 @@ public class DataConfig extends AbstractModel {
     private CFSConfig CFSSource;
 
     /**
-    * 来自HDFS的数据
+    * <p>来自HDFS的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HDFSSource")
@@ -80,7 +79,7 @@ public class DataConfig extends AbstractModel {
     private HDFSConfig HDFSSource;
 
     /**
-    * 配置GooseFS的数据
+    * <p>配置GooseFS的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GooseFSSource")
@@ -88,7 +87,7 @@ public class DataConfig extends AbstractModel {
     private GooseFS GooseFSSource;
 
     /**
-    * 配置TurboFS的数据
+    * <p>配置TurboFS的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CFSTurboSource")
@@ -96,7 +95,7 @@ public class DataConfig extends AbstractModel {
     private CFSTurbo CFSTurboSource;
 
     /**
-    * 来自本地磁盘的信息
+    * <p>来自本地磁盘的信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LocalDiskSource")
@@ -104,7 +103,7 @@ public class DataConfig extends AbstractModel {
     private LocalDisk LocalDiskSource;
 
     /**
-    * CBS配置信息
+    * <p>CBS配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CBSSource")
@@ -112,14 +111,14 @@ public class DataConfig extends AbstractModel {
     private CBSConfig CBSSource;
 
     /**
-    * 主机路径信息
+    * <p>主机路径信息</p>
     */
     @SerializedName("HostPathSource")
     @Expose
     private HostPath HostPathSource;
 
     /**
-    * 公有云数据源
+    * <p>公有云数据源</p>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicDataSource")
@@ -127,27 +126,25 @@ public class DataConfig extends AbstractModel {
     private PublicDataSourceFS PublicDataSource;
 
     /**
-     * Get 映射路径 
-     * @return MappingPath 映射路径
+     * Get <p>映射路径</p> 
+     * @return MappingPath <p>映射路径</p>
      */
     public String getMappingPath() {
         return this.MappingPath;
     }
 
     /**
-     * Set 映射路径
-     * @param MappingPath 映射路径
+     * Set <p>映射路径</p>
+     * @param MappingPath <p>映射路径</p>
      */
     public void setMappingPath(String MappingPath) {
         this.MappingPath = MappingPath;
     }
 
     /**
-     * Get 存储用途
-可选值为 BUILTIN_CODE, BUILTIN_DATA, BUILTIN_MODEL, USER_DATA, USER_CODE, USER_MODEL, OUTPUT, OTHER
+     * Get <p>存储用途<br>可选值为 BUILTIN_CODE, BUILTIN_DATA, BUILTIN_MODEL, USER_DATA, USER_CODE, USER_MODEL, OUTPUT, OTHER</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DataSourceUsage 存储用途
-可选值为 BUILTIN_CODE, BUILTIN_DATA, BUILTIN_MODEL, USER_DATA, USER_CODE, USER_MODEL, OUTPUT, OTHER
+     * @return DataSourceUsage <p>存储用途<br>可选值为 BUILTIN_CODE, BUILTIN_DATA, BUILTIN_MODEL, USER_DATA, USER_CODE, USER_MODEL, OUTPUT, OTHER</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataSourceUsage() {
@@ -155,11 +152,9 @@ public class DataConfig extends AbstractModel {
     }
 
     /**
-     * Set 存储用途
-可选值为 BUILTIN_CODE, BUILTIN_DATA, BUILTIN_MODEL, USER_DATA, USER_CODE, USER_MODEL, OUTPUT, OTHER
+     * Set <p>存储用途<br>可选值为 BUILTIN_CODE, BUILTIN_DATA, BUILTIN_MODEL, USER_DATA, USER_CODE, USER_MODEL, OUTPUT, OTHER</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DataSourceUsage 存储用途
-可选值为 BUILTIN_CODE, BUILTIN_DATA, BUILTIN_MODEL, USER_DATA, USER_CODE, USER_MODEL, OUTPUT, OTHER
+     * @param DataSourceUsage <p>存储用途<br>可选值为 BUILTIN_CODE, BUILTIN_DATA, BUILTIN_MODEL, USER_DATA, USER_CODE, USER_MODEL, OUTPUT, OTHER</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataSourceUsage(String DataSourceUsage) {
@@ -167,9 +162,9 @@ public class DataConfig extends AbstractModel {
     }
 
     /**
-     * Get DATASET、COS、CFS、CFSTurbo、GooseFSx、HDFS、WEDATA_HDFS
+     * Get <p>DATASET、COS、CFS、CFSTurbo、GooseFSx、HDFS、WEDATA_HDFS</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DataSourceType DATASET、COS、CFS、CFSTurbo、GooseFSx、HDFS、WEDATA_HDFS
+     * @return DataSourceType <p>DATASET、COS、CFS、CFSTurbo、GooseFSx、HDFS、WEDATA_HDFS</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataSourceType() {
@@ -177,9 +172,9 @@ public class DataConfig extends AbstractModel {
     }
 
     /**
-     * Set DATASET、COS、CFS、CFSTurbo、GooseFSx、HDFS、WEDATA_HDFS
+     * Set <p>DATASET、COS、CFS、CFSTurbo、GooseFSx、HDFS、WEDATA_HDFS</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DataSourceType DATASET、COS、CFS、CFSTurbo、GooseFSx、HDFS、WEDATA_HDFS
+     * @param DataSourceType <p>DATASET、COS、CFS、CFSTurbo、GooseFSx、HDFS、WEDATA_HDFS</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataSourceType(String DataSourceType) {
@@ -187,9 +182,9 @@ public class DataConfig extends AbstractModel {
     }
 
     /**
-     * Get 来自数据集的数据
+     * Get <p>来自数据集的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DataSetSource 来自数据集的数据
+     * @return DataSetSource <p>来自数据集的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DataSetConfig getDataSetSource() {
@@ -197,9 +192,9 @@ public class DataConfig extends AbstractModel {
     }
 
     /**
-     * Set 来自数据集的数据
+     * Set <p>来自数据集的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DataSetSource 来自数据集的数据
+     * @param DataSetSource <p>来自数据集的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataSetSource(DataSetConfig DataSetSource) {
@@ -207,9 +202,9 @@ public class DataConfig extends AbstractModel {
     }
 
     /**
-     * Get 来自cos的数据
+     * Get <p>来自cos的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return COSSource 来自cos的数据
+     * @return COSSource <p>来自cos的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CosPathInfo getCOSSource() {
@@ -217,9 +212,9 @@ public class DataConfig extends AbstractModel {
     }
 
     /**
-     * Set 来自cos的数据
+     * Set <p>来自cos的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param COSSource 来自cos的数据
+     * @param COSSource <p>来自cos的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCOSSource(CosPathInfo COSSource) {
@@ -227,9 +222,9 @@ public class DataConfig extends AbstractModel {
     }
 
     /**
-     * Get 来自CFS的数据
+     * Get <p>来自CFS的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CFSSource 来自CFS的数据
+     * @return CFSSource <p>来自CFS的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CFSConfig getCFSSource() {
@@ -237,9 +232,9 @@ public class DataConfig extends AbstractModel {
     }
 
     /**
-     * Set 来自CFS的数据
+     * Set <p>来自CFS的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CFSSource 来自CFS的数据
+     * @param CFSSource <p>来自CFS的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCFSSource(CFSConfig CFSSource) {
@@ -247,9 +242,9 @@ public class DataConfig extends AbstractModel {
     }
 
     /**
-     * Get 来自HDFS的数据
+     * Get <p>来自HDFS的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HDFSSource 来自HDFS的数据
+     * @return HDFSSource <p>来自HDFS的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public HDFSConfig getHDFSSource() {
@@ -257,9 +252,9 @@ public class DataConfig extends AbstractModel {
     }
 
     /**
-     * Set 来自HDFS的数据
+     * Set <p>来自HDFS的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HDFSSource 来自HDFS的数据
+     * @param HDFSSource <p>来自HDFS的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHDFSSource(HDFSConfig HDFSSource) {
@@ -267,9 +262,9 @@ public class DataConfig extends AbstractModel {
     }
 
     /**
-     * Get 配置GooseFS的数据
+     * Get <p>配置GooseFS的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GooseFSSource 配置GooseFS的数据
+     * @return GooseFSSource <p>配置GooseFS的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public GooseFS getGooseFSSource() {
@@ -277,9 +272,9 @@ public class DataConfig extends AbstractModel {
     }
 
     /**
-     * Set 配置GooseFS的数据
+     * Set <p>配置GooseFS的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GooseFSSource 配置GooseFS的数据
+     * @param GooseFSSource <p>配置GooseFS的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGooseFSSource(GooseFS GooseFSSource) {
@@ -287,9 +282,9 @@ public class DataConfig extends AbstractModel {
     }
 
     /**
-     * Get 配置TurboFS的数据
+     * Get <p>配置TurboFS的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CFSTurboSource 配置TurboFS的数据
+     * @return CFSTurboSource <p>配置TurboFS的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CFSTurbo getCFSTurboSource() {
@@ -297,9 +292,9 @@ public class DataConfig extends AbstractModel {
     }
 
     /**
-     * Set 配置TurboFS的数据
+     * Set <p>配置TurboFS的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CFSTurboSource 配置TurboFS的数据
+     * @param CFSTurboSource <p>配置TurboFS的数据</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCFSTurboSource(CFSTurbo CFSTurboSource) {
@@ -307,9 +302,9 @@ public class DataConfig extends AbstractModel {
     }
 
     /**
-     * Get 来自本地磁盘的信息
+     * Get <p>来自本地磁盘的信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LocalDiskSource 来自本地磁盘的信息
+     * @return LocalDiskSource <p>来自本地磁盘的信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public LocalDisk getLocalDiskSource() {
@@ -317,9 +312,9 @@ public class DataConfig extends AbstractModel {
     }
 
     /**
-     * Set 来自本地磁盘的信息
+     * Set <p>来自本地磁盘的信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LocalDiskSource 来自本地磁盘的信息
+     * @param LocalDiskSource <p>来自本地磁盘的信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocalDiskSource(LocalDisk LocalDiskSource) {
@@ -327,9 +322,9 @@ public class DataConfig extends AbstractModel {
     }
 
     /**
-     * Get CBS配置信息
+     * Get <p>CBS配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CBSSource CBS配置信息
+     * @return CBSSource <p>CBS配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CBSConfig getCBSSource() {
@@ -337,9 +332,9 @@ public class DataConfig extends AbstractModel {
     }
 
     /**
-     * Set CBS配置信息
+     * Set <p>CBS配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CBSSource CBS配置信息
+     * @param CBSSource <p>CBS配置信息</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCBSSource(CBSConfig CBSSource) {
@@ -347,25 +342,25 @@ public class DataConfig extends AbstractModel {
     }
 
     /**
-     * Get 主机路径信息 
-     * @return HostPathSource 主机路径信息
+     * Get <p>主机路径信息</p> 
+     * @return HostPathSource <p>主机路径信息</p>
      */
     public HostPath getHostPathSource() {
         return this.HostPathSource;
     }
 
     /**
-     * Set 主机路径信息
-     * @param HostPathSource 主机路径信息
+     * Set <p>主机路径信息</p>
+     * @param HostPathSource <p>主机路径信息</p>
      */
     public void setHostPathSource(HostPath HostPathSource) {
         this.HostPathSource = HostPathSource;
     }
 
     /**
-     * Get 公有云数据源
+     * Get <p>公有云数据源</p>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PublicDataSource 公有云数据源
+     * @return PublicDataSource <p>公有云数据源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PublicDataSourceFS getPublicDataSource() {
@@ -373,9 +368,9 @@ public class DataConfig extends AbstractModel {
     }
 
     /**
-     * Set 公有云数据源
+     * Set <p>公有云数据源</p>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PublicDataSource 公有云数据源
+     * @param PublicDataSource <p>公有云数据源</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicDataSource(PublicDataSourceFS PublicDataSource) {

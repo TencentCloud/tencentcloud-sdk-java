@@ -120,6 +120,14 @@ public class TriggerTaskSchedulerConfiguration extends AbstractModel {
     private Long AllowDownstreamDependency;
 
     /**
+    * <p>调度类型: 0 正常调度 1 空跑调度</p><p>枚举值：</p><ul><li>0： 正常调度</li><li>1： 空跑调度</li></ul><p>默认值：0</p>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScheduleType")
+    @Expose
+    private Long ScheduleType;
+
+    /**
      * Get <p>上游依赖数组</p>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return UpstreamDependencyConfigList <p>上游依赖数组</p>
@@ -359,6 +367,26 @@ public class TriggerTaskSchedulerConfiguration extends AbstractModel {
         this.AllowDownstreamDependency = AllowDownstreamDependency;
     }
 
+    /**
+     * Get <p>调度类型: 0 正常调度 1 空跑调度</p><p>枚举值：</p><ul><li>0： 正常调度</li><li>1： 空跑调度</li></ul><p>默认值：0</p>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScheduleType <p>调度类型: 0 正常调度 1 空跑调度</p><p>枚举值：</p><ul><li>0： 正常调度</li><li>1： 空跑调度</li></ul><p>默认值：0</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getScheduleType() {
+        return this.ScheduleType;
+    }
+
+    /**
+     * Set <p>调度类型: 0 正常调度 1 空跑调度</p><p>枚举值：</p><ul><li>0： 正常调度</li><li>1： 空跑调度</li></ul><p>默认值：0</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScheduleType <p>调度类型: 0 正常调度 1 空跑调度</p><p>枚举值：</p><ul><li>0： 正常调度</li><li>1： 空跑调度</li></ul><p>默认值：0</p>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScheduleType(Long ScheduleType) {
+        this.ScheduleType = ScheduleType;
+    }
+
     public TriggerTaskSchedulerConfiguration() {
     }
 
@@ -415,6 +443,9 @@ public class TriggerTaskSchedulerConfiguration extends AbstractModel {
         if (source.AllowDownstreamDependency != null) {
             this.AllowDownstreamDependency = new Long(source.AllowDownstreamDependency);
         }
+        if (source.ScheduleType != null) {
+            this.ScheduleType = new Long(source.ScheduleType);
+        }
     }
 
 
@@ -434,6 +465,7 @@ public class TriggerTaskSchedulerConfiguration extends AbstractModel {
         this.setParamArrayObj(map, prefix + "TaskOutputRegistryList.", this.TaskOutputRegistryList);
         this.setParamSimple(map, prefix + "DependencyTriggerPolicy", this.DependencyTriggerPolicy);
         this.setParamSimple(map, prefix + "AllowDownstreamDependency", this.AllowDownstreamDependency);
+        this.setParamSimple(map, prefix + "ScheduleType", this.ScheduleType);
 
     }
 }

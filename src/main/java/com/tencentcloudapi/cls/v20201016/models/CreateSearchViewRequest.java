@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateSearchViewRequest extends AbstractModel {
 
     /**
-    * <p>日志集id</p><p>标记视图所属该日志集，用于查询日志集下的查询视图配置</p>
+    * <p>日志集id</p><p>查询视图所属的日志集，仅用于管理查询视图，查询视图中包含的主题可与该日志集无关</p>
     */
     @SerializedName("LogsetId")
     @Expose
@@ -45,44 +45,44 @@ public class CreateSearchViewRequest extends AbstractModel {
     private String ViewName;
 
     /**
-    * <p>视图类型</p><p>枚举值：</p><ul><li>log： 日志主题</li><li>metric： 指标主题</li></ul><p>Topics字段中配置的主题信息应该与ViewType类型匹配</p>
+    * <p>视图类型</p><p>枚举值：</p><ul><li>log： 日志主题</li><li>metric： 指标主题</li></ul><p>Topics字段中配置的主题类型应该与ViewType类型匹配</p>
     */
     @SerializedName("ViewType")
     @Expose
     private String ViewType;
 
     /**
-    * <p>视图主题配置信息</p><p>Topics字段中配置的主题信息应该与ViewType类型匹配</p>
+    * <p>查询视图中包含的主题，最大可包含10个主题</p><p>Topics字段中配置的主题信息应该与ViewType类型匹配</p>
     */
     @SerializedName("Topics")
     @Expose
     private ViewSearchTopic [] Topics;
 
     /**
-    * <p>配置描述信息</p>
-    */
-    @SerializedName("Description")
-    @Expose
-    private String Description;
-
-    /**
-    * <p>自定义视图id前缀</p><p>参数格式：<code>^[a-z0-9][a-z0-9_-]{1,61}[a-z0-9]$</code></p><p>配置成功之后ViewId格式: ${ViewIdPrefix}-view</p>
+    * <p>自定义查询视图id前缀</p><p>参数格式：<code>^[a-z0-9][a-z0-9_-]{1,61}[a-z0-9]$</code></p><p>创建成功的查询视图 ViewId 格式为 ${ViewIdPrefix}-view</p>
     */
     @SerializedName("ViewIdPrefix")
     @Expose
     private String ViewIdPrefix;
 
     /**
-     * Get <p>日志集id</p><p>标记视图所属该日志集，用于查询日志集下的查询视图配置</p> 
-     * @return LogsetId <p>日志集id</p><p>标记视图所属该日志集，用于查询日志集下的查询视图配置</p>
+    * <p>描述信息</p>
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
+     * Get <p>日志集id</p><p>查询视图所属的日志集，仅用于管理查询视图，查询视图中包含的主题可与该日志集无关</p> 
+     * @return LogsetId <p>日志集id</p><p>查询视图所属的日志集，仅用于管理查询视图，查询视图中包含的主题可与该日志集无关</p>
      */
     public String getLogsetId() {
         return this.LogsetId;
     }
 
     /**
-     * Set <p>日志集id</p><p>标记视图所属该日志集，用于查询日志集下的查询视图配置</p>
-     * @param LogsetId <p>日志集id</p><p>标记视图所属该日志集，用于查询日志集下的查询视图配置</p>
+     * Set <p>日志集id</p><p>查询视图所属的日志集，仅用于管理查询视图，查询视图中包含的主题可与该日志集无关</p>
+     * @param LogsetId <p>日志集id</p><p>查询视图所属的日志集，仅用于管理查询视图，查询视图中包含的主题可与该日志集无关</p>
      */
     public void setLogsetId(String LogsetId) {
         this.LogsetId = LogsetId;
@@ -121,67 +121,67 @@ public class CreateSearchViewRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>视图类型</p><p>枚举值：</p><ul><li>log： 日志主题</li><li>metric： 指标主题</li></ul><p>Topics字段中配置的主题信息应该与ViewType类型匹配</p> 
-     * @return ViewType <p>视图类型</p><p>枚举值：</p><ul><li>log： 日志主题</li><li>metric： 指标主题</li></ul><p>Topics字段中配置的主题信息应该与ViewType类型匹配</p>
+     * Get <p>视图类型</p><p>枚举值：</p><ul><li>log： 日志主题</li><li>metric： 指标主题</li></ul><p>Topics字段中配置的主题类型应该与ViewType类型匹配</p> 
+     * @return ViewType <p>视图类型</p><p>枚举值：</p><ul><li>log： 日志主题</li><li>metric： 指标主题</li></ul><p>Topics字段中配置的主题类型应该与ViewType类型匹配</p>
      */
     public String getViewType() {
         return this.ViewType;
     }
 
     /**
-     * Set <p>视图类型</p><p>枚举值：</p><ul><li>log： 日志主题</li><li>metric： 指标主题</li></ul><p>Topics字段中配置的主题信息应该与ViewType类型匹配</p>
-     * @param ViewType <p>视图类型</p><p>枚举值：</p><ul><li>log： 日志主题</li><li>metric： 指标主题</li></ul><p>Topics字段中配置的主题信息应该与ViewType类型匹配</p>
+     * Set <p>视图类型</p><p>枚举值：</p><ul><li>log： 日志主题</li><li>metric： 指标主题</li></ul><p>Topics字段中配置的主题类型应该与ViewType类型匹配</p>
+     * @param ViewType <p>视图类型</p><p>枚举值：</p><ul><li>log： 日志主题</li><li>metric： 指标主题</li></ul><p>Topics字段中配置的主题类型应该与ViewType类型匹配</p>
      */
     public void setViewType(String ViewType) {
         this.ViewType = ViewType;
     }
 
     /**
-     * Get <p>视图主题配置信息</p><p>Topics字段中配置的主题信息应该与ViewType类型匹配</p> 
-     * @return Topics <p>视图主题配置信息</p><p>Topics字段中配置的主题信息应该与ViewType类型匹配</p>
+     * Get <p>查询视图中包含的主题，最大可包含10个主题</p><p>Topics字段中配置的主题信息应该与ViewType类型匹配</p> 
+     * @return Topics <p>查询视图中包含的主题，最大可包含10个主题</p><p>Topics字段中配置的主题信息应该与ViewType类型匹配</p>
      */
     public ViewSearchTopic [] getTopics() {
         return this.Topics;
     }
 
     /**
-     * Set <p>视图主题配置信息</p><p>Topics字段中配置的主题信息应该与ViewType类型匹配</p>
-     * @param Topics <p>视图主题配置信息</p><p>Topics字段中配置的主题信息应该与ViewType类型匹配</p>
+     * Set <p>查询视图中包含的主题，最大可包含10个主题</p><p>Topics字段中配置的主题信息应该与ViewType类型匹配</p>
+     * @param Topics <p>查询视图中包含的主题，最大可包含10个主题</p><p>Topics字段中配置的主题信息应该与ViewType类型匹配</p>
      */
     public void setTopics(ViewSearchTopic [] Topics) {
         this.Topics = Topics;
     }
 
     /**
-     * Get <p>配置描述信息</p> 
-     * @return Description <p>配置描述信息</p>
-     */
-    public String getDescription() {
-        return this.Description;
-    }
-
-    /**
-     * Set <p>配置描述信息</p>
-     * @param Description <p>配置描述信息</p>
-     */
-    public void setDescription(String Description) {
-        this.Description = Description;
-    }
-
-    /**
-     * Get <p>自定义视图id前缀</p><p>参数格式：<code>^[a-z0-9][a-z0-9_-]{1,61}[a-z0-9]$</code></p><p>配置成功之后ViewId格式: ${ViewIdPrefix}-view</p> 
-     * @return ViewIdPrefix <p>自定义视图id前缀</p><p>参数格式：<code>^[a-z0-9][a-z0-9_-]{1,61}[a-z0-9]$</code></p><p>配置成功之后ViewId格式: ${ViewIdPrefix}-view</p>
+     * Get <p>自定义查询视图id前缀</p><p>参数格式：<code>^[a-z0-9][a-z0-9_-]{1,61}[a-z0-9]$</code></p><p>创建成功的查询视图 ViewId 格式为 ${ViewIdPrefix}-view</p> 
+     * @return ViewIdPrefix <p>自定义查询视图id前缀</p><p>参数格式：<code>^[a-z0-9][a-z0-9_-]{1,61}[a-z0-9]$</code></p><p>创建成功的查询视图 ViewId 格式为 ${ViewIdPrefix}-view</p>
      */
     public String getViewIdPrefix() {
         return this.ViewIdPrefix;
     }
 
     /**
-     * Set <p>自定义视图id前缀</p><p>参数格式：<code>^[a-z0-9][a-z0-9_-]{1,61}[a-z0-9]$</code></p><p>配置成功之后ViewId格式: ${ViewIdPrefix}-view</p>
-     * @param ViewIdPrefix <p>自定义视图id前缀</p><p>参数格式：<code>^[a-z0-9][a-z0-9_-]{1,61}[a-z0-9]$</code></p><p>配置成功之后ViewId格式: ${ViewIdPrefix}-view</p>
+     * Set <p>自定义查询视图id前缀</p><p>参数格式：<code>^[a-z0-9][a-z0-9_-]{1,61}[a-z0-9]$</code></p><p>创建成功的查询视图 ViewId 格式为 ${ViewIdPrefix}-view</p>
+     * @param ViewIdPrefix <p>自定义查询视图id前缀</p><p>参数格式：<code>^[a-z0-9][a-z0-9_-]{1,61}[a-z0-9]$</code></p><p>创建成功的查询视图 ViewId 格式为 ${ViewIdPrefix}-view</p>
      */
     public void setViewIdPrefix(String ViewIdPrefix) {
         this.ViewIdPrefix = ViewIdPrefix;
+    }
+
+    /**
+     * Get <p>描述信息</p> 
+     * @return Description <p>描述信息</p>
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set <p>描述信息</p>
+     * @param Description <p>描述信息</p>
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
     }
 
     public CreateSearchViewRequest() {
@@ -210,11 +210,11 @@ public class CreateSearchViewRequest extends AbstractModel {
                 this.Topics[i] = new ViewSearchTopic(source.Topics[i]);
             }
         }
-        if (source.Description != null) {
-            this.Description = new String(source.Description);
-        }
         if (source.ViewIdPrefix != null) {
             this.ViewIdPrefix = new String(source.ViewIdPrefix);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
         }
     }
 
@@ -228,8 +228,8 @@ public class CreateSearchViewRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ViewName", this.ViewName);
         this.setParamSimple(map, prefix + "ViewType", this.ViewType);
         this.setParamArrayObj(map, prefix + "Topics.", this.Topics);
-        this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "ViewIdPrefix", this.ViewIdPrefix);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

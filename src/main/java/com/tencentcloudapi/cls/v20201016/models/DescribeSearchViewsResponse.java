@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeSearchViewsResponse extends AbstractModel {
 
     /**
-    * <p>Splunk投递任务信息列表</p>
+    * <p>查询视图详细信息</p>
     */
     @SerializedName("Infos")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeSearchViewsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Splunk投递任务信息列表</p> 
-     * @return Infos <p>Splunk投递任务信息列表</p>
+     * Get <p>查询视图详细信息</p> 
+     * @return Infos <p>查询视图详细信息</p>
      */
     public SearchViewInfo [] getInfos() {
         return this.Infos;
     }
 
     /**
-     * Set <p>Splunk投递任务信息列表</p>
-     * @param Infos <p>Splunk投递任务信息列表</p>
+     * Set <p>查询视图详细信息</p>
+     * @param Infos <p>查询视图详细信息</p>
      */
     public void setInfos(SearchViewInfo [] Infos) {
         this.Infos = Infos;

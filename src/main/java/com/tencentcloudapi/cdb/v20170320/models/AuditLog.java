@@ -164,6 +164,14 @@ public class AuditLog extends AbstractModel {
     private Long TrxId;
 
     /**
+    * 端口
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClientPort")
+    @Expose
+    private Long ClientPort;
+
+    /**
      * Get 影响行数。 
      * @return AffectRows 影响行数。
      */
@@ -483,6 +491,26 @@ public class AuditLog extends AbstractModel {
         this.TrxId = TrxId;
     }
 
+    /**
+     * Get 端口
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClientPort 端口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getClientPort() {
+        return this.ClientPort;
+    }
+
+    /**
+     * Set 端口
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClientPort 端口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClientPort(Long ClientPort) {
+        this.ClientPort = ClientPort;
+    }
+
     public AuditLog() {
     }
 
@@ -554,6 +582,9 @@ public class AuditLog extends AbstractModel {
         if (source.TrxId != null) {
             this.TrxId = new Long(source.TrxId);
         }
+        if (source.ClientPort != null) {
+            this.ClientPort = new Long(source.ClientPort);
+        }
     }
 
 
@@ -581,6 +612,7 @@ public class AuditLog extends AbstractModel {
         this.setParamSimple(map, prefix + "TrxLivingTime", this.TrxLivingTime);
         this.setParamArrayObj(map, prefix + "TemplateInfo.", this.TemplateInfo);
         this.setParamSimple(map, prefix + "TrxId", this.TrxId);
+        this.setParamSimple(map, prefix + "ClientPort", this.ClientPort);
 
     }
 }

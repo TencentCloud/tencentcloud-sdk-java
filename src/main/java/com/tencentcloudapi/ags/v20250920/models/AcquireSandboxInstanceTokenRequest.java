@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AcquireSandboxInstanceTokenRequest extends AbstractModel {
 
     /**
-    * 沙箱实例ID，生成的访问Token将仅可用于访问此沙箱实例
+    * <p>沙箱实例ID，生成的访问Token将仅可用于访问此沙箱实例</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get 沙箱实例ID，生成的访问Token将仅可用于访问此沙箱实例 
-     * @return InstanceId 沙箱实例ID，生成的访问Token将仅可用于访问此沙箱实例
+     * Get <p>沙箱实例ID，生成的访问Token将仅可用于访问此沙箱实例</p> 
+     * @return InstanceId <p>沙箱实例ID，生成的访问Token将仅可用于访问此沙箱实例</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 沙箱实例ID，生成的访问Token将仅可用于访问此沙箱实例
-     * @param InstanceId 沙箱实例ID，生成的访问Token将仅可用于访问此沙箱实例
+     * Set <p>沙箱实例ID，生成的访问Token将仅可用于访问此沙箱实例</p>
+     * @param InstanceId <p>沙箱实例ID，生成的访问Token将仅可用于访问此沙箱实例</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

@@ -38,21 +38,21 @@ public class ModifySearchViewRequest extends AbstractModel {
     private String ViewName;
 
     /**
-    * <p>视图类型</p><p>枚举值：</p><ul><li>log： 日志主题</li><li>metric： 指标主题</li></ul>
+    * <p>视图类型</p><p>枚举值：</p><ul><li>log： 日志主题</li><li>metric： 指标主题</li></ul><p>Topics字段中配置的主题信息应该与ViewType类型匹配</p>
     */
     @SerializedName("ViewType")
     @Expose
     private String ViewType;
 
     /**
-    * <p>视图主题配置信息</p>
+    * <p>查询视图中包含的主题，最大可包含10个主题</p>
     */
     @SerializedName("Topics")
     @Expose
     private ViewSearchTopic [] Topics;
 
     /**
-    * <p>配置描述信息</p>
+    * <p>描述信息</p>
     */
     @SerializedName("Description")
     @Expose
@@ -91,48 +91,48 @@ public class ModifySearchViewRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>视图类型</p><p>枚举值：</p><ul><li>log： 日志主题</li><li>metric： 指标主题</li></ul> 
-     * @return ViewType <p>视图类型</p><p>枚举值：</p><ul><li>log： 日志主题</li><li>metric： 指标主题</li></ul>
+     * Get <p>视图类型</p><p>枚举值：</p><ul><li>log： 日志主题</li><li>metric： 指标主题</li></ul><p>Topics字段中配置的主题信息应该与ViewType类型匹配</p> 
+     * @return ViewType <p>视图类型</p><p>枚举值：</p><ul><li>log： 日志主题</li><li>metric： 指标主题</li></ul><p>Topics字段中配置的主题信息应该与ViewType类型匹配</p>
      */
     public String getViewType() {
         return this.ViewType;
     }
 
     /**
-     * Set <p>视图类型</p><p>枚举值：</p><ul><li>log： 日志主题</li><li>metric： 指标主题</li></ul>
-     * @param ViewType <p>视图类型</p><p>枚举值：</p><ul><li>log： 日志主题</li><li>metric： 指标主题</li></ul>
+     * Set <p>视图类型</p><p>枚举值：</p><ul><li>log： 日志主题</li><li>metric： 指标主题</li></ul><p>Topics字段中配置的主题信息应该与ViewType类型匹配</p>
+     * @param ViewType <p>视图类型</p><p>枚举值：</p><ul><li>log： 日志主题</li><li>metric： 指标主题</li></ul><p>Topics字段中配置的主题信息应该与ViewType类型匹配</p>
      */
     public void setViewType(String ViewType) {
         this.ViewType = ViewType;
     }
 
     /**
-     * Get <p>视图主题配置信息</p> 
-     * @return Topics <p>视图主题配置信息</p>
+     * Get <p>查询视图中包含的主题，最大可包含10个主题</p> 
+     * @return Topics <p>查询视图中包含的主题，最大可包含10个主题</p>
      */
     public ViewSearchTopic [] getTopics() {
         return this.Topics;
     }
 
     /**
-     * Set <p>视图主题配置信息</p>
-     * @param Topics <p>视图主题配置信息</p>
+     * Set <p>查询视图中包含的主题，最大可包含10个主题</p>
+     * @param Topics <p>查询视图中包含的主题，最大可包含10个主题</p>
      */
     public void setTopics(ViewSearchTopic [] Topics) {
         this.Topics = Topics;
     }
 
     /**
-     * Get <p>配置描述信息</p> 
-     * @return Description <p>配置描述信息</p>
+     * Get <p>描述信息</p> 
+     * @return Description <p>描述信息</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set <p>配置描述信息</p>
-     * @param Description <p>配置描述信息</p>
+     * Set <p>描述信息</p>
+     * @param Description <p>描述信息</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
