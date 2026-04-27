@@ -630,12 +630,37 @@ class EndpointFailoverInterceptor implements Interceptor {
         }
         String suffix = "." + fromTld;
         if (host.endsWith(suffix)) {
-            return host.substring(0, host.length() - fromTld.length()) + toTld;
+            String prefix = host.substring(0, host.length() - suffix.length());
+            if (prefix.isEmpty()) {
+                return toTld;
+            }
+            return stripRegionalLabel(prefix) + "." + toTld;
         }
         if (host.equals(fromTld)) {
             return toTld;
         }
         return host;
+    }
+
+    private static String stripRegionalLabel(String prefix) {
+        int lastDot = prefix.lastIndexOf('.');
+        if (lastDot < 0) {
+            return prefix;
+        }
+        String lastLabel = prefix.substring(lastDot + 1);
+        if (!looksLikeRegionLabel(lastLabel)) {
+            return prefix;
+        }
+        return prefix.substring(0, lastDot);
+    }
+
+    private static boolean looksLikeRegionLabel(String label) {
+        return label != null && (label.startsWith("ap-")
+                || label.startsWith("na-")
+                || label.startsWith("eu-")
+                || label.startsWith("sa-")
+                || label.startsWith("af-")
+                || label.startsWith("me-"));
     }
 
     /**

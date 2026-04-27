@@ -68,17 +68,17 @@ public class EndpointFailoverInterceptorTest {
     }
 
     @Test
-    public void testSubstituteTldPreservesPrefix() {
+    public void testSubstituteTldDropsRegionalLabel() {
         assertEquals(
                 "cvm.tencentcloudapi.com.cn",
                 EndpointFailoverInterceptor.substituteTld(
                         "cvm.tencentcloudapi.com", "tencentcloudapi.com", "tencentcloudapi.com.cn"));
         assertEquals(
-                "cvm.ap-shanghai.tencentcloudapi.cn",
+                "cvm.tencentcloudapi.cn",
                 EndpointFailoverInterceptor.substituteTld(
                         "cvm.ap-shanghai.tencentcloudapi.com", "tencentcloudapi.com", "tencentcloudapi.cn"));
         assertEquals(
-                "hunyuan.ai.ap-guangzhou.tencentcloudapi.com.cn",
+                "hunyuan.ai.tencentcloudapi.com.cn",
                 EndpointFailoverInterceptor.substituteTld(
                         "hunyuan.ai.ap-guangzhou.tencentcloudapi.com",
                         "tencentcloudapi.com",
@@ -209,6 +209,24 @@ public class EndpointFailoverInterceptorTest {
         assertNotEquals(
                 chain.requests.get(0).header("Authorization"),
                 chain.requests.get(1).header("Authorization"));
+    }
+
+    @Test
+    public void testFailoverDropsRegionalLabelFromHost() throws Exception {
+        TestClient client = newTC3Client();
+        EndpointFailoverInterceptor it = new EndpointFailoverInterceptor(client);
+        Request req = newTC3Request("cvm.ap-guangzhou.tencentcloudapi.com");
+
+        RecordingChain chain = new RecordingChain(req);
+        chain.programDnsFailure();
+        chain.programSuccess();
+
+        Response resp = it.intercept(chain);
+        assertEquals(200, resp.code());
+        assertEquals(2, chain.requests.size());
+        assertEquals("cvm.ap-guangzhou.tencentcloudapi.com", chain.requests.get(0).url().host());
+        assertEquals("cvm.tencentcloudapi.cn", chain.requests.get(1).url().host());
+        assertEquals("cvm.tencentcloudapi.cn", chain.requests.get(1).header("Host"));
     }
 
     @Test
