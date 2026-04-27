@@ -112,35 +112,49 @@ public class EndpointFailoverInterceptorTest {
     public void testPassThroughWhenSkipSign() throws Exception {
         TestClient client = newTC3Client();
         EndpointFailoverInterceptor it = new EndpointFailoverInterceptor(client);
-        Request req = new Request.Builder()
-                .url("https://cvm.tencentcloudapi.com/")
-                .post(RequestBody.create(MediaType.parse("application/json; charset=utf-8"), "{}"))
-                .header("Host", "cvm.tencentcloudapi.com")
-                .header("Authorization", "SKIP")
-                .build();
+        Request req = newSkipSignV3Request("cvm.tencentcloudapi.com");
         RecordingChain chain = new RecordingChain(req);
         chain.programSuccess();
 
         it.intercept(chain);
         assertEquals(1, chain.requests.size());
         assertEquals("cvm.tencentcloudapi.com", chain.requests.get(0).url().host());
+        assertEquals("SKIP", chain.requests.get(0).header("Authorization"));
     }
 
     @Test
-    public void testPassThroughWhenDomainFailoverDisabled() throws Exception {
+    public void testFailoverRewritesSkipSignV3Request() throws Exception {
+        TestClient client = newTC3Client();
+        EndpointFailoverInterceptor it = new EndpointFailoverInterceptor(client);
+        Request req = newSkipSignV3Request("cvm.tencentcloudapi.com");
+        RecordingChain chain = new RecordingChain(req);
+        chain.programDnsFailure();
+        chain.programSuccess();
+
+        Response resp = it.intercept(chain);
+        assertEquals(200, resp.code());
+        assertEquals(2, chain.requests.size());
+        assertEquals("cvm.tencentcloudapi.com", chain.requests.get(0).url().host());
+        assertEquals("cvm.tencentcloudapi.cn", chain.requests.get(1).url().host());
+        assertEquals("cvm.tencentcloudapi.cn", chain.requests.get(1).header("Host"));
+        assertEquals("SKIP", chain.requests.get(1).header("Authorization"));
+    }
+
+    @Test
+    public void testKnownDomainStillFailsOverAfterRuntimeDisable() throws Exception {
         TestClient client = newTC3Client();
         client.getClientProfile().getHttpProfile().setDomainFailover(false);
         EndpointFailoverInterceptor it = new EndpointFailoverInterceptor(client);
         Request req = newTC3Request("cvm.tencentcloudapi.com");
         RecordingChain chain = new RecordingChain(req);
         chain.programDnsFailure();
-        try {
-            it.intercept(chain);
-            fail("expected UnknownHostException");
-        } catch (UnknownHostException expected) {
-            // no retry attempted when failover disabled
-        }
-        assertEquals(1, chain.requests.size());
+        chain.programSuccess();
+
+        Response resp = it.intercept(chain);
+        assertEquals(200, resp.code());
+        assertEquals(2, chain.requests.size());
+        assertEquals("cvm.tencentcloudapi.com", chain.requests.get(0).url().host());
+        assertEquals("cvm.tencentcloudapi.cn", chain.requests.get(1).url().host());
     }
 
     @Test
@@ -360,6 +374,21 @@ public class EndpointFailoverInterceptorTest {
                 .header("Authorization",
                         "TC3-HMAC-SHA256 Credential=AKIDTEST/2024-01-01/cvm/tc3_request,"
                                 + " SignedHeaders=content-type;host, Signature=deadbeef")
+                .header("X-TC-Action", "TestAction")
+                .header("X-TC-Timestamp", "1700000000")
+                .header("X-TC-Version", "2020-01-01")
+                .header("X-TC-RequestClient", "SDK_JAVA_TEST")
+                .header("X-TC-Region", "ap-guangzhou")
+                .build();
+    }
+
+    private static Request newSkipSignV3Request(String host) {
+        return new Request.Builder()
+                .url("https://" + host + "/")
+                .post(RequestBody.create(MediaType.parse("application/json; charset=utf-8"), "{}"))
+                .header("Content-Type", "application/json; charset=utf-8")
+                .header("Host", host)
+                .header("Authorization", "SKIP")
                 .header("X-TC-Action", "TestAction")
                 .header("X-TC-Timestamp", "1700000000")
                 .header("X-TC-Version", "2020-01-01")

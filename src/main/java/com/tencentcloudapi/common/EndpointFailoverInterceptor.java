@@ -228,41 +228,11 @@ class EndpointFailoverInterceptor implements Interceptor {
     }
 
     /**
-     * A request is eligible for TLD failover when:
-     * <ul>
-     *   <li>the owning client has domain failover enabled</li>
-     *   <li>the profile has no apigw-endpoint override (we never rewrite custom proxies)</li>
-     *   <li>the target host is a recognised Tencent Cloud API domain</li>
-     *   <li>for TC3-signed requests, Authorization header is present and not "SKIP"</li>
-     * </ul>
+     * A request is eligible for TLD failover when the target host is a
+     * recognised Tencent Cloud API domain.
      */
     private boolean eligibleForFailover(Request request) {
-        ClientProfile profile = client.getClientProfile();
-        if (profile == null) {
-            return false;
-        }
-        HttpProfile httpProfile = profile.getHttpProfile();
-        if (httpProfile == null || !httpProfile.getDomainFailover()) {
-            return false;
-        }
-        if (httpProfile.getApigwEndpoint() != null) {
-            return false;
-        }
-        String host = request.url().host();
-        if (tldIndexOf(host) < 0) {
-            return false;
-        }
-        String signMethod = profile.getSignMethod();
-        if (ClientProfile.SIGN_TC3_256.equals(signMethod)) {
-            String auth = request.header("Authorization");
-            if (auth == null || "SKIP".equals(auth)) {
-                return false;
-            }
-        } else if (!ClientProfile.SIGN_SHA1.equals(signMethod)
-                && !ClientProfile.SIGN_SHA256.equals(signMethod)) {
-            return false;
-        }
-        return true;
+        return tldIndexOf(request.url().host()) >= 0;
     }
 
     /**
@@ -320,6 +290,9 @@ class EndpointFailoverInterceptor implements Interceptor {
         }
 
         String signMethod = client.getClientProfile().getSignMethod();
+        if (isSkipSignV3Request(original, signMethod)) {
+            return rewriteSkipSignV3(original, targetHost);
+        }
         if (ClientProfile.SIGN_TC3_256.equals(signMethod)) {
             return resignTC3(original, targetHost);
         }
@@ -331,8 +304,41 @@ class EndpointFailoverInterceptor implements Interceptor {
     }
 
     // ========================================================================
-    // TC3-HMAC-SHA256 resign
+    // TC3-HMAC-SHA256 resign / SKIP rewrite
     // ========================================================================
+
+    private static boolean isSkipSignV3Request(Request original, String signMethod) {
+        return ClientProfile.SIGN_TC3_256.equals(signMethod)
+                && "SKIP".equals(original.header("Authorization"));
+    }
+
+    private Request rewriteSkipSignV3(Request original, String targetHost) throws IOException {
+        String httpMethod = original.method();
+        String contentType = original.header("Content-Type");
+        byte[] payload = readRequestBody(original);
+
+        Headers.Builder hb = new Headers.Builder();
+        Headers origHeaders = original.headers();
+        for (int i = 0; i < origHeaders.size(); i++) {
+            String name = origHeaders.name(i);
+            if (name.equalsIgnoreCase("Host")) {
+                continue;
+            }
+            hb.add(name, origHeaders.value(i));
+        }
+        hb.add("Host", targetHost);
+
+        HttpUrl newUrl = original.url().newBuilder().host(targetHost).build();
+        Request.Builder rb = original.newBuilder()
+                .url(newUrl)
+                .headers(hb.build());
+        if (HttpProfile.REQ_POST.equalsIgnoreCase(httpMethod)) {
+            rb.post(RequestBody.create(MediaType.parse(contentType), payload));
+        } else if (HttpProfile.REQ_GET.equalsIgnoreCase(httpMethod)) {
+            rb.get();
+        }
+        return rb.build();
+    }
 
     private Request resignTC3(Request original, String targetHost)
             throws TencentCloudSDKException, IOException {
