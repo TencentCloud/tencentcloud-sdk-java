@@ -146,7 +146,7 @@ class EndpointFailoverInterceptor implements Interceptor {
             this.state = getOrCreateState(originHost);
         }
 
-        /** Host candidates in preferred try order (last-known-working first). */
+        /** Host candidates in preferred try order, with the original TLD reprobed once its cooldown expires. */
         List<String> candidates() {
             List<String> hosts = new ArrayList<String>(KNOWN_TLDS.length);
             for (int tldIdx : buildTryOrder(state, originIdx)) {
@@ -177,12 +177,18 @@ class EndpointFailoverInterceptor implements Interceptor {
                 Response response = chain.proceed(attempt);
                 token.report(true);
                 state.currentIndex = tldIdx;
+                if (tldIdx == originIdx) {
+                    state.clearOriginProbe();
+                }
                 return response;
             } catch (IOException e) {
                 if (!shouldFailover(e)) {
                     throw e;
                 }
                 token.report(false);
+                if (tldIdx == originIdx) {
+                    state.scheduleOriginProbe(breakerTimeoutMs);
+                }
                 lastFailure = e;
                 return null;
             }
@@ -260,17 +266,27 @@ class EndpointFailoverInterceptor implements Interceptor {
     }
 
     /**
-     * Order: last-known-working TLD first, then the rest in natural KNOWN_TLDS order.
-     * If no successful TLD has been recorded yet, start from the origin.
+     * Order: last-known-working TLD first, unless the original TLD is due for a
+     * recovery probe. Once that cooldown expires, the original TLD moves to the
+     * front so traffic can automatically return to the user's configured domain.
      */
     private int[] buildTryOrder(FailoverState state, int originIdx) {
-        int startIdx = state.currentIndex >= 0 ? state.currentIndex : originIdx;
+        int preferredIdx = state.currentIndex >= 0 ? state.currentIndex : originIdx;
         int n = KNOWN_TLDS.length;
         int[] order = new int[n];
-        order[0] = startIdx;
-        int pos = 1;
+        boolean[] added = new boolean[n];
+        int pos = 0;
+
+        if (originIdx != preferredIdx && state.shouldProbeOrigin()) {
+            order[pos++] = originIdx;
+            added[originIdx] = true;
+        }
+        if (!added[preferredIdx]) {
+            order[pos++] = preferredIdx;
+            added[preferredIdx] = true;
+        }
         for (int i = 0; i < n; i++) {
-            if (i != startIdx) {
+            if (!added[i]) {
                 order[pos++] = i;
             }
         }
@@ -624,6 +640,8 @@ class EndpointFailoverInterceptor implements Interceptor {
         final CircuitBreaker[] breakers;
         /** Index in {@link #KNOWN_TLDS} of the last TLD that served a successful request; -1 until first success. */
         volatile int currentIndex = -1;
+        /** Timestamp after which the original TLD should be reprobed; -1 when no reprobe is pending. */
+        volatile long originProbeAfterMs = -1;
 
         FailoverState(long breakerTimeoutMs) {
             int n = KNOWN_TLDS.length;
@@ -633,6 +651,18 @@ class EndpointFailoverInterceptor implements Interceptor {
                 s.timeoutMs = breakerTimeoutMs;
                 this.breakers[i] = new CircuitBreaker(s);
             }
+        }
+
+        void scheduleOriginProbe(long delayMs) {
+            this.originProbeAfterMs = System.currentTimeMillis() + delayMs;
+        }
+
+        void clearOriginProbe() {
+            this.originProbeAfterMs = -1;
+        }
+
+        boolean shouldProbeOrigin() {
+            return this.originProbeAfterMs >= 0 && System.currentTimeMillis() >= this.originProbeAfterMs;
         }
     }
 }

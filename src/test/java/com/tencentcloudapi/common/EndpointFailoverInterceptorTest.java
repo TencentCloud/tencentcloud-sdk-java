@@ -247,6 +247,36 @@ public class EndpointFailoverInterceptorTest {
     }
 
     @Test
+    public void testFollowupRequestReprobesOriginalTldAfterCooldown() throws Exception {
+        TestClient client = newTC3Client();
+        EndpointFailoverInterceptor it = new EndpointFailoverInterceptor(client);
+
+        {
+            Request req = newTC3Request("cvm.tencentcloudapi.com");
+            RecordingChain chain = new RecordingChain(req);
+            chain.programDnsFailure();
+            chain.programSuccess();
+            Response resp = it.intercept(chain);
+            assertEquals(200, resp.code());
+        }
+
+        EndpointFailoverInterceptor.FailoverState state =
+                EndpointFailoverInterceptor.STATE.get("cvm.tencentcloudapi.com");
+        assertNotNull(state);
+        state.originProbeAfterMs = 0;
+
+        {
+            Request req = newTC3Request("cvm.tencentcloudapi.com");
+            RecordingChain chain = new RecordingChain(req);
+            chain.programSuccess();
+            Response resp = it.intercept(chain);
+            assertEquals(200, resp.code());
+            assertEquals(1, chain.requests.size());
+            assertEquals("cvm.tencentcloudapi.com", chain.requests.get(0).url().host());
+        }
+    }
+
+    @Test
     public void testResignPicksUpRotatedCredential() throws Exception {
         // Rotating the credential on the AbstractClient between initial sign and
         // failover resign should be reflected in the new Authorization header,
